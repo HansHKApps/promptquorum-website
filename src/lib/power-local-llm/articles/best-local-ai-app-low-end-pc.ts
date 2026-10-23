@@ -7,21 +7,24 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-en.webp',
     title: 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
-    seoTitle: 'Best Local AI Apps for 8GB RAM PCs 2026: Tested CPU-Only',
+    seoTitle: 'Best Local AI for Low-End PCs: 8GB RAM, CPU-Only (2026)',
     metaDescription:
-      'Ollama, Jan, llama.cpp and GPT4All tested on 8 GB RAM + integrated graphics. Tokens/sec, memory pressure, exact settings for no-GPU local AI. August 2026.',
+      'Ollama, Jan, llama.cpp and GPT4All compared on 8 GB RAM, no GPU: community-reported tokens/sec, best model per app and CPU-only speed settings.',
     twitterDescription:
-      '4 local AI apps that run on 8 GB RAM laptops with no GPU. Tokens/sec ranges, exact settings, real verdicts. August 2026.',
+      '4 local AI apps compared for 8 GB RAM laptops with no GPU. Community-reported tokens/sec, best model per app, exact settings, honest verdicts.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: [
+      'Intel Core i3 / Celeron / Pentium (older and Atom-based)',
+      'Intel Mac (x86, macOS 14+)',
       'Intel UHD 620',
       'Intel Iris Xe',
       'AMD Ryzen 5 5500U',
@@ -41,20 +44,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai old laptop',
     ],
     leadAnswerBlock:
-      '**On an 8 GB RAM laptop with no discrete GPU, four apps actually run well in August 2026: Ollama, Jan, llama.cpp, and GPT4All. Pair any of them with Phi-4 Mini Q4 (best balance), SmolLM 2 1.7B Q4 (fastest), or Llama 3.2 1B Q5 (smoothest GUI feel) and stay under 6 GB working set. GPT4All still runs, but it has shipped no release since v3.10.0 in February 2025 — prefer Jan if you want a maintained GUI.**',
+      '**Warning: GPT4All has had no update since 27 May 2025 (last release v3.10.0, 25 February 2025), so it may be unmaintained — check before relying on it.** **On an 8 GB RAM laptop with no discrete GPU, four apps run well in October 2026: Ollama, Jan, llama.cpp, and GPT4All. Pair any of them with Phi-4 Mini Q4 (best balance), SmolLM 2 1.7B Q4 (fastest), or Llama 3.2 1B Q5 (smoothest GUI feel) and stay under 6 GB working set. Prefer Jan if you want a maintained GUI.**',
     quickAnswerTop: {
       en: {
         question: 'Which local AI app runs best on an 8 GB RAM laptop with no GPU?',
         answer:
-          'Pick Ollama if you are comfortable with a terminal — it is the leanest runtime and pairs cleanly with Phi-4 Mini Q4 at 4–8 tok/sec on older Intel CPUs and 8–14 tok/sec on Ryzen 5000 / Intel 12th-gen class hardware. Pick Jan if you want a clean GUI with no command line — it is Apache 2.0, actively released, and the best no-terminal option in August 2026. Pick llama.cpp directly if you want maximum tokens-per-second and are willing to compile. Pick GPT4All only for the two cases it still wins: a 4 GB RAM machine, or a locked-down work laptop where you cannot install drivers or use admin rights — its last release was v3.10.0 in February 2025.',
+          'Pick Ollama if you are comfortable with a terminal — it is the leanest runtime and pairs cleanly with Phi-4 Mini Q4 at 4–8 tok/sec on older Intel CPUs and 8–14 tok/sec on Ryzen 5000 / Intel 12th-gen class hardware. Pick Jan if you want a clean GUI with no command line — it is Apache 2.0, actively released, and the best no-terminal option in October 2026. Pick llama.cpp directly if you want maximum tokens-per-second and are willing to compile. Pick GPT4All only for the two cases it still wins: a 4 GB RAM machine, or a locked-down work laptop where you cannot install drivers or use admin rights — its last release was v3.10.0 in February 2025 and its last code push was 27 May 2025.',
         bullets: [
           'Ollama — leanest CPU runtime, terminal-driven, pairs best with Phi-4 Mini',
           'Jan — full GUI, open source (Apache 2.0), Apple Silicon native, best no-terminal pick',
           'llama.cpp — bare-metal speed, requires compile, pairs best with SmolLM 2 / Gemma 4 E2B',
-          'GPT4All — lowest RAM floor (4 GB) and no-admin install, but no release since Feb 2025',
+          'GPT4All — lowest RAM floor (4 GB) and no-admin install, but no update since 27 May 2025 (may be unmaintained)',
           'All four are free, run offline after install, and load standard GGUF model files',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -71,16 +74,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: 'The slide deck below covers: Ollama, Jan, llama.cpp, and GPT4All tested on 8 GB RAM with no GPU (4–18 tok/sec ranges); the exact settings that buy 30–60% more speed (context 1024, batch 8, KV cache q8_0); best model per app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); and five common mistakes that trigger swap death. Download the PDF as a low-end PC local AI reference card. Slide ordering reflects the August 2026 refresh, in which GPT4All moved below Jan.',
+    gammaDescription: 'The slide deck below covers: Ollama, Jan, llama.cpp, and GPT4All compared on 8 GB RAM with no GPU (community-reported 4–18 tok/sec ranges); the exact settings that buy 30–60% more speed (context 1024, batch 8, KV cache q8_0); best model per app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); and five common mistakes that trigger swap death. Download the PDF as a low-end PC local AI reference card. Slide ordering places GPT4All below Jan because GPT4All has had no update since May 2025.',
     sections: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Ollama** — leanest CPU runtime in 2026 (v0.33.1, August 2026), runs as a background server, best app + model combo: Ollama + Phi-4 Mini Q4 at 4–14 tok/sec on 8 GB CPU-only.',
+          '**Ollama** — leanest CPU runtime in 2026 (v0.40.10, October 2026), runs as a background server, best app + model combo: Ollama + Phi-4 Mini Q4 at 4–14 tok/sec on 8 GB CPU-only.',
           '**Jan** — full GUI, Apache 2.0 open source, native on Apple Silicon, lightest GUI app for an 8 GB MacBook Air or M1 Mac mini, and the no-terminal pick now that GPT4All has gone quiet.',
           '**llama.cpp** — fastest tokens-per-second on identical hardware (5–15% over Ollama, 15–25% over GPT4All) but requires a compile step.',
-          '**GPT4All** — still the only app with a 4 GB RAM floor and a no-admin install path, but its last release was v3.10.0 on 25 February 2025, so treat it as a fallback rather than a first choice.',
+          '**GPT4All** — still the only GUI app of the four with a 4 GB RAM floor and a no-admin install path, but it has had no update since 27 May 2025 (last release v3.10.0 on 25 February 2025), so it may be unmaintained — treat it as a fallback rather than a first choice.',
           '**Best model on 8 GB / no-GPU:** Phi-4 Mini 3.8B at Q4_K_M for balance, SmolLM 2 1.7B Q4 for max speed, Llama 3.2 1B Q5 for smoothest chat feel.',
           '**Speed ranking on identical CPU:** llama.cpp > Ollama > Jan > GPT4All. The gap is 15–25%, not 2–3×.',
           '**Do not run 7B+ models on 8 GB RAM** — context-window pressure plus the operating system itself will trigger swap and crater throughput by 5–10×.',
@@ -90,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How Do Ollama, GPT4All, Jan, and llama.cpp Compare on 8 GB RAM, No GPU?',
         content:
-          'Ranges below are aggregated from llama.cpp upstream benchmark threads, Hugging Face model card numbers, and r/LocalLLaMA test reports on 8 GB integrated-graphics laptops (Intel UHD 620 / Iris Xe / Ryzen 5 5500U vega / Apple M1 8 GB). Tokens/sec is measured on 200-token generations after model load, default context window 2048 unless noted. Versions checked August 2026: Ollama v0.33.1, Jan v0.7.9, GPT4All v3.10.0 (released February 2025 — no newer build since).',
+          'Ranges below are aggregated from llama.cpp upstream benchmark threads, Hugging Face model card numbers, and r/LocalLLaMA test reports on 8 GB integrated-graphics laptops (Intel UHD 620 / Iris Xe / Ryzen 5 5500U vega / Apple M1 8 GB). Reported tokens/sec refer to 200-token generations after model load, default context window 2048 unless noted. PromptQuorum did not run these benchmarks itself. Versions checked October 2026: Ollama v0.40.10, Jan v0.8.7, GPT4All v3.10.0 (released February 2025; last code push 27 May 2025, so no newer build since).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -143,6 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: 'Chart of local AI tokens per second on a low-end PC with 8 GB RAM and no GPU: llama.cpp, Ollama, Jan, GPT4All',
         imageCaption:
           'Tokens/sec on 8 GB RAM, no GPU: llama.cpp 5–18 tok/s (fastest, requires compile), Ollama 4–14 tok/s (best balance), Jan 3–11 tok/s (best GUI, Apple Silicon native), GPT4All 3–10 tok/s (4 GB floor, unreleased since Feb 2025).',
       },
@@ -177,6 +181,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Pick': 'Ollama + SmolLM 2 1.7B',
           },
           {
+            'Your situation': 'Intel Mac (2015–2020) on macOS 14 or newer',
+            'Pick': 'Ollama (CPU-only) + SmolLM 2 1.7B',
+          },
+          {
             'Your situation': 'Chromebook with Linux dev mode',
             'Pick': 'llama.cpp + SmolLM 2',
           },
@@ -197,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cpu-benchmarks',
         title: 'How Fast Is Each App on Real Low-End Hardware?',
         content:
-          '**Tokens-per-second on representative 8 GB RAM, no-discrete-GPU machines, August 2026.** Numbers are community-reported ranges from llama.cpp upstream benchmark threads, Hugging Face model card data, and r/LocalLLaMA hardware-tagged tests. Each cell is the typical range across reported runs at default settings; outliers excluded.',
+          '**Tokens-per-second on representative 8 GB RAM, no-discrete-GPU machines, October 2026.** Numbers are community-reported ranges from llama.cpp upstream benchmark threads, Hugging Face model card data, and r/LocalLLaMA hardware-tagged tests. Each cell is the typical range across reported runs at default settings; outliers excluded.',
         columns: ['Hardware', 'Model', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           {
@@ -275,6 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: 'RAM budget of a low-end PC with 8 GB for local AI: Phi-4 Mini fits, a 7B Q4 model exceeds RAM and forces swap',
         imageCaption:
           '8 GB RAM budget compared: Phi-4 Mini 3.8B Q4 uses ~3 GB OS + ~3.5 GB model/KV cache, leaving ~1.5 GB free, while a 7B Q4 model needs ~9 GB total — 1 GB past the 8 GB ceiling — which forces swap and cuts tokens/sec by 5–10×.',
       },
@@ -396,7 +405,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is GPT4All still safe to install in 2026?',
-            a: 'It installs and runs fine, but its most recent release is v3.10.0 from 25 February 2025 — roughly 18 months without a new build. Practically that means no new model architectures in the bundled catalog and no security patches to the app itself, which matters more on a work machine than a personal one. Use it when its two remaining advantages apply — a 4 GB RAM ceiling, or a locked-down laptop where you cannot install anything needing admin rights — and use Jan otherwise.',
+            a: 'It installs and runs fine, but its most recent release is v3.10.0 from 25 February 2025 — roughly 20 months without a new build, and its last code push was 27 May 2025. Practically that means no new model architectures in the bundled catalog and no security patches to the app itself, which matters more on a work machine than a personal one. Treat it as possibly unmaintained and use it only when its two remaining advantages apply — a 4 GB RAM ceiling, or a locked-down laptop where you cannot install anything needing admin rights — and use Jan otherwise.',
+          },
+          {
+            q: 'Does local AI run on an Intel Mac with 8 GB RAM?',
+            a: 'Yes, on the CPU only. The official [Ollama macOS requirements](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) list macOS Sonoma (14) or newer on Apple M-series (CPU and GPU) or x86 (CPU only), so an Intel Mac stuck on macOS 13 or older cannot run the current Ollama app. [Jan](https://jan.ai) ships a universal macOS build, and [llama.cpp](https://github.com/ggml-org/llama.cpp) can be compiled on any Intel Mac. Expect speeds closer to the Intel laptop rows in the benchmark table than to the Apple M1 rows, so stay at 1.7B–3.8B models such as SmolLM 2 1.7B Q4_K_M or Phi-4 Mini Q4_K_M.',
+          },
+          {
+            q: 'Can an old Core i3, Celeron or Pentium laptop run local AI?',
+            a: 'Sometimes. The deciding factor is the CPU instruction set, not the brand name: Intel Core i3 chips from 2013 (Haswell) onward have AVX2, while first-generation Core i3, Ivy Bridge parts such as the i3-3110M, and Atom-based Celeron / Pentium N-series chips (Gemini Lake, Jasper Lake such as the N6000) do not. Check your exact model on Intel ARK before installing. On a CPU with AVX2 and 8 GB RAM, SmolLM 2 1.7B Q4_K_M or Llama 3.2 1B Q4_K_M is the realistic ceiling. Without AVX2, llama.cpp still runs, but at a speed that is rarely usable for chat.',
           },
           {
             q: 'Can I use a Raspberry Pi for local AI?',
@@ -424,9 +441,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
       'description':
-        'Ollama, Jan, llama.cpp, and GPT4All tested on 8 GB RAM laptops with integrated graphics. Tokens/sec ranges, memory pressure, exact settings. Refreshed August 2026.',
+        'Ollama, Jan, llama.cpp, and GPT4All compared on 8 GB RAM laptops with integrated graphics. Community-reported tokens/sec ranges, memory pressure, exact settings.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -483,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'position': 4,
           'name': 'GPT4All',
           'description':
-            'One-click installer with a 4 GB RAM floor and no admin rights needed; pairs best with Llama 3.2 1B Q4_0 at 3–10 tokens per second; last release v3.10.0, February 2025.',
+            'One-click installer with a 4 GB RAM floor and no admin rights needed; pairs best with Llama 3.2 1B Q4_0 at 3–10 tokens per second; last release v3.10.0, February 2025; no update since 27 May 2025.',
         },
       ],
     },
@@ -513,19 +530,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-de.webp',
     title: 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
-    seoTitle: 'Lokale KI für 8-GB-RAM-PCs 2026: CPU-only getestet',
+    seoTitle: 'Beste lokale KI für schwache PCs: 8 GB RAM, ohne GPU',
     metaDescription:
-      'Ollama, Jan, llama.cpp und GPT4All auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen. August 2026.',
+      'Ollama, Jan, llama.cpp und GPT4All im Vergleich auf 8 GB RAM ohne GPU: von der Community gemeldete Tokens/Sek., bestes Modell pro App, CPU-Einstellungen.',
     twitterDescription:
-      '4 lokale KI-Apps, die auf 8-GB-RAM-Laptops ohne GPU laufen. Tokens/Sek., exakte Einstellungen, ehrliche Bewertungen. August 2026.',
+      '4 lokale KI-Apps im Vergleich für 8-GB-RAM-Laptops ohne GPU. Von der Community gemeldete Tokens/Sek., bestes Modell pro App, exakte Einstellungen, ehrliche Bewertungen.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: [
       'Intel UHD 620',
@@ -547,20 +565,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale ki alter laptop',
     ],
     leadAnswerBlock:
-      '**Auf einem 8-GB-RAM-Laptop ohne dedizierte GPU laufen im August 2026 vier Apps wirklich gut: Ollama, Jan, llama.cpp und GPT4All. Kombinieren Sie eine davon mit Phi-4 Mini Q4 (beste Balance), SmolLM 2 1.7B Q4 (am schnellsten) oder Llama 3.2 1B Q5 (flüssigstes GUI-Gefühl) und bleiben Sie unter 6 GB Working Set. GPT4All läuft weiterhin, hat aber seit v3.10.0 im Februar 2025 kein Release mehr erhalten — wählen Sie Jan, wenn Sie ein gepflegtes GUI wollen.**',
+      '**Warnung: GPT4All hat seit dem 27. Mai 2025 kein Update erhalten (letztes Release v3.10.0 vom 25. Februar 2025) und wird möglicherweise nicht mehr gepflegt — prüfen Sie es, bevor Sie sich darauf verlassen.** **Auf einem 8-GB-RAM-Laptop ohne dedizierte GPU laufen im Oktober 2026 vier Apps wirklich gut: Ollama, Jan, llama.cpp und GPT4All. Kombinieren Sie eine davon mit Phi-4 Mini Q4 (beste Balance), SmolLM 2 1.7B Q4 (am schnellsten) oder Llama 3.2 1B Q5 (flüssigstes GUI-Gefühl) und bleiben Sie unter 6 GB Working Set. Wählen Sie Jan, wenn Sie ein gepflegtes GUI wollen.**',
     quickAnswerTop: {
       de: {
         question: 'Welche lokale KI-App läuft am besten auf einem 8-GB-RAM-Laptop ohne GPU?',
         answer:
-          'Wählen Sie Ollama, wenn Sie mit dem Terminal vertraut sind — es ist die schlankste Laufzeitumgebung und harmoniert sauber mit Phi-4 Mini Q4 bei 4–8 Tok/Sek. auf älteren Intel-CPUs und 8–14 Tok/Sek. auf Hardware der Klasse Ryzen 5000 / Intel 12. Generation. Wählen Sie Jan für ein sauberes GUI ohne Kommandozeile — Apache 2.0, aktiv veröffentlicht und im August 2026 die beste terminalfreie Option. Wählen Sie llama.cpp direkt für maximale Tokens-pro-Sekunde, wenn Sie zur Kompilierung bereit sind. Wählen Sie GPT4All nur für die zwei Fälle, in denen es weiterhin gewinnt: eine 4-GB-RAM-Maschine oder ein gesperrter Arbeits-Laptop ohne Admin-Rechte — sein letztes Release war v3.10.0 im Februar 2025.',
+          'Wählen Sie Ollama, wenn Sie mit dem Terminal vertraut sind — es ist die schlankste Laufzeitumgebung und harmoniert sauber mit Phi-4 Mini Q4 bei 4–8 Tok/Sek. auf älteren Intel-CPUs und 8–14 Tok/Sek. auf Hardware der Klasse Ryzen 5000 / Intel 12. Generation. Wählen Sie Jan für ein sauberes GUI ohne Kommandozeile — Apache 2.0, aktiv veröffentlicht und im Oktober 2026 die beste terminalfreie Option. Wählen Sie llama.cpp direkt für maximale Tokens-pro-Sekunde, wenn Sie zur Kompilierung bereit sind. Wählen Sie GPT4All nur für die zwei Fälle, in denen es weiterhin gewinnt: eine 4-GB-RAM-Maschine oder ein gesperrter Arbeits-Laptop ohne Admin-Rechte — sein letztes Release war v3.10.0 im Februar 2025, der letzte Code-Push am 27. Mai 2025.',
         bullets: [
           'Ollama — schlankste CPU-Laufzeit, terminalbasiert, harmoniert am besten mit Phi-4 Mini',
           'Jan — vollständiges GUI, Open Source (Apache 2.0), Apple Silicon nativ, beste terminalfreie Wahl',
           'llama.cpp — Geschwindigkeit auf Bare-Metal-Niveau, Kompilierung erforderlich, harmoniert am besten mit SmolLM 2 / Gemma 4 E2B',
-          'GPT4All — niedrigster RAM-Bedarf (4 GB) und Installation ohne Admin-Rechte, aber kein Release seit Februar 2025',
+          'GPT4All — niedrigster RAM-Bedarf (4 GB) und Installation ohne Admin-Rechte, aber kein Update seit dem 27. Mai 2025 (möglicherweise nicht mehr gepflegt)',
           'Alle vier sind kostenlos, laufen nach der Installation offline und laden Standard-GGUF-Modelldateien',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -577,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: 'Die Präsentation unten zeigt: Ollama, Jan, llama.cpp und GPT4All auf 8 GB RAM ohne GPU getestet (4–18 Tok/Sek); die genauen Einstellungen für 30–60 % mehr Geschwindigkeit (Kontext 1024, Batch 8, KV-Cache q8_0); bestes Modell pro App (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); und fünf häufige Fehler, die Swap-Death auslösen. PDF als Referenzkarte für Schwachrechner herunterladen. Die Reihenfolge der Folien entspricht der Aktualisierung vom August 2026, bei der GPT4All hinter Jan zurückgestuft wurde.',
+    gammaDescription: 'Die Präsentation unten zeigt: Ollama, Jan, llama.cpp und GPT4All auf 8 GB RAM ohne GPU im Vergleich (von der Community gemeldete 4–18 Tok/Sek); die genauen Einstellungen für 30–60 % mehr Geschwindigkeit (Kontext 1024, Batch 8, KV-Cache q8_0); bestes Modell pro App (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); und fünf häufige Fehler, die Swap-Death auslösen. PDF als Referenzkarte für Schwachrechner herunterladen. Die Folien stellen GPT4All hinter Jan, weil GPT4All seit Mai 2025 kein Update erhalten hat.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -586,17 +604,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama** — schlankste CPU-Laufzeit in 2026, läuft als Hintergrundserver, beste App + Modell-Kombination: Ollama + Phi-4 Mini Q4 bei 4–14 Tok/Sek. auf 8 GB CPU-only.',
           '**Jan** — vollständiges GUI, Apache 2.0 Open Source, nativ auf Apple Silicon, leichteste GUI-App für ein 8-GB-MacBook-Air oder M1 Mac mini.',
           '**llama.cpp** — schnellste Tokens-pro-Sekunde auf identischer Hardware (5–15 % über Ollama, 15–25 % über GPT4All), erfordert jedoch einen Kompilierschritt.',
-          '**GPT4All** — weiterhin die einzige App mit 4-GB-RAM-Minimum und Installationspfad ohne Admin-Rechte, letztes Release jedoch v3.10.0 vom 25. Februar 2025 — als Rückfalloption behandeln, nicht als erste Wahl.',
+          '**GPT4All** — weiterhin die einzige GUI-App der vier mit 4-GB-RAM-Minimum und Installationspfad ohne Admin-Rechte, doch seit dem 27. Mai 2025 ohne Update (letztes Release v3.10.0 vom 25. Februar 2025), möglicherweise nicht mehr gepflegt — als Rückfalloption behandeln, nicht als erste Wahl.',
           '**Bestes Modell auf 8 GB / ohne GPU:** Phi-4 Mini 3,8B bei Q4_K_M für Balance, SmolLM 2 1,7B Q4 für maximale Geschwindigkeit, Llama 3.2 1B Q5 für flüssigstes Chat-Gefühl.',
           '**Geschwindigkeitsranking auf identischer CPU:** llama.cpp > Ollama > Jan > GPT4All. Der Abstand beträgt 15–25 %, nicht 2–3×.',
-          '**Stand August 2026: Führen Sie keine 7B+-Modelle auf 8 GB RAM aus** — Kontextfenster-Druck plus das Betriebssystem selbst lösen Swap aus und brechen den Durchsatz um den Faktor 5–10 ein.',
+          '**Stand Oktober 2026: Führen Sie keine 7B+-Modelle auf 8 GB RAM aus** — Kontextfenster-Druck plus das Betriebssystem selbst lösen Swap aus und brechen den Durchsatz um den Faktor 5–10 ein.',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Wie schneiden Ollama, Jan, llama.cpp und GPT4All auf 8 GB RAM ohne GPU im Vergleich ab?',
         content:
-          'Die unten angegebenen Bereiche sind aggregiert aus llama.cpp Upstream-Benchmark-Threads, Hugging-Face-Modellkarten und r/LocalLLaMA-Testberichten auf 8-GB-Laptops mit integrierter Grafik (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Tokens/Sek. werden bei 200-Token-Generierungen nach dem Modellladen gemessen, Standardkontextfenster 2048, sofern nicht anders angegeben.',
+          'Die unten angegebenen Bereiche sind aggregiert aus llama.cpp Upstream-Benchmark-Threads, Hugging-Face-Modellkarten und r/LocalLLaMA-Testberichten auf 8-GB-Laptops mit integrierter Grafik (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Die gemeldeten Tokens/Sek. beziehen sich auf 200-Token-Generierungen nach dem Modellladen; PromptQuorum hat diese Benchmarks nicht selbst durchgeführt, Standardkontextfenster 2048, sofern nicht anders angegeben. Geprüfte Versionen (Oktober 2026): Ollama v0.40.10, Jan v0.8.7, GPT4All v3.10.0 (im Februar 2025 veröffentlicht; letzter Code-Push am 27. Mai 2025).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -645,12 +663,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bestes Modell (8-GB-Beschränkung)': 'Llama 3.2 1B Q4_0',
             'Tokens/Sek. (CPU-only)': '3–10 Tok/Sek.',
             'Wärme': 'Niedrig',
-            'Verdikt': 'Rückfall — kein Release seit Feb. 2025',
+            'Verdikt': 'Rückfall — kein Update seit Mai 2025',
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: 'Diagramm: lokale KI auf schwachem PC mit 8 GB RAM ohne GPU, Tokens pro Sekunde von llama.cpp, Ollama, Jan und GPT4All',
         imageCaption:
-          'Tokens/Sek. auf 8 GB RAM ohne GPU: llama.cpp 5–18 Tok/Sek. (am schnellsten, erfordert Kompilierung), Ollama 4–14 Tok/Sek. (beste Balance), Jan 3–11 Tok/Sek. (bestes GUI, Apple Silicon nativ), GPT4All 3–10 Tok/Sek. (4 GB Minimum, kein Release seit Feb. 2025).',
+          'Tokens/Sek. auf 8 GB RAM ohne GPU: llama.cpp 5–18 Tok/Sek. (am schnellsten, erfordert Kompilierung), Ollama 4–14 Tok/Sek. (beste Balance), Jan 3–11 Tok/Sek. (bestes GUI, Apple Silicon nativ), GPT4All 3–10 Tok/Sek. (4 GB Minimum, kein Update seit Mai 2025).',
       },
       whichOne: {
         id: 'which-one',
@@ -664,6 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre Situation': 'Linux-Laptop, maximale Tokens/Sek. gewünscht', 'Wählen': 'llama.cpp' },
           { 'Ihre Situation': '4-GB-RAM-Maschine (unter Spezifikation)', 'Wählen': 'GPT4All + Llama 3.2 1B Q4_0' },
           { 'Ihre Situation': 'Ältere Intel Core i5-8250U / i7-7700U Klasse CPU', 'Wählen': 'Ollama + SmolLM 2 1.7B' },
+          { 'Ihre Situation': 'Intel-Mac (2015–2020) mit macOS 14 oder neuer', 'Wählen': 'Ollama (nur CPU) + SmolLM 2 1.7B' },
           { 'Ihre Situation': 'Chromebook mit Linux-Dev-Modus', 'Wählen': 'llama.cpp + SmolLM 2' },
           { 'Ihre Situation': 'Arbeits-Laptop, auf dem keine Treiber installiert werden dürfen', 'Wählen': 'GPT4All (Installation ohne Treiber / ohne Admin-Rechte)' },
         ],
@@ -679,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cpu-benchmarks',
         title: 'Wie schnell ist jede App auf realer Low-End-Hardware?',
         content:
-          '**Tokens-pro-Sekunde auf repräsentativen 8-GB-RAM-Maschinen ohne dedizierte GPU, August 2026.** Die Zahlen sind von der Community gemeldete Bereiche aus llama.cpp-Upstream-Benchmark-Threads, Hugging-Face-Modellkarten und r/LocalLLaMA-Hardware-getaggten Tests. Jede Zelle ist der typische Bereich über die gemeldeten Läufe bei Standardeinstellungen; Ausreißer ausgeschlossen.',
+          '**Tokens-pro-Sekunde auf repräsentativen 8-GB-RAM-Maschinen ohne dedizierte GPU, Oktober 2026.** Die Zahlen sind von der Community gemeldete Bereiche aus llama.cpp-Upstream-Benchmark-Threads, Hugging-Face-Modellkarten und r/LocalLLaMA-Hardware-getaggten Tests. Jede Zelle ist der typische Bereich über die gemeldeten Läufe bei Standardeinstellungen; Ausreißer ausgeschlossen.',
         columns: ['Hardware', 'Modell', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           { 'Hardware': 'Intel Core i5-8250U + UHD 620 (2018 Ultraportable)', 'Modell': 'Phi-4 Mini Q4_K_M', 'Ollama': '4–6 Tok/Sek.', 'Jan': '3–5 Tok/Sek.', 'llama.cpp': '5–7 Tok/Sek.', 'GPT4All': '3–5 Tok/Sek.' },
@@ -715,6 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: 'RAM-Budget eines PCs mit 8 GB für lokale KI: Phi-4 Mini passt, ein 7B-Q4-Modell löst Swap aus',
         imageCaption:
           'Vergleich des 8-GB-RAM-Budgets: Phi-4 Mini 3.8B Q4 nutzt ~3 GB OS + ~3,5 GB Modell/KV-Cache und lässt ~1,5 GB frei, während ein 7B-Q4-Modell ~9 GB insgesamt benötigt — 1 GB über der 8-GB-Grenze — was Swap erzwingt und Tokens/Sek. um 5–10× senkt.',
       },
@@ -836,7 +857,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist GPT4All 2026 noch bedenkenlos installierbar?',
-            a: 'Es installiert und läuft weiterhin, aber das jüngste Release ist v3.10.0 vom 25. Februar 2025 — im August 2026 also rund 18 Monate ohne neuen Build. Praktisch bedeutet das: keine neuen Modellarchitekturen im mitgelieferten Katalog und keine Sicherheitspatches für die App selbst, was auf einem Firmengerät stärker wiegt als auf einem privaten. Nutzen Sie es, wenn seine zwei verbliebenen Vorteile greifen — eine 4-GB-RAM-Grenze oder ein gesperrter Laptop ohne Admin-Rechte — und ansonsten Jan.',
+            a: 'Es installiert und läuft weiterhin, aber das jüngste Release ist v3.10.0 vom 25. Februar 2025 — im Oktober 2026 also rund 20 Monate ohne neuen Build, der letzte Code-Push stammt vom 27. Mai 2025. Praktisch bedeutet das: keine neuen Modellarchitekturen im mitgelieferten Katalog und keine Sicherheitspatches für die App selbst, was auf einem Firmengerät stärker wiegt als auf einem privaten. Betrachten Sie es als möglicherweise nicht mehr gepflegt und nutzen Sie es nur, wenn seine zwei verbliebenen Vorteile greifen — eine 4-GB-RAM-Grenze oder ein gesperrter Laptop ohne Admin-Rechte — und ansonsten Jan.',
+          },
+          {
+            q: 'Läuft lokale KI auf einem Intel-Mac mit 8 GB RAM?',
+            a: 'Ja, allerdings nur auf der CPU. Laut den offiziellen [Ollama-Systemanforderungen für macOS](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) wird macOS Sonoma (14) oder neuer vorausgesetzt, auf Apple-M-Chips (CPU und GPU) oder x86 (nur CPU); ein Intel-Mac mit macOS 13 oder älter kann die aktuelle Ollama-App daher nicht ausführen. [Jan](https://jan.ai) liefert einen universellen macOS-Build, und [llama.cpp](https://github.com/ggml-org/llama.cpp) lässt sich auf jedem Intel-Mac kompilieren. Rechnen Sie mit Geschwindigkeiten nahe den Intel-Laptop-Zeilen der Benchmark-Tabelle, nicht den Apple-M1-Zeilen — bleiben Sie bei Modellen von 1,7B bis 3,8B wie SmolLM 2 1.7B Q4_K_M oder Phi-4 Mini Q4_K_M.',
+          },
+          {
+            q: 'Kann ein älterer Core-i3-, Celeron- oder Pentium-Laptop lokale KI ausführen?',
+            a: 'Manchmal. Entscheidend ist der CPU-Befehlssatz, nicht der Markenname: Intel-Core-i3-Chips ab 2013 (Haswell) beherrschen AVX2, die erste Core-i3-Generation, Ivy-Bridge-Modelle wie der i3-3110M sowie Atom-basierte Celeron-/Pentium-N-Chips (Gemini Lake, Jasper Lake wie der N6000) dagegen nicht. Prüfen Sie Ihr genaues Modell vor der Installation auf Intel ARK. Mit AVX2 und 8 GB RAM sind SmolLM 2 1.7B Q4_K_M oder Llama 3.2 1B Q4_K_M die realistische Obergrenze. Ohne AVX2 läuft llama.cpp zwar noch, aber meist zu langsam für Chat.',
           },
           {
             q: 'Kann ich einen Raspberry Pi für lokale KI verwenden?',
@@ -844,11 +873,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Muss ich bei der Verwendung lokaler KI-Apps die DSGVO beachten?',
-            a: 'Bei rein lokaler Inferenz auf Ihrem Gerät verlassen die verarbeiteten Daten Ihren Endpunkt nicht — das erfüllt die Anforderungen an Datenresidenz und Auftragsverarbeitung (Art. 28 DSGVO) ohne zusätzliche Auftragsverarbeitungsverträge mit Cloud-Anbietern. Beachten Sie für den geschäftlichen Einsatz dennoch die BSI-Grundschutz-Kataloge für die Konfiguration der Endgeräte (Festplattenverschlüsselung, Zugriffskontrolle, Update-Management). Wenn Sie sensible Kategorien (Art. 9 DSGVO — Gesundheit, Religion, etc.) verarbeiten, dokumentieren Sie die Verarbeitung im Verzeichnis von Verarbeitungstätigkeiten und führen Sie ggf. eine Datenschutz-Folgenabschätzung durch — die lokale Verarbeitung reduziert das Risiko, ersetzt aber nicht die Dokumentationspflicht.',
+            a: 'Bei rein lokaler Inferenz auf Ihrem Gerät verlassen die verarbeiteten Daten Ihren Endpunkt bei korrekter Konfiguration in der Regel nicht (Telemetrie- und Update-Einstellungen der jeweiligen App prüfen) — das kann Fragen zu Datenresidenz und Auftragsverarbeitung (Art. 28 DSGVO) vereinfachen, weil kein Cloud-Anbieter als Auftragsverarbeiter beteiligt ist. Ob Ihr konkreter Einsatz die DSGVO erfüllt, hängt von Ihrem Gesamtsetup ab und ist keine Rechtsberatung — klären Sie das mit Ihrer Datenschutzbeauftragten oder einer Anwältin. Beachten Sie für den geschäftlichen Einsatz dennoch die BSI-Grundschutz-Kataloge für die Konfiguration der Endgeräte (Festplattenverschlüsselung, Zugriffskontrolle, Update-Management). Wenn Sie sensible Kategorien (Art. 9 DSGVO — Gesundheit, Religion, etc.) verarbeiten, dokumentieren Sie die Verarbeitung im Verzeichnis von Verarbeitungstätigkeiten und führen Sie ggf. eine Datenschutz-Folgenabschätzung durch — die lokale Verarbeitung reduziert das Risiko, ersetzt aber nicht die Dokumentationspflicht.',
           },
           {
             q: 'Sind lokale KI-Apps für den deutschen Mittelstand geeignet?',
-            a: 'Ja — und besonders dort, wo Cloud-KI an Compliance-Hürden scheitert. Mittelständische Unternehmen in Maschinenbau, Steuerkanzleien, Arztpraxen und Anwaltskanzleien setzen 2026 zunehmend auf lokale Modelle, um Mandantendaten, Patientendaten und Konstruktionsdaten DSGVO-konform mit KI zu verarbeiten. Empfohlene Konfiguration für Mittelstand-IT: Ollama oder GPT4All auf einem dedizierten Workstation-PC (16 GB RAM minimum für 7B-Modelle; 32 GB für 13B), BSI-konformer Festplattenverschlüsselung (BitLocker oder LUKS), und einem internen Netzwerksegment ohne Internetzugang während der Inferenz. Für Teams ab 5 Personen lohnt sich die Investition in ein zentrales Ollama-Server-Setup mit Open WebUI als Browser-Frontend.',
+            a: 'Das kann sein — besonders dort, wo Cloud-KI an Compliance-Hürden scheitert. Mittelständische Unternehmen in Maschinenbau, Steuerkanzleien, Arztpraxen und Anwaltskanzleien prüfen lokale Modelle, weil Mandanten-, Patienten- und Konstruktionsdaten dabei auf dem eigenen Gerät bleiben können; ob eine konkrete Verarbeitung DSGVO-konform ist, muss im Einzelfall geprüft werden. Beispielkonfiguration für Mittelstand-IT: Ollama oder GPT4All auf einem dedizierten Workstation-PC (16 GB RAM minimum für 7B-Modelle; 32 GB für 13B), BSI-konformer Festplattenverschlüsselung (BitLocker oder LUKS), und einem internen Netzwerksegment ohne Internetzugang während der Inferenz. Für Teams ab 5 Personen lohnt sich die Investition in ein zentrales Ollama-Server-Setup mit Open WebUI als Browser-Frontend.',
           },
         ],
       },
@@ -873,9 +902,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/de/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
       'description':
-        'Ollama, Jan, llama.cpp und GPT4All auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen. Aktualisiert im August 2026.',
+        'Ollama, Jan, llama.cpp und GPT4All im Vergleich auf 8-GB-RAM-Laptops mit integrierter Grafik. Von der Community gemeldete Tokens/Sek., Speicherdruck, exakte Einstellungen.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
@@ -906,7 +935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', 'position': 1, 'name': 'Ollama', 'description': 'Schlankste CPU-Laufzeit; Mindestens 6 GB RAM; harmoniert am besten mit Phi-4 Mini Q4_K_M bei 4–14 Tokens pro Sekunde auf 8 GB CPU-only.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Jan', 'description': 'Open-Source-GUI (Apache 2.0); Mindestens 6 GB RAM; harmoniert am besten mit Gemma 4 E2B Q4_K_M bei 3–11 Tokens pro Sekunde; leichteste GUI auf Apple Silicon 8 GB.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'llama.cpp', 'description': 'Bare-Metal-Geschwindigkeit bei eigener Kompilierung; Mindestens 4 GB RAM; harmoniert am besten mit SmolLM 2 1.7B Q4_K_M bei 5–18 Tokens pro Sekunde; am schnellsten auf identischer Hardware.' },
-        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': 'One-Click-Installer mit 4-GB-RAM-Minimum, keine Admin-Rechte nötig; harmoniert am besten mit Llama 3.2 1B Q4_0 bei 3–10 Tokens pro Sekunde; letztes Release v3.10.0, Februar 2025.' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': 'One-Click-Installer mit 4-GB-RAM-Minimum, keine Admin-Rechte nötig; harmoniert am besten mit Llama 3.2 1B Q4_0 bei 3–10 Tokens pro Sekunde; letztes Release v3.10.0, Februar 2025; kein Update seit 27. Mai 2025.' },
       ],
     },
     breadcrumbSchema: {
@@ -920,19 +949,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-fr.webp',
     title: 'Meilleures applications d\'IA locale pour PC modestes en 2026 (8 Go RAM, sans GPU)',
-    seoTitle: 'Meilleures apps IA locales PC 8 Go RAM 2026 : test CPU',
+    seoTitle: 'Meilleure IA locale sur PC modeste : 8 Go, sans GPU (2026)',
     metaDescription:
-      'Ollama, Jan, llama.cpp et GPT4All testés sur portables 8 Go RAM avec graphiques intégrés. Tokens/s, pression mémoire, réglages exacts. Août 2026.',
+      'Ollama, Jan, llama.cpp et GPT4All comparés sur PC 8 Go RAM sans carte graphique : tokens/s rapportés par la communauté, meilleur modèle, réglages CPU.',
     twitterDescription:
-      '4 apps d\'IA locale pour portables 8 Go RAM sans GPU. Tokens/s, réglages exacts, verdicts honnêtes. Août 2026.',
+      '4 apps d\'IA locale comparées pour portables 8 Go RAM sans GPU. Tokens/s rapportés par la communauté, réglages exacts, verdicts honnêtes.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: ['Intel UHD 620', 'Intel Iris Xe', 'AMD Ryzen 5 5500U', 'Apple M1 8GB', 'Intel Core i5-8250U'],
     audience: 'Propriétaires de portables de 4 à 7 ans avec 8 Go de RAM et sans GPU dédié, choisissant leur première application d\'IA locale.',
@@ -941,20 +971,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'IA locale sur PC modeste',
     targetKeywords: ['ia locale 8go ram', 'meilleur llm local pc modeste', 'ia locale sans gpu', 'llm local cpu seul 2026', 'ia locale ancien portable'],
     leadAnswerBlock:
-      '**Sur un portable 8 Go RAM sans GPU dédié, quatre applications fonctionnent vraiment bien en août 2026 : Ollama, Jan, llama.cpp et GPT4All. Associez-en une à Phi-4 Mini Q4 (meilleur équilibre), SmolLM 2 1.7B Q4 (plus rapide) ou Llama 3.2 1B Q5 (sensation GUI la plus fluide) et restez sous 6 Go d\'empreinte mémoire. GPT4All fonctionne toujours, mais n\'a plus reçu de version depuis la v3.10.0 de février 2025 — préférez Jan si vous voulez une interface graphique maintenue.**',
+      '**Avertissement : GPT4All n\'a reçu aucune mise à jour depuis le 27 mai 2025 (dernière version v3.10.0, 25 février 2025) et n\'est peut-être plus maintenu — vérifiez avant de vous y fier.** **Sur un portable 8 Go RAM sans GPU dédié, quatre applications fonctionnent bien en octobre 2026 : Ollama, Jan, llama.cpp et GPT4All. Associez-en une à Phi-4 Mini Q4 (meilleur équilibre), SmolLM 2 1.7B Q4 (plus rapide) ou Llama 3.2 1B Q5 (sensation GUI la plus fluide) et restez sous 6 Go d\'empreinte mémoire. Préférez Jan si vous voulez une interface graphique maintenue.**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle application d\'IA locale fonctionne le mieux sur un portable 8 Go RAM sans GPU ?',
         answer:
-          'Choisissez Ollama si vous êtes à l\'aise avec le terminal — c\'est le runtime le plus léger et il s\'associe proprement à Phi-4 Mini Q4 à 4–8 t/s sur les anciens CPU Intel et 8–14 t/s sur du matériel de classe Ryzen 5000 / Intel 12e gén. Choisissez Jan pour une interface graphique propre sans ligne de commande — Apache 2.0, activement publiée, et la meilleure option sans terminal en août 2026. Choisissez llama.cpp directement pour le débit maximum en tokens/seconde, si vous acceptez de compiler. Ne choisissez GPT4All que pour les deux cas où il gagne encore : une machine à 4 Go de RAM, ou un portable verrouillé sans droits admin — sa dernière version est la v3.10.0 de février 2025.',
+          'Choisissez Ollama si vous êtes à l\'aise avec le terminal — c\'est le runtime le plus léger et il s\'associe proprement à Phi-4 Mini Q4 à 4–8 t/s sur les anciens CPU Intel et 8–14 t/s sur du matériel de classe Ryzen 5000 / Intel 12e gén. Choisissez Jan pour une interface graphique propre sans ligne de commande — Apache 2.0, activement publiée, et la meilleure option sans terminal en octobre 2026. Choisissez llama.cpp directement pour le débit maximum en tokens/seconde, si vous acceptez de compiler. Ne choisissez GPT4All que pour les deux cas où il gagne encore : une machine à 4 Go de RAM, ou un portable verrouillé sans droits admin — sa dernière version est la v3.10.0 de février 2025 et son dernier commit date du 27 mai 2025.',
         bullets: [
           'Ollama — runtime CPU le plus léger, terminal, s\'associe au mieux à Phi-4 Mini',
           'Jan — interface graphique complète, open source (Apache 2.0), natif Apple Silicon, choix le plus léger sur Mac 8 Go',
           'llama.cpp — vitesse au plus près du métal, compilation requise, s\'associe au mieux à SmolLM 2 / Gemma 4 E2B',
-          'GPT4All — plancher RAM le plus bas (4 Go) et installation sans droits admin, mais aucune version depuis février 2025',
+          'GPT4All — plancher RAM le plus bas (4 Go) et installation sans droits admin, mais aucune mise à jour depuis le 27 mai 2025 (peut-être plus maintenu)',
           'Toutes les quatre sont gratuites, fonctionnent hors ligne après installation, et chargent les fichiers GGUF standards',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -971,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: 'La présentation ci-dessous couvre : Ollama, Jan, llama.cpp et GPT4All testés sur 8 Go RAM sans GPU (4–18 tok/s) ; les paramètres exacts pour 30–60 % de vitesse en plus (contexte 1024, lot 8, cache KV q8_0) ; le meilleur modèle par appli (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B) ; et cinq erreurs courantes qui déclenchent le swap fatal. Téléchargez le PDF comme fiche de référence pour PC modeste. L\'ordre des diapositives reflète la mise à jour d\'août 2026, qui a rétrogradé GPT4All derrière Jan.',
+    gammaDescription: 'La présentation ci-dessous couvre : Ollama, Jan, llama.cpp et GPT4All comparés sur 8 Go RAM sans GPU (4–18 tok/s rapportés par la communauté) ; les paramètres exacts pour 30–60 % de vitesse en plus (contexte 1024, lot 8, cache KV q8_0) ; le meilleur modèle par appli (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B) ; et cinq erreurs courantes qui déclenchent le swap fatal. Téléchargez le PDF comme fiche de référence pour PC modeste. Les diapositives placent GPT4All derrière Jan, car GPT4All n\'a reçu aucune mise à jour depuis mai 2025.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -980,17 +1010,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama** — runtime CPU le plus léger en 2026, fonctionne en serveur d\'arrière-plan, meilleure combinaison app + modèle : Ollama + Phi-4 Mini Q4 à 4–14 t/s sur 8 Go CPU seul.',
           '**Jan** — interface graphique complète, open source Apache 2.0, natif Apple Silicon, app GUI la plus légère pour un MacBook Air 8 Go ou Mac mini M1.',
           '**llama.cpp** — meilleur débit en tokens/seconde sur matériel identique (5–15 % au-dessus d\'Ollama, 15–25 % au-dessus de GPT4All), mais nécessite une compilation.',
-          '**GPT4All** — toujours la seule app avec un plancher RAM de 4 Go et une installation sans droits admin, mais sa dernière version est la v3.10.0 du 25 février 2025 : à traiter comme solution de repli, pas comme premier choix.',
+          '**GPT4All** — toujours la seule app à interface graphique des quatre avec un plancher RAM de 4 Go et une installation sans droits admin, mais sans mise à jour depuis le 27 mai 2025 (dernière version v3.10.0 du 25 février 2025), il est peut-être plus maintenu : à traiter comme solution de repli, pas comme premier choix.',
           '**Meilleur modèle sur 8 Go / sans GPU :** Phi-4 Mini 3.8B en Q4_K_M pour l\'équilibre, SmolLM 2 1.7B Q4 pour la vitesse maximale, Llama 3.2 1B Q5 pour la sensation de chat la plus fluide.',
           '**Classement vitesse sur CPU identique :** llama.cpp > Ollama > Jan > GPT4All. L\'écart est de 15–25 %, pas 2–3×.',
-          '**En août 2026, n\'exécutez pas de modèle 7B+ en 8 Go RAM** — la pression de la fenêtre de contexte plus le système d\'exploitation lui-même déclenchent du swap et écrasent le débit d\'un facteur 5–10.',
+          '**En octobre 2026, n\'exécutez pas de modèle 7B+ en 8 Go RAM** — la pression de la fenêtre de contexte plus le système d\'exploitation lui-même déclenchent du swap et écrasent le débit d\'un facteur 5–10.',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Comment Ollama, Jan, llama.cpp et GPT4All se comparent-ils sur 8 Go RAM sans GPU ?',
         content:
-          'Les fourchettes ci-dessous sont agrégées depuis les fils de benchmarks llama.cpp upstream, les chiffres des fiches modèles Hugging Face et les rapports de tests r/LocalLLaMA sur des portables 8 Go avec graphiques intégrés (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 Go). Les tokens/s sont mesurés sur des générations de 200 tokens après le chargement du modèle, fenêtre de contexte par défaut 2048 sauf mention contraire.',
+          'Les fourchettes ci-dessous sont agrégées depuis les fils de benchmarks llama.cpp upstream, les chiffres des fiches modèles Hugging Face et les rapports de tests r/LocalLLaMA sur des portables 8 Go avec graphiques intégrés (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 Go). Les tokens/s rapportés portent sur des générations de 200 tokens après le chargement du modèle ; PromptQuorum n\'a pas exécuté ces benchmarks lui-même, fenêtre de contexte par défaut 2048 sauf mention contraire. Versions vérifiées (octobre 2026) : Ollama v0.40.10, Jan v0.8.7, GPT4All v3.10.0 (publiée en février 2025 ; dernier commit le 27 mai 2025).',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Sur un portable 8 Go RAM sans GPU dédié, Ollama avec Phi-4 Mini Q4_K_M est la meilleure configuration polyvalente d\'IA locale — vitesse de génération la plus rapide parmi les options sans code, charge thermique la plus basse, et bibliothèque de modèles la plus large.' },
           { type: 'plain-terms', text: 'Sur un PC modeste avec 8 Go RAM et sans GPU : installez Ollama, exécutez `ollama pull phi4-mini`, puis `ollama run phi4-mini`. Vous obtenez 4–14 tokens par seconde selon votre CPU — lent mais utilisable pour des tâches où vous envoyez un prompt et attendez la réponse. Pour une alternative sans terminal, Jan s\'installe comme une application normale et organise sa liste de modèles autour de ceux qui tiennent en 8 Go.' },
@@ -1003,11 +1033,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Application': '[Ollama](https://ollama.com)', 'RAM min.': '6 Go', 'Meilleur modèle (contrainte 8 Go)': 'Phi-4 Mini Q4_K_M', 'Tokens/s (CPU seul)': '4–14 t/s', 'Chaleur': 'Faible', 'Verdict': 'Meilleur équilibre — à choisir en premier' },
           { 'Application': '[Jan](https://jan.ai)', 'RAM min.': '6 Go', 'Meilleur modèle (contrainte 8 Go)': 'Gemma 4 E2B Q4_K_M', 'Tokens/s (CPU seul)': '3–11 t/s', 'Chaleur': 'Moyenne', 'Verdict': 'Meilleure GUI — choix sans terminal' },
           { 'Application': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'SmolLM 2 1.7B Q4_K_M', 'Tokens/s (CPU seul)': '5–18 t/s', 'Chaleur': 'Faible', 'Verdict': 'Plus rapide si vous compilez' },
-          { 'Application': '[GPT4All](https://nomic.ai/gpt4all)', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'Llama 3.2 1B Q4_0', 'Tokens/s (CPU seul)': '3–10 t/s', 'Chaleur': 'Faible', 'Verdict': 'Repli — aucune version depuis févr. 2025' },
+          { 'Application': '[GPT4All](https://nomic.ai/gpt4all)', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'Llama 3.2 1B Q4_0', 'Tokens/s (CPU seul)': '3–10 t/s', 'Chaleur': 'Faible', 'Verdict': 'Repli — aucune mise à jour depuis mai 2025' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: 'Graphique : IA locale sur PC modeste 8 Go RAM sans GPU, tokens/s de llama.cpp, Ollama, Jan et GPT4All',
         imageCaption:
-          'Tokens/s sur 8 Go RAM sans GPU : llama.cpp 5–18 t/s (le plus rapide, nécessite compilation), Ollama 4–14 t/s (meilleur équilibre), Jan 3–11 t/s (meilleure GUI, natif Apple Silicon), GPT4All 3–10 t/s (plancher 4 Go, aucune version depuis févr. 2025).',
+          'Tokens/s sur 8 Go RAM sans GPU : llama.cpp 5–18 t/s (le plus rapide, nécessite compilation), Ollama 4–14 t/s (meilleur équilibre), Jan 3–11 t/s (meilleure GUI, natif Apple Silicon), GPT4All 3–10 t/s (plancher 4 Go, aucune mise à jour depuis mai 2025).',
       },
       whichOne: {
         id: 'which-one',
@@ -1020,6 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': 'Portable Linux, débit tokens/s maximal', 'Choix': 'llama.cpp' },
           { 'Votre situation': 'Machine 4 Go RAM (sous-spec)', 'Choix': 'GPT4All + Llama 3.2 1B Q4_0' },
           { 'Votre situation': 'Ancien CPU classe Intel Core i5-8250U / i7-7700U', 'Choix': 'Ollama + SmolLM 2 1.7B' },
+          { 'Votre situation': 'Mac Intel (2015–2020) sous macOS 14 ou plus récent', 'Choix': 'Ollama (CPU seul) + SmolLM 2 1.7B' },
           { 'Votre situation': 'Chromebook avec mode dev Linux', 'Choix': 'llama.cpp + SmolLM 2' },
           { 'Votre situation': 'Portable de travail où l\'installation de pilotes est interdite', 'Choix': 'GPT4All (installation sans pilote / sans droits admin)' },
         ],
@@ -1031,7 +1063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cpuBenchmarks: {
         id: 'cpu-benchmarks',
         title: 'Quelle vitesse atteint chaque app sur du matériel modeste réel ?',
-        content: '**Tokens-par-seconde sur des machines représentatives 8 Go RAM sans GPU dédié, août 2026.** Les chiffres sont des fourchettes communautaires issues des fils de benchmarks llama.cpp upstream, des données de fiches modèles Hugging Face, et des tests r/LocalLLaMA tagués matériel. Chaque cellule est la fourchette typique sur les exécutions rapportées en réglages par défaut ; valeurs aberrantes exclues.',
+        content: '**Tokens-par-seconde sur des machines représentatives 8 Go RAM sans GPU dédié, octobre 2026.** Les chiffres sont des fourchettes communautaires issues des fils de benchmarks llama.cpp upstream, des données de fiches modèles Hugging Face, et des tests r/LocalLLaMA tagués matériel. Chaque cellule est la fourchette typique sur les exécutions rapportées en réglages par défaut ; valeurs aberrantes exclues.',
         columns: ['Matériel', 'Modèle', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           { 'Matériel': 'Intel Core i5-8250U + UHD 620 (ultraportable 2018)', 'Modèle': 'Phi-4 Mini Q4_K_M', 'Ollama': '4–6 t/s', 'Jan': '3–5 t/s', 'llama.cpp': '5–7 t/s', 'GPT4All': '3–5 t/s' },
@@ -1060,6 +1092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'warning', text: 'Ne chargez aucun modèle 7B sur 8 Go RAM, même en Q2. Q2 7B fait ≈ 2.5 Go sur disque mais l\'empreinte plus 2048 de contexte atterrit à ≈ 5.5 Go, ce qui fait basculer en swap sur la plupart des systèmes Windows / Linux. Résultat : chute de vitesse 5–10× et interface gelée.' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: 'Budget RAM d\'un PC modeste de 8 Go pour l\'IA locale : Phi-4 Mini tient, un modèle 7B Q4 force le swap',
         imageCaption:
           'Budget RAM 8 Go comparé : Phi-4 Mini 3.8B Q4 utilise ~3 Go OS + ~3,5 Go modèle/cache KV, laissant ~1,5 Go libre, tandis qu\'un modèle 7B Q4 nécessite ~9 Go au total — 1 Go au-delà du plafond de 8 Go — ce qui force le swap et réduit les tokens/s de 5–10×.',
       },
@@ -1136,7 +1169,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Puis-je faire tourner de l\'IA locale sur un Chromebook ?', a: 'Uniquement si le mode dev Linux (Crostini) est disponible. Les quatre apps de ce guide tournent toutes dans le conteneur Linux — llama.cpp compilé depuis les sources est le plus fiable sur les Chromebooks ARM, tandis que les Chromebooks x86 (Intel) fonctionnent avec Ollama ou GPT4All. Les performances suivent le CPU sous-jacent ; un Chromebook Intel Core i3 / i5 se comporte comme le portable Windows équivalent.' },
           { q: 'Windows 10 fonctionne-t-il toujours pour l\'IA locale en 2026 ?', a: 'Oui. Les quatre apps supportent Windows 10 22H2. Ollama, Jan et GPT4All livrent des installeurs Windows signés ; llama.cpp livre des binaires Windows précompilés sur ses releases GitHub. La fin du support grand public de Windows 10 en octobre 2025 n\'empêche pas l\'installation, mais les mises à jour de sécurité ont cessé — envisagez un dual-boot Linux ou une mise à niveau vers Windows 11 pour un usage long terme.' },
           { q: 'Quel est le portable le moins cher qui fait tourner l\'IA locale convenablement ?', a: 'Un ThinkPad T14 ou Dell Latitude 5430 d\'occasion 2021–2022 avec 16 Go RAM et un Ryzen 5 5500U ou Intel i5-1235U coûte 350–450 € en 2026 et fait tourner Phi-4 Mini Q4 à 8–14 t/s. Encore moins cher : tout MacBook Air Apple M1 8 Go d\'occasion à 450–550 €, qui bat la plupart des portables x86 sur les tokens/s grâce à la mémoire unifiée.' },
-          { q: 'GPT4All est-il encore sûr à installer en 2026 ?', a: 'Il s\'installe et fonctionne toujours, mais sa version la plus récente est la v3.10.0 du 25 février 2025 — soit environ 18 mois sans nouveau build en août 2026. Concrètement : aucune nouvelle architecture de modèle dans le catalogue fourni et aucun correctif de sécurité pour l\'application elle-même, ce qui pèse davantage sur un poste professionnel que personnel. Utilisez-le quand ses deux avantages restants s\'appliquent — un plafond de 4 Go de RAM, ou un portable verrouillé sans droits admin — et Jan sinon.' },
+          { q: 'GPT4All est-il encore sûr à installer en 2026 ?', a: 'Il s\'installe et fonctionne toujours, mais sa version la plus récente est la v3.10.0 du 25 février 2025 — soit environ 20 mois sans nouveau build en octobre 2026, avec un dernier commit le 27 mai 2025. Concrètement : aucune nouvelle architecture de modèle dans le catalogue fourni et aucun correctif de sécurité pour l\'application elle-même, ce qui pèse davantage sur un poste professionnel que personnel. Considérez-le comme possiblement non maintenu et utilisez-le seulement quand ses deux avantages restants s\'appliquent — un plafond de 4 Go de RAM, ou un portable verrouillé sans droits admin — et Jan sinon.' },
+          { q: 'L\'IA locale fonctionne-t-elle sur un Mac Intel avec 8 Go de RAM ?', a: 'Oui, mais uniquement sur le CPU. Les [prérequis officiels d\'Ollama pour macOS](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) indiquent macOS Sonoma (14) ou plus récent, sur puces Apple M (CPU et GPU) ou x86 (CPU seul) : un Mac Intel resté sous macOS 13 ou plus ancien ne peut donc pas exécuter l\'application Ollama actuelle. [Jan](https://jan.ai) propose une version macOS universelle et [llama.cpp](https://github.com/ggml-org/llama.cpp) se compile sur n\'importe quel Mac Intel. Attendez-vous à des vitesses proches des lignes de portables Intel du tableau de benchmarks, pas de celles de l\'Apple M1 — restez sur des modèles de 1,7B à 3,8B comme SmolLM 2 1.7B Q4_K_M ou Phi-4 Mini Q4_K_M.' },
+          { q: 'Un vieux portable Core i3, Celeron ou Pentium peut-il faire tourner de l\'IA locale ?', a: 'Parfois. Ce qui compte, c\'est le jeu d\'instructions du CPU, pas la marque : les Intel Core i3 à partir de 2013 (Haswell) disposent d\'AVX2, contrairement à la première génération de Core i3, aux modèles Ivy Bridge comme le i3-3110M et aux Celeron / Pentium N à base Atom (Gemini Lake, Jasper Lake comme le N6000). Vérifiez votre modèle exact sur Intel ARK avant d\'installer. Avec AVX2 et 8 Go de RAM, SmolLM 2 1.7B Q4_K_M ou Llama 3.2 1B Q4_K_M est le plafond réaliste. Sans AVX2, llama.cpp fonctionne encore, mais trop lentement pour un usage chat.' },
           { q: 'Puis-je utiliser un Raspberry Pi pour l\'IA locale ?', a: 'Un Raspberry Pi 5 avec 8 Go RAM fait tourner Llama 3.2 1B Q4 à 4–7 t/s — utilisable mais lent. Un Pi 4 4 Go plafonne autour de 2 t/s sur TinyLlama 1B. Pour un usage chat réel, un portable x86 8 Go ou un MacBook Air M1 est plus rapide, moins cher d\'occasion et plus simple à configurer. Le Pi n\'a de sens que pour les charges embarquées, edge ou always-on.' },
         ],
       },
@@ -1160,9 +1195,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/fr/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'Meilleures applications d\'IA locale pour PC modestes en 2026 (8 Go RAM, sans GPU)',
-      'description': 'Ollama, Jan, llama.cpp et GPT4All testés sur des portables 8 Go RAM avec graphiques intégrés. Tokens/s, pression mémoire, réglages exacts. Actualisé en août 2026.',
+      'description': 'Ollama, Jan, llama.cpp et GPT4All comparés sur des portables 8 Go RAM avec graphiques intégrés. Tokens/s rapportés par la communauté, pression mémoire, réglages exacts.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
       'proficiencyLevel': 'Beginner',
@@ -1185,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', 'position': 1, 'name': 'Ollama', 'description': 'Runtime CPU le plus léger ; minimum 6 Go RAM ; s\'associe au mieux à Phi-4 Mini Q4_K_M à 4–14 tokens par seconde sur 8 Go CPU seul.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Jan', 'description': 'Interface graphique open source (Apache 2.0) ; minimum 6 Go RAM ; s\'associe au mieux à Gemma 4 E2B Q4_K_M à 3–11 tokens par seconde ; GUI la plus légère sur Apple Silicon 8 Go.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'llama.cpp', 'description': 'Vitesse au plus près du métal si vous compilez ; minimum 4 Go RAM ; s\'associe au mieux à SmolLM 2 1.7B Q4_K_M à 5–18 tokens par seconde ; le plus rapide sur matériel identique.' },
-        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': 'Installeur en un clic, plancher 4 Go RAM, aucun droit admin requis ; s\'associe au mieux à Llama 3.2 1B Q4_0 à 3–10 tokens par seconde ; dernière version v3.10.0, février 2025.' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': 'Installeur en un clic, plancher 4 Go RAM, aucun droit admin requis ; s\'associe au mieux à Llama 3.2 1B Q4_0 à 3–10 tokens par seconde ; dernière version v3.10.0, février 2025 ; aucune mise à jour depuis le 27 mai 2025.' },
       ],
     },
     breadcrumbSchema: {
@@ -1199,19 +1234,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-ja.webp',
     title: 'ロースペックPC向けベストローカルAIアプリ 2026年版（8GB RAM・GPUなし）',
-    seoTitle: '8GB RAM PC向けローカルAIアプリ 2026：CPU専用テスト',
+    seoTitle: '低スペックPC向けローカルAIアプリ：8GB・GPUなし2026',
     metaDescription:
-      'RTX 4090は不要です。Ollama、Jan、llama.cpp、GPT4Allを8GB RAM・統合グラフィックス搭載ノートPCでテスト。tok/秒、メモリ圧、設定を解説。2026年8月。',
+      'Ollama、Jan、llama.cpp、GPT4Allを8GB RAM・GPUなしで比較。コミュニティ報告のtok/秒、アプリ別の推奨モデル、CPU専用の速度設定を紹介します。',
     twitterDescription:
-      '8GB RAM・GPUなしノートPCで動く4つのローカルAIアプリ。tok/秒、設定、率直な評価。2026年8月。',
+      '8GB RAM・GPUなしノートPCで動く4つのローカルAIアプリを比較。コミュニティ報告のtok/秒、設定、率直な評価。',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: ['Intel UHD 620', 'Intel Iris Xe', 'AMD Ryzen 5 5500U', 'Apple M1 8GB', 'Intel Core i5-8250U'],
     audience: '8GB RAM・専用GPUなしの4〜7年前のノートPCを所有し、初めてローカルAIアプリを選ぶユーザー。',
@@ -1220,20 +1256,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'ロースペックPC ローカルAI',
     targetKeywords: ['ローカルai 8gb ram', 'ロースペックpc llm', 'gpuなし ai', 'cpu専用 ローカルllm 2026', '古いノートpc ai'],
     leadAnswerBlock:
-      '**8GB RAM・専用GPUなしのノートPCで2026年8月に実用的に動くアプリは4つあります：Ollama、Jan、llama.cpp、GPT4All。これらをPhi-4 Mini Q4（バランス最適）、SmolLM 2 1.7B Q4（最速）、またはLlama 3.2 1B Q5（GUI体験が最も滑らか）と組み合わせ、ワーキングセットを6GB以下に抑えます。GPT4Allは今も動作しますが、2025年2月のv3.10.0以降リリースがないため、メンテナンスされたGUIが必要ならJanを選んでください。**',
+      '**警告：GPT4Allは2025年5月27日以降更新がなく（最終リリースは2025年2月25日のv3.10.0）、メンテナンスが終了している可能性があります — 頼る前に確認してください。** **8GB RAM・専用GPUなしのノートPCで2026年10月に実用的に動くアプリは4つあります：Ollama、Jan、llama.cpp、GPT4All。これらをPhi-4 Mini Q4（バランス最適）、SmolLM 2 1.7B Q4（最速）、またはLlama 3.2 1B Q5（GUI体験が最も滑らか）と組み合わせ、ワーキングセットを6GB以下に抑えます。メンテナンスされたGUIが必要ならJanを選んでください。**',
     quickAnswerTop: {
       ja: {
         question: '8GB RAM・GPUなしのノートPCで一番動くローカルAIアプリは？',
         answer:
-          'ターミナルに慣れている方はOllamaを選びます — 最も軽量なランタイムで、Phi-4 Mini Q4と組み合わせて旧Intel CPUで4〜8 tok/秒、Ryzen 5000 / Intel 12世代クラスのハードウェアで8〜14 tok/秒を実現します。コマンドラインを使わずクリーンなGUIが欲しい方はJanを選びます — Apache 2.0で、活発にリリースが続いており、2026年8月時点でターミナル不要の最良の選択肢です。GPT4Allは今も優位に立つ2つのケース、すなわち4GB RAMのマシンか、管理者権限のない業務用ノートPCの場合にのみ選んでください — 最終リリースは2025年2月のv3.10.0です。最大tok/秒を求め、コンパイルを厭わないならllama.cppを直接選びます。',
+          'ターミナルに慣れている方はOllamaを選びます — 最も軽量なランタイムで、Phi-4 Mini Q4と組み合わせて旧Intel CPUで4〜8 tok/秒、Ryzen 5000 / Intel 12世代クラスのハードウェアで8〜14 tok/秒を実現します。コマンドラインを使わずクリーンなGUIが欲しい方はJanを選びます — Apache 2.0で、活発にリリースが続いており、2026年10月時点でターミナル不要の最良の選択肢です。GPT4Allは今も優位に立つ2つのケース、すなわち4GB RAMのマシンか、管理者権限のない業務用ノートPCの場合にのみ選んでください — 最終リリースは2025年2月のv3.10.0、最後のコード更新は2025年5月27日です。最大tok/秒を求め、コンパイルを厭わないならllama.cppを直接選びます。',
         bullets: [
           'Ollama — 最軽量CPUランタイム、ターミナル駆動、Phi-4 Miniとの相性が最高',
           'Jan — フルGUI、オープンソース（Apache 2.0）、Apple Siliconネイティブ、8GB Macで最軽量',
           'llama.cpp — ベアメタル速度、コンパイル必須、SmolLM 2 / Gemma 4 E2Bとの相性が最高',
-          'GPT4All — 最低RAM要件が最も低く（4GB）管理者権限なしでインストール可能だが、2025年2月以降リリースなし',
+          'GPT4All — 最低RAM要件が最も低く（4GB）管理者権限なしでインストール可能だが、2025年5月27日以降更新なし（メンテナンス終了の可能性）',
           '4つすべて無料、インストール後オフライン動作、標準GGUFモデルファイルをロード',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -1250,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連記事', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: '以下のスライドデッキでは：Ollama、Jan、llama.cpp、GPT4Allを8GB RAM・GPU無しで実測（4〜18 tok/s）；速度30〜60%向上の正確な設定（コンテキスト1024、バッチ8、KVキャッシュq8_0）；各アプリの推奨モデル（Phi-4 Mini Q4_K_M、SmolLM 2 1.7B、Gemma 4 E2B）；スワップ死を引き起こす5つのよくある間違いをカバーしています。低スペックPCローカルAIリファレンスカードとしてPDFをダウンロードできます。',
+    gammaDescription: '以下のスライドデッキでは：Ollama、Jan、llama.cpp、GPT4Allを8GB RAM・GPU無しで比較（コミュニティ報告の4〜18 tok/s）；速度30〜60%向上の正確な設定（コンテキスト1024、バッチ8、KVキャッシュq8_0）；各アプリの推奨モデル（Phi-4 Mini Q4_K_M、SmolLM 2 1.7B、Gemma 4 E2B）；スワップ死を引き起こす5つのよくある間違いをカバーしています。低スペックPCローカルAIリファレンスカードとしてPDFをダウンロードできます。GPT4Allは2025年5月以降更新がないため、スライドではJanの下に置いています。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1259,17 +1295,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama** — 2026年最軽量のCPUランタイム、バックグラウンドサーバーとして動作、最良のアプリ＋モデル組み合わせ：Ollama + Phi-4 Mini Q4で8GB CPU専用環境にて4〜14 tok/秒。',
           '**Jan** — フルGUI、Apache 2.0オープンソース、Apple Siliconネイティブ、8GB MacBook AirやM1 Mac mini向けの最軽量GUIアプリ。',
           '**llama.cpp** — 同一ハードウェアで最速tok/秒（Ollama比5〜15％高速、GPT4All比15〜25％高速）、ただしコンパイル工程が必要。',
-          '**GPT4All** — RAM最低4GBで管理者権限不要のインストールパスを持つ唯一のアプリだが、最終リリースは2025年2月25日のv3.10.0であり、第一候補ではなく代替手段として扱うべき。',
+          '**GPT4All** — RAM最低4GBで管理者権限不要のインストールパスを持つ4つのうち唯一のGUIアプリだが、2025年5月27日以降更新がなく（最終リリースは2025年2月25日のv3.10.0）メンテナンス終了の可能性があるため、第一候補ではなく代替手段として扱うべき。',
           '**8GB / GPUなしでのベストモデル：** バランス重視ならPhi-4 Mini 3.8B Q4_K_M、最大速度重視ならSmolLM 2 1.7B Q4、最も滑らかなチャット体験ならLlama 3.2 1B Q5。',
           '**同一CPUでの速度ランキング：** llama.cpp > Ollama > Jan > GPT4All。差は15〜25％であり、2〜3倍ではありません。',
-          '**2026年8月時点で、8GB RAMで7B+モデルを実行しないでください** — コンテキストウィンドウ圧とOSそのものがスワップを誘発し、スループットを5〜10倍低下させます。',
+          '**2026年10月時点で、8GB RAMで7B+モデルを実行しないでください** — コンテキストウィンドウ圧とOSそのものがスワップを誘発し、スループットを5〜10倍低下させます。',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Ollama、Jan、llama.cpp、GPT4Allは8GB RAM・GPUなしでどう比較できるか？',
         content:
-          '以下の範囲はllama.cpp上流ベンチマークスレッド、Hugging Faceモデルカード値、r/LocalLLaMAテストレポート（8GB統合グラフィックスノートPC：Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8GB）から集計したものです。tok/秒はモデルロード後の200トークン生成で測定、デフォルトコンテキストウィンドウ2048（特記なき場合）。',
+          '以下の範囲はllama.cpp上流ベンチマークスレッド、Hugging Faceモデルカード値、r/LocalLLaMAテストレポート（8GB統合グラフィックスノートPC：Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8GB）から集計したものです。報告されたtok/秒はモデルロード後の200トークン生成に基づきます（PromptQuorum自身が測定したものではありません）。デフォルトコンテキストウィンドウ2048（特記なき場合）。確認したバージョン（2026年10月）：Ollama v0.40.10、Jan v0.8.7、GPT4All v3.10.0（2025年2月リリース、最後のコード更新は2025年5月27日）。',
         snippetBlocks: [
           { type: 'one-sentence', text: '8GB RAM・専用GPUなしのノートPCでは、Phi-4 Mini Q4_K_Mと組み合わせたOllamaが最良のオールラウンドローカルAIセットアップです — ノーコード選択肢の中で最速の生成速度、最低の熱負荷、最広のモデルライブラリを備えています。' },
           { type: 'plain-terms', text: '8GB RAM・GPUなしのロースペックPCでは：Ollamaをインストールし、`ollama pull phi4-mini`を実行、次に`ollama run phi4-mini`を実行します。CPUに応じて4〜14 tok/秒で動作 — 遅いですが、プロンプトを送って回答を待つ用途では実用的です。ターミナル不要の代替手段としては、Janが通常のアプリのようにインストールでき、8GBに収まるモデルにキュレートされたリストを提供します。' },
@@ -1282,11 +1318,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'アプリ': '[Ollama](https://ollama.com)', '最低RAM': '6 GB', 'ベストモデル（8GB制約）': 'Phi-4 Mini Q4_K_M', 'tok/秒（CPU専用）': '4〜14 tok/秒', '発熱': '低', '評価': 'バランス最良 — 最初に選ぶべき' },
           { 'アプリ': '[Jan](https://jan.ai)', '最低RAM': '6 GB', 'ベストモデル（8GB制約）': 'Gemma 4 E2B Q4_K_M', 'tok/秒（CPU専用）': '3〜11 tok/秒', '発熱': '中', '評価': '最良のGUI — ターミナル不要の選択肢' },
           { 'アプリ': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'SmolLM 2 1.7B Q4_K_M', 'tok/秒（CPU専用）': '5〜18 tok/秒', '発熱': '低', '評価': 'コンパイルできるなら最速' },
-          { 'アプリ': '[GPT4All](https://nomic.ai/gpt4all)', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'Llama 3.2 1B Q4_0', 'tok/秒（CPU専用）': '3〜10 tok/秒', '発熱': '低', '評価': '代替 — 2025年2月以降リリースなし' },
+          { 'アプリ': '[GPT4All](https://nomic.ai/gpt4all)', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'Llama 3.2 1B Q4_0', 'tok/秒（CPU専用）': '3〜10 tok/秒', '発熱': '低', '評価': '代替 — 2025年5月以降更新なし' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: '低スペックPCのローカルAI：8GB RAM・GPUなしでのllama.cpp、Ollama、Jan、GPT4Allのtok/秒比較',
         imageCaption:
-          '8GB RAM・GPUなしでのtok/秒：llama.cppは5〜18 tok/秒（最速、コンパイルが必要）、Ollamaは4〜14 tok/秒（バランス最良）、Janは3〜11 tok/秒（最良のGUI、Apple Siliconネイティブ）、GPT4Allは3〜10 tok/秒（最低4GB、2025年2月以降リリースなし）。',
+          '8GB RAM・GPUなしでのtok/秒：llama.cppは5〜18 tok/秒（最速、コンパイルが必要）、Ollamaは4〜14 tok/秒（バランス最良）、Janは3〜11 tok/秒（最良のGUI、Apple Siliconネイティブ）、GPT4Allは3〜10 tok/秒（最低4GB、2025年5月以降更新なし）。',
       },
       whichOne: {
         id: 'which-one',
@@ -1299,6 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '状況': 'Linuxノート、最大tok/秒を求める', '選択': 'llama.cpp' },
           { '状況': '4GB RAMマシン（仕様未満）', '選択': 'GPT4All + Llama 3.2 1B Q4_0' },
           { '状況': '旧Intel Core i5-8250U / i7-7700Uクラス CPU', '選択': 'Ollama + SmolLM 2 1.7B' },
+          { '状況': 'macOS 14以降のIntel Mac（2015〜2020年）', '選択': 'Ollama（CPU専用）+ SmolLM 2 1.7B' },
           { '状況': 'Linux dev mode対応Chromebook', '選択': 'llama.cpp + SmolLM 2' },
           { '状況': 'ドライバインストール不可の業務用ノートPC', '選択': 'GPT4All（ドライバ不要 / 管理者権限不要）' },
         ],
@@ -1310,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cpuBenchmarks: {
         id: 'cpu-benchmarks',
         title: '実際のロースペックハードウェアで各アプリはどれくらい速いか？',
-        content: '**8GB RAM・専用GPUなしの代表的マシンでのtok/秒、2026年8月。** 数値はllama.cpp上流ベンチマークスレッド、Hugging Faceモデルカードデータ、r/LocalLLaMAハードウェアタグ付きテストからのコミュニティ報告範囲です。各セルはデフォルト設定での報告実行の典型範囲（外れ値除外）。',
+        content: '**8GB RAM・専用GPUなしの代表的マシンでのtok/秒、2026年10月。** 数値はllama.cpp上流ベンチマークスレッド、Hugging Faceモデルカードデータ、r/LocalLLaMAハードウェアタグ付きテストからのコミュニティ報告範囲です。各セルはデフォルト設定での報告実行の典型範囲（外れ値除外）。',
         columns: ['ハードウェア', 'モデル', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           { 'ハードウェア': 'Intel Core i5-8250U + UHD 620（2018年ウルトラポータブル）', 'モデル': 'Phi-4 Mini Q4_K_M', 'Ollama': '4〜6 tok/秒', 'Jan': '3〜5 tok/秒', 'llama.cpp': '5〜7 tok/秒', 'GPT4All': '3〜5 tok/秒' },
@@ -1340,6 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'warning', text: '8GB RAMでは、Q2であっても7Bモデルを一切ロードしないでください。Q2 7Bはディスク上で ≈ 2.5 GBですが、ワーキングセット＋2048コンテキストでは ≈ 5.5 GBに達し、ほとんどのWindows / Linuxシステムでスワップに移行します。結果は5〜10倍の速度低下とフリーズしたUIです。' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: '低スペックPCのローカルAI向け8GB RAM予算：Phi-4 Miniは収まり、7B Q4はスワップを招く',
         imageCaption:
           '8GB RAM予算の比較：Phi-4 Mini 3.8B Q4はOS約3GB＋モデル/KVキャッシュ約3.5GBを使用し約1.5GBが空きますが、7B Q4モデルは合計約9GBが必要で、8GBの上限を1GB超え、スワップを引き起こしてtok/秒を5〜10倍低下させます。',
       },
@@ -1419,7 +1458,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Chromebookでローカルai を実行できますか？', a: 'Linux dev mode（Crostini）が利用可能な場合のみ。このガイドの4アプリはすべてLinuxコンテナで動作します — ARM Chromebookではソースからコンパイルしたllama.cppが最も信頼性が高く、x86 Chromebook（Intel）はOllamaやGPT4Allで動作します。パフォーマンスは基となるCPUに対応 — Intel Core i3 / i5 Chromebookは同等のWindowsノートPCのように動作します。' },
           { q: '2026年でもWindows 10はローカルAIに使えますか？', a: 'はい。4アプリすべてがWindows 10 22H2をサポートします。Ollama、Jan、GPT4Allは署名付きWindowsインストーラーを提供し、llama.cppはGitHubリリースにプリビルドWindowsバイナリを提供します。2025年10月のWindows 10メインストリームサポート終了はインストールを妨げませんが、セキュリティアップデートが終わったため、長期使用にはLinuxデュアルブートやWindows 11アップグレードを検討してください。' },
           { q: 'ローカルAIをまともに動かせる最安ノートPCは？', a: '中古2021〜2022年のThinkPad T14またはDell Latitude 5430（16 GB RAM、Ryzen 5 5500UまたはIntel i5-1235U）は2026年に約¥60,000〜80,000で、Phi-4 Mini Q4を8〜14 tok/秒で動作させます。さらに安価：8 GB Apple M1 MacBook Air中古は約¥80,000〜100,000で、ユニファイドメモリにより多くのx86ノートPCをtok/秒で凌駕します。' },
-          { q: '2026年でもGPT4Allをインストールして問題ありませんか？', a: 'インストールも動作も問題ありませんが、最新リリースは2025年2月25日のv3.10.0で、2026年8月時点で約18か月間新しいビルドが出ていません。実際上は、同梱カタログに新しいモデルアーキテクチャが追加されず、アプリ自体のセキュリティ修正も行われないということで、個人用マシンより業務用マシンで重く効いてきます。4GB RAMの上限、または管理者権限のないロックされたノートPCという残る2つの利点が当てはまる場合に使い、それ以外はJanを使ってください。' },
+          { q: '2026年でもGPT4Allをインストールして問題ありませんか？', a: 'インストールも動作も問題ありませんが、最新リリースは2025年2月25日のv3.10.0で、2026年10月時点で約20か月間新しいビルドが出ておらず、最後のコード更新は2025年5月27日です。実際上は、同梱カタログに新しいモデルアーキテクチャが追加されず、アプリ自体のセキュリティ修正も行われないということで、個人用マシンより業務用マシンで重く効いてきます。4GB RAMの上限、または管理者権限のないロックされたノートPCというメンテナンスが終了している可能性があるため、残る2つの利点が当てはまる場合にのみ使い、それ以外はJanを使ってください。' },
+          { q: 'Intel Macの8GB RAMでローカルAIは動きますか？', a: 'はい、ただしCPUのみです。[Ollamaの公式macOS要件](https://github.com/ollama/ollama/blob/main/docs/macos.mdx)は、macOS Sonoma（14）以降で、Apple Mシリーズ（CPUとGPU）またはx86（CPUのみ）と記載しています。そのためmacOS 13以前のIntel Macでは現行のOllamaアプリを実行できません。[Jan](https://jan.ai)はユニバーサルmacOSビルドを提供し、[llama.cpp](https://github.com/ggml-org/llama.cpp)はどのIntel Macでもコンパイルできます。速度はApple M1ではなくベンチマーク表のIntelノートPCの行に近くなるため、SmolLM 2 1.7B Q4_K_MやPhi-4 Mini Q4_K_Mなど1.7B〜3.8Bのモデルにとどめてください。' },
+          { q: '古いCore i3・Celeron・PentiumのノートPCでローカルAIは動きますか？', a: '動く場合もあります。決め手はブランド名ではなくCPUの命令セットです。2013年以降（Haswell）のIntel Core i3はAVX2に対応していますが、第1世代Core i3、i3-3110MなどのIvy Bridge、Atom系のCeleron／Pentium Nシリーズ（Gemini Lake、N6000などのJasper Lake）は対応していません。インストール前にIntel ARKで正確な型番を確認してください。AVX2対応で8GB RAMなら、SmolLM 2 1.7B Q4_K_MかLlama 3.2 1B Q4_K_Mが現実的な上限です。AVX2がない場合、llama.cppは動作しますが、チャット用途には遅すぎることがほとんどです。' },
           { q: 'Raspberry PiをローカルAIに使えますか？', a: '8 GB RAM搭載のRaspberry Pi 5はLlama 3.2 1B Q4を4〜7 tok/秒で動作 — 使用可能だが遅い。Pi 4 4 GBはTinyLlama 1Bで約2 tok/秒が上限。実際のチャット使用には、8 GB x86ノートPCやM1 MacBook Airの方が高速、中古で安価、セットアップが簡単です。Piは組み込み・エッジ・常時稼働ワークロードでのみ意味があります。' },
         ],
       },
@@ -1442,10 +1483,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/ja/power-local-llm/best-local-ai-app-low-end-pc',
-      'headline': 'ロースペックPC向けベストローカルAIアプリ 2026年版（8GB RAM・GPUなし）',
-      'description': 'Ollama、Jan、llama.cpp、GPT4Allを8GB RAM・統合グラフィックスノートPCでテスト。tok/秒、メモリ圧、設定。2026年8月更新。',
+      'headline': '低スペックPC向けローカルAIアプリ：8GB・GPUなし2026',
+      'description': 'Ollama、Jan、llama.cpp、GPT4Allを8GB RAM・統合グラフィックスノートPCで比較。コミュニティ報告のtok/秒、メモリ圧、設定。',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
       'proficiencyLevel': 'Beginner',
@@ -1468,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', 'position': 1, 'name': 'Ollama', 'description': '最軽量CPUランタイム；最低6 GB RAM；Phi-4 Mini Q4_K_Mとの組み合わせで8GB CPU専用環境にて4〜14トークン/秒。' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Jan', 'description': 'オープンソースGUI（Apache 2.0）；最低6 GB RAM；Gemma 4 E2B Q4_K_Mとの組み合わせで3〜11トークン/秒；Apple Silicon 8GBで最軽量GUI。' },
         { '@type': 'ListItem', 'position': 3, 'name': 'llama.cpp', 'description': 'コンパイルすればベアメタル速度；最低4 GB RAM；SmolLM 2 1.7B Q4_K_Mとの組み合わせで5〜18トークン/秒；同一ハードウェアで最速。' },
-        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': '最簡ワンクリックインストーラー；最低4 GB RAM；Llama 3.2 1B Q4_0との組み合わせで3〜10トークン/秒；非技術ユーザー推奨。' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': '最簡ワンクリックインストーラー；最低4 GB RAM；Llama 3.2 1B Q4_0との組み合わせで3〜10トークン/秒；非技術ユーザー向けだが、2025年5月27日以降更新なし。' },
       ],
     },
     breadcrumbSchema: {
@@ -1482,19 +1523,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-zh.webp',
     title: '2026年低配PC最佳本地AI应用（8GB内存，无独立GPU）',
-    seoTitle: '8GB内存集成显卡PC适用的本地AI 2026：Ollama、Jan、llama.cpp、GPT4All无GPU实测',
+    seoTitle: '低配PC本地AI应用：8GB内存无GPU（2026）',
     metaDescription:
-      '不需要RTX 4090。Ollama、Jan、llama.cpp和GPT4All在8GB内存集成显卡笔记本上实测。tokens/秒、内存压力、精确设置。2026年8月。',
+      'Ollama、Jan、llama.cpp和GPT4All在8GB内存无GPU下的对比：社区报告的tokens/秒、各应用推荐模型、纯CPU提速设置。',
     twitterDescription:
-      '4款可在8GB内存无GPU笔记本上运行的本地AI应用。tokens/秒、精确设置、坦诚评测。2026年8月。',
+      '4款可在8GB内存无GPU笔记本上运行的本地AI应用对比。社区报告的tokens/秒、精确设置、坦诚评测。',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: ['Intel UHD 620', 'Intel Iris Xe', 'AMD Ryzen 5 5500U', 'Apple M1 8GB', 'Intel Core i5-8250U'],
     audience: '拥有4至7年旧款笔记本（8GB内存，无独立GPU）选择首个本地AI应用的用户。',
@@ -1503,20 +1545,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: '低配PC本地AI',
     targetKeywords: ['本地ai 8gb 内存', '低配pc 最佳 llm', '无gpu 本地ai', 'cpu 专用 本地llm 2026', '老笔记本 本地ai'],
     leadAnswerBlock:
-      '**在8GB内存无独立GPU的笔记本上，2026年8月有4款应用可以良好运行：Ollama、Jan、llama.cpp和GPT4All。搭配Phi-4 Mini Q4（最佳平衡）、SmolLM 2 1.7B Q4（最快）或Llama 3.2 1B Q5（最流畅GUI体验），将工作集控制在6GB以下。GPT4All仍可运行，但自2025年2月的v3.10.0以来没有发布过新版本 — 如果你需要持续维护的GUI，请选择Jan。**',
+      '**警告：GPT4All自2025年5月27日起没有任何更新（最后一个版本是2025年2月25日的v3.10.0），可能已不再维护 — 依赖它之前请先确认。** **在8GB内存无独立GPU的笔记本上，2026年10月有4款应用可以良好运行：Ollama、Jan、llama.cpp和GPT4All。搭配Phi-4 Mini Q4（最佳平衡）、SmolLM 2 1.7B Q4（最快）或Llama 3.2 1B Q5（最流畅GUI体验），将工作集控制在6GB以下。如果你需要持续维护的GUI，请选择Jan。**',
     quickAnswerTop: {
       zh: {
         question: '8GB内存无GPU笔记本上最佳本地AI应用是什么？',
         answer:
-          '熟悉终端选择Ollama — 最轻量的运行时，与Phi-4 Mini Q4搭配在旧Intel CPU上达到4–8 tok/秒，在Ryzen 5000 / Intel 12代级硬件上达到8–14 tok/秒。需要简洁GUI且不用命令行选择Jan — Apache 2.0协议，发布活跃，是2026年8月无终端方案的最佳选择。仅在GPT4All仍占优势的两种情况下选择它：4GB内存的机器，或没有管理员权限的受限工作笔记本 — 它的最后一个版本是2025年2月的v3.10.0。需要最大tokens/秒并愿意编译选择llama.cpp。',
+          '熟悉终端选择Ollama — 最轻量的运行时，与Phi-4 Mini Q4搭配在旧Intel CPU上达到4–8 tok/秒，在Ryzen 5000 / Intel 12代级硬件上达到8–14 tok/秒。需要简洁GUI且不用命令行选择Jan — Apache 2.0协议，发布活跃，是2026年10月无终端方案的最佳选择。仅在GPT4All仍占优势的两种情况下选择它：4GB内存的机器，或没有管理员权限的受限工作笔记本 — 它的最后一个版本是2025年2月的v3.10.0，最后一次代码提交在2025年5月27日。需要最大tokens/秒并愿意编译选择llama.cpp。',
         bullets: [
           'Ollama — 最轻量CPU运行时，终端驱动，与Phi-4 Mini搭配最佳',
           'Jan — 完整GUI，开源（Apache 2.0），Apple Silicon原生，8GB Mac最轻量选择',
           'llama.cpp — 裸机速度，需要编译，与SmolLM 2 / Gemma 4 E2B搭配最佳',
-          'GPT4All — 内存门槛最低（4GB）且无需管理员权限安装，但自2025年2月起未发布新版本',
+          'GPT4All — 内存门槛最低（4GB）且无需管理员权限安装，但自2025年5月27日起没有更新（可能已不再维护）',
           '4款全部免费，安装后离线运行，加载标准GGUF模型文件',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -1533,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '相关阅读', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: '以下幻灯片包含：Ollama、Jan、llama.cpp和GPT4All在8GB内存+无GPU下实测（4〜18 tok/s）；提速30〜60%的精确设置（上下文1024、批处理8、KV缓存q8_0）；各应用推荐模型（Phi-4 Mini Q4_K_M、SmolLM 2 1.7B、Gemma 4 E2B）；以及触发交换死亡的五个常见错误。下载PDF作为低端PC本地AI参考卡片。',
+    gammaDescription: '以下幻灯片包含：Ollama、Jan、llama.cpp和GPT4All在8GB内存+无GPU下的对比（社区报告的4〜18 tok/s）；提速30〜60%的精确设置（上下文1024、批处理8、KV缓存q8_0）；各应用推荐模型（Phi-4 Mini Q4_K_M、SmolLM 2 1.7B、Gemma 4 E2B）；以及触发交换死亡的五个常见错误。下载PDF作为低端PC本地AI参考卡片。因GPT4All自2025年5月起没有更新，幻灯片将其排在Jan之后。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1542,17 +1584,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama** — 2026年最轻量CPU运行时，作为后台服务器运行，最佳应用+模型组合：Ollama + Phi-4 Mini Q4在8GB CPU专用环境下达到4–14 tok/秒。',
           '**Jan** — 完整GUI，Apache 2.0开源，Apple Silicon原生，8GB MacBook Air或M1 Mac mini的最轻量GUI应用。',
           '**llama.cpp** — 同硬件最快tokens/秒（比Ollama高5–15%，比GPT4All高15–25%），但需要编译步骤。',
-          '**GPT4All** — 仍是唯一支持4GB最低内存且无需管理员权限安装的应用，但最后一个版本是2025年2月25日的v3.10.0，应作为备选而非首选。',
+          '**GPT4All** — 仍是4款应用中唯一支持4GB最低内存且无需管理员权限安装的GUI应用，但自2025年5月27日起没有更新（最后一个版本是2025年2月25日的v3.10.0），可能已不再维护，应作为备选而非首选。',
           '**8GB / 无GPU最佳模型：** 平衡型选Phi-4 Mini 3.8B Q4_K_M，最大速度选SmolLM 2 1.7B Q4，最流畅聊天体验选Llama 3.2 1B Q5。',
           '**同CPU速度排名：** llama.cpp > Ollama > Jan > GPT4All。差距15–25%，不是2–3倍。',
-          '**截至2026年8月，请勿在8GB内存上运行7B+模型** — 上下文窗口压力加上操作系统本身将触发交换，使吞吐量下降5–10倍。',
+          '**截至2026年10月，请勿在8GB内存上运行7B+模型** — 上下文窗口压力加上操作系统本身将触发交换，使吞吐量下降5–10倍。',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Ollama、Jan、llama.cpp和GPT4All在8GB内存无GPU上如何对比？',
         content:
-          '以下范围汇总自llama.cpp上游基准测试线程、Hugging Face模型卡数据和r/LocalLLaMA在8GB集成显卡笔记本（Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8GB）上的测试报告。tokens/秒在模型加载后的200 token生成上测量，默认上下文窗口2048（除非另注）。',
+          '以下范围汇总自llama.cpp上游基准测试线程、Hugging Face模型卡数据和r/LocalLLaMA在8GB集成显卡笔记本（Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8GB）上的测试报告。所报告的tokens/秒基于模型加载后的200 token生成（并非PromptQuorum自行测得），默认上下文窗口2048（除非另注）。已核对版本（2026年10月）：Ollama v0.40.10、Jan v0.8.7、GPT4All v3.10.0（2025年2月发布，最后一次代码提交在2025年5月27日）。',
         snippetBlocks: [
           { type: 'one-sentence', text: '在8GB内存无独立GPU的笔记本上，搭配Phi-4 Mini Q4_K_M的Ollama是最佳全能本地AI配置 — 在无代码选项中生成速度最快、热负载最低、模型库最广。' },
           { type: 'plain-terms', text: '在8GB内存无GPU的低配PC上：安装Ollama，运行 `ollama pull phi4-mini`，然后 `ollama run phi4-mini`。根据CPU可获得4–14 tokens/秒 — 较慢但适用于发送提示后等待响应的任务。无终端替代方案：Jan像普通应用一样安装，并将模型列表精选为可装入8GB的模型。' },
@@ -1565,11 +1607,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '应用': '[Ollama](https://ollama.com)', '最低内存': '6 GB', '最佳模型（8GB限制）': 'Phi-4 Mini Q4_K_M', 'tokens/秒（CPU专用）': '4–14 tok/s', '发热': '低', '评判': '最佳平衡 — 优先选择' },
           { '应用': '[Jan](https://jan.ai)', '最低内存': '6 GB', '最佳模型（8GB限制）': 'Gemma 4 E2B Q4_K_M', 'tokens/秒（CPU专用）': '3–11 tok/s', '发热': '中', '评判': '最佳GUI — 无终端首选' },
           { '应用': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', '最低内存': '4 GB', '最佳模型（8GB限制）': 'SmolLM 2 1.7B Q4_K_M', 'tokens/秒（CPU专用）': '5–18 tok/s', '发热': '低', '评判': '能编译则最快' },
-          { '应用': '[GPT4All](https://nomic.ai/gpt4all)', '最低内存': '4 GB', '最佳模型（8GB限制）': 'Llama 3.2 1B Q4_0', 'tokens/秒（CPU专用）': '3–10 tok/s', '发热': '低', '评判': '备选 — 自2025年2月起无新版本' },
+          { '应用': '[GPT4All](https://nomic.ai/gpt4all)', '最低内存': '4 GB', '最佳模型（8GB限制）': 'Llama 3.2 1B Q4_0', 'tokens/秒（CPU专用）': '3–10 tok/s', '发热': '低', '评判': '备选 — 自2025年5月起无更新' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: '低配PC本地AI：8GB内存无GPU下llama.cpp、Ollama、Jan、GPT4All的tokens/秒对比图',
         imageCaption:
-          '8GB内存、无GPU下的tokens/秒：llama.cpp为5–18 tok/s（最快，需要编译），Ollama为4–14 tok/s（最佳平衡），Jan为3–11 tok/s（最佳GUI，Apple Silicon原生），GPT4All为3–10 tok/s（最低4GB，自2025年2月起无新版本）。',
+          '8GB内存、无GPU下的tokens/秒：llama.cpp为5–18 tok/s（最快，需要编译），Ollama为4–14 tok/s（最佳平衡），Jan为3–11 tok/s（最佳GUI，Apple Silicon原生），GPT4All为3–10 tok/s（最低4GB，自2025年5月起无更新）。',
       },
       whichOne: {
         id: 'which-one',
@@ -1582,6 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '您的情况': 'Linux笔记本，追求最大tokens/秒', '选择': 'llama.cpp' },
           { '您的情况': '4GB内存机器（低于规格）', '选择': 'GPT4All + Llama 3.2 1B Q4_0' },
           { '您的情况': '老旧Intel Core i5-8250U / i7-7700U级CPU', '选择': 'Ollama + SmolLM 2 1.7B' },
+          { '您的情况': 'macOS 14或更新版本的Intel Mac（2015–2020）', '选择': 'Ollama（纯CPU）+ SmolLM 2 1.7B' },
           { '您的情况': '启用Linux开发模式的Chromebook', '选择': 'llama.cpp + SmolLM 2' },
           { '您的情况': '无法安装驱动的工作笔记本', '选择': 'GPT4All（无驱动 / 无管理员权限安装）' },
         ],
@@ -1593,7 +1637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cpuBenchmarks: {
         id: 'cpu-benchmarks',
         title: '每个应用在真实低配硬件上有多快？',
-        content: '**8GB内存无独立GPU代表性机器上的tokens/秒，2026年8月。** 数字是来自llama.cpp上游基准测试线程、Hugging Face模型卡数据和r/LocalLLaMA硬件标记测试的社区报告范围。每个单元格是默认设置下报告运行的典型范围（排除异常值）。',
+        content: '**8GB内存无独立GPU代表性机器上的tokens/秒，2026年10月。** 数字是来自llama.cpp上游基准测试线程、Hugging Face模型卡数据和r/LocalLLaMA硬件标记测试的社区报告范围。每个单元格是默认设置下报告运行的典型范围（排除异常值）。',
         columns: ['硬件', '模型', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           { '硬件': 'Intel Core i5-8250U + UHD 620（2018超便携）', '模型': 'Phi-4 Mini Q4_K_M', 'Ollama': '4–6 tok/s', 'Jan': '3–5 tok/s', 'llama.cpp': '5–7 tok/s', 'GPT4All': '3–5 tok/s' },
@@ -1623,6 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'warning', text: '在8GB内存上不要加载任何7B模型，即使是Q2。Q2 7B在磁盘上 ≈ 2.5 GB，但工作集加2048上下文达到 ≈ 5.5 GB，在大多数Windows / Linux系统上越界进入交换。结果是5–10倍速度下降和UI冻结。' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: '低配PC本地AI的8GB内存预算：Phi-4 Mini可容纳，7B Q4模型会触发交换',
         imageCaption:
           '8GB内存预算对比：Phi-4 Mini 3.8B Q4使用约3GB操作系统+约3.5GB模型/KV缓存，剩余约1.5GB空闲，而7B Q4模型总共需要约9GB — 超出8GB上限1GB — 这会触发交换并使tokens/秒下降5–10倍。',
       },
@@ -1702,7 +1747,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '能在Chromebook上运行本地AI吗？', a: '仅当Linux开发模式（Crostini）可用。本指南的4个应用都在Linux容器中运行 — 从源码编译的llama.cpp在ARM Chromebook上最可靠，而x86 Chromebook（基于Intel）使用Ollama或GPT4All。性能映射到底层CPU；Intel Core i3 / i5 Chromebook表现类似等效Windows笔记本。' },
           { q: '2026年Windows 10还能用于本地AI吗？', a: '是的。所有4个应用都支持Windows 10 22H2。Ollama、Jan和GPT4All提供签名的Windows安装程序；llama.cpp在其GitHub发布版中提供预构建Windows二进制文件。2025年10月Windows 10主流支持结束并不阻止安装，但安全更新已停止 — 长期使用可考虑Linux双启动或升级到Windows 11。' },
           { q: '能良好运行本地AI的最便宜笔记本是什么？', a: '二手2021–2022 ThinkPad T14或Dell Latitude 5430（16 GB内存，Ryzen 5 5500U或Intel i5-1235U）在2026年售价350–450欧元，运行Phi-4 Mini Q4达8–14 tok/s。更便宜：任何8 GB Apple M1 MacBook Air二手450–550欧元，得益于统一内存在tokens/秒上击败大多数x86笔记本。' },
-          { q: '2026年安装GPT4All还安全吗？', a: '它仍能正常安装和运行，但最新版本是2025年2月25日的v3.10.0 — 到2026年8月已约18个月没有新构建。实际影响是：内置目录中不会加入新的模型架构，应用本身也不再获得安全补丁，这在工作机上比在个人机上更值得顾虑。当它仅存的两个优势成立时再用它 — 4GB内存上限，或没有管理员权限的受限笔记本 — 其余情况请用Jan。' },
+          { q: '2026年安装GPT4All还安全吗？', a: '它仍能正常安装和运行，但最新版本是2025年2月25日的v3.10.0 — 到2026年10月已约20个月没有新构建，最后一次代码提交在2025年5月27日。实际影响是：内置目录中不会加入新的模型架构，应用本身也不再获得安全补丁，这在工作机上比在个人机上更值得顾虑。它可能已不再维护，仅当它仅存的两个优势成立时再用它 — 4GB内存上限，或没有管理员权限的受限笔记本 — 其余情况请用Jan。' },
+          { q: 'Intel Mac在8GB内存下能运行本地AI吗？', a: '可以，但只能用CPU。[Ollama官方macOS系统要求](https://github.com/ollama/ollama/blob/main/docs/macos.mdx)列出的是macOS Sonoma（14）或更新版本，支持Apple M系列（CPU和GPU）或x86（仅CPU），因此停留在macOS 13或更早版本的Intel Mac无法运行当前的Ollama应用。[Jan](https://jan.ai)提供通用（universal）macOS版本，[llama.cpp](https://github.com/ggml-org/llama.cpp)可以在任何Intel Mac上编译。速度更接近基准表中的Intel笔记本行，而不是Apple M1行，因此请使用1.7B–3.8B的模型，例如SmolLM 2 1.7B Q4_K_M或Phi-4 Mini Q4_K_M。' },
+          { q: '老款Core i3、Celeron或Pentium笔记本能运行本地AI吗？', a: '有时可以。关键是CPU指令集，而不是品牌名称：2013年起（Haswell）的Intel Core i3支持AVX2，而第一代Core i3、i3-3110M这类Ivy Bridge处理器，以及基于Atom的Celeron / Pentium N系列（Gemini Lake，以及N6000这类Jasper Lake）不支持。安装前请在Intel ARK上核对确切型号。有AVX2且8GB内存时，SmolLM 2 1.7B Q4_K_M或Llama 3.2 1B Q4_K_M是现实的上限。没有AVX2时llama.cpp仍能运行，但速度通常慢到无法聊天。' },
           { q: '能用Raspberry Pi做本地AI吗？', a: '8 GB内存的Raspberry Pi 5以4–7 tok/s运行Llama 3.2 1B Q4 — 可用但慢。Pi 4 4 GB在TinyLlama 1B上限约2 tok/s。对于真实聊天使用，8 GB x86笔记本或M1 MacBook Air更快、二手更便宜、设置更简单。Pi仅在嵌入式、边缘或常开工作负载中有意义。' },
         ],
       },
@@ -1725,10 +1772,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/zh/power-local-llm/best-local-ai-app-low-end-pc',
-      'headline': '2026年低配PC最佳本地AI应用（8GB内存，无独立GPU）',
-      'description': 'Ollama、Jan、llama.cpp和GPT4All在8GB内存集成显卡笔记本上实测。tokens/秒、内存压力、精确设置。2026年8月更新。',
+      'headline': '低配PC本地AI应用：8GB内存无GPU（2026）',
+      'description': 'Ollama、Jan、llama.cpp和GPT4All在8GB内存集成显卡笔记本上的对比。社区报告的tokens/秒、内存压力、精确设置。',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
       'proficiencyLevel': 'Beginner',
@@ -1751,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', 'position': 1, 'name': 'Ollama', 'description': '最轻量CPU运行时；最低6 GB内存；与Phi-4 Mini Q4_K_M搭配在8GB CPU专用环境下达到4–14 tokens/秒。' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Jan', 'description': '开源GUI（Apache 2.0）；最低6 GB内存；与Gemma 4 E2B Q4_K_M搭配达3–11 tokens/秒；Apple Silicon 8GB最轻量GUI。' },
         { '@type': 'ListItem', 'position': 3, 'name': 'llama.cpp', 'description': '编译则有裸机速度；最低4 GB内存；与SmolLM 2 1.7B Q4_K_M搭配达5–18 tokens/秒；同硬件最快。' },
-        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': '最简一键安装程序；最低4 GB内存；与Llama 3.2 1B Q4_0搭配达3–10 tokens/秒；推荐非技术用户。' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': '最简一键安装程序；最低4 GB内存；与Llama 3.2 1B Q4_0搭配达3–10 tokens/秒；适合非技术用户，但自2025年5月27日起没有更新。' },
       ],
     },
     breadcrumbSchema: {
@@ -1765,19 +1812,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-es.webp',
     title: 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
-    seoTitle: 'Mejores apps de IA local en PC de 8 GB 2026: solo CPU',
+    seoTitle: 'Mejor IA local para PC de pocos recursos: 8 GB sin GPU',
     metaDescription:
-      'Ollama, Jan, llama.cpp y GPT4All probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas. Agosto 2026.',
+      'Ollama, Jan, llama.cpp y GPT4All comparados en PC con 8 GB de RAM sin GPU: tokens/s de la comunidad, mejor modelo por app y ajustes para CPU.',
     twitterDescription:
-      '4 apps de IA local que funcionan en portátiles con 8 GB RAM sin GPU. Tokens/s, configuraciones exactas, veredictos honestos. Mayo 2026.',
+      '4 apps de IA local comparadas para portátiles con 8 GB RAM sin GPU. Tokens/s de la comunidad, configuraciones exactas, veredictos honestos.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: [
       'Intel UHD 620',
@@ -1799,20 +1847,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ia local portátil antiguo',
     ],
     leadAnswerBlock:
-      '**En un portátil con 8 GB RAM y sin GPU dedicada, cuatro apps funcionan bien en agosto de 2026: Ollama, Jan, llama.cpp y GPT4All. Combina cualquiera con Phi-4 Mini Q4 (mejor equilibrio), SmolLM 2 1.7B Q4 (más rápido) o Llama 3.2 1B Q5 (experiencia GUI más fluida) y mantén el conjunto de trabajo por debajo de 6 GB. GPT4All sigue funcionando, pero no publica una versión desde la v3.10.0 de febrero de 2025 — elige Jan si quieres una GUI mantenida.**',
+      '**Advertencia: GPT4All no recibe ninguna actualización desde el 27 de mayo de 2025 (última versión v3.10.0, 25 de febrero de 2025), así que puede estar sin mantenimiento — compruébalo antes de depender de ella.** **En un portátil con 8 GB RAM y sin GPU dedicada, cuatro apps funcionan bien en octubre de 2026: Ollama, Jan, llama.cpp y GPT4All. Combina cualquiera con Phi-4 Mini Q4 (mejor equilibrio), SmolLM 2 1.7B Q4 (más rápido) o Llama 3.2 1B Q5 (experiencia GUI más fluida) y mantén el conjunto de trabajo por debajo de 6 GB. Elige Jan si quieres una GUI mantenida.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué app de IA local funciona mejor en un portátil con 8 GB RAM sin GPU?',
         answer:
-          'Elige Ollama si te manejas con la terminal — es el runtime más ligero y funciona muy bien con Phi-4 Mini Q4 a 4–8 tok/s en CPUs Intel más antiguas y 8–14 tok/s en hardware de la clase Ryzen 5000 / Intel 12.ª gen. Elige Jan para una GUI limpia sin línea de comandos — es Apache 2.0, se publica de forma activa y es la mejor opción sin terminal en agosto de 2026. Elige llama.cpp directamente si buscas el máximo de tokens por segundo y aceptas compilar. Elige GPT4All solo en los dos casos en que sigue ganando: una máquina con 4 GB de RAM, o un portátil corporativo bloqueado sin permisos de administrador — su última versión es la v3.10.0 de febrero de 2025.',
+          'Elige Ollama si te manejas con la terminal — es el runtime más ligero y funciona muy bien con Phi-4 Mini Q4 a 4–8 tok/s en CPUs Intel más antiguas y 8–14 tok/s en hardware de la clase Ryzen 5000 / Intel 12.ª gen. Elige Jan para una GUI limpia sin línea de comandos — es Apache 2.0, se publica de forma activa y es la mejor opción sin terminal en octubre de 2026. Elige llama.cpp directamente si buscas el máximo de tokens por segundo y aceptas compilar. Elige GPT4All solo en los dos casos en que sigue ganando: una máquina con 4 GB de RAM, o un portátil corporativo bloqueado sin permisos de administrador — su última versión es la v3.10.0 de febrero de 2025 y su último commit es del 27 de mayo de 2025.',
         bullets: [
           'Ollama — runtime CPU más ligero, basado en terminal, mejor combinación con Phi-4 Mini',
           'Jan — GUI completa, código abierto (Apache 2.0), nativa en Apple Silicon, la opción más ligera en Mac con 8 GB',
           'llama.cpp — velocidad bare-metal, requiere compilar, mejor combinación con SmolLM 2 / Gemma 4 E2B',
-          'GPT4All — mínimo de RAM más bajo (4 GB) e instalación sin permisos de admin, pero sin versión nueva desde febrero de 2025',
+          'GPT4All — mínimo de RAM más bajo (4 GB) e instalación sin permisos de admin, pero sin actualizaciones desde el 27 de mayo de 2025 (puede estar sin mantenimiento)',
           'Las cuatro son gratuitas, funcionan sin conexión tras instalar y cargan archivos de modelo GGUF estándar',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -1829,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: 'La presentación de abajo cubre: Ollama, Jan, llama.cpp y GPT4All probados con 8 GB RAM sin GPU (4–18 tok/s); las configuraciones exactas para un 30–60% más de velocidad (contexto 1024, batch 8, caché KV q8_0); el mejor modelo por app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); y cinco errores comunes que provocan swap fatal. Descarga el PDF como tarjeta de referencia para PCs de gama baja.',
+    gammaDescription: 'La presentación de abajo cubre: Ollama, Jan, llama.cpp y GPT4All comparados con 8 GB RAM sin GPU (4–18 tok/s según la comunidad); las configuraciones exactas para un 30–60% más de velocidad (contexto 1024, batch 8, caché KV q8_0); el mejor modelo por app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); y cinco errores comunes que provocan swap fatal. Descarga el PDF como tarjeta de referencia para PCs de gama baja. Las diapositivas colocan GPT4All por debajo de Jan porque GPT4All no recibe actualizaciones desde mayo de 2025.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1838,17 +1886,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama** — runtime CPU más ligero en 2026, funciona como servidor en segundo plano, mejor combinación app + modelo: Ollama + Phi-4 Mini Q4 a 4–14 tok/s en 8 GB solo CPU.',
           '**Jan** — GUI completa, código abierto Apache 2.0, nativa en Apple Silicon, la app GUI más ligera para un MacBook Air de 8 GB o Mac mini M1.',
           '**llama.cpp** — mayor tokens/s en hardware idéntico (5–15% por encima de Ollama, 15–25% por encima de GPT4All), pero requiere un paso de compilación.',
-          '**GPT4All** — sigue siendo la única app con un mínimo de 4 GB RAM e instalación sin permisos de admin, pero su última versión es la v3.10.0 del 25 de febrero de 2025: trátala como alternativa de reserva, no como primera opción.',
+          '**GPT4All** — sigue siendo la única app con GUI de las cuatro con un mínimo de 4 GB RAM e instalación sin permisos de admin, pero no recibe actualizaciones desde el 27 de mayo de 2025 (última versión v3.10.0 del 25 de febrero de 2025) y puede estar sin mantenimiento: trátala como alternativa de reserva, no como primera opción.',
           '**Mejor modelo con 8 GB / sin GPU:** Phi-4 Mini 3.8B en Q4_K_M para equilibrio, SmolLM 2 1.7B Q4 para máxima velocidad, Llama 3.2 1B Q5 para la experiencia de chat más fluida.',
           '**Ranking de velocidad en CPU idéntica:** llama.cpp > Ollama > Jan > GPT4All. La diferencia es del 15–25%, no de 2–3×.',
-          '**A agosto de 2026, no ejecutes modelos de 7B+ en 8 GB RAM** — la presión de la ventana de contexto más el propio sistema operativo activarán el swap y reducirán el throughput entre 5 y 10 veces.',
+          '**A octubre de 2026, no ejecutes modelos de 7B+ en 8 GB RAM** — la presión de la ventana de contexto más el propio sistema operativo activarán el swap y reducirán el throughput entre 5 y 10 veces.',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: '¿Cómo se comparan Ollama, Jan, llama.cpp y GPT4All en 8 GB RAM sin GPU?',
         content:
-          'Los rangos a continuación se agregan a partir de hilos de benchmark de llama.cpp upstream, cifras de las fichas de modelos de Hugging Face e informes de pruebas de r/LocalLLaMA en portátiles de 8 GB con gráficos integrados (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Los tokens/s se miden en generaciones de 200 tokens tras cargar el modelo, ventana de contexto por defecto 2048 salvo indicación.',
+          'Los rangos a continuación se agregan a partir de hilos de benchmark de llama.cpp upstream, cifras de las fichas de modelos de Hugging Face e informes de pruebas de r/LocalLLaMA en portátiles de 8 GB con gráficos integrados (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Los tokens/s reportados corresponden a generaciones de 200 tokens tras cargar el modelo; PromptQuorum no ejecutó estos benchmarks por sí mismo, ventana de contexto por defecto 2048 salvo indicación. Versiones comprobadas (octubre de 2026): Ollama v0.40.10, Jan v0.8.7, GPT4All v3.10.0 (publicada en febrero de 2025; último commit el 27 de mayo de 2025).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1897,12 +1945,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mejor modelo (límite 8 GB)': 'Llama 3.2 1B Q4_0',
             'Tokens/s (solo CPU)': '3–10 tok/s',
             'Calor': 'Bajo',
-            'Veredicto': 'Reserva — sin versión desde feb. 2025',
+            'Veredicto': 'Reserva — sin actualizaciones desde mayo 2025',
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: 'Gráfico: IA local en PC de pocos recursos con 8 GB RAM sin GPU, tokens/s de llama.cpp, Ollama, Jan y GPT4All',
         imageCaption:
-          'Tokens/s en 8 GB RAM sin GPU: llama.cpp 5–18 tok/s (la más rápida, requiere compilar), Ollama 4–14 tok/s (mejor equilibrio), Jan 3–11 tok/s (mejor GUI, nativa en Apple Silicon), GPT4All 3–10 tok/s (mínimo 4 GB, sin versión desde feb. 2025).',
+          'Tokens/s en 8 GB RAM sin GPU: llama.cpp 5–18 tok/s (la más rápida, requiere compilar), Ollama 4–14 tok/s (mejor equilibrio), Jan 3–11 tok/s (mejor GUI, nativa en Apple Silicon), GPT4All 3–10 tok/s (mínimo 4 GB, sin actualizaciones desde mayo 2025).',
       },
       whichOne: {
         id: 'which-one',
@@ -1935,6 +1984,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Elige': 'Ollama + SmolLM 2 1.7B',
           },
           {
+            'Tu situación': 'Mac Intel (2015–2020) con macOS 14 o posterior',
+            'Elige': 'Ollama (solo CPU) + SmolLM 2 1.7B',
+          },
+          {
             'Tu situación': 'Chromebook con modo desarrollador Linux',
             'Elige': 'llama.cpp + SmolLM 2',
           },
@@ -1955,7 +2008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cpu-benchmarks',
         title: '¿Qué tan rápida es cada app en hardware de gama baja real?',
         content:
-          '**Tokens por segundo en máquinas representativas con 8 GB RAM y sin GPU dedicada, mayo 2026.** Los números son rangos reportados por la comunidad en hilos de benchmark de llama.cpp upstream, datos de fichas de modelos de Hugging Face y pruebas con etiquetas de hardware de r/LocalLLaMA. Cada celda es el rango típico de las ejecuciones reportadas con configuración por defecto; se excluyen valores atípicos.',
+          '**Tokens por segundo en máquinas representativas con 8 GB RAM y sin GPU dedicada, octubre de 2026.** Los números son rangos reportados por la comunidad en hilos de benchmark de llama.cpp upstream, datos de fichas de modelos de Hugging Face y pruebas con etiquetas de hardware de r/LocalLLaMA. Cada celda es el rango típico de las ejecuciones reportadas con configuración por defecto; se excluyen valores atípicos.',
         columns: ['Hardware', 'Modelo', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           {
@@ -2033,6 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: 'Presupuesto de RAM de un PC con 8 GB para IA local: Phi-4 Mini cabe, un modelo 7B Q4 fuerza el swap',
         imageCaption:
           'Presupuesto de RAM de 8 GB comparado: Phi-4 Mini 3.8B Q4 usa ~3 GB de SO + ~3,5 GB de modelo/caché KV, dejando ~1,5 GB libres, mientras que un modelo 7B Q4 necesita ~9 GB en total — 1 GB por encima del límite de 8 GB — lo que fuerza el swap y reduce los tokens/s en 5–10×.',
       },
@@ -2154,7 +2208,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Sigue siendo recomendable instalar GPT4All en 2026?',
-            a: 'Se instala y funciona sin problemas, pero su versión más reciente es la v3.10.0 del 25 de febrero de 2025, es decir, unos 18 meses sin una compilación nueva en agosto de 2026. En la práctica eso significa que no llegan arquitecturas de modelo nuevas al catálogo incluido ni parches de seguridad a la propia aplicación, algo que pesa más en un equipo de trabajo que en uno personal. Úsala cuando apliquen sus dos ventajas restantes — un límite de 4 GB de RAM, o un portátil bloqueado sin permisos de administrador — y usa Jan en el resto de casos.',
+            a: 'Se instala y funciona sin problemas, pero su versión más reciente es la v3.10.0 del 25 de febrero de 2025, es decir, unos 20 meses sin una compilación nueva en octubre de 2026, con el último commit el 27 de mayo de 2025. En la práctica eso significa que no llegan arquitecturas de modelo nuevas al catálogo incluido ni parches de seguridad a la propia aplicación, algo que pesa más en un equipo de trabajo que en uno personal. Considérala una app posiblemente sin mantenimiento y úsala solo cuando apliquen sus dos ventajas restantes — un límite de 4 GB de RAM, o un portátil bloqueado sin permisos de administrador — y usa Jan en el resto de casos.',
+          },
+          {
+            q: '¿Funciona la IA local en un Mac Intel con 8 GB de RAM?',
+            a: 'Sí, pero solo con la CPU. Los [requisitos oficiales de Ollama para macOS](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) indican macOS Sonoma (14) o posterior, en chips Apple serie M (CPU y GPU) o x86 (solo CPU), así que un Mac Intel que se haya quedado en macOS 13 o anterior no puede ejecutar la app actual de Ollama. [Jan](https://jan.ai) ofrece una versión universal para macOS y [llama.cpp](https://github.com/ggml-org/llama.cpp) se puede compilar en cualquier Mac Intel. Espera velocidades más cercanas a las filas de portátiles Intel de la tabla de benchmarks que a las del Apple M1, así que quédate con modelos de 1.7B–3.8B como SmolLM 2 1.7B Q4_K_M o Phi-4 Mini Q4_K_M.',
+          },
+          {
+            q: '¿Puede un portátil antiguo con Core i3, Celeron o Pentium ejecutar IA local?',
+            a: 'A veces. Lo que decide es el conjunto de instrucciones de la CPU, no la marca: los Intel Core i3 desde 2013 (Haswell) tienen AVX2, mientras que la primera generación de Core i3, los modelos Ivy Bridge como el i3-3110M y los Celeron / Pentium serie N basados en Atom (Gemini Lake y Jasper Lake, como el N6000) no. Comprueba el modelo exacto en Intel ARK antes de instalar. Con AVX2 y 8 GB de RAM, SmolLM 2 1.7B Q4_K_M o Llama 3.2 1B Q4_K_M es el techo realista. Sin AVX2, llama.cpp funciona, pero a una velocidad que casi nunca sirve para chatear.',
           },
           {
             q: '¿Puedo usar una Raspberry Pi para IA local?',
@@ -2183,9 +2245,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
       'description':
-        'Ollama, Jan, llama.cpp y GPT4All probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas. Actualizado en agosto de 2026.',
+        'Ollama, Jan, llama.cpp y GPT4All comparados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s de la comunidad, presión de memoria, configuraciones exactas.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
@@ -2239,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'position': 4,
           'name': 'GPT4All',
           'description':
-            'Instalador de un clic con mínimo de 4 GB RAM y sin permisos de admin; mejor combinación con Llama 3.2 1B Q4_0 a 3–10 tokens por segundo; última versión v3.10.0, febrero de 2025.',
+            'Instalador de un clic con mínimo de 4 GB RAM y sin permisos de admin; mejor combinación con Llama 3.2 1B Q4_0 a 3–10 tokens por segundo; última versión v3.10.0, febrero de 2025; sin actualizaciones desde el 27 de mayo de 2025.',
         },
       ],
     },
@@ -2254,19 +2316,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-pt.webp',
     title: 'Melhores apps de IA local para PCs de baixo desempenho em 2026 (8 GB RAM, sem GPU)',
-    seoTitle: 'Melhores apps de IA local em PC de 8 GB 2026: só CPU',
+    seoTitle: 'Melhor IA local para PC fraco: 8 GB de RAM, sem GPU (2026)',
     metaDescription:
-      'Ollama, Jan, llama.cpp e GPT4All testados em notebooks com 8 GB RAM e gráficos integrados. Tokens/s, pressão de memória, configurações exatas. Agosto de 2026.',
+      'Ollama, Jan, llama.cpp e GPT4All comparados em PCs com 8 GB de RAM sem GPU: tokens/s relatados pela comunidade, melhor modelo por app e ajustes de CPU.',
     twitterDescription:
-      '4 apps de IA local que rodam em notebooks com 8 GB RAM sem GPU. Tokens/s, configurações exatas, veredictos honestos. Maio de 2026.',
+      '4 apps de IA local comparados para notebooks com 8 GB RAM sem GPU. Tokens/s relatados pela comunidade, configurações exatas, veredictos honestos.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: [
       'Intel UHD 620',
@@ -2288,20 +2351,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ia local notebook antigo',
     ],
     leadAnswerBlock:
-      '**Em um notebook com 8 GB RAM e sem GPU dedicada, quatro apps realmente rodam bem em agosto de 2026: Ollama, Jan, llama.cpp e GPT4All. Combine qualquer um deles com Phi-4 Mini Q4 (melhor equilíbrio), SmolLM 2 1.7B Q4 (mais rápido) ou Llama 3.2 1B Q5 (sensação de GUI mais fluida) e mantenha o conjunto de trabalho abaixo de 6 GB. O GPT4All continua funcionando, mas não recebe uma versão desde a v3.10.0 de fevereiro de 2025 — prefira o Jan se você quer uma GUI mantida.**',
+      '**Aviso: o GPT4All não recebe nenhuma atualização desde 27 de maio de 2025 (última versão v3.10.0, de 25 de fevereiro de 2025) e pode estar sem manutenção — confira antes de depender dele.** **Em um notebook com 8 GB RAM e sem GPU dedicada, quatro apps rodam bem em outubro de 2026: Ollama, Jan, llama.cpp e GPT4All. Combine qualquer um deles com Phi-4 Mini Q4 (melhor equilíbrio), SmolLM 2 1.7B Q4 (mais rápido) ou Llama 3.2 1B Q5 (sensação de GUI mais fluida) e mantenha o conjunto de trabalho abaixo de 6 GB. Prefira o Jan se você quer uma GUI mantida.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual app de IA local roda melhor em um notebook com 8 GB RAM sem GPU?',
         answer:
-          'Escolha o Ollama se você se vira bem no terminal — é o runtime mais leve e combina muito bem com o Phi-4 Mini Q4 a 4–8 tok/s em CPUs Intel mais antigas e 8–14 tok/s em hardware da classe Ryzen 5000 / Intel 12ª geração. Escolha o Jan se você quer uma GUI limpa sem linha de comando — é Apache 2.0, recebe versões ativamente e é a melhor opção sem terminal em agosto de 2026. Escolha o GPT4All apenas nos dois casos em que ele ainda vence: uma máquina com 4 GB de RAM, ou um notebook corporativo bloqueado sem direitos de administrador — sua última versão é a v3.10.0 de fevereiro de 2025. Escolha o llama.cpp diretamente se você quer o máximo de tokens por segundo e não se importa de compilar.',
+          'Escolha o Ollama se você se vira bem no terminal — é o runtime mais leve e combina muito bem com o Phi-4 Mini Q4 a 4–8 tok/s em CPUs Intel mais antigas e 8–14 tok/s em hardware da classe Ryzen 5000 / Intel 12ª geração. Escolha o Jan se você quer uma GUI limpa sem linha de comando — é Apache 2.0, recebe versões ativamente e é a melhor opção sem terminal em outubro de 2026. Escolha o GPT4All apenas nos dois casos em que ele ainda vence: uma máquina com 4 GB de RAM, ou um notebook corporativo bloqueado sem direitos de administrador — sua última versão é a v3.10.0 de fevereiro de 2025 e seu último commit é de 27 de maio de 2025. Escolha o llama.cpp diretamente se você quer o máximo de tokens por segundo e não se importa de compilar.',
         bullets: [
           'Ollama — runtime de CPU mais leve, baseado em terminal, combina melhor com Phi-4 Mini',
           'Jan — GUI completa, código aberto (Apache 2.0), nativo em Apple Silicon, a opção mais leve em Mac com 8 GB',
           'llama.cpp — velocidade bare-metal, exige compilação, combina melhor com SmolLM 2 / Gemma 4 E2B',
-          'GPT4All — menor exigência de RAM (4 GB) e instalação sem direitos de admin, mas sem nova versão desde fevereiro de 2025',
+          'GPT4All — menor exigência de RAM (4 GB) e instalação sem direitos de admin, mas sem atualizações desde 27 de maio de 2025 (pode estar sem manutenção)',
           'Os quatro são gratuitos, funcionam offline após a instalação e carregam arquivos de modelo GGUF padrão',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -2318,7 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leitura relacionada', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: 'A apresentação abaixo cobre: Ollama, Jan, llama.cpp e GPT4All testados com 8 GB RAM sem GPU (4–18 tok/s); as configurações exatas para 30–60% mais velocidade (contexto 1024, batch 8, cache KV q8_0); o melhor modelo por app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); e cinco erros comuns que provocam swap fatal. Baixe o PDF como cartão de referência para PCs de baixo desempenho.',
+    gammaDescription: 'A apresentação abaixo cobre: Ollama, Jan, llama.cpp e GPT4All comparados com 8 GB RAM sem GPU (4–18 tok/s relatados pela comunidade); as configurações exatas para 30–60% mais velocidade (contexto 1024, batch 8, cache KV q8_0); o melhor modelo por app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 4 E2B); e cinco erros comuns que provocam swap fatal. Baixe o PDF como cartão de referência para PCs de baixo desempenho. Os slides colocam o GPT4All abaixo do Jan porque o GPT4All não recebe atualizações desde maio de 2025.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2327,17 +2390,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama** — runtime de CPU mais leve em 2026, funciona como servidor em segundo plano, melhor combinação app + modelo: Ollama + Phi-4 Mini Q4 a 4–14 tok/s em 8 GB só CPU.',
           '**Jan** — GUI completa, código aberto Apache 2.0, nativo em Apple Silicon, o app de GUI mais leve para um MacBook Air de 8 GB ou Mac mini M1.',
           '**llama.cpp** — maior tokens por segundo em hardware idêntico (5–15% acima do Ollama, 15–25% acima do GPT4All), mas exige uma etapa de compilação.',
-          '**GPT4All** — continua sendo o único app com mínimo de 4 GB RAM e instalação sem direitos de admin, mas sua última versão é a v3.10.0 de 25 de fevereiro de 2025: trate como alternativa de reserva, não como primeira escolha.',
+          '**GPT4All** — continua sendo o único app com interface gráfica dos quatro com mínimo de 4 GB RAM e instalação sem direitos de admin, mas não recebe atualizações desde 27 de maio de 2025 (última versão v3.10.0, de 25 de fevereiro de 2025) e pode estar sem manutenção: trate como alternativa de reserva, não como primeira escolha.',
           '**Melhor modelo com 8 GB / sem GPU:** Phi-4 Mini 3.8B em Q4_K_M para equilíbrio, SmolLM 2 1.7B Q4 para velocidade máxima, Llama 3.2 1B Q5 para a sensação de chat mais fluida.',
           '**Ranking de velocidade em CPU idêntica:** llama.cpp > Ollama > Jan > GPT4All. A diferença é de 15–25%, não de 2–3×.',
-          '**Em agosto de 2026, não rode modelos de 7B+ em 8 GB RAM** — a pressão da janela de contexto somada ao próprio sistema operacional vai acionar o swap e derrubar o throughput em 5 a 10 vezes.',
+          '**Em outubro de 2026, não rode modelos de 7B+ em 8 GB RAM** — a pressão da janela de contexto somada ao próprio sistema operacional vai acionar o swap e derrubar o throughput em 5 a 10 vezes.',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'Como Ollama, Jan, llama.cpp e GPT4All se comparam em 8 GB RAM, sem GPU?',
         content:
-          'Os intervalos abaixo são agregados a partir de threads de benchmark do llama.cpp upstream, números das fichas de modelos do Hugging Face e relatos de testes do r/LocalLLaMA em notebooks de 8 GB com gráficos integrados (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Os tokens/s são medidos em gerações de 200 tokens após o carregamento do modelo, janela de contexto padrão 2048 salvo indicação.',
+          'Os intervalos abaixo são agregados a partir de threads de benchmark do llama.cpp upstream, números das fichas de modelos do Hugging Face e relatos de testes do r/LocalLLaMA em notebooks de 8 GB com gráficos integrados (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Os tokens/s relatados correspondem a gerações de 200 tokens após o carregamento do modelo; o PromptQuorum não executou esses benchmarks por conta própria, janela de contexto padrão 2048 salvo indicação. Versões conferidas (outubro de 2026): Ollama v0.40.10, Jan v0.8.7, GPT4All v3.10.0 (lançada em fevereiro de 2025; último commit em 27 de maio de 2025).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2386,12 +2449,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Melhor modelo (limite 8 GB)': 'Llama 3.2 1B Q4_0',
             'Tokens/s (só CPU)': '3–10 tok/s',
             'Calor': 'Baixo',
-            'Veredicto': 'Reserva — sem versão desde fev. 2025',
+            'Veredicto': 'Reserva — sem atualizações desde maio de 2025',
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: 'Gráfico: IA local em PC fraco com 8 GB RAM sem GPU, tokens/s de llama.cpp, Ollama, Jan e GPT4All',
         imageCaption:
-          'Tokens/s em 8 GB RAM sem GPU: llama.cpp 5–18 tok/s (o mais rápido, exige compilação), Ollama 4–14 tok/s (melhor equilíbrio), Jan 3–11 tok/s (melhor GUI, nativo em Apple Silicon), GPT4All 3–10 tok/s (mínimo de 4 GB, sem versão desde fev. 2025).',
+          'Tokens/s em 8 GB RAM sem GPU: llama.cpp 5–18 tok/s (o mais rápido, exige compilação), Ollama 4–14 tok/s (melhor equilíbrio), Jan 3–11 tok/s (melhor GUI, nativo em Apple Silicon), GPT4All 3–10 tok/s (mínimo de 4 GB, sem atualizações desde maio de 2025).',
       },
       whichOne: {
         id: 'which-one',
@@ -2424,6 +2488,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Escolha': 'Ollama + SmolLM 2 1.7B',
           },
           {
+            'Sua situação': 'Mac Intel (2015–2020) com macOS 14 ou posterior',
+            'Escolha': 'Ollama (só CPU) + SmolLM 2 1.7B',
+          },
+          {
             'Sua situação': 'Chromebook com modo desenvolvedor Linux',
             'Escolha': 'llama.cpp + SmolLM 2',
           },
@@ -2444,7 +2512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cpu-benchmarks',
         title: 'Quão rápido é cada app em hardware de baixo desempenho real?',
         content:
-          '**Tokens por segundo em máquinas representativas com 8 GB RAM e sem GPU dedicada, agosto de 2026.** Os números são intervalos relatados pela comunidade em threads de benchmark do llama.cpp upstream, dados das fichas de modelos do Hugging Face e testes com etiquetas de hardware do r/LocalLLaMA. Cada célula é o intervalo típico das execuções relatadas com configuração padrão; valores atípicos são excluídos.',
+          '**Tokens por segundo em máquinas representativas com 8 GB RAM e sem GPU dedicada, outubro de 2026.** Os números são intervalos relatados pela comunidade em threads de benchmark do llama.cpp upstream, dados das fichas de modelos do Hugging Face e testes com etiquetas de hardware do r/LocalLLaMA. Cada célula é o intervalo típico das execuções relatadas com configuração padrão; valores atípicos são excluídos.',
         columns: ['Hardware', 'Modelo', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           {
@@ -2522,6 +2590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: 'Orçamento de RAM de um PC com 8 GB para IA local: o Phi-4 Mini cabe, um modelo 7B Q4 força o swap',
         imageCaption:
           'Orçamento de RAM de 8 GB comparado: o Phi-4 Mini 3.8B Q4 usa ~3 GB de SO + ~3,5 GB de modelo/cache KV, deixando ~1,5 GB livres, enquanto um modelo 7B Q4 precisa de ~9 GB no total — 1 GB acima do teto de 8 GB — o que força o swap e reduz os tokens/s em 5–10×.',
       },
@@ -2643,7 +2712,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ainda vale a pena instalar o GPT4All em 2026?',
-            a: 'Ele instala e roda normalmente, mas sua versão mais recente é a v3.10.0, de 25 de fevereiro de 2025 — cerca de 18 meses sem uma nova build em agosto de 2026. Na prática isso significa nenhuma arquitetura de modelo nova no catálogo embutido e nenhum patch de segurança para o próprio aplicativo, o que pesa mais em uma máquina de trabalho do que em uma pessoal. Use quando as duas vantagens restantes se aplicarem — um teto de 4 GB de RAM, ou um notebook bloqueado sem direitos de administrador — e use o Jan nos demais casos.',
+            a: 'Ele instala e roda normalmente, mas sua versão mais recente é a v3.10.0, de 25 de fevereiro de 2025 — cerca de 20 meses sem uma nova build em outubro de 2026, com o último commit em 27 de maio de 2025. Na prática isso significa nenhuma arquitetura de modelo nova no catálogo embutido e nenhum patch de segurança para o próprio aplicativo, o que pesa mais em uma máquina de trabalho do que em uma pessoal. Considere-o um app possivelmente sem manutenção e use apenas quando as duas vantagens restantes se aplicarem — um teto de 4 GB de RAM, ou um notebook bloqueado sem direitos de administrador — e use o Jan nos demais casos.',
+          },
+          {
+            q: 'A IA local funciona em um Mac Intel com 8 GB de RAM?',
+            a: 'Sim, mas apenas na CPU. Os [requisitos oficiais do Ollama para macOS](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) pedem macOS Sonoma (14) ou posterior, em chips Apple série M (CPU e GPU) ou x86 (só CPU); por isso, um Mac Intel preso no macOS 13 ou anterior não consegue rodar o app atual do Ollama. O [Jan](https://jan.ai) oferece uma versão universal para macOS e o [llama.cpp](https://github.com/ggml-org/llama.cpp) pode ser compilado em qualquer Mac Intel. Espere velocidades mais próximas das linhas de notebooks Intel da tabela de benchmarks do que das linhas do Apple M1, então fique em modelos de 1.7B–3.8B, como SmolLM 2 1.7B Q4_K_M ou Phi-4 Mini Q4_K_M.',
+          },
+          {
+            q: 'Um notebook antigo com Core i3, Celeron ou Pentium consegue rodar IA local?',
+            a: 'Às vezes. O que decide é o conjunto de instruções da CPU, não a marca: os Intel Core i3 a partir de 2013 (Haswell) têm AVX2, enquanto a primeira geração do Core i3, modelos Ivy Bridge como o i3-3110M e os Celeron / Pentium série N baseados em Atom (Gemini Lake e Jasper Lake, como o N6000) não têm. Confira o modelo exato no Intel ARK antes de instalar. Com AVX2 e 8 GB de RAM, SmolLM 2 1.7B Q4_K_M ou Llama 3.2 1B Q4_K_M é o teto realista. Sem AVX2, o llama.cpp ainda roda, mas em uma velocidade quase sempre inviável para chat.',
           },
           {
             q: 'Posso usar uma Raspberry Pi para IA local?',
@@ -2672,9 +2749,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/pt/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'Melhores apps de IA local para PCs de baixo desempenho em 2026 (8 GB RAM, sem GPU)',
       'description':
-        'Ollama, Jan, llama.cpp e GPT4All testados em notebooks com 8 GB RAM e gráficos integrados. Tokens/s, pressão de memória, configurações exatas. Atualizado em agosto de 2026.',
+        'Ollama, Jan, llama.cpp e GPT4All comparados em notebooks com 8 GB RAM e gráficos integrados. Tokens/s relatados pela comunidade, pressão de memória, configurações exatas.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
@@ -2728,7 +2805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'position': 4,
           'name': 'GPT4All',
           'description':
-            'Instalador de um clique mais simples; mínimo 4 GB RAM; combina melhor com Llama 3.2 1B Q4_0 a 3–10 tokens por segundo; recomendado para usuários não técnicos.',
+            'Instalador de um clique mais simples; mínimo 4 GB RAM; combina melhor com Llama 3.2 1B Q4_0 a 3–10 tokens por segundo; recomendado para usuários não técnicos, mas sem atualizações desde 27 de maio de 2025.',
         },
       ],
     },
@@ -2743,19 +2820,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-ar.webp',
     title: 'أفضل تطبيقات الذكاء الاصطناعي المحلي للأجهزة الضعيفة ⁨2026⁩ (⁨8 GB RAM⁩ بدون ⁨GPU⁩)',
-    seoTitle: 'ذكاء اصطناعي محلي بدون ⁨GPU 2026⁩: ⁨Ollama⁩ و⁨GPT4All⁩',
+    seoTitle: 'ذكاء اصطناعي محلي للأجهزة الضعيفة: 8 GB RAM بدون ⁨GPU⁩',
     metaDescription:
-      'Ollama وJan وllama.cpp وGPT4All اختُبرت على 8 GB RAM برسومات متكاملة بدون GPU. سرعات الرموز وضغط الذاكرة والإعدادات المثلى لكل تطبيق.',
+      'مقارنة Ollama وJan وllama.cpp وGPT4All على 8 GB RAM بدون GPU: سرعات رموز من تقارير المجتمع، أفضل نموذج لكل تطبيق وإعدادات CPU.',
     twitterDescription:
-      '4 تطبيقات للذكاء الاصطناعي المحلي تعمل على أجهزة بـ8 GB RAM بدون GPU. الرموز/ثانية والإعدادات الدقيقة وتقييمات صادقة. أغسطس 2026.',
+      'مقارنة 4 تطبيقات للذكاء الاصطناعي المحلي تعمل على أجهزة بـ8 GB RAM بدون GPU. الرموز/ثانية من تقارير المجتمع والإعدادات الدقيقة وتقييمات صادقة.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: [
       'Intel UHD 620',
@@ -2777,20 +2855,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ذكاء اصطناعي محلي على لابتوب قديم',
     ],
     leadAnswerBlock:
-      '**على جهاز بـ8 GB RAM وبدون GPU مخصصة، أربعة تطبيقات تعمل فعلاً بشكل جيد في أغسطس 2026: Ollama وJan وllama.cpp وGPT4All. ادمج أياً منها مع Phi-4 Mini Q4 (أفضل توازن)، أو SmolLM 2 1.7B Q4 (الأسرع)، أو Llama 3.2 1B Q5 (أسلسة واجهة مستخدم أفضل) وابقِ مجموعة العمل أقل من 6 GB. لا يزال GPT4All يعمل، لكنه لم يصدر أي نسخة منذ v3.10.0 في فبراير 2025 — فاختر Jan إذا أردت واجهة رسومية مُصانة.**',
+      '**تحذير: لم يتلقَّ GPT4All أي تحديث منذ 27 مايو 2025 (آخر إصدار v3.10.0 بتاريخ 25 فبراير 2025)، وقد يكون متوقفاً عن الصيانة — تحقق منه قبل الاعتماد عليه.** **على جهاز بـ8 GB RAM وبدون GPU مخصصة، أربعة تطبيقات تعمل بشكل جيد في أكتوبر 2026: Ollama وJan وllama.cpp وGPT4All. ادمج أياً منها مع Phi-4 Mini Q4 (أفضل توازن)، أو SmolLM 2 1.7B Q4 (الأسرع)، أو Llama 3.2 1B Q5 (أسلسة واجهة مستخدم أفضل) وابقِ مجموعة العمل أقل من 6 GB. اختر Jan إذا أردت واجهة رسومية مُصانة.**',
     quickAnswerTop: {
       ar: {
         question: 'أي تطبيق للذكاء الاصطناعي المحلي يعمل بشكل أفضل على جهاز بـ8 GB RAM بدون GPU؟',
         answer:
-          'اختر تطبيق Ollama إذا كنت مرتاحاً للطرفية — هو وقت التشغيل الأخف ويتزاوج بشكل ممتاز مع Phi-4 Mini Q4 بـ4-8 رمز/ثانية على المعالجات Intel القديمة و8-14 رمز/ثانية على أجهزة من فئة Ryzen 5000 / Intel الجيل 12. اختر تطبيق Jan إذا أردت واجهة رسومية نظيفة بدون سطر أوامر — رخصته Apache 2.0، وإصداراته نشطة، وهو أفضل خيار بلا طرفية في أغسطس 2026. واختر تطبيق GPT4All فقط في الحالتين اللتين ما زال يتفوق فيهما: جهاز بـ4 GB من الـRAM، أو لابتوب عمل مقيّد بلا صلاحيات admin — وآخر إصدار له هو v3.10.0 في فبراير 2025. اختر llama.cpp مباشرةً إذا أردت أقصى رموز/ثانية ولا تمانع التجميع.',
+          'اختر تطبيق Ollama إذا كنت مرتاحاً للطرفية — هو وقت التشغيل الأخف ويتزاوج بشكل ممتاز مع Phi-4 Mini Q4 بـ4-8 رمز/ثانية على المعالجات Intel القديمة و8-14 رمز/ثانية على أجهزة من فئة Ryzen 5000 / Intel الجيل 12. اختر تطبيق Jan إذا أردت واجهة رسومية نظيفة بدون سطر أوامر — رخصته Apache 2.0، وإصداراته نشطة، وهو أفضل خيار بلا طرفية في أكتوبر 2026. واختر تطبيق GPT4All فقط في الحالتين اللتين ما زال يتفوق فيهما: جهاز بـ4 GB من الـRAM، أو لابتوب عمل مقيّد بلا صلاحيات admin — وآخر إصدار له هو v3.10.0 في فبراير 2025 وآخر تحديث للكود في 27 مايو 2025. اختر llama.cpp مباشرةً إذا أردت أقصى رموز/ثانية ولا تمانع التجميع.',
         bullets: [
           'Ollama — وقت تشغيل CPU أخف، قائم على الطرفية، يتزاوج بشكل أفضل مع Phi-4 Mini',
           'Jan — واجهة مستخدم رسومية كاملة، مفتوح المصدر (Apache 2.0)، أصيل على Apple Silicon، الأخف على Mac بـ8 GB',
           'llama.cpp — سرعة bare-metal، يتطلب التجميع، يتزاوج بشكل أفضل مع SmolLM 2 / Gemma 4 E2B',
-          'GPT4All — أدنى متطلبات RAM (4 GB) وتثبيت بدون صلاحيات admin، لكن دون أي إصدار منذ فبراير 2025',
+          'GPT4All — أدنى متطلبات RAM (4 GB) وتثبيت بدون صلاحيات admin، لكن دون أي تحديث منذ 27 مايو 2025 (قد يكون متوقفاً عن الصيانة)',
           'الأربعة مجانية وتعمل offline بعد التثبيت وتُحمِّل ملفات نماذج GGUF القياسية',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -2807,26 +2885,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءة ذات صلة', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: 'يغطي العرض أدناه: Ollama وJan وllama.cpp وGPT4All مُختبَرة بـ8 GB RAM بدون GPU (4-18 رمز/ثانية)؛ الإعدادات الدقيقة لـ30-60% سرعة إضافية (سياق 1024 وbatch 8 وcache KV q8_0)؛ أفضل نموذج لكل تطبيق (Phi-4 Mini Q4_K_M وSmolLM 2 1.7B وGemma 4 E2B)؛ وخمسة أخطاء شائعة تسبب تصادم swap مميت. نزّل PDF كبطاقة مرجعية للأجهزة الضعيفة.',
+    gammaDescription: 'يغطي العرض أدناه: Ollama وJan وllama.cpp وGPT4All مُقارَنة على 8 GB RAM بدون GPU (4-18 رمز/ثانية بحسب تقارير المجتمع)؛ الإعدادات الدقيقة لـ30-60% سرعة إضافية (سياق 1024 وbatch 8 وcache KV q8_0)؛ أفضل نموذج لكل تطبيق (Phi-4 Mini Q4_K_M وSmolLM 2 1.7B وGemma 4 E2B)؛ وخمسة أخطاء شائعة تسبب تصادم swap مميت. نزّل PDF كبطاقة مرجعية للأجهزة الضعيفة. تضع الشرائح GPT4All بعد Jan لأنه لم يتلقَّ أي تحديث منذ مايو 2025.',
     sections: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
         items: [
           '**تطبيق Ollama** — وقت تشغيل CPU الأخف في 2026، يعمل كخادم في الخلفية، أفضل زوج تطبيق + نموذج: Ollama + Phi-4 Mini Q4 بـ4-14 رمز/ثانية على 8 GB بـCPU فقط.',
-          '**تطبيق GPT4All** — لا يزال الوحيد بحد أدنى 4 GB RAM وتثبيت بدون صلاحيات admin، لكن آخر إصدار له هو v3.10.0 في 25 فبراير 2025، لذا تعامل معه كخيار احتياطي لا كخيار أول.',
+          '**تطبيق GPT4All** — لا يزال التطبيق الرسومي الوحيد بين الأربعة بحد أدنى 4 GB RAM وتثبيت بدون صلاحيات admin، لكن لا تحديث له منذ 27 مايو 2025 (آخر إصدار v3.10.0 في 25 فبراير 2025) وقد يكون متوقفاً عن الصيانة، لذا تعامل معه كخيار احتياطي لا كخيار أول.',
           '**تطبيق Jan** — واجهة مستخدم رسومية كاملة، مفتوح المصدر Apache 2.0، أصيل على Apple Silicon، أخف تطبيق GUI لـMacBook Air 8 GB أو Mac mini M1.',
           '**تطبيق llama.cpp** — أكثر رموز/ثانية على أجهزة متطابقة (5-15% فوق Ollama، 15-25% فوق GPT4All)، لكن يتطلب خطوة تجميع.',
           '**أفضل نموذج مع 8 GB / بدون GPU:** Phi-4 Mini 3.8B بـQ4_K_M للتوازن، SmolLM 2 1.7B Q4 لأقصى سرعة، Llama 3.2 1B Q5 لأسلسة دردشة أفضل.',
           '**ترتيب السرعة على نفس CPU:** llama.cpp > Ollama > Jan > GPT4All. الفرق 15-25%، ليس 2-3×.',
-          '**في أغسطس 2026، لا تُشغّل نماذج 7B+ على 8 GB RAM** — ضغط نافذة السياق مضافاً إليه نظام التشغيل نفسه سيُحرّك swap ويُسقط الأداء بمقدار 5-10×.',
+          '**في أكتوبر 2026، لا تُشغّل نماذج 7B+ على 8 GB RAM** — ضغط نافذة السياق مضافاً إليه نظام التشغيل نفسه سيُحرّك swap ويُسقط الأداء بمقدار 5-10×.',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: 'كيف تتقارن Ollama وJan وllama.cpp وGPT4All على 8 GB RAM بدون GPU؟',
         content:
-          'النطاقات أدناه مُجمَّعة من خيوط معايير llama.cpp الأصلية، وأرقام بطاقات النماذج على Hugging Face، وتقارير الاختبار من r/LocalLLaMA على أجهزة بـ8 GB RAM ورسومات متكاملة (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). الرموز/ثانية مقيسة على أجيال 200 رمز بعد تحميل النموذج، نافذة سياق افتراضية 2048 ما لم يُشار.',
+          'النطاقات أدناه مُجمَّعة من خيوط معايير llama.cpp الأصلية، وأرقام بطاقات النماذج على Hugging Face، وتقارير الاختبار من r/LocalLLaMA على أجهزة بـ8 GB RAM ورسومات متكاملة (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). الرموز/ثانية المُبلَّغ عنها تخص أجيال 200 رمز بعد تحميل النموذج، ولم تُجرِ PromptQuorum هذه المعايير بنفسها، نافذة سياق افتراضية 2048 ما لم يُشار. الإصدارات التي تم التحقق منها (أكتوبر 2026): Ollama v0.40.10 وJan v0.8.7 وGPT4All v3.10.0 (صدر في فبراير 2025؛ آخر تحديث للكود في 27 مايو 2025).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2875,10 +2953,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'أفضل نموذج (حد 8 GB)': 'Llama 3.2 1B Q4_0',
             'الرموز/ثانية (CPU فقط)': '3-10 رمز/ثانية',
             'الحرارة': 'منخفضة',
-            'الحكم': 'خيار احتياطي — دون إصدار منذ فبراير 2025',
+            'الحكم': 'خيار احتياطي — دون تحديث منذ مايو 2025',
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: 'مخطط: الذكاء الاصطناعي المحلي على جهاز ضعيف بـ8 GB RAM بدون GPU، رموز في الثانية لـ llama.cpp وOllama وJan وGPT4All',
         imageCaption:
           'الرموز في الثانية على 8 GB RAM بدون GPU: llama.cpp من 5 إلى 18 رمز/ثانية (الأسرع، يتطلب التجميع)، Ollama من 4 إلى 14 رمز/ثانية (أفضل توازن)، Jan من 3 إلى 11 رمز/ثانية (أفضل واجهة رسومية، أصلية على Apple Silicon)، GPT4All من 3 إلى 10 رمز/ثانية (أسهل تثبيت، الحد الأدنى 4 GB).',
       },
@@ -2913,6 +2992,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الاختيار': 'Ollama + SmolLM 2 1.7B',
           },
           {
+            'وضعك': 'Mac بمعالج Intel (2015–2020) مع macOS 14 أو أحدث',
+            'الاختيار': 'Ollama (CPU فقط) + SmolLM 2 1.7B',
+          },
+          {
             'وضعك': 'Chromebook بوضع مطوّر Linux',
             'الاختيار': 'llama.cpp + SmolLM 2',
           },
@@ -2933,7 +3016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cpu-benchmarks',
         title: 'ما مدى سرعة كل تطبيق على أجهزة ضعيفة حقيقية؟',
         content:
-          '**الرموز في الثانية على أجهزة نموذجية بـ8 GB RAM وبدون GPU مخصصة، أغسطس 2026.** الأرقام نطاقات مُبلَّغ عنها من المجتمع في خيوط معايير llama.cpp الأصلية، وبيانات بطاقات النماذج على Hugging Face، واختبارات بعلامات أجهزة من r/LocalLLaMA. كل خلية هي النطاق النموذجي للتشغيلات المُبلَّغ عنها بالإعداد الافتراضي؛ القيم الشاذة مستبعدة.',
+          '**الرموز في الثانية على أجهزة نموذجية بـ8 GB RAM وبدون GPU مخصصة، أكتوبر 2026.** الأرقام نطاقات مُبلَّغ عنها من المجتمع في خيوط معايير llama.cpp الأصلية، وبيانات بطاقات النماذج على Hugging Face، واختبارات بعلامات أجهزة من r/LocalLLaMA. كل خلية هي النطاق النموذجي للتشغيلات المُبلَّغ عنها بالإعداد الافتراضي؛ القيم الشاذة مستبعدة.',
         columns: ['الأجهزة', 'النموذج', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           {
@@ -3011,6 +3094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: 'ميزانية RAM لجهاز بـ8 GB للذكاء الاصطناعي المحلي: Phi-4 Mini يتسع، ونموذج 7B Q4 يفرض swap',
         imageCaption:
           'مقارنة ميزانية 8 GB RAM: يستخدم Phi-4 Mini 3.8B Q4 نحو 3 GB لنظام التشغيل + نحو 3.5 GB للنموذج وcache KV، تاركاً نحو 1.5 GB حرة، بينما يحتاج نموذج 7B Q4 إلى نحو 9 GB إجمالاً — أي 1 GB فوق حد 8 GB — مما يجبر النظام على الـswap ويخفض الرموز/ثانية بمقدار 5-10×.',
       },
@@ -3132,7 +3216,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل ما زال تثبيت GPT4All آمناً في 2026؟',
-            a: 'يُثبَّت ويعمل بشكل طبيعي، لكن أحدث إصدار له هو v3.10.0 بتاريخ 25 فبراير 2025 — أي نحو 18 شهراً بلا بناء جديد حتى أغسطس 2026. عملياً يعني ذلك عدم إضافة معماريات نماذج جديدة إلى الكتالوج المرفق وعدم صدور تصحيحات أمنية للتطبيق نفسه، وهو ما يزن أكثر على جهاز عمل منه على جهاز شخصي. استخدمه حين تنطبق ميزتاه المتبقيتان — سقف 4 GB من الـRAM، أو لابتوب مقيّد بلا صلاحيات admin — واستخدم Jan فيما عدا ذلك.',
+            a: 'يُثبَّت ويعمل بشكل طبيعي، لكن أحدث إصدار له هو v3.10.0 بتاريخ 25 فبراير 2025 — أي نحو 20 شهراً بلا بناء جديد حتى أكتوبر 2026، وآخر تحديث للكود كان في 27 مايو 2025. عملياً يعني ذلك عدم إضافة معماريات نماذج جديدة إلى الكتالوج المرفق وعدم صدور تصحيحات أمنية للتطبيق نفسه، وهو ما يزن أكثر على جهاز عمل منه على جهاز شخصي. اعتبره تطبيقاً قد يكون متوقفاً عن الصيانة ولا تستخدمه إلا حين تنطبق ميزتاه المتبقيتان — سقف 4 GB من الـRAM، أو لابتوب مقيّد بلا صلاحيات admin — واستخدم Jan فيما عدا ذلك.',
+          },
+          {
+            q: 'هل يعمل الذكاء الاصطناعي المحلي على Mac بمعالج Intel وذاكرة 8 GB؟',
+            a: 'نعم، لكن على CPU فقط. تذكر [متطلبات Ollama الرسمية لنظام macOS](https://github.com/ollama/ollama/blob/main/docs/macos.mdx) نظام macOS Sonoma (14) أو أحدث، على شرائح Apple من سلسلة M (CPU وGPU) أو x86 (CPU فقط)، لذا لا يستطيع جهاز Mac بمعالج Intel عالق على macOS 13 أو أقدم تشغيل تطبيق Ollama الحالي. يوفّر [Jan](https://jan.ai) نسخة macOS شاملة (universal)، ويمكن تجميع [llama.cpp](https://github.com/ggml-org/llama.cpp) على أي Mac بمعالج Intel. توقّع سرعات أقرب إلى صفوف لابتوبات Intel في جدول المعايير لا إلى صفوف Apple M1، لذا التزم بنماذج من 1.7B إلى 3.8B مثل SmolLM 2 1.7B Q4_K_M أو Phi-4 Mini Q4_K_M.',
+          },
+          {
+            q: 'هل يستطيع لابتوب قديم بمعالج Core i3 أو Celeron أو Pentium تشغيل الذكاء الاصطناعي المحلي؟',
+            a: 'أحياناً. العامل الحاسم هو مجموعة تعليمات المعالج لا اسم العلامة: معالجات Intel Core i3 منذ 2013 (Haswell) تدعم AVX2، بينما الجيل الأول من Core i3 وطرازات Ivy Bridge مثل i3-3110M ومعالجات Celeron / Pentium من سلسلة N المبنية على Atom (Gemini Lake وJasper Lake مثل N6000) لا تدعمه. تحقق من الطراز الدقيق على Intel ARK قبل التثبيت. مع AVX2 و8 GB RAM يكون SmolLM 2 1.7B Q4_K_M أو Llama 3.2 1B Q4_K_M هو السقف الواقعي. بدون AVX2 يعمل llama.cpp لكن بسرعة لا تصلح للدردشة في الغالب.',
           },
           {
             q: 'هل يمكن استخدام Raspberry Pi للذكاء الاصطناعي المحلي؟',
@@ -3161,9 +3253,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/ar/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'أفضل تطبيقات الذكاء الاصطناعي المحلي للأجهزة الضعيفة 2026 (8 GB RAM، بدون GPU)',
       'description':
-        'اختُبرت Ollama وJan وllama.cpp وGPT4All على أجهزة كمبيوتر محمولة بـ8 GB RAM ورسومات متكاملة. الرموز/ثانية وضغط الذاكرة والإعدادات الدقيقة. مُحدَّث في أغسطس 2026.',
+        'مقارنة بين Ollama وJan وllama.cpp وGPT4All على أجهزة كمبيوتر محمولة بـ8 GB RAM ورسومات متكاملة. الرموز/ثانية من تقارير المجتمع وضغط الذاكرة والإعدادات الدقيقة.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
@@ -3217,7 +3309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'position': 4,
           'name': 'GPT4All',
           'description':
-            'مثبّت بنقرة واحدة بحد أدنى 4 GB RAM وبدون صلاحيات admin؛ يتزاوج بشكل أفضل مع Llama 3.2 1B Q4_0 بـ3-10 رمز في الثانية؛ آخر إصدار v3.10.0 في فبراير 2025.',
+            'مثبّت بنقرة واحدة بحد أدنى 4 GB RAM وبدون صلاحيات admin؛ يتزاوج بشكل أفضل مع Llama 3.2 1B Q4_0 بـ3-10 رمز في الثانية؛ آخر إصدار v3.10.0 في فبراير 2025؛ لا تحديث منذ 27 مايو 2025.',
         },
       ],
     },
@@ -3232,19 +3324,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
+    dateModified: '2026-10-23',
+    last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-ko.webp',
     title: '저사양 PC를 위한 최고의 로컬 AI 앱 2026 (8 GB RAM, GPU 없음)',
-    seoTitle: '저사양 PC 8 GB 로컬 AI 앱 2026: CPU 전용',
+    seoTitle: '저사양 PC 로컬 AI 앱: 8 GB, GPU 없음 2026',
     metaDescription:
-      'Ollama, Jan, llama.cpp, GPT4All을 8 GB RAM 내장 그래픽 노트북에서 테스트. 토큰/초, 메모리 압박, 각 앱별 정확한 설정값. 2026년 8월.',
+      'Ollama, Jan, llama.cpp, GPT4All을 8 GB RAM·GPU 없는 PC에서 비교합니다. 커뮤니티 보고 토큰/초, 앱별 추천 모델, CPU 속도 설정을 정리했습니다.',
     twitterDescription:
-      'GPU 없는 8 GB RAM 노트북에서 작동하는 로컬 AI 앱 4종. 토큰/초, 정확한 설정, 솔직한 평가. 2026년 8월.',
+      'GPU 없는 8 GB RAM 노트북에서 작동하는 로컬 AI 앱 4종 비교. 커뮤니티 보고 토큰/초, 정확한 설정, 솔직한 평가.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen3 1.7B'],
     current_hardware_mentioned: ['Intel UHD 620', 'Intel Iris Xe', 'AMD Ryzen 5 5500U', 'Apple M1 8GB', 'Intel Core i5-8250U'],
     audience: '전용 GPU 없이 8 GB RAM만 있는 4~7년 된 노트북 사용자로 처음 로컬 AI 앱을 선택하는 분들.',
@@ -3253,20 +3346,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: '저사양 PC 로컬 AI',
     targetKeywords: ['로컬 ai 8gb ram', '저사양 pc 최적 로컬 llm', '로컬 ai gpu 없음', '로컬 llm cpu 전용 2026', '구형 노트북 로컬 ai'],
     leadAnswerBlock:
-      '**GPU 없이 8 GB RAM만 있는 노트북에서도 2026년 8월 기준 잘 작동하는 앱이 네 가지 있습니다: Ollama, Jan, llama.cpp, GPT4All. Phi-4 Mini Q4 (균형), SmolLM 2 1.7B Q4 (속도), Llama 3.2 1B Q5 (가장 부드러운 GUI 경험) 중 하나와 조합하고 작업 세트를 6 GB 이하로 유지하십시오. GPT4All은 지금도 실행되지만 2025년 2월 v3.10.0 이후 새 릴리스가 없으므로, 유지 관리되는 GUI가 필요하다면 Jan을 선택하십시오.**',
+      '**경고: GPT4All은 2025년 5월 27일 이후 업데이트가 없으며(마지막 릴리스는 2025년 2월 25일 v3.10.0) 유지 관리가 중단되었을 수 있습니다 — 의존하기 전에 확인하십시오.** **GPU 없이 8 GB RAM만 있는 노트북에서도 2026년 10월 기준 잘 작동하는 앱이 네 가지 있습니다: Ollama, Jan, llama.cpp, GPT4All. Phi-4 Mini Q4 (균형), SmolLM 2 1.7B Q4 (속도), Llama 3.2 1B Q5 (가장 부드러운 GUI 경험) 중 하나와 조합하고 작업 세트를 6 GB 이하로 유지하십시오. 유지 관리되는 GUI가 필요하다면 Jan을 선택하십시오.**',
     quickAnswerTop: {
       ko: {
         question: '8 GB RAM, GPU 없는 노트북에서 가장 잘 작동하는 로컬 AI 앱은 무엇인가요?',
         answer:
-          '터미널에 익숙하다면 Ollama를 선택하세요 — 가장 가벼운 런타임이며 Phi-4 Mini Q4와 궁합이 좋아 구형 Intel CPU에서 4~8 토큰/초, Ryzen 5000/Intel 12세대 하드웨어에서 8~14 토큰/초가 나옵니다. 명령줄 없이 깔끔한 GUI를 원한다면 Jan을 선택하십시오 — Apache 2.0 라이선스이며 릴리스가 활발하고, 2026년 8월 기준 터미널이 필요 없는 최선의 선택입니다. GPT4All은 아직 우위를 유지하는 두 경우, 즉 4 GB RAM 장치이거나 관리자 권한이 없는 잠긴 업무용 노트북일 때만 선택하십시오 — 마지막 릴리스는 2025년 2월 v3.10.0입니다.',
+          '터미널에 익숙하다면 Ollama를 선택하세요 — 가장 가벼운 런타임이며 Phi-4 Mini Q4와 궁합이 좋아 구형 Intel CPU에서 4~8 토큰/초, Ryzen 5000/Intel 12세대 하드웨어에서 8~14 토큰/초가 나옵니다. 명령줄 없이 깔끔한 GUI를 원한다면 Jan을 선택하십시오 — Apache 2.0 라이선스이며 릴리스가 활발하고, 2026년 10월 기준 터미널이 필요 없는 최선의 선택입니다. GPT4All은 아직 우위를 유지하는 두 경우, 즉 4 GB RAM 장치이거나 관리자 권한이 없는 잠긴 업무용 노트북일 때만 선택하십시오 — 마지막 릴리스는 2025년 2월 v3.10.0이며 마지막 코드 업데이트는 2025년 5월 27일입니다.',
         bullets: [
           'Ollama — 가장 가벼운 CPU 런타임, 터미널 기반, Phi-4 Mini와 최고 궁합',
           'Jan — 완전한 GUI, 오픈소스 (Apache 2.0), Apple Silicon 네이티브, 8 GB Mac에서 가장 가벼운 앱',
           'llama.cpp — 베어메탈 속도, 빌드 필요, SmolLM 2 / Gemma 4 E2B와 최고 궁합',
-          'GPT4All — 가장 낮은 RAM 요건(4 GB)과 관리자 권한 없는 설치가 가능하지만 2025년 2월 이후 새 릴리스 없음',
+          'GPT4All — 가장 낮은 RAM 요건(4 GB)과 관리자 권한 없는 설치가 가능하지만 2025년 5월 27일 이후 업데이트 없음(유지 관리 중단 가능성)',
           '네 앱 모두 무료이며 설치 후 오프라인 작동, 표준 GGUF 모델 파일 로드 가능',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -3283,7 +3376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 읽기', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
-    gammaDescription: '아래 프레젠테이션은 8 GB RAM, GPU 없이 테스트한 Ollama, Jan, llama.cpp, GPT4All (4~18 토큰/초), 30~60% 속도 향상 설정, 앱별 최적 모델, 성능을 망치는 5가지 흔한 실수를 다룹니다. PDF를 저사양 PC 참조 카드로 다운로드하세요.',
+    gammaDescription: '아래 프레젠테이션은 8 GB RAM, GPU 없이 비교한 Ollama, Jan, llama.cpp, GPT4All (커뮤니티 보고 4~18 토큰/초), 30~60% 속도 향상 설정, 앱별 최적 모델, 성능을 망치는 5가지 흔한 실수를 다룹니다. PDF를 저사양 PC 참조 카드로 다운로드하세요. GPT4All은 2025년 5월 이후 업데이트가 없어 슬라이드에서 Jan 뒤에 배치했습니다.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -3292,16 +3385,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama** — 2026년 가장 가벼운 CPU 런타임, 최고의 앱+모델 조합: Ollama + Phi-4 Mini Q4로 8 GB CPU 전용에서 4~14 토큰/초.',
           '**Jan** — 완전한 GUI, Apache 2.0 오픈소스, Apple Silicon 네이티브, 8 GB MacBook Air 또는 Mac mini M1에서 가장 가벼운 GUI 앱.',
           '**llama.cpp** — 동일 하드웨어에서 가장 높은 토큰/초 (Ollama보다 5~15%, GPT4All보다 15~25% 높음), 하지만 빌드 단계 필요.',
-          '**GPT4All** — 여전히 최소 4 GB RAM과 관리자 권한 없는 설치를 지원하는 유일한 앱이지만, 마지막 릴리스가 2025년 2월 25일 v3.10.0이므로 첫 번째 선택이 아니라 대안으로 다루십시오.',
+          '**GPT4All** — 여전히 최소 4 GB RAM과 관리자 권한 없는 설치를 지원하는 네 앱 중 유일한 GUI 앱이지만, 2025년 5월 27일 이후 업데이트가 없고(마지막 릴리스는 2025년 2월 25일 v3.10.0) 유지 관리가 중단되었을 수 있으므로 첫 번째 선택이 아니라 대안으로 다루십시오.',
           '**8 GB / GPU 없음 최적 모델:** 균형을 위한 Phi-4 Mini 3.8B Q4_K_M, 최고 속도를 위한 SmolLM 2 1.7B Q4, 가장 부드러운 채팅 경험을 위한 Llama 3.2 1B Q5.',
           '**CPU 동일 조건 속도 순위:** llama.cpp > Ollama > Jan > GPT4All. 차이는 15~25%이며, 2~3배가 아닙니다.',
-          '**2026년 8월 기준, 8 GB RAM에서 7B+ 모델 실행 금지** — 컨텍스트 창 압박과 OS 자체가 스왑을 유발해 처리량이 5~10배 떨어집니다.',
+          '**2026년 10월 기준, 8 GB RAM에서 7B+ 모델 실행 금지** — 컨텍스트 창 압박과 OS 자체가 스왑을 유발해 처리량이 5~10배 떨어집니다.',
         ],
       },
       comparisonTable: {
         id: 'comparison-table',
         title: '8 GB RAM, GPU 없음 조건에서 Ollama, Jan, llama.cpp, GPT4All 비교',
-        content: '아래 수치는 llama.cpp 기본 벤치마크 스레드, Hugging Face 모델 카드, r/LocalLLaMA의 8 GB RAM 내장 그래픽 테스트 보고서에서 수집한 것입니다.',
+        content: '아래 수치는 llama.cpp 기본 벤치마크 스레드, Hugging Face 모델 카드, r/LocalLLaMA의 8 GB RAM 내장 그래픽 테스트 보고서에서 수집한 것입니다. 확인한 버전(2026년 10월): Ollama v0.40.10, Jan v0.8.7, GPT4All v3.10.0(2025년 2월 릴리스, 마지막 코드 업데이트 2025년 5월 27일).',
         snippetBlocks: [
           { type: 'one-sentence', text: '8 GB RAM, 전용 GPU 없는 PC에서 Ollama + Phi-4 Mini Q4_K_M 조합이 비코딩 용도의 로컬 AI에 가장 적합합니다 — 가장 빠른 생성 속도, 가장 낮은 발열, 가장 큰 모델 라이브러리.' },
           { type: 'plain-terms', text: '저사양 8 GB RAM PC: Ollama를 설치하고 `ollama pull phi4-mini`와 `ollama run phi4-mini`를 실행하세요. CPU에 따라 4~14 토큰/초가 나옵니다. 터미널 없는 대안은 Jan을 일반 앱처럼 설치하고 8 GB에 맞는 모델로 필터링하세요.' },
@@ -3312,11 +3405,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '앱': '[Ollama](https://ollama.com)', '최소 RAM': '6 GB', '최적 모델 (8 GB 한도)': 'Phi-4 Mini Q4_K_M', '토큰/초 (CPU 전용)': '4~14 토큰/초', '발열': '낮음', '평가': '최고 균형 — 1순위 선택' },
           { '앱': '[Jan](https://jan.ai)', '최소 RAM': '6 GB', '최적 모델 (8 GB 한도)': 'Gemma 4 E2B Q4_K_M', '토큰/초 (CPU 전용)': '3~11 토큰/초', '발열': '보통', '평가': '최고의 GUI — 터미널 없는 선택' },
           { '앱': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'SmolLM 2 1.7B Q4_K_M', '토큰/초 (CPU 전용)': '5~18 토큰/초', '발열': '낮음', '평가': '빌드하면 가장 빠름' },
-          { '앱': '[GPT4All](https://nomic.ai/gpt4all)', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'Llama 3.2 1B Q4_0', '토큰/초 (CPU 전용)': '3~10 토큰/초', '발열': '낮음', '평가': '대안 — 2025년 2월 이후 릴리스 없음' },
+          { '앱': '[GPT4All](https://nomic.ai/gpt4all)', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'Llama 3.2 1B Q4_0', '토큰/초 (CPU 전용)': '3~10 토큰/초', '발열': '낮음', '평가': '대안 — 2025년 5월 이후 업데이트 없음' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageAlt: '저사양 PC 로컬 AI(8 GB RAM, GPU 없음): 4개 앱의 토큰/초 비교 차트',
         imageCaption:
-          '8 GB RAM, GPU 없음 기준 토큰/초: llama.cpp 5~18 토큰/초(가장 빠름, 빌드 필요), Ollama 4~14 토큰/초(최고 균형), Jan 3~11 토큰/초(최고의 GUI, Apple Silicon 네이티브), GPT4All 3~10 토큰/초(최소 4 GB, 2025년 2월 이후 릴리스 없음).',
+          '8 GB RAM, GPU 없음 기준 토큰/초: llama.cpp 5~18 토큰/초(가장 빠름, 빌드 필요), Ollama 4~14 토큰/초(최고 균형), Jan 3~11 토큰/초(최고의 GUI, Apple Silicon 네이티브), GPT4All 3~10 토큰/초(최소 4 GB, 2025년 5월 이후 업데이트 없음).',
       },
       whichOne: {
         id: 'which-one',
@@ -3329,6 +3423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': 'Linux 노트북, 최대 토큰/초 원함', '선택': 'llama.cpp' },
           { '상황': '4 GB RAM 장치 (최소 요건 미달)', '선택': 'GPT4All + Llama 3.2 1B Q4_0' },
           { '상황': 'Intel Core i5-8250U / i7-7700U 구형 CPU', '선택': 'Ollama + SmolLM 2 1.7B' },
+          { '상황': 'macOS 14 이상의 Intel Mac (2015~2020년형)', '선택': 'Ollama (CPU 전용) + SmolLM 2 1.7B' },
           { '상황': 'Linux 개발자 모드 Chromebook', '선택': 'llama.cpp + SmolLM 2' },
           { '상황': '드라이버 설치 불가 업무용 노트북', '선택': 'GPT4All (관리자 권한 불필요)' },
         ],
@@ -3338,7 +3433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cpuBenchmarks: {
         id: 'cpu-benchmarks',
         title: '실제 저사양 하드웨어에서 각 앱은 얼마나 빠른가요?',
-        content: '**8 GB RAM, 전용 GPU 없는 일반적인 하드웨어에서의 토큰/초, 2026년 8월.**',
+        content: '**8 GB RAM, 전용 GPU 없는 일반적인 하드웨어에서의 토큰/초, 2026년 10월.**',
         columns: ['하드웨어', '모델', 'Ollama', 'Jan', 'llama.cpp', 'GPT4All'],
         rows: [
           { '하드웨어': 'Intel Core i5-8250U + UHD 620 (2018년 울트라북)', '모델': 'Phi-4 Mini Q4_K_M', 'Ollama': '4~6 토큰/초', 'Jan': '3~5 토큰/초', 'llama.cpp': '5~7 토큰/초', 'GPT4All': '3~5 토큰/초' },
@@ -3363,6 +3458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [{ type: 'warning', text: '8 GB RAM에서는 Q2로도 7B 모델을 로드하지 마세요. 7B Q2는 2048 컨텍스트에서 ≈ 5.5 GB에 달해 8 GB 한도를 초과합니다.' }],
         image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageAlt: '저사양 PC 로컬 AI의 8 GB RAM 예산: Phi-4 Mini는 들어가고 7B Q4 모델은 스왑을 유발합니다',
         imageCaption:
           '8 GB RAM 예산 비교: Phi-4 Mini 3.8B Q4는 OS ~3 GB + 모델/KV 캐시 ~3.5 GB를 사용해 ~1.5 GB가 남지만, 7B Q4 모델은 총 ~9 GB가 필요해 8 GB 한도를 1 GB 초과하여 스왑을 유발하고 토큰/초를 5~10배 떨어뜨립니다.',
       },
@@ -3431,7 +3527,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Chromebook에서 로컬 AI를 실행할 수 있나요?', a: 'Linux 개발자 모드 (Crostini)가 있으면 가능합니다. ARM Chromebook에서는 llama.cpp가 가장 안정적입니다.' },
           { q: 'Windows 10이 2026년 로컬 AI에서 작동하나요?', a: '네. 네 앱 모두 Windows 10 22H2를 지원합니다. 보안 업데이트는 2025년 10월에 종료됐지만 앱 실행은 가능합니다.' },
           { q: '가장 저렴하게 로컬 AI를 잘 실행하는 노트북은?', a: '2021~2022년형 중고 ThinkPad T14 (16 GB RAM, Ryzen 5 5500U)는 350~450유로에 8~14 토큰/초. Apple M1 중고 MacBook Air도 좋은 선택입니다.' },
-          { q: '2026년에도 GPT4All을 설치해도 괜찮습니까?', a: '설치와 실행은 정상적으로 됩니다. 다만 최신 릴리스가 2025년 2월 25일 v3.10.0으로, 2026년 8월 기준 약 18개월간 새 빌드가 없습니다. 실질적으로는 기본 카탈로그에 새로운 모델 아키텍처가 추가되지 않고 앱 자체의 보안 패치도 제공되지 않는다는 뜻이며, 이는 개인용 기기보다 업무용 기기에서 더 큰 부담이 됩니다. 남아 있는 두 가지 장점이 해당될 때만 사용하십시오 — 4 GB RAM 한계, 또는 관리자 권한이 없는 잠긴 노트북 — 그 외에는 Jan을 사용하십시오.' },
+          { q: '2026년에도 GPT4All을 설치해도 괜찮습니까?', a: '설치와 실행은 정상적으로 됩니다. 다만 최신 릴리스가 2025년 2월 25일 v3.10.0으로, 2026년 10월 기준 약 20개월간 새 빌드가 없으며 마지막 코드 업데이트는 2025년 5월 27일입니다. 실질적으로는 기본 카탈로그에 새로운 모델 아키텍처가 추가되지 않고 앱 자체의 보안 패치도 제공되지 않는다는 뜻이며, 이는 개인용 기기보다 업무용 기기에서 더 큰 부담이 됩니다. 유지 관리가 중단되었을 수 있는 앱으로 간주하고, 남아 있는 두 가지 장점이 해당될 때만 사용하십시오 — 4 GB RAM 한계, 또는 관리자 권한이 없는 잠긴 노트북 — 그 외에는 Jan을 사용하십시오.' },
+          { q: 'Intel Mac 8 GB RAM에서 로컬 AI를 실행할 수 있나요?', a: '네, 다만 CPU로만 가능합니다. [Ollama의 공식 macOS 요구 사항](https://github.com/ollama/ollama/blob/main/docs/macos.mdx)은 macOS Sonoma(14) 이상, Apple M 시리즈(CPU 및 GPU) 또는 x86(CPU 전용)을 명시하므로, macOS 13 이하에 머문 Intel Mac에서는 현재 Ollama 앱을 실행할 수 없습니다. [Jan](https://jan.ai)은 유니버설 macOS 빌드를 제공하며, [llama.cpp](https://github.com/ggml-org/llama.cpp)는 모든 Intel Mac에서 컴파일할 수 있습니다. 속도는 Apple M1 행이 아니라 벤치마크 표의 Intel 노트북 행에 가깝게 나오므로, SmolLM 2 1.7B Q4_K_M이나 Phi-4 Mini Q4_K_M 같은 1.7B~3.8B 모델을 사용하십시오.' },
+          { q: '오래된 Core i3, Celeron, Pentium 노트북에서 로컬 AI를 실행할 수 있나요?', a: '경우에 따라 가능합니다. 결정 요인은 브랜드명이 아니라 CPU 명령어 세트입니다. 2013년 이후(Haswell) Intel Core i3는 AVX2를 지원하지만, 1세대 Core i3, i3-3110M 같은 Ivy Bridge 모델, Atom 기반 Celeron / Pentium N 시리즈(Gemini Lake, N6000 같은 Jasper Lake)는 지원하지 않습니다. 설치 전에 Intel ARK에서 정확한 모델을 확인하십시오. AVX2가 있고 8 GB RAM이라면 SmolLM 2 1.7B Q4_K_M 또는 Llama 3.2 1B Q4_K_M이 현실적인 상한입니다. AVX2가 없으면 llama.cpp는 실행되지만 대화에 쓰기에는 대체로 너무 느립니다.' },
           { q: 'Raspberry Pi를 로컬 AI에 사용할 수 있나요?', a: 'Raspberry Pi 5 8 GB는 4~7 토큰/초로 가능하지만 채팅용으로는 중고 x86 노트북이 더 낫습니다.' },
         ],
       },
@@ -3452,9 +3550,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/ko/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': '저사양 PC를 위한 최고의 로컬 AI 앱 2026 (8 GB RAM, GPU 없음)',
-      'description': 'Ollama, Jan, llama.cpp, GPT4All을 8 GB RAM 내장 그래픽 노트북에서 테스트. 토큰/초, 메모리 압박, 각 앱별 정확한 설정값. 2026년 8월 업데이트.',
+      'description': 'Ollama, Jan, llama.cpp, GPT4All을 8 GB RAM 내장 그래픽 노트북에서 비교합니다. 커뮤니티 보고 토큰/초, 메모리 압박, 각 앱별 정확한 설정값.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-08-27',
+      'dateModified': '2026-10-23',
       'inLanguage': 'ko',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -3468,7 +3566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', 'position': 1, 'name': 'Ollama', 'description': '가장 가벼운 CPU 런타임; 최소 6 GB RAM; Phi-4 Mini Q4_K_M과 8 GB CPU 전용에서 4~14 토큰/초.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Jan', 'description': '오픈소스 GUI (Apache 2.0); 최소 6 GB RAM; Apple Silicon 8 GB 최고 GUI.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'llama.cpp', 'description': '빌드하면 베어메탈 속도; 최소 4 GB RAM; SmolLM 2 1.7B Q4_K_M과 5~18 토큰/초.' },
-        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': '가장 간단한 원클릭 설치; 최소 4 GB RAM; Llama 3.2 1B Q4_0과 3~10 토큰/초; 비기술 사용자 권장.' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'GPT4All', 'description': '가장 간단한 원클릭 설치; 최소 4 GB RAM; Llama 3.2 1B Q4_0과 3~10 토큰/초; 비기술 사용자 권장, 단 2025년 5월 27일 이후 업데이트 없음.' },
       ],
     },
     breadcrumbSchema: {

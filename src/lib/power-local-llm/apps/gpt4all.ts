@@ -37,6 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { desktopApp: true, builtInEngine: true, fileChat: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2025-05-27', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2025-05-27', // GitHub API (latest release or push, whichever is newer), read 2026-10-23
   lastUpstreamUpdateSource: 'https://github.com/nomic-ai/gpt4all',
 }
