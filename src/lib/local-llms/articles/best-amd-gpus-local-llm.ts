@@ -122,12 +122,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: 'Which AMD GPUs Are Worth Buying for Local LLMs?',
         items: [
-          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): the strongest AMD consumer card for LLMs. A 32B model at Q4_K_M is roughly 20 GB, so it fits with room for context. On AMD\'s ROCm 7.2.1 matrix and on Ollama\'s ROCm list for Linux and Windows. Used: about $900–1,250.',
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): the AMD consumer card with the most VRAM and bandwidth. A 32B model at Q4_K_M is roughly 20 GB, so it fits with room for context. On AMD\'s ROCm 7.2.1 matrix and on Ollama\'s ROCm list for Linux and Windows. Used: about $900–1,250.',
           '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): the newer 16 GB option, on AMD\'s ROCm 7.2.1 matrix and Ollama\'s Linux ROCm list. Runs 14B models at Q4–Q6 comfortably. New: about $820–930.',
           '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): a workstation card with the most VRAM AMD sells in this class. It handles 32B models at Q4–Q6; two cards (64 GB) fit a 70B model at Q4. AMD list price: $1,299; reported street prices are higher.',
           '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): fits models up to roughly 24–27B at Q4. Buy it only if it is clearly cheaper than a used 7900 XTX; its price was not re-checked for this update.',
           '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): the budget pick at about $380–410 used. Lower bandwidth means slower generation, and AMD\'s current Radeon ROCm matrix no longer lists it, so plan on Ollama\'s Linux ROCm path or Vulkan.',
-          '**Ryzen AI Max+ 395 mini PCs** (up to 128 GB unified memory, 256 GB/s): not a graphics card, but the cheapest way to run very large mixture-of-experts models on AMD. 128 GB systems were listed at roughly $3,300–4,350 in late September 2026 (price trackers). See [Best AMD Mini PCs for Local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026).',
+          '**Ryzen AI Max+ 395 mini PCs** (up to 128 GB unified memory, 256 GB/s): not a graphics card, but a lower-cost way to run very large mixture-of-experts models on AMD. 128 GB systems were listed at roughly $3,300–4,350 in late September 2026 (price trackers). See [Best AMD Mini PCs for Local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026).',
         ],
       },
       'amd-vs-nvidia': {
@@ -510,12 +510,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: '¿Qué GPUs AMD merece la pena comprar para LLMs locales?',
         items: [
-          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): la AMD de consumo más potente para LLMs. Un modelo de 32B en Q4_K_M ocupa unos 20 GB, así que cabe con margen para el contexto. Figura en la matriz ROCm 7.2.1 de AMD y en la lista ROCm de Ollama para Linux y Windows. De segunda mano: unos $900–1,250.',
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): la AMD de consumo con más VRAM y ancho de banda. Un modelo de 32B en Q4_K_M ocupa unos 20 GB, así que cabe con margen para el contexto. Figura en la matriz ROCm 7.2.1 de AMD y en la lista ROCm de Ollama para Linux y Windows. De segunda mano: unos $900–1,250.',
           '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): la opción reciente de 16 GB, en la matriz ROCm 7.2.1 de AMD y en la lista ROCm de Ollama para Linux. Mueve con soltura modelos de 14B en Q4–Q6. Nueva: unos $820–930.',
           '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): una tarjeta de estación de trabajo con la mayor VRAM que AMD vende en esta clase. Maneja modelos de 32B en Q4–Q6; dos tarjetas (64 GB) alojan un modelo de 70B en Q4. Precio de lista de AMD: $1,299; los precios de calle reportados son más altos.',
           '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): aloja modelos de hasta unos 24–27B en Q4. Cómprala solo si es claramente más barata que una 7900 XTX de segunda mano; su precio no se volvió a comprobar en esta actualización.',
           '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): la opción económica, unos $380–410 de segunda mano. Menos ancho de banda implica generación más lenta, y la matriz ROCm actual de AMD para Radeon ya no la incluye, así que cuenta con la vía ROCm de Ollama en Linux o con Vulkan.',
-          '**Mini PCs con Ryzen AI Max+ 395** (hasta 128 GB de memoria unificada, 256 GB/s): no son tarjetas gráficas, pero son la forma más barata de ejecutar modelos mixture-of-experts muy grandes en AMD. Los sistemas de 128 GB aparecían a unos $3,300–4,350 a finales de septiembre de 2026 (rastreadores de precios). Consulta [Mejores mini PCs AMD para LLMs locales](/es/local-llms/best-amd-mini-pc-local-llm-2026).',
+          '**Mini PCs con Ryzen AI Max+ 395** (hasta 128 GB de memoria unificada, 256 GB/s): no son tarjetas gráficas, pero son una forma más económica de ejecutar modelos mixture-of-experts muy grandes en AMD. Los sistemas de 128 GB aparecían a unos $3,300–4,350 a finales de septiembre de 2026 (rastreadores de precios). Consulta [Mejores mini PCs AMD para LLMs locales](/es/local-llms/best-amd-mini-pc-local-llm-2026).',
         ],
       },
       'amd-vs-nvidia': {
@@ -898,12 +898,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: 'أي بطاقات AMD تستحق الشراء لنماذج LLM المحلية؟',
         items: [
-          '**RX 7900 XTX** (‏24 GB GDDR6، ‏960 GB/s، RDNA 3): أقوى بطاقة AMD استهلاكية لنماذج LLM. حجم نموذج 32B بصيغة Q4_K_M نحو 20 GB، فيتّسع مع هامش للسياق. موجودة في مصفوفة ROCm 7.2.1 من AMD وفي قائمة ROCm لدى Ollama على Linux وWindows. مستعملة: نحو 900–1,250 دولار.',
+          '**RX 7900 XTX** (‏24 GB GDDR6، ‏960 GB/s، RDNA 3): بطاقة AMD الاستهلاكية ذات أكبر VRAM وأعلى عرض نطاق. حجم نموذج 32B بصيغة Q4_K_M نحو 20 GB، فيتّسع مع هامش للسياق. موجودة في مصفوفة ROCm 7.2.1 من AMD وفي قائمة ROCm لدى Ollama على Linux وWindows. مستعملة: نحو 900–1,250 دولار.',
           '**RX 9070 XT** (‏16 GB GDDR6، ‏640 GB/s، RDNA 4): خيار 16 GB الأحدث، في مصفوفة ROCm 7.2.1 من AMD وقائمة ROCm على Linux لدى Ollama. تشغّل نماذج 14B بصيغة Q4–Q6 براحة. جديدة: نحو 820–930 دولارًا.',
           '**Radeon AI PRO R9700** (‏32 GB GDDR6، ‏640 GB/s، RDNA 4): بطاقة محطات عمل بأكبر VRAM تبيعه AMD في هذه الفئة. تتعامل مع نماذج 32B بصيغة Q4–Q6؛ وبطاقتان (64 GB) تستوعبان نموذج 70B بصيغة Q4. سعر القائمة لدى AMD: 1,299 دولار؛ وأسعار السوق المبلغ عنها أعلى.',
           '**RX 7900 XT** (‏20 GB GDDR6، ‏800 GB/s، RDNA 3): تستوعب نماذج حتى نحو 24–27B بصيغة Q4. اشترِها فقط إذا كانت أرخص بوضوح من 7900 XTX المستعملة؛ ولم يُعاد التحقق من سعرها في هذا التحديث.',
           '**RX 6800 XT** (‏16 GB GDDR6، ‏512 GB/s، RDNA 2): خيار الميزانية بنحو 380–410 دولارات مستعملة. عرض نطاق أقل يعني توليدًا أبطأ، ولم تعد مصفوفة ROCm الحالية من AMD لبطاقات Radeon تدرجها، فاعتمد على مسار ROCm على Linux لدى Ollama أو على Vulkan.',
-          '**أجهزة Mini PC بمعالج Ryzen AI Max+ 395** (حتى 128 GB ذاكرة موحّدة، ‏256 GB/s): ليست بطاقة رسوميات، لكنها أرخص طريقة لتشغيل نماذج Mixture-of-Experts الكبيرة جدًا على AMD. أُدرجت أنظمة 128 GB بنحو 3,300–4,350 دولار في أواخر سبتمبر 2026 (متتبعات الأسعار). راجع [أفضل أجهزة AMD Mini PC لنماذج LLM المحلية](/ar/local-llms/best-amd-mini-pc-local-llm-2026).',
+          '**أجهزة Mini PC بمعالج Ryzen AI Max+ 395** (حتى 128 GB ذاكرة موحّدة، ‏256 GB/s): ليست بطاقة رسوميات، لكنها طريقة أقل تكلفة لتشغيل نماذج Mixture-of-Experts الكبيرة جدًا على AMD. أُدرجت أنظمة 128 GB بنحو 3,300–4,350 دولار في أواخر سبتمبر 2026 (متتبعات الأسعار). راجع [أفضل أجهزة AMD Mini PC لنماذج LLM المحلية](/ar/local-llms/best-amd-mini-pc-local-llm-2026).',
         ],
       },
       'amd-vs-nvidia': {
@@ -1286,12 +1286,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: 'Quais GPUs AMD valem a pena para LLMs locais?',
         items: [
-          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): a placa AMD de consumo mais forte para LLMs. Um modelo de 32B em Q4_K_M tem cerca de 20 GB, então cabe com folga para o contexto. Consta na matriz ROCm 7.2.1 da AMD e na lista de ROCm do Ollama para Linux e Windows. Usada: cerca de US$ 900–1.250.',
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): a placa AMD de consumo com mais VRAM e largura de banda. Um modelo de 32B em Q4_K_M tem cerca de 20 GB, então cabe com folga para o contexto. Consta na matriz ROCm 7.2.1 da AMD e na lista de ROCm do Ollama para Linux e Windows. Usada: cerca de US$ 900–1.250.',
           '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): a opção recente de 16 GB, na matriz ROCm 7.2.1 da AMD e na lista de ROCm do Ollama para Linux. Roda modelos de 14B em Q4–Q6 com folga. Nova: cerca de US$ 820–930.',
           '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): uma placa de estação de trabalho com a maior VRAM que a AMD vende nessa classe. Lida com modelos de 32B em Q4–Q6; duas placas (64 GB) comportam um modelo de 70B em Q4. Preço de tabela da AMD: US$ 1.299; os preços de rua relatados são mais altos.',
           '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): comporta modelos de até cerca de 24–27B em Q4. Só compre se estiver claramente mais barata que uma 7900 XTX usada; o preço dela não foi reconferido nesta atualização.',
           '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): a opção econômica, cerca de US$ 380–410 usada. Menos largura de banda significa geração mais lenta, e a matriz atual de ROCm da AMD para Radeon não a lista mais; conte com o caminho de ROCm no Linux do Ollama ou com o Vulkan.',
-          '**Mini PCs com Ryzen AI Max+ 395** (até 128 GB de memória unificada, 256 GB/s): não são placas de vídeo, mas são a forma mais barata de rodar modelos mixture-of-experts muito grandes em AMD. Sistemas de 128 GB estavam listados por cerca de US$ 3.300–4.350 no fim de setembro de 2026 (rastreadores de preço). Veja [Melhores mini PCs AMD para LLMs locais](/pt/local-llms/best-amd-mini-pc-local-llm-2026).',
+          '**Mini PCs com Ryzen AI Max+ 395** (até 128 GB de memória unificada, 256 GB/s): não são placas de vídeo, mas são uma forma mais econômica de rodar modelos mixture-of-experts muito grandes em AMD. Sistemas de 128 GB estavam listados por cerca de US$ 3.300–4.350 no fim de setembro de 2026 (rastreadores de preço). Veja [Melhores mini PCs AMD para LLMs locais](/pt/local-llms/best-amd-mini-pc-local-llm-2026).',
         ],
       },
       'amd-vs-nvidia': {
@@ -1674,12 +1674,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: 'Welche AMD-GPUs lohnen sich für lokale LLMs?',
         items: [
-          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): die stärkste AMD-Consumer-Karte für LLMs. Ein 32B-Modell in Q4_K_M ist etwa 20 GB groß und passt daher mit Reserve für den Kontext. Steht in AMDs ROCm-7.2.1-Matrix und auf Ollamas ROCm-Liste für Linux und Windows. Gebraucht: ca. 900–1.250 $.',
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): die AMD-Consumer-Karte mit dem meisten VRAM und der höchsten Bandbreite. Ein 32B-Modell in Q4_K_M ist etwa 20 GB groß und passt daher mit Reserve für den Kontext. Steht in AMDs ROCm-7.2.1-Matrix und auf Ollamas ROCm-Liste für Linux und Windows. Gebraucht: ca. 900–1.250 $.',
           '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): die neuere 16-GB-Option, in AMDs ROCm-7.2.1-Matrix und auf Ollamas Linux-ROCm-Liste. Betreibt 14B-Modelle in Q4–Q6 bequem. Neu: ca. 820–930 $.',
           '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): eine Workstation-Karte mit dem meisten VRAM, den AMD in dieser Klasse verkauft. Sie verarbeitet 32B-Modelle in Q4–Q6; zwei Karten (64 GB) fassen ein 70B-Modell in Q4. AMD-Listenpreis: 1.299 $; gemeldete Straßenpreise sind höher.',
           '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): fasst Modelle bis etwa 24–27B in Q4. Kaufen Sie sie nur, wenn sie deutlich günstiger ist als eine gebrauchte 7900 XTX; ihr Preis wurde für dieses Update nicht neu geprüft.',
           '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): die Budget-Wahl für ca. 380–410 $ gebraucht. Weniger Bandbreite bedeutet langsamere Generierung, und AMDs aktuelle Radeon-ROCm-Matrix führt sie nicht mehr auf; rechnen Sie also mit Ollamas Linux-ROCm-Weg oder Vulkan.',
-          '**Mini-PCs mit Ryzen AI Max+ 395** (bis 128 GB einheitlicher Speicher, 256 GB/s): keine Grafikkarte, aber der günstigste Weg, sehr große Mixture-of-Experts-Modelle auf AMD zu betreiben. 128-GB-Systeme wurden Ende September 2026 für etwa 3.300–4.350 $ gelistet (Preis-Tracker). Siehe [Beste AMD-Mini-PCs für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026).',
+          '**Mini-PCs mit Ryzen AI Max+ 395** (bis 128 GB einheitlicher Speicher, 256 GB/s): keine Grafikkarte, aber ein günstigerer Weg, sehr große Mixture-of-Experts-Modelle auf AMD zu betreiben. 128-GB-Systeme wurden Ende September 2026 für etwa 3.300–4.350 $ gelistet (Preis-Tracker). Siehe [Beste AMD-Mini-PCs für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026).',
         ],
       },
       'amd-vs-nvidia': {
@@ -2062,12 +2062,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: 'Quels GPU AMD valent l\'achat pour les LLM locaux ?',
         items: [
-          '**RX 7900 XTX** (24 Go GDDR6, 960 Go/s, RDNA 3) : la carte AMD grand public la plus puissante pour les LLM. Un modèle 32B en Q4_K_M pèse environ 20 Go : il tient avec de la marge pour le contexte. Présente dans la matrice ROCm 7.2.1 d\'AMD et sur la liste ROCm d\'Ollama pour Linux et Windows. D\'occasion : environ 900–1 250 $.',
+          '**RX 7900 XTX** (24 Go GDDR6, 960 Go/s, RDNA 3) : la carte AMD grand public offrant le plus de VRAM et de bande passante. Un modèle 32B en Q4_K_M pèse environ 20 Go : il tient avec de la marge pour le contexte. Présente dans la matrice ROCm 7.2.1 d\'AMD et sur la liste ROCm d\'Ollama pour Linux et Windows. D\'occasion : environ 900–1 250 $.',
           '**RX 9070 XT** (16 Go GDDR6, 640 Go/s, RDNA 4) : l\'option récente de 16 Go, dans la matrice ROCm 7.2.1 d\'AMD et sur la liste ROCm Linux d\'Ollama. Exécute confortablement des modèles 14B en Q4–Q6. Neuve : environ 820–930 $.',
           '**Radeon AI PRO R9700** (32 Go GDDR6, 640 Go/s, RDNA 4) : une carte de station de travail avec le plus de VRAM qu\'AMD vende dans cette catégorie. Elle gère les modèles 32B en Q4–Q6 ; deux cartes (64 Go) accueillent un modèle 70B en Q4. Prix catalogue AMD : 1 299 $ ; les prix de rue signalés sont plus élevés.',
           '**RX 7900 XT** (20 Go GDDR6, 800 Go/s, RDNA 3) : accueille des modèles jusqu\'à environ 24–27B en Q4. Ne l\'achetez que si elle est nettement moins chère qu\'une 7900 XTX d\'occasion ; son prix n\'a pas été revérifié pour cette mise à jour.',
           '**RX 6800 XT** (16 Go GDDR6, 512 Go/s, RDNA 2) : le choix économique, environ 380–410 $ d\'occasion. Moins de bande passante signifie une génération plus lente, et la matrice ROCm actuelle d\'AMD pour Radeon ne la liste plus : prévoyez la voie ROCm Linux d\'Ollama ou Vulkan.',
-          '**Mini-PC Ryzen AI Max+ 395** (jusqu\'à 128 Go de mémoire unifiée, 256 Go/s) : ce n\'est pas une carte graphique, mais le moyen le moins cher d\'exécuter de très grands modèles mixture-of-experts sur AMD. Les systèmes de 128 Go étaient affichés à environ 3 300–4 350 $ fin septembre 2026 (comparateurs de prix). Voir [Meilleurs mini-PC AMD pour LLM locaux](/fr/local-llms/best-amd-mini-pc-local-llm-2026).',
+          '**Mini-PC Ryzen AI Max+ 395** (jusqu\'à 128 Go de mémoire unifiée, 256 Go/s) : ce n\'est pas une carte graphique, mais un moyen plus économique d\'exécuter de très grands modèles mixture-of-experts sur AMD. Les systèmes de 128 Go étaient affichés à environ 3 300–4 350 $ fin septembre 2026 (comparateurs de prix). Voir [Meilleurs mini-PC AMD pour LLM locaux](/fr/local-llms/best-amd-mini-pc-local-llm-2026).',
         ],
       },
       'amd-vs-nvidia': {
@@ -2450,12 +2450,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: 'ローカルLLM向けに買う価値のあるAMD GPUはどれ？',
         items: [
-          '**RX 7900 XTX**（24 GB GDDR6、960 GB/s、RDNA 3）：LLM向けでは最強のAMD一般向けカードです。32BモデルのQ4_K_Mは約20 GBなので、コンテキスト用の余裕もあります。AMDのROCm 7.2.1対応表と、OllamaのLinux・Windows向けROCmリストに載っています。中古で約$900〜1,250。',
+          '**RX 7900 XTX**（24 GB GDDR6、960 GB/s、RDNA 3）：AMD一般向けカードの中でVRAM容量とメモリ帯域が最大のカードです。32BモデルのQ4_K_Mは約20 GBなので、コンテキスト用の余裕もあります。AMDのROCm 7.2.1対応表と、OllamaのLinux・Windows向けROCmリストに載っています。中古で約$900〜1,250。',
           '**RX 9070 XT**（16 GB GDDR6、640 GB/s、RDNA 4）：新しい16 GBの選択肢で、AMDのROCm 7.2.1対応表とOllamaのLinux向けROCmリストに載っています。14BモデルのQ4〜Q6を余裕で動かせます。新品で約$820〜930。',
           '**Radeon AI PRO R9700**（32 GB GDDR6、640 GB/s、RDNA 4）：このクラスでAMDが売る中で最大のVRAMを持つワークステーション向けカードです。32BモデルのQ4〜Q6を扱え、2枚（64 GB）なら70BのQ4が収まります。AMD希望価格は$1,299で、報告されている実売価格はそれより高めです。',
           '**RX 7900 XT**（20 GB GDDR6、800 GB/s、RDNA 3）：約24〜27BまでのモデルをQ4で扱えます。中古の7900 XTXよりはっきり安い場合のみ検討してください。今回の更新では価格を再確認していません。',
           '**RX 6800 XT**（16 GB GDDR6、512 GB/s、RDNA 2）：中古で約$380〜410の予算向けカードです。帯域が低いため生成は遅めで、AMDの現行Radeon向けROCm対応表にも載っていないため、OllamaのLinux向けROCm経路かVulkanを前提にしてください。',
-          '**Ryzen AI Max+ 395搭載ミニPC**（最大128 GBのユニファイドメモリ、256 GB/s）：グラフィックスカードではありませんが、非常に大きなMixture-of-ExpertsモデルをAMDで動かす最も安い方法です。128 GBモデルは2026年9月下旬に約$3,300〜4,350で掲載されていました（価格トラッカー）。[ローカルLLM向けAMDミニPCのおすすめ](/ja/local-llms/best-amd-mini-pc-local-llm-2026)を参照してください。',
+          '**Ryzen AI Max+ 395搭載ミニPC**（最大128 GBのユニファイドメモリ、256 GB/s）：グラフィックスカードではありませんが、非常に大きなMixture-of-ExpertsモデルをAMDで動かす比較的低コストな方法です。128 GBモデルは2026年9月下旬に約$3,300〜4,350で掲載されていました（価格トラッカー）。[ローカルLLM向けAMDミニPCのおすすめ](/ja/local-llms/best-amd-mini-pc-local-llm-2026)を参照してください。',
         ],
       },
       'amd-vs-nvidia': {
@@ -2838,12 +2838,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: '哪些AMD显卡值得买来跑本地LLM？',
         items: [
-          '**RX 7900 XTX**（24 GB GDDR6，960 GB/s，RDNA 3）：最适合LLM的AMD消费级显卡。32B模型的Q4_K_M约20 GB，因此还有余量留给上下文。列于AMD的ROCm 7.2.1支持表，也在Ollama的Linux和Windows ROCm列表中。二手约$900–1,250。',
+          '**RX 7900 XTX**（24 GB GDDR6，960 GB/s，RDNA 3）：VRAM和带宽最大的AMD消费级显卡。32B模型的Q4_K_M约20 GB，因此还有余量留给上下文。列于AMD的ROCm 7.2.1支持表，也在Ollama的Linux和Windows ROCm列表中。二手约$900–1,250。',
           '**RX 9070 XT**（16 GB GDDR6，640 GB/s，RDNA 4）：较新的16 GB选择，列于AMD的ROCm 7.2.1支持表和Ollama的Linux ROCm列表。可轻松运行Q4–Q6的14B模型。全新约$820–930。',
           '**Radeon AI PRO R9700**（32 GB GDDR6，640 GB/s，RDNA 4）：工作站显卡，是AMD该级别中显存最大的。可处理Q4–Q6的32B模型；两张卡（64 GB）可容纳Q4的70B模型。AMD官方定价$1,299；据报道实际售价更高。',
           '**RX 7900 XT**（20 GB GDDR6，800 GB/s，RDNA 3）：可容纳Q4下约24–27B的模型。只有明显比二手7900 XTX便宜时才值得买；本次更新未重新核对其价格。',
           '**RX 6800 XT**（16 GB GDDR6，512 GB/s，RDNA 2）：预算之选，二手约$380–410。带宽较低意味着生成更慢，而且AMD当前Radeon的ROCm支持表已不再列出它，需走Ollama的Linux ROCm路径或Vulkan。',
-          '**Ryzen AI Max+ 395迷你主机**（最高128 GB统一内存，256 GB/s）：它不是显卡，但是用AMD运行超大型混合专家（MoE）模型最便宜的方式。128 GB系统在2026年9月下旬的挂牌价约$3,300–4,350（价格追踪站）。参见[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)。',
+          '**Ryzen AI Max+ 395迷你主机**（最高128 GB统一内存，256 GB/s）：它不是显卡，但是用AMD运行超大型混合专家（MoE）模型成本较低的方式。128 GB系统在2026年9月下旬的挂牌价约$3,300–4,350（价格追踪站）。参见[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)。',
         ],
       },
       'amd-vs-nvidia': {
@@ -3226,12 +3226,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-amd',
         title: '로컬 LLM용으로 살 만한 AMD GPU는 무엇입니까?',
         items: [
-          '**RX 7900 XTX**(24 GB GDDR6, 960 GB/s, RDNA 3): LLM용으로 가장 강력한 AMD 소비자용 카드입니다. 32B 모델의 Q4_K_M은 약 20 GB이므로 컨텍스트 여유를 두고 담을 수 있습니다. AMD의 ROCm 7.2.1 지원표와 Ollama의 Linux·Windows ROCm 목록에 있습니다. 중고 약 $900–1,250.',
+          '**RX 7900 XTX**(24 GB GDDR6, 960 GB/s, RDNA 3): AMD 소비자용 카드 중 VRAM과 대역폭이 가장 큰 카드입니다. 32B 모델의 Q4_K_M은 약 20 GB이므로 컨텍스트 여유를 두고 담을 수 있습니다. AMD의 ROCm 7.2.1 지원표와 Ollama의 Linux·Windows ROCm 목록에 있습니다. 중고 약 $900–1,250.',
           '**RX 9070 XT**(16 GB GDDR6, 640 GB/s, RDNA 4): 더 최신인 16 GB 선택지로, AMD의 ROCm 7.2.1 지원표와 Ollama의 Linux ROCm 목록에 있습니다. 14B 모델을 Q4–Q6으로 여유 있게 실행합니다. 신품 약 $820–930.',
           '**Radeon AI PRO R9700**(32 GB GDDR6, 640 GB/s, RDNA 4): 이 등급에서 AMD가 판매하는 가장 큰 VRAM을 가진 워크스테이션 카드입니다. 32B 모델의 Q4–Q6을 처리하며, 두 장(64 GB)이면 70B 모델의 Q4를 담습니다. AMD 권장가 $1,299이며 보고된 실거래가는 더 높습니다.',
           '**RX 7900 XT**(20 GB GDDR6, 800 GB/s, RDNA 3): Q4 기준 약 24–27B 모델까지 담습니다. 중고 7900 XTX보다 확실히 저렴할 때만 구매하십시오. 이번 업데이트에서는 가격을 다시 확인하지 않았습니다.',
           '**RX 6800 XT**(16 GB GDDR6, 512 GB/s, RDNA 2): 중고 약 $380–410의 예산형 선택지입니다. 대역폭이 낮아 생성이 느리고, AMD의 현재 Radeon ROCm 지원표에서는 더 이상 나열하지 않으므로 Ollama의 Linux ROCm 경로 또는 Vulkan을 전제로 하십시오.',
-          '**Ryzen AI Max+ 395 미니 PC**(최대 128 GB 통합 메모리, 256 GB/s): 그래픽 카드는 아니지만 매우 큰 Mixture-of-Experts 모델을 AMD에서 돌리는 가장 저렴한 방법입니다. 128 GB 시스템은 2026년 9월 하순에 약 $3,300–4,350으로 등록되어 있었습니다(가격 추적 사이트). [로컬 LLM용 AMD 미니 PC 추천](/ko/local-llms/best-amd-mini-pc-local-llm-2026)을 참고하십시오.',
+          '**Ryzen AI Max+ 395 미니 PC**(최대 128 GB 통합 메모리, 256 GB/s): 그래픽 카드는 아니지만 매우 큰 Mixture-of-Experts 모델을 AMD에서 돌리는 비용이 비교적 낮은 방법입니다. 128 GB 시스템은 2026년 9월 하순에 약 $3,300–4,350으로 등록되어 있었습니다(가격 추적 사이트). [로컬 LLM용 AMD 미니 PC 추천](/ko/local-llms/best-amd-mini-pc-local-llm-2026)을 참고하십시오.',
         ],
       },
       'amd-vs-nvidia': {
