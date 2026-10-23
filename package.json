@@ -42,6 +42,7 @@
     "test:article-skin": "npx -y tsx scripts/test-article-skin.tsx",
     "test:above-fold": "playwright test -c playwright.above-the-fold.config.ts",
     "query-coverage": "node scripts/query-coverage.mjs",
+    "gsc:import": "python3 scripts/gsc-import.py",
     "test:affiliate-clicks": "node scripts/test-affiliate-clicks.mjs",
     "indexnow": "node scripts/indexnow-direct.mjs",
     "freshness": "node scripts/freshness.mjs",

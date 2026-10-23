@@ -11,16 +11,16 @@
 
   <!-- Left bullets -->
   <circle cx="38" cy="90" r="3" fill="#EA4335"/>
-  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W power draw</text>
+  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W power draw (indicative)</text>
 
   <circle cx="38" cy="116" r="3" fill="#EA4335"/>
-  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% battery/hr (iPhone 16 Pro)</text>
+  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% battery/hr (iPhone 16 Pro, indicative)</text>
 
   <circle cx="38" cy="142" r="3" fill="#EA4335"/>
-  <text x="50" y="146" font-size="12" fill="#49454F">Throttles at ~38°C (10–15 min)</text>
+  <text x="50" y="146" font-size="12" fill="#49454F">Throttles when hot</text>
 
   <circle cx="38" cy="168" r="3" fill="#EA4335"/>
-  <text x="50" y="172" font-size="12" fill="#49454F">30–50% speed drop when hot</text>
+  <text x="50" y="172" font-size="12" fill="#49454F">Speed drops when hot</text>
 
   <!-- Right panel (green) -->
   <rect x="415" y="46" width="365" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
@@ -35,11 +35,11 @@
   <text x="445" y="120" font-size="12" fill="#49454F">Avoid direct sunlight</text>
 
   <circle cx="433" cy="142" r="3" fill="#34A853"/>
-  <text x="445" y="146" font-size="12" fill="#49454F">Short sessions: &lt;5 min → no throttle</text>
+  <text x="445" y="146" font-size="12" fill="#49454F">Prefer short sessions</text>
 
   <circle cx="433" cy="168" r="3" fill="#34A853"/>
-  <text x="445" y="172" font-size="12" fill="#49454F">Plug in during long sessions</text>
+  <text x="445" y="172" font-size="12" fill="#49454F">Expect faster drain in long sessions</text>
 
   <!-- Footer -->
-  <text x="400" y="342" font-size="11" fill="#79747E" text-anchor="middle">On iPhone 15 Pro, avoid combined MagSafe + inference — increases thermal pressure.</text>
+  <text x="400" y="342" font-size="11" fill="#79747E" text-anchor="middle">Avoid charging while running inference — it can add heat.</text>
 <text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

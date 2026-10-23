@@ -1,5 +1,5 @@
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
-  <rect width="800" height="350" fill="#FFFFFF"/>
+<svg viewBox="0 0 800 390" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="390" fill="#FFFFFF"/>
 
   <!-- Title -->
   <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Intégration iOS par app</text>
@@ -38,20 +38,20 @@
   <text x="643" y="124" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="134" x2="782" y2="134" stroke="#F7F2FA" stroke-width="1"/>
 
-  <!-- Row 3: MLC Chat -->
-  <text x="22" y="158" font-size="12" font-weight="600" fill="#1C1B1F">MLC Chat</text>
-  <circle cx="248" cy="154" r="9" fill="#EA4335"/>
-  <text x="248" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <!-- Row 3: Locally AI -->
+  <text x="22" y="158" font-size="12" font-weight="600" fill="#1C1B1F">Locally AI</text>
+  <circle cx="248" cy="154" r="9" fill="#34A853"/>
+  <text x="248" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <circle cx="368" cy="154" r="9" fill="#EA4335"/>
   <text x="368" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
-  <circle cx="488" cy="154" r="9" fill="#34A853"/>
-  <text x="488" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="488" cy="154" r="9" fill="#EA4335"/>
+  <text x="488" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
   <circle cx="643" cy="154" r="9" fill="#34A853"/>
   <text x="643" y="158" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
 
-  <!-- Row 4: LLM Farm -->
-  <text x="22" y="192" font-size="12" font-weight="600" fill="#1C1B1F">LLM Farm</text>
+  <!-- Row 4: Google AI Edge Gallery -->
+  <text x="22" y="192" font-size="12" font-weight="600" fill="#1C1B1F">Google AI Edge Gallery</text>
   <circle cx="248" cy="188" r="9" fill="#EA4335"/>
   <text x="248" y="192" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
   <circle cx="368" cy="188" r="9" fill="#EA4335"/>
@@ -62,18 +62,45 @@
   <text x="643" y="192" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="202" x2="782" y2="202" stroke="#F7F2FA" stroke-width="1"/>
 
-  <!-- Row 5: Apple Intelligence -->
-  <text x="22" y="226" font-size="12" font-weight="600" fill="#1C1B1F">Apple Intelligence</text>
-  <circle cx="248" cy="222" r="9" fill="#34A853"/>
-  <text x="248" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
-  <circle cx="368" cy="222" r="9" fill="#34A853"/>
-  <text x="368" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
-  <circle cx="488" cy="222" r="9" fill="#EA4335"/>
-  <text x="488" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
-  <rect x="612" y="212" width="62" height="18" rx="9" fill="#E8DEF8"/>
-  <text x="643" y="224" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">Intégré</text>
+  <!-- Row 5: MLC Chat -->
+  <text x="22" y="226" font-size="12" font-weight="600" fill="#1C1B1F">MLC Chat</text>
+  <text x="85" y="226" font-size="10" fill="#79747E">(inactive)</text>
+  <circle cx="248" cy="222" r="9" fill="#EA4335"/>
+  <text x="248" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="368" cy="222" r="9" fill="#EA4335"/>
+  <text x="368" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="488" cy="222" r="9" fill="#34A853"/>
+  <text x="488" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="643" cy="222" r="9" fill="#34A853"/>
+  <text x="643" y="226" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="236" x2="782" y2="236" stroke="#F7F2FA" stroke-width="1"/>
 
+  <!-- Row 6: LLM Farm -->
+  <text x="22" y="260" font-size="12" font-weight="600" fill="#1C1B1F">LLM Farm</text>
+  <text x="85" y="260" font-size="10" fill="#79747E">(non listée)</text>
+  <circle cx="248" cy="256" r="9" fill="#EA4335"/>
+  <text x="248" y="260" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="368" cy="256" r="9" fill="#EA4335"/>
+  <text x="368" y="260" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <circle cx="488" cy="256" r="9" fill="#34A853"/>
+  <text x="488" y="260" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <rect x="583.5" y="248" width="119" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="643" y="260" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">Code source seul</text>
+  <line x1="18" y1="270" x2="782" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 7: Apple Intelligence -->
+  <text x="22" y="294" font-size="12" font-weight="600" fill="#1C1B1F">Apple Intelligence</text>
+  <circle cx="248" cy="290" r="9" fill="#34A853"/>
+  <text x="248" y="294" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="368" cy="290" r="9" fill="#34A853"/>
+  <text x="368" y="294" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="488" cy="290" r="9" fill="#EA4335"/>
+  <text x="488" y="294" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗</text>
+  <rect x="611.5" y="282" width="63" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="643" y="294" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">Intégré</text>
+  <line x1="18" y1="304" x2="782" y2="304" stroke="#F7F2FA" stroke-width="1"/>
+
   <!-- Footer -->
-  <text x="400" y="265" font-size="11" fill="#79747E" text-anchor="middle">Private LLM : seule app payante avec Raccourcis + Siri. PocketPal AI, MLC Chat, LLM Farm : open-source, sans Raccourcis.</text>
-<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
+  <text x="400" y="334" font-size="11" fill="#79747E" text-anchor="middle">Private LLM : Raccourcis + Siri. Locally AI : Raccourcis, gratuit.</text>
+  <text x="400" y="350" font-size="11" fill="#79747E" text-anchor="middle">PocketPal AI, Google AI Edge Gallery, MLC Chat : aucun Raccourcis mentionné. LLM Farm : à compiler depuis les sources.</text>
+<text x="792" y="385" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
