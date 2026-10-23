@@ -3331,7 +3331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026년 iPhone용 최고의 로컬 AI 앱 (WiFi 없이 LLM 실행)',
     seoTitle: '2026년 iPhone 로컬 AI 앱 비교 (오프라인 LLM)',
     intro:
-      '2026년에 iPhone에서 실제 LLM을 완전히 기기 안에서 실행하는 선택지는 여섯 가지입니다: PocketPal AI, Private LLM, Locally AI(LM Studio 제공), Google AI Edge Gallery, MLC Chat, 그리고 Apple Intelligence(시스템 내장). 모두 모델을 한 번 다운로드하면 WiFi 없이 작동합니다. 이 가이드는 비용, 모델 라이브러리, iOS 통합, 개인 정보 보호 수준, 유지보수 상태를 기준으로 비교하며, iPhone 16 Pro와 iPhone 17 Pro의 참고용 속도 범위와 iPhone 18 Pro를 포함한 RAM 가이드를 제공하고, LLM Farm이 순위에서 빠진 이유도 설명합니다.',
+      '2026년에 iPhone에서 실제 LLM을 완전히 기기 안에서 실행하는 선택지는 여섯 가지입니다: PocketPal AI, Private LLM, Locally AI(LM Studio 제공), Google AI Edge Gallery, MLC Chat, 그리고 Apple Intelligence(시스템 내장). 모델을 한 번 다운로드하면 채팅은 WiFi 없이 작동합니다. 이 가이드는 비용, 모델 라이브러리, iOS 통합, 개인 정보 보호 수준, 유지보수 상태를 기준으로 비교하며, iPhone 16 Pro와 iPhone 17 Pro의 참고용 속도 범위와 iPhone 18 Pro를 포함한 RAM 가이드를 제공하고, LLM Farm이 순위에서 빠진 이유도 설명합니다.',
     metaDescription:
       '2026년 iPhone 로컬 LLM 앱 6종: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat 비교.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.webp',
@@ -3375,7 +3375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'iOS용 Ollama',
     ],
     leadAnswerBlock:
-      '**2026년 대부분의 iPhone 사용자에게는 App Store에서 PocketPal AI를 설치하고 Phi-4 Mini (3.8B Q4_K_M, ~2.7 GB) 같은 작은 모델을 다운로드하십시오.** 무료로 사용할 수 있고(프리미엄 콘텐츠는 선택적 인앱 구매), 오픈 소스(MIT)이며, iPhone 14 Pro 이상(6 GB 이상 RAM을 갖춘 모든 iPhone)에서 작동하고, iPhone 16 Pro에서 일상적인 채팅 기준 대략 10–15 토큰/초(참고용)를 생성합니다. Siri 및 Shortcuts 통합을 원한다면 Private LLM이 이 가이드의 유료 선택입니다 ($4.99 일회 구매, iPhone·iPad·Mac). LM Studio 팀이 개발한 Locally AI는 Apple MLX 기반의 무료 앱으로 Shortcuts를 지원하고 Apple의 기기 내 파운데이션 모델에도 접근할 수 있습니다. Google AI Edge Gallery는 Gemma 4 모델을 위한 Google의 무료 앱으로, 에이전트 스킬과 사고 모드를 제공합니다. 더 새로운 소형 모델인 Gemma 4 E2B/E4B와 Qwen3.5도 이 앱들에서 사용할 수 있습니다(iPhone 등급별 모델 참조). MLC Chat은 여전히 Metal 가속의 기준 앱이지만 iPhone 빌드는 2024년 9월 이후 업데이트되지 않았습니다. LLM Farm은 현재 App Store와 TestFlight에 없으며(README: "일시적으로 이용 불가") 소스 코드 빌드로만 설치할 수 있습니다. Apple Intelligence도 기기에서 모델을 실행하지만 시스템에 내장되어 있고 채팅 앱이 아니므로, 이 앱들과 경쟁하기보다 보완합니다.',
+      '**2026년 대부분의 iPhone 사용자에게는 App Store에서 PocketPal AI를 설치하고 Phi-4 Mini (3.8B Q4_K_M, ~2.7 GB) 같은 작은 모델을 다운로드하십시오.** 무료로 사용할 수 있고(프리미엄 콘텐츠는 선택적 인앱 구매), 오픈 소스(MIT)이며, iPhone 15 Pro 이상(8 GB 이상 RAM)에서 작동하고, iPhone 16 Pro에서 일상적인 채팅 기준 대략 10–15 토큰/초(참고용)를 생성합니다. iPhone 14 Pro 같은 6 GB iPhone에서는 대신 Qwen3 1.7B 같은 1.7B 모델을 사용하십시오. Siri 및 Shortcuts 통합을 원한다면 Private LLM이 이 가이드의 유료 선택입니다 ($4.99 일회 구매, iPhone·iPad·Mac). LM Studio 팀이 개발한 Locally AI는 Apple MLX 기반의 무료 앱으로 Shortcuts를 지원하고 Apple의 기기 내 파운데이션 모델에도 접근할 수 있습니다. Google AI Edge Gallery는 Gemma 4 모델을 위한 Google의 무료 앱으로, 에이전트 스킬과 사고 모드를 제공합니다. 더 새로운 소형 모델인 Gemma 4 E2B/E4B와 Qwen3.5도 이 앱들에서 사용할 수 있습니다(iPhone 등급별 모델 참조). MLC Chat은 여전히 Metal 가속의 기준 앱이지만 iPhone 빌드는 2024년 9월 이후 업데이트되지 않았습니다. LLM Farm은 현재 App Store와 TestFlight에 없으며(README: "일시적으로 이용 불가") 소스 코드 빌드로만 설치할 수 있습니다. Apple Intelligence도 기기에서 모델을 실행하지만 시스템에 내장되어 있고 채팅 앱이 아니므로, 이 앱들과 경쟁하기보다 보완합니다.',
     quickAnswerTop: {
       ko: {
         question: '2026년 iPhone용 최고의 로컬 LLM 앱은 무엇입니까?',
@@ -3419,7 +3419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**PocketPal AI가 권장하는 무료 기본 선택입니다.** 오픈 소스(MIT), App Store 설치, Hugging Face의 모든 GGUF 모델 지원. 로컬 채팅에는 계정이 필요 없으며, 프리미엄 Pals와 "PocketPal Plus"는 선택적 인앱 구매입니다. iPhone 16 Pro에서 Phi-4 Mini를 ~10–15 토큰/초로 실행합니다. 대부분의 iPhone 사용자에게 권장하는 출발점입니다.',
+          '**PocketPal AI가 권장하는 무료 기본 선택입니다.** 오픈 소스(MIT), App Store 설치, Hugging Face의 모든 GGUF 모델 지원. 로컬 채팅에는 계정이 필요 없으며(README), 프리미엄 Pals와 "PocketPal Plus"는 선택적 인앱 구매입니다. iPhone 16 Pro에서 Phi-4 Mini를 ~10–15 토큰/초로 실행합니다. 대부분의 iPhone 사용자에게 권장하는 출발점입니다.',
           '**Private LLM은 유료 선택입니다 ($4.99 일회 구매, 구독 없음).** 한 번 구매로 iPhone, iPad, Mac을 모두 사용할 수 있고 가족 공유는 최대 6명까지 확장됩니다. 큐레이션된 모델 라이브러리를 갖추었으며, 개발사에 따르면 Siri 및 Shortcuts와 연동됩니다.',
           '**Locally AI는 LM Studio 팀이 개발한 무료 MLX 기반 대안입니다.** Apple MLX에서 Llama, Gemma(Gemma 4 포함), Qwen, DeepSeek 모델을 실행하고, iOS Shortcuts와 함께 작동하며, Apple 자체의 기기 내 파운데이션 모델을 채팅 인터페이스로 노출할 수 있습니다.',
           '**Google AI Edge Gallery는 iPhone용 Google의 무료 Gemma 4 앱입니다.** 사고 모드, 에이전트 스킬, 이미지·오디오 입력을 제공하며, 모델은 GGUF가 아닌 LiteRT-LM 형식으로 실행됩니다. Google은 이 앱을 여전히 활발히 개발 중이라고 설명합니다.',
@@ -3435,26 +3435,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**비교 대상 앱:** PocketPal AI, Private LLM, Locally AI (LM Studio 제공), Google AI Edge Gallery, MLC Chat, Apple Intelligence (시스템) — 그리고 현재 App Store에 없는 LLM Farm (README: "일시적으로 이용 불가").',
           '**마지막 업스트림 업데이트 (2026-10-23 확인):** PocketPal AI v1.20.1 (2026년 10월 19일) · Locally AI v1.66.0 (2026년 10월 15일) · Google AI Edge Gallery v1.0.13 (2026년 10월 8일) · Private LLM v1.9.16 (2026년 9월 14일) · MLC Chat iPhone 앱 v1.6 (2024년 9월 27일 — 오래됨) · LLM Farm 릴리스 1.4.3 (2025년 1월 27일), 마지막 코드 푸시 2026년 1월 30일 — 오래됨.',
-          '**속도 수치의 기준 기기:** iPhone 16 Pro (A18 Pro, 8 GB RAM) 및 iPhone 17 Pro (A19 Pro, 12 GB RAM). 속도 수치는 참고용 범위이며 PromptQuorum의 통제된 벤치마크가 아닙니다. iPhone 18 Pro, 18 Pro Max, iPhone Duo (A20 Pro)에 대한 속도 수치는 여기에 없습니다.',
+          '**속도 수치의 기준 기기:** iPhone 16 Pro (A18 Pro, 8 GB RAM) 및 iPhone 17 Pro (A19 Pro, 12 GB RAM). 속도 수치는 최근 iPhone의 Q4_K_M 모델에 대한 대략적인 참고용 범위이며 PromptQuorum의 측정값이 아닙니다. iPhone 18 Pro, 18 Pro Max, iPhone Duo (A20 Pro)에 대한 속도 수치는 여기에 없습니다.',
           '**추론 엔진:** llama.cpp (PocketPal AI, LLM Farm), Apple MLX (Locally AI), Metal을 사용한 MLC LLM (MLC Chat), Google LiteRT-LM (Google AI Edge Gallery), 독점 기기 내 런타임 (Private LLM, Apple Intelligence).',
           '**3B+ 모델을 위한 최소 iPhone:** 1.7B에는 iPhone 14 Pro (A16, 6 GB RAM); 3B–4B에는 8 GB 이상의 모든 iPhone (15 Pro, 16 시리즈, 16e, 17 시리즈, 18 Pro).',
           '**권장 무료 앱:** PocketPal AI — App Store, 오픈 소스, 모델 유연성.',
           '**유료 선택:** Private LLM — $4.99 일회 구매 (iPhone + iPad + Mac), Shortcuts + Siri 지원.',
-          '**오프라인:** 여섯 가지 모두 모델을 다운로드하면 완전히 오프라인으로 작동하며, 각 앱의 README 또는 목록에 따르면 기기 내 채팅에는 클라우드 호출이 없습니다 (Apple Intelligence는 선택적으로 Private Cloud Compute를 사용할 수 있습니다).',
+          '**오프라인:** 모델을 다운로드하면 여섯 가지 모두 기기 내 채팅이 WiFi 없이 작동합니다. 실시간 데이터를 가져오는 기능(예: Google AI Edge Gallery의 Wikipedia 및 지도 스킬, Locally AI의 선택적 LM Link)은 연결이 필요합니다. 각 앱의 README 또는 목록에 따르면 기기 내 채팅에는 클라우드 호출이 없으며, Apple Intelligence는 선택적으로 Private Cloud Compute를 사용할 수 있습니다.',
         ],
       },
       whichApp: {
         id: 'which-app',
         title: 'iPhone에서 먼저 설치할 앱은 무엇입니까?',
         content:
-          '**대부분의 사용자에게: App Store에서 PocketPal AI를 설치하고 Phi-4 Mini (3.8B Q4_K_M)를 다운로드하십시오 — 또는 Gemma 4 E2B/E4B, Qwen3.5 4B 같은 더 새로운 소형 모델을 선택하십시오.** 이 조합은 iPhone 14 Pro 이상에서 작동하고, 채팅에는 비용이 들지 않으며, 일상적인 채팅, 요약, 간단한 초안 작성에 쓸 만한 결과를 제공합니다. 이것이 충족하지 못하는 특정 필요가 있을 때만 다른 앱을 선택하십시오.',
+          '**대부분의 사용자에게: App Store에서 PocketPal AI를 설치하고 Phi-4 Mini (3.8B Q4_K_M)를 다운로드하십시오 — 또는 Gemma 4 E2B/E4B, Qwen3.5 4B 같은 더 새로운 소형 모델을 선택하십시오.** 이 조합은 iPhone 15 Pro 이상(8 GB 이상 RAM)에서 작동하며, iPhone 14 Pro 같은 6 GB iPhone에서는 Qwen3 1.7B 같은 1.7B 모델을 다운로드하십시오(iPhone 등급별 모델 참조). 채팅에는 비용이 들지 않으며, 일상적인 채팅, 요약, 간단한 초안 작성에 쓸 만한 결과를 제공합니다. 이것이 충족하지 못하는 특정 필요가 있을 때만 다른 앱을 선택하십시오.',
         image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.webp',
         imageCaption:
           'iPhone 로컬 AI 앱 선택 가이드: 무료 PocketPal AI부터 Siri 지원 Private LLM까지의 결정표',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '2026년 대부분의 iPhone 사용자에게는 PocketPal AI (무료, App Store)를 설치하고 Phi-4 Mini 또는 Gemma 4 E2B 같은 더 새로운 소형 모델을 다운로드하십시오 — 6 GB 이상 RAM의 모든 iPhone에서 일상적인 채팅, 요약, 초안 작성을 다룹니다.',
+            text: '2026년 대부분의 iPhone 사용자에게는 PocketPal AI (무료, App Store)를 설치하고 Phi-4 Mini 또는 Gemma 4 E2B 같은 더 새로운 소형 모델을 다운로드하십시오 — 일상적인 채팅, 요약, 초안 작성을 다루며, 8 GB 이상 iPhone에서는 3B–4B 모델을, 6 GB iPhone에서는 1.7B 모델을 사용합니다.',
           },
           {
             type: 'plain-terms',
@@ -3505,7 +3505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '선택은 보통 세 가지로 좁혀집니다: Siri 통합에 비용을 지불할 것인가 (Private LLM), Shortcuts를 지원하는 LM Studio 생태계를 무료로 원하는가 (Locally AI), 아니면 사고 모드를 갖춘 Google 자체의 Gemma 4를 원하는가 (Google AI Edge Gallery). 그 외의 모든 경우에는 PocketPal AI가 기본 선택입니다. 표의 속도 수치는 Q4_K_M 양자화 기준의 참고용 범위이며 — 2026년 모바일 추론의 표준입니다 — 통제된 벤치마크가 아닙니다.',
+            text: '선택은 보통 세 가지로 좁혀집니다: Siri 통합에 비용을 지불할 것인가 (Private LLM), Shortcuts를 지원하는 LM Studio 생태계를 무료로 원하는가 (Locally AI), 아니면 사고 모드를 갖춘 Google 자체의 Gemma 4를 원하는가 (Google AI Edge Gallery). 그 외의 모든 경우에는 PocketPal AI가 기본 선택입니다. 표의 속도 수치는 Q4_K_M 양자화 기준의 참고용 범위이며 — 2026년 모바일 추론의 표준입니다 — PromptQuorum의 측정값이 아닙니다.',
           },
         ],
         columns: ['앱', '비용', '토큰/초 (Phi-4 Mini, 16 Pro)', '개인 정보 보호', '이상적인 대상'],
@@ -3513,17 +3513,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '앱': '[PocketPal AI](https://github.com/a-ghorbani/pocketpal-ai)', '비용': '무료 (MIT) + 선택적 인앱 구매', '토큰/초 (Phi-4 Mini, 16 Pro)': '~10–15', '개인 정보 보호': '기기 내 채팅, 계정 불필요 (README)', '이상적인 대상': '대부분을 위한 무료 기본 선택' },
           { '앱': '[Private LLM](https://privatellm.app)', '비용': '$4.99 일회 구매', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '기기 내 처리, 계정·추적 없음 (개발사)', '이상적인 대상': 'Shortcuts + Siri 통합' },
           { '앱': '[Locally AI](https://lmstudio.ai/locally)', '비용': '무료 (LM Studio 팀)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — MLX 카탈로그 (Phi-4 없음)', '개인 정보 보호': '기기 내 처리, 데이터 수집 없음 (스토어 목록)', '이상적인 대상': 'MLX + Shortcuts, LM Studio 연동' },
-          { '앱': '[Google AI Edge Gallery](https://apps.apple.com/app/id6749645337)', '비용': '무료 (Google)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — LiteRT-LM, Gemma 4', '개인 정보 보호': '모델 다운로드 후 기기 내 처리', '이상적인 대상': 'Gemma 4, 사고 모드, 에이전트 스킬' },
+          { '앱': '[Google AI Edge Gallery](https://apps.apple.com/app/id6749645337)', '비용': '무료 (Google)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — LiteRT-LM, Gemma 4', '개인 정보 보호': '모델 다운로드 후 기기 내 처리 (목록 기준)', '이상적인 대상': 'Gemma 4, 사고 모드, 에이전트 스킬' },
           { '앱': '[MLC Chat](https://llm.mlc.ai)', '비용': '무료 (오픈 소스)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — Phi-4 이전 라이브러리', '개인 정보 보호': '로컬 추론 (프로젝트 문서, 미검증)', '이상적인 대상': 'MLC LLM 도구 체인 사용자 (iOS 앱 정체)' },
           { '앱': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '비용': '무료 (소스 빌드)', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '로컬 추론 (프로젝트 문서, 미검증)', '이상적인 대상': '개발자 (App Store 없음, 오래됨)' },
-          { '앱': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '비용': '무료 (iOS 내장)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 (시스템 기능)', '개인 정보 보호': '로컬 + 옵트인 Private Cloud Compute', '이상적인 대상': 'Mail, 메시지, 메모 작문 지원' },
+          { '앱': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '비용': '무료 (iOS 내장)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 (시스템 기능)', '개인 정보 보호': '로컬 + 옵트인 Private Cloud Compute (Apple)', '이상적인 대상': 'Mail, 메시지, 메모 작문 지원' },
         ],
         note:
           '**Apple Neural Engine (ANE), Metal, MLX 비교 참고:** PocketPal AI와 LLM Farm은 추론에 Metal Performance Shaders와 함께 llama.cpp를 사용하며, 이는 GPU에서 실행됩니다. MLC Chat은 더 깊은 Metal 최적화를 적용한 MLC LLM을 사용하는데, MLC LLM 프로젝트는 동일한 하드웨어에서 llama.cpp 기반 앱보다 빠르다고 설명합니다 (프로젝트의 주장이며 PromptQuorum은 이를 측정하지 않았습니다). Locally AI는 Apple 자체의 오픈 소스 배열 프레임워크인 Apple MLX를 사용하여 Apple Silicon에서 비슷한 GPU 효율에 도달합니다. Google AI Edge Gallery는 Google의 LiteRT-LM 런타임으로 Gemma 4를 실행합니다. Apple Intelligence는 시스템 ~3B 모델에 ANE를 구체적으로 사용하며, 이는 Metal 기반 추론보다 전력 효율이 높지만 유연성이 낮습니다. iOS 26부터 서드파티 앱은 Foundation Models 프레임워크를 통해 이 시스템 모델을 호출할 수 있고 — Locally AI가 정확히 그렇게 합니다 — 커스텀 GGUF/MLX 모델은 여전히 ANE를 직접 대상으로 할 수 없습니다. Apple은 iPhone 18 Pro의 A20 Pro가 이전 대비 두 배의 연산 성능을 갖춘 듀얼 16코어 Neural Engine을 탑재했다고 밝히고 있으나, 이는 Apple의 주장이며 PromptQuorum은 이것이 이 앱들에 어떤 의미인지 측정하지 않았습니다.',
         callouts: [
           {
             type: 'tip',
-            text: '토큰/초 수치는 방향을 가늠하기 위한 반올림된 참고용 범위이며, PromptQuorum의 통제된 벤치마크가 아니고 앱 버전이나 테스트 날짜에 연결되어 있지 않습니다. Q4_K_M 양자화 (2026년 모바일 추론의 표준)와 다른 무거운 앱이 실행되지 않는 유휴 iPhone을 가정합니다. 백그라운드 앱은 처리량을 눈에 띄게 낮출 수 있으며, iPhone 17 Pro는 보통 iPhone 16 Pro보다 빠르게 실행됩니다. PocketPal AI의 내장 벤치마크로 직접 사용 중인 폰을 측정하십시오.',
+            text: '토큰/초 수치는 최근 iPhone의 Q4_K_M 모델에 대한 대략적인 참고용 범위이며, PromptQuorum의 측정값이 아니고 앱 버전이나 테스트 날짜에 연결되어 있지 않습니다. Q4_K_M 양자화 (2026년 모바일 추론의 표준)와 다른 무거운 앱이 실행되지 않는 유휴 iPhone을 가정합니다. 백그라운드 앱은 처리량을 눈에 띄게 낮출 수 있으며, iPhone 17 Pro는 보통 iPhone 16 Pro보다 빠르게 실행됩니다. PocketPal AI의 내장 벤치마크로 직접 사용 중인 폰을 측정하십시오.',
           },
         ],
       },
@@ -3534,10 +3534,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**PocketPal AI는 2026년 대부분의 iPhone 사용자에게 권장하는 출발점입니다.** 무료로 사용할 수 있고, 오픈 소스(MIT, GitHub: [a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai))이며, App Store에서 이용할 수 있고, Hugging Face의 모든 GGUF 모델을 지원합니다. 앱은 내부적으로 Apple Silicon 최적화를 적용한 llama.cpp를 사용합니다. 전체 리뷰: [PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review).',
         items: [
           '**무엇인가:** llama.cpp를 사용하여 GGUF 모델을 로컬로 실행하는 iOS/iPadOS 및 Android 앱으로, Gooya UG가 배포합니다. README에 따르면 프롬프트, 응답, 문서는 외부 서버로 업로드되지 않으며 채팅에는 계정이 필요 없습니다.',
-          '**버전과 마지막 업데이트:** v1.20.1, 2026년 10월 19일 릴리스 ([GitHub 릴리스](https://github.com/a-ghorbani/pocketpal-ai/releases)). App Store 목록도 같은 버전을 표시합니다. 업데이트 주기는 대략 1~2주 간격이며 오래됨 경고는 없습니다.',
+          '**버전과 마지막 업데이트:** v1.20.1, 2026년 10월 19일 릴리스 ([GitHub 릴리스](https://github.com/a-ghorbani/pocketpal-ai/releases)). App Store 목록도 같은 버전을 표시합니다. 최근 릴리스: v1.19.0(10월 4일), v1.20.0(10월 14일), v1.20.1(2026년 10월 19일) — 오래됨 경고는 없습니다.',
           '**설치:** App Store → "PocketPal AI". 무료 다운로드이며 선택적 인앱 구매(프리미엄 Pals와 "PocketPal Plus")가 있습니다. iOS/iPadOS 15.1 이상이 필요하며, 사용 가능한 모델 크기를 정하는 것은 iOS 버전이 아니라 RAM입니다. v1.20.0부터 선택적 Apple로 로그인과 계정 삭제도 제공합니다.',
           '**모델 추가:** 앱에서 모델 → "Hugging Face에서 추가" → 검색 (예: "phi-4-mini-instruct-Q4_K_M") → 탭하여 다운로드. 모델은 앱의 로컬 저장소에 저장됩니다 (Phi-4 Mini Q4의 경우 ~2.7 GB).',
-          '**생성 속도 (iPhone 16 Pro, 참고용):** Phi-4 Mini ~10–15 tok/초, Llama 3.2 3B ~12–18 tok/초, Gemma 3 4B ~7–10 tok/초, Qwen3 1.7B ~18–24 tok/초. PromptQuorum의 통제된 측정이 아니므로, 사용 중인 iPhone의 토큰/초와 메모리를 보고하는 내장 벤치마크를 사용하십시오.',
+          '**생성 속도 (iPhone 16 Pro, 참고용):** Phi-4 Mini ~10–15 tok/초, Llama 3.2 3B ~12–18 tok/초, Gemma 3 4B ~7–10 tok/초, Qwen3 1.7B ~18–24 tok/초. 대략적인 참고용 범위이며 PromptQuorum의 측정값이 아니므로, 사용 중인 iPhone의 토큰/초와 메모리를 보고하는 내장 벤치마크를 사용하십시오.',
           '**기타 기능:** Pals(맞춤형 어시스턴트), 기기 내 텍스트 음성 변환, Talents(성능이 충분한 모델을 위한 계산기 및 날짜/시간 도구), 접근 토큰으로 제한 모델(gated model)을 지원하는 Hugging Face 모델 브라우저.',
           '**이상적인 대상:** 계정이 필요 없고 커뮤니티가 공개한 모든 GGUF 모델을 지원하는, App Store에서 설치 가능한 무료 채팅 앱을 원하는 사용자.',
         ],
@@ -3572,7 +3572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'locally-ai',
         title: 'Locally AI: LM Studio의 무료 MLX 앱',
         content:
-          '**Locally AI는 LM Studio 팀이 개발한 (Element Labs Inc 명의로 등록) 무료 개인 정보 보호 중심 채팅 앱으로, llama.cpp 대신 Apple 자체의 MLX 프레임워크를 기반으로 합니다.** Apple의 기기 내 파운데이션 모델을 채팅 인터페이스로 노출하는 이 가이드의 유일한 앱입니다. 전체 리뷰: [Locally AI 리뷰](/ko/power-local-llm/locally-ai-review).',
+          '**Locally AI는 LM Studio 팀이 개발한 (Element Labs Inc 명의로 등록) 무료 채팅 앱(목록에 따르면 데이터를 수집하지 않음)으로, llama.cpp 대신 Apple 자체의 MLX 프레임워크를 기반으로 합니다.** Apple의 기기 내 파운데이션 모델을 채팅 인터페이스로 노출하는 이 가이드의 유일한 앱입니다. 전체 리뷰: [Locally AI 리뷰](/ko/power-local-llm/locally-ai-review).',
         items: [
           '**무엇인가:** 추론에 Apple MLX를 사용하는 iOS/iPadOS/macOS 앱으로, 데스크톱 LM Studio 앱을 만든 팀이 개발합니다.',
           '**설치:** App Store → "Locally AI". 무료, 인앱 구매 없음(목록 기준), 계정 불필요(목록 기준), 오프라인 실행.',
@@ -3636,7 +3636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**오래됨 경고: LLM Farm의 마지막 릴리스(1.4.3)는 2025년 1월 27일이었고 마지막 코드 푸시는 2026년 1월 30일로, 거의 9개월 동안 업데이트가 없어 유지보수되지 않을 수 있습니다.** PromptQuorum의 해당 프로젝트 리뷰는 App Store에서의 삭제 시점을 2025년 8월로 봅니다. GitHub README는 App Store와 TestFlight 두 곳 모두에서 앱이 "일시적으로 이용 불가"라고 설명합니다. 프로젝트 (GitHub: [guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm))는 여전히 오픈 소스이며 2026년 10월까지 GitHub 이슈 활동이 있었지만, 신규 사용자는 더 이상 App Store에서 설치할 수 없고 Xcode로 소스 코드에서 빌드해야 합니다 (README: macOS 13+ 및 iOS 16+). 전체 리뷰: [LLM Farm 리뷰](/ko/power-local-llm/llm-farm-review).',
         items: [
-          '**무엇인가:** 개발자 @guinmoon의 iOS 앱으로, 폭넓은 구성 옵션과 함께 GGUF 모델을 실행하며 이전에는 App Store에서 배포되었습니다.',
+          '**무엇인가:** 프로젝트 유지보수자가 만든 iOS 앱으로, 폭넓은 구성 옵션과 함께 GGUF 모델을 실행하며 이전에는 App Store에서 배포되었습니다.',
           '**현재 이용 가능 여부:** 이번 갱신 시점 기준으로 App Store나 TestFlight에서 설치할 수 없습니다. 소스 코드는 계속 공개되어 있으며 빌드할 수 있습니다.',
           '**소스에서 빌드:** 저장소를 클론하고 Xcode에서 열어 무료 또는 유료 Apple 개발자 계정으로 기기에 빌드합니다 — App Store 목록이 없는 오픈 소스 iOS 앱의 표준 사이드로딩 방식입니다.',
           '**노출되는 구성 (빌드 시):** temperature, top-p, top-k, mirostat 샘플링, 반복 페널티, 모델별 시스템 프롬프트, 채팅 템플릿 선택, 컨텍스트 윈도우 길이.',
@@ -3699,7 +3699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'battery-heat',
         title: '배터리 소모와 열 제한',
         content:
-          '**iPhone의 기기 내 LLM 추론은 CPU/GPU 부하가 크고 열을 발생시킵니다.** 대략적인 기준(참고용이며 PromptQuorum의 통제된 측정이 아님)으로, 활성 추론은 ~3–5 W를 소비하며, 지속적인 생성은 칩을 제한하고 iPhone 16 Pro에서 시간당 대략 20–30%의 배터리를 소모할 수 있습니다.',
+          '**iPhone의 기기 내 LLM 추론은 CPU/GPU 부하가 크고 열을 발생시킵니다.** 대략적인 기준(대략적인 참고용이며 PromptQuorum의 측정값이 아님)으로, 활성 추론은 ~3–5 W를 소비하며, 지속적인 생성은 칩을 제한하고 iPhone 16 Pro에서 시간당 대략 20–30%의 배터리를 소모할 수 있습니다.',
         image: '/images/iphone-llm-apps-battery-thermal-en.svg',
         imageCaption:
           'iPhone 로컬 LLM 배터리·발열 가이드: 전력 소모, 열 제한, 냉각 팁',
@@ -3708,7 +3708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**지속적인 생성은 열 제한을 유발할 수 있습니다.** 칩이 뜨거워지면 iOS가 클록 속도를 낮추어 토큰/초가 떨어집니다. 시작 시점과 속도 저하 폭은 폰, 케이스, 충전 여부, 실내 온도에 따라 달라지며 PromptQuorum은 이를 측정하지 않았습니다. 폰을 식히면 속도가 복원됩니다.',
           '**완화 방법:** 긴 추론 세션 중에는 열 방출을 위해 iPhone을 (손이나 주머니가 아니라) 단단한 표면 위에 앞면을 위로 놓으십시오. 패시브 방열 케이스가 도움이 되지만 짧은 상호작용에는 거의 필요하지 않습니다.',
           '**유휴 소모:** 생성 후 채팅 앱을 백그라운드에 열어 두면 RAM은 할당된 채로 남지만 추론은 실행되지 않으므로 배터리 영향은 미미합니다. 앱을 완전히 종료하면 ~3 GB의 RAM이 회수됩니다.',
-          '**추론 중 MagSafe 충전:** 생성 중 충전은 어떤 iPhone에서든 발열을 높일 수 있으며 iPhone 15 Pro에서 특히 그렇습니다. 기기가 따뜻해지면 충전이나 생성을 멈추거나 충전은 나중에 하십시오.',
+          '**추론 중 MagSafe 충전:** 생성 중 충전은 발열을 높일 수 있습니다. 기기가 따뜻해지면 충전이나 생성을 멈추거나 충전은 나중에 하십시오.',
         ],
         callouts: [
           {
@@ -3738,7 +3738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         promptExamples: [
           {
             label: 'Private LLM Shortcut: 선택한 텍스트 요약',
-            text: '1. 작업: "선택한 텍스트 가져오기" (iOS 공유 시트 입력).\n2. 작업: Private LLM 텍스트 생성 (Private LLM 앱의 Shortcuts 작업에서) → 프롬프트: "다음 텍스트를 세 개의 글머리 기호로 요약해 줘: [선택한 텍스트]" → 앱에 설치된 모델을 선택.\n3. 작업: "결과 보기" 또는 "클립보드에 복사".\n공유 시트에 추가하면 모든 앱의 선택한 텍스트에서 완전히 오프라인으로 실행할 수 있습니다. 작업 이름은 개발사의 설명을 따른 것이며 앱 버전에 따라 다를 수 있습니다.',
+            text: '1. 작업: "선택한 텍스트 가져오기" (iOS 공유 시트 입력).\n2. 작업: Private LLM 텍스트 생성 (Private LLM 앱의 Shortcuts 작업에서) → 프롬프트: "다음 텍스트를 세 개의 글머리 기호로 요약해 줘: [선택한 텍스트]" → 앱에 설치된 모델을 선택.\n3. 작업: "결과 보기" 또는 "클립보드에 복사".\n공유 시트에 추가하면 모든 앱의 선택한 텍스트에서 WiFi 없이 실행할 수 있습니다. 작업 이름은 개발사의 설명을 따른 것이며 앱 버전에 따라 다를 수 있습니다.',
           },
           {
             label: 'Apple Intelligence Shortcut: 어조에 맞게 다시 쓰기',
@@ -3822,7 +3822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 AI는 iPhone의 ChatGPT 앱과 어떻게 비교됩니까?',
-            a: '기기 내 모델 (Phi-4 Mini, Llama 3.2 3B)은 복잡한 추론, 폭넓은 세계 지식, 멀티모달 작업에서는 여전히 최첨단 클라우드 모델에 크게 뒤처지지만, 단순한 질의에서는 (네트워크 왕복이 없어) 더 빠르며 각 앱의 문서에 따르면 채팅 내용이 기기에 머뭅니다. 솔직한 절충안은 이렇습니다: 일상적이고 비공개적인 작업에는 로컬 AI, 가끔의 어려운 질문에는 ChatGPT 같은 클라우드 앱. 2026년에는 많은 사용자가 둘 다 두고 질의마다 선택합니다.',
+            a: '기기 내 모델 (Phi-4 Mini, Llama 3.2 3B)은 복잡한 추론, 폭넓은 세계 지식, 멀티모달 작업에서는 여전히 최첨단 클라우드 모델과 뚜렷한 차이가 있지만, 단순한 질의에서는 (네트워크 왕복이 없어) 더 빠르며 각 앱의 문서에 따르면 채팅 내용이 기기에 머뭅니다. 솔직한 절충안은 이렇습니다: 일상적이고 비공개적인 작업에는 로컬 AI, 가끔의 어려운 질문에는 ChatGPT 같은 클라우드 앱. 2026년에는 많은 사용자가 둘 다 두고 질의마다 선택합니다.',
           },
           {
             q: 'LLM Farm이 App Store에 없어도 여전히 안전하게 사용할 수 있습니까?',
