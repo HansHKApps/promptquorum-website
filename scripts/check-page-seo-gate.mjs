@@ -20,6 +20,7 @@
  * Usage:
  *   node scripts/check-page-seo-gate.mjs                       # the 8 pages of the 2026-10-21 audit
  *   node scripts/check-page-seo-gate.mjs https://www.promptquorum.com/frameworks/co-star
+ *   node scripts/check-page-seo-gate.mjs --base=http://localhost:3000 --locales=en,de /power-local-llm/x   # bare path, expanded per locale
  *   node scripts/check-page-seo-gate.mjs --base=http://localhost:3000   # same paths against a local server
  *   node scripts/check-page-seo-gate.mjs --locales=en,de,ar             # also check these locale prefixes
  *   node scripts/check-page-seo-gate.mjs --strict
@@ -62,7 +63,9 @@ const changedArg = args.find((a) => a === '--changed' || a.startsWith('--changed
 // (--base=http://localhost:3000): the live site does not have unmerged or undeployed changes.
 const localeList = (flag('locales') ?? (changedArg ? LOCALES.join(',') : 'en')).split(',').filter(Boolean)
 const explicit = args.filter((a) => /^https?:\/\//.test(a))
-let pathsToCheck = DEFAULT_PATHS
+// Bare paths ("/power-local-llm/x") are expanded across --locales on --base, like the default pages.
+const barePaths = args.filter((a) => a.startsWith('/'))
+let pathsToCheck = barePaths.length ? barePaths : DEFAULT_PATHS
 if (changedArg) {
   const res = changedArticleFiles(changedArg.split('=')[1])
   pathsToCheck = res.files.map(articleUrlPath).filter(Boolean)
@@ -135,7 +138,9 @@ async function check(url) {
   const title = decode(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? '').trim()
   const desc = metaContent(html, 'name', 'description') ?? ''
   const b = budgetFor(lang)
-  if (title.length < b.title[0] || title.length > b.title[1]) add('A2', `title ${title.length} chars outside ${b.title.join('–')}: "${title}"`)
+  // The budgets apply to the source seoTitle (validate-meta-budgets.mjs); the renderer appends " | PromptQuorum".
+  const titleLen = title.replace(/\s*\|\s*PromptQuorum$/, '').length
+  if (titleLen < b.title[0] || titleLen > b.title[1]) add('A2', `title ${titleLen} chars outside ${b.title.join('–')}: "${title}"`)
   if (desc.length < b.desc[0] || desc.length > b.desc[1]) add('A2', `meta description ${desc.length} chars outside ${b.desc.join('–')}`)
 
   const canonTag = (html.match(/<link\b[^>]*rel="canonical"[^>]*>/i) ?? [''])[0]
@@ -199,7 +204,8 @@ async function check(url) {
 
   // C
   const main = html.match(/<main[\s\S]*?<\/main>/i)?.[0] ?? html
-  const imgs = main.match(/<img\b[^>]*>/gi) ?? []
+  // Language-switcher flag icons (/flags/*.svg, alt = language name) sit inside <main> but are UI, not content images.
+  const imgs = (main.match(/<img\b[^>]*>/gi) ?? []).filter((t) => !/\bsrc="\/flags\//i.test(t))
   const noAlt = imgs.filter((t) => !/\balt="[^"]+"/i.test(t))
   if (noAlt.length) add('C1', `${noAlt.length} <img> in main without alt text (e.g. ${attr(noAlt[0], 'src').slice(0, 60)})`)
   // C1b: alt that is present but useless. The renderers fall back to generic strings
