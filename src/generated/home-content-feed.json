@@ -4864,7 +4864,7 @@
     "title": "How to Reduce Prompt Brittleness: 7 Techniques for Reliable Prompts",
     "excerpt": "Prompt brittleness causes silent failures on input changes. Use 7 techniques: structured output, defensive instructions, regression tests, version pinning.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4873,7 +4873,7 @@
     "title": "Prompt-Brittleness reduzieren: 7 Techniken für zuverlässige Prompts",
     "excerpt": "7 Techniken gegen Prompt-Brittleness: Structured Output, Few-Shot-Beispiele, defensive Anweisungen, Regressionstests und Model-Version-Pinning.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/de/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4882,7 +4882,7 @@
     "title": "Réduire la Fragilité des Prompts : 7 Techniques pour des Prompts Fiables",
     "excerpt": "7 techniques pour réduire la fragilité des prompts : output structuré, few-shot, instructions défensives, tests de régression et version pinning.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/fr/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4891,7 +4891,7 @@
     "title": "プロンプトの脆弱性を低減する7つのテクニック",
     "excerpt": "プロンプト脆弱性を減らす7つの手法：構造化出力、Few-Shot例、防御的指示、回帰テスト、モデルバージョン固定。",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/ja/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4900,7 +4900,7 @@
     "title": "减少Prompt脆弱性：7种可靠Prompt技术",
     "excerpt": "Prompt脆弱性导致生产中的隐形失败。应用7种技术减少脆弱性：结构化输出、Few-Shot示例、防御指令、参数化、回归测试、版本固定、输出验证。",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/zh/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4909,7 +4909,7 @@
     "title": "Cómo reducir la fragilidad de prompts: 7 técnicas para prompts fiables",
     "excerpt": "7 técnicas para reducir la fragilidad de prompts: salida estructurada, few-shot, instrucciones defensivas, pruebas de regresión y version pinning.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/es/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4918,7 +4918,7 @@
     "title": "Como reduzir a fragilidade de prompts: 7 técnicas para prompts confiáveis",
     "excerpt": "7 técnicas para reduzir a fragilidade de prompts: saída estruturada, few-shot, instruções defensivas, testes de regressão e version pinning.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/pt/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4927,7 +4927,7 @@
     "title": "كيفية تقليل هشاشة الـ ⁨prompt⁩: ⁨7⁩ تقنيات للحصول على ⁨prompts⁩ موثوقة",
     "excerpt": "⁨7⁩ تقنيات لمنع الإخفاقات الصامتة في بيئة الإنتاج: الإخراج المهيكل، وأمثلة ⁨few-shot⁩، والتعليمات الدفاعية، واختبار الانحدار، وتثبيت إصدار النموذج.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/ar/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -4936,7 +4936,7 @@
     "title": "프롬프트 취약성 줄이기: 신뢰할 수 있는 프롬프트를 위한 7가지 기법",
     "excerpt": "프롬프트 취약성은 입력 변경 시 조용한 실패를 유발합니다. 구조화된 출력, 방어적 지시문, 회귀 테스트, 버전 고정 등 7가지 기법을 적용하십시오.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-23",
     "url": "/ko/prompt-engineering/how-to-reduce-prompt-brittleness",
     "cluster": "prompt-engineering"
   },
@@ -16850,9 +16850,9 @@
   {
     "lang": "en",
     "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-    "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2.5-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.",
+    "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5, Coder and VL locally. VRAM needs, Ollama and LM Studio setup, Q4_K_M speeds and hardware tiers for every budget.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16861,7 +16861,7 @@
     "title": "Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Coder & VL je Hardware-Stufe",
     "excerpt": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/de/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16870,7 +16870,7 @@
     "title": "Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Coder et VL par niveau matériel",
     "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/fr/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16879,7 +16879,7 @@
     "title": "Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Coder・VLを全ハードウェア階層で動かす",
     "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ja/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16888,7 +16888,7 @@
     "title": "Qwen本地部署指南2026：Qwen 3.6 27B、Coder和VL各硬件层级完整指南",
     "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/zh/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16897,7 +16897,7 @@
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
     "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16906,7 +16906,7 @@
     "title": "Guia de implantação local do Qwen 2026: Qwen 3.6 27B, Coder e VL por nível de hardware",
     "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2.5-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/pt/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16915,7 +16915,7 @@
     "title": "دليل النشر المحلي لـ Qwen 2026: Qwen 3.6 27B وCoder وVL على كل مستوى أجهزة",
     "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ar/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16924,7 +16924,7 @@
     "title": "Qwen 로컬 배포 가이드 2026: Qwen 3.6 27B, Coder & VL 하드웨어 티어별 실행 방법",
     "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ko/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -21709,82 +21709,82 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 265 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "Browse 265 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
+    "title": "The Complete Local AI & LLM Software Directory: 267 Apps & Tools for Running AI Locally (2026)",
+    "excerpt": "Browse 267 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 265 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "Entdecken Sie 265 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
+    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 267 Apps und Tools, um KI lokal auszuführen (2026)",
+    "excerpt": "Entdecken Sie 267 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 265 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "Parcourez 265 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
+    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 267 apps et outils pour exécuter l'IA en local (2026)",
+    "excerpt": "Parcourez 267 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす265のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを265件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす267のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを267件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ja/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：265款应用与工具，在本地运行AI（2026）",
-    "excerpt": "收录265款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI与LLM软件完整目录：267款应用与工具，在本地运行AI（2026）",
+    "excerpt": "收录267款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/zh/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 265 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "Explora 265 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
+    "title": "El directorio completo de software de IA y LLM local: 267 apps y herramientas para ejecutar IA en local (2026)",
+    "excerpt": "Explora 267 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 265 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 265 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 267 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 267 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 265 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 265 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 267 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 267 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 265개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 265개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 267개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 267개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ko/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
@@ -23737,7 +23737,7 @@
     "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
     "excerpt": "Best local VLMs for Ollama in 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM per model, OCR picks and setup steps.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23746,7 +23746,7 @@
     "title": "Beste lokale Vision-Modelle 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal-Setup",
     "excerpt": "Beste lokale VLMs für Ollama 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM je Modell, OCR-Empfehlungen und Setup-Schritte.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23755,7 +23755,7 @@
     "title": "Meilleurs modèles de vision locaux 2026 : Gemma 4, Qwen3-VL, LLaVA & configuration Ollama",
     "excerpt": "Meilleurs VLM locaux pour Ollama en 2026 : Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM par modèle, choix OCR et étapes de configuration.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23764,7 +23764,7 @@
     "title": "ベストローカルビジョンモデル2026：Gemma 4・Qwen3-VL・LLaVA & Ollamaマルチモーダルセットアップ",
     "excerpt": "2026年のOllama向けベストローカルVLM：Gemma 4、Qwen3.5、Qwen3-VL、MiniCPM-V、Moondream。モデル別VRAM、OCRおすすめ、セットアップ手順。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ja/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23773,7 +23773,7 @@
     "title": "2026年最佳本地视觉模型：Gemma 4、Qwen3-VL、LLaVA与Ollama多模态配置",
     "excerpt": "2026年Ollama最佳本地VLM：Gemma 4、Qwen3.5、Qwen3-VL、MiniCPM-V、Moondream。各模型VRAM需求、OCR推荐与配置步骤。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/zh/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23782,7 +23782,7 @@
     "title": "Mejores modelos de visión locales 2026: Gemma 4, Qwen3-VL, LLaVA y configuración multimodal con Ollama",
     "excerpt": "Mejores VLM locales con Ollama en 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM por modelo, OCR y pasos de configuración.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23791,7 +23791,7 @@
     "title": "Melhores modelos de visão locais 2026: Gemma 4, Qwen3-VL, LLaVA e configuração multimodal com Ollama",
     "excerpt": "Melhores VLMs locais para Ollama em 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM por modelo, opções de OCR e passos de configuração.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23800,7 +23800,7 @@
     "title": "أفضل نماذج الرؤية المحلية 2026: Gemma 4 وQwen3-VL وLLaVA وإعداد Ollama متعدد الوسائط",
     "excerpt": "أفضل نماذج VLM المحلية مع Ollama في 2026: Gemma 4 وQwen3.5 وQwen3-VL وMiniCPM-V وMoondream. VRAM لكل نموذج وأفضل خيارات OCR وخطوات الإعداد.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23809,7 +23809,7 @@
     "title": "최고의 로컬 비전 모델 2026: Gemma 4, Qwen3-VL, LLaVA 및 Ollama 멀티모달 설정 가이드",
     "excerpt": "2026년 Ollama용 최고의 로컬 VLM: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. 모델별 VRAM, OCR 추천, 설정 방법.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ko/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -33374,7 +33374,7 @@
   {
     "lang": "en",
     "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-    "excerpt": "Compare 47 tools for running models locally: inference engines (llama.cpp, vLLM, SGLang, MLX and more), runtimes and managers (Ollama, LM Studio, Jan) and gateways. Licenses, GPU support, OpenAI-compatible APIs, from official documentation.",
+    "excerpt": "Compare 48 tools for running models locally: inference engines (llama.cpp, vLLM, SGLang, MLX and more), runtimes and managers (Ollama, LM Studio, Jan) and gateways. Licenses, GPU support, OpenAI-compatible APIs, from official documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -33383,7 +33383,7 @@
   {
     "lang": "de",
     "title": "Lokale Inferenz-Engines, Runtimes & Gateways im Vergleich (2026): Modelle ausführen und bereitstellen",
-    "excerpt": "Vergleich von 47 Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines (llama.cpp, vLLM, SGLang, MLX u. a.), Runtimes und Manager (Ollama, LM Studio, Jan) sowie Gateways. Lizenzen, GPU-Unterstützung, OpenAI-kompatible APIs laut offizieller Dokumentation.",
+    "excerpt": "Vergleich von 48 Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines (llama.cpp, vLLM, SGLang, MLX u. a.), Runtimes und Manager (Ollama, LM Studio, Jan) sowie Gateways. Lizenzen, GPU-Unterstützung, OpenAI-kompatible APIs laut offizieller Dokumentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-run-serve-compared",
@@ -33392,7 +33392,7 @@
   {
     "lang": "fr",
     "title": "Moteurs d'inférence, runtimes et passerelles locaux : comparatif (2026) pour exécuter et servir des modèles",
-    "excerpt": "Comparatif de 47 outils pour exécuter des modèles en local : moteurs d'inférence, runtimes (Ollama, LM Studio, Jan) et passerelles. Licences, GPU, API compatibles OpenAI.",
+    "excerpt": "Comparatif de 48 outils pour exécuter des modèles en local : moteurs d'inférence, runtimes (Ollama, LM Studio, Jan) et passerelles. Licences, GPU, API compatibles OpenAI.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-run-serve-compared",
@@ -33401,7 +33401,7 @@
   {
     "lang": "ja",
     "title": "ローカル推論エンジン・ランタイム・ゲートウェイ比較(2026):モデルの実行とサーブ",
-    "excerpt": "ローカルでモデルを動かす47ツールを比較:推論エンジン(llama.cpp、vLLM、SGLang、MLXなど)、ランタイム・マネージャー(Ollama、LM Studio、Jan)、ゲートウェイ。ライセンス、GPU対応、OpenAI互換APIを公式ドキュメントに基づいて整理。",
+    "excerpt": "ローカルでモデルを動かす48ツールを比較:推論エンジン(llama.cpp、vLLM、SGLang、MLXなど)、ランタイム・マネージャー(Ollama、LM Studio、Jan)、ゲートウェイ。ライセンス、GPU対応、OpenAI互換APIを公式ドキュメントに基づいて整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-run-serve-compared",
@@ -33410,7 +33410,7 @@
   {
     "lang": "zh",
     "title": "本地推理引擎、运行时与网关对比(2026):运行和部署模型",
-    "excerpt": "对比47款本地运行模型的工具:推理引擎(llama.cpp、vLLM、SGLang、MLX等)、运行时与管理器(Ollama、LM Studio、Jan)以及网关。许可证、GPU支持、OpenAI兼容API,均来自官方文档。",
+    "excerpt": "对比48款本地运行模型的工具:推理引擎(llama.cpp、vLLM、SGLang、MLX等)、运行时与管理器(Ollama、LM Studio、Jan)以及网关。许可证、GPU支持、OpenAI兼容API,均来自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-run-serve-compared",
@@ -33419,7 +33419,7 @@
   {
     "lang": "es",
     "title": "Motores de inferencia, runtimes y gateways locales: comparativa (2026) para ejecutar y servir modelos",
-    "excerpt": "Compara 47 herramientas para ejecutar modelos en local: motores de inferencia (llama.cpp, vLLM, SGLang, MLX y más), runtimes y gestores (Ollama, LM Studio, Jan) y gateways. Licencias, GPU y API compatibles con OpenAI, según la documentación oficial.",
+    "excerpt": "Compara 48 herramientas para ejecutar modelos en local: motores de inferencia (llama.cpp, vLLM, SGLang, MLX y más), runtimes y gestores (Ollama, LM Studio, Jan) y gateways. Licencias, GPU y API compatibles con OpenAI, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-run-serve-compared",
@@ -33428,7 +33428,7 @@
   {
     "lang": "pt",
     "title": "Mecanismos de inferência, runtimes e gateways locais comparados (2026): executar e servir modelos",
-    "excerpt": "Compare 47 ferramentas para executar modelos localmente: mecanismos de inferência (llama.cpp, vLLM, SGLang, MLX e outros), runtimes e gerenciadores (Ollama, LM Studio, Jan) e gateways. Licenças, suporte a GPU, APIs compatíveis com OpenAI, segundo a documentação oficial.",
+    "excerpt": "Compare 48 ferramentas para executar modelos localmente: mecanismos de inferência (llama.cpp, vLLM, SGLang, MLX e outros), runtimes e gerenciadores (Ollama, LM Studio, Jan) e gateways. Licenças, suporte a GPU, APIs compatíveis com OpenAI, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-run-serve-compared",
@@ -33437,7 +33437,7 @@
   {
     "lang": "ar",
     "title": "مقارنة محركات الاستدلال وبيئات التشغيل والبوابات المحلية (2026): تشغيل النماذج وتقديمها",
-    "excerpt": "قارن 47 أداة لتشغيل النماذج محليًا: محركات استدلال مثل llama.cpp وvLLM، وبيئات تشغيل مثل Ollama وLM Studio، وبوابات. الرخص ودعم GPU وواجهات OpenAI من التوثيق الرسمي.",
+    "excerpt": "قارن 48 أداة لتشغيل النماذج محليًا: محركات استدلال مثل llama.cpp وvLLM، وبيئات تشغيل مثل Ollama وLM Studio، وبوابات. الرخص ودعم GPU وواجهات OpenAI من التوثيق الرسمي.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-run-serve-compared",
@@ -33446,7 +33446,7 @@
   {
     "lang": "ko",
     "title": "로컬 추론 엔진·런타임·게이트웨이 비교(2026): 모델 실행과 서빙",
-    "excerpt": "로컬 모델 실행 도구 47개 비교: 추론 엔진(llama.cpp, vLLM, SGLang, MLX 등), 런타임·매니저(Ollama, LM Studio, Jan), 게이트웨이. 라이선스, GPU 지원, OpenAI 호환 API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 모델 실행 도구 48개 비교: 추론 엔진(llama.cpp, vLLM, SGLang, MLX 등), 런타임·매니저(Ollama, LM Studio, Jan), 게이트웨이. 라이선스, GPU 지원, OpenAI 호환 API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-run-serve-compared",
@@ -33536,7 +33536,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 92 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 93 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -33554,7 +33554,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 92 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 93 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -33563,7 +33563,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント92種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント93種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -33572,7 +33572,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比92款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比93款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -33581,7 +33581,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 92 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 93 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -33590,7 +33590,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 92 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 93 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -33599,7 +33599,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 92 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 93 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -33608,7 +33608,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 92개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 93개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -38720,9 +38720,9 @@
   {
     "lang": "en",
     "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
-    "excerpt": "TokForge review: a free offline AI chat app for Android with roleplay characters, image generation, voice cloning, and a speed leaderboard. Models, privacy, limits.",
+    "excerpt": "TokForge review: free offline AI chat for Android with roleplay characters, image generation, voice cloning and a speed leaderboard. Privacy and limits.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38731,7 +38731,7 @@
     "title": "TokForge-Rezension: Offline-KI-Chat für Android mit Rollenspiel und Bildgenerierung",
     "excerpt": "TokForge-Rezension: kostenlose Offline-KI-App für Android mit Rollenspiel, Bildgenerierung, Stimmklonen und Speed-Rangliste. Modelle, Datenschutz, Grenzen.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38740,7 +38740,7 @@
     "title": "Avis TokForge : chat IA hors ligne sur Android avec jeu de rôle et génération d'images",
     "excerpt": "Avis TokForge : appli Android gratuite de chat IA hors ligne avec personnages de jeu de rôle, génération d'images, clonage de voix et classement de vitesse.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38749,7 +38749,7 @@
     "title": "TokForgeレビュー:ロールプレイと画像生成を備えたオフラインのAndroid向けAIチャット",
     "excerpt": "TokForgeレビュー:ロールプレイ、画像生成、音声クローン、速度リーダーボードを備えた、Android向けの無料オフラインAIチャットアプリ。モデル、プライバシー、制約を解説します。",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/ja/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38758,7 +38758,7 @@
     "title": "TokForge 评测:支持角色扮演与图像生成的 Android 离线 AI 聊天应用",
     "excerpt": "TokForge 评测:一款免费的 Android 离线 AI 聊天应用,含角色扮演、图像生成、声音克隆和速度排行榜。涵盖模型、隐私与局限。",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/zh/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38767,7 +38767,7 @@
     "title": "Análisis de TokForge: chat de IA offline para Android con juegos de rol e imágenes",
     "excerpt": "Análisis de TokForge: app gratuita de chat de IA offline para Android con personajes de rol, imágenes, voz y ranking de velocidad. Privacidad y límites.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38776,7 +38776,7 @@
     "title": "TokForge: Análise do App de Chat de IA Offline para Android com Roleplay e Imagens",
     "excerpt": "Análise do TokForge: app gratuito de IA offline para Android com roleplay, imagens, clonagem de voz e ranking de velocidade. Privacidade, hardware e limites.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38785,7 +38785,7 @@
     "title": "مراجعة TokForge: دردشة ذكاء اصطناعي دون اتصال لأندرويد مع لعب الأدوار وتوليد الصور",
     "excerpt": "مراجعة TokForge: تطبيق ذكاء اصطناعي مجاني دون اتصال لأندرويد بشخصيات لعب أدوار وتوليد صور واستنساخ صوت ولوحة متصدرين للسرعة. النماذج والخصوصية والقيود.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38794,7 +38794,7 @@
     "title": "TokForge 리뷰: 롤플레이와 이미지 생성을 갖춘 오프라인 Android AI 채팅 앱",
     "excerpt": "TokForge 리뷰: 롤플레이 캐릭터, 이미지 생성, 음성 복제, 속도 리더보드를 갖춘 무료 오프라인 Android AI 채팅 앱입니다. 지원 엔진과 모델, 하드웨어 요구 사항, 개인정보 처리, 클로즈드 소스라는 한계, 그리고 확인하지 못한 사항까지 출처 기준으로 정리했습니다.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-23",
     "url": "/ko/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -39127,7 +39127,7 @@
     "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
     "excerpt": "Secret AI review: private offline AI chat for iPhone, Android and Mac with characters, Skills and MCP tools. Free tier, paid plans, source not published.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39136,7 +39136,7 @@
     "title": "Secret AI im Test: Privater Offline-KI-Chat für iPhone, Android und Mac",
     "excerpt": "Secret AI im Test: private Offline-KI-Chat-App für iPhone, Android und Mac mit Charakteren, Skills und MCP-Tools. Gratis mit Limit, Quellcode nicht offen.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39145,7 +39145,7 @@
     "title": "Test de Secret AI : chat IA privé hors ligne sur iPhone, Android et Mac",
     "excerpt": "Test de Secret AI : chat IA privé hors ligne sur iPhone, Android et Mac, avec personnages, Skills et outils MCP. Offre gratuite, code non publié.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39154,7 +39154,7 @@
     "title": "Secret AI レビュー：iPhone・Android・Mac向けのプライベートなオフラインAIチャット",
     "excerpt": "Secret AIレビュー：iPhone・Android・Macで使えるオフラインAIチャット。キャラクター、Skills、MCPツールに対応。無料枠と有料プランあり、ソース非公開。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ja/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39163,7 +39163,7 @@
     "title": "Secret AI 评测：iPhone、Android 和 Mac 上的私密离线 AI 聊天",
     "excerpt": "Secret AI 评测：支持角色、Skills 和 MCP 工具的 iPhone、Android、Mac 私密离线 AI 聊天应用。有免费版和付费方案，源码未公开。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/zh/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39172,7 +39172,7 @@
     "title": "Reseña de Secret AI: chat de IA privado y sin conexión para iPhone, Android y Mac",
     "excerpt": "Reseña de Secret AI: app de chat de IA privado y sin conexión para iPhone, Android y Mac con personajes, Skills y MCP. Plan gratuito; código no publicado.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39181,7 +39181,7 @@
     "title": "Análise do Secret AI: chat de IA privado e offline para iPhone, Android e Mac",
     "excerpt": "Análise do Secret AI: app de chat de IA privado e offline para iPhone, Android e Mac, com personagens, Skills e MCP. Plano grátis e pagos; código fechado.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39190,7 +39190,7 @@
     "title": "مراجعة Secret AI: دردشة ذكاء اصطناعي خاصة دون إنترنت على iPhone وAndroid وMac",
     "excerpt": "مراجعة Secret AI: تطبيق دردشة ذكاء اصطناعي خاص دون إنترنت لأجهزة iPhone وAndroid وMac مع شخصيات وSkills وأدوات MCP. نسخة مجانية وشيفرة غير منشورة.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -39199,7 +39199,7 @@
     "title": "Secret AI 리뷰: iPhone, Android, Mac용 비공개 오프라인 AI 채팅",
     "excerpt": "Secret AI 리뷰: 캐릭터, Skills, MCP 도구를 갖춘 iPhone·Android·Mac용 비공개 오프라인 AI 채팅 앱. 무료 플랜과 유료 플랜, 소스는 비공개입니다.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ko/power-local-llm/secret-ai-review",
     "cluster": "power-local-llm"
   },
@@ -40342,7 +40342,7 @@
     "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
     "excerpt": "MemoryAI review: free, closed-source offline AI chat for iPhone and Android with document Q&A, editable Agent Memory and voice. Privacy and limits.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40351,7 +40351,7 @@
     "title": "MemoryAI-Rezension: Kostenlose Offline-KI-Chat-App für iPhone und Android",
     "excerpt": "MemoryAI-Rezension: kostenlose, nicht quelloffene Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A, Agent Memory, Sprache. Datenschutz.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40360,7 +40360,7 @@
     "title": "Avis MemoryAI : chat IA gratuit hors ligne pour iPhone et Android",
     "excerpt": "Avis MemoryAI : appli de chat IA gratuite, code fermé, hors ligne, sur iPhone et Android, avec Q&R sur documents, Agent Memory, voix et contrôle parental.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40369,7 +40369,7 @@
     "title": "MemoryAIレビュー:iPhone・Android向けの無料オフラインAIチャット",
     "excerpt": "MemoryAIレビュー:ドキュメントQ&A、編集可能なAgent Memory、音声、ペアレンタルコントロールを備えた無料のオフラインAIチャット。プライバシーと制約を解説します。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ja/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40378,7 +40378,7 @@
     "title": "MemoryAI 评测:适用于 iPhone 和 Android 的免费离线 AI 聊天应用",
     "excerpt": "MemoryAI 评测:免费、闭源的 iPhone 和 Android 离线 AI 聊天应用,支持文档问答、可编辑 Agent Memory、语音模式与家长控制。涵盖隐私与局限。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/zh/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40387,7 +40387,7 @@
     "title": "Análisis de MemoryAI: chat de IA offline y gratuito para iPhone y Android",
     "excerpt": "Análisis de MemoryAI: chat de IA offline, gratuito y de código cerrado para iPhone y Android, con memoria editable y voz. Privacidad y límites.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40396,7 +40396,7 @@
     "title": "MemoryAI: Análise do App Gratuito de Chat de IA Offline para iPhone e Android",
     "excerpt": "Análise do MemoryAI: chat de IA offline, grátis e de código fechado para iPhone e Android, com perguntas sobre documentos, memória editável e voz.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40405,7 +40405,7 @@
     "title": "مراجعة MemoryAI: تطبيق دردشة ذكاء اصطناعي مجاني دون اتصال لـ iPhone وأندرويد",
     "excerpt": "مراجعة MemoryAI: تطبيق دردشة مجاني ومغلق المصدر دون اتصال لـ iPhone وأندرويد مع أسئلة على المستندات وذاكرة قابلة للتعديل وصوت. الخصوصية والقيود.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40414,88 +40414,88 @@
     "title": "MemoryAI 리뷰: iPhone·Android용 무료 오프라인 AI 채팅 앱",
     "excerpt": "MemoryAI 리뷰: 문서 Q&A, 편집 가능한 Agent Memory, 음성 모드, 자녀 보호 기능을 갖춘 iPhone·Android용 무료 비공개 소스 오프라인 AI 앱. 개인정보와 한계.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-23",
     "url": "/ko/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "en",
-    "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
+    "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
     "excerpt": "Llamatik review: free, MIT-licensed offline AI chatbot for Android, iPhone and desktop. Models, Firebase analytics, update status and open questions.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Llamatik-Rezension: Kostenloser Offline-KI-Chatbot für Android und iPhone",
+    "title": "Llamatik-Rezension: Kostenloser Open-Source-Offline-KI-Chatbot für Android, iPhone und Desktop",
     "excerpt": "Llamatik-Rezension: kostenloser, MIT-lizenzierter Offline-KI-Chatbot für Android, iPhone und Desktop. Modelle, Firebase-Analyse, Pflegestand, Lücken.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Avis Llamatik : chatbot IA gratuit hors ligne pour Android et iPhone",
+    "title": "Avis Llamatik : chatbot IA gratuit, open source et hors ligne pour Android, iPhone et ordinateur",
     "excerpt": "Avis Llamatik : chatbot IA gratuit, hors ligne et sous licence MIT pour Android, iPhone et ordinateur. Modèles, analytique Firebase et points non vérifiés.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "Llamatikレビュー:Android・iPhone向けの無料オフラインAIチャット",
+    "title": "Llamatikレビュー:Android・iPhone・デスクトップ向けの無料オープンソースのオフラインAIチャット",
     "excerpt": "Llamatikレビュー:Android・iPhone・デスクトップ向けの無料でMITライセンスのオフラインAIチャット。モデル、Firebase分析、更新状況、未確認の点を解説します。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ja/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "Llamatik 评测:适用于 Android 和 iPhone 的免费离线 AI 聊天应用",
+    "title": "Llamatik 评测:适用于 Android、iPhone 和桌面的免费开源离线 AI 聊天应用",
     "excerpt": "Llamatik 评测:免费、MIT 许可的 Android、iPhone 和桌面离线 AI 聊天应用。涵盖模型、Firebase 数据分析、更新状态和尚未确认的问题。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/zh/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Análisis de Llamatik: chat de IA offline y gratuito para Android e iPhone",
+    "title": "Análisis de Llamatik: chat de IA offline, gratuito y de código abierto para Android, iPhone y escritorio",
     "excerpt": "Análisis de Llamatik: chat de IA offline, gratuito y con licencia MIT para Android, iPhone y escritorio. Modelos, analítica de Firebase y dudas abiertas.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "Llamatik: Análise do Chatbot de IA Offline Gratuito para Android e iPhone",
+    "title": "Llamatik: Análise do Chatbot de IA Offline, Gratuito e de Código Aberto para Android, iPhone e Desktop",
     "excerpt": "Análise do Llamatik: chatbot de IA offline, gratuito e com licença MIT para Android, iPhone e computador. Modelos, Firebase, atualizações e dúvidas.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "مراجعة Llamatik: تطبيق دردشة ذكاء اصطناعي مجاني دون اتصال لأندرويد و iPhone",
+    "title": "مراجعة Llamatik: تطبيق دردشة ذكاء اصطناعي مجاني ومفتوح المصدر دون اتصال لأندرويد و iPhone وسطح المكتب",
     "excerpt": "مراجعة Llamatik: تطبيق دردشة مجاني بترخيص MIT يعمل دون اتصال على أندرويد و iPhone وسطح المكتب. النماذج وتحليلات Firebase وحالة التحديث وما لم يتأكد.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "Llamatik 리뷰: Android·iPhone용 무료 오프라인 AI 챗봇",
+    "title": "Llamatik 리뷰: Android·iPhone·데스크톱용 무료 오픈소스 오프라인 AI 챗봇",
     "excerpt": "Llamatik 리뷰: Android, iPhone, 데스크톱용 MIT 라이선스 무료 오프라인 AI 챗봇. 모델, Firebase 분석, 업데이트 현황과 확인되지 않은 점을 다룹니다.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-23",
     "url": "/ko/power-local-llm/llamatik-review",
     "cluster": "power-local-llm"
   },
@@ -40663,6 +40663,87 @@
   },
   {
     "lang": "en",
+    "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
+    "excerpt": "Strata review: free, MIT-licensed engine and app that runs a 125B open model on a gaming PC. Requirements, installers, local API and unverified claims.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Strata-Rezension: Ein Open-Modell mit 125B Parametern auf dem Gaming-PC",
+    "excerpt": "Strata-Rezension: kostenlose MIT-Engine und App, die ein 125B-Open-Modell auf dem Gaming-PC ausführt. Anforderungen, Installer, lokale API, offene Punkte.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/de/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Strata : un modèle ouvert de 125B sur un PC de jeu",
+    "excerpt": "Test de Strata : application gratuite sous licence MIT qui fait tourner un modèle ouvert de 125B sur un PC de jeu. Prérequis, API locale, zones d’ombre.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/fr/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Strataレビュー：ゲーミングPCで動く125Bパラメータのオープンモデル",
+    "excerpt": "Strataのレビュー：125BのオープンモデルをゲーミングPCで動かす無料のMITライセンス製アプリ。必要環境、インストーラー、ローカルAPI、未確認の点を解説します。",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/ja/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Strata 评测：在游戏电脑上运行 125B 参数开源模型",
+    "excerpt": "Strata 评测：免费、MIT 许可的引擎与应用，可在游戏电脑上运行 125B 开源模型。涵盖配置要求、安装包、本地 API 及未核实的说法。",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/zh/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Strata: un modelo abierto de 125B en un PC gamer",
+    "excerpt": "Reseña de Strata: motor y app gratuitos con licencia MIT que ejecutan un modelo abierto de 125B en un PC gamer. Requisitos, instaladores, API local, dudas.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/es/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Strata: um modelo aberto de 125B parâmetros em um PC gamer",
+    "excerpt": "Análise do Strata: app gratuito com licença MIT que roda um modelo aberto de 125B em PC gamer. Requisitos, instaladores, API local e dúvidas em aberto.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/pt/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Strata: نموذج مفتوح بـ 125 مليار معامل على حاسوب ألعاب",
+    "excerpt": "مراجعة Strata: محرك وتطبيق مجاني برخصة MIT يشغّل نموذجًا مفتوحًا بـ 125B على حاسوب ألعاب. المتطلبات وواجهة API المحلية وادعاءات لم يُتحقق منها.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/ar/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Strata 리뷰: 게이밍 PC에서 125B 파라미터 오픈 모델 실행",
+    "excerpt": "Strata 리뷰: 게이밍 PC에서 125B 오픈 모델을 실행하는 무료 MIT 라이선스 앱. 요구 사양, 설치 파일, 로컬 API, 확인하지 못한 주장을 정리했습니다.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/ko/power-local-llm/strata-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Caelum Review: Free Offline AI Chat App for Android",
     "excerpt": "Caelum review: free, closed-source Android chat app that says its AI runs offline, with document questions and optional Brave web search. Limits and risks.",
     "publishDate": "2026-10-19",
@@ -40740,6 +40821,87 @@
     "publishDate": "2026-10-19",
     "dateModified": "2026-10-21",
     "url": "/ko/power-local-llm/caelum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+    "excerpt": "Obscurify review: anonymous AI chat with random account numbers, blind-voucher payments and an optional in-browser local mode. Plans and privacy claims.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Obscurify-Rezension: Anonymer KI-Chat mit optionalem lokalem Modus",
+    "excerpt": "Obscurify-Rezension: anonymer KI-Chat mit zufälliger Kontonummer, Blind-Gutscheinen und optionalem lokalem Modus im Browser. Tarife und Datenschutz.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/de/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test d'Obscurify : chat IA anonyme avec mode local optionnel",
+    "excerpt": "Test d'Obscurify : chat IA anonyme, compte aléatoire, bons aveugles et mode local optionnel dans le navigateur. Offres, confidentialité et limites.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/fr/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Obscurifyレビュー：ローカルモードも使える匿名AIチャット",
+    "excerpt": "Obscurifyレビュー：ランダムなアカウント番号、ブラインドバウチャー決済、ブラウザ内ローカルモードを備えた匿名AIチャット。料金、プライバシー、未検証の点を解説します。",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/ja/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Obscurify 评测：支持可选本地模式的匿名 AI 聊天",
+    "excerpt": "Obscurify 评测：随机账号、盲代金券付款、可选浏览器本地模式的匿名 AI 聊天。含套餐价格、隐私声明，并列出尚未核实的事项与潜在风险。",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/zh/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Obscurify: chat de IA anónimo con modo local opcional",
+    "excerpt": "Reseña de Obscurify: chat de IA anónimo con número de cuenta aleatorio, vales ciegos y modo local opcional en el navegador. Planes y privacidad.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/es/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Obscurify: chat de IA anônimo com modo local opcional",
+    "excerpt": "Análise do Obscurify: chat de IA anônimo com conta aleatória, vouchers cegos e modo local opcional no navegador. Planos, privacidade, limites.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/pt/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Obscurify: دردشة ذكاء اصطناعي مجهولة الهوية مع وضع محلي اختياري",
+    "excerpt": "مراجعة Obscurify: دردشة ذكاء اصطناعي مجهولة برقم حساب عشوائي ودفع بقسائم عمياء ووضع محلي اختياري في المتصفح. الخطط والخصوصية وما لم يُتحقق منه.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/ar/power-local-llm/obscurify-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Obscurify 리뷰: 로컬 모드를 갖춘 익명 AI 채팅",
+    "excerpt": "Obscurify 리뷰: 무작위 계정 번호, 블라인드 바우처 결제, 브라우저 로컬 모드를 갖춘 익명 AI 채팅. 요금제, 개인정보 보호, 미확인 사항을 정리했습니다.",
+    "publishDate": "2026-10-23",
+    "dateModified": "2026-10-23",
+    "url": "/ko/power-local-llm/obscurify-review",
     "cluster": "power-local-llm"
   },
   {

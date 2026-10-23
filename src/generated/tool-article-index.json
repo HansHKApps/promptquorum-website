@@ -11,6 +11,30 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-vision-models-llava-ollama-2026",
+        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
+        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
@@ -26,14 +50,6 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "deepseek-vs-qwen-coding-local-2026",
         "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
@@ -43,9 +59,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-vision-models-llava-ollama-2026",
-        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
-        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-20",
         "tier": "about"
       },
@@ -64,25 +80,9 @@
         "url": "/power-local-llm/swiftlm-review",
         "dateModified": "2026-10-20",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-reasoning-model-deepseek-r1-2026",
-        "title": "Best Local Reasoning Model 2026: DeepSeek-R1 Ranked",
-        "url": "/local-llms/best-local-reasoning-model-deepseek-r1-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "long-context-local-llms",
-        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
-        "url": "/local-llms/long-context-local-llms",
-        "dateModified": "2026-10-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 302,
+    "totalCount": 303,
     "capped": true
   },
   "llama.cpp": {
@@ -96,6 +96,54 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "llamatik-review",
+        "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
+        "url": "/power-local-llm/llamatik-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "obscurify-review",
+        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "url": "/power-local-llm/obscurify-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "strata-review",
+        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
+        "url": "/power-local-llm/strata-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
@@ -105,9 +153,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "memoryai-review",
-        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
-        "url": "/power-local-llm/memoryai-review",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-20",
         "tier": "about"
       },
@@ -118,57 +166,9 @@
         "url": "/power-local-llm/ollama-vision-models-review",
         "dateModified": "2026-10-20",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "long-context-local-llms",
-        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
-        "url": "/local-llms/long-context-local-llms",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
-        "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
-        "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-offline-china-self-hosted-2026",
-        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
-        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "idefics-review",
-        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
-        "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamatik-review",
-        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
-        "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 167,
+    "totalCount": 169,
     "capped": true
   },
   "vLLM": {
@@ -186,7 +186,15 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -244,14 +252,6 @@
         "url": "/power-local-llm/dynamo-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kserve-review",
-        "title": "KServe Review: Kubernetes-Native Model Serving at Scale",
-        "url": "/power-local-llm/kserve-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
     "totalCount": 93,
@@ -272,7 +272,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -542,19 +542,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
         "url": "/local-llms/70b-models-consumer-hardware",
         "dateModified": "2026-10-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
         "tier": "mentioned"
       },
       {
@@ -638,7 +638,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -774,6 +774,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-llm-fine-tuning-framework-2026",
+        "title": "Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud",
+        "url": "/local-llms/best-llm-fine-tuning-framework",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "unsloth-review",
+        "title": "Unsloth Review: Free Fine-Tuning for LLMs, Images & Audio",
+        "url": "/power-local-llm/unsloth-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
@@ -803,22 +819,6 @@
         "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
         "url": "/power-local-llm/vllm-mlx-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "unsloth-review",
-        "title": "Unsloth Review: Free Fine-Tuning for LLMs, Images & Audio",
-        "url": "/power-local-llm/unsloth-review",
-        "dateModified": "2026-09-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-llm-fine-tuning-framework-2026",
-        "title": "Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud",
-        "url": "/local-llms/best-llm-fine-tuning-framework",
-        "dateModified": "2026-08-28",
         "tier": "about"
       },
       {
@@ -864,6 +864,14 @@
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-20",
         "tier": "about"
       },
@@ -920,14 +928,6 @@
         "slug": "best-ai-coding-tools-comparison-2026",
         "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
         "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-ide-plugins-2026",
-        "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
-        "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
@@ -992,18 +992,18 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "lm-studio-vs-jan-ai",
-        "title": "Jan AI vs LM Studio: Which Is Better for Local LLMs?",
-        "url": "/local-llms/lm-studio-vs-jan-ai",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lm-studio-vs-jan-ai",
+        "title": "Jan AI vs LM Studio: Which Is Better for Local LLMs?",
+        "url": "/local-llms/lm-studio-vs-jan-ai",
         "dateModified": "2026-10-17",
         "tier": "about"
       },
@@ -1082,7 +1082,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -1236,7 +1236,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 35,
+    "totalCount": 36,
     "capped": true
   },
   "Msty": {
@@ -1634,7 +1634,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -2120,7 +2120,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 54,
+    "totalCount": 55,
     "capped": true
   },
   "LibreChat": {
@@ -2175,6 +2175,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "obscurify-review",
+        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "url": "/power-local-llm/obscurify-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "qwen-local-deployment-complete-guide-2026",
         "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
         "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
@@ -2196,18 +2204,10 @@
         "url": "/power-local-llm/odysseus-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-review",
-        "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
-        "url": "/local-llms/text-generation-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "text-generation-webui": {
     "articles": [
@@ -3461,22 +3461,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "surfsense-review",
+        "title": "SurfSense Review: Open-Source Desktop NotebookLM Alternative",
+        "url": "/power-local-llm/surfsense-review",
+        "dateModified": "2026-10-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "return-editor-review",
         "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
         "url": "/power-local-llm/return-editor-review",
         "dateModified": "2026-10-16",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "hyperlink-nexa-review",
-        "title": "Hyperlink (Nexa AI) Review: On-Device File Search",
-        "url": "/power-local-llm/hyperlink-nexa-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Quivr": {
@@ -4867,6 +4867,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "strata-review",
+        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
+        "url": "/power-local-llm/strata-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -4888,17 +4896,9 @@
         "url": "/power-local-llm/cognee-review",
         "dateModified": "2026-09-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nvidia-g-assist-review",
-        "title": "NVIDIA Project G-Assist Review: On-Device RTX AI Assistant, Requirements, and Setup",
-        "url": "/power-local-llm/nvidia-g-assist-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Hermes Agent": {
@@ -4942,9 +4942,17 @@
         "url": "/power-local-llm/atomic-bot-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "strata-review",
+        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
+        "url": "/power-local-llm/strata-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Msty Go": {
@@ -5006,9 +5014,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "llamatik-review",
-        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
+        "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
         "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -5588,6 +5596,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-vision-models-llava-ollama-2026",
+        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
+        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
@@ -5600,14 +5616,6 @@
         "slug": "multimodal-local-llms",
         "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
         "url": "/local-llms/multimodal-local-llms",
-        "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-vision-models-llava-ollama-2026",
-        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
-        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
         "dateModified": "2026-10-20",
         "tier": "about"
       },
@@ -5629,18 +5637,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "llama-factory-review",
-        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
-        "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-09-14",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6754,7 +6762,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -7899,6 +7907,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-train-operate-compared",
         "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
         "url": "/power-local-llm/local-llm-train-operate-compared",
@@ -7911,14 +7927,6 @@
         "title": "Agentic Inbox Review: A Self-Hosted Email Client With an AI Agent",
         "url": "/power-local-llm/agentic-inbox-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-factory-review",
-        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
-        "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-09-14",
         "tier": "mentioned"
       }
     ],
@@ -8257,6 +8265,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "strata-review",
+        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
+        "url": "/power-local-llm/strata-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dreamserver-review",
         "title": "DreamServer Review: One-Command Local AI Server Stack",
         "url": "/power-local-llm/dreamserver-review",
@@ -8278,17 +8294,9 @@
         "url": "/power-local-llm/mlx-serve-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "multica-review",
-        "title": "Multica Review: A Workspace for AI Coding Agents",
-        "url": "/power-local-llm/multica-review",
-        "dateModified": "2026-09-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "MaxKB": {
@@ -9160,7 +9168,15 @@
         "slug": "unsloth-review",
         "title": "Unsloth Review: Free Fine-Tuning for LLMs, Images & Audio",
         "url": "/power-local-llm/unsloth-review",
-        "dateModified": "2026-09-13",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-llm-fine-tuning-framework-2026",
+        "title": "Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud",
+        "url": "/local-llms/best-llm-fine-tuning-framework",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -9168,6 +9184,14 @@
         "slug": "long-context-local-llms",
         "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
         "url": "/local-llms/long-context-local-llms",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -9185,22 +9209,6 @@
         "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
         "url": "/power-local-llm/local-llm-train-operate-compared",
         "dateModified": "2026-09-21",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-factory-review",
-        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
-        "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-llm-fine-tuning-framework-2026",
-        "title": "Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud",
-        "url": "/local-llms/best-llm-fine-tuning-framework",
-        "dateModified": "2026-08-28",
         "tier": "about"
       },
       {
@@ -9246,7 +9254,7 @@
         "slug": "llama-factory-review",
         "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-09-14",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -9561,6 +9569,34 @@
       }
     ],
     "totalCount": 3,
+    "capped": false
+  },
+  "SurfSense": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "surfsense-review",
+        "title": "SurfSense Review: Open-Source Desktop NotebookLM Alternative",
+        "url": "/power-local-llm/surfsense-review",
+        "dateModified": "2026-10-21",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Strata": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "strata-review",
+        "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
+        "url": "/power-local-llm/strata-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "candle-vllm": {
@@ -10688,7 +10724,31 @@
         "slug": "local-vision-models-llava-ollama-2026",
         "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
         "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
-        "dateModified": "2026-10-20",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "obscurify-review",
+        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "url": "/power-local-llm/obscurify-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "surfsense-review",
+        "title": "SurfSense Review: Open-Source Desktop NotebookLM Alternative",
+        "url": "/power-local-llm/surfsense-review",
+        "dateModified": "2026-10-21",
         "tier": "mentioned"
       },
       {
@@ -10701,9 +10761,25 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-llm-fine-tuning-framework-2026",
+        "title": "Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud",
+        "url": "/local-llms/best-llm-fine-tuning-framework",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "top-open-source-models-ollama",
         "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
         "url": "/local-llms/top-open-source-models-ollama",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-ai-courses-certifications-2026",
+        "title": "Best AI Courses and Certifications: 2026 Buying Guide",
+        "url": "/power-local-llm/best-ai-courses-certifications-2026",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
@@ -10714,49 +10790,9 @@
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "castmates-review",
-        "title": "Castmates Review: Offline AI Character Chat for iPhone",
-        "url": "/power-local-llm/castmates-review",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-offline-china-self-hosted-2026",
-        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
-        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-workstation-build-guide",
-        "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
-        "url": "/power-local-llm/local-ai-workstation-build-guide",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-with-logseq-and-joplin",
-        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
-        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlxhub-review",
-        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
-        "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 203,
+    "totalCount": 206,
     "capped": true
   },
   "Qdrant": {
@@ -11403,34 +11439,18 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llamatik-review",
+        "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
+        "url": "/power-local-llm/llamatik-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "caelum-review",
-        "title": "Caelum Review: Free Offline AI Chat App for Android",
-        "url": "/power-local-llm/caelum-review",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamatik-review",
-        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
-        "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlxhub-review",
-        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
-        "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-23",
         "tier": "mentioned"
       },
       {
@@ -11438,6 +11458,30 @@
         "slug": "secret-ai-review",
         "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
         "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "caelum-review",
+        "title": "Caelum Review: Free Offline AI Chat App for Android",
+        "url": "/power-local-llm/caelum-review",
+        "dateModified": "2026-10-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
@@ -11455,14 +11499,6 @@
         "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
         "url": "/power-local-llm/honey-llm-review",
         "dateModified": "2026-10-16",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-geetmark-review",
-        "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
-        "url": "/power-local-llm/local-ai-geetmark-review",
-        "dateModified": "2026-10-09",
         "tier": "mentioned"
       }
     ],
@@ -11550,7 +11586,7 @@
         "slug": "tokforge-review",
         "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
         "url": "/power-local-llm/tokforge-review",
-        "dateModified": "2026-10-09",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -11720,7 +11756,7 @@
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-20",
+        "dateModified": "2026-10-23",
         "tier": "about"
       }
     ],
@@ -11732,9 +11768,23 @@
       {
         "cluster": "power-local-llm",
         "slug": "llamatik-review",
-        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
+        "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
         "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Obscurify": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "obscurify-review",
+        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "url": "/power-local-llm/obscurify-review",
+        "dateModified": "2026-10-23",
         "tier": "about"
       }
     ],
@@ -11818,7 +11868,7 @@
         "slug": "secret-ai-review",
         "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
         "url": "/power-local-llm/secret-ai-review",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-23",
         "tier": "about"
       }
     ],
