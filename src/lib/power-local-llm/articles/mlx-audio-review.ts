@@ -11,6 +11,7 @@ const st = {
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-en.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -224,6 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-de.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -437,6 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-fr.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -650,6 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-ja.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -863,6 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-zh.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -1076,6 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-es.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -1289,6 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-pt.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -1502,6 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-ar.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
@@ -1715,6 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     designSkin: 'hub',
+    heroImage: '/images/mlx-audio-review-hero-ko.webp',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-23',
