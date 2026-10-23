@@ -608,6 +608,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // AI CutoutWerk review (Image editing, iOS/macOS) — 2026-10-16
   'ai-cutoutwerk-review',
   'openmontage-review',
+  // ECC review (Code & Development: agent toolkit) — 2026-10-23
+  'ecc-review',
 
   // PixlStash review (Image & Video Generation) — 2026-10-17
   'pixlstash-review',
