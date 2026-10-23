@@ -33,6 +33,31 @@ import { TOTAL_CATEGORY_GROUP_COUNT } from './apps/categories'
 import { buildLocalAiAppsItemListSchema } from './apps-schema'
 import { isFounderStarActive } from '@/components/local-ai-directory/founderStar'
 
+const SCHEMA_OS: Record<string, string> = { mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web' }
+const SPDX_LICENSES = new Set(['MIT', 'Apache-2.0', 'GPL-3.0', 'AGPL-3.0', 'BSD-3-Clause', 'MPL-2.0'])
+
+/** SoftwareApplication node for the app a review article is about; every field comes from the ToolRecord, none invented. */
+function buildReviewedAppSchema(app: (typeof localAiApps)[number], canonicalUrl: string, lang: Parameters<typeof toOutputLocale>[0]) {
+  const sameAs = Object.values(app.storeLinks ?? {}).filter(Boolean)
+  const officialUrl = app.storeLinks?.web ?? (app.url ? `https://${app.url}` : undefined)
+  const mobileOnly = !!app.platforms?.length && app.platforms.every((p) => p === 'ios' || p === 'android')
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    '@id': `${canonicalUrl}#app`,
+    name: app.name,
+    inLanguage: toOutputLocale(lang),
+    applicationCategory: mobileOnly ? 'MobileApplication' : 'UtilitiesApplication',
+    ...(app.platforms?.length && { operatingSystem: app.platforms.map((p) => SCHEMA_OS[p]).join(', ') }),
+    ...(app.pqReview?.version && { softwareVersion: app.pqReview.version }),
+    ...(SPDX_LICENSES.has(app.license) && { license: `https://spdx.org/licenses/${app.license}.html` }),
+    ...(app.price === 'free' && { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } }),
+    ...(officialUrl && { url: officialUrl }),
+    ...(app.lastUpstreamUpdate && { dateModified: app.lastUpstreamUpdate }),
+    ...(sameAs.length && { sameAs }),
+  }
+}
+
 const BASE = 'https://www.promptquorum.com'
 
 // Slug of the interactive Local AI App Directory (Phase 3 of
@@ -426,6 +451,17 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       ? { appName: reviewedApp.name, date: reviewedApp.founderReviewedDate! }
       : undefined
 
+  // Entity rule (docs/PAGE_UPDATER.md Step 4.8-B): a review's subject is a SoftwareApplication built from its
+  // ToolRecord, referenced from the article via about {@id}. No Review/reviewRating here: source-only reviews are untested.
+  const appSchema = reviewedApp ? buildReviewedAppSchema(reviewedApp, canonicalUrl, lang) : null
+  if (appSchema) {
+    const prevAbout = (articleSchema as any).about
+    const rest = (Array.isArray(prevAbout) ? prevAbout : prevAbout ? [prevAbout] : []).filter(
+      (n: any) => n?.['@id'] !== appSchema['@id'] && !(n?.['@type'] === 'Thing' && n?.name === reviewedApp!.name)
+    )
+    ;(articleSchema as any).about = [{ '@id': appSchema['@id'] }, ...rest]
+  }
+
   // Category comparison article: hand its tool-record-derived table data to the client. Tool review:
   // hand it the category guide + sibling links. Both are undefined for every other article.
   const compareGroup = (Object.keys(CATEGORY_COMPARE_ARTICLE) as CategoryGroupKey[]).find((g) => CATEGORY_COMPARE_ARTICLE[g] === slug)
@@ -437,6 +473,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      {appSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
