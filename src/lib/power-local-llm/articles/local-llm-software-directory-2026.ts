@@ -10,6 +10,7 @@ import { TOTAL_CATEGORY_GROUP_COUNT } from '../apps/categories'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -597,6 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -1191,6 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -1776,6 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -2363,6 +2367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -2950,6 +2955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -3551,6 +3557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 },
 
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -4151,6 +4158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',
@@ -4751,6 +4759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-10-23',

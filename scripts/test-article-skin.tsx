@@ -17,7 +17,8 @@ const fail = (m: string) => { failed++; console.error('FAIL ' + m) }
 
 for (const [slug, data] of Object.entries(ARTICLES)) {
   for (const lang of Object.keys(data)) {
-    const base = (data as any)[lang]
+    // Fixtures now ship with the flag set; the baseline must be the same article without it.
+    const { designSkin: _flag, ...base } = (data as any)[lang]
     const mk = (skin?: 'hub') =>
       renderToStaticMarkup(
         <PowerLocalLLMPostClient

@@ -8,6 +8,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -433,6 +434,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -858,6 +860,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -1283,6 +1286,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -1708,6 +1712,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -2133,6 +2138,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -2558,6 +2564,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -2983,6 +2990,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',
@@ -3408,6 +3416,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
     dateModified: '2026-10-20',

@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-22',
       last_full_refresh: '2026-10-23',
@@ -681,6 +682,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Models by Use Case',
       title: 'LLMs Locales más Rápidos para PCs de Gama Baja 2026: Guía Solo CPU',
@@ -1238,6 +1240,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Models by Use Case',
       title: 'أسرع نماذج LLM المحلية لأجهزة الكمبيوتر منخفضة المواصفات 2026: دليل CPU فقط',
@@ -1798,6 +1801,7 @@ schema: {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Models by Use Case',
       title: 'LLMs Locais mais Rápidos para PCs de Baixo Custo 2026: Guia Somente CPU',
@@ -2355,6 +2359,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Modelle nach Anwendungsfall',
       title: 'Schnellste lokale LLMs für Low-End-PCs 2026: CPU-only-Guide',
@@ -2930,6 +2935,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Modèles par cas d\'usage',
       title: 'LLMs locaux les plus rapides pour PC bas de gamme 2026 : guide CPU seul',
@@ -3487,6 +3493,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'ユースケース別モデル',
       title: '低スペックPC向け最速ローカルLLM 2026：CPU専用ガイド',
@@ -4044,6 +4051,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: '按使用场景分类模型',
       title: '低配电脑最快本地LLM 2026：纯CPU指南',
@@ -4601,6 +4609,7 @@ schema: {
       },
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: '사용 사례별 모델',
       title: '2026년 저사양 PC를 위한 가장 빠른 로컬 LLM: CPU 전용 가이드',

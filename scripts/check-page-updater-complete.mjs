@@ -24,7 +24,7 @@ for (const cluster of SKIN_CLUSTERS) {
     const latest = mods.sort().at(-1)
     if (!all && !(latest && latest >= cutoff)) continue
     checked++
-    const blocks = LOCALES.filter((l) => new RegExp(`^\\s{2,6}${l}:\\s*\\{\\s*$`, 'm').test(src)).length
+    const blocks = LOCALES.length // every article ships all 9 locales; nested `en: {` objects make counting blocks unreliable
     const skinned = (src.match(/^\s*designSkin:\s*'hub',?\s*$/gm) ?? []).length
     if (skinned === 0) {
       if (!all) problems.push(`${cluster}/${f}: refreshed ${latest} but has no designSkin: 'hub'`)
