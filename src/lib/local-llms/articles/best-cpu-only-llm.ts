@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_benchmarks_used: ['tok/s (estimated from memory bandwidth)'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**CPU-only inference works for 3–8B models on a modern PC with 8–32 GB RAM. Among the models compared here, Phi-4 Mini (3.8B, 2.5 GB file) is the best all-round pick at an estimated 15–25 tok/s on dual-channel RAM, Llama 3.2 3B (2.0 GB, est. 18–30 tok/s) is the smaller and faster option, and Qwen3 8B (5.2 GB, est. 8–15 tok/s) is the quality option for 16 GB machines. Speed on a CPU is set by memory bandwidth divided by model file size, so a GPU with 7–20× the bandwidth is typically 5–10× faster or more.** These speeds are PromptQuorum estimates, not lab measurements. Every model here is available as open weights (check each model card for its licence) and runs on the CPU alone, with no GPU and no cloud API.',
+      leadAnswerBlock: '**CPU-only inference works for 3–8B models on a modern PC with 8–32 GB RAM. Among the models compared here, Phi-4 Mini (3.8B, 2.5 GB file) is the best all-round pick at an estimated 15–25 tok/s on dual-channel RAM; speeds are PromptQuorum estimates, not lab measurements.**',
       quickAnswerTop: {
         en: {
           question: 'Can I run an LLM without a GPU and which models work on CPU only?',
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**La inferencia solo con CPU funciona con modelos de 3–8B en un PC moderno con 8–32 GB de RAM. Entre los modelos comparados aquí, Phi-4 Mini (3.8B, archivo de 2.5 GB) es la mejor opción general, con unos 15–25 tok/s estimados en RAM de doble canal; Llama 3.2 3B (2.0 GB, est. 18–30 tok/s) es la opción más pequeña y rápida, y Qwen3 8B (5.2 GB, est. 8–15 tok/s) es la opción de calidad para equipos de 16 GB. En una CPU la velocidad depende del ancho de banda de memoria dividido entre el tamaño del archivo del modelo, así que una GPU con 7–20× más ancho de banda suele ser 5–10× más rápida o más.** Estas velocidades son estimaciones de PromptQuorum, no mediciones de laboratorio. Todos los modelos de aquí están disponibles con pesos abiertos (consulta la licencia en la ficha de cada modelo) y se ejecutan solo con la CPU, sin GPU y sin API en la nube.',
+      leadAnswerBlock: '**La inferencia solo con CPU funciona con modelos de 3–8B en un PC moderno con 8–32 GB de RAM. Entre los modelos comparados, Phi-4 Mini (3,8B, 2,5 GB) es la opción general más equilibrada: unos 15–25 tok/s estimados con RAM de doble canal, según estimaciones de PromptQuorum, no mediciones.**',
       quickAnswerTop: {
         es: {
           question: '¿Puedo ejecutar un LLM sin GPU y qué modelos funcionan solo con CPU?',
@@ -890,7 +890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**يعمل الاستدلال على CPU فقط مع نماذج 3–8B على حاسوب حديث بذاكرة RAM سعتها 8–32 GB. من بين النماذج المقارَنة هنا، يُعد Phi-4 Mini (3.8B، ملف 2.5 GB) الخيار العام الأفضل بسرعة مقدّرة 15–25 tok/s على ذاكرة ثنائية القناة، ويُعد Llama 3.2 3B (2.0 GB، سرعة مقدّرة 18–30 tok/s) الخيار الأصغر والأسرع، ويُعد Qwen3 8B (5.2 GB، سرعة مقدّرة 8–15 tok/s) خيار الجودة للأجهزة ذات 16 GB. تُحدَّد السرعة على CPU بعرض النطاق الترددي للذاكرة مقسومًا على حجم ملف النموذج، لذا فإن GPU بعرض نطاق أكبر بمقدار 7–20× يكون عادةً أسرع بمقدار 5–10× أو أكثر.** هذه السرعات تقديرات من PromptQuorum وليست قياسات مخبرية. كل نموذج هنا متاح بأوزان مفتوحة (راجع بطاقة كل نموذج لمعرفة الترخيص) ويعمل على CPU وحده، بلا GPU وبلا واجهة API سحابية.',
+      leadAnswerBlock: '**يعمل الاستدلال على CPU فقط مع نماذج 3–8B على جهاز حديث بذاكرة 8–32 GB. من بين النماذج المقارنة هنا، يُعد Phi-4 Mini (3.8B، ملف 2.5 GB) الخيار العام الأفضل بسرعة تقديرية 15–25 tok/s مع ذاكرة ثنائية القناة (تقدير من PromptQuorum وليس قياساً مخبرياً).**',
       quickAnswerTop: {
         ar: {
           question: 'هل يمكنني تشغيل LLM بدون GPU وما النماذج التي تعمل على CPU فقط؟',
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**A inferência só com CPU funciona para modelos de 3–8B em um PC moderno com 8–32 GB de RAM. Entre os modelos comparados aqui, o Phi-4 Mini (3.8B, arquivo de 2.5 GB) é a melhor escolha geral, a cerca de 15–25 tok/s estimados em RAM dual-channel; o Llama 3.2 3B (2.0 GB, est. 18–30 tok/s) é a opção menor e mais rápida; e o Qwen3 8B (5.2 GB, est. 8–15 tok/s) é a opção de qualidade para máquinas com 16 GB. A velocidade na CPU é definida pela largura de banda da memória dividida pelo tamanho do arquivo do modelo, então uma GPU com 7–20× a largura de banda costuma ser 5–10× mais rápida ou mais.** Essas velocidades são estimativas da PromptQuorum, não medições de laboratório. Todos os modelos aqui estão disponíveis com pesos abertos (confira a licença na ficha de cada modelo) e rodam só na CPU, sem GPU e sem API na nuvem.',
+      leadAnswerBlock: '**A inferência só com CPU funciona com modelos de 3–8B em um PC moderno com 8–32 GB de RAM. Entre os modelos comparados, o Phi-4 Mini (3.8B, 2.5 GB) é a melhor escolha geral: cerca de 15–25 tok/s estimados com RAM dual-channel (estimativa da PromptQuorum, não medição).**',
       quickAnswerTop: {
         pt: {
           question: 'Posso rodar um LLM sem GPU e quais modelos funcionam só na CPU?',
@@ -1690,7 +1690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**Reine CPU-Inferenz funktioniert für 3–8B-Modelle auf einem modernen PC mit 8–32 GB RAM. Unter den hier verglichenen Modellen ist Phi-4 Mini (3,8B, 2,5 GB Datei) mit geschätzt 15–25 Tok/s bei Dual-Channel-RAM die beste Allround-Wahl, Llama 3.2 3B (2,0 GB, geschätzt 18–30 Tok/s) die kleinere und schnellere Option und Qwen3 8B (5,2 GB, geschätzt 8–15 Tok/s) die Qualitätsoption für Rechner mit 16 GB. Die Geschwindigkeit auf einer CPU ergibt sich aus Speicherbandbreite geteilt durch Modellgröße, daher ist eine GPU mit der 7–20-fachen Bandbreite typischerweise 5–10-mal schneller oder mehr.** Diese Geschwindigkeiten sind PromptQuorum-Schätzungen, keine Labormessungen. Alle Modelle hier sind mit offenen Gewichten verfügbar (Lizenz bitte jeweils auf der Modellkarte prüfen) und laufen allein auf der CPU, ohne GPU und ohne Cloud-API.',
+      leadAnswerBlock: '**Reine CPU-Inferenz funktioniert mit 3–8B-Modellen auf einem modernen PC mit 8–32 GB RAM. Unter den hier verglichenen Modellen ist Phi-4 Mini (3,8B, 2,5 GB Datei) die beste Allround-Wahl: geschätzt 15–25 Tok/s bei Dual-Channel-RAM (PromptQuorum-Schätzung, keine Labormessung).**',
       audience: 'Nutzer mit älterer Hardware, Raspberry-Pi-Nutzer und alle ohne dedizierte GPU, die praxistaugliche lokale LLM-Inferenz suchen.',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Beginner',
@@ -2076,7 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**L\'inférence sur CPU seul fonctionne pour les modèles de 3–8B sur un PC récent avec 8–32 GB de RAM. Parmi les modèles comparés ici, Phi-4 Mini (3.8B, fichier de 2.5 GB) est le meilleur choix polyvalent à environ 15–25 tok/s estimés avec une RAM double canal, Llama 3.2 3B (2.0 GB, est. 18–30 tok/s) est l\'option plus petite et plus rapide, et Qwen3 8B (5.2 GB, est. 8–15 tok/s) est l\'option qualité pour les machines de 16 GB. Sur un CPU, la vitesse dépend de la bande passante mémoire divisée par la taille du fichier du modèle ; un GPU, avec une bande passante 7–20× supérieure, est généralement 5–10× plus rapide, voire davantage.** Ces vitesses sont des estimations PromptQuorum, pas des mesures de laboratoire. Tous les modèles présentés ici sont disponibles en poids ouverts (vérifiez la licence sur la fiche de chaque modèle) et tournent sur le CPU seul, sans GPU ni API cloud.',
+      leadAnswerBlock: '**L\'inférence sur CPU seul fonctionne avec des modèles de 3–8B sur un PC récent avec 8–32 GB de RAM. Parmi les modèles comparés, Phi-4 Mini (3,8B, 2,5 GB) est le meilleur choix polyvalent : environ 15–25 tok/s estimés en RAM double canal (estimation PromptQuorum, pas une mesure).**',
       audience: 'Utilisateurs de matériel ancien, utilisateurs de Raspberry Pi et personnes sans GPU dédié qui cherchent une inférence LLM locale pratique.',
       readTime: '8 min de lecture',
       educationalLevel: 'Beginner',
@@ -2462,7 +2462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**CPU のみの推論は、8～32 GB RAM を搭載した最近の PC 上で 3～8B モデルに対応します。ここで比較したモデルのうち、Phi-4 Mini（3.8B、ファイル 2.5 GB）はデュアルチャネル RAM で推定 15～25 トークン/秒の総合的な最有力候補、Llama 3.2 3B（2.0 GB、推定 18～30 トークン/秒）は小さく高速な選択肢、Qwen3 8B（5.2 GB、推定 8～15 トークン/秒）は 16 GB マシン向けの品質重視の選択肢です。CPU での速度は、メモリ帯域をモデルのファイルサイズで割った値で決まるため、帯域が 7～20 倍ある GPU は通常 5～10 倍以上高速です。** これらの速度は PromptQuorum の推定値であり、実験室での測定値ではありません。ここで取り上げるモデルはすべてオープンウェイトで提供されており（ライセンスは各モデルカードで確認してください）、GPU もクラウド API も使わず CPU だけで動作します。',
+      leadAnswerBlock: '**CPU専用の推論は、8～32 GB RAMを搭載した最新のPCで3～8Bモデルに実用的です。ここで比較したモデルのうち、Phi-4 Mini（3.8B、ファイル2.5 GB）が総合的な最有力候補で、デュアルチャネルRAMで推定15～25 tok/s（PromptQuorumの推定値であり、実験室での測定値ではありません）。**',
       audience: '古いハードウェアを使っている方、Raspberry Pi ユーザー、専用 GPU がなく実用的なローカル LLM 推論を探している方。',
       readTime: '8分で読める',
       educationalLevel: 'Beginner',
@@ -2848,7 +2848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**纯 CPU 推理适用于 3–8B 模型，需要一台配备 8–32 GB 内存的现代电脑。在本文比较的模型中，Phi-4 Mini（3.8B，文件 2.5 GB）是最均衡的选择，双通道内存下估算 15–25 tok/s；Llama 3.2 3B（2.0 GB，估算 18–30 tok/s）更小更快；Qwen3 8B（5.2 GB，估算 8–15 tok/s）是 16 GB 内存机器上偏重质量的选择。CPU 的速度由内存带宽除以模型文件大小决定，而 GPU 的带宽高出 7–20 倍，通常要快 5–10 倍甚至更多。** 这些速度是 PromptQuorum 的估值，并非实验室实测。这里的每款模型都以开放权重形式提供（请查看各模型卡了解许可证），仅靠 CPU 即可运行，无需 GPU，也无需云端 API。',
+      leadAnswerBlock: '**纯 CPU 推理适用于配备 8–32 GB 内存的现代电脑上的 3–8B 模型。在这里比较的模型中，Phi-4 Mini（3.8B，文件 2.5 GB）是最均衡的选择，双通道内存下估算 15–25 tok/s（PromptQuorum 的估值，并非实验室实测）。**',
       audience: '使用旧硬件的用户、树莓派用户，以及没有独立显卡、想要实用本地 LLM 推理的人。',
       readTime: '阅读约8分钟',
       educationalLevel: 'Beginner',
@@ -3234,7 +3234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-10-23',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
-      leadAnswerBlock: '**CPU 전용 추론은 8~32 GB RAM을 갖춘 최신 PC에서 3~8B 모델에 적합합니다. 여기서 비교한 모델 중 Phi-4 Mini(3.8B, 파일 2.5 GB)는 듀얼 채널 RAM에서 추정 15–25 tok/s로 가장 균형 잡힌 선택이고, Llama 3.2 3B(2.0 GB, 추정 18–30 tok/s)는 더 작고 빠른 선택, Qwen3 8B(5.2 GB, 추정 8–15 tok/s)는 16 GB 머신을 위한 품질 중심 선택입니다. CPU의 속도는 메모리 대역폭을 모델 파일 크기로 나눈 값으로 정해지므로, 대역폭이 7–20배인 GPU는 보통 5–10배 이상 빠릅니다.** 이 속도는 PromptQuorum의 추정치이며 실험실 측정값이 아닙니다. 여기 소개한 모든 모델은 오픈 웨이트로 제공되며(라이선스는 각 모델 카드에서 확인하십시오) GPU도 클라우드 API도 없이 CPU만으로 실행됩니다.',
+      leadAnswerBlock: '**CPU 전용 추론은 8~32 GB RAM을 갖춘 최신 PC에서 3~8B 모델에 실용적입니다. 여기서 비교한 모델 중 Phi-4 Mini(3.8B, 파일 2.5 GB)가 가장 균형 잡힌 선택이며, 듀얼 채널 RAM에서 추정 15–25 tok/s입니다(PromptQuorum의 추정치이며 실험실 측정값이 아닙니다).**',
       quickAnswerTop: {
         ko: {
           question: 'GPU 없이 LLM을 실행할 수 있으며, CPU 전용으로 작동하는 모델은 무엇입니까?',
