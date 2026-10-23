@@ -14,7 +14,7 @@ const SEV = new Set(['High', 'Medium', 'Low', 'Positive'])
 
 // Paths (dot/bracket form, indexes normalised to []) whose string value must be byte-identical to EN.
 const PROTECTED = [
-  /^id$/, /^standard_version$/, /^published$/, /^started$/, /^ended$/,
+  /^id$/, /^standard_version$/, /^published$/, /^modified$/, /^scores_confirmed$/, /^started$/, /^ended$/,
   /^app\.(name|slug|vendor|pricing_url)$/,
   /^moments\[\]\[(2|3)\]$/, /^chapters\[\]\.id$/, /^chapters\[\]\.items\[\]\[2\]$/,
   /^usage_log\[\]\[(4|5)\](\[\])?$/, /^findings\[\]\[(0|4|5)\](\[\])?$/,
