@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '**4 GB RAM, CPU only:** Qwen3 1.7B Q4_K_M — 25–40 tok/s on modern i5/Ryzen 5. `ollama run qwen3:1.7b`',
           '**8 GB RAM, CPU only:** Phi-4-mini (3.8B) — 15–25 tok/s, handles coding and reasoning. `ollama run phi4-mini`',
-          '**8 GB RAM + Intel Iris iGPU:** Qwen3 4B — 12–20 tok/s with partial offload. `ollama run qwen3:4b`',
+          '**8 GB RAM + Intel Iris iGPU:** Qwen3 4B — est. 12–20 tok/s if the iGPU is used. `ollama run qwen3:4b`',
           '**16 GB RAM, CPU only:** Qwen3 8B Q4_K_M — 8–15 tok/s, strong quality. `ollama run qwen3:8b`',
         ],
         footer: 'For most low-end PCs, Phi-4-mini (3.8B) at Q4_K_M is the sweet spot — fits 8 GB RAM, 15-25 tok/s on CPU. Drop to Qwen3 1.7B for the absolute fastest response.',
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**1B–3B models:** Fit in 4–8 GB RAM → fastest generation → acceptable quality',
             '**7B models:** Borderline on 8 GB systems → slower due to memory pressure → high quality',
-            '**13B+ models:** Require 16+ GB VRAM or swap heavily → too slow for interactive use',
+            '**13B+ models:** Need 16+ GB of RAM or swap heavily → too slow for interactive use on low-end PCs',
           ],
         },
         'realistic-expectations': {
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Can I run a 7B-class model with no GPU at all?', a: 'Yes — Qwen3 8B Q4_K_M runs at an estimated 8–15 tok/s on 16 GB RAM, CPU-only (estimate for a dual-channel Ryzen 7 7700X-class desktop). It is slower than the smaller picks but delivers noticeably stronger quality. On 8 GB RAM, stick to Phi-4-mini (3.8B) instead — an 8B model at Q4_K_M needs headroom an 8 GB system does not reliably have.' },
             { q: 'Is CPU inference usable for chatbots?', a: 'Yes, for interactive use once you pick the right model size. Phi-4-mini at 15–25 tok/s (8 GB RAM) and Qwen3 1.7B at 25–40 tok/s (4 GB RAM) are both fast enough for real-time chat. A 7B-class model on CPU (8–15 tok/s) is better suited to batch tasks — drafting, summarization, offline review — than live back-and-forth conversation.' },
             { q: 'Should I use Phi-4-mini or Qwen3 1.7B on CPU-only hardware?', a: 'Use Phi-4-mini (3.8B) if you have 8 GB RAM — it handles coding and reasoning at 15–25 tok/s. Use Qwen3 1.7B if you have only 4 GB RAM or want the fastest possible response (25–40 tok/s) at the cost of some quality on complex tasks.' },
-            { q: 'How do I check if I have any GPU at all?', a: 'Run `nvidia-smi` in terminal for NVIDIA discrete GPUs. If it returns "command not found," check `lspci` (Linux) or Device Manager (Windows) for an Intel Iris Xe or AMD Radeon integrated GPU — those can still offload some layers even without CUDA support.' },
+            { q: 'How do I check if I have any GPU at all?', a: 'Run `nvidia-smi` in terminal for NVIDIA discrete GPUs. If it returns "command not found," check `lspci` (Linux) or Device Manager (Windows) for an Intel Iris Xe or AMD Radeon integrated GPU — whether Ollama can use it depends on driver and backend support, so confirm with `ollama ps`.' },
             { q: 'How does quantization affect inference speed?', a: 'Quantization primarily reduces memory bandwidth requirements, not computation. A Q2 (2-bit) file is smaller than a Q4 (4-bit) file, so the CPU reads fewer bytes per token and generates faster, roughly in proportion to the file size. However, Q2 loses much more output quality. The practical rule: use Q4_K_M as default for every tier in this guide, drop to Q3 only if Q4_K_M does not fit in available RAM.' },
             { q: 'Can I use quantization below Q2?', a: 'Technically yes (1-bit IQ1 formats exist in llama.cpp), but output quality collapses at that size. Not recommended for any practical use case, including the 4 GB RAM tier covered in this guide — pick a smaller model at Q4_K_M instead.' },
             { q: 'Is CPU + iGPU hybrid inference supported?', a: 'Sometimes. Ollama can split a model between CPU and GPU when it finds a supported GPU backend, and `ollama ps` shows the split in its PROCESSOR column. An iGPU shares system RAM with the CPU, so memory bandwidth — the main speed limit — does not increase. On an 8 GB RAM system with an Intel Iris Xe iGPU, Qwen3 4B is estimated at 12–20 tok/s if the iGPU is used. Test with `OLLAMA_VULKAN=0` to compare against CPU-only.' },
@@ -498,7 +498,7 @@ schema: {
             'name': 'How do I check if I have any GPU at all?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Run `nvidia-smi` in terminal for NVIDIA discrete GPUs. If it returns "command not found," check `lspci` (Linux) or Device Manager (Windows) for an Intel Iris Xe or AMD Radeon integrated GPU — those can still offload some layers even without CUDA support.',
+              'text': 'Run `nvidia-smi` in terminal for NVIDIA discrete GPUs. If it returns "command not found," check `lspci` (Linux) or Device Manager (Windows) for an Intel Iris Xe or AMD Radeon integrated GPU — whether Ollama can use it depends on driver and backend support, so confirm with `ollama ps`.',
             },
           },
           {
@@ -674,9 +674,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '4 GB RAM, CPU only', 'description': 'Qwen3 1.7B Q4_K_M. 25–40 tok/s. Fastest response on minimal hardware. ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': '8 GB RAM, CPU only — sweet spot', 'description': 'Phi-4-mini 3.8B Q4_K_M. 15–25 tok/s. Coding and reasoning. ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': '8 GB RAM + Intel Iris iGPU', 'description': 'Qwen3 4B Q4_K_M. 12–20 tok/s with partial GPU offload. ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': '8 GB RAM + Intel Iris iGPU', 'description': 'Qwen3 4B Q4_K_M. Est. 12–20 tok/s if the iGPU is used. ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': '16 GB RAM, CPU only', 'description': 'Qwen3 8B Q4_K_M. 8–15 tok/s. Strong quality, no GPU needed. ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': '16 GB RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. 20–35 tok/s with layer offload. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16 GB RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. Est. 20–35 tok/s if the iGPU is used. ollama run llama3.2:3b' },
         ],
       },
     },
@@ -698,7 +698,7 @@ schema: {
         bullets: [
           '**4 GB RAM, solo CPU:** Qwen3 1.7B Q4_K_M — 25–40 tok/s en un i5/Ryzen 5 moderno. `ollama run qwen3:1.7b`',
           '**8 GB RAM, solo CPU:** Phi-4-mini (3.8B) — 15–25 tok/s, maneja código y razonamiento. `ollama run phi4-mini`',
-          '**8 GB RAM + iGPU Intel Iris:** Qwen3 4B — 12–20 tok/s con offload parcial. `ollama run qwen3:4b`',
+          '**8 GB RAM + iGPU Intel Iris:** Qwen3 4B — est. 12–20 tok/s si se usa la iGPU. `ollama run qwen3:4b`',
           '**16 GB RAM, solo CPU:** Qwen3 8B Q4_K_M — 8–15 tok/s, calidad sólida. `ollama run qwen3:8b`',
         ],
         footer: 'Para la mayoría de PCs de gama baja, Phi-4-mini (3.8B) en Q4_K_M es el punto óptimo — cabe en 8 GB RAM, 15–25 tok/s en CPU. Baja a Qwen3 1.7B para la respuesta más rápida posible.',
@@ -810,7 +810,7 @@ schema: {
           items: [
             '**Modelos 1B–3B:** Caben en 4–8 GB RAM → generación más rápida → calidad aceptable',
             '**Modelos 7B:** Ajustados en sistemas de 8 GB → más lentos por presión de memoria → alta calidad',
-            '**Modelos 13B+:** Requieren 16+ GB VRAM o intercambio masivo → demasiado lentos para uso interactivo',
+            '**Modelos 13B+:** Necesitan 16+ GB de RAM o intercambio masivo → demasiado lentos para uso interactivo en PC de gama baja',
           ],
         },
         'realistic-expectations': {
@@ -937,7 +937,7 @@ schema: {
             { q: '¿Puedo ejecutar un modelo de clase 7B sin ninguna GPU?', a: 'Sí — Qwen3 8B Q4_K_M funciona a unos 8–15 tok/s estimados con 16 GB RAM, solo CPU (estimación para un equipo de sobremesa de doble canal de la clase Ryzen 7 7700X). Es más lento que las opciones más pequeñas pero ofrece una calidad notablemente mejor. Con 8 GB RAM, usa Phi-4-mini (3.8B) en su lugar — un modelo 8B en Q4_K_M necesita un margen que un sistema de 8 GB no garantiza de forma fiable.' },
             { q: '¿Es la inferencia CPU usable para chatbots?', a: 'Sí, para uso interactivo si eliges el tamaño de modelo correcto. Phi-4-mini a 15–25 tok/s (8 GB RAM) y Qwen3 1.7B a 25–40 tok/s (4 GB RAM) son lo bastante rápidos para chat en tiempo real. Un modelo de clase 7B en CPU (8–15 tok/s) es mejor para tareas por lotes — redacción, resúmenes, revisión offline — que para conversación en vivo.' },
             { q: '¿Debo usar Phi-4-mini o Qwen3 1.7B en hardware solo CPU?', a: 'Usa Phi-4-mini (3.8B) si tienes 8 GB RAM — maneja código y razonamiento a 15–25 tok/s. Usa Qwen3 1.7B si solo tienes 4 GB RAM o quieres la respuesta más rápida posible (25–40 tok/s) a costa de algo de calidad en tareas complejas.' },
-            { q: '¿Cómo verifico si tengo alguna GPU?', a: 'Ejecuta `nvidia-smi` en la terminal para GPUs NVIDIA discretas. Si devuelve "command not found", revisa `lspci` (Linux) o el Administrador de dispositivos (Windows) en busca de una iGPU Intel Iris Xe o AMD Radeon — estas pueden delegar algunas capas incluso sin soporte CUDA.' },
+            { q: '¿Cómo verifico si tengo alguna GPU?', a: 'Ejecuta `nvidia-smi` en la terminal para GPUs NVIDIA discretas. Si devuelve "command not found", revisa `lspci` (Linux) o el Administrador de dispositivos (Windows) en busca de una iGPU Intel Iris Xe o AMD Radeon — que Ollama pueda usarla depende del soporte de controladores y backend, así que confírmalo con `ollama ps`.' },
             { q: '¿Cómo afecta la cuantización a la velocidad de inferencia?', a: 'La cuantización reduce principalmente los requisitos de ancho de banda de memoria, no el cómputo. Un archivo Q2 (2 bits) es más pequeño que uno Q4 (4 bits), así que la CPU lee menos bytes por token y genera más rápido, aproximadamente en proporción al tamaño del archivo. Sin embargo, Q2 pierde mucha más calidad de salida. La regla práctica: usa Q4_K_M por defecto para todos los niveles de esta guía, baja a Q3 solo si Q4_K_M no cabe en la RAM disponible.' },
             { q: '¿Puedo usar cuantización por debajo de Q2?', a: 'Técnicamente sí (existen formatos IQ1 de 1 bit en llama.cpp), pero la calidad de salida se desploma con ese tamaño. No se recomienda para ningún caso de uso práctico, incluido el nivel de 4 GB RAM de esta guía — elige mejor un modelo más pequeño en Q4_K_M.' },
             { q: '¿Se admite la inferencia híbrida CPU + iGPU?', a: 'A veces. Ollama puede repartir un modelo entre CPU y GPU cuando encuentra un backend de GPU compatible, y `ollama ps` muestra el reparto en la columna PROCESSOR. Una iGPU comparte la RAM del sistema con la CPU, así que el ancho de banda de memoria — el principal límite de velocidad — no aumenta. En un sistema de 8 GB RAM con iGPU Intel Iris Xe, se estima que Qwen3 4B alcanza 12–20 tok/s si se usa la iGPU. Prueba con `OLLAMA_VULKAN=0` para comparar con solo CPU.' },
@@ -1055,7 +1055,7 @@ schema: {
             'name': '¿Cómo verifico si tengo alguna GPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ejecuta `nvidia-smi` en la terminal para GPUs NVIDIA discretas. Si devuelve "command not found", revisa `lspci` (Linux) o el Administrador de dispositivos (Windows) en busca de una iGPU Intel Iris Xe o AMD Radeon — estas pueden delegar algunas capas incluso sin soporte CUDA.',
+              'text': 'Ejecuta `nvidia-smi` en la terminal para GPUs NVIDIA discretas. Si devuelve "command not found", revisa `lspci` (Linux) o el Administrador de dispositivos (Windows) en busca de una iGPU Intel Iris Xe o AMD Radeon — que Ollama pueda usarla depende del soporte de controladores y backend, así que confírmalo con `ollama ps`.',
             },
           },
           {
@@ -1231,9 +1231,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '4 GB RAM, solo CPU', 'description': 'Qwen3 1.7B Q4_K_M. 25–40 tok/s. Respuesta más rápida en hardware mínimo. ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': '8 GB RAM, solo CPU — punto óptimo', 'description': 'Phi-4-mini 3.8B Q4_K_M. 15–25 tok/s. Código y razonamiento. ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': '8 GB RAM + iGPU Intel Iris', 'description': 'Qwen3 4B Q4_K_M. 12–20 tok/s con offload parcial de GPU. ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': '8 GB RAM + iGPU Intel Iris', 'description': 'Qwen3 4B Q4_K_M. Est. 12–20 tok/s si se usa la iGPU. ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': '16 GB RAM, solo CPU', 'description': 'Qwen3 8B Q4_K_M. 8–15 tok/s. Calidad sólida, sin necesidad de GPU. ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': '16 GB RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. 20–35 tok/s con offload de capas. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16 GB RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. Est. 20–35 tok/s si se usa la iGPU. ollama run llama3.2:3b' },
         ],
       },
     },
@@ -1255,7 +1255,7 @@ schema: {
         bullets: [
           '**4 جيجابايت رام، CPU فقط:** Qwen3 1.7B Q4_K_M — 25–40 tok/s على i5/Ryzen 5 حديث. `ollama run qwen3:1.7b`',
           '**8 جيجابايت رام، CPU فقط:** Phi-4-mini (3.8B) — 15–25 tok/s، يدعم البرمجة والاستدلال. `ollama run phi4-mini`',
-          '**8 جيجابايت رام + iGPU من Intel Iris:** Qwen3 4B — 12–20 tok/s مع تفويض جزئي. `ollama run qwen3:4b`',
+          '**8 جيجابايت رام + iGPU من Intel Iris:** Qwen3 4B — تقديري 12–20 tok/s إذا استُخدمت iGPU. `ollama run qwen3:4b`',
           '**16 جيجابايت رام، CPU فقط:** Qwen3 8B Q4_K_M — 8–15 tok/s، جودة قوية. `ollama run qwen3:8b`',
         ],
         footer: 'بالنسبة لمعظم الحواسيب منخفضة المواصفات، Phi-4-mini (3.8B) بصيغة Q4_K_M هو النقطة المثلى — يتناسب مع 8 جيجابايت رام، 15–25 tok/s على CPU. انتقل إلى Qwen3 1.7B لأسرع استجابة ممكنة.',
@@ -1367,7 +1367,7 @@ schema: {
           items: [
             '**نماذج 1B–3B:** تتناسب مع 4–8 GB RAM ← توليد أسرع ← جودة مقبولة',
             '**نماذج 7B:** ضيقة على أنظمة 8 GB ← أبطأ بسبب ضغط الذاكرة ← جودة عالية',
-            '**نماذج 13B+:** تتطلب 16+ GB VRAM أو تبادلاً ضخماً ← بطيئة جداً للاستخدام التفاعلي',
+            '**نماذج 13B+:** تتطلب 16+ GB رام أو تبادلاً ضخماً ← بطيئة جداً للاستخدام التفاعلي على الحواسيب منخفضة المواصفات',
           ],
         },
         'realistic-expectations': {
@@ -1494,7 +1494,7 @@ schema: {
             { q: 'هل يمكنني تشغيل نموذج من فئة 7B دون أي GPU على الإطلاق؟', a: 'نعم — يعمل Qwen3 8B بصيغة Q4_K_M بسرعة تقديرية 8–15 tok/s مع 16 جيجابايت رام، CPU فقط (تقدير لسطح مكتب ثنائي القناة من فئة Ryzen 7 7700X). إنه أبطأ من الخيارات الأصغر لكنه يقدّم جودة أفضل بشكل ملحوظ. مع 8 جيجابايت رام، التزم بـ Phi-4-mini (3.8B) بدلاً منه — يحتاج نموذج 8B بصيغة Q4_K_M هامشاً لا يضمنه نظام 8 جيجابايت بشكل موثوق دائماً.' },
             { q: 'هل استدلال CPU قابل للاستخدام لروبوتات الدردشة؟', a: 'نعم، للاستخدام التفاعلي إن اخترت الحجم الصحيح للنموذج. Phi-4-mini بسرعة 15–25 tok/s (8 جيجابايت رام) وQwen3 1.7B بسرعة 25–40 tok/s (4 جيجابايت رام) كلاهما سريع بما يكفي للدردشة الفورية. نموذج من فئة 7B على CPU (8–15 tok/s) أنسب للمهام الدفعية — الصياغة والتلخيص والمراجعة دون اتصال — من المحادثة الحية المتبادلة.' },
             { q: 'هل ينبغي أن أستخدم Phi-4-mini أم Qwen3 1.7B على عتاد CPU فقط؟', a: 'استخدم Phi-4-mini (3.8B) إن كان لديك 8 جيجابايت رام — يدعم البرمجة والاستدلال بسرعة 15–25 tok/s. استخدم Qwen3 1.7B إن كان لديك 4 جيجابايت رام فقط أو تريد أسرع استجابة ممكنة (25–40 tok/s) على حساب بعض الجودة في المهام المعقدة.' },
-            { q: 'كيف أتحقق إن كان لدي أي GPU على الإطلاق؟', a: 'شغّل `nvidia-smi` في الطرفية لوحدات NVIDIA المنفصلة. إن أعاد "command not found"، تحقق من `lspci` (على Linux) أو مدير الأجهزة (على Windows) بحثاً عن iGPU من نوع Intel Iris Xe أو AMD Radeon — يمكن لهذه أن تفوّض بعض الطبقات حتى دون دعم CUDA.' },
+            { q: 'كيف أتحقق إن كان لدي أي GPU على الإطلاق؟', a: 'شغّل `nvidia-smi` في الطرفية لوحدات NVIDIA المنفصلة. إن أعاد "command not found"، تحقق من `lspci` (على Linux) أو مدير الأجهزة (على Windows) بحثاً عن iGPU من نوع Intel Iris Xe أو AMD Radeon — تعتمد قدرة Ollama على استخدامها على دعم برنامج التشغيل والواجهة الخلفية (backend)، لذا تأكد عبر `ollama ps`.' },
             { q: 'كيف يؤثر التكميم على سرعة الاستدلال؟', a: 'يقلّل التكميم أساساً متطلبات عرض نطاق الذاكرة، لا الحوسبة. ملف Q2 (2 بت) أصغر من ملف Q4 (4 بت)، فيقرأ CPU بايتات أقل لكل رمز ويولّد أسرع، بنسبة تقارب نسبة حجم الملف. لكن Q2 يفقد جودة المخرجات أكثر بكثير. القاعدة العملية: استخدم Q4_K_M افتراضياً لكل مستوى في هذا الدليل، اخفض إلى Q3 فقط إن لم يتناسب Q4_K_M مع الرام المتاحة.' },
             { q: 'هل يمكنني استخدام تكميم دون Q2؟', a: 'تقنياً نعم (توجد صيغ IQ1 بدقة 1 بت في llama.cpp)، لكن جودة المخرجات تنهار عند هذا الحجم. غير موصى به لأي حالة استخدام عملية، بما في ذلك مستوى 4 جيجابايت رام في هذا الدليل — اختر نموذجاً أصغر بصيغة Q4_K_M بدلاً من ذلك.' },
             { q: 'هل الاستدلال الهجين CPU + iGPU مدعوم؟', a: 'أحياناً. يستطيع Ollama تقسيم النموذج بين CPU وGPU عندما يجد واجهة GPU خلفية مدعومة، ويعرض الأمر `ollama ps` هذا التقسيم في عمود PROCESSOR. تتشارك iGPU رام النظام مع CPU، لذا لا يزداد عرض نطاق الذاكرة — القيد الرئيسي للسرعة. على نظام 8 جيجابايت رام مع iGPU من Intel Iris Xe، يُقدَّر Qwen3 4B بسرعة 12–20 tok/s إذا استُخدمت iGPU. اختبر بالقيمة `OLLAMA_VULKAN=0` للمقارنة مع CPU فقط.' },
@@ -1614,7 +1614,7 @@ schema: {
             'name': 'كيف أتحقق إن كان لدي أي GPU على الإطلاق؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'شغّل `nvidia-smi` في الطرفية لوحدات NVIDIA المنفصلة. إن أعاد "command not found"، تحقق من `lspci` (على Linux) أو مدير الأجهزة (على Windows) بحثاً عن iGPU من نوع Intel Iris Xe أو AMD Radeon — يمكن لهذه أن تفوّض بعض الطبقات حتى دون دعم CUDA.',
+              'text': 'شغّل `nvidia-smi` في الطرفية لوحدات NVIDIA المنفصلة. إن أعاد "command not found"، تحقق من `lspci` (على Linux) أو مدير الأجهزة (على Windows) بحثاً عن iGPU من نوع Intel Iris Xe أو AMD Radeon — تعتمد قدرة Ollama على استخدامها على دعم برنامج التشغيل والواجهة الخلفية (backend)، لذا تأكد عبر `ollama ps`.',
             },
           },
           {
@@ -1791,9 +1791,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '4 جيجابايت رام، CPU فقط', 'description': 'Qwen3 1.7B Q4_K_M. 25–40 tok/s. أسرع استجابة على أقل عتاد. ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': '8 جيجابايت رام، CPU فقط — النقطة المثلى', 'description': 'Phi-4-mini 3.8B Q4_K_M. 15–25 tok/s. برمجة واستدلال. ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': '8 جيجابايت رام + iGPU من Intel Iris', 'description': 'Qwen3 4B Q4_K_M. 12–20 tok/s مع تفويض جزئي لـ GPU. ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': '8 جيجابايت رام + iGPU من Intel Iris', 'description': 'Qwen3 4B Q4_K_M. تقديري 12–20 tok/s إذا استُخدمت iGPU. ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': '16 جيجابايت رام، CPU فقط', 'description': 'Qwen3 8B Q4_K_M. 8–15 tok/s. جودة قوية، دون حاجة لـ GPU. ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': '16 جيجابايت رام + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. 20–35 tok/s مع تفويض الطبقات. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16 جيجابايت رام + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. تقديري 20–35 tok/s إذا استُخدمت iGPU. ollama run llama3.2:3b' },
         ],
       },
     },
@@ -1815,7 +1815,7 @@ schema: {
         bullets: [
           '**4 GB de RAM, somente CPU:** Qwen3 1.7B Q4_K_M — 25–40 tok/s em um i5/Ryzen 5 moderno. `ollama run qwen3:1.7b`',
           '**8 GB de RAM, somente CPU:** Phi-4-mini (3.8B) — 15–25 tok/s, dá conta de programação e raciocínio. `ollama run phi4-mini`',
-          '**8 GB de RAM + iGPU Intel Iris:** Qwen3 4B — 12–20 tok/s com offload parcial. `ollama run qwen3:4b`',
+          '**8 GB de RAM + iGPU Intel Iris:** Qwen3 4B — est. 12–20 tok/s se a iGPU for usada. `ollama run qwen3:4b`',
           '**16 GB de RAM, somente CPU:** Qwen3 8B Q4_K_M — 8–15 tok/s, qualidade sólida. `ollama run qwen3:8b`',
         ],
         footer: 'Para a maioria dos PCs de baixo custo, o Phi-4-mini (3.8B) em Q4_K_M é o ponto ideal — cabe em 8 GB de RAM, 15–25 tok/s na CPU. Baixe para o Qwen3 1.7B para a resposta mais rápida possível.',
@@ -1927,7 +1927,7 @@ schema: {
           items: [
             '**Modelos 1B–3B:** Cabem em 4–8 GB de RAM → geração mais rápida → qualidade aceitável',
             '**Modelos 7B:** No limite em sistemas de 8 GB → mais lentos por pressão de memória → alta qualidade',
-            '**Modelos 13B+:** Exigem 16+ GB de VRAM ou troca pesada de memória → lentos demais para uso interativo',
+            '**Modelos 13B+:** Exigem 16+ GB de RAM ou troca pesada de memória → lentos demais para uso interativo em PCs de baixo custo',
           ],
         },
         'realistic-expectations': {
@@ -2054,7 +2054,7 @@ schema: {
             { q: 'Posso rodar um modelo de classe 7B sem nenhuma GPU?', a: 'Sim — o Qwen3 8B em Q4_K_M roda a cerca de 8–15 tok/s (estimado) com 16 GB de RAM, somente CPU (estimativa para um desktop dual-channel da classe Ryzen 7 7700X). É mais lento que as opções menores, mas entrega qualidade bem melhor. Com 8 GB de RAM, prefira o Phi-4-mini (3.8B) — um modelo 8B em Q4_K_M precisa de uma margem que um sistema de 8 GB nem sempre garante.' },
             { q: 'A inferência em CPU é utilizável para chatbots?', a: 'Sim, para uso interativo, desde que você escolha o tamanho de modelo certo. O Phi-4-mini a 15–25 tok/s (8 GB de RAM) e o Qwen3 1.7B a 25–40 tok/s (4 GB de RAM) são rápidos o suficiente para chat em tempo real. Um modelo de classe 7B na CPU (8–15 tok/s) é mais adequado para tarefas em lote — redação, resumos, revisão offline — do que para conversa ao vivo.' },
             { q: 'Devo usar Phi-4-mini ou Qwen3 1.7B em hardware somente CPU?', a: 'Use o Phi-4-mini (3.8B) se tiver 8 GB de RAM — ele dá conta de programação e raciocínio a 15–25 tok/s. Use o Qwen3 1.7B se tiver apenas 4 GB de RAM ou quiser a resposta mais rápida possível (25–40 tok/s) ao custo de alguma qualidade em tarefas complexas.' },
-            { q: 'Como eu verifico se tenho alguma GPU?', a: 'Rode `nvidia-smi` no terminal para GPUs NVIDIA dedicadas. Se retornar "command not found", verifique `lspci` (Linux) ou o Gerenciador de Dispositivos (Windows) em busca de uma iGPU Intel Iris Xe ou AMD Radeon — elas ainda conseguem fazer offload de algumas camadas mesmo sem suporte a CUDA.' },
+            { q: 'Como eu verifico se tenho alguma GPU?', a: 'Rode `nvidia-smi` no terminal para GPUs NVIDIA dedicadas. Se retornar "command not found", verifique `lspci` (Linux) ou o Gerenciador de Dispositivos (Windows) em busca de uma iGPU Intel Iris Xe ou AMD Radeon — se o Ollama consegue usá-la depende do suporte de drivers e de backend, então confirme com `ollama ps`.' },
             { q: 'Como a quantização afeta a velocidade de inferência?', a: 'A quantização reduz principalmente os requisitos de banda de memória, não a computação. Um arquivo Q2 (2 bits) é menor que um Q4 (4 bits), então a CPU lê menos bytes por token e gera mais rápido, aproximadamente em proporção ao tamanho do arquivo. Porém, o Q2 perde muito mais qualidade na saída. A regra prática: use Q4_K_M como padrão para todos os níveis deste guia, baixe para Q3 apenas se Q4_K_M não couber na RAM disponível.' },
             { q: 'Posso usar quantização abaixo de Q2?', a: 'Tecnicamente sim (existem formatos IQ1 de 1 bit no llama.cpp), mas a qualidade da saída colapsa nesse tamanho. Não recomendado para nenhum caso de uso prático, incluindo o nível de 4 GB de RAM deste guia — escolha um modelo menor em Q4_K_M.' },
             { q: 'A inferência híbrida CPU + iGPU é suportada?', a: 'Às vezes. O Ollama pode dividir um modelo entre CPU e GPU quando encontra um backend de GPU suportado, e o `ollama ps` mostra a divisão na coluna PROCESSOR. Uma iGPU compartilha a RAM do sistema com a CPU, então a largura de banda da memória — o principal limite de velocidade — não aumenta. Em um sistema de 8 GB de RAM com iGPU Intel Iris Xe, a estimativa para o Qwen3 4B é de 12–20 tok/s se a iGPU for usada. Teste com `OLLAMA_VULKAN=0` para comparar com somente CPU.' },
@@ -2172,7 +2172,7 @@ schema: {
             'name': 'Como eu verifico se tenho alguma GPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Rode `nvidia-smi` no terminal para GPUs NVIDIA dedicadas. Se retornar "command not found", verifique `lspci` (Linux) ou o Gerenciador de Dispositivos (Windows) em busca de uma iGPU Intel Iris Xe ou AMD Radeon — elas ainda conseguem fazer offload de algumas camadas mesmo sem suporte a CUDA.',
+              'text': 'Rode `nvidia-smi` no terminal para GPUs NVIDIA dedicadas. Se retornar "command not found", verifique `lspci` (Linux) ou o Gerenciador de Dispositivos (Windows) em busca de uma iGPU Intel Iris Xe ou AMD Radeon — se o Ollama consegue usá-la depende do suporte de drivers e de backend, então confirme com `ollama ps`.',
             },
           },
           {
@@ -2348,9 +2348,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '4 GB de RAM, somente CPU', 'description': 'Qwen3 1.7B Q4_K_M. 25–40 tok/s. Resposta mais rápida em hardware mínimo. ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': '8 GB de RAM, somente CPU — ponto ideal', 'description': 'Phi-4-mini 3.8B Q4_K_M. 15–25 tok/s. Programação e raciocínio. ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': '8 GB de RAM + iGPU Intel Iris', 'description': 'Qwen3 4B Q4_K_M. 12–20 tok/s com offload parcial de GPU. ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': '8 GB de RAM + iGPU Intel Iris', 'description': 'Qwen3 4B Q4_K_M. Est. 12–20 tok/s se a iGPU for usada. ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': '16 GB de RAM, somente CPU', 'description': 'Qwen3 8B Q4_K_M. 8–15 tok/s. Qualidade sólida, sem precisar de GPU. ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': '16 GB de RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. 20–35 tok/s com offload de camadas. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16 GB de RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. Est. 20–35 tok/s se a iGPU for usada. ollama run llama3.2:3b' },
         ],
       },
     },
@@ -2372,7 +2372,7 @@ schema: {
         bullets: [
           '**4 GB RAM, nur CPU:** Qwen3 1.7B Q4_K_M — 25–40 Tok/s auf einem modernen i5/Ryzen 5. `ollama run qwen3:1.7b`',
           '**8 GB RAM, nur CPU:** Phi-4-mini (3.8B) — 15–25 Tok/s, übernimmt Coding und Reasoning. `ollama run phi4-mini`',
-          '**8 GB RAM + Intel-Iris-iGPU:** Qwen3 4B — 12–20 Tok/s mit partiellem Offload. `ollama run qwen3:4b`',
+          '**8 GB RAM + Intel-Iris-iGPU:** Qwen3 4B — geschätzt 12–20 Tok/s, wenn die iGPU genutzt wird. `ollama run qwen3:4b`',
           '**16 GB RAM, nur CPU:** Qwen3 8B Q4_K_M — 8–15 Tok/s, starke Qualität. `ollama run qwen3:8b`',
         ],
         footer: 'Für die meisten Low-End-PCs ist Phi-4-mini (3.8B) bei Q4_K_M der Sweet Spot — passt in 8 GB RAM, 15–25 Tok/s auf CPU. Wechseln Sie zu Qwen3 1.7B für die schnellstmögliche Antwort.',
@@ -2484,7 +2484,7 @@ schema: {
           items: [
             '**1B–3B-Modelle:** Passen in 4–8 GB RAM → schnellste Generierung → akzeptable Qualität',
             '**7B-Modelle:** Grenzwertig auf 8-GB-Systemen → langsamer durch Speicherdruck → hohe Qualität',
-            '**13B+-Modelle:** Benötigen 16+ GB VRAM oder Swap → zu langsam für interaktive Nutzung',
+            '**13B+-Modelle:** Benötigen 16+ GB RAM oder Swap → zu langsam für interaktive Nutzung auf Low-End-PCs',
           ],
         },
         'realistic-expectations': {
@@ -2611,7 +2611,7 @@ schema: {
             { q: 'Kann ich ein 7B-Modell ganz ohne GPU ausführen?', a: 'Ja — Qwen3 8B bei Q4_K_M läuft mit geschätzt 8–15 Tok/s bei 16 GB RAM, nur CPU (Schätzung für einen Desktop der Klasse Ryzen 7 7700X mit Dual-Channel-RAM). Es ist langsamer als die kleineren Optionen, liefert aber deutlich bessere Qualität. Bei 8 GB RAM bleiben Sie besser bei Phi-4-mini (3.8B) — ein 8B-Modell bei Q4_K_M braucht Spielraum, den ein 8-GB-System nicht zuverlässig garantiert.' },
             { q: 'Ist CPU-Inferenz für Chatbots nutzbar?', a: 'Ja, für interaktive Nutzung, wenn Sie die richtige Modellgröße wählen. Phi-4-mini mit 15–25 Tok/s (8 GB RAM) und Qwen3 1.7B mit 25–40 Tok/s (4 GB RAM) sind beide schnell genug für Echtzeit-Chat. Ein 7B-Modell auf CPU (8–15 Tok/s) eignet sich besser für Batch-Aufgaben — Entwürfe, Zusammenfassungen, Offline-Review — als für Live-Konversation.' },
             { q: 'Soll ich Phi-4-mini oder Qwen3 1.7B auf reiner CPU-Hardware verwenden?', a: 'Verwenden Sie Phi-4-mini (3.8B), wenn Sie 8 GB RAM haben — es übernimmt Coding und Reasoning mit 15–25 Tok/s. Verwenden Sie Qwen3 1.7B, wenn Sie nur 4 GB RAM haben oder die schnellstmögliche Antwort wollen (25–40 Tok/s) — auf Kosten etwas Qualität bei komplexen Aufgaben.' },
-            { q: 'Wie prüfe ich, ob ich überhaupt eine GPU habe?', a: 'Führen Sie `nvidia-smi` im Terminal für dedizierte NVIDIA-GPUs aus. Erscheint „command not found", prüfen Sie `lspci` (Linux) oder den Geräte-Manager (Windows) auf eine Intel-Iris-Xe- oder AMD-Radeon-iGPU — diese können auch ohne CUDA-Unterstützung einige Layer auslagern.' },
+            { q: 'Wie prüfe ich, ob ich überhaupt eine GPU habe?', a: 'Führen Sie `nvidia-smi` im Terminal für dedizierte NVIDIA-GPUs aus. Erscheint „command not found", prüfen Sie `lspci` (Linux) oder den Geräte-Manager (Windows) auf eine Intel-Iris-Xe- oder AMD-Radeon-iGPU — ob Ollama sie nutzen kann, hängt von der Treiber- und Backend-Unterstützung ab; bestätigen Sie es daher mit `ollama ps`.' },
             { q: 'Wie beeinflusst Quantisierung die Inferenzgeschwindigkeit?', a: 'Quantisierung reduziert primär den Speicherbandbreitenbedarf, nicht die Berechnung. Eine Q2-Datei (2-Bit) ist kleiner als eine Q4-Datei (4-Bit); die CPU liest daher pro Token weniger Bytes und generiert schneller, etwa im Verhältnis der Dateigröße. Q2 verliert jedoch deutlich mehr Ausgabequalität. Die praktische Regel: Verwenden Sie Q4_K_M als Standard für jede Stufe in diesem Leitfaden, wechseln Sie zu Q3 nur, wenn Q4_K_M nicht in den verfügbaren RAM passt.' },
             { q: 'Kann ich unter Q2 quantisieren?', a: 'Technisch ja (1-Bit-IQ1-Formate gibt es in llama.cpp), aber die Ausgabequalität bricht bei dieser Größe zusammen. Für keinen praktischen Anwendungsfall empfohlen, auch nicht für die 4-GB-RAM-Stufe in diesem Leitfaden — wählen Sie stattdessen ein kleineres Modell bei Q4_K_M.' },
             { q: 'Wird CPU + iGPU-Hybrid-Inferenz unterstützt?', a: 'Manchmal. Ollama kann ein Modell zwischen CPU und GPU aufteilen, wenn es ein unterstütztes GPU-Backend findet, und `ollama ps` zeigt die Aufteilung in der Spalte PROCESSOR. Eine iGPU teilt sich den Systemspeicher mit der CPU, sodass die Speicherbandbreite — die wichtigste Geschwindigkeitsgrenze — nicht steigt. Auf einem 8-GB-RAM-System mit Intel-Iris-Xe-iGPU wird Qwen3 4B auf geschätzt 12–20 Tok/s taxiert, wenn die iGPU genutzt wird. Testen Sie mit `OLLAMA_VULKAN=0`, um mit reiner CPU zu vergleichen.' },
@@ -2731,7 +2731,7 @@ schema: {
             'name': 'Wie prüfe ich, ob ich überhaupt eine GPU habe?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Führen Sie `nvidia-smi` im Terminal für dedizierte NVIDIA-GPUs aus. Erscheint „command not found", prüfen Sie `lspci` (Linux) oder den Geräte-Manager (Windows) auf eine Intel-Iris-Xe- oder AMD-Radeon-iGPU — diese können auch ohne CUDA-Unterstützung einige Layer auslagern.',
+              'text': 'Führen Sie `nvidia-smi` im Terminal für dedizierte NVIDIA-GPUs aus. Erscheint „command not found", prüfen Sie `lspci` (Linux) oder den Geräte-Manager (Windows) auf eine Intel-Iris-Xe- oder AMD-Radeon-iGPU — ob Ollama sie nutzen kann, hängt von der Treiber- und Backend-Unterstützung ab; bestätigen Sie es daher mit `ollama ps`.',
             },
           },
           {
@@ -2923,9 +2923,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '4 GB RAM, nur CPU', 'description': 'Qwen3 1.7B Q4_K_M. 25–40 Tok/s. Schnellste Antwort auf minimaler Hardware. ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': '8 GB RAM, nur CPU — Sweet Spot', 'description': 'Phi-4-mini 3.8B Q4_K_M. 15–25 Tok/s. Coding und Reasoning. ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': '8 GB RAM + Intel-Iris-iGPU', 'description': 'Qwen3 4B Q4_K_M. 12–20 Tok/s mit partiellem GPU-Offload. ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': '8 GB RAM + Intel-Iris-iGPU', 'description': 'Qwen3 4B Q4_K_M. Geschätzt 12–20 Tok/s, wenn die iGPU genutzt wird. ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': '16 GB RAM, nur CPU', 'description': 'Qwen3 8B Q4_K_M. 8–15 Tok/s. Starke Qualität, keine GPU nötig. ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': '16 GB RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. 20–35 Tok/s mit Layer-Offload. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16 GB RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. Geschätzt 20–35 Tok/s, wenn die iGPU genutzt wird. ollama run llama3.2:3b' },
         ],
       },
     },
@@ -2947,7 +2947,7 @@ schema: {
         bullets: [
           '**4 Go de RAM, CPU seul :** Qwen3 1.7B Q4_K_M — 25–40 tok/s sur un i5/Ryzen 5 récent. `ollama run qwen3:1.7b`',
           '**8 Go de RAM, CPU seul :** Phi-4-mini (3.8B) — 15–25 tok/s, gère le code et le raisonnement. `ollama run phi4-mini`',
-          '**8 Go de RAM + iGPU Intel Iris :** Qwen3 4B — 12–20 tok/s avec offload partiel. `ollama run qwen3:4b`',
+          '**8 Go de RAM + iGPU Intel Iris :** Qwen3 4B — est. 12–20 tok/s si l\'iGPU est utilisé. `ollama run qwen3:4b`',
           '**16 Go de RAM, CPU seul :** Qwen3 8B Q4_K_M — 8–15 tok/s, qualité solide. `ollama run qwen3:8b`',
         ],
         footer: 'Pour la plupart des PC bas de gamme, Phi-4-mini (3.8B) en Q4_K_M est le sweet spot — tient dans 8 Go de RAM, 15–25 tok/s sur CPU. Passez à Qwen3 1.7B pour la réponse la plus rapide possible.',
@@ -3059,7 +3059,7 @@ schema: {
           items: [
             '**Modèles 1B–3B :** Tiennent en 4–8 Go RAM → génération la plus rapide → qualité acceptable',
             '**Modèles 7B :** À la limite sur systèmes 8 Go → plus lents par pression mémoire → qualité élevée',
-            '**Modèles 13B+ :** Nécessitent 16+ Go VRAM ou swap massif → trop lents pour un usage interactif',
+            '**Modèles 13B+ :** Nécessitent 16+ Go de RAM ou un swap massif → trop lents pour un usage interactif sur PC bas de gamme',
           ],
         },
         'realistic-expectations': {
@@ -3186,7 +3186,7 @@ schema: {
             { q: 'Puis-je faire tourner un modèle de classe 7B sans aucun GPU ?', a: 'Oui — Qwen3 8B en Q4_K_M tourne à 8–15 tok/s estimés avec 16 Go de RAM, CPU seul (estimation pour un poste de bureau double canal de classe Ryzen 7 7700X). C\'est plus lent que les options plus petites mais offre une qualité nettement meilleure. Avec 8 Go de RAM, préférez plutôt Phi-4-mini (3.8B) — un modèle 8B en Q4_K_M a besoin d\'une marge qu\'un système 8 Go ne garantit pas toujours de façon fiable.' },
             { q: 'L\'inférence CPU est-elle utilisable pour les chatbots ?', a: 'Oui, pour un usage interactif si vous choisissez la bonne taille de modèle. Phi-4-mini à 15–25 tok/s (8 Go de RAM) et Qwen3 1.7B à 25–40 tok/s (4 Go de RAM) sont tous deux assez rapides pour le chat en temps réel. Un modèle de classe 7B sur CPU (8–15 tok/s) convient mieux aux tâches par lots — rédaction, résumés, révision hors ligne — qu\'à la conversation en direct.' },
             { q: 'Dois-je utiliser Phi-4-mini ou Qwen3 1.7B sur du matériel CPU seul ?', a: 'Utilisez Phi-4-mini (3.8B) si vous avez 8 Go de RAM — il gère le code et le raisonnement à 15–25 tok/s. Utilisez Qwen3 1.7B si vous n\'avez que 4 Go de RAM ou voulez la réponse la plus rapide possible (25–40 tok/s) au prix d\'un peu de qualité sur les tâches complexes.' },
-            { q: 'Comment vérifier si j\'ai un GPU quelconque ?', a: 'Exécutez `nvidia-smi` dans le terminal pour les GPU NVIDIA dédiés. Si la réponse est « command not found », vérifiez `lspci` (Linux) ou le Gestionnaire de périphériques (Windows) pour une iGPU Intel Iris Xe ou AMD Radeon — celles-ci peuvent décharger certaines couches même sans support CUDA.' },
+            { q: 'Comment vérifier si j\'ai un GPU quelconque ?', a: 'Exécutez `nvidia-smi` dans le terminal pour les GPU NVIDIA dédiés. Si la réponse est « command not found », vérifiez `lspci` (Linux) ou le Gestionnaire de périphériques (Windows) pour une iGPU Intel Iris Xe ou AMD Radeon — la capacité d\'Ollama à l\'utiliser dépend du support des pilotes et du backend ; confirmez-le avec `ollama ps`.' },
             { q: 'Comment la quantification affecte-t-elle la vitesse d\'inférence ?', a: 'La quantification réduit principalement les besoins en bande passante mémoire, pas le calcul. Un fichier Q2 (2 bits) est plus petit qu\'un fichier Q4 (4 bits) : le CPU lit donc moins d\'octets par token et génère plus vite, à peu près en proportion de la taille du fichier. Cependant, Q2 perd beaucoup plus en qualité de sortie. Règle pratique : utilisez Q4_K_M par défaut pour chaque niveau de ce guide, ne descendez à Q3 que si Q4_K_M ne tient pas dans la RAM disponible.' },
             { q: 'Puis-je quantifier en dessous de Q2 ?', a: 'Techniquement oui (des formats IQ1 à 1 bit existent dans llama.cpp), mais la qualité de sortie s\'effondre à cette taille. Non recommandé pour aucun cas d\'usage pratique, y compris le niveau 4 Go de RAM de ce guide — choisissez plutôt un modèle plus petit en Q4_K_M.' },
             { q: 'L\'inférence hybride CPU + iGPU est-elle supportée ?', a: 'Parfois. Ollama peut répartir un modèle entre CPU et GPU lorsqu\'il trouve un backend GPU pris en charge, et `ollama ps` affiche la répartition dans sa colonne PROCESSOR. Une iGPU partage la RAM système avec le CPU : la bande passante mémoire, principale limite de vitesse, n\'augmente donc pas. Sur un système 8 Go de RAM avec iGPU Intel Iris Xe, Qwen3 4B est estimé à 12–20 tok/s si l\'iGPU est utilisée. Testez avec `OLLAMA_VULKAN=0` pour comparer avec le CPU seul.' },
@@ -3304,7 +3304,7 @@ schema: {
             'name': 'Comment vérifier si j\'ai un GPU quelconque ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Exécutez `nvidia-smi` dans le terminal pour les GPU NVIDIA dédiés. Si la réponse est « command not found », vérifiez `lspci` (Linux) ou le Gestionnaire de périphériques (Windows) pour une iGPU Intel Iris Xe ou AMD Radeon — celles-ci peuvent décharger certaines couches même sans support CUDA.',
+              'text': 'Exécutez `nvidia-smi` dans le terminal pour les GPU NVIDIA dédiés. Si la réponse est « command not found », vérifiez `lspci` (Linux) ou le Gestionnaire de périphériques (Windows) pour une iGPU Intel Iris Xe ou AMD Radeon — la capacité d\'Ollama à l\'utiliser dépend du support des pilotes et du backend ; confirmez-le avec `ollama ps`.',
             },
           },
           {
@@ -3480,9 +3480,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '4 Go RAM, CPU seul', 'description': 'Qwen3 1.7B Q4_K_M. 25–40 tok/s. Réponse la plus rapide sur matériel minimal. ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': '8 Go RAM, CPU seul — sweet spot', 'description': 'Phi-4-mini 3.8B Q4_K_M. 15–25 tok/s. Code et raisonnement. ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': '8 Go RAM + iGPU Intel Iris', 'description': 'Qwen3 4B Q4_K_M. 12–20 tok/s avec offload GPU partiel. ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': '8 Go RAM + iGPU Intel Iris', 'description': 'Qwen3 4B Q4_K_M. Est. 12–20 tok/s si l\'iGPU est utilisé. ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': '16 Go RAM, CPU seul', 'description': 'Qwen3 8B Q4_K_M. 8–15 tok/s. Qualité solide, sans besoin de GPU. ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': '16 Go RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. 20–35 tok/s avec offload de couches. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16 Go RAM + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. Est. 20–35 tok/s si l\'iGPU est utilisé. ollama run llama3.2:3b' },
         ],
       },
     },
@@ -3504,7 +3504,7 @@ schema: {
         bullets: [
           '**RAM 4 GB、CPU専用：** Qwen3 1.7B Q4_K_M — 最新のi5/Ryzen 5で25〜40トークン/秒。`ollama run qwen3:1.7b`',
           '**RAM 8 GB、CPU専用：** Phi-4-mini（3.8B）— 15〜25トークン/秒、コーディングと推論に対応。`ollama run phi4-mini`',
-          '**RAM 8 GB + Intel Iris iGPU：** Qwen3 4B — 部分オフロードで12〜20トークン/秒。`ollama run qwen3:4b`',
+          '**RAM 8 GB + Intel Iris iGPU：** Qwen3 4B — iGPUが使われる場合、推定12〜20トークン/秒。`ollama run qwen3:4b`',
           '**RAM 16 GB、CPU専用：** Qwen3 8B Q4_K_M — 8〜15トークン/秒、高い品質。`ollama run qwen3:8b`',
         ],
         footer: 'ほとんどの低スペックPCでは、Phi-4-mini（3.8B）のQ4_K_Mがスイートスポットです — RAM 8GBに収まり、CPUで15〜25トークン/秒。最速の応答が欲しい場合はQwen3 1.7Bに切り替えてください。',
@@ -3616,7 +3616,7 @@ schema: {
           items: [
             '**1B〜3Bモデル：** 4〜8GB RAMに収まる → 最速生成 → 品質許容範囲',
             '**7Bモデル：** 8GBシステムでギリギリ → メモリプレッシャーで低速 → 高品質',
-            '**13B+モデル：** 16GB+ VRAMまたはスワップが必要 → インタラクティブ使用には遅すぎる',
+            '**13B+モデル：** 16GB+のRAMが必要、またはスワップが多発 → 低スペックPCでのインタラクティブ使用には遅すぎる',
           ],
         },
         'realistic-expectations': {
@@ -3743,7 +3743,7 @@ schema: {
             { q: 'GPUなしで7Bクラスのモデルを実行できますか？', a: 'はい — Qwen3 8B（Q4_K_M）はRAM 16 GB、CPU専用で推定8〜15トークン/秒で動作します（デュアルチャネルのRyzen 7 7700X級デスクトップでの推定値）。より小さいモデルより遅いですが、品質は明らかに優れています。RAM 8 GBの場合はPhi-4-mini（3.8B）を使用してください — 8Bモデル（Q4_K_M）は8 GBシステムでは確実に確保できない余裕を必要とします。' },
             { q: 'CPU推論はチャットボットに使用できますか？', a: 'はい、適切なモデルサイズを選べばインタラクティブ用途にも使えます。Phi-4-mini（15〜25トークン/秒、RAM 8 GB）とQwen3 1.7B（25〜40トークン/秒、RAM 4 GB）はどちらもリアルタイムチャットに十分な速度です。CPU上の7Bクラスモデル（8〜15トークン/秒）はライブの会話よりも、下書き、要約、オフラインレビューなどのバッチタスクに向いています。' },
             { q: 'CPU専用ハードウェアではPhi-4-miniとQwen3 1.7Bのどちらを使うべきですか？', a: 'RAM 8 GBがあればPhi-4-mini（3.8B）を使用 — コーディングと推論を15〜25トークン/秒で処理します。RAM 4 GBしかない、または最速の応答（25〜40トークン/秒）を優先する場合はQwen3 1.7Bを使用 — ただし複雑なタスクでは品質が多少犠牲になります。' },
-            { q: 'GPUがあるかどうかはどう確認しますか？', a: 'NVIDIA専用GPUの場合はターミナルで`nvidia-smi`を実行。「command not found」が返る場合は、`lspci`（Linux）またはデバイスマネージャー（Windows）でIntel Iris XeまたはAMD RadeonのiGPUを確認してください — CUDA非対応でも一部のレイヤーをオフロードできます。' },
+            { q: 'GPUがあるかどうかはどう確認しますか？', a: 'NVIDIA専用GPUの場合はターミナルで`nvidia-smi`を実行。「command not found」が返る場合は、`lspci`（Linux）またはデバイスマネージャー（Windows）でIntel Iris XeまたはAMD RadeonのiGPUを確認してください — OllamaがiGPUを使えるかどうかはドライバーとバックエンドの対応状況によるため、`ollama ps`で確認してください。' },
             { q: '量子化は推論速度にどう影響しますか？', a: '量子化は主に計算ではなくメモリ帯域幅要件を削減します。Q2（2ビット）のファイルはQ4（4ビット）より小さいため、CPUがトークンごとに読み出すバイト数が減り、ファイルサイズにほぼ比例して高速に生成できます。ただしQ2は出力品質の低下がはるかに大きくなります。実用的なルール：本ガイドのすべての階層でデフォルトはQ4_K_M、RAMに収まらない場合のみQ3に切り替え。' },
             { q: 'Q2以下の量子化は可能ですか？', a: '技術的には可能です（llama.cppには1ビットのIQ1形式があります）が、そのサイズでは出力品質が崩壊します。本ガイドのRAM 4GB階層を含め、実用的なユースケースには推奨しません — 代わりにQ4_K_Mのより小さいモデルを選んでください。' },
             { q: 'CPU + iGPUハイブリッド推論はサポートされていますか？', a: '場合によります。OllamaはサポートされるGPUバックエンドを見つけると、モデルをCPUとGPUに分割できます。分割の状況は`ollama ps`のPROCESSOR列で確認できます。iGPUはCPUとシステムRAMを共有するため、主な速度の制約であるメモリ帯域幅は増えません。Intel Iris Xe iGPU搭載のRAM 8GBシステムでは、iGPUが使われる場合のQwen3 4Bは推定12〜20トークン/秒です。`OLLAMA_VULKAN=0`でテストして、CPU専用と比較してください。' },
@@ -3861,7 +3861,7 @@ schema: {
             'name': 'GPUがあるかどうかはどう確認しますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'NVIDIA専用GPUの場合はターミナルで`nvidia-smi`を実行。「command not found」が返る場合は、`lspci`（Linux）またはデバイスマネージャー（Windows）でIntel Iris XeまたはAMD RadeonのiGPUを確認してください — CUDA非対応でも一部のレイヤーをオフロードできます。',
+              'text': 'NVIDIA専用GPUの場合はターミナルで`nvidia-smi`を実行。「command not found」が返る場合は、`lspci`（Linux）またはデバイスマネージャー（Windows）でIntel Iris XeまたはAMD RadeonのiGPUを確認してください — OllamaがiGPUを使えるかどうかはドライバーとバックエンドの対応状況によるため、`ollama ps`で確認してください。',
             },
           },
           {
@@ -3965,7 +3965,7 @@ schema: {
             'name': 'ローカルAIモデルとローカルLLMは同じものですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '本ガイドでは同じ意味で使っています。「ローカルAIモデル」は、業界がローカルLLM(大規模言語モデル)と呼ぶもの — 一度ダウンロードして自分のマシン上でオフラインで実行するテキスト生成の重み — を指す日常的な言い方です。この区別が重要になるのは、AIモデルがテキストベースでない場合のみです。Stable Diffusionのような画像生成モデルやWhisperのような音声モデルもローカルで動作しますが、ハードウェア要件が異なり、本ガイドのトークン/秒の数値はいずれも当てはまりません。',
+              'text': '本ガイドでは同じ意味で使っています。「ローカルAIモデル」は、業界がローカルLLM（大規模言語モデル）と呼ぶもの — 一度ダウンロードして自分のマシン上でオフラインで実行するテキスト生成の重み — を指す日常的な言い方です。この区別が重要になるのは、AIモデルがテキストベースでない場合のみです。Stable Diffusionのような画像生成モデルやWhisperのような音声モデルもローカルで動作しますが、ハードウェア要件が異なり、本ガイドのトークン/秒の数値はいずれも当てはまりません。',
             },
           },
           {
@@ -3973,7 +3973,7 @@ schema: {
             'name': '実用的な文章を書ける最も軽量なローカルLLMは何ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q4_K_MのQwen3 1.7Bが、本ガイドで使う価値のある最軽量モデルです — Ollamaではディスク上で1.4GB、4GBのRAMで動作し、CPU専用で推定25〜40トークン/秒。さらに小さい選択肢(TinyLlama 1.1B、Qwen3 0.6B)も存在し速度はより速いですが、出力品質が大きく落ちるため、文章作成アシスタントというよりオートコンプリートとして扱う方が適切です。おおよそ10億パラメータを下回ると、軽量モデルは長文で安定した一貫性のあるテキストを生成できません。',
+              'text': 'Q4_K_MのQwen3 1.7Bが、本ガイドで使う価値のある最軽量モデルです — Ollamaではディスク上で1.4GB、4GBのRAMで動作し、CPU専用で推定25〜40トークン/秒。さらに小さい選択肢（TinyLlama 1.1B、Qwen3 0.6B）も存在し速度はより速いですが、出力品質が大きく落ちるため、文章作成アシスタントというよりオートコンプリートとして扱う方が適切です。おおよそ10億パラメータを下回ると、軽量モデルは長文で安定した一貫性のあるテキストを生成できません。',
             },
           },
           {
@@ -4037,9 +4037,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'RAM 4 GB、CPU専用', 'description': 'Qwen3 1.7B Q4_K_M。25〜40トークン/秒。最小ハードウェアで最速の応答。ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'RAM 8 GB、CPU専用 — スイートスポット', 'description': 'Phi-4-mini 3.8B Q4_K_M。15〜25トークン/秒。コーディングと推論。ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'RAM 8 GB + Intel Iris iGPU', 'description': 'Qwen3 4B Q4_K_M。部分GPUオフロードで12〜20トークン/秒。ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'RAM 8 GB + Intel Iris iGPU', 'description': 'Qwen3 4B Q4_K_M。iGPUが使われる場合、推定12〜20トークン/秒。ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'RAM 16 GB、CPU専用', 'description': 'Qwen3 8B Q4_K_M。8〜15トークン/秒。GPU不要で高い品質。ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'RAM 16 GB + iGPU', 'description': 'Llama 3.2 3B Q4_K_M。レイヤーオフロードで20〜35トークン/秒。ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'RAM 16 GB + iGPU', 'description': 'Llama 3.2 3B Q4_K_M。iGPUが使われる場合、推定20〜35トークン/秒。ollama run llama3.2:3b' },
         ],
       },
     },
@@ -4061,7 +4061,7 @@ schema: {
         bullets: [
           '**4GB内存，纯CPU：** Qwen3 1.7B Q4_K_M——现代i5/Ryzen 5上25–40 tok/s。`ollama run qwen3:1.7b`',
           '**8GB内存，纯CPU：** Phi-4-mini（3.8B）——15–25 tok/s，可处理编程和推理。`ollama run phi4-mini`',
-          '**8GB内存 + Intel Iris核显：** Qwen3 4B——部分卸载下12–20 tok/s。`ollama run qwen3:4b`',
+          '**8GB内存 + Intel Iris核显：** Qwen3 4B——若核显被启用，估算12–20 tok/s。`ollama run qwen3:4b`',
           '**16GB内存，纯CPU：** Qwen3 8B Q4_K_M——8–15 tok/s，质量出色。`ollama run qwen3:8b`',
         ],
         footer: '对大多数低配电脑而言，Phi-4-mini（3.8B）配Q4_K_M是最佳选择——适合8GB内存，CPU上15–25 tok/s。想要最快响应可切换至Qwen3 1.7B。',
@@ -4173,7 +4173,7 @@ schema: {
           items: [
             '**1B-3B模型：** 适合4-8GB RAM → 生成最快 → 质量可接受',
             '**7B模型：** 在8GB系统上处于临界 → 因内存压力而较慢 → 质量高',
-            '**13B+模型：** 需要16GB+ VRAM或大量内存交换 → 交互式使用速度过慢',
+            '**13B+模型：** 需要16GB+内存或大量内存交换 → 在低配电脑上交互式使用速度过慢',
           ],
         },
         'realistic-expectations': {
@@ -4300,7 +4300,7 @@ schema: {
             { q: '我可以在完全没有GPU的情况下运行7B级模型吗？', a: '可以——Qwen3 8B（Q4_K_M）在16GB内存、纯CPU下估算可达8–15 tok/s（为双通道Ryzen 7 7700X级别台式机的估算值）。它比更小的选项慢，但质量明显更好。若只有8GB内存，建议改用Phi-4-mini（3.8B）——8B模型在Q4_K_M下需要的余量，8GB系统未必能可靠保证。' },
             { q: 'CPU推理适合聊天机器人吗？', a: '只要选对模型大小，适合交互式使用。Phi-4-mini（15–25 tok/s，8GB内存）和Qwen3 1.7B（25–40 tok/s，4GB内存）都足够快，可用于实时聊天。CPU上的7B级模型（8–15 tok/s）更适合起草、摘要、离线审阅等批处理任务，而非实时对话。' },
             { q: '在纯CPU硬件上应该使用Phi-4-mini还是Qwen3 1.7B？', a: '如果有8GB内存，使用Phi-4-mini（3.8B）——它以15–25 tok/s处理编程和推理。如果只有4GB内存，或想要最快的响应速度（25–40 tok/s），可以使用Qwen3 1.7B，但在复杂任务上质量会有所牺牲。' },
-            { q: '如何检查我是否有任何GPU？', a: '对于独立NVIDIA显卡，在终端运行`nvidia-smi`。如果返回"command not found"，请检查`lspci`（Linux）或设备管理器（Windows）是否有Intel Iris Xe或AMD Radeon核显——即使没有CUDA支持，这些核显仍可卸载部分层。' },
+            { q: '如何检查我是否有任何GPU？', a: '对于独立NVIDIA显卡，在终端运行`nvidia-smi`。如果返回"command not found"，请检查`lspci`（Linux）或设备管理器（Windows）是否有Intel Iris Xe或AMD Radeon核显——Ollama能否使用核显取决于驱动和后端支持，请用`ollama ps`确认。' },
             { q: '量化如何影响推理速度？', a: '量化主要减少内存带宽需求，而非计算量。Q2（2位）文件比Q4（4位）文件更小，CPU生成每个词元读取的字节更少，因此速度更快，大致与文件大小成比例。但Q2的输出质量损失要大得多。实用规则：本指南中每个层级都默认使用Q4_K_M，只有在Q4_K_M无法放入可用内存时才降至Q3。' },
             { q: '我可以使用Q2以下的量化吗？', a: '技术上可以（llama.cpp中存在1位的IQ1格式），但在这种体积下输出质量会崩溃。包括本指南的4GB内存层级在内，不建议用于任何实际场景——请改用更小的Q4_K_M模型。' },
             { q: '支持CPU + 核显混合推理吗？', a: '有时可以。当Ollama找到受支持的GPU后端时，可以在CPU和GPU之间拆分模型，`ollama ps`的PROCESSOR列会显示拆分情况。核显与CPU共用系统内存，因此主要的速度限制——内存带宽——并不会增加。在配备Intel Iris Xe核显的8GB内存系统上，若使用核显，Qwen3 4B估算为12–20 tok/s。可用`OLLAMA_VULKAN=0`与纯CPU对比测试。' },
@@ -4418,7 +4418,7 @@ schema: {
             'name': '如何检查我是否有任何GPU？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '对于独立NVIDIA显卡，在终端运行`nvidia-smi`。如果返回"command not found"，请检查`lspci`（Linux）或设备管理器（Windows）是否有Intel Iris Xe或AMD Radeon核显——即使没有CUDA支持，这些核显仍可卸载部分层。',
+              'text': '对于独立NVIDIA显卡，在终端运行`nvidia-smi`。如果返回"command not found"，请检查`lspci`（Linux）或设备管理器（Windows）是否有Intel Iris Xe或AMD Radeon核显——Ollama能否使用核显取决于驱动和后端支持，请用`ollama ps`确认。',
             },
           },
           {
@@ -4594,9 +4594,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '4GB内存，纯CPU', 'description': 'Qwen3 1.7B Q4_K_M。25–40 tok/s。最低硬件下最快响应。ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': '8GB内存，纯CPU——最佳选择', 'description': 'Phi-4-mini 3.8B Q4_K_M。15–25 tok/s。编程和推理。ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': '8GB内存 + Intel Iris核显', 'description': 'Qwen3 4B Q4_K_M。部分GPU卸载下12–20 tok/s。ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': '8GB内存 + Intel Iris核显', 'description': 'Qwen3 4B Q4_K_M。若核显被启用，估算12–20 tok/s。ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': '16GB内存，纯CPU', 'description': 'Qwen3 8B Q4_K_M。8–15 tok/s。质量出色，无需GPU。ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': '16GB内存 + 核显', 'description': 'Llama 3.2 3B Q4_K_M。层卸载下20–35 tok/s。ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16GB内存 + 核显', 'description': 'Llama 3.2 3B Q4_K_M。若核显被启用，估算20–35 tok/s。ollama run llama3.2:3b' },
         ],
       },
     },
@@ -4618,7 +4618,7 @@ schema: {
         bullets: [
           '**RAM 4 GB, CPU 전용:** Qwen3 1.7B Q4_K_M — 최신 i5/Ryzen 5에서 초당 25–40 토큰. `ollama run qwen3:1.7b`',
           '**RAM 8 GB, CPU 전용:** Phi-4-mini (3.8B) — 초당 15–25 토큰, 코딩과 추론 처리. `ollama run phi4-mini`',
-          '**RAM 8 GB + Intel Iris iGPU:** Qwen3 4B — 부분 오프로드로 초당 12–20 토큰. `ollama run qwen3:4b`',
+          '**RAM 8 GB + Intel Iris iGPU:** Qwen3 4B — iGPU가 사용되는 경우 추정 초당 12–20 토큰. `ollama run qwen3:4b`',
           '**RAM 16 GB, CPU 전용:** Qwen3 8B Q4_K_M — 초당 8–15 토큰, 우수한 품질. `ollama run qwen3:8b`',
         ],
         footer: '대부분의 저사양 PC에서는 Phi-4-mini (3.8B)의 Q4_K_M이 최적 지점입니다 — RAM 8GB에 적합하며 CPU에서 초당 15–25 토큰. 가장 빠른 응답을 원한다면 Qwen3 1.7B로 전환하세요.',
@@ -4730,7 +4730,7 @@ schema: {
           items: [
             '**1B–3B 모델:** RAM 4–8 GB에 적합 → 가장 빠른 생성 → 허용 가능한 품질',
             '**7B 모델:** 8 GB 시스템에서 경계선 → 메모리 압박으로 인해 느림 → 높은 품질',
-            '**13B 이상 모델:** VRAM 16 GB 이상 필요 또는 과도한 스왑 → 대화형 사용에 너무 느림',
+            '**13B 이상 모델:** RAM 16 GB 이상 필요 또는 과도한 스왑 → 저사양 PC에서 대화형 사용에 너무 느림',
           ],
         },
         'realistic-expectations': {
@@ -4857,7 +4857,7 @@ schema: {
             { q: 'GPU 없이 7B급 모델을 실행할 수 있습니까?', a: '예 — Qwen3 8B (Q4_K_M)는 RAM 16 GB, CPU 전용에서 추정 초당 8–15 토큰으로 동작합니다 (듀얼 채널 Ryzen 7 7700X급 데스크톱 기준 추정값). 더 작은 옵션보다 느리지만 품질은 눈에 띄게 좋습니다. RAM 8 GB인 경우 대신 Phi-4-mini (3.8B)를 사용하세요 — 8B 모델은 Q4_K_M에서 8 GB 시스템이 안정적으로 보장하지 못하는 여유 공간이 필요합니다.' },
             { q: 'CPU 추론을 챗봇에 사용할 수 있습니까?', a: '적절한 모델 크기를 선택하면 대화형 용도로도 사용할 수 있습니다. Phi-4-mini (초당 15–25 토큰, RAM 8 GB)와 Qwen3 1.7B (초당 25–40 토큰, RAM 4 GB) 모두 실시간 채팅에 충분히 빠릅니다. CPU상의 7B급 모델(초당 8–15 토큰)은 실시간 대화보다는 초안 작성, 요약, 오프라인 검토 같은 배치 작업에 더 적합합니다.' },
             { q: 'CPU 전용 하드웨어에서는 Phi-4-mini와 Qwen3 1.7B 중 어느 것을 사용해야 합니까?', a: 'RAM 8 GB가 있다면 Phi-4-mini (3.8B)를 사용하세요 — 초당 15–25 토큰으로 코딩과 추론을 처리합니다. RAM 4 GB뿐이거나 가능한 가장 빠른 응답(초당 25–40 토큰)을 원한다면 Qwen3 1.7B를 사용하세요 — 단, 복잡한 작업에서는 품질이 다소 희생됩니다.' },
-            { q: 'GPU가 있는지 어떻게 확인합니까?', a: '독립 NVIDIA GPU의 경우 터미널에서 `nvidia-smi`를 실행하십시오. "command not found"가 반환되면 `lspci` (Linux) 또는 장치 관리자 (Windows)에서 Intel Iris Xe 또는 AMD Radeon iGPU를 확인하십시오 — CUDA를 지원하지 않아도 일부 레이어를 오프로드할 수 있습니다.' },
+            { q: 'GPU가 있는지 어떻게 확인합니까?', a: '독립 NVIDIA GPU의 경우 터미널에서 `nvidia-smi`를 실행하십시오. "command not found"가 반환되면 `lspci` (Linux) 또는 장치 관리자 (Windows)에서 Intel Iris Xe 또는 AMD Radeon iGPU를 확인하십시오 — Ollama가 사용할 수 있는지는 드라이버와 백엔드 지원 여부에 따라 다르므로 `ollama ps`로 확인하십시오.' },
             { q: '양자화는 추론 속도에 어떤 영향을 미칩니까?', a: '양자화는 주로 계산이 아닌 메모리 대역폭 요구 사항을 줄입니다. Q2 (2비트) 파일은 Q4 (4비트) 파일보다 작아서 CPU가 토큰당 더 적은 바이트를 읽으므로, 대체로 파일 크기에 비례해 더 빠르게 생성합니다. 하지만 Q2는 출력 품질 손실이 훨씬 큽니다. 실용적 규칙: 이 가이드의 모든 티어에서 기본값은 Q4_K_M이며, RAM에 맞지 않을 때만 Q3로 낮추십시오.' },
             { q: 'Q2 미만의 양자화를 사용할 수 있습니까?', a: '기술적으로 가능하지만 (llama.cpp에는 1비트 IQ1 형식이 있습니다), 그 크기에서는 출력 품질이 무너집니다. 이 가이드의 RAM 4GB 티어를 포함해 어떠한 실용적인 사용 사례에도 권장하지 않습니다 — 대신 더 작은 모델을 Q4_K_M으로 선택하십시오.' },
             { q: 'CPU + iGPU 하이브리드 추론이 지원됩니까?', a: '경우에 따라 가능합니다. Ollama는 지원되는 GPU 백엔드를 찾으면 모델을 CPU와 GPU로 나눌 수 있으며, `ollama ps`의 PROCESSOR 열에 분할 상태가 표시됩니다. iGPU는 CPU와 시스템 RAM을 공유하므로 주된 속도 한계인 메모리 대역폭이 늘어나지 않습니다. Intel Iris Xe iGPU가 있는 RAM 8GB 시스템에서 iGPU가 사용되면 Qwen3 4B는 추정 초당 12–20 토큰입니다. CPU 전용과 비교하려면 `OLLAMA_VULKAN=0`으로 테스트하십시오.' },
@@ -4975,7 +4975,7 @@ schema: {
             'name': 'GPU가 있는지 어떻게 확인합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '독립 NVIDIA GPU의 경우 터미널에서 `nvidia-smi`를 실행하십시오. "command not found"가 반환되면 `lspci` (Linux) 또는 장치 관리자 (Windows)에서 Intel Iris Xe 또는 AMD Radeon iGPU를 확인하십시오 — CUDA를 지원하지 않아도 일부 레이어를 오프로드할 수 있습니다.',
+              'text': '독립 NVIDIA GPU의 경우 터미널에서 `nvidia-smi`를 실행하십시오. "command not found"가 반환되면 `lspci` (Linux) 또는 장치 관리자 (Windows)에서 Intel Iris Xe 또는 AMD Radeon iGPU를 확인하십시오 — Ollama가 사용할 수 있는지는 드라이버와 백엔드 지원 여부에 따라 다르므로 `ollama ps`로 확인하십시오.',
             },
           },
           {
@@ -5151,9 +5151,9 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'RAM 4 GB, CPU 전용', 'description': 'Qwen3 1.7B Q4_K_M. 초당 25–40 토큰. 최소 하드웨어에서 가장 빠른 응답. ollama run qwen3:1.7b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'RAM 8 GB, CPU 전용 — 최적 지점', 'description': 'Phi-4-mini 3.8B Q4_K_M. 초당 15–25 토큰. 코딩과 추론. ollama run phi4-mini' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'RAM 8 GB + Intel Iris iGPU', 'description': 'Qwen3 4B Q4_K_M. 부분 GPU 오프로드로 초당 12–20 토큰. ollama run qwen3:4b' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'RAM 8 GB + Intel Iris iGPU', 'description': 'Qwen3 4B Q4_K_M. iGPU가 사용되는 경우 추정 초당 12–20 토큰. ollama run qwen3:4b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'RAM 16 GB, CPU 전용', 'description': 'Qwen3 8B Q4_K_M. 초당 8–15 토큰. GPU 없이도 우수한 품질. ollama run qwen3:8b' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'RAM 16 GB + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. 레이어 오프로드로 초당 20–35 토큰. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'RAM 16 GB + iGPU', 'description': 'Llama 3.2 3B Q4_K_M. iGPU가 사용되는 경우 추정 초당 20–35 토큰. ollama run llama3.2:3b' },
         ],
       },
     },
