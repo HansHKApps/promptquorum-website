@@ -919,6 +919,11 @@
     "urlSlug": "surfsense-review",
     "url": "/power-local-llm/surfsense-review"
   },
+  "strata": {
+    "cluster": "power-local-llm",
+    "urlSlug": "strata-review",
+    "url": "/power-local-llm/strata-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
@@ -1283,6 +1288,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "caelum-review",
     "url": "/power-local-llm/caelum-review"
+  },
+  "obscurify": {
+    "cluster": "power-local-llm",
+    "urlSlug": "obscurify-review",
+    "url": "/power-local-llm/obscurify-review"
   },
   "whisper-notes": {
     "cluster": "power-local-llm",

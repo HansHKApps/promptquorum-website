@@ -66,7 +66,9 @@ import { article as a_memoryai_review } from './articles/memoryai-review'
 import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
+import { article as a_strata_review } from './articles/strata-review'
 import { article as a_caelum_review } from './articles/caelum-review'
+import { article as a_obscurify_review } from './articles/obscurify-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
@@ -676,7 +678,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llamatik-review':                               a_llamatik_review,
   'castmates-review':                              a_castmates_review,
   'surfsense-review':                              a_surfsense_review,
+  'strata-review':                                 a_strata_review,
   'caelum-review':                                 a_caelum_review,
+  'obscurify-review':                              a_obscurify_review,
   'anyllm-review':                                 a_anyllm_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06
