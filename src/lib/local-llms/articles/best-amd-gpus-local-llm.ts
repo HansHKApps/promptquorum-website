@@ -7,1872 +7,3110 @@ import type { Language } from "@/lib/blog/blogContent";
 import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
-    en: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
+  en: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
+      },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'GPU Buying Guides',
+    title: 'Best AMD GPU for Local LLMs and AI Inference',
+    seoTitle: 'Best AMD GPU for AI & Local LLMs 2026: 9070 XT vs 7900 XTX',
+    intro: '**The best AMD GPU for local LLMs in 2026 is the Radeon RX 7900 XTX (24 GB) for 30B-class models, the RX 9070 XT (16 GB) for 7B–14B models, and the Radeon AI PRO R9700 (32 GB) when you need the most VRAM per card.** All three are on Ollama\'s ROCm v7 support list for Linux, and llama.cpp also runs them through its Vulkan backend. NVIDIA CUDA is still the lower-effort path, so pick AMD for VRAM per dollar or because you already own the card.',
+    metaDescription: 'Best AMD GPU for AI and local LLMs: RX 7900 XTX (24 GB), RX 9070 XT (16 GB) and Radeon AI PRO R9700 (32 GB), plus ROCm, Vulkan and AMD vs NVIDIA.',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**The best AMD GPU for local LLMs in 2026 is the Radeon RX 7900 XTX (24 GB) for 30B-class models, the RX 9070 XT (16 GB) for 7B–14B models, and the Radeon AI PRO R9700 (32 GB) when you need the most VRAM per card.**',
+    quickAnswerTop: {
+      question: 'Which AMD GPU is best for local LLMs and AI inference?',
+      answer: 'The RX 7900 XTX (24 GB) is the best all-round AMD card for local LLMs, the RX 9070 XT (16 GB) is the best newer card for 7B–14B models, and the Radeon AI PRO R9700 (32 GB) offers the most VRAM per card. Ollama lists all three for ROCm v7 on Linux; Vulkan works as a fallback without ROCm. NVIDIA CUDA remains the easier path, so AMD fits best when VRAM per dollar matters.',
+      bullets: [
+        'RX 7900 XTX: 24 GB, 960 GB/s, about $900–1,250 used (price trackers, Sept–Oct 2026)',
+        'RX 9070 XT: 16 GB, 640 GB/s, about $820–930 new — fits 14B models at Q4–Q6',
+        'Radeon AI PRO R9700: 32 GB, $1,299 AMD list price; reported street prices run higher',
+        'Ollama needs ROCm v7 on Linux; Vulkan is on by default when its backend is installed',
       ],
-      freshness_tier: 'semi_annual',
-      last_full_refresh: '2026-09-01',
-      theme: 'GPU Buying Guides',
-      title: 'Best AMD GPU for Local LLMs',
-      seoTitle: 'Best AMD GPU for Local LLMs 2026: RX 7900 XTX vs RTX',
-      intro: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15-20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.** AMD ROCm (HIP) has matured, but compatibility layers add friction. NVIDIA CUDA is still the path of least resistance for local LLMs. Use AMD only if you find a great used deal or already own AMD hardware.',
-      metaDescription: 'AMD RX 7900 XTX matches RTX 4090 at 24 GB VRAM for $800-1,000 used — around half the price. ROCm adds 5–10 h setup friction. The best AMD GPU for local LLMs in 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
-      publishDate: '2026-04-05',
-      dateModified: '2026-09-01',
-      leadAnswerBlock: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15-20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.**',
-      quickAnswerTop: {
-        question: 'Are AMD GPUs good for running local LLMs?',
-        answer: 'AMD GPUs can run local LLMs via ROCm, but require 5–10 hours of driver setup vs plug-and-play NVIDIA CUDA. The RX 7900 XTX (24 GB, $800-1,000 used) matches RTX 4090 speed at half the price, but Ollama support is inconsistent. Use AMD only if you find a great deal or already own AMD hardware.',
-        bullets: [
-          'RX 7900 XTX: 24 GB VRAM, $800-1,000 used — same VRAM as RTX 4090 at ~60% the price',
-          'RX 6800 XT: 16 GB VRAM, $200–280 used — best AMD value, runs 13B models at Q4',
-          'ROCm (AMD driver stack) works with llama.cpp and vLLM; Ollama support inconsistent as of 2026',
-          'NVIDIA CUDA is still the easier path; choose AMD only for cost savings or existing hardware',
-        ],
-        updatedDate: '2026-07-14',
-      },
-      audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
-      readTime: '7 min',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'AMD GPU',
-schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': 'Best AMD GPU for Local LLMs 2026: RX 7900 XTX vs RTX',
-        'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. Updated July 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-09-01',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'about': [
-          { '@type': 'Thing', 'name': 'AMD GPU' },
-          { '@type': 'Thing', 'name': 'ROCm' },
-          { '@type': 'Thing', 'name': 'GPU VRAM' },
-          { '@type': 'Thing', 'name': 'local LLM inference' },
-        ],
-        'speakable': {
-          '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro'],
-        },
-        'educationalLevel': 'Intermediate',
-        'proficiencyLevel': 'Intermediate',
-        'inLanguage': 'en',
-        'audience': { '@type': 'Audience', 'audienceType': 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows' },
-      },
-      faqSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': 'Should I buy AMD RX 6800 XT or NVIDIA RTX 3080 for local LLMs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3080 if you value simplicity (CUDA "just works"). RX 6800 XT if you want 25% better value and don\'t mind 5-10 hours ROCm setup.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Is AMD RX 7900 XTX better than RTX 4090?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Similar speed, same VRAM (24GB). RX 7900 XTX is $1,000-1,800 cheaper used ($800-1,000 vs. $2,000-2,600 — RTX 4090 prices rose sharply after NVIDIA discontinued it in 2026). ROCm setup is the trade-off.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Can I use AMD GPUs with Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Technically yes. In our April 2026 testing (Ollama v0.3.x, ROCm 6.x), ROCm support was inconsistent — GPU detection failed on some configurations and CPU fallback was common. Check the current AMD compatibility list at github.com/ollama/ollama; vLLM or llama.cpp are the more reliable paths for AMD inference today.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'What\'s the best AMD path for local LLMs in 2026?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama.cpp (HIP backend) + Text Generation WebUI. Both have solid AMD support. Avoid Ollama.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Do I need Ubuntu for AMD ROCm, or does Windows work?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Windows support exists (HIP on Windows), but in our April 2026 testing it was less stable than Ubuntu. Ubuntu is the recommended path.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Is RX 6700, 6700 XT, or 6750 good for 7B models?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. RX 6700 XT (12GB, same VRAM) has ~15% faster clocks than the non-XT card but is still behind the 6800 XT. Only buy either if <$250. Otherwise, stretch to 6800 XT.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Is the RX 6900 XT worth buying for local LLMs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not really. The RX 6900 XT (16GB) is only marginally faster than the RX 6800 XT, is rarer used, and costs $420-500 vs. $320-400 for the 6800 XT. The price bump isn\'t worth it -- buy the 6800 XT instead.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Is the AMD Radeon 680M good for running local LLMs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'The Radeon 680M is integrated graphics built into Ryzen 6000/7000 mobile APUs -- it is not the same product as the discrete RX 6800M or RX 6800 XT. It has no dedicated VRAM and shares system RAM instead, so it is only viable for small quantized models (roughly 3B parameters or less at Q4) and will run noticeably slower than any discrete GPU on this page. For serious local LLM use, a discrete card like the RX 6800 XT is the better choice.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Can I mix AMD and NVIDIA GPUs in one system?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Theoretically yes, but management is a nightmare. Each GPU needs its own CUDA/HIP runtime. Not recommended.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'How much VRAM does the AMD RX 7900 XTX have?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'The AMD RX 7900 XTX has 24GB GDDR6 VRAM -- the same as RTX 4090. This makes it the most capable AMD card for running 70B models at Q4.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Is AMD ROCm stable enough for production LLM inference?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'ROCm 6.x (2025) is significantly more stable than ROCm 5.x. For production use, llama.cpp HIP backend on Ubuntu 22.04+ is the most reliable stack. In our April 2026 testing (Ollama v0.3.x, ROCm 6.x), Ollama\'s ROCm support was inconsistent — GPU detection failed on some configurations. Check the current AMD compatibility list at github.com/ollama/ollama before committing.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'What is the best AMD GPU for under $400?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'AMD RX 6800 XT (16GB, ~$320-400 used) is the best value AMD GPU under $400. It runs 13B models at Q4 smoothly and 7B models at Q8 comfortably via llama.cpp HIP backend.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Can I run local LLMs on an AMD RX 6800M laptop GPU?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. The AMD RX 6800M (mobile variant, 12GB GDDR6) can run 13B models at Q4_K_M (~8 GB) or 7B models at Q8_0 (~7 GB). Use llama.cpp HIP backend on Linux or Windows. ROCm driver support for RX 6800M is solid on Ubuntu 22.04+ with Linux Kernel 6.2+. Windows HIP support is newer (less stable). Speed: ~8-12 tokens/sec on CPU-only fallback, ~30-40 tokens/sec with HIP acceleration on RX 6800M.' }
-          }
-        ]
-      },
-      toc: [
-        { label: 'TLDR', anchor: '#key-takeaways' },
-        { label: 'Which AMD GPUs Are Actually Worth Using?', anchor: '#key-takeaways' },
-        { label: 'How Do AMD GPUs Compare to RTX on Price and Speed?', anchor: '#amd-vs-nvidia' },
-        { label: 'FAQ', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'AMD RX 7900 XTX matches RTX 4090 at 24 GB VRAM for $800-1,000 used, but ROCm driver setup adds 5–10 hours of friction vs NVIDIA CUDA.' },
-            { type: 'plain-terms', text: 'AMD GPUs are like a car with great horsepower but a manual transmission — more power per dollar, but more work to get running. NVIDIA is the automatic.' },
-          ],
-          items: [
-            'AMD RX 6800 XT (16GB, $320-400 used) and RX 7900 XTX (24GB, $800-1,000 used) are the only viable options for local LLMs.',
-            'Performance-per-dollar: AMD is 20-30% cheaper than NVIDIA, but software friction costs 5-10 hours of setup time.',
-            'Ollama: Limited AMD support (ROCm path was inconsistent in our April 2026 testing, Ollama v0.3.x / ROCm 6.x — GPU detection failed on some configurations; CPU fallback is slow). Check github.com/ollama/ollama for current AMD compatibility.',
-            'vLLM: Full AMD ROCm support as of v0.6.0, but setup requires manual drivers. Works well if you get past setup.',
-            'Text Generation WebUI: Excellent AMD support via ROCm. Best user experience on AMD.',
-            'Llama.cpp: Native AMD support (HIP backend). Solid performance. Recommended AMD path.',
-            'Setup cost: Plan 5-10 hours debugging ROCm drivers, HIPCC compilation, kernel compatibility.',
-            'Verdict (April 2026): Use AMD only if you have AMD already, or if you find a killer used deal ($320 for a 16GB card). Otherwise, NVIDIA CUDA is still simpler.',
-          ],
-        },
-        'which-amd': {
-          title: 'Which AMD GPUs Are Actually Worth Using?',
-          items: [
-            '**RX 6800 XT** (16GB GDDR6): The value king for AMD. 2020 release. Still solid for 7B-22B inference. Used: $320-400.',
-            '**RX 6900 XT** (16GB GDDR6): Marginally faster 6800 XT. Rare. Used: $420-500. Not worth the price bump.',
-            '**RX 7900 XT** (20GB GDDR6): Newer RDNA 3 arch. 20% faster than 6800 XT. Used: $700-850. Good for 70B Q4.',
-            '**RX 7900 XTX** (24GB GDDR6): Top AMD consumer GPU. 24GB VRAM is game-changer for 70B. Used: $800-1,000. Comparable to RTX 4090 speed.',
-            '**Radeon Pro W6800 (32GB)**: Enterprise card, cheaper used (~$200-300). Slower, but 32GB is excellent for 70B Q8. Niche play.',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: 'How Do AMD GPUs Compare to RTX on Price and Speed?',
-          rows: [
-            { '0': 'RX 6800 XT', '1': '16GB', '2': '1,952', '3': '$320-400', '4': '+25%', '5': 'RTX 3080 (slower)' },
-            { '0': 'RX 7900 XT', '1': '20GB', '2': '2,540', '3': '$700-850', '4': '+20%', '5': 'RTX 4080 (similar)' },
-            { '0': 'RX 7900 XTX', '1': '24GB', '2': '2,750', '3': '$800-1,000', '4': '+15%', '5': 'RTX 4090 (similar speed)' },
-            { '0': 'RTX 3080', '1': '10GB', '2': '1,456', '3': '$420-500', '4': '--', '5': '--' },
-            { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$2,000-2,600', '4': '--', '5': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', 'Price Used', 'Perf/$ vs. RTX', 'Equivalent RTX'],
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
-          imageCaption: 'RX 7900 XTX matches RTX 4090 speed and VRAM for roughly 60% of the price -- the trade-off is ROCm setup friction.',
-        },
-        'rocm-setup': {
-          title: 'What\'s the ROCm Setup Friction for AMD?',
-          content: [
-            '**1. Install AMD ROCm drivers: `apt-get install rocm-dkms` (Ubuntu). On Windows, manual .exe installer. Takes 30 min.**',
-            '2. Verify HIP compiler: `hipcc --version`. Often fails on first try. Debug kernel compatibility for your GPU.',
-            '3. Install HIPCC (AMD\'s HIP-to-C++ compiler): `apt-get install hip-runtime-amd`. Another dependency chain.',
-            '4. Test with small LLM: Run inference to verify GPU acceleration is working. Often defaults to CPU fallback.',
-            '5. Troubleshoot driver version mismatches: ROCm v5.7 works with kernel 5.15 but not 6.x. Consume 2-4 hours debugging.',
-            'NVIDIA CUDA by comparison: `nvidia-cuda-toolkit` → one apt-get, instant GPU access. AMD requires 5-10× more friction.',
-          ],
-        },
-        'software-support': {
-          title: 'Can You Run Ollama and vLLM on AMD?',
-          content: [
-            '**Ollama on AMD (as of our April 2026 testing, Ollama v0.3.x, ROCm 6.x):** ROCm support was inconsistent in our tests — GPU detection failed on some configurations, and CPU fallback is slow. Check the current AMD compatibility list at github.com/ollama/ollama before committing.',
-            '**vLLM on AMD:** Full ROCm support since v0.6.0. Works well, but requires manual ROCm/HIP driver setup. Good if you\'re past the setup gauntlet.',
-            '**Text Generation WebUI:** Excellent AMD ROCm support. Best user experience on AMD. Recommended.',
-            '**Llama.cpp:** Native HIP backend. Solid performance. Easiest AMD path. Recommended.',
-            '**LM Studio:** NVIDIA only. No AMD support.',
-            'vLLM + llama.cpp are your AMD paths. Ollama is not reliable.',
-          ],
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-en.webp',
-          imageCaption: 'llama.cpp and Text Generation WebUI are the reliable AMD paths in 2026 -- Ollama\'s ROCm support remains inconsistent.',
-        },
-        'when-buy-amd': {
-          title: 'When Should You Actually Buy AMD Over NVIDIA?',
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'Buy AMD if you find a used RX 7900 XTX near $800 or already own AMD hardware; skip AMD if you want plug-and-play simplicity with Ollama.' },
-            { type: 'plain-terms', text: 'AMD beats NVIDIA on price-per-gigabyte of VRAM, but the setup process is harder. If you are new to local LLMs, start with NVIDIA.' },
-          ],
-          content: [
-            'Buy AMD if:',
-            '- You find a used RX 7900 XTX for <$450 (under-priced vs. RTX 4090 value).',
-            '- You already own AMD hardware and want ecosystem consistency.',
-            '- You\'re building a cluster and value compute-per-dollar over ease-of-setup.',
-            'Don\'t buy AMD if:',
-            '- You want a plug-and-play experience. NVIDIA CUDA is faster to get working.',
-            '- You need Ollama. AMD ROCm support for Ollama has been inconsistent in community testing (as of 2026).',
-            '- You\'re time-constrained. ROCm debugging can eat 10+ hours.',
-          ],
-        },
-        'mistakes': {
-          title: 'What Are the Most Common AMD Adoption Mistakes?',
-          items: [
-            'Buying RX 6700 (12GB) thinking it\'s a 3060 12GB equivalent--it\'s 20% slower and often harder to find used.',
-            'Assuming ROCm "just works" like CUDA--plan 5-10 hours of troubleshooting driver and kernel compatibility.',
-            'Using Ollama with AMD expecting seamless integration — ROCm support was inconsistent in our April 2026 testing (Ollama v0.3.x, ROCm 6.x); llama.cpp or vLLM are better bets.',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: 'Next steps',
-          items: [
-            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — On a budget? Best value GPUs for LLM inference →',
-            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD vs Apple vs CPU — which platform fits your workflow? →',
-            '[How Much VRAM Do I Need?](/local-llms/how-much-vram-local-llm) — Match your GPU VRAM to model size →',
-          ],
-        },
-        'regionalContext': {
-          id: 'regional-context',
-          title: 'How Do Regional Data Laws Affect the AMD vs NVIDIA Decision?',
-          content: [
-            '**EU GDPR and UK DPA: Local inference on AMD hardware reduces data-transfer exposure.** Running Qwen3 or Llama 3.3 on an AMD RX 7900 XTX keeps inference data on-device, supporting GDPR Article 25 (data minimisation) and Article 32 (security measures). However, compliance still requires lawful basis, DPIA, retention policy, and breach procedures. AMD ROCm on-premise deployments are chosen by European enterprises for sensitive document processing, but formal compliance review is always required.',
-            '**Japan APPI and Singapore PDPA: On-device inference eliminates cross-border data transfer risk.** Japanese enterprises under the amended APPI (2022) face strict requirements for personal data transferred outside Japan. AMD ROCm local deployments at Japanese universities, financial institutions, and healthcare providers sidestep these requirements entirely — no data residency audit needed when inference is fully local.',
-            '**China DSL and PIPL: AMD hardware is subject to the same domestic deployment logic as NVIDIA.** Chinese enterprises running local LLMs under the Data Security Law (2021) and PIPL (2021) benefit from on-premise AMD deployments the same way as NVIDIA: data never leaves the local network. AMD ROCm is not subject to the US GPU export controls that affect high-end NVIDIA A100/H100 server chips (consumer RX cards are unrestricted).',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: 'Frequently Asked Questions',
-          faqs: [
-            { q: 'Should I buy AMD RX 6800 XT or NVIDIA RTX 3080 for local LLMs?', a: 'RTX 3080 if you value simplicity (CUDA "just works"). RX 6800 XT if you want 25% better value and don\'t mind 5-10 hours ROCm setup.' },
-            { q: 'Is AMD RX 7900 XTX better than RTX 4090?', a: 'Similar speed, same VRAM (24GB). RX 7900 XTX is $1,000-1,800 cheaper used ($800-1,000 vs. $2,000-2,600 — RTX 4090 prices rose sharply after NVIDIA discontinued it in 2026). ROCm setup is the trade-off.' },
-            { q: 'Can I use AMD GPUs with Ollama?', a: 'Technically yes. In our April 2026 testing (Ollama v0.3.x, ROCm 6.x), ROCm support was inconsistent — GPU detection failed on some configurations and CPU fallback was common. Check the current AMD compatibility list at github.com/ollama/ollama; for reliable AMD inference today, vLLM or llama.cpp are the safer paths.' },
-            { q: 'What\'s the best AMD path for local LLMs in 2026?', a: 'Llama.cpp (HIP backend) + Text Generation WebUI. Both have solid AMD support. Avoid Ollama.' },
-            { q: 'Do I need Ubuntu for AMD ROCm, or does Windows work?', a: 'Windows support exists (HIP on Windows), but in our April 2026 testing it was less stable than Ubuntu. Ubuntu is the recommended path.' },
-            { q: 'Is RX 6700, 6700 XT, or 6750 good for 7B models?', a: 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. RX 6700 XT (12GB, same VRAM) has ~15% faster clocks than the non-XT card but is still behind the 6800 XT. Only buy either if <$250. Otherwise, stretch to 6800 XT.' },
-            { q: 'Is the RX 6900 XT worth buying for local LLMs?', a: 'Not really. The RX 6900 XT (16GB) is only marginally faster than the RX 6800 XT, is rarer used, and costs $420-500 vs. $320-400 for the 6800 XT. The price bump isn\'t worth it -- buy the 6800 XT instead.' },
-            { q: 'Is the AMD Radeon 680M good for running local LLMs?', a: 'The Radeon 680M is integrated graphics built into Ryzen 6000/7000 mobile APUs -- it is not the same product as the discrete RX 6800M or RX 6800 XT. It has no dedicated VRAM and shares system RAM instead, so it is only viable for small quantized models (roughly 3B parameters or less at Q4) and will run noticeably slower than any discrete GPU on this page. For serious local LLM use, a discrete card like the RX 6800 XT is the better choice.' },
-            { q: 'Can I mix AMD and NVIDIA GPUs in one system?', a: 'Theoretically yes, but management is a nightmare. Each GPU needs its own CUDA/HIP runtime. Not recommended.' },
-            { q: 'How much VRAM does the AMD RX 7900 XTX have?', a: 'The AMD RX 7900 XTX has 24GB GDDR6 VRAM -- the same as RTX 4090. This makes it the most capable AMD card for running 70B models at Q4.' },
-            { q: 'Is AMD ROCm stable enough for production LLM inference?', a: 'ROCm 6.x (2025) is significantly more stable than ROCm 5.x. For production use, llama.cpp HIP backend on Ubuntu 22.04+ is the most reliable stack. In our April 2026 testing (Ollama v0.3.x, ROCm 6.x), Ollama\'s ROCm support was inconsistent — GPU detection failed on some configurations. Check the current AMD compatibility list at github.com/ollama/ollama before committing.' },
-            { q: 'What is the best AMD GPU for under $400?', a: 'AMD RX 6800 XT (16GB, ~$320-400 used) is the best value AMD GPU under $400. It runs 13B models at Q4 smoothly and 7B models at Q8 comfortably via llama.cpp HIP backend.' },
-            { q: 'Can I run local LLMs on an AMD RX 6800M laptop GPU?', a: 'Yes. The AMD RX 6800M (mobile variant, 12GB GDDR6) can run 13B models at Q4_K_M (~8 GB) or 7B models at Q8_0 (~7 GB). Use llama.cpp HIP backend on Linux or Windows. ROCm driver support for RX 6800M is solid on Ubuntu 22.04+ with Linux Kernel 6.2+. Windows HIP support is newer (less stable). Speed: ~8-12 tokens/sec on CPU-only fallback, ~30-40 tokens/sec with HIP acceleration on RX 6800M.' },
-          ],
-        },
-        'relatedReading': {
-          title: 'Related Reading',
-          items: [
-            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
-            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
-            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Text Generation WebUI vs vLLM vs Llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
-            '[Laptop vs Desktop for Local LLMs](/local-llms/laptop-vs-desktop-local-llm) — Desktop vs laptop cost and performance comparison for AI.',
-          ],
-        },
-        'sources': {
-          title: 'Sources',
-          items: [
-            'AMD ROCm documentation and GitHub: HIP compiler, driver compatibility matrix, LLM inference examples',
-            'vLLM GitHub: AMD/ROCm backend implementation and support status (v0.6.0+)',
-            'Llama.cpp GitHub: HIP backend for AMD GPU support',
-            'AMD GPUs deliver strong token/second speeds, but speed alone doesn\'t determine response quality. What you ask the model matters as much as how fast it responds: [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) covers how to structure longer requests within GPU memory limits.',
-          ],
-        },
-      },
+      updatedDate: '2026-10-23',
     },
-    es: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
-      ],
-      freshness_tier: 'semi_annual',
-      theme: 'GPU Buying Guides',
-      title: 'Mejores GPUs AMD para LLMs locales',
-      seoTitle: 'Mejores GPUs AMD para LLMs locales 2026: Guía de comparación',
-      intro: '**La AMD RX 6800 XT y la RX 7900 XTX son alternativas sólidas a NVIDIA, con un rendimiento por dólar 15-20% mejor, pero sufren de menor compatibilidad con ONNX Runtime y los drivers de vLLM.** AMD ROCm (HIP) ha madurado, aunque las capas de compatibilidad añaden fricción. NVIDIA CUDA sigue siendo el camino más sencillo para LLMs locales. Usa AMD solo si encuentras una gran oferta de segunda mano o ya tienes hardware AMD.',
-      metaDescription: 'Compara AMD RX 6800 XT y RX 7900 XTX vs NVIDIA RTX: configuración ROCm, rendimiento en vLLM, coste por TFLOP y cuándo comprar AMD. Actualizado 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-es.webp',
-      publishDate: '2026-04-05',
-      leadAnswerBlock: '**La AMD RX 6800 XT y la RX 7900 XTX son alternativas sólidas a NVIDIA, con un rendimiento por dólar 15-20% mejor, pero sufren de menor compatibilidad con ONNX Runtime y los drivers de vLLM.**',
-      audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan sus flujos de trabajo de LLMs locales',
-      readTime: '7 min de lectura',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'AMD GPU',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': 'Mejores GPUs AMD para LLMs locales 2026: RX 7900 XTX',
-        'description': 'Compara AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuración de ROCm, rendimiento en vLLM, análisis de coste por TFLOP. Cuándo elegir AMD sobre CUDA. Abril 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-09-01',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'about': [
-          { '@type': 'Thing', 'name': 'AMD GPU' },
-          { '@type': 'Thing', 'name': 'ROCm' },
-          { '@type': 'Thing', 'name': 'GPU VRAM' },
-          { '@type': 'Thing', 'name': 'inferencia local de LLM' },
+    audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
+    readTime: '9 min',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: 'TLDR',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: 'Which AMD GPUs Are Worth Buying for Local LLMs?',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'How Do AMD GPUs Compare to NVIDIA on VRAM and Price?',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'How Fast Are AMD GPUs Compared to NVIDIA?',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: 'How Hard Is ROCm Setup in 2026?',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: 'Which Local LLM Tools Work on AMD GPUs?',
+        anchor: '#software-support',
+      },
+      {
+        label: 'How Do You Run Quantized LLM Inference on an AMD GPU?',
+        anchor: '#run-quantized',
+      },
+      {
+        label: 'When Should You Buy AMD Over NVIDIA?',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD Instinct or NVIDIA Data-Center GPUs?',
+        anchor: '#instinct',
+      },
+      {
+        label: 'FAQ',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'The RX 7900 XTX (24 GB), RX 9070 XT (16 GB) and Radeon AI PRO R9700 (32 GB) are the AMD GPUs to buy for local LLMs in 2026, and Ollama\'s docs list all three for ROCm v7 on Linux.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD cards give you a lot of VRAM for the money, but you have to pick the right software path: ROCm on supported Linux setups, or Vulkan when you want it to simply work. NVIDIA is the plug-and-play option.',
+          },
         ],
-        'speakable': {
-          '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
-        },
-        'educationalLevel': 'Intermediate',
-        'proficiencyLevel': 'Intermediate',
+        items: [
+          '**Best all-round AMD pick:** RX 7900 XTX — 24 GB GDDR6, 960 GB/s, about $900–1,250 used (price trackers, Sept–Oct 2026). It fits roughly 30–35B models at Q4; a 70B model at Q4 needs about 40 GB or more, so it does not fit.',
+          '**Best newer card:** RX 9070 XT — 16 GB, 640 GB/s, about $820–930 new. Good for 7B–14B models at Q4–Q6.',
+          '**Most VRAM per card:** Radeon AI PRO R9700 — 32 GB, $1,299 AMD list price; third-party reports put street prices around $1,400–1,900. Two cards give 64 GB.',
+          '**Budget pick:** RX 6800 XT — 16 GB, about $380–410 used (asking prices, October 2026). It is on Ollama\'s Linux ROCm list but not on AMD\'s current Radeon ROCm 7.2.1 matrix.',
+          '**Ollama:** requires the ROCm v7 driver on Linux; on Windows its ROCm list covers RX 7000-series cards, and Vulkan is enabled by default when its backend is installed (disable with OLLAMA_VULKAN=0).',
+          '**LM Studio and llama.cpp:** both run on AMD through Vulkan or ROCm (HIP) backends. Vulkan needs only a graphics driver, so start there if ROCm does not detect your card.',
+          '**AMD vs NVIDIA:** a used RX 7900 XTX costs about the same as a used RTX 3090 (24 GB). AMD\'s clearest price advantage is the 32 GB R9700 against the RTX 5090 (about one-third to one-half of its price), at the cost of slower prompt processing.',
+          '**Verdict:** choose AMD when VRAM per dollar matters and you can use Linux or Vulkan; choose NVIDIA for CUDA-only tools, training and the least setup effort.',
+        ],
       },
-      faqSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': '¿Debo comprar la AMD RX 6800 XT o la NVIDIA RTX 3080 para LLMs locales?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3080 si valoras la simplicidad (CUDA funciona sin problemas). RX 6800 XT si quieres un 25% más de valor y no te importan 5-10 horas de configuración de ROCm.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿La AMD RX 7900 XTX es mejor que la RTX 4090?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Velocidad similar, misma VRAM (24GB). La RX 7900 XTX es $1,000-1,800 más barata de segunda mano ($800-1,000 vs. $2,000-2,600 — el precio de la RTX 4090 usada subió mucho tras su descontinuación por NVIDIA en 2026). La configuración de ROCm es el contrapeso.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Puedo usar GPUs AMD con Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Técnicamente sí. En nuestras pruebas de abril de 2026 (Ollama v0.3.x, ROCm 6.x), el soporte ROCm fue inconsistente — la detección de GPU falló en algunas configuraciones y el fallback a CPU fue frecuente. Compruebe la lista de compatibilidad AMD actualizada en github.com/ollama/ollama; para inferencia AMD fiable hoy, vLLM o llama.cpp son opciones más seguras.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Cuál es el mejor camino AMD para LLMs locales en 2026?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos tienen buen soporte para AMD. Evita Ollama.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Necesito Ubuntu para AMD ROCm, o Windows funciona también?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'El soporte en Windows existe (HIP on Windows), pero es más reciente y menos estable. Ubuntu es el camino recomendado.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Es la RX 6700, la 6700 XT o la 6750 buena para modelos de 7B?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'La RX 6700 (12GB) funciona, pero es un 20% más lenta que la RX 6800 XT. La RX 6700 XT (12GB, misma VRAM) tiene unos relojes ~15% más rápidos que la versión no-XT, pero sigue por detrás de la 6800 XT. Cómprala solo si cuesta menos de $250. Si no, apuesta por la 6800 XT.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Merece la pena la RX 6900 XT para LLMs locales?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No demasiado. La RX 6900 XT (16GB) es solo marginalmente más rápida que la RX 6800 XT, es más rara de segunda mano y cuesta $420-500 frente a $320-400 de la 6800 XT. El sobrecoste no compensa -- compra la 6800 XT en su lugar.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Es buena la AMD Radeon 680M para ejecutar LLMs locales?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'La Radeon 680M es gráficos integrados dentro de las APU móviles Ryzen 6000/7000 -- no es el mismo producto que la RX 6800M o la RX 6800 XT, que son tarjetas discretas. No tiene VRAM dedicada, sino que comparte la RAM del sistema, por lo que solo es viable para modelos pequeños cuantizados (aproximadamente 3B de parámetros o menos en Q4) y será notablemente más lenta que cualquier GPU discreta de esta guía. Para un uso serio de LLMs locales, una tarjeta discreta como la RX 6800 XT es la mejor opción.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Puedo combinar GPUs AMD y NVIDIA en un mismo sistema?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Teóricamente sí, pero la gestión es una pesadilla. Cada GPU necesita su propio runtime CUDA/HIP. No se recomienda.' }
-          },
-        ]
+      'which-amd': {
+        id: 'which-amd',
+        title: 'Which AMD GPUs Are Worth Buying for Local LLMs?',
+        items: [
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): the strongest AMD consumer card for LLMs. A 32B model at Q4_K_M is roughly 20 GB, so it fits with room for context. On AMD\'s ROCm 7.2.1 matrix and on Ollama\'s ROCm list for Linux and Windows. Used: about $900–1,250.',
+          '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): the newer 16 GB option, on AMD\'s ROCm 7.2.1 matrix and Ollama\'s Linux ROCm list. Runs 14B models at Q4–Q6 comfortably. New: about $820–930.',
+          '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): a workstation card with the most VRAM AMD sells in this class. It handles 32B models at Q4–Q6; two cards (64 GB) fit a 70B model at Q4. AMD list price: $1,299; reported street prices are higher.',
+          '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): fits models up to roughly 24–27B at Q4. Buy it only if it is clearly cheaper than a used 7900 XTX; its price was not re-checked for this update.',
+          '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): the budget pick at about $380–410 used. Lower bandwidth means slower generation, and AMD\'s current Radeon ROCm matrix no longer lists it, so plan on Ollama\'s Linux ROCm path or Vulkan.',
+          '**Ryzen AI Max+ 395 mini PCs** (up to 128 GB unified memory, 256 GB/s): not a graphics card, but the cheapest way to run very large mixture-of-experts models on AMD. 128 GB systems were listed at roughly $3,300–4,350 in late September 2026 (price trackers). See [Best AMD Mini PCs for Local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026).',
+        ],
       },
-      toc: [
-        { label: 'Puntos clave', anchor: '#key-takeaways' },
-        { label: '¿Qué GPUs AMD realmente valen la pena?', anchor: '#key-takeaways' },
-        { label: '¿Cómo se comparan las GPU AMD con las RTX en precio y velocidad?', anchor: '#amd-vs-nvidia' },
-        { label: 'Preguntas frecuentes', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'AMD RX 7900 XTX iguala a la RTX 4090 con 24 GB de VRAM por $800-1,000 usada, pero la configuración del driver ROCm añade entre 5 y 10 horas de fricción frente a NVIDIA CUDA.' },
-            { type: 'plain-terms', text: 'Las GPU AMD son como un coche con gran potencia pero caja de cambios manual: más potencia por dólar, pero más trabajo para ponerlo en marcha. NVIDIA es el automático.' },
-          ],
-          items: [
-            'La AMD RX 6800 XT (16GB, ~$320-400 de segunda mano) y la RX 7900 XTX (24GB, ~$800-1,000 de segunda mano) son las únicas opciones viables para LLMs locales. Los precios pueden variar según tu país.',
-            'Rendimiento por dólar: AMD es un 20-30% más barata que NVIDIA, pero la fricción de software cuesta entre 5 y 10 horas de configuración.',
-            'Ollama: soporte AMD limitado (el path de ROCm fue inconsistente en nuestras pruebas de abril de 2026, Ollama v0.3.x / ROCm 6.x — la detección de GPU falló en algunas configuraciones; el fallback a CPU es lento). Compruebe github.com/ollama/ollama para compatibilidad AMD actual.',
-            'vLLM: soporte completo para AMD ROCm desde v0.6.0, pero la configuración requiere instalar drivers manualmente. Funciona bien una vez superada la fase de instalación.',
-            'Text Generation WebUI: excelente soporte para AMD vía ROCm. La mejor experiencia de usuario en AMD.',
-            'Llama.cpp: soporte nativo para AMD (backend HIP). Rendimiento sólido. El camino recomendado en AMD.',
-            'Coste de configuración: planifica 5-10 horas de depuración de drivers ROCm, compilación de HIPCC y compatibilidad de kernel.',
-            'Veredicto (abril 2026): usa AMD solo si ya tienes hardware AMD o encuentras una oferta de segunda mano excelente (~$320 por una tarjeta de 16GB). Si no, NVIDIA CUDA sigue siendo más sencillo.',
-          ],
-        },
-        'which-amd': {
-          title: '¿Qué GPUs AMD realmente valen la pena?',
-          items: [
-            '**RX 6800 XT** (16GB GDDR6): la reina del valor en AMD. Lanzada en 2020. Sigue siendo sólida para inferencia de 7B-22B. De segunda mano: ~$320-400.',
-            '**RX 6900 XT** (16GB GDDR6): marginalmente más rápida que la 6800 XT. Poco común. De segunda mano: ~$420-500. El aumento de precio no merece la pena.',
-            '**RX 7900 XT** (20GB GDDR6): arquitectura RDNA 3 más nueva. Un 20% más rápida que la 6800 XT. De segunda mano: ~$700-850. Buena para 70B Q4.',
-            '**RX 7900 XTX** (24GB GDDR6): la GPU AMD de consumo de gama alta. 24GB de VRAM es un punto de inflexión para modelos de 70B. De segunda mano: ~$800-1,000. Velocidad comparable a la RTX 4090.',
-            '**Radeon Pro W6800 (32GB)**: tarjeta de nivel empresarial, más barata de segunda mano (~$200-300). Más lenta, pero los 32GB son excelentes para 70B Q8. Opción de nicho.',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: '¿Cómo se comparan las GPUs AMD con RTX en precio y rendimiento?',
-          rows: [
-            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1,952', 'Precio (2ª mano)': '~$320-400', 'Rend./$ vs. RTX': '+25%', 'RTX equivalente': 'RTX 3080 (más lenta)' },
-            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', 'Precio (2ª mano)': '~$700-850', 'Rend./$ vs. RTX': '+20%', 'RTX equivalente': 'RTX 4080 (similar)' },
-            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', 'Precio (2ª mano)': '~$800-1,000', 'Rend./$ vs. RTX': '+15%', 'RTX equivalente': 'RTX 4090 (velocidad similar)' },
-            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', 'Precio (2ª mano)': '~$420-500', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': '~$2,000-2,600', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
-        
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-es.webp',
-          imageCaption: 'La RX 7900 XTX iguala la velocidad y la VRAM de la RTX 4090 por aproximadamente el 60% del precio — la contrapartida es la fricción de configuración de ROCm.',
-        },
-        'rocm-setup': {
-          title: '¿Cuál es la fricción de configuración de ROCm para AMD?',
-          content: [
-            '**1. Instala los drivers AMD ROCm: `apt-get install rocm-dkms` (Ubuntu). En Windows, usa el instalador .exe manual. Tarda unos 30 min.**',
-            '2. Verifica el compilador HIP: `hipcc --version`. A menudo falla en el primer intento. Depura la compatibilidad de kernel para tu GPU.',
-            '3. Instala HIPCC (el compilador HIP-to-C++ de AMD): `apt-get install hip-runtime-amd`. Otra cadena de dependencias.',
-            '4. Prueba con un LLM pequeño: ejecuta inferencia para verificar que la aceleración por GPU funciona. El fallback a CPU es frecuente.',
-            '5. Soluciona incompatibilidades de versión de drivers: ROCm v5.7 funciona con el kernel 5.15 pero no con 6.x. Consume 2-4 horas de depuración.',
-            'NVIDIA CUDA en comparación: `nvidia-cuda-toolkit` → un apt-get, acceso instantáneo a la GPU. AMD requiere entre 5 y 10 veces más fricción.',
-          ],
-        },
-        'software-support': {
-          title: '¿Puedes ejecutar Ollama y vLLM en AMD?',
-          content: [
-            '**Ollama en AMD (según nuestras pruebas de abril de 2026, Ollama v0.3.x, ROCm 6.x):** el soporte ROCm fue inconsistente en nuestras pruebas — la detección de GPU falló en algunas configuraciones, el fallback a CPU es lento. Compruebe la lista de compatibilidad AMD actualizada en github.com/ollama/ollama antes de comprometerse.',
-            '**vLLM en AMD:** soporte completo para ROCm desde v0.6.0. Funciona bien, pero requiere configuración manual de drivers ROCm/HIP. Buena opción si superas la fase de instalación.',
-            '**Text Generation WebUI:** excelente soporte para AMD ROCm. La mejor experiencia de usuario en AMD. Recomendado.',
-            '**Llama.cpp:** backend HIP nativo. Rendimiento sólido. El camino AMD más sencillo. Recomendado.',
-            '**LM Studio:** solo NVIDIA. Sin soporte para AMD.',
-            'A partir de abril de 2026: vLLM + llama.cpp son tus opciones en AMD. Ollama no es fiable.',
-          ],
-        
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-es.webp',
-          imageCaption: 'llama.cpp y Text Generation WebUI son las rutas fiables para AMD en 2026 — el soporte ROCm de Ollama sigue siendo inconsistente.',
-        },
-        'when-buy-amd': {
-          title: '¿Cuándo deberías comprar AMD en lugar de NVIDIA?',
-          content: [
-            'Compra AMD si:',
-            '- Encuentras una RX 7900 XTX de segunda mano por menos de $450 (infravalorada frente al valor de la RTX 4090).',
-            '- Ya tienes hardware AMD y quieres mantener coherencia en el ecosistema.',
-            '- Estás construyendo un clúster y priorizas el rendimiento por dólar sobre la facilidad de configuración.',
-            'No compres AMD si:',
-            '- Quieres una experiencia plug-and-play. NVIDIA CUDA es más rápido de poner en marcha.',
-            '- Necesitas Ollama. El soporte AMD ROCm para Ollama ha sido inconsistente en pruebas comunitarias (en 2026).',
-            '- Tienes poco tiempo. La depuración de ROCm puede consumir más de 10 horas.',
-          ],
-        },
-        'mistakes': {
-          title: 'Errores comunes al adoptar AMD',
-          items: [
-            'Comprar una RX 6700 (12GB) creyendo que equivale a una 3060 12GB — es un 20% más lenta y a menudo difícil de encontrar de segunda mano.',
-            'Asumir que ROCm «simplemente funciona» como CUDA — planifica entre 5 y 10 horas de solución de problemas de compatibilidad de drivers y kernel.',
-            'Usar Ollama con AMD esperando una integración fluida — el soporte ROCm fue inconsistente en nuestras pruebas de abril de 2026 (Ollama v0.3.x, ROCm 6.x); llama.cpp o vLLM son mejores opciones.',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: 'Próximos pasos',
-          items: [
-            '[Mejores GPU de bajo costo para LLM local](/es/local-llms/best-budget-gpus-local-llm) — ¿Presupuesto ajustado? Las mejores GPU calidad-precio →',
-            '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple o CPU — ¿qué plataforma te conviene? →',
-            '[¿Cuánta VRAM necesito?](/es/local-llms/how-much-vram-local-llm) — Ajusta la VRAM de tu GPU al tamaño del modelo →',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: 'Preguntas frecuentes',
-          faqs: [
-            { q: '¿Debo comprar la AMD RX 6800 XT o la NVIDIA RTX 3080 para LLMs locales?', a: 'RTX 3080 si valoras la simplicidad (CUDA funciona sin problemas). RX 6800 XT si quieres un 25% más de valor y no te importan 5-10 horas de configuración de ROCm.' },
-            { q: '¿La AMD RX 7900 XTX es mejor que la RTX 4090?', a: 'Velocidad similar, misma VRAM (24GB). La RX 7900 XTX es $1,000-1,800 más barata de segunda mano ($800-1,000 vs. $2,000-2,600 — el precio de la RTX 4090 usada subió mucho tras su descontinuación por NVIDIA en 2026). La configuración de ROCm es el contrapeso.' },
-            { q: '¿Puedo usar GPUs AMD con Ollama?', a: 'Técnicamente sí. En nuestras pruebas de abril de 2026 (Ollama v0.3.x, ROCm 6.x), el soporte ROCm fue inconsistente — la detección de GPU falló en algunas configuraciones y el fallback a CPU fue frecuente. Compruebe la lista de compatibilidad AMD actualizada en github.com/ollama/ollama; para inferencia AMD fiable hoy, vLLM o llama.cpp son opciones más seguras.' },
-            { q: '¿Cuál es el mejor camino AMD para LLMs locales en 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos tienen buen soporte para AMD. Evita Ollama.' },
-            { q: '¿Necesito Ubuntu para AMD ROCm, o Windows funciona también?', a: 'El soporte en Windows existe (HIP on Windows), pero es más reciente y menos estable. Ubuntu es el camino recomendado.' },
-            { q: '¿Es la RX 6700, la 6700 XT o la 6750 buena para modelos de 7B?', a: 'La RX 6700 (12GB) funciona, pero es un 20% más lenta que la RX 6800 XT. La RX 6700 XT (12GB, misma VRAM) tiene unos relojes ~15% más rápidos que la versión no-XT, pero sigue por detrás de la 6800 XT. Cómprala solo si cuesta menos de $250. Si no, apuesta por la 6800 XT.' },
-            { q: '¿Merece la pena la RX 6900 XT para LLMs locales?', a: 'No demasiado. La RX 6900 XT (16GB) es solo marginalmente más rápida que la RX 6800 XT, es más rara de segunda mano y cuesta $420-500 frente a $320-400 de la 6800 XT. El sobrecoste no compensa -- compra la 6800 XT en su lugar.' },
-            { q: '¿Es buena la AMD Radeon 680M para ejecutar LLMs locales?', a: 'La Radeon 680M es gráficos integrados dentro de las APU móviles Ryzen 6000/7000 -- no es el mismo producto que la RX 6800M o la RX 6800 XT, que son tarjetas discretas. No tiene VRAM dedicada, sino que comparte la RAM del sistema, por lo que solo es viable para modelos pequeños cuantizados (aproximadamente 3B de parámetros o menos en Q4) y será notablemente más lenta que cualquier GPU discreta de esta guía. Para un uso serio de LLMs locales, una tarjeta discreta como la RX 6800 XT es la mejor opción.' },
-            { q: '¿Puedo combinar GPUs AMD y NVIDIA en un mismo sistema?', a: 'Teóricamente sí, pero la gestión es una pesadilla. Cada GPU necesita su propio runtime CUDA/HIP. No se recomienda.' },
-          ],
-        },
-        'relatedReading': {
-          title: 'Lecturas relacionadas',
-          items: [
-            '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm)',
-            '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms)',
-            '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Text Generation WebUI vs vLLM vs Llama.cpp](/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
-            '[Laptop vs Desktop para LLMs locales](/es/local-llms/laptop-vs-desktop-local-llm) — Comparación de coste y rendimiento entre portátil y sobremesa para IA.',
-          ],
-        },
-        'sources': {
-          title: 'Fuentes',
-          items: [
-            'Documentación de AMD ROCm y GitHub: compilador HIP, matriz de compatibilidad de drivers, ejemplos de inferencia con LLMs',
-            'vLLM GitHub: implementación del backend AMD/ROCm y estado de soporte (v0.6.0+)',
-            'Llama.cpp GitHub: backend HIP para soporte de GPUs AMD',
-            'Las GPUs AMD ofrecen buenas velocidades en tokens por segundo, pero la velocidad por sí sola no determina la calidad de las respuestas. Lo que le preguntas al modelo importa tanto como la rapidez de respuesta: [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) explica cómo estructurar solicitudes más largas dentro de los límites de memoria de la GPU.',
-          ],
-        },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: 'How Do AMD GPUs Compare to NVIDIA on VRAM and Price?',
+        columns: [
+          'GPU',
+          'VRAM',
+          'Bandwidth',
+          'Typical price',
+          'Main backend',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 GB',
+            Bandwidth: '512 GB/s',
+            'Typical price': '~$380–410 used',
+            'Main backend': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 GB',
+            Bandwidth: '640 GB/s',
+            'Typical price': '~$820–930 new',
+            'Main backend': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 GB',
+            Bandwidth: '800 GB/s',
+            'Typical price': 'Not re-checked',
+            'Main backend': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 GB',
+            Bandwidth: '960 GB/s',
+            'Typical price': '~$900–1,250 used',
+            'Main backend': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 GB',
+            Bandwidth: '640 GB/s',
+            'Typical price': '$1,299 list; ~$1,400–1,900 street',
+            'Main backend': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 GB',
+            Bandwidth: '936 GB/s',
+            'Typical price': '~$1,000–1,400 used',
+            'Main backend': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 GB',
+            Bandwidth: '1,008 GB/s',
+            'Typical price': '~$2,250 used',
+            'Main backend': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 GB',
+            Bandwidth: '1,792 GB/s',
+            'Typical price': '~$3,700–4,300 new',
+            'Main backend': 'CUDA, Vulkan',
+          },
+        ],
+        note: 'VRAM and bandwidth are vendor specifications ([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). Prices are US asking-price snapshots from public price trackers and reviews (Sept–Oct 2026), not PromptQuorum measurements; check current sold listings before buying.',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
+        imageCaption: 'AMD vs NVIDIA for local LLMs: VRAM, memory bandwidth and typical price (US, Sept–Oct 2026 snapshots).',
       },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
-        name: 'Mejores GPUs AMD para LLMs locales',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'La AMD RX 6800 XT (16GB, ~$320-400 de segunda mano) y la RX 7900 XTX (24GB, ~$800-1,000 de segunda mano) son las únicas opciones viables para LLMs locales.' },
-          { '@type': 'ListItem', position: 2, name: 'Rendimiento por dólar: AMD es un 20-30% más barata que NVIDIA, pero la fricción de software cuesta entre 5 y 10 horas de configuración.' },
-          { '@type': 'ListItem', position: 3, name: 'Ollama: soporte AMD limitado (el path de ROCm fue inconsistente en nuestras pruebas de abril de 2026, Ollama v0.3.x / ROCm 6.x; el fallback a CPU es lento). Compruebe github.com/ollama/ollama para compatibilidad AMD actual.' },
-          { '@type': 'ListItem', position: 4, name: 'vLLM: soporte completo para AMD ROCm desde v0.6.0, pero la configuración requiere instalar drivers manualmente.' },
-          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: excelente soporte para AMD vía ROCm. La mejor experiencia de usuario en AMD.' },
-          { '@type': 'ListItem', position: 6, name: 'Llama.cpp: soporte nativo para AMD (backend HIP). Rendimiento sólido. El camino recomendado en AMD.' },
-          { '@type': 'ListItem', position: 7, name: 'Coste de configuración: planifica 5-10 horas de depuración de drivers ROCm, compilación de HIPCC y compatibilidad de kernel.' },
-          { '@type': 'ListItem', position: 8, name: 'Veredicto (abril 2026): usa AMD solo si ya tienes hardware AMD o encuentras una oferta de segunda mano excelente. Si no, NVIDIA CUDA sigue siendo más sencillo.' },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'How Fast Are AMD GPUs Compared to NVIDIA for LLM Inference?',
+        content: [
+          '**Token generation speed tracks memory bandwidth more than TFLOPS, and AMD\'s top cards sit close to NVIDIA\'s older flagships on that measure.** The RX 7900 XTX (960 GB/s) is near the RTX 3090 (936 GB/s) and below the RTX 4090 (1,008 GB/s) and RTX 5090 (1,792 GB/s).',
+          'Prompt processing (prefill) is where NVIDIA leads more clearly. In a community llama.cpp comparison (llama.cpp discussion #19890, repeated by third-party reviews), the RTX 5090 was about 2.6–3.4× faster than the Radeon AI PRO R9700 at prefill and about 1.5× faster at generation on the same model. This is developer-reported data, not a PromptQuorum measurement.',
+          'Backend choice changes results: Vulkan and ROCm (HIP) trade wins depending on the model, card and driver version. llama.cpp can be built with both, so benchmark both on your own card before settling.',
+          'In practice, expect AMD to be competitive on generation speed per GB/s of bandwidth, slower on long prompts, and less polished on software.',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: 'How Hard Is ROCm Setup in 2026?',
+        content: [
+          '**Vulkan needs only a graphics driver; ROCm needs a supported GPU, Linux distribution and kernel.** Check these before you buy:',
+          '1. **Match your card to AMD\'s matrix.** The Radeon ROCm 7.2.1 matrix lists the RX 9070 XT, RX 9060 XT, RX 7900 XTX, RX 7900 XT, RX 7900 GRE, RX 7800 XT and Radeon AI PRO R9700 on Ubuntu 24.04.4, Ubuntu 22.04.5 and RHEL 10.1.',
+          '2. **Check Ollama\'s list too.** Ollama\'s docs add the RX 6800 XT, 6900 XT and other RX 6000 cards for Linux ROCm, and name Ryzen AI Max+ 395. Unlisted cards can try `HSA_OVERRIDE_GFX_VERSION` on Linux; it is not supported on Windows.',
+          '3. **Install the ROCm v7 stack** with AMD\'s `amdgpu-install` utility (Linux). Ollama requires ROCm v7 on Linux.',
+          '4. **Verify detection** with `rocminfo`: your GPU should appear as an agent (for example gfx1100 for the RX 7900 XTX, gfx1201 for the RX 9070 XT).',
+          '5. **On Windows,** Ollama\'s ROCm list names RX 7000-series cards. Other cards, including the RX 9070 series, are not on that list, so use the Vulkan backend.',
+          'The newest ROCm release is 7.14.0 (16 July 2026), which moved ROCm to the modular TheRock build system. AMD\'s Radeon compatibility page covered releases through 7.2.1 when checked, so match your card to the matrix for the version you install.',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: 'Which Local LLM Tools Work on AMD GPUs?',
+        content: [
+          '**Ollama:** ROCm v7 on Linux for the cards listed above; on Windows, RX 7000-series cards through ROCm. [Vulkan](https://docs.ollama.com/gpu) is enabled by default when its backend is installed and can be disabled with `OLLAMA_VULKAN=0`. The current release is v0.40.10 (23 October 2026), which includes a Linux ROCm build.',
+          '**llama.cpp:** builds for AMD with HIP (ROCm) or Vulkan (`-DGGML_VULKAN=1`). Both backends can be compiled together and selected per device with `--device`. Most front ends are built on it.',
+          '**LM Studio:** supports AMD GPUs through llama.cpp runtimes — Vulkan and ROCm. Vulkan is the usual fallback when the ROCm runtime does not detect a card. (An earlier version of this page said LM Studio was NVIDIA-only; that is wrong.)',
+          '**vLLM:** ships ROCm builds (the ROCm 7.14.0 release lists vLLM 0.23.0). It targets serving and batching; check vLLM\'s documentation for your exact GPU target before relying on it.',
+          '**Rule of thumb:** use Ollama or LM Studio for ease, llama.cpp for control, vLLM for multi-user serving.',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-en.webp',
+        imageCaption: 'Local LLM tools on AMD GPUs: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: 'How Do You Run Quantized LLM Inference on an AMD GPU?',
+        numberedItems: [
+          '**Size the model to your VRAM.** A Q4_K_M file uses roughly 0.6 GB per billion parameters (about 9 GB for 14B, 20 GB for 32B; estimates). Leave 2–4 GB for the context cache.',
+          '**Pick a backend.** Vulkan is the quickest start (graphics driver only). ROCm (HIP) is the better path on supported Linux setups.',
+          '**Install a runtime.** On Linux, install ROCm v7 with `amdgpu-install` first for the ROCm path, then install Ollama (`curl -fsSL https://ollama.com/install.sh | sh`) or LM Studio.',
+          '**Run a quantized model.** For example `ollama run qwen3:14b`, or with llama.cpp `llama-server -m model.gguf -ngl 99` to offload all layers to the GPU.',
+          '**Confirm the GPU is used.** `ollama ps` should show 100% GPU; `rocm-smi` shows VRAM in use. If it reports CPU, recheck the ROCm install or switch to Vulkan.',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: 'When Should You Buy AMD Over NVIDIA for Local LLMs?',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Buy AMD when you want 24–32 GB of VRAM at a lower price than NVIDIA\'s newest cards; skip it if you depend on CUDA-only tools or want zero setup.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD is a good deal when VRAM is what you are short of, and the software path (Linux ROCm or Vulkan) suits you. If you are new to local LLMs and want it to just work, start with NVIDIA.',
+          },
+        ],
+        content: [
+          'Buy AMD if:',
+          '- You want 32 GB on one card for less money: the Radeon AI PRO R9700 costs about one-third to one-half of an RTX 5090.',
+          '- You already own a supported Radeon card, or want a card that also games well.',
+          '- You run Linux or are happy with Vulkan, and your tools (Ollama, llama.cpp, LM Studio) already support AMD.',
+          'Buy NVIDIA if:',
+          '- You need CUDA-only tools, training or fine-tuning stacks, or the fastest prompt processing.',
+          '- You compare used 24 GB cards: a used RTX 3090 costs about the same as a used RX 7900 XTX, so CUDA support can decide it.',
+          '- You want the least setup time.',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: 'AMD Instinct or NVIDIA Data-Center GPUs: Which Is Better for LLMs?',
+        content: [
+          '**AMD Instinct (MI300X, MI350X) competes with NVIDIA\'s data-center GPUs and is bought for servers, not desktops.** Ollama\'s ROCm list includes Instinct cards, and ROCm was built around them, so support is broader than for consumer Radeon.',
+          'The MI300X carries 192 GB of HBM3 memory per accelerator (AMD specification), which suits very large models in one box. For a single-user machine, Radeon RX or Radeon AI PRO cards are the relevant AMD choice.',
+          'For server and cloud decisions, see [Enterprise GPU Server Buying Guide](/local-llms/enterprise-gpu-server-buying-guide-2026) and [Cloud GPU Rental Comparison](/local-llms/cloud-gpu-rental-comparison-2026).',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'What Are the Most Common AMD Adoption Mistakes?',
+        items: [
+          'Assuming 24 GB runs 70B models: a 70B model at Q4 needs about 40 GB or more, so a single 24 GB card tops out around 30–35B. Plan two cards or a 32 GB R9700 pair for 70B.',
+          'Buying a card ROCm does not support: check AMD\'s matrix and Ollama\'s list first. RX 6000 cards are not on AMD\'s current Radeon matrix.',
+          'Skipping Vulkan: if ROCm does not detect your card, try the Vulkan backend before concluding the GPU cannot be used.',
+          'Trusting asking prices: GPU and memory prices moved noticeably during 2026. Compare sold listings, not listing prices.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Next steps',
+        items: [
+          '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — On a budget? Best value GPUs for LLM inference →',
+          '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD vs Apple vs CPU — which platform fits your workflow? →',
+          '[How Much VRAM Do I Need?](/local-llms/how-much-vram-local-llm) — Match your GPU VRAM to model size →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'How Do Regional Data Laws Affect the AMD vs NVIDIA Decision?',
+        content: [
+          '**The GPU vendor does not change your data-protection duties; running inference locally does.** On-device inference keeps prompts and documents on your own hardware, which can reduce cross-border transfer exposure under the EU GDPR, Japan\'s APPI, and China\'s PIPL and Data Security Law. Compliance still requires a lawful basis, retention rules and breach procedures, so get a formal review for regulated data.',
+          'Export-control rules can restrict high-end accelerators from both AMD and NVIDIA in some markets. Check current rules for your country before importing or buying.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Frequently Asked Questions',
+        faqs: [
+          {
+            q: 'Are AMD GPUs good for running local LLMs?',
+            a: 'Yes, with caveats. AMD cards such as the RX 7900 XTX (24 GB) and Radeon AI PRO R9700 (32 GB) run quantized LLMs through ROCm or Vulkan in Ollama, LM Studio and llama.cpp. NVIDIA CUDA still has broader software support and faster prompt processing, so AMD fits best when VRAM per dollar matters.',
+          },
+          {
+            q: 'What is the best AMD GPU for local LLMs?',
+            a: 'The RX 7900 XTX is the best all-round AMD card for local LLMs: 24 GB of VRAM, 960 GB/s of bandwidth, and support in AMD\'s ROCm 7.2.1 matrix and Ollama. For more VRAM per card, the Radeon AI PRO R9700 offers 32 GB; for 7B–14B models, the RX 9070 XT (16 GB) is enough.',
+          },
+          {
+            q: 'AMD vs NVIDIA for local LLMs: which should I buy?',
+            a: 'Buy NVIDIA if you want CUDA compatibility and the least setup. Buy AMD if you want more VRAM per dollar, mainly the 32 GB R9700 against the RTX 5090. A used RX 7900 XTX costs about the same as a used RTX 3090, so there the choice comes down to software.',
+          },
+          {
+            q: 'Does Ollama work with AMD GPUs?',
+            a: 'Yes. Ollama requires the ROCm v7 driver on Linux and lists the RX 9070 XT, RX 7900 XTX, RX 6800 XT, Radeon AI PRO R9700 and others. On Windows its ROCm list covers RX 7000-series cards, and Vulkan is enabled by default when its backend is installed.',
+          },
+          {
+            q: 'Does LM Studio support AMD GPUs?',
+            a: 'Yes. LM Studio runs AMD GPUs through llama.cpp runtimes, either Vulkan or ROCm. If the ROCm runtime does not detect your card, switch the runtime to Vulkan. Earlier versions of this page wrongly said LM Studio was NVIDIA-only.',
+          },
+          {
+            q: 'How do I run quantized LLM inference on an AMD GPU?',
+            a: 'Pick a quantized model that fits your VRAM (Q4_K_M is roughly 0.6 GB per billion parameters), install Ollama or LM Studio, and use Vulkan or ROCm. On Linux, install ROCm v7 with amdgpu-install, run the model, then confirm GPU use with ollama ps or rocm-smi.',
+          },
+          {
+            q: 'RX 9070 XT or RX 7900 XTX for local LLMs?',
+            a: 'For local LLMs the RX 7900 XTX is the better choice because 24 GB fits models up to about 30–35B at Q4, while the RX 9070 XT\'s 16 GB tops out around 14B–24B. The RX 9070 XT is newer and cheaper, so choose it if 16 GB is enough.',
+          },
+          {
+            q: 'What is the best AMD GPU under $500?',
+            a: 'The RX 6800 XT (16 GB) at about $380–410 used is the best AMD value under $500. It runs 7B–14B models at Q4–Q8, but it is not on AMD\'s current Radeon ROCm matrix, so plan on Ollama\'s Linux ROCm path or Vulkan.',
+          },
+          {
+            q: 'Is the Radeon AI PRO R9700 worth it for local AI?',
+            a: 'Yes if you need 32 GB on one card. It lists at $1,299 against roughly $3,700–4,300 for an RTX 5090, though reported street prices are higher and prompt processing is slower. Two R9700 cards give 64 GB for 70B models at Q4.',
+          },
+          {
+            q: 'Do I need Linux for AMD ROCm, or does Windows work?',
+            a: 'Linux is the better-supported ROCm path: AMD\'s matrix lists Ubuntu 24.04.4, Ubuntu 22.04.5 and RHEL 10.1. On Windows, Ollama\'s ROCm list covers RX 7000-series cards, and other cards use the Vulkan backend.',
+          },
+          {
+            q: 'Which is better for LLMs, AMD Instinct or NVIDIA GPUs?',
+            a: 'Instinct (MI300X, MI350X) competes with NVIDIA\'s data-center GPUs and is bought for servers; the MI300X has 192 GB of HBM3. For a single desktop, Radeon or Radeon AI PRO cards are the relevant AMD options, and NVIDIA\'s CUDA ecosystem is still broader.',
+          },
+          {
+            q: 'Is AMD good for deep learning and machine learning, not just LLMs?',
+            a: 'For inference, yes. ROCm ships PyTorch builds (the ROCm 7.14.0 release lists PyTorch 2.12.0). For training and research code that assumes CUDA, NVIDIA still has the broader ecosystem, so check your framework\'s AMD support before buying.',
+          },
+          {
+            q: 'Is a Ryzen AI Max+ 395 mini PC better than a discrete AMD GPU?',
+            a: 'It depends on model size. Ryzen AI Max+ 395 systems offer up to 128 GB of unified memory but only 256 GB/s of bandwidth, so they suit large mixture-of-experts models, while a discrete card generates tokens faster on models that fit its VRAM.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+          '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
+          '[Best AMD Mini PCs for Local LLMs](/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[Laptop vs Desktop for Local LLMs](/local-llms/laptop-vs-desktop-local-llm) — Desktop vs laptop cost and performance comparison for AI.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Ollama GPU documentation](https://docs.ollama.com/gpu): AMD ROCm v7 requirement, supported Radeon, Radeon AI PRO, Radeon PRO, Ryzen AI and Instinct cards, Vulkan backend',
+          '[Ollama releases](https://github.com/ollama/ollama/releases): v0.40.10, 23 October 2026',
+          '[AMD ROCm on Radeon and Ryzen — Linux compatibility](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html): ROCm 7.2.1 supported Radeon GPUs and distributions',
+          '[ROCm releases](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0): ROCm 7.14.0, 16 July 2026, framework versions',
+          '[llama.cpp build documentation](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md): HIP and Vulkan backends',
+          'AMD product specifications: [RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          'Price snapshots (US, Sept–Oct 2026): public GPU price trackers and third-party reviews; prices are asking prices and change quickly',
+          'AMD GPUs deliver strong token/second speeds, but speed alone doesn\'t determine response quality. What you ask the model matters as much as how fast it responds: [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) covers how to structure longer requests within GPU memory limits.',
         ],
       },
     },
-    ar: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
+  },
+  es: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
+      },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'GPU Buying Guides',
+    title: 'Mejor GPU AMD para LLMs locales e inferencia de IA',
+    seoTitle: 'Mejor GPU AMD para LLM locales 2026: 7900 XTX o 9070 XT',
+    intro: '**La mejor GPU AMD para LLMs locales en 2026 es la Radeon RX 7900 XTX (24 GB) para modelos de clase 30B, la RX 9070 XT (16 GB) para modelos de 7B–14B y la Radeon AI PRO R9700 (32 GB) cuando necesitas la máxima VRAM por tarjeta.** Las tres figuran en la lista de compatibilidad de Ollama con ROCm v7 en Linux, y llama.cpp también las ejecuta con su backend Vulkan. NVIDIA CUDA sigue siendo el camino con menos esfuerzo, así que elige AMD por la VRAM por dólar o porque ya tienes la tarjeta.',
+    metaDescription: 'Mejor GPU AMD para IA y LLMs locales: RX 7900 XTX (24 GB), RX 9070 XT (16 GB) y Radeon AI PRO R9700 (32 GB), con ROCm, Vulkan y AMD frente a NVIDIA.',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-es.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**La mejor GPU AMD para LLMs locales en 2026 es la Radeon RX 7900 XTX (24 GB) para modelos de clase 30B, la RX 9070 XT (16 GB) para modelos de 7B–14B y la Radeon AI PRO R9700 (32 GB) cuando necesitas la máxima VRAM por tarjeta.**',
+    quickAnswerTop: {
+      question: '¿Qué GPU AMD es la mejor para LLMs locales e inferencia de IA?',
+      answer: 'La RX 7900 XTX (24 GB) es la mejor AMD en general para LLMs locales, la RX 9070 XT (16 GB) es la mejor tarjeta reciente para modelos de 7B–14B y la Radeon AI PRO R9700 (32 GB) ofrece más VRAM por tarjeta. Ollama lista las tres con ROCm v7 en Linux; Vulkan sirve como alternativa sin ROCm. NVIDIA CUDA sigue siendo más sencillo, así que AMD encaja cuando importa la VRAM por dólar.',
+      bullets: [
+        'RX 7900 XTX: 24 GB, 960 GB/s, unos $900–1,250 de segunda mano (rastreadores de precios, sept.–oct. 2026)',
+        'RX 9070 XT: 16 GB, 640 GB/s, unos $820–930 nueva — cabe un modelo de 14B en Q4–Q6',
+        'Radeon AI PRO R9700: 32 GB, precio de lista de AMD $1,299; los precios de calle reportados son más altos',
+        'Ollama necesita ROCm v7 en Linux; Vulkan está activado por defecto cuando su backend está instalado',
       ],
-      freshness_tier: 'semi_annual',
-      theme: 'GPU Buying Guides',
-      title: 'أفضل كروت رسوميات ⁨AMD⁩ لنماذج ⁨LLM⁩ المحلية',
-      seoTitle: 'كروت ⁨AMD⁩ لنماذج ⁨LLM⁩ المحلية: ⁨RX 7900 XTX⁩ مقابل ⁨RTX⁩',
-      intro: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.** نضج AMD ROCm (HIP)، رغم أن طبقات التوافق تضيف احتكاكًا. ولا يزال NVIDIA CUDA المسار الأبسط لنماذج LLM المحلية. استخدم AMD فقط إن وجدت عرضًا مستعملًا رائعًا أو كنت تملك بالفعل عتاد AMD.',
-      metaDescription: '⁨RX 7900 XTX⁩ بسعة ⁨24GB VRAM⁩ توازي ⁨RTX 4090⁩ بسعر أقل بـ ⁨300⁩ دولار. مقارنة ⁨ROCm⁩ مقابل ⁨CUDA⁩، دعم ⁨Ollama⁩ و⁨llama.cpp⁩، ومتى يستحق ⁨AMD⁩ الاختيار في ⁨2026⁩.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.webp',
-      publishDate: '2026-04-05',
-      leadAnswerBlock: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.**',
-      audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات عملهم مع نماذج LLM المحلية',
-      readTime: '7 دقائق للقراءة',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'AMD GPU',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': 'أفضل كروت رسوميات AMD لنماذج LLM المحلية 2026: RX 7900 XTX',
-        'description': 'قارن AMD RX 7900 XTX و6800 XT مقابل NVIDIA RTX. إعداد ROCm، الأداء في vLLM، تحليل التكلفة لكل TFLOP. متى تختار AMD على CUDA.',
-        'url': 'https://www.promptquorum.com/ar/local-llms/best-amd-gpus-local-llm',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-09-01',
-        'inLanguage': 'ar',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'about': [
-          { '@type': 'Thing', 'name': 'AMD GPU' },
-          { '@type': 'Thing', 'name': 'ROCm' },
-          { '@type': 'Thing', 'name': 'GPU VRAM' },
-          { '@type': 'Thing', 'name': 'الاستدلال المحلي لـ LLM' },
+      updatedDate: '2026-10-23',
+    },
+    audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan sus flujos de trabajo de LLMs locales',
+    readTime: '9 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: 'Puntos clave',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: '¿Qué GPUs AMD merece la pena comprar para LLMs locales?',
+        anchor: '#which-amd',
+      },
+      {
+        label: '¿Cómo se comparan las GPUs AMD con NVIDIA en VRAM y precio?',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: '¿Qué tan rápidas son las GPUs AMD frente a NVIDIA?',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: '¿Qué tan difícil es configurar ROCm en 2026?',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: '¿Qué herramientas de LLM locales funcionan con GPUs AMD?',
+        anchor: '#software-support',
+      },
+      {
+        label: '¿Cómo ejecutar inferencia cuantizada de LLM en una GPU AMD?',
+        anchor: '#run-quantized',
+      },
+      {
+        label: '¿Cuándo conviene comprar AMD en lugar de NVIDIA?',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: '¿AMD Instinct o GPUs de centro de datos de NVIDIA?',
+        anchor: '#instinct',
+      },
+      {
+        label: 'Preguntas frecuentes',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La RX 7900 XTX (24 GB), la RX 9070 XT (16 GB) y la Radeon AI PRO R9700 (32 GB) son las GPUs AMD que conviene comprar para LLMs locales en 2026, y la documentación de Ollama las lista las tres con ROCm v7 en Linux.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Las tarjetas AMD ofrecen mucha VRAM por el dinero, pero tienes que elegir bien el camino de software: ROCm en configuraciones Linux compatibles, o Vulkan cuando quieres que simplemente funcione. NVIDIA es la opción plug-and-play.',
+          },
         ],
-        'speakable': {
-          '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
-        },
-        'educationalLevel': 'Intermediate',
-        'proficiencyLevel': 'Intermediate',
+        items: [
+          '**Mejor AMD en general:** RX 7900 XTX — 24 GB GDDR6, 960 GB/s, unos $900–1,250 de segunda mano (rastreadores de precios, sept.–oct. 2026). Cabe un modelo de unos 30–35B en Q4; un modelo de 70B en Q4 necesita unos 40 GB o más, así que no cabe.',
+          '**Mejor tarjeta reciente:** RX 9070 XT — 16 GB, 640 GB/s, unos $820–930 nueva. Buena para modelos de 7B–14B en Q4–Q6.',
+          '**Más VRAM por tarjeta:** Radeon AI PRO R9700 — 32 GB, precio de lista de AMD $1,299; informes de terceros sitúan el precio de calle en torno a $1,400–1,900. Dos tarjetas dan 64 GB.',
+          '**Opción económica:** RX 6800 XT — 16 GB, unos $380–410 de segunda mano (precios de oferta, octubre 2026). Está en la lista ROCm de Ollama para Linux, pero no en la matriz ROCm 7.2.1 actual de AMD para Radeon.',
+          '**Ollama:** exige el driver ROCm v7 en Linux; en Windows su lista ROCm cubre las RX serie 7000, y Vulkan está activado por defecto cuando su backend está instalado (se desactiva con OLLAMA_VULKAN=0).',
+          '**LM Studio y llama.cpp:** ambos funcionan en AMD con backends Vulkan o ROCm (HIP). Vulkan solo necesita el driver gráfico, así que empieza por ahí si ROCm no detecta tu tarjeta.',
+          '**AMD frente a NVIDIA:** una RX 7900 XTX de segunda mano cuesta casi lo mismo que una RTX 3090 (24 GB) de segunda mano. La ventaja de precio más clara de AMD es la R9700 de 32 GB frente a la RTX 5090 (entre un tercio y la mitad de su precio), a cambio de un procesamiento de prompts más lento.',
+          '**Veredicto:** elige AMD cuando importa la VRAM por dólar y puedes usar Linux o Vulkan; elige NVIDIA para herramientas solo CUDA, entrenamiento y el menor esfuerzo de configuración. Los precios son de EE. UU. en USD; en tu país pueden variar por impuestos locales.',
+        ],
       },
-      faqSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        'inLanguage': 'ar',
-        'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': 'هل أشتري AMD RX 6800 XT أم NVIDIA RTX 3080 لنماذج LLM المحلية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3080 إن كنت تقدّر البساطة (CUDA يعمل دون مشاكل). RX 6800 XT إن أردت قيمة أكبر بنسبة 25% ولا تمانع 5-10 ساعات من إعداد ROCm.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل AMD RX 7900 XTX أفضل من RTX 4090؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 1,450-2,050 دولارًا مستعملة (450-550 دولارًا مقابل 2,000-2,600 دولار — ارتفع سعر RTX 4090 المستعملة بشدة بعد أن أوقفت NVIDIA إنتاجها في 2026). إعداد ROCm هو الثمن المقابل.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل يمكنني استخدام كروت رسوميات AMD مع Ollama؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'تقنيًا نعم. وفقاً لاختباراتنا في أبريل 2026 (Ollama v0.3.x، ROCm 6.x): كان دعم ROCm غير متسق في اختباراتنا — فشل اكتشاف GPU في بعض التكوينات والتراجع إلى المعالج كان متكرراً. راجع قائمة التوافق الحالية مع AMD على github.com/ollama/ollama قبل الالتزام؛ vLLM أو llama.cpp هما المسارات الأكثر أماناً للاستدلال على AMD اليوم.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'ما أفضل مسار AMD لنماذج LLM المحلية في 2026؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama.cpp (خلفية HIP) + Text Generation WebUI. كلاهما بدعم جيد لـ AMD. تجنّب Ollama.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل أحتاج Ubuntu لـ AMD ROCm، أم يعمل Windows أيضًا؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'الدعم في Windows موجود (HIP on Windows)، لكنه أحدث وأقل استقرارًا. Ubuntu هو المسار الموصى به.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل RX 6700 أو RX 6700 XT أو 6750 جيد لنماذج 7B؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. RX 6700 XT (12GB، نفس سعة VRAM) يمتلك سرعة معالجة أعلى بنحو 15% من نسخة non-XT، لكنه يبقى أبطأ من 6800 XT. اشترِ أيًّا منهما فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل تستحق RX 6900 XT الشراء لنماذج LLM المحلية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس فعلًا. RX 6900 XT (16GB) أسرع بشكل هامشي فقط من RX 6800 XT، وأندر مستعملة، وتكلف 350-400 دولار مقابل 300-350 دولارًا لـ 6800 XT. فارق السعر لا يستحق العناء -- اشترِ 6800 XT بدلًا منها.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل AMD Radeon 680M جيد لتشغيل نماذج LLM المحلية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Radeon 680M هو رسوميات مدمجة داخل معالجات Ryzen 6000/7000 المحمولة -- وهو ليس نفس منتج RX 6800M أو RX 6800 XT المنفصلين. لا يمتلك ذاكرة VRAM مخصصة، بل يشارك ذاكرة النظام (RAM) بدلًا من ذلك، لذا فهو مناسب فقط للنماذج الصغيرة المكمّمة (نحو 3B معامل أو أقل بصيغة Q4)، وسيعمل أبطأ بشكل ملحوظ من أي بطاقة رسوميات منفصلة في هذا الدليل. للاستخدام الجاد لنماذج LLM المحلية، بطاقة منفصلة مثل RX 6800 XT هي الخيار الأفضل.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل يمكنني الجمع بين كروت رسوميات AMD وNVIDIA في نظام واحد؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نظريًا نعم، لكن الإدارة كابوس. يحتاج كل GPU بيئة CUDA/HIP خاصة به. غير موصى به.' }
-          },
-        ]
+      'which-amd': {
+        id: 'which-amd',
+        title: '¿Qué GPUs AMD merece la pena comprar para LLMs locales?',
+        items: [
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): la AMD de consumo más potente para LLMs. Un modelo de 32B en Q4_K_M ocupa unos 20 GB, así que cabe con margen para el contexto. Figura en la matriz ROCm 7.2.1 de AMD y en la lista ROCm de Ollama para Linux y Windows. De segunda mano: unos $900–1,250.',
+          '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): la opción reciente de 16 GB, en la matriz ROCm 7.2.1 de AMD y en la lista ROCm de Ollama para Linux. Mueve con soltura modelos de 14B en Q4–Q6. Nueva: unos $820–930.',
+          '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): una tarjeta de estación de trabajo con la mayor VRAM que AMD vende en esta clase. Maneja modelos de 32B en Q4–Q6; dos tarjetas (64 GB) alojan un modelo de 70B en Q4. Precio de lista de AMD: $1,299; los precios de calle reportados son más altos.',
+          '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): aloja modelos de hasta unos 24–27B en Q4. Cómprala solo si es claramente más barata que una 7900 XTX de segunda mano; su precio no se volvió a comprobar en esta actualización.',
+          '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): la opción económica, unos $380–410 de segunda mano. Menos ancho de banda implica generación más lenta, y la matriz ROCm actual de AMD para Radeon ya no la incluye, así que cuenta con la vía ROCm de Ollama en Linux o con Vulkan.',
+          '**Mini PCs con Ryzen AI Max+ 395** (hasta 128 GB de memoria unificada, 256 GB/s): no son tarjetas gráficas, pero son la forma más barata de ejecutar modelos mixture-of-experts muy grandes en AMD. Los sistemas de 128 GB aparecían a unos $3,300–4,350 a finales de septiembre de 2026 (rastreadores de precios). Consulta [Mejores mini PCs AMD para LLMs locales](/es/local-llms/best-amd-mini-pc-local-llm-2026).',
+        ],
       },
-      toc: [
-        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
-        { label: 'أي كروت رسوميات AMD تستحق العناء فعلًا؟', anchor: '#key-takeaways' },
-        { label: 'كيف تقارن كروت AMD بكروت RTX من حيث السعر والسرعة؟', anchor: '#amd-vs-nvidia' },
-        { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'تضاهي AMD RX 7900 XTX بطاقة RTX 4090 بذاكرة 24 GB مقابل 450-550 دولاراً مستعملة، لكن إعداد برنامج تشغيل ROCm يضيف 5-10 ساعات من الاحتكاك مقارنة بـ NVIDIA CUDA.' },
-            { type: 'plain-terms', text: 'بطاقات AMD أشبه بسيارة قوية لكن بناقل حركة يدوي -- طاقة أكبر لكل دولار، لكن جهداً أكبر لتشغيلها. NVIDIA هي الناقل الأوتوماتيكي.' },
-          ],
-          items: [
-            'AMD RX 6800 XT (16GB، نحو 300-350 دولارًا مستعملة) وRX 7900 XTX (24GB، نحو 400-500 دولار مستعملة) هما الخياران الوحيدان القابلان للاستخدام لنماذج LLM المحلية. قد تتفاوت الأسعار حسب بلدك.',
-            'الأداء لكل دولار: AMD أرخص بنسبة 20-30% من NVIDIA، لكن احتكاك البرمجيات يكلف 5 إلى 10 ساعات من الإعداد.',
-            'Ollama: دعم AMD محدود (مسار ROCm كان غير متسق في اختباراتنا في أبريل 2026، Ollama v0.3.x / ROCm 6.x — فشل اكتشاف GPU في بعض التكوينات؛ التراجع إلى المعالج بطيء). راجع github.com/ollama/ollama للتوافق الحالي مع AMD.',
-            'vLLM: دعم كامل لـ AMD ROCm منذ الإصدار v0.6.0، لكن الإعداد يتطلب تثبيت برامج التشغيل يدويًا. يعمل جيدًا بعد تجاوز مرحلة التثبيت.',
-            'Text Generation WebUI: دعم ممتاز لـ AMD عبر ROCm. أفضل تجربة مستخدم على AMD.',
-            'Llama.cpp: دعم أصلي لـ AMD (خلفية HIP). أداء قوي. المسار الموصى به على AMD.',
-            'تكلفة الإعداد: خطّط لـ 5-10 ساعات من تصحيح برامج تشغيل ROCm، وتجميع HIPCC، وتوافق النواة.',
-            'الحكم (أبريل 2026): استخدم AMD فقط إن كنت تملك بالفعل عتاد AMD أو وجدت عرضًا مستعملًا ممتازًا (نحو 320 دولاراً لكرت بسعة 16GB). وإلا، يبقى NVIDIA CUDA أبسط.',
-          ],
-        },
-        'which-amd': {
-          title: 'أي كروت رسوميات AMD تستحق العناء فعلًا؟',
-          items: [
-            '**RX 6800 XT** (16GB GDDR6): ملكة القيمة في AMD. صدر في 2020. لا يزال قويًا لاستدلال 7B-22B. مستعمل: نحو 300-350 دولارًا.',
-            '**RX 6900 XT** (16GB GDDR6): أسرع هامشيًا من 6800 XT. غير شائع. مستعمل: نحو 350-400 دولار. زيادة السعر لا تستحق العناء.',
-            '**RX 7900 XT** (20GB GDDR6): بنية RDNA 3 أحدث. أسرع بنسبة 20% من 6800 XT. مستعمل: نحو 400-480 دولارًا. جيد لـ 70B Q4.',
-            '**RX 7900 XTX** (24GB GDDR6): كرت AMD الاستهلاكي الراقي. 24GB من VRAM نقطة تحول لنماذج 70B. مستعمل: نحو 450-550 دولارًا. سرعة مماثلة لـ RTX 4090.',
-            '**Radeon Pro W6800 (32GB)**: كرت بمستوى المؤسسات، أرخص مستعملًا (نحو 200-300 دولار). أبطأ، لكن 32GB ممتازة لـ 70B Q8. خيار متخصص.',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: 'كيف تُقارن كروت رسوميات AMD بـ RTX في السعر والأداء؟',
-          rows: [
-            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1,952', 'Precio (2ª mano)': 'نحو 300-350 دولارًا', 'Rend./$ vs. RTX': '+25%', 'RTX equivalente': 'RTX 3080 (أبطأ)' },
-            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', 'Precio (2ª mano)': 'نحو 400-480 دولارًا', 'Rend./$ vs. RTX': '+20%', 'RTX equivalente': 'RTX 4080 (متماثل)' },
-            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', 'Precio (2ª mano)': 'نحو 450-550 دولارًا', 'Rend./$ vs. RTX': '+15%', 'RTX equivalente': 'RTX 4090 (سرعة متماثلة)' },
-            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', 'Precio (2ª mano)': 'نحو 350-400 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': 'نحو 2,000-2,600 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
-        
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.webp',
-          imageCaption: 'تضاهي RX 7900 XTX سرعة وVRAM بطاقة RTX 4090 بنحو 60% من السعر — والمقابل هو صعوبة إعداد ROCm.',
-        },
-        'rocm-setup': {
-          title: 'ما احتكاك إعداد ROCm لـ AMD؟',
-          content: [
-            '**1. ثبّت برامج تشغيل AMD ROCm: `apt-get install rocm-dkms` (Ubuntu). في Windows، استخدم مثبّت .exe اليدوي. يستغرق نحو 30 دقيقة.**',
-            '2. تحقق من مُجمِّع HIP: `hipcc --version`. غالبًا ما يفشل في المحاولة الأولى. صحّح توافق النواة لكرتك.',
-            '3. ثبّت HIPCC (مُجمِّع HIP-to-C++ من AMD): `apt-get install hip-runtime-amd`. سلسلة تبعيات أخرى.',
-            '4. اختبر بنموذج LLM صغير: شغّل الاستدلال للتحقق من عمل تسريع GPU. التراجع إلى المعالج متكرر.',
-            '5. حلّ تعارضات إصدار برامج التشغيل: ROCm v5.7 يعمل مع النواة 5.15 لكن ليس مع 6.x. يستهلك 2-4 ساعات من التصحيح.',
-            'NVIDIA CUDA بالمقارنة: `nvidia-cuda-toolkit` ← أمر apt-get واحد، وصول فوري لـ GPU. تتطلب AMD احتكاكًا أكبر بـ 5 إلى 10 أضعاف.',
-          ],
-        },
-        'software-support': {
-          title: 'هل يمكنك تشغيل Ollama وvLLM على AMD؟',
-          content: [
-            '**Ollama على AMD (وفقاً لاختباراتنا في أبريل 2026، Ollama v0.3.x، ROCm 6.x):** كان دعم ROCm غير متسق في اختباراتنا — فشل اكتشاف GPU في بعض التكوينات، والتراجع إلى المعالج بطيء. راجع قائمة التوافق الحالية مع AMD على github.com/ollama/ollama قبل الالتزام.',
-            '**vLLM على AMD:** دعم كامل لـ ROCm منذ الإصدار v0.6.0. يعمل جيدًا، لكنه يتطلب تهيئة يدوية لبرامج تشغيل ROCm/HIP. خيار جيد إن تجاوزت مرحلة التثبيت.',
-            '**Text Generation WebUI:** دعم ممتاز لـ AMD ROCm. أفضل تجربة مستخدم على AMD. موصى به.',
-            '**Llama.cpp:** خلفية HIP أصلية. أداء قوي. أبسط مسار لـ AMD. موصى به.',
-            '**LM Studio:** NVIDIA فقط. دون دعم لـ AMD.',
-            'اعتبارًا من أبريل 2026: vLLM + llama.cpp هما خياراك على AMD. وOllama غير موثوق.',
-          ],
-        
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-ar.webp',
-          imageCaption: 'يُعد llama.cpp وText Generation WebUI المسارين الموثوقين لـ AMD في 2026 — بينما يظل دعم ROCm في Ollama غير مستقر.',
-        },
-        'when-buy-amd': {
-          title: 'متى ينبغي أن تشتري AMD بدلًا من NVIDIA؟',
-          content: [
-            'اشترِ AMD إذا:',
-            '- وجدت RX 7900 XTX مستعملة بأقل من 450 دولارًا (مُقيَّمة بأقل من قيمتها مقابل قيمة RTX 4090).',
-            '- كنت تملك بالفعل عتاد AMD وتريد الحفاظ على اتساق المنظومة.',
-            '- كنت تبني عنقودًا وترتّب الأداء لكل دولار فوق سهولة الإعداد.',
-            'لا تشترِ AMD إذا:',
-            '- أردت تجربة جاهزة للاستخدام. NVIDIA CUDA أسرع في التشغيل.',
-            '- احتجت Ollama. دعم AMD غير موثوق.',
-            '- كان وقتك ضيقًا. تصحيح ROCm قد يستهلك أكثر من 10 ساعات.',
-          ],
-        },
-        'mistakes': {
-          title: 'الأخطاء الشائعة عند تبنّي AMD',
-          items: [
-            'شراء RX 6700 (12GB) ظنًا أنه يكافئ 3060 12GB — إنه أبطأ بنسبة 20% وغالبًا صعب الإيجاد مستعملًا.',
-            'افتراض أن ROCm «يعمل ببساطة» مثل CUDA — خطّط لـ 5 إلى 10 ساعات من حل مشكلات توافق برامج التشغيل والنواة.',
-            'استخدام Ollama مع AMD مع توقع تكامل سلس — كان دعم ROCm غير متسق في اختباراتنا في أبريل 2026 (Ollama v0.3.x، ROCm 6.x)؛ llama.cpp أو vLLM خياران أفضل.',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: 'الخطوات التالية',
-          items: [
-            '[أفضل وحدات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm) — ميزانية محدودة؟ أفضل وحدات GPU من حيث القيمة →',
-            '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD أم Apple أم المعالج؟ اختر المنصة المناسبة →',
-            '[كم سعة VRAM أحتاج؟](/ar/local-llms/how-much-vram-local-llm) — طابق سعة VRAM لحجم النموذج →',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: 'الأسئلة الشائعة',
-          faqs: [
-            { q: 'هل أشتري AMD RX 6800 XT أم NVIDIA RTX 3080 لنماذج LLM المحلية؟', a: 'RTX 3080 إن كنت تقدّر البساطة (CUDA يعمل دون مشاكل). RX 6800 XT إن أردت قيمة أكبر بنسبة 25% ولا تمانع 5-10 ساعات من إعداد ROCm.' },
-            { q: 'هل AMD RX 7900 XTX أفضل من RTX 4090؟', a: 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 1,450-2,050 دولارًا مستعملة (450-550 دولارًا مقابل 2,000-2,600 دولار — ارتفع سعر RTX 4090 المستعملة بشدة بعد أن أوقفت NVIDIA إنتاجها في 2026). إعداد ROCm هو الثمن المقابل.' },
-            { q: 'هل يمكنني استخدام كروت رسوميات AMD مع Ollama؟', a: 'تقنيًا نعم. وفقاً لاختباراتنا في أبريل 2026 (Ollama v0.3.x، ROCm 6.x): كان دعم ROCm غير متسق في اختباراتنا — فشل اكتشاف GPU في بعض التكوينات والتراجع إلى المعالج كان متكرراً. راجع قائمة التوافق الحالية مع AMD على github.com/ollama/ollama قبل الالتزام؛ vLLM أو llama.cpp هما المسارات الأكثر أماناً للاستدلال على AMD اليوم.' },
-            { q: 'ما أفضل مسار AMD لنماذج LLM المحلية في 2026؟', a: 'Llama.cpp (خلفية HIP) + Text Generation WebUI. كلاهما بدعم جيد لـ AMD. تجنّب Ollama.' },
-            { q: 'هل أحتاج Ubuntu لـ AMD ROCm، أم يعمل Windows أيضًا؟', a: 'الدعم في Windows موجود (HIP on Windows)، لكنه أحدث وأقل استقرارًا. Ubuntu هو المسار الموصى به.' },
-            { q: 'هل RX 6700 أو RX 6700 XT أو 6750 جيد لنماذج 7B؟', a: 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. RX 6700 XT (12GB، نفس سعة VRAM) يمتلك سرعة معالجة أعلى بنحو 15% من نسخة non-XT، لكنه يبقى أبطأ من 6800 XT. اشترِ أيًّا منهما فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' },
-            { q: 'هل تستحق RX 6900 XT الشراء لنماذج LLM المحلية؟', a: 'ليس فعلًا. RX 6900 XT (16GB) أسرع بشكل هامشي فقط من RX 6800 XT، وأندر مستعملة، وتكلف 350-400 دولار مقابل 300-350 دولارًا لـ 6800 XT. فارق السعر لا يستحق العناء -- اشترِ 6800 XT بدلًا منها.' },
-            { q: 'هل AMD Radeon 680M جيد لتشغيل نماذج LLM المحلية؟', a: 'Radeon 680M هو رسوميات مدمجة داخل معالجات Ryzen 6000/7000 المحمولة -- وهو ليس نفس منتج RX 6800M أو RX 6800 XT المنفصلين. لا يمتلك ذاكرة VRAM مخصصة، بل يشارك ذاكرة النظام (RAM) بدلًا من ذلك، لذا فهو مناسب فقط للنماذج الصغيرة المكمّمة (نحو 3B معامل أو أقل بصيغة Q4)، وسيعمل أبطأ بشكل ملحوظ من أي بطاقة رسوميات منفصلة في هذا الدليل. للاستخدام الجاد لنماذج LLM المحلية، بطاقة منفصلة مثل RX 6800 XT هي الخيار الأفضل.' },
-            { q: 'هل يمكنني الجمع بين كروت رسوميات AMD وNVIDIA في نظام واحد؟', a: 'نظريًا نعم، لكن الإدارة كابوس. يحتاج كل GPU بيئة CUDA/HIP خاصة به. غير موصى به.' },
-          ],
-        },
-        'relatedReading': {
-          title: 'قراءات ذات صلة',
-          items: [
-            '[أفضل كروت الرسوميات الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm)',
-            '[أفضل كروت الرسوميات لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms)',
-            '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Text Generation WebUI مقابل vLLM مقابل Llama.cpp](/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
-            '[لابتوب مقابل سطح المكتب لنماذج LLM المحلية](/ar/local-llms/laptop-vs-desktop-local-llm) — مقارنة التكلفة والأداء بين اللابتوب وسطح المكتب للذكاء الاصطناعي.',
-          ],
-        },
-        'sources': {
-          title: 'المصادر',
-          items: [
-            'توثيق AMD ROCm وGitHub: مُجمِّع HIP، مصفوفة توافق برامج التشغيل، أمثلة استدلال بنماذج LLM',
-            'vLLM GitHub: تنفيذ خلفية AMD/ROCm وحالة الدعم (v0.6.0 فأحدث)',
-            'Llama.cpp GitHub: خلفية HIP لدعم كروت رسوميات AMD',
-            'تقدّم كروت رسوميات AMD سرعات جيدة في الـ tokens في الثانية، لكن السرعة وحدها لا تحدّد جودة الإجابات. ما تسأله للنموذج يهم بقدر سرعة الإجابة: [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) يشرح كيفية هيكلة الطلبات الأطول ضمن حدود ذاكرة GPU.',
-          ],
-        },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: '¿Cómo se comparan las GPUs AMD con NVIDIA en VRAM y precio?',
+        columns: [
+          'GPU',
+          'VRAM',
+          'Ancho de banda',
+          'Precio habitual',
+          'Backend principal',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 GB',
+            'Ancho de banda': '512 GB/s',
+            'Precio habitual': '~$380–410 2ª mano',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 GB',
+            'Ancho de banda': '640 GB/s',
+            'Precio habitual': '~$820–930 nueva',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 GB',
+            'Ancho de banda': '800 GB/s',
+            'Precio habitual': 'No se volvió a comprobar',
+            'Backend principal': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 GB',
+            'Ancho de banda': '960 GB/s',
+            'Precio habitual': '~$900–1,250 2ª mano',
+            'Backend principal': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 GB',
+            'Ancho de banda': '640 GB/s',
+            'Precio habitual': '$1,299 lista; ~$1,400–1,900 calle',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 GB',
+            'Ancho de banda': '936 GB/s',
+            'Precio habitual': '~$1,000–1,400 2ª mano',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 GB',
+            'Ancho de banda': '1,008 GB/s',
+            'Precio habitual': '~$2,250 2ª mano',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 GB',
+            'Ancho de banda': '1,792 GB/s',
+            'Precio habitual': '~$3,700–4,300 nueva',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+        ],
+        note: 'La VRAM y el ancho de banda son especificaciones de los fabricantes ([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). Los precios son instantáneas de precios de oferta en EE. UU. tomadas de rastreadores públicos y análisis (sept.–oct. 2026), no mediciones de PromptQuorum; en tu país pueden variar por impuestos locales. Consulta las ventas reales antes de comprar.',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-es.webp',
+        imageCaption: 'AMD frente a NVIDIA para LLMs locales: VRAM, ancho de banda y precio habitual (EE. UU., sept.–oct. 2026).',
       },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/ar/local-llms/best-amd-gpus-local-llm',
-        'inLanguage': 'ar',
-        name: 'أفضل كروت رسوميات AMD لنماذج LLM المحلية',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16GB، نحو 300-350 دولارًا مستعملة) وRX 7900 XTX (24GB، نحو 400-500 دولار مستعملة) هما الخياران الوحيدان القابلان للاستخدام لنماذج LLM المحلية.' },
-          { '@type': 'ListItem', position: 2, name: 'الأداء لكل دولار: AMD أرخص بنسبة 20-30% من NVIDIA، لكن احتكاك البرمجيات يكلف 5 إلى 10 ساعات من الإعداد.' },
-          { '@type': 'ListItem', position: 3, name: 'Ollama: دعم AMD محدود (مسار ROCm كان غير متسق في اختباراتنا في أبريل 2026، Ollama v0.3.x / ROCm 6.x؛ التراجع إلى المعالج بطيء). راجع github.com/ollama/ollama للتوافق الحالي مع AMD.' },
-          { '@type': 'ListItem', position: 4, name: 'vLLM: دعم كامل لـ AMD ROCm منذ الإصدار v0.6.0، لكن الإعداد يتطلب تثبيت برامج التشغيل يدويًا.' },
-          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: دعم ممتاز لـ AMD عبر ROCm. أفضل تجربة مستخدم على AMD.' },
-          { '@type': 'ListItem', position: 6, name: 'Llama.cpp: دعم أصلي لـ AMD (خلفية HIP). أداء قوي. المسار الموصى به على AMD.' },
-          { '@type': 'ListItem', position: 7, name: 'تكلفة الإعداد: خطّط لـ 5-10 ساعات من تصحيح برامج تشغيل ROCm، وتجميع HIPCC، وتوافق النواة.' },
-          { '@type': 'ListItem', position: 8, name: 'الحكم (أبريل 2026): استخدم AMD فقط إن كنت تملك بالفعل عتاد AMD أو وجدت عرضًا مستعملًا ممتازًا. وإلا، يبقى NVIDIA CUDA أبسط.' },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: '¿Qué tan rápidas son las GPUs AMD frente a NVIDIA en inferencia de LLMs?',
+        content: [
+          '**La velocidad de generación de tokens depende más del ancho de banda de memoria que de los TFLOPS, y las mejores tarjetas AMD se acercan en eso a los antiguos buques insignia de NVIDIA.** La RX 7900 XTX (960 GB/s) queda cerca de la RTX 3090 (936 GB/s) y por debajo de la RTX 4090 (1,008 GB/s) y la RTX 5090 (1,792 GB/s).',
+          'El procesamiento del prompt (prefill) es donde NVIDIA lidera con más claridad. En una comparación de la comunidad con llama.cpp (discusión #19890 de llama.cpp, repetida por análisis de terceros), la RTX 5090 fue unas 2.6–3.4 veces más rápida que la Radeon AI PRO R9700 en el prefill y unas 1.5 veces más rápida en la generación con el mismo modelo. Son datos reportados por desarrolladores, no una medición de PromptQuorum.',
+          'La elección del backend cambia los resultados: Vulkan y ROCm (HIP) se alternan la ventaja según el modelo, la tarjeta y la versión del driver. llama.cpp puede compilarse con ambos, así que prueba los dos en tu propia tarjeta antes de decidir.',
+          'En la práctica, espera que AMD sea competitiva en velocidad de generación por GB/s de ancho de banda, más lenta con prompts largos y menos pulida en software.',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: '¿Qué tan difícil es configurar ROCm en 2026?',
+        content: [
+          '**Vulkan solo necesita un driver gráfico; ROCm necesita una GPU, una distribución Linux y un kernel compatibles.** Comprueba esto antes de comprar:',
+          '1. **Compara tu tarjeta con la matriz de AMD.** La matriz ROCm 7.2.1 para Radeon lista la RX 9070 XT, RX 9060 XT, RX 7900 XTX, RX 7900 XT, RX 7900 GRE, RX 7800 XT y la Radeon AI PRO R9700 en Ubuntu 24.04.4, Ubuntu 22.04.5 y RHEL 10.1.',
+          '2. **Revisa también la lista de Ollama.** La documentación de Ollama añade la RX 6800 XT, la 6900 XT y otras RX serie 6000 para ROCm en Linux, y nombra la Ryzen AI Max+ 395. Las tarjetas no listadas pueden probar `HSA_OVERRIDE_GFX_VERSION` en Linux; no está soportado en Windows.',
+          '3. **Instala la pila ROCm v7** con la utilidad `amdgpu-install` de AMD (Linux). Ollama exige ROCm v7 en Linux.',
+          '4. **Verifica la detección** con `rocminfo`: tu GPU debe aparecer como agente (por ejemplo gfx1100 para la RX 7900 XTX, gfx1201 para la RX 9070 XT).',
+          '5. **En Windows,** la lista ROCm de Ollama nombra las RX serie 7000. Otras tarjetas, incluidas las RX serie 9070, no figuran en esa lista, así que usa el backend Vulkan.',
+          'La versión más reciente de ROCm es la 7.14.0 (16 de julio de 2026), que pasó ROCm al sistema de compilación modular TheRock. La página de compatibilidad de AMD para Radeon cubría versiones hasta la 7.2.1 cuando se revisó, así que compara tu tarjeta con la matriz de la versión que instales.',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: '¿Qué herramientas de LLM locales funcionan con GPUs AMD?',
+        content: [
+          '**Ollama:** ROCm v7 en Linux para las tarjetas indicadas arriba; en Windows, las RX serie 7000 con ROCm. [Vulkan](https://docs.ollama.com/gpu) está activado por defecto cuando su backend está instalado y se desactiva con `OLLAMA_VULKAN=0`. La versión actual es la v0.40.10 (23 de octubre de 2026), que incluye una compilación ROCm para Linux.',
+          '**llama.cpp:** compila para AMD con HIP (ROCm) o Vulkan (`-DGGML_VULKAN=1`). Ambos backends pueden compilarse juntos y elegirse por dispositivo con `--device`. La mayoría de las interfaces se basan en él.',
+          '**LM Studio:** admite GPUs AMD mediante los runtimes de llama.cpp: Vulkan y ROCm. Vulkan es la alternativa habitual cuando el runtime ROCm no detecta una tarjeta. (Una versión anterior de esta página decía que LM Studio era solo para NVIDIA; es incorrecto.)',
+          '**vLLM:** incluye compilaciones ROCm (la versión ROCm 7.14.0 lista vLLM 0.23.0). Está orientado a servir y procesar por lotes; consulta la documentación de vLLM para tu GPU concreta antes de depender de él.',
+          '**Regla práctica:** usa Ollama o LM Studio por comodidad, llama.cpp por control y vLLM para servir a varios usuarios.',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-es.webp',
+        imageCaption: 'Herramientas de LLM locales en GPUs AMD: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: '¿Cómo ejecutar inferencia cuantizada de LLM en una GPU AMD?',
+        numberedItems: [
+          '**Ajusta el modelo a tu VRAM.** Un archivo Q4_K_M ocupa aproximadamente 0.6 GB por cada mil millones de parámetros (unos 9 GB para 14B, 20 GB para 32B; estimaciones). Deja 2–4 GB para la caché de contexto.',
+          '**Elige un backend.** Vulkan es el inicio más rápido (solo el driver gráfico). ROCm (HIP) es mejor en configuraciones Linux compatibles.',
+          '**Instala un runtime.** En Linux, instala antes ROCm v7 con `amdgpu-install` si usas ROCm; después instala Ollama (`curl -fsSL https://ollama.com/install.sh | sh`) o LM Studio.',
+          '**Ejecuta un modelo cuantizado.** Por ejemplo `ollama run qwen3:14b`, o con llama.cpp `llama-server -m model.gguf -ngl 99` para volcar todas las capas a la GPU.',
+          '**Confirma que se usa la GPU.** `ollama ps` debe mostrar 100% GPU; `rocm-smi` muestra la VRAM en uso. Si indica CPU, revisa la instalación de ROCm o cambia a Vulkan.',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: '¿Cuándo conviene comprar AMD en lugar de NVIDIA para LLMs locales?',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Compra AMD cuando quieras 24–32 GB de VRAM a un precio menor que las tarjetas más nuevas de NVIDIA; evítala si dependes de herramientas solo CUDA o no quieres configurar nada.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD es un buen negocio cuando lo que te falta es VRAM y el camino de software (ROCm en Linux o Vulkan) te encaja. Si eres nuevo en los LLMs locales y quieres que funcione sin más, empieza con NVIDIA.',
+          },
+        ],
+        content: [
+          'Compra AMD si:',
+          '- Quieres 32 GB en una sola tarjeta por menos dinero: la Radeon AI PRO R9700 cuesta entre un tercio y la mitad que una RTX 5090.',
+          '- Ya tienes una Radeon compatible o quieres una tarjeta que también rinda bien en juegos.',
+          '- Usas Linux o te sirve Vulkan, y tus herramientas (Ollama, llama.cpp, LM Studio) ya admiten AMD.',
+          'Compra NVIDIA si:',
+          '- Necesitas herramientas solo CUDA, pilas de entrenamiento o fine-tuning, o el procesamiento de prompts más rápido.',
+          '- Comparas tarjetas de 24 GB de segunda mano: una RTX 3090 usada cuesta casi lo mismo que una RX 7900 XTX usada, así que el soporte CUDA puede decidir.',
+          '- Quieres dedicar el mínimo tiempo a configurar.',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: '¿AMD Instinct o GPUs de centro de datos de NVIDIA: cuál es mejor para LLMs?',
+        content: [
+          '**AMD Instinct (MI300X, MI350X) compite con las GPUs de centro de datos de NVIDIA y se compra para servidores, no para sobremesa.** La lista ROCm de Ollama incluye tarjetas Instinct, y ROCm se diseñó en torno a ellas, así que su soporte es más amplio que el de las Radeon de consumo.',
+          'La MI300X lleva 192 GB de memoria HBM3 por acelerador (especificación de AMD), lo que sirve para modelos muy grandes en un solo equipo. Para un equipo de un solo usuario, las Radeon RX o Radeon AI PRO son las opciones AMD relevantes.',
+          'Para decisiones de servidor y nube, consulta la [Guía de compra de servidores GPU empresariales](/es/local-llms/enterprise-gpu-server-buying-guide-2026) y la [Comparativa de alquiler de GPU en la nube](/es/local-llms/cloud-gpu-rental-comparison-2026).',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: '¿Cuáles son los errores más comunes al adoptar AMD?',
+        items: [
+          'Suponer que 24 GB mueven modelos de 70B: un modelo de 70B en Q4 necesita unos 40 GB o más, así que una sola tarjeta de 24 GB llega a unos 30–35B. Planifica dos tarjetas o un par de R9700 de 32 GB para 70B.',
+          'Comprar una tarjeta que ROCm no soporta: comprueba antes la matriz de AMD y la lista de Ollama. Las RX serie 6000 no están en la matriz actual de AMD para Radeon.',
+          'Descartar Vulkan: si ROCm no detecta tu tarjeta, prueba el backend Vulkan antes de concluir que la GPU no se puede usar.',
+          'Fiarse de los precios de oferta: los precios de GPU y memoria se movieron de forma notable durante 2026. Compara ventas reales, no precios de anuncio.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Próximos pasos',
+        items: [
+          '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm) — ¿Presupuesto ajustado? Las GPUs con mejor relación calidad-precio para inferencia →',
+          '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple o CPU: ¿qué plataforma encaja con tu flujo de trabajo? →',
+          '[¿Cuánta VRAM necesito?](/es/local-llms/how-much-vram-local-llm) — Ajusta la VRAM de tu GPU al tamaño del modelo →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '¿Cómo afectan las leyes regionales de datos a la decisión entre AMD y NVIDIA?',
+        content: [
+          '**El fabricante de la GPU no cambia tus obligaciones de protección de datos; ejecutar la inferencia en local sí.** La inferencia en el propio equipo mantiene los prompts y documentos en tu hardware, lo que puede reducir la exposición a transferencias transfronterizas bajo el RGPD de la UE, la APPI de Japón y la PIPL y la Ley de Seguridad de Datos de China. El cumplimiento sigue exigiendo una base jurídica, normas de conservación y procedimientos ante brechas, así que solicita una revisión formal para datos regulados.',
+          'Las normas de control de exportaciones pueden restringir los aceleradores de gama alta de AMD y de NVIDIA en algunos mercados. Comprueba las normas vigentes en tu país antes de importar o comprar.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿Son buenas las GPUs AMD para ejecutar LLMs locales?',
+            a: 'Sí, con matices. Tarjetas AMD como la RX 7900 XTX (24 GB) y la Radeon AI PRO R9700 (32 GB) ejecutan LLMs cuantizados mediante ROCm o Vulkan en Ollama, LM Studio y llama.cpp. NVIDIA CUDA sigue teniendo un soporte de software más amplio y un procesamiento de prompts más rápido, así que AMD encaja mejor cuando importa la VRAM por dólar.',
+          },
+          {
+            q: '¿Cuál es la mejor GPU AMD para LLMs locales?',
+            a: 'La RX 7900 XTX es la mejor AMD en general para LLMs locales: 24 GB de VRAM, 960 GB/s de ancho de banda y soporte en la matriz ROCm 7.2.1 de AMD y en Ollama. Para más VRAM por tarjeta, la Radeon AI PRO R9700 ofrece 32 GB; para modelos de 7B–14B, la RX 9070 XT (16 GB) es suficiente.',
+          },
+          {
+            q: 'AMD frente a NVIDIA para LLMs locales: ¿cuál debo comprar?',
+            a: 'Compra NVIDIA si quieres compatibilidad con CUDA y el mínimo de configuración. Compra AMD si quieres más VRAM por dólar, sobre todo la R9700 de 32 GB frente a la RTX 5090. Una RX 7900 XTX de segunda mano cuesta casi lo mismo que una RTX 3090 usada, así que ahí la decisión depende del software.',
+          },
+          {
+            q: '¿Funciona Ollama con GPUs AMD?',
+            a: 'Sí. Ollama exige el driver ROCm v7 en Linux y lista la RX 9070 XT, RX 7900 XTX, RX 6800 XT, Radeon AI PRO R9700 y otras. En Windows su lista ROCm cubre las RX serie 7000, y Vulkan está activado por defecto cuando su backend está instalado.',
+          },
+          {
+            q: '¿Admite LM Studio las GPUs AMD?',
+            a: 'Sí. LM Studio ejecuta GPUs AMD mediante los runtimes de llama.cpp, ya sea Vulkan o ROCm. Si el runtime ROCm no detecta tu tarjeta, cambia el runtime a Vulkan. Versiones anteriores de esta página decían por error que LM Studio era solo para NVIDIA.',
+          },
+          {
+            q: '¿Cómo ejecuto inferencia cuantizada de LLM en una GPU AMD?',
+            a: 'Elige un modelo cuantizado que quepa en tu VRAM (Q4_K_M son unos 0.6 GB por cada mil millones de parámetros), instala Ollama o LM Studio y usa Vulkan o ROCm. En Linux, instala ROCm v7 con amdgpu-install, ejecuta el modelo y confirma el uso de la GPU con ollama ps o rocm-smi.',
+          },
+          {
+            q: '¿RX 9070 XT o RX 7900 XTX para LLMs locales?',
+            a: 'Para LLMs locales es mejor la RX 7900 XTX, porque 24 GB alojan modelos de hasta unos 30–35B en Q4, mientras que los 16 GB de la RX 9070 XT llegan a unos 14B–24B. La RX 9070 XT es más nueva y barata, así que elígela si te bastan 16 GB.',
+          },
+          {
+            q: '¿Cuál es la mejor GPU AMD por menos de $500?',
+            a: 'La RX 6800 XT (16 GB) por unos $380–410 de segunda mano es la mejor AMD por menos de $500. Mueve modelos de 7B–14B en Q4–Q8, pero no está en la matriz ROCm actual de AMD para Radeon, así que cuenta con la vía ROCm de Ollama en Linux o con Vulkan.',
+          },
+          {
+            q: '¿Vale la pena la Radeon AI PRO R9700 para IA local?',
+            a: 'Sí, si necesitas 32 GB en una sola tarjeta. Su precio de lista es $1,299 frente a unos $3,700–4,300 de una RTX 5090, aunque los precios de calle reportados son más altos y el procesamiento de prompts es más lento. Dos R9700 dan 64 GB para modelos de 70B en Q4.',
+          },
+          {
+            q: '¿Necesito Linux para AMD ROCm o funciona Windows?',
+            a: 'Linux es el camino mejor soportado para ROCm: la matriz de AMD lista Ubuntu 24.04.4, Ubuntu 22.04.5 y RHEL 10.1. En Windows, la lista ROCm de Ollama cubre las RX serie 7000, y las demás tarjetas usan el backend Vulkan.',
+          },
+          {
+            q: '¿Qué es mejor para LLMs, AMD Instinct o las GPUs de NVIDIA?',
+            a: 'Instinct (MI300X, MI350X) compite con las GPUs de centro de datos de NVIDIA y se compra para servidores; la MI300X tiene 192 GB de HBM3. Para un solo equipo de sobremesa, las Radeon o Radeon AI PRO son las opciones AMD relevantes, y el ecosistema CUDA de NVIDIA sigue siendo más amplio.',
+          },
+          {
+            q: '¿Sirve AMD para deep learning y machine learning, no solo para LLMs?',
+            a: 'Para inferencia, sí. ROCm incluye compilaciones de PyTorch (la versión ROCm 7.14.0 lista PyTorch 2.12.0). Para entrenamiento y código de investigación que asume CUDA, NVIDIA sigue teniendo el ecosistema más amplio, así que comprueba el soporte AMD de tu framework antes de comprar.',
+          },
+          {
+            q: '¿Es mejor un mini PC con Ryzen AI Max+ 395 que una GPU AMD dedicada?',
+            a: 'Depende del tamaño del modelo. Los sistemas Ryzen AI Max+ 395 ofrecen hasta 128 GB de memoria unificada pero solo 256 GB/s de ancho de banda, así que sirven para modelos mixture-of-experts grandes, mientras que una tarjeta dedicada genera tokens más rápido en modelos que caben en su VRAM.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm)',
+          '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms)',
+          '[Mejores mini PCs AMD para LLMs locales](/es/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[Portátil vs sobremesa para LLMs locales](/es/local-llms/laptop-vs-desktop-local-llm) — Comparación de coste y rendimiento entre portátil y sobremesa para IA.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Documentación de GPU de Ollama](https://docs.ollama.com/gpu): requisito de AMD ROCm v7, tarjetas Radeon, Radeon AI PRO, Radeon PRO, Ryzen AI e Instinct compatibles, backend Vulkan',
+          '[Versiones de Ollama](https://github.com/ollama/ollama/releases): v0.40.10, 23 de octubre de 2026',
+          '[AMD ROCm en Radeon y Ryzen — compatibilidad con Linux](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html): GPUs Radeon y distribuciones compatibles con ROCm 7.2.1',
+          '[Versiones de ROCm](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0): ROCm 7.14.0, 16 de julio de 2026, versiones de frameworks',
+          '[Documentación de compilación de llama.cpp](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md): backends HIP y Vulkan',
+          'Especificaciones de producto de AMD: [RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          'Instantáneas de precios (EE. UU., sept.–oct. 2026): rastreadores públicos de precios de GPU y análisis de terceros; son precios de oferta y cambian rápido',
+          'Las GPUs AMD ofrecen buenas velocidades de tokens por segundo, pero la velocidad por sí sola no determina la calidad de la respuesta. Lo que le pides al modelo importa tanto como lo rápido que responde: [explicación de las ventanas de contexto](https://www.promptquorum.com/es/prompt-engineering/context-windows-explained-why-ai-forgets) cubre cómo estructurar peticiones largas dentro de los límites de memoria de la GPU.',
         ],
       },
     },
-    pt: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
+  },
+  ar: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
+      },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'GPU Buying Guides',
+    title: 'أفضل بطاقة AMD لنماذج LLM المحلية واستدلال الذكاء الاصطناعي',
+    seoTitle: 'أفضل بطاقة AMD للذكاء الاصطناعي وLLM المحلية 2026',
+    intro: '**أفضل بطاقة AMD لنماذج LLM المحلية في 2026 هي Radeon RX 7900 XTX (24 GB) للنماذج من فئة 30B، وRX 9070 XT (16 GB) للنماذج من 7B إلى 14B، وRadeon AI PRO R9700 (32 GB) عندما تحتاج إلى أكبر ذاكرة VRAM في البطاقة الواحدة.** تظهر البطاقات الثلاث في قائمة دعم Ollama مع ROCm v7 على Linux، ويشغّلها llama.cpp أيضًا عبر واجهة Vulkan. تبقى NVIDIA CUDA الطريق الأقل جهدًا، لذا اختر AMD من أجل VRAM لكل دولار أو لأنك تملك البطاقة بالفعل.',
+    metaDescription: 'أفضل بطاقة AMD للذكاء الاصطناعي ونماذج LLM المحلية: RX 7900 XTX (24 GB) وRX 9070 XT (16 GB) وRadeon AI PRO R9700 (32 GB) مع ROCm وVulkan وNVIDIA.',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**أفضل بطاقة AMD لنماذج LLM المحلية في 2026 هي Radeon RX 7900 XTX (24 GB) للنماذج من فئة 30B، وRX 9070 XT (16 GB) للنماذج من 7B إلى 14B، وRadeon AI PRO R9700 (32 GB) عندما تحتاج إلى أكبر ذاكرة VRAM في البطاقة الواحدة.**',
+    quickAnswerTop: {
+      question: 'ما أفضل بطاقة AMD لنماذج LLM المحلية واستدلال الذكاء الاصطناعي؟',
+      answer: 'RX 7900 XTX (24 GB) هي أفضل بطاقة AMD عامة لنماذج LLM المحلية، وRX 9070 XT (16 GB) أفضل بطاقة أحدث للنماذج من 7B إلى 14B، وRadeon AI PRO R9700 (32 GB) توفر أكبر VRAM للبطاقة الواحدة. يدرج Ollama الثلاث مع ROCm v7 على Linux، ويعمل Vulkan بديلًا دون ROCm. تبقى NVIDIA CUDA أسهل، لذا تناسب AMD أكثر عندما يهمّك VRAM لكل دولار.',
+      bullets: [
+        'RX 7900 XTX: ‏24 GB، ‏960 GB/s، نحو 900–1,250 دولارًا مستعملة (متتبعات الأسعار، سبتمبر–أكتوبر 2026)',
+        'RX 9070 XT: ‏16 GB، ‏640 GB/s، نحو 820–930 دولارًا جديدة — يتّسع نموذج 14B بصيغة Q4–Q6',
+        'Radeon AI PRO R9700: ‏32 GB، سعر القائمة لدى AMD ‏1,299 دولار؛ وأسعار السوق المبلغ عنها أعلى',
+        'يحتاج Ollama إلى ROCm v7 على Linux؛ ويكون Vulkan مفعّلًا افتراضيًا عند تثبيت واجهته الخلفية',
       ],
-      freshness_tier: 'semi_annual',
-      theme: 'GPU Buying Guides',
-      title: 'Melhores GPUs AMD para LLMs locais',
-      seoTitle: 'Melhores GPUs AMD para LLMs locais 2026: Guia de comparação',
-      intro: '**A AMD RX 6800 XT e a RX 7900 XTX são alternativas sólidas à NVIDIA, com desempenho por dólar 15-20% melhor, mas sofrem com a menor compatibilidade com o ONNX Runtime e os drivers do vLLM.** O AMD ROCm (HIP) amadureceu, embora as camadas de compatibilidade adicionem fricção. O NVIDIA CUDA continua sendo o caminho mais simples para LLMs locais. Use AMD só se encontrar uma ótima oferta de segunda mão ou já tiver hardware AMD.',
-      metaDescription: 'Compare AMD RX 6800 XT e RX 7900 XTX vs NVIDIA RTX: configuração ROCm, desempenho no vLLM, custo por TFLOP e quando comprar AMD. Atualizado 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.webp',
-      publishDate: '2026-04-05',
-      leadAnswerBlock: '**A AMD RX 6800 XT e a RX 7900 XTX são alternativas sólidas à NVIDIA, com desempenho por dólar 15-20% melhor, mas sofrem com a menor compatibilidade com o ONNX Runtime e os drivers do vLLM. No varejo brasileiro, com impostos de importação, os preços em reais ficam bem mais altos.**',
-      audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam seus fluxos de trabalho de LLMs locais',
-      readTime: '7 min de leitura',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'AMD GPU',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': 'Melhores GPUs AMD para LLMs locais 2026: RX 7900 XTX',
-        'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuração de ROCm, desempenho no vLLM, análise de custo por TFLOP. Quando escolher AMD em vez de CUDA. Abril 2026.',
-        'url': 'https://www.promptquorum.com/pt/local-llms/best-amd-gpus-local-llm',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-09-01',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'about': [
-          { '@type': 'Thing', 'name': 'AMD GPU' },
-          { '@type': 'Thing', 'name': 'ROCm' },
-          { '@type': 'Thing', 'name': 'GPU VRAM' },
-          { '@type': 'Thing', 'name': 'inferência local de LLM' },
+      updatedDate: '2026-10-23',
+    },
+    audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات عملهم مع نماذج LLM المحلية',
+    readTime: '9 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: 'النقاط الرئيسية',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: 'أي بطاقات AMD تستحق الشراء لنماذج LLM المحلية؟',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'كيف تقارن بطاقات AMD بـ NVIDIA في VRAM والسعر؟',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'ما سرعة بطاقات AMD مقارنة بـ NVIDIA؟',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: 'ما مدى صعوبة إعداد ROCm في 2026؟',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: 'أي أدوات LLM المحلية تعمل على بطاقات AMD؟',
+        anchor: '#software-support',
+      },
+      {
+        label: 'كيف تشغّل استدلال LLM المكمَّم على بطاقة AMD؟',
+        anchor: '#run-quantized',
+      },
+      {
+        label: 'متى تشتري AMD بدلًا من NVIDIA؟',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD Instinct أم وحدات NVIDIA لمراكز البيانات؟',
+        anchor: '#instinct',
+      },
+      {
+        label: 'الأسئلة الشائعة',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'بطاقات RX 7900 XTX (24 GB) وRX 9070 XT (16 GB) وRadeon AI PRO R9700 (32 GB) هي بطاقات AMD التي يُنصح بشرائها لنماذج LLM المحلية في 2026، وتدرج وثائق Ollama الثلاث مع ROCm v7 على Linux.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'توفر بطاقات AMD ذاكرة VRAM كبيرة مقابل السعر، لكن عليك اختيار مسار البرمجيات المناسب: ROCm على إعدادات Linux المدعومة، أو Vulkan عندما تريد أن يعمل كل شيء ببساطة. أما NVIDIA فهي الخيار الجاهز للاستخدام.',
+          },
         ],
-        'speakable': {
-          '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
-        },
-        'educationalLevel': 'Intermediate',
-        'proficiencyLevel': 'Intermediate',
+        items: [
+          '**أفضل بطاقة AMD عامة:** RX 7900 XTX — ‏24 GB GDDR6، ‏960 GB/s، نحو 900–1,250 دولارًا مستعملة (متتبعات الأسعار، سبتمبر–أكتوبر 2026). تتّسع لنماذج بحجم 30–35B تقريبًا بصيغة Q4؛ أما نموذج 70B بصيغة Q4 فيحتاج إلى نحو 40 GB أو أكثر ولا يتّسع.',
+          '**أفضل بطاقة أحدث:** RX 9070 XT — ‏16 GB، ‏640 GB/s، نحو 820–930 دولارًا جديدة. مناسبة لنماذج 7B–14B بصيغة Q4–Q6.',
+          '**أكبر VRAM للبطاقة الواحدة:** Radeon AI PRO R9700 — ‏32 GB، سعر القائمة لدى AMD ‏1,299 دولار؛ وتشير تقارير أطراف ثالثة إلى أسعار سوق نحو 1,400–1,900 دولار. بطاقتان تعطيان 64 GB.',
+          '**خيار الميزانية:** RX 6800 XT — ‏16 GB، نحو 380–410 دولارات مستعملة (أسعار معروضة، أكتوبر 2026). وهي في قائمة ROCm على Linux لدى Ollama لكنها ليست في مصفوفة ROCm 7.2.1 الحالية من AMD لبطاقات Radeon.',
+          '**Ollama:** يتطلب مشغّل ROCm v7 على Linux؛ وعلى Windows تشمل قائمة ROCm بطاقات RX سلسلة 7000، ويكون Vulkan مفعّلًا افتراضيًا عند تثبيت واجهته الخلفية (يمكن تعطيله بـ OLLAMA_VULKAN=0).',
+          '**LM Studio وllama.cpp:** كلاهما يعمل على AMD عبر واجهتي Vulkan أو ROCm (HIP). يحتاج Vulkan إلى مشغّل الرسوميات فقط، فابدأ به إذا لم يكتشف ROCm بطاقتك.',
+          '**AMD مقابل NVIDIA:** تكلّف RX 7900 XTX المستعملة تقريبًا ما تكلّفه RTX 3090 (24 GB) المستعملة. وأوضح ميزة سعرية لـ AMD هي R9700 بسعة 32 GB مقابل RTX 5090 (من ثلث سعرها إلى نصفه)، على حساب بطء معالجة الموجّه.',
+          '**الخلاصة:** اختر AMD عندما يهمّك VRAM لكل دولار وتستطيع استخدام Linux أو Vulkan؛ واختر NVIDIA للأدوات التي تعمل على CUDA فقط وللتدريب ولأقل جهد في الإعداد. الأسعار أمريكية بالدولار، وقد تختلف الأسعار في بلدك بحسب الضرائب والرسوم المحلية.',
+        ],
       },
-      faqSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': 'Devo comprar a AMD RX 6800 XT ou a NVIDIA RTX 3080 para LLMs locais?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3080 se você valoriza a simplicidade (o CUDA funciona sem problemas). RX 6800 XT se você quer 25% mais valor e não se importa com 5-10 horas de configuração do ROCm.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'A AMD RX 7900 XTX é melhor que a RTX 4090?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Velocidade semelhante, mesma VRAM (24GB). A RX 7900 XTX é US$ 1.450-2.050 mais barata de segunda mão (US$ 450-550 vs. US$ 2.000-2.600 — o preço da RTX 4090 usada subiu muito depois que a NVIDIA a descontinuou em 2026). A configuração do ROCm é o contrapeso.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Posso usar GPUs AMD com o Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Tecnicamente sim. Com base nos nossos testes de abril de 2026 (Ollama v0.3.x, ROCm 6.x): o suporte ROCm foi inconsistente nos nossos testes — a deteção de GPU falhou em algumas configurações e o fallback para CPU foi frequente. Verifique a lista de compatibilidade AMD atual em github.com/ollama/ollama antes de decidir; vLLM ou llama.cpp são os caminhos mais fiáveis para inferência AMD hoje.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Qual é o melhor caminho AMD para LLMs locais em 2026?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos têm bom suporte para AMD. Evite o Ollama.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Preciso de Ubuntu para o AMD ROCm, ou o Windows também funciona?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'O suporte no Windows existe (HIP no Windows), mas é mais recente e menos estável. O Ubuntu é o caminho recomendado.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'A RX 6700, a RX 6700 XT ou a 6750 é boa para modelos de 7B?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A RX 6700 (12GB) funciona, mas é 20% mais lenta que a RX 6800 XT. A RX 6700 XT (12GB, mesma VRAM) tem clocks cerca de 15% mais rápidos que a versão sem XT, mas ainda fica atrás da 6800 XT. Compre qualquer uma delas só se custar menos de US$ 250. Caso contrário, vá de 6800 XT.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Vale a pena comprar a RX 6900 XT para LLMs locais?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Não muito. A RX 6900 XT (16GB) é apenas marginalmente mais rápida que a RX 6800 XT, é mais rara de segunda mão e custa US$ 350-400 contra US$ 300-350 da 6800 XT. O aumento de preço não compensa -- compre a 6800 XT em vez dela.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'A AMD Radeon 680M é boa para rodar LLMs locais?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A Radeon 680M é uma placa de vídeo integrada dentro das APUs móveis Ryzen 6000/7000 -- não é o mesmo produto que a RX 6800M ou a RX 6800 XT, que são placas dedicadas. Ela não tem VRAM dedicada, e sim compartilha a RAM do sistema, então só é viável para modelos pequenos e quantizados (cerca de 3B de parâmetros ou menos em Q4) e vai rodar visivelmente mais devagar que qualquer GPU dedicada deste guia. Para uso sério de LLMs locais, uma placa dedicada como a RX 6800 XT é a melhor escolha.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Posso combinar GPUs AMD e NVIDIA no mesmo sistema?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Teoricamente sim, mas o gerenciamento é um pesadelo. Cada GPU precisa do seu próprio runtime CUDA/HIP. Não é recomendado.' }
-          },
-        ]
+      'which-amd': {
+        id: 'which-amd',
+        title: 'أي بطاقات AMD تستحق الشراء لنماذج LLM المحلية؟',
+        items: [
+          '**RX 7900 XTX** (‏24 GB GDDR6، ‏960 GB/s، RDNA 3): أقوى بطاقة AMD استهلاكية لنماذج LLM. حجم نموذج 32B بصيغة Q4_K_M نحو 20 GB، فيتّسع مع هامش للسياق. موجودة في مصفوفة ROCm 7.2.1 من AMD وفي قائمة ROCm لدى Ollama على Linux وWindows. مستعملة: نحو 900–1,250 دولار.',
+          '**RX 9070 XT** (‏16 GB GDDR6، ‏640 GB/s، RDNA 4): خيار 16 GB الأحدث، في مصفوفة ROCm 7.2.1 من AMD وقائمة ROCm على Linux لدى Ollama. تشغّل نماذج 14B بصيغة Q4–Q6 براحة. جديدة: نحو 820–930 دولارًا.',
+          '**Radeon AI PRO R9700** (‏32 GB GDDR6، ‏640 GB/s، RDNA 4): بطاقة محطات عمل بأكبر VRAM تبيعه AMD في هذه الفئة. تتعامل مع نماذج 32B بصيغة Q4–Q6؛ وبطاقتان (64 GB) تستوعبان نموذج 70B بصيغة Q4. سعر القائمة لدى AMD: 1,299 دولار؛ وأسعار السوق المبلغ عنها أعلى.',
+          '**RX 7900 XT** (‏20 GB GDDR6، ‏800 GB/s، RDNA 3): تستوعب نماذج حتى نحو 24–27B بصيغة Q4. اشترِها فقط إذا كانت أرخص بوضوح من 7900 XTX المستعملة؛ ولم يُعاد التحقق من سعرها في هذا التحديث.',
+          '**RX 6800 XT** (‏16 GB GDDR6، ‏512 GB/s، RDNA 2): خيار الميزانية بنحو 380–410 دولارات مستعملة. عرض نطاق أقل يعني توليدًا أبطأ، ولم تعد مصفوفة ROCm الحالية من AMD لبطاقات Radeon تدرجها، فاعتمد على مسار ROCm على Linux لدى Ollama أو على Vulkan.',
+          '**أجهزة Mini PC بمعالج Ryzen AI Max+ 395** (حتى 128 GB ذاكرة موحّدة، ‏256 GB/s): ليست بطاقة رسوميات، لكنها أرخص طريقة لتشغيل نماذج Mixture-of-Experts الكبيرة جدًا على AMD. أُدرجت أنظمة 128 GB بنحو 3,300–4,350 دولار في أواخر سبتمبر 2026 (متتبعات الأسعار). راجع [أفضل أجهزة AMD Mini PC لنماذج LLM المحلية](/ar/local-llms/best-amd-mini-pc-local-llm-2026).',
+        ],
       },
-      toc: [
-        { label: 'Pontos principais', anchor: '#key-takeaways' },
-        { label: 'Quais GPUs AMD realmente valem a pena?', anchor: '#key-takeaways' },
-        { label: 'Como as GPUs AMD se comparam às RTX em preço e velocidade?', anchor: '#amd-vs-nvidia' },
-        { label: 'Perguntas frequentes', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'A AMD RX 7900 XTX equipara-se à RTX 4090 com 24 GB de VRAM por $800-1,000 usada, mas a configuração do driver ROCm adiciona 5-10 horas de fricção em comparação com NVIDIA CUDA.' },
-            { type: 'plain-terms', text: 'As GPUs AMD são como um carro com ótima potência mas câmbio manual -- mais potência por dólar, mas mais trabalho para funcionar. A NVIDIA é o automático.' },
-          ],
-          items: [
-            'A AMD RX 6800 XT (16GB, ~US$ 300-350 de segunda mão) e a RX 7900 XTX (24GB, ~US$ 400-500 de segunda mão) são as únicas opções viáveis para LLMs locais. Os preços variam conforme o país (no Brasil, bem mais altos por causa dos impostos).',
-            'Desempenho por dólar: a AMD é 20-30% mais barata que a NVIDIA, mas a fricção de software custa entre 5 e 10 horas de configuração.',
-            'Ollama: suporte AMD limitado (o caminho do ROCm foi inconsistente nos nossos testes de abril de 2026, Ollama v0.3.x / ROCm 6.x — a deteção de GPU falhou em algumas configurações; o fallback para CPU é lento). Verifique github.com/ollama/ollama para compatibilidade AMD atual.',
-            'vLLM: suporte completo para AMD ROCm desde a v0.6.0, mas a configuração exige instalar drivers manualmente. Funciona bem depois de superada a fase de instalação.',
-            'Text Generation WebUI: excelente suporte para AMD via ROCm. A melhor experiência de usuário em AMD.',
-            'Llama.cpp: suporte nativo para AMD (backend HIP). Desempenho sólido. O caminho recomendado em AMD.',
-            'Custo de configuração: planeje 5-10 horas de depuração de drivers ROCm, compilação do HIPCC e compatibilidade de kernel.',
-            'Veredito (abril 2026): use AMD só se já tiver hardware AMD ou encontrar uma oferta de segunda mão excelente (~US$ 320 por uma placa de 16GB). Caso contrário, o NVIDIA CUDA continua mais simples.',
-          ],
-        },
-        'which-amd': {
-          title: 'Quais GPUs AMD realmente valem a pena?',
-          items: [
-            '**RX 6800 XT** (16GB GDDR6): a rainha do custo-benefício na AMD. Lançada em 2020. Continua sólida para inferência de 7B-22B. De segunda mão: ~US$ 300-350.',
-            '**RX 6900 XT** (16GB GDDR6): marginalmente mais rápida que a 6800 XT. Rara. De segunda mão: ~US$ 350-400. O aumento de preço não vale a pena.',
-            '**RX 7900 XT** (20GB GDDR6): arquitetura RDNA 3 mais nova. 20% mais rápida que a 6800 XT. De segunda mão: ~US$ 400-480. Boa para 70B Q4.',
-            '**RX 7900 XTX** (24GB GDDR6): a GPU AMD de consumo de topo. 24GB de VRAM é um divisor de águas para modelos de 70B. De segunda mão: ~US$ 450-550. Velocidade comparável à RTX 4090.',
-            '**Radeon Pro W6800 (32GB)**: placa de nível empresarial, mais barata de segunda mão (~US$ 200-300). Mais lenta, mas os 32GB são excelentes para 70B Q8. Opção de nicho.',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: 'Como as GPUs AMD se comparam às RTX em preço e desempenho?',
-          rows: [
-            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1.952', 'Preço (2ª mão)': '~US$ 300-350', 'Desemp./$ vs. RTX': '+25%', 'RTX equivalente': 'RTX 3080 (mais lenta)' },
-            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2.540', 'Preço (2ª mão)': '~US$ 400-480', 'Desemp./$ vs. RTX': '+20%', 'RTX equivalente': 'RTX 4080 (similar)' },
-            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2.750', 'Preço (2ª mão)': '~US$ 450-550', 'Desemp./$ vs. RTX': '+15%', 'RTX equivalente': 'RTX 4090 (velocidade similar)' },
-            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1.456', 'Preço (2ª mão)': '~US$ 350-400', 'Desemp./$ vs. RTX': '--', 'RTX equivalente': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', 'Preço (2ª mão)': '~US$ 2.000-2.600', 'Desemp./$ vs. RTX': '--', 'RTX equivalente': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', 'Preço (2ª mão)', 'Desemp./$ vs. RTX', 'RTX equivalente'],
-        
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.webp',
-          imageCaption: 'A RX 7900 XTX iguala a velocidade e a VRAM da RTX 4090 por cerca de 60% do preço — a contrapartida é o atrito de configuração do ROCm.',
-        },
-        'rocm-setup': {
-          title: 'Qual é a fricção de configuração do ROCm para AMD?',
-          content: [
-            '**1. Instale os drivers AMD ROCm: `apt-get install rocm-dkms` (Ubuntu). No Windows, use o instalador .exe manual. Leva cerca de 30 min.**',
-            '2. Verifique o compilador HIP: `hipcc --version`. Muitas vezes falha na primeira tentativa. Depure a compatibilidade de kernel da sua GPU.',
-            '3. Instale o HIPCC (o compilador HIP-to-C++ da AMD): `apt-get install hip-runtime-amd`. Outra cadeia de dependências.',
-            '4. Teste com um LLM pequeno: rode a inferência para verificar se a aceleração por GPU funciona. O fallback para CPU é frequente.',
-            '5. Resolva incompatibilidades de versão de drivers: o ROCm v5.7 funciona com o kernel 5.15, mas não com o 6.x. Consome 2-4 horas de depuração.',
-            'NVIDIA CUDA em comparação: `nvidia-cuda-toolkit` → um apt-get, acesso instantâneo à GPU. A AMD exige de 5 a 10 vezes mais fricção.',
-          ],
-        },
-        'software-support': {
-          title: 'Você pode rodar Ollama e vLLM em AMD?',
-          content: [
-            '**Ollama em AMD (com base nos nossos testes de abril de 2026, Ollama v0.3.x, ROCm 6.x):** o suporte ROCm foi inconsistente nos nossos testes — a deteção de GPU falhou em algumas configurações, o fallback para CPU é lento. Verifique a lista de compatibilidade AMD atual em github.com/ollama/ollama antes de decidir.',
-            '**vLLM em AMD:** suporte completo ao ROCm desde a v0.6.0. Funciona bem, mas exige configuração manual de drivers ROCm/HIP. Boa opção se você superar a fase de instalação.',
-            '**Text Generation WebUI:** excelente suporte ao AMD ROCm. A melhor experiência de usuário em AMD. Recomendado.',
-            '**Llama.cpp:** backend HIP nativo. Desempenho sólido. O caminho AMD mais simples. Recomendado.',
-            '**LM Studio:** só NVIDIA. Sem suporte para AMD.',
-            'A partir de abril de 2026: vLLM + llama.cpp são suas opções em AMD. O Ollama não é confiável.',
-          ],
-        
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-pt.webp',
-          imageCaption: 'llama.cpp e Text Generation WebUI são os caminhos confiáveis para AMD em 2026 — o suporte ROCm do Ollama continua inconsistente.',
-        },
-        'when-buy-amd': {
-          title: 'Quando você deve comprar AMD em vez de NVIDIA?',
-          content: [
-            'Compre AMD se:',
-            '- Você encontrar uma RX 7900 XTX de segunda mão por menos de US$ 450 (subvalorizada frente ao valor da RTX 4090).',
-            '- Você já tem hardware AMD e quer manter coerência no ecossistema.',
-            '- Você está montando um cluster e prioriza o desempenho por dólar em vez da facilidade de configuração.',
-            'Não compre AMD se:',
-            '- Você quer uma experiência plug-and-play. O NVIDIA CUDA é mais rápido de colocar para funcionar.',
-            '- Você precisa do Ollama. O suporte AMD é pouco confiável.',
-            '- Você tem pouco tempo. A depuração do ROCm pode consumir mais de 10 horas.',
-          ],
-        },
-        'mistakes': {
-          title: 'Erros comuns ao adotar AMD',
-          items: [
-            'Comprar uma RX 6700 (12GB) achando que equivale a uma 3060 12GB — ela é 20% mais lenta e muitas vezes difícil de achar de segunda mão.',
-            'Supor que o ROCm "simplesmente funciona" como o CUDA — planeje de 5 a 10 horas de solução de problemas de compatibilidade de drivers e kernel.',
-            'Usar o Ollama com AMD esperando uma integração fluida — o suporte ROCm foi inconsistente nos nossos testes de abril de 2026 (Ollama v0.3.x, ROCm 6.x); llama.cpp ou vLLM são melhores opções.',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: 'Próximos passos',
-          items: [
-            '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm) — Com orçamento limitado? As melhores GPUs custo-benefício →',
-            '[GPU vs CPU vs Apple Silicon](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple ou CPU — qual plataforma se encaixa? →',
-            '[Quanta VRAM eu preciso?](/pt/local-llms/how-much-vram-local-llm) — Encontre o equilíbrio entre VRAM e tamanho do modelo →',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: 'Perguntas frequentes',
-          faqs: [
-            { q: 'Devo comprar a AMD RX 6800 XT ou a NVIDIA RTX 3080 para LLMs locais?', a: 'RTX 3080 se você valoriza a simplicidade (o CUDA funciona sem problemas). RX 6800 XT se você quer 25% mais valor e não se importa com 5-10 horas de configuração do ROCm.' },
-            { q: 'A AMD RX 7900 XTX é melhor que a RTX 4090?', a: 'Velocidade semelhante, mesma VRAM (24GB). A RX 7900 XTX é US$ 1.450-2.050 mais barata de segunda mão (US$ 450-550 vs. US$ 2.000-2.600 — o preço da RTX 4090 usada subiu muito depois que a NVIDIA a descontinuou em 2026). A configuração do ROCm é o contrapeso.' },
-            { q: 'Posso usar GPUs AMD com o Ollama?', a: 'Tecnicamente sim. Com base nos nossos testes de abril de 2026 (Ollama v0.3.x, ROCm 6.x), o suporte ROCm foi inconsistente — a deteção de GPU falhou em algumas configurações e o fallback para CPU foi frequente. Verifique a lista de compatibilidade AMD atual em github.com/ollama/ollama antes de decidir; para inferência AMD fiável hoje, vLLM ou llama.cpp são os caminhos mais seguros.' },
-            { q: 'Qual é o melhor caminho AMD para LLMs locais em 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos têm bom suporte para AMD. Evite o Ollama.' },
-            { q: 'Preciso de Ubuntu para o AMD ROCm, ou o Windows também funciona?', a: 'O suporte no Windows existe (HIP no Windows), mas é mais recente e menos estável. O Ubuntu é o caminho recomendado.' },
-            { q: 'A RX 6700, a RX 6700 XT ou a 6750 é boa para modelos de 7B?', a: 'A RX 6700 (12GB) funciona, mas é 20% mais lenta que a RX 6800 XT. A RX 6700 XT (12GB, mesma VRAM) tem clocks cerca de 15% mais rápidos que a versão sem XT, mas ainda fica atrás da 6800 XT. Compre qualquer uma delas só se custar menos de US$ 250. Caso contrário, vá de 6800 XT.' },
-            { q: 'Vale a pena comprar a RX 6900 XT para LLMs locais?', a: 'Não muito. A RX 6900 XT (16GB) é apenas marginalmente mais rápida que a RX 6800 XT, é mais rara de segunda mão e custa US$ 350-400 contra US$ 300-350 da 6800 XT. O aumento de preço não compensa -- compre a 6800 XT em vez dela.' },
-            { q: 'A AMD Radeon 680M é boa para rodar LLMs locais?', a: 'A Radeon 680M é uma placa de vídeo integrada dentro das APUs móveis Ryzen 6000/7000 -- não é o mesmo produto que a RX 6800M ou a RX 6800 XT, que são placas dedicadas. Ela não tem VRAM dedicada, e sim compartilha a RAM do sistema, então só é viável para modelos pequenos e quantizados (cerca de 3B de parâmetros ou menos em Q4) e vai rodar visivelmente mais devagar que qualquer GPU dedicada deste guia. Para uso sério de LLMs locais, uma placa dedicada como a RX 6800 XT é a melhor escolha.' },
-            { q: 'Posso combinar GPUs AMD e NVIDIA no mesmo sistema?', a: 'Teoricamente sim, mas o gerenciamento é um pesadelo. Cada GPU precisa do seu próprio runtime CUDA/HIP. Não é recomendado.' },
-          ],
-        },
-        'relatedReading': {
-          title: 'Leituras relacionadas',
-          items: [
-            '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm)',
-            '[Melhores GPUs para LLMs locais](/pt/local-llms/best-gpus-for-local-llms)',
-            '[GPU vs CPU vs Apple Silicon](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Text Generation WebUI vs vLLM vs Llama.cpp](/pt/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
-            '[Notebook vs Desktop para LLMs locais](/pt/local-llms/laptop-vs-desktop-local-llm) — Comparação de custo e desempenho entre notebook e desktop para IA.',
-          ],
-        },
-        'sources': {
-          title: 'Fontes',
-          items: [
-            'Documentação do AMD ROCm e GitHub: compilador HIP, matriz de compatibilidade de drivers, exemplos de inferência com LLMs',
-            'vLLM GitHub: implementação do backend AMD/ROCm e estado do suporte (v0.6.0+)',
-            'Llama.cpp GitHub: backend HIP para suporte a GPUs AMD',
-            'As GPUs AMD oferecem boas velocidades em tokens por segundo, mas a velocidade sozinha não determina a qualidade das respostas. O que você pergunta ao modelo importa tanto quanto a rapidez da resposta: [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) explica como estruturar solicitações mais longas dentro dos limites de memória da GPU.',
-          ],
-        },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: 'كيف تقارن بطاقات AMD بـ NVIDIA في VRAM والسعر؟',
+        columns: [
+          'GPU',
+          'VRAM',
+          'عرض النطاق',
+          'السعر المعتاد',
+          'الواجهة الخلفية',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 GB',
+            'عرض النطاق': '512 GB/s',
+            'السعر المعتاد': '~380–410 دولارًا مستعملة',
+            'الواجهة الخلفية': 'ROCm (Linux)، Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 GB',
+            'عرض النطاق': '640 GB/s',
+            'السعر المعتاد': '~820–930 دولارًا جديدة',
+            'الواجهة الخلفية': 'ROCm (Linux)، Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 GB',
+            'عرض النطاق': '800 GB/s',
+            'السعر المعتاد': 'لم يُعاد التحقق منه',
+            'الواجهة الخلفية': 'ROCm، Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 GB',
+            'عرض النطاق': '960 GB/s',
+            'السعر المعتاد': '~900–1,250 دولارًا مستعملة',
+            'الواجهة الخلفية': 'ROCm، Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 GB',
+            'عرض النطاق': '640 GB/s',
+            'السعر المعتاد': '1,299 دولار قائمة؛ ~1,400–1,900 سوق',
+            'الواجهة الخلفية': 'ROCm (Linux)، Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 GB',
+            'عرض النطاق': '936 GB/s',
+            'السعر المعتاد': '~1,000–1,400 دولار مستعملة',
+            'الواجهة الخلفية': 'CUDA، Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 GB',
+            'عرض النطاق': '1,008 GB/s',
+            'السعر المعتاد': '~2,250 دولارًا مستعملة',
+            'الواجهة الخلفية': 'CUDA، Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 GB',
+            'عرض النطاق': '1,792 GB/s',
+            'السعر المعتاد': '~3,700–4,300 دولار جديدة',
+            'الواجهة الخلفية': 'CUDA، Vulkan',
+          },
+        ],
+        note: 'سعة VRAM وعرض النطاق مواصفات من الشركات المصنّعة ([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html) و[RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html) و[Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). الأسعار لقطات من أسعار معروضة في الولايات المتحدة مأخوذة من متتبعات أسعار عامة ومراجعات (سبتمبر–أكتوبر 2026)، وليست قياسات من PromptQuorum؛ وقد تختلف الأسعار في بلدك. تحقق من أسعار البيع الفعلية قبل الشراء.',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.webp',
+        imageCaption: 'AMD مقابل NVIDIA لنماذج LLM المحلية: VRAM وعرض النطاق والسعر المعتاد (الولايات المتحدة، لقطات سبتمبر–أكتوبر 2026).',
       },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/pt/local-llms/best-amd-gpus-local-llm',
-        name: 'Melhores GPUs AMD para LLMs locais',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'A AMD RX 6800 XT (16GB, ~US$ 300-350 de segunda mão) e a RX 7900 XTX (24GB, ~US$ 400-500 de segunda mão) são as únicas opções viáveis para LLMs locais.' },
-          { '@type': 'ListItem', position: 2, name: 'Desempenho por dólar: a AMD é 20-30% mais barata que a NVIDIA, mas a fricção de software custa entre 5 e 10 horas de configuração.' },
-          { '@type': 'ListItem', position: 3, name: 'Ollama: suporte AMD limitado (o caminho do ROCm foi inconsistente nos nossos testes de abril de 2026, Ollama v0.3.x / ROCm 6.x; o fallback para CPU é lento). Verifique github.com/ollama/ollama para compatibilidade AMD atual.' },
-          { '@type': 'ListItem', position: 4, name: 'vLLM: suporte completo para AMD ROCm desde a v0.6.0, mas a configuração exige instalar drivers manualmente.' },
-          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: excelente suporte para AMD via ROCm. A melhor experiência de usuário em AMD.' },
-          { '@type': 'ListItem', position: 6, name: 'Llama.cpp: suporte nativo para AMD (backend HIP). Desempenho sólido. O caminho recomendado em AMD.' },
-          { '@type': 'ListItem', position: 7, name: 'Custo de configuração: planeje 5-10 horas de depuração de drivers ROCm, compilação do HIPCC e compatibilidade de kernel.' },
-          { '@type': 'ListItem', position: 8, name: 'Veredito (abril 2026): use AMD só se já tiver hardware AMD ou encontrar uma oferta de segunda mão excelente. Caso contrário, o NVIDIA CUDA continua mais simples.' },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'ما سرعة بطاقات AMD مقارنة بـ NVIDIA في استدلال LLM؟',
+        content: [
+          '**تعتمد سرعة توليد الرموز (tokens) على عرض نطاق الذاكرة أكثر من TFLOPS، وتقترب أقوى بطاقات AMD في هذا المقياس من بطاقات NVIDIA الرائدة السابقة.** تقترب RX 7900 XTX (‏960 GB/s) من RTX 3090 (‏936 GB/s) وتقل عن RTX 4090 (‏1,008 GB/s) وRTX 5090 (‏1,792 GB/s).',
+          'معالجة الموجّه (prefill) هي المجال الذي تتفوق فيه NVIDIA بوضوح أكبر. في مقارنة مجتمعية باستخدام llama.cpp (نقاش llama.cpp رقم 19890، وتكرره مراجعات أطراف ثالثة) كانت RTX 5090 أسرع بنحو 2.6–3.4 مرة من Radeon AI PRO R9700 في prefill وبنحو 1.5 مرة في التوليد للنموذج نفسه. هذه بيانات أبلغ عنها مطورون، وليست قياسًا من PromptQuorum.',
+          'يغيّر اختيار الواجهة الخلفية النتائج: يتبادل Vulkan وROCm (HIP) التفوق بحسب النموذج والبطاقة وإصدار المشغّل. يمكن بناء llama.cpp بالواجهتين معًا، فاختبرهما على بطاقتك قبل أن تحسم قرارك.',
+          'عمليًا، توقّع أن تكون AMD منافسة في سرعة التوليد بالنسبة لكل GB/s من عرض النطاق، وأبطأ مع الموجّهات الطويلة، وأقل صقلًا من حيث البرمجيات.',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: 'ما مدى صعوبة إعداد ROCm في 2026؟',
+        content: [
+          '**يحتاج Vulkan إلى مشغّل رسوميات فقط؛ أما ROCm فيحتاج إلى GPU وتوزيعة Linux ونواة مدعومة.** تحقق مما يلي قبل الشراء:',
+          '1. **طابِق بطاقتك مع مصفوفة AMD.** تدرج مصفوفة ROCm 7.2.1 لبطاقات Radeon كلًا من RX 9070 XT وRX 9060 XT وRX 7900 XTX وRX 7900 XT وRX 7900 GRE وRX 7800 XT وRadeon AI PRO R9700 على Ubuntu 24.04.4 وUbuntu 22.04.5 وRHEL 10.1.',
+          '2. **راجع قائمة Ollama أيضًا.** تضيف وثائق Ollama بطاقات RX 6800 XT وRX 6900 XT وغيرها من سلسلة RX 6000 لـ ROCm على Linux، وتذكر Ryzen AI Max+ 395. يمكن للبطاقات غير المدرجة تجربة `HSA_OVERRIDE_GFX_VERSION` على Linux؛ وهو غير مدعوم على Windows.',
+          '3. **ثبّت حزمة ROCm v7** بأداة `amdgpu-install` من AMD (Linux). يتطلب Ollama ROCm v7 على Linux.',
+          '4. **تحقق من الاكتشاف** بالأمر `rocminfo`: يجب أن يظهر GPU كوكيل (agent)، مثل gfx1100 لبطاقة RX 7900 XTX وgfx1201 لبطاقة RX 9070 XT.',
+          '5. **على Windows،** تذكر قائمة ROCm لدى Ollama بطاقات RX سلسلة 7000. أما بقية البطاقات، ومنها سلسلة RX 9070، فليست في هذه القائمة، فاستخدم واجهة Vulkan الخلفية.',
+          'أحدث إصدار من ROCm هو 7.14.0 (16 يوليو 2026) الذي نقل ROCm إلى نظام البناء المعياري TheRock. وكانت صفحة التوافق لبطاقات Radeon لدى AMD تغطي الإصدارات حتى 7.2.1 عند التحقق، فطابِق بطاقتك مع مصفوفة الإصدار الذي ستثبّته.',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: 'أي أدوات LLM المحلية تعمل على بطاقات AMD؟',
+        content: [
+          '**Ollama:** ‏ROCm v7 على Linux للبطاقات المذكورة أعلاه؛ وعلى Windows تعمل بطاقات RX سلسلة 7000 عبر ROCm. يكون [Vulkan](https://docs.ollama.com/gpu) مفعّلًا افتراضيًا عند تثبيت واجهته الخلفية ويمكن تعطيله بـ `OLLAMA_VULKAN=0`. الإصدار الحالي v0.40.10 (23 أكتوبر 2026) ويتضمن بناء ROCm لـ Linux.',
+          '**llama.cpp:** يُبنى لـ AMD باستخدام HIP (ROCm) أو Vulkan (`-DGGML_VULKAN=1`). يمكن تجميع الواجهتين معًا واختيار إحداهما لكل جهاز بالخيار `--device`. معظم الواجهات الرسومية مبنية عليه.',
+          '**LM Studio:** يدعم بطاقات AMD عبر بيئات تشغيل llama.cpp — Vulkan وROCm. يُعد Vulkan البديل المعتاد عندما لا تكتشف بيئة ROCm البطاقة. (كانت نسخة سابقة من هذه الصفحة تقول إن LM Studio يعمل مع NVIDIA فقط؛ وهذا خطأ.)',
+          '**vLLM:** يوفّر إصدارات ROCm (يذكر إصدار ROCm 7.14.0 نسخة vLLM 0.23.0). يستهدف خدمة النماذج والمعالجة الدفعية؛ راجع وثائق vLLM لهدف GPU الخاص بك قبل الاعتماد عليه.',
+          '**قاعدة عامة:** استخدم Ollama أو LM Studio للسهولة، وllama.cpp للتحكم، وvLLM لخدمة عدة مستخدمين.',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-ar.webp',
+        imageCaption: 'أدوات LLM المحلية على بطاقات AMD: ‏Ollama (ROCm v7 وVulkan) وllama.cpp (HIP وVulkan) وLM Studio (Vulkan وROCm) وvLLM (ROCm).',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: 'كيف تشغّل استدلال LLM المكمَّم على بطاقة AMD؟',
+        numberedItems: [
+          '**اختر حجم النموذج بما يناسب VRAM.** يستهلك ملف Q4_K_M نحو 0.6 GB لكل مليار معامل (نحو 9 GB لنموذج 14B و20 GB لنموذج 32B؛ تقديرات). اترك 2–4 GB لذاكرة السياق المؤقتة.',
+          '**اختر واجهة خلفية.** يوفّر Vulkan أسرع بداية (مشغّل الرسوميات فقط). ويُفضَّل ROCm (HIP) على إعدادات Linux المدعومة.',
+          '**ثبّت بيئة تشغيل.** على Linux ثبّت ROCm v7 أولًا بـ `amdgpu-install` لمسار ROCm، ثم ثبّت Ollama (`curl -fsSL https://ollama.com/install.sh | sh`) أو LM Studio.',
+          '**شغّل نموذجًا مكمَّمًا.** مثلًا `ollama run qwen3:14b`، أو في llama.cpp الأمر `llama-server -m model.gguf -ngl 99` لتفريغ كل الطبقات على GPU.',
+          '**تأكد من استخدام GPU.** يجب أن يعرض `ollama ps` القيمة 100% GPU؛ ويعرض `rocm-smi` الـ VRAM المستخدم. إذا ظهر CPU فراجع تثبيت ROCm أو انتقل إلى Vulkan.',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: 'متى تشتري AMD بدلًا من NVIDIA لنماذج LLM المحلية؟',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'اشترِ AMD عندما تريد 24–32 GB من VRAM بسعر أقل من أحدث بطاقات NVIDIA؛ وتجاوزها إذا كنت تعتمد على أدوات CUDA فقط أو لا تريد أي جهد في الإعداد.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'تكون AMD صفقة جيدة عندما يكون الناقص لديك هو VRAM ويناسبك مسار البرمجيات (ROCm على Linux أو Vulkan). وإذا كنت جديدًا على نماذج LLM المحلية وتريد أن يعمل كل شيء مباشرة فابدأ بـ NVIDIA.',
+          },
+        ],
+        content: [
+          'اشترِ AMD إذا:',
+          '- أردت 32 GB على بطاقة واحدة بمال أقل: تكلّف Radeon AI PRO R9700 من ثلث سعر RTX 5090 إلى نصفه تقريبًا.',
+          '- كنت تملك بطاقة Radeon مدعومة، أو أردت بطاقة تؤدي جيدًا في الألعاب أيضًا.',
+          '- كنت تستخدم Linux أو يكفيك Vulkan، وكانت أدواتك (Ollama وllama.cpp وLM Studio) تدعم AMD أصلًا.',
+          'اشترِ NVIDIA إذا:',
+          '- احتجت إلى أدوات CUDA فقط أو حزم التدريب والضبط الدقيق أو أسرع معالجة للموجّه.',
+          '- كنت تقارن بطاقات 24 GB المستعملة: تكلّف RTX 3090 المستعملة تقريبًا ما تكلّفه RX 7900 XTX المستعملة، فقد يحسم دعم CUDA الأمر.',
+          '- أردت قضاء أقل وقت ممكن في الإعداد.',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: 'AMD Instinct أم وحدات NVIDIA لمراكز البيانات: أيهما أفضل لنماذج LLM؟',
+        content: [
+          '**تنافس AMD Instinct (MI300X وMI350X) وحدات NVIDIA لمراكز البيانات، وتُشترى للخوادم لا لمكاتب العمل.** تتضمن قائمة ROCm لدى Ollama بطاقات Instinct، وقد بُني ROCm حولها، لذا فدعمها أوسع من بطاقات Radeon الاستهلاكية.',
+          'يحمل MI300X ذاكرة HBM3 بسعة 192 GB لكل مسرّع (مواصفات AMD)، وهذا يناسب النماذج الكبيرة جدًا في جهاز واحد. أما لجهاز بمستخدم واحد فالخيارات ذات الصلة من AMD هي Radeon RX أو Radeon AI PRO.',
+          'لقرارات الخوادم والسحابة راجع [دليل شراء خوادم GPU للمؤسسات](/ar/local-llms/enterprise-gpu-server-buying-guide-2026) و[مقارنة تأجير GPU السحابي](/ar/local-llms/cloud-gpu-rental-comparison-2026).',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'ما أكثر الأخطاء شيوعًا عند اعتماد AMD؟',
+        items: [
+          'افتراض أن 24 GB تشغّل نماذج 70B: يحتاج نموذج 70B بصيغة Q4 إلى نحو 40 GB أو أكثر، فتبلغ بطاقة 24 GB الواحدة حدّها عند 30–35B تقريبًا. خطّط لبطاقتين أو لزوج R9700 بسعة 32 GB لنماذج 70B.',
+          'شراء بطاقة لا يدعمها ROCm: تحقق أولًا من مصفوفة AMD وقائمة Ollama. بطاقات RX سلسلة 6000 ليست في مصفوفة AMD الحالية لبطاقات Radeon.',
+          'تجاهل Vulkan: إذا لم يكتشف ROCm بطاقتك فجرّب واجهة Vulkan قبل أن تستنتج أن GPU غير قابل للاستخدام.',
+          'الوثوق بالأسعار المعروضة: تحركت أسعار GPU والذاكرة بوضوح خلال 2026. قارن أسعار البيع الفعلية لا أسعار الإعلانات.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'الخطوات التالية',
+        items: [
+          '[أفضل بطاقات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm) — ميزانيتك محدودة؟ أفضل بطاقات GPU قيمةً لاستدلال LLM →',
+          '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD أم Apple أم CPU: أي منصة تناسب سير عملك؟ →',
+          '[كم VRAM أحتاج؟](/ar/local-llms/how-much-vram-local-llm) — طابِق VRAM لبطاقتك مع حجم النموذج →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'كيف تؤثر قوانين البيانات الإقليمية في قرار AMD مقابل NVIDIA؟',
+        content: [
+          '**الشركة المصنّعة لـ GPU لا تغيّر التزامات حماية البيانات؛ أما تشغيل الاستدلال محليًا فيغيّرها.** يُبقي الاستدلال على الجهاز الموجّهات والمستندات على عتادك، وهذا قد يقلل التعرّض لمخاطر النقل عبر الحدود بموجب GDPR في الاتحاد الأوروبي وAPPI في اليابان وPIPL وقانون أمن البيانات في الصين، وكذلك أنظمة حماية البيانات الشخصية الإقليمية في الخليج مثل نظام PDPL السعودي. ومع ذلك يظل الامتثال متطلبًا لأساس نظامي وقواعد للاحتفاظ بالبيانات وإجراءات للتعامل مع الاختراقات، فاطلب مراجعة رسمية للبيانات الخاضعة للتنظيم.',
+          'قد تقيّد قواعد ضبط الصادرات المسرّعات عالية الأداء من AMD وNVIDIA في بعض الأسواق. تحقق من القواعد السارية في بلدك قبل الاستيراد أو الشراء.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'هل بطاقات AMD جيدة لتشغيل نماذج LLM المحلية؟',
+            a: 'نعم، مع بعض التحفظات. تشغّل بطاقات AMD مثل RX 7900 XTX (24 GB) وRadeon AI PRO R9700 (32 GB) نماذج LLM المكمَّمة عبر ROCm أو Vulkan في Ollama وLM Studio وllama.cpp. ما زالت NVIDIA CUDA تتمتع بدعم برمجي أوسع ومعالجة أسرع للموجّه، لذا تناسب AMD أكثر عندما يهمّك VRAM لكل دولار.',
+          },
+          {
+            q: 'ما أفضل بطاقة AMD لنماذج LLM المحلية؟',
+            a: 'RX 7900 XTX هي أفضل بطاقة AMD عامة لنماذج LLM المحلية: ‏24 GB من VRAM وعرض نطاق 960 GB/s ودعم في مصفوفة ROCm 7.2.1 من AMD وفي Ollama. وللحصول على VRAM أكبر في البطاقة الواحدة توفر Radeon AI PRO R9700 سعة 32 GB؛ وللنماذج من 7B إلى 14B تكفي RX 9070 XT (16 GB).',
+          },
+          {
+            q: 'AMD أم NVIDIA لنماذج LLM المحلية: أيهما أشتري؟',
+            a: 'اشترِ NVIDIA إذا أردت توافق CUDA وأقل قدر من الإعداد. واشترِ AMD إذا أردت VRAM أكبر لكل دولار، خصوصًا R9700 بسعة 32 GB مقابل RTX 5090. تكلّف RX 7900 XTX المستعملة تقريبًا ما تكلّفه RTX 3090 المستعملة، وهنا يتوقف الاختيار على البرمجيات.',
+          },
+          {
+            q: 'هل يعمل Ollama مع بطاقات AMD؟',
+            a: 'نعم. يتطلب Ollama مشغّل ROCm v7 على Linux ويدرج RX 9070 XT وRX 7900 XTX وRX 6800 XT وRadeon AI PRO R9700 وغيرها. وعلى Windows تشمل قائمة ROCm بطاقات RX سلسلة 7000، ويكون Vulkan مفعّلًا افتراضيًا عند تثبيت واجهته الخلفية.',
+          },
+          {
+            q: 'هل يدعم LM Studio بطاقات AMD؟',
+            a: 'نعم. يشغّل LM Studio بطاقات AMD عبر بيئات تشغيل llama.cpp، إما Vulkan أو ROCm. إذا لم تكتشف بيئة ROCm بطاقتك فبدّل البيئة إلى Vulkan. كانت نسخ سابقة من هذه الصفحة تذكر خطأً أن LM Studio يعمل مع NVIDIA فقط.',
+          },
+          {
+            q: 'كيف أشغّل استدلال LLM مكمَّمًا على بطاقة AMD؟',
+            a: 'اختر نموذجًا مكمَّمًا يتّسع في VRAM (يستهلك Q4_K_M نحو 0.6 GB لكل مليار معامل)، وثبّت Ollama أو LM Studio، واستخدم Vulkan أو ROCm. على Linux ثبّت ROCm v7 بـ amdgpu-install، ثم شغّل النموذج وتأكد من استخدام GPU عبر ollama ps أو rocm-smi.',
+          },
+          {
+            q: 'RX 9070 XT أم RX 7900 XTX لنماذج LLM المحلية؟',
+            a: 'لنماذج LLM المحلية تُفضَّل RX 7900 XTX لأن 24 GB تستوعب نماذج حتى نحو 30–35B بصيغة Q4، بينما تبلغ سعة 16 GB في RX 9070 XT حدّها عند نحو 14B–24B. RX 9070 XT أحدث وأرخص، فاخترها إذا كانت 16 GB تكفيك.',
+          },
+          {
+            q: 'ما أفضل بطاقة AMD بأقل من 500 دولار؟',
+            a: 'RX 6800 XT (16 GB) بنحو 380–410 دولارات مستعملة هي أفضل بطاقة AMD بأقل من 500 دولار. تشغّل نماذج 7B–14B بصيغة Q4–Q8، لكنها ليست في مصفوفة ROCm الحالية من AMD لبطاقات Radeon، فاعتمد على مسار ROCm على Linux لدى Ollama أو على Vulkan.',
+          },
+          {
+            q: 'هل تستحق Radeon AI PRO R9700 الشراء للذكاء الاصطناعي المحلي؟',
+            a: 'نعم إذا كنت تحتاج إلى 32 GB على بطاقة واحدة. سعر القائمة 1,299 دولار مقابل نحو 3,700–4,300 دولار لبطاقة RTX 5090، لكن أسعار السوق المبلغ عنها أعلى ومعالجة الموجّه أبطأ. بطاقتا R9700 تعطيان 64 GB لنماذج 70B بصيغة Q4.',
+          },
+          {
+            q: 'هل أحتاج إلى Linux لـ ROCm من AMD أم يعمل على Windows؟',
+            a: 'Linux هو مسار ROCm الأفضل دعمًا: تدرج مصفوفة AMD كلًا من Ubuntu 24.04.4 وUbuntu 22.04.5 وRHEL 10.1. وعلى Windows تشمل قائمة ROCm لدى Ollama بطاقات RX سلسلة 7000، وتستخدم بقية البطاقات واجهة Vulkan الخلفية.',
+          },
+          {
+            q: 'أيهما أفضل لنماذج LLM: AMD Instinct أم بطاقات NVIDIA؟',
+            a: 'تنافس Instinct (MI300X وMI350X) وحدات NVIDIA لمراكز البيانات وتُشترى للخوادم؛ ويحمل MI300X ذاكرة HBM3 بسعة 192 GB. أما لحاسوب مكتبي واحد فالخيارات ذات الصلة من AMD هي Radeon أو Radeon AI PRO، ويظل نظام CUDA البيئي لدى NVIDIA أوسع.',
+          },
+          {
+            q: 'هل AMD جيدة للتعلم العميق وتعلم الآلة وليس لنماذج LLM فقط؟',
+            a: 'للاستدلال نعم. يوفّر ROCm إصدارات من PyTorch (يذكر إصدار ROCm 7.14.0 نسخة PyTorch 2.12.0). أما التدريب والشفرات البحثية التي تفترض CUDA فما زال لدى NVIDIA نظام بيئي أوسع لها، فتحقق من دعم إطار عملك لـ AMD قبل الشراء.',
+          },
+          {
+            q: 'هل جهاز Mini PC بمعالج Ryzen AI Max+ 395 أفضل من بطاقة AMD مستقلة؟',
+            a: 'يعتمد ذلك على حجم النموذج. توفّر أنظمة Ryzen AI Max+ 395 حتى 128 GB من الذاكرة الموحّدة لكن عرض نطاقها 256 GB/s فقط، فتناسب نماذج Mixture-of-Experts الكبيرة، بينما تولّد البطاقة المستقلة الرموز أسرع في النماذج التي تتّسع في VRAM الخاص بها.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل بطاقات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm)',
+          '[أفضل بطاقات GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms)',
+          '[أفضل أجهزة AMD Mini PC لنماذج LLM المحلية](/ar/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI مقابل vLLM مقابل Llama.cpp](/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[الحاسوب المحمول مقابل المكتبي لنماذج LLM المحلية](/ar/local-llms/laptop-vs-desktop-local-llm) — مقارنة التكلفة والأداء بين المحمول والمكتبي للذكاء الاصطناعي.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        items: [
+          '[وثائق GPU لدى Ollama](https://docs.ollama.com/gpu): متطلب AMD ROCm v7 وبطاقات Radeon وRadeon AI PRO وRadeon PRO وRyzen AI وInstinct المدعومة وواجهة Vulkan',
+          '[إصدارات Ollama](https://github.com/ollama/ollama/releases): ‏v0.40.10، 23 أكتوبر 2026',
+          '[AMD ROCm على Radeon وRyzen — توافق Linux](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html): بطاقات Radeon والتوزيعات المدعومة في ROCm 7.2.1',
+          '[إصدارات ROCm](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0): ‏ROCm 7.14.0، 16 يوليو 2026، وإصدارات الأطر',
+          '[وثائق بناء llama.cpp](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md): واجهتا HIP وVulkan الخلفيتان',
+          'مواصفات منتجات AMD: [RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html) و[RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html) و[Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          'لقطات الأسعار (الولايات المتحدة، سبتمبر–أكتوبر 2026): متتبعات أسعار GPU العامة ومراجعات أطراف ثالثة؛ وهي أسعار معروضة تتغير بسرعة',
+          'تقدّم بطاقات AMD سرعات جيدة في الرموز في الثانية، لكن السرعة وحدها لا تحدد جودة الإجابة. ما تسأله للنموذج لا يقل أهمية عن سرعة استجابته: يوضح [شرح نوافذ السياق](https://www.promptquorum.com/ar/prompt-engineering/context-windows-explained-why-ai-forgets) كيف تنظّم الطلبات الأطول ضمن حدود ذاكرة GPU.',
         ],
       },
     },
-    de: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
-      ],
-      theme: 'GPU-Kaufleitfäden',
-      title: 'Beste AMD-GPUs für lokale LLMs',
-      seoTitle: 'AMD GPUs für lokale LLMs 2026: ROCm Setup & vLLM',
-      intro: '**AMD RX 6800 XT und RX 7900 XTX sind solide NVIDIA-Alternativen mit 15-20% besserer Rechenleistung pro Dollar, leiden aber unter schwächerer ONNX-Runtime- und vLLM-Treiberunterstützung.** AMD ROCm (HIP) hat sich reif entwickelt, aber Kompatibilitätsschichten erzeugen Reibung. NVIDIA CUDA ist immer noch der einfachste Weg für lokale LLMs. Verwenden Sie AMD nur, wenn Sie ein großartiges gebrauchtes Angebot finden oder bereits AMD-Hardware besitzen.',
-      metaDescription: 'AMD RX 6800 XT, 7900 XTX für lokale LLMs. ROCm-Einrichtung, vLLM-Unterstützung, Leistung vs. NVIDIA RTX. Entscheidungsleitfaden.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-de.webp',
-      publishDate: '2026-04-05',
-      readTime: '8 Min. Lesezeit',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'AMD GPU',
-      toc: [
-        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
-        { label: 'Welche AMD-GPUs lohnen sich wirklich?', anchor: '#key-takeaways' },
-        { label: 'Wie vergleichen sich AMD-GPUs mit RTX bei Preis und Geschwindigkeit?', anchor: '#amd-vs-nvidia' },
-        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'Die AMD RX 7900 XTX erreicht bei 24 GB VRAM für 450-550 $ gebraucht das Niveau der RTX 4090, aber die ROCm-Treiber-Einrichtung bringt 5-10 Stunden mehr Aufwand als bei NVIDIA CUDA.' },
-            { type: 'plain-terms', text: 'AMD-GPUs sind wie ein Auto mit viel Leistung, aber Schaltgetriebe -- mehr Leistung pro Dollar, aber mehr Aufwand, um es zum Laufen zu bringen. NVIDIA ist der Automatik.' },
-          ],
-          items: [
-            'AMD RX 6800 XT (16GB, 300-350 € gebraucht) und RX 7900 XTX (24GB, 400-500 € gebraucht) sind die einzigen praktikablen Optionen für lokale LLMs.',
-            'Rechenleistung pro Euro: AMD ist 20-30% günstiger als NVIDIA, aber die Software-Reibung kostet 5-10 Stunden Einrichtungszeit.',
-            'Ollama: Begrenzte AMD-Unterstützung (ROCm-Pfad war in unseren Tests April 2026, Ollama v0.3.x / ROCm 6.x, inkonsistent — GPU-Erkennung schlug bei einigen Konfigurationen fehl; CPU-Fallback ist langsam). Prüfen Sie die aktuelle AMD-Kompatibilitätsliste auf github.com/ollama/ollama.',
-            'vLLM: Volle AMD ROCm-Unterstützung seit v0.6.0, aber die Einrichtung erfordert manuelle Treiber. Funktioniert gut, wenn Sie das Einrichtungschaos überstanden haben.',
-            'Text Generation WebUI: Exzellente AMD-Unterstützung via ROCm. Beste Benutzererfahrung auf AMD.',
-            'Llama.cpp: Native AMD-Unterstützung (HIP-Backend). Solide Leistung. Empfohlener AMD-Pfad.',
-            'Einrichtungskosten: Planen Sie 5-10 Stunden Debugging von ROCm-Treibern, HIPCC-Kompilierung und Kernel-Kompatibilität.',
-            'Fazit (April 2026): Verwenden Sie AMD nur, wenn Sie bereits AMD-Hardware haben, oder wenn Sie ein großartiges gebrauchtes Angebot finden (320 € für eine 16-GB-Karte). Andernfalls ist NVIDIA CUDA immer noch einfacher.',
-          ],
-        },
-        'which-amd': {
-          title: 'Welche AMD-GPUs lohnen sich wirklich?',
-          items: [
-            '**RX 6800 XT** (16 GB GDDR6): Der Wert-König für AMD. 2020er-Release. Immer noch solide für 7B-22B-Inferenz. Gebraucht: 300-350 €.',
-            '**RX 6900 XT** (16 GB GDDR6): Marginal schneller als 6800 XT. Selten. Gebraucht: 350-400 €. Die Preiserhöhung lohnt sich nicht.',
-            '**RX 7900 XT** (20 GB GDDR6): Neuere RDNA 3-Architektur. 20% schneller als 6800 XT. Gebraucht: 400-480 €. Gut für 70B Q4.',
-            '**RX 7900 XTX** (24 GB GDDR6): Top-AMD-Consumer-GPU. 24 GB VRAM ist spielverändernd für 70B. Gebraucht: 450-550 €. Vergleichbar mit RTX 4090-Geschwindigkeit.',
-            '**Radeon Pro W6800 (32 GB)**: Enterprise-Karte, günstiger gebraucht (~200-300 €). Langsamer, aber 32 GB ist hervorragend für 70B Q8. Nische.',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: 'Wie vergleichen sich AMD-GPUs mit RTX bei Preis und Geschwindigkeit?',
-          rows: [
-            { 'GPU': 'RX 6800 XT', 'VRAM': '16 GB', 'TFLOPS': '1.952', 'Preis gebraucht': '300-350 €', 'Leistung/€ vs. RTX': '+25%', 'Equivalent RTX': 'RTX 3080 (langsamer)' },
-            { 'GPU': 'RX 7900 XT', 'VRAM': '20 GB', 'TFLOPS': '2.540', 'Preis gebraucht': '400-480 €', 'Leistung/€ vs. RTX': '+20%', 'Equivalent RTX': 'RTX 4080 (ähnlich)' },
-            { 'GPU': 'RX 7900 XTX', 'VRAM': '24 GB', 'TFLOPS': '2.750', 'Preis gebraucht': '450-550 €', 'Leistung/€ vs. RTX': '+15%', 'Equivalent RTX': 'RTX 4090 (ähnliche Geschwindigkeit)' },
-            { 'GPU': 'RTX 3080', 'VRAM': '10 GB', 'TFLOPS': '1.456', 'Preis gebraucht': '350-400 €', 'Leistung/€ vs. RTX': '--', 'Equivalent RTX': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'TFLOPS': '2.752', 'Preis gebraucht': '2.100-2.800 €', 'Leistung/€ vs. RTX': '--', 'Equivalent RTX': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', 'Preis gebraucht', 'Leistung/€ vs. RTX', 'Equivalent RTX'],
-        
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-de.webp',
-          imageCaption: 'Die RX 7900 XTX erreicht Geschwindigkeit und VRAM der RTX 4090 für etwa 60 % des Preises — der Kompromiss ist der ROCm-Einrichtungsaufwand.',
-        },
-        'rocm-setup': {
-          title: 'Welche ROCm-Einrichtungsherausforderungen gibt es?',
-          content: [
-            '1. Installieren Sie AMD ROCm-Treiber: `apt-get install rocm-dkms` (Ubuntu). Unter Windows ist ein manuelles .exe-Installationsprogramm erforderlich. Dauert 30 Minuten.',
-            '2. Überprüfen Sie den HIP-Compiler: `hipcc --version`. Fehlgeschlagen beim ersten Versuch. Debuggen Sie die Kernel-Kompatibilität für Ihre GPU.',
-            '3. Installieren Sie HIPCC (AMDs HIP-zu-C++-Compiler): `apt-get install hip-runtime-amd`. Eine weitere Abhängigkeitskette.',
-            '4. Testen Sie mit einem kleinen LLM: Führen Sie Inferenzen durch, um zu überprüfen, ob die GPU-Beschleunigung funktioniert. Fallback auf CPU ist häufig.',
-            '5. Beheben Sie Inkompatibilitäten der Treiberversion: ROCm v5.7 funktioniert mit Kernel 5.15, aber nicht mit 6.x. Verbraucht 2-4 Stunden Debugging.',
-            'NVIDIA CUDA zum Vergleich: `nvidia-cuda-toolkit` → ein apt-get, sofortiger GPU-Zugriff. AMD erfordert 5-10× mehr Reibung.',
-          ],
-        },
-        'software-support': {
-          title: 'Können Sie Ollama und vLLM auf AMD ausführen?',
-          content: [
-            '**Ollama auf AMD (Stand: unsere Tests April 2026, Ollama v0.3.x, ROCm 6.x):** Die ROCm-Unterstützung war in unseren Tests inkonsistent — GPU-Erkennung schlug bei einigen Konfigurationen fehl, CPU-Fallback ist langsam. Prüfen Sie die aktuelle AMD-Kompatibilitätsliste auf github.com/ollama/ollama vor dem Einsatz.',
-            '**vLLM auf AMD:** Volle ROCm-Unterstützung seit v0.6.0. Funktioniert gut, erfordert aber manuelle ROCm/HIP-Treibereinrichtung. Gut, wenn Sie das Einrichtungschaos überstanden haben.',
-            '**Text Generation WebUI:** Exzellente AMD ROCm-Unterstützung. Beste Benutzererfahrung auf AMD. Empfohlen.',
-            '**Llama.cpp:** Native HIP-Backend. Solide Leistung. Einfachster AMD-Pfad. Empfohlen.',
-            '**LM Studio:** Nur NVIDIA. Keine AMD-Unterstützung.',
-            'Seit April 2026: vLLM + llama.cpp sind Ihre AMD-Pfade. Ollama ist nicht zuverlässig.',
-          ],
-        
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-de.webp',
-          imageCaption: 'llama.cpp und Text Generation WebUI sind 2026 die zuverlässigen AMD-Pfade — Ollamas ROCm-Unterstützung bleibt inkonsistent.',
-        },
-        'when-buy-amd': {
-          title: 'Wann sollten Sie AMD statt NVIDIA kaufen?',
-          content: [
-            'AMD kaufen, wenn:',
-            '- Sie eine gebrauchte RX 7900 XTX für <450 € finden (unter Preis gegenüber RTX 4090 Wert).',
-            '- Sie bereits AMD-Hardware besitzen und Ökosystem-Konsistenz mögen.',
-            '- Sie einen Cluster bauen und Rechenleistung pro Euro über Benutzerfreundlichkeit stellen.',
-            'AMD nicht kaufen, wenn:',
-            '- Sie eine Plug-and-Play-Erfahrung wünschen. NVIDIA CUDA ist schneller funktionsfähig.',
-            '- Sie Ollama brauchen. AMD-ROCm-Unterstützung fuer Ollama war in der Praxis unzuverlaessig (Stand 2026).',
-            '- Sie zeitlich begrenzt sind. ROCm-Debugging kann 10+ Stunden dauern.',
-          ],
-        },
-        'mistakes': {
-          title: 'Häufige AMD-Adoptionfehler',
-          items: [
-            'RX 6700 (12 GB) kaufen, denkend, es ist ein 3060-12GB-Äquivalent - es ist 20% langsamer und oft schwer gebraucht zu finden.',
-            'Annahme, dass ROCm „einfach funktioniert" wie CUDA - planen Sie 5-10 Stunden Fehlerbehebung von Treiber- und Kernel-Kompatibilität.',
-            'Ollama mit AMD verwenden, nahtlose Integration erwartet — ROCm-Unterstützung war in unseren Tests April 2026 (Ollama v0.3.x, ROCm 6.x) inkonsistent; llama.cpp oder vLLM sind bessere Wetten.',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: 'Nächste Schritte',
-          items: [
-            '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — Knapp bei Kasse? Die besten GPUs für LLM-Inferenz →',
-            '[GPU vs. CPU vs. Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD vs. Apple vs. CPU — welche Plattform passt? →',
-            '[Wie viel VRAM brauche ich?](/de/local-llms/how-much-vram-local-llm) — GPU-VRAM auf Modellgröße abstimmen →',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: 'Häufig gestellte Fragen',
-          faqs: [
-            { q: 'Sollte ich AMD RX 6800 XT oder NVIDIA RTX 3080 für lokale LLMs kaufen?', a: 'RTX 3080, wenn Sie Einfachheit bevorzugen (CUDA „funktioniert einfach"). RX 6800 XT, wenn Sie 25% besseren Wert und 5-10 Stunden ROCm-Einrichtung nicht stört.' },
-            { q: 'Ist AMD RX 7900 XTX besser als RTX 4090?', a: 'Ähnliche Geschwindigkeit, gleicher VRAM (24 GB). RX 7900 XTX ist 1.550-2.350 € günstiger gebraucht (450-550 € vs. 2.100-2.800 € — der Preis gebrauchter RTX 4090 stieg stark, nachdem NVIDIA sie 2026 eingestellt hat). ROCm-Einrichtung ist der Kompromiss.' },
-            { q: 'Kann ich AMD-GPUs mit Ollama verwenden?', a: 'Technisch ja. In unseren Tests (April 2026, Ollama v0.3.x, ROCm 6.x) war die ROCm-Unterstützung inkonsistent — GPU-Erkennung schlug bei einigen Konfigurationen fehl, CPU-Fallback war häufig. Prüfen Sie die aktuelle AMD-Kompatibilitätsliste auf github.com/ollama/ollama vor dem Einsatz; für zuverlässige AMD-Inferenz heute sind vLLM oder llama.cpp die sichereren Wege.' },
-            { q: 'Was ist der beste AMD-Pfad für lokale LLMs 2026?', a: 'Llama.cpp (HIP-Backend) + Text Generation WebUI. Beide haben solide AMD-Unterstützung. Vermeiden Sie Ollama.' },
-            { q: 'Brauche ich Ubuntu für AMD ROCm, oder funktioniert Windows?', a: 'Windows-Unterstützung existiert (HIP auf Windows), aber sie war in unseren Tests April 2026 weniger stabil als auf Ubuntu. Ubuntu ist der empfohlene Pfad.' },
-            { q: 'Ist RX 6700, RX 6700 XT oder 6750 gut für 7B-Modelle?', a: 'RX 6700 (12 GB) funktioniert, ist aber 20% langsamer als RX 6800 XT. RX 6700 XT (12 GB, gleicher VRAM) hat etwa 15% höhere Taktraten als die Nicht-XT-Version, bleibt aber hinter der 6800 XT zurück. Kaufen Sie beide nur, wenn <250 €. Andernfalls dehnen Sie auf 6800 XT aus.' },
-            { q: 'Lohnt sich die RX 6900 XT für lokale LLMs?', a: 'Nicht wirklich. Die RX 6900 XT (16 GB) ist nur marginal schneller als die RX 6800 XT, gebraucht seltener zu finden und kostet 350-400 € gegenüber 300-350 € für die 6800 XT. Der Preisaufschlag lohnt sich nicht — kaufen Sie stattdessen die 6800 XT.' },
-            { q: 'Ist die AMD Radeon 680M gut für lokale LLMs?', a: 'Die Radeon 680M ist eine integrierte Grafikeinheit in mobilen Ryzen-6000/7000-APUs — nicht dasselbe Produkt wie die dedizierte RX 6800M oder RX 6800 XT. Sie hat keinen eigenen VRAM, sondern teilt sich den Arbeitsspeicher des Systems, weshalb sie nur für kleine quantisierte Modelle (etwa 3B Parameter oder weniger bei Q4) geeignet ist und spürbar langsamer läuft als jede dedizierte GPU in diesem Ratgeber. Für ernsthafte lokale LLM-Nutzung ist eine dedizierte Karte wie die RX 6800 XT die bessere Wahl.' },
-            { q: 'Kann ich AMD- und NVIDIA-GPUs in einem System mischen?', a: 'Theoretisch ja, aber das Management ist ein Albtraum. Jede GPU benötigt ihre eigene CUDA/HIP-Laufzeit. Nicht empfohlen.' },
-            { q: 'Erfüllt AMD ROCm die DSGVO-Anforderungen für deutsche Unternehmen?', a: 'Ja. AMD ROCm verarbeitet alle Daten lokal auf Ihrer Hardware, ohne in die Cloud zu gehen. Dies erfüllt die DSGVO Article 28 (Verarbeiter-Anforderungen) und BSI-Grundschutz-Kataloge automatisch, da Daten nicht an Dritte übertragen werden.' },
-            { q: 'Ist AMD ROCm für den deutschen Mittelstand geeignet?', a: 'Sehr geeignet. Der Mittelstand profitiert von der Kosteneinsparung (20-30% unter NVIDIA) und der vollständigen Datenkontrolle vor Ort. Die Einrichtungshürde (5-10 Stunden) ist einmalig. Nach dem Setup ist AMD eine solide Wahl für SMBs, die IT-Sicherheit und Kosteneffizienz schätzen.' },
-          ],
-        },
-        'relatedReading': {
-          title: 'Weiterführende Literatur',
-          items: [
-            '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm)',
-            '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
-            '[GPU vs. CPU vs. Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide)',
-          ],
-        },
-        'sources': {
-          title: 'Quellen',
-          items: [
-            'AMD ROCm-Dokumentation und GitHub: HIP-Compiler, Treiberkompatibilitätsmatrix, LLM-Inferenz-Beispiele',
-            'vLLM GitHub: AMD/ROCm Backend-Implementierung und Unterstützungsstatus (v0.6.0+)',
-            'Llama.cpp GitHub: HIP-Backend für AMD-GPU-Unterstützung',
-          ],
-        },
+  },
+  pt: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
       },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/de/local-llms/best-amd-gpus-local-llm',
-        name: 'Beste AMD-GPUs für lokale LLMs',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16 GB, 300-350 € gebraucht) und RX 7900 XTX (24 GB, 400-500 € gebraucht) sind die einzigen praktikablen Optionen für lokale LLMs.' },
-          { '@type': 'ListItem', position: 2, name: 'Rechenleistung pro Euro: AMD ist 20-30% günstiger als NVIDIA, aber die Software-Reibung kostet 5-10 Stunden Einrichtungszeit.' },
-          { '@type': 'ListItem', position: 3, name: 'Ollama: Begrenzte AMD-Unterstützung (ROCm-Pfad war in unseren Tests April 2026, Ollama v0.3.x / ROCm 6.x, inkonsistent; CPU-Fallback ist langsam). Prüfen Sie github.com/ollama/ollama für aktuelle AMD-Kompatibilität.' },
-          { '@type': 'ListItem', position: 4, name: 'vLLM: Volle AMD ROCm-Unterstützung seit v0.6.0, aber die Einrichtung erfordert manuelle Treiber. Funktioniert gut, wenn Sie das Einrichtungschaos überstanden haben.' },
-          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: Exzellente AMD-Unterstützung via ROCm. Beste Benutzererfahrung auf AMD.' },
-          { '@type': 'ListItem', position: 6, name: 'Llama.cpp: Native AMD-Unterstützung (HIP-Backend). Solide Leistung. Empfohlener AMD-Pfad.' },
-          { '@type': 'ListItem', position: 7, name: 'Einrichtungskosten: Planen Sie 5-10 Stunden Debugging von ROCm-Treibern, HIPCC-Kompilierung und Kernel-Kompatibilität.' },
-          { '@type': 'ListItem', position: 8, name: 'Fazit (April 2026): Verwenden Sie AMD nur, wenn Sie bereits AMD-Hardware haben, oder wenn Sie ein großartiges gebrauchtes Angebot finden (320 € für eine 16-GB-Karte). Andernfalls ist NVIDIA CUDA immer noch einfacher.' },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'GPU Buying Guides',
+    title: 'Melhor GPU AMD para LLMs locais e inferência de IA',
+    seoTitle: 'Melhor GPU AMD para LLMs locais 2026: 7900 XTX ou 9070 XT',
+    intro: '**A melhor GPU AMD para LLMs locais em 2026 é a Radeon RX 7900 XTX (24 GB) para modelos da classe 30B, a RX 9070 XT (16 GB) para modelos de 7B–14B e a Radeon AI PRO R9700 (32 GB) quando você precisa do máximo de VRAM por placa.** As três constam na lista de suporte do Ollama com ROCm v7 no Linux, e o llama.cpp também as executa pelo backend Vulkan. A NVIDIA CUDA continua sendo o caminho de menor esforço; escolha AMD pela VRAM por dólar ou porque você já tem a placa.',
+    metaDescription: 'Melhor GPU AMD para IA e LLMs locais: RX 7900 XTX (24 GB), RX 9070 XT (16 GB) e Radeon AI PRO R9700 (32 GB), com ROCm, Vulkan e AMD vs NVIDIA.',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**A melhor GPU AMD para LLMs locais em 2026 é a Radeon RX 7900 XTX (24 GB) para modelos da classe 30B, a RX 9070 XT (16 GB) para modelos de 7B–14B e a Radeon AI PRO R9700 (32 GB) quando você precisa do máximo de VRAM por placa.**',
+    quickAnswerTop: {
+      question: 'Qual é a melhor GPU AMD para LLMs locais e inferência de IA?',
+      answer: 'A RX 7900 XTX (24 GB) é a melhor AMD no geral para LLMs locais, a RX 9070 XT (16 GB) é a melhor placa recente para modelos de 7B–14B e a Radeon AI PRO R9700 (32 GB) oferece mais VRAM por placa. O Ollama lista as três com ROCm v7 no Linux; o Vulkan funciona como alternativa sem ROCm. A NVIDIA CUDA continua mais simples, então a AMD faz mais sentido quando a VRAM por dólar importa.',
+      bullets: [
+        'RX 7900 XTX: 24 GB, 960 GB/s, cerca de US$ 900–1.250 usada (rastreadores de preço, set.–out. 2026)',
+        'RX 9070 XT: 16 GB, 640 GB/s, cerca de US$ 820–930 nova — um modelo de 14B cabe em Q4–Q6',
+        'Radeon AI PRO R9700: 32 GB, preço de tabela da AMD US$ 1.299; os preços de rua relatados são mais altos',
+        'O Ollama precisa do ROCm v7 no Linux; o Vulkan vem ativado por padrão quando o backend está instalado',
+      ],
+      updatedDate: '2026-10-23',
+    },
+    audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam seus fluxos de trabalho de LLMs locais',
+    readTime: '9 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: 'Pontos principais',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: 'Quais GPUs AMD valem a pena para LLMs locais?',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'Como as GPUs AMD se comparam à NVIDIA em VRAM e preço?',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'Qual a velocidade das GPUs AMD em relação à NVIDIA?',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: 'Qual a dificuldade de configurar o ROCm em 2026?',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: 'Quais ferramentas de LLM local funcionam em GPUs AMD?',
+        anchor: '#software-support',
+      },
+      {
+        label: 'Como executar inferência quantizada de LLM em uma GPU AMD?',
+        anchor: '#run-quantized',
+      },
+      {
+        label: 'Quando escolher AMD em vez de NVIDIA?',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD Instinct ou GPUs de data center da NVIDIA?',
+        anchor: '#instinct',
+      },
+      {
+        label: 'FAQ',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A RX 7900 XTX (24 GB), a RX 9070 XT (16 GB) e a Radeon AI PRO R9700 (32 GB) são as GPUs AMD para comprar visando LLMs locais em 2026, e a documentação do Ollama lista as três com ROCm v7 no Linux.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'As placas AMD entregam muita VRAM pelo preço, mas você precisa escolher o caminho de software certo: ROCm em configurações Linux compatíveis, ou Vulkan quando quiser que simplesmente funcione. A NVIDIA é a opção plug-and-play.',
+          },
         ],
-        regionalContext: {
-          id: 'amd-vs-nvidia',
-          title: 'Regionale Akzeptanz und Compliance-Kontext',
-          content: [
-            '**Deutsche Mittelständler wählen lokale LLM-Tools aufgrund von DSGVO-Compliance-Funktionen.** Tools, die alle Daten lokal verarbeiten (Ollama, LM Studio, llama.cpp), erfüllen EU-Datenresidenz-Anforderungen automatisch. Organisationen in Deutschland, Österreich und der Schweiz bewerten Tools auf deaktivierte Telemetrie, keine Cloud-Synchronisierung und luftgekoppelte Bereitstellungsfähigkeit. PromptQuorum verbindet sich mit lokalen Tool-Endpunkten, ohne Daten durch externe Server zu leiten.',
-            '**Europäische Unternehmensrichtlinien beeinflussen die GPU-Auswahl basierend auf BSI-Grundschutz und Ecodesign-Direktiven.** Das Ecodesign Directive beeinflusst die GPU-Verfügbarkeit in europäischen Märkten. Organisationen berücksichtigen die Gesamtkosteneinsparung, einschließlich Energieverbrauches unter EU-Berichtsanforderungen.',
-            '**Datensouvränität und Sicherheitsstandards treiben AMD-Adoption bei großen deutschen Unternehmen an.** Finanz-, Gesundheits- und Rechtsorganisationen mit sensiblen Kundendaten bevorzugen AMD-Hardware mit lokaler ROCm-Verarbeitung, um DSGVO Article 32 (Sicherheitsmaßnahmen) und BSI-Grundschutz-Kataloge zu erfüllen.',
-          ],
-        },
+        items: [
+          '**Melhor AMD no geral:** RX 7900 XTX — 24 GB GDDR6, 960 GB/s, cerca de US$ 900–1.250 usada (rastreadores de preço, set.–out. 2026). Comporta modelos de cerca de 30–35B em Q4; um modelo de 70B em Q4 precisa de cerca de 40 GB ou mais, então não cabe.',
+          '**Melhor placa recente:** RX 9070 XT — 16 GB, 640 GB/s, cerca de US$ 820–930 nova. Boa para modelos de 7B–14B em Q4–Q6.',
+          '**Mais VRAM por placa:** Radeon AI PRO R9700 — 32 GB, preço de tabela da AMD US$ 1.299; relatos de terceiros colocam o preço de rua em torno de US$ 1.400–1.900. Duas placas somam 64 GB.',
+          '**Opção econômica:** RX 6800 XT — 16 GB, cerca de US$ 380–410 usada (preços anunciados, outubro 2026). Ela está na lista de ROCm para Linux do Ollama, mas não na matriz atual de ROCm 7.2.1 da AMD para Radeon.',
+          '**Ollama:** exige o driver ROCm v7 no Linux; no Windows a lista de ROCm cobre as RX série 7000, e o Vulkan vem ativado por padrão quando o backend está instalado (desative com OLLAMA_VULKAN=0).',
+          '**LM Studio e llama.cpp:** ambos funcionam em AMD com os backends Vulkan ou ROCm (HIP). O Vulkan só precisa do driver gráfico; comece por ele se o ROCm não detectar sua placa.',
+          '**AMD vs NVIDIA:** uma RX 7900 XTX usada custa quase o mesmo que uma RTX 3090 (24 GB) usada. A vantagem de preço mais clara da AMD é a R9700 de 32 GB contra a RTX 5090 (de um terço à metade do preço), ao custo de um processamento de prompt mais lento.',
+          '**Veredito:** escolha AMD quando a VRAM por dólar importa e você pode usar Linux ou Vulkan; escolha NVIDIA para ferramentas só CUDA, treinamento e o menor esforço de configuração. Os preços são dos EUA, em dólares; os preços no Brasil podem variar bastante devido a impostos de importação.',
+        ],
+      },
+      'which-amd': {
+        id: 'which-amd',
+        title: 'Quais GPUs AMD valem a pena para LLMs locais?',
+        items: [
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): a placa AMD de consumo mais forte para LLMs. Um modelo de 32B em Q4_K_M tem cerca de 20 GB, então cabe com folga para o contexto. Consta na matriz ROCm 7.2.1 da AMD e na lista de ROCm do Ollama para Linux e Windows. Usada: cerca de US$ 900–1.250.',
+          '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): a opção recente de 16 GB, na matriz ROCm 7.2.1 da AMD e na lista de ROCm do Ollama para Linux. Roda modelos de 14B em Q4–Q6 com folga. Nova: cerca de US$ 820–930.',
+          '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): uma placa de estação de trabalho com a maior VRAM que a AMD vende nessa classe. Lida com modelos de 32B em Q4–Q6; duas placas (64 GB) comportam um modelo de 70B em Q4. Preço de tabela da AMD: US$ 1.299; os preços de rua relatados são mais altos.',
+          '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): comporta modelos de até cerca de 24–27B em Q4. Só compre se estiver claramente mais barata que uma 7900 XTX usada; o preço dela não foi reconferido nesta atualização.',
+          '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): a opção econômica, cerca de US$ 380–410 usada. Menos largura de banda significa geração mais lenta, e a matriz atual de ROCm da AMD para Radeon não a lista mais; conte com o caminho de ROCm no Linux do Ollama ou com o Vulkan.',
+          '**Mini PCs com Ryzen AI Max+ 395** (até 128 GB de memória unificada, 256 GB/s): não são placas de vídeo, mas são a forma mais barata de rodar modelos mixture-of-experts muito grandes em AMD. Sistemas de 128 GB estavam listados por cerca de US$ 3.300–4.350 no fim de setembro de 2026 (rastreadores de preço). Veja [Melhores mini PCs AMD para LLMs locais](/pt/local-llms/best-amd-mini-pc-local-llm-2026).',
+        ],
+      },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: 'Como as GPUs AMD se comparam à NVIDIA em VRAM e preço?',
+        columns: [
+          'GPU',
+          'VRAM',
+          'Largura de banda',
+          'Preço típico',
+          'Backend principal',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 GB',
+            'Largura de banda': '512 GB/s',
+            'Preço típico': '~US$ 380–410 usada',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 GB',
+            'Largura de banda': '640 GB/s',
+            'Preço típico': '~US$ 820–930 nova',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 GB',
+            'Largura de banda': '800 GB/s',
+            'Preço típico': 'Não reconferido',
+            'Backend principal': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 GB',
+            'Largura de banda': '960 GB/s',
+            'Preço típico': '~US$ 900–1.250 usada',
+            'Backend principal': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 GB',
+            'Largura de banda': '640 GB/s',
+            'Preço típico': 'US$ 1.299 tabela; ~1.400–1.900 rua',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 GB',
+            'Largura de banda': '936 GB/s',
+            'Preço típico': '~US$ 1.000–1.400 usada',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 GB',
+            'Largura de banda': '1.008 GB/s',
+            'Preço típico': '~US$ 2.250 usada',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 GB',
+            'Largura de banda': '1.792 GB/s',
+            'Preço típico': '~US$ 3.700–4.300 nova',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+        ],
+        note: 'VRAM e largura de banda são especificações dos fabricantes ([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). Os preços são retratos de preços anunciados nos EUA, obtidos de rastreadores públicos e análises (set.–out. 2026), e não medições da PromptQuorum; os preços no Brasil podem variar bastante devido a impostos de importação. Confira vendas reais antes de comprar.',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.webp',
+        imageCaption: 'AMD vs NVIDIA para LLMs locais: VRAM, largura de banda e preço típico (EUA, retratos de set.–out. 2026).',
+      },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'Qual a velocidade das GPUs AMD em relação à NVIDIA na inferência de LLMs?',
+        content: [
+          '**A velocidade de geração de tokens depende mais da largura de banda de memória do que dos TFLOPS, e as melhores placas AMD ficam perto dos antigos topos de linha da NVIDIA nesse quesito.** A RX 7900 XTX (960 GB/s) fica perto da RTX 3090 (936 GB/s) e abaixo da RTX 4090 (1.008 GB/s) e da RTX 5090 (1.792 GB/s).',
+          'O processamento do prompt (prefill) é onde a NVIDIA lidera com mais clareza. Em uma comparação da comunidade com o llama.cpp (discussão nº 19890 do llama.cpp, repetida em análises de terceiros), a RTX 5090 foi cerca de 2.6–3.4 vezes mais rápida que a Radeon AI PRO R9700 no prefill e cerca de 1.5 vez mais rápida na geração com o mesmo modelo. São dados relatados por desenvolvedores, não uma medição da PromptQuorum.',
+          'A escolha do backend muda os resultados: Vulkan e ROCm (HIP) se alternam na frente conforme o modelo, a placa e a versão do driver. O llama.cpp pode ser compilado com os dois, então teste ambos na sua placa antes de decidir.',
+          'Na prática, espere que a AMD seja competitiva em velocidade de geração por GB/s de largura de banda, mais lenta com prompts longos e menos refinada em software.',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: 'Qual a dificuldade de configurar o ROCm em 2026?',
+        content: [
+          '**O Vulkan só precisa de um driver gráfico; o ROCm precisa de GPU, distribuição Linux e kernel compatíveis.** Confira isto antes de comprar:',
+          '1. **Compare sua placa com a matriz da AMD.** A matriz ROCm 7.2.1 para Radeon lista a RX 9070 XT, RX 9060 XT, RX 7900 XTX, RX 7900 XT, RX 7900 GRE, RX 7800 XT e a Radeon AI PRO R9700 no Ubuntu 24.04.4, Ubuntu 22.04.5 e RHEL 10.1.',
+          '2. **Veja também a lista do Ollama.** A documentação do Ollama acrescenta a RX 6800 XT, a 6900 XT e outras RX série 6000 para ROCm no Linux, e cita a Ryzen AI Max+ 395. Placas fora da lista podem tentar `HSA_OVERRIDE_GFX_VERSION` no Linux; no Windows não há suporte.',
+          '3. **Instale a pilha ROCm v7** com o utilitário `amdgpu-install` da AMD (Linux). O Ollama exige ROCm v7 no Linux.',
+          '4. **Verifique a detecção** com `rocminfo`: sua GPU deve aparecer como agente (por exemplo gfx1100 para a RX 7900 XTX, gfx1201 para a RX 9070 XT).',
+          '5. **No Windows,** a lista de ROCm do Ollama cita as RX série 7000. Outras placas, incluindo a série RX 9070, não estão nessa lista; use o backend Vulkan.',
+          'A versão mais recente do ROCm é a 7.14.0 (16 de julho de 2026), que migrou o ROCm para o sistema de build modular TheRock. A página de compatibilidade Radeon da AMD cobria versões até a 7.2.1 quando conferida; compare sua placa com a matriz da versão que você instalar.',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: 'Quais ferramentas de LLM local funcionam em GPUs AMD?',
+        content: [
+          '**Ollama:** ROCm v7 no Linux para as placas citadas acima; no Windows, as RX série 7000 via ROCm. O [Vulkan](https://docs.ollama.com/gpu) vem ativado por padrão quando o backend está instalado e pode ser desativado com `OLLAMA_VULKAN=0`. A versão atual é a v0.40.10 (23 de outubro de 2026), que inclui um build ROCm para Linux.',
+          '**llama.cpp:** compila para AMD com HIP (ROCm) ou Vulkan (`-DGGML_VULKAN=1`). Os dois backends podem ser compilados juntos e escolhidos por dispositivo com `--device`. A maioria das interfaces é construída sobre ele.',
+          '**LM Studio:** oferece suporte a GPUs AMD por meio dos runtimes do llama.cpp: Vulkan e ROCm. O Vulkan é a alternativa habitual quando o runtime ROCm não detecta a placa. (Uma versão anterior desta página dizia que o LM Studio era só para NVIDIA; isso estava errado.)',
+          '**vLLM:** fornece builds ROCm (a versão ROCm 7.14.0 lista o vLLM 0.23.0). Ele é voltado a servir e processar em lote; consulte a documentação do vLLM para o alvo da sua GPU antes de depender dele.',
+          '**Regra prática:** use Ollama ou LM Studio pela praticidade, llama.cpp pelo controle e vLLM para servir vários usuários.',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-pt.webp',
+        imageCaption: 'Ferramentas de LLM local em GPUs AMD: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: 'Como executar inferência quantizada de LLM em uma GPU AMD?',
+        numberedItems: [
+          '**Ajuste o modelo à sua VRAM.** Um arquivo Q4_K_M ocupa cerca de 0.6 GB por bilhão de parâmetros (cerca de 9 GB para 14B, 20 GB para 32B; estimativas). Reserve 2–4 GB para o cache de contexto.',
+          '**Escolha um backend.** O Vulkan é o início mais rápido (só o driver gráfico). O ROCm (HIP) é o melhor caminho em configurações Linux compatíveis.',
+          '**Instale um runtime.** No Linux, para o caminho ROCm, instale antes o ROCm v7 com `amdgpu-install`; depois instale o Ollama (`curl -fsSL https://ollama.com/install.sh | sh`) ou o LM Studio.',
+          '**Execute um modelo quantizado.** Por exemplo `ollama run qwen3:14b`, ou, no llama.cpp, `llama-server -m model.gguf -ngl 99` para descarregar todas as camadas na GPU.',
+          '**Confirme que a GPU está em uso.** `ollama ps` deve mostrar 100% GPU; `rocm-smi` mostra a VRAM em uso. Se indicar CPU, revise a instalação do ROCm ou mude para o Vulkan.',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: 'Quando escolher AMD em vez de NVIDIA para LLMs locais?',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Compre AMD quando quiser 24–32 GB de VRAM por menos que as placas mais novas da NVIDIA; deixe de lado se depende de ferramentas só CUDA ou não quer configurar nada.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'A AMD é um bom negócio quando o que falta é VRAM e o caminho de software (ROCm no Linux ou Vulkan) combina com você. Se você está começando com LLMs locais e quer que simplesmente funcione, comece com a NVIDIA.',
+          },
+        ],
+        content: [
+          'Compre AMD se:',
+          '- Você quer 32 GB em uma única placa por menos dinheiro: a Radeon AI PRO R9700 custa de um terço à metade de uma RTX 5090.',
+          '- Você já tem uma Radeon compatível ou quer uma placa que também vá bem em jogos.',
+          '- Você usa Linux ou se contenta com o Vulkan, e suas ferramentas (Ollama, llama.cpp, LM Studio) já oferecem suporte a AMD.',
+          'Compre NVIDIA se:',
+          '- Você precisa de ferramentas só CUDA, de pilhas de treinamento ou fine-tuning, ou do processamento de prompt mais rápido.',
+          '- Você compara placas usadas de 24 GB: uma RTX 3090 usada custa quase o mesmo que uma RX 7900 XTX usada, então o suporte a CUDA pode decidir.',
+          '- Você quer gastar o mínimo de tempo configurando.',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: 'AMD Instinct ou GPUs de data center da NVIDIA: qual é melhor para LLMs?',
+        content: [
+          '**O AMD Instinct (MI300X, MI350X) concorre com as GPUs de data center da NVIDIA e é comprado para servidores, não para a mesa de trabalho.** A lista de ROCm do Ollama inclui placas Instinct, e o ROCm foi construído em torno delas, então o suporte é mais amplo do que o das Radeon de consumo.',
+          'O MI300X traz 192 GB de memória HBM3 por acelerador (especificação da AMD), o que serve para modelos muito grandes em um único equipamento. Para uma máquina de um único usuário, as opções AMD relevantes são as Radeon RX ou Radeon AI PRO.',
+          'Para decisões de servidor e nuvem, veja o [Guia de compra de servidores GPU corporativos](/pt/local-llms/enterprise-gpu-server-buying-guide-2026) e a [Comparação de aluguel de GPU na nuvem](/pt/local-llms/cloud-gpu-rental-comparison-2026).',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'Quais são os erros mais comuns ao adotar AMD?',
+        items: [
+          'Achar que 24 GB rodam modelos de 70B: um modelo de 70B em Q4 precisa de cerca de 40 GB ou mais, então uma única placa de 24 GB chega a cerca de 30–35B. Planeje duas placas ou um par de R9700 de 32 GB para 70B.',
+          'Comprar uma placa que o ROCm não suporta: confira antes a matriz da AMD e a lista do Ollama. As RX série 6000 não estão na matriz atual da AMD para Radeon.',
+          'Ignorar o Vulkan: se o ROCm não detecta sua placa, experimente o backend Vulkan antes de concluir que a GPU não pode ser usada.',
+          'Confiar em preços anunciados: os preços de GPU e de memória oscilaram bastante em 2026. Compare vendas reais, não preços de anúncio.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Próximos passos',
+        items: [
+          '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm) — Orçamento apertado? As GPUs com melhor custo-benefício para inferência de LLMs →',
+          '[GPU vs CPU vs Apple Silicon](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple ou CPU: qual plataforma combina com seu fluxo de trabalho? →',
+          '[Quanta VRAM eu preciso?](/pt/local-llms/how-much-vram-local-llm) — Ajuste a VRAM da sua GPU ao tamanho do modelo →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Como as leis regionais de dados afetam a decisão entre AMD e NVIDIA?',
+        content: [
+          '**O fabricante da GPU não muda suas obrigações de proteção de dados; rodar a inferência localmente muda.** A inferência no próprio dispositivo mantém prompts e documentos no seu hardware, o que pode reduzir a exposição a transferências internacionais sob a LGPD e a supervisão da ANPD no Brasil, além do GDPR europeu, da APPI japonesa e da PIPL chinesa. A conformidade continua exigindo base legal, regras de retenção e procedimentos para incidentes; para dados regulados, busque uma revisão formal.',
+          'As regras de controle de exportação podem restringir aceleradores de alto desempenho da AMD e da NVIDIA em alguns mercados. Confira as regras vigentes no seu país antes de importar ou comprar.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'As GPUs AMD são boas para rodar LLMs locais?',
+            a: 'Sim, com ressalvas. Placas AMD como a RX 7900 XTX (24 GB) e a Radeon AI PRO R9700 (32 GB) rodam LLMs quantizados via ROCm ou Vulkan no Ollama, LM Studio e llama.cpp. A NVIDIA CUDA ainda tem suporte de software mais amplo e processamento de prompt mais rápido, então a AMD faz mais sentido quando a VRAM por dólar importa.',
+          },
+          {
+            q: 'Qual é a melhor GPU AMD para LLMs locais?',
+            a: 'A RX 7900 XTX é a melhor AMD no geral para LLMs locais: 24 GB de VRAM, 960 GB/s de largura de banda e suporte na matriz ROCm 7.2.1 da AMD e no Ollama. Para mais VRAM por placa, a Radeon AI PRO R9700 oferece 32 GB; para modelos de 7B–14B, a RX 9070 XT (16 GB) basta.',
+          },
+          {
+            q: 'AMD vs NVIDIA para LLMs locais: qual devo comprar?',
+            a: 'Compre NVIDIA se quiser compatibilidade com CUDA e o mínimo de configuração. Compre AMD se quiser mais VRAM por dólar, principalmente a R9700 de 32 GB contra a RTX 5090. Uma RX 7900 XTX usada custa quase o mesmo que uma RTX 3090 usada, então ali a decisão depende do software.',
+          },
+          {
+            q: 'O Ollama funciona com GPUs AMD?',
+            a: 'Sim. O Ollama exige o driver ROCm v7 no Linux e lista a RX 9070 XT, RX 7900 XTX, RX 6800 XT, Radeon AI PRO R9700 e outras. No Windows, a lista de ROCm cobre as RX série 7000, e o Vulkan vem ativado por padrão quando o backend está instalado.',
+          },
+          {
+            q: 'O LM Studio oferece suporte a GPUs AMD?',
+            a: 'Sim. O LM Studio roda GPUs AMD pelos runtimes do llama.cpp, Vulkan ou ROCm. Se o runtime ROCm não detectar sua placa, troque o runtime para Vulkan. Versões anteriores desta página diziam erroneamente que o LM Studio era só para NVIDIA.',
+          },
+          {
+            q: 'Como executar inferência quantizada de LLM em uma GPU AMD?',
+            a: 'Escolha um modelo quantizado que caiba na sua VRAM (Q4_K_M é cerca de 0.6 GB por bilhão de parâmetros), instale o Ollama ou o LM Studio e use Vulkan ou ROCm. No Linux, instale o ROCm v7 com amdgpu-install, rode o modelo e confirme o uso da GPU com ollama ps ou rocm-smi.',
+          },
+          {
+            q: 'RX 9070 XT ou RX 7900 XTX para LLMs locais?',
+            a: 'Para LLMs locais, a RX 7900 XTX é a melhor escolha: 24 GB comportam modelos de até cerca de 30–35B em Q4, enquanto os 16 GB da RX 9070 XT chegam a cerca de 14B–24B. A RX 9070 XT é mais nova e mais barata; escolha-a se 16 GB bastarem.',
+          },
+          {
+            q: 'Qual é a melhor GPU AMD por menos de US$ 500?',
+            a: 'A RX 6800 XT (16 GB), por cerca de US$ 380–410 usada, é a melhor AMD abaixo de US$ 500. Ela roda modelos de 7B–14B em Q4–Q8, mas não está na matriz atual de ROCm da AMD para Radeon; conte com o caminho de ROCm no Linux do Ollama ou com o Vulkan.',
+          },
+          {
+            q: 'A Radeon AI PRO R9700 vale a pena para IA local?',
+            a: 'Sim, se você precisa de 32 GB em uma única placa. O preço de tabela é US$ 1.299, contra cerca de US$ 3.700–4.300 de uma RTX 5090, embora os preços de rua relatados sejam mais altos e o processamento de prompt seja mais lento. Duas R9700 somam 64 GB para modelos de 70B em Q4.',
+          },
+          {
+            q: 'Preciso de Linux para o ROCm da AMD, ou o Windows funciona?',
+            a: 'O Linux é o caminho de ROCm com melhor suporte: a matriz da AMD lista Ubuntu 24.04.4, Ubuntu 22.04.5 e RHEL 10.1. No Windows, a lista de ROCm do Ollama cobre as RX série 7000, e as demais placas usam o backend Vulkan.',
+          },
+          {
+            q: 'O que é melhor para LLMs, AMD Instinct ou GPUs NVIDIA?',
+            a: 'O Instinct (MI300X, MI350X) concorre com as GPUs de data center da NVIDIA e é comprado para servidores; o MI300X tem 192 GB de HBM3. Para um único desktop, Radeon ou Radeon AI PRO são as opções AMD relevantes, e o ecossistema CUDA da NVIDIA continua mais amplo.',
+          },
+          {
+            q: 'A AMD é boa para deep learning e machine learning, não só para LLMs?',
+            a: 'Para inferência, sim. O ROCm oferece builds do PyTorch (a versão ROCm 7.14.0 lista o PyTorch 2.12.0). Para treinamento e código de pesquisa que pressupõe CUDA, a NVIDIA ainda tem o ecossistema mais amplo; confira o suporte a AMD do seu framework antes de comprar.',
+          },
+          {
+            q: 'Um mini PC com Ryzen AI Max+ 395 é melhor que uma GPU AMD dedicada?',
+            a: 'Depende do tamanho do modelo. Os sistemas Ryzen AI Max+ 395 oferecem até 128 GB de memória unificada, mas só 256 GB/s de largura de banda, então servem para modelos mixture-of-experts grandes, enquanto uma placa dedicada gera tokens mais rápido em modelos que cabem na sua VRAM.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm)',
+          '[Melhores GPUs para LLMs locais](/pt/local-llms/best-gpus-for-local-llms)',
+          '[Melhores mini PCs AMD para LLMs locais](/pt/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU vs CPU vs Apple Silicon](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/pt/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[Notebook vs desktop para LLMs locais](/pt/local-llms/laptop-vs-desktop-local-llm) — Comparação de custo e desempenho entre notebook e desktop para IA.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[Documentação de GPU do Ollama](https://docs.ollama.com/gpu): exigência do AMD ROCm v7, placas Radeon, Radeon AI PRO, Radeon PRO, Ryzen AI e Instinct compatíveis, backend Vulkan',
+          '[Versões do Ollama](https://github.com/ollama/ollama/releases): v0.40.10, 23 de outubro de 2026',
+          '[AMD ROCm em Radeon e Ryzen — compatibilidade com Linux](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html): GPUs Radeon e distribuições compatíveis com o ROCm 7.2.1',
+          '[Versões do ROCm](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0): ROCm 7.14.0, 16 de julho de 2026, versões de frameworks',
+          '[Documentação de build do llama.cpp](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md): backends HIP e Vulkan',
+          'Especificações de produto da AMD: [RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          'Retratos de preços (EUA, set.–out. 2026): rastreadores públicos de preços de GPU e análises de terceiros; são preços anunciados e mudam rápido',
+          'As GPUs AMD entregam boas velocidades em tokens por segundo, mas a velocidade sozinha não determina a qualidade da resposta. O que você pergunta ao modelo importa tanto quanto a rapidez com que ele responde: [janelas de contexto explicadas](https://www.promptquorum.com/pt/prompt-engineering/context-windows-explained-why-ai-forgets) mostra como estruturar pedidos mais longos dentro dos limites de memória da GPU.',
+        ],
       },
     },
-    fr: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
-      ],
-      theme: 'Guides d\'achat GPU',
-      title: 'Meilleures GPU AMD pour les LLM locaux',
-      seoTitle: 'GPU AMD pour LLM locaux 2026: Comparaison ROCm et vLLM',
-      intro: '**Les AMD RX 6800 XT et RX 7900 XTX sont des alternatives solides à NVIDIA, offrant 15-20% meilleure puissance de calcul par dollar, mais souffrent d\'un support ONNX Runtime et vLLM plus faible.** AMD ROCm (HIP) a mûri, mais les couches de compatibilité créent des frictions. NVIDIA CUDA reste le chemin de moindre résistance pour les LLM locaux. Utilisez AMD uniquement si vous trouvez une excellente affaire d\'occasion ou possédez déjà du matériel AMD.',
-      metaDescription: 'GPU AMD RX 6800 XT, 7900 XTX pour LLM locaux. Configuration ROCm, support vLLM, performance vs NVIDIA RTX. Guide décisionnel.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.webp',
-      publishDate: '2026-04-05',
-      readTime: '8 min de lecture',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'GPU AMD',
-      toc: [
-        { label: 'Résumé', anchor: '#key-takeaways' },
-        { label: 'Quels GPU AMD en valent vraiment la peine?', anchor: '#key-takeaways' },
-        { label: 'Comment les GPU AMD se comparent-ils à RTX en prix et vitesse?', anchor: '#amd-vs-nvidia' },
-        { label: 'Questions fréquentes', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: "L'AMD RX 7900 XTX égale la RTX 4090 avec 24 Go de VRAM pour 450-550 $ d'occasion, mais la configuration du pilote ROCm ajoute 5 à 10 heures de friction par rapport à NVIDIA CUDA." },
-            { type: 'plain-terms', text: "Les GPU AMD sont comme une voiture puissante mais à boîte manuelle -- plus de puissance par dollar, mais plus de travail pour la faire tourner. NVIDIA, c'est l'automatique." },
-          ],
-          items: [
-            'AMD RX 6800 XT (16 Go, 300-350 € occasion) et RX 7900 XTX (24 Go, 400-500 € occasion) sont les seules options viables pour les LLM locaux.',
-            'Performance par euro : AMD est 20-30% moins cher que NVIDIA, mais la friction logicielle coûte 5-10 heures de configuration.',
-            'Ollama : Support AMD limité (le chemin ROCm était inconsistant dans nos tests d\'avril 2026, Ollama v0.3.x / ROCm 6.x — la détection GPU a échoué sur certaines configurations ; repli CPU lent). Vérifiez github.com/ollama/ollama pour la compatibilité AMD actuelle.',
-            'vLLM : Support complet AMD ROCm depuis v0.6.0, mais configuration nécessite des pilotes manuels. Fonctionne bien après le démarrage.',
-            'Text Generation WebUI : Excellent support AMD via ROCm. Meilleure expérience utilisateur sur AMD.',
-            'Llama.cpp : Support natif AMD (backend HIP). Performance solide. Chemin AMD recommandé.',
-            'Coûts de configuration : Prévoyez 5-10 heures débogage pilotes ROCm, compilation HIPCC, compatibilité kernel.',
-            'Verdict (avril 2026) : Utilisez AMD uniquement si vous possédez déjà du matériel AMD, ou trouvez une excellente affaire d\'occasion (320 € pour une carte 16 Go). Sinon, NVIDIA CUDA reste plus simple.',
-          ],
-        },
-        'which-amd': {
-          title: 'Quels GPU AMD en valent vraiment la peine?',
-          items: [
-            '**RX 6800 XT** (16 Go GDDR6) : Le champion du rapport qualité-prix AMD. Lancement 2020. Solide pour inférence 7B-22B. Occasion : 300-350 €.',
-            '**RX 6900 XT** (16 Go GDDR6) : Légèrement plus rapide que 6800 XT. Rare. Occasion : 350-400 €. L\'augmentation de prix ne vaut pas le coup.',
-            '**RX 7900 XT** (20 Go GDDR6) : Architecture RDNA 3 plus récente. 20% plus rapide que 6800 XT. Occasion : 400-480 €. Bon pour 70B Q4.',
-            '**RX 7900 XTX** (24 Go GDDR6) : GPU consumer AMD haut de gamme. 24 Go VRAM change la donne pour 70B. Occasion : 450-550 €. Comparable à la vitesse RTX 4090.',
-            '**Radeon Pro W6800 (32 Go)** : Carte entreprise, moins cher en occasion (~200-300 €). Plus lent, mais 32 Go excellent pour 70B Q8. Niche.',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: 'Comment les GPU AMD se comparent-ils à RTX en prix et vitesse?',
-          rows: [
-            { 'GPU': 'RX 6800 XT', 'VRAM': '16 Go', 'TFLOPS': '1.952', 'Prix occasion': '300-350 €', 'Perf/€ vs RTX': '+25%', 'RTX équivalent': 'RTX 3080 (plus lent)' },
-            { 'GPU': 'RX 7900 XT', 'VRAM': '20 Go', 'TFLOPS': '2.540', 'Prix occasion': '400-480 €', 'Perf/€ vs RTX': '+20%', 'RTX équivalent': 'RTX 4080 (similaire)' },
-            { 'GPU': 'RX 7900 XTX', 'VRAM': '24 Go', 'TFLOPS': '2.750', 'Prix occasion': '450-550 €', 'Perf/€ vs RTX': '+15%', 'RTX équivalent': 'RTX 4090 (vitesse similaire)' },
-            { 'GPU': 'RTX 3080', 'VRAM': '10 Go', 'TFLOPS': '1.456', 'Prix occasion': '350-400 €', 'Perf/€ vs RTX': '--', 'RTX équivalent': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24 Go', 'TFLOPS': '2.752', 'Prix occasion': '2.100-2.800 €', 'Perf/€ vs RTX': '--', 'RTX équivalent': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', 'Prix occasion', 'Perf/€ vs RTX', 'RTX équivalent'],
-        
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.webp',
-          imageCaption: 'La RX 7900 XTX égale la vitesse et la VRAM de la RTX 4090 pour environ 60 % du prix — la contrepartie est la friction de configuration de ROCm.',
-        },
-        'rocm-setup': {
-          title: 'Quelle friction de configuration ROCm?',
-          content: [
-            '**1. Installez les pilotes AMD ROCm : `apt-get install rocm-dkms` (Ubuntu). Sur Windows, installer manuellement. 30 minutes.**',
-            '2. Vérifiez le compilateur HIP : `hipcc --version`. Échoue souvent au premier essai. Déboguez la compatibilité kernel pour votre GPU.',
-            '3. Installez HIPCC (compilateur HIP-vers-C++ AMD) : `apt-get install hip-runtime-amd`. Autre chaîne de dépendances.',
-            '4. Testez avec petit LLM : Exécutez l\'inférence pour vérifier que l\'accélération GPU fonctionne. Repli CPU fréquent.',
-            '5. Corrigez incompatibilités pilotes : ROCm v5.7 fonctionne avec kernel 5.15 mais pas 6.x. 2-4 heures débogage.',
-            'NVIDIA CUDA comparé : `nvidia-cuda-toolkit` → un apt-get, accès GPU instantané. AMD demande 5-10× plus d\'effort.',
-          ],
-        },
-        'software-support': {
-          title: 'Pouvez-vous exécuter Ollama et vLLM sur AMD?',
-          content: [
-            '**Ollama sur AMD (selon nos tests d\'avril 2026, Ollama v0.3.x, ROCm 6.x) :** le support ROCm était inconsistant dans nos tests — la détection GPU a échoué sur certaines configurations, repli CPU lent. Vérifiez la liste de compatibilité AMD actuelle sur github.com/ollama/ollama avant de vous engager.',
-            '**vLLM sur AMD** : Support complet ROCm depuis v0.6.0. Fonctionne bien, mais nécessite configuration ROCm/HIP manuelle. Bon après le démarrage.',
-            '**Text Generation WebUI** : Excellent support AMD ROCm. Meilleure expérience sur AMD. Recommandé.',
-            '**Llama.cpp** : Backend HIP natif. Performance solide. Chemin AMD le plus simple. Recommandé.',
-            '**LM Studio** : NVIDIA uniquement. Pas de support AMD.',
-            'Depuis avril 2026 : vLLM + llama.cpp sont vos chemins AMD. Ollama n\'est pas fiable.',
-          ],
-        
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-fr.webp',
-          imageCaption: 'llama.cpp et Text Generation WebUI sont les voies fiables pour AMD en 2026 — le support ROCm d\'Ollama reste incohérent.',
-        },
-        'when-buy-amd': {
-          title: 'Quand acheter AMD plutôt que NVIDIA?',
-          content: [
-            'Achetez AMD si :',
-            '- Vous trouvez RX 7900 XTX occasion <450 € (sous-évalué vs RTX 4090).',
-            '- Vous possédez déjà du matériel AMD et souhaitez cohérence écosystème.',
-            '- Vous construisez un cluster et privilégiez puissance de calcul par euro sur facilité.',
-            'N\'achetez pas AMD si :',
-            '- Vous désirez expérience plug-and-play. NVIDIA CUDA fonctionne plus vite.',
-            '- Vous avez besoin Ollama. Le support AMD ROCm pour Ollama a été peu fiable en pratique (en 2026).',
-            '- Vous êtes contraint en temps. Débogage ROCm peut prendre 10+ heures.',
-          ],
-        },
-        'mistakes': {
-          title: 'Erreurs courantes d\'adoption AMD',
-          items: [
-            'Acheter RX 6700 (12 Go) croyant c\'est équivalent à 3060 12Go - 20% plus lent, difficile à trouver occasion.',
-            'Supposer que ROCm « marche juste » comme CUDA - prévoyez 5-10 heures débogage pilotes et kernel.',
-            'Utiliser Ollama avec AMD en attendant une intégration transparente — le support ROCm était inconsistant dans nos tests d\'avril 2026 (Ollama v0.3.x, ROCm 6.x) ; llama.cpp ou vLLM sont de meilleurs choix.',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: 'Étapes suivantes',
-          items: [
-            '[Meilleures GPU budget pour LLM local](/fr/local-llms/best-budget-gpus-local-llm) — Petit budget ? Les meilleures GPU rapport qualité-prix →',
-            '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple ou CPU — quelle plateforme choisir ? →',
-            '[Combien de VRAM me faut-il ?](/fr/local-llms/how-much-vram-local-llm) — Faites correspondre la VRAM à la taille du modèle →',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: 'Questions fréquentes',
-          faqs: [
-            { q: 'Devrais-je acheter AMD RX 6800 XT ou NVIDIA RTX 3080 pour LLM locaux?', a: 'RTX 3080 si vous privilégiez simplicité (CUDA « marche »). RX 6800 XT si vous voulez 25% meilleur rapport et tolérez 5-10 h configuration ROCm.' },
-            { q: 'AMD RX 7900 XTX est-elle meilleure que RTX 4090?', a: 'Vitesse similaire, même VRAM (24 Go). RX 7900 XTX 1 550-2 350 € moins cher occasion (450-550 € vs 2 100-2 800 € — le prix de la RTX 4090 occasion a fortement augmenté depuis son arrêt par NVIDIA en 2026). Configuration ROCm est le compromis.' },
-            { q: 'Puis-je utiliser GPU AMD avec Ollama?', a: 'Techniquement oui. Dans nos tests d\'avril 2026 (Ollama v0.3.x, ROCm 6.x), le support ROCm était inconsistant — la détection GPU a échoué sur certaines configurations et le repli CPU était fréquent. Vérifiez la liste de compatibilité AMD actuelle sur github.com/ollama/ollama ; vLLM ou llama.cpp sont les chemins plus fiables pour AMD aujourd\'hui.' },
-            { q: 'Quel est le meilleur chemin AMD pour LLM locaux 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Tous deux ont support AMD solide. Évitez Ollama.' },
-            { q: 'Ai-je besoin Ubuntu pour AMD ROCm, ou Windows fonctionne?', a: 'Le support Windows existe (HIP sur Windows), mais il était moins stable qu\'Ubuntu dans nos tests d\'avril 2026. Ubuntu est le chemin recommandé.' },
-            { q: 'RX 6700, RX 6700 XT ou 6750 bon pour modèles 7B?', a: 'RX 6700 (12 Go) fonctionne mais 20% plus lent que 6800 XT. RX 6700 XT (12 Go, même VRAM) a des fréquences ~15% plus rapides que la version non-XT, mais reste derrière la 6800 XT. Achetez l\'une ou l\'autre seulement si <250 €. Sinon étendez à 6800 XT.' },
-            { q: 'La RX 6900 XT vaut-elle le coup pour les LLM locaux?', a: 'Pas vraiment. La RX 6900 XT (16 Go) est seulement marginalement plus rapide que la RX 6800 XT, plus rare en occasion, et coûte 350-400 € contre 300-350 € pour la 6800 XT. Le surcoût ne vaut pas la peine -- achetez plutôt la 6800 XT.' },
-            { q: 'L\'AMD Radeon 680M est-elle bonne pour les LLM locaux?', a: 'La Radeon 680M est un graphique intégré dans les APU mobiles Ryzen 6000/7000 -- ce n\'est pas le même produit que la RX 6800M ou la RX 6800 XT, qui sont des cartes dédiées. Elle n\'a pas de VRAM dédiée et partage la RAM système à la place, donc elle n\'est viable que pour de petits modèles quantifiés (environ 3B de paramètres ou moins en Q4) et sera nettement plus lente que n\'importe quelle carte dédiée de ce guide. Pour un usage sérieux des LLM locaux, une carte dédiée comme la RX 6800 XT est le meilleur choix.' },
-            { q: 'Puis-je mélanger GPU AMD et NVIDIA dans un système?', a: 'Théoriquement oui, mais gestion cauchemardesque. Chaque GPU besoin sa propre exécution CUDA/HIP. Non recommandé.' },
-            { q: 'Combien de temps faut-il configurer AMD ROCm?', a: 'Prévoyez 5-10 heures pour débogage pilotes, compilation HIPCC et résolution compatibilité. C\'est un investissement unique. Après, AMD stable et productif.' },
-            { q: 'AMD ROCm convient-il aux petites entreprises technologiques françaises?', a: 'Absolument. Les startups et PME tech bénéficient de 20-30% économies par rapport NVIDIA et contrôle données complet sur site. L\'effort configuration initial (5-10 h) vaut l\'investissement pour équipes valorisant indépendance technologique et économies.' },
-            { q: 'CNIL a-t-elle des recommandations sur les LLM locaux?', a: 'CNIL recommande les LLM locaux comme solution idéale pour données sensibles. Traitement local satisfait RGPD obligations de sécurité (Article 32) automatiquement, sans dépendre de fournisseurs cloud. AMD ROCm avec LLM local offre conformité RGPD maximale.' },
-          ],
-        },
-        'relatedReading': {
-          title: 'Lectures complémentaires',
-          items: [
-            '[Meilleures GPU budget pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm)',
-            '[Meilleures GPU pour LLM locaux](/fr/local-llms/best-gpus-for-local-llms)',
-            '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Local LLM Hardware Guide](/fr/local-llms/local-llm-hardware-guide)',
-          ],
-        },
-        'sources': {
-          title: 'Sources',
-          items: [
-            'Documentation AMD ROCm et GitHub : compilateur HIP, matrice compatibilité pilotes, exemples inférence LLM',
-            'vLLM GitHub : implémentation backend AMD/ROCm et statut support (v0.6.0+)',
-            'Llama.cpp GitHub : backend HIP pour support GPU AMD',
-          ],
-        },
+  },
+  de: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
       },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/fr/local-llms/best-amd-gpus-local-llm',
-        name: 'Meilleures GPU AMD pour les LLM locaux',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16 Go, 300-350 € occasion) et RX 7900 XTX (24 Go, 400-500 € occasion) sont les seules options viables pour les LLM locaux.' },
-          { '@type': 'ListItem', position: 2, name: 'Performance par euro : AMD est 20-30% moins cher que NVIDIA, mais la friction logicielle coûte 5-10 heures de configuration.' },
-          { '@type': 'ListItem', position: 3, name: 'Ollama : Support AMD limité (chemin ROCm inconsistant dans nos tests d\'avril 2026, Ollama v0.3.x / ROCm 6.x ; repli CPU lent). Vérifiez github.com/ollama/ollama pour la compatibilité AMD actuelle.' },
-          { '@type': 'ListItem', position: 4, name: 'vLLM : Support complet AMD ROCm depuis v0.6.0, mais configuration nécessite des pilotes manuels. Fonctionne bien après le démarrage.' },
-          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI : Excellent support AMD via ROCm. Meilleure expérience utilisateur sur AMD.' },
-          { '@type': 'ListItem', position: 6, name: 'Llama.cpp : Support natif AMD (backend HIP). Performance solide. Chemin AMD recommandé.' },
-          { '@type': 'ListItem', position: 7, name: 'Coûts de configuration : Prévoyez 5-10 heures débogage pilotes ROCm, compilation HIPCC, compatibilité kernel.' },
-          { '@type': 'ListItem', position: 8, name: 'Verdict (avril 2026) : Utilisez AMD uniquement si vous possédez déjà du matériel AMD, ou trouvez une excellente affaire d\'occasion (320 € pour une carte 16 Go). Sinon, NVIDIA CUDA reste plus simple.' },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'GPU-Kaufleitfäden',
+    title: 'Beste AMD-GPU für lokale LLMs und KI-Inferenz',
+    seoTitle: 'Beste AMD-GPU für lokale LLMs 2026: 7900 XTX oder 9070 XT',
+    intro: '**Die beste AMD-GPU für lokale LLMs ist 2026 die Radeon RX 7900 XTX (24 GB) für Modelle der 30B-Klasse, die RX 9070 XT (16 GB) für Modelle mit 7B–14B und die Radeon AI PRO R9700 (32 GB), wenn Sie möglichst viel VRAM pro Karte brauchen.** Alle drei stehen auf der ROCm-v7-Unterstützungsliste von Ollama für Linux, und llama.cpp betreibt sie zusätzlich über das Vulkan-Backend. NVIDIA CUDA bleibt der Weg mit dem geringsten Aufwand; wählen Sie AMD also wegen des VRAM pro Dollar oder weil Sie die Karte bereits besitzen.',
+    metaDescription: 'Beste AMD-GPU für KI und lokale LLMs: RX 7900 XTX (24 GB), RX 9070 XT (16 GB) und Radeon AI PRO R9700 (32 GB) – mit ROCm, Vulkan und AMD vs NVIDIA.',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-de.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**Die beste AMD-GPU für lokale LLMs ist 2026 die Radeon RX 7900 XTX (24 GB) für Modelle der 30B-Klasse, die RX 9070 XT (16 GB) für Modelle mit 7B–14B und die Radeon AI PRO R9700 (32 GB), wenn Sie möglichst viel VRAM pro Karte brauchen.**',
+    quickAnswerTop: {
+      question: 'Welche AMD-GPU ist die beste für lokale LLMs und KI-Inferenz?',
+      answer: 'Die RX 7900 XTX (24 GB) ist die beste AMD-Allroundkarte für lokale LLMs, die RX 9070 XT (16 GB) die beste neuere Karte für Modelle mit 7B–14B, und die Radeon AI PRO R9700 (32 GB) bietet den meisten VRAM pro Karte. Ollama führt alle drei mit ROCm v7 unter Linux auf; Vulkan dient als Ausweichlösung ohne ROCm. NVIDIA CUDA bleibt der einfachere Weg, AMD passt daher am besten, wenn VRAM pro Dollar zählt.',
+      bullets: [
+        'RX 7900 XTX: 24 GB, 960 GB/s, ca. 900–1.250 $ gebraucht (Preis-Tracker, Sept.–Okt. 2026)',
+        'RX 9070 XT: 16 GB, 640 GB/s, ca. 820–930 $ neu – ein 14B-Modell passt in Q4–Q6',
+        'Radeon AI PRO R9700: 32 GB, AMD-Listenpreis 1.299 $; gemeldete Straßenpreise liegen höher',
+        'Ollama braucht ROCm v7 unter Linux; Vulkan ist standardmäßig aktiv, sobald das Backend installiert ist',
+      ],
+      updatedDate: '2026-10-23',
+    },
+    audience: 'Entwickler, die mit Ollama oder LM Studio vertraut sind und ihre lokalen LLM-Workflows optimieren',
+    readTime: '9 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: 'Zusammenfassung',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: 'Welche AMD-GPUs lohnen sich für lokale LLMs?',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'Wie schneiden AMD-GPUs bei VRAM und Preis gegen NVIDIA ab?',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'Wie schnell sind AMD-GPUs im Vergleich zu NVIDIA?',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: 'Wie aufwendig ist die ROCm-Einrichtung 2026?',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: 'Welche lokalen LLM-Tools laufen auf AMD-GPUs?',
+        anchor: '#software-support',
+      },
+      {
+        label: 'Wie führt man quantisierte LLM-Inferenz auf einer AMD-GPU aus?',
+        anchor: '#run-quantized',
+      },
+      {
+        label: 'Wann sollten Sie AMD statt NVIDIA kaufen?',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD Instinct oder NVIDIA-Rechenzentrums-GPUs?',
+        anchor: '#instinct',
+      },
+      {
+        label: 'FAQ',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Die RX 7900 XTX (24 GB), die RX 9070 XT (16 GB) und die Radeon AI PRO R9700 (32 GB) sind 2026 die AMD-GPUs, die sich für lokale LLMs lohnen; die Ollama-Dokumentation führt alle drei mit ROCm v7 unter Linux auf.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD-Karten bieten viel VRAM fürs Geld, aber Sie müssen den passenden Software-Weg wählen: ROCm auf unterstützten Linux-Systemen oder Vulkan, wenn es einfach laufen soll. NVIDIA ist die Plug-and-play-Option.',
+          },
         ],
-        regionalContext: {
-          id: 'amd-vs-nvidia',
-          title: 'Contexte d\'adoption régionale et conformité',
-          content: [
-            '**Les entreprises françaises et européennes choisissent les LLM locaux pour la conformité RGPD.** Les outils qui traitent toutes les données localement (Ollama, LM Studio, llama.cpp) satisfont automatiquement les exigences de résidence des données de l\'UE. CNIL recommande les LLM locaux comme solution idéale pour données sensibles professionnelles. Les organisations valorisent la télémétrie désactivée, absence synchronisation cloud, et capacité déploiement isolé.',
-            '**Les directrices réglementaires européennes influencent la sélection GPU basée sur efficacité énergétique.** La Directive Écoconception affecte la disponibilité GPU sur les marchés européens. Les organisations considèrent le coût total de possession incluant consommation énergétique sous obligations rapports UE.',
-            '**La souveraineté des données anime adoption AMD chez les grandes entreprises françaises.** Les organisations financières, santé, juridique avec données client sensibles privilégient AMD avec traitement ROCm local satisfaisant obligations RGPD Article 32 (mesures sécurité) automatiquement, sans dépendre fournisseurs cloud américains.',
-          ],
-        },
+        items: [
+          '**Beste AMD-Allroundkarte:** RX 7900 XTX – 24 GB GDDR6, 960 GB/s, ca. 900–1.250 $ gebraucht (Preis-Tracker, Sept.–Okt. 2026). Sie fasst Modelle von rund 30–35B in Q4; ein 70B-Modell braucht in Q4 etwa 40 GB oder mehr und passt daher nicht.',
+          '**Beste neuere Karte:** RX 9070 XT – 16 GB, 640 GB/s, ca. 820–930 $ neu. Gut für Modelle mit 7B–14B in Q4–Q6.',
+          '**Am meisten VRAM pro Karte:** Radeon AI PRO R9700 – 32 GB, AMD-Listenpreis 1.299 $; Berichte Dritter nennen Straßenpreise um 1.400–1.900 $. Zwei Karten ergeben 64 GB.',
+          '**Budget-Tipp:** RX 6800 XT – 16 GB, ca. 380–410 $ gebraucht (Angebotspreise, Oktober 2026). Sie steht auf Ollamas Linux-ROCm-Liste, aber nicht in AMDs aktueller Radeon-Matrix für ROCm 7.2.1.',
+          '**Ollama:** verlangt unter Linux den ROCm-v7-Treiber; unter Windows deckt die ROCm-Liste RX-7000-Karten ab, und Vulkan ist standardmäßig aktiv, sobald das Backend installiert ist (abschaltbar mit OLLAMA_VULKAN=0).',
+          '**LM Studio und llama.cpp:** laufen beide auf AMD über Vulkan- oder ROCm-(HIP-)Backends. Vulkan braucht nur einen Grafiktreiber – beginnen Sie dort, wenn ROCm Ihre Karte nicht erkennt.',
+          '**AMD vs NVIDIA:** Eine gebrauchte RX 7900 XTX kostet etwa so viel wie eine gebrauchte RTX 3090 (24 GB). Der klarste Preisvorteil von AMD ist die R9700 mit 32 GB gegenüber der RTX 5090 (ein Drittel bis die Hälfte des Preises) – bei langsamerer Prompt-Verarbeitung.',
+          '**Fazit:** Wählen Sie AMD, wenn VRAM pro Dollar zählt und Sie Linux oder Vulkan nutzen können; wählen Sie NVIDIA für reine CUDA-Tools, Training und den geringsten Einrichtungsaufwand. Die Preise sind US-Preise in US-Dollar; in Deutschland weichen sie durch Mehrwertsteuer und Handelsspannen ab.',
+        ],
+      },
+      'which-amd': {
+        id: 'which-amd',
+        title: 'Welche AMD-GPUs lohnen sich für lokale LLMs?',
+        items: [
+          '**RX 7900 XTX** (24 GB GDDR6, 960 GB/s, RDNA 3): die stärkste AMD-Consumer-Karte für LLMs. Ein 32B-Modell in Q4_K_M ist etwa 20 GB groß und passt daher mit Reserve für den Kontext. Steht in AMDs ROCm-7.2.1-Matrix und auf Ollamas ROCm-Liste für Linux und Windows. Gebraucht: ca. 900–1.250 $.',
+          '**RX 9070 XT** (16 GB GDDR6, 640 GB/s, RDNA 4): die neuere 16-GB-Option, in AMDs ROCm-7.2.1-Matrix und auf Ollamas Linux-ROCm-Liste. Betreibt 14B-Modelle in Q4–Q6 bequem. Neu: ca. 820–930 $.',
+          '**Radeon AI PRO R9700** (32 GB GDDR6, 640 GB/s, RDNA 4): eine Workstation-Karte mit dem meisten VRAM, den AMD in dieser Klasse verkauft. Sie verarbeitet 32B-Modelle in Q4–Q6; zwei Karten (64 GB) fassen ein 70B-Modell in Q4. AMD-Listenpreis: 1.299 $; gemeldete Straßenpreise sind höher.',
+          '**RX 7900 XT** (20 GB GDDR6, 800 GB/s, RDNA 3): fasst Modelle bis etwa 24–27B in Q4. Kaufen Sie sie nur, wenn sie deutlich günstiger ist als eine gebrauchte 7900 XTX; ihr Preis wurde für dieses Update nicht neu geprüft.',
+          '**RX 6800 XT** (16 GB GDDR6, 512 GB/s, RDNA 2): die Budget-Wahl für ca. 380–410 $ gebraucht. Weniger Bandbreite bedeutet langsamere Generierung, und AMDs aktuelle Radeon-ROCm-Matrix führt sie nicht mehr auf; rechnen Sie also mit Ollamas Linux-ROCm-Weg oder Vulkan.',
+          '**Mini-PCs mit Ryzen AI Max+ 395** (bis 128 GB einheitlicher Speicher, 256 GB/s): keine Grafikkarte, aber der günstigste Weg, sehr große Mixture-of-Experts-Modelle auf AMD zu betreiben. 128-GB-Systeme wurden Ende September 2026 für etwa 3.300–4.350 $ gelistet (Preis-Tracker). Siehe [Beste AMD-Mini-PCs für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026).',
+        ],
+      },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: 'Wie schneiden AMD-GPUs bei VRAM und Preis gegen NVIDIA ab?',
+        columns: [
+          'GPU',
+          'VRAM',
+          'Speicherbandbreite',
+          'Üblicher Preis',
+          'Haupt-Backend',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 GB',
+            Speicherbandbreite: '512 GB/s',
+            'Üblicher Preis': 'ca. 380–410 $ gebraucht',
+            'Haupt-Backend': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 GB',
+            Speicherbandbreite: '640 GB/s',
+            'Üblicher Preis': 'ca. 820–930 $ neu',
+            'Haupt-Backend': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 GB',
+            Speicherbandbreite: '800 GB/s',
+            'Üblicher Preis': 'Nicht neu geprüft',
+            'Haupt-Backend': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 GB',
+            Speicherbandbreite: '960 GB/s',
+            'Üblicher Preis': 'ca. 900–1.250 $ gebraucht',
+            'Haupt-Backend': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 GB',
+            Speicherbandbreite: '640 GB/s',
+            'Üblicher Preis': '1.299 $ Liste; ca. 1.400–1.900 $ Straße',
+            'Haupt-Backend': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 GB',
+            Speicherbandbreite: '936 GB/s',
+            'Üblicher Preis': 'ca. 1.000–1.400 $ gebraucht',
+            'Haupt-Backend': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 GB',
+            Speicherbandbreite: '1.008 GB/s',
+            'Üblicher Preis': 'ca. 2.250 $ gebraucht',
+            'Haupt-Backend': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 GB',
+            Speicherbandbreite: '1.792 GB/s',
+            'Üblicher Preis': 'ca. 3.700–4.300 $ neu',
+            'Haupt-Backend': 'CUDA, Vulkan',
+          },
+        ],
+        note: 'VRAM und Speicherbandbreite sind Herstellerangaben ([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). Die Preise sind Momentaufnahmen von US-Angebotspreisen aus öffentlichen Preis-Trackern und Tests (Sept.–Okt. 2026), keine Messungen von PromptQuorum; in Deutschland weichen sie ab. Prüfen Sie vor dem Kauf tatsächliche Verkaufspreise, etwa bei Geizhals.',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-de.webp',
+        imageCaption: 'AMD vs NVIDIA für lokale LLMs: VRAM, Speicherbandbreite und üblicher Preis (USA, Momentaufnahmen Sept.–Okt. 2026).',
+      },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'Wie schnell sind AMD-GPUs im Vergleich zu NVIDIA bei der LLM-Inferenz?',
+        content: [
+          '**Die Token-Generierung hängt stärker von der Speicherbandbreite ab als von den TFLOPS, und AMDs Top-Karten liegen dabei nahe an NVIDIAs älteren Flaggschiffen.** Die RX 7900 XTX (960 GB/s) liegt nahe an der RTX 3090 (936 GB/s) und unter der RTX 4090 (1.008 GB/s) und der RTX 5090 (1.792 GB/s).',
+          'Bei der Prompt-Verarbeitung (Prefill) liegt NVIDIA deutlicher vorn. In einem Community-Vergleich mit llama.cpp (llama.cpp-Diskussion Nr. 19890, von Tests Dritter wiedergegeben) war die RTX 5090 beim Prefill etwa 2,6–3,4-mal und bei der Generierung desselben Modells etwa 1,5-mal schneller als die Radeon AI PRO R9700. Das sind von Entwicklern gemeldete Daten, keine Messung von PromptQuorum.',
+          'Die Backend-Wahl verändert die Ergebnisse: Vulkan und ROCm (HIP) wechseln sich je nach Modell, Karte und Treiberversion an der Spitze ab. llama.cpp lässt sich mit beiden bauen – testen Sie beide auf Ihrer eigenen Karte, bevor Sie sich festlegen.',
+          'In der Praxis ist AMD bei der Generierungsgeschwindigkeit pro GB/s Bandbreite konkurrenzfähig, bei langen Prompts langsamer und bei der Software weniger ausgereift.',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: 'Wie aufwendig ist die ROCm-Einrichtung 2026?',
+        content: [
+          '**Vulkan braucht nur einen Grafiktreiber; ROCm braucht eine unterstützte GPU, Linux-Distribution und einen passenden Kernel.** Prüfen Sie das vor dem Kauf:',
+          '1. **Gleichen Sie Ihre Karte mit AMDs Matrix ab.** Die Radeon-Matrix für ROCm 7.2.1 führt die RX 9070 XT, RX 9060 XT, RX 7900 XTX, RX 7900 XT, RX 7900 GRE, RX 7800 XT und die Radeon AI PRO R9700 unter Ubuntu 24.04.4, Ubuntu 22.04.5 und RHEL 10.1 auf.',
+          '2. **Prüfen Sie auch Ollamas Liste.** Die Ollama-Dokumentation ergänzt für Linux-ROCm die RX 6800 XT, 6900 XT und weitere RX-6000-Karten und nennt die Ryzen AI Max+ 395. Nicht gelistete Karten können unter Linux `HSA_OVERRIDE_GFX_VERSION` versuchen; unter Windows wird es nicht unterstützt.',
+          '3. **Installieren Sie den ROCm-v7-Stack** mit AMDs Dienstprogramm `amdgpu-install` (Linux). Ollama verlangt unter Linux ROCm v7.',
+          '4. **Prüfen Sie die Erkennung** mit `rocminfo`: Ihre GPU sollte als Agent erscheinen (zum Beispiel gfx1100 für die RX 7900 XTX, gfx1201 für die RX 9070 XT).',
+          '5. **Unter Windows** nennt Ollamas ROCm-Liste RX-7000-Karten. Andere Karten, darunter die RX-9070-Serie, stehen nicht auf dieser Liste – nutzen Sie dort das Vulkan-Backend.',
+          'Die neueste ROCm-Version ist 7.14.0 (16. Juli 2026), die ROCm auf das modulare Build-System TheRock umgestellt hat. AMDs Radeon-Kompatibilitätsseite deckte bei der Prüfung Versionen bis 7.2.1 ab; gleichen Sie Ihre Karte daher mit der Matrix der Version ab, die Sie installieren.',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: 'Welche lokalen LLM-Tools laufen auf AMD-GPUs?',
+        content: [
+          '**Ollama:** ROCm v7 unter Linux für die oben genannten Karten; unter Windows RX-7000-Karten über ROCm. [Vulkan](https://docs.ollama.com/gpu) ist standardmäßig aktiv, sobald das Backend installiert ist, und lässt sich mit `OLLAMA_VULKAN=0` abschalten. Aktuell ist v0.40.10 (23. Oktober 2026) mit einem Linux-ROCm-Build.',
+          '**llama.cpp:** baut für AMD mit HIP (ROCm) oder Vulkan (`-DGGML_VULKAN=1`). Beide Backends lassen sich zusammen kompilieren und pro Gerät mit `--device` auswählen. Die meisten Oberflächen basieren darauf.',
+          '**LM Studio:** unterstützt AMD-GPUs über llama.cpp-Runtimes – Vulkan und ROCm. Vulkan ist die übliche Ausweichlösung, wenn die ROCm-Runtime eine Karte nicht erkennt. (Eine frühere Version dieser Seite nannte LM Studio NVIDIA-only; das war falsch.)',
+          '**vLLM:** liefert ROCm-Builds (das Release ROCm 7.14.0 führt vLLM 0.23.0 auf). Es zielt auf Serving und Batching; prüfen Sie die vLLM-Dokumentation für Ihr GPU-Target, bevor Sie sich darauf verlassen.',
+          '**Faustregel:** Ollama oder LM Studio für Komfort, llama.cpp für Kontrolle, vLLM für Mehrbenutzer-Serving.',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-de.webp',
+        imageCaption: 'Lokale LLM-Tools auf AMD-GPUs: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: 'Wie führt man quantisierte LLM-Inferenz auf einer AMD-GPU aus?',
+        numberedItems: [
+          '**Wählen Sie die Modellgröße passend zum VRAM.** Eine Q4_K_M-Datei braucht grob 0,6 GB pro Milliarde Parameter (etwa 9 GB für 14B, 20 GB für 32B; Schätzwerte). Lassen Sie 2–4 GB für den Kontext-Cache frei.',
+          '**Wählen Sie ein Backend.** Vulkan ist der schnellste Einstieg (nur der Grafiktreiber). ROCm (HIP) ist auf unterstützten Linux-Systemen der bessere Weg.',
+          '**Installieren Sie eine Runtime.** Installieren Sie unter Linux für den ROCm-Weg zuerst ROCm v7 mit `amdgpu-install`, danach Ollama (`curl -fsSL https://ollama.com/install.sh | sh`) oder LM Studio.',
+          '**Starten Sie ein quantisiertes Modell.** Zum Beispiel `ollama run qwen3:14b`, oder mit llama.cpp `llama-server -m model.gguf -ngl 99`, um alle Schichten auf die GPU auszulagern.',
+          '**Prüfen Sie, ob die GPU genutzt wird.** `ollama ps` sollte 100% GPU zeigen; `rocm-smi` zeigt den belegten VRAM. Meldet es CPU, prüfen Sie die ROCm-Installation oder wechseln Sie zu Vulkan.',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: 'Wann sollten Sie für lokale LLMs AMD statt NVIDIA kaufen?',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Kaufen Sie AMD, wenn Sie 24–32 GB VRAM günstiger als bei NVIDIAs neuesten Karten wollen; verzichten Sie darauf, wenn Sie auf reine CUDA-Tools angewiesen sind oder keinen Einrichtungsaufwand wollen.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD ist ein gutes Angebot, wenn Ihnen VRAM fehlt und der Software-Weg (ROCm unter Linux oder Vulkan) zu Ihnen passt. Wenn Sie neu bei lokalen LLMs sind und es einfach laufen soll, beginnen Sie mit NVIDIA.',
+          },
+        ],
+        content: [
+          'Kaufen Sie AMD, wenn:',
+          '- Sie 32 GB auf einer Karte für weniger Geld wollen: Die Radeon AI PRO R9700 kostet etwa ein Drittel bis die Hälfte einer RTX 5090.',
+          '- Sie bereits eine unterstützte Radeon besitzen oder eine Karte wollen, die auch bei Spielen gut ist.',
+          '- Sie Linux nutzen oder mit Vulkan zufrieden sind und Ihre Tools (Ollama, llama.cpp, LM Studio) AMD bereits unterstützen.',
+          'Kaufen Sie NVIDIA, wenn:',
+          '- Sie reine CUDA-Tools, Training oder Fine-Tuning-Stacks oder die schnellste Prompt-Verarbeitung brauchen.',
+          '- Sie gebrauchte 24-GB-Karten vergleichen: Eine gebrauchte RTX 3090 kostet etwa so viel wie eine gebrauchte RX 7900 XTX, daher kann die CUDA-Unterstützung entscheiden.',
+          '- Sie möglichst wenig Zeit für die Einrichtung aufwenden wollen.',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: 'AMD Instinct oder NVIDIA-Rechenzentrums-GPUs: Was ist besser für LLMs?',
+        content: [
+          '**AMD Instinct (MI300X, MI350X) konkurriert mit NVIDIAs Rechenzentrums-GPUs und wird für Server gekauft, nicht für den Schreibtisch.** Ollamas ROCm-Liste enthält Instinct-Karten, und ROCm wurde um sie herum gebaut; die Unterstützung ist daher breiter als bei Radeon-Consumer-Karten.',
+          'Die MI300X trägt 192 GB HBM3-Speicher pro Beschleuniger (AMD-Spezifikation), was für sehr große Modelle in einem Gehäuse passt. Für einen Einzelplatz-Rechner sind Radeon RX oder Radeon AI PRO die relevanten AMD-Optionen.',
+          'Für Server- und Cloud-Entscheidungen siehe den [Kaufratgeber für Enterprise-GPU-Server](/de/local-llms/enterprise-gpu-server-buying-guide-2026) und den [Vergleich von Cloud-GPU-Mieten](/de/local-llms/cloud-gpu-rental-comparison-2026).',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'Was sind die häufigsten Fehler beim Einstieg mit AMD?',
+        items: [
+          'Annehmen, 24 GB reichten für 70B-Modelle: Ein 70B-Modell braucht in Q4 etwa 40 GB oder mehr, eine einzelne 24-GB-Karte endet daher bei rund 30–35B. Planen Sie für 70B zwei Karten oder ein Paar R9700 mit 32 GB.',
+          'Eine Karte kaufen, die ROCm nicht unterstützt: Prüfen Sie vorher AMDs Matrix und Ollamas Liste. RX-6000-Karten stehen nicht in AMDs aktueller Radeon-Matrix.',
+          'Vulkan überspringen: Erkennt ROCm Ihre Karte nicht, probieren Sie das Vulkan-Backend, bevor Sie schließen, dass sich die GPU nicht nutzen lässt.',
+          'Angebotspreisen vertrauen: GPU- und Speicherpreise haben sich 2026 spürbar bewegt. Vergleichen Sie tatsächliche Verkaufspreise, nicht Angebotspreise.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Nächste Schritte',
+        items: [
+          '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — Knappes Budget? Die GPUs mit dem besten Preis-Leistungs-Verhältnis für LLM-Inferenz →',
+          '[GPU vs CPU vs Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple oder CPU – welche Plattform passt zu Ihrem Workflow? →',
+          '[Wie viel VRAM brauche ich?](/de/local-llms/how-much-vram-local-llm) — Passen Sie den GPU-VRAM an die Modellgröße an →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Wie wirken sich regionale Datenschutzgesetze auf die Entscheidung AMD vs NVIDIA aus?',
+        content: [
+          '**Der GPU-Hersteller ändert Ihre Datenschutzpflichten nicht; die lokale Inferenz tut es.** Inferenz auf dem eigenen Gerät hält Prompts und Dokumente auf Ihrer Hardware, was das Risiko grenzüberschreitender Übermittlungen nach DSGVO, Japans APPI sowie Chinas PIPL und Datensicherheitsgesetz verringern kann. Compliance verlangt weiterhin eine Rechtsgrundlage, Aufbewahrungsregeln und Verfahren bei Datenpannen; in Deutschland und der DACH-Region sind zudem die IT-Sicherheitsstandards des BSI (IT-Grundschutz) zu beachten. Lassen Sie regulierte Daten formal prüfen.',
+          'Exportkontrollregeln können Hochleistungsbeschleuniger von AMD und NVIDIA in einzelnen Märkten einschränken. Prüfen Sie die aktuellen Regeln für Ihr Land, bevor Sie importieren oder kaufen.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Sind AMD-GPUs gut für den Betrieb lokaler LLMs?',
+            a: 'Ja, mit Einschränkungen. AMD-Karten wie die RX 7900 XTX (24 GB) und die Radeon AI PRO R9700 (32 GB) betreiben quantisierte LLMs über ROCm oder Vulkan in Ollama, LM Studio und llama.cpp. NVIDIA CUDA hat weiterhin die breitere Software-Unterstützung und die schnellere Prompt-Verarbeitung; AMD passt daher am besten, wenn VRAM pro Dollar zählt.',
+          },
+          {
+            q: 'Was ist die beste AMD-GPU für lokale LLMs?',
+            a: 'Die RX 7900 XTX ist die beste AMD-Allroundkarte für lokale LLMs: 24 GB VRAM, 960 GB/s Speicherbandbreite und Unterstützung in AMDs ROCm-7.2.1-Matrix und in Ollama. Für mehr VRAM pro Karte bietet die Radeon AI PRO R9700 32 GB; für Modelle mit 7B–14B genügt die RX 9070 XT (16 GB).',
+          },
+          {
+            q: 'AMD vs NVIDIA für lokale LLMs: Was sollte ich kaufen?',
+            a: 'Kaufen Sie NVIDIA, wenn Sie CUDA-Kompatibilität und möglichst wenig Einrichtung wollen. Kaufen Sie AMD, wenn Sie mehr VRAM pro Dollar wollen, vor allem die R9700 mit 32 GB gegenüber der RTX 5090. Eine gebrauchte RX 7900 XTX kostet etwa so viel wie eine gebrauchte RTX 3090; dort entscheidet die Software.',
+          },
+          {
+            q: 'Funktioniert Ollama mit AMD-GPUs?',
+            a: 'Ja. Ollama verlangt unter Linux den ROCm-v7-Treiber und führt die RX 9070 XT, RX 7900 XTX, RX 6800 XT, Radeon AI PRO R9700 und weitere auf. Unter Windows deckt die ROCm-Liste RX-7000-Karten ab, und Vulkan ist standardmäßig aktiv, sobald das Backend installiert ist.',
+          },
+          {
+            q: 'Unterstützt LM Studio AMD-GPUs?',
+            a: 'Ja. LM Studio betreibt AMD-GPUs über llama.cpp-Runtimes, entweder Vulkan oder ROCm. Erkennt die ROCm-Runtime Ihre Karte nicht, stellen Sie die Runtime auf Vulkan um. Frühere Versionen dieser Seite nannten LM Studio fälschlich NVIDIA-only.',
+          },
+          {
+            q: 'Wie führe ich quantisierte LLM-Inferenz auf einer AMD-GPU aus?',
+            a: 'Wählen Sie ein quantisiertes Modell, das in Ihren VRAM passt (Q4_K_M sind grob 0,6 GB pro Milliarde Parameter), installieren Sie Ollama oder LM Studio und nutzen Sie Vulkan oder ROCm. Installieren Sie unter Linux ROCm v7 mit amdgpu-install, starten Sie das Modell und prüfen Sie die GPU-Nutzung mit ollama ps oder rocm-smi.',
+          },
+          {
+            q: 'RX 9070 XT oder RX 7900 XTX für lokale LLMs?',
+            a: 'Für lokale LLMs ist die RX 7900 XTX die bessere Wahl, denn 24 GB fassen Modelle bis etwa 30–35B in Q4, während die 16 GB der RX 9070 XT bei etwa 14B–24B enden. Die RX 9070 XT ist neuer und günstiger; wählen Sie sie, wenn 16 GB genügen.',
+          },
+          {
+            q: 'Was ist die beste AMD-GPU unter 500 $?',
+            a: 'Die RX 6800 XT (16 GB) für ca. 380–410 $ gebraucht ist die beste AMD-Karte unter 500 $. Sie betreibt Modelle mit 7B–14B in Q4–Q8, steht aber nicht in AMDs aktueller Radeon-ROCm-Matrix; rechnen Sie also mit Ollamas Linux-ROCm-Weg oder Vulkan.',
+          },
+          {
+            q: 'Lohnt sich die Radeon AI PRO R9700 für lokale KI?',
+            a: 'Ja, wenn Sie 32 GB auf einer Karte brauchen. Ihr Listenpreis liegt bei 1.299 $, gegenüber etwa 3.700–4.300 $ für eine RTX 5090; gemeldete Straßenpreise sind jedoch höher, und die Prompt-Verarbeitung ist langsamer. Zwei R9700 ergeben 64 GB für 70B-Modelle in Q4.',
+          },
+          {
+            q: 'Brauche ich Linux für AMD ROCm, oder funktioniert Windows?',
+            a: 'Linux ist der besser unterstützte ROCm-Weg: AMDs Matrix führt Ubuntu 24.04.4, Ubuntu 22.04.5 und RHEL 10.1 auf. Unter Windows deckt Ollamas ROCm-Liste RX-7000-Karten ab, andere Karten nutzen das Vulkan-Backend.',
+          },
+          {
+            q: 'Was ist für LLMs besser, AMD Instinct oder NVIDIA-GPUs?',
+            a: 'Instinct (MI300X, MI350X) konkurriert mit NVIDIAs Rechenzentrums-GPUs und wird für Server gekauft; die MI300X hat 192 GB HBM3. Für einen einzelnen Desktop sind Radeon oder Radeon AI PRO die relevanten AMD-Optionen, und NVIDIAs CUDA-Ökosystem ist weiterhin breiter.',
+          },
+          {
+            q: 'Ist AMD gut für Deep Learning und Machine Learning, nicht nur für LLMs?',
+            a: 'Für Inferenz ja. ROCm liefert PyTorch-Builds (das Release ROCm 7.14.0 führt PyTorch 2.12.0 auf). Für Training und Forschungscode, der CUDA voraussetzt, hat NVIDIA weiterhin das breitere Ökosystem; prüfen Sie die AMD-Unterstützung Ihres Frameworks vor dem Kauf.',
+          },
+          {
+            q: 'Ist ein Mini-PC mit Ryzen AI Max+ 395 besser als eine dedizierte AMD-GPU?',
+            a: 'Das hängt von der Modellgröße ab. Ryzen-AI-Max+-395-Systeme bieten bis zu 128 GB einheitlichen Speicher, aber nur 256 GB/s Bandbreite; sie eignen sich für große Mixture-of-Experts-Modelle, während eine dedizierte Karte bei Modellen, die in ihren VRAM passen, Token schneller generiert.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm)',
+          '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
+          '[Beste AMD-Mini-PCs für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU vs CPU vs Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/de/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[Laptop vs Desktop für lokale LLMs](/de/local-llms/laptop-vs-desktop-local-llm) — Kosten- und Leistungsvergleich von Laptop und Desktop für KI.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          '[Ollama-GPU-Dokumentation](https://docs.ollama.com/gpu): AMD-ROCm-v7-Anforderung, unterstützte Radeon-, Radeon-AI-PRO-, Radeon-PRO-, Ryzen-AI- und Instinct-Karten, Vulkan-Backend',
+          '[Ollama-Releases](https://github.com/ollama/ollama/releases): v0.40.10, 23. Oktober 2026',
+          '[AMD ROCm auf Radeon und Ryzen – Linux-Kompatibilität](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html): von ROCm 7.2.1 unterstützte Radeon-GPUs und Distributionen',
+          '[ROCm-Releases](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0): ROCm 7.14.0, 16. Juli 2026, Framework-Versionen',
+          '[llama.cpp-Build-Dokumentation](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md): HIP- und Vulkan-Backends',
+          'AMD-Produktspezifikationen: [RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          'Preis-Momentaufnahmen (USA, Sept.–Okt. 2026): öffentliche GPU-Preis-Tracker und Tests Dritter; es sind Angebotspreise, die sich schnell ändern',
+          'AMD-GPUs liefern hohe Token-pro-Sekunde-Werte, aber Geschwindigkeit allein bestimmt nicht die Antwortqualität. Was Sie das Modell fragen, zählt ebenso wie die Antwortgeschwindigkeit: [Kontextfenster erklärt](https://www.promptquorum.com/de/prompt-engineering/context-windows-explained-why-ai-forgets) zeigt, wie Sie längere Anfragen innerhalb der GPU-Speichergrenzen strukturieren.',
+        ],
       },
     },
-    ja: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
-      ],
-      theme: 'GPU 購入ガイド',
-      title: 'ローカル LLM 向けベスト AMD GPU 2026',
-      seoTitle: 'AMD GPU ローカル LLM 2026：ROCm & vLLM ガイド',
-      intro: '**AMD RX 6800 XT と RX 7900 XTX は NVIDIA の堅実な代替品で、計算性能当たりのコスト が 15-20% 優れています。ただし ONNX Runtime と vLLM ドライバーのサポートが弱いです。** AMD ROCm (HIP) は成熟していますが、互換レイヤーが摩擦を増加させます。NVIDIA CUDA は依然としてローカル LLM への最短経路です。AMD は優れた中古取引を見つけた場合、または既に AMD ハードウェアを所有している場合のみ使用してください。',
-      metaDescription: 'AMD RX 6800 XT、7900 XTX ローカル LLM 向け。ROCm セットアップ、vLLM サポート、NVIDIA RTX 性能対比。2026 年 4 月決定ガイド。',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.webp',
-      publishDate: '2026-04-05',
-      readTime: '9分で読める',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'AMD GPU',
-      toc: [
-        { label: '重要ポイント', anchor: '#key-takeaways' },
-        { label: '実際に価値のある AMD GPU は？', anchor: '#key-takeaways' },
-        { label: 'AMD GPUは価格と速度でRTXとどう比較される？', anchor: '#amd-vs-nvidia' },
-        { label: 'よくある質問', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'AMD RX 7900 XTXは24GBのVRAMで中古450〜550ドルでRTX 4090に匹敵しますが、ROCmドライバーのセットアップにはNVIDIA CUDAより5〜10時間多くの手間がかかります。' },
-            { type: 'plain-terms', text: 'AMDのGPUは、馬力は高いがマニュアル車のようなものです -- ドルあたりのパワーは大きいですが、動かすまでの手間も大きくなります。NVIDIAはオートマ車です。' },
-          ],
-          items: [
-            'AMD RX 6800 XT（16GB、中古 ¥35,000-40,000）と RX 7900 XTX（24GB、中古 ¥50,000-65,000）は、ローカル LLM のための唯一の実用的なオプションです。',
-            'コスト・パフォーマンス：AMD は NVIDIA より 20-30% 安いですが、ソフトウェアの摩擦により 5-10 時間のセットアップ時間が必要です。',
-            'Ollama：AMD サポート限定（ROCm パスは2026年4月テスト時点、Ollama v0.3.x / ROCm 6.x で不安定でした — 一部の構成でGPU検出が失敗；CPU フォールバックが遅い）。導入前にgithub.com/ollama/ollamaで最新のAMD互換性リストを確認してください。',
-            'vLLM：v0.6.0 起完全サポート AMD ROCm。セットアップには手動ドライバーが必要です。セットアップを乗り越えれば動作します。',
-            'Text Generation WebUI：AMD への優れたサポート。AMD 上での最高のユーザー体験。',
-            'Llama.cpp：ネイティブ AMD サポート（HIP バックエンド）。堅牢なパフォーマンス。推奨される AMD パス。',
-            'セットアップコスト：ROCm ドライバー、HIPCC コンパイル、カーネル互換性のデバッグに 5-10 時間を計画してください。',
-            '評決（2026 年 4 月）：既に AMD ハードウェアを所有しているか、優れた中古取引（16GB カード ¥35,000）を見つけた場合にのみ AMD を使用してください。それ以外は NVIDIA CUDA がシンプルです。',
-          ],
-        },
-        'which-amd': {
-          title: '実際に価値のある AMD GPU は？',
-          items: [
-            '**RX 6800 XT**（16GB GDDR6）：AMD のコスト・パフォーマンス王。2020 年リリース。7B-22B 推論に堅牢です。中古：¥35,000-40,000。',
-            '**RX 6900 XT**（16GB GDDR6）：6800 XT よりわずかに高速。レア。中古：¥40,000-45,000。価格上昇の価値がありません。',
-            '**RX 7900 XT**（20GB GDDR6）：新型 RDNA 3 アーキテクチャ。6800 XT より 20% 高速。中古：¥50,000-55,000。70B Q4 に適しています。',
-            '**RX 7900 XTX**（24GB GDDR6）：AMD トップ・コンシューマー GPU。24GB VRAM は 70B に大きな違いをもたらします。中古：¥55,000-65,000。RTX 4090 の速度に匹敵します。',
-            '**Radeon Pro W6800（32GB）**：エンタープライズ・カード、中古で安い（～¥25,000-35,000）。遅いですが、32GB は 70B Q8 に優秀です。ニッチです。',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: 'AMD GPU と RTX の価格・性能対比',
-          rows: [
-            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1.952', '中古価格': '¥35,000-40,000', '性能/円 vs RTX': '+25%', '等効 RTX': 'RTX 3080（遅い）' },
-            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2.540', '中古価格': '¥50,000-55,000', '性能/円 vs RTX': '+20%', '等効 RTX': 'RTX 4080（相当）' },
-            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2.750', '中古価格': '¥55,000-65,000', '性能/円 vs RTX': '+15%', '等効 RTX': 'RTX 4090（相当速度）' },
-            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1.456', '中古価格': '¥40,000-45,000', '性能/円 vs RTX': '--', '等効 RTX': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', '中古価格': '¥245,000-320,000', '性能/円 vs RTX': '--', '等効 RTX': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', '中古価格', '性能/円 vs RTX', '等効 RTX'],
-        
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.webp',
-          imageCaption: 'RX 7900 XTXはRTX 4090と同等の速度とVRAMを、価格の約60%で実現します — その代償がROCmのセットアップの手間です。',
-        },
-        'rocm-setup': {
-          title: 'ROCm セットアップの課題',
-          content: [
-            '1. AMD ROCm ドライバーをインストール：`apt-get install rocm-dkms`（Ubuntu）。Windows では手動 .exe インストーラー。30 分かかります。',
-            '2. HIP コンパイラーを検証：`hipcc --version`。通常第一試行で失敗します。GPU のカーネル互換性をデバッグします。',
-            '3. HIPCC（AMD HIP-to-C++ コンパイラー）をインストール：`apt-get install hip-runtime-amd`。別の依存関係チェーン。',
-            '4. 小型 LLM でテスト：推論を実行して GPU アクセラレーションが動作することを検証します。CPU フォールバックが頻繁です。',
-            '5. ドライバー・バージョン不整合を解決：ROCm v5.7 はカーネル 5.15 で動作しますが、6.x では動作しません。2-4 時間のデバッグが必要です。',
-            '**注意：** NVIDIA CUDA との比較：`nvidia-cuda-toolkit` → 1 つの apt-get、即座 GPU アクセス。AMD は 5-10 倍の努力が必要です。',
-          ],
-        },
-        'software-support': {
-          title: 'Ollama と vLLM を AMD で実行できるか',
-          content: [
-            '**AMD上のOllama（2026年4月テスト時点、Ollama v0.3.x、ROCm 6.x）：** ROCmサポートはテストで不安定でした——一部の構成でGPU検出が失敗し、CPUフォールバックが遅い。導入前にgithub.com/ollama/ollamaで最新のAMD互換性リストを確認してください。',
-            '**vLLM on AMD：** v0.6.0 以降で完全 ROCm サポート。動作しますが、手動 ROCm/HIP ドライバー設定が必要です。セットアップを乗り越えれば良好です。',
-            '**Text Generation WebUI：** 優れた AMD ROCm サポート。AMD 上での最高の体験。推奨。',
-            '**Llama.cpp：** ネイティブ HIP バックエンド。堅牢なパフォーマンス。最も簡単な AMD パス。推奨。',
-            '**LM Studio：** NVIDIA のみ。AMD サポートなし。',
-            '**2026 年 4 月起：** vLLM + llama.cpp があなたの AMD パスです。Ollama は信頼できません。',
-          ],
-        
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-ja.webp',
-          imageCaption: '2026年時点でllama.cppとText Generation WebUIが信頼できるAMDの選択肢です — OllamaのROCmサポートは不安定なままです。',
-        },
-        'when-buy-amd': {
-          title: 'AMD を NVIDIA の代わりに購入すべき場合',
-          content: [
-            '**AMD を購入すべき場合：**',
-            '- 中古 RX 7900 XTX を ¥55,000 未満で見つけた場合（RTX 4090 に対して過小評価）。',
-            '- 既に AMD ハードウェアを所有していて、エコシステムの一貫性を望む場合。',
-            '- クラスターを構築していて、利便性よりも性能当たりコストを優先する場合。',
-            '**AMD を購入すべきではない場合：**',
-            '- プラグ・アンド・プレイ体験を望む場合。NVIDIA CUDA の方が速く機能します。',
-            '- Ollama が必要な場合。AMD サポートは不安定です。',
-            '- 時間が限定されている場合。ROCm デバッグに 10+ 時間かかることがあります。',
-          ],
-        },
-        'mistakes': {
-          title: 'AMD 導入における一般的な過ちと注意点',
-          items: [
-            '⚠️ **RX 6700（12GB）を 3060 12GB 同等と誤認して購入** -- 20% 遅く、中古でも見つけにくい。',
-            '⚠️ **ROCm が CUDA のように「即座に機能する」と仮定** -- ドライバーとカーネル互換性のデバッグに 5-10 時間を計画してください。',
-            '⚠️ **Ollama で AMD を使用しシームレスな統合を期待** — 2026年4月テスト（Ollama v0.3.x、ROCm 6.x）でROCmサポートは不安定でした。llama.cpp または vLLM の方が優れた選択肢です。',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: '次のステップ',
-          items: [
-            '[予算内で最高のGPU（ローカルLLM向け）](/ja/local-llms/best-budget-gpus-local-llm) — 予算が限られている？コスパ最強GPU →',
-            '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD・Apple・CPU、どのプラットフォームが最適か →',
-            '[必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — GPUのVRAMとモデルサイズを合わせる →',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: 'よくある質問',
-          faqs: [
-            { q: 'ローカル LLM に AMD RX 6800 XT または NVIDIA RTX 3080 を購入すべきか？', a: 'シンプルさを優先する場合は RTX 3080（CUDA「即座に機能」）。25% 優れたコスト・パフォーマンスで 5-10 時間の ROCm セットアップを厭わない場合は RX 6800 XT。' },
-            { q: 'AMD RX 7900 XTX は RTX 4090 より優れているか？', a: '速度は同等、VRAM は同じ（24GB）。RX 7900 XTX は中古 ¥55,000-65,000 に対し、RTX 4090 は中古¥245,000-320,000（NVIDIAが2026年に生産終了して以降、価格が大幅上昇）。ROCm セットアップはトレードオフです。' },
-            { q: 'AMD GPU を Ollama で使用できるか？', a: '技術的には可能です。2026年4月のテスト（Ollama v0.3.x、ROCm 6.x）では、ROCmサポートは不安定でした——一部の構成でGPU検出が失敗し、CPUフォールバックが頻繁でした。導入前にgithub.com/ollama/ollamaで最新のAMD互換性リストを確認してください；信頼性の高いAMD推論には、vLLM または llama.cpp がより安全な選択肢です。' },
-            { q: '2026 年のローカル LLM に最適な AMD パスは何か？', a: 'Llama.cpp（HIP バックエンド）+ Text Generation WebUI。両方とも AMD に堅実なサポートがあります。Ollama を避けてください。' },
-            { q: 'AMD ROCm に Ubuntu が必要か、それとも Windows でも機能するか？', a: 'Windows サポートが存在（Windows 上の HIP）しますが、2026年4月テスト時点ではUbuntuより不安定でした。Ubuntu が推奨パスです。' },
-            { q: '7B モデル用に RX 6700、RX 6700 XT、または 6750 は適切か？', a: 'RX 6700（12GB）は動作しますが、RX 6800 XT より 20% 遅い。RX 6700 XT（12GB、VRAM は同じ）は非 XT 版よりクロックが約 15% 速いですが、6800 XT にはまだ及びません。どちらも ¥25,000 以下の場合のみ購入してください。それ以外は 6800 XT に拡張してください。' },
-            { q: 'ローカル LLM に RX 6900 XT を買う価値はあるか？', a: 'あまりありません。RX 6900 XT（16GB）は RX 6800 XT よりわずかに速いだけで、中古でも希少、価格は 6800 XT より高くなりがちです。価格差に見合う価値はありません -- 代わりに 6800 XT を購入してください。' },
-            { q: 'AMD Radeon 680M はローカル LLM の実行に適しているか？', a: 'Radeon 680M は Ryzen 6000/7000 モバイル APU に内蔵された統合グラフィックスであり、ディスクリート GPU の RX 6800M や RX 6800 XT とは別の製品です。専用 VRAM を持たずシステム RAM を共有するため、小型の量子化モデル（おおよそ 3B パラメータ以下、Q4）にしか適しておらず、このページのどのディスクリート GPU よりも明らかに低速です。本格的なローカル LLM 用途には、RX 6800 XT のようなディスクリート GPU の方が適しています。' },
-            { q: '1 つのシステムで AMD と NVIDIA GPU を混合できるか？', a: '理論的には可能です。ただし管理は悪夢です。各 GPU に独自の CUDA/HIP ランタイムが必要です。非推奨。' },
-            { q: 'AMD ROCm セットアップにはどのくらい時間がかかるか？', a: 'ドライバー・デバッグ、HIPCC コンパイル、カーネル互換性の解決に 5-10 時間を計画してください。一回限りです。その後、AMD は安定して生産的です。' },
-            { q: '日本企業は AMD ROCm を採用すべきか？', a: 'はい。特に金融、医療、法律。データは完全にオンプレミスに留まり、METI AI ガバナンス 2024 ガイドラインに準拠します。セットアップの努力はそれだけの価値があります。' },
-            { q: 'METI AI ガバナンス 2024 とは何か、AMD ROCm とどう関連するか？', a: '日本政府の METI（経産省）AI ガバナンス・フレームワーク。監査ログ、バージョン管理統合、文書化 API インターフェースの確認を要求します。AMD ROCm は完全ローカル処理であるため自動的に準拠し、IT セキュリティチームが管理できます。' },
-          ],
-        },
-        'relatedReading': {
-          title: '関連資料',
-          items: [
-            '[ローカル LLM 向けベスト予算 GPU](/ja/local-llms/best-budget-gpus-local-llm)',
-            '[ローカル LLM 向けベスト GPU](/ja/local-llms/best-gpus-for-local-llms)',
-            '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Text Generation WebUI vs vLLM vs Llama.cpp](/ja/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
-          ],
-        },
-        'sources': {
-          title: '参考資料',
-          items: [
-            'AMD ROCm ドキュメントおよび GitHub：HIP コンパイラー、ドライバー互換性マトリックス、LLM 推論例',
-            'vLLM GitHub：AMD/ROCm バックエンド実装およびサポート状態（v0.6.0+）',
-            'Llama.cpp GitHub：AMD GPU サポート用 HIP バックエンド',
-          ],
-        },
+  },
+  fr: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
       },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/ja/local-llms/best-amd-gpus-local-llm',
-        name: 'ローカル LLM 向けベスト AMD GPU',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT（16GB、中古 ¥35,000-40,000）と RX 7900 XTX（24GB、中古 ¥50,000-65,000）は、ローカル LLM のための唯一の実用的なオプションです。' },
-          { '@type': 'ListItem', position: 2, name: 'コスト・パフォーマンス：AMD は NVIDIA より 20-30% 安いですが、ソフトウェアの摩擦により 5-10 時間のセットアップ時間が必要です。' },
-          { '@type': 'ListItem', position: 3, name: 'Ollama：AMD サポート限定（ROCm パスは2026年4月テスト、Ollama v0.3.x / ROCm 6.xで不安定；CPU フォールバックが遅い）。github.com/ollama/ollamaで最新のAMD互換性を確認してください。' },
-          { '@type': 'ListItem', position: 4, name: 'vLLM：v0.6.0 起完全サポート AMD ROCm。セットアップには手動ドライバーが必要です。セットアップを乗り越えれば動作します。' },
-          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI：AMD への優れたサポート。AMD 上での最高のユーザー体験。' },
-          { '@type': 'ListItem', position: 6, name: 'Llama.cpp：ネイティブ AMD サポート（HIP バックエンド）。堅牢なパフォーマンス。推奨される AMD パス。' },
-          { '@type': 'ListItem', position: 7, name: 'セットアップコスト：ROCm ドライバー、HIPCC コンパイル、カーネル互換性のデバッグに 5-10 時間を計画してください。' },
-          { '@type': 'ListItem', position: 8, name: '評決（2026 年 4 月）：既に AMD ハードウェアを所有しているか、優れた中古取引（16GB カード ¥35,000）を見つけた場合にのみ AMD を使用してください。それ以外は NVIDIA CUDA がシンプルです。' },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'Guides d\'achat GPU',
+    title: 'Meilleur GPU AMD pour les LLM locaux et l\'inférence IA',
+    seoTitle: 'Meilleur GPU AMD pour LLM locaux 2026 : 7900 XTX, 9070 XT',
+    intro: '**Le meilleur GPU AMD pour les LLM locaux en 2026 est la Radeon RX 7900 XTX (24 Go) pour les modèles de classe 30B, la RX 9070 XT (16 Go) pour les modèles de 7B à 14B et la Radeon AI PRO R9700 (32 Go) quand il vous faut le plus de VRAM par carte.** Les trois figurent sur la liste ROCm v7 d\'Ollama pour Linux, et llama.cpp les exécute aussi via son backend Vulkan. NVIDIA CUDA reste la voie la moins contraignante : choisissez AMD pour la VRAM par dollar ou parce que vous possédez déjà la carte.',
+    metaDescription: 'Meilleur GPU AMD pour l\'IA et les LLM locaux : RX 7900 XTX (24 Go), RX 9070 XT (16 Go) et Radeon AI PRO R9700 (32 Go), avec ROCm, Vulkan et AMD vs NVIDIA.',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**Le meilleur GPU AMD pour les LLM locaux en 2026 est la Radeon RX 7900 XTX (24 Go) pour les modèles de classe 30B, la RX 9070 XT (16 Go) pour les modèles de 7B à 14B et la Radeon AI PRO R9700 (32 Go) quand il vous faut le plus de VRAM par carte.**',
+    quickAnswerTop: {
+      question: 'Quel GPU AMD choisir pour les LLM locaux et l\'inférence IA ?',
+      answer: 'La RX 7900 XTX (24 Go) est le meilleur GPU AMD polyvalent pour les LLM locaux, la RX 9070 XT (16 Go) la meilleure carte récente pour les modèles de 7B à 14B, et la Radeon AI PRO R9700 (32 Go) offre le plus de VRAM par carte. Ollama liste les trois avec ROCm v7 sous Linux ; Vulkan sert de solution de repli sans ROCm. NVIDIA CUDA reste plus simple : AMD convient surtout quand la VRAM par dollar compte.',
+      bullets: [
+        'RX 7900 XTX : 24 Go, 960 Go/s, environ 900–1 250 $ d\'occasion (comparateurs de prix, sept.–oct. 2026)',
+        'RX 9070 XT : 16 Go, 640 Go/s, environ 820–930 $ neuve — un modèle 14B tient en Q4–Q6',
+        'Radeon AI PRO R9700 : 32 Go, prix catalogue AMD 1 299 $ ; les prix de rue signalés sont plus élevés',
+        'Ollama exige ROCm v7 sous Linux ; Vulkan est activé par défaut quand son backend est installé',
+      ],
+      updatedDate: '2026-10-23',
+    },
+    audience: 'Développeurs familiers avec Ollama ou LM Studio qui optimisent leurs workflows de LLM locaux',
+    readTime: '9 min de lecture',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'GPU AMD',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: 'Points clés',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: 'Quels GPU AMD valent l\'achat pour les LLM locaux ?',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'Comment les GPU AMD se comparent-ils à NVIDIA en VRAM et en prix ?',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'Quelle est la vitesse des GPU AMD face à NVIDIA ?',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: 'Quelle difficulté présente l\'installation de ROCm en 2026 ?',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: 'Quels outils de LLM locaux fonctionnent sur GPU AMD ?',
+        anchor: '#software-support',
+      },
+      {
+        label: 'Comment exécuter une inférence LLM quantifiée sur un GPU AMD ?',
+        anchor: '#run-quantized',
+      },
+      {
+        label: 'Quand acheter AMD plutôt que NVIDIA ?',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD Instinct ou GPU de datacenter NVIDIA ?',
+        anchor: '#instinct',
+      },
+      {
+        label: 'FAQ',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La RX 7900 XTX (24 Go), la RX 9070 XT (16 Go) et la Radeon AI PRO R9700 (32 Go) sont les GPU AMD à acheter pour les LLM locaux en 2026, et la documentation d\'Ollama liste les trois avec ROCm v7 sous Linux.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Les cartes AMD offrent beaucoup de VRAM pour le prix, mais il faut choisir le bon chemin logiciel : ROCm sur une configuration Linux prise en charge, ou Vulkan quand vous voulez que cela fonctionne simplement. NVIDIA est l\'option prête à l\'emploi.',
+          },
         ],
-        speakable: {
-          '@type': 'SpeakableSpecification',
-          cssSelector: ['.article-intro', '.key-takeaways'],
-        },
-        regionalContext: {
-          title: '日本国内の採用および METI ガバナンス',
-          content: [
-            '**日本企業：METI AI ガバナンス 2024 とローカル LLM 部署。** 日本政府の METI（経産省）AI ガバナンス・フレームワーク。監査ログ、バージョン管理統合、文書化 API インターフェースの確認を要求します。金融、医療、法律、通信などの規制業界では、AMD ROCm ローカル部署が完全なデータ・プライバシーと METI ガバナンス準拠を実現します。Ollama、LM Studio、llama.cpp などの完全ローカル化ツールは、データが政府サーバーを通じて海外に流出しないことを保証します。',
-            '**亜太地域：複数国のデータ規制フレームワークがローカル AI インフラ需要を駆動。** 日本（METI AI 治理）、シンガポール（PDPA）、韓国（PIPA）、ベトナム（情報セキュリティ法）などの国々はすべて厳格なデータ内国化要件を強制しています。この地域の企業、大学、政府機関は、複数国のコンプライアンス要件を同時に満たすために AMD ROCm ローカル LLM を採用しています。単一のローカル部署はすべての地域規制を満たしています。',
-            '**企業級部署：コスト、データ管理、および監管コンプライアンスの統一。** 多国籍企業（銀行、医薬品、製造）の亜太地域の子会社は、地元の AI ガバナンス規定を遵守する必要があります。AMD ROCm はプラグ・アンド・プレイ・ソリューションを提供しています：クラウド・ロックイン・なし、ベンダー・ロックイン・なし、クロスボーダー・データ・なし。初期セットアップ作業（5-10 時間）は複数年の運用に分散され、ROI は大きい：クラウド API に対して年間数百万ドル節約され、同時にデータ・セキュリティと監管コンプライアンスを保証します。',
-          ],
-        },
+        items: [
+          '**Meilleur choix AMD polyvalent :** RX 7900 XTX — 24 Go GDDR6, 960 Go/s, environ 900–1 250 $ d\'occasion (comparateurs de prix, sept.–oct. 2026). Elle accueille des modèles d\'environ 30–35B en Q4 ; un modèle 70B en Q4 demande environ 40 Go ou plus et n\'y tient donc pas.',
+          '**Meilleure carte récente :** RX 9070 XT — 16 Go, 640 Go/s, environ 820–930 $ neuve. Adaptée aux modèles de 7B à 14B en Q4–Q6.',
+          '**Le plus de VRAM par carte :** Radeon AI PRO R9700 — 32 Go, prix catalogue AMD 1 299 $ ; des sources tierces situent les prix de rue autour de 1 400–1 900 $. Deux cartes donnent 64 Go.',
+          '**Choix économique :** RX 6800 XT — 16 Go, environ 380–410 $ d\'occasion (prix demandés, octobre 2026). Elle figure sur la liste ROCm Linux d\'Ollama mais pas dans la matrice ROCm 7.2.1 actuelle d\'AMD pour Radeon.',
+          '**Ollama :** exige le pilote ROCm v7 sous Linux ; sous Windows sa liste ROCm couvre les RX série 7000, et Vulkan est activé par défaut quand son backend est installé (désactivable avec OLLAMA_VULKAN=0).',
+          '**LM Studio et llama.cpp :** tous deux fonctionnent sur AMD via les backends Vulkan ou ROCm (HIP). Vulkan ne demande qu\'un pilote graphique : commencez par là si ROCm ne détecte pas votre carte.',
+          '**AMD ou NVIDIA :** une RX 7900 XTX d\'occasion coûte à peu près autant qu\'une RTX 3090 (24 Go) d\'occasion. L\'avantage de prix le plus net d\'AMD est la R9700 de 32 Go face à la RTX 5090 (du tiers à la moitié de son prix), au prix d\'un traitement des prompts plus lent.',
+          '**Verdict :** choisissez AMD quand la VRAM par dollar compte et que vous pouvez utiliser Linux ou Vulkan ; choisissez NVIDIA pour les outils exclusivement CUDA, l\'entraînement et le moins d\'effort de configuration. Les prix sont des prix américains en dollars ; en France ils varient selon la TVA et les revendeurs.',
+        ],
+      },
+      'which-amd': {
+        id: 'which-amd',
+        title: 'Quels GPU AMD valent l\'achat pour les LLM locaux ?',
+        items: [
+          '**RX 7900 XTX** (24 Go GDDR6, 960 Go/s, RDNA 3) : la carte AMD grand public la plus puissante pour les LLM. Un modèle 32B en Q4_K_M pèse environ 20 Go : il tient avec de la marge pour le contexte. Présente dans la matrice ROCm 7.2.1 d\'AMD et sur la liste ROCm d\'Ollama pour Linux et Windows. D\'occasion : environ 900–1 250 $.',
+          '**RX 9070 XT** (16 Go GDDR6, 640 Go/s, RDNA 4) : l\'option récente de 16 Go, dans la matrice ROCm 7.2.1 d\'AMD et sur la liste ROCm Linux d\'Ollama. Exécute confortablement des modèles 14B en Q4–Q6. Neuve : environ 820–930 $.',
+          '**Radeon AI PRO R9700** (32 Go GDDR6, 640 Go/s, RDNA 4) : une carte de station de travail avec le plus de VRAM qu\'AMD vende dans cette catégorie. Elle gère les modèles 32B en Q4–Q6 ; deux cartes (64 Go) accueillent un modèle 70B en Q4. Prix catalogue AMD : 1 299 $ ; les prix de rue signalés sont plus élevés.',
+          '**RX 7900 XT** (20 Go GDDR6, 800 Go/s, RDNA 3) : accueille des modèles jusqu\'à environ 24–27B en Q4. Ne l\'achetez que si elle est nettement moins chère qu\'une 7900 XTX d\'occasion ; son prix n\'a pas été revérifié pour cette mise à jour.',
+          '**RX 6800 XT** (16 Go GDDR6, 512 Go/s, RDNA 2) : le choix économique, environ 380–410 $ d\'occasion. Moins de bande passante signifie une génération plus lente, et la matrice ROCm actuelle d\'AMD pour Radeon ne la liste plus : prévoyez la voie ROCm Linux d\'Ollama ou Vulkan.',
+          '**Mini-PC Ryzen AI Max+ 395** (jusqu\'à 128 Go de mémoire unifiée, 256 Go/s) : ce n\'est pas une carte graphique, mais le moyen le moins cher d\'exécuter de très grands modèles mixture-of-experts sur AMD. Les systèmes de 128 Go étaient affichés à environ 3 300–4 350 $ fin septembre 2026 (comparateurs de prix). Voir [Meilleurs mini-PC AMD pour LLM locaux](/fr/local-llms/best-amd-mini-pc-local-llm-2026).',
+        ],
+      },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: 'Comment les GPU AMD se comparent-ils à NVIDIA en VRAM et en prix ?',
+        columns: [
+          'GPU',
+          'VRAM',
+          'Bande passante',
+          'Prix courant',
+          'Backend principal',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 Go',
+            'Bande passante': '512 Go/s',
+            'Prix courant': '~380–410 $ occasion',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 Go',
+            'Bande passante': '640 Go/s',
+            'Prix courant': '~820–930 $ neuve',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 Go',
+            'Bande passante': '800 Go/s',
+            'Prix courant': 'Non revérifié',
+            'Backend principal': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 Go',
+            'Bande passante': '960 Go/s',
+            'Prix courant': '~900–1 250 $ occasion',
+            'Backend principal': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 Go',
+            'Bande passante': '640 Go/s',
+            'Prix courant': '1 299 $ catalogue ; ~1 400–1 900 $ rue',
+            'Backend principal': 'ROCm (Linux), Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 Go',
+            'Bande passante': '936 Go/s',
+            'Prix courant': '~1 000–1 400 $ occasion',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 Go',
+            'Bande passante': '1 008 Go/s',
+            'Prix courant': '~2 250 $ occasion',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 Go',
+            'Bande passante': '1 792 Go/s',
+            'Prix courant': '~3 700–4 300 $ neuve',
+            'Backend principal': 'CUDA, Vulkan',
+          },
+        ],
+        note: 'La VRAM et la bande passante sont des spécifications constructeur ([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). Les prix sont des instantanés de prix demandés aux États-Unis, issus de comparateurs publics et de tests (sept.–oct. 2026), et non des mesures de PromptQuorum ; ils varient en France. Vérifiez les ventes réelles avant d\'acheter.',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.webp',
+        imageCaption: 'AMD face à NVIDIA pour les LLM locaux : VRAM, bande passante et prix courant (États-Unis, instantanés sept.–oct. 2026).',
+      },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'Quelle est la vitesse des GPU AMD face à NVIDIA pour l\'inférence LLM ?',
+        content: [
+          '**La vitesse de génération de tokens dépend davantage de la bande passante mémoire que des TFLOPS, et les meilleures cartes AMD se situent à cet égard près des anciens modèles phares de NVIDIA.** La RX 7900 XTX (960 Go/s) est proche de la RTX 3090 (936 Go/s) et en dessous de la RTX 4090 (1 008 Go/s) et de la RTX 5090 (1 792 Go/s).',
+          'Le traitement du prompt (prefill) est le point où NVIDIA domine le plus nettement. Dans une comparaison communautaire sous llama.cpp (discussion llama.cpp n° 19890, reprise par des tests tiers), la RTX 5090 était environ 2.6 à 3.4 fois plus rapide que la Radeon AI PRO R9700 au prefill et environ 1.5 fois plus rapide en génération sur le même modèle. Ce sont des données rapportées par des développeurs, pas une mesure de PromptQuorum.',
+          'Le choix du backend change les résultats : Vulkan et ROCm (HIP) se disputent la première place selon le modèle, la carte et la version du pilote. llama.cpp peut être compilé avec les deux : testez-les sur votre propre carte avant de vous décider.',
+          'En pratique, attendez-vous à ce qu\'AMD soit compétitif en vitesse de génération par Go/s de bande passante, plus lent sur les longs prompts et moins abouti côté logiciel.',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: 'Quelle difficulté présente l\'installation de ROCm en 2026 ?',
+        content: [
+          '**Vulkan ne demande qu\'un pilote graphique ; ROCm exige un GPU, une distribution Linux et un noyau pris en charge.** Vérifiez ces points avant d\'acheter :',
+          '1. **Comparez votre carte à la matrice d\'AMD.** La matrice ROCm 7.2.1 pour Radeon liste la RX 9070 XT, la RX 9060 XT, la RX 7900 XTX, la RX 7900 XT, la RX 7900 GRE, la RX 7800 XT et la Radeon AI PRO R9700 sous Ubuntu 24.04.4, Ubuntu 22.04.5 et RHEL 10.1.',
+          '2. **Consultez aussi la liste d\'Ollama.** La documentation d\'Ollama ajoute la RX 6800 XT, la 6900 XT et d\'autres RX série 6000 pour ROCm sous Linux, et cite la Ryzen AI Max+ 395. Les cartes non listées peuvent essayer `HSA_OVERRIDE_GFX_VERSION` sous Linux ; ce n\'est pas pris en charge sous Windows.',
+          '3. **Installez la pile ROCm v7** avec l\'utilitaire `amdgpu-install` d\'AMD (Linux). Ollama exige ROCm v7 sous Linux.',
+          '4. **Vérifiez la détection** avec `rocminfo` : votre GPU doit apparaître comme agent (par exemple gfx1100 pour la RX 7900 XTX, gfx1201 pour la RX 9070 XT).',
+          '5. **Sous Windows,** la liste ROCm d\'Ollama cite les RX série 7000. Les autres cartes, dont les RX série 9070, ne figurent pas sur cette liste : utilisez le backend Vulkan.',
+          'La version la plus récente de ROCm est la 7.14.0 (16 juillet 2026), qui a fait passer ROCm au système de build modulaire TheRock. La page de compatibilité Radeon d\'AMD couvrait les versions jusqu\'à la 7.2.1 lors de la vérification : comparez votre carte à la matrice de la version que vous installez.',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: 'Quels outils de LLM locaux fonctionnent sur GPU AMD ?',
+        content: [
+          '**Ollama :** ROCm v7 sous Linux pour les cartes citées plus haut ; sous Windows, les RX série 7000 via ROCm. [Vulkan](https://docs.ollama.com/gpu) est activé par défaut quand son backend est installé et se désactive avec `OLLAMA_VULKAN=0`. La version actuelle est la v0.40.10 (23 octobre 2026), qui inclut un build ROCm pour Linux.',
+          '**llama.cpp :** se compile pour AMD avec HIP (ROCm) ou Vulkan (`-DGGML_VULKAN=1`). Les deux backends peuvent être compilés ensemble et choisis par périphérique avec `--device`. La plupart des interfaces s\'appuient dessus.',
+          '**LM Studio :** prend en charge les GPU AMD via les runtimes llama.cpp : Vulkan et ROCm. Vulkan est la solution de repli habituelle quand le runtime ROCm ne détecte pas une carte. (Une version précédente de cette page disait que LM Studio était réservé à NVIDIA ; c\'est faux.)',
+          '**vLLM :** fournit des builds ROCm (la version ROCm 7.14.0 liste vLLM 0.23.0). Il vise le serving et le traitement par lots ; consultez la documentation de vLLM pour votre cible GPU avant de vous y fier.',
+          '**Règle pratique :** Ollama ou LM Studio pour la simplicité, llama.cpp pour le contrôle, vLLM pour servir plusieurs utilisateurs.',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-fr.webp',
+        imageCaption: 'Outils de LLM locaux sur GPU AMD : Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: 'Comment exécuter une inférence LLM quantifiée sur un GPU AMD ?',
+        numberedItems: [
+          '**Adaptez le modèle à votre VRAM.** Un fichier Q4_K_M occupe environ 0.6 Go par milliard de paramètres (environ 9 Go pour 14B, 20 Go pour 32B ; estimations). Laissez 2 à 4 Go pour le cache de contexte.',
+          '**Choisissez un backend.** Vulkan est le démarrage le plus rapide (pilote graphique seul). ROCm (HIP) est préférable sur une configuration Linux prise en charge.',
+          '**Installez un runtime.** Sous Linux, installez d\'abord ROCm v7 avec `amdgpu-install` pour la voie ROCm, puis Ollama (`curl -fsSL https://ollama.com/install.sh | sh`) ou LM Studio.',
+          '**Lancez un modèle quantifié.** Par exemple `ollama run qwen3:14b`, ou avec llama.cpp `llama-server -m model.gguf -ngl 99` pour décharger toutes les couches sur le GPU.',
+          '**Vérifiez que le GPU est utilisé.** `ollama ps` doit afficher 100% GPU ; `rocm-smi` montre la VRAM utilisée. S\'il indique CPU, revérifiez l\'installation de ROCm ou passez à Vulkan.',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: 'Quand acheter AMD plutôt que NVIDIA pour les LLM locaux ?',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Achetez AMD si vous voulez 24 à 32 Go de VRAM à un prix inférieur aux cartes NVIDIA les plus récentes ; passez votre chemin si vous dépendez d\'outils exclusivement CUDA ou ne voulez aucune configuration.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD est une bonne affaire quand c\'est la VRAM qui vous manque et que le chemin logiciel (ROCm sous Linux ou Vulkan) vous convient. Si vous débutez avec les LLM locaux et voulez que cela fonctionne tout seul, commencez par NVIDIA.',
+          },
+        ],
+        content: [
+          'Achetez AMD si :',
+          '- Vous voulez 32 Go sur une seule carte pour moins cher : la Radeon AI PRO R9700 coûte du tiers à la moitié d\'une RTX 5090.',
+          '- Vous possédez déjà une Radeon compatible ou voulez une carte aussi performante en jeu.',
+          '- Vous utilisez Linux ou vous contentez de Vulkan, et vos outils (Ollama, llama.cpp, LM Studio) prennent déjà AMD en charge.',
+          'Achetez NVIDIA si :',
+          '- Vous avez besoin d\'outils exclusivement CUDA, de piles d\'entraînement ou de fine-tuning, ou du traitement de prompts le plus rapide.',
+          '- Vous comparez des cartes de 24 Go d\'occasion : une RTX 3090 d\'occasion coûte à peu près autant qu\'une RX 7900 XTX d\'occasion, donc la prise en charge de CUDA peut trancher.',
+          '- Vous voulez passer le moins de temps possible à configurer.',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: 'AMD Instinct ou GPU de datacenter NVIDIA : lequel est meilleur pour les LLM ?',
+        content: [
+          '**AMD Instinct (MI300X, MI350X) concurrence les GPU de datacenter de NVIDIA et s\'achète pour des serveurs, pas pour un bureau.** La liste ROCm d\'Ollama inclut des cartes Instinct, et ROCm a été conçu autour d\'elles : leur prise en charge est donc plus large que celle des Radeon grand public.',
+          'Le MI300X embarque 192 Go de mémoire HBM3 par accélérateur (spécification AMD), ce qui convient à de très grands modèles dans un seul boîtier. Pour une machine mono-utilisateur, les Radeon RX ou Radeon AI PRO sont les options AMD pertinentes.',
+          'Pour les choix de serveur et de cloud, voir le [Guide d\'achat de serveurs GPU d\'entreprise](/fr/local-llms/enterprise-gpu-server-buying-guide-2026) et le [Comparatif de location de GPU cloud](/fr/local-llms/cloud-gpu-rental-comparison-2026).',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'Quelles sont les erreurs les plus courantes en passant à AMD ?',
+        items: [
+          'Croire que 24 Go suffisent pour des modèles 70B : un modèle 70B en Q4 demande environ 40 Go ou plus, donc une seule carte de 24 Go plafonne vers 30–35B. Prévoyez deux cartes ou une paire de R9700 de 32 Go pour du 70B.',
+          'Acheter une carte que ROCm ne prend pas en charge : vérifiez d\'abord la matrice d\'AMD et la liste d\'Ollama. Les RX série 6000 ne figurent pas dans la matrice Radeon actuelle d\'AMD.',
+          'Ignorer Vulkan : si ROCm ne détecte pas votre carte, essayez le backend Vulkan avant de conclure que le GPU est inutilisable.',
+          'Se fier aux prix demandés : les prix des GPU et de la mémoire ont sensiblement bougé en 2026. Comparez les ventes réelles, pas les prix affichés.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Étapes suivantes',
+        items: [
+          '[Meilleurs GPU économiques pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm) — Petit budget ? Les GPU au meilleur rapport qualité-prix pour l\'inférence →',
+          '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple ou CPU : quelle plateforme convient à votre usage ? →',
+          '[De combien de VRAM ai-je besoin ?](/fr/local-llms/how-much-vram-local-llm) — Adaptez la VRAM de votre GPU à la taille du modèle →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Comment les lois régionales sur les données influencent-elles le choix AMD ou NVIDIA ?',
+        content: [
+          '**Le fabricant du GPU ne change pas vos obligations de protection des données ; l\'inférence locale, si.** L\'inférence sur l\'appareil garde les prompts et les documents sur votre matériel, ce qui peut réduire l\'exposition aux transferts transfrontaliers au titre du RGPD, de l\'APPI japonaise et de la PIPL et de la loi sur la sécurité des données chinoises. La conformité exige toujours une base légale, des règles de conservation et des procédures en cas de violation ; pour des données financières, médicales ou juridiques sensibles, consultez les recommandations de la CNIL sur l\'IA. Faites réaliser une revue formelle pour les données réglementées.',
+          'Les règles de contrôle des exportations peuvent restreindre les accélérateurs haut de gamme d\'AMD comme de NVIDIA sur certains marchés. Vérifiez les règles en vigueur dans votre pays avant d\'importer ou d\'acheter.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Questions fréquentes',
+        faqs: [
+          {
+            q: 'Les GPU AMD sont-ils adaptés aux LLM locaux ?',
+            a: 'Oui, avec des réserves. Des cartes AMD comme la RX 7900 XTX (24 Go) et la Radeon AI PRO R9700 (32 Go) exécutent des LLM quantifiés via ROCm ou Vulkan dans Ollama, LM Studio et llama.cpp. NVIDIA CUDA offre toujours une prise en charge logicielle plus large et un traitement des prompts plus rapide : AMD convient donc surtout quand la VRAM par dollar compte.',
+          },
+          {
+            q: 'Quel est le meilleur GPU AMD pour les LLM locaux ?',
+            a: 'La RX 7900 XTX est le meilleur GPU AMD polyvalent pour les LLM locaux : 24 Go de VRAM, 960 Go/s de bande passante et une prise en charge dans la matrice ROCm 7.2.1 d\'AMD et dans Ollama. Pour plus de VRAM par carte, la Radeon AI PRO R9700 offre 32 Go ; pour les modèles de 7B à 14B, la RX 9070 XT (16 Go) suffit.',
+          },
+          {
+            q: 'AMD ou NVIDIA pour les LLM locaux : que choisir ?',
+            a: 'Choisissez NVIDIA si vous voulez la compatibilité CUDA et le minimum de configuration. Choisissez AMD si vous voulez plus de VRAM par dollar, surtout la R9700 de 32 Go face à la RTX 5090. Une RX 7900 XTX d\'occasion coûte à peu près autant qu\'une RTX 3090 d\'occasion : là, le choix dépend du logiciel.',
+          },
+          {
+            q: 'Ollama fonctionne-t-il avec les GPU AMD ?',
+            a: 'Oui. Ollama exige le pilote ROCm v7 sous Linux et liste la RX 9070 XT, la RX 7900 XTX, la RX 6800 XT, la Radeon AI PRO R9700 et d\'autres. Sous Windows, sa liste ROCm couvre les RX série 7000, et Vulkan est activé par défaut quand son backend est installé.',
+          },
+          {
+            q: 'LM Studio prend-il en charge les GPU AMD ?',
+            a: 'Oui. LM Studio exécute les GPU AMD via les runtimes llama.cpp, Vulkan ou ROCm. Si le runtime ROCm ne détecte pas votre carte, passez le runtime sur Vulkan. Des versions précédentes de cette page indiquaient à tort que LM Studio était réservé à NVIDIA.',
+          },
+          {
+            q: 'Comment exécuter une inférence LLM quantifiée sur un GPU AMD ?',
+            a: 'Choisissez un modèle quantifié qui tient dans votre VRAM (Q4_K_M représente environ 0.6 Go par milliard de paramètres), installez Ollama ou LM Studio et utilisez Vulkan ou ROCm. Sous Linux, installez ROCm v7 avec amdgpu-install, lancez le modèle, puis confirmez l\'usage du GPU avec ollama ps ou rocm-smi.',
+          },
+          {
+            q: 'RX 9070 XT ou RX 7900 XTX pour les LLM locaux ?',
+            a: 'Pour les LLM locaux, la RX 7900 XTX est le meilleur choix : 24 Go accueillent des modèles jusqu\'à environ 30–35B en Q4, alors que les 16 Go de la RX 9070 XT plafonnent vers 14B–24B. La RX 9070 XT est plus récente et moins chère : choisissez-la si 16 Go vous suffisent.',
+          },
+          {
+            q: 'Quel est le meilleur GPU AMD à moins de 500 $ ?',
+            a: 'La RX 6800 XT (16 Go) à environ 380–410 $ d\'occasion est le meilleur GPU AMD à moins de 500 $. Elle exécute des modèles de 7B à 14B en Q4–Q8, mais ne figure pas dans la matrice ROCm Radeon actuelle d\'AMD : prévoyez la voie ROCm Linux d\'Ollama ou Vulkan.',
+          },
+          {
+            q: 'La Radeon AI PRO R9700 vaut-elle le coup pour l\'IA locale ?',
+            a: 'Oui, si vous avez besoin de 32 Go sur une seule carte. Son prix catalogue est de 1 299 $ contre environ 3 700–4 300 $ pour une RTX 5090, mais les prix de rue signalés sont plus élevés et le traitement des prompts est plus lent. Deux R9700 donnent 64 Go pour des modèles 70B en Q4.',
+          },
+          {
+            q: 'Faut-il Linux pour AMD ROCm, ou Windows convient-il ?',
+            a: 'Linux est la voie ROCm la mieux prise en charge : la matrice d\'AMD liste Ubuntu 24.04.4, Ubuntu 22.04.5 et RHEL 10.1. Sous Windows, la liste ROCm d\'Ollama couvre les RX série 7000, et les autres cartes utilisent le backend Vulkan.',
+          },
+          {
+            q: 'Quel est le meilleur pour les LLM : AMD Instinct ou les GPU NVIDIA ?',
+            a: 'Instinct (MI300X, MI350X) concurrence les GPU de datacenter de NVIDIA et s\'achète pour des serveurs ; le MI300X a 192 Go de HBM3. Pour un poste de bureau unique, les Radeon ou Radeon AI PRO sont les options AMD pertinentes, et l\'écosystème CUDA de NVIDIA reste plus large.',
+          },
+          {
+            q: 'AMD convient-il au deep learning et au machine learning, pas seulement aux LLM ?',
+            a: 'Pour l\'inférence, oui. ROCm fournit des builds de PyTorch (la version ROCm 7.14.0 liste PyTorch 2.12.0). Pour l\'entraînement et le code de recherche qui suppose CUDA, NVIDIA garde l\'écosystème le plus large : vérifiez la prise en charge d\'AMD par votre framework avant d\'acheter.',
+          },
+          {
+            q: 'Un mini-PC Ryzen AI Max+ 395 vaut-il mieux qu\'un GPU AMD dédié ?',
+            a: 'Cela dépend de la taille du modèle. Les systèmes Ryzen AI Max+ 395 offrent jusqu\'à 128 Go de mémoire unifiée mais seulement 256 Go/s de bande passante : ils conviennent aux grands modèles mixture-of-experts, tandis qu\'une carte dédiée génère les tokens plus vite sur les modèles qui tiennent dans sa VRAM.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Meilleurs GPU économiques pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm)',
+          '[Meilleurs GPU pour LLM locaux](/fr/local-llms/best-gpus-for-local-llms)',
+          '[Meilleurs mini-PC AMD pour LLM locaux](/fr/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/fr/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[Portable ou fixe pour les LLM locaux](/fr/local-llms/laptop-vs-desktop-local-llm) — Comparaison du coût et des performances entre portable et poste fixe pour l\'IA.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Documentation GPU d\'Ollama](https://docs.ollama.com/gpu) : exigence AMD ROCm v7, cartes Radeon, Radeon AI PRO, Radeon PRO, Ryzen AI et Instinct prises en charge, backend Vulkan',
+          '[Versions d\'Ollama](https://github.com/ollama/ollama/releases) : v0.40.10, 23 octobre 2026',
+          '[AMD ROCm sur Radeon et Ryzen — compatibilité Linux](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html) : GPU Radeon et distributions pris en charge par ROCm 7.2.1',
+          '[Versions de ROCm](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0) : ROCm 7.14.0, 16 juillet 2026, versions des frameworks',
+          '[Documentation de build de llama.cpp](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md) : backends HIP et Vulkan',
+          'Spécifications produit AMD : [RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          'Instantanés de prix (États-Unis, sept.–oct. 2026) : comparateurs publics de prix de GPU et tests tiers ; ce sont des prix demandés qui changent vite',
+          'Les GPU AMD offrent de bons débits en tokens par seconde, mais la vitesse seule ne détermine pas la qualité des réponses. Ce que vous demandez au modèle compte autant que sa rapidité : [fenêtres de contexte expliquées](https://www.promptquorum.com/fr/prompt-engineering/context-windows-explained-why-ai-forgets) montre comment structurer de longues requêtes dans les limites de mémoire du GPU.',
+        ],
       },
     },
-    zh: {
-      affiliateDisclosure: true,
-      affiliateLinks: [
-        {
-          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
-          productName: 'AMD Radeon RX 7900 XTX',
-          productCategory: 'gpu',
-          label: 'RX 7900 XTX on Amazon',
-        },
-        {
-          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
-          productName: 'AMD Radeon RX 7900 XT',
-          productCategory: 'gpu',
-          label: 'RX 7900 XT on Newegg',
-        },
-      ],
-      theme: 'GPU 购买指南',
-      title: '本地 LLM 最佳 AMD GPU 2026',
-      seoTitle: 'AMD GPU 本地 LLM 2026：ROCm vs vLLM 完整对比指南',
-      intro: '**AMD RX 6800 XT 和 RX 7900 XTX 是 NVIDIA 的坚实替代品，性能成本比提高 15-20%，但 ONNX Runtime 和 vLLM 驱动程序支持较弱。** AMD ROCm (HIP) 已成熟，但兼容层增加了摩擦。NVIDIA CUDA 仍是本地 LLM 的最平缓路径。仅当您找到优秀的二手交易或已拥有 AMD 硬件时才选择 AMD。',
-      metaDescription: 'AMD RX 6800 XT、7900 XTX 本地 LLM。ROCm 设置、vLLM 支持、NVIDIA RTX 性能对比。2026 年 4 月决策指南。',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.webp',
-      publishDate: '2026-04-05',
-      readTime: '阅读约9分钟',
-      educationalLevel: 'Intermediate',
-      primaryTerm: 'AMD GPU',
-      toc: [
-        { label: '核心要点', anchor: '#key-takeaways' },
-        { label: '哪些 AMD GPU 值得考虑？', anchor: '#key-takeaways' },
-        { label: 'AMD GPU 在价格和速度上与 RTX 相比如何？', anchor: '#amd-vs-nvidia' },
-        { label: '常见问题', anchor: '#faq' },
-      ],
-      sections: {
-        tldr: {
-          id: 'key-takeaways',
-
-          isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'AMD RX 7900 XTX以24GB显存、二手450-550美元的价格媲美RTX 4090，但ROCm驱动配置比NVIDIA CUDA多花5-10小时的折腾时间。' },
-            { type: 'plain-terms', text: 'AMD显卡就像动力强劲但配手动挡的汽车——每美元的性能更高，但要让它跑起来需要更多功夫。NVIDIA则是自动挡。' },
-          ],
-          items: [
-            'AMD RX 6800 XT（16GB，二手 $320-400）和 RX 7900 XTX（24GB，二手 $800-1,000）是本地 LLM 的唯一可行选项。',
-            '性能成本比：AMD 比 NVIDIA 便宜 20-30%，但软件摩擦需要 5-10 小时设置时间。',
-            'Ollama：AMD 支持有限（ROCm 路径在我们2026年4月的测试中不稳定，Ollama v0.3.x / ROCm 6.x——某些配置下GPU检测失败；CPU 回退缓慢）。在决定使用前，请查看github.com/ollama/ollama上的最新AMD兼容性列表。',
-            'vLLM：v0.6.0 起完全支持 AMD ROCm。需要手动驱动程序。设置完成后工作良好。',
-            'Text Generation WebUI：AMD 支持优异。AMD 上最佳用户体验。',
-            'Llama.cpp：原生 AMD 支持（HIP 后端）。性能稳定。推荐 AMD 路径。',
-            '设置成本：计划 5-10 小时调试 ROCm 驱动程序、HIPCC 编译、内核兼容性。',
-            '结论（2026 年 4 月）：仅在已拥有 AMD 硬件或找到优秀二手交易（16GB 卡 $300）时使用 AMD。否则 NVIDIA CUDA 更简单。',
-          ],
-        },
-        'which-amd': {
-          title: '哪些 AMD GPU 值得考虑？',
-          items: [
-            '**RX 6800 XT**（16GB GDDR6）：AMD 性价比之王。2020 年发布。适合 7B-22B 推理。二手：$320-400。',
-            '**RX 6900 XT**（16GB GDDR6）：比 6800 XT 略快。稀有。二手：$420-500。价格提升不值。',
-            '**RX 7900 XT**（20GB GDDR6）：新 RDNA 3 架构。比 6800 XT 快 20%。二手：$700-850。适合 70B Q4。',
-            '**RX 7900 XTX**（24GB GDDR6）：AMD 顶级消费级 GPU。24GB VRAM 对 70B 是游戏改变者。二手：$800-1,000。媲美 RTX 4090 速度。',
-            '**Radeon Pro W6800（32GB）**：企业卡，二手便宜（～$200-300）。较慢，但 32GB 对 70B Q8 优秀。小众。',
-          ],
-        },
-        'amd-vs-nvidia': {
-          title: 'AMD GPU 与 RTX 的价格和性能对比',
-          rows: [
-            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1,952', '二手价格': '$320-400', '性价比 vs RTX': '+25%', '等效 RTX': 'RTX 3080（较慢）' },
-            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', '二手价格': '$700-850', '性价比 vs RTX': '+20%', '等效 RTX': 'RTX 4080（相当）' },
-            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', '二手价格': '$800-1,000', '性价比 vs RTX': '+15%', '等效 RTX': 'RTX 4090（相当速度）' },
-            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', '二手价格': '$420-500', '性价比 vs RTX': '--', '等效 RTX': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', '二手价格': '$2,000-2,600', '性价比 vs RTX': '--', '等效 RTX': '--' },
-          ],
-          columns: ['GPU', 'VRAM', 'TFLOPS', '二手价格', '性价比 vs RTX', '等效 RTX'],
-        
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.webp',
-          imageCaption: 'RX 7900 XTX以约60%的价格实现与RTX 4090相当的速度和VRAM — 代价是ROCm配置的繁琐。',
-        },
-        'rocm-setup': {
-          title: 'ROCm 设置的难点',
-          content: [
-            '**实施步骤：**',
-            '1. 安装 AMD ROCm 驱动程序：`apt-get install rocm-dkms`（Ubuntu）。Windows 需手动 .exe 安装程序。需 30 分钟。',
-            '2. 验证 HIP 编译器：`hipcc --version`。通常第一次失败。调试您 GPU 的内核兼容性。',
-            '3. 安装 HIPCC（AMD HIP-to-C++ 编译器）：`apt-get install hip-runtime-amd`。另一个依赖链。',
-            '4. 用小型 LLM 测试：运行推理以验证 GPU 加速工作。CPU 回退常见。',
-            '5. 解决驱动程序版本不匹配：ROCm v5.7 适用于内核 5.15 但不适用 6.x。需 2-4 小时调试。',
-            '**注意：** 与 NVIDIA CUDA 比较：`nvidia-cuda-toolkit` → 一个 apt-get，立即 GPU 访问。AMD 需 5-10 倍努力。',
-          ],
-        },
-        'software-support': {
-          title: '能否在 AMD 上运行 Ollama 和 vLLM？',
-          content: [
-            '**AMD上的Ollama（基于我们2026年4月的测试，Ollama v0.3.x，ROCm 6.x）：** ROCm支持在我们的测试中不稳定——某些配置下GPU检测失败，CPU回退缓慢。在决定使用前，请查看github.com/ollama/ollama上的最新AMD兼容性列表。',
-            '**vLLM on AMD：** v0.6.0 起完全 ROCm 支持。工作，但需手动 ROCm/HIP 驱动程序设置。度过设置期后良好。',
-            '**Text Generation WebUI：** 优异 AMD ROCm 支持。AMD 上最佳体验。推荐。',
-            '**Llama.cpp：** 原生 HIP 后端。性能稳定。最简单的 AMD 路径。推荐。',
-            '**LM Studio：** 仅 NVIDIA。无 AMD 支持。',
-            '**2026 年 4 月起：** vLLM + llama.cpp 是您的 AMD 路径。Ollama 不可靠。',
-          ],
-        
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-zh.webp',
-          imageCaption: '截至2026年，llama.cpp和Text Generation WebUI是可靠的AMD方案 — Ollama的ROCm支持仍不稳定。',
-        },
-        'when-buy-amd': {
-          title: '何时应购买 AMD 而非 NVIDIA？',
-          content: [
-            '**购买 AMD 如果：**',
-            '- 找到二手 RX 7900 XTX 低于 $450（相对 RTX 4090 低估）。',
-            '- 已拥有 AMD 硬件，希望生态系统一致性。',
-            '- 构建集群，优先性价比胜于易用性。',
-            '**不购买 AMD 如果：**',
-            '- 希望即插即用体验。NVIDIA CUDA 更快工作。',
-            '- 需要 Ollama。AMD 支持不稳定。',
-            '- 时间有限。ROCm 调试可能耗 10+ 小时。',
-          ],
-        },
-        'mistakes': {
-          title: 'AMD 采用的常见错误',
-          items: [
-            '⚠️ **购买 RX 6700（12GB）误认为等同 3060 12GB** -- 慢 20%，二手也难找。',
-            '⚠️ **假设 ROCm 像 CUDA 一样「即插即用」** -- 计划 5-10 小时驱动程序和内核兼容性调试。',
-            '⚠️ **在 AMD 用 Ollama 期待无缝集成** — 2026年4月测试（Ollama v0.3.x，ROCm 6.x）中ROCm支持不稳定；llama.cpp 或 vLLM 是更佳选择。',
-          ],
-        },
-        'nextSteps': {
-          id: 'next-steps',
-          title: '下一步',
-          items: [
-            '[本地LLM预算GPU推荐](/zh/local-llms/best-budget-gpus-local-llm) — 预算有限？性价比最高的GPU →',
-            '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD、Apple还是CPU？哪个平台最合适 →',
-            '[我需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) — 根据模型大小匹配GPU显存 →',
-          ],
-        },
-        'faqSection': {
-          id: 'faq',
-          title: '常见问题',
-          faqs: [
-            { q: '本地 LLM 应购买 AMD RX 6800 XT 还是 NVIDIA RTX 3080？', a: '优先简单则 RTX 3080（CUDA「即用」）。优先 25% 更优性价比且可承受 5-10 小时 ROCm 设置则 RX 6800 XT。' },
-            { q: 'AMD RX 7900 XTX 优于 RTX 4090 吗？', a: '速度相当，VRAM 相同（24GB）。RX 7900 XTX 二手 $800-1,000，比二手RTX 4090的$2,000-2,600便宜$1,000-1,800（NVIDIA于2026年停产后RTX 4090二手价大幅上涨）。ROCm 设置是权衡。' },
-            { q: '能用 Ollama 使用 AMD GPU 吗？', a: '技术上可以。在我们2026年4月的测试（Ollama v0.3.x，ROCm 6.x）中，ROCm支持不稳定——某些配置下GPU检测失败，CPU回退常见。在决定使用前，请查看github.com/ollama/ollama上的最新AMD兼容性列表；对于可靠的AMD推理，vLLM或llama.cpp是更安全的选择。' },
-            { q: '2026 年本地 LLM 最优 AMD 路径？', a: 'Llama.cpp（HIP 后端）+ Text Generation WebUI。两者都对 AMD 有坚实支持。避免 Ollama。' },
-            { q: 'AMD ROCm 需要 Ubuntu 还是 Windows 也可？', a: 'Windows 支持存在（Windows 上 HIP），但在我们2026年4月的测试中不如Ubuntu稳定。Ubuntu 是推荐路径。' },
-            { q: '7B 模型用 RX 6700、RX 6700 XT 或 6750 合适吗？', a: 'RX 6700（12GB）可用但比 6800 XT 慢 20%。RX 6700 XT（12GB，VRAM 相同）频率比非 XT 版快约 15%，但仍不及 6800 XT。两者均仅 $250 以下购买。否则扩展到 6800 XT。' },
-            { q: '本地 LLM 值得买 RX 6900 XT 吗？', a: '不太值得。RX 6900 XT（16GB）只比 RX 6800 XT 略快，二手更稀有，价格约 $420-500，高于 6800 XT 的 $320-400。差价不值——建议直接买 6800 XT。' },
-            { q: 'AMD Radeon 680M 适合运行本地 LLM 吗？', a: 'Radeon 680M 是 Ryzen 6000/7000 移动 APU 内置的集成显卡，和独立显卡 RX 6800M 或 RX 6800 XT 不是同一产品。它没有独立显存,而是与系统内存共享,因此只适合运行很小的量化模型(大约 3B 参数或更少,Q4 精度),速度也明显慢于本文提到的任何独立显卡。若要认真跑本地 LLM,像 RX 6800 XT 这样的独立显卡才是更好的选择。' },
-            { q: '能在一个系统混合 AMD 和 NVIDIA GPU 吗？', a: '理论上可以。但管理是噩梦。每个 GPU 需自己 CUDA/HIP 运行时。不推荐。' },
-            { q: 'AMD ROCm 设置需多长时间？', a: '驱动程序调试、HIPCC 编译、内核兼容性解决计划 5-10 小时。仅一次。之后 AMD 稳定有效。' },
-            { q: '中国企业应采用 AMD ROCm 吗？', a: '是。特别金融、医疗、法律。数据完全驻留本地，符合《数据安全法》。设置努力值得投资。' },
-            { q: '什么是中国《数据安全法》，AMD ROCm 如何相关？', a: '中国政府 2021 年数据安全法。要求敏感数据不跨境。本地 LLM with AMD ROCm 完全满足，数据永不离开企业网络。' },
-          ],
-        },
-        'relatedReading': {
-          title: '延伸阅读',
-          items: [
-            '[本地 LLM 最佳预算 GPU](/zh/local-llms/best-budget-gpus-local-llm)',
-            '[本地 LLM 最佳 GPU](/zh/local-llms/best-gpus-for-local-llms)',
-            '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Text Generation WebUI vs vLLM vs Llama.cpp](/zh/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
-          ],
-        },
-        'sources': {
-          title: '参考资料',
-          items: [
-            'AMD ROCm 文档和 GitHub：HIP 编译器、驱动程序兼容性矩阵、LLM 推理示例',
-            'vLLM GitHub：AMD/ROCm 后端实现和支持状态（v0.6.0+）',
-            'Llama.cpp GitHub：AMD GPU 支持的 HIP 后端',
-          ],
-        },
+  },
+  ja: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
       },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/zh/local-llms/best-amd-gpus-local-llm',
-        about: [
-          { '@type': 'Thing', name: 'AMD ROCm' },
-          { '@type': 'Thing', name: 'NVIDIA CUDA' },
-          { '@type': 'Thing', name: 'Ollama' },
-          { '@type': 'Thing', name: 'vLLM' },
-          { '@type': 'Thing', name: 'Llama.cpp' },
-          { '@type': 'Thing', name: 'Text Generation WebUI' },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'GPU 購入ガイド',
+    title: 'ローカルLLM・AI推論に最適なAMD GPU',
+    seoTitle: 'ローカルLLM向けAMD GPU 2026：7900 XTX',
+    intro: '**2026年にローカルLLM向けで選ぶべきAMD GPUは、30B級モデルならRadeon RX 7900 XTX（24 GB）、7B〜14BならRX 9070 XT（16 GB）、1枚あたりのVRAMを最優先するならRadeon AI PRO R9700（32 GB）です。** 3枚ともOllamaのLinux向けROCm v7対応リストに載っており、llama.cppではVulkanバックエンドでも動かせます。手間が少ないのは今もNVIDIA CUDAなので、AMDはドルあたりのVRAMを重視する場合か、すでにカードを持っている場合に選びましょう。',
+    metaDescription: 'AI・ローカルLLM向けAMD GPUの選び方。RX 7900 XTX（24GB）、RX 9070 XT（16GB）、Radeon AI PRO R9700（32GB）をROCm・VulkanとNVIDIA比較で解説。',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**2026年にローカルLLM向けで選ぶべきAMD GPUは、30B級モデルならRadeon RX 7900 XTX（24 GB）、7B〜14BならRX 9070 XT（16 GB）、1枚あたりのVRAMを最優先するならRadeon AI PRO R9700（32 GB）です。**',
+    quickAnswerTop: {
+      question: 'ローカルLLMとAI推論に最適なAMD GPUはどれですか？',
+      answer: '総合ではRX 7900 XTX（24 GB）、7B〜14Bなら新しいRX 9070 XT（16 GB）、1枚あたりのVRAM最大はRadeon AI PRO R9700（32 GB）です。Ollamaは3枚ともLinuxのROCm v7対応として掲載しており、ROCmなしでもVulkanで代替できます。手間の少なさではNVIDIA CUDAが有利なので、ドルあたりのVRAMを重視する場合にAMDが向きます。',
+      bullets: [
+        'RX 7900 XTX：24 GB、960 GB/s、中古で約$900〜1,250（価格トラッカー、2026年9〜10月）',
+        'RX 9070 XT：16 GB、640 GB/s、新品で約$820〜930。14BモデルがQ4〜Q6で収まります',
+        'Radeon AI PRO R9700：32 GB、AMD希望価格$1,299。報告されている実売価格はそれより高めです',
+        'OllamaはLinuxでROCm v7が必要。Vulkanはバックエンド導入時にデフォルトで有効になります',
+      ],
+      updatedDate: '2026-10-23',
+    },
+    audience: 'OllamaやLM Studioに慣れ、ローカルLLMのワークフローを最適化したい開発者',
+    readTime: '9分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: '重要ポイント',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: 'ローカルLLM向けに買う価値のあるAMD GPUはどれ？',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'AMD GPUはVRAMと価格でNVIDIAとどう違う？',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'AMD GPUの速度はNVIDIAと比べてどうか？',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: '2026年のROCmセットアップはどれだけ大変か？',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: 'AMD GPUで動くローカルLLMツールは？',
+        anchor: '#software-support',
+      },
+      {
+        label: 'AMD GPUで量子化LLM推論を動かすには？',
+        anchor: '#run-quantized',
+      },
+      {
+        label: 'NVIDIAよりAMDを選ぶべきなのはどんなとき？',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD InstinctとNVIDIAデータセンターGPU、どちらが良い？',
+        anchor: '#instinct',
+      },
+      {
+        label: 'FAQ',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026年にローカルLLM向けで選ぶAMD GPUはRX 7900 XTX（24 GB）、RX 9070 XT（16 GB）、Radeon AI PRO R9700（32 GB）で、Ollamaのドキュメントは3枚ともLinuxのROCm v7対応として載せています。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMDのカードはお金のわりにVRAMが多い一方、ソフトウェアの経路選びが必要です。対応Linux環境ならROCm、手軽に動かしたいときはVulkanを使います。そのまま動く手軽さはNVIDIAです。',
+          },
         ],
-        mentions: [
-          { '@type': 'SoftwareApplication', name: 'AMD RX 6800 XT' },
-          { '@type': 'SoftwareApplication', name: 'AMD RX 7900 XTX' },
-          { '@type': 'SoftwareApplication', name: 'NVIDIA RTX 3080' },
-          { '@type': 'SoftwareApplication', name: 'NVIDIA RTX 4090' },
+        items: [
+          '**総合で選ぶAMD：** RX 7900 XTX。24 GB GDDR6、960 GB/s、中古で約$900〜1,250（価格トラッカー、2026年9〜10月）。Q4で約30〜35Bのモデルが収まります。70BモデルはQ4で約40 GB以上が必要なため収まりません。',
+          '**新しめのカード：** RX 9070 XT。16 GB、640 GB/s、新品で約$820〜930。7B〜14BモデルのQ4〜Q6に向きます。',
+          '**1枚あたりのVRAM最大：** Radeon AI PRO R9700。32 GB、AMD希望価格$1,299。第三者の報告では実売は約$1,400〜1,900。2枚で64 GBになります。',
+          '**予算重視：** RX 6800 XT。16 GB、中古で約$380〜410（2026年10月の提示価格）。OllamaのLinux向けROCmリストにはありますが、AMDの現行Radeon向けROCm 7.2.1対応表にはありません。',
+          '**Ollama：** LinuxではROCm v7ドライバが必須。WindowsではROCmリストがRX 7000シリーズを対象とし、Vulkanはバックエンド導入時にデフォルトで有効です（OLLAMA_VULKAN=0で無効化）。',
+          '**LM Studioとllama.cpp：** どちらもVulkanまたはROCm（HIP）バックエンドでAMD上で動作します。Vulkanはグラフィックスドライバのみで足りるため、ROCmがカードを認識しないときはまずVulkanを試してください。',
+          '**AMD対NVIDIA：** 中古のRX 7900 XTXは中古のRTX 3090（24 GB）とほぼ同じ価格です。AMDの価格面での明確な強みは、32 GBのR9700がRTX 5090の3分の1〜半額程度で買える点で、代わりにプロンプト処理は遅くなります。',
+          '**結論：** ドルあたりのVRAMが重要でLinuxかVulkanを使えるならAMD、CUDA専用ツールや学習、手間の少なさを求めるならNVIDIAを選びます。価格は米国のドル建てで、日本では為替や税、販売店により異なります。',
         ],
-        name: '本地 LLM 最佳 AMD GPU',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT（16GB，二手 $320-400）和 RX 7900 XTX（24GB，二手 $800-1,000）是本地 LLM 的唯一可行选项。' },
-          { '@type': 'ListItem', position: 2, name: '性能成本比：AMD 比 NVIDIA 便宜 20-30%，但软件摩擦需要 5-10 小时设置时间。' },
-          { '@type': 'ListItem', position: 3, name: 'Ollama：AMD 支持有限（ROCm 路径在我们2026年4月的测试中不稳定，Ollama v0.3.x / ROCm 6.x；CPU 回退缓慢）。请查看github.com/ollama/ollama上的最新AMD兼容性列表。' },
-          { '@type': 'ListItem', position: 4, name: 'vLLM：v0.6.0 起完全支持 AMD ROCm。需要手动驱动程序。设置完成后工作良好。' },
-          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI：AMD 支持优异。AMD 上最佳用户体验。' },
-          { '@type': 'ListItem', position: 6, name: 'Llama.cpp：原生 AMD 支持（HIP 后端）。性能稳定。推荐 AMD 路径。' },
-          { '@type': 'ListItem', position: 7, name: '设置成本：计划 5-10 小时调试 ROCm 驱动程序、HIPCC 编译、内核兼容性。' },
-          { '@type': 'ListItem', position: 8, name: '结论（2026 年 4 月）：仅在已拥有 AMD 硬件或找到优秀二手交易（16GB 卡 $300）时使用 AMD。否则 NVIDIA CUDA 更简单。' },
+      },
+      'which-amd': {
+        id: 'which-amd',
+        title: 'ローカルLLM向けに買う価値のあるAMD GPUはどれ？',
+        items: [
+          '**RX 7900 XTX**（24 GB GDDR6、960 GB/s、RDNA 3）：LLM向けでは最強のAMD一般向けカードです。32BモデルのQ4_K_Mは約20 GBなので、コンテキスト用の余裕もあります。AMDのROCm 7.2.1対応表と、OllamaのLinux・Windows向けROCmリストに載っています。中古で約$900〜1,250。',
+          '**RX 9070 XT**（16 GB GDDR6、640 GB/s、RDNA 4）：新しい16 GBの選択肢で、AMDのROCm 7.2.1対応表とOllamaのLinux向けROCmリストに載っています。14BモデルのQ4〜Q6を余裕で動かせます。新品で約$820〜930。',
+          '**Radeon AI PRO R9700**（32 GB GDDR6、640 GB/s、RDNA 4）：このクラスでAMDが売る中で最大のVRAMを持つワークステーション向けカードです。32BモデルのQ4〜Q6を扱え、2枚（64 GB）なら70BのQ4が収まります。AMD希望価格は$1,299で、報告されている実売価格はそれより高めです。',
+          '**RX 7900 XT**（20 GB GDDR6、800 GB/s、RDNA 3）：約24〜27BまでのモデルをQ4で扱えます。中古の7900 XTXよりはっきり安い場合のみ検討してください。今回の更新では価格を再確認していません。',
+          '**RX 6800 XT**（16 GB GDDR6、512 GB/s、RDNA 2）：中古で約$380〜410の予算向けカードです。帯域が低いため生成は遅めで、AMDの現行Radeon向けROCm対応表にも載っていないため、OllamaのLinux向けROCm経路かVulkanを前提にしてください。',
+          '**Ryzen AI Max+ 395搭載ミニPC**（最大128 GBのユニファイドメモリ、256 GB/s）：グラフィックスカードではありませんが、非常に大きなMixture-of-ExpertsモデルをAMDで動かす最も安い方法です。128 GBモデルは2026年9月下旬に約$3,300〜4,350で掲載されていました（価格トラッカー）。[ローカルLLM向けAMDミニPCのおすすめ](/ja/local-llms/best-amd-mini-pc-local-llm-2026)を参照してください。',
         ],
-        speakable: {
-          '@type': 'SpeakableSpecification',
-          cssSelector: ['.article-intro', '.key-takeaways'],
-        },
-        regionalContext: {
-          title: '中国和亚太地区采用及合规性',
-          content: [
-            '**中国企业：《数据安全法》和本地 LLM 部署。** 中国 2021 年《数据安全法》要求敏感数据不跨越国界。Ollama、LM Studio、llama.cpp 等处理所有数据本地化工具完全满足《数据安全法》第 37 条（个人信息和重要数据出境安全评估）。金融、医疗、电信、能源等关键行业的企业优先采用 AMD ROCm 本地部署，确保数据主权并避免美国技术出口管制风险。PromptQuorum 连接到完全本地的推理端点，不经第三方云。',
-            '**亚太地区：多国数据规制框架驱动本地 AI 基础设施需求。** 日本（METI AI 治理）、新加坡（PDPA）、韩国（PIPA）、越南（信息安全法）等国家均推行严格的数据驻地要求。这些地区的企业、高校、政府部门采用 AMD ROCm 本地 LLM 以同时满足多国合规需求。单一本地部署满足所有地区监管。',
-            '**企业级部署：成本、数据控制和监管合规统一。** 跨国公司（银行、制药、制造）在亚太地区的子公司需合规当地 AI 治理规定。AMD ROCm 提供即插即用解决方案：无云锁定、无供应商依赖、无跨境数据问题。初期设置努力（5-10 小时）分摊到多年运营中，ROI 显著：相比云端 API 每年节省数百万美元，同时保证数据安全和监管合规。',
-          ],
-        },
+      },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: 'AMD GPUはVRAMと価格でNVIDIAとどう違う？',
+        columns: [
+          'GPU',
+          'VRAM',
+          'メモリ帯域',
+          '目安価格',
+          '主なバックエンド',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 GB',
+            'メモリ帯域': '512 GB/s',
+            '目安価格': '約$380〜410（中古）',
+            '主なバックエンド': 'ROCm（Linux）、Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 GB',
+            'メモリ帯域': '640 GB/s',
+            '目安価格': '約$820〜930（新品）',
+            '主なバックエンド': 'ROCm（Linux）、Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 GB',
+            'メモリ帯域': '800 GB/s',
+            '目安価格': '再確認していません',
+            '主なバックエンド': 'ROCm、Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 GB',
+            'メモリ帯域': '960 GB/s',
+            '目安価格': '約$900〜1,250（中古）',
+            '主なバックエンド': 'ROCm、Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 GB',
+            'メモリ帯域': '640 GB/s',
+            '目安価格': '希望$1,299／実売約$1,400〜1,900',
+            '主なバックエンド': 'ROCm（Linux）、Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 GB',
+            'メモリ帯域': '936 GB/s',
+            '目安価格': '約$1,000〜1,400（中古）',
+            '主なバックエンド': 'CUDA、Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 GB',
+            'メモリ帯域': '1,008 GB/s',
+            '目安価格': '約$2,250（中古）',
+            '主なバックエンド': 'CUDA、Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 GB',
+            'メモリ帯域': '1,792 GB/s',
+            '目安価格': '約$3,700〜4,300（新品）',
+            '主なバックエンド': 'CUDA、Vulkan',
+          },
+        ],
+        note: 'VRAM容量とメモリ帯域はメーカー仕様です（[AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html)、[RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html)、[Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)）。価格は公開の価格トラッカーとレビューから集めた米国の提示価格のスナップショット（2026年9〜10月）で、PromptQuorumの計測ではありません。日本では価格が異なります。購入前に実際の取引価格を確認してください。',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.webp',
+        imageCaption: 'ローカルLLM向けのAMDとNVIDIAの比較：VRAM、メモリ帯域、目安価格（米国、2026年9〜10月のスナップショット）。',
+      },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'LLM推論でAMD GPUはNVIDIAと比べてどれくらい速い？',
+        content: [
+          '**トークン生成の速度はTFLOPSよりメモリ帯域に左右され、AMDの上位カードはその点でNVIDIAの旧世代フラッグシップに近い水準です。** RX 7900 XTX（960 GB/s）はRTX 3090（936 GB/s）に近く、RTX 4090（1,008 GB/s）とRTX 5090（1,792 GB/s）には届きません。',
+          'プロンプト処理（プリフィル）では、NVIDIAの優位がよりはっきり出ます。コミュニティのllama.cpp比較（llama.cppのディスカッション#19890、第三者のレビューが引用）では、RTX 5090はRadeon AI PRO R9700よりプリフィルで約2.6〜3.4倍、同じモデルの生成で約1.5倍速いと報告されています。これは開発者による報告であり、PromptQuorumの計測ではありません。',
+          'バックエンドの選択でも結果は変わります。VulkanとROCm（HIP）は、モデル、カード、ドライバのバージョンによって優劣が入れ替わります。llama.cppは両方を同時にビルドできるので、決める前に自分のカードで両方を試してください。',
+          '実際には、AMDは帯域あたりの生成速度では互角に近く、長いプロンプトでは遅れ、ソフトウェアの完成度ではやや劣ると考えておくとよいでしょう。',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: '2026年のROCmセットアップはどれだけ大変か？',
+        content: [
+          '**Vulkanはグラフィックスドライバだけで動きますが、ROCmには対応するGPU、Linuxディストリビューション、カーネルが必要です。** 購入前に次を確認してください。',
+          '1. **カードをAMDの対応表と照合する。** RadeonのROCm 7.2.1対応表には、RX 9070 XT、RX 9060 XT、RX 7900 XTX、RX 7900 XT、RX 7900 GRE、RX 7800 XT、Radeon AI PRO R9700がUbuntu 24.04.4、Ubuntu 22.04.5、RHEL 10.1向けに載っています。',
+          '2. **Ollamaのリストも確認する。** OllamaのドキュメントはLinuxのROCm向けにRX 6800 XT、6900 XTなどのRX 6000シリーズを追加し、Ryzen AI Max+ 395も挙げています。リストにないカードはLinuxで`HSA_OVERRIDE_GFX_VERSION`を試せますが、Windowsでは未対応です。',
+          '3. **ROCm v7スタックをインストールする。** AMDの`amdgpu-install`ユーティリティを使います（Linux）。OllamaはLinuxでROCm v7を必要とします。',
+          '4. **認識を確認する。** `rocminfo`でGPUがエージェントとして表示されるかを見ます（例：RX 7900 XTXはgfx1100、RX 9070 XTはgfx1201）。',
+          '5. **Windowsの場合。** OllamaのROCmリストはRX 7000シリーズを対象としています。RX 9070シリーズなどそれ以外のカードはそのリストにないため、Vulkanバックエンドを使います。',
+          'ROCmの最新リリースは7.14.0（2026年7月16日）で、モジュール式のビルドシステムTheRockに移行しました。確認時点でAMDのRadeon互換性ページは7.2.1までを扱っていたため、インストールするバージョンの対応表と照合してください。',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: 'AMD GPUで動くローカルLLMツールは？',
+        content: [
+          '**Ollama：** 上記のカードはLinuxでROCm v7、WindowsではRX 7000シリーズがROCmで動作します。[Vulkan](https://docs.ollama.com/gpu)はバックエンド導入時にデフォルトで有効になり、`OLLAMA_VULKAN=0`で無効化できます。現行リリースはv0.40.10（2026年10月23日）で、LinuxのROCmビルドを含みます。',
+          '**llama.cpp：** AMD向けにHIP（ROCm）またはVulkan（`-DGGML_VULKAN=1`）でビルドできます。両方を同時にビルドし、`--device`でデバイスごとに選べます。多くのフロントエンドがこれを土台にしています。',
+          '**LM Studio：** llama.cppランタイム（VulkanとROCm）を通じてAMD GPUに対応します。ROCmランタイムがカードを認識しないときは、Vulkanが通常の代替手段です。（このページの以前の版はLM StudioをNVIDIA専用としていましたが、誤りでした。）',
+          '**vLLM：** ROCmビルドを提供しています（ROCm 7.14.0のリリースはvLLM 0.23.0を挙げています）。用途はサービングとバッチ処理で、頼る前にお使いのGPUターゲットをvLLMのドキュメントで確認してください。',
+          '**目安：** 手軽さならOllamaかLM Studio、細かな制御ならllama.cpp、複数ユーザー向けのサービングならvLLMです。',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-ja.webp',
+        imageCaption: 'AMD GPUで動くローカルLLMツール：Ollama（ROCm v7、Vulkan）、llama.cpp（HIP、Vulkan）、LM Studio（Vulkan、ROCm）、vLLM（ROCm）。',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: 'AMD GPUで量子化LLM推論を動かすには？',
+        numberedItems: [
+          '**モデルサイズをVRAMに合わせます。** Q4_K_Mのファイルはパラメータ10億あたり約0.6 GBです（14Bで約9 GB、32Bで約20 GB。いずれも目安）。コンテキストキャッシュ用に2〜4 GBを空けておきます。',
+          '**バックエンドを選びます。** Vulkanが最も手早く始められます（グラフィックスドライバのみ）。対応するLinux環境ではROCm（HIP）が適しています。',
+          '**ランタイムを入れます。** ROCmを使う場合、Linuxではまず`amdgpu-install`でROCm v7を入れ、その後Ollama（`curl -fsSL https://ollama.com/install.sh | sh`）またはLM Studioを入れます。',
+          '**量子化モデルを実行します。** 例：`ollama run qwen3:14b`。llama.cppなら`llama-server -m model.gguf -ngl 99`で全レイヤーをGPUにオフロードします。',
+          '**GPUが使われていることを確認します。** `ollama ps`が100% GPUを示し、`rocm-smi`で使用中のVRAMが見えるはずです。CPUと表示される場合は、ROCmのインストールを見直すかVulkanに切り替えます。',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: 'ローカルLLMでNVIDIAよりAMDを選ぶべきなのはどんなとき？',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'NVIDIAの最新カードより安く24〜32 GBのVRAMが欲しいならAMD、CUDA専用ツールに依存する場合やセットアップの手間をかけたくない場合は見送りましょう。',
+          },
+          {
+            type: 'plain-terms',
+            text: '足りないのがVRAMで、ソフトウェア経路（LinuxのROCmまたはVulkan）が自分に合うなら、AMDはお買い得です。ローカルLLMが初めてで、そのまま動いてほしいならNVIDIAから始めてください。',
+          },
+        ],
+        content: [
+          'AMDを選ぶのは次の場合です。',
+          '- 32 GBを1枚で安く手に入れたい。Radeon AI PRO R9700の価格はRTX 5090の3分の1〜半額程度です。',
+          '- すでに対応するRadeonを持っている、またはゲームにも強いカードが欲しい。',
+          '- Linuxを使う、またはVulkanで問題なく、使うツール（Ollama、llama.cpp、LM Studio）がすでにAMDに対応している。',
+          'NVIDIAを選ぶのは次の場合です。',
+          '- CUDA専用ツール、学習やファインチューニングの環境、最速のプロンプト処理が必要。',
+          '- 中古の24 GBカードを比べている。中古のRTX 3090は中古のRX 7900 XTXとほぼ同じ価格なので、CUDAの対応が決め手になることがあります。',
+          '- セットアップにかける時間を最小限にしたい。',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: 'AMD InstinctとNVIDIAデータセンターGPU、LLMにはどちらが良い？',
+        content: [
+          '**AMD Instinct（MI300X、MI350X）はNVIDIAのデータセンターGPUと競合する製品で、デスクトップ用ではなくサーバー用に購入します。** OllamaのROCmリストにはInstinctカードが含まれ、ROCmもInstinctを中心に作られているため、一般向けRadeonより対応は広くなっています。',
+          'MI300Xはアクセラレータ1基あたり192 GBのHBM3メモリを搭載しており（AMD仕様）、非常に大きなモデルを1台に収めるのに向いています。1人で使うマシンなら、関係するAMDの選択肢はRadeon RXまたはRadeon AI PROです。',
+          'サーバーやクラウドの判断については、[エンタープライズGPUサーバー購入ガイド](/ja/local-llms/enterprise-gpu-server-buying-guide-2026)と[クラウドGPUレンタル比較](/ja/local-llms/cloud-gpu-rental-comparison-2026)を参照してください。',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'AMD導入でよくある失敗は？',
+        items: [
+          '24 GBで70Bモデルが動くと思い込む：70BモデルはQ4で約40 GB以上が必要なので、24 GBのカード1枚では約30〜35Bが上限です。70Bには2枚、または32 GBのR9700を2枚用意します。',
+          'ROCm非対応のカードを買う：事前にAMDの対応表とOllamaのリストを確認してください。RX 6000シリーズはAMDの現行Radeon対応表にありません。',
+          'Vulkanを試さない：ROCmがカードを認識しないときは、GPUが使えないと結論づける前にVulkanバックエンドを試してください。',
+          '提示価格を鵜呑みにする：2026年はGPUとメモリの価格が目立って動きました。表示価格ではなく、実際の取引価格を比べてください。',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: '次のステップ',
+        items: [
+          '[ローカルLLM向けのコスパ重視GPU](/ja/local-llms/best-budget-gpus-local-llm) — 予算重視なら。LLM推論向けのコスパの良いGPU →',
+          '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD、Apple、CPU。自分の使い方に合うプラットフォームは？ →',
+          '[必要なVRAMはどれくらい？](/ja/local-llms/how-much-vram-local-llm) — GPUのVRAMをモデルサイズに合わせる →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '地域のデータ規制はAMDとNVIDIAの選択にどう影響する？',
+        content: [
+          '**データ保護の義務を変えるのはGPUのメーカーではなく、推論をローカルで行うかどうかです。** 端末上での推論はプロンプトや文書を自分のハードウェア内にとどめるため、日本の個人情報保護法（APPI）、EUのGDPR、中国のPIPLおよびデータセキュリティ法に基づく越境移転のリスクを下げられる場合があります。ただし、適法な根拠、保存ルール、漏えい時の手順は引き続き必要です。企業での導入では、経済産業省（METI）のAIガバナンスに関する指針も参照し、規制対象のデータは正式なレビューを受けてください。',
+          '輸出管理の規則により、一部の市場ではAMDとNVIDIAの両方の高性能アクセラレータが制限される場合があります。輸入や購入の前に、お住まいの国の最新の規則を確認してください。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'AMD GPUはローカルLLMの実行に向いていますか？',
+            a: 'はい。ただし条件があります。RX 7900 XTX（24 GB）やRadeon AI PRO R9700（32 GB）などのAMDカードは、Ollama、LM Studio、llama.cppでROCmまたはVulkan経由の量子化LLMを動かせます。NVIDIA CUDAはソフトウェア対応が広くプロンプト処理も速いため、AMDはドルあたりのVRAMを重視する場合に向きます。',
+          },
+          {
+            q: 'ローカルLLM向けに最適なAMD GPUはどれですか？',
+            a: '総合ではRX 7900 XTXです。24 GBのVRAM、960 GB/sの帯域を持ち、AMDのROCm 7.2.1対応表とOllamaに対応しています。1枚あたりのVRAMを増やしたいならRadeon AI PRO R9700（32 GB）、7B〜14BならRX 9070 XT（16 GB）で足ります。',
+          },
+          {
+            q: 'ローカルLLMはAMDとNVIDIAのどちらを買うべきですか？',
+            a: 'CUDAとの互換性と手間の少なさを求めるならNVIDIAです。ドルあたりのVRAMを重視するならAMDで、特に32 GBのR9700はRTX 5090より安く買えます。中古のRX 7900 XTXは中古のRTX 3090とほぼ同じ価格なので、その比較ではソフトウェアの対応が決め手になります。',
+          },
+          {
+            q: 'OllamaはAMD GPUで動きますか？',
+            a: 'はい。OllamaはLinuxでROCm v7ドライバを必要とし、RX 9070 XT、RX 7900 XTX、RX 6800 XT、Radeon AI PRO R9700などを掲載しています。WindowsではROCmリストがRX 7000シリーズを対象とし、Vulkanはバックエンド導入時にデフォルトで有効になります。',
+          },
+          {
+            q: 'LM StudioはAMD GPUに対応していますか？',
+            a: 'はい。LM Studioはllama.cppランタイムのVulkanまたはROCmでAMD GPUを動かします。ROCmランタイムがカードを認識しない場合は、ランタイムをVulkanに切り替えてください。このページの以前の版はLM StudioをNVIDIA専用としていましたが、誤りでした。',
+          },
+          {
+            q: 'AMD GPUで量子化LLM推論を動かすにはどうすればよいですか？',
+            a: 'VRAMに収まる量子化モデルを選び（Q4_K_Mはパラメータ10億あたり約0.6 GB）、OllamaまたはLM Studioを入れ、VulkanかROCmを使います。LinuxではROCm v7をamdgpu-installで入れ、モデルを実行して、ollama psまたはrocm-smiでGPUの使用を確認します。',
+          },
+          {
+            q: 'ローカルLLMにはRX 9070 XTとRX 7900 XTXのどちらが良いですか？',
+            a: 'ローカルLLMではRX 7900 XTXが優れています。24 GBならQ4で約30〜35Bのモデルが収まりますが、RX 9070 XTの16 GBは約14B〜24Bが上限です。RX 9070 XTは新しく安いので、16 GBで足りるならそちらを選んでください。',
+          },
+          {
+            q: '$500以下で買える最良のAMD GPUはどれですか？',
+            a: '中古で約$380〜410のRX 6800 XT（16 GB）が、$500以下では最もコスパの良いAMDカードです。7B〜14BモデルのQ4〜Q8を動かせますが、AMDの現行Radeon向けROCm対応表には載っていないため、OllamaのLinux向けROCm経路かVulkanを前提にしてください。',
+          },
+          {
+            q: 'Radeon AI PRO R9700はローカルAIに買う価値がありますか？',
+            a: '1枚で32 GBが必要なら価値があります。希望価格は$1,299で、RTX 5090の約$3,700〜4,300より安い一方、報告されている実売価格は高めで、プロンプト処理も遅くなります。2枚あれば64 GBとなり、70BモデルのQ4に対応できます。',
+          },
+          {
+            q: 'AMDのROCmにはLinuxが必要ですか？Windowsでも動きますか？',
+            a: 'ROCmはLinuxのほうが対応が手厚く、AMDの対応表にはUbuntu 24.04.4、Ubuntu 22.04.5、RHEL 10.1が載っています。WindowsではOllamaのROCmリストがRX 7000シリーズを対象とし、それ以外のカードはVulkanバックエンドを使います。',
+          },
+          {
+            q: 'LLMにはAMD InstinctとNVIDIA GPUのどちらが良いですか？',
+            a: 'Instinct（MI300X、MI350X）はNVIDIAのデータセンターGPUと競合する製品で、サーバー用に購入します。MI300Xは192 GBのHBM3を搭載しています。1台のデスクトップならRadeonまたはRadeon AI PROが該当し、NVIDIAのCUDAエコシステムは今も幅広いです。',
+          },
+          {
+            q: 'AMDはLLMだけでなくディープラーニングや機械学習にも向いていますか？',
+            a: '推論なら向いています。ROCmはPyTorchのビルドを提供しています（ROCm 7.14.0のリリースはPyTorch 2.12.0を挙げています）。CUDAを前提とする学習や研究用コードでは、NVIDIAのエコシステムが依然として広いので、購入前にお使いのフレームワークのAMD対応を確認してください。',
+          },
+          {
+            q: 'Ryzen AI Max+ 395搭載ミニPCは、単体のAMD GPUより優れていますか？',
+            a: 'モデルのサイズ次第です。Ryzen AI Max+ 395は最大128 GBのユニファイドメモリを持ちますが帯域は256 GB/sにとどまるため、大きなMixture-of-Expertsモデル向きです。単体カードは、VRAMに収まるモデルならトークンをより速く生成します。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[ローカルLLM向けのコスパ重視GPU](/ja/local-llms/best-budget-gpus-local-llm)',
+          '[ローカルLLM向けのおすすめGPU](/ja/local-llms/best-gpus-for-local-llms)',
+          '[ローカルLLM向けAMDミニPCのおすすめ](/ja/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/ja/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[ローカルLLMはノートPCとデスクトップのどちらか](/ja/local-llms/laptop-vs-desktop-local-llm) — AI向けのノートPCとデスクトップのコストと性能の比較。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        items: [
+          '[OllamaのGPUドキュメント](https://docs.ollama.com/gpu)：AMD ROCm v7の要件、対応するRadeon、Radeon AI PRO、Radeon PRO、Ryzen AI、Instinctカード、Vulkanバックエンド',
+          '[Ollamaのリリース](https://github.com/ollama/ollama/releases)：v0.40.10（2026年10月23日）',
+          '[Radeon・Ryzen向けAMD ROCm — Linux互換性](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html)：ROCm 7.2.1が対応するRadeon GPUとディストリビューション',
+          '[ROCmのリリース](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0)：ROCm 7.14.0（2026年7月16日）、フレームワークのバージョン',
+          '[llama.cppのビルドドキュメント](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md)：HIPおよびVulkanバックエンド',
+          'AMD製品仕様：[RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html)、[RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html)、[Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          '価格のスナップショット（米国、2026年9〜10月）：公開のGPU価格トラッカーと第三者のレビュー。提示価格であり、すぐに変動します',
+          'AMD GPUは高いトークン/秒を出せますが、速度だけで回答の品質は決まりません。モデルに何を尋ねるかも、応答の速さと同じくらい重要です。[コンテキストウィンドウの解説](https://www.promptquorum.com/ja/prompt-engineering/context-windows-explained-why-ai-forgets)では、GPUメモリの制約内で長いリクエストを構成する方法を紹介しています。',
+        ],
       },
     },
+  },
+  zh: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
+      },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
+    freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
+    theme: 'GPU 购买指南',
+    title: '本地LLM与AI推理的最佳AMD显卡',
+    seoTitle: '本地LLM最佳AMD显卡2026：7900 XTX/9070 XT',
+    intro: '**2026年本地LLM的最佳AMD显卡：30B级模型选Radeon RX 7900 XTX（24 GB），7B–14B模型选RX 9070 XT（16 GB），需要单卡最大显存时选Radeon AI PRO R9700（32 GB）。** 这三款都在Ollama的Linux ROCm v7支持列表中，llama.cpp也能通过Vulkan后端运行它们。NVIDIA CUDA仍是最省事的路径，因此只有在看重每美元显存、或已拥有该显卡时才建议选AMD。',
+    metaDescription: 'AI与本地LLM最佳AMD显卡：RX 7900 XTX（24GB）、RX 9070 XT（16GB）、Radeon AI PRO R9700（32GB），含ROCm、Vulkan及AMD与NVIDIA对比。',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.webp',
+    publishDate: '2026-04-05',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**2026年本地LLM的最佳AMD显卡：30B级模型选Radeon RX 7900 XTX（24 GB），7B–14B模型选RX 9070 XT（16 GB），需要单卡最大显存时选Radeon AI PRO R9700（32 GB）。**',
+    quickAnswerTop: {
+      question: '本地LLM和AI推理应该选哪款AMD显卡？',
+      answer: '综合最佳是RX 7900 XTX（24 GB）；7B–14B模型选较新的RX 9070 XT（16 GB）；单卡显存最大的是Radeon AI PRO R9700（32 GB）。Ollama在Linux的ROCm v7列表中收录了这三款，没有ROCm时可用Vulkan作为后备。NVIDIA CUDA仍然更省事，所以AMD更适合看重每美元显存的用户。',
+      bullets: [
+        'RX 7900 XTX：24 GB，960 GB/s，二手约$900–1,250（价格追踪站，2026年9–10月）',
+        'RX 9070 XT：16 GB，640 GB/s，全新约$820–930——14B模型可在Q4–Q6下运行',
+        'Radeon AI PRO R9700：32 GB，AMD官方定价$1,299；据报道实际售价更高',
+        'Ollama在Linux上需要ROCm v7；安装其Vulkan后端后，Vulkan默认启用',
+      ],
+      updatedDate: '2026-10-23',
+    },
+    audience: '熟悉Ollama或LM Studio、希望优化本地LLM工作流的开发者',
+    readTime: '阅读约9分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    designSkin: 'hub',
+    toc: [
+      {
+        label: '核心要点',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: '哪些AMD显卡值得买来跑本地LLM？',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'AMD显卡在显存和价格上与NVIDIA如何比较？',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'AMD显卡的速度与NVIDIA相比如何？',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: '2026年配置ROCm有多难？',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: '哪些本地LLM工具支持AMD显卡？',
+        anchor: '#software-support',
+      },
+      {
+        label: '如何在AMD显卡上运行量化LLM推理？',
+        anchor: '#run-quantized',
+      },
+      {
+        label: '什么时候该选AMD而不是NVIDIA？',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD Instinct还是NVIDIA数据中心GPU？',
+        anchor: '#instinct',
+      },
+      {
+        label: 'FAQ',
+        anchor: '#faq',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RX 7900 XTX（24 GB）、RX 9070 XT（16 GB）和Radeon AI PRO R9700（32 GB）是2026年值得为本地LLM购买的AMD显卡，Ollama文档在Linux的ROCm v7列表中收录了这三款。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD显卡以同样的价格提供更多显存，但你需要选对软件路径：在受支持的Linux环境用ROCm，想直接能用时选Vulkan。NVIDIA则是即插即用的选择。',
+          },
+        ],
+        items: [
+          '**综合最佳AMD显卡：** RX 7900 XTX——24 GB GDDR6，960 GB/s，二手约$900–1,250（价格追踪站，2026年9–10月）。在Q4下可容纳约30–35B的模型；70B模型在Q4下需要约40 GB或更多，放不下。',
+          '**较新的选择：** RX 9070 XT——16 GB，640 GB/s，全新约$820–930。适合7B–14B模型的Q4–Q6。',
+          '**单卡显存最大：** Radeon AI PRO R9700——32 GB，AMD官方定价$1,299；第三方报道的实际售价约$1,400–1,900。两张卡合计64 GB。',
+          '**预算之选：** RX 6800 XT——16 GB，二手约$380–410（挂牌价，2026年10月）。它在Ollama的Linux ROCm列表中，但不在AMD当前Radeon的ROCm 7.2.1支持表中。',
+          '**Ollama：** 在Linux上要求ROCm v7驱动；在Windows上其ROCm列表涵盖RX 7000系列，安装其Vulkan后端后Vulkan默认启用（可用OLLAMA_VULKAN=0关闭）。',
+          '**LM Studio和llama.cpp：** 都能通过Vulkan或ROCm（HIP）后端在AMD上运行。Vulkan只需图形驱动，因此ROCm识别不到显卡时先试Vulkan。',
+          '**AMD与NVIDIA：** 二手RX 7900 XTX的价格与二手RTX 3090（24 GB）相近。AMD最明显的价格优势是32 GB的R9700对比RTX 5090（约为其三分之一到一半），代价是提示词处理更慢。',
+          '**结论：** 看重每美元显存且能使用Linux或Vulkan时选AMD；需要仅支持CUDA的工具、训练或想最省事时选NVIDIA。价格为美国美元价格，在你所在地区会因税费和渠道而不同。',
+        ],
+      },
+      'which-amd': {
+        id: 'which-amd',
+        title: '哪些AMD显卡值得买来跑本地LLM？',
+        items: [
+          '**RX 7900 XTX**（24 GB GDDR6，960 GB/s，RDNA 3）：最适合LLM的AMD消费级显卡。32B模型的Q4_K_M约20 GB，因此还有余量留给上下文。列于AMD的ROCm 7.2.1支持表，也在Ollama的Linux和Windows ROCm列表中。二手约$900–1,250。',
+          '**RX 9070 XT**（16 GB GDDR6，640 GB/s，RDNA 4）：较新的16 GB选择，列于AMD的ROCm 7.2.1支持表和Ollama的Linux ROCm列表。可轻松运行Q4–Q6的14B模型。全新约$820–930。',
+          '**Radeon AI PRO R9700**（32 GB GDDR6，640 GB/s，RDNA 4）：工作站显卡，是AMD该级别中显存最大的。可处理Q4–Q6的32B模型；两张卡（64 GB）可容纳Q4的70B模型。AMD官方定价$1,299；据报道实际售价更高。',
+          '**RX 7900 XT**（20 GB GDDR6，800 GB/s，RDNA 3）：可容纳Q4下约24–27B的模型。只有明显比二手7900 XTX便宜时才值得买；本次更新未重新核对其价格。',
+          '**RX 6800 XT**（16 GB GDDR6，512 GB/s，RDNA 2）：预算之选，二手约$380–410。带宽较低意味着生成更慢，而且AMD当前Radeon的ROCm支持表已不再列出它，需走Ollama的Linux ROCm路径或Vulkan。',
+          '**Ryzen AI Max+ 395迷你主机**（最高128 GB统一内存，256 GB/s）：它不是显卡，但是用AMD运行超大型混合专家（MoE）模型最便宜的方式。128 GB系统在2026年9月下旬的挂牌价约$3,300–4,350（价格追踪站）。参见[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)。',
+        ],
+      },
+      'amd-vs-nvidia': {
+        id: 'amd-vs-nvidia',
+        title: 'AMD显卡在显存和价格上与NVIDIA如何比较？',
+        columns: [
+          'GPU',
+          '显存',
+          '显存带宽',
+          '常见价格',
+          '主要后端',
+        ],
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            '显存': '16 GB',
+            '显存带宽': '512 GB/s',
+            '常见价格': '约$380–410（二手）',
+            '主要后端': 'ROCm（Linux）、Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            '显存': '16 GB',
+            '显存带宽': '640 GB/s',
+            '常见价格': '约$820–930（全新）',
+            '主要后端': 'ROCm（Linux）、Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            '显存': '20 GB',
+            '显存带宽': '800 GB/s',
+            '常见价格': '未重新核对',
+            '主要后端': 'ROCm、Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            '显存': '24 GB',
+            '显存带宽': '960 GB/s',
+            '常见价格': '约$900–1,250（二手）',
+            '主要后端': 'ROCm、Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            '显存': '32 GB',
+            '显存带宽': '640 GB/s',
+            '常见价格': '官方$1,299；实售约$1,400–1,900',
+            '主要后端': 'ROCm（Linux）、Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            '显存': '24 GB',
+            '显存带宽': '936 GB/s',
+            '常见价格': '约$1,000–1,400（二手）',
+            '主要后端': 'CUDA、Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            '显存': '24 GB',
+            '显存带宽': '1,008 GB/s',
+            '常见价格': '约$2,250（二手）',
+            '主要后端': 'CUDA、Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            '显存': '32 GB',
+            '显存带宽': '1,792 GB/s',
+            '常见价格': '约$3,700–4,300（全新）',
+            '主要后端': 'CUDA、Vulkan',
+          },
+        ],
+        note: '显存容量和带宽为厂商规格（[AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html)、[RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html)、[Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)）。价格是来自公开价格追踪站和评测的美国挂牌价快照（2026年9–10月），并非PromptQuorum的实测；你所在地区的价格会有差异。购买前请查看实际成交价。',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.webp',
+        imageCaption: '本地LLM的AMD与NVIDIA对比：显存、显存带宽和常见价格（美国，2026年9–10月快照）。',
+      },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'LLM推理中AMD显卡的速度与NVIDIA相比如何？',
+        content: [
+          '**生成token的速度更取决于显存带宽而非TFLOPS，在这方面AMD的高端显卡接近NVIDIA上一代旗舰。** RX 7900 XTX（960 GB/s）接近RTX 3090（936 GB/s），低于RTX 4090（1,008 GB/s）和RTX 5090（1,792 GB/s）。',
+          '提示词处理（prefill）是NVIDIA优势更明显的地方。在一项社区llama.cpp对比中（llama.cpp讨论#19890，被第三方评测转引），RTX 5090的prefill速度约为Radeon AI PRO R9700的2.6–3.4倍，同一模型的生成速度约为其1.5倍。这是开发者自行报告的数据，并非PromptQuorum的实测。',
+          '后端选择会改变结果：Vulkan与ROCm（HIP）的快慢随模型、显卡和驱动版本而互有胜负。llama.cpp可以同时编译两者，因此在定下来之前请在自己的显卡上分别测试。',
+          '实际使用中，可以预期AMD在单位带宽的生成速度上有竞争力，长提示词处理较慢，软件成熟度也稍逊一筹。',
+        ],
+      },
+      'rocm-setup': {
+        id: 'rocm-setup',
+        title: '2026年配置ROCm有多难？',
+        content: [
+          '**Vulkan只需要图形驱动；ROCm需要受支持的GPU、Linux发行版和内核。** 购买前请先确认：',
+          '1. **对照AMD的支持表。** Radeon的ROCm 7.2.1支持表在Ubuntu 24.04.4、Ubuntu 22.04.5和RHEL 10.1上列出了RX 9070 XT、RX 9060 XT、RX 7900 XTX、RX 7900 XT、RX 7900 GRE、RX 7800 XT和Radeon AI PRO R9700。',
+          '2. **也查看Ollama的列表。** Ollama文档为Linux ROCm补充了RX 6800 XT、6900 XT及其他RX 6000系列，并列出Ryzen AI Max+ 395。未列出的显卡可在Linux上尝试`HSA_OVERRIDE_GFX_VERSION`；Windows不支持该变量。',
+          '3. **安装ROCm v7软件栈。** 使用AMD的`amdgpu-install`工具（Linux）。Ollama在Linux上要求ROCm v7。',
+          '4. **验证识别情况。** 运行`rocminfo`：你的GPU应作为agent出现（例如RX 7900 XTX为gfx1100，RX 9070 XT为gfx1201）。',
+          '5. **在Windows上，** Ollama的ROCm列表涵盖RX 7000系列。包括RX 9070系列在内的其他显卡不在该列表中，请使用Vulkan后端。',
+          'ROCm的最新版本是7.14.0（2026年7月16日），它将ROCm迁移到模块化构建系统TheRock。核对时AMD的Radeon兼容性页面涵盖到7.2.1，因此请对照你要安装的版本所对应的支持表。',
+        ],
+      },
+      'software-support': {
+        id: 'software-support',
+        title: '哪些本地LLM工具支持AMD显卡？',
+        content: [
+          '**Ollama：** 上述显卡在Linux上使用ROCm v7；在Windows上，RX 7000系列通过ROCm运行。[Vulkan](https://docs.ollama.com/gpu)在安装其后端后默认启用，可用`OLLAMA_VULKAN=0`关闭。当前版本为v0.40.10（2026年10月23日），包含Linux ROCm构建。',
+          '**llama.cpp：** 可用HIP（ROCm）或Vulkan（`-DGGML_VULKAN=1`）为AMD编译。两个后端可以一起编译，并用`--device`按设备选择。大多数前端都基于它。',
+          '**LM Studio：** 通过llama.cpp运行时（Vulkan和ROCm）支持AMD显卡。当ROCm运行时识别不到显卡时，Vulkan是常用的后备方案。（本页早先版本称LM Studio仅支持NVIDIA，这是错误的。）',
+          '**vLLM：** 提供ROCm构建（ROCm 7.14.0版本列出了vLLM 0.23.0）。它面向服务部署和批处理；依赖它之前，请查阅vLLM文档确认你的GPU目标。',
+          '**经验法则：** 图省事用Ollama或LM Studio，要精细控制用llama.cpp，多用户服务用vLLM。',
+        ],
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-zh.webp',
+        imageCaption: 'AMD显卡上的本地LLM工具：Ollama（ROCm v7、Vulkan）、llama.cpp（HIP、Vulkan）、LM Studio（Vulkan、ROCm）、vLLM（ROCm）。',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: '如何在AMD显卡上运行量化LLM推理？',
+        numberedItems: [
+          '**按显存选择模型大小。** Q4_K_M文件每十亿参数约占0.6 GB（14B约9 GB，32B约20 GB；均为估算）。为上下文缓存预留2–4 GB。',
+          '**选择后端。** Vulkan上手最快（只需图形驱动）。在受支持的Linux环境中，ROCm（HIP）是更好的路径。',
+          '**安装运行时。** 走ROCm路径时，先在Linux上用`amdgpu-install`安装ROCm v7，再安装Ollama（`curl -fsSL https://ollama.com/install.sh | sh`）或LM Studio。',
+          '**运行量化模型。** 例如`ollama run qwen3:14b`，或用llama.cpp执行`llama-server -m model.gguf -ngl 99`，把所有层卸载到GPU。',
+          '**确认正在使用GPU。** `ollama ps`应显示100% GPU；`rocm-smi`可查看占用的显存。如果显示CPU，请重新检查ROCm安装或改用Vulkan。',
+        ],
+      },
+      'when-buy-amd': {
+        id: 'when-buy-amd',
+        title: '本地LLM什么时候该选AMD而不是NVIDIA？',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '想要比NVIDIA最新显卡更便宜的24–32 GB显存时选AMD；如果依赖仅支持CUDA的工具，或不想花时间配置，就跳过。',
+          },
+          {
+            type: 'plain-terms',
+            text: '缺的是显存，并且Linux上的ROCm或Vulkan路径适合你时，AMD很划算。如果你刚接触本地LLM、希望直接可用，请先从NVIDIA开始。',
+          },
+        ],
+        content: [
+          '在以下情况选AMD：',
+          '- 想用更少的钱在单卡上获得32 GB：Radeon AI PRO R9700的价格约为RTX 5090的三分之一到一半。',
+          '- 已经有受支持的Radeon，或者想要一张游戏表现也好的显卡。',
+          '- 使用Linux或接受Vulkan，且你的工具（Ollama、llama.cpp、LM Studio）已支持AMD。',
+          '在以下情况选NVIDIA：',
+          '- 需要仅支持CUDA的工具、训练或微调软件栈，或最快的提示词处理。',
+          '- 在比较二手24 GB显卡：二手RTX 3090的价格与二手RX 7900 XTX相近，所以CUDA支持可能成为决定因素。',
+          '- 希望把配置时间降到最低。',
+        ],
+      },
+      instinct: {
+        id: 'instinct',
+        title: 'AMD Instinct还是NVIDIA数据中心GPU：哪个更适合LLM？',
+        content: [
+          '**AMD Instinct（MI300X、MI350X）与NVIDIA的数据中心GPU竞争，面向服务器而非桌面采购。** Ollama的ROCm列表包含Instinct显卡，ROCm也是围绕它们构建的，因此支持范围比消费级Radeon更广。',
+          'MI300X每个加速器配备192 GB HBM3内存（AMD规格），适合在单台机器中运行超大模型。对于单人使用的机器，相关的AMD选择是Radeon RX或Radeon AI PRO。',
+          '服务器和云端决策请参阅[企业GPU服务器选购指南](/zh/local-llms/enterprise-gpu-server-buying-guide-2026)和[云GPU租用对比](/zh/local-llms/cloud-gpu-rental-comparison-2026)。',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: '采用AMD时最常见的错误有哪些？',
+        items: [
+          '以为24 GB能跑70B模型：70B模型在Q4下需要约40 GB或更多，单张24 GB显卡最多约30–35B。70B请规划两张卡，或一对32 GB的R9700。',
+          '买了ROCm不支持的显卡：购买前先查AMD的支持表和Ollama的列表。RX 6000系列不在AMD当前Radeon支持表中。',
+          '跳过Vulkan：ROCm识别不到显卡时，先试Vulkan后端，再判断这块GPU是否无法使用。',
+          '轻信挂牌价：2026年GPU和内存价格波动明显。请比较实际成交价，而不是挂牌价。',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: '下一步',
+        items: [
+          '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm) — 预算有限？LLM推理性价比最高的GPU →',
+          '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD、Apple还是CPU，哪个平台适合你的工作流？ →',
+          '[我需要多少显存？](/zh/local-llms/how-much-vram-local-llm) — 让GPU显存与模型大小相匹配 →',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '各地区的数据法规如何影响AMD与NVIDIA的选择？',
+        content: [
+          '**改变数据保护义务的不是GPU厂商，而是推理是否在本地运行。** 在本机进行推理可让提示词和文档留在自己的硬件上，从而可能降低在中国《数据安全法》和《个人信息保护法》（PIPL）、欧盟GDPR以及日本APPI下的跨境传输风险。企业部署仍需具备合法依据、留存规则和泄露应对流程；金融、医疗、法律等受监管数据请进行正式合规审查。亚太地区各市场的数据跨境规则不尽相同，部署前请逐一核实。',
+          '出口管制规则可能在部分市场限制AMD和NVIDIA的高端加速器。进口或购买前，请查看你所在国家的现行规定。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: 'AMD显卡适合运行本地LLM吗？',
+            a: '适合，但有前提。RX 7900 XTX（24 GB）和Radeon AI PRO R9700（32 GB）等AMD显卡可在Ollama、LM Studio和llama.cpp中通过ROCm或Vulkan运行量化LLM。NVIDIA CUDA的软件支持仍更广、提示词处理更快，所以AMD更适合看重每美元显存的情况。',
+          },
+          {
+            q: '本地LLM最好的AMD显卡是哪款？',
+            a: '综合最佳是RX 7900 XTX：24 GB显存、960 GB/s带宽，并被AMD的ROCm 7.2.1支持表和Ollama支持。要更大的单卡显存可选32 GB的Radeon AI PRO R9700；7B–14B模型用RX 9070 XT（16 GB）就够了。',
+          },
+          {
+            q: '本地LLM选AMD还是NVIDIA？',
+            a: '想要CUDA兼容性和最少配置就买NVIDIA。想要更高的每美元显存就买AMD，尤其是32 GB的R9700对比RTX 5090。二手RX 7900 XTX与二手RTX 3090价格相近，这时取决于软件支持。',
+          },
+          {
+            q: 'Ollama能用AMD显卡吗？',
+            a: '能。Ollama在Linux上要求ROCm v7驱动，并列出RX 9070 XT、RX 7900 XTX、RX 6800 XT、Radeon AI PRO R9700等。在Windows上其ROCm列表涵盖RX 7000系列，安装其后端后Vulkan默认启用。',
+          },
+          {
+            q: 'LM Studio支持AMD显卡吗？',
+            a: '支持。LM Studio通过llama.cpp运行时（Vulkan或ROCm）运行AMD显卡。如果ROCm运行时识别不到显卡，请把运行时切换为Vulkan。本页早先版本曾错误地称LM Studio仅支持NVIDIA。',
+          },
+          {
+            q: '如何在AMD显卡上运行量化LLM推理？',
+            a: '选一个能放进显存的量化模型（Q4_K_M每十亿参数约0.6 GB），安装Ollama或LM Studio，使用Vulkan或ROCm。在Linux上用amdgpu-install安装ROCm v7，运行模型，再用ollama ps或rocm-smi确认GPU在使用。',
+          },
+          {
+            q: '本地LLM选RX 9070 XT还是RX 7900 XTX？',
+            a: '本地LLM更推荐RX 7900 XTX：24 GB在Q4下可容纳约30–35B的模型，而RX 9070 XT的16 GB上限约为14B–24B。RX 9070 XT更新也更便宜，如果16 GB够用就选它。',
+          },
+          {
+            q: '$500以内最好的AMD显卡是什么？',
+            a: '二手约$380–410的RX 6800 XT（16 GB）是$500以内性价比最高的AMD显卡。它可运行Q4–Q8的7B–14B模型，但不在AMD当前Radeon的ROCm支持表中，需走Ollama的Linux ROCm路径或Vulkan。',
+          },
+          {
+            q: 'Radeon AI PRO R9700值得买来做本地AI吗？',
+            a: '如果你需要单卡32 GB，值得。它的官方定价为$1,299，而RTX 5090约为$3,700–4,300，不过据报道实际售价更高，提示词处理也更慢。两张R9700合计64 GB，可运行Q4的70B模型。',
+          },
+          {
+            q: 'AMD ROCm需要Linux吗？Windows能用吗？',
+            a: 'Linux是支持更好的ROCm路径：AMD的支持表列出了Ubuntu 24.04.4、Ubuntu 22.04.5和RHEL 10.1。在Windows上，Ollama的ROCm列表涵盖RX 7000系列，其他显卡使用Vulkan后端。',
+          },
+          {
+            q: '跑LLM，AMD Instinct和NVIDIA GPU哪个更好？',
+            a: 'Instinct（MI300X、MI350X）与NVIDIA的数据中心GPU竞争，面向服务器采购；MI300X配备192 GB HBM3。对单台桌面机而言，相关的AMD选择是Radeon或Radeon AI PRO，而NVIDIA的CUDA生态仍然更广。',
+          },
+          {
+            q: 'AMD适合深度学习和机器学习吗，而不只是LLM？',
+            a: '推理没问题。ROCm提供PyTorch构建（ROCm 7.14.0版本列出了PyTorch 2.12.0）。对于默认依赖CUDA的训练和研究代码，NVIDIA的生态仍然更广，购买前请确认你的框架对AMD的支持。',
+          },
+          {
+            q: 'Ryzen AI Max+ 395迷你主机比独立AMD显卡更好吗？',
+            a: '取决于模型大小。Ryzen AI Max+ 395系统最高提供128 GB统一内存，但带宽只有256 GB/s，适合大型混合专家模型；而对于能放进显存的模型，独立显卡生成token更快。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)',
+          '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms)',
+          '[本地LLM最佳AMD迷你主机](/zh/local-llms/best-amd-mini-pc-local-llm-2026)',
+          '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/zh/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[本地LLM：笔记本还是台式机](/zh/local-llms/laptop-vs-desktop-local-llm) — 面向AI的笔记本与台式机成本和性能对比。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          '[Ollama GPU文档](https://docs.ollama.com/gpu)：AMD ROCm v7要求、受支持的Radeon、Radeon AI PRO、Radeon PRO、Ryzen AI和Instinct显卡、Vulkan后端',
+          '[Ollama发布页](https://github.com/ollama/ollama/releases)：v0.40.10，2026年10月23日',
+          '[Radeon与Ryzen上的AMD ROCm — Linux兼容性](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html)：ROCm 7.2.1支持的Radeon GPU和发行版',
+          '[ROCm发布页](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0)：ROCm 7.14.0，2026年7月16日，框架版本',
+          '[llama.cpp构建文档](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md)：HIP和Vulkan后端',
+          'AMD产品规格：[RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html)、[RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html)、[Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          '价格快照（美国，2026年9–10月）：公开的GPU价格追踪站和第三方评测；均为挂牌价，变化很快',
+          'AMD显卡能提供很高的每秒token速度，但速度本身并不决定回答质量。你向模型提出什么问题，与它响应得多快同样重要：[上下文窗口详解](https://www.promptquorum.com/zh/prompt-engineering/context-windows-explained-why-ai-forgets)介绍了如何在GPU显存限制内组织较长的请求。',
+        ],
+      },
+    },
+  },
   ko: {
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -1890,306 +3128,375 @@ schema: {
       },
     ],
     freshness_tier: 'semi_annual',
+    last_full_refresh: '2026-10-23',
+    next_refresh_due: '2027-04-23',
     theme: 'GPU 구매 가이드',
-    title: '로컬 LLM을 위한 최고의 AMD GPU',
-    seoTitle: '로컬 LLM용 AMD GPU 2026: RX 7900 XTX vs RTX 비교 가이드',
-    intro: '**AMD RX 6800 XT와 RX 7900 XTX는 NVIDIA의 견실한 대안으로, 달러당 연산 성능이 15-20% 우수합니다. 다만 ONNX Runtime 및 vLLM 드라이버 지원이 상대적으로 취약합니다.** AMD ROCm(HIP)은 성숙 단계에 접어들었으나, 호환성 레이어로 인한 설정 부담이 여전히 존재합니다. NVIDIA CUDA는 로컬 LLM 구동에 있어 여전히 가장 수월한 경로입니다. AMD는 중고 제품을 저렴하게 구입하거나 이미 AMD 하드웨어를 보유한 경우에만 사용을 권장합니다.',
-    metaDescription: 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX 비교: ROCm 설치, vLLM 성능, TFLOP당 비용 분석, AMD 선택 시기.',
+    title: '로컬 LLM·AI 추론에 가장 좋은 AMD GPU',
+    seoTitle: '로컬 LLM용 AMD GPU 2026: 7900 XTX·9070 XT',
+    intro: '**2026년 로컬 LLM용 최고의 AMD GPU는 30B급 모델에는 Radeon RX 7900 XTX(24 GB), 7B–14B 모델에는 RX 9070 XT(16 GB), 카드 한 장에서 가장 큰 VRAM이 필요할 때는 Radeon AI PRO R9700(32 GB)입니다.** 세 제품 모두 Ollama의 Linux용 ROCm v7 지원 목록에 올라 있으며, llama.cpp에서는 Vulkan 백엔드로도 실행할 수 있습니다. 설정 부담이 가장 적은 쪽은 여전히 NVIDIA CUDA이므로, 달러당 VRAM이 중요하거나 이미 카드를 보유한 경우에 AMD를 선택하십시오.',
+    metaDescription: '로컬 LLM·AI용 AMD GPU: RX 7900 XTX(24GB), RX 9070 XT(16GB), R9700(32GB)을 ROCm·Vulkan, NVIDIA 비교와 함께 정리합니다.',
     heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
     publishDate: '2026-04-05',
-    dateModified: '2026-09-01',
-    lastFactChecked: '2026-04-18',
-    next_refresh_due: '2027-03-01',
-    leadAnswerBlock: '**AMD RX 6800 XT와 RX 7900 XTX는 NVIDIA의 견실한 대안으로, 달러당 연산 성능이 15-20% 우수하지만 ONNX Runtime 및 vLLM 드라이버 지원이 상대적으로 취약합니다.**',
+    dateModified: '2026-10-23',
+    leadAnswerBlock: '**2026년 로컬 LLM용 최고의 AMD GPU는 30B급 모델에는 Radeon RX 7900 XTX(24 GB), 7B–14B 모델에는 RX 9070 XT(16 GB), 카드 한 장에서 가장 큰 VRAM이 필요할 때는 Radeon AI PRO R9700(32 GB)입니다.**',
+    quickAnswerTop: {
+      question: '로컬 LLM과 AI 추론에는 어떤 AMD GPU가 가장 좋습니까?',
+      answer: '종합적으로는 RX 7900 XTX(24 GB)가 가장 좋고, 7B–14B 모델에는 더 최신인 RX 9070 XT(16 GB), 카드당 VRAM이 가장 큰 제품은 Radeon AI PRO R9700(32 GB)입니다. Ollama는 세 제품을 모두 Linux ROCm v7 지원으로 나열하며, ROCm 없이도 Vulkan을 대안으로 쓸 수 있습니다. 설정은 NVIDIA CUDA가 더 쉬우므로, 달러당 VRAM이 중요할 때 AMD가 적합합니다.',
+      bullets: [
+        'RX 7900 XTX: 24 GB, 960 GB/s, 중고 약 $900–1,250(가격 추적 사이트, 2026년 9–10월)',
+        'RX 9070 XT: 16 GB, 640 GB/s, 신품 약 $820–930 — 14B 모델을 Q4–Q6으로 실행 가능',
+        'Radeon AI PRO R9700: 32 GB, AMD 권장가 $1,299이며 보고된 실거래가는 더 높습니다',
+        'Ollama는 Linux에서 ROCm v7이 필요하며, Vulkan 백엔드를 설치하면 기본으로 활성화됩니다',
+      ],
+      updatedDate: '2026-10-23',
+    },
     audience: 'Ollama 또는 LM Studio에 익숙하며 로컬 LLM 워크플로를 최적화하려는 개발자',
-    readTime: '7분',
+    readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     primaryTerm: 'AMD GPU',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'TechArticle',
-      'headline': '로컬 LLM용 최고의 AMD GPU 2026: RX 7900 XTX',
-      'description': 'AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX 비교. ROCm 설치, vLLM 성능, TFLOP당 비용 분석. CUDA 대신 AMD를 선택해야 하는 경우.',
-      'url': 'https://www.promptquorum.com/ko/local-llms/best-amd-gpus-local-llm',
-      'datePublished': '2026-04-05',
-      'dateModified': '2026-09-01',
-      'inLanguage': 'ko',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
-      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-      'about': [
-        { '@type': 'Thing', 'name': 'AMD GPU' },
-        { '@type': 'Thing', 'name': 'ROCm' },
-        { '@type': 'Thing', 'name': 'GPU VRAM' },
-        { '@type': 'Thing', 'name': '로컬 LLM 추론' },
-      ],
-      'speakable': {
-        '@type': 'SpeakableSpecification',
-        'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
-      },
-      'educationalLevel': 'Intermediate',
-        'proficiencyLevel': 'Intermediate',
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'inLanguage': 'ko',
-      'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': '로컬 LLM용으로 AMD RX 6800 XT와 NVIDIA RTX 3080 중 어느 것을 구입해야 합니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '단순함을 중시한다면 RTX 3080(CUDA는 바로 작동합니다). 25% 더 나은 가성비를 원하고 5-10시간의 ROCm 설정을 감수할 수 있다면 RX 6800 XT를 권장합니다.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'AMD RX 7900 XTX가 RTX 4090보다 우수합니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $1,000-1,800 더 저렴합니다($800-1,000 대 $2,000-2,600 — NVIDIA가 2026년 단종한 이후 중고 RTX 4090 가격이 크게 상승). ROCm 설정이 트레이드오프입니다.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'AMD GPU로 Ollama를 사용할 수 있습니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '기술적으로는 가능합니다. 2026년 4월 테스트(Ollama v0.3.x, ROCm 6.x)에서 ROCm 지원이 불안정했습니다 — 일부 구성에서 GPU 감지 실패, CPU 폴백이 잦았습니다. 사용 전 github.com/ollama/ollama에서 최신 AMD 호환성 목록을 확인하십시오; 안정적인 AMD 추론에는 vLLM 또는 llama.cpp가 더 안전한 경로입니다.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '2026년 로컬 LLM을 위한 최적의 AMD 경로는 무엇입니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Llama.cpp(HIP 백엔드) + Text Generation WebUI입니다. 두 도구 모두 AMD 지원이 견실합니다. Ollama는 피하십시오.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'AMD ROCm에 Ubuntu가 필요합니까, 아니면 Windows에서도 작동합니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Windows 지원(HIP on Windows)도 있지만 더 최신이고 버그가 많습니다. Ubuntu가 권장 경로입니다.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'RX 6700, RX 6700 XT, 또는 6750은 7B 모델에 적합합니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. RX 6700 XT(12GB, 동일한 VRAM)는 non-XT 버전보다 클럭이 약 15% 빠르지만 여전히 6800 XT에는 못 미칩니다. 둘 다 $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '로컬 LLM에 RX 6900 XT를 구매할 가치가 있습니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '그다지 없습니다. RX 6900 XT(16GB)는 RX 6800 XT보다 약간 더 빠를 뿐이고, 중고 매물도 더 희귀하며, 가격은 6800 XT의 $300-350보다 높은 $420-500 수준입니다. 가격 차이만큼의 가치가 없습니다 -- 대신 6800 XT를 구매하십시오.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'AMD Radeon 680M은 로컬 LLM을 실행하기에 적합합니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Radeon 680M은 Ryzen 6000/7000 모바일 APU에 내장된 통합 그래픽으로, 별도의 디스크리트 GPU인 RX 6800M이나 RX 6800 XT와는 다른 제품입니다. 전용 VRAM이 없고 대신 시스템 RAM을 공유하므로, 작은 양자화 모델(대략 3B 매개변수 이하, Q4 기준)에서만 실용적이며 이 페이지의 어떤 디스크리트 GPU보다도 눈에 띄게 느립니다. 본격적인 로컬 LLM 사용에는 RX 6800 XT 같은 디스크리트 GPU가 더 나은 선택입니다.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '하나의 시스템에서 AMD와 NVIDIA GPU를 혼용할 수 있습니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '이론적으로는 가능하지만 관리가 매우 복잡합니다. 각 GPU마다 별도의 CUDA/HIP 런타임이 필요합니다. 권장하지 않습니다.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'AMD RX 7900 XTX의 VRAM 용량은 얼마입니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'AMD RX 7900 XTX는 24GB GDDR6 VRAM을 탑재하고 있습니다. RTX 4090과 동일한 용량으로, Q4 양자화 기준 70B 모델을 실행할 수 있는 가장 강력한 AMD 소비자용 카드입니다.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'AMD ROCm은 프로덕션 LLM 추론에 충분히 안정적입니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'ROCm 6.x(2025)는 ROCm 5.x보다 훨씬 안정적입니다. 프로덕션 환경에서는 Ubuntu 22.04+ 위의 llama.cpp HIP 백엔드 스택이 가장 신뢰성이 높습니다. AMD에서 Ollama를 프로덕션 워크로드에 사용하는 것은 피하십시오.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '$400 이하에서 가장 적합한 AMD GPU는 무엇입니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'AMD RX 6800 XT(16GB, 중고 약 $320-400)가 $400 이하에서 최고의 가성비 AMD GPU입니다. llama.cpp HIP 백엔드를 통해 Q4 기준 13B 모델을 원활하게, Q8 기준 7B 모델을 편안하게 실행합니다.',
-            },
-          },
-        ]
-    },
+    designSkin: 'hub',
     toc: [
-      { label: '요약', anchor: '#key-takeaways' },
-      { label: '실제로 사용할 만한 AMD GPU는?', anchor: '#key-takeaways' },
-      { label: 'AMD GPU는 가격과 속도 면에서 RTX와 어떻게 비교되나요?', anchor: '#amd-vs-nvidia' },
-      { label: '자주 묻는 질문', anchor: '#faq' },
+      {
+        label: '핵심 내용',
+        anchor: '#key-takeaways',
+      },
+      {
+        label: '로컬 LLM용으로 살 만한 AMD GPU는 무엇입니까?',
+        anchor: '#which-amd',
+      },
+      {
+        label: 'AMD GPU는 VRAM과 가격에서 NVIDIA와 어떻게 비교됩니까?',
+        anchor: '#amd-vs-nvidia',
+      },
+      {
+        label: 'AMD GPU는 NVIDIA에 비해 얼마나 빠릅니까?',
+        anchor: '#amd-vs-nvidia-speed',
+      },
+      {
+        label: '2026년에 ROCm 설정은 얼마나 어렵습니까?',
+        anchor: '#rocm-setup',
+      },
+      {
+        label: 'AMD GPU에서 동작하는 로컬 LLM 도구는 무엇입니까?',
+        anchor: '#software-support',
+      },
+      {
+        label: 'AMD GPU에서 양자화 LLM 추론은 어떻게 실행합니까?',
+        anchor: '#run-quantized',
+      },
+      {
+        label: '언제 NVIDIA 대신 AMD를 사야 합니까?',
+        anchor: '#when-buy-amd',
+      },
+      {
+        label: 'AMD Instinct와 NVIDIA 데이터센터 GPU 중 무엇이 낫습니까?',
+        anchor: '#instinct',
+      },
+      {
+        label: 'FAQ',
+        anchor: '#faq',
+      },
     ],
     sections: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'AMD RX 7900 XTX는 24GB VRAM 기준 중고가 $450-550로 RTX 4090과 맞먹지만, ROCm 드라이버 설정에는 NVIDIA CUDA보다 5~10시간 더 많은 수고가 듭니다.' },
-          { type: 'plain-terms', text: 'AMD GPU는 힘은 좋지만 수동 변속기가 달린 자동차와 같습니다 -- 달러당 성능은 더 높지만, 작동시키기까지 더 많은 수고가 필요합니다. NVIDIA는 자동 변속기입니다.' },
+          {
+            type: 'one-sentence',
+            text: 'RX 7900 XTX(24 GB), RX 9070 XT(16 GB), Radeon AI PRO R9700(32 GB)이 2026년 로컬 LLM용으로 살 만한 AMD GPU이며, Ollama 문서는 세 제품을 모두 Linux ROCm v7 지원으로 나열합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AMD 카드는 가격 대비 VRAM이 넉넉하지만 소프트웨어 경로를 잘 골라야 합니다. 지원되는 Linux에서는 ROCm, 그냥 동작하길 원하면 Vulkan을 쓰십시오. 바로 쓰기 편한 쪽은 NVIDIA입니다.',
+          },
         ],
         items: [
-          'AMD RX 6800 XT(16GB, 중고 $320-400)와 RX 7900 XTX(24GB, 중고 $800-1,000)는 로컬 LLM에 실질적으로 사용 가능한 유일한 AMD 옵션입니다.',
-          '달러당 성능: AMD는 NVIDIA보다 20-30% 저렴하지만, 소프트웨어 설정 부담으로 5-10시간이 추가로 소요됩니다.',
-          'Ollama: AMD 지원이 제한적입니다(ROCm 경로는 2026년 4월 테스트, Ollama v0.3.x / ROCm 6.x 기준 불안정했습니다 — 일부 구성에서 GPU 감지 실패; CPU 폴백 속도 느림). 최신 AMD 호환성 목록은 github.com/ollama/ollama에서 확인하십시오.',
-          'vLLM: v0.6.0부터 AMD ROCm 완전 지원. 단, 수동 드라이버 설치가 필요합니다. 설정을 완료하면 잘 작동합니다.',
-          'Text Generation WebUI: ROCm을 통한 AMD 지원이 우수합니다. AMD에서 최고의 사용자 경험을 제공합니다.',
-          'Llama.cpp: AMD 네이티브 지원(HIP 백엔드). 안정적인 성능. AMD에서 권장되는 경로입니다.',
-          '설정 비용: ROCm 드라이버 디버깅, HIPCC 컴파일, 커널 호환성 확인에 5-10시간을 계획하십시오.',
-          '결론(2026년 4월): AMD 하드웨어를 이미 보유하고 있거나 저렴한 중고 제품(16GB 카드 $320)을 발견한 경우에만 AMD를 선택하십시오. 그렇지 않으면 NVIDIA CUDA가 여전히 더 간편합니다.',
+          '**종합 최고의 AMD:** RX 7900 XTX — 24 GB GDDR6, 960 GB/s, 중고 약 $900–1,250(가격 추적 사이트, 2026년 9–10월). Q4 기준 약 30–35B 모델을 담을 수 있으며, 70B 모델은 Q4에서 약 40 GB 이상이 필요하므로 담을 수 없습니다.',
+          '**더 최신인 카드:** RX 9070 XT — 16 GB, 640 GB/s, 신품 약 $820–930. 7B–14B 모델의 Q4–Q6에 적합합니다.',
+          '**카드당 최대 VRAM:** Radeon AI PRO R9700 — 32 GB, AMD 권장가 $1,299이며, 제3자 보고에 따르면 실거래가는 약 $1,400–1,900입니다. 두 장이면 64 GB가 됩니다.',
+          '**예산형:** RX 6800 XT — 16 GB, 중고 약 $380–410(호가, 2026년 10월). Ollama의 Linux ROCm 목록에는 있지만 AMD의 현재 Radeon용 ROCm 7.2.1 지원표에는 없습니다.',
+          '**Ollama:** Linux에서 ROCm v7 드라이버가 필요합니다. Windows에서는 ROCm 목록이 RX 7000 시리즈를 포함하며, Vulkan 백엔드를 설치하면 Vulkan이 기본으로 활성화됩니다(OLLAMA_VULKAN=0으로 비활성화).',
+          '**LM Studio와 llama.cpp:** 둘 다 Vulkan 또는 ROCm(HIP) 백엔드로 AMD에서 동작합니다. Vulkan은 그래픽 드라이버만 있으면 되므로, ROCm이 카드를 인식하지 못하면 먼저 Vulkan을 쓰십시오.',
+          '**AMD 대 NVIDIA:** 중고 RX 7900 XTX는 중고 RTX 3090(24 GB)과 가격이 거의 같습니다. AMD의 가장 뚜렷한 가격 이점은 32 GB R9700이 RTX 5090의 3분의 1~절반 가격이라는 점이며, 대신 프롬프트 처리는 더 느립니다.',
+          '**결론:** 달러당 VRAM이 중요하고 Linux 또는 Vulkan을 쓸 수 있다면 AMD를, CUDA 전용 도구·학습·최소한의 설정이 필요하다면 NVIDIA를 선택하십시오. 가격은 미국 달러 기준이며, 국내에서는 세금과 유통 경로에 따라 달라질 수 있습니다.',
         ],
       },
       'which-amd': {
-        title: '실제로 사용할 만한 AMD GPU는?',
+        id: 'which-amd',
+        title: '로컬 LLM용으로 살 만한 AMD GPU는 무엇입니까?',
         items: [
-          '**RX 6800 XT** (16GB GDDR6): AMD 가성비의 왕. 2020년 출시. 7B-22B 추론에 여전히 견실합니다. 중고: $320-400.',
-          '**RX 6900 XT** (16GB GDDR6): 6800 XT보다 소폭 빠릅니다. 희귀합니다. 중고: $420-500. 가격 차이만큼의 가치가 없습니다.',
-          '**RX 7900 XT** (20GB GDDR6): 신형 RDNA 3 아키텍처. 6800 XT보다 20% 빠릅니다. 중고: $700-850. 70B Q4에 적합합니다.',
-          '**RX 7900 XTX** (24GB GDDR6): AMD 최상위 소비자용 GPU. 24GB VRAM은 70B 모델 구동의 판도를 바꿉니다. 중고: $800-1,000. RTX 4090과 유사한 속도.',
-          '**Radeon Pro W6800 (32GB)**: 엔터프라이즈 카드, 중고 가격이 저렴합니다(약 $200-300). 속도는 느리지만 32GB는 70B Q8에 탁월합니다. 틈새 선택지.',
+          '**RX 7900 XTX**(24 GB GDDR6, 960 GB/s, RDNA 3): LLM용으로 가장 강력한 AMD 소비자용 카드입니다. 32B 모델의 Q4_K_M은 약 20 GB이므로 컨텍스트 여유를 두고 담을 수 있습니다. AMD의 ROCm 7.2.1 지원표와 Ollama의 Linux·Windows ROCm 목록에 있습니다. 중고 약 $900–1,250.',
+          '**RX 9070 XT**(16 GB GDDR6, 640 GB/s, RDNA 4): 더 최신인 16 GB 선택지로, AMD의 ROCm 7.2.1 지원표와 Ollama의 Linux ROCm 목록에 있습니다. 14B 모델을 Q4–Q6으로 여유 있게 실행합니다. 신품 약 $820–930.',
+          '**Radeon AI PRO R9700**(32 GB GDDR6, 640 GB/s, RDNA 4): 이 등급에서 AMD가 판매하는 가장 큰 VRAM을 가진 워크스테이션 카드입니다. 32B 모델의 Q4–Q6을 처리하며, 두 장(64 GB)이면 70B 모델의 Q4를 담습니다. AMD 권장가 $1,299이며 보고된 실거래가는 더 높습니다.',
+          '**RX 7900 XT**(20 GB GDDR6, 800 GB/s, RDNA 3): Q4 기준 약 24–27B 모델까지 담습니다. 중고 7900 XTX보다 확실히 저렴할 때만 구매하십시오. 이번 업데이트에서는 가격을 다시 확인하지 않았습니다.',
+          '**RX 6800 XT**(16 GB GDDR6, 512 GB/s, RDNA 2): 중고 약 $380–410의 예산형 선택지입니다. 대역폭이 낮아 생성이 느리고, AMD의 현재 Radeon ROCm 지원표에서는 더 이상 나열하지 않으므로 Ollama의 Linux ROCm 경로 또는 Vulkan을 전제로 하십시오.',
+          '**Ryzen AI Max+ 395 미니 PC**(최대 128 GB 통합 메모리, 256 GB/s): 그래픽 카드는 아니지만 매우 큰 Mixture-of-Experts 모델을 AMD에서 돌리는 가장 저렴한 방법입니다. 128 GB 시스템은 2026년 9월 하순에 약 $3,300–4,350으로 등록되어 있었습니다(가격 추적 사이트). [로컬 LLM용 AMD 미니 PC 추천](/ko/local-llms/best-amd-mini-pc-local-llm-2026)을 참고하십시오.',
         ],
       },
       'amd-vs-nvidia': {
-        title: 'AMD GPU와 RTX의 가격·성능 비교',
-        rows: [
-          { '0': 'RX 6800 XT', '1': '16GB', '2': '1,952', '3': '$320-400', '4': '+25%', '5': 'RTX 3080 (느림)' },
-          { '0': 'RX 7900 XT', '1': '20GB', '2': '2,540', '3': '$700-850', '4': '+20%', '5': 'RTX 4080 (유사)' },
-          { '0': 'RX 7900 XTX', '1': '24GB', '2': '2,750', '3': '$800-1,000', '4': '+15%', '5': 'RTX 4090 (유사 속도)' },
-          { '0': 'RTX 3080', '1': '10GB', '2': '1,456', '3': '$420-500', '4': '--', '5': '--' },
-          { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$2,000-2,600', '4': '--', '5': '--' },
+        id: 'amd-vs-nvidia',
+        title: 'AMD GPU는 VRAM과 가격에서 NVIDIA와 어떻게 비교됩니까?',
+        columns: [
+          'GPU',
+          'VRAM',
+          '메모리 대역폭',
+          '일반 가격',
+          '주요 백엔드',
         ],
-        columns: ['GPU', 'VRAM', 'TFLOPS', '중고 가격', '달러당 성능 vs. RTX', '동급 RTX'],
-      
+        rows: [
+          {
+            GPU: 'RX 6800 XT',
+            VRAM: '16 GB',
+            '메모리 대역폭': '512 GB/s',
+            '일반 가격': '약 $380–410(중고)',
+            '주요 백엔드': 'ROCm(Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 9070 XT',
+            VRAM: '16 GB',
+            '메모리 대역폭': '640 GB/s',
+            '일반 가격': '약 $820–930(신품)',
+            '주요 백엔드': 'ROCm(Linux), Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XT',
+            VRAM: '20 GB',
+            '메모리 대역폭': '800 GB/s',
+            '일반 가격': '재확인하지 않음',
+            '주요 백엔드': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'RX 7900 XTX',
+            VRAM: '24 GB',
+            '메모리 대역폭': '960 GB/s',
+            '일반 가격': '약 $900–1,250(중고)',
+            '주요 백엔드': 'ROCm, Vulkan',
+          },
+          {
+            GPU: 'Radeon AI PRO R9700',
+            VRAM: '32 GB',
+            '메모리 대역폭': '640 GB/s',
+            '일반 가격': '권장 $1,299, 실거래 약 $1,400–1,900',
+            '주요 백엔드': 'ROCm(Linux), Vulkan',
+          },
+          {
+            GPU: 'RTX 3090',
+            VRAM: '24 GB',
+            '메모리 대역폭': '936 GB/s',
+            '일반 가격': '약 $1,000–1,400(중고)',
+            '주요 백엔드': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 4090',
+            VRAM: '24 GB',
+            '메모리 대역폭': '1,008 GB/s',
+            '일반 가격': '약 $2,250(중고)',
+            '주요 백엔드': 'CUDA, Vulkan',
+          },
+          {
+            GPU: 'RTX 5090',
+            VRAM: '32 GB',
+            '메모리 대역폭': '1,792 GB/s',
+            '일반 가격': '약 $3,700–4,300(신품)',
+            '주요 백엔드': 'CUDA, Vulkan',
+          },
+        ],
+        note: 'VRAM 용량과 메모리 대역폭은 제조사 사양입니다([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). 가격은 공개 가격 추적 사이트와 리뷰에서 가져온 미국 호가 스냅샷(2026년 9–10월)이며 PromptQuorum의 측정값이 아닙니다. 국내 가격은 다를 수 있으므로 구매 전에 실제 거래 가격을 확인하십시오.',
         image: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
-        imageCaption: 'RX 7900 XTX는 RTX 4090의 속도와 VRAM을 가격의 약 60%로 제공합니다 — 대가는 ROCm 설정의 번거로움입니다.',
+        imageCaption: '로컬 LLM용 AMD와 NVIDIA 비교: VRAM, 메모리 대역폭, 일반 가격(미국, 2026년 9–10월 스냅샷).',
+      },
+      'amd-vs-nvidia-speed': {
+        id: 'amd-vs-nvidia-speed',
+        title: 'LLM 추론에서 AMD GPU는 NVIDIA에 비해 얼마나 빠릅니까?',
+        content: [
+          '**토큰 생성 속도는 TFLOPS보다 메모리 대역폭에 좌우되며, 이 기준에서 AMD의 상위 카드는 NVIDIA의 이전 세대 플래그십에 가깝습니다.** RX 7900 XTX(960 GB/s)는 RTX 3090(936 GB/s)과 비슷하고, RTX 4090(1,008 GB/s)과 RTX 5090(1,792 GB/s)보다는 낮습니다.',
+          '프롬프트 처리(prefill)에서는 NVIDIA의 우위가 더 뚜렷합니다. 커뮤니티 llama.cpp 비교(llama.cpp 토론 #19890, 제3자 리뷰에서 인용)에서 RTX 5090은 Radeon AI PRO R9700보다 prefill이 약 2.6–3.4배, 같은 모델의 생성이 약 1.5배 빨랐다고 보고되었습니다. 이는 개발자가 보고한 데이터이며 PromptQuorum의 측정값이 아닙니다.',
+          '백엔드 선택에 따라 결과가 달라집니다. Vulkan과 ROCm(HIP)은 모델, 카드, 드라이버 버전에 따라 우열이 바뀝니다. llama.cpp는 둘 다 함께 빌드할 수 있으므로, 결정하기 전에 본인의 카드에서 둘 다 테스트하십시오.',
+          '실제로는 AMD가 대역폭당 생성 속도에서는 경쟁력이 있고, 긴 프롬프트에서는 느리며, 소프트웨어 완성도는 다소 떨어진다고 보면 됩니다.',
+        ],
       },
       'rocm-setup': {
-        title: 'AMD ROCm 설정의 부담은?',
+        id: 'rocm-setup',
+        title: '2026년에 ROCm 설정은 얼마나 어렵습니까?',
         content: [
-          '**1. AMD ROCm 드라이버 설치: `apt-get install rocm-dkms` (Ubuntu). Windows에서는 수동 .exe 설치 프로그램 사용. 약 30분 소요.**',
-          '2. HIP 컴파일러 확인: `hipcc --version`. 첫 시도에서 실패하는 경우가 많습니다. GPU 커널 호환성을 디버깅하십시오.',
-          '3. HIPCC(AMD HIP-to-C++ 컴파일러) 설치: `apt-get install hip-runtime-amd`. 또 다른 의존성 체인입니다.',
-          '4. 소형 LLM으로 테스트: 추론을 실행하여 GPU 가속이 작동하는지 확인합니다. CPU 폴백이 자주 발생합니다.',
-          '5. 드라이버 버전 불일치 해결: ROCm v5.7은 커널 5.15에서 작동하지만 6.x에서는 작동하지 않습니다. 2-4시간의 디버깅이 필요합니다.',
-          'NVIDIA CUDA와 비교: `nvidia-cuda-toolkit` → apt-get 한 번으로 즉시 GPU 접근 가능. AMD는 5-10배 더 많은 설정 부담이 있습니다.',
+          '**Vulkan은 그래픽 드라이버만 있으면 되지만, ROCm은 지원되는 GPU, Linux 배포판, 커널이 필요합니다.** 구매 전에 다음을 확인하십시오.',
+          '1. **카드를 AMD 지원표와 대조합니다.** Radeon용 ROCm 7.2.1 지원표는 Ubuntu 24.04.4, Ubuntu 22.04.5, RHEL 10.1에서 RX 9070 XT, RX 9060 XT, RX 7900 XTX, RX 7900 XT, RX 7900 GRE, RX 7800 XT, Radeon AI PRO R9700을 나열합니다.',
+          '2. **Ollama의 목록도 확인합니다.** Ollama 문서는 Linux ROCm용으로 RX 6800 XT, 6900 XT 등 RX 6000 시리즈를 추가하고 Ryzen AI Max+ 395도 명시합니다. 목록에 없는 카드는 Linux에서 `HSA_OVERRIDE_GFX_VERSION`을 시도할 수 있으나 Windows에서는 지원되지 않습니다.',
+          '3. **ROCm v7 스택을 설치합니다.** AMD의 `amdgpu-install` 유틸리티를 사용합니다(Linux). Ollama는 Linux에서 ROCm v7을 요구합니다.',
+          '4. **인식 여부를 확인합니다.** `rocminfo`에서 GPU가 에이전트로 표시되어야 합니다(예: RX 7900 XTX는 gfx1100, RX 9070 XT는 gfx1201).',
+          '5. **Windows에서는** Ollama의 ROCm 목록이 RX 7000 시리즈를 명시합니다. RX 9070 시리즈를 포함한 다른 카드는 해당 목록에 없으므로 Vulkan 백엔드를 사용하십시오.',
+          'ROCm의 최신 릴리스는 7.14.0(2026년 7월 16일)으로, ROCm을 모듈식 빌드 시스템 TheRock으로 옮겼습니다. 확인 시점에 AMD의 Radeon 호환성 페이지는 7.2.1까지를 다루었으므로, 설치할 버전에 해당하는 지원표와 카드를 대조하십시오.',
         ],
       },
       'software-support': {
-        title: 'AMD에서 Ollama와 vLLM을 실행할 수 있는가?',
+        id: 'software-support',
+        title: 'AMD GPU에서 동작하는 로컬 LLM 도구는 무엇입니까?',
         content: [
-          '**AMD에서의 Ollama:** 2026년 4월 기준 실험적/불안정 단계. ROCm 경로가 때때로 작동하지만 CPU 폴백은 느립니다. 권장하지 않습니다.',
-          '**AMD에서의 vLLM:** v0.6.0부터 완전한 ROCm 지원. 잘 작동하지만 ROCm/HIP 드라이버 수동 설정이 필요합니다. 설정을 완료하면 좋은 성능을 발휘합니다.',
-          '**Text Generation WebUI:** AMD ROCm 지원이 우수합니다. AMD에서 최고의 사용자 경험. 권장합니다.',
-          '**Llama.cpp:** 네이티브 HIP 백엔드. 안정적인 성능. 가장 간편한 AMD 경로. 권장합니다.',
-          '**LM Studio:** NVIDIA 전용. AMD 지원 없음.',
-          '2026년 4월 기준: vLLM + llama.cpp가 AMD에서의 선택지입니다. Ollama는 신뢰할 수 없습니다.',
+          '**Ollama:** 위에 나열한 카드는 Linux에서 ROCm v7을 사용하고, Windows에서는 RX 7000 시리즈가 ROCm으로 동작합니다. [Vulkan](https://docs.ollama.com/gpu)은 백엔드를 설치하면 기본으로 활성화되며 `OLLAMA_VULKAN=0`으로 끌 수 있습니다. 현재 릴리스는 v0.40.10(2026년 10월 23일)이며 Linux ROCm 빌드를 포함합니다.',
+          '**llama.cpp:** AMD용으로 HIP(ROCm) 또는 Vulkan(`-DGGML_VULKAN=1`)으로 빌드할 수 있습니다. 두 백엔드를 함께 컴파일하고 `--device`로 장치별로 선택할 수 있습니다. 대부분의 프런트엔드가 이를 기반으로 합니다.',
+          '**LM Studio:** llama.cpp 런타임(Vulkan과 ROCm)을 통해 AMD GPU를 지원합니다. ROCm 런타임이 카드를 인식하지 못할 때는 Vulkan이 일반적인 대안입니다. (이 페이지의 이전 버전은 LM Studio를 NVIDIA 전용이라고 했으나 잘못된 내용이었습니다.)',
+          '**vLLM:** ROCm 빌드를 제공합니다(ROCm 7.14.0 릴리스는 vLLM 0.23.0을 나열합니다). 서빙과 배치 처리를 대상으로 하므로, 의존하기 전에 본인의 GPU 타깃에 대해 vLLM 문서를 확인하십시오.',
+          '**경험칙:** 편의성은 Ollama나 LM Studio, 세밀한 제어는 llama.cpp, 다중 사용자 서빙은 vLLM입니다.',
         ],
-      
         image: '/images/best-amd-gpus-local-llm-software-support-hero-ko.webp',
-        imageCaption: '2026년 기준 llama.cpp와 Text Generation WebUI가 신뢰할 수 있는 AMD 경로입니다 — Ollama의 ROCm 지원은 여전히 불안정합니다.',
+        imageCaption: 'AMD GPU에서 동작하는 로컬 LLM 도구: Ollama(ROCm v7, Vulkan), llama.cpp(HIP, Vulkan), LM Studio(Vulkan, ROCm), vLLM(ROCm).',
+      },
+      'run-quantized': {
+        id: 'run-quantized',
+        title: 'AMD GPU에서 양자화 LLM 추론은 어떻게 실행합니까?',
+        numberedItems: [
+          '**모델 크기를 VRAM에 맞춥니다.** Q4_K_M 파일은 파라미터 10억 개당 약 0.6 GB를 사용합니다(14B는 약 9 GB, 32B는 약 20 GB이며 추정치입니다). 컨텍스트 캐시용으로 2–4 GB를 남겨 두십시오.',
+          '**백엔드를 선택합니다.** Vulkan이 가장 빠른 시작입니다(그래픽 드라이버만 필요). 지원되는 Linux 환경에서는 ROCm(HIP)이 더 낫습니다.',
+          '**런타임을 설치합니다.** ROCm 경로라면 Linux에서 먼저 `amdgpu-install`로 ROCm v7을 설치한 뒤, Ollama(`curl -fsSL https://ollama.com/install.sh | sh`) 또는 LM Studio를 설치합니다.',
+          '**양자화 모델을 실행합니다.** 예를 들어 `ollama run qwen3:14b`, 또는 llama.cpp에서 `llama-server -m model.gguf -ngl 99`로 모든 레이어를 GPU에 올립니다.',
+          '**GPU 사용 여부를 확인합니다.** `ollama ps`가 100% GPU를 표시해야 하며 `rocm-smi`로 사용 중인 VRAM을 볼 수 있습니다. CPU로 표시되면 ROCm 설치를 다시 확인하거나 Vulkan으로 전환하십시오.',
+        ],
       },
       'when-buy-amd': {
-        title: 'AMD를 NVIDIA 대신 선택해야 하는 경우',
+        id: 'when-buy-amd',
+        title: '로컬 LLM용으로 언제 NVIDIA 대신 AMD를 사야 합니까?',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'NVIDIA 최신 카드보다 저렴하게 24–32 GB VRAM을 원한다면 AMD를 사고, CUDA 전용 도구에 의존하거나 설정에 시간을 쓰고 싶지 않다면 건너뛰십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '부족한 것이 VRAM이고 소프트웨어 경로(Linux ROCm 또는 Vulkan)가 맞는다면 AMD는 좋은 선택입니다. 로컬 LLM이 처음이고 그냥 동작하길 원한다면 NVIDIA로 시작하십시오.',
+          },
+        ],
         content: [
-          'AMD를 구입해야 하는 경우:',
-          '- 중고 RX 7900 XTX를 $450 미만에 발견한 경우(RTX 4090 대비 저평가된 가격).',
-          '- 이미 AMD 하드웨어를 보유하고 있으며 에코시스템 일관성을 원하는 경우.',
-          '- 클러스터를 구축 중이며 설정 편의성보다 달러당 연산 성능을 우선시하는 경우.',
-          'AMD를 구입하지 말아야 하는 경우:',
-          '- 플러그 앤 플레이 경험을 원하는 경우. NVIDIA CUDA가 더 빠르게 작동합니다.',
-          '- Ollama가 필요한 경우. 2026년 4월 테스트(Ollama v0.3.x, ROCm 6.x)에서 AMD ROCm 지원이 불안정했습니다 — 최신 현황은 github.com/ollama/ollama에서 확인하십시오.',
-          '- 시간이 제한되어 있는 경우. ROCm 디버깅에 10시간 이상 소요될 수 있습니다.',
+          '다음의 경우 AMD를 사십시오.',
+          '- 카드 한 장으로 32 GB를 더 저렴하게 원하는 경우: Radeon AI PRO R9700은 RTX 5090의 3분의 1~절반 가격입니다.',
+          '- 이미 지원되는 Radeon을 가지고 있거나 게임 성능도 좋은 카드를 원하는 경우.',
+          '- Linux를 쓰거나 Vulkan으로 충분하며, 사용하는 도구(Ollama, llama.cpp, LM Studio)가 이미 AMD를 지원하는 경우.',
+          '다음의 경우 NVIDIA를 사십시오.',
+          '- CUDA 전용 도구, 학습·파인튜닝 스택, 가장 빠른 프롬프트 처리가 필요한 경우.',
+          '- 중고 24 GB 카드를 비교하는 경우: 중고 RTX 3090은 중고 RX 7900 XTX와 가격이 비슷하므로 CUDA 지원이 결정 요인이 될 수 있습니다.',
+          '- 설정에 쓰는 시간을 최소화하고 싶은 경우.',
         ],
       },
-      'mistakes': {
-        title: 'AMD 도입 시 흔한 실수',
+      instinct: {
+        id: 'instinct',
+        title: 'AMD Instinct와 NVIDIA 데이터센터 GPU 중 LLM에는 무엇이 낫습니까?',
+        content: [
+          '**AMD Instinct(MI300X, MI350X)는 NVIDIA의 데이터센터 GPU와 경쟁하는 제품으로, 데스크톱이 아니라 서버용으로 구매합니다.** Ollama의 ROCm 목록에는 Instinct 카드가 포함되어 있고 ROCm 자체가 이들을 중심으로 만들어졌으므로, 소비자용 Radeon보다 지원 범위가 넓습니다.',
+          'MI300X는 가속기당 192 GB의 HBM3 메모리를 탑재하며(AMD 사양), 매우 큰 모델을 한 대에서 돌리는 데 적합합니다. 1인용 머신이라면 해당되는 AMD 선택지는 Radeon RX 또는 Radeon AI PRO입니다.',
+          '서버와 클라우드 결정에 대해서는 [기업용 GPU 서버 구매 가이드](/ko/local-llms/enterprise-gpu-server-buying-guide-2026)와 [클라우드 GPU 임대 비교](/ko/local-llms/cloud-gpu-rental-comparison-2026)를 참고하십시오.',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'AMD를 도입할 때 가장 흔한 실수는 무엇입니까?',
         items: [
-          'RX 6700(12GB)을 3060 12GB와 동급으로 착각하고 구입하는 것 — 20% 느리며 중고 시장에서 찾기도 어렵습니다.',
-          'ROCm이 CUDA처럼 "그냥 작동"한다고 가정하는 것 — 드라이버 및 커널 호환성 디버깅에 5-10시간을 계획하십시오.',
-          'AMD에서 Ollama를 사용하며 원활한 통합을 기대하는 것 — 2026년 4월 테스트(Ollama v0.3.x, ROCm 6.x)에서 ROCm 지원이 불안정했습니다. llama.cpp 또는 vLLM이 더 나은 선택입니다.',
+          '24 GB로 70B 모델을 돌릴 수 있다고 가정하는 것: 70B 모델은 Q4에서 약 40 GB 이상이 필요하므로 24 GB 카드 한 장은 약 30–35B가 한계입니다. 70B에는 카드 두 장 또는 32 GB R9700 두 장을 계획하십시오.',
+          'ROCm이 지원하지 않는 카드를 사는 것: 먼저 AMD 지원표와 Ollama 목록을 확인하십시오. RX 6000 시리즈는 AMD의 현재 Radeon 지원표에 없습니다.',
+          'Vulkan을 건너뛰는 것: ROCm이 카드를 인식하지 못하면 GPU를 쓸 수 없다고 결론짓기 전에 Vulkan 백엔드를 시도하십시오.',
+          '호가를 그대로 믿는 것: GPU와 메모리 가격은 2026년 동안 눈에 띄게 움직였습니다. 표시 가격이 아니라 실제 거래 가격을 비교하십시오.',
         ],
       },
-      'nextSteps': {
+      nextSteps: {
         id: 'next-steps',
         title: '다음 단계',
         items: [
-          '[로컬 LLM 예산 GPU 추천](/ko/local-llms/best-budget-gpus-local-llm) — 예산이 부족하신가요? 가성비 최고 GPU →',
-          '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple, CPU — 어떤 플랫폼이 맞나요? →',
-          '[필요한 VRAM은 얼마나 될까요?](/ko/local-llms/how-much-vram-local-llm) — GPU VRAM과 모델 크기 맞추기 →',
+          '[로컬 LLM용 가성비 GPU](/ko/local-llms/best-budget-gpus-local-llm) — 예산이 빠듯하십니까? LLM 추론에 가성비 좋은 GPU →',
+          '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple, CPU 중 어떤 플랫폼이 내 워크플로에 맞을까요? →',
+          '[VRAM은 얼마나 필요합니까?](/ko/local-llms/how-much-vram-local-llm) — GPU VRAM을 모델 크기에 맞추기 →',
         ],
       },
-      'faqSection': {
+      regionalContext: {
+        id: 'regional-context',
+        title: '지역별 데이터 법규는 AMD와 NVIDIA 선택에 어떤 영향을 줍니까?',
+        content: [
+          '**데이터 보호 의무를 바꾸는 것은 GPU 제조사가 아니라 추론을 로컬에서 실행하는지 여부입니다.** 기기에서 직접 추론하면 프롬프트와 문서가 사용자의 하드웨어에 머물러, 한국의 개인정보 보호법(PIPA)과 개인정보보호위원회(PIPC)의 감독, EU GDPR, 일본 APPI, 중국 PIPL 및 데이터안전법에 따른 국외 이전 위험을 줄일 수 있습니다. 다만 적법한 근거, 보관 규칙, 침해 대응 절차는 여전히 필요하므로 규제 대상 데이터는 정식 검토를 받으십시오.',
+          '수출 통제 규정은 일부 시장에서 AMD와 NVIDIA의 고성능 가속기를 모두 제한할 수 있습니다. 수입이나 구매 전에 해당 국가의 최신 규정을 확인하십시오.',
+        ],
+      },
+      faqSection: {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-            { q: '로컬 LLM용으로 AMD RX 6800 XT와 NVIDIA RTX 3080 중 어느 것을 구입해야 합니까?', a: '단순함을 중시한다면 RTX 3080(CUDA는 바로 작동합니다). 25% 더 나은 가성비를 원하고 5-10시간의 ROCm 설정을 감수할 수 있다면 RX 6800 XT를 권장합니다.' },
-            { q: 'AMD RX 7900 XTX가 RTX 4090보다 우수합니까?', a: '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $1,000-1,800 더 저렴합니다($800-1,000 대 $2,000-2,600 — NVIDIA가 2026년 단종한 이후 중고 RTX 4090 가격이 크게 상승). ROCm 설정이 트레이드오프입니다.' },
-            { q: 'AMD GPU로 Ollama를 사용할 수 있습니까?', a: '기술적으로는 가능합니다. 2026년 4월 테스트(Ollama v0.3.x, ROCm 6.x)에서 ROCm 지원이 불안정했습니다 — 일부 구성에서 GPU 감지 실패, CPU 폴백이 잦았습니다. 사용 전 github.com/ollama/ollama에서 최신 AMD 호환성 목록을 확인하십시오; 안정적인 AMD 추론에는 vLLM 또는 llama.cpp가 더 안전한 경로입니다.' },
-            { q: '2026년 로컬 LLM을 위한 최적의 AMD 경로는 무엇입니까?', a: 'Llama.cpp(HIP 백엔드) + Text Generation WebUI입니다. 두 도구 모두 AMD 지원이 견실합니다. Ollama는 피하십시오.' },
-            { q: 'AMD ROCm에 Ubuntu가 필요합니까, 아니면 Windows에서도 작동합니까?', a: 'Windows 지원(HIP on Windows)도 있지만 더 최신이고 버그가 많습니다. Ubuntu가 권장 경로입니다.' },
-            { q: 'RX 6700, RX 6700 XT, 또는 6750은 7B 모델에 적합합니까?', a: 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. RX 6700 XT(12GB, 동일한 VRAM)는 non-XT 버전보다 클럭이 약 15% 빠르지만 여전히 6800 XT에는 못 미칩니다. 둘 다 $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.' },
-            { q: '로컬 LLM에 RX 6900 XT를 구매할 가치가 있습니까?', a: '그다지 없습니다. RX 6900 XT(16GB)는 RX 6800 XT보다 약간 더 빠를 뿐이고, 중고 매물도 더 희귀하며, 가격은 6800 XT의 $300-350보다 높은 $420-500 수준입니다. 가격 차이만큼의 가치가 없습니다 -- 대신 6800 XT를 구매하십시오.' },
-            { q: 'AMD Radeon 680M은 로컬 LLM을 실행하기에 적합합니까?', a: 'Radeon 680M은 Ryzen 6000/7000 모바일 APU에 내장된 통합 그래픽으로, 별도의 디스크리트 GPU인 RX 6800M이나 RX 6800 XT와는 다른 제품입니다. 전용 VRAM이 없고 대신 시스템 RAM을 공유하므로, 작은 양자화 모델(대략 3B 매개변수 이하, Q4 기준)에서만 실용적이며 이 페이지의 어떤 디스크리트 GPU보다도 눈에 띄게 느립니다. 본격적인 로컬 LLM 사용에는 RX 6800 XT 같은 디스크리트 GPU가 더 나은 선택입니다.' },
-            { q: '하나의 시스템에서 AMD와 NVIDIA GPU를 혼용할 수 있습니까?', a: '이론적으로는 가능하지만 관리가 매우 복잡합니다. 각 GPU마다 별도의 CUDA/HIP 런타임이 필요합니다. 권장하지 않습니다.' },
-            { q: 'AMD RX 7900 XTX의 VRAM 용량은 얼마입니까?', a: 'AMD RX 7900 XTX는 24GB GDDR6 VRAM을 탑재하고 있습니다. RTX 4090과 동일한 용량으로, Q4 양자화 기준 70B 모델을 실행할 수 있는 가장 강력한 AMD 소비자용 카드입니다.' },
-            { q: 'AMD ROCm은 프로덕션 LLM 추론에 충분히 안정적입니까?', a: 'ROCm 6.x(2025)는 ROCm 5.x보다 훨씬 안정적입니다. 프로덕션 환경에서는 Ubuntu 22.04+ 위의 llama.cpp HIP 백엔드 스택이 가장 신뢰성이 높습니다. AMD에서 Ollama를 프로덕션 워크로드에 사용하는 것은 피하십시오.' },
-            { q: '$400 이하에서 가장 적합한 AMD GPU는 무엇입니까?', a: 'AMD RX 6800 XT(16GB, 중고 약 $320-400)가 $400 이하에서 최고의 가성비 AMD GPU입니다. llama.cpp HIP 백엔드를 통해 Q4 기준 13B 모델을 원활하게, Q8 기준 7B 모델을 편안하게 실행합니다.' },
-          ],
+          {
+            q: 'AMD GPU는 로컬 LLM 실행에 적합합니까?',
+            a: '네, 다만 조건이 있습니다. RX 7900 XTX(24 GB)와 Radeon AI PRO R9700(32 GB) 같은 AMD 카드는 Ollama, LM Studio, llama.cpp에서 ROCm 또는 Vulkan으로 양자화 LLM을 실행합니다. NVIDIA CUDA는 여전히 소프트웨어 지원이 더 넓고 프롬프트 처리가 빠르므로, 달러당 VRAM이 중요할 때 AMD가 적합합니다.',
+          },
+          {
+            q: '로컬 LLM용으로 가장 좋은 AMD GPU는 무엇입니까?',
+            a: 'RX 7900 XTX가 종합적으로 가장 좋습니다. 24 GB VRAM, 960 GB/s 대역폭을 갖추고 AMD의 ROCm 7.2.1 지원표와 Ollama에서 지원됩니다. 카드당 VRAM을 더 늘리려면 Radeon AI PRO R9700(32 GB), 7B–14B 모델이라면 RX 9070 XT(16 GB)로 충분합니다.',
+          },
+          {
+            q: '로컬 LLM에는 AMD와 NVIDIA 중 무엇을 사야 합니까?',
+            a: 'CUDA 호환성과 최소한의 설정을 원하면 NVIDIA를 사십시오. 달러당 VRAM을 더 원하면 AMD, 특히 RTX 5090 대비 32 GB R9700을 고르십시오. 중고 RX 7900 XTX는 중고 RTX 3090과 가격이 비슷하므로 그 경우에는 소프트웨어 지원이 결정 요인입니다.',
+          },
+          {
+            q: 'Ollama는 AMD GPU에서 동작합니까?',
+            a: '네. Ollama는 Linux에서 ROCm v7 드라이버가 필요하며 RX 9070 XT, RX 7900 XTX, RX 6800 XT, Radeon AI PRO R9700 등을 나열합니다. Windows에서는 ROCm 목록이 RX 7000 시리즈를 포함하고, Vulkan 백엔드를 설치하면 Vulkan이 기본으로 활성화됩니다.',
+          },
+          {
+            q: 'LM Studio는 AMD GPU를 지원합니까?',
+            a: '네. LM Studio는 llama.cpp 런타임인 Vulkan 또는 ROCm으로 AMD GPU를 실행합니다. ROCm 런타임이 카드를 인식하지 못하면 런타임을 Vulkan으로 바꾸십시오. 이 페이지의 이전 버전은 LM Studio를 NVIDIA 전용이라고 잘못 안내했습니다.',
+          },
+          {
+            q: 'AMD GPU에서 양자화 LLM 추론은 어떻게 실행합니까?',
+            a: 'VRAM에 들어가는 양자화 모델(Q4_K_M은 파라미터 10억 개당 약 0.6 GB)을 고르고, Ollama 또는 LM Studio를 설치한 뒤 Vulkan이나 ROCm을 사용합니다. Linux에서는 amdgpu-install로 ROCm v7을 설치하고 모델을 실행한 다음 ollama ps 또는 rocm-smi로 GPU 사용을 확인하십시오.',
+          },
+          {
+            q: '로컬 LLM에는 RX 9070 XT와 RX 7900 XTX 중 무엇이 낫습니까?',
+            a: '로컬 LLM에는 RX 7900 XTX가 더 낫습니다. 24 GB는 Q4에서 약 30–35B 모델까지 담지만 RX 9070 XT의 16 GB는 약 14B–24B가 한계입니다. RX 9070 XT는 더 최신이고 저렴하므로 16 GB로 충분하다면 선택하십시오.',
+          },
+          {
+            q: '$500 이하에서 가장 좋은 AMD GPU는 무엇입니까?',
+            a: '중고 약 $380–410의 RX 6800 XT(16 GB)가 $500 이하에서 가장 가성비 좋은 AMD 카드입니다. 7B–14B 모델을 Q4–Q8로 실행하지만 AMD의 현재 Radeon ROCm 지원표에는 없으므로 Ollama의 Linux ROCm 경로 또는 Vulkan을 전제로 하십시오.',
+          },
+          {
+            q: 'Radeon AI PRO R9700은 로컬 AI에 살 만합니까?',
+            a: '카드 한 장에 32 GB가 필요하다면 그렇습니다. 권장가는 $1,299로 RTX 5090의 약 $3,700–4,300보다 낮지만, 보고된 실거래가는 더 높고 프롬프트 처리는 더 느립니다. R9700 두 장이면 70B 모델의 Q4를 위한 64 GB가 됩니다.',
+          },
+          {
+            q: 'AMD ROCm에는 Linux가 필요합니까, Windows에서도 동작합니까?',
+            a: 'Linux가 ROCm 지원이 더 잘 갖춰진 경로입니다. AMD 지원표는 Ubuntu 24.04.4, Ubuntu 22.04.5, RHEL 10.1을 나열합니다. Windows에서는 Ollama의 ROCm 목록이 RX 7000 시리즈를 포함하며, 다른 카드는 Vulkan 백엔드를 사용합니다.',
+          },
+          {
+            q: 'LLM에는 AMD Instinct와 NVIDIA GPU 중 무엇이 낫습니까?',
+            a: 'Instinct(MI300X, MI350X)는 NVIDIA의 데이터센터 GPU와 경쟁하며 서버용으로 구매하고, MI300X는 192 GB HBM3를 갖추고 있습니다. 데스크톱 한 대에는 Radeon 또는 Radeon AI PRO가 해당되는 AMD 선택지이며, NVIDIA의 CUDA 생태계는 여전히 더 넓습니다.',
+          },
+          {
+            q: 'AMD는 LLM뿐 아니라 딥러닝과 머신러닝에도 적합합니까?',
+            a: '추론에는 적합합니다. ROCm은 PyTorch 빌드를 제공합니다(ROCm 7.14.0 릴리스는 PyTorch 2.12.0을 나열합니다). CUDA를 전제로 하는 학습과 연구 코드에서는 NVIDIA 생태계가 여전히 더 넓으므로, 구매 전에 사용하는 프레임워크의 AMD 지원을 확인하십시오.',
+          },
+          {
+            q: 'Ryzen AI Max+ 395 미니 PC가 단독 AMD GPU보다 낫습니까?',
+            a: '모델 크기에 따라 다릅니다. Ryzen AI Max+ 395 시스템은 최대 128 GB 통합 메모리를 제공하지만 대역폭은 256 GB/s에 그치므로 큰 Mixture-of-Experts 모델에 적합하고, VRAM에 들어가는 모델에서는 단독 카드가 토큰을 더 빠르게 생성합니다.',
+          },
+        ],
       },
-      'relatedReading': {
-        title: '관련 자료',
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 글',
         items: [
-          '[로컬 LLM용 저예산 최고 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
+          '[로컬 LLM용 가성비 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
           '[로컬 LLM용 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms)',
+          '[로컬 LLM용 AMD 미니 PC 추천](/ko/local-llms/best-amd-mini-pc-local-llm-2026)',
           '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[Text Generation WebUI vs vLLM vs Llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
-          '[로컬 LLM용 노트북 vs 데스크톱](/ko/local-llms/laptop-vs-desktop-local-llm) — AI를 위한 노트북과 데스크톱의 비용 및 성능 비교.',
+          '[로컬 LLM: 노트북 대 데스크톱](/ko/local-llms/laptop-vs-desktop-local-llm) — AI용 노트북과 데스크톱의 비용 및 성능 비교.',
         ],
       },
-      'sources': {
-        title: '참고 자료',
+      sources: {
+        id: 'sources',
+        title: '출처',
         items: [
-          'AMD ROCm 공식 문서 및 GitHub: HIP 컴파일러, 드라이버 호환성 매트릭스, LLM 추론 예제',
-          'vLLM GitHub: AMD/ROCm 백엔드 구현 및 지원 현황(v0.6.0+)',
-          'Llama.cpp GitHub: AMD GPU 지원을 위한 HIP 백엔드',
-          'AMD GPU는 초당 토큰 속도가 우수하지만, 속도만으로 응답 품질이 결정되지는 않습니다. 모델에게 무엇을 묻느냐가 응답 속도만큼 중요합니다. [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets)에서는 GPU 메모리 한계 내에서 긴 요청을 구성하는 방법을 설명합니다.',
+          '[Ollama GPU 문서](https://docs.ollama.com/gpu): AMD ROCm v7 요구 사항, 지원되는 Radeon, Radeon AI PRO, Radeon PRO, Ryzen AI, Instinct 카드, Vulkan 백엔드',
+          '[Ollama 릴리스](https://github.com/ollama/ollama/releases): v0.40.10, 2026년 10월 23일',
+          '[Radeon 및 Ryzen용 AMD ROCm — Linux 호환성](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/compatibility/compatibilityrad/native_linux/native_linux_compatibility.html): ROCm 7.2.1이 지원하는 Radeon GPU와 배포판',
+          '[ROCm 릴리스](https://github.com/ROCm/ROCm/releases/tag/rocm-7.14.0): ROCm 7.14.0, 2026년 7월 16일, 프레임워크 버전',
+          '[llama.cpp 빌드 문서](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md): HIP 및 Vulkan 백엔드',
+          'AMD 제품 사양: [RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)',
+          '가격 스냅샷(미국, 2026년 9–10월): 공개 GPU 가격 추적 사이트와 제3자 리뷰이며, 호가이므로 빠르게 변합니다',
+          'AMD GPU는 높은 초당 토큰 속도를 내지만 속도만으로 응답 품질이 결정되지는 않습니다. 모델에 무엇을 묻는지가 응답 속도만큼 중요합니다. [컨텍스트 윈도우 설명](https://www.promptquorum.com/ko/prompt-engineering/context-windows-explained-why-ai-forgets)에서 GPU 메모리 한도 안에서 긴 요청을 구성하는 방법을 다룹니다.',
         ],
       },
-    },
-    itemListSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      'url': 'https://www.promptquorum.com/ko/local-llms/best-amd-gpus-local-llm',
-      'inLanguage': 'ko',
-      name: '로컬 LLM용 최고의 AMD GPU',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT(16GB, 중고 $320-400)와 RX 7900 XTX(24GB, 중고 $800-1,000)는 로컬 LLM에 실질적으로 사용 가능한 유일한 AMD 옵션입니다.' },
-        { '@type': 'ListItem', position: 2, name: '달러당 성능: AMD는 NVIDIA보다 20-30% 저렴하지만, 소프트웨어 설정 부담으로 5-10시간이 추가로 소요됩니다.' },
-        { '@type': 'ListItem', position: 3, name: 'Ollama: AMD 지원이 제한적입니다(ROCm 경로는 2026년 4월 테스트, Ollama v0.3.x / ROCm 6.x 기준 불안정; CPU 폴백 속도 느림). github.com/ollama/ollama에서 최신 AMD 호환성을 확인하십시오.' },
-        { '@type': 'ListItem', position: 4, name: 'vLLM: v0.6.0부터 AMD ROCm 완전 지원. 단, 수동 드라이버 설치가 필요합니다. 설정을 완료하면 잘 작동합니다.' },
-        { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: ROCm을 통한 AMD 지원이 우수합니다. AMD에서 최고의 사용자 경험을 제공합니다.' },
-        { '@type': 'ListItem', position: 6, name: 'Llama.cpp: AMD 네이티브 지원(HIP 백엔드). 안정적인 성능. AMD에서 권장되는 경로입니다.' },
-        { '@type': 'ListItem', position: 7, name: '설정 비용: ROCm 드라이버 디버깅, HIPCC 컴파일, 커널 호환성 확인에 5-10시간을 계획하십시오.' },
-        { '@type': 'ListItem', position: 8, name: '결론(2026년 4월): AMD 하드웨어를 이미 보유하고 있거나 저렴한 중고 제품을 발견한 경우에만 AMD를 선택하십시오. 그렇지 않으면 NVIDIA CUDA가 여전히 더 간편합니다.' },
-      ],
     },
   },
-};
+}
