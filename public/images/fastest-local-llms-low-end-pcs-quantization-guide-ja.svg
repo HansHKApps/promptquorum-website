@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">量子化ガイド：サイズ・速度・品質</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Q4_K_Mが標準的な選択。モデルがRAMに収まらない場合のみQ3/Q2へ。</text>
+  <text x="38" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">レベル</text>
+  <text x="130" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Q4_K_M比サイズ</text>
+  <text x="290" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">速度</text>
+  <text x="420" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">品質</text>
+  <text x="570" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">判定</text>
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="38" y="106" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q8</text>
+  <text x="130" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">約2倍</text>
+  <text x="290" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">遅い</text>
+  <text x="420" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">ほぼ無劣化</text>
+  <text x="570" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">割に合わない</text>
+  <line x1="18" y1="116" x2="782" y2="116" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="18" y="121" width="764" height="38" fill="#F7F2FA" rx="2"/>
+  <text x="38" y="144" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#6750A4">Q4_K_M ★</text>
+  <text x="130" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">基準</text>
+  <text x="290" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">基準</text>
+  <text x="420" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">良いバランス</text>
+  <text x="570" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4">推奨 ★</text>
+  <line x1="18" y1="159" x2="782" y2="159" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="38" y="185" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q3</text>
+  <text x="130" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">小さい</text>
+  <text x="290" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">速い</text>
+  <text x="420" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#B07D00">劣化大</text>
+  <text x="570" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#B07D00">Q4_K_Mが入らない時のみ</text>
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="38" y="221" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q2</text>
+  <text x="130" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">最小</text>
+  <text x="290" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">最速</text>
+  <text x="420" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">明らかに劣る</text>
+  <text x="570" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">最後の手段</text>
+  <line x1="18" y1="231" x2="782" y2="231" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="18" y="245" width="764" height="60" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="38" y="267" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">基本ルール：まずモデルサイズを選び、次にQ4_K_Mを使う。</text>
+  <text x="38" y="287" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Q4_K_Mの小型モデルは、Q2に圧縮した大型モデルより通常優れる。</text>
+  <text x="38" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">ファイルが小さいほどCPUで高速（ほぼ比例：速度 ≈ メモリ帯域幅 ÷ ファイルサイズ）。</text>
+  <text x="400" y="338" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>

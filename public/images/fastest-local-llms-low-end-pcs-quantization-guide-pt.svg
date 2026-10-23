@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Guia de quantização: tamanho, velocidade e qualidade</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Q4_K_M é a escolha padrão. Só desça para Q3/Q2 se o modelo não couber na RAM.</text>
+  <text x="38" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Nível</text>
+  <text x="130" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Tamanho vs Q4_K_M</text>
+  <text x="290" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Velocidade</text>
+  <text x="420" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Qualidade</text>
+  <text x="570" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Veredito</text>
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="38" y="106" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q8</text>
+  <text x="130" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">~2× maior</text>
+  <text x="290" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">mais lento</text>
+  <text x="420" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">quase sem perda</text>
+  <text x="570" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">raramente vale a pena</text>
+  <line x1="18" y1="116" x2="782" y2="116" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="18" y="121" width="764" height="38" fill="#F7F2FA" rx="2"/>
+  <text x="38" y="144" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#6750A4">Q4_K_M ★</text>
+  <text x="130" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">referência</text>
+  <text x="290" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">referência</text>
+  <text x="420" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">bom equilíbrio</text>
+  <text x="570" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4">recomendado ★</text>
+  <line x1="18" y1="159" x2="782" y2="159" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="38" y="185" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q3</text>
+  <text x="130" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">menor</text>
+  <text x="290" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">mais rápido</text>
+  <text x="420" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#B07D00">mais perda</text>
+  <text x="570" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#B07D00">só se Q4_K_M não couber</text>
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="38" y="221" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q2</text>
+  <text x="130" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">o menor</text>
+  <text x="290" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">o mais rápido</text>
+  <text x="420" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">claramente pior</text>
+  <text x="570" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">último recurso</text>
+  <line x1="18" y1="231" x2="782" y2="231" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="18" y="245" width="764" height="60" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="38" y="267" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">Regra-chave: escolha primeiro o tamanho do modelo e depois Q4_K_M.</text>
+  <text x="38" y="287" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Um modelo pequeno em Q4_K_M costuma superar um maior espremido em Q2.</text>
+  <text x="38" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Arquivo menor = mais rápido na CPU, aproximadamente em proporção (velocidade ≈ largura de banda ÷ tamanho).</text>
+  <text x="400" y="338" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>

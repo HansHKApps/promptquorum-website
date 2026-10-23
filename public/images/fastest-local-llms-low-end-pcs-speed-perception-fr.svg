@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 404" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="404" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qu'est-ce qui est vraiment « rapide » pour les LLM locaux ?</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Seuils de vitesse pour un usage interactif. Sous 15 tok/s → essayez un modèle plus petit avant d'acheter du matériel.</text>
+  <rect x="18" y="62" width="764" height="70" rx="6" fill="#FFF3F3" stroke="#EA4335" stroke-width="1.5"/>
+  <text x="38" y="84" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#EA4335">Sous 10 tok/s → Semble cassé</text>
+  <text x="38" y="105" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Les mots apparaissent un par un avec des pauses notables. Inutilisable pour un chat interactif.</text>
+  <text x="38" y="122" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Solution : passer à un modèle plus petit.</text>
+  <rect x="18" y="142" width="764" height="70" rx="6" fill="#FFFBF0" stroke="#F4B400" stroke-width="1.5"/>
+  <text x="38" y="164" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#B07D00">15–25 tok/s → Acceptable</text>
+  <text x="38" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Vitesse lisible pour la plupart des utilisateurs. Bon pour les questions-réponses, les résumés</text>
+  <text x="38" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">et l'aide au code. Léger décalage, mais utilisable.</text>
+  <rect x="18" y="222" width="370" height="82" rx="6" fill="#F0FFF4" stroke="#34A853" stroke-width="1.5"/>
+  <text x="38" y="244" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853">30+ tok/s → Fluide</text>
+  <text x="38" y="265" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">On dirait un vrai assistant. Confortable pour</text>
+  <text x="38" y="282" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">toutes les tâches interactives, y compris la</text>
+  <text x="38" y="299" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">revue de code.</text>
+  <rect x="412" y="222" width="370" height="82" rx="6" fill="#F0FFF4" stroke="#34A853" stroke-width="1.5"/>
+  <text x="432" y="244" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853">60+ tok/s → Instantané</text>
+  <text x="432" y="265" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Plus rapide que la lecture. Idéal pour</text>
+  <text x="432" y="282" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">l'autocomplétion en temps réel et l'itération</text>
+  <text x="432" y="299" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">rapide.</text>
+  <text x="400" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Exemples de matériel (vitesses estimées) :</text>
+  <text x="115" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">CPU, 4 Go RAM : 25–40 t/s</text>
+  <text x="295" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">CPU, 8 Go RAM : 15–25 t/s</text>
+  <text x="480" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">CPU, 16 Go RAM : 8–15 t/s</text>
+  <text x="670" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">GPU dédié : 5–10× plus rapide</text>
+  <line x1="18" y1="362" x2="782" y2="362" stroke="#E8DEF8" stroke-width="2"/>
+  <text x="18" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">0</text>
+  <text x="140" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">10</text>
+  <text x="290" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#B07D00">25</text>
+  <text x="440" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853">40</text>
+  <text x="590" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853">60</text>
+  <text x="735" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853">80+ t/s</text>
+  <text x="400" y="398" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>

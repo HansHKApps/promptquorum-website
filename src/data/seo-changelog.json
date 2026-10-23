@@ -5283,5 +5283,33 @@
       "t14": "2026-11-06",
       "t28": "2026-11-20"
     }
+  },
+  {
+    "id": "5dcb8bc2-6e0b-49ce-9d00-53824752f612",
+    "slug": "/local-llms/fastest-local-llms-low-end-pcs",
+    "date": "2026-10-23T13:08:38.967Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "The fastest local AI model without a GPU: Qwen3 1.7B at 25-40 tok/s in Ollama. Tested lightweight open-source LLMs for 4-16 GB RAM, CPU-only and Intel iGPU.",
+        "new": "Fastest local AI model with no GPU: Qwen3 1.7B at an estimated 25-40 tok/s in Ollama. Picks for 4-16 GB RAM, CPU-only or Intel iGPU, plus RAG on 2 GB."
+      }
+    ],
+    "reason": "Page-updater refresh 2026-10-23: removed unbacked 'Tested' claim from metaDescription, added estimate + RAG-on-2GB wording; new 2GB-RAM RAG section targets query with 533 impressions (pos 9.2); GSC mode (EN/JA/KO/DE exports)",
+    "queries": [
+      "fastest local llm",
+      "local ai for low end pc",
+      "fast local llm",
+      "cpu only llm",
+      "local rag on laptop 2gb ram 2026"
+    ],
+    "baseline": {
+      "position": 5.07,
+      "impressions": 35045,
+      "clicks": 438,
+      "ctr": 0.012498216578684548,
+      "period": "28d to 2026-10-21"
+    },
+    "deployedAt": null
   }
 ]
