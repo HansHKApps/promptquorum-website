@@ -15,12 +15,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-en.webp',
     title: 'Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac',
-    seoTitle: 'Secret AI Review: Offline AI Chat for iPhone and Android',
+    seoTitle: 'Secret AI Review: Offline AI Chat for iPhone, Android, Mac',
     intro: 'Secret AI is a private AI chat app from [Secret AI L.L.C.](https://secretai.io), a company registered in Wyoming, that runs open-source language models on the phone or Mac and adds custom characters, Skills and MCP tools. It is available for [Android](https://play.google.com/store/apps/details?id=io.secretai.llm), [iPhone and iPad](https://apps.apple.com/us/app/secret-ai/id6744668980), and the App Store lists a Mac version. This review is based on the two store listings, the official website and its privacy policy, checked on 19 October 2026; PromptQuorum has not tested the app hands-on. Other products share the name Secret AI; this review covers only the app with the Android package io.secretai.llm.',
     metaDescription: 'Secret AI review: private offline AI chat for iPhone, Android and Mac with characters, Skills and MCP tools. Free tier, paid plans, source not published.',
     twitterDescription: 'Secret AI review: private offline AI chat for iPhone, Android and Mac. Free tier, Plus and Pro plans, closed source, claims not yet tested.',
@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**Secret AI is a phone and Mac app that, per its developer, runs open-source AI models on the device so chats, characters and photos stay private.** The source code is not published, and the privacy policy was last updated in May 2025, before the app added tools, Skills and MCP servers.',
+    leadAnswerBlock: '**Secret AI is a phone and Mac app that, per its developer, runs open-source AI models on the device so chats, characters and photos stay private; MCP tool calls and optional remote model servers do send data off the device.** The source code is not published, and the privacy policy was last updated in May 2025, before the app added tools, Skills and MCP servers.',
     quickAnswerTop: {
       en: {
         question: 'Is Secret AI free, and does it work offline?',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'You install the app, download an AI model once, and then chat, talk to custom characters or send photos; according to the developer, nothing leaves the device.',
+            text: 'You install the app, download an AI model once, and then chat, talk to custom characters or send photos; according to the developer, chats are generated on the device, while MCP tool calls and an optional self-hosted server or Ollama connection send data off it.',
           },
         ],
         items: [
@@ -200,7 +200,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Three engines and three chips.** llama.cpp (GGUF) runs on the CPU in the free plan; the Pro plan adds GPU and NPU acceleration and the MNN and MLX engines.',
           '**Image input.** Photos are analysed on the device with vision models such as Qwen3.5 VL or Gemma 4; unlimited image understanding is part of the Pro plan.',
           '**Characters, Skills and MCP.** Characters carry a name, avatar and personality, and a character card can be imported; a Skill is a SKILL.md file you switch on per chat; tools stay off until enabled and each is approved the first time it runs. The free plan allows one MCP server, the paid plans more.',
-          '**Voice input and output.** Neither the store listings nor the website describe it.',
         ],
       },
       privacy: {
@@ -226,6 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**The Mac build.** It is unclear whether the Mac version is native or the iPad app running on Apple silicon.',
           '**Advertising.** The Plus plan lists "No Ads", but the listings do not say where ads appear in the free plan, and the Data safety section declares no data collection.',
           '**Independent feedback.** No third-party reviews or discussion were found beyond the store ratings and the testimonials on the website.',
+          '**Voice input and output.** Neither the store listings nor the website describe it.',
         ],
       },
       vsAlternatives: {
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/secret-ai-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
-      dateModified: '2026-10-19',
+      dateModified: '2026-10-23',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -390,12 +390,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-de.webp',
     title: 'Secret AI im Test: Privater Offline-KI-Chat für iPhone, Android und Mac',
-    seoTitle: 'Secret AI im Test: Offline-KI-Chat für iPhone und Android',
+    seoTitle: 'Secret AI im Test: Offline-KI für iPhone, Android und Mac',
     intro: 'Secret AI ist eine private KI-Chat-App von [Secret AI L.L.C.](https://secretai.io), einem in Wyoming eingetragenen Unternehmen. Sie führt quelloffene Sprachmodelle auf dem Smartphone oder Mac aus und ergänzt eigene Charaktere, Skills und MCP-Tools. Sie ist für [Android](https://play.google.com/store/apps/details?id=io.secretai.llm) sowie für [iPhone und iPad](https://apps.apple.com/us/app/secret-ai/id6744668980) erhältlich, und der App Store führt eine Mac-Version auf. Dieser Test beruht auf den beiden Store-Einträgen, der offiziellen Website und deren Datenschutzerklärung, geprüft am 19. Oktober 2026; PromptQuorum hat die App nicht selbst ausprobiert. Mehrere Produkte tragen den Namen Secret AI; dieser Test behandelt nur die App mit dem Android-Paket io.secretai.llm.',
     metaDescription: 'Secret AI im Test: private Offline-KI-Chat-App für iPhone, Android und Mac mit Charakteren, Skills und MCP-Tools. Gratis mit Limit, Quellcode nicht offen.',
     twitterDescription: 'Secret AI im Test: privater Offline-KI-Chat für iPhone, Android und Mac. Kostenloser Einstieg, Plus und Pro, Quellcode nicht veröffentlicht, ungetestet.',
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**Secret AI ist laut Entwickler eine App für Smartphone und Mac, die quelloffene KI-Modelle auf dem Gerät ausführt, sodass Chats, Charaktere und Fotos privat bleiben.** Der Quellcode ist nicht veröffentlicht, und die Datenschutzerklärung wurde zuletzt im Mai 2025 aktualisiert, also bevor die App Tools, Skills und MCP-Server erhielt.',
+    leadAnswerBlock: '**Secret AI ist laut Entwickler eine App für Smartphone und Mac, die quelloffene KI-Modelle auf dem Gerät ausführt, sodass Chats, Charaktere und Fotos privat bleiben; MCP-Tool-Aufrufe und optionale entfernte Modellserver senden jedoch Daten vom Gerät.** Der Quellcode ist nicht veröffentlicht, und die Datenschutzerklärung wurde zuletzt im Mai 2025 aktualisiert, also bevor die App Tools, Skills und MCP-Server erhielt.',
     quickAnswerTop: {
       de: {
         question: 'Ist Secret AI kostenlos, und funktioniert es offline?',
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Sie installieren die App, laden einmal ein KI-Modell herunter und chatten dann, sprechen mit eigenen Charakteren oder senden Fotos; laut Entwickler verlässt nichts das Gerät.',
+            text: 'Sie installieren die App, laden einmal ein KI-Modell herunter und chatten dann, sprechen mit eigenen Charakteren oder senden Fotos; laut Entwickler werden Chats auf dem Gerät erzeugt, während MCP-Tool-Aufrufe und eine optionale Anbindung an einen selbst betriebenen Server oder Ollama Daten vom Gerät senden.',
           },
         ],
         items: [
@@ -575,7 +575,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Drei Engines und drei Chips.** llama.cpp (GGUF) läuft im kostenlosen Plan auf der CPU; der Pro-Plan ergänzt GPU- und NPU-Beschleunigung sowie die Engines MNN und MLX.',
           '**Bildeingabe.** Fotos werden auf dem Gerät mit Vision-Modellen wie Qwen3.5 VL oder Gemma 4 analysiert; unbegrenzte Bildanalyse gehört zum Pro-Plan.',
           '**Charaktere, Skills und MCP.** Charaktere haben Namen, Avatar und Persönlichkeit, und eine Charakterkarte lässt sich importieren; ein Skill ist eine SKILL.md-Datei, die Sie pro Chat aktivieren; Tools bleiben aus, bis sie eingeschaltet werden, und jedes wird beim ersten Ausführen freigegeben. Der kostenlose Plan erlaubt einen MCP-Server, die kostenpflichtigen Pläne mehr.',
-          '**Spracheingabe und -ausgabe.** Weder die Store-Einträge noch die Website beschreiben sie.',
         ],
       },
       privacy: {
@@ -601,6 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Die Mac-Version.** Es ist unklar, ob die Mac-Version nativ ist oder die iPad-App auf Apple-Silicon-Chips läuft.',
           '**Werbung.** Der Plus-Plan führt „No Ads“ auf, doch die Einträge sagen nicht, wo im kostenlosen Plan Werbung erscheint, und der Abschnitt „Datensicherheit“ erklärt, dass keine Daten erhoben werden.',
           '**Unabhängige Rückmeldungen.** Außer den Store-Bewertungen und den Erfahrungsberichten auf der Website wurden keine Tests oder Diskussionen Dritter gefunden.',
+          '**Spracheingabe und -ausgabe.** Weder die Store-Einträge noch die Website beschreiben sie.',
         ],
       },
       vsAlternatives: {
@@ -693,12 +693,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-es.webp',
     title: 'Reseña de Secret AI: chat de IA privado y sin conexión para iPhone, Android y Mac',
-    seoTitle: 'Reseña de Secret AI: chat de IA sin conexión en el móvil',
+    seoTitle: 'Secret AI: chat de IA offline para iPhone, Android y Mac',
     intro: 'Secret AI es una app de chat de IA privado de [Secret AI L.L.C.](https://secretai.io), una empresa registrada en Wyoming, que ejecuta modelos de lenguaje de código abierto en el teléfono o en el Mac y añade personajes personalizados, Skills y herramientas MCP. Está disponible para [Android](https://play.google.com/store/apps/details?id=io.secretai.llm) y para [iPhone e iPad](https://apps.apple.com/us/app/secret-ai/id6744668980), y la App Store indica una versión para Mac. Esta reseña se basa en las dos fichas de las tiendas, el sitio web oficial y su política de privacidad, consultados el 19 de octubre de 2026; PromptQuorum no ha probado la app personalmente. Otros productos comparten el nombre Secret AI; esta reseña trata solo la app con el paquete de Android io.secretai.llm.',
     metaDescription: 'Reseña de Secret AI: app de chat de IA privado y sin conexión para iPhone, Android y Mac con personajes, Skills y MCP. Plan gratuito; código no publicado.',
     twitterDescription: 'Reseña de Secret AI: chat de IA privado y sin conexión para iPhone, Android y Mac. Plan gratuito, planes Plus y Pro, código cerrado, sin probar aún.',
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**Secret AI es una app para móvil y Mac que, según su desarrollador, ejecuta modelos de IA de código abierto en el dispositivo para que los chats, los personajes y las fotos se mantengan privados.** El código fuente no está publicado, y la política de privacidad se actualizó por última vez en mayo de 2025, antes de que la app añadiera herramientas, Skills y servidores MCP.',
+    leadAnswerBlock: '**Secret AI es una app para móvil y Mac que, según su desarrollador, ejecuta modelos de IA de código abierto en el dispositivo para que los chats, los personajes y las fotos se mantengan privados; las llamadas a herramientas MCP y los servidores de modelos remotos opcionales sí envían datos fuera del dispositivo.** El código fuente no está publicado, y la política de privacidad se actualizó por última vez en mayo de 2025, antes de que la app añadiera herramientas, Skills y servidores MCP.',
     quickAnswerTop: {
       es: {
         question: '¿Secret AI es gratis y funciona sin conexión?',
@@ -805,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Instalas la app, descargas una vez un modelo de IA y luego chateas, hablas con personajes personalizados o envías fotos; según el desarrollador, nada sale del dispositivo.',
+            text: 'Instalas la app, descargas una vez un modelo de IA y luego chateas, hablas con personajes personalizados o envías fotos; según el desarrollador, los chats se generan en el dispositivo, mientras que las llamadas a herramientas MCP y una conexión opcional a un servidor propio u Ollama envían datos fuera de él.',
           },
         ],
         items: [
@@ -878,7 +878,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tres motores y tres chips.** llama.cpp (GGUF) se ejecuta en la CPU en el plan gratuito; el plan Pro añade aceleración por GPU y NPU y los motores MNN y MLX.',
           '**Entrada de imágenes.** Las fotos se analizan en el dispositivo con modelos de visión como Qwen3.5 VL o Gemma 4; la comprensión ilimitada de imágenes forma parte del plan Pro.',
           '**Personajes, Skills y MCP.** Los personajes tienen nombre, avatar y personalidad, y se puede importar una tarjeta de personaje; una Skill es un archivo SKILL.md que activas en cada chat; las herramientas permanecen desactivadas hasta que las habilitas y cada una se aprueba la primera vez que se ejecuta. El plan gratuito permite un servidor MCP, los planes de pago más.',
-          '**Entrada y salida de voz.** Ni las fichas de las tiendas ni el sitio web la describen.',
         ],
       },
       privacy: {
@@ -904,6 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La versión para Mac.** No está claro si es nativa o la app de iPad ejecutándose en Apple silicon.',
           '**Publicidad.** El plan Plus indica «No Ads», pero las fichas no dicen dónde aparecen anuncios en el plan gratuito, y la sección Seguridad de los datos declara que no se recopilan datos.',
           '**Opiniones independientes.** No se encontraron reseñas ni debates de terceros más allá de las valoraciones de las tiendas y los testimonios del sitio web.',
+          '**Entrada y salida de voz.** Ni las fichas de las tiendas ni el sitio web la describen.',
         ],
       },
       vsAlternatives: {
@@ -996,7 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-fr.webp',
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**Secret AI est, selon son développeur, une application pour téléphone et Mac qui exécute des modèles d\'IA open source sur l\'appareil, de sorte que les conversations, les personnages et les photos restent privés.** Le code source n\'est pas publié, et la politique de confidentialité a été mise à jour pour la dernière fois en mai 2025, avant l\'arrivée des outils, des Skills et des serveurs MCP.',
+    leadAnswerBlock: '**Secret AI est, selon son développeur, une application pour téléphone et Mac qui exécute des modèles d\'IA open source sur l\'appareil, de sorte que les conversations, les personnages et les photos restent privés ; les appels d\'outils MCP et les serveurs de modèles distants facultatifs envoient en revanche des données hors de l\'appareil.** Le code source n\'est pas publié, et la politique de confidentialité a été mise à jour pour la dernière fois en mai 2025, avant l\'arrivée des outils, des Skills et des serveurs MCP.',
     quickAnswerTop: {
       fr: {
         question: 'Secret AI est-elle gratuite, et fonctionne-t-elle hors ligne ?',
@@ -1108,7 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Vous installez l\'application, téléchargez une fois un modèle d\'IA, puis vous discutez, parlez à des personnages personnalisés ou envoyez des photos ; selon le développeur, rien ne quitte l\'appareil.',
+            text: 'Vous installez l\'application, téléchargez une fois un modèle d\'IA, puis vous discutez, parlez à des personnages personnalisés ou envoyez des photos ; selon le développeur, les conversations sont générées sur l\'appareil, tandis que les appels d\'outils MCP et une connexion facultative à un serveur auto-hébergé ou à Ollama envoient des données hors de celui-ci.',
           },
         ],
         items: [
@@ -1181,7 +1181,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Trois moteurs et trois puces.** llama.cpp (GGUF) s\'exécute sur le CPU dans la formule gratuite ; la formule Pro ajoute l\'accélération GPU et NPU ainsi que les moteurs MNN et MLX.',
           '**Entrée d\'images.** Les photos sont analysées sur l\'appareil avec des modèles de vision comme Qwen3.5 VL ou Gemma 4 ; la compréhension d\'images illimitée fait partie de la formule Pro.',
           '**Personnages, Skills et MCP.** Les personnages ont un nom, un avatar et une personnalité, et une fiche de personnage peut être importée ; un Skill est un fichier SKILL.md que vous activez par conversation ; les outils restent désactivés tant qu\'ils ne sont pas activés, et chacun est approuvé à sa première exécution. La formule gratuite autorise un serveur MCP, les formules payantes davantage.',
-          '**Entrée et sortie vocales.** Ni les fiches des boutiques ni le site web ne les décrivent.',
         ],
       },
       privacy: {
@@ -1207,6 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La version Mac.** On ne sait pas si la version Mac est native ou si c\'est l\'application iPad exécutée sur Apple silicon.',
           '**Publicité.** La formule Plus mentionne « No Ads », mais les fiches n\'indiquent pas où des publicités apparaissent dans la formule gratuite, et la section Sécurité des données déclare qu\'aucune donnée n\'est collectée.',
           '**Avis indépendants.** Aucun test ni débat de tiers n\'a été trouvé, hormis les évaluations des boutiques et les témoignages du site web.',
+          '**Entrée et sortie vocales.** Ni les fiches des boutiques ni le site web ne les décrivent.',
         ],
       },
       vsAlternatives: {
@@ -1299,12 +1299,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-ja.webp',
     title: 'Secret AI レビュー：iPhone・Android・Mac向けのプライベートなオフラインAIチャット',
-    seoTitle: 'Secret AI レビュー：iPhone・Android向けオフラインAI',
+    seoTitle: 'Secret AI レビュー：iPhone・Android・Mac向けAIチャット',
     intro: 'Secret AIは、ワイオミング州に登録された企業[Secret AI L.L.C.](https://secretai.io)が提供するプライベートAIチャットアプリです。オープンソースの言語モデルをスマートフォンやMac上で動かし、カスタムキャラクター、Skills、MCPツールを追加できます。[Android](https://play.google.com/store/apps/details?id=io.secretai.llm)と[iPhone・iPad](https://apps.apple.com/us/app/secret-ai/id6744668980)向けに配信され、App StoreにはMac版も掲載されています。このレビューは2つのストア掲載情報、公式サイト、プライバシーポリシー（2026年10月19日確認）に基づいており、PromptQuorumは実機での検証を行っていません。Secret AIという名前の製品は他にもあり、このレビューが扱うのはAndroidのパッケージ名がio.secretai.llmのアプリのみです。',
     metaDescription: 'Secret AIレビュー：iPhone・Android・Macで使えるオフラインAIチャット。キャラクター、Skills、MCPツールに対応。無料枠と有料プランあり、ソース非公開。',
     twitterDescription: 'Secret AIレビュー：iPhone・Android・Mac向けのオフラインAIチャット。無料枠とPlus・Proプラン、ソース非公開、動作は未検証。',
@@ -1339,7 +1339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**Secret AIは、開発者によれば、オープンソースのAIモデルを端末上で動かし、チャット、キャラクター、写真をプライベートに保つスマートフォン・Mac向けアプリです。** ソースコードは公開されておらず、プライバシーポリシーの最終更新は2025年5月で、アプリがツール、Skills、MCPサーバーに対応する前のものです。',
+    leadAnswerBlock: '**Secret AIは、開発者によれば、オープンソースのAIモデルを端末上で動かし、チャット、キャラクター、写真をプライベートに保つスマートフォン・Mac向けアプリです（ただしMCPツール呼び出しや任意のリモートモデルサーバーはデータを端末外に送ります）。** ソースコードは公開されておらず、プライバシーポリシーの最終更新は2025年5月で、アプリがツール、Skills、MCPサーバーに対応する前のものです。',
     quickAnswerTop: {
       ja: {
         question: 'Secret AIは無料で、オフラインで使えますか？',
@@ -1411,7 +1411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'アプリをインストールし、AIモデルを一度ダウンロードすれば、チャット、カスタムキャラクターとの会話、写真の送信ができ、開発者によれば、データは端末の外に出ません。',
+            text: 'アプリをインストールし、AIモデルを一度ダウンロードすれば、チャット、カスタムキャラクターとの会話、写真の送信ができ、開発者によれば、チャットは端末上で生成されますが、MCPツール呼び出しや、任意で接続する自前サーバー／Ollamaではデータが端末の外に出ます。',
           },
         ],
         items: [
@@ -1484,7 +1484,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**3つのエンジンと3種類のチップ。** 無料プランではllama.cpp（GGUF）がCPUで動作し、ProプランではGPUとNPUによる高速化、MNNとMLXのエンジンが加わります。',
           '**画像入力。** 写真はQwen3.5 VLやGemma 4などのビジョンモデルで端末上で解析されます。画像理解の無制限利用はProプランに含まれます。',
           '**キャラクター、Skills、MCP。** キャラクターには名前、アバター、性格を設定でき、キャラクターカードの取り込みも可能です。SkillはチャットごとにオンにするSKILL.mdファイルで、ツールは有効にするまでオフのままで、初回の実行時に承認が必要です。無料プランで使えるMCPサーバーは1つ、有料プランではそれ以上です。',
-          '**音声入力と音声出力。** ストアの掲載情報にも公式サイトにも説明がありません。',
         ],
       },
       privacy: {
@@ -1510,6 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac版。** Mac版がネイティブなのか、Appleシリコン上で動くiPad版なのかは不明です。',
           '**広告。** Plusプランには「No Ads」とありますが、無料プランのどこに広告が出るのかは掲載情報にはなく、データセーフティではデータ収集なしと表明されています。',
           '**第三者の評価。** ストアの評価と公式サイトのお客様の声以外に、第三者によるレビューや議論は見つかりませんでした。',
+          '**音声入力と音声出力。** ストアの掲載情報にも公式サイトにも説明がありません。',
         ],
       },
       vsAlternatives: {
@@ -1602,12 +1602,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-pt.webp',
     title: 'Análise do Secret AI: chat de IA privado e offline para iPhone, Android e Mac',
-    seoTitle: 'Análise do Secret AI: IA offline no iPhone e Android',
+    seoTitle: 'Análise do Secret AI: IA offline no iPhone, Android e Mac',
     intro: 'O Secret AI é um app de chat de IA privado da [Secret AI L.L.C.](https://secretai.io), empresa registrada em Wyoming, que executa modelos de linguagem de código aberto no celular ou no Mac e acrescenta personagens personalizados, Skills e ferramentas MCP. Ele está disponível para [Android](https://play.google.com/store/apps/details?id=io.secretai.llm) e para [iPhone e iPad](https://apps.apple.com/us/app/secret-ai/id6744668980), e a App Store lista uma versão para Mac. Esta análise se baseia nas duas páginas de loja, no site oficial e na política de privacidade, consultados em 19 de outubro de 2026; a PromptQuorum não testou o app na prática. Outros produtos usam o nome Secret AI; esta análise trata apenas do app com o pacote Android io.secretai.llm.',
     metaDescription: 'Análise do Secret AI: app de chat de IA privado e offline para iPhone, Android e Mac, com personagens, Skills e MCP. Plano grátis e pagos; código fechado.',
     twitterDescription: 'Análise do Secret AI: chat de IA privado e offline para iPhone, Android e Mac. Plano grátis, planos Plus e Pro, código fechado, sem teste prático.',
@@ -1642,7 +1642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**O Secret AI é um app para celular e Mac que, segundo o desenvolvedor, executa modelos de IA de código aberto no aparelho para que conversas, personagens e fotos permaneçam privados.** O código-fonte não é publicado, e a política de privacidade foi atualizada pela última vez em maio de 2025, antes de o app incluir ferramentas, Skills e servidores MCP.',
+    leadAnswerBlock: '**O Secret AI é um app para celular e Mac que, segundo o desenvolvedor, executa modelos de IA de código aberto no aparelho para que conversas, personagens e fotos permaneçam privados; as chamadas de ferramentas MCP e os servidores de modelos remotos opcionais enviam, sim, dados para fora do aparelho.** O código-fonte não é publicado, e a política de privacidade foi atualizada pela última vez em maio de 2025, antes de o app incluir ferramentas, Skills e servidores MCP.',
     quickAnswerTop: {
       pt: {
         question: 'O Secret AI é grátis e funciona offline?',
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Você instala o app, baixa uma vez um modelo de IA e depois conversa, fala com personagens personalizados ou envia fotos; segundo o desenvolvedor, nada sai do aparelho.',
+            text: 'Você instala o app, baixa uma vez um modelo de IA e depois conversa, fala com personagens personalizados ou envia fotos; segundo o desenvolvedor, as conversas são geradas no aparelho, enquanto as chamadas de ferramentas MCP e uma conexão opcional com um servidor próprio ou Ollama enviam dados para fora dele.',
           },
         ],
         items: [
@@ -1787,7 +1787,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Três mecanismos e três chips.** O llama.cpp (GGUF) roda na CPU no plano grátis; o plano Pro acrescenta aceleração por GPU e NPU e os mecanismos MNN e MLX.',
           '**Entrada de imagens.** As fotos são analisadas no aparelho com modelos de visão como Qwen3.5 VL ou Gemma 4; a compreensão ilimitada de imagens faz parte do plano Pro.',
           '**Personagens, Skills e MCP.** Os personagens têm nome, avatar e personalidade, e é possível importar um cartão de personagem; uma Skill é um arquivo SKILL.md que você ativa por conversa; as ferramentas ficam desativadas até serem ativadas e cada uma é aprovada na primeira vez em que roda. O plano grátis permite um servidor MCP, os planos pagos permitem mais.',
-          '**Entrada e saída de voz.** Nem as páginas de loja nem o site a descrevem.',
         ],
       },
       privacy: {
@@ -1813,6 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O build para Mac.** Não está claro se a versão para Mac é nativa ou o app de iPad executado em Apple silicon.',
           '**Publicidade.** O plano Plus lista "No Ads", mas as páginas não dizem onde os anúncios aparecem no plano grátis, e a seção Segurança dos dados declara que nenhum dado é coletado.',
           '**Opiniões independentes.** Não foram encontradas análises nem discussões de terceiros, além das avaliações nas lojas e dos depoimentos no site.',
+          '**Entrada e saída de voz.** Nem as páginas de loja nem o site a descrevem.',
         ],
       },
       vsAlternatives: {
@@ -1905,12 +1905,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-ar.webp',
     title: 'مراجعة Secret AI: دردشة ذكاء اصطناعي خاصة دون إنترنت على iPhone وAndroid وMac',
-    seoTitle: 'مراجعة Secret AI: دردشة ذكاء اصطناعي دون إنترنت للهاتف',
+    seoTitle: 'مراجعة Secret AI: دردشة بلا إنترنت لـ iPhone وAndroid وMac',
     intro: 'Secret AI تطبيق دردشة خاص بالذكاء اصطناعي من شركة [Secret AI L.L.C.](https://secretai.io) المسجّلة في ولاية وايومنغ، يشغّل نماذج لغوية مفتوحة المصدر على الهاتف أو Mac ويضيف شخصيات مخصصة وSkills وأدوات MCP. التطبيق متاح لنظام [Android](https://play.google.com/store/apps/details?id=io.secretai.llm) ولأجهزة [iPhone وiPad](https://apps.apple.com/us/app/secret-ai/id6744668980)، ويعرض App Store نسخة لنظام Mac. تستند هذه المراجعة إلى صفحتي المتجرين والموقع الرسمي وسياسة الخصوصية، التي جرى الاطلاع عليها في 19 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عمليًا. تشترك منتجات أخرى في اسم Secret AI، وتغطي هذه المراجعة التطبيق ذا حزمة Android io.secretai.llm فقط.',
     metaDescription: 'مراجعة Secret AI: تطبيق دردشة ذكاء اصطناعي خاص دون إنترنت لأجهزة iPhone وAndroid وMac مع شخصيات وSkills وأدوات MCP. نسخة مجانية وشيفرة غير منشورة.',
     twitterDescription: 'مراجعة Secret AI: دردشة ذكاء اصطناعي خاصة دون إنترنت على iPhone وAndroid وMac. نسخة مجانية وخطتا Plus وPro، والشيفرة مغلقة، والادعاءات لم تُختبر بعد.',
@@ -1945,7 +1945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**Secret AI تطبيق للهاتف ولنظام Mac يشغّل، بحسب مطوّره، نماذج ذكاء اصطناعي مفتوحة المصدر على الجهاز، فتبقى المحادثات والشخصيات والصور خاصة.** الشيفرة المصدرية غير منشورة، وآخر تحديث لسياسة الخصوصية كان في مايو 2025، أي قبل أن يضيف التطبيق الأدوات وSkills وخوادم MCP.',
+    leadAnswerBlock: '**Secret AI تطبيق للهاتف ولنظام Mac يشغّل، بحسب مطوّره، نماذج ذكاء اصطناعي مفتوحة المصدر على الجهاز، فتبقى المحادثات والشخصيات والصور خاصة؛ أما استدعاءات أدوات MCP وخوادم النماذج البعيدة الاختيارية فترسل بيانات خارج الجهاز.** الشيفرة المصدرية غير منشورة، وآخر تحديث لسياسة الخصوصية كان في مايو 2025، أي قبل أن يضيف التطبيق الأدوات وSkills وخوادم MCP.',
     quickAnswerTop: {
       ar: {
         question: 'هل Secret AI مجاني، وهل يعمل دون إنترنت؟',
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'تثبّت التطبيق وتنزّل نموذج ذكاء اصطناعي مرة واحدة، ثم تدردش أو تحادث شخصيات مخصصة أو ترسل صورًا؛ وبحسب المطوّر لا يغادر شيء الجهاز.',
+            text: 'تثبّت التطبيق وتنزّل نموذج ذكاء اصطناعي مرة واحدة، ثم تدردش أو تحادث شخصيات مخصصة أو ترسل صورًا؛ وبحسب المطوّر تُولَّد المحادثات على الجهاز، بينما ترسل استدعاءات أدوات MCP والاتصال الاختياري بخادم مستضاف ذاتيًا أو Ollama بيانات خارج الجهاز.',
           },
         ],
         items: [
@@ -2090,7 +2090,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ثلاثة محركات وثلاثة معالجات.** يعمل llama.cpp (GGUF) على وحدة المعالجة المركزية في الخطة المجانية؛ وتضيف خطة Pro تسريع GPU وNPU ومحركي MNN وMLX.',
           '**إدخال الصور.** تُحلَّل الصور على الجهاز بنماذج رؤية مثل Qwen3.5 VL أو Gemma 4؛ والفهم غير المحدود للصور جزء من خطة Pro.',
           '**الشخصيات وSkills وMCP.** للشخصية اسم وصورة رمزية وطابع، ويمكن استيراد بطاقة شخصية؛ وSkill ملف SKILL.md تفعّله لكل محادثة؛ وتبقى الأدوات معطلة حتى تفعّلها وتُوافق على كل منها عند أول تشغيل. تسمح الخطة المجانية بخادم MCP واحد، والخطط المدفوعة بالمزيد.',
-          '**الإدخال والإخراج الصوتي.** لا تصفهما صفحتا المتجرين ولا الموقع.',
         ],
       },
       privacy: {
@@ -2116,6 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**نسخة Mac.** ليس واضحًا ما إذا كانت نسخة Mac أصلية أم تطبيق iPad يعمل على معالجات Apple silicon.',
           '**الإعلانات.** تذكر خطة Plus "No Ads"، لكن الصفحتين لا تبيّنان أين تظهر الإعلانات في الخطة المجانية، ويعلن قسم أمان البيانات عدم جمع أي بيانات.',
           '**آراء مستقلة.** لم يُعثر على مراجعات أو نقاشات من أطراف ثالثة سوى تقييمات المتجرين وشهادات المستخدمين المنشورة في الموقع.',
+          '**الإدخال والإخراج الصوتي.** لا تصفهما صفحتا المتجرين ولا الموقع.',
         ],
       },
       vsAlternatives: {
@@ -2208,12 +2208,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-zh.webp',
     title: 'Secret AI 评测：iPhone、Android 和 Mac 上的私密离线 AI 聊天',
-    seoTitle: 'Secret AI 评测：iPhone 与 Android 离线 AI 聊天',
+    seoTitle: 'Secret AI 评测：iPhone、Android、Mac 离线聊天',
     intro: 'Secret AI 是 [Secret AI L.L.C.](https://secretai.io)（注册于怀俄明州）推出的私密 AI 聊天应用，在手机或 Mac 上运行开源语言模型，并提供自定义角色、Skills 和 MCP 工具。它有 [Android](https://play.google.com/store/apps/details?id=io.secretai.llm) 版和 [iPhone、iPad](https://apps.apple.com/us/app/secret-ai/id6744668980) 版，App Store 还列出了 Mac 版本。本评测依据两个应用商店页面、官方网站及其隐私政策（2026年10月19日查阅），PromptQuorum 未对该应用进行实际测试。另有其他产品也叫 Secret AI；本评测只涉及 Android 包名为 io.secretai.llm 的应用。',
     metaDescription: 'Secret AI 评测：支持角色、Skills 和 MCP 工具的 iPhone、Android、Mac 私密离线 AI 聊天应用。有免费版和付费方案，源码未公开。',
     twitterDescription: 'Secret AI 评测：iPhone、Android 和 Mac 上的私密离线 AI 聊天。免费版、Plus 与 Pro 方案，源码未公开，说法未经实测。',
@@ -2248,7 +2248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**据开发者称，Secret AI 是一款手机和 Mac 应用，在设备上运行开源 AI 模型，使聊天、角色和照片保持私密。** 源码未公开，隐私政策最近更新于 2025 年 5 月，早于应用新增工具、Skills 和 MCP 服务器的时间。',
+    leadAnswerBlock: '**据开发者称，Secret AI 是一款手机和 Mac 应用，在设备上运行开源 AI 模型，使聊天、角色和照片保持私密；但 MCP 工具调用和可选的远程模型服务器会把数据发送到设备之外。** 源码未公开，隐私政策最近更新于 2025 年 5 月，早于应用新增工具、Skills 和 MCP 服务器的时间。',
     quickAnswerTop: {
       zh: {
         question: 'Secret AI 免费吗？能离线使用吗？',
@@ -2320,7 +2320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '安装应用，下载一次 AI 模型，之后就能聊天、与自定义角色对话或发送照片；据开发者称，任何内容都不会离开设备。',
+            text: '安装应用，下载一次 AI 模型，之后就能聊天、与自定义角色对话或发送照片；据开发者称，聊天在设备上生成，而 MCP 工具调用以及可选的自托管服务器或 Ollama 连接会把数据发送到设备之外。',
           },
         ],
         items: [
@@ -2393,7 +2393,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**三种引擎，三类芯片。** llama.cpp（GGUF）在免费方案中使用 CPU；Pro 方案增加 GPU 和 NPU 加速，以及 MNN 和 MLX 引擎。',
           '**图像输入。** 照片由 Qwen3.5 VL 或 Gemma 4 等视觉模型在设备上分析；不限次数的图像理解属于 Pro 方案。',
           '**角色、Skills 和 MCP。** 角色包含名称、头像和性格，并可导入角色卡；Skill 是按聊天单独开启的 SKILL.md 文件；工具默认关闭，每个工具在首次运行时都需要批准。免费方案允许一个 MCP 服务器，付费方案允许更多。',
-          '**语音输入与输出。** 应用商店页面和官网都没有说明。',
         ],
       },
       privacy: {
@@ -2419,6 +2418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac 版本。** 尚不清楚 Mac 版本是原生应用，还是在 Apple 芯片上运行的 iPad 应用。',
           '**广告。** Plus 方案标有“No Ads”，但页面没有说明免费方案中广告出现在哪里，而“数据安全”部分声明不收集数据。',
           '**独立反馈。** 除应用商店评分和官网上的用户评价外，未找到第三方评测或讨论。',
+          '**语音输入与输出。** 应用商店页面和官网都没有说明。',
         ],
       },
       vsAlternatives: {
@@ -2511,12 +2511,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/secret-ai-review-hero-ko.webp',
     title: 'Secret AI 리뷰: iPhone, Android, Mac용 비공개 오프라인 AI 채팅',
-    seoTitle: 'Secret AI 리뷰: iPhone·Android 오프라인 채팅',
+    seoTitle: 'Secret AI 리뷰: iPhone·Android·Mac 채팅',
     intro: 'Secret AI는 와이오밍주에 등록된 [Secret AI L.L.C.](https://secretai.io)의 비공개 AI 채팅 앱으로, 오픈소스 언어 모델을 휴대폰이나 Mac에서 실행하며 사용자 지정 캐릭터, Skills, MCP 도구를 더했습니다. [Android](https://play.google.com/store/apps/details?id=io.secretai.llm)와 [iPhone·iPad](https://apps.apple.com/us/app/secret-ai/id6744668980)용으로 나와 있고, App Store에는 Mac 버전도 표시됩니다. 이 리뷰는 두 스토어 등록 정보, 공식 웹사이트와 개인정보처리방침(2026년 10월 19일 확인)을 바탕으로 하며, PromptQuorum은 앱을 직접 사용해 보지 않았습니다. Secret AI라는 이름을 쓰는 다른 제품도 있으므로, 이 리뷰는 Android 패키지 io.secretai.llm 앱만 다룹니다.',
     metaDescription: 'Secret AI 리뷰: 캐릭터, Skills, MCP 도구를 갖춘 iPhone·Android·Mac용 비공개 오프라인 AI 채팅 앱. 무료 플랜과 유료 플랜, 소스는 비공개입니다.',
     twitterDescription: 'Secret AI 리뷰: iPhone, Android, Mac용 비공개 오프라인 AI 채팅. 무료 플랜과 Plus·Pro 플랜, 소스 비공개, 주장은 미검증.',
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac',
       'Android',
     ],
-    leadAnswerBlock: '**Secret AI는 개발자에 따르면 오픈소스 AI 모델을 기기에서 실행해 채팅, 캐릭터, 사진을 비공개로 유지하는 휴대폰·Mac 앱입니다.** 소스 코드는 공개되지 않았고, 개인정보처리방침은 앱에 도구, Skills, MCP 서버가 추가되기 전인 2025년 5월에 마지막으로 업데이트되었습니다.',
+    leadAnswerBlock: '**Secret AI는 개발자에 따르면 오픈소스 AI 모델을 기기에서 실행해 채팅, 캐릭터, 사진을 비공개로 유지하는 휴대폰·Mac 앱입니다(단, MCP 도구 호출과 선택적 원격 모델 서버는 데이터를 기기 밖으로 보냅니다).** 소스 코드는 공개되지 않았고, 개인정보처리방침은 앱에 도구, Skills, MCP 서버가 추가되기 전인 2025년 5월에 마지막으로 업데이트되었습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Secret AI는 무료이며 오프라인으로 작동하나요?',
@@ -2623,7 +2623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '앱을 설치하고 AI 모델을 한 번 내려받으면 채팅하거나 사용자 지정 캐릭터와 대화하거나 사진을 보낼 수 있으며, 개발자에 따르면 아무것도 기기 밖으로 나가지 않습니다.',
+            text: '앱을 설치하고 AI 모델을 한 번 내려받으면 채팅하거나 사용자 지정 캐릭터와 대화하거나 사진을 보낼 수 있으며, 개발자에 따르면 채팅은 기기에서 생성되지만, MCP 도구 호출과 선택적으로 연결하는 자체 호스팅 서버 또는 Ollama는 데이터를 기기 밖으로 보냅니다.',
           },
         ],
         items: [
@@ -2696,7 +2696,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**엔진 세 가지와 칩 세 가지.** llama.cpp(GGUF)는 무료 플랜에서 CPU로 실행되며, Pro 플랜은 GPU와 NPU 가속, MNN 및 MLX 엔진을 더합니다.',
           '**이미지 입력.** 사진은 Qwen3.5 VL이나 Gemma 4 같은 비전 모델로 기기에서 분석되며, 무제한 이미지 이해는 Pro 플랜에 포함됩니다.',
           '**캐릭터, Skills, MCP.** 캐릭터는 이름, 아바타, 성격을 갖고 캐릭터 카드를 가져올 수 있습니다. Skill은 채팅마다 켜는 SKILL.md 파일이고, 도구는 켜기 전까지 꺼져 있으며 처음 실행될 때마다 승인합니다. 무료 플랜은 MCP 서버 하나를, 유료 플랜은 더 많이 허용합니다.',
-          '**음성 입력과 출력.** 스토어 등록 정보와 웹사이트 어디에도 설명되어 있지 않습니다.',
         ],
       },
       privacy: {
@@ -2722,6 +2721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac 빌드.** Mac 버전이 네이티브인지, Apple silicon에서 실행되는 iPad 앱인지 분명하지 않습니다.',
           '**광고.** Plus 플랜에는 "No Ads"가 표시되지만, 무료 플랜에서 광고가 어디에 나오는지는 등록 정보에 없으며 데이터 보안 섹션은 데이터 수집이 없다고 밝힙니다.',
           '**독립적인 평가.** 스토어 평점과 웹사이트의 사용 후기 외에 제3자의 리뷰나 논의는 찾지 못했습니다.',
+          '**음성 입력과 출력.** 스토어 등록 정보와 웹사이트 어디에도 설명되어 있지 않습니다.',
         ],
       },
       vsAlternatives: {
