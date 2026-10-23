@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 import fs from 'fs'
 import path from 'path'
+import { splitBidiRuns } from '@/lib/hero/bidi-runs'
 
 export const runtime = 'nodejs'
 
@@ -78,6 +79,14 @@ function LogoMark({ color, barWidth = 10, barHeight = 44 }: { color: string; bar
   )
 }
 
+// RTL text: one flex item per Arabic word, one intact LTR item per Latin/number
+// run (see src/lib/hero/bidi-runs.ts). The parent is a row-reverse flex.
+function renderRtlRuns(text: string) {
+  return splitBidiRuns(text).map((r, i) => (
+    <div key={i} style={{ display: 'flex', direction: r.dir, whiteSpace: 'nowrap' }}>{r.text}</div>
+  ))
+}
+
 // Internal content-tooling route: renders Discover-compliant (1200x675 raster,
 // 16:9) poster-style hero images for article body/schema use, sharing the same
 // Satori+resvg pipeline as /api/og/[slug] so CJK and Arabic shaping render
@@ -137,7 +146,7 @@ export async function POST(request: Request) {
             }}
           >
             {/* RTL: Satori picks the paragraph direction from the first strong char, so a title starting with a Latin brand name (e.g. "DeepSeek V4 مقابل …") renders with reversed word order. Word-per-flex-item + row-reverse (same trick as the highlight lines) keeps logical order; join Latin multi-word names with NBSP in the caller. */}
-            {isRtl ? title.split(' ').map((w, wi) => <div key={wi} style={{ display: 'flex' }}>{w}</div>) : title}
+            {isRtl ? renderRtlRuns(title) : title}
           </div>
 
           {showFormula && (
@@ -169,7 +178,7 @@ export async function POST(request: Request) {
                   </div>
                   <div style={{ display: 'flex', flexDirection: rowDir, flexWrap: 'wrap', columnGap: isRtl ? '6px' : '0px', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
                     {/* Satori's bidi reorders multi-word Arabic text nodes inconsistently, so for RTL each word is its own flex item and row-reverse fixes the word order; shaping stays intact within a word. */}
-                    {isRtl ? line.split(' ').map((w, wi) => <div key={wi} style={{ display: 'flex' }}>{w}</div>) : line}
+                    {isRtl ? renderRtlRuns(line) : line}
                   </div>
                 </div>
               ))}
