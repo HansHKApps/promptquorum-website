@@ -1,9 +1,9 @@
-// Obscurify Review: Anonymous AI Chat with an Optional Local Mode
+// Obscurify.ai Review: Anonymous AI Chat with an Optional Local Mode
 // Slug: obscurify-review
 // Companion to: librechat-review, lobechat-review, open-webui-review, big-agi-review, local-llm-chat-assistants-compared
 // Sources: the official website obscurify.ai (home, pricing, about, privacy policy, blog, tutorials) and the public GitHub
-// organisation Obscurify-ai (web client, Android app), all checked 2026-10-23 — no hands-on use. The request came from the site
-// owner, not from the operator: no maker comment exists, so there is no fromTheMaker section and no founder badge.
+// organisation Obscurify-ai (web client, Android app), all checked 2026-10-23 — no hands-on use. Maker feedback received 2026-10-23
+// (name "Obscurify.ai", history CryptoTalks 2023 -> Obscurify.ai 2025, founder quote by Tony Davis): fromTheMaker section + founder badge.
 // Last upstream update 2026-10-21 (Android v0.4.1) => no stale warning (owner rule 2026-10-16).
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -18,20 +18,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-en.webp',
-    title: 'Obscurify Review: Anonymous AI Chat With an Optional Local Mode',
-    seoTitle: 'Obscurify Review: Anonymous AI Chat With a Local Mode',
+    title: 'Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode',
+    seoTitle: 'Obscurify.ai Review: Anonymous AI Chat With a Local Mode',
     intro:
-      'Obscurify is an AI chat service at [obscurify.ai](https://obscurify.ai) that describes itself as "your VPN for AI": you sign up with a random account number instead of an email address, pay with vouchers the operator says it cannot link to you, and reach 200+ cloud models. An optional local mode runs GGUF models inside the browser. This review reflects the website, its privacy policy and the public GitHub code, as checked on 23 October 2026; PromptQuorum did not test the service hands-on.',
+      'Obscurify.ai is an AI chat service at [obscurify.ai](https://obscurify.ai) that describes itself as "your VPN for AI": you sign up with a random account number instead of an email address, pay with vouchers the operator says it cannot link to you, and reach 200+ cloud models. An optional local mode runs GGUF models inside the browser. This review reflects the website, its privacy policy and the public GitHub code, as checked on 23 October 2026; PromptQuorum did not test the service hands-on.',
     metaDescription:
-      'Obscurify review: anonymous AI chat with random account numbers, blind-voucher payments and an optional in-browser local mode. Plans and privacy claims.',
+      'Obscurify.ai review: anonymous AI chat with random account numbers, blind-voucher payments and an optional in-browser local mode. Plans and privacy claims.',
     twitterDescription:
-      'Obscurify review: anonymous AI chat in the browser and on Android, with an optional in-browser local mode. What the site and its privacy policy claim, what the code shows, and what stays unverified.',
+      'Obscurify.ai review: anonymous AI chat in the browser and on Android, with an optional in-browser local mode. What the site and its privacy policy claim, what the code shows, and what stays unverified.',
     audience:
       'People who want to use cloud AI models without an email, phone number or identity, and who need to know what the sources confirm, what is only the operator\'s claim and what is unknown.',
     readTime: '7 min read',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Obscurify review',
+    primaryTerm: 'Obscurify.ai review',
     targetKeywords: [
       'obscurify review',
       'obscurify ai',
@@ -44,10 +44,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurify is a web and Android service that, by its own description, lets you chat with 200+ AI models through a random account number, with no email, phone number or identity.** Its "no logs" label comes with a 30-day IP retention period, and the operator is not named.',
+      '**Obscurify.ai is a web and Android service that, by its own description, lets you chat with 200+ AI models through a random account number, with no email, phone number or identity.** Its "no logs" label comes with a 30-day IP retention period, and the operator is not named.',
     quickAnswerTop: {
       en: {
-        question: 'Is Obscurify really anonymous and private?',
+        question: 'Is Obscurify.ai really anonymous and private?',
         answer:
           'According to its privacy policy, chat prompts and replies are not saved on its servers and no identity is required. Neither claim was tested, and the server code is not published.',
         bullets: [
@@ -60,11 +60,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Quick Answer', anchor: 'quick-answer' },
-      { label: 'What Is Obscurify?', anchor: 'what-is-obscurify' },
+      { label: 'What Is Obscurify.ai?', anchor: 'what-is-obscurify' },
       { label: 'Get It', anchor: 'get-it' },
       { label: 'Plans and Pricing', anchor: 'plans-and-pricing' },
       { label: 'Features and Local Mode', anchor: 'key-features' },
       { label: 'Privacy and Data Flow', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
       { label: 'Competitors and Alternatives', anchor: 'vs-alternatives' },
@@ -81,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurify is an AI chat service that sells access to cloud models without an email or identity and adds an optional mode that runs open models in the browser.',
+            text: 'Obscurify.ai is an AI chat service that sells access to cloud models without an email or identity and adds an optional mode that runs open models in the browser.',
           },
           {
             type: 'plain-terms',
@@ -103,10 +104,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'What Is Obscurify?',
+        title: 'What Is Obscurify.ai?',
         content: [
-          '**According to its website, Obscurify is a private AI chat service that sits between you and the model providers, strips identifying details from each request and forwards it under its own credentials.** The site calls this "your VPN for AI". You sign up with a random 16-digit account number, with no email, phone number, username or password, and chat with models from major AI providers.',
-          'A second mode runs open-source GGUF models directly in the browser through a WebAssembly build of llama.cpp, with no request to Obscurify\'s servers. An Android app is a separate native client of the same service. This review covers only [obscurify.ai](https://obscurify.ai) and its Android app.',
+          '**According to its website, Obscurify.ai is a private AI chat service that sits between you and the model providers, strips identifying details from each request and forwards it under its own credentials.** The site calls this "your VPN for AI". You sign up with a random 16-digit account number, with no email, phone number, username or password, and chat with models from major AI providers.',
+          'A second mode runs open-source GGUF models directly in the browser through a WebAssembly build of llama.cpp, with no request to Obscurify.ai\'s servers. An Android app is a separate native client of the same service. This review covers only [obscurify.ai](https://obscurify.ai) and its Android app.',
+          '**Obscurify.ai is older than its code repositories suggest: according to its operator, it launched in November 2023 as CryptoTalks, was renamed Obscurify.ai in July 2025 and has been listed on Monerica since March 2024.** The GitHub repositories date from 21 October 2026 only because the web client and the Android app were published under GPL-3.0 that day. The operator also points out that plain "Obscurify" is a well-known, unrelated Spotify statistics app, so this review uses the full name; none of these dates were independently verified.',
         ],
       },
       getIt: {
@@ -144,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: 'Plans and Pricing',
         content: [
-          '**Obscurify is freemium: guests chat for free, everything else is prepaid.** Prices are in US dollars; no local-currency prices were found.',
+          '**Obscurify.ai is freemium: guests chat for free, everything else is prepaid.** Prices are in US dollars; no local-currency prices were found.',
         ],
         columns: ['Plan', 'Price', 'What it includes'],
         rows: [
@@ -200,6 +202,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Tony Davis, founder of Obscurify.ai, shared the following about the service. It is presented as his own words, not as PromptQuorum\'s independent editorial assessment; the statements about storage and payments are the operator\'s claims, which PromptQuorum has not verified:',
+          'Obscurify.ai\'s media relations team also reviewed this article before this update and corrected the service name and its history; it said everything else matches what the service publishes, including the 30-day IP retention.',
+          '“Most AI chat services know exactly who you are: your email, your phone number, your card, and every question you have asked. Obscurify.ai started in 2023 as a way to pay for AI with Monero, and grew into a rule we design everything around: we would rather not have data than promise to protect it. That is why accounts are just a random number, chats are not stored on our servers, and payments go through blind-signed vouchers, so we cannot link a payment to an account. Next we want to move more of the work onto the user\'s device: faster and larger local models, more open-source code, and ways for users to verify our claims rather than trust them.”',
+        ],
+        note: '— Tony Davis, founder of Obscurify.ai',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Who Should Use It',
@@ -251,14 +263,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Key difference': 'Multi-provider front end with personas; you bring your own API keys',
           },
         ],
-        note: 'Competitor details change often; confirm each app\'s current price, license and platforms on its own page. Unlike these, Obscurify is a hosted service that sells model access itself.',
+        note: 'Competitor details change often; confirm each app\'s current price, license and platforms on its own page. Unlike these, Obscurify.ai is a hosted service that sells model access itself.',
       },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
-            q: 'Can I use Obscurify without any account?',
+            q: 'Can I use Obscurify.ai without any account?',
             a: 'Yes, as a guest with one open model and a limit of 30 messages an hour; frontier and uncensored models need a paid plan.',
           },
           {
@@ -266,11 +278,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'You buy blind vouchers with Monero, Bitcoin, Lightning or card and add them to your balance; the policy recommends Tor or a VPN and keeping the default redemption delay for more privacy.',
           },
           {
-            q: 'Is Obscurify open source?',
+            q: 'Is Obscurify.ai open source?',
             a: 'The web client and the Android app are GPL-3.0; no server repository was found, so the service as a whole is not fully open.',
           },
           {
-            q: 'Does Obscurify work offline?',
+            q: 'Does Obscurify.ai work offline?',
             a: 'Only local mode can, after a model has been downloaded in the browser; this was not tested, and cloud chat needs an internet connection.',
           },
         ],
@@ -279,16 +291,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Obscurify is an unusual hosted AI chat built around not knowing who you are, with a local mode as a fallback. Its design is documented and its client code is public, but the operator is unnamed, the server code is unpublished and the "no logs" claim keeps IP addresses for 30 days. It suits readers who want cloud models without an email and accept that trust; anyone who needs a verifiable setup should compare self-hosted options such as [LibreChat](/power-local-llm/librechat-review) or [Open WebUI](/local-llms/open-webui-review).',
+          'Obscurify.ai is an unusual hosted AI chat built around not knowing who you are, with a local mode as a fallback. Its design is documented and its client code is public, but the operator is unnamed, the server code is unpublished and the "no logs" claim keeps IP addresses for 30 days. It suits readers who want cloud models without an email and accept that trust; anyone who needs a verifiable setup should compare self-hosted options such as [LibreChat](/power-local-llm/librechat-review) or [Open WebUI](/local-llms/open-webui-review).',
       },
       sources: {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Obscurify website](https://obscurify.ai) — product description, local mode and links, checked 23 October 2026.',
-          '[Obscurify pricing](https://obscurify.ai/pricing) — guest limits, plans and billing, checked 23 October 2026.',
-          '[Obscurify about page](https://obscurify.ai/about) — anonymity, payments and logging statements, checked 23 October 2026.',
-          '[Obscurify privacy policy](https://obscurify.ai/privacy) — data collected, retention, providers and payments; last updated 22 October 2026.',
+          '[Obscurify.ai website](https://obscurify.ai) — product description, local mode and links, checked 23 October 2026.',
+          '[Obscurify.ai pricing](https://obscurify.ai/pricing) — guest limits, plans and billing, checked 23 October 2026.',
+          '[Obscurify.ai about page](https://obscurify.ai/about) — anonymity, payments and logging statements, checked 23 October 2026.',
+          '[Obscurify.ai privacy policy](https://obscurify.ai/privacy) — data collected, retention, providers and payments; last updated 22 October 2026.',
           '[Obscurify-ai on GitHub](https://github.com/Obscurify-ai) — web client and Android app, license, releases and README, checked 23 October 2026.',
         ],
       },
@@ -307,9 +319,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Obscurify Review: Anonymous AI Chat With an Optional Local Mode',
+      headline: 'Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode',
       description:
-        'Obscurify review: anonymous AI chat in the browser and on Android with an optional in-browser local mode. What the website and privacy policy claim, what the code shows, and what stays unverified.',
+        'Obscurify.ai review: anonymous AI chat in the browser and on Android with an optional in-browser local mode. What the website and privacy policy claim, what the code shows, and what stays unverified.',
       url: 'https://promptquorum.com/power-local-llm/obscurify-review',
       inLanguage: 'en',
       datePublished: '2026-10-23',
@@ -320,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       proficiencyLevel: 'Beginner',
       audience: { '@type': 'Audience', audienceType: 'People evaluating an anonymous AI chat service' },
       about: [
-        { '@type': 'Thing', name: 'Obscurify' },
+        { '@type': 'Thing', name: 'Obscurify.ai' },
         { '@type': 'Thing', name: 'Anonymous AI chat' },
         { '@type': 'Thing', name: 'In-browser local models' },
       ],
@@ -332,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Obscurify Review', item: 'https://promptquorum.com/power-local-llm/obscurify-review' },
+        { '@type': 'ListItem', position: 3, name: 'Obscurify.ai Review', item: 'https://promptquorum.com/power-local-llm/obscurify-review' },
       ],
     },
   },
@@ -344,20 +356,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-de.webp',
-    title: 'Obscurify-Rezension: Anonymer KI-Chat mit optionalem lokalem Modus',
-    seoTitle: 'Obscurify-Rezension: Anonymer KI-Chat mit lokalem Modus',
+    title: 'Obscurify.ai-Rezension: Anonymer KI-Chat mit optionalem lokalem Modus',
+    seoTitle: 'Obscurify.ai-Rezension: Anonymer KI-Chat mit lokalem Modus',
     intro:
-      'Obscurify ist ein KI-Chat-Dienst unter [obscurify.ai](https://obscurify.ai), der sich selbst als „VPN für KI“ beschreibt: Sie registrieren sich mit einer zufälligen Kontonummer statt mit einer E-Mail-Adresse, zahlen mit Gutscheinen, die der Betreiber nach eigener Aussage nicht mit Ihnen verknüpfen kann, und erreichen über 200 Cloud-Modelle. Ein optionaler lokaler Modus führt GGUF-Modelle im Browser aus. Diese Rezension gibt die Website, die Datenschutzerklärung und den öffentlichen GitHub-Code wieder, wie am 23. Oktober 2026 geprüft; PromptQuorum hat den Dienst nicht praktisch getestet.',
+      'Obscurify.ai ist ein KI-Chat-Dienst unter [obscurify.ai](https://obscurify.ai), der sich selbst als „VPN für KI“ beschreibt: Sie registrieren sich mit einer zufälligen Kontonummer statt mit einer E-Mail-Adresse, zahlen mit Gutscheinen, die der Betreiber nach eigener Aussage nicht mit Ihnen verknüpfen kann, und erreichen über 200 Cloud-Modelle. Ein optionaler lokaler Modus führt GGUF-Modelle im Browser aus. Diese Rezension gibt die Website, die Datenschutzerklärung und den öffentlichen GitHub-Code wieder, wie am 23. Oktober 2026 geprüft; PromptQuorum hat den Dienst nicht praktisch getestet.',
     metaDescription:
-      'Obscurify-Rezension: anonymer KI-Chat mit zufälliger Kontonummer, Blind-Gutscheinen und optionalem lokalem Modus im Browser. Tarife und Datenschutz.',
+      'Obscurify.ai-Rezension: anonymer KI-Chat mit zufälliger Kontonummer, Blind-Gutscheinen und optionalem lokalem Modus im Browser. Tarife und Datenschutz.',
     twitterDescription:
-      'Obscurify-Rezension: anonymer KI-Chat im Browser und auf Android mit optionalem lokalem Modus. Was Website und Datenschutzerklärung behaupten, was der Code zeigt und was ungeprüft bleibt.',
+      'Obscurify.ai-Rezension: anonymer KI-Chat im Browser und auf Android mit optionalem lokalem Modus. Was Website und Datenschutzerklärung behaupten, was der Code zeigt und was ungeprüft bleibt.',
     audience:
       'Menschen, die Cloud-KI-Modelle ohne E-Mail-Adresse, Telefonnummer oder Identität nutzen möchten und wissen müssen, was die Quellen bestätigen, was nur der Betreiber behauptet und was unbekannt ist.',
     readTime: '7 Min. Lesezeit',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Obscurify Rezension',
+    primaryTerm: 'Obscurify.ai Rezension',
     targetKeywords: [
       'obscurify rezension',
       'obscurify ai',
@@ -370,10 +382,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurify ist ein Web- und Android-Dienst, der laut eigener Beschreibung den Chat mit über 200 KI-Modellen über eine zufällige Kontonummer ermöglicht, ohne E-Mail, Telefonnummer oder Identität.** Das Label „No Logs“ geht mit 30 Tagen IP-Speicherung einher, und der Betreiber wird nicht genannt.',
+      '**Obscurify.ai ist ein Web- und Android-Dienst, der laut eigener Beschreibung den Chat mit über 200 KI-Modellen über eine zufällige Kontonummer ermöglicht, ohne E-Mail, Telefonnummer oder Identität.** Das Label „No Logs“ geht mit 30 Tagen IP-Speicherung einher, und der Betreiber wird nicht genannt.',
     quickAnswerTop: {
       de: {
-        question: 'Ist Obscurify wirklich anonym und privat?',
+        question: 'Ist Obscurify.ai wirklich anonym und privat?',
         answer:
           'Laut Datenschutzerklärung werden Chat-Eingaben und Antworten nicht auf den Servern gespeichert, und es ist keine Identität nötig. Beide Angaben wurden nicht getestet, und der Servercode ist nicht veröffentlicht.',
         bullets: [
@@ -386,11 +398,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Kurzantwort', anchor: 'quick-answer' },
-      { label: 'Was ist Obscurify?', anchor: 'what-is-obscurify' },
+      { label: 'Was ist Obscurify.ai?', anchor: 'what-is-obscurify' },
       { label: 'Bezugsquelle', anchor: 'get-it' },
       { label: 'Tarife und Preise', anchor: 'plans-and-pricing' },
       { label: 'Funktionen und lokaler Modus', anchor: 'key-features' },
       { label: 'Datenschutz und Datenfluss', anchor: 'privacy' },
+      { label: 'Vom Gründer', anchor: 'from-the-maker' },
       { label: 'Für wen sich der Dienst eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
       { label: 'Wettbewerber und Alternativen', anchor: 'vs-alternatives' },
@@ -407,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurify ist ein KI-Chat-Dienst, der Zugang zu Cloud-Modellen ohne E-Mail und Identität verkauft und einen optionalen Modus ergänzt, der offene Modelle im Browser ausführt.',
+            text: 'Obscurify.ai ist ein KI-Chat-Dienst, der Zugang zu Cloud-Modellen ohne E-Mail und Identität verkauft und einen optionalen Modus ergänzt, der offene Modelle im Browser ausführt.',
           },
           {
             type: 'plain-terms',
@@ -429,10 +442,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'Was ist Obscurify?',
+        title: 'Was ist Obscurify.ai?',
         content: [
-          '**Laut seiner Website ist Obscurify ein privater KI-Chat-Dienst, der zwischen Ihnen und den Modellanbietern sitzt, identifizierende Angaben aus jeder Anfrage entfernt und sie unter eigenen Zugangsdaten weiterleitet.** Die Website nennt das „Ihr VPN für KI“. Sie registrieren sich mit einer zufälligen 16-stelligen Kontonummer, ohne E-Mail, Telefonnummer, Benutzernamen oder Passwort, und chatten mit Modellen großer KI-Anbieter.',
-          'Ein zweiter Modus führt quelloffene GGUF-Modelle direkt im Browser über einen WebAssembly-Build von llama.cpp aus, ohne Anfrage an die Server von Obscurify. Eine Android-App ist ein eigener nativer Client desselben Dienstes. Diese Rezension behandelt nur [obscurify.ai](https://obscurify.ai) und die zugehörige Android-App.',
+          '**Laut seiner Website ist Obscurify.ai ein privater KI-Chat-Dienst, der zwischen Ihnen und den Modellanbietern sitzt, identifizierende Angaben aus jeder Anfrage entfernt und sie unter eigenen Zugangsdaten weiterleitet.** Die Website nennt das „Ihr VPN für KI“. Sie registrieren sich mit einer zufälligen 16-stelligen Kontonummer, ohne E-Mail, Telefonnummer, Benutzernamen oder Passwort, und chatten mit Modellen großer KI-Anbieter.',
+          'Ein zweiter Modus führt quelloffene GGUF-Modelle direkt im Browser über einen WebAssembly-Build von llama.cpp aus, ohne Anfrage an die Server von Obscurify.ai. Eine Android-App ist ein eigener nativer Client desselben Dienstes. Diese Rezension behandelt nur [obscurify.ai](https://obscurify.ai) und die zugehörige Android-App.',
+          '**Obscurify.ai ist älter, als seine Code-Repositories vermuten lassen: Laut dem Betreiber startete der Dienst im November 2023 als CryptoTalks, wurde im Juli 2025 in Obscurify.ai umbenannt und ist seit März 2024 auf Monerica gelistet.** Die GitHub-Repositories stammen nur deshalb vom 21. Oktober 2026, weil der Web-Client und die Android-App an diesem Tag unter GPL-3.0 veröffentlicht wurden. Der Betreiber weist zudem darauf hin, dass „Obscurify“ ohne Zusatz eine bekannte, nicht verwandte Spotify-Statistik-App ist; deshalb verwendet diese Rezension den vollständigen Namen. Keine dieser Angaben wurde unabhängig überprüft.',
         ],
       },
       getIt: {
@@ -470,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: 'Tarife und Preise',
         content: [
-          '**Obscurify arbeitet nach dem Freemium-Modell: Gäste chatten kostenlos, alles andere wird im Voraus bezahlt.** Die Preise gelten in US-Dollar; Preise in Landeswährung wurden nicht gefunden.',
+          '**Obscurify.ai arbeitet nach dem Freemium-Modell: Gäste chatten kostenlos, alles andere wird im Voraus bezahlt.** Die Preise gelten in US-Dollar; Preise in Landeswährung wurden nicht gefunden.',
         ],
         columns: ['Tarif', 'Preis', 'Enthalten'],
         rows: [
@@ -526,6 +540,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Gründer',
+        content: [
+          'Tony Davis, Gründer von Obscurify.ai, hat Folgendes zum Dienst mitgeteilt. Es wird als seine eigenen Worte wiedergegeben, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum; die Aussagen zu Speicherung und Zahlungen sind Angaben des Betreibers, die PromptQuorum nicht überprüft hat:',
+          'Das Medienteam von Obscurify.ai hat diesen Artikel außerdem vor dieser Aktualisierung geprüft und den Dienstnamen sowie die Historie korrigiert; alles Übrige stimme mit den Veröffentlichungen des Dienstes überein, einschließlich der 30-tägigen IP-Speicherung.',
+          '„Die meisten KI-Chatdienste wissen genau, wer Sie sind: Ihre E-Mail-Adresse, Ihre Telefonnummer, Ihre Karte und jede Frage, die Sie gestellt haben. Obscurify.ai ist 2023 als Möglichkeit entstanden, KI mit Monero zu bezahlen, und daraus wurde eine Regel, an der wir alles ausrichten: Wir haben lieber keine Daten, als zu versprechen, sie zu schützen. Deshalb sind Konten nur eine Zufallszahl, Chats werden nicht auf unseren Servern gespeichert und Zahlungen laufen über blind signierte Gutscheine, sodass wir keine Zahlung einem Konto zuordnen können. Als Nächstes wollen wir mehr Arbeit auf das Gerät der Nutzer verlagern: schnellere und größere lokale Modelle, mehr Open-Source-Code und Wege, wie Nutzer unsere Aussagen überprüfen können, statt uns zu vertrauen.“',
+        ],
+        note: '— Tony Davis, Gründer von Obscurify.ai',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Für wen sich der Dienst eignet',
@@ -577,14 +601,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Wesentlicher Unterschied': 'Multi-Provider-Frontend mit Personas; Sie bringen eigene API-Schlüssel mit',
           },
         ],
-        note: 'Details der Wettbewerber ändern sich oft; prüfen Sie aktuellen Preis, Lizenz und Plattformen auf der jeweiligen Seite. Anders als diese ist Obscurify ein gehosteter Dienst, der den Modellzugang selbst verkauft.',
+        note: 'Details der Wettbewerber ändern sich oft; prüfen Sie aktuellen Preis, Lizenz und Plattformen auf der jeweiligen Seite. Anders als diese ist Obscurify.ai ein gehosteter Dienst, der den Modellzugang selbst verkauft.',
       },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
-            q: 'Kann ich Obscurify ganz ohne Konto nutzen?',
+            q: 'Kann ich Obscurify.ai ganz ohne Konto nutzen?',
             a: 'Ja, als Gast mit einem offenen Modell und höchstens 30 Nachrichten pro Stunde; Frontier- und unzensierte Modelle erfordern einen Bezahltarif.',
           },
           {
@@ -592,11 +616,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sie kaufen Blind-Gutscheine mit Monero, Bitcoin, Lightning oder Karte und buchen sie auf Ihr Guthaben; für mehr Privatsphäre empfiehlt die Erklärung Tor oder ein VPN und die Standardverzögerung bei der Einlösung.',
           },
           {
-            q: 'Ist Obscurify Open Source?',
+            q: 'Ist Obscurify.ai Open Source?',
             a: 'Der Web-Client und die Android-App stehen unter GPL-3.0; ein Server-Repository wurde nicht gefunden, der Dienst als Ganzes ist also nicht vollständig offen.',
           },
           {
-            q: 'Funktioniert Obscurify offline?',
+            q: 'Funktioniert Obscurify.ai offline?',
             a: 'Nur der lokale Modus kann das, nachdem ein Modell im Browser heruntergeladen wurde; das wurde nicht getestet, und der Cloud-Chat braucht eine Internetverbindung.',
           },
         ],
@@ -605,16 +629,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Obscurify ist ein ungewöhnlicher gehosteter KI-Chat, der darauf ausgelegt ist, nicht zu wissen, wer Sie sind, mit einem lokalen Modus als Rückfallebene. Das Konzept ist dokumentiert und der Client-Code öffentlich, doch der Betreiber bleibt namenlos, der Servercode ist nicht veröffentlicht, und das „No Logs“-Versprechen speichert IP-Adressen 30 Tage lang. Der Dienst eignet sich für Leser, die Cloud-Modelle ohne E-Mail wollen und dieses Vertrauen aufbringen; wer ein überprüfbares Setup braucht, sollte selbst gehostete Optionen wie [LibreChat](/de/power-local-llm/librechat-review) oder [Open WebUI](/de/local-llms/open-webui-review) vergleichen.',
+          'Obscurify.ai ist ein ungewöhnlicher gehosteter KI-Chat, der darauf ausgelegt ist, nicht zu wissen, wer Sie sind, mit einem lokalen Modus als Rückfallebene. Das Konzept ist dokumentiert und der Client-Code öffentlich, doch der Betreiber bleibt namenlos, der Servercode ist nicht veröffentlicht, und das „No Logs“-Versprechen speichert IP-Adressen 30 Tage lang. Der Dienst eignet sich für Leser, die Cloud-Modelle ohne E-Mail wollen und dieses Vertrauen aufbringen; wer ein überprüfbares Setup braucht, sollte selbst gehostete Optionen wie [LibreChat](/de/power-local-llm/librechat-review) oder [Open WebUI](/de/local-llms/open-webui-review) vergleichen.',
       },
       sources: {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Obscurify-Website](https://obscurify.ai) — Produktbeschreibung, lokaler Modus und Links, geprüft am 23. Oktober 2026.',
-          '[Obscurify-Preise](https://obscurify.ai/pricing) — Gast-Limits, Tarife und Abrechnung, geprüft am 23. Oktober 2026.',
-          '[Obscurify-Seite „About“](https://obscurify.ai/about) — Aussagen zu Anonymität, Zahlungen und Protokollierung, geprüft am 23. Oktober 2026.',
-          '[Obscurify-Datenschutzerklärung](https://obscurify.ai/privacy) — erhobene Daten, Speicherdauer, Anbieter und Zahlungen; zuletzt aktualisiert am 22. Oktober 2026.',
+          '[Obscurify.ai-Website](https://obscurify.ai) — Produktbeschreibung, lokaler Modus und Links, geprüft am 23. Oktober 2026.',
+          '[Obscurify.ai-Preise](https://obscurify.ai/pricing) — Gast-Limits, Tarife und Abrechnung, geprüft am 23. Oktober 2026.',
+          '[Obscurify.ai-Seite „About“](https://obscurify.ai/about) — Aussagen zu Anonymität, Zahlungen und Protokollierung, geprüft am 23. Oktober 2026.',
+          '[Obscurify.ai-Datenschutzerklärung](https://obscurify.ai/privacy) — erhobene Daten, Speicherdauer, Anbieter und Zahlungen; zuletzt aktualisiert am 22. Oktober 2026.',
           '[Obscurify-ai auf GitHub](https://github.com/Obscurify-ai) — Web-Client und Android-App, Lizenz, Releases und README, geprüft am 23. Oktober 2026.',
         ],
       },
@@ -639,20 +663,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-es.webp',
-    title: 'Reseña de Obscurify: chat de IA anónimo con modo local opcional',
-    seoTitle: 'Reseña de Obscurify: chat de IA anónimo con modo local',
+    title: 'Reseña de Obscurify.ai: chat de IA anónimo con modo local opcional',
+    seoTitle: 'Reseña de Obscurify.ai: chat de IA anónimo con modo local',
     intro:
-      'Obscurify es un servicio de chat de IA en [obscurify.ai](https://obscurify.ai) que se describe como «tu VPN para la IA»: te registras con un número de cuenta aleatorio en lugar de un correo electrónico, pagas con vales que el operador dice no poder vincular contigo y accedes a más de 200 modelos en la nube. Un modo local opcional ejecuta modelos GGUF dentro del navegador. Esta reseña refleja el sitio web, su política de privacidad y el código público de GitHub, consultados el 23 de octubre de 2026; PromptQuorum no probó el servicio en la práctica.',
+      'Obscurify.ai es un servicio de chat de IA en [obscurify.ai](https://obscurify.ai) que se describe como «tu VPN para la IA»: te registras con un número de cuenta aleatorio en lugar de un correo electrónico, pagas con vales que el operador dice no poder vincular contigo y accedes a más de 200 modelos en la nube. Un modo local opcional ejecuta modelos GGUF dentro del navegador. Esta reseña refleja el sitio web, su política de privacidad y el código público de GitHub, consultados el 23 de octubre de 2026; PromptQuorum no probó el servicio en la práctica.',
     metaDescription:
-      'Reseña de Obscurify: chat de IA anónimo con número de cuenta aleatorio, vales ciegos y modo local opcional en el navegador. Planes y privacidad.',
+      'Reseña de Obscurify.ai: chat de IA anónimo con número de cuenta aleatorio, vales ciegos y modo local opcional en el navegador. Planes y privacidad.',
     twitterDescription:
-      'Reseña de Obscurify: chat de IA anónimo en el navegador y en Android, con modo local opcional. Lo que afirman el sitio y su política de privacidad, lo que muestra el código y lo que sigue sin verificar.',
+      'Reseña de Obscurify.ai: chat de IA anónimo en el navegador y en Android, con modo local opcional. Lo que afirman el sitio y su política de privacidad, lo que muestra el código y lo que sigue sin verificar.',
     audience:
       'Personas que quieren usar modelos de IA en la nube sin correo electrónico, teléfono ni identidad, y necesitan saber qué confirman las fuentes, qué es solo una afirmación del operador y qué se desconoce.',
     readTime: '7 min de lectura',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'reseña de Obscurify',
+    primaryTerm: 'reseña de Obscurify.ai',
     targetKeywords: [
       'reseña obscurify',
       'obscurify ai',
@@ -665,10 +689,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurify es un servicio web y para Android que, según su propia descripción, permite chatear con más de 200 modelos de IA mediante un número de cuenta aleatorio, sin correo, teléfono ni identidad.** Su etiqueta «sin registros» convive con 30 días de conservación de la IP, y el operador no figura por su nombre.',
+      '**Obscurify.ai es un servicio web y para Android que, según su propia descripción, permite chatear con más de 200 modelos de IA mediante un número de cuenta aleatorio, sin correo, teléfono ni identidad.** Su etiqueta «sin registros» convive con 30 días de conservación de la IP, y el operador no figura por su nombre.',
     quickAnswerTop: {
       es: {
-        question: '¿Es Obscurify realmente anónimo y privado?',
+        question: '¿Es Obscurify.ai realmente anónimo y privado?',
         answer:
           'Según su política de privacidad, los mensajes y las respuestas del chat no se guardan en sus servidores y no hace falta ninguna identidad. Ninguna de las dos afirmaciones se probó, y el código del servidor no es público.',
         bullets: [
@@ -681,11 +705,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Respuesta rápida', anchor: 'quick-answer' },
-      { label: '¿Qué es Obscurify?', anchor: 'what-is-obscurify' },
+      { label: '¿Qué es Obscurify.ai?', anchor: 'what-is-obscurify' },
       { label: 'Cómo obtenerlo', anchor: 'get-it' },
       { label: 'Planes y precios', anchor: 'plans-and-pricing' },
       { label: 'Funciones y modo local', anchor: 'key-features' },
       { label: 'Privacidad y flujo de datos', anchor: 'privacy' },
+      { label: 'La voz del fundador', anchor: 'from-the-maker' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
       { label: 'Competidores y alternativas', anchor: 'vs-alternatives' },
@@ -702,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurify es un servicio de chat de IA que vende acceso a modelos en la nube sin correo ni identidad y añade un modo opcional que ejecuta modelos abiertos en el navegador.',
+            text: 'Obscurify.ai es un servicio de chat de IA que vende acceso a modelos en la nube sin correo ni identidad y añade un modo opcional que ejecuta modelos abiertos en el navegador.',
           },
           {
             type: 'plain-terms',
@@ -724,10 +749,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: '¿Qué es Obscurify?',
+        title: '¿Qué es Obscurify.ai?',
         content: [
-          '**Según su sitio web, Obscurify es un servicio privado de chat de IA que se sitúa entre tú y los proveedores de modelos, elimina los datos identificativos de cada solicitud y la reenvía con sus propias credenciales.** El sitio lo llama «tu VPN para la IA». Te registras con un número de cuenta aleatorio de 16 dígitos, sin correo, teléfono, nombre de usuario ni contraseña, y chateas con modelos de grandes proveedores de IA.',
-          'Un segundo modo ejecuta modelos GGUF de código abierto directamente en el navegador mediante una compilación de llama.cpp en WebAssembly, sin enviar solicitudes a los servidores de Obscurify. Una app de Android es un cliente nativo independiente del mismo servicio. Esta reseña cubre solo [obscurify.ai](https://obscurify.ai) y su app de Android.',
+          '**Según su sitio web, Obscurify.ai es un servicio privado de chat de IA que se sitúa entre tú y los proveedores de modelos, elimina los datos identificativos de cada solicitud y la reenvía con sus propias credenciales.** El sitio lo llama «tu VPN para la IA». Te registras con un número de cuenta aleatorio de 16 dígitos, sin correo, teléfono, nombre de usuario ni contraseña, y chateas con modelos de grandes proveedores de IA.',
+          'Un segundo modo ejecuta modelos GGUF de código abierto directamente en el navegador mediante una compilación de llama.cpp en WebAssembly, sin enviar solicitudes a los servidores de Obscurify.ai. Una app de Android es un cliente nativo independiente del mismo servicio. Esta reseña cubre solo [obscurify.ai](https://obscurify.ai) y su app de Android.',
+          '**Obscurify.ai es más antiguo de lo que sugieren sus repositorios de código: según su operador, el servicio se lanzó en noviembre de 2023 como CryptoTalks, se renombró Obscurify.ai en julio de 2025 y figura en Monerica desde marzo de 2024.** Los repositorios de GitHub son del 21 de octubre de 2026 solo porque ese día se publicaron el cliente web y la app de Android bajo GPL-3.0. El operador señala además que «Obscurify» a secas es una conocida app de estadísticas de Spotify sin relación alguna; por eso esta reseña usa el nombre completo. Ninguna de estas fechas se verificó de forma independiente.',
         ],
       },
       getIt: {
@@ -765,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: 'Planes y precios',
         content: [
-          '**Obscurify es freemium: los invitados chatean gratis y todo lo demás es de prepago.** Los precios están en dólares estadounidenses; no se encontraron precios en moneda local.',
+          '**Obscurify.ai es freemium: los invitados chatean gratis y todo lo demás es de prepago.** Los precios están en dólares estadounidenses; no se encontraron precios en moneda local.',
         ],
         columns: ['Plan', 'Precio', 'Qué incluye'],
         rows: [
@@ -821,6 +847,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La voz del fundador',
+        content: [
+          'Tony Davis, fundador de Obscurify.ai, compartió lo siguiente sobre el servicio. Se presenta como sus propias palabras, no como una evaluación editorial independiente de PromptQuorum; las afirmaciones sobre el almacenamiento y los pagos son del operador y PromptQuorum no las ha verificado:',
+          'El equipo de relaciones con los medios de Obscurify.ai también revisó este artículo antes de esta actualización y corrigió el nombre del servicio y su historia; según el equipo, todo lo demás coincide con lo que el servicio publica, incluida la conservación de las direcciones IP durante 30 días.',
+          '“La mayoría de los servicios de chat con IA saben exactamente quién eres: tu correo electrónico, tu número de teléfono, tu tarjeta y cada pregunta que has hecho. Obscurify.ai nació en 2023 como una forma de pagar la IA con Monero y se convirtió en una regla en torno a la cual diseñamos todo: preferimos no tener datos a prometer protegerlos. Por eso las cuentas son solo un número aleatorio, los chats no se almacenan en nuestros servidores y los pagos pasan por vales firmados a ciegas, de modo que no podemos vincular un pago a una cuenta. A continuación queremos trasladar más trabajo al dispositivo del usuario: modelos locales más rápidos y más grandes, más código abierto y formas de que los usuarios verifiquen nuestras afirmaciones en lugar de confiar en ellas.”',
+        ],
+        note: '— Tony Davis, fundador de Obscurify.ai',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quién es',
@@ -872,14 +908,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Diferencia clave': 'Interfaz multiproveedor con personas; traes tus propias claves de API',
           },
         ],
-        note: 'Los detalles de los competidores cambian a menudo; confirma el precio, la licencia y las plataformas actuales en la página de cada app. A diferencia de ellas, Obscurify es un servicio alojado que vende el acceso a los modelos por sí mismo.',
+        note: 'Los detalles de los competidores cambian a menudo; confirma el precio, la licencia y las plataformas actuales en la página de cada app. A diferencia de ellas, Obscurify.ai es un servicio alojado que vende el acceso a los modelos por sí mismo.',
       },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           {
-            q: '¿Puedo usar Obscurify sin ninguna cuenta?',
+            q: '¿Puedo usar Obscurify.ai sin ninguna cuenta?',
             a: 'Sí, como invitado, con un modelo abierto y un límite de 30 mensajes por hora; los modelos de vanguardia y sin censura requieren un plan de pago.',
           },
           {
@@ -887,11 +923,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Compras vales ciegos con Monero, Bitcoin, Lightning o tarjeta y los añades a tu saldo; para mayor privacidad, la política recomienda Tor o una VPN y mantener el retraso de canje predeterminado.',
           },
           {
-            q: '¿Es Obscurify de código abierto?',
+            q: '¿Es Obscurify.ai de código abierto?',
             a: 'El cliente web y la app de Android son GPL-3.0; no se encontró ningún repositorio del servidor, así que el servicio en conjunto no es totalmente abierto.',
           },
           {
-            q: '¿Funciona Obscurify sin conexión?',
+            q: '¿Funciona Obscurify.ai sin conexión?',
             a: 'Solo el modo local puede hacerlo, una vez descargado un modelo en el navegador; no se probó, y el chat en la nube necesita conexión a internet.',
           },
         ],
@@ -900,16 +936,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Obscurify es un chat de IA alojado poco habitual, diseñado para no saber quién eres, con un modo local como alternativa. Su diseño está documentado y el código del cliente es público, pero el operador no tiene nombre, el código del servidor no es público y la promesa de «no logs» conserva las direcciones IP durante 30 días. Encaja con quien quiere modelos en la nube sin correo y acepta esa confianza; quien necesite una configuración verificable debería comparar opciones autoalojadas como [LibreChat](/es/power-local-llm/librechat-review) o [Open WebUI](/es/local-llms/open-webui-review).',
+          'Obscurify.ai es un chat de IA alojado poco habitual, diseñado para no saber quién eres, con un modo local como alternativa. Su diseño está documentado y el código del cliente es público, pero el operador no tiene nombre, el código del servidor no es público y la promesa de «no logs» conserva las direcciones IP durante 30 días. Encaja con quien quiere modelos en la nube sin correo y acepta esa confianza; quien necesite una configuración verificable debería comparar opciones autoalojadas como [LibreChat](/es/power-local-llm/librechat-review) o [Open WebUI](/es/local-llms/open-webui-review).',
       },
       sources: {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Sitio web de Obscurify](https://obscurify.ai) — descripción del producto, modo local y enlaces, consultado el 23 de octubre de 2026.',
-          '[Precios de Obscurify](https://obscurify.ai/pricing) — límites para invitados, planes y facturación, consultado el 23 de octubre de 2026.',
-          '[Página «About» de Obscurify](https://obscurify.ai/about) — afirmaciones sobre anonimato, pagos y registros, consultado el 23 de octubre de 2026.',
-          '[Política de privacidad de Obscurify](https://obscurify.ai/privacy) — datos recogidos, conservación, proveedores y pagos; última actualización el 22 de octubre de 2026.',
+          '[Sitio web de Obscurify.ai](https://obscurify.ai) — descripción del producto, modo local y enlaces, consultado el 23 de octubre de 2026.',
+          '[Precios de Obscurify.ai](https://obscurify.ai/pricing) — límites para invitados, planes y facturación, consultado el 23 de octubre de 2026.',
+          '[Página «About» de Obscurify.ai](https://obscurify.ai/about) — afirmaciones sobre anonimato, pagos y registros, consultado el 23 de octubre de 2026.',
+          '[Política de privacidad de Obscurify.ai](https://obscurify.ai/privacy) — datos recogidos, conservación, proveedores y pagos; última actualización el 22 de octubre de 2026.',
           '[Obscurify-ai en GitHub](https://github.com/Obscurify-ai) — cliente web y app de Android, licencia, versiones y README, consultado el 23 de octubre de 2026.',
         ],
       },
@@ -934,20 +970,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-fr.webp',
-    title: 'Test d\'Obscurify : chat IA anonyme avec mode local optionnel',
-    seoTitle: 'Test d\'Obscurify : chat IA anonyme avec mode local',
+    title: 'Test d\'Obscurify.ai : chat IA anonyme avec mode local optionnel',
+    seoTitle: 'Test d\'Obscurify.ai : chat IA anonyme avec mode local',
     intro:
-      'Obscurify est un service de chat IA accessible sur [obscurify.ai](https://obscurify.ai), qui se présente comme « votre VPN pour l\'IA » : vous vous inscrivez avec un numéro de compte aléatoire plutôt qu\'une adresse e-mail, vous payez avec des bons que l\'opérateur dit ne pas pouvoir relier à vous, et vous accédez à plus de 200 modèles cloud. Un mode local optionnel exécute des modèles GGUF dans le navigateur. Ce test reflète le site web, sa politique de confidentialité et le code public sur GitHub, consultés le 23 octobre 2026 ; PromptQuorum n\'a pas essayé le service en pratique.',
+      'Obscurify.ai est un service de chat IA accessible sur [obscurify.ai](https://obscurify.ai), qui se présente comme « votre VPN pour l\'IA » : vous vous inscrivez avec un numéro de compte aléatoire plutôt qu\'une adresse e-mail, vous payez avec des bons que l\'opérateur dit ne pas pouvoir relier à vous, et vous accédez à plus de 200 modèles cloud. Un mode local optionnel exécute des modèles GGUF dans le navigateur. Ce test reflète le site web, sa politique de confidentialité et le code public sur GitHub, consultés le 23 octobre 2026 ; PromptQuorum n\'a pas essayé le service en pratique.',
     metaDescription:
-      'Test d\'Obscurify : chat IA anonyme, compte aléatoire, bons aveugles et mode local optionnel dans le navigateur. Offres, confidentialité et limites.',
+      'Test d\'Obscurify.ai : chat IA anonyme, compte aléatoire, bons aveugles et mode local optionnel dans le navigateur. Offres, confidentialité et limites.',
     twitterDescription:
-      'Test d\'Obscurify : chat IA anonyme dans le navigateur et sur Android, avec mode local optionnel. Ce qu\'affirment le site et sa politique de confidentialité, ce que montre le code et ce qui reste non vérifié.',
+      'Test d\'Obscurify.ai : chat IA anonyme dans le navigateur et sur Android, avec mode local optionnel. Ce qu\'affirment le site et sa politique de confidentialité, ce que montre le code et ce qui reste non vérifié.',
     audience:
       'Les personnes qui veulent utiliser des modèles d\'IA cloud sans e-mail, numéro de téléphone ni identité, et qui doivent savoir ce que confirment les sources, ce qui relève de la seule déclaration de l\'opérateur et ce qui reste inconnu.',
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test Obscurify',
+    primaryTerm: 'test Obscurify.ai',
     targetKeywords: [
       'test obscurify',
       'obscurify ai',
@@ -960,10 +996,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurify est un service web et Android qui, selon sa propre description, permet de discuter avec plus de 200 modèles d\'IA via un numéro de compte aléatoire, sans e-mail, numéro de téléphone ni identité.** Son libellé « No Logs » s\'accompagne de 30 jours de conservation de l\'adresse IP, et l\'opérateur n\'est pas nommé.',
+      '**Obscurify.ai est un service web et Android qui, selon sa propre description, permet de discuter avec plus de 200 modèles d\'IA via un numéro de compte aléatoire, sans e-mail, numéro de téléphone ni identité.** Son libellé « No Logs » s\'accompagne de 30 jours de conservation de l\'adresse IP, et l\'opérateur n\'est pas nommé.',
     quickAnswerTop: {
       fr: {
-        question: 'Obscurify est-il vraiment anonyme et privé ?',
+        question: 'Obscurify.ai est-il vraiment anonyme et privé ?',
         answer:
           'Selon sa politique de confidentialité, les messages et les réponses du chat ne sont pas enregistrés sur ses serveurs et aucune identité n\'est requise. Aucune de ces affirmations n\'a été testée, et le code du serveur n\'est pas publié.',
         bullets: [
@@ -976,11 +1012,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Réponse rapide', anchor: 'quick-answer' },
-      { label: 'Qu\'est-ce qu\'Obscurify ?', anchor: 'what-is-obscurify' },
+      { label: 'Qu\'est-ce qu\'Obscurify.ai ?', anchor: 'what-is-obscurify' },
       { label: 'Où le trouver', anchor: 'get-it' },
       { label: 'Offres et tarifs', anchor: 'plans-and-pricing' },
       { label: 'Fonctions et mode local', anchor: 'key-features' },
       { label: 'Confidentialité et flux de données', anchor: 'privacy' },
+      { label: 'Le mot du fondateur', anchor: 'from-the-maker' },
       { label: 'À qui il convient', anchor: 'who-should-use' },
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
       { label: 'Concurrents et alternatives', anchor: 'vs-alternatives' },
@@ -997,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurify est un service de chat IA qui vend l\'accès à des modèles cloud sans e-mail ni identité et ajoute un mode optionnel exécutant des modèles ouverts dans le navigateur.',
+            text: 'Obscurify.ai est un service de chat IA qui vend l\'accès à des modèles cloud sans e-mail ni identité et ajoute un mode optionnel exécutant des modèles ouverts dans le navigateur.',
           },
           {
             type: 'plain-terms',
@@ -1019,10 +1056,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'Qu\'est-ce qu\'Obscurify ?',
+        title: 'Qu\'est-ce qu\'Obscurify.ai ?',
         content: [
-          '**Selon son site web, Obscurify est un service de chat IA privé qui s\'interpose entre vous et les fournisseurs de modèles, retire les éléments d\'identification de chaque requête et la transmet avec ses propres identifiants.** Le site le décrit comme « votre VPN pour l\'IA ». Vous vous inscrivez avec un numéro de compte aléatoire à 16 chiffres, sans e-mail, numéro de téléphone, nom d\'utilisateur ni mot de passe, et vous discutez avec des modèles de grands fournisseurs d\'IA.',
-          'Un second mode exécute des modèles GGUF open source directement dans le navigateur, via une version WebAssembly de llama.cpp, sans requête vers les serveurs d\'Obscurify. Une application Android est un client natif distinct du même service. Ce test ne couvre que [obscurify.ai](https://obscurify.ai) et son application Android.',
+          '**Selon son site web, Obscurify.ai est un service de chat IA privé qui s\'interpose entre vous et les fournisseurs de modèles, retire les éléments d\'identification de chaque requête et la transmet avec ses propres identifiants.** Le site le décrit comme « votre VPN pour l\'IA ». Vous vous inscrivez avec un numéro de compte aléatoire à 16 chiffres, sans e-mail, numéro de téléphone, nom d\'utilisateur ni mot de passe, et vous discutez avec des modèles de grands fournisseurs d\'IA.',
+          'Un second mode exécute des modèles GGUF open source directement dans le navigateur, via une version WebAssembly de llama.cpp, sans requête vers les serveurs d\'Obscurify.ai. Une application Android est un client natif distinct du même service. Ce test ne couvre que [obscurify.ai](https://obscurify.ai) et son application Android.',
+          '**Obscurify.ai est plus ancien que ses dépôts de code ne le laissent penser : selon son opérateur, le service a été lancé en novembre 2023 sous le nom CryptoTalks, rebaptisé Obscurify.ai en juillet 2025 et est référencé sur Monerica depuis mars 2024.** Les dépôts GitHub datent du 21 octobre 2026 uniquement parce que le client web et l\'application Android ont été publiés ce jour-là sous GPL-3.0. L\'opérateur précise aussi que « Obscurify » seul désigne une application de statistiques Spotify connue et sans rapport ; cette revue utilise donc le nom complet. Aucune de ces dates n\'a été vérifiée de façon indépendante.',
         ],
       },
       getIt: {
@@ -1060,7 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: 'Offres et tarifs',
         content: [
-          '**Obscurify fonctionne en freemium : les invités discutent gratuitement, tout le reste est prépayé.** Les prix sont en dollars américains ; aucun prix en monnaie locale n\'a été trouvé.',
+          '**Obscurify.ai fonctionne en freemium : les invités discutent gratuitement, tout le reste est prépayé.** Les prix sont en dollars américains ; aucun prix en monnaie locale n\'a été trouvé.',
         ],
         columns: ['Offre', 'Prix', 'Contenu'],
         rows: [
@@ -1116,6 +1154,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du fondateur',
+        content: [
+          'Tony Davis, fondateur d\'Obscurify.ai, a transmis le texte suivant à propos du service. Il est présenté comme ses propres mots, et non comme une évaluation éditoriale indépendante de PromptQuorum ; les affirmations sur le stockage et les paiements sont celles de l\'opérateur, que PromptQuorum n\'a pas vérifiées :',
+          'L\'équipe relations médias d\'Obscurify.ai a en outre relu cet article avant cette mise à jour et corrigé le nom du service ainsi que son historique ; selon elle, tout le reste correspond à ce que le service publie, y compris la conservation des adresses IP pendant 30 jours.',
+          '« La plupart des services de chat IA savent exactement qui vous êtes : votre e-mail, votre numéro de téléphone, votre carte et chaque question que vous avez posée. Obscurify.ai est né en 2023 comme un moyen de payer l\'IA avec Monero, puis est devenu une règle autour de laquelle nous concevons tout : nous préférons ne pas avoir de données plutôt que de promettre de les protéger. C\'est pourquoi les comptes ne sont qu\'un numéro aléatoire, les conversations ne sont pas stockées sur nos serveurs et les paiements passent par des bons signés à l\'aveugle, de sorte que nous ne pouvons pas relier un paiement à un compte. Ensuite, nous voulons déplacer davantage de travail vers l\'appareil de l\'utilisateur : des modèles locaux plus rapides et plus grands, davantage de code open source et des moyens pour que les utilisateurs vérifient nos affirmations plutôt que de nous croire sur parole. »',
+        ],
+        note: '— Tony Davis, fondateur d\'Obscurify.ai',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'À qui il convient',
@@ -1167,14 +1215,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Différence clé': 'Interface multifournisseur avec personas ; vous apportez vos propres clés d\'API',
           },
         ],
-        note: 'Les détails des concurrents changent souvent ; vérifiez le prix, la licence et les plateformes actuels sur la page de chaque application. Contrairement à elles, Obscurify est un service hébergé qui vend lui-même l\'accès aux modèles.',
+        note: 'Les détails des concurrents changent souvent ; vérifiez le prix, la licence et les plateformes actuels sur la page de chaque application. Contrairement à elles, Obscurify.ai est un service hébergé qui vend lui-même l\'accès aux modèles.',
       },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
           {
-            q: 'Puis-je utiliser Obscurify sans aucun compte ?',
+            q: 'Puis-je utiliser Obscurify.ai sans aucun compte ?',
             a: 'Oui, en tant qu\'invité, avec un modèle ouvert et une limite de 30 messages par heure ; les modèles de pointe et non censurés exigent une offre payante.',
           },
           {
@@ -1182,11 +1230,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Vous achetez des bons aveugles avec Monero, Bitcoin, Lightning ou carte et les ajoutez à votre solde ; pour plus de confidentialité, la politique recommande Tor ou un VPN et de conserver le délai d\'utilisation par défaut.',
           },
           {
-            q: 'Obscurify est-il open source ?',
+            q: 'Obscurify.ai est-il open source ?',
             a: 'Le client web et l\'application Android sont sous GPL-3.0 ; aucun dépôt du serveur n\'a été trouvé, le service dans son ensemble n\'est donc pas entièrement ouvert.',
           },
           {
-            q: 'Obscurify fonctionne-t-il hors ligne ?',
+            q: 'Obscurify.ai fonctionne-t-il hors ligne ?',
             a: 'Seul le mode local le peut, une fois un modèle téléchargé dans le navigateur ; cela n\'a pas été testé, et le chat cloud exige une connexion internet.',
           },
         ],
@@ -1195,16 +1243,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Obscurify est un chat IA hébergé inhabituel, conçu pour ne pas savoir qui vous êtes, avec un mode local en secours. Sa conception est documentée et le code du client est public, mais l\'opérateur n\'est pas nommé, le code du serveur n\'est pas publié et la promesse « no logs » conserve les adresses IP pendant 30 jours. Il convient aux lecteurs qui veulent des modèles cloud sans e-mail et acceptent cette confiance ; ceux qui ont besoin d\'une configuration vérifiable devraient comparer des solutions auto-hébergées comme [LibreChat](/fr/power-local-llm/librechat-review) ou [Open WebUI](/fr/local-llms/open-webui-review).',
+          'Obscurify.ai est un chat IA hébergé inhabituel, conçu pour ne pas savoir qui vous êtes, avec un mode local en secours. Sa conception est documentée et le code du client est public, mais l\'opérateur n\'est pas nommé, le code du serveur n\'est pas publié et la promesse « no logs » conserve les adresses IP pendant 30 jours. Il convient aux lecteurs qui veulent des modèles cloud sans e-mail et acceptent cette confiance ; ceux qui ont besoin d\'une configuration vérifiable devraient comparer des solutions auto-hébergées comme [LibreChat](/fr/power-local-llm/librechat-review) ou [Open WebUI](/fr/local-llms/open-webui-review).',
       },
       sources: {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Site web d\'Obscurify](https://obscurify.ai) — description du produit, mode local et liens, consulté le 23 octobre 2026.',
-          '[Tarifs d\'Obscurify](https://obscurify.ai/pricing) — limites invité, offres et facturation, consulté le 23 octobre 2026.',
-          '[Page « About » d\'Obscurify](https://obscurify.ai/about) — déclarations sur l\'anonymat, les paiements et les journaux, consulté le 23 octobre 2026.',
-          '[Politique de confidentialité d\'Obscurify](https://obscurify.ai/privacy) — données collectées, conservation, fournisseurs et paiements ; dernière mise à jour le 22 octobre 2026.',
+          '[Site web d\'Obscurify.ai](https://obscurify.ai) — description du produit, mode local et liens, consulté le 23 octobre 2026.',
+          '[Tarifs d\'Obscurify.ai](https://obscurify.ai/pricing) — limites invité, offres et facturation, consulté le 23 octobre 2026.',
+          '[Page « About » d\'Obscurify.ai](https://obscurify.ai/about) — déclarations sur l\'anonymat, les paiements et les journaux, consulté le 23 octobre 2026.',
+          '[Politique de confidentialité d\'Obscurify.ai](https://obscurify.ai/privacy) — données collectées, conservation, fournisseurs et paiements ; dernière mise à jour le 22 octobre 2026.',
           '[Obscurify-ai sur GitHub](https://github.com/Obscurify-ai) — client web et application Android, licence, versions et README, consulté le 23 octobre 2026.',
         ],
       },
@@ -1229,20 +1277,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-ja.webp',
-    title: 'Obscurifyレビュー：ローカルモードも使える匿名AIチャット',
-    seoTitle: 'Obscurifyレビュー：匿名AIチャットとローカルモード',
+    title: 'Obscurify.aiレビュー：ローカルモードも使える匿名AIチャット',
+    seoTitle: 'Obscurify.aiレビュー：匿名AIチャットとローカルモード',
     intro:
-      'Obscurifyは、[obscurify.ai](https://obscurify.ai)で提供されるAIチャットサービスで、自らを「AI向けのVPN」と説明しています。メールアドレスの代わりにランダムなアカウント番号で登録し、運営者が自分には紐づけられないと述べるバウチャーで支払い、200以上のクラウドモデルを利用できます。任意のローカルモードでは、ブラウザ内でGGUFモデルを実行します。このレビューは、2026年10月23日時点のウェブサイト、プライバシーポリシー、公開GitHubコードの内容に基づいており、PromptQuorumは実際の使用テストを行っていません。',
+      'Obscurify.aiは、[obscurify.ai](https://obscurify.ai)で提供されるAIチャットサービスで、自らを「AI向けのVPN」と説明しています。メールアドレスの代わりにランダムなアカウント番号で登録し、運営者が自分には紐づけられないと述べるバウチャーで支払い、200以上のクラウドモデルを利用できます。任意のローカルモードでは、ブラウザ内でGGUFモデルを実行します。このレビューは、2026年10月23日時点のウェブサイト、プライバシーポリシー、公開GitHubコードの内容に基づいており、PromptQuorumは実際の使用テストを行っていません。',
     metaDescription:
-      'Obscurifyレビュー：ランダムなアカウント番号、ブラインドバウチャー決済、ブラウザ内ローカルモードを備えた匿名AIチャット。料金、プライバシー、未検証の点を解説します。',
+      'Obscurify.aiレビュー：ランダムなアカウント番号、ブラインドバウチャー決済、ブラウザ内ローカルモードを備えた匿名AIチャット。料金、プライバシー、未検証の点を解説します。',
     twitterDescription:
-      'Obscurifyレビュー：ブラウザとAndroidで使える匿名AIチャット。ローカルモードも任意で利用可能。サイトとポリシーの主張、コードで確認できること、未検証の点を整理します。',
+      'Obscurify.aiレビュー：ブラウザとAndroidで使える匿名AIチャット。ローカルモードも任意で利用可能。サイトとポリシーの主張、コードで確認できること、未検証の点を整理します。',
     audience:
       'メールアドレス・電話番号・身元を明かさずにクラウドAIモデルを使いたい人で、情報源が確認していること、運営者の主張にすぎないこと、不明な点を知りたい人。',
     readTime: '7分で読める',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Obscurify レビュー',
+    primaryTerm: 'Obscurify.ai レビュー',
     targetKeywords: [
       'obscurify レビュー',
       'obscurify ai',
@@ -1255,10 +1303,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurifyは、公式の説明によると、メール・電話番号・身元なしで、ランダムなアカウント番号から200以上のAIモデルとチャットできるウェブ／Androidサービスです。** 「ノーログ」の表示がある一方でIPアドレスは30日間保持され、運営者の名前は明示されていません。',
+      '**Obscurify.aiは、公式の説明によると、メール・電話番号・身元なしで、ランダムなアカウント番号から200以上のAIモデルとチャットできるウェブ／Androidサービスです。** 「ノーログ」の表示がある一方でIPアドレスは30日間保持され、運営者の名前は明示されていません。',
     quickAnswerTop: {
       ja: {
-        question: 'Obscurifyは本当に匿名でプライベートですか？',
+        question: 'Obscurify.aiは本当に匿名でプライベートですか？',
         answer:
           'プライバシーポリシーによると、チャットの入力と応答はサーバーに保存されず、身元の提示も不要です。どちらの主張も検証しておらず、サーバーのコードは公開されていません。',
         bullets: [
@@ -1271,11 +1319,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'クイックアンサー', anchor: 'quick-answer' },
-      { label: 'Obscurifyとは?', anchor: 'what-is-obscurify' },
+      { label: 'Obscurify.aiとは?', anchor: 'what-is-obscurify' },
       { label: '入手方法', anchor: 'get-it' },
       { label: 'プランと料金', anchor: 'plans-and-pricing' },
       { label: '機能とローカルモード', anchor: 'key-features' },
       { label: 'プライバシーとデータの流れ', anchor: 'privacy' },
+      { label: '創業者から', anchor: 'from-the-maker' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかった点', anchor: 'who-should-not-use' },
       { label: '競合と代替アプリ', anchor: 'vs-alternatives' },
@@ -1292,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurifyは、メールや身元なしでクラウドモデルを利用できるAIチャットサービスで、オープンモデルをブラウザ内で動かす任意モードも備えています。',
+            text: 'Obscurify.aiは、メールや身元なしでクラウドモデルを利用できるAIチャットサービスで、オープンモデルをブラウザ内で動かす任意モードも備えています。',
           },
           {
             type: 'plain-terms',
@@ -1314,10 +1363,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'Obscurifyとは?',
+        title: 'Obscurify.aiとは?',
         content: [
-          '**公式サイトによると、ObscurifyはプライベートなAIチャットサービスで、利用者とモデル提供元の間に入り、各リクエストから識別情報を取り除いて自社の認証情報で転送します。** サイトはこれを「AI向けのVPN」と呼んでいます。メール、電話番号、ユーザー名、パスワードは不要で、ランダムな16桁のアカウント番号で登録し、大手AIプロバイダーのモデルとチャットします。',
-          '2つ目のモードでは、llama.cppのWebAssembly版を使い、オープンソースのGGUFモデルをブラウザ内で直接実行します。Obscurifyのサーバーへのリクエストは発生しません。Androidアプリは同じサービスの別のネイティブクライアントです。このレビューの対象は[obscurify.ai](https://obscurify.ai)とそのAndroidアプリのみです。',
+          '**公式サイトによると、Obscurify.aiはプライベートなAIチャットサービスで、利用者とモデル提供元の間に入り、各リクエストから識別情報を取り除いて自社の認証情報で転送します。** サイトはこれを「AI向けのVPN」と呼んでいます。メール、電話番号、ユーザー名、パスワードは不要で、ランダムな16桁のアカウント番号で登録し、大手AIプロバイダーのモデルとチャットします。',
+          '2つ目のモードでは、llama.cppのWebAssembly版を使い、オープンソースのGGUFモデルをブラウザ内で直接実行します。Obscurify.aiのサーバーへのリクエストは発生しません。Androidアプリは同じサービスの別のネイティブクライアントです。このレビューの対象は[obscurify.ai](https://obscurify.ai)とそのAndroidアプリのみです。',
+          '**Obscurify.aiは、コードリポジトリから受ける印象より古いサービスです。運営者によると、2023年11月にCryptoTalksとして開始され、2025年7月にObscurify.aiへ改称され、2024年3月からMonericaに掲載されています。** GitHubのリポジトリが2026年10月21日付なのは、その日にウェブクライアントとAndroidアプリがGPL-3.0で公開されたためにすぎません。運営者は、「Obscurify」単体は無関係の有名なSpotify統計アプリの名前でもあると指摘しており、このレビューでは正式名称を使用します。上記の日付はいずれも独立した検証を行っていません。',
         ],
       },
       getIt: {
@@ -1355,7 +1405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: 'プランと料金',
         content: [
-          '**Obscurifyはフリーミアムです。ゲストは無料でチャットでき、それ以外は前払い制です。** 価格は米ドル表記で、現地通貨の価格は見つかりませんでした。',
+          '**Obscurify.aiはフリーミアムです。ゲストは無料でチャットでき、それ以外は前払い制です。** 価格は米ドル表記で、現地通貨の価格は見つかりませんでした。',
         ],
         columns: ['プラン', '価格', '含まれる内容'],
         rows: [
@@ -1411,6 +1461,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '創業者から',
+        content: [
+          'Obscurify.aiの創業者であるTony Davis氏が、このサービスについて次のように述べています。以下は同氏自身の言葉として提示するものであり、PromptQuorumによる独立した編集上の評価ではありません。保存や支払いに関する記述は運営側の主張であり、PromptQuorumは検証していません:',
+          'Obscurify.aiの広報チームは、今回の更新前に本記事も確認し、サービス名と沿革を訂正しました。それ以外の内容は、30日間のIPアドレス保持を含め、サービスが公開している情報と一致しているとのことです。',
+          '「ほとんどのAIチャットサービスは、あなたが誰なのかを正確に把握しています。メールアドレス、電話番号、カード、そしてこれまでにした質問のすべてです。Obscurify.aiは2023年に、Moneroを使ってAIの料金を支払う手段として始まり、やがてすべての設計の軸となるルールへと育ちました。データを守ると約束するより、そもそもデータを持たないほうがよい、というルールです。そのため、アカウントはランダムな番号にすぎず、チャットは当社のサーバーに保存されず、支払いはブラインド署名されたバウチャーを通じて行われるので、支払いとアカウントを結び付けることができません。次の目標は、より多くの処理をユーザーのデバイス側に移すことです。より高速で大規模なローカルモデル、より多くのオープンソースコード、そして利用者が私たちの主張を信じるのではなく自分で検証できる手段を目指します。」',
+        ],
+        note: '— Tony Davis氏、Obscurify.ai創業者',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '向いている人',
@@ -1462,14 +1522,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '主な違い': 'ペルソナ付きのマルチプロバイダー対応フロントエンドで、自分のAPIキーを使用',
           },
         ],
-        note: '競合の詳細は変わりやすいため、各アプリのページで最新の価格・ライセンス・対応プラットフォームを確認してください。これらと異なり、Obscurifyはモデルへのアクセス自体を販売するホスト型サービスです。',
+        note: '競合の詳細は変わりやすいため、各アプリのページで最新の価格・ライセンス・対応プラットフォームを確認してください。これらと異なり、Obscurify.aiはモデルへのアクセス自体を販売するホスト型サービスです。',
       },
       faq: {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
           {
-            q: 'アカウントなしでObscurifyを使えますか？',
+            q: 'アカウントなしでObscurify.aiを使えますか？',
             a: 'はい。ゲストとして、オープンモデル1つを1時間30メッセージまで利用できます。最先端モデルや無検閲モデルには有料プランが必要です。',
           },
           {
@@ -1477,11 +1537,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Monero、Bitcoin、Lightning、カードでブラインドバウチャーを購入し、残高に追加します。より高いプライバシーのため、ポリシーはTorまたはVPNの利用と、既定の利用遅延を維持することを推奨しています。',
           },
           {
-            q: 'Obscurifyはオープンソースですか？',
+            q: 'Obscurify.aiはオープンソースですか？',
             a: 'ウェブクライアントとAndroidアプリはGPL-3.0です。サーバーのリポジトリは見つからなかったため、サービス全体が完全にオープンというわけではありません。',
           },
           {
-            q: 'Obscurifyはオフラインで使えますか？',
+            q: 'Obscurify.aiはオフラインで使えますか？',
             a: 'ブラウザにモデルをダウンロードした後のローカルモードだけが可能ですが、検証していません。クラウドチャットにはインターネット接続が必要です。',
           },
         ],
@@ -1490,16 +1550,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'Obscurifyは、利用者が誰かを知らないことを前提に作られた珍しいホスト型AIチャットで、予備としてローカルモードを備えています。設計は文書化されクライアントのコードも公開されていますが、運営者は名前が不明で、サーバーのコードは非公開、「ノーログ」の主張でもIPアドレスは30日間保持されます。メールなしでクラウドモデルを使いたく、その信頼を受け入れられる人に向いています。検証可能な構成が必要なら、[LibreChat](/ja/power-local-llm/librechat-review)や[Open WebUI](/ja/local-llms/open-webui-review)などのセルフホスト型を比較してください。',
+          'Obscurify.aiは、利用者が誰かを知らないことを前提に作られた珍しいホスト型AIチャットで、予備としてローカルモードを備えています。設計は文書化されクライアントのコードも公開されていますが、運営者は名前が不明で、サーバーのコードは非公開、「ノーログ」の主張でもIPアドレスは30日間保持されます。メールなしでクラウドモデルを使いたく、その信頼を受け入れられる人に向いています。検証可能な構成が必要なら、[LibreChat](/ja/power-local-llm/librechat-review)や[Open WebUI](/ja/local-llms/open-webui-review)などのセルフホスト型を比較してください。',
       },
       sources: {
         id: 'sources',
         title: '出典',
         items: [
-          '[Obscurify公式サイト](https://obscurify.ai) — 製品説明、ローカルモード、リンク。2026年10月23日に確認。',
-          '[Obscurifyの料金ページ](https://obscurify.ai/pricing) — ゲストの制限、プラン、課金。2026年10月23日に確認。',
-          '[Obscurifyのaboutページ](https://obscurify.ai/about) — 匿名性、支払い、ログに関する記述。2026年10月23日に確認。',
-          '[Obscurifyのプライバシーポリシー](https://obscurify.ai/privacy) — 収集データ、保持期間、提供元、支払い。最終更新2026年10月22日。',
+          '[Obscurify.ai公式サイト](https://obscurify.ai) — 製品説明、ローカルモード、リンク。2026年10月23日に確認。',
+          '[Obscurify.aiの料金ページ](https://obscurify.ai/pricing) — ゲストの制限、プラン、課金。2026年10月23日に確認。',
+          '[Obscurify.aiのaboutページ](https://obscurify.ai/about) — 匿名性、支払い、ログに関する記述。2026年10月23日に確認。',
+          '[Obscurify.aiのプライバシーポリシー](https://obscurify.ai/privacy) — 収集データ、保持期間、提供元、支払い。最終更新2026年10月22日。',
           '[GitHubのObscurify-ai](https://github.com/Obscurify-ai) — ウェブクライアントとAndroidアプリ、ライセンス、リリース、README。2026年10月23日に確認。',
         ],
       },
@@ -1524,20 +1584,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-pt.webp',
-    title: 'Análise do Obscurify: chat de IA anônimo com modo local opcional',
-    seoTitle: 'Análise do Obscurify: chat de IA anônimo com modo local',
+    title: 'Análise do Obscurify.ai: chat de IA anônimo com modo local opcional',
+    seoTitle: 'Análise do Obscurify.ai: chat de IA anônimo com modo local',
     intro:
-      'O Obscurify é um serviço de chat de IA em [obscurify.ai](https://obscurify.ai) que se descreve como "a sua VPN para a IA": você se cadastra com um número de conta aleatório em vez de um e-mail, paga com vouchers que o operador diz não conseguir vincular a você e acessa mais de 200 modelos na nuvem. Um modo local opcional executa modelos GGUF dentro do navegador. Esta análise reflete o site, a política de privacidade e o código público no GitHub, verificados em 23 de outubro de 2026; a PromptQuorum não testou o serviço na prática.',
+      'O Obscurify.ai é um serviço de chat de IA em [obscurify.ai](https://obscurify.ai) que se descreve como "a sua VPN para a IA": você se cadastra com um número de conta aleatório em vez de um e-mail, paga com vouchers que o operador diz não conseguir vincular a você e acessa mais de 200 modelos na nuvem. Um modo local opcional executa modelos GGUF dentro do navegador. Esta análise reflete o site, a política de privacidade e o código público no GitHub, verificados em 23 de outubro de 2026; a PromptQuorum não testou o serviço na prática.',
     metaDescription:
-      'Análise do Obscurify: chat de IA anônimo com conta aleatória, vouchers cegos e modo local opcional no navegador. Planos, privacidade, limites.',
+      'Análise do Obscurify.ai: chat de IA anônimo com conta aleatória, vouchers cegos e modo local opcional no navegador. Planos, privacidade, limites.',
     twitterDescription:
-      'Análise do Obscurify: chat de IA anônimo no navegador e no Android, com modo local opcional. O que o site e a política de privacidade afirmam, o que o código mostra e o que continua sem verificação.',
+      'Análise do Obscurify.ai: chat de IA anônimo no navegador e no Android, com modo local opcional. O que o site e a política de privacidade afirmam, o que o código mostra e o que continua sem verificação.',
     audience:
       'Pessoas que querem usar modelos de IA na nuvem sem e-mail, telefone ou identidade e precisam saber o que as fontes confirmam, o que é apenas afirmação do operador e o que é desconhecido.',
     readTime: '7 min de leitura',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'análise do Obscurify',
+    primaryTerm: 'análise do Obscurify.ai',
     targetKeywords: [
       'análise obscurify',
       'obscurify ai',
@@ -1550,10 +1610,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**O Obscurify é um serviço web e para Android que, segundo a própria descrição, permite conversar com mais de 200 modelos de IA por meio de um número de conta aleatório, sem e-mail, telefone ou identidade.** O rótulo "sem logs" convive com 30 dias de retenção do IP, e o operador não é nomeado.',
+      '**O Obscurify.ai é um serviço web e para Android que, segundo a própria descrição, permite conversar com mais de 200 modelos de IA por meio de um número de conta aleatório, sem e-mail, telefone ou identidade.** O rótulo "sem logs" convive com 30 dias de retenção do IP, e o operador não é nomeado.',
     quickAnswerTop: {
       pt: {
-        question: 'O Obscurify é realmente anônimo e privado?',
+        question: 'O Obscurify.ai é realmente anônimo e privado?',
         answer:
           'Segundo a política de privacidade, as mensagens e respostas do chat não são salvas nos servidores e nenhuma identidade é exigida. Nenhuma das afirmações foi testada, e o código do servidor não é público.',
         bullets: [
@@ -1566,11 +1626,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Resposta rápida', anchor: 'quick-answer' },
-      { label: 'O que é o Obscurify?', anchor: 'what-is-obscurify' },
+      { label: 'O que é o Obscurify.ai?', anchor: 'what-is-obscurify' },
       { label: 'Como obter', anchor: 'get-it' },
       { label: 'Planos e preços', anchor: 'plans-and-pricing' },
       { label: 'Recursos e modo local', anchor: 'key-features' },
       { label: 'Privacidade e fluxo de dados', anchor: 'privacy' },
+      { label: 'A palavra do fundador', anchor: 'from-the-maker' },
       { label: 'Para quem é indicado', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
       { label: 'Concorrentes e alternativas', anchor: 'vs-alternatives' },
@@ -1587,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O Obscurify é um serviço de chat de IA que vende acesso a modelos na nuvem sem e-mail nem identidade e acrescenta um modo opcional que executa modelos abertos no navegador.',
+            text: 'O Obscurify.ai é um serviço de chat de IA que vende acesso a modelos na nuvem sem e-mail nem identidade e acrescenta um modo opcional que executa modelos abertos no navegador.',
           },
           {
             type: 'plain-terms',
@@ -1609,10 +1670,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'O que é o Obscurify?',
+        title: 'O que é o Obscurify.ai?',
         content: [
-          '**Segundo o site, o Obscurify é um serviço de chat de IA privado que fica entre você e os provedores de modelos, remove os dados de identificação de cada solicitação e a repassa com as próprias credenciais.** O site chama isso de "a sua VPN para a IA". Você se cadastra com um número de conta aleatório de 16 dígitos, sem e-mail, telefone, nome de usuário ou senha, e conversa com modelos de grandes provedores de IA.',
-          'Um segundo modo executa modelos GGUF de código aberto diretamente no navegador, por meio de uma versão do llama.cpp em WebAssembly, sem enviar solicitações aos servidores do Obscurify. Um app Android é um cliente nativo separado do mesmo serviço. Esta análise cobre apenas [obscurify.ai](https://obscurify.ai) e o app Android.',
+          '**Segundo o site, o Obscurify.ai é um serviço de chat de IA privado que fica entre você e os provedores de modelos, remove os dados de identificação de cada solicitação e a repassa com as próprias credenciais.** O site chama isso de "a sua VPN para a IA". Você se cadastra com um número de conta aleatório de 16 dígitos, sem e-mail, telefone, nome de usuário ou senha, e conversa com modelos de grandes provedores de IA.',
+          'Um segundo modo executa modelos GGUF de código aberto diretamente no navegador, por meio de uma versão do llama.cpp em WebAssembly, sem enviar solicitações aos servidores do Obscurify.ai. Um app Android é um cliente nativo separado do mesmo serviço. Esta análise cobre apenas [obscurify.ai](https://obscurify.ai) e o app Android.',
+          '**O Obscurify.ai é mais antigo do que seus repositórios de código sugerem: segundo o operador, o serviço foi lançado em novembro de 2023 como CryptoTalks, renomeado para Obscurify.ai em julho de 2025 e está listado na Monerica desde março de 2024.** Os repositórios no GitHub são de 21 de outubro de 2026 apenas porque o cliente web e o app Android foram publicados sob GPL-3.0 nesse dia. O operador também observa que "Obscurify" sozinho é um conhecido app de estatísticas do Spotify, sem relação com o serviço; por isso esta análise usa o nome completo. Nenhuma dessas datas foi verificada de forma independente.',
         ],
       },
       getIt: {
@@ -1650,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: 'Planos e preços',
         content: [
-          '**O Obscurify é freemium: convidados conversam de graça e todo o resto é pré-pago.** Os preços são em dólares americanos; não foram encontrados preços em moeda local.',
+          '**O Obscurify.ai é freemium: convidados conversam de graça e todo o resto é pré-pago.** Os preços são em dólares americanos; não foram encontrados preços em moeda local.',
         ],
         columns: ['Plano', 'Preço', 'O que inclui'],
         rows: [
@@ -1706,6 +1768,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do fundador',
+        content: [
+          'Tony Davis, fundador do Obscurify.ai, compartilhou o seguinte sobre o serviço. É apresentado como as palavras dele, não como uma avaliação editorial independente da PromptQuorum; as afirmações sobre armazenamento e pagamentos são do operador e a PromptQuorum não as verificou:',
+          'A equipe de relações com a mídia do Obscurify.ai também revisou este artigo antes desta atualização e corrigiu o nome do serviço e seu histórico; segundo a equipe, todo o resto confere com o que o serviço publica, inclusive a retenção de endereços IP por 30 dias.',
+          '“A maioria dos serviços de chat com IA sabe exatamente quem você é: seu e-mail, seu número de telefone, seu cartão e cada pergunta que você já fez. O Obscurify.ai começou em 2023 como uma forma de pagar por IA com Monero e virou uma regra em torno da qual projetamos tudo: preferimos não ter dados a prometer protegê-los. Por isso as contas são apenas um número aleatório, os chats não ficam armazenados em nossos servidores e os pagamentos passam por vouchers com assinatura cega, de modo que não conseguimos vincular um pagamento a uma conta. O próximo passo é levar mais trabalho para o dispositivo do usuário: modelos locais mais rápidos e maiores, mais código aberto e formas de os usuários verificarem nossas afirmações em vez de confiar nelas.”',
+        ],
+        note: '— Tony Davis, fundador do Obscurify.ai',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quem é indicado',
@@ -1757,14 +1829,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Diferença principal': 'Front-end multiprovedor com personas; você traz suas próprias chaves de API',
           },
         ],
-        note: 'Os detalhes dos concorrentes mudam com frequência; confirme preço, licença e plataformas atuais na página de cada app. Ao contrário deles, o Obscurify é um serviço hospedado que vende o próprio acesso aos modelos.',
+        note: 'Os detalhes dos concorrentes mudam com frequência; confirme preço, licença e plataformas atuais na página de cada app. Ao contrário deles, o Obscurify.ai é um serviço hospedado que vende o próprio acesso aos modelos.',
       },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           {
-            q: 'Posso usar o Obscurify sem nenhuma conta?',
+            q: 'Posso usar o Obscurify.ai sem nenhuma conta?',
             a: 'Sim, como convidado, com um modelo aberto e limite de 30 mensagens por hora; modelos de ponta e sem censura exigem um plano pago.',
           },
           {
@@ -1772,11 +1844,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Você compra vouchers cegos com Monero, Bitcoin, Lightning ou cartão e os adiciona ao saldo; para mais privacidade, a política recomenda Tor ou uma VPN e manter o atraso de resgate padrão.',
           },
           {
-            q: 'O Obscurify é de código aberto?',
+            q: 'O Obscurify.ai é de código aberto?',
             a: 'O cliente web e o app Android são GPL-3.0; nenhum repositório do servidor foi encontrado, portanto o serviço como um todo não é totalmente aberto.',
           },
           {
-            q: 'O Obscurify funciona offline?',
+            q: 'O Obscurify.ai funciona offline?',
             a: 'Só o modo local pode, depois que um modelo for baixado no navegador; isso não foi testado, e o chat na nuvem precisa de conexão com a internet.',
           },
         ],
@@ -1785,16 +1857,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Obscurify é um chat de IA hospedado incomum, construído para não saber quem você é, com um modo local como alternativa. O desenho está documentado e o código do cliente é público, mas o operador não tem nome, o código do servidor não é público e a promessa de "sem logs" guarda endereços IP por 30 dias. Serve a quem quer modelos na nuvem sem e-mail e aceita essa confiança; quem precisa de uma configuração verificável deve comparar opções autohospedadas como [LibreChat](/pt/power-local-llm/librechat-review) ou [Open WebUI](/pt/local-llms/open-webui-review).',
+          'O Obscurify.ai é um chat de IA hospedado incomum, construído para não saber quem você é, com um modo local como alternativa. O desenho está documentado e o código do cliente é público, mas o operador não tem nome, o código do servidor não é público e a promessa de "sem logs" guarda endereços IP por 30 dias. Serve a quem quer modelos na nuvem sem e-mail e aceita essa confiança; quem precisa de uma configuração verificável deve comparar opções autohospedadas como [LibreChat](/pt/power-local-llm/librechat-review) ou [Open WebUI](/pt/local-llms/open-webui-review).',
       },
       sources: {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Site do Obscurify](https://obscurify.ai) — descrição do produto, modo local e links, verificado em 23 de outubro de 2026.',
-          '[Preços do Obscurify](https://obscurify.ai/pricing) — limites para convidados, planos e cobrança, verificado em 23 de outubro de 2026.',
-          '[Página "About" do Obscurify](https://obscurify.ai/about) — afirmações sobre anonimato, pagamentos e logs, verificado em 23 de outubro de 2026.',
-          '[Política de privacidade do Obscurify](https://obscurify.ai/privacy) — dados coletados, retenção, provedores e pagamentos; última atualização em 22 de outubro de 2026.',
+          '[Site do Obscurify.ai](https://obscurify.ai) — descrição do produto, modo local e links, verificado em 23 de outubro de 2026.',
+          '[Preços do Obscurify.ai](https://obscurify.ai/pricing) — limites para convidados, planos e cobrança, verificado em 23 de outubro de 2026.',
+          '[Página "About" do Obscurify.ai](https://obscurify.ai/about) — afirmações sobre anonimato, pagamentos e logs, verificado em 23 de outubro de 2026.',
+          '[Política de privacidade do Obscurify.ai](https://obscurify.ai/privacy) — dados coletados, retenção, provedores e pagamentos; última atualização em 22 de outubro de 2026.',
           '[Obscurify-ai no GitHub](https://github.com/Obscurify-ai) — cliente web e app Android, licença, versões e README, verificado em 23 de outubro de 2026.',
         ],
       },
@@ -1819,20 +1891,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-ar.webp',
-    title: 'مراجعة Obscurify: دردشة ذكاء اصطناعي مجهولة الهوية مع وضع محلي اختياري',
-    seoTitle: 'مراجعة Obscurify: دردشة ذكاء اصطناعي مجهولة مع وضع محلي',
+    title: 'مراجعة Obscurify.ai: دردشة ذكاء اصطناعي مجهولة الهوية مع وضع محلي اختياري',
+    seoTitle: 'مراجعة Obscurify.ai: دردشة ذكاء اصطناعي مجهولة مع وضع محلي',
     intro:
-      'Obscurify خدمة دردشة بالذكاء الاصطناعي على [obscurify.ai](https://obscurify.ai) تصف نفسها بأنها «VPN الخاص بك للذكاء الاصطناعي»: تسجّل برقم حساب عشوائي بدلاً من البريد الإلكتروني، وتدفع بقسائم يقول المشغّل إنه لا يستطيع ربطها بك، وتصل إلى أكثر من 200 نموذج سحابي. ويشغّل وضع محلي اختياري نماذج GGUF داخل المتصفح. تعكس هذه المراجعة الموقع وسياسة الخصوصية وشيفرة GitHub العامة كما جرى التحقق منها في 23 أكتوبر 2026، ولم تختبر PromptQuorum الخدمة عملياً.',
+      'Obscurify.ai خدمة دردشة بالذكاء الاصطناعي على [obscurify.ai](https://obscurify.ai) تصف نفسها بأنها «VPN الخاص بك للذكاء الاصطناعي»: تسجّل برقم حساب عشوائي بدلاً من البريد الإلكتروني، وتدفع بقسائم يقول المشغّل إنه لا يستطيع ربطها بك، وتصل إلى أكثر من 200 نموذج سحابي. ويشغّل وضع محلي اختياري نماذج GGUF داخل المتصفح. تعكس هذه المراجعة الموقع وسياسة الخصوصية وشيفرة GitHub العامة كما جرى التحقق منها في 23 أكتوبر 2026، ولم تختبر PromptQuorum الخدمة عملياً.',
     metaDescription:
-      'مراجعة Obscurify: دردشة ذكاء اصطناعي مجهولة برقم حساب عشوائي ودفع بقسائم عمياء ووضع محلي اختياري في المتصفح. الخطط والخصوصية وما لم يُتحقق منه.',
+      'مراجعة Obscurify.ai: دردشة ذكاء اصطناعي مجهولة برقم حساب عشوائي ودفع بقسائم عمياء ووضع محلي اختياري في المتصفح. الخطط والخصوصية وما لم يُتحقق منه.',
     twitterDescription:
-      'مراجعة Obscurify: دردشة ذكاء اصطناعي مجهولة في المتصفح وعلى Android مع وضع محلي اختياري. ما يزعمه الموقع وسياسة الخصوصية، وما تُظهره الشيفرة، وما يبقى غير مؤكد.',
+      'مراجعة Obscurify.ai: دردشة ذكاء اصطناعي مجهولة في المتصفح وعلى Android مع وضع محلي اختياري. ما يزعمه الموقع وسياسة الخصوصية، وما تُظهره الشيفرة، وما يبقى غير مؤكد.',
     audience:
       'من يريدون استخدام نماذج ذكاء اصطناعي سحابية دون بريد إلكتروني أو رقم هاتف أو هوية، ويحتاجون إلى معرفة ما تؤكده المصادر وما هو مجرد ادعاء من المشغّل وما هو مجهول.',
     readTime: '7 دقائق للقراءة',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'مراجعة Obscurify',
+    primaryTerm: 'مراجعة Obscurify.ai',
     targetKeywords: [
       'مراجعة obscurify',
       'obscurify ai',
@@ -1845,10 +1917,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurify خدمة ويب وAndroid تتيح، بحسب وصفها الذاتي، الدردشة مع أكثر من 200 نموذج ذكاء اصطناعي عبر رقم حساب عشوائي، دون بريد إلكتروني أو رقم هاتف أو هوية.** وتقترن عبارة «بلا سجلات» بالاحتفاظ بعنوان IP لمدة 30 يوماً، ولا يُذكر اسم المشغّل.',
+      '**Obscurify.ai خدمة ويب وAndroid تتيح، بحسب وصفها الذاتي، الدردشة مع أكثر من 200 نموذج ذكاء اصطناعي عبر رقم حساب عشوائي، دون بريد إلكتروني أو رقم هاتف أو هوية.** وتقترن عبارة «بلا سجلات» بالاحتفاظ بعنوان IP لمدة 30 يوماً، ولا يُذكر اسم المشغّل.',
     quickAnswerTop: {
       ar: {
-        question: 'هل Obscurify مجهول الهوية وخاص فعلاً؟',
+        question: 'هل Obscurify.ai مجهول الهوية وخاص فعلاً؟',
         answer:
           'بحسب سياسة الخصوصية، لا تُحفظ مدخلات الدردشة وردودها على خوادمها ولا تُطلب أي هوية. لم يُختبر أي من الادعاءين، وشيفرة الخادم غير منشورة.',
         bullets: [
@@ -1861,11 +1933,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'إجابة سريعة', anchor: 'quick-answer' },
-      { label: 'ما هو Obscurify؟', anchor: 'what-is-obscurify' },
+      { label: 'ما هو Obscurify.ai؟', anchor: 'what-is-obscurify' },
       { label: 'كيف تحصل عليه', anchor: 'get-it' },
       { label: 'الخطط والأسعار', anchor: 'plans-and-pricing' },
       { label: 'الميزات والوضع المحلي', anchor: 'key-features' },
       { label: 'الخصوصية وتدفق البيانات', anchor: 'privacy' },
+      { label: 'من مؤسس الخدمة', anchor: 'from-the-maker' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
       { label: 'المنافسون والبدائل', anchor: 'vs-alternatives' },
@@ -1882,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurify خدمة دردشة بالذكاء الاصطناعي تبيع الوصول إلى نماذج سحابية دون بريد إلكتروني أو هوية، وتضيف وضعاً اختيارياً يشغّل نماذج مفتوحة داخل المتصفح.',
+            text: 'Obscurify.ai خدمة دردشة بالذكاء الاصطناعي تبيع الوصول إلى نماذج سحابية دون بريد إلكتروني أو هوية، وتضيف وضعاً اختيارياً يشغّل نماذج مفتوحة داخل المتصفح.',
           },
           {
             type: 'plain-terms',
@@ -1904,10 +1977,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'ما هو Obscurify؟',
+        title: 'ما هو Obscurify.ai؟',
         content: [
-          '**بحسب موقعها، Obscurify خدمة دردشة خاصة بالذكاء الاصطناعي تقف بينك وبين مزوّدي النماذج، وتزيل التفاصيل المعرِّفة من كل طلب، ثم تمرّره ببيانات اعتمادها الخاصة.** ويسمّي الموقع ذلك «VPN الخاص بك للذكاء الاصطناعي». تسجّل برقم حساب عشوائي من 16 خانة، دون بريد إلكتروني أو رقم هاتف أو اسم مستخدم أو كلمة مرور، وتدردش مع نماذج مزوّدي ذكاء اصطناعي كبار.',
-          'ويشغّل وضع ثانٍ نماذج GGUF مفتوحة المصدر مباشرة داخل المتصفح عبر نسخة WebAssembly من llama.cpp، دون أي طلب إلى خوادم Obscurify. أما تطبيق Android فهو عميل أصلي منفصل لنفس الخدمة. تغطي هذه المراجعة [obscurify.ai](https://obscurify.ai) وتطبيق Android فقط.',
+          '**بحسب موقعها، Obscurify.ai خدمة دردشة خاصة بالذكاء الاصطناعي تقف بينك وبين مزوّدي النماذج، وتزيل التفاصيل المعرِّفة من كل طلب، ثم تمرّره ببيانات اعتمادها الخاصة.** ويسمّي الموقع ذلك «VPN الخاص بك للذكاء الاصطناعي». تسجّل برقم حساب عشوائي من 16 خانة، دون بريد إلكتروني أو رقم هاتف أو اسم مستخدم أو كلمة مرور، وتدردش مع نماذج مزوّدي ذكاء اصطناعي كبار.',
+          'ويشغّل وضع ثانٍ نماذج GGUF مفتوحة المصدر مباشرة داخل المتصفح عبر نسخة WebAssembly من llama.cpp، دون أي طلب إلى خوادم Obscurify.ai. أما تطبيق Android فهو عميل أصلي منفصل لنفس الخدمة. تغطي هذه المراجعة [obscurify.ai](https://obscurify.ai) وتطبيق Android فقط.',
+          '**Obscurify.ai أقدم مما توحي به مستودعات شيفرتها: فبحسب المشغّل، أُطلقت الخدمة في نوفمبر 2023 باسم CryptoTalks، ثم أُعيدت تسميتها إلى Obscurify.ai في يوليو 2025، وهي مدرجة في Monerica منذ مارس 2024.** وتعود مستودعات GitHub إلى 21 أكتوبر 2026 فقط لأن عميل الويب وتطبيق Android نُشرا في ذلك اليوم بترخيص GPL-3.0. ويشير المشغّل أيضًا إلى أن "Obscurify" وحده اسم تطبيق شهير لإحصاءات Spotify لا علاقة له بالخدمة، ولذلك تستخدم هذه المراجعة الاسم الكامل. لم يُتحقق من أي من هذه التواريخ بشكل مستقل.',
         ],
       },
       getIt: {
@@ -1945,7 +2019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: 'الخطط والأسعار',
         content: [
-          '**Obscurify بنموذج «فريميوم»: يدردش الزوار مجاناً وكل ما عدا ذلك مدفوع مسبقاً.** الأسعار بالدولار الأمريكي، ولم تُعثر على أسعار بالعملة المحلية.',
+          '**Obscurify.ai بنموذج «فريميوم»: يدردش الزوار مجاناً وكل ما عدا ذلك مدفوع مسبقاً.** الأسعار بالدولار الأمريكي، ولم تُعثر على أسعار بالعملة المحلية.',
         ],
         columns: ['الخطة', 'السعر', 'ما تشمله'],
         rows: [
@@ -2001,6 +2075,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من مؤسس الخدمة',
+        content: [
+          'شارك Tony Davis، مؤسس Obscurify.ai، ما يلي عن الخدمة. يُعرض هنا بوصفه كلماته هو، وليس تقييمًا تحريريًا مستقلًا من PromptQuorum؛ أما ما يخص التخزين والمدفوعات فهو ادعاءات من المشغّل لم تتحقق منها PromptQuorum:',
+          'كما راجع فريق العلاقات الإعلامية في Obscurify.ai هذه المقالة قبل هذا التحديث وصحّح اسم الخدمة وتاريخها؛ وذكر الفريق أن كل ما عدا ذلك يطابق ما تنشره الخدمة، بما في ذلك الاحتفاظ بعناوين IP لمدة 30 يومًا.',
+          '«تعرف معظم خدمات الدردشة بالذكاء الاصطناعي من أنت بالضبط: بريدك الإلكتروني، ورقم هاتفك، وبطاقتك، وكل سؤال طرحته. بدأت Obscurify.ai عام 2023 كوسيلة للدفع مقابل الذكاء الاصطناعي بعملة Monero، ثم أصبحت قاعدة نصمّم كل شيء حولها: نفضّل ألا نملك البيانات على أن نَعِد بحمايتها. ولهذا فإن الحسابات مجرد رقم عشوائي، ولا تُخزَّن المحادثات على خوادمنا، وتمر المدفوعات عبر قسائم موقّعة بتوقيع أعمى، فلا نستطيع ربط أي دفعة بأي حساب. وفي المرحلة التالية نريد نقل مزيد من العمل إلى جهاز المستخدم: نماذج محلية أسرع وأكبر، ومزيدًا من الشيفرة مفتوحة المصدر، ووسائل تتيح للمستخدمين التحقق من ادعاءاتنا بدل الاكتفاء بالثقة بها.»',
+        ],
+        note: '— Tony Davis، مؤسس Obscurify.ai',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'لمن يناسب',
@@ -2052,14 +2136,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الفرق الرئيسي': 'واجهة أمامية متعددة المزوّدين مع شخصيات؛ تستخدم مفاتيح API الخاصة بك',
           },
         ],
-        note: 'تتغير تفاصيل المنافسين كثيراً؛ تأكد من السعر والترخيص والمنصات الحالية في صفحة كل تطبيق. وعلى خلافها، Obscurify خدمة مستضافة تبيع الوصول إلى النماذج بنفسها.',
+        note: 'تتغير تفاصيل المنافسين كثيراً؛ تأكد من السعر والترخيص والمنصات الحالية في صفحة كل تطبيق. وعلى خلافها، Obscurify.ai خدمة مستضافة تبيع الوصول إلى النماذج بنفسها.',
       },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           {
-            q: 'هل يمكنني استخدام Obscurify دون أي حساب؟',
+            q: 'هل يمكنني استخدام Obscurify.ai دون أي حساب؟',
             a: 'نعم، كزائر مع نموذج مفتوح واحد وبحد أقصى 30 رسالة في الساعة؛ أما النماذج المتقدمة والنماذج بلا رقابة فتتطلب خطة مدفوعة.',
           },
           {
@@ -2067,11 +2151,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'تشتري قسائم عمياء بـ Monero أو Bitcoin أو Lightning أو بالبطاقة وتضيفها إلى رصيدك؛ ولمزيد من الخصوصية توصي السياسة باستخدام Tor أو VPN وإبقاء تأخير الاسترداد الافتراضي.',
           },
           {
-            q: 'هل Obscurify مفتوح المصدر؟',
+            q: 'هل Obscurify.ai مفتوح المصدر؟',
             a: 'عميل الويب وتطبيق Android بترخيص GPL-3.0؛ ولم يُعثر على مستودع للخادم، لذا فالخدمة ككل ليست مفتوحة بالكامل.',
           },
           {
-            q: 'هل يعمل Obscurify دون اتصال بالإنترنت؟',
+            q: 'هل يعمل Obscurify.ai دون اتصال بالإنترنت؟',
             a: 'الوضع المحلي وحده يستطيع ذلك بعد تنزيل نموذج في المتصفح؛ ولم يُختبر هذا، والدردشة السحابية تحتاج إلى اتصال بالإنترنت.',
           },
         ],
@@ -2080,16 +2164,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'Obscurify دردشة ذكاء اصطناعي مستضافة غير معتادة، مبنية على ألا تعرف من أنت، مع وضع محلي كخيار احتياطي. تصميمها موثّق وشيفرة العميل علنية، لكن المشغّل بلا اسم، وشيفرة الخادم غير منشورة، ووعد «بلا سجلات» يحتفظ بعناوين IP لمدة 30 يوماً. تناسب من يريد نماذج سحابية دون بريد إلكتروني ويقبل هذه الثقة؛ ومن يحتاج إلى إعداد يمكن التحقق منه فعليه مقارنة خيارات مستضافة ذاتياً مثل [LibreChat](/ar/power-local-llm/librechat-review) أو [Open WebUI](/ar/local-llms/open-webui-review).',
+          'Obscurify.ai دردشة ذكاء اصطناعي مستضافة غير معتادة، مبنية على ألا تعرف من أنت، مع وضع محلي كخيار احتياطي. تصميمها موثّق وشيفرة العميل علنية، لكن المشغّل بلا اسم، وشيفرة الخادم غير منشورة، ووعد «بلا سجلات» يحتفظ بعناوين IP لمدة 30 يوماً. تناسب من يريد نماذج سحابية دون بريد إلكتروني ويقبل هذه الثقة؛ ومن يحتاج إلى إعداد يمكن التحقق منه فعليه مقارنة خيارات مستضافة ذاتياً مثل [LibreChat](/ar/power-local-llm/librechat-review) أو [Open WebUI](/ar/local-llms/open-webui-review).',
       },
       sources: {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[موقع Obscurify](https://obscurify.ai) — وصف المنتج والوضع المحلي والروابط، جرى التحقق منه في 23 أكتوبر 2026.',
-          '[أسعار Obscurify](https://obscurify.ai/pricing) — حدود الزوار والخطط والفوترة، جرى التحقق منها في 23 أكتوبر 2026.',
-          '[صفحة About في Obscurify](https://obscurify.ai/about) — العبارات المتعلقة بإخفاء الهوية والمدفوعات والسجلات، جرى التحقق منها في 23 أكتوبر 2026.',
-          '[سياسة خصوصية Obscurify](https://obscurify.ai/privacy) — البيانات المجموعة ومدد الاحتفاظ والمزوّدون والمدفوعات؛ آخر تحديث في 22 أكتوبر 2026.',
+          '[موقع Obscurify.ai](https://obscurify.ai) — وصف المنتج والوضع المحلي والروابط، جرى التحقق منه في 23 أكتوبر 2026.',
+          '[أسعار Obscurify.ai](https://obscurify.ai/pricing) — حدود الزوار والخطط والفوترة، جرى التحقق منها في 23 أكتوبر 2026.',
+          '[صفحة About في Obscurify.ai](https://obscurify.ai/about) — العبارات المتعلقة بإخفاء الهوية والمدفوعات والسجلات، جرى التحقق منها في 23 أكتوبر 2026.',
+          '[سياسة خصوصية Obscurify.ai](https://obscurify.ai/privacy) — البيانات المجموعة ومدد الاحتفاظ والمزوّدون والمدفوعات؛ آخر تحديث في 22 أكتوبر 2026.',
           '[Obscurify-ai على GitHub](https://github.com/Obscurify-ai) — عميل الويب وتطبيق Android والترخيص والإصدارات وREADME، جرى التحقق منها في 23 أكتوبر 2026.',
         ],
       },
@@ -2114,20 +2198,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-zh.webp',
-    title: 'Obscurify 评测：支持可选本地模式的匿名 AI 聊天',
-    seoTitle: 'Obscurify 评测：匿名 AI 聊天与可选的浏览器本地模式',
+    title: 'Obscurify.ai 评测：支持可选本地模式的匿名 AI 聊天',
+    seoTitle: 'Obscurify.ai 评测：匿名 AI 聊天与可选的浏览器本地模式',
     intro:
-      'Obscurify 是 [obscurify.ai](https://obscurify.ai) 上的 AI 聊天服务，自称“AI 的 VPN”：用随机账号而非邮箱注册，用运营方称无法与你关联的代金券付款，可访问 200 多个云端模型。可选的本地模式在浏览器内运行 GGUF 模型。本评测反映 2026 年 10 月 23 日核查时的网站、隐私政策和 GitHub 公开代码；PromptQuorum 未对该服务做实际使用测试。',
+      'Obscurify.ai 是 [obscurify.ai](https://obscurify.ai) 上的 AI 聊天服务，自称“AI 的 VPN”：用随机账号而非邮箱注册，用运营方称无法与你关联的代金券付款，可访问 200 多个云端模型。可选的本地模式在浏览器内运行 GGUF 模型。本评测反映 2026 年 10 月 23 日核查时的网站、隐私政策和 GitHub 公开代码；PromptQuorum 未对该服务做实际使用测试。',
     metaDescription:
-      'Obscurify 评测：随机账号、盲代金券付款、可选浏览器本地模式的匿名 AI 聊天。含套餐价格、隐私声明，并列出尚未核实的事项与潜在风险。',
+      'Obscurify.ai 评测：随机账号、盲代金券付款、可选浏览器本地模式的匿名 AI 聊天。含套餐价格、隐私声明，并列出尚未核实的事项与潜在风险。',
     twitterDescription:
-      'Obscurify 评测：浏览器和 Android 上的匿名 AI 聊天，另有可选本地模式。网站与隐私政策的说法、代码所能证实的内容，以及仍未核实的部分。',
+      'Obscurify.ai 评测：浏览器和 Android 上的匿名 AI 聊天，另有可选本地模式。网站与隐私政策的说法、代码所能证实的内容，以及仍未核实的部分。',
     audience:
       '想在不提供邮箱、手机号或身份的情况下使用云端 AI 模型，并需要了解来源已证实什么、哪些只是运营方的说法、哪些尚不清楚的读者。',
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Obscurify 评测',
+    primaryTerm: 'Obscurify.ai 评测',
     targetKeywords: [
       'obscurify 评测',
       'obscurify ai',
@@ -2140,10 +2224,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurify 是一项网页和 Android 服务，按其自述，可通过随机账号与 200 多个 AI 模型聊天，无需邮箱、手机号或身份。** 其“无日志”标注附带 30 天的 IP 保留期，且运营方未具名。',
+      '**Obscurify.ai 是一项网页和 Android 服务，按其自述，可通过随机账号与 200 多个 AI 模型聊天，无需邮箱、手机号或身份。** 其“无日志”标注附带 30 天的 IP 保留期，且运营方未具名。',
     quickAnswerTop: {
       zh: {
-        question: 'Obscurify 真的匿名且私密吗？',
+        question: 'Obscurify.ai 真的匿名且私密吗？',
         answer:
           '据其隐私政策，聊天提示词和回复不会保存在其服务器上，也无需提供身份。这两点均未经测试，服务器代码也未公开。',
         bullets: [
@@ -2156,11 +2240,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: '快速解答', anchor: 'quick-answer' },
-      { label: 'Obscurify 是什么？', anchor: 'what-is-obscurify' },
+      { label: 'Obscurify.ai 是什么？', anchor: 'what-is-obscurify' },
       { label: '获取方式', anchor: 'get-it' },
       { label: '套餐与价格', anchor: 'plans-and-pricing' },
       { label: '功能与本地模式', anchor: 'key-features' },
       { label: '隐私与数据流向', anchor: 'privacy' },
+      { label: '来自创始人', anchor: 'from-the-maker' },
       { label: '适合哪些人使用', anchor: 'who-should-use' },
       { label: '我们无法核实的内容', anchor: 'who-should-not-use' },
       { label: '竞品与替代方案', anchor: 'vs-alternatives' },
@@ -2177,7 +2262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurify 是一项 AI 聊天服务，提供无需邮箱和身份的云端模型访问，并附带可在浏览器内运行开源模型的可选模式。',
+            text: 'Obscurify.ai 是一项 AI 聊天服务，提供无需邮箱和身份的云端模型访问，并附带可在浏览器内运行开源模型的可选模式。',
           },
           {
             type: 'plain-terms',
@@ -2199,10 +2284,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'Obscurify 是什么？',
+        title: 'Obscurify.ai 是什么？',
         content: [
-          '**据其网站介绍，Obscurify 是一项私密 AI 聊天服务，位于你与模型供应商之间，去除每个请求中的身份信息，再以自己的凭据转发。** 网站称之为“AI 的 VPN”。你用随机的 16 位账号注册，无需邮箱、手机号、用户名或密码，即可与主要 AI 供应商的模型聊天。',
-          '第二种模式通过 llama.cpp 的 WebAssembly 版本，直接在浏览器内运行开源 GGUF 模型，不会向 Obscurify 的服务器发送请求。Android 应用是同一服务的独立原生客户端。本评测仅涵盖 [obscurify.ai](https://obscurify.ai) 及其 Android 应用。',
+          '**据其网站介绍，Obscurify.ai 是一项私密 AI 聊天服务，位于你与模型供应商之间，去除每个请求中的身份信息，再以自己的凭据转发。** 网站称之为“AI 的 VPN”。你用随机的 16 位账号注册，无需邮箱、手机号、用户名或密码，即可与主要 AI 供应商的模型聊天。',
+          '第二种模式通过 llama.cpp 的 WebAssembly 版本，直接在浏览器内运行开源 GGUF 模型，不会向 Obscurify.ai 的服务器发送请求。Android 应用是同一服务的独立原生客户端。本评测仅涵盖 [obscurify.ai](https://obscurify.ai) 及其 Android 应用。',
+          '**Obscurify.ai 比其代码仓库所显示的更早:据运营方称,该服务于 2023 年 11 月以 CryptoTalks 之名上线,2025 年 7 月更名为 Obscurify.ai,自 2024 年 3 月起列入 Monerica。** GitHub 仓库的日期是 2026 年 10 月 21 日,只是因为 Web 客户端和 Android 应用在当天以 GPL-3.0 发布。运营方还指出,单独的“Obscurify”是一款知名且无关的 Spotify 统计应用,因此本评测使用完整名称。上述日期均未经独立验证。',
         ],
       },
       getIt: {
@@ -2240,7 +2326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: '套餐与价格',
         content: [
-          '**Obscurify 采用免费增值模式：访客可免费聊天，其余均为预付费。** 价格以美元计，未找到本地货币价格。',
+          '**Obscurify.ai 采用免费增值模式：访客可免费聊天，其余均为预付费。** 价格以美元计，未找到本地货币价格。',
         ],
         columns: ['套餐', '价格', '包含内容'],
         rows: [
@@ -2296,6 +2382,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自创始人',
+        content: [
+          'Obscurify.ai 创始人 Tony Davis 就该服务分享了以下内容。以下以其本人的话呈现,并非 PromptQuorum 独立的编辑评估;其中关于存储和支付的说法属于运营方的主张,PromptQuorum 未予验证:',
+          'Obscurify.ai 的媒体关系团队在本次更新前也审阅了本文,并更正了服务名称及其历史;该团队表示,其余内容与服务公开的信息一致,包括 30 天的 IP 地址保留期。',
+          '“大多数 AI 聊天服务清楚地知道你是谁:你的邮箱、手机号、银行卡,以及你问过的每一个问题。Obscurify.ai 于 2023 年起步,最初只是一种用 Monero 支付 AI 费用的方式,后来成为我们设计一切所遵循的原则:与其承诺保护数据,我们宁愿不持有数据。因此,账号只是一个随机数字,聊天内容不存储在我们的服务器上,付款通过盲签名代金券进行,所以我们无法把某笔付款与某个账号关联起来。接下来,我们希望把更多工作转移到用户的设备上:更快、更大的本地模型,更多开源代码,以及让用户自行验证而不是单纯相信我们说法的方式。”',
+        ],
+        note: '— Tony Davis,Obscurify.ai 创始人',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '适合哪些人使用',
@@ -2347,14 +2443,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '主要区别': '支持多家供应商并带角色设定的前端，需自备 API 密钥',
           },
         ],
-        note: '竞品信息经常变化，请到各应用页面确认当前价格、许可证和平台。与它们不同，Obscurify 是自己出售模型访问权限的托管服务。',
+        note: '竞品信息经常变化，请到各应用页面确认当前价格、许可证和平台。与它们不同，Obscurify.ai 是自己出售模型访问权限的托管服务。',
       },
       faq: {
         id: 'faq',
         title: '常见问题',
         faqs: [
           {
-            q: '不注册账号也能使用 Obscurify 吗？',
+            q: '不注册账号也能使用 Obscurify.ai 吗？',
             a: '可以，以访客身份使用一个开放模型，每小时最多 30 条消息；前沿模型和无审查模型需要付费套餐。',
           },
           {
@@ -2362,11 +2458,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '用 Monero、Bitcoin、Lightning 或银行卡购买盲代金券并加到余额中；为获得更强的隐私，政策建议使用 Tor 或 VPN，并保留默认的兑换延迟。',
           },
           {
-            q: 'Obscurify 是开源的吗？',
+            q: 'Obscurify.ai 是开源的吗？',
             a: '网页客户端和 Android 应用采用 GPL-3.0；未找到服务器仓库，因此整个服务并非完全开源。',
           },
           {
-            q: 'Obscurify 可以离线使用吗？',
+            q: 'Obscurify.ai 可以离线使用吗？',
             a: '只有在浏览器中下载模型后的本地模式才可能离线使用，但未经测试；云端聊天需要联网。',
           },
         ],
@@ -2375,16 +2471,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Obscurify 是一款少见的托管式 AI 聊天，设计目标就是不知道你是谁，并以本地模式作为备选。其设计有文档说明，客户端代码也已公开，但运营方未具名、服务器代码未公开，“无日志”的说法下仍保留 IP 地址 30 天。它适合想要免邮箱使用云端模型并接受这种信任的读者；需要可验证部署的人应比较 [LibreChat](/zh/power-local-llm/librechat-review) 或 [Open WebUI](/zh/local-llms/open-webui-review) 等自托管方案。',
+          'Obscurify.ai 是一款少见的托管式 AI 聊天，设计目标就是不知道你是谁，并以本地模式作为备选。其设计有文档说明，客户端代码也已公开，但运营方未具名、服务器代码未公开，“无日志”的说法下仍保留 IP 地址 30 天。它适合想要免邮箱使用云端模型并接受这种信任的读者；需要可验证部署的人应比较 [LibreChat](/zh/power-local-llm/librechat-review) 或 [Open WebUI](/zh/local-llms/open-webui-review) 等自托管方案。',
       },
       sources: {
         id: 'sources',
         title: '来源',
         items: [
-          '[Obscurify 官方网站](https://obscurify.ai) — 产品介绍、本地模式和链接，2026 年 10 月 23 日核查。',
-          '[Obscurify 价格页面](https://obscurify.ai/pricing) — 访客限制、套餐和计费，2026 年 10 月 23 日核查。',
-          '[Obscurify About 页面](https://obscurify.ai/about) — 关于匿名性、付款和日志的说法，2026 年 10 月 23 日核查。',
-          '[Obscurify 隐私政策](https://obscurify.ai/privacy) — 收集的数据、保留期限、供应商和付款；最近更新于 2026 年 10 月 22 日。',
+          '[Obscurify.ai 官方网站](https://obscurify.ai) — 产品介绍、本地模式和链接，2026 年 10 月 23 日核查。',
+          '[Obscurify.ai 价格页面](https://obscurify.ai/pricing) — 访客限制、套餐和计费，2026 年 10 月 23 日核查。',
+          '[Obscurify.ai About 页面](https://obscurify.ai/about) — 关于匿名性、付款和日志的说法，2026 年 10 月 23 日核查。',
+          '[Obscurify.ai 隐私政策](https://obscurify.ai/privacy) — 收集的数据、保留期限、供应商和付款；最近更新于 2026 年 10 月 22 日。',
           '[GitHub 上的 Obscurify-ai](https://github.com/Obscurify-ai) — 网页客户端和 Android 应用、许可证、版本发布和 README，2026 年 10 月 23 日核查。',
         ],
       },
@@ -2409,20 +2505,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/obscurify-review-hero-ko.webp',
-    title: 'Obscurify 리뷰: 로컬 모드를 갖춘 익명 AI 채팅',
-    seoTitle: 'Obscurify 리뷰: 익명 AI 채팅과 로컬 모드',
+    title: 'Obscurify.ai 리뷰: 로컬 모드를 갖춘 익명 AI 채팅',
+    seoTitle: 'Obscurify.ai 리뷰: 익명 AI 채팅과 로컬 모드',
     intro:
-      'Obscurify는 [obscurify.ai](https://obscurify.ai)에서 제공하는 AI 채팅 서비스로, 스스로를 "AI를 위한 VPN"이라고 소개합니다. 이메일 대신 무작위 계정 번호로 가입하고, 운영자가 사용자와 연결할 수 없다고 밝히는 바우처로 결제하며, 200개 이상의 클라우드 모델을 사용할 수 있습니다. 선택 사항인 로컬 모드는 브라우저 안에서 GGUF 모델을 실행합니다. 이 리뷰는 2026년 10월 23일에 확인한 웹사이트, 개인정보 처리방침, 공개 GitHub 코드를 바탕으로 하며, PromptQuorum은 서비스를 직접 사용해 테스트하지 않았습니다.',
+      'Obscurify.ai는 [obscurify.ai](https://obscurify.ai)에서 제공하는 AI 채팅 서비스로, 스스로를 "AI를 위한 VPN"이라고 소개합니다. 이메일 대신 무작위 계정 번호로 가입하고, 운영자가 사용자와 연결할 수 없다고 밝히는 바우처로 결제하며, 200개 이상의 클라우드 모델을 사용할 수 있습니다. 선택 사항인 로컬 모드는 브라우저 안에서 GGUF 모델을 실행합니다. 이 리뷰는 2026년 10월 23일에 확인한 웹사이트, 개인정보 처리방침, 공개 GitHub 코드를 바탕으로 하며, PromptQuorum은 서비스를 직접 사용해 테스트하지 않았습니다.',
     metaDescription:
-      'Obscurify 리뷰: 무작위 계정 번호, 블라인드 바우처 결제, 브라우저 로컬 모드를 갖춘 익명 AI 채팅. 요금제, 개인정보 보호, 미확인 사항을 정리했습니다.',
+      'Obscurify.ai 리뷰: 무작위 계정 번호, 블라인드 바우처 결제, 브라우저 로컬 모드를 갖춘 익명 AI 채팅. 요금제, 개인정보 보호, 미확인 사항을 정리했습니다.',
     twitterDescription:
-      'Obscurify 리뷰: 브라우저와 Android에서 쓰는 익명 AI 채팅과 선택형 로컬 모드. 사이트와 정책의 주장, 코드로 확인되는 내용, 아직 확인되지 않은 부분을 다룹니다.',
+      'Obscurify.ai 리뷰: 브라우저와 Android에서 쓰는 익명 AI 채팅과 선택형 로컬 모드. 사이트와 정책의 주장, 코드로 확인되는 내용, 아직 확인되지 않은 부분을 다룹니다.',
     audience:
       '이메일, 전화번호, 신원 없이 클라우드 AI 모델을 쓰고 싶으며, 출처가 확인한 내용과 운영자의 주장일 뿐인 내용, 알 수 없는 내용을 구분해 알고 싶은 분.',
     readTime: '7분 읽기',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Obscurify 리뷰',
+    primaryTerm: 'Obscurify.ai 리뷰',
     targetKeywords: [
       'obscurify 리뷰',
       'obscurify ai',
@@ -2435,10 +2531,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Obscurify는 운영자의 설명에 따르면 이메일, 전화번호, 신원 없이 무작위 계정 번호로 200개 이상의 AI 모델과 채팅할 수 있는 웹·Android 서비스입니다.** "노로그" 표기와 달리 IP 주소를 30일간 보관하며, 운영자의 이름은 밝혀져 있지 않습니다.',
+      '**Obscurify.ai는 운영자의 설명에 따르면 이메일, 전화번호, 신원 없이 무작위 계정 번호로 200개 이상의 AI 모델과 채팅할 수 있는 웹·Android 서비스입니다.** "노로그" 표기와 달리 IP 주소를 30일간 보관하며, 운영자의 이름은 밝혀져 있지 않습니다.',
     quickAnswerTop: {
       ko: {
-        question: 'Obscurify는 정말 익명이고 비공개입니까?',
+        question: 'Obscurify.ai는 정말 익명이고 비공개입니까?',
         answer:
           '개인정보 처리방침에 따르면 채팅 프롬프트와 응답은 서버에 저장되지 않으며 신원도 요구하지 않습니다. 두 주장 모두 테스트하지 않았고, 서버 코드는 공개되어 있지 않습니다.',
         bullets: [
@@ -2451,11 +2547,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: '빠른 답변', anchor: 'quick-answer' },
-      { label: 'Obscurify란 무엇인가?', anchor: 'what-is-obscurify' },
+      { label: 'Obscurify.ai란 무엇인가?', anchor: 'what-is-obscurify' },
       { label: '어디서 받나요?', anchor: 'get-it' },
       { label: '요금제와 가격', anchor: 'plans-and-pricing' },
       { label: '기능과 로컬 모드', anchor: 'key-features' },
       { label: '개인정보와 데이터 흐름', anchor: 'privacy' },
+      { label: '창립자의 말', anchor: 'from-the-maker' },
       { label: '이런 분께 적합합니다', anchor: 'who-should-use' },
       { label: '확인하지 못한 사항', anchor: 'who-should-not-use' },
       { label: '경쟁 앱과 대안', anchor: 'vs-alternatives' },
@@ -2472,7 +2569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Obscurify는 이메일이나 신원 없이 클라우드 모델을 쓸 수 있게 해 주는 AI 채팅 서비스이며, 오픈 모델을 브라우저 안에서 실행하는 선택 모드를 더했습니다.',
+            text: 'Obscurify.ai는 이메일이나 신원 없이 클라우드 모델을 쓸 수 있게 해 주는 AI 채팅 서비스이며, 오픈 모델을 브라우저 안에서 실행하는 선택 모드를 더했습니다.',
           },
           {
             type: 'plain-terms',
@@ -2494,10 +2591,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       overview: {
         id: 'what-is-obscurify',
-        title: 'Obscurify란 무엇인가?',
+        title: 'Obscurify.ai란 무엇인가?',
         content: [
-          '**웹사이트에 따르면 Obscurify는 비공개 AI 채팅 서비스로, 사용자와 모델 제공업체 사이에서 각 요청의 식별 정보를 제거하고 자체 자격 증명으로 전달합니다.** 사이트는 이를 "AI를 위한 VPN"이라고 부릅니다. 이메일, 전화번호, 사용자 이름, 비밀번호 없이 무작위 16자리 계정 번호로 가입하고 주요 AI 제공업체의 모델과 채팅합니다.',
-          '두 번째 모드는 llama.cpp의 WebAssembly 빌드로 오픈소스 GGUF 모델을 브라우저 안에서 직접 실행하며, Obscurify 서버로 요청을 보내지 않습니다. Android 앱은 같은 서비스의 별도 네이티브 클라이언트입니다. 이 리뷰는 [obscurify.ai](https://obscurify.ai)와 해당 Android 앱만 다룹니다.',
+          '**웹사이트에 따르면 Obscurify.ai는 비공개 AI 채팅 서비스로, 사용자와 모델 제공업체 사이에서 각 요청의 식별 정보를 제거하고 자체 자격 증명으로 전달합니다.** 사이트는 이를 "AI를 위한 VPN"이라고 부릅니다. 이메일, 전화번호, 사용자 이름, 비밀번호 없이 무작위 16자리 계정 번호로 가입하고 주요 AI 제공업체의 모델과 채팅합니다.',
+          '두 번째 모드는 llama.cpp의 WebAssembly 빌드로 오픈소스 GGUF 모델을 브라우저 안에서 직접 실행하며, Obscurify.ai 서버로 요청을 보내지 않습니다. Android 앱은 같은 서비스의 별도 네이티브 클라이언트입니다. 이 리뷰는 [obscurify.ai](https://obscurify.ai)와 해당 Android 앱만 다룹니다.',
+          '**Obscurify.ai는 코드 저장소가 시사하는 것보다 오래된 서비스입니다. 운영자에 따르면 2023년 11월 CryptoTalks라는 이름으로 출시되었고, 2025년 7월 Obscurify.ai로 이름을 바꿨으며, 2024년 3월부터 Monerica에 등재되어 있습니다.** GitHub 저장소가 2026년 10월 21일자인 것은 그날 웹 클라이언트와 Android 앱이 GPL-3.0으로 공개되었기 때문일 뿐입니다. 운영자는 "Obscurify"만으로는 무관한 유명 Spotify 통계 앱을 가리키기도 한다고 지적했으며, 그래서 이 리뷰는 전체 이름을 사용합니다. 위 날짜는 모두 독립적으로 검증하지 않았습니다.',
         ],
       },
       getIt: {
@@ -2535,7 +2633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'plans-and-pricing',
         title: '요금제와 가격',
         content: [
-          '**Obscurify는 프리미엄 모델입니다. 게스트는 무료로 채팅하고, 나머지는 선불입니다.** 가격은 미국 달러 기준이며 현지 통화 가격은 확인하지 못했습니다.',
+          '**Obscurify.ai는 프리미엄 모델입니다. 게스트는 무료로 채팅하고, 나머지는 선불입니다.** 가격은 미국 달러 기준이며 현지 통화 가격은 확인하지 못했습니다.',
         ],
         columns: ['요금제', '가격', '포함 내용'],
         rows: [
@@ -2591,6 +2689,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '창립자의 말',
+        content: [
+          'Obscurify.ai의 창립자 Tony Davis가 서비스에 대해 다음과 같이 전했습니다. 창립자 본인의 말로 제시하는 것이며, PromptQuorum의 독립적인 편집 평가가 아닙니다. 저장과 결제에 관한 진술은 운영자의 주장이며 PromptQuorum이 검증하지 않았습니다:',
+          'Obscurify.ai 홍보팀도 이번 업데이트에 앞서 이 글을 검토하여 서비스 이름과 연혁을 바로잡았으며, 그 밖의 내용은 30일간의 IP 주소 보관을 포함해 서비스가 공개한 내용과 일치한다고 밝혔습니다.',
+          '"대부분의 AI 채팅 서비스는 여러분이 누구인지 정확히 압니다. 이메일, 전화번호, 카드, 그리고 지금까지 한 모든 질문까지 알고 있습니다. Obscurify.ai는 2023년에 Monero로 AI 요금을 결제하는 방법으로 시작했고, 이제는 모든 것을 설계하는 기준이 되는 원칙으로 자랐습니다. 데이터를 보호하겠다고 약속하느니 차라리 데이터를 갖지 않겠다는 것입니다. 그래서 계정은 무작위 번호일 뿐이고, 채팅은 저희 서버에 저장되지 않으며, 결제는 블라인드 서명 바우처를 통해 이루어지므로 결제를 계정과 연결할 수 없습니다. 다음 목표는 더 많은 작업을 사용자의 기기로 옮기는 것입니다. 더 빠르고 큰 로컬 모델, 더 많은 오픈소스 코드, 그리고 사용자가 저희 주장을 믿는 대신 직접 검증할 수 있는 방법을 만들겠습니다."',
+        ],
+        note: '— Tony Davis, Obscurify.ai 창립자',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '이런 분께 적합합니다',
@@ -2642,14 +2750,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '핵심 차이': '페르소나를 지원하는 멀티 제공업체 프런트엔드로, 자신의 API 키 사용',
           },
         ],
-        note: '경쟁 앱의 세부 사항은 자주 바뀌므로 각 앱의 페이지에서 현재 가격, 라이선스, 플랫폼을 확인하십시오. 이들과 달리 Obscurify는 모델 접근 자체를 판매하는 호스팅 서비스입니다.',
+        note: '경쟁 앱의 세부 사항은 자주 바뀌므로 각 앱의 페이지에서 현재 가격, 라이선스, 플랫폼을 확인하십시오. 이들과 달리 Obscurify.ai는 모델 접근 자체를 판매하는 호스팅 서비스입니다.',
       },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           {
-            q: '계정 없이도 Obscurify를 쓸 수 있습니까?',
+            q: '계정 없이도 Obscurify.ai를 쓸 수 있습니까?',
             a: '예. 게스트로 오픈 모델 1개를 시간당 30개 메시지까지 쓸 수 있으며, 최신 모델과 무검열 모델에는 유료 요금제가 필요합니다.',
           },
           {
@@ -2657,11 +2765,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Monero, Bitcoin, Lightning 또는 카드로 블라인드 바우처를 구매해 잔액에 추가합니다. 더 강한 프라이버시를 위해 정책은 Tor 또는 VPN 사용과 기본 사용 지연 유지를 권장합니다.',
           },
           {
-            q: 'Obscurify는 오픈소스입니까?',
+            q: 'Obscurify.ai는 오픈소스입니까?',
             a: '웹 클라이언트와 Android 앱은 GPL-3.0입니다. 서버 저장소는 찾지 못했으므로 서비스 전체가 완전히 공개된 것은 아닙니다.',
           },
           {
-            q: 'Obscurify는 오프라인에서 작동합니까?',
+            q: 'Obscurify.ai는 오프라인에서 작동합니까?',
             a: '브라우저에 모델을 내려받은 뒤의 로컬 모드만 가능하지만 테스트하지 않았습니다. 클라우드 채팅에는 인터넷 연결이 필요합니다.',
           },
         ],
@@ -2670,16 +2778,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'Obscurify는 사용자가 누구인지 알지 못하도록 설계된 독특한 호스팅형 AI 채팅이며, 로컬 모드를 대안으로 갖추고 있습니다. 설계는 문서화되어 있고 클라이언트 코드도 공개되어 있지만, 운영자는 이름이 없고 서버 코드는 공개되지 않았고 "노로그" 주장에도 IP 주소를 30일간 보관합니다. 이메일 없이 클라우드 모델을 쓰고 싶고 그 신뢰를 받아들이는 분께 적합합니다. 검증 가능한 구성이 필요하다면 [LibreChat](/ko/power-local-llm/librechat-review)이나 [Open WebUI](/ko/local-llms/open-webui-review) 같은 자체 호스팅 옵션을 비교하십시오.',
+          'Obscurify.ai는 사용자가 누구인지 알지 못하도록 설계된 독특한 호스팅형 AI 채팅이며, 로컬 모드를 대안으로 갖추고 있습니다. 설계는 문서화되어 있고 클라이언트 코드도 공개되어 있지만, 운영자는 이름이 없고 서버 코드는 공개되지 않았고 "노로그" 주장에도 IP 주소를 30일간 보관합니다. 이메일 없이 클라우드 모델을 쓰고 싶고 그 신뢰를 받아들이는 분께 적합합니다. 검증 가능한 구성이 필요하다면 [LibreChat](/ko/power-local-llm/librechat-review)이나 [Open WebUI](/ko/local-llms/open-webui-review) 같은 자체 호스팅 옵션을 비교하십시오.',
       },
       sources: {
         id: 'sources',
         title: '출처',
         items: [
-          '[Obscurify 웹사이트](https://obscurify.ai) — 제품 설명, 로컬 모드, 링크. 2026년 10월 23일 확인.',
-          '[Obscurify 요금 페이지](https://obscurify.ai/pricing) — 게스트 제한, 요금제, 청구. 2026년 10월 23일 확인.',
-          '[Obscurify About 페이지](https://obscurify.ai/about) — 익명성, 결제, 로그에 관한 설명. 2026년 10월 23일 확인.',
-          '[Obscurify 개인정보 처리방침](https://obscurify.ai/privacy) — 수집 데이터, 보관 기간, 제공업체, 결제. 마지막 업데이트 2026년 10월 22일.',
+          '[Obscurify.ai 웹사이트](https://obscurify.ai) — 제품 설명, 로컬 모드, 링크. 2026년 10월 23일 확인.',
+          '[Obscurify.ai 요금 페이지](https://obscurify.ai/pricing) — 게스트 제한, 요금제, 청구. 2026년 10월 23일 확인.',
+          '[Obscurify.ai About 페이지](https://obscurify.ai/about) — 익명성, 결제, 로그에 관한 설명. 2026년 10월 23일 확인.',
+          '[Obscurify.ai 개인정보 처리방침](https://obscurify.ai/privacy) — 수집 데이터, 보관 기간, 제공업체, 결제. 마지막 업데이트 2026년 10월 22일.',
           '[GitHub의 Obscurify-ai](https://github.com/Obscurify-ai) — 웹 클라이언트와 Android 앱, 라이선스, 릴리스, README. 2026년 10월 23일 확인.',
         ],
       },
