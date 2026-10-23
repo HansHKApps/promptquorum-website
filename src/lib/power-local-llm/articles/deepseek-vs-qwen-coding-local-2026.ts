@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
-        url: 'https://promptquorum.com',
+        url: 'https://www.promptquorum.com',
       },
       url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'en',
@@ -2310,7 +2310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
-        url: 'https://promptquorum.com',
+        url: 'https://www.promptquorum.com',
       },
       url: 'https://www.promptquorum.com/de/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       proficiencyLevel: 'Advanced',
@@ -2606,7 +2606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
-        url: 'https://promptquorum.com',
+        url: 'https://www.promptquorum.com',
       },
       url: 'https://www.promptquorum.com/fr/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       proficiencyLevel: 'Advanced',
@@ -2902,7 +2902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
-        url: 'https://promptquorum.com',
+        url: 'https://www.promptquorum.com',
       },
       url: 'https://www.promptquorum.com/ja/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       proficiencyLevel: 'Advanced',
@@ -3198,7 +3198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
-        url: 'https://promptquorum.com',
+        url: 'https://www.promptquorum.com',
       },
       url: 'https://www.promptquorum.com/zh/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       proficiencyLevel: 'Advanced',

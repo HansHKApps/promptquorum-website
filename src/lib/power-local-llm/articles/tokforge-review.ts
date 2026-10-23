@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'TokForge Review: Offline Android AI Chat with Roleplay and Image Generation',
       description:
         'TokForge review: a free offline AI chat app for Android with roleplay characters, on-device image generation, voice cloning, and a public speed leaderboard. Privacy, hardware, and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/tokforge-review',
+      url: 'https://www.promptquorum.com/power-local-llm/tokforge-review',
       inLanguage: 'en',
       datePublished: '2026-10-03',
       dateModified: '2026-10-09',
@@ -387,15 +387,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'On-device AI' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/tokforge-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/tokforge-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'TokForge Review', item: 'https://promptquorum.com/power-local-llm/tokforge-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'TokForge Review', item: 'https://www.promptquorum.com/power-local-llm/tokforge-review' },
       ],
     },
   },

@@ -650,12 +650,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -690,7 +690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -1444,12 +1444,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -1484,7 +1484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -2238,12 +2238,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -3032,12 +3032,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -3072,7 +3072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -3826,12 +3826,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -3866,7 +3866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -4620,12 +4620,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -4660,7 +4660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -5414,12 +5414,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -5454,7 +5454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -6208,12 +6208,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -6248,7 +6248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -7002,12 +7002,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -7042,7 +7042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {

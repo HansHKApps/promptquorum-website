@@ -383,7 +383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'LM Playground Review: Open-Source Offline LLM Chat for Android',
       description:
         'LM Playground review: a free, MIT-licensed Android app that runs GGUF language models offline with document Q&A and vision input. Models, privacy, versions, and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/lm-playground-review',
+      url: 'https://www.promptquorum.com/power-local-llm/lm-playground-review',
       inLanguage: 'en',
       datePublished: '2026-10-16',
       dateModified: '2026-10-16',
@@ -398,15 +398,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'On-device AI' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/lm-playground-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/lm-playground-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'LM Playground Review', item: 'https://promptquorum.com/power-local-llm/lm-playground-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'LM Playground Review', item: 'https://www.promptquorum.com/power-local-llm/lm-playground-review' },
       ],
     },
   },

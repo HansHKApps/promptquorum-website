@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Ollama Local AI Review: Android LLM Runner and LAN API Proxy',
       description:
         'Ollama Local AI review: an Android app that runs GGUF models on-device and serves an OpenAI-compatible API on your LAN. What the Google Play listing confirms and what it leaves unverified.',
-      url: 'https://promptquorum.com/power-local-llm/ollama-local-ai-review',
+      url: 'https://www.promptquorum.com/power-local-llm/ollama-local-ai-review',
       inLanguage: 'en',
       datePublished: '2026-10-02',
       dateModified: '2026-10-02',
@@ -362,15 +362,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'OpenAI-compatible API' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/ollama-local-ai-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/ollama-local-ai-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Ollama Local AI Review', item: 'https://promptquorum.com/power-local-llm/ollama-local-ai-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Ollama Local AI Review', item: 'https://www.promptquorum.com/power-local-llm/ollama-local-ai-review' },
       ],
     },
   },

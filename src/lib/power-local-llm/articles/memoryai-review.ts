@@ -344,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'MemoryAI Review: Free Offline AI Chat for iPhone and Android',
       description:
         'MemoryAI review: a free, closed-source offline AI chat app for iPhone and Android with document Q&A, editable Agent Memory, voice mode and parental controls. Privacy, limits and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/memoryai-review',
+      url: 'https://www.promptquorum.com/power-local-llm/memoryai-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
       dateModified: '2026-10-20',
@@ -359,15 +359,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Local LLM' },
         { '@type': 'Thing', name: 'llama.cpp' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/memoryai-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/memoryai-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'MemoryAI Review', item: 'https://promptquorum.com/power-local-llm/memoryai-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'MemoryAI Review', item: 'https://www.promptquorum.com/power-local-llm/memoryai-review' },
       ],
     },
   },
