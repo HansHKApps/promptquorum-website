@@ -95,9 +95,11 @@ async function measure(page: Page, vh: number): Promise<Measure> {
         let obstructedBy: string | null = null
         const r = lead.getBoundingClientRect()
         const xs = [r.left + 12, r.left + r.width / 2]
+        // Probe only points inside the lead's own box AND the viewport. A lead that starts below the fold has no
+        // on-screen point; the old vh-2 clamp probed unrelated content (false "covered by").
         const ys = [r.top + 6, Math.min(r.bottom - 6, vh - 2)]
         for (const x of xs) for (const y of ys) {
-          if (y < 0 || y >= vh || x < 0 || x >= window.innerWidth) continue
+          if (y < r.top || y > r.bottom || y < 0 || y >= vh || x < 0 || x >= window.innerWidth) continue
           const el = document.elementFromPoint(x, y)
           if (el && !lead.contains(el) && !el.contains(lead)) {
             const cs = getComputedStyle(el)
@@ -133,10 +135,15 @@ async function measure(page: Page, vh: number): Promise<Measure> {
   )
 }
 
-function judge(m: Measure, vh: number, loc: string): string[] {
+// Templates that by design have no lead-answer block or Key Takeaways box (Rule 31/36 describe the article
+// renderers): hands-on tests and the frameworks/* pages. Only the H1 is checked there.
+const H1_ONLY = /\/frameworks\/|-hands-on-test$/
+
+function judge(m: Measure, vh: number, loc: string, path: string): string[] {
   const f: string[] = []
   if (!m.h1) f.push('no <h1> in <main>')
   else if (m.h1.bottom > vh) f.push(`H1 ends ${m.h1.bottom - vh}px below the fold`)
+  if (H1_ONLY.test(path)) return f
 
   if (!m.lead) {
     f.push('no bold lead answer found after the H1 (Rule 31)')
@@ -169,7 +176,7 @@ test.describe('above the fold', () => {
           await page.evaluate(() => document.fonts.ready)
           await page.waitForTimeout(800) // cookie banner and hydration-time layout shifts
           const m = await measure(page, vp.height)
-          const f = judge(m, vp.height, loc)
+          const f = judge(m, vp.height, loc, path)
           const px = (b: Box | null | undefined) => (b ? `${b.top}-${b.bottom}` : 'none')
           console.log(`${f.length ? 'FAIL' : 'ok  '} ${url} @ ${vp.name}: h1 ${px(m.h1)} · lead ${px(m.lead)}${m.lead ? ` (${m.lead.words}w)` : ''} · takeaways ${px(m.takeaways)}`)
           failures.push(...f.map((x) => `${vp.name}: ${x}`))
