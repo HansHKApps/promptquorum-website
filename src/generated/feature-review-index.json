@@ -919,6 +919,11 @@
     "urlSlug": "surfsense-review",
     "url": "/power-local-llm/surfsense-review"
   },
+  "strata": {
+    "cluster": "power-local-llm",
+    "urlSlug": "strata-review",
+    "url": "/power-local-llm/strata-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
