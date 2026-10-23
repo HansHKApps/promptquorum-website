@@ -5455,5 +5455,138 @@
       "period": "GSC export pasted 2026-10-24, window not stated"
     },
     "deployedAt": null
+  },
+  {
+    "id": "b59ccab3-a1ae-4abd-95ed-4c9695340fae",
+    "slug": "/power-local-llm/local-vision-models-llava-ollama-2026",
+    "date": "2026-10-23T19:39:18.501Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best local VLMs for Ollama in 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM per model, OCR picks and setup steps.",
+        "new": "Best local vision models (VLMs) 2026: Gemma 4, Qwen3-VL, Qwen3.8, MiniCPM-V. VRAM per model, Mac and 16–24 GB picks, OCR picks and Ollama setup."
+      }
+    ],
+    "reason": "Meta description under the 140-char floor and missing the VLM/Mac/16-24 GB terms behind top GSC queries",
+    "queries": [
+      "best local vision model",
+      "best local vlm",
+      "local vlm",
+      "local vision models",
+      "best local vision models"
+    ],
+    "baseline": {
+      "position": 4.46,
+      "impressions": 7385,
+      "clicks": 66,
+      "ctr": 0.008937034529451592,
+      "period": "28d to 2026-10-21"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "9c3ee211-3dee-42f3-b53c-0203070dd310",
+    "slug": "/power-local-llm/local-vision-models-llava-ollama-2026",
+    "date": "2026-10-23T19:39:18.668Z",
+    "fields": [
+      {
+        "field": "faq",
+        "old": "13 FAQs",
+        "new": "18 FAQs"
+      }
+    ],
+    "reason": "Five new FAQs answering uncovered GSC queries (quantization, hardware tiers, Mac, llama.cpp/vLLM, Gemma 5)",
+    "queries": [
+      "ollama llm vision quantization 2026",
+      "for 16gb vram",
+      "24gb m4 mac mini",
+      "which multimodal models support llama.cpp ollama or vllm",
+      "multimodal local models that run on 32gb of ram"
+    ],
+    "baseline": {
+      "position": 4.46,
+      "impressions": 7385,
+      "clicks": 66,
+      "ctr": 0.008937034529451592,
+      "period": "28d to 2026-10-21"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5d0813d2-663b-4e92-953c-d387a9ec173b",
+    "slug": "/ko/power-local-llm/local-vision-models-llava-ollama-2026",
+    "date": "2026-10-23T19:39:18.793Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "최고의 로컬 비전 모델 2026: Gemma 4, Qwen3-VL, Ollama",
+        "new": "로컬 VLM 순위 2026: Gemma 4, Qwen3-VL"
+      }
+    ],
+    "reason": "seoTitle over the 28-38 budget and lacking the ranking/VLM wording of the top ko queries",
+    "queries": [
+      "vlm 모델 순위",
+      "로컬 vlm",
+      "vlm 모델 추천",
+      "비전모델"
+    ],
+    "baseline": {
+      "position": 4.59,
+      "impressions": 490,
+      "clicks": 22,
+      "ctr": 0.044897959183673466,
+      "period": "28d to 2026-10-21"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "21a295f7-d0d7-4b05-81be-ea64a0e68116",
+    "slug": "/ja/power-local-llm/local-vision-models-llava-ollama-2026",
+    "date": "2026-10-23T19:39:18.898Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ベストローカルビジョンモデル2026：Gemma 4・Qwen3-VL & Ollama",
+        "new": "ローカルVLMおすすめ2026：Gemma 4・Qwen3-VL"
+      }
+    ],
+    "reason": "seoTitle over the 24-32 budget; adds the ローカルVLM wording of the top ja query",
+    "queries": [
+      "ローカルvlm",
+      "ollama vlm",
+      "vlm ollama"
+    ],
+    "baseline": {
+      "position": 6.06,
+      "impressions": 478,
+      "clicks": 17,
+      "ctr": 0.03556485355648536,
+      "period": "28d to 2026-10-21"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "ac49a276-a1bd-4800-9d3a-e57c04304e03",
+    "slug": "/zh/power-local-llm/local-vision-models-llava-ollama-2026",
+    "date": "2026-10-23T19:39:19.005Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年最佳本地视觉模型：Gemma 4、Qwen3-VL与Ollama",
+        "new": "2026年最佳本地视觉模型：Gemma 4与Qwen3-VL"
+      }
+    ],
+    "reason": "seoTitle over the 24-32 budget",
+    "queries": [
+      "vlm local"
+    ],
+    "baseline": {
+      "position": 6.39,
+      "impressions": 120,
+      "clicks": 4,
+      "ctr": 0.03333333333333333,
+      "period": "28d to 2026-10-21"
+    },
+    "deployedAt": null
   }
 ]
