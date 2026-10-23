@@ -1000,7 +1000,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
   }, [section.rows, section.columns])
 
   return (
-    <div className="mt-8" id={id}>
+    <div className={section.isTldr ? 'mt-2' : 'mt-8'} id={id}>
       {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
           {renderInlineLinks(section.title, lang)}
@@ -1028,7 +1028,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
 
       {/* TL;DR block */}
       {section.isTldr && section.items && (
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
+        <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 sm:p-5 my-3 key-takeaways">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => {
@@ -1528,41 +1528,58 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Fundamentals']
 
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
+    <div className="min-h-screen bg-white pt-24 sm:pt-20 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
       <div className="max-w-3xl mx-auto">
 
         {/* Breadcrumb + language */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
             <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
             <a href={lang === 'en' ? '/prompt-engineering' : `/${lang}/prompt-engineering`} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Prompt Engineering'}</a>
-            <span>/</span>
-            <span className="text-text-primary font-medium">{article.title}</span>
+            <span className="hidden md:inline">/</span>
+            <span className="hidden md:inline text-text-primary font-medium">{article.title}</span>
           </div>
           <LanguageSwitcher />
         </div>
 
-        <ClusterBanner cluster="prompt-engineering" />
-
         {/* Article header */}
-        <div className="mb-10">
-          <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 ${colors.badge}`}>
+        <div className="mb-4 sm:mb-6">
+          <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-2 ${colors.badge}`}>
             {article.theme}
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4 leading-tight">
+          <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
             {article.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm text-text-secondary">
+          <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
             <time dateTime={article.dateModified ?? article.publishDate}>
               {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {formatDisplayDate(article.dateModified ?? article.publishDate, lang)}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
-            <span>·</span>
-            <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
+            <span className="hidden sm:inline">·</span>
+            <span className="basis-full sm:basis-auto">{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
           </div>
         </div>
+
+        {/* Lead Answer Block — canonical bold definition, 25–50 words (Rule 31) */}
+        {(article as any).leadAnswerBlock && (
+          <div className="border-l-4 border-primary bg-primary/5 rounded-r-xl px-4 sm:px-5 py-3 sm:py-4 mt-0 mb-3 sm:mb-4 max-w-2xl">
+            <p className="text-sm font-bold text-text-primary leading-snug sm:leading-relaxed">
+              {renderInlineLinks((article as any).leadAnswerBlock, lang)}
+            </p>
+          </div>
+        )}
+
+        {/* Key Takeaways directly after the lead answer (Rule 36 first screen) */}
+        {(() => {
+          const tldrEntry = Object.entries(article.sections).find(([, s]) => s.isTldr)
+          if (!tldrEntry) return null
+          const [tldrKey, tldrSection] = tldrEntry
+          return <SectionBlock key={tldrKey} section={tldrSection} colors={colors} id="key-takeaways" lang={lang} />
+        })()}
+
+        <ClusterBanner cluster="prompt-engineering" />
 
         {/* Cross-language links */}
         <LangLinksBar cluster="prompt-engineering" slug={slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
@@ -1572,15 +1589,6 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           <p className="text-lg text-text-secondary leading-relaxed mb-4 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>
-        )}
-
-        {/* Lead Answer Block — canonical bold definition, 25–50 words (Rule 31) */}
-        {(article as any).leadAnswerBlock && (
-          <div className="border-l-4 border-primary bg-primary/5 rounded-r-xl px-5 py-4 my-6 max-w-2xl">
-            <p className="text-sm font-bold text-text-primary leading-relaxed">
-              {renderInlineLinks((article as any).leadAnswerBlock, lang)}
-            </p>
-          </div>
         )}
 
         {/* Static Hero Image for Discover */}
@@ -1839,15 +1847,6 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           )
         })()}
 
-        {/* Key Takeaways — rendered before ToC per GEO ordering rule */}
-        {(() => {
-          const tldrEntry = Object.entries(article.sections).find(([, s]) => s.isTldr)
-          if (!tldrEntry) return null
-          const [tldrKey, tldrSection] = tldrEntry
-          const sectionId = 'key-takeaways'
-          return <SectionBlock key={tldrKey} section={tldrSection} colors={colors} id={sectionId} lang={lang} />
-        })()}
-
         {/* Quick Facts block — numeric highlights, rendered between Key Takeaways and TOC (Rule 27) */}
         {(article as any).quickFacts && (article as any).quickFacts.length > 0 && (
           <div className="border border-primary/20 bg-primary/3 rounded-xl p-5 my-6">
@@ -1930,8 +1929,9 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           const labels = SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!
           return (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{labels.tableOfContents}</p>
-            <ol className="space-y-1">
+            <details>
+            <summary className="cursor-pointer text-xs font-bold text-primary uppercase tracking-widest">{labels.tableOfContents}</summary>
+            <ol className="space-y-1 mt-3">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>
                   <a href={item.anchor.startsWith('#') ? item.anchor : `#${item.anchor}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
@@ -1940,6 +1940,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
                 </li>
               ))}
             </ol>
+            </details>
           </nav>
           )
         })()}
