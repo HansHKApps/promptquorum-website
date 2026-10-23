@@ -75,14 +75,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "lm-studio-review",
-        "title": "LM Studio Review: The GUI-First Local AI Desktop App",
-        "url": "/power-local-llm/lm-studio-review",
+        "slug": "libredb-studio-review",
+        "title": "LibreDB Studio Review: Open-Source SQL Editor With an Optional Local AI Agent",
+        "url": "/power-local-llm/libredb-studio-review",
         "dateModified": "2026-10-23",
         "tier": "about"
       }
     ],
-    "totalCount": 303,
+    "totalCount": 305,
     "capped": true
   },
   "llama.cpp": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 147,
+    "totalCount": 148,
     "capped": true
   },
   "Atomic Chat": {
@@ -1236,7 +1236,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 37,
+    "totalCount": 38,
     "capped": true
   },
   "Msty": {
@@ -2750,7 +2750,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 43,
+    "totalCount": 44,
     "capped": true
   },
   "Cline": {
@@ -3035,6 +3035,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "libredb-studio-review",
+        "title": "LibreDB Studio Review: Open-Source SQL Editor With an Optional Local AI Agent",
+        "url": "/power-local-llm/libredb-studio-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "cursor-local-mode-review",
         "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
         "url": "/power-local-llm/cursor-local-mode-review",
@@ -3072,18 +3080,10 @@
         "url": "/power-local-llm/sourcegraph-cody-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "twinny-review",
-        "title": "Twinny Review: Archived by Its Maker, Still Open Source",
-        "url": "/power-local-llm/twinny-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "CodeGPT": {
     "articles": [
@@ -3811,6 +3811,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openrag-review",
+        "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
+        "url": "/power-local-llm/openrag-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -3842,7 +3850,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "LlamaIndex": {
@@ -9675,6 +9683,34 @@
     "totalCount": 1,
     "capped": false
   },
+  "LibreDB Studio": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "libredb-studio-review",
+        "title": "LibreDB Studio Review: Open-Source SQL Editor With an Optional Local AI Agent",
+        "url": "/power-local-llm/libredb-studio-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "OpenRAG": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openrag-review",
+        "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
+        "url": "/power-local-llm/openrag-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "candle-vllm": {
     "articles": [
       {
@@ -10177,6 +10213,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openrag-review",
+        "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
+        "url": "/power-local-llm/openrag-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dreamserver-review",
         "title": "DreamServer Review: One-Command Local AI Server Stack",
         "url": "/power-local-llm/dreamserver-review",
@@ -10200,7 +10244,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "little-coder": {
