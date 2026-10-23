@@ -5033,7 +5033,11 @@
       "ctr": 0.013960390043001635,
       "period": "28d EN GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "eff4db52-909a-431b-81e9-0743a00742f3",
@@ -5059,7 +5063,11 @@
       "ctr": 0.06469529733482579,
       "period": "28d EN GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "7ee70480-dca9-4364-a8de-53198ab41a6b",
@@ -5080,7 +5088,11 @@
       "ctr": 0.05217391304347826,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "a7b14300-d47f-410d-9bb2-928dac919ccc",
@@ -5106,7 +5118,11 @@
       "ctr": 0.09395711500974659,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "97ad5041-d83d-464d-a4f7-ddca3ad4e824",
@@ -5132,7 +5148,11 @@
       "ctr": 0.07445708376421924,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "c93c46fe-6d85-4caf-a823-2a41e6e6a17f",
@@ -5153,7 +5173,11 @@
       "ctr": 0.10752860656614266,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "e45222aa-19ee-465a-864f-a3734da2a8ff",
@@ -5174,7 +5198,11 @@
       "ctr": 0.2120188069350573,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "bfe20f83-ba44-40aa-be1e-d7fc969fc413",
@@ -5200,7 +5228,11 @@
       "ctr": 0.07295666483817882,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "2ee2d9c0-4116-44fd-96a2-285d9a152113",
@@ -5221,7 +5253,11 @@
       "ctr": 0.09712163416898793,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   },
   {
     "id": "264d1099-fc37-428b-a037-f9db3cc64ac9",
@@ -5242,6 +5278,10 @@
       "ctr": 0.07645875251509054,
       "period": "28d GSC export 2026-10-17 (page level)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-23",
+    "measure": {
+      "t14": "2026-11-06",
+      "t28": "2026-11-20"
+    }
   }
 ]
