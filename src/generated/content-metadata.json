@@ -2603,7 +2603,7 @@
       ]
     },
     "fastest-local-llms-low-end-pcs": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2621,19 +2621,19 @@
       "images": [
         {
           "url": "/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-en.webp",
-          "title": "Local LLM speed by hardware tier (CPU-only and iGPU): 4 GB RAM (25–40 tok/s, Qwen3 1.7B), 8 GB RAM CPU (15–25 tok/s, Phi-4-mini), 8 GB + Iris iGPU (12–20 tok/s), 16 GB CPU (8–15 tok/s), 16 GB + iGPU (20–35 tok/s). July 2026 benchmarks."
+          "title": "Estimated speed of fast local LLMs on low-end PCs by hardware tier, from 4 GB CPU-only to 16 GB with iGPU"
         },
         {
           "url": "/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-en.webp",
-          "title": "CPU vs GPU speed comparison for local LLMs: CPU-only reaches 10–25 tok/sec (3B models) and 15–40 tok/sec. GPU (RTX 3060, 8 GB) hits 25–60 tok/sec — 4–10× faster than CPU-only inference."
+          "title": "Estimated CPU-only vs discrete GPU speed for local LLMs: a GPU is typically 5–10× faster for the same model"
         },
         {
           "url": "/images/fastest-local-llms-low-end-pcs-quantization-guide-en.svg",
-          "title": "Quantization trade-offs for local LLMs: Q4 (1% quality loss, 50% VRAM savings, 4.5 GB for Mistral Small) is the standard. Q2 is 30% faster but 10% quality drop. Avoid Q8 — 2× VRAM cost with minimal gain."
+          "title": "Quantization trade-offs for local LLMs: Q4_K_M balances file size and quality, Q2 is smallest and lossiest"
         },
         {
           "url": "/images/fastest-local-llms-low-end-pcs-speed-perception-en.svg",
-          "title": "Speed perception thresholds for local LLMs: below 10 tok/sec feels broken, 15–25 tok/sec is acceptable for Q&A, 30+ tok/sec is smooth for all tasks, 60+ tok/sec enables real-time autocomplete."
+          "title": "Speed perception thresholds for local LLMs: under 10 tok/s feels broken, 30+ tok/s feels smooth"
         }
       ]
     },
@@ -9963,7 +9963,7 @@
       "images": []
     },
     "private-llm-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,

@@ -19459,12 +19459,47 @@
     "width": 1200,
     "height": 675
   },
+  "/images/fastest-local-llms-low-end-pcs-quantization-guide-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/fastest-local-llms-low-end-pcs-quantization-guide-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
   "/images/fastest-local-llms-low-end-pcs-quantization-guide-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
   },
   "/images/fastest-local-llms-low-end-pcs-quantization-guide-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/fastest-local-llms-low-end-pcs-quantization-guide-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/fastest-local-llms-low-end-pcs-quantization-guide-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/fastest-local-llms-low-end-pcs-quantization-guide-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/fastest-local-llms-low-end-pcs-quantization-guide-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/fastest-local-llms-low-end-pcs-quantization-guide-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
@@ -19524,15 +19559,50 @@
     "width": 1200,
     "height": 675
   },
+  "/images/fastest-local-llms-low-end-pcs-speed-perception-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 404
+  },
+  "/images/fastest-local-llms-low-end-pcs-speed-perception-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 404
+  },
   "/images/fastest-local-llms-low-end-pcs-speed-perception-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 404
   },
   "/images/fastest-local-llms-low-end-pcs-speed-perception-es.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 404
+  },
+  "/images/fastest-local-llms-low-end-pcs-speed-perception-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 404
+  },
+  "/images/fastest-local-llms-low-end-pcs-speed-perception-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 404
+  },
+  "/images/fastest-local-llms-low-end-pcs-speed-perception-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 404
+  },
+  "/images/fastest-local-llms-low-end-pcs-speed-perception-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 404
+  },
+  "/images/fastest-local-llms-low-end-pcs-speed-perception-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 404
   },
   "/images/fine-tuning-7b-model-locally-hardware-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
