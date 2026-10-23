@@ -26,7 +26,6 @@
 //   PQ_CHROMIUM_PATH    path to a Chromium binary (sandboxes without the Playwright browser download)
 
 import { expect, test, type Page } from '@playwright/test'
-// @ts-expect-error plain .mjs helper without types
 import { changedArticleFiles, articleUrlPath } from '../scripts/changed-article-files.mjs'
 
 const ALL_LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
@@ -52,7 +51,7 @@ const changedRef = process.env.PQ_ATF_CHANGED
 const paths: string[] = process.env.PQ_ATF_PATHS
   ? process.env.PQ_ATF_PATHS.split(',').map((s) => s.trim()).filter(Boolean)
   : changedRef
-    ? changedArticleFiles(changedRef).files.map(articleUrlPath).filter(Boolean)
+    ? changedArticleFiles(changedRef).files.map(articleUrlPath).filter((x: string | null): x is string => Boolean(x))
     : DEFAULT_PATHS
 const localeEnv = process.env.PQ_ATF_LOCALES ?? 'en'
 const locales = localeEnv === 'all' ? ALL_LOCALES : localeEnv.split(',').map((s) => s.trim()).filter(Boolean)
