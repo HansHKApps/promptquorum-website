@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-en.webp',
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quantization: uses OmniQuant and GPTQ, which the developer says produce better output quality per bit than the round-to-nearest (RTN) quantization used in some competing apps.',
           'Privacy: the App Store privacy label states the developer collects no data from the app; no account or sign-in is required to chat.',
           'Extras: Siri and Shortcuts integration via two App Intents, plus Family Sharing for up to six people on one purchase.',
-          'Version 1.9.15 (July 2026) is the current release; the app first launched on the App Store in June 2023.',
+          'Version 1.9.16 (App Store release 14 September 2026; the developer\'s release notes date it 29 July 2026) is the current release; the app first launched on the App Store in June 2023.',
         ],
       },
       whatIsPrivateLLM: {
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'What it does not include': 'Any Android, Windows, or Linux version — the App Store purchase does not unlock a cross-platform license',
           },
         ],
-        note: 'App Store prices can change without notice and may differ by region. Confirm the current price on the [App Store listing](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) before purchasing. Verified for this review on 2026-09-05.',
+        note: 'App Store prices can change without notice and may differ by region. Confirm the current price on the [App Store listing](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) before purchasing. Verified for this review on 2026-10-23.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -209,6 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**No account required.** You can download, purchase, and use the app without creating a profile or signing in.',
           '**No data collection, per the App Store label.** Apple\'s privacy nutrition label for this listing shows no data collected from the app.',
+          '**Chat history is stored on the device since version 1.9.16.** The release notes describe a saved conversation list with search, rename, and delete that can be turned off or cleared in Settings.',
           '**iCloud sync of chat history is not documented.** The developer\'s public FAQ does not describe iCloud sync of conversations across devices — this review treats that as unconfirmed rather than assuming it exists. If cross-device chat sync matters to you, verify current behavior directly in the app before relying on it.',
           '**Sandboxed execution.** The app runs within Apple\'s standard app sandbox, the same isolation every App Store app is subject to — this is an Apple platform guarantee, not a Private LLM-specific feature.',
         ],
@@ -227,7 +228,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**January 2024.** Multi-model downloading introduced, expanding the library to include TinyLlama, StableLM, Phi-2, Mistral, Llama, and Gemma family models.',
           '**February 2024.** macOS-specific writing services added: grammar correction, summarization, and rephrasing that other Mac apps can call into.',
           '**March 2024.** Model switching without leaving the active chat interface.',
-          '**July 2026.** Version 1.9.15 moved model downloads to a CDN instead of Hugging Face, which the release notes describe as faster; this is the current version as of this review.',
+          '**July 2026.** Version 1.9.15 (8 July 2026) moved model downloads to a CDN instead of Hugging Face, which the release notes describe as faster.',
+          '**July–September 2026.** Version 1.9.16 (dated 29 July 2026 in the developer\'s release notes; live on the App Store from 14 September 2026) added saved on-device chat history with search, rename, and delete, export to Markdown or PDF, faster inference and model switching, and Siri and Shortcuts replies that now reach the requesting app; this is the current version as of 2026-10-23.',
         ],
         note: 'Version history sourced from the developer\'s own [release notes](https://privatellm.app/en/release-notes) page. Dates and version numbers are as published there; verify the current version directly in the App Store before relying on a specific feature being present.',
       },
@@ -376,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'How much does Private LLM cost?',
-            a: 'Private LLM costs [$4.99 as a one-time purchase](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) on the Apple App Store, verified for this review on 2026-09-05. There is no subscription and no in-app purchases listed on the current App Store listing. App Store prices can vary by region and change over time — confirm the current price before buying.',
+            a: 'Private LLM costs [$4.99 as a one-time purchase](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) on the Apple App Store, verified for this review on 2026-10-23. There is no subscription and no in-app purchases listed on the current App Store listing. App Store prices can vary by region and change over time — confirm the current price before buying.',
           },
           {
             q: 'Is Private LLM available on Android or Windows?',
@@ -429,7 +431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM on the App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — price, platform compatibility, privacy label, ratings, and version history.',
           '[Private LLM official site](https://privatellm.app/en) — product overview, pricing model, and privacy claims.',
           '[Private LLM FAQ](https://privatellm.app/en/faq) — supported models, quantization approach, hardware requirements, Family Sharing, and Siri/Shortcuts integration.',
-          '[Private LLM release notes](https://privatellm.app/en/release-notes) — version history and feature milestones from June 2023 to July 2026.',
+          '[Private LLM release notes](https://privatellm.app/en/release-notes) — version history and feature milestones from June 2023 to September 2026.',
         ],
       },
       relatedReading: {
@@ -450,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-de.webp',
@@ -494,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       de: {
         question: 'Lohnt sich Private LLM für 4,99 $ im App Store?',
@@ -507,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nutzt OmniQuant- und GPTQ-Quantisierung statt der einfacheren Round-to-Nearest-Quantisierung.',
           'Entwickler (Numen Technologies Limited) gibt an, dass die App keine Daten sammelt und kein Konto benötigt.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -551,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quantisierung: nutzt OmniQuant und GPTQ, was laut Entwickler pro Bit bessere Ausgabequalität liefert als die Round-to-Nearest-Quantisierung (RTN), die manche konkurrierenden Apps verwenden.',
           'Datenschutz: Das App-Store-Datenschutzlabel gibt an, dass der Entwickler keine Daten aus der App sammelt; zum Chatten ist kein Konto oder Login erforderlich.',
           'Extras: Siri- und Shortcuts-Integration über zwei App Intents, plus Familienfreigabe für bis zu sechs Personen bei einem Kauf.',
-          'Version 1.9.15 (Juli 2026) ist die aktuelle Version; die App erschien erstmals im Juni 2023 im App Store.',
+          'Version 1.9.16 (App-Store-Veröffentlichung am 14. September 2026; die Release Notes des Entwicklers datieren sie auf den 29. Juli 2026) ist die aktuelle Version; die App erschien erstmals im Juni 2023 im App Store.',
         ],
       },
       whatIsPrivateLLM: {
@@ -608,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Was nicht enthalten ist': 'Eine Android-, Windows- oder Linux-Version — der App-Store-Kauf schaltet keine plattformübergreifende Lizenz frei',
           },
         ],
-        note: 'App-Store-Preise können sich ohne Vorankündigung ändern und je nach Region unterscheiden. Prüfen Sie den aktuellen Preis im [App-Store-Eintrag](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) vor dem Kauf. Für diese Rezension geprüft am 2026-09-05.',
+        note: 'App-Store-Preise können sich ohne Vorankündigung ändern und je nach Region unterscheiden. Prüfen Sie den aktuellen Preis im [App-Store-Eintrag](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) vor dem Kauf. Für diese Rezension geprüft am 2026-10-23.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -662,6 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Kein Konto erforderlich.** Sie können die App herunterladen, kaufen und nutzen, ohne ein Profil anzulegen oder sich anzumelden.',
           '**Keine Datensammlung laut App-Store-Label.** Apples Datenschutz-Kennzeichnung für diesen Eintrag zeigt keine aus der App gesammelten Daten.',
+          '**Der Chatverlauf wird seit Version 1.9.16 auf dem Gerät gespeichert.** Laut Release Notes gibt es eine gespeicherte Konversationsliste mit Suche, Umbenennen und Löschen, die in den Einstellungen deaktiviert oder gelöscht werden kann.',
           '**iCloud-Synchronisierung des Chat-Verlaufs ist nicht dokumentiert.** Die öffentliche FAQ des Entwicklers beschreibt keine iCloud-Synchronisierung von Unterhaltungen zwischen Geräten — diese Rezension behandelt dies als unbestätigt, statt es anzunehmen. Wenn geräteübergreifende Chat-Synchronisierung für Sie wichtig ist, prüfen Sie das aktuelle Verhalten direkt in der App, bevor Sie sich darauf verlassen.',
           '**Sandbox-Ausführung.** Die App läuft innerhalb der Standard-App-Sandbox von Apple, derselben Isolation, der jede App-Store-App unterliegt — dies ist eine Plattformgarantie von Apple, kein Private-LLM-spezifisches Feature.',
         ],
@@ -680,7 +683,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Januar 2024.** Multi-Modell-Download eingeführt, wodurch die Bibliothek um TinyLlama, StableLM, Phi-2, Mistral, Llama und Gemma-Familienmodelle erweitert wurde.',
           '**Februar 2024.** macOS-spezifische Schreibdienste hinzugefügt: Grammatikkorrektur, Zusammenfassung und Umformulierung, die andere Mac-Apps aufrufen können.',
           '**März 2024.** Modellwechsel möglich, ohne die aktive Chat-Oberfläche zu verlassen.',
-          '**Juli 2026.** Version 1.9.15 verlagerte Modell-Downloads auf ein CDN statt Hugging Face, was laut Release Notes für schnellere Downloads sorgt; dies ist die aktuelle Version zum Zeitpunkt dieser Rezension.',
+          '**Juli 2026.** Version 1.9.15 (8. Juli 2026) verlagerte Modell-Downloads auf ein CDN statt Hugging Face, was laut Release Notes für schnellere Downloads sorgt.',
+          '**Juli–September 2026.** Version 1.9.16 (in den Release Notes des Entwicklers auf den 29. Juli 2026 datiert; seit dem 14. September 2026 im App Store) brachte gespeicherten Chatverlauf auf dem Gerät mit Suche, Umbenennen und Löschen, Export als Markdown oder PDF, schnellere Inferenz und schnelleres Modellwechseln sowie Siri- und Kurzbefehle-Antworten, die nun die anfragende App erreichen; dies ist die aktuelle Version am 23.10.2026.',
         ],
         note: 'Versionsverlauf laut den eigenen [Release Notes](https://privatellm.app/en/release-notes) des Entwicklers. Daten und Versionsnummern entsprechen den dort veröffentlichten Angaben; prüfen Sie die aktuelle Version direkt im App Store, bevor Sie sich auf ein bestimmtes Feature verlassen.',
       },
@@ -829,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Wie viel kostet Private LLM?',
-            a: 'Private LLM kostet [4,99 $ als Einmalkauf](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) im Apple App Store, für diese Rezension geprüft am 2026-09-05. Es gibt kein Abonnement und keine In-App-Käufe im aktuellen App-Store-Eintrag. App-Store-Preise können je nach Region variieren und sich über die Zeit ändern — prüfen Sie den aktuellen Preis vor dem Kauf.',
+            a: 'Private LLM kostet [4,99 $ als Einmalkauf](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) im Apple App Store, für diese Rezension geprüft am 2026-10-23. Es gibt kein Abonnement und keine In-App-Käufe im aktuellen App-Store-Eintrag. App-Store-Preise können je nach Region variieren und sich über die Zeit ändern — prüfen Sie den aktuellen Preis vor dem Kauf.',
           },
           {
             q: 'Ist Private LLM für Android oder Windows verfügbar?',
@@ -882,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM im App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — Preis, Plattformkompatibilität, Datenschutzlabel, Bewertungen und Versionsverlauf.',
           '[Offizielle Website von Private LLM](https://privatellm.app/en) — Produktübersicht, Preismodell und Datenschutzangaben.',
           '[FAQ von Private LLM](https://privatellm.app/en/faq) — unterstützte Modelle, Quantisierungsansatz, Hardwareanforderungen, Familienfreigabe und Siri-/Shortcuts-Integration.',
-          '[Release Notes von Private LLM](https://privatellm.app/en/release-notes) — Versionsverlauf und Feature-Meilensteine von Juni 2023 bis Juli 2026.',
+          '[Release Notes von Private LLM](https://privatellm.app/en/release-notes) — Versionsverlauf und Feature-Meilensteine von Juni 2023 bis September 2026.',
         ],
       },
       relatedReading: {
@@ -903,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-es.webp',
@@ -947,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       es: {
         question: '¿Vale la pena Private LLM por 4,99 $ en la App Store?',
@@ -960,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Usa cuantización OmniQuant y GPTQ en lugar de la cuantización round-to-nearest más simple.',
           'El desarrollador (Numen Technologies Limited) afirma que la app no recopila datos y no requiere cuenta.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -1004,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cuantización: usa OmniQuant y GPTQ, que según el desarrollador producen mejor calidad de salida por bit que la cuantización round-to-nearest (RTN) que usan algunas apps de la competencia.',
           'Privacidad: la etiqueta de privacidad de la App Store indica que el desarrollador no recopila datos de la app; no se requiere cuenta ni inicio de sesión para chatear.',
           'Extras: integración con Siri y Atajos mediante dos App Intents, además de Compartir en familia para hasta seis personas con una sola compra.',
-          'La versión 1.9.15 (julio de 2026) es la actual; la app se lanzó por primera vez en la App Store en junio de 2023.',
+          'La versión 1.9.16 (publicada en la App Store el 14 de septiembre de 2026; las notas de versión del desarrollador la fechan el 29 de julio de 2026) es la actual; la app se lanzó por primera vez en la App Store en junio de 2023.',
         ],
       },
       whatIsPrivateLLM: {
@@ -1061,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Lo que no incluye': 'Ninguna versión para Android, Windows o Linux — la compra en la App Store no desbloquea una licencia multiplataforma',
           },
         ],
-        note: 'Los precios de la App Store pueden cambiar sin previo aviso y variar según la región. Confirma el precio actual en la [ficha de la App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) antes de comprar. Verificado para este análisis el 2026-09-05.',
+        note: 'Los precios de la App Store pueden cambiar sin previo aviso y variar según la región. Confirma el precio actual en la [ficha de la App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) antes de comprar. Verificado para este análisis el 2026-10-23.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -1115,6 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**No requiere cuenta.** Puedes descargar, comprar y usar la app sin crear un perfil ni iniciar sesión.',
           '**Sin recopilación de datos, según la etiqueta de la App Store.** La etiqueta de privacidad de Apple para esta ficha muestra que no se recopilan datos de la app.',
+          '**Desde la versión 1.9.16 el historial de chat se guarda en el dispositivo.** Las notas de la versión describen una lista de conversaciones guardadas con búsqueda, cambio de nombre y eliminación, que puede desactivarse o borrarse en Ajustes.',
           '**La sincronización del historial de chat por iCloud no está documentada.** Las preguntas frecuentes públicas del desarrollador no describen sincronización por iCloud de conversaciones entre dispositivos — este análisis lo trata como no confirmado en lugar de asumir que existe. Si la sincronización de chat entre dispositivos te importa, verifica el comportamiento actual directamente en la app antes de depender de ello.',
           '**Ejecución en sandbox.** La app se ejecuta dentro del sandbox estándar de Apple, el mismo aislamiento al que está sujeta cualquier app de la App Store — es una garantía de la plataforma de Apple, no una característica específica de Private LLM.',
         ],
@@ -1133,7 +1138,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Enero de 2024.** Se introdujo la descarga de múltiples modelos, ampliando la biblioteca con modelos de las familias TinyLlama, StableLM, Phi-2, Mistral, Llama y Gemma.',
           '**Febrero de 2024.** Se añadieron servicios de escritura específicos de macOS: corrección gramatical, resumen y reformulación, invocables desde otras apps de Mac.',
           '**Marzo de 2024.** Cambio de modelo sin salir de la interfaz de chat activa.',
-          '**Julio de 2026.** La versión 1.9.15 pasó las descargas de modelos a una CDN en lugar de Hugging Face, lo que las notas de la versión describen como más rápido; es la versión actual en el momento de este análisis.',
+          '**Julio de 2026.** La versión 1.9.15 (8 de julio de 2026) pasó las descargas de modelos a una CDN en lugar de Hugging Face, lo que las notas de la versión describen como más rápido.',
+          '**Julio–septiembre de 2026.** La versión 1.9.16 (fechada el 29 de julio de 2026 en las notas de versión del desarrollador; disponible en la App Store desde el 14 de septiembre de 2026) añadió historial de chat guardado en el dispositivo con búsqueda, cambio de nombre y eliminación, exportación a Markdown o PDF, inferencia y cambio de modelo más rápidos, y respuestas de Siri y Atajos que ahora llegan a la app solicitante; es la versión actual a 23-10-2026.',
         ],
         note: 'Historial de versiones basado en la propia página de [notas de la versión](https://privatellm.app/en/release-notes) del desarrollador. Las fechas y números de versión son los publicados allí; verifica la versión actual directamente en la App Store antes de dar por hecha una característica concreta.',
       },
@@ -1282,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Cuánto cuesta Private LLM?',
-            a: 'Private LLM cuesta [4,99 $ como compra única](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) en la App Store de Apple, verificado para este análisis el 2026-09-05. No hay suscripción ni compras dentro de la app en la ficha actual de la App Store. Los precios de la App Store pueden variar según la región y cambiar con el tiempo — confirma el precio actual antes de comprar.',
+            a: 'Private LLM cuesta [4,99 $ como compra única](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) en la App Store de Apple, verificado para este análisis el 2026-10-23. No hay suscripción ni compras dentro de la app en la ficha actual de la App Store. Los precios de la App Store pueden variar según la región y cambiar con el tiempo — confirma el precio actual antes de comprar.',
           },
           {
             q: '¿Está disponible Private LLM en Android o Windows?',
@@ -1335,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM en la App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — precio, compatibilidad de plataformas, etiqueta de privacidad, valoraciones e historial de versiones.',
           '[Sitio oficial de Private LLM](https://privatellm.app/en) — descripción del producto, modelo de precios y afirmaciones de privacidad.',
           '[Preguntas frecuentes de Private LLM](https://privatellm.app/en/faq) — modelos compatibles, enfoque de cuantización, requisitos de hardware, Compartir en familia e integración con Siri/Atajos.',
-          '[Notas de la versión de Private LLM](https://privatellm.app/en/release-notes) — historial de versiones e hitos de funciones de junio de 2023 a julio de 2026.',
+          '[Notas de la versión de Private LLM](https://privatellm.app/en/release-notes) — historial de versiones e hitos de funciones de junio de 2023 a septiembre de 2026.',
         ],
       },
       relatedReading: {
@@ -1356,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-fr.webp',
@@ -1400,7 +1406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       fr: {
         question: 'Private LLM vaut-elle ses 4,99 $ sur l\'App Store ?',
@@ -1413,7 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Utilise la quantification OmniQuant et GPTQ plutôt que la quantification round-to-nearest plus simple.',
           'L\'éditeur (Numen Technologies Limited) déclare que l\'application ne collecte aucune donnée et ne nécessite aucun compte.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -1457,7 +1463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quantification : utilise OmniQuant et GPTQ, qui selon l\'éditeur produisent une meilleure qualité de sortie par bit que la quantification round-to-nearest (RTN) utilisée par certaines applications concurrentes.',
           'Confidentialité : la fiche de confidentialité de l\'App Store indique que l\'éditeur ne collecte aucune donnée via l\'application ; aucun compte ni connexion n\'est requis pour discuter.',
           'Extras : intégration Siri et Raccourcis via deux App Intents, plus le Partage familial pour jusqu\'à six personnes pour un seul achat.',
-          'La version 1.9.15 (juillet 2026) est la version actuelle ; l\'application est apparue pour la première fois sur l\'App Store en juin 2023.',
+          'La version 1.9.16 (publiée sur l\'App Store le 14 septembre 2026 ; les notes de version du développeur la datent du 29 juillet 2026) est la version actuelle ; l\'application est apparue pour la première fois sur l\'App Store en juin 2023.',
         ],
       },
       whatIsPrivateLLM: {
@@ -1514,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ce qui n\'est pas inclus': 'Aucune version Android, Windows ou Linux — l\'achat sur l\'App Store ne débloque pas de licence multiplateforme',
           },
         ],
-        note: 'Les prix de l\'App Store peuvent changer sans préavis et varier selon la région. Vérifiez le prix actuel sur la [fiche App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) avant d\'acheter. Vérifié pour ce test le 2026-09-05.',
+        note: 'Les prix de l\'App Store peuvent changer sans préavis et varier selon la région. Vérifiez le prix actuel sur la [fiche App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) avant d\'acheter. Vérifié pour ce test le 2026-10-23.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -1568,6 +1574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Aucun compte requis.** Vous pouvez télécharger, acheter et utiliser l\'application sans créer de profil ni vous connecter.',
           '**Aucune collecte de données, selon la fiche App Store.** L\'étiquette de confidentialité d\'Apple pour cette fiche ne montre aucune donnée collectée par l\'application.',
+          '**Depuis la version 1.9.16, l\'historique des conversations est enregistré sur l\'appareil.** Les notes de version décrivent une liste de conversations enregistrées avec recherche, renommage et suppression, que l\'on peut désactiver ou effacer dans les Réglages.',
           '**La synchronisation de l\'historique via iCloud n\'est pas documentée.** La FAQ publique de l\'éditeur ne décrit aucune synchronisation iCloud des conversations entre appareils — ce test considère ce point comme non confirmé plutôt que de supposer qu\'il existe. Si la synchronisation multi-appareils compte pour vous, vérifiez le comportement actuel directement dans l\'application avant de vous y fier.',
           '**Exécution en bac à sable (sandbox).** L\'application s\'exécute dans le bac à sable standard d\'Apple, la même isolation à laquelle est soumise toute application de l\'App Store — c\'est une garantie de la plateforme Apple, pas une fonctionnalité propre à Private LLM.',
         ],
@@ -1586,7 +1593,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Janvier 2024.** Introduction du téléchargement multi-modèles, élargissant la bibliothèque avec des modèles des familles TinyLlama, StableLM, Phi-2, Mistral, Llama et Gemma.',
           '**Février 2024.** Ajout de services d\'écriture spécifiques à macOS : correction grammaticale, résumé et reformulation, accessibles depuis d\'autres applications Mac.',
           '**Mars 2024.** Changement de modèle sans quitter l\'interface de chat active.',
-          '**Juillet 2026.** La version 1.9.15 a déplacé les téléchargements de modèles vers un CDN plutôt que Hugging Face, ce que les notes de version décrivent comme plus rapide ; il s\'agit de la version actuelle au moment de ce test.',
+          '**Juillet 2026.** La version 1.9.15 (8 juillet 2026) a déplacé les téléchargements de modèles vers un CDN plutôt que Hugging Face, ce que les notes de version décrivent comme plus rapide.',
+          '**Juillet–septembre 2026.** La version 1.9.16 (datée du 29 juillet 2026 dans les notes de version du développeur ; disponible sur l\'App Store depuis le 14 septembre 2026) a ajouté un historique des conversations enregistré sur l\'appareil avec recherche, renommage et suppression, l\'export en Markdown ou PDF, une inférence et un changement de modèle plus rapides, et des réponses Siri et Raccourcis qui parviennent désormais à l\'app demandeuse ; c\'est la version actuelle au 23/10/2026.',
         ],
         note: 'Historique des versions basé sur la page des [notes de version](https://privatellm.app/en/release-notes) de l\'éditeur. Les dates et numéros de version sont ceux publiés à cet endroit ; vérifiez la version actuelle directement sur l\'App Store avant de compter sur une fonctionnalité précise.',
       },
@@ -1735,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Combien coûte Private LLM ?',
-            a: 'Private LLM coûte [4,99 $ en achat unique](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) sur l\'App Store d\'Apple, vérifié pour ce test le 2026-09-05. Il n\'y a ni abonnement ni achats intégrés sur la fiche actuelle de l\'App Store. Les prix de l\'App Store peuvent varier selon la région et évoluer dans le temps — confirmez le prix actuel avant d\'acheter.',
+            a: 'Private LLM coûte [4,99 $ en achat unique](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) sur l\'App Store d\'Apple, vérifié pour ce test le 2026-10-23. Il n\'y a ni abonnement ni achats intégrés sur la fiche actuelle de l\'App Store. Les prix de l\'App Store peuvent varier selon la région et évoluer dans le temps — confirmez le prix actuel avant d\'acheter.',
           },
           {
             q: 'Private LLM est-elle disponible sur Android ou Windows ?',
@@ -1788,7 +1796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM sur l\'App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — prix, compatibilité des plateformes, fiche de confidentialité, notes et historique des versions.',
           '[Site officiel de Private LLM](https://privatellm.app/en) — présentation du produit, modèle tarifaire et affirmations de confidentialité.',
           '[FAQ de Private LLM](https://privatellm.app/en/faq) — modèles pris en charge, approche de quantification, configuration matérielle requise, Partage familial et intégration Siri/Raccourcis.',
-          '[Notes de version de Private LLM](https://privatellm.app/en/release-notes) — historique des versions et jalons de fonctionnalités de juin 2023 à juillet 2026.',
+          '[Notes de version de Private LLM](https://privatellm.app/en/release-notes) — historique des versions et jalons de fonctionnalités de juin 2023 à septembre 2026.',
         ],
       },
       relatedReading: {
@@ -1809,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-ja.webp',
@@ -1853,7 +1861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       ja: {
         question: 'Private LLMはApp Storeの4.99ドルに見合う価値がありますか？',
@@ -1866,7 +1874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'よりシンプルなround-to-nearest量子化ではなく、OmniQuantとGPTQ量子化を使用。',
           '開発元（Numen Technologies Limited）は、アプリがデータを収集せずアカウントも不要だとしている。',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -1910,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '量子化：OmniQuantとGPTQを使用。開発者によれば、一部の競合アプリが使うround-to-nearest（RTN）量子化よりビットあたりの出力品質が高いとしている。',
           'プライバシー：App Storeのプライバシーラベルでは、開発元がアプリからデータを収集しないとされている。チャットにアカウントやログインは不要。',
           '追加機能：2つのApp IntentによるSiriおよびショートカット連携に加え、1回の購入で最大6人まで使えるファミリー共有。',
-          'バージョン1.9.15（2026年7月）が最新版。アプリは2023年6月に初めてApp Storeに登場した。',
+          'バージョン1.9.16（App Storeでの公開は2026年9月14日、開発元のリリースノートでは2026年7月29日付）が最新版。アプリは2023年6月に初めてApp Storeに登場した。',
         ],
       },
       whatIsPrivateLLM: {
@@ -2021,6 +2029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**アカウント不要。** プロフィール作成やログインなしで、アプリのダウンロード・購入・利用ができる。',
           '**App Storeラベルによればデータ収集なし。** このリストに対するAppleのプライバシー栄養表示ラベルでは、アプリから収集されるデータはないとされている。',
+          '**バージョン1.9.16以降、チャット履歴は端末内に保存される。** リリースノートによれば、検索・名前変更・削除ができる会話リストが保存され、設定でオフにしたり消去したりできる。',
           '**チャット履歴のiCloud同期は文書化されていない。** 開発者の公開FAQには、端末間での会話のiCloud同期に関する記載がない——本レビューでは、存在すると仮定するのではなく未確認として扱う。端末間でのチャット同期が重要な場合は、それに依存する前にアプリ内で現在の挙動を直接確認すること。',
           '**サンドボックス実行。** アプリはAppleの標準的なアプリサンドボックス内で実行される。これはApp Store上のすべてのアプリが従う分離の仕組みであり、Private LLM固有の機能ではなくAppleプラットフォームによる保証である。',
         ],
@@ -2039,7 +2048,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2024年1月。** マルチモデルダウンロード機能を導入し、TinyLlama、StableLM、Phi-2、Mistral、Llama、Gemmaファミリーのモデルをライブラリに追加。',
           '**2024年2月。** macOS固有の文章サービス（文法修正、要約、言い換え）を追加。他のMacアプリから呼び出し可能。',
           '**2024年3月。** アクティブなチャット画面を離れずにモデルを切り替えられるようになった。',
-          '**2026年7月。** バージョン1.9.15でモデルのダウンロード元をHugging Faceから CDNに移行。リリースノートによればダウンロードが高速化されたとのこと——本レビュー時点での最新版。',
+          '**2026年7月。** バージョン1.9.15（2026年7月8日）でモデルのダウンロード元をHugging FaceからCDNに移行。リリースノートによればダウンロードが高速化されたとのこと。',
+          '**2026年7月〜9月。** バージョン1.9.16（開発元のリリースノートでは2026年7月29日付、App Storeでの公開は2026年9月14日）で、検索・名前変更・削除ができる端末内のチャット履歴、MarkdownまたはPDFへの書き出し、推論とモデル切り替えの高速化、そしてSiriやショートカットの返信が呼び出し元アプリに届く修正が加わった。2026年10月23日時点の最新版。',
         ],
         note: 'バージョン履歴は開発者自身の[リリースノート](https://privatellm.app/en/release-notes)ページに基づく。日付とバージョン番号はそこで公開されている内容の通り——特定の機能の存在を前提にする前に、App Storeで現在のバージョンを直接確認すること。',
       },
@@ -2241,7 +2251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[App StoreのPrivate LLM](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — 価格、プラットフォーム互換性、プライバシーラベル、評価、バージョン履歴。',
           '[Private LLM公式サイト](https://privatellm.app/en) — 製品概要、価格モデル、プライバシーに関する主張。',
           '[Private LLMのFAQ](https://privatellm.app/en/faq) — 対応モデル、量子化方式、ハードウェア要件、ファミリー共有、Siri/ショートカット連携。',
-          '[Private LLMのリリースノート](https://privatellm.app/en/release-notes) — 2023年6月から2026年7月までのバージョン履歴と機能の節目。',
+          '[Private LLMのリリースノート](https://privatellm.app/en/release-notes) — 2023年6月から2026年9月までのバージョン履歴と機能の節目。',
         ],
       },
       relatedReading: {
@@ -2262,7 +2272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-pt.webp',
@@ -2306,7 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       pt: {
         question: 'O Private LLM vale os US$ 4,99 cobrados na App Store?',
@@ -2319,7 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Usa quantização OmniQuant e GPTQ em vez da quantização round-to-nearest mais simples.',
           'O desenvolvedor (Numen Technologies Limited) afirma que o app não coleta dados e não exige conta.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -2363,7 +2373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quantização: usa OmniQuant e GPTQ, que segundo o desenvolvedor entregam melhor qualidade de saída por bit do que a quantização round-to-nearest (RTN) usada por alguns apps concorrentes.',
           'Privacidade: o rótulo de privacidade da App Store informa que o desenvolvedor não coleta dados do app; nenhuma conta ou login é necessário para conversar.',
           'Extras: integração com Siri e Atalhos via dois App Intents, além de Compartilhamento familiar para até seis pessoas em uma única compra.',
-          'A versão 1.9.15 (julho de 2026) é a atual; o app foi lançado pela primeira vez na App Store em junho de 2023.',
+          'A versão 1.9.16 (publicada na App Store em 14 de setembro de 2026; as notas de versão do desenvolvedor a datam de 29 de julho de 2026) é a atual; o app foi lançado pela primeira vez na App Store em junho de 2023.',
         ],
       },
       whatIsPrivateLLM: {
@@ -2420,7 +2430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'O que não está incluído': 'Qualquer versão para Android, Windows ou Linux — a compra na App Store não desbloqueia uma licença multiplataforma',
           },
         ],
-        note: 'Os preços da App Store podem mudar sem aviso prévio e variar por região. Confirme o preço atual na [ficha da App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) antes de comprar. Verificado para esta análise em 2026-09-05.',
+        note: 'Os preços da App Store podem mudar sem aviso prévio e variar por região. Confirme o preço atual na [ficha da App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) antes de comprar. Verificado para esta análise em 2026-10-23.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -2474,6 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Nenhuma conta necessária.** Você pode baixar, comprar e usar o app sem criar um perfil ou fazer login.',
           '**Nenhuma coleta de dados, segundo o rótulo da App Store.** O rótulo de privacidade da Apple para esta ficha mostra nenhum dado coletado pelo app.',
+          '**Desde a versão 1.9.16, o histórico de chat fica salvo no aparelho.** As notas de versão descrevem uma lista de conversas salvas com busca, renomeação e exclusão, que pode ser desativada ou apagada nos Ajustes.',
           '**A sincronização do histórico de chat via iCloud não está documentada.** O FAQ público do desenvolvedor não descreve sincronização via iCloud de conversas entre aparelhos — esta análise trata isso como não confirmado em vez de presumir que existe. Se a sincronização de chat entre dispositivos for importante para você, verifique o comportamento atual diretamente no app antes de depender disso.',
           '**Execução em sandbox.** O app roda dentro do sandbox padrão da Apple, o mesmo isolamento ao qual todo app da App Store está sujeito — isso é uma garantia da plataforma da Apple, não um recurso específico do Private LLM.',
         ],
@@ -2492,7 +2503,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Janeiro de 2024.** Introduzido o download de múltiplos modelos, ampliando a biblioteca com modelos das famílias TinyLlama, StableLM, Phi-2, Mistral, Llama e Gemma.',
           '**Fevereiro de 2024.** Adicionados serviços de escrita específicos do macOS: correção gramatical, resumo e reformulação, acionáveis a partir de outros apps de Mac.',
           '**Março de 2024.** Troca de modelo sem sair da interface de chat ativa.',
-          '**Julho de 2026.** A versão 1.9.15 passou a baixar modelos de uma CDN em vez do Hugging Face, o que as notas de versão descrevem como mais rápido; esta é a versão atual no momento desta análise.',
+          '**Julho de 2026.** A versão 1.9.15 (8 de julho de 2026) passou a baixar modelos de uma CDN em vez do Hugging Face, o que as notas de versão descrevem como mais rápido.',
+          '**Julho–setembro de 2026.** A versão 1.9.16 (datada de 29 de julho de 2026 nas notas de versão do desenvolvedor; disponível na App Store desde 14 de setembro de 2026) adicionou histórico de chat salvo no aparelho com busca, renomeação e exclusão, exportação para Markdown ou PDF, inferência e troca de modelo mais rápidas, e respostas de Siri e Atalhos que agora chegam ao app solicitante; é a versão atual em 23/10/2026.',
         ],
         note: 'Histórico de versões baseado na própria página de [notas de versão](https://privatellm.app/en/release-notes) do desenvolvedor. Datas e números de versão são os publicados ali; verifique a versão atual diretamente na App Store antes de contar com um recurso específico.',
       },
@@ -2641,7 +2653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Quanto custa o Private LLM?',
-            a: 'O Private LLM custa [US$ 4,99 como compra única](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) na App Store da Apple, verificado para esta análise em 2026-09-05. Não há assinatura nem compras no app na ficha atual da App Store. Os preços da App Store podem variar por região e mudar com o tempo — confirme o preço atual antes de comprar.',
+            a: 'O Private LLM custa [US$ 4,99 como compra única](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) na App Store da Apple, verificado para esta análise em 2026-10-23. Não há assinatura nem compras no app na ficha atual da App Store. Os preços da App Store podem variar por região e mudar com o tempo — confirme o preço atual antes de comprar.',
           },
           {
             q: 'O Private LLM está disponível para Android ou Windows?',
@@ -2694,7 +2706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM na App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — preço, compatibilidade de plataformas, rótulo de privacidade, avaliações e histórico de versões.',
           '[Site oficial do Private LLM](https://privatellm.app/en) — visão geral do produto, modelo de preços e alegações de privacidade.',
           '[FAQ do Private LLM](https://privatellm.app/en/faq) — modelos suportados, abordagem de quantização, requisitos de hardware, Compartilhamento familiar e integração com Siri/Atalhos.',
-          '[Notas de versão do Private LLM](https://privatellm.app/en/release-notes) — histórico de versões e marcos de recursos de junho de 2023 a julho de 2026.',
+          '[Notas de versão do Private LLM](https://privatellm.app/en/release-notes) — histórico de versões e marcos de recursos de junho de 2023 a setembro de 2026.',
         ],
       },
       relatedReading: {
@@ -2715,7 +2727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-ar.webp',
@@ -2759,7 +2771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       ar: {
         question: 'هل يستحق تطبيق Private LLM سعر 4.99 دولار في App Store؟',
@@ -2772,7 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يستخدم تكميم OmniQuant وGPTQ بدلًا من تكميم round-to-nearest الأبسط.',
           'يذكر المطوّر (Numen Technologies Limited) أن التطبيق لا يجمع أي بيانات ولا يتطلب حسابًا.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -2816,7 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التكميم: يستخدم OmniQuant وGPTQ، اللذين يقول المطوّر إنهما ينتجان جودة إخراج أفضل لكل بت مقارنة بتكميم round-to-nearest (RTN) الذي تستخدمه بعض التطبيقات المنافسة.',
           'الخصوصية: تشير بطاقة خصوصية App Store إلى أن المطوّر لا يجمع أي بيانات من التطبيق؛ لا حاجة لحساب أو تسجيل دخول للمحادثة.',
           'إضافات: تكامل مع Siri والاختصارات عبر App Intents اثنين، بالإضافة إلى المشاركة العائلية لحتى ستة أشخاص بعملية شراء واحدة.',
-          'الإصدار 1.9.15 (يوليو 2026) هو الإصدار الحالي؛ ظهر التطبيق لأول مرة في App Store في يونيو 2023.',
+          'الإصدار 1.9.16 (نُشر في App Store في 14 سبتمبر 2026؛ وتؤرّخه ملاحظات الإصدار لدى المطوّر بـ 29 يوليو 2026) هو الإصدار الحالي؛ ظهر التطبيق لأول مرة في App Store في يونيو 2023.',
         ],
       },
       whatIsPrivateLLM: {
@@ -2873,7 +2885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ما لا يشمله': 'أي نسخة لأنظمة Android أو Windows أو Linux — شراء التطبيق من App Store لا يفتح ترخيصًا متعدد المنصات',
           },
         ],
-        note: 'قد تتغير أسعار App Store دون إشعار مسبق وقد تختلف حسب المنطقة. تحقق من السعر الحالي في [صفحة App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) قبل الشراء. تم التحقق لهذه المراجعة بتاريخ 2026-09-05.',
+        note: 'قد تتغير أسعار App Store دون إشعار مسبق وقد تختلف حسب المنطقة. تحقق من السعر الحالي في [صفحة App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) قبل الشراء. تم التحقق لهذه المراجعة بتاريخ 2026-10-23.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -2927,6 +2939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**لا حاجة لحساب.** يمكنك تنزيل التطبيق وشراءه واستخدامه دون إنشاء ملف تعريف أو تسجيل الدخول.',
           '**لا جمع للبيانات، وفقًا لبطاقة App Store.** لا تُظهر بطاقة خصوصية Apple لهذه الصفحة أي بيانات يتم جمعها من التطبيق.',
+          '**يُحفظ سجل المحادثات على الجهاز منذ الإصدار 1.9.16.** تصف ملاحظات الإصدار قائمة محادثات محفوظة مع البحث وإعادة التسمية والحذف، ويمكن إيقافها أو مسحها من الإعدادات.',
           '**مزامنة سجل المحادثة عبر iCloud غير موثقة.** لا تصف الأسئلة الشائعة العامة للمطوّر أي مزامنة عبر iCloud للمحادثات بين الأجهزة — تعامل هذه المراجعة ذلك على أنه غير مؤكد بدلًا من افتراض وجوده. إذا كانت مزامنة المحادثة بين الأجهزة مهمة بالنسبة لك، تحقق من السلوك الحالي مباشرة داخل التطبيق قبل الاعتماد عليه.',
           '**التشغيل داخل بيئة معزولة (sandbox).** يعمل التطبيق داخل بيئة Apple المعزولة القياسية، وهي نفس العزل الذي تخضع له أي تطبيق في App Store — هذا ضمان من منصة Apple، وليس ميزة خاصة بـ Private LLM.',
         ],
@@ -2945,7 +2958,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**يناير 2024.** تقديم تنزيل عدة نماذج، ما وسّع المكتبة لتشمل نماذج عائلات TinyLlama وStableLM وPhi-2 وMistral وLlama وGemma.',
           '**فبراير 2024.** إضافة خدمات كتابة خاصة بـ macOS: تصحيح القواعد النحوية والتلخيص وإعادة الصياغة، يمكن استدعاؤها من تطبيقات Mac أخرى.',
           '**مارس 2024.** إمكانية تبديل النموذج دون مغادرة واجهة المحادثة النشطة.',
-          '**يوليو 2026.** نقل الإصدار 1.9.15 عمليات تنزيل النماذج إلى شبكة توصيل محتوى (CDN) بدلًا من Hugging Face، وهو ما تصفه ملاحظات الإصدار بأنه أسرع؛ وهذا هو الإصدار الحالي وقت هذه المراجعة.',
+          '**يوليو 2026.** نقل الإصدار 1.9.15 (8 يوليو 2026) عمليات تنزيل النماذج إلى شبكة توصيل محتوى (CDN) بدلًا من Hugging Face، وهو ما تصفه ملاحظات الإصدار بأنه أسرع.',
+          '**يوليو–سبتمبر 2026.** أضاف الإصدار 1.9.16 (مؤرَّخ في 29 يوليو 2026 في ملاحظات إصدار المطوّر؛ متاح في App Store منذ 14 سبتمبر 2026) سجل محادثات محفوظاً على الجهاز مع البحث وإعادة التسمية والحذف، والتصدير إلى Markdown أو PDF، واستدلالاً وتبديلاً للنماذج أسرع، وردود Siri والاختصارات التي تصل الآن إلى التطبيق الطالب؛ وهذا هو الإصدار الحالي حتى 2026-10-23.',
         ],
         note: 'تاريخ الإصدارات مستند إلى صفحة [ملاحظات الإصدار](https://privatellm.app/en/release-notes) الخاصة بالمطوّر نفسه. التواريخ وأرقام الإصدارات هي المنشورة هناك؛ تحقق من الإصدار الحالي مباشرة في App Store قبل الاعتماد على وجود ميزة معينة.',
       },
@@ -3094,7 +3108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'كم يبلغ سعر Private LLM؟',
-            a: 'يبلغ سعر Private LLM [4.99 دولار كشراء لمرة واحدة](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) في App Store من Apple، تم التحقق منه لهذه المراجعة بتاريخ 2026-09-05. لا يوجد اشتراك ولا مشتريات داخل التطبيق في صفحة App Store الحالية. قد تختلف أسعار App Store حسب المنطقة وقد تتغير بمرور الوقت — تأكد من السعر الحالي قبل الشراء.',
+            a: 'يبلغ سعر Private LLM [4.99 دولار كشراء لمرة واحدة](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) في App Store من Apple، تم التحقق منه لهذه المراجعة بتاريخ 2026-10-23. لا يوجد اشتراك ولا مشتريات داخل التطبيق في صفحة App Store الحالية. قد تختلف أسعار App Store حسب المنطقة وقد تتغير بمرور الوقت — تأكد من السعر الحالي قبل الشراء.',
           },
           {
             q: 'هل Private LLM متوفر على Android أو Windows؟',
@@ -3147,7 +3161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM على App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — السعر، توافق المنصات، بطاقة الخصوصية، التقييمات، وتاريخ الإصدارات.',
           '[الموقع الرسمي لـ Private LLM](https://privatellm.app/en) — نظرة عامة على المنتج، نموذج التسعير، وادعاءات الخصوصية.',
           '[الأسئلة الشائعة لـ Private LLM](https://privatellm.app/en/faq) — النماذج المدعومة، أسلوب التكميم، متطلبات الأجهزة، المشاركة العائلية، وتكامل Siri/الاختصارات.',
-          '[ملاحظات إصدار Private LLM](https://privatellm.app/en/release-notes) — تاريخ الإصدارات ومحطات الميزات من يونيو 2023 إلى يوليو 2026.',
+          '[ملاحظات إصدار Private LLM](https://privatellm.app/en/release-notes) — تاريخ الإصدارات ومحطات الميزات من يونيو 2023 إلى سبتمبر 2026.',
         ],
       },
       relatedReading: {
@@ -3168,7 +3182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-zh.webp',
@@ -3212,7 +3226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       zh: {
         question: 'Private LLM在App Store上售价4.99美元，值得购买吗？',
@@ -3225,7 +3239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '采用OmniQuant和GPTQ量化，而非更简单的round-to-nearest量化。',
           '开发者（Numen Technologies Limited）声明该应用不收集任何数据，也无需账号。',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -3269,7 +3283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '量化：使用OmniQuant和GPTQ，开发者称这比一些竞品应用使用的round-to-nearest（RTN）量化在每比特上能提供更高的输出质量。',
           '隐私：App Store隐私标签显示开发者不从该应用收集任何数据；聊天无需账号或登录。',
           '附加功能：通过两个App Intent实现Siri和快捷指令集成，一次购买即可通过家人共享供最多六人使用。',
-          '版本1.9.15（2026年7月）为当前版本；该应用于2023年6月首次登陆App Store。',
+          '版本1.9.16（App Store上线于2026年9月14日；开发者的发行说明标注为2026年7月29日）为当前版本；该应用于2023年6月首次登陆App Store。',
         ],
       },
       whatIsPrivateLLM: {
@@ -3326,7 +3340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '不包含的内容': '任何Android、Windows或Linux版本——App Store购买不会解锁跨平台许可证',
           },
         ],
-        note: 'App Store价格可能无预警变动，也可能因地区而异。购买前请在[App Store页面](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)确认当前价格。本评测于2026-09-05核实。',
+        note: 'App Store价格可能无预警变动，也可能因地区而异。购买前请在[App Store页面](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)确认当前价格。本评测于2026-10-23核实。',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -3380,6 +3394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**无需账号。** 你可以在不创建个人资料或登录的情况下下载、购买和使用该应用。',
           '**根据App Store标签，不收集数据。** Apple针对此页面的隐私营养标签显示该应用未收集任何数据。',
+          '**自版本1.9.16起，聊天记录保存在设备上。** 发行说明描述了带搜索、重命名和删除功能的已保存会话列表，可在“设置”中关闭或清除。',
           '**iCloud同步聊天记录未有文档说明。** 开发者的公开常见问题中没有描述设备间通过iCloud同步对话的功能——本评测将其视为未经证实，而非假定其存在。如果跨设备聊天同步对你很重要，请在依赖它之前直接在应用内确认当前行为。',
           '**沙盒运行。** 该应用运行在Apple标准应用沙盒内，这是所有App Store应用都遵循的隔离机制——这是Apple平台的保障，而非Private LLM独有的功能。',
         ],
@@ -3398,7 +3413,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2024年1月。** 引入多模型下载功能，将模型库扩展至包括TinyLlama、StableLM、Phi-2、Mistral、Llama和Gemma系列模型。',
           '**2024年2月。** 新增macOS专属写作服务：语法纠正、摘要和改写，可供其他Mac应用调用。',
           '**2024年3月。** 无需离开当前聊天界面即可切换模型。',
-          '**2026年7月。** 版本1.9.15将模型下载来源从Hugging Face迁移到CDN，发行说明称此举提升了下载速度；这是本评测撰写时的当前版本。',
+          '**2026年7月。** 版本1.9.15（2026年7月8日）将模型下载来源从Hugging Face迁移到CDN，发行说明称此举提升了下载速度。',
+          '**2026年7月至9月。** 版本1.9.16（开发者发行说明标注为2026年7月29日；2026年9月14日起在App Store可用）新增了带搜索、重命名和删除功能的设备端聊天记录、导出为Markdown或PDF、更快的推理与模型切换，以及Siri和快捷指令的回复现可送达发起请求的应用；截至2026年10月23日这是当前版本。',
         ],
         note: '版本历史依据开发者自己的[发行说明](https://privatellm.app/en/release-notes)页面。日期和版本号以该页面发布的内容为准；在依赖某个特定功能存在之前，请直接在App Store确认当前版本。',
       },
@@ -3547,7 +3563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Private LLM多少钱？',
-            a: 'Private LLM在Apple App Store上[一次性购买4.99美元](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)，已针对本评测于2026-09-05核实。当前App Store页面未列出订阅或应用内购买。App Store价格可能因地区而异，也可能随时间变化——购买前请确认当前价格。',
+            a: 'Private LLM在Apple App Store上[一次性购买4.99美元](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)，已针对本评测于2026-10-23核实。当前App Store页面未列出订阅或应用内购买。App Store价格可能因地区而异，也可能随时间变化——购买前请确认当前价格。',
           },
           {
             q: 'Private LLM在Android或Windows上可用吗？',
@@ -3600,7 +3616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[App Store上的Private LLM](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — 价格、平台兼容性、隐私标签、评分和版本历史。',
           '[Private LLM官方网站](https://privatellm.app/en) — 产品概述、定价模式和隐私声明。',
           '[Private LLM常见问题](https://privatellm.app/en/faq) — 支持的模型、量化方式、硬件要求、家人共享以及Siri/快捷指令集成。',
-          '[Private LLM发行说明](https://privatellm.app/en/release-notes) — 2023年6月至2026年7月的版本历史和功能里程碑。',
+          '[Private LLM发行说明](https://privatellm.app/en/release-notes) — 2023年6月至2026年9月的版本历史和功能里程碑。',
         ],
       },
       relatedReading: {
@@ -3621,7 +3637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-ko.webp',
@@ -3665,7 +3681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses OmniQuant and GPTQ quantization instead of simpler round-to-nearest quantization.',
           'Developer (Numen Technologies Limited) states the app collects no data and needs no account.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
       ko: {
         question: 'Private LLM은 App Store에서 4.99달러를 지불할 가치가 있습니까?',
@@ -3678,7 +3694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '더 단순한 round-to-nearest 양자화 대신 OmniQuant와 GPTQ 양자화 사용.',
           '개발사(Numen Technologies Limited)는 앱이 데이터를 수집하지 않으며 계정도 필요 없다고 명시.',
         ],
-        updatedDate: '2026-09-05',
+        updatedDate: '2026-10-23',
       },
     },
     toc: [
@@ -3722,7 +3738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '양자화: OmniQuant와 GPTQ 사용. 개발사에 따르면 일부 경쟁 앱이 사용하는 round-to-nearest(RTN) 양자화보다 비트당 출력 품질이 더 우수하다고 함.',
           '개인정보 보호: App Store 개인정보 보호 라벨에 따르면 개발사가 앱에서 데이터를 수집하지 않음; 채팅에 계정이나 로그인이 필요 없음.',
           '추가 기능: 두 개의 App Intent를 통한 Siri 및 단축어 연동, 한 번 구매로 최대 6명까지 사용 가능한 가족 공유.',
-          '버전 1.9.15(2026년 7월)가 현재 버전이며, 이 앱은 2023년 6월 App Store에 처음 등장했습니다.',
+          '버전 1.9.16(App Store 출시일 2026년 9월 14일, 개발사 릴리스 노트상 날짜는 2026년 7월 29일)이 현재 버전이며, 이 앱은 2023년 6월 App Store에 처음 등장했습니다.',
         ],
       },
       whatIsPrivateLLM: {
@@ -3779,7 +3795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '포함되지 않는 것': 'Android, Windows, Linux 버전 — App Store 구매로는 크로스 플랫폼 라이선스가 잠금 해제되지 않음',
           },
         ],
-        note: 'App Store 가격은 예고 없이 변경될 수 있으며 지역에 따라 다를 수 있습니다. 구매 전 [App Store 페이지](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)에서 현재 가격을 확인하십시오. 본 리뷰를 위해 2026-09-05에 확인했습니다.',
+        note: 'App Store 가격은 예고 없이 변경될 수 있으며 지역에 따라 다를 수 있습니다. 구매 전 [App Store 페이지](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)에서 현재 가격을 확인하십시오. 본 리뷰를 위해 2026-10-23에 확인했습니다.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -3833,6 +3849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**계정이 필요 없음.** 프로필을 만들거나 로그인하지 않고도 앱을 다운로드, 구매, 사용할 수 있습니다.',
           '**App Store 라벨에 따르면 데이터 수집 없음.** 이 페이지에 대한 Apple의 개인정보 보호 라벨에는 앱이 수집하는 데이터가 없다고 표시되어 있습니다.',
+          '**버전 1.9.16부터 채팅 기록이 기기에 저장됨.** 릴리스 노트는 검색, 이름 변경, 삭제가 가능한 저장된 대화 목록을 설명하며, 설정에서 끄거나 지울 수 있음.',
           '**iCloud를 통한 채팅 기록 동기화는 문서화되어 있지 않음.** 개발사의 공개 FAQ에는 기기 간 대화의 iCloud 동기화에 대한 설명이 없습니다 — 본 리뷰는 그것이 존재한다고 가정하지 않고 확인되지 않은 것으로 취급합니다. 기기 간 채팅 동기화가 중요하다면, 이에 의존하기 전에 앱 내에서 현재 동작을 직접 확인하십시오.',
           '**샌드박스 실행.** 이 앱은 모든 App Store 앱이 따르는 것과 동일한 격리 방식인 Apple의 표준 앱 샌드박스 내에서 실행됩니다 — 이는 Private LLM만의 기능이 아니라 Apple 플랫폼 차원의 보장입니다.',
         ],
@@ -3851,7 +3868,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2024년 1월.** 다중 모델 다운로드 기능 도입, TinyLlama, StableLM, Phi-2, Mistral, Llama, Gemma 계열 모델로 라이브러리 확장.',
           '**2024년 2월.** macOS 전용 문서 서비스 추가: 문법 교정, 요약, 다듬기 — 다른 Mac 앱에서 호출 가능.',
           '**2024년 3월.** 활성 채팅 화면을 벗어나지 않고 모델을 전환할 수 있게 됨.',
-          '**2026년 7월.** 버전 1.9.15에서 모델 다운로드 방식을 Hugging Face 대신 CDN으로 이전, 릴리스 노트는 이를 더 빠른 다운로드로 설명함 — 본 리뷰 시점 기준 현재 버전.',
+          '**2026년 7월.** 버전 1.9.15(2026년 7월 8일)에서 모델 다운로드 방식을 Hugging Face 대신 CDN으로 이전, 릴리스 노트는 이를 더 빠른 다운로드로 설명함.',
+          '**2026년 7~9월.** 버전 1.9.16(개발사 릴리스 노트상 2026년 7월 29일자, 2026년 9월 14일부터 App Store에서 이용 가능)에서 검색·이름 변경·삭제가 가능한 기기 내 채팅 기록, Markdown 또는 PDF 내보내기, 더 빠른 추론과 모델 전환, 그리고 Siri 및 단축어 응답이 요청한 앱에 전달되도록 하는 수정이 추가됨. 2026년 10월 23일 기준 현재 버전.',
         ],
         note: '버전 이력은 개발사 자체 [릴리스 노트](https://privatellm.app/en/release-notes) 페이지를 기준으로 합니다. 날짜와 버전 번호는 해당 페이지에 게시된 대로이며, 특정 기능의 존재를 전제하기 전에 App Store에서 현재 버전을 직접 확인하십시오.',
       },
@@ -4000,7 +4018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Private LLM은 가격이 얼마입니까?',
-            a: 'Private LLM은 Apple App Store에서 [4.99달러 일회성 구매](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)로 제공되며, 본 리뷰를 위해 2026-09-05에 확인했습니다. 현재 App Store 페이지에는 구독이나 앱 내 구매 항목이 없습니다. App Store 가격은 지역에 따라 다를 수 있고 시간이 지나면서 변경될 수 있으므로 구매 전 현재 가격을 확인하십시오.',
+            a: 'Private LLM은 Apple App Store에서 [4.99달러 일회성 구매](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)로 제공되며, 본 리뷰를 위해 2026-10-23에 확인했습니다. 현재 App Store 페이지에는 구독이나 앱 내 구매 항목이 없습니다. App Store 가격은 지역에 따라 다를 수 있고 시간이 지나면서 변경될 수 있으므로 구매 전 현재 가격을 확인하십시오.',
           },
           {
             q: 'Private LLM은 Android나 Windows에서 사용할 수 있습니까?',
@@ -4053,7 +4071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[App Store의 Private LLM](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — 가격, 플랫폼 호환성, 개인정보 보호 라벨, 평점, 버전 이력.',
           '[Private LLM 공식 웹사이트](https://privatellm.app/en) — 제품 개요, 가격 모델, 개인정보 보호 관련 주장.',
           '[Private LLM FAQ](https://privatellm.app/en/faq) — 지원 모델, 양자화 방식, 하드웨어 요구 사항, 가족 공유, Siri/단축어 연동.',
-          '[Private LLM 릴리스 노트](https://privatellm.app/en/release-notes) — 2023년 6월부터 2026년 7월까지의 버전 이력과 기능 이정표.',
+          '[Private LLM 릴리스 노트](https://privatellm.app/en/release-notes) — 2023년 6월부터 2026년 9월까지의 버전 이력과 기능 이정표.',
         ],
       },
       relatedReading: {
