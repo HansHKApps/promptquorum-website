@@ -5393,5 +5393,32 @@
       "period": "2026-09-24..2026-10-21"
     },
     "deployedAt": null
+  },
+  {
+    "id": "333287e7-4835-453c-8a9c-4c47d1a36f4d",
+    "slug": "local-llms/best-amd-gpus-local-llm",
+    "date": "2026-10-23T19:40:07.572Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best AMD GPU for Local LLMs 2026: RX 7900 XTX vs RTX",
+        "new": "Best AMD GPU for AI & Local LLMs 2026: 9070 XT vs 7900 XTX"
+      }
+    ],
+    "queries": [
+      "amd gpu for llm",
+      "best amd gpu for ai",
+      "amd vs nvidia gpu for local llm",
+      "best amd gpu for deep learning",
+      "best amd card for ai"
+    ],
+    "baseline": {
+      "position": 6.2,
+      "impressions": 145,
+      "clicks": 1,
+      "ctr": 0.006896551724137931,
+      "period": "28d to 2026-10-23"
+    },
+    "deployedAt": null
   }
 ]
