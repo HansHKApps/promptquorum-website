@@ -939,6 +939,11 @@
     "urlSlug": "libredb-studio-review",
     "url": "/power-local-llm/libredb-studio-review"
   },
+  "openrag": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openrag-review",
+    "url": "/power-local-llm/openrag-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
