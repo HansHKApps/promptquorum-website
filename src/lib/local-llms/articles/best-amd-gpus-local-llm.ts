@@ -3304,7 +3304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'VRAM 용량과 메모리 대역폭은 제조사 사양입니다([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). 가격은 공개 가격 추적 사이트와 리뷰에서 가져온 미국 호가 스냅샷(2026년 9–10월)이며 PromptQuorum의 측정값이 아닙니다. 국내 가격은 다를 수 있으므로 구매 전에 실제 거래 가격을 확인하십시오.',
         image: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
-        imageCaption: '로컬 LLM·AI 추론용 가장 좋은 AMD GPU와 NVIDIA 비교: VRAM, 메모리 대역폭, 일반 가격(미국, 2026년 9–10월 스냅샷).',
+        imageCaption: '로컬 LLM·AI 추론에 가장 좋은 AMD GPU: NVIDIA와 VRAM·가격 비교(미국 스냅샷).',
       },
       'amd-vs-nvidia-speed': {
         id: 'amd-vs-nvidia-speed',
