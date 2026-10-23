@@ -167,6 +167,10 @@ export type HandsOnTest = {
   faq: [string, string, EvidenceKey][]
   status: string
   published: string
+  /** ISO date of the last reader-visible change; omit until the test is actually revised (falls back to `published`). */
+  modified?: string
+  /** Set true only when the tester has confirmed the scorecard; gates Review/reviewRating JSON-LD. */
+  scores_confirmed?: boolean
   started: string
   meta: [string, string, EvidenceKey | null][]
   disclosure: string

@@ -155,7 +155,7 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
             const im = imgId ? img(imgId) : null
             return (
               <a key={title} href={`#${chapterId}`} className={`flex flex-col overflow-hidden rounded-md border border-border bg-white hover:border-primary ${im ? '' : 'border-t-4 border-t-primary'}`}>
-                {im && <img src={`/images/${im.file}`} alt="" loading="lazy" decoding="async" className="aspect-[16/10] w-full bg-slate-200 object-cover object-top" />}
+                {im && <img src={`/images/${im.file}`} alt={im.alt} loading="lazy" decoding="async" className="aspect-[16/10] w-full bg-slate-200 object-cover object-top" />}
                 <span className="flex flex-col gap-1.5 p-4 text-sm">
                   <strong className="text-lg leading-tight text-text-primary">{title}</strong>
                   <span>{text}</span>

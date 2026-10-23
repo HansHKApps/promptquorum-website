@@ -10,6 +10,18 @@ import { appSlugFromHandsOnUrlSlug, handsOnTestLangs, handsOnTestUrlSlug } from 
 
 const BASE = 'https://www.promptquorum.com'
 
+/** Schema.org operatingSystem from the free-text `app.platform` ("Android", "macOS (DMG)", "Chrome extension …"). */
+function operatingSystemFor(platform: string): string | undefined {
+  const found: string[] = []
+  if (/android/i.test(platform)) found.push('Android')
+  if (/\bios\b|iphone|ipad/i.test(platform)) found.push('iOS')
+  if (/macos/i.test(platform)) found.push('macOS')
+  if (/windows/i.test(platform)) found.push('Windows')
+  if (/linux/i.test(platform)) found.push('Linux')
+  if (/chrome/i.test(platform)) found.push('Chrome')
+  return found.length ? found.join(', ') : undefined
+}
+
 /** Arabic data carries invisible bidi isolates (U+2066/U+2069) for on-page display; keep them out of <head> and JSON-LD. */
 const plain = (s: string) => s.replace(/[\u2066\u2069]/g, '')
 
@@ -35,6 +47,10 @@ export function buildHandsOnTestMetadata(urlSlug: string, lang: Language = 'en')
   const test = appSlug ? getHandsOnTest(appSlug, lang) : null
   if (!appSlug || !test) return null
   const url = `${BASE}${localizedPath(urlSlug, lang)}`
+  const hero = test.images.find((i) => i.role === 'hero')
+  const ogImage = hero
+    ? { url: `/images/${hero.file}`, width: hero.width, height: hero.height, alt: plain(hero.alt) }
+    : { url: '/og-image.png', alt: 'PromptQuorum' }
   const title = plain(test.seo.title)
   const description = plain(test.seo.description)
   return {
@@ -43,8 +59,8 @@ export function buildHandsOnTestMetadata(urlSlug: string, lang: Language = 'en')
     // Hands-on tests are always indexable; scripts/validate-hands-on-tests.mjs rejects an 'index' field.
     robots: { index: true, follow: true },
     alternates: generateAlternates(pathFor(urlSlug), lang, true, [...handsOnTestLangs(appSlug)]),
-    openGraph: { title, description, url, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
-    twitter: { card: 'summary_large_image', title, description },
+    openGraph: { title, description, url, images: [ogImage], type: 'article', siteName: 'PromptQuorum', publishedTime: test.published, modifiedTime: test.modified ?? test.published },
+    twitter: { card: 'summary_large_image', title, description, images: [ogImage.url] },
   }
 }
 
@@ -56,6 +72,25 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
   const prefix = lang === 'en' ? '' : `/${lang}`
   const url = `${BASE}${localizedPath(urlSlug, lang)}`
   const hero = test.images.find((i) => i.role === 'hero')
+  // Rating only when the tester confirmed the scorecard; the unscored dimensions (null) are left out of the average.
+  const scored = test.scores.filter(([, n]) => n !== null) as [string, number, string][]
+  const scoredReview =
+    test.scores_confirmed && scored.length
+      ? {
+          '@type': 'Review',
+          '@id': `${url}#review`,
+          inLanguage: toOutputLocale(lang),
+          itemReviewed: { '@id': `${url}#app` },
+          author: { '@type': 'Person', name: 'Hans Kuepper' },
+          datePublished: test.published,
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: Math.round((scored.reduce((a, [, n]) => a + n, 0) / scored.length) * 10) / 10,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : null
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -67,7 +102,7 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
         description: plain(test.seo.description),
         inLanguage: toOutputLocale(lang),
         datePublished: test.published,
-        dateModified: test.published,
+        dateModified: test.modified ?? test.published,
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: BASE },
         about: { '@id': `${url}#app` },
@@ -79,10 +114,11 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
         '@id': `${url}#app`,
         name: test.app.name,
         applicationCategory: /image/i.test(test.app.category) ? 'MultimediaApplication' : 'UtilitiesApplication',
-        ...(/macos/i.test(test.app.platform) && { operatingSystem: 'macOS' }),
+        ...(operatingSystemFor(test.app.platform) && { operatingSystem: operatingSystemFor(test.app.platform) }),
         // A vendor that was not recorded must not be published as an organisation name.
         ...(!/^not recorded/i.test(test.app.vendor) && { publisher: { '@type': 'Organization', name: test.app.vendor } }),
       },
+      ...(scoredReview ? [scoredReview] : []),
       {
         '@type': 'FAQPage',
         '@id': `${url}#faq`,
