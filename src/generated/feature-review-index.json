@@ -1284,6 +1284,11 @@
     "urlSlug": "caelum-review",
     "url": "/power-local-llm/caelum-review"
   },
+  "obscurify": {
+    "cluster": "power-local-llm",
+    "urlSlug": "obscurify-review",
+    "url": "/power-local-llm/obscurify-review"
+  },
   "whisper-notes": {
     "cluster": "power-local-llm",
     "urlSlug": "whisper-notes-review",
