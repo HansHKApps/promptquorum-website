@@ -127,7 +127,7 @@ export function ToolTable({
                   {app.name}
                   {(appActivity === 'quiet' || appActivity === 'dead') && (
                     <span
-                      className={`ml-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-800'}`}
+                      className={`ml-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'}`}
                       title={t(appActivity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', lang)}
                     >
                       ⚠ {t(appActivity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', lang)}
@@ -137,7 +137,7 @@ export function ToolTable({
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                   {app.stars != null ? (
                     <span className="inline-flex items-center gap-1">
-                      <StarIcon className="h-3.5 w-3.5 text-amber-400" />
+                      <StarIcon className="h-3.5 w-3.5 text-hub-amber" />
                       {app.stars.toLocaleString()}
                     </span>
                   ) : (
@@ -164,7 +164,7 @@ export function ToolTable({
                 </td>
                 <td
                   className={`p-2 sm:p-3 whitespace-nowrap ${
-                    listingFreshness === 'old' ? 'text-amber-700' : listingFreshness === 'warn' ? 'text-yellow-700' : 'text-text-secondary'
+                    listingFreshness === 'old' ? 'text-hub-amber-ink' : listingFreshness === 'warn' ? 'text-hub-amber-ink' : 'text-text-secondary'
                   }`}
                   title={
                     listingFreshness === 'old'

@@ -13,9 +13,9 @@ import { CheckIcon, WarningIcon, StopIcon, QuestionIcon } from './icons'
 import { t } from './directory-i18n'
 
 const VERDICT_STYLE: Record<CompatibilityVerdict, string> = {
-  comfortable: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  marginal: 'bg-amber-50 text-amber-700 border-amber-200',
-  'wont-run': 'bg-rose-50 text-rose-700 border-rose-200',
+  comfortable: 'bg-hub-olive-tint text-hub-olive-ink border-hub-olive-edge',
+  marginal: 'bg-hub-amber-tint text-hub-amber-ink border-hub-amber-edge',
+  'wont-run': 'bg-hub-rose-tint text-hub-rose-ink border-hub-rose-edge',
   unknown: 'bg-slate-50 text-slate-500 border-slate-200',
 }
 

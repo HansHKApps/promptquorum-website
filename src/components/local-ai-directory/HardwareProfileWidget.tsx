@@ -186,7 +186,7 @@ export function HardwareProfileWidget({
           <button
             type="button"
             onClick={handleForget}
-            className="rounded-lg border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-semibold text-rose-700 hover:bg-rose-100"
+            className="rounded-lg border border-hub-rose-edge bg-hub-rose-tint px-3 py-1.5 text-xs font-semibold text-hub-rose-ink hover:bg-hub-rose-tint"
           >
             {t('hwProfileForgetButton', ui)}
           </button>

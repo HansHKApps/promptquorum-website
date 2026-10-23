@@ -264,8 +264,8 @@ export function ToolDrawer({
                   >
                     {copied ? (
                       <>
-                        <CheckIcon className="h-3.5 w-3.5 text-emerald-600" />
-                        <span className="text-emerald-600">{t('copied', ui)}</span>
+                        <CheckIcon className="h-3.5 w-3.5 text-hub-olive" />
+                        <span className="text-hub-olive">{t('copied', ui)}</span>
                       </>
                     ) : (
                       <>
@@ -293,7 +293,7 @@ export function ToolDrawer({
                   <div
                     role="alert"
                     className={`mb-4 rounded-lg border-2 p-3 text-sm ${
-                      activity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-900'
+                      activity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'
                     }`}
                   >
                     <p className="font-extrabold">⚠ {t(activity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', ui)}</p>
@@ -316,7 +316,7 @@ export function ToolDrawer({
                 return (
                   <span
                     className={`mb-4 inline-flex w-fit items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
-                      freshness === 'old' ? 'border-amber-300 bg-amber-50 text-amber-800' : 'border-yellow-200 bg-yellow-50 text-yellow-700'
+                      freshness === 'old' ? 'border-hub-amber-edge bg-hub-amber-tint text-hub-amber-ink' : 'border-hub-amber-edge bg-hub-amber-tint text-hub-amber-ink'
                     }`}
                     title={t(freshness === 'old' ? 'staleListingTooltipOld' : 'staleListingTooltipWarn', ui)}
                   >
@@ -326,9 +326,9 @@ export function ToolDrawer({
               })()}
 
               {isFounderStarActive(app.founderReviewedDate) && (
-                <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 mb-5">
-                  <StarIcon className="h-4 w-4 mt-0.5 shrink-0 text-amber-500" />
-                  <p className="text-xs text-amber-900">
+                <div className="flex items-start gap-2 rounded-xl border border-hub-amber-edge bg-hub-amber-tint p-3 mb-5">
+                  <StarIcon className="h-4 w-4 mt-0.5 shrink-0 text-hub-amber" />
+                  <p className="text-xs text-hub-amber-ink">
                     <span className="font-bold uppercase tracking-wide">{t('founderReviewedBannerLabel', ui)}</span>{' '}
                     {t('founderReviewedBannerBodyTemplate', ui, { name: app.name })}
                   </p>
@@ -337,13 +337,13 @@ export function ToolDrawer({
 
               <div className="flex flex-wrap items-center gap-2 mb-5">
                 {app.status !== 'listed' && (
-                  <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-emerald-50 text-emerald-700 border-emerald-200">
+                  <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-hub-olive-tint text-hub-olive-ink border-hub-olive-edge">
                     {STATUS_LABEL[app.status]}
                   </span>
                 )}
                 {app.stars != null && (
                   <span className="inline-flex items-center gap-1 text-xs text-text-secondary">
-                    <StarIcon className="h-3.5 w-3.5 text-amber-400" />
+                    <StarIcon className="h-3.5 w-3.5 text-hub-amber" />
                     {app.stars.toLocaleString()}
                   </span>
                 )}

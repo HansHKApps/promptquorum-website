@@ -30,36 +30,36 @@ import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
 const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
-  'run-serve': { bar: 'bg-violet-500', chip: 'bg-violet-50 text-violet-700', avatar: 'bg-violet-100 text-violet-700' },
-  'chat-assistants': { bar: 'bg-blue-500', chip: 'bg-blue-50 text-blue-700', avatar: 'bg-blue-100 text-blue-700' },
-  'code-development': { bar: 'bg-indigo-500', chip: 'bg-indigo-50 text-indigo-700', avatar: 'bg-indigo-100 text-indigo-700' },
-  'knowledge-retrieval': { bar: 'bg-teal-500', chip: 'bg-teal-50 text-teal-700', avatar: 'bg-teal-100 text-teal-700' },
-  'voice-audio': { bar: 'bg-rose-500', chip: 'bg-rose-50 text-rose-700', avatar: 'bg-rose-100 text-rose-700' },
-  'images-video': { bar: 'bg-fuchsia-500', chip: 'bg-fuchsia-50 text-fuchsia-700', avatar: 'bg-fuchsia-100 text-fuchsia-700' },
-  'train-operate': { bar: 'bg-amber-500', chip: 'bg-amber-50 text-amber-700', avatar: 'bg-amber-100 text-amber-700' },
-  'at-the-edge': { bar: 'bg-orange-500', chip: 'bg-orange-50 text-orange-700', avatar: 'bg-orange-100 text-orange-700' },
+  'run-serve': { bar: 'bg-hub-violet', chip: 'bg-hub-violet-tint text-hub-violet-ink', avatar: 'bg-hub-violet-tint text-hub-violet-ink' },
+  'chat-assistants': { bar: 'bg-hub-azure', chip: 'bg-hub-azure-tint text-hub-azure-ink', avatar: 'bg-hub-azure-tint text-hub-azure-ink' },
+  'code-development': { bar: 'bg-hub-indigo', chip: 'bg-hub-indigo-tint text-hub-indigo-ink', avatar: 'bg-hub-indigo-tint text-hub-indigo-ink' },
+  'knowledge-retrieval': { bar: 'bg-hub-cyan', chip: 'bg-hub-cyan-tint text-hub-cyan-ink', avatar: 'bg-hub-cyan-tint text-hub-cyan-ink' },
+  'voice-audio': { bar: 'bg-hub-rose', chip: 'bg-hub-rose-tint text-hub-rose-ink', avatar: 'bg-hub-rose-tint text-hub-rose-ink' },
+  'images-video': { bar: 'bg-hub-orchid', chip: 'bg-hub-orchid-tint text-hub-orchid-ink', avatar: 'bg-hub-orchid-tint text-hub-orchid-ink' },
+  'train-operate': { bar: 'bg-hub-amber', chip: 'bg-hub-amber-tint text-hub-amber-ink', avatar: 'bg-hub-amber-tint text-hub-amber-ink' },
+  'at-the-edge': { bar: 'bg-hub-orange', chip: 'bg-hub-orange-tint text-hub-orange-ink', avatar: 'bg-hub-orange-tint text-hub-orange-ink' },
 }
 
 const LOCALITY_BADGE: Record<'local' | 'hybrid' | 'cloud', string> = {
-  local: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  hybrid: 'bg-amber-50 text-amber-700 border-amber-200',
+  local: 'bg-hub-olive-tint text-hub-olive-ink border-hub-olive-edge',
+  hybrid: 'bg-hub-amber-tint text-hub-amber-ink border-hub-amber-edge',
   cloud: 'bg-slate-50 text-slate-600 border-slate-200',
 }
 
 const ENGINE_BADGE: Record<'builtin' | 'external' | 'both' | 'library', string> = {
-  builtin: 'bg-violet-50 text-violet-700 border-violet-200',
-  external: 'bg-sky-50 text-sky-700 border-sky-200',
-  both: 'bg-violet-50 text-violet-700 border-violet-200',
+  builtin: 'bg-hub-violet-tint text-hub-violet-ink border-hub-violet-edge',
+  external: 'bg-hub-azure-tint text-hub-azure-ink border-hub-azure-edge',
+  both: 'bg-hub-violet-tint text-hub-violet-ink border-hub-violet-edge',
   library: 'bg-slate-50 text-slate-600 border-slate-200',
 }
 
 const PRICE_BADGE: Record<'free' | 'freemium' | 'paid', string> = {
-  free: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  freemium: 'bg-amber-50 text-amber-700 border-amber-200',
-  paid: 'bg-rose-50 text-rose-700 border-rose-200',
+  free: 'bg-hub-olive-tint text-hub-olive-ink border-hub-olive-edge',
+  freemium: 'bg-hub-amber-tint text-hub-amber-ink border-hub-amber-edge',
+  paid: 'bg-hub-rose-tint text-hub-rose-ink border-hub-rose-edge',
 }
 
-const MCP_BADGE = 'bg-violet-50 text-violet-700 border-violet-200'
+const MCP_BADGE = 'bg-hub-violet-tint text-hub-violet-ink border-hub-violet-edge'
 
 // Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
 // names — kept identical across locales rather than "translated".
@@ -155,7 +155,7 @@ export function ToolCard({
         appActivity === 'dead'
           ? 'border border-gray-300 bg-gray-100 grayscale opacity-80 hover:opacity-100 hover:border-gray-400'
           : isFounderReviewed
-          ? 'border-2 border-amber-400 bg-gradient-to-b from-amber-50 to-white shadow-[0_2px_16px_-4px_rgba(217,119,6,0.35)] hover:border-amber-500 hover:shadow-[0_4px_24px_-4px_rgba(217,119,6,0.45)]'
+          ? 'border-2 border-hub-amber bg-gradient-to-b from-hub-amber-tint to-white shadow-[0_6px_18px_-8px_var(--hub-amber)] hover:border-hub-amber hover:shadow-[0_12px_26px_-8px_var(--hub-amber)]'
           : 'border border-primary/10 bg-white hover:border-primary/40'
       }`}
       role="button"
@@ -169,7 +169,7 @@ export function ToolCard({
       }}
     >
       <span
-        className={`absolute inset-x-0 top-0 ${isFounderReviewed ? 'h-1.5 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500' : `h-1 ${accent.bar}`}`}
+        className={`absolute inset-x-0 top-0 ${isFounderReviewed ? 'h-1.5 bg-hub-amber' : `h-1 ${accent.bar}`}`}
         aria-hidden="true"
       />
       <span
@@ -182,10 +182,10 @@ export function ToolCard({
       <div className="flex flex-col h-full p-4 pt-5 pr-8">
         {isFounderReviewed && (
           <span
-            className="inline-flex items-center gap-1 self-start mb-2.5 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide rounded-full border-2 border-amber-500 bg-amber-100 text-amber-900 shadow-sm"
+            className="inline-flex items-center gap-1 self-start mb-2.5 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide rounded-full border-2 border-hub-amber bg-hub-amber-tint text-hub-amber-ink shadow-sm"
             title={t('founderReviewedTooltip', lang)}
           >
-            <StarIcon className="h-3 w-3 fill-amber-600 text-amber-600" />
+            <StarIcon className="h-3 w-3 fill-hub-amber text-hub-amber" />
             {t('founderReviewedBadge', lang)}
           </span>
         )}
@@ -295,7 +295,7 @@ export function ToolCard({
             <div className="flex items-center gap-3">
               {app.stars != null && (
                 <span className="flex items-center gap-1">
-                  <StarIcon className="h-3.5 w-3.5 text-amber-400" />
+                  <StarIcon className="h-3.5 w-3.5 text-hub-amber" />
                   {app.stars.toLocaleString()}
                 </span>
               )}
@@ -326,7 +326,7 @@ export function ToolCard({
           )}
 
           {appUpdateLabel && (
-            <p className={`text-[11px] mb-1.5 ${appActivity === 'dead' ? 'font-bold text-gray-700' : appActivity === 'quiet' ? 'font-bold text-red-700' : 'text-text-secondary'}`}>
+            <p className={`text-[11px] mb-1.5 ${appActivity === 'dead' ? 'font-bold text-gray-700' : appActivity === 'quiet' ? 'font-bold text-hub-rose-ink' : 'text-text-secondary'}`}>
               {t('appLastUpdateLabel', lang)}: {appUpdateLabel}
             </p>
           )}
@@ -335,7 +335,7 @@ export function ToolCard({
             <div
               role="alert"
               className={`mb-2 rounded-md border-2 px-2 py-1.5 text-xs font-extrabold leading-snug ${
-                appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-800'
+                appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'
               }`}
               title={t(appActivity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', lang)}
             >
@@ -352,7 +352,7 @@ export function ToolCard({
           {listingFreshness !== 'fresh' && (
             <span
               className={`inline-flex w-fit items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide mb-1.5 ${
-                listingFreshness === 'old' ? 'border-amber-300 bg-amber-50 text-amber-800' : 'border-yellow-200 bg-yellow-50 text-yellow-700'
+                listingFreshness === 'old' ? 'border-hub-amber-edge bg-hub-amber-tint text-hub-amber-ink' : 'border-hub-amber-edge bg-hub-amber-tint text-hub-amber-ink'
               }`}
               title={t(listingFreshness === 'old' ? 'staleListingTooltipOld' : 'staleListingTooltipWarn', lang)}
             >

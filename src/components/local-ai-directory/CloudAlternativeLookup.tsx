@@ -129,7 +129,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
     <section aria-labelledby="alt-lookup-title" className="mb-6">
       <div className="flex flex-wrap items-center gap-3">
         <h2 id="alt-lookup-title" className="text-lg font-bold text-slate-900">{t('altReplaceTitle', ui)}</h2>
-        <span className="rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-800">
+        <span className="rounded-full border border-hub-amber-edge bg-hub-amber-tint px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-hub-amber-ink">
           {t('altBadge', ui)}
         </span>
         <button
@@ -137,14 +137,14 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
           onClick={toggleOpen}
           aria-expanded={open}
           aria-controls="alt-lookup-body"
-          className="ms-auto rounded-lg border border-slate-300 bg-white px-3 py-1 text-xs font-semibold text-slate-700 hover:border-violet-400 hover:text-violet-700"
+          className="ms-auto rounded-lg border border-slate-300 bg-white px-3 py-1 text-xs font-semibold text-slate-700 hover:border-hub-violet hover:text-hub-violet-ink"
         >
           {open ? t('altHide', ui) : t('altShow', ui)}
         </button>
       </div>
 
       <div id="alt-lookup-body" hidden={!open} className="mt-3">
-        <p role="note" className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
+        <p role="note" className="rounded-lg border border-hub-amber-edge bg-hub-amber-tint px-3 py-2 text-sm text-hub-amber-ink">
           {t('altScopeNotice', ui, { count: SUPPORTED_APPS.length })}
         </p>
 
@@ -157,9 +157,9 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
             maxLength={80}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t('altPlaceholder', ui)}
-            className="min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-200"
+            className="min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-hub-violet focus:outline-none focus:ring-2 focus:ring-hub-violet-edge"
           />
-          <button type="submit" className="rounded-lg bg-violet-700 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-800">
+          <button type="submit" className="rounded-lg bg-hub-violet-ink px-4 py-2 text-sm font-semibold text-white hover:bg-hub-violet-ink">
             {t('altButton', ui)}
           </button>
         </form>
@@ -173,17 +173,17 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                   type="button"
                   onClick={clearMiss}
                   aria-label={t('altClearResults', ui)}
-                  className="ms-auto rounded-lg border border-slate-300 bg-white px-2 py-0.5 text-xs font-semibold text-slate-700 hover:border-violet-400 hover:text-violet-700"
+                  className="ms-auto rounded-lg border border-slate-300 bg-white px-2 py-0.5 text-xs font-semibold text-slate-700 hover:border-hub-violet hover:text-hub-violet-ink"
                 >
                   ×
                 </button>
               </div>
               <p className="mt-1">{t('altMissBody', ui)}</p>
               <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
-                <button type="button" onClick={() => onBrowseApps('image')} className="font-semibold text-violet-700 underline">
+                <button type="button" onClick={() => onBrowseApps('image')} className="font-semibold text-hub-violet-ink underline">
                   {t('altBrowseImage', ui)}
                 </button>
-                <button type="button" onClick={() => onBrowseApps('audio')} className="font-semibold text-violet-700 underline">
+                <button type="button" onClick={() => onBrowseApps('audio')} className="font-semibold text-hub-violet-ink underline">
                   {t('altBrowseAudio', ui)}
                 </button>
               </div>
@@ -217,7 +217,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                     <span
                       aria-hidden="true"
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm font-bold ${
-                        app.category === 'image' ? 'bg-fuchsia-100 text-fuchsia-700' : 'bg-rose-100 text-rose-700'
+                        app.category === 'image' ? 'bg-hub-orchid-tint text-hub-orchid-ink' : 'bg-hub-rose-tint text-hub-rose-ink'
                       }`}
                     >
                       {app.name.charAt(0).toUpperCase()}
@@ -252,7 +252,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                       <li key={m.slug} className="flex gap-3 border-b border-slate-200 py-3">
                         <span
                           aria-hidden="true"
-                          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-100 text-sm font-bold text-violet-700"
+                          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-hub-violet-tint text-sm font-bold text-hub-violet-ink"
                         >
                           {tool.name.charAt(0).toUpperCase()}
                         </span>
@@ -261,7 +261,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                             <button
                               type="button"
                               onClick={() => onOpenTool(tool.slug)}
-                              className="min-w-0 text-start text-sm font-semibold text-slate-900 hover:text-violet-700 hover:underline"
+                              className="min-w-0 text-start text-sm font-semibold text-slate-900 hover:text-hub-violet-ink hover:underline"
                             >
                               {tool.name}
                             </button>
@@ -278,7 +278,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                               </span>
                             )}
                             {review && (
-                              <Link href={review} className="font-semibold text-violet-700 hover:underline">
+                              <Link href={review} className="font-semibold text-hub-violet-ink hover:underline">
                                 {t('readReview', ui)} →
                               </Link>
                             )}
@@ -296,7 +296,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                   type="button"
                   onClick={() => setExpanded((v) => !v)}
                   aria-expanded={expanded}
-                  className="mt-4 text-sm font-semibold text-slate-900 underline underline-offset-4 hover:text-violet-700"
+                  className="mt-4 text-sm font-semibold text-slate-900 underline underline-offset-4 hover:text-hub-violet-ink"
                 >
                   {expanded
                     ? t('altSeeFewer', ui)
@@ -320,7 +320,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                 ))}
               </p>
               <p className="mt-1 text-xs text-slate-500">{t('altDisclaimer', ui)}</p>
-              <button type="button" onClick={() => onBrowseApps(WANT_FOR[selected.category])} className="mt-3 text-sm font-semibold text-violet-700 underline">
+              <button type="button" onClick={() => onBrowseApps(WANT_FOR[selected.category])} className="mt-3 text-sm font-semibold text-hub-violet-ink underline">
                 {t(selected.category === 'image' ? 'altBrowseImage' : 'altBrowseAudio', ui)}
               </button>
             </div>

@@ -5,9 +5,9 @@ import type { InstallEffortKey, OSKey, ToolRecord } from '@/lib/power-local-llm/
 import type { DirUiKey } from './directory-i18n'
 
 export const INSTALL_EFFORT_UI: Record<InstallEffortKey, { label: DirUiKey; tip: DirUiKey; badge: string }> = {
-  installer: { label: 'installInstaller', tip: 'installInstallerTip', badge: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
-  'one-command': { label: 'installOneCommand', tip: 'installOneCommandTip', badge: 'bg-sky-50 text-sky-700 border-sky-200' },
-  'terminal-setup': { label: 'installTerminal', tip: 'installTerminalTip', badge: 'bg-amber-50 text-amber-800 border-amber-200' },
+  installer: { label: 'installInstaller', tip: 'installInstallerTip', badge: 'bg-hub-olive-tint text-hub-olive-ink border-hub-olive-edge' },
+  'one-command': { label: 'installOneCommand', tip: 'installOneCommandTip', badge: 'bg-hub-azure-tint text-hub-azure-ink border-hub-azure-edge' },
+  'terminal-setup': { label: 'installTerminal', tip: 'installTerminalTip', badge: 'bg-hub-amber-tint text-hub-amber-ink border-hub-amber-edge' },
   hosted: { label: 'installHosted', tip: 'installHostedTip', badge: 'bg-slate-50 text-slate-600 border-slate-200' },
 }
 
