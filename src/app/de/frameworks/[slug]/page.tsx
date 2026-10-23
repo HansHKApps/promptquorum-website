@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { AppLink as Link } from '@/components/AppLink'
 import { notFound } from 'next/navigation'
+import { FrameworkMentions } from '@/components/FrameworkMentions'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { FRAMEWORKS, getFrameworkLocalized } from '@/lib/frameworksData'
 import { getFrameworkUiLabels } from '@/lib/frameworksUiLabels'
 import { generateAlternates } from '@/lib/hreflang'
@@ -149,6 +151,10 @@ export default async function DeFrameworkPage({ params }: { params: Promise<{ sl
             </h1>
             <p className="text-lg text-primary font-mono mb-4">{fw.expansion}</p>
             <p className="text-xl text-text-secondary leading-relaxed">{fw.tagline}</p>
+            <p className="mt-4 text-sm text-text-muted">
+              {labels.by} <Link href="/de/about" className="text-primary underline">Hans Kuepper</Link> · {labels.lastUpdated}{' '}
+              <time dateTime={fw.dateModified ?? fw.publishDate ?? '2026-03-16'}>{formatDisplayDate(fw.dateModified ?? fw.publishDate ?? '2026-03-16', LANG)}</time>
+            </p>
           </div>
 
           {/* Static hero image for Discover */}
@@ -237,7 +243,7 @@ export default async function DeFrameworkPage({ params }: { params: Promise<{ sl
                   {fw.notFor.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-text-secondary text-sm">
                       <span className="text-orange-400 mt-0.5 flex-shrink-0">✗</span>
-                      {item}
+                      <FrameworkMentions text={item} prefix="/de" currentSlug={fw.slug} />
                     </li>
                   ))}
                 </ul>
@@ -257,6 +263,20 @@ export default async function DeFrameworkPage({ params }: { params: Promise<{ sl
               ))}
             </div>
           </section>
+
+          {/* Sources */}
+          {fw.sources && fw.sources.length > 0 && (
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-text-primary mb-4">{labels.sourcesHeading}</h2>
+              <ul className="space-y-2 text-sm text-text-secondary">
+                {fw.sources.map(src => (
+                  <li key={src.url}>
+                    <a href={src.url} target="_blank" rel="noopener noreferrer" className="text-primary underline" dir="ltr">{src.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {/* Related frameworks */}
           {related.length > 0 && (

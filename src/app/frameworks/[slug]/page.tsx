@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { AppLink as Link } from '@/components/AppLink'
 import { notFound } from 'next/navigation'
+import { FrameworkMentions } from '@/components/FrameworkMentions'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework, getFrameworkLocalized } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
@@ -68,7 +70,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             {
               '@context': 'https://schema.org',
               '@type': 'Article',
-              'headline': `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
+              'headline': fw.seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
               'description': fw.tagline,
               'url': `https://www.promptquorum.com/frameworks/${fw.slug}`,
               'author': {
@@ -148,6 +150,10 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             </h1>
             <p className="text-lg text-primary font-mono mb-4">{fw.expansion}</p>
             <p className="text-xl text-text-secondary leading-relaxed">{fw.tagline}</p>
+            <p className="mt-4 text-sm text-text-muted">
+              {'By'} <Link href="/about" className="text-primary underline">Hans Kuepper</Link> · {'Last updated'}{' '}
+              <time dateTime={fw.dateModified ?? fw.publishDate ?? '2026-03-16'}>{formatDisplayDate(fw.dateModified ?? fw.publishDate ?? '2026-03-16', 'en')}</time>
+            </p>
           </div>
 
           {/* Static hero image for Discover */}
@@ -238,7 +244,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
                   {fw.notFor.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-text-secondary text-sm">
                       <span className="text-orange-400 mt-0.5 flex-shrink-0">✗</span>
-                      {item}
+                      <FrameworkMentions text={item} prefix="" currentSlug={fw.slug} />
                     </li>
                   ))}
                 </ul>
@@ -258,6 +264,20 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
               ))}
             </div>
           </section>
+
+          {/* Sources */}
+          {fw.sources && fw.sources.length > 0 && (
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-text-primary mb-4">{'Sources'}</h2>
+              <ul className="space-y-2 text-sm text-text-secondary">
+                {fw.sources.map(src => (
+                  <li key={src.url}>
+                    <a href={src.url} target="_blank" rel="noopener noreferrer" className="text-primary underline" dir="ltr">{src.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {/* Related frameworks */}
           {related.length > 0 && (

@@ -130,7 +130,7 @@ export default async function HowItWorksPage({ searchParams }: PageProps) {
         {
           '@type': 'Question',
           'name': 'What prompt engineering frameworks does PromptQuorum include?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum includes 9 built-in frameworks: CO-STAR (winner of the Singapore GPT-4 competition), CRAFT, RISEN, TRACE, APE, SPECS, Google Prompt, RTF, and Single Prompt Line — plus 2 fully custom framework slots. A Framework Wizard helps you choose the right one for your task.' },
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum includes 9 built-in frameworks: CO-STAR (used to win the Singapore GPT-4 competition), CRAFT, RISEN, TRACE, APE, SPECS, Google Prompt, RTF, and Single Prompt Line — plus 2 fully custom framework slots. A Framework Wizard helps you choose the right one for your task.' },
         },
         {
           '@type': 'Question',

@@ -20,6 +20,9 @@ export type FrameworkUiLabels = {
   howToName: (name: string) => string
   howToDescription: (name: string) => string
   fillInField: (field: string) => string
+  by: string
+  lastUpdated: string
+  sourcesHeading: string
 }
 
 const EN: FrameworkUiLabels = {
@@ -43,6 +46,9 @@ const EN: FrameworkUiLabels = {
   howToName: name => `How to use the ${name} prompt framework`,
   howToDescription: name => `A step-by-step guide to using the ${name} framework for AI prompt engineering.`,
   fillInField: field => `Fill in ${field}`,
+    by: 'By',
+    lastUpdated: 'Last updated',
+    sourcesHeading: 'Sources',
 }
 
 const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
@@ -67,6 +73,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `${name}-Prompt-Framework verwenden`,
     howToDescription: name => `Eine Schritt-für-Schritt-Anleitung zur Verwendung des ${name}-Frameworks für Prompt Engineering.`,
     fillInField: field => `${field} ausfüllen`,
+    by: 'Von',
+    lastUpdated: 'Zuletzt aktualisiert',
+    sourcesHeading: 'Quellen',
   },
   fr: {
     home: 'Accueil',
@@ -89,6 +98,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `Comment utiliser le framework de prompt ${name}`,
     howToDescription: name => `Un guide étape par étape pour utiliser le framework ${name} en prompt engineering.`,
     fillInField: field => `Renseigner ${field}`,
+    by: 'Par',
+    lastUpdated: 'Dernière mise à jour',
+    sourcesHeading: 'Sources',
   },
   es: {
     home: 'Inicio',
@@ -111,6 +123,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `Cómo usar el framework de prompt ${name}`,
     howToDescription: name => `Una guía paso a paso para usar el framework ${name} en ingeniería de prompts.`,
     fillInField: field => `Completa ${field}`,
+    by: 'Por',
+    lastUpdated: 'Última actualización',
+    sourcesHeading: 'Fuentes',
   },
   pt: {
     home: 'Início',
@@ -133,6 +148,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `Como usar o framework de prompt ${name}`,
     howToDescription: name => `Um guia passo a passo para usar o framework ${name} em engenharia de prompts.`,
     fillInField: field => `Preencha ${field}`,
+    by: 'Por',
+    lastUpdated: 'Última atualização',
+    sourcesHeading: 'Fontes',
   },
   ja: {
     home: 'ホーム',
@@ -155,6 +173,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `${name}プロンプトフレームワークの使い方`,
     howToDescription: name => `AIプロンプトエンジニアリングにおける${name}フレームワークの使い方をステップごとに解説します。`,
     fillInField: field => `${field}を入力`,
+    by: '著者',
+    lastUpdated: '最終更新',
+    sourcesHeading: '出典',
   },
   zh: {
     home: '首页',
@@ -177,6 +198,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `如何使用${name}提示词框架`,
     howToDescription: name => `关于在AI提示词工程中使用${name}框架的分步指南。`,
     fillInField: field => `填写${field}`,
+    by: '作者',
+    lastUpdated: '最后更新',
+    sourcesHeading: '来源',
   },
   ar: {
     home: 'الرئيسية',
@@ -199,6 +223,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `كيفية استخدام إطار الأوامر ${name}`,
     howToDescription: name => `دليل خطوة بخطوة لاستخدام إطار ${name} في هندسة الأوامر للذكاء الاصطناعي.`,
     fillInField: field => `املأ ${field}`,
+    by: 'بقلم',
+    lastUpdated: 'آخر تحديث',
+    sourcesHeading: 'المصادر',
   },
   ko: {
     home: '홈',
@@ -221,6 +248,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     howToName: name => `${name} 프롬프트 프레임워크 사용법`,
     howToDescription: name => `AI 프롬프트 엔지니어링에서 ${name} 프레임워크를 사용하는 단계별 가이드입니다.`,
     fillInField: field => `${field} 입력`,
+    by: '작성',
+    lastUpdated: '최종 업데이트',
+    sourcesHeading: '출처',
   },
 }
 

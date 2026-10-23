@@ -49,8 +49,8 @@ export default async function KoFAQPage() {
               { '@type': 'Question', name: '사용 제한이 있나요?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum 측에서는 어떤 제한도 없습니다. 사용량은 API 키나 로컬 LLM 리소스에 의해서만 제한됩니다.' } },
               { '@type': 'Question', name: '프롬프트 엔지니어링이란 무엇이며 왜 중요한가요?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 엔지니어링은 AI 모델에 대한 입력을 설계해 더 정확하고 유용하며 신뢰할 수 있는 출력을 얻는 실천입니다. 테스트에서 프레임워크 필드를 갖춘 구조화된 프롬프트는 LLM 평가 점수를 25~45% 높입니다. PromptQuorum은 9개의 내장 프레임워크로 이를 자동화합니다.' } },
               { '@type': 'Question', name: 'PromptQuorum은 어떻게 프롬프트를 최적화하나요?', acceptedAnswer: { '@type': 'Answer', text: '연결된 LLM이 프레임워크의 원시 필드를 정밀 프롬프트로 변환합니다. 이후 8가지 원클릭 정제로 반복적으로 개선할 수 있습니다. 모든 단계가 버전 기록에 저장되므로 언제든지 되돌릴 수 있습니다.' } },
-              { '@type': 'Question', name: 'PromptQuorum에 내장된 프롬프트 프레임워크는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '9가지 프레임워크: Single Prompt Line, APE, CRAFT, CO-STAR(싱가포르 GPT-4 대회 우승), SPECS, RISEN, TRACE, Google Prompt, RTF. 또한 2개의 완전히 사용자 정의 프레임워크를 만들 수 있습니다.' } },
-              { '@type': 'Question', name: 'CO-STAR 프레임워크란 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR는 Context(맥락), Objective(목표), Style(스타일), Tone(어조), Audience(대상), Response(응답 형식)의 약자입니다. 싱가포르 GPT-4 프롬프트 엔지니어링 대회에서 우승했으며, 비즈니스 커뮤니케이션과 마케팅에 이상적입니다.' } },
+              { '@type': 'Question', name: 'PromptQuorum에 내장된 프롬프트 프레임워크는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '9가지 프레임워크: Single Prompt Line, APE, CRAFT, CO-STAR(싱가포르 GPT-4 대회 우승에 활용), SPECS, RISEN, TRACE, Google Prompt, RTF. 또한 2개의 완전히 사용자 정의 프레임워크를 만들 수 있습니다.' } },
+              { '@type': 'Question', name: 'CO-STAR 프레임워크란 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR는 Context(맥락), Objective(목표), Style(스타일), Tone(어조), Audience(대상), Response(응답 형식)의 약자입니다. 싱가포르 GPT-4 프롬프트 엔지니어링 대회 우승에 활용되었으며, 비즈니스 커뮤니케이션과 마케팅에 이상적입니다.' } },
             ],
             breadcrumb: {
               '@type': 'BreadcrumbList',

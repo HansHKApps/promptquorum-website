@@ -137,7 +137,7 @@ const T = {
         details: [
           'Single Prompt Line — schnelle, unstrukturierte Prompts',
           'CRAFT — Context, Role, Action, Format, Target',
-          'CO-STAR — Gewinner des Singapore GPT-4-Wettbewerbs',
+          'CO-STAR — im Singapore-GPT-4-Wettbewerb zum Sieg eingesetzt',
           'RISEN — Unternehmensaufgaben mit sequenziellen Schritten',
           'TRACE — wenn Sie Few-Shot-Beispiele benötigen',
           'APE, SPECS, Google Prompt, RTF + 2 benutzerdefinierte Slots',
@@ -256,7 +256,7 @@ const T = {
         details: [
           'Single Prompt Line — prompts rapides et non structurés',
           'CRAFT — Context, Role, Action, Format, Target',
-          'CO-STAR — vainqueur du concours Singapore GPT-4',
+          'CO-STAR — utilisé pour remporter le concours Singapore GPT-4',
           'RISEN — tâches entreprise avec étapes séquentielles',
           'TRACE — quand vous avez besoin d\'exemples few-shot',
           'APE, SPECS, Google Prompt, RTF + 2 slots personnalisés',
@@ -375,7 +375,7 @@ const T = {
         details: [
           'Single Prompt Line — 素早い非構造化プロンプト',
           'CRAFT — Context, Role, Action, Format, Target',
-          'CO-STAR — シンガポールGPT-4コンテスト優勝',
+          'CO-STAR — シンガポールGPT-4コンテストの優勝に使用',
           'RISEN — 逐次ステップのエンタープライズタスク',
           'TRACE — Few-Shotの例が必要な場合',
           'APE, SPECS, Google Prompt, RTF + カスタムスロット×2',
@@ -494,7 +494,7 @@ const T = {
         details: [
           'Single Prompt Line — 快速、非结构化的提示词',
           'CRAFT — Context, Role, Action, Format, Target',
-          'CO-STAR — 新加坡 GPT-4 竞赛冠军',
+          'CO-STAR — 曾用于赢得新加坡 GPT-4 竞赛',
           'RISEN — 带有顺序步骤的企业任务',
           'TRACE — 需要 few-shot 示例时',
           'APE, SPECS, Google Prompt, RTF + 2 个自定义插槽',
