@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Locally AI: Kostenlose MLX-App von LM Studio', anchor: '#locally-ai' },
       { label: 'Google AI Edge Gallery: Googles kostenlose Gemma-4-App', anchor: '#google-ai-edge-gallery' },
       { label: 'MLC Chat: Apple-Silicon-Optimierung', anchor: '#mlc-chat' },
-      { label: 'LLM Farm: Entfernt, aber weiter konfigurierbar', anchor: '#llm-farm' },
+      { label: 'LLM Farm: Nicht im App Store, Quellcode weiterhin verfügbar', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: Systemintegrierte On-Device-KI', anchor: '#apple-intelligence' },
       { label: 'Modelle nach iPhone-Modell', anchor: '#models-by-tier' },
       { label: 'Akkuverbrauch und thermisches Throttling', anchor: '#battery-heat' },
@@ -749,8 +749,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Private LLM](https://privatellm.app)', 'Preis': '$4.99 einmalig', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'On-Device; keine Konten oder Tracking (Entwickler)', 'Am besten geeignet für': 'Kurzbefehle + Siri-Integration' },
           { 'App': '[Locally AI](https://lmstudio.ai/locally)', 'Preis': 'Kostenlos (LM-Studio-Team)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – MLX-Katalog (kein Phi-4)', 'Datenschutz': 'On-Device; keine Datenerhebung (Eintrag)', 'Am besten geeignet für': 'MLX + Kurzbefehle, LM-Studio-Anbindung' },
           { 'App': '[Google AI Edge Gallery](https://apps.apple.com/app/id6749645337)', 'Preis': 'Kostenlos (Google)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – LiteRT-LM, Gemma 4', 'Datenschutz': 'On-Device nach dem Modell-Download', 'Am besten geeignet für': 'Gemma 4, Denkmodus, Agent Skills' },
-          { 'App': '[MLC Chat](https://llm.mlc.ai)', 'Preis': 'Kostenlos (Open Source)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – Bibliothek vor Phi-4', 'Datenschutz': 'Nur lokal (Open Source)', 'Am besten geeignet für': 'MLC-LLM-Toolchain (iOS-App inaktiv)' },
-          { 'App': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Preis': 'Kostenlos (nur Quellcode)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Nur lokal (Open Source)', 'Am besten geeignet für': 'Entwickler (entfernt, veraltet)' },
+          { 'App': '[MLC Chat](https://llm.mlc.ai)', 'Preis': 'Kostenlos (Open Source)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – Bibliothek vor Phi-4', 'Datenschutz': 'Lokale Inferenz (Projektdoku; ungeprüft)', 'Am besten geeignet für': 'MLC-LLM-Toolchain (iOS-App inaktiv)' },
+          { 'App': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Preis': 'Kostenlos (nur Quellcode)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Lokale Inferenz (Projektdoku; ungeprüft)', 'Am besten geeignet für': 'Entwickler (nicht im App Store, veraltet)' },
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Preis': 'Kostenlos (in iOS integriert)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. (Systemfunktion)', 'Datenschutz': 'Lokal + opt-in Private Cloud Compute', 'Am besten geeignet für': 'Hilfe in Mail, Nachrichten, Notizen' },
         ],
         note:
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       llmFarm: {
         id: 'llm-farm',
-        title: 'LLM Farm: Entfernt, aber weiter konfigurierbar',
+        title: 'LLM Farm: Nicht im App Store, Quellcode weiterhin verfügbar',
         content:
           '**Veraltet-Warnung: Der letzte Release von LLM Farm (1.4.3) erschien am 27. Januar 2025 und der letzte Code-Push am 30. Januar 2026 – seit fast neun Monaten gibt es kein Update –, daher wird die App möglicherweise nicht mehr gepflegt.** Die PromptQuorum-Rezension des Projekts datiert die Entfernung aus dem App Store auf August 2025; die eigene GitHub-README beschreibt die App im App Store und auf TestFlight als „vorübergehend nicht verfügbar". Das Projekt (GitHub: [guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)) ist weiterhin quelloffen und verzeichnete bis Oktober 2026 GitHub-Issue-Aktivität, doch neue Nutzer können es nicht mehr über den App Store installieren; es muss über Xcode aus dem Quellcode gebaut werden (README: macOS 13+ und iOS 16+). Ausführlicher Test: [LLM Farm Review](/de/power-local-llm/llm-farm-review).',
         items: [
@@ -888,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'apple-intelligence',
         title: 'Apple Intelligence: Systemintegrierte On-Device-KI',
         content:
-          '**Apple Intelligence führt Apples eigenes ~3B-Foundation-Modell auf dem iPhone 15 Pro und neuer aus (A17-Pro-Chip mit mindestens 8 GB RAM).** Es ist standardmäßig keine Chat-App – es treibt Systemfunktionen in Mail (Smart Reply), Nachrichten (Schreibwerkzeuge), Notizen (Zusammenfassungen) und Benachrichtigungs-Zusammenfassungen an. Seit iOS 26 erlaubt Apples Foundation-Models-Framework Drittentwicklern, dasselbe On-Device-Modell direkt aufzurufen, und Apps wie Locally AI nutzen es, um darauf eine echte Chat-Oberfläche anzubieten. iOS 27 erweitert das Framework: Laut Apples Entwicklerleitfaden können Apps jedes Sprachmodell nutzen, das dessen Sprachmodell-Protokoll erfüllt, einschließlich Apples eigener Modelle und Cloud-Modelle.',
+          '**Apple Intelligence führt Apples eigenes ~3B-Foundation-Modell auf dem iPhone 15 Pro und neuer aus (die Generation des iPhone 15 Pro, gemeldet mit 8 GB RAM; Apple nennt keine RAM-Größe).** Es ist standardmäßig keine Chat-App – es treibt Systemfunktionen in Mail (Smart Reply), Nachrichten (Schreibwerkzeuge), Notizen (Zusammenfassungen) und Benachrichtigungs-Zusammenfassungen an. Seit iOS 26 erlaubt Apples Foundation-Models-Framework Drittentwicklern, dasselbe On-Device-Modell direkt aufzurufen, und Apps wie Locally AI nutzen es, um darauf eine echte Chat-Oberfläche anzubieten. iOS 27 erweitert das Framework: Laut Apples Entwicklerleitfaden können Apps jedes Sprachmodell nutzen, das dessen Sprachmodell-Protokoll erfüllt, einschließlich Apples eigener Modelle und Cloud-Modelle.',
         items: [
           '**Wo es steckt:** in iOS 18+ integriert (Foundation-Models-Framework seit iOS 26). Aktivieren unter Einstellungen → Apple Intelligence & Siri.',
           '**Hardware-Voraussetzung:** iPhone 15 Pro / 15 Pro Max, iPhone 16er-Serie, iPhone 16e, iPhone 17er-Serie sowie die iPhone 18 Pro, 18 Pro Max und iPhone Duo (A20 Pro) von 2026. Ältere iPhones (14 und früher) unterstützen Apple Intelligence nicht. Prüfen Sie vor dem Kauf Apples aktuelle Kompatibilitätsliste für iOS 27.',
@@ -912,15 +912,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Der iPhone-RAM bestimmt die maximale Modellgröße – nicht die Chip-Generation.** Ein iPhone mit 6 GB (14 Pro, 15) führt 1.7B-Modelle komfortabel aus; ein iPhone mit 8 GB+ (15 Pro, 16er-Serie, 16e, 17er-Serie) führt 3B–4B-Modelle komfortabel und 7B-Modelle langsam aus. Neuere kleine Modelle, die neben Phi-4 Mini einen Versuch wert sind: Gemma 4 E2B und E4B (Google, April 2026; etwa 2,58 GB und 3,65 GB als LiteRT-LM-Dateien) und die kleine Qwen3.5-Serie (Alibaba, März 2026; 0.8B, 2B, 4B und 9B, Apache 2.0 laut der Zusammenfassung von Artificial Analysis). PromptQuorum hat dafür keine Geschwindigkeitswerte; Locally AI und Google AI Edge Gallery liefern sie direkt mit. Den breiteren Modellüberblick für alle Hardware-Klassen (nicht nur mobil) finden Sie unter [Die besten lokalen LLMs 2026](/de/local-llms/best-local-llms-2026).',
         image: '/images/iphone-llm-apps-models-tier-de.svg',
         imageCaption: 'Empfehlungen für lokale LLM-Modelle je iPhone-RAM-Stufe, vom iPhone mit 4 GB bis zum iPhone 17 Pro mit 12 GB',
-        columns: ['iPhone-Modell (Jahr, RAM)', 'Empfohlenes Modell', 'Download-Größe', 'Erwartete Geschwindigkeit'],
+        columns: ['iPhone-Modell (Jahr, RAM)', 'Empfohlenes Modell', 'Download-Größe', 'Grobe Geschwindigkeit (Richtwert)'],
         rows: [
-          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 18 Pro / Pro Max (2026, ~12 GB gemeldet)', 'Empfohlenes Modell': 'Wie 17 Pro; RAM von Apple nicht angegeben', 'Download-Größe': '~2,5–3,7 GB', 'Erwartete Geschwindigkeit': 'Keine Angabe' },
-          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 17 Pro / 17 Pro Max (2025, 12 GB)', 'Empfohlenes Modell': 'Phi-4 Mini / Llama 3.2 3B / Gemma 4 E4B', 'Download-Größe': '~2,5–3,7 GB', 'Erwartete Geschwindigkeit': '~13–20 Tok/Sek. (Phi-4 Mini)' },
-          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 16er-Serie / 16e / 17 (2024–2025, 8 GB)', 'Empfohlenes Modell': 'Phi-4 Mini (3,8B Q4_K_M) oder Gemma 4 E2B', 'Download-Größe': '~2,6–2,7 GB', 'Erwartete Geschwindigkeit': '~10–15 Tok/Sek. (Phi-4 Mini)' },
-          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 15 Pro / Pro Max (2023, 8 GB)', 'Empfohlenes Modell': 'Phi-4 Mini (3,8B Q4_K_M)', 'Download-Größe': '~2,7 GB', 'Erwartete Geschwindigkeit': '~8–12 Tok/Sek.' },
-          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 13 Pro / 14 Pro / Pro Max (6 GB)', 'Empfohlenes Modell': 'Qwen3 1.7B oder SmolLM 2 1.7B (Q4_K_M)', 'Download-Größe': '~1,1 GB', 'Erwartete Geschwindigkeit': '~15–20 Tok/Sek.' },
-          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 14 / 14 Plus / 15 / 15 Plus (6 GB)', 'Empfohlenes Modell': 'Qwen3 1.7B oder SmolLM 2 1.7B (Q4_K_M)', 'Download-Größe': '~1,1 GB', 'Erwartete Geschwindigkeit': '~12–18 Tok/Sek.' },
-          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 13 / 12 / SE / älter (4 GB)', 'Empfohlenes Modell': 'Für On-Device-LLMs nicht empfohlen', 'Download-Größe': '—', 'Erwartete Geschwindigkeit': '—' },
+          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 18 Pro / Pro Max (2026, ~12 GB gemeldet)', 'Empfohlenes Modell': 'Wie 17 Pro; RAM von Apple nicht angegeben', 'Download-Größe': '~2,5–3,7 GB', 'Grobe Geschwindigkeit (Richtwert)': 'Keine Angabe' },
+          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 17 Pro / 17 Pro Max (2025, 12 GB)', 'Empfohlenes Modell': 'Phi-4 Mini / Llama 3.2 3B / Gemma 4 E4B', 'Download-Größe': '~2,5–3,7 GB', 'Grobe Geschwindigkeit (Richtwert)': '~13–20 Tok/Sek. (Phi-4 Mini)' },
+          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 16er-Serie / 16e / 17 (2024–2025, 8 GB)', 'Empfohlenes Modell': 'Phi-4 Mini (3,8B Q4_K_M) oder Gemma 4 E2B', 'Download-Größe': '~2,6–2,7 GB', 'Grobe Geschwindigkeit (Richtwert)': '~10–15 Tok/Sek. (Phi-4 Mini)' },
+          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 15 Pro / Pro Max (2023, 8 GB)', 'Empfohlenes Modell': 'Phi-4 Mini (3,8B Q4_K_M)', 'Download-Größe': '~2,7 GB', 'Grobe Geschwindigkeit (Richtwert)': '~8–12 Tok/Sek.' },
+          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 13 Pro / 14 Pro / Pro Max (6 GB)', 'Empfohlenes Modell': 'Qwen3 1.7B oder SmolLM 2 1.7B (Q4_K_M)', 'Download-Größe': '~1,1 GB', 'Grobe Geschwindigkeit (Richtwert)': '~15–20 Tok/Sek.' },
+          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 14 / 14 Plus / 15 / 15 Plus (6 GB)', 'Empfohlenes Modell': 'Qwen3 1.7B oder SmolLM 2 1.7B (Q4_K_M)', 'Download-Größe': '~1,1 GB', 'Grobe Geschwindigkeit (Richtwert)': '~12–18 Tok/Sek.' },
+          { 'iPhone-Modell (Jahr, RAM)': 'iPhone 13 / 12 / SE / älter (4 GB)', 'Empfohlenes Modell': 'Für On-Device-LLMs nicht empfohlen', 'Download-Größe': '—', 'Grobe Geschwindigkeit (Richtwert)': '—' },
         ],
         callouts: [
           {
@@ -941,12 +941,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dauerhafte Generierung kann thermisches Throttling auslösen.** Wird der Chip heiß, senkt iOS die Taktfrequenz, und die Tokens/Sek. sinken. Wann das beginnt und wie viel Geschwindigkeit verloren geht, hängt von Telefon, Hülle, Ladevorgang und Raumtemperatur ab; PromptQuorum hat das nicht gemessen. Lässt man das Telefon abkühlen, kehrt die Geschwindigkeit zurück.',
           '**Gegenmaßnahme:** Halten Sie das iPhone bei langen Inferenz-Sitzungen mit dem Display nach oben auf einer harten Oberfläche (nicht in der Hand oder Tasche), damit die Wärme abgeführt wird. Ein passives Kühlkörper-Case hilft, ist bei kurzen Interaktionen aber selten nötig.',
           '**Verbrauch im Leerlauf:** Wenn Sie nach der Generierung eine Chat-App im Hintergrund geöffnet lassen, bleibt der RAM belegt, aber es läuft keine Inferenz – der Akkueinfluss ist minimal. Das vollständige Schließen der App gibt die ~3 GB RAM wieder frei.',
-          '**MagSafe-Laden während der Inferenz:** auf dem iPhone 17 Pro und 16 Pro akzeptabel (beide haben ein verbessertes Wärmedesign). Auf dem iPhone 15 Pro kann die Kombination aus Laden und Inferenz schneller an die thermischen Grenzen stoßen – laden Sie lieber danach.',
+          '**MagSafe-Laden während der Inferenz:** Laden während der Generierung kann bei jedem iPhone zusätzliche Wärme erzeugen, beim iPhone 15 Pro eher stärker; wird das Telefon warm, pausieren Sie das Laden oder die Generierung, oder laden Sie erst danach.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Führen Sie On-Device-LLM-Inferenz auf dem iPhone nicht in direkter Sonne oder in einem heißen Auto aus. Die Kombination aus Umgebungswärme und Rechenlast treibt den Chip innerhalb von Minuten über die thermischen Grenzen, löst aggressives Throttling und möglicherweise die Meldung „iPhone muss abkühlen" aus. Die Chat-App stürzt nicht ab, aber die Generierung wird extrem langsam.',
+            text: 'Führen Sie On-Device-LLM-Inferenz auf dem iPhone nicht in direkter Sonne oder in einem heißen Auto aus. In direkter Sonne oder in einem heißen Auto kann der Chip früher an seine thermischen Grenzen stoßen, was Throttling und Apples Meldung „iPhone muss abkühlen" auslösen kann. Die Generierung wird dann meist langsamer, statt dass sich die App schließt.',
           },
         ],
       },
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Häufige Fehler',
         items: [
-          '**Ein Modell installieren, das größer ist als der iPhone-RAM erlaubt.** Ein 7B-Modell auf einem 8-GB-iPhone läuft mit ~3–5 Tokens/Sek. und stürzt ab, wenn iOS Arbeitsspeicher für eine andere App beansprucht. Verwenden Sie das empfohlene Modell für Ihre iPhone-Klasse (3B–4B für 8-GB-Geräte, 1.7B für 6-GB-Geräte).',
+          '**Ein Modell installieren, das größer ist als der iPhone-RAM erlaubt.** Ein 7B-Modell auf einem 8-GB-iPhone ist für den Chat oft zu langsam und kann von iOS beendet werden, wenn es Arbeitsspeicher für eine andere App beansprucht; messen Sie es vorher mit dem eingebauten Benchmark von PocketPal AI. Verwenden Sie das empfohlene Modell für Ihre iPhone-Klasse (3B–4B für 8-GB-Geräte, 1.7B für 6-GB-Geräte).',
           '**Cloud-KI-Qualität von On-Device-Modellen erwarten.** Phi-4 Mini (3,8B) ist für seine Größe beeindruckend, aber kein GPT-5.5. Verwenden Sie es für Chat, Zusammenfassungen, Textentwürfe und schnelle Fragen – nicht für mehrstufiges Schlussfolgern, komplexe Code-Generierung oder nuanciertes kreatives Schreiben.',
           '**Inferenz im direkten Sonnenlicht oder in einem heißen Auto ausführen.** Thermisches Throttling kann schnell einsetzen, die Generierung verlangsamt sich, und die Meldung „iPhone muss abkühlen" kann erscheinen. Führen Sie Inferenz bei Raumtemperatur aus.',
           '**3+ Chat-Apps mit je 3-GB-Modellen installiert lassen.** Sie verbrauchen ~10 GB Speicher mit duplizierten Modellen. Entscheiden Sie sich für eine App und ein Modell; deinstallieren Sie die anderen, bis Sie sicher sind, dass Sie sie benötigen.',
@@ -1018,7 +1018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Kann das iPhone wirklich ein 7B-Modell ausführen?',
-            a: 'Technisch ja auf dem iPhone 15 Pro und neueren Modellen (8 GB RAM), aber nicht mit nutzbarer Geschwindigkeit. Ein 7B-Q4-Modell auf dem iPhone 16 Pro generiert mit ~3–5 Tokens/Sek. – für den Chat frustrierend. iOS neigt auch dazu, die App zu beenden, wenn andere Apps Arbeitsspeicher benötigen. Verwenden Sie 3B–4B-Modelle (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) für den alltäglichen On-Device-Chat. Für 7B+-Qualität verbinden Sie sich remote mit einem Mac oder PC zu Hause, auf dem Ollama läuft.',
+            a: 'Technisch ja auf dem iPhone 15 Pro und neueren Modellen (8 GB RAM), aber nicht mit nutzbarer Geschwindigkeit. Ein 7B-Q4-Modell auf dem iPhone 16 Pro ist für komfortablen Chat oft zu langsam (Richtwert). iOS neigt auch dazu, die App zu beenden, wenn andere Apps Arbeitsspeicher benötigen. Verwenden Sie 3B–4B-Modelle (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) für den alltäglichen On-Device-Chat. Für 7B+-Qualität verbinden Sie sich remote mit einem Mac oder PC zu Hause, auf dem Ollama läuft.',
           },
           {
             q: 'Entlädt lokale KI meinen iPhone-Akku?',
@@ -1034,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funktionieren diese Apps auf dem iPhone SE oder älteren iPhones?',
-            a: 'Eingeschränkt. Das iPhone SE und das iPhone 13 / 12 (4 GB RAM) liegen unter der praktischen Schwelle für On-Device-LLMs 2026. iPhone 14 / 15 (nicht Pro, 6 GB RAM) können 1.7B-Modelle (Qwen3 1.7B, SmolLM 2 1.7B) ausführen, aber keine 3B+-Modelle. Auch das iPhone 13 Pro und 14 Pro (6 GB RAM) bleiben bei 1.7B; das iPhone 15 Pro (8 GB RAM) kann 3B-Modelle wie Phi-4 Mini mit 8–12 Tokens/Sek. ausführen. Für ältere iPhones ist die bessere Option eine Remote-Verbindung zu einem Mac oder PC zu Hause.',
+            a: 'Eingeschränkt. Das iPhone SE und das iPhone 13 / 12 (4 GB RAM) liegen unter der praktischen Schwelle für On-Device-LLMs 2026. iPhone 14 / 15 (nicht Pro, 6 GB RAM) können 1.7B-Modelle (Qwen3 1.7B, SmolLM 2 1.7B) ausführen, aber keine 3B+-Modelle. Auch das iPhone 13 Pro und 14 Pro (6 GB RAM) bleiben bei 1.7B; das iPhone 15 Pro (8 GB RAM) kann 3B-Modelle wie Phi-4 Mini mit grob 8–12 Tokens/Sek. (Richtwert) ausführen. Für ältere iPhones ist die bessere Option eine Remote-Verbindung zu einem Mac oder PC zu Hause.',
           },
           {
             q: 'Kann ich den Chat-Verlauf zwischen iPhone und Mac synchronisieren?',
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie vergleicht sich lokale KI mit der ChatGPT-App auf dem iPhone?',
-            a: 'On-Device-Modelle (Phi-4 Mini, Llama 3.2 3B) liegen bei komplexem Schlussfolgern, breitem Weltwissen und multimodalen Aufgaben weiterhin spürbar hinter Frontier-Cloud-Modellen, sind aber bei einfachen Anfragen schneller (kein Netzwerk-Round-Trip) und vollständig privat. Der ehrliche Kompromiss: lokale KI für Routine- und private Aufgaben; ChatGPT oder eine andere Cloud-App für gelegentliche schwierige Fragen. Viele Nutzer haben 2026 beide und wählen je nach Anfrage.',
+            a: 'On-Device-Modelle (Phi-4 Mini, Llama 3.2 3B) liegen bei komplexem Schlussfolgern, breitem Weltwissen und multimodalen Aufgaben weiterhin spürbar hinter Frontier-Cloud-Modellen, sind aber bei einfachen Anfragen schneller (kein Netzwerk-Round-Trip) und halten den Chat laut Dokumentation der jeweiligen App auf dem Gerät. Der ehrliche Kompromiss: lokale KI für Routine- und private Aufgaben; ChatGPT oder eine andere Cloud-App für gelegentliche schwierige Fragen. Viele Nutzer haben 2026 beide und wählen je nach Anfrage.',
           },
           {
             q: 'Ist LLM Farm noch sicher, wenn sie nicht mehr im App Store ist?',
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Gibt es eine Ollama-App für das iPhone?',
-            a: 'Die Download-Seite von Ollama listet macOS, Windows und Linux, aber keine iPhone-App. Um Modelle von Ollama oder LM Studio vom iPhone aus zu nutzen, betreiben Sie den Server auf einem Mac oder PC und verbinden sich über eine Client-App; Locally AI bietet mit LM Link eine verschlüsselte Verbindung zu LM Studio auf einem Mac. Für Modelle, die komplett auf dem Telefon laufen, nutzen Sie die Apps in diesem Leitfaden.',
+            a: 'Die Download-Seite von Ollama listet macOS, Windows und Linux, aber keine iPhone-App. Um Modelle von Ollama oder LM Studio vom iPhone aus zu nutzen, betreiben Sie den Server auf einem Mac oder PC und verbinden sich über eine Client-App; Locally AI bietet mit LM Link eine Verbindung zu LM Studio auf einem Mac, die LM Studio als verschlüsselt beschreibt. Für Modelle, die komplett auf dem Telefon laufen, nutzen Sie die Apps in diesem Leitfaden.',
           },
           {
             q: 'Sollte ich Gemma 4 oder Phi-4 Mini herunterladen?',
@@ -1086,11 +1086,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Muss ich bei der Verwendung dieser iPhone-LLM-Apps die DSGVO beachten?',
-            a: 'Für rein private Nutzung greift die DSGVO häufig nicht (Haushaltsausnahme, Art. 2 Abs. 2 lit. c DSGVO). Sobald Sie die Apps beruflich nutzen oder personenbezogene Daten Dritter eingeben, kann sie gelten. Für professionelle oder geschäftliche Nutzung – insbesondere wenn Sie Texte mit personenbezogenen Daten (Kundennamen, E-Mails, Vertragsinhalte) in das Modell eingeben – gilt Folgendes: Wenn die Verarbeitung vollständig auf dem Gerät läuft, gelangen die Eingaben nicht an einen externen Dienstleister, was die Anforderungen aus Artikel 28 DSGVO (Auftragsverarbeitung) und zur Datenminimierung in der Regel leichter erfüllbar macht als bei Cloud-KI-Diensten. Prüfen Sie dennoch App für App: PocketPal AI bietet optionale In-App-Käufe und eine optionale Anmeldung mit Apple (der Chat selbst braucht kein Konto), und der Entwickler von Private LLM gibt an, es gebe keine Konten und kein Tracking – das sind Herstellerangaben, keine von PromptQuorum geprüften Zusicherungen. Modell-Downloads benötigen eine Internetverbindung. Dies ist keine Rechtsberatung; klären Sie den konkreten Einsatz mit Ihrer oder Ihrem Datenschutzbeauftragten.',
+            a: 'Für rein private Nutzung greift die DSGVO häufig nicht (Haushaltsausnahme, Art. 2 Abs. 2 lit. c DSGVO). Sobald Sie die Apps beruflich nutzen oder personenbezogene Daten Dritter eingeben, kann sie gelten. Für professionelle oder geschäftliche Nutzung – insbesondere wenn Sie Texte mit personenbezogenen Daten (Kundennamen, E-Mails, Vertragsinhalte) in das Modell eingeben – gilt Folgendes: Läuft die Verarbeitung laut Herstellerangaben vollständig auf dem Gerät, gelangen die Eingaben nach diesen Angaben nicht an einen externen Dienstleister; das kann die Anforderungen aus Artikel 28 DSGVO (Auftragsverarbeitung) und zur Datenminimierung in der Regel leichter erfüllbar machen als bei Cloud-KI-Diensten, ersetzt aber keine eigene Prüfung. Prüfen Sie dennoch App für App: PocketPal AI bietet optionale In-App-Käufe und eine optionale Anmeldung mit Apple (der Chat selbst braucht kein Konto), und der Entwickler von Private LLM gibt an, es gebe keine Konten und kein Tracking – das sind Herstellerangaben, keine von PromptQuorum geprüften Zusicherungen. Modell-Downloads benötigen eine Internetverbindung. Dies ist keine Rechtsberatung; klären Sie den konkreten Einsatz mit Ihrer oder Ihrem Datenschutzbeauftragten.',
           },
           {
             q: 'Sind diese iPhone-LLM-Apps für den deutschen Mittelstand geeignet?',
-            a: 'Die Apps können sich für den Einsatz in kleinen und mittleren Unternehmen eignen, etwa zum Zusammenfassen von Texten ohne Internetverbindung oder zum Umformulieren von E-Mails. Denkbare Einsatzszenarien sind Vertriebsmitarbeitende, die offline Angebotszusammenfassungen erstellen, Servicetechniker, die im Feld Dokumentation zusammenfassen, und Büromitarbeitende, die Berichte umformulieren. Weil Eingaben beim On-Device-Chat auf dem Gerät bleiben, entfällt die Übermittlung an einen externen KI-Dienst; ob der Gesamtbetrieb den Datenschutzanforderungen genügt, hängt von Rechtsgrundlage, technisch-organisatorischen Maßnahmen und gegebenenfalls einer Datenschutz-Folgenabschätzung ab. Für regulierte Bereiche (Gesundheitswesen, Finanzdienstleistungen) klären Sie den Einsatz vorab mit Ihrer oder Ihrem Datenschutzbeauftragten. Dies ist keine Rechtsberatung.',
+            a: 'Die Apps können sich für den Einsatz in kleinen und mittleren Unternehmen eignen, etwa zum Zusammenfassen von Texten ohne Internetverbindung oder zum Umformulieren von E-Mails. Denkbare Einsatzszenarien sind Vertriebsmitarbeitende, die offline Angebotszusammenfassungen erstellen, Servicetechniker, die im Feld Dokumentation zusammenfassen, und Büromitarbeitende, die Berichte umformulieren. Laut README bzw. Herstellerangaben bleiben Eingaben beim On-Device-Chat auf dem Gerät, sodass keine Übermittlung an einen externen KI-Dienst stattfindet; ob der Gesamtbetrieb den Datenschutzanforderungen genügt, hängt von Rechtsgrundlage, technisch-organisatorischen Maßnahmen und gegebenenfalls einer Datenschutz-Folgenabschätzung ab. Für regulierte Bereiche (Gesundheitswesen, Finanzdienstleistungen) klären Sie den Einsatz vorab mit Ihrer oder Ihrem Datenschutzbeauftragten. Dies ist keine Rechtsberatung.',
           },
         ],
       },
