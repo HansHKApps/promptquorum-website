@@ -60,7 +60,7 @@ function NumberField({
         step={1}
         value={Number.isFinite(value) ? value : ''}
         onChange={(e) => onChange(e.target.valueAsNumber)}
-        className="w-24 rounded-md border border-primary/20 bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+        className="w-24 rounded-md border border-hub-violet-edge bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
       />
       {hint && <span className="text-[11px] text-text-secondary/70">{hint}</span>}
     </label>
@@ -142,7 +142,7 @@ export function HardwareProfileWidget({
   }
 
   return (
-    <div id="hw-profile-widget" className="rounded-lg border border-primary/20 bg-white p-3 space-y-3 text-sm shadow-sm">
+    <div id="hw-profile-widget" className="rounded-[10px] border border-hub-violet-edge bg-white p-3 space-y-3 text-sm shadow-sm">
       <div className="flex flex-wrap items-end gap-3">
         {(machine === 'dgpu' || machine === 'cpu' || machine === 'ios' || machine === 'android') && (
           <NumberField
@@ -171,14 +171,14 @@ export function HardwareProfileWidget({
         <button
           type="button"
           onClick={handleSave}
-          className="rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-bold text-white hover:bg-primary/90"
+          className="rounded-[10px] border border-hub-violet bg-hub-violet px-3 py-1.5 text-xs font-bold text-white hover:brightness-95"
         >
           {t('hwProfileSaveButton', ui)}
         </button>
         <button
           type="button"
           onClick={() => onExpandedChange(false)}
-          className="rounded-lg border border-primary/20 px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
+          className="rounded-[10px] border border-hub-violet-edge px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-hub-violet-tint"
         >
           {t('hwProfileCancelButton', ui)}
         </button>
@@ -186,7 +186,7 @@ export function HardwareProfileWidget({
           <button
             type="button"
             onClick={handleForget}
-            className="rounded-lg border border-hub-rose-edge bg-hub-rose-tint px-3 py-1.5 text-xs font-semibold text-hub-rose-ink hover:bg-hub-rose-tint"
+            className="rounded-[10px] border border-hub-rose-edge bg-hub-rose-tint px-3 py-1.5 text-xs font-semibold text-hub-rose-ink hover:bg-hub-rose-tint"
           >
             {t('hwProfileForgetButton', ui)}
           </button>

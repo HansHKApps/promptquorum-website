@@ -92,9 +92,9 @@ export function ToolTable({
     <div className="relative overflow-x-auto" ref={scrollRef}>
       <table className="w-full min-w-[960px] border-collapse text-sm">
         <thead>
-          <tr className="border-b-2 border-primary/20">
+          <tr className="border-b-2 border-hub-violet-edge">
             {COLUMNS.map((col, i) => (
-              <th key={col.key} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap${i === 0 ? ' sticky left-0 z-10' : ''}`}>
+              <th key={col.key} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-hub-violet-tint whitespace-nowrap${i === 0 ? ' sticky start-0 z-10' : ''}`}>
                 {col.kind === 'sort' ? (
                   <button
                     type="button"
@@ -121,9 +121,9 @@ export function ToolTable({
               <tr
                 key={app.slug}
                 onClick={() => onOpen(app.slug)}
-                className={`border-b border-primary/10 hover:bg-primary/5 transition-colors cursor-pointer group ${appActivity === 'dead' ? 'grayscale bg-gray-100 text-gray-500' : ''}`}
+                className={`border-b border-hub-violet-edge hover:bg-hub-violet-tint transition-colors cursor-pointer group ${appActivity === 'dead' ? 'grayscale bg-gray-100 text-gray-500' : ''}`}
               >
-                <td className="p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap">
+                <td className="p-2 sm:p-3 sticky start-0 z-10 bg-white group-hover:bg-hub-violet-tint transition-colors font-medium text-text-primary whitespace-nowrap">
                   {app.name}
                   {(appActivity === 'quiet' || appActivity === 'dead') && (
                     <span
@@ -194,7 +194,7 @@ export function ToolTable({
         </tbody>
       </table>
       {isScrollable && (
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent" />
+        <div className="pointer-events-none absolute end-0 top-0 h-full w-8 bg-gradient-to-l rtl:bg-gradient-to-r from-white/80 to-transparent" />
       )}
     </div>
   )

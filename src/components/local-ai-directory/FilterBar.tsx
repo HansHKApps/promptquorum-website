@@ -92,7 +92,7 @@ function FilterGroup({
                   onCheckedChange={() => onToggle(group, value)}
                   className={cn(
                     'flex h-4 w-4 shrink-0 items-center justify-center rounded border',
-                    checked ? 'border-primary bg-primary' : 'border-primary/30 bg-white'
+                    checked ? 'border-hub-violet bg-hub-violet' : 'border-hub-violet-edge bg-white'
                   )}
                 >
                   <Checkbox.Indicator>
@@ -138,7 +138,7 @@ export function FilterBar({
   return (
     <div
       id="local-ai-filter-panel"
-      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-x-6 gap-y-5 border-t border-primary/10 pt-4 mt-3"
+      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-x-6 gap-y-5 border-t border-hub-violet-edge pt-4 mt-3"
     >
       {GROUPS.map((group) => (
         <FilterGroup

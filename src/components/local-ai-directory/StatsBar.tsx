@@ -27,7 +27,7 @@ export function StatsBar({
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-x-6 gap-y-2 border border-primary/10 rounded-xl bg-primary/5 px-4 py-3 text-sm">
+    <div className="flex flex-wrap items-center gap-x-6 gap-y-2 border border-hub-violet-edge rounded-xl bg-hub-violet-tint px-4 py-3 text-sm">
       <p className="font-bold text-text-primary">
         {visible === total ? t('statsToolsTotal', lang, { total }) : t('statsToolsVisible', lang, { visible, total })}
       </p>

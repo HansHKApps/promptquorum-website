@@ -75,7 +75,7 @@ function FounderSocials({ socials, ui }: { socials?: FounderSocialLinks; ui: Dir
 
 function FounderFullQuote({ paragraphs, source, socials, ui }: { paragraphs: string[]; source?: string; socials?: FounderSocialLinks; ui: DirUi }) {
   return (
-    <div className="max-h-64 overflow-y-auto rounded-lg border border-primary/10 bg-primary/5 p-3 space-y-2">
+    <div className="max-h-64 overflow-y-auto rounded-[10px] border border-hub-violet-edge bg-hub-violet-tint p-3 space-y-2">
       {paragraphs.map((p, i) => (
         <p key={i} className="text-sm text-text-secondary italic leading-relaxed">{p}</p>
       ))}
@@ -115,13 +115,13 @@ function FounderClaimBox({ appName, ui }: { appName: string; ui: DirUi }) {
         aria-expanded={expanded}
         className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
       >
-        <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-primary text-[11px] leading-none">
+        <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-hub-violet text-[11px] leading-none">
           {expanded ? '–' : '+'}
         </span>
         {expanded ? t('hideDetails', ui) : t('whyClaimIt', ui)}
       </button>
       {expanded && (
-        <div className="mt-3 space-y-2.5 text-sm text-text-secondary border-t border-primary/10 pt-3">
+        <div className="mt-3 space-y-2.5 text-sm text-text-secondary border-t border-hub-violet-edge pt-3">
           <p>
             <span className="font-semibold text-text-primary">{t('verifiedBadgeTitle', ui)}</span>{' '}
             {t('verifiedBadgeBodyTemplate', ui, { appName })}
@@ -292,7 +292,7 @@ export function ToolDrawer({
                 return (
                   <div
                     role="alert"
-                    className={`mb-4 rounded-lg border-2 p-3 text-sm ${
+                    className={`mb-4 rounded-[10px] border-2 p-3 text-sm ${
                       activity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'
                     }`}
                   >
@@ -361,7 +361,7 @@ export function ToolDrawer({
               </div>
 
               {/* Full details */}
-              <section className="border border-primary/10 rounded-xl p-4 mb-5">
+              <section className="border border-hub-violet-edge rounded-xl p-4 mb-5">
                 <dl className="space-y-2">
                   <DetailRow label={t('detailCategory', ui)} value={app.categories.map((c) => CATEGORY_SUB_LABEL[c][lang]).join(', ')} />
                   <DetailRow label={t('detailInterface', ui)} value={app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')} />
@@ -476,7 +476,7 @@ export function ToolDrawer({
                   list rendered by ArticlesBlock below. */}
               {featureReview && (
                 <section className="mb-5">
-                  <span className="inline-flex w-fit items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-2">
+                  <span className="inline-flex w-fit items-center gap-1 rounded-full border border-hub-violet-edge bg-hub-violet-tint px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-2">
                     {t('featureArticleBadge', ui)}
                   </span>
                   <Link
@@ -514,7 +514,7 @@ export function ToolDrawer({
                         key={alt.slug}
                         type="button"
                         onClick={() => onOpenSlug(alt.slug)}
-                        className="rounded-full border border-primary/20 bg-white px-3 py-1 text-xs font-medium text-text-primary hover:border-primary/50 hover:bg-primary/5"
+                        className="rounded-full border border-hub-violet-edge bg-white px-3 py-1 text-xs font-medium text-text-primary hover:border-hub-violet hover:bg-hub-violet-tint"
                       >
                         {alt.name}
                       </button>

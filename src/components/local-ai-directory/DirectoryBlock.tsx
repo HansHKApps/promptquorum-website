@@ -57,7 +57,7 @@ export function DirectoryBlock({ data, position }: Props) {
               <li key={card.href} className="m-0">
                 <Link
                   href={card.href}
-                  className="block h-full rounded-lg border border-border bg-card px-3 py-2 no-underline transition-colors hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                  className="block h-full rounded-[10px] border border-border bg-card px-3 py-2 no-underline transition-colors hover:border-hub-violet focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
                 >
                   <span className="block text-sm font-semibold text-text-primary">{card.name}</span>
                   {(card.platforms || card.license) && (

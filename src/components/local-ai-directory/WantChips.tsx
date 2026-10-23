@@ -40,8 +40,8 @@ export function WantChips({
             className={cn(
               'inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors',
               isSelected
-                ? 'border-primary bg-primary text-white'
-                : 'border-primary/20 bg-white text-text-primary hover:border-primary/50 hover:bg-primary/5'
+                ? 'border-hub-violet bg-hub-violet text-white'
+                : 'border-hub-violet-edge bg-white text-text-primary hover:border-hub-violet hover:bg-hub-violet-tint'
             )}
           >
             {wantLabels[key]}

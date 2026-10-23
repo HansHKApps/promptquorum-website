@@ -137,14 +137,14 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
           onClick={toggleOpen}
           aria-expanded={open}
           aria-controls="alt-lookup-body"
-          className="ms-auto rounded-lg border border-slate-300 bg-white px-3 py-1 text-xs font-semibold text-slate-700 hover:border-hub-violet hover:text-hub-violet-ink"
+          className="ms-auto rounded-[10px] border border-slate-300 bg-white px-3 py-1 text-xs font-semibold text-slate-700 hover:border-hub-violet hover:text-hub-violet-ink"
         >
           {open ? t('altHide', ui) : t('altShow', ui)}
         </button>
       </div>
 
       <div id="alt-lookup-body" hidden={!open} className="mt-3">
-        <p role="note" className="rounded-lg border border-hub-amber-edge bg-hub-amber-tint px-3 py-2 text-sm text-hub-amber-ink">
+        <p role="note" className="rounded-[10px] border border-hub-amber-edge bg-hub-amber-tint px-3 py-2 text-sm text-hub-amber-ink">
           {t('altScopeNotice', ui, { count: SUPPORTED_APPS.length })}
         </p>
 
@@ -157,23 +157,23 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
             maxLength={80}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t('altPlaceholder', ui)}
-            className="min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-hub-violet focus:outline-none focus:ring-2 focus:ring-hub-violet-edge"
+            className="min-w-0 flex-1 rounded-[10px] border border-slate-300 bg-white px-3 py-2 text-sm focus:border-hub-violet focus:outline-none focus:ring-2 focus:ring-hub-violet-edge"
           />
-          <button type="submit" className="rounded-lg bg-hub-violet-ink px-4 py-2 text-sm font-semibold text-white hover:bg-hub-violet-ink">
+          <button type="submit" className="rounded-[10px] bg-hub-violet-ink px-4 py-2 text-sm font-semibold text-white hover:bg-hub-violet-ink">
             {t('altButton', ui)}
           </button>
         </form>
 
         <div aria-live="polite">
           {miss && (
-            <div className="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">
+            <div className="mt-3 rounded-[10px] border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">
               <div className="flex items-start gap-2">
                 <p className="font-semibold">{t('altMissTitle', ui, { query: submitted })}</p>
                 <button
                   type="button"
                   onClick={clearMiss}
                   aria-label={t('altClearResults', ui)}
-                  className="ms-auto rounded-lg border border-slate-300 bg-white px-2 py-0.5 text-xs font-semibold text-slate-700 hover:border-hub-violet hover:text-hub-violet-ink"
+                  className="ms-auto rounded-[10px] border border-slate-300 bg-white px-2 py-0.5 text-xs font-semibold text-slate-700 hover:border-hub-violet hover:text-hub-violet-ink"
                 >
                   ×
                 </button>
@@ -216,7 +216,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                   >
                     <span
                       aria-hidden="true"
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm font-bold ${
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] text-sm font-bold ${
                         app.category === 'image' ? 'bg-hub-orchid-tint text-hub-orchid-ink' : 'bg-hub-rose-tint text-hub-rose-ink'
                       }`}
                     >
@@ -252,7 +252,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                       <li key={m.slug} className="flex gap-3 border-b border-slate-200 py-3">
                         <span
                           aria-hidden="true"
-                          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-hub-violet-tint text-sm font-bold text-hub-violet-ink"
+                          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-hub-violet-tint text-sm font-bold text-hub-violet-ink"
                         >
                           {tool.name.charAt(0).toUpperCase()}
                         </span>
@@ -304,7 +304,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
                 </button>
               )}
 
-              {selected.gapNote && <p className="mt-4 rounded-lg bg-slate-50 p-3 text-sm text-slate-700">{selected.gapNote}</p>}
+              {selected.gapNote && <p className="mt-4 rounded-[10px] bg-slate-50 p-3 text-sm text-slate-700">{selected.gapNote}</p>}
 
               <p className="mt-4 text-xs text-slate-500">
                 {t('altVerifiedOn', ui, { date: formatDisplayDate(selected.verifiedAt, lang) })} · {t('altSources', ui)}:{' '}

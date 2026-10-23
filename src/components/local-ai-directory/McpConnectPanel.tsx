@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
 const DIFFICULTY_LABEL = { easy: 'Easy setup', medium: 'Medium setup', hard: 'Hard setup' } as const
 
 function Badge({ children }: { children: React.ReactNode }) {
-  return <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-text-primary">{children}</span>
+  return <span className="rounded-full bg-hub-violet-tint px-2 py-0.5 text-xs font-medium text-text-primary">{children}</span>
 }
 
 function CopyButton({ text, label }: { text: string; label: string }) {
@@ -34,7 +34,7 @@ function CopyButton({ text, label }: { text: string; label: string }) {
       type="button"
       onClick={copy}
       aria-label={`Copy ${label}`}
-      className="shrink-0 rounded border border-primary/30 bg-white px-2 py-1 text-xs font-medium text-text-primary hover:bg-primary/5"
+      className="shrink-0 rounded border border-hub-violet-edge bg-white px-2 py-1 text-xs font-medium text-text-primary hover:bg-hub-violet-tint"
     >
       {copied ? 'Copied ✓' : 'Copy'}
     </button>
@@ -48,21 +48,21 @@ function detectOs(): SetupProfile['os'] {
   return 'mac'
 }
 
-const SELECT = 'w-full rounded border border-primary/20 bg-white px-2 py-1.5 text-sm text-text-primary'
+const SELECT = 'w-full rounded border border-hub-violet-edge bg-white px-2 py-1.5 text-sm text-text-primary'
 
 function Panel({ client }: { client: McpClientOnboarding }) {
   const [profile, setProfile] = useState<SetupProfile>({ groupId: 'chat-assistants', subId: '', os: 'mac', ramGb: 16 })
   useEffect(() => setProfile((p) => ({ ...p, os: detectOs() })), [])
   const launchPrompt = buildLaunchPrompt(client, profile)
   return (
-    <div className="mt-3 rounded-lg border border-primary/15 bg-white p-4 text-sm text-text-primary space-y-4">
+    <div className="mt-3 rounded-[10px] border border-hub-violet-edge bg-white p-4 text-sm text-text-primary space-y-4">
       <section>
         <h3 className="font-semibold">What it is</h3>
         <p className="mt-1 text-text-secondary">{client.description}</p>
       </section>
       <section>
         <h3 className="font-semibold">How to connect</h3>
-        <ol className="mt-1 list-decimal pl-5 space-y-1 text-text-secondary">
+        <ol className="mt-1 list-decimal ps-5 space-y-1 text-text-secondary">
           {client.connectSteps.map((s) => (
             <li key={s}>{s}</li>
           ))}
@@ -119,7 +119,7 @@ function Panel({ client }: { client: McpClientOnboarding }) {
         </div>
         <p className="mt-2 text-text-secondary">This ready-made prompt goes to your AI in one go:</p>
         <div className="mt-1 flex items-start gap-2">
-          <blockquote className="min-w-0 flex-1 whitespace-pre-line rounded border-l-4 border-primary/40 bg-primary/5 px-3 py-2 text-xs">{launchPrompt}</blockquote>
+          <blockquote className="min-w-0 flex-1 whitespace-pre-line rounded border-l-4 border-hub-violet-edge bg-hub-violet-tint px-3 py-2 text-xs">{launchPrompt}</blockquote>
           <CopyButton text={launchPrompt} label="prompt" />
         </div>
         {client.openWithPrompt && (
@@ -127,7 +127,7 @@ function Panel({ client }: { client: McpClientOnboarding }) {
             href={client.openWithPrompt(launchPrompt)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-block rounded border border-primary bg-primary px-3 py-1.5 text-xs font-medium text-white hover:opacity-90"
+            className="mt-2 inline-block rounded border border-hub-violet bg-hub-violet px-3 py-1.5 text-xs font-medium text-white hover:opacity-90"
           >
             Open in {client.displayName} with this prompt ↗
           </a>
@@ -159,7 +159,7 @@ export function McpConnectPanel() {
     <section
       aria-labelledby="mcp-connect-heading"
       className={cn(
-        'mb-6 scroll-mt-24 rounded-xl border border-primary/15 bg-primary/5 p-4 transition-shadow',
+        'mb-6 scroll-mt-24 rounded-xl border border-hub-violet-edge bg-hub-violet-tint p-4 transition-shadow',
         highlighted && 'animate-pulse ring-4 ring-primary ring-offset-2'
       )}
     >
@@ -188,8 +188,8 @@ export function McpConnectPanel() {
               setOpenId(openId === c.id ? null : c.id)
             }}
             className={cn(
-              'flex flex-col items-start gap-1 rounded-lg border px-3 py-2 text-left text-sm font-medium',
-              openId === c.id ? 'border-primary bg-primary text-white' : 'border-primary/20 bg-white text-text-primary hover:bg-primary/5',
+              'flex flex-col items-start gap-1 rounded-[10px] border px-3 py-2 text-left text-sm font-medium',
+              openId === c.id ? 'border-hub-violet bg-hub-violet text-white' : 'border-hub-violet-edge bg-white text-text-primary hover:bg-hub-violet-tint',
               highlighted && 'ring-2 ring-primary/60'
             )}
           >

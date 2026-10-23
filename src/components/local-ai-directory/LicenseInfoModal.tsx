@@ -66,7 +66,7 @@ export function LicenseInfoModal({
                       <p>{t('licenseModalMultipleNote', lang)}</p>
                       <ul className="space-y-2">
                         {families.map((f) => (
-                          <li key={f.key} className="rounded-lg border border-primary/10 bg-primary/[0.03] p-2.5">
+                          <li key={f.key} className="rounded-[10px] border border-hub-violet-edge bg-primary/[0.03] p-2.5">
                             <span className="block text-xs font-bold text-text-primary mb-0.5">{f.name[lang] ?? f.name.en}</span>
                             <span className="text-xs leading-relaxed">{f.summary[lang] ?? f.summary.en}</span>
                           </li>
@@ -87,7 +87,7 @@ export function LicenseInfoModal({
                 href={LICENSE_ARTICLE_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 flex items-center justify-center rounded-lg border border-primary bg-primary px-3 py-2 text-sm font-bold text-white hover:bg-primary/90"
+                className="mt-4 flex items-center justify-center rounded-[10px] border border-hub-violet bg-hub-violet px-3 py-2 text-sm font-bold text-white hover:brightness-95"
               >
                 {t('licenseModalReadGuide', lang)}
               </a>

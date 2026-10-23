@@ -151,12 +151,12 @@ export function ToolCard({
 
   return (
     <div
-      className={`group relative flex flex-col text-left h-full overflow-hidden rounded-xl cursor-pointer transition-all hover:shadow-lg hover:-translate-y-0.5 ${
+      className={`group relative flex flex-col text-left h-full overflow-hidden rounded-[18px] cursor-pointer transition-all hover:shadow-[0_14px_28px_-10px_var(--hub-violet)] hover:-translate-y-0.5 ${
         appActivity === 'dead'
           ? 'border border-gray-300 bg-gray-100 grayscale opacity-80 hover:opacity-100 hover:border-gray-400'
           : isFounderReviewed
           ? 'border-2 border-hub-amber bg-gradient-to-b from-hub-amber-tint to-white shadow-[0_6px_18px_-8px_var(--hub-amber)] hover:border-hub-amber hover:shadow-[0_12px_26px_-8px_var(--hub-amber)]'
-          : 'border border-primary/10 bg-white hover:border-primary/40'
+          : 'border border-hub-violet-edge bg-white hover:border-hub-violet'
       }`}
       role="button"
       tabIndex={0}
@@ -173,7 +173,7 @@ export function ToolCard({
         aria-hidden="true"
       />
       <span
-        className="absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full bg-primary/5 text-primary/50 transition-colors group-hover:bg-primary/10 group-hover:text-primary"
+        className="absolute top-3 end-3 flex h-5 w-5 items-center justify-center rounded-full bg-hub-violet-tint text-primary/50 transition-colors group-hover:bg-hub-violet-tint group-hover:text-primary"
         aria-hidden="true"
       >
         <ChevronRightIcon className="h-3 w-3" />
@@ -191,7 +191,7 @@ export function ToolCard({
         )}
         <div className="flex items-start gap-3 mb-2.5">
           <span
-            className={`shrink-0 flex h-9 w-9 items-center justify-center rounded-lg text-sm font-extrabold ${accent.avatar}`}
+            className={`shrink-0 flex h-9 w-9 items-center justify-center rounded-[10px] text-sm font-extrabold ${accent.avatar}`}
             aria-hidden="true"
           >
             {app.name.charAt(0).toUpperCase()}
@@ -214,7 +214,7 @@ export function ToolCard({
         <p className="text-sm text-text-secondary leading-relaxed line-clamp-2 mb-3">{tagline}</p>
 
         {app.founder && (
-          <p className="text-xs italic text-text-secondary/80 leading-relaxed line-clamp-2 mb-3 border-l-2 border-primary/20 pl-2">
+          <p className="text-xs italic text-text-secondary/80 leading-relaxed line-clamp-2 mb-3 border-l-2 border-hub-violet-edge pl-2">
             {/* Prefer his own verbatim words when we have them; `why` is a
                 PromptQuorum paraphrase and shouldn't be shown in quotation
                 marks as if it were a direct quote. */}
@@ -280,12 +280,12 @@ export function ToolCard({
         <div className="mt-auto space-y-2.5">
           <div className="flex flex-wrap gap-1">
             {app.interfaces.map((i) => (
-              <span key={i} className="rounded-md bg-primary/5 border border-primary/10 px-1.5 py-0.5 text-[11px] font-medium text-primary">
+              <span key={i} className="rounded-full bg-hub-violet-tint border border-hub-violet-edge px-2 py-0.5 text-[11px] font-medium text-hub-violet-ink">
                 {INTERFACE_LABEL[i][lang]}
               </span>
             ))}
             {app.platforms?.map((p) => (
-              <span key={p} className="rounded-md bg-gray-50 border border-gray-200 px-1.5 py-0.5 text-[11px] font-medium text-text-secondary">
+              <span key={p} className="rounded-full bg-gray-50 border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-text-secondary">
                 {PLATFORM_LABEL[p] ?? p}
               </span>
             ))}
@@ -312,7 +312,7 @@ export function ToolCard({
                   e.stopPropagation()
                   setLicenseModalOpen(true)
                 }}
-                className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+                className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 hover:border-hub-violet hover:bg-hub-violet-tint hover:text-primary"
               >
                 {app.license}
               </button>
@@ -361,7 +361,7 @@ export function ToolCard({
           )}
 
           {review && (
-            <span className="inline-flex w-fit items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-1.5">
+            <span className="inline-flex w-fit items-center gap-1 rounded-full border border-hub-violet-edge bg-hub-violet-tint px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-1.5">
               {t('featureArticleBadge', lang)}
             </span>
           )}
@@ -372,7 +372,7 @@ export function ToolCard({
                 <Link
                   href={review}
                   onClick={stop}
-                  className="w-full text-center rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-bold underline underline-offset-2 text-white hover:bg-primary/90"
+                  className="w-full text-center rounded-[10px] border border-hub-violet bg-hub-violet shadow-[inset_0_-2px_0_rgba(0,0,0,.16),0_6px_14px_-6px_var(--hub-violet)] hover:-translate-y-0.5 transition-all px-3 py-1.5 text-xs font-bold underline underline-offset-2 text-white hover:brightness-95"
                 >
                   {t('readReview', lang)}
                 </Link>
@@ -380,7 +380,7 @@ export function ToolCard({
                   <Link
                     href={handsOn}
                     onClick={stop}
-                    className="w-full text-center rounded-lg border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/5"
+                    className="w-full text-center rounded-[10px] border border-hub-violet-edge px-3 py-1.5 text-xs font-semibold text-primary hover:bg-hub-violet-tint"
                   >
                     {t('handsOnTest', lang)}
                   </Link>
@@ -389,7 +389,7 @@ export function ToolCard({
                   <Link
                     href={guideHref}
                     onClick={stop}
-                    className="w-full text-center rounded-lg border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/5"
+                    className="w-full text-center rounded-[10px] border border-hub-violet-edge px-3 py-1.5 text-xs font-semibold text-primary hover:bg-hub-violet-tint"
                   >
                     {t('readGuide', lang)}
                   </Link>
@@ -401,7 +401,7 @@ export function ToolCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={stop}
-                    className="flex-1 min-w-[45%] text-center rounded-lg border border-primary/20 px-2 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
+                    className="flex-1 min-w-[45%] text-center rounded-[10px] border border-hub-violet-edge px-2 py-1.5 text-xs font-semibold text-text-primary hover:bg-hub-violet-tint"
                   >
                     {link.label}
                   </a>
@@ -416,7 +416,7 @@ export function ToolCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={stop}
-                    className="flex-1 min-w-[45%] text-center rounded-lg border border-primary bg-primary px-2 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
+                    className="flex-1 min-w-[45%] text-center rounded-[10px] border border-hub-violet bg-hub-violet shadow-[inset_0_-2px_0_rgba(0,0,0,.16),0_6px_14px_-6px_var(--hub-violet)] hover:-translate-y-0.5 transition-all px-2 py-1.5 text-xs font-semibold text-white hover:brightness-95"
                   >
                     {link.label}
                   </a>
@@ -427,7 +427,7 @@ export function ToolCard({
                     e.stopPropagation()
                     onOpen(app.slug)
                   }}
-                  className="flex-1 min-w-[45%] text-center rounded-lg border border-primary/20 px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
+                  className="flex-1 min-w-[45%] text-center rounded-[10px] border border-hub-violet-edge px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-hub-violet-tint"
                 >
                   {t('detailsButton', lang)}
                 </button>
