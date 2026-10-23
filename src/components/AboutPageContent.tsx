@@ -10,6 +10,7 @@ import { getHomeStats } from '@/lib/home/stats'
 import { MCP_SERVER_URL } from '@/lib/mcp/clients'
 import { ABOUT_COPY } from '@/lib/about/copy'
 import { fillTokens } from '@/lib/about/types'
+import { HUB_TONES, cycleTone, type HubTone } from '@/components/hub-template/palette'
 
 const SITE = 'https://www.promptquorum.com'
 const GROUP_COUNT = CATEGORY_GROUPS.length
@@ -49,11 +50,11 @@ const SOCIAL = [
   ['GitHub', 'https://github.com/HansHKApps'],
 ]
 
-const CARD = 'bg-card border border-primary/20 rounded-2xl p-6'
-const H2 = 'text-2xl sm:text-3xl font-bold text-text-primary mb-3'
+const CARD = 'bg-white border border-hub-violet-edge rounded-xl p-6'
+const H2 = 'text-2xl sm:text-3xl font-bold tracking-tight text-text-primary mb-3'
 const LEAD = 'text-lg text-text-secondary leading-relaxed mb-8'
 const BODY = 'text-text-secondary leading-relaxed'
-const LINK = 'text-primary hover:text-primary/80 font-medium'
+const LINK = 'text-hub-violet hover:text-hub-violet-ink font-semibold'
 
 const ICON_PROPS = {
   className: 'w-6 h-6',
@@ -145,13 +146,14 @@ function ArrowIcon({ className, flip }: { className: string; flip: boolean }) {
 }
 function CheckIcon() {
   return (
-    <svg className="w-5 h-5 text-primary shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <svg className="w-5 h-5 text-hub-violet shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
       <path d="M4 10.5l4 4 8-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
 
 interface PartProps {
+  tone: HubTone
   verb: string
   icon: ReactNode
   title: string
@@ -165,22 +167,22 @@ interface PartProps {
   via: string
 }
 
-function Part({ verb, icon, title, oneLiner, children, connectsLabel, connects, href, cta, arrow, via }: PartProps) {
+function Part({ tone, verb, icon, title, oneLiner, children, connectsLabel, connects, href, cta, arrow, via }: PartProps) {
   return (
-    <div className={`${CARD} flex flex-col`}>
+    <div className={`rounded-xl border p-6 flex flex-col transition hover:shadow-lg hover:-translate-y-0.5 ${HUB_TONES[tone].tint} ${HUB_TONES[tone].edge}`}>
       <div className="flex items-center gap-3 mb-3">
-        <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">{icon}</div>
+        <div className={`w-11 h-11 rounded-xl text-white flex items-center justify-center shrink-0 ${HUB_TONES[tone].solid}`}>{icon}</div>
         <div>
-          <div className="text-xs font-bold text-primary uppercase tracking-widest">{verb}</div>
+          <div className={`text-xs font-bold uppercase tracking-widest ${HUB_TONES[tone].ink}`}>{verb}</div>
           <h3 className="text-lg font-bold text-text-primary leading-snug">{title}</h3>
         </div>
       </div>
       <p className="text-sm font-semibold text-text-primary mb-2">{oneLiner}</p>
       <p className={`${BODY} mb-3`}>{children}</p>
-      <p className="text-sm text-text-secondary border-l-2 border-primary/30 pl-3 mb-4">
+      <p className={`text-sm text-text-secondary border-s-2 ps-3 mb-4 ${HUB_TONES[tone].solidBorder}`}>
         <strong className="text-text-primary">{connectsLabel}</strong> {connects}
       </p>
-      <AboutTrackedLink href={href} via={via} className={`${LINK} text-sm mt-auto`}>
+      <AboutTrackedLink href={href} via={via} className={`${LINK} ${HUB_TONES[tone].ink} text-sm mt-auto`}>
         {cta} {arrow}
       </AboutTrackedLink>
     </div>
@@ -258,8 +260,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
         }}
       />
 
-      <div className="min-h-screen bg-surface pt-24 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="min-h-screen bg-surface pb-20">
           <AboutHeroClient
             lang={lang}
             kicker={copy.kicker}
@@ -276,6 +277,8 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             ctaMcp={copy.ctaMcp}
           />
 
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-16">
+
           {/* Three waves: the theory */}
           <section id="three-waves" className="mb-20 scroll-mt-24">
             <h2 className={H2}>{copy.wavesH2}</h2>
@@ -287,14 +290,14 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 return (
                   <li key={w.n} className="flex flex-col md:flex-row md:items-center gap-2">
                     <div className="flex flex-col items-center text-center gap-1.5 w-40 mx-auto md:mx-0">
-                      <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                      <div className={`w-14 h-14 rounded-full text-white flex items-center justify-center ${HUB_TONES[cycleTone(i)].solid}`}>
                         <Icon />
                       </div>
-                      <div className="text-[11px] font-bold text-primary uppercase tracking-widest">{w.n}</div>
+                      <div className={`text-[11px] font-bold uppercase tracking-widest ${HUB_TONES[cycleTone(i)].ink}`}>{w.n}</div>
                       <div className="text-sm font-semibold text-text-primary leading-tight">{w.product}</div>
                     </div>
                     {i < copy.waves.length - 1 && (
-                      <div className="flex items-center justify-center text-primary/40 shrink-0">
+                      <div className="flex items-center justify-center text-hub-violet-edge shrink-0">
                         <ArrowIcon className="w-5 h-5 rotate-90 md:rotate-0" flip={rtl} />
                       </div>
                     )}
@@ -307,25 +310,25 @@ export function AboutPageContent({ lang }: { lang: Language }) {
               {copy.waves.map((w, i) => (
                 <li key={w.n} className="flex flex-col md:flex-row md:flex-1 items-stretch gap-3 md:gap-2">
                   <div
-                    className={`flex-1 rounded-2xl p-6 border ${
-                      i === copy.waves.length - 1 ? 'bg-primary/10 border-primary shadow-sm' : 'bg-card border-primary/20'
+                    className={`flex-1 rounded-xl p-6 border ${HUB_TONES[cycleTone(i)].tint} ${
+                      i === copy.waves.length - 1 ? `${HUB_TONES[cycleTone(i)].solidBorder} shadow-sm` : HUB_TONES[cycleTone(i)].edge
                     }`}
                   >
-                    <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{w.n}</div>
+                    <div className={`text-xs font-bold uppercase tracking-widest mb-1 ${HUB_TONES[cycleTone(i)].ink}`}>{w.n}</div>
                     <h3 className="text-xl font-bold text-text-primary">{w.title}</h3>
-                    <p className="text-primary font-semibold mb-3">{w.solved}</p>
+                    <p className={`font-semibold mb-3 ${HUB_TONES[cycleTone(i)].ink}`}>{w.solved}</p>
                     <p className={`${BODY} mb-4 text-sm`}>{w.text}</p>
-                    <p className="text-sm text-text-secondary border-t border-primary/20 pt-3">
+                    <p className={`text-sm text-text-secondary border-t pt-3 ${HUB_TONES[cycleTone(i)].edge}`}>
                       <strong className="text-text-primary">{copy.theCatchLabel}</strong> {w.catch}
                     </p>
                     {i === copy.waves.length - 1 && (
-                      <p className="mt-4 inline-block rounded-full bg-primary text-white text-xs font-semibold px-3 py-1">
+                      <p className={`mt-4 inline-block rounded-full text-white text-xs font-semibold px-3 py-1 ${HUB_TONES[cycleTone(i)].solid}`}>
                         {copy.waveHighlightBadge}
                       </p>
                     )}
                   </div>
                   {i < copy.waves.length - 1 && (
-                    <div className="flex items-center justify-center text-primary/60 shrink-0" aria-hidden="true">
+                    <div className="flex items-center justify-center text-hub-violet shrink-0" aria-hidden="true">
                       <ArrowIcon className="w-6 h-6 rotate-90 md:rotate-0" flip={rtl} />
                     </div>
                   )}
@@ -339,7 +342,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
           {/* Philosophy */}
           <section id="why-local" className="mb-20 scroll-mt-24">
             <h2 className={H2}>{copy.believeH2}</h2>
-            <div className="border-l-4 border-primary pl-5 mb-8">
+            <div className="border-s-4 border-hub-violet ps-5 mb-8">
               <p className="text-xl font-semibold text-text-primary mb-2">{copy.believeQuoteTitle}</p>
               <p className={BODY}>
                 {copy.believeQuotePre} <strong className="text-text-primary">{copy.believeQuoteBold}</strong> {copy.believeQuotePost}
@@ -366,6 +369,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               <Part
+                tone={cycleTone(0)}
                 verb={copy.findLabel}
                 icon={<SearchIcon />}
                 title={copy.partFindTitle}
@@ -380,6 +384,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 {partFindBody}
               </Part>
               <Part
+                tone={cycleTone(1)}
                 verb={copy.learnLabel}
                 icon={<BookIcon />}
                 title={copy.partLearnTitle}
@@ -394,6 +399,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 {partLearnBody}
               </Part>
               <Part
+                tone={cycleTone(2)}
                 verb={copy.useLabel}
                 icon={<LayersIcon />}
                 title={copy.partUseTitle}
@@ -408,6 +414,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 {copy.partUseBody}
               </Part>
               <Part
+                tone={cycleTone(3)}
                 verb={copy.askLabel}
                 icon={<PlugIcon />}
                 title={copy.partAskTitle}
@@ -429,7 +436,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
               <ol className="space-y-3">
                 {copy.practiceSteps.map((text, i) => (
                   <li key={practiceStepLabels[i]} className="flex gap-3">
-                    <span className="shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center">
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-hub-violet text-white text-sm font-bold flex items-center justify-center">
                       {i + 1}
                     </span>
                     <p className={BODY}>
@@ -454,7 +461,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                     <AboutTrackedLink
                       href={hrefs[i]}
                       via={vias[i]}
-                      className="block bg-card border border-primary/20 rounded-xl px-4 py-3 text-text-primary italic hover:border-primary/40 transition-colors"
+                      className="block bg-hub-violet-tint border border-hub-violet-edge rounded-xl px-4 py-3 text-text-primary italic hover:border-hub-violet transition-colors"
                     >
                       {text}
                     </AboutTrackedLink>
@@ -472,7 +479,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             </div>
 
             <div className="grid sm:grid-cols-5 gap-4">
-              <div className={`${CARD} sm:col-span-3`}>
+              <div className="rounded-xl border p-6 sm:col-span-3 bg-hub-olive-tint border-hub-olive-edge">
                 <h3 className="text-lg font-bold text-text-primary mb-3">{copy.forYouIfH3}</h3>
                 <ul className="space-y-3">
                   {copy.forYouList.map((f) => (
@@ -483,7 +490,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                   ))}
                 </ul>
               </div>
-              <div className={`${CARD} sm:col-span-2`}>
+              <div className="rounded-xl border p-6 sm:col-span-2 bg-hub-amber-tint border-hub-amber-edge">
                 <h3 className="text-lg font-bold text-text-primary mb-3">{copy.notForYouH3}</h3>
                 <p className={`${BODY} text-sm`}>{copy.notForYouText}</p>
               </div>
@@ -549,7 +556,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 </dd>
               </div>
             </dl>
-            <pre dir="ltr" className="bg-card border border-primary/20 rounded-xl p-4 text-sm overflow-x-auto text-left mb-4">
+            <pre dir="ltr" className="bg-white border border-hub-violet-edge rounded-xl p-4 text-sm overflow-x-auto text-left mb-4">
               <code>{MCP_CONFIG}</code>
             </pre>
             <p className={`${BODY} mb-4 text-sm`}>
@@ -571,7 +578,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
           {/* Founder */}
           <section className="mb-20">
             <h2 className={H2}>{copy.founderH2}</h2>
-            <div className={`${CARD} mt-6 flex flex-col sm:flex-row gap-6 sm:gap-8`}>
+            <div className="rounded-xl border p-6 mt-6 flex flex-col sm:flex-row gap-6 sm:gap-8 bg-hub-azure-tint border-hub-azure-edge">
               <Image
                 src="/images/hans-kuepper.jpg"
                 alt={copy.founderImgAlt}
@@ -581,7 +588,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
               />
               <div>
                 <h3 className="text-xl font-bold text-text-primary">{'Hans Küpper'}</h3>
-                <p className="text-sm text-primary font-medium mb-4">{copy.founderTitle}</p>
+                <p className="text-sm text-hub-azure-ink font-semibold mb-4">{copy.founderTitle}</p>
                 <div className={`${BODY} space-y-4`}>
                   <p>{copy.founderBioP1}</p>
                   <p>{copy.founderBioP2}</p>
