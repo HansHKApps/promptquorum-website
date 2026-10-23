@@ -68,6 +68,7 @@ import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
 import { article as a_strata_review } from './articles/strata-review'
 import { article as a_speechbrain_review } from './articles/speechbrain-review'
+import { article as a_libredb_studio_review } from './articles/libredb-studio-review'
 import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_obscurify_review } from './articles/obscurify-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
@@ -683,6 +684,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'surfsense-review':                              a_surfsense_review,
   'strata-review':                                 a_strata_review,
   'speechbrain-review':                            a_speechbrain_review,
+  'libredb-studio-review':                         a_libredb_studio_review,
   'caelum-review':                                 a_caelum_review,
   'obscurify-review':                              a_obscurify_review,
   'anyllm-review':                                 a_anyllm_review,

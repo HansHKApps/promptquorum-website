@@ -979,6 +979,7 @@ const HUB_THEMES: Array<{
       'local-llm-code-development-compared',
       'claude-code-local-review',
       'little-coder-review',
+      'libredb-studio-review',
     ],
   },
   {

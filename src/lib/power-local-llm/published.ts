@@ -566,6 +566,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'strata-review',
   // SpeechBrain review (Voice & Audio, speech toolkit) — 2026-10-23
   'speechbrain-review',
+  // LibreDB Studio review (Coding Assistants, SQL editor with optional local AI) — 2026-10-23
+  'libredb-studio-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
