@@ -2839,7 +2839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
       theme: 'Best Models',
-      title: '2026 年最佳纯 CPU 本地 LLM：5 款模型，无需 GPU',
+      title: '2026年最佳纯CPU本地LLM：5款模型，无需GPU',
       seoTitle: '无GPU跑LLM：Phi-4 Mini估算15–25 tok/s',
       intro: '在 8–32 GB 内存的现代电脑上，纯 CPU 推理可以流畅运行 3–8B 模型。本文比较的五款模型中，Phi-4 Mini（3.8B，文件 2.5 GB）在双通道内存下估算为 15–25 tok/s，Llama 3.2 3B（2.0 GB）估算为 18–30 tok/s，Qwen3 8B（5.2 GB）估算为 8–15 tok/s。这些是 PromptQuorum 根据内存带宽推算的估值，并非实验室实测。通过 Ollama、LM Studio 或 llama.cpp 即可运行，无需 GPU。',
       metaDescription: '无需GPU也能跑大模型：Phi-4 Mini估算15-25 tok/s，另有Llama 3.2 3B、Gemma 4 E2B、Qwen3 8B与DeepSeek-R1 7B，附内存需求。',
@@ -2908,7 +2908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['模型', '参数量', '文件（Ollama）', '最低内存', '估算 tok/s', '最适合'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-zh.webp',
-          imageCaption: '2026 年最佳纯 CPU 本地 LLM：5 款模型，无需 GPU（按文件大小估算 tok/s）',
+          imageCaption: '2026年最佳纯CPU本地LLM：5款模型，无需GPU（按文件大小估算 tok/s）',
         },
         speedComparison: {
           id: 'speed-comparison',
