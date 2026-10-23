@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Model', 'Params', 'File (Ollama)', 'Min RAM', 'Est. tok/s', 'Best For'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-en.webp',
-          imageCaption: 'Estimated CPU-only speed by model file size: Phi-4 Mini and Llama 3.2 3B have the smallest files, so they should generate fastest on the same RAM.',
+          imageCaption: 'Best CPU-only local LLMs 2026: estimated tok/s by model file size',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Bandwidth', 'Model', 'Ceiling tok/s', 'Est. tok/s'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-en.webp',
-          imageCaption: 'Memory bandwidth sets the speed ceiling: dual-channel DDR4 delivers 51.2 GB/s, an RTX 3060 360 GB/s, so a GPU is typically 5–10× faster.',
+          imageCaption: 'CPU-only LLM vs GPU speed: memory bandwidth 51.2 GB/s (DDR4 dual) vs 360 GB/s (RTX 3060)',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modelo', 'Parámetros', 'Archivo (Ollama)', 'RAM mín.', 'tok/s est.', 'Mejor para'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-es.webp',
-          imageCaption: 'Velocidad estimada solo CPU según el tamaño del archivo del modelo: Phi-4 Mini y Llama 3.2 3B tienen los archivos más pequeños, así que deberían generar más rápido con la misma RAM.',
+          imageCaption: 'Mejores LLM locales solo CPU 2026: tok/s estimados según el tamaño del archivo',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Ancho de banda', 'Modelo', 'Techo tok/s', 'tok/s est.'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-es.webp',
-          imageCaption: 'El ancho de banda de memoria fija el techo de velocidad: DDR4 de doble canal ofrece 51.2 GB/s, una RTX 3060 360 GB/s, así que una GPU suele ser 5–10× más rápida.',
+          imageCaption: 'LLM solo CPU frente a GPU: ancho de banda 51.2 GB/s (DDR4 doble) frente a 360 GB/s (RTX 3060)',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['النموذج', 'المعاملات', 'الحجم (Ollama)', 'أدنى RAM', 'tok/s (تقدير)', 'الأفضل لـ'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-ar.webp',
-          imageCaption: 'السرعة المقدّرة على CPU فقط بحسب حجم ملف النموذج: لدى Phi-4 Mini وLlama 3.2 3B أصغر الملفات، لذا يُتوقع أن يولّدا النص أسرع على الذاكرة نفسها.',
+          imageCaption: 'أفضل LLM محلية بمعالج فقط 2026: tok/s تقديرية بحسب حجم ملف النموذج',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['العتاد', 'عرض النطاق', 'النموذج', 'الحد الأقصى tok/s', 'tok/s (تقدير)'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-ar.webp',
-          imageCaption: 'يحدد عرض النطاق الترددي للذاكرة سقف السرعة: تقدّم DDR4 ثنائية القناة 51.2 GB/s وبطاقة RTX 3060 تقدّم 360 GB/s، لذا فإن GPU عادةً أسرع بمقدار 5–10×.',
+          imageCaption: 'سرعة LLM على CPU مقابل GPU: عرض النطاق 51.2 GB/s (DDR4 ثنائية) مقابل 360 GB/s (RTX 3060)',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modelo', 'Params', 'Arquivo (Ollama)', 'RAM mín.', 'Tok/s est.', 'Melhor para'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-pt.webp',
-          imageCaption: 'Velocidade estimada só com CPU por tamanho de arquivo: Phi-4 Mini e Llama 3.2 3B têm os menores arquivos, então devem gerar mais rápido na mesma RAM.',
+          imageCaption: 'Melhores LLMs locais só com CPU 2026: tok/s estimados por tamanho de arquivo',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Largura de banda', 'Modelo', 'Teto tok/s', 'Tok/s est.'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-pt.webp',
-          imageCaption: 'A largura de banda da memória define o teto de velocidade: DDR4 dual-channel entrega 51.2 GB/s e uma RTX 3060 entrega 360 GB/s, então uma GPU costuma ser 5–10× mais rápida.',
+          imageCaption: 'LLM só com CPU vs GPU: largura de banda 51.2 GB/s (DDR4 dual) vs 360 GB/s (RTX 3060)',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modell', 'Parameter', 'Datei (Ollama)', 'Min. RAM', 'Geschätzt Tok/s', 'Am besten für'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-de.webp',
-          imageCaption: 'Geschätzte CPU-only-Geschwindigkeit nach Modelldateigröße: Phi-4 Mini und Llama 3.2 3B haben die kleinsten Dateien und sollten daher mit demselben RAM am schnellsten erzeugen.',
+          imageCaption: 'Beste lokale CPU-only-LLMs 2026: geschätzte Tok/s nach Modelldateigröße',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Bandbreite', 'Modell', 'Obergrenze Tok/s', 'Geschätzt Tok/s'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-de.webp',
-          imageCaption: 'Die Speicherbandbreite setzt die Geschwindigkeitsobergrenze: Dual-Channel-DDR4 liefert 51,2 GB/s, eine RTX 3060 360 GB/s, daher ist eine GPU typischerweise 5–10-mal schneller.',
+          imageCaption: 'CPU-only-LLM vs. GPU: Speicherbandbreite 51,2 GB/s (DDR4 Dual) vs. 360 GB/s (RTX 3060)',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -2136,7 +2136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modèle', 'Paramètres', 'Fichier (Ollama)', 'RAM min.', 'tok/s est.', 'Idéal pour'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-fr.webp',
-          imageCaption: 'Vitesse estimée sur CPU seul selon la taille du fichier : Phi-4 Mini et Llama 3.2 3B ont les fichiers les plus petits, donc ils devraient générer le plus vite avec la même RAM.',
+          imageCaption: 'Meilleurs LLM locaux sur CPU seul 2026 : tok/s estimés selon la taille du fichier',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -2151,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Matériel', 'Bande passante', 'Modèle', 'Plafond tok/s', 'tok/s est.'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-fr.webp',
-          imageCaption: 'La bande passante mémoire fixe le plafond de vitesse : la DDR4 double canal offre 51.2 GB/s, une RTX 3060 360 GB/s ; un GPU est donc généralement 5–10× plus rapide.',
+          imageCaption: 'LLM sur CPU seul vs GPU : bande passante 51.2 GB/s (DDR4 double) vs 360 GB/s (RTX 3060)',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -2522,7 +2522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['モデル', 'パラメータ数', 'ファイル（Ollama）', '最小 RAM', '推定トークン/秒', '用途'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-ja.webp',
-          imageCaption: 'モデルのファイルサイズ別に見た CPU のみの推定速度：Phi-4 Mini と Llama 3.2 3B はファイルが最も小さいため、同じ RAM なら最も速く生成するはずです。',
+          imageCaption: 'CPU専用ローカルLLMおすすめ2026：ファイルサイズ別の推定tok/s',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -2537,7 +2537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['ハードウェア', '帯域', 'モデル', '上限トークン/秒', '推定トークン/秒'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-ja.webp',
-          imageCaption: 'メモリ帯域が速度の上限を決めます：デュアルチャネル DDR4 は 51.2 GB/s、RTX 3060 は 360 GB/s で、GPU は通常 5～10 倍高速です。',
+          imageCaption: 'CPU専用LLMとGPUの速度：メモリ帯域51.2 GB/s（DDR4）対360 GB/s（RTX 3060）',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -2908,7 +2908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['模型', '参数量', '文件（Ollama）', '最低内存', '估算 tok/s', '最适合'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-zh.webp',
-          imageCaption: '按模型文件大小估算的纯 CPU 速度：Phi-4 Mini 和 Llama 3.2 3B 的文件最小，因此在相同内存下应当生成最快。',
+          imageCaption: 'CPU 专用本地 LLM 推荐 2026：按模型文件大小估算的 tok/s',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -2923,7 +2923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['硬件', '带宽', '模型', '上限 tok/s', '估算 tok/s'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-zh.webp',
-          imageCaption: '内存带宽决定速度上限：双通道 DDR4 为 51.2 GB/s，RTX 3060 为 360 GB/s，因此 GPU 通常快 5–10 倍。',
+          imageCaption: 'CPU 专用 LLM 与 GPU 速度：内存带宽 51.2 GB/s（DDR4 双通道）对 360 GB/s（RTX 3060）',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -3308,7 +3308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['모델', '파라미터', '파일(Ollama)', '최소 RAM', '추정 tok/s', '최적 용도'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-ko.webp',
-          imageCaption: '모델 파일 크기별 CPU 전용 추정 속도: Phi-4 Mini와 Llama 3.2 3B는 파일이 가장 작아 같은 RAM에서 가장 빠르게 생성할 것으로 예상됩니다.',
+          imageCaption: 'CPU 전용 로컬 LLM 추천 2026: 모델 파일 크기별 추정 tok/s',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -3323,7 +3323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['하드웨어', '대역폭', '모델', '상한 tok/s', '추정 tok/s'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-ko.webp',
-          imageCaption: '메모리 대역폭이 속도 상한을 정합니다. 듀얼 채널 DDR4는 51.2 GB/s, RTX 3060은 360 GB/s이므로 GPU는 보통 5–10배 빠릅니다.',
+          imageCaption: 'CPU 전용 LLM과 GPU 속도: 메모리 대역폭 51.2 GB/s(DDR4) 대 360 GB/s(RTX 3060)',
         },
         ramRequirements: {
           id: 'ram-requirements',
