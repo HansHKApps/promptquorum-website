@@ -293,6 +293,7 @@ https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/boltai-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
+https://www.promptquorum.com/power-local-llm/caelum-hands-on-test
 https://www.promptquorum.com/power-local-llm/caelum-review
 https://www.promptquorum.com/power-local-llm/camel-review
 https://www.promptquorum.com/power-local-llm/candle-vllm-review
@@ -552,6 +553,7 @@ https://www.promptquorum.com/power-local-llm/stableswarmui-review
 https://www.promptquorum.com/power-local-llm/styletts-2-review
 https://www.promptquorum.com/power-local-llm/superagi-review
 https://www.promptquorum.com/power-local-llm/surf-review
+https://www.promptquorum.com/power-local-llm/surfsense-review
 https://www.promptquorum.com/power-local-llm/swerve-ai-review
 https://www.promptquorum.com/power-local-llm/swiftlm-review
 https://www.promptquorum.com/power-local-llm/tabby-review
