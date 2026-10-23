@@ -48,12 +48,28 @@ const BUDGET = {
 const budgetFor = (l) => (l === 'ja' || l === 'zh' ? BUDGET.cjk : l === 'ko' ? BUDGET.ko : l === 'ar' ? BUDGET.ar : BUDGET.latin)
 const PLACEHOLDER = /\b(to be added|TODO|TBD|lorem ipsum)\b/i
 
+import { changedArticleFiles, articleUrlPath } from './changed-article-files.mjs'
+
 const args = process.argv.slice(2)
 const strict = args.includes('--strict')
 const flag = (n) => args.find((a) => a.startsWith(`--${n}=`))?.split('=')[1]
 const base = flag('base') ?? DEFAULT_BASE
-const localeList = (flag('locales') ?? 'en').split(',').filter(Boolean)
+const changedArg = args.find((a) => a === '--changed' || a.startsWith('--changed='))
+// --changed: check only articles that differ from the git ref (default origin/main), in all 9 locales
+// unless --locales is given. The gate reads served HTML, so point --base at a local production build
+// (--base=http://localhost:3000): the live site does not have unmerged or undeployed changes.
+const localeList = (flag('locales') ?? (changedArg ? LOCALES.join(',') : 'en')).split(',').filter(Boolean)
 const explicit = args.filter((a) => /^https?:\/\//.test(a))
+let pathsToCheck = DEFAULT_PATHS
+if (changedArg) {
+  const res = changedArticleFiles(changedArg.split('=')[1])
+  pathsToCheck = res.files.map(articleUrlPath).filter(Boolean)
+  console.log(`--changed: ${pathsToCheck.length} article(s) differ from ${res.ref}`)
+  if (!pathsToCheck.length) {
+    console.log('Nothing to check. (prompt-engineering articles live in one content.ts and are not covered by --changed.)')
+    process.exit(0)
+  }
+}
 
 const decode = (s) =>
   s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'")
@@ -167,6 +183,15 @@ async function check(url) {
   const imgs = main.match(/<img\b[^>]*>/gi) ?? []
   const noAlt = imgs.filter((t) => !/\balt="[^"]+"/i.test(t))
   if (noAlt.length) add('C1', `${noAlt.length} <img> in main without alt text (e.g. ${attr(noAlt[0], 'src').slice(0, 60)})`)
+  // C1b: alt that is present but useless. The renderers fall back to generic strings
+  // ("PromptQuorum article diagram", "Article hero image"), which pass C1 but say nothing.
+  const alts = imgs.map((t) => attr(t, 'alt').trim()).filter(Boolean)
+  const GENERIC = /^(promptquorum )?(article )?(diagram|illustration|hero image|image|photo|picture|screenshot)$|article (diagram|illustration|hero image)$/i
+  const generic = alts.filter((a) => GENERIC.test(a) || /\.(png|webp|jpe?g|svg|gif)$/i.test(a) || a.length < 10)
+  if (generic.length) add('C1b', `${generic.length} generic/too-short alt text (e.g. "${generic[0]}")`)
+  const counts = alts.reduce((m, a) => m.set(a, (m.get(a) ?? 0) + 1), new Map())
+  const dupes = [...counts].filter(([a, n]) => n > 1 && !GENERIC.test(a))
+  if (dupes.length) add('C1b', `${dupes.length} alt text(s) reused on several images (e.g. "${dupes[0][0].slice(0, 60)}" ×${dupes[0][1]})`)
   const ph = text.match(PLACEHOLDER)
   if (ph) add('C2', `placeholder string "${ph[0]}" in the page text`)
 
@@ -175,7 +200,7 @@ async function check(url) {
 
 const targets = explicit.length
   ? explicit
-  : DEFAULT_PATHS.flatMap((p) => localeList.map((l) => `${base}${l === 'en' ? '' : `/${l}`}${p}`))
+  : pathsToCheck.flatMap((p) => localeList.map((l) => `${base}${l === 'en' ? '' : `/${l}`}${p}`))
 
 let total = 0
 for (const url of targets) {
