@@ -53,7 +53,7 @@ export function ActiveFilterChips({
           key={chip.key}
           type="button"
           onClick={chip.onRemove}
-          className="inline-flex items-center gap-1 rounded-full border border-primary/20 bg-primary/5 px-2.5 py-1 text-xs font-medium text-text-primary hover:border-primary/40"
+          className="inline-flex items-center gap-1 rounded-full border border-hub-violet-edge bg-hub-violet-tint px-2.5 py-1 text-xs font-medium text-text-primary hover:border-hub-violet"
         >
           {chip.label}
           <CloseIcon className="h-3 w-3 text-text-secondary" />

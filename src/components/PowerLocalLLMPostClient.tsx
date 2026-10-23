@@ -1463,7 +1463,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             {article.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-text-secondary flex-wrap">
-            <time dateTime={article.dateModified ?? article.publishDate} className={skinCls.updatedBadge}>
+            <time dateTime={article.dateModified ?? article.publishDate} className={isDirectoryPage ? 'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : skinCls.updatedBadge}>
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
@@ -1562,7 +1562,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
 
         {/* Affiliate disclosure — neutral third-party-link notice */}
         {article.affiliateDisclosure && (
-          <p className="affiliate-disclosure text-xs text-text-secondary bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 mb-6">
+          <p className={`affiliate-disclosure text-xs text-text-secondary px-4 py-2.5 mb-6 ${isDirectoryPage ? 'bg-hub-violet-tint border border-hub-violet-edge rounded-[14px]' : 'bg-gray-50 border border-gray-200 rounded-lg'}`}>
             {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
           </p>
         )}
@@ -1831,7 +1831,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         {/* Marketing CTA suppressed cluster-wide until /power-local-llm launches publicly. */}
 
         <p className="text-center mt-16 pt-8 border-t border-primary/20">
-          <a href={powerLLMHubPath(lang as any)} className="text-primary hover:text-primary/80 text-sm">
+          <a href={powerLLMHubPath(lang as any)} className={isDirectoryPage ? 'text-hub-violet-ink hover:underline text-sm font-semibold' : 'text-primary hover:text-primary/80 text-sm'}>
             {POST_UI.backLink[lang] ?? POST_UI.backLink['en']}
           </a>
         </p>

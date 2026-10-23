@@ -38,7 +38,7 @@ export function SubcategoryChips({
 
   return (
     <div
-      className="flex flex-wrap items-center gap-1.5 rounded-lg border border-dashed border-primary/25 bg-primary/[0.03] px-3 py-2.5 animate-in fade-in slide-in-from-top-1 duration-150"
+      className="flex flex-wrap items-center gap-1.5 rounded-[10px] border border-dashed border-primary/25 bg-primary/[0.03] px-3 py-2.5 animate-in fade-in slide-in-from-top-1 duration-150"
       role="group"
       aria-label={t('narrowDownAriaLabel', ui)}
     >
@@ -54,8 +54,8 @@ export function SubcategoryChips({
             className={cn(
               'inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-medium transition-colors',
               isSelected
-                ? 'border-primary bg-primary text-white'
-                : 'border-primary/20 bg-white text-text-primary hover:border-primary/50 hover:bg-primary/5'
+                ? 'border-hub-violet bg-hub-violet text-white'
+                : 'border-hub-violet-edge bg-white text-text-primary hover:border-hub-violet hover:bg-hub-violet-tint'
             )}
           >
             {CATEGORY_SUB_LABEL[value as CategorySubKey]?.[lang] ?? value}

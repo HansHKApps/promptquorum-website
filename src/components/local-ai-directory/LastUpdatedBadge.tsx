@@ -58,7 +58,7 @@ export function LastUpdatedBadge({
         aria-expanded={open}
         className={
           variant === 'chip'
-            ? 'inline-flex w-fit items-center gap-1 rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-[11px] text-text-secondary hover:border-primary/40 hover:bg-primary/5 hover:text-primary'
+            ? 'inline-flex w-fit items-center gap-1 rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-[11px] text-text-secondary hover:border-hub-violet hover:bg-hub-violet-tint hover:text-primary'
             : 'inline-flex w-fit items-center gap-1 text-text-secondary underline decoration-dotted decoration-text-secondary/50 underline-offset-2 hover:text-primary'
         }
       >
@@ -68,7 +68,7 @@ export function LastUpdatedBadge({
       {open && (
         <div
           role="tooltip"
-          className="absolute bottom-full left-0 z-20 mb-1.5 w-56 rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-[11px] leading-snug text-text-secondary shadow-lg"
+          className="absolute bottom-full left-0 z-20 mb-1.5 w-56 rounded-[10px] border border-gray-200 bg-white px-2.5 py-1.5 text-[11px] leading-snug text-text-secondary shadow-lg"
         >
           {t('lastUpdatedTooltip', lang)}
         </div>

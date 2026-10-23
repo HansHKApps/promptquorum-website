@@ -1671,6 +1671,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-10-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hilbertraum-review",
         "title": "HilbertRaum Review: A Portable, Offline AI Workspace for Chat and Your Own Documents",
         "url": "/power-local-llm/hilbertraum-review",
@@ -1678,7 +1686,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "BoltAI": {
@@ -5829,6 +5837,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -5890,14 +5906,6 @@
         "url": "/power-local-llm/ollitert-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ai-on-device-review",
-        "title": "AI on Device Review: A $4.99 Apple Intelligence-Only App",
-        "url": "/power-local-llm/ai-on-device-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
     "totalCount": 40,
@@ -5941,6 +5949,14 @@
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -6006,14 +6022,6 @@
         "url": "/power-local-llm/anythingllm-mobile-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chapper-review",
-        "title": "Chapper Review: AI & LM Studio Client for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/chapper-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
     "totalCount": 21,
@@ -6046,6 +6054,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "galaxy-s26-local-ai-on-device-2026",
         "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
@@ -6059,14 +6075,6 @@
         "title": "Private Mind Review: Open-Source Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/private-mind-review",
         "dateModified": "2026-10-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-08-22",
         "tier": "mentioned"
       }
     ],
@@ -6616,7 +6624,7 @@
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -10729,6 +10737,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "obscurify-review",
         "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
@@ -10782,17 +10798,9 @@
         "url": "/power-local-llm/best-ai-courses-certifications-2026",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 206,
+    "totalCount": 207,
     "capped": true
   },
   "Qdrant": {

@@ -38,7 +38,7 @@ const DEFAULT_CLASSES: SkinClasses = {
   tocLabel: 'text-xs font-bold text-primary uppercase tracking-widest mb-3',
   tocLink: 'text-sm text-primary hover:text-primary/80 transition-colors',
   updatedBadge:
-    'inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold',
+    'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 border-emerald-300 text-emerald-700',
 }
 
 // Same layout utilities, hub colour tokens. The H2 gains a left accent rule;
@@ -52,7 +52,7 @@ const HUB_CLASSES: SkinClasses = {
   tocLabel: 'text-xs font-bold text-hub-violet-ink uppercase tracking-widest mb-3',
   tocLink: 'text-sm text-hub-violet-ink hover:text-hub-violet transition-colors',
   updatedBadge:
-    'inline-flex items-center gap-1.5 bg-hub-indigo-tint border border-hub-indigo-edge text-hub-indigo-ink px-2.5 py-0.5 rounded-full text-xs font-semibold',
+    'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-indigo-tint border-hub-indigo-edge text-hub-indigo-ink',
 }
 
 // Theme → hub tone. Full literal class strings so Tailwind can see them.
