@@ -10,11 +10,11 @@ export function HandsOnTestsBlock({ lang = 'en' }: { lang?: Language }) {
   const tests = getHandsOnFeed(lang)
 
   if (tests.length === 0) {
-    return <HomeCard size="md" icon="test" title={t('handsOnTitle', lang)} emptyState emptyMessage={t('handsOnEmpty', lang)} />
+    return <HomeCard size="md" tone="orchid" icon="test" title={t('handsOnTitle', lang)} emptyState emptyMessage={t('handsOnEmpty', lang)} />
   }
 
   return (
-    <HomeCard size="md" icon="test" title={t('handsOnTitle', lang)}>
+    <HomeCard size="md" tone="orchid" icon="test" title={t('handsOnTitle', lang)}>
       <ExpandableList
         lang={lang}
         items={tests.map((x) => ({

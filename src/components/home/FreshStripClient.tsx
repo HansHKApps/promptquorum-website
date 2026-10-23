@@ -49,7 +49,7 @@ export function FreshStripClient({ items, labels }: { items: FreshStripItem[]; l
   return (
     <section
       aria-labelledby="home-fresh-title"
-      className="mb-8 rounded-xl border-2 border-primary bg-primary/10 p-4 sm:p-5 shadow-sm"
+      className="mb-8 rounded-xl border-2 border-hub-rose bg-hub-rose-tint p-4 sm:p-5 shadow-sm"
     >
       <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
         <h2 id="home-fresh-title" className="text-lg sm:text-xl font-extrabold text-text-primary">
@@ -64,13 +64,13 @@ export function FreshStripClient({ items, labels }: { items: FreshStripItem[]; l
             <li key={item.key}>
               <Link
                 href={item.url}
-                className="block h-full rounded-lg border border-primary/30 bg-card p-3 transition hover:border-primary hover:shadow-md"
+                className="block h-full rounded-lg border border-hub-rose-edge bg-white p-3 transition hover:border-hub-rose hover:shadow-md"
               >
                 <div className="mb-1.5 flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-primary px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-white">
+                  <span className="rounded-full bg-hub-rose px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-white">
                     {labels.newPill}
                   </span>
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-primary">{item.kindLabel}</span>
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-hub-rose-ink">{item.kindLabel}</span>
                 </div>
                 <p className="text-sm font-extrabold text-text-primary line-clamp-2">{item.title}</p>
                 {item.description && <p className="mt-0.5 text-xs text-text-secondary line-clamp-2">{item.description}</p>}

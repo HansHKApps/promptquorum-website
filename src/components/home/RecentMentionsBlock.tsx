@@ -19,7 +19,7 @@ export function RecentMentionsBlock({ lang = 'en' }: { lang?: Language }) {
   })
 
   if (mentions.length === 0) {
-    return <HomeCard size="sm" variant="stat" icon="mentions" title={t('mentionsTitle', lang)} emptyState emptyMessage={t('mentionsEmpty', lang)} />
+    return <HomeCard size="sm" variant="stat" tone="indigo" icon="mentions" title={t('mentionsTitle', lang)} emptyState emptyMessage={t('mentionsEmpty', lang)} />
   }
 
   const current = mentions.slice(0, 10)
@@ -60,7 +60,7 @@ export function RecentMentionsBlock({ lang = 'en' }: { lang?: Language }) {
   ]
 
   return (
-    <HomeCard size="sm" variant="stat" icon="mentions" title={t('mentionsTitle', lang)}>
+    <HomeCard size="sm" variant="stat" tone="indigo" icon="mentions" title={t('mentionsTitle', lang)}>
       <BatchedList lang={lang} batches={batches} />
     </HomeCard>
   )

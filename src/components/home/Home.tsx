@@ -35,11 +35,11 @@ import { getHomeStats } from '@/lib/home/stats'
 export function Home({ lang }: { lang: Language }) {
   return (
     <main dir={getLangDir(lang)}>
-      <div className="border-b border-hero-edge bg-linear-to-r from-hero-from to-hero-to pt-16">
-        <div className="container mx-auto px-4 py-6 max-w-7xl">
-          <h1 className="text-2xl font-bold text-text-primary">{t('pageH1', lang)}</h1>
-          <h2 className="mt-1.5 text-base font-semibold text-primary">{t('heroTagline', lang)}</h2>
-          <p className="mt-1 text-xs text-text-secondary">{t('heroPlainExplainer', lang)}</p>
+      <div className="border-b border-hub-violet-edge bg-hub-violet-tint pt-16">
+        <div className="container mx-auto px-4 py-10 max-w-7xl">
+          <h1 className="max-w-[900px] text-[28px] font-bold leading-[1.18] tracking-tight text-text-primary sm:text-[32px] lg:text-[34px]">{t('pageH1', lang)}</h1>
+          <h2 className="mt-3 max-w-[760px] text-lg font-semibold leading-relaxed text-hub-violet-ink">{t('heroTagline', lang)}</h2>
+          <p className="mt-2 max-w-[760px] text-sm text-text-secondary">{t('heroPlainExplainer', lang)}</p>
         </div>
       </div>
       <div className="container mx-auto px-4 py-8 max-w-7xl">

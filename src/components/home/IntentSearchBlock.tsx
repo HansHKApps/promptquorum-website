@@ -5,7 +5,7 @@ import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { useSearch } from '@/components/search/useSearch'
 import { HomeIcon } from './HomeIcon'
-import { SURFACE_CLASS } from './homeSurface'
+import { SURFACE_CLASS, HUB_BUTTON_CLASS } from './homeSurface'
 import { t, type HomeUiKey } from './home-i18n'
 
 type Intent = 'compare' | 'learn' | 'find-app'
@@ -47,8 +47,8 @@ export function IntentSearchBlock({ lang = 'en', appCount }: { lang?: Language; 
 
   return (
     <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full flex flex-col`}>
-      <h2 className="text-xl font-bold text-text-primary mb-1 flex items-center gap-2">
-        <HomeIcon name="search" size={20} />
+      <h2 className="text-[22px] font-bold tracking-tight text-text-primary mb-1 flex items-center gap-2">
+        <HomeIcon name="search" size={20} className="text-hub-violet" />
         {t('searchHeading', lang)}
       </h2>
       <p className="text-sm text-text-secondary mb-4">{t('searchSubheading', lang)}</p>
@@ -64,8 +64,8 @@ export function IntentSearchBlock({ lang = 'en', appCount }: { lang?: Language; 
             }}
             className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
               intent === i.key
-                ? 'border-primary bg-primary text-primary-foreground'
-                : 'border-border text-text-secondary hover:border-primary/50'
+                ? 'border-hub-violet bg-hub-violet text-white'
+                : 'border-hub-violet-edge bg-white text-hub-violet-ink hover:border-hub-violet'
             }`}
           >
             {t(i.labelKey, lang)}
@@ -80,9 +80,9 @@ export function IntentSearchBlock({ lang = 'en', appCount }: { lang?: Language; 
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => void loadIndex()}
           placeholder={t('searchPlaceholderTemplate', lang, { example: activeExample })}
-          className="min-w-0 flex-1 rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/40"
+          className="min-w-0 flex-1 rounded-[10px] border border-hub-violet-edge bg-white px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/40"
         />
-        <button type="submit" className="shrink-0 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
+        <button type="submit" className="shrink-0 rounded-[10px] bg-hub-violet px-4 py-2 text-sm font-bold text-white">
           {t('searchButton', lang)}
         </button>
       </form>
@@ -102,7 +102,7 @@ export function IntentSearchBlock({ lang = 'en', appCount }: { lang?: Language; 
 
       <Link
         href={lang === 'en' ? '/directory' : `/${lang}/directory`}
-        className="mt-6 lg:mt-auto block w-full rounded-xl bg-primary px-6 py-5 text-primary-foreground transition-colors hover:bg-primary/90"
+        className={`mt-6 lg:mt-auto block w-full rounded-xl px-6 py-5 ${HUB_BUTTON_CLASS}`}
       >
         <span className="block text-lg font-bold leading-snug">{t('directoryCtaTitle', lang)}</span>
         <span className="mt-1 block text-sm font-semibold opacity-90">
