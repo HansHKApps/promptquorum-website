@@ -5341,5 +5341,57 @@
       "period": "2026-09-24..2026-10-21"
     },
     "deployedAt": null
+  },
+  {
+    "id": "a8d52832-5490-4acf-8e0a-47f22416f4fb",
+    "slug": "/power-local-llm/best-local-ai-app-low-end-pc",
+    "date": "2026-10-23T19:34:39.654Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Local AI Apps for 8GB RAM PCs 2026: Tested CPU-Only",
+        "new": "Best Local AI for Low-End PCs: 8GB RAM, CPU-Only (2026)"
+      }
+    ],
+    "queries": [
+      "local ai for low end pc",
+      "low end local ai",
+      "local ai cpu only",
+      "8gb ram no gpu"
+    ],
+    "baseline": {
+      "position": 4.03,
+      "impressions": 5924,
+      "clicks": 83,
+      "ctr": 0.014010803511141121,
+      "period": "2026-09-24..2026-10-21"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "68f387b6-f89b-4aef-8212-5b2a267b8ded",
+    "slug": "/power-local-llm/best-local-ai-app-low-end-pc",
+    "date": "2026-10-23T19:34:39.758Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Ollama, Jan, llama.cpp and GPT4All tested on 8 GB RAM + integrated graphics. Tokens/sec, memory pressure, exact settings for no-GPU local AI. August 2026.",
+        "new": "Ollama, Jan, llama.cpp and GPT4All compared on 8 GB RAM, no GPU: community-reported tokens/sec, best model per app and CPU-only speed settings."
+      }
+    ],
+    "queries": [
+      "local ai for low end pc",
+      "low end local ai",
+      "local ai cpu only",
+      "8gb ram no gpu"
+    ],
+    "baseline": {
+      "position": 4.03,
+      "impressions": 5924,
+      "clicks": 83,
+      "ctr": 0.014010803511141121,
+      "period": "2026-09-24..2026-10-21"
+    },
+    "deployedAt": null
   }
 ]

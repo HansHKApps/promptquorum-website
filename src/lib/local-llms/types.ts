@@ -51,6 +51,7 @@ export interface LLMSection {
   tableFormat?: boolean
   image?: string
   imageCaption?: string
+  imageAlt?: string
   imagePlaceholder?: boolean
   codeBlock?: string
   codeLanguage?: string
