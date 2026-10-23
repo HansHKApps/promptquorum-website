@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-en.webp',
     title: 'How to Run Qwen2.5-VL and Qwen3-VL Locally in 2026: Document OCR & Vision Guide',
     seoTitle: 'Run Qwen2.5-VL & Qwen3-VL Locally 2026: Ollama Setup Guide',
-    intro: 'Qwen2.5-VL and Qwen3-VL are Alibaba\'s open vision-language models for reading documents, screenshots, charts and photos, and both run locally through Ollama. Qwen3-VL 8B is a 6.1 GB download (`ollama pull qwen3-vl:8b`) and Qwen2.5-VL 7B is a 6.0 GB download (`ollama pull qwen2.5vl:7b`). Qwen2-VL, the model this page originally covered, is the older generation and has no official Ollama library entry, so `ollama pull qwen2-vl:7b` fails. This guide gives the verified tags, sizes and licences, setup with Ollama and LM Studio, and practical prompts for Chinese, Japanese and Korean document extraction.',
+    intro: 'Qwen2.5-VL and Qwen3-VL are Alibaba\'s open vision-language models for reading documents, screenshots, charts and photos, and both run locally through Ollama. Qwen3-VL 8B is a 6.2 GB download (`ollama pull qwen3-vl:8b`) and Qwen2.5-VL 7B is a 6.0 GB download (`ollama pull qwen2.5vl:7b`). Qwen2-VL, the model this page originally covered, is the older generation and has no official Ollama library entry, so `ollama pull qwen2-vl:7b` fails. This guide gives the verified tags, sizes and licences, setup with Ollama and LM Studio, and practical prompts for Chinese, Japanese and Korean document extraction.',
     metaDescription: 'Run Qwen2.5-VL and Qwen3-VL locally via Ollama: verified tags, download sizes, licences, setup steps and document OCR. Qwen2-VL is superseded.',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -46,14 +46,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**Run `ollama pull qwen3-vl:8b` (6.1 GB, needs Ollama 0.12.7 or newer) or `ollama pull qwen2.5vl:7b` (6.0 GB, needs Ollama 0.7.0 or newer) to read documents and images locally.** The older tag `qwen2-vl:7b` is not in the official Ollama library, so use Qwen2.5-VL or Qwen3-VL instead; the images you send are processed by your local Ollama server rather than uploaded to a cloud API.',
+    leadAnswerBlock: '**Run `ollama pull qwen3-vl:8b` (6.2 GB, needs Ollama 0.12.7 or newer) or `ollama pull qwen2.5vl:7b` (6.0 GB, needs Ollama 0.7.0 or newer) to read documents and images locally.** The older tag `qwen2-vl:7b` is not in the official Ollama library, so use Qwen2.5-VL or Qwen3-VL instead; the images you send are processed by your local Ollama server rather than uploaded to a cloud API.',
     quickAnswerTop: {
       en: {
         question: 'How do I run Qwen vision models locally in 2026?',
         answer: 'Update Ollama, run `ollama pull qwen3-vl:8b` (or `qwen2.5vl:7b` on an older Ollama), then `ollama run qwen3-vl:8b` and type an image file path inside your prompt. For a GUI, search for Qwen3-VL or Qwen2.5-VL in LM Studio and pick a build whose model card lists vision support. Both models are downloads of about 6 GB; leave extra memory for the context and the image encoder.',
         bullets: [
           'Ollama version: 0.12.7+ for Qwen3-VL, 0.7.0+ for Qwen2.5-VL (per the Ollama library pages)',
-          'Pull a model: ollama pull qwen3-vl:8b (6.1 GB) or ollama pull qwen2.5vl:7b (6.0 GB)',
+          'Pull a model: ollama pull qwen3-vl:8b (6.2 GB) or ollama pull qwen2.5vl:7b (6.0 GB)',
           'Attach images: type the file path in the prompt (CLI) or send a base64 images array (API)',
           'Dead tag: qwen2-vl:7b is not in the official Ollama library — use qwen2.5vl or qwen3-vl',
           'Licences: Qwen3-VL and Qwen2.5-VL 7B/32B are Apache 2.0 on their Hugging Face cards; Qwen2.5-VL 3B and 72B use Qwen licences',
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Use Qwen3-VL or Qwen2.5-VL, not Qwen2-VL**: both have official Ollama library entries (`qwen3-vl`, `qwen2.5vl`), while `ollama.com/library/qwen2-vl` returns a 404 and `ollama pull qwen2-vl:7b` fails.',
-          '**Qwen3-VL 8B is a 6.1 GB download** (`ollama pull qwen3-vl:8b`, needs Ollama 0.12.7+); **Qwen2.5-VL 7B is 6.0 GB** (`ollama pull qwen2.5vl:7b`, needs Ollama 0.7.0+).',
+          '**Qwen3-VL 8B is a 6.2 GB download** (`ollama pull qwen3-vl:8b`, needs Ollama 0.12.7+); **Qwen2.5-VL 7B is 6.0 GB** (`ollama pull qwen2.5vl:7b`, needs Ollama 0.7.0+).',
           '**Sizes**: Qwen3-VL 2B, 4B, 8B, 30B-A3B, 32B and 235B-A22B (1.9 GB to 143 GB); Qwen2.5-VL 3B, 7B, 32B and 72B (3.2 GB to 49 GB). These are download sizes from the Ollama library pages.',
           '**Context**: the Ollama pages list a 256K context window for Qwen3-VL and 125K for Qwen2.5-VL; the context you can actually use depends on your memory.',
           '**Licences differ by size**: Qwen3-VL and Qwen2.5-VL 7B/32B are Apache 2.0 on their Hugging Face cards; Qwen2.5-VL 3B and 72B use Qwen licences. Read the card before commercial use.',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'These are Qwen\'s own descriptions, not PromptQuorum measurements. Accuracy on your documents — especially small fonts, handwriting or low-quality scans — varies, so test a few representative pages before you build on it.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Run Qwen vision models locally with `ollama pull qwen3-vl:8b` (6.1 GB) or `ollama pull qwen2.5vl:7b` (6.0 GB); the old `qwen2-vl` tag is no longer in the official Ollama library.' },
+          { type: 'one-sentence', text: 'Run Qwen vision models locally with `ollama pull qwen3-vl:8b` (6.2 GB) or `ollama pull qwen2.5vl:7b` (6.0 GB); the old `qwen2-vl` tag is no longer in the official Ollama library.' },
           { type: 'plain-terms', text: 'A vision-language model reads images instead of generating them. You give it a photo or a scanned page and it returns text — a description, an answer, or the extracted contents.' },
         ],
       },
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Model': 'Qwen3-VL 2B', 'Ollama tag': 'qwen3-vl:2b', 'Download': '1.9 GB', 'Licence (HF card)': 'Apache 2.0' },
           { 'Model': 'Qwen3-VL 4B', 'Ollama tag': 'qwen3-vl:4b', 'Download': '3.3 GB', 'Licence (HF card)': 'Apache 2.0' },
-          { 'Model': 'Qwen3-VL 8B', 'Ollama tag': 'qwen3-vl:8b', 'Download': '6.1 GB', 'Licence (HF card)': 'Apache 2.0' },
+          { 'Model': 'Qwen3-VL 8B', 'Ollama tag': 'qwen3-vl:8b', 'Download': '6.2 GB', 'Licence (HF card)': 'Apache 2.0' },
           { 'Model': 'Qwen3-VL 30B-A3B (MoE)', 'Ollama tag': 'qwen3-vl:30b', 'Download': '20 GB', 'Licence (HF card)': 'Apache 2.0' },
           { 'Model': 'Qwen3-VL 32B', 'Ollama tag': 'qwen3-vl:32b', 'Download': '21 GB', 'Licence (HF card)': 'Apache 2.0' },
           { 'Model': 'Qwen3-VL 235B-A22B (MoE)', 'Ollama tag': 'qwen3-vl:235b', 'Download': '143 GB', 'Licence (HF card)': 'Apache 2.0' },
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Hardware Requirements for Qwen Vision Models',
         items: [
-          '**Download sizes are weights only**: Qwen3-VL 8B is 6.1 GB and Qwen2.5-VL 7B is 6.0 GB. The context cache and the image encoder need extra memory that grows with context length and image size, so leave headroom above the download size.',
+          '**Download sizes are weights only**: Qwen3-VL 8B is 6.2 GB and Qwen2.5-VL 7B is 6.0 GB. The context cache and the image encoder need extra memory that grows with context length and image size, so leave headroom above the download size.',
           '**Smaller options**: Qwen3-VL 2B (1.9 GB) and 4B (3.3 GB) or Qwen2.5-VL 3B (3.2 GB) suit small GPUs and laptops; expect lower accuracy than the 7B–8B models.',
           '**Larger options**: Qwen3-VL 30B-A3B (20 GB), Qwen3-VL 32B and Qwen2.5-VL 32B (21 GB) and Qwen2.5-VL 72B (49 GB) need a large GPU, several GPUs, or Apple Silicon with large unified memory.',
           '**Partial offload**: when a model does not fit in VRAM, Ollama can place part of it in system RAM; this works but is noticeably slower.',
@@ -168,7 +168,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -352,7 +352,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-es.webp',
     title: 'Cómo ejecutar Qwen2.5-VL y Qwen3-VL en local en 2026: guía de OCR de documentos y visión',
     seoTitle: 'Ejecutar Qwen2.5-VL y Qwen3-VL en local 2026: guía de Ollama',
-    intro: 'Qwen2.5-VL y Qwen3-VL son los modelos abiertos de visión-lenguaje de Alibaba para leer documentos, capturas de pantalla, gráficos y fotos, y ambos se ejecutan en local con Ollama. Qwen3-VL 8B es una descarga de 6.1 GB (`ollama pull qwen3-vl:8b`) y Qwen2.5-VL 7B es una descarga de 6.0 GB (`ollama pull qwen2.5vl:7b`). Qwen2-VL, el modelo que esta página trataba originalmente, es la generación anterior y no tiene entrada oficial en la biblioteca de Ollama, por lo que `ollama pull qwen2-vl:7b` falla. Esta guía ofrece las etiquetas, tamaños y licencias verificados, la configuración con Ollama y LM Studio y prompts prácticos para extraer documentos en chino, japonés y coreano.',
+    intro: 'Qwen2.5-VL y Qwen3-VL son los modelos abiertos de visión-lenguaje de Alibaba para leer documentos, capturas de pantalla, gráficos y fotos, y ambos se ejecutan en local con Ollama. Qwen3-VL 8B es una descarga de 6.2 GB (`ollama pull qwen3-vl:8b`) y Qwen2.5-VL 7B es una descarga de 6.0 GB (`ollama pull qwen2.5vl:7b`). Qwen2-VL, el modelo que esta página trataba originalmente, es la generación anterior y no tiene entrada oficial en la biblioteca de Ollama, por lo que `ollama pull qwen2-vl:7b` falla. Esta guía ofrece las etiquetas, tamaños y licencias verificados, la configuración con Ollama y LM Studio y prompts prácticos para extraer documentos en chino, japonés y coreano.',
     metaDescription: 'Ejecuta Qwen2.5-VL y Qwen3-VL en local con Ollama: etiquetas, tamaños y licencias verificados, instalación y OCR de documentos. Qwen2-VL está superado.',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -387,14 +387,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**Ejecuta `ollama pull qwen3-vl:8b` (6.1 GB, requiere Ollama 0.12.7 o posterior) o `ollama pull qwen2.5vl:7b` (6.0 GB, requiere Ollama 0.7.0 o posterior) para leer documentos e imágenes en local.** La etiqueta antigua `qwen2-vl:7b` no está en la biblioteca oficial de Ollama, así que usa Qwen2.5-VL o Qwen3-VL; las imágenes que envías las procesa tu servidor Ollama local en lugar de subirse a una API en la nube.',
+    leadAnswerBlock: '**Ejecuta `ollama pull qwen3-vl:8b` (6.2 GB, requiere Ollama 0.12.7 o posterior) o `ollama pull qwen2.5vl:7b` (6.0 GB, requiere Ollama 0.7.0 o posterior) para leer documentos e imágenes en local.** La etiqueta antigua `qwen2-vl:7b` no está en la biblioteca oficial de Ollama, así que usa Qwen2.5-VL o Qwen3-VL; las imágenes que envías las procesa tu servidor Ollama local en lugar de subirse a una API en la nube.',
     quickAnswerTop: {
       es: {
         question: '¿Cómo ejecuto modelos de visión de Qwen en local en 2026?',
         answer: 'Actualiza Ollama, ejecuta `ollama pull qwen3-vl:8b` (o `qwen2.5vl:7b` con una versión anterior de Ollama), luego `ollama run qwen3-vl:8b` y escribe la ruta de una imagen dentro de tu prompt. Para una interfaz gráfica, busca Qwen3-VL o Qwen2.5-VL en LM Studio y elige una variante cuya ficha indique compatibilidad con visión. Ambos modelos son descargas de unos 6 GB; deja memoria extra para el contexto y el codificador de imágenes.',
         bullets: [
           'Versión de Ollama: 0.12.7+ para Qwen3-VL, 0.7.0+ para Qwen2.5-VL (según las páginas de la biblioteca de Ollama)',
-          'Descargar un modelo: ollama pull qwen3-vl:8b (6.1 GB) o ollama pull qwen2.5vl:7b (6.0 GB)',
+          'Descargar un modelo: ollama pull qwen3-vl:8b (6.2 GB) o ollama pull qwen2.5vl:7b (6.0 GB)',
           'Adjuntar imágenes: escribe la ruta del archivo en el prompt (CLI) o envía un array base64 de images (API)',
           'Etiqueta obsoleta: qwen2-vl:7b no está en la biblioteca oficial de Ollama — usa qwen2.5vl o qwen3-vl',
           'Licencias: Qwen3-VL y Qwen2.5-VL 7B/32B son Apache 2.0 en sus fichas de Hugging Face; Qwen2.5-VL 3B y 72B usan licencias de Qwen',
@@ -423,7 +423,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**Usa Qwen3-VL o Qwen2.5-VL, no Qwen2-VL**: ambos tienen entrada oficial en la biblioteca de Ollama (`qwen3-vl`, `qwen2.5vl`), mientras que `ollama.com/library/qwen2-vl` devuelve un 404 y `ollama pull qwen2-vl:7b` falla.',
-          '**Qwen3-VL 8B es una descarga de 6.1 GB** (`ollama pull qwen3-vl:8b`, requiere Ollama 0.12.7+); **Qwen2.5-VL 7B ocupa 6.0 GB** (`ollama pull qwen2.5vl:7b`, requiere Ollama 0.7.0+).',
+          '**Qwen3-VL 8B es una descarga de 6.2 GB** (`ollama pull qwen3-vl:8b`, requiere Ollama 0.12.7+); **Qwen2.5-VL 7B ocupa 6.0 GB** (`ollama pull qwen2.5vl:7b`, requiere Ollama 0.7.0+).',
           '**Tamaños**: Qwen3-VL 2B, 4B, 8B, 30B-A3B, 32B y 235B-A22B (de 1.9 GB a 143 GB); Qwen2.5-VL 3B, 7B, 32B y 72B (de 3.2 GB a 49 GB). Son tamaños de descarga de las páginas de la biblioteca de Ollama.',
           '**Contexto**: las páginas de Ollama indican una ventana de contexto de 256K para Qwen3-VL y de 125K para Qwen2.5-VL; el contexto que puedes usar en la práctica depende de tu memoria.',
           '**Las licencias varían según el tamaño**: Qwen3-VL y Qwen2.5-VL 7B/32B son Apache 2.0 en sus fichas de Hugging Face; Qwen2.5-VL 3B y 72B usan licencias de Qwen. Lee la ficha antes de un uso comercial.',
@@ -443,7 +443,7 @@ ollama run qwen3-vl:8b
           'Son descripciones del propio equipo de Qwen, no mediciones de PromptQuorum. La precisión con tus documentos — sobre todo con fuentes pequeñas, escritura a mano o escaneos de baja calidad — varía, así que prueba unas cuantas páginas representativas antes de apoyarte en ella.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Ejecuta modelos de visión de Qwen en local con `ollama pull qwen3-vl:8b` (6.1 GB) o `ollama pull qwen2.5vl:7b` (6.0 GB); la antigua etiqueta `qwen2-vl` ya no está en la biblioteca oficial de Ollama.' },
+          { type: 'one-sentence', text: 'Ejecuta modelos de visión de Qwen en local con `ollama pull qwen3-vl:8b` (6.2 GB) o `ollama pull qwen2.5vl:7b` (6.0 GB); la antigua etiqueta `qwen2-vl` ya no está en la biblioteca oficial de Ollama.' },
           { type: 'plain-terms', text: 'Un modelo de visión-lenguaje lee imágenes en lugar de generarlas. Le das una foto o una página escaneada y devuelve texto: una descripción, una respuesta o el contenido extraído.' },
         ],
       },
@@ -456,7 +456,7 @@ ollama run qwen3-vl:8b
         rows: [
           { 'Modelo': 'Qwen3-VL 2B', 'Etiqueta de Ollama': 'qwen3-vl:2b', 'Descarga': '1.9 GB', 'Licencia (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 4B', 'Etiqueta de Ollama': 'qwen3-vl:4b', 'Descarga': '3.3 GB', 'Licencia (ficha HF)': 'Apache 2.0' },
-          { 'Modelo': 'Qwen3-VL 8B', 'Etiqueta de Ollama': 'qwen3-vl:8b', 'Descarga': '6.1 GB', 'Licencia (ficha HF)': 'Apache 2.0' },
+          { 'Modelo': 'Qwen3-VL 8B', 'Etiqueta de Ollama': 'qwen3-vl:8b', 'Descarga': '6.2 GB', 'Licencia (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 30B-A3B (MoE)', 'Etiqueta de Ollama': 'qwen3-vl:30b', 'Descarga': '20 GB', 'Licencia (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 32B', 'Etiqueta de Ollama': 'qwen3-vl:32b', 'Descarga': '21 GB', 'Licencia (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 235B-A22B (MoE)', 'Etiqueta de Ollama': 'qwen3-vl:235b', 'Descarga': '143 GB', 'Licencia (ficha HF)': 'Apache 2.0' },
@@ -473,7 +473,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'Requisitos de hardware para los modelos de visión de Qwen',
         items: [
-          '**Los tamaños de descarga son solo los pesos**: Qwen3-VL 8B ocupa 6.1 GB y Qwen2.5-VL 7B ocupa 6.0 GB. La caché de contexto y el codificador de imágenes necesitan memoria adicional que crece con la longitud del contexto y el tamaño de la imagen, así que deja margen sobre el tamaño de descarga.',
+          '**Los tamaños de descarga son solo los pesos**: Qwen3-VL 8B ocupa 6.2 GB y Qwen2.5-VL 7B ocupa 6.0 GB. La caché de contexto y el codificador de imágenes necesitan memoria adicional que crece con la longitud del contexto y el tamaño de la imagen, así que deja margen sobre el tamaño de descarga.',
           '**Opciones más pequeñas**: Qwen3-VL 2B (1.9 GB) y 4B (3.3 GB) o Qwen2.5-VL 3B (3.2 GB) sirven para GPUs pequeñas y portátiles; espera menos precisión que con los modelos de 7B–8B.',
           '**Opciones más grandes**: Qwen3-VL 30B-A3B (20 GB), Qwen3-VL 32B y Qwen2.5-VL 32B (21 GB) y Qwen2.5-VL 72B (49 GB) requieren una GPU grande, varias GPUs o Apple Silicon con mucha memoria unificada.',
           '**Descarga parcial**: cuando un modelo no cabe en la VRAM, Ollama puede colocar parte en la RAM del sistema; funciona, pero es notablemente más lento.',
@@ -509,7 +509,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -693,7 +693,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-ar.webp',
     title: 'كيفية تشغيل ⁨Qwen2.5-VL⁩ و⁨Qwen3-VL⁩ محليًا في ⁨2026⁩: دليل ⁨OCR⁩ للمستندات والرؤية',
     seoTitle: 'تشغيل ⁨Qwen2.5-VL⁩ و⁨Qwen3-VL⁩ محليًا ⁨2026⁩: دليل ⁨Ollama⁩',
-    intro: 'Qwen2.5-VL وQwen3-VL نموذجان مفتوحان للرؤية واللغة من Alibaba لقراءة المستندات ولقطات الشاشة والرسوم البيانية والصور، ويعملان محليًا عبر Ollama. حجم تنزيل Qwen3-VL 8B هو 6.1 GB (`ollama pull qwen3-vl:8b`)، وحجم تنزيل Qwen2.5-VL 7B هو 6.0 GB (`ollama pull qwen2.5vl:7b`). أما Qwen2-VL، النموذج الذي كانت هذه الصفحة تتناوله في الأصل، فهو الجيل الأقدم وليس له مدخل رسمي في مكتبة Ollama، ولذلك يفشل الأمر `ollama pull qwen2-vl:7b`. يقدّم هذا الدليل الوسوم والأحجام والتراخيص التي جرى التحقق منها، وإعداد Ollama وLM Studio، وأوامر عملية لاستخراج المستندات الصينية واليابانية والكورية.',
+    intro: 'Qwen2.5-VL وQwen3-VL نموذجان مفتوحان للرؤية واللغة من Alibaba لقراءة المستندات ولقطات الشاشة والرسوم البيانية والصور، ويعملان محليًا عبر Ollama. حجم تنزيل Qwen3-VL 8B هو 6.2 GB (`ollama pull qwen3-vl:8b`)، وحجم تنزيل Qwen2.5-VL 7B هو 6.0 GB (`ollama pull qwen2.5vl:7b`). أما Qwen2-VL، النموذج الذي كانت هذه الصفحة تتناوله في الأصل، فهو الجيل الأقدم وليس له مدخل رسمي في مكتبة Ollama، ولذلك يفشل الأمر `ollama pull qwen2-vl:7b`. يقدّم هذا الدليل الوسوم والأحجام والتراخيص التي جرى التحقق منها، وإعداد Ollama وLM Studio، وأوامر عملية لاستخراج المستندات الصينية واليابانية والكورية.',
     metaDescription: 'شغّل ⁨Qwen2.5-VL⁩ و⁨Qwen3-VL⁩ محليًا عبر ⁨Ollama⁩: وسوم وأحجام وتراخيص تم التحقق منها، وخطوات الإعداد، و⁨OCR⁩ للمستندات. ⁨Qwen2-VL⁩ تجاوزه الزمن.',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -728,14 +728,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**نفّذ `ollama pull qwen3-vl:8b` (6.1 GB، يتطلب Ollama 0.12.7 أو أحدث) أو `ollama pull qwen2.5vl:7b` (6.0 GB، يتطلب Ollama 0.7.0 أو أحدث) لقراءة المستندات والصور محليًا.** الوسم القديم `qwen2-vl:7b` غير موجود في مكتبة Ollama الرسمية، لذا استخدم Qwen2.5-VL أو Qwen3-VL؛ والصور التي ترسلها يعالجها خادم Ollama المحلي لديك بدل رفعها إلى API سحابية.',
+    leadAnswerBlock: '**نفّذ `ollama pull qwen3-vl:8b` (6.2 GB، يتطلب Ollama 0.12.7 أو أحدث) أو `ollama pull qwen2.5vl:7b` (6.0 GB، يتطلب Ollama 0.7.0 أو أحدث) لقراءة المستندات والصور محليًا.** الوسم القديم `qwen2-vl:7b` غير موجود في مكتبة Ollama الرسمية، لذا استخدم Qwen2.5-VL أو Qwen3-VL؛ والصور التي ترسلها يعالجها خادم Ollama المحلي لديك بدل رفعها إلى API سحابية.',
     quickAnswerTop: {
       ar: {
         question: 'كيف أشغّل نماذج الرؤية من Qwen محليًا في 2026؟',
         answer: 'حدّث Ollama ثم نفّذ `ollama pull qwen3-vl:8b` (أو `qwen2.5vl:7b` مع إصدار أقدم من Ollama)، ثم `ollama run qwen3-vl:8b` واكتب مسار ملف الصورة داخل الأمر. وللحصول على واجهة رسومية، ابحث عن Qwen3-VL أو Qwen2.5-VL في LM Studio واختر نسخة تذكر بطاقة نموذجها دعم الرؤية. حجم تنزيل كلا النموذجين نحو 6 GB؛ فاترك ذاكرة إضافية للسياق ومرمّز الصور.',
         bullets: [
           'إصدار Ollama: 0.12.7+ لـ Qwen3-VL و0.7.0+ لـ Qwen2.5-VL (بحسب صفحات مكتبة Ollama)',
-          'تنزيل نموذج: ollama pull qwen3-vl:8b (6.1 GB) أو ollama pull qwen2.5vl:7b (6.0 GB)',
+          'تنزيل نموذج: ollama pull qwen3-vl:8b (6.2 GB) أو ollama pull qwen2.5vl:7b (6.0 GB)',
           'إرفاق الصور: اكتب مسار الملف في الأمر (CLI) أو أرسل مصفوفة images بصيغة base64 (API)',
           'وسم متوقف: qwen2-vl:7b غير موجود في مكتبة Ollama الرسمية — استخدم qwen2.5vl أو qwen3-vl',
           'التراخيص: Qwen3-VL وQwen2.5-VL بحجمي 7B/32B بترخيص Apache 2.0 في بطاقات Hugging Face؛ أما Qwen2.5-VL بحجمي 3B و72B فتستخدم تراخيص Qwen',
@@ -764,7 +764,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**استخدم Qwen3-VL أو Qwen2.5-VL لا Qwen2-VL**: لكليهما مدخل رسمي في مكتبة Ollama (`qwen3-vl` و`qwen2.5vl`)، بينما تُرجع الصفحة `ollama.com/library/qwen2-vl` الخطأ 404 ويفشل `ollama pull qwen2-vl:7b`.',
-          '**حجم تنزيل Qwen3-VL 8B هو 6.1 GB** (`ollama pull qwen3-vl:8b`، يتطلب Ollama 0.12.7+)؛ و**Qwen2.5-VL 7B بحجم 6.0 GB** (`ollama pull qwen2.5vl:7b`، يتطلب Ollama 0.7.0+).',
+          '**حجم تنزيل Qwen3-VL 8B هو 6.2 GB** (`ollama pull qwen3-vl:8b`، يتطلب Ollama 0.12.7+)؛ و**Qwen2.5-VL 7B بحجم 6.0 GB** (`ollama pull qwen2.5vl:7b`، يتطلب Ollama 0.7.0+).',
           '**الأحجام**: Qwen3-VL بأحجام 2B و4B و8B و30B-A3B و32B و235B-A22B (من 1.9 GB إلى 143 GB)؛ وQwen2.5-VL بأحجام 3B و7B و32B و72B (من 3.2 GB إلى 49 GB). وهي أحجام التنزيل المذكورة في صفحات مكتبة Ollama.',
           '**السياق**: تذكر صفحات Ollama نافذة سياق بحجم 256K لـ Qwen3-VL و125K لـ Qwen2.5-VL؛ أما السياق الذي يمكنك استخدامه فعليًا فيعتمد على ذاكرتك.',
           '**التراخيص تختلف بحسب الحجم**: Qwen3-VL وQwen2.5-VL بحجمي 7B/32B بترخيص Apache 2.0 في بطاقات Hugging Face؛ وQwen2.5-VL بحجمي 3B و72B بتراخيص Qwen. اقرأ البطاقة قبل أي استخدام تجاري.',
@@ -784,7 +784,7 @@ ollama run qwen3-vl:8b
           'هذه أوصاف من فريق Qwen نفسه وليست قياسات أجرتها PromptQuorum. تتفاوت الدقة على مستنداتك — خصوصًا مع الخطوط الصغيرة أو الكتابة اليدوية أو المسوحات منخفضة الجودة — فاختبر بضع صفحات ممثِّلة قبل أن تبني عليها.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'شغّل نماذج الرؤية من Qwen محليًا بالأمر `ollama pull qwen3-vl:8b` (6.1 GB) أو `ollama pull qwen2.5vl:7b` (6.0 GB)؛ أما الوسم القديم `qwen2-vl` فلم يعد في مكتبة Ollama الرسمية.' },
+          { type: 'one-sentence', text: 'شغّل نماذج الرؤية من Qwen محليًا بالأمر `ollama pull qwen3-vl:8b` (6.2 GB) أو `ollama pull qwen2.5vl:7b` (6.0 GB)؛ أما الوسم القديم `qwen2-vl` فلم يعد في مكتبة Ollama الرسمية.' },
           { type: 'plain-terms', text: 'نموذج الرؤية واللغة يقرأ الصور ولا يولّدها. تعطيه صورة أو صفحة ممسوحة ضوئيًا فيعيد لك نصًا — وصفًا أو إجابة أو المحتوى المستخرج.' },
         ],
       },
@@ -797,7 +797,7 @@ ollama run qwen3-vl:8b
         rows: [
           { 'النموذج': 'Qwen3-VL 2B', 'وسم Ollama': 'qwen3-vl:2b', 'التنزيل': '1.9 GB', 'الترخيص (بطاقة HF)': 'Apache 2.0' },
           { 'النموذج': 'Qwen3-VL 4B', 'وسم Ollama': 'qwen3-vl:4b', 'التنزيل': '3.3 GB', 'الترخيص (بطاقة HF)': 'Apache 2.0' },
-          { 'النموذج': 'Qwen3-VL 8B', 'وسم Ollama': 'qwen3-vl:8b', 'التنزيل': '6.1 GB', 'الترخيص (بطاقة HF)': 'Apache 2.0' },
+          { 'النموذج': 'Qwen3-VL 8B', 'وسم Ollama': 'qwen3-vl:8b', 'التنزيل': '6.2 GB', 'الترخيص (بطاقة HF)': 'Apache 2.0' },
           { 'النموذج': 'Qwen3-VL 30B-A3B (MoE)', 'وسم Ollama': 'qwen3-vl:30b', 'التنزيل': '20 GB', 'الترخيص (بطاقة HF)': 'Apache 2.0' },
           { 'النموذج': 'Qwen3-VL 32B', 'وسم Ollama': 'qwen3-vl:32b', 'التنزيل': '21 GB', 'الترخيص (بطاقة HF)': 'Apache 2.0' },
           { 'النموذج': 'Qwen3-VL 235B-A22B (MoE)', 'وسم Ollama': 'qwen3-vl:235b', 'التنزيل': '143 GB', 'الترخيص (بطاقة HF)': 'Apache 2.0' },
@@ -814,7 +814,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'متطلبات الأجهزة لنماذج الرؤية من Qwen',
         items: [
-          '**أحجام التنزيل تشمل الأوزان فقط**: حجم Qwen3-VL 8B هو 6.1 GB وQwen2.5-VL 7B هو 6.0 GB. يحتاج ذاكرة السياق ومرمّز الصور إلى ذاكرة إضافية تزداد مع طول السياق وحجم الصورة، لذا اترك هامشًا فوق حجم التنزيل.',
+          '**أحجام التنزيل تشمل الأوزان فقط**: حجم Qwen3-VL 8B هو 6.2 GB وQwen2.5-VL 7B هو 6.0 GB. يحتاج ذاكرة السياق ومرمّز الصور إلى ذاكرة إضافية تزداد مع طول السياق وحجم الصورة، لذا اترك هامشًا فوق حجم التنزيل.',
           '**خيارات أصغر**: Qwen3-VL 2B (1.9 GB) و4B (3.3 GB) أو Qwen2.5-VL 3B (3.2 GB) تناسب وحدات GPU الصغيرة والحواسيب المحمولة؛ وتوقّع دقة أقل من نماذج 7B–8B.',
           '**خيارات أكبر**: Qwen3-VL 30B-A3B (20 GB) وQwen3-VL 32B وQwen2.5-VL 32B (21 GB) وQwen2.5-VL 72B (49 GB) تتطلب GPU كبيرة أو عدة وحدات GPU أو Apple Silicon بذاكرة موحدة كبيرة.',
           '**التفريغ الجزئي**: عندما لا يتسع النموذج في VRAM يمكن لـ Ollama وضع جزء منه في ذاكرة النظام؛ يعمل ذلك لكنه أبطأ بوضوح.',
@@ -850,7 +850,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -1034,7 +1034,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-pt.webp',
     title: 'Como executar o Qwen2.5-VL e o Qwen3-VL localmente em 2026: guia de OCR de documentos e visão',
     seoTitle: 'Executar Qwen2.5-VL e Qwen3-VL localmente 2026: guia do Ollama',
-    intro: 'O Qwen2.5-VL e o Qwen3-VL são os modelos abertos de visão e linguagem da Alibaba para ler documentos, capturas de tela, gráficos e fotos, e ambos rodam localmente pelo Ollama. O Qwen3-VL 8B é um download de 6.1 GB (`ollama pull qwen3-vl:8b`) e o Qwen2.5-VL 7B é um download de 6.0 GB (`ollama pull qwen2.5vl:7b`). O Qwen2-VL, o modelo que esta página abordava originalmente, é a geração anterior e não tem entrada oficial na biblioteca do Ollama, então `ollama pull qwen2-vl:7b` falha. Este guia traz as tags, os tamanhos e as licenças verificados, a configuração com Ollama e LM Studio e prompts práticos para extrair documentos em chinês, japonês e coreano.',
+    intro: 'O Qwen2.5-VL e o Qwen3-VL são os modelos abertos de visão e linguagem da Alibaba para ler documentos, capturas de tela, gráficos e fotos, e ambos rodam localmente pelo Ollama. O Qwen3-VL 8B é um download de 6.2 GB (`ollama pull qwen3-vl:8b`) e o Qwen2.5-VL 7B é um download de 6.0 GB (`ollama pull qwen2.5vl:7b`). O Qwen2-VL, o modelo que esta página abordava originalmente, é a geração anterior e não tem entrada oficial na biblioteca do Ollama, então `ollama pull qwen2-vl:7b` falha. Este guia traz as tags, os tamanhos e as licenças verificados, a configuração com Ollama e LM Studio e prompts práticos para extrair documentos em chinês, japonês e coreano.',
     metaDescription: 'Execute o Qwen2.5-VL e o Qwen3-VL localmente com Ollama: tags, tamanhos e licenças verificados, instalação e OCR de documentos. O Qwen2-VL foi superado.',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -1069,14 +1069,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**Execute `ollama pull qwen3-vl:8b` (6.1 GB, exige Ollama 0.12.7 ou mais recente) ou `ollama pull qwen2.5vl:7b` (6.0 GB, exige Ollama 0.7.0 ou mais recente) para ler documentos e imagens localmente.** A tag antiga `qwen2-vl:7b` não está na biblioteca oficial do Ollama, então use o Qwen2.5-VL ou o Qwen3-VL; as imagens que você envia são processadas pelo seu servidor Ollama local, e não enviadas a uma API na nuvem.',
+    leadAnswerBlock: '**Execute `ollama pull qwen3-vl:8b` (6.2 GB, exige Ollama 0.12.7 ou mais recente) ou `ollama pull qwen2.5vl:7b` (6.0 GB, exige Ollama 0.7.0 ou mais recente) para ler documentos e imagens localmente.** A tag antiga `qwen2-vl:7b` não está na biblioteca oficial do Ollama, então use o Qwen2.5-VL ou o Qwen3-VL; as imagens que você envia são processadas pelo seu servidor Ollama local, e não enviadas a uma API na nuvem.',
     quickAnswerTop: {
       pt: {
         question: 'Como executo os modelos de visão do Qwen localmente em 2026?',
         answer: 'Atualize o Ollama, execute `ollama pull qwen3-vl:8b` (ou `qwen2.5vl:7b` em um Ollama mais antigo), depois `ollama run qwen3-vl:8b` e digite o caminho de um arquivo de imagem dentro do prompt. Para uma interface gráfica, procure Qwen3-VL ou Qwen2.5-VL no LM Studio e escolha uma versão cuja ficha informe suporte a visão. Os dois modelos são downloads de cerca de 6 GB; deixe memória extra para o contexto e o codificador de imagens.',
         bullets: [
           'Versão do Ollama: 0.12.7+ para o Qwen3-VL, 0.7.0+ para o Qwen2.5-VL (conforme as páginas da biblioteca do Ollama)',
-          'Baixar um modelo: ollama pull qwen3-vl:8b (6.1 GB) ou ollama pull qwen2.5vl:7b (6.0 GB)',
+          'Baixar um modelo: ollama pull qwen3-vl:8b (6.2 GB) ou ollama pull qwen2.5vl:7b (6.0 GB)',
           'Anexar imagens: digite o caminho do arquivo no prompt (CLI) ou envie um array base64 de images (API)',
           'Tag obsoleta: qwen2-vl:7b não está na biblioteca oficial do Ollama — use qwen2.5vl ou qwen3-vl',
           'Licenças: Qwen3-VL e Qwen2.5-VL 7B/32B são Apache 2.0 nas fichas do Hugging Face; Qwen2.5-VL 3B e 72B usam licenças da Qwen',
@@ -1105,7 +1105,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**Use o Qwen3-VL ou o Qwen2.5-VL, não o Qwen2-VL**: ambos têm entrada oficial na biblioteca do Ollama (`qwen3-vl`, `qwen2.5vl`), enquanto `ollama.com/library/qwen2-vl` retorna 404 e `ollama pull qwen2-vl:7b` falha.',
-          '**O Qwen3-VL 8B é um download de 6.1 GB** (`ollama pull qwen3-vl:8b`, exige Ollama 0.12.7+); **o Qwen2.5-VL 7B tem 6.0 GB** (`ollama pull qwen2.5vl:7b`, exige Ollama 0.7.0+).',
+          '**O Qwen3-VL 8B é um download de 6.2 GB** (`ollama pull qwen3-vl:8b`, exige Ollama 0.12.7+); **o Qwen2.5-VL 7B tem 6.0 GB** (`ollama pull qwen2.5vl:7b`, exige Ollama 0.7.0+).',
           '**Tamanhos**: Qwen3-VL 2B, 4B, 8B, 30B-A3B, 32B e 235B-A22B (de 1.9 GB a 143 GB); Qwen2.5-VL 3B, 7B, 32B e 72B (de 3.2 GB a 49 GB). São tamanhos de download das páginas da biblioteca do Ollama.',
           '**Contexto**: as páginas do Ollama indicam uma janela de contexto de 256K para o Qwen3-VL e de 125K para o Qwen2.5-VL; o contexto que você realmente consegue usar depende da sua memória.',
           '**As licenças variam conforme o tamanho**: Qwen3-VL e Qwen2.5-VL 7B/32B são Apache 2.0 nas fichas do Hugging Face; Qwen2.5-VL 3B e 72B usam licenças da Qwen. Leia a ficha antes de usar comercialmente.',
@@ -1125,7 +1125,7 @@ ollama run qwen3-vl:8b
           'Essas são descrições da própria Qwen, não medições do PromptQuorum. A precisão nos seus documentos — principalmente com fontes pequenas, escrita à mão ou digitalizações de baixa qualidade — varia, então teste algumas páginas representativas antes de se basear nela.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Execute os modelos de visão do Qwen localmente com `ollama pull qwen3-vl:8b` (6.1 GB) ou `ollama pull qwen2.5vl:7b` (6.0 GB); a antiga tag `qwen2-vl` não está mais na biblioteca oficial do Ollama.' },
+          { type: 'one-sentence', text: 'Execute os modelos de visão do Qwen localmente com `ollama pull qwen3-vl:8b` (6.2 GB) ou `ollama pull qwen2.5vl:7b` (6.0 GB); a antiga tag `qwen2-vl` não está mais na biblioteca oficial do Ollama.' },
           { type: 'plain-terms', text: 'Um modelo de visão e linguagem lê imagens em vez de gerá-las. Você dá a ele uma foto ou uma página digitalizada e ele devolve texto: uma descrição, uma resposta ou o conteúdo extraído.' },
         ],
       },
@@ -1138,7 +1138,7 @@ ollama run qwen3-vl:8b
         rows: [
           { 'Modelo': 'Qwen3-VL 2B', 'Tag do Ollama': 'qwen3-vl:2b', 'Download': '1.9 GB', 'Licença (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 4B', 'Tag do Ollama': 'qwen3-vl:4b', 'Download': '3.3 GB', 'Licença (ficha HF)': 'Apache 2.0' },
-          { 'Modelo': 'Qwen3-VL 8B', 'Tag do Ollama': 'qwen3-vl:8b', 'Download': '6.1 GB', 'Licença (ficha HF)': 'Apache 2.0' },
+          { 'Modelo': 'Qwen3-VL 8B', 'Tag do Ollama': 'qwen3-vl:8b', 'Download': '6.2 GB', 'Licença (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 30B-A3B (MoE)', 'Tag do Ollama': 'qwen3-vl:30b', 'Download': '20 GB', 'Licença (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 32B', 'Tag do Ollama': 'qwen3-vl:32b', 'Download': '21 GB', 'Licença (ficha HF)': 'Apache 2.0' },
           { 'Modelo': 'Qwen3-VL 235B-A22B (MoE)', 'Tag do Ollama': 'qwen3-vl:235b', 'Download': '143 GB', 'Licença (ficha HF)': 'Apache 2.0' },
@@ -1155,7 +1155,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'Requisitos de hardware para os modelos de visão do Qwen',
         items: [
-          '**Os tamanhos de download são apenas os pesos**: o Qwen3-VL 8B tem 6.1 GB e o Qwen2.5-VL 7B tem 6.0 GB. O cache de contexto e o codificador de imagens precisam de memória extra, que cresce com o tamanho do contexto e da imagem, então deixe folga acima do tamanho do download.',
+          '**Os tamanhos de download são apenas os pesos**: o Qwen3-VL 8B tem 6.2 GB e o Qwen2.5-VL 7B tem 6.0 GB. O cache de contexto e o codificador de imagens precisam de memória extra, que cresce com o tamanho do contexto e da imagem, então deixe folga acima do tamanho do download.',
           '**Opções menores**: Qwen3-VL 2B (1.9 GB) e 4B (3.3 GB) ou Qwen2.5-VL 3B (3.2 GB) servem para GPUs pequenas e notebooks; espere menos precisão do que nos modelos de 7B–8B.',
           '**Opções maiores**: Qwen3-VL 30B-A3B (20 GB), Qwen3-VL 32B e Qwen2.5-VL 32B (21 GB) e Qwen2.5-VL 72B (49 GB) exigem uma GPU grande, várias GPUs ou Apple Silicon com muita memória unificada.',
           '**Offload parcial**: quando um modelo não cabe na VRAM, o Ollama pode colocar parte dele na RAM do sistema; funciona, mas é bem mais lento.',
@@ -1191,7 +1191,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -1375,7 +1375,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-de.webp',
     title: 'Qwen2.5-VL und Qwen3-VL lokal betreiben 2026: Leitfaden für Dokumenten-OCR und Bildverständnis',
     seoTitle: 'Qwen2.5-VL & Qwen3-VL lokal betreiben 2026: Ollama-Anleitung',
-    intro: 'Qwen2.5-VL und Qwen3-VL sind die offenen Vision-Language-Modelle von Alibaba zum Lesen von Dokumenten, Screenshots, Diagrammen und Fotos, und beide laufen lokal über Ollama. Qwen3-VL 8B ist ein Download von 6,1 GB (`ollama pull qwen3-vl:8b`), Qwen2.5-VL 7B ein Download von 6,0 GB (`ollama pull qwen2.5vl:7b`). Qwen2-VL, das Modell, das diese Seite ursprünglich behandelte, ist die ältere Generation und hat keinen offiziellen Eintrag in der Ollama-Bibliothek – `ollama pull qwen2-vl:7b` schlägt daher fehl. Dieser Leitfaden nennt geprüfte Tags, Größen und Lizenzen, die Einrichtung mit Ollama und LM Studio sowie praxistaugliche Prompts für die Extraktion chinesischer, japanischer und koreanischer Dokumente.',
+    intro: 'Qwen2.5-VL und Qwen3-VL sind die offenen Vision-Language-Modelle von Alibaba zum Lesen von Dokumenten, Screenshots, Diagrammen und Fotos, und beide laufen lokal über Ollama. Qwen3-VL 8B ist ein Download von 6,2 GB (`ollama pull qwen3-vl:8b`), Qwen2.5-VL 7B ein Download von 6,0 GB (`ollama pull qwen2.5vl:7b`). Qwen2-VL, das Modell, das diese Seite ursprünglich behandelte, ist die ältere Generation und hat keinen offiziellen Eintrag in der Ollama-Bibliothek – `ollama pull qwen2-vl:7b` schlägt daher fehl. Dieser Leitfaden nennt geprüfte Tags, Größen und Lizenzen, die Einrichtung mit Ollama und LM Studio sowie praxistaugliche Prompts für die Extraktion chinesischer, japanischer und koreanischer Dokumente.',
     metaDescription: 'Qwen2.5-VL und Qwen3-VL lokal mit Ollama betreiben: geprüfte Tags, Download-Größen, Lizenzen, Einrichtung und Dokumenten-OCR. Qwen2-VL ist überholt.',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -1410,14 +1410,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**Führen Sie `ollama pull qwen3-vl:8b` (6,1 GB, erfordert Ollama 0.12.7 oder neuer) oder `ollama pull qwen2.5vl:7b` (6,0 GB, erfordert Ollama 0.7.0 oder neuer) aus, um Dokumente und Bilder lokal zu lesen.** Der ältere Tag `qwen2-vl:7b` ist nicht in der offiziellen Ollama-Bibliothek enthalten – nutzen Sie stattdessen Qwen2.5-VL oder Qwen3-VL; die gesendeten Bilder verarbeitet Ihr lokaler Ollama-Server, statt sie in eine Cloud-API hochzuladen.',
+    leadAnswerBlock: '**Führen Sie `ollama pull qwen3-vl:8b` (6,2 GB, erfordert Ollama 0.12.7 oder neuer) oder `ollama pull qwen2.5vl:7b` (6,0 GB, erfordert Ollama 0.7.0 oder neuer) aus, um Dokumente und Bilder lokal zu lesen.** Der ältere Tag `qwen2-vl:7b` ist nicht in der offiziellen Ollama-Bibliothek enthalten – nutzen Sie stattdessen Qwen2.5-VL oder Qwen3-VL; die gesendeten Bilder verarbeitet Ihr lokaler Ollama-Server, statt sie in eine Cloud-API hochzuladen.',
     quickAnswerTop: {
       de: {
         question: 'Wie betreibe ich Qwen-Vision-Modelle 2026 lokal?',
         answer: 'Aktualisieren Sie Ollama, führen Sie `ollama pull qwen3-vl:8b` aus (oder `qwen2.5vl:7b` bei einer älteren Ollama-Version), dann `ollama run qwen3-vl:8b`, und geben Sie den Pfad einer Bilddatei in Ihrem Prompt an. Für eine grafische Oberfläche suchen Sie in LM Studio nach Qwen3-VL oder Qwen2.5-VL und wählen einen Build, dessen Modellkarte Vision-Unterstützung nennt. Beide Modelle sind Downloads von rund 6 GB; planen Sie zusätzlichen Speicher für Kontext und Bild-Encoder ein.',
         bullets: [
           'Ollama-Version: 0.12.7+ für Qwen3-VL, 0.7.0+ für Qwen2.5-VL (laut den Seiten der Ollama-Bibliothek)',
-          'Modell laden: ollama pull qwen3-vl:8b (6,1 GB) oder ollama pull qwen2.5vl:7b (6,0 GB)',
+          'Modell laden: ollama pull qwen3-vl:8b (6,2 GB) oder ollama pull qwen2.5vl:7b (6,0 GB)',
           'Bilder anhängen: Dateipfad im Prompt angeben (CLI) oder ein Base64-Array images senden (API)',
           'Veralteter Tag: qwen2-vl:7b ist nicht in der offiziellen Ollama-Bibliothek – nutzen Sie qwen2.5vl oder qwen3-vl',
           'Lizenzen: Qwen3-VL und Qwen2.5-VL 7B/32B sind laut Hugging-Face-Karten Apache 2.0; Qwen2.5-VL 3B und 72B verwenden Qwen-Lizenzen',
@@ -1446,7 +1446,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**Nutzen Sie Qwen3-VL oder Qwen2.5-VL, nicht Qwen2-VL**: Beide haben offizielle Einträge in der Ollama-Bibliothek (`qwen3-vl`, `qwen2.5vl`), während `ollama.com/library/qwen2-vl` einen 404 liefert und `ollama pull qwen2-vl:7b` fehlschlägt.',
-          '**Qwen3-VL 8B ist ein Download von 6,1 GB** (`ollama pull qwen3-vl:8b`, erfordert Ollama 0.12.7+); **Qwen2.5-VL 7B hat 6,0 GB** (`ollama pull qwen2.5vl:7b`, erfordert Ollama 0.7.0+).',
+          '**Qwen3-VL 8B ist ein Download von 6,2 GB** (`ollama pull qwen3-vl:8b`, erfordert Ollama 0.12.7+); **Qwen2.5-VL 7B hat 6,0 GB** (`ollama pull qwen2.5vl:7b`, erfordert Ollama 0.7.0+).',
           '**Größen**: Qwen3-VL 2B, 4B, 8B, 30B-A3B, 32B und 235B-A22B (1,9 GB bis 143 GB); Qwen2.5-VL 3B, 7B, 32B und 72B (3,2 GB bis 49 GB). Es sind Download-Größen laut den Seiten der Ollama-Bibliothek.',
           '**Kontext**: Die Ollama-Seiten nennen ein Kontextfenster von 256K für Qwen3-VL und 125K für Qwen2.5-VL; der tatsächlich nutzbare Kontext hängt von Ihrem Speicher ab.',
           '**Lizenzen unterscheiden sich je nach Größe**: Qwen3-VL und Qwen2.5-VL 7B/32B sind laut Hugging-Face-Karten Apache 2.0; Qwen2.5-VL 3B und 72B verwenden Qwen-Lizenzen. Lesen Sie die Karte vor kommerzieller Nutzung.',
@@ -1466,7 +1466,7 @@ ollama run qwen3-vl:8b
           'Das sind Beschreibungen des Qwen-Teams, keine Messungen von PromptQuorum. Die Genauigkeit bei Ihren Dokumenten – besonders bei kleiner Schrift, Handschrift oder Scans schlechter Qualität – schwankt; testen Sie daher einige repräsentative Seiten, bevor Sie darauf aufbauen.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen-Vision-Modelle laufen lokal mit `ollama pull qwen3-vl:8b` (6,1 GB) oder `ollama pull qwen2.5vl:7b` (6,0 GB); der alte Tag `qwen2-vl` ist nicht mehr in der offiziellen Ollama-Bibliothek.' },
+          { type: 'one-sentence', text: 'Qwen-Vision-Modelle laufen lokal mit `ollama pull qwen3-vl:8b` (6,2 GB) oder `ollama pull qwen2.5vl:7b` (6,0 GB); der alte Tag `qwen2-vl` ist nicht mehr in der offiziellen Ollama-Bibliothek.' },
           { type: 'plain-terms', text: 'Ein Vision-Language-Modell liest Bilder, statt sie zu erzeugen. Sie geben ihm ein Foto oder eine gescannte Seite, und es liefert Text zurück – eine Beschreibung, eine Antwort oder den extrahierten Inhalt.' },
         ],
       },
@@ -1479,7 +1479,7 @@ ollama run qwen3-vl:8b
         rows: [
           { 'Modell': 'Qwen3-VL 2B', 'Ollama-Tag': 'qwen3-vl:2b', 'Download': '1,9 GB', 'Lizenz (HF-Karte)': 'Apache 2.0' },
           { 'Modell': 'Qwen3-VL 4B', 'Ollama-Tag': 'qwen3-vl:4b', 'Download': '3,3 GB', 'Lizenz (HF-Karte)': 'Apache 2.0' },
-          { 'Modell': 'Qwen3-VL 8B', 'Ollama-Tag': 'qwen3-vl:8b', 'Download': '6,1 GB', 'Lizenz (HF-Karte)': 'Apache 2.0' },
+          { 'Modell': 'Qwen3-VL 8B', 'Ollama-Tag': 'qwen3-vl:8b', 'Download': '6,2 GB', 'Lizenz (HF-Karte)': 'Apache 2.0' },
           { 'Modell': 'Qwen3-VL 30B-A3B (MoE)', 'Ollama-Tag': 'qwen3-vl:30b', 'Download': '20 GB', 'Lizenz (HF-Karte)': 'Apache 2.0' },
           { 'Modell': 'Qwen3-VL 32B', 'Ollama-Tag': 'qwen3-vl:32b', 'Download': '21 GB', 'Lizenz (HF-Karte)': 'Apache 2.0' },
           { 'Modell': 'Qwen3-VL 235B-A22B (MoE)', 'Ollama-Tag': 'qwen3-vl:235b', 'Download': '143 GB', 'Lizenz (HF-Karte)': 'Apache 2.0' },
@@ -1496,7 +1496,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'Hardware-Anforderungen für Qwen-Vision-Modelle',
         items: [
-          '**Download-Größen sind nur die Gewichte**: Qwen3-VL 8B hat 6,1 GB, Qwen2.5-VL 7B hat 6,0 GB. Kontext-Cache und Bild-Encoder benötigen zusätzlichen Speicher, der mit Kontextlänge und Bildgröße wächst – planen Sie also Reserve über der Download-Größe ein.',
+          '**Download-Größen sind nur die Gewichte**: Qwen3-VL 8B hat 6,2 GB, Qwen2.5-VL 7B hat 6,0 GB. Kontext-Cache und Bild-Encoder benötigen zusätzlichen Speicher, der mit Kontextlänge und Bildgröße wächst – planen Sie also Reserve über der Download-Größe ein.',
           '**Kleinere Optionen**: Qwen3-VL 2B (1,9 GB) und 4B (3,3 GB) oder Qwen2.5-VL 3B (3,2 GB) eignen sich für kleine GPUs und Notebooks; rechnen Sie mit geringerer Genauigkeit als bei den 7B–8B-Modellen.',
           '**Größere Optionen**: Qwen3-VL 30B-A3B (20 GB), Qwen3-VL 32B und Qwen2.5-VL 32B (21 GB) sowie Qwen2.5-VL 72B (49 GB) benötigen eine große GPU, mehrere GPUs oder Apple Silicon mit viel Unified Memory.',
           '**Teilweises Auslagern**: Passt ein Modell nicht ins VRAM, kann Ollama einen Teil in den System-RAM legen; das funktioniert, ist aber deutlich langsamer.',
@@ -1532,7 +1532,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -1716,7 +1716,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-fr.webp',
     title: 'Exécuter Qwen2.5-VL et Qwen3-VL en local en 2026 : guide de l\'OCR de documents et de la vision',
     seoTitle: 'Qwen2.5-VL et Qwen3-VL en local 2026 : guide Ollama',
-    intro: 'Qwen2.5-VL et Qwen3-VL sont les modèles vision-langage ouverts d\'Alibaba pour lire des documents, des captures d\'écran, des graphiques et des photos, et tous deux s\'exécutent en local via Ollama. Qwen3-VL 8B se télécharge en 6.1 Go (`ollama pull qwen3-vl:8b`) et Qwen2.5-VL 7B en 6.0 Go (`ollama pull qwen2.5vl:7b`). Qwen2-VL, le modèle que cette page traitait à l\'origine, est la génération précédente et n\'a pas d\'entrée officielle dans la bibliothèque Ollama : `ollama pull qwen2-vl:7b` échoue donc. Ce guide donne les tags, tailles et licences vérifiés, la configuration avec Ollama et LM Studio, et des prompts pratiques pour extraire des documents en chinois, japonais et coréen.',
+    intro: 'Qwen2.5-VL et Qwen3-VL sont les modèles vision-langage ouverts d\'Alibaba pour lire des documents, des captures d\'écran, des graphiques et des photos, et tous deux s\'exécutent en local via Ollama. Qwen3-VL 8B se télécharge en 6.2 Go (`ollama pull qwen3-vl:8b`) et Qwen2.5-VL 7B en 6.0 Go (`ollama pull qwen2.5vl:7b`). Qwen2-VL, le modèle que cette page traitait à l\'origine, est la génération précédente et n\'a pas d\'entrée officielle dans la bibliothèque Ollama : `ollama pull qwen2-vl:7b` échoue donc. Ce guide donne les tags, tailles et licences vérifiés, la configuration avec Ollama et LM Studio, et des prompts pratiques pour extraire des documents en chinois, japonais et coréen.',
     metaDescription: 'Exécutez Qwen2.5-VL et Qwen3-VL en local avec Ollama : tags, tailles et licences vérifiés, installation et OCR de documents. Qwen2-VL est dépassé.',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -1751,14 +1751,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**Exécutez `ollama pull qwen3-vl:8b` (6.1 Go, nécessite Ollama 0.12.7 ou plus récent) ou `ollama pull qwen2.5vl:7b` (6.0 Go, nécessite Ollama 0.7.0 ou plus récent) pour lire documents et images en local.** L\'ancien tag `qwen2-vl:7b` n\'est pas dans la bibliothèque officielle d\'Ollama ; utilisez donc Qwen2.5-VL ou Qwen3-VL. Les images que vous envoyez sont traitées par votre serveur Ollama local au lieu d\'être téléversées vers une API cloud.',
+    leadAnswerBlock: '**Exécutez `ollama pull qwen3-vl:8b` (6.2 Go, nécessite Ollama 0.12.7 ou plus récent) ou `ollama pull qwen2.5vl:7b` (6.0 Go, nécessite Ollama 0.7.0 ou plus récent) pour lire documents et images en local.** L\'ancien tag `qwen2-vl:7b` n\'est pas dans la bibliothèque officielle d\'Ollama ; utilisez donc Qwen2.5-VL ou Qwen3-VL. Les images que vous envoyez sont traitées par votre serveur Ollama local au lieu d\'être téléversées vers une API cloud.',
     quickAnswerTop: {
       fr: {
         question: 'Comment exécuter les modèles de vision Qwen en local en 2026 ?',
         answer: 'Mettez Ollama à jour, lancez `ollama pull qwen3-vl:8b` (ou `qwen2.5vl:7b` avec une version plus ancienne d\'Ollama), puis `ollama run qwen3-vl:8b` et saisissez le chemin d\'une image dans votre prompt. Pour une interface graphique, cherchez Qwen3-VL ou Qwen2.5-VL dans LM Studio et choisissez une version dont la fiche indique la prise en charge de la vision. Les deux modèles se téléchargent en 6 Go environ ; prévoyez de la mémoire supplémentaire pour le contexte et l\'encodeur d\'images.',
         bullets: [
           'Version d\'Ollama : 0.12.7+ pour Qwen3-VL, 0.7.0+ pour Qwen2.5-VL (selon les pages de la bibliothèque Ollama)',
-          'Télécharger un modèle : ollama pull qwen3-vl:8b (6.1 Go) ou ollama pull qwen2.5vl:7b (6.0 Go)',
+          'Télécharger un modèle : ollama pull qwen3-vl:8b (6.2 Go) ou ollama pull qwen2.5vl:7b (6.0 Go)',
           'Joindre des images : saisissez le chemin du fichier dans le prompt (CLI) ou envoyez un tableau images en base64 (API)',
           'Tag obsolète : qwen2-vl:7b n\'est pas dans la bibliothèque officielle d\'Ollama — utilisez qwen2.5vl ou qwen3-vl',
           'Licences : Qwen3-VL et Qwen2.5-VL 7B/32B sont sous Apache 2.0 sur leurs fiches Hugging Face ; Qwen2.5-VL 3B et 72B utilisent des licences Qwen',
@@ -1787,7 +1787,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**Utilisez Qwen3-VL ou Qwen2.5-VL, pas Qwen2-VL** : les deux ont une entrée officielle dans la bibliothèque Ollama (`qwen3-vl`, `qwen2.5vl`), alors que `ollama.com/library/qwen2-vl` renvoie une 404 et que `ollama pull qwen2-vl:7b` échoue.',
-          '**Qwen3-VL 8B se télécharge en 6.1 Go** (`ollama pull qwen3-vl:8b`, nécessite Ollama 0.12.7+) ; **Qwen2.5-VL 7B fait 6.0 Go** (`ollama pull qwen2.5vl:7b`, nécessite Ollama 0.7.0+).',
+          '**Qwen3-VL 8B se télécharge en 6.2 Go** (`ollama pull qwen3-vl:8b`, nécessite Ollama 0.12.7+) ; **Qwen2.5-VL 7B fait 6.0 Go** (`ollama pull qwen2.5vl:7b`, nécessite Ollama 0.7.0+).',
           '**Tailles** : Qwen3-VL 2B, 4B, 8B, 30B-A3B, 32B et 235B-A22B (de 1.9 Go à 143 Go) ; Qwen2.5-VL 3B, 7B, 32B et 72B (de 3.2 Go à 49 Go). Ce sont les tailles de téléchargement indiquées par les pages de la bibliothèque Ollama.',
           '**Contexte** : les pages Ollama indiquent une fenêtre de contexte de 256K pour Qwen3-VL et de 125K pour Qwen2.5-VL ; le contexte réellement utilisable dépend de votre mémoire.',
           '**Les licences varient selon la taille** : Qwen3-VL et Qwen2.5-VL 7B/32B sont sous Apache 2.0 sur leurs fiches Hugging Face ; Qwen2.5-VL 3B et 72B utilisent des licences Qwen. Lisez la fiche avant tout usage commercial.',
@@ -1807,7 +1807,7 @@ ollama run qwen3-vl:8b
           'Il s\'agit de descriptions de l\'équipe Qwen, pas de mesures de PromptQuorum. La précision sur vos documents — surtout avec de petites polices, de l\'écriture manuscrite ou des scans de mauvaise qualité — varie ; testez donc quelques pages représentatives avant de vous appuyer dessus.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Exécutez les modèles de vision Qwen en local avec `ollama pull qwen3-vl:8b` (6.1 Go) ou `ollama pull qwen2.5vl:7b` (6.0 Go) ; l\'ancien tag `qwen2-vl` n\'est plus dans la bibliothèque officielle d\'Ollama.' },
+          { type: 'one-sentence', text: 'Exécutez les modèles de vision Qwen en local avec `ollama pull qwen3-vl:8b` (6.2 Go) ou `ollama pull qwen2.5vl:7b` (6.0 Go) ; l\'ancien tag `qwen2-vl` n\'est plus dans la bibliothèque officielle d\'Ollama.' },
           { type: 'plain-terms', text: 'Un modèle vision-langage lit des images au lieu d\'en générer. Vous lui donnez une photo ou une page numérisée, et il renvoie du texte : une description, une réponse ou le contenu extrait.' },
         ],
       },
@@ -1820,7 +1820,7 @@ ollama run qwen3-vl:8b
         rows: [
           { 'Modèle': 'Qwen3-VL 2B', 'Tag Ollama': 'qwen3-vl:2b', 'Téléchargement': '1.9 Go', 'Licence (fiche HF)': 'Apache 2.0' },
           { 'Modèle': 'Qwen3-VL 4B', 'Tag Ollama': 'qwen3-vl:4b', 'Téléchargement': '3.3 Go', 'Licence (fiche HF)': 'Apache 2.0' },
-          { 'Modèle': 'Qwen3-VL 8B', 'Tag Ollama': 'qwen3-vl:8b', 'Téléchargement': '6.1 Go', 'Licence (fiche HF)': 'Apache 2.0' },
+          { 'Modèle': 'Qwen3-VL 8B', 'Tag Ollama': 'qwen3-vl:8b', 'Téléchargement': '6.2 Go', 'Licence (fiche HF)': 'Apache 2.0' },
           { 'Modèle': 'Qwen3-VL 30B-A3B (MoE)', 'Tag Ollama': 'qwen3-vl:30b', 'Téléchargement': '20 Go', 'Licence (fiche HF)': 'Apache 2.0' },
           { 'Modèle': 'Qwen3-VL 32B', 'Tag Ollama': 'qwen3-vl:32b', 'Téléchargement': '21 Go', 'Licence (fiche HF)': 'Apache 2.0' },
           { 'Modèle': 'Qwen3-VL 235B-A22B (MoE)', 'Tag Ollama': 'qwen3-vl:235b', 'Téléchargement': '143 Go', 'Licence (fiche HF)': 'Apache 2.0' },
@@ -1837,7 +1837,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'Configuration matérielle requise pour les modèles de vision Qwen',
         items: [
-          '**Les tailles de téléchargement ne comptent que les poids** : Qwen3-VL 8B fait 6.1 Go et Qwen2.5-VL 7B fait 6.0 Go. Le cache de contexte et l\'encodeur d\'images demandent de la mémoire supplémentaire, qui croît avec la longueur du contexte et la taille de l\'image ; gardez donc de la marge au-dessus de la taille de téléchargement.',
+          '**Les tailles de téléchargement ne comptent que les poids** : Qwen3-VL 8B fait 6.2 Go et Qwen2.5-VL 7B fait 6.0 Go. Le cache de contexte et l\'encodeur d\'images demandent de la mémoire supplémentaire, qui croît avec la longueur du contexte et la taille de l\'image ; gardez donc de la marge au-dessus de la taille de téléchargement.',
           '**Options plus petites** : Qwen3-VL 2B (1.9 Go) et 4B (3.3 Go) ou Qwen2.5-VL 3B (3.2 Go) conviennent aux petits GPU et aux portables ; attendez-vous à une précision inférieure à celle des modèles 7B–8B.',
           '**Options plus grandes** : Qwen3-VL 30B-A3B (20 Go), Qwen3-VL 32B et Qwen2.5-VL 32B (21 Go) et Qwen2.5-VL 72B (49 Go) exigent un gros GPU, plusieurs GPU ou un Apple Silicon avec beaucoup de mémoire unifiée.',
           '**Déport partiel** : quand un modèle ne tient pas dans la VRAM, Ollama peut en placer une partie dans la RAM système ; cela fonctionne, mais c\'est nettement plus lent.',
@@ -1873,7 +1873,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -2057,7 +2057,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-ja.webp',
     title: 'Qwen2.5-VLとQwen3-VLをローカルで動かす方法【2026年版】：ドキュメントOCRとビジョンガイド',
     seoTitle: 'Qwen2.5-VL・Qwen3-VLをローカルで動かす2026：Ollamaガイド',
-    intro: 'Qwen2.5-VLとQwen3-VLは、ドキュメント、スクリーンショット、グラフ、写真を読み取るAlibabaのオープンなビジョン言語モデルで、どちらもOllamaでローカル実行できます。Qwen3-VL 8Bは6.1GBのダウンロード（`ollama pull qwen3-vl:8b`）、Qwen2.5-VL 7Bは6.0GBのダウンロード（`ollama pull qwen2.5vl:7b`）です。このページがもともと扱っていたQwen2-VLは旧世代で、Ollamaの公式ライブラリにエントリがないため、`ollama pull qwen2-vl:7b`は失敗します。本ガイドでは、確認済みのタグ・サイズ・ライセンス、OllamaとLM Studioでのセットアップ、中国語・日本語・韓国語ドキュメントを抽出するための実用的なプロンプトを紹介します。',
+    intro: 'Qwen2.5-VLとQwen3-VLは、ドキュメント、スクリーンショット、グラフ、写真を読み取るAlibabaのオープンなビジョン言語モデルで、どちらもOllamaでローカル実行できます。Qwen3-VL 8Bは6.2GBのダウンロード（`ollama pull qwen3-vl:8b`）、Qwen2.5-VL 7Bは6.0GBのダウンロード（`ollama pull qwen2.5vl:7b`）です。このページがもともと扱っていたQwen2-VLは旧世代で、Ollamaの公式ライブラリにエントリがないため、`ollama pull qwen2-vl:7b`は失敗します。本ガイドでは、確認済みのタグ・サイズ・ライセンス、OllamaとLM Studioでのセットアップ、中国語・日本語・韓国語ドキュメントを抽出するための実用的なプロンプトを紹介します。',
     metaDescription: 'Qwen2.5-VLとQwen3-VLをOllamaでローカル実行：確認済みのタグ・サイズ・ライセンス、手順、ドキュメントOCR。Qwen2-VLは旧世代です。',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -2092,14 +2092,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**ドキュメントや画像をローカルで読み取るには、`ollama pull qwen3-vl:8b`（6.1GB、Ollama 0.12.7以降が必要）または`ollama pull qwen2.5vl:7b`（6.0GB、Ollama 0.7.0以降が必要）を実行します。** 旧タグの`qwen2-vl:7b`はOllamaの公式ライブラリにないため、Qwen2.5-VLまたはQwen3-VLを使ってください。送信した画像はクラウドAPIにアップロードされず、ローカルのOllamaサーバーで処理されます。',
+    leadAnswerBlock: '**ドキュメントや画像をローカルで読み取るには、`ollama pull qwen3-vl:8b`（6.2GB、Ollama 0.12.7以降が必要）または`ollama pull qwen2.5vl:7b`（6.0GB、Ollama 0.7.0以降が必要）を実行します。** 旧タグの`qwen2-vl:7b`はOllamaの公式ライブラリにないため、Qwen2.5-VLまたはQwen3-VLを使ってください。送信した画像はクラウドAPIにアップロードされず、ローカルのOllamaサーバーで処理されます。',
     quickAnswerTop: {
       ja: {
         question: '2026年にQwenのビジョンモデルをローカルで動かすには？',
         answer: 'Ollamaを更新し、`ollama pull qwen3-vl:8b`（古いOllamaでは`qwen2.5vl:7b`）を実行してから`ollama run qwen3-vl:8b`を起動し、プロンプト内に画像ファイルのパスを入力します。GUIで使う場合は、LM StudioでQwen3-VLまたはQwen2.5-VLを検索し、モデルカードでビジョン対応と記載されたビルドを選びます。どちらも約6GBのダウンロードで、コンテキストと画像エンコーダー用に余裕のあるメモリが必要です。',
         bullets: [
           'Ollamaのバージョン：Qwen3-VLは0.12.7以降、Qwen2.5-VLは0.7.0以降（Ollamaライブラリページによる）',
-          'モデルの取得：ollama pull qwen3-vl:8b（6.1GB）または ollama pull qwen2.5vl:7b（6.0GB）',
+          'モデルの取得：ollama pull qwen3-vl:8b（6.2GB）または ollama pull qwen2.5vl:7b（6.0GB）',
           '画像の添付：プロンプトにファイルパスを入力（CLI）、またはbase64のimages配列を送信（API）',
           '使えないタグ：qwen2-vl:7bはOllama公式ライブラリにありません — qwen2.5vlかqwen3-vlを使用',
           'ライセンス：Qwen3-VLとQwen2.5-VL 7B/32BはHugging FaceのカードでApache 2.0、Qwen2.5-VL 3Bと72BはQwenのライセンス',
@@ -2128,7 +2128,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**Qwen2-VLではなくQwen3-VLかQwen2.5-VLを使う**：どちらもOllamaライブラリに公式エントリ（`qwen3-vl`、`qwen2.5vl`）がありますが、`ollama.com/library/qwen2-vl`は404を返し、`ollama pull qwen2-vl:7b`は失敗します。',
-          '**Qwen3-VL 8Bは6.1GBのダウンロード**（`ollama pull qwen3-vl:8b`、Ollama 0.12.7以降が必要）、**Qwen2.5-VL 7Bは6.0GB**（`ollama pull qwen2.5vl:7b`、Ollama 0.7.0以降が必要）。',
+          '**Qwen3-VL 8Bは6.2GBのダウンロード**（`ollama pull qwen3-vl:8b`、Ollama 0.12.7以降が必要）、**Qwen2.5-VL 7Bは6.0GB**（`ollama pull qwen2.5vl:7b`、Ollama 0.7.0以降が必要）。',
           '**サイズ**：Qwen3-VLは2B、4B、8B、30B-A3B、32B、235B-A22B（1.9GB〜143GB）、Qwen2.5-VLは3B、7B、32B、72B（3.2GB〜49GB）。いずれもOllamaライブラリページのダウンロードサイズです。',
           '**コンテキスト**：Ollamaのページでは、Qwen3-VLは256K、Qwen2.5-VLは125Kのコンテキストウィンドウと記載されています。実際に使える長さはメモリ次第です。',
           '**ライセンスはサイズで異なる**：Qwen3-VLとQwen2.5-VL 7B/32BはHugging FaceカードでApache 2.0、Qwen2.5-VL 3Bと72BはQwenのライセンスです。商用利用の前にカードを確認してください。',
@@ -2148,7 +2148,7 @@ ollama run qwen3-vl:8b
           'これらはQwenによる説明であり、PromptQuorumの測定値ではありません。お手元のドキュメント（特に小さい文字、手書き、低品質のスキャン）での精度は異なるため、代表的なページを数枚試してから採用してください。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwenのビジョンモデルは`ollama pull qwen3-vl:8b`（6.1GB）または`ollama pull qwen2.5vl:7b`（6.0GB）でローカル実行できます。旧タグの`qwen2-vl`はOllama公式ライブラリにありません。' },
+          { type: 'one-sentence', text: 'Qwenのビジョンモデルは`ollama pull qwen3-vl:8b`（6.2GB）または`ollama pull qwen2.5vl:7b`（6.0GB）でローカル実行できます。旧タグの`qwen2-vl`はOllama公式ライブラリにありません。' },
           { type: 'plain-terms', text: 'ビジョン言語モデルは画像を生成するのではなく読み取るモデルです。写真やスキャンしたページを渡すと、説明、回答、抽出した内容などのテキストが返ってきます。' },
         ],
       },
@@ -2161,7 +2161,7 @@ ollama run qwen3-vl:8b
         rows: [
           { 'モデル': 'Qwen3-VL 2B', 'Ollamaタグ': 'qwen3-vl:2b', 'ダウンロード': '1.9 GB', 'ライセンス（HFカード）': 'Apache 2.0' },
           { 'モデル': 'Qwen3-VL 4B', 'Ollamaタグ': 'qwen3-vl:4b', 'ダウンロード': '3.3 GB', 'ライセンス（HFカード）': 'Apache 2.0' },
-          { 'モデル': 'Qwen3-VL 8B', 'Ollamaタグ': 'qwen3-vl:8b', 'ダウンロード': '6.1 GB', 'ライセンス（HFカード）': 'Apache 2.0' },
+          { 'モデル': 'Qwen3-VL 8B', 'Ollamaタグ': 'qwen3-vl:8b', 'ダウンロード': '6.2 GB', 'ライセンス（HFカード）': 'Apache 2.0' },
           { 'モデル': 'Qwen3-VL 30B-A3B (MoE)', 'Ollamaタグ': 'qwen3-vl:30b', 'ダウンロード': '20 GB', 'ライセンス（HFカード）': 'Apache 2.0' },
           { 'モデル': 'Qwen3-VL 32B', 'Ollamaタグ': 'qwen3-vl:32b', 'ダウンロード': '21 GB', 'ライセンス（HFカード）': 'Apache 2.0' },
           { 'モデル': 'Qwen3-VL 235B-A22B (MoE)', 'Ollamaタグ': 'qwen3-vl:235b', 'ダウンロード': '143 GB', 'ライセンス（HFカード）': 'Apache 2.0' },
@@ -2178,7 +2178,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'Qwenビジョンモデルのハードウェア要件',
         items: [
-          '**ダウンロードサイズは重みのみ**：Qwen3-VL 8Bは6.1GB、Qwen2.5-VL 7Bは6.0GBです。コンテキストキャッシュと画像エンコーダーには追加メモリが必要で、コンテキスト長や画像サイズに応じて増えるため、ダウンロードサイズより余裕を持たせてください。',
+          '**ダウンロードサイズは重みのみ**：Qwen3-VL 8Bは6.2GB、Qwen2.5-VL 7Bは6.0GBです。コンテキストキャッシュと画像エンコーダーには追加メモリが必要で、コンテキスト長や画像サイズに応じて増えるため、ダウンロードサイズより余裕を持たせてください。',
           '**小さめの選択肢**：Qwen3-VL 2B（1.9GB）・4B（3.3GB）、Qwen2.5-VL 3B（3.2GB）は小型GPUやノートPC向けです。7B〜8Bモデルより精度は下がると考えてください。',
           '**大きめの選択肢**：Qwen3-VL 30B-A3B（20GB）、Qwen3-VL 32BとQwen2.5-VL 32B（21GB）、Qwen2.5-VL 72B（49GB）は、大型GPU、複数GPU、または大容量のユニファイドメモリを持つApple Siliconが必要です。',
           '**部分オフロード**：モデルがVRAMに収まらない場合、Ollamaは一部をシステムRAMに置けます。動作しますが、かなり遅くなります。',
@@ -2214,7 +2214,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -2398,7 +2398,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-zh.webp',
     title: '2026年如何在本地运行Qwen2.5-VL和Qwen3-VL：文档OCR与视觉指南',
     seoTitle: '本地运行Qwen2.5-VL与Qwen3-VL 2026：Ollama指南',
-    intro: 'Qwen2.5-VL和Qwen3-VL是阿里巴巴用于读取文档、截图、图表和照片的开源视觉语言模型，二者都可以通过Ollama在本地运行。Qwen3-VL 8B的下载大小为6.1 GB（`ollama pull qwen3-vl:8b`），Qwen2.5-VL 7B为6.0 GB（`ollama pull qwen2.5vl:7b`）。本页最初介绍的Qwen2-VL是上一代模型，Ollama官方库中没有它的条目，因此`ollama pull qwen2-vl:7b`会失败。本指南提供经过核实的标签、大小和许可证，介绍Ollama与LM Studio的配置方法，以及提取中文、日文和韩文文档的实用提示词。',
+    intro: 'Qwen2.5-VL和Qwen3-VL是阿里巴巴用于读取文档、截图、图表和照片的开源视觉语言模型，二者都可以通过Ollama在本地运行。Qwen3-VL 8B的下载大小为6.2 GB（`ollama pull qwen3-vl:8b`），Qwen2.5-VL 7B为6.0 GB（`ollama pull qwen2.5vl:7b`）。本页最初介绍的Qwen2-VL是上一代模型，Ollama官方库中没有它的条目，因此`ollama pull qwen2-vl:7b`会失败。本指南提供经过核实的标签、大小和许可证，介绍Ollama与LM Studio的配置方法，以及提取中文、日文和韩文文档的实用提示词。',
     metaDescription: '通过Ollama在本地运行Qwen2.5-VL和Qwen3-VL：核实过的标签、下载大小、许可证、配置步骤与文档OCR。Qwen2-VL已被取代。',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -2433,14 +2433,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**运行`ollama pull qwen3-vl:8b`（6.1 GB，需要Ollama 0.12.7或更高版本）或`ollama pull qwen2.5vl:7b`（6.0 GB，需要Ollama 0.7.0或更高版本），即可在本地读取文档和图像。** 旧标签`qwen2-vl:7b`不在Ollama官方库中，请改用Qwen2.5-VL或Qwen3-VL；你发送的图像由本地Ollama服务器处理，而不是上传到云端API。',
+    leadAnswerBlock: '**运行`ollama pull qwen3-vl:8b`（6.2 GB，需要Ollama 0.12.7或更高版本）或`ollama pull qwen2.5vl:7b`（6.0 GB，需要Ollama 0.7.0或更高版本），即可在本地读取文档和图像。** 旧标签`qwen2-vl:7b`不在Ollama官方库中，请改用Qwen2.5-VL或Qwen3-VL；你发送的图像由本地Ollama服务器处理，而不是上传到云端API。',
     quickAnswerTop: {
       zh: {
         question: '2026年如何在本地运行Qwen视觉模型？',
         answer: '先更新Ollama，运行`ollama pull qwen3-vl:8b`（Ollama版本较旧时用`qwen2.5vl:7b`），再运行`ollama run qwen3-vl:8b`，并在提示词中输入图像文件路径。需要图形界面时，在LM Studio中搜索Qwen3-VL或Qwen2.5-VL，选择模型卡标明支持视觉的版本。两个模型的下载大小都约为6 GB，请为上下文和图像编码器预留额外内存。',
         bullets: [
           'Ollama版本：Qwen3-VL需要0.12.7+，Qwen2.5-VL需要0.7.0+（依据Ollama库页面）',
-          '拉取模型：ollama pull qwen3-vl:8b（6.1 GB）或 ollama pull qwen2.5vl:7b（6.0 GB）',
+          '拉取模型：ollama pull qwen3-vl:8b（6.2 GB）或 ollama pull qwen2.5vl:7b（6.0 GB）',
           '添加图像：在提示词中输入文件路径（CLI），或发送base64格式的images数组（API）',
           '失效标签：qwen2-vl:7b不在Ollama官方库中——请使用qwen2.5vl或qwen3-vl',
           '许可证：Qwen3-VL和Qwen2.5-VL 7B/32B在Hugging Face模型卡上为Apache 2.0；Qwen2.5-VL 3B和72B使用Qwen许可证',
@@ -2469,7 +2469,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**使用Qwen3-VL或Qwen2.5-VL，而不是Qwen2-VL**：二者在Ollama库中都有官方条目（`qwen3-vl`、`qwen2.5vl`），而`ollama.com/library/qwen2-vl`返回404，`ollama pull qwen2-vl:7b`会失败。',
-          '**Qwen3-VL 8B下载大小为6.1 GB**（`ollama pull qwen3-vl:8b`，需要Ollama 0.12.7+）；**Qwen2.5-VL 7B为6.0 GB**（`ollama pull qwen2.5vl:7b`，需要Ollama 0.7.0+）。',
+          '**Qwen3-VL 8B下载大小为6.2 GB**（`ollama pull qwen3-vl:8b`，需要Ollama 0.12.7+）；**Qwen2.5-VL 7B为6.0 GB**（`ollama pull qwen2.5vl:7b`，需要Ollama 0.7.0+）。',
           '**尺寸**：Qwen3-VL有2B、4B、8B、30B-A3B、32B和235B-A22B（1.9 GB至143 GB）；Qwen2.5-VL有3B、7B、32B和72B（3.2 GB至49 GB）。均为Ollama库页面给出的下载大小。',
           '**上下文**：Ollama页面标注Qwen3-VL的上下文窗口为256K，Qwen2.5-VL为125K；实际可用的上下文取决于你的内存。',
           '**许可证因尺寸而异**：Qwen3-VL以及Qwen2.5-VL 7B/32B在Hugging Face模型卡上为Apache 2.0；Qwen2.5-VL 3B和72B使用Qwen许可证。商用前请阅读模型卡。',
@@ -2489,7 +2489,7 @@ ollama run qwen3-vl:8b
           '以上是Qwen团队自己的描述，不是PromptQuorum的测量结果。模型在你的文档上的准确率（尤其是小字号、手写体或低质量扫描件）会有差异，因此请先用几页有代表性的文档测试，再决定是否采用。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: '用`ollama pull qwen3-vl:8b`（6.1 GB）或`ollama pull qwen2.5vl:7b`（6.0 GB）即可在本地运行Qwen视觉模型；旧标签`qwen2-vl`已不在Ollama官方库中。' },
+          { type: 'one-sentence', text: '用`ollama pull qwen3-vl:8b`（6.2 GB）或`ollama pull qwen2.5vl:7b`（6.0 GB）即可在本地运行Qwen视觉模型；旧标签`qwen2-vl`已不在Ollama官方库中。' },
           { type: 'plain-terms', text: '视觉语言模型的作用是读取图像，而不是生成图像。你给它一张照片或一页扫描件，它会返回文本——描述、答案或提取出的内容。' },
         ],
       },
@@ -2502,7 +2502,7 @@ ollama run qwen3-vl:8b
         rows: [
           { '模型': 'Qwen3-VL 2B', 'Ollama标签': 'qwen3-vl:2b', '下载大小': '1.9 GB', '许可证（HF模型卡）': 'Apache 2.0' },
           { '模型': 'Qwen3-VL 4B', 'Ollama标签': 'qwen3-vl:4b', '下载大小': '3.3 GB', '许可证（HF模型卡）': 'Apache 2.0' },
-          { '模型': 'Qwen3-VL 8B', 'Ollama标签': 'qwen3-vl:8b', '下载大小': '6.1 GB', '许可证（HF模型卡）': 'Apache 2.0' },
+          { '模型': 'Qwen3-VL 8B', 'Ollama标签': 'qwen3-vl:8b', '下载大小': '6.2 GB', '许可证（HF模型卡）': 'Apache 2.0' },
           { '模型': 'Qwen3-VL 30B-A3B (MoE)', 'Ollama标签': 'qwen3-vl:30b', '下载大小': '20 GB', '许可证（HF模型卡）': 'Apache 2.0' },
           { '模型': 'Qwen3-VL 32B', 'Ollama标签': 'qwen3-vl:32b', '下载大小': '21 GB', '许可证（HF模型卡）': 'Apache 2.0' },
           { '模型': 'Qwen3-VL 235B-A22B (MoE)', 'Ollama标签': 'qwen3-vl:235b', '下载大小': '143 GB', '许可证（HF模型卡）': 'Apache 2.0' },
@@ -2519,7 +2519,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'Qwen视觉模型的硬件要求',
         items: [
-          '**下载大小只含权重**：Qwen3-VL 8B为6.1 GB，Qwen2.5-VL 7B为6.0 GB。上下文缓存和图像编码器需要额外内存，且随上下文长度和图像大小增长，因此请在下载大小之上留出余量。',
+          '**下载大小只含权重**：Qwen3-VL 8B为6.2 GB，Qwen2.5-VL 7B为6.0 GB。上下文缓存和图像编码器需要额外内存，且随上下文长度和图像大小增长，因此请在下载大小之上留出余量。',
           '**较小的选项**：Qwen3-VL 2B（1.9 GB）和4B（3.3 GB），或Qwen2.5-VL 3B（3.2 GB），适合小显存GPU和笔记本；准确率预计低于7B–8B模型。',
           '**较大的选项**：Qwen3-VL 30B-A3B（20 GB）、Qwen3-VL 32B和Qwen2.5-VL 32B（21 GB）以及Qwen2.5-VL 72B（49 GB）需要大显存GPU、多张GPU，或统一内存很大的Apple Silicon。',
           '**部分卸载**：模型装不进显存时，Ollama可以把一部分放到系统内存中；能运行，但速度会明显变慢。',
@@ -2555,7 +2555,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
@@ -2739,7 +2739,7 @@ ollama run qwen3-vl:8b
     heroImage: '/images/run-qwen-vl-locally-2026-overview-hero-ko.webp',
     title: '2026년 Qwen2.5-VL과 Qwen3-VL 로컬 실행 방법: 문서 OCR 및 비전 가이드',
     seoTitle: 'Qwen2.5-VL·Qwen3-VL 로컬 실행 2026: Ollama 가이드',
-    intro: 'Qwen2.5-VL과 Qwen3-VL은 문서, 스크린샷, 차트, 사진을 읽는 Alibaba의 오픈 비전-언어 모델이며, 둘 다 Ollama로 로컬에서 실행할 수 있습니다. Qwen3-VL 8B는 6.1 GB 다운로드(`ollama pull qwen3-vl:8b`), Qwen2.5-VL 7B는 6.0 GB 다운로드(`ollama pull qwen2.5vl:7b`)입니다. 이 페이지가 원래 다루던 Qwen2-VL은 이전 세대로 Ollama 공식 라이브러리에 항목이 없으므로 `ollama pull qwen2-vl:7b`는 실패합니다. 이 가이드는 확인된 태그·크기·라이선스, Ollama와 LM Studio 설정, 중국어·일본어·한국어 문서 추출을 위한 실용적인 프롬프트를 제공합니다.',
+    intro: 'Qwen2.5-VL과 Qwen3-VL은 문서, 스크린샷, 차트, 사진을 읽는 Alibaba의 오픈 비전-언어 모델이며, 둘 다 Ollama로 로컬에서 실행할 수 있습니다. Qwen3-VL 8B는 6.2 GB 다운로드(`ollama pull qwen3-vl:8b`), Qwen2.5-VL 7B는 6.0 GB 다운로드(`ollama pull qwen2.5vl:7b`)입니다. 이 페이지가 원래 다루던 Qwen2-VL은 이전 세대로 Ollama 공식 라이브러리에 항목이 없으므로 `ollama pull qwen2-vl:7b`는 실패합니다. 이 가이드는 확인된 태그·크기·라이선스, Ollama와 LM Studio 설정, 중국어·일본어·한국어 문서 추출을 위한 실용적인 프롬프트를 제공합니다.',
     metaDescription: 'Ollama로 Qwen2.5-VL과 Qwen3-VL을 로컬 실행: 확인된 태그·다운로드 크기·라이선스, 설정 단계, 문서 OCR. Qwen2-VL은 구세대입니다.',
     publishDate: '2026-05-22',
     dateModified: '2026-10-19',
@@ -2774,14 +2774,14 @@ ollama run qwen3-vl:8b
       'NVIDIA GPU',
       'Apple Silicon (unified memory)',
     ],
-    leadAnswerBlock: '**문서와 이미지를 로컬에서 읽으려면 `ollama pull qwen3-vl:8b`(6.1 GB, Ollama 0.12.7 이상 필요) 또는 `ollama pull qwen2.5vl:7b`(6.0 GB, Ollama 0.7.0 이상 필요)를 실행하십시오.** 이전 태그인 `qwen2-vl:7b`는 Ollama 공식 라이브러리에 없으므로 Qwen2.5-VL 또는 Qwen3-VL을 사용하십시오. 전송한 이미지는 클라우드 API로 업로드되지 않고 로컬 Ollama 서버에서 처리됩니다.',
+    leadAnswerBlock: '**문서와 이미지를 로컬에서 읽으려면 `ollama pull qwen3-vl:8b`(6.2 GB, Ollama 0.12.7 이상 필요) 또는 `ollama pull qwen2.5vl:7b`(6.0 GB, Ollama 0.7.0 이상 필요)를 실행하십시오.** 이전 태그인 `qwen2-vl:7b`는 Ollama 공식 라이브러리에 없으므로 Qwen2.5-VL 또는 Qwen3-VL을 사용하십시오. 전송한 이미지는 클라우드 API로 업로드되지 않고 로컬 Ollama 서버에서 처리됩니다.',
     quickAnswerTop: {
       ko: {
         question: '2026년에 Qwen 비전 모델을 로컬에서 실행하려면 어떻게 합니까?',
         answer: 'Ollama를 업데이트한 뒤 `ollama pull qwen3-vl:8b`(구버전 Ollama에서는 `qwen2.5vl:7b`)를 실행하고, `ollama run qwen3-vl:8b`로 시작해 프롬프트 안에 이미지 파일 경로를 입력하십시오. GUI를 쓰려면 LM Studio에서 Qwen3-VL 또는 Qwen2.5-VL을 검색해 모델 카드에 비전 지원이 표시된 빌드를 선택하십시오. 두 모델 모두 다운로드 크기가 약 6 GB이므로 컨텍스트와 이미지 인코더를 위한 여유 메모리를 확보하십시오.',
         bullets: [
           'Ollama 버전: Qwen3-VL은 0.12.7 이상, Qwen2.5-VL은 0.7.0 이상(Ollama 라이브러리 페이지 기준)',
-          '모델 받기: ollama pull qwen3-vl:8b(6.1 GB) 또는 ollama pull qwen2.5vl:7b(6.0 GB)',
+          '모델 받기: ollama pull qwen3-vl:8b(6.2 GB) 또는 ollama pull qwen2.5vl:7b(6.0 GB)',
           '이미지 첨부: 프롬프트에 파일 경로 입력(CLI) 또는 base64 images 배열 전송(API)',
           '사용할 수 없는 태그: qwen2-vl:7b는 Ollama 공식 라이브러리에 없습니다 — qwen2.5vl 또는 qwen3-vl 사용',
           '라이선스: Qwen3-VL과 Qwen2.5-VL 7B/32B는 Hugging Face 카드에서 Apache 2.0, Qwen2.5-VL 3B와 72B는 Qwen 라이선스',
@@ -2810,7 +2810,7 @@ ollama run qwen3-vl:8b
         isTldr: true,
         items: [
           '**Qwen2-VL이 아니라 Qwen3-VL 또는 Qwen2.5-VL을 사용하십시오**: 둘 다 Ollama 라이브러리에 공식 항목(`qwen3-vl`, `qwen2.5vl`)이 있지만, `ollama.com/library/qwen2-vl`은 404를 반환하고 `ollama pull qwen2-vl:7b`는 실패합니다.',
-          '**Qwen3-VL 8B는 6.1 GB 다운로드**(`ollama pull qwen3-vl:8b`, Ollama 0.12.7 이상 필요)이고, **Qwen2.5-VL 7B는 6.0 GB**(`ollama pull qwen2.5vl:7b`, Ollama 0.7.0 이상 필요)입니다.',
+          '**Qwen3-VL 8B는 6.2 GB 다운로드**(`ollama pull qwen3-vl:8b`, Ollama 0.12.7 이상 필요)이고, **Qwen2.5-VL 7B는 6.0 GB**(`ollama pull qwen2.5vl:7b`, Ollama 0.7.0 이상 필요)입니다.',
           '**크기**: Qwen3-VL은 2B, 4B, 8B, 30B-A3B, 32B, 235B-A22B(1.9 GB~143 GB), Qwen2.5-VL은 3B, 7B, 32B, 72B(3.2 GB~49 GB)입니다. Ollama 라이브러리 페이지의 다운로드 크기입니다.',
           '**컨텍스트**: Ollama 페이지에는 Qwen3-VL이 256K, Qwen2.5-VL이 125K 컨텍스트 창으로 표시됩니다. 실제로 쓸 수 있는 컨텍스트는 메모리에 달려 있습니다.',
           '**라이선스는 크기별로 다릅니다**: Qwen3-VL과 Qwen2.5-VL 7B/32B는 Hugging Face 카드에서 Apache 2.0, Qwen2.5-VL 3B와 72B는 Qwen 라이선스입니다. 상업적으로 사용하기 전에 카드를 확인하십시오.',
@@ -2830,7 +2830,7 @@ ollama run qwen3-vl:8b
           '이는 Qwen 팀의 설명이며 PromptQuorum의 측정 결과가 아닙니다. 사용자의 문서(특히 작은 글꼴, 손글씨, 저품질 스캔)에서의 정확도는 다를 수 있으므로, 대표적인 페이지 몇 장으로 테스트한 뒤 도입하십시오.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 비전 모델은 `ollama pull qwen3-vl:8b`(6.1 GB) 또는 `ollama pull qwen2.5vl:7b`(6.0 GB)로 로컬 실행할 수 있으며, 이전 `qwen2-vl` 태그는 Ollama 공식 라이브러리에 없습니다.' },
+          { type: 'one-sentence', text: 'Qwen 비전 모델은 `ollama pull qwen3-vl:8b`(6.2 GB) 또는 `ollama pull qwen2.5vl:7b`(6.0 GB)로 로컬 실행할 수 있으며, 이전 `qwen2-vl` 태그는 Ollama 공식 라이브러리에 없습니다.' },
           { type: 'plain-terms', text: '비전-언어 모델은 이미지를 생성하는 것이 아니라 읽는 모델입니다. 사진이나 스캔한 페이지를 주면 설명, 답변, 추출된 내용 같은 텍스트를 돌려줍니다.' },
         ],
       },
@@ -2843,7 +2843,7 @@ ollama run qwen3-vl:8b
         rows: [
           { '모델': 'Qwen3-VL 2B', 'Ollama 태그': 'qwen3-vl:2b', '다운로드': '1.9 GB', '라이선스(HF 카드)': 'Apache 2.0' },
           { '모델': 'Qwen3-VL 4B', 'Ollama 태그': 'qwen3-vl:4b', '다운로드': '3.3 GB', '라이선스(HF 카드)': 'Apache 2.0' },
-          { '모델': 'Qwen3-VL 8B', 'Ollama 태그': 'qwen3-vl:8b', '다운로드': '6.1 GB', '라이선스(HF 카드)': 'Apache 2.0' },
+          { '모델': 'Qwen3-VL 8B', 'Ollama 태그': 'qwen3-vl:8b', '다운로드': '6.2 GB', '라이선스(HF 카드)': 'Apache 2.0' },
           { '모델': 'Qwen3-VL 30B-A3B (MoE)', 'Ollama 태그': 'qwen3-vl:30b', '다운로드': '20 GB', '라이선스(HF 카드)': 'Apache 2.0' },
           { '모델': 'Qwen3-VL 32B', 'Ollama 태그': 'qwen3-vl:32b', '다운로드': '21 GB', '라이선스(HF 카드)': 'Apache 2.0' },
           { '모델': 'Qwen3-VL 235B-A22B (MoE)', 'Ollama 태그': 'qwen3-vl:235b', '다운로드': '143 GB', '라이선스(HF 카드)': 'Apache 2.0' },
@@ -2860,7 +2860,7 @@ ollama run qwen3-vl:8b
         id: 'hardware',
         title: 'Qwen 비전 모델의 하드웨어 요구사항',
         items: [
-          '**다운로드 크기는 가중치만 포함합니다**: Qwen3-VL 8B는 6.1 GB, Qwen2.5-VL 7B는 6.0 GB입니다. 컨텍스트 캐시와 이미지 인코더에는 컨텍스트 길이와 이미지 크기에 따라 늘어나는 추가 메모리가 필요하므로 다운로드 크기보다 여유를 두십시오.',
+          '**다운로드 크기는 가중치만 포함합니다**: Qwen3-VL 8B는 6.2 GB, Qwen2.5-VL 7B는 6.0 GB입니다. 컨텍스트 캐시와 이미지 인코더에는 컨텍스트 길이와 이미지 크기에 따라 늘어나는 추가 메모리가 필요하므로 다운로드 크기보다 여유를 두십시오.',
           '**더 작은 선택지**: Qwen3-VL 2B(1.9 GB)와 4B(3.3 GB), Qwen2.5-VL 3B(3.2 GB)는 작은 GPU와 노트북에 적합하며, 7B–8B 모델보다 정확도가 낮을 것으로 예상하십시오.',
           '**더 큰 선택지**: Qwen3-VL 30B-A3B(20 GB), Qwen3-VL 32B와 Qwen2.5-VL 32B(21 GB), Qwen2.5-VL 72B(49 GB)는 대형 GPU, 다중 GPU 또는 통합 메모리가 큰 Apple Silicon이 필요합니다.',
           '**부분 오프로드**: 모델이 VRAM에 들어가지 않으면 Ollama가 일부를 시스템 RAM에 둘 수 있습니다. 동작은 하지만 눈에 띄게 느려집니다.',
@@ -2896,7 +2896,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 
 # Step 2 — Pull a Qwen vision model (explicit tag)
-ollama pull qwen3-vl:8b          # 6.1 GB
+ollama pull qwen3-vl:8b          # 6.2 GB
 # or: ollama pull qwen2.5vl:7b   # 6.0 GB
 
 # Step 3 — Run and attach an image (interactive)
