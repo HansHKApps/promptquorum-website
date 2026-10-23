@@ -1178,6 +1178,7 @@ const HUB_THEMES: Array<{
       'chatterbox-vs-elevenlabs',
       'coqui-tts-review',
       'faster-whisper-review',
+      'speechbrain-review',
       'idefics-review',
       'kokoro-vs-elevenlabs',
       'llava-review',
