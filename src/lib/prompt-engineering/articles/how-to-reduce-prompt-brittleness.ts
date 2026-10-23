@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'How to Reduce Prompt Brittleness: 7 Techniques',
     twitterDescription: 'Prompts break silently on input variations. 7 techniques: structured output, few-shot anchoring, defensive instructions, parameterization, regression testing, version pinning, output validation.',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8 min read',
     educationalLevel: 'Advanced',
     audience: 'Developers and prompt engineers managing prompts in production',
@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'The Five Root Causes of Prompt Brittleness',
-        content: '**Most prompt brittleness comes from five patterns in how prompts are written and tested.** The two most common — implicit format expectations and happy-path-only testing — account for the majority of production failures. Understanding these causes is the first step toward [evaluating and improving your prompt quality](/prompt-engineering/how-to-evaluate-prompt-quality).',
+        content: '**Most prompt brittleness comes from five patterns in how prompts are written and tested.** The two most common — implicit format expectations and happy-path-only testing — are, in our experience, among the most frequent causes of production failures. Understanding these causes is the first step toward [evaluating and improving your prompt quality](/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Implicit format expectations** — The prompt asks for a specific output format (JSON, bullet list, yes/no) without enforcing it. Any input variation that causes the model to add a preamble or rephrase breaks downstream parsing.',
           '**Happy-path-only testing** — Prompts are validated on 3–5 manually curated examples that always work. Edge cases — empty inputs, very long text, ambiguous phrasing — are never tested.',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: 'Seven Techniques That Reduce Prompt Brittleness',
-        content: '**Seven techniques address the five root causes above and cover the full failure-mode surface.** Apply them in order — earlier techniques address the most common failures. In production codebases, format-related brittleness — prompts that parse free text expecting a specific shape — accounts for the majority of silent failures in classification and extraction tasks. Structured output enforcement (Technique 1) addresses this class entirely.',
+        content: '**Seven techniques address the five root causes above and cover the full failure-mode surface.** Apply them in order — earlier techniques address the most common failures. In production codebases, format-related brittleness — prompts that parse free text expecting a specific shape — is, in our experience, a leading cause of silent failures in classification and extraction tasks. Structured output enforcement (Technique 1) eliminates format drift in this class; it does not guarantee correct field values (see Technique 7).',
         numberedItems: [
           '**Enforce structured output** — Use [JSON mode or native structured output APIs](/prompt-engineering/structured-output-and-json-mode) instead of asking the model to "respond in JSON". Format enforcement moves the reliability burden from the prompt to the API layer.',
           '**Add explicit few-shot examples** — Include 2–3 input/output pairs that demonstrate correct behavior, including one edge case. Examples anchor the model\'s behavior more reliably than instruction-only prompts. See [zero-shot vs. few-shot prompting](/prompt-engineering/zero-shot-vs-few-shot) for more guidance.',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'en',
       about: [
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Prompt-Brittleness reduzieren: 7 Techniken (2026)',
     twitterDescription: '7 Techniken gegen stille Prompt-Fehler in Produktion. Structured Output, Regressionstests, Version-Pinning — das komplette Playbook.',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Advanced',
     audience: 'Entwickler und Prompt-Ingenieure, die Prompts in der Produktion verwalten',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'Die fünf Hauptursachen von Prompt-Brittleness',
-        content: '**Die meiste Prompt-Brittleness kommt aus fünf Mustern, wie Prompts geschrieben und getestet werden.** Die zwei häufigsten — implizite Formaterwartungen und Happy-Path-Only-Tests — machen die Mehrheit der Produktionsfehler aus. Das Verständnis dieser Ursachen ist der erste Schritt zum [Bewerten und Verbessern der Qualität Ihrer Prompts](/de/prompt-engineering/how-to-evaluate-prompt-quality).',
+        content: '**Die meiste Prompt-Brittleness kommt aus fünf Mustern, wie Prompts geschrieben und getestet werden.** Die zwei häufigsten — implizite Formaterwartungen und Happy-Path-Only-Tests — gehören nach unserer Erfahrung zu den häufigsten Ursachen von Produktionsfehlern. Das Verständnis dieser Ursachen ist der erste Schritt zum [Bewerten und Verbessern der Qualität Ihrer Prompts](/de/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Implizite Formaterwartungen** — Der Prompt fordert ein bestimmtes Ausgabeformat (JSON, Bullet-Liste, ja/nein) an, ohne es durchzusetzen. Jede Eingabevariante, die das Modell veranlasst, eine Präambel hinzuzufügen oder umzuformulieren, bricht das nachgelagerte Parsing.',
           '**Happy-Path-Only-Tests** — Prompts werden an 3–5 manuell kuratierte Beispiele validiert, die immer funktionieren. Randfälle — leere Eingaben, sehr langer Text, mehrdeutige Formulierungen — werden nie getestet.',
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: 'Sieben Techniken zur Reduktion von Prompt-Brittleness',
-        content: '**Sieben Techniken behandeln die fünf Grundursachen oben und decken die gesamte Fehlermodell-Oberfläche ab.** Wenden Sie sie der Reihe nach an — frühere Techniken behandeln die häufigsten Fehler. In Produktions-Codebases macht Format-bezogene Brittleness — Prompts, die Freitext parsen und eine bestimmte Form erwarten — die Mehrheit der stillen Fehler in Klassifizierungs- und Extraktionsaufgaben aus. Durchsetzung strukturierter Ausgabe (Technik 1) behandelt diese Klasse vollständig.',
+        content: '**Sieben Techniken behandeln die fünf Grundursachen oben und decken die gesamte Fehlermodell-Oberfläche ab.** Wenden Sie sie der Reihe nach an — frühere Techniken behandeln die häufigsten Fehler. In Produktions-Codebases ist Format-bezogene Brittleness — Prompts, die Freitext parsen und eine bestimmte Form erwarten — nach unserer Erfahrung eine der Hauptursachen stiller Fehler in Klassifizierungs- und Extraktionsaufgaben. Durchsetzung strukturierter Ausgabe (Technik 1) beseitigt Format-Drift in dieser Klasse, garantiert aber keine korrekten Feldwerte (siehe Technik 7).',
         numberedItems: [
           '**Strukturierte Ausgabe durchsetzen** — Verwenden Sie [JSON-Modus oder native strukturierte Ausgabe-APIs](/de/prompt-engineering/structured-output-and-json-mode) anstatt das Modell anzuweisen, „in JSON zu antworten". Formatdurchsetzung verlagert die Zuverlässigkeitslast vom Prompt zur API-Schicht.',
           '**Explizite Few-Shot-Beispiele hinzufügen** — Fügen Sie 2–3 Input/Output-Paare ein, die korrektes Verhalten demonstrieren, einschließlich eines Randfalls. Beispiele verankern das Verhalten des Modells zuverlässiger als reine Instruktions-Prompts. Siehe [Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) für weitere Anleitung.',
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/de/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'de',
       about: [
@@ -602,7 +602,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Fragilidad de prompts: 7 técnicas',
     twitterDescription: '7 técnicas para evitar que tus prompts fallen silenciosamente en producción. Salida estructurada, pruebas de regresión, version pinning.',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8 min de lectura',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores y prompt engineers que gestionan prompts en producción',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'Las cinco causas raíz de la fragilidad de prompts',
-        content: '**La mayoría de la fragilidad de prompts proviene de cinco patrones en cómo se escriben y prueban los prompts.** Los dos más comunes — expectativas de formato implícitas y pruebas solo del happy path — explican la mayoría de los fallos en producción. Comprender estas causas es el primer paso para [evaluar y mejorar la calidad de tus prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality).',
+        content: '**La mayoría de la fragilidad de prompts proviene de cinco patrones en cómo se escriben y prueban los prompts.** Los dos más comunes — expectativas de formato implícitas y pruebas solo del happy path — están, según nuestra experiencia, entre las causas más frecuentes de fallos en producción. Comprender estas causas es el primer paso para [evaluar y mejorar la calidad de tus prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Expectativas de formato implícitas** — El prompt pide un formato de salida específico (JSON, lista de puntos, sí/no) sin aplicarlo. Cualquier variación de entrada que haga que el modelo añada un preámbulo o reformule rompe el parseo posterior.',
           '**Pruebas solo del happy path** — Los prompts se validan con 3–5 ejemplos curados manualmente que siempre funcionan. Los casos límite — entradas vacías, texto muy largo, redacción ambigua — nunca se prueban.',
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: 'Siete técnicas para reducir la fragilidad de prompts',
-        content: '**Siete técnicas abordan las cinco causas raíz anteriores y cubren toda la superficie de modos de fallo.** Aplícalas en orden — las técnicas anteriores abordan los fallos más comunes. En bases de código de producción, la fragilidad relacionada con el formato — prompts que analizan texto libre esperando una forma específica — explica la mayoría de los fallos silenciosos en tareas de clasificación y extracción. La aplicación de salida estructurada (Técnica 1) aborda completamente esta clase.',
+        content: '**Siete técnicas abordan las cinco causas raíz anteriores y cubren toda la superficie de modos de fallo.** Aplícalas en orden — las técnicas anteriores abordan los fallos más comunes. En bases de código de producción, la fragilidad relacionada con el formato — prompts que analizan texto libre esperando una forma específica — es, según nuestra experiencia, una de las causas principales de fallos silenciosos en tareas de clasificación y extracción. La aplicación de salida estructurada (Técnica 1) elimina la deriva de formato en esta clase, pero no garantiza valores de campo correctos (véase la Técnica 7).',
         numberedItems: [
           '**Aplica salida estructurada** — Usa el [modo JSON o las APIs de salida estructurada nativa](/es/prompt-engineering/structured-output-and-json-mode) en lugar de pedirle al modelo que "responda en JSON". La aplicación de formato traslada la carga de fiabilidad del prompt a la capa de API.',
           '**Añade ejemplos few-shot explícitos** — Incluye 2–3 pares entrada/salida que demuestren el comportamiento correcto, incluyendo un caso límite. Los ejemplos anclan el comportamiento del modelo de forma más fiable que los prompts solo de instrucciones. Consulta [prompting zero-shot vs. few-shot](/es/prompt-engineering/zero-shot-vs-few-shot) para más orientación.',
@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'es',
       about: [
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Fragilidade de prompts: 7 técnicas',
     twitterDescription: '7 técnicas para evitar que seus prompts falhem silenciosamente em produção. Saída estruturada, testes de regressão, version pinning.',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8 min de leitura',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores e engenheiros de prompts que gerenciam prompts em produção',
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'As cinco causas raiz da fragilidade de prompts',
-        content: '**A maior parte da fragilidade de prompts vem de cinco padrões na forma como os prompts são escritos e testados.** Os dois mais comuns — expectativas de formato implícitas e testes apenas do happy path — respondem pela maioria das falhas em produção. Entender essas causas é o primeiro passo para [avaliar e melhorar a qualidade dos seus prompts](/pt/prompt-engineering/how-to-evaluate-prompt-quality).',
+        content: '**A maior parte da fragilidade de prompts vem de cinco padrões na forma como os prompts são escritos e testados.** Os dois mais comuns — expectativas de formato implícitas e testes apenas do happy path — estão, na nossa experiência, entre as causas mais frequentes de falhas em produção. Entender essas causas é o primeiro passo para [avaliar e melhorar a qualidade dos seus prompts](/pt/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Expectativas de formato implícitas** — O prompt pede um formato de saída específico (JSON, lista com marcadores, sim/não) sem aplicá-lo. Qualquer variação de entrada que faça o modelo adicionar um preâmbulo ou reformular quebra o processamento subsequente.',
           '**Testes apenas do happy path** — Os prompts são validados com 3–5 exemplos curados manualmente que sempre funcionam. Casos limítrofes — entradas vazias, texto muito longo, redação ambígua — nunca são testados.',
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: 'Sete técnicas para reduzir a fragilidade de prompts',
-        content: '**Sete técnicas abordam as cinco causas raiz acima e cobrem toda a superfície de modos de falha.** Aplique-as em ordem — as técnicas anteriores abordam as falhas mais comuns. Em bases de código de produção, a fragilidade relacionada ao formato — prompts que analisam texto livre esperando uma forma específica — responde pela maioria das falhas silenciosas em tarefas de classificação e extração. A aplicação de saída estruturada (Técnica 1) aborda essa classe completamente.',
+        content: '**Sete técnicas abordam as cinco causas raiz acima e cobrem toda a superfície de modos de falha.** Aplique-as em ordem — as técnicas anteriores abordam as falhas mais comuns. Em bases de código de produção, a fragilidade relacionada ao formato — prompts que analisam texto livre esperando uma forma específica — é, na nossa experiência, uma das principais causas de falhas silenciosas em tarefas de classificação e extração. A aplicação de saída estruturada (Técnica 1) elimina o desvio de formato nessa classe, mas não garante valores de campo corretos (veja a Técnica 7).',
         numberedItems: [
           '**Aplique saída estruturada** — Use o [modo JSON ou as APIs de saída estruturada nativa](/pt/prompt-engineering/structured-output-and-json-mode) em vez de pedir ao modelo que "responda em JSON". A aplicação de formato transfere o ônus de confiabilidade do prompt para a camada de API.',
           '**Adicione exemplos few-shot explícitos** — Inclua 2–3 pares entrada/saída que demonstrem o comportamento correto, incluindo um caso limítrofe. Os exemplos ancoram o comportamento do modelo de forma mais confiável do que prompts apenas de instruções. Consulte [prompting zero-shot vs. few-shot](/pt/prompt-engineering/zero-shot-vs-few-shot) para mais orientações.',
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/pt/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'pt-BR',
       about: [
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Fragilité des Prompts : 7 Techniques (2026)',
     twitterDescription: '7 techniques pour empêcher vos prompts de casser silencieusement en production. Output structuré, tests de régression, version pinning.',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8 min de lecture',
     educationalLevel: 'Advanced',
     audience: 'Développeurs et ingénieurs de prompts gérant des prompts en production',
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'Les cinq causes racines de la fragilité des prompts',
-        content: '**La plupart des fragilités des prompts proviennent de cinq motifs dans la façon dont les prompts sont écrits et testés.** Les deux plus courants — attentes de format implicites et tests happy-path uniquement — expliquent la majorité des défaillances en production. Comprendre ces causes est la première étape pour [évaluer et améliorer la qualité de vos prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality).',
+        content: '**La plupart des fragilités des prompts proviennent de cinq motifs dans la façon dont les prompts sont écrits et testés.** Les deux plus courants — attentes de format implicites et tests happy-path uniquement — figurent, d\'après notre expérience, parmi les causes les plus fréquentes de défaillances en production. Comprendre ces causes est la première étape pour [évaluer et améliorer la qualité de vos prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Attentes de format implicites** — Le prompt demande un format de sortie spécifique (JSON, liste à puces, oui/non) sans le forcer. Toute variation d\'entrée qui amène le modèle à ajouter un préambule ou reformuler casse l\'analyse en aval.',
           '**Tests happy-path uniquement** — Les prompts sont validés contre 3–5 exemples manuellement triés qui fonctionnent toujours. Les cas limites — entrées vides, texte très long, formulations ambiguës — ne sont jamais testés.',
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: 'Sept techniques pour réduire la fragilité des prompts',
-        content: '**Sept techniques traitent les cinq causes racines ci-dessus et couvrent toute la surface des modes de défaillance.** Appliquez-les dans l\'ordre — les techniques antérieures traitent les défaillances les plus courantes. Dans les codebases de production, la fragilité liée au format — des prompts qui analysent du texte libre en attendant une forme spécifique — explique la majorité des défaillances silencieuses dans les tâches de classification et d\'extraction. L\'application de la sortie structurée (Technique 1) traite entièrement cette classe.',
+        content: '**Sept techniques traitent les cinq causes racines ci-dessus et couvrent toute la surface des modes de défaillance.** Appliquez-les dans l\'ordre — les techniques antérieures traitent les défaillances les plus courantes. Dans les codebases de production, la fragilité liée au format — des prompts qui analysent du texte libre en attendant une forme spécifique — est, d\'après notre expérience, l\'une des principales causes de défaillances silencieuses dans les tâches de classification et d\'extraction. L\'application de la sortie structurée (Technique 1) élimine la dérive de format dans cette classe, mais ne garantit pas des valeurs de champ correctes (voir la Technique 7).',
         numberedItems: [
           '**Forcer la sortie structurée** — Utilisez [le mode JSON ou les API de sortie structurée native](/fr/prompt-engineering/structured-output-and-json-mode) au lieu de demander au modèle de \"répondre en JSON\". L\'application du format déplace le fardeau de la fiabilité du prompt à la couche API.',
           '**Ajouter des exemples few-shot explicites** — Incluez 2–3 paires entrée/sortie qui démontrent le comportement correct, y compris un cas limite. Les exemples ancrent le comportement du modèle plus fiablement que les prompts d\'instruction uniquement. Voir [Zero-Shot vs. Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) pour plus de guidance.',
@@ -1450,7 +1450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/fr/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'fr',
       about: [
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'プロンプト脆弱性を低減する7つのテクニック',
     twitterDescription: '本番環境でプロンプトが静かに壊れるのを防ぐ7つのテクニック。構造化出力、回帰テスト、バージョン固定。',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8分で読める',
     educationalLevel: 'Advanced',
     audience: '本番環境でプロンプトを管理する開発者とプロンプトエンジニア',
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'プロンプト脆弱性の5つの根本原因',
-        content: '**ほとんどのプロンプト脆弱性は、プロンプトがどのように書かれてテストされるかの5つのパターンから生じます。** 最も一般的な2つ — 暗黙的な形式の期待とハッピーパステストのみ — は本番環境での失敗の大多数を説明しています。これらの原因を理解することは、[プロンプト品質を評価して改善する](/ja/prompt-engineering/how-to-evaluate-prompt-quality)ための最初のステップです。',
+        content: '**ほとんどのプロンプト脆弱性は、プロンプトがどのように書かれてテストされるかの5つのパターンから生じます。** 最も一般的な2つ — 暗黙的な形式の期待とハッピーパステストのみ — は、私たちの経験では本番環境での失敗の主な原因に含まれます。これらの原因を理解することは、[プロンプト品質を評価して改善する](/ja/prompt-engineering/how-to-evaluate-prompt-quality)ための最初のステップです。',
         items: [
           '**暗黙的な形式の期待** — プロンプトは特定の出力形式（JSON、箇条書き、はい/いいえ）を要求しますが、強制しません。モデルを前文を追加したり、言い直したりする入力バリエーションは、下流の解析を中断します。',
           '**ハッピーパステストのみ** — プロンプトは常に機能する3〜5個の手動で管理された例に対して検証されます。エッジケース — 空の入力、非常に長いテキスト、あいまいなフレーズ — はテストされません。',
@@ -1553,7 +1553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: 'プロンプト脆弱性を低減する7つのテクニック',
-        content: '**7つのテクニックは上記の5つの根本原因に対処し、失敗モードの全体的なサーフェスをカバーしています。** 順番に適用してください — 初期のテクニックは最も一般的な失敗に対処します。本番環境のコードベースでは、形式関連の脆弱性 — フリーテキストを解析し、特定の形状を期待するプロンプト — は分類タスクと抽出タスクで静かな失敗の大多数を説明しています。構造化出力の強制（テクニック1）はこのクラス全体に対処します。',
+        content: '**7つのテクニックは上記の5つの根本原因に対処し、失敗モードの全体的なサーフェスをカバーしています。** 順番に適用してください — 初期のテクニックは最も一般的な失敗に対処します。本番環境のコードベースでは、形式関連の脆弱性 — フリーテキストを解析し、特定の形状を期待するプロンプト — は、私たちの経験では分類タスクと抽出タスクにおける静かな失敗の主な原因の一つです。構造化出力の強制（テクニック1）はこのクラスの形式のずれを解消しますが、フィールド値の正しさまでは保証しません（テクニック7を参照）。',
         numberedItems: [
           '**構造化出力を強制する** — モデルに「JSONで応答する」ように要求する代わりに、[JSONモードまたはネイティブ構造化出力API](/ja/prompt-engineering/structured-output-and-json-mode)を使用します。形式の強制は、信頼性の負担をプロンプトからAPI層に移動します。',
           '**明示的なFew-Shot例を追加する** — エッジケースを含む正しい動作を示す2〜3個の入力/出力ペアを含めます。例は、命令のみのプロンプトよりも信頼できるようにモデルの動作をアンカリングします。詳細については、[Zero-Shot vs Few-Shot Prompting](/ja/prompt-engineering/zero-shot-vs-few-shot)を参照してください。',
@@ -1739,7 +1739,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/ja/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'ja',
       about: [
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: '减少Prompt脆弱性：7种技术',
     twitterDescription: '7种技术防止Prompt在生产环境中静默失败。结构化输出、回归测试、版本固定。',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '阅读约8分钟',
     educationalLevel: 'Advanced',
     audience: '在生产环境中管理Prompt的开发者和Prompt工程师',
@@ -1827,7 +1827,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'Prompt脆弱性的五大根本原因',
-        content: '**大多数Prompt脆弱性源于Prompt编写和测试方式的5个模式。** 最常见的两个 — 隐含的格式期望和仅正常路径测试 — 占生产失败的大多数。理解这些原因是[评估和改进Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)的第一步。',
+        content: '**大多数Prompt脆弱性源于Prompt编写和测试方式的5个模式。** 最常见的两个 — 隐含的格式期望和仅正常路径测试 — 据我们的经验，是生产失败的最常见原因之一。理解这些原因是[评估和改进Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)的第一步。',
         items: [
           '**隐含的格式期望** — Prompt要求特定的输出格式（JSON、项目列表、是/否）但不强制。任何导致模型添加前言或改写的输入变化都会破坏下游解析。',
           '**仅正常路径测试** — Prompt针对3-5个手动精选的始终有效的示例进行验证。边界情况 — 空输入、非常长的文本、模糊措辞 — 从不测试。',
@@ -1842,7 +1842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: '减少Prompt脆弱性的7种技术',
-        content: '**7种技术处理上述5个根本原因并覆盖整个失败模式表面。** 按顺序应用它们 — 早期技术处理最常见的失败。在生产代码库中，格式相关的脆弱性 — 解析自由文本并期望特定形状的Prompt — 占分类和提取任务中静默失败的大多数。强制结构化输出（技术1）完全处理这个类。',
+        content: '**7种技术处理上述5个根本原因并覆盖整个失败模式表面。** 按顺序应用它们 — 早期技术处理最常见的失败。在生产代码库中，格式相关的脆弱性 — 解析自由文本并期望特定形状的Prompt — 据我们的经验，是分类和提取任务中静默失败的主要原因之一。强制结构化输出（技术1）可消除这一类中的格式漂移，但不能保证字段值正确（见技术7）。',
         numberedItems: [
           '**强制结构化输出** — 使用[JSON模式或本机结构化输出API](/zh/prompt-engineering/structured-output-and-json-mode)而不是要求模型"以JSON响应"。格式强制将可靠性负担从Prompt转移到API层。',
           '**添加显式Few-Shot示例** — 包括2-3个演示正确行为的输入/输出对，包括一个边界情况。示例比仅指令Prompt更可靠地锚定模型行为。参见[Zero-Shot vs Few-Shot Prompting](/zh/prompt-engineering/zero-shot-vs-few-shot)了解更多指导。',
@@ -2028,7 +2028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/zh/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'zh',
       about: [
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'هشاشة الـ prompt: 7 تقنيات',
     twitterDescription: '⁨7⁩ تقنيات لمنع فشل الـ ⁨prompts⁩ الصامت في بيئة الإنتاج. الإخراج المهيكل، واختبار الانحدار، وتثبيت الإصدار.',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Advanced',
     audience: 'المطوِّرون ومهندسو الـ prompt الذين يديرون الـ prompts في بيئة الإنتاج',
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'الأسباب الجذرية الخمسة لهشاشة الـ prompt',
-        content: '**معظم هشاشة الـ prompt مصدرها خمسة أنماط في طريقة كتابة الـ prompts واختبارها.** أكثر الأنماط شيوعًا — توقعات التنسيق الضمنية، واختبار المسار السعيد فقط — يُفسِّران غالبية الإخفاقات في الإنتاج. فهم هذه الأسباب هو الخطوة الأولى نحو [تقييم جودة الـ prompts وتحسينها](/ar/prompt-engineering/how-to-evaluate-prompt-quality).',
+        content: '**معظم هشاشة الـ prompt مصدرها خمسة أنماط في طريقة كتابة الـ prompts واختبارها.** أكثر الأنماط شيوعًا — توقعات التنسيق الضمنية، واختبار المسار السعيد فقط — هما، بحسب خبرتنا، من أكثر أسباب الإخفاقات في الإنتاج شيوعًا. فهم هذه الأسباب هو الخطوة الأولى نحو [تقييم جودة الـ prompts وتحسينها](/ar/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**توقعات التنسيق الضمنية** — يطلب الـ prompt تنسيق إخراج محددًا (JSON، قائمة نقاط، نعم/لا) دون تطبيقه. أي تباين في المدخلات يجعل النموذج يُضيف مقدمةً أو يُعيد الصياغة يُعطِّل التحليل اللاحق.',
           '**اختبار المسار السعيد فقط** — تُتحقَّق صحة الـ prompts بـ 3–5 أمثلة منتقاة يدويًا تعمل دائمًا. حالات الحافة — مدخلات فارغة، نصوص طويلة جدًا، صياغة غامضة — لا تُختبَر أبدًا وتفشل في الإنتاج.',
@@ -2132,7 +2132,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'reduce-brittleness',
         title: 'كيفية تقليل هشاشة الـ prompt',
-        content: '**تُعالج سبعُ تقنياتٍ الأسبابَ الجذرية الخمسة السابقة وتُغطي كامل أوجه الإخفاق.** طبِّقها بالترتيب — فالتقنيات السابقة تُعالج الإخفاقات الأكثر شيوعًا. في قواعد كود الإنتاج، تُفسِّر الهشاشة المتعلقة بالتنسيق — prompts تُحلِّل نصًا حرًا متوقِّعةً شكلًا محددًا — معظمَ الإخفاقات الصامتة في مهام التصنيف والاستخراج. تُعالج تقنية تطبيق الإخراج المهيكل (التقنية 1) هذه الفئة بالكامل.',
+        content: '**تُعالج سبعُ تقنياتٍ الأسبابَ الجذرية الخمسة السابقة وتُغطي كامل أوجه الإخفاق.** طبِّقها بالترتيب — فالتقنيات السابقة تُعالج الإخفاقات الأكثر شيوعًا. في قواعد كود الإنتاج، الهشاشة المتعلقة بالتنسيق — prompts تُحلِّل نصًا حرًا متوقِّعةً شكلًا محددًا — هي، بحسب خبرتنا، من الأسباب الرئيسية للإخفاقات الصامتة في مهام التصنيف والاستخراج. وتُزيل تقنية تطبيق الإخراج المهيكل (التقنية 1) انحراف التنسيق في هذه الفئة، لكنها لا تضمن صحة قيم الحقول (انظر التقنية 7).',
         numberedItems: [
           '**طبِّق الإخراج المهيكل** — استخدم [وضع JSON أو APIs الإخراج المهيكل الأصلية](/ar/prompt-engineering/structured-output-and-json-mode) بدلًا من مطالبة النموذج بـ "الرد بـ JSON". تطبيق التنسيق ينقل عبء الموثوقية من الـ prompt إلى طبقة API.',
           '**أضِف أمثلة few-shot صريحة** — أدرِج 2–3 أزواج من المدخلات/الإخراج توضِّح السلوك الصحيح، بما يشمل حالة حافة. تُثبِّت الأمثلةُ سلوكَ النموذج بشكل أكثر موثوقيةً من الـ prompts المعتمدة على التعليمات فقط. اطَّلع على [zero-shot مقابل few-shot prompting](/ar/prompt-engineering/zero-shot-vs-few-shot) للمزيد من التوجيه.',
@@ -2318,7 +2318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/ar/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'ar',
       about: [
@@ -2348,7 +2348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: '프롬프트 취약성 줄이기: 7가지 기법',
     twitterDescription: '프롬프트는 입력 변형 시 조용히 실패합니다. 7가지 기법: 구조화된 출력, few-shot 앵커링, 방어적 지시문, 파라미터화, 회귀 테스트, 버전 고정, 출력 검증.',
     publishDate: '2026-04-29',
-    dateModified: '2026-09-01',
+    dateModified: '2026-10-23',
     readTime: '8분 읽기',
     educationalLevel: 'Advanced',
     audience: '프로덕션에서 프롬프트를 관리하는 개발자 및 프롬프트 엔지니어',
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: '프롬프트 취약성의 5가지 근본 원인',
-        content: '**프롬프트 취약성의 대부분은 프롬프트가 작성되고 테스트되는 방식의 다섯 가지 패턴에서 비롯됩니다.** 가장 일반적인 두 가지인 암묵적 형식 기대와 해피 패스 전용 테스트가 프로덕션 실패의 대부분을 차지합니다. 이러한 원인을 이해하는 것이 [프롬프트 품질 평가 및 개선](/ko/prompt-engineering/how-to-evaluate-prompt-quality)의 첫 번째 단계입니다.',
+        content: '**프롬프트 취약성의 대부분은 프롬프트가 작성되고 테스트되는 방식의 다섯 가지 패턴에서 비롯됩니다.** 가장 일반적인 두 가지인 암묵적 형식 기대와 해피 패스 전용 테스트는 저희 경험상 프로덕션 실패의 가장 흔한 원인에 속합니다. 이러한 원인을 이해하는 것이 [프롬프트 품질 평가 및 개선](/ko/prompt-engineering/how-to-evaluate-prompt-quality)의 첫 번째 단계입니다.',
         items: [
           '**암묵적 형식 기대** — 프롬프트가 특정 출력 형식(JSON, 글머리 목록, 예/아니오)을 요청하지만 이를 강제하지 않습니다. 모델이 서문을 추가하거나 표현을 바꾸게 만드는 입력 변형이 다운스트림 파싱을 깨뜨립니다.',
           '**해피 패스 전용 테스트** — 프롬프트는 항상 작동하는 3~5개의 수동으로 선별된 예시에 대해 검증됩니다. 엣지 케이스인 빈 입력, 매우 긴 텍스트, 모호한 표현은 테스트되지 않습니다.',
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
         title: '프롬프트 취약성을 줄이는 7가지 기법',
-        content: '**일곱 가지 기법이 위의 다섯 가지 근본 원인을 해결하고 전체 실패 모드 범위를 포괄합니다.** 순서대로 적용하십시오. 앞의 기법들이 가장 일반적인 실패를 처리합니다. 프로덕션 코드베이스에서 형식 관련 취약성(자유 텍스트를 파싱하며 특정 형태를 기대하는 프롬프트)은 분류 및 추출 작업에서 조용한 실패의 대부분을 차지합니다. 구조화된 출력 강제(기법 1)가 이 클래스를 완전히 처리합니다.',
+        content: '**일곱 가지 기법이 위의 다섯 가지 근본 원인을 해결하고 전체 실패 모드 범위를 포괄합니다.** 순서대로 적용하십시오. 앞의 기법들이 가장 일반적인 실패를 처리합니다. 프로덕션 코드베이스에서 형식 관련 취약성(자유 텍스트를 파싱하며 특정 형태를 기대하는 프롬프트)은 저희 경험상 분류 및 추출 작업에서 조용한 실패의 주요 원인 중 하나입니다. 구조화된 출력 강제(기법 1)는 이 클래스의 형식 드리프트를 제거하지만 필드 값의 정확성까지 보장하지는 않습니다(기법 7 참조).',
         numberedItems: [
           '**구조화된 출력 강제** — 모델에게 "JSON으로 응답"하도록 요청하는 대신 [JSON 모드 또는 네이티브 구조화된 출력 API](/ko/prompt-engineering/structured-output-and-json-mode)를 사용하십시오. 형식 강제는 신뢰성 부담을 프롬프트에서 API 레이어로 이동시킵니다.',
           '**명시적 few-shot 예시 추가** — 엣지 케이스 하나를 포함하여 올바른 동작을 보여주는 2~3개의 입력/출력 쌍을 포함하십시오. 예시는 지시문만 있는 프롬프트보다 모델의 동작을 더 안정적으로 고정합니다. 자세한 가이드는 [제로샷 vs. few-shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot)을 참조하십시오.',
@@ -2608,7 +2608,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-09-01',
+      dateModified: '2026-10-23',
       url: 'https://www.promptquorum.com/ko/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'ko',
       about: [
