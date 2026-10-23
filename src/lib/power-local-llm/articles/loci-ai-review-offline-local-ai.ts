@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Loci, built by Loci AI, Inc., is designed to make local AI feel like a normal assistant rather than a model-management project. It runs AI on iPhone, iPad, Android, Mac, and Windows, can work offline after setup, and positions itself as a privacy-first alternative to cloud AI services. The app automatically selects the best inference runtime (llama.cpp or MLX) for each model on your hardware, implements thermal management to keep your phone stable, syncs memory across conversations, and can link to a desktop for access to more powerful models. The practical question is not whether local inference is possible — it is whether Loci gives you enough quality and control without the model downloads, storage use, and technical configuration (manually selecting GGUF files, tuning quantizations, calculating VRAM) that more advanced local-LLM tools require.',
     metaDescription:
-      'Loci AI review: is it worth using for private, offline AI? See how it works on iPhone, Android, iPad, Mac and Windows, who it suits, and how it compares with Private LLM, PocketPal and Google AI Edge Gallery.',
+      'Loci AI review: a free private AI app for iPhone, Android, iPad, Mac and Windows. Offline use, App Store privacy label and comparison with Private LLM.',
     twitterDescription:
       'Loci AI review 2026: offline AI that just works on iPhone, Android, iPad, Mac and Windows. Privacy, pricing, setup, and comparisons with Private LLM and Google AI Edge Gallery.',
     audience:
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Free, no subscription, works on 5 platforms (iPhone/iPad/Android/Mac/Windows).',
           'Offline-capable after app and model download/setup.',
-          'No account, no tracking, conversations stay on-device per Loci AI claims.',
+          'No account; chat stays on-device per Loci AI. The App Store label lists identifiers, usage data and location as linked to you.',
           'Optional features (web search via DuckDuckGo, Windows voice input) require internet.',
           'Quality and model selection less flexible than Private LLM or PocketPal AI.',
         ],
@@ -96,11 +96,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'What Loci Is',
         content: [
-          'Loci is a consumer-focused, on-device AI assistant available on iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac, and Windows. Built by Loci AI, Inc., the app is free with no subscription, no ads, and no account requirement. The App Store listing showed version 1.3.31 as updated on October 23, 2026 (the listing gives only a relative time); the [Windows download page](https://askloci.ai/windows/) labels the Windows build beta.',
+          'Loci is a consumer-focused, on-device AI assistant available on iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac, and Windows; the App Store listing also lists visionOS 2.0+. Built by Loci AI, Inc., the app is free with no subscription, ads or account requirement, according to Loci AI. The App Store version history lists version 1.3.31 as released on October 23, 2026, and 25 releases since version 1.3.4 on August 9, 2026, so the mobile app is updated frequently; the [Windows download page](https://askloci.ai/windows/) labels the Windows build beta.',
           'Model architecture: Loci can use "Apple\'s built-in foundation model or download from 10+ curated open-source models, including Gemma, Qwen, Llama, and Phi — all running locally on your device." This means inference happens on-device after setup, not in the cloud.',
-          'Privacy positioning: The official claim is "Chat is processed on your device and is not uploaded. There is no account, no server-side copy of your conversations, and no training on your words." The app collects "Identifiers," "Usage Data," and "Diagnostics" via its privacy nutrition label, but states this data is "not linked to your identity." The developer\'s terms are in its [privacy policy](https://askloci.ai/privacy/).',
+          'Privacy positioning: The official claim is "Chat is processed on your device and is not uploaded. There is no account, no server-side copy of your conversations, and no training on your words." The developer\'s terms are in its [privacy policy](https://askloci.ai/privacy/), and the website says search queries go directly to third-party providers when web search is used. The App Store privacy label, which PromptQuorum read on October 23, 2026, is more detailed than that claim: under "Data Linked to You" it lists Location, Identifiers, Usage Data and Diagnostics, with purposes that include analytics, app functionality and "Developer\'s Advertising or Marketing". The developer supplies this label itself. An earlier version of this review described the data as not linked to your identity; the label now says otherwise.',
           'Optional features include photo analysis, voice mode, calendar/reminders integration, and web search via DuckDuckGo. The caveat: web search and Windows voice input require an internet connection, which alters the "offline" story if used.',
           'Messaging apps (maker-stated): Loci AI told PromptQuorum in October 2026 that Loci now also works inside iMessage, Telegram, Discord, and Slack, with WhatsApp coming soon. The [Loci website](https://askloci.ai) did not mention messaging integrations when PromptQuorum checked on October 23, 2026, and PromptQuorum has not tested them.',
+          'Features on the website (maker-stated): the [Loci website](https://askloci.ai) also describes a document library for asking questions about your files, local meeting notes (transcription and summaries of main points, decisions and next steps), local dictation, writing help and image description, plus encrypted pairing between your own devices for Loci Link. PromptQuorum has not tested these features.',
         ],
       },
       howLocalAiWorks: {
@@ -305,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**User needing live web knowledge offline.** Loci has optional DuckDuckGo web search, but it requires internet. The local models have no concept of "today" or current events.',
           '**Developer wanting comprehensive model/inference control.** If you need to benchmark different quantizations, compare token/second speeds, or tune sampling parameters, Private LLM or PocketPal AI offer more depth.',
           '**User building a fully documented voice assistant stack.** Loci has a "voice mode" feature: on Apple platforms (iPhone, iPad, Mac), voice input and output run fully on-device with no cloud dependency. On Windows, voice input is constrained by the operating system\'s speech-recognition APIs and requires internet (a Windows OS limitation, not a Loci design choice). If you need a fully documented, sourced voice stack with Whisper STT + local LLM + TTS, see [Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) for the recommended open-source pipeline.',
-          '**User handling highly sensitive information.** Before using Loci for private/confidential work, review the current privacy policy and privacy nutrition label on the App Store. App Store label shows data collection for "Identifiers," "Usage Data," and "Diagnostics" (stated as not linked to your identity), but read the full policy first.',
+          '**User handling highly sensitive information.** Before using Loci for private/confidential work, review the current privacy policy and privacy nutrition label on the App Store. The App Store label lists Location, Identifiers, Usage Data and Diagnostics as data linked to you, with advertising/marketing and analytics among the purposes, so read the full policy first.',
         ],
       },
       faq: {
@@ -318,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Loci completely private?',
-            a: 'Loci\'s official claim is that "Chat is processed on your device and is not uploaded." However: (1) optional features like DuckDuckGo web search and Windows voice input require internet and may create data trails; (2) the app collects "Identifiers," "Usage Data," and "Diagnostics" per its App Store privacy nutrition label (stated as "not linked to your identity"); (3) app updates and model downloads require internet. For maximum privacy assurance, verify the current privacy policy and disable optional online features if privacy is critical.',
+            a: 'Loci\'s official claim is that "Chat is processed on your device and is not uploaded." However: (1) optional features like DuckDuckGo web search and Windows voice input require internet and may create data trails; (2) the App Store privacy label lists Location, Identifiers, Usage Data and Diagnostics as "Data Linked to You", with analytics, app functionality and the developer\'s advertising or marketing among the declared purposes (self-reported by the developer); (3) app updates and model downloads require internet. For maximum privacy assurance, verify the current privacy policy and disable optional online features if privacy is critical.',
           },
           {
             q: 'Can I use Loci without Wi-Fi?',
@@ -343,6 +344,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'How much storage does Loci use?',
             a: 'The app itself is small (~100 MB). Model files depend on which you choose: compact models (Phi-4 Mini, Gemma 4 E2B, SmolLM) are 1–3 GB; larger models (Llama 3.2 3B, Gemma 4 E4B, Qwen3) are 2–5 GB. If you have multiple models downloaded, total usage can reach 10+ GB. Plan accordingly on devices with limited storage.',
+          },
+          {
+            q: 'Does Loci have an API?',
+            a: 'No public API is documented. The Loci website and the App Store listing describe the app only as a chat assistant, and PromptQuorum found no developer documentation there on October 23, 2026. Loci AI told PromptQuorum that Loci also works inside messaging apps such as iMessage, Telegram, Discord and Slack (maker-stated, untested), but that does not give you an API to call from your own code. If you need a local OpenAI-compatible endpoint, Ollama and LM Studio provide one.',
+          },
+          {
+            q: 'Is "Loci Private AI" the same as Loci from askloci.ai?',
+            a: 'Yes. The app is listed on the App Store as "Loci - Private, Local AI" and is made by Loci AI, Inc.; its website is [askloci.ai](https://askloci.ai). Other, unrelated projects also use the name Loci, for example a local memory tool for AI agents, so check the developer name and domain before installing.',
+          },
+          {
+            q: 'Can Loci answer questions about my documents or transcribe meetings?',
+            a: 'According to the Loci AI website, yes: it describes a document library you can ask questions about (documents stay on the device during local chat) and local meeting transcription with summaries of main points, decisions and next steps. PromptQuorum has not tested these features, so try them with non-sensitive files first.',
           },
         ],
       },
@@ -369,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Loci official site](https://askloci.ai) — product overview, platform downloads, model-selection FAQ, and the benchmark claim cited above (read October 23, 2026).',
           '[Loci Windows download page](https://askloci.ai/windows/) — beta label, x64 and ARM64 builds.',
           '[Loci privacy policy](https://askloci.ai/privacy/) — the developer\'s privacy terms.',
-          '[Loci on the App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOS availability, version 1.3.31, privacy nutrition label, minimum OS requirements.',
+          '[Loci on the App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOS availability, version history (1.3.31, October 23, 2026), privacy label, minimum OS requirements.',
           '[Loci on Google Play](https://play.google.com/store/apps/details?id=app.lociai.loci) — Android availability.',
           '[Artificial Analysis](https://artificialanalysis.ai) — publisher of the Intelligence Index that Loci AI cites; PromptQuorum did not independently check the scores.',
           '[Google AI Edge Gallery on GitHub](https://github.com/google-ai-edge/gallery) — feature list, supported models, cross-platform availability.',
@@ -401,11 +414,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-ar.webp',
     title: 'مراجعة Loci AI (2026): ذكاء اصطناعي خاص دون إنترنت عبر iPhone و Android و iPad و Mac و Windows',
-    seoTitle: 'مراجعة Loci AI 2026: ذكاء اصطناعي خاص دون الاتصال بالإنترنت',
+    seoTitle: 'مراجعة Loci AI 2026: ذكاء اصطناعي خاص دون إنترنت',
     intro:
       'تم تصميم Loci، الذي طورته Loci AI, Inc.، لجعل الذكاء الاصطناعي المحلي يشعر مثل مساعد عادي بدلاً من مشروع إدارة نموذج. يعمل على iPhone و iPad و Android و Mac و Windows، ويمكن أن يعمل دون إنترنت بعد الإعداد، ويوضع نفسه كبديل يركز على الخصوصية لخدمات الذكاء الاصطناعي السحابية. التطبيق يختار تلقائياً أفضل بيئة استدلال (llama.cpp أو MLX) لكل نموذج على أجهزتك، ينفذ إدارة حرارية لإبقاء هاتفك مستقراً، يزامن الذاكرة عبر المحادثات، ويمكن أن يربط نفسه بجهاز كمبيوتر مكتبي للوصول إلى نماذج أقوى. السؤال العملي ليس ما إذا كان الاستدلال المحلي ممكناً — بل ما إذا كان Loci يعطيك جودة وتحكماً كافياً دون تنزيلات النماذج واستخدام التخزين والتكوين التقني (اختيار ملفات GGUF يدويًا، ضبط التقادير، حساب VRAM) الذي تتطلبه أدوات الذكاء الاصطناعي المحلية الأكثر تقدماً.',
     metaDescription:
-      'مراجعة Loci AI: هل تستحق الاستخدام للذكاء الاصطناعي الخاص والمحلي؟ اكتشف كيف يعمل على iPhone و Android و iPad و Mac و Windows، من الذي يناسبه، وكيف يقارن مع Private LLM و PocketPal و Google AI Edge Gallery.',
+      'مراجعة Loci AI: تطبيق ذكاء اصطناعي خاص ومجاني لأجهزة iPhone وAndroid وiPad وMac وWindows. الاستخدام دون إنترنت وملصق الخصوصية والمقارنة.',
     twitterDescription:
       'مراجعة Loci AI 2026: ذكاء اصطناعي محلي يعمل ببساطة على iPhone و Android و iPad و Mac و Windows. الخصوصية والتسعير والإعداد والمقارنات مع Private LLM و Google AI Edge Gallery.',
     audience:
@@ -439,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Free, no subscription, works on 5 platforms (iPhone/iPad/Android/Mac/Windows).',
           'Offline-capable after app and model download/setup.',
-          'No account, no tracking, conversations stay on-device per Loci AI claims.',
+          'No account; chat stays on-device per Loci AI. The App Store label lists identifiers, usage data and location as linked to you.',
           'Optional features (web search via DuckDuckGo, Windows voice input) require internet.',
           'Quality and model selection less flexible than Private LLM or PocketPal AI.',
         ],
@@ -452,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'مجاني، لا اشتراك، يعمل على 5 منصات (iPhone/iPad/Android/Mac/Windows).',
           'قابل للعمل بدون إنترنت بعد تنزيل التطبيق والنموذج والإعداد.',
-          'لا حساب، لا تتبع، المحادثات تبقى على الجهاز وفقاً لأدعاءات المطور.',
+          'لا حساب؛ تبقى المحادثات على الجهاز وفقاً لـ Loci AI. يُدرج ملصق App Store الموقع والمعرفات وبيانات الاستخدام كبيانات مرتبطة بك.',
           'الميزات الاختيارية (البحث عن الويب عبر DuckDuckGo، إدخال الصوت على Windows) تتطلب الإنترنت.',
           'الجودة واختيار النموذج أقل مرونة من Private LLM أو PocketPal AI.',
         ],
@@ -495,11 +508,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'ما هو Loci',
         content: [
-          'Loci مساعد ذكاء اصطناعي موجّه للمستهلكين يعمل على الجهاز، ومتاح على iPhone (iOS 18.0+) وiPad (iPadOS 18.0+) وAndroid وMac وWindows. طوّرته Loci AI, Inc.، وهو مجاني بلا اشتراك ولا إعلانات ولا حاجة إلى حساب. أظهرت صفحة App Store الإصدار 1.3.31 على أنه حُدّث في 23 أكتوبر 2026 (تعرض الصفحة وقتاً نسبياً فقط)؛ وتصنّف [صفحة تنزيل Windows](https://askloci.ai/windows/) نسخة Windows على أنها تجريبية (Beta). وشروط المطوّر موجودة في [سياسة الخصوصية](https://askloci.ai/privacy/).',
+          'Loci مساعد ذكاء اصطناعي موجّه للمستهلكين يعمل على الجهاز، ومتاح على iPhone (iOS 18.0+) وiPad (iPadOS 18.0+) وAndroid وMac وWindows؛ وتذكر صفحة App Store أيضاً visionOS 2.0+. طوّرته Loci AI, Inc.، وهو مجاني بلا اشتراك ولا إعلانات ولا حاجة إلى حساب بحسب Loci AI. يذكر سجل إصدارات App Store أن الإصدار 1.3.31 صدر في 23 أكتوبر 2026، وأن هناك 25 إصداراً منذ الإصدار 1.3.4 في 9 أغسطس 2026، أي أن تطبيق الهاتف يُحدَّث بشكل متكرر؛ وتصنّف [صفحة تنزيل Windows](https://askloci.ai/windows/) نسخة Windows على أنها تجريبية (Beta). وشروط المطوّر موجودة في [سياسة الخصوصية](https://askloci.ai/privacy/).',
           'بنية النموذج: يمكن لـ Loci استخدام نموذج الأساس المدمج من Apple أو التنزيل من 10+ نماذج مفتوحة المصدر منسقة، بما في ذلك Gemma و Qwen و Llama و Phi — جميعها تعمل محلياً على جهازك. هذا يعني أن الاستدلال يحدث على الجهاز بعد الإعداد وليس في السحابة.',
-          'موضع الخصوصية: الادعاء الرسمي هو "تتم معالجة المحادثة على جهازك وليست محملة. لا يوجد حساب، لا نسخة من جانب الخادم من محادثاتك، وليس التدريب على كلماتك." يجمع التطبيق "المعرفات" و"بيانات الاستخدام" و"التشخيص" عبر ملصق التغذية الغذائية للخصوصية الخاص به، لكنه يذكر أن هذه البيانات "ليست مرتبطة بهويتك".',
+          'موضع الخصوصية: الادعاء الرسمي هو "تتم معالجة المحادثة على جهازك وليست محملة. لا يوجد حساب، لا نسخة من جانب الخادم من محادثاتك، وليس التدريب على كلماتك." بحسب الموقع، تُرسل استعلامات البحث مباشرة إلى جهات خارجية عند استخدام البحث على الويب. أما ملصق الخصوصية في App Store، الذي قرأته PromptQuorum في 23 أكتوبر 2026، فهو أكثر تفصيلاً من هذا الادعاء: ففي قسم "بيانات مرتبطة بك" يُدرج الموقع والمعرفات وبيانات الاستخدام والتشخيص، وتشمل الأغراض التحليلات ووظائف التطبيق و"إعلانات المطوّر أو تسويقه". والملصق مُصرَّح به من المطوّر نفسه. وكانت نسخة سابقة من هذه المراجعة تصف البيانات بأنها غير مرتبطة بهويتك؛ أما الملصق الآن فيذكر خلاف ذلك.',
           'تتضمن الميزات الاختيارية تحليل الصور وأسلوب الصوت والتكامل مع التقويم والتذكيرات والبحث عن الويب عبر DuckDuckGo. التحذير: يتطلب البحث عن الويب وإدخال الصوت على Windows اتصالاً بالإنترنت، مما يغير قصة "المحلي" إذا تم استخدامها.',
           'تطبيقات المراسلة (بحسب المطوّر): أبلغت Loci AI شركة PromptQuorum في أكتوبر 2026 أن Loci يعمل الآن أيضاً داخل iMessage وTelegram وDiscord وSlack، وأن WhatsApp قادم قريباً. ولم يذكر [موقع Loci](https://askloci.ai) أي تكاملات مراسلة عندما راجعته PromptQuorum في 23 أكتوبر 2026، ولم تختبرها PromptQuorum.',
+          'الميزات بحسب الموقع (بحسب المطوّر): يصف [موقع Loci](https://askloci.ai) أيضاً مكتبة مستندات لطرح أسئلة عن ملفاتك، وملاحظات اجتماعات محلية (نسخ وتلخيص للنقاط الرئيسية والقرارات والخطوات التالية)، وإملاءً محلياً، ومساعدة في الكتابة ووصف الصور، إضافة إلى اقتران مشفّر بين أجهزتك لميزة Loci Link. لم تختبر PromptQuorum هذه الميزات.',
         ],
       },
       howLocalAiWorks: {
@@ -704,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**مستخدم يحتاج إلى معرفة ويب مباشرة محلية.** لدى Loci بحث ويب اختياري عبر DuckDuckGo ولكنه يتطلب الإنترنت. النماذج المحلية ليس لديها مفهوم "اليوم" أو الأحداث الجارية.',
           '**مطور يريد تحكم شامل في النموذج/الاستدلال.** إذا كنت تريد معايرة التقادير المختلفة ومقارنة سرعات التوكن الثانية أو ضبط معاملات العينات فإن Private LLM أو PocketPal AI توفران عمقاً أكثر.',
           '**مستخدم يبني مساعد صوت محلي كامل.** لدى Loci ميزة "أسلوب الصوت" لكن التنفيذ (ما إذا كان الاستدلال المحلي أو واجهات برمجية نظام Apple) ليس موثقاً بشكل علني. للحصول على كومة صوت محلية المصدر كاملة اطلع على [بناء مساعد صوت محلي على هاتفك](/ar/power-local-llm/voice-assistant-local-mobile-offline) للحصول على خط أنابيب Whisper + LLM + TTS الموصى به.',
-          '**مستخدم يتعامل مع معلومات حساسة جداً.** قبل استخدام Loci للعمل الخاص/السري راجع سياسة الخصوصية الحالية وملصق التغذية الغذائية للخصوصية على App Store. يُظهر ملصق App Store جمع البيانات لـ "المعرفات" و"بيانات الاستخدام" و"التشخيص" (مذكور كغير مرتبط بهويتك) لكن اقرأ السياسة الكاملة أولاً.',
+          '**مستخدم يتعامل مع معلومات حساسة جداً.** قبل استخدام Loci للعمل الخاص/السري راجع سياسة الخصوصية الحالية وملصق التغذية الغذائية للخصوصية على App Store. يُدرج ملصق App Store الموقع والمعرفات وبيانات الاستخدام والتشخيص كبيانات مرتبطة بك، وتشمل الأغراض الإعلان/التسويق والتحليلات، لذا اقرأ السياسة الكاملة أولاً.',
         ],
       },
       faq: {
@@ -717,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل Loci خاص تماماً؟',
-            a: 'الادعاء الرسمي لـ Loci هو "تتم معالجة المحادثة على جهازك وليست محملة." ومع ذلك: (1) الميزات الاختيارية مثل بحث الويب عبر DuckDuckGo وإدخال الصوت على Windows تتطلب الإنترنت وقد تنشئ آثار بيانات؛ (2) يجمع التطبيق "المعرفات" و"بيانات الاستخدام" و"التشخيص" وفقاً لملصق التغذية الغذائية للخصوصية في App Store (مذكور كـ "غير مرتبط بهويتك")؛ (3) تحديثات التطبيق وتنزيلات النموذج تتطلب الإنترنت. للحصول على أقصى ضمان خصوصية تحقق من سياسة الخصوصية الحالية وعطّل الميزات الاختيارية عبر الإنترنت إذا كانت الخصوصية حرجة.',
+            a: 'الادعاء الرسمي لـ Loci هو "تتم معالجة المحادثة على جهازك وليست محملة." ومع ذلك: (1) الميزات الاختيارية مثل بحث الويب عبر DuckDuckGo وإدخال الصوت على Windows تتطلب الإنترنت وقد تنشئ آثار بيانات؛ (2) يُدرج ملصق الخصوصية في App Store الموقع والمعرفات وبيانات الاستخدام والتشخيص ضمن "بيانات مرتبطة بك"، وتشمل الأغراض المعلنة التحليلات ووظائف التطبيق وإعلانات المطوّر أو تسويقه (تصريح ذاتي من المطوّر)؛ (3) تحديثات التطبيق وتنزيلات النموذج تتطلب الإنترنت. للحصول على أقصى ضمان خصوصية تحقق من سياسة الخصوصية الحالية وعطّل الميزات الاختيارية عبر الإنترنت إذا كانت الخصوصية حرجة.',
           },
           {
             q: 'هل يمكنني استخدام Loci بدون WiFi؟',
@@ -742,6 +756,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم التخزين الذي يستخدمه Loci؟',
             a: 'التطبيق نفسه صغير (~100 MB). ملفات النموذج تعتمد على اختيارك: النماذج المدمجة (Phi-4 Mini و Gemma 4 E2B و SmolLM) هي 1–3 GB؛ النماذج الأكبر (Llama 3.2 3B و Gemma 4 E4B و Qwen3) هي 2–5 GB. إذا كان لديك نماذج متعددة منزلة فيمكن أن يصل الاستخدام الكلي إلى 10+ GB. خطط وفقاً لذلك على الأجهزة ذات التخزين المحدود.',
+          },
+          {
+            q: 'هل لدى Loci واجهة برمجة تطبيقات (API)؟',
+            a: 'لا توجد واجهة برمجة تطبيقات عامة موثّقة. يصف موقع Loci وصفحة App Store التطبيق كمساعد محادثة فقط، ولم تجد PromptQuorum وثائق للمطوّرين في 23 أكتوبر 2026. أبلغت Loci AI شركة PromptQuorum أن Loci يعمل أيضاً داخل تطبيقات المراسلة مثل iMessage وTelegram وDiscord وSlack (بحسب المطوّر، دون اختبار)، لكن ذلك لا يمنحك واجهة برمجة يمكنك استدعاؤها من شيفرتك الخاصة. وإذا كنت بحاجة إلى نقطة اتصال محلية متوافقة مع OpenAI فإن Ollama وLM Studio توفّران ذلك.',
+          },
+          {
+            q: 'هل "Loci Private AI" هو نفسه Loci من askloci.ai؟',
+            a: 'نعم. يظهر التطبيق في App Store باسم "Loci - Private, Local AI" وتطوّره Loci AI, Inc.؛ وموقعه [askloci.ai](https://askloci.ai). وهناك مشاريع أخرى غير مرتبطة تستخدم اسم Loci أيضاً، مثل أداة ذاكرة محلية لوكلاء الذكاء الاصطناعي، لذا تحقق من اسم المطوّر والنطاق قبل التثبيت.',
+          },
+          {
+            q: 'هل يستطيع Loci الإجابة عن أسئلة حول مستنداتي أو نسخ الاجتماعات؟',
+            a: 'بحسب موقع Loci AI، نعم: فهو يصف مكتبة مستندات يمكنك طرح أسئلة عنها (تبقى المستندات على الجهاز أثناء المحادثة المحلية) ونسخاً محلياً للاجتماعات مع ملخصات للنقاط الرئيسية والقرارات والخطوات التالية. لم تختبر PromptQuorum هذه الميزات، لذا جرّبها أولاً مع ملفات غير حساسة.',
           },
         ],
       },
@@ -768,7 +794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[موقع Loci الرسمي](https://askloci.ai) — نظرة عامة على المنتج، وتنزيلات المنصات، والأسئلة الشائعة حول اختيار النموذج، وادعاء اختبار الأداء المذكور أعلاه (اطُّلع عليه في 23 أكتوبر 2026).',
           '[صفحة تنزيل Loci لنظام Windows](https://askloci.ai/windows/) — وسم Beta، ونسختا x64 وARM64.',
           '[سياسة خصوصية Loci](https://askloci.ai/privacy/) — شروط الخصوصية لدى المطوّر.',
-          '[Loci على App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — التوفر على iOS، والإصدار 1.3.31، وملصق الخصوصية، والحد الأدنى لمتطلبات النظام.',
+          '[Loci على App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — التوفر على iOS، وسجل الإصدارات (1.3.31، 23 أكتوبر 2026)، وملصق الخصوصية، والحد الأدنى لمتطلبات النظام.',
           '[Loci على Google Play](https://play.google.com/store/apps/details?id=app.lociai.loci) — التوفر على Android.',
           '[Artificial Analysis](https://artificialanalysis.ai) — ناشر مؤشر Intelligence Index الذي تستشهد به Loci AI؛ ولم تتحقق PromptQuorum من النتائج بشكل مستقل.',
           '[Google AI Edge Gallery على GitHub](https://github.com/google-ai-edge/gallery) — قائمة الميزات، والنماذج المدعومة، والتوفر عبر المنصات.',
@@ -800,11 +826,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-de.webp',
     title: 'Loci AI Review (2026): Private Offline-KI für iPhone, Android, iPad, Mac und Windows',
-    seoTitle: 'Loci AI Review 2026: Private Offline-KI auf allen Plattformen',
+    seoTitle: 'Loci AI Review 2026: Private Offline-KI für 5 Plattformen',
     intro:
       'Loci, entwickelt von Loci AI, Inc., ist darauf ausgelegt, lokale KI wie einen normalen Assistenten wirken zu lassen, anstatt als Modell-Management-Projekt. Es läuft auf iPhone, iPad, Android, Mac und Windows, kann nach der Einrichtung offline arbeiten und positioniert sich als datenschutzorientierte Alternative zu Cloud-KI-Services. Die App wählt automatisch die beste Inferenz-Laufzeit (llama.cpp oder MLX) für jedes Modell auf Ihrer Hardware aus, implementiert Thermal Management zur Stabilisierung Ihres Telefons, synchronisiert Speicher über Gespräche hinweg und kann sich mit einem Desktop verbinden, um stärkere Modelle zu nutzen. Die praktische Frage lautet nicht, ob lokale Inferenz möglich ist — sondern ob Loci Ihnen genügend Qualität und Kontrolle bietet, ohne die Modell-Downloads, Speichernutzung und technische Konfiguration (manuelles Auswählen von GGUF-Dateien, Quantisierungs-Tuning, VRAM-Berechnungen) zu erfordern, die fortgeschrittenere Tools verlangen.',
     metaDescription:
-      'Loci AI Review: Lohnt sich die Nutzung für private, offline KI? Sehen Sie, wie es auf iPhone, Android, iPad, Mac und Windows funktioniert, für wen es geeignet ist und wie es sich mit Private LLM, PocketPal und Google AI Edge Gallery vergleicht.',
+      'Loci AI Review: kostenlose private KI-App für iPhone, Android, iPad, Mac und Windows. Offline-Nutzung, Datenschutzlabel, Vergleich mit Private LLM.',
     twitterDescription:
       'Loci AI Review 2026: Offline-KI, die einfach auf iPhone, Android, iPad, Mac und Windows funktioniert. Datenschutz, Preisgestaltung, Einrichtung und Vergleiche mit Private LLM und Google AI Edge Gallery.',
     audience:
@@ -838,7 +864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Kostenlos, kein Abonnement, funktioniert auf 5 Plattformen (iPhone/iPad/Android/Mac/Windows).',
           'Offline-fähig nach App- und Modell-Download/Einrichtung.',
-          'Kein Konto, kein Tracking, Gespräche bleiben laut Entwicklerangaben lokal.',
+          'Kein Konto; Gespräche bleiben laut Loci AI auf dem Gerät. Das App-Store-Label führt Location, Identifiers und Usage Data als mit Ihnen verknüpft auf.',
           'Optionale Funktionen (Web-Suche via DuckDuckGo, Windows-Spracheingabe) erfordern Internet.',
           'Qualität und Modellauswahl weniger flexibel als Private LLM oder PocketPal AI.',
         ],
@@ -881,11 +907,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Was ist Loci',
         content: [
-          'Loci ist ein verbraucherorientierter KI-Assistent, der auf dem Gerät läuft, für iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac und Windows. Die App von Loci AI, Inc. ist kostenlos, ohne Abonnement, ohne Werbung und ohne Kontopflicht. Der App-Store-Eintrag zeigte Version 1.3.31 als am 23. Oktober 2026 aktualisiert (der Eintrag nennt nur eine relative Zeitangabe); die [Windows-Download-Seite](https://askloci.ai/windows/) kennzeichnet die Windows-Version als Beta. Die Bedingungen des Entwicklers stehen in der [Datenschutzerklärung](https://askloci.ai/privacy/).',
+          'Loci ist ein verbraucherorientierter KI-Assistent, der auf dem Gerät läuft, für iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac und Windows; der App-Store-Eintrag nennt zusätzlich visionOS 2.0+. Die App von Loci AI, Inc. ist laut Loci AI kostenlos, ohne Abonnement, ohne Werbung und ohne Kontopflicht. Der Versionsverlauf im App Store nennt Version 1.3.31 als am 23. Oktober 2026 veröffentlicht und seit Version 1.3.4 am 9. August 2026 insgesamt 25 Veröffentlichungen, die mobile App wird also häufig aktualisiert; die [Windows-Download-Seite](https://askloci.ai/windows/) kennzeichnet die Windows-Version als Beta. Die Bedingungen des Entwicklers stehen in der [Datenschutzerklärung](https://askloci.ai/privacy/).',
           'Modell-Architektur: Loci kann „Apples eingebautes Grundmodell oder Downloads von 10+ kuratierten Open-Source-Modellen, einschließlich Gemma, Qwen, Llama und Phi — alle lokal auf Ihrem Gerät ausgeführt" verwenden. Dies bedeutet, dass die Inferenz nach der Einrichtung auf dem Gerät stattfindet, nicht in der Cloud.',
-          'Datenschutz-Positionierung: Der offizielle Anspruch lautet: „Chat wird auf Ihrem Gerät verarbeitet und nicht hochgeladen. Es gibt kein Konto, keine serverseitige Kopie Ihrer Gespräche und kein Training an Ihren Worten." Die App erfasst „Identifiers", „Usage Data" und „Diagnostics" über ihr Privacy Nutrition Label, gibt aber an, dass diese Daten „nicht mit Ihrer Identität verknüpft sind".',
+          'Datenschutz-Positionierung: Der offizielle Anspruch lautet: „Chat wird auf Ihrem Gerät verarbeitet und nicht hochgeladen. Es gibt kein Konto, keine serverseitige Kopie Ihrer Gespräche und kein Training an Ihren Worten." Laut Website gehen Suchanfragen bei der Websuche direkt an Drittanbieter. Das App-Store-Datenschutzlabel, das PromptQuorum am 23. Oktober 2026 gelesen hat, ist detaillierter als diese Aussage: Unter „Data Linked to You" nennt es Location, Identifiers, Usage Data und Diagnostics, mit Zwecken wie Analytics, App-Funktionalität und „Developer\'s Advertising or Marketing" (Eigenwerbung des Entwicklers). Das Label stammt vom Entwickler selbst. Eine frühere Fassung dieser Rezension beschrieb die Daten als nicht mit Ihrer Identität verknüpft; das Label sagt inzwischen etwas anderes.',
           'Optionale Funktionen umfassen Fotoanalyse, Sprachmodus, Kalender/Erinnerungen-Integration und Web-Suche via DuckDuckGo. Der Vorbehalt: Web-Suche und Windows-Spracheingabe erfordern eine Internetverbindung, die die „Offline"-Story bei Verwendung verändert.',
           'Messaging-Apps (Herstellerangabe): Loci AI teilte PromptQuorum im Oktober 2026 mit, dass Loci jetzt auch in iMessage, Telegram, Discord und Slack funktioniert, WhatsApp folgt in Kürze. Die [Loci-Website](https://askloci.ai) erwähnte keine Messaging-Integrationen, als PromptQuorum am 23. Oktober 2026 nachsah; PromptQuorum hat sie nicht getestet.',
+          'Funktionen laut Website (Herstellerangabe): Die [Loci-Website](https://askloci.ai) beschreibt außerdem eine Dokumentenbibliothek für Fragen zu Ihren Dateien, lokale Meeting-Notizen (Transkription und Zusammenfassung von Kernpunkten, Entscheidungen und nächsten Schritten), lokales Diktieren, Schreibhilfe und Bildbeschreibung sowie eine verschlüsselte Kopplung Ihrer eigenen Geräte für Loci Link. PromptQuorum hat diese Funktionen nicht getestet.',
         ],
       },
       howLocalAiWorks: {
@@ -1090,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nutzer, der Live-Web-Wissen offline benötigt.** Loci hat optionale DuckDuckGo Web-Suche, aber sie erfordert Internet. Die lokalen Modelle haben kein Konzept vom „Heute" oder aktuellen Events.',
           '**Entwickler, der umfangreiche Modell/Inferenz-Kontrolle wünscht.** Wenn Sie verschiedene Quantisierungen benchmarken, Token/Sekunde-Geschwindigkeiten vergleichen oder Sampling-Parameter tunen müssen, bieten Private LLM oder PocketPal AI mehr Tiefe.',
           '**Nutzer, der einen vollständigen Offline-Sprachassistenten baut.** Loci hat eine „Sprachmodus"-Funktion, aber die Implementierung (ob lokale ASR/TTS oder Apple-System-APIs) ist nicht öffentlich dokumentiert. Für einen vollständig dokumentierten, Offline-Sprachstack, siehe [Bauen Sie einen lokalen Sprachassistenten auf Ihrem Telefon](/de/power-local-llm/voice-assistant-local-mobile-offline) für die empfohlene Whisper + LLM + TTS Pipeline.',
-          '**Nutzer, der hochsensible Informationen verarbeitet.** Bevor Sie Loci für private/vertrauliche Arbeit verwenden, überprüfen Sie die aktuelle Datenschutzrichtlinie und Privacy Nutrition Label auf dem App Store. App Store Label zeigt Datenerfassung für „Identifiers", „Usage Data" und „Diagnostics" (angegeben als nicht mit Ihrer Identität verknüpft), aber lesen Sie zuerst die vollständige Richtlinie.',
+          '**Nutzer, der hochsensible Informationen verarbeitet.** Bevor Sie Loci für private/vertrauliche Arbeit verwenden, überprüfen Sie die aktuelle Datenschutzrichtlinie und Privacy Nutrition Label auf dem App Store. Das App-Store-Label führt Location, Identifiers, Usage Data und Diagnostics als mit Ihnen verknüpfte Daten auf, mit Werbung/Marketing und Analytics unter den Zwecken – lesen Sie daher zuerst die vollständige Richtlinie.',
         ],
       },
       faq: {
@@ -1103,7 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Loci völlig privat?',
-            a: 'Locis offizielle Angabe lautet: „Chat wird auf Ihrem Gerät verarbeitet und nicht hochgeladen." Allerdings: (1) optionale Funktionen wie DuckDuckGo Web-Suche und Windows-Spracheingabe erfordern Internet und können Datenspuren hinterlassen; (2) die App erfasst „Identifiers", „Usage Data" und „Diagnostics" gemäß ihrem App Store Privacy Nutrition Label (angegeben als „nicht mit Ihrer Identität verknüpft"); (3) App-Updates und Modell-Downloads erfordern Internet. Für maximale Datenschutzgarantie überprüfen Sie die aktuelle Datenschutzrichtlinie und deaktivieren Sie optionale Online-Funktionen, falls Datenschutz kritisch ist.',
+            a: 'Locis offizielle Angabe lautet: „Chat wird auf Ihrem Gerät verarbeitet und nicht hochgeladen." Allerdings: (1) optionale Funktionen wie DuckDuckGo Web-Suche und Windows-Spracheingabe erfordern Internet und können Datenspuren hinterlassen; (2) das App-Store-Datenschutzlabel führt Location, Identifiers, Usage Data und Diagnostics als „Data Linked to You" auf, mit Analytics, App-Funktionalität und Eigenwerbung/Marketing des Entwicklers unter den angegebenen Zwecken (Selbstauskunft des Entwicklers); (3) App-Updates und Modell-Downloads erfordern Internet. Für maximale Datenschutzgarantie überprüfen Sie die aktuelle Datenschutzrichtlinie und deaktivieren Sie optionale Online-Funktionen, falls Datenschutz kritisch ist.',
           },
           {
             q: 'Kann ich Loci ohne WLAN verwenden?',
@@ -1137,6 +1164,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Ist Loci für den deutschen Mittelstand geeignet?',
             a: 'Potenziell, mit Vorbehalten. Viele deutsche Mittelständler streben Datensouveränität und lokale Verarbeitung an — Locis Offline-First-Ansatz spricht diesen Bedarf an. Allerdings: (1) Die kleinen Modelle (3B–4B Parameter) sind möglicherweise nicht ausreichend für komplexe Geschäftslogik oder regulatorische Analyse — Mittelständler in Finanz-, Versicherungs- und Rechtsberatung benötigen möglicherweise größere Modelle oder Cloud-Backup; (2) Sie müssen interne Richtlinien für die Verwendung nicht genehmigter KI-Tools überprüfen — viele Mittelständler haben IT-Governance-Anforderungen; (3) Falls Loci geschäftskritische Informationen verarbeitet, benötigen Sie möglicherweise eine offizielle IT-Risikobeurteilung durch Ihre IT-Abteilung. Für Mittelständler, die lokale KI ausprobieren möchten, ist Loci ein guter Startpunkt, solange die oben genannten Governance-Punkte adressiert sind.',
           },
+          {
+            q: 'Hat Loci eine API?',
+            a: 'Eine öffentliche API ist nicht dokumentiert. Auf der Loci-Website und im App-Store-Eintrag wird die App nur als Chat-Assistent beschrieben; PromptQuorum fand dort am 23. Oktober 2026 keine Entwicklerdokumentation. Loci AI teilte PromptQuorum mit, dass Loci auch in Messaging-Apps wie iMessage, Telegram, Discord und Slack funktioniert (Herstellerangabe, ungetestet) – das ist jedoch keine API, die Sie aus eigenem Code aufrufen können. Wenn Sie einen lokalen OpenAI-kompatiblen Endpunkt brauchen, bieten Ollama und LM Studio einen.',
+          },
+          {
+            q: 'Ist „Loci Private AI" dasselbe wie Loci von askloci.ai?',
+            a: 'Ja. Die App heißt im App Store „Loci - Private, Local AI" und stammt von Loci AI, Inc.; die Website ist [askloci.ai](https://askloci.ai). Auch andere, nicht verwandte Projekte tragen den Namen Loci, etwa ein lokales Gedächtnis-Tool für KI-Agenten – prüfen Sie daher vor der Installation Entwicklername und Domain.',
+          },
+          {
+            q: 'Kann Loci Fragen zu meinen Dokumenten beantworten oder Meetings transkribieren?',
+            a: 'Laut Website von Loci AI ja: Sie beschreibt eine Dokumentenbibliothek, zu der Sie Fragen stellen können (Dokumente bleiben beim lokalen Chat auf dem Gerät), sowie lokale Meeting-Transkription mit Zusammenfassung von Kernpunkten, Entscheidungen und nächsten Schritten. PromptQuorum hat diese Funktionen nicht getestet; probieren Sie sie zuerst mit unkritischen Dateien aus.',
+          },
         ],
       },
       fromTheMaker: {
@@ -1162,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Offizielle Loci-Website](https://askloci.ai) – Produktübersicht, Plattform-Downloads, FAQ zur Modellauswahl und die oben genannte Benchmark-Angabe (abgerufen am 23. Oktober 2026).',
           '[Loci-Download-Seite für Windows](https://askloci.ai/windows/) – Beta-Kennzeichnung, x64- und ARM64-Versionen.',
           '[Loci-Datenschutzerklärung](https://askloci.ai/privacy/) – die Datenschutzbedingungen des Entwicklers.',
-          '[Loci im App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) – iOS-Verfügbarkeit, Version 1.3.31, Datenschutz-Nährwertkennzeichnung, Mindest-OS-Anforderungen.',
+          '[Loci im App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) – iOS-Verfügbarkeit, Versionsverlauf (1.3.31, 23. Oktober 2026), Datenschutz-Nährwertkennzeichnung, Mindest-OS-Anforderungen.',
           '[Loci bei Google Play](https://play.google.com/store/apps/details?id=app.lociai.loci) – Android-Verfügbarkeit.',
           '[Artificial Analysis](https://artificialanalysis.ai) – Herausgeber des Intelligence Index, den Loci AI zitiert; PromptQuorum hat die Werte nicht unabhängig überprüft.',
           '[Google AI Edge Gallery auf GitHub](https://github.com/google-ai-edge/gallery) – Funktionsliste, unterstützte Modelle, plattformübergreifende Verfügbarkeit.',
@@ -1194,11 +1233,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-es.webp',
     title: 'Reseña de Loci AI (2026): IA privada sin conexión para iPhone, Android, iPad, Mac y Windows',
-    seoTitle: 'Reseña de Loci AI 2026: IA privada sin conexión en todas las plataformas',
+    seoTitle: 'Reseña de Loci AI 2026: IA privada y sin conexión',
     intro:
       'Loci, desarrollado por Loci AI, Inc., está diseñado para que la IA local se sienta como un asistente normal en lugar de un proyecto de gestión de modelos. Se ejecuta en iPhone, iPad, Android, Mac y Windows, puede funcionar sin conexión después de la configuración, y se posiciona como una alternativa centrada en la privacidad a los servicios de IA en la nube. La app selecciona automáticamente la mejor infraestructura de inferencia (llama.cpp o MLX) para cada modelo en tu hardware, implementa gestión térmica para mantener tu teléfono estable, sincroniza memoria entre conversaciones y puede vincularse a una computadora de escritorio para acceder a modelos más potentes. La pregunta práctica no es si la inferencia local es posible — es si Loci te ofrece suficiente calidad y control sin las descargas de modelos, el uso de almacenamiento y la configuración técnica (seleccionar archivos GGUF manualmente, ajustar cuantizaciones, calcular VRAM) que requieren herramientas más avanzadas de IA local.',
     metaDescription:
-      '¿Vale la pena usar Loci AI para IA privada sin conexión? Descubre cómo funciona en iPhone, Android, iPad, Mac y Windows, a quién le conviene, y cómo se compara con Private LLM, PocketPal y Google AI Edge Gallery.',
+      'Reseña de Loci AI: app de IA privada y gratuita para iPhone, Android, iPad, Mac y Windows. Uso sin conexión, etiqueta de privacidad y comparativa.',
     twitterDescription:
       'Reseña de Loci AI 2026: IA sin conexión que simplemente funciona en iPhone, Android, iPad, Mac y Windows. Privacidad, precios, configuración y comparativas con Private LLM y Google AI Edge Gallery.',
     audience:
@@ -1232,7 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Gratis, sin suscripción, funciona en 5 plataformas (iPhone/iPad/Android/Mac/Windows).',
           'Capaz de funcionar sin conexión después de descargar la aplicación y el modelo.',
-          'Sin cuenta, sin seguimiento, las conversaciones permanecen en el dispositivo según los desarrolladores.',
+          'Sin cuenta; el chat permanece en el dispositivo según Loci AI. La etiqueta de la App Store indica ubicación, identificadores y datos de uso como vinculados a ti.',
           'Las funciones opcionales (búsqueda web a través de DuckDuckGo, entrada de voz en Windows) requieren internet.',
           'La calidad y selección de modelos es menos flexible que Private LLM o PocketPal AI.',
         ],
@@ -1275,11 +1314,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Qué es Loci',
         content: [
-          'Loci es un asistente de IA orientado al consumidor que funciona en el dispositivo y está disponible en iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac y Windows. Creada por Loci AI, Inc., la app es gratuita, sin suscripción, sin anuncios y sin necesidad de cuenta. La ficha de la App Store mostraba la versión 1.3.31 como actualizada el 23 de octubre de 2026 (la ficha solo indica un tiempo relativo); la [página de descarga de Windows](https://askloci.ai/windows/) marca la versión de Windows como beta. Las condiciones del desarrollador están en su [política de privacidad](https://askloci.ai/privacy/).',
+          'Loci es un asistente de IA orientado al consumidor que funciona en el dispositivo y está disponible en iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac y Windows; la ficha de la App Store indica además visionOS 2.0+. Creada por Loci AI, Inc., la app es gratuita, sin suscripción, sin anuncios y sin necesidad de cuenta, según Loci AI. El historial de versiones de la App Store indica la versión 1.3.31 como publicada el 23 de octubre de 2026 y 25 versiones desde la 1.3.4 del 9 de agosto de 2026, por lo que la app móvil se actualiza con frecuencia; la [página de descarga de Windows](https://askloci.ai/windows/) marca la versión de Windows como beta. Las condiciones del desarrollador están en su [política de privacidad](https://askloci.ai/privacy/).',
           'Arquitectura del modelo: Loci puede usar "el modelo de fundación integrado de Apple o descargar de 10+ modelos de código abierto curados, incluyendo Gemma, Qwen, Llama y Phi — todos ejecutándose localmente en tu dispositivo." Esto significa que la inferencia ocurre en el dispositivo después de la configuración, no en la nube.',
-          'Posicionamiento de privacidad: la afirmación oficial es "El chat se procesa en tu dispositivo y no se carga. No hay cuenta, no hay copia en el servidor de tus conversaciones, y no se entrena con tus palabras." La aplicación recopila "Identificadores," "Datos de uso" y "Diagnósticos" a través de su etiqueta de nutrición de privacidad, pero afirma que estos datos no están "vinculados a tu identidad."',
+          'Posicionamiento de privacidad: la afirmación oficial es "El chat se procesa en tu dispositivo y no se carga. No hay cuenta, no hay copia en el servidor de tus conversaciones, y no se entrena con tus palabras." Según el sitio web, las consultas de búsqueda van directamente a proveedores externos cuando usas la búsqueda web. La etiqueta de privacidad de la App Store, que PromptQuorum leyó el 23 de octubre de 2026, es más detallada que esa afirmación: bajo "Datos vinculados a ti" enumera Ubicación, Identificadores, Datos de uso y Diagnósticos, con finalidades que incluyen análisis, funcionalidad de la app y "publicidad o marketing del desarrollador". La etiqueta la rellena el propio desarrollador. Una versión anterior de esta reseña describía los datos como no vinculados a tu identidad; la etiqueta ahora indica lo contrario.',
           'Las funciones opcionales incluyen análisis de fotos, modo de voz, integración de calendario/recordatorios y búsqueda web a través de DuckDuckGo. La advertencia: la búsqueda web y la entrada de voz en Windows requieren conexión a internet, lo que cambia la historia de "sin conexión" si se usan.',
           'Apps de mensajería (declaración del creador): Loci AI comunicó a PromptQuorum en octubre de 2026 que Loci ahora también funciona dentro de iMessage, Telegram, Discord y Slack, y que WhatsApp llegará pronto. El [sitio web de Loci](https://askloci.ai) no mencionaba integraciones de mensajería cuando PromptQuorum lo revisó el 23 de octubre de 2026, y PromptQuorum no las ha probado.',
+          'Funciones según el sitio web (declaración del creador): el [sitio web de Loci](https://askloci.ai) describe además una biblioteca de documentos para hacer preguntas sobre tus archivos, notas de reuniones locales (transcripción y resúmenes de puntos principales, decisiones y próximos pasos), dictado local, ayuda para escribir y descripción de imágenes, además de un emparejamiento cifrado entre tus propios dispositivos para Loci Link. PromptQuorum no ha probado estas funciones.',
         ],
       },
       howLocalAiWorks: {
@@ -1484,7 +1524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Usuario que necesita conocimiento web en vivo sin conexión.** Loci tiene búsqueda web de DuckDuckGo opcional, pero requiere internet. Los modelos locales no tienen concepto de "hoy" o eventos actuales.',
           '**Desarrollador que quiere control integral de modelo/inferencia.** Si necesitas hacer benchmark de cuantizaciones diferentes, comparar velocidades de token/segundo o ajustar parámetros de muestreo, Private LLM o PocketPal AI ofrecen más profundidad.',
           '**Usuario construyendo un asistente de voz completo sin conexión.** Loci tiene una característica de "modo de voz", pero la implementación (si es ASR/TTS local o APIs del sistema Apple) no está documentada públicamente. Para una pila de voz completa sin conexión y documentada, ve a [Construye un asistente de voz local en tu teléfono](/es/power-local-llm/voice-assistant-local-mobile-offline) para la tubería Whisper + LLM + TTS recomendada.',
-          '**Usuario manejando información altamente sensible.** Antes de usar Loci para trabajo privado/confidencial, revisa la política de privacidad actual y etiqueta de nutrición de privacidad en la App Store. La etiqueta de la App Store muestra recopilación de datos para "Identificadores," "Datos de uso" y "Diagnósticos" (indicados como no vinculados a tu identidad), pero lee la política completa primero.',
+          '**Usuario manejando información altamente sensible.** Antes de usar Loci para trabajo privado/confidencial, revisa la política de privacidad actual y etiqueta de nutrición de privacidad en la App Store. La etiqueta de la App Store enumera Ubicación, Identificadores, Datos de uso y Diagnósticos como datos vinculados a ti, con publicidad/marketing y análisis entre las finalidades, así que lee primero la política completa.',
         ],
       },
       faq: {
@@ -1497,7 +1537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es Loci completamente privado?',
-            a: 'La afirmación oficial de Loci es que "El chat se procesa en tu dispositivo y no se carga." Sin embargo: (1) las funciones opcionales como búsqueda web de DuckDuckGo y entrada de voz de Windows requieren internet y pueden crear rastros de datos; (2) la aplicación recopila "Identificadores," "Datos de uso" y "Diagnósticos" según su etiqueta de nutrición de privacidad de la App Store (indicado como "no vinculado a tu identidad"); (3) las actualizaciones de aplicaciones y descargas de modelos requieren internet. Para máxima seguridad de privacidad, verifica la política de privacidad actual e inhabilita funciones en línea opcionales si la privacidad es crítica.',
+            a: 'La afirmación oficial de Loci es que "El chat se procesa en tu dispositivo y no se carga." Sin embargo: (1) las funciones opcionales como búsqueda web de DuckDuckGo y entrada de voz de Windows requieren internet y pueden crear rastros de datos; (2) la etiqueta de privacidad de la App Store enumera Ubicación, Identificadores, Datos de uso y Diagnósticos como "Datos vinculados a ti", con análisis, funcionalidad de la app y publicidad o marketing del desarrollador entre las finalidades declaradas (autodeclarado por el desarrollador); (3) las actualizaciones de aplicaciones y descargas de modelos requieren internet. Para máxima seguridad de privacidad, verifica la política de privacidad actual e inhabilita funciones en línea opcionales si la privacidad es crítica.',
           },
           {
             q: '¿Puedo usar Loci sin Wi-Fi?',
@@ -1522,6 +1562,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Cuánto almacenamiento usa Loci?',
             a: 'La aplicación misma es pequeña (~100 MB). Los archivos del modelo dependen de cuál elijas: modelos compactos (Phi-4 Mini, Gemma 4 E2B, SmolLM) son 1–3 GB; modelos más grandes (Llama 3.2 3B, Gemma 4 E4B, Qwen3) son 2–5 GB. Si tienes múltiples modelos descargados, el uso total puede llegar a 10+ GB. Planifica según dispositivos con almacenamiento limitado.',
+          },
+          {
+            q: '¿Tiene Loci una API?',
+            a: 'No hay una API pública documentada. El sitio web de Loci y la ficha de la App Store describen la app solo como asistente de chat, y PromptQuorum no encontró documentación para desarrolladores el 23 de octubre de 2026. Loci AI comunicó a PromptQuorum que Loci también funciona dentro de apps de mensajería como iMessage, Telegram, Discord y Slack (declaración del creador, sin probar), pero eso no te da una API que puedas llamar desde tu propio código. Si necesitas un endpoint local compatible con OpenAI, Ollama y LM Studio ofrecen uno.',
+          },
+          {
+            q: '¿"Loci Private AI" es lo mismo que Loci de askloci.ai?',
+            a: 'Sí. La app figura en la App Store como "Loci - Private, Local AI" y es de Loci AI, Inc.; su sitio web es [askloci.ai](https://askloci.ai). Otros proyectos no relacionados también usan el nombre Loci, por ejemplo una herramienta de memoria local para agentes de IA, así que comprueba el nombre del desarrollador y el dominio antes de instalar.',
+          },
+          {
+            q: '¿Puede Loci responder preguntas sobre mis documentos o transcribir reuniones?',
+            a: 'Según el sitio web de Loci AI, sí: describe una biblioteca de documentos sobre la que puedes hacer preguntas (los documentos permanecen en el dispositivo durante el chat local) y transcripción local de reuniones con resúmenes de puntos principales, decisiones y próximos pasos. PromptQuorum no ha probado estas funciones, así que pruébalas primero con archivos no sensibles.',
           },
         ],
       },
@@ -1548,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Sitio oficial de Loci](https://askloci.ai): descripción del producto, descargas por plataforma, preguntas frecuentes sobre la selección de modelos y la afirmación de benchmark citada arriba (consultado el 23 de octubre de 2026).',
           '[Página de descarga de Loci para Windows](https://askloci.ai/windows/): indicación de beta, versiones x64 y ARM64.',
           '[Política de privacidad de Loci](https://askloci.ai/privacy/): las condiciones de privacidad del desarrollador.',
-          '[Loci en la App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748): disponibilidad en iOS, versión 1.3.31, etiqueta de privacidad, requisitos mínimos de SO.',
+          '[Loci en la App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748): disponibilidad en iOS, historial de versiones (1.3.31, 23 de octubre de 2026), etiqueta de privacidad, requisitos mínimos de SO.',
           '[Loci en Google Play](https://play.google.com/store/apps/details?id=app.lociai.loci): disponibilidad en Android.',
           '[Artificial Analysis](https://artificialanalysis.ai): editor del Intelligence Index que cita Loci AI; PromptQuorum no verificó las puntuaciones de forma independiente.',
           '[Google AI Edge Gallery en GitHub](https://github.com/google-ai-edge/gallery): lista de funciones, modelos compatibles, disponibilidad multiplataforma.',
@@ -1580,11 +1632,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   theme: 'Mobile & Edge LLMs',
   heroImage: '/images/loci-ai-review-hero-fr.webp',
   title: 'Critique de Loci AI (2026) : IA hors ligne privée sur iPhone, Android, iPad, Mac et Windows',
-  seoTitle: 'Critique Loci AI 2026 : IA hors ligne privée multiplateforme',
+  seoTitle: 'Critique Loci AI 2026 : IA privée hors ligne gratuite',
   intro:
     'Loci, développé par Loci AI, Inc., est conçu pour rendre l\'IA locale aussi naturelle qu\'un assistant ordinaire, sans gestion technique de modèles. Il s\'exécute sur iPhone, iPad, Android, Mac et Windows, fonctionne hors ligne après la configuration, et se positionne comme alternative sans cloud aux services IA propriétaires. L\'app sélectionne automatiquement le meilleur environnement d\'inférence (llama.cpp ou MLX) pour chaque modèle sur votre matériel, implémente la gestion thermique pour stabiliser votre téléphone, synchronise la mémoire entre conversations et peut se connecter à un ordinateur de bureau pour accéder à des modèles plus puissants. La vraie question n\'est pas si l\'inférence locale est possible — elle existe. C\'est si Loci offre assez de qualité et de contrôle sans les téléchargements, l\'espace disque et la configuration technique (sélection manuelle de fichiers GGUF, ajustement des quantifications, calcul de VRAM) que les outils IA locaux plus avancés imposent.',
   metaDescription:
-    'Critique de Loci AI : vaut-il le coup pour une IA privée hors ligne ? Découvrez le fonctionnement sur iPhone, Android, iPad, Mac et Windows, pour qui c\'est adapté, et les comparaisons.',
+    'Critique de Loci AI : appli d\'IA privée gratuite pour iPhone, Android, iPad, Mac et Windows. Usage hors ligne, étiquette de confidentialité, comparaison.',
   twitterDescription:
     'Critique Loci AI 2026 : IA hors ligne qui fonctionne sur iPhone, Android, iPad, Mac et Windows. Confidentialité, tarification, installation et comparaisons.',
   audience:
@@ -1618,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       bullets: [
         'Gratuit, pas d\'abonnement, fonctionne sur 5 plates-formes (iPhone/iPad/Android/Mac/Windows).',
         'Capable hors ligne après téléchargement et configuration de l\'application et du modèle.',
-        'Pas de compte, pas de suivi, conversations restent sur appareil selon les affirmations du développeur.',
+        'Pas de compte ; le chat reste sur l\'appareil selon Loci AI. L\'étiquette de l\'App Store indique Localisation, Identifiants et Données d\'utilisation comme liés à vous.',
         'Fonctionnalités optionnelles (recherche web via DuckDuckGo, entrée vocale Windows) nécessitent une connexion Internet.',
         'Qualité et flexibilité de sélection des modèles inférieures à Private LLM ou PocketPal AI.',
       ],
@@ -1661,11 +1713,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'what-is-loci',
       title: 'Ce qu\'est Loci',
       content: [
-        'Loci est un assistant d\'IA grand public fonctionnant sur l\'appareil, disponible sur iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac et Windows. Développée par Loci AI, Inc., l\'application est gratuite, sans abonnement, sans publicité et sans compte obligatoire. La fiche de l\'App Store indiquait la version 1.3.31 comme mise à jour le 23 octobre 2026 (la fiche ne donne qu\'une durée relative) ; la [page de téléchargement Windows](https://askloci.ai/windows/) indique que la version Windows est en bêta. Les conditions de l\'éditeur figurent dans sa [politique de confidentialité](https://askloci.ai/privacy/).',
+        'Loci est un assistant d\'IA grand public fonctionnant sur l\'appareil, disponible sur iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac et Windows ; la fiche de l\'App Store mentionne aussi visionOS 2.0+. Développée par Loci AI, Inc., l\'application est gratuite, sans abonnement, sans publicité et sans compte obligatoire, selon Loci AI. L\'historique des versions de l\'App Store indique la version 1.3.31 comme publiée le 23 octobre 2026, et 25 versions depuis la 1.3.4 du 9 août 2026, ce qui montre que l\'application mobile est mise à jour fréquemment ; la [page de téléchargement Windows](https://askloci.ai/windows/) indique que la version Windows est en bêta. Les conditions de l\'éditeur figurent dans sa [politique de confidentialité](https://askloci.ai/privacy/).',
         'Architecture des modèles : Loci peut utiliser « le modèle fondation intégré Apple ou télécharger parmi 10+ modèles open-source organisés, incluant Gemma, Qwen, Llama et Phi — tous s\'exécutant localement sur votre appareil ». Cela signifie que l\'inférence se fait sur appareil après configuration, pas dans le cloud.',
-        'Positionnement en matière de confidentialité : l\'affirmation officielle est « Le chat est traité sur votre appareil et n\'est pas téléchargé. Il n\'y a pas de compte, pas de copie serveur de vos conversations, pas d\'entraînement sur vos mots. » L\'application collecte « Identifiants », « Données d\'utilisation » et « Diagnostics » via son étiquette de nutrition sur la confidentialité, mais affirme que ces données « ne sont pas liées à votre identité ».',
+        'Positionnement en matière de confidentialité : l\'affirmation officielle est « Le chat est traité sur votre appareil et n\'est pas téléchargé. Il n\'y a pas de compte, pas de copie serveur de vos conversations, pas d\'entraînement sur vos mots. » Selon le site web, les requêtes de recherche vont directement à des fournisseurs tiers lorsque vous utilisez la recherche web. L\'étiquette de confidentialité de l\'App Store, lue par PromptQuorum le 23 octobre 2026, est plus détaillée que cette affirmation : sous « Données liées à vous », elle indique Localisation, Identifiants, Données d\'utilisation et Diagnostics, avec des finalités incluant l\'analyse, les fonctionnalités de l\'application et « la publicité ou le marketing du développeur ». Cette étiquette est déclarée par le développeur lui-même. Une version précédente de cette critique décrivait ces données comme non liées à votre identité ; l\'étiquette indique désormais le contraire.',
         'Les fonctionnalités optionnelles incluent l\'analyse de photos, le mode voix, l\'intégration calendrier/rappels et la recherche web via DuckDuckGo. Le point faible : la recherche web et l\'entrée vocale Windows nécessitent une connexion Internet, ce qui modifie l\'histoire « hors ligne » si utilisés.',
         'Applications de messagerie (déclaration de l\'éditeur) : Loci AI a indiqué à PromptQuorum en octobre 2026 que Loci fonctionne désormais aussi dans iMessage, Telegram, Discord et Slack, WhatsApp arrivant bientôt. Le [site de Loci](https://askloci.ai) ne mentionnait aucune intégration de messagerie lors de la vérification de PromptQuorum le 23 octobre 2026, et PromptQuorum ne les a pas testées.',
+        'Fonctionnalités selon le site web (déclaration de l\'éditeur) : le [site web de Loci](https://askloci.ai) décrit aussi une bibliothèque de documents pour poser des questions sur vos fichiers, des notes de réunion locales (transcription et résumés des points principaux, décisions et prochaines étapes), la dictée locale, une aide à la rédaction et la description d\'images, ainsi qu\'un appairage chiffré entre vos propres appareils pour Loci Link. PromptQuorum n\'a pas testé ces fonctionnalités.',
       ],
     },
     howLocalAiWorks: {
@@ -1870,7 +1923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Utilisateur nécessitant connaissances web en direct hors ligne.** Loci a une recherche web DuckDuckGo optionnelle, mais elle exige Internet. Les modèles locaux n\'ont aucun concept « d\'aujourd\'hui » ou d\'événements actuels.',
         '**Développeur voulant contrôle complet de modèle/inférence.** Si vous avez besoin de comparer différentes quantifications, comparer vitesses token/seconde ou ajuster paramètres d\'échantillonnage, Private LLM ou PocketPal AI offrent plus de profondeur.',
         '**Utilisateur construisant assistant vocal hors ligne complet.** Loci a une fonctionnalité « mode voix », mais l\'implémentation (ASR/TTS local ou APIs système Apple) n\'est pas documentée publiquement. Pour une pile vocale complète et vérifiée hors ligne, consultez [Construire un assistant vocal local sur votre téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline) pour le pipeline Whisper + LLM + TTS recommandé.',
-        '**Utilisateur gérant informations hautement sensibles.** Avant d\'utiliser Loci pour travail privé/confidentiel, consultez la politique de confidentialité actuelle et l\'étiquette de nutrition sur la confidentialité de l\'App Store. L\'étiquette App Store montre collection de données « Identifiants », « Données d\'utilisation » et « Diagnostics » (affirmée comme non liée à votre identité), mais lisez la politique complète d\'abord. La CNIL recommande les solutions de traitement local pour données sensibles professionnelles — vérifiez que Loci satisfait votre cadre de conformité avant utilisation.',
+        '**Utilisateur gérant informations hautement sensibles.** Avant d\'utiliser Loci pour travail privé/confidentiel, consultez la politique de confidentialité actuelle et l\'étiquette de nutrition sur la confidentialité de l\'App Store. L\'étiquette de l\'App Store indique Localisation, Identifiants, Données d\'utilisation et Diagnostics comme données liées à vous, avec la publicité/le marketing et l\'analyse parmi les finalités ; lisez donc d\'abord la politique complète. La CNIL recommande les solutions de traitement local pour données sensibles professionnelles — vérifiez que Loci satisfait votre cadre de conformité avant utilisation.',
       ],
     },
     faq: {
@@ -1883,7 +1936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Loci est-il complètement privé ?',
-          a: 'L\'affirmation officielle de Loci est que « Le chat est traité sur votre appareil et n\'est pas téléchargé. » Toutefois : (1) les fonctionnalités optionnelles comme la recherche web DuckDuckGo et l\'entrée vocale Windows exigent Internet et peuvent créer des traces ; (2) l\'application collecte « Identifiants », « Données d\'utilisation » et « Diagnostics » selon son étiquette de nutrition App Store (affirmée comme « non liée à votre identité ») ; (3) mises à jour d\'applications et téléchargements de modèles exigent Internet. Pour assurance maximale de confidentialité, vérifiez la politique de confidentialité actuelle et désactivez les fonctionnalités en ligne optionnelles si la confidentialité est critique.',
+          a: 'L\'affirmation officielle de Loci est que « Le chat est traité sur votre appareil et n\'est pas téléchargé. » Toutefois : (1) les fonctionnalités optionnelles comme la recherche web DuckDuckGo et l\'entrée vocale Windows exigent Internet et peuvent créer des traces ; (2) l\'étiquette de confidentialité de l\'App Store indique Localisation, Identifiants, Données d\'utilisation et Diagnostics comme « Données liées à vous », avec l\'analyse, les fonctionnalités de l\'application et la publicité ou le marketing du développeur parmi les finalités déclarées (déclaration du développeur) ; (3) mises à jour d\'applications et téléchargements de modèles exigent Internet. Pour assurance maximale de confidentialité, vérifiez la politique de confidentialité actuelle et désactivez les fonctionnalités en ligne optionnelles si la confidentialité est critique.',
         },
         {
           q: 'Puis-je utiliser Loci sans Wi-Fi ?',
@@ -1908,6 +1961,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           q: 'Combien d\'espace Loci utilise-t-il ?',
           a: 'L\'application elle-même est petite (~100 MB). Les fichiers modèles dépendent de celui que vous choisissez : les modèles compacts (Phi-4 Mini, Gemma 4 E2B, SmolLM) font 1–3 GB ; les plus grands modèles (Llama 3.2 3B, Gemma 4 E4B, Qwen3) font 2–5 GB. Si vous avez plusieurs modèles téléchargés, l\'utilisation totale peut atteindre 10+ GB. Prévoyez en fonction sur appareils avec stockage limité.',
+        },
+        {
+          q: 'Loci propose-t-il une API ?',
+          a: 'Aucune API publique n\'est documentée. Le site web de Loci et la fiche de l\'App Store ne décrivent l\'application que comme un assistant de chat, et PromptQuorum n\'y a trouvé aucune documentation pour développeurs le 23 octobre 2026. Loci AI a indiqué à PromptQuorum que Loci fonctionne aussi dans des applications de messagerie comme iMessage, Telegram, Discord et Slack (déclaration de l\'éditeur, non testée), mais cela ne vous donne pas d\'API à appeler depuis votre propre code. Si vous avez besoin d\'un point d\'accès local compatible OpenAI, Ollama et LM Studio en proposent un.',
+        },
+        {
+          q: '« Loci Private AI » est-il la même chose que Loci d\'askloci.ai ?',
+          a: 'Oui. L\'application figure sur l\'App Store sous le nom « Loci - Private, Local AI » et est éditée par Loci AI, Inc. ; son site web est [askloci.ai](https://askloci.ai). D\'autres projets sans rapport portent aussi le nom Loci, par exemple un outil de mémoire locale pour agents d\'IA ; vérifiez donc le nom du développeur et le domaine avant d\'installer.',
+        },
+        {
+          q: 'Loci peut-il répondre à des questions sur mes documents ou transcrire des réunions ?',
+          a: 'D\'après le site web de Loci AI, oui : il décrit une bibliothèque de documents sur laquelle vous pouvez poser des questions (les documents restent sur l\'appareil pendant le chat local) et une transcription locale des réunions avec résumés des points principaux, décisions et prochaines étapes. PromptQuorum n\'a pas testé ces fonctionnalités ; essayez-les d\'abord avec des fichiers non sensibles.',
         },
       ],
     },
@@ -1934,7 +1999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '[Site officiel de Loci](https://askloci.ai) — présentation du produit, téléchargements par plateforme, FAQ sur le choix des modèles et l\'affirmation de benchmark citée ci-dessus (consulté le 23 octobre 2026).',
         '[Page de téléchargement Windows de Loci](https://askloci.ai/windows/) — mention bêta, versions x64 et ARM64.',
         '[Politique de confidentialité de Loci](https://askloci.ai/privacy/) — les conditions de confidentialité de l\'éditeur.',
-        '[Loci sur l\'App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — disponibilité iOS, version 1.3.31, étiquette de confidentialité, versions minimales de l\'OS.',
+        '[Loci sur l\'App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — disponibilité iOS, historique des versions (1.3.31, 23 octobre 2026), étiquette de confidentialité, versions minimales de l\'OS.',
         '[Loci sur Google Play](https://play.google.com/store/apps/details?id=app.lociai.loci) — disponibilité Android.',
         '[Artificial Analysis](https://artificialanalysis.ai) — éditeur de l\'Intelligence Index cité par Loci AI ; PromptQuorum n\'a pas vérifié les scores de façon indépendante.',
         '[Google AI Edge Gallery sur GitHub](https://github.com/google-ai-edge/gallery) — liste des fonctionnalités, modèles pris en charge, disponibilité multiplateforme.',
@@ -1966,11 +2031,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-ja.webp',
     title: 'Loci AI レビュー (2026): iPhone、Android、iPad、Mac、Windows 対応のオフラインAI',
-    seoTitle: 'Loci AI レビュー 2026: プライベート・オフラインAI全プラットフォーム対応',
+    seoTitle: 'Loci AI レビュー 2026: プライベートAI',
     intro:
       'Loci（Loci AI, Inc. 開発）は、ローカルAIをモデル管理プロジェクトではなく、通常のアシスタントのように感じさせるように設計されています。iPhone、iPad、Android、Mac、Windowsで動作し、セットアップ後はオフラインで動作でき、クラウドAIサービスのプライバシー重視の代替手段として位置づけています。アプリはハードウェア上の各モデルに最適な推論ランタイム（llama.cpp または MLX）を自動選択し、スマートフォン安定化の熱管理を実装し、会話間でメモリを同期し、デスクトップに接続してより強力なモデルにアクセスできます。実際の質問は、ローカル推論が可能かどうかではなく、Lociが、より高度なローカルLLMツールが必要とするモデルダウンロード、ストレージ使用、技術設定（GGUF ファイルの手動選択、量子化チューニング、VRAM計算）なしに、十分な品質と制御をもたらすかどうかです。',
     metaDescription:
-      'Loci AI レビュー: プライベートでオフラインのAIに価値があるのか。iPhone、Android、iPad、Mac、Windows での動作方法、適合性、Private LLM、PocketPal、Google AI Edge Gallery との比較を確認します。',
+      'Loci AI レビュー: iPhone・Android・iPad・Mac・Windows対応の無料プライベートAIアプリ。オフライン利用、プライバシーラベル、Private LLMとの比較。',
     twitterDescription:
       'Loci AI レビュー 2026: iPhone、Android、iPad、Mac、Windows で動作するオフラインAI。プライバシー、価格、セットアップ、Private LLM や Google AI Edge Gallery との比較。',
     audience:
@@ -2004,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '無料、サブスクリプションなし、5プラットフォーム対応（iPhone/iPad/Android/Mac/Windows）。',
           'アプリとモデルダウンロード/セットアップ後はオフラインで動作可能。',
-          'アカウントなし、追跡なし、開発者の主張によるとデバイス上でのチャット。',
+          'アカウント不要。Loci AIによると、チャットはデバイス上に残ります。App Storeのラベルでは、位置情報・識別子・使用データが「あなたにリンクされたデータ」として記載されています。',
           'オプション機能（DuckDuckGo経由のウェブ検索、Windows音声入力）はインターネット接続が必要。',
           'Private LLM や PocketPal AI よりも品質とモデル選択の柔軟性が低い。',
         ],
@@ -2047,11 +2112,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Loci の概要',
         content: [
-          'Lociは、iPhone(iOS 18.0以降)、iPad(iPadOS 18.0以降)、Android、Mac、Windowsで利用できる、一般ユーザー向けのオンデバイスAIアシスタントです。Loci AI, Inc.が開発し、無料で、サブスクリプションも広告もアカウント登録も不要です。App Storeの掲載情報では、バージョン1.3.31が2026年10月23日に更新されたと表示されていました(掲載情報は相対的な時間しか示しません)。[Windowsのダウンロードページ](https://askloci.ai/windows/)では、Windows版はベータ版と表示されています。開発元の条件は[プライバシーポリシー](https://askloci.ai/privacy/)に記載されています。',
+          'Lociは、iPhone(iOS 18.0以降)、iPad(iPadOS 18.0以降)、Android、Mac、Windowsで利用できる、一般ユーザー向けのオンデバイスAIアシスタントです。App Storeの掲載情報にはvisionOS 2.0以降も記載されています。Loci AI, Inc.が開発し、Loci AIによると無料で、サブスクリプションも広告もアカウント登録も不要です。App Storeのバージョン履歴には、バージョン1.3.31が2026年10月23日にリリースされたこと、2026年8月9日のバージョン1.3.4以降で25回のリリースがあったことが記載されており、モバイルアプリは頻繁に更新されています。[Windowsのダウンロードページ](https://askloci.ai/windows/)では、Windows版はベータ版と表示されています。開発元の条件は[プライバシーポリシー](https://askloci.ai/privacy/)に記載されています。',
           'モデルアーキテクチャ: Loci は「Apple の組み込みファンデーションモデルまたは Gemma、Qwen、Llama、Phi を含む 10+ のキュレートされたオープンソースモデルからダウンロード可能」とします。これはセットアップ後の推論がデバイス上で発生し、クラウドではないことを意味します。',
-          'プライバシー位置付け: 公式の主張は「チャットはデバイス上で処理され、アップロードされません。アカウントなし、サーバー側のチャットコピーなし、言葉でのトレーニングなし」です。アプリはプライバシー栄養ラベル経由で「識別子」「使用データ」「診断」を収集していますが、このデータは「身元にリンクされない」と述べています。',
+          'プライバシー位置付け: 公式の主張は「チャットはデバイス上で処理され、アップロードされません。アカウントなし、サーバー側のチャットコピーなし、言葉でのトレーニングなし」です。ウェブサイトによると、ウェブ検索を使うと検索クエリは第三者のプロバイダーに直接送られます。PromptQuorumが2026年10月23日に確認したApp Storeのプライバシーラベルは、この主張より詳細です。「あなたにリンクされたデータ」として位置情報、識別子、使用データ、診断を挙げ、目的には分析、アプリの機能、「デベロッパの広告またはマーケティング」が含まれます。このラベルは開発元による自己申告です。このレビューの以前の版ではこれらのデータを身元にリンクされないものと説明していましたが、現在のラベルは異なる内容を示しています。',
           'オプション機能には、写真分析、音声モード、カレンダー/リマインダー統合、DuckDuckGo経由のウェブ検索が含まれます。注意事項: ウェブ検索と Windows 音声入力にはインターネット接続が必要であり、「オフライン」ストーリーを変更します。',
           'メッセージングアプリ(開発元の主張):Loci AIは2026年10月、LociがiMessage、Telegram、Discord、Slack内でも動作するようになり、WhatsAppも近日対応予定であるとPromptQuorumに伝えました。PromptQuorumが2026年10月23日に[Lociのウェブサイト](https://askloci.ai)を確認した時点では、メッセージング連携についての記載はなく、PromptQuorumはこれらをテストしていません。',
+          '公式サイトの機能(開発元の主張): [Lociのウェブサイト](https://askloci.ai)には、ファイルについて質問できるドキュメントライブラリ、ローカルの会議メモ(文字起こしと、要点・決定事項・次のステップの要約)、ローカルのディクテーション、文章作成支援、画像の説明、そしてLoci Link用の自分のデバイス間の暗号化ペアリングも記載されています。PromptQuorumはこれらの機能をテストしていません。',
         ],
       },
       howLocalAiWorks: {
@@ -2256,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ライブウェブ知識をオフラインで必要とするユーザー。** Loci には DuckDuckGo ウェブ検索オプションがありますが、インターネットが必要。ローカルモデルは「今日」や現在のイベントについて概念がありません。',
           '**包括的なモデル/推論制御を望む開発者。** 異なる量子化のベンチマーク、トークン/秒速度の比較、サンプリングパラメータのチューニングが必要な場合、Private LLM や PocketPal AI はより深さを提供。',
           '**完全なオフラインボイスアシスタントを構築するユーザー。** Loci には「音声モード」機能がありますが、実装（ローカル ASR/TTS か Apple システム API か）は公開されていません。ソース化済みの完全オフラインボイススタックについては、[スマートフォンでのローカルボイスアシスタント構築](/ja/power-local-llm/voice-assistant-local-mobile-offline) を参照。',
-          '**極度に機密な情報を扱うユーザー。** Loci をプライベート/機密の作業に使う前に、App Store の現在のプライバシーポリシーとプライバシー栄養ラベルを確認してください。App Store ラベルは「識別子」「使用データ」「診断」のデータ収集を示す（身元にリンクされないと述べている）が、完全なポリシーを最初に読んでください。',
+          '**極度に機密な情報を扱うユーザー。** Loci をプライベート/機密の作業に使う前に、App Store の現在のプライバシーポリシーとプライバシー栄養ラベルを確認してください。App Store のラベルは、位置情報・識別子・使用データ・診断を「あなたにリンクされたデータ」として挙げ、目的に広告/マーケティングと分析を含めているため、まず完全なポリシーを読んでください。',
         ],
       },
       faq: {
@@ -2269,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci は完全にプライベートですか?',
-            a: 'Loci の公式の主張は「チャットはデバイス上で処理されアップロードされません」。ただし: (1) DuckDuckGo ウェブ検索と Windows 音声入力などのオプション機能にはインターネットが必要で、データ痕跡を作成する可能性があります。(2) アプリは App Store プライバシー栄養ラベルごとに「識別子」「使用データ」「診断」を収集（身元にリンクされないと述べている）。(3) アプリ更新とモデルダウンロードにはインターネットが必要。最大限のプライバシー保証については、現在のプライバシーポリシーを検証し、プライバシーが重要な場合はオプションのオンライン機能を無効にしてください。',
+            a: 'Loci の公式の主張は「チャットはデバイス上で処理されアップロードされません」。ただし: (1) DuckDuckGo ウェブ検索と Windows 音声入力などのオプション機能にはインターネットが必要で、データ痕跡を作成する可能性があります。(2) App Store のプライバシーラベルは、位置情報・識別子・使用データ・診断を「あなたにリンクされたデータ」として挙げ、宣言された目的に分析、アプリの機能、開発元の広告またはマーケティングが含まれます（開発元の自己申告）。(3) アプリ更新とモデルダウンロードにはインターネットが必要。最大限のプライバシー保証については、現在のプライバシーポリシーを検証し、プライバシーが重要な場合はオプションのオンライン機能を無効にしてください。',
           },
           {
             q: 'Loci を WiFi なしで使用できますか?',
@@ -2294,6 +2360,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Loci はどの程度のストレージを使用しますか?',
             a: 'アプリ自体は小さい（~100 MB）。モデルファイルは選択するものに依存: コンパクトモデル（Phi-4 Mini、Gemma 4 E2B、SmolLM）は 1–3 GB。より大きなモデル（Llama 3.2 3B、Gemma 4 E4B、Qwen3）は 2–5 GB。複数のモデルをダウンロードすると、合計使用量は 10+ GB に達する可能性があります。ストレージが制限されたデバイスで適切に計画してください。',
+          },
+          {
+            q: 'Loci にAPIはありますか?',
+            a: '公開APIのドキュメントは見当たりません。Lociのウェブサイトと App Store の掲載情報では、アプリはチャットアシスタントとしてのみ説明されており、PromptQuorumは2026年10月23日時点で開発者向けドキュメントを見つけられませんでした。Loci AIはPromptQuorumに、LociがiMessage、Telegram、Discord、Slackなどのメッセージングアプリ内でも動作すると伝えました(開発元の主張、未テスト)が、これは自分のコードから呼び出せるAPIではありません。ローカルのOpenAI互換エンドポイントが必要な場合は、OllamaやLM Studioが提供しています。',
+          },
+          {
+            q: '「Loci Private AI」は askloci.ai の Loci と同じですか?',
+            a: 'はい。このアプリは App Store では「Loci - Private, Local AI」として掲載され、Loci AI, Inc.が開発しています。ウェブサイトは[askloci.ai](https://askloci.ai)です。Lociという名前は、AIエージェント向けのローカルなメモリツールなど、無関係な別のプロジェクトでも使われているため、インストール前に開発元名とドメインを確認してください。',
+          },
+          {
+            q: 'Loci は自分のドキュメントについての質問に答えたり、会議を文字起こししたりできますか?',
+            a: 'Loci AIのウェブサイトによると、可能です。質問できるドキュメントライブラリ(ローカルチャット中、ドキュメントはデバイス上に留まります)と、要点・決定事項・次のステップの要約付きのローカル会議文字起こしが説明されています。PromptQuorumはこれらの機能をテストしていないため、まず機密性のないファイルで試してください。',
           },
         ],
       },
@@ -2320,7 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Loci公式サイト](https://askloci.ai) — 製品概要、プラットフォーム別ダウンロード、モデル選択に関するFAQ、上記のベンチマークの主張(2026年10月23日に確認)。',
           '[LociのWindowsダウンロードページ](https://askloci.ai/windows/) — ベータ表示、x64とARM64版。',
           '[Lociのプライバシーポリシー](https://askloci.ai/privacy/) — 開発元のプライバシー条件。',
-          '[App StoreのLoci](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOSでの提供状況、バージョン1.3.31、プライバシー栄養ラベル、最低OS要件。',
+          '[App StoreのLoci](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOSでの提供状況、バージョン履歴(1.3.31、2026年10月23日)、プライバシーラベル、最低OS要件。',
           '[Google PlayのLoci](https://play.google.com/store/apps/details?id=app.lociai.loci) — Androidでの提供状況。',
           '[Artificial Analysis](https://artificialanalysis.ai) — Loci AIが引用するIntelligence Indexの発行元。PromptQuorumはスコアを独自に確認していません。',
           '[GitHubのGoogle AI Edge Gallery](https://github.com/google-ai-edge/gallery) — 機能一覧、対応モデル、クロスプラットフォームでの提供状況。',
@@ -2352,11 +2430,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/loci-ai-review-hero-ko.webp',
     title: 'Loci AI 리뷰 (2026): iPhone, Android, iPad, Mac, Windows용 오프라인 AI',
-    seoTitle: 'Loci AI 리뷰 2026: 크로스플랫폼 프라이빗 오프라인 AI',
+    seoTitle: 'Loci AI 리뷰 2026: 프라이빗 오프라인 AI',
     intro:
       'Loci(Loci AI, Inc.에서 개발)는 로컬 AI를 일반적인 비서 역할처럼 느끼게 하려고 설계되었습니다. iPhone, iPad, Android, Mac, Windows에서 AI를 실행할 수 있고, 설정 후 오프라인으로 작동하며, 클라우드 AI 서비스에 대한 프라이버시 중심의 대안으로 자리 잡았습니다. 앱은 하드웨어의 각 모델에 대해 최적의 추론 런타임(llama.cpp 또는 MLX)을 자동으로 선택하고, 휴대폰 안정성을 위해 열 관리를 구현하며, 대화 간에 메모리를 동기화하고, 데스크톱에 연결하여 더 강력한 모델에 접근할 수 있습니다. 실질적인 질문은 로컬 추론이 가능한가가 아니라, Loci가 더 고급 로컬 LLM 도구가 요구하는 모델 다운로드, 스토리지 사용, 기술적 설정(GGUF 파일 직접 선택, 양자화 조정, VRAM 계산) 없이 충분한 품질과 제어를 제공하는가입니다.',
     metaDescription:
-      'Loci AI 리뷰: 프라이빗 오프라인 AI로 가치 있는 선택일까요? iPhone, Android, iPad, Mac, Windows에서 작동 방식, 적합한 사용자, Private LLM 및 Google AI Edge Gallery와의 비교를 확인하세요.',
+      'Loci AI 리뷰: iPhone, Android, iPad, Mac, Windows용 무료 프라이빗 AI 앱. 오프라인 사용, 개인정보 라벨, Private LLM 비교.',
     twitterDescription:
       'Loci AI 리뷰 2026: iPhone, Android, iPad, Mac, Windows에서 작동하는 오프라인 AI. 프라이버시, 요금, 설정, Private LLM 및 Google AI Edge Gallery와의 비교.',
     audience:
@@ -2390,7 +2468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '무료, 구독 없음, 5개 플랫폼(iPhone/iPad/Android/Mac/Windows)에서 작동합니다.',
           '앱과 모델 다운로드/설정 후 오프라인 가능합니다.',
-          '계정 없음, 추적 없음, 개발자 주장에 따르면 대화는 디바이스에 남습니다.',
+          '계정 없음, Loci AI에 따르면 채팅은 디바이스에 남습니다. App Store 라벨은 위치, 식별자, 사용 데이터를 사용자와 연결된 데이터로 표시합니다.',
           '선택적 기능(DuckDuckGo 웹 검색, Windows 음성 입력)은 인터넷이 필요합니다.',
           'Private LLM 또는 PocketPal AI보다 품질 및 모델 선택이 유연하지 않습니다.',
         ],
@@ -2433,11 +2511,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Loci란',
         content: [
-          'Loci는 iPhone(iOS 18.0 이상), iPad(iPadOS 18.0 이상), Android, Mac, Windows에서 사용할 수 있는 일반 사용자용 온디바이스 AI 어시스턴트입니다. Loci AI, Inc.가 만들었으며 무료이고 구독, 광고, 계정이 필요 없습니다. App Store 목록에는 버전 1.3.31이 2026년 10월 23일에 업데이트된 것으로 표시되었습니다(목록은 상대적 시간만 제공합니다). [Windows 다운로드 페이지](https://askloci.ai/windows/)는 Windows 버전을 베타로 표시합니다. 개발사의 약관은 [개인정보 처리방침](https://askloci.ai/privacy/)에 있습니다.',
+          'Loci는 iPhone(iOS 18.0 이상), iPad(iPadOS 18.0 이상), Android, Mac, Windows에서 사용할 수 있는 일반 사용자용 온디바이스 AI 어시스턴트이며, App Store 목록에는 visionOS 2.0 이상도 표시됩니다. Loci AI, Inc.가 만들었으며 Loci AI에 따르면 무료이고 구독, 광고, 계정이 필요 없습니다. App Store 버전 기록에는 버전 1.3.31이 2026년 10월 23일에 출시된 것으로, 2026년 8월 9일의 버전 1.3.4 이후 25개 릴리스가 있는 것으로 나와 있어 모바일 앱은 자주 업데이트되고 있습니다. [Windows 다운로드 페이지](https://askloci.ai/windows/)는 Windows 버전을 베타로 표시합니다. 개발사의 약관은 [개인정보 처리방침](https://askloci.ai/privacy/)에 있습니다.',
           '모델 아키텍처: Loci는 "Apple의 기본 제공 기반 모델을 사용하거나 Gemma, Qwen, Llama, Phi를 포함한 10개 이상의 큐레이션된 오픈소스 모델에서 다운로드할 수 있습니다. 모두 디바이스에서 로컬로 실행됩니다." 이는 설정 후 추론이 클라우드가 아닌 온디바이스에서 발생함을 의미합니다.',
-          '프라이버시 위치 지정: 공식 주장은 "채팅이 디바이스에서 처리되며 업로드되지 않습니다. 계정이 없고, 대화의 서버 측 사본이 없으며, 당신의 말로 학습하지 않습니다." 앱은 프라이버시 영양 레이블을 통해 "식별자", "사용 데이터", "진단"을 수집하지만 이 데이터가 "당신의 신원과 연결되지 않는다"고 명시합니다.',
+          '프라이버시 위치 지정: 공식 주장은 "채팅이 디바이스에서 처리되며 업로드되지 않습니다. 계정이 없고, 대화의 서버 측 사본이 없으며, 당신의 말로 학습하지 않습니다." 웹사이트에 따르면 웹 검색을 사용할 때 검색어는 서드파티 제공업체로 직접 전송됩니다. PromptQuorum이 2026년 10월 23일에 확인한 App Store 개인정보 라벨은 이 주장보다 더 자세합니다. "사용자와 연결된 데이터" 아래에 위치, 식별자, 사용 데이터, 진단을 나열하며, 목적에는 분석, 앱 기능, "개발자의 광고 또는 마케팅"이 포함됩니다. 이 라벨은 개발사가 직접 신고한 내용입니다. 이 리뷰의 이전 버전은 이 데이터가 신원과 연결되지 않는다고 설명했지만, 현재 라벨은 다르게 표시합니다.',
           '선택적 기능은 사진 분석, 음성 모드, 캘린더/알림 통합, DuckDuckGo를 통한 웹 검색을 포함합니다. 주의: 웹 검색 및 Windows 음성 입력은 인터넷 연결이 필요하며, 사용하는 경우 "오프라인" 스토리를 변경합니다.',
           '메시징 앱(제작사 주장): Loci AI는 2026년 10월 PromptQuorum에 Loci가 이제 iMessage, Telegram, Discord, Slack 안에서도 작동하며 WhatsApp은 곧 지원된다고 전했습니다. PromptQuorum이 2026년 10월 23일 [Loci 웹사이트](https://askloci.ai)를 확인했을 때는 메시징 연동에 대한 언급이 없었으며, PromptQuorum은 이를 테스트하지 않았습니다.',
+          '웹사이트의 기능(제작자 주장): [Loci 웹사이트](https://askloci.ai)는 파일에 대해 질문할 수 있는 문서 라이브러리, 로컬 회의 노트(핵심 내용, 결정 사항, 다음 단계의 전사 및 요약), 로컬 받아쓰기, 글쓰기 지원, 이미지 설명, 그리고 Loci Link를 위한 본인 기기 간 암호화된 페어링도 설명합니다. PromptQuorum은 이 기능들을 테스트하지 않았습니다.',
         ],
       },
       howLocalAiWorks: {
@@ -2642,12 +2721,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**라이브 웹 지식이 필요한 사용자.** Loci는 선택적 DuckDuckGo 웹 검색을 가지고 있지만 인터넷이 필요합니다. 로컬 모델은 "오늘" 또는 현재 이벤트의 개념이 없습니다.',
           '**포괄적인 모델/추론 제어를 원하는 개발자.** 다양한 양자화를 벤치마크하고, 토큰/초 속도를 비교하거나, 샘플링 매개변수를 조정하려면 Private LLM 또는 PocketPal AI가 더 깊이를 제공합니다.',
           '**완전한 오프라인 음성 보조를 구축하는 사용자.** Loci는 "음성 모드" 기능을 가지고 있지만 구현(로컬 ASR/TTS 또는 Apple 시스템 API인지)은 공개적으로 문서화되지 않았습니다. 소싱되고 완전히 오프라인인 음성 스택의 경우 [전화에서 로컬 음성 보조 구축](/ko/power-local-llm/voice-assistant-local-mobile-offline)을 참조하세요 권장되는 Whisper + LLM + TTS 파이프라인의 경우.',
-          '**매우 민감한 정보를 처리하는 사용자.** Loci를 프라이빗/기밀 작업에 사용하기 전에 현재 개인정보보호방침과 App Store의 개인정보보호 영양 레이블을 검토하세요. App Store 레이블은 "식별자", "사용 데이터", "진단"의 데이터 수집을 보여줍니다(당신의 신원과 연결되지 않음이라고 명시됨), 하지만 전체 정책을 먼저 읽으세요.',
+          '**매우 민감한 정보를 처리하는 사용자.** Loci를 프라이빗/기밀 작업에 사용하기 전에 현재 개인정보보호방침과 App Store의 개인정보보호 영양 레이블을 검토하세요. App Store 라벨은 위치, 식별자, 사용 데이터, 진단을 사용자와 연결된 데이터로 나열하고 목적에 광고/마케팅과 분석을 포함하므로 전체 정책을 먼저 읽으세요.',
         ],
       },
       faq: {
         id: 'faq',
-        title: 'Frequently Asked Questions',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'Loci에 AI 모델이 자동으로 포함되어 있나요?',
@@ -2655,7 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci는 완전히 프라이빗인가요?',
-            a: 'Loci의 공식 주장은 "채팅이 디바이스에서 처리되며 업로드되지 않습니다." 그러나: (1) DuckDuckGo 웹 검색 및 Windows 음성 입력과 같은 선택적 기능은 인터넷이 필요하며 데이터 흔적을 남길 수 있습니다; (2) 앱은 앱 스토어 개인정보보호 영양 레이블에 따라 "식별자", "사용 데이터", "진단"을 수집합니다(당신의 신원과 연결되지 않음이라고 명시됨); (3) 앱 업데이트 및 모델 다운로드에는 인터넷이 필요합니다. 최대 프라이버시 보증을 위해 현재 개인정보보호방침을 확인하고 프라이버시가 중요한 경우 선택적 온라인 기능을 비활성화하세요.',
+            a: 'Loci의 공식 주장은 "채팅이 디바이스에서 처리되며 업로드되지 않습니다." 그러나: (1) DuckDuckGo 웹 검색 및 Windows 음성 입력과 같은 선택적 기능은 인터넷이 필요하며 데이터 흔적을 남길 수 있습니다; (2) App Store 개인정보 라벨은 위치, 식별자, 사용 데이터, 진단을 "사용자와 연결된 데이터"로 나열하며, 신고된 목적에는 분석, 앱 기능, 개발자의 광고 또는 마케팅이 포함됩니다(개발사의 자체 신고); (3) 앱 업데이트 및 모델 다운로드에는 인터넷이 필요합니다. 최대 프라이버시 보증을 위해 현재 개인정보보호방침을 확인하고 프라이버시가 중요한 경우 선택적 온라인 기능을 비활성화하세요.',
           },
           {
             q: 'Wi-Fi 없이 Loci를 사용할 수 있나요?',
@@ -2680,6 +2759,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Loci는 얼마나 많은 스토리지를 사용하나요?',
             a: '앱 자체는 작습니다(약 100 MB). 모델 파일은 선택에 따라 다릅니다: 컴팩트 모델(Phi-4 Mini, Gemma 4 E2B, SmolLM)은 1–3 GB; 더 큰 모델(Llama 3.2 3B, Gemma 4 E4B, Qwen3)은 2–5 GB입니다. 여러 모델을 다운로드한 경우 총 사용량은 10GB 이상에 도달할 수 있습니다. 스토리지가 제한된 디바이스에서는 계획하세요.',
+          },
+          {
+            q: 'Loci에 API가 있나요?',
+            a: '문서화된 공개 API는 없습니다. Loci 웹사이트와 App Store 목록은 앱을 채팅 어시스턴트로만 설명하며, PromptQuorum은 2026년 10월 23일 기준으로 개발자 문서를 찾지 못했습니다. Loci AI는 PromptQuorum에 Loci가 iMessage, Telegram, Discord, Slack 같은 메시징 앱 안에서도 작동한다고 전했지만(제작자 주장, 미테스트), 이는 직접 작성한 코드에서 호출할 수 있는 API가 아닙니다. 로컬 OpenAI 호환 엔드포인트가 필요하다면 Ollama와 LM Studio가 제공합니다.',
+          },
+          {
+            q: '"Loci Private AI"는 askloci.ai의 Loci와 같은 앱인가요?',
+            a: '네. 이 앱은 App Store에 "Loci - Private, Local AI"로 등록되어 있으며 Loci AI, Inc.가 만들었습니다. 웹사이트는 [askloci.ai](https://askloci.ai)입니다. AI 에이전트용 로컬 메모리 도구처럼 관련 없는 다른 프로젝트도 Loci라는 이름을 쓰므로 설치 전에 개발사 이름과 도메인을 확인하세요.',
+          },
+          {
+            q: 'Loci가 내 문서에 대한 질문에 답하거나 회의를 전사할 수 있나요?',
+            a: 'Loci AI 웹사이트에 따르면 가능합니다. 질문할 수 있는 문서 라이브러리(로컬 채팅 중 문서는 디바이스에 남습니다)와 핵심 내용, 결정 사항, 다음 단계 요약이 포함된 로컬 회의 전사를 설명합니다. PromptQuorum은 이 기능들을 테스트하지 않았으므로 먼저 민감하지 않은 파일로 시도해 보세요.',
           },
         ],
       },
@@ -2706,7 +2797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Loci 공식 사이트](https://askloci.ai) — 제품 개요, 플랫폼별 다운로드, 모델 선택 FAQ, 위에서 인용한 벤치마크 주장(2026년 10월 23일 확인).',
           '[Loci Windows 다운로드 페이지](https://askloci.ai/windows/) — 베타 표시, x64 및 ARM64 빌드.',
           '[Loci 개인정보 처리방침](https://askloci.ai/privacy/) — 개발사의 개인정보 약관.',
-          '[App Store의 Loci](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOS 제공 여부, 버전 1.3.31, 개인정보 보호 라벨, 최소 OS 요구 사항.',
+          '[App Store의 Loci](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOS 제공 여부, 버전 기록(1.3.31, 2026년 10월 23일), 개인정보 보호 라벨, 최소 OS 요구 사항.',
           '[Google Play의 Loci](https://play.google.com/store/apps/details?id=app.lociai.loci) — Android 제공 여부.',
           '[Artificial Analysis](https://artificialanalysis.ai) — Loci AI가 인용하는 Intelligence Index의 발행처. PromptQuorum은 점수를 독립적으로 확인하지 않았습니다.',
           '[GitHub의 Google AI Edge Gallery](https://github.com/google-ai-edge/gallery) — 기능 목록, 지원 모델, 크로스 플랫폼 제공 여부.',
@@ -2738,11 +2829,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   theme: 'Mobile & Edge LLMs',
   heroImage: '/images/loci-ai-review-hero-pt.webp',
   title: 'Revisão do Loci AI (2026): IA Offline para iPhone, Android, iPad, Mac e Windows',
-  seoTitle: 'Revisão do Loci AI 2026: IA Offline Privada em Múltiplas Plataformas',
+  seoTitle: 'Revisão do Loci AI 2026: IA privada offline e gratuita',
   intro:
     'Loci, desenvolvido pela Loci AI, Inc., foi projetado para tornar a IA local como um assistente normal em vez de um projeto de gerenciamento de modelos. Funciona em iPhone, iPad, Android, Mac e Windows, pode funcionar offline após a configuração e se posiciona como uma alternativa focada em privacidade aos serviços de IA em nuvem. O app seleciona automaticamente o melhor tempo de execução de inferência (llama.cpp ou MLX) para cada modelo no seu hardware, implementa gerenciamento térmico para manter seu telefone estável, sincroniza memória entre conversas e pode se conectar a um desktop para acessar modelos mais poderosos. A pergunta prática não é se a inferência local é possível — é se Loci oferece qualidade e controle suficientes sem os downloads de modelo, uso de armazenamento e configuração técnica (seleção manual de arquivos GGUF, ajuste de quantizações, cálculo de VRAM) que ferramentas mais avançadas de IA local exigem.',
   metaDescription:
-    'Revisão do Loci AI: Vale a pena usar para IA privada e offline? Veja como funciona em iPhone, Android, iPad, Mac e Windows, quem se beneficia, e como se compara com Private LLM, PocketPal e Google AI Edge Gallery.',
+    'Revisão do Loci AI: app de IA privada e gratuito para iPhone, Android, iPad, Mac e Windows. Uso offline, rótulo de privacidade e comparação.',
   twitterDescription:
     'Revisão do Loci AI 2026: IA offline que simplesmente funciona em iPhone, Android, iPad, Mac e Windows. Privacidade, preços, configuração e comparações com Private LLM e Google AI Edge Gallery.',
   audience:
@@ -2776,7 +2867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       bullets: [
         'Gratuito, sem assinatura, funciona em 5 plataformas (iPhone/iPad/Android/Mac/Windows).',
         'Compatível com offline após download do app e modelo/configuração.',
-        'Sem conta, sem rastreamento, conversas permanecem no dispositivo conforme declarações do desenvolvedor.',
+        'Sem conta; o chat permanece no dispositivo segundo a Loci AI. O rótulo da App Store lista localização, identificadores e dados de uso como vinculados a você.',
         'Recursos opcionais (pesquisa web via DuckDuckGo, entrada de voz no Windows) requerem internet.',
         'Qualidade e seleção de modelo menos flexíveis que Private LLM ou PocketPal AI.',
       ],
@@ -2819,11 +2910,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'what-is-loci',
       title: 'O Que é Loci',
       content: [
-        'O Loci é um assistente de IA voltado ao consumidor, que roda no dispositivo e está disponível para iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac e Windows. Criado pela Loci AI, Inc., o app é gratuito, sem assinatura, sem anúncios e sem exigência de conta. A página da App Store mostrava a versão 1.3.31 como atualizada em 23 de outubro de 2026 (a página informa apenas um tempo relativo); a [página de download para Windows](https://askloci.ai/windows/) marca a versão para Windows como beta. Os termos do desenvolvedor estão na [política de privacidade](https://askloci.ai/privacy/).',
+        'O Loci é um assistente de IA voltado ao consumidor, que roda no dispositivo e está disponível para iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac e Windows; a página da App Store lista também o visionOS 2.0+. Criado pela Loci AI, Inc., o app é gratuito, sem assinatura, sem anúncios e sem exigência de conta, segundo a Loci AI. O histórico de versões da App Store lista a versão 1.3.31 como lançada em 23 de outubro de 2026 e 25 lançamentos desde a versão 1.3.4, de 9 de agosto de 2026, o que indica que o app móvel é atualizado com frequência; a [página de download para Windows](https://askloci.ai/windows/) marca a versão para Windows como beta. Os termos do desenvolvedor estão na [política de privacidade](https://askloci.ai/privacy/).',
         'Arquitetura de modelo: Loci pode usar "modelo de fundação integrado do Apple ou baixar de 10+ modelos open-source curados, incluindo Gemma, Qwen, Llama e Phi — todos funcionando localmente em seu dispositivo." Isso significa que a inferência acontece no dispositivo após a configuração, não na nuvem.',
-        'Posicionamento de privacidade: A afirmação oficial é "O chat é processado em seu dispositivo e não é enviado. Não há conta, sem cópia no servidor de suas conversas e nenhum treinamento com suas palavras." O app coleta "Identificadores," "Dados de Uso" e "Diagnósticos" via seu rótulo de nutrição de privacidade, mas afirma que esses dados "não estão vinculados à sua identidade."',
+        'Posicionamento de privacidade: A afirmação oficial é "O chat é processado em seu dispositivo e não é enviado. Não há conta, sem cópia no servidor de suas conversas e nenhum treinamento com suas palavras." Segundo o site, as consultas de pesquisa vão diretamente para provedores terceiros quando você usa a pesquisa web. O rótulo de privacidade da App Store, lido pela PromptQuorum em 23 de outubro de 2026, é mais detalhado do que essa afirmação: em "Dados Vinculados a Você", ele lista Localização, Identificadores, Dados de Uso e Diagnósticos, com finalidades que incluem análise, funcionalidade do app e "publicidade ou marketing do desenvolvedor". O rótulo é autodeclarado pelo desenvolvedor. Uma versão anterior desta revisão descrevia os dados como não vinculados à sua identidade; o rótulo agora indica o contrário.',
         'Recursos opcionais incluem análise de foto, modo de voz, integração de calendário/lembretes e pesquisa web via DuckDuckGo. A ressalva: pesquisa web e entrada de voz do Windows requerem uma conexão com a internet, o que altera a história "offline" se usada.',
         'Apps de mensagens (declaração do criador): a Loci AI informou à PromptQuorum em outubro de 2026 que o Loci agora também funciona dentro do iMessage, Telegram, Discord e Slack, com o WhatsApp em breve. O [site do Loci](https://askloci.ai) não mencionava integrações de mensagens quando a PromptQuorum o verificou em 23 de outubro de 2026, e a PromptQuorum não as testou.',
+        'Recursos segundo o site (declaração do criador): o [site do Loci](https://askloci.ai) também descreve uma biblioteca de documentos para fazer perguntas sobre seus arquivos, notas de reunião locais (transcrição e resumos de pontos principais, decisões e próximos passos), ditado local, ajuda para escrever e descrição de imagens, além do pareamento criptografado entre seus próprios dispositivos para o Loci Link. A PromptQuorum não testou esses recursos.',
       ],
     },
     howLocalAiWorks: {
@@ -3028,7 +3120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Usuário precisando de conhecimento web ao vivo offline.** Loci tem pesquisa web DuckDuckGo opcional, mas requer internet. Os modelos locais não têm conceito de "hoje" ou eventos atuais.',
         '**Desenvolvedor querendo controle abrangente de modelo/inferência.** Se você precisa avaliar diferentes quantizações, comparar velocidades token/segundo ou ajustar parâmetros de amostragem, Private LLM ou PocketPal AI oferecem mais profundidade.',
         '**Usuário construindo um assistente de voz offline completo.** Loci tem um recurso "modo de voz", mas a implementação (se ASR/TTS local ou APIs do sistema Apple) não é documentada publicamente. Para uma pilha de voz offline totalmente originada, veja [Construir um Assistente de Voz Local em Seu Telefone](/pt/power-local-llm/voice-assistant-local-mobile-offline) para o pipeline Whisper + LLM + TTS recomendado.',
-        '**Usuário lidando com informações altamente sensíveis.** Antes de usar Loci para trabalho privado/confidencial, revise a política de privacidade atual e rótulo de nutrição de privacidade na App Store. O rótulo da App Store mostra coleta de dados para "Identificadores," "Dados de Uso" e "Diagnósticos" (afirmado como não vinculado à sua identidade), mas leia a política completa primeiro.',
+        '**Usuário lidando com informações altamente sensíveis.** Antes de usar Loci para trabalho privado/confidencial, revise a política de privacidade atual e rótulo de nutrição de privacidade na App Store. O rótulo da App Store lista Localização, Identificadores, Dados de Uso e Diagnósticos como dados vinculados a você, com publicidade/marketing e análise entre as finalidades; por isso, leia a política completa primeiro.',
       ],
     },
     faq: {
@@ -3041,7 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Loci é completamente privado?',
-          a: 'A afirmação oficial de Loci é que "O chat é processado em seu dispositivo e não é enviado." No entanto: (1) recursos opcionais como pesquisa web DuckDuckGo e entrada de voz do Windows requerem internet e podem criar rastros de dados; (2) o app coleta "Identificadores," "Dados de Uso" e "Diagnósticos" conforme seu rótulo de nutrição de privacidade da App Store (afirmado como "não vinculado à sua identidade"); (3) atualizações de app e downloads de modelo requerem internet. Para garantia máxima de privacidade, verifique a política de privacidade atual e desabilite recursos online opcionais se a privacidade for crítica.',
+          a: 'A afirmação oficial de Loci é que "O chat é processado em seu dispositivo e não é enviado." No entanto: (1) recursos opcionais como pesquisa web DuckDuckGo e entrada de voz do Windows requerem internet e podem criar rastros de dados; (2) o rótulo de privacidade da App Store lista Localização, Identificadores, Dados de Uso e Diagnósticos como "Dados Vinculados a Você", com análise, funcionalidade do app e publicidade ou marketing do desenvolvedor entre as finalidades declaradas (autodeclarado pelo desenvolvedor); (3) atualizações de app e downloads de modelo requerem internet. Para garantia máxima de privacidade, verifique a política de privacidade atual e desabilite recursos online opcionais se a privacidade for crítica.',
         },
         {
           q: 'Posso usar Loci sem WiFi?',
@@ -3066,6 +3158,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           q: 'Quanto armazenamento Loci usa?',
           a: 'O app em si é pequeno (~100 MB). Arquivos de modelo dependem de qual você escolher: modelos compactos (Phi-4 Mini, Gemma 4 E2B, SmolLM) são 1–3 GB; modelos maiores (Llama 3.2 3B, Gemma 4 E4B, Qwen3) são 2–5 GB. Se você tiver vários modelos baixados, o uso total pode chegar a 10+ GB. Planeje adequadamente em dispositivos com armazenamento limitado.',
+        },
+        {
+          q: 'O Loci tem uma API?',
+          a: 'Não há API pública documentada. O site do Loci e a página da App Store descrevem o app apenas como um assistente de chat, e a PromptQuorum não encontrou documentação para desenvolvedores em 23 de outubro de 2026. A Loci AI informou à PromptQuorum que o Loci também funciona dentro de apps de mensagens como iMessage, Telegram, Discord e Slack (declaração do criador, não testada), mas isso não lhe dá uma API para chamar a partir do seu próprio código. Se você precisa de um endpoint local compatível com OpenAI, o Ollama e o LM Studio oferecem um.',
+        },
+        {
+          q: 'O "Loci Private AI" é o mesmo que o Loci de askloci.ai?',
+          a: 'Sim. O app aparece na App Store como "Loci - Private, Local AI" e é da Loci AI, Inc.; o site é [askloci.ai](https://askloci.ai). Outros projetos sem relação também usam o nome Loci, por exemplo uma ferramenta de memória local para agentes de IA; por isso, confira o nome do desenvolvedor e o domínio antes de instalar.',
+        },
+        {
+          q: 'O Loci consegue responder perguntas sobre meus documentos ou transcrever reuniões?',
+          a: 'Segundo o site da Loci AI, sim: ele descreve uma biblioteca de documentos sobre a qual você pode fazer perguntas (os documentos permanecem no dispositivo durante o chat local) e transcrição local de reuniões com resumos de pontos principais, decisões e próximos passos. A PromptQuorum não testou esses recursos; experimente primeiro com arquivos não sensíveis.',
         },
       ],
     },
@@ -3092,7 +3196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '[Site oficial do Loci](https://askloci.ai) — visão geral do produto, downloads por plataforma, FAQ sobre a escolha de modelos e a afirmação de benchmark citada acima (consultado em 23 de outubro de 2026).',
         '[Página de download do Loci para Windows](https://askloci.ai/windows/) — indicação de beta, versões x64 e ARM64.',
         '[Política de privacidade do Loci](https://askloci.ai/privacy/) — os termos de privacidade do desenvolvedor.',
-        '[Loci na App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — disponibilidade no iOS, versão 1.3.31, rótulo de privacidade, requisitos mínimos de SO.',
+        '[Loci na App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — disponibilidade no iOS, histórico de versões (1.3.31, 23 de outubro de 2026), rótulo de privacidade, requisitos mínimos de SO.',
         '[Loci no Google Play](https://play.google.com/store/apps/details?id=app.lociai.loci) — disponibilidade no Android.',
         '[Artificial Analysis](https://artificialanalysis.ai) — editora do Intelligence Index citado pela Loci AI; a PromptQuorum não verificou as pontuações de forma independente.',
         '[Google AI Edge Gallery no GitHub](https://github.com/google-ai-edge/gallery) — lista de recursos, modelos compatíveis, disponibilidade multiplataforma.',
@@ -3128,7 +3232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Loci（由 Loci AI, Inc. 开发）的设计目标是让本地 AI 感觉像一个常规助手，而不是一个模型管理项目。它可以在 iPhone、iPad、Android、Mac 和 Windows 上运行 AI，设置后可以离线工作，并将自己定位为云 AI 服务的隐私优先替代方案。应用会自动为硬件上的每个模型选择最佳推理运行时（llama.cpp 或 MLX），实现热管理以保持手机稳定，跨对话同步记忆，并可以连接到台式电脑以访问更强大的模型。实际问题不是本地推理是否可能——而是 Loci 是否能在不需要模型下载、存储占用和技术配置（手动选择 GGUF 文件、调整量化、计算 VRAM）的情况下为你提供足够的质量和控制，这些是更高级本地 LLM 工具的要求。',
     metaDescription:
-      'Loci AI 评测：是否值得用于私密离线 AI？了解它如何在 iPhone、Android、iPad、Mac 和 Windows 上工作、适合哪些用户，以及它与 Private LLM、PocketPal 和 Google AI Edge Gallery 的比较。',
+      'Loci AI 评测：iPhone、Android、iPad、Mac 和 Windows 上的免费私密 AI 应用。离线使用、隐私标签以及与 Private LLM 的比较。',
     twitterDescription:
       'Loci AI 评测 2026：离线 AI，可在 iPhone、Android、iPad、Mac 和 Windows 上直接使用。隐私、定价、设置和与 Private LLM、Google AI Edge Gallery 的比较。',
     audience:
@@ -3156,15 +3260,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '**如果您更看重省心的设备端 AI,而不是手动管理模型,Loci 最值得考虑。** 它可在 iPhone、iPad、Android、Mac 和 Windows 上运行,会自动选择适合您硬件的模型,并允许您之后下载其他模型。Loci AI 称 Gemma 4 E2B/E4B 是手机上可用的最强推理能力,并表示桌面端现已成为一等平台,Mac 和 Windows 可运行大得多的模型(开发者自述,见“来自开发者”)。高级用户还可以将手机与 Mac 或 PC 配对(Loci Link),从手机上使用这些模型。如果您想自行选择量化方式、导入模型或使用更大的模型库,应将其与 Private LLM 或 PocketPal AI 等技术性更强的替代方案进行比较。',
     quickAnswerTop: {
       zh: {
-        question: 'Should I use Loci for private, offline AI?',
+        question: '我应该使用 Loci 来实现私密的离线 AI 吗?',
         answer:
           '如果您想要无需管理模型的私密设备端聊天,可在 iPhone、Android、iPad、Mac 或 Windows 上使用 Loci。如果您需要无网络下的实时网络知识,或对模型选择和量化有深度控制,云端 AI 或 Private LLM 等技术性更强的本地 LLM 应用更合适。',
         bullets: [
-          'Free, no subscription, works on 5 platforms (iPhone/iPad/Android/Mac/Windows).',
-          'Offline-capable after app and model download/setup.',
-          'No account, no tracking, conversations stay on-device per Loci AI claims.',
-          'Optional features (web search via DuckDuckGo, Windows voice input) require internet.',
-          'Quality and model selection less flexible than Private LLM or PocketPal AI.',
+          '免费,无订阅,支持 5 个平台(iPhone/iPad/Android/Mac/Windows)。',
+          '下载应用和模型并完成设置后可离线使用。',
+          '无需账户;据 Loci AI 称,聊天保留在设备上。App Store 标签将位置、标识符和使用数据列为与你关联的数据。',
+          '可选功能(通过 DuckDuckGo 的网络搜索、Windows 语音输入)需要联网。',
+          '质量和模型选择的灵活性不如 Private LLM 或 PocketPal AI。',
         ],
         updatedDate: '2026-10-23',
       },
@@ -3205,11 +3309,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Loci 是什么',
         content: [
-          'Loci 是面向普通用户的设备端 AI 助手,支持 iPhone(iOS 18.0+)、iPad(iPadOS 18.0+)、Android、Mac 和 Windows。该应用由 Loci AI, Inc. 开发,免费,无订阅、无广告,也无需账户。App Store 页面显示 1.3.31 版本于 2026 年 10 月 23 日更新(页面仅给出相对时间);[Windows 下载页面](https://askloci.ai/windows/)将 Windows 版标注为 Beta。开发者的条款见其[隐私政策](https://askloci.ai/privacy/)。',
+          'Loci 是面向普通用户的设备端 AI 助手,支持 iPhone(iOS 18.0+)、iPad(iPadOS 18.0+)、Android、Mac 和 Windows;App Store 页面还列出 visionOS 2.0+。该应用由 Loci AI, Inc. 开发,据 Loci AI 称免费,无订阅、无广告,也无需账户。App Store 版本历史显示 1.3.31 版本于 2026 年 10 月 23 日发布,自 2026 年 8 月 9 日的 1.3.4 版本以来共有 25 次发布,说明移动应用更新频繁;[Windows 下载页面](https://askloci.ai/windows/)将 Windows 版标注为 Beta。开发者的条款见其[隐私政策](https://askloci.ai/privacy/)。',
           '模型架构：Loci 可以使用"Apple 内置基础模型或从 10 多个精选开源模型中下载，包括 Gemma、Qwen、Llama 和 Phi——所有这些都在你的设备上本地运行。" 这意味着设置后推理在设备上进行，不在云中。',
-          '隐私定位：官方声称是"聊天在你的设备上处理，不上传。没有账户，没有服务器端你对话的副本，没有对你的词语的训练。" 该应用通过其隐私营养标签收集"标识符"、"使用数据"和"诊断"，但声称这些数据"不与你的身份相关联"。',
+          '隐私定位：官方声称是"聊天在你的设备上处理，不上传。没有账户，没有服务器端你对话的副本，没有对你的词语的训练。" 据网站称，使用网络搜索时，搜索查询会直接发送给第三方提供商。PromptQuorum 于 2026 年 10 月 23 日读取的 App Store 隐私标签比上述声称更详细：在"与你关联的数据"下，它列出位置、标识符、使用数据和诊断，用途包括分析、应用功能和"开发者的广告或营销"。该标签由开发者自行申报。本评测的早期版本曾将这些数据描述为与你的身份无关；标签现在显示的内容不同。',
           '可选功能包括照片分析、语音模式、日历/提醒集成和通过 DuckDuckGo 的网络搜索。注意：网络搜索和 Windows 语音输入需要互联网连接，这改变了"离线"的故事（如果使用）。',
           '消息应用(开发者自述):Loci AI 于 2026 年 10 月告知 PromptQuorum,Loci 现在也可在 iMessage、Telegram、Discord 和 Slack 内使用,WhatsApp 即将支持。PromptQuorum 于 2026 年 10 月 23 日查看 [Loci 网站](https://askloci.ai)时,其中未提及消息集成,PromptQuorum 也未对其进行测试。',
+          '网站所述功能（开发者声称）：[Loci 网站](https://askloci.ai)还介绍了可就你的文件提问的文档库、本地会议笔记（转录并总结要点、决定和后续步骤）、本地听写、写作辅助和图像描述，以及用于 Loci Link 的自有设备间加密配对。PromptQuorum 尚未测试这些功能。',
         ],
       },
       howLocalAiWorks: {
@@ -3414,7 +3519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**需要实时网络知识离线的用户。** Loci 有可选的 DuckDuckGo 网络搜索，但它需要互联网。本地模型对"今天"或当前事件没有概念。',
           '**想要综合模型/推理控制的开发者。** 如果你需要对比不同量化、比较令牌/秒速度或调整采样参数，Private LLM 或 PocketPal AI 提供更多深度。',
           '**构建完整离线语音助手的用户。** Loci 有一个"语音模式"功能，但实现（是本地 ASR/TTS 还是 Apple 系统 API）没有公开记录。对于有源的完全离线语音堆栈，请参阅[在你的手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)了解推荐的 Whisper + LLM + TTS 管道。',
-          '**处理高度敏感信息的用户。** 在将 Loci 用于私密/机密工作之前，查阅当前隐私政策和 App Store 上的隐私营养标签。App Store 标签显示"标识符"、"使用数据"和"诊断"的数据收集（声称与你的身份无关），但首先阅读完整政策。',
+          '**处理高度敏感信息的用户。** 在将 Loci 用于私密/机密工作之前，查阅当前隐私政策和 App Store 上的隐私营养标签。App Store 标签将位置、标识符、使用数据和诊断列为与你关联的数据，用途包括广告/营销和分析，因此请先阅读完整政策。',
         ],
       },
       faq: {
@@ -3427,7 +3532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci 完全私密吗？',
-            a: 'Loci 的官方声称是"聊天在你的设备上处理，不上传。" 然而：（1）像 DuckDuckGo 网络搜索和 Windows 语音输入这样的可选功能需要互联网，可能会创建数据痕迹；（2）该应用通过其 App Store 隐私营养标签收集"标识符"、"使用数据"和"诊断"（声称为"与你的身份无关"）；（3）应用更新和模型下载需要互联网。为了获得最大隐私保证，验证当前隐私政策并禁用可选在线功能（如果隐私至关重要）。',
+            a: 'Loci 的官方声称是"聊天在你的设备上处理，不上传。" 然而：（1）像 DuckDuckGo 网络搜索和 Windows 语音输入这样的可选功能需要互联网，可能会创建数据痕迹；（2）App Store 隐私标签将位置、标识符、使用数据和诊断列为"与你关联的数据"，已申报的用途包括分析、应用功能以及开发者的广告或营销（开发者自行申报）；（3）应用更新和模型下载需要互联网。为了获得最大隐私保证，验证当前隐私政策并禁用可选在线功能（如果隐私至关重要）。',
           },
           {
             q: '我可以在没有 Wi-Fi 的情况下使用 Loci 吗？',
@@ -3452,6 +3557,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Loci 使用多少存储空间？',
             a: '应用本身很小（~100 MB）。模型文件取决于你选择哪个：紧凑模型（Phi-4 Mini、Gemma 4 E2B、SmolLM）为 1–3 GB；较大的模型（Llama 3.2 3B、Gemma 4 E4B、Qwen3）为 2–5 GB。如果你下载了多个模型，总使用量可以达到 10+ GB。在存储有限的设备上相应规划。',
+          },
+          {
+            q: 'Loci 有 API 吗?',
+            a: '没有公开记录的 API。Loci 网站和 App Store 页面仅将该应用描述为聊天助手;截至 2026 年 10 月 23 日,PromptQuorum 未找到开发者文档。Loci AI 告知 PromptQuorum,Loci 也可在 iMessage、Telegram、Discord 和 Slack 等消息应用中使用(开发者声称,未测试),但这并不是你可以从自己的代码中调用的 API。如果你需要本地的 OpenAI 兼容端点,Ollama 和 LM Studio 提供此功能。',
+          },
+          {
+            q: '"Loci Private AI"和 askloci.ai 上的 Loci 是同一个应用吗?',
+            a: '是的。该应用在 App Store 中名为"Loci - Private, Local AI",由 Loci AI, Inc. 开发;网站是 [askloci.ai](https://askloci.ai)。也有其他无关的项目使用 Loci 这个名称,例如一个面向 AI 智能体的本地记忆工具,因此安装前请核对开发者名称和域名。',
+          },
+          {
+            q: 'Loci 能回答关于我文档的问题或转录会议吗?',
+            a: '据 Loci AI 网站称可以:它介绍了可就文档提问的文档库(本地聊天期间文档保留在设备上),以及带有要点、决定和后续步骤摘要的本地会议转录。PromptQuorum 尚未测试这些功能,因此请先用不敏感的文件试用。',
           },
         ],
       },
@@ -3478,7 +3595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Loci 官方网站](https://askloci.ai) — 产品概述、各平台下载、模型选择常见问题,以及上文引用的基准测试说法(2026 年 10 月 23 日查阅)。',
           '[Loci Windows 下载页面](https://askloci.ai/windows/) — Beta 标注、x64 和 ARM64 版本。',
           '[Loci 隐私政策](https://askloci.ai/privacy/) — 开发者的隐私条款。',
-          '[App Store 上的 Loci](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOS 可用性、1.3.31 版本、隐私营养标签、最低系统要求。',
+          '[App Store 上的 Loci](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — iOS 可用性、版本历史(1.3.31,2026 年 10 月 23 日)、隐私标签、最低系统要求。',
           '[Google Play 上的 Loci](https://play.google.com/store/apps/details?id=app.lociai.loci) — Android 可用性。',
           '[Artificial Analysis](https://artificialanalysis.ai) — Loci AI 所引用的 Intelligence Index 的发布方;PromptQuorum 未独立核实这些分数。',
           '[GitHub 上的 Google AI Edge Gallery](https://github.com/google-ai-edge/gallery) — 功能列表、支持的模型、跨平台可用性。',

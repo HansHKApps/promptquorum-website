@@ -44,7 +44,7 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { offline: true, modelDownloads: true },
   lastVerifiedDate: '2026-10-23',
-  lastUpstreamUpdate: '2026-10-23', // App Store v1.3.31 listed as updated "7h ago" when read 2026-10-23 (relative time only, so the date is the read date); mobile builds only
+  lastUpstreamUpdate: '2026-10-23', // App Store version history: v1.3.31 released 2026-10-23 03:11 UTC (re-verified 2026-10-23; 25 releases since 1.3.4 on 2026-08-09); mobile builds only
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/loci/id6762100748',
   pqReview: {
     date: '2026-10-23',
