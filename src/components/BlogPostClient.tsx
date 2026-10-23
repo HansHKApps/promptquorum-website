@@ -182,74 +182,10 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
   const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
   const metadata = blogMetadata[postId as keyof typeof blogMetadata]?.[lang as 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'pt' | 'es' | 'ar'] || blogMetadata[postId as keyof typeof blogMetadata]?.['en']
 
-  return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6">
-      <div className="max-w-4xl mx-auto">
-        {/* Breadcrumb + Language Switcher */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-2 text-sm text-text-secondary">
-            <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{BLOG_UI.breadcrumbHome[lang]}</a>
-            <span>/</span>
-            <a href={lang === 'en' ? '/#blog' : `/${lang}#blog`} className="hover:text-primary">{BLOG_UI.breadcrumbHub[lang]}</a>
-            <span>/</span>
-            <span className="text-text-primary font-medium">{metadata?.title || post.title}</span>
-          </div>
-          <LanguageSwitcher />
-        </div>
-
-        <ClusterBanner cluster="blog" />
-
-        {/* Article Header */}
-        <article className="prose prose-invert max-w-none">
-          <div className="mb-8">
-            <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              {metadata?.category || post.category}
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
-              {metadata?.title || post.title}
-            </h1>
-            <p className="text-lg text-text-secondary mb-4">{metadata?.intro || post.intro}</p>
-            <div className="flex items-center gap-4 text-sm text-text-secondary">
-              <time dateTime={getDateISO(metadata?.publishDate || post.publishDate)}>
-                {metadata?.publishDate || post.publishDate}
-              </time>
-              <span>•</span>
-              <span>{metadata?.readTime || post.readTime}</span>
-              <span>•</span>
-              <span>By <Link href="/author/hans-kuepper" className="text-primary hover:text-primary/80 font-medium">Hans Kuepper</Link> · PromptQuorum</span>
-            </div>
-          </div>
-
-          {/* Cross-language links */}
-          {postId && availableLangs.length > 0 && (
-            <LangLinksBar cluster="blog" slug={slug} availableLangs={availableLangs} initialLang={lang} />
-          )}
-
-          {/* Hero Component or Image */}
-          {post.heroComponent === 'FrameworkWheel' ? (
-            <FrameworkWheel />
-          ) : post.heroImage ? (
-            <div className="my-8">
-              <Image
-                src={post.heroImage}
-                alt="Article illustration"
-                width={1200}
-                height={675}
-                className="w-full rounded-lg border border-primary/20 shadow-sm"
-                priority
-                // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
-                // image optimizer has nothing to add — it only adds a billed transformation
-                // per source image (5,318 of them) and a redirect hop before LCP.
-                unoptimized
-              />
-            </div>
-          ) : null}
-
-          {/* Sections */}
-          <div className="mt-12 space-y-8">
-            {Object.entries(post.sections).map(([key, section]) => (
+  const tldrEntries = Object.entries(post.sections).filter(([, sec]) => sec.isTldr && sec.items && sec.items.length > 0)
+  const renderSection = ([key, section]: [string, (typeof post.sections)[string]]) => (
               <section key={key} className="prose prose-invert max-w-none">
-                {section.title && (
+                {section.title && !section.isTldr && (
                   <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-8 mb-4">
                     {section.title}
                   </h2>
@@ -338,11 +274,11 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
 
                 {/* TL;DR Callout */}
                 {section.isTldr && section.items && section.items.length > 0 && (
-                  <div className="my-8 p-6 border-l-4 border-primary bg-primary/5 rounded-r-lg">
+                  <div className="my-3 p-4 sm:p-5 border-l-4 border-primary bg-primary/5 rounded-r-lg key-takeaways">
                     <div className="flex gap-3">
                       <span className="text-2xl font-bold text-primary flex-shrink-0">⚡</span>
                       <div className="w-full">
-                        <h3 className="font-bold text-text-primary mb-3">{section.title}</h3>
+                        <h2 className="font-bold text-text-primary mb-2 text-base">{section.title}</h2>
                         <ul className="space-y-2">
                           {section.items.map((item, idx) => (
                             <li key={idx} className="text-text-secondary text-sm flex gap-2">
@@ -374,7 +310,77 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
                   </div>
                 )}
               </section>
-            ))}
+  )
+
+  return (
+    <div className="min-h-screen bg-white pt-24 sm:pt-20 pb-20 px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto">
+        {/* Breadcrumb + Language Switcher */}
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
+          <div className="flex items-center gap-2 text-sm text-text-secondary">
+            <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{BLOG_UI.breadcrumbHome[lang]}</a>
+            <span>/</span>
+            <a href={lang === 'en' ? '/#blog' : `/${lang}#blog`} className="hover:text-primary">{BLOG_UI.breadcrumbHub[lang]}</a>
+            <span className="hidden md:inline">/</span>
+            <span className="hidden md:inline text-text-primary font-medium">{metadata?.title || post.title}</span>
+          </div>
+          <LanguageSwitcher />
+        </div>
+
+        {/* Article Header */}
+        <article className="prose prose-invert max-w-none">
+          <div className="mb-4 sm:mb-6">
+            <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-2">
+              {metadata?.category || post.category}
+            </div>
+            <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
+              {metadata?.title || post.title}
+            </h1>
+            <p className="text-base sm:text-lg font-semibold text-text-primary leading-snug sm:leading-relaxed mb-3 article-intro">{metadata?.intro || post.intro}</p>
+            <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
+              <time dateTime={getDateISO(metadata?.publishDate || post.publishDate)}>
+                {metadata?.publishDate || post.publishDate}
+              </time>
+              <span>•</span>
+              <span>{metadata?.readTime || post.readTime}</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="basis-full sm:basis-auto">By <Link href="/author/hans-kuepper" className="text-primary hover:text-primary/80 font-medium">Hans Kuepper</Link> · PromptQuorum</span>
+            </div>
+          </div>
+
+          {/* Key Takeaways directly after the lead (Rule 36 first screen) */}
+          {tldrEntries.length > 0 && <div className="mt-2 space-y-4">{tldrEntries.map(renderSection)}</div>}
+
+          <ClusterBanner cluster="blog" />
+
+          {/* Cross-language links */}
+          {postId && availableLangs.length > 0 && (
+            <LangLinksBar cluster="blog" slug={slug} availableLangs={availableLangs} initialLang={lang} />
+          )}
+
+          {/* Hero Component or Image */}
+          {post.heroComponent === 'FrameworkWheel' ? (
+            <FrameworkWheel />
+          ) : post.heroImage ? (
+            <div className="my-8">
+              <Image
+                src={post.heroImage}
+                alt="Article illustration"
+                width={1200}
+                height={675}
+                className="w-full rounded-lg border border-primary/20 shadow-sm"
+                priority
+                // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
+                // image optimizer has nothing to add — it only adds a billed transformation
+                // per source image (5,318 of them) and a redirect hop before LCP.
+                unoptimized
+              />
+            </div>
+          ) : null}
+
+          {/* Sections */}
+          <div className="mt-12 space-y-8">
+            {Object.entries(post.sections).filter(([, sec]) => !sec.isTldr).map(renderSection)}
           </div>
         </article>
 
