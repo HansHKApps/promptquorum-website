@@ -5008,5 +5008,57 @@
       "t14": "2026-11-01",
       "t28": "2026-11-15"
     }
+  },
+  {
+    "id": "c7ad1fbd-622b-4628-bb7d-6ed3e4cda88d",
+    "slug": "/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-23T08:53:42.495Z",
+    "fields": [
+      {
+        "field": "internalLinks",
+        "old": "1 link to topic page (Related Reading only)",
+        "new": "3 links to topic page (overview, onTheName, Related Reading)"
+      }
+    ],
+    "reason": "cross-link app review and topic page: pointer to uncensored LLM list in overview and name section (links only, 9 locales)",
+    "queries": [
+      "locally uncensored",
+      "uncensored local ai",
+      "local uncensored"
+    ],
+    "baseline": {
+      "position": 5.58,
+      "impressions": 33022,
+      "clicks": 461,
+      "ctr": 0.013960390043001635,
+      "period": "28d EN GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eff4db52-909a-431b-81e9-0743a00742f3",
+    "slug": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T08:53:42.555Z",
+    "fields": [
+      {
+        "field": "internalLinks",
+        "old": "1 link to review (Related Reading, long title anchor)",
+        "new": "2 links to review (setup item + short anchor in Related Reading)"
+      }
+    ],
+    "reason": "cross-link app review and topic page: setup item and short anchor to review (links only, title/meta/headings untouched, 9 locales)",
+    "queries": [
+      "nsfw llm",
+      "best nsfw llm",
+      "llm without restrictions"
+    ],
+    "baseline": {
+      "position": 4.89,
+      "impressions": 70577,
+      "clicks": 4566,
+      "ctr": 0.06469529733482579,
+      "period": "28d EN GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
   }
 ]
