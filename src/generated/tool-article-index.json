@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-cpu-only-llm",
+        "title": "Best CPU-Only Local LLM 2026: 5 Models, No GPU Needed",
+        "url": "/local-llms/best-cpu-only-llm",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
         "dateModified": "2026-10-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
-        "tier": "about"
       }
     ],
     "totalCount": 303,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-cpu-only-llm",
+        "title": "Best CPU-Only Local LLM 2026: 5 Models, No GPU Needed",
+        "url": "/local-llms/best-cpu-only-llm",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-20",
         "tier": "about"
       }

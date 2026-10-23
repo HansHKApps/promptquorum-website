@@ -475,7 +475,7 @@
       ]
     },
     "best-cpu-only-llm": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -493,11 +493,11 @@
       "images": [
         {
           "url": "/images/best-cpu-only-llm-model-speeds-hero-en.webp",
-          "title": "Phi-4 Mini balances speed and quality best -- Gemma 4 E2B is faster but has less capability at 12 tok/s vs 15 tok/s."
+          "title": "Best CPU-only local LLMs 2026: estimated tok/s by model file size"
         },
         {
           "url": "/images/best-cpu-only-llm-cpu-vs-gpu-hero-en.webp",
-          "title": "CPU is 6-30x slower than GPU -- but costs $0 in dedicated hardware and works on any machine."
+          "title": "CPU-only LLM vs GPU speed: memory bandwidth 51.2 GB/s (DDR4 dual) vs 360 GB/s (RTX 3060)"
         }
       ]
     },
