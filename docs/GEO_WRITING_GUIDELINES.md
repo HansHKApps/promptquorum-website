@@ -1242,6 +1242,8 @@ Before publishing, perform the **viewport test**:
 3. Check: Can a new visitor see H1 + Lead Answer + CTR Hook + Key Takeaways + "Best Choice" WITHOUT scrolling?
 4. If any of these elements require scrolling → **FAIL** → move them up or split into two articles
 
+**Automated:** `npm run test:above-fold` (`tests/above-the-fold.spec.ts`) runs this test in headless Chromium at 1024×768 and 375×812 against a running build. It fails when the H1, the lead answer or the Key Takeaways heading and first bullet fall below the fold, when the lead is not 25–50 words, or when a cookie banner or sticky element covers the lead. It does not check the CTR hook or the Best Choice block (the renderers give them no stable markup); verify those by hand. Usage: header of the spec file.
+
 #### Checklist
 
 - [ ] H1 visible (top of screen)

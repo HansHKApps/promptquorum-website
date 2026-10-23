@@ -503,6 +503,7 @@ Run this against the **live or locally built HTML** of every locale URL of the p
 - [ ] Every "we tested" claim has a methodology block: device, OS/runtime version, model tag + quantization, prompt, run count, date
 - [ ] Sources section links the primary source for every benchmark, price, license and origin claim (model card / release page / store listing / original author); a product page with only shop links and no primary source is a fail
 - [ ] Internal mentions of other frameworks, tools or guides are links (`[name](path)`), and every internal link resolves (no 404, no redirect chain)
+- [ ] `npm run test:above-fold` passes for the page in every changed locale (`PQ_ATF_PATHS=/<cluster>/<slug> PQ_ATF_LOCALES=all`, against a running production build): H1, lead answer and Key Takeaways inside 1024×768 and 375×812 (GEO Rule 36)
 - [ ] The first 150 words state the page's non-replicable finding (test result, verified discrepancy, decision) — not template text
 - [ ] Visible byline and localized `Last updated` (and `Published`) rendered via `formatDisplayDate`
 

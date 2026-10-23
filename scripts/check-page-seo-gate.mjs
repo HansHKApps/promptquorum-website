@@ -46,9 +46,11 @@ const BUDGET = {
   ar: { title: [40, 55], desc: [110, 150] },
 }
 const budgetFor = (l) => (l === 'ja' || l === 'zh' ? BUDGET.cjk : l === 'ko' ? BUDGET.ko : l === 'ar' ? BUDGET.ar : BUDGET.latin)
+const norm2 = (x) => x.normalize('NFKC').toLowerCase()
 const PLACEHOLDER = /\b(to be added|TODO|TBD|lorem ipsum)\b/i
 
 import { changedArticleFiles, articleUrlPath } from './changed-article-files.mjs'
+import { keyTerms, field, hit } from './seo-terms.mjs'
 
 const args = process.argv.slice(2)
 const strict = args.includes('--strict')
@@ -112,6 +114,23 @@ async function check(url) {
 
   const h1 = html.match(/<h1\b/gi)?.length ?? 0
   if (h1 !== 1) add('A1', `${h1} <h1> elements (expected 1)`)
+
+  // A7: heading hierarchy inside <main>, in document order: H1 first, no skipped levels
+  // (H2 -> H4), no empty headings, no H3+ before the first H2, no repeated H2 text.
+  const mainHtml = html.match(/<main[\s\S]*?<\/main>/i)?.[0] ?? html
+  const heads = [...mainHtml.matchAll(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/gi)].map((m) => ({ level: Number(m[1]), text: stripTags(m[2]) }))
+  if (heads.length) {
+    if (heads[0].level !== 1) add('A7', `first heading in <main> is <h${heads[0].level}> "${heads[0].text.slice(0, 50)}", expected the <h1>`)
+    const skips = []
+    for (let i = 1; i < heads.length; i++) if (heads[i].level > heads[i - 1].level + 1) skips.push(`h${heads[i - 1].level}→h${heads[i].level} "${heads[i].text.slice(0, 40)}"`)
+    if (skips.length) add('A7', `${skips.length} skipped heading level(s) (e.g. ${skips[0]})`)
+    const empty = heads.filter((h) => !h.text)
+    if (empty.length) add('A7', `${empty.length} empty heading(s) (<h${empty[0].level}>)`)
+    const h2s = heads.filter((h) => h.level === 2 && h.text).map((h) => h.text.toLowerCase())
+    const dupH2 = h2s.filter((t, i) => h2s.indexOf(t) !== i)
+    if (dupH2.length) add('A7', `${dupH2.length} repeated H2 text(s) (e.g. "${dupH2[0].slice(0, 50)}")`)
+    if (!heads.some((h) => h.level === 2)) add('A7', 'no <h2> in <main>: the page has no section structure for answer engines to chunk')
+  }
 
   const title = decode(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? '').trim()
   const desc = metaContent(html, 'name', 'description') ?? ''
@@ -192,6 +211,25 @@ async function check(url) {
   const counts = alts.reduce((m, a) => m.set(a, (m.get(a) ?? 0) + 1), new Map())
   const dupes = [...counts].filter(([a, n]) => n > 1 && !GENERIC.test(a))
   if (dupes.length) add('C1b', `${dupes.length} alt text(s) reused on several images (e.g. "${dupes[0][0].slice(0, 60)}" ×${dupes[0][1]})`)
+  // C1c: is the alt text about THIS page and a real description? Lexical heuristic, not a judgement of
+  // image content: it checks topic overlap with <title>/<h1>, length, and stuffing patterns.
+  const h1Plain = stripTags(html.match(/<h1\b[\s\S]*?<\/h1>/i)?.[0] ?? '')
+  const topic = keyTerms(`${title.replace(/\|.*$/, '')} ${h1Plain}`, lang).filter((t) => t !== 'promptquorum' && !/^\d{4}$/.test(t))
+  const real = alts.filter((a) => !GENERIC.test(a) && !/\.(png|webp|jpe?g|svg|gif)$/i.test(a))
+  const cjk = lang === 'ja' || lang === 'zh' || lang === 'ko'
+  const size = (a) => (cjk ? [...a].length : a.split(/\s+/).length)
+  const tooShort = real.filter((a) => size(a) < (cjk ? 8 : 4) && a.length >= 10)
+  if (tooShort.length) add('C1c', `${tooShort.length} alt text(s) too short to describe an image (<${cjk ? 8 : 4} ${cjk ? 'chars' : 'words'}) (e.g. "${tooShort[0]}")`)
+  const stuffed = real.filter((a) => (cjk ? [...a].length > 80 : a.length > 125) || (a.match(/,/g) ?? []).length >= 4 ||
+    keyTerms(a, lang).some((t) => t.length > 2 && norm2(a).split(/[^\p{L}\p{N}]+/u).filter((w) => w === t).length >= 4))
+  if (stuffed.length) add('C1c', `${stuffed.length} alt text(s) look stuffed (too long, a keyword list, or a term repeated 4+ times) (e.g. "${stuffed[0].slice(0, 70)}")`)
+  if (topic.length >= 2 && real.length) {
+    const off = real.filter((a) => !topic.some((t) => hit(t, field(a))))
+    if (off.length) add('C1c', `${off.length} of ${real.length} alt text(s) share no term with the page title/H1 (topic terms: ${topic.slice(0, 5).join(', ')}) (e.g. "${off[0].slice(0, 70)}")`)
+    const need = Math.max(1, Math.ceil(topic.length / 2))
+    const best = Math.max(...real.map((a) => topic.filter((t) => hit(t, field(a))).length))
+    if (best < need) add('C1c', `no image alt reflects the page topic (best alt covers ${best} of ${topic.length} title/H1 terms; hero/main diagram alt should name the subject)`)
+  }
   const ph = text.match(PLACEHOLDER)
   if (ph) add('C2', `placeholder string "${ph[0]}" in the page text`)
 

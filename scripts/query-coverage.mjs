@@ -5,8 +5,8 @@
  *
  * Takes a page URL and the GSC queries that page is shown for, fetches the RAW
  * server HTML of each locale version, and checks whether each query's key terms
- * appear in the title, meta description, H1, H2s, lead (first ~150 words) and
- * FAQ questions. Prints a gap table per locale. For every gap it proposes
+ * appear in the title, meta description, H1, H2s, lead (first ~150 words), FAQ
+ * questions and image alt text (alt never counts toward grade A). Prints a gap table per locale. For every gap it proposes
  * concrete fix options (title / meta / H2 / FAQ / lead), and — with
  * --interactive — lets you confirm which options to apply and writes the
  * confirmed fix plan to docs/seo-tracking/fix-plans/.
@@ -48,6 +48,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import readline from 'node:readline/promises'
 import { stdin, stdout } from 'node:process'
+import { CJK, norm, keyTerms, field, hit } from './seo-terms.mjs'
 
 const LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 // [titleMax, descMax] — same budgets as scripts/validate-meta-budgets.mjs
@@ -55,16 +56,7 @@ const BUDGET = {
   en: [58, 155], de: [58, 155], fr: [58, 155], es: [58, 155], pt: [58, 155],
   ja: [32, 110], zh: [32, 110], ko: [38, 110], ar: [55, 150],
 }
-const CJK = new Set(['ja', 'zh', 'ko'])
 
-const STOP = {
-  en: 'a an and are as at be best by can do does for from how i in is it of on or the to vs versus what which who why with your you my 2024 2025'.split(' '),
-  de: 'der die das ein eine einen und oder für mit von zu im in ist wie was wo welche bester beste bestes auf den dem des'.split(' '),
-  fr: 'le la les un une des et ou pour avec de du en est comment quel quelle quels meilleur sur au aux'.split(' '),
-  es: 'el la los las un una unos y o para con de del en es como cual mejor mejores sobre al'.split(' '),
-  pt: 'o a os as um uma e ou para com de do da em é como qual melhor melhores sobre ao'.split(' '),
-}
-const stopFor = (loc) => new Set(STOP[loc] ?? [])
 
 // ---------- args ----------
 const argv = process.argv.slice(2)
@@ -89,8 +81,6 @@ const writePlan = has('plan') || interactive
 const decode = (s) =>
   s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&nbsp;/g, ' ')
 const strip = (h) => decode(h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim()
-const norm = (s) => s.normalize('NFKC').toLowerCase().replace(/[-_./]/g, ' ').replace(/\s+/g, ' ').trim()
-const isCjkChar = (c) => /[぀-ヿ㐀-鿿가-힯]/.test(c)
 
 function parseCsvLine(line) {
   const out = []
@@ -146,33 +136,6 @@ function readQueries() {
     .slice(0, top)
 }
 
-function keyTerms(query, loc) {
-  const q = norm(query)
-  if (CJK.has(loc) || [...q].some(isCjkChar)) {
-    // Bigrams per whitespace-separated word, so no bigram spans two words.
-    const grams = []
-    for (const word of q.split(/\s+/).filter(Boolean)) {
-      const chars = [...word]
-      if (chars.length <= 2) grams.push(word)
-      else for (let i = 0; i < chars.length - 1; i++) grams.push(chars[i] + chars[i + 1])
-    }
-    return [...new Set(grams)]
-  }
-  const stop = stopFor(loc)
-  const stem = (t) => (loc === 'en' && t.length > 3 && t.endsWith('s') && !t.endsWith('ss') ? t.slice(0, -1) : t)
-  const terms = q.split(/[^\p{L}\p{N}]+/u).filter(Boolean).filter((t) => !stop.has(t)).map(stem)
-  return [...new Set(terms.length ? terms : q.split(/[^\p{L}\p{N}]+/u).filter(Boolean))]
-}
-
-const field = (text) => {
-  const n = norm(text ?? '')
-  return { raw: text ?? '', n, tokens: new Set(n.split(/[^\p{L}\p{N}]+/u).filter(Boolean)) }
-}
-const hit = (term, f) => {
-  if (!f.n) return false
-  if (f.tokens.has(term) || f.tokens.has(`${term}s`)) return true
-  return (term.length >= 5 || [...term].some(isCjkChar)) && f.n.includes(term)
-}
 
 // ---------- page parsing ----------
 function parsePage(html, loc) {
@@ -202,7 +165,10 @@ function parsePage(html, loc) {
     const t = strip(m[0])
     if (/[?？؟]\s*$/.test(t)) faq.add(t)
   }
-  return { title, meta, h1, h2, lead, faq: [...faq], hasMain: /<main/i.test(html) }
+  const alts = [...main.matchAll(/<img\b[^>]*>/gi)]
+    .map((m) => decode((m[0].match(/\balt="([^"]*)"/i) ?? [])[1] ?? '').trim())
+    .filter(Boolean)
+  return { title, meta, h1, h2, lead, faq: [...faq], alts, hasMain: /<main/i.test(html) }
 }
 
 // ---------- grading ----------
@@ -210,7 +176,7 @@ function grade(query, loc, page) {
   const terms = keyTerms(query, loc)
   const F = {
     title: field(page.title), h1: field(page.h1), meta: field(page.meta), lead: field(page.lead),
-    h2: page.h2.map(field), faq: page.faq.map(field),
+    h2: page.h2.map(field), faq: page.faq.map(field), alt: page.alts.map(field),
   }
   const single = [['title', F.title], ['h1', F.h1], ...F.h2.map((f, i) => [`h2#${i + 1}`, f]), ...F.faq.map((f, i) => [`faq#${i + 1}`, f])]
   const all = (f) => terms.every((t) => hit(t, f))
@@ -219,7 +185,7 @@ function grade(query, loc, page) {
   for (const t of terms) {
     where[t] = [
       ['title', F.title], ['h1', F.h1], ['meta', F.meta], ['lead', F.lead],
-      ['h2', null, F.h2], ['faq', null, F.faq],
+      ['h2', null, F.h2], ['faq', null, F.faq], ['alt', null, F.alt],
     ].filter(([, f, arr]) => (f ? hit(t, f) : arr.some((x) => hit(t, x)))).map(([k]) => k)
   }
   const present = terms.filter((t) => where[t].length)
@@ -280,6 +246,11 @@ function proposals(row, g, page, loc) {
     add('L', 'lead',
       `State the answer for "${row.query}" in the first 150 words (terms missing from lead: ${g.terms.filter((t) => !hit(t, g.F.lead)).join(', ') || 'none'})`,
       'Rule 36: the main question is answered on the first screen', g.grade === 'D' && !!row.impressions && row.impressions > 100, true)
+  }
+  if (page.alts.length && g.terms.some((t) => !g.where[t]?.includes('alt'))) {
+    add('I', 'image alt',
+      `Describe the hero or main diagram in its alt text using the page topic and "${g.terms.join(' ')}" where it is true of the image (${page.alts.length} image alt(s) now, none covers every term)`,
+      'Alt text is read by image search and screen readers; it must describe the image, never list keywords', false, true)
   }
   if (pos != null && pos > 15) {
     out.forEach((o) => { if (o.field === 'title' || o.field === 'metaDescription') o.recommended = false })
@@ -342,7 +313,7 @@ for (const loc of locales) {
   const mine = queries.filter((q) => q.locale === loc || (q.locale === null && (loc === 'en' || explicitLocales)))
   console.log(`\n[${loc}] ${url}`)
   console.log(`  title (${page.title.length}/${BUDGET[loc][0]}): ${page.title}`)
-  console.log(`  h1: ${page.h1 || '(none)'}  ·  h2: ${page.h2.length}  ·  faq: ${page.faq.length}`)
+  console.log(`  h1: ${page.h1 || '(none)'}  ·  h2: ${page.h2.length}  ·  faq: ${page.faq.length}  ·  img alts: ${page.alts.length}`)
   if (!page.hasMain) console.log('  note: no <main> element found; lead/H1 parsed from the whole document')
   if (!mine.length) { console.log('  no queries apply to this locale'); continue }
 
