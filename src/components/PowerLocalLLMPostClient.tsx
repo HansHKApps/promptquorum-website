@@ -732,7 +732,7 @@ function SectionBlock({ section, colors, skinCls, id, lang, renderLinks, compare
 
   return (
     <div
-      className={(section.highlight || section.sponsoredSlot) ? 'mt-8 sponsored-slot rounded-xl border border-primary/30 bg-primary/5 p-5' : 'mt-8'}
+      className={(section.highlight || section.sponsoredSlot) ? 'mt-8 sponsored-slot rounded-xl border border-primary/30 bg-primary/5 p-5' : section.isTldr ? 'mt-2' : 'mt-8'}
       id={id}
     >
       {section.sponsoredSlot && (
@@ -748,7 +748,7 @@ function SectionBlock({ section, colors, skinCls, id, lang, renderLinks, compare
 
       {/* TL;DR block */}
       {section.isTldr && section.items && (
-        <div className={skinCls.tldrBox}>
+        <div className={skinCls.tldrBoxCompact}>
           <p className={skinCls.tldrLabel}>{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => (
@@ -1435,6 +1435,9 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   // The hero shows the short intro; the longer answer-first block (most non-EN locales) stays visible below it.
   const directoryLeadIsSeparate = isDirectoryPage && (article.leadAnswerBlock?.length ?? 0) > (article.intro?.length ?? 0) * 1.5
 
+  // Rule 36 first screen: Key Takeaways render directly after the lead answer, so the loop below skips it.
+  const tldrKey = isDirectoryPage ? undefined : Object.entries(article.sections).find(([, sec]) => (sec as any).isTldr && (sec as any).items)?.[0]
+
   const updatedBadge = (
     <time dateTime={article.dateModified ?? article.publishDate} className={isDirectoryPage ? 'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : skinCls.updatedBadge}>
       <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -1446,7 +1449,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   )
 
   return (
-    <div className={isDirectoryPage ? 'min-h-screen bg-white pb-20' : 'min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6'} key={`${slug}-${lang}`}>
+    <div className={isDirectoryPage ? 'min-h-screen bg-white pb-20' : 'min-h-screen bg-white pt-24 sm:pt-20 pb-20 px-4 sm:px-6'} key={`${slug}-${lang}`}>
       {/* Directory page: hub-style hero in place of the plain article header (see DirectoryHero). */}
       {isDirectoryPage && directorySlot && (
         <DirectoryHero
@@ -1475,7 +1478,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
 
         {/* Breadcrumb + language */}
         {!isDirectoryPage && (
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
             <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
@@ -1485,24 +1488,23 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                 <span>/</span>
               </>
             )}
-            <span className="text-text-primary font-medium">{article.title}</span>
+            <span className="hidden md:inline">/</span>
+            <span className="hidden md:inline text-text-primary font-medium">{article.title}</span>
           </div>
           {/* LanguageSwitcher omitted: cluster ships noindex; path-based switcher to be added before launch */}
         </div>
         )}
 
-        {!isDirectoryPage && <ClusterBanner cluster="power-local-llm" />}
-
-        {/* Article header */}
+        {/* Article header (cluster banner moved below Key Takeaways: Rule 36 first screen) */}
         {!isDirectoryPage && (
-        <div className="mb-10">
-          <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 ${colors.badge}`}>
+        <div className="mb-4 sm:mb-6">
+          <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-2 ${colors.badge}`}>
             {article.theme}
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4 leading-tight">
+          <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
             {article.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm text-text-secondary flex-wrap">
+          <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
             <time dateTime={article.dateModified ?? article.publishDate} className={isDirectoryPage ? 'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : skinCls.updatedBadge}>
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -1512,11 +1514,27 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
-            <span>·</span>
-            <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
+            <span className="hidden sm:inline">·</span>
+            <span className="basis-full sm:basis-auto">{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
           </div>
         </div>
         )}
+
+        {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
+        {(!isDirectoryPage || directoryLeadIsSeparate) && article.leadAnswerBlock && (
+          <div className={isDirectoryPage ? 'mb-8 rounded-2xl border border-hub-azure-edge bg-hub-azure-tint px-5 py-4' : skinCls.leadBlockCompact}>
+            <p className={isDirectoryPage ? 'text-[15px] text-text-primary leading-relaxed' : 'text-[15px] sm:text-base text-text-primary font-semibold leading-snug sm:leading-relaxed'}>
+              {renderInlineLinks(article.leadAnswerBlock, lang)}
+            </p>
+          </div>
+        )}
+
+        {/* Key Takeaways directly after the lead answer (Rule 36 first screen); skipped in the section loop below */}
+        {tldrKey && (
+          <SectionBlock key={tldrKey} section={article.sections[tldrKey]!} colors={colors} skinCls={skinCls} id={slugifySectionId(article.sections[tldrKey]!, tldrKey)} lang={lang} renderLinks={renderLinks} compareData={compareData} pageSlug={slug} />
+        )}
+
+        {!isDirectoryPage && <ClusterBanner cluster="power-local-llm" />}
 
         {/* Cross-language links */}
         <LangLinksBar cluster={isDirectoryPage ? 'directory' : 'power-local-llm'} slug={isDirectoryPage ? '' : slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
@@ -1573,15 +1591,6 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
               )}
             </p>
           </aside>
-        )}
-
-        {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
-        {(!isDirectoryPage || directoryLeadIsSeparate) && article.leadAnswerBlock && (
-          <div className={isDirectoryPage ? 'mb-8 rounded-2xl border border-hub-azure-edge bg-hub-azure-tint px-5 py-4' : skinCls.leadBlock}>
-            <p className={isDirectoryPage ? 'text-[15px] text-text-primary leading-relaxed' : 'text-text-primary font-semibold leading-relaxed'}>
-              {renderInlineLinks(article.leadAnswerBlock, lang)}
-            </p>
-          </div>
         )}
 
         {/* Article intro paragraph */}
@@ -1752,8 +1761,9 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
           const labels = SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!
           return (
             <nav className={skinCls.tocNav} aria-label="Table of contents">
-              <p className={skinCls.tocLabel}>{labels.tableOfContents}</p>
-              <ol className="space-y-1">
+              <details>
+              <summary className={skinCls.tocSummary}>{labels.tableOfContents}</summary>
+              <ol className="space-y-1 mt-3">
                 {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                   <li key={item.anchor}>
                     <a href={`#${item.anchor.replace(/^#/, '')}`} className={skinCls.tocLink}>
@@ -1762,6 +1772,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                   </li>
                 ))}
               </ol>
+              </details>
             </nav>
           )
         })()}
@@ -1790,6 +1801,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
               : entries
 
             return orderedEntries.map(([key, section]) => {
+              if (key === tldrKey) return null
               const sectionId = slugifySectionId(section, key)
               if (directorySlot?.sectionKeys.includes(key)) {
                 // The interactive hub already rendered once, full-bleed,
