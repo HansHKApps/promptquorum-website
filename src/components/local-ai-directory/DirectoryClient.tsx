@@ -18,6 +18,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { McpConnectPanel } from './McpConnectPanel'
 import { CloudAlternativeLookup } from './CloudAlternativeLookup'
+import { DirSectionHeading } from './DirSectionHeading'
 import { StatsBar } from './StatsBar'
 import { WantChips, WANT_ORDER } from './WantChips'
 import { SubcategoryChips } from './SubcategoryChips'
@@ -292,6 +293,25 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       {lang === 'en' && <McpConnectPanel />}
+      <section id="directory-goal" aria-labelledby="directory-goal-title" className="mb-12 scroll-mt-24">
+        <DirSectionHeading index={1} tone="azure" id="directory-goal-title" intro={t('secGoalIntro', ui)}>
+          {t('secGoalTitle', ui)}
+        </DirSectionHeading>
+        <div id="directory-toolbar" className="space-y-4 scroll-mt-24">
+          <WantChips counts={wantCounts} selected={want} onSelect={handleWant} ui={ui} />
+          {want && (
+            <SubcategoryChips
+              counts={countsByGroup.category}
+              selected={filters.category}
+              onToggle={(value) => toggleFilter('category', value)}
+              onClear={clearCategoryFilters}
+              lang={lang}
+              ui={ui}
+            />
+          )}
+        </div>
+      </section>
+
       <CloudAlternativeLookup
         apps={apps}
         lang={lang}
@@ -299,19 +319,14 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
         onOpenTool={setOpenSlug}
         onBrowseApps={handleWant}
       />
-      <div id="directory-toolbar" className="space-y-4 mb-6 scroll-mt-24">
-        <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
-        <WantChips counts={wantCounts} selected={want} onSelect={handleWant} ui={ui} />
-        {want && (
-          <SubcategoryChips
-            counts={countsByGroup.category}
-            selected={filters.category}
-            onToggle={(value) => toggleFilter('category', value)}
-            onClear={clearCategoryFilters}
-            lang={lang}
-            ui={ui}
-          />
-        )}
+
+      <div id="directory-all" className="scroll-mt-24">
+        <DirSectionHeading index={3} tone="indigo" intro={t('secAllIntro', ui)}>
+          {t('secAllTitle', ui)}
+        </DirSectionHeading>
+        <div className="mb-4">
+          <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
+        </div>
       </div>
 
       {/* Sticky top filter bar — replaces the old left sidebar (audit item

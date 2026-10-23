@@ -126,9 +126,10 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApp
   const visible = expanded ? ranked : ranked.slice(0, COLLAPSED_COUNT)
 
   return (
-    <section aria-labelledby="alt-lookup-title" className="mb-6">
+    <section id="directory-replace" aria-labelledby="alt-lookup-title" className="mb-12 scroll-mt-24">
       <div className="flex flex-wrap items-center gap-3">
-        <h2 id="alt-lookup-title" className="text-lg font-bold text-slate-900">{t('altReplaceTitle', ui)}</h2>
+        <span className="rounded-[10px] bg-hub-orchid px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white">02</span>
+        <h2 id="alt-lookup-title" className="text-[26px] font-bold tracking-tight text-text-primary sm:text-[28px]">{t('altReplaceTitle', ui)}</h2>
         <span className="rounded-full border border-hub-amber-edge bg-hub-amber-tint px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-hub-amber-ink">
           {t('altBadge', ui)}
         </span>
