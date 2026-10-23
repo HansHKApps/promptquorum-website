@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     quickAnswerTop: {
       en: {
-        question: 'Best local LLM for a 16 GB RAM laptop?',
+        question: 'Best Local LLM for a 16 GB RAM Laptop (2026)?',
         answer: 'For a 16 GB RAM laptop without a dedicated GPU, Qwen3.5 9B (Q4, ~7 GB download) is the best all-rounder, and Gemma 4 12B (~8 GB) is the strongest model that still fits, at lower speed. Qwen3.5 4B (~3.5 GB) or Phi-4-mini (~2.5 GB) suit weaker machines. Qwen3 8B and Gemma 3 12B still run fine but have newer successors. Speeds are estimates: roughly 6–12 tok/s for a 9B model on CPU, and about 1.5–2× that on Apple Silicon. At 32 GB, 26–27B models become options.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, est. ~6–12 tok/s on CPU — best all-rounder for 16 GB',
@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       de: {
-        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop?',
+        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
         answer: 'Für einen 16-GB-RAM-Laptop ohne dedizierte GPU ist Qwen3.5 9B (Q4, ~7 GB Download) der beste Allrounder, und Gemma 4 12B (~8 GB) ist das stärkste Modell, das noch passt, allerdings langsamer. Qwen3.5 4B (~3,5 GB) oder Phi-4-mini (~2,5 GB) eignen sich für schwächere Rechner. Qwen3 8B und Gemma 3 12B laufen weiterhin, haben aber neuere Nachfolger. Die Geschwindigkeiten sind Schätzwerte: etwa 6–12 tok/s für ein 9B-Modell auf der CPU, auf Apple Silicon rund das 1,5- bis 2-Fache. Mit 32 GB kommen 26–27B-Modelle in Frage.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, geschätzt ~6–12 tok/s auf CPU — bester Allrounder für 16 GB',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       fr: {
-        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM ?',
+        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
         answer: 'Pour un laptop 16 Go de RAM sans GPU dédié, Qwen3.5 9B (Q4, ~7 Go à télécharger) est le meilleur polyvalent, et Gemma 4 12B (~8 Go) est le modèle le plus puissant qui tient encore, mais plus lent. Qwen3.5 4B (~3,5 Go) ou Phi-4-mini (~2,5 Go) conviennent aux machines plus faibles. Qwen3 8B et Gemma 3 12B fonctionnent toujours, mais ont des successeurs plus récents. Les vitesses sont des estimations : environ 6–12 tok/s pour un modèle 9B sur CPU, et environ 1,5 à 2 fois plus sur Apple Silicon. Avec 32 Go, les modèles 26–27B deviennent possibles.',
         bullets: [
           'Qwen3.5 9B (Q4) : ~7 Go, ~6–12 tok/s estimés sur CPU — meilleur polyvalent pour 16 Go',
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       ja: {
-        question: '16 GB RAM ラップトップに最適なローカル LLM は？',
+        question: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
         answer: '専用 GPU のない 16 GB RAM ラップトップでは、Qwen3.5 9B（Q4、ダウンロード約 7 GB）が最良のオールラウンダーで、Gemma 4 12B（約 8 GB）は収まる最も強力なモデルです（低速）。非力なマシンには Qwen3.5 4B（約 3.5 GB）や Phi-4-mini（約 2.5 GB）が向いています。Qwen3 8B と Gemma 3 12B も動作しますが、後継モデルがあります。速度は推定値で、9B モデルは CPU で約 6～12 tok/s、Apple Silicon ではその約 1.5～2 倍です。32 GB なら 26～27B モデルも選択肢になります。',
         bullets: [
           'Qwen3.5 9B（Q4）：約 7 GB、CPU で推定 ~6–12 tok/s — 16 GB で最良のオールラウンダー',
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       zh: {
-        question: '16 GB 内存笔记本最适合哪款本地 LLM？',
+        question: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
         answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Qwen3.5 9B（Q4，下载约 7 GB）是最佳全能选择，Gemma 4 12B（约 8 GB）是仍能装下的最强模型，但速度较慢。较弱的机器可选 Qwen3.5 4B（约 3.5 GB）或 Phi-4-mini（约 2.5 GB）。Qwen3 8B 和 Gemma 3 12B 仍可运行，但已有更新的后继模型。速度为估算值：9B 模型在 CPU 上约 6–12 tok/s，Apple Silicon 约为其 1.5–2 倍。32 GB 内存可考虑 26–27B 模型。',
         bullets: [
           'Qwen3.5 9B（Q4）：约 7 GB，CPU 估算约 6–12 tok/s——16 GB 最佳全能选择',
@@ -163,13 +163,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
     dateModified: '2026-10-17',
     seoTitle: 'Bestes lokales LLM 16 GB Laptop 2026: Qwen3.5, Gemma 4',
-    metaDescription: 'Beste lokale LLMs für einen 16-GB-Laptop: Qwen3.5 9B (Allrounder), Gemma 4 12B (das stärkste, das passt), Qwen3.5 4B für schwache Rechner. Größen und CPU-Tempo.',
+    metaDescription: 'Beste lokale LLMs für einen 16-GB-Laptop: Qwen3.5 9B (Allrounder), Gemma 4 12B (stärkstes, das passt), Qwen3.5 4B für schwache Rechner. Größen, CPU-Tempo.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       de: {
-        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop?',
+        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
         answer: 'Für einen 16-GB-RAM-Laptop ohne dedizierte GPU ist Qwen3.5 9B (Q4, ~7 GB Download) der beste Allrounder, und Gemma 4 12B (~8 GB) ist das stärkste Modell, das noch passt, allerdings langsamer. Qwen3.5 4B (~3,5 GB) oder Phi-4-mini (~2,5 GB) eignen sich für schwächere Rechner. Qwen3 8B und Gemma 3 12B laufen weiterhin, haben aber neuere Nachfolger. Die Geschwindigkeiten sind Schätzwerte: etwa 6–12 tok/s für ein 9B-Modell auf der CPU, auf Apple Silicon rund das 1,5- bis 2-Fache. Mit 32 GB kommen 26–27B-Modelle in Frage.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, geschätzt ~6–12 tok/s auf CPU — bester Allrounder für 16 GB',
@@ -267,13 +267,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
     dateModified: '2026-10-17',
     seoTitle: 'Meilleur LLM local laptop 16 Go 2026 : Qwen3.5, Gemma 4',
-    metaDescription: 'Meilleurs LLM locaux pour un laptop 16 Go : Qwen3.5 9B (polyvalent), Gemma 4 12B (le plus puissant qui tient), Qwen3.5 4B pour machines faibles. Tailles et vitesses CPU.',
+    metaDescription: 'Meilleurs LLM locaux pour laptop 16 Go : Qwen3.5 9B (polyvalent), Gemma 4 12B (le plus puissant qui tient), Qwen3.5 4B pour machines faibles. Tailles, CPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       fr: {
-        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM ?',
+        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
         answer: 'Pour un laptop 16 Go de RAM sans GPU dédié, Qwen3.5 9B (Q4, ~7 Go à télécharger) est le meilleur polyvalent, et Gemma 4 12B (~8 Go) est le modèle le plus puissant qui tient encore, mais plus lent. Qwen3.5 4B (~3,5 Go) ou Phi-4-mini (~2,5 Go) conviennent aux machines plus faibles. Qwen3 8B et Gemma 3 12B fonctionnent toujours, mais ont des successeurs plus récents. Les vitesses sont des estimations : environ 6–12 tok/s pour un modèle 9B sur CPU, et environ 1,5 à 2 fois plus sur Apple Silicon. Avec 32 Go, les modèles 26–27B deviennent possibles.',
         bullets: [
           'Qwen3.5 9B (Q4) : ~7 Go, ~6–12 tok/s estimés sur CPU — meilleur polyvalent pour 16 Go',
@@ -370,14 +370,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ja.webp',
     title: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
     dateModified: '2026-10-17',
-    seoTitle: '16 GB ラップトップ最適ローカル LLM 2026：Qwen3.5, Gemma 4',
+    seoTitle: '16GBノートのローカルLLM：Qwen3.5・Gemma 4',
     metaDescription: '16 GB ラップトップに最適なローカル LLM：Qwen3.5 9B（オールラウンダー）、Gemma 4 12B（収まる最強）、非力なマシンには Qwen3.5 4B。サイズと CPU 速度。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       ja: {
-        question: '16 GB RAM ラップトップに最適なローカル LLM は？',
+        question: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
         answer: '専用 GPU のない 16 GB RAM ラップトップでは、Qwen3.5 9B（Q4、ダウンロード約 7 GB）が最良のオールラウンダーで、Gemma 4 12B（約 8 GB）は収まる最も強力なモデルです（低速）。非力なマシンには Qwen3.5 4B（約 3.5 GB）や Phi-4-mini（約 2.5 GB）が向いています。Qwen3 8B と Gemma 3 12B も動作しますが、後継モデルがあります。速度は推定値で、9B モデルは CPU で約 6～12 tok/s、Apple Silicon ではその約 1.5～2 倍です。32 GB なら 26～27B モデルも選択肢になります。',
         bullets: [
           'Qwen3.5 9B（Q4）：約 7 GB、CPU で推定 ~6–12 tok/s — 16 GB で最良のオールラウンダー',
@@ -474,14 +474,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-es.webp',
     title: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM (2026)?',
     dateModified: '2026-10-17',
-    seoTitle: 'Mejor LLM local para laptop de 16 GB 2026: Qwen3.5, Gemma 4',
-    metaDescription: 'Mejores LLM locales para un laptop de 16 GB: Qwen3.5 9B (todoterreno), Gemma 4 12B (el más potente que cabe), Qwen3.5 4B para equipos débiles. Tamaños y velocidad en CPU.',
+    seoTitle: 'Mejor LLM local para laptop 16 GB 2026: Qwen3.5, Gemma 4',
+    metaDescription: 'Mejores LLM locales para laptop de 16 GB: Qwen3.5 9B (todoterreno), Gemma 4 12B (el más potente que cabe), Qwen3.5 4B para equipos débiles. Tamaños y CPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       es: {
-        question: '¿Qué LLM local es mejor para un laptop con 16 GB de RAM?',
+        question: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM (2026)?',
         answer: 'Para un laptop con 16 GB de RAM sin GPU dedicada, Qwen3.5 9B (Q4, ~7 GB de descarga) es el mejor todoterreno, y Gemma 4 12B (~8 GB) es el modelo más potente que aún cabe, aunque más lento. Qwen3.5 4B (~3,5 GB) o Phi-4-mini (~2,5 GB) sirven para equipos más débiles. Qwen3 8B y Gemma 3 12B siguen funcionando, pero tienen sucesores más nuevos. Las velocidades son estimaciones: unos 6–12 tok/s para un modelo de 9B en CPU y entre 1,5 y 2 veces más en Apple Silicon. Con 32 GB entran en juego los modelos de 26–27B.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, ~6–12 tok/s estimados en CPU — mejor todoterreno para 16 GB',
@@ -578,14 +578,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-pt.webp',
     title: 'Qual é o Melhor LLM Local para um Notebook com 16 GB de RAM (2026)?',
     dateModified: '2026-10-17',
-    seoTitle: 'Melhor LLM local para notebook de 16 GB 2026: Qwen3.5, Gemma 4',
-    metaDescription: 'Melhores LLMs locais para notebook de 16 GB: Qwen3.5 9B (generalista), Gemma 4 12B (o mais forte que cabe), Qwen3.5 4B para máquinas fracas. Tamanhos e velocidade em CPU.',
+    seoTitle: 'Melhor LLM local em notebook 16 GB 2026: Qwen3.5, Gemma 4',
+    metaDescription: 'Melhores LLMs locais para notebook de 16 GB: Qwen3.5 9B (generalista), Gemma 4 12B (o mais forte que cabe), Qwen3.5 4B para máquinas fracas. Tamanhos, CPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       pt: {
-        question: 'Qual é o melhor LLM local para um notebook com 16 GB de RAM?',
+        question: 'Qual é o Melhor LLM Local para um Notebook com 16 GB de RAM (2026)?',
         answer: 'Para um notebook com 16 GB de RAM sem GPU dedicada, o Qwen3.5 9B (Q4, ~7 GB de download) é o melhor generalista, e o Gemma 4 12B (~8 GB) é o modelo mais forte que ainda cabe, porém mais lento. Qwen3.5 4B (~3,5 GB) ou Phi-4-mini (~2,5 GB) servem para máquinas mais fracas. Qwen3 8B e Gemma 3 12B ainda funcionam, mas têm sucessores mais novos. As velocidades são estimativas: cerca de 6–12 tok/s para um modelo de 9B na CPU e de 1,5 a 2 vezes isso no Apple Silicon. Com 32 GB, modelos de 26–27B passam a ser opção.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, ~6–12 tok/s estimados na CPU — melhor generalista para 16 GB',
@@ -683,13 +683,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ⁨16⁩ جيجابايت ⁨RAM⁩؟ (⁨2026⁩)',
     dateModified: '2026-10-17',
     seoTitle: 'أفضل LLM محلي لحاسب 16 جيجابايت 2026: Qwen3.5 وGemma 4',
-    metaDescription: 'أفضل نماذج LLM المحلية لحاسب محمول بذاكرة 16 جيجابايت: Qwen3.5 9B (شامل) وGemma 4 12B (الأقوى الذي يتسع) وQwen3.5 4B للأجهزة الضعيفة. الأحجام وسرعة المعالج.',
+    metaDescription: 'أفضل نماذج LLM المحلية لحاسب محمول بذاكرة 16 جيجابايت: Qwen3.5 9B (شامل) وGemma 4 12B (الأقوى الذي يتسع) وQwen3.5 4B للأجهزة الضعيفة. الأحجام والسرعة.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       ar: {
-        question: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ16 جيجابايت RAM؟',
+        question: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ⁨16⁩ جيجابايت ⁨RAM⁩؟ (⁨2026⁩)',
         answer: 'لحاسب محمول بذاكرة RAM بسعة 16 جيجابايت وبدون معالج رسومات مخصص، يُعدّ Qwen3.5 9B (بتكميم Q4، حجم التنزيل ~7 جيجابايت) أفضل نموذج شامل، ويُعدّ Gemma 4 12B (~8 جيجابايت) أقوى نموذج لا يزال يتسع، لكنه أبطأ. أما Qwen3.5 4B (~3.5 جيجابايت) أو Phi-4-mini (~2.5 جيجابايت) فيناسبان الأجهزة الأضعف. ما زال Qwen3 8B وGemma 3 12B يعملان، لكن لهما خلفاء أحدث. السرعات تقديرية: نحو 6–12 tok/s لنموذج 9B على المعالج، وحوالي 1.5–2 ضعف ذلك على Apple Silicon. مع 32 جيجابايت تصبح نماذج 26–27B خياراً ممكناً.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 جيجابايت، تقديرياً ~6–12 tok/s على المعالج — أفضل نموذج شامل لسعة 16 جيجابايت',
@@ -786,14 +786,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-zh.webp',
     title: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
     dateModified: '2026-10-17',
-    seoTitle: '16 GB 笔记本最佳本地 LLM 2026：Qwen3.5、Gemma 4',
+    seoTitle: '16 GB笔记本本地LLM：Qwen3.5、Gemma 4',
     metaDescription: '16 GB 笔记本最佳本地 LLM：Qwen3.5 9B（全能）、Gemma 4 12B（能装下的最强）、弱机选 Qwen3.5 4B。含模型大小与 CPU 速度。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       zh: {
-        question: '16 GB 内存笔记本最适合哪款本地 LLM？',
+        question: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
         answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Qwen3.5 9B（Q4，下载约 7 GB）是最佳全能选择，Gemma 4 12B（约 8 GB）是仍能装下的最强模型，但速度较慢。较弱的机器可选 Qwen3.5 4B（约 3.5 GB）或 Phi-4-mini（约 2.5 GB）。Qwen3 8B 和 Gemma 3 12B 仍可运行，但已有更新的后继模型。速度为估算值：9B 模型在 CPU 上约 6–12 tok/s，Apple Silicon 约为其 1.5–2 倍。32 GB 内存可考虑 26–27B 模型。',
         bullets: [
           'Qwen3.5 9B（Q4）：约 7 GB，CPU 估算约 6–12 tok/s——16 GB 最佳全能选择',
@@ -890,7 +890,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ko.webp',
     title: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까? (2026)',
     dateModified: '2026-10-17',
-    seoTitle: '16 GB 노트북 최적 로컬 LLM 2026: Qwen3.5, Gemma 4',
+    seoTitle: '16 GB 노트북 로컬 LLM: Qwen3.5, Gemma 4',
     metaDescription: '16 GB 노트북 최적 로컬 LLM: Qwen3.5 9B(범용), Gemma 4 12B(들어가는 가장 강력한 모델), 저사양 기기는 Qwen3.5 4B. 모델 크기와 CPU 속도 정리.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     readTime: '4분 분량',
     quickAnswerTop: {
       ko: {
-        question: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까?',
+        question: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까? (2026)',
         answer: '독립 GPU가 없는 16 GB RAM 노트북에서는 Qwen3.5 9B(Q4, 다운로드 약 7 GB)가 최고의 범용 모델이고, Gemma 4 12B(약 8 GB)는 여전히 들어가는 가장 강력한 모델이지만 더 느립니다. 저사양 기기에는 Qwen3.5 4B(약 3.5 GB)나 Phi-4-mini(약 2.5 GB)가 적합합니다. Qwen3 8B와 Gemma 3 12B도 계속 동작하지만 더 새로운 후속 모델이 있습니다. 속도는 추정치로, 9B 모델은 CPU에서 약 6–12 tok/s이고 Apple Silicon에서는 약 1.5–2배입니다. 32 GB면 26–27B 모델도 선택지가 됩니다.',
         bullets: [
           'Qwen3.5 9B(Q4): 약 7 GB, CPU에서 추정 ~6–12 tok/s — 16 GB 최고의 범용 모델',
