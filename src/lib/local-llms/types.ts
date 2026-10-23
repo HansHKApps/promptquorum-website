@@ -135,6 +135,8 @@ export interface LLMArticle {
   gammaDescription?: string
   twitterDescription?: string
   heroImage?: string
+  /** Hub colour/design skin. Set only by the page-updater (docs/PAGE_UPDATER.md step 4.9). */
+  designSkin?: 'hub'
   freshness_tier?: 'evergreen' | 'semi_annual' | 'annual' | 'monthly'
   next_refresh_due?: string
   last_full_refresh?: string
