@@ -1418,7 +1418,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   const enData = articleData['en']!
   const article = (langData ?? enData)
   const skin = resolveSkin(article.designSkin)
-  const skinCls = getSkinClasses(skin)
+  const skinCls = getSkinClasses(skin, 'violet')
   const colors = getSkinThemeColors(skin, article.theme, THEME_COLORS[article.theme] ?? FALLBACK_THEME_COLOR)
 
   // Bound helper for rendering links
@@ -1449,7 +1449,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   )
 
   return (
-    <div className={isDirectoryPage ? 'min-h-screen bg-white pb-20' : 'min-h-screen bg-white pt-24 sm:pt-20 pb-20 px-4 sm:px-6'} key={`${slug}-${lang}`}>
+    <div className={isDirectoryPage ? 'min-h-screen bg-white pb-20' : `min-h-screen ${skinCls.page} pt-24 sm:pt-20 pb-20 px-4 sm:px-6`} key={`${slug}-${lang}`}>
       {/* Directory page: hub-style hero in place of the plain article header (see DirectoryHero). */}
       {isDirectoryPage && directorySlot && (
         <DirectoryHero
@@ -1777,7 +1777,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         })()}
 
         {/* Sections */}
-        <article className="key-takeaways-container">
+        <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             // Directory page reorder (page-redesign-v2.md §2): Quick answer
             // (already rendered above) → Real-world stacks → How the layers

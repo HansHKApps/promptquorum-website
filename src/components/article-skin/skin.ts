@@ -12,6 +12,7 @@
  */
 
 export type ArticleSkin = 'default' | 'hub'
+export type ArticleAccent = 'rose' | 'violet'
 
 export interface DotBadge {
   dot: string
@@ -30,6 +31,10 @@ export interface SkinClasses {
   tocSummary: string
   tocLink: string
   updatedBadge: string
+  /** Page background (replaces `bg-white` on the outer wrapper). */
+  page: string
+  /** Extra classes on the `<article>` that holds the sections: numbered, tone-cycling cards. */
+  sections: string
 }
 
 const DEFAULT_CLASSES: SkinClasses = {
@@ -45,12 +50,14 @@ const DEFAULT_CLASSES: SkinClasses = {
   tocLink: 'text-sm text-primary hover:text-primary/80 transition-colors',
   updatedBadge:
     'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 border-emerald-300 text-emerald-700',
+  page: 'bg-white',
+  sections: '',
 }
 
 // Same layout utilities, hub colour tokens. The H2 gains a left accent rule;
 // padding-left is the only geometry change and keeps the heading in the flow.
-const HUB_CLASSES: SkinClasses = {
-  h2: 'text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4 border-l-4 border-hub-violet pl-3',
+const HUB_BASE: Omit<SkinClasses, 'page'> = {
+  h2: 'text-2xl sm:text-3xl font-bold text-text-primary mt-0 mb-4 [counter-increment:hubsec] before:content-[counter(hubsec,decimal-leading-zero)] before:inline-block before:align-middle before:me-3 before:rounded-[10px] before:px-3.5 before:py-1 before:text-[15px] before:font-extrabold before:text-white before:bg-hub-violet',
   tldrBox: 'bg-hub-violet-tint border border-hub-violet-edge rounded-xl p-5 my-4 key-takeaways',
   tldrBoxCompact: 'bg-hub-violet-tint border border-hub-violet-edge rounded-xl p-4 sm:p-5 my-3 key-takeaways',
   tldrLabel: 'text-xs font-bold text-hub-violet-ink uppercase tracking-widest mb-3',
@@ -62,7 +69,12 @@ const HUB_CLASSES: SkinClasses = {
   tocLink: 'text-sm text-hub-violet-ink hover:text-hub-violet transition-colors',
   updatedBadge:
     'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-indigo-tint border-hub-indigo-edge text-hub-indigo-ink',
+  sections:
+    '[counter-reset:hubsec] [&>div]:rounded-2xl [&>div]:border [&>div]:p-5 sm:[&>div]:p-7 [&>div:nth-child(5n+1)]:bg-hub-violet-tint [&>div:nth-child(5n+1)]:border-hub-violet-edge [&>div:nth-child(5n+1)_h2]:before:bg-hub-violet [&>div:nth-child(5n+2)]:bg-hub-azure-tint [&>div:nth-child(5n+2)]:border-hub-azure-edge [&>div:nth-child(5n+2)_h2]:before:bg-hub-azure [&>div:nth-child(5n+3)]:bg-hub-indigo-tint [&>div:nth-child(5n+3)]:border-hub-indigo-edge [&>div:nth-child(5n+3)_h2]:before:bg-hub-indigo [&>div:nth-child(5n+4)]:bg-hub-orchid-tint [&>div:nth-child(5n+4)]:border-hub-orchid-edge [&>div:nth-child(5n+4)_h2]:before:bg-hub-orchid [&>div:nth-child(5n+5)]:bg-hub-rose-tint [&>div:nth-child(5n+5)]:border-hub-rose-edge [&>div:nth-child(5n+5)_h2]:before:bg-hub-rose',
 }
+
+// Page tint = the cluster hub's accent (hub hero colour); literal classes for Tailwind.
+const HUB_PAGE: Record<ArticleAccent, string> = { rose: 'bg-hub-rose-tint', violet: 'bg-hub-violet-tint' }
 
 // Theme → hub tone. Full literal class strings so Tailwind can see them.
 const HUB_THEME_COLORS: Record<string, DotBadge> = {
@@ -86,8 +98,8 @@ export function resolveSkin(value: unknown): ArticleSkin {
   return value === 'hub' ? 'hub' : 'default'
 }
 
-export function getSkinClasses(skin: ArticleSkin): SkinClasses {
-  return skin === 'hub' ? HUB_CLASSES : DEFAULT_CLASSES
+export function getSkinClasses(skin: ArticleSkin, accent: ArticleAccent = 'violet'): SkinClasses {
+  return skin === 'hub' ? { ...HUB_BASE, page: HUB_PAGE[accent] } : DEFAULT_CLASSES
 }
 
 /** Default skin returns `current` untouched, so existing output is unchanged. */
