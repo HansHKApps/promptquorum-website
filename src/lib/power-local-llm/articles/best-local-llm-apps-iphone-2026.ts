@@ -3450,7 +3450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**대부분의 사용자에게: App Store에서 PocketPal AI를 설치하고 Phi-4 Mini (3.8B Q4_K_M)를 다운로드하십시오 — 또는 Gemma 4 E2B/E4B, Qwen3.5 4B 같은 더 새로운 소형 모델을 선택하십시오.** 이 조합은 iPhone 15 Pro 이상(8 GB 이상 RAM)에서 작동하며, iPhone 14 Pro 같은 6 GB iPhone에서는 Qwen3 1.7B 같은 1.7B 모델을 다운로드하십시오(iPhone 등급별 모델 참조). 채팅에는 비용이 들지 않으며, 일상적인 채팅, 요약, 간단한 초안 작성에 쓸 만한 결과를 제공합니다. 이것이 충족하지 못하는 특정 필요가 있을 때만 다른 앱을 선택하십시오.',
         image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.webp',
         imageCaption:
-          'iPhone 로컬 AI 앱 선택 가이드: 무료 PocketPal AI부터 Siri 지원 Private LLM까지의 결정표',
+          '2026년 iPhone용 로컬 AI 앱 선택 가이드: WiFi 없이 LLM 실행, 무료 PocketPal AI부터 Private LLM까지',
         snippetBlocks: [
           {
             type: 'one-sentence',
