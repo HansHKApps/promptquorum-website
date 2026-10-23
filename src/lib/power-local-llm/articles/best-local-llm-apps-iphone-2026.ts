@@ -3404,7 +3404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Locally AI: LM Studio의 무료 MLX 앱', anchor: '#locally-ai' },
       { label: 'Google AI Edge Gallery: Google의 무료 Gemma 4 앱', anchor: '#google-ai-edge-gallery' },
       { label: 'MLC Chat: Apple Silicon 최적화', anchor: '#mlc-chat' },
-      { label: 'LLM Farm: 삭제되었지만 여전히 구성 가능', anchor: '#llm-farm' },
+      { label: 'LLM Farm: App Store에는 없지만 소스는 계속 제공됩니다', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: 시스템 내장 기기 내 AI', anchor: '#apple-intelligence' },
       { label: 'iPhone 등급별 모델', anchor: '#models-by-tier' },
       { label: '배터리 소모와 열 제한', anchor: '#battery-heat' },
@@ -3514,8 +3514,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '앱': '[Private LLM](https://privatellm.app)', '비용': '$4.99 일회 구매', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '기기 내 처리, 계정·추적 없음 (개발사)', '이상적인 대상': 'Shortcuts + Siri 통합' },
           { '앱': '[Locally AI](https://lmstudio.ai/locally)', '비용': '무료 (LM Studio 팀)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — MLX 카탈로그 (Phi-4 없음)', '개인 정보 보호': '기기 내 처리, 데이터 수집 없음 (스토어 목록)', '이상적인 대상': 'MLX + Shortcuts, LM Studio 연동' },
           { '앱': '[Google AI Edge Gallery](https://apps.apple.com/app/id6749645337)', '비용': '무료 (Google)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — LiteRT-LM, Gemma 4', '개인 정보 보호': '모델 다운로드 후 기기 내 처리', '이상적인 대상': 'Gemma 4, 사고 모드, 에이전트 스킬' },
-          { '앱': '[MLC Chat](https://llm.mlc.ai)', '비용': '무료 (오픈 소스)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — Phi-4 이전 라이브러리', '개인 정보 보호': '로컬 전용 (오픈 소스)', '이상적인 대상': 'MLC LLM 도구 체인 사용자 (iOS 앱 정체)' },
-          { '앱': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '비용': '무료 (소스 빌드)', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '로컬 전용 (오픈 소스)', '이상적인 대상': '개발자 (삭제됨, 오래됨)' },
+          { '앱': '[MLC Chat](https://llm.mlc.ai)', '비용': '무료 (오픈 소스)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 — Phi-4 이전 라이브러리', '개인 정보 보호': '로컬 추론 (프로젝트 문서, 미검증)', '이상적인 대상': 'MLC LLM 도구 체인 사용자 (iOS 앱 정체)' },
+          { '앱': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '비용': '무료 (소스 빌드)', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '로컬 추론 (프로젝트 문서, 미검증)', '이상적인 대상': '개발자 (App Store 없음, 오래됨)' },
           { '앱': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '비용': '무료 (iOS 내장)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 (시스템 기능)', '개인 정보 보호': '로컬 + 옵트인 Private Cloud Compute', '이상적인 대상': 'Mail, 메시지, 메모 작문 지원' },
         ],
         note:
@@ -3632,7 +3632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       llmFarm: {
         id: 'llm-farm',
-        title: 'LLM Farm: 삭제되었지만 여전히 구성 가능',
+        title: 'LLM Farm: App Store에는 없지만 소스는 계속 제공됩니다',
         content:
           '**오래됨 경고: LLM Farm의 마지막 릴리스(1.4.3)는 2025년 1월 27일이었고 마지막 코드 푸시는 2026년 1월 30일로, 거의 9개월 동안 업데이트가 없어 유지보수되지 않을 수 있습니다.** PromptQuorum의 해당 프로젝트 리뷰는 App Store에서의 삭제 시점을 2025년 8월로 봅니다. GitHub README는 App Store와 TestFlight 두 곳 모두에서 앱이 "일시적으로 이용 불가"라고 설명합니다. 프로젝트 (GitHub: [guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm))는 여전히 오픈 소스이며 2026년 10월까지 GitHub 이슈 활동이 있었지만, 신규 사용자는 더 이상 App Store에서 설치할 수 없고 Xcode로 소스 코드에서 빌드해야 합니다 (README: macOS 13+ 및 iOS 16+). 전체 리뷰: [LLM Farm 리뷰](/ko/power-local-llm/llm-farm-review).',
         items: [
@@ -3653,7 +3653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'apple-intelligence',
         title: 'Apple Intelligence: 시스템 내장 기기 내 AI',
         content:
-          '**Apple Intelligence는 iPhone 15 Pro 이상 (최소 8 GB RAM의 A17 Pro 칩)에서 Apple 자체의 ~3B 파운데이션 모델을 기기 내에서 실행합니다.** 기본적으로 채팅 앱이 아니며, Mail(스마트 답장), 메시지(작문 도구), 메모(요약), 알림 요약의 시스템 기능을 지원합니다. iOS 26부터 Apple의 Foundation Models 프레임워크로 서드파티 개발자가 같은 기기 내 모델을 직접 호출할 수 있으며, Locally AI 같은 앱은 이를 이용해 그 위에 실제 채팅 인터페이스를 제공합니다. iOS 27은 프레임워크를 확장합니다: Apple의 개발자 가이드에 따르면 앱은 Apple 자체 모델과 클라우드 모델을 포함해 언어 모델 프로토콜을 따르는 모든 언어 모델을 사용할 수 있습니다.',
+          '**Apple Intelligence는 iPhone 15 Pro 이상 (iPhone 15 Pro 세대, 보도상 8 GB RAM이며 Apple은 RAM을 공개하지 않음)에서 Apple 자체의 ~3B 파운데이션 모델을 기기 내에서 실행합니다.** 기본적으로 채팅 앱이 아니며, Mail(스마트 답장), 메시지(작문 도구), 메모(요약), 알림 요약의 시스템 기능을 지원합니다. iOS 26부터 Apple의 Foundation Models 프레임워크로 서드파티 개발자가 같은 기기 내 모델을 직접 호출할 수 있으며, Locally AI 같은 앱은 이를 이용해 그 위에 실제 채팅 인터페이스를 제공합니다. iOS 27은 프레임워크를 확장합니다: Apple의 개발자 가이드에 따르면 앱은 Apple 자체 모델과 클라우드 모델을 포함해 언어 모델 프로토콜을 따르는 모든 언어 모델을 사용할 수 있습니다.',
         items: [
           '**위치:** iOS 18+에 통합 (Foundation Models 프레임워크는 iOS 26에서 추가). 설정 → Apple Intelligence 및 Siri에서 활성화합니다.',
           '**하드웨어 요구 사항:** iPhone 15 Pro / 15 Pro Max, iPhone 16 시리즈, iPhone 16e, iPhone 17 시리즈, 그리고 2026년 iPhone 18 Pro, 18 Pro Max, iPhone Duo (A20 Pro). 이전 iPhone (14 이하)은 Apple Intelligence를 지원하지 않습니다. 구매 전에 iOS 27의 Apple 최신 호환 목록을 확인하십시오.',
@@ -3678,15 +3678,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/iphone-llm-apps-models-tier-en.svg',
         imageCaption:
           'iPhone RAM 구간별 추천 로컬 LLM 모델: 4 GB 기기부터 12 GB iPhone 17 Pro까지',
-        columns: ['iPhone 등급 (연도, RAM)', '권장 모델', '다운로드 크기', '예상 속도'],
+        columns: ['iPhone 등급 (연도, RAM)', '권장 모델', '다운로드 크기', '대략적 속도(참고용)'],
         rows: [
-          { 'iPhone 등급 (연도, RAM)': 'iPhone 18 Pro / Pro Max (2026, 보도상 ~12 GB)', '권장 모델': '17 Pro와 동일하게 시작. Apple이 RAM 미공개', '다운로드 크기': '~2.5–3.7 GB', '예상 속도': '수치 없음' },
-          { 'iPhone 등급 (연도, RAM)': 'iPhone 17 Pro / 17 Pro Max (2025, 12 GB)', '권장 모델': 'Phi-4 Mini / Llama 3.2 3B / Gemma 4 E4B', '다운로드 크기': '~2.5–3.7 GB', '예상 속도': '~13–20 tok/초 (Phi-4 Mini)' },
-          { 'iPhone 등급 (연도, RAM)': 'iPhone 16 시리즈 / 16e / 17 (2024–2025, 8 GB)', '권장 모델': 'Phi-4 Mini (3.8B Q4_K_M) 또는 Gemma 4 E2B', '다운로드 크기': '~2.6–2.7 GB', '예상 속도': '~10–15 tok/초 (Phi-4 Mini)' },
-          { 'iPhone 등급 (연도, RAM)': 'iPhone 15 Pro / Pro Max (2023, 8 GB)', '권장 모델': 'Phi-4 Mini (3.8B Q4_K_M)', '다운로드 크기': '~2.7 GB', '예상 속도': '~8–12 tok/초' },
-          { 'iPhone 등급 (연도, RAM)': 'iPhone 13 Pro / 14 Pro / Pro Max (6 GB)', '권장 모델': 'Qwen3 1.7B 또는 SmolLM 2 1.7B (Q4_K_M)', '다운로드 크기': '~1.1 GB', '예상 속도': '~15–20 tok/초' },
-          { 'iPhone 등급 (연도, RAM)': 'iPhone 14 / 14 Plus / 15 / 15 Plus (6 GB)', '권장 모델': 'Qwen3 1.7B 또는 SmolLM 2 1.7B (Q4_K_M)', '다운로드 크기': '~1.1 GB', '예상 속도': '~12–18 tok/초' },
-          { 'iPhone 등급 (연도, RAM)': 'iPhone 13 / 12 / SE / 이전 (4 GB)', '권장 모델': '기기 내 LLM에 권장하지 않음', '다운로드 크기': '—', '예상 속도': '—' },
+          { 'iPhone 등급 (연도, RAM)': 'iPhone 18 Pro / Pro Max (2026, 보도상 ~12 GB)', '권장 모델': '17 Pro와 동일하게 시작. Apple이 RAM 미공개', '다운로드 크기': '~2.5–3.7 GB', '대략적 속도(참고용)': '수치 없음' },
+          { 'iPhone 등급 (연도, RAM)': 'iPhone 17 Pro / 17 Pro Max (2025, 12 GB)', '권장 모델': 'Phi-4 Mini / Llama 3.2 3B / Gemma 4 E4B', '다운로드 크기': '~2.5–3.7 GB', '대략적 속도(참고용)': '~13–20 tok/초 (Phi-4 Mini)' },
+          { 'iPhone 등급 (연도, RAM)': 'iPhone 16 시리즈 / 16e / 17 (2024–2025, 8 GB)', '권장 모델': 'Phi-4 Mini (3.8B Q4_K_M) 또는 Gemma 4 E2B', '다운로드 크기': '~2.6–2.7 GB', '대략적 속도(참고용)': '~10–15 tok/초 (Phi-4 Mini)' },
+          { 'iPhone 등급 (연도, RAM)': 'iPhone 15 Pro / Pro Max (2023, 8 GB)', '권장 모델': 'Phi-4 Mini (3.8B Q4_K_M)', '다운로드 크기': '~2.7 GB', '대략적 속도(참고용)': '~8–12 tok/초' },
+          { 'iPhone 등급 (연도, RAM)': 'iPhone 13 Pro / 14 Pro / Pro Max (6 GB)', '권장 모델': 'Qwen3 1.7B 또는 SmolLM 2 1.7B (Q4_K_M)', '다운로드 크기': '~1.1 GB', '대략적 속도(참고용)': '~15–20 tok/초' },
+          { 'iPhone 등급 (연도, RAM)': 'iPhone 14 / 14 Plus / 15 / 15 Plus (6 GB)', '권장 모델': 'Qwen3 1.7B 또는 SmolLM 2 1.7B (Q4_K_M)', '다운로드 크기': '~1.1 GB', '대략적 속도(참고용)': '~12–18 tok/초' },
+          { 'iPhone 등급 (연도, RAM)': 'iPhone 13 / 12 / SE / 이전 (4 GB)', '권장 모델': '기기 내 LLM에 권장하지 않음', '다운로드 크기': '—', '대략적 속도(참고용)': '—' },
         ],
         callouts: [
           {
@@ -3708,12 +3708,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**지속적인 생성은 열 제한을 유발할 수 있습니다.** 칩이 뜨거워지면 iOS가 클록 속도를 낮추어 토큰/초가 떨어집니다. 시작 시점과 속도 저하 폭은 폰, 케이스, 충전 여부, 실내 온도에 따라 달라지며 PromptQuorum은 이를 측정하지 않았습니다. 폰을 식히면 속도가 복원됩니다.',
           '**완화 방법:** 긴 추론 세션 중에는 열 방출을 위해 iPhone을 (손이나 주머니가 아니라) 단단한 표면 위에 앞면을 위로 놓으십시오. 패시브 방열 케이스가 도움이 되지만 짧은 상호작용에는 거의 필요하지 않습니다.',
           '**유휴 소모:** 생성 후 채팅 앱을 백그라운드에 열어 두면 RAM은 할당된 채로 남지만 추론은 실행되지 않으므로 배터리 영향은 미미합니다. 앱을 완전히 종료하면 ~3 GB의 RAM이 회수됩니다.',
-          '**추론 중 MagSafe 충전:** iPhone 17 Pro와 16 Pro (둘 다 열 설계가 개선됨)에서는 허용됩니다. iPhone 15 Pro에서는 충전과 추론을 동시에 하면 열 한계에 더 빨리 도달할 수 있으므로 충전은 나중에 하는 것이 좋습니다.',
+          '**추론 중 MagSafe 충전:** 생성 중 충전은 어떤 iPhone에서든 발열을 높일 수 있으며 iPhone 15 Pro에서 특히 그렇습니다. 기기가 따뜻해지면 충전이나 생성을 멈추거나 충전은 나중에 하십시오.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '직사광선 아래나 뜨거운 차 안에서 iPhone의 기기 내 LLM 추론을 실행하지 마십시오. 주변 열과 추론 부하가 결합되면 칩이 몇 분 안에 열 한계를 넘어 강한 제한이 걸리고 "iPhone을 식혀야 합니다" 경고가 나타날 수 있습니다. 채팅 앱이 충돌하지는 않지만 생성 속도가 극도로 느려집니다.',
+            text: '직사광선 아래나 뜨거운 차 안에서 iPhone의 기기 내 LLM 추론을 실행하지 마십시오. 직사광선 아래나 뜨거운 차 안에서는 칩이 열 한계에 더 빨리 도달해 제한이 걸리고 Apple의 "iPhone을 식혀야 합니다" 경고가 나타날 수 있습니다. 보통 앱이 종료되기보다 생성 속도가 느려집니다.',
           },
         ],
       },
@@ -3756,13 +3756,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '흔한 실수',
         items: [
-          '**iPhone의 RAM이 허용하는 것보다 큰 모델을 설치하는 것.** 8 GB iPhone에서 7B 모델은 ~3–5 토큰/초로 실행되며 iOS가 다른 앱을 위해 메모리를 회수할 때 충돌합니다. iPhone 등급에 권장되는 모델을 따르십시오 (8 GB 기기에는 3B–4B, 6 GB 기기에는 1.7B).',
+          '**iPhone의 RAM이 허용하는 것보다 큰 모델을 설치하는 것.** 8 GB iPhone에서 7B 모델은 채팅에 쓰기에는 너무 느린 경우가 많고 iOS가 다른 앱을 위해 메모리를 회수할 때 종료될 수 있습니다. 먼저 PocketPal AI의 내장 벤치마크로 측정해 보십시오. iPhone 등급에 권장되는 모델을 따르십시오 (8 GB 기기에는 3B–4B, 6 GB 기기에는 1.7B).',
           '**기기 내 모델에 클라우드 AI 수준의 품질을 기대하는 것.** Phi-4 Mini (3.8B)는 크기에 비해 인상적이지만 GPT-5.5는 아닙니다. 채팅, 요약, 초안 작성, 간단한 Q&A에 사용하고, 다단계 추론, 복잡한 코드 생성, 섬세한 창작 글쓰기에는 사용하지 마십시오.',
           '**직사광선이나 뜨거운 차 안에서 추론을 실행하는 것.** 열 제한이 빠르게 시작될 수 있고, 생성이 느려지며 "iPhone을 식혀야 합니다" 경고가 나타날 수 있습니다. 실온에서 추론을 실행하십시오.',
           '**각각 3 GB 모델이 있는 채팅 앱을 3개 이상 설치해 두는 것.** 중복 모델로 ~10 GB의 저장 공간을 소모하게 됩니다. 앱 하나와 모델 하나를 고르고, 필요하다고 확신할 때까지 나머지는 삭제하십시오.',
           '**Apple Intelligence에는 채팅 인터페이스가 전혀 없다고 가정하는 것.** iOS 18까지는 맞았지만, iOS 26부터 Locally AI 같은 앱은 Foundation Models 프레임워크를 통해 Apple의 기기 내 모델 앞에 실제 채팅 창을 둘 수 있습니다. 시스템 기능 (작문 도구, 스마트 답장)은 여전히 그 자체로 채팅 UI가 아닙니다.',
           '**App Store에서 LLM Farm을 찾는 것.** 현재 App Store에 없습니다 (PromptQuorum의 LLM Farm 리뷰는 삭제 시점을 2025년 8월로 봅니다). App Store에서 검색하면 시간만 낭비하게 됩니다. 같은 무료/유연 용도에는 PocketPal AI를 사용하고, 노출된 mirostat 제어가 꼭 필요하다면 Xcode에서 LLM Farm을 소스로 빌드하십시오.',
-          '**"무료"가 결제가 없다는 뜻이라고 가정하는 것.** PocketPal AI는 로컬 채팅은 무료이지만 선택적 프리미엄 콘텐츠(Pals와 "PocketPal Plus")를 판매하고, Locally AI와 Google AI Edge Gallery는 인앱 구매가 없다고 표시되어 있습니다. 설치 전에 목록의 인앱 구매 항목을 확인하십시오 (미국 App Store의 PocketPal AI 목록은 2026-10-23에 18세 이상 등급으로 표시되었습니다).',
+          '**"무료"가 결제가 없다는 뜻이라고 가정하는 것.** PocketPal AI는 로컬 채팅은 무료이지만 선택적 프리미엄 콘텐츠(Pals와 "PocketPal Plus")를 판매하고, Locally AI와 Google AI Edge Gallery는 인앱 구매가 없다고 표시되어 있습니다. 설치 전에 목록의 인앱 구매 항목을 확인하십시오 (PocketPal AI의 미국 App Store 목록은 2026-10-23에 18세 이상 등급으로 표시되었습니다).',
           '**속도 표만 보고 모델을 판단하는 것.** 이 가이드의 토큰/초 범위는 참고용이며 Gemma 4, Qwen3.5 같은 더 새로운 모델은 포함되어 있지 않습니다. 이미 다운로드한 모델을 삭제하기 전에 PocketPal AI의 벤치마크에서 두 모델에 같은 프롬프트를 실행해 보십시오.',
         ],
       },
@@ -3786,7 +3786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'iPhone이 정말 7B 모델을 실행할 수 있습니까?',
-            a: '기술적으로는 iPhone 15 Pro 이상 (8 GB RAM)에서 가능하지만 쓸 만한 속도는 아닙니다. iPhone 16 Pro에서 7B Q4 모델은 ~3–5 토큰/초로 생성되어 채팅에는 답답합니다. 또한 다른 앱이 메모리를 필요로 하면 iOS가 앱을 종료하는 경향이 있습니다. 일상적인 기기 내 채팅에는 3B–4B 모델 (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B)을 사용하십시오. 7B 이상의 품질이 필요하다면 Ollama를 실행하는 홈 Mac이나 PC에 원격으로 연결하십시오.',
+            a: '기술적으로는 iPhone 15 Pro 이상 (8 GB RAM)에서 가능하지만 쓸 만한 속도는 아닙니다. iPhone 16 Pro에서 7B Q4 모델은 편안한 채팅에 쓰기에는 너무 느린 경우가 많습니다(참고용). 또한 다른 앱이 메모리를 필요로 하면 iOS가 앱을 종료하는 경향이 있습니다. 일상적인 기기 내 채팅에는 3B–4B 모델 (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B)을 사용하십시오. 7B 이상의 품질이 필요하다면 Ollama를 실행하는 홈 Mac이나 PC에 원격으로 연결하십시오.',
           },
           {
             q: '로컬 AI가 iPhone 배터리를 소모합니까?',
@@ -3802,7 +3802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '이 앱들이 iPhone SE나 구형 iPhone에서 작동합니까?',
-            a: '제한적입니다. iPhone SE와 iPhone 13 / 12 (4 GB RAM)는 2026년 기기 내 LLM의 실용적 기준 미만입니다. iPhone 14 / 15 (비Pro, 6 GB RAM)는 1.7B 모델 (Qwen3 1.7B, SmolLM 2 1.7B)을 실행할 수 있지만 3B 이상은 아닙니다. iPhone 13 Pro와 14 Pro (6 GB RAM)도 1.7B에 머물며, iPhone 15 Pro (8 GB RAM)는 Phi-4 Mini 같은 3B 모델을 8–12 토큰/초로 실행할 수 있습니다. 구형 iPhone에는 홈 Mac이나 PC에 원격으로 연결하는 것이 더 나은 방법입니다.',
+            a: '제한적입니다. iPhone SE와 iPhone 13 / 12 (4 GB RAM)는 2026년 기기 내 LLM의 실용적 기준 미만입니다. iPhone 14 / 15 (비Pro, 6 GB RAM)는 1.7B 모델 (Qwen3 1.7B, SmolLM 2 1.7B)을 실행할 수 있지만 3B 이상은 아닙니다. iPhone 13 Pro와 14 Pro (6 GB RAM)도 1.7B에 머물며, iPhone 15 Pro (8 GB RAM)는 Phi-4 Mini 같은 3B 모델을 대략 8–12 토큰/초(참고용)로 실행할 수 있습니다. 구형 iPhone에는 홈 Mac이나 PC에 원격으로 연결하는 것이 더 나은 방법입니다.',
           },
           {
             q: 'iPhone과 Mac 사이에 채팅 기록을 동기화할 수 있습니까?',
@@ -3822,7 +3822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 AI는 iPhone의 ChatGPT 앱과 어떻게 비교됩니까?',
-            a: '기기 내 모델 (Phi-4 Mini, Llama 3.2 3B)은 복잡한 추론, 폭넓은 세계 지식, 멀티모달 작업에서는 여전히 최첨단 클라우드 모델에 크게 뒤처지지만, 단순한 질의에서는 (네트워크 왕복이 없어) 더 빠르고 완전히 비공개입니다. 솔직한 절충안은 이렇습니다: 일상적이고 비공개적인 작업에는 로컬 AI, 가끔의 어려운 질문에는 ChatGPT 같은 클라우드 앱. 2026년에는 많은 사용자가 둘 다 두고 질의마다 선택합니다.',
+            a: '기기 내 모델 (Phi-4 Mini, Llama 3.2 3B)은 복잡한 추론, 폭넓은 세계 지식, 멀티모달 작업에서는 여전히 최첨단 클라우드 모델에 크게 뒤처지지만, 단순한 질의에서는 (네트워크 왕복이 없어) 더 빠르며 각 앱의 문서에 따르면 채팅 내용이 기기에 머뭅니다. 솔직한 절충안은 이렇습니다: 일상적이고 비공개적인 작업에는 로컬 AI, 가끔의 어려운 질문에는 ChatGPT 같은 클라우드 앱. 2026년에는 많은 사용자가 둘 다 두고 질의마다 선택합니다.',
           },
           {
             q: 'LLM Farm이 App Store에 없어도 여전히 안전하게 사용할 수 있습니까?',
