@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twitterDescription: 'CPU-only: Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. 8GB RAM no GPU guide. Ollama commands included.',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: 'Among the models compared in this guide, Qwen3 1.7B at Q4_K_M is the fastest pick for a CPU-only low-end PC with 4–8 GB RAM — an estimated 25-40 tok/s on a modern dual-channel i5/Ryzen 5. For usable quality on 8 GB, Phi-4-mini (3.8B) runs at an estimated 15-25 tok/s and handles coding and reasoning well. Speed on CPU is set by memory bandwidth divided by model file size, so the smallest file wins. Every model in this guide is free to download as open weights (check each model card for its licence) and light enough to run in Ollama without a GPU.',
+      leadAnswerBlock: 'Among the models compared here, Qwen3 1.7B (Q4_K_M) is the fastest pick for a CPU-only PC with 4–8 GB RAM, at an estimated 25–40 tok/s. For better quality on 8 GB, use Phi-4-mini (3.8B) at an estimated 15–25 tok/s.',
       quickAnswer: {
         title: 'Fastest Local LLMs for Low-End PCs (2026)',
         intro: 'Speed depends on your hardware tier. Match your CPU/RAM to the right model — the wrong choice leaves 4–10× speed on the table.',
@@ -693,7 +693,7 @@ schema: {
       twitterDescription: 'Solo CPU: Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. Guía sin GPU con 8 GB RAM. Comandos de Ollama incluidos.',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: 'Entre los modelos comparados en esta guía, Qwen3 1.7B en Q4_K_M es la opción más rápida para un PC de gama baja solo con CPU y 4–8 GB RAM — unos 25–40 tok/s estimados en un i5/Ryzen 5 moderno de doble canal. Para buena calidad con 8 GB, Phi-4-mini (3.8B) funciona a unos 15–25 tok/s estimados y maneja bien código y razonamiento. En CPU, la velocidad la marca el ancho de banda de la memoria dividido entre el tamaño del archivo del modelo, así que gana el archivo más pequeño. Todos los modelos de esta guía se pueden descargar gratis como pesos abiertos (consulta la licencia en la ficha de cada modelo) y son lo bastante ligeros para ejecutarse en Ollama sin GPU.',
+      leadAnswerBlock: 'Entre los modelos comparados aquí, Qwen3 1.7B (Q4_K_M) es la opción más rápida para un PC solo con CPU y 4–8 GB de RAM, con unos 25–40 tok/s estimados. Para mayor calidad con 8 GB, usa Phi-4-mini (3.8B), con unos 15–25 tok/s estimados.',
       quickAnswer: {
         title: 'LLMs Locales más Rápidos para PCs de Gama Baja (2026)',
         intro: 'La velocidad depende de tu nivel de hardware. Asocia tu CPU/RAM con el modelo correcto — la elección equivocada deja 4–10× de velocidad sin aprovechar.',
@@ -1251,7 +1251,7 @@ schema: {
       twitterDescription: 'CPU فقط: Qwen3 1.7B تقديرياً 25–40 tok/s. Phi-4-mini تقديرياً 15–25 tok/s. دليل 8 جيجابايت رام دون GPU. أوامر Ollama مضمّنة.',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: 'من بين النماذج المقارَنة في هذا الدليل، يُعدّ Qwen3 1.7B بصيغة Q4_K_M الخيار الأسرع لكمبيوتر منخفض المواصفات بمعالج CPU فقط وذاكرة 4–8 جيجابايت رام — بسرعة تقديرية 25–40 رمزاً/ثانية على i5/Ryzen 5 حديث بذاكرة ثنائية القناة. لجودة جيدة مع 8 جيجابايت، يعمل Phi-4-mini (3.8B) بسرعة تقديرية 15–25 رمزاً/ثانية ويدعم البرمجة والاستدلال جيداً. تُحدَّد السرعة على CPU بعرض نطاق الذاكرة مقسوماً على حجم ملف النموذج، لذا يفوز أصغر ملف. جميع النماذج في هذا الدليل مجانية للتنزيل كأوزان مفتوحة (راجع ترخيص كل نموذج في بطاقته) وخفيفة بما يكفي للعمل في Ollama دون GPU.',
+      leadAnswerBlock: 'من بين النماذج المقارَنة هنا، يُعدّ Qwen3 1.7B (Q4_K_M) الخيار الأسرع لكمبيوتر بمعالج CPU فقط وذاكرة 4–8 جيجابايت رام، بسرعة تقديرية 25–40 رمزاً/ثانية. لجودة أفضل مع 8 جيجابايت، استخدم Phi-4-mini (3.8B) بسرعة تقديرية 15–25 رمزاً/ثانية.',
       quickAnswer: {
         title: 'أسرع نماذج LLM المحلية لأجهزة الكمبيوتر منخفضة المواصفات (2026)',
         intro: 'تعتمد السرعة على مستوى عتادك. اربط CPU/RAM لديك بالنموذج الصحيح — الاختيار الخاطئ يترك 4–10× من السرعة دون استغلال.',
@@ -1812,7 +1812,7 @@ schema: {
       twitterDescription: 'Somente CPU: Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. Guia sem GPU com 8 GB de RAM. Comandos do Ollama incluídos.',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: 'Entre os modelos comparados neste guia, o Qwen3 1.7B em Q4_K_M é a opção mais rápida para um PC de baixo custo somente com CPU e 4–8 GB de RAM — cerca de 25–40 tok/s (estimado) em um i5/Ryzen 5 moderno com RAM dual-channel. Para boa qualidade com 8 GB, o Phi-4-mini (3.8B) roda a cerca de 15–25 tok/s (estimado) e dá conta bem de programação e raciocínio. Na CPU, a velocidade é definida pela largura de banda da memória dividida pelo tamanho do arquivo do modelo, então o menor arquivo vence. Todos os modelos deste guia são gratuitos para baixar como pesos abertos (confira a licença na página de cada modelo) e leves o bastante para rodar no Ollama sem GPU.',
+      leadAnswerBlock: 'Entre os modelos comparados aqui, o Qwen3 1.7B (Q4_K_M) é a opção mais rápida para um PC somente com CPU e 4–8 GB de RAM, com cerca de 25–40 tok/s (estimado). Para mais qualidade com 8 GB, use o Phi-4-mini (3.8B), com cerca de 15–25 tok/s (estimado).',
       quickAnswer: {
         title: 'LLMs Locais mais Rápidos para PCs de Baixo Custo (2026)',
         intro: 'A velocidade depende do seu nível de hardware. Combine sua CPU/RAM com o modelo certo — a escolha errada deixa 4–10× de velocidade na mesa.',
@@ -2370,7 +2370,7 @@ schema: {
       twitterDescription: 'Nur CPU: Qwen3 1.7B geschätzt 25–40 Tok/s. Phi-4-mini geschätzt 15–25 Tok/s. 8GB-RAM-Guide ohne GPU. Ollama-Befehle inklusive.',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: 'Unter den in diesem Leitfaden verglichenen Modellen ist Qwen3 1.7B bei Q4_K_M die schnellste Wahl für einen Low-End-PC nur mit CPU und 4–8 GB RAM — geschätzt 25–40 Tok/s auf einem modernen Dual-Channel-i5/Ryzen 5. Für gute Qualität bei 8 GB läuft Phi-4-mini (3.8B) mit geschätzt 15–25 Tok/s und übernimmt Coding und Reasoning gut. Auf der CPU bestimmt die Speicherbandbreite geteilt durch die Größe der Modelldatei die Geschwindigkeit, daher gewinnt die kleinste Datei. Kein Modell in diesem Leitfaden benötigt eine GPU.',
+      leadAnswerBlock: 'Unter den hier verglichenen Modellen ist Qwen3 1.7B (Q4_K_M) die schnellste Wahl für einen reinen CPU-PC mit 4–8 GB RAM, bei geschätzt 25–40 Tok/s. Für bessere Qualität bei 8 GB nutzen Sie Phi-4-mini (3.8B) mit geschätzt 15–25 Tok/s.',
       quickAnswer: {
         title: 'Schnellste lokale LLMs für Low-End-PCs (2026)',
         intro: 'Die Geschwindigkeit hängt von Ihrer Hardware-Stufe ab. Stimmen Sie CPU/RAM auf das richtige Modell ab — die falsche Wahl verschenkt 4–10× Geschwindigkeit.',
@@ -2946,7 +2946,7 @@ schema: {
       twitterDescription: 'CPU seul : Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. Guide sans GPU, 8 Go de RAM. Commandes Ollama incluses.',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: 'Parmi les modèles comparés dans ce guide, Qwen3 1.7B en Q4_K_M est le choix le plus rapide pour un PC bas de gamme en CPU seul avec 4–8 Go de RAM — environ 25–40 tok/s estimés sur un i5/Ryzen 5 récent à double canal mémoire. Pour une bonne qualité avec 8 Go, Phi-4-mini (3.8B) tourne à 15–25 tok/s estimés et gère bien le code et le raisonnement. Sur CPU, la vitesse dépend de la bande passante mémoire divisée par la taille du fichier du modèle : le plus petit fichier gagne. Tous les modèles de ce guide sont téléchargeables gratuitement en poids ouverts (vérifiez la licence sur la fiche de chaque modèle) et assez légers pour tourner sous Ollama sans GPU.',
+      leadAnswerBlock: 'Parmi les modèles comparés ici, Qwen3 1.7B (Q4_K_M) est le choix le plus rapide pour un PC en CPU seul avec 4–8 Go de RAM, à environ 25–40 tok/s estimés. Pour une meilleure qualité avec 8 Go, utilisez Phi-4-mini (3.8B), à environ 15–25 tok/s estimés.',
       quickAnswer: {
         title: 'LLMs locaux les plus rapides pour PC bas de gamme (2026)',
         intro: 'La vitesse dépend de votre niveau matériel. Associez votre CPU/RAM au bon modèle — le mauvais choix laisse 4–10× de vitesse sur la table.',
@@ -3504,7 +3504,7 @@ schema: {
       twitterDescription: 'CPU専用：Qwen3 1.7B 推定25〜40トークン/秒。Phi-4-mini 推定15〜25トークン/秒。RAM 8GB・GPU不要ガイド。Ollamaコマンド付き。',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '本ガイドで比較したモデルの中では、CPU専用でRAM 4〜8 GBの低スペックPCで最速の選択肢はQwen3 1.7B（Q4_K_M）です — デュアルチャネルの最新i5/Ryzen 5で推定25〜40トークン/秒。RAM 8 GBで良質な結果が欲しい場合はPhi-4-mini（3.8B）が推定15〜25トークン/秒で動作し、コーディングと推論によく対応します。CPUでの速度はメモリ帯域幅をモデルのファイルサイズで割った値で決まるため、最も小さいファイルが最速です。本ガイドのすべてのモデルはオープンウェイトとして無料でダウンロードでき（ライセンスは各モデルカードで確認してください）、GPUなしでもOllamaで動作する軽量なものです。',
+      leadAnswerBlock: 'ここで比較したモデルの中では、CPU専用でRAM 4〜8 GBのPCで最速の選択肢はQwen3 1.7B（Q4_K_M）で、推定25〜40トークン/秒です。RAM 8 GBでより高い品質が欲しい場合は、推定15〜25トークン/秒のPhi-4-mini（3.8B）をお使いください。',
       quickAnswer: {
         title: '低スペックPC向け最速ローカルLLM（2026年）',
         intro: '速度はハードウェア階層によって決まります。CPU/RAMを正しいモデルに合わせましょう — 選択を誤ると4〜10倍の速度を無駄にします。',
@@ -4062,7 +4062,7 @@ schema: {
       twitterDescription: '纯CPU：Qwen3 1.7B 估算25–40 tok/s。Phi-4-mini 估算15–25 tok/s。8GB内存无GPU指南。附Ollama命令。',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '在本指南对比的模型中，Qwen3 1.7B（Q4_K_M）是纯CPU、4–8 GB内存低配电脑上最快的选择——在现代双通道i5/Ryzen 5上估算为25–40 tok/s。若8GB内存追求更好质量，Phi-4-mini（3.8B）估算以15–25 tok/s运行，能很好地处理编程和推理。CPU上的速度由内存带宽除以模型文件大小决定，因此文件最小的模型最快。本指南所有模型均可作为开放权重免费下载（请查看各模型卡片上的许可证），且足够轻量，无需GPU即可在Ollama中运行。',
+      leadAnswerBlock: '在本文对比的模型中，Qwen3 1.7B（Q4_K_M）是纯CPU、4–8 GB内存电脑上最快的选择，估算为25–40 tok/s。若8GB内存追求更好质量，请使用Phi-4-mini（3.8B），估算为15–25 tok/s。',
       quickAnswer: {
         title: '低配电脑最快本地LLM（2026年）',
         intro: '速度取决于您的硬件层级。将CPU/内存与正确的模型匹配——选错会损失4–10倍的速度。',
@@ -4620,7 +4620,7 @@ schema: {
       twitterDescription: 'CPU 전용: Qwen3 1.7B 추정 초당 25–40 토큰. Phi-4-mini 추정 초당 15–25 토큰. RAM 8GB GPU 불필요 가이드. Ollama 명령어 포함.',
       publishDate: '2026-04-05',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '이 가이드에서 비교한 모델 중 CPU 전용, RAM 4–8 GB 저사양 PC에서 가장 빠른 선택은 Qwen3 1.7B (Q4_K_M)입니다 — 듀얼 채널 메모리를 갖춘 최신 i5/Ryzen 5에서 추정 초당 25–40 토큰. 8 GB에서 더 나은 품질을 원한다면 Phi-4-mini (3.8B)가 추정 초당 15–25 토큰으로 동작하며 코딩과 추론을 잘 처리합니다. CPU에서의 속도는 메모리 대역폭을 모델 파일 크기로 나눈 값에 의해 결정되므로, 파일이 가장 작은 모델이 가장 빠릅니다. 이 가이드의 모든 모델은 오픈 웨이트로 무료로 내려받을 수 있으며(라이선스는 각 모델 카드에서 확인하십시오) GPU 없이 Ollama에서 실행할 수 있을 만큼 가볍습니다.',
+      leadAnswerBlock: '여기서 비교한 모델 중 CPU 전용, RAM 4–8 GB PC에서 가장 빠른 선택은 Qwen3 1.7B (Q4_K_M)이며, 추정 초당 25–40 토큰입니다. RAM 8 GB에서 더 나은 품질을 원하신다면 Phi-4-mini (3.8B)를 사용하십시오. 추정 초당 15–25 토큰입니다.',
       quickAnswer: {
         title: '저사양 PC를 위한 가장 빠른 로컬 LLM (2026)',
         intro: '속도는 하드웨어 티어에 따라 다릅니다. CPU/RAM에 맞는 모델을 선택하세요 — 잘못된 선택은 4–10배의 속도 손실을 초래합니다.',
