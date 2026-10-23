@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Model": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "File (Ollama)": "6.6 GB",
             "Min RAM": "7–8 GB",
-            "Est. tok/s": "6–11",
+            "Est. tok/s": "6–12",
             "Best For": "16 GB laptops, newer family, image input"
           }
         ],
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "9B model, 6.6 GB Ollama file. Est. 6–11 tok/s on dual-channel RAM (PromptQuorum estimate). Newer family with image input on 16 GB laptops."
+          "description": "9B model, 6.6 GB Ollama file. Est. 6–12 tok/s on dual-channel RAM (PromptQuorum estimate). Newer family with image input on 16 GB laptops."
         }
       ]
     },
@@ -1416,7 +1416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Modell": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "Datei (Ollama)": "6,6 GB",
             "Min. RAM": "7–8 GB",
-            "Gesch. tok/s": "6–11",
+            "Gesch. tok/s": "6–12",
             "Am besten für": "Laptops mit 16 GB, neuere Familie, Bildeingabe"
           }
         ],
@@ -1793,7 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "9B-Modell, 6,6 GB große Ollama-Datei. Gesch. 6–11 tok/s bei Dual-Channel-RAM (PromptQuorum-Schätzung). Neuere Familie mit Bildeingabe auf Laptops mit 16 GB."
+          "description": "9B-Modell, 6,6 GB große Ollama-Datei. Gesch. 6–12 tok/s bei Dual-Channel-RAM (PromptQuorum-Schätzung). Neuere Familie mit Bildeingabe auf Laptops mit 16 GB."
         }
       ]
     },
@@ -2356,7 +2356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Modèle": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "Fichier (Ollama)": "6.6 GB",
             "RAM min.": "7–8 GB",
-            "tok/s est.": "6–11",
+            "tok/s est.": "6–12",
             "Idéal pour": "Portables 16 GB, famille récente, entrée image"
           }
         ],
@@ -2733,7 +2733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "Modèle 9B, fichier Ollama de 6.6 GB. 6–11 tok/s est. en RAM dual-channel (estimation PromptQuorum). Famille récente avec entrée image sur portables 16 GB."
+          "description": "Modèle 9B, fichier Ollama de 6.6 GB. 6–12 tok/s est. en RAM dual-channel (estimation PromptQuorum). Famille récente avec entrée image sur portables 16 GB."
         }
       ]
     },
@@ -3296,7 +3296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "モデル": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "ファイル（Ollama）": "6.6 GB",
             "最小RAM": "7–8 GB",
-            "推定tok/s": "6–11",
+            "推定tok/s": "6–12",
             "おすすめ用途": "16 GBノートPC、新世代、画像入力対応"
           }
         ],
@@ -3672,7 +3672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "9Bモデル、Ollamaのファイルは6.6 GB。デュアルチャネル RAMで推定6–11 tok/s（PromptQuorumの推定）。画像入力に対応する新世代で、16 GBノートPC向け。"
+          "description": "9Bモデル、Ollamaのファイルは6.6 GB。デュアルチャネル RAMで推定6–12 tok/s（PromptQuorumの推定）。画像入力に対応する新世代で、16 GBノートPC向け。"
         }
       ]
     },
@@ -4235,7 +4235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "模型": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "文件（Ollama）": "6.6 GB",
             "最低内存": "7–8 GB",
-            "估算 tok/s": "6–11",
+            "估算 tok/s": "6–12",
             "适用场景": "16 GB笔记本电脑，较新系列，支持图像输入"
           }
         ],
@@ -4611,7 +4611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "9B模型，Ollama文件6.6 GB。双通道内存上估算6–11 tok/s（PromptQuorum估算）。较新的系列，支持图像输入，适合16 GB笔记本电脑。"
+          "description": "9B模型，Ollama文件6.6 GB。双通道内存上估算6–12 tok/s（PromptQuorum估算）。较新的系列，支持图像输入，适合16 GB笔记本电脑。"
         }
       ]
     },
@@ -5174,7 +5174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Modelo": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "Archivo (Ollama)": "6.6 GB",
             "RAM mín.": "7–8 GB",
-            "tok/s est.": "6–11",
+            "tok/s est.": "6–12",
             "Ideal para": "Portátiles de 16 GB, familia más reciente, entrada de imagen"
           }
         ],
@@ -5551,7 +5551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "Modelo de 9B, archivo de 6.6 GB en Ollama. Est. 6–11 tok/s con RAM de doble canal (estimación de PromptQuorum). Familia más reciente con entrada de imagen en portátiles de 16 GB."
+          "description": "Modelo de 9B, archivo de 6.6 GB en Ollama. Est. 6–12 tok/s con RAM de doble canal (estimación de PromptQuorum). Familia más reciente con entrada de imagen en portátiles de 16 GB."
         }
       ]
     },
@@ -6114,7 +6114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Modelo": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "Arquivo (Ollama)": "6.6 GB",
             "RAM mín.": "7–8 GB",
-            "tok/s est.": "6–11",
+            "tok/s est.": "6–12",
             "Melhor para": "Notebooks de 16 GB, família mais nova, entrada de imagem"
           }
         ],
@@ -6491,7 +6491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "Modelo 9B, arquivo de 6.6 GB no Ollama. Est. 6–11 tok/s com RAM dual-channel (estimativa da PromptQuorum). Família mais nova com entrada de imagem em notebooks de 16 GB."
+          "description": "Modelo 9B, arquivo de 6.6 GB no Ollama. Est. 6–12 tok/s com RAM dual-channel (estimativa da PromptQuorum). Família mais nova com entrada de imagem em notebooks de 16 GB."
         }
       ]
     },
@@ -7054,7 +7054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "النموذج": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "الملف (Ollama)": "6.6 GB",
             "أدنى RAM": "7–8 GB",
-            "tok/s تقديري": "6–11",
+            "tok/s تقديري": "6–12",
             "الأنسب لـ": "حواسيب 16 GB، عائلة أحدث، إدخال صور"
           }
         ],
@@ -7430,7 +7430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "نموذج 9B بملف Ollama حجمه 6.6 GB. تقديري 6–11 tok/s على ذاكرة ثنائية القناة (تقدير PromptQuorum). عائلة أحدث مع إدخال صور على الحواسيب المحمولة بذاكرة 16 GB."
+          "description": "نموذج 9B بملف Ollama حجمه 6.6 GB. تقديري 6–12 tok/s على ذاكرة ثنائية القناة (تقدير PromptQuorum). عائلة أحدث مع إدخال صور على الحواسيب المحمولة بذاكرة 16 GB."
         }
       ]
     },
@@ -7993,7 +7993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "모델": "[Qwen3.5 9B](https://ollama.com/library/qwen3.5)",
             "파일(Ollama)": "6.6 GB",
             "최소 RAM": "7–8 GB",
-            "추정 tok/s": "6–11",
+            "추정 tok/s": "6–12",
             "추천 대상": "16 GB 노트북, 최신 모델군, 이미지 입력"
           }
         ],
@@ -8369,7 +8369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "@type": "ListItem",
           "position": 5,
           "name": "Qwen3.5 9B",
-          "description": "9B 모델, Ollama 파일 6.6 GB. 듀얼 채널 RAM에서 추정 6–11 tok/s(PromptQuorum 추정). 이미지 입력을 지원하는 최신 모델군으로, 16 GB 노트북에 적합합니다."
+          "description": "9B 모델, Ollama 파일 6.6 GB. 듀얼 채널 RAM에서 추정 6–12 tok/s(PromptQuorum 추정). 이미지 입력을 지원하는 최신 모델군으로, 16 GB 노트북에 적합합니다."
         }
       ]
     },

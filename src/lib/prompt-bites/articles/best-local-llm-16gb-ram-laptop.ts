@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Model': 'Gemma 4 12B', 'Download (Q4)': '~8 GB', 'Speed (best for)': '~5–8 tok/s — strongest that fits' },
           { 'Model': 'Qwen3.5 4B', 'Download (Q4)': '3.3–4.0 GB', 'Speed (best for)': '~12–20 tok/s — 8 GB / weak CPUs' },
           { 'Model': 'Phi-4-mini', 'Download (Q4)': '~2.5 GB', 'Speed (best for)': '~15–25 tok/s — speed first' },
-          { 'Model': 'Qwen3 8B', 'Download (Q4)': '~5.2 GB', 'Speed (best for)': '~8–12 tok/s — older, still solid' },
+          { 'Model': 'Qwen3 8B', 'Download (Q4)': '~5.2 GB', 'Speed (best for)': '~8–15 tok/s — older, still solid' },
         ],
         content2: [
           'Gemma 4 12B is the practical ceiling for 16 GB: its 7.7–8.0 GB download fits with headroom but runs slower on CPU, which suits quality-first, non-interactive tasks such as document analysis and batch summarization. Gemma 4 E4B (6.6 GB) adds audio input for multimodal use. For coding on 16 GB, use Qwen3.5 9B or Gemma 4 12B: Qwen3-Coder is a 30B model (19 GB download) and needs a 32 GB machine. Both Qwen3.5 9B and Gemma 4 12B are listed under the Apache 2.0 license on Ollama; Gemma 4 12B was released on June 3, 2026 per Google\'s release notes.',
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modell': 'Gemma 4 12B', 'Download (Q4)': '~8 GB', 'Tempo (am besten für)': '~5–8 tok/s — stärkstes, das passt' },
           { 'Modell': 'Qwen3.5 4B', 'Download (Q4)': '3,3–4,0 GB', 'Tempo (am besten für)': '~12–20 tok/s — 8 GB / schwache CPUs' },
           { 'Modell': 'Phi-4-mini', 'Download (Q4)': '~2,5 GB', 'Tempo (am besten für)': '~15–25 tok/s — Tempo zuerst' },
-          { 'Modell': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Tempo (am besten für)': '~8–12 tok/s — älter, weiter solide' },
+          { 'Modell': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Tempo (am besten für)': '~8–15 tok/s — älter, weiter solide' },
         ],
         content2: [
           'Gemma 4 12B ist die praktische Obergrenze für 16 GB: Der Download von 7,7–8,0 GB passt mit Reserve, läuft auf der CPU aber langsamer — geeignet für qualitätsorientierte, nicht-interaktive Aufgaben wie Dokumentenanalyse und Batch-Zusammenfassungen. Gemma 4 E4B (6,6 GB) ergänzt Audio-Eingabe für multimodale Nutzung. Fürs Coding auf 16 GB nutzen Sie Qwen3.5 9B oder Gemma 4 12B: Qwen3-Coder ist ein 30B-Modell (19 GB Download) und braucht einen Rechner mit 32 GB. Qwen3.5 9B und Gemma 4 12B sind bei Ollama beide unter der Apache-2.0-Lizenz aufgeführt; Gemma 4 12B erschien laut Googles Release Notes am 3. Juni 2026.',
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modèle': 'Gemma 4 12B', 'Téléchargement (Q4)': '~8 Go', 'Vitesse (meilleur usage)': '~5–8 tok/s — le plus puissant qui tient' },
           { 'Modèle': 'Qwen3.5 4B', 'Téléchargement (Q4)': '3,3–4,0 Go', 'Vitesse (meilleur usage)': '~12–20 tok/s — 8 Go / CPU faibles' },
           { 'Modèle': 'Phi-4-mini', 'Téléchargement (Q4)': '~2,5 Go', 'Vitesse (meilleur usage)': '~15–25 tok/s — vitesse avant tout' },
-          { 'Modèle': 'Qwen3 8B', 'Téléchargement (Q4)': '~5,2 Go', 'Vitesse (meilleur usage)': '~8–12 tok/s — plus ancien, solide' },
+          { 'Modèle': 'Qwen3 8B', 'Téléchargement (Q4)': '~5,2 Go', 'Vitesse (meilleur usage)': '~8–15 tok/s — plus ancien, solide' },
         ],
         content2: [
           'Gemma 4 12B est le plafond pratique pour 16 Go : son téléchargement de 7,7–8,0 Go tient avec de la marge, mais il est plus lent sur CPU, ce qui convient aux tâches non interactives axées qualité (analyse de documents, résumé par lots). Gemma 4 E4B (6,6 Go) ajoute l\'entrée audio pour un usage multimodal. Pour le Coding sur 16 Go, utilisez Qwen3.5 9B ou Gemma 4 12B : Qwen3-Coder est un modèle 30B (19 Go à télécharger) et demande une machine de 32 Go. Qwen3.5 9B et Gemma 4 12B sont tous deux répertoriés sous licence Apache 2.0 sur Ollama ; Gemma 4 12B est sorti le 3 juin 2026 selon les notes de version de Google.',
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'モデル': 'Gemma 4 12B', 'ダウンロード（Q4）': '~8 GB', '速度（最適用途）': '~5–8 tok/s — 収まる最強' },
           { 'モデル': 'Qwen3.5 4B', 'ダウンロード（Q4）': '3.3–4.0 GB', '速度（最適用途）': '~12–20 tok/s — 8 GB／非力な CPU' },
           { 'モデル': 'Phi-4-mini', 'ダウンロード（Q4）': '~2.5 GB', '速度（最適用途）': '~15–25 tok/s — 速度優先' },
-          { 'モデル': 'Qwen3 8B', 'ダウンロード（Q4）': '~5.2 GB', '速度（最適用途）': '~8–12 tok/s — 旧世代だが堅実' },
+          { 'モデル': 'Qwen3 8B', 'ダウンロード（Q4）': '~5.2 GB', '速度（最適用途）': '~8–15 tok/s — 旧世代だが堅実' },
         ],
         content2: [
           'Gemma 4 12B は 16 GB の実用的な上限です。7.7～8.0 GB のダウンロードで余裕を持って収まりますが、CPU では低速になるため、文書分析やバッチ要約のような品質重視の非対話型タスク向けです。Gemma 4 E4B（6.6 GB）は音声入力にも対応し、マルチモーダル用途に向いています。16 GB での Coding には Qwen3.5 9B か Gemma 4 12B を使ってください。Qwen3-Coder は 30B モデル（ダウンロード 19 GB）で、32 GB のマシンが必要です。 Ollama では Qwen3.5 9B と Gemma 4 12B はどちらも Apache 2.0 ライセンスと表示されています。Gemma 4 12B は Google のリリースノートによると 2026 年 6 月 3 日に公開されました。',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modelo': 'Gemma 4 12B', 'Descarga (Q4)': '~8 GB', 'Velocidad (mejor para)': '~5–8 tok/s — el más potente que cabe' },
           { 'Modelo': 'Qwen3.5 4B', 'Descarga (Q4)': '3,3–4,0 GB', 'Velocidad (mejor para)': '~12–20 tok/s — 8 GB / CPU débiles' },
           { 'Modelo': 'Phi-4-mini', 'Descarga (Q4)': '~2,5 GB', 'Velocidad (mejor para)': '~15–25 tok/s — velocidad primero' },
-          { 'Modelo': 'Qwen3 8B', 'Descarga (Q4)': '~5,2 GB', 'Velocidad (mejor para)': '~8–12 tok/s — más antiguo, sólido' },
+          { 'Modelo': 'Qwen3 8B', 'Descarga (Q4)': '~5,2 GB', 'Velocidad (mejor para)': '~8–15 tok/s — más antiguo, sólido' },
         ],
         content2: [
           'Gemma 4 12B es el techo práctico para 16 GB: su descarga de 7,7–8,0 GB cabe con margen, pero va más lento en CPU, lo que encaja con tareas no interactivas centradas en la calidad, como el análisis de documentos y los resúmenes por lotes. Gemma 4 E4B (6,6 GB) añade entrada de audio para uso multimodal. Para programación con 16 GB, usa Qwen3.5 9B o Gemma 4 12B: Qwen3-Coder es un modelo de 30B (19 GB de descarga) y necesita un equipo de 32 GB. Qwen3.5 9B y Gemma 4 12B figuran ambos con la licencia Apache 2.0 en Ollama; Gemma 4 12B se lanzó el 3 de junio de 2026, según las notas de versión de Google.',
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modelo': 'Gemma 4 12B', 'Download (Q4)': '~8 GB', 'Velocidade (melhor para)': '~5–8 tok/s — o mais forte que cabe' },
           { 'Modelo': 'Qwen3.5 4B', 'Download (Q4)': '3,3–4,0 GB', 'Velocidade (melhor para)': '~12–20 tok/s — 8 GB / CPUs fracas' },
           { 'Modelo': 'Phi-4-mini', 'Download (Q4)': '~2,5 GB', 'Velocidade (melhor para)': '~15–25 tok/s — velocidade primeiro' },
-          { 'Modelo': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Velocidade (melhor para)': '~8–12 tok/s — mais antigo, sólido' },
+          { 'Modelo': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Velocidade (melhor para)': '~8–15 tok/s — mais antigo, sólido' },
         ],
         content2: [
           'O Gemma 4 12B é o teto prático para 16 GB: o download de 7,7–8,0 GB cabe com margem, mas fica mais lento na CPU, o que serve para tarefas não interativas focadas em qualidade, como análise de documentos e resumos em lote. O Gemma 4 E4B (6,6 GB) acrescenta entrada de áudio para uso multimodal. Para programar com 16 GB, use o Qwen3.5 9B ou o Gemma 4 12B: o Qwen3-Coder é um modelo de 30B (19 GB de download) e exige uma máquina de 32 GB. O Qwen3.5 9B e o Gemma 4 12B constam ambos com a licença Apache 2.0 no Ollama; o Gemma 4 12B foi lançado em 3 de junho de 2026, segundo as notas de versão do Google.',
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'النموذج': 'Gemma 4 12B', 'التنزيل (Q4)': '~8 GB', 'السرعة (الأفضل لـ)': '~5–8 tok/s — الأقوى الذي يتسع' },
           { 'النموذج': 'Qwen3.5 4B', 'التنزيل (Q4)': '3.3–4.0 GB', 'السرعة (الأفضل لـ)': '~12–20 tok/s — 8 GB / معالجات ضعيفة' },
           { 'النموذج': 'Phi-4-mini', 'التنزيل (Q4)': '~2.5 GB', 'السرعة (الأفضل لـ)': '~15–25 tok/s — السرعة أولاً' },
-          { 'النموذج': 'Qwen3 8B', 'التنزيل (Q4)': '~5.2 GB', 'السرعة (الأفضل لـ)': '~8–12 tok/s — أقدم لكنه متين' },
+          { 'النموذج': 'Qwen3 8B', 'التنزيل (Q4)': '~5.2 GB', 'السرعة (الأفضل لـ)': '~8–15 tok/s — أقدم لكنه متين' },
         ],
         content2: [
           'يُعدّ Gemma 4 12B الحد العملي لسعة 16 جيجابايت: يتسع تنزيله البالغ 7.7–8.0 جيجابايت بهامش جيد، لكنه أبطأ على المعالج، ما يناسب المهام غير التفاعلية التي تُقدّم الجودة، مثل تحليل المستندات والتلخيص الدفعي. ويضيف Gemma 4 E4B (6.6 جيجابايت) إدخال الصوت للاستخدام متعدد الوسائط. وللبرمجة على 16 جيجابايت استخدم Qwen3.5 9B أو Gemma 4 12B: فـ Qwen3-Coder نموذج 30B (تنزيل 19 جيجابايت) ويحتاج إلى جهاز بذاكرة 32 جيجابايت. يُدرج Ollama كلاً من Qwen3.5 9B وGemma 4 12B برخصة Apache 2.0؛ وصدر Gemma 4 12B في 3 يونيو 2026 وفق ملاحظات إصدار Google.',
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '模型': 'Gemma 4 12B', '下载大小（Q4）': '~8 GB', '速度（最适用途）': '~5–8 tok/s——能装下的最强' },
           { '模型': 'Qwen3.5 4B', '下载大小（Q4）': '3.3–4.0 GB', '速度（最适用途）': '~12–20 tok/s——8 GB／弱 CPU' },
           { '模型': 'Phi-4-mini', '下载大小（Q4）': '~2.5 GB', '速度（最适用途）': '~15–25 tok/s——速度优先' },
-          { '模型': 'Qwen3 8B', '下载大小（Q4）': '~5.2 GB', '速度（最适用途）': '~8–12 tok/s——较旧但可靠' },
+          { '模型': 'Qwen3 8B', '下载大小（Q4）': '~5.2 GB', '速度（最适用途）': '~8–15 tok/s——较旧但可靠' },
         ],
         content2: [
           'Gemma 4 12B 是 16 GB 的实际上限：7.7–8.0 GB 的下载大小可留有余量，但在 CPU 上较慢，适合文档分析、批量摘要等注重质量的非交互任务。Gemma 4 E4B（6.6 GB）增加了音频输入，适合多模态用途。16 GB 上的编程请使用 Qwen3.5 9B 或 Gemma 4 12B：Qwen3-Coder 是 30B 模型（下载 19 GB），需要 32 GB 的机器。 Ollama 上 Qwen3.5 9B 和 Gemma 4 12B 均标注为 Apache 2.0 许可；据 Google 发布说明，Gemma 4 12B 于 2026 年 6 月 3 日发布。',
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '모델': 'Gemma 4 12B', '다운로드 (Q4)': '~8 GB', '속도 (최적 용도)': '~5–8 tok/s — 들어가는 최강' },
           { '모델': 'Qwen3.5 4B', '다운로드 (Q4)': '3.3–4.0 GB', '속도 (최적 용도)': '~12–20 tok/s — 8 GB / 약한 CPU' },
           { '모델': 'Phi-4-mini', '다운로드 (Q4)': '~2.5 GB', '속도 (최적 용도)': '~15–25 tok/s — 속도 우선' },
-          { '모델': 'Qwen3 8B', '다운로드 (Q4)': '~5.2 GB', '속도 (최적 용도)': '~8–12 tok/s — 구형이지만 견고' },
+          { '모델': 'Qwen3 8B', '다운로드 (Q4)': '~5.2 GB', '속도 (최적 용도)': '~8–15 tok/s — 구형이지만 견고' },
         ],
         content2: [
           'Gemma 4 12B는 16 GB의 실질적인 상한입니다. 7.7–8.0 GB 다운로드는 여유 있게 들어가지만 CPU에서 더 느려, 문서 분석이나 일괄 요약처럼 품질을 우선하는 비대화형 작업에 적합합니다. Gemma 4 E4B(6.6 GB)는 오디오 입력이 추가되어 멀티모달 용도에 맞습니다. 16 GB에서 코딩에는 Qwen3.5 9B 또는 Gemma 4 12B를 사용하십시오. Qwen3-Coder는 30B 모델(다운로드 19 GB)이라 32 GB 기기가 필요합니다. Ollama에서 Qwen3.5 9B와 Gemma 4 12B는 모두 Apache 2.0 라이선스로 표시되며, Gemma 4 12B는 Google 릴리스 노트에 따르면 2026년 6월 3일에 출시되었습니다.',
