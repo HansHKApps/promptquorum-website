@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Llamatik Review: Free Offline AI Chatbot for Android and iPhone',
       description:
         'Llamatik review: a free, MIT-licensed offline AI chatbot for Android, iPhone and desktop built on an open-source Kotlin SDK. Models, privacy, update status and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/llamatik-review',
+      url: 'https://www.promptquorum.com/power-local-llm/llamatik-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
       dateModified: '2026-10-19',
@@ -349,15 +349,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Local LLM' },
         { '@type': 'Thing', name: 'llama.cpp' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/llamatik-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/llamatik-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Llamatik Review', item: 'https://promptquorum.com/power-local-llm/llamatik-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Llamatik Review', item: 'https://www.promptquorum.com/power-local-llm/llamatik-review' },
       ],
     },
   },

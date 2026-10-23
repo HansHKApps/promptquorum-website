@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'FriedrichAI Review: Offline Windows AI Assistant Sold on Steam',
       description:
         'FriedrichAI review: a paid offline AI assistant for Windows sold on Steam, with local memory, image, video, and audio packs. Privacy, hardware, and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/friedrichai-review',
+      url: 'https://www.promptquorum.com/power-local-llm/friedrichai-review',
       inLanguage: 'en',
       datePublished: '2026-10-09',
       dateModified: '2026-10-09',
@@ -403,15 +403,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'On-device AI' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/friedrichai-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/friedrichai-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'FriedrichAI Review', item: 'https://promptquorum.com/power-local-llm/friedrichai-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'FriedrichAI Review', item: 'https://www.promptquorum.com/power-local-llm/friedrichai-review' },
       ],
     },
   },

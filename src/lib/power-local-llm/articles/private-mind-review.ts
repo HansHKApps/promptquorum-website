@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Private Mind Review: Open-Source Offline AI Chat for iPhone and Android',
       description:
         'Private Mind review: a free, MIT-licensed offline AI chat app for iPhone and Android with on-device document Q&A. Models, privacy, the optional web search, and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/private-mind-review',
+      url: 'https://www.promptquorum.com/power-local-llm/private-mind-review',
       inLanguage: 'en',
       datePublished: '2026-10-03',
       dateModified: '2026-10-03',
@@ -415,15 +415,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'On-device AI' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/private-mind-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/private-mind-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Private Mind Review', item: 'https://promptquorum.com/power-local-llm/private-mind-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Private Mind Review', item: 'https://www.promptquorum.com/power-local-llm/private-mind-review' },
       ],
     },
   },

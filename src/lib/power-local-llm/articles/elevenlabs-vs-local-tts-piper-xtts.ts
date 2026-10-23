@@ -790,12 +790,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -1748,12 +1748,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -2706,12 +2706,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -2746,7 +2746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -3661,12 +3661,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -3701,7 +3701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -4616,12 +4616,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -4656,7 +4656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -5574,12 +5574,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -5614,7 +5614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -6531,12 +6531,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -6571,7 +6571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -7486,12 +7486,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -7526,7 +7526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {
@@ -8439,12 +8439,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://promptquorum.com/logo.svg',
+          'url': 'https://www.promptquorum.com/logo.svg',
           'width': '250',
           'height': '60'
         }
       },
-      'url': 'https://promptquorum.com/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
+      'url': 'https://www.promptquorum.com/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -8479,7 +8479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': 'https://www.promptquorum.com/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
       }
     },
     faqSchema: {

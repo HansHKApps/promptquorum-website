@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Layla Review (2026): On-Device AI Companion App for Android and iOS',
       description:
         'Layla review: a $19.99 on-device AI companion app for Android and iOS with roleplay features. What runs locally vs. the optional Layla Cloud mode, pricing, and who it fits.',
-      url: 'https://promptquorum.com/power-local-llm/layla-review',
+      url: 'https://www.promptquorum.com/power-local-llm/layla-review',
       inLanguage: 'en',
       datePublished: '2026-09-06',
       dateModified: '2026-09-06',
@@ -527,15 +527,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Local LLM' },
         { '@type': 'Thing', name: 'On-device AI privacy' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/layla-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/layla-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Layla Review (2026)', item: 'https://promptquorum.com/power-local-llm/layla-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Layla Review (2026)', item: 'https://www.promptquorum.com/power-local-llm/layla-review' },
       ],
     },
   },

@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'LLM Hub Review: On-Device AI Suite for Android and iPhone',
       description:
         'LLM Hub review: an on-device AI app for Android and iPhone with chat, an MCP-capable agent, image and music generation, translation, and transcription. Pricing, the PolyForm Noncommercial license, privacy, and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/llm-hub-review',
+      url: 'https://www.promptquorum.com/power-local-llm/llm-hub-review',
       inLanguage: 'en',
       datePublished: '2026-10-03',
       dateModified: '2026-10-03',
@@ -454,15 +454,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'On-device AI' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/llm-hub-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/llm-hub-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'LLM Hub Review', item: 'https://promptquorum.com/power-local-llm/llm-hub-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'LLM Hub Review', item: 'https://www.promptquorum.com/power-local-llm/llm-hub-review' },
       ],
     },
   },

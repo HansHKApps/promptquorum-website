@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'LocalMind Review: Free Chat App for On-Device and Self-Hosted Models',
       description:
         'LocalMind review: a free, MIT-licensed Android and iPhone chat app for on-device models, Ollama, LM Studio, and OpenRouter. Backends, privacy, versions, and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/localmind-review',
+      url: 'https://www.promptquorum.com/power-local-llm/localmind-review',
       inLanguage: 'en',
       datePublished: '2026-10-17',
       dateModified: '2026-10-17',
@@ -393,15 +393,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'On-device AI' },
         { '@type': 'Thing', name: 'Model Context Protocol' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/localmind-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/localmind-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'LocalMind Review', item: 'https://promptquorum.com/power-local-llm/localmind-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'LocalMind Review', item: 'https://www.promptquorum.com/power-local-llm/localmind-review' },
       ],
     },
   },

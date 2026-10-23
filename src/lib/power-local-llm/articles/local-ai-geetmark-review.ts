@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits',
       description:
         'Local AI: Offline Chat & Image review: a free Android app with 20+ offline models, Stable Diffusion image generation and 15 prompt toolkits. Privacy, ads, hardware, and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/local-ai-geetmark-review',
+      url: 'https://www.promptquorum.com/power-local-llm/local-ai-geetmark-review',
       inLanguage: 'en',
       datePublished: '2026-10-09',
       dateModified: '2026-10-09',
@@ -362,15 +362,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'On-device AI' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/local-ai-geetmark-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/local-ai-geetmark-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Local AI: Offline Chat & Image Review', item: 'https://promptquorum.com/power-local-llm/local-ai-geetmark-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Local AI: Offline Chat & Image Review', item: 'https://www.promptquorum.com/power-local-llm/local-ai-geetmark-review' },
       ],
     },
   },

@@ -542,7 +542,7 @@ docker run --gpus all \\
       datePublished: '2026-05-26',
       dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'Qwen language models' },
@@ -731,7 +731,7 @@ docker run --gpus all \\
       datePublished: '2026-05-26',
       dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
     },
     relatedReading: {
@@ -866,7 +866,7 @@ docker run --gpus all \\
       datePublished: '2026-05-26',
       dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
     },
     relatedReading: {
@@ -1006,7 +1006,7 @@ docker run --gpus all \\
       datePublished: '2026-05-26',
       dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
     },
     relatedReading: {
@@ -1168,7 +1168,7 @@ docker run --gpus all \\
       datePublished: '2026-05-26',
       dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
     },
     relatedReading: {

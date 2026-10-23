@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'SurfSense Review: Open-Source Desktop NotebookLM Alternative',
       description:
         'SurfSense review: a free, open-source desktop app for cited research over your own files. Pricing, privacy claims and what the sources leave unconfirmed.',
-      url: 'https://promptquorum.com/power-local-llm/surfsense-review',
+      url: 'https://www.promptquorum.com/power-local-llm/surfsense-review',
       inLanguage: 'en',
       datePublished: '2026-10-21',
       dateModified: '2026-10-21',
@@ -314,15 +314,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'NotebookLM alternative' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/surfsense-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/surfsense-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'SurfSense Review', item: 'https://promptquorum.com/power-local-llm/surfsense-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'SurfSense Review', item: 'https://www.promptquorum.com/power-local-llm/surfsense-review' },
       ],
     },
   },

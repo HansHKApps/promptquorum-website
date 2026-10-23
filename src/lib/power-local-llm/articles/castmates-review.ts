@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Castmates Review: Offline AI Character Chat for iPhone',
       description:
         'Castmates review: a free, closed-source iPhone app for offline AI character chat with 32 characters, custom characters and no account. Pricing, privacy, age controls and what the sources do not confirm.',
-      url: 'https://promptquorum.com/power-local-llm/castmates-review',
+      url: 'https://www.promptquorum.com/power-local-llm/castmates-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
       dateModified: '2026-10-19',
@@ -328,15 +328,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'AI roleplay' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/castmates-review' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/castmates-review' },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Castmates Review', item: 'https://promptquorum.com/power-local-llm/castmates-review' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Castmates Review', item: 'https://www.promptquorum.com/power-local-llm/castmates-review' },
       ],
     },
   },
