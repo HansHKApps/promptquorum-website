@@ -3286,7 +3286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Por qué desapareció LLM Farm del App Store?',
-            a: 'El README del proyecto dice: "The app is temporarily unavailable in TestFlight and Appstore." PromptQuorum no encontró ningún motivo público de la retirada, así que cualquier explicación que leas en otro sitio no está confirmada (consulta la [reseña de LLM Farm](/es/power-local-llm/llm-farm-review)). Si al buscarla el App Store te dice que la app no está disponible en tu región, lo más probable es que se deba a esta retirada y no a un ajuste de tu cuenta. El código fuente sigue siendo público, pero la última versión fue la 1.4.3 del 27 de enero de 2025. Como alternativa gratuita e instalable desde el App Store, usa PocketPal AI o Locally AI.',
+            a: 'El README del proyecto dice: "The app is temporarily unavailable in TestFlight and Appstore." PromptQuorum no encontró ningún motivo público de la retirada, así que cualquier explicación que leas en otro sitio no está confirmada (consulta la [reseña de LLM Farm](/es/power-local-llm/llm-farm-review)). El código fuente sigue siendo público, pero la última versión fue la 1.4.3 del 27 de enero de 2025. Como alternativa gratuita e instalable desde el App Store, usa PocketPal AI o Locally AI.',
           },
           {
             q: '¿Hay una app de Ollama para iPhone?',
@@ -4425,19 +4425,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Local LLM Apps for iPhone 2026 (English)](/power-local-llm/best-local-llm-apps-iphone-2026) — versão em inglês deste guia',
         ],
       },
-    },
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'TechArticle',
-      headline: 'Os melhores apps de IA local para iPhone em 2026 (execute LLMs sem WiFi)',
-      description: 'Seis opções para iPhone que executam LLMs reais no aparelho em 2026. PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery e MLC Chat comparados em custo, privacidade e biblioteca de modelos, com velocidades indicativas no iPhone 16 Pro e 17 Pro.',
-      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-apps-iphone-2026',
-      inLanguage: 'pt-BR',
-      datePublished: '2026-05-24',
-      dateModified: '2026-10-23',
-      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      'proficiencyLevel': 'Beginner',
     },
   },
   ar: {
