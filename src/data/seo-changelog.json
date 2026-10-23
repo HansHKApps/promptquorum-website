@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -4683,5 +4683,330 @@
     ],
     "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
     "baseline": null
+  },
+  {
+    "id": "4dd464ad-f6ec-49ca-b43a-a7a04f0bfa43",
+    "slug": "/ko/local-llms",
+    "date": "2026-10-23T08:10:32.349Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 3.97,
+      "impressions": 5912,
+      "clicks": 739,
+      "ctr": 0.125,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "a2870688-c010-4108-a4b5-4a5ecd63904b",
+    "slug": "/de/local-llms",
+    "date": "2026-10-23T08:10:32.440Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 4.05,
+      "impressions": 12956,
+      "clicks": 619,
+      "ctr": 0.047777091694967584,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "9443b7e0-4f6b-4e13-adb0-f21a5d1e237d",
+    "slug": "/local-llms",
+    "date": "2026-10-23T08:10:32.530Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 9.01,
+      "impressions": 39675,
+      "clicks": 351,
+      "ctr": 0.0088468809073724,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "9bcfc60a-f2f2-46df-888d-0caa8728d4f5",
+    "slug": "/ja/local-llms",
+    "date": "2026-10-23T08:10:32.619Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 8.04,
+      "impressions": 3905,
+      "clicks": 210,
+      "ctr": 0.05377720870678617,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "421caae1-d67b-4c3b-890a-725e09593468",
+    "slug": "/fr/local-llms",
+    "date": "2026-10-23T08:10:32.708Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 5.13,
+      "impressions": 3927,
+      "clicks": 172,
+      "ctr": 0.043799337916984975,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "0b5e1ae3-b2f2-41b7-96fd-9eda5755c443",
+    "slug": "/zh/local-llms",
+    "date": "2026-10-23T08:10:32.797Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 7.01,
+      "impressions": 3644,
+      "clicks": 118,
+      "ctr": 0.03238199780461032,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "3a7ad695-7557-42f4-8c60-02c8ad6e540d",
+    "slug": "/es/local-llms",
+    "date": "2026-10-23T08:10:32.888Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 4.99,
+      "impressions": 3325,
+      "clicks": 96,
+      "ctr": 0.02887218045112782,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "636f19dc-5bf2-44fd-90d3-394259c6a56f",
+    "slug": "/pt/local-llms",
+    "date": "2026-10-23T08:10:32.978Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 5,
+      "impressions": 2103,
+      "clicks": 41,
+      "ctr": 0.019495958155016643,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "41a2cd2f-cc9b-4f6b-80d8-b9ec752f7ad8",
+    "slug": "/power-local-llm",
+    "date": "2026-10-23T08:10:33.068Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 6.92,
+      "impressions": 5174,
+      "clicks": 26,
+      "ctr": 0.005025125628140704,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "e5e9c74b-9c3e-4b84-96ec-7471c543f8af",
+    "slug": "/smart-home",
+    "date": "2026-10-23T08:10:33.157Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 8.58,
+      "impressions": 2480,
+      "clicks": 17,
+      "ctr": 0.0068548387096774195,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "9083865e-19e7-4449-8d83-8a048c40533d",
+    "slug": "/ko/power-local-llm",
+    "date": "2026-10-23T08:10:33.246Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 10.34,
+      "impressions": 569,
+      "clicks": 14,
+      "ctr": 0.02460456942003515,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "2962ebcd-0075-47fc-9bde-fafa87310535",
+    "slug": "/zh/power-local-llm",
+    "date": "2026-10-23T08:10:33.335Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 21.01,
+      "impressions": 800,
+      "clicks": 9,
+      "ctr": 0.01125,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
+  },
+  {
+    "id": "945e1e3f-39d3-4a9a-8d4b-8de1419fa909",
+    "slug": "/ja/power-local-llm",
+    "date": "2026-10-23T08:10:33.426Z",
+    "fields": [
+      {
+        "field": "hubTemplate",
+        "old": "previous per-hub layout",
+        "new": "shared hub template (deploy fe40783a6)"
+      }
+    ],
+    "reason": "shared hub template redesign",
+    "baseline": {
+      "position": 9.91,
+      "impressions": 409,
+      "clicks": 7,
+      "ctr": 0.017114914425427872,
+      "period": "28d 2026-09-17 to 2026-10-14 (GSC export 2026-10-17)"
+    },
+    "deployedAt": "2026-10-18",
+    "measure": {
+      "t14": "2026-11-01",
+      "t28": "2026-11-15"
+    }
   }
 ]
