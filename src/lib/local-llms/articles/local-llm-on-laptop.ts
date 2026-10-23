@@ -3103,7 +3103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "ハードウェアの前提"
         ],
         "image": "/images/local-llm-on-laptop-ram-tiers-hero-ja.webp",
-        "imageCaption": "ノートPCでローカルLLM：8GB・16GB・Apple Siliconで動くモデルと推定tok/s"
+        "imageCaption": "ノートPCでローカルLLM：8GB・16GB・Apple Siliconで動くモデル（2026）の推定tok/s"
       },
       "tldr": {
         "id": "key-takeaways",
@@ -4042,7 +4042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "硬件假设"
         ],
         "image": "/images/local-llm-on-laptop-ram-tiers-hero-zh.webp",
-        "imageCaption": "笔记本电脑运行本地LLM：8GB、16GB与Apple Silicon适用模型及估算tok/s"
+        "imageCaption": "笔记本电脑运行本地LLM：8GB、16GB与Apple Silicon能跑什么（2026）的估算tok/s"
       },
       "tldr": {
         "id": "key-takeaways",
@@ -7800,7 +7800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "하드웨어 가정"
         ],
         "image": "/images/local-llm-on-laptop-ram-tiers-hero-ko.webp",
-        "imageCaption": "노트북에서 로컬 LLM 실행: 8GB, 16GB, Apple Silicon 모델과 추정 tok/s"
+        "imageCaption": "노트북에서 로컬 LLM 실행하기: 8GB, 16GB, Apple Silicon에서 되는 것 (2026) 추정 tok/s"
       },
       "tldr": {
         "id": "key-takeaways",
