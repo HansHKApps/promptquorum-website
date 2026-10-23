@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'GPU vs CPU for Local LLMs: Which Is Faster on Low-End Hardware?',
           content: [
             '**Discrete GPU:** typically 5–10× faster than CPU-only for the same model, because VRAM has far more memory bandwidth than system RAM. A used RTX 4060 8 GB (price varies) is a common budget upgrade. See [budget GPU guide](/local-llms/best-budget-gpus-local-llm) for cost-effective options.',
-            '**iGPU (integrated):** shares system RAM with the CPU, so the main limit — memory bandwidth — stays the same. Any gain is usually modest and depends on driver support. Ollama\'s documentation says Vulkan GPU support on Windows and Linux is enabled by default when the backend is installed, and lists AMD Ryzen AI iGPUs under ROCm; it does not say that Intel integrated GPUs are supported. Check `ollama ps`: the PROCESSOR column shows whether the model runs on CPU, GPU or a split.',
+            '**iGPU (integrated):** shares system RAM with the CPU, so the main limit — memory bandwidth — stays the same. Any gain is usually modest and depends on driver support. Ollama\'s documentation says Vulkan GPU support on Windows and Linux is enabled by default when the backend is installed, and lists AMD Ryzen AI iGPUs under ROCm; it does not list Intel integrated GPUs in a support table. Check `ollama ps`: the PROCESSOR column shows whether the model runs on CPU, GPU or a split.',
             '**CPU-only:** runs on any PC with no driver setup. Speed is roughly memory bandwidth ÷ model file size, which is why dual-channel RAM and a small Q4_K_M file matter more than CPU clock speed.',
             '**Rule:** Use a discrete GPU if you have one. Otherwise run the same prompt with the iGPU on and off (`OLLAMA_VULKAN=0` turns Vulkan GPUs off) and keep whichever is faster.',
           ],
@@ -367,9 +367,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'Local LLMs on Low-End PCs: Regional Context',
           content: [
-            '**EU / GDPR:** Local on low-end hardware: no inference data leaves the device — for many SMEs and freelancers a technically straightforward way to avoid Art. 44 GDPR transfer risks. Whether the EU AI Act or other obligations apply to your use depends on who deploys the system and for what purpose; this guide is not legal advice. For German SMEs weighing local LLMs for internal business tasks, keeping documents on the device avoids sending them to a third-party processor, but overall data protection compliance still depends on your full operational setup, not the inference architecture alone.',
+            '**EU / GDPR:** Local on low-end hardware: when run offline, no inference data leaves the device — for many SMEs and freelancers a technically straightforward way to avoid Art. 44 GDPR transfer risks. Whether the EU AI Act or other obligations apply to your use depends on who deploys the system and for what purpose; this guide is not legal advice. For German SMEs weighing local LLMs for internal business tasks, keeping documents on the device avoids sending them to a third-party processor, but overall data protection compliance still depends on your full operational setup, not the inference architecture alone.',
             '**Japan:** Japan\'s METI AI guidelines for business emphasize responsible handling of data. CPU inference on low-end hardware, while slow, keeps prompts on the device — once the model is downloaded, inference itself needs no API calls. For Japanese-language tasks on Qwen3 at CPU speeds in the ranges above, a few seconds per sentence is acceptable for non-time-critical document summarization.',
-            '**China:** Local inference of Qwen3 and DeepSeek-R1 on consumer hardware is an option for users in China who cannot reach non-Chinese cloud APIs. Qwen3 0.6B, 1.7B and 4B run on CPU-only hardware, providing a functional alternative to cloud APIs for users with constrained hardware.',
+            '**China:** Local inference of Qwen3 and DeepSeek-R1 distills on consumer hardware is an option for users in China who cannot reach non-Chinese cloud APIs. Qwen3 0.6B, 1.7B and 4B run on CPU-only hardware, providing a functional alternative to cloud APIs for users with constrained hardware.',
           ],
         },
         'faqSection': {
@@ -384,13 +384,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'How does quantization affect inference speed?', a: 'Quantization primarily reduces memory bandwidth requirements, not computation. A Q2 (2-bit) file is smaller than a Q4 (4-bit) file, so the CPU reads fewer bytes per token and generates faster, roughly in proportion to the file size. However, Q2 loses much more output quality. The practical rule: use Q4_K_M as default for every tier in this guide, drop to Q3 only if Q4_K_M does not fit in available RAM.' },
             { q: 'Can I use quantization below Q2?', a: 'Technically yes (1-bit IQ1 formats exist in llama.cpp), but output quality collapses at that size. Not recommended for any practical use case, including the 4 GB RAM tier covered in this guide — pick a smaller model at Q4_K_M instead.' },
             { q: 'Is CPU + iGPU hybrid inference supported?', a: 'Sometimes. Ollama can split a model between CPU and GPU when it finds a supported GPU backend, and `ollama ps` shows the split in its PROCESSOR column. An iGPU shares system RAM with the CPU, so memory bandwidth — the main speed limit — does not increase. On an 8 GB RAM system with an Intel Iris Xe iGPU, Qwen3 4B is estimated at 12–20 tok/s if the iGPU is used. Test with `OLLAMA_VULKAN=0` to compare against CPU-only.' },
-            { q: 'What is the fastest local LLM for a low-end PC?', a: 'Qwen3 1.7B at Q4_K_M is the fastest model in this guide — 25–40 tok/s on a modern i5/Ryzen 5 with 4 GB RAM and no GPU. For better quality at a similar speed tier, Phi-4-mini (3.8B) runs 15–25 tok/s on 8 GB RAM and handles coding and reasoning noticeably better.' },
-            { q: 'Can I run a local LLM on 4 GB RAM?', a: 'Yes — Qwen3 1.7B at Q4_K_M is the recommended pick for 4 GB RAM, CPU-only, reaching 25–40 tok/s on a modern i5/Ryzen 5. It is the fastest model in this guide and fits comfortably with headroom for the OS.' },
+            { q: 'What is the fastest local LLM for a low-end PC?', a: 'Qwen3 1.7B at Q4_K_M is the fastest of the tier picks in this guide (smaller models such as Qwen3 0.6B are faster still, at much lower quality) — an estimated 25–40 tok/s on a modern i5/Ryzen 5 with 4 GB RAM and no GPU. For better quality at a similar speed tier, Phi-4-mini (3.8B) runs 15–25 tok/s on 8 GB RAM and handles coding and reasoning noticeably better.' },
+            { q: 'Can I run a local LLM on 4 GB RAM?', a: 'Yes — Qwen3 1.7B at Q4_K_M is the recommended pick for 4 GB RAM, CPU-only, reaching 25–40 tok/s on a modern i5/Ryzen 5. It is the fastest of the tier picks in this guide and fits comfortably with headroom for the OS.' },
             { q: 'Is a GPU required for speed?', a: 'No — every model in this guide runs CPU-only. An Intel Iris iGPU may add a modest speed boost (Qwen3 4B: est. 12–20 tok/s if the iGPU is used) but is optional and depends on driver support. A discrete GPU like a used RTX 4060 8 GB is typically 5–10× faster than CPU-only for the same model, but is a separate upgrade path, not a requirement.' },
             { q: 'Is an Intel Iris iGPU good enough for local LLMs?', a: 'It can help, but it is not guaranteed. On 8 GB RAM with an Intel Iris Xe iGPU, Qwen3 4B is estimated at 12–20 tok/s if Ollama actually uses the iGPU; on 16 GB RAM, Llama 3.2 3B is estimated at 20–35 tok/s. Because an iGPU shares system RAM with the CPU, the gain is usually modest. Run the same prompt with and without the iGPU and keep the faster setting.' },
             { q: 'Should I use Q2 or Q4 quantization on low-end hardware?', a: 'Start with Q4_K_M — it fits every model tier in this guide (1.7B through 8B) with a small quality loss. Only drop to Q3 or Q2 if Q4_K_M causes out-of-memory errors. Q2 files are faster because they are smaller, but the quality loss is noticeable on reasoning and coding tasks.' },
             { q: 'How do I check my available RAM on Windows?', a: 'Open Task Manager → Performance → Memory. The total shown is your system RAM — match it to the hardware decision table above (4 GB, 8 GB, or 16 GB tiers) to pick the right model.' },
-            { q: 'Does Ollama automatically use my integrated GPU?', a: 'Only where a supported backend exists. Ollama\'s documentation says Vulkan GPU support on Windows and Linux is enabled by default when the backend is installed, and it lists AMD Ryzen AI iGPUs under ROCm; it does not state support for Intel integrated GPUs. Verify with `ollama ps` after loading a model — the PROCESSOR column shows 100% CPU, 100% GPU or a split. Set `OLLAMA_VULKAN=0` to turn Vulkan GPUs off.' },
+            { q: 'Does Ollama automatically use my integrated GPU?', a: 'Only where a supported backend exists. Ollama\'s documentation says Vulkan GPU support on Windows and Linux is enabled by default when the backend is installed, and it lists AMD Ryzen AI iGPUs under ROCm; it does not list Intel integrated GPUs in a support table. Verify with `ollama ps` after loading a model — the PROCESSOR column shows 100% CPU, 100% GPU or a split. Set `OLLAMA_VULKAN=0` to turn Vulkan GPUs off.' },
             { q: 'What is the best free alternative to ChatGPT on a low-end PC?', a: 'Phi-4-mini (3.8B) at Q4_K_M on Ollama with 8 GB RAM, CPU-only, gives 15–25 tok/s — enough for chat, summaries, and coding help. Quality is lower than a frontier cloud model but sufficient for everyday tasks. Completely free, runs offline, no API key needed.' },
             { q: 'How much faster is a discrete GPU than CPU for local LLMs?', a: 'Typically 5–10× faster for the same model. A used RTX 4060 8 GB (price varies) usually outpaces the CPU-only setups covered in this guide. An Intel Iris iGPU sits in between at best — for example Qwen3 4B is estimated at 12–20 tok/s if the iGPU is used, versus an estimated 8–15 tok/s CPU-only for the closest comparable tier.' },
             { q: 'Is a local AI model the same thing as a local LLM?', a: 'For this guide, yes. "Local AI model" is the everyday phrasing for what the field calls a local LLM (large language model) — text-generating weights you download once and run on your own machine, offline. The distinction only matters when the AI model is not text-based: image generators like Stable Diffusion and speech models like Whisper also run locally, but they have different hardware profiles and none of the tok/s figures in this guide apply to them.' },
@@ -530,7 +530,7 @@ schema: {
             'name': 'What is the fastest local LLM for a low-end PC?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B at Q4_K_M is the fastest model in this guide — 25–40 tok/s on a modern i5/Ryzen 5 with 4 GB RAM and no GPU. For better quality at a similar speed tier, Phi-4-mini (3.8B) runs 15–25 tok/s on 8 GB RAM and handles coding and reasoning noticeably better.',
+              'text': 'Qwen3 1.7B at Q4_K_M is the fastest of the tier picks in this guide (smaller models such as Qwen3 0.6B are faster still, at much lower quality) — an estimated 25–40 tok/s on a modern i5/Ryzen 5 with 4 GB RAM and no GPU. For better quality at a similar speed tier, Phi-4-mini (3.8B) runs 15–25 tok/s on 8 GB RAM and handles coding and reasoning noticeably better.',
             },
           },
           {
@@ -538,7 +538,7 @@ schema: {
             'name': 'Can I run a local LLM on 4 GB RAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes — Qwen3 1.7B at Q4_K_M is the recommended pick for 4 GB RAM, CPU-only, reaching 25–40 tok/s on a modern i5/Ryzen 5. It is the fastest model in this guide and fits comfortably with headroom for the OS.',
+              'text': 'Yes — Qwen3 1.7B at Q4_K_M is the recommended pick for 4 GB RAM, CPU-only, reaching 25–40 tok/s on a modern i5/Ryzen 5. It is the fastest of the tier picks in this guide and fits comfortably with headroom for the OS.',
             },
           },
           {
@@ -578,7 +578,7 @@ schema: {
             'name': 'Does Ollama automatically use my integrated GPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Only where a supported backend exists. Ollama\'s documentation says Vulkan GPU support on Windows and Linux is enabled by default when the backend is installed, and it lists AMD Ryzen AI iGPUs under ROCm; it does not state support for Intel integrated GPUs. Verify with `ollama ps` after loading a model — the PROCESSOR column shows 100% CPU, 100% GPU or a split. Set `OLLAMA_VULKAN=0` to turn Vulkan GPUs off.',
+              'text': 'Only where a supported backend exists. Ollama\'s documentation says Vulkan GPU support on Windows and Linux is enabled by default when the backend is installed, and it lists AMD Ryzen AI iGPUs under ROCm; it does not list Intel integrated GPUs in a support table. Verify with `ollama ps` after loading a model — the PROCESSOR column shows 100% CPU, 100% GPU or a split. Set `OLLAMA_VULKAN=0` to turn Vulkan GPUs off.',
             },
           },
           {
@@ -793,7 +793,7 @@ schema: {
           title: 'GPU vs CPU para LLMs locales: ¿cuál es más rápido en hardware de gama baja?',
           content: [
             '**GPU discreta:** normalmente entre 5 y 10 veces más rápida que solo CPU con el mismo modelo, porque la VRAM tiene mucho más ancho de banda de memoria que la RAM del sistema. Una RTX 4060 8 GB de segunda mano (el precio varía) es una mejora económica frecuente. Consulta la [guía de GPUs económicas](/es/local-llms/best-budget-gpus-local-llm) para opciones rentables.',
-            '**iGPU (integrada):** comparte la RAM del sistema con la CPU, así que el límite principal — el ancho de banda de memoria — sigue igual. La ganancia suele ser modesta y depende del soporte de los controladores. La documentación de Ollama indica que el soporte de GPU con Vulkan en Windows y Linux está activado por defecto cuando el backend está instalado, y menciona las iGPU AMD Ryzen AI bajo ROCm; no indica que las GPU integradas de Intel sean compatibles. Comprueba `ollama ps`: la columna PROCESSOR muestra si el modelo se ejecuta en CPU, GPU o repartido.',
+            '**iGPU (integrada):** comparte la RAM del sistema con la CPU, así que el límite principal — el ancho de banda de memoria — sigue igual. La ganancia suele ser modesta y depende del soporte de los controladores. La documentación de Ollama indica que el soporte de GPU con Vulkan en Windows y Linux está activado por defecto cuando el backend está instalado, y menciona las iGPU AMD Ryzen AI bajo ROCm; no incluye las GPU integradas de Intel en una tabla de compatibilidad. Comprueba `ollama ps`: la columna PROCESSOR muestra si el modelo se ejecuta en CPU, GPU o repartido.',
             '**Solo CPU:** funciona en cualquier PC sin configurar controladores. La velocidad es aproximadamente el ancho de banda de memoria ÷ el tamaño del archivo del modelo, por eso la RAM de doble canal y un archivo Q4_K_M pequeño importan más que la frecuencia de la CPU.',
             '**Regla:** Usa una GPU discreta si la tienes. Si no, ejecuta el mismo prompt con la iGPU activada y desactivada (`OLLAMA_VULKAN=0` desactiva las GPU Vulkan) y quédate con la opción más rápida.',
           ],
@@ -924,9 +924,9 @@ schema: {
           id: 'regional-context',
           title: 'LLMs locales en PCs de gama baja: contexto regional',
           content: [
-            '**UE / RGPD:** Local en hardware de gama baja: ningún dato de inferencia sale del dispositivo — para muchas PYMES y autónomos, una forma técnicamente sencilla de evitar los riesgos de transferencia del art. 44 del RGPD. Si la Ley de IA de la UE u otras obligaciones se aplican a tu uso depende de quién despliega el sistema y con qué fin; esta guía no es asesoramiento jurídico. Para las pymes alemanas que valoran los LLMs locales para tareas internas de negocio, mantener los documentos en el dispositivo evita enviarlos a un encargado de tratamiento externo, pero el cumplimiento global en materia de protección de datos depende de toda la operación, no solo de la arquitectura de inferencia.',
+            '**UE / RGPD:** Local en hardware de gama baja: si se ejecuta sin conexión, ningún dato de inferencia sale del dispositivo — para muchas PYMES y autónomos, una forma técnicamente sencilla de evitar los riesgos de transferencia del art. 44 del RGPD. Si la Ley de IA de la UE u otras obligaciones se aplican a tu uso depende de quién despliega el sistema y con qué fin; esta guía no es asesoramiento jurídico. Para las pymes alemanas que valoran los LLMs locales para tareas internas de negocio, mantener los documentos en el dispositivo evita enviarlos a un encargado de tratamiento externo, pero el cumplimiento global en materia de protección de datos depende de toda la operación, no solo de la arquitectura de inferencia.',
             '**América Latina:** La inferencia local en hardware de consumo puede reducir la necesidad de enviar datos de inferencia a proveedores externos, algo relevante en la LFPDPPP (México), la Ley 25.326 (Argentina) y la Ley 1581 (Colombia). Dado que los datos de inferencia no salen del dispositivo, no hace falta enviar la información a proveedores de IA externos, lo que puede simplificar los requisitos de residencia de datos donde apliquen. Para empresas latinoamericanas que procesan datos de clientes o documentos internos sensibles, la inferencia local en hardware accesible solo con CPU puede ser una opción sencilla; el cumplimiento normativo sigue dependiendo de toda la operación y esta guía no es asesoramiento jurídico.',
-            '**China:** La inferencia local de Qwen3 y DeepSeek-R1 en hardware de consumo es una opción para usuarios en China que no pueden acceder a las APIs en la nube de modelos no chinos. Qwen3 0.6B, 1.7B y 4B funcionan en hardware solo CPU, proporcionando una alternativa funcional a las APIs en la nube para usuarios con hardware limitado.',
+            '**China:** La inferencia local de Qwen3 y de los modelos destilados de DeepSeek-R1 en hardware de consumo es una opción para usuarios en China que no pueden acceder a las APIs en la nube de modelos no chinos. Qwen3 0.6B, 1.7B y 4B funcionan en hardware solo CPU, proporcionando una alternativa funcional a las APIs en la nube para usuarios con hardware limitado.',
           ],
         },
         'faqSection': {
@@ -941,13 +941,13 @@ schema: {
             { q: '¿Cómo afecta la cuantización a la velocidad de inferencia?', a: 'La cuantización reduce principalmente los requisitos de ancho de banda de memoria, no el cómputo. Un archivo Q2 (2 bits) es más pequeño que uno Q4 (4 bits), así que la CPU lee menos bytes por token y genera más rápido, aproximadamente en proporción al tamaño del archivo. Sin embargo, Q2 pierde mucha más calidad de salida. La regla práctica: usa Q4_K_M por defecto para todos los niveles de esta guía, baja a Q3 solo si Q4_K_M no cabe en la RAM disponible.' },
             { q: '¿Puedo usar cuantización por debajo de Q2?', a: 'Técnicamente sí (existen formatos IQ1 de 1 bit en llama.cpp), pero la calidad de salida se desploma con ese tamaño. No se recomienda para ningún caso de uso práctico, incluido el nivel de 4 GB RAM de esta guía — elige mejor un modelo más pequeño en Q4_K_M.' },
             { q: '¿Se admite la inferencia híbrida CPU + iGPU?', a: 'A veces. Ollama puede repartir un modelo entre CPU y GPU cuando encuentra un backend de GPU compatible, y `ollama ps` muestra el reparto en la columna PROCESSOR. Una iGPU comparte la RAM del sistema con la CPU, así que el ancho de banda de memoria — el principal límite de velocidad — no aumenta. En un sistema de 8 GB RAM con iGPU Intel Iris Xe, se estima que Qwen3 4B alcanza 12–20 tok/s si se usa la iGPU. Prueba con `OLLAMA_VULKAN=0` para comparar con solo CPU.' },
-            { q: '¿Cuál es el LLM local más rápido para un PC de gama baja?', a: 'Qwen3 1.7B en Q4_K_M es el modelo más rápido de esta guía — 25–40 tok/s en un i5/Ryzen 5 moderno con 4 GB RAM y sin GPU. Para mejor calidad a una velocidad similar, Phi-4-mini (3.8B) funciona a 15–25 tok/s con 8 GB RAM y maneja código y razonamiento notablemente mejor.' },
-            { q: '¿Puedo ejecutar un LLM local con 4 GB de RAM?', a: 'Sí — Qwen3 1.7B en Q4_K_M es la opción recomendada para 4 GB RAM, solo CPU, alcanzando 25–40 tok/s en un i5/Ryzen 5 moderno. Es el modelo más rápido de esta guía y cabe con margen para el SO.' },
+            { q: '¿Cuál es el LLM local más rápido para un PC de gama baja?', a: 'Qwen3 1.7B en Q4_K_M es el más rápido de las opciones por nivel de esta guía (los modelos más pequeños, como Qwen3 0.6B, son aún más rápidos, con mucha menos calidad) — unos 25–40 tok/s estimados en un i5/Ryzen 5 moderno con 4 GB RAM y sin GPU. Para mejor calidad a una velocidad similar, Phi-4-mini (3.8B) funciona a 15–25 tok/s con 8 GB RAM y maneja código y razonamiento notablemente mejor.' },
+            { q: '¿Puedo ejecutar un LLM local con 4 GB de RAM?', a: 'Sí — Qwen3 1.7B en Q4_K_M es la opción recomendada para 4 GB RAM, solo CPU, alcanzando 25–40 tok/s en un i5/Ryzen 5 moderno. Es el más rápido de las opciones por nivel de esta guía y cabe con margen para el SO.' },
             { q: '¿Se necesita GPU para mayor velocidad?', a: 'No — todos los modelos de esta guía funcionan solo con CPU. Una iGPU Intel Iris puede aportar un impulso modesto de velocidad (Qwen3 4B: est. 12–20 tok/s si se usa la iGPU), pero es opcional y depende del soporte de los controladores. Una GPU discreta como una RTX 4060 8 GB usada suele ser 5–10× más rápida que solo CPU con el mismo modelo, pero es una vía de mejora aparte, no un requisito.' },
             { q: '¿Es suficiente una iGPU Intel Iris para LLMs locales?', a: 'Puede ayudar, pero no está garantizado. Con 8 GB RAM y una iGPU Intel Iris Xe, se estima que Qwen3 4B alcanza 12–20 tok/s si Ollama realmente usa la iGPU; con 16 GB RAM, se estima que Llama 3.2 3B alcanza 20–35 tok/s. Como una iGPU comparte la RAM del sistema con la CPU, la ganancia suele ser modesta. Ejecuta el mismo prompt con y sin la iGPU y quédate con el ajuste más rápido.' },
             { q: '¿Debo usar cuantización Q2 o Q4 en hardware de gama baja?', a: 'Empieza con Q4_K_M — cabe en todos los niveles de modelo de esta guía (1.7B hasta 8B) con una pérdida de calidad pequeña. Solo baja a Q3 o Q2 si Q4_K_M provoca errores de falta de memoria. Los archivos Q2 son más rápidos porque son más pequeños, pero la pérdida de calidad es notable en tareas de razonamiento y código.' },
             { q: '¿Cómo verifico mi RAM disponible en Windows?', a: 'Abre el Administrador de tareas → Rendimiento → Memoria. El total mostrado es tu RAM del sistema — compáralo con la tabla de decisión de hardware de arriba (niveles de 4 GB, 8 GB o 16 GB) para elegir el modelo correcto.' },
-            { q: '¿Ollama usa automáticamente mi GPU integrada?', a: 'Solo donde existe un backend compatible. La documentación de Ollama indica que el soporte de GPU con Vulkan en Windows y Linux está activado por defecto cuando el backend está instalado, y menciona las iGPU AMD Ryzen AI bajo ROCm; no indica compatibilidad con las GPU integradas de Intel. Verifica con `ollama ps` después de cargar un modelo — la columna PROCESSOR muestra 100% CPU, 100% GPU o un reparto. Define `OLLAMA_VULKAN=0` para desactivar las GPU Vulkan.' },
+            { q: '¿Ollama usa automáticamente mi GPU integrada?', a: 'Solo donde existe un backend compatible. La documentación de Ollama indica que el soporte de GPU con Vulkan en Windows y Linux está activado por defecto cuando el backend está instalado, y menciona las iGPU AMD Ryzen AI bajo ROCm; no incluye las GPU integradas de Intel en una tabla de compatibilidad. Verifica con `ollama ps` después de cargar un modelo — la columna PROCESSOR muestra 100% CPU, 100% GPU o un reparto. Define `OLLAMA_VULKAN=0` para desactivar las GPU Vulkan.' },
             { q: '¿Cuál es la mejor alternativa gratuita a ChatGPT en un PC de gama baja?', a: 'Phi-4-mini (3.8B) en Q4_K_M en Ollama con 8 GB RAM, solo CPU, da 15–25 tok/s — suficiente para chat, resúmenes y ayuda con código. La calidad es menor que un modelo de frontera en la nube pero suficiente para tareas cotidianas. Completamente gratuito, funciona offline, sin necesidad de clave API.' },
             { q: '¿Cuánto más rápida es una GPU discreta que la CPU para LLMs locales?', a: 'Normalmente entre 5 y 10 veces más rápida con el mismo modelo. Una RTX 4060 8 GB usada (el precio varía) suele superar a las configuraciones solo CPU de esta guía. Una iGPU Intel Iris se sitúa como mucho en un punto intermedio — por ejemplo, se estima que Qwen3 4B alcanza 12–20 tok/s si se usa la iGPU, frente a unos 8–15 tok/s estimados solo CPU en el nivel comparable más cercano.' },
             { q: '¿Un modelo de IA local es lo mismo que un LLM local?', a: 'Para esta guía, sí. "Modelo de IA local" es la forma coloquial de referirse a lo que el sector llama LLM local (modelo de lenguaje grande) — pesos generadores de texto que descargas una vez y ejecutas en tu propia máquina, sin conexión. La distinción solo importa cuando el modelo de IA no se basa en texto: generadores de imágenes como Stable Diffusion y modelos de voz como Whisper también funcionan localmente, pero tienen perfiles de hardware distintos y ninguna de las cifras de tok/s de esta guía se les aplica.' },
@@ -1087,7 +1087,7 @@ schema: {
             'name': '¿Cuál es el LLM local más rápido para un PC de gama baja?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B en Q4_K_M es el modelo más rápido de esta guía — 25–40 tok/s en un i5/Ryzen 5 moderno con 4 GB RAM y sin GPU. Para mejor calidad a una velocidad similar, Phi-4-mini (3.8B) funciona a 15–25 tok/s con 8 GB RAM y maneja código y razonamiento notablemente mejor.',
+              'text': 'Qwen3 1.7B en Q4_K_M es el más rápido de las opciones por nivel de esta guía (los modelos más pequeños, como Qwen3 0.6B, son aún más rápidos, con mucha menos calidad) — unos 25–40 tok/s estimados en un i5/Ryzen 5 moderno con 4 GB RAM y sin GPU. Para mejor calidad a una velocidad similar, Phi-4-mini (3.8B) funciona a 15–25 tok/s con 8 GB RAM y maneja código y razonamiento notablemente mejor.',
             },
           },
           {
@@ -1095,7 +1095,7 @@ schema: {
             'name': '¿Puedo ejecutar un LLM local con 4 GB de RAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí — Qwen3 1.7B en Q4_K_M es la opción recomendada para 4 GB RAM, solo CPU, alcanzando 25–40 tok/s en un i5/Ryzen 5 moderno. Es el modelo más rápido de esta guía y cabe con margen para el SO.',
+              'text': 'Sí — Qwen3 1.7B en Q4_K_M es la opción recomendada para 4 GB RAM, solo CPU, alcanzando 25–40 tok/s en un i5/Ryzen 5 moderno. Es el más rápido de las opciones por nivel de esta guía y cabe con margen para el SO.',
             },
           },
           {
@@ -1135,7 +1135,7 @@ schema: {
             'name': '¿Ollama usa automáticamente mi GPU integrada?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Solo donde existe un backend compatible. La documentación de Ollama indica que el soporte de GPU con Vulkan en Windows y Linux está activado por defecto cuando el backend está instalado, y menciona las iGPU AMD Ryzen AI bajo ROCm; no indica compatibilidad con las GPU integradas de Intel. Verifica con `ollama ps` después de cargar un modelo — la columna PROCESSOR muestra 100% CPU, 100% GPU o un reparto. Define `OLLAMA_VULKAN=0` para desactivar las GPU Vulkan.',
+              'text': 'Solo donde existe un backend compatible. La documentación de Ollama indica que el soporte de GPU con Vulkan en Windows y Linux está activado por defecto cuando el backend está instalado, y menciona las iGPU AMD Ryzen AI bajo ROCm; no incluye las GPU integradas de Intel en una tabla de compatibilidad. Verifica con `ollama ps` después de cargar un modelo — la columna PROCESSOR muestra 100% CPU, 100% GPU o un reparto. Define `OLLAMA_VULKAN=0` para desactivar las GPU Vulkan.',
             },
           },
           {
@@ -1350,7 +1350,7 @@ schema: {
           title: 'GPU مقابل CPU لنماذج LLM المحلية: أيهما أسرع على العتاد منخفض المواصفات؟',
           content: [
             '**GPU منفصلة:** أسرع عادةً بـ 5–10 أضعاف من CPU فقط للنموذج نفسه، لأن VRAM يملك عرض نطاق ذاكرة أكبر بكثير من رام النظام. RTX 4060 8 GB مستعملة (السعر متغيّر) ترقية اقتصادية شائعة. راجع [دليل وحدات GPU الاقتصادية](/ar/local-llms/best-budget-gpus-local-llm) للخيارات المجدية.',
-            '**iGPU (مدمجة):** تتشارك رام النظام مع CPU، فيبقى القيد الرئيسي — عرض نطاق الذاكرة — كما هو. والمكسب عادةً متواضع ويتوقف على دعم برنامج التشغيل. يذكر توثيق Ollama أن دعم Vulkan لوحدات GPU على Windows وLinux مفعّل افتراضياً عند تثبيت الواجهة الخلفية، ويدرج وحدات iGPU من AMD Ryzen AI ضمن ROCm؛ ولا يذكر أن وحدات Intel الرسومية المدمجة مدعومة. تحقق بالأمر `ollama ps`: يبيّن عمود PROCESSOR هل يعمل النموذج على CPU أم GPU أم بتوزيع بينهما.',
+            '**iGPU (مدمجة):** تتشارك رام النظام مع CPU، فيبقى القيد الرئيسي — عرض نطاق الذاكرة — كما هو. والمكسب عادةً متواضع ويتوقف على دعم برنامج التشغيل. يذكر توثيق Ollama أن دعم Vulkan لوحدات GPU على Windows وLinux مفعّل افتراضياً عند تثبيت الواجهة الخلفية، ويدرج وحدات iGPU من AMD Ryzen AI ضمن ROCm؛ ولا يدرج وحدات Intel الرسومية المدمجة في جدول دعم. تحقق بالأمر `ollama ps`: يبيّن عمود PROCESSOR هل يعمل النموذج على CPU أم GPU أم بتوزيع بينهما.',
             '**CPU فقط:** يعمل على أي كمبيوتر دون إعداد برامج تشغيل. السرعة تساوي تقريباً عرض نطاق الذاكرة ÷ حجم ملف النموذج، ولذلك فإن الرام ثنائية القناة وملف Q4_K_M صغير يهمان أكثر من تردد CPU.',
             '**القاعدة:** استخدم GPU منفصلة إن كانت لديك. وإلا فشغّل الموجّه نفسه مع iGPU وبدونها (`OLLAMA_VULKAN=0` يوقف وحدات Vulkan GPU) واحتفظ بالأسرع.',
           ],
@@ -1481,9 +1481,9 @@ schema: {
           id: 'regional-context',
           title: 'نماذج LLM المحلية على أجهزة الكمبيوتر منخفضة المواصفات: السياق الإقليمي',
           content: [
-            '**الاتحاد الأوروبي / GDPR:** محلياً على أجهزة منخفضة التكلفة: لا تغادر بيانات الاستنتاج الجهاز — وهذه طريقة تقنية بسيطة لكثير من الشركات الصغيرة والمتوسطة والعاملين لحسابهم الخاص لتجنب مخاطر النقل وفق المادة 44 من اللائحة العامة لحماية البيانات. يتوقف انطباق قانون الذكاء الاصطناعي للاتحاد الأوروبي أو غيره من الالتزامات على استخدامك على من ينشر النظام ولأي غرض؛ وهذا الدليل ليس استشارة قانونية. وللشركات الألمانية الصغيرة والمتوسطة التي تدرس نماذج LLM المحلية لمهام العمل الداخلية، فإن إبقاء المستندات على الجهاز يتجنّب إرسالها إلى معالِج بيانات تابع لطرف ثالث، غير أن الامتثال الشامل لحماية البيانات يعتمد على التشغيل الكامل، وليس على بنية الاستنتاج وحدها.',
+            '**الاتحاد الأوروبي / GDPR:** محلياً على أجهزة منخفضة التكلفة: عند التشغيل دون اتصال بالإنترنت لا تغادر بيانات الاستنتاج الجهاز — وهذه طريقة تقنية بسيطة لكثير من الشركات الصغيرة والمتوسطة والعاملين لحسابهم الخاص لتجنب مخاطر النقل وفق المادة 44 من اللائحة العامة لحماية البيانات. يتوقف انطباق قانون الذكاء الاصطناعي للاتحاد الأوروبي أو غيره من الالتزامات على استخدامك على من ينشر النظام ولأي غرض؛ وهذا الدليل ليس استشارة قانونية. وللشركات الألمانية الصغيرة والمتوسطة التي تدرس نماذج LLM المحلية لمهام العمل الداخلية، فإن إبقاء المستندات على الجهاز يتجنّب إرسالها إلى معالِج بيانات تابع لطرف ثالث، غير أن الامتثال الشامل لحماية البيانات يعتمد على التشغيل الكامل، وليس على بنية الاستنتاج وحدها.',
             '**اليابان:** تؤكد إرشادات METI للذكاء الاصطناعي في قطاع الأعمال في اليابان على التعامل المسؤول مع البيانات. يُبقي الاستدلال على CPU لعتاد منخفض المواصفات، رغم بطئه، الموجّهات على الجهاز — فبعد تنزيل النموذج لا يحتاج الاستدلال نفسه إلى استدعاءات API. وبالنسبة للمهام باللغة اليابانية على Qwen3 بسرعات CPU ضمن النطاقات المذكورة أعلاه، فإن بضع ثوانٍ لكل جملة مقبولة لتلخيص المستندات غير العاجل.',
-            '**الصين:** يُعدّ الاستدلال المحلي لنموذجي Qwen3 وDeepSeek-R1 على العتاد الاستهلاكي خياراً للمستخدمين في الصين الذين لا يستطيعون الوصول إلى واجهات API السحابية للنماذج غير الصينية. تعمل Qwen3 0.6B و1.7B و4B على عتاد CPU فقط، موفّراً بديلاً عملياً لواجهات API السحابية للمستخدمين ذوي العتاد المحدود.',
+            '**الصين:** يُعدّ الاستدلال المحلي لنموذج Qwen3 وللنسخ المقطّرة من DeepSeek-R1 على العتاد الاستهلاكي خياراً للمستخدمين في الصين الذين لا يستطيعون الوصول إلى واجهات API السحابية للنماذج غير الصينية. تعمل Qwen3 0.6B و1.7B و4B على عتاد CPU فقط، موفّراً بديلاً عملياً لواجهات API السحابية للمستخدمين ذوي العتاد المحدود.',
           ],
         },
         'faqSection': {
@@ -1498,13 +1498,13 @@ schema: {
             { q: 'كيف يؤثر التكميم على سرعة الاستدلال؟', a: 'يقلّل التكميم أساساً متطلبات عرض نطاق الذاكرة، لا الحوسبة. ملف Q2 (2 بت) أصغر من ملف Q4 (4 بت)، فيقرأ CPU بايتات أقل لكل رمز ويولّد أسرع، بنسبة تقارب نسبة حجم الملف. لكن Q2 يفقد جودة المخرجات أكثر بكثير. القاعدة العملية: استخدم Q4_K_M افتراضياً لكل مستوى في هذا الدليل، اخفض إلى Q3 فقط إن لم يتناسب Q4_K_M مع الرام المتاحة.' },
             { q: 'هل يمكنني استخدام تكميم دون Q2؟', a: 'تقنياً نعم (توجد صيغ IQ1 بدقة 1 بت في llama.cpp)، لكن جودة المخرجات تنهار عند هذا الحجم. غير موصى به لأي حالة استخدام عملية، بما في ذلك مستوى 4 جيجابايت رام في هذا الدليل — اختر نموذجاً أصغر بصيغة Q4_K_M بدلاً من ذلك.' },
             { q: 'هل الاستدلال الهجين CPU + iGPU مدعوم؟', a: 'أحياناً. يستطيع Ollama تقسيم النموذج بين CPU وGPU عندما يجد واجهة GPU خلفية مدعومة، ويعرض الأمر `ollama ps` هذا التقسيم في عمود PROCESSOR. تتشارك iGPU رام النظام مع CPU، لذا لا يزداد عرض نطاق الذاكرة — القيد الرئيسي للسرعة. على نظام 8 جيجابايت رام مع iGPU من Intel Iris Xe، يُقدَّر Qwen3 4B بسرعة 12–20 tok/s إذا استُخدمت iGPU. اختبر بالقيمة `OLLAMA_VULKAN=0` للمقارنة مع CPU فقط.' },
-            { q: 'ما أسرع LLM محلي لكمبيوتر منخفض المواصفات؟', a: 'Qwen3 1.7B بصيغة Q4_K_M هو أسرع نموذج في هذا الدليل — 25–40 tok/s على i5/Ryzen 5 حديث مع 4 جيجابايت رام ودون GPU. لجودة أفضل بسرعة مماثلة، يعمل Phi-4-mini (3.8B) بسرعة 15–25 tok/s مع 8 جيجابايت رام ويدعم البرمجة والاستدلال بشكل أفضل ملحوظاً.' },
-            { q: 'هل يمكنني تشغيل LLM محلي بـ 4 جيجابايت من الرام؟', a: 'نعم — Qwen3 1.7B بصيغة Q4_K_M هو الخيار الموصى به لـ 4 جيجابايت رام، CPU فقط، ويبلغ 25–40 tok/s على i5/Ryzen 5 حديث. إنه أسرع نموذج في هذا الدليل ويتناسب بهامش لنظام التشغيل.' },
+            { q: 'ما أسرع LLM محلي لكمبيوتر منخفض المواصفات؟', a: 'Qwen3 1.7B بصيغة Q4_K_M هو الأسرع بين اختيارات الفئات في هذا الدليل (نماذج أصغر مثل Qwen3 0.6B أسرع منه، لكن بجودة أقل بكثير) — نحو 25–40 tok/s تقديرياً على i5/Ryzen 5 حديث مع 4 جيجابايت رام ودون GPU. لجودة أفضل بسرعة مماثلة، يعمل Phi-4-mini (3.8B) بسرعة 15–25 tok/s مع 8 جيجابايت رام ويدعم البرمجة والاستدلال بشكل أفضل ملحوظاً.' },
+            { q: 'هل يمكنني تشغيل LLM محلي بـ 4 جيجابايت من الرام؟', a: 'نعم — Qwen3 1.7B بصيغة Q4_K_M هو الخيار الموصى به لـ 4 جيجابايت رام، CPU فقط، ويبلغ 25–40 tok/s على i5/Ryzen 5 حديث. إنه الأسرع بين اختيارات الفئات في هذا الدليل ويتناسب بهامش لنظام التشغيل.' },
             { q: 'هل GPU ضرورية لسرعة أعلى؟', a: 'لا — تعمل جميع نماذج هذا الدليل على CPU فقط. قد تضيف iGPU من Intel Iris دفعة سرعة متواضعة (Qwen3 4B: تقديري 12–20 tok/s إذا استُخدمت iGPU) لكنها اختيارية وتتوقف على دعم برنامج التشغيل. GPU منفصلة مثل RTX 4060 8 GB مستعملة أسرع عادةً بـ 5–10× من CPU فقط للنموذج نفسه، لكنها مسار ترقية منفصل، لا شرط أساسي.' },
             { q: 'هل iGPU من Intel Iris كافية لنماذج LLM المحلية؟', a: 'قد تفيد، لكن ذلك غير مضمون. مع 8 جيجابايت رام وiGPU من Intel Iris Xe، يُقدَّر Qwen3 4B بسرعة 12–20 tok/s إذا استخدم Ollama وحدة iGPU فعلاً؛ ومع 16 جيجابايت رام يُقدَّر Llama 3.2 3B بسرعة 20–35 tok/s. ولأن iGPU تتشارك رام النظام مع CPU، فإن المكسب متواضع عادةً. شغّل الموجّه نفسه مع iGPU وبدونها واحتفظ بالإعداد الأسرع.' },
             { q: 'هل ينبغي أن أستخدم تكميم Q2 أم Q4 على العتاد منخفض المواصفات؟', a: 'ابدأ بـ Q4_K_M — يتناسب مع كل مستوى نموذج في هذا الدليل (من 1.7B إلى 8B) بفقدان جودة صغير. اخفض إلى Q3 أو Q2 فقط إن سبّب Q4_K_M أخطاء نفاد ذاكرة. ملفات Q2 أسرع لأنها أصغر، لكن فقدان الجودة ملحوظ في مهام الاستدلال والكود.' },
             { q: 'كيف أتحقق من الرام المتاحة لدي على Windows؟', a: 'افتح مدير المهام ← الأداء ← الذاكرة. الإجمالي المعروض هو رام النظام لديك — قارنه بجدول قرار العتاد أعلاه (مستويات 4 أو 8 أو 16 جيجابايت) لاختيار النموذج الصحيح.' },
-            { q: 'هل يستخدم Ollama وحدة GPU المدمجة لدي تلقائياً؟', a: 'فقط حيثما توجد واجهة خلفية مدعومة. يذكر توثيق Ollama أن دعم Vulkan لوحدات GPU على Windows وLinux مفعّل افتراضياً عند تثبيت الواجهة الخلفية، ويدرج وحدات iGPU من AMD Ryzen AI ضمن ROCm؛ ولا يذكر دعماً لوحدات Intel الرسومية المدمجة. تحقق بـ `ollama ps` بعد تحميل نموذج — يعرض عمود PROCESSOR القيمة 100% CPU أو 100% GPU أو توزيعاً بينهما. اضبط `OLLAMA_VULKAN=0` لإيقاف وحدات Vulkan GPU.' },
+            { q: 'هل يستخدم Ollama وحدة GPU المدمجة لدي تلقائياً؟', a: 'فقط حيثما توجد واجهة خلفية مدعومة. يذكر توثيق Ollama أن دعم Vulkan لوحدات GPU على Windows وLinux مفعّل افتراضياً عند تثبيت الواجهة الخلفية، ويدرج وحدات iGPU من AMD Ryzen AI ضمن ROCm؛ ولا يدرج وحدات Intel الرسومية المدمجة في جدول دعم. تحقق بـ `ollama ps` بعد تحميل نموذج — يعرض عمود PROCESSOR القيمة 100% CPU أو 100% GPU أو توزيعاً بينهما. اضبط `OLLAMA_VULKAN=0` لإيقاف وحدات Vulkan GPU.' },
             { q: 'ما أفضل بديل مجاني لـ ChatGPT على كمبيوتر منخفض المواصفات؟', a: 'Phi-4-mini (3.8B) بصيغة Q4_K_M على Ollama مع 8 جيجابايت رام، CPU فقط، يعطي 15–25 tok/s — كافٍ للدردشة والتلخيصات والمساعدة في الكود. الجودة أقل من نموذج سحابي متقدم لكنها كافية للمهام اليومية. مجاني تماماً، يعمل دون اتصال، دون حاجة لمفتاح API.' },
             { q: 'كم أسرع GPU منفصلة من CPU لنماذج LLM المحلية؟', a: 'أسرع عادةً بين 5 و10 أضعاف للنموذج نفسه. تتفوق RTX 4060 8 GB مستعملة (السعر متغيّر) عادةً على إعدادات CPU فقط المذكورة في هذا الدليل. تقع iGPU من Intel Iris في مرتبة وسطى في أفضل الأحوال — على سبيل المثال يُقدَّر Qwen3 4B بسرعة 12–20 tok/s إذا استُخدمت iGPU، مقابل تقدير 8–15 tok/s لـ CPU فقط في أقرب مستوى مقارن.' },
             { q: 'هل نموذج الذكاء الاصطناعي المحلي هو نفسه LLM المحلي؟', a: 'بالنسبة لهذا الدليل، نعم. "نموذج الذكاء الاصطناعي المحلي" هو التعبير الشائع لما يسميه المجال LLM محلي (نموذج لغوي كبير) — أوزان مولّدة للنص تُحمّل مرة واحدة وتُشغّل على جهازك الخاص، دون اتصال. لا يهم هذا التمييز إلا عندما يكون نموذج الذكاء الاصطناعي غير نصي: مولدات الصور مثل Stable Diffusion ونماذج الكلام مثل Whisper تعمل محلياً أيضاً، لكن لها ملفات أجهزة مختلفة ولا تنطبق عليها أرقام tok/s في هذا الدليل.' },
@@ -1646,7 +1646,7 @@ schema: {
             'name': 'ما أسرع LLM محلي لكمبيوتر منخفض المواصفات؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B بصيغة Q4_K_M هو أسرع نموذج في هذا الدليل — 25–40 tok/s على i5/Ryzen 5 حديث مع 4 جيجابايت رام ودون GPU. لجودة أفضل بسرعة مماثلة، يعمل Phi-4-mini (3.8B) بسرعة 15–25 tok/s مع 8 جيجابايت رام ويدعم البرمجة والاستدلال بشكل أفضل ملحوظاً.',
+              'text': 'Qwen3 1.7B بصيغة Q4_K_M هو الأسرع بين اختيارات الفئات في هذا الدليل (نماذج أصغر مثل Qwen3 0.6B أسرع منه، لكن بجودة أقل بكثير) — نحو 25–40 tok/s تقديرياً على i5/Ryzen 5 حديث مع 4 جيجابايت رام ودون GPU. لجودة أفضل بسرعة مماثلة، يعمل Phi-4-mini (3.8B) بسرعة 15–25 tok/s مع 8 جيجابايت رام ويدعم البرمجة والاستدلال بشكل أفضل ملحوظاً.',
             },
           },
           {
@@ -1654,7 +1654,7 @@ schema: {
             'name': 'هل يمكنني تشغيل LLM محلي بـ 4 جيجابايت من الرام؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم — Qwen3 1.7B بصيغة Q4_K_M هو الخيار الموصى به لـ 4 جيجابايت رام، CPU فقط، ويبلغ 25–40 tok/s على i5/Ryzen 5 حديث. إنه أسرع نموذج في هذا الدليل ويتناسب بهامش لنظام التشغيل.',
+              'text': 'نعم — Qwen3 1.7B بصيغة Q4_K_M هو الخيار الموصى به لـ 4 جيجابايت رام، CPU فقط، ويبلغ 25–40 tok/s على i5/Ryzen 5 حديث. إنه الأسرع بين اختيارات الفئات في هذا الدليل ويتناسب بهامش لنظام التشغيل.',
             },
           },
           {
@@ -1694,7 +1694,7 @@ schema: {
             'name': 'هل يستخدم Ollama وحدة GPU المدمجة لدي تلقائياً؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'فقط حيثما توجد واجهة خلفية مدعومة. يذكر توثيق Ollama أن دعم Vulkan لوحدات GPU على Windows وLinux مفعّل افتراضياً عند تثبيت الواجهة الخلفية، ويدرج وحدات iGPU من AMD Ryzen AI ضمن ROCm؛ ولا يذكر دعماً لوحدات Intel الرسومية المدمجة. تحقق بـ `ollama ps` بعد تحميل نموذج — يعرض عمود PROCESSOR القيمة 100% CPU أو 100% GPU أو توزيعاً بينهما. اضبط `OLLAMA_VULKAN=0` لإيقاف وحدات Vulkan GPU.',
+              'text': 'فقط حيثما توجد واجهة خلفية مدعومة. يذكر توثيق Ollama أن دعم Vulkan لوحدات GPU على Windows وLinux مفعّل افتراضياً عند تثبيت الواجهة الخلفية، ويدرج وحدات iGPU من AMD Ryzen AI ضمن ROCm؛ ولا يدرج وحدات Intel الرسومية المدمجة في جدول دعم. تحقق بـ `ollama ps` بعد تحميل نموذج — يعرض عمود PROCESSOR القيمة 100% CPU أو 100% GPU أو توزيعاً بينهما. اضبط `OLLAMA_VULKAN=0` لإيقاف وحدات Vulkan GPU.',
             },
           },
           {
@@ -1910,7 +1910,7 @@ schema: {
           title: 'GPU vs CPU para LLMs locais: qual é mais rápido em hardware de baixo custo?',
           content: [
             '**GPU dedicada:** normalmente 5–10× mais rápida que somente CPU para o mesmo modelo, porque a VRAM tem muito mais largura de banda de memória que a RAM do sistema. Uma RTX 4060 8 GB usada (preço varia) é um upgrade econômico comum. Veja o [guia de GPUs econômicas](/pt/local-llms/best-budget-gpus-local-llm) para opções custo-benefício.',
-            '**iGPU (integrada):** compartilha a RAM do sistema com a CPU, então o principal limite — a largura de banda da memória — continua o mesmo. O ganho costuma ser modesto e depende do suporte de drivers. A documentação do Ollama diz que o suporte a GPU Vulkan no Windows e no Linux vem ativado por padrão quando o backend está instalado e lista as iGPUs AMD Ryzen AI em ROCm; ela não diz que GPUs integradas Intel são suportadas. Confira `ollama ps`: a coluna PROCESSOR mostra se o modelo roda na CPU, na GPU ou dividido.',
+            '**iGPU (integrada):** compartilha a RAM do sistema com a CPU, então o principal limite — a largura de banda da memória — continua o mesmo. O ganho costuma ser modesto e depende do suporte de drivers. A documentação do Ollama diz que o suporte a GPU Vulkan no Windows e no Linux vem ativado por padrão quando o backend está instalado e lista as iGPUs AMD Ryzen AI em ROCm; ela não lista GPUs integradas Intel em uma tabela de suporte. Confira `ollama ps`: a coluna PROCESSOR mostra se o modelo roda na CPU, na GPU ou dividido.',
             '**Somente CPU:** roda em qualquer PC, sem configurar drivers. A velocidade é aproximadamente a largura de banda da memória ÷ o tamanho do arquivo do modelo, e é por isso que RAM dual-channel e um arquivo Q4_K_M pequeno pesam mais que o clock da CPU.',
             '**Regra:** use uma GPU dedicada se você tiver uma. Caso contrário, rode o mesmo prompt com a iGPU ligada e desligada (`OLLAMA_VULKAN=0` desativa as GPUs Vulkan) e fique com a opção mais rápida.',
           ],
@@ -2041,9 +2041,9 @@ schema: {
           id: 'regional-context',
           title: 'LLMs locais em PCs de baixo custo: contexto regional',
           content: [
-            '**Brasil / LGPD:** Rodar localmente em hardware de baixo custo significa que nenhum dado de inferência sai do dispositivo — uma forma tecnicamente simples que pode reduzir, para pequenas empresas e autônomos, o risco de transferência internacional de dados de inferência sob a LGPD. Como a inferência acontece no dispositivo, esse fluxo não envia os dados de inferência a provedores de IA externos. Este guia não é aconselhamento jurídico, e a conformidade geral com a LGPD ainda depende de toda a operação, não apenas da arquitetura de inferência.',
-            '**UE / GDPR:** Local em hardware de baixo custo: nenhum dado de inferência sai do dispositivo — para muitas PMEs e autônomos europeus, uma forma tecnicamente simples de evitar os riscos de transferência do art. 44 do GDPR. Se o AI Act da UE ou outras obrigações se aplicam ao seu uso depende de quem implanta o sistema e de qual finalidade; este guia não é aconselhamento jurídico. Para PMEs que avaliam LLMs locais em tarefas internas, manter os documentos no dispositivo evita enviá-los a um operador terceiro, mas a conformidade geral com a proteção de dados ainda depende de toda a operação, não apenas da arquitetura de inferência.',
-            '**China:** A inferência local de Qwen3 e DeepSeek-R1 em hardware de consumo é uma opção para usuários na China que não conseguem acessar APIs em nuvem de modelos não chineses. Qwen3 0.6B, 1.7B e 4B rodam em hardware somente CPU, oferecendo uma alternativa funcional a APIs em nuvem para usuários com hardware limitado.',
+            '**Brasil / LGPD:** Rodar localmente em hardware de baixo custo significa que, ao rodar offline, nenhum dado de inferência sai do dispositivo — uma forma tecnicamente simples que pode reduzir, para pequenas empresas e autônomos, o risco de transferência internacional de dados de inferência sob a LGPD. Como a inferência acontece no dispositivo, esse fluxo não envia os dados de inferência a provedores de IA externos. Este guia não é aconselhamento jurídico, e a conformidade geral com a LGPD ainda depende de toda a operação, não apenas da arquitetura de inferência.',
+            '**UE / GDPR:** Local em hardware de baixo custo: ao rodar offline, nenhum dado de inferência sai do dispositivo — para muitas PMEs e autônomos europeus, uma forma tecnicamente simples de evitar os riscos de transferência do art. 44 do GDPR. Se o AI Act da UE ou outras obrigações se aplicam ao seu uso depende de quem implanta o sistema e de qual finalidade; este guia não é aconselhamento jurídico. Para PMEs que avaliam LLMs locais em tarefas internas, manter os documentos no dispositivo evita enviá-los a um operador terceiro, mas a conformidade geral com a proteção de dados ainda depende de toda a operação, não apenas da arquitetura de inferência.',
+            '**China:** A inferência local de Qwen3 e de modelos destilados do DeepSeek-R1 em hardware de consumo é uma opção para usuários na China que não conseguem acessar APIs em nuvem de modelos não chineses. Qwen3 0.6B, 1.7B e 4B rodam em hardware somente CPU, oferecendo uma alternativa funcional a APIs em nuvem para usuários com hardware limitado.',
           ],
         },
         'faqSection': {
@@ -2058,12 +2058,12 @@ schema: {
             { q: 'Como a quantização afeta a velocidade de inferência?', a: 'A quantização reduz principalmente os requisitos de banda de memória, não a computação. Um arquivo Q2 (2 bits) é menor que um Q4 (4 bits), então a CPU lê menos bytes por token e gera mais rápido, aproximadamente em proporção ao tamanho do arquivo. Porém, o Q2 perde muito mais qualidade na saída. A regra prática: use Q4_K_M como padrão para todos os níveis deste guia, baixe para Q3 apenas se Q4_K_M não couber na RAM disponível.' },
             { q: 'Posso usar quantização abaixo de Q2?', a: 'Tecnicamente sim (existem formatos IQ1 de 1 bit no llama.cpp), mas a qualidade da saída colapsa nesse tamanho. Não recomendado para nenhum caso de uso prático, incluindo o nível de 4 GB de RAM deste guia — escolha um modelo menor em Q4_K_M.' },
             { q: 'A inferência híbrida CPU + iGPU é suportada?', a: 'Às vezes. O Ollama pode dividir um modelo entre CPU e GPU quando encontra um backend de GPU suportado, e o `ollama ps` mostra a divisão na coluna PROCESSOR. Uma iGPU compartilha a RAM do sistema com a CPU, então a largura de banda da memória — o principal limite de velocidade — não aumenta. Em um sistema de 8 GB de RAM com iGPU Intel Iris Xe, a estimativa para o Qwen3 4B é de 12–20 tok/s se a iGPU for usada. Teste com `OLLAMA_VULKAN=0` para comparar com somente CPU.' },
-            { q: 'Qual é o LLM local mais rápido para um PC de baixo custo?', a: 'O Qwen3 1.7B em Q4_K_M é o modelo mais rápido deste guia — 25–40 tok/s em um i5/Ryzen 5 moderno com 4 GB de RAM e sem GPU. Para melhor qualidade a uma velocidade parecida, o Phi-4-mini (3.8B) roda a 15–25 tok/s com 8 GB de RAM e dá conta de programação e raciocínio bem melhor.' },
-            { q: 'Posso rodar um LLM local com 4 GB de RAM?', a: 'Sim — o Qwen3 1.7B em Q4_K_M é a escolha recomendada para 4 GB de RAM, somente CPU, atingindo 25–40 tok/s em um i5/Ryzen 5 moderno. É o modelo mais rápido deste guia e cabe com folga para o SO.' },
+            { q: 'Qual é o LLM local mais rápido para um PC de baixo custo?', a: 'O Qwen3 1.7B em Q4_K_M é o mais rápido entre as escolhas por nível deste guia (modelos menores, como o Qwen3 0.6B, são ainda mais rápidos, com qualidade bem menor) — cerca de 25–40 tok/s (estimado) em um i5/Ryzen 5 moderno com 4 GB de RAM e sem GPU. Para melhor qualidade a uma velocidade parecida, o Phi-4-mini (3.8B) roda a 15–25 tok/s com 8 GB de RAM e dá conta de programação e raciocínio bem melhor.' },
+            { q: 'Posso rodar um LLM local com 4 GB de RAM?', a: 'Sim — o Qwen3 1.7B em Q4_K_M é a escolha recomendada para 4 GB de RAM, somente CPU, atingindo 25–40 tok/s em um i5/Ryzen 5 moderno. É o mais rápido entre as escolhas por nível deste guia e cabe com folga para o SO.' },
             { q: 'É preciso ter GPU para mais velocidade?', a: 'Não — todos os modelos deste guia rodam somente com CPU. Uma iGPU Intel Iris pode dar um ganho modesto de velocidade (Qwen3 4B: est. 12–20 tok/s se a iGPU for usada), mas é opcional e depende do suporte de drivers. Uma GPU dedicada como uma RTX 4060 8 GB usada costuma ser 5–10× mais rápida que somente CPU com o mesmo modelo, mas é um caminho de upgrade separado, não um requisito.' },
             { q: 'Uma iGPU Intel Iris é suficiente para LLMs locais?', a: 'Pode ajudar, mas não é garantido. Com 8 GB de RAM e uma iGPU Intel Iris Xe, a estimativa para o Qwen3 4B é de 12–20 tok/s se o Ollama realmente usar a iGPU; com 16 GB de RAM, a estimativa para o Llama 3.2 3B é de 20–35 tok/s. Como a iGPU compartilha a RAM do sistema com a CPU, o ganho costuma ser modesto. Rode o mesmo prompt com e sem a iGPU e fique com a configuração mais rápida.' },
             { q: 'Devo usar quantização Q2 ou Q4 em hardware de baixo custo?', a: 'Comece com Q4_K_M — ele cabe em todos os níveis de modelo deste guia (1.7B a 8B) com uma pequena perda de qualidade. Baixe para Q3 ou Q2 apenas se Q4_K_M causar erros de falta de memória. Os arquivos Q2 são mais rápidos por serem menores, mas a perda de qualidade é perceptível em tarefas de raciocínio e programação.' },
-            { q: 'O Ollama usa minha GPU integrada automaticamente?', a: 'Somente onde existe um backend suportado. A documentação do Ollama diz que o suporte a GPU Vulkan no Windows e no Linux vem ativado por padrão quando o backend está instalado e lista as iGPUs AMD Ryzen AI em ROCm; ela não informa suporte a GPUs integradas Intel. Verifique com `ollama ps` após carregar um modelo — a coluna PROCESSOR mostra 100% CPU, 100% GPU ou uma divisão. Defina `OLLAMA_VULKAN=0` para desativar as GPUs Vulkan.' },
+            { q: 'O Ollama usa minha GPU integrada automaticamente?', a: 'Somente onde existe um backend suportado. A documentação do Ollama diz que o suporte a GPU Vulkan no Windows e no Linux vem ativado por padrão quando o backend está instalado e lista as iGPUs AMD Ryzen AI em ROCm; ela não lista GPUs integradas Intel em uma tabela de suporte. Verifique com `ollama ps` após carregar um modelo — a coluna PROCESSOR mostra 100% CPU, 100% GPU ou uma divisão. Defina `OLLAMA_VULKAN=0` para desativar as GPUs Vulkan.' },
             { q: 'Qual é a melhor alternativa gratuita ao ChatGPT em um PC de baixo custo?', a: 'O Phi-4-mini (3.8B) em Q4_K_M no Ollama com 8 GB de RAM, somente CPU, entrega 15–25 tok/s — suficiente para chat, resumos e ajuda com código. Totalmente gratuito, roda offline, sem necessidade de chave de API.' },
             { q: 'Como verifico minha RAM disponível no Windows?', a: 'Abra o Gerenciador de Tarefas → Desempenho → Memória. O total mostrado é sua RAM do sistema — compare com a tabela de decisão de hardware acima (níveis de 4 GB, 8 GB ou 16 GB) para escolher o modelo certo.' },
             { q: 'Quanto mais rápida é uma GPU dedicada em comparação à CPU para LLMs locais?', a: 'Normalmente 5–10× mais rápida com o mesmo modelo. Uma RTX 4060 8 GB usada (preço varia) costuma superar as configurações somente CPU cobertas neste guia. Uma iGPU Intel Iris fica, no melhor caso, no meio-termo — por exemplo, a estimativa para o Qwen3 4B é de 12–20 tok/s se a iGPU for usada, contra uma estimativa de 8–15 tok/s somente CPU no nível comparável mais próximo.' },
@@ -2204,7 +2204,7 @@ schema: {
             'name': 'Qual é o LLM local mais rápido para um PC de baixo custo?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'O Qwen3 1.7B em Q4_K_M é o modelo mais rápido deste guia — 25–40 tok/s em um i5/Ryzen 5 moderno com 4 GB de RAM e sem GPU. Para melhor qualidade a uma velocidade parecida, o Phi-4-mini (3.8B) roda a 15–25 tok/s com 8 GB de RAM e dá conta de programação e raciocínio bem melhor.',
+              'text': 'O Qwen3 1.7B em Q4_K_M é o mais rápido entre as escolhas por nível deste guia (modelos menores, como o Qwen3 0.6B, são ainda mais rápidos, com qualidade bem menor) — cerca de 25–40 tok/s (estimado) em um i5/Ryzen 5 moderno com 4 GB de RAM e sem GPU. Para melhor qualidade a uma velocidade parecida, o Phi-4-mini (3.8B) roda a 15–25 tok/s com 8 GB de RAM e dá conta de programação e raciocínio bem melhor.',
             },
           },
           {
@@ -2212,7 +2212,7 @@ schema: {
             'name': 'Posso rodar um LLM local com 4 GB de RAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim — o Qwen3 1.7B em Q4_K_M é a escolha recomendada para 4 GB de RAM, somente CPU, atingindo 25–40 tok/s em um i5/Ryzen 5 moderno. É o modelo mais rápido deste guia e cabe com folga para o SO.',
+              'text': 'Sim — o Qwen3 1.7B em Q4_K_M é a escolha recomendada para 4 GB de RAM, somente CPU, atingindo 25–40 tok/s em um i5/Ryzen 5 moderno. É o mais rápido entre as escolhas por nível deste guia e cabe com folga para o SO.',
             },
           },
           {
@@ -2244,7 +2244,7 @@ schema: {
             'name': 'O Ollama usa minha GPU integrada automaticamente?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Somente onde existe um backend suportado. A documentação do Ollama diz que o suporte a GPU Vulkan no Windows e no Linux vem ativado por padrão quando o backend está instalado e lista as iGPUs AMD Ryzen AI em ROCm; ela não informa suporte a GPUs integradas Intel. Verifique com `ollama ps` após carregar um modelo — a coluna PROCESSOR mostra 100% CPU, 100% GPU ou uma divisão. Defina `OLLAMA_VULKAN=0` para desativar as GPUs Vulkan.',
+              'text': 'Somente onde existe um backend suportado. A documentação do Ollama diz que o suporte a GPU Vulkan no Windows e no Linux vem ativado por padrão quando o backend está instalado e lista as iGPUs AMD Ryzen AI em ROCm; ela não lista GPUs integradas Intel em uma tabela de suporte. Verifique com `ollama ps` após carregar um modelo — a coluna PROCESSOR mostra 100% CPU, 100% GPU ou uma divisão. Defina `OLLAMA_VULKAN=0` para desativar as GPUs Vulkan.',
             },
           },
           {
@@ -2467,7 +2467,7 @@ schema: {
           title: 'GPU vs. CPU für lokale LLMs: Was ist schneller auf Low-End-Hardware?',
           content: [
             '**Dedizierte GPU:** in der Regel 5–10× schneller als reine CPU beim selben Modell, weil VRAM eine weit höhere Speicherbandbreite hat als der Systemspeicher. Eine gebrauchte RTX 4060 8 GB (Preis schwankt) ist ein gängiges Budget-Upgrade. Weitere kostengünstige Optionen finden Sie im [Budget-GPU-Leitfaden](/de/local-llms/best-budget-gpus-local-llm).',
-            '**iGPU (integrierte Grafik):** teilt sich den Systemspeicher mit der CPU, sodass die wichtigste Grenze — die Speicherbandbreite — gleich bleibt. Ein Gewinn fällt meist bescheiden aus und hängt von der Treiberunterstützung ab. Laut Ollama-Dokumentation ist die Vulkan-GPU-Unterstützung unter Windows und Linux standardmäßig aktiviert, sofern das Backend installiert ist, und AMD-Ryzen-AI-iGPUs werden unter ROCm aufgeführt; Intel-Grafikeinheiten werden dort nicht als unterstützt genannt. Prüfen Sie `ollama ps`: Die Spalte PROCESSOR zeigt, ob das Modell auf CPU, GPU oder geteilt läuft.',
+            '**iGPU (integrierte Grafik):** teilt sich den Systemspeicher mit der CPU, sodass die wichtigste Grenze — die Speicherbandbreite — gleich bleibt. Ein Gewinn fällt meist bescheiden aus und hängt von der Treiberunterstützung ab. Laut Ollama-Dokumentation ist die Vulkan-GPU-Unterstützung unter Windows und Linux standardmäßig aktiviert, sofern das Backend installiert ist, und AMD-Ryzen-AI-iGPUs werden unter ROCm aufgeführt; Intel-Grafikeinheiten werden dort nicht in einer Support-Tabelle aufgeführt. Prüfen Sie `ollama ps`: Die Spalte PROCESSOR zeigt, ob das Modell auf CPU, GPU oder geteilt läuft.',
             '**Nur CPU:** läuft auf jedem PC ohne Treiber-Setup. Die Geschwindigkeit entspricht grob Speicherbandbreite ÷ Größe der Modelldatei; deshalb zählen Dual-Channel-RAM und eine kleine Q4_K_M-Datei mehr als die CPU-Taktfrequenz.',
             '**Regel:** Nutzen Sie eine dedizierte GPU, wenn Sie eine haben. Andernfalls führen Sie denselben Prompt mit und ohne iGPU aus (`OLLAMA_VULKAN=0` schaltet Vulkan-GPUs ab) und behalten Sie die schnellere Variante.',
           ],
@@ -2598,9 +2598,9 @@ schema: {
           id: 'regional-context',
           title: 'Lokale LLMs auf Low-End-PCs: Regionaler Kontext',
           content: [
-            '**EU / DSGVO:** Lokal auf Low-End-Hardware: Keine Inferenzdaten verlassen das Gerät — für viele KMU und Freiberufler im DACH-Raum eine technisch einfache Methode, Art.-44-Transferrisiken zu vermeiden. Ob der EU AI Act oder andere Pflichten für Ihren Einsatz gelten, hängt davon ab, wer das System betreibt und zu welchem Zweck; dieser Leitfaden ist keine Rechtsberatung. Für deutsche KMU, die lokale LLMs für interne Geschäftsaufgaben abwägen, vermeidet das Belassen der Dokumente auf dem Gerät die Weitergabe an einen Drittanbieter als Auftragsverarbeiter; die datenschutzrechtliche Gesamtkonformität hängt jedoch vom Betrieb ab, nicht allein von der Inferenz-Architektur.',
+            '**EU / DSGVO:** Lokal auf Low-End-Hardware: Bei Offline-Betrieb verlassen keine Inferenzdaten das Gerät — für viele KMU und Freiberufler im DACH-Raum eine technisch einfache Methode, Art.-44-Transferrisiken zu vermeiden. Ob der EU AI Act oder andere Pflichten für Ihren Einsatz gelten, hängt davon ab, wer das System betreibt und zu welchem Zweck; dieser Leitfaden ist keine Rechtsberatung. Für deutsche KMU, die lokale LLMs für interne Geschäftsaufgaben abwägen, vermeidet das Belassen der Dokumente auf dem Gerät die Weitergabe an einen Drittanbieter als Auftragsverarbeiter; die datenschutzrechtliche Gesamtkonformität hängt jedoch vom Betrieb ab, nicht allein von der Inferenz-Architektur.',
             '**Japan:** Japans METI-KI-Leitlinien für Unternehmen betonen den verantwortungsvollen Umgang mit Daten. CPU-Inferenz auf Low-End-Hardware ist zwar langsam, hält Prompts aber auf dem Gerät — sobald das Modell heruntergeladen ist, benötigt die Inferenz selbst keine API-Aufrufe. Für japanischsprachige Aufgaben mit Qwen3 bei CPU-Geschwindigkeiten in den obigen Bereichen sind einige Sekunden pro Satz für nicht zeitkritische Dokumentzusammenfassungen akzeptabel.',
-            '**China:** Lokale Inferenz von Qwen3 und DeepSeek-R1 auf Consumer-Hardware ist eine Option für Nutzer in China, die nicht-chinesische Cloud-APIs nicht erreichen können. Qwen3 0.6B, 1.7B und 4B laufen auf CPU-only-Hardware und bieten eine funktionale Alternative zu Cloud-APIs für Nutzer mit eingeschränkter Hardware.',
+            '**China:** Lokale Inferenz von Qwen3 und DeepSeek-R1-Distillationen auf Consumer-Hardware ist eine Option für Nutzer in China, die nicht-chinesische Cloud-APIs nicht erreichen können. Qwen3 0.6B, 1.7B und 4B laufen auf CPU-only-Hardware und bieten eine funktionale Alternative zu Cloud-APIs für Nutzer mit eingeschränkter Hardware.',
           ],
         },
         'faqSection': {
@@ -2615,15 +2615,15 @@ schema: {
             { q: 'Wie beeinflusst Quantisierung die Inferenzgeschwindigkeit?', a: 'Quantisierung reduziert primär den Speicherbandbreitenbedarf, nicht die Berechnung. Eine Q2-Datei (2-Bit) ist kleiner als eine Q4-Datei (4-Bit); die CPU liest daher pro Token weniger Bytes und generiert schneller, etwa im Verhältnis der Dateigröße. Q2 verliert jedoch deutlich mehr Ausgabequalität. Die praktische Regel: Verwenden Sie Q4_K_M als Standard für jede Stufe in diesem Leitfaden, wechseln Sie zu Q3 nur, wenn Q4_K_M nicht in den verfügbaren RAM passt.' },
             { q: 'Kann ich unter Q2 quantisieren?', a: 'Technisch ja (1-Bit-IQ1-Formate gibt es in llama.cpp), aber die Ausgabequalität bricht bei dieser Größe zusammen. Für keinen praktischen Anwendungsfall empfohlen, auch nicht für die 4-GB-RAM-Stufe in diesem Leitfaden — wählen Sie stattdessen ein kleineres Modell bei Q4_K_M.' },
             { q: 'Wird CPU + iGPU-Hybrid-Inferenz unterstützt?', a: 'Manchmal. Ollama kann ein Modell zwischen CPU und GPU aufteilen, wenn es ein unterstütztes GPU-Backend findet, und `ollama ps` zeigt die Aufteilung in der Spalte PROCESSOR. Eine iGPU teilt sich den Systemspeicher mit der CPU, sodass die Speicherbandbreite — die wichtigste Geschwindigkeitsgrenze — nicht steigt. Auf einem 8-GB-RAM-System mit Intel-Iris-Xe-iGPU wird Qwen3 4B auf geschätzt 12–20 Tok/s taxiert, wenn die iGPU genutzt wird. Testen Sie mit `OLLAMA_VULKAN=0`, um mit reiner CPU zu vergleichen.' },
-            { q: 'Was ist das schnellste lokale LLM für einen Low-End-PC?', a: 'Qwen3 1.7B bei Q4_K_M ist das schnellste Modell in diesem Leitfaden — 25–40 Tok/s auf einem modernen i5/Ryzen 5 mit 4 GB RAM ohne GPU. Für bessere Qualität bei ähnlicher Geschwindigkeit läuft Phi-4-mini (3.8B) mit 15–25 Tok/s bei 8 GB RAM und übernimmt Coding und Reasoning deutlich besser.' },
-            { q: 'Kann ich ein lokales LLM mit 4 GB RAM ausführen?', a: 'Ja — Qwen3 1.7B bei Q4_K_M ist die empfohlene Wahl für 4 GB RAM, nur CPU, mit 25–40 Tok/s auf einem modernen i5/Ryzen 5. Es ist das schnellste Modell in diesem Leitfaden und passt mit Puffer für das Betriebssystem.' },
+            { q: 'Was ist das schnellste lokale LLM für einen Low-End-PC?', a: 'Qwen3 1.7B bei Q4_K_M ist das schnellste der Stufenempfehlungen in diesem Leitfaden (kleinere Modelle wie Qwen3 0,6B sind noch schneller, bei deutlich geringerer Qualität) — geschätzt 25–40 Tok/s auf einem modernen i5/Ryzen 5 mit 4 GB RAM ohne GPU. Für bessere Qualität bei ähnlicher Geschwindigkeit läuft Phi-4-mini (3.8B) mit 15–25 Tok/s bei 8 GB RAM und übernimmt Coding und Reasoning deutlich besser.' },
+            { q: 'Kann ich ein lokales LLM mit 4 GB RAM ausführen?', a: 'Ja — Qwen3 1.7B bei Q4_K_M ist die empfohlene Wahl für 4 GB RAM, nur CPU, mit 25–40 Tok/s auf einem modernen i5/Ryzen 5. Es ist das schnellste der Stufenempfehlungen in diesem Leitfaden und passt mit Puffer für das Betriebssystem.' },
             { q: 'Ist eine GPU für Geschwindigkeit erforderlich?', a: 'Nein — jedes Modell in diesem Leitfaden läuft nur auf CPU. Eine Intel-Iris-iGPU kann einen bescheidenen Geschwindigkeitsschub bringen (Qwen3 4B: geschätzt 12–20 Tok/s, wenn die iGPU genutzt wird), ist aber optional und hängt von der Treiberunterstützung ab. Eine dedizierte GPU wie eine gebrauchte RTX 4060 8 GB ist typischerweise 5–10× schneller als reine CPU beim selben Modell, ist aber ein separater Upgrade-Pfad, keine Voraussetzung.' },
             { q: 'Muss ich bei der Verwendung lokaler LLMs auf Low-End-PCs die DSGVO beachten?', a: 'Für rein private Nutzung greift in der Regel die Haushaltsausnahme (Art. 2 Abs. 2 lit. c DSGVO). Verarbeiten Sie Daten anderer Personen beruflich (z. B. Kundendaten, Patienteninformationen), gelten die DSGVO-Pflichten weiterhin. Bei rein lokaler Inferenz ohne externen Anbieter entsteht für diese Verarbeitungsstufe kein Auftragsverarbeiter. Dies ist keine Rechtsberatung.' },
             { q: 'Ist der Einsatz lokaler LLMs auf Low-End-Hardware für den deutschen Mittelstand geeignet?', a: 'Das kann passen, etwa für interne Dokumente. Kleine lokale Modelle liefern aber keine verlässlichen Vertragsanalysen; prüfen Sie Ergebnisse stets selbst und stimmen Sie sich bei Bedarf mit Ihrer IT-Sicherheit ab (etwa nach BSI IT-Grundschutz). Für KMU bieten sich Phi-4-mini (3.8B) auf einem modernen CPU-System (8 GB RAM) oder Qwen3 8B (16 GB RAM) für höhere Qualität an. Dies ist keine Rechtsberatung.' },
             { q: 'Reicht eine Intel-Iris-iGPU für lokale LLMs?', a: 'Es kann helfen, ist aber nicht garantiert. Bei 8 GB RAM mit Intel-Iris-Xe-iGPU wird Qwen3 4B auf geschätzt 12–20 Tok/s taxiert, wenn Ollama die iGPU tatsächlich nutzt; bei 16 GB RAM liegt Llama 3.2 3B bei geschätzt 20–35 Tok/s. Weil sich eine iGPU den Systemspeicher mit der CPU teilt, fällt der Gewinn meist bescheiden aus. Führen Sie denselben Prompt mit und ohne iGPU aus und behalten Sie die schnellere Einstellung.' },
             { q: 'Sollte ich Q2- oder Q4-Quantisierung auf Low-End-Hardware verwenden?', a: 'Beginnen Sie mit Q4_K_M — es passt für jede Modellstufe in diesem Leitfaden (1.7B bis 8B) bei geringem Qualitätsverlust. Wechseln Sie nur zu Q3 oder Q2, wenn Q4_K_M Out-of-Memory-Fehler verursacht. Q2-Dateien sind schneller, weil sie kleiner sind, aber der Qualitätsverlust ist bei Reasoning- und Coding-Aufgaben spürbar.' },
             { q: 'Wie prüfe ich meinen verfügbaren RAM unter Windows?', a: 'Öffnen Sie Task-Manager → Leistung → Arbeitsspeicher. Der angezeigte Gesamtwert ist Ihr System-RAM — vergleichen Sie ihn mit der obigen Hardware-Entscheidungstabelle (4-, 8- oder 16-GB-Stufen), um das richtige Modell zu wählen.' },
-            { q: 'Nutzt Ollama automatisch meine integrierte GPU?', a: 'Nur dort, wo ein unterstütztes Backend existiert. Laut Ollama-Dokumentation ist die Vulkan-GPU-Unterstützung unter Windows und Linux standardmäßig aktiviert, sofern das Backend installiert ist, und AMD-Ryzen-AI-iGPUs werden unter ROCm aufgeführt; eine Unterstützung für integrierte Intel-GPUs wird nicht genannt. Prüfen Sie mit `ollama ps` nach dem Laden eines Modells — die Spalte PROCESSOR zeigt 100 % CPU, 100 % GPU oder eine Aufteilung. Setzen Sie `OLLAMA_VULKAN=0`, um Vulkan-GPUs abzuschalten.' },
+            { q: 'Nutzt Ollama automatisch meine integrierte GPU?', a: 'Nur dort, wo ein unterstütztes Backend existiert. Laut Ollama-Dokumentation ist die Vulkan-GPU-Unterstützung unter Windows und Linux standardmäßig aktiviert, sofern das Backend installiert ist, und AMD-Ryzen-AI-iGPUs werden unter ROCm aufgeführt; integrierte Intel-GPUs werden nicht in einer Support-Tabelle aufgeführt. Prüfen Sie mit `ollama ps` nach dem Laden eines Modells — die Spalte PROCESSOR zeigt 100 % CPU, 100 % GPU oder eine Aufteilung. Setzen Sie `OLLAMA_VULKAN=0`, um Vulkan-GPUs abzuschalten.' },
             { q: 'Was ist die beste kostenlose Alternative zu ChatGPT auf einem Low-End-PC?', a: 'Phi-4-mini (3.8B) bei Q4_K_M auf Ollama mit 8 GB RAM, nur CPU, liefert 15–25 Tok/s — genug für Chat, Zusammenfassungen und Coding-Hilfe. Die Qualität ist niedriger als bei einem Frontier-Cloud-Modell, aber für Alltagsaufgaben ausreichend. Komplett kostenlos, läuft offline, kein API-Key nötig.' },
             { q: 'Um wie viel schneller ist eine dedizierte GPU als CPU bei lokalen LLMs?', a: 'Typischerweise 5–10× schneller beim selben Modell. Eine gebrauchte RTX 4060 8 GB (Preis schwankt) übertrifft die in diesem Leitfaden behandelten CPU-only-Konfigurationen in der Regel. Eine Intel-Iris-iGPU liegt allenfalls dazwischen — Qwen3 4B kommt z. B. auf geschätzt 12–20 Tok/s, wenn die iGPU genutzt wird, gegenüber geschätzt 8–15 Tok/s bei reiner CPU auf der vergleichbarsten Stufe.' },
             { q: 'Ist ein lokales KI-Modell dasselbe wie ein lokales LLM?', a: 'Für diesen Leitfaden: ja. "Lokales KI-Modell" ist die umgangssprachliche Bezeichnung für das, was der Fachbereich lokales LLM (Large Language Model) nennt — textgenerierende Gewichte, die Sie einmal herunterladen und offline auf Ihrem eigenen Gerät ausführen. Der Unterschied spielt nur eine Rolle, wenn das KI-Modell nicht textbasiert ist: Bildgeneratoren wie Stable Diffusion und Sprachmodelle wie Whisper laufen ebenfalls lokal, haben aber andere Hardware-Profile, und keine der Tok/s-Angaben in diesem Leitfaden gilt für sie.' },
@@ -2763,7 +2763,7 @@ schema: {
             'name': 'Was ist das schnellste lokale LLM für einen Low-End-PC?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B bei Q4_K_M ist das schnellste Modell in diesem Leitfaden — 25–40 Tok/s auf einem modernen i5/Ryzen 5 mit 4 GB RAM ohne GPU. Für bessere Qualität bei ähnlicher Geschwindigkeit läuft Phi-4-mini (3.8B) mit 15–25 Tok/s bei 8 GB RAM und übernimmt Coding und Reasoning deutlich besser.',
+              'text': 'Qwen3 1.7B bei Q4_K_M ist das schnellste der Stufenempfehlungen in diesem Leitfaden (kleinere Modelle wie Qwen3 0,6B sind noch schneller, bei deutlich geringerer Qualität) — geschätzt 25–40 Tok/s auf einem modernen i5/Ryzen 5 mit 4 GB RAM ohne GPU. Für bessere Qualität bei ähnlicher Geschwindigkeit läuft Phi-4-mini (3.8B) mit 15–25 Tok/s bei 8 GB RAM und übernimmt Coding und Reasoning deutlich besser.',
             },
           },
           {
@@ -2771,7 +2771,7 @@ schema: {
             'name': 'Kann ich ein lokales LLM mit 4 GB RAM ausführen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja — Qwen3 1.7B bei Q4_K_M ist die empfohlene Wahl für 4 GB RAM, nur CPU, mit 25–40 Tok/s auf einem modernen i5/Ryzen 5. Es ist das schnellste Modell in diesem Leitfaden und passt mit Puffer für das Betriebssystem.',
+              'text': 'Ja — Qwen3 1.7B bei Q4_K_M ist die empfohlene Wahl für 4 GB RAM, nur CPU, mit 25–40 Tok/s auf einem modernen i5/Ryzen 5. Es ist das schnellste der Stufenempfehlungen in diesem Leitfaden und passt mit Puffer für das Betriebssystem.',
             },
           },
           {
@@ -2827,7 +2827,7 @@ schema: {
             'name': 'Nutzt Ollama automatisch meine integrierte GPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nur dort, wo ein unterstütztes Backend existiert. Laut Ollama-Dokumentation ist die Vulkan-GPU-Unterstützung unter Windows und Linux standardmäßig aktiviert, sofern das Backend installiert ist, und AMD-Ryzen-AI-iGPUs werden unter ROCm aufgeführt; eine Unterstützung für integrierte Intel-GPUs wird nicht genannt. Prüfen Sie mit `ollama ps` nach dem Laden eines Modells — die Spalte PROCESSOR zeigt 100 % CPU, 100 % GPU oder eine Aufteilung. Setzen Sie `OLLAMA_VULKAN=0`, um Vulkan-GPUs abzuschalten.',
+              'text': 'Nur dort, wo ein unterstütztes Backend existiert. Laut Ollama-Dokumentation ist die Vulkan-GPU-Unterstützung unter Windows und Linux standardmäßig aktiviert, sofern das Backend installiert ist, und AMD-Ryzen-AI-iGPUs werden unter ROCm aufgeführt; integrierte Intel-GPUs werden nicht in einer Support-Tabelle aufgeführt. Prüfen Sie mit `ollama ps` nach dem Laden eines Modells — die Spalte PROCESSOR zeigt 100 % CPU, 100 % GPU oder eine Aufteilung. Setzen Sie `OLLAMA_VULKAN=0`, um Vulkan-GPUs abzuschalten.',
             },
           },
           {
@@ -3042,7 +3042,7 @@ schema: {
           title: 'GPU vs CPU pour les LLMs locaux : lequel est plus rapide sur matériel bas de gamme ?',
           content: [
             '**GPU dédié :** généralement 5–10× plus rapide que le CPU seul pour le même modèle, car la VRAM offre bien plus de bande passante mémoire que la RAM système. Une RTX 4060 8 Go d\'occasion (prix variable) est une mise à niveau économique courante. Consultez le [guide GPU budget](/fr/local-llms/best-budget-gpus-local-llm) pour des options économiques.',
-            '**iGPU (graphiques intégrés) :** partage la RAM système avec le CPU, donc la principale limite — la bande passante mémoire — reste la même. Le gain est généralement modeste et dépend de la prise en charge des pilotes. La documentation d\'Ollama indique que la prise en charge GPU Vulkan sous Windows et Linux est activée par défaut lorsque le backend est installé, et cite les iGPU AMD Ryzen AI sous ROCm ; elle n\'indique pas que les GPU intégrés Intel sont pris en charge. Vérifiez avec `ollama ps` : la colonne PROCESSOR indique si le modèle tourne sur CPU, GPU ou en mode partagé.',
+            '**iGPU (graphiques intégrés) :** partage la RAM système avec le CPU, donc la principale limite — la bande passante mémoire — reste la même. Le gain est généralement modeste et dépend de la prise en charge des pilotes. La documentation d\'Ollama indique que la prise en charge GPU Vulkan sous Windows et Linux est activée par défaut lorsque le backend est installé, et cite les iGPU AMD Ryzen AI sous ROCm ; elle ne répertorie pas les GPU intégrés Intel dans un tableau de prise en charge. Vérifiez avec `ollama ps` : la colonne PROCESSOR indique si le modèle tourne sur CPU, GPU ou en mode partagé.',
             '**CPU seul :** fonctionne sur n\'importe quel PC sans configuration de pilote. La vitesse est à peu près la bande passante mémoire ÷ la taille du fichier du modèle, d\'où l\'importance de la RAM double canal et d\'un petit fichier Q4_K_M, plus que de la fréquence du CPU.',
             '**Règle :** Utilisez un GPU dédié si vous en avez un. Sinon, lancez le même prompt avec l\'iGPU activé puis désactivé (`OLLAMA_VULKAN=0` désactive les GPU Vulkan) et gardez le réglage le plus rapide.',
           ],
@@ -3173,9 +3173,9 @@ schema: {
           id: 'regional-context',
           title: 'LLMs locaux sur PC bas de gamme : contexte régional',
           content: [
-            '**UE / RGPD :** Local sur matériel d\'entrée de gamme : aucune donnée d\'inférence ne quitte l\'appareil — pour beaucoup de PME et d\'indépendants, une méthode techniquement simple pour éviter les risques de transfert de l\'art. 44 RGPD. L\'application du règlement européen sur l\'IA ou d\'autres obligations à votre usage dépend de qui déploie le système et dans quel but ; ce guide ne constitue pas un conseil juridique. Pour les données professionnelles sensibles (financières, médicales, juridiques), garder les documents sur l\'appareil évite de les confier à un sous-traitant tiers, et la CNIL publie des ressources sur l\'IA et le RGPD à consulter. La conformité globale en matière de protection des données dépend cependant de l\'ensemble de votre fonctionnement, et pas seulement de l\'architecture d\'inférence.',
+            '**UE / RGPD :** Local sur matériel d\'entrée de gamme : en fonctionnement hors ligne, aucune donnée d\'inférence ne quitte l\'appareil — pour beaucoup de PME et d\'indépendants, une méthode techniquement simple pour éviter les risques de transfert de l\'art. 44 RGPD. L\'application du règlement européen sur l\'IA ou d\'autres obligations à votre usage dépend de qui déploie le système et dans quel but ; ce guide ne constitue pas un conseil juridique. Pour les données professionnelles sensibles (financières, médicales, juridiques), garder les documents sur l\'appareil évite de les confier à un sous-traitant tiers, et la CNIL publie des ressources sur l\'IA et le RGPD à consulter. La conformité globale en matière de protection des données dépend cependant de l\'ensemble de votre fonctionnement, et pas seulement de l\'architecture d\'inférence.',
             '**Japon :** Les lignes directrices IA du METI pour les entreprises insistent sur une gestion responsable des données. L\'inférence CPU sur matériel bas de gamme, même lente, garde vos prompts sur l\'appareil — une fois le modèle téléchargé, l\'inférence elle-même ne nécessite aucun appel API. Pour des tâches en japonais avec Qwen3 aux vitesses CPU indiquées ci-dessus, quelques secondes par phrase restent acceptables pour des résumés de documents non urgents.',
-            '**Chine :** L\'inférence locale de Qwen3 et DeepSeek-R1 sur matériel grand public est une option pour les utilisateurs en Chine qui ne peuvent pas accéder aux API cloud de modèles non chinois. Qwen3 0.6B, 1.7B et 4B fonctionnent sur matériel CPU seul, offrant une alternative fonctionnelle aux API cloud pour les utilisateurs avec un matériel limité.',
+            '**Chine :** L\'inférence locale de Qwen3 et de versions distillées de DeepSeek-R1 sur matériel grand public est une option pour les utilisateurs en Chine qui ne peuvent pas accéder aux API cloud de modèles non chinois. Qwen3 0.6B, 1.7B et 4B fonctionnent sur matériel CPU seul, offrant une alternative fonctionnelle aux API cloud pour les utilisateurs avec un matériel limité.',
           ],
         },
         'faqSection': {
@@ -3190,13 +3190,13 @@ schema: {
             { q: 'Comment la quantification affecte-t-elle la vitesse d\'inférence ?', a: 'La quantification réduit principalement les besoins en bande passante mémoire, pas le calcul. Un fichier Q2 (2 bits) est plus petit qu\'un fichier Q4 (4 bits) : le CPU lit donc moins d\'octets par token et génère plus vite, à peu près en proportion de la taille du fichier. Cependant, Q2 perd beaucoup plus en qualité de sortie. Règle pratique : utilisez Q4_K_M par défaut pour chaque niveau de ce guide, ne descendez à Q3 que si Q4_K_M ne tient pas dans la RAM disponible.' },
             { q: 'Puis-je quantifier en dessous de Q2 ?', a: 'Techniquement oui (des formats IQ1 à 1 bit existent dans llama.cpp), mais la qualité de sortie s\'effondre à cette taille. Non recommandé pour aucun cas d\'usage pratique, y compris le niveau 4 Go de RAM de ce guide — choisissez plutôt un modèle plus petit en Q4_K_M.' },
             { q: 'L\'inférence hybride CPU + iGPU est-elle supportée ?', a: 'Parfois. Ollama peut répartir un modèle entre CPU et GPU lorsqu\'il trouve un backend GPU pris en charge, et `ollama ps` affiche la répartition dans sa colonne PROCESSOR. Une iGPU partage la RAM système avec le CPU : la bande passante mémoire, principale limite de vitesse, n\'augmente donc pas. Sur un système 8 Go de RAM avec iGPU Intel Iris Xe, Qwen3 4B est estimé à 12–20 tok/s si l\'iGPU est utilisée. Testez avec `OLLAMA_VULKAN=0` pour comparer avec le CPU seul.' },
-            { q: 'Quel est le LLM local le plus rapide pour un PC bas de gamme ?', a: 'Qwen3 1.7B en Q4_K_M est le modèle le plus rapide de ce guide — 25–40 tok/s sur un i5/Ryzen 5 récent avec 4 Go de RAM et sans GPU. Pour une meilleure qualité à une vitesse similaire, Phi-4-mini (3.8B) tourne à 15–25 tok/s avec 8 Go de RAM et gère le code et le raisonnement nettement mieux.' },
-            { q: 'Puis-je faire tourner un LLM local avec 4 Go de RAM ?', a: 'Oui — Qwen3 1.7B en Q4_K_M est le choix recommandé pour 4 Go de RAM, CPU seul, atteignant 25–40 tok/s sur un i5/Ryzen 5 récent. C\'est le modèle le plus rapide de ce guide et il tient avec une marge pour l\'OS.' },
+            { q: 'Quel est le LLM local le plus rapide pour un PC bas de gamme ?', a: 'Qwen3 1.7B en Q4_K_M est le plus rapide des modèles recommandés par palier dans ce guide (des modèles plus petits, comme Qwen3 0.6B, sont encore plus rapides, mais de bien moindre qualité) — environ 25–40 tok/s estimés sur un i5/Ryzen 5 récent avec 4 Go de RAM et sans GPU. Pour une meilleure qualité à une vitesse similaire, Phi-4-mini (3.8B) tourne à 15–25 tok/s avec 8 Go de RAM et gère le code et le raisonnement nettement mieux.' },
+            { q: 'Puis-je faire tourner un LLM local avec 4 Go de RAM ?', a: 'Oui — Qwen3 1.7B en Q4_K_M est le choix recommandé pour 4 Go de RAM, CPU seul, atteignant 25–40 tok/s sur un i5/Ryzen 5 récent. C\'est le plus rapide des modèles recommandés par palier dans ce guide et il tient avec une marge pour l\'OS.' },
             { q: 'Un GPU est-il nécessaire pour la vitesse ?', a: 'Non — tous les modèles de ce guide tournent en CPU seul. Une iGPU Intel Iris peut apporter un gain de vitesse modeste (Qwen3 4B : est. 12–20 tok/s si l\'iGPU est utilisée) mais reste optionnelle et dépend de la prise en charge des pilotes. Un GPU dédié comme une RTX 4060 8 Go d\'occasion est généralement 5–10× plus rapide qu\'en CPU seul pour le même modèle, mais c\'est une voie de mise à niveau séparée, pas un prérequis.' },
             { q: 'Une iGPU Intel Iris est-elle suffisante pour les LLM locaux ?', a: 'Cela peut aider, mais ce n\'est pas garanti. Avec 8 Go de RAM et une iGPU Intel Iris Xe, Qwen3 4B est estimé à 12–20 tok/s si Ollama utilise réellement l\'iGPU ; avec 16 Go de RAM, Llama 3.2 3B est estimé à 20–35 tok/s. Comme une iGPU partage la RAM système avec le CPU, le gain est généralement modeste. Lancez le même prompt avec et sans l\'iGPU et gardez le réglage le plus rapide.' },
             { q: 'Devrais-je utiliser la quantification Q2 ou Q4 sur du matériel bas de gamme ?', a: 'Commencez par Q4_K_M — il tient dans chaque niveau de modèle de ce guide (1.7B à 8B) avec une petite perte de qualité. Ne descendez à Q3 ou Q2 que si Q4_K_M provoque des erreurs de mémoire insuffisante. Les fichiers Q2 sont plus rapides car plus petits, mais la perte de qualité est perceptible sur les tâches de raisonnement et de code.' },
             { q: 'Comment vérifier ma RAM disponible sous Windows ?', a: 'Ouvrez le Gestionnaire des tâches → Performances → Mémoire. Le total affiché est votre RAM système — comparez-le au tableau de décision matérielle ci-dessus (niveaux 4, 8 ou 16 Go) pour choisir le bon modèle.' },
-            { q: 'Ollama utilise-t-il automatiquement mon GPU intégré ?', a: 'Seulement là où un backend pris en charge existe. La documentation d\'Ollama indique que la prise en charge GPU Vulkan sous Windows et Linux est activée par défaut lorsque le backend est installé, et cite les iGPU AMD Ryzen AI sous ROCm ; elle n\'indique pas la prise en charge des GPU intégrés Intel. Vérifiez avec `ollama ps` après avoir chargé un modèle — la colonne PROCESSOR affiche 100 % CPU, 100 % GPU ou une répartition. Définissez `OLLAMA_VULKAN=0` pour désactiver les GPU Vulkan.' },
+            { q: 'Ollama utilise-t-il automatiquement mon GPU intégré ?', a: 'Seulement là où un backend pris en charge existe. La documentation d\'Ollama indique que la prise en charge GPU Vulkan sous Windows et Linux est activée par défaut lorsque le backend est installé, et cite les iGPU AMD Ryzen AI sous ROCm ; elle ne répertorie pas les GPU intégrés Intel dans un tableau de prise en charge. Vérifiez avec `ollama ps` après avoir chargé un modèle — la colonne PROCESSOR affiche 100 % CPU, 100 % GPU ou une répartition. Définissez `OLLAMA_VULKAN=0` pour désactiver les GPU Vulkan.' },
             { q: 'Quelle est la meilleure alternative gratuite à ChatGPT sur un PC bas de gamme ?', a: 'Phi-4-mini (3.8B) en Q4_K_M sur Ollama avec 8 Go de RAM, CPU seul, donne 15–25 tok/s — suffisant pour le chat, les résumés et l\'aide au code. La qualité est inférieure à un modèle cloud de pointe mais suffisante pour les tâches quotidiennes. Complètement gratuit, fonctionne hors ligne, aucune clé API requise.' },
             { q: 'De combien un GPU dédié est-il plus rapide que le CPU pour les LLM locaux ?', a: 'Généralement 5 à 10× plus rapide pour le même modèle. Une RTX 4060 8 Go d\'occasion (prix variable) surpasse généralement les configurations CPU seul traitées dans ce guide. Une iGPU Intel Iris se situe au mieux entre les deux — par exemple, Qwen3 4B est estimé à 12–20 tok/s si l\'iGPU est utilisée, contre 8–15 tok/s estimés en CPU seul au niveau comparable le plus proche.' },
             { q: 'Un modèle d\'IA local est-il la même chose qu\'un LLM local ?', a: 'Pour ce guide, oui. « Modèle d\'IA local » est la formulation courante pour ce que le secteur appelle un LLM local (grand modèle de langage) — des poids générateurs de texte que vous téléchargez une fois et exécutez sur votre propre machine, hors ligne. La distinction ne compte que lorsque le modèle d\'IA n\'est pas basé sur le texte : les générateurs d\'images comme Stable Diffusion et les modèles vocaux comme Whisper fonctionnent aussi en local, mais avec des profils matériels différents, et aucun des chiffres de tok/s de ce guide ne s\'applique à eux.' },
@@ -3336,7 +3336,7 @@ schema: {
             'name': 'Quel est le LLM local le plus rapide pour un PC bas de gamme ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B en Q4_K_M est le modèle le plus rapide de ce guide — 25–40 tok/s sur un i5/Ryzen 5 récent avec 4 Go de RAM et sans GPU. Pour une meilleure qualité à une vitesse similaire, Phi-4-mini (3.8B) tourne à 15–25 tok/s avec 8 Go de RAM et gère le code et le raisonnement nettement mieux.',
+              'text': 'Qwen3 1.7B en Q4_K_M est le plus rapide des modèles recommandés par palier dans ce guide (des modèles plus petits, comme Qwen3 0.6B, sont encore plus rapides, mais de bien moindre qualité) — environ 25–40 tok/s estimés sur un i5/Ryzen 5 récent avec 4 Go de RAM et sans GPU. Pour une meilleure qualité à une vitesse similaire, Phi-4-mini (3.8B) tourne à 15–25 tok/s avec 8 Go de RAM et gère le code et le raisonnement nettement mieux.',
             },
           },
           {
@@ -3344,7 +3344,7 @@ schema: {
             'name': 'Puis-je faire tourner un LLM local avec 4 Go de RAM ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui — Qwen3 1.7B en Q4_K_M est le choix recommandé pour 4 Go de RAM, CPU seul, atteignant 25–40 tok/s sur un i5/Ryzen 5 récent. C\'est le modèle le plus rapide de ce guide et il tient avec une marge pour l\'OS.',
+              'text': 'Oui — Qwen3 1.7B en Q4_K_M est le choix recommandé pour 4 Go de RAM, CPU seul, atteignant 25–40 tok/s sur un i5/Ryzen 5 récent. C\'est le plus rapide des modèles recommandés par palier dans ce guide et il tient avec une marge pour l\'OS.',
             },
           },
           {
@@ -3384,7 +3384,7 @@ schema: {
             'name': 'Ollama utilise-t-il automatiquement mon GPU intégré ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Seulement là où un backend pris en charge existe. La documentation d\'Ollama indique que la prise en charge GPU Vulkan sous Windows et Linux est activée par défaut lorsque le backend est installé, et cite les iGPU AMD Ryzen AI sous ROCm ; elle n\'indique pas la prise en charge des GPU intégrés Intel. Vérifiez avec `ollama ps` après avoir chargé un modèle — la colonne PROCESSOR affiche 100 % CPU, 100 % GPU ou une répartition. Définissez `OLLAMA_VULKAN=0` pour désactiver les GPU Vulkan.',
+              'text': 'Seulement là où un backend pris en charge existe. La documentation d\'Ollama indique que la prise en charge GPU Vulkan sous Windows et Linux est activée par défaut lorsque le backend est installé, et cite les iGPU AMD Ryzen AI sous ROCm ; elle ne répertorie pas les GPU intégrés Intel dans un tableau de prise en charge. Vérifiez avec `ollama ps` après avoir chargé un modèle — la colonne PROCESSOR affiche 100 % CPU, 100 % GPU ou une répartition. Définissez `OLLAMA_VULKAN=0` pour désactiver les GPU Vulkan.',
             },
           },
           {
@@ -3599,7 +3599,7 @@ schema: {
           title: 'GPU vs CPU：低スペックハードウェアでどちらが速い？',
           content: [
             '**専用GPU：** 同じモデルでCPU専用の通常5〜10倍高速です。VRAMはシステムRAMよりメモリ帯域幅がはるかに大きいためです。中古のRTX 4060 8 GB（価格は変動）は一般的な予算アップグレードです。費用対効果の高い選択肢は[バジェットGPUガイド](/ja/local-llms/best-budget-gpus-local-llm)を参照。',
-            '**iGPU（統合グラフィックス）：** CPUとシステムRAMを共有するため、主なボトルネックであるメモリ帯域幅は変わりません。効果は通常わずかで、ドライバの対応状況に左右されます。Ollamaのドキュメントによると、WindowsとLinuxでのVulkan GPUサポートはバックエンドがインストールされていればデフォルトで有効で、AMD Ryzen AIのiGPUはROCmの項目に記載されています。Intel統合GPUが対応するとは記載されていません。`ollama ps`を確認してください。PROCESSOR列に、モデルがCPU、GPU、またはその分割のどれで動いているかが表示されます。',
+            '**iGPU（統合グラフィックス）：** CPUとシステムRAMを共有するため、主なボトルネックであるメモリ帯域幅は変わりません。効果は通常わずかで、ドライバの対応状況に左右されます。Ollamaのドキュメントによると、WindowsとLinuxでのVulkan GPUサポートはバックエンドがインストールされていればデフォルトで有効で、AMD Ryzen AIのiGPUはROCmの項目に記載されています。Intel統合GPUはサポート表に記載されていません。`ollama ps`を確認してください。PROCESSOR列に、モデルがCPU、GPU、またはその分割のどれで動いているかが表示されます。',
             '**CPU専用：** ドライバ設定なしでどのPCでも動作します。速度はおおよそメモリ帯域幅 ÷ モデルのファイルサイズで決まるため、CPUクロックよりもデュアルチャネルRAMと小さなQ4_K_Mファイルのほうが重要です。',
             '**ルール：** 専用GPUがあれば使用してください。なければ、同じプロンプトをiGPUありとなしで実行し（`OLLAMA_VULKAN=0`でVulkan GPUをオフにできます）、速いほうを採用します。',
           ],
@@ -3731,8 +3731,8 @@ schema: {
           title: '低スペックPCのローカルLLM：地域別コンテキスト',
           content: [
             '**日本（METI AIガバナンス）：** 経済産業省（METI）などが公表する日本のAI事業者向けガイドラインは、データの責任ある取り扱いを重視しています。低スペックハードウェアでのCPU推論は低速ですが、プロンプトが端末内にとどまります。モデルをダウンロードした後は、推論自体にAPIコールは必要ありません。日本語タスクで上記の範囲のCPU速度でQwen3を動かす場合、1文あたり数秒の応答は、時間に余裕のある文書要約であれば許容範囲です。',
-            '**EU / GDPR：** 低スペックハードウェアでのローカル実行では、推論データが端末を離れません — 多くの中小企業やフリーランサーにとって、GDPR第44条の移転リスクを回避する技術的にシンプルな方法です。EU AI法やその他の義務が利用に適用されるかどうかは、システムを誰がどのような目的で導入するかによって異なります。本ガイドは法的助言ではありません。文書を端末内にとどめれば第三者の処理者に送信せずに済みますが、データ保護の全体的なコンプライアンスは推論アーキテクチャだけでなく、運用全体に依存します。',
-            '**中国：** Qwen3やDeepSeek-R1を消費者向けハードウェアでローカル推論することは、非中国製のクラウドAPIにアクセスできない中国のユーザーにとって選択肢の一つです。Qwen3 0.6B、1.7B、4BはCPU専用ハードウェアで動作し、ハードウェアが限られたユーザーにクラウドAPIの実用的な代替手段を提供します。',
+            '**EU / GDPR：** 低スペックハードウェアでのローカル実行では、オフライン時は推論データが端末を離れません — 多くの中小企業やフリーランサーにとって、GDPR第44条の移転リスクを回避する技術的にシンプルな方法です。EU AI法やその他の義務が利用に適用されるかどうかは、システムを誰がどのような目的で導入するかによって異なります。本ガイドは法的助言ではありません。文書を端末内にとどめれば第三者の処理者に送信せずに済みますが、データ保護の全体的なコンプライアンスは推論アーキテクチャだけでなく、運用全体に依存します。',
+            '**中国：** Qwen3やDeepSeek-R1蒸留モデルを消費者向けハードウェアでローカル推論することは、非中国製のクラウドAPIにアクセスできない中国のユーザーにとって選択肢の一つです。Qwen3 0.6B、1.7B、4BはCPU専用ハードウェアで動作し、ハードウェアが限られたユーザーにクラウドAPIの実用的な代替手段を提供します。',
           ],
         },
         'faqSection': {
@@ -3747,13 +3747,13 @@ schema: {
             { q: '量子化は推論速度にどう影響しますか？', a: '量子化は主に計算ではなくメモリ帯域幅要件を削減します。Q2（2ビット）のファイルはQ4（4ビット）より小さいため、CPUがトークンごとに読み出すバイト数が減り、ファイルサイズにほぼ比例して高速に生成できます。ただしQ2は出力品質の低下がはるかに大きくなります。実用的なルール：本ガイドのすべての階層でデフォルトはQ4_K_M、RAMに収まらない場合のみQ3に切り替え。' },
             { q: 'Q2以下の量子化は可能ですか？', a: '技術的には可能です（llama.cppには1ビットのIQ1形式があります）が、そのサイズでは出力品質が崩壊します。本ガイドのRAM 4GB階層を含め、実用的なユースケースには推奨しません — 代わりにQ4_K_Mのより小さいモデルを選んでください。' },
             { q: 'CPU + iGPUハイブリッド推論はサポートされていますか？', a: '場合によります。OllamaはサポートされるGPUバックエンドを見つけると、モデルをCPUとGPUに分割できます。分割の状況は`ollama ps`のPROCESSOR列で確認できます。iGPUはCPUとシステムRAMを共有するため、主な速度の制約であるメモリ帯域幅は増えません。Intel Iris Xe iGPU搭載のRAM 8GBシステムでは、iGPUが使われる場合のQwen3 4Bは推定12〜20トークン/秒です。`OLLAMA_VULKAN=0`でテストして、CPU専用と比較してください。' },
-            { q: '低スペックPC向け最速のローカルLLMは何ですか？', a: 'Qwen3 1.7B（Q4_K_M）は本ガイドで最速のモデルです — 最新のi5/Ryzen 5、RAM 4 GB、GPUなしで25〜40トークン/秒。同程度の速度でより高い品質が欲しい場合は、Phi-4-mini（3.8B）がRAM 8 GBで15〜25トークン/秒、コーディングと推論をより優れて処理します。' },
-            { q: '4GBのRAMでローカルLLMを実行できますか？', a: 'はい — Qwen3 1.7B（Q4_K_M）はRAM 4 GB・CPU専用向けの推奨モデルで、最新のi5/Ryzen 5で25〜40トークン/秒に到達します。本ガイドで最速のモデルであり、OS用の余裕を残して収まります。' },
+            { q: '低スペックPC向け最速のローカルLLMは何ですか？', a: 'Qwen3 1.7B（Q4_K_M）は本ガイドのティア別推奨モデルの中で最速です（Qwen3 0.6Bのようなさらに小さいモデルはより高速ですが、品質は大きく下がります）— 最新のi5/Ryzen 5、RAM 4 GB、GPUなしで推定25〜40トークン/秒。同程度の速度でより高い品質が欲しい場合は、Phi-4-mini（3.8B）がRAM 8 GBで15〜25トークン/秒、コーディングと推論をより優れて処理します。' },
+            { q: '4GBのRAMでローカルLLMを実行できますか？', a: 'はい — Qwen3 1.7B（Q4_K_M）はRAM 4 GB・CPU専用向けの推奨モデルで、最新のi5/Ryzen 5で25〜40トークン/秒に到達します。本ガイドのティア別推奨モデルの中で最速であり、OS用の余裕を残して収まります。' },
             { q: '速度にGPUは必要ですか？', a: 'いいえ — 本ガイドのすべてのモデルはCPU専用で動作します。Intel Iris iGPUはわずかな速度向上をもたらす場合があります（Qwen3 4B：iGPUが使われる場合は推定12〜20トークン/秒）が、あくまでオプションで、ドライバの対応状況に左右されます。中古のRTX 4060 8GBなどの専用GPUは、同じモデルでCPU専用の通常5〜10倍高速ですが、これは別のアップグレード経路であり、必須ではありません。' },
             { q: 'Intel Iris iGPUはローカルLLMに十分ですか？', a: '役立つ場合はありますが、保証はされません。RAM 8 GBとIntel Iris Xe iGPUの場合、Ollamaが実際にiGPUを使うなら、Qwen3 4Bは推定12〜20トークン/秒です。RAM 16 GBでは、Llama 3.2 3Bが推定20〜35トークン/秒です。iGPUはCPUとシステムRAMを共有するため、効果は通常わずかです。同じプロンプトをiGPUありとなしで実行し、速いほうの設定を採用してください。' },
             { q: '低スペックハードウェアではQ2とQ4のどちらの量子化を使うべきですか？', a: 'まずQ4_K_Mから始めてください — 本ガイドのすべてのモデル階層（1.7B〜8B）に収まり、品質低下は小さく抑えられます。Q4_K_Mでメモリ不足エラーが発生する場合のみQ3またはQ2に下げてください。Q2のファイルは小さいぶん高速ですが、品質低下は推論やコーディングタスクで顕著です。' },
             { q: 'WindowsでRAMの空き容量を確認する方法は？', a: 'タスクマネージャー → パフォーマンス → メモリを開きます。表示される合計がシステムRAMです — 上記のハードウェア判定テーブル（4GB、8GB、16GBの各階層）と比較して正しいモデルを選んでください。' },
-            { q: 'Ollamaは統合GPUを自動的に使用しますか？', a: '対応するバックエンドがある場合のみです。Ollamaのドキュメントによると、WindowsとLinuxでのVulkan GPUサポートはバックエンドがインストールされていればデフォルトで有効で、AMD Ryzen AIのiGPUはROCmの項目に記載されています。Intel統合GPUが対応するとは記載されていません。モデルをロードした後に`ollama ps`で確認すると、PROCESSOR列に100% CPU、100% GPU、またはその分割が表示されます。`OLLAMA_VULKAN=0`を設定するとVulkan GPUをオフにできます。' },
+            { q: 'Ollamaは統合GPUを自動的に使用しますか？', a: '対応するバックエンドがある場合のみです。Ollamaのドキュメントによると、WindowsとLinuxでのVulkan GPUサポートはバックエンドがインストールされていればデフォルトで有効で、AMD Ryzen AIのiGPUはROCmの項目に記載されています。Intel統合GPUはサポート表に記載されていません。モデルをロードした後に`ollama ps`で確認すると、PROCESSOR列に100% CPU、100% GPU、またはその分割が表示されます。`OLLAMA_VULKAN=0`を設定するとVulkan GPUをオフにできます。' },
             { q: '低スペックPCでのChatGPTの最良の無料代替は何ですか？', a: 'RAM 8 GB、CPU専用のOllamaでPhi-4-mini（3.8B、Q4_K_M）を使うと15〜25トークン/秒 — チャット、要約、コーディング支援に十分です。品質はフロンティアクラウドモデルより劣りますが、日常的なタスクには十分です。完全無料でオフライン動作、APIキー不要です。' },
             { q: 'ローカルLLMで専用GPUはCPUよりどれくらい速いですか？', a: '同じモデルで通常5〜10倍速いです。中古のRTX 4060 8GB（価格は変動）は、本ガイドで扱うCPU専用構成を通常上回ります。Intel Iris iGPUは、よくてもその中間です — 例えばQwen3 4Bは、iGPUが使われる場合は推定12〜20トークン/秒で、最も近いCPU専用の比較階層では推定8〜15トークン/秒です。' },
             { q: 'ローカルAIモデルとローカルLLMは同じものですか？', a: '本ガイドでは同じ意味で使っています。「ローカルAIモデル」は、業界がローカルLLM（大規模言語モデル）と呼ぶもの — 一度ダウンロードして自分のマシン上でオフラインで実行するテキスト生成の重み — を指す日常的な言い方です。この区別が重要になるのは、AIモデルがテキストベースでない場合のみです。Stable Diffusionのような画像生成モデルやWhisperのような音声モデルもローカルで動作しますが、ハードウェア要件が異なり、本ガイドのトークン/秒の数値はいずれも当てはまりません。' },
@@ -3893,7 +3893,7 @@ schema: {
             'name': '低スペックPC向け最速のローカルLLMは何ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B（Q4_K_M）は本ガイドで最速のモデルです — 最新のi5/Ryzen 5、RAM 4 GB、GPUなしで25〜40トークン/秒。同程度の速度でより高い品質が欲しい場合は、Phi-4-mini（3.8B）がRAM 8 GBで15〜25トークン/秒、コーディングと推論をより優れて処理します。',
+              'text': 'Qwen3 1.7B（Q4_K_M）は本ガイドのティア別推奨モデルの中で最速です（Qwen3 0.6Bのようなさらに小さいモデルはより高速ですが、品質は大きく下がります）— 最新のi5/Ryzen 5、RAM 4 GB、GPUなしで推定25〜40トークン/秒。同程度の速度でより高い品質が欲しい場合は、Phi-4-mini（3.8B）がRAM 8 GBで15〜25トークン/秒、コーディングと推論をより優れて処理します。',
             },
           },
           {
@@ -3901,7 +3901,7 @@ schema: {
             'name': '4GBのRAMでローカルLLMを実行できますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい — Qwen3 1.7B（Q4_K_M）はRAM 4 GB・CPU専用向けの推奨モデルで、最新のi5/Ryzen 5で25〜40トークン/秒に到達します。本ガイドで最速のモデルであり、OS用の余裕を残して収まります。',
+              'text': 'はい — Qwen3 1.7B（Q4_K_M）はRAM 4 GB・CPU専用向けの推奨モデルで、最新のi5/Ryzen 5で25〜40トークン/秒に到達します。本ガイドのティア別推奨モデルの中で最速であり、OS用の余裕を残して収まります。',
             },
           },
           {
@@ -3941,7 +3941,7 @@ schema: {
             'name': 'Ollamaは統合GPUを自動的に使用しますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '対応するバックエンドがある場合のみです。Ollamaのドキュメントによると、WindowsとLinuxでのVulkan GPUサポートはバックエンドがインストールされていればデフォルトで有効で、AMD Ryzen AIのiGPUはROCmの項目に記載されています。Intel統合GPUが対応するとは記載されていません。モデルをロードした後に`ollama ps`で確認すると、PROCESSOR列に100% CPU、100% GPU、またはその分割が表示されます。`OLLAMA_VULKAN=0`を設定するとVulkan GPUをオフにできます。',
+              'text': '対応するバックエンドがある場合のみです。Ollamaのドキュメントによると、WindowsとLinuxでのVulkan GPUサポートはバックエンドがインストールされていればデフォルトで有効で、AMD Ryzen AIのiGPUはROCmの項目に記載されています。Intel統合GPUはサポート表に記載されていません。モデルをロードした後に`ollama ps`で確認すると、PROCESSOR列に100% CPU、100% GPU、またはその分割が表示されます。`OLLAMA_VULKAN=0`を設定するとVulkan GPUをオフにできます。',
             },
           },
           {
@@ -4156,7 +4156,7 @@ schema: {
           title: 'GPU vs CPU：低配硬件上哪个更快？',
           content: [
             '**独立显卡：** 同一模型通常比纯CPU快5–10倍，因为显存的内存带宽远高于系统内存。二手RTX 4060 8 GB（价格不定）是常见的预算升级选择。参见[经济型GPU指南](/zh/local-llms/best-budget-gpus-local-llm)。',
-            '**集显（集成显卡）：** 与CPU共用系统内存，因此主要限制——内存带宽——并没有改变。提升通常有限，且取决于驱动支持。Ollama文档称，安装后端时Windows和Linux上的Vulkan GPU支持默认启用，并将AMD Ryzen AI核显列在ROCm之下；文档并未说明支持Intel集成显卡。请查看`ollama ps`：PROCESSOR列会显示模型运行在CPU、GPU还是两者之间拆分。',
+            '**集显（集成显卡）：** 与CPU共用系统内存，因此主要限制——内存带宽——并没有改变。提升通常有限，且取决于驱动支持。Ollama文档称，安装后端时Windows和Linux上的Vulkan GPU支持默认启用，并将AMD Ryzen AI核显列在ROCm之下；文档并未在支持列表中列出Intel集成显卡。请查看`ollama ps`：PROCESSOR列会显示模型运行在CPU、GPU还是两者之间拆分。',
             '**纯CPU：** 无需配置驱动，任何电脑都能运行。速度大致等于内存带宽 ÷ 模型文件大小，这就是双通道内存和体积小的Q4_K_M文件比CPU主频更重要的原因。',
             '**规则：** 有独立显卡就用独立显卡。否则，分别开启和关闭核显（`OLLAMA_VULKAN=0`可关闭Vulkan GPU）运行同一提示词，保留更快的那个设置。',
           ],
@@ -4287,8 +4287,8 @@ schema: {
           id: 'regional-context',
           title: '低配PC本地LLM：地区背景',
           content: [
-            '**中国（数据安全法）：** 2021年施行的《数据安全法》和《个人信息保护法》（PIPL）对数据处理和数据出境提出了要求。在消费级硬件上本地运行Qwen3和DeepSeek-R1是一种可选方案。金融、医疗和法律等行业的企业可以考虑这一部署思路：本地推理让推理数据留在设备上，有助于减少对境外云服务的依赖。具体合规要求取决于您的数据类型和业务场景，本指南不构成法律意见。Qwen3 0.6B、1.7B和4B可在纯CPU硬件上运行，为硬件受限用户提供可行的替代方案。',
-            '**欧盟 / GDPR：** 在低配硬件上本地运行：推理数据不离开设备——对许多中小企业和自由职业者而言，这是规避GDPR第44条数据转移风险的技术简便方法。欧盟AI法案或其他义务是否适用于您的使用场景，取决于部署系统的主体及其用途；本指南不构成法律意见。对于考虑在内部业务任务中使用本地LLM的德国中小企业，将文档保留在设备上可避免把文档发送给第三方处理者，但数据保护的整体合规性仍取决于您的整体运营方式，而非仅推理架构本身。',
+            '**中国（数据安全法）：** 2021年施行的《数据安全法》和《个人信息保护法》（PIPL）对数据处理和数据出境提出了要求。在消费级硬件上本地运行Qwen3和DeepSeek-R1蒸馏版是一种可选方案。金融、医疗和法律等行业的企业可以考虑这一部署思路：离线运行时，本地推理让推理数据留在设备上，有助于减少对境外云服务的依赖。具体合规要求取决于您的数据类型和业务场景，本指南不构成法律意见。Qwen3 0.6B、1.7B和4B可在纯CPU硬件上运行，为硬件受限用户提供可行的替代方案。',
+            '**欧盟 / GDPR：** 在低配硬件上本地运行：离线运行时，推理数据不离开设备——对许多中小企业和自由职业者而言，这是规避GDPR第44条数据转移风险的技术简便方法。欧盟AI法案或其他义务是否适用于您的使用场景，取决于部署系统的主体及其用途；本指南不构成法律意见。对于考虑在内部业务任务中使用本地LLM的德国中小企业，将文档保留在设备上可避免把文档发送给第三方处理者，但数据保护的整体合规性仍取决于您的整体运营方式，而非仅推理架构本身。',
             '**日本（METI AI治理）：** 日本经济产业省（METI）面向企业的AI指南强调负责任地处理数据。低配硬件上的CPU推理虽然较慢，但提示词保留在设备上——模型下载完成后，推理本身不需要API调用。对于使用CPU运行Qwen3处理日语任务的用户，按上文速度范围，每句话几秒钟对非实时文档摘要来说已经足够。',
           ],
         },
@@ -4304,13 +4304,13 @@ schema: {
             { q: '量化如何影响推理速度？', a: '量化主要减少内存带宽需求，而非计算量。Q2（2位）文件比Q4（4位）文件更小，CPU生成每个词元读取的字节更少，因此速度更快，大致与文件大小成比例。但Q2的输出质量损失要大得多。实用规则：本指南中每个层级都默认使用Q4_K_M，只有在Q4_K_M无法放入可用内存时才降至Q3。' },
             { q: '我可以使用Q2以下的量化吗？', a: '技术上可以（llama.cpp中存在1位的IQ1格式），但在这种体积下输出质量会崩溃。包括本指南的4GB内存层级在内，不建议用于任何实际场景——请改用更小的Q4_K_M模型。' },
             { q: '支持CPU + 核显混合推理吗？', a: '有时可以。当Ollama找到受支持的GPU后端时，可以在CPU和GPU之间拆分模型，`ollama ps`的PROCESSOR列会显示拆分情况。核显与CPU共用系统内存，因此主要的速度限制——内存带宽——并不会增加。在配备Intel Iris Xe核显的8GB内存系统上，若使用核显，Qwen3 4B估算为12–20 tok/s。可用`OLLAMA_VULKAN=0`与纯CPU对比测试。' },
-            { q: '低配电脑最快的本地LLM是什么？', a: 'Qwen3 1.7B（Q4_K_M）是本指南中最快的模型——在现代i5/Ryzen 5、4GB内存、无GPU的情况下达25–40 tok/s。若追求相近速度下更好的质量，Phi-4-mini（3.8B）在8GB内存下以15–25 tok/s运行，编程和推理表现明显更佳。' },
-            { q: '我可以在4GB内存上运行本地LLM吗？', a: '可以——Qwen3 1.7B（Q4_K_M）是4GB内存、纯CPU场景下的推荐选择，在现代i5/Ryzen 5上可达25–40 tok/s。它是本指南中最快的模型，且为操作系统留有余量。' },
+            { q: '低配电脑最快的本地LLM是什么？', a: 'Qwen3 1.7B（Q4_K_M）是本指南各档位推荐中最快的模型（Qwen3 0.6B等更小的模型更快，但质量低得多）——在现代i5/Ryzen 5、4GB内存、无GPU的情况下预计可达25–40 tok/s。若追求相近速度下更好的质量，Phi-4-mini（3.8B）在8GB内存下以15–25 tok/s运行，编程和推理表现明显更佳。' },
+            { q: '我可以在4GB内存上运行本地LLM吗？', a: '可以——Qwen3 1.7B（Q4_K_M）是4GB内存、纯CPU场景下的推荐选择，在现代i5/Ryzen 5上可达25–40 tok/s。它是本指南各档位推荐中最快的模型，且为操作系统留有余量。' },
             { q: '速度一定需要GPU吗？', a: '不需要——本指南所有模型均可仅用CPU运行。Intel Iris核显可能带来小幅速度提升（Qwen3 4B：若使用核显，估算12–20 tok/s），但仅是可选项，且取决于驱动支持。像二手RTX 4060 8GB这样的独立显卡在同一模型下通常比纯CPU快5–10倍，但这是一条独立的升级路径，而非必需条件。' },
             { q: 'Intel Iris核显对本地LLM够用吗？', a: '有帮助，但不能保证。配备8GB内存和Intel Iris Xe核显时，如果Ollama确实使用了核显，Qwen3 4B估算为12–20 tok/s；配备16GB内存时，Llama 3.2 3B估算为20–35 tok/s。由于核显与CPU共用系统内存，提升通常有限。请分别开启和关闭核显运行同一提示词，保留更快的设置。' },
             { q: '低配硬件上应该使用Q2还是Q4量化？', a: '从Q4_K_M开始——它适用于本指南中的每个模型层级（1.7B到8B），质量损失较小。只有在Q4_K_M导致内存不足错误时才降至Q3或Q2。Q2文件因为更小所以更快，但质量损失在推理和编程任务上较为明显。' },
             { q: '如何在Windows上检查可用内存？', a: '打开任务管理器 → 性能 → 内存。显示的总量即为系统内存——将其与上方的硬件判断表（4GB、8GB或16GB层级）对比，选择正确的模型。' },
-            { q: 'Ollama会自动使用我的集成显卡吗？', a: '只有存在受支持的后端时才会。Ollama文档称，安装后端时Windows和Linux上的Vulkan GPU支持默认启用，并将AMD Ryzen AI核显列在ROCm之下；文档并未说明支持Intel集成显卡。加载模型后用`ollama ps`验证——PROCESSOR列会显示100% CPU、100% GPU或两者拆分。设置`OLLAMA_VULKAN=0`可关闭Vulkan GPU。' },
+            { q: 'Ollama会自动使用我的集成显卡吗？', a: '只有存在受支持的后端时才会。Ollama文档称，安装后端时Windows和Linux上的Vulkan GPU支持默认启用，并将AMD Ryzen AI核显列在ROCm之下；文档并未在支持列表中列出Intel集成显卡。加载模型后用`ollama ps`验证——PROCESSOR列会显示100% CPU、100% GPU或两者拆分。设置`OLLAMA_VULKAN=0`可关闭Vulkan GPU。' },
             { q: '低配电脑上ChatGPT的最佳免费替代方案是什么？', a: '在Ollama上使用Phi-4-mini（3.8B，Q4_K_M），8GB内存、纯CPU，可达15–25 tok/s——足以应付聊天、摘要和编程辅助。质量低于前沿云端模型，但对日常任务已经足够。完全免费，可离线运行，无需API密钥。' },
             { q: '独立显卡比CPU快多少？', a: '同一模型下通常快5–10倍。一块二手RTX 4060 8GB（价格不定）通常优于本指南涉及的纯CPU配置。Intel Iris核显至多介于两者之间——例如Qwen3 4B若使用核显，估算为12–20 tok/s，而最接近的纯CPU层级估算为8–15 tok/s。' },
             { q: '本地AI模型和本地LLM是同一回事吗？', a: '在本指南中，是的。"本地AI模型"是业界所说的本地LLM（大语言模型）的通俗说法——即下载一次、在自己设备上离线运行的文本生成权重。这一区分只在AI模型不基于文本时才有意义：Stable Diffusion等图像生成模型和Whisper等语音模型也能本地运行，但硬件要求不同，本指南中的tok/s数据均不适用于它们。' },
@@ -4450,7 +4450,7 @@ schema: {
             'name': '低配电脑最快的本地LLM是什么？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B（Q4_K_M）是本指南中最快的模型——在现代i5/Ryzen 5、4GB内存、无GPU的情况下达25–40 tok/s。若追求相近速度下更好的质量，Phi-4-mini（3.8B）在8GB内存下以15–25 tok/s运行，编程和推理表现明显更佳。',
+              'text': 'Qwen3 1.7B（Q4_K_M）是本指南各档位推荐中最快的模型（Qwen3 0.6B等更小的模型更快，但质量低得多）——在现代i5/Ryzen 5、4GB内存、无GPU的情况下预计可达25–40 tok/s。若追求相近速度下更好的质量，Phi-4-mini（3.8B）在8GB内存下以15–25 tok/s运行，编程和推理表现明显更佳。',
             },
           },
           {
@@ -4458,7 +4458,7 @@ schema: {
             'name': '我可以在4GB内存上运行本地LLM吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '可以——Qwen3 1.7B（Q4_K_M）是4GB内存、纯CPU场景下的推荐选择，在现代i5/Ryzen 5上可达25–40 tok/s。它是本指南中最快的模型，且为操作系统留有余量。',
+              'text': '可以——Qwen3 1.7B（Q4_K_M）是4GB内存、纯CPU场景下的推荐选择，在现代i5/Ryzen 5上可达25–40 tok/s。它是本指南各档位推荐中最快的模型，且为操作系统留有余量。',
             },
           },
           {
@@ -4498,7 +4498,7 @@ schema: {
             'name': 'Ollama会自动使用我的集成显卡吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '只有存在受支持的后端时才会。Ollama文档称，安装后端时Windows和Linux上的Vulkan GPU支持默认启用，并将AMD Ryzen AI核显列在ROCm之下；文档并未说明支持Intel集成显卡。加载模型后用`ollama ps`验证——PROCESSOR列会显示100% CPU、100% GPU或两者拆分。设置`OLLAMA_VULKAN=0`可关闭Vulkan GPU。',
+              'text': '只有存在受支持的后端时才会。Ollama文档称，安装后端时Windows和Linux上的Vulkan GPU支持默认启用，并将AMD Ryzen AI核显列在ROCm之下；文档并未在支持列表中列出Intel集成显卡。加载模型后用`ollama ps`验证——PROCESSOR列会显示100% CPU、100% GPU或两者拆分。设置`OLLAMA_VULKAN=0`可关闭Vulkan GPU。',
             },
           },
           {
@@ -4713,7 +4713,7 @@ schema: {
           title: '저사양 하드웨어에서 GPU와 CPU 중 어느 것이 더 빠릅니까?',
           content: [
             '**독립 GPU:** 같은 모델 기준 일반적으로 CPU 전용보다 5–10배 빠릅니다. VRAM의 메모리 대역폭이 시스템 RAM보다 훨씬 크기 때문입니다. 중고 RTX 4060 8 GB (가격 변동)는 흔한 예산형 업그레이드입니다. 비용 효율적인 옵션은 [예산 GPU 가이드](/ko/local-llms/best-budget-gpus-local-llm)를 참조하십시오.',
-            '**iGPU (내장형):** CPU와 시스템 RAM을 공유하므로 주된 한계인 메모리 대역폭이 그대로입니다. 향상 폭은 대체로 크지 않으며 드라이버 지원에 따라 달라집니다. Ollama 문서에 따르면 Windows와 Linux에서 Vulkan GPU 지원은 백엔드가 설치되어 있으면 기본으로 활성화되고, AMD Ryzen AI iGPU는 ROCm 항목에 나열되어 있지만, Intel 내장 GPU가 지원된다는 언급은 없습니다. `ollama ps`를 확인하십시오: PROCESSOR 열에 모델이 CPU, GPU 또는 분할 중 어디에서 실행되는지 표시됩니다.',
+            '**iGPU (내장형):** CPU와 시스템 RAM을 공유하므로 주된 한계인 메모리 대역폭이 그대로입니다. 향상 폭은 대체로 크지 않으며 드라이버 지원에 따라 달라집니다. Ollama 문서에 따르면 Windows와 Linux에서 Vulkan GPU 지원은 백엔드가 설치되어 있으면 기본으로 활성화되고, AMD Ryzen AI iGPU는 ROCm 항목에 나열되어 있지만, Intel 내장 GPU는 지원 표에 나열되어 있지 않습니다. `ollama ps`를 확인하십시오: PROCESSOR 열에 모델이 CPU, GPU 또는 분할 중 어디에서 실행되는지 표시됩니다.',
             '**CPU 전용:** 드라이버 설정 없이 모든 PC에서 실행됩니다. 속도는 대략 메모리 대역폭 ÷ 모델 파일 크기이며, 그래서 CPU 클럭 속도보다 듀얼 채널 RAM과 작은 Q4_K_M 파일이 더 중요합니다.',
             '**규칙:** 독립 GPU가 있다면 사용하십시오. 그렇지 않다면 같은 프롬프트를 iGPU를 켠 상태와 끈 상태로 실행해 보고 (`OLLAMA_VULKAN=0`은 Vulkan GPU를 끕니다) 더 빠른 쪽을 유지하십시오.',
           ],
@@ -4844,8 +4844,8 @@ schema: {
           id: 'regional-context',
           title: '저사양 PC의 로컬 LLM: 지역별 상황',
           content: [
-            '**한국:** 개인정보보호법(PIPA) 및 데이터 3법 개정에 따라, 로컬 하드웨어에서의 추론은 추론 데이터가 기기를 떠나지 않으므로 국외 이전과 관련한 검토 부담을 줄이는 기술적으로 간단한 방법이 될 수 있습니다. 이 가이드는 법률 자문이 아닙니다. 금융, 의료 등 규제 산업의 중소기업이 내부 문서 처리에 로컬 LLM을 검토할 때, 저사양 CPU에서도 오프라인으로 시도해 볼 수 있습니다. 전체적인 규정 준수는 추론 아키텍처만이 아니라 전체 운영 환경에 달려 있습니다.',
-            '**EU / GDPR:** 저사양 하드웨어에서 로컬로 실행: 추론 데이터가 기기를 떠나지 않습니다 — 많은 중소기업과 프리랜서에게 GDPR 제44조 이전 위험을 피하는 기술적으로 간단한 방법입니다. EU AI 법이나 그 밖의 의무가 사용 사례에 적용되는지는 시스템을 누가 어떤 목적으로 배포하는지에 따라 달라지며, 이 가이드는 법률 자문이 아닙니다. 전체적인 데이터 보호 규정 준수는 추론 아키텍처만이 아니라 전체 운영 환경에 달려 있습니다.',
+            '**한국:** 개인정보보호법(PIPA) 및 데이터 3법 개정에 따라, 로컬 하드웨어에서 오프라인으로 추론하면 추론 데이터가 기기를 떠나지 않으므로 국외 이전과 관련한 검토 부담을 줄이는 기술적으로 간단한 방법이 될 수 있습니다. 이 가이드는 법률 자문이 아닙니다. 금융, 의료 등 규제 산업의 중소기업이 내부 문서 처리에 로컬 LLM을 검토할 때, 저사양 CPU에서도 오프라인으로 시도해 볼 수 있습니다. 전체적인 규정 준수는 추론 아키텍처만이 아니라 전체 운영 환경에 달려 있습니다.',
+            '**EU / GDPR:** 저사양 하드웨어에서 로컬로 실행: 오프라인으로 실행하면 추론 데이터가 기기를 떠나지 않습니다 — 많은 중소기업과 프리랜서에게 GDPR 제44조 이전 위험을 피하는 기술적으로 간단한 방법입니다. EU AI 법이나 그 밖의 의무가 사용 사례에 적용되는지는 시스템을 누가 어떤 목적으로 배포하는지에 따라 달라지며, 이 가이드는 법률 자문이 아닙니다. 전체적인 데이터 보호 규정 준수는 추론 아키텍처만이 아니라 전체 운영 환경에 달려 있습니다.',
             '**일본:** 일본 METI의 기업용 AI 가이드라인은 데이터의 책임 있는 취급을 강조합니다. 저사양 하드웨어에서의 CPU 추론은 느리지만 프롬프트가 기기 안에 머뭅니다 — 모델을 내려받은 뒤에는 추론 자체에 API 호출이 필요하지 않습니다. 위에서 제시한 CPU 속도 범위에서 Qwen3로 일본어 작업을 할 경우, 비시간 중요 문서 요약에는 문장당 몇 초 정도면 충분합니다.',
           ],
         },
@@ -4861,13 +4861,13 @@ schema: {
             { q: '양자화는 추론 속도에 어떤 영향을 미칩니까?', a: '양자화는 주로 계산이 아닌 메모리 대역폭 요구 사항을 줄입니다. Q2 (2비트) 파일은 Q4 (4비트) 파일보다 작아서 CPU가 토큰당 더 적은 바이트를 읽으므로, 대체로 파일 크기에 비례해 더 빠르게 생성합니다. 하지만 Q2는 출력 품질 손실이 훨씬 큽니다. 실용적 규칙: 이 가이드의 모든 티어에서 기본값은 Q4_K_M이며, RAM에 맞지 않을 때만 Q3로 낮추십시오.' },
             { q: 'Q2 미만의 양자화를 사용할 수 있습니까?', a: '기술적으로 가능하지만 (llama.cpp에는 1비트 IQ1 형식이 있습니다), 그 크기에서는 출력 품질이 무너집니다. 이 가이드의 RAM 4GB 티어를 포함해 어떠한 실용적인 사용 사례에도 권장하지 않습니다 — 대신 더 작은 모델을 Q4_K_M으로 선택하십시오.' },
             { q: 'CPU + iGPU 하이브리드 추론이 지원됩니까?', a: '경우에 따라 가능합니다. Ollama는 지원되는 GPU 백엔드를 찾으면 모델을 CPU와 GPU로 나눌 수 있으며, `ollama ps`의 PROCESSOR 열에 분할 상태가 표시됩니다. iGPU는 CPU와 시스템 RAM을 공유하므로 주된 속도 한계인 메모리 대역폭이 늘어나지 않습니다. Intel Iris Xe iGPU가 있는 RAM 8GB 시스템에서 iGPU가 사용되면 Qwen3 4B는 추정 초당 12–20 토큰입니다. CPU 전용과 비교하려면 `OLLAMA_VULKAN=0`으로 테스트하십시오.' },
-            { q: '저사양 PC를 위한 가장 빠른 로컬 LLM은 무엇입니까?', a: 'Qwen3 1.7B (Q4_K_M)가 이 가이드에서 가장 빠른 모델입니다 — 최신 i5/Ryzen 5, RAM 4 GB, GPU 없이 초당 25–40 토큰. 비슷한 속도에서 더 나은 품질을 원한다면 Phi-4-mini (3.8B)가 RAM 8 GB에서 초당 15–25 토큰으로 동작하며 코딩과 추론을 훨씬 잘 처리합니다.' },
-            { q: 'RAM 4 GB에서 로컬 LLM을 실행할 수 있습니까?', a: '예 — Qwen3 1.7B (Q4_K_M)가 RAM 4 GB, CPU 전용에 권장되는 모델이며, 최신 i5/Ryzen 5에서 초당 25–40 토큰에 도달합니다. 이 가이드에서 가장 빠른 모델이며 OS를 위한 여유 공간을 남기고 맞습니다.' },
+            { q: '저사양 PC를 위한 가장 빠른 로컬 LLM은 무엇입니까?', a: 'Qwen3 1.7B (Q4_K_M)가 이 가이드의 티어별 추천 모델 중 가장 빠릅니다 (Qwen3 0.6B 같은 더 작은 모델은 더 빠르지만 품질이 크게 낮습니다) — 최신 i5/Ryzen 5, RAM 4 GB, GPU 없이 추정 초당 25–40 토큰. 비슷한 속도에서 더 나은 품질을 원한다면 Phi-4-mini (3.8B)가 RAM 8 GB에서 초당 15–25 토큰으로 동작하며 코딩과 추론을 훨씬 잘 처리합니다.' },
+            { q: 'RAM 4 GB에서 로컬 LLM을 실행할 수 있습니까?', a: '예 — Qwen3 1.7B (Q4_K_M)가 RAM 4 GB, CPU 전용에 권장되는 모델이며, 최신 i5/Ryzen 5에서 초당 25–40 토큰에 도달합니다. 이 가이드의 티어별 추천 모델 중 가장 빠르며 OS를 위한 여유 공간을 남기고 맞습니다.' },
             { q: '속도를 위해 GPU가 필요합니까?', a: '아니요 — 이 가이드의 모든 모델은 CPU 전용으로 실행됩니다. Intel Iris iGPU는 소폭의 속도 향상을 줄 수 있지만 (Qwen3 4B: iGPU가 사용되는 경우 추정 초당 12–20 토큰) 선택 사항이며 드라이버 지원에 따라 달라집니다. 중고 RTX 4060 8GB 같은 독립 GPU는 같은 모델 기준 CPU 전용보다 보통 5–10배 빠르지만, 이는 필수가 아닌 별도의 업그레이드 경로입니다.' },
             { q: 'Intel Iris iGPU는 로컬 LLM에 충분합니까?', a: '도움이 될 수 있지만 보장되지는 않습니다. RAM 8 GB와 Intel Iris Xe iGPU에서 Ollama가 실제로 iGPU를 사용하면 Qwen3 4B는 추정 초당 12–20 토큰이고, RAM 16 GB에서 Llama 3.2 3B는 추정 초당 20–35 토큰입니다. iGPU는 CPU와 시스템 RAM을 공유하므로 향상 폭은 대체로 크지 않습니다. 같은 프롬프트를 iGPU를 사용할 때와 사용하지 않을 때 각각 실행해 보고 더 빠른 설정을 유지하십시오.' },
             { q: '저사양 하드웨어에서는 Q2와 Q4 중 어느 양자화를 사용해야 합니까?', a: 'Q4_K_M부터 시작하십시오 — 이 가이드의 모든 모델 티어(1.7B~8B)에 맞으며 품질 손실은 작습니다. Q4_K_M이 메모리 부족 오류를 일으킬 때만 Q3나 Q2로 낮추십시오. Q2 파일은 더 작아서 더 빠르지만, 추론 및 코딩 작업에서 품질 손실이 눈에 띕니다.' },
             { q: 'Windows에서 사용 가능한 RAM을 확인하는 방법은 무엇입니까?', a: '작업 관리자 → 성능 → 메모리를 여십시오. 표시되는 총량이 시스템 RAM입니다 — 위의 하드웨어 판단 표(4GB, 8GB, 16GB 티어)와 비교하여 올바른 모델을 선택하십시오.' },
-            { q: 'Ollama가 내장 GPU를 자동으로 사용합니까?', a: '지원되는 백엔드가 있는 경우에만 사용합니다. Ollama 문서에 따르면 Windows와 Linux에서 Vulkan GPU 지원은 백엔드가 설치되어 있으면 기본으로 활성화되며, AMD Ryzen AI iGPU는 ROCm 항목에 나열되어 있습니다. Intel 내장 GPU 지원은 명시되어 있지 않습니다. 모델을 로드한 후 `ollama ps`로 확인하십시오 — PROCESSOR 열에 100% CPU, 100% GPU 또는 분할 상태가 표시됩니다. Vulkan GPU를 끄려면 `OLLAMA_VULKAN=0`을 설정하십시오.' },
+            { q: 'Ollama가 내장 GPU를 자동으로 사용합니까?', a: '지원되는 백엔드가 있는 경우에만 사용합니다. Ollama 문서에 따르면 Windows와 Linux에서 Vulkan GPU 지원은 백엔드가 설치되어 있으면 기본으로 활성화되며, AMD Ryzen AI iGPU는 ROCm 항목에 나열되어 있습니다. Intel 내장 GPU는 지원 표에 나열되어 있지 않습니다. 모델을 로드한 후 `ollama ps`로 확인하십시오 — PROCESSOR 열에 100% CPU, 100% GPU 또는 분할 상태가 표시됩니다. Vulkan GPU를 끄려면 `OLLAMA_VULKAN=0`을 설정하십시오.' },
             { q: '저사양 PC에서 ChatGPT의 가장 좋은 무료 대안은 무엇입니까?', a: 'RAM 8 GB, CPU 전용 Ollama에서 Q4_K_M의 Phi-4-mini (3.8B)를 사용하면 초당 15–25 토큰을 얻을 수 있습니다 — 채팅, 요약, 코딩 도움에 충분합니다. 품질은 프론티어 클라우드 모델보다 낮지만 일상 작업에는 충분합니다. 완전 무료이며 오프라인으로 실행되고 API 키가 필요 없습니다.' },
             { q: '로컬 LLM에서 독립 GPU는 CPU보다 얼마나 빠릅니까?', a: '같은 모델 기준 보통 5–10배 빠릅니다. 중고 RTX 4060 8GB (가격 변동)는 이 가이드에서 다루는 CPU 전용 구성보다 대체로 빠릅니다. Intel Iris iGPU는 기껏해야 그 중간에 위치합니다 — 예를 들어 Qwen3 4B는 iGPU가 사용되는 경우 추정 초당 12–20 토큰이고, 가장 근접한 CPU 전용 비교 티어는 추정 초당 8–15 토큰입니다.' },
             { q: '로컬 AI 모델과 로컬 LLM은 같은 것입니까?', a: '이 가이드에서는 동일한 의미로 사용합니다. "로컬 AI 모델"은 업계에서 로컬 LLM(대규모 언어 모델)이라고 부르는 것 — 한 번 다운로드하여 자신의 기기에서 오프라인으로 실행하는 텍스트 생성 가중치 — 을 가리키는 일상적 표현입니다. 이 구분이 중요해지는 경우는 AI 모델이 텍스트 기반이 아닐 때뿐입니다. Stable Diffusion과 같은 이미지 생성 모델이나 Whisper와 같은 음성 모델도 로컬에서 실행되지만 하드웨어 요구사항이 다르며, 이 가이드의 tok/s 수치는 이들에 적용되지 않습니다.' },
@@ -5007,7 +5007,7 @@ schema: {
             'name': '저사양 PC를 위한 가장 빠른 로컬 LLM은 무엇입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 1.7B (Q4_K_M)가 이 가이드에서 가장 빠른 모델입니다 — 최신 i5/Ryzen 5, RAM 4 GB, GPU 없이 초당 25–40 토큰. 비슷한 속도에서 더 나은 품질을 원한다면 Phi-4-mini (3.8B)가 RAM 8 GB에서 초당 15–25 토큰으로 동작하며 코딩과 추론을 훨씬 잘 처리합니다.',
+              'text': 'Qwen3 1.7B (Q4_K_M)가 이 가이드의 티어별 추천 모델 중 가장 빠릅니다 (Qwen3 0.6B 같은 더 작은 모델은 더 빠르지만 품질이 크게 낮습니다) — 최신 i5/Ryzen 5, RAM 4 GB, GPU 없이 추정 초당 25–40 토큰. 비슷한 속도에서 더 나은 품질을 원한다면 Phi-4-mini (3.8B)가 RAM 8 GB에서 초당 15–25 토큰으로 동작하며 코딩과 추론을 훨씬 잘 처리합니다.',
             },
           },
           {
@@ -5015,7 +5015,7 @@ schema: {
             'name': 'RAM 4 GB에서 로컬 LLM을 실행할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '예 — Qwen3 1.7B (Q4_K_M)가 RAM 4 GB, CPU 전용에 권장되는 모델이며, 최신 i5/Ryzen 5에서 초당 25–40 토큰에 도달합니다. 이 가이드에서 가장 빠른 모델이며 OS를 위한 여유 공간을 남기고 맞습니다.',
+              'text': '예 — Qwen3 1.7B (Q4_K_M)가 RAM 4 GB, CPU 전용에 권장되는 모델이며, 최신 i5/Ryzen 5에서 초당 25–40 토큰에 도달합니다. 이 가이드의 티어별 추천 모델 중 가장 빠르며 OS를 위한 여유 공간을 남기고 맞습니다.',
             },
           },
           {
@@ -5055,7 +5055,7 @@ schema: {
             'name': 'Ollama가 내장 GPU를 자동으로 사용합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '지원되는 백엔드가 있는 경우에만 사용합니다. Ollama 문서에 따르면 Windows와 Linux에서 Vulkan GPU 지원은 백엔드가 설치되어 있으면 기본으로 활성화되며, AMD Ryzen AI iGPU는 ROCm 항목에 나열되어 있습니다. Intel 내장 GPU 지원은 명시되어 있지 않습니다. 모델을 로드한 후 `ollama ps`로 확인하십시오 — PROCESSOR 열에 100% CPU, 100% GPU 또는 분할 상태가 표시됩니다. Vulkan GPU를 끄려면 `OLLAMA_VULKAN=0`을 설정하십시오.',
+              'text': '지원되는 백엔드가 있는 경우에만 사용합니다. Ollama 문서에 따르면 Windows와 Linux에서 Vulkan GPU 지원은 백엔드가 설치되어 있으면 기본으로 활성화되며, AMD Ryzen AI iGPU는 ROCm 항목에 나열되어 있습니다. Intel 내장 GPU는 지원 표에 나열되어 있지 않습니다. 모델을 로드한 후 `ollama ps`로 확인하십시오 — PROCESSOR 열에 100% CPU, 100% GPU 또는 분할 상태가 표시됩니다. Vulkan GPU를 끄려면 `OLLAMA_VULKAN=0`을 설정하십시오.',
             },
           },
           {
