@@ -122,7 +122,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "obscurify-review",
-        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
         "dateModified": "2026-10-23",
         "tier": "about"
@@ -2192,7 +2192,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "obscurify-review",
-        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
@@ -10786,7 +10786,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "obscurify-review",
-        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
@@ -11809,12 +11809,12 @@
     "totalCount": 1,
     "capped": false
   },
-  "Obscurify": {
+  "Obscurify.ai": {
     "articles": [
       {
         "cluster": "power-local-llm",
         "slug": "obscurify-review",
-        "title": "Obscurify Review: Anonymous AI Chat With an Optional Local Mode",
+        "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
         "dateModified": "2026-10-23",
         "tier": "about"
