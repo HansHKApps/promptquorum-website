@@ -28,6 +28,7 @@ import { EdgeVideoBandwidthCalculator } from '@/components/EdgeVideoBandwidthCal
 import { ShadowAiExposureAssessment } from '@/components/ShadowAiExposureAssessment'
 import { AgentBlastRadiusCalculator } from '@/components/AgentBlastRadiusCalculator'
 import { IpRiskTriageMatrix } from '@/components/IpRiskTriageMatrix'
+import { resolveSkin, getSkinClasses, getSkinThemeColors, type SkinClasses } from '@/components/article-skin/skin'
 import { CategoryCompareTable } from '@/components/CategoryCompareTable'
 import type { CategoryCompareData } from '@/lib/power-local-llm/compare-data'
 import { StateAiLawApplicabilityChecker } from '@/components/StateAiLawApplicabilityChecker'
@@ -713,7 +714,7 @@ function RelatedArticlesDisclosure({ toolName, lang, pageSlug }: { toolName: str
   )
 }
 
-function SectionBlock({ section, colors, id, lang, renderLinks, compareData, pageSlug }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode; compareData?: CategoryCompareData; pageSlug?: string }) {
+function SectionBlock({ section, colors, skinCls, id, lang, renderLinks, compareData, pageSlug }: { section: LLMSection; colors: { dot: string; badge: string }; skinCls: SkinClasses; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode; compareData?: CategoryCompareData; pageSlug?: string }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
@@ -739,15 +740,15 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData, pag
         </p>
       )}
       {section.title && !section.isTldr && (
-        <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
+        <h2 className={skinCls.h2}>
           {renderInlineLinks(section.title, lang)}
         </h2>
       )}
 
       {/* TL;DR block */}
       {section.isTldr && section.items && (
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
+        <div className={skinCls.tldrBox}>
+          <p className={skinCls.tldrLabel}>{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => (
               <li key={i} className="flex gap-3 text-text-secondary text-sm">
@@ -1415,7 +1416,9 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   const langData = articleData[lang]
   const enData = articleData['en']!
   const article = (langData ?? enData)
-  const colors = THEME_COLORS[article.theme] ?? FALLBACK_THEME_COLOR
+  const skin = resolveSkin(article.designSkin)
+  const skinCls = getSkinClasses(skin)
+  const colors = getSkinThemeColors(skin, article.theme, THEME_COLORS[article.theme] ?? FALLBACK_THEME_COLOR)
 
   // Bound helper for rendering links
   const renderLinks = (text: string) =>
@@ -1460,7 +1463,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             {article.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-text-secondary flex-wrap">
-            <time dateTime={article.dateModified ?? article.publishDate} className={`inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold ${isDirectoryPage ? 'bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : 'bg-emerald-50 border-emerald-300 text-emerald-700'}`}>
+            <time dateTime={article.dateModified ?? article.publishDate} className={isDirectoryPage ? 'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : skinCls.updatedBadge}>
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
@@ -1533,7 +1536,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (
-          <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4 mb-6">
+          <div className={skinCls.leadBlock}>
             <p className="text-text-primary font-semibold leading-relaxed">
               {renderInlineLinks(article.leadAnswerBlock, lang)}
             </p>
@@ -1707,12 +1710,12 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
           const tldrId = tldrEntry ? slugifySectionId(tldrEntry[1] as any, tldrEntry[0]) : undefined
           const labels = SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!
           return (
-            <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{labels.tableOfContents}</p>
+            <nav className={skinCls.tocNav} aria-label="Table of contents">
+              <p className={skinCls.tocLabel}>{labels.tableOfContents}</p>
               <ol className="space-y-1">
                 {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                   <li key={item.anchor}>
-                    <a href={`#${item.anchor.replace(/^#/, '')}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
+                    <a href={`#${item.anchor.replace(/^#/, '')}`} className={skinCls.tocLink}>
                       {tldrId && item.anchor.replace(/^#/, '') === tldrId ? labels.keyTakeaways : item.label}
                     </a>
                   </li>
@@ -1755,7 +1758,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                 return null
               }
               const sectionEl = (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} pageSlug={slug} />
+                <SectionBlock key={key} section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} pageSlug={slug} />
               )
               if (directoryFunnel && key === 'relatedReading') {
                 return (

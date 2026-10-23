@@ -513,6 +513,24 @@ Run this against the **live or locally built HTML** of every locale URL of the p
 
 ---
 
+### Step 4.9: Hub Skin (design only — set by the page-updater, never by hand)
+
+Articles reached from a cluster hub should look like the hub. When you run a full page update on an article, set the skin flag **on every locale object of that article**:
+
+```ts
+designSkin: 'hub',
+```
+
+What it does: swaps colours and decoration (H2 accent rule, TL;DR box, lead block, table of contents, "last updated" badge, theme badge) to the `--hub-*` tokens. It changes **classes only**: no sections, headings, text, links or schema are added, removed or reordered.
+
+Rules:
+- Only the page-updater adds the flag. Do not add it in a content-only edit or to pages you did not update.
+- Set it in all 9 locales or none (parity, same as Step 5.5).
+- Do not touch the speakable hooks (`.article-intro`, `.key-takeaways`, `h1`, `h2`) or move the first answer block.
+- Supported renderers: `PowerLocalLLMPostClient` today; other clusters are wired in later. The flag is ignored by a renderer that does not support it, so setting it early is harmless.
+- Verify: `npm run test:article-skin` (same HTML with and without the flag, class attributes aside). Then run Step 4.8 as usual. Above-the-fold: the lead answer must still render in the first viewport (`npm run test:above-fold`).
+- Roll back by deleting the line. Nothing else changes.
+
 ## Slide Decks and PDF Reference Cards
 
 Many pages include embedded slide decks and downloadable PDF reference cards. These are separate assets that also go stale.
