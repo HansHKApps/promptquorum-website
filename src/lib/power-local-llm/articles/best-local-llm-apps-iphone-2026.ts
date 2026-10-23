@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**PocketPal AI is the recommended free default.** Open-source (MIT), App Store install, supports any GGUF model from Hugging Face. Local chat needs no account (README); premium Pals and "PocketPal Plus" are optional in-app purchases. Runs Phi-4 Mini at ~10–15 tokens/sec on iPhone 16 Pro. Recommended starting point for most iPhone users.',
+          '**PocketPal AI is the recommended free default.** Open-source (MIT), App Store install, supports any GGUF model from Hugging Face. Local chat needs no account (README); premium Pals and "PocketPal Plus" are optional in-app purchases. Runs Phi-4 Mini at ~10–15 tokens/sec on iPhone 16 Pro.',
           '**Private LLM is the paid option in this guide ($4.99 one-time, no subscription).** One purchase covers iPhone, iPad, and Mac, and Family Sharing extends to up to six people. Curated model library; per the developer it plugs into Siri and Shortcuts.',
           '**Locally AI is the free MLX-based alternative, developed by the LM Studio team.** Runs Llama, Gemma (incl. Gemma 4), Qwen, and DeepSeek models on Apple MLX, works with iOS Shortcuts, and can expose Apple\'s own on-device foundation model as a chat interface.',
           '**Google AI Edge Gallery is Google\'s free Gemma 4 app for iPhone.** Thinking mode, agent skills, and image/audio input; models run in the LiteRT-LM format, not GGUF. Google still describes the app as in active development.',
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**PocketPal AI ist die empfohlene kostenlose Standard-App.** Quelloffen (MIT), Installation über den App Store, unterstützt jedes GGUF-Modell von Hugging Face. Der lokale Chat braucht kein Konto; Premium-Pals und „PocketPal Plus" sind optionale In-App-Käufe. Führt Phi-4 Mini mit ~10–15 Tokens/Sek. auf dem iPhone 16 Pro aus. Empfohlener Einstiegspunkt für die meisten iPhone-Nutzer.',
+          '**PocketPal AI ist die empfohlene kostenlose Standard-App.** Quelloffen (MIT), Installation über den App Store, unterstützt jedes GGUF-Modell von Hugging Face. Der lokale Chat braucht kein Konto; Premium-Pals und „PocketPal Plus" sind optionale In-App-Käufe. Führt Phi-4 Mini mit ~10–15 Tokens/Sek. auf dem iPhone 16 Pro aus.',
           '**Private LLM ist die kostenpflichtige Option ($4.99 einmalig, kein Abo).** Ein Kauf deckt iPhone, iPad und Mac ab, und Family Sharing erstreckt sich auf bis zu sechs Personen. Kuratierte Modellbibliothek; laut Entwickler ist die App in Siri und Kurzbefehle eingebunden.',
           '**Locally AI ist die kostenlose MLX-basierte Alternative, entwickelt vom LM-Studio-Team.** Führt Llama-, Gemma- (inkl. Gemma 4), Qwen- und DeepSeek-Modelle auf Apple MLX aus, arbeitet mit iOS Kurzbefehlen zusammen und kann Apples eigenes On-Device-Foundation-Modell als Chat-Oberfläche bereitstellen.',
           '**Google AI Edge Gallery ist Googles kostenlose Gemma-4-App für das iPhone.** Denkmodus, Agent Skills und Bild-/Audioeingabe; die Modelle laufen im LiteRT-LM-Format, nicht als GGUF. Google beschreibt die App weiterhin als in aktiver Entwicklung.',
@@ -1766,7 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**PocketPal AI est l\'option gratuite par défaut recommandée.** Open source (MIT), installation via l\'App Store, compatible avec tout modèle GGUF de Hugging Face. Le chat local ne demande aucun compte (README) ; les Pals premium et « PocketPal Plus » sont des achats intégrés optionnels. Fait tourner Phi-4 Mini à ~10–15 tokens/sec sur iPhone 16 Pro. Point de départ recommandé pour la plupart des utilisateurs iPhone.',
+          '**PocketPal AI est l\'option gratuite par défaut recommandée.** Open source (MIT), installation via l\'App Store, compatible avec tout modèle GGUF de Hugging Face. Le chat local ne demande aucun compte (README) ; les Pals premium et « PocketPal Plus » sont des achats intégrés optionnels. Fait tourner Phi-4 Mini à ~10–15 tokens/sec sur iPhone 16 Pro.',
           '**Private LLM est l\'option payante de ce guide ($4.99 en achat unique, sans abonnement).** Un seul achat couvre iPhone, iPad et Mac, et le partage familial l\'étend à six personnes. Bibliothèque de modèles sélectionnés ; selon le développeur, il s\'intègre à Siri et à Shortcuts.',
           '**Locally AI est l\'alternative gratuite basée sur MLX, développée par l\'équipe LM Studio.** Fait tourner des modèles Llama, Gemma (dont Gemma 4), Qwen et DeepSeek sur Apple MLX, fonctionne avec iOS Shortcuts et peut exposer le propre modèle de fondation on-device d\'Apple comme interface de chat.',
           '**Google AI Edge Gallery est l\'application Gemma 4 gratuite de Google pour iPhone.** Mode réflexion, agent skills et entrée image/audio ; les modèles tournent au format LiteRT-LM, pas GGUF. Google décrit toujours l\'application comme en développement actif.',
@@ -2868,7 +2868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**PocketPal AI es la opción gratuita recomendada por defecto.** Código abierto (MIT), instalación desde el App Store, compatible con cualquier modelo GGUF de Hugging Face. El chat local no requiere cuenta (README); los Pals premium y "PocketPal Plus" son compras integradas opcionales. Ejecuta Phi-4 Mini a ~10–15 tokens/seg en iPhone 16 Pro. Punto de partida recomendado para la mayoría de usuarios de iPhone.',
+          '**PocketPal AI es la opción gratuita recomendada por defecto.** Código abierto (MIT), instalación desde el App Store, compatible con cualquier modelo GGUF de Hugging Face. El chat local no requiere cuenta (README); los Pals premium y "PocketPal Plus" son compras integradas opcionales. Ejecuta Phi-4 Mini a ~10–15 tokens/seg en iPhone 16 Pro.',
           '**Private LLM es la opción de pago ($4.99 de pago único, sin suscripción).** Una sola compra cubre iPhone, iPad y Mac, y Compartir en familia lo extiende hasta seis personas. Biblioteca de modelos curada; según el desarrollador, se integra con Siri y Shortcuts.',
           '**Locally AI es la alternativa gratuita basada en MLX, desarrollada por el equipo de LM Studio.** Ejecuta modelos Llama, Gemma (incluido Gemma 4), Qwen y DeepSeek sobre Apple MLX, funciona con iOS Shortcuts y puede exponer el propio modelo de base en dispositivo de Apple como interfaz de chat.',
           '**Google AI Edge Gallery es la app gratuita de Google con Gemma 4 para iPhone.** Modo de razonamiento, habilidades de agente y entrada de imagen/audio; los modelos se ejecutan en formato LiteRT-LM, no GGUF. Google sigue describiendo la app como en desarrollo activo.',
@@ -3975,7 +3975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**O PocketPal AI é a opção gratuita padrão recomendada.** Código aberto (MIT), instalação pela App Store, compatível com qualquer modelo GGUF do Hugging Face. O chat local não exige conta (README); os Pals premium e o "PocketPal Plus" são compras opcionais dentro do app. Executa o Phi-4 Mini a ~10–15 tokens/seg no iPhone 16 Pro. Ponto de partida recomendado para a maioria dos usuários de iPhone.',
+          '**O PocketPal AI é a opção gratuita padrão recomendada.** Código aberto (MIT), instalação pela App Store, compatível com qualquer modelo GGUF do Hugging Face. O chat local não exige conta (README); os Pals premium e o "PocketPal Plus" são compras opcionais dentro do app. Executa o Phi-4 Mini a ~10–15 tokens/seg no iPhone 16 Pro.',
           '**O Private LLM é a opção paga deste guia ($4.99 pagamento único, sem assinatura).** Uma única compra cobre iPhone, iPad e Mac, e o Compartilhamento em Família se estende a até seis pessoas. Biblioteca de modelos curada; segundo o desenvolvedor, ele se integra à Siri e ao Shortcuts.',
           '**O Locally AI é a alternativa gratuita baseada em MLX, desenvolvida pela equipe da LM Studio.** Executa modelos Llama, Gemma (incluindo o Gemma 4), Qwen e DeepSeek em Apple MLX, funciona com o iOS Shortcuts e pode expor o próprio modelo de base no dispositivo da Apple como interface de chat.',
           '**O Google AI Edge Gallery é o app gratuito do Google para o Gemma 4 no iPhone.** Modo de raciocínio, agent skills e entrada de imagem/áudio; os modelos rodam no formato LiteRT-LM, não em GGUF. O Google ainda descreve o app como em desenvolvimento ativo.',
