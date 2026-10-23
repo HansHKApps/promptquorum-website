@@ -939,6 +939,7 @@ const HUB_THEMES: Array<{
       'longmemory-review',
       'return-editor-review',
       'surfsense-review',
+      'openrag-review',
     ],
   },
   {
