@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { resolveSkin, getSkinClasses, getSkinThemeColors, type SkinClasses } from '@/components/article-skin/skin'
 import type { LLMSection, LLMArticle } from '@/lib/local-llms/types'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -377,7 +378,7 @@ interface LightboxImage {
   caption?: string
 }
 
-function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode }) {
+function SectionBlock({ section, colors, skinCls, id, lang, renderLinks }: { section: LLMSection; colors: { dot: string; badge: string }; skinCls: SkinClasses; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
@@ -395,15 +396,15 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   return (
     <div className={section.isTldr ? 'mt-2' : 'mt-8'} id={id}>
       {section.title && !section.isTldr && (
-        <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
+        <h2 className={skinCls.h2}>
           {renderLinks(section.title)}
         </h2>
       )}
 
       {/* TL;DR block */}
       {section.isTldr && section.items && (
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 sm:p-5 my-3 key-takeaways">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
+        <div className={skinCls.tldrBoxCompact}>
+          <p className={skinCls.tldrLabel}>{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => (
               <li key={i} className="flex gap-3 text-text-secondary text-sm">
@@ -914,7 +915,9 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
   const langData = articleData[lang]
   const enData = articleData['en']!
   const article = (langData ?? enData)
-  const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started']
+  const skin = resolveSkin(article.designSkin)
+  const skinCls = getSkinClasses(skin)
+  const colors = getSkinThemeColors(skin, article.theme, THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started'])
 
   const tldrKey = Object.entries(article.sections).find(([, sec]) => (sec as any).isTldr && (sec as any).items)?.[0]
 
@@ -947,7 +950,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
             {article.title}
           </h1>
           <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
-            <time dateTime={article.dateModified ?? article.publishDate} className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold">
+            <time dateTime={article.dateModified ?? article.publishDate} className={skinCls.updatedBadge}>
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
@@ -963,7 +966,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (
-          <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl px-4 sm:px-5 py-3 sm:py-4 mb-3 sm:mb-4">
+          <div className={skinCls.leadBlockCompact}>
             <p className="text-text-primary font-semibold leading-snug sm:leading-relaxed">
               {renderLinks(article.leadAnswerBlock)}
             </p>
@@ -972,7 +975,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
 
         {/* Key Takeaways directly after the lead answer (Rule 36 first screen); skipped in the section loop below */}
         {tldrKey && (
-          <SectionBlock key={tldrKey} section={article.sections[tldrKey]} colors={colors} id={slugifySectionId(article.sections[tldrKey], tldrKey)} lang={lang} renderLinks={renderLinks} />
+          <SectionBlock key={tldrKey} section={article.sections[tldrKey]} colors={colors} skinCls={skinCls} id={slugifySectionId(article.sections[tldrKey], tldrKey)} lang={lang} renderLinks={renderLinks} />
         )}
 
         <ClusterBanner cluster="local-llms" />
@@ -1123,13 +1126,13 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
           const tldrId = tldrEntry ? slugifySectionId(tldrEntry[1] as any, tldrEntry[0]) : undefined
           const labels = SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!
           return (
-          <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
+          <nav className={skinCls.tocNav} aria-label="Table of contents">
             <details>
-            <summary className="cursor-pointer text-xs font-bold text-primary uppercase tracking-widest">{labels.tableOfContents}</summary>
+            <summary className={skinCls.tocSummary}>{labels.tableOfContents}</summary>
             <ol className="space-y-1 mt-3">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>
-                  <a href={`#${item.anchor.replace(/^#/, '')}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
+                  <a href={`#${item.anchor.replace(/^#/, '')}`} className={skinCls.tocLink}>
                     {tldrId && item.anchor.replace(/^#/, '') === tldrId ? labels.keyTakeaways : item.label}
                   </a>
                 </li>
@@ -1146,7 +1149,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
             if (key === tldrKey) return null
             const sectionId = slugifySectionId(section, key)
             const sectionEl = (
-              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
+              <SectionBlock key={key} section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} renderLinks={renderLinks} />
             )
             if (directoryFunnel && key === 'relatedReading') {
               return (

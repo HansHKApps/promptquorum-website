@@ -40,6 +40,7 @@
     "seo:gate:changed": "node scripts/check-page-seo-gate.mjs --changed --strict --base=http://localhost:3000",
     "seo:measure": "node scripts/seo-measure.mjs",
     "test:article-skin": "npx -y tsx scripts/test-article-skin.tsx",
+    "check:page-updater": "node scripts/check-page-updater-complete.mjs",
     "test:above-fold": "playwright test -c playwright.above-the-fold.config.ts",
     "query-coverage": "node scripts/query-coverage.mjs",
     "gsc:import": "python3 scripts/gsc-import.py",

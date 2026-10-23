@@ -20,6 +20,7 @@ const st = {
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
@@ -542,6 +543,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Beste lokale LLM-Frontends 2026: Open WebUI, Enchanted UI und mehr',
       seoTitle: 'Lokale LLM-Frontends 2026: 8 Ollama-Frontends im Vergleich',
@@ -963,6 +965,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
       seoTitle: 'Meilleures interfaces Ollama et LLM locaux 2026 : 8 outils',
@@ -1366,6 +1369,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '2026年のローカルLLMフロントエンド比較：Open WebUI、Enchanted UIなど',
       seoTitle: 'ローカルLLMフロントエンド2026：Ollama対応8種を比較',
@@ -1766,6 +1770,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '2026年最佳本地LLM前端：Open WebUI、Enchanted UI等',
       seoTitle: '2026年Ollama与本地LLM前端对比：8款工具',
@@ -2168,6 +2173,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Los mejores frontends para LLMs locales en 2026: Open WebUI, Enchanted UI y más',
@@ -2573,6 +2579,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'أفضل واجهات نماذج LLM المحلية في 2026: Open WebUI وEnchanted UI وغيرهما',
@@ -2979,6 +2986,7 @@ schema: {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Melhores frontends para LLMs locais em 2026: Open WebUI, Enchanted UI e mais',
@@ -3383,6 +3391,7 @@ schema: {
       },
     },
     ko: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: '2026년 최고의 로컬 LLM 프론트엔드: Open WebUI, Enchanted UI 등',
