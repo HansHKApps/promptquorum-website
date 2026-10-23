@@ -4,6 +4,7 @@ import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { buildLLMHubData } from '@/lib/local-llms/hub-data'
+import { generateLocalLlmsJsonLd } from '@/lib/local-llms/schema'
 import { LocalLlmsHubTemplate, usesLocalLlmsHubTemplate } from '@/lib/local-llms/hub-template'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -32,6 +33,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function EsLocalLLMsPage() {
   const hubData = buildLLMHubData('pt')
-  if (usesLocalLlmsHubTemplate('pt')) return <LocalLlmsHubTemplate lang="pt" {...hubData} />
-  return <LocalLLMsHub initialLang="pt" {...hubData} />
+  const jsonLd = generateLocalLlmsJsonLd('pt', 'https://www.promptquorum.com/pt/local-llms', '/pt')
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {usesLocalLlmsHubTemplate('pt') ? <LocalLlmsHubTemplate lang="pt" {...hubData} /> : <LocalLLMsHub initialLang="pt" {...hubData} />}
+    </>
+  )
 }

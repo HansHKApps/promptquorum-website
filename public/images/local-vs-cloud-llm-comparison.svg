@@ -37,12 +37,12 @@
   <!-- Row 1: Cost -->
   <text x="108" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">$0/token after hardware</text>
   <text x="108" y="166" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Runs on GPU you already own</text>
-  <text x="416" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">$0.15–$60 per 1M tokens</text>
+  <text x="416" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Pay per token</text>
   <text x="416" y="166" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Varies by model and provider</text>
 
   <!-- Row 2: Privacy -->
-  <text x="108" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Full — data never leaves device</text>
-  <text x="108" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">GDPR / HIPAA compliant by default</text>
+  <text x="108" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Data stays on your device</text>
+  <text x="108" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Simplifies GDPR / HIPAA reviews</text>
   <text x="416" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Sent to provider servers</text>
   <text x="416" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Verify data retention policy per tier</text>
 
@@ -53,9 +53,9 @@
   <text x="416" y="262" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">No hardware requirements</text>
 
   <!-- Row 4: Quality -->
-  <text x="108" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Good — 7B to 70B open models</text>
-  <text x="108" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">70B matches GPT-4o Mini benchmarks</text>
-  <text x="416" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Excellent — GPT-4o, Claude 4.6</text>
+  <text x="108" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Good — open models, 4B to 70B</text>
+  <text x="108" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Covers most everyday coding and writing</text>
+  <text x="416" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Excellent — leading cloud models</text>
   <text x="416" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Frontier models, updated continuously</text>
 
   <!-- Row 5: Best for -->

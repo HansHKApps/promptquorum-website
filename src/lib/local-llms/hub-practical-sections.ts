@@ -45,7 +45,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: 'Memory sets the limit, not the software: at Q4 a model needs about 0.6 GB per billion parameters plus 1–2 GB of headroom. One 24 GB card runs a 27B-class model; 48 GB runs a 70B model.',
       cols: ['Model', 'Quantization', 'Weights', 'Fits'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '~22 GB', '24 GB VRAM'],
+        ['Qwen3.8-27B', 'Q4', '~18 GB', '24 GB VRAM'],
         ['70B (Llama 3.3, Qwen)', 'Q4', '~42 GB', '48 GB VRAM'],
         ['70B', 'Q5', '~50 GB', 'Above a single 48 GB card'],
         ['70B', 'Q8', '~74 GB', 'Multi-GPU setup'],
@@ -92,7 +92,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: 'Den Ausschlag gibt der Speicher, nicht die Software: Bei Q4 braucht ein Modell etwa 0,6 GB pro Milliarde Parameter plus 1–2 GB Reserve. Eine 24-GB-Karte betreibt ein Modell der 27B-Klasse, mit 48 GB läuft ein 70B-Modell.',
       cols: ['Modell', 'Quantisierung', 'Gewichte', 'Passt auf'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '~22 GB', '24 GB VRAM'],
+        ['Qwen3.8-27B', 'Q4', '~18 GB', '24 GB VRAM'],
         ['70B (Llama 3.3, Qwen)', 'Q4', '~42 GB', '48 GB VRAM'],
         ['70B', 'Q5', '~50 GB', 'Mehr als eine einzelne 48-GB-Karte'],
         ['70B', 'Q8', '~74 GB', 'Multi-GPU-Aufbau'],
@@ -139,7 +139,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: 'C\'est la mémoire qui fixe la limite, pas le logiciel : en Q4, un modèle demande environ 0,6 Go par milliard de paramètres, plus 1 à 2 Go de marge. Une carte de 24 Go fait tourner un modèle de classe 27B ; avec 48 Go, un modèle 70B.',
       cols: ['Modèle', 'Quantification', 'Poids', 'Tient sur'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '~22 Go', '24 Go de VRAM'],
+        ['Qwen3.8-27B', 'Q4', '~18 Go', '24 Go de VRAM'],
         ['70B (Llama 3.3, Qwen)', 'Q4', '~42 Go', '48 Go de VRAM'],
         ['70B', 'Q5', '~50 Go', 'Plus qu\'une seule carte de 48 Go'],
         ['70B', 'Q8', '~74 Go', 'Configuration multi-GPU'],
@@ -186,7 +186,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: 'El límite lo pone la memoria, no el software: en Q4 un modelo necesita unos 0,6 GB por cada mil millones de parámetros, más 1–2 GB de margen. Una tarjeta de 24 GB ejecuta un modelo de clase 27B; con 48 GB, uno de 70B.',
       cols: ['Modelo', 'Cuantización', 'Pesos', 'Cabe en'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '~22 GB', '24 GB de VRAM'],
+        ['Qwen3.8-27B', 'Q4', '~18 GB', '24 GB de VRAM'],
         ['70B (Llama 3.3, Qwen)', 'Q4', '~42 GB', '48 GB de VRAM'],
         ['70B', 'Q5', '~50 GB', 'Más de lo que ofrece una sola tarjeta de 48 GB'],
         ['70B', 'Q8', '~74 GB', 'Configuración multi-GPU'],
@@ -233,7 +233,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: 'O limite é a memória, não o software: em Q4, um modelo precisa de cerca de 0,6 GB por bilhão de parâmetros, mais 1–2 GB de folga. Uma placa de 24 GB roda um modelo da classe 27B; com 48 GB, um modelo 70B.',
       cols: ['Modelo', 'Quantização', 'Pesos', 'Cabe em'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '~22 GB', '24 GB de VRAM'],
+        ['Qwen3.8-27B', 'Q4', '~18 GB', '24 GB de VRAM'],
         ['70B (Llama 3.3, Qwen)', 'Q4', '~42 GB', '48 GB de VRAM'],
         ['70B', 'Q5', '~50 GB', 'Mais do que uma única placa de 48 GB'],
         ['70B', 'Q8', '~74 GB', 'Configuração multi-GPU'],
@@ -280,7 +280,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: '上限を決めるのはソフトではなくメモリです。Q4では10億パラメータあたり約0.6GBに、1〜2GBの余裕を加えた容量が必要です。24GBのカード1枚で27Bクラス、48GBなら70Bモデルが動きます。',
       cols: ['モデル', '量子化', '重みサイズ', '収まる環境'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '約22 GB', 'VRAM 24 GB'],
+        ['Qwen3.8-27B', 'Q4', '約18 GB', 'VRAM 24 GB'],
         ['70B（Llama 3.3、Qwen）', 'Q4', '約42 GB', 'VRAM 48 GB'],
         ['70B', 'Q5', '約50 GB', '48 GBカード1枚では不足'],
         ['70B', 'Q8', '約74 GB', 'マルチGPU構成'],
@@ -327,7 +327,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: '决定上限的是内存，而不是软件：Q4量化下，每10亿参数约需0.6 GB，再加1–2 GB余量。一张24 GB显卡可运行27B级模型，48 GB可运行70B模型。',
       cols: ['模型', '量化', '权重大小', '适配显存'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '约22 GB', '24 GB显存'],
+        ['Qwen3.8-27B', 'Q4', '约18 GB', '24 GB显存'],
         ['70B（Llama 3.3、Qwen）', 'Q4', '约42 GB', '48 GB显存'],
         ['70B', 'Q5', '约50 GB', '超出单张48 GB显卡'],
         ['70B', 'Q8', '约74 GB', '多GPU配置'],
@@ -374,7 +374,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: '한계를 정하는 것은 소프트웨어가 아니라 메모리입니다. Q4에서는 파라미터 10억 개당 약 0.6GB에 1–2GB 여유분이 필요합니다. 24GB 카드 한 장이면 27B급, 48GB라면 70B 모델을 실행할 수 있습니다.',
       cols: ['모델', '양자화', '가중치 크기', '적합한 환경'],
       rows: [
-        ['Qwen3.8-27B', 'Q4', '약 22 GB', 'VRAM 24 GB'],
+        ['Qwen3.8-27B', 'Q4', '약 18 GB', 'VRAM 24 GB'],
         ['70B (Llama 3.3, Qwen)', 'Q4', '약 42 GB', 'VRAM 48 GB'],
         ['70B', 'Q5', '약 50 GB', '48 GB 카드 한 장으로는 부족'],
         ['70B', 'Q8', '약 74 GB', '멀티 GPU 구성'],
@@ -421,7 +421,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
       intro: 'الذاكرة هي التي تحدد الحد الأقصى، لا البرنامج: عند ⁨Q4⁩ يحتاج النموذج إلى نحو ⁨0.6 GB⁩ لكل مليار معامل، إضافةً إلى ⁨1–2 GB⁩ هامش أمان. بطاقة بسعة ⁨24 GB⁩ تشغّل نموذجًا من فئة ⁨27B⁩، وسعة ⁨48 GB⁩ تشغّل نموذج ⁨70B⁩.',
       cols: ['النموذج', 'التكميم', 'حجم الأوزان', 'يناسب'],
       rows: [
-        ['⁨Qwen3.8-27B⁩', '⁨Q4⁩', '⁨~22 GB⁩', '⁨24 GB VRAM⁩'],
+        ['⁨Qwen3.8-27B⁩', '⁨Q4⁩', '⁨~18 GB⁩', '⁨24 GB VRAM⁩'],
         ['⁨70B (Llama 3.3, Qwen)⁩', '⁨Q4⁩', '⁨~42 GB⁩', '⁨48 GB VRAM⁩'],
         ['⁨70B⁩', '⁨Q5⁩', '⁨~50 GB⁩', 'أكثر من بطاقة واحدة بسعة ⁨48 GB⁩'],
         ['⁨70B⁩', '⁨Q8⁩', '⁨~74 GB⁩', 'إعداد متعدد ⁨GPU⁩'],
