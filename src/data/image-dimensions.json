@@ -5674,31 +5674,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/best-cpu-only-llm-cpu-vs-gpu-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -5744,51 +5719,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-cpu-vs-gpu-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-cpu-only-llm-model-speeds-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-cpu-only-llm-model-speeds-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 400
-  },
-  "/images/best-cpu-only-llm-model-speeds-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-cpu-only-llm-model-speeds-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-cpu-only-llm-model-speeds-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/best-cpu-only-llm-model-speeds-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -5833,26 +5763,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/best-cpu-only-llm-model-speeds-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-cpu-only-llm-model-speeds-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-cpu-only-llm-model-speeds-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/best-cpu-only-llm-model-speeds-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
   },
   "/images/best-deepseek-distill-for-your-gpu-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
