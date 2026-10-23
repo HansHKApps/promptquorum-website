@@ -2302,7 +2302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Locally AI：LM Studio出品的免费MLX应用', anchor: '#locally-ai' },
       { label: 'Google AI Edge Gallery：谷歌免费的Gemma 4应用', anchor: '#google-ai-edge-gallery' },
       { label: 'MLC Chat：苹果芯片专项优化', anchor: '#mlc-chat' },
-      { label: 'LLM Farm：已下架但仍可配置', anchor: '#llm-farm' },
+      { label: 'LLM Farm：不在App Store上，源码仍可获取', anchor: '#llm-farm' },
       { label: 'Apple Intelligence：系统级内置AI', anchor: '#apple-intelligence' },
       { label: '按iPhone档次推荐模型', anchor: '#models-by-tier' },
       { label: '电池消耗与过热问题', anchor: '#battery-heat' },
@@ -2410,8 +2410,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '应用': '[Private LLM](https://privatellm.app)', '费用': '$4.99买断', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '设备端；无账号、无追踪（开发者称）', '适合人群': '快捷指令 + Siri集成' },
           { '应用': '[Locally AI](https://lmstudio.ai/locally)', '费用': '免费（LM Studio团队）', 'Phi-4 Mini tok/s（16 Pro）': '无数据——MLX目录（无Phi-4）', '隐私': '设备端；不收集数据（商店页面）', '适合人群': 'MLX + 快捷指令，LM Studio联动' },
           { '应用': '[Google AI Edge Gallery](https://apps.apple.com/app/id6749645337)', '费用': '免费（谷歌）', 'Phi-4 Mini tok/s（16 Pro）': '无数据——LiteRT-LM，Gemma 4', '隐私': '模型下载后在设备端运行', '适合人群': 'Gemma 4、思考模式、智能体技能' },
-          { '应用': '[MLC Chat](https://llm.mlc.ai)', '费用': '免费（开源）', 'Phi-4 Mini tok/s（16 Pro）': '无数据——模型库早于Phi-4', '隐私': '仅本地（开源）', '适合人群': 'MLC LLM工具链用户（iOS版已停更）' },
-          { '应用': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '费用': '免费（从源码编译）', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '仅本地（开源）', '适合人群': '开发者（已下架，已过时）' },
+          { '应用': '[MLC Chat](https://llm.mlc.ai)', '费用': '免费（开源）', 'Phi-4 Mini tok/s（16 Pro）': '无数据——模型库早于Phi-4', '隐私': '本地推理（项目文档；未核实）', '适合人群': 'MLC LLM工具链用户（iOS版已停更）' },
+          { '应用': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '费用': '免费（从源码编译）', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '本地推理（项目文档；未核实）', '适合人群': '开发者（不在App Store，已过时）' },
           { '应用': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '费用': '免费（iOS内置）', 'Phi-4 Mini tok/s（16 Pro）': '不适用（系统功能）', '隐私': '本地 + 可选Private Cloud Compute', '适合人群': '邮件、信息、备忘录辅助' },
         ],
         note:
@@ -2528,7 +2528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       llmFarm: {
         id: 'llm-farm',
-        title: 'LLM Farm：已下架但仍可配置',
+        title: 'LLM Farm：不在App Store上，源码仍可获取',
         content:
           '**过时警告：LLM Farm最后一个发布版本（1.4.3）是2025年1月27日，最后一次代码提交是2026年1月30日——近九个月没有更新——因此可能已无人维护。** PromptQuorum对该项目的评测将其从App Store下架的时间定为2025年8月；其GitHub README称该应用在App Store和TestFlight均“暂时不可用”。项目（GitHub：[guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)）仍然开源，GitHub上到2026年10月仍有issue活动，但新用户已无法从App Store安装；必须通过Xcode从源码编译（README：macOS 13+和iOS 16+）。完整评测：[LLM Farm评测](/zh/power-local-llm/llm-farm-review)。',
         items: [
@@ -2549,7 +2549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'apple-intelligence',
         title: 'Apple Intelligence：系统级内置AI',
         content:
-          '**Apple Intelligence在iPhone 15 Pro及更新机型（至少A17 Pro芯片、8 GB内存）上，于设备端运行苹果自家约3B的基础模型。** 它默认不是对话应用——而是为邮件（智能回复）、信息（写作工具）、备忘录（摘要）和通知摘要等系统功能提供支持。自iOS 26起，苹果的Foundation Models框架允许第三方开发者直接调用同一个设备端模型，Locally AI等应用现已借此在其上提供真正的对话界面。iOS 27进一步扩展了该框架：苹果的开发者指南称，应用可以使用任何符合其语言模型协议的语言模型，包括苹果自家模型和云端模型。',
+          '**Apple Intelligence在iPhone 15 Pro及更新机型（即iPhone 15 Pro这一代，据报道为8 GB内存；苹果未公布内存）上，于设备端运行苹果自家约3B的基础模型。** 它默认不是对话应用——而是为邮件（智能回复）、信息（写作工具）、备忘录（摘要）和通知摘要等系统功能提供支持。自iOS 26起，苹果的Foundation Models框架允许第三方开发者直接调用同一个设备端模型，Locally AI等应用现已借此在其上提供真正的对话界面。iOS 27进一步扩展了该框架：苹果的开发者指南称，应用可以使用任何符合其语言模型协议的语言模型，包括苹果自家模型和云端模型。',
         items: [
           '**所在位置：** 集成于iOS 18+（Foundation Models框架自iOS 26加入）。在“设置 → Apple智能与Siri”中启用。',
           '**硬件要求：** iPhone 15 Pro / 15 Pro Max、iPhone 16系列、iPhone 16e、iPhone 17系列，以及2026年的iPhone 18 Pro、18 Pro Max和iPhone Duo（A20 Pro）。更早的iPhone（14及以下）不支持Apple Intelligence。购买前请查看苹果针对iOS 27的最新兼容列表。',
@@ -2573,15 +2573,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**决定模型大小上限的是iPhone的内存，而不是芯片代际。** 6 GB内存的iPhone（14 Pro、15）可流畅运行1.7B模型；8 GB以上的iPhone（15 Pro、16系列、16e、17系列）可流畅运行3B–4B模型，运行7B模型则较慢。除Phi-4 Mini外值得一试的较新小模型有：Gemma 4 E2B和E4B（谷歌，2026年4月；LiteRT-LM文件分别约2.58 GB和3.65 GB），以及Qwen3.5小模型系列（阿里巴巴，2026年3月；0.8B、2B、4B和9B，据Artificial Analysis摘要为Apache 2.0）。PromptQuorum没有它们的速度数据；Locally AI和Google AI Edge Gallery直接内置了它们。关于覆盖所有硬件（不限移动端）的模型全景，请参阅[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026)。',
         image: '/images/iphone-llm-apps-models-tier-zh.svg',
         imageCaption: '按 iPhone 内存档位推荐的本地 LLM 模型：从 4 GB 机型到 12 GB 的 iPhone 17 Pro',
-        columns: ['iPhone档次（年份，内存）', '推荐模型', '下载大小', '预期速度'],
+        columns: ['iPhone档次（年份，内存）', '推荐模型', '下载大小', '速度参考（粗略）'],
         rows: [
-          { 'iPhone档次（年份，内存）': 'iPhone 18 Pro / Pro Max（2026，据报道约12 GB）', '推荐模型': '参照17 Pro起步；苹果未公布内存', '下载大小': '约2.5–3.7 GB', '预期速度': '无数据' },
-          { 'iPhone档次（年份，内存）': 'iPhone 17 Pro / 17 Pro Max（2025，12 GB）', '推荐模型': 'Phi-4 Mini / Llama 3.2 3B / Gemma 4 E4B', '下载大小': '约2.5–3.7 GB', '预期速度': '约13–20 tok/秒（Phi-4 Mini）' },
-          { 'iPhone档次（年份，内存）': 'iPhone 16系列 / 16e / 17（2024–2025，8 GB）', '推荐模型': 'Phi-4 Mini（3.8B Q4_K_M）或Gemma 4 E2B', '下载大小': '约2.6–2.7 GB', '预期速度': '约10–15 tok/秒（Phi-4 Mini）' },
-          { 'iPhone档次（年份，内存）': 'iPhone 15 Pro / Pro Max（2023，8 GB）', '推荐模型': 'Phi-4 Mini（3.8B Q4_K_M）', '下载大小': '约2.7 GB', '预期速度': '约8–12 tok/秒' },
-          { 'iPhone档次（年份，内存）': 'iPhone 13 Pro / 14 Pro / Pro Max（6 GB）', '推荐模型': 'Qwen3 1.7B或SmolLM 2 1.7B（Q4_K_M）', '下载大小': '约1.1 GB', '预期速度': '约15–20 tok/秒' },
-          { 'iPhone档次（年份，内存）': 'iPhone 14 / 14 Plus / 15 / 15 Plus（6 GB）', '推荐模型': 'Qwen3 1.7B或SmolLM 2 1.7B（Q4_K_M）', '下载大小': '约1.1 GB', '预期速度': '约12–18 tok/秒' },
-          { 'iPhone档次（年份，内存）': 'iPhone 13 / 12 / SE / 更早机型（4 GB）', '推荐模型': '不推荐运行设备端LLM', '下载大小': '—', '预期速度': '—' },
+          { 'iPhone档次（年份，内存）': 'iPhone 18 Pro / Pro Max（2026，据报道约12 GB）', '推荐模型': '参照17 Pro起步；苹果未公布内存', '下载大小': '约2.5–3.7 GB', '速度参考（粗略）': '无数据' },
+          { 'iPhone档次（年份，内存）': 'iPhone 17 Pro / 17 Pro Max（2025，12 GB）', '推荐模型': 'Phi-4 Mini / Llama 3.2 3B / Gemma 4 E4B', '下载大小': '约2.5–3.7 GB', '速度参考（粗略）': '约13–20 tok/秒（Phi-4 Mini）' },
+          { 'iPhone档次（年份，内存）': 'iPhone 16系列 / 16e / 17（2024–2025，8 GB）', '推荐模型': 'Phi-4 Mini（3.8B Q4_K_M）或Gemma 4 E2B', '下载大小': '约2.6–2.7 GB', '速度参考（粗略）': '约10–15 tok/秒（Phi-4 Mini）' },
+          { 'iPhone档次（年份，内存）': 'iPhone 15 Pro / Pro Max（2023，8 GB）', '推荐模型': 'Phi-4 Mini（3.8B Q4_K_M）', '下载大小': '约2.7 GB', '速度参考（粗略）': '约8–12 tok/秒' },
+          { 'iPhone档次（年份，内存）': 'iPhone 13 Pro / 14 Pro / Pro Max（6 GB）', '推荐模型': 'Qwen3 1.7B或SmolLM 2 1.7B（Q4_K_M）', '下载大小': '约1.1 GB', '速度参考（粗略）': '约15–20 tok/秒' },
+          { 'iPhone档次（年份，内存）': 'iPhone 14 / 14 Plus / 15 / 15 Plus（6 GB）', '推荐模型': 'Qwen3 1.7B或SmolLM 2 1.7B（Q4_K_M）', '下载大小': '约1.1 GB', '速度参考（粗略）': '约12–18 tok/秒' },
+          { 'iPhone档次（年份，内存）': 'iPhone 13 / 12 / SE / 更早机型（4 GB）', '推荐模型': '不推荐运行设备端LLM', '下载大小': '—', '速度参考（粗略）': '—' },
         ],
         callouts: [
           {
@@ -2602,12 +2602,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**持续生成可能触发热降频。** 芯片发热时，iOS会降低时钟频率，tokens/秒随之下降。何时开始、速度损失多少，取决于手机、保护壳、是否在充电以及室温；PromptQuorum并未测量过这一点。让手机降温即可恢复速度。',
           '**缓解办法：** 长时间推理时，请将iPhone屏幕朝上放在硬质表面上（不要拿在手里或放在口袋里）以利散热。被动散热片手机壳有帮助，但对短时间使用很少有必要。',
           '**后台“幽灵耗电”：** 如果生成结束后让对话应用留在后台，内存仍被占用但并无推理在运行——对电池的影响很小。彻底关闭应用即可回收约3 GB内存。',
-          '**推理时使用MagSafe充电：** 在iPhone 17 Pro和16 Pro上可以接受（两者的散热设计都有改进）。在iPhone 15 Pro上，充电与推理叠加会更快触及热限制——建议事后再充电。',
+          '**推理时使用MagSafe充电：** 充电的同时生成内容，任何iPhone都可能产生更多热量，iPhone 15 Pro尤甚；如果手机变热，请暂停充电或生成，或者事后再充电。',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '请勿在阳光直射或高温车内的iPhone上运行设备端LLM推理。环境高温与推理负载叠加，会在几分钟内使芯片越过热限制，触发严重降频，甚至出现“iPhone需要降温”的提示。对话应用不会崩溃，但生成速度会慢得像爬。',
+            text: '请勿在阳光直射或高温车内的iPhone上运行设备端LLM推理。在阳光直射或高温车内，芯片可能更早达到热限制，从而触发降频和苹果的“iPhone需要降温”提示。通常是生成速度变慢，而不是应用被关闭。',
           },
         ],
       },
@@ -2649,13 +2649,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '常见错误',
         items: [
-          '**安装超出iPhone内存承载能力的模型。** 8 GB的iPhone运行7B模型只有约3–5 tokens/秒，且在iOS为其他应用回收内存时会崩溃。请遵循您所属iPhone档次的推荐模型（8 GB设备用3B–4B，6 GB设备用1.7B）。',
+          '**安装超出iPhone内存承载能力的模型。** 8 GB的iPhone运行7B模型往往慢到不适合对话，且在iOS为其他应用回收内存时可能被系统关闭；请先用PocketPal AI内置的基准测试实测。请遵循您所属iPhone档次的推荐模型（8 GB设备用3B–4B，6 GB设备用1.7B）。',
           '**期待设备端模型有云端AI的质量。** Phi-4 Mini（3.8B）就其体量而言令人印象深刻，但不是GPT-5.5。请将它用于对话、摘要、起草和快速问答——而不是多步推理、复杂代码生成或细腻的创意写作。',
           '**在阳光直射或高温车内运行推理。** 热降频可能很快触发，生成速度会变慢，您还可能看到“iPhone需要降温”的提示。请在室温下运行推理。',
           '**同时装着3个以上对话应用，每个都存3 GB模型。** 重复的模型会白白占用约10 GB存储空间。请选定一个应用和一个模型；在确认需要之前，先卸载其他的。',
           '**以为Apple Intelligence完全没有对话界面。** 到iOS 18为止确实如此，但自iOS 26起，Locally AI等应用可通过Foundation Models框架，为苹果设备端模型提供真正的对话窗口。不过系统功能（写作工具、智能回复）本身仍不是对话界面。',
           '**到App Store里找LLM Farm。** 它目前不在App Store上（PromptQuorum的LLM Farm评测将下架时间定为2025年8月）。在App Store搜索它只是浪费时间；同样的免费/灵活需求请用PocketPal AI，或者如果确实需要它开放的mirostat控制，就在Xcode中从源码编译LLM Farm。',
-          '**以为“免费”就是没有任何购买项。** PocketPal AI本地对话免费，但销售可选的高级内容（Pals和“PocketPal Plus”），而Locally AI和Google AI Edge Gallery未列出应用内购买。安装前请查看商店页面的应用内购买部分（美国App Store页面在2026-10-23显示年龄分级为18+）。',
+          '**以为“免费”就是没有任何购买项。** PocketPal AI本地对话免费，但销售可选的高级内容（Pals和“PocketPal Plus”），而Locally AI和Google AI Edge Gallery未列出应用内购买。安装前请查看商店页面的应用内购买部分（PocketPal AI的美国App Store页面在2026-10-23显示年龄分级为18+）。',
           '**只凭速度表来评判模型。** 本指南中的tokens/秒区间只是参考值，Gemma 4和Qwen3.5等较新模型也不在其中。在删除已下载的模型之前，请先在PocketPal AI的基准测试中用同一提示词跑一下两个模型。',
         ],
       },
@@ -2679,7 +2679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'iPhone真的能运行7B模型吗？',
-            a: '技术上可以，iPhone 15 Pro及更新机型（8 GB内存）能跑，但速度不实用。iPhone 16 Pro上7B Q4模型的生成速度约为3–5 tokens/秒——用于对话会令人沮丧。当其他应用需要内存时，iOS也倾向于终止该应用。日常设备端对话请使用3B–4B模型（Phi-4 Mini、Llama 3.2 3B、Gemma 3 4B）。若需要7B以上的质量，请远程连接家里运行Ollama的Mac或PC。',
+            a: '技术上可以，iPhone 15 Pro及更新机型（8 GB内存）能跑，但速度不实用。iPhone 16 Pro上7B Q4模型用于对话往往太慢（参考判断）——会令人沮丧。当其他应用需要内存时，iOS也倾向于终止该应用。日常设备端对话请使用3B–4B模型（Phi-4 Mini、Llama 3.2 3B、Gemma 3 4B）。若需要7B以上的质量，请远程连接家里运行Ollama的Mac或PC。',
           },
           {
             q: '本地AI会消耗iPhone的电量吗？',
@@ -2695,7 +2695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '这些应用能在iPhone SE或更旧的iPhone上使用吗？',
-            a: '有限。iPhone SE以及iPhone 13 / 12（4 GB内存）低于2026年设备端LLM的实用门槛。iPhone 14 / 15（非Pro，6 GB内存）可运行1.7B模型（Qwen3 1.7B、SmolLM 2 1.7B），但不能运行3B以上。iPhone 13 Pro和14 Pro（6 GB内存）同样停留在1.7B；iPhone 15 Pro（8 GB内存）可以约8–12 tokens/秒运行Phi-4 Mini这类3B模型。对于较旧的iPhone，更好的做法是远程连接家里的Mac或PC。',
+            a: '有限。iPhone SE以及iPhone 13 / 12（4 GB内存）低于2026年设备端LLM的实用门槛。iPhone 14 / 15（非Pro，6 GB内存）可运行1.7B模型（Qwen3 1.7B、SmolLM 2 1.7B），但不能运行3B以上。iPhone 13 Pro和14 Pro（6 GB内存）同样停留在1.7B；iPhone 15 Pro（8 GB内存）可以大约8–12 tokens/秒（参考值）运行Phi-4 Mini这类3B模型。对于较旧的iPhone，更好的做法是远程连接家里的Mac或PC。',
           },
           {
             q: '能在iPhone和Mac之间同步聊天记录吗？',
@@ -2715,7 +2715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本地AI与iPhone上的ChatGPT应用相比如何？',
-            a: '设备端模型（Phi-4 Mini、Llama 3.2 3B）在复杂推理、广博世界知识和多模态任务上仍明显逊于前沿云端模型，但在简单问题上更快（无网络延迟），且完全私密。客观来说：本地AI适合日常和私密任务；偶尔遇到高难度问题时可用ChatGPT等云端应用。2026年很多用户两者都装着，按需选择。',
+            a: '设备端模型（Phi-4 Mini、Llama 3.2 3B）在复杂推理、广博世界知识和多模态任务上仍明显逊于前沿云端模型，但在简单问题上更快（无网络延迟），且按各应用的文档说明，对话内容保留在设备上。客观来说：本地AI适合日常和私密任务；偶尔遇到高难度问题时可用ChatGPT等云端应用。2026年很多用户两者都装着，按需选择。',
           },
           {
             q: 'LLM Farm不在App Store上架后还安全吗？',
@@ -2739,7 +2739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'iPhone上有Ollama应用吗？',
-            a: 'Ollama的下载页面列出了macOS、Windows和Linux，没有iPhone应用。要在iPhone上使用Ollama或LM Studio的模型，请在Mac或PC上运行服务器，再从客户端应用连接；Locally AI提供LM Link，即连接到Mac上LM Studio的加密链路。若要模型完全在手机上运行，请使用本指南中的应用。',
+            a: 'Ollama的下载页面列出了macOS、Windows和Linux，没有iPhone应用。要在iPhone上使用Ollama或LM Studio的模型，请在Mac或PC上运行服务器，再从客户端应用连接；Locally AI提供LM Link，即LM Studio所称的连接到Mac上LM Studio的加密链路。若要模型完全在手机上运行，请使用本指南中的应用。',
           },
           {
             q: '应该下载Gemma 4还是Phi-4 Mini？',
