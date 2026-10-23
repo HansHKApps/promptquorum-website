@@ -24,7 +24,7 @@ import { PowerLocalLlmHubTemplate, usesPowerLocalLlmHubTemplate } from './hub-te
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
-import { toOutputLocale } from '@/lib/i18n/constants'
+import { toOutputLocale, ogLocale } from '@/lib/i18n/constants'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 import { DirectoryClient } from '@/components/local-ai-directory/DirectoryClient'
 import { resolveAll } from '@/components/local-ai-directory/directory-i18n'
@@ -206,6 +206,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       url: `${BASE}${powerLLMArticlePath(lang, slug)}`,
       type: 'article',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [
         {
           url: (article as any).heroImage
@@ -531,6 +532,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${powerLLMHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [{ url: `${BASE}/images/power-local-llm-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
     },
     twitter: {

@@ -12,6 +12,7 @@
 // Coming Soon and the hub renders the category grid with placeholder links. Content lands
 // in a later phase; translations + the noindex flip happen after that.
 
+import { ogLocale } from '@/lib/i18n/constants'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { AppLink as Link } from '@/components/AppLink'
@@ -160,6 +161,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       url: `${BASE}${balconySolarArticlePath(lang, slug)}`,
       type: 'article',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [
         {
           url: (article as any)?.heroImage
@@ -380,6 +382,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${balconySolarHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [{ url: `${BASE}/images/balcony-solar-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: title }],
     },
     twitter: {

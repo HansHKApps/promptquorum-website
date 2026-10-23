@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { HowItWorksPageClient } from '@/components/HowItWorksPageClient'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'pt'
@@ -18,6 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
     },
     twitter: {
       card: 'summary_large_image',

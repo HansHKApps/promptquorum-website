@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { AppLink as Link } from '@/components/AppLink'
 import { Sparkles, Layers, Brain, Zap, Shield } from 'lucide-react'
 import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
@@ -21,6 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale('de'),
     },
     twitter: {
       card: 'summary_large_image',

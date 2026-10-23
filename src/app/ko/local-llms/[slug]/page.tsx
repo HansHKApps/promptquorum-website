@@ -5,7 +5,7 @@ import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 import { reviewPageProps } from '@/lib/power-local-llm/review-page-props'
@@ -100,6 +100,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [{ url: ogImageUrl, width: 1200, height: 675, alt: article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? article.publishDate,

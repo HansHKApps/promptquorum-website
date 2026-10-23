@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS, getLangDir } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, getLangDir, ogLocale } from '@/lib/i18n/constants'
 import { TOTAL_TOOL_COUNT } from '@/lib/power-local-llm/apps-barrel'
 import { WhatCanIRunClient } from '@/components/tools/WhatCanIRunClient'
 import { t } from '@/components/tools/tools-i18n'
@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: `${title} | PromptQuorum`,
     description,
     alternates: generateAlternates(PATH, LANG, true, undefined, [...PATH_PREFIX_LANGS]),
-    openGraph: { title, description, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'website', siteName: 'PromptQuorum' },
+    openGraph: { title, description, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'website', siteName: 'PromptQuorum', ...ogLocale(LANG) },
     twitter: { card: 'summary_large_image', title, description },
   }
 }

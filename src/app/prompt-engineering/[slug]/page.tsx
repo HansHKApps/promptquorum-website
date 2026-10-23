@@ -7,7 +7,7 @@ import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { truncateTitle } from '@/lib/utils'
 import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
@@ -151,6 +151,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
+      ...ogLocale(selectedLang),
       images: [{ url: finalOgImage, width: 1200, height: 675, alt: isGlossary ? 'Prompt Engineering Glossary Mind Map 2026 — 100+ Essential Terms' : article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,

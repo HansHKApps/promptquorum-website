@@ -4,7 +4,7 @@ import { PromptEngineeringPostClient } from '@/components/PromptEngineeringPostC
 import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 
@@ -51,6 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [{ url: ogImageUrl, width: 1200, height: 675, alt: article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? article.publishDate,

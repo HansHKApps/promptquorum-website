@@ -4,7 +4,7 @@ import { AppLink as Link } from '@/components/AppLink'
 import { notFound } from 'next/navigation'
 import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework, getFrameworkLocalized } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: `https://www.promptquorum.com/frameworks/${fw.slug}`,
       siteName: 'PromptQuorum',
+      ...ogLocale(selectedLang),
       title: `${fw.name} Prompt Framework — Complete Guide`,
       description: `${fw.tagline}`,
       images: [{ url: ogImageUrl, width: 1200, height: 675, alt: `${fw.name} Prompt Framework` }],
