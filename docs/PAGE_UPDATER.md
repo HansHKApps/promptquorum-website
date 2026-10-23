@@ -297,6 +297,10 @@ After updating, verify:
 - [ ] Zero-click high-impression queries have been addressed (content gap filled or title/meta improved)
 - [ ] If this page links to, or is linked from, a hub/comparison/review page for the same product — run the Step 4.5 Hub-vs-Review Price/Spec Cross-Check below
 
+### Step 4.4: Volatile Numbers Come From Data (MANDATORY — GEO Rule 49)
+
+Before editing prose for stale counts, run `npm run refresh-app-stars -- --slug=<tiles on this page>` (dry run; use `GITHUB_TOKEN=$(gh auth token)`), then `--write` for tiles that moved. Star counts in the article must be `${st.<lang>('<slug>')}` calls, never typed digits — converting a legacy typed count is part of the refresh, and `node scripts/validate-volatile-numbers.mjs --update-baseline` locks in the lower count. This is what keeps all nine locale blocks, JSON-LD and meta descriptions in agreement without nine separate edits.
+
 ### Step 5: Multi-Language Propagation
 
 > **HARD GATE — `docs/geo-translation.md` (owner rule, restated 2026-10-19).** Before writing ANY non-EN text (a whole article, a new section, or one FAQ), open and read `docs/geo-translation.md` in this session, then apply its per-language table (register, decimals, currency, readTime, never-translate identifiers, schema fidelity, regional-rule test) to every string you author. Hand-writing translations from memory is a protocol violation, not a shortcut — it happened on 2026-10-19 (DeepSeek-R1 refresh) and had to be redone. The Step 6 report MUST carry the `geo-translation:` line; a report without it is incomplete.

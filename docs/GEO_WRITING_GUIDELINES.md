@@ -456,6 +456,8 @@ Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists f
 
 **When to use:** Every article with numeric claims (percentages, latency, costs, parameters). **When NOT to use:** Skip for purely conceptual content without data.
 
+**Volatile counters (GitHub stars, directory size) are not typed at all** — see Rule 49.
+
 #### Rule 3: Delete Vague Superlatives
 
 Every claim must be specific and verifiable. **Delete words that add no information.**
@@ -2345,6 +2347,7 @@ Use this checklist before committing any new or edited article:
 
 #### Content Quality
 - [ ] Every numeric claim is factual, measured, or sourced (never invented)
+- [ ] No typed GitHub star counts — they come from the directory tile via `starsFor(lang)(slug)` — Rule 49
 - [ ] No vague superlatives (powerful, seamless, revolutionary, etc.)
 - [ ] Article includes at least 1 original insight with numeric data
 - [ ] Regional context included (if applicable: EU, China, Japan)
@@ -2969,6 +2972,49 @@ rows: [
 - `[ ]` Every non-owning section references the fact with a pointer clause, not a full restatement
 - `[ ]` The lead answer block and the Key Takeaways/TL;DR section are the only places a fact may appear in full twice
 - `[ ]` FAQ answers that duplicate a body claim without adding new information are dropped, not kept for FAQ-count padding
+
+---
+
+### Rule 49: Volatile Numbers Come From Data, Never From the Writer (Mandatory)
+
+**A number that changes without anyone editing the article — GitHub stars, download counts, the size of the directory — must not be typed into prose.** It goes stale within weeks, and because an article carries nine locale blocks plus JSON-LD, meta descriptions and a slide deck, one typed number becomes 15–25 copies that drift apart. This is not hypothetical: on 2026-10-23 `best-local-llm-frontends` still said "140,000+ stars" for Open WebUI (live: 156,000) and "25,000+" in three locale blocks, and the refresh needed 170 hand edits across 9 locales.
+
+**What counts as volatile**
+
+| Volatile — never typed | How it reaches the page |
+|---|---|
+| GitHub star counts | `starsFor(lang)('<tile-slug>')` from `src/lib/power-local-llm/app-facts.ts`, read from the directory tile's `stars` |
+| Size of the directory ("N tools") | `TOTAL_APP_COUNT` / `TOTAL_TOOL_COUNT` (already data-driven) |
+| Anything else a tile already stores (`lastUpstreamUpdate`, `license`, platforms) | read the tile; do not retype it |
+
+**How to write it**
+
+```ts
+import { starsFor } from "@/lib/power-local-llm/app-facts";
+const st = { en: starsFor('en'), de: starsFor('de') /* … all nine locales */ };
+
+// inside the article, use a template literal, one formatter per locale block:
+`Open WebUI is the most-starred frontend here with ${st.en('open-webui')} GitHub stars.`   // "150,000+"
+`… mehr als ${st.de('open-webui', 'bare')} Sterne`                                          // "150.000"  (sentence already says "mehr als")
+`Open WebUI (${st.en('open-webui', 'k')} stars, RAG)`                                       // "150k+"  (meta descriptions, tables)
+```
+
+- The helper rounds **down** (1k steps below 100k, 10k steps above), so "N+" is always true. It applies each locale's thousands separator (`150.000` de/es/pt, `150 000` fr, `150,000` others). **Translators never type the number**, which removes a whole class of locale drift.
+- The tile is the single source of truth. To update it run `npm run refresh-app-stars -- --slug=<slug>` (dry run) and then `--write`. Set `GITHUB_TOKEN=$(gh auth token)` — 60 unauthenticated calls/hour run out fast.
+- The helper throws at build time if the tile does not exist or has `stars: null`. Fix the tile; do not fall back to typing the number.
+- **No volatile number in a title, `seoTitle` or slug.** Meta descriptions may use the `k` form through the helper.
+
+**Version numbers, prices and dates are different — they are facts about a moment, not a running counter.** Keep them, but: (1) state them once, in the section that owns the fact (Rule 48), with the date they were checked in the same sentence ("v0.12.3, released October 16, 2026"); (2) take them from a primary source at every refresh (see "App Maintenance Recency" in `CLAUDE.md`); (3) do not repeat them in the lead, FAQ and schema unless Rule 48's top-block exception applies. A version that must appear in many places is a sign the page should link to the release page instead.
+
+**Enforcement:** `npm run validate-volatile-numbers` runs in `prebuild`. It counts hard-coded star counts per file ("140,000+ GitHub stars", "25k stars", "140.000+ Sterne", "15万スター") and compares them with `scripts/volatile-numbers-baseline.json`. A file with **more** hits than its baseline fails the build; fewer is fine. The baseline records the pre-rule backlog (7,364 hits in 198 files at 2026-10-23, mostly FeatureAppPost reviews), so the backlog can only shrink. When you convert a file, run `node scripts/validate-volatile-numbers.mjs --update-baseline` to lock in the lower count. `--list` prints every remaining hit with `file:line`.
+
+#### Compliance Checklist
+
+- `[ ]` No GitHub star count typed into any string — body, FAQ, JSON-LD, meta, `gammaDescription`, `quickAnswerTop`
+- `[ ]` Every star count in the article is `${st.<lang>('<slug>')}` with the formatter of its own locale block
+- `[ ]` The tile's `stars` was refreshed (`npm run refresh-app-stars`) in this run, and the diff is in the commit
+- `[ ]` Versions/prices/dates appear once, next to their date, and come from a primary source read in this run
+- `[ ]` `npm run validate-volatile-numbers` passes
 
 ---
 
