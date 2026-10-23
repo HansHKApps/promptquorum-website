@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Rule of thumb:** use Ollama or LM Studio for ease, llama.cpp for control, vLLM for multi-user serving.',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-en.webp',
-        imageCaption: 'Local LLM tools on AMD GPUs: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+        imageCaption: 'Local LLM tools that run on AMD GPUs: Ollama, llama.cpp, LM Studio and vLLM.',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Regla práctica:** usa Ollama o LM Studio por comodidad, llama.cpp por control y vLLM para servir a varios usuarios.',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-es.webp',
-        imageCaption: 'Herramientas de LLM locales en GPUs AMD: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+        imageCaption: 'Herramientas de LLM locales que funcionan en GPUs AMD: Ollama, llama.cpp, LM Studio y vLLM.',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**قاعدة عامة:** استخدم Ollama أو LM Studio للسهولة، وllama.cpp للتحكم، وvLLM لخدمة عدة مستخدمين.',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-ar.webp',
-        imageCaption: 'أدوات LLM المحلية على بطاقات AMD: ‏Ollama (ROCm v7 وVulkan) وllama.cpp (HIP وVulkan) وLM Studio (Vulkan وROCm) وvLLM (ROCm).',
+        imageCaption: 'أدوات LLM المحلية التي تعمل على بطاقات AMD: ‏Ollama وllama.cpp وLM Studio وvLLM.',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -1400,7 +1400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Regra prática:** use Ollama ou LM Studio pela praticidade, llama.cpp pelo controle e vLLM para servir vários usuários.',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-pt.webp',
-        imageCaption: 'Ferramentas de LLM local em GPUs AMD: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+        imageCaption: 'Ferramentas de LLM local que funcionam em GPUs AMD: Ollama, llama.cpp, LM Studio e vLLM.',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Faustregel:** Ollama oder LM Studio für Komfort, llama.cpp für Kontrolle, vLLM für Mehrbenutzer-Serving.',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-de.webp',
-        imageCaption: 'Lokale LLM-Tools auf AMD-GPUs: Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+        imageCaption: 'Lokale LLM-Tools, die auf AMD-GPUs laufen: Ollama, llama.cpp, LM Studio und vLLM.',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -1969,12 +1969,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Guides d\'achat GPU',
     title: 'Meilleur GPU AMD pour les LLM locaux et l\'inférence IA',
     seoTitle: 'Meilleur GPU AMD pour LLM locaux 2026 : 7900 XTX, 9070 XT',
-    intro: '**Le meilleur GPU AMD pour les LLM locaux en 2026 est la Radeon RX 7900 XTX (24 Go) pour les modèles de classe 30B, la RX 9070 XT (16 Go) pour les modèles de 7B à 14B et la Radeon AI PRO R9700 (32 Go) quand il vous faut le plus de VRAM par carte.** Les trois figurent sur la liste ROCm v7 d\'Ollama pour Linux, et llama.cpp les exécute aussi via son backend Vulkan. NVIDIA CUDA reste la voie la moins contraignante : choisissez AMD pour la VRAM par dollar ou parce que vous possédez déjà la carte.',
+    intro: '**En 2026, le meilleur GPU AMD pour les LLM locaux est la Radeon RX 7900 XTX (24 Go) pour les modèles 30B, la RX 9070 XT (16 Go) pour les 7B–14B et la Radeon AI PRO R9700 (32 Go) pour le plus de VRAM.** Les trois figurent sur la liste ROCm v7 d\'Ollama pour Linux, et llama.cpp les exécute aussi via son backend Vulkan. NVIDIA CUDA reste la voie la moins contraignante : choisissez AMD pour la VRAM par dollar ou parce que vous possédez déjà la carte.',
     metaDescription: 'Meilleur GPU AMD pour l\'IA et les LLM locaux : RX 7900 XTX (24 Go), RX 9070 XT (16 Go) et Radeon AI PRO R9700 (32 Go), avec ROCm, Vulkan et AMD vs NVIDIA.',
     heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.webp',
     publishDate: '2026-04-05',
     dateModified: '2026-10-23',
-    leadAnswerBlock: '**Le meilleur GPU AMD pour les LLM locaux en 2026 est la Radeon RX 7900 XTX (24 Go) pour les modèles de classe 30B, la RX 9070 XT (16 Go) pour les modèles de 7B à 14B et la Radeon AI PRO R9700 (32 Go) quand il vous faut le plus de VRAM par carte.**',
+    leadAnswerBlock: '**En 2026, le meilleur GPU AMD pour les LLM locaux est la Radeon RX 7900 XTX (24 Go) pour les modèles 30B, la RX 9070 XT (16 Go) pour les 7B–14B et la Radeon AI PRO R9700 (32 Go) pour le plus de VRAM.**',
     quickAnswerTop: {
       question: 'Quel GPU AMD choisir pour les LLM locaux et l\'inférence IA ?',
       answer: 'La RX 7900 XTX (24 Go) est le meilleur GPU AMD polyvalent pour les LLM locaux, la RX 9070 XT (16 Go) la meilleure carte récente pour les modèles de 7B à 14B, et la Radeon AI PRO R9700 (32 Go) offre le plus de VRAM par carte. Ollama liste les trois avec ROCm v7 sous Linux ; Vulkan sert de solution de repli sans ROCm. NVIDIA CUDA reste plus simple : AMD convient surtout quand la VRAM par dollar compte.',
@@ -2176,7 +2176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Règle pratique :** Ollama ou LM Studio pour la simplicité, llama.cpp pour le contrôle, vLLM pour servir plusieurs utilisateurs.',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-fr.webp',
-        imageCaption: 'Outils de LLM locaux sur GPU AMD : Ollama (ROCm v7, Vulkan), llama.cpp (HIP, Vulkan), LM Studio (Vulkan, ROCm), vLLM (ROCm).',
+        imageCaption: 'Outils de LLM locaux fonctionnant sur GPU AMD : Ollama, llama.cpp, LM Studio et vLLM.',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -2564,7 +2564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**目安：** 手軽さならOllamaかLM Studio、細かな制御ならllama.cpp、複数ユーザー向けのサービングならvLLMです。',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-ja.webp',
-        imageCaption: 'AMD GPUで動くローカルLLMツール：Ollama（ROCm v7、Vulkan）、llama.cpp（HIP、Vulkan）、LM Studio（Vulkan、ROCm）、vLLM（ROCm）。',
+        imageCaption: 'AMD GPUで動くローカルLLMツール：Ollama、llama.cpp、LM Studio、vLLM。',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -2952,7 +2952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**经验法则：** 图省事用Ollama或LM Studio，要精细控制用llama.cpp，多用户服务用vLLM。',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-zh.webp',
-        imageCaption: 'AMD显卡上的本地LLM工具：Ollama（ROCm v7、Vulkan）、llama.cpp（HIP、Vulkan）、LM Studio（Vulkan、ROCm）、vLLM（ROCm）。',
+        imageCaption: '可在AMD显卡上运行的本地LLM工具：Ollama、llama.cpp、LM Studio和vLLM。',
       },
       'run-quantized': {
         id: 'run-quantized',
@@ -3304,7 +3304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'VRAM 용량과 메모리 대역폭은 제조사 사양입니다([AMD RX 7900 XTX](https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7900xtx.html), [RX 9070 XT](https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html), [Radeon AI PRO R9700](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)). 가격은 공개 가격 추적 사이트와 리뷰에서 가져온 미국 호가 스냅샷(2026년 9–10월)이며 PromptQuorum의 측정값이 아닙니다. 국내 가격은 다를 수 있으므로 구매 전에 실제 거래 가격을 확인하십시오.',
         image: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
-        imageCaption: '로컬 LLM용 AMD와 NVIDIA 비교: VRAM, 메모리 대역폭, 일반 가격(미국, 2026년 9–10월 스냅샷).',
+        imageCaption: '로컬 LLM용 AMD GPU와 NVIDIA 비교: VRAM, 메모리 대역폭, 일반 가격(미국, 2026년 9–10월 스냅샷).',
       },
       'amd-vs-nvidia-speed': {
         id: 'amd-vs-nvidia-speed',
@@ -3340,7 +3340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**경험칙:** 편의성은 Ollama나 LM Studio, 세밀한 제어는 llama.cpp, 다중 사용자 서빙은 vLLM입니다.',
         ],
         image: '/images/best-amd-gpus-local-llm-software-support-hero-ko.webp',
-        imageCaption: 'AMD GPU에서 동작하는 로컬 LLM 도구: Ollama(ROCm v7, Vulkan), llama.cpp(HIP, Vulkan), LM Studio(Vulkan, ROCm), vLLM(ROCm).',
+        imageCaption: 'AMD GPU에서 동작하는 로컬 LLM 도구: Ollama, llama.cpp, LM Studio, vLLM.',
       },
       'run-quantized': {
         id: 'run-quantized',
