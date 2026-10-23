@@ -2908,7 +2908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['模型', '参数量', '文件（Ollama）', '最低内存', '估算 tok/s', '最适合'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-zh.webp',
-          imageCaption: 'CPU 专用本地 LLM 推荐 2026：按模型文件大小估算的 tok/s',
+          imageCaption: '2026 年最佳纯 CPU 本地 LLM：按模型文件大小估算的 tok/s',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -2923,7 +2923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['硬件', '带宽', '模型', '上限 tok/s', '估算 tok/s'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-zh.webp',
-          imageCaption: 'CPU 专用 LLM 与 GPU 速度：内存带宽 51.2 GB/s（DDR4 双通道）对 360 GB/s（RTX 3060）',
+          imageCaption: '纯 CPU 本地 LLM 与 GPU 速度对比：内存带宽 51.2 GB/s 对 360 GB/s',
         },
         ramRequirements: {
           id: 'ram-requirements',
