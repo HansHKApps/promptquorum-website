@@ -5,6 +5,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -481,6 +482,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -942,6 +944,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -1347,6 +1350,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -1750,6 +1754,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -2227,6 +2232,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -2639,6 +2645,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -3127,6 +3134,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
@@ -3608,6 +3616,7 @@ curl http://localhost:11434/v1/chat/completions \\
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',

@@ -21,10 +21,13 @@ export interface DotBadge {
 export interface SkinClasses {
   h2: string
   tldrBox: string
+  tldrBoxCompact: string
   tldrLabel: string
   leadBlock: string
+  leadBlockCompact: string
   tocNav: string
   tocLabel: string
+  tocSummary: string
   tocLink: string
   updatedBadge: string
 }
@@ -32,10 +35,13 @@ export interface SkinClasses {
 const DEFAULT_CLASSES: SkinClasses = {
   h2: 'text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4',
   tldrBox: 'bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways',
+  tldrBoxCompact: 'bg-primary/5 border border-primary/20 rounded-xl p-4 sm:p-5 my-3 key-takeaways',
   tldrLabel: 'text-xs font-bold text-primary uppercase tracking-widest mb-3',
   leadBlock: 'bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4 mb-6',
+  leadBlockCompact: 'bg-primary/5 border-l-4 border-primary rounded-r-xl px-4 sm:px-5 py-3 sm:py-4 mb-3 sm:mb-4',
   tocNav: 'mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5',
   tocLabel: 'text-xs font-bold text-primary uppercase tracking-widest mb-3',
+  tocSummary: 'cursor-pointer text-xs font-bold text-primary uppercase tracking-widest',
   tocLink: 'text-sm text-primary hover:text-primary/80 transition-colors',
   updatedBadge:
     'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 border-emerald-300 text-emerald-700',
@@ -46,10 +52,13 @@ const DEFAULT_CLASSES: SkinClasses = {
 const HUB_CLASSES: SkinClasses = {
   h2: 'text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4 border-l-4 border-hub-violet pl-3',
   tldrBox: 'bg-hub-violet-tint border border-hub-violet-edge rounded-xl p-5 my-4 key-takeaways',
+  tldrBoxCompact: 'bg-hub-violet-tint border border-hub-violet-edge rounded-xl p-4 sm:p-5 my-3 key-takeaways',
   tldrLabel: 'text-xs font-bold text-hub-violet-ink uppercase tracking-widest mb-3',
   leadBlock: 'bg-hub-violet-tint border-l-4 border-hub-violet rounded-r-xl px-5 py-4 mb-6',
+  leadBlockCompact: 'bg-hub-violet-tint border-l-4 border-hub-violet rounded-r-xl px-4 sm:px-5 py-3 sm:py-4 mb-3 sm:mb-4',
   tocNav: 'mb-8 bg-hub-violet-tint border border-hub-violet-edge rounded-lg p-5',
   tocLabel: 'text-xs font-bold text-hub-violet-ink uppercase tracking-widest mb-3',
+  tocSummary: 'cursor-pointer text-xs font-bold text-hub-violet-ink uppercase tracking-widest',
   tocLink: 'text-sm text-hub-violet-ink hover:text-hub-violet transition-colors',
   updatedBadge:
     'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-indigo-tint border-hub-indigo-edge text-hub-indigo-ink',

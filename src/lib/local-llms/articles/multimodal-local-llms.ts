@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'Multimodal Local LLMs: Vision, Audio, and Text Processing',
@@ -130,6 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'LLMs locales multimodales: visión, audio y procesamiento de texto',
@@ -264,6 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'نماذج ⁨LLM⁩ المحلية متعددة الوسائط: معالجة الرؤية والصوت والنص',
@@ -398,6 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'Multimodale lokale LLMs: Vision, Audio und Textverarbeitung',
@@ -520,6 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'Modèles multimodaux locaux : vision, audio et traitement de texte',
@@ -642,6 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'マルチモーダルローカルLLM: ビジョン、オーディオ、テキスト処理',
@@ -764,6 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: '多模态本地LLM：视觉、音频和文本处理',
@@ -886,6 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'LLMs locais multimodais: visão, áudio e processamento de texto',
@@ -1020,6 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: '멀티모달 로컬 LLM: 비전, 오디오, 텍스트 처리',

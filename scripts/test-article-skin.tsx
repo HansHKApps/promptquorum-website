@@ -7,7 +7,8 @@
 import React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { PowerLocalLLMPostClient } from '../src/components/PowerLocalLLMPostClient'
-import { ARTICLES } from './_skin-articles'
+import { LocalLLMsPostClient } from '../src/components/LocalLLMsPostClient'
+import { ARTICLES, LOCAL_LLM_ARTICLES } from './_skin-articles'
 import { resolveAll } from '../src/components/local-ai-directory/directory-i18n'
 
 const strip = (h: string) => h.replace(/\sclass="[^"]*"/g, '')
@@ -16,7 +17,8 @@ const fail = (m: string) => { failed++; console.error('FAIL ' + m) }
 
 for (const [slug, data] of Object.entries(ARTICLES)) {
   for (const lang of Object.keys(data)) {
-    const base = (data as any)[lang]
+    // Fixtures now ship with the flag set; the baseline must be the same article without it.
+    const { designSkin: _flag, ...base } = (data as any)[lang]
     const mk = (skin?: 'hub') =>
       renderToStaticMarkup(
         <PowerLocalLLMPostClient
@@ -38,6 +40,27 @@ for (const [slug, data] of Object.entries(ARTICLES)) {
     }
     const h = (s: string) => (s.match(/<h[12][\s>]/g) ?? []).length
     if (h(off) !== h(on)) fail(`${slug}/${lang}: heading count changed`)
+  }
+}
+// /local-llms/* renders through LocalLLMsPostClient. Articles there ship with
+// designSkin: 'hub' already set, so compare against the same article with the flag removed.
+for (const [slug, data] of Object.entries(LOCAL_LLM_ARTICLES)) {
+  for (const lang of Object.keys(data)) {
+    const base = (data as any)[lang]
+    if (base.designSkin !== 'hub') fail(`${slug}/${lang}: designSkin: 'hub' missing`)
+    const { designSkin: _drop, ...plain } = base
+    const mk = (a: unknown) =>
+      renderToStaticMarkup(
+        <LocalLLMsPostClient slug={slug} initialLang={lang as any} articleData={{ [lang]: a } as any} availableLangs={Object.keys(data)} />,
+      )
+    const off = mk(plain)
+    const on = mk(base)
+    if (strip(off) !== strip(on)) fail(`${slug}/${lang}: DOM differs beyond class attributes`)
+    if (/hub-/.test(off)) fail(`${slug}/${lang}: default skin leaks hub tokens`)
+    if (!/hub-violet/.test(on)) fail(`${slug}/${lang}: hub skin applied no hub tokens`)
+    for (const hook of ['key-takeaways']) {
+      if (off.includes(hook) && !on.includes(hook)) fail(`${slug}/${lang}: lost hook .${hook}`)
+    }
   }
 }
 if (failed) { console.error(`${failed} failure(s)`); process.exit(1) }

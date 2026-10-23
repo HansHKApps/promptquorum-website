@@ -385,6 +385,8 @@ After completing the update, output a section-by-section report:
 - Entity schema: SoftwareApplication #app present from apps/<slug>.ts [or: N/A — page is not about one product]
 - Figure consistency: [list every number checked and the single value kept]
 - Provenance labels: [n] third-party figures labeled; [0] unlabeled
+- Hub skin (Step 4.9): designSkin 'hub' set in 9/9 locales [or: renderer not yet supported — say which]
+- Completion check (Step 10): check:page-updater PASS, test:article-skin PASS; full sweep this run: [yes/no — Run N since last sweep]
 - Languages pending: DE, ES, FR, JA, ZH
 ```
 
@@ -531,9 +533,22 @@ Rules:
 - Only the page-updater adds the flag. Do not add it in a content-only edit or to pages you did not update.
 - Set it in all 9 locales or none (parity, same as Step 5.5).
 - Do not touch the speakable hooks (`.article-intro`, `.key-takeaways`, `h1`, `h2`) or move the first answer block.
-- Supported renderers: `PowerLocalLLMPostClient` today; other clusters are wired in later. The flag is ignored by a renderer that does not support it, so setting it early is harmless.
+- Supported renderers: `PowerLocalLLMPostClient` and `LocalLLMsPostClient` (`/local-llms/*`); other clusters are wired in later. The flag is ignored by a renderer that does not support it, so setting it early is harmless.
 - Verify: `npm run test:article-skin` (same HTML with and without the flag, class attributes aside). Then run Step 4.8 as usual. Above-the-fold: the lead answer must still render in the first viewport (`npm run test:above-fold`).
 - Roll back by deleting the line. Nothing else changes.
+
+### Step 10: Completion Check (MANDATORY — last step of EVERY run, owner rule 2026-10-23)
+
+A run is not done until this passes. Run it before writing the report:
+
+```bash
+npm run check:page-updater          # articles refreshed in the last 3 days
+npm run test:article-skin           # same-DOM guard for the hub skin
+```
+
+- Any `INCOMPLETE` line is a failed run: fix it (usually Step 4.9, `designSkin: 'hub'` in all 9 locales) and re-run. Never hand back a "done" with an open line.
+- **Every 3rd page-updater run** (count them in the update report: "Run N since last sweep") also run the full sweep: `npm run check:page-updater -- --all`. It checks `designSkin` parity (all 9 locales or none) across every article in a skin-supporting cluster.
+- Put both outputs in the Update Report under "Completion check".
 
 ## Slide Decks and PDF Reference Cards
 
