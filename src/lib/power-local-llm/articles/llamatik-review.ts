@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-en.webp',
-    title: 'Llamatik Review: Free Offline AI Chatbot for Android and iPhone',
+    title: 'Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop',
     seoTitle: 'Llamatik Review: Free Open-Source Offline AI Chatbot',
     intro:
       'Llamatik is a free, MIT-licensed offline AI chatbot for Android, iPhone and desktop, built by the independent developer Ferran Pons as the showcase app of his open-source Llamatik Kotlin Multiplatform SDK. It runs small open-weight language models on the device through llama.cpp, and the Android version was first released on Google Play on 20 November 2025. This review reflects the store listings, website, privacy policy and GitHub repository as checked on 19 October 2026.',
@@ -229,6 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kotlin and Android developers evaluating the SDK.** The app is its reference demo and the code is MIT-licensed.',
           '**Readers who prefer open-source software.** Source, issues and releases are public.',
           '**Users who accept diagnostics but want chats kept local.** Content stays on the device while Firebase receives crash and usage data.',
+          '**Not for users who need large models or document chat.** The listings offer neither.',
         ],
       },
       whoShouldNotUse: {
@@ -240,7 +241,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Model sizes and hardware needs.** The listings give no download sizes, RAM figures or minimum Android version; the README lists API level 26 for the library, which is not necessarily the app\'s requirement.',
           '**Importing your own models.** The store descriptions mention only the built-in downloader.',
           '**Whether newer SDK releases reached the stores.** The store builds are 1.9.0 from 14 May 2026, and the sources do not say when they will move.',
-          '**Not for users who need large models or document chat.** The listings offer neither.',
         ],
       },
       vsAlternatives: {
@@ -331,13 +331,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Llamatik Review: Free Offline AI Chatbot for Android and iPhone',
+      headline: 'Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop',
       description:
         'Llamatik review: a free, MIT-licensed offline AI chatbot for Android, iPhone and desktop built on an open-source Kotlin SDK. Models, privacy, update status and what the sources do not confirm.',
       url: 'https://www.promptquorum.com/power-local-llm/llamatik-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
-      dateModified: '2026-10-19',
+      dateModified: '2026-10-23',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Beginner',
@@ -364,11 +364,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-de.webp',
-    title: 'Llamatik-Rezension: Kostenloser Offline-KI-Chatbot für Android und iPhone',
+    title: 'Llamatik-Rezension: Kostenloser Open-Source-Offline-KI-Chatbot für Android, iPhone und Desktop',
     seoTitle: 'Llamatik-Rezension: Kostenloser Open-Source-KI-Chatbot',
     intro:
       'Llamatik ist ein kostenloser, MIT-lizenzierter Offline-KI-Chatbot für Android, iPhone und Desktop. Der unabhängige Entwickler Ferran Pons hat ihn als Showcase-App seines quelloffenen Llamatik-Kotlin-Multiplatform-SDK gebaut. Er führt kleine Open-Weight-Sprachmodelle über llama.cpp auf dem Gerät aus, und die Android-Version erschien am 20. November 2025 erstmals bei Google Play. Diese Rezension gibt die Store-Einträge, die Website, die Datenschutzerklärung und das GitHub-Repository wieder, wie am 19. Oktober 2026 geprüft.',
@@ -580,6 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kotlin- und Android-Entwickler, die das SDK bewerten.** Die App ist seine Referenz-Demo, und der Code steht unter der MIT-Lizenz.',
           '**Leser, die quelloffene Software bevorzugen.** Quellcode, Issues und Releases sind öffentlich.',
           '**Nutzer, die Diagnosedaten akzeptieren, ihre Chats aber lokal halten möchten.** Die Inhalte bleiben auf dem Gerät, während Firebase Absturz- und Nutzungsdaten erhält.',
+          '**Nicht für Nutzer, die große Modelle oder Chat mit Dokumenten brauchen.** Die Einträge bieten keines von beiden.',
         ],
       },
       whoShouldNotUse: {
@@ -591,7 +592,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modellgrößen und Hardware-Anforderungen.** Die Einträge nennen keine Download-Größen, RAM-Angaben oder Mindestversion von Android; die README nennt API-Level 26 für die Bibliothek, was nicht zwingend die Anforderung der App ist.',
           '**Import eigener Modelle.** Die Store-Beschreibungen erwähnen nur den integrierten Downloader.',
           '**Ob neuere SDK-Releases die Stores erreicht haben.** Die Store-Builds sind 1.9.0 vom 14. Mai 2026, und die Quellen sagen nicht, wann sie nachziehen.',
-          '**Nicht für Nutzer, die große Modelle oder Chat mit Dokumenten brauchen.** Die Einträge bieten keines von beiden.',
         ],
       },
       vsAlternatives: {
@@ -683,11 +683,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-es.webp',
-    title: 'Análisis de Llamatik: chat de IA offline y gratuito para Android e iPhone',
+    title: 'Análisis de Llamatik: chat de IA offline, gratuito y de código abierto para Android, iPhone y escritorio',
     seoTitle: 'Análisis de Llamatik: chat de IA offline de código abierto',
     intro:
       'Llamatik es un chat de IA offline, gratuito y con licencia MIT para Android, iPhone y escritorio, creado por el desarrollador independiente Ferran Pons como app de muestra de su SDK de código abierto Llamatik para Kotlin Multiplatform. Ejecuta pequeños modelos de lenguaje de pesos abiertos en el dispositivo mediante llama.cpp, y la versión para Android salió por primera vez en Google Play el 20 de noviembre de 2025. Este análisis refleja las fichas de las tiendas, el sitio web, la política de privacidad y el repositorio de GitHub, consultados el 19 de octubre de 2026.',
@@ -899,6 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Desarrolladores de Kotlin y Android que evalúan el SDK.** La app es su demo de referencia y el código tiene licencia MIT.',
           '**Lectores que prefieren el software de código abierto.** El código fuente, las incidencias y las versiones son públicos.',
           '**Usuarios que aceptan los diagnósticos pero quieren sus chats en local.** El contenido se queda en el dispositivo mientras Firebase recibe datos de fallos y de uso.',
+          '**No es para quien necesita modelos grandes o chat con documentos.** Las fichas no ofrecen ninguno de los dos.',
         ],
       },
       whoShouldNotUse: {
@@ -910,7 +911,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tamaños de modelos y requisitos de hardware.** Las fichas no indican tamaños de descarga, cifras de RAM ni versión mínima de Android; el README indica el nivel de API 26 para la biblioteca, que no es necesariamente el requisito de la app.',
           '**Importar tus propios modelos.** Las descripciones de las tiendas mencionan solo el descargador integrado.',
           '**Si las versiones más recientes del SDK han llegado a las tiendas.** Las versiones de las tiendas son la 1.9.0 del 14 de mayo de 2026, y las fuentes no dicen cuándo se actualizarán.',
-          '**No es para quien necesita modelos grandes o chat con documentos.** Las fichas no ofrecen ninguno de los dos.',
         ],
       },
       vsAlternatives: {
@@ -1002,11 +1002,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-fr.webp',
-    title: 'Avis Llamatik : chatbot IA gratuit hors ligne pour Android et iPhone',
+    title: 'Avis Llamatik : chatbot IA gratuit, open source et hors ligne pour Android, iPhone et ordinateur',
     seoTitle: 'Avis Llamatik : chatbot IA open source gratuit hors ligne',
     intro:
       'Llamatik est un chatbot IA hors ligne, gratuit et sous licence MIT, pour Android, iPhone et ordinateur. Il a été créé par le développeur indépendant Ferran Pons comme application vitrine de son SDK open source Llamatik en Kotlin Multiplatform. Il exécute de petits modèles de langage à poids ouverts sur l\'appareil grâce à llama.cpp, et la version Android est sortie pour la première fois sur Google Play le 20 novembre 2025. Cet avis reflète les fiches des boutiques, le site, la politique de confidentialité et le dépôt GitHub, consultés le 19 octobre 2026.',
@@ -1218,6 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les développeurs Kotlin et Android qui évaluent le SDK.** L\'application en est la démo de référence et le code est sous licence MIT.',
           '**Les lecteurs qui préfèrent les logiciels open source.** Le code, les tickets et les versions sont publics.',
           '**Les utilisateurs qui acceptent les diagnostics mais veulent garder leurs conversations en local.** Le contenu reste sur l\'appareil, tandis que Firebase reçoit les données de plantage et d\'usage.',
+          '**Pas adaptée à ceux qui ont besoin de gros modèles ou de discuter avec des documents.** Les fiches n\'offrent ni l\'un ni l\'autre.',
         ],
       },
       whoShouldNotUse: {
@@ -1229,7 +1230,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Taille des modèles et besoins matériels.** Les fiches n\'indiquent ni taille de téléchargement, ni RAM, ni version minimale d\'Android ; le README indique le niveau d\'API 26 pour la bibliothèque, ce qui n\'est pas forcément le prérequis de l\'application.',
           '**Import de vos propres modèles.** Les descriptions des boutiques ne mentionnent que le téléchargeur intégré.',
           '**Arrivée ou non des versions récentes du SDK dans les boutiques.** Les versions des boutiques sont en 1.9.0, datant du 14 mai 2026, et les sources n\'indiquent pas quand elles évolueront.',
-          '**Pas adaptée à ceux qui ont besoin de gros modèles ou de discuter avec des documents.** Les fiches n\'offrent ni l\'un ni l\'autre.',
         ],
       },
       vsAlternatives: {
@@ -1321,11 +1321,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-ja.webp',
-    title: 'Llamatikレビュー:Android・iPhone向けの無料オフラインAIチャット',
+    title: 'Llamatikレビュー:Android・iPhone・デスクトップ向けの無料オープンソースのオフラインAIチャット',
     seoTitle: 'Llamatikレビュー:無料のオープンソースAIチャット',
     intro:
       'Llamatikは、独立系開発者Ferran Pons氏が、自身のオープンソースKotlin Multiplatform SDK「Llamatik」のショーケースアプリとして開発した、Android・iPhone・デスクトップ向けの無料でMITライセンスのオフラインAIチャットアプリです。llama.cppを通じて、小型のオープンウェイト言語モデルを端末上で動かします。Android版がGoogle Playで最初にリリースされたのは2025年11月20日でした。本レビューは、2026年10月19日に確認したストアの掲載情報、ウェブサイト、プライバシーポリシー、GitHubリポジトリに基づいています。',
@@ -1537,6 +1537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SDKを評価するKotlinおよびAndroid開発者。** このアプリはSDKのリファレンスデモで、コードはMITライセンスです。',
           '**オープンソースのソフトウェアを好む人。** ソース、イシュー、リリースが公開されています。',
           '**診断データは受け入れつつ、チャットは端末内にとどめたい人。** 内容は端末上に残り、Firebaseが受け取るのはクラッシュと利用状況のデータです。',
+          '**大きなモデルやドキュメントとのチャットが必要な人には向きません。** 掲載情報にはどちらもありません。',
         ],
       },
       whoShouldNotUse: {
@@ -1548,7 +1549,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**モデルのサイズと必要なハードウェア。** 掲載情報にはダウンロードサイズ、RAMの数値、Androidの最低バージョンが示されていません。READMEにはライブラリ向けにAPIレベル26とありますが、アプリの要件と同じとは限りません。',
           '**独自モデルのインポート。** ストアの説明文が触れているのは、内蔵のダウンローダーだけです。',
           '**SDKの新しいリリースがストア版に反映されたか。** ストア版のビルドは2026年5月14日の1.9.0で、いつ更新されるかは情報源に書かれていません。',
-          '**大きなモデルやドキュメントとのチャットが必要な人には向きません。** 掲載情報にはどちらもありません。',
         ],
       },
       vsAlternatives: {
@@ -1640,11 +1640,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-pt.webp',
-    title: 'Llamatik: Análise do Chatbot de IA Offline Gratuito para Android e iPhone',
+    title: 'Llamatik: Análise do Chatbot de IA Offline, Gratuito e de Código Aberto para Android, iPhone e Desktop',
     seoTitle: 'Análise do Llamatik: Chatbot de IA Offline Open Source',
     intro:
       'O Llamatik é um chatbot de IA offline gratuito, com licença MIT, para Android, iPhone e computador, criado pelo desenvolvedor independente Ferran Pons como o app de demonstração do seu SDK open source Llamatik para Kotlin Multiplatform. Ele roda modelos de linguagem pequenos, de peso aberto, no próprio dispositivo por meio do llama.cpp, e a versão para Android foi lançada no Google Play em 20 de novembro de 2025. Esta análise reflete as fichas das lojas, o site, a política de privacidade e o repositório do GitHub, consultados em 19 de outubro de 2026.',
@@ -1856,6 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Desenvolvedores Kotlin e Android que avaliam o SDK.** O app é a demonstração de referência e o código tem licença MIT.',
           '**Leitores que preferem software de código aberto.** Código-fonte, issues e versões são públicos.',
           '**Usuários que aceitam diagnósticos, mas querem manter as conversas locais.** O conteúdo fica no dispositivo, enquanto o Firebase recebe dados de falhas e de uso.',
+          '**Não é indicado para quem precisa de modelos grandes ou de chat com documentos.** As fichas não oferecem nenhum dos dois.',
         ],
       },
       whoShouldNotUse: {
@@ -1867,7 +1868,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tamanhos de modelo e requisitos de hardware.** As fichas não informam tamanhos de download, quantidade de RAM nem versão mínima do Android; o README indica o nível de API 26 para a biblioteca, que não é necessariamente o requisito do app.',
           '**Importação de modelos próprios.** As descrições das lojas mencionam apenas o downloader integrado.',
           '**Se as versões mais novas do SDK chegaram às lojas.** Os builds das lojas são a versão 1.9.0 de 14 de maio de 2026, e as fontes não dizem quando serão atualizados.',
-          '**Não é indicado para quem precisa de modelos grandes ou de chat com documentos.** As fichas não oferecem nenhum dos dois.',
         ],
       },
       vsAlternatives: {
@@ -1959,11 +1959,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-ar.webp',
-    title: 'مراجعة Llamatik: تطبيق دردشة ذكاء اصطناعي مجاني دون اتصال لأندرويد و iPhone',
+    title: 'مراجعة Llamatik: تطبيق دردشة ذكاء اصطناعي مجاني ومفتوح المصدر دون اتصال لأندرويد و iPhone وسطح المكتب',
     seoTitle: 'مراجعة Llamatik: دردشة ذكاء اصطناعي مفتوحة المصدر',
     intro:
       'Llamatik تطبيق دردشة مجاني بترخيص MIT يعمل دون اتصال على أندرويد و iPhone وسطح المكتب، من تطوير فيران بونس (Ferran Pons)، وهو مطوّر مستقل، وهو التطبيق التجريبي لحزمة تطويره مفتوحة المصدر Llamatik Kotlin Multiplatform SDK. يشغّل نماذج لغوية صغيرة مفتوحة الأوزان على الجهاز عبر llama.cpp، وصدرت نسخة أندرويد منه لأول مرة على Google Play في 20 نوفمبر 2025. تعكس هذه المراجعة صفحتي المتجر والموقع وسياسة الخصوصية ومستودع GitHub كما جرى التحقق منها في 19 أكتوبر 2026.',
@@ -2175,6 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**مطوّرو Kotlin وأندرويد الذين يقيّمون الحزمة (SDK).** التطبيق هو عرضها المرجعي، والكود بترخيص MIT.',
           '**القراء الذين يفضلون البرمجيات مفتوحة المصدر.** الكود والمشكلات والإصدارات كلها عامة.',
           '**المستخدمون الذين يقبلون التشخيصات لكن يريدون إبقاء محادثاتهم محلية.** يبقى المحتوى على الجهاز بينما يتلقى Firebase بيانات الأعطال والاستخدام.',
+          '**لا يناسب من يحتاج إلى نماذج كبيرة أو دردشة مع المستندات.** فالصفحتان لا تقدمان أياً منهما.',
         ],
       },
       whoShouldNotUse: {
@@ -2186,7 +2187,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أحجام النماذج ومتطلبات العتاد.** لا تذكر الصفحتان أحجام التنزيل ولا حجم الذاكرة ولا الحد الأدنى لإصدار أندرويد؛ ويذكر README مستوى API 26 للمكتبة، وليس بالضرورة أنه متطلب التطبيق.',
           '**استيراد نماذجك الخاصة.** لا يذكر وصفا المتجر سوى المنزّل المدمج.',
           '**هل وصلت إصدارات SDK الأحدث إلى المتجرين.** إصدارات المتجرين هي 1.9.0 الصادر في 14 مايو 2026، ولا تذكر المصادر متى ستنتقل.',
-          '**لا يناسب من يحتاج إلى نماذج كبيرة أو دردشة مع المستندات.** فالصفحتان لا تقدمان أياً منهما.',
         ],
       },
       vsAlternatives: {
@@ -2278,11 +2278,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-zh.webp',
-    title: 'Llamatik 评测:适用于 Android 和 iPhone 的免费离线 AI 聊天应用',
+    title: 'Llamatik 评测:适用于 Android、iPhone 和桌面的免费开源离线 AI 聊天应用',
     seoTitle: 'Llamatik 评测:免费开源的手机离线 AI 聊天应用',
     intro:
       'Llamatik 是一款免费、采用 MIT 许可的离线 AI 聊天应用,适用于 Android、iPhone 和桌面,由独立开发者 Ferran Pons 开发,是其开源 Llamatik Kotlin Multiplatform SDK 的示范应用。它通过 llama.cpp 在设备上运行小型开放权重语言模型,Android 版于 2025 年 11 月 20 日首次在 Google Play 发布。本评测反映其应用商店页面、网站、隐私政策和 GitHub 代码仓库在 2026 年 10 月 19 日的情况。',
@@ -2494,6 +2494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**正在评估该 SDK 的 Kotlin 和 Android 开发者。** 该应用是它的参考示范,代码采用 MIT 许可。',
           '**偏好开源软件的读者。** 源代码、问题和发布版本均为公开。',
           '**接受诊断数据、但希望聊天保持在本地的用户。** 聊天内容留在设备上,而 Firebase 会收到崩溃和使用数据。',
+          '**不适合需要大型模型或文档聊天的用户。** 页面两者均未提供。',
         ],
       },
       whoShouldNotUse: {
@@ -2505,7 +2506,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**模型大小与硬件要求。** 页面未给出下载大小、内存数据或最低 Android 版本;README 为该库列出了 API 级别 26,但这不一定是应用的要求。',
           '**导入自己的模型。** 应用商店的描述只提到了内置下载器。',
           '**较新的 SDK 版本是否已进入应用商店。** 应用商店中的构建版本是 2026 年 5 月 14 日的 1.9.0,来源并未说明它们何时会更新。',
-          '**不适合需要大型模型或文档聊天的用户。** 页面两者均未提供。',
         ],
       },
       vsAlternatives: {
@@ -2597,11 +2597,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-23',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llamatik-review-hero-ko.webp',
-    title: 'Llamatik 리뷰: Android·iPhone용 무료 오프라인 AI 챗봇',
+    title: 'Llamatik 리뷰: Android·iPhone·데스크톱용 무료 오픈소스 오프라인 AI 챗봇',
     seoTitle: 'Llamatik 리뷰: 무료 오픈 소스 오프라인 AI 챗봇',
     intro:
       'Llamatik은 독립 개발자 Ferran Pons가 자신의 오픈 소스 Llamatik Kotlin Multiplatform SDK의 쇼케이스 앱으로 만든, MIT 라이선스의 무료 오프라인 AI 챗봇이며 Android, iPhone, 데스크톱에서 쓸 수 있습니다. llama.cpp를 통해 작은 오픈 웨이트 언어 모델을 기기에서 실행하며, Android 버전은 2025년 11월 20일에 Google Play에 처음 출시되었습니다. 이 리뷰는 2026년 10월 19일에 확인한 스토어 게재 정보, 웹사이트, 개인정보 처리방침, GitHub 저장소를 반영합니다.',
@@ -2813,6 +2813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SDK를 평가하는 Kotlin·Android 개발자.** 이 앱이 SDK의 레퍼런스 데모이고 코드는 MIT 라이선스입니다.',
           '**오픈 소스 소프트웨어를 선호하는 분.** 소스, 이슈, 릴리스가 공개되어 있습니다.',
           '**진단 정보는 받아들이되 채팅은 로컬에 두고 싶은 이용자.** 내용은 기기에 머물고 Firebase는 충돌 및 사용 데이터를 받습니다.',
+          '**대형 모델이나 문서 채팅이 필요한 분께는 맞지 않습니다.** 게재 정보에는 둘 다 나와 있지 않습니다.',
         ],
       },
       whoShouldNotUse: {
@@ -2824,7 +2825,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**모델 크기와 하드웨어 요구 사항.** 게재 정보에는 다운로드 크기, RAM 수치, 최소 Android 버전이 나와 있지 않습니다. README는 라이브러리에 API 레벨 26을 명시하지만 이것이 앱의 요구 사항이라고 단정할 수는 없습니다.',
           '**내 모델 가져오기.** 스토어 설명에는 내장 다운로더만 언급됩니다.',
           '**새 SDK 릴리스가 스토어에 반영되었는지.** 스토어 빌드는 2026년 5월 14일의 1.9.0이며, 언제 바뀔지는 출처에 나와 있지 않습니다.',
-          '**대형 모델이나 문서 채팅이 필요한 분께는 맞지 않습니다.** 게재 정보에는 둘 다 나와 있지 않습니다.',
         ],
       },
       vsAlternatives: {
