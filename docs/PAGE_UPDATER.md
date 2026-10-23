@@ -204,6 +204,16 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 | 10,506 US impressions, 0 clicks | US queries are likely informational/version-check — check if title signals "latest" or "updated" |
 | Mobile CTR 3.4% vs Desktop CTR 0.07% | Desktop impressions are low-intent bulk queries — don't optimize for them, focus on mobile-intent queries |
 
+**Run the coverage check on the pasted data (mandatory when GSC data exists):** save the page's queries as a CSV and run
+
+```bash
+node scripts/query-coverage.mjs <page-url> --queries-file <gsc-queries.csv> --top=20 [--locales=en,de,...] [--interactive]
+```
+
+It grades every query A–D against the title, meta, H1, H2s, lead and FAQ questions, prints the gaps, proposes fix options (title / meta / H2 / FAQ / lead) and, with `--interactive`, records the options you confirm as a fix plan in `docs/seo-tracking/fix-plans/`. Apply the plan in this run, then re-run the script: the Step 4 checkboxes "top 5 queries are answered" and "title contains words from the top queries" are satisfied only when the targeted queries reach grade A. Matching is lexical, so judge synonyms by hand. Tag locale-specific queries (`de:...` or a `locale` CSV column); never translate query wording literally.
+
+**Log the change so it can be measured** (Step 6): `npm run seo:log -- --slug <path> --queries "q1|q2" --position P --impressions N --clicks C --period "<window>" --field ... --old ... --new ...`. Deploys are on demand, so record the live date after shipping with `npm run seo:log -- --mark-deployed --all-pending --date YYYY-MM-DD`. At T+14 and T+28 re-export GSC (Pages and Queries) and run `npm run seo:measure -- --export pages.csv --exported YYYY-MM-DD [--queries-export queries.csv] --write`; `npm run seo:measure -- --status` lists what is due. A change logged without a baseline cannot be measured.
+
 **If no GSC data is provided:** Ask the operator once. If they provide data → run the analyses above. If they confirm none exists → switch to No-GSC mode below and run the FULL refresh process anyway (Steps 1–6 all still run). Never stop the update, and never skip the meta review, because data is missing. Never fabricate query data.
 
 #### No-GSC mode: the Data-Free Meta Review
@@ -354,6 +364,8 @@ After completing the update, output a section-by-section report:
 - geo-translation: APPLIED — read docs/geo-translation.md this session; per-locale quality table below [or: N/A — no non-EN text authored]
 - GSC data reviewed: [date range], [X] queries, [Y] impressions, [Z] clicks
 - Top GSC query gaps addressed: [list queries that were missing from content]
+- Query coverage: [n] of [m] top queries at grade A before → [n'] after (`scripts/query-coverage.mjs`); fix plan: [path or N/A — no GSC data]
+- Logged: seo:log entry [id] with --queries and baseline; deploy date pending/recorded
 - Title tag: UPDATED (was "X", now "Y") — aligned to top query: "[query]"
 - Meta description: UPDATED — now addresses: "[top query]"
 - Lead answer block: UPDATED — new top pick: [model]
@@ -491,8 +503,11 @@ Run this against the **live or locally built HTML** of every locale URL of the p
 - [ ] Every "we tested" claim has a methodology block: device, OS/runtime version, model tag + quantization, prompt, run count, date
 - [ ] Sources section links the primary source for every benchmark, price, license and origin claim (model card / release page / store listing / original author); a product page with only shop links and no primary source is a fail
 - [ ] Internal mentions of other frameworks, tools or guides are links (`[name](path)`), and every internal link resolves (no 404, no redirect chain)
+- [ ] `npm run test:above-fold` passes for the page in every changed locale (`PQ_ATF_PATHS=/<cluster>/<slug> PQ_ATF_LOCALES=all`, against a running production build): H1, lead answer and Key Takeaways inside 1024×768 and 375×812 (GEO Rule 36)
 - [ ] The first 150 words state the page's non-replicable finding (test result, verified discrepancy, decision) — not template text
 - [ ] Visible byline and localized `Last updated` (and `Published`) rendered via `formatDisplayDate`
+
+**Tooling:** `npm run validate-meta-budgets:changed` (static, strict, only article files that differ from `origin/main`; also runs in `pr-checks.yml`) and `npm run seo:gate:changed` (strict, all 9 locales of changed articles; needs a running production build, so start `next start` on port 3000 first or pass `--base=`). Both leave the existing backlog alone but fail on any file you touched. Line C1 (empty alt) is now backed by C1b, which flags generic, filename-style or reused alt text; the renderers' fallbacks ("… article diagram", "Article hero image") pass C1 but say nothing.
 
 **Why:** the 2026-10-21 eight-page audit found every one of these failing on at least one page that had passed content review: empty `alt` on a hands-on test, generic `og:image`, 57 articles with non-www schema URLs, `Thing`-only entities on app reviews, a meta description promising a comparison the page lacks, and two flagship guides quoting the same figure with two or three different values. AI answer engines quote the inconsistency or skip the page; neither shows up in GSC as a crawl error.
 

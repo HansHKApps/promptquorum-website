@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # full history so --changed can diff against the PR base
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -40,6 +42,9 @@ jobs:
 
       - name: Validate month drift
         run: node scripts/validate-month-drift.mjs
+
+      - name: Validate meta budgets (changed article files only, strict)
+        run: node scripts/validate-meta-budgets.mjs --changed=origin/${{ github.base_ref }} --strict
 
       - name: Validate no internal-note leakage
         run: node scripts/validate-no-internal-note-leakage.mjs

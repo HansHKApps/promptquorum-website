@@ -39,6 +39,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { changedArticleFiles } from './changed-article-files.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LIB_DIR = path.resolve(__dirname, '..', 'src', 'lib');
@@ -63,6 +64,20 @@ const STRICT = args.includes('--strict') || process.env.STRICT_META_BUDGETS === 
 const OVER_ONLY = args.includes('--over');
 const ONLY_LOCALE = (args.find((a) => a.startsWith('--locale=')) || '').split('=')[1];
 const LIMIT = Number((args.find((a) => a.startsWith('--limit=')) || '').split('=')[1] || 25);
+
+// --changed[=<git ref>]: only check article files that differ from the ref (default origin/main).
+// Combine with --strict to fail on violations in files you touched, without the 2,000+ backlog.
+const changedArg = args.find((a) => a === '--changed' || a.startsWith('--changed='));
+let CHANGED = null;
+if (changedArg) {
+  const res = changedArticleFiles(changedArg.split('=')[1]);
+  CHANGED = new Set(res.files);
+  console.log(`🔎 --changed: ${res.files.length} article file(s) differ from ${res.ref}`);
+  if (res.files.length === 0) {
+    console.log('✅ Nothing to check.');
+    process.exit(0);
+  }
+}
 
 function findArticleDirs() {
   const dirs = [];
@@ -129,6 +144,7 @@ for (const dir of findArticleDirs()) {
     if (!name.endsWith('.ts')) continue;
     const abs = path.join(dir, name);
     const file = path.relative(process.cwd(), abs);
+    if (CHANGED && !CHANGED.has(path.relative(path.resolve(__dirname, '..'), abs).split(path.sep).join('/'))) continue;
     const content = fs.readFileSync(abs, 'utf-8');
     for (const block of splitLangBlocks(content)) {
       if (ONLY_LOCALE && block.lang !== ONLY_LOCALE) continue;
