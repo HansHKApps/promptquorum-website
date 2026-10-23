@@ -62,5 +62,5 @@
   <line x1="18" y1="268" x2="782" y2="268" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Footer note -->
-  <text x="400" y="298" font-size="11" fill="#79747E" text-anchor="middle">Velocidad en tok/s con cuantizaci&#xf3;n Q4_K_M. iPhones de 6 GB: usa solo modelos de 1.7B. 4 GB: no recomendado.</text>
+  <text x="400" y="298" font-size="11" fill="#79747E" text-anchor="middle">Valores orientativos en tok/s (Q4_K_M), no son un benchmark de PromptQuorum. iPhones de 6 GB: solo 1.7B. 4 GB: no recomendado.</text>
 <text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
