@@ -99,7 +99,7 @@ The site supports 9 languages, all on **path-prefix URL routing** (`/de/...`, `/
 - `pt` emits hreflang/schema `inLanguage` as `pt-BR` (Brazilian Portuguese) via `toOutputLocale()`; `ar` is RTL (`getLangDir()` in `src/lib/i18n/constants.ts`)
 - All nav links must resolve to the correct path-prefixed href via the shared nav helper in `HeaderClient.tsx`
 - Translations live in `src/locales/[lang].ts`
-- **Known gap (tracked, not yet fixed):** `src/app/layout.tsx` still hardcodes `<html lang="en" dir="ltr">` server-side for every locale; a client-side `HtmlLangUpdater.tsx` patches it post-hydration only. Raw HTML served to crawlers is wrong for all 8 non-EN locales until the `[locale]` segment refactor lands.
+- **Known gap (tracked, not yet fixed):** `src/app/layout.tsx` still hardcodes `<html lang="en" dir="ltr">` server-side for every locale; a client-side `HtmlLangUpdater.tsx` patches it post-hydration only. Raw HTML served to crawlers is wrong for all 8 non-EN locales until the `[locale]` segment refactor lands. See `docs/PAGE_UPDATER.md` Step 4.8 for the interim check.
 
 ### Critical: Server-to-Client Language Handoff
 
