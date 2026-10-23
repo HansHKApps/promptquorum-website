@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fastest Local LLMs for Low-End PCs | PromptQuorum</title>
-    <meta name="description" content="Interactive presentation: fastest local LLMs for low-end PCs. 4 GB RAM: 25–40 tok/s. 8 GB RAM: 15–25 tok/s. 16 GB RAM: 8–15 tok/s." />
+    <meta name="description" content="Interactive presentation: fastest local LLMs for low-end PCs. Estimated speeds — 4 GB RAM: 25–40 tok/s. 8 GB RAM: 15–25 tok/s. 16 GB RAM: 8–15 tok/s." />
     <meta property="og:title" content="Fastest Local LLMs for Low-End PCs — PromptQuorum" />
-    <meta property="og:description" content="Hardware-matched model picks, quantization guide, and real benchmarks for low-end PCs." />
+    <meta property="og:description" content="Hardware-matched model picks, quantization guide, and estimated speeds for low-end PCs." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs" />
 
@@ -367,7 +367,7 @@
           {
             type: 'title',
             h1: 'Fastest Local LLMs for Low-End PCs',
-            subtitle: '4 GB RAM: 25–40 tok/s · 8 GB RAM: 15–25 tok/s · 16 GB RAM: 8–15 tok/s',
+            subtitle: '4 GB RAM: 25–40 tok/s · 8 GB RAM: 15–25 tok/s · 16 GB RAM: 8–15 tok/s (estimates)',
             link: BASE
           },
           {
@@ -376,22 +376,22 @@
             items: [
               '<strong>4 GB RAM, CPU only:</strong> Qwen3 1.7B Q4_K_M — 25–40 tok/s. Fastest response on minimal hardware.',
               '<strong>8 GB RAM, CPU only (sweet spot):</strong> Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s. Coding and reasoning on old laptops.',
-              '<strong>8 GB RAM + Intel Iris iGPU:</strong> Qwen3 4B — 12–20 tok/s with partial GPU offload.',
+              '<strong>8 GB RAM + Intel Iris iGPU:</strong> Qwen3 4B — 12–20 tok/s only if the iGPU is actually used.',
               '<strong>16 GB RAM, CPU only:</strong> Qwen3 8B Q4_K_M — 8–15 tok/s. Strong quality, no GPU needed.',
-              '<strong>16 GB RAM + iGPU:</strong> Llama 3.2 3B or Qwen3 4B — 20–35 tok/s with layer offload.',
+              '<strong>16 GB RAM + iGPU:</strong> Llama 3.2 3B or Qwen3 4B — 20–35 tok/s if the iGPU is used.',
               '<strong>Winner verdict:</strong> Phi-4-mini (3.8B) at Q4_K_M is the sweet spot for most low-end PCs — fits 8 GB RAM, 15–25 tok/s on CPU.'
             ]
           },
           {
             type: 'comparison',
             h2: 'The Core Rule: Match Hardware to Model',
-            line1: '❌ Wrong model = 4–10× speed wasted',
-            line2: '✅ Right model = max speed for your hardware',
-            tip: 'If you have any GPU (even integrated), use it. CPU is last resort.'
+            line1: '❌ Model too big for your RAM = slow or crashing',
+            line2: '✅ Right-sized model = max speed for your hardware',
+            tip: 'Speed ≈ memory bandwidth ÷ model file size. Test the iGPU on and off (ollama ps).'
           },
           {
             type: 'table',
-            h2: 'Fastest Model for Your Hardware',
+            h2: 'Fastest Model for Your Hardware (Estimated Speeds)',
             columns: ['Hardware', 'Best Model', 'Speed'],
             rows: [
               { 'Hardware': '4 GB RAM, CPU only', 'Best Model': 'Qwen3 1.7B Q4_K_M', 'Speed': '25–40 t/s' },
@@ -408,14 +408,14 @@
             items: [
               '<strong>4 GB RAM, CPU only →</strong> Qwen3 1.7B Q4_K_M (25–40 tok/sec) — fastest response on minimal hardware',
               '<strong>8 GB RAM, CPU only →</strong> Phi-4-mini 3.8B Q4_K_M (15–25 tok/sec) — sweet spot for coding and reasoning',
-              '<strong>8 GB RAM + Intel Iris iGPU →</strong> Qwen3 4B Q4_K_M (12–20 tok/sec) — partial GPU offload',
+              '<strong>8 GB RAM + Intel Iris iGPU →</strong> Qwen3 4B Q4_K_M (12–20 tok/sec) — only if the iGPU is used',
               '<strong>16 GB RAM, CPU only →</strong> Qwen3 8B Q4_K_M (8–15 tok/sec) — strong quality, no GPU needed',
-              '<strong>16 GB RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 tok/sec) — smooth on integrated graphics'
+              '<strong>16 GB RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 tok/sec) — smooth if the iGPU is used'
             ]
           },
           {
             type: 'table',
-            h2: 'Full Hardware Benchmark Table',
+            h2: 'Full Hardware Table (Estimated Speeds)',
             columns: ['Hardware', 'Model', 'Quant', 'Speed'],
             rows: [
               { 'Hardware': '4 GB RAM, CPU only', 'Model': 'Qwen3 1.7B', 'Quant': 'Q4_K_M', 'Speed': '25–40 t/s' },
@@ -429,10 +429,10 @@
             type: 'list',
             h2: 'GPU vs CPU: Speed Facts',
             items: [
-              '<strong>GPU (RTX 3060):</strong> 15–20 tok/sec. Fastest option. Requires CUDA.',
-              '<strong>Integrated GPU:</strong> 5–8 tok/sec. No setup. Slower than discrete GPU.',
-              '<strong>CPU only:</strong> 1–5 tok/sec. Runs everywhere. Slowest.',
-              '<strong>Rule:</strong> Use any GPU (even integrated) over CPU. CPU is last resort.'
+              '<strong>Discrete GPU:</strong> Typically 5–10× faster than CPU-only.',
+              '<strong>Integrated GPU:</strong> Shares system RAM, so it adds no bandwidth. Gain is modest and depends on drivers — check with ollama ps.',
+              '<strong>CPU only:</strong> Estimated 10–25 tok/s on 3B–4B models, 25–40 tok/s on 1.7B. Runs everywhere, no setup.',
+              '<strong>Rule:</strong> CPU speed ≈ memory bandwidth ÷ model file size. Test the iGPU on and off.'
             ]
           },
           {
@@ -449,45 +449,45 @@
           {
             type: 'list',
             h2: 'Quantization Guide',
-            intro: 'Trade quality for VRAM savings and speed:',
+            intro: 'Smaller files run faster but lose more quality:',
             items: [
-              '<strong>Q4:</strong> ~1% quality loss, 50% VRAM savings. Standard choice.',
-              '<strong>Q3:</strong> ~3% quality loss, 62% savings. Acceptable for chat.',
-              '<strong>Q2:</strong> ~10% quality loss, 75% savings. Last resort only.',
-              '<strong>Q2 is 30% faster</strong> than Q4 due to less memory bandwidth.',
-              '<strong>Strategy:</strong> Quantize large models (Mistral Small Q2) vs switching to tiny ones.'
+              '<strong>Q4_K_M:</strong> The standard balance of size, speed and quality. Start here.',
+              '<strong>Q3:</strong> Smaller and faster roughly in proportion to file size, with more quality loss. Only if Q4_K_M does not fit.',
+              '<strong>Q2:</strong> Smallest and fastest, but noticeably worse quality. Last resort.',
+              '<strong>Q8:</strong> Doubles the file size for little gain.',
+              '<strong>Strategy:</strong> Pick the model size first, then Q4_K_M. A small model at Q4_K_M usually beats a larger one squeezed to Q2.'
             ]
           },
           {
             type: 'numbered',
             h2: 'How to Speed Up CPU Inference',
             items: [
-              '<strong>Enable AVX-512:</strong> Set LLAMACPP_AVX512=1 — ~20% speedup.',
-              '<strong>Reduce context window:</strong> Use --ctx-size 1024 instead of 4096.',
-              '<strong>Use llama.cpp directly:</strong> ~10% faster than Ollama on CPU.',
-              '<strong>Try single-threaded mode:</strong> Weak CPUs often run faster single-threaded.',
-              '<strong>Offload to iGPU:</strong> Even integrated GPU beats pure CPU inference.'
+              '<strong>Fill both RAM channels:</strong> Two matching sticks; single-channel RAM halves the speed ceiling.',
+              '<strong>Shrink the context window:</strong> Set OLLAMA_CONTEXT_LENGTH=2048 (default 4096).',
+              '<strong>Cut KV-cache memory:</strong> OLLAMA_FLASH_ATTENTION=1 and OLLAMA_KV_CACHE_TYPE=q8_0 (about half the KV-cache memory vs f16).',
+              '<strong>Keep the model loaded:</strong> OLLAMA_KEEP_ALIVE=30m (default 5m); close memory-hungry apps.',
+              '<strong>Check the CPU/GPU split:</strong> ollama ps shows where the model runs; OLLAMA_VULKAN=0 disables Vulkan GPUs.'
             ]
           },
           {
             type: 'numbered',
             h2: 'Common Mistakes to Avoid',
             items: [
-              'Using TinyLlama on CPU — use Phi-4 Mini 3.8B instead.',
-              'Not enabling CPU acceleration flags (AVX-512 or NEON).',
-              'Forcing a 7B model into 4 GB with Q2 — causes OOM crashes.',
-              'Assuming newer hardware always means faster inference — benchmark first.',
-              'Using wrong Ollama slug — ollama run phi loads Phi-2, not Phi-4 Mini.'
+              'Running a single RAM stick — it halves memory bandwidth, and CPU speed follows bandwidth.',
+              'Judging speed by CPU model alone — memory bandwidth and model file size matter more.',
+              'Forcing a 7B model into 4 GB with Q2 — causes OOM crashes and poor quality.',
+              'Leaving the context window large — set OLLAMA_CONTEXT_LENGTH=2048.',
+              'Using the wrong Ollama slug — ollama run phi loads Phi-2; use phi4-mini.'
             ]
           },
           {
             type: 'list',
             h2: 'What to Avoid on Low-End PCs',
             items: [
-              '<strong>13B+ models:</strong> Exceed RAM limits. Require 8–10 GB VRAM minimum.',
-              '<strong>Q8 quantization:</strong> 2× VRAM cost for only ~2% quality improvement.',
-              '<strong>Real-time autocomplete:</strong> Needs ≥20 tok/sec — CPU cannot reach this.',
-              '<strong>Production chatbots on CPU:</strong> 300 ms latency is too slow for users.'
+              '<strong>13B+ models:</strong> Exceed the RAM of most low-end PCs and run slowly on CPU.',
+              '<strong>Q8 quantization:</strong> Doubles the file size for little gain.',
+              '<strong>Real-time autocomplete:</strong> Needs a fast model — larger CPU-only models are too slow for it.',
+              '<strong>Production chatbots on CPU:</strong> Speeds are estimates and drop with long contexts — test before relying on it.'
             ]
           },
           {
@@ -496,7 +496,7 @@
             faqs: [
               { q: 'What qualifies as a low-end PC?', a: 'Any CPU-only machine with no discrete GPU and 4–16 GB of system RAM. Includes laptops with Intel Iris or AMD Radeon integrated graphics, older desktops, and mini PCs like the Intel N100.' },
               { q: 'Can I run a 7B-class model with no GPU at all?', a: 'Yes — Qwen3 8B Q4_K_M runs at 8–15 tok/s on 16 GB RAM, CPU-only. It is slower than the smaller picks but delivers noticeably stronger quality. On 8 GB RAM, stick to Phi-4-mini (3.8B) instead.' },
-              { q: 'How does quantization affect speed?', a: 'Q2 is about 30% faster than Q4 because it loads fewer bytes per forward pass, but carries a ~10% quality penalty. Use Q4_K_M by default; drop to Q3 only if it doesn\'t fit in RAM.' }
+              { q: 'How does quantization affect speed?', a: 'Smaller quantization files run faster roughly in proportion to file size, because CPU speed is limited by memory bandwidth ÷ model file size. Q3 and Q2 lose more quality. Use Q4_K_M by default; drop to Q3 only if it does not fit in RAM.' }
             ]
           },
           {
@@ -516,7 +516,7 @@
           {
             type: 'title',
             h1: 'Schnellste lokale LLMs für Low-End-PCs',
-            subtitle: '4 GB RAM: 25–40 Tok/s · 8 GB RAM: 15–25 Tok/s · 16 GB RAM: 8–15 Tok/s',
+            subtitle: '4 GB RAM: 25–40 Tok/s · 8 GB RAM: 15–25 Tok/s · 16 GB RAM: 8–15 Tok/s (Schätzwerte)',
             link: BASE
           },
           {
@@ -525,22 +525,22 @@
             items: [
               '<strong>4 GB RAM, nur CPU:</strong> Qwen3 1.7B Q4_K_M — 25–40 Tok/s. Schnellste Antwort auf minimaler Hardware.',
               '<strong>8 GB RAM, nur CPU (Sweet Spot):</strong> Phi-4-mini 3.8B Q4_K_M — 15–25 Tok/s. Coding und Reasoning auf alten Notebooks.',
-              '<strong>8 GB RAM + Intel-Iris-iGPU:</strong> Qwen3 4B — 12–20 Tok/s mit partiellem GPU-Offload.',
+              '<strong>8 GB RAM + Intel-Iris-iGPU:</strong> Qwen3 4B — 12–20 Tok/s nur wenn die iGPU tatsächlich genutzt wird.',
               '<strong>16 GB RAM, nur CPU:</strong> Qwen3 8B Q4_K_M — 8–15 Tok/s. Starke Qualität, keine GPU nötig.',
-              '<strong>16 GB RAM + iGPU:</strong> Llama 3.2 3B oder Qwen3 4B — 20–35 Tok/s mit Layer-Offload.',
+              '<strong>16 GB RAM + iGPU:</strong> Llama 3.2 3B oder Qwen3 4B — 20–35 Tok/s wenn die iGPU genutzt wird.',
               '<strong>Fazit:</strong> Phi-4-mini (3.8B) bei Q4_K_M ist der Sweet Spot für die meisten Low-End-PCs — passt in 8 GB RAM, 15–25 Tok/s auf CPU.'
             ]
           },
           {
             type: 'comparison',
             h2: 'Grundregel: Hardware zum Modell passend auswählen',
-            line1: '❌ Falsches Modell = 4–10× Geschwindigkeit verschenkt',
-            line2: '✅ Richtiges Modell = maximale Geschwindigkeit für Ihre Hardware',
-            tip: 'Wenn Sie eine GPU haben (auch integriert), verwenden Sie diese. CPU ist die letzte Option.'
+            line1: '❌ Modell zu groß für den RAM = langsam oder Absturz',
+            line2: '✅ Passendes Modell = maximale Geschwindigkeit für Ihre Hardware',
+            tip: 'Geschwindigkeit ≈ Speicherbandbreite ÷ Modelldateigröße. iGPU testweise ein- und ausschalten (ollama ps).'
           },
           {
             type: 'table',
-            h2: 'Schnellstes Modell für Ihre Hardware',
+            h2: 'Schnellstes Modell für Ihre Hardware (geschätzte Werte)',
             columns: ['Hardware', 'Bestes Modell', 'Geschwindigkeit'],
             rows: [
               { 'Hardware': '4 GB RAM, nur CPU', 'Bestes Modell': 'Qwen3 1.7B Q4_K_M', 'Geschwindigkeit': '25–40 T/Sek' },
@@ -557,14 +557,14 @@
             items: [
               '<strong>4 GB RAM, nur CPU →</strong> Qwen3 1.7B Q4_K_M (25–40 Tok/Sek) — schnellste Antwort auf minimaler Hardware',
               '<strong>8 GB RAM, nur CPU →</strong> Phi-4-mini 3.8B Q4_K_M (15–25 Tok/Sek) — Sweet Spot für Coding und Reasoning',
-              '<strong>8 GB RAM + Intel-Iris-iGPU →</strong> Qwen3 4B Q4_K_M (12–20 Tok/Sek) — partieller GPU-Offload',
+              '<strong>8 GB RAM + Intel-Iris-iGPU →</strong> Qwen3 4B Q4_K_M (12–20 Tok/Sek) — nur wenn die iGPU genutzt wird',
               '<strong>16 GB RAM, nur CPU →</strong> Qwen3 8B Q4_K_M (8–15 Tok/Sek) — starke Qualität, keine GPU nötig',
-              '<strong>16 GB RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 Tok/Sek) — flüssig mit integrierter Grafik'
+              '<strong>16 GB RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 Tok/Sek) — flüssig, wenn die iGPU genutzt wird'
             ]
           },
           {
             type: 'table',
-            h2: 'Hardware-Benchmark-Tabelle',
+            h2: 'Hardware-Tabelle (geschätzte Geschwindigkeiten)',
             columns: ['Hardware', 'Modell', 'Quant.', 'Geschwindigkeit'],
             rows: [
               { 'Hardware': '4 GB RAM, nur CPU', 'Modell': 'Qwen3 1.7B', 'Quant.': 'Q4_K_M', 'Geschwindigkeit': '25–40 T/Sek' },
@@ -578,10 +578,10 @@
             type: 'list',
             h2: 'GPU vs. CPU: Geschwindigkeitsfakten',
             items: [
-              '<strong>GPU (RTX 3060):</strong> 15–20 Tok/Sek. Schnellste Option. Erfordert CUDA.',
-              '<strong>Integrierte GPU:</strong> 5–8 Tok/Sek. Kein Setup. Langsamer als dedizierter GPU.',
-              '<strong>Nur CPU:</strong> 1–5 Tok/Sek. Läuft überall. Am langsamsten.',
-              '<strong>Regel:</strong> Jede GPU (auch integriert) schlägt CPU. CPU ist letzter Ausweg.'
+              '<strong>Dedizierte GPU:</strong> Typischerweise 5–10× schneller als reine CPU.',
+              '<strong>Integrierte GPU:</strong> Teilt sich den Arbeitsspeicher, bringt also keine zusätzliche Bandbreite. Der Gewinn ist gering und treiberabhängig — mit ollama ps prüfen.',
+              '<strong>Nur CPU:</strong> Geschätzt 10–25 Tok/Sek bei 3B–4B-Modellen, 25–40 Tok/Sek bei 1.7B. Läuft überall, kein Setup.',
+              '<strong>Regel:</strong> CPU-Tempo ≈ Speicherbandbreite ÷ Modelldateigröße. iGPU testweise ein- und ausschalten.'
             ]
           },
           {
@@ -598,45 +598,45 @@
           {
             type: 'list',
             h2: 'Quantisierungsleitfaden',
-            intro: 'Qualität gegen VRAM-Einsparungen und Geschwindigkeit tauschen:',
+            intro: 'Kleinere Dateien laufen schneller, verlieren aber mehr Qualität:',
             items: [
-              '<strong>Q4:</strong> ~1% Qualitätsverlust, 50% VRAM-Einsparung. Standardwahl.',
-              '<strong>Q3:</strong> ~3% Verlust, 62% Einsparung. Akzeptabel für Chat.',
-              '<strong>Q2:</strong> ~10% Verlust, 75% Einsparung. Nur letzter Ausweg.',
-              '<strong>Q2 ist 30% schneller</strong> als Q4 (weniger Speicherbandbreite).',
-              '<strong>Strategie:</strong> Große Modelle quantisieren (Mistral Small Q2) statt Tiny-Modelle.'
+              '<strong>Q4_K_M:</strong> Der Standard-Kompromiss aus Größe, Tempo und Qualität. Hier anfangen.',
+              '<strong>Q3:</strong> Kleiner und etwa im Verhältnis zur Dateigröße schneller, aber mit mehr Qualitätsverlust. Nur, wenn Q4_K_M nicht passt.',
+              '<strong>Q2:</strong> Am kleinsten und schnellsten, aber spürbar schlechtere Qualität. Nur letzter Ausweg.',
+              '<strong>Q8:</strong> Verdoppelt die Dateigröße bei geringem Nutzen.',
+              '<strong>Strategie:</strong> Erst die Modellgröße wählen, dann Q4_K_M. Ein kleines Modell mit Q4_K_M schlägt meist ein größeres, das auf Q2 gequetscht wurde.'
             ]
           },
           {
             type: 'numbered',
             h2: 'CPU-Inferenz beschleunigen',
             items: [
-              '<strong>AVX-512 aktivieren:</strong> LLAMACPP_AVX512=1 setzen — ~20% Beschleunigung.',
-              '<strong>Kontext reduzieren:</strong> --ctx-size 1024 statt 4096 verwenden.',
-              '<strong>llama.cpp direkt verwenden:</strong> ~10% schneller als Ollama auf CPU.',
-              '<strong>Einfachen Thread testen:</strong> Schwache CPUs laufen single-threaded schneller.',
-              '<strong>Auf iGPU auslagern:</strong> Selbst integrierte GPU schlägt reine CPU.'
+              '<strong>Beide RAM-Kanäle belegen:</strong> Zwei identische Riegel; Single-Channel-RAM halbiert die Tempo-Obergrenze.',
+              '<strong>Kontextfenster verkleinern:</strong> OLLAMA_CONTEXT_LENGTH=2048 setzen (Standard 4096).',
+              '<strong>KV-Cache-Speicher sparen:</strong> OLLAMA_FLASH_ATTENTION=1 und OLLAMA_KV_CACHE_TYPE=q8_0 (etwa halber KV-Cache-Speicher gegenüber f16).',
+              '<strong>Modell geladen halten:</strong> OLLAMA_KEEP_ALIVE=30m (Standard 5m); speicherhungrige Apps schließen.',
+              '<strong>CPU/GPU-Aufteilung prüfen:</strong> ollama ps zeigt, wo das Modell läuft; OLLAMA_VULKAN=0 deaktiviert Vulkan-GPUs.'
             ]
           },
           {
             type: 'numbered',
             h2: 'Häufige Fehler vermeiden',
             items: [
-              'TinyLlama auf CPU verwenden — Phi-4 Mini 3.8B nehmen.',
-              'CPU-Beschleunigungsflags (AVX-512/NEON) nicht aktivieren.',
-              '7B-Modell mit Q2 in 4 GB zwingen — verursacht OOM-Abstürze.',
-              'Annehmen, neuere Hardware bedeutet schnellere Inferenz — erst benchmarken.',
-              'Falschen Ollama-Slug verwenden — ollama run phi lädt Phi-2, nicht Phi-4-mini.'
+              'Nur einen RAM-Riegel nutzen — das halbiert die Speicherbandbreite, und das CPU-Tempo folgt der Bandbreite.',
+              'Das Tempo allein am CPU-Modell festmachen — Speicherbandbreite und Modelldateigröße zählen mehr.',
+              '7B-Modell mit Q2 in 4 GB zwingen — verursacht OOM-Abstürze und schlechte Qualität.',
+              'Das Kontextfenster groß lassen — OLLAMA_CONTEXT_LENGTH=2048 setzen.',
+              'Falschen Ollama-Slug verwenden — ollama run phi lädt Phi-2; phi4-mini nutzen.'
             ]
           },
           {
             type: 'list',
             h2: 'Was auf Low-End-PCs zu vermeiden ist',
             items: [
-              '<strong>13B+-Modelle:</strong> Überschreiten RAM-Limits. Benötigen 8–10 GB VRAM.',
-              '<strong>Q8-Quantisierung:</strong> 2× VRAM-Kosten, nur ~2% Qualitätsgewinn.',
-              '<strong>Echtzeit-Autovervollständigung:</strong> Benötigt ≥20 Tok/Sek — CPU schafft das nicht.',
-              '<strong>Produktions-Chatbots auf CPU:</strong> 300 ms Latenz — zu langsam für Nutzer.'
+              '<strong>13B+-Modelle:</strong> Sprengen den RAM der meisten Low-End-PCs und laufen auf der CPU langsam.',
+              '<strong>Q8-Quantisierung:</strong> Verdoppelt die Dateigröße bei geringem Nutzen.',
+              '<strong>Echtzeit-Autovervollständigung:</strong> Braucht ein schnelles Modell — größere reine CPU-Modelle sind dafür zu langsam.',
+              '<strong>Produktions-Chatbots auf CPU:</strong> Die Werte sind Schätzungen und sinken bei langem Kontext — vor dem Einsatz testen.'
             ]
           },
           {
@@ -645,7 +645,7 @@
             faqs: [
               { q: 'Was gilt als Low-End-PC?', a: 'Jede reine CPU-Maschine ohne dedizierte GPU mit 4–16 GB Systemspeicher. Dazu gehören Notebooks mit Intel Iris oder AMD Radeon integrierter Grafik, ältere Desktops und Mini-PCs wie der Intel N100.' },
               { q: 'Kann ich ein 7B-Modell ganz ohne GPU ausführen?', a: 'Ja — Qwen3 8B bei Q4_K_M läuft mit 8–15 Tok/s bei 16 GB RAM, nur CPU. Es ist langsamer als die kleineren Optionen, liefert aber deutlich bessere Qualität. Bei 8 GB RAM bleiben Sie besser bei Phi-4-mini (3.8B).' },
-              { q: 'Wie beeinflusst Quantisierung die Geschwindigkeit?', a: 'Q2 ist etwa 30% schneller als Q4, weil pro Forward-Pass weniger Bytes geladen werden, hat aber eine ~10% Qualitätseinbuße. Verwenden Sie standardmäßig Q4_K_M; wechseln Sie nur zu Q3, wenn es nicht in den RAM passt.' }
+              { q: 'Wie beeinflusst Quantisierung die Geschwindigkeit?', a: 'Kleinere Quantisierungsdateien laufen etwa im Verhältnis zur Dateigröße schneller, weil das CPU-Tempo durch Speicherbandbreite ÷ Modelldateigröße begrenzt wird. Q3 und Q2 verlieren mehr Qualität. Verwenden Sie standardmäßig Q4_K_M; wechseln Sie nur zu Q3, wenn es nicht in den RAM passt.' }
             ]
           },
           {
@@ -665,7 +665,7 @@
           {
             type: 'title',
             h1: 'LLMs locaux les plus rapides pour PC bas de gamme',
-            subtitle: '4 Go RAM : 25–40 tok/s · 8 Go RAM : 15–25 tok/s · 16 Go RAM : 8–15 tok/s',
+            subtitle: '4 Go RAM : 25–40 tok/s · 8 Go RAM : 15–25 tok/s · 16 Go RAM : 8–15 tok/s (estimations)',
             link: BASE
           },
           {
@@ -674,22 +674,22 @@
             items: [
               '<strong>4 Go de RAM, CPU seul :</strong> Qwen3 1.7B Q4_K_M — 25–40 tok/s. Réponse la plus rapide sur matériel minimal.',
               '<strong>8 Go de RAM, CPU seul (sweet spot) :</strong> Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s. Code et raisonnement sur vieux portables.',
-              '<strong>8 Go de RAM + iGPU Intel Iris :</strong> Qwen3 4B — 12–20 tok/s avec offload GPU partiel.',
+              '<strong>8 Go de RAM + iGPU Intel Iris :</strong> Qwen3 4B — 12–20 tok/s avec un iGPU réellement utilisé.',
               '<strong>16 Go de RAM, CPU seul :</strong> Qwen3 8B Q4_K_M — 8–15 tok/s. Qualité solide, sans besoin de GPU.',
-              '<strong>16 Go de RAM + iGPU :</strong> Llama 3.2 3B ou Qwen3 4B — 20–35 tok/s avec offload de couches.',
+              '<strong>16 Go de RAM + iGPU :</strong> Llama 3.2 3B ou Qwen3 4B — 20–35 tok/s avec un iGPU utilisé.',
               '<strong>Verdict :</strong> Phi-4-mini (3.8B) en Q4_K_M est le sweet spot pour la plupart des PC bas de gamme — tient dans 8 Go de RAM, 15–25 tok/s sur CPU.'
             ]
           },
           {
             type: 'comparison',
             h2: 'La règle fondamentale : adapter le modèle au matériel',
-            line1: '❌ Mauvais modèle = 4–10× de vitesse gaspillée',
-            line2: '✅ Bon modèle = vitesse maximale pour votre matériel',
-            tip: 'Si vous avez un GPU (même intégré), utilisez-le. Le CPU est le dernier recours.'
+            line1: '❌ Modèle trop gros pour votre RAM = lent ou plantages',
+            line2: '✅ Modèle adapté = vitesse maximale pour votre matériel',
+            tip: "Vitesse ≈ bande passante mémoire ÷ taille du fichier du modèle. Testez l'iGPU activé et désactivé (ollama ps)."
           },
           {
             type: 'table',
-            h2: 'Modèle le plus rapide pour votre matériel',
+            h2: 'Modèle le plus rapide pour votre matériel (vitesses estimées)',
             columns: ['Matériel', 'Meilleur modèle', 'Vitesse'],
             rows: [
               { 'Matériel': '4 Go RAM, CPU seul', 'Meilleur modèle': 'Qwen3 1.7B Q4_K_M', 'Vitesse': '25–40 t/s' },
@@ -706,14 +706,14 @@
             items: [
               '<strong>4 Go RAM, CPU seul →</strong> Qwen3 1.7B Q4_K_M (25–40 tok/sec) — réponse la plus rapide sur matériel minimal',
               '<strong>8 Go RAM, CPU seul →</strong> Phi-4-mini 3.8B Q4_K_M (15–25 tok/sec) — sweet spot pour le code et le raisonnement',
-              '<strong>8 Go RAM + iGPU Intel Iris →</strong> Qwen3 4B Q4_K_M (12–20 tok/sec) — offload GPU partiel',
+              '<strong>8 Go RAM + iGPU Intel Iris →</strong> Qwen3 4B Q4_K_M (12–20 tok/sec) — avec un iGPU utilisé',
               '<strong>16 Go RAM, CPU seul →</strong> Qwen3 8B Q4_K_M (8–15 tok/sec) — qualité solide, sans besoin de GPU',
-              '<strong>16 Go RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 tok/sec) — fluide avec graphiques intégrés'
+              '<strong>16 Go RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 tok/sec) — fluide avec un iGPU utilisé'
             ]
           },
           {
             type: 'table',
-            h2: 'Tableau complet des benchmarks',
+            h2: 'Tableau complet du matériel (vitesses estimées)',
             columns: ['Matériel', 'Modèle', 'Quant.', 'Vitesse'],
             rows: [
               { 'Matériel': '4 Go RAM, CPU seul', 'Modèle': 'Qwen3 1.7B', 'Quant.': 'Q4_K_M', 'Vitesse': '25–40 t/s' },
@@ -727,10 +727,10 @@
             type: 'list',
             h2: 'GPU vs CPU : les faits de vitesse',
             items: [
-              '<strong>GPU (RTX 3060) :</strong> 15–20 tok/sec. Option la plus rapide. Nécessite CUDA.',
-              '<strong>GPU intégré :</strong> 5–8 tok/sec. Pas de configuration. Plus lent que GPU dédié.',
-              '<strong>CPU seul :</strong> 1–5 tok/sec. Fonctionne partout. Le plus lent.',
-              '<strong>Règle :</strong> Tout GPU (même intégré) bat le CPU. CPU en dernier recours.'
+              '<strong>GPU dédié :</strong> Généralement 5 à 10× plus rapide que le CPU seul.',
+              "<strong>GPU intégré :</strong> Partage la RAM système, donc n'ajoute pas de bande passante. Gain modeste, dépend des pilotes — vérifiez avec ollama ps.",
+              '<strong>CPU seul :</strong> Environ 10–25 tok/s estimés sur des modèles 3B–4B, 25–40 tok/s sur 1.7B. Fonctionne partout, sans configuration.',
+              "<strong>Règle :</strong> vitesse CPU ≈ bande passante mémoire ÷ taille du modèle. Testez l'iGPU activé et désactivé."
             ]
           },
           {
@@ -747,45 +747,45 @@
           {
             type: 'list',
             h2: 'Guide de quantification',
-            intro: 'Échanger qualité contre économies VRAM et vitesse :',
+            intro: 'Les fichiers plus petits vont plus vite mais perdent plus en qualité :',
             items: [
-              '<strong>Q4 :</strong> ~1% de perte de qualité, 50% économies VRAM. Choix standard.',
-              '<strong>Q3 :</strong> ~3% de perte, 62% économies. Acceptable pour le chat.',
-              '<strong>Q2 :</strong> ~10% de perte, 75% économies. Dernier recours uniquement.',
-              '<strong>Q2 est 30% plus rapide</strong> que Q4 (moins de bande passante mémoire).',
-              '<strong>Stratégie :</strong> Quantifier grands modèles (Mistral Small Q2) plutôt que petits.'
+              "<strong>Q4_K_M :</strong> L'équilibre standard entre taille, vitesse et qualité. Commencez ici.",
+              '<strong>Q3 :</strong> Plus petit et plus rapide, à peu près proportionnellement à la taille du fichier, avec plus de perte de qualité. Seulement si Q4_K_M ne tient pas.',
+              '<strong>Q2 :</strong> Le plus petit et le plus rapide, mais qualité nettement dégradée. Dernier recours.',
+              '<strong>Q8 :</strong> Double la taille du fichier pour un gain minime.',
+              "<strong>Stratégie :</strong> Choisissez d'abord la taille du modèle, puis Q4_K_M. Un petit modèle en Q4_K_M bat généralement un plus grand écrasé en Q2."
             ]
           },
           {
             type: 'numbered',
             h2: "Accélérer l'inférence CPU",
             items: [
-              "<strong>Activer AVX-512 :</strong> Définir LLAMACPP_AVX512=1 — ~20% d'accélération.",
-              '<strong>Réduire le contexte :</strong> Utiliser --ctx-size 1024 au lieu de 4096.',
-              "<strong>Utiliser llama.cpp directement :</strong> ~10% plus rapide qu'Ollama sur CPU.",
-              '<strong>Tester mono-thread :</strong> Les CPU faibles sont souvent plus rapides en mono-thread.',
-              '<strong>Décharger sur iGPU :</strong> Même GPU intégré bat le CPU pur.'
+              '<strong>Remplir les deux canaux RAM :</strong> Deux barrettes identiques ; une RAM mono-canal divise par deux le plafond de vitesse.',
+              '<strong>Réduire la fenêtre de contexte :</strong> Définir OLLAMA_CONTEXT_LENGTH=2048 (4096 par défaut).',
+              "<strong>Réduire la mémoire du cache KV :</strong> OLLAMA_FLASH_ATTENTION=1 et OLLAMA_KV_CACHE_TYPE=q8_0 (environ moitié moins de mémoire de cache KV qu'en f16).",
+              '<strong>Garder le modèle chargé :</strong> OLLAMA_KEEP_ALIVE=30m (5m par défaut) ; fermer les applis gourmandes en mémoire.',
+              '<strong>Vérifier la répartition CPU/GPU :</strong> ollama ps montre où tourne le modèle ; OLLAMA_VULKAN=0 désactive les GPU Vulkan.'
             ]
           },
           {
             type: 'numbered',
             h2: 'Erreurs courantes à éviter',
             items: [
-              'Utiliser TinyLlama sur CPU — utiliser Phi-4 Mini 3.8B à la place.',
-              "Ne pas activer les flags d'accélération CPU (AVX-512/NEON).",
-              'Forcer 7B dans 4 Go avec Q2 — provoque des crashs OOM.',
-              'Supposer que matériel plus récent = inférence plus rapide — tester avant.',
-              "Utiliser le mauvais slug Ollama — ollama run phi charge Phi-2, pas Phi-4-mini."
+              'Utiliser une seule barrette de RAM — cela divise par deux la bande passante mémoire, et la vitesse CPU la suit.',
+              "Juger la vitesse d'après le seul modèle de CPU — la bande passante mémoire et la taille du fichier comptent davantage.",
+              'Forcer un modèle 7B dans 4 Go avec Q2 — provoque des crashs OOM et une mauvaise qualité.',
+              'Laisser une grande fenêtre de contexte — définir OLLAMA_CONTEXT_LENGTH=2048.',
+              'Utiliser le mauvais slug Ollama — ollama run phi charge Phi-2 ; utiliser phi4-mini.'
             ]
           },
           {
             type: 'list',
             h2: 'Ce à éviter sur PC bas de gamme',
             items: [
-              '<strong>Modèles 13B+ :</strong> Dépassent les limites RAM. Nécessitent 8–10 Go VRAM.',
-              '<strong>Quantification Q8 :</strong> 2× coût VRAM pour seulement ~2% de gain qualité.',
-              "<strong>Autocomplétion temps réel :</strong> Nécessite ≥20 tok/sec — CPU ne peut pas.",
-              '<strong>Chatbots de production sur CPU :</strong> 300 ms latence — trop lent pour utilisateurs.'
+              '<strong>Modèles 13B+ :</strong> Dépassent la RAM de la plupart des PC bas de gamme et sont lents sur CPU.',
+              '<strong>Quantification Q8 :</strong> Double la taille du fichier pour un gain minime.',
+              '<strong>Autocomplétion temps réel :</strong> Exige un modèle rapide — les gros modèles sur CPU seul sont trop lents.',
+              '<strong>Chatbots de production sur CPU :</strong> Les vitesses sont des estimations et baissent avec un long contexte — testez avant de vous y fier.'
             ]
           },
           {
@@ -794,7 +794,7 @@
             faqs: [
               { q: "Qu'est-ce qu'un PC bas de gamme ?", a: "Toute machine CPU seul sans GPU dédié avec 4–16 Go de RAM système. Inclut les portables avec graphiques intégrés Intel Iris ou AMD Radeon, les vieux PC de bureau, et les mini PC comme l'Intel N100." },
               { q: 'Puis-je exécuter un modèle de classe 7B sans aucun GPU ?', a: "Oui — Qwen3 8B en Q4_K_M tourne à 8–15 tok/s avec 16 Go de RAM, CPU seul. C'est plus lent que les options plus petites mais offre une qualité nettement meilleure. Avec 8 Go de RAM, préférez Phi-4-mini (3.8B)." },
-              { q: 'Comment la quantification affecte-t-elle la vitesse ?', a: "Q2 est environ 30% plus rapide que Q4 car il charge moins d'octets par passe, mais entraîne une pénalité qualité de ~10%. Utilisez Q4_K_M par défaut ; ne descendez à Q3 que si cela ne tient pas dans la RAM." }
+              { q: 'Comment la quantification affecte-t-elle la vitesse ?', a: "Les fichiers de quantification plus petits vont à peu près proportionnellement plus vite, car la vitesse CPU est limitée par la bande passante mémoire ÷ la taille du fichier du modèle. Q3 et Q2 perdent plus en qualité. Utilisez Q4_K_M par défaut ; ne descendez à Q3 que si cela ne tient pas dans la RAM." }
             ]
           },
           {
@@ -814,7 +814,7 @@
           {
             type: 'title',
             h1: '低スペックPCで動く最速ローカルLLM',
-            subtitle: 'RAM 4 GB：25〜40トークン/秒 · RAM 8 GB：15〜25トークン/秒 · RAM 16 GB：8〜15トークン/秒',
+            subtitle: 'RAM 4 GB：25〜40トークン/秒 · RAM 8 GB：15〜25トークン/秒 · RAM 16 GB：8〜15トークン/秒（推定）',
             link: BASE
           },
           {
@@ -823,22 +823,22 @@
             items: [
               '<strong>RAM 4 GB、CPU専用：</strong>Qwen3 1.7B Q4_K_M — 25〜40トークン/秒。最小ハードウェアで最速の応答。',
               '<strong>RAM 8 GB、CPU専用（スイートスポット）：</strong>Phi-4-mini 3.8B Q4_K_M — 15〜25トークン/秒。古いノートPCでコーディングと推論。',
-              '<strong>RAM 8 GB + Intel Iris iGPU：</strong>Qwen3 4B — 部分GPUオフロードで12〜20トークン/秒。',
+              '<strong>RAM 8 GB + Intel Iris iGPU：</strong>Qwen3 4B — iGPUが実際に使われる場合に12〜20トークン/秒。',
               '<strong>RAM 16 GB、CPU専用：</strong>Qwen3 8B Q4_K_M — 8〜15トークン/秒。GPU不要で高い品質。',
-              '<strong>RAM 16 GB + iGPU：</strong>Llama 3.2 3BまたはQwen3 4B — レイヤーオフロードで20〜35トークン/秒。',
+              '<strong>RAM 16 GB + iGPU：</strong>Llama 3.2 3BまたはQwen3 4B — iGPUが使われる場合に20〜35トークン/秒。',
               '<strong>結論：</strong>Phi-4-mini（3.8B）のQ4_K_Mはほとんどの低スペックPCでスイートスポット — RAM 8GBに収まり、CPUで15〜25トークン/秒。'
             ]
           },
           {
             type: 'comparison',
             h2: '基本ルール：ハードウェアに合ったモデルを選ぶ',
-            line1: '❌ 間違ったモデル = 4〜10倍の速度を無駄に',
-            line2: '✅ 正しいモデル = ハードウェア最大速度を実現',
-            tip: 'GPUがあれば（統合でも）使用する。CPUは最終手段。'
+            line1: '❌ RAMに対して大きすぎるモデル = 低速またはクラッシュ',
+            line2: '✅ 適切なサイズのモデル = ハードウェア最大速度',
+            tip: '速度 ≈ メモリ帯域幅 ÷ モデルファイルサイズ。iGPUのオン／オフを試す（ollama ps）。'
           },
           {
             type: 'table',
-            h2: 'あなたのハードウェアに最速のモデルは？',
+            h2: 'あなたのハードウェアに最速のモデルは？（推定速度）',
             columns: ['ハードウェア', '最適モデル', '速度'],
             rows: [
               { 'ハードウェア': 'RAM 4 GB、CPU専用', '最適モデル': 'Qwen3 1.7B Q4_K_M', '速度': '25〜40t/s' },
@@ -855,14 +855,14 @@
             items: [
               '<strong>RAM 4 GB、CPU専用 →</strong> Qwen3 1.7B Q4_K_M（25〜40トークン/秒）— 最小ハードウェアで最速の応答',
               '<strong>RAM 8 GB、CPU専用 →</strong> Phi-4-mini 3.8B Q4_K_M（15〜25トークン/秒）— コーディングと推論のスイートスポット',
-              '<strong>RAM 8 GB + Intel Iris iGPU →</strong> Qwen3 4B Q4_K_M（12〜20トークン/秒）— 部分GPUオフロード',
+              '<strong>RAM 8 GB + Intel Iris iGPU →</strong> Qwen3 4B Q4_K_M（12〜20トークン/秒）— iGPUが使われる場合のみ',
               '<strong>RAM 16 GB、CPU専用 →</strong> Qwen3 8B Q4_K_M（8〜15トークン/秒）— GPU不要で高い品質',
-              '<strong>RAM 16 GB + iGPU →</strong> Llama 3.2 3B Q4_K_M（20〜35トークン/秒）— 統合グラフィックスでスムーズ'
+              '<strong>RAM 16 GB + iGPU →</strong> Llama 3.2 3B Q4_K_M（20〜35トークン/秒）— iGPUが使われる場合はスムーズ'
             ]
           },
           {
             type: 'table',
-            h2: 'ハードウェアベンチマーク表',
+            h2: 'ハードウェア別一覧表（推定速度）',
             columns: ['ハードウェア', 'モデル', '量子化', '速度'],
             rows: [
               { 'ハードウェア': 'RAM 4 GB、CPU専用', 'モデル': 'Qwen3 1.7B', '量子化': 'Q4_K_M', '速度': '25〜40t/s' },
@@ -876,10 +876,10 @@
             type: 'list',
             h2: 'GPU vs CPU：速度の事実',
             items: [
-              '<strong>GPU（RTX 3060）：</strong>15〜20t/s。最速オプション。CUDAが必要。',
-              '<strong>統合GPU：</strong>5〜8t/s。設定不要。専用GPUより遅い。',
-              '<strong>CPUのみ：</strong>1〜5t/s。どこでも動く。最も遅い。',
-              '<strong>ルール：</strong>どんなGPU（統合でも）もCPUに勝る。CPUは最後の手段。'
+              '<strong>専用GPU：</strong>CPUのみと比べて通常5〜10倍高速。',
+              '<strong>統合GPU：</strong>システムRAMを共有するため帯域幅は増えない。効果は小さくドライバ依存 — ollama psで確認。',
+              '<strong>CPUのみ：</strong>3B〜4Bモデルで推定10〜25t/s、1.7Bで25〜40t/s。どこでも動き、設定不要。',
+              '<strong>ルール：</strong>CPU速度 ≈ メモリ帯域幅 ÷ モデルファイルサイズ。iGPUのオン／オフを試す。'
             ]
           },
           {
@@ -896,45 +896,45 @@
           {
             type: 'list',
             h2: '量子化ガイド',
-            intro: '品質をVRAM節約と速度に換える：',
+            intro: '小さいファイルほど高速だが、品質の低下は大きくなる：',
             items: [
-              '<strong>Q4：</strong>品質損失〜1%、VRAM 50%節約。標準的な選択。',
-              '<strong>Q3：</strong>品質損失〜3%、62%節約。チャットに許容範囲。',
-              '<strong>Q2：</strong>品質損失〜10%、75%節約。最後の手段のみ。',
-              '<strong>Q2はQ4より30%速い</strong>（メモリ帯域幅が少ないため）。',
-              '<strong>戦略：</strong>小型モデルより大型モデルを量子化（Mistral Small Q2）。'
+              '<strong>Q4_K_M：</strong>サイズ・速度・品質の標準的なバランス。まずはここから。',
+              '<strong>Q3：</strong>ファイルサイズにほぼ比例して小さく高速になるが、品質低下は大きい。Q4_K_Mが収まらない場合のみ。',
+              '<strong>Q2：</strong>最小・最速だが、品質は明らかに低下。最後の手段。',
+              '<strong>Q8：</strong>ファイルサイズが2倍になるが、得られる利点はわずか。',
+              '<strong>戦略：</strong>まずモデルサイズを選び、次にQ4_K_Mを使う。Q4_K_Mの小型モデルは、Q2に圧縮した大型モデルより通常優れる。'
             ]
           },
           {
             type: 'numbered',
             h2: 'CPU推論を高速化する方法',
             items: [
-              '<strong>AVX-512を有効化：</strong>LLAMACPP_AVX512=1を設定 — 約20%高速化。',
-              '<strong>コンテキストを削減：</strong>4096の代わりに--ctx-size 1024を使用。',
-              '<strong>llama.cppを直接使用：</strong>CPU上でOllamaより約10%速い。',
-              '<strong>シングルスレッドを試す：</strong>弱いCPUはシングルスレッドで速い場合がある。',
-              '<strong>iGPUにオフロード：</strong>統合GPUでさえCPUに勝る。'
+              '<strong>RAMの2チャネルを埋める：</strong>同じ2枚のメモリ。シングルチャネルだと速度の上限が半分になる。',
+              '<strong>コンテキストを縮小：</strong>OLLAMA_CONTEXT_LENGTH=2048を設定（デフォルトは4096）。',
+              '<strong>KVキャッシュのメモリを削減：</strong>OLLAMA_FLASH_ATTENTION=1とOLLAMA_KV_CACHE_TYPE=q8_0（f16と比べKVキャッシュのメモリが約半分）。',
+              '<strong>モデルをロードしたままにする：</strong>OLLAMA_KEEP_ALIVE=30m（デフォルトは5m）。メモリを大量に使うアプリは閉じる。',
+              '<strong>CPU/GPUの割り当てを確認：</strong>ollama psでモデルの実行場所を確認。OLLAMA_VULKAN=0でVulkan GPUを無効化。'
             ]
           },
           {
             type: 'numbered',
             h2: 'よくある間違い',
             items: [
-              'CPU上でTinyLlamaを使う — 代わりにPhi-4 Mini 3.8Bを使用。',
-              'CPUアクセラレーションフラグ（AVX-512/NEON）を有効化しない。',
-              '4GBにQ2で7Bモデルを無理に入れる — OOMクラッシュを引き起こす。',
-              '新しいハードウェア＝高速推論と仮定する — まずベンチマーク。',
-              '間違ったOllamaスラグを使用 — ollama run phiはPhi-4-miniではなくPhi-2をロード。'
+              'RAMを1枚だけで使う — メモリ帯域幅が半分になり、CPU速度も帯域幅に比例して落ちる。',
+              'CPUの型番だけで速度を判断する — メモリ帯域幅とモデルファイルサイズの方が重要。',
+              '4GBにQ2で7Bモデルを無理に入れる — OOMクラッシュと品質低下を招く。',
+              'コンテキストウィンドウを大きいままにする — OLLAMA_CONTEXT_LENGTH=2048を設定。',
+              '間違ったOllamaスラグを使用 — ollama run phiはPhi-2をロード。phi4-miniを使う。'
             ]
           },
           {
             type: 'list',
             h2: '低スペックPCで避けること',
             items: [
-              '<strong>13B+モデル：</strong>RAMの限界を超える。8〜10GB VRAMが必要。',
-              '<strong>Q8量子化：</strong>VRAMコスト2倍、品質向上わずか〜2%。',
-              '<strong>リアルタイムオートコンプリート：</strong>≥20t/s必要 — CPUでは不可。',
-              '<strong>CPUでの本番チャットボット：</strong>300msレイテンシ — ユーザー向けには遅すぎる。'
+              '<strong>13B+モデル：</strong>低スペックPCのRAMを超えがちで、CPUでは低速。',
+              '<strong>Q8量子化：</strong>ファイルサイズが2倍になるが、得られる利点はわずか。',
+              '<strong>リアルタイムオートコンプリート：</strong>高速なモデルが必要 — CPUのみの大きなモデルでは遅すぎる。',
+              '<strong>CPUでの本番チャットボット：</strong>速度は推定値で、長いコンテキストでは低下する — 導入前にテストする。'
             ]
           },
           {
@@ -943,7 +943,7 @@
             faqs: [
               { q: '低スペックPCとは何ですか？', a: '専用GPUのないCPU専用マシンで、システムRAMが4〜16 GBのもの。Intel IrisやAMD Radeon統合グラフィックスを搭載するノートPC、古いデスクトップ、Intel N100などのミニPCが該当。' },
               { q: 'GPUなしで7Bクラスのモデルを実行できますか？', a: 'はい — Qwen3 8B（Q4_K_M）はRAM 16 GB、CPU専用で8〜15トークン/秒で動作します。より小さいモデルより遅いですが、品質は明らかに優れています。RAM 8 GBの場合はPhi-4-mini（3.8B）を使用してください。' },
-              { q: '量子化は速度にどう影響しますか？', a: 'Q2はフォワードパスごとにロードするバイト数が少ないためQ4より約30%速いですが、品質は約10%低下します。デフォルトはQ4_K_M；RAMに収まらない場合のみQ3に切り替え。' }
+              { q: '量子化は速度にどう影響しますか？', a: '小さい量子化ファイルは、CPU速度がメモリ帯域幅 ÷ モデルファイルサイズで制限されるため、ファイルサイズにほぼ比例して高速になります。Q3とQ2は品質低下が大きくなります。デフォルトはQ4_K_M；RAMに収まらない場合のみQ3に切り替え。' }
             ]
           },
           {
@@ -963,7 +963,7 @@
           {
             type: 'title',
             h1: '低配PC最快本地大语言模型',
-            subtitle: '4GB内存：25–40 tok/s · 8GB内存：15–25 tok/s · 16GB内存：8–15 tok/s',
+            subtitle: '4GB内存：25–40 tok/s · 8GB内存：15–25 tok/s · 16GB内存：8–15 tok/s（估算）',
             link: BASE
           },
           {
@@ -972,22 +972,22 @@
             items: [
               '<strong>4GB内存，纯CPU：</strong>Qwen3 1.7B Q4_K_M——25–40 tok/s。最低硬件下最快响应。',
               '<strong>8GB内存，纯CPU（最佳选择）：</strong>Phi-4-mini 3.8B Q4_K_M——15–25 tok/s。旧笔记本上处理编程和推理。',
-              '<strong>8GB内存 + Intel Iris核显：</strong>Qwen3 4B——部分GPU卸载下12–20 tok/s。',
+              '<strong>8GB内存 + Intel Iris核显：</strong>Qwen3 4B——仅在核显实际被使用时为12–20 tok/s。',
               '<strong>16GB内存，纯CPU：</strong>Qwen3 8B Q4_K_M——8–15 tok/s。质量出色，无需GPU。',
-              '<strong>16GB内存 + 核显：</strong>Llama 3.2 3B或Qwen3 4B——层卸载下20–35 tok/s。',
+              '<strong>16GB内存 + 核显：</strong>Llama 3.2 3B或Qwen3 4B——核显被使用时为20–35 tok/s。',
               '<strong>结论：</strong>Phi-4-mini（3.8B）配Q4_K_M是大多数低配电脑的最佳选择——适合8GB内存，CPU上15–25 tok/s。'
             ]
           },
           {
             type: 'comparison',
             h2: '核心规则：将硬件与模型匹配',
-            line1: '❌ 错误模型 = 浪费4-10倍速度',
-            line2: '✅ 正确模型 = 硬件最大速度',
-            tip: '如果有任何GPU（即使是集显），就使用它。CPU是最后手段。'
+            line1: '❌ 模型超出内存 = 变慢或崩溃',
+            line2: '✅ 大小合适的模型 = 硬件最大速度',
+            tip: '速度 ≈ 内存带宽 ÷ 模型文件大小。分别开启和关闭核显进行测试（ollama ps）。'
           },
           {
             type: 'table',
-            h2: '适合您硬件的最快模型',
+            h2: '适合您硬件的最快模型（估算速度）',
             columns: ['硬件', '最佳模型', '速度'],
             rows: [
               { '硬件': '4GB内存，纯CPU', '最佳模型': 'Qwen3 1.7B Q4_K_M', '速度': '25–40 t/s' },
@@ -1004,14 +1004,14 @@
             items: [
               '<strong>4GB内存，纯CPU →</strong> Qwen3 1.7B Q4_K_M（25–40 tok/s）——最低硬件下最快响应',
               '<strong>8GB内存，纯CPU →</strong> Phi-4-mini 3.8B Q4_K_M（15–25 tok/s）——编程和推理的最佳选择',
-              '<strong>8GB内存 + Intel Iris核显 →</strong> Qwen3 4B Q4_K_M（12–20 tok/s）——部分GPU卸载',
+              '<strong>8GB内存 + Intel Iris核显 →</strong> Qwen3 4B Q4_K_M（12–20 tok/s）——仅在使用核显时',
               '<strong>16GB内存，纯CPU →</strong> Qwen3 8B Q4_K_M（8–15 tok/s）——质量出色，无需GPU',
-              '<strong>16GB内存 + 核显 →</strong> Llama 3.2 3B Q4_K_M（20–35 tok/s）——集显下流畅运行'
+              '<strong>16GB内存 + 核显 →</strong> Llama 3.2 3B Q4_K_M（20–35 tok/s）——核显被使用时流畅运行'
             ]
           },
           {
             type: 'table',
-            h2: '硬件基准测试完整表格',
+            h2: '硬件完整表格（估算速度）',
             columns: ['硬件', '模型', '量化', '速度'],
             rows: [
               { '硬件': '4GB内存，纯CPU', '模型': 'Qwen3 1.7B', '量化': 'Q4_K_M', '速度': '25–40 t/s' },
@@ -1025,10 +1025,10 @@
             type: 'list',
             h2: 'GPU vs CPU：速度事实',
             items: [
-              '<strong>GPU（RTX 3060）：</strong>15-20词/秒。最快选项。需要CUDA。',
-              '<strong>集成GPU：</strong>5-8词/秒。无需配置。比独立GPU慢。',
-              '<strong>纯CPU：</strong>1-5词/秒。可在任何地方运行。最慢。',
-              '<strong>规则：</strong>任何GPU（即使是集显）都优于CPU。CPU是最后手段。'
+              '<strong>独立GPU：</strong>通常比纯CPU快5–10倍。',
+              '<strong>集成GPU：</strong>共享系统内存，不增加带宽。提升有限且取决于驱动——用ollama ps检查。',
+              '<strong>纯CPU：</strong>3B–4B模型估算10–25 tok/s，1.7B为25–40 tok/s。可在任何地方运行，无需配置。',
+              '<strong>规则：</strong>CPU速度 ≈ 内存带宽 ÷ 模型文件大小。分别开启和关闭核显测试。'
             ]
           },
           {
@@ -1045,45 +1045,45 @@
           {
             type: 'list',
             h2: '量化指南',
-            intro: '以质量换取速度和VRAM节省：',
+            intro: '文件越小速度越快，但质量损失更大：',
             items: [
-              '<strong>Q4：</strong>质量损失约1%，节省50% VRAM。标准选择。',
-              '<strong>Q3：</strong>质量损失约3%，节省62%。聊天可接受。',
-              '<strong>Q2：</strong>质量损失约10%，节省75%。仅作最后手段。',
-              '<strong>Q2比Q4快30%</strong>（内存带宽更少）。',
-              '<strong>策略：</strong>量化大模型（Mistral Small Q2）而非使用小模型。'
+              '<strong>Q4_K_M：</strong>大小、速度与质量的标准平衡。从这里开始。',
+              '<strong>Q3：</strong>文件更小，速度大致与文件大小成比例提升，但质量损失更大。仅在Q4_K_M放不下时使用。',
+              '<strong>Q2：</strong>最小最快，但质量明显下降。仅作最后手段。',
+              '<strong>Q8：</strong>文件大小翻倍，收益很小。',
+              '<strong>策略：</strong>先选模型大小，再用Q4_K_M。Q4_K_M的小模型通常优于被压缩到Q2的大模型。'
             ]
           },
           {
             type: 'numbered',
             h2: '如何加速纯CPU推理',
             items: [
-              '<strong>启用AVX-512：</strong>设置LLAMACPP_AVX512=1 — 约20%加速。',
-              '<strong>减少上下文：</strong>使用--ctx-size 1024而非4096。',
-              '<strong>直接使用llama.cpp：</strong>CPU上比Ollama快约10%。',
-              '<strong>尝试单线程：</strong>弱CPU上单线程可能更快。',
-              '<strong>卸载到集显：</strong>即使集成GPU也优于纯CPU。'
+              '<strong>插满两条内存通道：</strong>两条相同的内存条；单通道内存会使速度上限减半。',
+              '<strong>缩小上下文窗口：</strong>设置OLLAMA_CONTEXT_LENGTH=2048（默认4096）。',
+              '<strong>减少KV缓存内存：</strong>OLLAMA_FLASH_ATTENTION=1和OLLAMA_KV_CACHE_TYPE=q8_0（KV缓存内存约为f16的一半）。',
+              '<strong>保持模型常驻：</strong>OLLAMA_KEEP_ALIVE=30m（默认5m）；关闭占用内存的应用。',
+              '<strong>检查CPU/GPU分配：</strong>ollama ps显示模型运行位置；OLLAMA_VULKAN=0可禁用Vulkan GPU。'
             ]
           },
           {
             type: 'numbered',
             h2: '常见错误',
             items: [
-              '在CPU上使用TinyLlama — 应使用Phi-4 Mini 3.8B。',
-              '未启用CPU加速标志（AVX-512/NEON）。',
-              '用Q2将7B模型强塞进4GB — 导致OOM崩溃。',
-              '假设更新的硬件=更快的推理 — 先进行基准测试。',
-              '使用错误的Ollama slug — ollama run phi加载的是Phi-2，而非Phi-4-mini。'
+              '只插一条内存 — 内存带宽减半，CPU速度随带宽下降。',
+              '只凭CPU型号判断速度 — 内存带宽和模型文件大小更重要。',
+              '用Q2将7B模型强塞进4GB — 导致OOM崩溃和质量低下。',
+              '上下文窗口保持过大 — 设置OLLAMA_CONTEXT_LENGTH=2048。',
+              '使用错误的Ollama slug — ollama run phi加载的是Phi-2；请使用phi4-mini。'
             ]
           },
           {
             type: 'list',
             h2: '低配PC上应避免什么',
             items: [
-              '<strong>13B+模型：</strong>超出RAM限制。需要8-10GB VRAM。',
-              '<strong>Q8量化：</strong>VRAM成本2倍，质量提升仅约2%。',
-              '<strong>实时自动补全：</strong>需要≥20词/秒 — CPU达不到。',
-              '<strong>CPU上的生产聊天机器人：</strong>300ms延迟 — 对用户太慢。'
+              '<strong>13B+模型：</strong>超出多数低配PC的内存，CPU上运行缓慢。',
+              '<strong>Q8量化：</strong>文件大小翻倍，收益很小。',
+              '<strong>实时自动补全：</strong>需要快速模型 — 较大的纯CPU模型太慢。',
+              '<strong>CPU上的生产聊天机器人：</strong>速度为估算值，上下文变长时会下降 — 依赖前请先测试。'
             ]
           },
           {
@@ -1092,7 +1092,7 @@
             faqs: [
               { q: '什么是低配PC？', a: '没有独立显卡、系统内存为4–16GB的纯CPU机器。包括配备Intel Iris或AMD Radeon集成显卡的笔记本电脑、旧款台式机，以及Intel N100等迷你主机。' },
               { q: '我可以在完全没有GPU的情况下运行7B级模型吗？', a: '可以——Qwen3 8B（Q4_K_M）在16GB内存、纯CPU下可达8–15 tok/s。它比更小的选项慢，但质量明显更好。若只有8GB内存，建议改用Phi-4-mini（3.8B）。' },
-              { q: '量化如何影响速度？', a: 'Q2因每次前向传播加载的字节更少而比Q4快约30%，但会带来约10%的质量损失。默认使用Q4_K_M；仅在无法放入内存时才降至Q3。' }
+              { q: '量化如何影响速度？', a: '较小的量化文件速度大致与文件大小成比例提升，因为CPU速度受内存带宽 ÷ 模型文件大小限制。Q3和Q2的质量损失更大。默认使用Q4_K_M；仅在无法放入内存时才降至Q3。' }
             ]
           },
           {

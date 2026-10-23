@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">量化指南：大小、速度与质量</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Q4_K_M是标准选择。仅当模型放不进内存时才降到Q3/Q2。</text>
+  <text x="38" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">级别</text>
+  <text x="130" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">相对Q4_K_M大小</text>
+  <text x="290" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">速度</text>
+  <text x="420" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">质量</text>
+  <text x="570" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">结论</text>
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="38" y="106" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q8</text>
+  <text x="130" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">约2倍</text>
+  <text x="290" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">更慢</text>
+  <text x="420" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">几乎无损</text>
+  <text x="570" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">很少值得</text>
+  <line x1="18" y1="116" x2="782" y2="116" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="18" y="121" width="764" height="38" fill="#F7F2FA" rx="2"/>
+  <text x="38" y="144" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#6750A4">Q4_K_M ★</text>
+  <text x="130" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">基准</text>
+  <text x="290" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">基准</text>
+  <text x="420" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">平衡良好</text>
+  <text x="570" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4">推荐 ★</text>
+  <line x1="18" y1="159" x2="782" y2="159" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="38" y="185" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q3</text>
+  <text x="130" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">更小</text>
+  <text x="290" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">更快</text>
+  <text x="420" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#B07D00">损失更多</text>
+  <text x="570" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#B07D00">仅在Q4_K_M放不下时</text>
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="38" y="221" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q2</text>
+  <text x="130" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">最小</text>
+  <text x="290" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">最快</text>
+  <text x="420" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">明显变差</text>
+  <text x="570" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">最后手段</text>
+  <line x1="18" y1="231" x2="782" y2="231" stroke="#F7F2FA" stroke-width="1"/>
+  <rect x="18" y="245" width="764" height="60" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="38" y="267" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">核心规则：先选模型大小，再用Q4_K_M。</text>
+  <text x="38" y="287" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Q4_K_M的小模型通常优于被压缩到Q2的大模型。</text>
+  <text x="38" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">文件越小，CPU上越快（大致成比例：速度 ≈ 内存带宽 ÷ 文件大小）。</text>
+  <text x="400" y="338" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>
