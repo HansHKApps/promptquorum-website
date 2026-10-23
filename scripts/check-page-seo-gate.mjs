@@ -48,7 +48,9 @@ const BUDGET = {
 }
 const budgetFor = (l) => (l === 'ja' || l === 'zh' ? BUDGET.cjk : l === 'ko' ? BUDGET.ko : l === 'ar' ? BUDGET.ar : BUDGET.latin)
 const norm2 = (x) => x.normalize('NFKC').toLowerCase()
-const PLACEHOLDER = /\b(to be added|TODO|TBD|lorem ipsum)\b/i
+// TODO/TBD are case-sensitive: lower-case "todo" is an ordinary word in es/pt ("all").
+const PLACEHOLDER_CI = /\b(to be added|lorem ipsum)\b/i
+const PLACEHOLDER_CS = /\b(TODO|TBD)\b/
 
 import { changedArticleFiles, articleUrlPath } from './changed-article-files.mjs'
 import { keyTerms, field, hit } from './seo-terms.mjs'
@@ -236,7 +238,7 @@ async function check(url) {
     const best = Math.max(...real.map((a) => topic.filter((t) => hit(t, field(a))).length))
     if (best < need) add('C1c', `no image alt reflects the page topic (best alt covers ${best} of ${topic.length} title/H1 terms; hero/main diagram alt should name the subject)`)
   }
-  const ph = text.match(PLACEHOLDER)
+  const ph = text.match(PLACEHOLDER_CI) ?? text.match(PLACEHOLDER_CS)
   if (ph) add('C2', `placeholder string "${ph[0]}" in the page text`)
 
   return findings
