@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama für ios',
     ],
     leadAnswerBlock:
-      '**Für die meisten iPhone-Nutzer 2026: PocketPal AI (kostenlos, Open Source) installieren und ein kleines Modell wie Phi-4 Mini (ca. 2,7 GB) herunterladen. Private LLM ($4.99) ergänzt Siri und Kurzbefehle; Locally AI und Google AI Edge Gallery sind kostenlose Alternativen.**',
+      '**Für die meisten iPhone-Nutzer 2026: PocketPal AI (kostenlos) installieren und ein kleines Modell wie Phi-4 Mini laden. Private LLM ($4.99) ergänzt Siri und Kurzbefehle; Locally AI und Google AI Edge Gallery sind kostenlose Alternativen.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist die beste Local-LLM-App für das iPhone 2026?',
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama pour ios',
     ],
     leadAnswerBlock:
-      '**Pour la plupart des utilisateurs d\'iPhone en 2026 : installez PocketPal AI (gratuit, open source) et téléchargez un petit modèle comme Phi-4 Mini (environ 2.7 Go). Private LLM ($4.99) ajoute Siri et Shortcuts ; Locally AI et Google AI Edge Gallery sont des alternatives gratuites.**',
+      '**Pour la plupart des utilisateurs d\'iPhone en 2026 : installez PocketPal AI (gratuit) et téléchargez un petit modèle comme Phi-4 Mini. Private LLM ($4.99) ajoute Siri et Shortcuts ; Locally AI et Google AI Edge Gallery sont des alternatives gratuites.**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle est la meilleure application LLM locale pour iPhone en 2026 ?',
@@ -2824,7 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama para ios',
     ],
     leadAnswerBlock:
-      '**Para la mayoría de usuarios de iPhone en 2026: instala PocketPal AI (gratuita, código abierto) y descarga un modelo pequeño como Phi-4 Mini (unos 2.7 GB). Private LLM ($4.99) añade Siri y Shortcuts; Locally AI y Google AI Edge Gallery son alternativas gratuitas.**',
+      '**Para la mayoría de usuarios de iPhone en 2026: instala PocketPal AI (gratuita) y descarga un modelo pequeño como Phi-4 Mini. Private LLM ($4.99) añade Siri y Shortcuts; Locally AI y Google AI Edge Gallery son alternativas gratuitas.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la mejor app de LLM local para iPhone en 2026?',
@@ -3931,7 +3931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama pra ios',
     ],
     leadAnswerBlock:
-      '**Para a maioria dos usuários de iPhone em 2026: instale o PocketPal AI (gratuito, código aberto) e baixe um modelo pequeno como o Phi-4 Mini (cerca de 2.7 GB). O Private LLM ($4.99) adiciona Siri e Shortcuts; Locally AI e Google AI Edge Gallery são alternativas gratuitas.**',
+      '**Para a maioria dos usuários de iPhone em 2026: instale o PocketPal AI (gratuito) e baixe um modelo pequeno como o Phi-4 Mini. O Private LLM ($4.99) adiciona Siri e Shortcuts; Locally AI e Google AI Edge Gallery são alternativas gratuitas.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor app de LLM local para iPhone em 2026?',
