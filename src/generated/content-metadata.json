@@ -3431,7 +3431,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-10-20",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -3881,7 +3881,7 @@
       "images": []
     },
     "best-llm-fine-tuning-framework-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-08-28",
       "hasSections": true,
@@ -5260,7 +5260,7 @@
       "images": []
     },
     "how-to-reduce-prompt-brittleness": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-04-29",
       "hasSections": true,
@@ -6072,7 +6072,7 @@
       ]
     },
     "best-ai-courses-certifications-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6603,7 +6603,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6621,7 +6621,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 8 categories of a local LLM stack: 265 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
+          "title": "The 8 categories of a local LLM stack: 267 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7285,7 +7285,7 @@
       ]
     },
     "local-vision-models-llava-ollama-2026": {
-      "dateModified": "2026-10-20",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -7402,7 +7402,7 @@
       "images": []
     },
     "best-affiliate-tools-ai-developers-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -8878,7 +8878,7 @@
       "images": []
     },
     "locally-uncensored-review": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -10341,7 +10341,7 @@
       "images": []
     },
     "unsloth-review": {
-      "dateModified": "2026-09-13",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-13",
       "hasSections": true,
@@ -10377,7 +10377,7 @@
       "images": []
     },
     "llama-factory-review": {
-      "dateModified": "2026-09-14",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-14",
       "hasSections": true,
@@ -10755,7 +10755,7 @@
       "images": []
     },
     "tokforge-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-03",
       "hasSections": true,
@@ -10845,7 +10845,7 @@
       "images": []
     },
     "secret-ai-review": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
       "hasSections": true,
@@ -11115,7 +11115,7 @@
       "images": []
     },
     "memoryai-review": {
-      "dateModified": "2026-10-20",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
       "hasSections": true,
@@ -11133,7 +11133,7 @@
       "images": []
     },
     "llamatik-review": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
       "hasSections": true,
@@ -11168,10 +11168,64 @@
       ],
       "images": []
     },
+    "surfsense-review": {
+      "dateModified": "2026-10-21",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-21",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "strata-review": {
+      "dateModified": "2026-10-23",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-23",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "caelum-review": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-21",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "obscurify-review": {
+      "dateModified": "2026-10-23",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-23",
       "hasSections": true,
       "langs": [
         "en",
@@ -14884,7 +14938,7 @@
       "images": []
     },
     "isBalconySolarLegalVirginia": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -14902,7 +14956,7 @@
       "images": []
     },
     "isBalconySolarLegalMaryland": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -14920,7 +14974,7 @@
       "images": []
     },
     "isBalconySolarLegalColorado": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -14938,7 +14992,7 @@
       "images": []
     },
     "isBalconySolarLegalNewHampshire": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -14956,7 +15010,7 @@
       "images": []
     },
     "isBalconySolarLegalVermont": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15046,7 +15100,7 @@
       "images": []
     },
     "localAiTrend2027CloudSubsidyCollapse": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15064,7 +15118,7 @@
       "images": []
     },
     "localAiTrend2027AiPcNpuNormalization": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15082,7 +15136,7 @@
       "images": []
     },
     "localAiTrend2027SmallLanguageModels": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15100,7 +15154,7 @@
       "images": []
     },
     "localAiTrend2027PrivateRag": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15118,7 +15172,7 @@
       "images": []
     },
     "localAiTrend2027FrontierDesktopAi": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15136,7 +15190,7 @@
       "images": []
     },
     "localAiTrend2027HybridLocalCloudRouting": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15154,7 +15208,7 @@
       "images": []
     },
     "localAiTrend2027AiNasHomeServer": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15172,7 +15226,7 @@
       "images": []
     },
     "localAiTrend2027LocalAgenticAi": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15190,7 +15244,7 @@
       "images": []
     },
     "localAiTrend2027DataSovereigntyCompliance": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15208,7 +15262,7 @@
       "images": []
     },
     "localAiTrend2027NoCodeFineTuning": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16540,7 +16594,7 @@
       "images": []
     },
     "balcony-solar-legal-us-states": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -16792,7 +16846,7 @@
       "images": []
     },
     "how-balcony-solar-became-legal-in-the-us": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16810,7 +16864,7 @@
       "images": []
     },
     "balcony-solar-battery-storage-standard-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -16828,7 +16882,7 @@
       "images": []
     },
     "eu-800w-balcony-solar-standard-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -16846,7 +16900,7 @@
       "images": []
     },
     "balcony-solar-housing-associations-b2b-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -16864,7 +16918,7 @@
       "images": []
     },
     "net-metering-rollback-balcony-solar-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -16882,7 +16936,7 @@
       "images": []
     },
     "balcony-solar-japan-status-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -16954,7 +17008,7 @@
       "images": []
     },
     "balcony-solar-greece-status-2027": {
-      "dateModified": "2026-07-19",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -16972,7 +17026,7 @@
       "images": []
     },
     "balcony-solar-industry-overview": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -16990,7 +17044,7 @@
       "images": [
         {
           "url": "/images/balcony-solar-industry-overview-snapshot-en.svg",
-          "title": "Germany scaled from roughly 40,000 registered balcony-solar systems in 2017 to an estimated 4 million installations by 2025 — the market’s clearest verified growth signal."
+          "title": "Germany passed 500,000 registered balcony-solar systems in June 2024 and reached an estimated 1.03 million by June 2025 (heise estimate) — the market’s clearest growth signal."
         },
         {
           "url": "/images/balcony-solar-industry-overview-timeline-en.svg",
@@ -17015,7 +17069,7 @@
       ]
     },
     "balcony-solar-global-market-overview": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -17041,7 +17095,7 @@
         },
         {
           "url": "/images/balcony-solar-global-market-overview-germany-detail-en.svg",
-          "title": "Bundesnetzagentur MaStR data — roughly 430,000 new registrations added in 2025 alone."
+          "title": "Marktstammdatenregister data — an estimated 1.03 million systems by June 2025 (heise estimate)."
         },
         {
           "url": "/images/balcony-solar-global-market-overview-us-states-en.svg",
@@ -17807,7 +17861,7 @@
       ]
     },
     "jackery-balcony-solar": {
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-08-30",
       "hasSections": true,
@@ -17850,7 +17904,7 @@
       ]
     },
     "bluetti-balcony-solar": {
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-08-30",
       "hasSections": true,

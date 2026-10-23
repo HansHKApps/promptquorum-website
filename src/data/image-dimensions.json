@@ -14294,6 +14294,21 @@
     "width": 1200,
     "height": 675
   },
+  "/images/caelum-download-progress.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
+  },
+  "/images/caelum-home-screen.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
+  },
+  "/images/caelum-parcel-slip-description.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
+  },
   "/images/caelum-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -14338,6 +14353,16 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/caelum-rwanda-assassination-claim.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
+  },
+  "/images/caelum-web-search-running.webp": {
+    "encodingFormat": "image/webp",
+    "width": 582,
+    "height": 1280
   },
   "/images/camel-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -34044,6 +34069,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/ltx-desktop-launch-splash-screen-loading-bar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 860
+  },
+  "/images/ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp": {
+    "encodingFormat": "image/webp",
+    "width": 884,
+    "height": 508
+  },
   "/images/m4-max-vs-m4-pro-local-llm-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37080,6 +37115,51 @@
     "height": 675
   },
   "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/obscurify-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -46944,6 +47024,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/strata-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/strata-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/strix-halo-ollama-vulkan-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -47120,6 +47245,51 @@
     "height": 675
   },
   "/images/superagi-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/surfsense-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
