@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   worksWith: null,
   engine: 'builtin',
   license: 'Closed source',
-  price: 'freemium',
+  price: 'free', // App Store listing: Free, no in-app purchases listed (read 2026-10-23)
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per www.locallyai.app: "Available for recent iPhone, iPad, and Mac models," "optimized specifically for Apple Silicon chips" — no numeric RAM figure or explicit GPU requirement published; Apple Silicon devices have no discrete VRAM, so cpuOnly is genuinely unclear from the source, checked 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
