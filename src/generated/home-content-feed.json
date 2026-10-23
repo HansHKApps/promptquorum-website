@@ -14258,81 +14258,81 @@
   {
     "lang": "en",
     "title": "Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide",
-    "excerpt": "The fastest local AI model without a GPU: Qwen3 1.7B at 25-40 tok/s in Ollama. Tested lightweight open-source LLMs for 4-16 GB RAM, CPU-only and Intel iGPU.",
+    "excerpt": "Fastest local AI model with no GPU: Qwen3 1.7B at an estimated 25-40 tok/s in Ollama. Picks for 4-16 GB RAM, CPU-only or Intel iGPU, plus RAG on 2 GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Schnellste lokale LLMs für Low-End-PCs 2026: CPU-only-Guide",
-    "excerpt": "Lokale LLMs auf alter Hardware betreiben — 8 GB RAM, keine GPU, Intel-iGPU. Gemessene Geschwindigkeiten für Qwen3, Phi-4-mini auf CPU-only-Systemen.",
+    "excerpt": "Schnellstes lokales LLM ohne GPU: Qwen3 1.7B mit geschätzt 25–40 Tok/s in Ollama. Modelle für 4–16 GB RAM, nur CPU oder Intel-iGPU, plus RAG mit 2 GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/de/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "LLMs locaux les plus rapides pour PC bas de gamme 2026 : guide CPU seul",
-    "excerpt": "Faites tourner des LLM locaux sur du matériel ancien — 8 Go de RAM, sans GPU, iGPU Intel. Vitesses réelles de Qwen3 et Phi-4-mini en CPU seul, par niveau.",
+    "excerpt": "LLM local le plus rapide sans GPU : Qwen3 1.7B à 25-40 tok/s estimés sous Ollama. Choix pour 4-16 Go de RAM, CPU seul ou iGPU Intel, et RAG sur 2 Go.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/fr/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "低スペックPC向け最速ローカルLLM 2026：CPU専用ガイド",
-    "excerpt": "古いハードウェアでローカルLLMを実行 — RAM 8GB、GPU不要、Intel iGPU。QwenやPhi-4-miniのCPU専用実測速度。ハードウェア階層別の実際のトークン/秒。",
+    "excerpt": "GPUなしで最速のローカルLLMはQwen3 1.7B（推定25〜40トークン/秒）。RAM 4〜16 GBの低スペックPC向けCPU専用おすすめと、RAM 2 GBで動くRAGを解説。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/ja/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "低配电脑最快本地LLM 2026：纯CPU指南",
-    "excerpt": "在旧硬件上运行本地LLM——8GB内存、无需GPU、Intel核显。Qwen3、Phi-4-mini在纯CPU上的实测速度。按硬件层级列出的真实tok/s。",
+    "excerpt": "低配电脑无GPU最快的本地LLM：Qwen3 1.7B在Ollama上估算25-40 tok/s。适合4-16GB内存、纯CPU或Intel核显，另含2GB内存本地RAG方案。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/zh/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "LLMs Locales más Rápidos para PCs de Gama Baja 2026: Guía Solo CPU",
-    "excerpt": "Ejecuta LLMs locales en hardware antiguo — 8 GB RAM, sin GPU, iGPU Intel. Velocidades reales de Qwen3 y Phi-4-mini en solo CPU. Tok/s reales por nivel.",
+    "excerpt": "El LLM local más rápido sin GPU: Qwen3 1.7B a 25-40 tok/s estimados en Ollama. Modelos para 4-16 GB de RAM, solo CPU o iGPU Intel, y RAG con 2 GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/es/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "LLMs Locais mais Rápidos para PCs de Baixo Custo 2026: Guia Somente CPU",
-    "excerpt": "Rode LLMs locais em hardware antigo — 8 GB de RAM, sem GPU, iGPU Intel. Velocidades reais de Qwen3 e Phi-4-mini somente CPU. Tok/s reais por nível.",
+    "excerpt": "LLM local rápido sem GPU: Qwen3 1.7B a cerca de 25–40 tok/s (estimado) no Ollama. Opções para 4–16 GB de RAM, só CPU ou iGPU Intel, e RAG com 2 GB.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/pt/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "أسرع نماذج LLM المحلية لأجهزة الكمبيوتر منخفضة المواصفات 2026: دليل CPU فقط",
-    "excerpt": "شغّل نماذج LLM المحلية على عتاد قديم — 8 جيجابايت رام، دون GPU، iGPU من Intel. سرعات حقيقية لـ Qwen3 وPhi-4-mini على CPU فقط. أرقام رمز/ث حقيقية حسب المستوى.",
+    "excerpt": "أسرع LLM محلي بدون GPU: Qwen3 1.7B بسرعة تقديرية 25–40 tok/s في Ollama. خيارات لذاكرة 4–16 جيجابايت (CPU فقط أو iGPU من Intel) وRAG على 2 جيجابايت.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/ar/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "2026년 저사양 PC를 위한 가장 빠른 로컬 LLM: CPU 전용 가이드",
-    "excerpt": "오래된 하드웨어에서 로컬 LLM 실행 — RAM 8GB, GPU 불필요, Intel iGPU. Qwen3와 Phi-4-mini의 CPU 전용 실측 속도. 하드웨어 티어별 실제 tok/s.",
+    "excerpt": "저사양 PC용 가장 빠른 로컬 LLM: CPU 전용, GPU 불필요. Qwen3 1.7B 추정 초당 25–40 토큰, RAM 4–16GB 추천 모델과 RAM 2GB 로컬 RAG.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-23",
     "url": "/ko/local-llms/fastest-local-llms-low-end-pcs",
     "cluster": "local-llms"
   },
@@ -35158,7 +35158,7 @@
     "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
     "excerpt": "Private LLM review 2026: $4.99 one-time purchase, iPhone/iPad/Mac only, 140+ models, OmniQuant quantization, no subscription. Pricing, privacy, and how it compares to PocketPal AI.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35167,7 +35167,7 @@
     "title": "Private-LLM-Rezension: KI-Chat auf dem Gerät für iPhone, iPad und Mac",
     "excerpt": "Private-LLM-Rezension 2026: 4,99 $ Einmalkauf, nur iPhone/iPad/Mac, 140+ Modelle, OmniQuant-Quantisierung, kein Abo. Preise, Datenschutz und Vergleich mit PocketPal AI.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/de/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35176,7 +35176,7 @@
     "title": "Private LLM: test de l'IA embarquée pour iPhone, iPad et Mac",
     "excerpt": "Test de Private LLM 2026 : achat unique à 4,99 $, iPhone/iPad/Mac uniquement, 140+ modèles, quantification OmniQuant, sans abonnement. Prix, confidentialité et comparaison avec PocketPal AI.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/fr/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35185,7 +35185,7 @@
     "title": "Private LLMレビュー：iPhone・iPad・Mac向けオンデバイスAIチャット",
     "excerpt": "Private LLMレビュー2026：4.99ドルの買い切り、iPhone/iPad/Mac専用、140以上のモデル、OmniQuant量子化、サブスクなし。価格、プライバシー、PocketPal AIとの比較。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/ja/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35194,7 +35194,7 @@
     "title": "Private LLM评测：iPhone、iPad和Mac的本地设备端AI聊天应用",
     "excerpt": "Private LLM 2026评测：4.99美元一次性购买，仅支持iPhone/iPad/Mac，140多个模型，OmniQuant量化，无订阅。价格、隐私及与PocketPal AI的对比。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/zh/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35203,7 +35203,7 @@
     "title": "Private LLM: Análisis: Chat de IA en el dispositivo para iPhone, iPad y Mac",
     "excerpt": "Análisis de Private LLM 2026: compra única de 4,99 $, solo iPhone/iPad/Mac, 140+ modelos, cuantización OmniQuant, sin suscripción. Precios, privacidad y comparación con PocketPal AI.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/es/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35212,7 +35212,7 @@
     "title": "Private LLM: Análise do chat de IA no dispositivo para iPhone, iPad e Mac",
     "excerpt": "Análise do Private LLM 2026: compra única de US$ 4,99, apenas iPhone/iPad/Mac, 140+ modelos, quantização OmniQuant, sem assinatura. Preços, privacidade e comparação com o PocketPal AI.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/pt/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35221,7 +35221,7 @@
     "title": "مراجعة Private LLM: محادثة ذكاء اصطناعي على الجهاز لأجهزة iPhone وiPad وMac",
     "excerpt": "مراجعة Private LLM 2026: شراء لمرة واحدة بـ 4.99 دولار، حصري لـ iPhone/iPad/Mac، أكثر من 140 نموذجًا، تكميم OmniQuant، بدون اشتراك. السعر والخصوصية والمقارنة مع PocketPal AI.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/ar/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },
@@ -35230,7 +35230,7 @@
     "title": "Private LLM 리뷰: iPhone·iPad·Mac용 온디바이스 AI 챗",
     "excerpt": "Private LLM 2026 리뷰: 4.99달러 일회성 구매, iPhone/iPad/Mac 전용, 140개 이상 모델, OmniQuant 양자화, 구독 없음. 가격, 개인정보 보호, PocketPal AI와의 비교.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-23",
     "url": "/ko/power-local-llm/private-llm-review",
     "cluster": "power-local-llm"
   },

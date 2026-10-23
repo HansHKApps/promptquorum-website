@@ -19,6 +19,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "fastest-local-llms-low-end-pcs",
+        "title": "Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide",
+        "url": "/local-llms/fastest-local-llms-low-end-pcs",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
@@ -70,14 +78,6 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-vision-models-review",
-        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
-        "url": "/power-local-llm/ollama-vision-models-review",
         "dateModified": "2026-10-20",
         "tier": "about"
       }
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 169,
+    "totalCount": 168,
     "capped": true
   },
   "vLLM": {
@@ -928,14 +928,6 @@
         "slug": "llm-quantization-explained",
         "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
         "url": "/local-llms/llm-quantization-explained",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lm-studio-vs-jan-ai",
-        "title": "Jan AI vs LM Studio: Which Is Better for Local LLMs?",
-        "url": "/local-llms/lm-studio-vs-jan-ai",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
@@ -5877,6 +5869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -5922,14 +5922,6 @@
         "url": "/power-local-llm/oscilla-review",
         "dateModified": "2026-10-04",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
     "totalCount": 40,
@@ -5972,7 +5964,7 @@
         "slug": "private-llm-review",
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -6225,6 +6217,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -6245,14 +6245,6 @@
         "title": "Layla Review: On-Device AI Companion App for Android and iOS",
         "url": "/power-local-llm/layla-review",
         "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "private-llm-review",
-        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/private-llm-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -6325,6 +6317,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anyllm-review",
         "title": "AnyLLM Review: BYOK AI Chat Client for Android",
         "url": "/power-local-llm/anyllm-review",
@@ -6361,14 +6361,6 @@
         "title": "LLM Farm Review: Open-Source GGUF App, Off the App Store",
         "url": "/power-local-llm/llm-farm-review",
         "dateModified": "2026-09-06",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "private-llm-review",
-        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/private-llm-review",
-        "dateModified": "2026-09-05",
         "tier": "mentioned"
       }
     ],
@@ -6601,18 +6593,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "tina-review",
-        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
-        "url": "/power-local-llm/tina-review",
-        "dateModified": "2026-10-04",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-10-23",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "private-llm-review",
-        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/private-llm-review",
-        "dateModified": "2026-09-05",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
         "tier": "mentioned"
       }
     ],
@@ -10801,6 +10793,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "secret-ai-review",
         "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
         "url": "/power-local-llm/secret-ai-review",
@@ -10821,22 +10821,6 @@
         "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
         "url": "/power-local-llm/swiftlm-review",
         "dateModified": "2026-10-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-llm-fine-tuning-framework-2026",
-        "title": "Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud",
-        "url": "/local-llms/best-llm-fine-tuning-framework",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "top-open-source-models-ollama",
-        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
-        "url": "/local-llms/top-open-source-models-ollama",
-        "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
     ],
