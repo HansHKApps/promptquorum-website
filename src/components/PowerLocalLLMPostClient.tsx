@@ -1577,8 +1577,8 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {(!isDirectoryPage || directoryLeadIsSeparate) && article.leadAnswerBlock && (
-          <div className={skinCls.leadBlock}>
-            <p className="text-text-primary font-semibold leading-relaxed">
+          <div className={isDirectoryPage ? 'mb-8 rounded-2xl border border-hub-azure-edge bg-hub-azure-tint px-5 py-4' : skinCls.leadBlock}>
+            <p className={isDirectoryPage ? 'text-[15px] text-text-primary leading-relaxed' : 'text-text-primary font-semibold leading-relaxed'}>
               {renderInlineLinks(article.leadAnswerBlock, lang)}
             </p>
           </div>

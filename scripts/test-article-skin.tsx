@@ -8,6 +8,7 @@ import React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { PowerLocalLLMPostClient } from '../src/components/PowerLocalLLMPostClient'
 import { ARTICLES } from './_skin-articles'
+import { resolveAll } from '../src/components/local-ai-directory/directory-i18n'
 
 const strip = (h: string) => h.replace(/\sclass="[^"]*"/g, '')
 let failed = 0
@@ -21,6 +22,7 @@ for (const [slug, data] of Object.entries(ARTICLES)) {
         <PowerLocalLLMPostClient
           slug={slug}
           lang={lang as any}
+          ui={resolveAll(lang as any)}
           articleData={{ [lang]: skin ? { ...base, designSkin: skin } : base } as any}
           availableLangs={Object.keys(data)}
         />,

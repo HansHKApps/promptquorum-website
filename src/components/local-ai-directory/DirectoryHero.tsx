@@ -52,7 +52,7 @@ export function DirectoryHero({
           <span className={`inline-block rounded-full border bg-white px-3 py-0.5 text-[13px] font-semibold ${a.solidBorder} ${a.ink}`}>
             {t('heroPill', ui)}
           </span>
-          <h1 className="mb-3 mt-3.5 text-4xl font-bold leading-[1.15] tracking-tight sm:text-[42px]">
+          <h1 className="mb-3 mt-3.5 text-[28px] font-bold leading-[1.18] tracking-tight sm:text-[32px] lg:text-[34px]">
             {renderTitle(title, t('heroHighlight', ui))}
           </h1>
           <p className="mb-5 max-w-[600px] text-lg leading-relaxed text-text-secondary">{lead}</p>
