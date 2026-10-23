@@ -35,6 +35,7 @@
     "test:cluster-noindex": "node scripts/test-cluster-noindex.mjs",
     "check:affiliate-links": "node scripts/check-affiliate-links.mjs",
     "risk:scan": "node scripts/risk-scan.mjs",
+    "seo:gate": "node scripts/check-page-seo-gate.mjs",
     "test:affiliate-clicks": "node scripts/test-affiliate-clicks.mjs",
     "indexnow": "node scripts/indexnow-direct.mjs",
     "freshness": "node scripts/freshness.mjs",
