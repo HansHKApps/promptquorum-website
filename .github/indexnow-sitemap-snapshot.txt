@@ -475,6 +475,7 @@ https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/nanobot-review
 https://www.promptquorum.com/power-local-llm/noema-review
 https://www.promptquorum.com/power-local-llm/nvidia-g-assist-review
+https://www.promptquorum.com/power-local-llm/obscurify-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
 https://www.promptquorum.com/power-local-llm/odysseus-review
 https://www.promptquorum.com/power-local-llm/off-grid-ai-review
@@ -550,6 +551,7 @@ https://www.promptquorum.com/power-local-llm/spiritbox-ultimate-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-forge-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-review
 https://www.promptquorum.com/power-local-llm/stableswarmui-review
+https://www.promptquorum.com/power-local-llm/strata-review
 https://www.promptquorum.com/power-local-llm/styletts-2-review
 https://www.promptquorum.com/power-local-llm/superagi-review
 https://www.promptquorum.com/power-local-llm/surf-review
