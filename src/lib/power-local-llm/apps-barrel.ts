@@ -226,6 +226,7 @@ import { app as app_firecrawl } from './apps/firecrawl'
 import { app as app_blinko } from './apps/blinko'
 import { app as app_surfsense } from './apps/surfsense'
 import { app as app_strata } from './apps/strata'
+import { app as app_mlx_audio } from './apps/mlx-audio'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
@@ -466,6 +467,7 @@ export const localAiApps: ToolRecord[] = [
   app_blinko,
   app_surfsense,
   app_strata,
+  app_mlx_audio,
   app_candle_vllm,
   app_chroma,
   app_claude_code_local,

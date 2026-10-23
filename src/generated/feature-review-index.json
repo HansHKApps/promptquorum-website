@@ -924,6 +924,11 @@
     "urlSlug": "strata-review",
     "url": "/power-local-llm/strata-review"
   },
+  "mlx-audio": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mlx-audio-review",
+    "url": "/power-local-llm/mlx-audio-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
