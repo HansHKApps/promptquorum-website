@@ -4554,31 +4554,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/best-amd-gpus-local-llm-price-performance-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-price-performance-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-price-performance-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-price-performance-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-price-performance-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
   "/images/best-amd-gpus-local-llm-price-performance-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -4624,51 +4599,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/best-amd-gpus-local-llm-price-performance-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-price-performance-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-price-performance-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-price-performance-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
-  },
-  "/images/best-amd-gpus-local-llm-software-support-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-amd-gpus-local-llm-software-support-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 380
-  },
-  "/images/best-amd-gpus-local-llm-software-support-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-amd-gpus-local-llm-software-support-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-amd-gpus-local-llm-software-support-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
   "/images/best-amd-gpus-local-llm-software-support-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -4713,26 +4643,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/best-amd-gpus-local-llm-software-support-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-amd-gpus-local-llm-software-support-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-amd-gpus-local-llm-software-support-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-amd-gpus-local-llm-software-support-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
   },
   "/images/best-amd-mini-pc-amd-vs-apple-de.svg": {
     "encodingFormat": "image/svg+xml",
