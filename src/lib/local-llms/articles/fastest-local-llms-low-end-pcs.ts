@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-en.webp',
-          imageCaption: 'Estimated local LLM speed by hardware tier (CPU-only and iGPU): 4 GB RAM (25–40 tok/s, Qwen3 1.7B), 8 GB RAM CPU (15–25 tok/s, Phi-4-mini), 8 GB + Iris iGPU (12–20 tok/s), 16 GB CPU (8–15 tok/s), 16 GB + iGPU (20–35 tok/s). Estimates, not lab measurements.',
+          imageCaption: 'Estimated speed of fast local LLMs on low-end PCs by hardware tier, from 4 GB CPU-only to 16 GB with iGPU',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Rule:** Use a discrete GPU if you have one. Otherwise run the same prompt with the iGPU on and off (`OLLAMA_VULKAN=0` turns Vulkan GPUs off) and keep whichever is faster.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-en.webp',
-          imageCaption: 'CPU vs GPU speed comparison for local LLMs: CPU-only reaches an estimated 10–25 tok/sec (3B–4B models) and 25–40 tok/sec (1.7B). A discrete GPU (RTX 3060, 8 GB) is typically 5–10× faster than CPU-only inference. Estimates, not lab measurements.',
+          imageCaption: 'Estimated CPU-only vs discrete GPU speed for local LLMs: a GPU is typically 5–10× faster for the same model',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Faster models trade quality for speed — but tuning temperature and top-p recovers much of that quality loss. Lower temperature (0.1–0.3) on fast models produces more consistent output than default settings. See [temperature and top-p explained](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity) for the exact settings.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-en.svg',
-          imageCaption: 'Quantization trade-offs for local LLMs: Q4_K_M is the standard balance of file size and quality. Q2 gives the smallest and fastest file but the largest quality drop. Q8 doubles the file size with little quality gain.',
+          imageCaption: 'Quantization trade-offs for local LLMs: Q4_K_M balances file size and quality, Q2 is smallest and lossiest',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**60+ tok/sec → instant.** Faster than you can read. Ideal for real-time autocomplete and rapid iteration.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-en.svg',
-          imageCaption: 'Speed perception thresholds for local LLMs: below 10 tok/sec feels broken, 15–25 tok/sec is acceptable for Q&A, 30+ tok/sec is smooth for all tasks, 60+ tok/sec enables real-time autocomplete.',
+          imageCaption: 'Speed perception thresholds for local LLMs: under 10 tok/s feels broken, 30+ tok/s feels smooth',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -786,7 +786,7 @@ schema: {
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-es.webp',
-          imageCaption: 'Velocidad estimada de LLM local por nivel de hardware (solo CPU e iGPU): 4 GB RAM (25–40 tok/s, Qwen3 1.7B), 8 GB RAM CPU (15–25 tok/s, Phi-4-mini), 8 GB + iGPU Iris (12–20 tok/s), 16 GB CPU (8–15 tok/s), 16 GB + iGPU (20–35 tok/s). Estimaciones, no mediciones de laboratorio.',
+          imageCaption: 'Velocidad estimada de LLMs locales rápidos en PC de gama baja por nivel de hardware, de 4 GB solo CPU a 16 GB con iGPU',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -798,7 +798,7 @@ schema: {
             '**Regla:** Usa una GPU discreta si la tienes. Si no, ejecuta el mismo prompt con la iGPU activada y desactivada (`OLLAMA_VULKAN=0` desactiva las GPU Vulkan) y quédate con la opción más rápida.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-es.webp',
-          imageCaption: 'Comparativa de velocidad CPU vs GPU para LLMs locales: solo CPU alcanza unos 10–25 tok/s estimados (modelos 3B–4B) y 25–40 tok/s (1.7B). Una GPU discreta (RTX 3060, 8 GB) es normalmente entre 5 y 10 veces más rápida que la inferencia solo en CPU. Estimaciones, no mediciones de laboratorio.',
+          imageCaption: 'Velocidad estimada de LLMs locales: una GPU discreta suele ser 5–10× más rápida que solo CPU con el mismo modelo',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -840,7 +840,7 @@ schema: {
             'Los modelos más rápidos sacrifican calidad por velocidad — pero ajustar temperature y top-p recupera buena parte de esa calidad. Una temperature baja (0.1–0.3) en modelos rápidos produce resultados más consistentes que la configuración predeterminada. Consulta [temperature y top-p explicados](https://www.promptquorum.com/es/prompt-engineering/temperature-and-top-p-control-ai-creativity) para los ajustes exactos.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-es.svg',
-          imageCaption: 'Compromisos de cuantización para LLMs locales: Q4_K_M es el equilibrio estándar entre tamaño de archivo y calidad. Q2 da el archivo más pequeño y rápido, pero la mayor caída de calidad. Q8 duplica el tamaño del archivo con poca ganancia de calidad.',
+          imageCaption: 'Compromisos de cuantización en LLMs locales: Q4_K_M equilibra tamaño y calidad, Q2 es el más pequeño y con más pérdida',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -897,7 +897,7 @@ schema: {
             '**60+ tok/s → instantáneo.** Más rápido que la lectura. Ideal para autocompletado en tiempo real e iteración rápida.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-es.svg',
-          imageCaption: 'Umbrales de percepción de velocidad para LLMs locales: por debajo de 10 tok/s se siente roto, 15–25 tok/s es aceptable para preguntas y respuestas, 30+ tok/s es fluido para todas las tareas, 60+ tok/s habilita el autocompletado en tiempo real.',
+          imageCaption: 'Umbrales de percepción de velocidad en LLMs locales: bajo 10 tok/s se siente roto, desde 30 tok/s resulta fluido',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -1343,7 +1343,7 @@ schema: {
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-ar.webp',
-          imageCaption: 'سرعة LLM المحلي التقديرية حسب مستوى العتاد (CPU فقط وiGPU): 4 جيجابايت رام (25–40 tok/s، Qwen3 1.7B)، 8 جيجابايت رام CPU (15–25 tok/s، Phi-4-mini)، 8 جيجابايت + iGPU Iris (12–20 tok/s)، 16 جيجابايت CPU (8–15 tok/s)، 16 جيجابايت + iGPU (20–35 tok/s). تقديرات، وليست قياسات مخبرية.',
+          imageCaption: 'سرعة تقديرية لنماذج LLM المحلية السريعة على الأجهزة الضعيفة حسب مستوى العتاد، من 4 GB على CPU فقط إلى 16 GB مع iGPU',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -1355,7 +1355,7 @@ schema: {
             '**القاعدة:** استخدم GPU منفصلة إن كانت لديك. وإلا فشغّل الموجّه نفسه مع iGPU وبدونها (`OLLAMA_VULKAN=0` يوقف وحدات Vulkan GPU) واحتفظ بالأسرع.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-ar.webp',
-          imageCaption: 'مقارنة سرعة CPU مقابل GPU لنماذج LLM المحلية: CPU فقط يبلغ تقديرياً 10–25 tok/s (نماذج 3B–4B) و25–40 tok/s (نموذج 1.7B). GPU منفصلة (RTX 3060، 8 GB) أسرع عادةً بـ 5–10 أضعاف من الاستدلال على CPU فقط. تقديرات، وليست قياسات مخبرية.',
+          imageCaption: 'سرعة تقديرية لنماذج LLM المحلية: GPU منفصلة أسرع عادةً بـ 5–10 أضعاف من CPU فقط للنموذج نفسه',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -1397,7 +1397,7 @@ schema: {
             'تضحّي النماذج الأسرع بالجودة مقابل السرعة — لكن ضبط temperature وtop-p يستعيد جزءاً كبيراً من تلك الجودة. ينتج temperature منخفض (0.1–0.3) في النماذج السريعة نتائج أكثر اتساقاً من الإعداد الافتراضي. راجع [شرح temperature وtop-p](https://www.promptquorum.com/ar/prompt-engineering/temperature-and-top-p-control-ai-creativity) للإعدادات الدقيقة.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-ar.svg',
-          imageCaption: 'مفاضلات التكميم لنماذج LLM المحلية: Q4_K_M هو التوازن القياسي بين حجم الملف والجودة. Q2 يعطي أصغر ملف وأسرعه لكن بأكبر هبوط في الجودة. Q8 يضاعف حجم الملف بمكسب ضئيل في الجودة.',
+          imageCaption: 'مفاضلات التكميم في نماذج LLM المحلية: Q4_K_M يوازن بين الحجم والجودة، وQ2 الأصغر والأكثر فقداً للجودة',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -1454,7 +1454,7 @@ schema: {
             '**60+ tok/s ← فوري.** أسرع من القراءة. مثالي للإكمال التلقائي في الوقت الفعلي والتكرار السريع.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-ar.svg',
-          imageCaption: 'عتبات إدراك السرعة لنماذج LLM المحلية: دون 10 tok/s يبدو معطّلاً، 15–25 tok/s مقبول للأسئلة والأجوبة، 30+ tok/s سلس لجميع المهام، 60+ tok/s يتيح الإكمال التلقائي في الوقت الفعلي.',
+          imageCaption: 'عتبات إدراك السرعة في نماذج LLM المحلية: دون 10 tok/s يبدو معطّلاً، و30+ tok/s يبدو سلساً',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -1903,7 +1903,7 @@ schema: {
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-pt.webp',
-          imageCaption: 'Velocidade estimada de LLM local por nível de hardware (somente CPU e iGPU): 4 GB de RAM (25–40 tok/s, Qwen3 1.7B), 8 GB de RAM CPU (15–25 tok/s, Phi-4-mini), 8 GB + iGPU Iris (12–20 tok/s), 16 GB CPU (8–15 tok/s), 16 GB + iGPU (20–35 tok/s). Estimativas, não medições de laboratório.',
+          imageCaption: 'Velocidade estimada de LLMs locais rápidos em PCs modestos por nível de hardware, de 4 GB só CPU a 16 GB com iGPU',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -1915,7 +1915,7 @@ schema: {
             '**Regra:** use uma GPU dedicada se você tiver uma. Caso contrário, rode o mesmo prompt com a iGPU ligada e desligada (`OLLAMA_VULKAN=0` desativa as GPUs Vulkan) e fique com a opção mais rápida.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-pt.webp',
-          imageCaption: 'Comparação de velocidade CPU vs GPU para LLMs locais: somente CPU alcança cerca de 10–25 tok/s (modelos 3B–4B) e 25–40 tok/s (1.7B), valores estimados. Uma GPU dedicada (RTX 3060, 8 GB) é normalmente 5–10× mais rápida que a inferência somente CPU. Estimativas, não medições de laboratório.',
+          imageCaption: 'Velocidade estimada de LLMs locais: uma GPU dedicada costuma ser 5–10× mais rápida que só CPU com o mesmo modelo',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -1957,7 +1957,7 @@ schema: {
             'Modelos mais rápidos trocam qualidade por velocidade — mas ajustar temperature e top-p recupera boa parte dessa qualidade. Uma temperature baixa (0.1–0.3) em modelos rápidos produz saídas mais consistentes que a configuração padrão. Veja [temperature e top-p explicados](https://www.promptquorum.com/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity) para os ajustes exatos.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-pt.svg',
-          imageCaption: 'Trade-offs de quantização para LLMs locais: Q4_K_M é o equilíbrio padrão entre tamanho do arquivo e qualidade. Q2 dá o menor e mais rápido arquivo, mas a maior queda de qualidade. Q8 dobra o tamanho do arquivo com pouco ganho de qualidade.',
+          imageCaption: 'Trade-offs de quantização em LLMs locais: Q4_K_M equilibra tamanho e qualidade, Q2 é o menor e o de maior perda',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -2014,7 +2014,7 @@ schema: {
             '**60+ tok/s → instantâneo.** Mais rápido do que você consegue ler. Ideal para autocompletar em tempo real e iteração rápida.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-pt.svg',
-          imageCaption: 'Limiares de percepção de velocidade para LLMs locais: abaixo de 10 tok/s parece quebrado, 15–25 tok/s é aceitável para perguntas e respostas, 30+ tok/s é fluido para todas as tarefas, 60+ tok/s permite autocompletar em tempo real.',
+          imageCaption: 'Limiares de percepção de velocidade em LLMs locais: abaixo de 10 tok/s parece quebrado, 30+ tok/s parece fluido',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -2460,7 +2460,7 @@ schema: {
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-de.webp',
-          imageCaption: 'Geschätzte Geschwindigkeit lokaler LLMs nach Hardware-Stufe (CPU-only und iGPU): 4 GB RAM (25–40 Tok/s, Qwen3 1.7B), 8 GB RAM CPU (15–25 Tok/s, Phi-4-mini), 8 GB + iGPU Iris (12–20 Tok/s), 16 GB CPU (8–15 Tok/s), 16 GB + iGPU (20–35 Tok/s). Schätzungen, keine Labormessungen.',
+          imageCaption: 'Geschätzte Geschwindigkeit schneller lokaler LLMs auf Low-End-PCs nach Hardware-Stufe, von 4 GB CPU bis 16 GB mit iGPU',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -2472,7 +2472,7 @@ schema: {
             '**Regel:** Nutzen Sie eine dedizierte GPU, wenn Sie eine haben. Andernfalls führen Sie denselben Prompt mit und ohne iGPU aus (`OLLAMA_VULKAN=0` schaltet Vulkan-GPUs ab) und behalten Sie die schnellere Variante.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-de.webp',
-          imageCaption: 'CPU- vs. GPU-Geschwindigkeitsvergleich für lokale LLMs: CPU-only erreicht geschätzt 10–25 Tok/Sek (3B–4B-Modelle) und 25–40 Tok/Sek (1.7B). Eine dedizierte GPU (RTX 3060, 8 GB) ist typischerweise 5–10× schneller als reine CPU-Inferenz. Schätzungen, keine Labormessungen.',
+          imageCaption: 'Geschätzte Geschwindigkeit lokaler LLMs: Eine dedizierte GPU ist typischerweise 5–10× schneller als reine CPU-Inferenz',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -2514,7 +2514,7 @@ schema: {
             'Schnellere Modelle opfern Qualität für Geschwindigkeit — aber durch Anpassen von Temperature und top-p lässt sich viel dieser Qualität zurückgewinnen. Niedrigere Temperature (0,1–0,3) bei schnellen Modellen erzeugt konsistentere Ausgabe als Standardeinstellungen. Siehe [Temperature und top-p erklärt](https://www.promptquorum.com/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) für die genauen Einstellungen.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-de.svg',
-          imageCaption: 'Quantisierungs-Trade-offs für lokale LLMs: Q4_K_M ist der Standard-Kompromiss aus Dateigröße und Qualität. Q2 liefert die kleinste und schnellste Datei, aber den größten Qualitätsverlust. Q8 verdoppelt die Dateigröße bei kaum besserer Qualität.',
+          imageCaption: 'Quantisierung bei lokalen LLMs: Q4_K_M balanciert Dateigröße und Qualität, Q2 ist am kleinsten und verlustreichsten',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -2571,7 +2571,7 @@ schema: {
             '**60+ Tok/s → sofort.** Schneller als man lesen kann. Ideal für Echtzeit-Autovervollständigung und schnelle Iteration.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-de.svg',
-          imageCaption: 'Geschwindigkeitswahrnehmungs-Schwellenwerte für lokale LLMs: unter 10 Tok/s fühlt sich kaputt an, 15–25 Tok/s ist akzeptabel für Q&A, 30+ Tok/s ist flüssig für alle Aufgaben, 60+ Tok/s ermöglicht Echtzeit-Autovervollständigung.',
+          imageCaption: 'Schwellenwerte der Geschwindigkeitswahrnehmung bei lokalen LLMs: unter 10 Tok/s wirkt kaputt, ab 30 Tok/s flüssig',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -3035,7 +3035,7 @@ schema: {
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-fr.webp',
-          imageCaption: 'Vitesse estimée des LLM locaux par niveau matériel (CPU seul et iGPU) : 4 Go RAM (25–40 tok/s, Qwen3 1.7B), 8 Go RAM CPU (15–25 tok/s, Phi-4-mini), 8 Go + iGPU Iris (12–20 tok/s), 16 Go CPU (8–15 tok/s), 16 Go + iGPU (20–35 tok/s). Estimations, pas des mesures de laboratoire.',
+          imageCaption: 'Vitesse estimée des LLM locaux rapides sur PC d\'entrée de gamme par niveau matériel, de 4 Go CPU seul à 16 Go avec iGPU',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -3047,7 +3047,7 @@ schema: {
             '**Règle :** Utilisez un GPU dédié si vous en avez un. Sinon, lancez le même prompt avec l\'iGPU activé puis désactivé (`OLLAMA_VULKAN=0` désactive les GPU Vulkan) et gardez le réglage le plus rapide.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-fr.webp',
-          imageCaption: 'Comparaison de vitesse CPU vs GPU pour les LLM locaux : le CPU seul atteint environ 10–25 tok/sec estimés (modèles 3B–4B) et 25–40 tok/sec (1.7B). Un GPU dédié (RTX 3060, 8 Go) est généralement 5 à 10× plus rapide que l\'inférence CPU seul. Estimations, pas des mesures de laboratoire.',
+          imageCaption: 'Vitesse estimée des LLM locaux : un GPU dédié est généralement 5 à 10× plus rapide que le CPU seul',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -3089,7 +3089,7 @@ schema: {
             'Les modèles plus rapides sacrifient la qualité pour la vitesse — mais en réglant la température et le top-p, vous pouvez récupérer beaucoup de cette qualité. Une température plus basse (0,1–0,3) sur les modèles rapides produit une sortie plus cohérente que les paramètres par défaut. Consultez [température et top-p expliqués](https://www.promptquorum.com/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) pour les paramètres exacts.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-fr.svg',
-          imageCaption: 'Compromis de quantification pour les LLM locaux : Q4_K_M est l\'équilibre standard entre taille de fichier et qualité. Q2 donne le fichier le plus petit et le plus rapide, mais la plus forte baisse de qualité. Q8 double la taille du fichier pour un faible gain de qualité.',
+          imageCaption: 'Compromis de quantification des LLM locaux : Q4_K_M équilibre taille et qualité, Q2 est le plus petit et le plus dégradé',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -3146,7 +3146,7 @@ schema: {
             '**60+ tok/s → instantané.** Plus rapide que la lecture. Idéal pour l\'autocomplétion en temps réel et l\'itération rapide.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-fr.svg',
-          imageCaption: 'Seuils de perception de vitesse pour les LLM locaux : sous 10 tok/s semble cassé, 15–25 tok/s est acceptable pour les Q&R, 30+ tok/s est fluide pour toutes les tâches, 60+ tok/s permet l\'autocomplétion en temps réel.',
+          imageCaption: 'Seuils de perception de vitesse des LLM locaux : sous 10 tok/s semble cassé, dès 30 tok/s c\'est fluide',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -3592,7 +3592,7 @@ schema: {
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-ja.webp',
-          imageCaption: 'ハードウェア階層別ローカルLLMの推定速度（CPU専用とiGPU）：RAM 4 GB（25〜40トークン/秒、Qwen3 1.7B）、RAM 8 GB CPU（15〜25トークン/秒、Phi-4-mini）、8 GB + iGPU Iris（12〜20トークン/秒）、16 GB CPU（8〜15トークン/秒）、16 GB + iGPU（20〜35トークン/秒）。推定値であり、実験室での測定値ではありません。',
+          imageCaption: '低スペックPC向け高速ローカルLLMの推定速度：ハードウェア階層別、4 GB CPU専用から16 GB＋iGPUまで',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -3604,7 +3604,7 @@ schema: {
             '**ルール：** 専用GPUがあれば使用してください。なければ、同じプロンプトをiGPUありとなしで実行し（`OLLAMA_VULKAN=0`でVulkan GPUをオフにできます）、速いほうを採用します。',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-ja.webp',
-          imageCaption: 'ローカルLLMのCPU vs GPU速度比較：CPU専用は推定10〜25トークン/秒（3B〜4Bモデル）および25〜40トークン/秒（1.7B）に到達。専用GPU（RTX 3060、8 GB）は通常CPU専用推論より5〜10倍高速。推定値であり、実験室での測定値ではありません。',
+          imageCaption: 'ローカルLLMの推定速度：同じモデルなら専用GPUはCPU専用の通常5〜10倍高速',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -3646,7 +3646,7 @@ schema: {
             '高速モデルは品質と引き換えに速度を得ていますが、温度とtop-pを調整することで多くの品質を回復できます。高速モデルに低い温度（0.1～0.3）を設定することで、デフォルト設定より一貫性のある出力が得られます。[温度とtop-pについて](https://www.promptquorum.com/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity)で正確な設定を確認してください。',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-ja.svg',
-          imageCaption: 'ローカルLLMの量子化トレードオフ：Q4_K_Mはファイルサイズと品質のバランスが取れた標準です。Q2は最小かつ最速のファイルですが、品質低下が最大です。Q8はファイルサイズが2倍になり、品質向上はわずかです。',
+          imageCaption: 'ローカルLLMの量子化トレードオフ：Q4_K_Mはサイズと品質のバランス、Q2は最小だが品質低下が最大',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -3703,7 +3703,7 @@ schema: {
             '**60トークン/秒以上 → 瞬時。** 読むより速い。リアルタイムのオートコンプリートや高速なイテレーションに最適。',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-ja.svg',
-          imageCaption: 'ローカルLLMの速度体感の閾値：10トークン/秒未満は壊れているように感じる、15〜25トークン/秒はQ&Aに許容範囲、30トークン/秒以上はすべてのタスクでスムーズ、60トークン/秒以上でリアルタイムのオートコンプリートが可能。',
+          imageCaption: 'ローカルLLMの速度体感の閾値：10トークン/秒未満は壊れた感じ、30トークン/秒以上はスムーズ',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -4149,7 +4149,7 @@ schema: {
           ],
           columns: ['硬件', 'Model', 'Quant', 'Speed', 'Experience'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-zh.webp',
-          imageCaption: '按硬件层级（纯CPU和核显）估算的本地LLM速度：4GB内存（25–40 tok/s，Qwen3 1.7B）、8GB内存CPU（15–25 tok/s，Phi-4-mini）、8GB+核显Iris（12–20 tok/s）、16GB CPU（8–15 tok/s）、16GB+核显（20–35 tok/s）。为估算值，并非实验室实测。',
+          imageCaption: '低配电脑上快速本地LLM的估算速度：按硬件层级，从4GB纯CPU到16GB+核显',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -4161,7 +4161,7 @@ schema: {
             '**规则：** 有独立显卡就用独立显卡。否则，分别开启和关闭核显（`OLLAMA_VULKAN=0`可关闭Vulkan GPU）运行同一提示词，保留更快的那个设置。',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-zh.webp',
-          imageCaption: '本地LLM的CPU与GPU速度对比：纯CPU估算可达10–25 tok/s（3B–4B模型）和25–40 tok/s（1.7B）。独立显卡（RTX 3060，8 GB）通常比纯CPU推理快5–10倍。为估算值，并非实验室实测。',
+          imageCaption: '本地LLM估算速度：同一模型下，独立显卡通常比纯CPU快5–10倍',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -4203,7 +4203,7 @@ schema: {
             '快速模型以牺牲质量来换取速度——但通过调整温度和top-p，您可以恢复大部分质量。在快速模型上使用较低的温度（0.1-0.3）会产生比默认设置更一致的输出。参阅[温度和top-p解析](https://www.promptquorum.com/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity)了解确切设置。',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-zh.svg',
-          imageCaption: '本地LLM的量化权衡：Q4_K_M是文件大小与质量之间的标准平衡。Q2文件最小、最快，但质量下降最大。Q8文件大小翻倍，质量提升很小。',
+          imageCaption: '本地LLM量化权衡：Q4_K_M平衡文件大小与质量，Q2最小但质量损失最大',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -4260,7 +4260,7 @@ schema: {
             '**60+ tok/s → 即时。** 比阅读速度还快。适合实时自动补全和快速迭代。',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-zh.svg',
-          imageCaption: '本地LLM的速度体感阈值：低于10 tok/s感觉卡顿，15–25 tok/s对问答可接受，30+ tok/s所有任务都流畅，60+ tok/s可实现实时自动补全。',
+          imageCaption: '本地LLM速度体感阈值：低于10 tok/s感觉卡顿，30+ tok/s流畅',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
@@ -4706,7 +4706,7 @@ schema: {
           ],
           columns: ['하드웨어', '모델', '양자화', '속도', '경험'],
           image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-ko.webp',
-          imageCaption: '하드웨어 티어별 로컬 LLM 추정 속도 (CPU 전용 및 iGPU): RAM 4 GB (초당 25–40 토큰, Qwen3 1.7B), RAM 8 GB CPU (초당 15–25 토큰, Phi-4-mini), 8 GB + iGPU Iris (초당 12–20 토큰), 16 GB CPU (초당 8–15 토큰), 16 GB + iGPU (초당 20–35 토큰). 추정값이며 실험실 측정값이 아닙니다.',
+          imageCaption: '저사양 PC용 빠른 로컬 LLM의 추정 속도: 하드웨어 티어별, 4 GB CPU 전용부터 16 GB + iGPU까지',
         },
         'gpu-vs-cpu': {
           id: 'gpu-vs-cpu',
@@ -4718,7 +4718,7 @@ schema: {
             '**규칙:** 독립 GPU가 있다면 사용하십시오. 그렇지 않다면 같은 프롬프트를 iGPU를 켠 상태와 끈 상태로 실행해 보고 (`OLLAMA_VULKAN=0`은 Vulkan GPU를 끕니다) 더 빠른 쪽을 유지하십시오.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-ko.webp',
-          imageCaption: '로컬 LLM의 CPU vs GPU 속도 비교: CPU 전용은 추정 초당 10–25 토큰 (3B–4B 모델) 및 추정 초당 25–40 토큰 (1.7B)에 도달합니다. 독립 GPU (RTX 3060, 8 GB)는 CPU 전용 추론보다 일반적으로 5–10배 빠릅니다. 추정값이며 실험실 측정값이 아닙니다.',
+          imageCaption: '로컬 LLM 추정 속도: 같은 모델이라면 독립 GPU가 CPU 전용보다 일반적으로 5–10배 빠릅니다',
         },
         'why-small-models-faster': {
           id: 'why-small-models-faster',
@@ -4760,7 +4760,7 @@ schema: {
             '빠른 모델은 속도를 위해 품질을 희생합니다 — 하지만 temperature와 top-p를 조정하면 품질 손실을 많이 회복할 수 있습니다. 빠른 모델에서 낮은 temperature (0.1–0.3)는 기본 설정보다 더 일관된 출력을 생성합니다. 정확한 설정은 [temperature 및 top-p 설명](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)을 참조하십시오.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-ko.svg',
-          imageCaption: '로컬 LLM의 양자화 트레이드오프: Q4_K_M은 파일 크기와 품질의 표준적인 균형입니다. Q2는 가장 작고 빠른 파일을 제공하지만 품질 저하가 가장 큽니다. Q8은 파일 크기가 두 배가 되는 데 비해 품질 이득은 거의 없습니다.',
+          imageCaption: '로컬 LLM 양자화 트레이드오프: Q4_K_M은 크기와 품질의 균형, Q2는 가장 작지만 품질 저하가 가장 큽니다',
         },
         'cpu-tricks': {
           id: 'cpu-tricks',
@@ -4817,7 +4817,7 @@ schema: {
             '**초당 60 토큰 이상 → 즉각적.** 읽는 것보다 빠릅니다. 실시간 자동 완성 및 빠른 반복에 이상적.',
           ],
           image: '/images/fastest-local-llms-low-end-pcs-speed-perception-ko.svg',
-          imageCaption: '로컬 LLM의 속도 인식 임계값: 초당 10 토큰 미만은 고장난 것처럼 느껴지고, 초당 15–25 토큰은 Q&A에 허용 가능하며, 초당 30 토큰 이상은 모든 작업에 원활하고, 초당 60 토큰 이상은 실시간 자동 완성을 가능하게 합니다.',
+          imageCaption: '로컬 LLM 속도 인식 임계값: 초당 10 토큰 미만은 고장난 듯, 초당 30 토큰 이상은 원활합니다',
         },
         'what-to-avoid': {
           id: 'what-to-avoid',
