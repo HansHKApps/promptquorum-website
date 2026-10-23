@@ -22,7 +22,7 @@ export function FounderReviewsBlock({ lang = 'en' }: { lang?: Language }) {
   }
 
   return (
-    <HomeCard size="md" icon="review" title={t('founderReviewsTitle', lang)}>
+    <HomeCard size="md" tone="rose" icon="review" title={t('founderReviewsTitle', lang)}>
       <ExpandableList
         lang={lang}
         items={reviews.map((r) => ({

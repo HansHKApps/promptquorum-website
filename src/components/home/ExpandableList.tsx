@@ -51,7 +51,7 @@ export function ExpandableList({
           const row = (
             <>
               {fresh && (
-                <span className="mb-1 inline-block rounded-full bg-primary px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-white">
+                <span className="mb-1 inline-block rounded-full bg-hub-rose px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-white">
                   {item.freshText}
                 </span>
               )}
@@ -65,7 +65,7 @@ export function ExpandableList({
               key={item.key}
               className={
                 fresh
-                  ? 'rounded-md border-l-4 border-primary bg-primary/10 py-2 pl-3 pr-2'
+                  ? 'rounded-md border-l-4 border-hub-rose bg-hub-rose-tint py-2 pl-3 pr-2'
                   : 'border-b border-border/60 pb-2 last:border-0'
               }
             >

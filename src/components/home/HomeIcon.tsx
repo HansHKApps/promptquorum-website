@@ -19,7 +19,7 @@ const PATHS: Record<HomeIconName, string> = {
   mcp: 'M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M7 7h10v10H7z',
 }
 
-export function HomeIcon({ name, size = 18 }: { name: HomeIconName; size?: number }) {
+export function HomeIcon({ name, size = 18, className = 'text-primary' }: { name: HomeIconName; size?: number; className?: string }) {
   return (
     <svg
       width={size}
@@ -31,7 +31,7 @@ export function HomeIcon({ name, size = 18 }: { name: HomeIconName; size?: numbe
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className="shrink-0 text-primary"
+      className={`shrink-0 ${className}`}
     >
       <path d={PATHS[name]} />
     </svg>

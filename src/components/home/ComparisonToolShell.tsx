@@ -57,8 +57,8 @@ export function ComparisonToolShell({ groups, lang = 'en' }: { groups: CategoryC
 
   return (
     <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full`}>
-      <h2 className="text-xl font-bold text-text-primary mb-1 flex items-center gap-2">
-        <HomeIcon name="compare" size={20} />
+      <h2 className="text-[22px] font-bold tracking-tight text-text-primary mb-1 flex items-center gap-2">
+        <HomeIcon name="compare" size={20} className="text-hub-violet" />
         {t('compareHeading', lang)}
       </h2>
       <p className="text-sm text-text-secondary mb-4">{t('compareSubheading', lang)}</p>

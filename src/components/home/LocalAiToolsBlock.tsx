@@ -16,38 +16,38 @@ function localizedPath(lang: Language, path: string): string {
 export function LocalAiToolsBlock({ lang }: { lang: Language }) {
   return (
     <section className="mb-8">
-      <h2 className="text-lg font-bold text-text-primary mb-1">{tTools('toolsSectionHeading', lang)}</h2>
+      <h2 className="text-[26px] font-bold tracking-tight text-text-primary mb-1">{tTools('toolsSectionHeading', lang)}</h2>
       <p className="text-sm text-text-secondary mb-4">{tTools('toolsSectionSub', lang)}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <HomeCard
           size="md"
-          variant="action"
+          tone="azure"
           icon="stats"
           href={localizedPath(lang, '/local-llms/vram-calculator-local-llm')}
           title={tTools('vramCalcCardTitle', lang)}
           description={tTools('vramCalcCardDesc', lang)}
         >
-          <p className="text-sm text-primary font-medium mt-3">{tTools('vramCalcCardCta', lang)} →</p>
+          <p className="text-sm text-hub-violet-ink font-bold mt-3">{tTools('vramCalcCardCta', lang)} →</p>
         </HomeCard>
         <HomeCard
           size="md"
-          variant="action"
+          tone="violet"
           icon="search"
           href={localizedPath(lang, '/tools/what-can-i-run')}
           title={tTools('whatCanIRunCardTitle', lang)}
           description={tTools('whatCanIRunCardDesc', lang)}
         >
-          <p className="text-sm text-primary font-medium mt-3">{tTools('whatCanIRunCardCta', lang)} →</p>
+          <p className="text-sm text-hub-violet-ink font-bold mt-3">{tTools('whatCanIRunCardCta', lang)} →</p>
         </HomeCard>
         <HomeCard
           size="md"
-          variant="action"
+          tone="rose"
           icon="verified"
           href={localizedPath(lang, '/tools/can-i-run-this')}
           title={tTools('canIRunThisCardTitle', lang)}
           description={tTools('canIRunThisCardDesc', lang)}
         >
-          <p className="text-sm text-primary font-medium mt-3">{tTools('canIRunThisCardCta', lang)} →</p>
+          <p className="text-sm text-hub-violet-ink font-bold mt-3">{tTools('canIRunThisCardCta', lang)} →</p>
         </HomeCard>
       </div>
     </section>
