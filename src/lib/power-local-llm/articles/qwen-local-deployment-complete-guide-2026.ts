@@ -9,6 +9,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -579,6 +580,7 @@ docker run --gpus all \\
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -743,6 +745,7 @@ docker run --gpus all \\
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -878,6 +881,7 @@ docker run --gpus all \\
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -1018,6 +1022,7 @@ docker run --gpus all \\
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -1180,6 +1185,7 @@ docker run --gpus all \\
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -1741,6 +1747,7 @@ docker run --gpus all \\
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -2303,6 +2310,7 @@ docker run --gpus all \\
   },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',
@@ -2702,6 +2710,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
     dateModified: '2026-10-19',

@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Download & Install Ollama on macOS, Windows & Linux',
@@ -382,6 +383,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Descargar e instalar Ollama en macOS, Windows y Linux',
@@ -770,6 +772,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'تنزيل وتثبيت ⁨Ollama⁩ على ⁨macOS⁩ و⁨Windows⁩ و⁨Linux⁩',
@@ -1140,6 +1143,7 @@ schema: {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Baixar e instalar o Ollama no macOS, Windows e Linux',
@@ -1542,6 +1546,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Ollama herunterladen und installieren: macOS, Windows, Linux',
       seoTitle: 'Ollama herunterladen und installieren: macOS, Windows, Linux',
@@ -1889,6 +1894,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Télécharger et installer Ollama sur macOS, Windows et Linux',
       seoTitle: 'Télécharger et installer Ollama sur macOS, Windows et Linux',
@@ -2318,6 +2324,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'はじめに',
       title: 'Ollama のダウンロードとインストール：macOS・Windows・Linux',
       seoTitle: 'Ollama のダウンロードとインストール：macOS・Windows・Linux',
@@ -2665,6 +2672,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '入门',
       title: '下载并安装 Ollama：macOS、Windows 和 Linux 指南',
       seoTitle: '下载并安装 Ollama：macOS、Windows 和 Linux 指南',
@@ -3012,6 +3020,7 @@ schema: {
       },
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'annual',
       theme: '시작하기',
       title: 'Ollama 다운로드 및 설치: macOS, Windows, Linux',

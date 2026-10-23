@@ -7,6 +7,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -758,6 +759,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -1515,6 +1517,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -2264,6 +2267,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -3015,6 +3019,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
   },
 
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -3762,6 +3767,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -4524,6 +4530,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
 },
 
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -5286,6 +5293,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
 },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -6047,6 +6055,7 @@ model = WhisperModel("small", device="cuda", compute_type="float32")`,
      },
 },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',

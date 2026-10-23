@@ -3,6 +3,7 @@ import type { Language } from '@/lib/blog/blogContent'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     title: 'Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared',
     dateModified: '2026-10-17',
     seoTitle: 'Best AI Coding Assistant & IDE for Local LLMs 2026',
@@ -449,6 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     title: 'Mejor asistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
     seoTitle: 'Mejor asistente de código IA e IDE para LLM local 2026',
     metaDescription: 'Compara 5 asistentes de código IA con soporte LLM local nativo: Ollama, LM Studio, privacidad, precios. Cursor vs Continue.dev vs Cody.',
@@ -874,6 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     title: 'أفضل مساعد كود بالذكاء الاصطناعي لـ ⁨LLM⁩ المحلي ⁨2026⁩: ⁨Cursor⁩ مقابل ⁨Continue.dev⁩ مقابل ⁨Cody⁩',
     seoTitle: '⁨Continue.dev⁩ مقابل ⁨Cursor⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩',
     metaDescription: '⁨Continue.dev⁩ مجاني مع أفضل تكامل ⁨Ollama. Cursor⁩ (⁨20⁩ دولارًا/شهر) للتدفق الهجين سحابة+محلي. ⁨Cody⁩ لسياق المستودع. مقارنة ⁨5⁩ مساعدي كود.',
@@ -1298,6 +1301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     title: 'Melhor assistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
     dateModified: '2026-10-17',
     seoTitle: 'Melhor assistente de código IA e IDE para LLM local 2026',
@@ -1568,6 +1572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     title: 'Bester KI-Coding-Assistent für Local LLM 2026: Cursor, Continue.dev und Cody im Vergleich',
     seoTitle: 'Beste KI-Coding-Assistenten & IDEs für Local LLM 2026',
     metaDescription: 'Vergleichen Sie 5 KI-Assistenten mit lokalem LLM-Support: Ollama, LM Studio, Datenschutz, Preise. Cursor vs Continue.dev vs Cody.',
@@ -2017,6 +2022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     title: 'Meilleur assistant IA de code pour Local LLM 2026 : Cursor vs Continue.dev vs Cody comparés',
     seoTitle: 'Meilleur assistant IA de code et IDE pour Local LLM 2026',
     metaDescription: 'Comparez 5 assistants IA de code avec support LLM local : Ollama, LM Studio, confidentialité, tarifs. Cursor vs Continue.dev vs Cody.',
@@ -2386,6 +2392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     title: '2026年ローカルLLM最高のAIコーディングアシスタント：Cursor対Continue.dev対Cody比較',
     seoTitle: '2026年ローカルLLM対応の最高のAIコーディングアシスタント5選',
     metaDescription: 'ローカルLLM対応のAIコーディングアシスタント5つを完全比較。Continue.dev、Cursor、Cody、Tabnine、Windsurf。価格、プライバシー、機能で最適なツール選択ガイド。',
@@ -2440,6 +2447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: '5款最佳本地LLM编程助手对比 2026',
     seoTitle: '5款本地LLM编程助手完整对比2026 | 隐私、成本、功能解读',
@@ -2520,6 +2528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     title: '로컬 LLM용 최고의 AI 코딩 어시스턴트 2026: Cursor vs Continue.dev vs Cody 비교',
     seoTitle: '로컬 LLM용 최고의 AI 코딩 어시스턴트 & IDE 2026',
     metaDescription: '네이티브 로컬 LLM 지원 AI 코딩 어시스턴트 5종 비교: Ollama, LM Studio, 가격, 프라이버시. Cursor vs Continue.dev vs Cody.',

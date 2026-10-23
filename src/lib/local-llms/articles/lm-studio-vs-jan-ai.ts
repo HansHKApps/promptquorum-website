@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'Jan AI vs LM Studio: Which Is Better for Local LLMs?',
@@ -221,6 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Werkzeuge und Benutzeroberflächen',
       title: 'Jan AI vs LM Studio: Welches ist besser für lokale LLMs?',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-de.webp',
@@ -441,6 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Outils et interfaces',
       title: 'Jan AI vs LM Studio : Lequel choisir pour les LLM locaux ?',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-fr.webp',
@@ -661,6 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ツールとインターフェース',
       title: 'Jan AI vs LM Studio：ローカルLLMにはどちらが優れているか？',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-ja.webp',
@@ -881,6 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '工具与界面',
       title: 'Jan AI vs LM Studio：哪款本地LLM应用更好用？',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-zh.webp',
@@ -1101,6 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Jan AI vs LM Studio: ¿Cuál es mejor para LLMs locales?',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-es.webp',
@@ -1321,6 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ar: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '⁨Jan AI⁩ مقابل ⁨LM Studio⁩: أيهما أفضل لنماذج ⁨LLM⁩ المحلية؟',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-ar.webp',
@@ -1541,6 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     pt: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Jan AI vs LM Studio: Qual é melhor para LLMs locais?',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-pt.webp',
@@ -1762,6 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ko: {
+      designSkin: 'hub',
       freshness_tier: 'annual',
       theme: '도구 및 인터페이스',
       title: 'Jan AI vs LM Studio: 로컬 LLM에 어느 것이 더 적합합니까?',

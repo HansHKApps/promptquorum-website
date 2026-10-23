@@ -7,6 +7,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -570,6 +571,7 @@ if __name__ == "__main__":
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -943,6 +945,7 @@ if __name__ == "__main__":
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -1282,6 +1285,7 @@ if __name__ == "__main__":
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -1621,6 +1625,7 @@ if __name__ == "__main__":
   },
 
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -1960,6 +1965,7 @@ if __name__ == "__main__":
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -2531,6 +2537,7 @@ if __name__ == "__main__":
 },
 
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -3102,6 +3109,7 @@ if __name__ == "__main__":
 },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',
@@ -3661,6 +3669,7 @@ if __name__ == "__main__":
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
     dateModified: '2026-10-17',

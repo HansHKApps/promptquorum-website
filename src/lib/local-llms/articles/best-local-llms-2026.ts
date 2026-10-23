@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       last_full_refresh: '2026-10-17',
       next_refresh_due: '2026-11-16',
@@ -342,6 +343,7 @@ schema: {
     },
 
     es: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Mejores LLMs locales en 2026: Qwen3.8-27B, Gemma 4 y Phi-4-mini clasificados',
@@ -667,6 +669,7 @@ schema: {
 
 
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية في ⁨2026⁩: تصنيف ⁨Qwen3.8-27B⁩ و⁨Gemma 4⁩ و⁨Phi-4-mini⁩',
@@ -992,6 +995,7 @@ schema: {
     },
 
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Melhores LLMs locais em 2026: Qwen3.8-27B, Gemma 4 e Phi-4-mini classificados',
@@ -1270,6 +1274,7 @@ schema: {
 
 
     de: {
+      designSkin: 'hub',
       theme: 'Beste Modelle',
       title: 'Beste lokale LLMs 2026: Qwen3.8-27B, Gemma 4 und Phi-4-mini im Ranking',
       seoTitle: 'Beste lokale LLMs 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini',
@@ -1351,6 +1356,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'http
 
 
     fr: {
+      designSkin: 'hub',
       theme: 'Meilleurs modèles',
       title: 'Meilleurs LLMs locaux en 2026 : Qwen3.8-27B, Gemma 4 et Phi-4-mini classés',
       seoTitle: 'Meilleurs LLMs locaux 2026 : Qwen3.8-27B, Gemma 4, Phi-4-mini',
@@ -1639,6 +1645,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ベストモデル',
       title: '2026年 最高のローカルLLM：Qwen3.8-27B、Gemma 4、Phi-4-miniをランク付け',
       seoTitle: '2026年 最高のローカルLLM：Qwen3.8-27B、Gemma 4、Phi-4-mini',
@@ -1925,6 +1932,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '最佳模型',
       title: '2026年最佳本地大语言模型：Qwen3.8-27B、Gemma 4与Phi-4-mini排名',
       seoTitle: '2026年最佳本地大语言模型：Qwen3.8-27B、Gemma 4、Phi-4-mini',
@@ -2211,6 +2219,7 @@ schema: {
       },
     },
   ko: {
+    designSkin: 'hub',
   freshness_tier: 'monthly',
   last_full_refresh: '2026-10-17',
   next_refresh_due: '2026-11-16',

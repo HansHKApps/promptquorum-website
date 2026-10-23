@@ -4,6 +4,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     last_full_refresh: '2026-10-19',
@@ -364,6 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     }
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-ko.webp',
     title: '갤럭시 S26 온디바이스 AI 완벽 가이드: Galaxy AI·NPU 작동 원리 (2026)',
@@ -710,6 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     }
   },
   de: {
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-de.webp',
     title: 'Galaxy S26 Lokale KI Leitfaden: Galaxy AI & NPU erklär (2026)',
@@ -1049,6 +1052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     }
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-fr.webp',
     title: 'Guide Galaxy S26 IA Locale: Galaxy AI et NPU Expliqués (2026)',
@@ -1388,6 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     }
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     last_full_refresh: '2026-10-19',
@@ -1588,6 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] }
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     last_full_refresh: '2026-10-19',
@@ -1788,6 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] }
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     last_full_refresh: '2026-10-19',
@@ -1988,6 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] }
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     last_full_refresh: '2026-10-19',
@@ -2188,6 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] }
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     last_full_refresh: '2026-10-19',

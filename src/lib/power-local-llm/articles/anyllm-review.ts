@@ -9,6 +9,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -433,6 +434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -863,6 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -1293,6 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -1717,6 +1721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -2139,6 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -2569,6 +2575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -2999,6 +3006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',
@@ -3423,6 +3431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
     dateModified: '2026-10-17',

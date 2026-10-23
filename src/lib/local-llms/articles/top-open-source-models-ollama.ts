@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-11-17',
       next_refresh_due: '2026-11-17',
@@ -654,6 +655,7 @@ schema: {
       gammaDescription: 'The slide deck below covers: top Ollama models by download count, performance comparison, best models by use case (chat, coding, agentic coding, reasoning, vision), DeepSeek-R1 chain-of-thought reasoning, and exact pull commands. Download the PDF as your Ollama model selection reference card.',
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Ollama Última Versión 2026: v0.40.5 + Mejores Modelos por Caso de Uso',
@@ -1220,6 +1222,7 @@ schema: {
       gammaDescription: 'La presentación a continuación cubre: top 10 modelos Ollama por número de descargas, comparación de rendimiento, mejores modelos por caso de uso (chat, programación, razonamiento, visión), razonamiento chain-of-thought de DeepSeek-R1 y comandos exactos de descarga. Descarga el PDF como tu tarjeta de referencia para selección de modelos Ollama.',
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Ollama Versão Mais Recente 2026: v0.40.5 + Melhores Modelos por Caso de Uso',
@@ -1539,6 +1542,7 @@ schema: {
       gammaDescription: 'A apresentação abaixo cobre: top 10 modelos Ollama por número de downloads, comparação de desempenho, melhores modelos por caso de uso (chat, programação, raciocínio, visão), raciocínio chain-of-thought do DeepSeek-R1 e comandos exatos de download. Baixe o PDF como seu cartão de referência para seleção de modelos Ollama.',
     },
     de: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Ollama Aktuelle Version 2026: v0.40.5 + Beste Modelle nach Anwendungsfall',
       seoTitle: 'Ollama Aktuelle Version 2026: v0.40.5 + 10 beste Modelle',
@@ -2072,6 +2076,7 @@ schema: {
       gammaDescription: 'Die Präsentation behandelt: Top 10 Ollama-Modelle nach Download-Häufigkeit, Leistungsvergleich, beste Modelle nach Anwendungsfall (Chat, Codierung, Reasoning, Vision), DeepSeek-R1 Chain-of-Thought-Reasoning und exakte Pull-Befehle. Laden Sie die PDF als Ihre Ollama-Modellauswahl-Referenzkarte herunter.',
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Ollama Dernière Version 2026 : v0.40.5 + Meilleurs Modèles par Cas d\'Usage',
       seoTitle: 'Ollama Dernière Version 2026 : v0.40.5 + 10 Meilleurs Modèles',
@@ -2602,6 +2607,7 @@ schema: {
       gammaDescription: 'La présentation ci-dessous couvre : top 10 modèles Ollama par nombre de téléchargements, comparaison de performance, meilleurs modèles par cas d\'utilisation (chat, codage, raisonnement, vision), DeepSeek-R1 chain-of-thought reasoning et commandes pull exactes. Téléchargez le PDF comme votre carte de référence de sélection de modèles Ollama.',
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Ollama最新バージョン2026：v0.40.5＋用途別おすすめモデル',
       seoTitle: 'Ollama最新バージョン2026：v0.40.5＋おすすめ10モデル',
@@ -3121,6 +3127,7 @@ schema: {
       gammaDescription: '下記のスライドデッキは以下をカバーしています：ダウンロード数別の Top 10 Ollama モデル、パフォーマンス比較、ユースケース別の最高モデル（チャット、コーディング、推論、ビジョン）、DeepSeek-R1 chain-of-thought 推論、および正確なプルコマンド。Ollama モデル選択リファレンスカードとして PDF をダウンロードしてください。',
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Ollama最新版本2026：v0.40.5＋按用途选择最佳模型',
       seoTitle: 'Ollama最新版本2026：v0.40.5＋10大最佳模型',
@@ -3622,6 +3629,7 @@ schema: {
       gammaDescription: '下面的幻灯片涵盖：按下载次数排名的 Top 10 Ollama 模型、性能对比、按用途分类的最佳模型（聊天、编码、推理、视觉）、DeepSeek-R1 链式思维推理及确切的拉取命令。将 PDF 下载为您的 Ollama 模型选择参考卡。',
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-11-17',
       next_refresh_due: '2026-11-17',
@@ -4018,6 +4026,7 @@ schema: {
       },
     },
   ar: {
+    designSkin: 'hub',
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-11-17',
       next_refresh_due: '2026-11-17',

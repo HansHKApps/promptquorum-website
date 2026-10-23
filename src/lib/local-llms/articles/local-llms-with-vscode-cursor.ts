@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
@@ -263,6 +264,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Lokale LLMs mit VS Code und Cursor: Einrichtung und Best Practices',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-de.webp',
@@ -510,6 +512,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LLM Locaux avec VS Code et Cursor : Configuration et Bonnes Pratiques',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-fr.webp',
@@ -741,6 +744,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'VS CodeとCursorでローカルLLMを使用する：セットアップとベストプラクティス',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ja.webp',
@@ -988,6 +992,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'VS Code和Cursor中的本地LLM：设置和最佳实践',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-zh.webp',
@@ -1220,6 +1225,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LLMs Locales con VS Code y Cursor: Configuración y Mejores Prácticas',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-es.webp',
@@ -1456,6 +1462,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'نماذج ⁨LLM⁩ المحلية مع ⁨VS Code⁩ و⁨Cursor⁩: الإعداد وأفضل الممارسات',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ar.webp',
@@ -1692,6 +1699,7 @@ schema: {
       },
     },
     pt: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LLMs Locais com VS Code e Cursor: Configuração e Boas Práticas',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-pt.webp',
@@ -1928,6 +1936,7 @@ schema: {
       },
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'VS Code와 Cursor에서 로컬 LLM 사용하기: 설정 및 모범 사례',

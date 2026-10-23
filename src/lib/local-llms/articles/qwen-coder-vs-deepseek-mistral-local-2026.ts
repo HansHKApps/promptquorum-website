@@ -5,6 +5,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Best Models',
@@ -297,6 +298,7 @@ DEEPSEEK_MODEL=deepseek-flash
     },
   },
   de: {
+    designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-17',
       theme: 'Best Models',
@@ -512,6 +514,7 @@ DEEPSEEK_MODEL=deepseek-flash
       },
     },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Best Models',
@@ -727,6 +730,7 @@ DEEPSEEK_MODEL=deepseek-flash
     },
   },
   ja: {
+    designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-17',
       theme: 'Best Models',
@@ -942,6 +946,7 @@ DEEPSEEK_MODEL=deepseek-flash
       },
     },
   zh: {
+    designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-17',
       theme: 'Best Models',
@@ -1157,6 +1162,7 @@ DEEPSEEK_MODEL=deepseek-flash
       },
     },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Best Models',
@@ -1372,6 +1378,7 @@ DEEPSEEK_MODEL=deepseek-flash
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Best Models',
@@ -1588,6 +1595,7 @@ DEEPSEEK_MODEL=deepseek-flash
   },
   // VERIFY: seção "Matemática de custo por token" é um modelo financeiro ancorado em USD (API do DeepSeek cobrada em dólar) com eletricidade a € 0,35/kWh como premissa explícita. Os valores de varejo brasileiro (RTX 4090 em R$, eletricidade em R$/kWh) que a versão anterior citava foram removidos por não terem fonte verificável (consulta em out/2026: a ANEEL é citada pela imprensa com R$ 851/MWh e R$ 998/MWh sem tributos, e comparadores listam a RTX 4090 entre cerca de R$ 14 mil e R$ 23 mil); a prosa orienta o leitor a usar a própria tarifa e o preço local. Reinserir números só com fonte primária datada.
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Best Models',
@@ -1817,6 +1825,7 @@ DEEPSEEK_MODEL=deepseek-flash
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     theme: 'Best Models',
