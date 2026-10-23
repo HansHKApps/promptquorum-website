@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Six ways to run LLMs on iPhone in 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat. Cost, privacy and RAM guide per iPhone.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-en.webp',
     twitterDescription:
-      'iPhone local AI in 2026: PocketPal AI (free default), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). All run offline once downloaded.',
+      'iPhone local AI in 2026: PocketPal AI (free default), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). Chat works without WiFi once downloaded.',
     current_models_mentioned: [
       'Phi-4 Mini',
       'Llama 3.2 3B',
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Apps compared:** PocketPal AI, Private LLM, Locally AI (by LM Studio), Google AI Edge Gallery, MLC Chat, Apple Intelligence (system) — plus LLM Farm, currently not on the App Store (README: "temporarily unavailable").',
           '**Last upstream updates (checked 2026-10-23):** PocketPal AI v1.20.1 (19 Oct 2026) · Locally AI v1.66.0 (15 Oct 2026) · Google AI Edge Gallery v1.0.13 (8 Oct 2026) · Private LLM v1.9.16 (14 Sep 2026) · MLC Chat iPhone app v1.6 (27 Sep 2024 — stale) · LLM Farm release 1.4.3 (27 Jan 2025), last code push 30 Jan 2026 — stale.',
-          '**Reference devices for speed figures:** iPhone 16 Pro (A18 Pro, 8 GB RAM) and iPhone 17 Pro (A19 Pro, 12 GB RAM). Speed figures are indicative ranges, not a controlled PromptQuorum benchmark. The iPhone 18 Pro, 18 Pro Max, and iPhone Duo (A20 Pro) have no speed figures here.',
+          '**Reference devices for speed figures:** iPhone 16 Pro (A18 Pro, 8 GB RAM) and iPhone 17 Pro (A19 Pro, 12 GB RAM). Speed figures are rough orientation ranges, not measurements by PromptQuorum. The iPhone 18 Pro, 18 Pro Max, and iPhone Duo (A20 Pro) have no speed figures here.',
           '**Inference engines:** llama.cpp (PocketPal AI, LLM Farm), Apple MLX (Locally AI), MLC LLM with Metal (MLC Chat), Google LiteRT-LM (Google AI Edge Gallery), proprietary on-device runtime (Private LLM, Apple Intelligence).',
           '**Minimum iPhone for 3B+ models:** iPhone 14 Pro (A16, 6 GB RAM) for 1.7B; any 8 GB+ iPhone (15 Pro, 16 series, 16e, 17 series, 18 Pro) for 3B–4B.',
           '**Recommended free app:** PocketPal AI — App Store, open-source, model flexibility.',
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Lokale KI auf dem iPhone 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery und MLC Chat im Vergleich. Kosten, Datenschutz, RAM je iPhone.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.webp',
     twitterDescription:
-      'Lokale KI auf dem iPhone 2026: PocketPal AI (kostenlos), Private LLM ($4.99, Siri + Kurzbefehle), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). Alle laufen offline nach dem Download.',
+      'Lokale KI auf dem iPhone 2026: PocketPal AI (kostenlos), Private LLM ($4.99, Siri + Kurzbefehle), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). Der Chat läuft nach dem Download ohne WLAN.',
     current_models_mentioned: [
       'Phi-4 Mini',
       'Llama 3.2 3B',
@@ -1683,7 +1683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Six façons de faire tourner des LLM sur iPhone en 2026 : PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat. Coût, vie privée et RAM.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-fr.webp',
     twitterDescription:
-      'IA locale sur iPhone en 2026 : PocketPal AI (défaut gratuit), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). Hors ligne après téléchargement.',
+      'IA locale sur iPhone en 2026 : PocketPal AI (défaut gratuit), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). Chat sans WiFi après téléchargement.',
     current_models_mentioned: [
       'Phi-4 Mini',
       'Llama 3.2 3B',
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年在iPhone上运行LLM的六种方式：PocketPal AI、Private LLM、Locally AI、Google AI Edge Gallery、MLC Chat。含费用、隐私对比与内存选型指南。',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-zh.webp',
     twitterDescription:
-      'iPhone本地AI 2026：PocketPal AI（免费首选）、Private LLM（$4.99，Siri + 快捷指令）、Locally AI（LM Studio，MLX）、Google AI Edge Gallery（Gemma 4）。模型下载后均可离线运行。',
+      'iPhone本地AI 2026：PocketPal AI（免费首选）、Private LLM（$4.99，Siri + 快捷指令）、Locally AI（LM Studio，MLX）、Google AI Edge Gallery（Gemma 4）。模型下载后，对话无需WiFi即可使用。',
     current_models_mentioned: [
       'Phi-4 Mini',
       'Llama 3.2 3B',
@@ -2785,7 +2785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Seis formas de ejecutar LLMs en iPhone en 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery y MLC Chat. Coste, privacidad y guía de RAM.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-es.webp',
     twitterDescription:
-      'IA local en iPhone en 2026: PocketPal AI (opción gratuita), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). Todas funcionan sin conexión tras la descarga.',
+      'IA local en iPhone en 2026: PocketPal AI (opción gratuita), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). El chat funciona sin WiFi tras la descarga.',
     current_models_mentioned: [
       'Phi-4 Mini',
       'Llama 3.2 3B',
@@ -3336,7 +3336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026년 iPhone 로컬 LLM 앱 6종: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat 비교.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.webp',
     twitterDescription:
-      '2026년 iPhone 로컬 AI: PocketPal AI (무료 기본 선택), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). 모델 다운로드 후 모두 오프라인 작동.',
+      '2026년 iPhone 로컬 AI: PocketPal AI (무료 기본 선택), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). 모델 다운로드 후 채팅은 WiFi 없이 작동합니다.',
     current_models_mentioned: [
       'Phi-4 Mini',
       'Llama 3.2 3B',
@@ -3892,7 +3892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Seis jeitos de rodar LLMs no iPhone em 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery e MLC Chat. Custo, privacidade e guia de RAM.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-pt.webp',
     twitterDescription:
-      'IA local no iPhone em 2026: PocketPal AI (padrão gratuito), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). Todos funcionam offline depois do download.',
+      'IA local no iPhone em 2026: PocketPal AI (padrão gratuito), Private LLM ($4.99, Siri + Shortcuts), Locally AI (LM Studio, MLX), Google AI Edge Gallery (Gemma 4). O chat funciona sem WiFi depois do download.',
     current_models_mentioned: [
       'Phi-4 Mini',
       'Llama 3.2 3B',
@@ -4542,7 +4542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**التطبيقات المُقارَنة:** PocketPal AI وPrivate LLM وLocally AI (من LM Studio) وGoogle AI Edge Gallery وMLC Chat وApple Intelligence (النظام) — إضافةً إلى LLM Farm، غير المتوفر حالياً على App Store (README: "غير متاح مؤقتاً").',
           '**آخر تحديثات المشاريع (روجعت في 23 أكتوبر 2026):** PocketPal AI v1.20.1 (19 أكتوبر 2026) · Locally AI v1.66.0 (15 أكتوبر 2026) · Google AI Edge Gallery v1.0.13 (8 أكتوبر 2026) · Private LLM v1.9.16 (14 سبتمبر 2026) · تطبيق MLC Chat لـ iPhone v1.6 (27 سبتمبر 2024 — قديم) · LLM Farm الإصدار 1.4.3 (27 يناير 2025)، وآخر دفعة كود 30 يناير 2026 — قديم.',
-          '**أجهزة المرجع لأرقام السرعة:** iPhone 16 Pro (A18 Pro، 8 جيجابايت ذاكرة عشوائية) وiPhone 17 Pro (A19 Pro، 12 جيجابايت). أرقام السرعة نطاقات إرشادية وليست اختباراً مضبوطاً من PromptQuorum. لا توجد هنا أرقام سرعة لأجهزة iPhone 18 Pro وiPhone 18 Pro Max وiPhone Duo (A20 Pro).',
+          '**أجهزة المرجع لأرقام السرعة:** iPhone 16 Pro (A18 Pro، 8 جيجابايت ذاكرة عشوائية) وiPhone 17 Pro (A19 Pro، 12 جيجابايت). أرقام السرعة نطاقات تقريبية للاستئناس وليست قياسات من PromptQuorum. لا توجد هنا أرقام سرعة لأجهزة iPhone 18 Pro وiPhone 18 Pro Max وiPhone Duo (A20 Pro).',
           '**محركات الاستدلال:** llama.cpp (PocketPal AI وLLM Farm)، وApple MLX (Locally AI)، وMLC LLM مع Metal (MLC Chat)، وGoogle LiteRT-LM (Google AI Edge Gallery)، وبيئة تشغيل خاصة على الجهاز (Private LLM وApple Intelligence).',
           '**الحد الأدنى من iPhone لنماذج 3B+:** iPhone 14 Pro (A16، 6 جيجابايت) لنماذج 1.7B؛ أي iPhone بذاكرة 8 جيجابايت فأكثر (15 Pro، سلسلة 16، 16e، سلسلة 17، 18 Pro) لنماذج 3B–4B.',
           '**التطبيق المجاني الموصى به:** PocketPal AI — App Store، مفتوح المصدر، مرونة في اختيار النماذج.',
