@@ -542,6 +542,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'surfsense-review':                         'surfsense-review',
   'strata-review':                            'strata-review',
   'speechbrain-review':                       'speechbrain-review',
+  'libredb-studio-review':                    'libredb-studio-review',
   'caelum-review':                            'caelum-review',
   'obscurify-review':                         'obscurify-review',
   'ecc-review':                               'ecc-review',

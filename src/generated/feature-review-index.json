@@ -934,6 +934,11 @@
     "urlSlug": "speechbrain-review",
     "url": "/power-local-llm/speechbrain-review"
   },
+  "libredb-studio": {
+    "cluster": "power-local-llm",
+    "urlSlug": "libredb-studio-review",
+    "url": "/power-local-llm/libredb-studio-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
