@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama for ios',
     ],
     leadAnswerBlock:
-      '**For most iPhone users in 2026, install PocketPal AI from the App Store and download a small model such as Phi-4 Mini (3.8B Q4_K_M, ~2.7 GB).** It is free to use (optional in-app purchases for premium content), open-source (MIT), and runs on iPhone 15 Pro and newer (8 GB+ RAM) at roughly 10–15 tokens/sec (indicative) on iPhone 16 Pro for everyday chat; on a 6 GB iPhone such as the iPhone 14 Pro, use a 1.7B model such as Qwen3 1.7B instead. For Siri and Shortcuts integration, Private LLM is the paid option ($4.99 one-time, iPhone, iPad, and Mac). Locally AI — developed by the LM Studio team — is the free app built on Apple MLX, with Shortcuts support and access to Apple\'s on-device foundation model. Google AI Edge Gallery is Google\'s free app for its Gemma 4 models, with agent skills and a thinking mode. Newer small models — Gemma 4 E2B/E4B and Qwen3.5 — are also available in these apps (see Models by iPhone Tier). MLC Chat remains the Metal-acceleration reference app, but its iPhone build has not been updated since September 2024. LLM Farm is currently not on the App Store or TestFlight (its README says "temporarily unavailable") and is build-from-source only. Apple Intelligence runs models on-device too but is system-integrated, not a chat app — it complements rather than competes with these apps.',
+      '**For most iPhone users in 2026, install PocketPal AI (free, open-source) and download a small model such as Phi-4 Mini (about 2.7 GB). Private LLM ($4.99) adds Siri and Shortcuts; Locally AI and Google AI Edge Gallery are free alternatives.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best local LLM app for iPhone in 2026?',
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama für ios',
     ],
     leadAnswerBlock:
-      '**Für die meisten iPhone-Nutzer 2026: PocketPal AI aus dem App Store installieren und ein kleines Modell wie Phi-4 Mini (3,8B Q4_K_M, ~2,7 GB) herunterladen.** Die App ist kostenlos nutzbar (optionale In-App-Käufe für Premium-Inhalte), quelloffen (MIT) und läuft auf dem iPhone 15 Pro und neueren Modellen (8 GB+ RAM) mit grob 10–15 Tokens/Sek. (Richtwert) auf dem iPhone 16 Pro für den Alltag; auf einem iPhone mit 6 GB wie dem iPhone 14 Pro verwenden Sie stattdessen ein 1.7B-Modell wie Qwen3 1.7B. Für Siri- und Kurzbefehle-Integration ist Private LLM die kostenpflichtige Option ($4.99 einmalig, iPhone, iPad und Mac). Locally AI – vom LM-Studio-Team entwickelt – ist die kostenlose App auf Basis von Apple MLX, mit Kurzbefehle-Unterstützung und Zugriff auf Apples On-Device-Foundation-Modell. Google AI Edge Gallery ist Googles kostenlose App für die Gemma-4-Modelle, mit Agent Skills und Denkmodus. Neuere kleine Modelle – Gemma 4 E2B/E4B und Qwen3.5 – gibt es ebenfalls in diesen Apps (siehe Modelle nach iPhone-Modell). MLC Chat bleibt die Metal-Referenz-App, doch der iPhone-Build wurde seit September 2024 nicht aktualisiert. LLM Farm ist derzeit weder im App Store noch über TestFlight verfügbar (die README nennt die App „vorübergehend nicht verfügbar") und nur per Quellcode installierbar. Apple Intelligence führt ebenfalls Modelle auf dem Gerät aus, ist aber systemintegriert und keine Chat-App – es ergänzt diese Apps, statt mit ihnen zu konkurrieren.',
+      '**Für die meisten iPhone-Nutzer 2026: PocketPal AI (kostenlos, Open Source) installieren und ein kleines Modell wie Phi-4 Mini (ca. 2,7 GB) herunterladen. Private LLM ($4.99) ergänzt Siri und Kurzbefehle; Locally AI und Google AI Edge Gallery sind kostenlose Alternativen.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist die beste Local-LLM-App für das iPhone 2026?',
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'locally ai pocketpal 比較',
     ],
     leadAnswerBlock:
-      '**2026年の多くのiPhoneユーザーには、App StoreでPocketPal AIをインストールし、Phi-4 Mini（3.8B Q4_K_M、約2.7 GB）のような小型モデルをダウンロードする方法をおすすめします。** 利用は無料（プレミアムコンテンツはアプリ内課金が任意）、オープンソース（MIT）で、iPhone 15 Pro以降（RAM 8 GB以上）で動作します。iPhone 16 Proでは日常のチャットで毎秒約10〜15トークン（目安）です。iPhone 14 Proのような6 GBのiPhoneでは、代わりにQwen3 1.7Bのような1.7Bモデルを使ってください。SiriとShortcutsの統合が必要なら、Private LLM（$4.99の買い切り、iPhone・iPad・Mac対応）が有料の選択肢です。Locally AI（LM Studioチーム開発）はApple MLXを基盤とした無料アプリで、Shortcutsに対応し、Appleのオンデバイスファウンデーションモデルにもアクセスできます。Google AI Edge Galleryは、Googleが提供するGemma 4用の無料アプリで、エージェントスキルと思考モードを備えています。Gemma 4 E2B/E4BやQwen3.5といった新しい小型モデルも、これらのアプリで利用できます（「iPhoneモデル別推奨モデル」を参照）。MLC ChatはMetal加速のリファレンスアプリですが、iPhone版は2024年9月以降更新されていません。LLM Farmは現在App StoreにもTestFlightにもありません（READMEには「一時的に利用不可」と記載）。ソースからのビルドのみ可能です。Apple Intelligenceもオンデバイスでモデルを実行しますが、システム統合型でチャットアプリではないため、これらのアプリと競合せず補完する役割を担います。',
+      '**2026年のほとんどのiPhoneユーザーには、無料のPocketPal AIをインストールし、Phi-4 Miniのような小型モデル（約2.7 GB）をダウンロードする方法をおすすめします。Private LLM（$4.99）はSiriとショートカットに対応し、Locally AIとGoogle AI Edge Galleryは無料の代替です。**',
     quickAnswerTop: {
       ja: {
         question: '2026年のiPhoneで最高のローカルLLMアプリは何ですか？',
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama pour ios',
     ],
     leadAnswerBlock:
-      '**Pour la plupart des utilisateurs iPhone en 2026, installez PocketPal AI depuis l\'App Store et téléchargez un petit modèle comme Phi-4 Mini (3.8B Q4_K_M, ~2.7 Go).** Gratuit (achats intégrés optionnels pour du contenu premium), open source (MIT), compatible avec iPhone 15 Pro et les modèles plus récents (8 Go+ de RAM), il génère environ 10–15 tokens/sec (indicatif) sur iPhone 16 Pro pour le chat quotidien ; sur un iPhone 6 Go comme l\'iPhone 14 Pro, utilisez plutôt un modèle 1.7B tel que Qwen3 1.7B. Pour l\'intégration Siri et Shortcuts, Private LLM est l\'option payante ($4.99 en achat unique, iPhone, iPad et Mac). Locally AI — développé par l\'équipe LM Studio — est l\'application gratuite basée sur Apple MLX, avec support Shortcuts et accès au modèle de fondation on-device d\'Apple. Google AI Edge Gallery est l\'application gratuite de Google pour ses modèles Gemma 4, avec agent skills et mode réflexion. Les petits modèles plus récents — Gemma 4 E2B/E4B et Qwen3.5 — sont aussi disponibles dans ces applications (voir Modèles par génération d\'iPhone). MLC Chat reste l\'application de référence pour Metal, mais sa version iPhone n\'a pas été mise à jour depuis septembre 2024. LLM Farm n\'est actuellement ni sur l\'App Store ni sur TestFlight (son README indique « temporairement indisponible ») et ne s\'installe qu\'en compilant les sources. Apple Intelligence exécute aussi des modèles on-device mais est intégré au système, sans être une application de chat — il complète ces applications plutôt qu\'il ne les concurrence.',
+      '**Pour la plupart des utilisateurs d\'iPhone en 2026 : installez PocketPal AI (gratuit, open source) et téléchargez un petit modèle comme Phi-4 Mini (environ 2.7 Go). Private LLM ($4.99) ajoute Siri et Shortcuts ; Locally AI et Google AI Edge Gallery sont des alternatives gratuites.**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle est la meilleure application LLM locale pour iPhone en 2026 ?',
@@ -2273,7 +2273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ios版ollama',
     ],
     leadAnswerBlock:
-      '**2026年对大多数iPhone用户而言，推荐在App Store安装PocketPal AI，并下载Phi-4 Mini（3.8B Q4_K_M，约2.7 GB）这类小模型。** 它可免费使用（高级内容为可选的应用内购买）、开源（MIT），支持iPhone 15 Pro及更新机型（8 GB以上内存），在iPhone 16 Pro上日常对话约为10–15 tokens/秒（参考值）；在6 GB内存的iPhone（如iPhone 14 Pro）上，请改用Qwen3 1.7B这类1.7B模型。如需Siri和快捷指令集成，Private LLM是付费选项（$4.99买断，覆盖iPhone、iPad和Mac）。Locally AI由LM Studio团队开发，是基于Apple MLX的免费应用，支持快捷指令，并可访问苹果的设备端基础模型。Google AI Edge Gallery是谷歌面向Gemma 4模型的免费应用，带有智能体技能和思考模式。Gemma 4 E2B/E4B和Qwen3.5等较新的小模型也可在这些应用中使用（见“按iPhone档次推荐模型”）。MLC Chat仍是Metal加速的参考应用，但其iPhone版自2024年9月起未再更新。LLM Farm目前不在App Store或TestFlight上（其README称“暂时不可用”），仅支持从源码编译安装。Apple Intelligence同样在设备端运行模型，但属系统集成型，不是对话应用——与上述应用互补而非竞争。',
+      '**对大多数iPhone用户，2026年建议安装免费的PocketPal AI，并下载Phi-4 Mini这类小型模型（约2.7 GB）。Private LLM（$4.99）支持Siri和快捷指令；Locally AI与Google AI Edge Gallery是免费替代方案。**',
     quickAnswerTop: {
       zh: {
         question: '2026年iPhone最佳本地LLM应用是什么？',
@@ -2824,7 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama para ios',
     ],
     leadAnswerBlock:
-      '**Para la mayoría de usuarios de iPhone en 2026, instala PocketPal AI desde el App Store y descarga un modelo pequeño como Phi-4 Mini (3.8B Q4_K_M, ~2.7 GB).** Se puede usar gratis (con compras integradas opcionales para contenido premium), es de código abierto (MIT) y funciona en iPhone 15 Pro y modelos más recientes (8 GB+ de RAM) a unos 10–15 tokens/seg (orientativo) en iPhone 16 Pro para el chat diario; en un iPhone de 6 GB como el iPhone 14 Pro, usa en su lugar un modelo de 1.7B como Qwen3 1.7B. Para integración con Siri y Shortcuts, Private LLM es la opción de pago ($4.99 de pago único, iPhone, iPad y Mac). Locally AI —desarrollada por el equipo de LM Studio— es la app gratuita basada en Apple MLX, con soporte de Shortcuts y acceso al modelo de base en dispositivo de Apple. Google AI Edge Gallery es la app gratuita de Google para sus modelos Gemma 4, con habilidades de agente y modo de razonamiento. Modelos pequeños más nuevos —Gemma 4 E2B/E4B y Qwen3.5— también están disponibles en estas apps (consulta Modelos según el modelo de iPhone). MLC Chat sigue siendo la app de referencia para la aceleración Metal, pero su versión para iPhone no se actualiza desde septiembre de 2024. LLM Farm no está disponible actualmente en el App Store ni en TestFlight (su README dice "temporalmente no disponible") y solo se instala compilando el código fuente. Apple Intelligence también ejecuta modelos en el dispositivo, pero está integrado en el sistema y no es una app de chat; complementa a estas apps en lugar de competir con ellas.',
+      '**Para la mayoría de usuarios de iPhone en 2026: instala PocketPal AI (gratuita, código abierto) y descarga un modelo pequeño como Phi-4 Mini (unos 2.7 GB). Private LLM ($4.99) añade Siri y Shortcuts; Locally AI y Google AI Edge Gallery son alternativas gratuitas.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la mejor app de LLM local para iPhone en 2026?',
@@ -3375,7 +3375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'iOS용 Ollama',
     ],
     leadAnswerBlock:
-      '**2026년 대부분의 iPhone 사용자에게는 App Store에서 PocketPal AI를 설치하고 Phi-4 Mini (3.8B Q4_K_M, ~2.7 GB) 같은 작은 모델을 다운로드하십시오.** 무료로 사용할 수 있고(프리미엄 콘텐츠는 선택적 인앱 구매), 오픈 소스(MIT)이며, iPhone 15 Pro 이상(8 GB 이상 RAM)에서 작동하고, iPhone 16 Pro에서 일상적인 채팅 기준 대략 10–15 토큰/초(참고용)를 생성합니다. iPhone 14 Pro 같은 6 GB iPhone에서는 대신 Qwen3 1.7B 같은 1.7B 모델을 사용하십시오. Siri 및 Shortcuts 통합을 원한다면 Private LLM이 이 가이드의 유료 선택입니다 ($4.99 일회 구매, iPhone·iPad·Mac). LM Studio 팀이 개발한 Locally AI는 Apple MLX 기반의 무료 앱으로 Shortcuts를 지원하고 Apple의 기기 내 파운데이션 모델에도 접근할 수 있습니다. Google AI Edge Gallery는 Gemma 4 모델을 위한 Google의 무료 앱으로, 에이전트 스킬과 사고 모드를 제공합니다. 더 새로운 소형 모델인 Gemma 4 E2B/E4B와 Qwen3.5도 이 앱들에서 사용할 수 있습니다(iPhone 등급별 모델 참조). MLC Chat은 여전히 Metal 가속의 기준 앱이지만 iPhone 빌드는 2024년 9월 이후 업데이트되지 않았습니다. LLM Farm은 현재 App Store와 TestFlight에 없으며(README: "일시적으로 이용 불가") 소스 코드 빌드로만 설치할 수 있습니다. Apple Intelligence도 기기에서 모델을 실행하지만 시스템에 내장되어 있고 채팅 앱이 아니므로, 이 앱들과 경쟁하기보다 보완합니다.',
+      '**2026년 대부분의 iPhone 사용자에게는 무료 PocketPal AI를 설치하고 Phi-4 Mini 같은 소형 모델(약 2.7 GB)을 내려받는 방법을 권장합니다. Private LLM($4.99)은 Siri와 단축어를 지원하고, Locally AI와 Google AI Edge Gallery는 무료 대안입니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 iPhone용 최고의 로컬 LLM 앱은 무엇입니까?',
@@ -3931,7 +3931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama pra ios',
     ],
     leadAnswerBlock:
-      '**Para a maioria dos usuários de iPhone em 2026, instale o PocketPal AI pela App Store e baixe um modelo pequeno como o Phi-4 Mini (3.8B Q4_K_M, ~2.7 GB).** Ele é gratuito (com compras opcionais dentro do app para conteúdo premium), de código aberto (MIT) e funciona no iPhone 15 Pro e modelos mais recentes (8 GB+ de RAM), gerando cerca de 10–15 tokens/seg (indicativo) no iPhone 16 Pro no chat do dia a dia; em um iPhone de 6 GB, como o iPhone 14 Pro, use um modelo de 1.7B, como o Qwen3 1.7B. Para integração com a Siri e o Shortcuts, o Private LLM é a opção paga ($4.99 pagamento único, iPhone, iPad e Mac). O Locally AI — desenvolvido pela equipe da LM Studio — é o app gratuito baseado em Apple MLX, com suporte a Shortcuts e acesso ao modelo de base no dispositivo da Apple. O Google AI Edge Gallery é o app gratuito do Google para os modelos Gemma 4, com agent skills e modo de raciocínio. Modelos pequenos mais novos — Gemma 4 E2B/E4B e Qwen3.5 — também estão disponíveis nesses apps (veja Modelos conforme o modelo de iPhone). O MLC Chat continua sendo o app de referência para aceleração Metal, mas a versão para iPhone não é atualizada desde setembro de 2024. O LLM Farm atualmente não está na App Store nem no TestFlight (o README diz "temporariamente indisponível") e só pode ser instalado compilando o código-fonte. O Apple Intelligence também executa modelos no aparelho, mas é integrado ao sistema e não é um app de chat — ele complementa esses apps em vez de competir com eles.',
+      '**Para a maioria dos usuários de iPhone em 2026: instale o PocketPal AI (gratuito, código aberto) e baixe um modelo pequeno como o Phi-4 Mini (cerca de 2.7 GB). O Private LLM ($4.99) adiciona Siri e Shortcuts; Locally AI e Google AI Edge Gallery são alternativas gratuitas.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor app de LLM local para iPhone em 2026?',
@@ -4482,7 +4482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Ollama لنظام iOS',
     ],
     leadAnswerBlock:
-      '**لمعظم مستخدمي iPhone في 2026، ثبّت برنامج PocketPal AI من App Store ونزّل نموذجاً صغيراً مثل Phi-4 Mini (حجم 3.8B Q4_K_M، ~2.7 جيجابايت).** التطبيق مجاني الاستخدام (مع مشتريات اختيارية داخل التطبيق للمحتوى المتقدم) ومفتوح المصدر (MIT)، ويعمل على iPhone 15 Pro والإصدارات الأحدث (ذاكرة 8 جيجابايت فأكثر) بنحو 10–15 رمزاً في الثانية (إرشادي) على iPhone 16 Pro للدردشة اليومية؛ وعلى iPhone بذاكرة 6 جيجابايت مثل iPhone 14 Pro استخدم نموذج 1.7B مثل Qwen3 1.7B بدلاً منه. لمن يريد تكامل Siri وShortcuts، يُعدّ Private LLM الخيار المدفوع (4.99 دولار دفعة واحدة، يشمل iPhone وiPad وMac). أما Locally AI — الذي يُطوّره فريق LM Studio — فهو التطبيق المجاني المبني على Apple MLX، مع دعم Shortcuts ووصول إلى نموذج Apple الأساسي على الجهاز. وGoogle AI Edge Gallery هو تطبيق Google المجاني لنماذج Gemma 4، مع مهارات الوكيل ووضع التفكير. تتوفر أيضاً نماذج صغيرة أحدث — Gemma 4 E2B/E4B وQwen3.5 — في هذه التطبيقات (راجع النماذج حسب فئة iPhone). يظل MLC Chat تطبيق Metal المرجعي، لكن إصدار iPhone منه لم يُحدَّث منذ سبتمبر 2024. أما LLM Farm فهو غير متوفر حالياً على App Store أو TestFlight (يذكر ملف README الخاص به أنه "غير متاح مؤقتاً") ولا يُثبَّت إلا عبر بناء الكود المصدري. يُشغّل Apple Intelligence أيضاً نماذج على الجهاز لكنه مدمج في النظام وليس تطبيق دردشة؛ فهو يُكمل هذه التطبيقات لا يُنافسها.',
+      '**لمعظم مستخدمي iPhone في 2026: ثبّت PocketPal AI (مجاني ومفتوح المصدر) ونزّل نموذجاً صغيراً مثل Phi-4 Mini (نحو 2.7 جيجابايت). يضيف Private LLM ($4.99) دعم Siri والاختصارات، وLocally AI وGoogle AI Edge Gallery بديلان مجانيان.**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل تطبيق نموذج لغوي محلي لـ iPhone في 2026؟',
