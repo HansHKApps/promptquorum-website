@@ -2,6 +2,8 @@
 
 ## The Bug That Happened
 
+> **Technical gate:** raw-HTML head, JSON-LD, alt-text, figure-consistency and evidence checks live in one place — `docs/PAGE_UPDATER.md` Step 4.8. Do not duplicate that list here.
+
 **Critical Issue**: All `?lang=XX` URLs served English HTML to crawlers (Google, Perplexity, ChatGPT) even though translations existed.
 
 **Root Cause**: Architecture pattern where client components defaulted to English before hydration, and the server wasn't passing the correct language down.

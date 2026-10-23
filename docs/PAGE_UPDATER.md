@@ -365,6 +365,10 @@ After completing the update, output a section-by-section report:
 - TOC anchors: FIXED — 2 mismatched IDs corrected
 - Frontmatter: UPDATED — dateModified, current_models_mentioned, next_refresh_due
 - Structural parity: FIXED — [DE, FR, JA, ZH] were missing [benchmarkTable, methodology, vramGuide]; sections authored and FAQs brought to 7/7
+- SEO/AIO/GEO gate (Step 4.8): PASS [n/n checks] per locale / FIXED — [list] / known gap: html lang (layout.tsx) until [locale] refactor
+- Entity schema: SoftwareApplication #app present from apps/<slug>.ts [or: N/A — page is not about one product]
+- Figure consistency: [list every number checked and the single value kept]
+- Provenance labels: [n] third-party figures labeled; [0] unlabeled
 - Languages pending: DE, ES, FR, JA, ZH
 ```
 
@@ -405,6 +409,10 @@ This report serves as the audit trail for the update and prevents the "I think I
 ### 8. Date-Only Bump
 **Wrong:** Updating `dateModified` (or anything the visible "Last updated" badge reads) with no reader-visible content change in the same commit.
 **Why it fails:** Google detects and penalizes date manipulation. The fresh date must always be earned by content readers can see — that is exactly what the Step 2.5 Freshness Expansion Block exists for. The inverse is also wrong: giving up with "nothing to update" and leaving a historic date without running the Step 2.5 gate.
+
+### 9. Content-Only Refresh
+**Wrong:** Updating facts and translations but never opening the raw HTML / JSON-LD of the page.
+**Why it fails:** the head, schema and alt text are generated from fields the content pass never reads (`schema:` overrides, `heroImage`, `relatedReading`, `howTo`). They drift silently — a review can describe version 2.0 while its schema still says `Thing`, its `og:image` is the site logo and its FAQPage lists one more question than the page shows. Step 4.8 exists so the refresh ends with what crawlers and answer engines actually receive.
 
 ---
 
@@ -454,6 +462,39 @@ Do this in both directions: after refreshing a review, grep hub/comparison pages
 - `npm run validate-category-compare` (part of `prebuild`) checks that every `compare` key is defined for the tool's segment, that comparison articles are registered and render the table, and that a published comparison article has all 9 locale blocks.
 
 **Why:** Cross-linked review clusters (smart-home mini-PC/hardware pages, power-local-llm app reviews, GPU/hardware guides) exist specifically because the site claims verified specs and prices — that claim breaks the moment two pages that link to each other disagree, and an outside reader (or a competitor) checking is exactly the kind of gap that damages trust in every other "verified" claim on the site.
+
+### Step 4.8: Technical SEO / AIO / GEO Gate (MANDATORY — every page-updater run, every locale)
+
+Run this against the **live or locally built HTML** of every locale URL of the page (raw server HTML, not the hydrated DOM — AI crawlers read the raw response), before the Step 5.7 risk gate. Each line is pass/fail; a fail is fixed in the same run (same standard as Step 5.5), never deferred.
+
+**A. Head / crawl**
+- [ ] Exactly one `<h1>`; `<title>` and H1 name the same scope (platforms, product, year) — no claim in one that the other drops
+- [ ] `<title>` and meta description inside the locale budget (`scripts/validate-meta-budgets.mjs --locale=<xx>`: Latin 48–58 / 140–155, ja·zh 24–32 / 70–110, ko 28–38 / 70–110, ar 40–55 / 110–150); `| PromptQuorum` suffix only on titles ≤45 chars; no month names in trailing-stamp position
+- [ ] Meta description promises nothing the body does not deliver (a "comparison" or "table" named in the description must exist as a section)
+- [ ] `rel=canonical` = the page's own www URL; hreflang set complete (9 locales + x-default); `robots` = index,follow
+- [ ] `<html lang>`/`dir` and `og:locale` match the locale (until the `[locale]` refactor lands, verify with `scripts/check-lang-dir-all-locales.mjs` and record the known gap in the report)
+- [ ] `og:image`/`twitter:image` is the article's own localized hero, never `/og-image.png`; `article:published_time` and `article:modified_time` present
+
+**B. Structured data (JSON-LD)**
+- [ ] Parses without error; `Article`/`TechArticle`.`headline` = `<title>` or H1; `url`/`mainEntityOfPage`/breadcrumb `item` use `https://www.promptquorum.com/…` (never non-www) and equal the canonical
+- [ ] `datePublished`/`dateModified` equal the article fields; `inLanguage` = locale (`pt-BR` for pt)
+- [ ] `FAQPage` item count = number of FAQ questions visible on the page (the Quick Answer question may be included only if it is rendered as visible text); every answer text matches the visible answer
+- [ ] `HowTo` present whenever the page has a numbered setup/step section; absent otherwise
+- [ ] **Entity rule:** a page whose subject is one product/app/model carries that subject as a `SoftwareApplication` (or `Product`) node from its record (`src/lib/power-local-llm/apps/<slug>.ts` — name, `operatingSystem` from `platforms`, `softwareVersion` from `pqReview.version`, license, offers, official URL) referenced via `about`/`mainEntity`; `Thing`-only is a fail
+- [ ] **Rating rule:** `Review`/`reviewRating` only on pages with a PromptQuorum hands-on scorecard; never on source-only reviews ("not tested" pages)
+
+**C. Body / evidence (AIO + GEO)**
+- [ ] Every image in `<main>` has non-empty, descriptive `alt`
+- [ ] No placeholder strings anywhere in any locale (`to be added`, `TODO`, `TBD`, `lorem`, empty `relatedReading`, empty section headings)
+- [ ] Every number appears with one value page-wide: grep each figure (VRAM, GB, tok/s, %, prices, counts, context lengths) and confirm tables, prose, Key Takeaways, FAQ, `gammaDescription` and slide deck agree; a figure stated twice with two values is a fail
+- [ ] Every third-party figure carries its provenance label (`developer-reported`, `vendor benchmark`, `measured by PromptQuorum`, `estimate`) — unlabeled figures read as our measurements
+- [ ] Every "we tested" claim has a methodology block: device, OS/runtime version, model tag + quantization, prompt, run count, date
+- [ ] Sources section links the primary source for every benchmark, price, license and origin claim (model card / release page / store listing / original author); a product page with only shop links and no primary source is a fail
+- [ ] Internal mentions of other frameworks, tools or guides are links (`[name](path)`), and every internal link resolves (no 404, no redirect chain)
+- [ ] The first 150 words state the page's non-replicable finding (test result, verified discrepancy, decision) — not template text
+- [ ] Visible byline and localized `Last updated` (and `Published`) rendered via `formatDisplayDate`
+
+**Why:** the 2026-10-21 eight-page audit found every one of these failing on at least one page that had passed content review: empty `alt` on a hands-on test, generic `og:image`, 57 articles with non-www schema URLs, `Thing`-only entities on app reviews, a meta description promising a comparison the page lacks, and two flagship guides quoting the same figure with two or three different values. AI answer engines quote the inconsistency or skip the page; neither shows up in GSC as a crawl error.
 
 ---
 

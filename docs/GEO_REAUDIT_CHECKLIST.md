@@ -2,6 +2,8 @@
 
 **Version:** 2.0 | **Last Updated:** April 7, 2026 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured)
 
+> **Technical gate:** raw-HTML head, JSON-LD, alt-text, figure-consistency and evidence checks live in one place — `docs/PAGE_UPDATER.md` Step 4.8. Do not duplicate that list here.
+
 This checklist is used to reaudit already-published articles against the restructured GEO Writing Guidelines (Parts 1–6). Use this when revisiting older articles that need updating or when verifying compliance of existing content.
 
 ---
