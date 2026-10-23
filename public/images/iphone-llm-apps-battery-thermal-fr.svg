@@ -11,16 +11,16 @@
 
   <!-- Left bullets -->
   <circle cx="38" cy="90" r="3" fill="#EA4335"/>
-  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W de puissance</text>
+  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W de puissance (indicatif)</text>
 
   <circle cx="38" cy="116" r="3" fill="#EA4335"/>
-  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% de batterie/h (iPhone 16 Pro)</text>
+  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% de batterie/h (iPhone 16 Pro, indicatif)</text>
 
   <circle cx="38" cy="142" r="3" fill="#EA4335"/>
-  <text x="50" y="146" font-size="12" fill="#49454F">Bride à ~38°C (après 10–15 min)</text>
+  <text x="50" y="146" font-size="12" fill="#49454F">Bridage en cas de chaleur</text>
 
   <circle cx="38" cy="168" r="3" fill="#EA4335"/>
-  <text x="50" y="172" font-size="12" fill="#49454F">Chute 30–50% vitesse sous la chaleur</text>
+  <text x="50" y="172" font-size="12" fill="#49454F">La vitesse baisse sous la chaleur</text>
 
   <!-- Right panel (green) -->
   <rect x="415" y="46" width="365" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
@@ -35,7 +35,7 @@
   <text x="445" y="120" font-size="12" fill="#49454F">Évitez le soleil direct</text>
 
   <circle cx="433" cy="142" r="3" fill="#34A853"/>
-  <text x="445" y="146" font-size="12" fill="#49454F">Sessions courtes : &lt;5 min → pas de bride</text>
+  <text x="445" y="146" font-size="12" fill="#49454F">Privilégier les sessions courtes</text>
 
   <circle cx="433" cy="168" r="3" fill="#34A853"/>
   <text x="445" y="172" font-size="12" fill="#49454F">Branchez pour les longues sessions</text>

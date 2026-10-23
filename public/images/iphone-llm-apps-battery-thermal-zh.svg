@@ -11,16 +11,16 @@
 
   <!-- Left bullets -->
   <circle cx="38" cy="90" r="3" fill="#EA4335"/>
-  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W 功耗</text>
+  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W 功耗 (参考值)</text>
 
   <circle cx="38" cy="116" r="3" fill="#EA4335"/>
-  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% 电量/小时 (iPhone 16 Pro)</text>
+  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% 电量/小时 (iPhone 16 Pro, 参考值)</text>
 
   <circle cx="38" cy="142" r="3" fill="#EA4335"/>
-  <text x="50" y="146" font-size="12" fill="#49454F">~38°C时降频（10–15分钟后）</text>
+  <text x="50" y="146" font-size="12" fill="#49454F">过热时降频</text>
 
   <circle cx="38" cy="168" r="3" fill="#EA4335"/>
-  <text x="50" y="172" font-size="12" fill="#49454F">过热时速度下降30–50%</text>
+  <text x="50" y="172" font-size="12" fill="#49454F">过热时速度下降</text>
 
   <!-- Right panel (green) -->
   <rect x="415" y="46" width="365" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
@@ -35,7 +35,7 @@
   <text x="445" y="120" font-size="12" fill="#49454F">避免直射阳光</text>
 
   <circle cx="433" cy="142" r="3" fill="#34A853"/>
-  <text x="445" y="146" font-size="12" fill="#49454F">短会话: &lt;5分钟→不降频</text>
+  <text x="445" y="146" font-size="12" fill="#49454F">优先使用短会话</text>
 
   <circle cx="433" cy="168" r="3" fill="#34A853"/>
   <text x="445" y="172" font-size="12" fill="#49454F">长时间使用时连接充电</text>

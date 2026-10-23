@@ -11,16 +11,16 @@
 
   <!-- Left bullets -->
   <circle cx="38" cy="90" r="3" fill="#EA4335"/>
-  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W Leistungsaufnahme</text>
+  <text x="50" y="94" font-size="12" fill="#49454F">~3–5W Leistungsaufnahme (Richtwert)</text>
 
   <circle cx="38" cy="116" r="3" fill="#EA4335"/>
-  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% Akku/Std. (iPhone 16 Pro)</text>
+  <text x="50" y="120" font-size="12" fill="#49454F">~20–30% Akku/Std. (iPhone 16 Pro, Richtwert)</text>
 
   <circle cx="38" cy="142" r="3" fill="#EA4335"/>
-  <text x="50" y="146" font-size="12" fill="#49454F">Drossel ab ~38°C (nach 10–15 Min.)</text>
+  <text x="50" y="146" font-size="12" fill="#49454F">Drosselung bei Hitze</text>
 
   <circle cx="38" cy="168" r="3" fill="#EA4335"/>
-  <text x="50" y="172" font-size="12" fill="#49454F">30–50% Geschwindigkeitsverlust</text>
+  <text x="50" y="172" font-size="12" fill="#49454F">Geschwindigkeit sinkt bei Hitze</text>
 
   <!-- Right panel (green) -->
   <rect x="415" y="46" width="365" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
@@ -35,7 +35,7 @@
   <text x="445" y="120" font-size="12" fill="#49454F">Direkte Sonneneinstrahlung meiden</text>
 
   <circle cx="433" cy="142" r="3" fill="#34A853"/>
-  <text x="445" y="146" font-size="12" fill="#49454F">Kurze Sessions: &lt;5 Min. → kein Throttling</text>
+  <text x="445" y="146" font-size="12" fill="#49454F">Kurze Sessions bevorzugen</text>
 
   <circle cx="433" cy="168" r="3" fill="#34A853"/>
   <text x="445" y="172" font-size="12" fill="#49454F">Bei langen Sessions ans Ladegerät</text>
