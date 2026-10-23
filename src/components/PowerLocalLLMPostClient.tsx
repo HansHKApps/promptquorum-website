@@ -28,6 +28,7 @@ import { EdgeVideoBandwidthCalculator } from '@/components/EdgeVideoBandwidthCal
 import { ShadowAiExposureAssessment } from '@/components/ShadowAiExposureAssessment'
 import { AgentBlastRadiusCalculator } from '@/components/AgentBlastRadiusCalculator'
 import { IpRiskTriageMatrix } from '@/components/IpRiskTriageMatrix'
+import { renderHubTitle } from '@/components/article-skin/HubTitle'
 import { resolveSkin, getSkinClasses, getSkinThemeColors, type SkinClasses } from '@/components/article-skin/skin'
 import { CategoryCompareTable } from '@/components/CategoryCompareTable'
 import type { CategoryCompareData } from '@/lib/power-local-llm/compare-data'
@@ -1418,7 +1419,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   const enData = articleData['en']!
   const article = (langData ?? enData)
   const skin = resolveSkin(article.designSkin)
-  const skinCls = getSkinClasses(skin)
+  const skinCls = getSkinClasses(skin, 'violet')
   const colors = getSkinThemeColors(skin, article.theme, THEME_COLORS[article.theme] ?? FALLBACK_THEME_COLOR)
 
   // Bound helper for rendering links
@@ -1449,7 +1450,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   )
 
   return (
-    <div className={isDirectoryPage ? 'min-h-screen bg-white pb-20' : 'min-h-screen bg-white pt-24 sm:pt-20 pb-20 px-4 sm:px-6'} key={`${slug}-${lang}`}>
+    <div className={isDirectoryPage ? 'min-h-screen bg-white pb-20' : `min-h-screen ${skinCls.page} pt-24 sm:pt-20 pb-20 px-4 sm:px-6`} key={`${slug}-${lang}`}>
       {/* Directory page: hub-style hero in place of the plain article header (see DirectoryHero). */}
       {isDirectoryPage && directorySlot && (
         <DirectoryHero
@@ -1501,7 +1502,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             {article.theme}
           </span>
           <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
-            {article.title}
+            {renderHubTitle(article.title, skin, lang)}
           </h1>
           <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
             <time dateTime={article.dateModified ?? article.publishDate} className={isDirectoryPage ? 'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : skinCls.updatedBadge}>
@@ -1777,7 +1778,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         })()}
 
         {/* Sections */}
-        <article className="key-takeaways-container">
+        <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             // Directory page reorder (page-redesign-v2.md §2): Quick answer
             // (already rendered above) → Real-world stacks → How the layers

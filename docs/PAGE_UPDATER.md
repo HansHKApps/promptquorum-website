@@ -527,7 +527,7 @@ Articles reached from a cluster hub should look like the hub. When you run a ful
 designSkin: 'hub',
 ```
 
-What it does: swaps colours and decoration (H2 accent rule, TL;DR box, lead block, table of contents, "last updated" badge, theme badge) to the `--hub-*` tokens. It changes **classes only**: no sections, headings, text, links or schema are added, removed or reordered.
+What it does: makes the article look like its cluster hub — page background in the hub accent tint (rose for `/local-llms`, violet for `/power-local-llm`), every H2 section as a numbered card cycling through the hub tones (violet, azure, indigo, orchid, rose; numbers via CSS counter, no extra text), plus the TL;DR box, lead block, table of contents, "last updated" badge and theme badge in `--hub-*` tokens. It changes **classes only**: no sections, headings, text, links or schema are added, removed or reordered.
 
 Rules:
 - Only the page-updater adds the flag. Do not add it in a content-only edit or to pages you did not update.

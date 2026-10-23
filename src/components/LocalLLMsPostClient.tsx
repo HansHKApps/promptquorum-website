@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { renderHubTitle } from '@/components/article-skin/HubTitle'
 import { resolveSkin, getSkinClasses, getSkinThemeColors, type SkinClasses } from '@/components/article-skin/skin'
 import type { LLMSection, LLMArticle } from '@/lib/local-llms/types'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
@@ -916,7 +917,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
   const enData = articleData['en']!
   const article = (langData ?? enData)
   const skin = resolveSkin(article.designSkin)
-  const skinCls = getSkinClasses(skin)
+  const skinCls = getSkinClasses(skin, 'rose')
   const colors = getSkinThemeColors(skin, article.theme, THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started'])
 
   const tldrKey = Object.entries(article.sections).find(([, sec]) => (sec as any).isTldr && (sec as any).items)?.[0]
@@ -926,7 +927,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
     renderInlineLinks(text, lang, slug)
 
   return (
-    <div className="min-h-screen bg-white pt-24 sm:pt-20 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
+    <div className={`min-h-screen ${skinCls.page} pt-24 sm:pt-20 pb-20 px-4 sm:px-6`} key={`${slug}-${lang}`}>
       <div className="max-w-3xl mx-auto">
 
         {/* Breadcrumb + language */}
@@ -947,7 +948,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
             {article.theme}
           </span>
           <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
-            {article.title}
+            {renderHubTitle(article.title, skin, lang)}
           </h1>
           <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
             <time dateTime={article.dateModified ?? article.publishDate} className={skinCls.updatedBadge}>
@@ -1144,7 +1145,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
         })()}
 
         {/* Sections */}
-        <article className="key-takeaways-container">
+        <article className={`key-takeaways-container ${skinCls.sections}`}>
           {Object.entries(article.sections).map(([key, section]) => {
             if (key === tldrKey) return null
             const sectionId = slugifySectionId(section, key)

@@ -11,7 +11,7 @@ import { LocalLLMsPostClient } from '../src/components/LocalLLMsPostClient'
 import { ARTICLES, LOCAL_LLM_ARTICLES } from './_skin-articles'
 import { resolveAll } from '../src/components/local-ai-directory/directory-i18n'
 
-const strip = (h: string) => h.replace(/\sclass="[^"]*"/g, '')
+const strip = (h: string) => h.replace(/<span class="hub-h1-hl[^"]*">([^<]*)<\/span>/g, '$1').replace(/\sclass="[^"]*"/g, '')
 let failed = 0
 const fail = (m: string) => { failed++; console.error('FAIL ' + m) }
 
