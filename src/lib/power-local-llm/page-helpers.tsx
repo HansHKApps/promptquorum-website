@@ -962,6 +962,7 @@ const HUB_THEMES: Array<{
       'aider-review',
       'blackbox-ai-cli-review',
       'cline-review',
+      'ecc-review',
       'codegpt-review',
       'continue-dev-review',
       'cursor-local-mode-review',

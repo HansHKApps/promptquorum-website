@@ -544,4 +544,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'speechbrain-review':                       'speechbrain-review',
   'caelum-review':                            'caelum-review',
   'obscurify-review':                         'obscurify-review',
+  'ecc-review':                               'ecc-review',
 }

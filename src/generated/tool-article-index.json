@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-amd-gpus-local-llm",
         "title": "Best AMD GPU for Local LLMs and AI Inference",
         "url": "/local-llms/best-amd-gpus-local-llm",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-vision-models-llava-ollama-2026",
-        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
-        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
     "totalCount": 303,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "obscurify-review",
         "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-10-23",
         "tier": "about"
       }
@@ -542,19 +542,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-18",
         "tier": "mentioned"
       },
       {
@@ -10815,6 +10815,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ecc-review",
+        "title": "ECC Review: Agent Toolkit for Claude Code and Codex",
+        "url": "/power-local-llm/ecc-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-studio-review",
         "title": "LM Studio Review: The GUI-First Local AI Desktop App",
         "url": "/power-local-llm/lm-studio-review",
@@ -10844,17 +10852,9 @@
         "url": "/power-local-llm/mlx-audio-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "obscurify-review",
-        "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
-        "url": "/power-local-llm/obscurify-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 209,
+    "totalCount": 210,
     "capped": true
   },
   "Qdrant": {
@@ -11943,6 +11943,60 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "ECC": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ecc-review",
+        "title": "ECC Review: Agent Toolkit for Claude Code and Codex",
+        "url": "/power-local-llm/ecc-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
+        "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
+        "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-workstation-build-local-ai-2026",
+        "title": "Best Workstation Build for Local AI (2026): Three Budget Tiers",
+        "url": "/power-local-llm/best-workstation-build-local-ai-2026",
+        "dateModified": "2026-09-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "how-much-vram-local-llm",
+        "title": "How Much VRAM for Local LLM? 7B to 70B Charts (2026)",
+        "url": "/local-llms/how-much-vram-local-llm",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-rag-for-private-business-data",
+        "title": "Local RAG for Business Data: GDPR-Compliant AI for Sensitive Documents (2026)",
+        "url": "/power-local-llm/local-rag-for-private-business-data",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 6,
     "capped": false
   }
 }

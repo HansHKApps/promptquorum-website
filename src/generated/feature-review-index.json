@@ -1343,5 +1343,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "swerve-ai-review",
     "url": "/power-local-llm/swerve-ai-review"
+  },
+  "ecc": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ecc-review",
+    "url": "/power-local-llm/ecc-review"
   }
 }

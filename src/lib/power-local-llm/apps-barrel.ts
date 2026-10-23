@@ -281,6 +281,7 @@ import { app as app_radiant_canvas } from './apps/radiant-canvas'
 import { app as app_paios } from './apps/paios'
 import { app as app_ai_cutoutwerk } from './apps/ai-cutoutwerk'
 import { app as app_openmontage } from './apps/openmontage'
+import { app as app_ecc } from './apps/ecc'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -552,6 +553,7 @@ export const localAiApps: ToolRecord[] = [
   app_honey_llm,
   app_secret_ai,
   app_swerve_ai,
+  app_ecc,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
