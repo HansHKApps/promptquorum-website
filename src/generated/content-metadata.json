@@ -308,7 +308,7 @@
       ]
     },
     "local-llm-on-laptop": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -326,23 +326,11 @@
       "images": [
         {
           "url": "/images/local-llm-on-laptop-ram-tiers-hero-en.webp",
-          "title": "8 GB RAM is the practical floor -- a 7B model at Q4_K_M runs on any laptop built after 2018."
-        },
-        {
-          "url": "/images/ollama-terminal.svg",
-          "title": "Ollama running Mistral Small on a MacBook -- 22 tokens/sec on CPU at Q4_K_M quantization."
+          "title": "Local LLM on a laptop: Q4_K_M model picks by RAM tier, with estimated tok/s"
         },
         {
           "url": "/images/local-llm-on-laptop-model-picks-hero-en.webp",
-          "title": "Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.1 8B needs 16 GB but gives the best quality at this size."
-        },
-        {
-          "url": "/images/apple-silicon-unified-memory.svg",
-          "title": "Apple Silicon unified memory lets the GPU access the full RAM pool -- a 13B model fits entirely in GPU memory on an 18 GB M3 Pro."
-        },
-        {
-          "url": "/images/laptop-stand-airflow.svg",
-          "title": "Raising a laptop 2-3 cm on a stand improves exhaust airflow and delays throttling onset from 10 to 20+ minutes."
+          "title": "Best local LLM models for laptops by file size, with estimated tok/s on dual-channel RAM"
         }
       ]
     },
@@ -2190,7 +2178,7 @@
       ]
     },
     "best-amd-gpus-local-llm": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2208,11 +2196,11 @@
       "images": [
         {
           "url": "/images/best-amd-gpus-local-llm-price-performance-hero-en.webp",
-          "title": "RX 7900 XTX matches RTX 4090 speed and VRAM for roughly 60% of the price -- the trade-off is ROCm setup friction."
+          "title": "AMD vs NVIDIA for local LLMs: VRAM, memory bandwidth and typical price (US, Sept–Oct 2026 snapshots)."
         },
         {
           "url": "/images/best-amd-gpus-local-llm-software-support-hero-en.webp",
-          "title": "llama.cpp and Text Generation WebUI are the reliable AMD paths in 2026 -- Ollama's ROCm support remains inconsistent."
+          "title": "Local LLM tools that run on AMD GPUs: Ollama, llama.cpp, LM Studio and vLLM."
         }
       ]
     },
@@ -6045,7 +6033,7 @@
       ]
     },
     "best-laptop-for-local-llm": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6117,7 +6105,7 @@
       "images": []
     },
     "best-local-ai-app-low-end-pc": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6621,7 +6609,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 8 categories of a local LLM stack: 267 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
+          "title": "The 8 categories of a local LLM stack: 268 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -6970,7 +6958,7 @@
       "images": []
     },
     "run-ai-on-tablet-ipad-android": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -10143,7 +10131,7 @@
       "images": []
     },
     "lm-studio-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -12105,7 +12093,7 @@
       "images": []
     },
     "omlx-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-09-18",
       "hasSections": true,
@@ -12756,6 +12744,24 @@
       "dateModified": "2026-09-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mlx-audio-review": {
+      "dateModified": "2026-10-23",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-23",
       "hasSections": true,
       "langs": [
         "en",

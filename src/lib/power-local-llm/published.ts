@@ -542,6 +542,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'parlor-review',
   'izwi-review',
   'vllm-mlx-review',
+  'mlx-audio-review',
   'mlxcel-review',
   'mlx-serve-review',
   'willow-inference-server-review',

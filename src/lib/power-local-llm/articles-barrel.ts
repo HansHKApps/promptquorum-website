@@ -366,6 +366,7 @@ import { article as a_ollitert_review } from './articles/ollitert-review'
 import { article as a_parlor_review } from './articles/parlor-review'
 import { article as a_izwi_review } from './articles/izwi-review'
 import { article as a_vllm_mlx_review } from './articles/vllm-mlx-review'
+import { article as a_mlx_audio_review } from './articles/mlx-audio-review'
 import { article as a_mlxcel_review } from './articles/mlxcel-review'
 import { article as a_mlx_serve_review } from './articles/mlx-serve-review'
 import { article as a_willow_inference_server_review } from './articles/willow-inference-server-review'
@@ -780,6 +781,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'parlor-review':                                       a_parlor_review,
   'izwi-review':                                         a_izwi_review,
   'vllm-mlx-review':                                     a_vllm_mlx_review,
+  'mlx-audio-review':                                    a_mlx_audio_review,
   'mlxcel-review':                                       a_mlxcel_review,
   'mlx-serve-review':                                    a_mlx_serve_review,
   'willow-inference-server-review':                      a_willow_inference_server_review,

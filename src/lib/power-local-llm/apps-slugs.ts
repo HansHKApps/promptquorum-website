@@ -206,6 +206,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'caelum':                                  'caelum',
   'obscurify':                               'obscurify',
   'strata':                                  'strata',
+  'mlx-audio':                               'mlx-audio',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

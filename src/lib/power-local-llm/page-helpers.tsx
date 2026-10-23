@@ -859,6 +859,7 @@ const HUB_THEMES: Array<{
       'mlx-serve-review',
       'candle-vllm-review',
       'strata-review',
+      'mlx-audio-review',
     ],
   },
   {

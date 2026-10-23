@@ -525,6 +525,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'parlor-review':                            'parlor-review',
   'izwi-review':                              'izwi-review',
   'vllm-mlx-review':                          'vllm-mlx-review',
+  'mlx-audio-review':                         'mlx-audio-review',
   'mlxcel-review':                            'mlxcel-review',
   'mlx-serve-review':                         'mlx-serve-review',
   'willow-inference-server-review':           'willow-inference-server-review',
