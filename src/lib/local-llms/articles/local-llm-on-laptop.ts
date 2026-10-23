@@ -2932,8 +2932,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "next_seo_review_due": "2027-01-01",
     "last_seo_review": "2026-10-23",
     "theme": "Getting Started",
-    "title": "ノートPCでローカルLLM：8GB・16GB・Apple Siliconで動くモデル（2026）",
-    "seoTitle": "ノートPCのローカルLLM（2026）：8GB・16GB・Mac",
+    "title": "ノートパソコンでローカルLLMを動かす：メモリ8GBと16GBとMacの目安（2026）",
+    "seoTitle": "ノートパソコンのローカルLLM：メモリ8GBと16GBの目安",
     "intro": "RAM 8 GBのノートPCでもローカルLLMは動きます。Q4_K_Mの3B–4Bモデルはデュアルチャネル RAMで推定15–30 tok/s、16 GBのノートPCなら8Bモデルが推定8–15 tok/sです。Apple Siliconはユニファイドメモリの帯域が広いため、より高速です。速度はメモリ帯域から導いたPromptQuorumの推定値で、実験室での実測値ではありません。発熱とバッテリーにより、ノートPCが速度を維持できる時間は限られます。",
     "metaDescription": "ノートPCで動くローカルLLMを、8GB・16GB・Apple Silicon別に解説。メモリ帯域から求めた推定tok/s、発熱、バッテリー、量子化もまとめます。",
     "heroImage": "/images/local-llm-on-laptop-ram-tiers-hero-ja.webp",
@@ -3103,7 +3103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "ハードウェアの前提"
         ],
         "image": "/images/local-llm-on-laptop-ram-tiers-hero-ja.webp",
-        "imageCaption": "ノートPCでローカルLLM：8GB・16GB・Apple Siliconで動くモデル（2026）の推定tok/s"
+        "imageCaption": "ノートパソコンでローカルLLMを動かす：メモリ8GBと16GBとMacの目安（2026）の推定tok/s"
       },
       "tldr": {
         "id": "key-takeaways",
@@ -3591,7 +3591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "schema": {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "ノートPCでローカルLLM：8GB・16GB・Apple Siliconで動くモデル（2026）",
+      "headline": "ノートパソコンでローカルLLMを動かす：メモリ8GBと16GBとMacの目安（2026）",
       "description": "RAM 8 GBまたは16 GB、もしくはApple SiliconのノートPCでローカルLLMを動かす方法を解説。モデルの選び方（Llama 3.2 3B、Phi-4-mini、Qwen3 8B）、メモリ帯域から求めた速度の推定、発熱、バッテリー、Q4_K_M量子化を扱います。",
       "url": "https://www.promptquorum.com/ja/local-llms/local-llm-on-laptop",
       "datePublished": "2026-04-04",
@@ -3871,8 +3871,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "next_seo_review_due": "2027-01-01",
     "last_seo_review": "2026-10-23",
     "theme": "Getting Started",
-    "title": "笔记本电脑运行本地LLM：8GB、16GB与Apple Silicon能跑什么（2026）",
-    "seoTitle": "笔记本电脑本地LLM（2026）：8GB、16GB与Mac",
+    "title": "笔记本电脑运行本地大模型：8GB、16GB内存与Mac能跑什么（2026）",
+    "seoTitle": "笔记本电脑本地大模型：8GB与16GB内存的选择（2026）",
     "intro": "8 GB内存的笔记本电脑就能运行本地LLM：Q4_K_M量化的3B–4B模型在双通道内存上估算可达15–30 tok/s，16 GB笔记本电脑运行8B模型估算为8–15 tok/s。Apple Silicon的统一内存带宽更高，因此更快。所有速度均为PromptQuorum根据内存带宽得出的估算，并非实验室实测；散热和电池会限制笔记本电脑能持续多久保持这一速度。",
     "metaDescription": "笔记本电脑能跑哪些本地LLM：8 GB、16 GB与Apple Silicon的模型选择，按内存带宽估算的tok/s，以及散热、电池和量化建议。",
     "heroImage": "/images/local-llm-on-laptop-ram-tiers-hero-zh.webp",
@@ -4042,7 +4042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "硬件假设"
         ],
         "image": "/images/local-llm-on-laptop-ram-tiers-hero-zh.webp",
-        "imageCaption": "笔记本电脑运行本地LLM：8GB、16GB与Apple Silicon能跑什么（2026）的估算tok/s"
+        "imageCaption": "笔记本电脑运行本地大模型：8GB、16GB内存与Mac能跑什么（2026）的估算tok/s"
       },
       "tldr": {
         "id": "key-takeaways",
@@ -4530,7 +4530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "schema": {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "笔记本电脑运行本地LLM：8GB、16GB与Apple Silicon能跑什么（2026）",
+      "headline": "笔记本电脑运行本地大模型：8GB、16GB内存与Mac能跑什么（2026）",
       "description": "在8 GB或16 GB内存或Apple Silicon的笔记本电脑上运行本地LLM。涵盖模型选择（Llama 3.2 3B、Phi-4-mini、Qwen3 8B）、按内存带宽得出的速度估算、散热、电池以及Q4_K_M量化。",
       "url": "https://www.promptquorum.com/zh/local-llms/local-llm-on-laptop",
       "datePublished": "2026-04-04",
@@ -7629,8 +7629,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "next_seo_review_due": "2027-01-01",
     "last_seo_review": "2026-10-23",
     "theme": "Getting Started",
-    "title": "노트북에서 로컬 LLM 실행하기: 8GB, 16GB, Apple Silicon에서 되는 것 (2026)",
-    "seoTitle": "노트북 로컬 LLM: 8GB, 16GB, Apple Silicon",
+    "title": "노트북에서 로컬 LLM 실행하기: 메모리 8GB, 16GB, 애플 실리콘 (2026)",
+    "seoTitle": "노트북에서 로컬 LLM 실행: 메모리 8GB와 16GB, 맥북 기준",
     "intro": "RAM 8 GB 노트북에서도 로컬 LLM을 실행할 수 있습니다. Q4_K_M 3B–4B 모델은 듀얼 채널 RAM에서 추정 15–30 tok/s로 동작하고, 16 GB 노트북은 8B 모델을 추정 8–15 tok/s로 실행합니다. Apple Silicon은 통합 메모리의 대역폭이 더 넓어 더 빠릅니다. 속도는 메모리 대역폭에서 산출한 PromptQuorum의 추정치이며 실험실 측정값이 아닙니다. 노트북이 이 속도를 얼마나 오래 유지하는지는 발열과 배터리에 따라 제한됩니다.",
     "metaDescription": "노트북 로컬 LLM: 8 GB, 16 GB, Apple Silicon에서 실행되는 모델과 메모리 대역폭 기반 추정 tok/s, 발열, 배터리, 양자화까지 정리했습니다.",
     "heroImage": "/images/local-llm-on-laptop-ram-tiers-hero-ko.webp",
@@ -7800,7 +7800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "하드웨어 가정"
         ],
         "image": "/images/local-llm-on-laptop-ram-tiers-hero-ko.webp",
-        "imageCaption": "노트북에서 로컬 LLM 실행하기: 8GB, 16GB, Apple Silicon에서 되는 것 (2026) 추정 tok/s"
+        "imageCaption": "노트북에서 로컬 LLM 실행하기: 메모리 8GB, 16GB, 애플 실리콘 (2026) 추정 tok/s"
       },
       "tldr": {
         "id": "key-takeaways",
@@ -8288,7 +8288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "schema": {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "노트북에서 로컬 LLM 실행하기: 8GB, 16GB, Apple Silicon에서 되는 것 (2026)",
+      "headline": "노트북에서 로컬 LLM 실행하기: 메모리 8GB, 16GB, 애플 실리콘 (2026)",
       "description": "RAM 8 GB 또는 16 GB 노트북과 Apple Silicon에서 로컬 LLM을 실행하는 방법. 모델 추천(Llama 3.2 3B, Phi-4-mini, Qwen3 8B), 메모리 대역폭 기반 속도 추정, 발열, 배터리, Q4_K_M 양자화를 다룹니다.",
       "url": "https://www.promptquorum.com/ko/local-llms/local-llm-on-laptop",
       "datePublished": "2026-04-04",
