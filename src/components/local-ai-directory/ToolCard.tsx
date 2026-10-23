@@ -151,7 +151,7 @@ export function ToolCard({
 
   return (
     <div
-      className={`group relative flex flex-col text-left h-full overflow-hidden rounded-[18px] cursor-pointer transition-all hover:shadow-[0_14px_28px_-10px_var(--hub-violet)] hover:-translate-y-0.5 ${
+      className={`group relative flex flex-col text-start h-full overflow-hidden rounded-[18px] cursor-pointer transition-all hover:shadow-[0_14px_28px_-10px_var(--hub-violet)] hover:-translate-y-0.5 ${
         appActivity === 'dead'
           ? 'border border-gray-300 bg-gray-100 grayscale opacity-80 hover:opacity-100 hover:border-gray-400'
           : isFounderReviewed
@@ -179,7 +179,7 @@ export function ToolCard({
         <ChevronRightIcon className="h-3 w-3" />
       </span>
 
-      <div className="flex flex-col h-full p-4 pt-5 pr-8">
+      <div className="flex flex-col h-full p-4 pt-5 pe-8">
         {isFounderReviewed && (
           <span
             className="inline-flex items-center gap-1 self-start mb-2.5 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide rounded-full border-2 border-hub-amber bg-hub-amber-tint text-hub-amber-ink shadow-sm"
@@ -214,7 +214,7 @@ export function ToolCard({
         <p className="text-sm text-text-secondary leading-relaxed line-clamp-2 mb-3">{tagline}</p>
 
         {app.founder && (
-          <p className="text-xs italic text-text-secondary/80 leading-relaxed line-clamp-2 mb-3 border-l-2 border-hub-violet-edge pl-2">
+          <p className="text-xs italic text-text-secondary/80 leading-relaxed line-clamp-2 mb-3 border-s-2 border-hub-violet-edge pl-2">
             {/* Prefer his own verbatim words when we have them; `why` is a
                 PromptQuorum paraphrase and shouldn't be shown in quotation
                 marks as if it were a direct quote. */}

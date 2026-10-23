@@ -134,7 +134,7 @@ export function HardwareProfileWidget({
         type="button"
         id="hw-profile-widget"
         onClick={() => onExpandedChange(true)}
-        className="text-sm font-medium text-primary hover:underline text-left"
+        className="text-sm font-medium text-primary hover:underline text-start"
       >
         {summary}
       </button>
