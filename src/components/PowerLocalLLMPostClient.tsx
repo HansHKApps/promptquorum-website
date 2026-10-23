@@ -1485,10 +1485,9 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             {!isDirectoryPage && (
               <>
                 <a href={powerLLMHubPath(lang as any)} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Power Local LLM'}</a>
-                <span>/</span>
+                <span className="hidden md:inline">/</span>
               </>
             )}
-            <span className="hidden md:inline">/</span>
             <span className="hidden md:inline text-text-primary font-medium">{article.title}</span>
           </div>
           {/* LanguageSwitcher omitted: cluster ships noindex; path-based switcher to be added before launch */}
