@@ -6,7 +6,7 @@
 
 import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
-import { getLangDir } from '@/lib/i18n/constants'
+import { getLangDir, toOutputLocale } from '@/lib/i18n/constants'
 import type { McpToolName, UsageSnapshot } from '@/lib/mcp/usage'
 import { t } from './mcp-stats-i18n'
 import { CopyEndpointButton } from './CopyEndpointButton'
@@ -95,7 +95,9 @@ function localizedPath(lang: Language, path: string): string {
 
 export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: UsageSnapshot }) {
   const dir = getLangDir(lang)
-  const generatedDate = new Date(snapshot.generatedAt).toLocaleString('en-US', {
+  const loc = toOutputLocale(lang)
+  const fmt = (n: number) => n.toLocaleString(loc)
+  const generatedDate = new Date(snapshot.generatedAt).toLocaleString(loc, {
     timeZone: 'UTC',
     dateStyle: 'medium',
     timeStyle: 'short',
@@ -104,6 +106,9 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
   const last7Total = Object.values(snapshot.last7).reduce((a, b) => a + b, 0)
   const last30Total = Object.values(snapshot.last30).reduce((a, b) => a + b, 0)
   const medianDay = median(snapshot.days.map((d) => d.calls))
+  // Busiest tools first, so the table answers "what do assistants actually call?"
+  // at a glance; ties keep the grouped display order.
+  const rankedTools = [...TOOLS].sort((a, b) => snapshot.byTool[b] - snapshot.byTool[a])
 
   return (
     <main dir={dir} className="mx-auto max-w-3xl px-6 py-16">
@@ -123,6 +128,22 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
         </code>
         <CopyEndpointButton text="https://www.promptquorum.com/api/mcp" lang={lang} />
       </div>
+
+      <a
+        href="#usage"
+        className="mt-6 grid grid-cols-3 divide-x divide-border rtl:divide-x-reverse overflow-hidden rounded-xl border border-border bg-surface text-center hover:border-primary"
+      >
+        {[
+          { label: t('totalAllTime', lang), value: snapshot.total },
+          { label: t('trendLast30', lang), value: last30Total },
+          { label: t('trendLast7', lang), value: last7Total },
+        ].map((k) => (
+          <span key={k.label} className="block px-2 py-3">
+            <span className="block text-xl font-semibold tabular-nums text-text-primary sm:text-2xl">{fmt(k.value)}</span>
+            <span className="mt-0.5 block text-xs text-text-secondary">{k.label}</span>
+          </span>
+        ))}
+      </a>
 
       <aside className="mt-6 rounded-xl border-2 border-primary bg-primary/5 p-4">
         <p className="text-base font-bold text-text-primary">
@@ -215,12 +236,12 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
       <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('limitsHeading', lang)}</h2>
       <p className="mt-2 text-sm text-text-secondary">{tDocs('limitsBody', lang)}</p>
 
-      <h2 className="mt-10 text-lg font-bold text-text-primary">{t('usageHeading', lang)}</h2>
+      <h2 id="usage" className="mt-10 scroll-mt-20 text-lg font-bold text-text-primary">{t('usageHeading', lang)}</h2>
       <p className="mt-1 text-sm text-text-secondary">{t('usageExplainer', lang, { date: generatedDate })}</p>
 
       <div className="mt-4 rounded-xl border border-border bg-surface p-4">
         <div className="text-sm text-text-secondary">{t('totalAllTime', lang)}</div>
-        <div className="mt-1 text-3xl font-semibold text-text-primary">{snapshot.total.toLocaleString()}</div>
+        <div className="mt-1 text-3xl font-semibold text-text-primary">{fmt(snapshot.total)}</div>
       </div>
 
 
@@ -228,15 +249,15 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
       <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <div className="rounded-xl border border-border bg-surface p-4">
           <div className="text-sm text-text-secondary">{t('trendLast7', lang)}</div>
-          <div className="mt-1 text-2xl font-semibold text-text-primary">{last7Total.toLocaleString()}</div>
+          <div className="mt-1 text-2xl font-semibold text-text-primary">{fmt(last7Total)}</div>
         </div>
         <div className="rounded-xl border border-border bg-surface p-4">
           <div className="text-sm text-text-secondary">{t('trendLast30', lang)}</div>
-          <div className="mt-1 text-2xl font-semibold text-text-primary">{last30Total.toLocaleString()}</div>
+          <div className="mt-1 text-2xl font-semibold text-text-primary">{fmt(last30Total)}</div>
         </div>
         <div className="rounded-xl border border-border bg-surface p-4">
           <div className="text-sm text-text-secondary">{t('trendMedianDay', lang)}</div>
-          <div className="mt-1 text-2xl font-semibold text-text-primary">{medianDay.toLocaleString()}</div>
+          <div className="mt-1 text-2xl font-semibold text-text-primary">{fmt(medianDay)}</div>
         </div>
       </div>
       <div className="mt-3 rounded-xl border border-border bg-surface p-4">
@@ -251,24 +272,24 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
       <div className="mt-6 overflow-x-auto">
       <table className="w-full border-collapse text-sm">
         <thead>
-          <tr className="border-b border-border text-left text-text-secondary">
-            <th className="py-2 font-medium">{t('tableTool', lang)}</th>
-            <th className="py-2 font-medium">{t('tableTotalCalls', lang)}</th>
-            <th className="py-2 font-medium">{t('tableLast30', lang)}</th>
-            <th className="py-2 font-medium">{t('tableLast7', lang)}</th>
-            <th className="py-2 font-medium">{t('tableCallsToday', lang)}</th>
+          <tr className="border-b border-border text-start text-text-secondary">
+            <th scope="col" className="py-2 pe-3 text-start font-medium">{t('tableTool', lang)}</th>
+            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableTotalCalls', lang)}</th>
+            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableLast30', lang)}</th>
+            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableLast7', lang)}</th>
+            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableCallsToday', lang)}</th>
           </tr>
         </thead>
         <tbody>
-          {TOOLS.map((name) => (
+          {rankedTools.map((name) => (
             <tr key={name} className="border-b border-border/60">
-              <td dir="ltr" className="py-2 text-left font-mono text-text-primary">{name}</td>
-              <td className="py-2 text-text-primary">
-                {snapshot.byTool[name] === 0 ? <span className="text-text-muted">{t('noCallsYet', lang)}</span> : snapshot.byTool[name].toLocaleString()}
+              <td dir="ltr" className="py-2 pe-3 text-left font-mono text-xs text-text-primary">{name}</td>
+              <td className="py-2 ps-3 text-end tabular-nums text-text-primary">
+                {snapshot.byTool[name] === 0 ? <span className="text-text-muted">{t('noCallsYet', lang)}</span> : fmt(snapshot.byTool[name])}
               </td>
-              <td className="py-2 text-text-primary">{snapshot.last30[name].toLocaleString()}</td>
-              <td className="py-2 text-text-primary">{snapshot.last7[name].toLocaleString()}</td>
-              <td className="py-2 text-text-primary">{snapshot.today[name].toLocaleString()}</td>
+              {([snapshot.last30, snapshot.last7, snapshot.today] as const).map((col, i) => (
+                <td key={i} className={`py-2 ps-3 text-end tabular-nums ${col[name] === 0 ? 'text-text-muted' : 'text-text-primary'}`}>{fmt(col[name])}</td>
+              ))}
             </tr>
           ))}
         </tbody>
