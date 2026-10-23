@@ -5108,7 +5108,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "faster-whisper": {
@@ -5155,6 +5155,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "speechbrain-review",
+        "title": "SpeechBrain Review: An Open-Source PyTorch Toolkit for Speech and Text",
+        "url": "/power-local-llm/speechbrain-review",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "transcriptionsuite-review",
         "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
         "url": "/power-local-llm/transcriptionsuite-review",
@@ -5184,17 +5192,9 @@
         "url": "/power-local-llm/funclip-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "willow-inference-server-review",
-        "title": "Willow Inference Server Review: Self-Hosted Whisper ASR and TTS",
-        "url": "/power-local-llm/willow-inference-server-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Piper TTS": {
@@ -9659,6 +9659,20 @@
       }
     ],
     "totalCount": 3,
+    "capped": false
+  },
+  "SpeechBrain": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "speechbrain-review",
+        "title": "SpeechBrain Review: An Open-Source PyTorch Toolkit for Speech and Text",
+        "url": "/power-local-llm/speechbrain-review",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "candle-vllm": {
