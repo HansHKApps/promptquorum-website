@@ -7,6 +7,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     last_seo_review: '2026-10-19',
     next_seo_review_due: '2026-11-19',
@@ -793,6 +794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: 'The slide deck below covers: which local LLMs reach 128K, 256K and 1M tokens, KV-cache memory per model at 32K, 128K and the maximum window, why architecture decides memory, the usable-versus-advertised context gap (RULER, NoLiMa) and how to set num_ctx in Ollama. Download the PDF as a long context local LLM reference card.',
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',
@@ -1580,6 +1582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: 'La presentación siguiente cubre: qué LLM locales llegan a 128K, 256K y 1M tokens, la memoria de la caché KV por modelo a 32K, 128K y en la ventana máxima, por qué la arquitectura decide la memoria, la brecha entre contexto utilizable y anunciado (RULER, NoLiMa) y cómo ajustar num_ctx en Ollama. Descarga el PDF como tarjeta de referencia sobre LLM locales de contexto largo.',
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',
@@ -2367,6 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: 'تغطي الشرائح أدناه: أي نماذج LLM المحلية تبلغ 128K و256K و1M رمز، وذاكرة KV cache لكل نموذج عند 32K و128K وأقصى نافذة، ولماذا تحدد البنية الذاكرة، والفجوة بين السياق القابل للاستخدام والمعلن (RULER وNoLiMa)، وكيفية ضبط num_ctx في Ollama. نزّل ملف PDF كبطاقة مرجعية عن نماذج LLM المحلية ذات السياق الطويل.',
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',
@@ -3154,6 +3158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: 'Os slides abaixo cobrem: quais LLMs locais chegam a 128K, 256K e 1M tokens, a memória do cache KV por modelo a 32K, 128K e na janela máxima, por que a arquitetura decide a memória, a diferença entre contexto utilizável e anunciado (RULER, NoLiMa) e como definir num_ctx no Ollama. Baixe o PDF como cartão de referência sobre LLMs locais de contexto longo.',
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',
@@ -3941,6 +3946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: 'Die Folien unten behandeln: welche lokalen LLMs 128K, 256K und 1M Token erreichen, KV-Cache-Speicher pro Modell bei 32K, 128K und Maximalfenster, warum die Architektur den Speicher bestimmt, die Lücke zwischen nutzbarem und angegebenem Kontext (RULER, NoLiMa) und wie num_ctx in Ollama gesetzt wird. Laden Sie das PDF als Referenzkarte zu lokalen LLMs mit langem Kontext herunter.',
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',
@@ -4728,6 +4734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: 'Le diaporama ci-dessous couvre : quels LLM locaux atteignent 128K, 256K et 1M tokens, la mémoire du cache KV par modèle à 32K, 128K et à la fenêtre maximale, pourquoi l\'architecture décide de la mémoire, l\'écart entre contexte utilisable et annoncé (RULER, NoLiMa) et le réglage de num_ctx dans Ollama. Téléchargez le PDF comme aide-mémoire sur les LLM locaux à contexte long.',
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',
@@ -5515,6 +5522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: '以下のスライドでは、128K・256K・1Mトークンに到達するローカルLLM、32K・128K・最大ウィンドウでのモデル別KVキャッシュのメモリ量、アーキテクチャがメモリを決める理由、実用的なコンテキストと公称値の差（RULER、NoLiMa）、Ollamaでのnum_ctxの設定方法を扱います。PDFはロングコンテキスト対応ローカルLLMのリファレンスカードとしてダウンロードできます。',
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',
@@ -6302,6 +6310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: '以下幻灯片涵盖：哪些本地LLM能达到128K、256K和1M token，各模型在32K、128K和最大窗口下的KV缓存内存，架构为何决定内存，实际可用上下文与标称值的差距（RULER、NoLiMa），以及如何在Ollama中设置num_ctx。可下载PDF作为长上下文本地LLM参考卡。',
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'monthly',
     next_refresh_due: '2026-11-19',
     theme: 'Best Models',

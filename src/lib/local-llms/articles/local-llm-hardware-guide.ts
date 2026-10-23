@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -835,6 +836,7 @@ schema: {
       gammaDescription: 'The slide deck below covers: GPU VRAM tiers for 12/16/24 GB, best models per tier with VRAM usage and speed benchmarks, CPU-only inference on 16 GB RAM, and llama.cpp speed flags for RTX 4070 Ti. Download the PDF as a Local LLM Hardware Guide 2026 reference card.',
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -1640,6 +1642,7 @@ schema: {
       gammaDescription: 'La presentación de abajo cubre: niveles de VRAM de GPU para 12/16/24 GB, mejores modelos por nivel con uso de VRAM y benchmarks de velocidad, inferencia solo por CPU en 16 GB de RAM, y flags de velocidad de llama.cpp para la RTX 4070 Ti. Descarga el PDF como tarjeta de referencia de la Guía de hardware para LLM locales 2026.',
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -2463,6 +2466,7 @@ schema: {
       gammaDescription: 'تغطي شرائح العرض أدناه: مستويات GPU VRAM لـ 12/16/24 GB، أفضل النماذج لكل مستوى مع استخدام VRAM وقياسات السرعة المرجعية، الاستدلال على CPU فقط بذاكرة 16 GB، وعلامات سرعة llama.cpp لـ RTX 4070 Ti. نزّل ملف PDF كبطاقة مرجعية لدليل عتاد LLM المحلي 2026.',
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -3277,6 +3281,7 @@ schema: {
       gammaDescription: 'O slide deck abaixo cobre: faixas de VRAM de GPU para 12/16/24 GB, melhores modelos por faixa com uso de VRAM e benchmarks de velocidade, inferência apenas por CPU em 16 GB de RAM, e flags de velocidade do llama.cpp para a RTX 4070 Ti. Baixe o PDF como cartão de referência do Guia de Hardware para LLM Local 2026.',
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -4100,6 +4105,7 @@ schema: {
       gammaDescription: 'Das Foliendeck unten behandelt: GPU-VRAM-Stufen fuer 12/16/24 GB, beste Modelle pro Stufe mit VRAM-Nutzung und Geschwindigkeits-Benchmarks, CPU-only-Inferenz auf 16 GB RAM und llama.cpp-Geschwindigkeits-Flags fuer die RTX 4070 Ti. Lade das PDF als Referenzkarte zum Lokale-LLM-Hardware-Leitfaden 2026 herunter.',
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -4915,6 +4921,7 @@ schema: {
       gammaDescription: 'Le diaporama ci-dessous couvre : les paliers de VRAM GPU pour 12/16/24 Go, les meilleurs modeles par palier avec utilisation de VRAM et benchmarks de vitesse, l\'inference CPU seul sur 16 Go de RAM, et les drapeaux de vitesse llama.cpp pour RTX 4070 Ti. Telechargez le PDF comme fiche de reference du guide du materiel LLM local 2026.',
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -5729,6 +5736,7 @@ schema: {
       gammaDescription: '以下のスライドデッキは次をカバーします：12/16/24 GB向けのGPU VRAMティア、VRAM使用量と速度ベンチマーク付きの各ティアのベストモデル、16 GB RAMでのCPUのみの推論、そしてRTX 4070 Ti向けのllama.cpp速度フラグ。PDFを2026年ローカルLLMハードウェアガイドのリファレンスカードとしてダウンロードしてください。',
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
@@ -6552,6 +6560,7 @@ schema: {
       gammaDescription: '下面的幻灯片涵盖：12/16/24 GB 的 GPU 显存档位、每档位最佳模型及其显存使用和速度基准、16 GB 内存上的纯CPU推理，以及 RTX 4070 Ti 的 llama.cpp 速度标志。下载 PDF 作为 2026 年本地LLM硬件指南参考卡。',
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'monthly',
       affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',

@@ -3,6 +3,7 @@ import type { LLMArticle } from '../types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-en.webp',
     freshness_tier: 'semi_annual',
@@ -241,6 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
   },
   es: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-es.webp',
     freshness_tier: 'semi_annual',
@@ -440,6 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-ar.webp',
     freshness_tier: 'semi_annual',
@@ -639,6 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-de.webp',
     freshness_tier: 'semi_annual',
@@ -825,6 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-fr.webp',
     freshness_tier: 'semi_annual',
@@ -1011,6 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-ja.webp',
     freshness_tier: 'semi_annual',
@@ -1197,6 +1203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-zh.webp',
     freshness_tier: 'semi_annual',
@@ -1383,6 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-pt.webp',
     freshness_tier: 'semi_annual',
@@ -1595,6 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   // VERIFY: preços de hardware on-premise em BRL (RTX 4070 Ti ~R$ 4.500-6.500; multi-GPU ~R$ 40.000-120.000) e eletricidade (~R$ 50-90/mês, ~R$ 600/ano) são estimativas de varejo BR (jun/2026); custos de API/tokens da nuvem mantidos em USD (cobrados em dólar). Referências jurídicas latino-americanas do bloco es foram trocadas pela LGPD/ANPD do Brasil. Confirmar antes de publicar.
   ko: {
+    designSkin: 'hub',
     theme: '개인정보 보호 및 보안',
     heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-ko.webp',
     freshness_tier: 'semi_annual',

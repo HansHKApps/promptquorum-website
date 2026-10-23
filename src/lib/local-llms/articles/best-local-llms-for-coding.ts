@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       last_seo_review: '2026-10-17',
       next_seo_review_due: '2027-01-01',
@@ -710,6 +711,7 @@ schema: {
       gammaDescription: 'Interactive 14-slide presentation covering: what makes a good coding LLM, reported SWE-bench Pro and Verified scores, hardware-matched model selection (8 GB, 16 GB, 24 GB+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B and Qwen3 8B, why Kimi K2.6 is not a local pick, and IDE integration with Continue.dev. Download the reference card as PDF.',
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-16',
       theme: 'Best Models',
@@ -1348,6 +1350,7 @@ schema: {
       gammaDescription: 'Presentación interactiva de 14 diapositivas sobre: qué hace bueno a un LLM de código, puntuaciones SWE-bench Pro y Verified informadas, selección de modelo según hardware (8 GB, 16 GB, 24 GB+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B y Qwen3 8B, por qué Kimi K2.6 no es una opción local e integración con el IDE mediante Continue.dev. Descarga la tarjeta de referencia en PDF.',
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-16',
       theme: 'Best Models',
@@ -1986,6 +1989,7 @@ schema: {
       gammaDescription: 'عرض تفاعلي من 14 شريحة يغطي: ما الذي يجعل LLM جيداً للبرمجة، ونتائج SWE-bench Pro وVerified المعلنة، واختيار النموذج بحسب العتاد (8 GB و16 GB و24 GB+)، وQwen3.8 27B وDevstral Small 2 وLaguna XS 2.1 وCodestral 22B وQwen3 8B، ولماذا ليس Kimi K2.6 خياراً محلياً، والتكامل مع IDE عبر Continue.dev. نزّل بطاقة المرجع بصيغة PDF.',
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-16',
       theme: 'Best Models',
@@ -2458,6 +2462,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-16',
       theme: 'Beste Modelle',
@@ -3076,6 +3081,7 @@ schema: {
       gammaDescription: 'Interaktive Präsentation mit 14 Folien zu: Kriterien für gute Coding-LLMs, gemeldeten SWE-bench-Pro- und Verified-Werten, hardwareabhängiger Modellauswahl (8 GB, 16 GB, 24 GB+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B und Qwen3 8B, warum Kimi K2.6 keine lokale Wahl ist, und IDE-Integration mit Continue.dev. Referenzkarte als PDF herunterladen.',
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-16',
       theme: 'Meilleurs Modèles',
@@ -3690,6 +3696,7 @@ schema: {
       gammaDescription: 'Présentation interactive de 14 diapositives : critères d\'un bon LLM de code, scores SWE-bench Pro et Verified annoncés, choix du modèle selon le matériel (8 Go, 16 Go, 24 Go+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B et Qwen3 8B, pourquoi Kimi K2.6 n\'est pas un choix local, et intégration IDE avec Continue.dev. Téléchargez la fiche de référence en PDF.',
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-16',
       theme: 'ベストモデル',
@@ -4316,6 +4323,7 @@ schema: {
       gammaDescription: 'インタラクティブな14スライドのプレゼンテーション：優れたコーディングLLMの条件、公表されたSWE-bench ProとVerifiedのスコア、ハードウェア別モデル選択（8GB、16GB、24GB以上）、Qwen3.8 27B、Devstral Small 2、Laguna XS 2.1、Codestral 22B、Qwen3 8B、Kimi K2.6がローカル向きでない理由、Continue.devによるIDE統合。PDFのリファレンスカードをダウンロードできます。',
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_refresh_due: '2026-11-16',
       theme: '最佳模型',
@@ -4942,6 +4950,7 @@ schema: {
       gammaDescription: '交互式14张幻灯片演示：优秀编程LLM的标准、厂商公布的SWE-bench Pro与Verified分数、按硬件选择模型（8GB、16GB、24GB以上）、Qwen3.8 27B、Devstral Small 2、Laguna XS 2.1、Codestral 22B与Qwen3 8B、Kimi K2.6为何不适合本地运行，以及使用Continue.dev的IDE集成。可下载PDF参考卡。',
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'monthly',
       last_seo_review: '2026-10-17',
       next_seo_review_due: '2027-01-01',

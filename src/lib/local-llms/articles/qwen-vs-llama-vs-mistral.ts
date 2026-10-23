@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       next_seo_review_due: '2027-01-01',
       theme: 'Best Models',
@@ -555,6 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gammaDescription: 'The slide deck below covers: Qwen3.8-27B vs Llama 4 Scout vs Mistral benchmark comparison (SWE-bench, MoE VRAM realities), which model wins by task (best overall on 24 GB, coding, multilingual, long-context, RAM efficiency), size-by-size comparison including MoE tier, Devstral for agentic coding, Codestral for IDE, and Ollama quick-start commands. Download the PDF as a local LLM model selection reference card.',
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026',
@@ -1099,6 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gammaDescription: 'La presentación a continuación cubre: comparativa de benchmarks Qwen3.8-27B vs Llama 4 Scout vs Mistral (SWE-bench, realidades de VRAM en MoE), qué modelo gana por tarea (mejor general en 24 GB, programación, multilingüe, contexto largo, eficiencia de RAM), comparativa por tamaño incluyendo el nivel MoE, Devstral para programación agentiva, Codestral para IDE y comandos de inicio rápido con Ollama. Descarga el PDF como tarjeta de referencia para selección de modelos LLM locales.',
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: '⁨Qwen3.8-27B⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩',
@@ -1586,6 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gammaDescription: 'يغطي العرض التقديمي أدناه: مقارنة معايير Qwen3.8-27B مقابل Llama 4 Scout مقابل Mistral (SWE-bench، وقائع VRAM في MoE)، وأي نموذج يفوز حسب المهمة (الأفضل عام في 24 GB، البرمجة، متعدد اللغات، السياق الطويل، كفاءة RAM)، ومقارنة حسب الحجم تشمل مستوى MoE، وDevstral للبرمجة بالوكلاء، وCodestral لـ IDE، وأوامر البدء السريع مع Ollama. نزّل ملف PDF كبطاقة مرجعية لاختيار نماذج LLM المحلية.',
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026',
@@ -1911,6 +1915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gammaDescription: 'A apresentação abaixo cobre: comparação de benchmarks Qwen3.8-27B vs Llama 4 Scout vs Mistral (SWE-bench, realidades de VRAM em MoE), qual modelo vence por tarefa (melhor geral em 24 GB, programação, multilíngue, contexto longo, eficiência de RAM) e comandos de início rápido com Ollama. Baixe o PDF como cartão de referência para seleção de modelos LLM locais.',
     },
     de: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026: Qwen gewinnt',
@@ -2342,6 +2347,7 @@ schema: {
       gammaDescription: 'Die Präsentation umfasst: Qwen3 vs. Llama 3.x vs. Mistral Benchmark-Vergleich (84% vs. 82% vs. 79% MMLU bei 70B), welches Modell nach Aufgabe gewinnt (Coding, Mehrsprachigkeit, RAM-Effizienz), Größen-für-Größen-Vergleich über vier Klassen und Ollama-Schnellstart-Befehle. Laden Sie die PDF als Referenzkarte zur lokalen LLM-Modellauswahl herunter.',
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026 : Qwen gagne',
@@ -2716,6 +2722,7 @@ schema: {
       gammaDescription: 'Présentation : Qwen3.8-27B vs Llama 4 Scout vs Mistral benchmarks (87% vs 82% vs 79% MMLU), quelle famille gagne par tâche (meilleur global sur 24 Go, codage dense, agentic, contexte long, efficacité), architecture MoE et réalités VRAM expliquées, commandes Ollama démarrage. Télécharger PDF référence modèles LLM locaux.',
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026：Qwenが勝つ',
@@ -3120,6 +3127,7 @@ schema: {
       gammaDescription: '以下のスライドデッキは：Qwen3 vs Llama 3.x vs Mistralのベンチマーク比較（70Bで84% vs 82% vs 79% MMLU）、タスク別での優勝モデル（コーディング、多言語、RAM効率）、4つのクラスにわたるサイズ別比較、Ollamaクイックスタートコマンドをカバーしています。PDFをローカルLLMモデル選択のリファレンスカードとしてダウンロードしてください。',
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026：Qwen编程胜出',
@@ -3533,6 +3541,7 @@ schema: {
       gammaDescription: '以下幻灯片涵盖：Qwen3 vs Llama 3.x vs Mistral基准对比（70B时MMLU为84% vs 82% vs 79%）、各任务获胜模型（编程、多语言、RAM效率）、四个类别的大小对比，以及Ollama快速上手命令。将PDF下载为本地LLM模型选择参考卡。',
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'monthly',
       next_seo_review_due: '2027-01-01',
       theme: 'Best Models',

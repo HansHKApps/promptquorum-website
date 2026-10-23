@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -782,6 +783,7 @@ schema: {
       gammaDescription: 'The slide deck below covers: Q4_K_M vs Q8_0 vs GGUF format comparison, RAM savings by model size (3B-70B), quality loss by quantization level, and which quantization to choose for your hardware. Download the PDF as an LLM quantization reference card.',
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -1424,6 +1426,7 @@ schema: {
       gammaDescription: 'El slide deck a continuación cubre: comparación Q4_K_M vs Q8_0 vs formato GGUF, ahorro de RAM por tamaño de modelo (3B-70B), pérdida de calidad por nivel de cuantización y qué cuantización elegir para tu hardware. Descarga el PDF como tarjeta de referencia de cuantización de LLM.',
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -2066,6 +2069,7 @@ schema: {
       gammaDescription: 'يغطي العرض التقديمي أدناه: مقارنة Q4_K_M مقابل Q8_0 مقابل صيغة GGUF، وتوفير RAM حسب حجم النموذج (3B-70B)، وفقدان الجودة حسب مستوى التكميم، وأي تكميم تختار لعتادك. نزّل ملف PDF كبطاقة مرجعية لتكميم LLM.',
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -2659,6 +2663,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -3332,6 +3337,7 @@ schema: {
       gammaDescription: 'Das Slide-Deck umfasst: Q4_K_M vs Q8_0 vs GGUF-Formatvergleich, RAM-Einsparungen nach Modellgröße (3B-70B), Qualitätsverlust nach Quantisierungsstufe und welche Quantisierung für Ihre Hardware geeignet ist. PDF als LLM-Quantisierungs-Referenzkarte herunterladen.',
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -3992,6 +3998,7 @@ schema: {
       gammaDescription: 'Le diaporama ci-dessous couvre : comparaison Q4_K_M vs Q8_0 vs GGUF, économies RAM par taille de modèle (3B-70B), perte de qualité par niveau de quantification, et quelle quantification choisir pour votre matériel. Téléchargez le PDF comme référence de quantification LLM.',
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -4670,6 +4677,7 @@ schema: {
       gammaDescription: '下記のスライドデッキには次の内容が含まれています：Q4_K_M vs Q8_0 vs GGUF形式の比較、モデルサイズ（3B～70B）別のRAM削減量、量子化レベル別の品質低下、お使いのハードウェアに適した量子化の選択方法。PDFをLLM量子化リファレンスカードとしてダウンロードできます。',
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
@@ -5321,6 +5329,7 @@ schema: {
       gammaDescription: '下方幻灯片涵盖：Q4_K_M vs Q8_0 vs GGUF格式对比、按模型大小（3B～70B）节省的RAM、各量化级别的质量损失，以及如何为您的硬件选择量化级别。将PDF下载为LLM量化参考卡片。',
     },
   ko: {
+    designSkin: 'hub',
       freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',

@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Best Small Local LLMs 2026: Top 4B Models and the Smallest to Run Locally',
@@ -549,6 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Mejores LLM locales pequeños 2026: top modelos de 4B y el más pequeño para ejecutar en local',
@@ -1011,6 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية الصغيرة ⁨2026⁩: أفضل نماذج ⁨4B⁩ وأصغر نموذج للتشغيل محليًا',
@@ -1469,6 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Melhores LLMs locais pequenos 2026: top modelos 4B e o menor para rodar',
@@ -1931,6 +1935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Beste kleine lokale LLMs 2026: Top-4B-Modelle und das kleinste lokal lauffähige LLM',
@@ -2472,6 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Meilleurs petits LLM locaux 2026 : top des modèles 4B et le plus petit à exécuter en local',
@@ -3014,6 +3020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: '2026年版 最高の小型ローカルLLM：4Bモデル比較と最小で動かせるモデル',
@@ -3517,6 +3524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: '2026年最佳小型本地LLM：最强4B模型与最小可运行模型',
@@ -4017,6 +4025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ko: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: '2026년 최고의 소형 로컬 LLM: 상위 4B 모델과 로컬에서 실행 가능한 최소 모델',

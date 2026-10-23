@@ -20,6 +20,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-en.webp',
     freshness_tier: 'semi_annual',
@@ -440,6 +441,7 @@ const response = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-de.webp',
     freshness_tier: 'semi_annual',
@@ -830,6 +832,7 @@ const response = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
@@ -1220,6 +1223,7 @@ const response = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-es.webp',
     freshness_tier: 'semi_annual',
@@ -1610,6 +1614,7 @@ const response = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
@@ -2000,6 +2005,7 @@ const response = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
@@ -2390,6 +2396,7 @@ const response = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
@@ -2780,6 +2787,7 @@ const response = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
@@ -3170,6 +3178,7 @@ const response = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/snug-protocol-review-hero-ko.webp',
     freshness_tier: 'semi_annual',

@@ -10,6 +10,7 @@ const OG_SLUG = 'best-local-llm-apps-android-2026';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -603,6 +604,7 @@ snippetBlocks: [
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -1218,6 +1220,7 @@ snippetBlocks: [
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -1814,6 +1817,7 @@ snippetBlocks: [
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -2426,6 +2430,7 @@ snippetBlocks: [
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -3019,6 +3024,7 @@ snippetBlocks: [
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -3611,6 +3617,7 @@ snippetBlocks: [
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -4203,6 +4210,7 @@ snippetBlocks: [
     },
   },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',
@@ -4795,6 +4803,7 @@ snippetBlocks: [
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
     dateModified: '2026-10-19',

@@ -5,6 +5,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -346,6 +347,7 @@ ollama run qwen3-vl:8b
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -687,6 +689,7 @@ ollama run qwen3-vl:8b
   },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -1028,6 +1031,7 @@ ollama run qwen3-vl:8b
   },
 
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -1369,6 +1373,7 @@ ollama run qwen3-vl:8b
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -1710,6 +1715,7 @@ ollama run qwen3-vl:8b
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -2051,6 +2057,7 @@ ollama run qwen3-vl:8b
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -2392,6 +2399,7 @@ ollama run qwen3-vl:8b
   },
 
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',
@@ -2733,6 +2741,7 @@ ollama run qwen3-vl:8b
   },
 
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-19',
     theme: 'Advanced Techniques',

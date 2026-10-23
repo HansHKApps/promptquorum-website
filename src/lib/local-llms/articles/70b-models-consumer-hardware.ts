@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware',
@@ -779,6 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Ejecutar un LLM 70B en local 2026: RAM, VRAM y velocidad',
@@ -1323,6 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ar: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'تشغيل نموذج 70B محليًا 2026: الذاكرة وVRAM والسرعة',
@@ -2076,6 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     pt: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Rodar LLM de 70B localmente em 2026: RAM, VRAM e velocidade',
@@ -2620,6 +2624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Beste Modelle',
       title: '70B-LLM lokal ausführen 2026: RAM, VRAM & Tempo je Hardware',
@@ -3370,6 +3375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     fr: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Meilleurs modèles',
       title: "Exécuter un LLM 70B en local 2026 : RAM, VRAM et vitesse",
@@ -4135,6 +4141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ja: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: '70B LLMをローカルで動かす2026年版：ハード別のRAM・VRAM・速度',
@@ -5196,6 +5203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     zh: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: '最佳模型',
       title: '本地运行 70B 大模型 2026：各硬件内存与速度',
@@ -5949,6 +5957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ko: {
+      designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: '최고 모델',
       title: '70B LLM 로컬 실행 2026: 하드웨어·RAM·속도',
