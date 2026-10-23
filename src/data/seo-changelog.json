@@ -5008,5 +5008,240 @@
       "t14": "2026-11-01",
       "t28": "2026-11-15"
     }
+  },
+  {
+    "id": "c7ad1fbd-622b-4628-bb7d-6ed3e4cda88d",
+    "slug": "/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-23T08:53:42.495Z",
+    "fields": [
+      {
+        "field": "internalLinks",
+        "old": "1 link to topic page (Related Reading only)",
+        "new": "3 links to topic page (overview, onTheName, Related Reading)"
+      }
+    ],
+    "reason": "cross-link app review and topic page: pointer to uncensored LLM list in overview and name section (links only, 9 locales)",
+    "queries": [
+      "locally uncensored",
+      "uncensored local ai",
+      "local uncensored"
+    ],
+    "baseline": {
+      "position": 5.58,
+      "impressions": 33022,
+      "clicks": 461,
+      "ctr": 0.013960390043001635,
+      "period": "28d EN GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eff4db52-909a-431b-81e9-0743a00742f3",
+    "slug": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T08:53:42.555Z",
+    "fields": [
+      {
+        "field": "internalLinks",
+        "old": "1 link to review (Related Reading, long title anchor)",
+        "new": "2 links to review (setup item + short anchor in Related Reading)"
+      }
+    ],
+    "reason": "cross-link app review and topic page: setup item and short anchor to review (links only, title/meta/headings untouched, 9 locales)",
+    "queries": [
+      "nsfw llm",
+      "best nsfw llm",
+      "llm without restrictions"
+    ],
+    "baseline": {
+      "position": 4.89,
+      "impressions": 70577,
+      "clicks": 4566,
+      "ctr": 0.06469529733482579,
+      "period": "28d EN GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7ee70480-dca9-4364-a8de-53198ab41a6b",
+    "slug": "/fr/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-23T09:34:22.305Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored : présentation, sécurité, téléchargement",
+        "new": "Locally Uncensored : aperçu, sécurité, téléchargement"
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 7.37,
+      "impressions": 230,
+      "clicks": 12,
+      "ctr": 0.05217391304347826,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a7b14300-d47f-410d-9bb2-928dac919ccc",
+    "slug": "/de/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T09:34:22.411Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Unzensierte LLMs für Erotik & NSFW-Texte 2026",
+        "new": "Unzensierte lokale LLMs für Erotik & NSFW-Texte 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Unzensierte lokale LLMs ohne Einschränkungen für Erotik & NSFW-Texte: Hermes 3 vs. Dolphin 3.0, Ollama-Setup und die ethischen Grenzen.",
+        "new": "Unzensierte lokale LLMs ohne Einschränkungen für Erotik & NSFW-Texte: Hermes 3 vs. Dolphin 3.0, Setup mit Ollama und LM Studio und die ethischen Grenzen."
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 5.21,
+      "impressions": 2565,
+      "clicks": 241,
+      "ctr": 0.09395711500974659,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "97ad5041-d83d-464d-a4f7-ddca3ad4e824",
+    "slug": "/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T09:34:22.481Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLMs non censurés pour érotisme & NSFW 2026",
+        "new": "LLM locaux non censurés pour érotisme & NSFW 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Meilleurs LLM locaux non censurés, sans restriction de contenu, pour l'érotisme et le NSFW : Hermes 3 vs Dolphin 3.0, configuration Ollama et les limites éthiques.",
+        "new": "Meilleurs LLM locaux non censurés, sans restriction, pour l'érotisme et le NSFW : Hermes 3 vs Dolphin 3.0, configuration Ollama et les limites éthiques."
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 5.36,
+      "impressions": 1934,
+      "clicks": 144,
+      "ctr": 0.07445708376421924,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c93c46fe-6d85-4caf-a823-2a41e6e6a17f",
+    "slug": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T09:34:22.546Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。無修正/非検閲モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。",
+        "new": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。"
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 4.96,
+      "impressions": 18702,
+      "clicks": 2011,
+      "ctr": 0.10752860656614266,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e45222aa-19ee-465a-864f-a3734da2a8ff",
+    "slug": "/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T09:34:22.605Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "无限制本地LLM：情色与NSFW创作2026",
+        "new": "无限制本地LLM：情色与NSFW创作指南2026"
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 6.07,
+      "impressions": 6806,
+      "clicks": 1443,
+      "ctr": 0.2120188069350573,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bfe20f83-ba44-40aa-be1e-d7fc969fc413",
+    "slug": "/es/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T09:34:22.654Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLMs sin censura para erótica y NSFW 2026",
+        "new": "Mejores LLMs locales sin censura para erótica y NSFW 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Los mejores LLMs locales sin censura, sin restricciones de contenido, para erótica y NSFW: Hermes 3 vs Dolphin 3.0, configuración en Ollama y los límites éticos.",
+        "new": "Los mejores LLMs locales sin censura, sin restricciones, para erótica y NSFW: Hermes 3 vs Dolphin 3.0, configuración en Ollama y los límites éticos."
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 5.4,
+      "impressions": 1823,
+      "clicks": 133,
+      "ctr": 0.07295666483817882,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "2ee2d9c0-4116-44fd-96a2-285d9a152113",
+    "slug": "/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T09:34:22.704Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "에로티카 & NSFW 무검열 로컬 LLM 2026",
+        "new": "에로티카 & NSFW 무검열 로컬 LLM 추천 2026"
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 4.88,
+      "impressions": 5385,
+      "clicks": 523,
+      "ctr": 0.09712163416898793,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "264d1099-fc37-428b-a037-f9db3cc64ac9",
+    "slug": "/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-23T09:34:22.764Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLMs sem censura para erótica e NSFW 2026",
+        "new": "Melhores LLMs locais sem censura para erótica e NSFW 2026"
+      }
+    ],
+    "reason": "meta length fix to locale budget (strict-on-changed gate); wording otherwise unchanged",
+    "baseline": {
+      "position": 5.52,
+      "impressions": 994,
+      "clicks": 76,
+      "ctr": 0.07645875251509054,
+      "period": "28d GSC export 2026-10-17 (page level)"
+    },
+    "deployedAt": null
   }
 ]

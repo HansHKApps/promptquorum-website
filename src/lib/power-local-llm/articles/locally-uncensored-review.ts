@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'What Is Locally Uncensored?',
-        content: '**Locally Uncensored is a desktop application that gives chat, coding, and image-generation tools running on your own computer a single interface, instead of requiring a separate app or browser tab for each one.** Per its [GitHub repository](https://github.com/PurpleDoubleD/locally-uncensored), it is built with [Tauri](https://tauri.app) and does not require an existing inference server to already be running — it detects backends already installed on the machine, or installs and manages its own bundled engine ("LU Engine") if none are present.',
+        content: '**Locally Uncensored is a desktop application that gives chat, coding, and image-generation tools running on your own computer a single interface, instead of requiring a separate app or browser tab for each one.** Per its [GitHub repository](https://github.com/PurpleDoubleD/locally-uncensored), it is built with [Tauri](https://tauri.app) and does not require an existing inference server to already be running — it detects backends already installed on the machine, or installs and manages its own bundled engine ("LU Engine") if none are present. Looking for uncensored models rather than this app? See [uncensored local LLMs ranked by hardware tier](/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         items: [
           'Core function: a desktop chat/code/image interface that connects to local inference backends already on your machine, or to its own bundled engine',
           'Detected/managed backends, per the [GitHub README](https://github.com/PurpleDoubleD/locally-uncensored): [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM, [LM Studio](https://lmstudio.ai), [Jan](https://jan.ai), TabbyAPI, [GPT4All](https://www.nomic.ai/gpt4all), Aphrodite, SGLang, and TGI',
@@ -209,6 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locally Uncensored does not train, publish, or maintain any model itself — it is a front end that runs whatever model you choose to load through a connected backend',
           'The app applies no content-moderation layer of its own on top of a loaded model\'s output; whatever a given model produces reflects that model\'s own training and configuration, not a filter added or removed by this app',
           'This means the user, not Locally Uncensored, controls which model is loaded and what that model\'s existing behavior is — the app is a delivery mechanism for local inference, not a source of content policy',
+          'For what the terms "abliterated" and "uncensored" mean for models, and a ranked list of such models, see [uncensored vs abliterated vs fine-tuned models explained](/power-local-llm/uncensored-local-llm-creative-writing-ethics)',
         ],
         note: 'This section describes documented, factual mechanics — what "abliterated" means as a model-publishing term, and that Locally Uncensored itself adds no moderation layer — without characterizing what any specific model can be prompted to produce. Running any local model, uncensored or otherwise, remains subject to the same legal and platform terms that would apply to content you produce with any other software.',
       },
@@ -413,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'Was ist Locally Uncensored?',
-        content: '**Locally Uncensored ist eine Desktop-Anwendung, die Chat-, Code- und Bildgenerierungs-Tools auf Ihrem eigenen Rechner eine einzige Oberfläche gibt, statt für jedes eine separate App oder einen Browser-Tab zu erfordern.** Laut dem [GitHub-Repository](https://github.com/PurpleDoubleD/locally-uncensored) ist sie mit [Tauri](https://tauri.app) gebaut und setzt keinen bereits laufenden Inferenz-Server voraus — sie erkennt bereits installierte Backends auf dem Rechner oder installiert und verwaltet ihre eigene mitgelieferte Engine ("LU Engine"), falls keines vorhanden ist.',
+        content: '**Locally Uncensored ist eine Desktop-Anwendung, die Chat-, Code- und Bildgenerierungs-Tools auf Ihrem eigenen Rechner eine einzige Oberfläche gibt, statt für jedes eine separate App oder einen Browser-Tab zu erfordern.** Laut dem [GitHub-Repository](https://github.com/PurpleDoubleD/locally-uncensored) ist sie mit [Tauri](https://tauri.app) gebaut und setzt keinen bereits laufenden Inferenz-Server voraus — sie erkennt bereits installierte Backends auf dem Rechner oder installiert und verwaltet ihre eigene mitgelieferte Engine ("LU Engine"), falls keines vorhanden ist. Sie suchen unzensierte Modelle statt dieser App? Siehe [unzensierte lokale LLMs, gereiht nach Hardware-Stufe](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         items: [
           'Kernfunktion: eine Desktop-Oberfläche für Chat, Code und Bilder, die sich mit bereits auf dem Rechner installierten lokalen Inferenz-Backends verbindet, oder mit der eigenen mitgelieferten Engine',
           'Erkannte/verwaltete Backends, laut [GitHub-README](https://github.com/PurpleDoubleD/locally-uncensored): [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM, [LM Studio](https://lmstudio.ai), [Jan](https://jan.ai), TabbyAPI, [GPT4All](https://www.nomic.ai/gpt4all), Aphrodite, SGLang und TGI',
@@ -526,6 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locally Uncensored trainiert, veröffentlicht oder pflegt selbst kein Modell — es ist eine Oberfläche, die das jeweils über ein verbundenes Backend geladene Modell ausführt',
           'Die App wendet selbst keine Inhaltsmoderationsebene auf die Ausgabe eines geladenen Modells an; was ein bestimmtes Modell erzeugt, spiegelt das eigene Training und die Konfiguration dieses Modells wider, nicht einen von dieser App hinzugefügten oder entfernten Filter',
           'Das bedeutet: Der Nutzer, nicht Locally Uncensored, kontrolliert, welches Modell geladen wird und welches Verhalten dieses Modell mitbringt — die App ist ein Bereitstellungsmechanismus für lokale Inferenz, keine Quelle einer Inhaltsrichtlinie',
+          'Was die Begriffe "abliterated" und "unzensiert" bei Modellen bedeuten, samt gereihter Modellliste: [Unzensiert, abliteriert, feinjustiert: was die Begriffe bedeuten](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics)',
         ],
         note: 'Dieser Abschnitt beschreibt dokumentierte, faktische Mechanik — was "abliterated" als Begriff der Modellveröffentlichung bedeutet, und dass Locally Uncensored selbst keine Moderationsebene hinzufügt —, ohne zu charakterisieren, was ein bestimmtes Modell durch entsprechende Eingaben erzeugen kann. Der Betrieb jedes lokalen Modells, ob "uncensored" oder anders, unterliegt weiterhin denselben rechtlichen und plattformseitigen Bedingungen, die auch für mit jeder anderen Software erzeugte Inhalte gelten würden.',
       },
@@ -660,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Les personnes qui souhaitent une seule application de bureau pour le chat, un agent de codage, la génération d\'images, la génération de vidéos et l\'entraînement de LoRA en local, avec la possibilité d\'accéder au modèle hébergé sur leur PC depuis un smartphone ou une tablette',
     primaryTerm: 'Locally Uncensored',
     title: 'Locally Uncensored: avis sur le chat, l\'image et la vidéo locaux en une seule application',
-    seoTitle: 'Locally Uncensored : présentation, sécurité, téléchargement',
+    seoTitle: 'Locally Uncensored : aperçu, sécurité, téléchargement',
     intro: 'Locally Uncensored ([locallyuncensored.com](https://locallyuncensored.com), code source sur [github.com/PurpleDoubleD/locally-uncensored](https://github.com/PurpleDoubleD/locally-uncensored)) est une application de bureau gratuite et open source pour Windows, Linux et macOS (bêta) qui exécute des modèles de chat, de code et de génération d\'images sur votre propre matériel via un seul installeur. Elle fonctionne comme une interface au-dessus de moteurs d\'inférence locaux existants — [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io) et d\'autres — ou via son propre "LU Engine" intégré si aucun n\'est déjà installé. Cet avis présente ce que fait réellement l\'application, comment fonctionne son couplage avec un téléphone, sa licence et son modèle tarifaire réels, et sa place face aux autres applications de chat local.',
     metaDescription: 'Locally Uncensored est une appli gratuite et open source (AGPL-3.0) pour chat, image et vidéo IA en local. Fiable ? Téléchargement, GPU, Mac et mobile.',
     readTime: '11 min de lecture',
@@ -730,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'Qu\'est-ce que Locally Uncensored ?',
-        content: '**Locally Uncensored est une application de bureau qui réunit dans une seule interface des outils de chat, de code et de génération d\'images tournant sur votre propre ordinateur, plutôt que d\'exiger une application ou un onglet de navigateur distinct pour chacun.** Selon son [dépôt GitHub](https://github.com/PurpleDoubleD/locally-uncensored), elle est construite avec [Tauri](https://tauri.app) et ne nécessite pas qu\'un serveur d\'inférence tourne déjà — elle détecte les moteurs déjà installés sur la machine, ou installe et gère son propre moteur intégré ("LU Engine") si aucun n\'est présent.',
+        content: '**Locally Uncensored est une application de bureau qui réunit dans une seule interface des outils de chat, de code et de génération d\'images tournant sur votre propre ordinateur, plutôt que d\'exiger une application ou un onglet de navigateur distinct pour chacun.** Selon son [dépôt GitHub](https://github.com/PurpleDoubleD/locally-uncensored), elle est construite avec [Tauri](https://tauri.app) et ne nécessite pas qu\'un serveur d\'inférence tourne déjà — elle détecte les moteurs déjà installés sur la machine, ou installe et gère son propre moteur intégré ("LU Engine") si aucun n\'est présent. Vous cherchez des modèles non censurés plutôt que cette application ? Voir [LLM locaux non censurés, classés par palier matériel](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         items: [
           'Fonction principale : une interface de bureau pour chat, code et images qui se connecte aux moteurs d\'inférence locaux déjà présents sur votre machine, ou à son propre moteur intégré',
           'Moteurs détectés/gérés, selon le [README GitHub](https://github.com/PurpleDoubleD/locally-uncensored) : [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM, [LM Studio](https://lmstudio.ai), [Jan](https://jan.ai), TabbyAPI, [GPT4All](https://www.nomic.ai/gpt4all), Aphrodite, SGLang et TGI',
@@ -843,6 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locally Uncensored n\'entraîne, ne publie ni ne maintient lui-même aucun modèle — c\'est une interface qui exécute le modèle choisi par l\'utilisateur via un moteur connecté',
           'L\'application n\'applique elle-même aucune couche de modération de contenu sur la sortie d\'un modèle chargé ; ce qu\'un modèle donné produit reflète l\'entraînement et la configuration propres à ce modèle, et non un filtre ajouté ou retiré par cette application',
           'Cela signifie que c\'est l\'utilisateur, et non Locally Uncensored, qui contrôle le modèle chargé et le comportement existant de ce modèle — l\'application est un mécanisme de mise à disposition pour l\'inférence locale, pas une source de politique de contenu',
+          'Pour comprendre ce que signifient « abliterated » et « non censuré » pour des modèles, avec un classement de ces modèles, voir [Non censuré, abliteré, fine-tuné : ce que veulent dire les termes](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics)',
         ],
         note: 'Cette section décrit une mécanique documentée et factuelle — ce que signifie « abliterated » comme terme employé par les éditeurs de modèles, et le fait que Locally Uncensored n\'ajoute lui-même aucune couche de modération — sans caractériser ce qu\'un modèle donné peut être amené à produire. L\'utilisation de tout modèle local, « uncensored » ou non, reste soumise aux mêmes conditions légales et de plateforme que celles applicables à tout contenu produit avec n\'importe quel autre logiciel.',
       },
@@ -1047,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: '¿Qué es Locally Uncensored?',
-        content: '**Locally Uncensored es una aplicación de escritorio que reúne en una sola interfaz herramientas de chat, código y generación de imágenes que corren en tu propio equipo, en lugar de exigir una app o pestaña de navegador distinta para cada una.** Según su [repositorio de GitHub](https://github.com/PurpleDoubleD/locally-uncensored), está construida con [Tauri](https://tauri.app) y no requiere que ya haya un servidor de inferencia en ejecución: detecta backends ya instalados en el equipo, o instala y gestiona su propio motor incluido ("LU Engine") si no hay ninguno presente.',
+        content: '**Locally Uncensored es una aplicación de escritorio que reúne en una sola interfaz herramientas de chat, código y generación de imágenes que corren en tu propio equipo, en lugar de exigir una app o pestaña de navegador distinta para cada una.** Según su [repositorio de GitHub](https://github.com/PurpleDoubleD/locally-uncensored), está construida con [Tauri](https://tauri.app) y no requiere que ya haya un servidor de inferencia en ejecución: detecta backends ya instalados en el equipo, o instala y gestiona su propio motor incluido ("LU Engine") si no hay ninguno presente. ¿Buscas modelos sin censura en lugar de esta app? Consulta los [LLM locales sin censura, ordenados por nivel de hardware](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         items: [
           'Función principal: una interfaz de escritorio para chat, código e imágenes que se conecta a backends de inferencia local ya presentes en tu equipo, o a su propio motor incluido',
           'Backends detectados/gestionados, según el [README de GitHub](https://github.com/PurpleDoubleD/locally-uncensored): [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM, [LM Studio](https://lmstudio.ai), [Jan](https://jan.ai), TabbyAPI, [GPT4All](https://www.nomic.ai/gpt4all), Aphrodite, SGLang y TGI',
@@ -1160,6 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locally Uncensored no entrena, publica ni mantiene ningún modelo por sí misma; es una interfaz que ejecuta el modelo que elijas cargar a través de un backend conectado',
           'La app no aplica ninguna capa de moderación de contenido propia sobre la salida de un modelo cargado; lo que produce un modelo determinado refleja el entrenamiento y la configuración propios de ese modelo, no un filtro añadido o eliminado por esta app',
           'Esto significa que es el usuario, no Locally Uncensored, quien controla qué modelo se carga y cuál es el comportamiento existente de ese modelo — la app es un mecanismo de entrega para la inferencia local, no una fuente de política de contenido',
+          'Para saber qué significan "abliterated" y "sin censura" en los modelos, con una lista ordenada de modelos, consulta [Sin censura, abliterado y fine-tuned: qué significan los términos](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics)',
         ],
         note: 'Esta sección describe una mecánica documentada y factual — qué significa "abliterated" como término de publicación de modelos, y el hecho de que Locally Uncensored en sí no añade ninguna capa de moderación — sin caracterizar lo que un modelo específico puede producir si se le indica. Usar cualquier modelo local, "uncensored" o no, sigue sujeto a las mismas condiciones legales y de plataforma que aplicarían a cualquier contenido producido con otro software.',
       },
@@ -1364,7 +1368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'O que é o Locally Uncensored?',
-        content: '**Locally Uncensored é um aplicativo de desktop que reúne em uma única interface ferramentas de chat, código e geração de imagens que rodam no seu próprio computador, em vez de exigir um app ou aba do navegador separado para cada uma.** Segundo seu [repositório no GitHub](https://github.com/PurpleDoubleD/locally-uncensored), ele é construído com [Tauri](https://tauri.app) e não exige que um servidor de inferência já esteja em execução — ele detecta backends já instalados na máquina, ou instala e gerencia seu próprio motor embutido ("LU Engine") caso nenhum esteja presente.',
+        content: '**Locally Uncensored é um aplicativo de desktop que reúne em uma única interface ferramentas de chat, código e geração de imagens que rodam no seu próprio computador, em vez de exigir um app ou aba do navegador separado para cada uma.** Segundo seu [repositório no GitHub](https://github.com/PurpleDoubleD/locally-uncensored), ele é construído com [Tauri](https://tauri.app) e não exige que um servidor de inferência já esteja em execução — ele detecta backends já instalados na máquina, ou instala e gerencia seu próprio motor embutido ("LU Engine") caso nenhum esteja presente. Está procurando modelos sem censura em vez deste app? Veja os [LLMs locais sem censura, ordenados por nível de hardware](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         items: [
           'Função principal: uma interface de desktop para chat, código e imagens que se conecta a backends de inferência local já presentes na sua máquina, ou ao próprio motor embutido',
           'Backends detectados/gerenciados, segundo o [README do GitHub](https://github.com/PurpleDoubleD/locally-uncensored): [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM, [LM Studio](https://lmstudio.ai), [Jan](https://jan.ai), TabbyAPI, [GPT4All](https://www.nomic.ai/gpt4all), Aphrodite, SGLang e TGI',
@@ -1477,6 +1481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Locally Uncensored não treina, publica nem mantém nenhum modelo por conta própria — é uma interface que executa o modelo que você escolher carregar por meio de um backend conectado',
           'O app não aplica nenhuma camada de moderação de conteúdo própria sobre a saída de um modelo carregado; o que um determinado modelo produz reflete o próprio treinamento e a configuração desse modelo, não um filtro adicionado ou removido por este app',
           'Isso significa que é o usuário, não o Locally Uncensored, quem controla qual modelo é carregado e qual é o comportamento existente desse modelo — o app é um mecanismo de entrega para inferência local, não uma fonte de política de conteúdo',
+          'Para entender o que "abliterated" e "sem censura" significam em modelos, com uma lista ordenada de modelos, veja [Sem censura, abliterado e fine-tuned: o que os termos significam](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics)',
         ],
         note: 'Esta seção descreve uma mecânica documentada e factual — o que "abliterated" significa como termo usado por editores de modelos, e o fato de que o Locally Uncensored em si não adiciona nenhuma camada de moderação — sem caracterizar o que um modelo específico pode ser levado a produzir. Usar qualquer modelo local, "uncensored" ou não, continua sujeito às mesmas condições legais e de plataforma que se aplicariam a qualquer conteúdo produzido com outro software.',
       },
@@ -1681,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'Locally Uncensoredとは？',
-        content: '**Locally Uncensoredは、自分のコンピューター上で動くチャット・コード・画像生成ツールを、それぞれ別のアプリやブラウザタブを用意することなく、1つのインターフェースにまとめるデスクトップアプリケーションです。** [GitHubリポジトリ](https://github.com/PurpleDoubleD/locally-uncensored)によれば、[Tauri](https://tauri.app)で構築されており、既存の推論サーバーがすでに動作していることを前提としません — マシン上に既にインストールされているバックエンドを検出するか、何もなければ独自バンドルのエンジン（「LU Engine」）をインストール・管理します。',
+        content: '**Locally Uncensoredは、自分のコンピューター上で動くチャット・コード・画像生成ツールを、それぞれ別のアプリやブラウザタブを用意することなく、1つのインターフェースにまとめるデスクトップアプリケーションです。** [GitHubリポジトリ](https://github.com/PurpleDoubleD/locally-uncensored)によれば、[Tauri](https://tauri.app)で構築されており、既存の推論サーバーがすでに動作していることを前提としません — マシン上に既にインストールされているバックエンドを検出するか、何もなければ独自バンドルのエンジン（「LU Engine」）をインストール・管理します。このアプリではなく無検閲モデルをお探しの方は、[無検閲ローカルLLMおすすめ一覧：ハードウェア段階別](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics)をご覧ください。',
         items: [
           '中核機能：自分のマシン上に既にあるローカル推論バックエンド、または独自バンドルのエンジンに接続する、チャット・コード・画像用のデスクトップインターフェース',
           '検出・管理対象のバックエンド（[GitHubのREADME](https://github.com/PurpleDoubleD/locally-uncensored)より）：[Ollama](https://ollama.com)、[llama.cpp](https://github.com/ggml-org/llama.cpp)、[KoboldCpp](https://github.com/LostRuins/koboldcpp)、[LocalAI](https://localai.io)、vLLM、[LM Studio](https://lmstudio.ai)、[Jan](https://jan.ai)、TabbyAPI、[GPT4All](https://www.nomic.ai/gpt4all)、Aphrodite、SGLang、TGI',
@@ -1794,6 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locally Uncensored自体は、いかなるモデルも学習・公開・維持していません — 接続されたバックエンド経由でユーザーが選んで読み込んだモデルを実行するフロントエンドです',
           'このアプリ自体は、読み込まれたモデルの出力に独自のコンテンツモデレーション層を適用しません。特定のモデルが生成する内容は、そのモデル自体の学習と設定を反映したものであり、このアプリが追加または除去したフィルターではありません',
           'つまり、どのモデルを読み込み、そのモデルが既存にどのような挙動を持つかを制御するのはユーザー自身であり、Locally Uncensoredではありません — このアプリはローカル推論のための配信手段であり、コンテンツポリシーの発信源ではありません',
+          'モデルにおける「abliterated」と「無検閲」の意味と、モデルのランキングについては、[無検閲・アブリテレーション・ファインチューンの違い](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics)をご覧ください',
         ],
         note: 'このセクションでは、「abliterated」がモデル発行に関する用語として何を意味するか、そしてLocally Uncensored自体がモデレーション層を追加しないという事実など、文書化された事実に基づく仕組みを説明しています。特定のモデルにどのような入力を与えると何を生成しうるかについては特徴づけていません。「uncensored」であるかどうかにかかわらず、いかなるローカルモデルの利用も、他のソフトウェアで生成されたコンテンツと同様の法的・プラットフォーム上の条件に引き続き従います。',
       },
@@ -1998,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'Locally Uncensored是什么？',
-        content: '**Locally Uncensored是一款桌面应用,将运行在你自己电脑上的聊天、代码和图像生成工具整合到一个界面中,而不需要为每一项功能单独使用一个应用或浏览器标签。** 根据其[GitHub仓库](https://github.com/PurpleDoubleD/locally-uncensored)介绍,它基于[Tauri](https://tauri.app)构建,不要求已有推理服务器在运行——它会检测机器上已安装的后端,若没有则安装并管理自带的引擎（"LU Engine"）。',
+        content: '**Locally Uncensored是一款桌面应用,将运行在你自己电脑上的聊天、代码和图像生成工具整合到一个界面中,而不需要为每一项功能单独使用一个应用或浏览器标签。** 根据其[GitHub仓库](https://github.com/PurpleDoubleD/locally-uncensored)介绍,它基于[Tauri](https://tauri.app)构建,不要求已有推理服务器在运行——它会检测机器上已安装的后端,若没有则安装并管理自带的引擎（"LU Engine"）。如需查找无审查模型而非这款应用，请参阅[最佳无审查本地LLM：按硬件档位排序](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics)。',
         items: [
           '核心功能:一个桌面界面,用于聊天、代码和图像,连接到你机器上已有的本地推理后端,或使用其自带的引擎',
           '据[GitHub README](https://github.com/PurpleDoubleD/locally-uncensored)所述,可检测/管理的后端包括:[Ollama](https://ollama.com)、[llama.cpp](https://github.com/ggml-org/llama.cpp)、[KoboldCpp](https://github.com/LostRuins/koboldcpp)、[LocalAI](https://localai.io)、vLLM、[LM Studio](https://lmstudio.ai)、[Jan](https://jan.ai)、TabbyAPI、[GPT4All](https://www.nomic.ai/gpt4all)、Aphrodite、SGLang和TGI',
@@ -2111,6 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locally Uncensored本身并不训练、发布或维护任何模型——它是一个前端,运行用户通过已连接后端选择加载的模型',
           '该应用本身不会在已加载模型的输出之上添加任何内容审核层;某个特定模型生成的内容,反映的是该模型自身的训练和配置,而不是本应用添加或移除的过滤器',
           '这意味着控制加载哪个模型以及该模型已有行为的是用户,而不是Locally Uncensored——这款应用是本地推理的交付机制,而不是内容政策的来源',
+          '要了解"abliterated"和"无审查"对模型意味着什么，以及相应的模型排名，请参阅[无审查、abliterated与微调：这些术语的含义](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics)',
         ],
         note: '本节描述的是有据可查的事实性机制——"abliterated"作为模型发布术语的含义,以及Locally Uncensored本身不添加任何审核层这一事实——并未对特定模型在何种提示下可能生成何种内容作出定性描述。无论是否为"uncensored"，运行任何本地模型仍需遵守与使用其他任何软件生成内容相同的法律和平台条款。',
       },
@@ -2315,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'ما هو Locally Uncensored؟',
-        content: '**Locally Uncensored تطبيق سطح مكتب يجمع أدوات الدردشة والبرمجة وتوليد الصور التي تعمل على جهازك الخاص في واجهة واحدة، بدلًا من الحاجة إلى تطبيق أو تبويب متصفح منفصل لكل واحدة منها.** وفقًا لـ[مستودعه على GitHub](https://github.com/PurpleDoubleD/locally-uncensored)، فهو مبني باستخدام [Tauri](https://tauri.app) ولا يتطلب وجود خادم استدلال يعمل مسبقًا — إذ يكتشف المحركات المُثبَّتة بالفعل على الجهاز، أو يُثبِّت ويدير محركه المدمج الخاص ("LU Engine") إن لم يكن أي منها موجودًا.',
+        content: '**Locally Uncensored تطبيق سطح مكتب يجمع أدوات الدردشة والبرمجة وتوليد الصور التي تعمل على جهازك الخاص في واجهة واحدة، بدلًا من الحاجة إلى تطبيق أو تبويب متصفح منفصل لكل واحدة منها.** وفقًا لـ[مستودعه على GitHub](https://github.com/PurpleDoubleD/locally-uncensored)، فهو مبني باستخدام [Tauri](https://tauri.app) ولا يتطلب وجود خادم استدلال يعمل مسبقًا — إذ يكتشف المحركات المُثبَّتة بالفعل على الجهاز، أو يُثبِّت ويدير محركه المدمج الخاص ("LU Engine") إن لم يكن أي منها موجودًا. إذا كنت تبحث عن نماذج غير مقيّدة بدلًا من هذا التطبيق، فراجع [أفضل نماذج LLM المحلية غير المقيّدة، مرتبة حسب فئة العتاد](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         items: [
           'الوظيفة الأساسية: واجهة سطح مكتب للدردشة والبرمجة والصور تتصل بمحركات استدلال محلية موجودة بالفعل على جهازك، أو بمحركه المدمج الخاص',
           'المحركات التي يكتشفها/يديرها، وفقًا لِ[ملف README على GitHub](https://github.com/PurpleDoubleD/locally-uncensored): [Ollama](https://ollama.com) وَ[llama.cpp](https://github.com/ggml-org/llama.cpp) وَ[KoboldCpp](https://github.com/LostRuins/koboldcpp) وَ[LocalAI](https://localai.io) وَvLLM وَ[LM Studio](https://lmstudio.ai) وَ[Jan](https://jan.ai) وَTabbyAPI وَ[GPT4All](https://www.nomic.ai/gpt4all) وَAphrodite وَSGLang وَTGI',
@@ -2428,6 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا يقوم Locally Uncensored نفسه بتدريب أو نشر أو صيانة أي نموذج — إنه واجهة أمامية تُشغِّل النموذج الذي تختار تحميله عبر محرك متصل',
           'لا يطبّق التطبيق نفسه أي طبقة إشراف على المحتوى فوق مخرجات نموذج مُحمَّل؛ وما ينتجه نموذج معيّن يعكس تدريب وضبط ذلك النموذج نفسه، لا فلترًا أضافه هذا التطبيق أو أزاله',
           'وهذا يعني أن المستخدم، لا Locally Uncensored، هو من يتحكّم في النموذج المُحمَّل وسلوك ذلك النموذج القائم — فالتطبيق آلية توصيل للاستدلال المحلي، وليس مصدرًا لسياسة المحتوى',
+          'لمعرفة ما يعنيه "abliterated" و"غير مقيّد" في النماذج، مع قائمة مرتبة بالنماذج، راجع [غير مقيّد وabliteration والضبط الدقيق: ماذا تعني المصطلحات](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics)',
         ],
         note: 'يصف هذا القسم آلية موثَّقة وواقعية — معنى "abliterated" كمصطلح يستخدمه ناشرو النماذج، وحقيقة أن Locally Uncensored نفسه لا يضيف أي طبقة إشراف — دون وصف ما يمكن حث نموذج معيّن على إنتاجه. يظل استخدام أي نموذج محلي، سواء كان "uncensored" أم لا، خاضعًا لنفس الشروط القانونية وشروط المنصات التي تنطبق على أي محتوى يُنتَج باستخدام أي برنامج آخر.',
       },
@@ -2632,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-locally-uncensored',
         title: 'Locally Uncensored란?',
-        content: '**Locally Uncensored는 자신의 컴퓨터에서 실행되는 채팅·코드·이미지 생성 도구를 각각 별도의 앱이나 브라우저 탭 없이 하나의 인터페이스로 통합하는 데스크톱 애플리케이션입니다.** [GitHub 저장소](https://github.com/PurpleDoubleD/locally-uncensored)에 따르면 [Tauri](https://tauri.app)로 구축되어 있으며, 이미 실행 중인 추론 서버를 필요로 하지 않습니다 — 머신에 이미 설치된 백엔드를 감지하거나, 아무것도 없으면 자체 번들 엔진("LU Engine")을 설치하고 관리합니다.',
+        content: '**Locally Uncensored는 자신의 컴퓨터에서 실행되는 채팅·코드·이미지 생성 도구를 각각 별도의 앱이나 브라우저 탭 없이 하나의 인터페이스로 통합하는 데스크톱 애플리케이션입니다.** [GitHub 저장소](https://github.com/PurpleDoubleD/locally-uncensored)에 따르면 [Tauri](https://tauri.app)로 구축되어 있으며, 이미 실행 중인 추론 서버를 필요로 하지 않습니다 — 머신에 이미 설치된 백엔드를 감지하거나, 아무것도 없으면 자체 번들 엔진("LU Engine")을 설치하고 관리합니다. 이 앱이 아니라 무검열 모델을 찾고 계신다면 [최고의 무검열 로컬 LLM: 하드웨어 단계별 순위](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics)를 참고하십시오.',
         items: [
           '핵심 기능: 자신의 머신에 이미 있는 로컬 추론 백엔드 또는 자체 번들 엔진에 연결하는 채팅·코드·이미지용 데스크톱 인터페이스',
           '[GitHub README](https://github.com/PurpleDoubleD/locally-uncensored)에 따라 감지·관리되는 백엔드: [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM, [LM Studio](https://lmstudio.ai), [Jan](https://jan.ai), TabbyAPI, [GPT4All](https://www.nomic.ai/gpt4all), Aphrodite, SGLang, TGI',
@@ -2745,6 +2753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locally Uncensored 자체는 어떤 모델도 훈련·배포·유지 관리하지 않으며, 연결된 백엔드를 통해 사용자가 선택해 로드한 모델을 실행하는 프런트엔드일 뿐임',
           '이 앱은 로드된 모델의 출력에 자체 콘텐츠 조정 계층을 적용하지 않으며, 특정 모델이 생성하는 내용은 그 모델 자체의 훈련과 설정을 반영하는 것이지 이 앱이 추가하거나 제거한 필터가 아님',
           '이는 어떤 모델을 로드할지와 그 모델이 이미 지닌 동작을 통제하는 주체가 Locally Uncensored가 아니라 사용자임을 의미함 — 이 앱은 로컬 추론을 위한 전달 수단이지, 콘텐츠 정책의 출처가 아님',
+          '모델에서 "abliterated"와 "무검열"이 의미하는 바와 모델 순위는 [무검열, abliteration, 파인튜닝: 용어의 차이](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics)를 참고하십시오',
         ],
         note: '이 섹션은 "abliterated"가 모델 배포 용어로서 무엇을 의미하는지, 그리고 Locally Uncensored 자체가 어떤 조정 계층도 추가하지 않는다는 사실 등 문서화된 사실에 기반한 메커니즘을 설명할 뿐, 특정 모델이 어떤 입력에 따라 무엇을 생성할 수 있는지를 규정하지 않습니다. "uncensored" 여부와 관계없이, 어떤 로컬 모델을 사용하더라도 다른 소프트웨어로 만든 콘텐츠에 적용되는 것과 동일한 법적·플랫폼 조건이 그대로 적용됩니다.',
       },
