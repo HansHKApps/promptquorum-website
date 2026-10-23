@@ -316,7 +316,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
 
       {/* Sticky top filter bar — replaces the old left sidebar (audit item
           #2). Collapsible panel + active-filter chips underneath. */}
-      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 border-b border-primary/10">
+      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 border-b border-hub-violet-edge">
         <div className="flex flex-col min-[560px]:flex-row min-[560px]:flex-wrap gap-3">
           <button
             type="button"
@@ -324,8 +324,8 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
             aria-expanded={filtersOpen}
             aria-controls="local-ai-filter-panel"
             className={cn(
-              'inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium shrink-0',
-              filtersOpen ? 'bg-primary text-white border-primary' : 'bg-white text-text-primary border-primary/20 hover:bg-primary/5'
+              'inline-flex items-center gap-1.5 rounded-[10px] border px-3 py-2 text-sm font-medium shrink-0',
+              filtersOpen ? 'bg-hub-violet text-white border-hub-violet' : 'bg-white text-text-primary border-hub-violet-edge hover:bg-hub-violet-tint'
             )}
           >
             {t('filtersButton', ui)} {hasActiveFilters && !filtersOpen && <span className="text-xs">●</span>}
@@ -339,7 +339,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
               value={search}
               onChange={(e) => handleSearch(e.target.value)}
               placeholder={t('searchPlaceholder', ui)}
-              className="w-full rounded-lg border border-primary/20 bg-white pl-9 pr-9 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+              className="w-full rounded-[10px] border border-hub-violet-edge bg-white pl-9 pr-9 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
             />
             {search && (
               <button
@@ -358,7 +358,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
             onClick={() => setMobileOptionsOpen((o) => !o)}
             aria-expanded={mobileOptionsOpen}
             aria-controls="local-ai-mobile-options"
-            className="min-[560px]:hidden inline-flex items-center justify-between gap-1.5 rounded-lg border border-primary/20 bg-white px-3 py-2 text-sm font-medium text-text-primary hover:bg-primary/5"
+            className="min-[560px]:hidden inline-flex items-center justify-between gap-1.5 rounded-[10px] border border-hub-violet-edge bg-white px-3 py-2 text-sm font-medium text-text-primary hover:bg-hub-violet-tint"
           >
             {t('moreOptionsButton', ui)}
             <ChevronRightIcon className={cn('h-4 w-4 shrink-0 transition-transform', mobileOptionsOpen && 'rotate-90')} />
@@ -373,7 +373,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
           >
           <label className="flex items-center gap-2 text-sm">
             <span className="text-text-secondary shrink-0">{t('deviceCategoryLabel', ui)}</span>
-            <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('deviceCategoryLabel', ui)}>
+            <div className="inline-flex rounded-[10px] border border-hub-violet-edge overflow-hidden shrink-0" role="group" aria-label={t('deviceCategoryLabel', ui)}>
               {(['desktop', 'mobile'] as MachineCategory[]).map((cat) => (
                 <button
                   key={cat}
@@ -382,8 +382,8 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
                   aria-pressed={deviceCategory === cat}
                   className={cn(
                     'px-3 py-2 text-sm font-medium',
-                    cat === 'mobile' && 'border-l border-primary/20',
-                    deviceCategory === cat ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5'
+                    cat === 'mobile' && 'border-s border-hub-violet-edge',
+                    deviceCategory === cat ? 'bg-hub-violet text-white' : 'bg-white text-text-secondary hover:bg-hub-violet-tint'
                   )}
                 >
                   {DEVICE_CATEGORY_LABEL[cat]}
@@ -399,7 +399,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
             <select
               value={machine}
               onChange={(e) => handleMachineChange(e.target.value as MachineType)}
-              className="rounded-lg border border-primary/20 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+              className="rounded-[10px] border border-hub-violet-edge bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
               {(deviceCategory === 'mobile' ? MOBILE_MACHINES : DESKTOP_MACHINES).map((m) => (
                 <option key={m} value={m}>{MACHINE_LABEL[m]}</option>
@@ -432,7 +432,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
               <select
                 value={sortKey}
                 onChange={(e) => handleSort(e.target.value as SortKey)}
-                className="rounded-lg border border-primary/20 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+                className="rounded-[10px] border border-hub-violet-edge bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
                 <option value="category">{t('groupCategory', ui)}</option>
                 <option value="stars">{t('colStars', ui)}</option>
@@ -452,12 +452,12 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
             </label>
           )}
 
-          <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('viewModeAriaLabel', ui)}>
+          <div className="inline-flex rounded-[10px] border border-hub-violet-edge overflow-hidden shrink-0" role="group" aria-label={t('viewModeAriaLabel', ui)}>
             <button
               type="button"
               onClick={() => setView('cards')}
               aria-pressed={view === 'cards'}
-              className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium', view === 'cards' ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5')}
+              className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium', view === 'cards' ? 'bg-hub-violet text-white' : 'bg-white text-text-secondary hover:bg-hub-violet-tint')}
             >
               <GridIcon className="h-4 w-4" />
               {t('viewCards', ui)}
@@ -466,7 +466,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
               type="button"
               onClick={() => setView('table')}
               aria-pressed={view === 'table'}
-              className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium border-l border-primary/20', view === 'table' ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5')}
+              className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium border-s border-hub-violet-edge', view === 'table' ? 'bg-hub-violet text-white' : 'bg-white text-text-secondary hover:bg-hub-violet-tint')}
             >
               <TableIcon className="h-4 w-4" />
               {t('viewTable', ui)}
@@ -529,7 +529,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
                     <button
                       type="button"
                       onClick={() => setShown((s) => s + PAGE_SIZE)}
-                      className="rounded-lg border border-primary/20 bg-white px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-primary/5"
+                      className="rounded-[10px] border border-hub-violet-edge bg-white px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-hub-violet-tint"
                     >
                       {t('showMoreTemplate', ui, { n: Math.min(PAGE_SIZE, remaining), remaining })}
                     </button>

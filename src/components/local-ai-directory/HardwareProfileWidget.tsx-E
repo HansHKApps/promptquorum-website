@@ -1,0 +1,197 @@
+'use client'
+
+// "Your setup" panel — the opt-in, precise layer on top of the existing
+// coarse "My machine:" selector (MachineType, persisted separately in
+// hardware.ts's readStoredMachine/writeStoredMachine). This widget owns the
+// HardwareProfile draft state and is the ONLY place that ever calls
+// writeStoredProfile/clearStoredProfile — always from a direct user click,
+// never a passive effect.
+//
+// TTDSG/privacy discipline (hard requirement, see the task spec this shipped
+// against): nothing is written to localStorage until the viewer clicks
+// "Save my setup". `navigator.deviceMemory` may pre-fill the RAM input as a
+// labelled, honestly-worded HINT ("≈8GB detected — confirm or adjust") but
+// that value sits in the input, unsaved, until the click. The exact profile
+// itself is never transmitted anywhere — the only network call this can ever
+// trigger is trackHardwareProfileSaved(), which (a) only fires on this same
+// explicit Save click, never passively, (b) only fires at all if the viewer
+// already granted the site's existing general "Analytics" cookie-consent
+// category, and (c) sends coarse buckets (e.g. "16-32") only, never the raw
+// numbers — see src/lib/tracking/hardwareProfile.ts for the full contract.
+
+import { useState } from 'react'
+import type { HardwareProfile, MachineType } from './types'
+import { writeStoredProfile, clearStoredProfile } from './hardware'
+import { t, machineLabelsFromUi, type DirUi } from './directory-ui-client'
+import { trackHardwareProfileSaved } from '@/lib/tracking/hardwareProfile'
+
+/**
+ * navigator.deviceMemory is a Chromium-only, coarse (power-of-two, capped at
+ * 8) API not in the standard DOM lib types — hence the local cast. Used only
+ * to pre-fill an input the viewer must still confirm and explicitly save;
+ * never read into localStorage directly (see file header).
+ */
+function deviceMemoryHint(): number | null {
+  try {
+    const nav = navigator as Navigator & { deviceMemory?: number }
+    return typeof nav.deviceMemory === 'number' ? nav.deviceMemory : null
+  } catch {
+    return null
+  }
+}
+
+function NumberField({
+  label,
+  value,
+  onChange,
+  hint,
+}: {
+  label: string
+  value: number
+  onChange: (n: number) => void
+  hint?: string | null
+}) {
+  return (
+    <label className="flex flex-col gap-1 text-xs">
+      <span className="font-medium text-text-secondary">{label}</span>
+      <input
+        type="number"
+        min={0}
+        step={1}
+        value={Number.isFinite(value) ? value : ''}
+        onChange={(e) => onChange(e.target.valueAsNumber)}
+        className="w-24 rounded-md border border-hub-violet-edge bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+      />
+      {hint && <span className="text-[11px] text-text-secondary/70">{hint}</span>}
+    </label>
+  )
+}
+
+export function HardwareProfileWidget({
+  machine,
+  profile,
+  onProfileChange,
+  ui,
+  expanded,
+  onExpandedChange,
+}: {
+  machine: MachineType
+  profile: HardwareProfile | null
+  onProfileChange: (profile: HardwareProfile | null) => void
+  ui: DirUi
+  expanded: boolean
+  onExpandedChange: (next: boolean) => void
+}) {
+  const memoryHint = deviceMemoryHint()
+  const matchesMachine = profile != null && profile.machine === machine
+  // Safari (so every iPhone/iPad) doesn't implement navigator.deviceMemory at
+  // all, so memoryHint is always null there — 16 GB is a sane blind guess for
+  // a laptop/desktop but a wildly high one for a phone (typical iPhone/Android
+  // RAM is 6-8 GB), so the two machine categories get different fallbacks.
+  const defaultRamGb = machine === 'ios' || machine === 'android' ? 8 : 16
+
+  const [ramGb, setRamGb] = useState<number>(() =>
+    profile && 'ramGb' in profile ? profile.ramGb : memoryHint ?? defaultRamGb
+  )
+  const [vramGb, setVramGb] = useState<number>(() => (profile && 'vramGb' in profile ? profile.vramGb : 8))
+  const [unifiedGb, setUnifiedGb] = useState<number>(() =>
+    profile && 'unifiedGb' in profile ? profile.unifiedGb : memoryHint ?? 16
+  )
+
+  const handleSave = () => {
+    let next: HardwareProfile
+    if (machine === 'dgpu') next = { machine: 'dgpu', ramGb, vramGb }
+    else if (machine === 'cpu') next = { machine: 'cpu', ramGb }
+    else if (machine === 'ios') next = { machine: 'ios', ramGb }
+    else if (machine === 'android') next = { machine: 'android', ramGb }
+    else next = { machine: 'apple', unifiedGb }
+    writeStoredProfile(next)
+    onProfileChange(next)
+    onExpandedChange(false)
+    trackHardwareProfileSaved(next)
+  }
+
+  const handleForget = () => {
+    clearStoredProfile()
+    onProfileChange(null)
+    onExpandedChange(false)
+  }
+
+  if (!expanded) {
+    let summary = t('hwProfileSetLink', ui)
+    if (matchesMachine && profile) {
+      if (profile.machine === 'dgpu') summary = t('hwProfileSummaryDgpuTemplate', ui, { ram: profile.ramGb, vram: profile.vramGb })
+      else if (profile.machine === 'cpu' || profile.machine === 'ios' || profile.machine === 'android') {
+        summary = t('hwProfileSummaryCpuTemplate', ui, { ram: profile.ramGb })
+      } else summary = t('hwProfileSummaryAppleTemplate', ui, { unified: profile.unifiedGb })
+    } else if (profile) {
+      // Saved, but for a machine type the viewer has since switched away
+      // from in the selector above — the numbers don't apply anymore.
+      summary = t('hwProfileStaleForMachineTemplate', ui, { machine: machineLabelsFromUi(ui)[machine] })
+    }
+    return (
+      <button
+        type="button"
+        id="hw-profile-widget"
+        onClick={() => onExpandedChange(true)}
+        className="text-sm font-medium text-primary hover:underline text-left"
+      >
+        {summary}
+      </button>
+    )
+  }
+
+  return (
+    <div id="hw-profile-widget" className="rounded-[10px] border border-hub-violet-edge bg-white p-3 space-y-3 text-sm shadow-sm">
+      <div className="flex flex-wrap items-end gap-3">
+        {(machine === 'dgpu' || machine === 'cpu' || machine === 'ios' || machine === 'android') && (
+          <NumberField
+            label={t('hwProfileRamLabel', ui)}
+            value={ramGb}
+            onChange={setRamGb}
+            hint={memoryHint != null && !(profile && 'ramGb' in profile) ? t('hwProfileDetectedHintTemplate', ui, { n: memoryHint }) : null}
+          />
+        )}
+        {machine === 'dgpu' && (
+          <NumberField label={t('hwProfileVramLabel', ui)} value={vramGb} onChange={setVramGb} />
+        )}
+        {machine === 'apple' && (
+          <NumberField
+            label={t('hwProfileUnifiedLabel', ui)}
+            value={unifiedGb}
+            onChange={setUnifiedGb}
+            hint={memoryHint != null && !(profile && 'unifiedGb' in profile) ? t('hwProfileDetectedHintTemplate', ui, { n: memoryHint }) : null}
+          />
+        )}
+      </div>
+
+      <p className="text-[11px] text-text-secondary/70">{t('hwProfilePrivacyNote', ui)}</p>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          onClick={handleSave}
+          className="rounded-[10px] border border-hub-violet bg-hub-violet px-3 py-1.5 text-xs font-bold text-white hover:brightness-95"
+        >
+          {t('hwProfileSaveButton', ui)}
+        </button>
+        <button
+          type="button"
+          onClick={() => onExpandedChange(false)}
+          className="rounded-[10px] border border-hub-violet-edge px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-hub-violet-tint"
+        >
+          {t('hwProfileCancelButton', ui)}
+        </button>
+        {profile && (
+          <button
+            type="button"
+            onClick={handleForget}
+            className="rounded-[10px] border border-hub-rose-edge bg-hub-rose-tint px-3 py-1.5 text-xs font-semibold text-hub-rose-ink hover:bg-hub-rose-tint"
+          >
+            {t('hwProfileForgetButton', ui)}
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}

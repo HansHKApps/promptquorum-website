@@ -92,9 +92,9 @@ export function ToolTable({
     <div className="relative overflow-x-auto" ref={scrollRef}>
       <table className="w-full min-w-[960px] border-collapse text-sm">
         <thead>
-          <tr className="border-b-2 border-primary/20">
+          <tr className="border-b-2 border-hub-violet-edge">
             {COLUMNS.map((col, i) => (
-              <th key={col.key} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap${i === 0 ? ' sticky left-0 z-10' : ''}`}>
+              <th key={col.key} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-hub-violet-tint whitespace-nowrap${i === 0 ? ' sticky start-0 z-10' : ''}`}>
                 {col.kind === 'sort' ? (
                   <button
                     type="button"
@@ -121,13 +121,13 @@ export function ToolTable({
               <tr
                 key={app.slug}
                 onClick={() => onOpen(app.slug)}
-                className={`border-b border-primary/10 hover:bg-primary/5 transition-colors cursor-pointer group ${appActivity === 'dead' ? 'grayscale bg-gray-100 text-gray-500' : ''}`}
+                className={`border-b border-hub-violet-edge hover:bg-hub-violet-tint transition-colors cursor-pointer group ${appActivity === 'dead' ? 'grayscale bg-gray-100 text-gray-500' : ''}`}
               >
-                <td className="p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap">
+                <td className="p-2 sm:p-3 sticky start-0 z-10 bg-white group-hover:bg-hub-violet-tint transition-colors font-medium text-text-primary whitespace-nowrap">
                   {app.name}
                   {(appActivity === 'quiet' || appActivity === 'dead') && (
                     <span
-                      className={`ml-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-800'}`}
+                      className={`ml-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'}`}
                       title={t(appActivity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', lang)}
                     >
                       ⚠ {t(appActivity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', lang)}
@@ -137,7 +137,7 @@ export function ToolTable({
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                   {app.stars != null ? (
                     <span className="inline-flex items-center gap-1">
-                      <StarIcon className="h-3.5 w-3.5 text-amber-400" />
+                      <StarIcon className="h-3.5 w-3.5 text-hub-amber" />
                       {app.stars.toLocaleString()}
                     </span>
                   ) : (
@@ -164,7 +164,7 @@ export function ToolTable({
                 </td>
                 <td
                   className={`p-2 sm:p-3 whitespace-nowrap ${
-                    listingFreshness === 'old' ? 'text-amber-700' : listingFreshness === 'warn' ? 'text-yellow-700' : 'text-text-secondary'
+                    listingFreshness === 'old' ? 'text-hub-amber-ink' : listingFreshness === 'warn' ? 'text-hub-amber-ink' : 'text-text-secondary'
                   }`}
                   title={
                     listingFreshness === 'old'
@@ -194,7 +194,7 @@ export function ToolTable({
         </tbody>
       </table>
       {isScrollable && (
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent" />
+        <div className="pointer-events-none absolute end-0 top-0 h-full w-8 bg-gradient-to-l rtl:bg-gradient-to-r from-white/80 to-transparent" />
       )}
     </div>
   )
