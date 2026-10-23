@@ -12,6 +12,10 @@
 // was updated 2026-10-19), LiteRT also runs Qwen 2.5 1.5B / DeepSeek R1 Distill 1.5B / Phi-4 Mini, Android 9+, Android build 1.0.54 since 2026-10-18, iPhone 1.0.52.
 // Network use per the updated policy: TelemetryDeck usage events and Sentry crash reports (no chat content, per the developer); OneSignal push and, on Android
 // only, Google Analytics for Firebase after the in-app "Privacy & Notifications" prompt is accepted.
+// 2026-10-23: the developer wrote that 1.0.55 (Google Play 2026-10-20) removed Firebase Analytics on Android, explains the notification
+// permission with a Settings switch and sends no notifications in Kid Mode; the policy (updated 2026-10-20) confirms all three. Re-verified from
+// primary sources: App Store lookup v1.0.56 released 2026-10-22 (free, iOS 16.4+, same privacy label), Google Play 1.0.56 updated 2026-10-23
+// (Data safety unchanged). The developer's note that iPhone 1.0.55 was still in Apple review is superseded: iOS is already on 1.0.56.
 
 import type { ToolRecord } from './types'
 
@@ -37,7 +41,7 @@ export const app: ToolRecord = {
     googlePlay: 'https://play.google.com/store/apps/details?id=com.ts.memoryai',
   },
   installEffort: 'installer',
-  installEvidence: 'App Store listing id6758719586 (free, iOS 16.4+, 198.7 MB) and Google Play listing com.ts.memoryai (free, 1K+ downloads), read 2026-10-19',
+  installEvidence: 'App Store listing id6758719586 (free, iOS 16.4+, 198.7 MB) and Google Play listing com.ts.memoryai (free, 1K+ downloads), re-read 2026-10-23',
   tagline: {
     en: 'Free offline AI chat for iPhone and Android with document Q&A, editable Agent Memory, hands-free voice and a PIN-locked Kid Mode',
     de: 'Kostenloser Offline-KI-Chat für iPhone und Android mit Dokumentenfragen, editierbarem Agent Memory, Freisprech-Sprachmodus und PIN-geschütztem Kindermodus',
@@ -53,9 +57,9 @@ export const app: ToolRecord = {
   // voice = on-device voice input plus text-to-speech and a hands-free continuous mode; visionInput = "Image Understanding"
   // with Vision AI models; importModels = custom GGUF import from Hugging Face.
   compare: { offline: true, importModels: true, modelDownloads: true, visionInput: true, voice: true },
-  lastVerifiedDate: '2026-10-19',
-  lastUpstreamUpdate: '2026-10-18', // App Store currentVersionReleaseDate 2026-10-18 (v1.0.52); Google Play "Updated on Oct 18, 2026"
-  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586',
+  lastVerifiedDate: '2026-10-23',
+  lastUpstreamUpdate: '2026-10-23', // Google Play "Updated on Oct 23, 2026" (page data: build 1.0.56); App Store v1.0.56 currentVersionReleaseDate 2026-10-22; read 2026-10-23
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=com.ts.memoryai',
   founderReviewedDate: '2026-10-19', // Alessandro Facchini reviewed the draft and supplied technical corrections plus a maker note 2026-10-19; drives the amber Founder-reviewed banner + star
   founder: {
     who: {
@@ -142,8 +146,8 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'memoryai-review',
   pqReview: {
-    date: '2026-10-19',
-    version: '1.0.52',
+    date: '2026-10-23',
+    version: '1.0.56',
     versionSourceUrl: 'https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586',
   },
   verdict: 'Best for iPhone and Android users who want a free, account-less offline chat app with document Q&A, an editable on-device memory, hands-free voice and a PIN-locked Kid Mode; limited by being closed source and young (first release 30 March 2026, 1K+ Play downloads), by small 0.3–4 GB models, and by analytics and crash reports that still leave the phone (without chat content, per the developer).',
