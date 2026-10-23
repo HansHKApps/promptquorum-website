@@ -38,7 +38,7 @@
   <text x="445" y="146" font-size="12" fill="#49454F">Kurze Sessions bevorzugen</text>
 
   <circle cx="433" cy="168" r="3" fill="#34A853"/>
-  <text x="445" y="172" font-size="12" fill="#49454F">Bei langen Sessions ans Ladegerät</text>
+  <text x="445" y="172" font-size="12" fill="#49454F">Schnellerer Akkuverbrauch bei langen Sessions</text>
 
   <!-- Footer -->
   <text x="400" y="342" font-size="11" fill="#79747E" text-anchor="middle">Laden während der Inferenz vermeiden — kann Wärme erzeugen.</text>

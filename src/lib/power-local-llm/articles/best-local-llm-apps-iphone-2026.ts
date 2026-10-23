@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)',
     seoTitle: 'Best Local AI Apps for iPhone 2026 (Run LLMs Offline)',
     intro:
-      'Six iPhone options run real LLMs fully on-device in 2026: PocketPal AI, Private LLM, Locally AI (by LM Studio), Google AI Edge Gallery, MLC Chat, and Apple Intelligence (system-integrated). Chat works without WiFi once the model is downloaded. This guide compares them on cost, model library, iOS integration, privacy posture, and maintenance status — with indicative speeds on iPhone 16 Pro and iPhone 17 Pro and a RAM guide that now includes the iPhone 18 Pro — and explains why LLM Farm dropped out of the ranking.',
+      'Six iPhone options run real LLMs on-device in 2026 (Apple Intelligence can also hand some requests to Apple\'s Private Cloud Compute): PocketPal AI, Private LLM, Locally AI (by LM Studio), Google AI Edge Gallery, MLC Chat, and Apple Intelligence (system-integrated). Chat works without WiFi once the model is downloaded. This guide compares them on cost, model library, iOS integration, privacy posture, and maintenance status — with indicative speeds on iPhone 16 Pro and iPhone 17 Pro and a RAM guide that now includes the iPhone 18 Pro — and explains why LLM Farm dropped out of the ranking.',
     metaDescription:
       'Six ways to run LLMs on iPhone in 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat. Cost, privacy and RAM guide per iPhone.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-en.webp',
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Six iPhone options run AI fully on your phone in 2026. PocketPal AI is the recommended free starting point — install it, download a 2.7 GB model file once, and you have a private chat assistant that works on the train without WiFi. Private LLM is the paid option if you want Siri to talk to the local model. Locally AI, from the LM Studio team, is the free modern alternative with Shortcuts support, and Google AI Edge Gallery is Google\'s free app for its Gemma 4 models. The iPhone build of MLC Chat is no longer updated. Apple Intelligence is built into iOS but not a chat app. PocketPal AI fits most use cases.',
+            text: 'Six iPhone options run AI on your phone in 2026; the chat apps keep chat on the device once the model is downloaded, and Apple Intelligence can also use Apple\'s Private Cloud Compute for larger requests. PocketPal AI is the recommended free starting point — install it, download a 2.7 GB model file once, and you have a private chat assistant that works on the train without WiFi. Private LLM is the paid option if you want Siri to talk to the local model. Locally AI, from the LM Studio team, is the free modern alternative with Shortcuts support, and Google AI Edge Gallery is Google\'s free app for its Gemma 4 models. The iPhone build of MLC Chat is no longer updated. Apple Intelligence is built into iOS but not a chat app. PocketPal AI fits most use cases.',
           },
         ],
         decisionBlock: {
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does local AI drain my iPhone battery?',
-            a: 'Yes — actively running inference typically draws ~3–5 W and, as a rough indicative guide, can drain the battery roughly 20–30% per hour on iPhone 16 Pro. For occasional chat (a few prompts), the impact is small. For sustained use (long conversation, multiple summarisation tasks), keep the iPhone plugged in. The model itself sitting in RAM with no inference running has negligible battery impact.',
+            a: 'Yes — actively running inference typically draws ~3–5 W and, as a rough indicative guide, can drain the battery roughly 20–30% per hour on iPhone 16 Pro. For occasional chat (a few prompts), the impact is small. For sustained use (long conversation, multiple summarisation tasks), expect the battery to drain quickly; charging while generating can add heat, so pause generation if the phone gets warm. The model itself sitting in RAM with no inference running has negligible battery impact.',
           },
           {
             q: 'Will my iPhone get hot using local AI?',
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale KI auf dem iPhone: Die besten Local-LLM-Apps 2026 (ohne WLAN)',
     seoTitle: 'Lokale KI auf dem iPhone: Die besten LLM-Apps 2026',
     intro:
-      'Sechs iPhone-Optionen führen 2026 echte LLMs vollständig auf dem Gerät aus: PocketPal AI, Private LLM, Locally AI (von LM Studio), Google AI Edge Gallery, MLC Chat und Apple Intelligence (systemintegriert). Der Chat funktioniert nach dem Download des Modells ohne WLAN. Dieser Leitfaden vergleicht sie nach Kosten, Modellbibliothek, iOS-Integration, Datenschutz und Pflegestand – mit Richtwerten zur Geschwindigkeit auf iPhone 16 Pro und iPhone 17 Pro sowie einer RAM-Übersicht, die jetzt auch das iPhone 18 Pro enthält – und erklärt, warum LLM Farm aus dem Ranking gefallen ist.',
+      'Sechs iPhone-Optionen führen 2026 echte LLMs auf dem Gerät aus (Apple Intelligence kann einzelne Anfragen auch an Apples Private Cloud Compute übergeben): PocketPal AI, Private LLM, Locally AI (von LM Studio), Google AI Edge Gallery, MLC Chat und Apple Intelligence (systemintegriert). Der Chat funktioniert nach dem Download des Modells ohne WLAN. Dieser Leitfaden vergleicht sie nach Kosten, Modellbibliothek, iOS-Integration, Datenschutz und Pflegestand – mit Richtwerten zur Geschwindigkeit auf iPhone 16 Pro und iPhone 17 Pro sowie einer RAM-Übersicht, die jetzt auch das iPhone 18 Pro enthält – und erklärt, warum LLM Farm aus dem Ranking gefallen ist.',
     metaDescription:
       'Lokale KI auf dem iPhone 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery und MLC Chat im Vergleich. Kosten, Datenschutz, RAM je iPhone.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.webp',
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Sechs iPhone-Optionen führen KI 2026 vollständig auf Ihrem Telefon aus. PocketPal AI ist der empfohlene kostenlose Einstiegspunkt: einmal installieren, eine 2,7-GB-Modelldatei herunterladen, und Sie haben einen privaten Chat-Assistenten, der auch in der U-Bahn ohne WLAN funktioniert. Private LLM ist die kostenpflichtige Option, wenn Siri mit dem lokalen Modell sprechen soll. Locally AI vom LM-Studio-Team ist die kostenlose moderne Alternative mit Kurzbefehle-Unterstützung, und Google AI Edge Gallery ist Googles kostenlose App für die Gemma-4-Modelle. Der iPhone-Build von MLC Chat wird nicht mehr aktualisiert. Apple Intelligence ist in iOS integriert, aber keine Chat-App. PocketPal AI passt zu den meisten Anwendungsfällen.',
+            text: 'Sechs iPhone-Optionen führen KI 2026 auf Ihrem Telefon aus; die Chat-Apps halten den Chat nach dem Modell-Download auf dem Gerät, und Apple Intelligence kann für größere Anfragen auch Apples Private Cloud Compute nutzen. PocketPal AI ist der empfohlene kostenlose Einstiegspunkt: einmal installieren, eine 2,7-GB-Modelldatei herunterladen, und Sie haben einen privaten Chat-Assistenten, der auch in der U-Bahn ohne WLAN funktioniert. Private LLM ist die kostenpflichtige Option, wenn Siri mit dem lokalen Modell sprechen soll. Locally AI vom LM-Studio-Team ist die kostenlose moderne Alternative mit Kurzbefehle-Unterstützung, und Google AI Edge Gallery ist Googles kostenlose App für die Gemma-4-Modelle. Der iPhone-Build von MLC Chat wird nicht mehr aktualisiert. Apple Intelligence ist in iOS integriert, aber keine Chat-App. PocketPal AI passt zu den meisten Anwendungsfällen.',
           },
         ],
         decisionBlock: {
@@ -1022,7 +1022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Entlädt lokale KI meinen iPhone-Akku?',
-            a: 'Ja – aktive Inferenz zieht typischerweise ~3–5 W und kann den Akku – als grober Richtwert – auf dem iPhone 16 Pro um etwa 20–30 % pro Stunde entladen. Bei gelegentlichem Chat (wenige Prompts) ist der Einfluss gering. Bei dauerhafter Nutzung (langes Gespräch, mehrere Zusammenfassungsaufgaben) schließen Sie das iPhone an. Das Modell selbst im RAM ohne laufende Inferenz hat vernachlässigbaren Akkueinfluss.',
+            a: 'Ja – aktive Inferenz zieht typischerweise ~3–5 W und kann den Akku – als grober Richtwert – auf dem iPhone 16 Pro um etwa 20–30 % pro Stunde entladen. Bei gelegentlichem Chat (wenige Prompts) ist der Einfluss gering. Bei dauerhafter Nutzung (langes Gespräch, mehrere Zusammenfassungsaufgaben) entlädt sich der Akku schnell; Laden während der Generierung kann zusätzliche Wärme erzeugen – pausieren Sie die Generierung, wenn das iPhone warm wird. Das Modell selbst im RAM ohne laufende Inferenz hat vernachlässigbaren Akkueinfluss.',
           },
           {
             q: 'Wird mein iPhone bei lokaler KI heiß?',
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026年iPhoneで使えるLocal LLMアプリ比較（WiFi不要でAI利用）',
     seoTitle: 'iPhoneローカルLLMアプリ6選｜2026年版オフライン比較',
     intro:
-      '2026年、iPhoneで本格的なLLMを完全にオンデバイスで動作させる選択肢は6つあります：PocketPal AI、Private LLM、Locally AI（LM Studio製）、Google AI Edge Gallery、MLC Chat、そしてApple Intelligence（システム統合型）です。モデルをダウンロードすれば、チャットはWiFiなしで使えます。このガイドでは、費用、モデルライブラリ、iOS統合、プライバシー、メンテナンス状況を比較します。iPhone 16 ProとiPhone 17 Proでの速度は目安で、RAMガイドにはiPhone 18 Proも加えました。LLM Farmがランキングから外れた理由も解説します。',
+      '2026年、iPhoneで本格的なLLMをオンデバイスで動作させる選択肢は6つあります（Apple Intelligenceは一部のリクエストをAppleのPrivate Cloud Computeに送ることもあります）：PocketPal AI、Private LLM、Locally AI（LM Studio製）、Google AI Edge Gallery、MLC Chat、そしてApple Intelligence（システム統合型）です。モデルをダウンロードすれば、チャットはWiFiなしで使えます。このガイドでは、費用、モデルライブラリ、iOS統合、プライバシー、メンテナンス状況を比較します。iPhone 16 ProとiPhone 17 Proでの速度は目安で、RAMガイドにはiPhone 18 Proも加えました。LLM Farmがランキングから外れた理由も解説します。',
     metaDescription:
       'iPhoneでLLMをWiFiなしで動かす6つの方法を2026年版で比較。PocketPal AI、Private LLM、Locally AI、Google AI Edge Galleryほか。費用・RAM別ガイド。',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ja.webp',
@@ -1253,7 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '2026年には6つのiPhone向け選択肢が、AIを端末上だけで完全に動作させます。PocketPal AIが推奨する無料のスタート地点です。インストールして2.7 GBのモデルファイルを一度ダウンロードするだけで、WiFiなしの電車の中でも使えるプライベートなチャットアシスタントが手に入ります。Private LLMはSiriにローカルモデルを応答させたい場合の有料オプションです。LM Studioチーム製のLocally AIはShortcutsに対応した無料の現代的な代替で、Google AI Edge GalleryはGoogleのGemma 4モデル用の無料アプリです。MLC ChatのiPhone版はすでに更新されていません。Apple IntelligenceはiOSに内蔵されていますが、チャットアプリではありません。PocketPal AIはほとんどのユースケースに対応します。',
+            text: '2026年には6つのiPhone向け選択肢が、AIをiPhone上で動作させます。チャットアプリはモデルをダウンロードした後、チャットを端末内で処理し、Apple Intelligenceは大きなリクエストにAppleのPrivate Cloud Computeを使うこともあります。PocketPal AIが推奨する無料のスタート地点です。インストールして2.7 GBのモデルファイルを一度ダウンロードするだけで、WiFiなしの電車の中でも使えるプライベートなチャットアシスタントが手に入ります。Private LLMはSiriにローカルモデルを応答させたい場合の有料オプションです。LM Studioチーム製のLocally AIはShortcutsに対応した無料の現代的な代替で、Google AI Edge GalleryはGoogleのGemma 4モデル用の無料アプリです。MLC ChatのiPhone版はすでに更新されていません。Apple IntelligenceはiOSに内蔵されていますが、チャットアプリではありません。PocketPal AIはほとんどのユースケースに対応します。',
           },
         ],
         decisionBlock: {
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルAIはiPhoneのバッテリーを消耗させますか？',
-            a: 'はい。アクティブな推論は通常約3〜5 Wを消費し、目安として、iPhone 16 Proで1時間あたり約20〜30%バッテリーを消耗することがあります。ときどきのチャット（数回のプロンプト）なら影響は小さいです。継続的な使用（長い会話、複数の要約タスク）の場合はiPhoneを充電器につないでください。推論なしでRAMに留まるモデル自体のバッテリーへの影響は無視できる程度です。',
+            a: 'はい。アクティブな推論は通常約3〜5 Wを消費し、目安として、iPhone 16 Proで1時間あたり約20〜30%バッテリーを消耗することがあります。ときどきのチャット（数回のプロンプト）なら影響は小さいです。継続的な使用（長い会話、複数の要約タスク）ではバッテリーの消耗が早くなります。生成中の充電は発熱を増やす場合があるため、本体が温かくなったら生成を一時停止してください。推論なしでRAMに留まるモデル自体のバッテリーへの影響は無視できる程度です。',
           },
           {
             q: 'ローカルAI使用中にiPhoneは熱くなりますか？',
@@ -1678,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleures applications d\'IA locale pour iPhone en 2026 (LLM sans WiFi)',
     seoTitle: 'Meilleures applications d\'IA locale pour iPhone 2026',
     intro:
-      'Six options iPhone font tourner de vrais LLM entièrement sur l\'appareil en 2026 : PocketPal AI, Private LLM, Locally AI (par LM Studio), Google AI Edge Gallery, MLC Chat et Apple Intelligence (intégrée au système). Le chat fonctionne sans WiFi une fois le modèle téléchargé. Ce guide les compare sur le coût, la bibliothèque de modèles, l\'intégration iOS, la confidentialité et l\'état de maintenance — avec des vitesses indicatives sur iPhone 16 Pro et iPhone 17 Pro et un guide de RAM incluant désormais l\'iPhone 18 Pro — et explique pourquoi LLM Farm est sorti du classement.',
+      'Six options iPhone font tourner de vrais LLM sur l\'appareil en 2026 (Apple Intelligence peut aussi confier certaines requêtes à Private Cloud Compute d\'Apple) : PocketPal AI, Private LLM, Locally AI (par LM Studio), Google AI Edge Gallery, MLC Chat et Apple Intelligence (intégrée au système). Le chat fonctionne sans WiFi une fois le modèle téléchargé. Ce guide les compare sur le coût, la bibliothèque de modèles, l\'intégration iOS, la confidentialité et l\'état de maintenance — avec des vitesses indicatives sur iPhone 16 Pro et iPhone 17 Pro et un guide de RAM incluant désormais l\'iPhone 18 Pro — et explique pourquoi LLM Farm est sorti du classement.',
     metaDescription:
       'Six façons de faire tourner des LLM sur iPhone en 2026 : PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat. Coût, vie privée et RAM.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-fr.webp',
@@ -1804,7 +1804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Six options iPhone font tourner l\'IA entièrement sur votre téléphone en 2026. PocketPal AI est le point de départ gratuit recommandé — installez-le, téléchargez une fois un fichier modèle de 2.7 Go, et vous disposez d\'un assistant de chat privé qui fonctionne dans le train sans WiFi. Private LLM est l\'option payante si vous voulez que Siri parle au modèle local. Locally AI, de l\'équipe LM Studio, est l\'alternative gratuite moderne avec support Shortcuts, et Google AI Edge Gallery est l\'application gratuite de Google pour ses modèles Gemma 4. La version iPhone de MLC Chat n\'est plus mise à jour. Apple Intelligence est intégré à iOS mais n\'est pas une application de chat. PocketPal AI convient à la plupart des usages.',
+            text: 'Six options iPhone font tourner l\'IA sur votre téléphone en 2026 ; les apps de chat gardent la conversation sur l\'appareil une fois le modèle téléchargé, et Apple Intelligence peut aussi utiliser Private Cloud Compute d\'Apple pour les requêtes plus lourdes. PocketPal AI est le point de départ gratuit recommandé — installez-le, téléchargez une fois un fichier modèle de 2.7 Go, et vous disposez d\'un assistant de chat privé qui fonctionne dans le train sans WiFi. Private LLM est l\'option payante si vous voulez que Siri parle au modèle local. Locally AI, de l\'équipe LM Studio, est l\'alternative gratuite moderne avec support Shortcuts, et Google AI Edge Gallery est l\'application gratuite de Google pour ses modèles Gemma 4. La version iPhone de MLC Chat n\'est plus mise à jour. Apple Intelligence est intégré à iOS mais n\'est pas une application de chat. PocketPal AI convient à la plupart des usages.',
           },
         ],
         decisionBlock: {
@@ -2132,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'L\'IA locale vide-t-elle la batterie de mon iPhone ?',
-            a: 'Oui — l\'inférence active consomme typiquement ~3–5 W et, à titre de repère indicatif approximatif, peut vider la batterie d\'environ 20–30 % par heure sur iPhone 16 Pro. Pour un usage occasionnel (quelques invites), l\'impact est faible. Pour un usage soutenu (longue conversation, plusieurs synthèses), gardez l\'iPhone branché. Le modèle simplement présent en RAM sans inférence a un impact négligeable sur la batterie.',
+            a: 'Oui — l\'inférence active consomme typiquement ~3–5 W et, à titre de repère indicatif approximatif, peut vider la batterie d\'environ 20–30 % par heure sur iPhone 16 Pro. Pour un usage occasionnel (quelques invites), l\'impact est faible. En usage soutenu (longue conversation, plusieurs synthèses), la batterie se vide vite ; charger pendant la génération peut ajouter de la chaleur, donc mettez la génération en pause si le téléphone chauffe. Le modèle simplement présent en RAM sans inférence a un impact négligeable sur la batterie.',
           },
           {
             q: 'Mon iPhone va-t-il chauffer avec l\'IA locale ?',
@@ -2229,7 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026年最佳iPhone本地AI应用（无需WiFi运行LLM）',
     seoTitle: '2026年iPhone本地AI应用推荐（离线运行LLM）',
     intro:
-      '2026年，六款iPhone方案可在设备端完整运行真实LLM：PocketPal AI、Private LLM、Locally AI（LM Studio出品）、Google AI Edge Gallery、MLC Chat，以及系统集成的Apple Intelligence。模型下载完成后，对话无需WiFi即可使用。本指南从费用、模型库、iOS集成、隐私和维护状态几个维度逐一对比，给出iPhone 16 Pro和iPhone 17 Pro上的参考速度，以及已涵盖iPhone 18 Pro的内存选型指南，并说明LLM Farm为何退出榜单。',
+      '2026年，六款iPhone方案可在设备端运行真实LLM（Apple Intelligence也可能将部分请求交给苹果的Private Cloud Compute）：PocketPal AI、Private LLM、Locally AI（LM Studio出品）、Google AI Edge Gallery、MLC Chat，以及系统集成的Apple Intelligence。模型下载完成后，对话无需WiFi即可使用。本指南从费用、模型库、iOS集成、隐私和维护状态几个维度逐一对比，给出iPhone 16 Pro和iPhone 17 Pro上的参考速度，以及已涵盖iPhone 18 Pro的内存选型指南，并说明LLM Farm为何退出榜单。',
     metaDescription:
       '2026年在iPhone上运行LLM的六种方式：PocketPal AI、Private LLM、Locally AI、Google AI Edge Gallery、MLC Chat。含费用、隐私对比与内存选型指南。',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-zh.webp',
@@ -2355,7 +2355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '2026年有六种方案可让AI完全在iPhone上本地运行。PocketPal AI是推荐的免费起点——安装后一次性下载约2.7 GB的模型文件，即可获得一个无需WiFi、在地铁上也能使用的私密AI助手。Private LLM是希望Siri与本地模型对话的付费选择。Locally AI由LM Studio团队出品，是支持快捷指令的免费现代替代方案，Google AI Edge Gallery则是谷歌面向Gemma 4模型的免费应用。MLC Chat的iPhone版已不再更新。Apple Intelligence内置于iOS，但不是对话应用。PocketPal AI适合大多数使用场景。',
+            text: '2026年有六种方案可让AI在iPhone上运行；对话类应用在模型下载后将对话保留在设备端，Apple Intelligence处理较大请求时也可能使用苹果的Private Cloud Compute。PocketPal AI是推荐的免费起点——安装后一次性下载约2.7 GB的模型文件，即可获得一个无需WiFi、在地铁上也能使用的私密AI助手。Private LLM是希望Siri与本地模型对话的付费选择。Locally AI由LM Studio团队出品，是支持快捷指令的免费现代替代方案，Google AI Edge Gallery则是谷歌面向Gemma 4模型的免费应用。MLC Chat的iPhone版已不再更新。Apple Intelligence内置于iOS，但不是对话应用。PocketPal AI适合大多数使用场景。',
           },
         ],
         decisionBlock: {
@@ -2683,7 +2683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本地AI会消耗iPhone的电量吗？',
-            a: '会——持续运行推理时功耗通常约3–5 W，作为粗略的参考值，在iPhone 16 Pro上每小时可能耗电约20–30%。偶尔聊几句（几条提示）影响很小。持续使用（长对话、多个摘要任务）时，请让iPhone保持充电。模型仅驻留在内存中而不进行推理时，对电池的影响可以忽略。',
+            a: '会——持续运行推理时功耗通常约3–5 W，作为粗略的参考值，在iPhone 16 Pro上每小时可能耗电约20–30%。偶尔聊几句（几条提示）影响很小。持续使用（长对话、多个摘要任务）时电量消耗较快；生成时充电可能增加发热，手机变热时请暂停生成。模型仅驻留在内存中而不进行推理时，对电池的影响可以忽略。',
           },
           {
             q: '使用本地AI时iPhone会发烫吗？',
@@ -2780,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Las mejores apps de IA local para iPhone en 2026 (ejecuta LLMs sin WiFi)',
     seoTitle: 'Mejores apps de IA local para iPhone 2026 (sin conexión)',
     intro:
-      'Seis opciones para iPhone ejecutan LLMs reales por completo en el dispositivo en 2026: PocketPal AI, Private LLM, Locally AI (de LM Studio), Google AI Edge Gallery, MLC Chat y Apple Intelligence (integrado en el sistema). El chat funciona sin WiFi una vez descargado el modelo. Esta guía las compara por coste, biblioteca de modelos, integración con iOS, privacidad y estado de mantenimiento — con velocidades orientativas en iPhone 16 Pro e iPhone 17 Pro y una guía de RAM que ahora incluye el iPhone 18 Pro — y explica por qué LLM Farm salió de la clasificación.',
+      'Seis opciones para iPhone ejecutan LLMs reales en el dispositivo en 2026 (Apple Intelligence también puede enviar algunas solicitudes a Private Cloud Compute de Apple): PocketPal AI, Private LLM, Locally AI (de LM Studio), Google AI Edge Gallery, MLC Chat y Apple Intelligence (integrado en el sistema). El chat funciona sin WiFi una vez descargado el modelo. Esta guía las compara por coste, biblioteca de modelos, integración con iOS, privacidad y estado de mantenimiento — con velocidades orientativas en iPhone 16 Pro e iPhone 17 Pro y una guía de RAM que ahora incluye el iPhone 18 Pro — y explica por qué LLM Farm salió de la clasificación.',
     metaDescription:
       'Seis formas de ejecutar LLMs en iPhone en 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery y MLC Chat. Coste, privacidad y guía de RAM.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-es.webp',
@@ -2906,7 +2906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Seis opciones para iPhone ejecutan IA completamente en tu teléfono en 2026. PocketPal AI es el punto de partida gratuito recomendado — instálala, descarga un archivo de modelo de 2.7 GB una sola vez y tendrás un asistente de chat privado que funciona en el tren sin WiFi. Private LLM es la opción de pago si quieres que Siri hable con el modelo local. Locally AI, del equipo de LM Studio, es la alternativa gratuita moderna con soporte de Shortcuts, y Google AI Edge Gallery es la app gratuita de Google para sus modelos Gemma 4. La versión de MLC Chat para iPhone ya no se actualiza. Apple Intelligence está integrada en iOS, pero no es una app de chat. PocketPal AI encaja en la mayoría de los casos de uso.',
+            text: 'Seis opciones para iPhone ejecutan IA en tu teléfono en 2026; las apps de chat mantienen el chat en el dispositivo una vez descargado el modelo, y Apple Intelligence también puede usar Private Cloud Compute de Apple para solicitudes más grandes. PocketPal AI es el punto de partida gratuito recomendado — instálala, descarga un archivo de modelo de 2.7 GB una sola vez y tendrás un asistente de chat privado que funciona en el tren sin WiFi. Private LLM es la opción de pago si quieres que Siri hable con el modelo local. Locally AI, del equipo de LM Studio, es la alternativa gratuita moderna con soporte de Shortcuts, y Google AI Edge Gallery es la app gratuita de Google para sus modelos Gemma 4. La versión de MLC Chat para iPhone ya no se actualiza. Apple Intelligence está integrada en iOS, pero no es una app de chat. PocketPal AI encaja en la mayoría de los casos de uso.',
           },
         ],
         decisionBlock: {
@@ -3234,7 +3234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿La IA local agota la batería de mi iPhone?',
-            a: 'Sí — la inferencia activa suele consumir ~3–5 W y, como guía aproximada y orientativa, puede drenar la batería un 20–30 % por hora en iPhone 16 Pro. Para el uso ocasional (unos pocos prompts), el impacto es pequeño. Para el uso sostenido (conversación larga, múltiples tareas de resumen), mantén el iPhone enchufado. El modelo en sí, almacenado en RAM sin inferencia activa, tiene un impacto mínimo en la batería.',
+            a: 'Sí — la inferencia activa suele consumir ~3–5 W y, como guía aproximada y orientativa, puede drenar la batería un 20–30 % por hora en iPhone 16 Pro. Para el uso ocasional (unos pocos prompts), el impacto es pequeño. En uso sostenido (conversación larga, varias tareas de resumen) la batería se agota rápido; cargar mientras se genera puede añadir calor, así que pausa la generación si el teléfono se calienta. El modelo en sí, almacenado en RAM sin inferencia activa, tiene un impacto mínimo en la batería.',
           },
           {
             q: '¿Se calentará mi iPhone usando IA local?',
@@ -3331,7 +3331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026년 iPhone용 최고의 로컬 AI 앱 (WiFi 없이 LLM 실행)',
     seoTitle: '2026년 iPhone 로컬 AI 앱 비교 (오프라인 LLM)',
     intro:
-      '2026년에 iPhone에서 실제 LLM을 완전히 기기 안에서 실행하는 선택지는 여섯 가지입니다: PocketPal AI, Private LLM, Locally AI(LM Studio 제공), Google AI Edge Gallery, MLC Chat, 그리고 Apple Intelligence(시스템 내장). 모델을 한 번 다운로드하면 채팅은 WiFi 없이 작동합니다. 이 가이드는 비용, 모델 라이브러리, iOS 통합, 개인 정보 보호 수준, 유지보수 상태를 기준으로 비교하며, iPhone 16 Pro와 iPhone 17 Pro의 참고용 속도 범위와 iPhone 18 Pro를 포함한 RAM 가이드를 제공하고, LLM Farm이 순위에서 빠진 이유도 설명합니다.',
+      '2026년에 iPhone에서 실제 LLM을 기기 안에서 실행하는 선택지는 여섯 가지입니다(Apple Intelligence는 일부 요청을 Apple의 Private Cloud Compute로 보낼 수도 있습니다): PocketPal AI, Private LLM, Locally AI(LM Studio 제공), Google AI Edge Gallery, MLC Chat, 그리고 Apple Intelligence(시스템 내장). 모델을 한 번 다운로드하면 채팅은 WiFi 없이 작동합니다. 이 가이드는 비용, 모델 라이브러리, iOS 통합, 개인 정보 보호 수준, 유지보수 상태를 기준으로 비교하며, iPhone 16 Pro와 iPhone 17 Pro의 참고용 속도 범위와 iPhone 18 Pro를 포함한 RAM 가이드를 제공하고, LLM Farm이 순위에서 빠진 이유도 설명합니다.',
     metaDescription:
       '2026년 iPhone 로컬 LLM 앱 6종: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery, MLC Chat 비교.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.webp',
@@ -3458,7 +3458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '2026년에 iPhone에서 AI를 완전히 폰 안에서 실행하는 선택지는 여섯 가지입니다. PocketPal AI가 권장하는 무료 출발점입니다 — 설치하고 2.7 GB 모델 파일을 한 번 다운로드하면 WiFi 없이 기차에서도 작동하는 개인 채팅 비서를 갖게 됩니다. Private LLM은 Siri가 로컬 모델과 통신하기를 원할 때의 유료 선택입니다. LM Studio 팀의 Locally AI는 Shortcuts를 지원하는 무료 현대적 대안이고, Google AI Edge Gallery는 Gemma 4 모델을 위한 Google의 무료 앱입니다. MLC Chat의 iPhone 빌드는 더 이상 업데이트되지 않습니다. Apple Intelligence는 iOS에 내장되어 있지만 채팅 앱이 아닙니다. 대부분의 사용 사례에는 PocketPal AI가 맞습니다.',
+            text: '2026년에 iPhone에서 AI를 실행하는 선택지는 여섯 가지입니다. 채팅 앱은 모델을 다운로드한 뒤 채팅을 기기 안에서 처리하며, Apple Intelligence는 더 큰 요청에 Apple의 Private Cloud Compute를 사용할 수도 있습니다. PocketPal AI가 권장하는 무료 출발점입니다 — 설치하고 2.7 GB 모델 파일을 한 번 다운로드하면 WiFi 없이 기차에서도 작동하는 개인 채팅 비서를 갖게 됩니다. Private LLM은 Siri가 로컬 모델과 통신하기를 원할 때의 유료 선택입니다. LM Studio 팀의 Locally AI는 Shortcuts를 지원하는 무료 현대적 대안이고, Google AI Edge Gallery는 Gemma 4 모델을 위한 Google의 무료 앱입니다. MLC Chat의 iPhone 빌드는 더 이상 업데이트되지 않습니다. Apple Intelligence는 iOS에 내장되어 있지만 채팅 앱이 아닙니다. 대부분의 사용 사례에는 PocketPal AI가 맞습니다.',
           },
         ],
         decisionBlock: {
@@ -3790,7 +3790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 AI가 iPhone 배터리를 소모합니까?',
-            a: '예 — 추론을 활발히 실행하면 보통 ~3–5 W를 소비하며, 대략적인 참고 기준으로 iPhone 16 Pro에서 시간당 약 20–30%의 배터리를 소모할 수 있습니다. 가끔 채팅하는 정도(프롬프트 몇 개)라면 영향이 작습니다. 장시간 사용(긴 대화, 여러 요약 작업)에는 iPhone을 충전기에 연결해 두십시오. 추론이 실행되지 않고 모델이 RAM에만 있을 때의 배터리 영향은 무시할 만합니다.',
+            a: '예 — 추론을 활발히 실행하면 보통 ~3–5 W를 소비하며, 대략적인 참고 기준으로 iPhone 16 Pro에서 시간당 약 20–30%의 배터리를 소모할 수 있습니다. 가끔 채팅하는 정도(프롬프트 몇 개)라면 영향이 작습니다. 장시간 사용(긴 대화, 여러 요약 작업) 시 배터리가 빠르게 소모됩니다. 생성 중 충전은 발열을 늘릴 수 있으므로 기기가 따뜻해지면 생성을 일시 중지하십시오. 추론이 실행되지 않고 모델이 RAM에만 있을 때의 배터리 영향은 무시할 만합니다.',
           },
           {
             q: '로컬 AI를 사용하면 iPhone이 뜨거워집니까?',
@@ -3887,7 +3887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Os melhores apps de IA local para iPhone em 2026 (execute LLMs sem WiFi)',
     seoTitle: 'Melhores apps de IA local para iPhone em 2026 (offline)',
     intro:
-      'Seis opções para iPhone executam LLMs reais totalmente no aparelho em 2026: PocketPal AI, Private LLM, Locally AI (da LM Studio), Google AI Edge Gallery, MLC Chat e Apple Intelligence (integrado ao sistema). O chat funciona sem WiFi depois que o modelo é baixado. Este guia compara as opções por custo, biblioteca de modelos, integração com o iOS, privacidade e situação de manutenção — com velocidades indicativas no iPhone 16 Pro e no iPhone 17 Pro e um guia de RAM que agora inclui o iPhone 18 Pro — e explica por que o LLM Farm saiu do ranking.',
+      'Seis opções para iPhone executam LLMs reais no aparelho em 2026 (o Apple Intelligence também pode enviar algumas solicitações ao Private Cloud Compute da Apple): PocketPal AI, Private LLM, Locally AI (da LM Studio), Google AI Edge Gallery, MLC Chat e Apple Intelligence (integrado ao sistema). O chat funciona sem WiFi depois que o modelo é baixado. Este guia compara as opções por custo, biblioteca de modelos, integração com o iOS, privacidade e situação de manutenção — com velocidades indicativas no iPhone 16 Pro e no iPhone 17 Pro e um guia de RAM que agora inclui o iPhone 18 Pro — e explica por que o LLM Farm saiu do ranking.',
     metaDescription:
       'Seis jeitos de rodar LLMs no iPhone em 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery e MLC Chat. Custo, privacidade e guia de RAM.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-pt.webp',
@@ -4013,7 +4013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Seis opções executam IA totalmente no seu iPhone em 2026. O PocketPal AI é o ponto de partida gratuito recomendado — instale, baixe uma única vez um arquivo de modelo de 2.7 GB e pronto: você tem um assistente de chat privado que funciona no trem sem WiFi. O Private LLM é a opção paga se você quer que a Siri converse com o modelo local. O Locally AI, da equipe da LM Studio, é a alternativa gratuita e moderna com suporte a Shortcuts, e o Google AI Edge Gallery é o app gratuito do Google para os modelos Gemma 4. A versão do MLC Chat para iPhone não é mais atualizada. O Apple Intelligence é integrado ao iOS, mas não é um app de chat. O PocketPal AI atende à maioria dos casos de uso.',
+            text: 'Seis opções executam IA no seu iPhone em 2026; os apps de chat mantêm o chat no aparelho depois que o modelo é baixado, e o Apple Intelligence também pode usar o Private Cloud Compute da Apple para solicitações maiores. O PocketPal AI é o ponto de partida gratuito recomendado — instale, baixe uma única vez um arquivo de modelo de 2.7 GB e pronto: você tem um assistente de chat privado que funciona no trem sem WiFi. O Private LLM é a opção paga se você quer que a Siri converse com o modelo local. O Locally AI, da equipe da LM Studio, é a alternativa gratuita e moderna com suporte a Shortcuts, e o Google AI Edge Gallery é o app gratuito do Google para os modelos Gemma 4. A versão do MLC Chat para iPhone não é mais atualizada. O Apple Intelligence é integrado ao iOS, mas não é um app de chat. O PocketPal AI atende à maioria dos casos de uso.',
           },
         ],
         decisionBlock: {
@@ -4341,7 +4341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'A IA local gasta a bateria do meu iPhone?',
-            a: 'Sim — a inferência ativa normalmente consome ~3–5 W e, como referência aproximada e indicativa, pode esgotar a bateria em cerca de 20–30% por hora no iPhone 16 Pro. Para uso ocasional (alguns prompts), o impacto é pequeno. Para uso contínuo (conversa longa, várias tarefas de resumo), deixe o iPhone na tomada. O modelo parado na RAM, sem inferência rodando, tem impacto desprezível na bateria.',
+            a: 'Sim — a inferência ativa normalmente consome ~3–5 W e, como referência aproximada e indicativa, pode esgotar a bateria em cerca de 20–30% por hora no iPhone 16 Pro. Para uso ocasional (alguns prompts), o impacto é pequeno. Em uso contínuo (conversa longa, várias tarefas de resumo) a bateria descarrega rápido; carregar durante a geração pode aumentar o calor, então pause a geração se o celular esquentar. O modelo parado na RAM, sem inferência rodando, tem impacto desprezível na bateria.',
           },
           {
             q: 'Meu iPhone vai esquentar usando IA local?',
@@ -4438,7 +4438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل تطبيقات الذكاء الاصطناعي المحلي لـ iPhone في 2026 (شغّل النماذج اللغوية بدون واي فاي)',
     seoTitle: 'أفضل تطبيقات الذكاء الاصطناعي المحلي لـ iPhone 2026',
     intro:
-      'ست خيارات على iPhone تُشغّل نماذج لغوية حقيقية بالكامل على الجهاز في 2026: PocketPal AI وPrivate LLM وLocally AI (من LM Studio) وGoogle AI Edge Gallery وMLC Chat وApple Intelligence (المدمج في النظام). تعمل الدردشة على الجهاز بدون واي فاي بمجرد تنزيل النموذج. يقارن هذا الدليل بينها من حيث التكلفة ومكتبة النماذج والتكامل مع iOS وموقف الخصوصية وحالة الصيانة — مع سرعات إرشادية على iPhone 16 Pro وiPhone 17 Pro ودليل للذاكرة العشوائية يشمل الآن iPhone 18 Pro — ويشرح سبب خروج LLM Farm من الترتيب.',
+      'ست خيارات على iPhone تُشغّل نماذج لغوية حقيقية على الجهاز في 2026 (ويمكن لـ Apple Intelligence أيضاً إرسال بعض الطلبات إلى Private Cloud Compute من Apple): PocketPal AI وPrivate LLM وLocally AI (من LM Studio) وGoogle AI Edge Gallery وMLC Chat وApple Intelligence (المدمج في النظام). تعمل الدردشة على الجهاز بدون واي فاي بمجرد تنزيل النموذج. يقارن هذا الدليل بينها من حيث التكلفة ومكتبة النماذج والتكامل مع iOS وموقف الخصوصية وحالة الصيانة — مع سرعات إرشادية على iPhone 16 Pro وiPhone 17 Pro ودليل للذاكرة العشوائية يشمل الآن iPhone 18 Pro — ويشرح سبب خروج LLM Farm من الترتيب.',
     metaDescription:
       'ست طرق لتشغيل LLMs على iPhone في 2026: PocketPal AI وPrivate LLM وLocally AI وGoogle AI Edge Gallery وMLC Chat. التكلفة والخصوصية ودليل الذاكرة.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ar.webp',
@@ -4564,7 +4564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'ست خيارات على iPhone تُشغّل الذكاء الاصطناعي بالكامل على هاتفك في 2026. PocketPal AI هو نقطة البداية المجانية الموصى بها — ثبّته، نزّل ملف النموذج (2.7 جيجابايت) مرة واحدة، وستحصل على مساعد دردشة خاص يعمل في القطار بدون واي فاي. Private LLM هو الخيار المدفوع إذا أردت أن يتحدث Siri مع النموذج المحلي. Locally AI، من فريق LM Studio، هو البديل المجاني الحديث بدعم Shortcuts، وGoogle AI Edge Gallery هو تطبيق Google المجاني لنماذج Gemma 4. أما إصدار iPhone من MLC Chat فلم يعد يُحدَّث. Apple Intelligence مدمج في iOS لكنه ليس تطبيق دردشة. PocketPal AI يناسب معظم حالات الاستخدام.',
+            text: 'ست خيارات على iPhone تُشغّل الذكاء الاصطناعي على هاتفك في 2026؛ تُبقي تطبيقات الدردشة المحادثة على الجهاز بعد تنزيل النموذج، ويمكن لـ Apple Intelligence أيضاً استخدام Private Cloud Compute من Apple للطلبات الأكبر. PocketPal AI هو نقطة البداية المجانية الموصى بها — ثبّته، نزّل ملف النموذج (2.7 جيجابايت) مرة واحدة، وستحصل على مساعد دردشة خاص يعمل في القطار بدون واي فاي. Private LLM هو الخيار المدفوع إذا أردت أن يتحدث Siri مع النموذج المحلي. Locally AI، من فريق LM Studio، هو البديل المجاني الحديث بدعم Shortcuts، وGoogle AI Edge Gallery هو تطبيق Google المجاني لنماذج Gemma 4. أما إصدار iPhone من MLC Chat فلم يعد يُحدَّث. Apple Intelligence مدمج في iOS لكنه ليس تطبيق دردشة. PocketPal AI يناسب معظم حالات الاستخدام.',
           },
         ],
         decisionBlock: {
@@ -4892,7 +4892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يستنزف الذكاء الاصطناعي المحلي بطارية iPhone؟',
-            a: 'نعم — الاستدلال النشط يستهلك عادةً نحو 3–5 واط، وكدليل تقريبي إرشادي قد يستنزف البطارية بنحو 20–30% في الساعة على iPhone 16 Pro. للاستخدام العرضي (بضع مطالبات)، يكون التأثير ضئيلاً. للاستخدام المستمر (محادثة طويلة، مهام تلخيص متعددة)، أبقِ iPhone موصولاً بالشاحن. النموذج ذاته في الذاكرة العشوائية بدون استدلال نشط له تأثير ضئيل على البطارية.',
+            a: 'نعم — الاستدلال النشط يستهلك عادةً نحو 3–5 واط، وكدليل تقريبي إرشادي قد يستنزف البطارية بنحو 20–30% في الساعة على iPhone 16 Pro. للاستخدام العرضي (بضع مطالبات)، يكون التأثير ضئيلاً. عند الاستخدام المستمر (محادثة طويلة، مهام تلخيص متعددة) تستنزف البطارية بسرعة؛ وقد يزيد الشحن أثناء التوليد من الحرارة، لذا أوقف التوليد مؤقتاً إذا سخّن الهاتف. النموذج ذاته في الذاكرة العشوائية بدون استدلال نشط له تأثير ضئيل على البطارية.',
           },
           {
             q: 'هل يسخن iPhone عند استخدام الذكاء الاصطناعي المحلي؟',
