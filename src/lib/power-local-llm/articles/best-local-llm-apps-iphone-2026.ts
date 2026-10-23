@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'PocketPal AI is the recommended free default for most iPhone users — open-source (MIT), App Store install, supports any GGUF model from Hugging Face, and runs Phi-4 Mini (3.8B) at roughly 10–15 tokens/sec (indicative) on iPhone 16 Pro. Private LLM is the paid option ($4.99 one-time, iPhone + iPad + Mac) with Shortcuts and Siri integration. Locally AI, developed by the LM Studio team, is the free Apple MLX option with Shortcuts support and access to Apple\'s on-device foundation model. Google AI Edge Gallery is Google\'s free app for Gemma 4. MLC Chat is Metal-accelerated but its iPhone build is dormant since September 2024. Apple Intelligence runs on-device models too but is system-integrated and complements these apps rather than replacing them.',
         bullets: [
-          'PocketPal AI — free, open-source (MIT), App Store, v1.20.1 (19 Oct 2026). Best default for most users. Supports any GGUF model. Optional in-app purchases for premium content.',
+          'PocketPal AI — free, open-source (MIT), App Store, v1.20.1 (19 Oct 2026). Recommended default for most users. Supports any GGUF model. Optional in-app purchases for premium content.',
           'Private LLM — $4.99 one-time (iPhone + iPad + Mac), v1.9.16 (14 Sep 2026). Paid option. Shortcuts + Siri integration.',
           'Locally AI — free, by the LM Studio team, v1.66.0 (15 Oct 2026). Apple MLX engine, Shortcuts support, Apple Foundation Models access.',
           'Google AI Edge Gallery — free, by Google, v1.0.13 (8 Oct 2026). Gemma 4, agent skills, thinking mode, image and audio input.',
