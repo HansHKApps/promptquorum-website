@@ -82,7 +82,7 @@ export function HardwareBlock({
     return (
       <span className="font-medium text-text-primary">
         {display.headline}
-        {echo && <span className="ml-1 font-normal text-[11px] text-text-secondary/70">({echo})</span>}
+        {echo && <span className="ms-1 font-normal text-[11px] text-text-secondary/70">({echo})</span>}
       </span>
     )
   }

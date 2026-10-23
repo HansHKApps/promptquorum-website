@@ -94,7 +94,7 @@ export function ToolTable({
         <thead>
           <tr className="border-b-2 border-hub-violet-edge">
             {COLUMNS.map((col, i) => (
-              <th key={col.key} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-hub-violet-tint whitespace-nowrap${i === 0 ? ' sticky start-0 z-10' : ''}`}>
+              <th key={col.key} className={`text-start p-2 sm:p-3 font-bold text-text-primary bg-hub-violet-tint whitespace-nowrap${i === 0 ? ' sticky start-0 z-10' : ''}`}>
                 {col.kind === 'sort' ? (
                   <button
                     type="button"
@@ -127,7 +127,7 @@ export function ToolTable({
                   {app.name}
                   {(appActivity === 'quiet' || appActivity === 'dead') && (
                     <span
-                      className={`ml-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'}`}
+                      className={`ms-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-hub-rose bg-hub-rose-tint text-hub-rose-ink'}`}
                       title={t(appActivity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', lang)}
                     >
                       ⚠ {t(appActivity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', lang)}

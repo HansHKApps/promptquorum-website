@@ -119,7 +119,7 @@ function Panel({ client }: { client: McpClientOnboarding }) {
         </div>
         <p className="mt-2 text-text-secondary">This ready-made prompt goes to your AI in one go:</p>
         <div className="mt-1 flex items-start gap-2">
-          <blockquote className="min-w-0 flex-1 whitespace-pre-line rounded border-l-4 border-hub-violet-edge bg-hub-violet-tint px-3 py-2 text-xs">{launchPrompt}</blockquote>
+          <blockquote className="min-w-0 flex-1 whitespace-pre-line rounded border-s-4 border-hub-violet-edge bg-hub-violet-tint px-3 py-2 text-xs">{launchPrompt}</blockquote>
           <CopyButton text={launchPrompt} label="prompt" />
         </div>
         {client.openWithPrompt && (
@@ -188,7 +188,7 @@ export function McpConnectPanel() {
               setOpenId(openId === c.id ? null : c.id)
             }}
             className={cn(
-              'flex flex-col items-start gap-1 rounded-[10px] border px-3 py-2 text-left text-sm font-medium',
+              'flex flex-col items-start gap-1 rounded-[10px] border px-3 py-2 text-start text-sm font-medium',
               openId === c.id ? 'border-hub-violet bg-hub-violet text-white' : 'border-hub-violet-edge bg-white text-text-primary hover:bg-hub-violet-tint',
               highlighted && 'ring-2 ring-primary/60'
             )}
