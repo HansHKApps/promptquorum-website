@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { CSSProperties } from 'react'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { AppLink as Link } from '@/components/AppLink'
@@ -60,202 +61,248 @@ export default function EsPQAppsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-surface pt-24 pb-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-
-          {/* Hero */}
-          <div className="py-16 border-b border-primary/20 mb-16 text-center">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">PQ Apps</p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
-              PromptQuorum, donde sea que trabajes
-            </h1>
-            <p className="text-xl text-text-secondary leading-relaxed mb-8">
-              Un solo prompt, enviado simultáneamente a más de 25 modelos de IA, con soporte para LLMs locales y análisis de consenso multi-modelo, todo desde tu navegador.
-            </p>
-            <Link
-              href="/es/download"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
-            >
-              Probar la beta
-            </Link>
+      <div className="min-h-screen bg-white text-text-primary">
+        <section className="border-b border-hub-violet-edge bg-hub-violet-tint">
+          <div className="mx-auto max-w-[1120px] px-6 flex flex-wrap items-stretch gap-8 pb-12 pt-24">
+            <div className="min-w-0 flex-[1_1_520px]">
+              <nav aria-label="Breadcrumb" className="mb-3.5 text-[13px] text-text-secondary">
+                <Link href="/es" className="hover:underline">Inicio</Link>
+                <span aria-hidden="true"> &nbsp;/&nbsp; </span>
+                <span aria-current="page">PQ Apps</span>
+              </nav>
+              <span className="inline-block rounded-full border border-hub-violet bg-white px-3 py-0.5 text-[13px] font-semibold text-hub-violet-ink">PQ Apps</span>
+              <h1 className="mb-3 mt-3.5 text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl">
+                PromptQuorum, donde sea que trabajes
+              </h1>
+              <p className="mb-6 max-w-[600px] text-lg leading-relaxed text-text-secondary">
+                Un solo prompt, enviado simultáneamente a más de 25 modelos de IA, con soporte para LLMs locales y análisis de consenso multi-modelo, todo desde tu navegador.
+              </p>
+              <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href="/es/download"
+                style={{ '--cta-tone': 'var(--hub-violet)', '--cta-offset': 'var(--hub-violet-tint)' } as CSSProperties}
+                className="motion-safe:animate-hub-cta-pop relative inline-block rounded-[10px] bg-hub-violet px-6 py-3.5 text-[17px] font-extrabold text-white ring-2 ring-white ring-offset-2 ring-offset-[var(--cta-offset)] transition-[transform,box-shadow] duration-150 [animation-fill-mode:both] hover:-translate-y-0.5 shadow-[inset_0_1.5px_0_0_rgba(255,255,255,0.35),inset_0_-2.5px_0_0_rgba(0,0,0,0.16),0_10px_22px_-6px_var(--cta-tone)] hover:shadow-[inset_0_1.5px_0_0_rgba(255,255,255,0.4),inset_0_-2.5px_0_0_rgba(0,0,0,0.22),0_15px_28px_-6px_var(--cta-tone)]"
+              >
+                Probar la beta
+              </Link>
+              </div>
+            </div>
+            <div className="min-w-0 flex-[1_1_400px]">
+              <div className="box-border rounded-2xl border border-hub-violet-edge bg-white p-5 lg:self-start">
+                <ol className="flex flex-col gap-2.5">
+                  <li className="flex items-center gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-hub-violet text-xs font-bold text-white">1</span>
+                    <span className="min-w-0 flex-1 rounded-lg bg-hub-violet-tint px-3 py-2 text-[13px] font-semibold leading-snug text-hub-violet-ink"><span className="font-bold">Escribir</span> · Estructura tu prompt</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-hub-azure text-xs font-bold text-white">2</span>
+                    <span className="min-w-0 flex-1 rounded-lg bg-hub-azure-tint px-3 py-2 text-[13px] font-semibold leading-snug text-hub-azure-ink"><span className="font-bold">Optimizar</span> · Refina con tu propio LLM</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-hub-indigo text-xs font-bold text-white">3</span>
+                    <span className="min-w-0 flex-1 rounded-lg bg-hub-indigo-tint px-3 py-2 text-[13px] font-semibold leading-snug text-hub-indigo-ink"><span className="font-bold">Enviar</span> · Envía a 25+ servicios de IA</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-hub-orchid text-xs font-bold text-white">4</span>
+                    <span className="min-w-0 flex-1 rounded-lg bg-hub-orchid-tint px-3 py-2 text-[13px] font-semibold leading-snug text-hub-orchid-ink"><span className="font-bold">Quorum</span> · Encuentra consenso entre todos los modelos</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
           </div>
+        </section>
+
+        <div className="border-b border-border bg-white">
+          <nav className="mx-auto max-w-[1120px] px-6 flex flex-wrap items-center gap-x-2.5 gap-y-2 py-2.5 text-sm">
+            <a href="#how-it-works" className="rounded-full bg-hub-azure-tint px-3.5 py-1.5 font-semibold text-hub-azure-ink">Cómo funciona</a>
+            <a href="#features" className="rounded-full bg-hub-violet-tint px-3.5 py-1.5 font-semibold text-hub-violet-ink">Características</a>
+            <a href="#compare-tools" className="rounded-full bg-hub-indigo-tint px-3.5 py-1.5 font-semibold text-hub-indigo-ink">Comparar herramientas</a>
+            <a href="#faq" className="rounded-full bg-hub-cyan-tint px-3.5 py-1.5 font-semibold text-hub-cyan-ink">Preguntas frecuentes</a>
+          </nav>
+        </div>
+
+        <div>
 
           {/* How It Works */}
-          <section id="how-it-works" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl font-bold text-text-primary mb-2">Cómo funciona</h2>
+          <section id="how-it-works" className="scroll-mt-24 border-t border-border bg-white">
+            <div className="mx-auto max-w-[1120px] px-6 py-14">
+            <div className="mb-4 flex items-center gap-3">
+              <span aria-hidden="true" className="rounded-[10px] bg-hub-azure px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white">01</span>
+              <h2 className="text-[26px] font-bold tracking-tight text-text-primary sm:text-[28px]">Cómo funciona</h2>
+            </div>
             <p className="text-text-secondary mb-3">Un flujo de trabajo de 4 etapas: escribe un prompt estructurado usando uno de 9 frameworks, optimízalo con tu propio LLM, envíalo simultáneamente a 25+ servicios de IA y analiza todas las respuestas usando 13 tipos de análisis de consenso.</p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-hub-azure-tint text-hub-azure-ink rounded-full text-sm font-medium mb-8">
               Funciona completamente en tu navegador — ningún servidor de PromptQuorum ve tus prompts ni claves de API
             </div>
 
             <div className="space-y-8 mb-16">
-              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+              <div className="rounded-[14px] border border-hub-violet-edge bg-hub-violet-tint overflow-hidden">
                 <div className="flex items-start gap-6 p-6 sm:p-8">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">1</span>
+                    <div className="w-14 h-14 rounded-xl bg-hub-violet flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">1</span>
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Escribir</span>
+                    <span className="text-xs font-bold text-hub-violet-ink uppercase tracking-widest">Escribir</span>
                     <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Estructura tu prompt</h3>
                     <p className="text-text-secondary mb-5 text-lg leading-relaxed">Los prompts estructurados con frameworks producen resultados de mayor calidad. PromptQuorum incluye 9 frameworks integrados (Single Prompt Line, CRAFT, CO-STAR, RISEN, TRACE, APE, SPECS, Google Prompt, RTF) más 2 ranuras de frameworks totalmente personalizables.</p>
                     <ul className="space-y-2 mb-5">
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-violet-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Single Prompt Line — estructura mínima para tareas rápidas</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-violet-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>CRAFT — Context, Role, Action, Format, Target (escritura creativa)</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-violet-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>CO-STAR — Context, Objective, Style, Tone, Audience, Response (marketing, negocios)</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-violet-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>RISEN — Role, Instructions, Steps, End Goal, Narrowing (tareas empresariales secuenciales)</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-violet-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>TRACE — Task, Request, Action, Context, Example (aprendizaje few-shot)</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-violet-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>APE, SPECS, Google Prompt, RTF — optimizados para tipos de tareas específicas</span>
                       </li>
                     </ul>
-                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                    <div className="bg-white border-l-4 border-hub-violet rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
                       Un Asistente de Frameworks recomienda el mejor framework según el tipo de tarea.
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+              <div className="rounded-[14px] border border-hub-azure-edge bg-hub-azure-tint overflow-hidden">
                 <div className="flex items-start gap-6 p-6 sm:p-8">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">2</span>
+                    <div className="w-14 h-14 rounded-xl bg-hub-azure flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">2</span>
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Optimizar</span>
+                    <span className="text-xs font-bold text-hub-azure-ink uppercase tracking-widest">Optimizar</span>
                     <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Refina con tu propio LLM</h3>
                     <p className="text-text-secondary mb-5 text-lg leading-relaxed">La calidad del prompt mejora de forma medible con la optimización — los prompts estructurados puntúan un 25–45% más alto en evaluaciones de LLM. PromptQuorum aplica 8 tipos de refinamiento (Hacer Conciso, Expandir Detalle, Dividir en Pasos, Aumentar Especificidad, Simplificar, Añadir Controles de Calidad, Consulta Multi-Experto, Comprimir a Esencia) más detección inteligente de temperatura.</p>
                     <ul className="space-y-2 mb-5">
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-azure-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Evaluación de calidad — puntuación de 0-100% en claridad, especificidad, estructura y restricciones</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-azure-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Temperatura inteligente — recomienda el nivel óptimo de creatividad (0,0–1,0) según el tipo de tarea</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-azure-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Historial de versiones — cada refinamiento guardado; ramifica y compara rutas de refinamiento</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-azure-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Modo enseñanza — explica por qué cada cambio mejora la calidad y la claridad</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-azure-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>8 refinamientos con un clic — aplica transformaciones estructuradas al instante</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-azure-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Instrucción personalizada — refinamiento en texto libre usando tu propio LLM</span>
                       </li>
                     </ul>
-                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                    <div className="bg-white border-l-4 border-hub-azure rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
                       Tu LLM. Tu clave de API. Nada pasa por los servidores de PromptQuorum.
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+              <div className="rounded-[14px] border border-hub-indigo-edge bg-hub-indigo-tint overflow-hidden">
                 <div className="flex items-start gap-6 p-6 sm:p-8">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">3</span>
+                    <div className="w-14 h-14 rounded-xl bg-hub-indigo flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">3</span>
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Enviar</span>
+                    <span className="text-xs font-bold text-hub-indigo-ink uppercase tracking-widest">Enviar</span>
                     <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Envía a 25+ servicios de IA</h3>
                     <p className="text-text-secondary mb-5 text-lg leading-relaxed">Enviar el mismo prompt a múltiples modelos de IA revela cuál funciona mejor para tu tarea. PromptQuorum abre pestañas de navegador en paralelo hacia 25+ destinos sin copiar y pegar.</p>
                     <ul className="space-y-2 mb-5">
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-indigo-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Envío automático (17 servicios): OpenAI ChatGPT, Google Gemini, Anthropic Claude, Perplexity, xAI Grok, DeepSeek, Mistral, Cohere, Azure, Together, Groq y más</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-indigo-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Copiar-pegar (8 servicios): Qwen, Meta AI, Poe, Kimi, LM Studio, Jan AI, GPT4All y otros</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-indigo-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Perplexity se envía automáticamente — prompt enviado de inmediato al cargarse</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-indigo-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>2 ranuras de URL personalizadas — configura cualquier servicio de IA fuera de la lista predeterminada</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-indigo-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Refinamiento previo al envío opcional — mejora final de LLM antes de enviar</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-indigo-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Ejecución en paralelo — todas las pestañas se abren simultáneamente; recoge respuestas en menos de 1 minuto</span>
                       </li>
                     </ul>
-                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                    <div className="bg-white border-l-4 border-hub-indigo rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
                       Todas las pestañas del navegador se abren en paralelo. Sin copiar y pegar entre pestañas.
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+              <div className="rounded-[14px] border border-hub-orchid-edge bg-hub-orchid-tint overflow-hidden">
                 <div className="flex items-start gap-6 p-6 sm:p-8">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">4</span>
+                    <div className="w-14 h-14 rounded-xl bg-hub-orchid flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">4</span>
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Quorum</span>
+                    <span className="text-xs font-bold text-hub-orchid-ink uppercase tracking-widest">Quorum</span>
                     <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Encuentra consenso entre todos los modelos</h3>
                     <p className="text-text-secondary mb-5 text-lg leading-relaxed">Cuando 5+ modelos independientes coinciden en una respuesta, la confianza es mayor que con un solo modelo. Pega todas las respuestas de nuevo en PromptQuorum y aplica 13 tipos de análisis de consenso.</p>
                     <ul className="space-y-2 mb-5">
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-orchid-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Resumen de consenso — identifica temas compartidos y acuerdos unánimes</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-orchid-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Detección de contradicciones — marca dónde los modelos divergen; identifica opiniones minoritarias</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-orchid-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Detección de alucinaciones — identifica afirmaciones que aparecen en pocos modelos; posibles datos falsos</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-orchid-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Puntuación de confianza — nivel de certeza por modelo y por afirmación</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-orchid-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Selección de la mejor respuesta — selecciona la respuesta individual de mayor calidad</span>
                       </li>
                       <li className="flex items-start gap-2 text-text-secondary">
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-hub-orchid-ink font-bold mt-0.5 flex-shrink-0">✓</span>
                         <span>Fusión ponderada — sintetiza una respuesta híbrida usando los mejores elementos de todos los modelos</span>
                       </li>
                     </ul>
-                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                    <div className="bg-white border-l-4 border-hub-orchid rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
                       Cuando 5+ modelos independientes convergen en la misma respuesta, el riesgo de alucinación es menor que con un solo modelo.
                     </div>
                   </div>
@@ -269,55 +316,55 @@ export default function EsPQAppsPage() {
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="border-b border-primary/20">
+                    <tr className="border-b border-hub-orchid-edge">
                       <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary">Framework</th>
                       <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary hidden md:table-cell">Estructura</th>
                       <th className="text-left py-2 sm:py-3 font-semibold text-text-primary">Óptimo para</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">Single Prompt Line</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">Single Prompt Line</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">—</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Consultas rápidas y ad hoc sin estructura</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">APE</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">APE</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Action · Purpose · Expectation</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Estructura mínima de 3 campos; tareas simples</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">CRAFT</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">CRAFT</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Context · Role · Action · Format · Target</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Escritura creativa; tareas de uso general</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">CO-STAR</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">CO-STAR</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Context · Objective · Style · Tone · Audience · Response</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Textos de marketing; comunicación empresarial</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">SPECS</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">SPECS</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Situation · Purpose · Expected Output · Context · Style</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Análisis; investigación; redacción técnica</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">RISEN</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">RISEN</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Role · Instructions · Steps · End Goal · Narrowing</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Flujos de trabajo empresariales de múltiples pasos</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">TRACE</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">TRACE</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Task · Request · Action · Context · Example</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Aprendizaje few-shot; tareas basadas en ejemplos</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">Google Prompt</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">Google Prompt</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Task · Context · Persona</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Tareas profesionales; prompts basados en roles</td>
                     </tr>
-                    <tr className="border-b border-primary/10">
-                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">RTF</td>
+                    <tr className="border-b border-hub-orchid-edge">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-hub-orchid-ink whitespace-nowrap">RTF</td>
                       <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Role · Task · Format</td>
                       <td className="py-2 sm:py-3 text-text-secondary">Estructura mínima; solo 3 campos esenciales</td>
                     </tr>
@@ -330,88 +377,88 @@ export default function EsPQAppsPage() {
               <h3 className="text-xl font-bold text-text-primary mb-2">13 Tipos de Análisis Quorum</h3>
               <p className="text-text-secondary mb-6">Aplica 2 o los 13 análisis a respuestas de múltiples modelos. Cada análisis es ejecutado por tu LLM conectado, no por los servidores de PromptQuorum. Identifica consenso, contradicciones, alucinaciones y niveles de confianza en todos los resultados.</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="bg-card border border-primary/20 rounded-xl p-5">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Síntesis (3)</div>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-5">
+                  <div className="text-xs font-bold text-hub-orchid-ink uppercase tracking-widest mb-3">Síntesis (3)</div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Resumen de consenso — temas compartidos entre todos los modelos
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Fusión ponderada — respuesta híbrida combinando lo mejor de cada modelo
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Extracción de hechos atómicos — desglosa afirmaciones en hechos discretos; cuenta el acuerdo entre modelos
                     </li>
                   </ul>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-5">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Comparación (3)</div>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-5">
+                  <div className="text-xs font-bold text-hub-orchid-ink uppercase tracking-widest mb-3">Comparación (3)</div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Mapeo de superposición — identifica qué modelos produjeron resultados idénticos
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Detección de contradicciones — marca afirmaciones donde los modelos divergen
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Puntuación de confianza — mide el nivel de certeza por modelo y por afirmación
                     </li>
                   </ul>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-5">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Calidad (3)</div>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-5">
+                  <div className="text-xs font-bold text-hub-orchid-ink uppercase tracking-widest mb-3">Calidad (3)</div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Verificación de completitud — verifica que toda la información requerida esté presente
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Detección de alucinaciones — identifica afirmaciones en pocos modelos; posibles datos falsos
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Eliminación de redundancias — elimina afirmaciones duplicadas o casi duplicadas
                     </li>
                   </ul>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-5">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Selección (4)</div>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-5">
+                  <div className="text-xs font-bold text-hub-orchid-ink uppercase tracking-widest mb-3">Selección (4)</div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Selección de la mejor respuesta — elige la respuesta individual de mayor calidad
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Conjunto multi-modelo — combina resultados usando ponderación de confiabilidad por modelo
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Bandera de controversia — destaca afirmaciones donde el acuerdo entre modelos es débil
                     </li>
                     <li className="flex items-start gap-2 text-text-secondary text-sm">
-                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                       Análisis personalizado — plantilla de análisis definida por el usuario
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="mt-6 bg-secondary/30 border border-primary/20 rounded-xl p-6">
+              <div className="mt-6 bg-white border border-hub-orchid-edge rounded-[14px] p-6">
                 <div className="text-sm font-semibold text-text-primary mb-2">Exporta resultados en 6 formatos</div>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.txt</span>
-                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.md</span>
-                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.json</span>
-                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.csv</span>
-                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.html</span>
-                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.pdf</span>
+                  <span className="px-3 py-1 bg-white border border-hub-orchid-edge rounded-full text-xs font-mono text-text-secondary">.txt</span>
+                  <span className="px-3 py-1 bg-white border border-hub-orchid-edge rounded-full text-xs font-mono text-text-secondary">.md</span>
+                  <span className="px-3 py-1 bg-white border border-hub-orchid-edge rounded-full text-xs font-mono text-text-secondary">.json</span>
+                  <span className="px-3 py-1 bg-white border border-hub-orchid-edge rounded-full text-xs font-mono text-text-secondary">.csv</span>
+                  <span className="px-3 py-1 bg-white border border-hub-orchid-edge rounded-full text-xs font-mono text-text-secondary">.html</span>
+                  <span className="px-3 py-1 bg-white border border-hub-orchid-edge rounded-full text-xs font-mono text-text-secondary">.pdf</span>
                 </div>
                 <p className="text-xs text-text-muted mt-2">Múltiples formatos → descargados como archivo .zip. File System Access API para selección de carpeta (Chrome/Edge/Safari 16+).</p>
               </div>
@@ -420,24 +467,24 @@ export default function EsPQAppsPage() {
             <div className="mb-16">
               <h3 className="text-xl font-bold text-text-primary mb-6">Conceptos Clave</h3>
               <dl className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <dt className="font-semibold text-primary mb-2">Envío Multi-Modelo</dt>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <dt className="font-semibold text-hub-orchid-ink mb-2">Envío Multi-Modelo</dt>
                   <dd className="text-text-secondary text-sm leading-relaxed">Enviar un prompt simultáneamente a 25+ modelos de IA con un solo clic. PromptQuorum precarga tu prompt en cada destino a través de URL — sin copiar y pegar, todas las pestañas se abren en paralelo.</dd>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <dt className="font-semibold text-primary mb-2">Análisis Quorum</dt>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <dt className="font-semibold text-hub-orchid-ink mb-2">Análisis Quorum</dt>
                   <dd className="text-text-secondary text-sm leading-relaxed">Comparación estructurada de respuestas de múltiples modelos de IA para identificar consenso, contradicciones y niveles de confianza. PromptQuorum ofrece 13 tipos de análisis, incluyendo Detección de Alucinaciones y Selección de la Mejor Respuesta.</dd>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <dt className="font-semibold text-primary mb-2">Puntuación de Consenso</dt>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <dt className="font-semibold text-hub-orchid-ink mb-2">Puntuación de Consenso</dt>
                   <dd className="text-text-secondary text-sm leading-relaxed">Una calificación de confianza derivada del grado de acuerdo entre múltiples respuestas de modelos. Mayor consenso = mayor fiabilidad. Menor consenso señala áreas de incertidumbre o posible alucinación.</dd>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <dt className="font-semibold text-primary mb-2">Detección de Alucinaciones</dt>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <dt className="font-semibold text-hub-orchid-ink mb-2">Detección de Alucinaciones</dt>
                   <dd className="text-text-secondary text-sm leading-relaxed">Identificar afirmaciones fácticas que aparecen en solo uno o una minoría de modelos, indicando posible fabricación de la IA. Contrastar 5+ modelos independientes reduce drásticamente la tasa de alucinaciones no detectadas.</dd>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <dt className="font-semibold text-primary mb-2">BYOM — Trae tu Propio Modelo</dt>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <dt className="font-semibold text-hub-orchid-ink mb-2">BYOM — Trae tu Propio Modelo</dt>
                   <dd className="text-text-secondary text-sm leading-relaxed">Conectar tus propias claves de API directamente a los proveedores de IA. Las claves se almacenan solo en el localStorage de tu navegador y se conectan directamente a los proveedores — ningún servidor de PromptQuorum recibe ni transmite tus credenciales.</dd>
                 </div>
               </dl>
@@ -448,52 +495,52 @@ export default function EsPQAppsPage() {
               <p className="text-text-secondary mb-6">PromptQuorum no aloja ni ejecuta ningún modelo LLM. Cada llamada de API va directamente desde tu navegador a tu proveedor elegido. Tus claves de API permanecen en el localStorage del navegador y nunca se transmiten a los servidores de PromptQuorum.</p>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">APIs en la nube (trae tu propia clave de API)</div>
+                  <div className="text-xs font-bold text-hub-orchid-ink uppercase tracking-widest mb-4">APIs en la nube (trae tu propia clave de API)</div>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       OpenAI (GPT-4, GPT-4o)
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       Anthropic (Claude 3.5)
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       Google Gemini 1.5
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       Grok (xAI)
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       DeepSeek
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       Mistral
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       Cohere
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       Together AI
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       Groq
                     </li>
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-hub-orchid flex-shrink-0" />
                       OpenRouter (free tier)
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Modelos locales (sin clave de API; ejecuta en tu máquina)</div>
+                  <div className="text-xs font-bold text-hub-orchid-ink uppercase tracking-widest mb-4">Modelos locales (sin clave de API; ejecuta en tu máquina)</div>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-text-secondary text-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
@@ -537,134 +584,139 @@ export default function EsPQAppsPage() {
             </div>
 
             <div className="grid sm:grid-cols-3 gap-4 mb-16">
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
-                    <span className="text-primary text-lg">✓</span>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <div className="w-8 h-8 rounded-lg bg-hub-orchid-tint flex items-center justify-center mb-3">
+                    <span className="text-hub-orchid-ink text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">Sin telemetría</h3>
                   <p className="text-text-secondary text-sm">Sin análisis, sin rastreo, sin registro, sin recopilación de datos. Ni siquiera estadísticas de uso anónimas.</p>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
-                    <span className="text-primary text-lg">✓</span>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <div className="w-8 h-8 rounded-lg bg-hub-orchid-tint flex items-center justify-center mb-3">
+                    <span className="text-hub-orchid-ink text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">Sin registro</h3>
                   <p className="text-text-secondary text-sm">Cero registro requerido. Sin correo, sin cuenta, sin inicio de sesión. Abre la app y empieza inmediatamente.</p>
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-6">
-                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
-                    <span className="text-primary text-lg">✓</span>
+                <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6">
+                  <div className="w-8 h-8 rounded-lg bg-hub-orchid-tint flex items-center justify-center mb-3">
+                    <span className="text-hub-orchid-ink text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">Funciona sin conexión</h3>
                   <p className="text-text-secondary text-sm">La app de escritorio (Electron) admite operación completamente sin conexión con modelos locales a través de Ollama, LM Studio, Jan AI o endpoints compatibles. La app móvil (Capacitor) está prevista.</p>
                 </div>
             </div>
 
-            <div className="bg-card border border-primary/20 rounded-2xl p-6 sm:p-8 mb-8">
+            <div className="bg-white border border-hub-orchid-edge rounded-[14px] p-6 sm:p-8 mb-8">
               <h3 className="text-xl font-bold text-text-primary mb-3">Cómo realizamos las pruebas</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">Los datos de rendimiento citados en los artículos de PromptQuorum se basan en sesiones de dispatch controladas con PromptQuorum. Cuando un artículo cita cifras concretas (puntuaciones de calidad de prompts, comparaciones de temperatura, benchmarks), estos reflejan pruebas editoriales o datos de benchmark públicos — no mediciones propias de PromptQuorum salvo indicación explícita.</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2 text-text-secondary text-sm">
-                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                   Dispatch de prompts: envío simultáneo a los modelos indicados mediante el dispatch con un clic de PromptQuorum
                 </li>
                 <li className="flex items-start gap-2 text-text-secondary text-sm">
-                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                   Tamaño muestral: las pruebas editoriales usan un mínimo de 30 prompts por condición salvo indicación contraria
                 </li>
                 <li className="flex items-start gap-2 text-text-secondary text-sm">
-                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                   Evaluación: las respuestas son puntuadas por al menos 2 revisores independientes en revisión ciega
                 </li>
                 <li className="flex items-start gap-2 text-text-secondary text-sm">
-                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                   Benchmarks de terceros (HumanEval, SWE-bench, MBPP): extraídos de publicaciones oficiales de modelos o leaderboards comunitarios; fecha de evaluación citada en cada artículo
                 </li>
                 <li className="flex items-start gap-2 text-text-secondary text-sm">
-                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                   Pruebas de modelos locales: ejecutadas en hardware de consumo al nivel de cuantización indicado en el artículo
                 </li>
                 <li className="flex items-start gap-2 text-text-secondary text-sm">
-                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  <span className="text-hub-orchid-ink mt-0.5 flex-shrink-0">→</span>
                   Divulgación: cuando se citan pruebas internas de PromptQuorum, se identifican con la etiqueta "Tested in PromptQuorum" en el cuerpo del artículo
                 </li>
               </ul>
             </div>
+          </div>
           </section>
 
           {/* Features */}
-          <section id="features" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">Características</h2>
+          <section id="features" className="scroll-mt-24 border-t border-border bg-hub-violet-tint">
+            <div className="mx-auto max-w-[1120px] px-6 py-14">
+            <div className="mb-4 flex items-center gap-3">
+              <span aria-hidden="true" className="rounded-[10px] bg-hub-violet px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white">02</span>
+              <h2 className="text-[26px] font-bold tracking-tight text-text-primary sm:text-[28px]">Características</h2>
+            </div>
 
-            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 mb-8">
+            <div className="bg-white border border-hub-violet-edge rounded-[14px] p-6 mb-8">
               <h3 className="text-lg font-bold text-text-primary mb-4">Características principales de un vistazo</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">Envío a 25+ modelos en la nube simultáneamente (GPT-4o, Claude, Gemini, DeepSeek y más)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">13 tipos de análisis de consenso Quorum en 4 categorías (síntesis, comparación, calidad, selección)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">La detección de alucinaciones marca afirmaciones que aparecen en un solo modelo o contradicen el consenso</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">Soporte de LLM local: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM y cualquier endpoint compatible con OpenAI</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">Privacidad ante todo: ejecución completamente sin conexión, sin registro requerido, nada sale de tu dispositivo</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">Comparación instantánea de respuestas en paralelo de todos los modelos en tiempo real</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-hub-violet-ink font-bold text-lg mt-0.5">✓</span>
                 <span className="text-text-secondary">Optimización automática de prompts con 8 técnicas de refinamiento para mejores resultados de IA</span>
               </li>
               </ul>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              <div className="p-6 rounded-xl bg-card border border-primary/20">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+              <div className="rounded-[14px] border border-hub-violet-edge bg-white p-6">
+                <div className="w-12 h-12 rounded-xl bg-hub-violet flex items-center justify-center text-white mb-4">
                   <Sparkles size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Optimización de prompts</h3>
                 <p className="text-text-secondary">Refina y optimiza tus prompts automáticamente con 8 técnicas de refinamiento probadas para mejores resultados de IA.</p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-primary/20">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+              <div className="rounded-[14px] border border-hub-azure-edge bg-white p-6">
+                <div className="w-12 h-12 rounded-xl bg-hub-azure flex items-center justify-center text-white mb-4">
                   <Layers size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Envío multi-modelo</h3>
                 <p className="text-text-secondary">Ejecuta prompts en ChatGPT, Claude, Gemini y 25+ modelos más simultáneamente en paralelo.</p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-primary/20">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+              <div className="rounded-[14px] border border-hub-indigo-edge bg-white p-6">
+                <div className="w-12 h-12 rounded-xl bg-hub-indigo flex items-center justify-center text-white mb-4">
                   <Brain size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Puntuación Quorum</h3>
                 <p className="text-text-secondary">Encuentra respuestas de consenso entre modelos con puntuación de confianza. La detección de alucinaciones marca afirmaciones que aparecen en un solo modelo.</p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-primary/20">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+              <div className="rounded-[14px] border border-hub-orchid-edge bg-white p-6">
+                <div className="w-12 h-12 rounded-xl bg-hub-orchid flex items-center justify-center text-white mb-4">
                   <Zap size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Comparación instantánea</h3>
                 <p className="text-text-secondary">Obtén respuestas en paralelo con un clic — sin copiar y pegar manualmente entre pestañas del navegador.</p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-primary/20">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+              <div className="rounded-[14px] border border-hub-rose-edge bg-white p-6">
+                <div className="w-12 h-12 rounded-xl bg-hub-rose flex items-center justify-center text-white mb-4">
                   <Shield size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Privacidad ante todo</h3>
@@ -672,14 +724,14 @@ export default function EsPQAppsPage() {
               </div>
             </div>
 
-            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-8">
+            <div className="bg-white border border-hub-violet-edge rounded-[14px] p-6 sm:p-8 mb-8">
               <PromptOptimizerShowcase lang="es" />
             </div>
 
             <div className="mb-8">
               <h3 className="text-xl font-bold text-text-primary mb-2">¿Cómo revisas los resultados de optimización?</h3>
               <p className="text-text-secondary mb-6">Revisa evaluaciones de calidad, historial de versiones y sugerencias de mejora para tus prompts optimizados.</p>
-              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+              <div className="bg-white border border-hub-violet-edge rounded-[14px] p-6 sm:p-8 mb-6">
                 <OptimizationShowcase lang="es" />
               </div>
               <div className="grid sm:grid-cols-3 gap-6">
@@ -701,7 +753,7 @@ export default function EsPQAppsPage() {
             <div>
               <h3 className="text-xl font-bold text-text-primary mb-2">¿Qué es Quorum — Consenso multi-modelo?</h3>
               <p className="text-text-secondary mb-6">Recopila respuestas de 25+ modelos de IA, analiza patrones de consenso y sintetiza perspectivas de diferentes fuentes.</p>
-              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+              <div className="bg-white border border-hub-violet-edge rounded-[14px] p-6 sm:p-8 mb-6">
                 <QuorumShowcase lang="es" />
               </div>
               <div className="grid sm:grid-cols-3 gap-6">
@@ -719,13 +771,18 @@ export default function EsPQAppsPage() {
                 </div>
               </div>
             </div>
+          </div>
           </section>
 
           {/* Compare Tools */}
-          <section id="compare-tools" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl font-bold text-text-primary mb-4">Comparar herramientas</h2>
+          <section id="compare-tools" className="scroll-mt-24 border-t border-border bg-hub-indigo-tint">
+            <div className="mx-auto max-w-[1120px] px-6 py-14">
+            <div className="mb-4 flex items-center gap-3">
+              <span aria-hidden="true" className="rounded-[10px] bg-hub-indigo px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white">03</span>
+              <h2 className="text-[26px] font-bold tracking-tight text-text-primary sm:text-[28px]">Comparar herramientas</h2>
+            </div>
 
-            <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-xs text-amber-800 leading-relaxed mb-8">
+            <div className="bg-hub-amber-tint border border-hub-amber-edge rounded-lg px-4 py-3 text-xs text-hub-amber-ink leading-relaxed mb-8">
               <strong>Nota de precisión:</strong>
                La información de características y precios fue verificada en marzo de 2026 y se proporciona de buena fe basándose en la documentación pública de cada producto. Los productos cambian con frecuencia — verifica las características actuales directamente con cada proveedor. Si crees que alguna información de esta página es inexacta u obsoleta, 
               <a href="mailto:hello@promptquorum.com" className="underline hover:text-amber-900">contáctanos</a>
@@ -734,7 +791,7 @@ export default function EsPQAppsPage() {
 
             <div className="mb-10">
               <h3 className="text-xl font-bold text-text-primary mb-3">¿Qué es una herramienta de comparación multi-LLM?</h3>
-              <div className="border-l-4 border-primary bg-primary/5 rounded-r-lg px-5 py-4 mb-4">
+              <div className="border-l-4 border-hub-indigo bg-hub-indigo-tint rounded-r-lg px-5 py-4 mb-4">
                 <p className="text-text-primary text-[15px] leading-relaxed">Una herramienta de comparación multi-LLM envía el mismo prompt a múltiples modelos de lenguaje grande de forma simultánea y muestra las respuestas en paralelo, permitiendo a los usuarios evaluar las diferencias en razonamiento, precisión y estilo entre sistemas de IA — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large y otros — sin cambiar pestañas ni repetir la entrada.</p>
               </div>
               <p className="text-text-secondary mb-3">Ningún modelo de IA individual es autoritativo para todas las tareas en 2026. GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro tienen datos de entrenamiento, sesgos arquitectónicos y fortalezas de razonamiento diferentes. Una respuesta que parece correcta de un modelo puede ser contradicha, matizada o significativamente ampliada por otro.</p>
@@ -744,10 +801,10 @@ export default function EsPQAppsPage() {
             <div className="mb-10">
               <h3 className="text-xl font-bold text-text-primary mb-2">¿Cuáles son las diferencias clave entre 5 herramientas multi-LLM?</h3>
               <p className="text-text-secondary mb-4">La siguiente tabla compara las cinco herramientas en las características más importantes para flujos de trabajo multi-LLM profesionales — envío simultáneo, puntuación de consenso, soporte de LLM local, control de clave de API y precios.</p>
-              <div className="overflow-x-auto rounded-xl border border-gray-200">
+              <div className="overflow-x-auto rounded-[14px] border border-hub-indigo-edge bg-white">
                 <table className="w-full text-sm border-collapse">
                   <thead>
-                    <tr className="bg-gray-50 border-b border-gray-200">
+                    <tr className="bg-hub-indigo-tint border-b border-hub-indigo-edge">
                       <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-semibold text-xs uppercase tracking-wider">Herramienta</th>
                       <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Envío simultáneo</th>
                       <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Puntuación de consenso</th>
@@ -757,7 +814,7 @@ export default function EsPQAppsPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-gray-100">
+                    <tr className="border-b border-hub-indigo-edge">
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">PromptQuorum</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Sí</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Quorum Verdict</td>
@@ -765,7 +822,7 @@ export default function EsPQAppsPage() {
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Tus claves</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Beta gratuita</td>
                     </tr>
-                    <tr className="border-b border-gray-100">
+                    <tr className="border-b border-hub-indigo-edge">
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">Poe (Quora)</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Secuencial / limitado</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
@@ -773,7 +830,7 @@ export default function EsPQAppsPage() {
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Limitado</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Gratis / $19,99/mes</td>
                     </tr>
-                    <tr className="border-b border-gray-100">
+                    <tr className="border-b border-hub-indigo-edge">
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">LM Arena</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Solo 2 modelos</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Solo votación humana</td>
@@ -781,7 +838,7 @@ export default function EsPQAppsPage() {
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Gratis</td>
                     </tr>
-                    <tr className="border-b border-gray-100">
+                    <tr className="border-b border-hub-indigo-edge">
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">OpenMark</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Paralelo</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Puntuación determinista</td>
@@ -789,7 +846,7 @@ export default function EsPQAppsPage() {
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Sí</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Nivel gratuito / créditos</td>
                     </tr>
-                    <tr className="border-b border-gray-100">
+                    <tr className="border-b border-hub-indigo-edge">
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">AiZolo</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Sí</td>
                       <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
@@ -804,16 +861,16 @@ export default function EsPQAppsPage() {
             </div>
 
             <div className="mb-10">
-              <div className="border border-primary/25 bg-primary/5 rounded-xl p-6 mb-3">
+              <div className="border border-hub-indigo-edge bg-hub-indigo-tint rounded-[14px] p-6 mb-3">
                 <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
-                  <span className="text-lg font-bold text-primary">PromptQuorum</span>
+                  <span className="text-lg font-bold text-hub-indigo-ink">PromptQuorum</span>
                   <span className="text-xs font-mono bg-green-100 text-green-700 border-green-200 border px-3 py-1 rounded-full">Ideal para: desarrolladores y usuarios avanzados</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Beta · Julio 2026</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">promptquorum.com</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Claves API requeridas</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Ollama + LM Studio</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Beta · Julio 2026</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">promptquorum.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Claves API requeridas</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Ollama + LM Studio</span>
                 </div>
 <p className="text-text-secondary mb-3 leading-relaxed"><strong>PromptQuorum es la única herramienta entre las revisadas que combina el envío simultáneo de prompts con la puntuación de consenso automatizada.</strong> Escribes un prompt, seleccionas tus modelos — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large y modelos que se ejecutan localmente — y PromptQuorum los envía a todos en paralelo. El Quorum Verdict analiza entonces dónde los modelos coinciden, dónde divergen y qué significan esos patrones para la fiabilidad de la respuesta.</p>
 <p className="text-text-secondary mb-3 leading-relaxed">La característica definitoria es el soporte de LLM local. A través de la integración con Ollama y LM Studio, PromptQuorum incluye modelos que se ejecutan localmente — LLaMA 3.1 7B requiere 8 GB de RAM; 13B requiere 16 GB — en el envío, por lo que los prompts sensibles nunca salen de tu máquina. Para profesionales del derecho, trabajadores sanitarios, analistas financieros y desarrolladores que trabajan con código propietario, esto no es opcional.</p>
@@ -821,64 +878,64 @@ export default function EsPQAppsPage() {
               </div>
               <h4 className="text-base font-semibold text-text-primary mb-2">¿Quién debería usar PromptQuorum?</h4>
               <p className="text-text-secondary mb-8">PromptQuorum está diseñado para desarrolladores que evalúan qué modelo integrar en un pipeline de producción, investigadores que necesitan validación cruzada de hallazgos entre modelos y profesionales cuyo trabajo involucra información confidencial que no puede enviarse a servidores en la nube de terceros.</p>
-              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+              <div className="border border-hub-indigo-edge bg-white rounded-[14px] p-6 mb-3">
                 <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
                   <span className="text-lg font-bold text-text-primary">Poe (by Quora)</span>
-                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">Ideal para: uso casual / consumidor</span>
+                  <span className="text-xs font-mono bg-hub-amber-tint text-amber-700 border-hub-amber-edge border px-3 py-1 rounded-full">Ideal para: uso casual / consumidor</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">poe.com</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Gratis / $19,99/mes</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">iOS, Android, Web</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Millones de usuarios</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">poe.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Gratis / $19,99/mes</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">iOS, Android, Web</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Millones de usuarios</span>
                 </div>
 <p className="text-text-secondary mb-3 leading-relaxed"><strong>Poe, creado por Quora, es la plataforma multi-modelo de IA más grande con acceso a GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Llama, Grok y miles de bots creados por usuarios desde una sola interfaz.</strong> Es la mejor opción para usuarios que quieren acceso amplio a modelos de IA sin gestionar claves de API.</p>
 <p className="text-text-secondary leading-relaxed">Poe no ofrece envío simultáneo — los usuarios cambian entre modelos o comparan dos a la vez, en lugar de enviar un prompt a todos los modelos en paralelo. No hay puntuación de consenso ni análisis automatizado de concordancia de respuestas. Todo el procesamiento es en la nube, lo que lo hace inadecuado para trabajo con información sensible.</p>
               </div>
               <h4 className="text-base font-semibold text-text-primary mb-2">Poe vs PromptQuorum: diferencias clave</h4>
               <p className="text-text-secondary mb-8">Poe es mejor para la exploración casual, el descubrimiento de bots y la conversación sin gestión de claves de API. PromptQuorum es mejor para la evaluación controlada de prompts, el análisis de consenso y los flujos de trabajo con LLM local. Abordan casos de uso fundamentalmente diferentes: Poe es una plataforma de consumo; PromptQuorum es una herramienta de evaluación profesional.</p>
-              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+              <div className="border border-hub-indigo-edge bg-white rounded-[14px] p-6 mb-3">
                 <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
                   <span className="text-lg font-bold text-text-primary">LM Arena (lmarena.ai)</span>
-                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">Ideal para: benchmarking comunitario</span>
+                  <span className="text-xs font-mono bg-hub-amber-tint text-amber-700 border-hub-amber-edge border px-3 py-1 rounded-full">Ideal para: benchmarking comunitario</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">lmarena.ai</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Gratis</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Solo web</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Sistema de votación humana</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">lmarena.ai</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Gratis</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Solo web</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Sistema de votación humana</span>
                 </div>
 <p className="text-text-secondary mb-3 leading-relaxed"><strong>LM Arena (antes Chatbot Arena) es el leaderboard de modelos de IA más citado, utilizando ratings Elo derivados de millones de votos de preferencia humana.</strong> Los usuarios envían prompts y votan cuál de dos modelos anónimos produjo la mejor respuesta.</p>
 <p className="text-text-secondary leading-relaxed">LM Arena muestra dos modelos en paralelo y recoge un voto de preferencia humana — no proporciona análisis de consenso automatizado, no admite LLMs locales y no permite seleccionar modelos específicos en el modo de comparación principal. Es una plataforma de benchmarking, no una herramienta de flujo de trabajo.</p>
               </div>
               <h4 className="text-base font-semibold text-text-primary mb-2">LM Arena vs PromptQuorum: diferencias clave</h4>
               <p className="text-text-secondary mb-8">LM Arena es mejor para entender las tendencias agregadas de preferencia humana en la industria. PromptQuorum es mejor para evaluar tus prompts específicos en tus modelos elegidos con un análisis consistente y automatizado. LM Arena te dice qué prefiere la multitud; PromptQuorum te dice qué produce tu prompt en cada modelo que te importa.</p>
-              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+              <div className="border border-hub-indigo-edge bg-white rounded-[14px] p-6 mb-3">
                 <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
                   <span className="text-lg font-bold text-text-primary">OpenMark (openmark.ai)</span>
                   <span className="text-xs font-mono bg-green-50 text-green-700 border-green-200 border px-3 py-1 rounded-full">Ideal para: análisis de coste/calidad</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">openmark.ai</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Nivel gratuito / créditos</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Más de 100 modelos</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Puntuación determinista</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">openmark.ai</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Nivel gratuito / créditos</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Más de 100 modelos</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Puntuación determinista</span>
                 </div>
 <p className="text-text-secondary mb-3 leading-relaxed"><strong>OpenMark es una herramienta de benchmarking orientada a desarrolladores que ejecuta prompts contra más de 100 modelos de IA simultáneamente y puntúa los resultados de manera determinista — el mismo prompt siempre produce el mismo resultado clasificado.</strong> Muestra exactamente cuánto cuesta cada modelo por prompt junto con las puntuaciones de calidad.</p>
 <p className="text-text-secondary leading-relaxed">OpenMark es sólido en amplitud (100+ modelos) y transparencia de costes, pero no produce un veredicto de consenso — puntúa cada modelo individualmente en lugar de analizar patrones de acuerdo. No admite LLMs locales a través de Ollama o LM Studio.</p>
               </div>
               <h4 className="text-base font-semibold text-text-primary mb-2">OpenMark vs PromptQuorum: diferencias clave</h4>
               <p className="text-text-secondary mb-8">OpenMark responde "qué modelo individual funciona mejor para esta tarea y a qué coste". PromptQuorum responde "¿cuánto coinciden los modelos en este prompt y qué significa su desacuerdo?". Ambos requieren claves de API; OpenMark admite 100+ modelos; PromptQuorum añade de forma única inferencia de LLM local y puntuación de consenso.</p>
-              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+              <div className="border border-hub-indigo-edge bg-white rounded-[14px] p-6 mb-3">
                 <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
                   <span className="text-lg font-bold text-text-primary">AiZolo (aizolo.com)</span>
-                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">Ideal para: equipos de contenido</span>
+                  <span className="text-xs font-mono bg-hub-amber-tint text-amber-700 border-hub-amber-edge border px-3 py-1 rounded-full">Ideal para: equipos de contenido</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">aizolo.com</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Desde $9,90/mes</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">GPT-4o, Claude, Gemini, Grok</span>
-                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Biblioteca de prompts</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">aizolo.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Desde $9,90/mes</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">GPT-4o, Claude, Gemini, Grok</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-hub-indigo-edge px-2 py-1 rounded">Biblioteca de prompts</span>
                 </div>
 <p className="text-text-secondary mb-3 leading-relaxed"><strong>AiZolo es un espacio de trabajo multi-modelo unificado diseñado para creadores de contenido y equipos de marketing, con envío simultáneo a GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro y Grok en paralelo.</strong> A partir de marzo de 2026, los planes comenzaban desde $9,90/mes — verifica el precio actual en aizolo.com.</p>
 <p className="text-text-secondary leading-relaxed">AiZolo no ofrece puntuación de consenso — muestra las respuestas en paralelo pero deja el análisis al usuario. Admite solo cuatro modelos en la nube, sin opción de LLM local. Es una herramienta de flujo de trabajo de producción de contenido, no una plataforma de evaluación técnica.</p>
@@ -890,157 +947,250 @@ export default function EsPQAppsPage() {
             <div className="mb-8">
               <h3 className="text-xl font-bold text-text-primary mb-6">¿Qué herramienta multi-LLM deberías usar?</h3>
               <div className="space-y-3">
-                <div className="rounded-lg px-5 py-4 bg-primary/8 border border-primary/20">
-                  <span className="font-semibold text-primary">Elige PromptQuorum</span>
+                <div className="rounded-lg px-5 py-4 bg-hub-indigo-tint border border-hub-indigo-edge">
+                  <span className="font-semibold text-hub-indigo-ink">Elige PromptQuorum</span>
                   <span className="text-text-secondary"> si necesitas puntuación de consenso entre modelos, soporte de LLM local para trabajo con información sensible o un flujo de evaluación controlado con tus propias claves de API.</span>
                 </div>
-                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                <div className="rounded-lg px-5 py-4 bg-white border border-hub-indigo-edge">
                   <span className="font-semibold text-text-primary">Elige Poe</span>
                   <span className="text-text-secondary"> si quieres acceso fácil a GPT-4o, Claude 4.6 Sonnet, Gemini y miles de bots para conversación casual y exploración sin gestionar claves de API.</span>
                 </div>
-                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                <div className="rounded-lg px-5 py-4 bg-white border border-hub-indigo-edge">
                   <span className="font-semibold text-text-primary">Elige LM Arena</span>
                   <span className="text-text-secondary"> si quieres contribuir o estudiar los datos de preferencia de modelos impulsados por la comunidad y los rankings Elo de la industria.</span>
                 </div>
-                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                <div className="rounded-lg px-5 py-4 bg-white border border-hub-indigo-edge">
                   <span className="font-semibold text-text-primary">Elige OpenMark</span>
                   <span className="text-text-secondary"> si eres un desarrollador que selecciona un modelo para una aplicación de producción y necesitas puntuación de calidad determinista con datos de coste transparentes en más de 100 modelos.</span>
                 </div>
-                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                <div className="rounded-lg px-5 py-4 bg-white border border-hub-indigo-edge">
                   <span className="font-semibold text-text-primary">Elige AiZolo</span>
                   <span className="text-text-secondary"> si eres un creador de contenido o profesional de marketing que necesita un espacio de trabajo multi-modelo asequible y bien diseñado para flujos de trabajo de escritura diarios.</span>
                 </div>
               </div>
             </div>
+          </div>
           </section>
 
           {/* FAQ */}
-          <section id="faq" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">Preguntas frecuentes</h2>
-            <div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Es gratuito PromptQuorum?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Sí. PromptQuorum es gratuito. Puedes traer tu propia clave de API, usar un LLM local o probar nuestro servicio backend gratuito limitado para la optimización de prompts.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cómo funciona la privacidad?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Tú decides adónde van tus datos. Mantén todo localmente con LM Studio u Ollama, o usa tus propias claves de API. Cero telemetría, cero rastreo, sin recopilación de datos — ni siquiera estadísticas de uso anónimas.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué proveedores de IA son compatibles?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Más de 25 proveedores de IA incluidos: OpenAI (GPT-4, GPT-4o), Anthropic (Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, más todos los proveedores locales (Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga y cualquier endpoint compatible con OpenAI).</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿En qué plataformas funciona PromptQuorum?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum está disponible para macOS, Windows y Linux (escritorio via Electron). Una aplicación web está en desarrollo, seguida de aplicaciones móviles (iOS y Android via Capacitor). Funciona completamente sin conexión con un LLM local.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué hace diferente a PromptQuorum?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum cubre el ciclo completo del prompt en una sola herramienta basada en el navegador: escritura estructurada con 9 frameworks, optimización iterativa impulsada por IA con 8 tipos de refinamiento, envío con un clic a 25+ servicios de IA y 13 tipos de análisis Quorum para la puntuación de consenso — todo sin que ningún dato salga de tu dispositivo.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Hay algún límite?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Ningún límite por parte de PromptQuorum. Tu uso solo está limitado por tus claves de API o recursos de LLM local.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué es el prompt engineering y por qué importa?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">El prompt engineering es la práctica de diseñar entradas para modelos de IA de modo que devuelvan resultados más precisos, útiles y fiables. En pruebas, los prompts estructurados con campos de framework producen puntuaciones de evaluación de LLM un 25–45% más altas en comparación con entradas no estructuradas. PromptQuorum automatiza esto con 9 frameworks integrados — sin necesidad de experiencia previa.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cómo optimiza PromptQuorum mis prompts?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Tu LLM conectado transforma los campos sin procesar del framework en un prompt de precisión. Luego refinas de forma iterativa con 8 refinamientos con un clic: Hacer Conciso, Expandir Detalle, Dividir en Pasos, Simplificar, Aumentar Especificidad, Consulta Multi-Experto, Añadir Controles de Calidad e Instrucción Personalizada. Cada paso se guarda en el historial de versiones para que puedas revertir en cualquier momento.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué frameworks de prompt están integrados en PromptQuorum?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum incluye 9 frameworks: Single Prompt Line (rápido), APE (3 campos), CRAFT (escritura creativa), CO-STAR (usado para ganar la competición Singapore GPT-4), SPECS (análisis), RISEN (tareas empresariales secuenciales), TRACE (ejemplos few-shot), Google Prompt (tareas de negocio) y RTF (3 campos mínimos). También puedes construir 2 frameworks completamente personalizados.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué es el framework CO-STAR?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">CO-STAR son las siglas de Context (Contexto), Objective (Objetivo), Style (Estilo), Tone (Tono), Audience (Audiencia) y Response (Respuesta). Se usó para ganar la competición de prompt engineering Singapore GPT-4 y es ideal para comunicación empresarial, textos de marketing y creación de contenido. PromptQuorum te guía a través de cada campo y ensambla el prompt final automáticamente.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué es el consenso multi-modelo y por qué es valioso?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">El consenso multi-modelo consiste en enviar el mismo prompt a múltiples modelos de IA y encontrar dónde coinciden. Cuando 5 modelos independientes dan la misma respuesta, la confianza es mucho mayor que cuando 1 solo modelo responde. También detecta contradicciones y alucinaciones potenciales automáticamente.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cómo detecta PromptQuorum las alucinaciones de IA?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Tras recopilar respuestas de múltiples modelos en el paso Quorum, tu LLM ejecuta el análisis de Detección de Alucinaciones — marcando afirmaciones que aparecen solo en la respuesta de un modelo pero no en las demás, o que contradicen el consenso factual. Tú eliges qué tipos de análisis ejecutar y los combinas libremente.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Puedo usar PromptQuorum con modelos de IA locales como Ollama o LM Studio?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Sí. PromptQuorum se conecta nativamente a Ollama (localhost:11434), LM Studio (localhost:1234), Jan AI (localhost:1337), GPT4All (localhost:4891), Open WebUI, KoboldCpp, vLLM, oobabooga y cualquier endpoint compatible con OpenAI. No se necesita clave de API para los modelos locales — todo se ejecuta en tu máquina.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Puedo usar PromptQuorum completamente sin conexión?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Sí. Si ejecutas un modelo local como Ollama o LM Studio, PromptQuorum funciona completamente sin conexión. No se requiere conexión a internet. Tus prompts, claves de API y resultados nunca salen de tu dispositivo.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué es BYOM (Trae Tu Propio Modelo)?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">BYOM significa que PromptQuorum nunca llama a ningún LLM usando sus propias claves de API. Cada llamada va directamente desde tu navegador a tu proveedor elegido — en la nube o local. Tus claves de API solo se almacenan en el localStorage de tu navegador y nunca se transmiten a ningún servidor de PromptQuorum.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cómo funciona la función Dispatch?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Dispatch envía tu prompt optimizado a múltiples servicios de IA con un solo clic. Para los servicios de envío automático (ChatGPT, Gemini, Perplexity, Claude, Copilot, DeepSeek, Mistral y más), PromptQuorum precarga tu prompt en la URL para que esté listo instantáneamente. Perplexity incluso se envía automáticamente al cargar. Todas las pestañas se abren en paralelo — recoge todas las respuestas en menos de un minuto.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué es el análisis Quorum y qué tipos hay disponibles?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">El análisis Quorum procesa todas las respuestas de IA recopiladas a través de tu LLM. Hay 13 tipos de análisis en 4 categorías: Síntesis (Resumen de Consenso, Fusión Ponderada, Extracción de Hechos Atómicos), Comparación (Mapeo de Superposición, Detección de Contradicciones, Puntuación de Confianza), Calidad (Verificación de Completitud, Detección de Alucinaciones, Eliminación de Redundancias) y Recomendaciones (Selección de la Mejor Respuesta, Conjunto Multi-Modelo, Bandera de Controversia).</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Puedo exportar mis resultados?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Sí. Los resultados Quorum se exportan en 6 formatos: .txt, .md, .json, .csv, .html y .pdf. Selecciona varios formatos y se agrupan en un archivo .zip. En Chrome, Edge y Safari 16+, puedes elegir la carpeta de guardado mediante la File System Access API.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cómo funciona el Asistente de Frameworks?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">El Asistente de Frameworks te hace algunas preguntas sobre tu tarea — qué intentas conseguir, el tipo de resultado que necesitas y tu audiencia. Basándose en tus respuestas, recomienda el framework más adecuado de entre las 9 opciones integradas y muestra una comparación en paralelo de lo que cada uno produciría para tu prompt.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué es el Ajuste de Temperatura Inteligente?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Antes de cada optimización, PromptQuorum analiza el texto de tu prompt y sugiere la temperatura ideal del LLM: ~0,2 para tareas factuales, ~0,7 para equilibradas, ~0,85 para creativas. Muestra una puntuación de confianza y solo te consulta cuando la confianza supera el 60%. Después de 3 elecciones consistentes para el mismo tipo de intención, aplica automáticamente tu preferencia.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Funciona PromptQuorum con ChatGPT, Claude y Gemini?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Sí. Puedes usar ChatGPT (GPT-4, GPT-4o), Anthropic Claude (3, 3.5) y Google Gemini (1.5 Pro, Flash) como tu LLM de optimización añadiendo tu clave de API en Ajustes. También puedes enviar prompts a los tres simultáneamente desde la página de Dispatch, sin necesidad de claves de API para el envío.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Hay un historial de versiones de mis prompts?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Sí. Cada paso de optimización y refinamiento se guarda automáticamente en el historial de versiones con una etiqueta legible (p. ej., "v2 — Hacer Más Conciso 12:36"). Puedes seleccionar cualquier versión para restaurarla y comenzar nuevos refinamientos desde allí. Nada se pierde.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Qué es el Modo Enseñanza?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">El Modo Enseñanza añade un cuadro de explicación debajo de cada resultado de optimización que explica exactamente por qué se realizó cada cambio — qué principios de prompt engineering se aplicaron y qué efecto tienen. Está diseñado para desarrolladores e investigadores que quieren aprender prompt engineering mientras usan la herramienta.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cómo obtengo PromptQuorum y tiene algún costo?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum está en beta pública gratuita. Descarga la app de escritorio directamente — sin registro, sin lista de espera, sin correo electrónico requerido.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Quién es Hans Kuepper, el fundador de PromptQuorum?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Hans Kuepper es el fundador y desarrollador de PromptQuorum. Tiene su base en Baden-Württemberg, Alemania, cerca de Heidelberg en la región de Kraichgau. Habla cuatro idiomas — alemán, inglés, francés y ruso — y ha vivido y trabajado en más de 20 países.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Dónde se desarrolla PromptQuorum?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum es desarrollado por Hans Kuepper, un desarrollador independiente en Baden-Württemberg, Alemania. El proyecto no tiene inversores externos y se desarrolla como una herramienta de IA con privacidad ante todo y propiedad del usuario.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cuál es la mejor herramienta para comparar el mismo prompt en múltiples LLMs simultáneamente?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum es la única herramienta revisada aquí que combina el envío simultáneo con la puntuación de consenso automatizada. Poe, AiZolo y OpenMark ofrecen respuestas en paralelo, pero ninguno produce un Quorum Verdict — un análisis automatizado de dónde GPT-4o, Claude 4.6 Sonnet y otros modelos coinciden o divergen. Para usuarios que necesitan más que una comparación visual en paralelo, PromptQuorum es la opción diseñada específicamente para ello. Información de características verificada en marzo de 2026.</p>
-              </div>
-              <div className="py-5 border-b border-primary/10 last:border-0">
-                <p className="font-semibold text-text-primary mb-2 leading-snug">¿Cuál es la diferencia entre PromptQuorum y Poe o LM Arena?</p>
-                <p className="text-sm text-text-secondary leading-relaxed">Poe (de Quora) es una plataforma de chat de consumo para cambiar entre modelos de uno en uno. LM Arena utiliza votación colectiva para clasificar el rendimiento individual de los modelos. PromptQuorum es único: envía a todos los modelos seleccionados simultáneamente y analiza automáticamente dónde coinciden o divergen mediante puntuación de consenso. Poe está creado para la conversación; LM Arena para el benchmarking; PromptQuorum para la evaluación controlada y la detección de alucinaciones.</p>
-              </div>
+          <section id="faq" className="scroll-mt-24 border-t border-border bg-hub-cyan-tint">
+            <div className="mx-auto max-w-[1120px] px-6 py-14">
+            <div className="mb-4 flex items-center gap-3">
+              <span aria-hidden="true" className="rounded-[10px] bg-hub-cyan px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white">04</span>
+              <h2 className="text-[26px] font-bold tracking-tight text-text-primary sm:text-[28px]">Preguntas frecuentes</h2>
             </div>
+            <div className="rounded-[14px] border border-border bg-white">
+                <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Es gratuito PromptQuorum?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Sí. PromptQuorum es gratuito. Puedes traer tu propia clave de API, usar un LLM local o probar nuestro servicio backend gratuito limitado para la optimización de prompts.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cómo funciona la privacidad?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Tú decides adónde van tus datos. Mantén todo localmente con LM Studio u Ollama, o usa tus propias claves de API. Cero telemetría, cero rastreo, sin recopilación de datos — ni siquiera estadísticas de uso anónimas.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué proveedores de IA son compatibles?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Más de 25 proveedores de IA incluidos: OpenAI (GPT-4, GPT-4o), Anthropic (Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, más todos los proveedores locales (Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga y cualquier endpoint compatible con OpenAI).</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿En qué plataformas funciona PromptQuorum?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">PromptQuorum está disponible para macOS, Windows y Linux (escritorio via Electron). Una aplicación web está en desarrollo, seguida de aplicaciones móviles (iOS y Android via Capacitor). Funciona completamente sin conexión con un LLM local.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué hace diferente a PromptQuorum?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">PromptQuorum cubre el ciclo completo del prompt en una sola herramienta basada en el navegador: escritura estructurada con 9 frameworks, optimización iterativa impulsada por IA con 8 tipos de refinamiento, envío con un clic a 25+ servicios de IA y 13 tipos de análisis Quorum para la puntuación de consenso — todo sin que ningún dato salga de tu dispositivo.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Hay algún límite?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Ningún límite por parte de PromptQuorum. Tu uso solo está limitado por tus claves de API o recursos de LLM local.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué es el prompt engineering y por qué importa?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">El prompt engineering es la práctica de diseñar entradas para modelos de IA de modo que devuelvan resultados más precisos, útiles y fiables. En pruebas, los prompts estructurados con campos de framework producen puntuaciones de evaluación de LLM un 25–45% más altas en comparación con entradas no estructuradas. PromptQuorum automatiza esto con 9 frameworks integrados — sin necesidad de experiencia previa.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cómo optimiza PromptQuorum mis prompts?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Tu LLM conectado transforma los campos sin procesar del framework en un prompt de precisión. Luego refinas de forma iterativa con 8 refinamientos con un clic: Hacer Conciso, Expandir Detalle, Dividir en Pasos, Simplificar, Aumentar Especificidad, Consulta Multi-Experto, Añadir Controles de Calidad e Instrucción Personalizada. Cada paso se guarda en el historial de versiones para que puedas revertir en cualquier momento.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué frameworks de prompt están integrados en PromptQuorum?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">PromptQuorum incluye 9 frameworks: Single Prompt Line (rápido), APE (3 campos), CRAFT (escritura creativa), CO-STAR (usado para ganar la competición Singapore GPT-4), SPECS (análisis), RISEN (tareas empresariales secuenciales), TRACE (ejemplos few-shot), Google Prompt (tareas de negocio) y RTF (3 campos mínimos). También puedes construir 2 frameworks completamente personalizados.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué es el framework CO-STAR?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">CO-STAR son las siglas de Context (Contexto), Objective (Objetivo), Style (Estilo), Tone (Tono), Audience (Audiencia) y Response (Respuesta). Se usó para ganar la competición de prompt engineering Singapore GPT-4 y es ideal para comunicación empresarial, textos de marketing y creación de contenido. PromptQuorum te guía a través de cada campo y ensambla el prompt final automáticamente.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué es el consenso multi-modelo y por qué es valioso?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">El consenso multi-modelo consiste en enviar el mismo prompt a múltiples modelos de IA y encontrar dónde coinciden. Cuando 5 modelos independientes dan la misma respuesta, la confianza es mucho mayor que cuando 1 solo modelo responde. También detecta contradicciones y alucinaciones potenciales automáticamente.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cómo detecta PromptQuorum las alucinaciones de IA?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Tras recopilar respuestas de múltiples modelos en el paso Quorum, tu LLM ejecuta el análisis de Detección de Alucinaciones — marcando afirmaciones que aparecen solo en la respuesta de un modelo pero no en las demás, o que contradicen el consenso factual. Tú eliges qué tipos de análisis ejecutar y los combinas libremente.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Puedo usar PromptQuorum con modelos de IA locales como Ollama o LM Studio?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Sí. PromptQuorum se conecta nativamente a Ollama (localhost:11434), LM Studio (localhost:1234), Jan AI (localhost:1337), GPT4All (localhost:4891), Open WebUI, KoboldCpp, vLLM, oobabooga y cualquier endpoint compatible con OpenAI. No se necesita clave de API para los modelos locales — todo se ejecuta en tu máquina.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Puedo usar PromptQuorum completamente sin conexión?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Sí. Si ejecutas un modelo local como Ollama o LM Studio, PromptQuorum funciona completamente sin conexión. No se requiere conexión a internet. Tus prompts, claves de API y resultados nunca salen de tu dispositivo.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué es BYOM (Trae Tu Propio Modelo)?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">BYOM significa que PromptQuorum nunca llama a ningún LLM usando sus propias claves de API. Cada llamada va directamente desde tu navegador a tu proveedor elegido — en la nube o local. Tus claves de API solo se almacenan en el localStorage de tu navegador y nunca se transmiten a ningún servidor de PromptQuorum.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cómo funciona la función Dispatch?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Dispatch envía tu prompt optimizado a múltiples servicios de IA con un solo clic. Para los servicios de envío automático (ChatGPT, Gemini, Perplexity, Claude, Copilot, DeepSeek, Mistral y más), PromptQuorum precarga tu prompt en la URL para que esté listo instantáneamente. Perplexity incluso se envía automáticamente al cargar. Todas las pestañas se abren en paralelo — recoge todas las respuestas en menos de un minuto.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué es el análisis Quorum y qué tipos hay disponibles?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">El análisis Quorum procesa todas las respuestas de IA recopiladas a través de tu LLM. Hay 13 tipos de análisis en 4 categorías: Síntesis (Resumen de Consenso, Fusión Ponderada, Extracción de Hechos Atómicos), Comparación (Mapeo de Superposición, Detección de Contradicciones, Puntuación de Confianza), Calidad (Verificación de Completitud, Detección de Alucinaciones, Eliminación de Redundancias) y Recomendaciones (Selección de la Mejor Respuesta, Conjunto Multi-Modelo, Bandera de Controversia).</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Puedo exportar mis resultados?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Sí. Los resultados Quorum se exportan en 6 formatos: .txt, .md, .json, .csv, .html y .pdf. Selecciona varios formatos y se agrupan en un archivo .zip. En Chrome, Edge y Safari 16+, puedes elegir la carpeta de guardado mediante la File System Access API.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cómo funciona el Asistente de Frameworks?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">El Asistente de Frameworks te hace algunas preguntas sobre tu tarea — qué intentas conseguir, el tipo de resultado que necesitas y tu audiencia. Basándose en tus respuestas, recomienda el framework más adecuado de entre las 9 opciones integradas y muestra una comparación en paralelo de lo que cada uno produciría para tu prompt.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué es el Ajuste de Temperatura Inteligente?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Antes de cada optimización, PromptQuorum analiza el texto de tu prompt y sugiere la temperatura ideal del LLM: ~0,2 para tareas factuales, ~0,7 para equilibradas, ~0,85 para creativas. Muestra una puntuación de confianza y solo te consulta cuando la confianza supera el 60%. Después de 3 elecciones consistentes para el mismo tipo de intención, aplica automáticamente tu preferencia.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Funciona PromptQuorum con ChatGPT, Claude y Gemini?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Sí. Puedes usar ChatGPT (GPT-4, GPT-4o), Anthropic Claude (3, 3.5) y Google Gemini (1.5 Pro, Flash) como tu LLM de optimización añadiendo tu clave de API en Ajustes. También puedes enviar prompts a los tres simultáneamente desde la página de Dispatch, sin necesidad de claves de API para el envío.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Hay un historial de versiones de mis prompts?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Sí. Cada paso de optimización y refinamiento se guarda automáticamente en el historial de versiones con una etiqueta legible (p. ej., "v2 — Hacer Más Conciso 12:36"). Puedes seleccionar cualquier versión para restaurarla y comenzar nuevos refinamientos desde allí. Nada se pierde.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Qué es el Modo Enseñanza?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">El Modo Enseñanza añade un cuadro de explicación debajo de cada resultado de optimización que explica exactamente por qué se realizó cada cambio — qué principios de prompt engineering se aplicaron y qué efecto tienen. Está diseñado para desarrolladores e investigadores que quieren aprender prompt engineering mientras usan la herramienta.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cómo obtengo PromptQuorum y tiene algún costo?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">PromptQuorum está en beta pública gratuita. Descarga la app de escritorio directamente — sin registro, sin lista de espera, sin correo electrónico requerido.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Quién es Hans Kuepper, el fundador de PromptQuorum?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Hans Kuepper es el fundador y desarrollador de PromptQuorum. Tiene su base en Baden-Württemberg, Alemania, cerca de Heidelberg en la región de Kraichgau. Habla cuatro idiomas — alemán, inglés, francés y ruso — y ha vivido y trabajado en más de 20 países.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Dónde se desarrolla PromptQuorum?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">PromptQuorum es desarrollado por Hans Kuepper, un desarrollador independiente en Baden-Württemberg, Alemania. El proyecto no tiene inversores externos y se desarrolla como una herramienta de IA con privacidad ante todo y propiedad del usuario.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cuál es la mejor herramienta para comparar el mismo prompt en múltiples LLMs simultáneamente?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">PromptQuorum es la única herramienta revisada aquí que combina el envío simultáneo con la puntuación de consenso automatizada. Poe, AiZolo y OpenMark ofrecen respuestas en paralelo, pero ninguno produce un Quorum Verdict — un análisis automatizado de dónde GPT-4o, Claude 4.6 Sonnet y otros modelos coinciden o divergen. Para usuarios que necesitan más que una comparación visual en paralelo, PromptQuorum es la opción diseñada específicamente para ello. Información de características verificada en marzo de 2026.</p>
+                </details>
+              <details className="group border-b border-border last:border-b-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-[15px] font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span>¿Cuál es la diferencia entre PromptQuorum y Poe o LM Arena?</span>
+                    <span aria-hidden="true" className="text-xl leading-none text-hub-violet transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-4 leading-relaxed text-text-secondary">Poe (de Quora) es una plataforma de chat de consumo para cambiar entre modelos de uno en uno. LM Arena utiliza votación colectiva para clasificar el rendimiento individual de los modelos. PromptQuorum es único: envía a todos los modelos seleccionados simultáneamente y analiza automáticamente dónde coinciden o divergen mediante puntuación de consenso. Poe está creado para la conversación; LM Arena para el benchmarking; PromptQuorum para la evaluación controlada y la detección de alucinaciones.</p>
+                </details>
+            </div>
+          </div>
           </section>
 
           {/* Repeat CTA */}
-          <div className="text-center py-12 border-t border-primary/20">
-            <Link
-              href="/es/download"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
-            >
-              Probar la beta
-            </Link>
+          <div className="border-t border-border bg-white">
+            <div className="mx-auto max-w-[1120px] px-6 py-12 text-center">
+              <Link
+                href="/es/download"
+                style={{ '--cta-tone': 'var(--hub-violet)', '--cta-offset': 'var(--hub-violet-tint)' } as CSSProperties}
+                className="motion-safe:animate-hub-cta-pop relative inline-block rounded-[10px] bg-hub-violet px-6 py-3.5 text-[17px] font-extrabold text-white ring-2 ring-white ring-offset-2 ring-offset-[var(--cta-offset)] transition-[transform,box-shadow] duration-150 [animation-fill-mode:both] hover:-translate-y-0.5 shadow-[inset_0_1.5px_0_0_rgba(255,255,255,0.35),inset_0_-2.5px_0_0_rgba(0,0,0,0.16),0_10px_22px_-6px_var(--cta-tone)] hover:shadow-[inset_0_1.5px_0_0_rgba(255,255,255,0.4),inset_0_-2.5px_0_0_rgba(0,0,0,0.22),0_15px_28px_-6px_var(--cta-tone)]"
+              >
+                Probar la beta
+              </Link>
+            </div>
           </div>
 
         </div>
