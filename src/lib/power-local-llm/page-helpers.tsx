@@ -1220,6 +1220,7 @@ const HUB_THEMES: Array<{
       'styletts-2-review',
       'whisper-cpp-review',
       'handy-review',
+      'fluidvoice-review',
       'xtts-v2-review',
       'elevenlabs-vs-local-tts-piper-xtts',
       'voice-ai-writers-cloud-vs-local',

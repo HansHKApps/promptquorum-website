@@ -969,6 +969,11 @@
     "urlSlug": "handy-review",
     "url": "/power-local-llm/handy-review"
   },
+  "fluidvoice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "fluidvoice-review",
+    "url": "/power-local-llm/fluidvoice-review"
+  },
   "localmcp": {
     "cluster": "power-local-llm",
     "urlSlug": "localmcp-review",
