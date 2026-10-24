@@ -1052,6 +1052,7 @@ const HUB_THEMES: Array<{
       'web-search-mcp-review',
       'snug-protocol-review',
       'localghost-review',
+      'nekoni-review',
     ],
   },
   {

@@ -67,22 +67,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nekoni-review",
+        "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
+        "url": "/power-local-llm/nekoni-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openclient-review",
         "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
         "url": "/power-local-llm/openclient-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 313,
+    "totalCount": 314,
     "capped": true
   },
   "llama.cpp": {
@@ -9870,9 +9870,17 @@
         "url": "/power-local-llm/murmur-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nekoni-review",
+        "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
+        "url": "/power-local-llm/nekoni-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Local Operator": {
@@ -9882,6 +9890,20 @@
         "slug": "local-operator-review",
         "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
         "url": "/power-local-llm/local-operator-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Nekoni": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "nekoni-review",
+        "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
+        "url": "/power-local-llm/nekoni-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }

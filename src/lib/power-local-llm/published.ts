@@ -572,6 +572,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'kruvo-review',
   // LocalGhost review (personal assistants, self-hosted) — 2026-10-24
   'localghost-review',
+  // Nekoni review (personal assistants, self-hosted agent + iPhone companion) — 2026-10-24
+  'nekoni-review',
   // LLM Studio Go review (Mobile & Edge LLMs, iPhone/iPad) — 2026-10-24
   'llm-studio-go-review',
   // Zero1LLM review (general chat client, desktop) — 2026-10-24
