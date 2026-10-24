@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 174,
+    "totalCount": 175,
     "capped": true
   },
   "vLLM": {
@@ -9868,6 +9868,20 @@
         "slug": "murmur-review",
         "title": "Murmur Review: On-Device AI Music Generator for iPhone",
         "url": "/power-local-llm/murmur-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "IIMAGINE Desktop": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "iimagine-desktop-review",
+        "title": "IIMAGINE Desktop Review: Open-Source Local AI Chat App",
+        "url": "/power-local-llm/iimagine-desktop-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
