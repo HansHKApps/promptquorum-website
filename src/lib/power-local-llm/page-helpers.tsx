@@ -1105,6 +1105,7 @@ const HUB_THEMES: Array<{
       'llamatik-review',
       'castmates-review',
       'frankly-ai-review',
+      'haplo-ai-review',
       'caelum-review',
       'lm-mini-review',
       'llm-hub-review',
