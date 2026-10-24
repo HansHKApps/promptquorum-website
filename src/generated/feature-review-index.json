@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "zeno": {
+    "cluster": "power-local-llm",
+    "urlSlug": "zeno-review",
+    "url": "/power-local-llm/zeno-review"
+  },
   "asiden": {
     "cluster": "power-local-llm",
     "urlSlug": "asiden-review",
