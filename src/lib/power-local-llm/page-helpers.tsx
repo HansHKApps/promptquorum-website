@@ -1229,6 +1229,7 @@ const HUB_THEMES: Array<{
       'buzz-captions-review',
       'aquavoice-review',
       'meetily-review',
+      'anarlog-review',
       'funclip-review',
       'openai-edge-tts-review',
       'parlor-review',

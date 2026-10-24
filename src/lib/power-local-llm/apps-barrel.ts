@@ -250,6 +250,7 @@ import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_buzz_captions } from './apps/buzz-captions'
 import { app as app_logseq } from './apps/logseq'
+import { app as app_anarlog } from './apps/anarlog'
 import { app as app_searxng } from './apps/searxng'
 import { app as app_linkwarden } from './apps/linkwarden'
 import { app as app_tolaria } from './apps/tolaria'
@@ -522,6 +523,7 @@ export const localAiApps: ToolRecord[] = [
   app_murmur,
   app_buzz_captions,
   app_logseq,
+  app_anarlog,
   app_searxng,
   app_linkwarden,
   app_tolaria,
