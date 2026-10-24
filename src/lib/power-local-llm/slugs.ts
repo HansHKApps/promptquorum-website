@@ -551,5 +551,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'localmindai-review':                       'localmindai-review',
   'caelum-review':                            'caelum-review',
   'obscurify-review':                         'obscurify-review',
+  'genva-review':                             'genva-review',
   'ecc-review':                               'ecc-review',
 }

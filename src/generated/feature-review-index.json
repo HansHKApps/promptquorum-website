@@ -1339,6 +1339,11 @@
     "urlSlug": "obscurify-review",
     "url": "/power-local-llm/obscurify-review"
   },
+  "genva": {
+    "cluster": "power-local-llm",
+    "urlSlug": "genva-review",
+    "url": "/power-local-llm/genva-review"
+  },
   "whisper-notes": {
     "cluster": "power-local-llm",
     "urlSlug": "whisper-notes-review",

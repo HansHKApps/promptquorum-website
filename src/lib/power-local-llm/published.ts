@@ -586,6 +586,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'caelum-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',
+  // Genva review (Image & Video Generation) — 2026-10-24
+  'genva-review',
 
   // LLM Hub review (Mobile & Edge LLMs) — 2026-10-03
   'llm-hub-review',

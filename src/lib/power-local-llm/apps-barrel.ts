@@ -137,6 +137,7 @@ import { app as app_on_device_ai_translator } from './apps/on-device-ai-translat
 import { app as app_llamatik } from './apps/llamatik'
 import { app as app_caelum } from './apps/caelum'
 import { app as app_obscurify } from './apps/obscurify'
+import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
@@ -559,6 +560,7 @@ export const localAiApps: ToolRecord[] = [
   app_llamatik,
   app_caelum,
   app_obscurify,
+  app_genva,
   app_whisper_notes,
   app_anyllm,
   app_local_ai_geetmark,

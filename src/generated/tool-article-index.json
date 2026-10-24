@@ -1776,9 +1776,17 @@
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "genva-review",
+        "title": "Genva Review: Free On-Device AI Image Generator for iPhone",
+        "url": "/power-local-llm/genva-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Ekorbia": {
@@ -11931,6 +11939,20 @@
         "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
         "url": "/power-local-llm/obscurify-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Genva": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "genva-review",
+        "title": "Genva Review: Free On-Device AI Image Generator for iPhone",
+        "url": "/power-local-llm/genva-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],

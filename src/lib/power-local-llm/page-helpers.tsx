@@ -1228,6 +1228,7 @@ const HUB_THEMES: Array<{
       'pixlstash-review',
       'controlnet-review',
       'draw-things-review',
+      'genva-review',
       'fooocus-review',
       'invokeai-review',
       'real-esrgan-ai-image-upscaler-review',

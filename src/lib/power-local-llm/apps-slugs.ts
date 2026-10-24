@@ -206,6 +206,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'llamatik':                                'llamatik',
   'caelum':                                  'caelum',
   'obscurify':                               'obscurify',
+  'genva':                                   'genva',
   'strata':                                  'strata',
   'zero1llm':                                'zero1llm',
   'mlx-audio':                               'mlx-audio',
