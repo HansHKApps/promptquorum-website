@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 43,
+    "totalCount": 44,
     "capped": true
   },
   "Pocket AI": {
@@ -11671,6 +11671,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "frankly-ai-review",
+        "title": "Frankly AI Review: iPhone Chat App With Downloadable On-Device Models",
+        "url": "/power-local-llm/frankly-ai-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11724,17 +11732,9 @@
         "url": "/power-local-llm/caelum-review",
         "dateModified": "2026-10-21",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlxhub-review",
-        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
-        "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "LLM Hub": {
@@ -11955,6 +11955,20 @@
         "title": "Local AI Chat Pocket Review: Offline LLM and Image Chat for iPhone and iPad",
         "url": "/power-local-llm/local-ai-chat-pocket-review",
         "dateModified": "2026-10-06",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Frankly AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "frankly-ai-review",
+        "title": "Frankly AI Review: iPhone Chat App With Downloadable On-Device Models",
+        "url": "/power-local-llm/frankly-ai-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],

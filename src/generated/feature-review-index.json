@@ -1324,6 +1324,11 @@
     "urlSlug": "castmates-review",
     "url": "/power-local-llm/castmates-review"
   },
+  "frankly-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "frankly-ai-review",
+    "url": "/power-local-llm/frankly-ai-review"
+  },
   "pixlstash": {
     "cluster": "power-local-llm",
     "urlSlug": "pixlstash-review",
