@@ -1334,6 +1334,11 @@
     "urlSlug": "frankly-ai-review",
     "url": "/power-local-llm/frankly-ai-review"
   },
+  "haplo-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "haplo-ai-review",
+    "url": "/power-local-llm/haplo-ai-review"
+  },
   "pixlstash": {
     "cluster": "power-local-llm",
     "urlSlug": "pixlstash-review",
