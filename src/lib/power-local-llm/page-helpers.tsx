@@ -1183,6 +1183,7 @@ const HUB_THEMES: Array<{
       'local-multimodal-pipeline-voice-vision-text',
       'dograh-review',
       'bark-tts-review',
+      'murmur-review',
       'best-local-tts-mac',
       'best-local-tts-nvidia-gpu',
       'best-local-tts-raspberry-pi',

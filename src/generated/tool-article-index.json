@@ -9793,6 +9793,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Murmur": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "murmur-review",
+        "title": "Murmur Review: On-Device AI Music Generator for iPhone",
+        "url": "/power-local-llm/murmur-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "candle-vllm": {
     "articles": [
       {
@@ -10947,6 +10961,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "murmur-review",
+        "title": "Murmur Review: On-Device AI Music Generator for iPhone",
+        "url": "/power-local-llm/murmur-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "on-device-ai-translator-review",
         "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
         "url": "/power-local-llm/on-device-ai-translator-review",
@@ -10992,17 +11014,9 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ecc-review",
-        "title": "ECC Review: Agent Toolkit for Claude Code and Codex",
-        "url": "/power-local-llm/ecc-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 213,
+    "totalCount": 214,
     "capped": true
   },
   "Qdrant": {

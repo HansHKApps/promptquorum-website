@@ -979,6 +979,11 @@
     "urlSlug": "localmindai-review",
     "url": "/power-local-llm/localmindai-review"
   },
+  "murmur": {
+    "cluster": "power-local-llm",
+    "urlSlug": "murmur-review",
+    "url": "/power-local-llm/murmur-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
