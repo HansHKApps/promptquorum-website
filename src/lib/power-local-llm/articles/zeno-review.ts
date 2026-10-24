@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dies sind Angaben von Icosa, keine Prüfergebnisse. Der Quellcode ist nicht veröffentlicht, und PromptQuorum hat den Netzwerkverkehr der App nicht untersucht. Die Aussage des Manifests, Icosa könne Ihre Daten „physically can\'t“ einsehen, ist die Behauptung des Unternehmens selbst, und eine eigene Datenschutzseite wurde nicht gefunden.',
+            text: 'Dies sind Angaben von Icosa, keine Prüfergebnisse. Der Quellcode ist nicht veröffentlicht, und PromptQuorum hat den Netzwerkverkehr der App nicht untersucht. Die Aussage des Manifests, Icosa könne Ihre Daten physisch nicht einsehen („physically can\'t“), ist die Behauptung des Unternehmens selbst, und eine eigene Datenschutzseite wurde nicht gefunden.',
           },
         ],
       },
