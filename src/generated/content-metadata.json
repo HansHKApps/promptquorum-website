@@ -6609,7 +6609,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 8 categories of a local LLM stack: 284 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
+          "title": "The 8 categories of a local LLM stack: 286 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -8866,7 +8866,7 @@
       "images": []
     },
     "locally-uncensored-review": {
-      "dateModified": "2026-10-20",
+      "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -11192,6 +11192,24 @@
       ],
       "images": []
     },
+    "haplo-ai-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "surfsense-review": {
       "dateModified": "2026-10-21",
       "lastFactChecked": null,
@@ -11214,6 +11232,24 @@
       "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-23",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "coil-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
       "hasSections": true,
       "langs": [
         "en",

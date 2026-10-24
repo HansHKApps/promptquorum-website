@@ -67,9 +67,11 @@ import { article as a_on_device_ai_translator_review } from './articles/on-devic
 import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_frankly_ai_review } from './articles/frankly-ai-review'
+import { article as a_haplo_ai_review } from './articles/haplo-ai-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
 import { article as a_strata_review } from './articles/strata-review'
 import { article as a_coil_review } from './articles/coil-review'
+import { article as a_kruvo_review } from './articles/kruvo-review'
 import { article as a_localghost_review } from './articles/localghost-review'
 import { article as a_llm_studio_go_review } from './articles/llm-studio-go-review'
 import { article as a_openclient_review } from './articles/openclient-review'
@@ -82,6 +84,7 @@ import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review
 import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_nekoni_review } from './articles/nekoni-review'
+import { article as a_ensu_review } from './articles/ensu-review'
 import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_obscurify_review } from './articles/obscurify-review'
@@ -698,9 +701,11 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llamatik-review':                               a_llamatik_review,
   'castmates-review':                              a_castmates_review,
   'frankly-ai-review':                             a_frankly_ai_review,
+  'haplo-ai-review':                              a_haplo_ai_review,
   'surfsense-review':                              a_surfsense_review,
   'strata-review':                                 a_strata_review,
   'coil-review':                                   a_coil_review,
+  'kruvo-review':                                  a_kruvo_review,
   'localghost-review':                             a_localghost_review,
   'llm-studio-go-review':                          a_llm_studio_go_review,
   'openclient-review':                             a_openclient_review,
@@ -713,6 +718,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'localmindai-review':                            a_localmindai_review,
   'murmur-review':                                 a_murmur_review,
   'nekoni-review':                                 a_nekoni_review,
+  'ensu-review':                                   a_ensu_review,
   'caelum-review':                                 a_caelum_review,
   'lm-mini-review':                                a_lm_mini_review,
   'obscurify-review':                              a_obscurify_review,

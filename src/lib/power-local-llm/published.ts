@@ -568,6 +568,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'strata-review',
   // Coil review (Autonomous agents, Mac agent harness) — 2026-10-24
   'coil-review',
+  // Kruvo review (Autonomous agents, desktop AI coworker for Windows and macOS) — 2026-10-24
+  'kruvo-review',
   // LocalGhost review (personal assistants, self-hosted) — 2026-10-24
   'localghost-review',
   // Nekoni review (personal assistants, self-hosted agent + iPhone companion) — 2026-10-24
@@ -598,10 +600,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'caelum-review',
   // LM Mini review (Mobile & Edge LLMs) — 2026-10-24
   'lm-mini-review',
+  'ensu-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',
   // Frankly AI review (Mobile & Edge LLMs) — 2026-10-24
   'frankly-ai-review',
+  'haplo-ai-review',
 
   // Genva review (Image & Video Generation) — 2026-10-24
   'genva-review',
