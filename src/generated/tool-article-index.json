@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 152,
+    "totalCount": 153,
     "capped": true
   },
   "Atomic Chat": {
@@ -9882,6 +9882,92 @@
     ],
     "totalCount": 2,
     "capped": false
+  },
+  "Logseq": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "logseq-review",
+        "title": "Logseq Review: Open-Source Outliner With Local-First Notes",
+        "url": "/power-local-llm/logseq-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "siyuan-review",
+        "title": "SiYuan Review: The Privacy-First, Block-Based Knowledge Base",
+        "url": "/power-local-llm/siyuan-review",
+        "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "copilot-for-obsidian-review",
+        "title": "Copilot for Obsidian Review: Local-Model AI Agent for Your Vault",
+        "url": "/power-local-llm/copilot-for-obsidian-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "logseq-copilot-review",
+        "title": "logseq-copilot Review: Local-Model AI Chat Inside Logseq",
+        "url": "/power-local-llm/logseq-copilot-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bmo-chatbot-review",
+        "title": "BMO Chatbot Review: Lightweight Local AI Sidebar for Obsidian",
+        "url": "/power-local-llm/bmo-chatbot-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "smart-connections-review",
+        "title": "Smart Connections Review: Local Semantic Search for Obsidian",
+        "url": "/power-local-llm/smart-connections-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 11,
+    "capped": true
   },
   "Local Operator": {
     "articles": [

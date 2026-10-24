@@ -1173,6 +1173,7 @@ const HUB_THEMES: Array<{
       'unsloth-review',
       'llama-factory-review',
       'siyuan-review',
+      'logseq-review',
       'karakeep-review',
       'blinko-review',
       'baserow-review',
