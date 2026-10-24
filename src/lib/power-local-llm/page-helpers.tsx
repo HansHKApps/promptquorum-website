@@ -1047,6 +1047,7 @@ const HUB_THEMES: Array<{
       'mission-control-review',
       'web-search-mcp-review',
       'snug-protocol-review',
+      'localghost-review',
     ],
   },
   {

@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 171,
+    "totalCount": 172,
     "capped": true
   },
   "vLLM": {
@@ -3553,6 +3553,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "localghost-review",
+        "title": "LocalGhost Review: A Personal AI Server You Host Yourself",
+        "url": "/power-local-llm/localghost-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
@@ -3590,17 +3598,9 @@
         "url": "/power-local-llm/siyuan-review",
         "dateModified": "2026-09-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "hyperlink-nexa-review",
-        "title": "Hyperlink (Nexa AI) Review: On-Device File Search",
-        "url": "/power-local-llm/hyperlink-nexa-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "Dify": {
@@ -8528,9 +8528,17 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "localghost-review",
+        "title": "LocalGhost Review: A Personal AI Server You Host Yourself",
+        "url": "/power-local-llm/localghost-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "exo": {
@@ -9609,6 +9617,20 @@
         "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
         "url": "/power-local-llm/strata-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "LocalGhost": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "localghost-review",
+        "title": "LocalGhost Review: A Personal AI Server You Host Yourself",
+        "url": "/power-local-llm/localghost-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],

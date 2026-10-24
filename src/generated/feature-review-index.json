@@ -924,6 +924,11 @@
     "urlSlug": "strata-review",
     "url": "/power-local-llm/strata-review"
   },
+  "localghost": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localghost-review",
+    "url": "/power-local-llm/localghost-review"
+  },
   "llm-studio-go": {
     "cluster": "power-local-llm",
     "urlSlug": "llm-studio-go-review",
