@@ -89,6 +89,7 @@ import { article as a_logseq_review } from './articles/logseq-review'
 import { article as a_searxng_review } from './articles/searxng-review'
 import { article as a_linkwarden_review } from './articles/linkwarden-review'
 import { article as a_handy_review } from './articles/handy-review'
+import { article as a_tolaria_review } from './articles/tolaria-review'
 import { article as a_local_operator_review } from './articles/local-operator-review'
 import { article as a_nekoni_review } from './articles/nekoni-review'
 import { article as a_iimagine_desktop_review } from './articles/iimagine-desktop-review'
@@ -735,6 +736,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'searxng-review':                                a_searxng_review,
   'linkwarden-review':                             a_linkwarden_review,
   'handy-review':                                  a_handy_review,
+  'tolaria-review':                                a_tolaria_review,
   'local-operator-review':                         a_local_operator_review,
   'nekoni-review':                                 a_nekoni_review,
   'iimagine-desktop-review':                       a_iimagine_desktop_review,

@@ -1178,6 +1178,7 @@ const HUB_THEMES: Array<{
       'karakeep-review',
       'linkwarden-review',
       'blinko-review',
+      'tolaria-review',
       'baserow-review',
       'surf-review',
       'translate-books-with-llms-review',

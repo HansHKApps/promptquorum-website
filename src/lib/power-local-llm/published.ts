@@ -604,6 +604,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'searxng-review',
   // Linkwarden review (Productivity & Knowledge Tools, self-hosted bookmark manager) — 2026-10-24
   'linkwarden-review',
+  // Tolaria review (Productivity & Knowledge Tools, Markdown notes with Git and AI agents) — 2026-10-24
+  'tolaria-review',
   'local-operator-review',
   // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
   'iimagine-desktop-review',
