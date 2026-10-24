@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openclient-review",
         "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
         "url": "/power-local-llm/openclient-review",
@@ -72,14 +80,6 @@
         "url": "/local-llms/local-llm-on-laptop",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
     "totalCount": 307,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/memoryai-review",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "obscurify-review",
-        "title": "Obscurify.ai Review: Anonymous AI Chat With an Optional Local Mode",
-        "url": "/power-local-llm/obscurify-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 170,
+    "totalCount": 171,
     "capped": true
   },
   "vLLM": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 148,
+    "totalCount": 149,
     "capped": true
   },
   "Atomic Chat": {
@@ -989,6 +989,14 @@
         "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -1054,17 +1062,9 @@
         "url": "/power-local-llm/docker-model-runner-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ekorbia-review",
-        "title": "Ekorbia Review: Free Open-Source Local AI Desktop App",
-        "url": "/power-local-llm/ekorbia-review",
-        "dateModified": "2026-09-07",
-        "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 43,
     "capped": true
   },
   "GPT4All": {
@@ -1074,7 +1074,7 @@
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-09-07",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -1150,7 +1150,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "AnythingLLM": {
@@ -1291,6 +1291,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openclient-review",
         "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
         "url": "/power-local-llm/openclient-review",
@@ -1311,14 +1319,6 @@
         "title": "Sidekick Review: A Free, Native macOS Local AI Chat App",
         "url": "/power-local-llm/sidekick-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "odysseus-review",
-        "title": "Odysseus Review: The Self-Hosted AI Workspace",
-        "url": "/power-local-llm/odysseus-review",
-        "dateModified": "2026-09-12",
         "tier": "mentioned"
       }
     ],
@@ -1485,6 +1485,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openclient-review",
         "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
         "url": "/power-local-llm/openclient-review",
@@ -1520,14 +1528,6 @@
         "slug": "ekorbia-review",
         "title": "Ekorbia Review: Free Open-Source Local AI Desktop App",
         "url": "/power-local-llm/ekorbia-review",
-        "dateModified": "2026-09-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-09-07",
         "tier": "mentioned"
       }
@@ -1709,6 +1709,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "sidekick-review",
         "title": "Sidekick Review: A Free, Native macOS Local AI Chat App",
         "url": "/power-local-llm/sidekick-review",
@@ -1720,14 +1728,6 @@
         "slug": "ekorbia-review",
         "title": "Ekorbia Review: Free Open-Source Local AI Desktop App",
         "url": "/power-local-llm/ekorbia-review",
-        "dateModified": "2026-09-07",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-09-07",
         "tier": "mentioned"
       },
@@ -3453,18 +3453,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "surfsense-review",
-        "title": "SurfSense Review: Open-Source Desktop NotebookLM Alternative",
-        "url": "/power-local-llm/surfsense-review",
-        "dateModified": "2026-10-21",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "return-editor-review",
-        "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
-        "url": "/power-local-llm/return-editor-review",
-        "dateModified": "2026-10-16",
+        "slug": "surfsense-review",
+        "title": "SurfSense Review: Open-Source Desktop NotebookLM Alternative",
+        "url": "/power-local-llm/surfsense-review",
+        "dateModified": "2026-10-21",
         "tier": "mentioned"
       }
     ],
@@ -5084,7 +5084,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "faster-whisper": {
@@ -9629,6 +9629,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Zero1LLM": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "zero1llm-review",
+        "title": "Zero1LLM Review: Local Chat App with Web Search and Browser Control",
+        "url": "/power-local-llm/zero1llm-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "MLX-Audio": {
     "articles": [
       {
@@ -9667,6 +9681,20 @@
         "title": "SpeechBrain Review: An Open-Source PyTorch Toolkit for Speech and Text",
         "url": "/power-local-llm/speechbrain-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "LocalMCP": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "localmcp-review",
+        "title": "LocalMCP Review: A Local MCP Server for Your Mac Data",
+        "url": "/power-local-llm/localmcp-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -10845,9 +10873,25 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "gpt4all-review",
+        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
+        "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "on-device-ai-translator-review",
         "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
         "url": "/power-local-llm/on-device-ai-translator-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "zero1llm-review",
+        "title": "Zero1LLM Review: Local Chat App with Web Search and Browser Control",
+        "url": "/power-local-llm/zero1llm-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
@@ -10898,25 +10942,9 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-vision-models-llava-ollama-2026",
-        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
-        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 211,
+    "totalCount": 212,
     "capped": true
   },
   "Qdrant": {
