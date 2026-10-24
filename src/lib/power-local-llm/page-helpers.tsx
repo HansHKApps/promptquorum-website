@@ -1039,6 +1039,7 @@ const HUB_THEMES: Array<{
       'odysseus-review',
       'phoneclaw-review',
       'nanobot-review',
+      'local-operator-review',
       'localmcp-review',
       'self-hosted-ai-starter-kit-review',
       'local-deep-research-review',
