@@ -944,6 +944,11 @@
     "urlSlug": "openrag-review",
     "url": "/power-local-llm/openrag-review"
   },
+  "arynwood-mcp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "arynwood-mcp-review",
+    "url": "/power-local-llm/arynwood-mcp-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",

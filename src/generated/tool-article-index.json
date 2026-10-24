@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "arynwood-mcp-review",
+        "title": "Arynwood MCP Review: A Local AI Workspace in Alpha",
+        "url": "/power-local-llm/arynwood-mcp-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/best-local-ai-app-low-end-pc",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "libredb-studio-review",
-        "title": "LibreDB Studio Review: Open-Source SQL Editor With an Optional Local AI Agent",
-        "url": "/power-local-llm/libredb-studio-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 305,
+    "totalCount": 306,
     "capped": true
   },
   "llama.cpp": {
@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 43,
     "capped": true
   },
   "GPT4All": {
@@ -1236,7 +1236,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 39,
     "capped": true
   },
   "Msty": {
@@ -6784,7 +6784,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 33,
     "capped": true
   },
   "ComfyUI": {
@@ -9711,6 +9711,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Arynwood MCP": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "arynwood-mcp-review",
+        "title": "Arynwood MCP Review: A Local AI Workspace in Alpha",
+        "url": "/power-local-llm/arynwood-mcp-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "candle-vllm": {
     "articles": [
       {
@@ -10998,7 +11012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "Rapid-MLX": {

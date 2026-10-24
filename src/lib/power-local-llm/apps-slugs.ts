@@ -203,6 +203,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'hiwaifu':                                 'hiwaifu',
   'memoryai':                                'memoryai',
   'llamatik':                                'llamatik',
+  'arynwood-mcp':                            'arynwood-mcp',
   'caelum':                                  'caelum',
   'obscurify':                               'obscurify',
   'strata':                                  'strata',

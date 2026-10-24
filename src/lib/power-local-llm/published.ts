@@ -570,6 +570,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'libredb-studio-review',
   // OpenRAG review (RAG & Document Chat) — 2026-10-23
   'openrag-review',
+  // Arynwood MCP review (Easiest Desktop Apps, chat client) — 2026-10-24
+  'arynwood-mcp-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
