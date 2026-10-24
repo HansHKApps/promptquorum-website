@@ -541,6 +541,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'castmates-review':                         'castmates-review',
   'surfsense-review':                         'surfsense-review',
   'strata-review':                            'strata-review',
+  'coil-review':                              'coil-review',
   'speechbrain-review':                       'speechbrain-review',
   'libredb-studio-review':                    'libredb-studio-review',
   'openrag-review':                           'openrag-review',

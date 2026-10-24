@@ -564,6 +564,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'surfsense-review',
   // Strata review (Run & Serve, inference engine) — 2026-10-23
   'strata-review',
+  // Coil review (Autonomous agents, Mac agent harness) — 2026-10-24
+  'coil-review',
   // SpeechBrain review (Voice & Audio, speech toolkit) — 2026-10-23
   'speechbrain-review',
   // LibreDB Studio review (Coding Assistants, SQL editor with optional local AI) — 2026-10-23

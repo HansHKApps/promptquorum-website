@@ -1024,6 +1024,7 @@ const HUB_THEMES: Array<{
       'microsoft-agent-framework-review',
       'autogpt-local-review',
       'goose-review',
+      'coil-review',
       'atomic-bot-review',
       'librechat-review',
       'obscurify-review',
