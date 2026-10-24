@@ -20,13 +20,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Murmur Review: On-Device AI Music Generator for iPhone',
     seoTitle: 'Murmur Review: On-Device AI Music Generator for iPhone',
     intro:
-      'Murmur is an iPhone app by the independent developer [Konstantin Tabakov](https://murmurapps.com) that composes instrumental, royalty-free music for photos, videos and games, and says it generates every track on the phone after a one-time model download. It is free to download, with a one-time Pro unlock. This review is based on the App Store listing, the maker\'s website and its privacy policy, checked on 24 October 2026; PromptQuorum has not tested the app hands-on.',
+      'Murmur is an iPhone app by the independent developer [Konstantin Tabakov](https://murmurapps.com) that composes instrumental music for photos, videos and games, and says it generates every track on the phone after a one-time model download. It is free to download, with a one-time Pro unlock. This review is based on the App Store listing, the maker\'s website and its privacy policy, checked on 24 October 2026; PromptQuorum has not tested the app hands-on.',
     metaDescription:
       'Murmur review: iPhone app that composes instrumental AI music for photos, videos and games on the device. Free with a one-time Pro unlock; untested.',
     twitterDescription:
       'Murmur review: on-device AI music for iPhone, scored for your photos and videos. Free, one-time Pro unlock, what the sources confirm and what they do not.',
     audience:
-      'Creators and iPhone users who want royalty-free background music generated on the phone and need to know what the sources confirm, what the maker only claims and what it costs.',
+      'Creators and iPhone users who want background music generated on the phone and need to know what the sources confirm, what the maker only claims and what it costs.',
     readTime: '6 min read',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur (version 2.2.5, updated on 22 October 2026) is an iPhone app that composes instrumental, royalty-free music for your photos, videos and games on the device.** It is free to download and sells a one-time Pro unlock instead of a subscription. It produces no vocals, and every statement here comes from the App Store listing, the maker\'s site and its privacy policy.',
+      '**Murmur (version 2.2.5, updated on 22 October 2026) is an iPhone app that composes instrumental music for your photos, videos and games on the device.** It is free to download and sells a one-time Pro unlock instead of a subscription. It produces no vocals, and every statement here comes from the App Store listing, the maker\'s site and its privacy policy.',
     quickAnswerTop: {
       en: {
         question: 'Does Murmur really make AI music offline on the iPhone?',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Engines: Orpheus for Score and standard tracks, Google\'s Magenta RT for Live mode, per the maker.',
           'Cost: free tier with daily limits and a one-time Pro unlock; there is no subscription.',
           'Output: instrumental only, with no vocals or lyrics.',
-          'Maker: an independent developer, with no company behind the app and no published source code.',
+          'Maker: an independent developer, with no published source code.',
         ],
         callouts: [
           {
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Murmur is a focused, actively updated way to get instrumental music for clips from an iPhone, with a free tier to try it and a one-time Pro price instead of a subscription. Against that, it is closed-source, comes from one independent developer, needs a recent iOS and a large model download, and none of its sound claims could be checked here. It suits creators who want fast, private-by-design background tracks and can test the free tier first; anyone who needs a documented licence for the generated music should read the engine terms and the maker\'s statement carefully before using tracks commercially.',
+          'Murmur is a focused, actively updated way to get instrumental music for clips from an iPhone, with a free tier to try it and a one-time Pro price instead of a subscription. Against that, it is closed-source, comes from one independent developer, needs a recent iOS and a large model download, and none of its sound claims could be checked here. It suits creators who want fast background tracks that the maker says are generated on the phone and can test the free tier first; anyone who needs a documented licence for the generated music should read the engine terms and the maker\'s statement carefully before using tracks commercially.',
       },
       sources: {
         id: 'sources',
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Murmur Review: On-Device AI Music Generator for iPhone',
       description:
-        'Murmur review: an iPhone app that composes instrumental, royalty-free AI music for photos, videos and games on the device. Pricing, requirements, privacy and what the sources leave unconfirmed.',
+        'Murmur review: an iPhone app that composes instrumental AI music for photos, videos and games on the device. Pricing, requirements, privacy and what the sources leave unconfirmed.',
       url: 'https://www.promptquorum.com/power-local-llm/murmur-review',
       inLanguage: 'en',
       datePublished: '2026-10-24',
@@ -321,13 +321,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Murmur-Rezension: KI-Musikgenerator direkt auf dem iPhone',
     seoTitle: 'Murmur-Rezension: KI-Musik direkt auf dem iPhone erzeugen',
     intro:
-      'Murmur ist eine iPhone-App des unabhängigen Entwicklers [Konstantin Tabakov](https://murmurapps.com), die instrumentale, lizenzfreie Musik für Fotos, Videos und Spiele komponiert; laut Hersteller entsteht jeder Track nach einem einmaligen Modell-Download auf dem Telefon selbst. Der Download ist kostenlos, Pro wird einmalig freigeschaltet. Diese Rezension stützt sich auf den App-Store-Eintrag, die Website des Herstellers und seine Datenschutzerklärung, geprüft am 24. Oktober 2026; PromptQuorum hat die App nicht selbst getestet.',
+      'Murmur ist eine iPhone-App des unabhängigen Entwicklers [Konstantin Tabakov](https://murmurapps.com), die instrumentale Musik für Fotos, Videos und Spiele komponiert; laut Hersteller entsteht jeder Track nach einem einmaligen Modell-Download auf dem Telefon selbst. Der Download ist kostenlos, Pro wird einmalig freigeschaltet. Diese Rezension stützt sich auf den App-Store-Eintrag, die Website des Herstellers und seine Datenschutzerklärung, geprüft am 24. Oktober 2026; PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
       'Murmur-Rezension: iPhone-App, die instrumentale KI-Musik für Fotos, Videos und Spiele auf dem Gerät komponiert. Gratis, Pro als Einmalkauf; ungetestet.',
     twitterDescription:
       'Murmur-Rezension: KI-Musik direkt auf dem iPhone, passend zu Ihren Fotos und Videos. Gratis, Pro als Einmalkauf – was die Quellen bestätigen und was nicht.',
     audience:
-      'Kreative und iPhone-Nutzer, die lizenzfreie Hintergrundmusik direkt auf dem Telefon erzeugen möchten und wissen müssen, was die Quellen bestätigen, was der Hersteller nur behauptet und was die App kostet.',
+      'Kreative und iPhone-Nutzer, die Hintergrundmusik direkt auf dem Telefon erzeugen möchten und wissen müssen, was die Quellen bestätigen, was der Hersteller nur behauptet und was die App kostet.',
     readTime: '6 Min. Lesezeit',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -344,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur (Version 2.2.5, aktualisiert am 22. Oktober 2026) ist eine iPhone-App, die instrumentale, lizenzfreie Musik für Ihre Fotos, Videos und Spiele direkt auf dem Gerät komponiert.** Der Download ist kostenlos, statt eines Abos gibt es eine einmalige Pro-Freischaltung. Gesang erzeugt die App nicht, und jede Aussage hier stammt aus dem App-Store-Eintrag, der Website des Herstellers und seiner Datenschutzerklärung.',
+      '**Murmur (Version 2.2.5, aktualisiert am 22. Oktober 2026) ist eine iPhone-App, die instrumentale Musik für Ihre Fotos, Videos und Spiele direkt auf dem Gerät komponiert.** Der Download ist kostenlos, statt eines Abos gibt es eine einmalige Pro-Freischaltung. Gesang erzeugt die App nicht, und jede Aussage hier stammt aus dem App-Store-Eintrag, der Website des Herstellers und seiner Datenschutzerklärung.',
     quickAnswerTop: {
       de: {
         question: 'Erzeugt Murmur die KI-Musik wirklich offline auf dem iPhone?',
@@ -395,7 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Engines: laut Hersteller Orpheus für Score und normale Tracks, Googles Magenta RT für den Live-Modus.',
           'Kosten: kostenlose Stufe mit Tageslimits und eine einmalige Pro-Freischaltung; ein Abo gibt es nicht.',
           'Ausgabe: ausschließlich instrumental, ohne Gesang und ohne Liedtexte.',
-          'Hersteller: ein unabhängiger Entwickler, ohne Unternehmen hinter der App und ohne veröffentlichten Quellcode.',
+          'Hersteller: ein unabhängiger Entwickler, ohne veröffentlichten Quellcode.',
         ],
         callouts: [
           {
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Murmur ist ein fokussierter, aktiv gepflegter Weg, auf dem iPhone instrumentale Musik für Clips zu erhalten, mit einer kostenlosen Stufe zum Ausprobieren und einem einmaligen Pro-Preis statt eines Abos. Dem stehen gegenüber: Die App ist quellgeschlossen, stammt von einem einzelnen unabhängigen Entwickler, braucht ein aktuelles iOS und einen großen Modell-Download, und keine ihrer Aussagen zum Klang ließ sich hier überprüfen. Sie passt zu Kreativen, die schnelle, konzeptionell private Hintergrund-Tracks möchten und zuerst die kostenlose Stufe testen können; wer für die erzeugte Musik eine dokumentierte Lizenz braucht, sollte die Bedingungen der Engines und die Erklärung des Herstellers sorgfältig lesen, bevor er Tracks kommerziell nutzt.',
+          'Murmur ist ein fokussierter, aktiv gepflegter Weg, auf dem iPhone instrumentale Musik für Clips zu erhalten, mit einer kostenlosen Stufe zum Ausprobieren und einem einmaligen Pro-Preis statt eines Abos. Dem stehen gegenüber: Die App ist quellgeschlossen, stammt von einem einzelnen unabhängigen Entwickler, braucht ein aktuelles iOS und einen großen Modell-Download, und keine ihrer Aussagen zum Klang ließ sich hier überprüfen. Sie passt zu Kreativen, die schnelle Hintergrund-Tracks, die laut Hersteller auf dem Telefon entstehen möchten und zuerst die kostenlose Stufe testen können; wer für die erzeugte Musik eine dokumentierte Lizenz braucht, sollte die Bedingungen der Engines und die Erklärung des Herstellers sorgfältig lesen, bevor er Tracks kommerziell nutzt.',
       },
       sources: {
         id: 'sources',
@@ -590,13 +590,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de Murmur: generador de música con IA en el iPhone',
     seoTitle: 'Reseña de Murmur: música con IA en el propio iPhone',
     intro:
-      'Murmur es una app para iPhone del desarrollador independiente [Konstantin Tabakov](https://murmurapps.com) que compone música instrumental libre de derechos para fotos, vídeos y juegos, y según su creador genera cada pista en el propio teléfono tras una descarga única del modelo. Se descarga gratis y ofrece un desbloqueo Pro de pago único. Esta reseña se basa en la ficha de la App Store, el sitio web del creador y su política de privacidad, comprobados el 24 de octubre de 2026; PromptQuorum no ha probado la app.',
+      'Murmur es una app para iPhone del desarrollador independiente [Konstantin Tabakov](https://murmurapps.com) que compone música instrumental para fotos, vídeos y juegos, y según su creador genera cada pista en el propio teléfono tras una descarga única del modelo. Se descarga gratis y ofrece un desbloqueo Pro de pago único. Esta reseña se basa en la ficha de la App Store, el sitio web del creador y su política de privacidad, comprobados el 24 de octubre de 2026; PromptQuorum no ha probado la app.',
     metaDescription:
       'Reseña de Murmur: app de iPhone que compone música instrumental con IA para fotos, vídeos y juegos en el dispositivo. Gratis, con Pro de pago único.',
     twitterDescription:
       'Reseña de Murmur: música con IA generada en el iPhone para tus fotos y vídeos. Gratis, Pro de pago único, y qué confirman las fuentes y qué no.',
     audience:
-      'Creadores y usuarios de iPhone que quieren música de fondo libre de derechos generada en el teléfono y necesitan saber qué confirman las fuentes, qué solo afirma el creador y cuánto cuesta.',
+      'Creadores y usuarios de iPhone que quieren música de fondo generada en el teléfono y necesitan saber qué confirman las fuentes, qué solo afirma el creador y cuánto cuesta.',
     readTime: '6 min de lectura',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur (versión 2.2.5, actualizada el 22 de octubre de 2026) es una app para iPhone que compone en el propio dispositivo música instrumental libre de derechos para tus fotos, vídeos y juegos.** Se descarga gratis y vende un desbloqueo Pro de pago único en lugar de una suscripción. No genera voces, y todo lo que se afirma aquí procede de la ficha de la App Store, del sitio del creador y de su política de privacidad.',
+      '**Murmur (versión 2.2.5, actualizada el 22 de octubre de 2026) es una app para iPhone que compone en el propio dispositivo música instrumental para tus fotos, vídeos y juegos.** Se descarga gratis y vende un desbloqueo Pro de pago único en lugar de una suscripción. No genera voces, y todo lo que se afirma aquí procede de la ficha de la App Store, del sitio del creador y de su política de privacidad.',
     quickAnswerTop: {
       es: {
         question: '¿Murmur crea de verdad música con IA sin conexión en el iPhone?',
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Motores: Orpheus para Score y las pistas estándar, y Magenta RT de Google para el modo Live, según el creador.',
           'Coste: nivel gratuito con límites diarios y un desbloqueo Pro de pago único; no hay suscripción.',
           'Resultado: solo música instrumental, sin voces ni letras.',
-          'Creador: un desarrollador independiente, sin una empresa detrás de la app y sin código fuente publicado.',
+          'Creador: un desarrollador independiente, sin código fuente publicado.',
         ],
         callouts: [
           {
@@ -825,7 +825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Murmur es una forma centrada y con actualizaciones activas de conseguir música instrumental para clips desde un iPhone, con un nivel gratuito para probarla y un precio Pro de pago único en lugar de una suscripción. En contra, es de código cerrado, procede de un único desarrollador independiente, necesita un iOS reciente y una descarga de modelo grande, y aquí no se pudo comprobar ninguna de sus afirmaciones sobre el sonido. Encaja con creadores que quieren pistas de fondo rápidas y privadas por diseño y pueden probar antes el nivel gratuito; quien necesite una licencia documentada para la música generada debería leer con atención los términos de los motores y la declaración del creador antes de usar las pistas comercialmente.',
+          'Murmur es una forma centrada y con actualizaciones activas de conseguir música instrumental para clips desde un iPhone, con un nivel gratuito para probarla y un precio Pro de pago único en lugar de una suscripción. En contra, es de código cerrado, procede de un único desarrollador independiente, necesita un iOS reciente y una descarga de modelo grande, y aquí no se pudo comprobar ninguna de sus afirmaciones sobre el sonido. Encaja con creadores que quieren pistas de fondo rápidas que, según el creador, se generan en el teléfono y pueden probar antes el nivel gratuito; quien necesite una licencia documentada para la música generada debería leer con atención los términos de los motores y la declaración del creador antes de usar las pistas comercialmente.',
       },
       sources: {
         id: 'sources',
@@ -859,13 +859,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test de Murmur : générateur de musique IA embarqué pour iPhone',
     seoTitle: 'Test de Murmur : musique IA générée sur l’iPhone',
     intro:
-      'Murmur est une application iPhone du développeur indépendant [Konstantin Tabakov](https://murmurapps.com) qui compose de la musique instrumentale libre de droits pour vos photos, vidéos et jeux ; selon lui, chaque morceau est généré sur le téléphone après un téléchargement unique des modèles. Le téléchargement est gratuit, avec un déblocage Pro en achat unique. Ce test repose sur la fiche App Store, le site du développeur et sa politique de confidentialité, consultés le 24 octobre 2026 ; PromptQuorum n’a pas testé l’application en conditions réelles.',
+      'Murmur est une application iPhone du développeur indépendant [Konstantin Tabakov](https://murmurapps.com) qui compose de la musique instrumentale pour vos photos, vidéos et jeux ; selon lui, chaque morceau est généré sur le téléphone après un téléchargement unique des modèles. Le téléchargement est gratuit, avec un déblocage Pro en achat unique. Ce test repose sur la fiche App Store, le site du développeur et sa politique de confidentialité, consultés le 24 octobre 2026 ; PromptQuorum n’a pas testé l’application en conditions réelles.',
     metaDescription:
       'Test de Murmur : app iPhone composant sur l’appareil de la musique IA instrumentale pour photos, vidéos et jeux. Gratuite, Pro en achat unique, non testée.',
     twitterDescription:
       'Test de Murmur : musique IA générée sur l’iPhone pour vos photos et vidéos. Gratuite, Pro en achat unique : ce que les sources confirment, et ce qu’elles taisent.',
     audience:
-      'Créateurs et utilisateurs d’iPhone qui veulent une musique de fond libre de droits générée sur le téléphone et ont besoin de savoir ce que les sources confirment, ce que le développeur se contente d’affirmer et ce que cela coûte.',
+      'Créateurs et utilisateurs d’iPhone qui veulent une musique de fond générée sur le téléphone et ont besoin de savoir ce que les sources confirment, ce que le développeur se contente d’affirmer et ce que cela coûte.',
     readTime: '6 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur (version 2.2.5, mise à jour le 22 octobre 2026) est une application iPhone qui compose sur l’appareil de la musique instrumentale libre de droits pour vos photos, vidéos et jeux.** Le téléchargement est gratuit, et un déblocage Pro en achat unique remplace l’abonnement. Elle ne produit pas de voix, et chaque affirmation ici provient de la fiche App Store, du site du développeur et de sa politique de confidentialité.',
+      '**Murmur (version 2.2.5, mise à jour le 22 octobre 2026) est une application iPhone qui compose sur l’appareil de la musique instrumentale pour vos photos, vidéos et jeux.** Le téléchargement est gratuit, et un déblocage Pro en achat unique remplace l’abonnement. Elle ne produit pas de voix, et chaque affirmation ici provient de la fiche App Store, du site du développeur et de sa politique de confidentialité.',
     quickAnswerTop: {
       fr: {
         question: 'Murmur génère-t-il vraiment de la musique IA hors ligne sur l’iPhone ?',
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Moteurs : Orpheus pour Score et les morceaux standard, Magenta RT de Google pour le mode Live, selon le développeur.',
           'Coût : version gratuite avec limites quotidiennes et déblocage Pro en achat unique ; aucun abonnement.',
           'Sortie : uniquement instrumentale, sans voix ni paroles.',
-          'Éditeur : un développeur indépendant, sans entreprise derrière l’application et sans code source publié.',
+          'Éditeur : un développeur indépendant, sans code source publié.',
         ],
         callouts: [
           {
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Murmur est un moyen ciblé et activement mis à jour d’obtenir de la musique instrumentale pour vos clips depuis un iPhone, avec une version gratuite pour l’essayer et un prix Pro unique plutôt qu’un abonnement. En contrepartie, son code est fermé, il provient d’un seul développeur indépendant, exige un iOS récent et un gros téléchargement de modèles, et aucune de ses promesses sonores n’a pu être vérifiée ici. Il convient aux créateurs qui veulent des musiques de fond rapides, pensées pour la confidentialité, et peuvent d’abord tester la version gratuite ; quiconque a besoin d’une licence documentée pour la musique générée doit lire attentivement les conditions des moteurs et la déclaration du développeur avant tout usage commercial.',
+          'Murmur est un moyen ciblé et activement mis à jour d’obtenir de la musique instrumentale pour vos clips depuis un iPhone, avec une version gratuite pour l’essayer et un prix Pro unique plutôt qu’un abonnement. En contrepartie, son code est fermé, il provient d’un seul développeur indépendant, exige un iOS récent et un gros téléchargement de modèles, et aucune de ses promesses sonores n’a pu être vérifiée ici. Il convient aux créateurs qui veulent des musiques de fond rapides qui, selon le développeur, sont générées sur le téléphone, et peuvent d’abord tester la version gratuite ; quiconque a besoin d’une licence documentée pour la musique générée doit lire attentivement les conditions des moteurs et la déclaration du développeur avant tout usage commercial.',
       },
       sources: {
         id: 'sources',
@@ -1128,13 +1128,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Murmurレビュー：iPhoneで動くオンデバイスAI作曲アプリ',
     seoTitle: 'Murmurレビュー：iPhone上で作曲するオンデバイスAI音楽アプリ',
     intro:
-      'Murmurは、独立系開発者の[Konstantin Tabakov](https://murmurapps.com)によるiPhoneアプリです。写真・動画・ゲーム向けに、ロイヤリティフリーのインストゥルメンタル音楽を作曲します。開発者によれば、初回にモデルを一度ダウンロードした後は、すべての曲をiPhone上で生成します。ダウンロードは無料で、Proは買い切りで解放できます。このレビューは、2026年10月24日に確認したApp Storeの掲載情報、開発者の公式サイト、プライバシーポリシーに基づきます。PromptQuorumは実機でのテストを行っていません。',
+      'Murmurは、独立系開発者の[Konstantin Tabakov](https://murmurapps.com)によるiPhoneアプリです。写真・動画・ゲーム向けに、インストゥルメンタル音楽を作曲します。開発者によれば、初回にモデルを一度ダウンロードした後は、すべての曲をiPhone上で生成します。ダウンロードは無料で、Proは買い切りで解放できます。このレビューは、2026年10月24日に確認したApp Storeの掲載情報、開発者の公式サイト、プライバシーポリシーに基づきます。PromptQuorumは実機でのテストを行っていません。',
     metaDescription:
       'Murmurレビュー：写真・動画・ゲーム向けのBGMをiPhone上で作曲するAI音楽アプリ。無料で、Proは買い切り。料金、動作要件、プライバシー、未検証の点を解説します。',
     twitterDescription:
       'Murmurレビュー：写真や動画に合わせてiPhone上でBGMを作るAI音楽アプリ。無料、Proは買い切り。情報源で確認できた点とできなかった点。',
     audience:
-      'ロイヤリティフリーのBGMをiPhone上で生成したいクリエイターやiPhoneユーザー。情報源で確認できる点、開発者の主張にとどまる点、費用を知りたい方向けです。',
+      'BGMをiPhone上で生成したいクリエイターやiPhoneユーザー。情報源で確認できる点、開発者の主張にとどまる点、費用を知りたい方向けです。',
     readTime: '6分で読める',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -1151,7 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur（バージョン2.2.5、2026年10月22日更新）は、写真・動画・ゲーム向けのロイヤリティフリーなインストゥルメンタル音楽をiPhone上で作曲するアプリです。**ダウンロードは無料で、サブスクリプションではなく買い切りのPro解放を販売しています。ボーカルは生成しません。本記事の記載はすべて、App Storeの掲載情報、開発者のサイトとプライバシーポリシーに基づきます。',
+      '**Murmur（バージョン2.2.5、2026年10月22日更新）は、写真・動画・ゲーム向けのインストゥルメンタル音楽をiPhone上で作曲するアプリです。**ダウンロードは無料で、サブスクリプションではなく買い切りのPro解放を販売しています。ボーカルは生成しません。本記事の記載はすべて、App Storeの掲載情報、開発者のサイトとプライバシーポリシーに基づきます。',
     quickAnswerTop: {
       ja: {
         question: 'MurmurはiPhoneで本当にオフラインでAI音楽を作れますか？',
@@ -1202,7 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'エンジン：開発者によれば、Scoreと通常の曲はOrpheus、LiveモードはGoogleのMagenta RTが担当します。',
           '費用：1日あたりの制限付きの無料版と、買い切りのPro解放があります。サブスクリプションはありません。',
           '出力：インストゥルメンタルのみで、ボーカルや歌詞は生成しません。',
-          '開発元：独立系の個人開発者で、背後に企業はなく、ソースコードも公開されていません。',
+          '開発元：独立系の個人開発者で、ソースコードは公開されていません。',
         ],
         callouts: [
           {
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'Murmurは、iPhoneからクリップ用のインストゥルメンタル音楽を得るための、用途を絞った活発に更新されているアプリです。試せる無料版があり、Proはサブスクリプションではなく買い切りです。一方で、クローズドソースで、開発者は独立系の1人であり、新しいiOSと大容量のモデルのダウンロードが必要で、音に関する主張はここでは一つも検証できませんでした。プライバシーに配慮した設計のBGMを素早く作りたく、先に無料版を試せるクリエイターに向いています。生成した音楽のライセンスを文書で確認する必要がある方は、曲を商用利用する前にエンジンの利用規約と開発者の説明を注意深く読んでください。',
+          'Murmurは、iPhoneからクリップ用のインストゥルメンタル音楽を得るための、用途を絞った活発に更新されているアプリです。試せる無料版があり、Proはサブスクリプションではなく買い切りです。一方で、クローズドソースで、開発者は独立系の1人であり、新しいiOSと大容量のモデルのダウンロードが必要で、音に関する主張はここでは一つも検証できませんでした。開発者によれば端末上で生成されるBGMを素早く作りたく、先に無料版を試せるクリエイターに向いています。生成した音楽のライセンスを文書で確認する必要がある方は、曲を商用利用する前にエンジンの利用規約と開発者の説明を注意深く読んでください。',
       },
       sources: {
         id: 'sources',
@@ -1397,13 +1397,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise do Murmur: gerador de música com IA no próprio iPhone',
     seoTitle: 'Análise do Murmur: música com IA direto no iPhone',
     intro:
-      'O Murmur é um app para iPhone do desenvolvedor independente [Konstantin Tabakov](https://murmurapps.com) que compõe músicas instrumentais e livres de royalties para fotos, vídeos e jogos e, segundo ele, gera cada faixa no próprio celular depois de um download único dos modelos. O download é gratuito, com um desbloqueio Pro de pagamento único. Esta análise se baseia na página da App Store, no site do desenvolvedor e na política de privacidade dele, verificados em 24 de outubro de 2026; a PromptQuorum não testou o app na prática.',
+      'O Murmur é um app para iPhone do desenvolvedor independente [Konstantin Tabakov](https://murmurapps.com) que compõe músicas instrumentais para fotos, vídeos e jogos e, segundo ele, gera cada faixa no próprio celular depois de um download único dos modelos. O download é gratuito, com um desbloqueio Pro de pagamento único. Esta análise se baseia na página da App Store, no site do desenvolvedor e na política de privacidade dele, verificados em 24 de outubro de 2026; a PromptQuorum não testou o app na prática.',
     metaDescription:
       'Análise do Murmur: app para iPhone que compõe música instrumental com IA para fotos, vídeos e jogos no aparelho. Grátis, com Pro vitalício; não testado.',
     twitterDescription:
       'Análise do Murmur: música com IA gerada no iPhone para suas fotos e vídeos. Grátis, Pro de pagamento único, o que as fontes confirmam e o que não confirmam.',
     audience:
-      'Criadores de conteúdo e usuários de iPhone que querem trilhas de fundo livres de royalties geradas no celular e precisam saber o que as fontes confirmam, o que o desenvolvedor apenas afirma e quanto custa.',
+      'Criadores de conteúdo e usuários de iPhone que querem trilhas de fundo geradas no celular e precisam saber o que as fontes confirmam, o que o desenvolvedor apenas afirma e quanto custa.',
     readTime: '6 min de leitura',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -1420,7 +1420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**O Murmur (versão 2.2.5, atualizada em 22 de outubro de 2026) é um app para iPhone que compõe, no próprio aparelho, músicas instrumentais e livres de royalties para suas fotos, vídeos e jogos.** O download é gratuito e, em vez de assinatura, ele vende um desbloqueio Pro de pagamento único. Ele não gera vocais, e tudo o que consta aqui vem da página da App Store, do site do desenvolvedor e da política de privacidade dele.',
+      '**O Murmur (versão 2.2.5, atualizada em 22 de outubro de 2026) é um app para iPhone que compõe, no próprio aparelho, músicas instrumentais para suas fotos, vídeos e jogos.** O download é gratuito e, em vez de assinatura, ele vende um desbloqueio Pro de pagamento único. Ele não gera vocais, e tudo o que consta aqui vem da página da App Store, do site do desenvolvedor e da política de privacidade dele.',
     quickAnswerTop: {
       pt: {
         question: 'O Murmur realmente cria música com IA offline no iPhone?',
@@ -1471,7 +1471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Motores: Orpheus para o Score e as faixas padrão, e o Magenta RT do Google para o modo Live, segundo o desenvolvedor.',
           'Custo: plano gratuito com limites diários e um desbloqueio Pro de pagamento único; não há assinatura.',
           'Resultado: apenas instrumental, sem vocais nem letras.',
-          'Desenvolvedor: um desenvolvedor independente, sem empresa por trás do app e sem código-fonte publicado.',
+          'Desenvolvedor: um desenvolvedor independente, sem código-fonte publicado.',
         ],
         callouts: [
           {
@@ -1632,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'O Murmur é uma forma focada e atualizada com frequência de obter música instrumental para clipes a partir do iPhone, com um plano gratuito para experimentar e um preço Pro único em vez de assinatura. Por outro lado, tem código fechado, vem de um único desenvolvedor independente, exige um iOS recente e um download grande de modelos, e nenhuma das afirmações sobre o som pôde ser verificada aqui. Ele atende criadores que querem trilhas de fundo rápidas e privadas por concepção e que podem testar o plano gratuito primeiro; quem precisa de uma licença documentada para a música gerada deve ler com atenção os termos dos motores e a declaração do desenvolvedor antes de usar as faixas comercialmente.',
+          'O Murmur é uma forma focada e atualizada com frequência de obter música instrumental para clipes a partir do iPhone, com um plano gratuito para experimentar e um preço Pro único em vez de assinatura. Por outro lado, tem código fechado, vem de um único desenvolvedor independente, exige um iOS recente e um download grande de modelos, e nenhuma das afirmações sobre o som pôde ser verificada aqui. Ele atende criadores que querem trilhas de fundo rápidas que, segundo o desenvolvedor, são geradas no celular e que podem testar o plano gratuito primeiro; quem precisa de uma licença documentada para a música gerada deve ler com atenção os termos dos motores e a declaração do desenvolvedor antes de usar as faixas comercialmente.',
       },
       sources: {
         id: 'sources',
@@ -1666,13 +1666,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Murmur: مولّد موسيقى بالذكاء الاصطناعي على iPhone',
     seoTitle: 'مراجعة Murmur: موسيقى بالذكاء الاصطناعي على iPhone',
     intro:
-      'Murmur تطبيق لـ iPhone من المطوّر المستقل [Konstantin Tabakov](https://murmurapps.com) يؤلّف موسيقى آلية خالية من حقوق الاستخدام للصور ومقاطع الفيديو والألعاب، ويقول إنه يولّد كل مقطوعة على الهاتف نفسه بعد تنزيل النموذج مرة واحدة. التطبيق مجاني التنزيل، مع ترقية Pro تُدفع مرة واحدة. تستند هذه المراجعة إلى صفحة التطبيق في App Store وموقع المطوّر وسياسة الخصوصية، وقد رُوجعت في 24 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عمليًا.',
+      'Murmur تطبيق لـ iPhone من المطوّر المستقل [Konstantin Tabakov](https://murmurapps.com) يؤلّف موسيقى آلية للصور ومقاطع الفيديو والألعاب، ويقول إنه يولّد كل مقطوعة على الهاتف نفسه بعد تنزيل النموذج مرة واحدة. التطبيق مجاني التنزيل، مع ترقية Pro تُدفع مرة واحدة. تستند هذه المراجعة إلى صفحة التطبيق في App Store وموقع المطوّر وسياسة الخصوصية، وقد رُوجعت في 24 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
       'مراجعة Murmur: تطبيق iPhone يؤلّف موسيقى آلية بالذكاء الاصطناعي لصورك وفيديوهاتك وألعابك على الجهاز نفسه. مجاني مع ترقية Pro لمرة واحدة؛ لم نختبره.',
     twitterDescription:
       'مراجعة Murmur: موسيقى بالذكاء الاصطناعي تُولَّد على iPhone لصورك وفيديوهاتك. مجاني مع ترقية Pro لمرة واحدة، وما تؤكده المصادر وما لا تؤكده.',
     audience:
-      'صنّاع المحتوى ومستخدمو iPhone الذين يريدون موسيقى خلفية خالية من حقوق الاستخدام تُولَّد على الهاتف، ويحتاجون إلى معرفة ما تؤكده المصادر وما يكتفي المطوّر بادعائه وكم تبلغ التكلفة.',
+      'صنّاع المحتوى ومستخدمو iPhone الذين يريدون موسيقى خلفية تُولَّد على الهاتف، ويحتاجون إلى معرفة ما تؤكده المصادر وما يكتفي المطوّر بادعائه وكم تبلغ التكلفة.',
     readTime: '6 دقائق للقراءة',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur (الإصدار 2.2.5، حُدِّث في 22 أكتوبر 2026) تطبيق لـ iPhone يؤلّف موسيقى آلية خالية من حقوق الاستخدام لصورك وفيديوهاتك وألعابك على الجهاز نفسه.** تنزيله مجاني، ويبيع ترقية Pro تُدفع مرة واحدة بدلًا من الاشتراك. لا ينتج غناءً، وكل ما يرد هنا مصدره صفحة App Store وموقع المطوّر وسياسة الخصوصية.',
+      '**Murmur (الإصدار 2.2.5، حُدِّث في 22 أكتوبر 2026) تطبيق لـ iPhone يؤلّف موسيقى آلية لصورك وفيديوهاتك وألعابك على الجهاز نفسه.** تنزيله مجاني، ويبيع ترقية Pro تُدفع مرة واحدة بدلًا من الاشتراك. لا ينتج غناءً، وكل ما يرد هنا مصدره صفحة App Store وموقع المطوّر وسياسة الخصوصية.',
     quickAnswerTop: {
       ar: {
         question: 'هل يولّد Murmur الموسيقى بالذكاء الاصطناعي على iPhone دون اتصال فعلًا؟',
@@ -1740,7 +1740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المحرّكات: Orpheus لوضع Score والمقطوعات العادية، وMagenta RT من Google لوضع Live، وفق المطوّر.',
           'التكلفة: فئة مجانية بحدود يومية وترقية Pro تُدفع مرة واحدة؛ ولا يوجد اشتراك.',
           'المخرجات: موسيقى آلية فقط، بلا غناء أو كلمات.',
-          'المطوّر: مطوّر مستقل، بلا شركة خلف التطبيق وبلا شيفرة مصدرية منشورة.',
+          'المطوّر: مطوّر مستقل، وبلا شيفرة مصدرية منشورة.',
         ],
         callouts: [
           {
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'Murmur وسيلة مركّزة ومحدَّثة باستمرار للحصول على موسيقى آلية لمقاطعك من iPhone، مع فئة مجانية للتجربة وسعر Pro يُدفع مرة واحدة بدلًا من الاشتراك. في المقابل، هو مغلق المصدر، ويأتي من مطوّر مستقل واحد، ويتطلب إصدار iOS حديثًا وتنزيل نموذج كبير، ولم يكن ممكنًا هنا التحقق من أي من ادعاءاته المتعلقة بالصوت. يناسب صنّاع المحتوى الذين يريدون مقطوعات خلفية سريعة مصمَّمة لحماية الخصوصية ويمكنهم تجربة الفئة المجانية أولًا؛ أما من يحتاج إلى ترخيص موثّق للموسيقى المولَّدة فعليه قراءة شروط المحرّكات وتصريح المطوّر بعناية قبل استخدام المقطوعات تجاريًا.',
+          'Murmur وسيلة مركّزة ومحدَّثة باستمرار للحصول على موسيقى آلية لمقاطعك من iPhone، مع فئة مجانية للتجربة وسعر Pro يُدفع مرة واحدة بدلًا من الاشتراك. في المقابل، هو مغلق المصدر، ويأتي من مطوّر مستقل واحد، ويتطلب إصدار iOS حديثًا وتنزيل نموذج كبير، ولم يكن ممكنًا هنا التحقق من أي من ادعاءاته المتعلقة بالصوت. يناسب صنّاع المحتوى الذين يريدون مقطوعات خلفية سريعة تُولَّد على الهاتف بحسب المطوّر ويمكنهم تجربة الفئة المجانية أولًا؛ أما من يحتاج إلى ترخيص موثّق للموسيقى المولَّدة فعليه قراءة شروط المحرّكات وتصريح المطوّر بعناية قبل استخدام المقطوعات تجاريًا.',
       },
       sources: {
         id: 'sources',
@@ -1935,13 +1935,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Murmur 评测：在 iPhone 本机运行的 AI 音乐生成器',
     seoTitle: 'Murmur 评测：iPhone 端侧 AI 音乐生成应用',
     intro:
-      'Murmur 是独立开发者 [Konstantin Tabakov](https://murmurapps.com) 推出的 iPhone 应用，可为照片、视频和游戏创作免版税的纯器乐音乐。开发者表示，只需一次性下载模型，之后每首曲目都在手机本机生成。应用可免费下载，Pro 版为一次性解锁。本评测基于 2026年10月24日核对的 App Store 页面、开发者官网及其隐私政策；PromptQuorum 未上手实测该应用。',
+      'Murmur 是独立开发者 [Konstantin Tabakov](https://murmurapps.com) 推出的 iPhone 应用，可为照片、视频和游戏创作纯器乐音乐。开发者表示，只需一次性下载模型，之后每首曲目都在手机本机生成。应用可免费下载，Pro 版为一次性解锁。本评测基于 2026年10月24日核对的 App Store 页面、开发者官网及其隐私政策；PromptQuorum 未上手实测该应用。',
     metaDescription:
       'Murmur 评测：在 iPhone 本机为照片、视频和游戏生成纯器乐 AI 音乐的应用。免费下载，Pro 一次性解锁；PromptQuorum 未实测，本文说明来源能证实什么。',
     twitterDescription:
       'Murmur 评测：iPhone 端侧 AI 音乐，为你的照片和视频配乐。免费下载，Pro 一次性解锁；哪些内容有来源证实，哪些没有。',
     audience:
-      '希望在手机本机生成免版税背景音乐的创作者和 iPhone 用户，需要了解来源证实了什么、哪些只是开发者的说法，以及费用是多少。',
+      '希望在手机本机生成背景音乐的创作者和 iPhone 用户，需要了解来源证实了什么、哪些只是开发者的说法，以及费用是多少。',
     readTime: '阅读约6分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -1958,7 +1958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur（版本 2.2.5，2026年10月22日更新）是一款 iPhone 应用，可在手机本机为你的照片、视频和游戏创作免版税的纯器乐音乐。**它可免费下载，付费方式是一次性 Pro 解锁而非订阅。它不生成人声；本文所有说法均来自 App Store 页面、开发者官网及其隐私政策。',
+      '**Murmur（版本 2.2.5，2026年10月22日更新）是一款 iPhone 应用，可在手机本机为你的照片、视频和游戏创作纯器乐音乐。**它可免费下载，付费方式是一次性 Pro 解锁而非订阅。它不生成人声；本文所有说法均来自 App Store 页面、开发者官网及其隐私政策。',
     quickAnswerTop: {
       zh: {
         question: 'Murmur 真的能在 iPhone 上离线生成 AI 音乐吗？',
@@ -2009,7 +2009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '引擎：据开发者介绍，Score 和普通曲目使用 Orpheus，Live 模式使用 Google 的 Magenta RT。',
           '费用：免费版有每日限额，Pro 为一次性解锁，没有订阅。',
           '输出：仅限纯器乐，不含人声或歌词。',
-          '开发者：一位独立开发者，背后没有公司，也未公开源代码。',
+          '开发者：一位独立开发者，未公开源代码。',
         ],
         callouts: [
           {
@@ -2170,7 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Murmur 专注于用 iPhone 为短片获取器乐配乐，更新活跃，提供免费版可供试用，Pro 为一次性付费而非订阅。另一方面，它闭源、出自一位独立开发者、需要较新的 iOS 和大容量模型下载，而且其音质方面的说法本文都无法核实。它适合想要快速获得、在设计上注重隐私的背景音乐、并能先试用免费版的创作者；需要为生成音乐取得书面授权依据的用户，在商用之前应仔细阅读引擎条款和开发者声明。',
+          'Murmur 专注于用 iPhone 为短片获取器乐配乐，更新活跃，提供免费版可供试用，Pro 为一次性付费而非订阅。另一方面，它闭源、出自一位独立开发者、需要较新的 iOS 和大容量模型下载，而且其音质方面的说法本文都无法核实。它适合想要快速获得、据开发者称在手机本机生成的背景音乐、并能先试用免费版的创作者；需要为生成音乐取得书面授权依据的用户，在商用之前应仔细阅读引擎条款和开发者声明。',
       },
       sources: {
         id: 'sources',
@@ -2204,13 +2204,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Murmur 리뷰: iPhone용 온디바이스 AI 음악 생성 앱',
     seoTitle: 'Murmur 리뷰: iPhone 온디바이스 AI 음악 생성 앱',
     intro:
-      'Murmur는 독립 개발자 [Konstantin Tabakov](https://murmurapps.com)가 만든 iPhone 앱으로, 사진·동영상·게임에 쓸 저작권료 없는(로열티 프리) 연주곡을 작곡하며, 1회 모델 다운로드 후에는 모든 트랙을 휴대폰에서 생성한다고 밝히고 있습니다. 다운로드는 무료이고 Pro 기능은 1회 구매로 잠금 해제합니다. 이 리뷰는 2026년 10월 24일에 확인한 App Store 페이지, 개발자 웹사이트, 개인정보 처리방침을 바탕으로 하며, PromptQuorum은 앱을 직접 사용해 보지 않았습니다.',
+      'Murmur는 독립 개발자 [Konstantin Tabakov](https://murmurapps.com)가 만든 iPhone 앱으로, 사진·동영상·게임에 쓸 연주곡을 작곡하며, 1회 모델 다운로드 후에는 모든 트랙을 휴대폰에서 생성한다고 밝히고 있습니다. 다운로드는 무료이고 Pro 기능은 1회 구매로 잠금 해제합니다. 이 리뷰는 2026년 10월 24일에 확인한 App Store 페이지, 개발자 웹사이트, 개인정보 처리방침을 바탕으로 하며, PromptQuorum은 앱을 직접 사용해 보지 않았습니다.',
     metaDescription:
       'Murmur 리뷰: 사진·동영상·게임용 연주곡을 기기에서 직접 작곡하는 iPhone AI 음악 앱입니다. 무료 다운로드에 Pro는 1회 구매이며, 직접 테스트하지는 않았습니다.',
     twitterDescription:
       'Murmur 리뷰: 사진과 동영상에 맞춰 곡을 만드는 iPhone 온디바이스 AI 음악 앱. 무료, Pro 1회 구매, 출처가 확인하는 것과 확인하지 않는 것.',
     audience:
-      '휴대폰에서 생성한 로열티 프리 배경음악이 필요하며, 출처가 무엇을 확인해 주고 개발자가 무엇을 주장할 뿐이며 비용이 얼마인지 알고 싶은 크리에이터와 iPhone 사용자를 위한 글입니다.',
+      '휴대폰에서 생성한 배경음악이 필요하며, 출처가 무엇을 확인해 주고 개발자가 무엇을 주장할 뿐이며 비용이 얼마인지 알고 싶은 크리에이터와 iPhone 사용자를 위한 글입니다.',
     readTime: '6분 읽기',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
@@ -2227,7 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Orpheus', 'Magenta RT'],
     current_hardware_mentioned: ['iPhone', 'Apple Neural Engine', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Murmur(버전 2.2.5, 2026년 10월 22일 업데이트)는 사진·동영상·게임에 쓸 로열티 프리 연주곡을 기기에서 직접 작곡하는 iPhone 앱입니다.** 다운로드는 무료이며, 구독 대신 Pro 기능을 1회 구매로 판매합니다. 보컬은 만들지 않으며, 이 글의 모든 내용은 App Store 페이지, 개발자 사이트, 개인정보 처리방침에 근거합니다.',
+      '**Murmur(버전 2.2.5, 2026년 10월 22일 업데이트)는 사진·동영상·게임에 쓸 연주곡을 기기에서 직접 작곡하는 iPhone 앱입니다.** 다운로드는 무료이며, 구독 대신 Pro 기능을 1회 구매로 판매합니다. 보컬은 만들지 않으며, 이 글의 모든 내용은 App Store 페이지, 개발자 사이트, 개인정보 처리방침에 근거합니다.',
     quickAnswerTop: {
       ko: {
         question: 'Murmur는 정말 iPhone에서 오프라인으로 AI 음악을 만듭니까?',
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '엔진: 개발자에 따르면 Score와 일반 트랙에는 Orpheus, Live 모드에는 Google의 Magenta RT를 사용합니다.',
           '비용: 일일 제한이 있는 무료 등급과 1회 구매형 Pro 잠금 해제가 있으며, 구독은 없습니다.',
           '결과물: 연주곡 전용이며 보컬이나 가사는 없습니다.',
-          '개발자: 독립 개발자 1인이 만들며, 앱을 뒷받침하는 회사나 공개된 소스 코드는 없습니다.',
+          '개발자: 독립 개발자 1인이 만들며, 공개된 소스 코드는 없습니다.',
         ],
         callouts: [
           {
@@ -2439,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'Murmur는 iPhone에서 클립용 연주곡을 얻을 수 있는, 기능이 명확하고 활발히 업데이트되는 앱으로, 체험용 무료 등급과 구독 대신 1회 구매형 Pro 가격을 제공합니다. 반면 비공개 소스이고 독립 개발자 1인이 만들며, 최신 iOS와 대용량 모델 다운로드가 필요하고, 음질에 관한 주장은 이 리뷰에서 하나도 확인할 수 없었습니다. 설계상 프라이버시를 고려한 배경 트랙을 빠르게 얻고 싶고 먼저 무료 등급으로 시험해 볼 수 있는 크리에이터에게 적합합니다. 생성된 음악에 대해 문서화된 라이선스가 필요한 분은 트랙을 상업적으로 사용하기 전에 엔진 약관과 개발자의 설명을 꼼꼼히 읽어야 합니다.',
+          'Murmur는 iPhone에서 클립용 연주곡을 얻을 수 있는, 기능이 명확하고 활발히 업데이트되는 앱으로, 체험용 무료 등급과 구독 대신 1회 구매형 Pro 가격을 제공합니다. 반면 비공개 소스이고 독립 개발자 1인이 만들며, 최신 iOS와 대용량 모델 다운로드가 필요하고, 음질에 관한 주장은 이 리뷰에서 하나도 확인할 수 없었습니다. 개발자에 따르면 기기에서 생성되는 배경 트랙을 빠르게 얻고 싶고 먼저 무료 등급으로 시험해 볼 수 있는 크리에이터에게 적합합니다. 생성된 음악에 대해 문서화된 라이선스가 필요한 분은 트랙을 상업적으로 사용하기 전에 엔진 약관과 개발자의 설명을 꼼꼼히 읽어야 합니다.',
       },
       sources: {
         id: 'sources',
