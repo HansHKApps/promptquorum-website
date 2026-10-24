@@ -999,6 +999,11 @@
     "urlSlug": "nekoni-review",
     "url": "/power-local-llm/nekoni-review"
   },
+  "asiden": {
+    "cluster": "power-local-llm",
+    "urlSlug": "asiden-review",
+    "url": "/power-local-llm/asiden-review"
+  },
   "ensu": {
     "cluster": "power-local-llm",
     "urlSlug": "ensu-review",

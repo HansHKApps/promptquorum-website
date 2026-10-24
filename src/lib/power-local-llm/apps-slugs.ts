@@ -227,6 +227,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
   'nekoni':                                  'nekoni',
+  'asiden':                                  'asiden',
   'ensu':                                    'ensu',
 }
 
