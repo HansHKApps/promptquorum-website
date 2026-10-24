@@ -558,26 +558,49 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'private-mind-review',
   // MemoryAI review (Mobile & Edge LLMs) — 2026-10-19
   'memoryai-review',
+  // On-Device AI Translator review (Mobile & Edge LLMs) — 2026-10-24
+  'on-device-ai-translator-review',
   // Castmates review (Mobile & Edge LLMs) — 2026-10-19
   'castmates-review',
   // SurfSense review (RAG & Document Chat) — 2026-10-21
   'surfsense-review',
   // Strata review (Run & Serve, inference engine) — 2026-10-23
   'strata-review',
+  // LocalGhost review (personal assistants, self-hosted) — 2026-10-24
+  'localghost-review',
+  // LLM Studio Go review (Mobile & Edge LLMs, iPhone/iPad) — 2026-10-24
+  'llm-studio-go-review',
+  // Zero1LLM review (general chat client, desktop) — 2026-10-24
+  'zero1llm-review',
   // SpeechBrain review (Voice & Audio, speech toolkit) — 2026-10-23
   'speechbrain-review',
+  // OpenClient review (Chat apps, Apple client for Ollama/LiteLLM) — 2026-10-24
+  'openclient-review',
+  // LocalMCP review (Personal Assistants, local MCP server for Mac data) — 2026-10-24
+  'localmcp-review',
   // LibreDB Studio review (Coding Assistants, SQL editor with optional local AI) — 2026-10-23
   'libredb-studio-review',
   // OpenRAG review (RAG & Document Chat) — 2026-10-23
   'openrag-review',
+  // Arynwood MCP review (Easiest Desktop Apps, chat client) — 2026-10-24
+  'arynwood-mcp-review',
+  // LocalMindAI review (Mobile & Edge LLMs) — 2026-10-24
+  'localmindai-review',
+  // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
+  'murmur-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
   'caelum-review',
+  // LM Mini review (Mobile & Edge LLMs) — 2026-10-24
+  'lm-mini-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',
   // Frankly AI review (Mobile & Edge LLMs) — 2026-10-24
   'frankly-ai-review',
+
+  // Genva review (Image & Video Generation) — 2026-10-24
+  'genva-review',
 
   // LLM Hub review (Mobile & Edge LLMs) — 2026-10-03
   'llm-hub-review',

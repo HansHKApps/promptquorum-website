@@ -1,14 +1,20 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { starsFor } from '@/lib/power-local-llm/app-facts'
+
+const ST = {
+  en: starsFor('en'), de: starsFor('de'), fr: starsFor('fr'), ja: starsFor('ja'), zh: starsFor('zh'),
+  es: starsFor('es'), pt: starsFor('pt'), ar: starsFor('ar'), ko: starsFor('ko'),
+}
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-en.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'People who want a free, open-source desktop app for running AI models fully offline, including on modest CPU-only hardware',
     primaryTerm: 'GPT4All',
@@ -24,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       'free offline AI chat app',
     ],
-    leadAnswerBlock: '**GPT4All is a free, open-source desktop app (nomic.ai/gpt4all, source at [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) that runs AI models entirely on your own computer through a built-in llama.cpp-based engine, with an optional LocalDocs feature for chatting with your own files.** It has no paid tier: the GitHub repository is [MIT-licensed](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), and the app itself carries no subscription or account requirement. GPT4All runs on Windows (including ARM), macOS (Apple Silicon and Intel), and Ubuntu/Linux, and includes a Docker-based, OpenAI-compatible local API server plus a Python SDK for developers.',
+    leadAnswerBlock: '**Warning: GPT4All has had no update since 27 May 2025 (last repository commit; the latest release, v3.10.0, shipped on 25 February 2025), so it may be unmaintained — check that it still works for you before relying on it.** **GPT4All is a free, open-source desktop app (nomic.ai/gpt4all, source at [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) that runs AI models entirely on your own computer through a built-in llama.cpp-based engine, with an optional LocalDocs feature for chatting with your own files.** It has no paid tier: the GitHub repository is [MIT-licensed](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), and the app itself carries no subscription or account requirement. GPT4All runs on Windows (including ARM), macOS (Apple Silicon and Intel), and Ubuntu/Linux, and includes a Docker-based, OpenAI-compatible local API server plus a Python SDK for developers.',
     quickAnswerTop: {
       en: {
         question: 'What is GPT4All and how much does it cost?',
@@ -34,10 +40,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Runs on Windows (x64 and ARM), macOS (Apple Silicon and Intel, Monterey 12.6+), and Ubuntu/Linux x86-64',
           'Built-in local inference via a llama.cpp-based engine; minimum CPU: Intel Core i3 2nd Gen or AMD Bulldozer-era or newer',
           'Includes LocalDocs, a feature for chatting with your own local files (PDF, text, and other documents)',
-          'GitHub repository ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) shows roughly 77,400 stars and about 8,300 forks as of September 2026',
+          `GitHub repository ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) shows ${ST.en('gpt4all')} stars`,
           'Includes a Docker-based, OpenAI-compatible local API server, and a Python SDK for developers',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -59,6 +65,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: 'TL;DR — GPT4All in 2026',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: 'No update since 27 May 2025. GPT4All may be unmaintained: confirm that the installer and the models you want still work on your system before relying on it.' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4All is a free, open-source, MIT-licensed desktop app from Nomic AI that runs AI models offline through a built-in llama.cpp-based engine, with a LocalDocs feature for chatting with your own files and no paid tier of any kind.' },
           { type: 'plain-terms', text: 'Instead of paying for a ChatGPT-style subscription, GPT4All lets you download a model to your own computer and chat with it there — no account, no internet connection required once a model is downloaded, and no bill. LocalDocs lets you point the app at your own PDFs or text files so you can ask questions about them without uploading anything to the internet.' },
@@ -148,6 +157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Platform': 'macOS', 'Download': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { 'Platform': 'Linux (Ubuntu, .run)', 'Download': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { 'Platform': 'Linux (Flathub)', 'Download': 'Community-maintained package — search "GPT4All" on [Flathub](https://flathub.org)' },
+          { 'Platform': 'Website', 'Download': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { 'Platform': 'Privacy policy', 'Download': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'Minimum CPU for Windows and Linux: Intel Core i3 2nd Gen or AMD Bulldozer-era or newer. macOS requires Monterey 12.6 or newer, with best performance on Apple Silicon. Linux builds are x86-64 only — this review found no official ARM64 Linux installer, unlike Windows, which does ship an ARM build. As with any local-model tool, actual usability also depends on which model you load: a given model\'s RAM requirement is a separate, model-specific constraint beyond these baseline CPU/OS requirements.',
       },
@@ -290,9 +301,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-de.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'Menschen, die eine kostenlose Open-Source-Desktop-App suchen, um KI-Modelle vollständig offline auszuführen, auch auf bescheidener CPU-only-Hardware',
     primaryTerm: 'GPT4All',
@@ -308,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       'kostenlose Offline-KI-Chat-App',
     ],
-    leadAnswerBlock: '**GPT4All ist eine kostenlose, quelloffene Desktop-App (nomic.ai/gpt4all, Quellcode unter [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)), die KI-Modelle vollständig auf Ihrem eigenen Rechner über eine eingebaute, auf llama.cpp basierende Engine ausführt, mit optionaler LocalDocs-Funktion zum Chatten mit Ihren eigenen Dateien.** Es gibt keine kostenpflichtige Stufe: Das GitHub-Repository ist [MIT-lizenziert](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), und die App selbst erfordert weder Abonnement noch Konto. GPT4All läuft unter Windows (auch ARM), macOS (Apple Silicon und Intel) und Ubuntu/Linux und enthält einen Docker-basierten, OpenAI-kompatiblen lokalen API-Server sowie ein Python-SDK für Entwickler.',
+    leadAnswerBlock: '**Warnung: GPT4All hat seit dem 27. Mai 2025 kein Update erhalten (letzter Commit im Repository; die neueste Version, v3.10.0, erschien am 25. Februar 2025) und wird möglicherweise nicht mehr gepflegt — prüfen Sie vor dem Einsatz, ob es bei Ihnen weiterhin funktioniert.** **GPT4All ist eine kostenlose, quelloffene Desktop-App (nomic.ai/gpt4all, Quellcode unter [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)), die KI-Modelle vollständig auf Ihrem eigenen Rechner über eine eingebaute, auf llama.cpp basierende Engine ausführt, mit optionaler LocalDocs-Funktion zum Chatten mit Ihren eigenen Dateien.** Es gibt keine kostenpflichtige Stufe: Das GitHub-Repository ist [MIT-lizenziert](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), und die App selbst erfordert weder Abonnement noch Konto. GPT4All läuft unter Windows (auch ARM), macOS (Apple Silicon und Intel) und Ubuntu/Linux und enthält einen Docker-basierten, OpenAI-kompatiblen lokalen API-Server sowie ein Python-SDK für Entwickler.',
     quickAnswerTop: {
       de: {
         question: 'Was ist GPT4All und wie viel kostet es?',
@@ -318,10 +329,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Läuft unter Windows (x64 und ARM), macOS (Apple Silicon und Intel, Monterey 12.6+) und Ubuntu/Linux x86-64',
           'Eingebaute lokale Inferenz über eine auf llama.cpp basierende Engine; Mindest-CPU: Intel Core i3 2. Generation oder AMD Bulldozer-Ära oder neuer',
           'Enthält LocalDocs, eine Funktion zum Chatten mit Ihren eigenen lokalen Dateien (PDF, Text und weitere Dokumente)',
-          'Das GitHub-Repository ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) zeigt Stand September 2026 rund 77.400 Sterne und etwa 8.300 Forks',
+          `Das GitHub-Repository ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) zeigt ${ST.de('gpt4all')} Sterne`,
           'Enthält einen Docker-basierten, OpenAI-kompatiblen lokalen API-Server sowie ein Python-SDK für Entwickler',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -343,6 +354,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: 'Zusammenfassung — GPT4All in 2026',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: 'Kein Update seit dem 27. Mai 2025. GPT4All wird möglicherweise nicht mehr gepflegt: Prüfen Sie vor dem Einsatz, ob Installer und gewünschte Modelle auf Ihrem System weiterhin funktionieren.' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4All ist eine kostenlose, quelloffene, MIT-lizenzierte Desktop-App von Nomic AI, die KI-Modelle über eine eingebaute, auf llama.cpp basierende Engine offline ausführt, mit einer LocalDocs-Funktion zum Chatten mit eigenen Dateien und ohne jegliche kostenpflichtige Stufe.' },
           { type: 'plain-terms', text: 'Statt für ein ChatGPT-ähnliches Abonnement zu bezahlen, lässt GPT4All Sie ein Modell auf Ihren eigenen Rechner herunterladen und dort damit chatten — kein Konto, keine Internetverbindung nötig, sobald ein Modell heruntergeladen ist, und keine Rechnung. Mit LocalDocs richten Sie die App auf Ihre eigenen PDFs oder Textdateien, um Fragen dazu zu stellen, ohne irgendetwas ins Internet hochzuladen.' },
@@ -432,6 +446,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plattform': 'macOS', 'Download': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { 'Plattform': 'Linux (Ubuntu, .run)', 'Download': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { 'Plattform': 'Linux (Flathub)', 'Download': 'Community-gepflegtes Paket — suchen Sie "GPT4All" auf [Flathub](https://flathub.org)' },
+          { 'Plattform': 'Website', 'Download': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { 'Plattform': 'Datenschutzerklärung', 'Download': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'Mindest-CPU für Windows und Linux: Intel Core i3 2. Generation oder AMD Bulldozer-Ära oder neuer. macOS benötigt Monterey 12.6 oder neuer, mit bester Leistung auf Apple Silicon. Linux-Builds sind ausschließlich x86-64 — diese Review fand keinen offiziellen ARM64-Linux-Installer, anders als Windows, das einen ARM-Build ausliefert. Wie bei jedem Tool für lokale Modelle hängt die tatsächliche Nutzbarkeit auch davon ab, welches Modell Sie laden: Der RAM-Bedarf eines bestimmten Modells ist eine separate, modellspezifische Einschränkung über diese grundlegenden CPU-/Betriebssystem-Anforderungen hinaus.',
       },
@@ -574,9 +590,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'Les personnes qui souhaitent une application de bureau gratuite et open source pour exécuter des modèles d\'IA entièrement hors ligne, y compris sur du matériel modeste fonctionnant uniquement sur CPU',
     primaryTerm: 'GPT4All',
@@ -592,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       'application de chat IA hors ligne gratuite',
     ],
-    leadAnswerBlock: '**GPT4All est une application de bureau gratuite et open source (nomic.ai/gpt4all, code source sur [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) qui exécute des modèles d\'IA entièrement sur votre propre ordinateur via un moteur intégré basé sur llama.cpp, avec une fonctionnalité LocalDocs optionnelle pour discuter avec vos propres fichiers.** Il n\'existe aucune offre payante : le dépôt GitHub est sous [licence MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), et l\'application elle-même ne requiert ni abonnement ni compte. GPT4All fonctionne sous Windows (y compris ARM), macOS (Apple Silicon et Intel) et Ubuntu/Linux, et inclut un serveur API local compatible OpenAI basé sur Docker ainsi qu\'un SDK Python pour les développeurs.',
+    leadAnswerBlock: '**Avertissement : GPT4All n\'a reçu aucune mise à jour depuis le 27 mai 2025 (dernier commit du dépôt ; la dernière version, v3.10.0, date du 25 février 2025) et peut donc ne plus être maintenu — vérifiez qu\'il fonctionne toujours chez vous avant de vous y fier.** **GPT4All est une application de bureau gratuite et open source (nomic.ai/gpt4all, code source sur [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) qui exécute des modèles d\'IA entièrement sur votre propre ordinateur via un moteur intégré basé sur llama.cpp, avec une fonctionnalité LocalDocs optionnelle pour discuter avec vos propres fichiers.** Il n\'existe aucune offre payante : le dépôt GitHub est sous [licence MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), et l\'application elle-même ne requiert ni abonnement ni compte. GPT4All fonctionne sous Windows (y compris ARM), macOS (Apple Silicon et Intel) et Ubuntu/Linux, et inclut un serveur API local compatible OpenAI basé sur Docker ainsi qu\'un SDK Python pour les développeurs.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que GPT4All et combien coûte-t-il ?',
@@ -602,10 +618,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionne sous Windows (x64 et ARM), macOS (Apple Silicon et Intel, Monterey 12.6+) et Ubuntu/Linux x86-64',
           'Inférence locale intégrée via un moteur basé sur llama.cpp ; CPU minimum : Intel Core i3 2e génération ou AMD ère Bulldozer ou plus récent',
           'Inclut LocalDocs, une fonctionnalité pour discuter avec vos propres fichiers locaux (PDF, texte et autres documents)',
-          'Le dépôt GitHub ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) affiche environ 77 400 étoiles et environ 8 300 forks en septembre 2026',
+          `Le dépôt GitHub ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) affiche ${ST.fr('gpt4all')} étoiles`,
           'Inclut un serveur API local compatible OpenAI basé sur Docker, et un SDK Python pour les développeurs',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -627,6 +643,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: 'Points clés — GPT4All en 2026',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: 'Aucune mise à jour depuis le 27 mai 2025. GPT4All peut ne plus être maintenu : vérifiez que l\'installateur et les modèles souhaités fonctionnent toujours sur votre système avant de vous y fier.' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4All est une application de bureau gratuite, open source et sous licence MIT de Nomic AI, qui exécute des modèles d\'IA hors ligne via un moteur intégré basé sur llama.cpp, avec une fonctionnalité LocalDocs pour discuter avec ses propres fichiers et sans aucune offre payante.' },
           { type: 'plain-terms', text: 'Plutôt que de payer un abonnement type ChatGPT, GPT4All vous permet de télécharger un modèle sur votre propre ordinateur et d\'y discuter — sans compte, sans connexion internet nécessaire une fois le modèle téléchargé, et sans facture. LocalDocs permet de pointer l\'application vers vos propres PDF ou fichiers texte pour leur poser des questions sans rien envoyer vers internet.' },
@@ -716,6 +735,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plateforme': 'macOS', 'Téléchargement': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { 'Plateforme': 'Linux (Ubuntu, .run)', 'Téléchargement': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { 'Plateforme': 'Linux (Flathub)', 'Téléchargement': 'Paquet maintenu par la communauté — recherchez « GPT4All » sur [Flathub](https://flathub.org)' },
+          { 'Plateforme': 'Site web', 'Téléchargement': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { 'Plateforme': 'Politique de confidentialité', 'Téléchargement': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'CPU minimum pour Windows et Linux : Intel Core i3 2e génération ou AMD ère Bulldozer ou plus récent. macOS nécessite Monterey 12.6 ou plus récent, avec les meilleures performances sur Apple Silicon. Les versions Linux sont uniquement x86-64 — cette revue n\'a trouvé aucun installateur Linux ARM64 officiel, contrairement à Windows, qui propose bien une version ARM. Comme pour tout outil de modèles locaux, l\'utilisabilité réelle dépend aussi du modèle chargé : les besoins en RAM d\'un modèle donné constituent une contrainte séparée, propre à ce modèle, au-delà de ces exigences CPU/OS de base.',
       },
@@ -858,9 +879,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-es.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'Personas que quieren una app de escritorio gratuita y de código abierto para ejecutar modelos de IA totalmente sin conexión, incluso en hardware modesto que solo usa CPU',
     primaryTerm: 'GPT4All',
@@ -876,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       'app de chat IA sin conexión gratis',
     ],
-    leadAnswerBlock: '**GPT4All es una aplicación de escritorio gratuita y de código abierto (nomic.ai/gpt4all, código fuente en [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) que ejecuta modelos de IA totalmente en tu propio equipo mediante un motor integrado basado en llama.cpp, con una función opcional LocalDocs para chatear con tus propios archivos.** No tiene ningún plan de pago: el repositorio de GitHub está bajo [licencia MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), y la app en sí no requiere suscripción ni cuenta. GPT4All funciona en Windows (incluido ARM), macOS (Apple Silicon e Intel) y Ubuntu/Linux, e incluye un servidor API local compatible con OpenAI basado en Docker, además de un SDK de Python para desarrolladores.',
+    leadAnswerBlock: '**Aviso: GPT4All no ha recibido ninguna actualización desde el 27 de mayo de 2025 (último commit del repositorio; la versión más reciente, v3.10.0, salió el 25 de febrero de 2025), así que puede estar sin mantenimiento — comprueba que sigue funcionando en tu equipo antes de depender de él.** **GPT4All es una aplicación de escritorio gratuita y de código abierto (nomic.ai/gpt4all, código fuente en [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) que ejecuta modelos de IA totalmente en tu propio equipo mediante un motor integrado basado en llama.cpp, con una función opcional LocalDocs para chatear con tus propios archivos.** No tiene ningún plan de pago: el repositorio de GitHub está bajo [licencia MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), y la app en sí no requiere suscripción ni cuenta. GPT4All funciona en Windows (incluido ARM), macOS (Apple Silicon e Intel) y Ubuntu/Linux, e incluye un servidor API local compatible con OpenAI basado en Docker, además de un SDK de Python para desarrolladores.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es GPT4All y cuánto cuesta?',
@@ -886,10 +907,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciona en Windows (x64 y ARM), macOS (Apple Silicon e Intel, Monterey 12.6+) y Ubuntu/Linux x86-64',
           'Inferencia local integrada mediante un motor basado en llama.cpp; CPU mínima: Intel Core i3 de 2.ª generación o AMD de la era Bulldozer o posterior',
           'Incluye LocalDocs, una función para chatear con tus propios archivos locales (PDF, texto y otros documentos)',
-          'El repositorio de GitHub ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) muestra alrededor de 77.400 estrellas y unos 8.300 forks a septiembre de 2026',
+          `El repositorio de GitHub ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) muestra ${ST.es('gpt4all')} estrellas`,
           'Incluye un servidor API local compatible con OpenAI basado en Docker, y un SDK de Python para desarrolladores',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -911,6 +932,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: 'Puntos clave — GPT4All en 2026',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: 'Sin actualizaciones desde el 27 de mayo de 2025. GPT4All puede estar sin mantenimiento: comprueba que el instalador y los modelos que quieres usar siguen funcionando en tu equipo antes de depender de él.' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4All es una app de escritorio gratuita, de código abierto y bajo licencia MIT de Nomic AI, que ejecuta modelos de IA sin conexión mediante un motor integrado basado en llama.cpp, con una función LocalDocs para chatear con tus propios archivos y sin ningún plan de pago.' },
           { type: 'plain-terms', text: 'En lugar de pagar una suscripción tipo ChatGPT, GPT4All te permite descargar un modelo a tu propio equipo y chatear con él allí — sin cuenta, sin necesitar conexión a internet una vez descargado el modelo, y sin factura. LocalDocs te permite apuntar la app a tus propios PDF o archivos de texto para hacerles preguntas sin subir nada a internet.' },
@@ -1000,6 +1024,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': 'macOS', 'Descarga': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { 'Plataforma': 'Linux (Ubuntu, .run)', 'Descarga': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { 'Plataforma': 'Linux (Flathub)', 'Descarga': 'Paquete mantenido por la comunidad — busca "GPT4All" en [Flathub](https://flathub.org)' },
+          { 'Plataforma': 'Sitio web', 'Descarga': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { 'Plataforma': 'Política de privacidad', 'Descarga': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'CPU mínima para Windows y Linux: Intel Core i3 de 2.ª generación o AMD de la era Bulldozer o posterior. macOS requiere Monterey 12.6 o posterior, con mejor rendimiento en Apple Silicon. Las versiones de Linux son solo x86-64 — esta reseña no encontró un instalador oficial de Linux ARM64, a diferencia de Windows, que sí ofrece una versión ARM. Como con cualquier herramienta de modelos locales, la usabilidad real también depende del modelo que cargues: el requisito de RAM de un modelo concreto es una restricción aparte, específica del modelo, más allá de estos requisitos básicos de CPU/SO.',
       },
@@ -1142,9 +1168,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'Pessoas que querem um app de desktop gratuito e de código aberto para rodar modelos de IA totalmente offline, inclusive em hardware modesto que usa apenas CPU',
     primaryTerm: 'GPT4All',
@@ -1160,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       'app de chat IA offline gratuito',
     ],
-    leadAnswerBlock: '**O GPT4All é um aplicativo de desktop gratuito e de código aberto (nomic.ai/gpt4all, código-fonte em [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) que roda modelos de IA inteiramente no seu próprio computador por meio de um motor integrado baseado em llama.cpp, com um recurso opcional LocalDocs para conversar com seus próprios arquivos.** Não existe nenhum plano pago: o repositório do GitHub está sob [licença MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), e o app em si não exige assinatura nem conta. O GPT4All roda em Windows (incluindo ARM), macOS (Apple Silicon e Intel) e Ubuntu/Linux, e inclui um servidor de API local compatível com OpenAI baseado em Docker, além de um SDK Python para desenvolvedores.',
+    leadAnswerBlock: '**Aviso: o GPT4All não recebe nenhuma atualização desde 27 de maio de 2025 (último commit do repositório; a versão mais recente, v3.10.0, saiu em 25 de fevereiro de 2025), então pode estar sem manutenção — confirme que ele ainda funciona no seu computador antes de depender dele.** **O GPT4All é um aplicativo de desktop gratuito e de código aberto (nomic.ai/gpt4all, código-fonte em [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) que roda modelos de IA inteiramente no seu próprio computador por meio de um motor integrado baseado em llama.cpp, com um recurso opcional LocalDocs para conversar com seus próprios arquivos.** Não existe nenhum plano pago: o repositório do GitHub está sob [licença MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt), e o app em si não exige assinatura nem conta. O GPT4All roda em Windows (incluindo ARM), macOS (Apple Silicon e Intel) e Ubuntu/Linux, e inclui um servidor de API local compatível com OpenAI baseado em Docker, além de um SDK Python para desenvolvedores.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o GPT4All e quanto custa?',
@@ -1170,10 +1196,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Roda em Windows (x64 e ARM), macOS (Apple Silicon e Intel, Monterey 12.6+) e Ubuntu/Linux x86-64',
           'Inferência local integrada por meio de um motor baseado em llama.cpp; CPU mínima: Intel Core i3 2ª geração ou AMD da era Bulldozer ou mais recente',
           'Inclui o LocalDocs, um recurso para conversar com seus próprios arquivos locais (PDF, texto e outros documentos)',
-          'O repositório no GitHub ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) mostra cerca de 77.400 estrelas e cerca de 8.300 forks em setembro de 2026',
+          `O repositório no GitHub ([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) mostra ${ST.pt('gpt4all')} estrelas`,
           'Inclui um servidor de API local compatível com OpenAI baseado em Docker, e um SDK Python para desenvolvedores',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1195,6 +1221,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: 'Pontos principais — GPT4All em 2026',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: 'Sem atualizações desde 27 de maio de 2025. O GPT4All pode estar sem manutenção: confirme que o instalador e os modelos que você quer usar ainda funcionam no seu computador antes de depender dele.' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'O GPT4All é um app de desktop gratuito, de código aberto e sob licença MIT da Nomic AI, que roda modelos de IA offline por meio de um motor integrado baseado em llama.cpp, com um recurso LocalDocs para conversar com seus próprios arquivos e sem nenhum plano pago.' },
           { type: 'plain-terms', text: 'Em vez de pagar uma assinatura estilo ChatGPT, o GPT4All permite baixar um modelo para o seu próprio computador e conversar com ele ali — sem conta, sem precisar de conexão com a internet depois que o modelo é baixado, e sem cobrança. O LocalDocs permite apontar o app para seus próprios PDFs ou arquivos de texto para fazer perguntas sobre eles sem enviar nada para a internet.' },
@@ -1284,6 +1313,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': 'macOS', 'Download': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { 'Plataforma': 'Linux (Ubuntu, .run)', 'Download': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { 'Plataforma': 'Linux (Flathub)', 'Download': 'Pacote mantido pela comunidade — busque "GPT4All" no [Flathub](https://flathub.org)' },
+          { 'Plataforma': 'Site oficial', 'Download': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { 'Plataforma': 'Política de privacidade', 'Download': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'CPU mínima para Windows e Linux: Intel Core i3 2ª geração ou AMD da era Bulldozer ou mais recente. O macOS exige Monterey 12.6 ou mais recente, com melhor desempenho em Apple Silicon. As versões para Linux são apenas x86-64 — esta análise não encontrou um instalador oficial para Linux ARM64, diferente do Windows, que oferece uma versão ARM. Como em qualquer ferramenta de modelos locais, a usabilidade real também depende de qual modelo você carrega: o requisito de RAM de um determinado modelo é uma restrição separada, específica do modelo, além desses requisitos básicos de CPU/SO.',
       },
@@ -1426,9 +1457,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'CPUのみの控えめなハードウェアでも、AIモデルを完全オフラインで動かせる無料のオープンソース・デスクトップアプリを探している人',
     primaryTerm: 'GPT4All',
@@ -1444,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       '無料オフラインAIチャットアプリ',
     ],
-    leadAnswerBlock: '**GPT4Allは、内蔵のllama.cppベースエンジンを通じてAIモデルを自分のコンピューター上で完全にローカル実行する無料のオープンソース・デスクトップアプリ（nomic.ai/gpt4all、ソースコードは[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)）で、自分のファイルとチャットできる任意機能のLocalDocsを備えています。** 有料プランは一切ありません。GitHubリポジトリは[MITライセンス](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)で、アプリ自体にサブスクリプションやアカウントは不要です。GPT4AllはWindows（ARM含む）、macOS（Apple SiliconとIntel）、Ubuntu/Linuxで動作し、Dockerベースの OpenAI互換ローカルAPIサーバーと、開発者向けのPython SDKを含みます。',
+    leadAnswerBlock: '**警告：GPT4Allは2025年5月27日（リポジトリの最終コミット。最新リリースのv3.10.0は2025年2月25日）以降、更新されていません。メンテナンスが行われていない可能性があるため、利用前にお使いの環境で動作するか確認してください。** **GPT4Allは、内蔵のllama.cppベースエンジンを通じてAIモデルを自分のコンピューター上で完全にローカル実行する無料のオープンソース・デスクトップアプリ（nomic.ai/gpt4all、ソースコードは[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)）で、自分のファイルとチャットできる任意機能のLocalDocsを備えています。** 有料プランは一切ありません。GitHubリポジトリは[MITライセンス](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)で、アプリ自体にサブスクリプションやアカウントは不要です。GPT4AllはWindows（ARM含む）、macOS（Apple SiliconとIntel）、Ubuntu/Linuxで動作し、Dockerベースの OpenAI互換ローカルAPIサーバーと、開発者向けのPython SDKを含みます。',
     quickAnswerTop: {
       ja: {
         question: 'GPT4Allとは何で、費用はいくらですか？',
@@ -1454,10 +1485,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windows（x64およびARM）、macOS（Apple SiliconとIntel、Monterey 12.6以降）、Ubuntu/Linux x86-64で動作',
           'llama.cppベースのエンジンによる内蔵ローカル推論。最低CPU要件：Intel Core i3 第2世代またはAMD Bulldozer世代以降',
           'LocalDocsを搭載し、自分のローカルファイル（PDF、テキストなど）とチャット可能',
-          'GitHubリポジトリ（[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)）は2026年9月時点で約77,400のスターと約8,300のフォークを表示',
+          `GitHubリポジトリ（[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)）は${ST.ja('gpt4all')}のスターを表示`,
           'DockerベースのOpenAI互換ローカルAPIサーバーと、開発者向けのPython SDKを搭載',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1479,6 +1510,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: '重要ポイント — 2026年のGPT4All',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: '2025年5月27日以降、更新がありません。GPT4Allはメンテナンスされていない可能性があります。利用前に、インストーラーと使いたいモデルがお使いの環境で動作するか確認してください。' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4Allは、Nomic AI提供の無料オープンソースMITライセンス・デスクトップアプリで、内蔵のllama.cppベースエンジンを通じてAIモデルをオフライン実行し、自分のファイルとチャットできるLocalDocs機能を持ち、有料プランは一切ありません。' },
           { type: 'plain-terms', text: 'ChatGPTのようなサブスクリプションに料金を払う代わりに、GPT4Allではモデルを自分のコンピューターにダウンロードしてそこでチャットできます — アカウント不要、モデルをダウンロードした後はインターネット接続も不要、料金請求もありません。LocalDocsを使えば、自分のPDFやテキストファイルをアプリに指定して、何もインターネットにアップロードすることなく質問できます。' },
@@ -1568,6 +1602,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'プラットフォーム': 'macOS', 'ダウンロード': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { 'プラットフォーム': 'Linux (Ubuntu, .run)', 'ダウンロード': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { 'プラットフォーム': 'Linux (Flathub)', 'ダウンロード': 'コミュニティ管理パッケージ — [Flathub](https://flathub.org)で「GPT4All」を検索' },
+          { 'プラットフォーム': '公式サイト', 'ダウンロード': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { 'プラットフォーム': 'プライバシーポリシー', 'ダウンロード': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'WindowsおよびLinuxの最低CPU要件：Intel Core i3 第2世代またはAMD Bulldozer世代以降。macOSはMonterey 12.6以降が必要で、Apple Siliconで最良のパフォーマンスを発揮します。Linux版はx86-64のみ対応 — このレビューでは、公式のARM64版Linuxインストーラーは見つかりませんでした（Windowsとは異なり、こちらはARM版を提供しています）。ローカルモデルツール全般と同様、実際の使い勝手はどのモデルを読み込むかにも左右されます。特定モデルのRAM要件は、これら基本的なCPU/OS要件とは別の、モデル固有の制約です。',
       },
@@ -1710,9 +1746,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: '希望在仅有CPU的普通硬件上完全离线运行AI模型的免费开源桌面应用用户',
     primaryTerm: 'GPT4All',
@@ -1728,7 +1764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       '免费离线AI聊天应用',
     ],
-    leadAnswerBlock: '**GPT4All是一款免费开源的桌面应用（nomic.ai/gpt4all，源代码位于[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)），通过内置的llama.cpp引擎完全在你自己的电脑上运行AI模型，并配有可选的LocalDocs功能，让你与自己的文件对话。** 它没有任何付费方案：GitHub仓库采用[MIT许可证](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)，应用本身不需要订阅或账户。GPT4All可在Windows（包括ARM）、macOS（Apple Silicon和Intel）以及Ubuntu/Linux上运行，并包含一个基于Docker的、兼容OpenAI的本地API服务器，以及供开发者使用的Python SDK。',
+    leadAnswerBlock: '**警告：GPT4All自2025年5月27日（仓库最后一次提交；最新版本v3.10.0发布于2025年2月25日）以来没有任何更新，可能已不再维护——使用前请先确认它在你的设备上仍能正常运行。** **GPT4All是一款免费开源的桌面应用（nomic.ai/gpt4all，源代码位于[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)），通过内置的llama.cpp引擎完全在你自己的电脑上运行AI模型，并配有可选的LocalDocs功能，让你与自己的文件对话。** 它没有任何付费方案：GitHub仓库采用[MIT许可证](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)，应用本身不需要订阅或账户。GPT4All可在Windows（包括ARM）、macOS（Apple Silicon和Intel）以及Ubuntu/Linux上运行，并包含一个基于Docker的、兼容OpenAI的本地API服务器，以及供开发者使用的Python SDK。',
     quickAnswerTop: {
       zh: {
         question: 'GPT4All是什么，需要花多少钱？',
@@ -1738,10 +1774,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可在Windows（x64和ARM）、macOS（Apple Silicon和Intel，Monterey 12.6及以上）以及Ubuntu/Linux x86-64上运行',
           '通过基于llama.cpp的引擎内置本地推理；最低CPU要求：Intel Core i3第2代或AMD Bulldozer时代及以上',
           '内置LocalDocs，可与你自己的本地文件（PDF、文本等文档）对话',
-          '截至2026年9月，GitHub仓库（[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)）显示约77,400颗星和约8,300次fork',
+          `GitHub仓库（[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)）显示${ST.zh('gpt4all')}颗星`,
           '内置基于Docker的、兼容OpenAI的本地API服务器，以及供开发者使用的Python SDK',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1763,6 +1799,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: '核心要点 — 2026年的GPT4All',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: '自2025年5月27日起没有更新。GPT4All可能已不再维护：使用前请确认安装程序和你想用的模型在你的系统上仍能正常运行。' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4All是Nomic AI推出的免费开源、MIT许可证桌面应用，通过内置的llama.cpp引擎离线运行AI模型，配有LocalDocs功能可与自己的文件对话，且没有任何付费方案。' },
           { type: 'plain-terms', text: '与其为类似ChatGPT的订阅付费，GPT4All让你可以把模型下载到自己的电脑上并在那里对话——无需账户，模型下载完成后无需联网，也没有账单。LocalDocs可以让你把应用指向自己的PDF或文本文件，向它们提问而无需将任何内容上传到互联网。' },
@@ -1852,6 +1891,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '平台': 'macOS', '下载': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { '平台': 'Linux (Ubuntu, .run)', '下载': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { '平台': 'Linux (Flathub)', '下载': '社区维护软件包 — 在[Flathub](https://flathub.org)搜索"GPT4All"' },
+          { '平台': '官方网站', '下载': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { '平台': '隐私政策', '下载': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'Windows和Linux的最低CPU要求：Intel Core i3第2代或AMD Bulldozer时代及以上。macOS要求Monterey 12.6及以上，在Apple Silicon上性能最佳。Linux版本仅支持x86-64——本评测未发现官方的ARM64 Linux安装程序，这与Windows不同，后者确实提供了ARM版本。与任何本地模型工具一样，实际可用性还取决于你加载的模型：特定模型的内存要求是超出这些基本CPU/操作系统要求之外的、针对该模型的独立约束。',
       },
@@ -1994,9 +2035,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'الأشخاص الذين يريدون تطبيق سطح مكتب مجاني ومفتوح المصدر لتشغيل نماذج الذكاء الاصطناعي بشكل كامل دون اتصال بالإنترنت، حتى على أجهزة متواضعة تعتمد على CPU فقط',
     primaryTerm: 'GPT4All',
@@ -2012,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       'تطبيق دردشة ذكاء اصطناعي مجاني دون إنترنت',
     ],
-    leadAnswerBlock: '**GPT4All هو تطبيق سطح مكتب مجاني ومفتوح المصدر (nomic.ai/gpt4all، والشيفرة المصدرية على [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) يشغّل نماذج الذكاء الاصطناعي بالكامل على جهاز الكمبيوتر الخاص بك عبر محرك مدمج قائم على llama.cpp، مع ميزة اختيارية تُدعى LocalDocs للدردشة مع ملفاتك الخاصة.** لا توجد أي خطة مدفوعة: مستودع GitHub مرخّص بموجب [رخصة MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)، والتطبيق نفسه لا يتطلب اشتراكًا أو حسابًا. يعمل GPT4All على Windows (بما في ذلك ARM)، وmacOS (Apple Silicon وIntel)، وUbuntu/Linux، ويتضمن خادم API محلي متوافق مع OpenAI يعتمد على Docker، بالإضافة إلى حزمة تطوير برمجيات Python للمطورين.',
+    leadAnswerBlock: '**تحذير: لم يتلقَّ GPT4All أي تحديث منذ 27 مايو 2025 (آخر إيداع في المستودع؛ وأحدث إصدار v3.10.0 صدر في 25 فبراير 2025)، لذا قد يكون غير مدعوم — تحقق من أنه ما زال يعمل لديك قبل الاعتماد عليه.** **GPT4All هو تطبيق سطح مكتب مجاني ومفتوح المصدر (nomic.ai/gpt4all، والشيفرة المصدرية على [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) يشغّل نماذج الذكاء الاصطناعي بالكامل على جهاز الكمبيوتر الخاص بك عبر محرك مدمج قائم على llama.cpp، مع ميزة اختيارية تُدعى LocalDocs للدردشة مع ملفاتك الخاصة.** لا توجد أي خطة مدفوعة: مستودع GitHub مرخّص بموجب [رخصة MIT](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)، والتطبيق نفسه لا يتطلب اشتراكًا أو حسابًا. يعمل GPT4All على Windows (بما في ذلك ARM)، وmacOS (Apple Silicon وIntel)، وUbuntu/Linux، ويتضمن خادم API محلي متوافق مع OpenAI يعتمد على Docker، بالإضافة إلى حزمة تطوير برمجيات Python للمطورين.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو GPT4All وكم تكلفته؟',
@@ -2022,10 +2063,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعمل على Windows (‏x64 وARM)، وmacOS (Apple Silicon وIntel، Monterey 12.6 فأحدث)، وUbuntu/Linux x86-64',
           'استدلال محلي مدمج عبر محرك قائم على llama.cpp؛ الحد الأدنى للمعالج: Intel Core i3 الجيل الثاني أو AMD من حقبة Bulldozer أو أحدث',
           'يتضمن LocalDocs، ميزة للدردشة مع ملفاتك المحلية الخاصة (PDF ونصوص ومستندات أخرى)',
-          'يُظهر مستودع GitHub (‏[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) نحو 77,400 نجمة وحوالي 8,300 نسخة متفرعة (fork) اعتبارًا من سبتمبر 2026',
+          `يُظهر مستودع GitHub (‏[github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)) ${ST.ar('gpt4all')} نجمة`,
           'يتضمن خادم API محلي متوافق مع OpenAI يعتمد على Docker، وحزمة تطوير برمجيات Python للمطورين',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2047,6 +2088,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: 'النقاط الرئيسية — GPT4All في 2026',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: 'لا تحديثات منذ 27 مايو 2025. قد لا يكون GPT4All مدعومًا بعد الآن: تحقق من أن المثبّت والنماذج التي تريدها ما زالت تعمل على جهازك قبل الاعتماد عليه.' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4All هو تطبيق سطح مكتب مجاني ومفتوح المصدر ومرخّص بموجب MIT من Nomic AI، يشغّل نماذج الذكاء الاصطناعي دون اتصال بالإنترنت عبر محرك مدمج قائم على llama.cpp، مع ميزة LocalDocs للدردشة مع ملفاتك الخاصة، دون أي خطة مدفوعة.' },
           { type: 'plain-terms', text: 'بدلًا من دفع اشتراك على غرار ChatGPT، يتيح لك GPT4All تنزيل نموذج على جهازك الخاص والدردشة معه هناك — دون حساب، ودون الحاجة إلى اتصال بالإنترنت بعد تنزيل النموذج، ودون فاتورة. يتيح لك LocalDocs توجيه التطبيق نحو ملفات PDF أو النصوص الخاصة بك لطرح أسئلة عنها دون رفع أي شيء إلى الإنترنت.' },
@@ -2136,6 +2180,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المنصة': 'macOS', 'التنزيل': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { 'المنصة': 'Linux (Ubuntu, .run)', 'التنزيل': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { 'المنصة': 'Linux (Flathub)', 'التنزيل': 'حزمة يديرها المجتمع — ابحث عن "GPT4All" في [Flathub](https://flathub.org)' },
+          { 'المنصة': 'الموقع الرسمي', 'التنزيل': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { 'المنصة': 'سياسة الخصوصية', 'التنزيل': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'الحد الأدنى للمعالج لأنظمة Windows وLinux: Intel Core i3 الجيل الثاني أو AMD من حقبة Bulldozer أو أحدث. يتطلب macOS نظام Monterey 12.6 أو أحدث، مع أفضل أداء على Apple Silicon. إصدارات Linux مخصصة لـ x86-64 فقط — لم تجد هذه المراجعة أي برنامج تثبيت رسمي لـ Linux ARM64، على عكس Windows الذي يقدم إصدار ARM. كما هو الحال مع أي أداة نماذج محلية، تعتمد إمكانية الاستخدام الفعلية أيضًا على النموذج الذي تحمّله: متطلبات ذاكرة الوصول العشوائي لنموذج معين قيد منفصل خاص بذلك النموذج، يتجاوز هذه المتطلبات الأساسية للمعالج/نظام التشغيل.',
       },
@@ -2278,9 +2324,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/gpt4all-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-07',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-07',
-    dateModified: '2026-09-07',
+    dateModified: '2026-10-24',
     educationalLevel: 'Beginner',
     audience: 'CPU만 갖춘 보급형 하드웨어에서도 AI 모델을 완전히 오프라인으로 실행할 수 있는 무료 오픈소스 데스크톱 앱을 찾는 사람',
     primaryTerm: 'GPT4All',
@@ -2296,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GPT4All LocalDocs',
       '무료 오프라인 AI 채팅 앱',
     ],
-    leadAnswerBlock: '**GPT4All은 내장된 llama.cpp 기반 엔진을 통해 AI 모델을 사용자의 컴퓨터에서 완전히 로컬로 실행하는 무료 오픈소스 데스크톱 앱(nomic.ai/gpt4all, 소스 코드는 [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all))이며, 자신의 파일과 대화할 수 있는 선택적 LocalDocs 기능을 제공합니다.** 유료 요금제는 전혀 없습니다. GitHub 저장소는 [MIT 라이선스](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)이며, 앱 자체는 구독이나 계정을 요구하지 않습니다. GPT4All은 Windows(ARM 포함), macOS(Apple Silicon 및 Intel), Ubuntu/Linux에서 실행되며, Docker 기반의 OpenAI 호환 로컬 API 서버와 개발자를 위한 Python SDK를 포함합니다.',
+    leadAnswerBlock: '**경고: GPT4All은 2025년 5월 27일(저장소의 마지막 커밋, 최신 릴리스 v3.10.0은 2025년 2월 25일) 이후 업데이트가 없어 더 이상 유지보수되지 않을 수 있습니다. 사용하기 전에 현재 환경에서 계속 작동하는지 확인하십시오.** **GPT4All은 내장된 llama.cpp 기반 엔진을 통해 AI 모델을 사용자의 컴퓨터에서 완전히 로컬로 실행하는 무료 오픈소스 데스크톱 앱(nomic.ai/gpt4all, 소스 코드는 [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all))이며, 자신의 파일과 대화할 수 있는 선택적 LocalDocs 기능을 제공합니다.** 유료 요금제는 전혀 없습니다. GitHub 저장소는 [MIT 라이선스](https://github.com/nomic-ai/gpt4all/blob/main/LICENSE.txt)이며, 앱 자체는 구독이나 계정을 요구하지 않습니다. GPT4All은 Windows(ARM 포함), macOS(Apple Silicon 및 Intel), Ubuntu/Linux에서 실행되며, Docker 기반의 OpenAI 호환 로컬 API 서버와 개발자를 위한 Python SDK를 포함합니다.',
     quickAnswerTop: {
       ko: {
         question: 'GPT4All은 무엇이며 비용은 얼마입니까?',
@@ -2306,10 +2352,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windows(x64 및 ARM), macOS(Apple Silicon 및 Intel, Monterey 12.6 이상), Ubuntu/Linux x86-64에서 실행',
           'llama.cpp 기반 엔진을 통한 내장 로컬 추론. 최소 CPU 요구 사항: Intel Core i3 2세대 또는 AMD Bulldozer 세대 이상',
           '자신의 로컬 파일(PDF, 텍스트 등 문서)과 대화할 수 있는 LocalDocs 탑재',
-          'GitHub 저장소([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all))는 2026년 9월 기준 약 77,400개의 스타와 약 8,300개의 포크를 기록',
+          `GitHub 저장소([github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all))는 ${ST.ko('gpt4all')}개의 스타를 기록`,
           'Docker 기반의 OpenAI 호환 로컬 API 서버와 개발자를 위한 Python SDK 탑재',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2331,6 +2377,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         title: '핵심 내용 — 2026년의 GPT4All',
         isTldr: true,
+        callouts: [
+          { type: 'warning', text: '2025년 5월 27일 이후 업데이트가 없습니다. GPT4All은 더 이상 유지보수되지 않을 수 있습니다. 사용하기 전에 설치 프로그램과 사용하려는 모델이 현재 시스템에서 계속 작동하는지 확인하십시오.' },
+        ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPT4All은 Nomic AI가 제공하는 무료 오픈소스 MIT 라이선스 데스크톱 앱으로, 내장된 llama.cpp 기반 엔진을 통해 AI 모델을 오프라인으로 실행하며, 자신의 파일과 대화할 수 있는 LocalDocs 기능을 제공하고 유료 요금제는 전혀 없습니다.' },
           { type: 'plain-terms', text: 'ChatGPT식 구독료를 지불하는 대신, GPT4All은 모델을 사용자의 컴퓨터에 다운로드하여 그곳에서 대화할 수 있게 해줍니다 — 계정 불필요, 모델 다운로드 후에는 인터넷 연결도 불필요하며 청구서도 없습니다. LocalDocs를 사용하면 자신의 PDF나 텍스트 파일을 앱에 지정해 인터넷에 아무것도 업로드하지 않고 질문할 수 있습니다.' },
@@ -2420,6 +2469,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '플랫폼': 'macOS', '다운로드': '[gpt4all-installer-darwin.dmg](https://gpt4all.io/installers/gpt4all-installer-darwin.dmg)' },
           { '플랫폼': 'Linux (Ubuntu, .run)', '다운로드': '[gpt4all-installer-linux.run](https://gpt4all.io/installers/gpt4all-installer-linux.run)' },
           { '플랫폼': 'Linux (Flathub)', '다운로드': '커뮤니티 관리 패키지 — [Flathub](https://flathub.org)에서 "GPT4All" 검색' },
+          { '플랫폼': '공식 웹사이트', '다운로드': '[nomic.ai/gpt4all](https://www.nomic.ai/gpt4all)' },
+          { '플랫폼': '개인정보 처리방침', '다운로드': '[nomic.ai/privacy-policy](https://www.nomic.ai/privacy-policy)' },
         ],
         note: 'Windows 및 Linux 최소 CPU 요구 사항: Intel Core i3 2세대 또는 AMD Bulldozer 세대 이상. macOS는 Monterey 12.6 이상이 필요하며 Apple Silicon에서 최고의 성능을 발휘합니다. Linux 빌드는 x86-64만 지원합니다 — 이 리뷰에서는 공식 ARM64 Linux 인스톨러를 찾지 못했으며, 이는 ARM 빌드를 제공하는 Windows와 다릅니다. 다른 로컬 모델 도구와 마찬가지로 실제 사용성은 어떤 모델을 불러오는지에도 좌우됩니다. 특정 모델의 RAM 요구 사항은 이러한 기본적인 CPU/OS 요구 사항과는 별도의, 모델별 제약 조건입니다.',
       },
