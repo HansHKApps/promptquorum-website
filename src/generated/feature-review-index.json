@@ -1009,6 +1009,11 @@
     "urlSlug": "logseq-review",
     "url": "/power-local-llm/logseq-review"
   },
+  "anarlog": {
+    "cluster": "power-local-llm",
+    "urlSlug": "anarlog-review",
+    "url": "/power-local-llm/anarlog-review"
+  },
   "searxng": {
     "cluster": "power-local-llm",
     "urlSlug": "searxng-review",

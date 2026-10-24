@@ -600,6 +600,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'buzz-captions-review',
   // Logseq review (Productivity & Knowledge Tools, core note-taking app) — 2026-10-24
   'logseq-review',
+  // Anarlog review (Voice, Speech & Multimodal, bot-free AI meeting notepad, formerly Hyprnote) — 2026-10-24
+  'anarlog-review',
   // SearXNG review (RAG & Document Chat, self-hosted web-search backend) — 2026-10-24
   'searxng-review',
   // Linkwarden review (Productivity & Knowledge Tools, self-hosted bookmark manager) — 2026-10-24

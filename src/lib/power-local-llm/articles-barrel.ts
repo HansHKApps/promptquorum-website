@@ -86,6 +86,7 @@ import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_buzz_captions_review } from './articles/buzz-captions-review'
 import { article as a_logseq_review } from './articles/logseq-review'
+import { article as a_anarlog_review } from './articles/anarlog-review'
 import { article as a_searxng_review } from './articles/searxng-review'
 import { article as a_linkwarden_review } from './articles/linkwarden-review'
 import { article as a_handy_review } from './articles/handy-review'
@@ -736,6 +737,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'murmur-review':                                 a_murmur_review,
   'buzz-captions-review':                          a_buzz_captions_review,
   'logseq-review':                                 a_logseq_review,
+  'anarlog-review':                                a_anarlog_review,
   'searxng-review':                                a_searxng_review,
   'linkwarden-review':                             a_linkwarden_review,
   'handy-review':                                  a_handy_review,
