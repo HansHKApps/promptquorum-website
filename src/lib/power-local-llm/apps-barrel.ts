@@ -246,6 +246,7 @@ import { app as app_openrag } from './apps/openrag'
 import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
+import { app as app_compactifai_app } from './apps/compactifai-app'
 import { app as app_iimagine_desktop } from './apps/iimagine-desktop'
 import { app as app_zeno } from './apps/zeno'
 import { app as app_asiden } from './apps/asiden'
@@ -586,6 +587,7 @@ export const localAiApps: ToolRecord[] = [
   app_llamatik,
   app_caelum,
   app_lm_mini,
+  app_compactifai_app,
   app_pocketllm_lite,
   app_obscurify,
   app_genva,

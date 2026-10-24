@@ -227,6 +227,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'openclient':                              'openclient',
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
+  'compactifai-app':                         'compactifai-app',
   'iimagine-desktop':                        'iimagine-desktop',
   'zeno':                                    'zeno',
   'asiden':                                  'asiden',

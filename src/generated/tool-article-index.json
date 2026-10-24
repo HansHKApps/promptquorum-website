@@ -5932,7 +5932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 45,
+    "totalCount": 46,
     "capped": true
   },
   "Pocket AI": {
@@ -11069,6 +11069,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "compactifai-app-review",
+        "title": "CompactifAI APP Review: Free Chat App with Offline and Cloud Models",
+        "url": "/power-local-llm/compactifai-app-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
@@ -11130,17 +11138,9 @@
         "url": "/local-llms/local-llm-on-laptop",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-ai-app-low-end-pc",
-        "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
-        "url": "/power-local-llm/best-local-ai-app-low-end-pc",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 215,
+    "totalCount": 216,
     "capped": true
   },
   "Qdrant": {
@@ -11795,6 +11795,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "compactifai-app-review",
+        "title": "CompactifAI APP Review: Free Chat App with Offline and Cloud Models",
+        "url": "/power-local-llm/compactifai-app-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "frankly-ai-review",
         "title": "Frankly AI Review: iPhone Chat App With Downloadable On-Device Models",
         "url": "/power-local-llm/frankly-ai-review",
@@ -11848,17 +11856,9 @@
         "url": "/power-local-llm/secret-ai-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tokforge-review",
-        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
-        "url": "/power-local-llm/tokforge-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "LLM Hub": {
@@ -12190,6 +12190,20 @@
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "CompactifAI APP": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "compactifai-app-review",
+        "title": "CompactifAI APP Review: Free Chat App with Offline and Cloud Models",
+        "url": "/power-local-llm/compactifai-app-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
