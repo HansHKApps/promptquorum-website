@@ -35,6 +35,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/best-amd-gpus-local-llm",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-cpu-only-llm",
-        "title": "Best CPU-Only Local LLM 2026: 5 Models, No GPU Needed",
-        "url": "/local-llms/best-cpu-only-llm",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 310,
+    "totalCount": 311,
     "capped": true
   },
   "llama.cpp": {
@@ -1593,6 +1593,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "multica-review",
         "title": "Multica Review: A Workspace for AI Coding Agents",
         "url": "/power-local-llm/multica-review",
@@ -1624,7 +1632,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Locally Uncensored": {
@@ -4693,6 +4701,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "intentkit-review",
         "title": "IntentKit Review: Self-Hosted Agent Cluster With Built-In APIs",
         "url": "/power-local-llm/intentkit-review",
@@ -4716,7 +4732,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "GPT Engineer": {
@@ -9653,6 +9669,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Kruvo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "LocalGhost": {
     "articles": [
       {
@@ -10997,6 +11027,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11050,17 +11088,9 @@
         "url": "/power-local-llm/best-local-ai-app-low-end-pc",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 214,
+    "totalCount": 215,
     "capped": true
   },
   "Qdrant": {
