@@ -1216,6 +1216,7 @@ const HUB_THEMES: Array<{
       'piper-vs-kokoro-tts',
       'styletts-2-review',
       'whisper-cpp-review',
+      'handy-review',
       'xtts-v2-review',
       'elevenlabs-vs-local-tts-piper-xtts',
       'voice-ai-writers-cloud-vs-local',

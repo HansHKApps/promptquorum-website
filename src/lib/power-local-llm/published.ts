@@ -312,6 +312,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
   'whisper-cpp-review',
+  // Handy review (Voice, Speech & Multimodal, offline dictation) — 2026-10-24
+  'handy-review',
   'faster-whisper-review',
   'dograh-review',
   // exo review — 2026-09-12
