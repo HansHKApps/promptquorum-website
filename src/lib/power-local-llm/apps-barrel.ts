@@ -227,6 +227,7 @@ import { app as app_blinko } from './apps/blinko'
 import { app as app_surfsense } from './apps/surfsense'
 import { app as app_strata } from './apps/strata'
 import { app as app_openclient } from './apps/openclient'
+import { app as app_zero1llm } from './apps/zero1llm'
 import { app as app_mlx_audio } from './apps/mlx-audio'
 import { app as app_speechbrain } from './apps/speechbrain'
 import { app as app_libredb_studio } from './apps/libredb-studio'
@@ -474,6 +475,7 @@ export const localAiApps: ToolRecord[] = [
   app_surfsense,
   app_strata,
   app_openclient,
+  app_zero1llm,
   app_mlx_audio,
   app_speechbrain,
   app_libredb_studio,
