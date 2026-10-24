@@ -1,0 +1,1727 @@
+{
+  "id": "pq-test-locally-uncensored-2026-10-20",
+  "hero": "locally-uncensored-main-chat-window",
+  "date_human": "2026年10月20日",
+  "captured": "2026年10月20日。終了時刻は記録なし",
+  "standard_version": "0.2",
+  "locale": "ja",
+  "app": {
+    "name": "Locally Uncensored (LU)",
+    "slug": "locally-uncensored",
+    "vendor": "LU Labs",
+    "category": "ローカルAIデスクトップアプリ：チャット、画像生成、コーディングエージェント",
+    "platform": "macOS（Mac版）",
+    "pricing_url": "https://locallyuncensored.com"
+  },
+  "title": "24 GB MacでのLocally Uncensored（LU）：チャット、ドキュメントチャット、画像生成、コーディングエージェントを1つのアプリで",
+  "page_title": "Locally Uncensoredテスト",
+  "dek": "24 GBのApple M4 Macでの最初のセッション。セットアップは丁寧で機能は幅広いものの、PDF・Word・Excelファイルは読み込まれませんでした。",
+  "seo": {
+    "title": "Locally Uncensored実機テスト：チャット・画像",
+    "description": "24 GBのM4 MacでのLocally Uncensored（LU）実機テスト。チャット、画像生成、コーディングエージェントは動作し、PDFとWordのドキュメントチャットは動作しませんでした。"
+  },
+  "faq": [
+    [
+      "LocallyUncensoredでドキュメントチャットは動作しますか？",
+      "テストでは動作しませんでした。クリップのボタンで添付したPDF（872 KB）とExcelファイルは、ファイル名だけが読まれました。Docsフィールドに追加したWordファイルは「20 chunks」と表示されたものの、モデルは内容を読み取れないと答えました。テスターは、DocsフィールドからのPDFも失敗したと述べています。開発者はPDFの所見を認め、対応に取り組むと述べていますが、これは未検証です。",
+      "observed"
+    ],
+    [
+      "LUで24 GBのMacではどの画像モデルが動きますか？",
+      "アプリ自身のカードによると、SD Turbo（8 GB必要）と3つの4ビットモデル（FLUX.2 klein 4B、Z-Image Turbo、Qwen-Image 2.1。各16 GB）には「Runs on this Mac」と表示され、Z-Image（32 GB）、Z-Image Turbo（32 GB）、Qwen-Image 2512（64 GB）にはメモリ不足の表示が出ます。テストで実際に動かしたのはSD Turboのみです。",
+      "measured"
+    ],
+    [
+      "24 GBのMacでLUはキャラクターを学習できますか？",
+      "テストではできませんでした。キャラクター学習にはZ-Image Turbo（30.5 GB、32 GB必要）が必要で、アプリはこのMacには大きすぎると表示します。Characterタブは写真を受け付けましたが、学習は開始できませんでした。4ビット版のZ-Image Turboは試していません。",
+      "observed"
+    ],
+    [
+      "LUにコーディングエージェントはありますか？",
+      "はい。gemma4で動かしたCoding Agentが、ピンポンゲーム用のindex.htmlを書き、内蔵プレビュー（Desktop、Tablet、Mobile）でスコア付きで動作する様子が表示されました。権限モードはAsk、Bypass、Planです。",
+      "observed"
+    ],
+    [
+      "最初の画像セットアップにはどれくらいかかりますか？",
+      "残り時間は表示されず、パーセントとMB/sだけが出ます。確認された1.1〜1.2 MB/sでは、2.4 GBのSD Turboモデルは計算上およそ33〜36分かかります。実際の所要時間は計測していません。",
+      "observed"
+    ],
+    [
+      "LUは、すでに持っているモデルを見つけてくれますか？",
+      "テストでは見つけました。セットアップのステップ2で、マシンにすでにあった7つのモデルが、何も指示しないまま一覧表示されました。LUがどのように見つけているかは、画面上では説明されていません。",
+      "observed"
+    ],
+    [
+      "LUはオフラインで動作し、チャットは非公開に保たれますか？",
+      "未テストです。「Your chats stay on your machine」はウェルカム画面の主張です。アプリにはCloudトグル、LU Cloudの案内、モデル一覧のクラウドモデル項目もあり、データがマシンの外に出たかどうかは確認していません。",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-10-24",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "Locally Uncensored。アプリ内では「LU by LU Labs」と表示されます。",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "記録なし。PromptQuorumディレクトリは、2026-09-22付の自社レビューで3.0.2と記載していますが、テスターのビルドとは異なる可能性があります。",
+      null
+    ],
+    [
+      "入手元",
+      "ディレクトリによればベンダーサイトlocallyuncensored.com。正確なダウンロードページは記録なし。",
+      null
+    ],
+    [
+      "テスター",
+      "Hans Kuepper（PromptQuorum創設者）",
+      null
+    ],
+    [
+      "開始",
+      "2026年10月20日。開始時刻は記録なし。",
+      null
+    ],
+    [
+      "終了",
+      "記録なし",
+      null
+    ],
+    [
+      "ハードウェア",
+      "Apple M4、24 GBユニファイドメモリ。メモには「M3、24 GB」とありましたが、テスターは草稿の後でチップをM4に訂正しました。M4 Proかどうかは記載なし。",
+      "observed"
+    ],
+    [
+      "システム",
+      "macOSのバージョンは記録なし。ダウンロードされたPython wheelにはmacosx_14_0_arm64というタグが付いていますが、これは最低要件であり、インストール済みのバージョンではありません。",
+      null
+    ],
+    [
+      "テストの理由",
+      "メモによると、ローカルのチャット用フロントエンドはすでに多数あるため、テスターはLUがチャット以上のことをしてくれるのではないかと期待していました。",
+      "tester-view"
+    ],
+    [
+      "目的",
+      "メモには目標として明記されていません。メモに残っているのは、セットアップ、チャット、ドキュメント、画像、その他のタブを最初に見た内容です。",
+      null
+    ],
+    [
+      "マシンにあったモデル",
+      "すでにあるものとして7つのモデルが表示されました：x/z-image-turbo、HSR-DeepThink/nwe、x/flux2-klein、gemma4、gemma3:1b、minimax-m2:cloud、qwen3-coder:30b。チャットのテストにはgemma4とgemma3:1bを使いました。",
+      "observed"
+    ],
+    [
+      "使用したAI支援",
+      "Claudeが、テスターのWordメモと45枚のスクリーンショットからこのレポートを下書きしました。テスト中のAI支援は記録されていません。",
+      "observed"
+    ],
+    [
+      "開示事項",
+      "テスターはローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しており、LUはそこに、AIが作成したレビューと開発者から提供された創設者コメント（2026-09-22）付きで掲載されています。テスターと開発者は2026年9月に、そして今回のテスト後にもメッセージを交わしており、開発者は返信前にテストのメモを受け取っていました。LUはサイトからのクリックを受けています。メモには、支払いやスポンサーシップの記録はありません。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターはローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しており、LUはそこに、AIが作成したレビューと開発者から提供された創設者コメント（2026-09-22）付きで掲載されています。テスターと開発者は2026年9月に、そして今回のテスト後にもメッセージを交わしており、開発者は返信前にテストのメモを受け取っていました。LUはサイトからのクリックを受けています。メモには、支払いやスポンサーシップの記録はありません。",
+  "verdict": {
+    "general": "最初の起動体験が丁寧に作り込まれた、幅広いアプリです。このセッションでは、チャット、最小モデルでのローカル画像生成、コーディングエージェントは動作しましたが、ドキュメントチャットは動作しませんでした。動画、キャラクター学習、プライバシー、アンインストールは、完了していないか未テストです。",
+    "fit": "テスターは、これまで見た中で最も完成度の高い単体ローカルアプリであり、注目に値すると評価しています。使い続けるかどうかは、メモには書かれていません。"
+  },
+  "scores": [
+    [
+      "インストール",
+      4,
+      "小さなインストーラー、3ステップのセットアップ、エンジンは準備完了。正式名称で検索しても見つかりませんでした。"
+    ],
+    [
+      "オンボーディングとモデル選び",
+      4,
+      "既存のモデルが見つかり、サイズも表示されました。エンジンのチェックマークは切り替えられませんでした。"
+    ],
+    [
+      "中核機能",
+      4,
+      "チャットとコーディングエージェントは動作。画像出力は入門用モデルでは指示との一致がゆるく、ドキュメントチャットは失敗しました。"
+    ],
+    [
+      "ガイダンスと試行錯誤",
+      3,
+      "アプリ内の解説と適合ラベルは充実している一方、サンプリング設定には説明がなく、Troubleshootは閉じられませんでした。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "テスターは計測していません。アプリが報告した速度は小型モデル2つ分のみ（LU-27、LU-28）。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "確認したのはアプリ内の解説のみで、リンク先の完全なガイドは開いていません。"
+    ],
+    [
+      "信頼とプライバシー",
+      null,
+      "監査していません。オフライン動作とクラウドへのデータの流れはテストしていません（LU-30）。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "スコアは、以下の根拠から導いた案です（1 = 低い、5 = 非常に良い）。中核機能はテスターが4に引き上げました。その他はレポート作成者による案のままです。該当なしは「未テスト」を意味し、ゼロ点ではありません。",
+  "tldr": [
+    [
+      "observed",
+      "LUはMac向けのオールインワン型ローカルアプリで、チャット、画像、音声、比較、ベンチマーク、コーディングエージェントのタブがあります。初回セットアップは3ステップで、マシンにすでにあった7つのモデルが見つかりました。"
+    ],
+    [
+      "observed",
+      "チャットは動作し、コーディングエージェントも動作しました。ピンポンゲーム用のindex.htmlを書き、内蔵プレビューにスコア付きで動作する様子が表示されました。"
+    ],
+    [
+      "observed",
+      "テストではドキュメントチャットは動作しませんでした。クリップのボタンで添付したPDF（872 KB）とExcelファイルは読み込まれず、Docsフィールドに追加したWordファイルは「20 chunks」と表示されたものの、モデルは内容を読み取れないと答えました。"
+    ],
+    [
+      "observed",
+      "ローカル画像生成は、最小モデルのSD Turbo（512×512）で動作しました。最初のプロンプト（エッフェル塔の上の象）では塔だけが出力され、2つ目では象が現れたものの白黒でした。"
+    ],
+    [
+      "measured",
+      "画像モデルのカードには、ダウンロードサイズ、必要メモリ、このMacへの適合ラベルが表示されます。24 GBでは、4つのモデルが「Runs on this Mac」（16 GB以下）、3つが「Too big」（32 GB以上）と表示され、キャラクター学習に必要なモデルも後者に含まれます。"
+    ],
+    [
+      "observed",
+      "ダウンロードのダイアログにはパーセントとMB/sが表示されますが、残り時間は表示されません。約1.1〜1.2 MB/sでは、2.4 GBのモデルは計算上およそ33〜36分かかりました。動画、キャラクター学習、オフライン利用、プライバシー、アンインストールは、完了していないか未テストです。"
+    ],
+    [
+      "vendor-claim",
+      "開発者はPDFの所見を認め、ドキュメント修正、Top P・Top K・Temperatureの説明、ダウンロード時間の目安、Troubleshootウィンドウに取り組むと述べています。いずれも未検証で、再テスト項目です。"
+    ]
+  ],
+  "quotes": [
+    "小さなことが大切です。アイデアは素晴らしいのに、掘り下げるとインターフェースに問題があるアプリを、これまで数多く見てきました。",
+    "このツールにはすべてが揃っていて、この種のツールには期待しないような機能まであります。"
+  ],
+  "quote_note": "テスターのメモ。音声入力から軽く編集。英語から翻訳。どちらも本人の判断であり、測定値ではありません。",
+  "moments_title": "このテストを形づくった6つの場面",
+  "moments_nav": "6つの場面",
+  "moments": [
+    [
+      "エンジンは1つ、チェックも1つ",
+      "セットアップのエンジンの手順：LU Engineが準備完了としてチェックされ、そのチェックは外せませんでした。",
+      "locally-uncensored-engine-choice-step",
+      "chapter-install"
+    ],
+    [
+      "既存のモデルを検出",
+      "セットアップで、既存の7モデルが指示なしに一覧表示されました。",
+      "locally-uncensored-existing-models-detected",
+      "chapter-install"
+    ],
+    [
+      "ファイル名だけだったPDF",
+      "ドキュメントについての質問への返答：モデルはテキストを読み取れません。",
+      "locally-uncensored-pdf-not-read-reply",
+      "chapter-docs"
+    ],
+    [
+      "ダウンロード前にサイズと適合を表示",
+      "ダウンロードサイズ、必要メモリ、このMacへの適合ラベルを示す画像モデルのカード。",
+      "locally-uncensored-image-model-catalog-memory-fit",
+      "chapter-image"
+    ],
+    [
+      "キャラクター学習はここで止まる",
+      "必要なモデルのZ-Image Turboは、24 GBには大きすぎると表示されます。",
+      "locally-uncensored-z-image-turbo-too-big-card",
+      "chapter-image"
+    ],
+    [
+      "箱の中のコーディングエージェント",
+      "エージェントが書いたピンポンゲームのプレビュー。",
+      "locally-uncensored-coding-agent-pingpong-preview",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "掲載情報と初回起動",
+      "items": [
+        [
+          "tester-view",
+          "テスターは、ローカルのチャット用フロントエンドがすでに多数あるため、LUがチャット以上のことをしてくれるのではないかと期待していました。",
+          null
+        ],
+        [
+          "observed",
+          "インストーラーのダウンロードは15.8 MBで、テスターがダウンロードから読み取った値です。インストール後、正式名称ではアプリを見つけられませんでした。アプリ名は「LU」です。",
+          null
+        ],
+        [
+          "observed",
+          "セットアップ後のメインウィンドウには、Chat、Create、Voice、Compare、Benchmark、Models、Settingsのタブが並び、上部バーにCloudトグルがあります。",
+          "locally-uncensored-main-chat-window"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "インストールとセットアップ",
+      "items": [
+        [
+          "observed",
+          "ステップ1では、内蔵のLU Engineが準備完了としてチェックされた状態で表示され、Continueボタンと、その下に「Use another engine (Ollama, LM Studio...)」のリンクがあります。テスターは選択肢のあるアプリを好みますが、エンジンのカードのチェックは外せませんでした。別のエンジンのリンクは試していません。",
+          "locally-uncensored-engine-choice-step"
+        ],
+        [
+          "observed",
+          "ステップ2では、マシンにすでにあった7つのモデルが、指示なしに一覧表示されました：x/z-image-turbo、HSR-DeepThink/nwe、x/flux2-klein、gemma4、gemma3:1b、minimax-m2:cloud、qwen3-coder:30b。テスターはgemma4を選びました。その下の2つの入門用モデルには、説明、ダウンロードサイズ、必要な空きメモリが付いています。",
+          "locally-uncensored-existing-models-detected"
+        ],
+        [
+          "tester-view",
+          "他のアプリでは入門用モデルにサイズが表示されることはまれで、テスターはこれを長所と見ています。",
+          null
+        ],
+        [
+          "observed",
+          "ステップ3では、Document Chat用の任意の埋め込みモデル（nomic-embed-text、84 MB）が、InstallとSkip for nowのボタンとともに提示されます。どちらを選んだかは、メモに記載がありません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-docs",
+      "title": "チャットとドキュメント",
+      "items": [
+        [
+          "observed",
+          "最初のチャットは動作しました。最初のメッセージを送ってモデルが読み込まれたとき、「Starting」の表示は18 sでした。gemma4はベルリンとパリの地下鉄についての質問に「Paris generally has more」と答えましたが、テスターは事実確認をしていません。",
+          null
+        ],
+        [
+          "measured",
+          "メッセージ欄の上にあるコンテキストメーターは使用量を示します（309/16K、のちに4.2K/16K）。ツールチップによると、Ollamaのnum_ctxトークンを数えており、推論トークンは含まれません。",
+          null
+        ],
+        [
+          "observed",
+          "クリップのボタンでExcelファイル（.xlsx、84 KB）を添付しました。モデルはファイル名とシートのファイル名（sheet1.xmlからsheet6.xml）から答え、内容は見えないと述べました。Docsのドロップ領域に表示される形式はPDF、DOCX、TXTで、Excelは含まれていません。",
+          null
+        ],
+        [
+          "observed",
+          "クリップのボタンで添付したPDF（872 KB）は、名前だけが読まれました。その中の金額についての質問には、テキストを読み取れないという返答があり、該当部分をコピー＆ペーストするよう求められました。テスターは最初「はい、ファイルを理解しました」と書き、数行後に自分で訂正しています。",
+          "locally-uncensored-pdf-not-read-reply"
+        ],
+        [
+          "observed",
+          "メモによると、同じPDFをDocsフィールドから渡した場合も失敗しました。スクリーンショットはありません。Docsフィールドに入れたWordファイルは「20 chunks」と表示されたものの、モデルは.docxの内部の内容を読み取れないと答えました。",
+          null
+        ],
+        [
+          "tester-view",
+          "テスターはこれを最先端のモデルと比較し、PDFを諦めて、創設者に相談するつもりでいました。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-image",
+      "title": "画像生成",
+      "items": [
+        [
+          "vendor-claim",
+          "Createタブには、ローカル画像生成には一度きりのセットアップが必要で、Apple MLXと最小の画像モデルがインストールされ、「about 5 GB in all」と表示されます。テスターが実際にダウンロードされるのを見たのは、Python wheel（torch、88.0 MB）とSD Turboモデル（2.4 GB）で、合計は記録されていません。",
+          null
+        ],
+        [
+          "observed",
+          "ダウンロードのダイアログには、パーセント、GB中のMB、MB/sが表示されます（32%で1.2 MB/s、100%で1.1 MB/s）が、残り時間は表示されません。テスターはタブを離れ、Settingsを開き、Troubleshootウィンドウに行き当たり、アプリを再起動しましたが、ダウンロードは途中の進捗から再開されました。",
+          null
+        ],
+        [
+          "observed",
+          "画像モデルのカタログには6枚のカードがあり、ダウンロードサイズ、必要メモリ、ラベルが表示されます。4ビットモデルには「Runs on this Mac」、大きいモデルには「Too big for this Mac's memory. Images run on LU Cloud」と表示されます。",
+          "locally-uncensored-image-model-catalog-memory-fit"
+        ],
+        [
+          "observed",
+          "512×512のSD Turboは、プロンプトへの追従がゆるいものでした。「draw an elephant sitting on the Eifel Tower」では塔が出て、象は見当たりませんでした。「a color please」を加えると象が現れましたが、やはり白黒でした。シードが異なっていたため、違いの原因はシードかもしれません。",
+          null
+        ],
+        [
+          "observed",
+          "テスターはこのマシンでは動画をスキップしました（一度きりのセットアップで約27 GB）。キャラクター学習にはZ-Image Turbo（30.5 GB、32 GB必要）が必要で、このMacには大きすぎると表示されます。Characterタブは写真を受け付けましたが、24 GBでは学習を開始できませんでした。",
+          "locally-uncensored-z-image-turbo-too-big-card"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "設定、比較、ベンチマーク、エージェント",
+      "items": [
+        [
+          "observed",
+          "設定には、ライト／ダークの切り替え（使用）、ChatGPTのエクスポートのインポート、チャットのバックアップ、コンテンツポリシー、プライバシー、アップデート、オンボーディングがあります。サンプリングのスライダー（Temperature 0.7、Top P 0.9、Top K 40）には説明がありません。",
+          null
+        ],
+        [
+          "tester-view",
+          "テスターは、初心者が他で調べなくて済むよう、これらのスライダーに情報アイコンを付けてほしいと考えています。テスターの大きな表示スケーリングでは、メッセージ欄がとても小さく感じられ、灰色のバーが横切っていました。",
+          null
+        ],
+        [
+          "measured",
+          "A/B Compareはgemma4とgemma3:1bを並べて実行し、速度、時間、トークン数を表示しました（gemma4は54.5 t/s、15.5 s。gemma3:1bは23.9 t/s、0.4 s）。Benchmarkでは、gemma3:1bが「useful」t/s 109.4（正答率67%）で1位、gemma4は56.9（正答率100%）でした。",
+          null
+        ],
+        [
+          "observed",
+          "Coding Agent（gemma4）はピンポンゲーム用のindex.htmlを書き、内蔵プレビュー（Desktop、Tablet、Mobile）にスコア付きで動作するゲームが表示されました。最初の返答ではファイルの場所が示されなかったため、テスターが尋ねると、エージェントがファイルを読み返しました（248行）。",
+          "locally-uncensored-coding-agent-pingpong-preview"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-developer",
+      "title": "開発者の返信",
+      "items": [
+        [
+          "vendor-claim",
+          "テスターがメモを送った後、LUの開発者（LU Labs）がドイツ語で返信しました。日付は記載がなく、ここでは英語での言い換えです。テスターによると、開発者は掲載に同意しています（2026-10-24）。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "これまで受け取った中で最も徹底したテストだと、開発者は述べています。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "開発者はPDFの所見を認めています：クリップのボタンではモデルにファイル名だけが渡り、内容は渡らなかった。DocsフィールドがPDFを処理するはずだった。この件に取り組む、とのことです。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "このほか、Top P・Top K・Temperatureの説明、ダウンロードの時間の目安、Troubleshootウィンドウにも取り組むと述べています。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "ユーザーの多くはGitHub、Reddit、Googleで見つけたガイドから来ており、小さなリリースとフィードバックへの素早い返信を何か月も続けることが最も重要だった、と開発者は述べています。",
+          null
+        ],
+        [
+          "observed",
+          "これらの変更は、このテストでは検証されていません。いずれも再テスト項目です。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "判断",
+      "items": [
+        [
+          "tester-view",
+          "メモは総括で終わり、使い続けるかどうかの判断は書かれていません。テスターは、インターフェースへの配慮と機能の組み合わせを驚くべきものと評し、多くのアプリがこれらのアイデアを真似できるだろうと述べています。提供されるすべての機能で最高とは限らないのではと疑問も示し、1年後にどうなっているかに関心を寄せています。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "「Private, local AI chat that works right away. No extra software to install.」",
+      "アプリのウェルカム画面",
+      "セットアップ後にチャットは動作しました。画像生成には追加のダウンロードが必要でした。",
+      "observed"
+    ],
+    [
+      "「Your chats stay on your machine.」",
+      "アプリのウェルカム画面",
+      "未検証。オフライン動作とクラウドへのデータの流れはテストしていません。",
+      "vendor-claim"
+    ],
+    [
+      "「LU runs its own engine on your machine. Nothing to install.」",
+      "セットアップのステップ1",
+      "エンジンは準備完了と表示され、既存のモデルが見つかりました。",
+      "observed"
+    ],
+    [
+      "Document Chat：PDF、Word文書、テキストファイルをドロップすると、モデルがその内容について質問に答える。",
+      "セットアップのステップ3",
+      "PDFでもWordでも、動作は確認できませんでした。",
+      "observed"
+    ],
+    [
+      "画像のセットアップ：Apple MLXと最小モデルで、合計約5 GB。",
+      "Createタブ",
+      "一部確認：Python wheel（88.0 MB）と2.4 GBのモデル。合計は記録していません。",
+      "vendor-claim"
+    ],
+    [
+      "画像のインストールはバックグラウンドで実行され、タブを離れても続く。",
+      "ダウンロードのダイアログ",
+      "確認しました。アプリ再起動後の再開も含みます。",
+      "observed"
+    ],
+    [
+      "カードに、このMacで動くモデルと大きすぎるモデルが示される。",
+      "画像モデルのカタログ",
+      "確認しました。テスターの24 GBとも整合しています。",
+      "observed"
+    ],
+    [
+      "チャット、コード、画像、動画、LoRAを1つのインストーラーで。",
+      "PromptQuorumディレクトリのキャッチコピー",
+      "チャット、コード、画像は確認。動画は未実行。LoRA（キャラクター学習）は先に進めませんでした。",
+      "third-party"
+    ],
+    [
+      "小さなリリースと、フィードバックへの素早い返信。",
+      "開発者のメッセージ",
+      "1回のセッションでは検証できません。",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 70,
+    "rows": [
+      [
+        "SD Turbo（テストマシンにインストール済み）",
+        8,
+        "必要メモリ 8 GB · ダウンロード 2.4 GB",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4ビット（Experimentalと表示）",
+        16,
+        "必要メモリ 16 GB · ダウンロード 4.3 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo 4ビット",
+        16,
+        "必要メモリ 16 GB · ダウンロード 5.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2.1 4ビット（Non-commercialと表示）",
+        16,
+        "必要メモリ 16 GB · ダウンロード 9.9 GB",
+        "measured"
+      ],
+      [
+        "Z-Image",
+        32,
+        "必要メモリ 32 GB · ダウンロード 19.1 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo（キャラクター学習に必要）",
+        32,
+        "必要メモリ 32 GB · ダウンロード 30.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2512",
+        64,
+        "必要メモリ 64 GB · ダウンロード 53.7 GB",
+        "measured"
+      ]
+    ],
+    "title": "24 GBに収まるか",
+    "note": "メモリの数値は、各画像モデルについてアプリ自身が示した内容を画面から読み取ったものです。ダウンロードサイズは実行時のメモリではありません。アプリの画面にあるその他の項目：Qwen 2.5 7B Abliterated（チャット入門用）4.4 GiB、空きメモリ約6 GB。Qwen 3.5 9B Abliterated 5.2 GiBに画像入力0.9 GiBを加え、空きメモリ約6.1 GB。nomic-embed-text（ドキュメントチャット）84 MB、どのCPUでも動作（vendor-claim）。LTX-2.3 Distilled 4ビットの動画セットアップは合計約27 GBで、メモリは表示なし。実際に動かしたのはSD Turboのみで、テストマシンのメモリは24 GBです。"
+  },
+  "usage_log": [
+    [
+      "チャット：ベルリンとパリ、地下鉄の駅が多いのは？",
+      "gemma4",
+      "「Paris generally has more」と回答。事実確認はしていません",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "Excelファイルの要約（クリップ）",
+      "gemma4",
+      "内容は読み取られず",
+      "記録なし",
+      "Fail",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "PDFの要約（クリップ）",
+      "gemma4",
+      "ファイル名に基づく回答、その後「読み取れない」",
+      "記録なし",
+      "Fail",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "PDFへの質問（Docsフィールド）",
+      "gemma4",
+      "メモによると失敗。スクリーンショットなし",
+      "記録なし",
+      "Fail",
+      []
+    ],
+    [
+      "Wordファイルへの質問（Docsフィールド）",
+      "gemma4",
+      "「20 chunks」と表示されたが、内容は読み取られず",
+      "記録なし",
+      "Fail",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "画像：エッフェル塔の上の象",
+      "SD Turbo, Standard",
+      "塔のみで、象は見当たらず",
+      "記録なし",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-first-image"
+      ]
+    ],
+    [
+      "画像：同じ内容に「a color please」を追加",
+      "SD Turbo, Standard",
+      "象が現れたが、白黒",
+      "記録なし",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "画像：夕日を背にした浜辺の恋人たち",
+      "SD Turbo, High",
+      "カラーで絵画調の画像。テスターのコメントなし",
+      "記録なし",
+      "Pass",
+      [
+        "locally-uncensored-lovers-beach-sunset-image"
+      ]
+    ],
+    [
+      "A/B Compare：パリはどこか、ドイツ語での卵の調理法",
+      "gemma4, gemma3:1b",
+      "どちらも回答。gemma3:1bは場所が誤り",
+      "15.5 s / 0.4 s（最初のプロンプト）",
+      "Pass",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "Benchmark、モデル2つ",
+      "gemma4, gemma3:1b",
+      "リーダーボードが生成された",
+      "記録なし",
+      "Pass",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "コーディングエージェント：ピンポンのページ",
+      "gemma4",
+      "index.htmlを作成。プレビューは動作",
+      "撮影時点で「Responding 26s」",
+      "Pass",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview"
+      ]
+    ],
+    [
+      "SD Turbo（2.4 GB）のダウンロード",
+      "該当なし",
+      "アプリの再起動後にインストール完了",
+      "記録なし",
+      "Pass",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "動画のセットアップ",
+      "該当なし",
+      "開始せず",
+      "該当なし",
+      "Not completed",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "キャラクター学習",
+      "該当なし",
+      "必要なモデルのために先に進めず",
+      "該当なし",
+      "Not completed",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "LU Engineのカードにある緑のチェックマークは外せるはずだと考えていました。スクリーンショットには、その下に「Use another engine」のリンクが見えていますが、試していません。"
+    ],
+    [
+      "tester-error",
+      "最初のPDFの回答の後に「はい、ファイルを理解しました」と書きました。その回答はファイル名に基づくものでした。テスターは数行後に自分で訂正しています。"
+    ],
+    [
+      "tester-error",
+      "Docsのドロップ領域が対応形式として示していない（PDF、DOCX、TXT）Excelファイルでテストし、確認しないまま、モデルまたはアプリの不具合として受け取りました。"
+    ],
+    [
+      "tester-error",
+      "再開したダウンロードを「20%くらい」と書きましたが、スクリーンショットでは30%と32%です。"
+    ],
+    [
+      "tester-error",
+      "画質とプロンプトへの追従を、512 pxの入門用モデル1つだけで判断しました。このマシンで動かせるとアプリが示すモデル、たとえばFLUX.2 klein 4B 4ビット（4.3 GB）は、ダウンロードしていません。"
+    ],
+    [
+      "assumption",
+      "スクリーンショットではシードが異なり、2枚目には象が写っています。そのため、プロンプトの文章を忘れたのではなく、シードが違いを説明するのかもしれません。これは推論です。"
+    ],
+    [
+      "tester-error",
+      "任意の埋め込みモデルをインストールしたかどうかを記録していません。ドキュメントでの失敗に関係している可能性があります。"
+    ],
+    [
+      "tester-error",
+      "記録の抜け：アプリとmacOSのバージョン、終了時刻、チップ名（メモには「M3」とあり、のちにテスターがM4に訂正）、DocsフィールドでのPDFの試行の手順とスクリーンショット、ダウンロードの合計時間、画像生成の所要時間、表示スケーリング、アンインストール。"
+    ]
+  ],
+  "findings": [
+    [
+      "LU-01",
+      "インストーラーのダウンロードは15.8 MBで、テスターがダウンロードから読み取った値です。スクリーンショットはありません。アプリは3ステップのセットアップで始まります。",
+      "インストール",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-02",
+      "アプリ名は「LU」です。「Locally Uncensored」で検索しても、テスターが短い名前を知るまで見つかりませんでした。どうやって知ったかは、メモからは不明です。",
+      "インストール",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LU-03",
+      "エンジンの手順で「LU Engine」がチェックされています。チェックをクリックしても選択は外れず、Continueしか押せませんでした。ボタンの下に「Use another engine (Ollama, LM Studio...)」のリンクがありますが、試していません（TE-1）。",
+      "初回セットアップ",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-engine-choice-step"
+      ]
+    ],
+    [
+      "LU-04",
+      "モデルの手順で、マシンにすでにあった7つのモデルが、指示なしに一覧表示されました。LUがどのように見つけているかは画面上では説明されておらず、テスターのOllamaストアから読み取っているというのは推測です。",
+      "初回セットアップ",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-05",
+      "入門用モデルのカードには、説明、ダウンロードサイズ、必要な空きメモリが表示されています（適合の図を参照）。テスターは、サイズを示さない他のアプリと対比しています（tester-view）。",
+      "初回セットアップ",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-06",
+      "x/z-image-turboとx/flux2-kleinという名前のモデルが、チャットのモデルピッカーと、「7 text models」という見出しのBenchmark一覧に表示されます。これらを画像モデルと読むのは、名前に基づく推測です（assumption）。テスターはコメントしていません。スクリーンショットの見直しで見つけました。",
+      "初回セットアップ",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-existing-models-detected",
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-07",
+      "セットアップのステップ3では、Document Chat用の任意の埋め込みモデル（nomic-embed-text、84 MB）が、InstallとSkip for nowとともに提示されます。どちらを選んだかは、メモに記載がありません（TE-7）。",
+      "初回セットアップ",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-document-chat-setup-step"
+      ]
+    ],
+    [
+      "LU-08",
+      "最初のメッセージを送ってモデルが読み込まれたとき、「Starting」の表示は18 sでした。この値は撮影時のものです。最終的な所要時間は記録されていません。",
+      "チャット",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LU-09",
+      "メッセージ欄の上にあるコンテキストメーターは、使用量を示します（309/16K、のちに4.2K/16K）。ツールチップによると、Ollamaのnum_ctxトークンを数え、推論トークンは含みません。テスターの見解：「somebody has spent some time to develop something real」。",
+      "チャット",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-context-meter-tooltip"
+      ]
+    ],
+    [
+      "LU-10",
+      "クリップのボタンで添付したExcelファイル（.xlsx、84 KB）は読み込まれませんでした。モデルはファイル名とシートのファイル名（sheet1.xmlからsheet6.xml）から答え、内容は見えないと述べました。.xlsxはDocsのドロップ領域に表示されている形式には含まれていません（TE-3）。",
+      "ドキュメント",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "LU-11",
+      "クリップのボタンで添付したPDF（872 KB）は読み込まれませんでした。最初の回答はファイル名に基づいており、文書内の金額についての質問には、テキストを読み取れないという返答があり、コピー＆ペーストを求められました（TE-2）。",
+      "ドキュメント",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "LU-12",
+      "テスターのメモによると、同じPDFをDocsフィールドから渡した場合も失敗しました。スクリーンショットはありません。",
+      "ドキュメント",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "LU-13",
+      "Docsフィールドに追加したWordファイルは「20 chunks」と表示されましたが、モデルは.docxの内部の内容を読み取れないと答えました。原因は切り分けられていません。埋め込みモデルがインストールされていたかどうかは記録されていません（LU-07）。",
+      "ドキュメント",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "LU-14",
+      "最初の画像の前に、Createタブには、一度きりのセットアップでApple MLXと最小の画像モデルがインストールされ、「about 5 GB in all」と表示されます。テスターが実際にダウンロードされるのを見たのは、Python wheel（torch、88.0 MB）とSD Turboモデル（2.4 GB）で、合計は記録されていません。",
+      "画像",
+      "vendor-claim",
+      "Positive",
+      [
+        "locally-uncensored-image-one-time-setup-5-gb"
+      ]
+    ],
+    [
+      "LU-15",
+      "ダウンロードのダイアログには、パーセント、GB中のMB、MB/sが表示されます（32%で1.2 MB/s、100%で1.1 MB/s）が、残り時間は表示されません。この速度では、2.4 GBに約33〜36分、5 GBに約70〜76分かかります（計算。一定の速度を仮定）。100%の時点でも、Installedと表示されるまでダイアログは残り、速度は変化し続けました。所要時間は記録されていません。",
+      "画像",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-16",
+      "ダイアログには、インストールはバックグラウンドで実行され、タブを離れても続くと表示されます（vendor-claim）。テスターはタブを離れ、Settingsを開き、アプリを再起動しましたが、ダウンロードは途中の進捗から再開され、Modelsタブにも同じ進捗が表示されました（TE-4）。",
+      "画像",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-17",
+      "画像モデルのカードには、ダウンロードサイズ、必要メモリ、このMacへの適合ラベル（「Runs on this Mac」、または「Too big for this Mac's memory. Images run on LU Cloud」）に加えて、Get anywayボタンが表示されます。数値は適合の図にあります。",
+      "画像",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-image-model-catalog-memory-fit"
+      ]
+    ],
+    [
+      "LU-18",
+      "大きすぎると表示されたモデルには、「Try LU Cloud」の案内が出ます。PromptQuorumディレクトリにある開発者の説明では、クラウド側は任意で、クレジット制です。使用もテストもしていません。",
+      "画像",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-19",
+      "入門用モデルのSD Turbo（512×512）で、最初のプロンプト「draw an elephant sitting on the Eifel Tower」は、塔が出て、象は見当たりませんでした。「a color please」を加えた2つ目では象が現れましたが、白黒のままでした。シードは異なっていました（99713826、1101006993）。テスターの見解：「technically it works, but the model does whatever it wants」。テキストを追加すると前のテキストをモデルが忘れるのではないかというテスターの見立ては、再現していません（TE-5、TE-6）。",
+      "画像",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-elephant-eiffel-first-image",
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "LU-20",
+      "内蔵の「How Image works on a Mac」の解説（HiRes pass、Prompt enhancer）は、完全なガイドへのリンク付きのポップアップで開きます。ガイドは開いていません。テスターの見解：「inbuilt instructions, great」。",
+      "画像",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-how-image-works-guide"
+      ]
+    ],
+    [
+      "LU-21",
+      "Videoタブでは、一度きりのセットアップ（テキストエンコーダー付きのLTX-2.3 Distilled 4ビット）が約27 GBと示されます。テスターはこのMacでは実行していません。",
+      "画像",
+      "vendor-claim",
+      "Info",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "LU-22",
+      "キャラクター学習にはZ-Image Turbo（30.5 GB、32 GB必要、このMacには大きすぎると表示）が必要です。Characterタブは写真を受け付けました（カウンター6/100。実在の人物のためスクリーンショットは非公開）が、24 GBでは学習を開始できませんでした。4ビット版のZ-Image Turboは試していません。OSとアプリで7〜8 GBを使うというテスターの見積もりは推測です。",
+      "画像",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-23",
+      "サンプリング設定（Temperature 0.7、Top P 0.9、Top K 40）には説明がありません。テスターは、初心者が他で調べなくて済むよう、情報アイコンを望んでいます。",
+      "設定",
+      "tester-view",
+      "Medium",
+      [
+        "locally-uncensored-sampling-sliders"
+      ]
+    ],
+    [
+      "LU-24",
+      "Settings、Troubleshootを開くとトレースのウィンドウが表示され、テスターは閉じられなかったため、アプリを再起動しました。原因は切り分けられていません。",
+      "設定",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "LU-25",
+      "設定には、ライト／ダークの切り替え（見つけて使用）、ChatGPTのエクスポート（.zipまたは.json）のインポート、チャットのバックアップのエクスポートとインポート、コンテンツポリシー、プライバシー、アップデート、オンボーディングがあります。使ったのはテーマの切り替えのみです。",
+      "設定",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-26",
+      "テスターの大きな表示スケーリングでは、メッセージ欄がとても小さく、灰色のバーが横切っています。その意味はテスターには不明です。スケーリングの設定は記録されていません。",
+      "設定",
+      "tester-view",
+      "Low",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-27",
+      "A/B Compareは2つのモデルを並べて実行し、速度、時間、トークン数を表示します。「where is Paris」の質問で、gemma4は54.5 t/s、15.5 s、846トークン。gemma3:1bは23.9 t/s、0.4 s、9トークン。gemma3:1bはパリを北米に置きましたが、これはモデルの誤りであり、アプリの誤りではありません。",
+      "比較",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "LU-28",
+      "Benchmarkは、正答率で重み付けした「useful」トークン毎秒でモデルを順位付けします：gemma3:1bは109.4（生の値164.1、正答率67%）、gemma4は56.9（正答率100%）、6回の実行。アプリが「correct」を判定する方法と、「Benchmark 5 remaining」というカウンターは確認していません。",
+      "比較",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-29",
+      "Coding Agent（gemma4）はピンポンゲーム用のindex.htmlを書き、内蔵プレビュー（Desktop、Tablet、Mobile）にスコア付きで動作するゲームが表示されます。最初の返答ではファイルの場所が示されなかったため、テスターが尋ねると、エージェントがファイルを読み返しました（248行）。権限モードはAsk、Bypass、Planです。テスターがゲームを遊んだかどうかは記録されていません。",
+      "エージェント",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview",
+        "locally-uncensored-agent-permission-modes"
+      ]
+    ],
+    [
+      "LU-30",
+      "クラウド機能がローカル機能の隣にあります：上部バーのCloudトグル、LU Cloudの案内、モデル一覧のminimax-m2:cloud項目。データがマシンの外に出たかどうかはテストしていません。ウェルカム画面の「Your chats stay on your machine」はvendor-claimです。",
+      "信頼性",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-31",
+      "この製品の中心的な主張である、コンテンツフィルターなしとAbliterated系の入門用モデルは、テストしていません。全体を通して標準のgemma4モデルを使い、Content policyの設定は開いていません。",
+      "対象範囲",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "重要度は、初めて使う人への影響度です。案であり、実測値ではありません。Infoは、問題でも長所でもない所見を示します。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "すでにOllamaのモデルを持っていて、チャット、コーディングエージェント、入門レベルの画像生成を1か所で使いたいMacユーザー（1回のセッションからの推測）。アプリ自身のラベルでは、4ビットの画像モデルは16 GBとされています。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "今すぐドキュメントチャットが必要な人、または24 GBでキャラクター学習やフルサイズの画像モデルを使いたい人。"
+      ]
+    ],
+    "retest": "開発者がドキュメントチャットの修正、サンプリングの説明、ダウンロード時間の目安、Troubleshootの変更を出したとき、またはメジャーバージョンが新しくなったときに再テストしてください。対象：両方の経路でのPDF、4ビットの画像モデル、動画、オフライン利用、アンインストール。あわせてアプリとmacOSのバージョンを記録してください。"
+  },
+  "background_intro": "ハンズオンではありません。以下は、LUについてのPromptQuorumディレクトリの項目と開発者によるもので、ここでは独自に検証していません。",
+  "background": [
+    [
+      "third-party",
+      "LU Labs。ディレクトリの項目では、開発者はDavidという名前です。"
+    ],
+    [
+      "third-party",
+      "ライセンスはAGPL 3.0、フリーミアム。GitHubスターは約1,750、初掲載は2026-09-04（2026-09-22のディレクトリ確認時点。1か月以上前）。"
+    ],
+    [
+      "vendor-claim",
+      "クラウド側は任意でクレジット制。2026-09-22の開発者自身の説明ではMac版は計画中とされていましたが、テスターは2026-10-20にMac版を実行しました。"
+    ]
+  ],
+  "sources": [
+    "テスターのハンズオンのメモとスクリーンショット、2026年10月20日（元のWordメモ。生のメモのPDFは追加予定）。",
+    "Locally UncensoredのPromptQuorumディレクトリ項目とレビュー（slug: locally-uncensored）、最終確認日2026-09-22。",
+    "ベンダーサイト：locallyuncensored.com（このテストでは開いていません）。",
+    "ベンダーのリリース：github.com/PurpleDoubleD/locally-uncensored/releases（ディレクトリに掲載。このテストでは開いていません）。",
+    "開発者からテスターへのメッセージ（ドイツ語）。上記では言い換えています。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "locally-uncensored-main-chat-window",
+      "figure": 1,
+      "file": "locally-uncensored-main-chat-window.webp",
+      "path": "images/locally-uncensored-main-chat-window.webp",
+      "alt": "ダークテーマのLUメインウィンドウ。Chat、Create、Voice、Compare、Benchmark、Models、Settingsのタブと、空のチャット入力欄。",
+      "caption": "セットアップ後のメインウィンドウ。観察。",
+      "role": "hero",
+      "width": 1269,
+      "height": 796,
+      "bytes": 12462,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 7"
+    },
+    {
+      "id": "locally-uncensored-engine-choice-step",
+      "figure": 2,
+      "file": "locally-uncensored-engine-choice-step.webp",
+      "path": "images/locally-uncensored-engine-choice-step.webp",
+      "alt": "LUのセットアップ3ステップ中のステップ1：LU Engineが準備完了としてチェックされ、Continueボタンと、OllamaやLM Studioなど別のエンジンを使うリンクがある。",
+      "caption": "セットアップ3ステップ中のステップ1。観察。",
+      "role": "moment",
+      "width": 1176,
+      "height": 754,
+      "bytes": 20808,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 2"
+    },
+    {
+      "id": "locally-uncensored-existing-models-detected",
+      "figure": 3,
+      "file": "locally-uncensored-existing-models-detected.webp",
+      "path": "images/locally-uncensored-existing-models-detected.webp",
+      "alt": "LUのセットアップのステップ2：マシンにすでにある7つのモデルでgemma4:latestが選択され、その下にインストール可能な入門用モデルが2つある。",
+      "caption": "セットアップ3ステップ中のステップ2。観察。",
+      "role": "moment",
+      "width": 682,
+      "height": 663,
+      "bytes": 31280,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 4"
+    },
+    {
+      "id": "locally-uncensored-document-chat-setup-step",
+      "figure": 4,
+      "file": "locally-uncensored-document-chat-setup-step.webp",
+      "path": "images/locally-uncensored-document-chat-setup-step.webp",
+      "alt": "セットアップ3ステップ中のステップ3（任意のDocument Chat）：nomic-embed-text（84 MB）と、InstallおよびSkip for nowのボタン。",
+      "caption": "セットアップで提示される任意の埋め込みモデル。観察。",
+      "role": "gallery",
+      "width": 556,
+      "height": 367,
+      "bytes": 14586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 5"
+    },
+    {
+      "id": "locally-uncensored-pdf-not-read-reply",
+      "figure": 5,
+      "file": "locally-uncensored-pdf-not-read-reply.webp",
+      "path": "images/locally-uncensored-pdf-not-read-reply.webp",
+      "alt": "PDFの全文を読み取れないと述べ、該当部分をチャットにコピー＆ペーストするよう求めるチャットの返答。",
+      "caption": "PDFについての質問への返答。観察。",
+      "role": "moment",
+      "width": 1008,
+      "height": 399,
+      "bytes": 44580,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-docs"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 17"
+    },
+    {
+      "id": "locally-uncensored-excel-file-not-read-reply",
+      "figure": 6,
+      "file": "locally-uncensored-excel-file-not-read-reply.webp",
+      "path": "images/locally-uncensored-excel-file-not-read-reply.webp",
+      "alt": "Excelファイルを、その名前とシートのファイルから説明し、実際の内容は読み取れないと述べるチャットの返答。",
+      "caption": "Excelについての質問への返答。観察。",
+      "role": "gallery",
+      "width": 982,
+      "height": 687,
+      "bytes": 73560,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 12"
+    },
+    {
+      "id": "locally-uncensored-docs-drop-zone-20-chunks",
+      "figure": 7,
+      "file": "locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "path": "images/locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "alt": "PDF、DOCX、TXTを挙げているDocsのドロップ領域。アップロードしたファイルは「20 chunks」と表示されている。",
+      "caption": "Wordファイルが「20 chunks」と表示されたDocsのドロップ領域。観察。",
+      "role": "gallery",
+      "width": 327,
+      "height": 216,
+      "bytes": 2856,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 18"
+    },
+    {
+      "id": "locally-uncensored-docx-not-read-reply",
+      "figure": 8,
+      "file": "locally-uncensored-docx-not-read-reply.webp",
+      "path": "images/locally-uncensored-docx-not-read-reply.webp",
+      "alt": ".docxファイルの内部の内容を読み取れず、どの言語が含まれるか分からないと述べるチャットの返答。",
+      "caption": "Wordファイルがチャンク化された後の返答。観察。",
+      "role": "gallery",
+      "width": 994,
+      "height": 162,
+      "bytes": 15786,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 19"
+    },
+    {
+      "id": "locally-uncensored-context-meter-tooltip",
+      "figure": 9,
+      "file": "locally-uncensored-context-meter-tooltip.webp",
+      "path": "images/locally-uncensored-context-meter-tooltip.webp",
+      "alt": "コンテキストメーターのツールチップ：16K中6.5Kトークン、Ollama num_ctx、推論トークンは含まない。",
+      "caption": "コンテキストメーターのツールチップ。実測。",
+      "role": "gallery",
+      "width": 303,
+      "height": 109,
+      "bytes": 6134,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 14"
+    },
+    {
+      "id": "locally-uncensored-image-one-time-setup-5-gb",
+      "figure": 10,
+      "file": "locally-uncensored-image-one-time-setup-5-gb.webp",
+      "path": "images/locally-uncensored-image-one-time-setup-5-gb.webp",
+      "alt": "Createタブ、Image：ローカル画像生成には約5 GBの一度きりのセットアップが必要というメッセージと、Download and installボタン。",
+      "caption": "最初の画像の前のCreateタブ。5 GBはvendor-claimです。",
+      "role": "gallery",
+      "width": 930,
+      "height": 865,
+      "bytes": 23592,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 20"
+    },
+    {
+      "id": "locally-uncensored-image-download-100-percent",
+      "figure": 11,
+      "file": "locally-uncensored-image-download-100-percent.webp",
+      "path": "images/locally-uncensored-image-download-100-percent.webp",
+      "alt": "100パーセントのダウンロードダイアログ。2.4 GB中2.4 GB、1.1 MB/s、Cancelリンク付き。",
+      "caption": "100パーセント時点のダウンロード。実測。",
+      "role": "gallery",
+      "width": 591,
+      "height": 315,
+      "bytes": 10302,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 28"
+    },
+    {
+      "id": "locally-uncensored-how-image-works-guide",
+      "figure": 12,
+      "file": "locally-uncensored-how-image-works-guide.webp",
+      "path": "images/locally-uncensored-how-image-works-guide.webp",
+      "alt": "「How Image works on a Mac」のポップアップ。ぼかしたプレビュー、HiRes passについての文章、完全なガイドへのリンク。",
+      "caption": "アプリ内の解説。観察。",
+      "role": "gallery",
+      "width": 455,
+      "height": 510,
+      "bytes": 14540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 31"
+    },
+    {
+      "id": "locally-uncensored-image-model-catalog-memory-fit",
+      "figure": 13,
+      "file": "locally-uncensored-image-model-catalog-memory-fit.webp",
+      "path": "images/locally-uncensored-image-model-catalog-memory-fit.webp",
+      "alt": "ダウンロードサイズ、必要メモリ、「Runs on this Mac」または「Too big for this Mac's memory」のラベルを示す6枚の画像モデルのカード。",
+      "caption": "画像モデルのカタログ。サイズと必要メモリは画面から実測。",
+      "role": "moment",
+      "width": 1015,
+      "height": 428,
+      "bytes": 53074,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 29"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-first-image",
+      "figure": 14,
+      "file": "locally-uncensored-elephant-eiffel-first-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-first-image.webp",
+      "alt": "MLX SD Turboで作成した、シード99713826の512×512の白黒のエッフェル塔の画像。プロンプト欄には象のリクエストが表示されている。",
+      "caption": "最初の象のプロンプト、シード99713826。観察。",
+      "role": "gallery",
+      "width": 825,
+      "height": 632,
+      "bytes": 39310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 32"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-second-image",
+      "figure": 15,
+      "file": "locally-uncensored-elephant-eiffel-second-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-second-image.webp",
+      "alt": "MLX SD Turboによる、シード1101006993の512×512の線画。エッフェル塔が2本あり、足元に象がいる。やはり白黒。",
+      "caption": "2回目の象のプロンプト、シード1101006993。観察。",
+      "role": "gallery",
+      "width": 902,
+      "height": 689,
+      "bytes": 42130,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 33"
+    },
+    {
+      "id": "locally-uncensored-lovers-beach-sunset-image",
+      "figure": 16,
+      "file": "locally-uncensored-lovers-beach-sunset-image.webp",
+      "path": "images/locally-uncensored-lovers-beach-sunset-image.webp",
+      "alt": "High品質のMLX SD Turboで作成した、夕暮れの浜辺にいる2人の人物の、512×512の絵画調の画像。",
+      "caption": "3つ目の画像プロンプト。観察。",
+      "role": "gallery",
+      "width": 808,
+      "height": 630,
+      "bytes": 35046,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 34"
+    },
+    {
+      "id": "locally-uncensored-video-setup-27-gb",
+      "figure": 17,
+      "file": "locally-uncensored-video-setup-27-gb.webp",
+      "path": "images/locally-uncensored-video-setup-27-gb.webp",
+      "alt": "Videoタブ：ローカル動画生成には約27 GBの一度きりのセットアップが必要というメッセージと、Download and installボタン。",
+      "caption": "動画のセットアップ画面。27 GBはvendor-claimです。",
+      "role": "gallery",
+      "width": 549,
+      "height": 308,
+      "bytes": 15570,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 35"
+    },
+    {
+      "id": "locally-uncensored-z-image-turbo-too-big-card",
+      "figure": 18,
+      "file": "locally-uncensored-z-image-turbo-too-big-card.webp",
+      "path": "images/locally-uncensored-z-image-turbo-too-big-card.webp",
+      "alt": "Z-Image Turboのカード：30.5 GB、32 GBメモリ必要、このMacには大きすぎると表示。Try LU CloudとGet anywayのボタン付き。",
+      "caption": "Z-Image Turboのカード。画面から実測。",
+      "role": "moment",
+      "width": 341,
+      "height": 219,
+      "bytes": 9818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 37"
+    },
+    {
+      "id": "locally-uncensored-sampling-sliders",
+      "figure": 19,
+      "file": "locally-uncensored-sampling-sliders.webp",
+      "path": "images/locally-uncensored-sampling-sliders.webp",
+      "alt": "生成設定のスライダー：Temperature 0.7、Top P 0.9、Top K 40。説明文はない。",
+      "caption": "既定のサンプリングスライダー。観察。",
+      "role": "gallery",
+      "width": 809,
+      "height": 207,
+      "bytes": 3026,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 22"
+    },
+    {
+      "id": "locally-uncensored-ab-compare-where-is-paris",
+      "figure": 20,
+      "file": "locally-uncensored-ab-compare-where-is-paris.webp",
+      "path": "images/locally-uncensored-ab-compare-where-is-paris.webp",
+      "alt": "A/B Compare画面：gemma4:latestとgemma3:1bの、「where is Paris」の質問に対する速度、時間、トークン数。",
+      "caption": "A/B Compare。アプリによる実測。",
+      "role": "gallery",
+      "width": 1260,
+      "height": 519,
+      "bytes": 40440,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 40"
+    },
+    {
+      "id": "locally-uncensored-benchmark-leaderboard",
+      "figure": 21,
+      "file": "locally-uncensored-benchmark-leaderboard.webp",
+      "path": "images/locally-uncensored-benchmark-leaderboard.webp",
+      "alt": "Benchmarkのリーダーボード：gemma3:1bが「useful」トークン毎秒109.4で1位、gemma4:latestが56.9で2位。下に7つのテキストモデルの一覧。",
+      "caption": "Benchmarkのリーダーボード。アプリによる実測。",
+      "role": "gallery",
+      "width": 798,
+      "height": 691,
+      "bytes": 26384,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 41"
+    },
+    {
+      "id": "locally-uncensored-coding-agent-pingpong-preview",
+      "figure": 22,
+      "file": "locally-uncensored-coding-agent-pingpong-preview.webp",
+      "path": "images/locally-uncensored-coding-agent-pingpong-preview.webp",
+      "alt": "ピンポンゲームのコーディングエージェントのプレビュー：黒いフィールド、白いパドル2つ、黄色いボール、スコア5対4、Desktop・Tablet・Mobileの切り替え。",
+      "caption": "生成されたゲームのプレビュー。観察。",
+      "role": "moment",
+      "width": 959,
+      "height": 590,
+      "bytes": 5400,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 45"
+    },
+    {
+      "id": "locally-uncensored-agent-permission-modes",
+      "figure": 23,
+      "file": "locally-uncensored-agent-permission-modes.webp",
+      "path": "images/locally-uncensored-agent-permission-modes.webp",
+      "alt": "コーディングエージェントの権限モードのメニュー：Ask permissions（有効）、Bypass permissions、Plan mode。それぞれに1行の説明。",
+      "caption": "エージェントの権限モード。観察。",
+      "role": "gallery",
+      "width": 304,
+      "height": 170,
+      "bytes": 7004,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored（LU）アプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026年10月20日。正確な時刻は記録なし",
+      "original_docx_media": "Tester notes (Word), screenshot 43"
+    }
+  ],
+  "figure_order": [
+    "locally-uncensored-main-chat-window",
+    "locally-uncensored-engine-choice-step",
+    "locally-uncensored-existing-models-detected",
+    "locally-uncensored-document-chat-setup-step",
+    "locally-uncensored-pdf-not-read-reply",
+    "locally-uncensored-excel-file-not-read-reply",
+    "locally-uncensored-docs-drop-zone-20-chunks",
+    "locally-uncensored-docx-not-read-reply",
+    "locally-uncensored-context-meter-tooltip",
+    "locally-uncensored-image-one-time-setup-5-gb",
+    "locally-uncensored-image-download-100-percent",
+    "locally-uncensored-how-image-works-guide",
+    "locally-uncensored-image-model-catalog-memory-fit",
+    "locally-uncensored-elephant-eiffel-first-image",
+    "locally-uncensored-elephant-eiffel-second-image",
+    "locally-uncensored-lovers-beach-sunset-image",
+    "locally-uncensored-video-setup-27-gb",
+    "locally-uncensored-z-image-turbo-too-big-card",
+    "locally-uncensored-sampling-sliders",
+    "locally-uncensored-ab-compare-where-is-paris",
+    "locally-uncensored-benchmark-leaderboard",
+    "locally-uncensored-coding-agent-pingpong-preview",
+    "locally-uncensored-agent-permission-modes"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年10月20日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "24 GB",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "モデル",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好",
+      "Info": "情報"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
+  }
+}

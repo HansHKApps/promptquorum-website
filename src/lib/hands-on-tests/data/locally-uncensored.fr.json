@@ -1,0 +1,1727 @@
+{
+  "id": "pq-test-locally-uncensored-2026-10-20",
+  "hero": "locally-uncensored-main-chat-window",
+  "date_human": "20 octobre 2026",
+  "captured": "2026-10-20 ; heure de fin non consignée",
+  "standard_version": "0.2",
+  "locale": "fr",
+  "app": {
+    "name": "Locally Uncensored (LU)",
+    "slug": "locally-uncensored",
+    "vendor": "LU Labs",
+    "category": "Appli de bureau d'IA locale : chat, images, agent de code",
+    "platform": "macOS (version Mac)",
+    "pricing_url": "https://locallyuncensored.com"
+  },
+  "title": "Locally Uncensored (LU) sur un Mac de 24 GB : chat, chat avec documents, images et agent de code dans une seule appli",
+  "page_title": "Test de Locally Uncensored",
+  "dek": "Une première session sur un Mac Apple M4 de 24 GB : une prise en main soignée et de nombreuses fonctions, mais les fichiers PDF, Word et Excel n'ont pas été lus.",
+  "seo": {
+    "title": "Test pratique de Locally Uncensored : chat, images, agent",
+    "description": "Test pratique de Locally Uncensored (LU) sur un Mac M4 de 24 GB : chat, images et agent de code ont fonctionné, pas le chat avec PDF ni Word."
+  },
+  "faq": [
+    [
+      "Le chat avec documents fonctionne-t-il dans Locally Uncensored ?",
+      "Pas dans le test. Un PDF (872 KB) et un fichier Excel joints avec le trombone n'ont été lus que par leur nom de fichier, et un fichier Word déposé dans le champ Docs a été listé en 20 fragments (chunks), mais le modèle a dit ne pas pouvoir lire le contenu. Le testeur indique aussi que le PDF a échoué via le champ Docs. Le développeur a confirmé le constat sur le PDF et dit s'en occuper ; ce n'est pas vérifié.",
+      "observed"
+    ],
+    [
+      "Quels modèles d'image tournent sur un Mac de 24 GB dans LU ?",
+      "D'après les cartes de l'appli elle-même, SD Turbo (8 GB requis) et trois modèles 4 bits (FLUX.2 klein 4B, Z-Image Turbo, Qwen-Image 2.1 ; 16 GB chacun) sont marqués \"Runs on this Mac\" ; Z-Image (32 GB), Z-Image Turbo (32 GB) et Qwen-Image 2512 (64 GB) sont signalés comme trop gros. Seul SD Turbo a été lancé pendant le test.",
+      "measured"
+    ],
+    [
+      "LU peut-il entraîner un personnage sur un Mac de 24 GB ?",
+      "Pas dans le test. L'entraînement de personnage exige Z-Image Turbo (30.5 GB, 32 GB requis), que l'appli signale comme trop gros pour ce Mac. L'onglet Character a accepté des photos, mais l'entraînement n'a pas pu démarrer. La variante 4 bits de Z-Image Turbo n'a pas été essayée.",
+      "observed"
+    ],
+    [
+      "LU dispose-t-il d'un agent de code ?",
+      "Oui. Le Coding Agent, exécuté avec gemma4, a écrit un index.html pour un jeu de ping-pong, et l'aperçu intégré (Desktop, Tablet, Mobile) l'a montré en marche, avec un score. Les modes d'autorisation sont Ask, Bypass et Plan.",
+      "observed"
+    ],
+    [
+      "Combien de temps prend la première installation du module d'images ?",
+      "Aucun temps restant n'est affiché, seulement le pourcentage et les MB/s. Aux 1.1 à 1.2 MB/s relevés, le modèle SD Turbo de 2.4 GB prend environ 33 à 36 minutes par calcul ; la durée réelle n'a pas été chronométrée.",
+      "observed"
+    ],
+    [
+      "LU retrouve-t-il les modèles que j'ai déjà ?",
+      "Oui, dans le test : l'étape 2 de la configuration a listé sept modèles déjà présents sur la machine, sans qu'on le demande. L'écran n'explique pas comment LU les trouve.",
+      "observed"
+    ],
+    [
+      "LU fonctionne-t-il hors ligne et garde-t-il les conversations privées ?",
+      "Non testé. \"Your chats stay on your machine\" est l'affirmation de l'écran d'accueil. L'appli propose aussi un interrupteur Cloud, des invites LU Cloud et un modèle cloud dans la liste des modèles ; savoir si des données ont quitté la machine n'a pas été vérifié.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partiel",
+  "published": "2026-10-24",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "Appli",
+      "Locally Uncensored, affichée dans l'appli sous le nom “LU by LU Labs”",
+      "observed"
+    ],
+    [
+      "Version",
+      "Non consignée. L'annuaire PromptQuorum indique 3.0.2 pour son propre avis daté du 2026-09-22 ; la version du testeur peut différer.",
+      null
+    ],
+    [
+      "Source",
+      "Site du fournisseur locallyuncensored.com d'après l'annuaire ; la page de téléchargement exacte n'est pas consignée.",
+      null
+    ],
+    [
+      "Testeur",
+      "Hans Kuepper, fondateur de PromptQuorum",
+      null
+    ],
+    [
+      "Début",
+      "20 octobre 2026 ; heure de début non consignée.",
+      null
+    ],
+    [
+      "Fin",
+      "Non consignée",
+      null
+    ],
+    [
+      "Matériel",
+      "Apple M4, 24 GB de mémoire unifiée. La note disait “M3, 24 GB” ; le testeur a corrigé la puce en M4 après le brouillon. Il n'est pas précisé s'il s'agit d'un M4 Pro.",
+      "observed"
+    ],
+    [
+      "Système",
+      "Version de macOS non consignée. Une wheel Python téléchargée porte l'étiquette macosx_14_0_arm64, qui indique un minimum, pas la version installée.",
+      null
+    ],
+    [
+      "Pourquoi ce test",
+      "Les notes indiquent que le testeur espérait que LU fasse plus que du chat, puisqu'il existe déjà beaucoup d'interfaces de chat locales.",
+      "tester-view"
+    ],
+    [
+      "Objectif",
+      "Non formulé comme un objectif dans les notes. Elles décrivent un premier tour d'horizon de la configuration, du chat, des documents, des images et des autres onglets.",
+      null
+    ],
+    [
+      "Modèles sur la machine",
+      "Sept modèles étaient listés comme déjà présents : x/z-image-turbo, HSR-DeepThink/nwe, x/flux2-klein, gemma4, gemma3:1b, minimax-m2:cloud, qwen3-coder:30b. Les tests de chat ont utilisé gemma4 et gemma3:1b.",
+      "observed"
+    ],
+    [
+      "Aide de l'IA",
+      "Claude a rédigé ce rapport à partir des notes Word du testeur et de 45 captures d'écran. Aucune aide de l'IA pendant le test lui-même n'est consignée.",
+      "observed"
+    ],
+    [
+      "Déclaration d'intérêts",
+      "Le testeur a fondé PromptQuorum, un site de contenu et un annuaire consacrés aux applis d'IA locale ; LU y figure avec un avis rédigé par IA et une déclaration du fondateur fournie par le développeur (2026-09-22). Le testeur et le développeur ont échangé des messages en septembre 2026, puis de nouveau après ce test ; le développeur avait les notes du test avant de répondre. LU reçoit des clics depuis le site. Aucun paiement ni parrainage n'est consigné dans les notes.",
+      "observed"
+    ]
+  ],
+  "disclosure": "Le testeur a fondé PromptQuorum, un site de contenu et un annuaire consacrés aux applis d'IA locale ; LU y figure avec un avis rédigé par IA et une déclaration du fondateur fournie par le développeur (2026-09-22). Le testeur et le développeur ont échangé des messages en septembre 2026, puis de nouveau après ce test ; le développeur avait les notes du test avant de répondre. LU reçoit des clics depuis le site. Aucun paiement ni parrainage n'est consigné dans les notes.",
+  "verdict": {
+    "general": "Une appli aux fonctions larges, avec une première utilisation soigneusement conçue. Dans cette session, le chat, la génération d'images locale sur le plus petit modèle et l'agent de code ont fonctionné ; le chat avec documents, non. La vidéo, l'entraînement de personnage, la confidentialité et la désinstallation n'ont pas été menés à terme ou n'ont pas été testés.",
+    "fit": "Le testeur la qualifie d'appli locale unique la plus complète qu'il ait vue jusqu'ici, à suivre. Ses notes ne disent pas s'il continuera à l'utiliser."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Petit installateur, configuration en trois étapes, moteur prêt. La recherche par le nom complet n'a rien donné."
+    ],
+    [
+      "Prise en main et choix du modèle",
+      4,
+      "Modèles existants détectés et tailles affichées ; la coche du moteur ne s'est pas décochée."
+    ],
+    [
+      "Fonction principale",
+      4,
+      "Le chat et l'agent de code ont fonctionné, la sortie d'image était approximative sur le modèle de départ, le chat avec documents a échoué."
+    ],
+    [
+      "Guidage et itération",
+      3,
+      "Les explications intégrées et les étiquettes d'adéquation sont solides ; les réglages d'échantillonnage ne sont pas expliqués et la fenêtre Troubleshoot ne se fermait pas."
+    ],
+    [
+      "Performances",
+      null,
+      "Non chronométré par le testeur. Des vitesses relevées par l'appli existent pour deux petits modèles (LU-27, LU-28)."
+    ],
+    [
+      "Documentation",
+      null,
+      "Seules les explications intégrées à l'appli ont été vues ; le guide complet lié n'a pas été ouvert."
+    ],
+    [
+      "Confiance et confidentialité",
+      null,
+      "Non audité. Le fonctionnement hors ligne et le flux de données vers le cloud n'ont pas été testés (LU-30)."
+    ],
+    [
+      "Désinstallation",
+      null,
+      "Non testée."
+    ]
+  ],
+  "scores_note": "Les scores sont des propositions tirées des éléments de preuve ci-dessous (1 = médiocre, 5 = très bon). Le testeur a relevé la fonction principale à 4 ; les autres restent des propositions de l'auteur du rapport. n/d signifie non testé, pas zéro.",
+  "tldr": [
+    [
+      "observed",
+      "LU est une appli locale tout-en-un pour Mac, avec des onglets pour le chat, les images, la voix, la comparaison, le benchmark et un agent de code. La configuration du premier lancement comporte trois étapes et a trouvé sept modèles déjà présents sur la machine."
+    ],
+    [
+      "observed",
+      "Le chat a fonctionné, l'agent de code aussi : il a écrit un index.html pour un jeu de ping-pong et l'aperçu intégré l'a montré en marche, avec un score."
+    ],
+    [
+      "observed",
+      "Le chat avec documents n'a pas fonctionné dans le test : un PDF (872 KB) et un fichier Excel joints avec le trombone n'ont pas été lus, et un fichier Word ajouté dans le champ Docs a été listé en 20 fragments (chunks), mais le modèle a dit ne pas pouvoir lire le contenu."
+    ],
+    [
+      "observed",
+      "La génération d'images locale a fonctionné sur le plus petit modèle, SD Turbo en 512×512. Le premier prompt, un éléphant sur la tour Eiffel, n'a donné que la tour ; le second a montré un éléphant, mais en noir et blanc."
+    ],
+    [
+      "measured",
+      "Les cartes des modèles d'image indiquent la taille de téléchargement, la mémoire requise et une étiquette d'adéquation pour ce Mac. Avec 24 GB, quatre modèles sont marqués \"Runs on this Mac\" (16 GB ou moins) et trois \"Too big\" (32 GB ou plus), dont celui qu'exige l'entraînement de personnage."
+    ],
+    [
+      "observed",
+      "La boîte de dialogue de téléchargement affiche le pourcentage et les MB/s, mais pas le temps restant ; à environ 1.1 à 1.2 MB/s, le modèle de 2.4 GB a pris environ 33 à 36 minutes par calcul. La vidéo, l'entraînement de personnage, l'usage hors ligne, la confidentialité et la désinstallation n'ont pas été menés à terme ou n'ont pas été testés."
+    ],
+    [
+      "vendor-claim",
+      "Le développeur a confirmé le constat sur le PDF et dit s'occuper du correctif pour les documents, des explications sur Top P, Top K et Temperature, d'une estimation de la durée de téléchargement et de la fenêtre Troubleshoot. Rien de cela n'est vérifié ; chaque point est à retester."
+    ]
+  ],
+  "quotes": [
+    "Ce sont les petits détails qui comptent. J'ai vu tant d'applis avec une excellente idée, mais dès qu'on creuse, on trouve des problèmes d'interface.",
+    "Cet outil a tout, et certaines fonctions auxquelles on ne s'attendrait pas dans un outil de ce genre."
+  ],
+  "quote_note": "Notes du testeur, légèrement retouchées à partir d'une dictée ; traduites de l'anglais. Les deux citations sont son jugement, pas des mesures.",
+  "moments_title": "Six moments qui ont façonné ce test",
+  "moments_nav": "Six moments",
+  "moments": [
+    [
+      "Un moteur, une coche",
+      "Étape du moteur lors de la configuration : LU Engine coché comme prêt, et la coche ne se désactivait pas.",
+      "locally-uncensored-engine-choice-step",
+      "chapter-install"
+    ],
+    [
+      "Modèles déjà trouvés",
+      "Sept modèles existants listés à la configuration, sans qu'on le demande.",
+      "locally-uncensored-existing-models-detected",
+      "chapter-install"
+    ],
+    [
+      "Un PDF réduit à un nom de fichier",
+      "La réponse à une question sur le document : le modèle ne peut pas lire le texte.",
+      "locally-uncensored-pdf-not-read-reply",
+      "chapter-docs"
+    ],
+    [
+      "Taille et adéquation avant le téléchargement",
+      "Cartes de modèles d'image avec la taille de téléchargement, la mémoire requise et une étiquette d'adéquation pour ce Mac.",
+      "locally-uncensored-image-model-catalog-memory-fit",
+      "chapter-image"
+    ],
+    [
+      "L'entraînement de personnage s'arrête ici",
+      "Le modèle requis, Z-Image Turbo, est signalé comme trop gros pour 24 GB.",
+      "locally-uncensored-z-image-turbo-too-big-card",
+      "chapter-image"
+    ],
+    [
+      "Un agent de code dans la boîte",
+      "Aperçu du jeu de ping-pong écrit par l'agent.",
+      "locally-uncensored-coding-agent-pingpong-preview",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "L'annonce et le premier lancement",
+      "items": [
+        [
+          "tester-view",
+          "Le testeur espérait que LU fasse plus que du chat, puisqu'il existe déjà beaucoup d'interfaces de chat locales.",
+          null
+        ],
+        [
+          "observed",
+          "Le téléchargement de l'installateur pesait 15.8 MB, lu par le testeur dans le téléchargement. Après l'installation, il n'a pas retrouvé l'appli par son nom complet ; elle s'appelle LU.",
+          null
+        ],
+        [
+          "observed",
+          "Après la configuration, la fenêtre principale affiche des onglets Chat, Create, Voice, Compare, Benchmark, Models et Settings, avec un interrupteur Cloud dans la barre supérieure.",
+          "locally-uncensored-main-chat-window"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "Installation et configuration",
+      "items": [
+        [
+          "observed",
+          "L'étape 1 propose le moteur intégré LU Engine, coché comme prêt, avec un bouton Continue et, en dessous, un lien \"Use another engine (Ollama, LM Studio...)\". Le testeur apprécie les applis qui laissent le choix, mais la coche sur la carte du moteur ne se désactivait pas. Le lien vers un autre moteur n'a pas été essayé.",
+          "locally-uncensored-engine-choice-step"
+        ],
+        [
+          "observed",
+          "L'étape 2 a listé sept modèles déjà présents sur la machine, sans qu'on le demande : x/z-image-turbo, HSR-DeepThink/nwe, x/flux2-klein, gemma4, gemma3:1b, minimax-m2:cloud et qwen3-coder:30b. Il a choisi gemma4. Deux modèles de départ, plus bas, affichent une description, la taille de téléchargement et la mémoire libre requise.",
+          "locally-uncensored-existing-models-detected"
+        ],
+        [
+          "tester-view",
+          "Il voit rarement la taille des modèles de départ dans d'autres applis et y voit un point positif.",
+          null
+        ],
+        [
+          "observed",
+          "L'étape 3 propose un modèle d'embedding facultatif pour Document Chat (nomic-embed-text, 84 MB), avec Install et Skip for now. Les notes ne disent pas lequel a été choisi.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-docs",
+      "title": "Chat et documents",
+      "items": [
+        [
+          "observed",
+          "Un premier chat a fonctionné : l'indicateur \"Starting\" affichait 18 s à l'envoi du premier message, le temps de charger le modèle. À la question « Berlin ou Paris : où y a-t-il le plus de stations de métro ? », gemma4 a répondu \"Paris generally has more\" ; le testeur n'a pas vérifié.",
+          null
+        ],
+        [
+          "measured",
+          "Un compteur de contexte au-dessus de la zone de saisie indique l'usage (309/16K, puis 4.2K/16K). Son infobulle précise qu'il compte les tokens num_ctx d'Ollama et exclut les tokens de raisonnement.",
+          null
+        ],
+        [
+          "observed",
+          "Il a joint un fichier Excel (.xlsx, 84 KB) avec le trombone. Le modèle a répondu à partir du nom du fichier et des noms de fichiers des feuilles (sheet1.xml à sheet6.xml) et a dit ne pas voir le contenu. La zone de dépôt Docs liste PDF, DOCX et TXT, pas Excel.",
+          null
+        ],
+        [
+          "observed",
+          "Un PDF (872 KB) joint avec le trombone n'a été lu que par son nom. À une question sur un montant du document, le modèle a répondu qu'il ne pouvait pas lire le texte et lui a demandé de copier-coller la section. Le testeur a d'abord écrit « Yes, it understood the file » puis s'est corrigé quelques lignes plus loin.",
+          "locally-uncensored-pdf-not-read-reply"
+        ],
+        [
+          "observed",
+          "Le même PDF via le champ Docs a aussi échoué, d'après ses notes ; il n'existe pas de capture d'écran. Un fichier Word dans le champ Docs a été listé en 20 fragments (chunks), mais le modèle a dit ne pas pouvoir lire le contenu interne du .docx.",
+          null
+        ],
+        [
+          "tester-view",
+          "Il compare avec les modèles de pointe, a renoncé au PDF et comptait en parler au fondateur.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-image",
+      "title": "Génération d'images",
+      "items": [
+        [
+          "vendor-claim",
+          "L'onglet Create indique que la génération d'images locale exige une configuration unique qui installe Apple MLX et le plus petit modèle d'image, \"about 5 GB in all\". Le testeur a vu télécharger une wheel Python (torch, 88.0 MB) et le modèle SD Turbo (2.4 GB) ; le total n'est pas consigné.",
+          null
+        ],
+        [
+          "observed",
+          "La boîte de dialogue de téléchargement affiche le pourcentage, les MB sur GB et les MB/s (1.2 MB/s à 32 %, 1.1 MB/s à 100 %), mais pas le temps restant. Il a quitté l'onglet, ouvert Settings, rencontré la fenêtre Troubleshoot, redémarré l'appli, et le téléchargement a repris à partir de la progression partielle.",
+          null
+        ],
+        [
+          "observed",
+          "Le catalogue des modèles d'image présente six cartes avec la taille de téléchargement, la mémoire requise et une étiquette : \"Runs on this Mac\" pour les modèles 4 bits, \"Too big for this Mac's memory. Images run on LU Cloud\" pour les plus gros.",
+          "locally-uncensored-image-model-catalog-memory-fit"
+        ],
+        [
+          "observed",
+          "SD Turbo en 512×512 a suivi les prompts de façon approximative. \"draw an elephant sitting on the Eifel Tower\" a donné une tour sans éléphant visible ; en ajoutant \"a color please\", un éléphant est apparu, toujours en noir et blanc. Les seeds différaient, donc le seed peut expliquer la différence.",
+          null
+        ],
+        [
+          "observed",
+          "Il a laissé de côté la vidéo sur cette machine (configuration unique d'environ 27 GB). L'entraînement de personnage exige Z-Image Turbo (30.5 GB, 32 GB requis), signalé comme trop gros pour ce Mac ; l'onglet Character a accepté des photos, mais l'entraînement n'a pas pu démarrer avec 24 GB.",
+          "locally-uncensored-z-image-turbo-too-big-card"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "Réglages, comparaison, benchmark et agent",
+      "items": [
+        [
+          "observed",
+          "Les réglages comprennent un interrupteur clair/sombre (utilisé), l'import d'exports ChatGPT, la sauvegarde des conversations, la politique de contenu, la confidentialité, les mises à jour et l'onboarding. Les curseurs d'échantillonnage (Temperature 0.7, Top P 0.9, Top K 40) ne sont pas expliqués.",
+          null
+        ],
+        [
+          "tester-view",
+          "Il voudrait une icône d'information sur ces curseurs pour que les débutants n'aient pas à chercher ailleurs. Avec son échelle d'affichage élevée, la zone de saisie lui a paru très petite et une barre grise la traversait.",
+          null
+        ],
+        [
+          "measured",
+          "A/B Compare a fait tourner gemma4 et gemma3:1b côte à côte, avec vitesse, durée et tokens (gemma4 54.5 t/s, 15.5 s ; gemma3:1b 23.9 t/s, 0.4 s). Benchmark a classé gemma3:1b premier avec 109.4 t/s \"useful\" et 67 % de réponses correctes, gemma4 avec 56.9 et 100 % de réponses correctes.",
+          null
+        ],
+        [
+          "observed",
+          "Le Coding Agent (gemma4) a écrit un index.html pour un jeu de ping-pong, et l'aperçu intégré (Desktop, Tablet, Mobile) a montré un jeu en marche avec un score. La première réponse n'indiquait pas où se trouvait le fichier ; il a demandé et l'agent l'a relu (248 lignes).",
+          "locally-uncensored-coding-agent-pingpong-preview"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-developer",
+      "title": "La réponse du développeur",
+      "items": [
+        [
+          "vendor-claim",
+          "Après l'envoi des notes par le testeur, le développeur de LU (LU Labs) a répondu en allemand ; la date n'est pas indiquée et ce qui suit est une paraphrase en français. Le testeur indique que le développeur a accepté la publication (2026-10-24).",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Il dit que c'est le test le plus approfondi qu'il ait reçu jusqu'ici.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Il confirme le constat sur le PDF : via le trombone, seul le nom du fichier est parvenu au modèle, pas le contenu, et le champ Docs aurait dû traiter le PDF. Il s'en occupe.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Il s'occupe aussi des explications sur Top P, Top K et Temperature, d'une estimation de durée pour les téléchargements et de la fenêtre Troubleshoot.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Il dit que la plupart des utilisateurs arrivent par GitHub, Reddit et des guides trouvés sur Google, et que de petites versions et des réponses rapides aux retours, tenues pendant des mois, ont compté le plus.",
+          null
+        ],
+        [
+          "observed",
+          "Aucun de ces changements n'est vérifié dans ce test. Chacun est à retester.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Décision",
+      "items": [
+        [
+          "tester-view",
+          "Les notes se terminent par un résumé, sans décision sur la poursuite de l'usage. Il juge incroyable le soin porté à l'interface et la combinaison des fonctions, et dit que beaucoup d'applis pourraient reprendre ces idées. Il doute qu'elle soit la meilleure pour chaque fonction proposée et se demande ce qu'elle sera dans un an.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "\"Private, local AI chat that works right away. No extra software to install.\"",
+      "Écran d'accueil de l'appli",
+      "Le chat a fonctionné après la configuration. La génération d'images a demandé un téléchargement supplémentaire.",
+      "observed"
+    ],
+    [
+      "\"Your chats stay on your machine.\"",
+      "Écran d'accueil de l'appli",
+      "Non vérifié. Le fonctionnement hors ligne et le flux de données vers le cloud n'ont pas été testés.",
+      "vendor-claim"
+    ],
+    [
+      "\"LU runs its own engine on your machine. Nothing to install.\"",
+      "Étape 1 de la configuration",
+      "Le moteur a été signalé comme prêt et les modèles existants ont été trouvés.",
+      "observed"
+    ],
+    [
+      "Document Chat : déposez un PDF, un document Word ou un fichier texte et le modèle répond aux questions à son sujet.",
+      "Étape 3 de la configuration",
+      "Non vu en fonctionnement pour le PDF ni pour Word.",
+      "observed"
+    ],
+    [
+      "Configuration des images : Apple MLX et le plus petit modèle, environ 5 GB au total.",
+      "Onglet Create",
+      "Vu en partie : une wheel Python (88.0 MB) et le modèle de 2.4 GB ; le total n'a pas été consigné.",
+      "vendor-claim"
+    ],
+    [
+      "L'installation des images s'exécute en arrière-plan et survit à la sortie de l'onglet.",
+      "Boîte de dialogue de téléchargement",
+      "Vu, y compris la reprise après un redémarrage de l'appli.",
+      "observed"
+    ],
+    [
+      "Les cartes indiquent quels modèles tournent sur ce Mac et lesquels sont trop gros.",
+      "Catalogue des modèles d'image",
+      "Vu, et cohérent avec les 24 GB du testeur.",
+      "observed"
+    ],
+    [
+      "Chat, code, images, vidéo et LoRA dans un seul installateur.",
+      "Slogan de l'annuaire PromptQuorum",
+      "Chat, code et images vus ; vidéo non lancée ; LoRA (entraînement de personnage) bloqué.",
+      "third-party"
+    ],
+    [
+      "De petites versions et des réponses rapides aux retours.",
+      "Message du développeur",
+      "Ne peut pas être testé en une seule session.",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 70,
+    "rows": [
+      [
+        "SD Turbo (installé sur la machine de test)",
+        8,
+        "requiert 8 GB · téléchargement 2.4 GB",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4 bits (marqué Experimental)",
+        16,
+        "requiert 16 GB · téléchargement 4.3 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo 4 bits",
+        16,
+        "requiert 16 GB · téléchargement 5.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2.1 4 bits (marqué Non-commercial)",
+        16,
+        "requiert 16 GB · téléchargement 9.9 GB",
+        "measured"
+      ],
+      [
+        "Z-Image",
+        32,
+        "requiert 32 GB · téléchargement 19.1 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo (requis pour l'entraînement de personnage)",
+        32,
+        "requiert 32 GB · téléchargement 30.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2512",
+        64,
+        "requiert 64 GB · téléchargement 53.7 GB",
+        "measured"
+      ]
+    ],
+    "title": "Tient-il dans 24 GB ?",
+    "note": "Les chiffres de mémoire sont ceux que l'appli annonce pour chaque modèle d'image, relevés sur ses écrans ; la taille de téléchargement n'est pas la mémoire utilisée à l'exécution. Autres éléments des écrans de l'appli : Qwen 2.5 7B Abliterated (modèle de départ pour le chat) 4.4 GiB, environ 6 GB libres ; Qwen 3.5 9B Abliterated 5.2 GiB plus 0.9 GiB pour l'entrée d'image, environ 6.1 GB libres ; nomic-embed-text (chat avec documents) 84 MB, tourne sur n'importe quel CPU (vendor-claim) ; la configuration vidéo LTX-2.3 Distilled 4 bits environ 27 GB au total, mémoire non indiquée. Seul SD Turbo a été lancé ; la machine de test a 24 GB."
+  },
+  "usage_log": [
+    [
+      "Chat : Berlin ou Paris, plus de stations de métro ?",
+      "gemma4",
+      "Réponse \"Paris generally has more\" ; non vérifiée",
+      "Non consignée",
+      "Pass",
+      []
+    ],
+    [
+      "Résumé d'un fichier Excel (trombone)",
+      "gemma4",
+      "Contenu non lu",
+      "Non consignée",
+      "Fail",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "Résumé d'un PDF (trombone)",
+      "gemma4",
+      "Réponse d'après le nom de fichier, puis lecture impossible",
+      "Non consignée",
+      "Fail",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "Question sur un PDF (champ Docs)",
+      "gemma4",
+      "Échec d'après les notes, sans capture d'écran",
+      "Non consignée",
+      "Fail",
+      []
+    ],
+    [
+      "Question sur un fichier Word (champ Docs)",
+      "gemma4",
+      "Listé en 20 fragments (chunks), contenu non lu",
+      "Non consignée",
+      "Fail",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "Image : éléphant sur la tour Eiffel",
+      "SD Turbo, Standard",
+      "Tour seule, aucun éléphant visible",
+      "Non consignée",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-first-image"
+      ]
+    ],
+    [
+      "Image : idem, \"a color please\"",
+      "SD Turbo, Standard",
+      "Éléphant, en noir et blanc",
+      "Non consignée",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "Image : amoureux sur la plage, coucher de soleil derrière",
+      "SD Turbo, High",
+      "Image picturale en couleur, sans commentaire du testeur",
+      "Non consignée",
+      "Pass",
+      [
+        "locally-uncensored-lovers-beach-sunset-image"
+      ]
+    ],
+    [
+      "A/B Compare : où est Paris ; cuisson d'un œuf en allemand",
+      "gemma4, gemma3:1b",
+      "Les deux ont répondu ; gemma3:1b faux sur la localisation",
+      "15.5 s / 0.4 s (premier prompt)",
+      "Pass",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "Benchmark, deux modèles",
+      "gemma4, gemma3:1b",
+      "Classement produit",
+      "Non consignée",
+      "Pass",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "Agent de code : page de ping-pong",
+      "gemma4",
+      "index.html écrit ; l'aperçu fonctionne",
+      "\"Responding 26s\" à la capture",
+      "Pass",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview"
+      ]
+    ],
+    [
+      "Téléchargement de SD Turbo (2.4 GB)",
+      "Sans objet",
+      "Installé après un redémarrage de l'appli",
+      "Non consignée",
+      "Pass",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "Configuration vidéo",
+      "Sans objet",
+      "Non démarrée",
+      "Sans objet",
+      "Not completed",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "Entraînement de personnage",
+      "Sans objet",
+      "Bloqué par le modèle requis",
+      "Sans objet",
+      "Not completed",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "S'attendait à ce que la coche verte sur la carte LU Engine se désactive. Un lien “Use another engine” est visible en dessous sur la capture d'écran et n'a pas été essayé."
+    ],
+    [
+      "tester-error",
+      "A écrit “Yes, it understood the file” après la première réponse sur le PDF. Cette réponse venait du nom du fichier ; le testeur s'est corrigé quelques lignes plus loin."
+    ],
+    [
+      "tester-error",
+      "A testé un fichier Excel, un format que la zone de dépôt Docs ne liste pas (PDF, DOCX, TXT), et a pris la réponse pour une défaillance du modèle ou de l'appli sans vérifier."
+    ],
+    [
+      "tester-error",
+      "A écrit que le téléchargement repris en était “like 20%”. Les captures d'écran montrent 30 % et 32 %."
+    ],
+    [
+      "tester-error",
+      "A jugé la qualité d'image et le respect du prompt sur un seul modèle de départ en 512 px. Les modèles que l'appli donne comme exécutables ici, tels que FLUX.2 klein 4B 4 bits (4.3 GB), n'ont pas été téléchargés."
+    ],
+    [
+      "assumption",
+      "Les captures d'écran montrent des seeds différents et un éléphant sur la deuxième image ; le seed peut donc expliquer la différence, plutôt qu'un oubli d'une partie du prompt. C'est une inférence."
+    ],
+    [
+      "tester-error",
+      "N'a pas consigné si le modèle d'embedding facultatif avait été installé, ce qui peut jouer sur les échecs des documents."
+    ],
+    [
+      "tester-error",
+      "Lacunes dans le relevé : version de l'appli et de macOS, heure de fin, nom de la puce (la note disait “M3”, corrigé en M4 par le testeur ensuite), étapes et capture d'écran pour l'essai du PDF dans le champ Docs, durée totale du téléchargement, durées de génération des images, échelle d'affichage, désinstallation."
+    ]
+  ],
+  "findings": [
+    [
+      "LU-01",
+      "Téléchargement de l'installateur de 15.8 MB, lu par le testeur dans le téléchargement ; pas de capture d'écran. L'appli s'ouvre sur une configuration en trois étapes.",
+      "Installation",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-02",
+      "L'appli s'appelle “LU”. Une recherche de “Locally Uncensored” n'a rien trouvé tant que le testeur n'a pas appris le nom court ; la façon dont il l'a appris n'est pas claire dans les notes.",
+      "Installation",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LU-03",
+      "À l'étape du moteur, “LU Engine” est coché. Cliquer sur la coche ne l'a pas désélectionné et seul Continue était possible. Un lien “Use another engine (Ollama, LM Studio...)” se trouve sous le bouton et n'a pas été essayé (TE-1).",
+      "Prise en main",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-engine-choice-step"
+      ]
+    ],
+    [
+      "LU-04",
+      "L'étape des modèles a listé sept modèles déjà présents sur la machine, sans qu'on le demande. L'écran n'explique pas comment LU les trouve ; qu'il les lise dans le dépôt Ollama du testeur est une hypothèse.",
+      "Prise en main",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-05",
+      "Les modèles de départ affichent sur leur carte une description, la taille de téléchargement et la mémoire libre requise (voir le graphique d'adéquation). Le testeur l'oppose aux applis qui n'indiquent aucune taille (avis du testeur).",
+      "Prise en main",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-06",
+      "Des modèles nommés x/z-image-turbo et x/flux2-klein apparaissent dans le sélecteur de modèles du chat et dans une liste Benchmark intitulée “7 text models”. Les considérer comme des modèles d'image repose sur leur nom (hypothèse). Le testeur ne l'a pas commenté ; constaté lors de la revue des captures d'écran.",
+      "Prise en main",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-existing-models-detected",
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-07",
+      "L'étape 3 propose un modèle d'embedding facultatif pour Document Chat (nomic-embed-text, 84 MB), avec Install et Skip for now. Les notes ne disent pas lequel a été choisi (TE-7).",
+      "Prise en main",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-document-chat-setup-step"
+      ]
+    ],
+    [
+      "LU-08",
+      "Un indicateur “Starting” affichait 18 s à l'envoi du premier message, le temps de charger le modèle. La valeur vient de la capture ; la durée finale n'est pas consignée.",
+      "Chat",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LU-09",
+      "Un compteur de contexte au-dessus de la zone de saisie indique l'usage (309/16K, puis 4.2K/16K). Son infobulle explique qu'il compte les tokens num_ctx d'Ollama et exclut les tokens de raisonnement. Avis du testeur : “somebody has spent some time to develop something real”.",
+      "Chat",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-context-meter-tooltip"
+      ]
+    ],
+    [
+      "LU-10",
+      "Un fichier Excel (.xlsx, 84 KB) joint avec le trombone n'a pas été lu. Le modèle a répondu à partir du nom du fichier et des noms de fichiers des feuilles (sheet1.xml à sheet6.xml) et a dit ne pas voir le contenu. Le format .xlsx ne figure pas parmi ceux listés sur la zone de dépôt Docs (TE-3).",
+      "Documents",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "LU-11",
+      "Un PDF (872 KB) joint avec le trombone n'a pas été lu. La première réponse venait du nom du fichier ; à une question sur un montant du document, le modèle a répondu qu'il ne pouvait pas lire le texte et a demandé de le copier-coller (TE-2).",
+      "Documents",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "LU-12",
+      "Le même PDF via le champ Docs a aussi échoué, d'après les notes du testeur. Il n'existe pas de capture d'écran.",
+      "Documents",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "LU-13",
+      "Un fichier Word ajouté dans le champ Docs a été listé en “20 chunks”, mais le modèle a répondu qu'il ne pouvait pas lire le contenu interne du .docx. Cause non isolée ; l'installation du modèle d'embedding n'est pas consignée (LU-07).",
+      "Documents",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "LU-14",
+      "Avant la première image, l'onglet Create indique qu'une configuration unique installe Apple MLX et le plus petit modèle d'image, “about 5 GB in all”. Le testeur a vu télécharger une wheel Python (torch, 88.0 MB) et le modèle SD Turbo (2.4 GB) ; le total n'est pas consigné.",
+      "Image",
+      "vendor-claim",
+      "Positive",
+      [
+        "locally-uncensored-image-one-time-setup-5-gb"
+      ]
+    ],
+    [
+      "LU-15",
+      "Les boîtes de dialogue de téléchargement affichent le pourcentage, les MB sur GB et les MB/s (1.2 MB/s à 32 %, 1.1 MB/s à 100 %), mais pas le temps restant. À ces débits, 2.4 GB prennent environ 33 à 36 minutes et 5 GB environ 70 à 76 minutes (calcul ; suppose un débit constant). À 100 %, la boîte de dialogue est restée affichée tandis que le débit continuait de changer, avant l'apparition de Installed ; durée non consignée.",
+      "Image",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-16",
+      "La boîte de dialogue indique que l'installation s'exécute en arrière-plan et survit à la sortie de l'onglet (vendor-claim). Le testeur a quitté l'onglet, ouvert Settings, redémarré l'appli, et le téléchargement a repris à partir de la progression partielle ; l'onglet Models affichait la même progression (TE-4).",
+      "Image",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-17",
+      "Les cartes des modèles d'image affichent la taille de téléchargement, la mémoire requise et une étiquette d'adéquation pour ce Mac (“Runs on this Mac”, ou “Too big for this Mac's memory. Images run on LU Cloud”), plus un bouton Get anyway. Les chiffres figurent dans le graphique d'adéquation.",
+      "Image",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-image-model-catalog-memory-fit"
+      ]
+    ],
+    [
+      "LU-18",
+      "Les modèles marqués trop gros affichent une invite “Try LU Cloud”. Selon la déclaration du développeur dans l'annuaire PromptQuorum, la partie cloud est facultative et fonctionne avec des crédits. Elle n'a été ni utilisée ni testée.",
+      "Image",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-19",
+      "Avec le modèle de départ SD Turbo (512×512), le premier prompt, “draw an elephant sitting on the Eifel Tower”, a donné une tour sans éléphant visible. Le second, avec “a color please” ajouté, a montré un éléphant mais toujours en noir et blanc. Les seeds différaient (99713826, 1101006993). Avis du testeur : “technically it works, but the model does whatever it wants”. Son intuition selon laquelle le texte ajouté fait oublier le texte précédent au modèle n'a pas été reproduite (TE-5, TE-6).",
+      "Image",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-elephant-eiffel-first-image",
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "LU-20",
+      "Une explication intégrée “How Image works on a Mac” (passe HiRes, Prompt enhancer) s'ouvre dans une fenêtre contextuelle avec un lien vers un guide complet, qui n'a pas été ouvert. Avis du testeur : “inbuilt instructions, great”.",
+      "Image",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-how-image-works-guide"
+      ]
+    ],
+    [
+      "LU-21",
+      "L'onglet Video propose une configuration unique (LTX-2.3 Distilled 4 bits avec son encodeur de texte) d'environ 27 GB. Le testeur ne l'a pas lancée sur ce Mac.",
+      "Image",
+      "vendor-claim",
+      "Info",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "LU-22",
+      "L'entraînement de personnage exige Z-Image Turbo (30.5 GB, 32 GB requis, signalé comme trop gros pour ce Mac). L'onglet Character a accepté des photos (compteur 6/100 ; capture d'écran non publiée, personne réelle), mais l'entraînement n'a pas pu démarrer avec 24 GB. La variante 4 bits de Z-Image Turbo n'a pas été essayée. L'estimation du testeur selon laquelle le système et l'appli occupent 7 à 8 GB est une hypothèse.",
+      "Image",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-23",
+      "Les réglages d'échantillonnage (Temperature 0.7, Top P 0.9, Top K 40) ne sont pas expliqués. Le testeur voudrait une icône d'information pour les débutants, afin qu'ils n'aient pas à chercher ailleurs.",
+      "Réglages",
+      "tester-view",
+      "Medium",
+      [
+        "locally-uncensored-sampling-sliders"
+      ]
+    ],
+    [
+      "LU-24",
+      "Settings, Troubleshoot a ouvert une fenêtre de trace que le testeur n'a pas pu fermer ; il a redémarré l'appli. Cause non isolée.",
+      "Réglages",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "LU-25",
+      "Les réglages comprennent un interrupteur clair/sombre (trouvé et utilisé), l'import d'exports ChatGPT (.zip ou .json), l'export et l'import de sauvegardes de conversations, la politique de contenu, la confidentialité, les mises à jour et l'onboarding. Seul l'interrupteur de thème a été utilisé.",
+      "Réglages",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-26",
+      "Avec l'échelle d'affichage élevée du testeur, la zone de saisie est très petite et une barre grise la traverse ; sa signification lui échappe. Le réglage d'échelle n'est pas consigné.",
+      "Réglages",
+      "tester-view",
+      "Low",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-27",
+      "A/B Compare fait tourner deux modèles côte à côte et affiche vitesse, durée et tokens : gemma4 54.5 t/s, 15.5 s, 846 tokens ; gemma3:1b 23.9 t/s, 0.4 s, 9 tokens, pour “where is Paris”. gemma3:1b a placé Paris en Amérique du Nord ; c'est une erreur du modèle, pas de l'appli.",
+      "Comparaison",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "LU-28",
+      "Benchmark classe les modèles selon les tokens “useful” par seconde, pondérés par l'exactitude : gemma3:1b 109.4 (164.1 brut, 67 % de réponses correctes), gemma4 56.9 (100 % correctes), six exécutions. La méthode de l'appli pour juger “correct” et un compteur “Benchmark 5 remaining” n'ont pas été vérifiés.",
+      "Comparaison",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-29",
+      "Le Coding Agent (gemma4) a écrit index.html pour un jeu de ping-pong et l'aperçu intégré (Desktop, Tablet, Mobile) montre un jeu en marche avec un score. La première réponse n'indiquait pas où se trouvait le fichier ; le testeur a demandé et l'agent l'a relu (248 lignes). Les modes d'autorisation sont Ask, Bypass et Plan. On ignore si le testeur a joué au jeu.",
+      "Agent",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview",
+        "locally-uncensored-agent-permission-modes"
+      ]
+    ],
+    [
+      "LU-30",
+      "Des fonctions cloud côtoient les fonctions locales : un interrupteur Cloud dans la barre supérieure, des invites LU Cloud et une entrée minimax-m2:cloud dans la liste des modèles. Savoir si des données ont quitté la machine n'a pas été testé. “Your chats stay on your machine” sur l'écran d'accueil est une vendor-claim.",
+      "Confiance",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-31",
+      "L'argument central du produit, l'absence de filtre de contenu et les modèles de départ Abliterated, n'a pas été testé. Un modèle gemma4 standard a servi tout du long et le réglage Content policy n'a pas été ouvert.",
+      "Périmètre",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "La gravité est l'impact sur un utilisateur qui découvre l'appli. Proposée, non mesurée. Info désigne un constat qui n'est ni un problème ni un point fort.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Utilisateurs de Mac qui ont déjà des modèles Ollama et veulent réunir au même endroit un chat, un agent de code et une génération d'images de départ (hypothèse tirée d'une seule session). Les étiquettes de l'appli placent les modèles d'image 4 bits à 16 GB."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Quiconque a besoin dès aujourd'hui du chat avec documents, ou de l'entraînement de personnage et de modèles d'image pleine taille avec 24 GB."
+      ]
+    ],
+    "retest": "À retester lorsque le développeur livrera le correctif du chat avec documents, les explications sur l'échantillonnage, l'estimation de durée de téléchargement ou la modification de Troubleshoot, ou lors d'une nouvelle version majeure. À couvrir : le PDF par les deux voies, les modèles d'image 4 bits, la vidéo, l'usage hors ligne, la désinstallation, et consigner les versions de l'appli et de macOS."
+  },
+  "background_intro": "Pas de test pratique. Les éléments ci-dessous proviennent de la fiche de LU dans l'annuaire PromptQuorum et du développeur, et n'ont pas été vérifiés de façon indépendante ici.",
+  "background": [
+    [
+      "third-party",
+      "LU Labs ; le développeur est nommé David dans la fiche de l'annuaire."
+    ],
+    [
+      "third-party",
+      "Licence AGPL 3.0, freemium ; environ 1 750 étoiles GitHub et première inscription le 2026-09-04, à la date de la vérification de l'annuaire du 2026-09-22 (il y a plus d'un mois)."
+    ],
+    [
+      "vendor-claim",
+      "Partie cloud facultative sur crédits ; la déclaration du développeur du 2026-09-22 décrivait une version Mac comme prévue, et le testeur a utilisé une version Mac le 2026-10-20."
+    ]
+  ],
+  "sources": [
+    "Notes pratiques et captures d'écran du testeur, 20 octobre 2026 (notes Word d'origine ; PDF des notes brutes à venir).",
+    "Fiche et avis de Locally Uncensored dans l'annuaire PromptQuorum (slug : locally-uncensored), dernière vérification le 2026-09-22.",
+    "Site du fournisseur : locallyuncensored.com (non ouvert pour ce test).",
+    "Versions du fournisseur : github.com/PurpleDoubleD/locally-uncensored/releases (indiqué dans l'annuaire ; non ouvert pour ce test).",
+    "Le message du développeur au testeur, en allemand, paraphrasé ci-dessus."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Observé",
+      "meaning": "Vu de première main dans l'appli, sur une capture ou dans les notes du testeur."
+    },
+    "measured": {
+      "label": "Mesuré",
+      "meaning": "Valeur lue dans une boîte de dialogue, un compteur ou un outil, avec le chiffre indiqué."
+    },
+    "tester-estimate": {
+      "label": "Estimation du testeur",
+      "meaning": "L'estimation propre du testeur ; ni chronométrée ni comptée."
+    },
+    "vendor-claim": {
+      "label": "Affirmation du fabricant",
+      "meaning": "Énoncé par l'appli, sa fiche de store ou son site web ; non vérifié."
+    },
+    "third-party": {
+      "label": "Source tierce",
+      "meaning": "Provient d'une autre source (un assistant IA, un article) ; non vérifié ici."
+    },
+    "assumption": {
+      "label": "Hypothèse",
+      "meaning": "Une déduction. Elle peut être fausse."
+    },
+    "tester-view": {
+      "label": "Avis du testeur",
+      "meaning": "Le jugement ou l'opinion du testeur."
+    },
+    "tester-error": {
+      "label": "Erreur du testeur",
+      "meaning": "Cas où le testeur s'est trompé ou a manqué quelque chose."
+    }
+  },
+  "images": [
+    {
+      "id": "locally-uncensored-main-chat-window",
+      "figure": 1,
+      "file": "locally-uncensored-main-chat-window.webp",
+      "path": "images/locally-uncensored-main-chat-window.webp",
+      "alt": "Fenêtre principale de LU en thème sombre avec les onglets Chat, Create, Voice, Compare, Benchmark, Models, Settings et un chat vide.",
+      "caption": "Fenêtre principale après la configuration. Observé.",
+      "role": "hero",
+      "width": 1269,
+      "height": 796,
+      "bytes": 12462,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 7"
+    },
+    {
+      "id": "locally-uncensored-engine-choice-step",
+      "figure": 2,
+      "file": "locally-uncensored-engine-choice-step.webp",
+      "path": "images/locally-uncensored-engine-choice-step.webp",
+      "alt": "Étape 1 sur 3 de la configuration de LU : LU Engine coché comme prêt, un bouton Continue et un lien pour utiliser un autre moteur tel qu'Ollama ou LM Studio.",
+      "caption": "Étape 1 sur 3 de la configuration. Observé.",
+      "role": "moment",
+      "width": 1176,
+      "height": 754,
+      "bytes": 20808,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 2"
+    },
+    {
+      "id": "locally-uncensored-existing-models-detected",
+      "figure": 3,
+      "file": "locally-uncensored-existing-models-detected.webp",
+      "path": "images/locally-uncensored-existing-models-detected.webp",
+      "alt": "Étape 2 de la configuration de LU : sept modèles déjà présents sur la machine avec gemma4:latest sélectionné, et deux modèles de départ installables en dessous.",
+      "caption": "Étape 2 sur 3 de la configuration. Observé.",
+      "role": "moment",
+      "width": 682,
+      "height": 663,
+      "bytes": 31280,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 4"
+    },
+    {
+      "id": "locally-uncensored-document-chat-setup-step",
+      "figure": 4,
+      "file": "locally-uncensored-document-chat-setup-step.webp",
+      "path": "images/locally-uncensored-document-chat-setup-step.webp",
+      "alt": "Étape 3 sur 3 de la configuration, Document Chat facultatif, qui propose nomic-embed-text (84 MB) avec les boutons Install et Skip for now.",
+      "caption": "Modèle d'embedding facultatif proposé à la configuration. Observé.",
+      "role": "gallery",
+      "width": 556,
+      "height": 367,
+      "bytes": 14586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 5"
+    },
+    {
+      "id": "locally-uncensored-pdf-not-read-reply",
+      "figure": 5,
+      "file": "locally-uncensored-pdf-not-read-reply.webp",
+      "path": "images/locally-uncensored-pdf-not-read-reply.webp",
+      "alt": "Réponse du chat disant qu'elle ne peut pas lire le texte complet du PDF et demandant à l'utilisateur de copier-coller la section dans le chat.",
+      "caption": "Réponse à une question sur le PDF. Observé.",
+      "role": "moment",
+      "width": 1008,
+      "height": 399,
+      "bytes": 44580,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-docs"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 17"
+    },
+    {
+      "id": "locally-uncensored-excel-file-not-read-reply",
+      "figure": 6,
+      "file": "locally-uncensored-excel-file-not-read-reply.webp",
+      "path": "images/locally-uncensored-excel-file-not-read-reply.webp",
+      "alt": "Réponse du chat décrivant un fichier Excel d'après son nom et ses fichiers de feuilles, et précisant que le contenu réel ne peut pas être lu.",
+      "caption": "Réponse à la question sur le fichier Excel. Observé.",
+      "role": "gallery",
+      "width": 982,
+      "height": 687,
+      "bytes": 73560,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 12"
+    },
+    {
+      "id": "locally-uncensored-docs-drop-zone-20-chunks",
+      "figure": 7,
+      "file": "locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "path": "images/locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "alt": "Zone de dépôt Docs listant PDF, DOCX et TXT, avec un fichier importé affiché comme 20 chunks.",
+      "caption": "Zone de dépôt Docs avec un fichier Word affiché comme 20 chunks. Observé.",
+      "role": "gallery",
+      "width": 327,
+      "height": 216,
+      "bytes": 2856,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 18"
+    },
+    {
+      "id": "locally-uncensored-docx-not-read-reply",
+      "figure": 8,
+      "file": "locally-uncensored-docx-not-read-reply.webp",
+      "path": "images/locally-uncensored-docx-not-read-reply.webp",
+      "alt": "Réponse du chat disant qu'elle ne peut pas lire le contenu interne du fichier .docx ni dire quelles langues il couvre.",
+      "caption": "Réponse après le découpage du fichier Word en fragments. Observé.",
+      "role": "gallery",
+      "width": 994,
+      "height": 162,
+      "bytes": 15786,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 19"
+    },
+    {
+      "id": "locally-uncensored-context-meter-tooltip",
+      "figure": 9,
+      "file": "locally-uncensored-context-meter-tooltip.webp",
+      "path": "images/locally-uncensored-context-meter-tooltip.webp",
+      "alt": "Infobulle expliquant le compteur de contexte : 6.5K sur 16K tokens, num_ctx d'Ollama, tokens de raisonnement non comptés.",
+      "caption": "Infobulle du compteur de contexte. Mesuré.",
+      "role": "gallery",
+      "width": 303,
+      "height": 109,
+      "bytes": 6134,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 14"
+    },
+    {
+      "id": "locally-uncensored-image-one-time-setup-5-gb",
+      "figure": 10,
+      "file": "locally-uncensored-image-one-time-setup-5-gb.webp",
+      "path": "images/locally-uncensored-image-one-time-setup-5-gb.webp",
+      "alt": "Onglet Create, Image : message indiquant que la génération d'images locale exige une configuration unique d'environ 5 GB, avec un bouton Download and install.",
+      "caption": "Onglet Create avant la première image. Le chiffre de 5 GB est une vendor-claim.",
+      "role": "gallery",
+      "width": 930,
+      "height": 865,
+      "bytes": 23592,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 20"
+    },
+    {
+      "id": "locally-uncensored-image-download-100-percent",
+      "figure": 11,
+      "file": "locally-uncensored-image-download-100-percent.webp",
+      "path": "images/locally-uncensored-image-download-100-percent.webp",
+      "alt": "Boîte de dialogue de téléchargement à 100 pour cent, 2.4 GB sur 2.4 GB à 1.1 MB/s, avec un lien Cancel.",
+      "caption": "Téléchargement à 100 pour cent. Mesuré.",
+      "role": "gallery",
+      "width": 591,
+      "height": 315,
+      "bytes": 10302,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 28"
+    },
+    {
+      "id": "locally-uncensored-how-image-works-guide",
+      "figure": 12,
+      "file": "locally-uncensored-how-image-works-guide.webp",
+      "path": "images/locally-uncensored-how-image-works-guide.webp",
+      "alt": "Fenêtre contextuelle How Image works on a Mac avec un aperçu flouté, un texte sur la passe HiRes et un lien vers le guide complet.",
+      "caption": "Explication intégrée à l'appli. Observé.",
+      "role": "gallery",
+      "width": 455,
+      "height": 510,
+      "bytes": 14540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 31"
+    },
+    {
+      "id": "locally-uncensored-image-model-catalog-memory-fit",
+      "figure": 13,
+      "file": "locally-uncensored-image-model-catalog-memory-fit.webp",
+      "path": "images/locally-uncensored-image-model-catalog-memory-fit.webp",
+      "alt": "Six cartes de modèles d'image avec la taille de téléchargement, la mémoire requise et l'étiquette Runs on this Mac ou Too big for this Mac's memory.",
+      "caption": "Catalogue des modèles d'image. Tailles et mémoires requises relevées sur l'écran.",
+      "role": "moment",
+      "width": 1015,
+      "height": 428,
+      "bytes": 53074,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 29"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-first-image",
+      "figure": 14,
+      "file": "locally-uncensored-elephant-eiffel-first-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-first-image.webp",
+      "alt": "Image 512 par 512 en noir et blanc de la tour Eiffel, seed 99713826, réalisée avec MLX SD Turbo ; la zone de prompt affiche la demande d'éléphant.",
+      "caption": "Premier prompt avec l'éléphant, seed 99713826. Observé.",
+      "role": "gallery",
+      "width": 825,
+      "height": 632,
+      "bytes": 39310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 32"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-second-image",
+      "figure": 15,
+      "file": "locally-uncensored-elephant-eiffel-second-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-second-image.webp",
+      "alt": "Dessin au trait 512 par 512 de deux tours Eiffel avec un éléphant à la base, toujours en noir et blanc, seed 1101006993, MLX SD Turbo.",
+      "caption": "Second prompt avec l'éléphant, seed 1101006993. Observé.",
+      "role": "gallery",
+      "width": 902,
+      "height": 689,
+      "bytes": 42130,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 33"
+    },
+    {
+      "id": "locally-uncensored-lovers-beach-sunset-image",
+      "figure": 16,
+      "file": "locally-uncensored-lovers-beach-sunset-image.webp",
+      "path": "images/locally-uncensored-lovers-beach-sunset-image.webp",
+      "alt": "Image picturale 512 par 512 de deux silhouettes sur une plage au coucher du soleil, réalisée avec MLX SD Turbo en qualité High.",
+      "caption": "Troisième prompt d'image. Observé.",
+      "role": "gallery",
+      "width": 808,
+      "height": 630,
+      "bytes": 35046,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 34"
+    },
+    {
+      "id": "locally-uncensored-video-setup-27-gb",
+      "figure": 17,
+      "file": "locally-uncensored-video-setup-27-gb.webp",
+      "path": "images/locally-uncensored-video-setup-27-gb.webp",
+      "alt": "Onglet Video : message indiquant que la génération vidéo locale exige une configuration unique d'environ 27 GB, avec un bouton Download and install.",
+      "caption": "Écran de configuration vidéo. Le chiffre de 27 GB est une vendor-claim.",
+      "role": "gallery",
+      "width": 549,
+      "height": 308,
+      "bytes": 15570,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 35"
+    },
+    {
+      "id": "locally-uncensored-z-image-turbo-too-big-card",
+      "figure": 18,
+      "file": "locally-uncensored-z-image-turbo-too-big-card.webp",
+      "path": "images/locally-uncensored-z-image-turbo-too-big-card.webp",
+      "alt": "Carte Z-Image Turbo : 30.5 GB, 32 GB de mémoire requis, signalée comme trop grosse pour ce Mac, avec les boutons Try LU Cloud et Get anyway.",
+      "caption": "Carte Z-Image Turbo. Relevé sur l'écran.",
+      "role": "moment",
+      "width": 341,
+      "height": 219,
+      "bytes": 9818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 37"
+    },
+    {
+      "id": "locally-uncensored-sampling-sliders",
+      "figure": 19,
+      "file": "locally-uncensored-sampling-sliders.webp",
+      "path": "images/locally-uncensored-sampling-sliders.webp",
+      "alt": "Curseurs des réglages de génération : Temperature 0.7, Top P 0.9, Top K 40, sans texte explicatif.",
+      "caption": "Curseurs d'échantillonnage par défaut. Observé.",
+      "role": "gallery",
+      "width": 809,
+      "height": 207,
+      "bytes": 3026,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 22"
+    },
+    {
+      "id": "locally-uncensored-ab-compare-where-is-paris",
+      "figure": 20,
+      "file": "locally-uncensored-ab-compare-where-is-paris.webp",
+      "path": "images/locally-uncensored-ab-compare-where-is-paris.webp",
+      "alt": "Écran A/B Compare : gemma4:latest face à gemma3:1b, avec vitesse, durée et nombre de tokens pour la question where is Paris.",
+      "caption": "A/B Compare. Mesuré par l'appli.",
+      "role": "gallery",
+      "width": 1260,
+      "height": 519,
+      "bytes": 40440,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 40"
+    },
+    {
+      "id": "locally-uncensored-benchmark-leaderboard",
+      "figure": 21,
+      "file": "locally-uncensored-benchmark-leaderboard.webp",
+      "path": "images/locally-uncensored-benchmark-leaderboard.webp",
+      "alt": "Classement Benchmark : gemma3:1b premier avec 109.4 tokens utiles par seconde, gemma4:latest deuxième avec 56.9, et une liste de sept modèles de texte.",
+      "caption": "Classement Benchmark. Mesuré par l'appli.",
+      "role": "gallery",
+      "width": 798,
+      "height": 691,
+      "bytes": 26384,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 41"
+    },
+    {
+      "id": "locally-uncensored-coding-agent-pingpong-preview",
+      "figure": 22,
+      "file": "locally-uncensored-coding-agent-pingpong-preview.webp",
+      "path": "images/locally-uncensored-coding-agent-pingpong-preview.webp",
+      "alt": "Aperçu de l'agent de code d'un jeu de ping-pong : terrain noir, deux raquettes blanches, balle jaune, score 5 à 4, sélecteur Desktop Tablet Mobile.",
+      "caption": "Aperçu du jeu généré. Observé.",
+      "role": "moment",
+      "width": 959,
+      "height": 590,
+      "bytes": 5400,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 45"
+    },
+    {
+      "id": "locally-uncensored-agent-permission-modes",
+      "figure": 23,
+      "file": "locally-uncensored-agent-permission-modes.webp",
+      "path": "images/locally-uncensored-agent-permission-modes.webp",
+      "alt": "Menu des modes d'autorisation de l'agent de code : Ask permissions (actif), Bypass permissions et Plan mode, chacun avec une explication d'une ligne.",
+      "caption": "Modes d'autorisation de l'agent. Observé.",
+      "role": "gallery",
+      "width": 304,
+      "height": 170,
+      "bytes": 7004,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Capture d'écran de l'appli Locally Uncensored (LU)",
+      "rights": "Capture d'écran du testeur, d'une interface de logiciel tiers.",
+      "captured": "2026-10-20 ; heure exacte non consignée",
+      "original_docx_media": "Tester notes (Word), screenshot 43"
+    }
+  ],
+  "figure_order": [
+    "locally-uncensored-main-chat-window",
+    "locally-uncensored-engine-choice-step",
+    "locally-uncensored-existing-models-detected",
+    "locally-uncensored-document-chat-setup-step",
+    "locally-uncensored-pdf-not-read-reply",
+    "locally-uncensored-excel-file-not-read-reply",
+    "locally-uncensored-docs-drop-zone-20-chunks",
+    "locally-uncensored-docx-not-read-reply",
+    "locally-uncensored-context-meter-tooltip",
+    "locally-uncensored-image-one-time-setup-5-gb",
+    "locally-uncensored-image-download-100-percent",
+    "locally-uncensored-how-image-works-guide",
+    "locally-uncensored-image-model-catalog-memory-fit",
+    "locally-uncensored-elephant-eiffel-first-image",
+    "locally-uncensored-elephant-eiffel-second-image",
+    "locally-uncensored-lovers-beach-sunset-image",
+    "locally-uncensored-video-setup-27-gb",
+    "locally-uncensored-z-image-turbo-too-big-card",
+    "locally-uncensored-sampling-sliders",
+    "locally-uncensored-ab-compare-where-is-paris",
+    "locally-uncensored-benchmark-leaderboard",
+    "locally-uncensored-coding-agent-pingpong-preview",
+    "locally-uncensored-agent-permission-modes"
+  ],
+  "ui": {
+    "kicker": "Test pratique PromptQuorum · {app} · {date}",
+    "date_line": "20 octobre 2026",
+    "nav_aria": "Sections",
+    "nav": {
+      "verdict": "Verdict",
+      "moments": "Six moments",
+      "story": "Déroulé",
+      "claims": "Affirmations",
+      "fit": "24 GB",
+      "log": "Journal d’usage",
+      "errors": "Erreurs du testeur",
+      "findings": "Constats",
+      "background": "Contexte"
+    },
+    "related": "À lire aussi :",
+    "review_link": "Avis PromptQuorum sur {app}",
+    "directory_link": "Annuaire des applications d’IA locales",
+    "verdict_h": "Verdict",
+    "general_assessment": "Appréciation générale",
+    "fit_for_tester": "Adéquation à l’usage du testeur",
+    "scorecard": "Grille de scores",
+    "status_prefix": "Statut :",
+    "na": "n/d",
+    "score_aria": "{n} sur 5",
+    "details_h": "Détails du test",
+    "label_intro": "Chaque affirmation porte une étiquette :",
+    "legend_link": "Signification des étiquettes",
+    "disclosure_label": "Déclaration d’intérêts.",
+    "raw_notes": "PDF des notes brutes :",
+    "to_be_added": "à venir",
+    "moments_h": "Six moments qui ont façonné ce test",
+    "see_context": "Voir en contexte",
+    "story_h": "Déroulement du test",
+    "claims_h": "Affirmations et observations du testeur",
+    "claims_cols": [
+      "Affirmation",
+      "Source",
+      "Observé",
+      "Étiquette"
+    ],
+    "fit_h": "Tient-il dans 24 GB ?",
+    "memory_line": "{gb} GB de mémoire",
+    "above": "au-dessus de {gb} GB",
+    "below": "en dessous de {gb} GB",
+    "log_h": "Journal d’usage",
+    "log_cols": [
+      "#",
+      "Tâche",
+      "Modèle",
+      "Résultat",
+      "Durée",
+      "Statut",
+      "Figures"
+    ],
+    "statuses": {
+      "Fail": "Échec",
+      "Partial": "Partiel",
+      "Pass": "Réussi",
+      "Not completed": "Non abouti"
+    },
+    "errors_h": "Là où le testeur s’est trompé",
+    "findings_h": "Registre des constats",
+    "filter_aria": "Filtrer les constats par étiquette",
+    "filter_all": "Tous",
+    "findings_cols": [
+      "ID",
+      "Constat",
+      "Catégorie",
+      "Étiquette",
+      "Gravité",
+      "Figures"
+    ],
+    "severities": {
+      "High": "Élevée",
+      "Medium": "Moyenne",
+      "Low": "Faible",
+      "Positive": "Positive",
+      "Info": "Info"
+    },
+    "fig_abbr": "Fig.",
+    "figure": "Figure",
+    "enlarge": "Agrandir :",
+    "audience_h": "À qui il s’adresse",
+    "likely_fit": "Adéquation probable",
+    "likely_poor_fit": "Mauvaise adéquation probable",
+    "retest": "Nouveau test.",
+    "background_h": "Contexte sur le créateur",
+    "gallery_h": "Autres images du test",
+    "legend_h": "Comment lire les étiquettes",
+    "sources_h": "Sources",
+    "footer_line": "ID du test {id} · Norme de test v{version} · PDF des notes brutes : à venir",
+    "crumb_home": "Accueil",
+    "crumb_directory": "Annuaire",
+    "crumb_test": "Test pratique de {app}",
+    "faq_h": "Questions fréquentes",
+    "more_tests_h": "Autres tests pratiques"
+  }
+}

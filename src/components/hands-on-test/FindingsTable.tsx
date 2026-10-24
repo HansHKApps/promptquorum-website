@@ -9,6 +9,7 @@ const SEV: Record<string, string> = {
   Medium: 'border-slate-500 text-text-primary',
   Low: 'border-slate-300 text-text-muted',
   Positive: 'border-emerald-500 text-emerald-700',
+  Info: 'border-slate-300 text-text-muted',
 }
 
 export function FindingsTable({

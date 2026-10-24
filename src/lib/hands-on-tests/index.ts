@@ -38,6 +38,15 @@ import unslothPt from './data/unsloth.pt.json'
 import unslothAr from './data/unsloth.ar.json'
 import unslothKo from './data/unsloth.ko.json'
 import ltxDesktop from './data/ltx-desktop.json'
+import locallyUncensored from './data/locally-uncensored.json'
+import locallyUncensoredDe from './data/locally-uncensored.de.json'
+import locallyUncensoredFr from './data/locally-uncensored.fr.json'
+import locallyUncensoredJa from './data/locally-uncensored.ja.json'
+import locallyUncensoredZh from './data/locally-uncensored.zh.json'
+import locallyUncensoredEs from './data/locally-uncensored.es.json'
+import locallyUncensoredPt from './data/locally-uncensored.pt.json'
+import locallyUncensoredAr from './data/locally-uncensored.ar.json'
+import locallyUncensoredKo from './data/locally-uncensored.ko.json'
 import caelum from './data/caelum.json'
 import caelumDe from './data/caelum.de.json'
 import caelumFr from './data/caelum.fr.json'
@@ -279,6 +288,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: ltxDesktopPt as unknown as HandsOnTest,
     ar: ltxDesktopAr as unknown as HandsOnTest,
     ko: ltxDesktopKo as unknown as HandsOnTest,
+  },
+  'locally-uncensored': {
+    en: locallyUncensored as unknown as HandsOnTest,
+    de: locallyUncensoredDe as unknown as HandsOnTest,
+    fr: locallyUncensoredFr as unknown as HandsOnTest,
+    ja: locallyUncensoredJa as unknown as HandsOnTest,
+    zh: locallyUncensoredZh as unknown as HandsOnTest,
+    es: locallyUncensoredEs as unknown as HandsOnTest,
+    pt: locallyUncensoredPt as unknown as HandsOnTest,
+    ar: locallyUncensoredAr as unknown as HandsOnTest,
+    ko: locallyUncensoredKo as unknown as HandsOnTest,
   },
   caelum: {
     en: caelum as unknown as HandsOnTest,
