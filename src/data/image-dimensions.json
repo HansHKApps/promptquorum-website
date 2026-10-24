@@ -15569,6 +15569,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/coil-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/coil-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/comfyui-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -33769,6 +33814,106 @@
     "width": 1200,
     "height": 675
   },
+  "/images/locally-uncensored-ab-compare-where-is-paris.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1260,
+    "height": 519
+  },
+  "/images/locally-uncensored-agent-permission-modes.webp": {
+    "encodingFormat": "image/webp",
+    "width": 304,
+    "height": 170
+  },
+  "/images/locally-uncensored-benchmark-leaderboard.webp": {
+    "encodingFormat": "image/webp",
+    "width": 798,
+    "height": 691
+  },
+  "/images/locally-uncensored-coding-agent-pingpong-preview.webp": {
+    "encodingFormat": "image/webp",
+    "width": 959,
+    "height": 590
+  },
+  "/images/locally-uncensored-context-meter-tooltip.webp": {
+    "encodingFormat": "image/webp",
+    "width": 303,
+    "height": 109
+  },
+  "/images/locally-uncensored-docs-drop-zone-20-chunks.webp": {
+    "encodingFormat": "image/webp",
+    "width": 327,
+    "height": 216
+  },
+  "/images/locally-uncensored-document-chat-setup-step.webp": {
+    "encodingFormat": "image/webp",
+    "width": 556,
+    "height": 367
+  },
+  "/images/locally-uncensored-docx-not-read-reply.webp": {
+    "encodingFormat": "image/webp",
+    "width": 994,
+    "height": 162
+  },
+  "/images/locally-uncensored-elephant-eiffel-first-image.webp": {
+    "encodingFormat": "image/webp",
+    "width": 825,
+    "height": 632
+  },
+  "/images/locally-uncensored-elephant-eiffel-second-image.webp": {
+    "encodingFormat": "image/webp",
+    "width": 902,
+    "height": 689
+  },
+  "/images/locally-uncensored-engine-choice-step.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1176,
+    "height": 754
+  },
+  "/images/locally-uncensored-excel-file-not-read-reply.webp": {
+    "encodingFormat": "image/webp",
+    "width": 982,
+    "height": 687
+  },
+  "/images/locally-uncensored-existing-models-detected.webp": {
+    "encodingFormat": "image/webp",
+    "width": 682,
+    "height": 663
+  },
+  "/images/locally-uncensored-how-image-works-guide.webp": {
+    "encodingFormat": "image/webp",
+    "width": 455,
+    "height": 510
+  },
+  "/images/locally-uncensored-image-download-100-percent.webp": {
+    "encodingFormat": "image/webp",
+    "width": 591,
+    "height": 315
+  },
+  "/images/locally-uncensored-image-model-catalog-memory-fit.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1015,
+    "height": 428
+  },
+  "/images/locally-uncensored-image-one-time-setup-5-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 930,
+    "height": 865
+  },
+  "/images/locally-uncensored-lovers-beach-sunset-image.webp": {
+    "encodingFormat": "image/webp",
+    "width": 808,
+    "height": 630
+  },
+  "/images/locally-uncensored-main-chat-window.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1269,
+    "height": 796
+  },
+  "/images/locally-uncensored-pdf-not-read-reply.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1008,
+    "height": 399
+  },
   "/images/locally-uncensored-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -33813,6 +33958,21 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/locally-uncensored-sampling-sliders.webp": {
+    "encodingFormat": "image/webp",
+    "width": 809,
+    "height": 207
+  },
+  "/images/locally-uncensored-video-setup-27-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 549,
+    "height": 308
+  },
+  "/images/locally-uncensored-z-image-turbo-too-big-card.webp": {
+    "encodingFormat": "image/webp",
+    "width": 341,
+    "height": 219
   },
   "/images/localmcp-review-hero-ar.webp": {
     "encodingFormat": "image/webp",

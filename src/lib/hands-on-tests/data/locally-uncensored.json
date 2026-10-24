@@ -1,0 +1,1727 @@
+{
+  "id": "pq-test-locally-uncensored-2026-10-20",
+  "hero": "locally-uncensored-main-chat-window",
+  "date_human": "20 October 2026",
+  "captured": "2026-10-20; end time not recorded",
+  "standard_version": "0.2",
+  "locale": "en",
+  "app": {
+    "name": "Locally Uncensored (LU)",
+    "slug": "locally-uncensored",
+    "vendor": "LU Labs",
+    "category": "Local AI desktop app: chat, image, coding agent",
+    "platform": "macOS (Mac build)",
+    "pricing_url": "https://locallyuncensored.com"
+  },
+  "title": "Locally Uncensored (LU) on a 24 GB Mac: Chat, Document Chat, Images and a Coding Agent in One App",
+  "page_title": "Locally Uncensored Test",
+  "dek": "A first session on an Apple M4 Mac with 24 GB: a considerate setup and a wide feature set, with PDF, Word and Excel files not read.",
+  "seo": {
+    "title": "Locally Uncensored Hands-on Test: Chat, Images, Agent",
+    "description": "Hands-on test of Locally Uncensored (LU) on a 24 GB M4 Mac: chat, images and a coding agent worked, PDF and Word document chat did not."
+  },
+  "faq": [
+    [
+      "Does document chat work in Locally Uncensored?",
+      "Not in the test. A PDF (872 KB) and an Excel file attached with the paperclip were read only by file name, and a Word file in the Docs field was listed as 20 chunks, yet the model said it could not read the content. The tester also says the PDF failed through the Docs field. The developer confirmed the PDF finding and says he is taking it on; that is not verified.",
+      "observed"
+    ],
+    [
+      "Which image models run on a 24 GB Mac in LU?",
+      "By the app's own cards, SD Turbo (needs 8 GB) and three 4-bit models (FLUX.2 klein 4B, Z-Image Turbo, Qwen-Image 2.1; 16 GB each) are labelled \"Runs on this Mac\"; Z-Image (32 GB), Z-Image Turbo (32 GB) and Qwen-Image 2512 (64 GB) are labelled too big. Only SD Turbo was run in the test.",
+      "measured"
+    ],
+    [
+      "Can LU train a character on a 24 GB Mac?",
+      "Not in the test. Character training needs Z-Image Turbo (30.5 GB, needs 32 GB), which the app flags as too big for this Mac. The Character tab took photos, but training could not start. The 4-bit Z-Image Turbo variant was not tried.",
+      "observed"
+    ],
+    [
+      "Does LU have a coding agent?",
+      "Yes. The Coding Agent, run with gemma4, wrote an index.html for a ping-pong game and the built-in preview (Desktop, Tablet, Mobile) showed it running with a score. Permission modes are Ask, Bypass and Plan.",
+      "observed"
+    ],
+    [
+      "How long does the first image setup take?",
+      "No remaining time is shown, only percentage and MB/s. At the 1.1 to 1.2 MB/s seen, the 2.4 GB SD Turbo model takes roughly 33 to 36 minutes by calculation; the real total was not timed.",
+      "observed"
+    ],
+    [
+      "Does LU find models I already have?",
+      "Yes, in the test: setup step 2 listed seven models already on the machine without being asked. How LU finds them is not explained on screen.",
+      "observed"
+    ],
+    [
+      "Does LU work offline and keep chats private?",
+      "Not tested. \"Your chats stay on your machine\" is the welcome screen's claim. The app also has a Cloud toggle, LU Cloud prompts and a cloud model entry in the model list, and whether anything left the machine was not checked.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-10-24",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Locally Uncensored, shown in the app as “LU by LU Labs”",
+      "observed"
+    ],
+    [
+      "Version",
+      "Not recorded. The PromptQuorum directory lists 3.0.2 for its own review dated 2026-09-22; the tester's build may differ.",
+      null
+    ],
+    [
+      "Source",
+      "Vendor site locallyuncensored.com per the directory; the exact download page is not recorded.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, founder of PromptQuorum",
+      null
+    ],
+    [
+      "Started",
+      "20 October 2026; start time not recorded.",
+      null
+    ],
+    [
+      "Ended",
+      "Not recorded",
+      null
+    ],
+    [
+      "Hardware",
+      "Apple M4, 24 GB unified memory. The note said “M3, 24 GB”; the tester corrected the chip to M4 after the draft. Whether it is an M4 Pro is not stated.",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS version not recorded. A downloaded Python wheel carries the tag macosx_14_0_arm64, which is a minimum, not the installed version.",
+      null
+    ],
+    [
+      "Why tested",
+      "The notes say the tester hoped LU does more than chat, because there are many local chat front-ends already.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "Not stated as a goal in the notes. The notes show a first look at setup, chat, documents, images and the other tabs.",
+      null
+    ],
+    [
+      "Models on the machine",
+      "Seven models were listed as already present: x/z-image-turbo, HSR-DeepThink/nwe, x/flux2-klein, gemma4, gemma3:1b, minimax-m2:cloud, qwen3-coder:30b. Chat tests used gemma4 and gemma3:1b.",
+      "observed"
+    ],
+    [
+      "AI help used",
+      "Claude drafted this report from the tester's Word notes and 45 screenshots. No AI help during the test itself is recorded.",
+      "observed"
+    ],
+    [
+      "Disclosure",
+      "The tester founded PromptQuorum, a content site and directory about local AI apps, and LU is listed there with an AI-written review and a founder statement supplied by the developer (2026-09-22). The tester and the developer exchanged messages in September 2026 and again after this test; the developer had the test notes before replying. LU receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+      "observed"
+    ]
+  ],
+  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps, and LU is listed there with an AI-written review and a founder statement supplied by the developer (2026-09-22). The tester and the developer exchanged messages in September 2026 and again after this test; the developer had the test notes before replying. LU receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+  "verdict": {
+    "general": "A broad app with a carefully built first-run experience. In this session chat, local image generation on the smallest model and the coding agent worked; document chat did not. Video, character training, privacy and uninstall were not completed or not tested.",
+    "fit": "The tester calls it the most complete single local app he has seen so far and one to watch. Whether he will keep using it is not stated in his notes."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Small installer, three-step setup, engine ready. Searching the full name found nothing."
+    ],
+    [
+      "Onboarding and model choice",
+      4,
+      "Existing models found and sizes shown; the engine tick did not toggle."
+    ],
+    [
+      "Core function",
+      4,
+      "Chat and the coding agent worked, image output was loose on the starter model, document chat failed."
+    ],
+    [
+      "Guidance and iteration",
+      3,
+      "Built-in explainers and fit labels are strong; sampling controls are unexplained and Troubleshoot would not close."
+    ],
+    [
+      "Performance",
+      null,
+      "Not timed by the tester. App-reported speeds exist for two small models (LU-27, LU-28)."
+    ],
+    [
+      "Documentation",
+      null,
+      "Only in-app explainers were seen; the linked full guide was not opened."
+    ],
+    [
+      "Trust and privacy",
+      null,
+      "Not audited. Offline operation and cloud data flow were not tested (LU-30)."
+    ],
+    [
+      "Uninstall",
+      null,
+      "Not tested."
+    ]
+  ],
+  "scores_note": "Scores are proposals derived from the evidence below (1 = poor, 5 = very good). Core function was raised to 4 by the tester; the others are still proposals by the report author. n/a means not tested, not zero.",
+  "tldr": [
+    [
+      "observed",
+      "LU is an all-in-one local app for Mac with tabs for chat, images, voice, compare, benchmark and a coding agent. The first-run setup has three steps and found seven models already on the machine."
+    ],
+    [
+      "observed",
+      "Chat worked, and so did the coding agent: it wrote an index.html for a ping-pong game and the built-in preview showed it running with a score."
+    ],
+    [
+      "observed",
+      "Document chat did not work in the test: a PDF (872 KB) and an Excel file attached with the paperclip were not read, and a Word file added in the Docs field was listed as 20 chunks, yet the model said it could not read the content."
+    ],
+    [
+      "observed",
+      "Local image generation worked on the smallest model, SD Turbo at 512×512. The first prompt, an elephant on the Eiffel Tower, gave only the tower; the second showed an elephant but in black and white."
+    ],
+    [
+      "measured",
+      "The image-model cards state download size, memory need and a fit label for this Mac. On 24 GB, four models are labelled \"Runs on this Mac\" (16 GB or less) and three \"Too big\" (32 GB or more), including the one Character training needs."
+    ],
+    [
+      "observed",
+      "The download dialog shows percentage and MB/s but no time left; at about 1.1 to 1.2 MB/s the 2.4 GB model took roughly 33 to 36 minutes by calculation. Video, character training, offline use, privacy and uninstall were not completed or not tested."
+    ],
+    [
+      "vendor-claim",
+      "The developer confirmed the PDF finding and says he is taking on the document fix, explanations for Top P, Top K and Temperature, a download time estimate and the Troubleshoot window. None of this is verified; each is a retest item."
+    ]
+  ],
+  "quotes": [
+    "The small things matter. I have seen so many apps with a great idea, but once you dig in you find interface problems.",
+    "This tool has everything, and some functions you would not expect in a tool like this."
+  ],
+  "quote_note": "Tester notes, lightly edited from dictation. Both are his judgment, not measurements.",
+  "moments_title": "Six moments that shaped this test",
+  "moments_nav": "Six moments",
+  "moments": [
+    [
+      "One engine, one tick",
+      "Engine step of the setup: LU Engine ticked as ready, and the tick would not switch off.",
+      "locally-uncensored-engine-choice-step",
+      "chapter-install"
+    ],
+    [
+      "Models already found",
+      "Seven existing models listed at setup, without being asked.",
+      "locally-uncensored-existing-models-detected",
+      "chapter-install"
+    ],
+    [
+      "A PDF that was only a file name",
+      "The reply to a question about the document: the model cannot read the text.",
+      "locally-uncensored-pdf-not-read-reply",
+      "chapter-docs"
+    ],
+    [
+      "Size and fit before the download",
+      "Image-model cards with download size, memory need and a fit label for this Mac.",
+      "locally-uncensored-image-model-catalog-memory-fit",
+      "chapter-image"
+    ],
+    [
+      "Character training stops here",
+      "The required model, Z-Image Turbo, is flagged too big for 24 GB.",
+      "locally-uncensored-z-image-turbo-too-big-card",
+      "chapter-image"
+    ],
+    [
+      "A coding agent in the box",
+      "Preview of the ping-pong game the agent wrote.",
+      "locally-uncensored-coding-agent-pingpong-preview",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "The listing and first launch",
+      "items": [
+        [
+          "tester-view",
+          "The tester hoped LU does more than chat, because there are many local chat front-ends already.",
+          null
+        ],
+        [
+          "observed",
+          "The installer download was 15.8 MB, read by the tester from the download. After installing he could not find the app by its full name; it is called LU.",
+          null
+        ],
+        [
+          "observed",
+          "After setup the main window shows tabs for Chat, Create, Voice, Compare, Benchmark, Models and Settings, with a Cloud toggle in the top bar.",
+          "locally-uncensored-main-chat-window"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "Install and setup",
+      "items": [
+        [
+          "observed",
+          "Step 1 offers the built-in LU Engine, ticked as ready, with a Continue button and a \"Use another engine (Ollama, LM Studio...)\" link below it. The tester likes apps that let people choose, but the tick on the engine card would not switch off. The other-engine link was not tried.",
+          "locally-uncensored-engine-choice-step"
+        ],
+        [
+          "observed",
+          "Step 2 listed seven models already on the machine without being asked: x/z-image-turbo, HSR-DeepThink/nwe, x/flux2-klein, gemma4, gemma3:1b, minimax-m2:cloud and qwen3-coder:30b. He picked gemma4. Two starter models below carry a description, download size and free-memory need.",
+          "locally-uncensored-existing-models-detected"
+        ],
+        [
+          "tester-view",
+          "He rarely sees sizes on starter models in other apps and counts this as a plus.",
+          null
+        ],
+        [
+          "observed",
+          "Step 3 offers an optional embedding model for Document Chat (nomic-embed-text, 84 MB) with Install and Skip for now. The notes do not say which was chosen.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-docs",
+      "title": "Chat and documents",
+      "items": [
+        [
+          "observed",
+          "A first chat worked: the \"Starting\" indicator read 18 s when the first message was sent and the model loaded. gemma4 answered a Berlin-or-Paris metro question with \"Paris generally has more\"; the tester did not fact-check it.",
+          null
+        ],
+        [
+          "measured",
+          "A context meter above the message box shows usage (309/16K, later 4.2K/16K). Its tooltip says it counts Ollama num_ctx tokens and leaves out reasoning tokens.",
+          null
+        ],
+        [
+          "observed",
+          "He attached an Excel file (.xlsx, 84 KB) with the paperclip. The model answered from the file name and the sheet file names (sheet1.xml to sheet6.xml) and said it could not see the content. The Docs drop zone lists PDF, DOCX and TXT, not Excel.",
+          null
+        ],
+        [
+          "observed",
+          "A PDF (872 KB) attached with the paperclip was read only by name. A question about an amount in it got a reply that the model could not read the text and asked him to copy and paste the section. The tester first wrote \"Yes, it understood the file\" and corrected himself a few lines later.",
+          "locally-uncensored-pdf-not-read-reply"
+        ],
+        [
+          "observed",
+          "The same PDF through the Docs field also failed, according to his notes; no screenshot exists. A Word file in the Docs field was listed as 20 chunks, yet the model said it could not read the internal content of the .docx.",
+          null
+        ],
+        [
+          "tester-view",
+          "He compares this with frontier models, gave up on the PDF and planned to talk to the founder.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-image",
+      "title": "Image generation",
+      "items": [
+        [
+          "vendor-claim",
+          "The Create tab says local image generation needs a one-time setup that installs Apple MLX and the smallest image model, \"about 5 GB in all\". The tester saw a Python wheel (torch, 88.0 MB) and the SD Turbo model (2.4 GB) download; the total is not recorded.",
+          null
+        ],
+        [
+          "observed",
+          "The download dialog shows percentage, MB of GB and MB/s (1.2 MB/s at 32%, 1.1 MB/s at 100%) but no remaining time. He left the tab, opened Settings, hit the Troubleshoot window, restarted the app, and the download continued from partial progress.",
+          null
+        ],
+        [
+          "observed",
+          "The image-model catalog shows six cards with download size, memory need and a label: \"Runs on this Mac\" for the 4-bit models, \"Too big for this Mac's memory. Images run on LU Cloud\" for the larger ones.",
+          "locally-uncensored-image-model-catalog-memory-fit"
+        ],
+        [
+          "observed",
+          "SD Turbo at 512×512 followed prompts loosely. \"draw an elephant sitting on the Eifel Tower\" gave a tower and no visible elephant; adding \"a color please\" showed an elephant, still black and white. The seeds differed, so the seed may explain the difference.",
+          null
+        ],
+        [
+          "observed",
+          "He skipped video on this machine (one-time setup of about 27 GB). Character training needs Z-Image Turbo (30.5 GB, needs 32 GB), flagged too big for this Mac; the Character tab took photos but training could not start on 24 GB.",
+          "locally-uncensored-z-image-turbo-too-big-card"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "Settings, compare, benchmark and agent",
+      "items": [
+        [
+          "observed",
+          "Settings include a light/dark switch (used), import of ChatGPT exports, chat backup, content policy, privacy, updates and onboarding. The sampling sliders (Temperature 0.7, Top P 0.9, Top K 40) have no explanation.",
+          null
+        ],
+        [
+          "tester-view",
+          "He wants an info icon on those sliders so beginners do not have to search elsewhere. At his large display scaling the message box felt very small and a grey bar crossed it.",
+          null
+        ],
+        [
+          "measured",
+          "A/B Compare ran gemma4 and gemma3:1b side by side with speed, time and tokens (gemma4 54.5 t/s, 15.5 s; gemma3:1b 23.9 t/s, 0.4 s). Benchmark ranked gemma3:1b first at 109.4 \"useful\" t/s with 67% correct, gemma4 at 56.9 with 100% correct.",
+          null
+        ],
+        [
+          "observed",
+          "The Coding Agent (gemma4) wrote an index.html for a ping-pong game and the built-in preview (Desktop, Tablet, Mobile) showed a running game with a score. The first reply did not say where the file was; he asked and the agent read it back (248 lines).",
+          "locally-uncensored-coding-agent-pingpong-preview"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-developer",
+      "title": "The developer's reply",
+      "items": [
+        [
+          "vendor-claim",
+          "After the tester sent his notes, the developer of LU (LU Labs) replied in German; the date is not stated and this is a paraphrase in English. The tester reports that the developer agreed to its publication (2026-10-24).",
+          null
+        ],
+        [
+          "vendor-claim",
+          "He says this is the most thorough test he has received so far.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "He confirms the PDF finding: through the paperclip only the file name reached the model, not the content, and the Docs field should have handled the PDF. He is taking it on.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "He is also taking on the explanations for Top P, Top K and Temperature, a time estimate for downloads and the Troubleshoot window.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "He says most users arrive through GitHub, Reddit and guides found on Google, and that small releases and quick answers to feedback, kept up for months, mattered most.",
+          null
+        ],
+        [
+          "observed",
+          "None of these changes is verified in this test. Each is a retest item.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Decision",
+      "items": [
+        [
+          "tester-view",
+          "The notes end with a summary and no decision on continued use. He calls the thought put into the interface and the combined functions incredible and says many apps could copy these ideas. He doubts it is the best at every function it offers, and wonders what it will be a year from now.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "\"Private, local AI chat that works right away. No extra software to install.\"",
+      "App welcome screen",
+      "Chat worked after setup. Image generation needed a further download.",
+      "observed"
+    ],
+    [
+      "\"Your chats stay on your machine.\"",
+      "App welcome screen",
+      "Not verified. Offline operation and cloud data flow were not tested.",
+      "vendor-claim"
+    ],
+    [
+      "\"LU runs its own engine on your machine. Nothing to install.\"",
+      "Setup step 1",
+      "The engine was reported ready and existing models were found.",
+      "observed"
+    ],
+    [
+      "Document Chat: drop a PDF, Word doc or text file and the model answers questions about it.",
+      "Setup step 3",
+      "Not seen working for PDF or Word.",
+      "observed"
+    ],
+    [
+      "Image setup: Apple MLX and the smallest model, about 5 GB in all.",
+      "Create tab",
+      "Partly seen: a Python wheel (88.0 MB) and the 2.4 GB model; the total was not recorded.",
+      "vendor-claim"
+    ],
+    [
+      "The image install runs in the background and survives leaving the tab.",
+      "Download dialog",
+      "Seen, including resume after an app restart.",
+      "observed"
+    ],
+    [
+      "Cards say which models run on this Mac and which are too big.",
+      "Image-model catalog",
+      "Seen, and consistent with the tester's 24 GB.",
+      "observed"
+    ],
+    [
+      "Chat, code, images, video and LoRA in one installer.",
+      "PromptQuorum directory tagline",
+      "Chat, code and images seen; video not run; LoRA (character training) blocked.",
+      "third-party"
+    ],
+    [
+      "Small releases and fast answers to feedback.",
+      "The developer's message",
+      "Cannot be tested in one session.",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 70,
+    "rows": [
+      [
+        "SD Turbo (installed on the test machine)",
+        8,
+        "needs 8 GB · download 2.4 GB",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4-bit (marked Experimental)",
+        16,
+        "needs 16 GB · download 4.3 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo 4-bit",
+        16,
+        "needs 16 GB · download 5.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2.1 4-bit (marked Non-commercial)",
+        16,
+        "needs 16 GB · download 9.9 GB",
+        "measured"
+      ],
+      [
+        "Z-Image",
+        32,
+        "needs 32 GB · download 19.1 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo (needed for Character training)",
+        32,
+        "needs 32 GB · download 30.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2512",
+        64,
+        "needs 64 GB · download 53.7 GB",
+        "measured"
+      ]
+    ],
+    "title": "Does it fit in 24 GB?",
+    "note": "The memory figures are the app's own statement for each image model, read from its screens; download size is not runtime memory. Other items on the app's screens: Qwen 2.5 7B Abliterated (chat starter) 4.4 GiB, about 6 GB free; Qwen 3.5 9B Abliterated 5.2 GiB plus 0.9 GiB image input, about 6.1 GB free; nomic-embed-text (document chat) 84 MB, runs on any CPU (vendor-claim); the LTX-2.3 Distilled 4-bit video setup about 27 GB in all, memory not shown. Only SD Turbo was run; the test machine has 24 GB."
+  },
+  "usage_log": [
+    [
+      "Chat: Berlin or Paris, more metro stations?",
+      "gemma4",
+      "Answered \"Paris generally has more\"; not fact-checked",
+      "Not recorded",
+      "Pass",
+      []
+    ],
+    [
+      "Excel file summary (paperclip)",
+      "gemma4",
+      "Content not read",
+      "Not recorded",
+      "Fail",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "PDF summary (paperclip)",
+      "gemma4",
+      "File-name answer, then could not read",
+      "Not recorded",
+      "Fail",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "PDF question (Docs field)",
+      "gemma4",
+      "Failed per notes, no screenshot",
+      "Not recorded",
+      "Fail",
+      []
+    ],
+    [
+      "Word file question (Docs field)",
+      "gemma4",
+      "Listed as 20 chunks, content not read",
+      "Not recorded",
+      "Fail",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "Image: elephant on the Eiffel Tower",
+      "SD Turbo, Standard",
+      "Tower only, no visible elephant",
+      "Not recorded",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-first-image"
+      ]
+    ],
+    [
+      "Image: same, \"a color please\"",
+      "SD Turbo, Standard",
+      "Elephant, black and white",
+      "Not recorded",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "Image: lovers on the beach, sunset behind",
+      "SD Turbo, High",
+      "Colour painterly image, no comment from the tester",
+      "Not recorded",
+      "Pass",
+      [
+        "locally-uncensored-lovers-beach-sunset-image"
+      ]
+    ],
+    [
+      "A/B Compare: where is Paris; egg cooking in German",
+      "gemma4, gemma3:1b",
+      "Both answered; gemma3:1b wrong on the location",
+      "15.5 s / 0.4 s (first prompt)",
+      "Pass",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "Benchmark, two models",
+      "gemma4, gemma3:1b",
+      "Leaderboard produced",
+      "Not recorded",
+      "Pass",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "Coding agent: ping-pong page",
+      "gemma4",
+      "index.html written; preview runs",
+      "\"Responding 26s\" at capture",
+      "Pass",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview"
+      ]
+    ],
+    [
+      "Download SD Turbo (2.4 GB)",
+      "Not applicable",
+      "Installed after an app restart",
+      "Not recorded",
+      "Pass",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "Video setup",
+      "Not applicable",
+      "Not started",
+      "Not applicable",
+      "Not completed",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "Character training",
+      "Not applicable",
+      "Blocked by the required model",
+      "Not applicable",
+      "Not completed",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Expected the green tick on the LU Engine card to switch off. A “Use another engine” link is visible below it in the screenshot and was not tried."
+    ],
+    [
+      "tester-error",
+      "Wrote “Yes, it understood the file” after the first PDF answer. That answer came from the file name; the tester corrected himself a few lines later."
+    ],
+    [
+      "tester-error",
+      "Tested an Excel file, a format the Docs drop zone does not list (PDF, DOCX, TXT), and read the reply as a model or app fault without checking."
+    ],
+    [
+      "tester-error",
+      "Wrote the resumed download was “like 20%”. The screenshots show 30% and 32%."
+    ],
+    [
+      "tester-error",
+      "Judged image quality and prompt following on one 512 px starter model. Models the app lists as runnable here, such as FLUX.2 klein 4B 4-bit (4.3 GB), were not downloaded."
+    ],
+    [
+      "assumption",
+      "The screenshots show different seeds and an elephant in the second image, so the seed may explain the difference, not forgotten prompt text. This is an inference."
+    ],
+    [
+      "tester-error",
+      "Did not record whether the optional embedding model was installed, which may bear on the document failures."
+    ],
+    [
+      "tester-error",
+      "Gaps in the record: app and macOS version, end time, chip name (the note said “M3”, corrected by the tester to M4 afterwards), the steps and a screenshot for the Docs-field PDF attempt, total download time, image generation times, display scaling, uninstall."
+    ]
+  ],
+  "findings": [
+    [
+      "LU-01",
+      "Installer download of 15.8 MB, read by the tester from the download; no screenshot. The app opens with a three-step setup.",
+      "Install",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-02",
+      "The app is named “LU”. A search for “Locally Uncensored” found nothing until the tester learned the short name; how he learned it is unclear in the notes.",
+      "Install",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LU-03",
+      "On the engine step “LU Engine” is ticked. Clicking the tick did not deselect it and only Continue was possible. A “Use another engine (Ollama, LM Studio...)” link sits below the button and was not tried (TE-1).",
+      "Onboarding",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-engine-choice-step"
+      ]
+    ],
+    [
+      "LU-04",
+      "The model step listed seven models already on the machine without being asked. How LU finds them is not explained on screen; reading them from the tester's Ollama store is an assumption.",
+      "Onboarding",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-05",
+      "Starter models carry a description, download size and free-memory need on the card (see the fit chart). The tester contrasts this with apps that give no size (tester-view).",
+      "Onboarding",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-06",
+      "Models named x/z-image-turbo and x/flux2-klein appear in the chat model picker and in a Benchmark list headed “7 text models”. Reading them as image models rests on their names (assumption). The tester did not comment; found in the screenshot review.",
+      "Onboarding",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-existing-models-detected",
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-07",
+      "Setup step 3 offers an optional embedding model for Document Chat (nomic-embed-text, 84 MB) with Install and Skip for now. The notes do not say which was chosen (TE-7).",
+      "Onboarding",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-document-chat-setup-step"
+      ]
+    ],
+    [
+      "LU-08",
+      "A “Starting” indicator read 18 s when the first message was sent and the model loaded. The value is from the capture; the final duration is not recorded.",
+      "Chat",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LU-09",
+      "A context meter above the message box shows usage (309/16K, later 4.2K/16K). Its tooltip explains it counts Ollama num_ctx tokens and leaves out reasoning tokens. Tester-view: “somebody has spent some time to develop something real”.",
+      "Chat",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-context-meter-tooltip"
+      ]
+    ],
+    [
+      "LU-10",
+      "An Excel file (.xlsx, 84 KB) attached with the paperclip was not read. The model answered from the file name and sheet file names (sheet1.xml to sheet6.xml) and said it could not see the content. .xlsx is not among the formats listed on the Docs drop zone (TE-3).",
+      "Documents",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "LU-11",
+      "A PDF (872 KB) attached with the paperclip was not read. The first answer came from the file name; a question about an amount in the document got a reply that it could not read the text, with a request to copy and paste it (TE-2).",
+      "Documents",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "LU-12",
+      "The same PDF through the Docs field also failed, according to the tester's notes. No screenshot exists.",
+      "Documents",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "LU-13",
+      "A Word file added in the Docs field was listed as “20 chunks”, yet the model replied that it could not read the internal content of the .docx. Cause not isolated; whether the embedding model was installed is not recorded (LU-07).",
+      "Documents",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "LU-14",
+      "Before the first image the Create tab states that a one-time setup installs Apple MLX and the smallest image model, “about 5 GB in all”. The tester saw a Python wheel (torch, 88.0 MB) and the SD Turbo model (2.4 GB) download; the total is not recorded.",
+      "Image",
+      "vendor-claim",
+      "Positive",
+      [
+        "locally-uncensored-image-one-time-setup-5-gb"
+      ]
+    ],
+    [
+      "LU-15",
+      "Download dialogs show percentage, MB of GB and MB/s (1.2 MB/s at 32%, 1.1 MB/s at 100%) but no remaining time. At those rates 2.4 GB takes about 33 to 36 minutes and 5 GB about 70 to 76 minutes (calculation; assumes a constant rate). At 100% the dialog stayed up while the rate kept changing, before Installed appeared; duration not recorded.",
+      "Image",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-16",
+      "The dialog says the install runs in the background and survives leaving the tab (vendor-claim). The tester left the tab, opened Settings, restarted the app and the download continued from partial progress; the Models tab showed the same progress (TE-4).",
+      "Image",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-17",
+      "Image-model cards show download size, memory need and a fit label for this Mac (“Runs on this Mac”, or “Too big for this Mac's memory. Images run on LU Cloud”) plus a Get anyway button. Figures are in the fit chart.",
+      "Image",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-image-model-catalog-memory-fit"
+      ]
+    ],
+    [
+      "LU-18",
+      "Models marked too big show a “Try LU Cloud” prompt. Per the developer's statement in the PromptQuorum directory the cloud side is optional and runs on credits. It was not used or tested.",
+      "Image",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-19",
+      "With the starter model SD Turbo (512×512) the first prompt, “draw an elephant sitting on the Eifel Tower”, gave a tower and no visible elephant. The second, with “a color please” added, showed an elephant but stayed black and white. The seeds differed (99713826, 1101006993). Tester-view: “technically it works, but the model does whatever it wants”. His hunch that added text makes the model forget earlier text was not reproduced (TE-5, TE-6).",
+      "Image",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-elephant-eiffel-first-image",
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "LU-20",
+      "A built-in “How Image works on a Mac” explainer (HiRes pass, Prompt enhancer) opens as a popup with a link to a full guide, which was not opened. Tester-view: “inbuilt instructions, great”.",
+      "Image",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-how-image-works-guide"
+      ]
+    ],
+    [
+      "LU-21",
+      "The Video tab offers a one-time setup (LTX-2.3 Distilled 4-bit with its text encoder) of about 27 GB. The tester did not run it on this Mac.",
+      "Image",
+      "vendor-claim",
+      "Info",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "LU-22",
+      "Character training needs Z-Image Turbo (30.5 GB, needs 32 GB, flagged too big for this Mac). The Character tab took photos (counter 6/100; screenshot withheld, real person) but training could not start on 24 GB. The 4-bit Z-Image Turbo variant was not tried. The tester's estimate that the OS and app take 7 to 8 GB is an assumption.",
+      "Image",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-23",
+      "Sampling settings (Temperature 0.7, Top P 0.9, Top K 40) have no explanation. The tester wants an info icon for beginners so they do not have to search elsewhere.",
+      "Settings",
+      "tester-view",
+      "Medium",
+      [
+        "locally-uncensored-sampling-sliders"
+      ]
+    ],
+    [
+      "LU-24",
+      "Settings, Troubleshoot opened a trace window that the tester could not close; he restarted the app. Cause not isolated.",
+      "Settings",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "LU-25",
+      "Settings include a light/dark switch (found and used), import of ChatGPT exports (.zip or .json), chat backup export and import, content policy, privacy, updates and onboarding. Only the theme switch was used.",
+      "Settings",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-26",
+      "At the tester's large display scaling the message box is very small and a grey bar crosses it; its meaning is unclear to him. The scaling setting is not recorded.",
+      "Settings",
+      "tester-view",
+      "Low",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-27",
+      "A/B Compare runs two models side by side and shows speed, time and tokens: gemma4 54.5 t/s, 15.5 s, 846 tokens; gemma3:1b 23.9 t/s, 0.4 s, 9 tokens, for “where is Paris”. gemma3:1b placed Paris in North America; that is a model error, not an app error.",
+      "Compare",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "LU-28",
+      "Benchmark ranks models by “useful” tokens per second weighted by correctness: gemma3:1b 109.4 (164.1 raw, 67% correct), gemma4 56.9 (100% correct), six runs. The app's method for “correct” and a “Benchmark 5 remaining” counter were not checked.",
+      "Compare",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-29",
+      "The Coding Agent (gemma4) wrote index.html for a ping-pong game and the built-in preview (Desktop, Tablet, Mobile) shows a running game with a score. The first reply did not say where the file was; the tester asked and the agent read it back (248 lines). Permission modes are Ask, Bypass and Plan. Whether the tester played the game is not recorded.",
+      "Agent",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview",
+        "locally-uncensored-agent-permission-modes"
+      ]
+    ],
+    [
+      "LU-30",
+      "Cloud features sit next to local ones: a Cloud toggle in the top bar, LU Cloud prompts and a minimax-m2:cloud entry in the model list. Whether anything left the machine was not tested. “Your chats stay on your machine” on the welcome screen is a vendor-claim.",
+      "Trust",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-31",
+      "The product's defining claim, no content filter and Abliterated starter models, was not tested. A standard gemma4 model was used throughout and the Content policy setting was not opened.",
+      "Scope",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "Severity is the impact on a first-time user. Proposed, not measured. Info marks a finding that is neither a problem nor a plus.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Mac users who already have Ollama models and want chat, a coding agent and starter image generation in one place (assumption from one session). The app's own labels put the 4-bit image models at 16 GB."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Anyone who needs document chat today, or character training and full-size image models on 24 GB."
+      ]
+    ],
+    "retest": "Retest when the developer ships the document-chat fix, the sampling explanations, the download estimate or the Troubleshoot change, or on a new major version. Cover: PDF through both routes, the 4-bit image models, video, offline use, uninstall, and record the app and macOS versions."
+  },
+  "background_intro": "Not hands-on. The items below come from the PromptQuorum directory entry for LU and the developer, and were not independently verified here.",
+  "background": [
+    [
+      "third-party",
+      "LU Labs; the developer is named David in the directory entry."
+    ],
+    [
+      "third-party",
+      "Licence AGPL 3.0, freemium; about 1,750 GitHub stars and first listed 2026-09-04, as of the directory check on 2026-09-22 (more than a month old)."
+    ],
+    [
+      "vendor-claim",
+      "Optional cloud side on credits; the developer's own statement of 2026-09-22 described a Mac build as planned, and the tester ran a Mac build on 2026-10-20."
+    ]
+  ],
+  "sources": [
+    "Tester's hands-on notes and screenshots, 20 October 2026 (original Word notes; PDF of the raw notes to be added).",
+    "PromptQuorum directory entry and review of Locally Uncensored (slug: locally-uncensored), last verified 2026-09-22.",
+    "Vendor site: locallyuncensored.com (not opened for this test).",
+    "Vendor releases: github.com/PurpleDoubleD/locally-uncensored/releases (listed in the directory; not opened for this test).",
+    "The developer's message to the tester, in German, paraphrased above."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Observed",
+      "meaning": "Seen first-hand in the app, a screenshot or the tester's notes."
+    },
+    "measured": {
+      "label": "Measured",
+      "meaning": "A value read from a dialog, counter or tool, with the number given."
+    },
+    "tester-estimate": {
+      "label": "Tester estimate",
+      "meaning": "The tester's own estimate; not timed or counted."
+    },
+    "vendor-claim": {
+      "label": "Vendor claim",
+      "meaning": "Stated by the app, its store listing or its website; not verified."
+    },
+    "third-party": {
+      "label": "Third party",
+      "meaning": "From another source (an AI assistant, an article); not verified here."
+    },
+    "assumption": {
+      "label": "Assumption",
+      "meaning": "An inference. It may be wrong."
+    },
+    "tester-view": {
+      "label": "Tester view",
+      "meaning": "The tester's judgment or opinion."
+    },
+    "tester-error": {
+      "label": "Tester error",
+      "meaning": "Where the tester made a mistake or missed something."
+    }
+  },
+  "images": [
+    {
+      "id": "locally-uncensored-main-chat-window",
+      "figure": 1,
+      "file": "locally-uncensored-main-chat-window.webp",
+      "path": "images/locally-uncensored-main-chat-window.webp",
+      "alt": "LU main window in dark theme with tabs Chat, Create, Voice, Compare, Benchmark, Models, Settings and an empty chat prompt.",
+      "caption": "Main window after setup. Observed.",
+      "role": "hero",
+      "width": 1269,
+      "height": 796,
+      "bytes": 12462,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 7"
+    },
+    {
+      "id": "locally-uncensored-engine-choice-step",
+      "figure": 2,
+      "file": "locally-uncensored-engine-choice-step.webp",
+      "path": "images/locally-uncensored-engine-choice-step.webp",
+      "alt": "LU setup step 1 of 3: LU Engine ticked as ready, a Continue button and a link to use another engine such as Ollama or LM Studio.",
+      "caption": "Setup step 1 of 3. Observed.",
+      "role": "moment",
+      "width": 1176,
+      "height": 754,
+      "bytes": 20808,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 2"
+    },
+    {
+      "id": "locally-uncensored-existing-models-detected",
+      "figure": 3,
+      "file": "locally-uncensored-existing-models-detected.webp",
+      "path": "images/locally-uncensored-existing-models-detected.webp",
+      "alt": "LU setup step 2: seven models already on the machine with gemma4:latest selected, and two installable starter models below.",
+      "caption": "Setup step 2 of 3. Observed.",
+      "role": "moment",
+      "width": 682,
+      "height": 663,
+      "bytes": 31280,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 4"
+    },
+    {
+      "id": "locally-uncensored-document-chat-setup-step",
+      "figure": 4,
+      "file": "locally-uncensored-document-chat-setup-step.webp",
+      "path": "images/locally-uncensored-document-chat-setup-step.webp",
+      "alt": "Setup step 3 of 3, optional Document Chat, offering nomic-embed-text at 84 MB with Install and Skip for now buttons.",
+      "caption": "Optional embedding model offered in setup. Observed.",
+      "role": "gallery",
+      "width": 556,
+      "height": 367,
+      "bytes": 14586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 5"
+    },
+    {
+      "id": "locally-uncensored-pdf-not-read-reply",
+      "figure": 5,
+      "file": "locally-uncensored-pdf-not-read-reply.webp",
+      "path": "images/locally-uncensored-pdf-not-read-reply.webp",
+      "alt": "Chat reply saying it cannot read the PDF's full text and asking the user to copy and paste the section into the chat.",
+      "caption": "Reply to a question about the PDF. Observed.",
+      "role": "moment",
+      "width": 1008,
+      "height": 399,
+      "bytes": 44580,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-docs"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 17"
+    },
+    {
+      "id": "locally-uncensored-excel-file-not-read-reply",
+      "figure": 6,
+      "file": "locally-uncensored-excel-file-not-read-reply.webp",
+      "path": "images/locally-uncensored-excel-file-not-read-reply.webp",
+      "alt": "Chat reply describing an Excel file from its name and sheet files and noting that the actual content cannot be read.",
+      "caption": "Reply to the Excel question. Observed.",
+      "role": "gallery",
+      "width": 982,
+      "height": 687,
+      "bytes": 73560,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 12"
+    },
+    {
+      "id": "locally-uncensored-docs-drop-zone-20-chunks",
+      "figure": 7,
+      "file": "locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "path": "images/locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "alt": "Docs drop zone listing PDF, DOCX and TXT, with an uploaded file shown as 20 chunks.",
+      "caption": "Docs drop zone with a Word file shown as 20 chunks. Observed.",
+      "role": "gallery",
+      "width": 327,
+      "height": 216,
+      "bytes": 2856,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 18"
+    },
+    {
+      "id": "locally-uncensored-docx-not-read-reply",
+      "figure": 8,
+      "file": "locally-uncensored-docx-not-read-reply.webp",
+      "path": "images/locally-uncensored-docx-not-read-reply.webp",
+      "alt": "Chat reply saying it cannot read the internal content of the .docx file and cannot tell which languages are covered.",
+      "caption": "Reply after the Word file was chunked. Observed.",
+      "role": "gallery",
+      "width": 994,
+      "height": 162,
+      "bytes": 15786,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 19"
+    },
+    {
+      "id": "locally-uncensored-context-meter-tooltip",
+      "figure": 9,
+      "file": "locally-uncensored-context-meter-tooltip.webp",
+      "path": "images/locally-uncensored-context-meter-tooltip.webp",
+      "alt": "Tooltip explaining the context meter: 6.5K of 16K tokens, Ollama num_ctx, reasoning tokens not counted.",
+      "caption": "Context meter tooltip. Measured.",
+      "role": "gallery",
+      "width": 303,
+      "height": 109,
+      "bytes": 6134,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 14"
+    },
+    {
+      "id": "locally-uncensored-image-one-time-setup-5-gb",
+      "figure": 10,
+      "file": "locally-uncensored-image-one-time-setup-5-gb.webp",
+      "path": "images/locally-uncensored-image-one-time-setup-5-gb.webp",
+      "alt": "Create tab, Image: message that local image generation needs a one-time setup of about 5 GB, with a Download and install button.",
+      "caption": "Create tab before the first image. The 5 GB figure is a vendor-claim.",
+      "role": "gallery",
+      "width": 930,
+      "height": 865,
+      "bytes": 23592,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 20"
+    },
+    {
+      "id": "locally-uncensored-image-download-100-percent",
+      "figure": 11,
+      "file": "locally-uncensored-image-download-100-percent.webp",
+      "path": "images/locally-uncensored-image-download-100-percent.webp",
+      "alt": "Download dialog at 100 percent, 2.4 GB of 2.4 GB at 1.1 MB/s, with a Cancel link.",
+      "caption": "Download at 100 percent. Measured.",
+      "role": "gallery",
+      "width": 591,
+      "height": 315,
+      "bytes": 10302,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 28"
+    },
+    {
+      "id": "locally-uncensored-how-image-works-guide",
+      "figure": 12,
+      "file": "locally-uncensored-how-image-works-guide.webp",
+      "path": "images/locally-uncensored-how-image-works-guide.webp",
+      "alt": "Popup How Image works on a Mac with a blurred preview, text about the HiRes pass and a link to the full guide.",
+      "caption": "In-app explainer. Observed.",
+      "role": "gallery",
+      "width": 455,
+      "height": 510,
+      "bytes": 14540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 31"
+    },
+    {
+      "id": "locally-uncensored-image-model-catalog-memory-fit",
+      "figure": 13,
+      "file": "locally-uncensored-image-model-catalog-memory-fit.webp",
+      "path": "images/locally-uncensored-image-model-catalog-memory-fit.webp",
+      "alt": "Six image-model cards with download size, memory need and either Runs on this Mac or Too big for this Mac's memory labels.",
+      "caption": "Image-model catalog. Sizes and memory needs measured from the screen.",
+      "role": "moment",
+      "width": 1015,
+      "height": 428,
+      "bytes": 53074,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 29"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-first-image",
+      "figure": 14,
+      "file": "locally-uncensored-elephant-eiffel-first-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-first-image.webp",
+      "alt": "512 by 512 black-and-white image of the Eiffel Tower, seed 99713826, made with MLX SD Turbo; the prompt box shows the elephant request.",
+      "caption": "First elephant prompt, seed 99713826. Observed.",
+      "role": "gallery",
+      "width": 825,
+      "height": 632,
+      "bytes": 39310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 32"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-second-image",
+      "figure": 15,
+      "file": "locally-uncensored-elephant-eiffel-second-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-second-image.webp",
+      "alt": "512 by 512 line drawing of two Eiffel towers with an elephant at the base, still black and white, seed 1101006993, MLX SD Turbo.",
+      "caption": "Second elephant prompt, seed 1101006993. Observed.",
+      "role": "gallery",
+      "width": 902,
+      "height": 689,
+      "bytes": 42130,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 33"
+    },
+    {
+      "id": "locally-uncensored-lovers-beach-sunset-image",
+      "figure": 16,
+      "file": "locally-uncensored-lovers-beach-sunset-image.webp",
+      "path": "images/locally-uncensored-lovers-beach-sunset-image.webp",
+      "alt": "512 by 512 painterly image of two figures on a beach at sunset, made with MLX SD Turbo at High quality.",
+      "caption": "Third image prompt. Observed.",
+      "role": "gallery",
+      "width": 808,
+      "height": 630,
+      "bytes": 35046,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 34"
+    },
+    {
+      "id": "locally-uncensored-video-setup-27-gb",
+      "figure": 17,
+      "file": "locally-uncensored-video-setup-27-gb.webp",
+      "path": "images/locally-uncensored-video-setup-27-gb.webp",
+      "alt": "Video tab: message that local video generation needs a one-time setup of about 27 GB, with a Download and install button.",
+      "caption": "Video setup screen. The 27 GB figure is a vendor-claim.",
+      "role": "gallery",
+      "width": 549,
+      "height": 308,
+      "bytes": 15570,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 35"
+    },
+    {
+      "id": "locally-uncensored-z-image-turbo-too-big-card",
+      "figure": 18,
+      "file": "locally-uncensored-z-image-turbo-too-big-card.webp",
+      "path": "images/locally-uncensored-z-image-turbo-too-big-card.webp",
+      "alt": "Z-Image Turbo card: 30.5 GB, needs 32 GB memory, flagged too big for this Mac, with Try LU Cloud and Get anyway buttons.",
+      "caption": "Z-Image Turbo card. Measured from the screen.",
+      "role": "moment",
+      "width": 341,
+      "height": 219,
+      "bytes": 9818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 37"
+    },
+    {
+      "id": "locally-uncensored-sampling-sliders",
+      "figure": 19,
+      "file": "locally-uncensored-sampling-sliders.webp",
+      "path": "images/locally-uncensored-sampling-sliders.webp",
+      "alt": "Generation settings sliders: Temperature 0.7, Top P 0.9, Top K 40, with no explanatory text.",
+      "caption": "Default sampling sliders. Observed.",
+      "role": "gallery",
+      "width": 809,
+      "height": 207,
+      "bytes": 3026,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 22"
+    },
+    {
+      "id": "locally-uncensored-ab-compare-where-is-paris",
+      "figure": 20,
+      "file": "locally-uncensored-ab-compare-where-is-paris.webp",
+      "path": "images/locally-uncensored-ab-compare-where-is-paris.webp",
+      "alt": "A/B Compare screen: gemma4:latest against gemma3:1b with speed, time and token counts for the question where is Paris.",
+      "caption": "A/B Compare. Measured by the app.",
+      "role": "gallery",
+      "width": 1260,
+      "height": 519,
+      "bytes": 40440,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 40"
+    },
+    {
+      "id": "locally-uncensored-benchmark-leaderboard",
+      "figure": 21,
+      "file": "locally-uncensored-benchmark-leaderboard.webp",
+      "path": "images/locally-uncensored-benchmark-leaderboard.webp",
+      "alt": "Benchmark leaderboard: gemma3:1b first at 109.4 useful tokens per second, gemma4:latest second at 56.9, and a list of seven text models.",
+      "caption": "Benchmark leaderboard. Measured by the app.",
+      "role": "gallery",
+      "width": 798,
+      "height": 691,
+      "bytes": 26384,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 41"
+    },
+    {
+      "id": "locally-uncensored-coding-agent-pingpong-preview",
+      "figure": 22,
+      "file": "locally-uncensored-coding-agent-pingpong-preview.webp",
+      "path": "images/locally-uncensored-coding-agent-pingpong-preview.webp",
+      "alt": "Coding agent preview of a ping-pong game: black field, two white paddles, yellow ball, score 5 to 4, Desktop Tablet Mobile switch.",
+      "caption": "Preview of the generated game. Observed.",
+      "role": "moment",
+      "width": 959,
+      "height": 590,
+      "bytes": 5400,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 45"
+    },
+    {
+      "id": "locally-uncensored-agent-permission-modes",
+      "figure": 23,
+      "file": "locally-uncensored-agent-permission-modes.webp",
+      "path": "images/locally-uncensored-agent-permission-modes.webp",
+      "alt": "Permission modes menu in the coding agent: Ask permissions (active), Bypass permissions and Plan mode, each with a one-line explanation.",
+      "caption": "Agent permission modes. Observed.",
+      "role": "gallery",
+      "width": 304,
+      "height": 170,
+      "bytes": 7004,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Screenshot of the Locally Uncensored (LU) app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-20; exact time not recorded",
+      "original_docx_media": "Tester notes (Word), screenshot 43"
+    }
+  ],
+  "figure_order": [
+    "locally-uncensored-main-chat-window",
+    "locally-uncensored-engine-choice-step",
+    "locally-uncensored-existing-models-detected",
+    "locally-uncensored-document-chat-setup-step",
+    "locally-uncensored-pdf-not-read-reply",
+    "locally-uncensored-excel-file-not-read-reply",
+    "locally-uncensored-docs-drop-zone-20-chunks",
+    "locally-uncensored-docx-not-read-reply",
+    "locally-uncensored-context-meter-tooltip",
+    "locally-uncensored-image-one-time-setup-5-gb",
+    "locally-uncensored-image-download-100-percent",
+    "locally-uncensored-how-image-works-guide",
+    "locally-uncensored-image-model-catalog-memory-fit",
+    "locally-uncensored-elephant-eiffel-first-image",
+    "locally-uncensored-elephant-eiffel-second-image",
+    "locally-uncensored-lovers-beach-sunset-image",
+    "locally-uncensored-video-setup-27-gb",
+    "locally-uncensored-z-image-turbo-too-big-card",
+    "locally-uncensored-sampling-sliders",
+    "locally-uncensored-ab-compare-where-is-paris",
+    "locally-uncensored-benchmark-leaderboard",
+    "locally-uncensored-coding-agent-pingpong-preview",
+    "locally-uncensored-agent-permission-modes"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum hands-on test · {app} · {date}",
+    "date_line": "20 October 2026",
+    "nav_aria": "Sections",
+    "nav": {
+      "verdict": "Verdict",
+      "moments": "Six moments",
+      "story": "How it went",
+      "claims": "Claims",
+      "fit": "24 GB",
+      "log": "Usage log",
+      "errors": "Tester errors",
+      "findings": "Findings",
+      "background": "Background"
+    },
+    "related": "Related:",
+    "review_link": "PromptQuorum review of {app}",
+    "directory_link": "Local AI app directory",
+    "verdict_h": "Verdict",
+    "general_assessment": "General assessment",
+    "fit_for_tester": "Fit for the tester's use",
+    "scorecard": "Scorecard",
+    "status_prefix": "Status:",
+    "na": "n/a",
+    "score_aria": "{n} out of 5",
+    "details_h": "Test details",
+    "label_intro": "Every statement carries a label:",
+    "legend_link": "What the labels mean",
+    "disclosure_label": "Disclosure.",
+    "raw_notes": "Raw notes PDF:",
+    "to_be_added": "to be added",
+    "moments_h": "Six moments that shaped this test",
+    "see_context": "See it in context",
+    "story_h": "How the test went",
+    "claims_h": "Claims versus what the tester saw",
+    "claims_cols": [
+      "Claim",
+      "Source",
+      "Observed",
+      "Label"
+    ],
+    "fit_h": "Does it fit in 24 GB?",
+    "memory_line": "{gb} GB memory",
+    "above": "above {gb} GB",
+    "below": "below {gb} GB",
+    "log_h": "Usage log",
+    "log_cols": [
+      "#",
+      "Task",
+      "Model",
+      "Result",
+      "Time",
+      "Status",
+      "Figures"
+    ],
+    "statuses": {
+      "Fail": "Fail",
+      "Partial": "Partial",
+      "Pass": "Pass",
+      "Not completed": "Not completed"
+    },
+    "errors_h": "Where the tester got it wrong",
+    "findings_h": "Findings register",
+    "filter_aria": "Filter findings by label",
+    "filter_all": "All",
+    "findings_cols": [
+      "ID",
+      "Finding",
+      "Category",
+      "Label",
+      "Severity",
+      "Figures"
+    ],
+    "severities": {
+      "High": "High",
+      "Medium": "Medium",
+      "Low": "Low",
+      "Positive": "Positive",
+      "Info": "Info"
+    },
+    "fig_abbr": "Fig.",
+    "figure": "Figure",
+    "enlarge": "Enlarge:",
+    "audience_h": "Who it is for",
+    "likely_fit": "Likely fit",
+    "likely_poor_fit": "Likely poor fit",
+    "retest": "Retest.",
+    "background_h": "Background on the maker",
+    "gallery_h": "More from the test",
+    "legend_h": "How to read the labels",
+    "sources_h": "Sources",
+    "footer_line": "Test ID {id} · Test standard v{version} · Raw notes PDF: to be added",
+    "crumb_home": "Home",
+    "crumb_directory": "Directory",
+    "crumb_test": "{app} hands-on test",
+    "faq_h": "Frequently asked questions",
+    "more_tests_h": "More hands-on tests"
+  }
+}

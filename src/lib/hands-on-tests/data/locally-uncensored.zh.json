@@ -1,0 +1,1727 @@
+{
+  "id": "pq-test-locally-uncensored-2026-10-20",
+  "hero": "locally-uncensored-main-chat-window",
+  "date_human": "2026年10月20日",
+  "captured": "2026-10-20；结束时间未记录",
+  "standard_version": "0.2",
+  "locale": "zh",
+  "app": {
+    "name": "Locally Uncensored (LU)",
+    "slug": "locally-uncensored",
+    "vendor": "LU Labs",
+    "category": "本地 AI 桌面应用：聊天、图像、编程代理",
+    "platform": "macOS（Mac 版）",
+    "pricing_url": "https://locallyuncensored.com"
+  },
+  "title": "24 GB Mac 上的 Locally Uncensored (LU)：聊天、文档对话、图像和编程代理集于一个应用",
+  "page_title": "Locally Uncensored 测试",
+  "dek": "在 24 GB 内存的 Apple M4 Mac 上的首次试用：安装引导周到、功能面广，但 PDF、Word 和 Excel 文件没有被读取。",
+  "seo": {
+    "title": "Locally Uncensored 实测：聊天、图像、代理",
+    "description": "Locally Uncensored (LU) 在 24 GB M4 Mac 上的实测：聊天、图像和编程代理可用，PDF 和 Word 文档对话不可用。"
+  },
+  "faq": [
+    [
+      "Locally Uncensored 的文档对话能用吗？",
+      "测试中不能。用回形针附加的 PDF（872 KB）和 Excel 文件只被按文件名读取；在 Docs 区域添加的 Word 文件显示为 20 个文本块，但模型表示读不到内容。测试者还说，通过 Docs 区域上传 PDF 同样失败。开发者确认了 PDF 的问题，并表示会着手处理；这一点尚未验证。",
+      "observed"
+    ],
+    [
+      "24 GB 的 Mac 上，LU 能运行哪些图像模型？",
+      "按应用自己的卡片标注，SD Turbo（需要 8 GB）和三个 4-bit 模型（FLUX.2 klein 4B、Z-Image Turbo、Qwen-Image 2.1，各需 16 GB）标为“Runs on this Mac”；Z-Image（32 GB）、Z-Image Turbo（32 GB）和 Qwen-Image 2512（64 GB）标为太大。测试中只运行了 SD Turbo。",
+      "measured"
+    ],
+    [
+      "LU 能在 24 GB 的 Mac 上训练角色吗？",
+      "测试中不能。角色训练需要 Z-Image Turbo（30.5 GB，需要 32 GB 内存），应用提示它对这台 Mac 来说太大。Character 标签页接受了照片，但训练无法启动。4-bit 版 Z-Image Turbo 没有尝试。",
+      "observed"
+    ],
+    [
+      "LU 有编程代理吗？",
+      "有。用 gemma4 运行的 Coding Agent 为一个乒乓球游戏写出了 index.html，内置预览（Desktop、Tablet、Mobile）显示游戏在运行并有比分。权限模式有 Ask、Bypass 和 Plan。",
+      "observed"
+    ],
+    [
+      "首次图像设置要多久？",
+      "应用不显示剩余时间，只显示百分比和 MB/s。按所见的 1.1 至 1.2 MB/s 计算，2.4 GB 的 SD Turbo 模型大约需要 33 至 36 分钟；实际总时间没有计时。",
+      "observed"
+    ],
+    [
+      "LU 能找到我已有的模型吗？",
+      "测试中可以：设置第 2 步在没有询问的情况下列出了机器上已有的七个模型。LU 是如何找到它们的，屏幕上没有说明。",
+      "observed"
+    ],
+    [
+      "LU 能离线使用并保护聊天隐私吗？",
+      "未测试。“Your chats stay on your machine”是欢迎界面的说法。应用还有 Cloud 开关、LU Cloud 提示，以及模型列表中的一个云端模型条目；是否有数据离开本机没有检查。",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-10-24",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "Locally Uncensored，应用内显示为“LU by LU Labs”",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录。PromptQuorum 目录在其自己 2026-09-22 的评测中列为 3.0.2；测试者使用的版本可能不同。",
+      null
+    ],
+    [
+      "来源",
+      "按目录所述为厂商网站 locallyuncensored.com；具体下载页面未记录。",
+      null
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026年10月20日；开始时刻未记录。",
+      null
+    ],
+    [
+      "结束时间",
+      "未记录",
+      null
+    ],
+    [
+      "硬件",
+      "Apple M4，24 GB 统一内存。笔记原写“M3, 24 GB”；测试者在草稿之后把芯片更正为 M4。是否为 M4 Pro 未说明。",
+      "observed"
+    ],
+    [
+      "系统",
+      "macOS 版本未记录。下载的一个 Python wheel 带有 macosx_14_0_arm64 标签，这只是最低要求，不是实际安装的版本。",
+      null
+    ],
+    [
+      "测试原因",
+      "笔记称，测试者希望 LU 不只是聊天，因为现在已有很多本地聊天前端。",
+      "tester-view"
+    ],
+    [
+      "目标",
+      "笔记中没有写明目标。笔记记录的是对安装、聊天、文档、图像和其他标签页的初步查看。",
+      null
+    ],
+    [
+      "机器上的模型",
+      "列出了七个已存在的模型：x/z-image-turbo、HSR-DeepThink/nwe、x/flux2-klein、gemma4、gemma3:1b、minimax-m2:cloud、qwen3-coder:30b。聊天测试使用了 gemma4 和 gemma3:1b。",
+      "observed"
+    ],
+    [
+      "使用的 AI 辅助",
+      "Claude 根据测试者的 Word 笔记和 45 张截图起草了本报告。测试过程中没有使用 AI 辅助的记录。",
+      "observed"
+    ],
+    [
+      "利益披露",
+      "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录；LU 在站内有目录条目，包含一篇由 AI 撰写的评测和开发者提供的创始人说明（2026-09-22）。测试者与开发者在 2026年9月有过交流，本次测试之后也有；开发者回复前已拿到测试笔记。LU 从本站获得点击。笔记中没有付款或赞助的记录。",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录；LU 在站内有目录条目，包含一篇由 AI 撰写的评测和开发者提供的创始人说明（2026-09-22）。测试者与开发者在 2026年9月有过交流，本次测试之后也有；开发者回复前已拿到测试笔记。LU 从本站获得点击。笔记中没有付款或赞助的记录。",
+  "verdict": {
+    "general": "一款功能面很广、首次运行体验精心设计的应用。在这次测试中，聊天、最小模型上的本地图像生成和编程代理可用；文档对话不可用。视频、角色训练、隐私和卸载没有完成或未测试。",
+    "fit": "测试者称它是他目前见过的最完整的单一本地应用，值得关注。他的笔记中没有说明他是否会继续使用。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "小巧的安装包，三步设置，引擎就绪。搜索完整名称没有找到。"
+    ],
+    [
+      "引导与模型选择",
+      4,
+      "找到了已有模型并显示了大小；引擎的勾选无法取消。"
+    ],
+    [
+      "核心功能",
+      4,
+      "聊天和编程代理可用，入门模型的图像输出偏离提示，文档对话失败。"
+    ],
+    [
+      "引导与迭代",
+      3,
+      "内置说明和适配标签做得好；采样参数没有解释，Troubleshoot 窗口无法关闭。"
+    ],
+    [
+      "性能",
+      null,
+      "测试者未计时。应用报告了两个小模型的速度（LU-27、LU-28）。"
+    ],
+    [
+      "文档",
+      null,
+      "只看到了应用内的说明；链接的完整指南没有打开。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未做审计。离线运行和云端数据流向没有测试（LU-30）。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是根据下方证据得出的建议（1 = 差，5 = 很好）。核心功能一项已由测试者上调为 4；其余仍是报告作者的建议。n/a 表示未测试，不是零分。",
+  "tldr": [
+    [
+      "observed",
+      "LU 是一款面向 Mac 的一体化本地应用，带有聊天、图像、语音、对比、基准测试和编程代理等标签页。首次运行设置有三步，找到了机器上已有的七个模型。"
+    ],
+    [
+      "observed",
+      "聊天可用，编程代理也可用：它为一个乒乓球游戏写出了 index.html，内置预览显示游戏在运行并有比分。"
+    ],
+    [
+      "observed",
+      "测试中文档对话不可用：用回形针附加的 PDF（872 KB）和 Excel 文件没有被读取；在 Docs 区域添加的 Word 文件显示为 20 个文本块，但模型表示读不到内容。"
+    ],
+    [
+      "observed",
+      "本地图像生成在最小的模型 SD Turbo（512×512）上可用。第一个提示“大象坐在埃菲尔铁塔上”只生成了铁塔；第二次出现了大象，但是黑白的。"
+    ],
+    [
+      "measured",
+      "图像模型卡片标明了下载大小、内存需求和针对这台 Mac 的适配标签。在 24 GB 上，四个模型标为“Runs on this Mac”（16 GB 或以下），三个标为“Too big”（32 GB 或以上），其中包括角色训练所需的那个。"
+    ],
+    [
+      "observed",
+      "下载对话框显示百分比和 MB/s，但没有剩余时间；按约 1.1 至 1.2 MB/s 计算，2.4 GB 的模型大约需要 33 至 36 分钟。视频、角色训练、离线使用、隐私和卸载没有完成或未测试。"
+    ],
+    [
+      "vendor-claim",
+      "开发者确认了 PDF 的问题，并表示会处理文档修复、Top P、Top K 和 Temperature 的说明、下载时间估计以及 Troubleshoot 窗口。这些均未验证；每一项都是待复测项。"
+    ]
+  ],
+  "quotes": [
+    "细节很重要。我见过很多想法很好的应用，但一深入就发现界面问题。",
+    "这个工具什么都有，还有一些你不会指望在这类工具里出现的功能。"
+  ],
+  "quote_note": "测试者笔记，由语音口述略作整理。两句都是他的个人判断，不是测量结果。",
+  "moments_title": "左右这次测试的六个时刻",
+  "moments_nav": "六个时刻",
+  "moments": [
+    [
+      "一个引擎，一个勾选",
+      "设置的引擎步骤：LU Engine 已勾选为就绪，而且这个勾选无法取消。",
+      "locally-uncensored-engine-choice-step",
+      "chapter-install"
+    ],
+    [
+      "已有模型被找到",
+      "设置时没有询问，就列出了七个已有模型。",
+      "locally-uncensored-existing-models-detected",
+      "chapter-install"
+    ],
+    [
+      "只是一个文件名的 PDF",
+      "对文档提问后的回复：模型读不到文本。",
+      "locally-uncensored-pdf-not-read-reply",
+      "chapter-docs"
+    ],
+    [
+      "下载前先看大小和适配",
+      "图像模型卡片，标有下载大小、内存需求和针对这台 Mac 的适配标签。",
+      "locally-uncensored-image-model-catalog-memory-fit",
+      "chapter-image"
+    ],
+    [
+      "角色训练到此为止",
+      "所需的模型 Z-Image Turbo 被标为对 24 GB 来说太大。",
+      "locally-uncensored-z-image-turbo-too-big-card",
+      "chapter-image"
+    ],
+    [
+      "内置的编程代理",
+      "代理所写乒乓球游戏的预览。",
+      "locally-uncensored-coding-agent-pingpong-preview",
+      "chapter-explore"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "条目与首次启动",
+      "items": [
+        [
+          "tester-view",
+          "测试者希望 LU 不只是聊天，因为现在已有很多本地聊天前端。",
+          null
+        ],
+        [
+          "observed",
+          "安装包下载大小为 15.8 MB，由测试者从下载中读出。安装后他用完整名称找不到这个应用；它叫 LU。",
+          null
+        ],
+        [
+          "observed",
+          "设置完成后，主窗口显示 Chat、Create、Voice、Compare、Benchmark、Models 和 Settings 标签页，顶栏有 Cloud 开关。",
+          "locally-uncensored-main-chat-window"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "安装与设置",
+      "items": [
+        [
+          "observed",
+          "第 1 步提供内置的 LU Engine，已勾选为就绪，带 Continue 按钮，下方有“Use another engine (Ollama, LM Studio...)”链接。测试者喜欢让用户自己选择的应用，但引擎卡片上的勾选无法取消。另一个引擎的链接没有尝试。",
+          "locally-uncensored-engine-choice-step"
+        ],
+        [
+          "observed",
+          "第 2 步在没有询问的情况下列出了机器上已有的七个模型：x/z-image-turbo、HSR-DeepThink/nwe、x/flux2-klein、gemma4、gemma3:1b、minimax-m2:cloud 和 qwen3-coder:30b。他选了 gemma4。下方的两个入门模型带有说明、下载大小和所需的可用内存。",
+          "locally-uncensored-existing-models-detected"
+        ],
+        [
+          "tester-view",
+          "他在其他应用的入门模型上很少看到大小信息，认为这是加分项。",
+          null
+        ],
+        [
+          "observed",
+          "第 3 步提供一个可选的文档对话嵌入模型（nomic-embed-text，84 MB），有 Install 和 Skip for now 两个选项。笔记没有说明选了哪个。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-docs",
+      "title": "聊天与文档",
+      "items": [
+        [
+          "observed",
+          "第一次聊天可用：发送第一条消息、模型加载时，“Starting”指示显示 18 秒。gemma4 回答柏林和巴黎哪个地铁站更多的问题时说“Paris generally has more”；测试者没有核对事实。",
+          null
+        ],
+        [
+          "measured",
+          "消息框上方的上下文计量器显示用量（309/16K，之后为 4.2K/16K）。它的提示说明统计的是 Ollama num_ctx 的 token，不包括推理 token。",
+          null
+        ],
+        [
+          "observed",
+          "他用回形针附加了一个 Excel 文件（.xlsx，84 KB）。模型根据文件名和工作表文件名（sheet1.xml 至 sheet6.xml）作答，并表示看不到内容。Docs 拖放区列出的是 PDF、DOCX 和 TXT，没有 Excel。",
+          null
+        ],
+        [
+          "observed",
+          "用回形针附加的 PDF（872 KB）只被按文件名读取。就文档中的一笔金额提问时，回复说模型读不到文本，并让他复制粘贴相关部分。测试者起初写了“Yes, it understood the file”，几行之后自己做了更正。",
+          "locally-uncensored-pdf-not-read-reply"
+        ],
+        [
+          "observed",
+          "据他的笔记，同一个 PDF 通过 Docs 区域上传也失败了；没有截图。Docs 区域里的一个 Word 文件显示为 20 个文本块，但模型表示读不到 .docx 的内部内容。",
+          null
+        ],
+        [
+          "tester-view",
+          "他拿它与前沿模型比较，放弃了 PDF，并打算联系创始人。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-image",
+      "title": "图像生成",
+      "items": [
+        [
+          "vendor-claim",
+          "Create 标签页说，本地图像生成需要一次性设置，会安装 Apple MLX 和最小的图像模型，“about 5 GB in all”。测试者看到下载了一个 Python wheel（torch，88.0 MB）和 SD Turbo 模型（2.4 GB）；总量没有记录。",
+          null
+        ],
+        [
+          "observed",
+          "下载对话框显示百分比、已下载 MB 与总 GB 以及 MB/s（32% 时 1.2 MB/s，100% 时 1.1 MB/s），但没有剩余时间。他离开该标签页、打开 Settings、遇到 Troubleshoot 窗口、重启应用，下载从已有进度继续。",
+          null
+        ],
+        [
+          "observed",
+          "图像模型目录显示六张卡片，标有下载大小、内存需求和标签：4-bit 模型为“Runs on this Mac”，较大的为“Too big for this Mac's memory. Images run on LU Cloud”。",
+          "locally-uncensored-image-model-catalog-memory-fit"
+        ],
+        [
+          "observed",
+          "SD Turbo 在 512×512 下对提示的遵循较松散。“draw an elephant sitting on the Eifel Tower”生成了铁塔，看不到大象；加上“a color please”后出现了大象，仍是黑白的。两次的种子不同，所以差异可能是种子造成的。",
+          null
+        ],
+        [
+          "observed",
+          "他在这台机器上跳过了视频（一次性设置约 27 GB）。角色训练需要 Z-Image Turbo（30.5 GB，需要 32 GB），被标为对这台 Mac 太大；Character 标签页接受了照片，但在 24 GB 上训练无法启动。",
+          "locally-uncensored-z-image-turbo-too-big-card"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-explore",
+      "title": "设置、对比、基准测试和代理",
+      "items": [
+        [
+          "observed",
+          "设置包括明暗主题切换（已使用）、导入 ChatGPT 导出、聊天备份、内容政策、隐私、更新和引导。采样滑块（Temperature 0.7、Top P 0.9、Top K 40）没有任何说明。",
+          null
+        ],
+        [
+          "tester-view",
+          "他希望这些滑块旁有信息图标，这样新手不必去别处查。在他的大幅显示缩放下，消息框显得很小，还有一条灰色横条横穿其上。",
+          null
+        ],
+        [
+          "measured",
+          "A/B Compare 并排运行 gemma4 和 gemma3:1b，显示速度、用时和 token 数（gemma4 54.5 t/s，15.5 秒；gemma3:1b 23.9 t/s，0.4 秒）。Benchmark 把 gemma3:1b 排第一，“useful”速度为 109.4 t/s，正确率 67%；gemma4 为 56.9，正确率 100%。",
+          null
+        ],
+        [
+          "observed",
+          "Coding Agent（gemma4）为一个乒乓球游戏写出了 index.html，内置预览（Desktop、Tablet、Mobile）显示游戏在运行并有比分。第一次回复没有说明文件在哪里；他追问后，代理把文件读了出来（248 行）。",
+          "locally-uncensored-coding-agent-pingpong-preview"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-developer",
+      "title": "开发者的回复",
+      "items": [
+        [
+          "vendor-claim",
+          "测试者发出笔记后，LU（LU Labs）的开发者用德语回复；回复日期未说明，此处为英文转述后的中文译述。测试者表示开发者同意发布（2026-10-24）。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "他说这是他迄今收到的最详尽的测试。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "他确认了 PDF 的问题：通过回形针只有文件名传到模型，内容没有传到，而 Docs 区域本应能处理 PDF。他会着手处理。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "他还会处理 Top P、Top K 和 Temperature 的说明、下载的时间估计以及 Troubleshoot 窗口。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "他说大多数用户通过 GitHub、Reddit 和在 Google 上找到的指南而来，持续数月的小版本发布和对反馈的快速回应最为重要。",
+          null
+        ],
+        [
+          "observed",
+          "这些改动在本次测试中均未验证。每一项都是待复测项。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "决定",
+      "items": [
+        [
+          "tester-view",
+          "笔记以总结结尾，没有写明是否继续使用。他称界面上花的心思和功能的整合令人惊叹，并说很多应用可以借鉴这些想法。他怀疑它在每项功能上是否都是最好的，也好奇一年之后它会变成什么样。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "“Private, local AI chat that works right away. No extra software to install.”",
+      "应用欢迎界面",
+      "设置后聊天可用。图像生成还需要另外下载。",
+      "observed"
+    ],
+    [
+      "“Your chats stay on your machine.”",
+      "应用欢迎界面",
+      "未验证。离线运行和云端数据流向没有测试。",
+      "vendor-claim"
+    ],
+    [
+      "“LU runs its own engine on your machine. Nothing to install.”",
+      "设置第 1 步",
+      "引擎显示为就绪，并找到了已有模型。",
+      "observed"
+    ],
+    [
+      "文档对话：拖入 PDF、Word 文档或文本文件，模型就能回答相关问题。",
+      "设置第 3 步",
+      "没有看到 PDF 或 Word 可用。",
+      "observed"
+    ],
+    [
+      "图像设置：Apple MLX 和最小的模型，共约 5 GB。",
+      "Create 标签页",
+      "部分看到：一个 Python wheel（88.0 MB）和 2.4 GB 的模型；总量没有记录。",
+      "vendor-claim"
+    ],
+    [
+      "图像安装在后台运行，离开标签页后仍会继续。",
+      "下载对话框",
+      "已看到，包括应用重启后继续。",
+      "observed"
+    ],
+    [
+      "卡片会标明哪些模型能在这台 Mac 上运行，哪些太大。",
+      "图像模型目录",
+      "已看到，并与测试者的 24 GB 一致。",
+      "observed"
+    ],
+    [
+      "一个安装包里有聊天、代码、图像、视频和 LoRA。",
+      "PromptQuorum 目录标语",
+      "聊天、代码和图像已看到；视频没有运行；LoRA（角色训练）被挡住。",
+      "third-party"
+    ],
+    [
+      "小版本发布，快速回应反馈。",
+      "开发者的消息",
+      "一次测试无法验证。",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 70,
+    "rows": [
+      [
+        "SD Turbo（已安装在测试机上）",
+        8,
+        "需要 8 GB · 下载 2.4 GB",
+        "measured"
+      ],
+      [
+        "FLUX.2 klein 4B 4-bit（标为 Experimental）",
+        16,
+        "需要 16 GB · 下载 4.3 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo 4-bit",
+        16,
+        "需要 16 GB · 下载 5.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2.1 4-bit（标为 Non-commercial）",
+        16,
+        "需要 16 GB · 下载 9.9 GB",
+        "measured"
+      ],
+      [
+        "Z-Image",
+        32,
+        "需要 32 GB · 下载 19.1 GB",
+        "measured"
+      ],
+      [
+        "Z-Image Turbo（角色训练所需）",
+        32,
+        "需要 32 GB · 下载 30.5 GB",
+        "measured"
+      ],
+      [
+        "Qwen-Image 2512",
+        64,
+        "需要 64 GB · 下载 53.7 GB",
+        "measured"
+      ]
+    ],
+    "title": "能装进 24 GB 吗？",
+    "note": "内存数字是应用对每个图像模型自己的说明，读自其界面；下载大小不等于运行时内存。应用界面上的其他条目：Qwen 2.5 7B Abliterated（聊天入门模型）4.4 GiB，约需 6 GB 可用内存；Qwen 3.5 9B Abliterated 5.2 GiB 加 0.9 GiB 图像输入，约需 6.1 GB 可用内存；nomic-embed-text（文档对话）84 MB，可在任何 CPU 上运行（厂商声明）；LTX-2.3 Distilled 4-bit 视频设置共约 27 GB，未显示内存需求。只运行了 SD Turbo；测试机为 24 GB。"
+  },
+  "usage_log": [
+    [
+      "聊天：柏林和巴黎，哪个地铁站更多？",
+      "gemma4",
+      "回答“Paris generally has more”；未核对事实",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "Excel 文件摘要（回形针）",
+      "gemma4",
+      "内容未被读取",
+      "未记录",
+      "Fail",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "PDF 摘要（回形针）",
+      "gemma4",
+      "先按文件名作答，随后表示读不到",
+      "未记录",
+      "Fail",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "PDF 提问（Docs 区域）",
+      "gemma4",
+      "据笔记失败，无截图",
+      "未记录",
+      "Fail",
+      []
+    ],
+    [
+      "Word 文件提问（Docs 区域）",
+      "gemma4",
+      "显示为 20 个文本块，内容未被读取",
+      "未记录",
+      "Fail",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "图像：大象在埃菲尔铁塔上",
+      "SD Turbo, Standard",
+      "只有铁塔，看不到大象",
+      "未记录",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-first-image"
+      ]
+    ],
+    [
+      "图像：同上，加“a color please”",
+      "SD Turbo, Standard",
+      "大象，黑白",
+      "未记录",
+      "Partial",
+      [
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "图像：海滩上的恋人，背后是落日",
+      "SD Turbo, High",
+      "彩色绘画风格图像，测试者没有评论",
+      "未记录",
+      "Pass",
+      [
+        "locally-uncensored-lovers-beach-sunset-image"
+      ]
+    ],
+    [
+      "A/B Compare：巴黎在哪里；用德语煮鸡蛋",
+      "gemma4, gemma3:1b",
+      "两个都作答；gemma3:1b 的位置答错",
+      "15.5 秒 / 0.4 秒（第一个提示）",
+      "Pass",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "Benchmark，两个模型",
+      "gemma4, gemma3:1b",
+      "生成了排行榜",
+      "未记录",
+      "Pass",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "编程代理：乒乓球页面",
+      "gemma4",
+      "已写出 index.html；预览可运行",
+      "截图时显示“Responding 26s”",
+      "Pass",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview"
+      ]
+    ],
+    [
+      "下载 SD Turbo（2.4 GB）",
+      "不适用",
+      "应用重启后安装完成",
+      "未记录",
+      "Pass",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "视频设置",
+      "不适用",
+      "未开始",
+      "不适用",
+      "Not completed",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "角色训练",
+      "不适用",
+      "被所需的模型挡住",
+      "不适用",
+      "Not completed",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "以为 LU Engine 卡片上的绿色勾选可以取消。截图里勾选下方有“Use another engine”链接，没有尝试。"
+    ],
+    [
+      "tester-error",
+      "对第一个 PDF 回答写了“Yes, it understood the file”。那个回答其实来自文件名；测试者几行之后自己更正了。"
+    ],
+    [
+      "tester-error",
+      "测试了 Excel 文件，而 Docs 拖放区列出的格式（PDF、DOCX、TXT）并不包括它，却没有核对就把回复当成模型或应用的故障。"
+    ],
+    [
+      "tester-error",
+      "把继续的下载写成“like 20%”。截图显示的是 30% 和 32%。"
+    ],
+    [
+      "tester-error",
+      "仅凭一个 512 px 的入门模型来判断图像质量和对提示的遵循。应用列为可在本机运行的模型，如 FLUX.2 klein 4B 4-bit（4.3 GB），没有下载。"
+    ],
+    [
+      "assumption",
+      "截图显示两次的种子不同，且第二张图里有大象，所以差异可能是种子造成的，而不是忘了前面的提示文字。这是推断。"
+    ],
+    [
+      "tester-error",
+      "没有记录是否安装了可选的嵌入模型，这可能与文档读取失败有关。"
+    ],
+    [
+      "tester-error",
+      "记录中的缺口：应用和 macOS 版本、结束时间、芯片名称（笔记写“M3”，测试者之后更正为 M4）、Docs 区域 PDF 尝试的步骤和截图、总下载时间、图像生成用时、显示缩放、卸载。"
+    ]
+  ],
+  "findings": [
+    [
+      "LU-01",
+      "安装包下载大小为 15.8 MB，由测试者从下载中读出；没有截图。应用打开后是三步设置。",
+      "安装",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-02",
+      "应用名为“LU”。搜索“Locally Uncensored”什么也没找到，直到测试者得知简称；笔记里不清楚他是怎么得知的。",
+      "安装",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LU-03",
+      "引擎步骤中“LU Engine”已勾选。点击勾选无法取消，只能点 Continue。按钮下方有“Use another engine (Ollama, LM Studio...)”链接，没有尝试（TE-1）。",
+      "引导",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-engine-choice-step"
+      ]
+    ],
+    [
+      "LU-04",
+      "模型步骤在没有询问的情况下列出了机器上已有的七个模型。LU 如何找到它们，屏幕上没有说明；认为它读取了测试者的 Ollama 存储只是假设。",
+      "引导",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-05",
+      "入门模型的卡片上带有说明、下载大小和所需可用内存（见适配图）。测试者拿它与不给出大小的应用对比（测试者观点）。",
+      "引导",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-existing-models-detected"
+      ]
+    ],
+    [
+      "LU-06",
+      "名为 x/z-image-turbo 和 x/flux2-klein 的模型出现在聊天模型选择器和标题为“7 text models”的 Benchmark 列表中。把它们当作图像模型只是依据名称（假设）。测试者没有评论；这是在查看截图时发现的。",
+      "引导",
+      "observed",
+      "Low",
+      [
+        "locally-uncensored-existing-models-detected",
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-07",
+      "设置第 3 步提供一个可选的文档对话嵌入模型（nomic-embed-text，84 MB），有 Install 和 Skip for now 两个选项。笔记没有说明选了哪个（TE-7）。",
+      "引导",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-document-chat-setup-step"
+      ]
+    ],
+    [
+      "LU-08",
+      "发送第一条消息、模型加载时，“Starting”指示显示 18 秒。该数值取自截图；最终用时没有记录。",
+      "聊天",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "LU-09",
+      "消息框上方的上下文计量器显示用量（309/16K，之后为 4.2K/16K）。提示说明它统计的是 Ollama num_ctx 的 token，不包括推理 token。测试者观点：“somebody has spent some time to develop something real”。",
+      "聊天",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-context-meter-tooltip"
+      ]
+    ],
+    [
+      "LU-10",
+      "用回形针附加的 Excel 文件（.xlsx，84 KB）没有被读取。模型根据文件名和工作表文件名（sheet1.xml 至 sheet6.xml）作答，并表示看不到内容。.xlsx 不在 Docs 拖放区列出的格式之中（TE-3）。",
+      "文档",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-excel-file-not-read-reply"
+      ]
+    ],
+    [
+      "LU-11",
+      "用回形针附加的 PDF（872 KB）没有被读取。第一个回答来自文件名；就文档中的一笔金额提问时，回复说读不到文本，并请他复制粘贴（TE-2）。",
+      "文档",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-pdf-not-read-reply"
+      ]
+    ],
+    [
+      "LU-12",
+      "据测试者的笔记，同一个 PDF 通过 Docs 区域上传同样失败。没有截图。",
+      "文档",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "LU-13",
+      "在 Docs 区域添加的 Word 文件显示为“20 chunks”，但模型回复说读不到 .docx 的内部内容。原因未查明；是否安装了嵌入模型没有记录（LU-07）。",
+      "文档",
+      "observed",
+      "High",
+      [
+        "locally-uncensored-docs-drop-zone-20-chunks",
+        "locally-uncensored-docx-not-read-reply"
+      ]
+    ],
+    [
+      "LU-14",
+      "生成第一张图之前，Create 标签页说一次性设置会安装 Apple MLX 和最小的图像模型，“about 5 GB in all”。测试者看到下载了一个 Python wheel（torch，88.0 MB）和 SD Turbo 模型（2.4 GB）；总量没有记录。",
+      "图像",
+      "vendor-claim",
+      "Positive",
+      [
+        "locally-uncensored-image-one-time-setup-5-gb"
+      ]
+    ],
+    [
+      "LU-15",
+      "下载对话框显示百分比、已下载 MB 与总 GB 以及 MB/s（32% 时 1.2 MB/s，100% 时 1.1 MB/s），但没有剩余时间。按这些速度，2.4 GB 约需 33 至 36 分钟，5 GB 约需 70 至 76 分钟（计算所得，假设速度恒定）。到 100% 时对话框仍停留，速度还在变化，之后才出现 Installed；耗时没有记录。",
+      "图像",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-16",
+      "对话框说安装在后台运行，离开标签页后仍会继续（厂商声明）。测试者离开了标签页、打开了 Settings、重启了应用，下载从已有进度继续；Models 标签页显示了同样的进度（TE-4）。",
+      "图像",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-image-download-100-percent"
+      ]
+    ],
+    [
+      "LU-17",
+      "图像模型卡片显示下载大小、内存需求和针对这台 Mac 的适配标签（“Runs on this Mac”，或“Too big for this Mac's memory. Images run on LU Cloud”），还有 Get anyway 按钮。数字见适配图。",
+      "图像",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-image-model-catalog-memory-fit"
+      ]
+    ],
+    [
+      "LU-18",
+      "被标为太大的模型会显示“Try LU Cloud”提示。按开发者在 PromptQuorum 目录中的说法，云端部分是可选的，按积分计费。没有使用或测试。",
+      "图像",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-19",
+      "用入门模型 SD Turbo（512×512），第一个提示“draw an elephant sitting on the Eifel Tower”生成了铁塔，看不到大象。第二个加上“a color please”，出现了大象，但仍是黑白的。两次的种子不同（99713826、1101006993）。测试者观点：“technically it works, but the model does whatever it wants”。他认为追加文字会让模型忘记之前的文字，这个猜测没有重现（TE-5、TE-6）。",
+      "图像",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-elephant-eiffel-first-image",
+        "locally-uncensored-elephant-eiffel-second-image"
+      ]
+    ],
+    [
+      "LU-20",
+      "内置的“How Image works on a Mac”说明（HiRes pass、Prompt enhancer）以弹窗形式打开，带有完整指南的链接，该指南没有打开。测试者观点：“inbuilt instructions, great”。",
+      "图像",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-how-image-works-guide"
+      ]
+    ],
+    [
+      "LU-21",
+      "Video 标签页提供一次性设置（LTX-2.3 Distilled 4-bit 及其文本编码器），约 27 GB。测试者没有在这台 Mac 上运行。",
+      "图像",
+      "vendor-claim",
+      "Info",
+      [
+        "locally-uncensored-video-setup-27-gb"
+      ]
+    ],
+    [
+      "LU-22",
+      "角色训练需要 Z-Image Turbo（30.5 GB，需要 32 GB，被标为对这台 Mac 太大）。Character 标签页接受了照片（计数 6/100；截图因涉及真人而未公开），但在 24 GB 上训练无法启动。4-bit 版 Z-Image Turbo 没有尝试。测试者估计系统和应用占用 7 至 8 GB，这是假设。",
+      "图像",
+      "observed",
+      "Medium",
+      [
+        "locally-uncensored-z-image-turbo-too-big-card"
+      ]
+    ],
+    [
+      "LU-23",
+      "采样设置（Temperature 0.7、Top P 0.9、Top K 40）没有说明。测试者希望加上信息图标，让新手不必去别处查。",
+      "设置",
+      "tester-view",
+      "Medium",
+      [
+        "locally-uncensored-sampling-sliders"
+      ]
+    ],
+    [
+      "LU-24",
+      "Settings 里的 Troubleshoot 打开了一个测试者无法关闭的跟踪窗口；他重启了应用。原因未查明。",
+      "设置",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "LU-25",
+      "设置包括明暗主题切换（找到并用过）、导入 ChatGPT 导出（.zip 或 .json）、聊天备份的导出和导入、内容政策、隐私、更新和引导。只用了主题切换。",
+      "设置",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "LU-26",
+      "在测试者的大幅显示缩放下，消息框很小，一条灰色横条横穿其上；他不清楚它的含义。缩放设置没有记录。",
+      "设置",
+      "tester-view",
+      "Low",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-27",
+      "A/B Compare 并排运行两个模型，显示速度、用时和 token 数：针对“where is Paris”，gemma4 54.5 t/s、15.5 秒、846 个 token；gemma3:1b 23.9 t/s、0.4 秒、9 个 token。gemma3:1b 把巴黎放在北美；这是模型的错误，不是应用的错误。",
+      "对比",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-ab-compare-where-is-paris"
+      ]
+    ],
+    [
+      "LU-28",
+      "Benchmark 按用正确率加权的“useful”token 每秒对模型排名：gemma3:1b 109.4（原始 164.1，正确率 67%），gemma4 56.9（正确率 100%），共六次运行。应用判定“correct”的方法和“Benchmark 5 remaining”计数器没有检查。",
+      "对比",
+      "measured",
+      "Positive",
+      [
+        "locally-uncensored-benchmark-leaderboard"
+      ]
+    ],
+    [
+      "LU-29",
+      "Coding Agent（gemma4）为一个乒乓球游戏写出了 index.html，内置预览（Desktop、Tablet、Mobile）显示游戏在运行并有比分。第一次回复没有说明文件在哪里；测试者追问后，代理把文件读了出来（248 行）。权限模式有 Ask、Bypass 和 Plan。测试者是否玩过这个游戏没有记录。",
+      "代理",
+      "observed",
+      "Positive",
+      [
+        "locally-uncensored-coding-agent-pingpong-preview",
+        "locally-uncensored-agent-permission-modes"
+      ]
+    ],
+    [
+      "LU-30",
+      "云端功能与本地功能并列：顶栏的 Cloud 开关、LU Cloud 提示，以及模型列表中的 minimax-m2:cloud 条目。是否有数据离开本机没有测试。欢迎界面的“Your chats stay on your machine”是厂商声明。",
+      "信任",
+      "observed",
+      "Info",
+      [
+        "locally-uncensored-main-chat-window"
+      ]
+    ],
+    [
+      "LU-31",
+      "产品的核心卖点——没有内容过滤和 Abliterated 入门模型——没有测试。全程使用的是标准 gemma4 模型，Content policy 设置没有打开。",
+      "范围",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响，是建议值，不是测量值。Info 表示既不是问题也不是优点的发现。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "已有 Ollama 模型、想在一个地方使用聊天、编程代理和入门级图像生成的 Mac 用户（基于一次测试的假设）。应用自己的标签把 4-bit 图像模型的需求定为 16 GB。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "现在就需要文档对话的人，或想在 24 GB 上做角色训练和使用完整大小图像模型的人。"
+      ]
+    ],
+    "retest": "待开发者发布文档对话修复、采样说明、下载时间估计或 Troubleshoot 的改动，或有新的主版本时复测。覆盖：通过两种途径上传 PDF、4-bit 图像模型、视频、离线使用、卸载，并记录应用和 macOS 版本。"
+  },
+  "background_intro": "非实测内容。以下条目来自 PromptQuorum 目录中的 LU 条目和开发者，此处未独立核实。",
+  "background": [
+    [
+      "third-party",
+      "LU Labs；目录条目中开发者名为 David。"
+    ],
+    [
+      "third-party",
+      "许可证 AGPL 3.0，免费增值；约 1,750 个 GitHub star，首次收录于 2026-09-04，数据来自 2026-09-22 的目录核查（已超过一个月）。"
+    ],
+    [
+      "vendor-claim",
+      "可选的云端部分按积分计费；开发者 2026-09-22 的说明称 Mac 版在计划中，而测试者于 2026-10-20 运行的就是 Mac 版。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记和截图，2026年10月20日（原始 Word 笔记；原始笔记 PDF 待补充）。",
+    "PromptQuorum 目录中 Locally Uncensored 的条目和评测（slug：locally-uncensored），最后核实于 2026-09-22。",
+    "厂商网站：locallyuncensored.com（本次测试未打开）。",
+    "厂商发布页：github.com/PurpleDoubleD/locally-uncensored/releases（目录中列出；本次测试未打开）。",
+    "开发者发给测试者的德语消息，上文为转述。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "locally-uncensored-main-chat-window",
+      "figure": 1,
+      "file": "locally-uncensored-main-chat-window.webp",
+      "path": "images/locally-uncensored-main-chat-window.webp",
+      "alt": "LU 主窗口，深色主题，标签页为 Chat、Create、Voice、Compare、Benchmark、Models、Settings，聊天输入区为空。",
+      "caption": "设置完成后的主窗口。观察所得。",
+      "role": "hero",
+      "width": 1269,
+      "height": 796,
+      "bytes": 12462,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 7"
+    },
+    {
+      "id": "locally-uncensored-engine-choice-step",
+      "figure": 2,
+      "file": "locally-uncensored-engine-choice-step.webp",
+      "path": "images/locally-uncensored-engine-choice-step.webp",
+      "alt": "LU 设置第 1 步（共 3 步）：LU Engine 已勾选为就绪，有 Continue 按钮，以及使用 Ollama 或 LM Studio 等其他引擎的链接。",
+      "caption": "设置第 1 步（共 3 步）。观察所得。",
+      "role": "moment",
+      "width": 1176,
+      "height": 754,
+      "bytes": 20808,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 2"
+    },
+    {
+      "id": "locally-uncensored-existing-models-detected",
+      "figure": 3,
+      "file": "locally-uncensored-existing-models-detected.webp",
+      "path": "images/locally-uncensored-existing-models-detected.webp",
+      "alt": "LU 设置第 2 步：机器上已有七个模型，其中 gemma4:latest 被选中，下方有两个可安装的入门模型。",
+      "caption": "设置第 2 步（共 3 步）。观察所得。",
+      "role": "moment",
+      "width": 682,
+      "height": 663,
+      "bytes": 31280,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 4"
+    },
+    {
+      "id": "locally-uncensored-document-chat-setup-step",
+      "figure": 4,
+      "file": "locally-uncensored-document-chat-setup-step.webp",
+      "path": "images/locally-uncensored-document-chat-setup-step.webp",
+      "alt": "设置第 3 步（共 3 步），可选的文档对话，提供 84 MB 的 nomic-embed-text，有 Install 和 Skip for now 按钮。",
+      "caption": "设置中提供的可选嵌入模型。观察所得。",
+      "role": "gallery",
+      "width": 556,
+      "height": 367,
+      "bytes": 14586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 5"
+    },
+    {
+      "id": "locally-uncensored-pdf-not-read-reply",
+      "figure": 5,
+      "file": "locally-uncensored-pdf-not-read-reply.webp",
+      "path": "images/locally-uncensored-pdf-not-read-reply.webp",
+      "alt": "聊天回复称读不到 PDF 的完整文本，并请用户把相关部分复制粘贴到聊天中。",
+      "caption": "对 PDF 提问后的回复。观察所得。",
+      "role": "moment",
+      "width": 1008,
+      "height": 399,
+      "bytes": 44580,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-docs"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 17"
+    },
+    {
+      "id": "locally-uncensored-excel-file-not-read-reply",
+      "figure": 6,
+      "file": "locally-uncensored-excel-file-not-read-reply.webp",
+      "path": "images/locally-uncensored-excel-file-not-read-reply.webp",
+      "alt": "聊天回复根据文件名和工作表文件描述了一个 Excel 文件，并说明无法读取实际内容。",
+      "caption": "对 Excel 提问后的回复。观察所得。",
+      "role": "gallery",
+      "width": 982,
+      "height": 687,
+      "bytes": 73560,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 12"
+    },
+    {
+      "id": "locally-uncensored-docs-drop-zone-20-chunks",
+      "figure": 7,
+      "file": "locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "path": "images/locally-uncensored-docs-drop-zone-20-chunks.webp",
+      "alt": "Docs 拖放区列出 PDF、DOCX 和 TXT，已上传的文件显示为 20 个文本块。",
+      "caption": "Docs 拖放区，Word 文件显示为 20 个文本块。观察所得。",
+      "role": "gallery",
+      "width": 327,
+      "height": 216,
+      "bytes": 2856,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 18"
+    },
+    {
+      "id": "locally-uncensored-docx-not-read-reply",
+      "figure": 8,
+      "file": "locally-uncensored-docx-not-read-reply.webp",
+      "path": "images/locally-uncensored-docx-not-read-reply.webp",
+      "alt": "聊天回复称读不到 .docx 文件的内部内容，也无法判断涵盖哪些语言。",
+      "caption": "Word 文件被分块后的回复。观察所得。",
+      "role": "gallery",
+      "width": 994,
+      "height": 162,
+      "bytes": 15786,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 19"
+    },
+    {
+      "id": "locally-uncensored-context-meter-tooltip",
+      "figure": 9,
+      "file": "locally-uncensored-context-meter-tooltip.webp",
+      "path": "images/locally-uncensored-context-meter-tooltip.webp",
+      "alt": "上下文计量器的提示：16K token 中已用 6.5K，Ollama num_ctx，推理 token 不计入。",
+      "caption": "上下文计量器提示。测量所得。",
+      "role": "gallery",
+      "width": 303,
+      "height": 109,
+      "bytes": 6134,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 14"
+    },
+    {
+      "id": "locally-uncensored-image-one-time-setup-5-gb",
+      "figure": 10,
+      "file": "locally-uncensored-image-one-time-setup-5-gb.webp",
+      "path": "images/locally-uncensored-image-one-time-setup-5-gb.webp",
+      "alt": "Create 标签页的 Image：提示本地图像生成需要约 5 GB 的一次性设置，有 Download and install 按钮。",
+      "caption": "首张图像之前的 Create 标签页。5 GB 这个数字是厂商声明。",
+      "role": "gallery",
+      "width": 930,
+      "height": 865,
+      "bytes": 23592,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 20"
+    },
+    {
+      "id": "locally-uncensored-image-download-100-percent",
+      "figure": 11,
+      "file": "locally-uncensored-image-download-100-percent.webp",
+      "path": "images/locally-uncensored-image-download-100-percent.webp",
+      "alt": "下载对话框在 100% 时：2.4 GB 中的 2.4 GB，速度 1.1 MB/s，带 Cancel 链接。",
+      "caption": "下载达到 100%。测量所得。",
+      "role": "gallery",
+      "width": 591,
+      "height": 315,
+      "bytes": 10302,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 28"
+    },
+    {
+      "id": "locally-uncensored-how-image-works-guide",
+      "figure": 12,
+      "file": "locally-uncensored-how-image-works-guide.webp",
+      "path": "images/locally-uncensored-how-image-works-guide.webp",
+      "alt": "弹窗“How Image works on a Mac”，带模糊预览、关于 HiRes pass 的文字和完整指南的链接。",
+      "caption": "应用内说明。观察所得。",
+      "role": "gallery",
+      "width": 455,
+      "height": 510,
+      "bytes": 14540,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 31"
+    },
+    {
+      "id": "locally-uncensored-image-model-catalog-memory-fit",
+      "figure": 13,
+      "file": "locally-uncensored-image-model-catalog-memory-fit.webp",
+      "path": "images/locally-uncensored-image-model-catalog-memory-fit.webp",
+      "alt": "六张图像模型卡片，标有下载大小、内存需求，以及“Runs on this Mac”或“Too big for this Mac's memory”标签。",
+      "caption": "图像模型目录。大小和内存需求读自屏幕，测量所得。",
+      "role": "moment",
+      "width": 1015,
+      "height": 428,
+      "bytes": 53074,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 29"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-first-image",
+      "figure": 14,
+      "file": "locally-uncensored-elephant-eiffel-first-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-first-image.webp",
+      "alt": "512×512 的埃菲尔铁塔黑白图像，种子 99713826，由 MLX SD Turbo 生成；提示框中显示的是大象的请求。",
+      "caption": "第一个大象提示，种子 99713826。观察所得。",
+      "role": "gallery",
+      "width": 825,
+      "height": 632,
+      "bytes": 39310,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 32"
+    },
+    {
+      "id": "locally-uncensored-elephant-eiffel-second-image",
+      "figure": 15,
+      "file": "locally-uncensored-elephant-eiffel-second-image.webp",
+      "path": "images/locally-uncensored-elephant-eiffel-second-image.webp",
+      "alt": "512×512 的线条画，两座埃菲尔铁塔，底部有一头大象，仍是黑白，种子 1101006993，MLX SD Turbo。",
+      "caption": "第二个大象提示，种子 1101006993。观察所得。",
+      "role": "gallery",
+      "width": 902,
+      "height": 689,
+      "bytes": 42130,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 33"
+    },
+    {
+      "id": "locally-uncensored-lovers-beach-sunset-image",
+      "figure": 16,
+      "file": "locally-uncensored-lovers-beach-sunset-image.webp",
+      "path": "images/locally-uncensored-lovers-beach-sunset-image.webp",
+      "alt": "512×512 的绘画风格图像，日落时海滩上的两个人影，由 MLX SD Turbo 以 High 质量生成。",
+      "caption": "第三个图像提示。观察所得。",
+      "role": "gallery",
+      "width": 808,
+      "height": 630,
+      "bytes": 35046,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 34"
+    },
+    {
+      "id": "locally-uncensored-video-setup-27-gb",
+      "figure": 17,
+      "file": "locally-uncensored-video-setup-27-gb.webp",
+      "path": "images/locally-uncensored-video-setup-27-gb.webp",
+      "alt": "Video 标签页：提示本地视频生成需要约 27 GB 的一次性设置，有 Download and install 按钮。",
+      "caption": "视频设置界面。27 GB 这个数字是厂商声明。",
+      "role": "gallery",
+      "width": 549,
+      "height": 308,
+      "bytes": 15570,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "vendor-claim",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 35"
+    },
+    {
+      "id": "locally-uncensored-z-image-turbo-too-big-card",
+      "figure": 18,
+      "file": "locally-uncensored-z-image-turbo-too-big-card.webp",
+      "path": "images/locally-uncensored-z-image-turbo-too-big-card.webp",
+      "alt": "Z-Image Turbo 卡片：30.5 GB，需要 32 GB 内存，被标为对这台 Mac 太大，带 Try LU Cloud 和 Get anyway 按钮。",
+      "caption": "Z-Image Turbo 卡片。读自屏幕，测量所得。",
+      "role": "moment",
+      "width": 341,
+      "height": 219,
+      "bytes": 9818,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-image"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 37"
+    },
+    {
+      "id": "locally-uncensored-sampling-sliders",
+      "figure": 19,
+      "file": "locally-uncensored-sampling-sliders.webp",
+      "path": "images/locally-uncensored-sampling-sliders.webp",
+      "alt": "生成设置滑块：Temperature 0.7、Top P 0.9、Top K 40，没有任何说明文字。",
+      "caption": "默认采样滑块。观察所得。",
+      "role": "gallery",
+      "width": 809,
+      "height": 207,
+      "bytes": 3026,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 22"
+    },
+    {
+      "id": "locally-uncensored-ab-compare-where-is-paris",
+      "figure": 20,
+      "file": "locally-uncensored-ab-compare-where-is-paris.webp",
+      "path": "images/locally-uncensored-ab-compare-where-is-paris.webp",
+      "alt": "A/B Compare 界面：gemma4:latest 对比 gemma3:1b，显示“where is Paris”这个问题的速度、用时和 token 数。",
+      "caption": "A/B Compare。由应用测量。",
+      "role": "gallery",
+      "width": 1260,
+      "height": 519,
+      "bytes": 40440,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 40"
+    },
+    {
+      "id": "locally-uncensored-benchmark-leaderboard",
+      "figure": 21,
+      "file": "locally-uncensored-benchmark-leaderboard.webp",
+      "path": "images/locally-uncensored-benchmark-leaderboard.webp",
+      "alt": "Benchmark 排行榜：gemma3:1b 第一，每秒 109.4 个 useful token；gemma4:latest 第二，56.9；另有七个文本模型的列表。",
+      "caption": "Benchmark 排行榜。由应用测量。",
+      "role": "gallery",
+      "width": 798,
+      "height": 691,
+      "bytes": 26384,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 41"
+    },
+    {
+      "id": "locally-uncensored-coding-agent-pingpong-preview",
+      "figure": 22,
+      "file": "locally-uncensored-coding-agent-pingpong-preview.webp",
+      "path": "images/locally-uncensored-coding-agent-pingpong-preview.webp",
+      "alt": "编程代理的乒乓球游戏预览：黑色场地、两个白色球拍、黄色球、比分 5 比 4，以及 Desktop、Tablet、Mobile 切换。",
+      "caption": "所生成游戏的预览。观察所得。",
+      "role": "moment",
+      "width": 959,
+      "height": 590,
+      "bytes": 5400,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-explore"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 45"
+    },
+    {
+      "id": "locally-uncensored-agent-permission-modes",
+      "figure": 23,
+      "file": "locally-uncensored-agent-permission-modes.webp",
+      "path": "images/locally-uncensored-agent-permission-modes.webp",
+      "alt": "编程代理中的权限模式菜单：Ask permissions（当前）、Bypass permissions 和 Plan mode，每项带一行说明。",
+      "caption": "代理权限模式。观察所得。",
+      "role": "gallery",
+      "width": 304,
+      "height": 170,
+      "bytes": 7004,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Locally Uncensored (LU) 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-10-20；具体时间未记录",
+      "original_docx_media": "Tester notes (Word), screenshot 43"
+    }
+  ],
+  "figure_order": [
+    "locally-uncensored-main-chat-window",
+    "locally-uncensored-engine-choice-step",
+    "locally-uncensored-existing-models-detected",
+    "locally-uncensored-document-chat-setup-step",
+    "locally-uncensored-pdf-not-read-reply",
+    "locally-uncensored-excel-file-not-read-reply",
+    "locally-uncensored-docs-drop-zone-20-chunks",
+    "locally-uncensored-docx-not-read-reply",
+    "locally-uncensored-context-meter-tooltip",
+    "locally-uncensored-image-one-time-setup-5-gb",
+    "locally-uncensored-image-download-100-percent",
+    "locally-uncensored-how-image-works-guide",
+    "locally-uncensored-image-model-catalog-memory-fit",
+    "locally-uncensored-elephant-eiffel-first-image",
+    "locally-uncensored-elephant-eiffel-second-image",
+    "locally-uncensored-lovers-beach-sunset-image",
+    "locally-uncensored-video-setup-27-gb",
+    "locally-uncensored-z-image-turbo-too-big-card",
+    "locally-uncensored-sampling-sliders",
+    "locally-uncensored-ab-compare-where-is-paris",
+    "locally-uncensored-benchmark-leaderboard",
+    "locally-uncensored-coding-agent-pingpong-preview",
+    "locally-uncensored-agent-permission-modes"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年10月20日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面",
+      "Info": "提示"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}

@@ -10,7 +10,7 @@ const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'src/l
 const LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 const EVID = new Set(['observed', 'measured', 'tester-estimate', 'vendor-claim', 'third-party', 'assumption', 'tester-view', 'tester-error'])
 const STATUS = new Set(['Fail', 'Partial', 'Pass', 'Not completed'])
-const SEV = new Set(['High', 'Medium', 'Low', 'Positive'])
+const SEV = new Set(['High', 'Medium', 'Low', 'Positive', 'Info'])
 
 // Paths (dot/bracket form, indexes normalised to []) whose string value must be byte-identical to EN.
 const PROTECTED = [
