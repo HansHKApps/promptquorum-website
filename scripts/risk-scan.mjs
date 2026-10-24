@@ -4,7 +4,11 @@
 // Regex triage for the `risk-checker` skill (~/.claude/skills/risk-checker/SKILL.md):
 // it finds sentences that MAY be risky; the skill decides. No file is modified.
 //
-// Run: node scripts/risk-scan.mjs [--cluster <name>] [--all] [--file <path>] [--csv <path>] [--quiet]
+// Run: node scripts/risk-scan.mjs [--cluster <name>] [--all] [--file <path>] [--csv <path>] [--quiet] [--no-hedge]
+// Hedge-aware: a hit on a line that visibly negates verification ("not tested", "did not run") or attributes
+// the claim to the maker/website ("the site says", "laut Hersteller") is downgraded to HEDGED and kept in the CSV
+// but left out of the CRITICAL/HIGH/MEDIUM counts. R4 (false provenance) only accepts negation, never attribution.
+// --no-hedge restores the raw regex severities.
 // Output: risk-scan-report.csv (file, cluster, slug, locale, line, class, severity, snippet) + console summary
 
 import fs from 'fs';
@@ -36,6 +40,7 @@ const clusterArg = getArg('--cluster');
 const fileArg = getArg('--file');
 const csvArg = getArg('--csv') || 'risk-scan-report.csv';
 const quiet = args.includes('--quiet');
+const hedgeAware = !args.includes('--no-hedge');
 
 if (clusterArg && !CLUSTER_DIRS[clusterArg]) {
   console.error(`Unknown cluster "${clusterArg}". Known: ${Object.keys(CLUSTER_DIRS).join(', ')}`);
@@ -52,7 +57,7 @@ const PATTERNS = [
   { cls: 'R1', sev: 'CRITICAL', re: /\b(GDPR|DSGVO|RGPD|LGPD|HIPAA|PIPL|APPI|PIPA)[- ]?(compliant|konform|conforme|compliance guaranteed|compatível|준수)\b/iu },
   { cls: 'R1', sev: 'CRITICAL', re: /\b(automatically|fully|automatisch|vollständig|automáticamente|automaticamente|automatiquement)\s+(compliant|konform|conforme|compatível)/iu },
   { cls: 'R1', sev: 'CRITICAL', re: /\b(ab Inbetriebnahme|out of the box compliant|compliant out of the box|rechtssicher|legally safe|juridiquement sûr|legalmente seguro|juridicamente seguro)\b/iu },
-  { cls: 'R1', sev: 'HIGH', re: /\b(SOC ?2|ISO ?27001|BSI[- ]Grundschutz|zertifiziert|certified|certifié|certificado)\b/iu },
+  { cls: 'R1', sev: 'HIGH', re: /\b(SOC ?2|ISO ?27001|BSI[- ]Grundschutz|zertifiziert|certified|certifié)\b/iu },
   { cls: 'R1', sev: 'HIGH', re: /\b(kein|no|aucun|sin|sem)\s+Schrems[- ]II/iu },
   { cls: 'R1', sev: 'HIGH', re: /(AI Act|KI-Verordnung|AI-Verordnung|Ley de IA|Lei de IA)[- ]?(compliant|konform|conforme)/iu },
   { cls: 'R1', sev: 'HIGH', re: /(GDPR準拠|個人情報保護法に準拠|完全準拠|符合GDPR|符合《?个人信息保护法|完全合规|متوافق مع اللائحة|متوافق تمامًا|GDPR 준수|개인정보보호법 준수|완전 준수)/u },
@@ -111,6 +116,82 @@ const PATTERNS = [
   // R3 negative statements about named third parties (needs a named entity nearby)
   { cls: 'R3', sev: 'HIGH', re: /\b(Ollama|LM Studio|ROCm|AMD|NVIDIA|Apple|Hetzner|OpenAI|Anthropic|Google|Meta|Alibaba|Qwen|DeepSeek|Mistral|Microsoft|Amazon|Llama|Gemma|Claude|ChatGPT|Gemini|Copilot)\b[^.!?。！？\n]{0,80}\b(broken|buggy|unreliable|insecure|worse|inferior|fails|dishonest|scam|misleading|abandoned|dead|leaks|spies|phones home|bloatware|fehlerhaft|kaputt|unzuverlässig|unsicher|schlechter|minderwertig|versagt|unseriös|irreführend|eingestellt|défectueux|peu fiable|trompeur|defectuoso|poco fiable|engañoso|defeituoso|pouco confiável|enganoso|不安定|信頼できない|劣る|有缺陷|不可靠|不如|معيب|غير موثوق|결함|불안정|신뢰할 수 없)/iu },
 ];
+
+
+// ---- Hedge detection -------------------------------------------------------
+// A match is a hedge when the same line states the thing was NOT verified (NEG) or attributes it to
+// the maker / website / policy instead of asserting it as PromptQuorum fact (ATTR). Per-line on purpose:
+// article strings are one sentence per line, so the hedge sits next to the claim it softens.
+
+const HEDGE_NEG = new RegExp([
+  // en
+  "\\b(not|never|n't|nor|neither) (been )?(hands-on |independently )?(tested|verified|checked|confirmed|inspected|installed|measured|audited|benchmarked|run|reviewed|read|examined|opened)\\b",
+  "\\b(did not|didn't|do not|don't|does not|doesn't|has not|hasn't|have not|haven't|cannot|can't|could not|couldn't|was not|were not|is not|isn't|are not)\\b[^.]{0,60}\\b(test|verif|check|confirm|inspect|install|measure|audit|benchmark|run|review|read|examin|open|claim|state|say|guarantee|cover|mention|certif)",
+  "\\b(no|without|zero) (hands-on|testing|verification|independent|network inspection|traffic inspection|benchmark|audit)\\b",
+  "\\b(unverified|untested|unconfirmed|unaudited|unchecked)\\b", "\\b(no|without) [\\w ,-]{0,40}hands-on",
+  // de
+  "\\bnicht (selbst |unabhängig )?(getestet|geprüft|überprüft|verifiziert|bestätigt|untersucht|gemessen|installiert|ausgeführt|gelesen|abgedeckt|zertifiziert)\\b",
+  "\\b(haben|hat|wurde|wurden|ist|sind) (nicht|kein|keine)\\b[^.]{0,60}(test|prüf|überprüf|verifizier|bestätig|untersuch|messen|gemessen|installier|ausgeführt|gelesen|zugesichert|garantier)",
+  "\\b(ohne|kein|keine|keinen) (Praxis|Test|Hands-on|eigene|unabhängige|Netzwerk|Prüfung)", "\\b(ungeprüft|unverifiziert|ungetestet|unbestätigt)\\b",
+  // fr
+  "\\b(pas|non|jamais) (été )?(testé|vérifié|contrôlé|confirmé|inspecté|installé|mesuré|exécuté|lu)",
+  "\\b(n'a|n'ont|n'avons|n'est|ne) (pas|jamais)\\b[^.]{0,60}(test|vérif|contrôl|confirm|inspect|install|mesur|exécut|lu |garanti)", "\\b(sans|aucun) (test|vérification|essai|inspection)", "\\bnon (vérifié|testé|confirmé)",
+  // es
+  "\\bno (se )?(ha |han |hemos )?(probado|probó|probamos|verificado|verificó|comprobado|comprobó|inspeccionado|inspeccionó|instalado|medido|ejecutado|leído|garantiza)", "\\b(sin|ninguna) (probar|verificar|prueba|comprobación|inspección)", "\\bno (verificad|probad|comprobad|confirmad)",
+  // pt
+  "\\bnão (foi |foram |se )?(testou|testamos|testado|verificou|verificado|verificamos|comprovou|comprovado|inspecionou|inspecionado|instalou|instalado|medido|executou|leu|garante)", "\\b(sem|nenhum|nenhuma) (testar|verificar|teste|verificação|inspeção)", "\\bnão (verificad|testad|comprovad|confirmad)",
+  // ja
+  "(未検証|未確認|未テスト|未実測|確認していません|検証していません|試していません|テストしていません|確認できていません|調べていません|読んでいません|実行していません|保証していません|保証しません|ではありません|わけではありません)",
+  // zh
+  "(未经|未能|未曾|并未|没有|不曾|无法|尚未|并没有|不保证|不作保证)[^。]{0,20}(验证|核实|核对|测试|实测|检查|审计|运行|阅读|确认|保证|安装)", "(未验证|未核实|未测试|未实测|未检查|未经验证|未上手|没有上手)",
+  // ar
+  "(لم (نختبر|نتحقق|نفحص|نقم|نجرب|نقرأ|نشغّل|يتم|نؤكد)|لا نضمن|غير (مُتحقق|مؤكد|موثق|مختبر)|دون (اختبار|تحقق|فحص))",
+  // ko
+  "(직접 확인(하십시오|하세요|해 보|할 수 있는지)|알 수 없|검증하지|확인하지|테스트하지|점검하지|실행하지|읽지|설치하지|보장하지|확인되지|검증되지|검증되지 않|확인할 수 없|않았습니다|않습니다|미검증|미확인)",
+].join('|'), 'iu');
+
+const HEDGE_ATTR = new RegExp([
+  // en
+  "\\b(claims?|claimed|claiming|according to|states?|stated|stating|says|said|saying|describes?|described|advertis\\w+|promises?|promised|asserts?|asserted|reports?|reported|lists?|listed|publishes|published|markets?|marketed|self-reported|vendor-reported|treat(ed|s)? as|taken from|comes? from|come from|per the|per its|as per)\\b",
+  "\\b(the |its |their |maker|developer|vendor|publisher|company|team)'?s? ?(maker|developer|vendor|publisher|website|site|listing|policy|privacy policy|README|readme|store page|store listing|App Store|Play Store|docs|documentation|page|announcement|blog|FAQ|terms|licen[cs]e)\\b",
+  "\\b(maker|developer|vendor|publisher)'s (own )?(words|claim|statement|description|wording|text)\\b",
+  // de
+  "\\b(laut|gemäß|nach Angaben|nach Aussage|behauptet|behaupten|angeblich|gibt an|geben an|besagt|besagen|nennt|nennen|beschreibt|beschreiben|verspricht|versprechen|wirbt|werben|Herstellerangabe|Herstellerangaben|Aussage des|Angabe des|stammen aus|stammt aus)\\b",
+  "\\b(Hersteller|Entwickler|Anbieter|Betreiber|Website|Webseite|Seite|Datenschutzerklärung|README|Store-Eintrag|App-Store|Eintrag)\\b",
+  // fr
+  "\\b(selon|d'après|affirme|affirment|indique|indiquent|prétend|prétendent|déclare|déclarent|annonce|annoncent|décrit|décrivent|promet|promettent|revendique|revendiquent|allégation|provient|proviennent)\\b",
+  "\\b(développeur|éditeur|fabricant|site|politique de confidentialité|README|fiche|page)\\b",
+  // es
+  "\\b(según|afirma|afirman|indica|indican|declara|declaran|asegura|aseguran|alega|alegan|describe|describen|promete|prometen|anuncia|anuncian|proceden de|procede de)\\b",
+  "\\b(desarrollador|fabricante|editor|sitio|política de privacidad|README|ficha|página)\\b",
+  // pt
+  "\\b(segundo|de acordo com|afirma|afirmam|indica|indicam|declara|declaram|alega|alegam|descreve|descrevem|promete|prometem|anuncia|anunciam|vêm de|vem de)\\b",
+  "\\b(desenvolvedor|fabricante|editor|site|política de privacidade|README|ficha|página)\\b",
+  // ja
+  "(によると|によれば|と述べ|としています|と説明|と主張|を主張|と記載|と書かれ|とされ|と謳|開発元|公式サイト|サイトの記述|READMEの記述|ポリシー|ストアページ|記述です|自己申告)",
+  // zh
+  "(据|根据|声称|宣称|称[，,]|表示|说法|声明|所述|官网|网站|开发方|开发者|厂商|政策|商店页面|自称|来自 ?README|来自.{0,6}(网站|官网))",
+  // ar
+  "(وفقًا|وفقا|حسب|يزعم|يدّعي|يدعي|تزعم|تدّعي|يذكر|تذكر|يقول|تقول|ينص|تنص|يصف|تصف|المطوّر|المطور|الشركة المطورة|الموقع|الادعاء|ادعاء|سياسة الخصوصية)",
+  // ko
+  "(에 따르면|따르면|라고 (밝|설명|말|주장)|주장|밝히|개발사|개발자|제조사|웹사이트|공식 사이트|공식|정책|설명합니다|설명하며|소개합니다|스토어 페이지|README)",
+].join('|'), 'iu');
+
+/** @returns {'neg'|'attr'|'q'|'label'|null} */
+function hedgeKind(line, cls, match) {
+  // FAQ question text ("q: 'Can X run fully offline?'") asks, it does not claim.
+  if (/^\s*q\s*:/.test(line)) return 'q';
+  // A bold section label such as "**Hands-on behavior.**" names a heading, it does not claim provenance.
+  if (cls === 'R4' && /\*\*[^*]*$/.test(line.slice(0, match.index)) && /^[^*]*\*\*/.test(line.slice(match.index))) return 'label';
+  // "the only client / tagged release / documented version" states product scope, it is not a market-leader claim.
+  if (cls === 'R5' && /(only|único|única|seul|seule|nur|einzige[rn]?|唯一|الوحيد|유일)[^.。]{0,25}(client|cliente|Client|客户端|العميل|클라이언트|tagged|etiquet|étiquet|标记|الموسوم|release|version|versão|versión|Version|documented|documentad|documenté|documentiert|figure|forma de acceso|way in|المدخل)|(client|cliente|Client|客户端|العميل|클라이언트|المدخل)[^.。]{0,25}(الوحيد|唯一)/iu.test(line)) return 'label';
+  // "preço único" / "precio único" = one-off price, not a Spitzenstellung claim.
+  if (cls === 'R5' && /\b(preço|pagamento|compra|cobrança|precio|pago|prix|Preis)\s+(único|única|unique)\b/iu.test(line)) return 'label';
+  if (HEDGE_NEG.test(line)) return 'neg';
+  // R4 = "we tested / hands-on" provenance claims: attribution to the maker never excuses them.
+  if (cls !== 'R4' && HEDGE_ATTR.test(line)) return 'attr';
+  return null;
+}
 
 // ---- Helpers ---------------------------------------------------------------
 
@@ -172,6 +253,7 @@ const rows = [];
 const perFile = new Map();
 const perClass = {};
 const perLocale = {};
+let hedgedCount = 0;
 
 for (const file of files) {
   const rel = path.relative(ROOT, file);
@@ -185,15 +267,19 @@ for (const file of files) {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    // skip pure code-ish lines (imports, closing braces) fast
+    // skip source comments (never published) and pure code-ish lines (imports, closing braces) fast
+    if (/^\s*(\/\/|\/?\*)/.test(line)) continue;
     if (!/['"`]/.test(line) && !/[぀-鿿؀-ۿ가-힯]/.test(line)) continue;
     for (const p of PATTERNS) {
       const m = p.re.exec(line);
       if (!m) continue;
       const start = Math.max(0, m.index - 60);
       const snippet = line.slice(start, m.index + m[0].length + 60).trim().replace(/\s+/g, ' ');
-      const row = { file: rel, cluster, slug, locale: locales[i], line: i + 1, cls: p.cls, sev: p.sev, snippet };
+      const hk = hedgeAware && (p.sev === 'HIGH' || p.sev === 'CRITICAL') ? hedgeKind(line, p.cls, m) : null;
+      const sev = hk ? 'HEDGED' : p.sev;
+      const row = { file: rel, cluster, slug, locale: locales[i], line: i + 1, cls: p.cls, sev, orig: p.sev, snippet };
       rows.push(row);
+      if (hk) { hedgedCount++; continue; }
       perClass[p.cls] = (perClass[p.cls] || 0) + 1;
       perLocale[row.locale] = (perLocale[row.locale] || 0) + 1;
       if (!perFile.has(rel)) perFile.set(rel, { CRITICAL: 0, HIGH: 0, MEDIUM: 0, classes: new Set() });
@@ -206,16 +292,16 @@ for (const file of files) {
 
 // ---- Write CSV -------------------------------------------------------------
 
-const header = ['file', 'cluster', 'slug', 'locale', 'line', 'class', 'severity', 'snippet'];
+const header = ['file', 'cluster', 'slug', 'locale', 'line', 'class', 'severity', 'was', 'snippet'];
 const csv = [header.join(',')]
-  .concat(rows.map((r) => [r.file, r.cluster, r.slug, r.locale, r.line, r.cls, r.sev, r.snippet].map(csvEscape).join(',')))
+  .concat(rows.map((r) => [r.file, r.cluster, r.slug, r.locale, r.line, r.cls, r.sev, r.orig, r.snippet].map(csvEscape).join(',')))
   .join('\n');
 fs.writeFileSync(path.resolve(ROOT, csvArg), csv + '\n');
 
 // ---- Summary ---------------------------------------------------------------
 
 if (!quiet) {
-  console.log(`Hits: ${rows.length} across ${perFile.size} file(s) → ${csvArg}\n`);
+  console.log(`Hits: ${rows.length - hedgedCount} open (+ ${hedgedCount} downgraded to HEDGED) across ${perFile.size} file(s) → ${csvArg}\n`);
   console.log('By class:');
   for (const k of Object.keys(perClass).sort()) console.log(`  ${k.padEnd(4)} ${perClass[k]}`);
   console.log('\nBy locale:');
