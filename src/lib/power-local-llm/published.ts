@@ -594,6 +594,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'murmur-review',
   // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
   'iimagine-desktop-review',
+  // Zeno review (Local AI Agents & Tool Use, macOS local AI workspace by Icosa Computing) — 2026-10-24
+  'zeno-review',
   'asiden-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',

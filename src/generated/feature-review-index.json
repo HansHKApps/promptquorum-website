@@ -999,6 +999,11 @@
     "urlSlug": "iimagine-desktop-review",
     "url": "/power-local-llm/iimagine-desktop-review"
   },
+  "zeno": {
+    "cluster": "power-local-llm",
+    "urlSlug": "zeno-review",
+    "url": "/power-local-llm/zeno-review"
+  },
   "asiden": {
     "cluster": "power-local-llm",
     "urlSlug": "asiden-review",
