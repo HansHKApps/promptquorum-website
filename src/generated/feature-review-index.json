@@ -999,6 +999,11 @@
     "urlSlug": "zeno-review",
     "url": "/power-local-llm/zeno-review"
   },
+  "ensu": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ensu-review",
+    "url": "/power-local-llm/ensu-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",

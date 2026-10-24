@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 173,
+    "totalCount": 174,
     "capped": true
   },
   "vLLM": {
@@ -9874,6 +9874,20 @@
         "slug": "zeno-review",
         "title": "Zeno Review: Free Private AI Workspace for Mac",
         "url": "/power-local-llm/zeno-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Ensu": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ensu-review",
+        "title": "Ensu Review: Free On-Device Chat App from Ente Labs",
+        "url": "/power-local-llm/ensu-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
