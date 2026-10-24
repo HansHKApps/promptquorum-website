@@ -1248,6 +1248,7 @@ const HUB_THEMES: Array<{
       'automatic1111-review',
       'comfyui-review',
       'pixlstash-review',
+      'photoprism-review',
       'controlnet-review',
       'draw-things-review',
       'genva-review',
