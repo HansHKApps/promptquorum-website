@@ -891,6 +891,7 @@ const HUB_THEMES: Array<{
       'jarvis-mac-review',
       'msty-review',
       'open-felix-review',
+      'openclient-review',
       'osaurus-ai-review',
       'rapr-ai-review',
       'voxa-review',
