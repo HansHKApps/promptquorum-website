@@ -130,6 +130,7 @@ import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
 import { app as app_castmates } from './apps/castmates'
 import { app as app_frankly_ai } from './apps/frankly-ai'
+import { app as app_haplo_ai } from './apps/haplo-ai'
 import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_hiwaifu } from './apps/hiwaifu'
@@ -245,6 +246,7 @@ import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_iimagine_desktop } from './apps/iimagine-desktop'
+import { app as app_ensu } from './apps/ensu'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
@@ -501,6 +503,7 @@ export const localAiApps: ToolRecord[] = [
   app_localmindai,
   app_murmur,
   app_iimagine_desktop,
+  app_ensu,
   app_candle_vllm,
   app_chroma,
   app_claude_code_local,
@@ -570,6 +573,7 @@ export const localAiApps: ToolRecord[] = [
   app_local_ai_chat_pocket,
   app_castmates,
   app_frankly_ai,
+  app_haplo_ai,
   app_pixlstash,
   app_hiwaifu,
   app_memoryai,

@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 173,
+    "totalCount": 175,
     "capped": true
   },
   "vLLM": {
@@ -5924,7 +5924,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 44,
+    "totalCount": 45,
     "capped": true
   },
   "Pocket AI": {
@@ -6712,6 +6712,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "haplo-ai-review",
+        "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
+        "url": "/power-local-llm/haplo-ai-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "galaxy-s26-local-ai-on-device-2026",
         "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
@@ -6774,17 +6782,9 @@
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stable-diffusion-forge-review",
-        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
-        "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 33,
+    "totalCount": 34,
     "capped": true
   },
   "ComfyUI": {
@@ -9881,6 +9881,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Ensu": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ensu-review",
+        "title": "Ensu Review: Free On-Device Chat App from Ente Labs",
+        "url": "/power-local-llm/ensu-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "candle-vllm": {
     "articles": [
       {
@@ -11753,6 +11767,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "haplo-ai-review",
+        "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
+        "url": "/power-local-llm/haplo-ai-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11798,17 +11820,9 @@
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "caelum-review",
-        "title": "Caelum Review: Free Offline AI Chat App for Android",
-        "url": "/power-local-llm/caelum-review",
-        "dateModified": "2026-10-21",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "LLM Hub": {
@@ -12042,6 +12056,20 @@
         "slug": "frankly-ai-review",
         "title": "Frankly AI Review: iPhone Chat App With Downloadable On-Device Models",
         "url": "/power-local-llm/frankly-ai-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Haplo AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "haplo-ai-review",
+        "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
+        "url": "/power-local-llm/haplo-ai-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
