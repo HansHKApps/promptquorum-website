@@ -59,6 +59,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nekoni-review",
+        "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
+        "url": "/power-local-llm/nekoni-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openclient-review",
         "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
         "url": "/power-local-llm/openclient-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/70b-models-consumer-hardware",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-gpus-local-llm",
-        "title": "Best AMD GPU for Local LLMs and AI Inference",
-        "url": "/local-llms/best-amd-gpus-local-llm",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 312,
+    "totalCount": 313,
     "capped": true
   },
   "llama.cpp": {
@@ -9868,6 +9868,28 @@
         "slug": "murmur-review",
         "title": "Murmur Review: On-Device AI Music Generator for iPhone",
         "url": "/power-local-llm/murmur-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nekoni-review",
+        "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
+        "url": "/power-local-llm/nekoni-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Nekoni": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "nekoni-review",
+        "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
+        "url": "/power-local-llm/nekoni-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }

@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "nekoni": {
+    "cluster": "power-local-llm",
+    "urlSlug": "nekoni-review",
+    "url": "/power-local-llm/nekoni-review"
+  },
   "iimagine-desktop": {
     "cluster": "power-local-llm",
     "urlSlug": "iimagine-desktop-review",
