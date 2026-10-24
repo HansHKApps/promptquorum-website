@@ -26,7 +26,7 @@ const L = {
   ja: { hl: ['デスクトップ向けローカルAI', 'エンジン同梱・localhost API', 'MIT・初期の0.x版'], price: '価格', priceV: '無料', lic: 'ライセンス', licV: 'MIT', plat: '対応プラットフォーム', platV: 'macOS・Windows・Linux', footer: 'PromptQuorumガイド' },
   zh: { hl: ['桌面端本地 AI 聊天', '内置引擎，localhost API', 'MIT 许可，早期 0.x 版'], price: '价格', priceV: '免费', lic: '许可证', licV: 'MIT', plat: '支持平台', platV: 'macOS、Windows、Linux', footer: 'PromptQuorum 指南' },
   pt: { hl: ['Chat de IA local no desktop', 'Motor incluído, API localhost', 'MIT, versão 0.x inicial'], price: 'Preço', priceV: 'Grátis', lic: 'Licença', licV: 'MIT', plat: 'Plataformas', platV: 'macOS, Windows, Linux', footer: 'Guia PromptQuorum' },
-  ar: { hl: ['دردشة ذكاء اصطناعي محلية لسطح المكتب', 'محرك مدمج وواجهة برمجية محلية', 'ترخيص مفتوح وإصدار مبكر'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'MIT', plat: 'المنصات', platV: 'macOS وWindows وLinux', footer: 'دليل PromptQuorum' },
+  ar: { hl: ['دردشة ذكاء اصطناعي محلية لسطح المكتب', 'محرك مدمج + API محلي', 'ترخيص مفتوح وإصدار مبكر'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'MIT', plat: 'المنصات', platV: 'macOS وWindows وLinux', footer: 'دليل PromptQuorum' },
   ko: { hl: ['데스크톱 로컬 AI 채팅', '내장 엔진, localhost API', 'MIT, 초기 0.x 버전'], price: '가격', priceV: '무료', lic: '라이선스', licV: 'MIT', plat: '플랫폼', platV: 'macOS, Windows, Linux', footer: 'PromptQuorum 가이드' },
 }
 
