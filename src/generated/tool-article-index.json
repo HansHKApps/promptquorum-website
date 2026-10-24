@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 312,
+    "totalCount": 313,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 175,
+    "totalCount": 176,
     "capped": true
   },
   "vLLM": {
@@ -9889,6 +9889,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "IIMAGINE Desktop": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "iimagine-desktop-review",
+        "title": "IIMAGINE Desktop Review: Open-Source Local AI Chat App",
+        "url": "/power-local-llm/iimagine-desktop-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Zeno": {
     "articles": [
       {
@@ -12190,6 +12204,20 @@
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PocketLLM Lite": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketllm-lite-review",
+        "title": "PocketLLM Lite Review: Local-First AI Chat App for Android",
+        "url": "/power-local-llm/pocketllm-lite-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }

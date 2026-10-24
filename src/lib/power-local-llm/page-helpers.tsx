@@ -1110,6 +1110,7 @@ const HUB_THEMES: Array<{
       'haplo-ai-review',
       'caelum-review',
       'lm-mini-review',
+      'pocketllm-lite-review',
       'ensu-review',
       'llm-hub-review',
       'lm-playground-review',

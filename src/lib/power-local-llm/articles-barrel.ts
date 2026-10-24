@@ -84,11 +84,13 @@ import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review
 import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_local_operator_review } from './articles/local-operator-review'
+import { article as a_iimagine_desktop_review } from './articles/iimagine-desktop-review'
 import { article as a_zeno_review } from './articles/zeno-review'
 import { article as a_asiden_review } from './articles/asiden-review'
 import { article as a_ensu_review } from './articles/ensu-review'
 import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
+import { article as a_pocketllm_lite_review } from './articles/pocketllm-lite-review'
 import { article as a_obscurify_review } from './articles/obscurify-review'
 import { article as a_genva_review } from './articles/genva-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
@@ -720,11 +722,13 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'localmindai-review':                            a_localmindai_review,
   'murmur-review':                                 a_murmur_review,
   'local-operator-review':                         a_local_operator_review,
+  'iimagine-desktop-review':                       a_iimagine_desktop_review,
   'zeno-review':                                   a_zeno_review,
   'asiden-review':                                 a_asiden_review,
   'ensu-review':                                   a_ensu_review,
   'caelum-review':                                 a_caelum_review,
   'lm-mini-review':                                a_lm_mini_review,
+  'pocketllm-lite-review':                         a_pocketllm_lite_review,
   'obscurify-review':                              a_obscurify_review,
   'genva-review':                                  a_genva_review,
   'anyllm-review':                                 a_anyllm_review,

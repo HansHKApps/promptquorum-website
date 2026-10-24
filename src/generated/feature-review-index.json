@@ -999,6 +999,11 @@
     "urlSlug": "local-operator-review",
     "url": "/power-local-llm/local-operator-review"
   },
+  "iimagine-desktop": {
+    "cluster": "power-local-llm",
+    "urlSlug": "iimagine-desktop-review",
+    "url": "/power-local-llm/iimagine-desktop-review"
+  },
   "zeno": {
     "cluster": "power-local-llm",
     "urlSlug": "zeno-review",
@@ -1398,6 +1403,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "lm-mini-review",
     "url": "/power-local-llm/lm-mini-review"
+  },
+  "pocketllm-lite": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pocketllm-lite-review",
+    "url": "/power-local-llm/pocketllm-lite-review"
   },
   "obscurify": {
     "cluster": "power-local-llm",
