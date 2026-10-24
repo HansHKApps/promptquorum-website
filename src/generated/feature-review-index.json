@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "ente-photos": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ente-photos-review",
+    "url": "/power-local-llm/ente-photos-review"
+  },
   "local-operator": {
     "cluster": "power-local-llm",
     "urlSlug": "local-operator-review",

@@ -1243,6 +1243,7 @@ const HUB_THEMES: Array<{
       'automatic1111-review',
       'comfyui-review',
       'pixlstash-review',
+      'ente-photos-review',
       'controlnet-review',
       'draw-things-review',
       'genva-review',

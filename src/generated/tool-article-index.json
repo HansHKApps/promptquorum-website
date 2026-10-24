@@ -9883,6 +9883,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Ente Photos": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ente-photos-review",
+        "title": "Ente Photos Review: Encrypted Backup with On-Device AI Search",
+        "url": "/power-local-llm/ente-photos-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Local Operator": {
     "articles": [
       {
@@ -9962,9 +9976,17 @@
         "url": "/power-local-llm/ensu-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ente-photos-review",
+        "title": "Ente Photos Review: Encrypted Backup with On-Device AI Search",
+        "url": "/power-local-llm/ente-photos-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "candle-vllm": {
@@ -11113,6 +11135,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ente-photos-review",
+        "title": "Ente Photos Review: Encrypted Backup with On-Device AI Search",
+        "url": "/power-local-llm/ente-photos-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
@@ -11166,17 +11196,9 @@
         "url": "/power-local-llm/zero1llm-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 217,
+    "totalCount": 218,
     "capped": true
   },
   "Qdrant": {
