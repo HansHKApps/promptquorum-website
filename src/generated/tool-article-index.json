@@ -9791,6 +9791,92 @@
     "totalCount": 1,
     "capped": false
   },
+  "Handy": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "handy-review",
+        "title": "Handy Review: Free Offline Speech-to-Text Dictation App",
+        "url": "/power-local-llm/handy-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "parrot-review",
+        "title": "Parrot Review: Free Offline Text-to-Speech That Reads Selected Text Aloud",
+        "url": "/power-local-llm/parrot-review",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-mobile-review",
+        "title": "AnythingLLM Mobile Review: On-Device Chat + RAG",
+        "url": "/power-local-llm/anythingllm-mobile-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llm-farm-review",
+        "title": "LLM Farm Review: Open-Source GGUF App, Off the App Store",
+        "url": "/power-local-llm/llm-farm-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review: Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "khoj-ai-second-brain-review",
+        "title": "Khoj Review: Self-Hosted AI Second Brain, No Cloud Left",
+        "url": "/power-local-llm/khoj-ai-second-brain-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 11,
+    "capped": true
+  },
   "LocalMCP": {
     "articles": [
       {
@@ -11121,6 +11207,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "handy-review",
+        "title": "Handy Review: Free Offline Speech-to-Text Dictation App",
+        "url": "/power-local-llm/handy-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kruvo-review",
         "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
         "url": "/power-local-llm/kruvo-review",
@@ -11166,17 +11260,9 @@
         "url": "/power-local-llm/zero1llm-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 217,
+    "totalCount": 218,
     "capped": true
   },
   "Qdrant": {

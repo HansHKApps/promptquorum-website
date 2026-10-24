@@ -964,6 +964,11 @@
     "urlSlug": "speechbrain-review",
     "url": "/power-local-llm/speechbrain-review"
   },
+  "handy": {
+    "cluster": "power-local-llm",
+    "urlSlug": "handy-review",
+    "url": "/power-local-llm/handy-review"
+  },
   "localmcp": {
     "cluster": "power-local-llm",
     "urlSlug": "localmcp-review",

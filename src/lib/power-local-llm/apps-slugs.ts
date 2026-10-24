@@ -220,6 +220,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'zero1llm':                                'zero1llm',
   'mlx-audio':                               'mlx-audio',
   'speechbrain':                             'speechbrain',
+  'handy':                                   'handy',
   'localmcp':                                'localmcp',
   'ecc':                                     'ecc',
   'libredb-studio':                          'libredb-studio',
