@@ -596,6 +596,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'murmur-review',
   // Buzz review (Voice, Speech & Multimodal, free offline Whisper transcription app) - 2026-10-24
   'buzz-captions-review',
+  // Logseq review (Productivity & Knowledge Tools, core note-taking app) — 2026-10-24
+  'logseq-review',
   'local-operator-review',
   // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
   'iimagine-desktop-review',

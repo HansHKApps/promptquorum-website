@@ -247,6 +247,7 @@ import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_buzz_captions } from './apps/buzz-captions'
+import { app as app_logseq } from './apps/logseq'
 import { app as app_local_operator } from './apps/local-operator'
 import { app as app_nekoni } from './apps/nekoni'
 import { app as app_compactifai_app } from './apps/compactifai-app'
@@ -510,6 +511,7 @@ export const localAiApps: ToolRecord[] = [
   app_localmindai,
   app_murmur,
   app_buzz_captions,
+  app_logseq,
   app_local_operator,
   app_nekoni,
   app_iimagine_desktop,
