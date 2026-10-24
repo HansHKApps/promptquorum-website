@@ -999,6 +999,11 @@
     "urlSlug": "nekoni-review",
     "url": "/power-local-llm/nekoni-review"
   },
+  "iimagine-desktop": {
+    "cluster": "power-local-llm",
+    "urlSlug": "iimagine-desktop-review",
+    "url": "/power-local-llm/iimagine-desktop-review"
+  },
   "zeno": {
     "cluster": "power-local-llm",
     "urlSlug": "zeno-review",

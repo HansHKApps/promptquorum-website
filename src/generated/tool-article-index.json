@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 174,
+    "totalCount": 175,
     "capped": true
   },
   "vLLM": {
@@ -9890,6 +9890,20 @@
         "slug": "nekoni-review",
         "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
         "url": "/power-local-llm/nekoni-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "IIMAGINE Desktop": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "iimagine-desktop-review",
+        "title": "IIMAGINE Desktop Review: Open-Source Local AI Chat App",
+        "url": "/power-local-llm/iimagine-desktop-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
