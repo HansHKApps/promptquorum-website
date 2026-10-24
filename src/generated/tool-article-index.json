@@ -11,6 +11,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeHub Review (Formerly LobeChat): Agent Workspace With Desktop Apps and Self-Hosting",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openclient-review",
+        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
+        "url": "/power-local-llm/openclient-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
         "url": "/local-llms/70b-models-consumer-hardware",
@@ -64,25 +80,9 @@
         "url": "/local-llms/qwen-local-deployment-guide-2026",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-ai-app-low-end-pc",
-        "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
-        "url": "/power-local-llm/best-local-ai-app-low-end-pc",
-        "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "libredb-studio-review",
-        "title": "LibreDB Studio Review: Open-Source SQL Editor With an Optional Local AI Agent",
-        "url": "/power-local-llm/libredb-studio-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 305,
+    "totalCount": 307,
     "capped": true
   },
   "llama.cpp": {
@@ -1291,6 +1291,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openclient-review",
+        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
+        "url": "/power-local-llm/openclient-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -1312,17 +1320,9 @@
         "url": "/power-local-llm/odysseus-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "phoneclaw-review",
-        "title": "PhoneClaw Review: The On-Device iPhone AI Agent",
-        "url": "/power-local-llm/phoneclaw-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Cherry Studio": {
@@ -1341,14 +1341,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-review",
-        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
-        "url": "/local-llms/lobechat-review",
-        "dateModified": "2026-09-11",
         "tier": "about"
       },
       {
@@ -1392,7 +1384,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 7,
     "capped": false
   },
   "Backyard AI": {
@@ -1493,6 +1485,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openclient-review",
+        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
+        "url": "/power-local-llm/openclient-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "localmind-review",
         "title": "LocalMind Review: Free Chat App for On-Device and Self-Hosted Models",
         "url": "/power-local-llm/localmind-review",
@@ -1530,17 +1530,9 @@
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-09-07",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "jan-review",
-        "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
-        "url": "/power-local-llm/jan-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "h2oGPT": {
@@ -2136,7 +2128,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 55,
+    "totalCount": 54,
     "capped": true
   },
   "LibreChat": {
@@ -2170,14 +2162,6 @@
         "slug": "big-agi-review",
         "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
         "url": "/local-llms/big-agi-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-review",
-        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
-        "url": "/local-llms/lobechat-review",
         "dateModified": "2026-09-11",
         "tier": "about"
       },
@@ -2220,10 +2204,18 @@
         "url": "/power-local-llm/odysseus-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "text-generation-webui-review",
+        "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
+        "url": "/local-llms/text-generation-webui-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
-    "capped": true
+    "totalCount": 10,
+    "capped": false
   },
   "text-generation-webui": {
     "articles": [
@@ -2394,65 +2386,25 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 17,
     "capped": true
   },
-  "LobeChat": {
+  "LobeHub": {
     "articles": [
       {
         "cluster": "local-llms",
         "slug": "lobechat-review",
-        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "title": "LobeHub Review (Formerly LobeChat): Agent Workspace With Desktop Apps and Self-Hosting",
         "url": "/local-llms/lobechat-review",
-        "dateModified": "2026-09-11",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
         "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "big-agi-review",
-        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
-        "url": "/local-llms/big-agi-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "chatbox-review",
-        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
-        "url": "/local-llms/chatbox-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-09-11",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -2465,14 +2417,22 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
-        "url": "/local-llms/cherry-studio-ai-desktop-client",
-        "dateModified": "2026-09-20",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 5,
     "capped": false
   },
   "Big-AGI": {
@@ -6601,6 +6561,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "localmindai-review",
+        "title": "LocalMindAI Review: On-Device AI Companion for iPhone",
+        "url": "/power-local-llm/localmindai-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "private-llm-review",
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
@@ -6616,7 +6584,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Arbiter": {
@@ -9329,6 +9297,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openclient-review",
+        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
+        "url": "/power-local-llm/openclient-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -9390,17 +9366,9 @@
         "url": "/power-local-llm/shell-gpt-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-llm-api-gateway-2026",
-        "title": "LiteLLM vs OpenRouter vs Portkey: Best LLM Gateway 2026",
-        "url": "/local-llms/best-llm-api-gateway",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "multica": {
@@ -9639,6 +9607,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "OpenClient": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openclient-review",
+        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
+        "url": "/power-local-llm/openclient-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "MLX-Audio": {
     "articles": [
       {
@@ -9705,6 +9687,20 @@
         "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
         "url": "/power-local-llm/openrag-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "LocalMindAI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "localmindai-review",
+        "title": "LocalMindAI Review: On-Device AI Companion for iPhone",
+        "url": "/power-local-llm/localmindai-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -11702,9 +11698,17 @@
         "url": "/power-local-llm/localmind-review",
         "dateModified": "2026-10-17",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "localmindai-review",
+        "title": "LocalMindAI Review: On-Device AI Companion for iPhone",
+        "url": "/power-local-llm/localmindai-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "TokForge": {

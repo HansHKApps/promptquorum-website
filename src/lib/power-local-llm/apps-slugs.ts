@@ -212,6 +212,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'libredb-studio':                          'libredb-studio',
   'openrag':                                 'openrag',
   'openclient':                              'openclient',
+  'localmindai':                             'localmindai',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

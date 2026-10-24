@@ -949,6 +949,11 @@
     "urlSlug": "openrag-review",
     "url": "/power-local-llm/openrag-review"
   },
+  "localmindai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localmindai-review",
+    "url": "/power-local-llm/localmindai-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
