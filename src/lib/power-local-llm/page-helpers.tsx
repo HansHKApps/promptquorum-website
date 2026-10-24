@@ -900,6 +900,7 @@ const HUB_THEMES: Array<{
       'hilbertraum-review',
       'friedrichai-review',
       'spiritbox-ultimate-review',
+      'arynwood-mcp-review',
       'local-llm-chat-assistants-compared',
       'lm-studio-review',
       'sidekick-review',

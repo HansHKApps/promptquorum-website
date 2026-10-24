@@ -235,6 +235,7 @@ import { app as app_speechbrain } from './apps/speechbrain'
 import { app as app_localmcp } from './apps/localmcp'
 import { app as app_libredb_studio } from './apps/libredb-studio'
 import { app as app_openrag } from './apps/openrag'
+import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
@@ -484,6 +485,7 @@ export const localAiApps: ToolRecord[] = [
   app_localmcp,
   app_libredb_studio,
   app_openrag,
+  app_arynwood_mcp,
   app_localmindai,
   app_candle_vllm,
   app_chroma,

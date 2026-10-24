@@ -548,6 +548,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'localmcp-review':                          'localmcp-review',
   'libredb-studio-review':                    'libredb-studio-review',
   'openrag-review':                           'openrag-review',
+  'arynwood-mcp-review':                      'arynwood-mcp-review',
   'localmindai-review':                       'localmindai-review',
   'caelum-review':                            'caelum-review',
   'obscurify-review':                         'obscurify-review',

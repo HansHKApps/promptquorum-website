@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "arynwood-mcp-review",
+        "title": "Arynwood MCP Review: A Local AI Workspace in Alpha",
+        "url": "/power-local-llm/arynwood-mcp-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/fastest-local-llms-low-end-pcs",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-on-laptop",
-        "title": "Local LLM on a Laptop: What Runs on 8GB, 16GB & Apple Silicon (2026)",
-        "url": "/local-llms/local-llm-on-laptop",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 307,
+    "totalCount": 308,
     "capped": true
   },
   "llama.cpp": {
@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 43,
+    "totalCount": 44,
     "capped": true
   },
   "GPT4All": {
@@ -1236,7 +1236,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 39,
     "capped": true
   },
   "Msty": {
@@ -6760,7 +6760,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 33,
     "capped": true
   },
   "ComfyUI": {
@@ -9729,6 +9729,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Arynwood MCP": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "arynwood-mcp-review",
+        "title": "Arynwood MCP Review: A Local AI Workspace in Alpha",
+        "url": "/power-local-llm/arynwood-mcp-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "LocalMindAI": {
     "articles": [
       {
@@ -11030,7 +11044,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "Rapid-MLX": {
