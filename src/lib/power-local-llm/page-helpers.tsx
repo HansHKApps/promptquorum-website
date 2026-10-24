@@ -1073,6 +1073,7 @@ const HUB_THEMES: Array<{
       'risuai-review',
       'swerve-ai-review',
       'hiwaifu-review',
+      'asiden-review',
     ],
   },
   {
