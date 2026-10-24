@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "local-operator": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-operator-review",
+    "url": "/power-local-llm/local-operator-review"
+  },
   "nekoni": {
     "cluster": "power-local-llm",
     "urlSlug": "nekoni-review",

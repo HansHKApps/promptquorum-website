@@ -51,6 +51,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-operator-review",
+        "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
+        "url": "/power-local-llm/local-operator-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/openclient-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 313,
+    "totalCount": 314,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 175,
+    "totalCount": 176,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 93,
+    "totalCount": 94,
     "capped": true
   },
   "LocalAI": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 151,
+    "totalCount": 152,
     "capped": true
   },
   "Atomic Chat": {
@@ -9883,6 +9883,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Local Operator": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-operator-review",
+        "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
+        "url": "/power-local-llm/local-operator-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Nekoni": {
     "articles": [
       {
@@ -11123,6 +11137,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-operator-review",
+        "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
+        "url": "/power-local-llm/local-operator-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "murmur-review",
         "title": "Murmur Review: On-Device AI Music Generator for iPhone",
         "url": "/power-local-llm/murmur-review",
@@ -11152,17 +11174,9 @@
         "url": "/local-llms/best-local-llm-frontends",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-on-laptop",
-        "title": "Local LLM on a Laptop: What Runs on 8GB, 16GB & Apple Silicon (2026)",
-        "url": "/local-llms/local-llm-on-laptop",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 216,
+    "totalCount": 217,
     "capped": true
   },
   "Qdrant": {
