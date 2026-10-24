@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "home-assistant-assist": {
+    "cluster": "power-local-llm",
+    "urlSlug": "home-assistant-assist-review",
+    "url": "/power-local-llm/home-assistant-assist-review"
+  },
   "local-operator": {
     "cluster": "power-local-llm",
     "urlSlug": "local-operator-review",

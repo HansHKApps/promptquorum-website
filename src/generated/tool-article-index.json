@@ -35,6 +35,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "home-assistant-assist-review",
+        "title": "Home Assistant Assist Review: Local Voice Control and LLM Agents",
+        "url": "/power-local-llm/home-assistant-assist-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kruvo-review",
         "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
         "url": "/power-local-llm/kruvo-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/nekoni-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openclient-review",
-        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
-        "url": "/power-local-llm/openclient-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 314,
+    "totalCount": 315,
     "capped": true
   },
   "llama.cpp": {
@@ -9881,6 +9881,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Home Assistant Assist": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "home-assistant-assist-review",
+        "title": "Home Assistant Assist Review: Local Voice Control and LLM Agents",
+        "url": "/power-local-llm/home-assistant-assist-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Local Operator": {
