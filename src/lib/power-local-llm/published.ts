@@ -618,6 +618,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Zeno review (Local AI Agents & Tool Use, macOS local AI workspace by Icosa Computing) — 2026-10-24
   'zeno-review',
   'asiden-review',
+  // KernelAI review (Mobile & Edge LLMs, free offline chat app for iPhone/iPad/Android) — 2026-10-24
+  'kernelai-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19

@@ -1120,6 +1120,7 @@ const HUB_THEMES: Array<{
       'lm-playground-review',
       'localmind-review',
       'localmindai-review',
+      'kernelai-review',
       'tokforge-review',
       'local-ai-geetmark-review',
       'local-ai-mail-review',
