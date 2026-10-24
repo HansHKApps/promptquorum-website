@@ -90,6 +90,7 @@ import { article as a_asiden_review } from './articles/asiden-review'
 import { article as a_ensu_review } from './articles/ensu-review'
 import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
+import { article as a_compactifai_app_review } from './articles/compactifai-app-review'
 import { article as a_pocketllm_lite_review } from './articles/pocketllm-lite-review'
 import { article as a_obscurify_review } from './articles/obscurify-review'
 import { article as a_genva_review } from './articles/genva-review'
@@ -728,6 +729,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'ensu-review':                                   a_ensu_review,
   'caelum-review':                                 a_caelum_review,
   'lm-mini-review':                                a_lm_mini_review,
+  'compactifai-app-review':                        a_compactifai_app_review,
   'pocketllm-lite-review':                         a_pocketllm_lite_review,
   'obscurify-review':                              a_obscurify_review,
   'genva-review':                                  a_genva_review,
