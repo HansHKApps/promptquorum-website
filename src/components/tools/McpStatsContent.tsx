@@ -8,6 +8,8 @@ import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { getLangDir, toOutputLocale } from '@/lib/i18n/constants'
 import type { McpToolName, UsageSnapshot } from '@/lib/mcp/usage'
+import { HUB_TONES, type HubTone } from '@/components/hub-template/palette'
+import { t as tTools } from './tools-i18n'
 import { t } from './mcp-stats-i18n'
 import { CopyEndpointButton } from './CopyEndpointButton'
 import { NEW_TOOL_COPY, TOOL_GROUPS, TOOL_GROUP_OF, tDocs, toolAsk, type ToolGroup } from './mcp-docs-i18n'
@@ -67,7 +69,7 @@ function DailyBars({ days, label }: { days: UsageSnapshot['days']; label: string
   const max = Math.max(1, ...days.map((d) => d.calls))
   const barW = 10
   const gap = 4
-  const height = 64
+  const height = 96
   const width = days.length * (barW + gap) - gap
   return (
     <svg
@@ -75,7 +77,7 @@ function DailyBars({ days, label }: { days: UsageSnapshot['days']; label: string
       aria-label={label}
       viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio="none"
-      className="h-16 w-full text-primary"
+      className="h-28 w-full text-hub-azure"
     >
       {days.map((d, i) => {
         const h = d.calls === 0 ? 1 : Math.max(2, (d.calls / max) * height)
@@ -91,6 +93,30 @@ function DailyBars({ days, label }: { days: UsageSnapshot['days']; label: string
 
 function localizedPath(lang: Language, path: string): string {
   return lang === 'en' ? path : `/${lang}${path}`
+}
+
+const MAX_WIDTH = 'mx-auto max-w-[1120px] px-6'
+const ENDPOINT = 'https://www.promptquorum.com/api/mcp'
+const GROUP_TONE: Record<ToolGroup, HubTone> = { find: 'azure', decide: 'violet', learn: 'orchid', profile: 'rose' }
+const CYCLE: HubTone[] = ['violet', 'azure', 'indigo', 'orchid', 'rose']
+
+function SectionHeading({ index, tone, children, id }: { index: number; tone: HubTone; children: React.ReactNode; id?: string }) {
+  return (
+    <div className="mb-2 flex items-center gap-3">
+      <span className={`rounded-[10px] px-3.5 py-1 text-[15px] font-extrabold tracking-wide text-white ${HUB_TONES[tone].solid}`}>{String(index).padStart(2, '0')}</span>
+      <h2 id={id} className="text-[26px] font-bold tracking-tight text-text-primary sm:text-[28px]">{children}</h2>
+    </div>
+  )
+}
+
+function Stat({ label, value, tone }: { label: string; value: string; tone: HubTone }) {
+  const c = HUB_TONES[tone]
+  return (
+    <div className={`min-w-[150px] flex-[1_1_150px] rounded-xl border px-4 py-3.5 ${c.tint} ${c.edge}`}>
+      <div className={`mb-1 text-xs font-bold ${c.ink}`}>{label}</div>
+      <div className="text-2xl font-bold tabular-nums text-text-primary">{value}</div>
+    </div>
+  )
 }
 
 export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: UsageSnapshot }) {
@@ -110,193 +136,255 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
   // at a glance; ties keep the grouped display order.
   const rankedTools = [...TOOLS].sort((a, b) => snapshot.byTool[b] - snapshot.byTool[a])
 
-  return (
-    <main dir={dir} className="mx-auto max-w-3xl px-6 py-16">
-      <p className="text-xs font-bold uppercase tracking-widest text-primary">{t('eyebrow', lang)}</p>
-      <h1 className="mt-1 text-2xl font-bold text-text-primary">{t('pageTitle', lang)}</h1>
-      <p className="mt-3 text-sm text-text-secondary">{t('intro', lang)}</p>
+  const jump: { id: string; label: string; tone: HubTone }[] = [
+    { id: 'start', label: tDocs('startHeading', lang), tone: 'azure' },
+    { id: 'tools', label: t('toolsHeading', lang), tone: 'violet' },
+    { id: 'example', label: t('exampleHeading', lang), tone: 'indigo' },
+    { id: 'resources', label: tDocs('resourcesHeading', lang), tone: 'orchid' },
+    { id: 'trust', label: tDocs('trustHeading', lang), tone: 'rose' },
+    { id: 'usage', label: t('usageHeading', lang), tone: 'cyan' },
+  ]
 
-      <div className="mt-6 flex flex-wrap gap-3">
-        <Link
-          href={localizedPath(lang, '/directory#mcp-connect-heading')}
-          className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
-        >
-          {t('connectCta', lang)}
-        </Link>
-        <code dir="ltr" className="inline-flex items-center rounded-lg border border-border bg-surface px-3 py-2 text-xs text-text-secondary">
-          https://www.promptquorum.com/api/mcp
-        </code>
-        <CopyEndpointButton text="https://www.promptquorum.com/api/mcp" lang={lang} />
+  return (
+    <div dir={dir} className="min-h-screen bg-white text-text-primary">
+      {/* Hero */}
+      <section className={`border-b ${HUB_TONES.azure.tint} ${HUB_TONES.azure.edge}`}>
+        <div className={`${MAX_WIDTH} flex flex-wrap items-stretch gap-8 pb-12 pt-24`}>
+          <div className="min-w-0 flex-[1_1_520px]">
+            <nav aria-label="Breadcrumb" className="mb-3.5 text-[13px] text-text-secondary">
+              <Link href={localizedPath(lang, '/')} className="hover:underline">{tTools('breadcrumbHome', lang)}</Link>
+              <span aria-hidden="true"> &nbsp;/&nbsp; </span>
+              <span aria-current="page">{t('pageTitle', lang)}</span>
+            </nav>
+            <span className={`inline-block rounded-full border bg-white px-3 py-0.5 text-[13px] font-semibold ${HUB_TONES.azure.solidBorder} ${HUB_TONES.azure.ink}`}>
+              {t('eyebrow', lang)}
+            </span>
+            <h1 className="mb-3 mt-3.5 text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl">{t('pageTitle', lang)}</h1>
+            <p className="mb-5 max-w-[600px] text-lg leading-relaxed text-text-secondary">{t('intro', lang)}</p>
+            <div className="mb-6 flex flex-wrap items-center gap-3">
+              <Link
+                href={localizedPath(lang, '/directory#mcp-connect-heading')}
+                className={`rounded-[10px] px-6 py-3.5 text-[17px] font-extrabold text-white shadow-[inset_0_1.5px_0_0_rgba(255,255,255,0.35),inset_0_-2.5px_0_0_rgba(0,0,0,0.16),0_10px_22px_-6px_var(--hub-azure)] transition-transform hover:-translate-y-0.5 ${HUB_TONES.azure.solid}`}
+              >
+                {t('connectCta', lang)}
+              </Link>
+              <code dir="ltr" className={`rounded-[10px] border bg-white px-3 py-2.5 text-[13px] ${HUB_TONES.azure.edge} ${HUB_TONES.azure.ink}`}>{ENDPOINT}</code>
+              <CopyEndpointButton text={ENDPOINT} lang={lang} />
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Stat label={t('totalAllTime', lang)} value={fmt(snapshot.total)} tone="violet" />
+              <Stat label={t('trendLast30', lang)} value={fmt(last30Total)} tone="azure" />
+              <Stat label={t('trendLast7', lang)} value={fmt(last7Total)} tone="indigo" />
+            </div>
+          </div>
+
+          <div className="min-w-0 flex-[1_1_400px]">
+            <div className={`box-border rounded-2xl border bg-white p-5 lg:self-start ${HUB_TONES.azure.edge}`}>
+              <div className="mb-3.5 text-[13px] font-bold">{t('trendHeading', lang)}</div>
+              <DailyBars days={snapshot.days} label={t('trendChartLabel', lang)} />
+              <div dir="ltr" className="mt-1 flex justify-between text-xs text-text-muted">
+                <span>{snapshot.days[0]?.date}</span>
+                <span>{snapshot.days[snapshot.days.length - 1]?.date}</span>
+              </div>
+              <div className="mt-3.5 text-xs font-medium text-text-secondary">{t('usageExplainer', lang, { date: generatedDate })}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Jump bar */}
+      <div className="border-b border-border bg-white">
+        <nav aria-label="Sections" className={`${MAX_WIDTH} flex flex-wrap items-center gap-x-2.5 gap-y-2 py-2.5 text-sm`}>
+          {jump.map((item) => (
+            <a key={item.id} href={`#${item.id}`} className={`rounded-full px-3.5 py-1.5 font-semibold ${HUB_TONES[item.tone].tint} ${HUB_TONES[item.tone].ink}`}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
       </div>
 
-      <a
-        href="#usage"
-        className="mt-6 grid grid-cols-3 divide-x divide-border rtl:divide-x-reverse overflow-hidden rounded-xl border border-border bg-surface text-center hover:border-primary"
-      >
-        {[
-          { label: t('totalAllTime', lang), value: snapshot.total },
-          { label: t('trendLast30', lang), value: last30Total },
-          { label: t('trendLast7', lang), value: last7Total },
-        ].map((k) => (
-          <span key={k.label} className="block px-2 py-3">
-            <span className="block text-xl font-semibold tabular-nums text-text-primary sm:text-2xl">{fmt(k.value)}</span>
-            <span className="mt-0.5 block text-xs text-text-secondary">{k.label}</span>
-          </span>
-        ))}
-      </a>
+      {/* 01 Start here + how it works */}
+      <section id="start" className="bg-white">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={1} tone="azure">{tDocs('startHeading', lang)}</SectionHeading>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <div className={`rounded-[14px] border p-6 ${HUB_TONES.azure.tint} ${HUB_TONES.azure.edge}`}>
+              <p className="text-base leading-relaxed text-text-primary">{tDocs('startBody', lang)}</p>
+              <code dir="ltr" className={`mt-4 inline-block rounded-lg px-4 py-2 text-sm font-bold text-white ${HUB_TONES.azure.solid}`}>start</code>
+            </div>
+            <div className={`rounded-[14px] border p-6 ${HUB_TONES.violet.tint} ${HUB_TONES.violet.edge}`}>
+              <h3 className={`mb-2 text-lg font-bold ${HUB_TONES.violet.ink}`}>{tDocs('howHeading', lang)}</h3>
+              <p className="text-sm leading-relaxed text-text-secondary">{tDocs('howBody', lang)}</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <aside className="mt-6 rounded-xl border-2 border-primary bg-primary/5 p-4">
-        <p className="text-base font-bold text-text-primary">
-          <span aria-hidden="true">👉 </span>{tDocs('startHeading', lang)}
-        </p>
-        <p className="mt-1 text-sm text-text-secondary">{tDocs('startBody', lang)}</p>
-        <code dir="ltr" className="mt-3 inline-block rounded-lg bg-primary px-3 py-1.5 text-sm font-semibold text-white">start</code>
-      </aside>
+      {/* 02 Tools */}
+      <section id="tools" className="border-y border-border bg-hub-violet-tint">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={2} tone="violet">{t('toolsHeading', lang)}</SectionHeading>
+          {GROUP_ORDER.map((group) => {
+            const tone = GROUP_TONE[group]
+            const c = HUB_TONES[tone]
+            return (
+              <div key={group} className="mt-8">
+                <h3 className={`mb-3 inline-block rounded-lg px-3 py-1 text-sm font-bold uppercase tracking-wide text-white ${c.solid}`}>
+                  {TOOL_GROUPS[group][lang] ?? TOOL_GROUPS[group].en}
+                </h3>
+                <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {TOOLS.filter((name) => TOOL_GROUP_OF[name] === group).map((name) => {
+                    const copy = toolCopy(name, lang)
+                    return (
+                      <li key={name} className={`rounded-[14px] border bg-white p-5 ${c.edge}`}>
+                        <span dir="ltr" className={`block font-mono text-xs font-bold ${c.ink}`}>{name}</span>
+                        <div className="mb-1.5 mt-1 text-[17px] font-bold leading-snug">{copy.title}</div>
+                        <p className="text-sm leading-relaxed text-text-secondary">{copy.desc}</p>
+                        <p className={`mt-3 rounded-lg px-3 py-2 text-sm leading-relaxed ${c.tint}`}>
+                          <span className={`font-semibold ${c.ink}`}>{tDocs('askLabel', lang)}:</span>{' '}
+                          <q>{toolAsk(name, lang)}</q>
+                        </p>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
+      </section>
 
-      <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('howHeading', lang)}</h2>
-      <p className="mt-2 text-sm text-text-secondary">{tDocs('howBody', lang)}</p>
+      {/* 03 Example */}
+      <section id="example" className="bg-hub-indigo-tint">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={3} tone="indigo">{t('exampleHeading', lang)}</SectionHeading>
+          <p className="mb-5 max-w-[640px] text-base leading-relaxed text-text-secondary">{t('exampleIntro', lang)}</p>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <div className="space-y-4">
+              <div className="rounded-[14px] border border-hub-indigo-edge bg-white p-5">
+                <div className={`mb-2 inline-block rounded-lg px-2.5 py-0.5 text-sm font-bold text-white ${HUB_TONES.indigo.solid}`}>{t('exampleYouLabel', lang)}</div>
+                <p className="text-sm leading-relaxed text-text-primary">{t('exampleQuestion', lang)}</p>
+              </div>
+              <p className="px-1 text-sm text-text-secondary">
+                {t('exampleToolsLabel', lang)}: <code dir="ltr" className={`rounded-md px-2 py-0.5 font-mono text-xs font-bold ${HUB_TONES.indigo.tint} ${HUB_TONES.indigo.ink}`}>recommend_stack</code>
+              </p>
+            </div>
+            <div className="rounded-[14px] border border-hub-indigo-edge bg-white p-5">
+              <div className={`mb-2 inline-block rounded-lg px-2.5 py-0.5 text-sm font-bold text-white ${HUB_TONES.orchid.solid}`}>{t('exampleAssistantLabel', lang)}</div>
+              <p className="text-sm leading-relaxed text-text-primary">{t('exampleAnswer', lang)}</p>
+              <p className="mt-4 text-xs font-bold uppercase tracking-wide text-text-muted">{t('exampleLinksLabel', lang)}</p>
+              <ul className="mt-1 list-disc space-y-1 ps-5 text-sm">
+                <li><Link href={localizedPath(lang, '/power-local-llm/anythingllm-review')} className={`font-semibold underline ${HUB_TONES.indigo.ink}`}>{t('exampleLinkReview', lang)}</Link></li>
+                <li><Link href={localizedPath(lang, '/directory?category=document-pdf-chat')} className={`font-semibold underline ${HUB_TONES.indigo.ink}`}>{t('exampleLinkDirectory', lang)}</Link></li>
+                <li><Link href={localizedPath(lang, '/power-local-llm/local-llm-knowledge-retrieval-compared')} className={`font-semibold underline ${HUB_TONES.indigo.ink}`}>{t('exampleLinkCompared', lang)}</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-5 max-w-[640px] rounded-r-xl border-s-4 border-hub-indigo bg-white px-5 py-4">
+            <p className="text-sm leading-relaxed text-text-primary">{t('exampleNote', lang)}</p>
+          </div>
+        </div>
+      </section>
 
-      <h2 className="mt-10 text-lg font-bold text-text-primary">{t('toolsHeading', lang)}</h2>
-      {GROUP_ORDER.map((group) => (
-        <section key={group} className="mt-5">
-          <h3 className="text-sm font-bold uppercase tracking-wide text-text-muted">{TOOL_GROUPS[group][lang] ?? TOOL_GROUPS[group].en}</h3>
-          <ul className="mt-2 divide-y divide-border rounded-xl border border-border">
-            {TOOLS.filter((name) => TOOL_GROUP_OF[name] === group).map((name) => {
-              const copy = toolCopy(name, lang)
+      {/* 04 Resources & prompts */}
+      <section id="resources" className="border-t border-border bg-white">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={4} tone="orchid">{tDocs('resourcesHeading', lang)}</SectionHeading>
+          <p className="mb-5 max-w-[640px] text-base leading-relaxed text-text-secondary">{tDocs('resourcesIntro', lang)}</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {RESOURCES.map((r, i) => {
+              const c = HUB_TONES[CYCLE[i % CYCLE.length]]
               return (
-                <li key={name} className="p-4">
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span dir="ltr" className="font-mono text-xs font-semibold text-primary">{name}</span>
-                    <span className="text-sm font-medium text-text-primary">{copy.title}</span>
-                  </div>
-                  <p className="mt-1 text-sm text-text-secondary">{copy.desc}</p>
-                  <p className="mt-2 text-sm text-text-secondary">
-                    <span className="font-semibold text-text-primary">{tDocs('askLabel', lang)}:</span>{' '}
-                    <q>{toolAsk(name, lang)}</q>
-                  </p>
-                </li>
+                <div key={r.uri} className={`rounded-[14px] border p-5 ${c.tint} ${c.edge}`}>
+                  <code dir="ltr" className={`block break-all font-mono text-xs font-bold ${c.ink}`}>{r.uri}</code>
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">{tDocs(r.key, lang)}</p>
+                </div>
               )
             })}
+          </div>
+          <h3 className="mb-3 mt-10 text-lg font-bold">{tDocs('promptsLabel', lang)}</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PROMPTS.map((p, i) => {
+              const c = HUB_TONES[CYCLE[(i + 2) % CYCLE.length]]
+              return (
+                <div key={p.name} className={`rounded-[14px] border p-5 ${c.tint} ${c.edge}`}>
+                  <code dir="ltr" className={`block font-mono text-xs font-bold ${c.ink}`}>{p.name}</code>
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">{tDocs(p.key, lang)}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 05 Trust + limits */}
+      <section id="trust" className="border-t border-border bg-hub-rose-tint">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={5} tone="rose">{tDocs('trustHeading', lang)}</SectionHeading>
+          <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {(['trust1', 'trust2', 'trust3', 'trust4', 'trust5'] as const).map((k, i) => (
+              <li key={k} className="flex gap-3 rounded-[14px] border border-hub-rose-edge bg-white p-5">
+                <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${HUB_TONES[CYCLE[i % CYCLE.length]].solid}`}>{i + 1}</span>
+                <span className="text-sm leading-relaxed text-text-secondary">{tDocs(k, lang)}</span>
+              </li>
+            ))}
           </ul>
-        </section>
-      ))}
-
-      <h2 className="mt-10 text-lg font-bold text-text-primary">{t('exampleHeading', lang)}</h2>
-      <p className="mt-2 text-sm text-text-secondary">{t('exampleIntro', lang)}</p>
-      <div className="mt-3 space-y-3 rounded-xl border border-border bg-surface p-4">
-        <div>
-          <div className="text-xs font-bold uppercase tracking-wide text-text-muted">{t('exampleYouLabel', lang)}</div>
-          <p className="mt-1 text-sm text-text-primary">{t('exampleQuestion', lang)}</p>
+          <div className="mt-5 max-w-[720px] rounded-r-xl border-s-4 border-hub-rose bg-white px-5 py-4">
+            <h3 className={`mb-1 text-sm font-bold ${HUB_TONES.rose.ink}`}>{tDocs('limitsHeading', lang)}</h3>
+            <p className="text-sm leading-relaxed text-text-primary">{tDocs('limitsBody', lang)}</p>
+          </div>
         </div>
-        <p className="text-xs text-text-muted">
-          {t('exampleToolsLabel', lang)}: <code dir="ltr" className="font-mono font-semibold text-primary">recommend_stack</code>
-        </p>
-        <div>
-          <div className="text-xs font-bold uppercase tracking-wide text-text-muted">{t('exampleAssistantLabel', lang)}</div>
-          <p className="mt-1 text-sm text-text-primary">{t('exampleAnswer', lang)}</p>
-          <p className="mt-3 text-xs font-bold uppercase tracking-wide text-text-muted">{t('exampleLinksLabel', lang)}</p>
-          <ul className="mt-1 list-disc space-y-1 ps-5 text-sm">
-            <li><Link href={localizedPath(lang, '/power-local-llm/anythingllm-review')} className="text-primary underline">{t('exampleLinkReview', lang)}</Link></li>
-            <li><Link href={localizedPath(lang, '/directory?category=document-pdf-chat')} className="text-primary underline">{t('exampleLinkDirectory', lang)}</Link></li>
-            <li><Link href={localizedPath(lang, '/power-local-llm/local-llm-knowledge-retrieval-compared')} className="text-primary underline">{t('exampleLinkCompared', lang)}</Link></li>
-          </ul>
+      </section>
+
+      {/* 06 Usage */}
+      <section id="usage" className="scroll-mt-20 border-t border-border bg-hub-cyan-tint">
+        <div className={`${MAX_WIDTH} py-14`}>
+          <SectionHeading index={6} tone="cyan">{t('usageHeading', lang)}</SectionHeading>
+          <p className="mb-5 max-w-[640px] text-base leading-relaxed text-text-secondary">{t('usageExplainer', lang, { date: generatedDate })}</p>
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {[
+              { label: t('totalAllTime', lang), value: snapshot.total, tone: 'violet' as const },
+              { label: t('trendLast30', lang), value: last30Total, tone: 'azure' as const },
+              { label: t('trendLast7', lang), value: last7Total, tone: 'indigo' as const },
+              { label: t('trendMedianDay', lang), value: medianDay, tone: 'orchid' as const },
+            ].map((k) => (
+              <div key={k.label} className="rounded-[14px] border border-hub-cyan-edge bg-white p-5">
+                <div className={`mb-2 inline-block rounded-lg px-2.5 py-0.5 text-xs font-bold text-white ${HUB_TONES[k.tone].solid}`}>{k.label}</div>
+                <div className="text-3xl font-bold tabular-nums">{fmt(k.value)}</div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-xs text-text-muted">{t('trendNote', lang)}</p>
+
+          <div className="mt-6 overflow-x-auto rounded-[14px] border border-hub-cyan-edge bg-white">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className={`${HUB_TONES.cyan.tint} ${HUB_TONES.cyan.ink}`}>
+                  <th scope="col" className="px-4 py-3 text-start font-bold">{t('tableTool', lang)}</th>
+                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableTotalCalls', lang)}</th>
+                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableLast30', lang)}</th>
+                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableLast7', lang)}</th>
+                  <th scope="col" className="px-4 py-3 text-end font-bold">{t('tableCallsToday', lang)}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rankedTools.map((name) => (
+                  <tr key={name} className="border-t border-border">
+                    <td dir="ltr" className="px-4 py-2.5 text-left font-mono text-xs font-semibold text-text-primary">{name}</td>
+                    <td className="px-4 py-2.5 text-end tabular-nums text-text-primary">
+                      {snapshot.byTool[name] === 0 ? <span className="text-text-muted">{t('noCallsYet', lang)}</span> : fmt(snapshot.byTool[name])}
+                    </td>
+                    {([snapshot.last30, snapshot.last7, snapshot.today] as const).map((col, i) => (
+                      <td key={i} className={`px-4 py-2.5 text-end tabular-nums ${col[name] === 0 ? 'text-text-muted' : 'text-text-primary'}`}>{fmt(col[name])}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-xs text-text-muted">{t('rawJsonNote', lang)}</p>
         </div>
-      </div>
-      <p className="mt-2 text-xs text-text-muted">{t('exampleNote', lang)}</p>
-
-      <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('resourcesHeading', lang)}</h2>
-      <p className="mt-2 text-sm text-text-secondary">{tDocs('resourcesIntro', lang)}</p>
-      <ul className="mt-3 divide-y divide-border rounded-xl border border-border">
-        {RESOURCES.map((r) => (
-          <li key={r.uri} className="p-3 text-sm">
-            <code dir="ltr" className="font-mono text-xs font-semibold text-primary">{r.uri}</code>
-            <span className="text-text-secondary"> — {tDocs(r.key, lang)}</span>
-          </li>
-        ))}
-      </ul>
-      <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-text-muted">{tDocs('promptsLabel', lang)}</h3>
-      <ul className="mt-2 divide-y divide-border rounded-xl border border-border">
-        {PROMPTS.map((p) => (
-          <li key={p.name} className="p-3 text-sm">
-            <code dir="ltr" className="font-mono text-xs font-semibold text-primary">{p.name}</code>
-            <span className="text-text-secondary"> — {tDocs(p.key, lang)}</span>
-          </li>
-        ))}
-      </ul>
-
-      <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('trustHeading', lang)}</h2>
-      <ul className="mt-2 list-disc space-y-2 ps-5 text-sm text-text-secondary">
-        <li>{tDocs('trust1', lang)}</li>
-        <li>{tDocs('trust2', lang)}</li>
-        <li>{tDocs('trust3', lang)}</li>
-        <li>{tDocs('trust4', lang)}</li>
-        <li>{tDocs('trust5', lang)}</li>
-      </ul>
-
-      <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('limitsHeading', lang)}</h2>
-      <p className="mt-2 text-sm text-text-secondary">{tDocs('limitsBody', lang)}</p>
-
-      <h2 id="usage" className="mt-10 scroll-mt-20 text-lg font-bold text-text-primary">{t('usageHeading', lang)}</h2>
-      <p className="mt-1 text-sm text-text-secondary">{t('usageExplainer', lang, { date: generatedDate })}</p>
-
-      <div className="mt-4 rounded-xl border border-border bg-surface p-4">
-        <div className="text-sm text-text-secondary">{t('totalAllTime', lang)}</div>
-        <div className="mt-1 text-3xl font-semibold text-text-primary">{fmt(snapshot.total)}</div>
-      </div>
-
-
-      <h3 className="mt-8 text-base font-bold text-text-primary">{t('trendHeading', lang)}</h3>
-      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <div className="rounded-xl border border-border bg-surface p-4">
-          <div className="text-sm text-text-secondary">{t('trendLast7', lang)}</div>
-          <div className="mt-1 text-2xl font-semibold text-text-primary">{fmt(last7Total)}</div>
-        </div>
-        <div className="rounded-xl border border-border bg-surface p-4">
-          <div className="text-sm text-text-secondary">{t('trendLast30', lang)}</div>
-          <div className="mt-1 text-2xl font-semibold text-text-primary">{fmt(last30Total)}</div>
-        </div>
-        <div className="rounded-xl border border-border bg-surface p-4">
-          <div className="text-sm text-text-secondary">{t('trendMedianDay', lang)}</div>
-          <div className="mt-1 text-2xl font-semibold text-text-primary">{fmt(medianDay)}</div>
-        </div>
-      </div>
-      <div className="mt-3 rounded-xl border border-border bg-surface p-4">
-        <DailyBars days={snapshot.days} label={t('trendChartLabel', lang)} />
-        <div dir="ltr" className="mt-1 flex justify-between text-xs text-text-muted">
-          <span>{snapshot.days[0]?.date}</span>
-          <span>{snapshot.days[snapshot.days.length - 1]?.date}</span>
-        </div>
-      </div>
-      <p className="mt-3 text-xs text-text-muted">{t('trendNote', lang)}</p>
-
-      <div className="mt-6 overflow-x-auto">
-      <table className="w-full border-collapse text-sm">
-        <thead>
-          <tr className="border-b border-border text-start text-text-secondary">
-            <th scope="col" className="py-2 pe-3 text-start font-medium">{t('tableTool', lang)}</th>
-            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableTotalCalls', lang)}</th>
-            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableLast30', lang)}</th>
-            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableLast7', lang)}</th>
-            <th scope="col" className="py-2 ps-3 text-end font-medium">{t('tableCallsToday', lang)}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rankedTools.map((name) => (
-            <tr key={name} className="border-b border-border/60">
-              <td dir="ltr" className="py-2 pe-3 text-left font-mono text-xs text-text-primary">{name}</td>
-              <td className="py-2 ps-3 text-end tabular-nums text-text-primary">
-                {snapshot.byTool[name] === 0 ? <span className="text-text-muted">{t('noCallsYet', lang)}</span> : fmt(snapshot.byTool[name])}
-              </td>
-              {([snapshot.last30, snapshot.last7, snapshot.today] as const).map((col, i) => (
-                <td key={i} className={`py-2 ps-3 text-end tabular-nums ${col[name] === 0 ? 'text-text-muted' : 'text-text-primary'}`}>{fmt(col[name])}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      </div>
-
-      <p className="mt-8 text-xs text-text-muted">{t('rawJsonNote', lang)}</p>
-    </main>
+      </section>
+    </div>
   )
 }
