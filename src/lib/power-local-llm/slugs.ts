@@ -559,6 +559,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'murmur-review':                            'murmur-review',
   'caelum-review':                            'caelum-review',
   'lm-mini-review':                           'lm-mini-review',
+  'ensu-review':                              'ensu-review',
   'obscurify-review':                         'obscurify-review',
   'genva-review':                             'genva-review',
   'ecc-review':                               'ecc-review',
