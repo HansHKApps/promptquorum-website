@@ -133,6 +133,7 @@ import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_hiwaifu } from './apps/hiwaifu'
 import { app as app_memoryai } from './apps/memoryai'
+import { app as app_on_device_ai_translator } from './apps/on-device-ai-translator'
 import { app as app_llamatik } from './apps/llamatik'
 import { app as app_caelum } from './apps/caelum'
 import { app as app_obscurify } from './apps/obscurify'
@@ -552,6 +553,7 @@ export const localAiApps: ToolRecord[] = [
   app_pixlstash,
   app_hiwaifu,
   app_memoryai,
+  app_on_device_ai_translator,
   app_llamatik,
   app_caelum,
   app_obscurify,

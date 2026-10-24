@@ -2049,11 +2049,6 @@
     "width": 800,
     "height": 350
   },
-  "/images/apple-silicon-unified-memory.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
   "/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -18474,6 +18469,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/ecc-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ecc-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/ecoflow-balcony-solar-certification-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -25384,11 +25424,6 @@
     "width": 800,
     "height": 400
   },
-  "/images/laptop-stand-airflow.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
   "/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -25695,6 +25730,51 @@
     "height": 675
   },
   "/images/librechat-review-2026-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/libredb-studio-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -29254,31 +29334,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/local-llm-on-laptop-model-picks-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-model-picks-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-model-picks-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-model-picks-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-model-picks-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/local-llm-on-laptop-model-picks-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -29324,51 +29379,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/local-llm-on-laptop-model-picks-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-model-picks-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-model-picks-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-model-picks-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/local-llm-on-laptop-ram-tiers-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/local-llm-on-laptop-ram-tiers-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 380
-  },
-  "/images/local-llm-on-laptop-ram-tiers-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/local-llm-on-laptop-ram-tiers-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/local-llm-on-laptop-ram-tiers-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
   "/images/local-llm-on-laptop-ram-tiers-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -29413,26 +29423,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/local-llm-on-laptop-ram-tiers-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/local-llm-on-laptop-ram-tiers-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/local-llm-on-laptop-ram-tiers-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/local-llm-on-laptop-ram-tiers-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
   },
   "/images/local-llm-one-click-installers-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -35304,6 +35294,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/mlx-audio-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-audio-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/mlx-lm-explained-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37619,11 +37654,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/ollama-terminal.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/ollama-top10-models-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 880,
@@ -38025,6 +38055,51 @@
     "height": 675
   },
   "/images/on-device-ai-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/on-device-ai-translator-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -38625,6 +38700,51 @@
     "height": 675
   },
   "/images/openmontage-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/openrag-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -46779,6 +46899,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/speechbrain-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/speechbrain-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/spiritbox-ultimate-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -50970,51 +51135,6 @@
     "height": 675
   },
   "/images/zero-shot-vs-few-shot-overview-hero-zh.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-ar.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-de.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-en.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-es.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-fr.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-ja.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-ko.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-pt.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/ecc-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675

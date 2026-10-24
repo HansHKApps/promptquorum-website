@@ -1095,6 +1095,7 @@ const HUB_THEMES: Array<{
       'maid-review',
       'private-mind-review',
       'memoryai-review',
+      'on-device-ai-translator-review',
       'llamatik-review',
       'castmates-review',
       'caelum-review',

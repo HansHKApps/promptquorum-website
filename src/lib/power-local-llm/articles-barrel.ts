@@ -63,6 +63,7 @@ import { article as a_transcriptionsuite_review } from './articles/transcription
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
 import { article as a_memoryai_review } from './articles/memoryai-review'
+import { article as a_on_device_ai_translator_review } from './articles/on-device-ai-translator-review'
 import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
@@ -683,6 +684,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
   'memoryai-review':                               a_memoryai_review,
+  'on-device-ai-translator-review':                a_on_device_ai_translator_review,
   'llamatik-review':                               a_llamatik_review,
   'castmates-review':                              a_castmates_review,
   'surfsense-review':                              a_surfsense_review,
