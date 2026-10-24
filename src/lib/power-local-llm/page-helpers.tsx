@@ -1201,6 +1201,7 @@ const HUB_THEMES: Array<{
       'bark-tts-review',
       'murmur-review',
       'subtitle-edit-review',
+      'home-assistant-assist-review',
       'best-local-tts-mac',
       'best-local-tts-nvidia-gpu',
       'best-local-tts-raspberry-pi',

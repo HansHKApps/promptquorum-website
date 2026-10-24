@@ -608,6 +608,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'tolaria-review',
   // Subtitle Edit review (Voice, Speech & Multimodal, subtitle editor with local Whisper and auto-translate) — 2026-10-24
   'subtitle-edit-review',
+  // Home Assistant Assist review (Voice, Speech & Multimodal, voice pipeline inside Home Assistant) — 2026-10-24
+  'home-assistant-assist-review',
   'local-operator-review',
   // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
   'iimagine-desktop-review',
