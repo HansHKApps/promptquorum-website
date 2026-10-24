@@ -999,6 +999,11 @@
     "urlSlug": "asiden-review",
     "url": "/power-local-llm/asiden-review"
   },
+  "ensu": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ensu-review",
+    "url": "/power-local-llm/ensu-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
@@ -1343,6 +1348,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "frankly-ai-review",
     "url": "/power-local-llm/frankly-ai-review"
+  },
+  "haplo-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "haplo-ai-review",
+    "url": "/power-local-llm/haplo-ai-review"
   },
   "pixlstash": {
     "cluster": "power-local-llm",
