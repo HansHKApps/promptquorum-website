@@ -231,6 +231,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
   'open-llm-vtuber':                         'open-llm-vtuber',
+  'presenton':                               'presenton',
   'buzz-captions':                           'buzz-captions',
   'logseq':                                  'logseq',
   'anarlog':                                 'anarlog',

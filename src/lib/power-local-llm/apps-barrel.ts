@@ -250,6 +250,7 @@ import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
+import { app as app_presenton } from './apps/presenton'
 import { app as app_buzz_captions } from './apps/buzz-captions'
 import { app as app_logseq } from './apps/logseq'
 import { app as app_anarlog } from './apps/anarlog'
@@ -525,6 +526,7 @@ export const localAiApps: ToolRecord[] = [
   app_localmindai,
   app_murmur,
   app_open_llm_vtuber,
+  app_presenton,
   app_buzz_captions,
   app_logseq,
   app_anarlog,
