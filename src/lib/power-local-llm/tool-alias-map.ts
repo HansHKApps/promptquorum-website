@@ -28,6 +28,7 @@ export function normalizeToolName(text: string): string {
  */
 export const CURATED_ALIASES: Readonly<Record<string, readonly string[]>> = {
   jan: ['Jan AI'],
+  lobechat: ['LobeChat', 'LobeHub (formerly LobeChat)'],
   autogpt: ['AutoGPT', 'AutoGPT (classic)'],
   'loci-ai': ['Loci'],
   haystack: ['Haystack (deepset)'],
