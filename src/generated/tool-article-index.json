@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 312,
+    "totalCount": 313,
     "capped": true
   },
   "llama.cpp": {
@@ -8321,6 +8321,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "zeno-review",
+        "title": "Zeno Review: Free Private AI Workspace for Mac",
+        "url": "/power-local-llm/zeno-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "strata-review",
         "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
         "url": "/power-local-llm/strata-review",
@@ -8342,17 +8350,9 @@
         "url": "/power-local-llm/longmemory-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlx-serve-review",
-        "title": "mlx-serve Review: Native Zig Inference Server for Apple Silicon",
-        "url": "/power-local-llm/mlx-serve-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "MaxKB": {
@@ -9890,6 +9890,20 @@
         "slug": "nekoni-review",
         "title": "Nekoni Review: A Self-Hosted AI Agent You Reach From Your iPhone",
         "url": "/power-local-llm/nekoni-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Zeno": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "zeno-review",
+        "title": "Zeno Review: Free Private AI Workspace for Mac",
+        "url": "/power-local-llm/zeno-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -12184,6 +12198,20 @@
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PocketLLM Lite": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketllm-lite-review",
+        "title": "PocketLLM Lite Review: Local-First AI Chat App for Android",
+        "url": "/power-local-llm/pocketllm-lite-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }

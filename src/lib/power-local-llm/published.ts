@@ -594,6 +594,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localmindai-review',
   // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
   'murmur-review',
+  // Zeno review (Local AI Agents & Tool Use, macOS local AI workspace by Icosa Computing) — 2026-10-24
+  'zeno-review',
   'asiden-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
@@ -601,6 +603,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'caelum-review',
   // LM Mini review (Mobile & Edge LLMs) — 2026-10-24
   'lm-mini-review',
+  // PocketLLM Lite review (Android local-first chat app, MIT) — 2026-10-24
+  'pocketllm-lite-review',
   'ensu-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',

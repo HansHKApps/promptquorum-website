@@ -139,6 +139,7 @@ import { app as app_on_device_ai_translator } from './apps/on-device-ai-translat
 import { app as app_llamatik } from './apps/llamatik'
 import { app as app_caelum } from './apps/caelum'
 import { app as app_lm_mini } from './apps/lm-mini'
+import { app as app_pocketllm_lite } from './apps/pocketllm-lite'
 import { app as app_obscurify } from './apps/obscurify'
 import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
@@ -246,6 +247,7 @@ import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_nekoni } from './apps/nekoni'
+import { app as app_zeno } from './apps/zeno'
 import { app as app_asiden } from './apps/asiden'
 import { app as app_ensu } from './apps/ensu'
 import { app as app_candle_vllm } from './apps/candle-vllm'
@@ -504,6 +506,7 @@ export const localAiApps: ToolRecord[] = [
   app_localmindai,
   app_murmur,
   app_nekoni,
+  app_zeno,
   app_asiden,
   app_ensu,
   app_candle_vllm,
@@ -583,6 +586,7 @@ export const localAiApps: ToolRecord[] = [
   app_llamatik,
   app_caelum,
   app_lm_mini,
+  app_pocketllm_lite,
   app_obscurify,
   app_genva,
   app_whisper_notes,
