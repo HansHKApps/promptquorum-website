@@ -245,6 +245,7 @@ https://www.promptquorum.com/power-local-llm/aori-ai-personal-agent-review
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
 https://www.promptquorum.com/power-local-llm/aquavoice-review
 https://www.promptquorum.com/power-local-llm/arbiter-local-ai-chat-review
+https://www.promptquorum.com/power-local-llm/arynwood-mcp-review
 https://www.promptquorum.com/power-local-llm/asus-mini-pc-local-ai
 https://www.promptquorum.com/power-local-llm/atlarix-review
 https://www.promptquorum.com/power-local-llm/atomic-agent-review
@@ -309,6 +310,7 @@ https://www.promptquorum.com/power-local-llm/cline-review
 https://www.promptquorum.com/power-local-llm/codegpt-review
 https://www.promptquorum.com/power-local-llm/cognee-review
 https://www.promptquorum.com/power-local-llm/cognira-review
+https://www.promptquorum.com/power-local-llm/coil-review
 https://www.promptquorum.com/power-local-llm/comfyui-review
 https://www.promptquorum.com/power-local-llm/continue-dev-review
 https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local
@@ -352,6 +354,7 @@ https://www.promptquorum.com/power-local-llm/firecrawl-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
 https://www.promptquorum.com/power-local-llm/foundry-local-review
+https://www.promptquorum.com/power-local-llm/frankly-ai-review
 https://www.promptquorum.com/power-local-llm/friedrichai-review
 https://www.promptquorum.com/power-local-llm/funclip-review
 https://www.promptquorum.com/power-local-llm/genva-review
@@ -404,6 +407,8 @@ https://www.promptquorum.com/power-local-llm/llamatik-review
 https://www.promptquorum.com/power-local-llm/llava-review
 https://www.promptquorum.com/power-local-llm/llm-farm-review
 https://www.promptquorum.com/power-local-llm/llm-hub-review
+https://www.promptquorum.com/power-local-llm/llm-studio-go-review
+https://www.promptquorum.com/power-local-llm/lm-mini-review
 https://www.promptquorum.com/power-local-llm/lm-playground-review
 https://www.promptquorum.com/power-local-llm/lm-studio-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
@@ -444,7 +449,9 @@ https://www.promptquorum.com/power-local-llm/local-vision-models-llava-ollama-20
 https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison
 https://www.promptquorum.com/power-local-llm/localai-apexcreator-review
 https://www.promptquorum.com/power-local-llm/localai-explained
+https://www.promptquorum.com/power-local-llm/localghost-review
 https://www.promptquorum.com/power-local-llm/locally-ai-review
+https://www.promptquorum.com/power-local-llm/locally-uncensored-hands-on-test
 https://www.promptquorum.com/power-local-llm/locally-uncensored-review
 https://www.promptquorum.com/power-local-llm/localmcp-review
 https://www.promptquorum.com/power-local-llm/localmind-review
@@ -477,6 +484,7 @@ https://www.promptquorum.com/power-local-llm/msty-go-review
 https://www.promptquorum.com/power-local-llm/msty-hands-on-test
 https://www.promptquorum.com/power-local-llm/msty-review
 https://www.promptquorum.com/power-local-llm/multica-review
+https://www.promptquorum.com/power-local-llm/murmur-review
 https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/nanobot-review
 https://www.promptquorum.com/power-local-llm/noema-review
