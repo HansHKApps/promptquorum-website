@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Data Flow and Privacy',
         content: [
           '**The privacy policy, last updated on 21 March 2026, says the app and the developer collect no messages, name, email, location, analytics or advertising data.** Chat history is stored on the iPhone, the Ed25519 identity key sits in the iOS Keychain, and documents and logs stay on the machine that runs the agent.',
-          'The one public component is a signalling server operated by the project. According to the policy it exchanges only the WebRTC set-up data (SDP and ICE) and does not log or store data beyond the active session; after connecting, messages travel over an encrypted channel between phone and agent. The security documentation adds that every signalling message is signed and that a four-step mutual authentication runs before the agent accepts a message. The camera is used only to scan the pairing QR code.',
+          'The project describes one public component, a signalling server that it operates. According to the policy it exchanges only the WebRTC set-up data (SDP and ICE) and does not log or store data beyond the active session; after connecting, messages travel over an encrypted channel between phone and agent. The security documentation adds that every signalling message is signed and that a four-step mutual authentication runs before the agent accepts a message. The camera is used only to scan the pairing QR code.',
         ],
         callouts: [
           { type: 'note', text: 'These are the project\'s own declarations, not audit results, and PromptQuorum has not inspected the network traffic. The policy speaks of the mobile app and does not mention the hosted browser app.' },
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenfluss und Datenschutz',
         content: [
           '**Laut Datenschutzerklärung, zuletzt aktualisiert am 21. März 2026, erheben App und Entwickler keine Nachrichten, Namen, E-Mail-Adressen, Standortdaten, Analysen oder Werbedaten.** Der Chatverlauf liegt auf dem iPhone, der Ed25519-Identitätsschlüssel im iOS-Schlüsselbund, und Dokumente und Protokolle bleiben auf dem Rechner, auf dem der Agent läuft.',
-          'Die einzige öffentliche Komponente ist ein vom Projekt betriebener Signalisierungsserver. Laut Erklärung tauscht er nur die WebRTC-Verbindungsdaten (SDP und ICE) aus und protokolliert oder speichert nichts über die aktive Sitzung hinaus; nach dem Verbindungsaufbau laufen Nachrichten über einen verschlüsselten Kanal zwischen Telefon und Agent. Die Sicherheitsdokumentation ergänzt, dass jede Signalisierungsnachricht signiert ist und vor der Annahme einer Nachricht eine vierstufige gegenseitige Authentifizierung stattfindet. Die Kamera dient nur zum Scannen des Kopplungs-QR-Codes.',
+          'Als einzige öffentliche Komponente nennt das Projekt einen von ihm betriebenen Signalisierungsserver. Laut Erklärung tauscht er nur die WebRTC-Verbindungsdaten (SDP und ICE) aus und protokolliert oder speichert nichts über die aktive Sitzung hinaus; nach dem Verbindungsaufbau laufen Nachrichten über einen verschlüsselten Kanal zwischen Telefon und Agent. Die Sicherheitsdokumentation ergänzt, dass jede Signalisierungsnachricht signiert ist und vor der Annahme einer Nachricht eine vierstufige gegenseitige Authentifizierung stattfindet. Die Kamera dient nur zum Scannen des Kopplungs-QR-Codes.',
         ],
         callouts: [
           { type: 'note', text: 'Dies sind Angaben des Projekts selbst, keine Prüfergebnisse, und PromptQuorum hat den Netzwerkverkehr nicht untersucht. Die Erklärung spricht von der mobilen App und erwähnt die gehostete Browser-App nicht.' },
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Flujo de datos y privacidad',
         content: [
           '**La política de privacidad, actualizada por última vez el 21 de marzo de 2026, dice que la app y el desarrollador no recopilan mensajes, nombre, correo, ubicación, analíticas ni datos publicitarios.** El historial de chat se guarda en el iPhone, la clave de identidad Ed25519 está en el llavero de iOS, y los documentos y registros permanecen en la máquina que ejecuta el agente.',
-          'El único componente público es un servidor de señalización operado por el proyecto. Según la política solo intercambia los datos de establecimiento de WebRTC (SDP e ICE) y no registra ni almacena datos más allá de la sesión activa; tras conectar, los mensajes viajan por un canal cifrado entre teléfono y agente. La documentación de seguridad añade que cada mensaje de señalización va firmado y que antes de aceptar un mensaje se ejecuta una autenticación mutua de cuatro pasos. La cámara solo se usa para escanear el código QR de vinculación.',
+          'El proyecto describe un único componente público: un servidor de señalización que opera él mismo. Según la política solo intercambia los datos de establecimiento de WebRTC (SDP e ICE) y no registra ni almacena datos más allá de la sesión activa; tras conectar, los mensajes viajan por un canal cifrado entre teléfono y agente. La documentación de seguridad añade que cada mensaje de señalización va firmado y que antes de aceptar un mensaje se ejecuta una autenticación mutua de cuatro pasos. La cámara solo se usa para escanear el código QR de vinculación.',
         ],
         callouts: [
           { type: 'note', text: 'Son declaraciones del propio proyecto, no resultados de una auditoría, y PromptQuorum no ha inspeccionado el tráfico de red. La política habla de la app móvil y no menciona la app de navegador alojada.' },
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Flux de données et confidentialité',
         content: [
           '**La politique de confidentialité, mise à jour pour la dernière fois le 21 mars 2026, indique que l’appli et le développeur ne collectent ni messages, ni nom, ni e-mail, ni position, ni mesures d’audience, ni données publicitaires.** L’historique de chat est stocké sur l’iPhone, la clé d’identité Ed25519 se trouve dans le trousseau iOS, et les documents et journaux restent sur la machine qui exécute l’agent.',
-          'Le seul composant public est un serveur de signalisation exploité par le projet. Selon la politique, il n’échange que les données d’établissement WebRTC (SDP et ICE) et ne journalise ni ne conserve de données au-delà de la session active ; une fois connectés, les messages circulent par un canal chiffré entre le téléphone et l’agent. La documentation de sécurité ajoute que chaque message de signalisation est signé et qu’une authentification mutuelle en quatre étapes a lieu avant que l’agent n’accepte un message. L’appareil photo ne sert qu’à scanner le code QR d’association.',
+          'Le projet décrit un seul composant public : un serveur de signalisation qu’il exploite. Selon la politique, il n’échange que les données d’établissement WebRTC (SDP et ICE) et ne journalise ni ne conserve de données au-delà de la session active ; une fois connectés, les messages circulent par un canal chiffré entre le téléphone et l’agent. La documentation de sécurité ajoute que chaque message de signalisation est signé et qu’une authentification mutuelle en quatre étapes a lieu avant que l’agent n’accepte un message. L’appareil photo ne sert qu’à scanner le code QR d’association.',
         ],
         callouts: [
           { type: 'note', text: 'Ce sont des déclarations du projet lui-même, pas des résultats d’audit, et PromptQuorum n’a pas inspecté le trafic réseau. La politique parle de l’appli mobile et ne mentionne pas l’appli de navigateur hébergée.' },
@@ -1116,7 +1116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'データの流れとプライバシー',
         content: [
           '**最終更新が2026年3月21日のプライバシーポリシーによると、アプリと開発者はメッセージ、氏名、メールアドレス、位置情報、解析データ、広告データを収集しません。** チャット履歴はiPhone内に、Ed25519の識別キーはiOSのキーチェーンに保存され、文書とログはエージェントを動かすマシンに残ります。',
-          '公開されている唯一のコンポーネントは、プロジェクトが運用するシグナリングサーバーです。ポリシーによれば、交換するのはWebRTCの接続設定データ（SDPとICE）のみで、アクティブなセッションを超えてデータを記録・保存しません。接続後のメッセージは、スマートフォンとエージェントの間の暗号化されたチャネルを通ります。セキュリティ文書には、すべてのシグナリングメッセージに署名があり、エージェントがメッセージを受け付ける前に4段階の相互認証が行われるとあります。カメラはペアリング用QRコードの読み取りにのみ使われます。',
+          'プロジェクトの説明では、公開されているコンポーネントはプロジェクトが運用するシグナリングサーバー1つです。ポリシーによれば、交換するのはWebRTCの接続設定データ（SDPとICE）のみで、アクティブなセッションを超えてデータを記録・保存しません。接続後のメッセージは、スマートフォンとエージェントの間の暗号化されたチャネルを通ります。セキュリティ文書には、すべてのシグナリングメッセージに署名があり、エージェントがメッセージを受け付ける前に4段階の相互認証が行われるとあります。カメラはペアリング用QRコードの読み取りにのみ使われます。',
         ],
         callouts: [
           { type: 'note', text: 'これらはプロジェクト自身の申告であり、監査結果ではありません。PromptQuorumはネットワーク通信を調べていません。ポリシーはモバイルアプリについて述べており、ホスト型のブラウザアプリには触れていません。' },
@@ -1346,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxo de dados e privacidade',
         content: [
           '**A política de privacidade, atualizada pela última vez em 21 de março de 2026, diz que o app e o desenvolvedor não coletam mensagens, nome, e-mail, localização, análises nem dados de publicidade.** O histórico de chat fica no iPhone, a chave de identidade Ed25519 fica no Keychain do iOS, e documentos e registros permanecem na máquina que executa o agente.',
-          'O único componente público é um servidor de sinalização operado pelo projeto. Segundo a política, ele troca apenas os dados de estabelecimento do WebRTC (SDP e ICE) e não registra nem armazena dados além da sessão ativa; depois de conectadas, as mensagens trafegam por um canal criptografado entre celular e agente. A documentação de segurança acrescenta que cada mensagem de sinalização é assinada e que uma autenticação mútua em quatro etapas ocorre antes de o agente aceitar qualquer mensagem. A câmera é usada apenas para escanear o QR code de pareamento.',
+          'O projeto descreve um único componente público: um servidor de sinalização que ele mesmo opera. Segundo a política, ele troca apenas os dados de estabelecimento do WebRTC (SDP e ICE) e não registra nem armazena dados além da sessão ativa; depois de conectadas, as mensagens trafegam por um canal criptografado entre celular e agente. A documentação de segurança acrescenta que cada mensagem de sinalização é assinada e que uma autenticação mútua em quatro etapas ocorre antes de o agente aceitar qualquer mensagem. A câmera é usada apenas para escanear o QR code de pareamento.',
         ],
         callouts: [
           { type: 'note', text: 'Estas são declarações do próprio projeto, não resultados de auditoria, e o PromptQuorum não inspecionou o tráfego de rede. A política fala do app móvel e não menciona o app de navegador hospedado.' },
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تدفق البيانات والخصوصية',
         content: [
           '**تقول سياسة الخصوصية، التي حُدّثت آخر مرة في 21 مارس 2026، إن التطبيق والمطوّر لا يجمعان الرسائل ولا الاسم ولا البريد الإلكتروني ولا الموقع ولا بيانات التحليلات أو الإعلانات.** يُخزَّن سجل المحادثة على iPhone، ويوجد مفتاح الهوية Ed25519 في سلسلة مفاتيح iOS، وتبقى المستندات والسجلات على الجهاز الذي يشغّل الوكيل.',
-          'المكوّن العام الوحيد هو خادم إشارات يديره المشروع. بحسب السياسة فهو يتبادل بيانات إعداد WebRTC فقط (SDP وICE) ولا يسجّل ولا يخزّن بيانات بعد انتهاء الجلسة النشطة؛ وبعد الاتصال تنتقل الرسائل عبر قناة مشفّرة بين الهاتف والوكيل. وتضيف وثائق الأمان أن كل رسالة إشارات موقّعة وأن مصادقة متبادلة من أربع خطوات تجري قبل أن يقبل الوكيل أي رسالة. ولا تُستخدم الكاميرا إلا لمسح رمز QR الخاص بالاقتران.',
+          'يصف المشروع مكوّنًا عامًا واحدًا هو خادم إشارات يديره. بحسب السياسة فهو يتبادل بيانات إعداد WebRTC فقط (SDP وICE) ولا يسجّل ولا يخزّن بيانات بعد انتهاء الجلسة النشطة؛ وبعد الاتصال تنتقل الرسائل عبر قناة مشفّرة بين الهاتف والوكيل. وتضيف وثائق الأمان أن كل رسالة إشارات موقّعة وأن مصادقة متبادلة من أربع خطوات تجري قبل أن يقبل الوكيل أي رسالة. ولا تُستخدم الكاميرا إلا لمسح رمز QR الخاص بالاقتران.',
         ],
         callouts: [
           { type: 'note', text: 'هذه تصريحات المشروع نفسه وليست نتائج تدقيق، ولم يفحص PromptQuorum حركة الشبكة. وتتحدث السياسة عن تطبيق الجوال ولا تذكر تطبيق المتصفح المستضاف.' },
@@ -1806,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '数据流向与隐私',
         content: [
           '**隐私政策（最后更新于 2026 年 3 月 21 日）称，应用和开发者不收集消息、姓名、电子邮件、位置、分析数据或广告数据。** 聊天记录保存在 iPhone 上，Ed25519 身份密钥存放在 iOS 钥匙串中，文档和日志留在运行智能体的机器上。',
-          '唯一的公共组件是项目运营的信令服务器。据政策所述，它只交换 WebRTC 建立连接所需的数据（SDP 和 ICE），不记录也不保存超出当前会话的数据；连接建立后，消息经手机与智能体之间的加密通道传输。安全文档补充说，每条信令消息都带签名，智能体接受消息前会先完成四步双向认证。相机仅用于扫描配对二维码。',
+          '项目称其唯一的公共组件是自己运营的信令服务器。据政策所述，它只交换 WebRTC 建立连接所需的数据（SDP 和 ICE），不记录也不保存超出当前会话的数据；连接建立后，消息经手机与智能体之间的加密通道传输。安全文档补充说，每条信令消息都带签名，智能体接受消息前会先完成四步双向认证。相机仅用于扫描配对二维码。',
         ],
         callouts: [
           { type: 'note', text: '这些是项目自己的声明，而非审计结果，PromptQuorum 未检查网络流量。政策谈的是移动应用，没有提到托管的浏览器应用。' },
@@ -2036,7 +2036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '데이터 흐름과 개인정보',
         content: [
           '**2026년 3월 21일에 마지막으로 갱신된 개인정보 처리방침은 앱과 개발자가 메시지, 이름, 이메일, 위치, 분석, 광고 데이터를 수집하지 않는다고 밝힙니다.** 채팅 기록은 iPhone에, Ed25519 신원 키는 iOS 키체인에 저장되고, 문서와 로그는 에이전트를 실행하는 기기에 남습니다.',
-          '공개된 유일한 구성 요소는 프로젝트가 운영하는 시그널링 서버입니다. 방침에 따르면 WebRTC 연결 설정 데이터(SDP와 ICE)만 교환하며 활성 세션 이후에는 데이터를 기록하거나 저장하지 않습니다. 연결 후 메시지는 휴대폰과 에이전트 사이의 암호화된 채널로 전달됩니다. 보안 문서는 모든 시그널링 메시지에 서명이 있고, 에이전트가 메시지를 받기 전에 4단계 상호 인증이 수행된다고 덧붙입니다. 카메라는 페어링 QR 코드를 스캔하는 데만 사용됩니다.',
+          '프로젝트는 공개 구성 요소로 자체 운영하는 시그널링 서버 하나를 듭니다. 방침에 따르면 WebRTC 연결 설정 데이터(SDP와 ICE)만 교환하며 활성 세션 이후에는 데이터를 기록하거나 저장하지 않습니다. 연결 후 메시지는 휴대폰과 에이전트 사이의 암호화된 채널로 전달됩니다. 보안 문서는 모든 시그널링 메시지에 서명이 있고, 에이전트가 메시지를 받기 전에 4단계 상호 인증이 수행된다고 덧붙입니다. 카메라는 페어링 QR 코드를 스캔하는 데만 사용됩니다.',
         ],
         callouts: [
           { type: 'note', text: '이는 프로젝트 자체의 선언이며 감사 결과가 아닙니다. PromptQuorum은 네트워크 트래픽을 점검하지 않았습니다. 방침은 모바일 앱을 다루며 호스팅되는 브라우저 앱은 언급하지 않습니다.' },
