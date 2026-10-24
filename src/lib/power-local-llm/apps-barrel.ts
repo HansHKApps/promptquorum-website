@@ -248,6 +248,7 @@ import { app as app_openrag } from './apps/openrag'
 import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
+import { app as app_presenton } from './apps/presenton'
 import { app as app_buzz_captions } from './apps/buzz-captions'
 import { app as app_logseq } from './apps/logseq'
 import { app as app_searxng } from './apps/searxng'
@@ -519,6 +520,7 @@ export const localAiApps: ToolRecord[] = [
   app_arynwood_mcp,
   app_localmindai,
   app_murmur,
+  app_presenton,
   app_buzz_captions,
   app_logseq,
   app_searxng,
