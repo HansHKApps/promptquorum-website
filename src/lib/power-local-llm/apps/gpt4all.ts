@@ -22,6 +22,12 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat'],
   url: 'nomic.ai/gpt4all',
+  storeLinks: {
+    web: 'https://www.nomic.ai/gpt4all',
+    github: 'https://github.com/nomic-ai/gpt4all',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'nomic.ai/gpt4all links gpt4all-installer-win64.exe, gpt4all-installer-win64-arm.exe, gpt4all-installer-darwin.dmg and gpt4all-installer-linux.run; GitHub Releases v3.10.0 attaches the same installers (win64, win64-arm, macos .dmg, linux .run). checked 2026-10-24',
   tagline: {
     en: 'Beginner-friendly with strong CPU-only support',
     de: 'Einsteigerfreundlich mit starker CPU-only-Unterstützung',
@@ -36,7 +42,8 @@ export const app: ToolRecord = {
   reviewSlug: 'gpt4all-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { desktopApp: true, builtInEngine: true, fileChat: true },
-  lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2025-05-27', // GitHub API (latest release or push, whichever is newer), read 2026-10-23
+  lastVerifiedDate: '2026-10-24', // official page, GitHub API (releases + repo) read 2026-10-24
+  lastUpstreamUpdate: '2025-05-27', // GitHub API: last push 2025-05-27 (newer than latest release v3.10.0, 2025-02-25), read 2026-10-24
   lastUpstreamUpdateSource: 'https://github.com/nomic-ai/gpt4all',
+  pqReview: { date: '2026-10-24', version: 'v3.10.0', versionSourceUrl: 'https://github.com/nomic-ai/gpt4all/releases/tag/v3.10.0' },
 }
