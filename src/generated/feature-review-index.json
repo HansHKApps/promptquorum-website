@@ -928,6 +928,7 @@
     "cluster": "power-local-llm",
     "urlSlug": "coil-review",
     "url": "/power-local-llm/coil-review"
+  },
   "localghost": {
     "cluster": "power-local-llm",
     "urlSlug": "localghost-review",
