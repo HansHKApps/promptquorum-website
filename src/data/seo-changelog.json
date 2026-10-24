@@ -5420,5 +5420,40 @@
       "period": "28d to 2026-10-23"
     },
     "deployedAt": null
+  },
+  {
+    "id": "2b49c47c-ae02-4eb0-a0a9-522e36873e4d",
+    "slug": "/de/power-local-llm/litellm-review",
+    "date": "2026-10-24T14:08:12.225Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LiteLLM Review: Gateway für 100+ LLM-APIs",
+        "new": "LiteLLM Review: Gateway, Kosten & Enterprise-Lizenz"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LiteLLM ist ein Open-Source-LLM-Gateway (MIT, mit separater Enterprise-Ausnahme), das über 100 Anbieter-APIs hinter einer OpenAI-kompatiblen Schnittstelle vereint. SDK- und Proxy-Setup für 2026.",
+        "new": "LiteLLM (BerriAI/litellm) ist ein Open-Source-LLM-Gateway für 100+ Anbieter-APIs: Kosten, MIT-Lizenz, Enterprise für Unternehmen, SDK- und Proxy-Setup."
+      }
+    ],
+    "reason": "GSC (DE page): top query 'litellm' 971 imp / 0 clicks at pos 7.3 -> title/meta problem; add kosten/Unternehmen/Enterprise intent; title+meta in budget",
+    "queries": [
+      "litellm",
+      "litellm gateway",
+      "litellm unternehmen",
+      "litellm kosten",
+      "litellm für unternehmen",
+      "was ist litellm",
+      "lite llm"
+    ],
+    "baseline": {
+      "position": 7.3,
+      "impressions": 971,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC export pasted 2026-10-24, window not stated"
+    },
+    "deployedAt": null
   }
 ]
