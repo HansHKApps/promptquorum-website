@@ -354,6 +354,7 @@ https://www.promptquorum.com/power-local-llm/fooocus-review
 https://www.promptquorum.com/power-local-llm/foundry-local-review
 https://www.promptquorum.com/power-local-llm/friedrichai-review
 https://www.promptquorum.com/power-local-llm/funclip-review
+https://www.promptquorum.com/power-local-llm/genva-review
 https://www.promptquorum.com/power-local-llm/github-copilot-cli-review
 https://www.promptquorum.com/power-local-llm/google-ai-edge-gallery-review
 https://www.promptquorum.com/power-local-llm/goose-review
@@ -445,7 +446,9 @@ https://www.promptquorum.com/power-local-llm/localai-apexcreator-review
 https://www.promptquorum.com/power-local-llm/localai-explained
 https://www.promptquorum.com/power-local-llm/locally-ai-review
 https://www.promptquorum.com/power-local-llm/locally-uncensored-review
+https://www.promptquorum.com/power-local-llm/localmcp-review
 https://www.promptquorum.com/power-local-llm/localmind-review
+https://www.promptquorum.com/power-local-llm/localmindai-review
 https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/logseq-copilot-review
 https://www.promptquorum.com/power-local-llm/longmemory-review
@@ -488,11 +491,13 @@ https://www.promptquorum.com/power-local-llm/ollama-vision-models-review
 https://www.promptquorum.com/power-local-llm/ollitert-review
 https://www.promptquorum.com/power-local-llm/omlx-review
 https://www.promptquorum.com/power-local-llm/on-device-ai-review
+https://www.promptquorum.com/power-local-llm/on-device-ai-translator-review
 https://www.promptquorum.com/power-local-llm/onyx-review
 https://www.promptquorum.com/power-local-llm/open-felix-review
 https://www.promptquorum.com/power-local-llm/open-interpreter-review
 https://www.promptquorum.com/power-local-llm/openai-edge-tts-review
 https://www.promptquorum.com/power-local-llm/openclaw-review
+https://www.promptquorum.com/power-local-llm/openclient-review
 https://www.promptquorum.com/power-local-llm/opencode-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/openllm-review
@@ -599,6 +604,7 @@ https://www.promptquorum.com/power-local-llm/windsurf-review
 https://www.promptquorum.com/power-local-llm/xtts-v2-review
 https://www.promptquorum.com/power-local-llm/ypipe-review
 https://www.promptquorum.com/power-local-llm/zed-review
+https://www.promptquorum.com/power-local-llm/zero1llm-review
 https://www.promptquorum.com/pq-apps
 https://www.promptquorum.com/privacy
 https://www.promptquorum.com/prompt-bites
