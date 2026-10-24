@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Maintenance: the desktop app (0.42.2) and the agent runtime (0.88.3) both shipped releases on 24 October 2026, so no stale-project warning applies.',
             'Models: local servers such as Ollama, LM Studio, vLLM and llama.cpp, or hosted providers through your own keys or Radient Pass.',
             'Safety: reads run automatically, while file writes and shell commands ask first and show the exact command.',
-            'Cost: the app is free and open source; hosted model usage is the only thing you can pay for.',
+            'Cost: the app is free and open source; per the maker, the only thing you might pay for is AI model usage.',
             'Maker: Radient Inc., with both repositories published under the MIT license.',
           ],
         callouts: [
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Competitors and Alternatives',
         columns: ['App', 'Platforms', 'Price / license', 'Key difference'],
         rows: [
-            { 'App': '[Open Interpreter](/power-local-llm/open-interpreter-review)', 'Platforms': 'Windows, macOS, Linux', 'Price / license': 'Free / Apache 2.0', 'Key difference': 'Lets a local model control your computer and run code; installed with a single command rather than a graphical installer' },
+            { 'App': '[Open Interpreter](/power-local-llm/open-interpreter-review)', 'Platforms': 'Windows, macOS, Linux', 'Price / license': 'Free / Apache 2.0', 'Key difference': 'Lets a local model control your computer and run code; check its own review for install path and license terms' },
             { 'App': '[Agent Zero](/power-local-llm/agent-zero-review)', 'Platforms': 'Windows, macOS, Linux', 'Price / license': 'Free / MIT', 'Key difference': 'Self-hosted agent that runs in Docker with a web interface rather than a native installer' },
             { 'App': '[Nanobot](/power-local-llm/nanobot-review)', 'Platforms': 'Windows, macOS, Linux', 'Price / license': 'Free / MIT', 'Key difference': 'Self-hosted personal agent with persistent memory, MCP tools and chat-app integrations, used from a web or command-line interface' },
           ],
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Pflege: Desktop-App (0.42.2) und Agenten-Laufzeit (0.88.3) haben beide am 24. Oktober 2026 Releases veröffentlicht, daher gilt keine Warnung vor einem verwaisten Projekt.',
             'Modelle: lokale Server wie Ollama, LM Studio, vLLM und llama.cpp oder gehostete Anbieter über eigene Schlüssel oder Radient Pass.',
             'Sicherheit: Lesezugriffe laufen automatisch, Schreibzugriffe und Shell-Befehle fragen vorher nach und zeigen den genauen Befehl.',
-            'Kosten: Die App ist kostenlos und Open Source; Kosten entstehen höchstens für gehostete Modellnutzung.',
+            'Kosten: Die App ist kostenlos und Open Source; laut Hersteller kann höchstens die Nutzung von KI-Modellen etwas kosten.',
             'Hersteller: Radient Inc., beide Repositories stehen unter der MIT-Lizenz.',
           ],
         callouts: [
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wettbewerber und Alternativen',
         columns: ['App', 'Plattformen', 'Preis / Lizenz', 'Wichtigster Unterschied'],
         rows: [
-            { 'App': '[Open Interpreter](/de/power-local-llm/open-interpreter-review)', 'Plattformen': 'Windows, macOS, Linux', 'Preis / Lizenz': 'Gratis / Apache 2.0', 'Wichtigster Unterschied': 'Lässt ein lokales Modell Ihren Rechner steuern und Code ausführen; Installation mit einem einzigen Befehl statt grafischem Installer' },
+            { 'App': '[Open Interpreter](/de/power-local-llm/open-interpreter-review)', 'Plattformen': 'Windows, macOS, Linux', 'Preis / Lizenz': 'Gratis / Apache 2.0', 'Wichtigster Unterschied': 'Lässt ein lokales Modell Ihren Rechner steuern und Code ausführen; Installationsweg und Lizenz stehen in der eigenen Rezension' },
             { 'App': '[Agent Zero](/de/power-local-llm/agent-zero-review)', 'Plattformen': 'Windows, macOS, Linux', 'Preis / Lizenz': 'Gratis / MIT', 'Wichtigster Unterschied': 'Selbst gehosteter Agent in Docker mit Weboberfläche statt nativem Installer' },
             { 'App': '[Nanobot](/de/power-local-llm/nanobot-review)', 'Plattformen': 'Windows, macOS, Linux', 'Preis / Lizenz': 'Gratis / MIT', 'Wichtigster Unterschied': 'Selbst gehosteter persönlicher Agent mit dauerhaftem Gedächtnis, MCP-Tools und Chat-App-Anbindungen, bedient über Web- oder Kommandozeile' },
           ],
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mantenimiento: la app de escritorio (0.42.2) y el motor de agentes (0.88.3) publicaron versiones el 24 de octubre de 2026, así que no se aplica ninguna advertencia de proyecto abandonado.',
             'Modelos: servidores locales como Ollama, LM Studio, vLLM y llama.cpp, o proveedores alojados con tus claves o Radient Pass.',
             'Seguridad: las lecturas se ejecutan solas, mientras que las escrituras de archivos y los comandos de shell preguntan antes y muestran el comando exacto.',
-            'Coste: la app es gratuita y de código abierto; lo único que puede costar es el uso de modelos alojados.',
+            'Coste: la app es gratuita y de código abierto; según el fabricante, lo único por lo que podrías pagar es el uso de modelos de IA.',
             'Fabricante: Radient Inc., con ambos repositorios publicados bajo licencia MIT.',
           ],
         callouts: [
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Competidores y alternativas',
         columns: ['App', 'Plataformas', 'Precio / licencia', 'Diferencia clave'],
         rows: [
-            { 'App': '[Open Interpreter](/es/power-local-llm/open-interpreter-review)', 'Plataformas': 'Windows, macOS, Linux', 'Precio / licencia': 'Gratis / Apache 2.0', 'Diferencia clave': 'Permite que un modelo local controle tu ordenador y ejecute código; se instala con un solo comando en lugar de un instalador gráfico' },
+            { 'App': '[Open Interpreter](/es/power-local-llm/open-interpreter-review)', 'Plataformas': 'Windows, macOS, Linux', 'Precio / licencia': 'Gratis / Apache 2.0', 'Diferencia clave': 'Permite que un modelo local controle tu ordenador y ejecute código; la vía de instalación y la licencia están en su propia reseña' },
             { 'App': '[Agent Zero](/es/power-local-llm/agent-zero-review)', 'Plataformas': 'Windows, macOS, Linux', 'Precio / licencia': 'Gratis / MIT', 'Diferencia clave': 'Agente autoalojado que se ejecuta en Docker con interfaz web en lugar de un instalador nativo' },
             { 'App': '[Nanobot](/es/power-local-llm/nanobot-review)', 'Plataformas': 'Windows, macOS, Linux', 'Precio / licencia': 'Gratis / MIT', 'Diferencia clave': 'Agente personal autoalojado con memoria persistente, herramientas MCP e integraciones con apps de chat, usado desde la web o la línea de comandos' },
           ],
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Maintenance : l’appli de bureau (0.42.2) et le moteur d’agents (0.88.3) ont tous deux publié des versions le 24 octobre 2026, donc aucun avertissement de projet délaissé ne s’applique.',
             'Modèles : serveurs locaux comme Ollama, LM Studio, vLLM et llama.cpp, ou fournisseurs hébergés via vos clés ou Radient Pass.',
             'Sécurité : les lectures s’exécutent seules, tandis que les écritures de fichiers et les commandes shell demandent d’abord et affichent la commande exacte.',
-            'Coût : l’appli est gratuite et open source ; seule l’utilisation de modèles hébergés peut coûter.',
+            'Coût : l’appli est gratuite et open source ; d’après l’éditeur, seule l’utilisation de modèles d’IA peut coûter.',
             'Éditeur : Radient Inc., les deux dépôts étant publiés sous licence MIT.',
           ],
         callouts: [
@@ -1034,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Concurrents et alternatives',
         columns: ['Application', 'Plateformes', 'Prix / licence', 'Différence clé'],
         rows: [
-            { 'Application': '[Open Interpreter](/fr/power-local-llm/open-interpreter-review)', 'Plateformes': 'Windows, macOS, Linux', 'Prix / licence': 'Gratuit / Apache 2.0', 'Différence clé': 'Permet à un modèle local de piloter votre ordinateur et d’exécuter du code ; s’installe en une seule commande plutôt qu’avec un installateur graphique' },
+            { 'Application': '[Open Interpreter](/fr/power-local-llm/open-interpreter-review)', 'Plateformes': 'Windows, macOS, Linux', 'Prix / licence': 'Gratuit / Apache 2.0', 'Différence clé': 'Permet à un modèle local de piloter votre ordinateur et d’exécuter du code ; installation et licence détaillées dans son propre test' },
             { 'Application': '[Agent Zero](/fr/power-local-llm/agent-zero-review)', 'Plateformes': 'Windows, macOS, Linux', 'Prix / licence': 'Gratuit / MIT', 'Différence clé': 'Agent auto-hébergé exécuté dans Docker avec une interface web plutôt qu’un installateur natif' },
             { 'Application': '[Nanobot](/fr/power-local-llm/nanobot-review)', 'Plateformes': 'Windows, macOS, Linux', 'Prix / licence': 'Gratuit / MIT', 'Différence clé': 'Agent personnel auto-hébergé avec mémoire persistante, outils MCP et intégrations d’applis de messagerie, utilisé via le web ou la ligne de commande' },
           ],
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'メンテナンス：デスクトップアプリ（0.42.2）とエージェント実行基盤（0.88.3）はどちらも2026年10月24日にリリースされており、更新停止の警告は該当しません。',
             'モデル：Ollama、LM Studio、vLLM、llama.cppなどのローカルサーバー、または自分のキーやRadient Pass経由のホスト型プロバイダー。',
             '安全性：読み取りは自動で実行され、ファイルの書き込みやシェルコマンドは事前に正確なコマンドを示して確認を求めます。',
-            '費用：アプリは無料のオープンソースで、費用が発生しうるのはホスト型モデルの利用分だけです。',
+            '費用：アプリは無料のオープンソースで、開発元によると、費用が発生しうるのはAIモデルの利用分だけです。',
             '開発元：Radient Inc.。2つのリポジトリはどちらもMITライセンスで公開されています。',
           ],
         callouts: [
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '競合と代替ツール',
         columns: ['アプリ', '対応プラットフォーム', '価格／ライセンス', '主な違い'],
         rows: [
-            { 'アプリ': '[Open Interpreter](/ja/power-local-llm/open-interpreter-review)', '対応プラットフォーム': 'Windows、macOS、Linux', '価格／ライセンス': '無料／Apache 2.0', '主な違い': 'ローカルモデルにPCを操作させてコードを実行する。GUIのインストーラーではなく1つのコマンドで導入' },
+            { 'アプリ': '[Open Interpreter](/ja/power-local-llm/open-interpreter-review)', '対応プラットフォーム': 'Windows、macOS、Linux', '価格／ライセンス': '無料／Apache 2.0', '主な違い': 'ローカルモデルにPCを操作させてコードを実行する。導入方法とライセンスは専用レビューを参照' },
             { 'アプリ': '[Agent Zero](/ja/power-local-llm/agent-zero-review)', '対応プラットフォーム': 'Windows、macOS、Linux', '価格／ライセンス': '無料／MIT', '主な違い': 'Docker上で動くセルフホスト型のエージェントで、ネイティブのインストーラーではなくウェブ画面を使う' },
             { 'アプリ': '[Nanobot](/ja/power-local-llm/nanobot-review)', '対応プラットフォーム': 'Windows、macOS、Linux', '価格／ライセンス': '無料／MIT', '主な違い': '永続メモリ、MCPツール、チャットアプリ連携を備えたセルフホスト型の個人用エージェントで、ウェブまたはコマンドラインで使う' },
           ],
@@ -1430,7 +1430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Manutenção: o app de desktop (0.42.2) e o motor de agentes (0.88.3) lançaram versões em 24 de outubro de 2026, então nenhum aviso de projeto abandonado se aplica.',
             'Modelos: servidores locais como Ollama, LM Studio, vLLM e llama.cpp, ou provedores hospedados com suas chaves ou o Radient Pass.',
             'Segurança: as leituras rodam sozinhas, enquanto gravações de arquivos e comandos de shell perguntam antes e mostram o comando exato.',
-            'Custo: o app é gratuito e de código aberto; o único custo possível é o uso de modelos hospedados.',
+            'Custo: o app é gratuito e de código aberto; segundo o fabricante, o único custo possível é o uso de modelos de IA.',
             'Fabricante: Radient Inc., com os dois repositórios publicados sob a licença MIT.',
           ],
         callouts: [
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Concorrentes e alternativas',
         columns: ['App', 'Plataformas', 'Preço / licença', 'Diferença principal'],
         rows: [
-            { 'App': '[Open Interpreter](/pt/power-local-llm/open-interpreter-review)', 'Plataformas': 'Windows, macOS, Linux', 'Preço / licença': 'Grátis / Apache 2.0', 'Diferença principal': 'Deixa um modelo local controlar seu computador e executar código; instala com um único comando em vez de um instalador gráfico' },
+            { 'App': '[Open Interpreter](/pt/power-local-llm/open-interpreter-review)', 'Plataformas': 'Windows, macOS, Linux', 'Preço / licença': 'Grátis / Apache 2.0', 'Diferença principal': 'Deixa um modelo local controlar seu computador e executar código; instalação e licença estão na própria análise' },
             { 'App': '[Agent Zero](/pt/power-local-llm/agent-zero-review)', 'Plataformas': 'Windows, macOS, Linux', 'Preço / licença': 'Grátis / MIT', 'Diferença principal': 'Agente auto-hospedado que roda no Docker com interface web, em vez de um instalador nativo' },
             { 'App': '[Nanobot](/pt/power-local-llm/nanobot-review)', 'Plataformas': 'Windows, macOS, Linux', 'Preço / licença': 'Grátis / MIT', 'Diferença principal': 'Agente pessoal auto-hospedado com memória persistente, ferramentas MCP e integrações com apps de chat, usado pela web ou pela linha de comando' },
           ],
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الصيانة: أصدر تطبيق سطح المكتب (0.42.2) ومحرك الوكلاء (0.88.3) إصدارات في 24 أكتوبر 2026، فلا ينطبق تحذير المشروع المتوقف.',
             'النماذج: خوادم محلية مثل Ollama وLM Studio وvLLM وllama.cpp، أو مزوّدون مستضافون عبر مفاتيحك أو Radient Pass.',
             'الأمان: تعمل عمليات القراءة تلقائيًا، أما كتابة الملفات وأوامر الصدفة فتسأل أولًا وتعرض الأمر بدقة.',
-            'التكلفة: التطبيق مجاني ومفتوح المصدر، والتكلفة الوحيدة المحتملة هي استخدام النماذج المستضافة.',
+            'التكلفة: التطبيق مجاني ومفتوح المصدر، وبحسب الشركة فالشيء الوحيد الذي قد تدفع مقابله هو استخدام نماذج الذكاء الاصطناعي.',
             'الشركة: Radient Inc.، وكلا المستودعين منشوران برخصة MIT.',
           ],
         callouts: [
@@ -1820,7 +1820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المنافسون والبدائل',
         columns: ['التطبيق', 'المنصات', 'السعر / الرخصة', 'الفرق الأبرز'],
         rows: [
-            { 'التطبيق': '[Open Interpreter](/ar/power-local-llm/open-interpreter-review)', 'المنصات': 'Windows وmacOS وLinux', 'السعر / الرخصة': 'مجاني / Apache 2.0', 'الفرق الأبرز': 'يتيح لنموذج محلي التحكم بحاسوبك وتنفيذ الشيفرة؛ ويُثبَّت بأمر واحد بدلًا من مثبّت رسومي' },
+            { 'التطبيق': '[Open Interpreter](/ar/power-local-llm/open-interpreter-review)', 'المنصات': 'Windows وmacOS وLinux', 'السعر / الرخصة': 'مجاني / Apache 2.0', 'الفرق الأبرز': 'يتيح لنموذج محلي التحكم بحاسوبك وتنفيذ الشيفرة؛ طريقة التثبيت والرخصة في مراجعته الخاصة' },
             { 'التطبيق': '[Agent Zero](/ar/power-local-llm/agent-zero-review)', 'المنصات': 'Windows وmacOS وLinux', 'السعر / الرخصة': 'مجاني / MIT', 'الفرق الأبرز': 'وكيل مستضاف ذاتيًا يعمل داخل Docker بواجهة ويب بدل مثبّت أصلي' },
             { 'التطبيق': '[Nanobot](/ar/power-local-llm/nanobot-review)', 'المنصات': 'Windows وmacOS وLinux', 'السعر / الرخصة': 'مجاني / MIT', 'الفرق الأبرز': 'وكيل شخصي مستضاف ذاتيًا بذاكرة دائمة وأدوات MCP وتكامل مع تطبيقات المحادثة، يُستخدم عبر الويب أو سطر الأوامر' },
           ],
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '维护情况：桌面应用（0.42.2）和智能体运行时（0.88.3）都在 2026 年 10 月 24 日发布了版本，因此不适用项目停更警告。',
             '模型：Ollama、LM Studio、vLLM、llama.cpp 等本地服务器，或通过你自己的密钥、Radient Pass 使用托管服务商。',
             '安全：读取操作自动执行，写入文件和 shell 命令会先询问并显示完整命令。',
-            '费用：应用免费开源，唯一可能产生的费用是托管模型的使用量。',
+            '费用：应用免费开源，据厂商所述，唯一可能产生的费用是 AI 模型的使用量。',
             '厂商：Radient Inc.，两个仓库均采用 MIT 许可证发布。',
           ],
         callouts: [
@@ -2082,7 +2082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '竞品与替代方案',
         columns: ['应用', '平台', '价格 / 许可证', '主要区别'],
         rows: [
-            { '应用': '[Open Interpreter](/zh/power-local-llm/open-interpreter-review)', '平台': 'Windows、macOS、Linux', '价格 / 许可证': '免费 / Apache 2.0', '主要区别': '让本地模型控制你的电脑并运行代码；用一条命令安装，而非图形安装程序' },
+            { '应用': '[Open Interpreter](/zh/power-local-llm/open-interpreter-review)', '平台': 'Windows、macOS、Linux', '价格 / 许可证': '免费 / Apache 2.0', '主要区别': '让本地模型控制你的电脑并运行代码；安装方式和许可证见其自己的评测' },
             { '应用': '[Agent Zero](/zh/power-local-llm/agent-zero-review)', '平台': 'Windows、macOS、Linux', '价格 / 许可证': '免费 / MIT', '主要区别': '在 Docker 中运行的自托管智能体，使用网页界面而非原生安装程序' },
             { '应用': '[Nanobot](/zh/power-local-llm/nanobot-review)', '平台': 'Windows、macOS、Linux', '价格 / 许可证': '免费 / MIT', '主要区别': '带持久记忆、MCP 工具和聊天应用集成的自托管个人智能体，通过网页或命令行使用' },
           ],
@@ -2216,7 +2216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '유지 관리: 데스크톱 앱(0.42.2)과 에이전트 런타임(0.88.3) 모두 2026년 10월 24일에 릴리스되었으므로 방치된 프로젝트 경고는 해당되지 않습니다.',
             '모델: Ollama, LM Studio, vLLM, llama.cpp 같은 로컬 서버, 또는 직접 발급한 키나 Radient Pass를 통한 호스팅 제공자.',
             '안전: 읽기는 자동으로 실행되고, 파일 쓰기와 셸 명령은 먼저 정확한 명령을 보여 주며 확인을 요청합니다.',
-            '비용: 앱은 무료 오픈소스이며, 비용이 들 수 있는 것은 호스팅 모델 사용량뿐입니다.',
+            '비용: 앱은 무료 오픈소스이며, 제작사에 따르면 비용이 들 수 있는 것은 AI 모델 사용량뿐입니다.',
             '제작사: Radient Inc.이며 두 저장소 모두 MIT 라이선스로 공개되어 있습니다.',
           ],
         callouts: [
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '경쟁 제품과 대안',
         columns: ['앱', '플랫폼', '가격 / 라이선스', '핵심 차이점'],
         rows: [
-            { '앱': '[Open Interpreter](/ko/power-local-llm/open-interpreter-review)', '플랫폼': 'Windows, macOS, Linux', '가격 / 라이선스': '무료 / Apache 2.0', '핵심 차이점': '로컬 모델이 컴퓨터를 제어하고 코드를 실행하게 함. 그래픽 설치 프로그램이 아니라 명령 한 줄로 설치' },
+            { '앱': '[Open Interpreter](/ko/power-local-llm/open-interpreter-review)', '플랫폼': 'Windows, macOS, Linux', '가격 / 라이선스': '무료 / Apache 2.0', '핵심 차이점': '로컬 모델이 컴퓨터를 제어하고 코드를 실행하게 함. 설치 방법과 라이선스는 해당 리뷰 참고' },
             { '앱': '[Agent Zero](/ko/power-local-llm/agent-zero-review)', '플랫폼': 'Windows, macOS, Linux', '가격 / 라이선스': '무료 / MIT', '핵심 차이점': 'Docker에서 실행되는 자체 호스팅 에이전트로, 네이티브 설치 프로그램 대신 웹 화면을 사용' },
             { '앱': '[Nanobot](/ko/power-local-llm/nanobot-review)', '플랫폼': 'Windows, macOS, Linux', '가격 / 라이선스': '무료 / MIT', '핵심 차이점': '영구 메모리, MCP 도구, 채팅 앱 연동을 갖춘 자체 호스팅 개인 에이전트로, 웹이나 명령줄에서 사용' },
           ],
