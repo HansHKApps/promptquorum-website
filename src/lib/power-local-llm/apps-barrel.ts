@@ -243,6 +243,7 @@ import { app as app_openrag } from './apps/openrag'
 import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
+import { app as app_iimagine_desktop } from './apps/iimagine-desktop'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
@@ -497,6 +498,7 @@ export const localAiApps: ToolRecord[] = [
   app_arynwood_mcp,
   app_localmindai,
   app_murmur,
+  app_iimagine_desktop,
   app_candle_vllm,
   app_chroma,
   app_claude_code_local,

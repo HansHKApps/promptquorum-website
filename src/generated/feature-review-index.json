@@ -989,6 +989,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "iimagine-desktop": {
+    "cluster": "power-local-llm",
+    "urlSlug": "iimagine-desktop-review",
+    "url": "/power-local-llm/iimagine-desktop-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",

@@ -590,6 +590,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localmindai-review',
   // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
   'murmur-review',
+  // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
+  'iimagine-desktop-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
