@@ -236,6 +236,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'tolaria':                                 'tolaria',
   'subtitle-edit':                           'subtitle-edit',
   'home-assistant-assist':                   'home-assistant-assist',
+  'ente-photos':                             'ente-photos',
   'local-operator':                          'local-operator',
   'nekoni':                                  'nekoni',
   'compactifai-app':                         'compactifai-app',

@@ -610,6 +610,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'subtitle-edit-review',
   // Home Assistant Assist review (Voice, Speech & Multimodal, voice pipeline inside Home Assistant) — 2026-10-24
   'home-assistant-assist-review',
+  // Ente Photos review (Images & Video, encrypted photo backup with on-device AI search) — 2026-10-24
+  'ente-photos-review',
   'local-operator-review',
   // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
   'iimagine-desktop-review',
