@@ -70,6 +70,7 @@ import { article as a_frankly_ai_review } from './articles/frankly-ai-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
 import { article as a_strata_review } from './articles/strata-review'
 import { article as a_coil_review } from './articles/coil-review'
+import { article as a_kruvo_review } from './articles/kruvo-review'
 import { article as a_localghost_review } from './articles/localghost-review'
 import { article as a_llm_studio_go_review } from './articles/llm-studio-go-review'
 import { article as a_openclient_review } from './articles/openclient-review'
@@ -700,6 +701,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'surfsense-review':                              a_surfsense_review,
   'strata-review':                                 a_strata_review,
   'coil-review':                                   a_coil_review,
+  'kruvo-review':                                  a_kruvo_review,
   'localghost-review':                             a_localghost_review,
   'llm-studio-go-review':                          a_llm_studio_go_review,
   'openclient-review':                             a_openclient_review,

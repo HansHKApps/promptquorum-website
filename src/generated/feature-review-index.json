@@ -929,6 +929,11 @@
     "urlSlug": "coil-review",
     "url": "/power-local-llm/coil-review"
   },
+  "kruvo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "kruvo-review",
+    "url": "/power-local-llm/kruvo-review"
+  },
   "localghost": {
     "cluster": "power-local-llm",
     "urlSlug": "localghost-review",

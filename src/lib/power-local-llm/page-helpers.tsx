@@ -1028,6 +1028,7 @@ const HUB_THEMES: Array<{
       'autogpt-local-review',
       'goose-review',
       'coil-review',
+      'kruvo-review',
       'atomic-bot-review',
       'librechat-review',
       'obscurify-review',
