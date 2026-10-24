@@ -243,6 +243,7 @@ import { app as app_mlx_audio } from './apps/mlx-audio'
 import { app as app_speechbrain } from './apps/speechbrain'
 import { app as app_handy } from './apps/handy'
 import { app as app_fluidvoice } from './apps/fluidvoice'
+import { app as app_openwhispr } from './apps/openwhispr'
 import { app as app_localmcp } from './apps/localmcp'
 import { app as app_libredb_studio } from './apps/libredb-studio'
 import { app as app_openrag } from './apps/openrag'
@@ -519,6 +520,7 @@ export const localAiApps: ToolRecord[] = [
   app_speechbrain,
   app_handy,
   app_fluidvoice,
+  app_openwhispr,
   app_localmcp,
   app_libredb_studio,
   app_openrag,

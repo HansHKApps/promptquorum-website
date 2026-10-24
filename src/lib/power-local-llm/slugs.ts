@@ -279,6 +279,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'whisper-cpp-review':                      'whisper-cpp-review',
   'handy-review':                            'handy-review',
   'fluidvoice-review':                       'fluidvoice-review',
+  'openwhispr-review':                       'openwhispr-review',
   'faster-whisper-review':                   'faster-whisper-review',
   'dograh-review':                           'dograh-review',
   'exo-review':                              'exo-review',

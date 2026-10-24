@@ -223,6 +223,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'speechbrain':                             'speechbrain',
   'handy':                                   'handy',
   'fluidvoice':                             'fluidvoice',
+  'openwhispr':                              'openwhispr',
   'localmcp':                                'localmcp',
   'ecc':                                     'ecc',
   'libredb-studio':                          'libredb-studio',
