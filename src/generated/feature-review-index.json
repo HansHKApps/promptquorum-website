@@ -1404,6 +1404,11 @@
     "urlSlug": "lm-mini-review",
     "url": "/power-local-llm/lm-mini-review"
   },
+  "compactifai-app": {
+    "cluster": "power-local-llm",
+    "urlSlug": "compactifai-app-review",
+    "url": "/power-local-llm/compactifai-app-review"
+  },
   "pocketllm-lite": {
     "cluster": "power-local-llm",
     "urlSlug": "pocketllm-lite-review",
