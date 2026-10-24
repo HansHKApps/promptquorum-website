@@ -234,6 +234,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'searxng':                                 'searxng',
   'linkwarden':                              'linkwarden',
   'tolaria':                                 'tolaria',
+  'subtitle-edit':                           'subtitle-edit',
   'local-operator':                          'local-operator',
   'nekoni':                                  'nekoni',
   'compactifai-app':                         'compactifai-app',

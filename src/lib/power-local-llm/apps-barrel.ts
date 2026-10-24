@@ -253,6 +253,7 @@ import { app as app_logseq } from './apps/logseq'
 import { app as app_searxng } from './apps/searxng'
 import { app as app_linkwarden } from './apps/linkwarden'
 import { app as app_tolaria } from './apps/tolaria'
+import { app as app_subtitle_edit } from './apps/subtitle-edit'
 import { app as app_local_operator } from './apps/local-operator'
 import { app as app_nekoni } from './apps/nekoni'
 import { app as app_compactifai_app } from './apps/compactifai-app'
@@ -521,6 +522,7 @@ export const localAiApps: ToolRecord[] = [
   app_searxng,
   app_linkwarden,
   app_tolaria,
+  app_subtitle_edit,
   app_local_operator,
   app_nekoni,
   app_iimagine_desktop,

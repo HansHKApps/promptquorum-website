@@ -564,6 +564,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'searxng-review':                           'searxng-review',
   'linkwarden-review':                        'linkwarden-review',
   'tolaria-review':                           'tolaria-review',
+  'subtitle-edit-review':                     'subtitle-edit-review',
   'local-operator-review':                    'local-operator-review',
   'nekoni-review':                            'nekoni-review',
   'iimagine-desktop-review':                  'iimagine-desktop-review',

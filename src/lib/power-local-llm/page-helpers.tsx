@@ -1200,6 +1200,7 @@ const HUB_THEMES: Array<{
       'dograh-review',
       'bark-tts-review',
       'murmur-review',
+      'subtitle-edit-review',
       'best-local-tts-mac',
       'best-local-tts-nvidia-gpu',
       'best-local-tts-raspberry-pi',
