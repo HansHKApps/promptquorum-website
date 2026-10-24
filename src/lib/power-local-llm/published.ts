@@ -603,6 +603,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'lm-mini-review',
   // CompactifAI APP review (Mobile & Edge LLMs) — 2026-10-24
   'compactifai-app-review',
+  // PocketLLM Lite review (Android local-first chat app, MIT) — 2026-10-24
+  'pocketllm-lite-review',
   'ensu-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',

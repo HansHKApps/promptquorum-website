@@ -1399,6 +1399,11 @@
     "urlSlug": "compactifai-app-review",
     "url": "/power-local-llm/compactifai-app-review"
   },
+  "pocketllm-lite": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pocketllm-lite-review",
+    "url": "/power-local-llm/pocketllm-lite-review"
+  },
   "obscurify": {
     "cluster": "power-local-llm",
     "urlSlug": "obscurify-review",

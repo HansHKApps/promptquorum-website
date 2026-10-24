@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 311,
+    "totalCount": 312,
     "capped": true
   },
   "llama.cpp": {
@@ -12190,6 +12190,20 @@
         "slug": "compactifai-app-review",
         "title": "CompactifAI APP Review: Free Chat App with Offline and Cloud Models",
         "url": "/power-local-llm/compactifai-app-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PocketLLM Lite": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketllm-lite-review",
+        "title": "PocketLLM Lite Review: Local-First AI Chat App for Android",
+        "url": "/power-local-llm/pocketllm-lite-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
