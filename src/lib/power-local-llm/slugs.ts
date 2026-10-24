@@ -539,6 +539,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'memoryai-review':                          'memoryai-review',
   'llamatik-review':                          'llamatik-review',
   'castmates-review':                         'castmates-review',
+  'frankly-ai-review':                        'frankly-ai-review',
   'surfsense-review':                         'surfsense-review',
   'strata-review':                            'strata-review',
   'speechbrain-review':                       'speechbrain-review',

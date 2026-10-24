@@ -65,6 +65,7 @@ import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
 import { article as a_memoryai_review } from './articles/memoryai-review'
 import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
+import { article as a_frankly_ai_review } from './articles/frankly-ai-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
 import { article as a_strata_review } from './articles/strata-review'
 import { article as a_speechbrain_review } from './articles/speechbrain-review'
@@ -682,6 +683,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'memoryai-review':                               a_memoryai_review,
   'llamatik-review':                               a_llamatik_review,
   'castmates-review':                              a_castmates_review,
+  'frankly-ai-review':                             a_frankly_ai_review,
   'surfsense-review':                              a_surfsense_review,
   'strata-review':                                 a_strata_review,
   'speechbrain-review':                            a_speechbrain_review,
