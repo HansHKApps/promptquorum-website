@@ -43,6 +43,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openclient-review",
         "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
         "url": "/power-local-llm/openclient-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/best-cpu-only-llm",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 309,
+    "totalCount": 310,
     "capped": true
   },
   "llama.cpp": {
@@ -100,6 +100,14 @@
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       },
@@ -158,14 +166,6 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memoryai-review",
-        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
-        "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
     "totalCount": 172,
@@ -183,18 +183,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
-        "dateModified": "2026-10-23",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
+        "slug": "omlx-review",
+        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
+        "url": "/power-local-llm/omlx-review",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -272,7 +272,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -542,19 +542,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
         "url": "/local-llms/70b-models-consumer-hardware",
         "dateModified": "2026-10-23",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
         "tier": "mentioned"
       },
       {
@@ -638,7 +638,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -868,6 +868,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -897,14 +905,6 @@
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -1008,6 +1008,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -1029,14 +1037,6 @@
         "title": "LM Studio Review: The GUI-First Local AI Desktop App",
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -1079,6 +1079,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-ai-app-low-end-pc",
         "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
         "url": "/power-local-llm/best-local-ai-app-low-end-pc",
@@ -1091,14 +1099,6 @@
         "title": "LM Studio Review: The GUI-First Local AI Desktop App",
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -1423,6 +1423,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1446,7 +1454,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Enchanted": {
@@ -1634,7 +1642,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -4685,6 +4693,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "coil-review",
+        "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
+        "url": "/power-local-llm/coil-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "intentkit-review",
         "title": "IntentKit Review: Self-Hosted Agent Cluster With Built-In APIs",
         "url": "/power-local-llm/intentkit-review",
@@ -4708,7 +4724,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "GPT Engineer": {
@@ -6786,7 +6802,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -7877,22 +7893,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "Second Me": {
@@ -8009,6 +8025,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "coil-review",
+        "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
+        "url": "/power-local-llm/coil-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "little-coder-review",
         "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
         "url": "/power-local-llm/little-coder-review",
@@ -8016,7 +8040,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Zed": {
@@ -9623,6 +9647,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Coil": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "coil-review",
+        "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
+        "url": "/power-local-llm/coil-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "LocalGhost": {
     "articles": [
       {
@@ -9800,6 +9838,20 @@
         "slug": "murmur-review",
         "title": "Murmur Review: On-Device AI Music Generator for iPhone",
         "url": "/power-local-llm/murmur-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Asiden": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
