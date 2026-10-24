@@ -1369,6 +1369,11 @@
     "urlSlug": "lm-mini-review",
     "url": "/power-local-llm/lm-mini-review"
   },
+  "pocketllm-lite": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pocketllm-lite-review",
+    "url": "/power-local-llm/pocketllm-lite-review"
+  },
   "obscurify": {
     "cluster": "power-local-llm",
     "urlSlug": "obscurify-review",
