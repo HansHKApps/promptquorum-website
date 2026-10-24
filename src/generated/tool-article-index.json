@@ -35,6 +35,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/70b-models-consumer-hardware",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-gpus-local-llm",
-        "title": "Best AMD GPU for Local LLMs and AI Inference",
-        "url": "/local-llms/best-amd-gpus-local-llm",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 311,
+    "totalCount": 312,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 173,
+    "totalCount": 175,
     "capped": true
   },
   "vLLM": {
@@ -1423,6 +1423,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1446,7 +1454,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Enchanted": {
@@ -1593,6 +1601,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "multica-review",
         "title": "Multica Review: A Workspace for AI Coding Agents",
         "url": "/power-local-llm/multica-review",
@@ -1624,7 +1640,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Locally Uncensored": {
@@ -4693,6 +4709,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "intentkit-review",
         "title": "IntentKit Review: Self-Hosted Agent Cluster With Built-In APIs",
         "url": "/power-local-llm/intentkit-review",
@@ -4716,7 +4740,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "GPT Engineer": {
@@ -5908,7 +5932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 44,
+    "totalCount": 45,
     "capped": true
   },
   "Pocket AI": {
@@ -6696,6 +6720,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "haplo-ai-review",
+        "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
+        "url": "/power-local-llm/haplo-ai-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "galaxy-s26-local-ai-on-device-2026",
         "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
@@ -6758,17 +6790,9 @@
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stable-diffusion-forge-review",
-        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
-        "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 33,
+    "totalCount": 34,
     "capped": true
   },
   "ComfyUI": {
@@ -7885,22 +7909,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "Second Me": {
@@ -8297,6 +8321,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "zeno-review",
+        "title": "Zeno Review: Free Private AI Workspace for Mac",
+        "url": "/power-local-llm/zeno-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "strata-review",
         "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
         "url": "/power-local-llm/strata-review",
@@ -8318,17 +8350,9 @@
         "url": "/power-local-llm/longmemory-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlx-serve-review",
-        "title": "mlx-serve Review: Native Zig Inference Server for Apple Silicon",
-        "url": "/power-local-llm/mlx-serve-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "MaxKB": {
@@ -9653,6 +9677,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Kruvo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "LocalGhost": {
     "articles": [
       {
@@ -9844,6 +9882,48 @@
         "slug": "local-operator-review",
         "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
         "url": "/power-local-llm/local-operator-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Zeno": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "zeno-review",
+        "title": "Zeno Review: Free Private AI Workspace for Mac",
+        "url": "/power-local-llm/zeno-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Asiden": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Ensu": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ensu-review",
+        "title": "Ensu Review: Free On-Device Chat App from Ente Labs",
+        "url": "/power-local-llm/ensu-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -10997,6 +11077,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kruvo-review",
+        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
+        "url": "/power-local-llm/kruvo-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11050,17 +11138,9 @@
         "url": "/local-llms/local-llm-on-laptop",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-ai-app-low-end-pc",
-        "title": "Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)",
-        "url": "/power-local-llm/best-local-ai-app-low-end-pc",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 215,
+    "totalCount": 216,
     "capped": true
   },
   "Qdrant": {
@@ -11723,6 +11803,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "haplo-ai-review",
+        "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
+        "url": "/power-local-llm/haplo-ai-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11768,17 +11856,9 @@
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "caelum-review",
-        "title": "Caelum Review: Free Offline AI Chat App for Android",
-        "url": "/power-local-llm/caelum-review",
-        "dateModified": "2026-10-21",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "LLM Hub": {
@@ -12012,6 +12092,20 @@
         "slug": "frankly-ai-review",
         "title": "Frankly AI Review: iPhone Chat App With Downloadable On-Device Models",
         "url": "/power-local-llm/frankly-ai-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Haplo AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "haplo-ai-review",
+        "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
+        "url": "/power-local-llm/haplo-ai-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }

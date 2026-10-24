@@ -196,6 +196,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'local-ai-chat-pocket':                    'local-ai-chat-pocket',
   'castmates':                               'castmates',
   'frankly-ai':                              'frankly-ai',
+  'haplo-ai':                                'haplo-ai',
   'pixlstash':                               'pixlstash',
   'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
@@ -212,6 +213,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'genva':                                   'genva',
   'strata':                                  'strata',
   'coil':                                    'coil',
+  'kruvo':                                   'kruvo',
   'localghost':                              'localghost',
   'llm-studio-go':                           'llm-studio-go',
   'zero1llm':                                'zero1llm',
@@ -225,6 +227,9 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
   'local-operator':                          'local-operator',
+  'zeno':                                    'zeno',
+  'asiden':                                  'asiden',
+  'ensu':                                    'ensu',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

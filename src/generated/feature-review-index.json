@@ -929,6 +929,11 @@
     "urlSlug": "coil-review",
     "url": "/power-local-llm/coil-review"
   },
+  "kruvo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "kruvo-review",
+    "url": "/power-local-llm/kruvo-review"
+  },
   "localghost": {
     "cluster": "power-local-llm",
     "urlSlug": "localghost-review",
@@ -993,6 +998,21 @@
     "cluster": "power-local-llm",
     "urlSlug": "local-operator-review",
     "url": "/power-local-llm/local-operator-review"
+  },
+  "zeno": {
+    "cluster": "power-local-llm",
+    "urlSlug": "zeno-review",
+    "url": "/power-local-llm/zeno-review"
+  },
+  "asiden": {
+    "cluster": "power-local-llm",
+    "urlSlug": "asiden-review",
+    "url": "/power-local-llm/asiden-review"
+  },
+  "ensu": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ensu-review",
+    "url": "/power-local-llm/ensu-review"
   },
   "candle-vllm": {
     "cluster": "power-local-llm",
@@ -1338,6 +1358,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "frankly-ai-review",
     "url": "/power-local-llm/frankly-ai-review"
+  },
+  "haplo-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "haplo-ai-review",
+    "url": "/power-local-llm/haplo-ai-review"
   },
   "pixlstash": {
     "cluster": "power-local-llm",
