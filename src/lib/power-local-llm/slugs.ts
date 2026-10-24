@@ -543,6 +543,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'frankly-ai-review':                        'frankly-ai-review',
   'surfsense-review':                         'surfsense-review',
   'strata-review':                            'strata-review',
+  'coil-review':                              'coil-review',
   'localghost-review':                        'localghost-review',
   'llm-studio-go-review':                     'llm-studio-go-review',
   'openclient-review':                        'openclient-review',
