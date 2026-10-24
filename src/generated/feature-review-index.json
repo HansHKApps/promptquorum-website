@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "searxng": {
+    "cluster": "power-local-llm",
+    "urlSlug": "searxng-review",
+    "url": "/power-local-llm/searxng-review"
+  },
   "local-operator": {
     "cluster": "power-local-llm",
     "urlSlug": "local-operator-review",

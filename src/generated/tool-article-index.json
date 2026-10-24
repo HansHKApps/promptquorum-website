@@ -2080,6 +2080,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "searxng-review",
+        "title": "SearXNG Review: Self-Hosted Search Backend for Local LLMs",
+        "url": "/power-local-llm/searxng-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -2142,17 +2150,9 @@
         "url": "/power-local-llm/docker-model-runner-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "big-agi-review",
-        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
-        "url": "/local-llms/big-agi-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
       }
     ],
-    "totalCount": 54,
+    "totalCount": 55,
     "capped": true
   },
   "LibreChat": {
@@ -9883,6 +9883,68 @@
     "totalCount": 2,
     "capped": false
   },
+  "SearXNG": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "searxng-review",
+        "title": "SearXNG Review: Self-Hosted Search Backend for Local LLMs",
+        "url": "/power-local-llm/searxng-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dreamserver-review",
+        "title": "DreamServer Review: One-Command Local AI Server Stack",
+        "url": "/power-local-llm/dreamserver-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "farfalle-review",
+        "title": "Farfalle Review: A Self-Hosted, Open-Source AI Search Engine",
+        "url": "/power-local-llm/farfalle-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "onyx-review",
+        "title": "Onyx Review: Self-Hosted Enterprise Search and RAG (Formerly Danswer)",
+        "url": "/power-local-llm/onyx-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 7,
+    "capped": false
+  },
   "Local Operator": {
     "articles": [
       {
@@ -10248,9 +10310,17 @@
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "searxng-review",
+        "title": "SearXNG Review: Self-Hosted Search Backend for Local LLMs",
+        "url": "/power-local-llm/searxng-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "FunClip": {
