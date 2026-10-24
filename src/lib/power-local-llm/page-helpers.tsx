@@ -1033,6 +1033,7 @@ const HUB_THEMES: Array<{
       'obscurify-review',
       'hermes-agent-review',
       'msty-go-review',
+      'zeno-review',
       'multica-review',
       'metagpt-review',
       'nvidia-g-assist-review',
