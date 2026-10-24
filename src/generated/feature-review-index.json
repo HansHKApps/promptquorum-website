@@ -1069,6 +1069,11 @@
     "urlSlug": "ensu-review",
     "url": "/power-local-llm/ensu-review"
   },
+  "kernelai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "kernelai-review",
+    "url": "/power-local-llm/kernelai-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",

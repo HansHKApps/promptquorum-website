@@ -59,6 +59,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -70,14 +78,6 @@
         "slug": "local-operator-review",
         "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
         "url": "/power-local-llm/local-operator-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -183,6 +183,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -244,14 +252,6 @@
         "url": "/power-local-llm/candle-vllm-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dynamo-review",
-        "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
-        "url": "/power-local-llm/dynamo-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
     "totalCount": 94,
@@ -265,6 +265,14 @@
         "title": "LocalAI Explained: The Self-Hosted OpenAI API Alternative (2026)",
         "url": "/power-local-llm/localai-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -297,14 +305,6 @@
         "title": "Langchain-Chatchat Review: Self-Hosted RAG and Agent Framework",
         "url": "/power-local-llm/langchain-chatchat-review",
         "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
         "tier": "about"
       },
       {
@@ -5940,7 +5940,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 46,
+    "totalCount": 47,
     "capped": true
   },
   "Pocket AI": {
@@ -6609,6 +6609,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kernelai-review",
+        "title": "KernelAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/kernelai-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "localmindai-review",
         "title": "LocalMindAI Review: On-Device AI Companion for iPhone",
         "url": "/power-local-llm/localmindai-review",
@@ -6632,7 +6640,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Arbiter": {
@@ -9356,7 +9364,7 @@
         "slug": "litellm-review",
         "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
         "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -9559,6 +9567,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "plano-review",
         "title": "Plano Review: The Envoy-Based AI Proxy for Agentic Apps",
         "url": "/power-local-llm/plano-review",
@@ -9566,7 +9582,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Baserow": {
@@ -10309,6 +10325,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "KernelAI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "kernelai-review",
+        "title": "KernelAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/kernelai-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "candle-vllm": {
     "articles": [
       {
@@ -10459,6 +10489,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -10466,7 +10504,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "cognee": {
@@ -11511,6 +11549,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11524,17 +11570,9 @@
         "url": "/power-local-llm/local-operator-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "murmur-review",
-        "title": "Murmur Review: On-Device AI Music Generator for iPhone",
-        "url": "/power-local-llm/murmur-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 220,
+    "totalCount": 221,
     "capped": true
   },
   "Qdrant": {
