@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'What do I need to run Kruvo?',
         answer: 'A 64-bit Windows 10 22H2 or Windows 11 PC, or a Mac on macOS 13.5 or newer for full functionality, plus a model: a supported provider API key or Ollama on suitable hardware. Model costs are separate.',
         bullets: [
-          'Approval cards show the tool, target and reason; hard-floor actions always need a human decision.',
+          'Per the maker, approval cards show the tool, target and reason, and hard-floor actions need a human decision.',
           'Computer use (supervised Chrome or Edge, authorised Windows apps) is off by default and needs consent per site or app.',
           'Work mode runs in a folder with tools; Chat mode answers without them.',
           'Scheduled local automations and Telegram or Slack requests work only while Kruvo is running.'
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can Kruvo act without asking me?',
-            a: 'Hard-floor actions always require human approval, and computer actions classed as sensitive need approval in the desktop app in every mode. Other tools follow the permission policy and standing rules you set.'
+            a: 'Per the maker, hard-floor actions require human approval, and computer actions classed as sensitive need approval in the desktop app in every mode. Other tools follow the permission policy and standing rules you set.'
           },
           {
             q: 'Why do the version numbers differ?',
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Was brauche ich, um Kruvo auszuführen?',
         answer: 'Einen 64-Bit-PC mit Windows 10 22H2 oder Windows 11 oder einen Mac mit macOS 13.5 oder neuer für den vollen Funktionsumfang sowie ein Modell: einen unterstützten API-Schlüssel eines Anbieters oder Ollama auf geeigneter Hardware. Modellkosten fallen separat an.',
         bullets: [
-          'Freigabekarten zeigen Werkzeug, Ziel und Grund; Aktionen an der „Hard Floor“ erfordern immer eine menschliche Entscheidung.',
+          'Laut Hersteller zeigen Freigabekarten Werkzeug, Ziel und Grund, und Aktionen an der „Hard Floor“ erfordern eine menschliche Entscheidung.',
           'Computernutzung (beaufsichtigtes Chrome oder Edge, autorisierte Windows-Apps) ist standardmäßig aus und braucht eine Zustimmung je Website oder App.',
           'Der Work-Modus arbeitet in einem Ordner mit Werkzeugen; der Chat-Modus antwortet ohne sie.',
           'Geplante lokale Automatisierungen und Anfragen über Telegram oder Slack funktionieren nur, solange Kruvo läuft.'
@@ -762,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann Kruvo handeln, ohne zu fragen?',
-            a: 'Aktionen an der „Hard Floor“ erfordern immer eine menschliche Freigabe, und als sensibel eingestufte Computeraktionen brauchen in jedem Modus eine Freigabe in der Desktop-App. Andere Werkzeuge folgen der von Ihnen gesetzten Berechtigungsrichtlinie und den Standardregeln.'
+            a: 'Laut Hersteller erfordern Aktionen an der „Hard Floor“ eine menschliche Freigabe, und als sensibel eingestufte Computeraktionen brauchen in jedem Modus eine Freigabe in der Desktop-App. Andere Werkzeuge folgen der von Ihnen gesetzten Berechtigungsrichtlinie und den Standardregeln.'
           },
           {
             q: 'Warum weichen die Versionsnummern voneinander ab?',
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿Qué necesito para usar Kruvo?',
         answer: 'Un PC de 64 bits con Windows 10 22H2 o Windows 11, o un Mac con macOS 13.5 o posterior para todas las funciones, además de un modelo: una clave API de un proveedor compatible u Ollama en un equipo adecuado. Los costes del modelo van aparte.',
         bullets: [
-          'Las tarjetas de aprobación muestran la herramienta, el destino y el motivo; las acciones de «hard floor» siempre requieren una decisión humana.',
+          'Según el fabricante, las tarjetas de aprobación muestran la herramienta, el destino y el motivo, y las acciones de «hard floor» requieren una decisión humana.',
           'El uso del ordenador (Chrome o Edge supervisado, aplicaciones de Windows autorizadas) está desactivado por defecto y pide consentimiento por sitio o aplicación.',
           'El modo Work se ejecuta en una carpeta con herramientas; el modo Chat responde sin ellas.',
           'Las automatizaciones locales programadas y las peticiones por Telegram o Slack solo funcionan mientras Kruvo está en ejecución.'
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede Kruvo actuar sin preguntarme?',
-            a: 'Las acciones de «hard floor» siempre requieren aprobación humana, y las acciones de ordenador clasificadas como sensibles necesitan aprobación en la aplicación de escritorio en cualquier modo. Las demás herramientas siguen la política de permisos y las reglas permanentes que definas.'
+            a: 'Según el fabricante, las acciones de «hard floor» requieren aprobación humana, y las acciones de ordenador clasificadas como sensibles necesitan aprobación en la aplicación de escritorio en cualquier modo. Las demás herramientas siguen la política de permisos y las reglas permanentes que definas.'
           },
           {
             q: '¿Por qué difieren los números de versión?',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Que faut-il pour utiliser Kruvo ?',
         answer: 'Un PC 64 bits sous Windows 10 22H2 ou Windows 11, ou un Mac sous macOS 13.5 ou plus récent pour toutes les fonctions, plus un modèle : une clé API de fournisseur prise en charge ou Ollama sur un matériel adapté. Les coûts du modèle sont à part.',
         bullets: [
-          'Les cartes d’approbation indiquent l’outil, la cible et la raison ; les actions « hard floor » exigent toujours une décision humaine.',
+          'Selon l’éditeur, les cartes d’approbation indiquent l’outil, la cible et la raison, et les actions « hard floor » exigent une décision humaine.',
           'L’usage de l’ordinateur (Chrome ou Edge supervisé, applications Windows autorisées) est désactivé par défaut et demande un accord par site ou application.',
           'Le mode Work s’exécute dans un dossier avec des outils ; le mode Chat répond sans eux.',
           'Les automatisations locales planifiées et les demandes par Telegram ou Slack ne fonctionnent que si Kruvo est lancé.'
@@ -1484,7 +1484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kruvo peut-il agir sans me demander ?',
-            a: 'Les actions « hard floor » exigent toujours une approbation humaine, et les actions informatiques classées sensibles demandent une approbation dans l’application de bureau, quel que soit le mode. Les autres outils suivent la politique d’autorisations et les règles permanentes que vous définissez.'
+            a: 'Selon l’éditeur, les actions « hard floor » exigent une approbation humaine, et les actions informatiques classées sensibles demandent une approbation dans l’application de bureau, quel que soit le mode. Les autres outils suivent la politique d’autorisations et les règles permanentes que vous définissez.'
           },
           {
             q: 'Pourquoi les numéros de version diffèrent-ils ?',
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Kruvoを動かすには何が必要ですか？',
         answer: '64ビット版のWindows 10 22H2またはWindows 11、もしくは全機能を使うならmacOS 13.5以降のMacに加えて、モデルが必要です。対応するモデル提供元のAPIキー、または適切なハードウェア上のOllamaを使います。モデルの利用料は別です。',
         bullets: [
-          '承認カードにツール・対象・理由が表示され、ハードフロア操作は常に人間の判断が必要です。',
+          '提供元によると、承認カードにツール・対象・理由が表示され、ハードフロア操作には人間の判断が必要です。',
           'コンピューター操作（監督付きのChromeまたはEdge、許可したWindowsアプリ）は初期状態でオフで、サイトやアプリごとの同意が必要です。',
           'Workモードはツール付きでフォルダ内を作業し、Chatモードはツールなしで回答します。',
           '予定されたローカル自動化とTelegramまたはSlack経由の依頼は、Kruvoが起動している間だけ動きます。'
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kruvoは確認なしに操作できますか？',
-            a: 'ハードフロア操作は常に人間の承認が必要で、機微と分類されたコンピューター操作は、どのモードでもデスクトップアプリでの承認が必要です。それ以外のツールは、設定した権限ポリシーと常設ルールに従います。'
+            a: '提供元によると、ハードフロア操作は人間の承認が必要で、機微と分類されたコンピューター操作は、どのモードでもデスクトップアプリでの承認が必要です。それ以外のツールは、設定した権限ポリシーと常設ルールに従います。'
           },
           {
             q: 'バージョン番号が食い違うのはなぜですか？',
@@ -1918,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'O que preciso para usar o Kruvo?',
         answer: 'Um PC de 64 bits com Windows 10 22H2 ou Windows 11, ou um Mac com macOS 13.5 ou mais recente para todas as funções, além de um modelo: uma chave de API de um provedor compatível ou o Ollama em hardware adequado. Os custos do modelo são à parte.',
         bullets: [
-          'Os cartões de aprovação mostram a ferramenta, o destino e o motivo; ações de “hard floor” sempre exigem uma decisão humana.',
+          'Segundo o fabricante, os cartões de aprovação mostram a ferramenta, o destino e o motivo, e ações de “hard floor” exigem uma decisão humana.',
           'O uso do computador (Chrome ou Edge supervisionado, apps do Windows autorizados) vem desativado e pede consentimento por site ou app.',
           'O modo Work roda em uma pasta com ferramentas; o modo Chat responde sem elas.',
           'Automações locais agendadas e pedidos por Telegram ou Slack só funcionam enquanto o Kruvo estiver em execução.'
@@ -2206,7 +2206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Kruvo pode agir sem me perguntar?',
-            a: 'Ações de “hard floor” sempre exigem aprovação humana, e ações de computador classificadas como sensíveis precisam de aprovação no app de desktop em qualquer modo. As demais ferramentas seguem a política de permissões e as regras permanentes que você definir.'
+            a: 'Segundo o fabricante, ações de “hard floor” exigem aprovação humana, e ações de computador classificadas como sensíveis precisam de aprovação no app de desktop em qualquer modo. As demais ferramentas seguem a política de permissões e as regras permanentes que você definir.'
           },
           {
             q: 'Por que os números de versão diferem?',
@@ -2279,7 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'ماذا أحتاج لتشغيل Kruvo؟',
         answer: 'جهاز Windows 10 22H2 أو Windows 11 بنظام 64 بت، أو جهاز Mac بنظام macOS 13.5 أو أحدث للحصول على كل الوظائف، إضافةً إلى نموذج: مفتاح API من مزوّد مدعوم أو Ollama على عتاد مناسب. تكاليف النموذج منفصلة.',
         bullets: [
-          'تعرض بطاقات الموافقة الأداة والهدف والسبب؛ وإجراءات «hard floor» تتطلب دائماً قراراً بشرياً.',
+          'بحسب الجهة المطوّرة، تعرض بطاقات الموافقة الأداة والهدف والسبب، وإجراءات «hard floor» تتطلب قراراً بشرياً.',
           'استخدام الحاسوب (Chrome أو Edge تحت الإشراف، وتطبيقات Windows المصرّح بها) متوقف افتراضياً ويتطلب موافقة لكل موقع أو تطبيق.',
           'يعمل وضع Work داخل مجلد مع الأدوات، بينما يجيب وضع Chat دونها.',
           'الأتمتة المحلية المجدولة وطلبات Telegram أو Slack تعمل فقط أثناء تشغيل Kruvo.'
@@ -2567,7 +2567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يستطيع Kruvo التصرف دون أن يسألني؟',
-            a: 'إجراءات «hard floor» تتطلب دائماً موافقة بشرية، والإجراءات الحاسوبية المصنّفة حساسة تحتاج موافقة في تطبيق سطح المكتب في كل وضع. أما الأدوات الأخرى فتتبع سياسة الصلاحيات والقواعد الدائمة التي تضعها.'
+            a: 'بحسب الجهة المطوّرة، إجراءات «hard floor» تتطلب موافقة بشرية، والإجراءات الحاسوبية المصنّفة حساسة تحتاج موافقة في تطبيق سطح المكتب في كل وضع. أما الأدوات الأخرى فتتبع سياسة الصلاحيات والقواعد الدائمة التي تضعها.'
           },
           {
             q: 'لماذا تختلف أرقام الإصدارات؟',
@@ -2640,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '运行 Kruvo 需要什么？',
         answer: '一台 64 位 Windows 10 22H2 或 Windows 11 电脑，或运行 macOS 13.5 及以上版本的 Mac（以获得完整功能），再加上一个模型：受支持的服务商 API 密钥，或在合适硬件上运行的 Ollama。模型费用另计。',
         bullets: [
-          '审批卡片会显示工具、目标和原因；“硬底线”操作始终需要人工决定。',
+          '据厂商介绍，审批卡片会显示工具、目标和原因，“硬底线”操作需要人工决定。',
           '电脑操作（受监督的 Chrome 或 Edge、已授权的 Windows 应用）默认关闭，需按网站或应用逐一同意。',
           'Work 模式在文件夹中配合工具运行；Chat 模式不使用工具直接回答。',
           '定时本地自动化以及通过 Telegram 或 Slack 发来的请求，仅在 Kruvo 运行期间有效。'
@@ -2928,7 +2928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kruvo 会不经询问就行动吗？',
-            a: '硬底线操作始终需要人工批准，被归类为敏感的电脑操作在任何模式下都需要在桌面应用中批准。其他工具遵循你设置的权限策略和常设规则。'
+            a: '据厂商介绍，硬底线操作需要人工批准，被归类为敏感的电脑操作在任何模式下都需要在桌面应用中批准。其他工具遵循你设置的权限策略和常设规则。'
           },
           {
             q: '为什么版本号不一致？',
@@ -3001,7 +3001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Kruvo를 실행하려면 무엇이 필요합니까?',
         answer: '64비트 Windows 10 22H2 또는 Windows 11 PC, 또는 전체 기능을 쓰려면 macOS 13.5 이상의 Mac과 모델이 필요합니다. 지원되는 제공업체 API 키 또는 적합한 하드웨어에서 실행하는 Ollama를 사용합니다. 모델 사용 비용은 별도입니다.',
         bullets: [
-          '승인 카드에 도구·대상·이유가 표시되며, 하드 플로어 작업은 항상 사람의 결정이 필요합니다.',
+          '제작사에 따르면 승인 카드에 도구·대상·이유가 표시되며, 하드 플로어 작업에는 사람의 결정이 필요합니다.',
           '컴퓨터 사용(감독 하의 Chrome 또는 Edge, 허용한 Windows 앱)은 기본적으로 꺼져 있으며 사이트나 앱마다 동의가 필요합니다.',
           'Work 모드는 도구와 함께 폴더에서 실행되고, Chat 모드는 도구 없이 답합니다.',
           '예약된 로컬 자동화와 Telegram 또는 Slack 요청은 Kruvo가 실행 중일 때만 동작합니다.'
@@ -3289,7 +3289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kruvo가 묻지 않고 실행할 수 있습니까?',
-            a: '하드 플로어 작업은 항상 사람의 승인이 필요하고, 민감한 것으로 분류된 컴퓨터 작업은 어떤 모드에서든 데스크톱 앱에서 승인해야 합니다. 그 밖의 도구는 사용자가 설정한 권한 정책과 상시 규칙을 따릅니다.'
+            a: '제작사에 따르면 하드 플로어 작업은 사람의 승인이 필요하고, 민감한 것으로 분류된 컴퓨터 작업은 어떤 모드에서든 데스크톱 앱에서 승인해야 합니다. 그 밖의 도구는 사용자가 설정한 권한 정책과 상시 규칙을 따릅니다.'
           },
           {
             q: '버전 번호가 서로 다른 이유는 무엇입니까?',
