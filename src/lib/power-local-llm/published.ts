@@ -566,6 +566,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'strata-review',
   // SpeechBrain review (Voice & Audio, speech toolkit) — 2026-10-23
   'speechbrain-review',
+  // OpenClient review (Chat apps, Apple client for Ollama/LiteLLM) — 2026-10-24
+  'openclient-review',
   // LibreDB Studio review (Coding Assistants, SQL editor with optional local AI) — 2026-10-23
   'libredb-studio-review',
   // OpenRAG review (RAG & Document Chat) — 2026-10-23
