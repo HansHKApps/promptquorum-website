@@ -224,6 +224,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'openclient':                              'openclient',
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
+  'nekoni':                                  'nekoni',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
