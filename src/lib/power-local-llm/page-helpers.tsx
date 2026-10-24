@@ -890,6 +890,7 @@ const HUB_THEMES: Array<{
       'jan-review',
       'jarvis-mac-review',
       'msty-review',
+      'zero1llm-review',
       'open-felix-review',
       'openclient-review',
       'osaurus-ai-review',

@@ -929,6 +929,11 @@
     "urlSlug": "openclient-review",
     "url": "/power-local-llm/openclient-review"
   },
+  "zero1llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "zero1llm-review",
+    "url": "/power-local-llm/zero1llm-review"
+  },
   "mlx-audio": {
     "cluster": "power-local-llm",
     "urlSlug": "mlx-audio-review",

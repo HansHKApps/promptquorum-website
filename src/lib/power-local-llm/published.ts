@@ -564,6 +564,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'surfsense-review',
   // Strata review (Run & Serve, inference engine) — 2026-10-23
   'strata-review',
+  // Zero1LLM review (general chat client, desktop) — 2026-10-24
+  'zero1llm-review',
   // SpeechBrain review (Voice & Audio, speech toolkit) — 2026-10-23
   'speechbrain-review',
   // OpenClient review (Chat apps, Apple client for Ollama/LiteLLM) — 2026-10-24
