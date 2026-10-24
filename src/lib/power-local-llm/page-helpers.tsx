@@ -1077,6 +1077,7 @@ const HUB_THEMES: Array<{
       'risuai-review',
       'swerve-ai-review',
       'hiwaifu-review',
+      'open-llm-vtuber-review',
       'asiden-review',
     ],
   },
