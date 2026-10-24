@@ -974,6 +974,11 @@
     "urlSlug": "fluidvoice-review",
     "url": "/power-local-llm/fluidvoice-review"
   },
+  "openwhispr": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openwhispr-review",
+    "url": "/power-local-llm/openwhispr-review"
+  },
   "localmcp": {
     "cluster": "power-local-llm",
     "urlSlug": "localmcp-review",
@@ -1008,6 +1013,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "open-llm-vtuber-review",
     "url": "/power-local-llm/open-llm-vtuber-review"
+  },
+  "presenton": {
+    "cluster": "power-local-llm",
+    "urlSlug": "presenton-review",
+    "url": "/power-local-llm/presenton-review"
   },
   "buzz-captions": {
     "cluster": "power-local-llm",
