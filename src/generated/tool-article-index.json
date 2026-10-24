@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 314,
+    "totalCount": 315,
     "capped": true
   },
   "llama.cpp": {
@@ -12157,6 +12157,20 @@
         "title": "PixlStash Review: Self-Hosted Image Library Manager with Local AI Tagging",
         "url": "/power-local-llm/pixlstash-review",
         "dateModified": "2026-10-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PhotoPrism": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "photoprism-review",
+        "title": "PhotoPrism Review: Self-Hosted AI Photo Library for Your Server",
+        "url": "/power-local-llm/photoprism-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],

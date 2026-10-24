@@ -403,6 +403,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'mlxhub-review':                           'mlxhub-review',
   'local-ai-chat-pocket-review':             'local-ai-chat-pocket-review',
   'pixlstash-review':                        'pixlstash-review',
+  'photoprism-review':                       'photoprism-review',
   'whisper-notes-review':                   'whisper-notes-review',
   'transcriptionsuite-review':              'transcriptionsuite-review',
   'parrot-review':                          'parrot-review',
