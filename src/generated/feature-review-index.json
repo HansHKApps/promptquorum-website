@@ -1004,6 +1004,41 @@
     "urlSlug": "buzz-captions-review",
     "url": "/power-local-llm/buzz-captions-review"
   },
+  "logseq": {
+    "cluster": "power-local-llm",
+    "urlSlug": "logseq-review",
+    "url": "/power-local-llm/logseq-review"
+  },
+  "searxng": {
+    "cluster": "power-local-llm",
+    "urlSlug": "searxng-review",
+    "url": "/power-local-llm/searxng-review"
+  },
+  "linkwarden": {
+    "cluster": "power-local-llm",
+    "urlSlug": "linkwarden-review",
+    "url": "/power-local-llm/linkwarden-review"
+  },
+  "tolaria": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tolaria-review",
+    "url": "/power-local-llm/tolaria-review"
+  },
+  "subtitle-edit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "subtitle-edit-review",
+    "url": "/power-local-llm/subtitle-edit-review"
+  },
+  "home-assistant-assist": {
+    "cluster": "power-local-llm",
+    "urlSlug": "home-assistant-assist-review",
+    "url": "/power-local-llm/home-assistant-assist-review"
+  },
+  "ente-photos": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ente-photos-review",
+    "url": "/power-local-llm/ente-photos-review"
+  },
   "local-operator": {
     "cluster": "power-local-llm",
     "urlSlug": "local-operator-review",
