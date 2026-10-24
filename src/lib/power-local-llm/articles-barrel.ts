@@ -71,6 +71,7 @@ import { article as a_openclient_review } from './articles/openclient-review'
 import { article as a_speechbrain_review } from './articles/speechbrain-review'
 import { article as a_libredb_studio_review } from './articles/libredb-studio-review'
 import { article as a_openrag_review } from './articles/openrag-review'
+import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_obscurify_review } from './articles/obscurify-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
@@ -689,6 +690,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'speechbrain-review':                            a_speechbrain_review,
   'libredb-studio-review':                         a_libredb_studio_review,
   'openrag-review':                                a_openrag_review,
+  'localmindai-review':                            a_localmindai_review,
   'caelum-review':                                 a_caelum_review,
   'obscurify-review':                              a_obscurify_review,
   'anyllm-review':                                 a_anyllm_review,
