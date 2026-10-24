@@ -568,6 +568,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'strata-review',
   // Coil review (Autonomous agents, Mac agent harness) — 2026-10-24
   'coil-review',
+  // Kruvo review (Autonomous agents, desktop AI coworker for Windows and macOS) — 2026-10-24
+  'kruvo-review',
   // LocalGhost review (personal assistants, self-hosted) — 2026-10-24
   'localghost-review',
   // LLM Studio Go review (Mobile & Edge LLMs, iPhone/iPad) — 2026-10-24
@@ -590,6 +592,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localmindai-review',
   // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
   'murmur-review',
+  'asiden-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
@@ -598,10 +601,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'lm-mini-review',
   // CompactifAI APP review (Mobile & Edge LLMs) — 2026-10-24
   'compactifai-app-review',
+  'ensu-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',
   // Frankly AI review (Mobile & Edge LLMs) — 2026-10-24
   'frankly-ai-review',
+  'haplo-ai-review',
 
   // Genva review (Image & Video Generation) — 2026-10-24
   'genva-review',
