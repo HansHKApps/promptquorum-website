@@ -931,6 +931,7 @@ const HUB_THEMES: Array<{
       'anythingllm-review',
       'onyx-review',
       'vane-review',
+      'searxng-review',
       'best-ai-hr-software-enterprise',
       'best-ai-marketing-software-enterprise',
       'h2ogpt-review',

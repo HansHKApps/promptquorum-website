@@ -229,6 +229,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'murmur':                                  'murmur',
   'buzz-captions':                           'buzz-captions',
   'logseq':                                  'logseq',
+  'searxng':                                 'searxng',
   'local-operator':                          'local-operator',
   'nekoni':                                  'nekoni',
   'compactifai-app':                         'compactifai-app',
