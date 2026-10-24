@@ -944,6 +944,11 @@
     "urlSlug": "speechbrain-review",
     "url": "/power-local-llm/speechbrain-review"
   },
+  "localmcp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localmcp-review",
+    "url": "/power-local-llm/localmcp-review"
+  },
   "libredb-studio": {
     "cluster": "power-local-llm",
     "urlSlug": "libredb-studio-review",
