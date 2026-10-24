@@ -228,6 +228,7 @@ import { app as app_firecrawl } from './apps/firecrawl'
 import { app as app_blinko } from './apps/blinko'
 import { app as app_surfsense } from './apps/surfsense'
 import { app as app_strata } from './apps/strata'
+import { app as app_llm_studio_go } from './apps/llm-studio-go'
 import { app as app_openclient } from './apps/openclient'
 import { app as app_zero1llm } from './apps/zero1llm'
 import { app as app_mlx_audio } from './apps/mlx-audio'
@@ -478,6 +479,7 @@ export const localAiApps: ToolRecord[] = [
   app_blinko,
   app_surfsense,
   app_strata,
+  app_llm_studio_go,
   app_openclient,
   app_zero1llm,
   app_mlx_audio,

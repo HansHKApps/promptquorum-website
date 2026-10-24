@@ -1111,6 +1111,7 @@ const HUB_THEMES: Array<{
       'pcai-photo-retouch-review',
       'honey-llm-review',
       'secret-ai-review',
+      'llm-studio-go-review',
       'oscilla-review',
       'tina-review',
       'mlxhub-review',

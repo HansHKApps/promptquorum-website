@@ -68,6 +68,7 @@ import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
 import { article as a_strata_review } from './articles/strata-review'
+import { article as a_llm_studio_go_review } from './articles/llm-studio-go-review'
 import { article as a_openclient_review } from './articles/openclient-review'
 import { article as a_zero1llm_review } from './articles/zero1llm-review'
 import { article as a_speechbrain_review } from './articles/speechbrain-review'
@@ -692,6 +693,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'castmates-review':                              a_castmates_review,
   'surfsense-review':                              a_surfsense_review,
   'strata-review':                                 a_strata_review,
+  'llm-studio-go-review':                          a_llm_studio_go_review,
   'openclient-review':                             a_openclient_review,
   'zero1llm-review':                               a_zero1llm_review,
   'speechbrain-review':                            a_speechbrain_review,

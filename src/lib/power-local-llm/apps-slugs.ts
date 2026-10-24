@@ -209,6 +209,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'obscurify':                               'obscurify',
   'genva':                                   'genva',
   'strata':                                  'strata',
+  'llm-studio-go':                           'llm-studio-go',
   'zero1llm':                                'zero1llm',
   'mlx-audio':                               'mlx-audio',
   'speechbrain':                             'speechbrain',

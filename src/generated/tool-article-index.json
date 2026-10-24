@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 149,
+    "totalCount": 150,
     "capped": true
   },
   "Atomic Chat": {
@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 41,
+    "totalCount": 42,
     "capped": true
   },
   "Pocket AI": {
@@ -6016,7 +6016,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "Google AI Edge Gallery": {
@@ -9609,6 +9609,20 @@
         "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
         "url": "/power-local-llm/strata-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "LLM Studio Go": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "llm-studio-go-review",
+        "title": "LLM Studio Go Review: Local AI Chat, Voice and Music on iPhone and iPad",
+        "url": "/power-local-llm/llm-studio-go-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
