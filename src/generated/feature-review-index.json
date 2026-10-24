@@ -989,6 +989,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "local-operator": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-operator-review",
+    "url": "/power-local-llm/local-operator-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
