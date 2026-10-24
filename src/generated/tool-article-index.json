@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 305,
+    "totalCount": 306,
     "capped": true
   },
   "llama.cpp": {
@@ -4717,6 +4717,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "coil-review",
+        "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
+        "url": "/power-local-llm/coil-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "intentkit-review",
         "title": "IntentKit Review: Self-Hosted Agent Cluster With Built-In APIs",
         "url": "/power-local-llm/intentkit-review",
@@ -4740,7 +4748,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "GPT Engineer": {
@@ -8033,6 +8041,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "coil-review",
+        "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
+        "url": "/power-local-llm/coil-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "little-coder-review",
         "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
         "url": "/power-local-llm/little-coder-review",
@@ -8040,7 +8056,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Zed": {
@@ -9633,6 +9649,20 @@
         "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
         "url": "/power-local-llm/strata-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Coil": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "coil-review",
+        "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
+        "url": "/power-local-llm/coil-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
