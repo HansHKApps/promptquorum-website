@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   license: 'MIT', // repo-root LICENSE file; a separate enterprise-license carve-out applies only to the enterprise/ subdirectory, verified 2026-09-14
   price: 'freemium',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // gateway/proxy routing calls to external LLM provider APIs, not a model runtime itself — no GPU requirement, verified 2026-09-14
-  stars: 58663,
+  stars: 61954,
   addedDate: '2026-09-14',
   status: 'listed',
   uses: ['build', 'serve'],
@@ -33,10 +33,10 @@ export const app: ToolRecord = {
     ar: 'بوابة واحدة متوافقة مع OpenAI لأكثر من 100 واجهة برمجة لمزوّدي نماذج اللغة، مع التوجيه وتتبع التكاليف',
     ko: '100개 이상의 LLM 제공업체 API를 위한 단일 OpenAI 호환 게이트웨이, 라우팅 및 비용 추적 포함',
   },
-  pqReview: { date: '2026-09-20', version: 'v1.101.0', versionSourceUrl: 'https://github.com/BerriAI/litellm/releases/tag/v1.101.0' },
+  pqReview: { date: '2026-10-24', version: 'v1.106.3', versionSourceUrl: 'https://github.com/BerriAI/litellm/releases/tag/v1.106.3' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { openaiApi: true, localModels: true, fallback: true },
-  lastVerifiedDate: '2026-09-14',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastVerifiedDate: '2026-10-24',
+  lastUpstreamUpdate: '2026-10-24', // GitHub API (latest release v1.106.3 and last push, both 2026-10-24), read 2026-10-24
   lastUpstreamUpdateSource: 'https://github.com/BerriAI/litellm',
 }

@@ -1,21 +1,35 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { starsFor } from '@/lib/power-local-llm/app-facts'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
+
+// Star counts come from the directory tile (GEO_WRITING_GUIDELINES.md Rule 49) -- never type them into a string.
+const st = {
+  en: starsFor('en'), de: starsFor('de'), fr: starsFor('fr'), ja: starsFor('ja'), zh: starsFor('zh'),
+  es: starsFor('es'), pt: starsFor('pt'), ar: starsFor('ar'), ko: starsFor('ko'),
+}
+
+// Last upstream update comes from the directory tile (App Maintenance Recency rule); rendered via formatDisplayDate.
+const lastUpdate = (lang: Language) =>
+  formatDisplayDate(localAiApps.find((a) => a.slug === 'litellm')?.lastUpstreamUpdate, lang)
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-en.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: 'Developers and platform teams routing application traffic across multiple LLM provider APIs through one interface',
     primaryTerm: 'LiteLLM',
     title: 'LiteLLM Review: One Gateway for 100+ LLM Provider APIs',
-    seoTitle: 'LiteLLM Review: 100+ LLM Provider API Gateway',
+    seoTitle: 'LiteLLM Review: Gateway for 100+ LLM APIs and Pricing',
     intro: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), docs at [docs.litellm.ai](https://docs.litellm.ai)) is an open-source LLM gateway that gives your code one OpenAI-compatible interface for calling 100+ different provider APIs — OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Ollama, and many others — instead of writing separate integration code for each. It ships two ways: an importable Python SDK (`pip install litellm`) and a self-hosted proxy server with an admin dashboard, deployable via Docker, Helm, AWS ECS Fargate, or Google Cloud Run. This review covers what LiteLLM actually does, how to install and run both modes, its licensing (which is not simply "MIT" across the whole repository), and where it fits next to vLLM, LocalAI, and hosted routing services like OpenRouter.',
-    metaDescription: 'LiteLLM is an open-source LLM gateway (MIT, with a separate enterprise carve-out) unifying 100+ provider APIs behind one OpenAI-compatible interface. SDK and proxy setup covered for 2026.',
+    metaDescription: 'LiteLLM is an open-source LLM gateway (MIT core, separate enterprise license) that unifies 100+ provider APIs behind one OpenAI-compatible interface.',
     readTime: '12 min read',
     targetKeywords: [
       'LiteLLM review',
@@ -24,21 +38,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'self-hosted LLM gateway',
       'LiteLLM docker setup',
     ],
-    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) is an open-source gateway that lets your code call 100+ LLM provider APIs through one OpenAI-compatible interface, instead of writing separate integration code per provider.** It ships as a Python SDK (`pip install litellm`) for direct use inside an application, and as a self-hosted proxy server with a virtual-key admin dashboard for teams that want centralized routing, cost tracking, and rate limiting across multiple apps and users. The core repository is MIT-licensed per its own LICENSE file, with a separate enterprise-license carve-out that applies only to the `enterprise/` subdirectory — verified directly against the repository\'s LICENSE file for this review. As of this review, GitHub reports roughly 58,663 stars and 11,415 forks.',
+    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) is an open-source gateway that lets your code call 100+ LLM provider APIs through one OpenAI-compatible interface, instead of writing separate integration code per provider.**',
     quickAnswerTop: {
       en: {
         question: 'What is LiteLLM and do I need a GPU to run it?',
         answer: 'LiteLLM is an open-source gateway that unifies 100+ LLM provider APIs behind one OpenAI-compatible interface, with request routing, fallback, cost tracking, and rate limiting. No — LiteLLM does not need a GPU. It is a router that forwards requests to external provider APIs (or to a local runtime like Ollama); it does not run model weights itself, so it works fine on CPU-only hardware.',
         bullets: [
-          'Open source on GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), roughly 58,663 stars and 11,415 forks as of this review (2026-09)',
+          'Open source on GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), more than ' + st.en('litellm', 'bare') + ' stars as of this review',
           'Core repository license: MIT, per the repository\'s own LICENSE file — a separate enterprise-license carve-out applies only to the `enterprise/` subdirectory',
           'Two ways to use it: the `litellm` Python SDK, and a self-hosted proxy server (`litellm[proxy]`) with an admin UI at `/ui`',
           'Routes calls to 100+ providers (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama, and many more) behind one OpenAI-compatible request/response format',
           'No GPU requirement — it is a request router, not a model-inference engine; production proxy deployments need PostgreSQL and Redis, not a GPU',
           'Deployable via Docker, Helm charts, AWS ECS Fargate (official Terraform module), Google Cloud Run (official Terraform module), or one-click Render/Railway buttons',
-          'Latest tagged release: v1.101.0',
+          'Latest tagged release: v1.106.3; last upstream update: ' + lastUpdate('en'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -64,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: "If your app needs to talk to OpenAI today and Anthropic or a local Ollama model tomorrow, normally you'd rewrite the integration code for each one. LiteLLM sits in between and translates every provider's API into the same OpenAI-style format, so your code only has to learn one format, and a proxy version adds a dashboard for tracking who's spending what." },
         ],
         items: [
-          'Open source on [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); roughly 58,663 stars and 11,415 forks as of this review',
+          'Open source on [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); more than ' + st.en('litellm', 'bare') + ' stars as of this review',
           'Core repository is MIT-licensed per its own LICENSE file; a separate license applies only to the `enterprise/` subdirectory, verified directly against the LICENSE file for this review',
           'Two products: the **`litellm` Python SDK** (`pip install litellm`) for calling providers directly from code, and the **LiteLLM Proxy Server** (`pip install \'litellm[proxy]\'`, or Docker) for a self-hosted gateway with an admin dashboard',
           'Unifies 100+ provider APIs (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama, and more) behind one request/response format, per the project\'s own README',
@@ -77,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'What Is LiteLLM?',
-        content: '**LiteLLM is a gateway that translates one OpenAI-compatible request format into calls against 100+ different LLM provider APIs.** Its own [GitHub README](https://github.com/BerriAI/litellm) describes it as "the fastest, litest AI Gateway," built with a Rust core and a Python SDK on top — a change from the pure-Python implementation the project shipped in its earlier years. Instead of writing separate client code for OpenAI\'s API, Anthropic\'s API, and a local Ollama server, an application calls LiteLLM once, and LiteLLM forwards the request to whichever provider is configured for that model name.',
+        content: '**LiteLLM is a gateway that translates one OpenAI-compatible request format into calls against 100+ different LLM provider APIs.** Its [GitHub repository description](https://github.com/BerriAI/litellm) calls it "the fastest, litest AI Gateway," built with a Rust core and a Python SDK on top — a change from the pure-Python implementation the project shipped in its earlier years. Instead of writing separate client code for OpenAI\'s API, Anthropic\'s API, and a local Ollama server, an application calls LiteLLM once, and LiteLLM forwards the request to whichever provider is configured for that model name.',
         items: [
           'Core function: accept a request in OpenAI\'s `chat/completions` format (or the target provider\'s native format), forward it to the configured provider, and return a normalized response',
           'Two access modes: the `litellm` Python SDK, imported directly into an application\'s code, and the LiteLLM Proxy Server, a standalone service other applications call over HTTP',
@@ -147,6 +161,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You still pay the provider you route to — LiteLLM does not reduce OpenAI, Anthropic, or Bedrock API pricing, it only unifies and tracks it',
           'Self-hosting the proxy has its own infrastructure cost: a server or container host, plus PostgreSQL and Redis for production use',
           'LiteLLM Enterprise adds SSO, prioritized support, and other business features on top of the same open-source core, per [litellm.ai/enterprise](https://litellm.ai/enterprise) — pricing is not published and requires contacting the company',
+          'Enterprise pricing is annual and sized to gateway request capacity, deployment architecture and support needs, and is never per token, per [litellm.ai/pricing](https://www.litellm.ai/pricing); a 30-day Enterprise trial key is available and quotes come from sales',
+          'Single sign-on is free for up to 5 users from v1.76.0 onward; beyond that an enterprise license is required, per the [LiteLLM SSO documentation](https://docs.litellm.ai/docs/proxy/admin_ui_sso)',
         ],
         note: 'The repository\'s own LICENSE file states that content outside the `enterprise/` directory is MIT-licensed, and that anything inside `enterprise/` (if that directory exists in your checkout) is licensed separately under `enterprise/LICENSE` — verified directly against the repository\'s LICENSE file for this review. This is a narrower, more precise claim than saying the whole project is "just MIT" — check the LICENSE file yourself before redistributing or building a commercial product on any code from the `enterprise/` path specifically.',
       },
@@ -193,8 +209,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. Other Gateways and Frameworks',
-        content: 'As of this review, LiteLLM is the first router/gateway-category tool covered with its own dedicated review in PromptQuorum\'s [Local LLM Software Directory](/directory) — there is no second same-segment (router/gateway) FeatureAppPost to compare it against directly yet. The closest useful comparisons instead come from adjacent tools in the same "Run & Serve" part of the directory, plus one widely known hosted alternative outside the directory.',
+        content: 'LiteLLM belongs to the routers and gateways segment of PromptQuorum\'s [Local LLM Software Directory](/directory), which has three other dedicated reviews, listed first below. The remaining comparisons come from adjacent tools in the same "Run & Serve" part of the directory, plus one widely known hosted alternative outside the directory.',
         items: [
+          '**[Plano](/power-local-llm/plano-review)** — a self-hosted, Envoy-based AI proxy and data plane for agentic apps, with LLM routing, observability and guardrails (Apache-2.0).',
+          '**[ClawRouter](/power-local-llm/clawrouter-review)** — a self-hosted, agent-native LLM router that makes routing decisions locally across frontier and free open-weight models (MIT).',
+          '**[AIClient2API](/power-local-llm/aiclient2api-review)** — a self-hosted proxy that converts Gemini CLI, Codex, Grok, Kiro and Antigravity client protocols into one OpenAI-compatible API (GPL-3.0).',
           '**[vLLM](/power-local-llm/vllm-explained)** — a self-hosted inference engine that actually serves model weights (GPU required); commonly paired with LiteLLM rather than competing with it, with LiteLLM as the routing layer in front of one or more vLLM deployments.',
           '**[LocalAI](/power-local-llm/localai-explained)** — a self-hosted, OpenAI-compatible API server for running open models locally; solves a different problem than LiteLLM (serving vs. routing) but exposes a similar OpenAI-format API, which is a common source of confusion between the two.',
           '**[LangChain](/power-local-llm/langchain-review)** — an application framework for building LLM-powered apps (chains, agents, memory); it can call LiteLLM (or any provider directly) as its model-access layer rather than replacing what LiteLLM does.',
@@ -230,14 +249,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is LiteLLM?', a: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) is an open-source gateway that lets applications call 100+ LLM provider APIs through one OpenAI-compatible interface, available as a Python SDK or a self-hosted proxy server with routing, cost tracking, and rate limiting.' },
-          { q: 'Is LiteLLM free?', a: 'The open-source SDK and Proxy Server are free — you pay only for the underlying provider API calls and your own hosting. A separate paid LiteLLM Enterprise tier adds SSO and dedicated support; its pricing is not published and requires contacting LiteLLM directly.' },
+          { q: 'Is LiteLLM free?', a: 'The open-source SDK and Proxy Server are free — you pay only for the underlying provider API calls and your own hosting. The paid LiteLLM Enterprise tier adds SSO beyond five users, audit logs and 24/7 support with SLAs; it is sold annually through sales, sized to request capacity and never per token. A 30-day trial key is available; no prices are published.' },
+          { q: 'Is LiteLLM suitable for company use?', a: 'Yes. The MIT-licensed core (everything outside `enterprise/`) can be used commercially, and teams run it as a shared internal gateway with virtual keys, budgets and spend tracking. SSO beyond five users, SCIM, audit logs and SLA-backed support need the paid Enterprise license; its page lists SOC 2 Type 2 and ISO 27001 (vendor statement, not verified here). GDPR compliance depends on the providers you route to and your configuration; this is not legal advice, so involve your data-protection officer.' },
           { q: 'What license does LiteLLM use?', a: 'The core repository is MIT-licensed, per its own LICENSE file. A separate license applies only to the `enterprise/` subdirectory, under `enterprise/LICENSE` — verified directly against the repository\'s LICENSE file for this review.' },
           { q: 'Does LiteLLM need a GPU?', a: 'No. LiteLLM is a request router, not a model-inference engine — it forwards calls to providers (cloud APIs or local runtimes like Ollama) rather than running model weights itself, so it runs fine on CPU-only hardware.' },
           { q: 'How do I install LiteLLM?', a: 'For the Python SDK: `pip install litellm`. For the self-hosted proxy: `pip install \'litellm[proxy]\'` then `litellm --model gpt-4o`, or run the Docker image `docker.litellm.ai/berriai/litellm:latest` with a mounted `config.yaml`. See the install table above for Helm, AWS ECS Fargate, and Google Cloud Run options.' },
           { q: 'Does the LiteLLM proxy require a database?', a: 'For production use, yes — PostgreSQL persists virtual keys and spend data, and Redis keeps rate limiting consistent across multiple proxy instances, per LiteLLM\'s own deployment documentation. A quick local test can run without either, but loses those features.' },
           { q: 'Can LiteLLM route to a locally hosted model?', a: 'Yes. The same `config.yaml` `model_list` that points at OpenAI or Anthropic can equally point at a local [Ollama](https://ollama.com) or [vLLM](/power-local-llm/vllm-explained) endpoint, letting one gateway mix cloud and local models.' },
           { q: 'How does LiteLLM compare to OpenRouter?', a: 'Both unify multiple LLM providers behind one interface. LiteLLM is self-hosted infrastructure you run yourself (open-source proxy or SDK); OpenRouter is a third-party hosted routing service you call instead of running your own. Choose based on whether you want zero-ops (OpenRouter) or full control and no per-request markup from a router provider (self-hosted LiteLLM).' },
-          { q: 'Who develops LiteLLM?', a: 'BerriAI, the organization behind the [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm) repository, which reports roughly 58,663 stars and 11,415 forks as of this review.' },
+          { q: 'Who develops LiteLLM?', a: 'BerriAI, the organization behind the [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm) repository, which reports more than ' + st.en('litellm', 'bare') + ' stars as of this review.' },
         ],
       },
       sources: {
@@ -251,6 +271,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'LiteLLM Docker Quick Start', description: 'Official Docker run command, image name, and admin UI login details used in this review\'s install section.' },
           { url: 'https://pypi.org/project/litellm/', title: 'litellm on PyPI', description: 'Official package page showing the current release version and release history for the litellm Python package.' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: 'The project\'s own page describing the paid Enterprise tier (SSO, prioritized features, dedicated support).' },
+          { url: 'https://www.litellm.ai/pricing', title: 'LiteLLM Pricing', description: 'Official pricing page: free self-hosted open-source tier, annual sales-quoted Enterprise pricing (not per token), and a 30-day Enterprise trial key.' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'LiteLLM Admin UI SSO documentation', description: 'Official documentation stating that SSO is free for up to 5 users from v1.76.0 and requires an enterprise license beyond that.' },
         ],
       },
       relatedReading: {
@@ -266,19 +288,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-de.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: 'Entwickler und Plattform-Teams, die Anwendungsverkehr über mehrere LLM-Anbieter-APIs hinweg durch eine einzige Schnittstelle leiten',
     primaryTerm: 'LiteLLM',
     title: 'LiteLLM Review: Ein Gateway für über 100 LLM-Anbieter-APIs',
-    seoTitle: 'LiteLLM Review: Gateway für 100+ LLM-APIs',
+    seoTitle: 'LiteLLM Review: Gateway, Kosten & Enterprise-Lizenz',
     intro: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), Dokumentation auf [docs.litellm.ai](https://docs.litellm.ai)) ist ein Open-Source-LLM-Gateway, das Ihrem Code eine einzige OpenAI-kompatible Schnittstelle für den Aufruf von über 100 verschiedenen Anbieter-APIs bietet — OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Ollama und viele weitere — statt für jeden Anbieter separaten Integrationscode zu schreiben. Es gibt zwei Zugangswege: ein importierbares Python-SDK (`pip install litellm`) und einen selbst gehosteten Proxy-Server mit Admin-Dashboard, bereitstellbar über Docker, Helm, AWS ECS Fargate oder Google Cloud Run. Diese Review zeigt, was LiteLLM tatsächlich leistet, wie man beide Modi installiert und betreibt, wie die Lizenzierung aussieht (die nicht einfach „MIT" für das gesamte Repository ist), und wie es sich zu vLLM, LocalAI und gehosteten Routing-Diensten wie OpenRouter verhält.',
-    metaDescription: 'LiteLLM ist ein Open-Source-LLM-Gateway (MIT, mit separater Enterprise-Ausnahme), das über 100 Anbieter-APIs hinter einer OpenAI-kompatiblen Schnittstelle vereint. SDK- und Proxy-Setup für 2026.',
+    metaDescription: 'LiteLLM (BerriAI/litellm) ist ein Open-Source-LLM-Gateway für 100+ Anbieter-APIs: Kosten, MIT-Lizenz, Enterprise für Unternehmen, SDK- und Proxy-Setup.',
     readTime: '12 Min. Lesezeit',
     targetKeywords: [
       'LiteLLM Review',
@@ -286,21 +309,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LiteLLM vs OpenRouter',
       'selbst gehostetes LLM-Gateway',
       'LiteLLM Docker Setup',
+      'LiteLLM Kosten',
+      'LiteLLM Unternehmen',
     ],
-    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) ist ein Open-Source-Gateway, mit dem Ihr Code über 100 LLM-Anbieter-APIs durch eine einzige OpenAI-kompatible Schnittstelle aufrufen kann, statt für jeden Anbieter separaten Integrationscode zu schreiben.** Es gibt ein Python-SDK (`pip install litellm`) für die direkte Nutzung im Anwendungscode sowie einen selbst gehosteten Proxy-Server mit einem Admin-Dashboard für virtuelle Schlüssel, gedacht für Teams, die zentrales Routing, Kostenverfolgung und Rate-Limiting über mehrere Apps und Nutzer hinweg wollen. Das Kern-Repository steht laut eigener LICENSE-Datei unter der MIT-Lizenz, mit einer separaten Enterprise-Lizenz-Ausnahme, die ausschließlich für das Unterverzeichnis `enterprise/` gilt — für diese Review direkt anhand der LICENSE-Datei des Repositorys geprüft. Stand dieser Review zeigt GitHub rund 58.663 Sterne und 11.415 Forks.',
+    leadAnswerBlock: '**LiteLLM (auch „Lite LLM" geschrieben; [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) ist ein Open-Source-Gateway, mit dem Ihr Code über 100 LLM-Anbieter-APIs durch eine einzige OpenAI-kompatible Schnittstelle aufrufen kann, statt für jeden Anbieter separaten Integrationscode zu schreiben.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist LiteLLM, und brauche ich eine GPU, um es zu betreiben?',
         answer: 'LiteLLM ist ein Open-Source-Gateway, das über 100 LLM-Anbieter-APIs hinter einer OpenAI-kompatiblen Schnittstelle vereint, mit Request-Routing, Fallback, Kostenverfolgung und Rate-Limiting. Nein — LiteLLM benötigt keine GPU. Es ist ein Router, der Anfragen an externe Anbieter-APIs (oder an eine lokale Laufzeitumgebung wie Ollama) weiterleitet; es führt selbst keine Modellgewichte aus und läuft daher problemlos auf reiner CPU-Hardware.',
         bullets: [
-          'Open Source auf GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), Stand dieser Review (2026-09) rund 58.663 Sterne und 11.415 Forks',
+          'Open Source auf GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), Stand dieser Review über ' + st.de('litellm', 'bare') + ' Sterne',
           'Lizenz des Kern-Repositorys: MIT, laut eigener LICENSE-Datei des Repositorys — eine separate Enterprise-Lizenz-Ausnahme gilt ausschließlich für das Unterverzeichnis `enterprise/`',
           'Zwei Nutzungswege: das Python-SDK `litellm`, und ein selbst gehosteter Proxy-Server (`litellm[proxy]`) mit Admin-Oberfläche unter `/ui`',
           'Leitet Aufrufe an über 100 Anbieter weiter (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama und viele weitere) hinter einem einheitlichen OpenAI-kompatiblen Anfrage-/Antwortformat',
           'Keine GPU nötig — es handelt sich um einen Anfrage-Router, keine Modell-Inferenz-Engine; produktive Proxy-Bereitstellungen benötigen PostgreSQL und Redis, keine GPU',
           'Bereitstellbar über Docker, Helm-Charts, AWS ECS Fargate (offizielles Terraform-Modul), Google Cloud Run (offizielles Terraform-Modul) oder Ein-Klick-Buttons für Render/Railway',
+          'Neueste getaggte Version: v1.106.3; letzte Aktualisierung des Projekts: ' + lastUpdate('de'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -309,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was können Sie mit LiteLLM tun?', anchor: 'what-litellm-does' },
       { label: 'Anwendungsbeispiele', anchor: 'usage-examples' },
       { label: 'LiteLLM installieren: SDK, Proxy und Docker', anchor: 'install-litellm' },
-      { label: 'LiteLLM-Preise: Ist LiteLLM wirklich kostenlos?', anchor: 'litellm-pricing' },
+      { label: 'LiteLLM-Kosten für Unternehmen: Kern kostenlos, Enterprise auf Anfrage', anchor: 'litellm-pricing' },
       { label: 'LiteLLM vs. vLLM vs. LocalAI', anchor: 'litellm-vs-inference-servers' },
       { label: 'Für wen ist LiteLLM geeignet?', anchor: 'who-should-use-litellm' },
       { label: 'LiteLLM vs. andere Gateways und Frameworks', anchor: 'litellm-competitors' },
@@ -326,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Wenn Ihre App heute mit OpenAI sprechen soll und morgen mit Anthropic oder einem lokalen Ollama-Modell, müssten Sie normalerweise den Integrationscode für jeden neu schreiben. LiteLLM sitzt dazwischen und übersetzt die API jedes Anbieters in dasselbe OpenAI-ähnliche Format, sodass Ihr Code nur ein Format lernen muss — und die Proxy-Variante liefert zusätzlich ein Dashboard, das zeigt, wer wie viel ausgibt.' },
         ],
         items: [
-          'Open Source auf [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); Stand dieser Review rund 58.663 Sterne und 11.415 Forks',
+          'Open Source auf [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); Stand dieser Review über ' + st.de('litellm', 'bare') + ' Sterne',
           'Das Kern-Repository steht laut eigener LICENSE-Datei unter der MIT-Lizenz; eine separate Lizenz gilt ausschließlich für das Unterverzeichnis `enterprise/`, für diese Review direkt anhand der LICENSE-Datei geprüft',
           'Zwei Produkte: das **Python-SDK `litellm`** (`pip install litellm`) für den direkten Aufruf von Anbietern aus dem Code heraus, sowie der **LiteLLM Proxy Server** (`pip install \'litellm[proxy]\'` oder Docker) als selbst gehostetes Gateway mit Admin-Dashboard',
           'Vereint über 100 Anbieter-APIs (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama und weitere) hinter einem einheitlichen Anfrage-/Antwortformat, laut eigenem README des Projekts',
@@ -339,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'Was ist LiteLLM?',
-        content: '**LiteLLM ist ein Gateway, das ein einziges OpenAI-kompatibles Anfrageformat in Aufrufe an über 100 verschiedene LLM-Anbieter-APIs übersetzt.** Das eigene [GitHub-README](https://github.com/BerriAI/litellm) beschreibt es als „the fastest, litest AI Gateway", aufgebaut mit einem Rust-Kern und einem Python-SDK darüber — ein Wandel gegenüber der reinen Python-Implementierung der früheren Projektjahre. Statt separaten Client-Code für die OpenAI-API, die Anthropic-API und einen lokalen Ollama-Server zu schreiben, ruft eine Anwendung LiteLLM einmal auf, und LiteLLM leitet die Anfrage an den für diesen Modellnamen konfigurierten Anbieter weiter.',
+        content: '**LiteLLM ist ein Gateway, das ein einziges OpenAI-kompatibles Anfrageformat in Aufrufe an über 100 verschiedene LLM-Anbieter-APIs übersetzt.** Die [GitHub-Repository-Beschreibung](https://github.com/BerriAI/litellm) bezeichnet es als „the fastest, litest AI Gateway", aufgebaut mit einem Rust-Kern und einem Python-SDK darüber — ein Wandel gegenüber der reinen Python-Implementierung der früheren Projektjahre. Statt separaten Client-Code für die OpenAI-API, die Anthropic-API und einen lokalen Ollama-Server zu schreiben, ruft eine Anwendung LiteLLM einmal auf, und LiteLLM leitet die Anfrage an den für diesen Modellnamen konfigurierten Anbieter weiter.',
         items: [
           'Kernfunktion: eine Anfrage im OpenAI-Format `chat/completions` (oder im nativen Format des Zielanbieters) entgegennehmen, an den konfigurierten Anbieter weiterleiten und eine normalisierte Antwort zurückgeben',
           'Zwei Zugangswege: das Python-SDK `litellm`, direkt in den Code einer Anwendung eingebunden, sowie der LiteLLM Proxy Server, ein eigenständiger Dienst, den andere Anwendungen per HTTP aufrufen',
@@ -402,13 +428,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'litellm-pricing',
-        title: 'LiteLLM-Preise: Ist LiteLLM wirklich kostenlos?',
+        title: 'LiteLLM-Kosten für Unternehmen: Kern kostenlos, Enterprise auf Anfrage',
         content: '**Das Open-Source-SDK und der Proxy Server sind kostenlos — Sie zahlen nur für die zugrunde liegenden Anbieter-API-Aufrufe, die Sie über LiteLLM leiten, plus Ihre eigenen Hosting-Kosten.** LiteLLM selbst berechnet für den Open-Source-Weg weder pro Anfrage noch pro Token etwas. Eine separate, kostenpflichtige **LiteLLM-Enterprise**-Stufe existiert unter [litellm.ai/enterprise](https://litellm.ai/enterprise) mit SSO, priorisierten Feature-Wünschen und dediziertem Support, laut der eigenen Projektseite — diese Review fand keine veröffentlichten Enterprise-Preise und empfiehlt, für ein Angebot direkt Kontakt mit LiteLLM aufzunehmen.',
         items: [
           'Open-Source-SDK und Proxy Server: keine Lizenzgebühr, Kern-Repository unter MIT-Lizenz (siehe Lizenzhinweis unten)',
           'Sie zahlen weiterhin an den Anbieter, an den geroutet wird — LiteLLM senkt nicht die API-Preise von OpenAI, Anthropic oder Bedrock, es vereint und protokolliert sie nur',
           'Das Selbst-Hosten des Proxys hat eigene Infrastrukturkosten: einen Server oder Container-Host, plus PostgreSQL und Redis für den produktiven Einsatz',
           'LiteLLM Enterprise ergänzt SSO, priorisierten Support und weitere Business-Funktionen auf demselben Open-Source-Kern, laut [litellm.ai/enterprise](https://litellm.ai/enterprise) — Preise sind nicht veröffentlicht und erfordern Kontakt mit dem Unternehmen',
+          'Die Enterprise-Preise werden laut [litellm.ai/pricing](https://www.litellm.ai/pricing) jährlich abgerechnet und nach Anfragekapazität des Gateways, Deployment-Architektur und Supportbedarf bemessen, nie pro Token; ein 30-Tage-Testschlüssel für Enterprise ist verfügbar, Angebote kommen über den Vertrieb',
+          'Single Sign-on (SSO) ist laut [LiteLLM-SSO-Dokumentation](https://docs.litellm.ai/docs/proxy/admin_ui_sso) ab Version v1.76.0 für bis zu 5 Nutzer kostenlos; darüber hinaus ist eine Enterprise-Lizenz erforderlich',
         ],
         note: 'Die eigene LICENSE-Datei des Repositorys besagt, dass Inhalte außerhalb des Verzeichnisses `enterprise/` unter der MIT-Lizenz stehen und dass alles innerhalb von `enterprise/` (sofern dieses Verzeichnis in Ihrem Checkout existiert) separat unter `enterprise/LICENSE` lizenziert ist — für diese Review direkt anhand der LICENSE-Datei des Repositorys geprüft. Das ist eine engere, präzisere Aussage, als das gesamte Projekt „einfach MIT" zu nennen — prüfen Sie die LICENSE-Datei selbst, bevor Sie Code speziell aus dem Pfad `enterprise/` weiterverbreiten oder ein kommerzielles Produkt darauf aufbauen.',
       },
@@ -455,8 +483,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. andere Gateways und Frameworks',
-        content: 'Stand dieser Review ist LiteLLM das erste Router-/Gateway-Tool mit eigener ausführlicher Review in PromptQuorums [Local LLM Software Directory](/de/directory) — es gibt noch kein zweites Tool im selben Segment (Router/Gateway) für einen direkten Vergleich. Die nächstliegenden sinnvollen Vergleiche stammen stattdessen von benachbarten Tools im selben „Run & Serve"-Teil des Directorys, ergänzt um eine bekannte gehostete Alternative außerhalb des Directorys.',
+        content: 'LiteLLM gehört zum Segment Router und Gateways in PromptQuorums [Local LLM Software Directory](/de/directory), das drei weitere eigene Reviews umfasst, die unten zuerst aufgeführt sind. Die übrigen Vergleiche stammen von benachbarten Tools im selben „Run & Serve"-Teil des Directorys, ergänzt um eine bekannte gehostete Alternative außerhalb des Directorys.',
         items: [
+          '**[Plano](/de/power-local-llm/plano-review)** — ein selbst gehosteter, Envoy-basierter KI-Proxy und Data Plane für agentenbasierte Anwendungen mit LLM-Routing, Observability und Guardrails (Apache-2.0).',
+          '**[ClawRouter](/de/power-local-llm/clawrouter-review)** — ein selbst gehosteter, für Agenten konzipierter LLM-Router, der Routing-Entscheidungen lokal über Spitzen- und kostenlose Open-Weight-Modelle trifft (MIT).',
+          '**[AIClient2API](/de/power-local-llm/aiclient2api-review)** — ein selbst gehosteter Proxy, der die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine einzige OpenAI-kompatible API umwandelt (GPL-3.0).',
           '**[vLLM](/de/power-local-llm/vllm-explained)** — eine selbst gehostete Inferenz-Engine, die tatsächlich Modellgewichte ausführt (GPU erforderlich); wird meist zusammen mit LiteLLM eingesetzt statt als Konkurrenz, wobei LiteLLM als Routing-Schicht vor einem oder mehreren vLLM-Deployments steht.',
           '**[LocalAI](/de/power-local-llm/localai-explained)** — ein selbst gehosteter, OpenAI-kompatibler API-Server zum lokalen Betrieb offener Modelle; löst ein anderes Problem als LiteLLM (Ausführen vs. Routing), bietet aber eine ähnliche OpenAI-Format-API — eine häufige Verwechslungsquelle zwischen beiden.',
           '**[LangChain](/de/power-local-llm/langchain-review)** — ein Anwendungs-Framework zum Bauen LLM-gestützter Apps (Chains, Agenten, Memory); kann LiteLLM (oder jeden Anbieter direkt) als Modellzugriffsschicht nutzen, statt zu ersetzen, was LiteLLM tut.',
@@ -491,15 +522,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Was ist LiteLLM?', a: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) ist ein Open-Source-Gateway, mit dem Anwendungen über eine einzige OpenAI-kompatible Schnittstelle auf über 100 LLM-Anbieter-APIs zugreifen können, verfügbar als Python-SDK oder als selbst gehosteter Proxy-Server mit Routing, Kostenverfolgung und Rate-Limiting.' },
-          { q: 'Ist LiteLLM kostenlos?', a: 'Das Open-Source-SDK und der Proxy Server sind kostenlos — Sie zahlen nur für die zugrunde liegenden Anbieter-API-Aufrufe und Ihr eigenes Hosting. Eine separate kostenpflichtige LiteLLM-Enterprise-Stufe ergänzt SSO und dedizierten Support; die Preise sind nicht veröffentlicht und erfordern direkten Kontakt mit LiteLLM.' },
+          { q: 'Was ist LiteLLM?', a: 'LiteLLM (auch „Lite LLM" geschrieben; [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) ist ein Open-Source-Gateway, mit dem Anwendungen über eine einzige OpenAI-kompatible Schnittstelle auf über 100 LLM-Anbieter-APIs zugreifen können, verfügbar als Python-SDK oder als selbst gehosteter Proxy-Server mit Routing, Kostenverfolgung und Rate-Limiting.' },
+          { q: 'Was kostet LiteLLM — ist es kostenlos?', a: 'Das Open-Source-SDK und der Proxy Server kosten nichts — Sie zahlen nur die zugrunde liegenden Anbieter-API-Aufrufe und Ihr eigenes Hosting. Die separate kostenpflichtige Enterprise-Stufe ergänzt SSO für mehr als fünf Nutzer, Audit-Logs und 24/7-Support mit SLAs; sie wird laut Anbieter jährlich über den Vertrieb angeboten, nach Anfragekapazität bemessen und nie pro Token abgerechnet. Ein 30-Tage-Testschlüssel ist verfügbar; veröffentlichte Preise gibt es nicht.' },
+          { q: 'Ist LiteLLM für Unternehmen geeignet?', a: 'Ja. Der MIT-lizenzierte Kern (alles außerhalb von `enterprise/`) darf kommerziell genutzt werden, und Teams betreiben ihn als gemeinsames internes Gateway mit virtuellen Schlüsseln, Budgets und Ausgabenverfolgung. SSO für mehr als fünf Nutzer, SCIM, Audit-Logs und SLA-gestützter Support erfordern die kostenpflichtige Enterprise-Lizenz; deren Seite nennt SOC 2 Type 2 und ISO 27001 (Herstellerangabe, hier nicht geprüft). Ob der Einsatz DSGVO-konform ist, hängt von den angebundenen Anbietern und Ihrer Konfiguration ab ; das ist keine Rechtsberatung — klären Sie es mit Ihrem Datenschutzbeauftragten.' },
           { q: 'Welche Lizenz verwendet LiteLLM?', a: 'Das Kern-Repository steht laut eigener LICENSE-Datei unter der MIT-Lizenz. Eine separate Lizenz gilt ausschließlich für das Unterverzeichnis `enterprise/`, unter `enterprise/LICENSE` — für diese Review direkt anhand der LICENSE-Datei des Repositorys geprüft.' },
           { q: 'Braucht LiteLLM eine GPU?', a: 'Nein. LiteLLM ist ein Anfrage-Router, keine Modell-Inferenz-Engine — es leitet Aufrufe an Anbieter (Cloud-APIs oder lokale Laufzeitumgebungen wie Ollama) weiter, statt selbst Modellgewichte auszuführen, und läuft daher problemlos auf reiner CPU-Hardware.' },
           { q: 'Wie installiere ich LiteLLM?', a: 'Für das Python-SDK: `pip install litellm`. Für den selbst gehosteten Proxy: `pip install \'litellm[proxy]\'`, dann `litellm --model gpt-4o`, oder das Docker-Image `docker.litellm.ai/berriai/litellm:latest` mit gemounteter `config.yaml` ausführen. Weitere Optionen wie Helm, AWS ECS Fargate und Google Cloud Run finden Sie in der Installationstabelle oben.' },
           { q: 'Benötigt der LiteLLM-Proxy eine Datenbank?', a: 'Für den produktiven Einsatz ja — PostgreSQL speichert virtuelle Schlüssel und Ausgabendaten dauerhaft, und Redis hält das Rate-Limiting über mehrere Proxy-Instanzen hinweg konsistent, laut LiteLLMs eigener Deployment-Dokumentation. Ein schneller lokaler Test läuft auch ohne beides, verliert dann aber diese Funktionen.' },
           { q: 'Kann LiteLLM an ein lokal gehostetes Modell routen?', a: 'Ja. Dieselbe `model_list` in der `config.yaml`, die auf OpenAI oder Anthropic zeigt, kann ebenso auf einen lokalen [Ollama](https://ollama.com)- oder [vLLM](/de/power-local-llm/vllm-explained)-Endpunkt zeigen, sodass ein Gateway Cloud- und lokale Modelle mischen kann.' },
           { q: 'Wie schneidet LiteLLM im Vergleich zu OpenRouter ab?', a: 'Beide vereinen mehrere LLM-Anbieter hinter einer Schnittstelle. LiteLLM ist selbst gehostete Infrastruktur, die Sie selbst betreiben (Open-Source-Proxy oder SDK); OpenRouter ist ein gehosteter Drittanbieter-Routing-Dienst, den Sie aufrufen, statt einen eigenen zu betreiben. Die Wahl hängt davon ab, ob Sie zero-ops (OpenRouter) oder volle Kontrolle ohne Aufschlag pro Anfrage durch einen Router-Anbieter (selbst gehostetes LiteLLM) wollen.' },
-          { q: 'Wer entwickelt LiteLLM?', a: 'BerriAI, die Organisation hinter dem Repository [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), das Stand dieser Review rund 58.663 Sterne und 11.415 Forks aufweist.' },
+          { q: 'Wer entwickelt LiteLLM?', a: 'BerriAI, die Organisation hinter dem Repository [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), das Stand dieser Review über ' + st.de('litellm', 'bare') + ' Sterne aufweist.' },
         ],
       },
       sources: {
@@ -513,6 +545,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'LiteLLM Docker Quick Start', description: 'Offizieller Docker-run-Befehl, Image-Name und Admin-UI-Login-Details, verwendet im Installationsabschnitt dieser Review.' },
           { url: 'https://pypi.org/project/litellm/', title: 'litellm auf PyPI', description: 'Offizielle Paketseite mit aktueller Release-Version und Release-Historie des Python-Pakets litellm.' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: 'Die eigene Projektseite zur kostenpflichtigen Enterprise-Stufe (SSO, priorisierte Features, dedizierter Support).' },
+          { url: 'https://www.litellm.ai/pricing', title: 'LiteLLM-Preise', description: 'Offizielle Preisseite: kostenlose selbst gehostete Open-Source-Stufe, jährliche, über den Vertrieb angebotene Enterprise-Preise (nicht pro Token) und ein 30-Tage-Testschlüssel für Enterprise.' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'LiteLLM-Dokumentation zu SSO in der Admin-Oberfläche', description: 'Offizielle Dokumentation, nach der SSO ab v1.76.0 für bis zu 5 Nutzer kostenlos ist und darüber hinaus eine Enterprise-Lizenz erfordert.' },
         ],
       },
       relatedReading: {
@@ -528,19 +562,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: 'Développeurs et équipes plateforme qui routent le trafic applicatif vers plusieurs API de fournisseurs LLM via une seule interface',
     primaryTerm: 'LiteLLM',
     title: 'LiteLLM: une passerelle unique pour plus de 100 API LLM',
-    seoTitle: 'LiteLLM: passerelle pour 100+ API LLM',
+    seoTitle: 'LiteLLM : passerelle pour plus de 100 API LLM, tarifs',
     intro: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), documentation sur [docs.litellm.ai](https://docs.litellm.ai)) est une passerelle LLM open source qui offre à votre code une interface unique compatible OpenAI pour appeler plus de 100 API de fournisseurs différents — OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Ollama et bien d\'autres — au lieu d\'écrire du code d\'intégration séparé pour chacun. Le projet se présente sous deux formes : un SDK Python importable (`pip install litellm`) et un serveur proxy auto-hébergé avec tableau de bord d\'administration, déployable via Docker, Helm, AWS ECS Fargate ou Google Cloud Run. Ce guide pratique détaille ce que fait réellement LiteLLM, comment installer et exploiter les deux modes, sa licence (qui n\'est pas simplement « MIT » pour l\'ensemble du dépôt), et sa place face à vLLM, LocalAI et des services de routage hébergés comme OpenRouter.',
-    metaDescription: 'LiteLLM est une passerelle LLM open source (MIT, avec une exception enterprise séparée) unifiant plus de 100 API de fournisseurs derrière une interface compatible OpenAI. Installation SDK et proxy pour 2026.',
+    metaDescription: 'LiteLLM : passerelle LLM open source (cœur MIT, licence enterprise séparée) unifiant plus de 100 API de fournisseurs via une interface compatible OpenAI.',
     readTime: '12 min de lecture',
     targetKeywords: [
       'LiteLLM avis',
@@ -549,20 +584,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'passerelle LLM auto-hébergée',
       'LiteLLM installation Docker',
     ],
-    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) est une passerelle open source qui permet à votre code d\'appeler plus de 100 API de fournisseurs LLM via une seule interface compatible OpenAI, au lieu d\'écrire du code d\'intégration séparé pour chaque fournisseur.** Le projet se décline en un SDK Python (`pip install litellm`) pour un usage direct dans une application, et un serveur proxy auto-hébergé avec tableau de bord de clés virtuelles, destiné aux équipes qui veulent un routage centralisé, un suivi des coûts et une limitation de débit sur plusieurs applications et utilisateurs. Le dépôt principal est sous licence MIT selon son propre fichier LICENSE, avec une exception de licence enterprise distincte qui s\'applique uniquement au sous-répertoire `enterprise/` — vérifié directement dans le fichier LICENSE du dépôt pour cet avis. Au moment de cet avis, GitHub affiche environ 58 663 étoiles et 11 415 forks.',
+    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) est une passerelle open source qui permet à votre code d\'appeler plus de 100 API de fournisseurs LLM via une seule interface compatible OpenAI, au lieu d\'écrire du code d\'intégration séparé pour chaque fournisseur.**',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que LiteLLM et faut-il un GPU pour l\'exécuter ?',
         answer: 'LiteLLM est une passerelle open source qui unifie plus de 100 API de fournisseurs LLM derrière une seule interface compatible OpenAI, avec routage des requêtes, secours, suivi des coûts et limitation de débit. Non — LiteLLM n\'a pas besoin de GPU. C\'est un routeur qui transmet les requêtes à des API de fournisseurs externes (ou à un runtime local comme Ollama) ; il n\'exécute pas lui-même les poids du modèle, il fonctionne donc très bien sur du matériel CPU uniquement.',
         bullets: [
-          'Open source sur GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), environ 58 663 étoiles et 11 415 forks au moment de cet avis (2026-09)',
+          'Open source sur GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), plus de ' + st.fr('litellm', 'bare') + ' étoiles au moment de cet avis',
           'Licence du dépôt principal : MIT, selon son propre fichier LICENSE — une exception de licence enterprise distincte s\'applique uniquement au sous-répertoire `enterprise/`',
           'Deux modes d\'utilisation : le SDK Python `litellm`, et un serveur proxy auto-hébergé (`litellm[proxy]`) avec interface d\'administration sur `/ui`',
           'Route les appels vers plus de 100 fournisseurs (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama et bien d\'autres) derrière un format de requête/réponse unique compatible OpenAI',
           'Aucun GPU requis — c\'est un routeur de requêtes, pas un moteur d\'inférence ; les déploiements de proxy en production nécessitent PostgreSQL et Redis, pas de GPU',
           'Déployable via Docker, des charts Helm, AWS ECS Fargate (module Terraform officiel), Google Cloud Run (module Terraform officiel), ou des boutons de déploiement en un clic Render/Railway',
+          'Dernière version publiée : v1.106.3 ; dernière mise à jour du projet : ' + lastUpdate('fr'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -588,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: "Si votre application doit parler à OpenAI aujourd'hui et à Anthropic ou à un modèle Ollama local demain, il faudrait normalement réécrire le code d'intégration à chaque fois. LiteLLM se place au milieu et traduit l'API de chaque fournisseur dans le même format proche d'OpenAI, donc votre code n'a besoin d'apprendre qu'un seul format — et la version proxy ajoute un tableau de bord pour suivre qui dépense quoi." },
         ],
         items: [
-          'Open source sur [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm) ; environ 58 663 étoiles et 11 415 forks au moment de cet avis',
+          'Open source sur [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm) ; plus de ' + st.fr('litellm', 'bare') + ' étoiles au moment de cet avis',
           'Le dépôt principal est sous licence MIT selon son propre fichier LICENSE ; une licence distincte s\'applique uniquement au sous-répertoire `enterprise/`, vérifié directement dans le fichier LICENSE pour cet avis',
           'Deux produits : le **SDK Python `litellm`** (`pip install litellm`) pour appeler les fournisseurs directement depuis le code, et le **LiteLLM Proxy Server** (`pip install \'litellm[proxy]\'`, ou Docker) pour une passerelle auto-hébergée avec tableau de bord d\'administration',
           'Unifie plus de 100 API de fournisseurs (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama et bien d\'autres) derrière un format unique de requête/réponse, selon le README du projet',
@@ -601,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'Qu\'est-ce que LiteLLM ?',
-        content: '**LiteLLM est une passerelle qui traduit un format de requête unique compatible OpenAI en appels vers plus de 100 API de fournisseurs LLM différents.** Son propre [README GitHub](https://github.com/BerriAI/litellm) le décrit comme « la passerelle IA la plus rapide et la plus légère », construite avec un cœur en Rust et un SDK Python par-dessus — une évolution par rapport à l\'implémentation purement Python des premières années du projet. Plutôt que d\'écrire du code client séparé pour l\'API OpenAI, l\'API Anthropic et un serveur Ollama local, une application appelle LiteLLM une seule fois, et LiteLLM transmet la requête au fournisseur configuré pour ce nom de modèle.',
+        content: '**LiteLLM est une passerelle qui traduit un format de requête unique compatible OpenAI en appels vers plus de 100 API de fournisseurs LLM différents.** La description de son [dépôt GitHub](https://github.com/BerriAI/litellm) le présente comme « la passerelle IA la plus rapide et la plus légère », construite avec un cœur en Rust et un SDK Python par-dessus — une évolution par rapport à l\'implémentation purement Python des premières années du projet. Plutôt que d\'écrire du code client séparé pour l\'API OpenAI, l\'API Anthropic et un serveur Ollama local, une application appelle LiteLLM une seule fois, et LiteLLM transmet la requête au fournisseur configuré pour ce nom de modèle.',
         items: [
           'Fonction principale : recevoir une requête au format `chat/completions` d\'OpenAI (ou au format natif du fournisseur cible), la transmettre au fournisseur configuré, et renvoyer une réponse normalisée',
           'Deux modes d\'accès : le SDK Python `litellm`, importé directement dans le code d\'une application, et le LiteLLM Proxy Server, un service autonome que d\'autres applications appellent via HTTP',
@@ -671,6 +707,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vous continuez à payer le fournisseur vers lequel vous routez — LiteLLM ne réduit pas les tarifs des API OpenAI, Anthropic ou Bedrock, il les unifie et les suit seulement',
           'L\'auto-hébergement du proxy a son propre coût d\'infrastructure : un serveur ou un hébergeur de conteneurs, plus PostgreSQL et Redis pour un usage en production',
           'LiteLLM Enterprise ajoute SSO, support prioritaire et d\'autres fonctionnalités professionnelles au-dessus du même cœur open source, selon [litellm.ai/enterprise](https://litellm.ai/enterprise) — les tarifs ne sont pas publiés et nécessitent de contacter l\'entreprise',
+          'Les tarifs Enterprise sont annuels et dimensionnés selon la capacité de requêtes de la passerelle, l\'architecture de déploiement et les besoins de support, jamais par token, d\'après [litellm.ai/pricing](https://www.litellm.ai/pricing) ; une clé d\'essai Enterprise de 30 jours est disponible et les devis passent par l\'équipe commerciale',
+          'Le Single Sign-On (SSO) est gratuit jusqu\'à 5 utilisateurs depuis la version v1.76.0 ; au-delà, une licence enterprise est requise, d\'après la [documentation SSO de LiteLLM](https://docs.litellm.ai/docs/proxy/admin_ui_sso)',
         ],
         note: 'Le fichier LICENSE du dépôt indique que le contenu hors du répertoire `enterprise/` est sous licence MIT, et que tout ce qui se trouve dans `enterprise/` (si ce répertoire existe dans votre copie) est sous une licence distincte définie dans `enterprise/LICENSE` — vérifié directement dans le fichier LICENSE du dépôt pour cet avis. C\'est une affirmation plus précise et plus étroite que de dire que tout le projet est « simplement MIT » — vérifiez vous-même le fichier LICENSE avant de redistribuer ou de bâtir un produit commercial sur du code provenant spécifiquement du chemin `enterprise/`.',
       },
@@ -717,8 +755,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM face aux autres passerelles et frameworks',
-        content: 'Au moment de cet avis, LiteLLM est le premier outil de la catégorie routeur/passerelle à disposer de sa propre revue approfondie dans le [Local LLM Software Directory](/fr/directory) de PromptQuorum — il n\'existe pas encore de deuxième FeatureAppPost du même segment (routeur/passerelle) pour une comparaison directe. Les comparaisons utiles les plus proches viennent plutôt d\'outils voisins dans la même partie « Run & Serve » du répertoire, complétées par une alternative hébergée largement connue en dehors du répertoire.',
+        content: 'LiteLLM fait partie du segment routeurs et passerelles du [Local LLM Software Directory](/fr/directory) de PromptQuorum, qui compte trois autres revues dédiées, listées en premier ci-dessous. Les autres comparaisons viennent d\'outils voisins de la même partie « Run & Serve » du répertoire, ainsi que d\'une alternative hébergée très connue, hors du répertoire.',
         items: [
+          '**[Plano](/fr/power-local-llm/plano-review)** — un proxy IA auto-hébergé basé sur Envoy et plan de données pour applications agentiques, avec routage LLM, observabilité et garde-fous (Apache-2.0).',
+          '**[ClawRouter](/fr/power-local-llm/clawrouter-review)** — un routeur LLM auto-hébergé, conçu pour les agents, qui prend ses décisions de routage en local entre modèles de pointe et modèles open-weight gratuits (MIT).',
+          '**[AIClient2API](/fr/power-local-llm/aiclient2api-review)** — un proxy auto-hébergé qui convertit les protocoles clients de Gemini CLI, Codex, Grok, Kiro et Antigravity en une seule API compatible OpenAI (GPL-3.0).',
           '**[vLLM](/fr/power-local-llm/vllm-explained)** — un moteur d\'inférence auto-hébergé qui exécute réellement les poids du modèle (GPU requis) ; couramment associé à LiteLLM plutôt qu\'en concurrence avec lui, LiteLLM servant de couche de routage devant un ou plusieurs déploiements vLLM.',
           '**[LocalAI](/fr/power-local-llm/localai-explained)** — un serveur API auto-hébergé compatible OpenAI pour exécuter localement des modèles ouverts ; résout un problème différent de celui de LiteLLM (exécution vs. routage) mais expose une API de format OpenAI similaire, source fréquente de confusion entre les deux.',
           '**[LangChain](/fr/power-local-llm/langchain-review)** — un framework applicatif pour construire des applications basées sur des LLM (chaînes, agents, mémoire) ; il peut appeler LiteLLM (ou n\'importe quel fournisseur directement) comme couche d\'accès aux modèles plutôt que de remplacer ce que fait LiteLLM.',
@@ -754,14 +795,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Qu\'est-ce que LiteLLM ?', a: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) est une passerelle open source qui permet aux applications d\'appeler plus de 100 API de fournisseurs LLM via une seule interface compatible OpenAI, disponible comme SDK Python ou comme serveur proxy auto-hébergé avec routage, suivi des coûts et limitation de débit.' },
-          { q: 'LiteLLM est-il gratuit ?', a: 'Le SDK open source et le Proxy Server sont gratuits — vous ne payez que les appels API aux fournisseurs sous-jacents et votre propre hébergement. Une offre payante distincte, LiteLLM Enterprise, ajoute SSO et un support dédié ; ses tarifs ne sont pas publiés et nécessitent de contacter directement LiteLLM.' },
+          { q: 'LiteLLM est-il gratuit ?', a: 'Le SDK open source et le Proxy Server sont gratuits — vous ne payez que les appels API aux fournisseurs sous-jacents et votre propre hébergement. L\'offre payante LiteLLM Enterprise ajoute le SSO au-delà de cinq utilisateurs, des journaux d\'audit et un support 24h/24 et 7j/7 avec SLA ; elle est vendue à l\'année sur devis, dimensionnée selon la capacité de requêtes et jamais par token. Une clé d\'essai de 30 jours est disponible ; aucun tarif n\'est publié.' },
+          { q: 'LiteLLM convient-il à un usage en entreprise ?', a: 'Oui. Le cœur sous licence MIT (tout ce qui est hors de `enterprise/`) peut être utilisé commercialement, et les équipes l\'exploitent comme passerelle interne partagée avec clés virtuelles, budgets et suivi des dépenses. Le SSO au-delà de cinq utilisateurs, SCIM, les journaux d\'audit et le support sous SLA exigent la licence payante Enterprise ; sa page cite SOC 2 Type 2 et ISO 27001 (déclaration de l\'éditeur, non vérifiée ici). La conformité au RGPD dépend des fournisseurs vers lesquels vous routez et de votre configuration ; ceci ne constitue pas un conseil juridique, consultez votre délégué à la protection des données.' },
           { q: 'Quelle licence utilise LiteLLM ?', a: 'Le dépôt principal est sous licence MIT, selon son propre fichier LICENSE. Une licence distincte s\'applique uniquement au sous-répertoire `enterprise/`, définie dans `enterprise/LICENSE` — vérifié directement dans le fichier LICENSE du dépôt pour cet avis.' },
           { q: 'LiteLLM nécessite-t-il un GPU ?', a: 'Non. LiteLLM est un routeur de requêtes, pas un moteur d\'inférence de modèle — il transmet les appels aux fournisseurs (API cloud ou runtimes locaux comme Ollama) au lieu d\'exécuter lui-même les poids du modèle, il fonctionne donc très bien sur du matériel CPU uniquement.' },
           { q: 'Comment installer LiteLLM ?', a: 'Pour le SDK Python : `pip install litellm`. Pour le proxy auto-hébergé : `pip install \'litellm[proxy]\'` puis `litellm --model gpt-4o`, ou exécuter l\'image Docker `docker.litellm.ai/berriai/litellm:latest` avec un `config.yaml` monté. Voir le tableau d\'installation ci-dessus pour les options Helm, AWS ECS Fargate et Google Cloud Run.' },
           { q: 'Le proxy LiteLLM nécessite-t-il une base de données ?', a: 'Pour un usage en production, oui — PostgreSQL conserve les clés virtuelles et les données de dépenses, et Redis maintient une limitation de débit cohérente sur plusieurs instances de proxy, selon la documentation de déploiement de LiteLLM. Un test local rapide peut fonctionner sans les deux, mais perd ces fonctionnalités.' },
           { q: 'LiteLLM peut-il router vers un modèle hébergé localement ?', a: 'Oui. La même `model_list` du `config.yaml` qui pointe vers OpenAI ou Anthropic peut tout aussi bien pointer vers un point de terminaison [Ollama](https://ollama.com) ou [vLLM](/fr/power-local-llm/vllm-explained) local, permettant à une passerelle de mélanger modèles cloud et locaux.' },
           { q: 'Comment LiteLLM se compare-t-il à OpenRouter ?', a: 'Les deux unifient plusieurs fournisseurs LLM derrière une interface. LiteLLM est une infrastructure auto-hébergée que vous exploitez vous-même (proxy ou SDK open source) ; OpenRouter est un service de routage hébergé par un tiers que vous appelez au lieu d\'exploiter le vôtre. Le choix dépend de si vous voulez du zero-ops (OpenRouter) ou un contrôle total sans marge par requête d\'un fournisseur de routage (LiteLLM auto-hébergé).' },
-          { q: 'Qui développe LiteLLM ?', a: 'BerriAI, l\'organisation derrière le dépôt [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), qui affiche environ 58 663 étoiles et 11 415 forks au moment de cet avis.' },
+          { q: 'Qui développe LiteLLM ?', a: 'BerriAI, l\'organisation derrière le dépôt [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), qui affiche plus de ' + st.fr('litellm', 'bare') + ' étoiles au moment de cet avis.' },
         ],
       },
       sources: {
@@ -775,6 +817,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'Démarrage rapide Docker LiteLLM', description: 'Commande docker run officielle, nom de l\'image et détails de connexion à l\'interface d\'administration utilisés dans la section installation de cet avis.' },
           { url: 'https://pypi.org/project/litellm/', title: 'litellm sur PyPI', description: 'Page officielle du paquet montrant la version actuelle et l\'historique des versions du paquet Python litellm.' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: 'La page du projet décrivant l\'offre payante Enterprise (SSO, fonctionnalités prioritaires, support dédié).' },
+          { url: 'https://www.litellm.ai/pricing', title: 'Tarifs LiteLLM', description: 'Page officielle des tarifs : niveau open source auto-hébergé gratuit, tarifs Enterprise annuels sur devis (pas par token) et clé d\'essai Enterprise de 30 jours.' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'Documentation SSO de l\'interface d\'administration LiteLLM', description: 'Documentation officielle indiquant que le SSO est gratuit jusqu\'à 5 utilisateurs depuis la v1.76.0 et qu\'une licence enterprise est requise au-delà.' },
         ],
       },
       relatedReading: {
@@ -790,19 +834,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-es.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores y equipos de plataforma que enrutan el tráfico de sus aplicaciones a través de varias API de proveedores de LLM mediante una única interfaz',
     primaryTerm: 'LiteLLM',
     title: 'LiteLLM: una sola puerta de enlace para más de 100 API de LLM',
-    seoTitle: 'LiteLLM: puerta de enlace para 100+ API de LLM',
+    seoTitle: 'LiteLLM: puerta de enlace para más de 100 API de LLM',
     intro: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), documentación en [docs.litellm.ai](https://docs.litellm.ai)) es una puerta de enlace de LLM de código abierto que ofrece a tu código una única interfaz compatible con OpenAI para llamar a más de 100 API de proveedores distintos — OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Ollama y muchos más — en lugar de escribir código de integración por separado para cada uno. Se distribuye de dos formas: un SDK de Python importable (`pip install litellm`) y un servidor proxy autoalojado con panel de administración, desplegable vía Docker, Helm, AWS ECS Fargate o Google Cloud Run. Esta reseña cubre qué hace realmente LiteLLM, cómo instalar y operar ambos modos, su licencia (que no es simplemente "MIT" para todo el repositorio) y su posición frente a vLLM, LocalAI y servicios de enrutamiento alojados como OpenRouter.',
-    metaDescription: 'LiteLLM es una puerta de enlace de LLM de código abierto (MIT, con una excepción enterprise aparte) que unifica más de 100 API de proveedores tras una interfaz compatible con OpenAI. SDK y proxy para 2026.',
+    metaDescription: 'LiteLLM: puerta de enlace de LLM de código abierto (núcleo MIT, licencia enterprise aparte) que unifica más de 100 API de proveedores con interfaz OpenAI.',
     readTime: '12 min de lectura',
     targetKeywords: [
       'LiteLLM reseña',
@@ -811,20 +856,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'puerta de enlace LLM autoalojada',
       'LiteLLM instalación Docker',
     ],
-    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) es una puerta de enlace de código abierto que permite a tu código llamar a más de 100 API de proveedores de LLM mediante una única interfaz compatible con OpenAI, en lugar de escribir código de integración distinto por proveedor.** Se distribuye como un SDK de Python (`pip install litellm`) para uso directo dentro de una aplicación, y como un servidor proxy autoalojado con un panel de administración de claves virtuales para equipos que quieren enrutamiento centralizado, seguimiento de costes y limitación de tasa entre varias aplicaciones y usuarios. El repositorio principal tiene licencia MIT según su propio archivo LICENSE, con una excepción de licencia enterprise aparte que se aplica únicamente al subdirectorio `enterprise/` — verificado directamente contra el archivo LICENSE del repositorio para esta reseña. Al momento de esta reseña, GitHub muestra aproximadamente 58.663 estrellas y 11.415 forks.',
+    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) es una puerta de enlace de código abierto que permite a tu código llamar a más de 100 API de proveedores de LLM mediante una única interfaz compatible con OpenAI, en lugar de escribir código de integración distinto por proveedor.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué es LiteLLM y necesito una GPU para ejecutarlo?',
         answer: 'LiteLLM es una puerta de enlace de código abierto que unifica más de 100 API de proveedores de LLM tras una única interfaz compatible con OpenAI, con enrutamiento de solicitudes, respaldo, seguimiento de costes y limitación de tasa. No — LiteLLM no necesita GPU. Es un enrutador que reenvía solicitudes a API de proveedores externos (o a un runtime local como Ollama); no ejecuta los pesos del modelo por sí mismo, por lo que funciona bien en hardware solo con CPU.',
         bullets: [
-          'Código abierto en GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), aproximadamente 58.663 estrellas y 11.415 forks al momento de esta reseña (2026-09)',
+          'Código abierto en GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), más de ' + st.es('litellm', 'bare') + ' estrellas al momento de esta reseña',
           'Licencia del repositorio principal: MIT, según su propio archivo LICENSE — una excepción de licencia enterprise aparte se aplica únicamente al subdirectorio `enterprise/`',
           'Dos formas de uso: el SDK de Python `litellm`, y un servidor proxy autoalojado (`litellm[proxy]`) con interfaz de administración en `/ui`',
           'Enruta llamadas a más de 100 proveedores (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama y muchos más) tras un único formato de solicitud/respuesta compatible con OpenAI',
           'No requiere GPU — es un enrutador de solicitudes, no un motor de inferencia; los despliegues del proxy en producción necesitan PostgreSQL y Redis, no una GPU',
           'Desplegable vía Docker, charts de Helm, AWS ECS Fargate (módulo Terraform oficial), Google Cloud Run (módulo Terraform oficial), o botones de despliegue con un clic en Render/Railway',
+          'Última versión etiquetada: v1.106.3; última actualización del proyecto: ' + lastUpdate('es'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -850,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Si tu app necesita hablar con OpenAI hoy y con Anthropic o un modelo local de Ollama mañana, normalmente tendrías que reescribir el código de integración para cada uno. LiteLLM se coloca en medio y traduce la API de cada proveedor al mismo formato estilo OpenAI, así que tu código solo tiene que aprender un formato, y la versión proxy añade además un panel para ver quién gasta qué.' },
         ],
         items: [
-          'Código abierto en [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); aproximadamente 58.663 estrellas y 11.415 forks al momento de esta reseña',
+          'Código abierto en [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); más de ' + st.es('litellm', 'bare') + ' estrellas al momento de esta reseña',
           'El repositorio principal tiene licencia MIT según su propio archivo LICENSE; una licencia aparte se aplica únicamente al subdirectorio `enterprise/`, verificado directamente contra el archivo LICENSE para esta reseña',
           'Dos productos: el **SDK de Python `litellm`** (`pip install litellm`) para llamar a proveedores directamente desde el código, y el **LiteLLM Proxy Server** (`pip install \'litellm[proxy]\'`, o Docker) como puerta de enlace autoalojada con panel de administración',
           'Unifica más de 100 API de proveedores (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama y más) tras un único formato de solicitud/respuesta, según el propio README del proyecto',
@@ -863,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: '¿Qué es LiteLLM?',
-        content: '**LiteLLM es una puerta de enlace que traduce un único formato de solicitud compatible con OpenAI en llamadas a más de 100 API de proveedores de LLM distintos.** Su propio [README de GitHub](https://github.com/BerriAI/litellm) lo describe como "la puerta de enlace de IA más rápida y ligera", construida con un núcleo en Rust y un SDK de Python encima — un cambio respecto a la implementación puramente en Python de los primeros años del proyecto. En lugar de escribir código cliente separado para la API de OpenAI, la de Anthropic y un servidor Ollama local, una aplicación llama a LiteLLM una vez, y LiteLLM reenvía la solicitud al proveedor configurado para ese nombre de modelo.',
+        content: '**LiteLLM es una puerta de enlace que traduce un único formato de solicitud compatible con OpenAI en llamadas a más de 100 API de proveedores de LLM distintos.** La descripción de su [repositorio de GitHub](https://github.com/BerriAI/litellm) lo presenta como "la puerta de enlace de IA más rápida y ligera", construida con un núcleo en Rust y un SDK de Python encima — un cambio respecto a la implementación puramente en Python de los primeros años del proyecto. En lugar de escribir código cliente separado para la API de OpenAI, la de Anthropic y un servidor Ollama local, una aplicación llama a LiteLLM una vez, y LiteLLM reenvía la solicitud al proveedor configurado para ese nombre de modelo.',
         items: [
           'Función principal: aceptar una solicitud en el formato `chat/completions` de OpenAI (o en el formato nativo del proveedor de destino), reenviarla al proveedor configurado y devolver una respuesta normalizada',
           'Dos modos de acceso: el SDK de Python `litellm`, importado directamente en el código de una aplicación, y el LiteLLM Proxy Server, un servicio independiente que otras aplicaciones llaman por HTTP',
@@ -933,6 +979,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sigues pagando al proveedor al que enrutas — LiteLLM no reduce los precios de las API de OpenAI, Anthropic o Bedrock, solo los unifica y registra',
           'Autoalojar el proxy tiene su propio coste de infraestructura: un servidor o proveedor de contenedores, más PostgreSQL y Redis para uso en producción',
           'LiteLLM Enterprise añade SSO, soporte prioritario y otras funciones empresariales sobre el mismo núcleo de código abierto, según [litellm.ai/enterprise](https://litellm.ai/enterprise) — los precios no están publicados y requieren contactar con la empresa',
+          'Los precios de Enterprise son anuales y se dimensionan según la capacidad de solicitudes de la puerta de enlace, la arquitectura de despliegue y las necesidades de soporte, nunca por token, según [litellm.ai/pricing](https://www.litellm.ai/pricing); hay una clave de prueba Enterprise de 30 días y los presupuestos los da el equipo comercial',
+          'El inicio de sesión único (SSO) es gratuito para hasta 5 usuarios desde la versión v1.76.0; a partir de ahí se requiere una licencia enterprise, según la [documentación de SSO de LiteLLM](https://docs.litellm.ai/docs/proxy/admin_ui_sso)',
         ],
         note: 'El propio archivo LICENSE del repositorio indica que el contenido fuera del directorio `enterprise/` tiene licencia MIT, y que todo lo que esté dentro de `enterprise/` (si ese directorio existe en tu copia) tiene una licencia aparte definida en `enterprise/LICENSE` — verificado directamente contra el archivo LICENSE del repositorio para esta reseña. Es una afirmación más precisa y limitada que decir que todo el proyecto es "simplemente MIT" — revisa tú mismo el archivo LICENSE antes de redistribuir o construir un producto comercial sobre código proveniente específicamente de la ruta `enterprise/`.',
       },
@@ -979,8 +1027,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM frente a otras puertas de enlace y frameworks',
-        content: 'Al momento de esta reseña, LiteLLM es la primera herramienta de la categoría enrutador/puerta de enlace con su propia reseña dedicada en el [Directorio de Software LLM Local](/es/directory) de PromptQuorum — todavía no existe una segunda herramienta del mismo segmento (enrutador/puerta de enlace) para una comparación directa. Las comparaciones útiles más cercanas provienen en cambio de herramientas afines en la misma sección "Run & Serve" del directorio, más una alternativa alojada ampliamente conocida fuera del directorio.',
+        content: 'LiteLLM pertenece al segmento de enrutadores y puertas de enlace del [Directorio de Software LLM Local](/es/directory) de PromptQuorum, que cuenta con otras tres reseñas dedicadas, listadas primero a continuación. El resto de comparaciones proviene de herramientas adyacentes de la misma parte «Run & Serve» del directorio, más una alternativa alojada muy conocida fuera del directorio.',
         items: [
+          '**[Plano](/es/power-local-llm/plano-review)** — un proxy de IA autoalojado basado en Envoy y plano de datos para aplicaciones con agentes, con enrutamiento de LLM, observabilidad y barreras de seguridad (Apache-2.0).',
+          '**[ClawRouter](/es/power-local-llm/clawrouter-review)** — un enrutador de LLM autoalojado, pensado para agentes, que toma sus decisiones de enrutamiento en local entre modelos de frontera y modelos open-weight gratuitos (MIT).',
+          '**[AIClient2API](/es/power-local-llm/aiclient2api-review)** — un proxy autoalojado que convierte los protocolos de cliente de Gemini CLI, Codex, Grok, Kiro y Antigravity en una sola API compatible con OpenAI (GPL-3.0).',
           '**[vLLM](/es/power-local-llm/vllm-explained)** — un motor de inferencia autoalojado que realmente sirve los pesos del modelo (requiere GPU); habitualmente combinado con LiteLLM en lugar de competir con él, con LiteLLM como capa de enrutamiento delante de uno o varios despliegues de vLLM.',
           '**[LocalAI](/es/power-local-llm/localai-explained)** — un servidor de API autoalojado y compatible con OpenAI para ejecutar modelos abiertos localmente; resuelve un problema distinto al de LiteLLM (servir vs. enrutar) pero expone una API de formato OpenAI similar, fuente habitual de confusión entre ambos.',
           '**[LangChain](/es/power-local-llm/langchain-review)** — un framework de aplicación para construir apps basadas en LLM (cadenas, agentes, memoria); puede llamar a LiteLLM (o directamente a cualquier proveedor) como su capa de acceso a modelos, en lugar de sustituir lo que hace LiteLLM.',
@@ -1016,14 +1067,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es LiteLLM?', a: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) es una puerta de enlace de código abierto que permite a las aplicaciones llamar a más de 100 API de proveedores de LLM mediante una única interfaz compatible con OpenAI, disponible como SDK de Python o como servidor proxy autoalojado con enrutamiento, seguimiento de costes y limitación de tasa.' },
-          { q: '¿Es gratis LiteLLM?', a: 'El SDK de código abierto y el Proxy Server son gratuitos — solo pagas las llamadas a la API del proveedor subyacente y tu propio alojamiento. Un nivel de pago aparte, LiteLLM Enterprise, añade SSO y soporte dedicado; sus precios no están publicados y requieren contactar directamente con LiteLLM.' },
+          { q: '¿Es gratis LiteLLM?', a: 'El SDK de código abierto y el Proxy Server son gratuitos — solo pagas las llamadas a la API del proveedor subyacente y tu propio alojamiento. El nivel de pago LiteLLM Enterprise añade SSO a partir de cinco usuarios, registros de auditoría y soporte 24/7 con SLA; se vende por años mediante cotización, dimensionado según la capacidad de solicitudes y nunca por token. Hay una clave de prueba de 30 días; no se publican precios.' },
+          { q: '¿Es LiteLLM adecuado para uso empresarial?', a: 'Sí. El núcleo con licencia MIT (todo lo que está fuera de `enterprise/`) puede usarse comercialmente, y los equipos lo ejecutan como puerta de enlace interna compartida con claves virtuales, presupuestos y seguimiento del gasto. El SSO a partir de cinco usuarios, SCIM, los registros de auditoría y el soporte con SLA requieren la licencia de pago Enterprise; su página menciona SOC 2 Type 2 e ISO 27001 (declaración del proveedor, no verificada aquí). El cumplimiento del RGPD depende de los proveedores a los que enrutes y de tu configuración; esto no es asesoramiento legal, consulta a tu delegado de protección de datos.' },
           { q: '¿Qué licencia usa LiteLLM?', a: 'El repositorio principal tiene licencia MIT, según su propio archivo LICENSE. Una licencia aparte se aplica únicamente al subdirectorio `enterprise/`, definida en `enterprise/LICENSE` — verificado directamente contra el archivo LICENSE del repositorio para esta reseña.' },
           { q: '¿Necesita LiteLLM una GPU?', a: 'No. LiteLLM es un enrutador de solicitudes, no un motor de inferencia de modelos — reenvía llamadas a proveedores (API en la nube o runtimes locales como Ollama) en lugar de ejecutar él mismo los pesos del modelo, por lo que funciona bien en hardware solo con CPU.' },
           { q: '¿Cómo instalo LiteLLM?', a: 'Para el SDK de Python: `pip install litellm`. Para el proxy autoalojado: `pip install \'litellm[proxy]\'` y luego `litellm --model gpt-4o`, o ejecuta la imagen Docker `docker.litellm.ai/berriai/litellm:latest` con un `config.yaml` montado. Consulta la tabla de instalación anterior para las opciones de Helm, AWS ECS Fargate y Google Cloud Run.' },
           { q: '¿El proxy de LiteLLM requiere una base de datos?', a: 'Para uso en producción, sí — PostgreSQL persiste las claves virtuales y los datos de gasto, y Redis mantiene la limitación de tasa consistente entre varias instancias del proxy, según la propia documentación de despliegue de LiteLLM. Una prueba local rápida puede ejecutarse sin ninguna de las dos, pero pierde esas funciones.' },
           { q: '¿Puede LiteLLM enrutar a un modelo alojado localmente?', a: 'Sí. La misma `model_list` del `config.yaml` que apunta a OpenAI o Anthropic puede apuntar igualmente a un endpoint local de [Ollama](https://ollama.com) o [vLLM](/es/power-local-llm/vllm-explained), permitiendo que una puerta de enlace mezcle modelos en la nube y locales.' },
           { q: '¿Cómo se compara LiteLLM con OpenRouter?', a: 'Ambos unifican varios proveedores de LLM tras una interfaz. LiteLLM es infraestructura autoalojada que operas tú mismo (proxy o SDK de código abierto); OpenRouter es un servicio de enrutamiento alojado por un tercero al que llamas en lugar de operar el tuyo propio. La elección depende de si quieres cero operación propia (OpenRouter) o control total sin recargo por solicitud de un proveedor de enrutamiento (LiteLLM autoalojado).' },
-          { q: '¿Quién desarrolla LiteLLM?', a: 'BerriAI, la organización detrás del repositorio [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), que muestra aproximadamente 58.663 estrellas y 11.415 forks al momento de esta reseña.' },
+          { q: '¿Quién desarrolla LiteLLM?', a: 'BerriAI, la organización detrás del repositorio [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), que muestra más de ' + st.es('litellm', 'bare') + ' estrellas al momento de esta reseña.' },
         ],
       },
       sources: {
@@ -1037,6 +1089,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'Inicio rápido de Docker LiteLLM', description: 'Comando docker run oficial, nombre de la imagen y detalles de acceso a la interfaz de administración usados en la sección de instalación de esta reseña.' },
           { url: 'https://pypi.org/project/litellm/', title: 'litellm en PyPI', description: 'Página oficial del paquete que muestra la versión actual y el historial de versiones del paquete de Python litellm.' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: 'La página del propio proyecto que describe el nivel de pago Enterprise (SSO, funciones prioritarias, soporte dedicado).' },
+          { url: 'https://www.litellm.ai/pricing', title: 'Precios de LiteLLM', description: 'Página oficial de precios: nivel de código abierto autoalojado gratuito, precios Enterprise anuales por cotización (no por token) y clave de prueba Enterprise de 30 días.' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'Documentación de SSO en la interfaz de administración de LiteLLM', description: 'Documentación oficial que indica que el SSO es gratuito hasta 5 usuarios desde la v1.76.0 y que se requiere una licencia enterprise a partir de ahí.' },
         ],
       },
       relatedReading: {
@@ -1052,19 +1106,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores e equipes de plataforma que roteiam o tráfego de aplicações por várias APIs de provedores de LLM através de uma única interface',
     primaryTerm: 'LiteLLM',
     title: 'LiteLLM: um único gateway para mais de 100 APIs de LLM',
-    seoTitle: 'LiteLLM: gateway para 100+ APIs de LLM',
+    seoTitle: 'LiteLLM: gateway para mais de 100 APIs de LLM e preços',
     intro: 'O LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), documentação em [docs.litellm.ai](https://docs.litellm.ai)) é um gateway de LLM de código aberto que oferece ao seu código uma única interface compatível com OpenAI para chamar mais de 100 APIs de provedores diferentes — OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Ollama e muitos outros — em vez de escrever código de integração separado para cada um. Ele é distribuído de duas formas: um SDK Python importável (`pip install litellm`) e um servidor proxy auto-hospedado com painel de administração, implantável via Docker, Helm, AWS ECS Fargate ou Google Cloud Run. Esta análise cobre o que o LiteLLM realmente faz, como instalar e operar os dois modos, sua licença (que não é simplesmente "MIT" para todo o repositório) e como ele se posiciona ao lado do vLLM, LocalAI e serviços de roteamento hospedados como o OpenRouter.',
-    metaDescription: 'LiteLLM é um gateway de LLM de código aberto (MIT, com uma exceção enterprise separada) que unifica mais de 100 APIs de provedores atrás de uma interface compatível com OpenAI. SDK e proxy para 2026.',
+    metaDescription: 'LiteLLM: gateway de LLM de código aberto (núcleo MIT, licença enterprise separada) que unifica 100+ APIs de provedores com interface compatível OpenAI.',
     readTime: '12 min de leitura',
     targetKeywords: [
       'LiteLLM análise',
@@ -1073,20 +1128,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gateway de LLM auto-hospedado',
       'LiteLLM instalação Docker',
     ],
-    leadAnswerBlock: '**O LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) é um gateway de código aberto que permite ao seu código chamar mais de 100 APIs de provedores de LLM através de uma única interface compatível com OpenAI, em vez de escrever código de integração separado para cada provedor.** Ele é distribuído como um SDK Python (`pip install litellm`) para uso direto dentro de uma aplicação, e como um servidor proxy auto-hospedado com um painel de administração de chaves virtuais, voltado para equipes que querem roteamento centralizado, rastreamento de custos e limitação de taxa entre várias aplicações e usuários. O repositório principal tem licença MIT segundo seu próprio arquivo LICENSE, com uma exceção de licença enterprise separada que se aplica somente ao subdiretório `enterprise/` — verificado diretamente no arquivo LICENSE do repositório para esta análise. No momento desta análise, o GitHub mostra aproximadamente 58.663 estrelas e 11.415 forks.',
+    leadAnswerBlock: '**O LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) é um gateway de código aberto que permite ao seu código chamar mais de 100 APIs de provedores de LLM através de uma única interface compatível com OpenAI, em vez de escrever código de integração separado para cada provedor.**',
     quickAnswerTop: {
       pt: {
         question: 'O que é o LiteLLM e preciso de uma GPU para executá-lo?',
         answer: 'O LiteLLM é um gateway de código aberto que unifica mais de 100 APIs de provedores de LLM atrás de uma única interface compatível com OpenAI, com roteamento de requisições, fallback, rastreamento de custos e limitação de taxa. Não — o LiteLLM não precisa de GPU. É um roteador que encaminha requisições para APIs de provedores externos (ou para um runtime local como o Ollama); ele não executa os pesos do modelo por si só, então funciona bem em hardware apenas com CPU.',
         bullets: [
-          'Código aberto no GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), aproximadamente 58.663 estrelas e 11.415 forks no momento desta análise (2026-09)',
+          'Código aberto no GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm)), mais de ' + st.pt('litellm', 'bare') + ' estrelas no momento desta análise',
           'Licença do repositório principal: MIT, segundo seu próprio arquivo LICENSE — uma exceção de licença enterprise separada se aplica somente ao subdiretório `enterprise/`',
           'Duas formas de uso: o SDK Python `litellm`, e um servidor proxy auto-hospedado (`litellm[proxy]`) com interface de administração em `/ui`',
           'Roteia chamadas para mais de 100 provedores (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama e muitos outros) atrás de um único formato de requisição/resposta compatível com OpenAI',
           'Não exige GPU — é um roteador de requisições, não um motor de inferência; implantações de proxy em produção precisam de PostgreSQL e Redis, não de GPU',
           'Implantável via Docker, charts Helm, AWS ECS Fargate (módulo Terraform oficial), Google Cloud Run (módulo Terraform oficial), ou botões de implantação em um clique no Render/Railway',
+          'Versão mais recente: v1.106.3; última atualização do projeto: ' + lastUpdate('pt'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1112,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Se o seu app precisa falar com a OpenAI hoje e com a Anthropic ou um modelo Ollama local amanhã, normalmente você teria que reescrever o código de integração para cada um. O LiteLLM fica no meio e traduz a API de cada provedor para o mesmo formato estilo OpenAI, então seu código só precisa aprender um formato — e a versão proxy ainda adiciona um painel para ver quem está gastando o quê.' },
         ],
         items: [
-          'Código aberto no [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); aproximadamente 58.663 estrelas e 11.415 forks no momento desta análise',
+          'Código aberto no [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm); mais de ' + st.pt('litellm', 'bare') + ' estrelas no momento desta análise',
           'O repositório principal tem licença MIT segundo seu próprio arquivo LICENSE; uma licença separada se aplica somente ao subdiretório `enterprise/`, verificado diretamente no arquivo LICENSE para esta análise',
           'Dois produtos: o **SDK Python `litellm`** (`pip install litellm`) para chamar provedores diretamente do código, e o **LiteLLM Proxy Server** (`pip install \'litellm[proxy]\'`, ou Docker) como gateway auto-hospedado com painel de administração',
           'Unifica mais de 100 APIs de provedores (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama e mais) atrás de um único formato de requisição/resposta, segundo o próprio README do projeto',
@@ -1125,7 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'O que é o LiteLLM?',
-        content: '**O LiteLLM é um gateway que traduz um único formato de requisição compatível com OpenAI em chamadas para mais de 100 APIs de provedores de LLM diferentes.** Seu próprio [README no GitHub](https://github.com/BerriAI/litellm) o descreve como "o gateway de IA mais rápido e mais leve", construído com um núcleo em Rust e um SDK Python por cima — uma mudança em relação à implementação puramente em Python dos primeiros anos do projeto. Em vez de escrever código de cliente separado para a API da OpenAI, a API da Anthropic e um servidor Ollama local, uma aplicação chama o LiteLLM uma vez, e o LiteLLM encaminha a requisição para o provedor configurado para aquele nome de modelo.',
+        content: '**O LiteLLM é um gateway que traduz um único formato de requisição compatível com OpenAI em chamadas para mais de 100 APIs de provedores de LLM diferentes.** A descrição do seu [repositório no GitHub](https://github.com/BerriAI/litellm) o apresenta como "o gateway de IA mais rápido e mais leve", construído com um núcleo em Rust e um SDK Python por cima — uma mudança em relação à implementação puramente em Python dos primeiros anos do projeto. Em vez de escrever código de cliente separado para a API da OpenAI, a API da Anthropic e um servidor Ollama local, uma aplicação chama o LiteLLM uma vez, e o LiteLLM encaminha a requisição para o provedor configurado para aquele nome de modelo.',
         items: [
           'Função principal: aceitar uma requisição no formato `chat/completions` da OpenAI (ou no formato nativo do provedor de destino), encaminhá-la ao provedor configurado e retornar uma resposta normalizada',
           'Dois modos de acesso: o SDK Python `litellm`, importado diretamente no código de uma aplicação, e o LiteLLM Proxy Server, um serviço independente que outras aplicações chamam via HTTP',
@@ -1195,6 +1251,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Você continua pagando o provedor para o qual está roteando — o LiteLLM não reduz os preços das APIs da OpenAI, Anthropic ou Bedrock, apenas os unifica e registra',
           'Auto-hospedar o proxy tem seu próprio custo de infraestrutura: um servidor ou host de contêiner, mais PostgreSQL e Redis para uso em produção',
           'O LiteLLM Enterprise adiciona SSO, suporte prioritário e outras funcionalidades empresariais sobre o mesmo núcleo de código aberto, segundo [litellm.ai/enterprise](https://litellm.ai/enterprise) — os preços não são publicados e exigem contato com a empresa',
+          'Os preços do Enterprise são anuais e dimensionados conforme a capacidade de requisições do gateway, a arquitetura de implantação e as necessidades de suporte, nunca por token, segundo [litellm.ai/pricing](https://www.litellm.ai/pricing); há uma chave de teste Enterprise de 30 dias e as cotações vêm da equipe comercial',
+          'O login único (SSO) é gratuito para até 5 usuários a partir da versão v1.76.0; acima disso, é necessária uma licença enterprise, segundo a [documentação de SSO do LiteLLM](https://docs.litellm.ai/docs/proxy/admin_ui_sso)',
         ],
         note: 'O próprio arquivo LICENSE do repositório declara que o conteúdo fora do diretório `enterprise/` tem licença MIT, e que tudo dentro de `enterprise/` (se esse diretório existir no seu checkout) tem licença separada definida em `enterprise/LICENSE` — verificado diretamente no arquivo LICENSE do repositório para esta análise. Essa é uma afirmação mais restrita e precisa do que dizer que o projeto inteiro é "apenas MIT" — confira você mesmo o arquivo LICENSE antes de redistribuir ou construir um produto comercial sobre código vindo especificamente do caminho `enterprise/`.',
       },
@@ -1241,8 +1299,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. outros gateways e frameworks',
-        content: 'No momento desta análise, o LiteLLM é a primeira ferramenta da categoria roteador/gateway com uma análise dedicada própria no [Diretório de Software LLM Local](/pt/directory) da PromptQuorum — ainda não existe uma segunda ferramenta do mesmo segmento (roteador/gateway) para uma comparação direta. As comparações úteis mais próximas vêm, em vez disso, de ferramentas adjacentes na mesma seção "Run & Serve" do diretório, além de uma alternativa hospedada amplamente conhecida fora do diretório.',
+        content: 'O LiteLLM pertence ao segmento de roteadores e gateways do [Diretório de Software LLM Local](/pt/directory) da PromptQuorum, que tem outras três análises dedicadas, listadas primeiro abaixo. As demais comparações vêm de ferramentas adjacentes da mesma parte "Run & Serve" do diretório, mais uma alternativa hospedada bastante conhecida fora do diretório.',
         items: [
+          '**[Plano](/pt/power-local-llm/plano-review)** — um proxy de IA auto-hospedado baseado em Envoy e plano de dados para aplicações com agentes, com roteamento de LLM, observabilidade e guardrails (Apache-2.0).',
+          '**[ClawRouter](/pt/power-local-llm/clawrouter-review)** — um roteador de LLM auto-hospedado, voltado a agentes, que toma as decisões de roteamento localmente entre modelos de ponta e modelos open-weight gratuitos (MIT).',
+          '**[AIClient2API](/pt/power-local-llm/aiclient2api-review)** — um proxy auto-hospedado que converte os protocolos de cliente do Gemini CLI, Codex, Grok, Kiro e Antigravity em uma única API compatível com OpenAI (GPL-3.0).',
           '**[vLLM](/pt/power-local-llm/vllm-explained)** — um motor de inferência auto-hospedado que realmente serve os pesos do modelo (exige GPU); comumente combinado com o LiteLLM em vez de competir com ele, com o LiteLLM como camada de roteamento na frente de uma ou mais implantações do vLLM.',
           '**[LocalAI](/pt/power-local-llm/localai-explained)** — um servidor de API auto-hospedado e compatível com OpenAI para executar modelos abertos localmente; resolve um problema diferente do LiteLLM (servir vs. rotear), mas expõe uma API de formato OpenAI semelhante, fonte comum de confusão entre os dois.',
           '**[LangChain](/pt/power-local-llm/langchain-review)** — um framework de aplicação para construir apps baseados em LLM (chains, agentes, memória); pode chamar o LiteLLM (ou diretamente qualquer provedor) como sua camada de acesso a modelos, em vez de substituir o que o LiteLLM faz.',
@@ -1278,14 +1339,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é o LiteLLM?', a: 'O LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) é um gateway de código aberto que permite às aplicações chamar mais de 100 APIs de provedores de LLM através de uma única interface compatível com OpenAI, disponível como SDK Python ou como servidor proxy auto-hospedado com roteamento, rastreamento de custos e limitação de taxa.' },
-          { q: 'O LiteLLM é gratuito?', a: 'O SDK de código aberto e o Proxy Server são gratuitos — você paga apenas pelas chamadas de API do provedor subjacente e sua própria hospedagem. Um nível pago separado, o LiteLLM Enterprise, adiciona SSO e suporte dedicado; seus preços não são publicados e exigem contato direto com o LiteLLM.' },
+          { q: 'O LiteLLM é gratuito?', a: 'O SDK de código aberto e o Proxy Server são gratuitos — você paga apenas pelas chamadas de API do provedor subjacente e sua própria hospedagem. O nível pago LiteLLM Enterprise adiciona SSO acima de cinco usuários, logs de auditoria e suporte 24/7 com SLA; ele é vendido anualmente sob cotação, dimensionado pela capacidade de requisições e nunca por token. Há uma chave de teste de 30 dias; não há preços publicados.' },
+          { q: 'O LiteLLM é adequado para uso empresarial?', a: 'Sim. O núcleo sob licença MIT (tudo fora de `enterprise/`) pode ser usado comercialmente, e as equipes o executam como gateway interno compartilhado, com chaves virtuais, orçamentos e rastreamento de gastos. SSO acima de cinco usuários, SCIM, logs de auditoria e suporte com SLA exigem a licença paga Enterprise; a página dela cita SOC 2 Type 2 e ISO 27001 (declaração do fornecedor, não verificada aqui). A conformidade com a LGPD depende dos provedores para os quais você roteia e da sua configuração; isto não é aconselhamento jurídico, consulte seu encarregado de proteção de dados.' },
           { q: 'Qual licença o LiteLLM usa?', a: 'O repositório principal tem licença MIT, segundo seu próprio arquivo LICENSE. Uma licença separada se aplica somente ao subdiretório `enterprise/`, definida em `enterprise/LICENSE` — verificado diretamente no arquivo LICENSE do repositório para esta análise.' },
           { q: 'O LiteLLM precisa de GPU?', a: 'Não. O LiteLLM é um roteador de requisições, não um motor de inferência de modelo — ele encaminha chamadas para provedores (APIs na nuvem ou runtimes locais como o Ollama) em vez de executar ele mesmo os pesos do modelo, então funciona bem em hardware apenas com CPU.' },
           { q: 'Como instalo o LiteLLM?', a: 'Para o SDK Python: `pip install litellm`. Para o proxy auto-hospedado: `pip install \'litellm[proxy]\'` e depois `litellm --model gpt-4o`, ou execute a imagem Docker `docker.litellm.ai/berriai/litellm:latest` com um `config.yaml` montado. Veja a tabela de instalação acima para as opções Helm, AWS ECS Fargate e Google Cloud Run.' },
           { q: 'O proxy do LiteLLM exige um banco de dados?', a: 'Para uso em produção, sim — o PostgreSQL persiste as chaves virtuais e os dados de gastos, e o Redis mantém a limitação de taxa consistente entre várias instâncias do proxy, segundo a própria documentação de implantação do LiteLLM. Um teste local rápido pode rodar sem nenhum dos dois, mas perde essas funcionalidades.' },
           { q: 'O LiteLLM pode rotear para um modelo hospedado localmente?', a: 'Sim. A mesma `model_list` no `config.yaml` que aponta para a OpenAI ou Anthropic pode igualmente apontar para um endpoint local do [Ollama](https://ollama.com) ou [vLLM](/pt/power-local-llm/vllm-explained), permitindo que um gateway misture modelos na nuvem e locais.' },
           { q: 'Como o LiteLLM se compara ao OpenRouter?', a: 'Ambos unificam vários provedores de LLM atrás de uma interface. O LiteLLM é infraestrutura auto-hospedada que você mesmo opera (proxy ou SDK de código aberto); o OpenRouter é um serviço de roteamento hospedado por terceiros que você chama em vez de operar o seu próprio. A escolha depende de você querer zero operação própria (OpenRouter) ou controle total sem markup por requisição de um provedor de roteamento (LiteLLM auto-hospedado).' },
-          { q: 'Quem desenvolve o LiteLLM?', a: 'A BerriAI, organização por trás do repositório [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), que mostra aproximadamente 58.663 estrelas e 11.415 forks no momento desta análise.' },
+          { q: 'Quem desenvolve o LiteLLM?', a: 'A BerriAI, organização por trás do repositório [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), que mostra mais de ' + st.pt('litellm', 'bare') + ' estrelas no momento desta análise.' },
         ],
       },
       sources: {
@@ -1299,6 +1361,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'Início rápido Docker do LiteLLM', description: 'Comando docker run oficial, nome da imagem e detalhes de login na interface de administração usados na seção de instalação desta análise.' },
           { url: 'https://pypi.org/project/litellm/', title: 'litellm no PyPI', description: 'Página oficial do pacote mostrando a versão atual e o histórico de versões do pacote Python litellm.' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: 'A própria página do projeto descrevendo o nível pago Enterprise (SSO, funcionalidades prioritárias, suporte dedicado).' },
+          { url: 'https://www.litellm.ai/pricing', title: 'Preços do LiteLLM', description: 'Página oficial de preços: nível de código aberto auto-hospedado gratuito, preços Enterprise anuais sob cotação (não por token) e chave de teste Enterprise de 30 dias.' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'Documentação de SSO na interface de administração do LiteLLM', description: 'Documentação oficial que informa que o SSO é gratuito para até 5 usuários desde a v1.76.0 e exige licença enterprise acima disso.' },
         ],
       },
       relatedReading: {
@@ -1314,12 +1378,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: '複数のLLMプロバイダーAPIへのアプリケーショントラフィックを単一インターフェースでルーティングする開発者とプラットフォームチーム',
     primaryTerm: 'LiteLLM',
@@ -1335,20 +1400,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'セルフホスト LLM ゲートウェイ',
       'LiteLLM Docker 設定',
     ],
-    leadAnswerBlock: '**LiteLLM（[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)）は、プロバイダーごとに個別の統合コードを書く代わりに、コードから100以上のLLMプロバイダーAPIを単一のOpenAI互換インターフェースで呼び出せるようにするオープンソースのゲートウェイです。** アプリケーション内で直接使うPython SDK（`pip install litellm`）として、または複数のアプリやユーザーにまたがる集中ルーティング・コスト追跡・レート制限を求めるチーム向けに、仮想キー管理ダッシュボード付きのセルフホスト型プロキシサーバーとして提供されます。コアリポジトリは自身のLICENSEファイルによればMITライセンスであり、`enterprise/`サブディレクトリにのみ適用される別のエンタープライズライセンス例外があります — 本レビューではリポジトリのLICENSEファイルを直接確認して検証しました。本レビュー時点でGitHubは約58,663のスターと11,415のフォークを示しています。',
+    leadAnswerBlock: '**LiteLLM（[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)）は、プロバイダーごとに個別の統合コードを書く代わりに、コードから100以上のLLMプロバイダーAPIを単一のOpenAI互換インターフェースで呼び出せるようにするオープンソースのゲートウェイです。**',
     quickAnswerTop: {
       ja: {
         question: 'LiteLLMとは何か、実行にGPUは必要か？',
         answer: 'LiteLLMは、リクエストルーティング、フォールバック、コスト追跡、レート制限を備え、100以上のLLMプロバイダーAPIを単一のOpenAI互換インターフェースの背後に統合するオープンソースのゲートウェイです。いいえ — LiteLLMにGPUは不要です。外部プロバイダーAPI（またはOllamaのようなローカルランタイム）にリクエストを転送するルーターであり、自らモデルの重みを実行するわけではないため、CPUのみのハードウェアでも問題なく動作します。',
         bullets: [
-          'GitHub（[BerriAI/litellm](https://github.com/BerriAI/litellm)）でオープンソース公開、本レビュー時点（2026年9月）で約58,663スター、11,415フォーク',
+          'GitHub（[BerriAI/litellm](https://github.com/BerriAI/litellm)）でオープンソース公開、本レビュー時点で' + st.ja('litellm', 'bare') + '以上のスター',
           'コアリポジトリのライセンス：リポジトリ自身のLICENSEファイルによればMIT — 別途エンタープライズライセンス例外が`enterprise/`サブディレクトリにのみ適用される',
           '2つの利用方法：Python SDKの`litellm`、そして`/ui`に管理UIを持つセルフホスト型プロキシサーバー（`litellm[proxy]`）',
           '100以上のプロバイダー（OpenAI、Anthropic、Google Gemini、AWS Bedrock、Azure OpenAI、Ollamaなど）への呼び出しを、単一のOpenAI互換リクエスト/レスポンス形式の背後でルーティング',
           'GPU不要 — モデル推論エンジンではなくリクエストルーターであり、本番プロキシ展開にはGPUではなくPostgreSQLとRedisが必要',
           'Docker、Helmチャート、AWS ECS Fargate（公式Terraformモジュール）、Google Cloud Run（公式Terraformモジュール）、またはRender/Railwayのワンクリックデプロイボタン経由でデプロイ可能',
+          '最新タグ付きリリース：v1.106.3、プロジェクトの最終更新：' + lastUpdate('ja'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1374,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'アプリが今日はOpenAIと話し、明日はAnthropicやローカルのOllamaモデルと話す必要がある場合、通常はそれぞれ統合コードを書き直すことになります。LiteLLMはその間に入り、各プロバイダーのAPIを同じOpenAI風の形式に変換するので、コード側は1つの形式だけ覚えればよく、プロキシ版ではさらに誰が何にいくら使っているかを見るダッシュボードが付きます。' },
         ],
         items: [
-          '[GitHub](https://github.com/BerriAI/litellm)（BerriAI/litellm）でオープンソース公開。本レビュー時点で約58,663スター、11,415フォーク',
+          '[GitHub](https://github.com/BerriAI/litellm)（BerriAI/litellm）でオープンソース公開。本レビュー時点で' + st.ja('litellm', 'bare') + '以上のスター',
           'コアリポジトリはリポジトリ自身のLICENSEファイルによればMITライセンス。別のライセンスが`enterprise/`サブディレクトリにのみ適用される — 本レビューではLICENSEファイルを直接確認して検証',
           '2つの製品：コードから直接プロバイダーを呼び出す**Python SDKの`litellm`**（`pip install litellm`）と、管理ダッシュボード付きのセルフホスト型ゲートウェイである**LiteLLM Proxy Server**（`pip install \'litellm[proxy]\'`またはDocker）',
           'プロジェクト自身のREADMEによれば、100以上のプロバイダーAPI（OpenAI、Anthropic、Google Gemini、AWS Bedrock、Azure OpenAI、Ollamaなど）を単一のリクエスト/レスポンス形式の背後に統合',
@@ -1387,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'LiteLLMとは何か？',
-        content: '**LiteLLMは、単一のOpenAI互換リクエスト形式を100以上の異なるLLMプロバイダーAPIへの呼び出しに変換するゲートウェイです。** 自身の[GitHub README](https://github.com/BerriAI/litellm)では「最速・最軽量のAIゲートウェイ」と説明されており、Rustコアの上にPython SDKを載せた構成になっています — これはプロジェクト初期の純Python実装からの変化です。OpenAI API、Anthropic API、ローカルのOllamaサーバーそれぞれに個別のクライアントコードを書く代わりに、アプリケーションはLiteLLMを一度呼び出すだけで、LiteLLMがそのモデル名に設定されたプロバイダーへリクエストを転送します。',
+        content: '**LiteLLMは、単一のOpenAI互換リクエスト形式を100以上の異なるLLMプロバイダーAPIへの呼び出しに変換するゲートウェイです。** 自身の[GitHubリポジトリの説明文](https://github.com/BerriAI/litellm)では「最速・最軽量のAIゲートウェイ」と説明されており、Rustコアの上にPython SDKを載せた構成になっています — これはプロジェクト初期の純Python実装からの変化です。OpenAI API、Anthropic API、ローカルのOllamaサーバーそれぞれに個別のクライアントコードを書く代わりに、アプリケーションはLiteLLMを一度呼び出すだけで、LiteLLMがそのモデル名に設定されたプロバイダーへリクエストを転送します。',
         items: [
           '中核機能：OpenAIの`chat/completions`形式（または対象プロバイダーのネイティブ形式）でリクエストを受け取り、設定済みのプロバイダーに転送し、正規化されたレスポンスを返す',
           '2つのアクセス方法：アプリケーションのコードに直接インポートするPython SDK `litellm`と、他のアプリケーションがHTTP経由で呼び出す独立サービスのLiteLLM Proxy Server',
@@ -1457,6 +1523,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ルーティング先のプロバイダーへの支払いは引き続き発生する — LiteLLMはOpenAI、Anthropic、Bedrockの料金を下げるわけではなく、統合し記録するだけ',
           'プロキシのセルフホストには独自のインフラコストがかかる：サーバーまたはコンテナホスト、加えて本番利用にはPostgreSQLとRedis',
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)によれば、LiteLLM Enterpriseは同じオープンソースコアの上にSSO、優先サポート、その他のビジネス機能を追加する — 料金は公開されておらず、企業への問い合わせが必要',
+          'Enterpriseの料金は年額で、ゲートウェイのリクエスト容量、デプロイ構成、サポート要件に応じて決まり、トークン単位ではありません（[litellm.ai/pricing](https://www.litellm.ai/pricing)より）。30日間のEnterpriseトライアルキーが用意されており、見積もりは営業窓口経由です',
+          'シングルサインオン（SSO）はv1.76.0以降、5ユーザーまで無料で、それを超える場合はエンタープライズライセンスが必要です（[LiteLLMのSSOドキュメント](https://docs.litellm.ai/docs/proxy/admin_ui_sso)より）',
         ],
         note: 'リポジトリ自身のLICENSEファイルには、`enterprise/`ディレクトリ外のコンテンツはMITライセンスであり、`enterprise/`内のすべて（そのディレクトリがチェックアウトに存在する場合）は`enterprise/LICENSE`の下で別途ライセンスされると記載されています — 本レビューではリポジトリのLICENSEファイルを直接確認して検証しました。これはプロジェクト全体を「単にMIT」と言うよりも狭く、正確な主張です — `enterprise/`パス由来のコードを再配布したり、それを基に商用製品を構築したりする前に、LICENSEファイル自体を確認してください。',
       },
@@ -1503,8 +1571,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. 他のゲートウェイとフレームワーク',
-        content: '本レビュー時点で、LiteLLMはPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)において専用レビューを持つ最初のルーター/ゲートウェイカテゴリーのツールです — 直接比較できる同一セグメント（ルーター/ゲートウェイ）の2つ目のツールはまだありません。代わりに、ディレクトリ内の同じ「Run & Serve」区分にある近接ツール、そしてディレクトリ外のよく知られたホスト型代替サービスが、最も有用な比較対象になります。',
+        content: 'LiteLLMは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)のルーター/ゲートウェイ分野に属します。同じ分野にはほかに3件の専用レビューがあり、下に最初に挙げています。残りの比較は、ディレクトリ内の同じ「Run & Serve」領域にある隣接ツールと、ディレクトリ外のよく知られたホスト型の代替サービスです。',
         items: [
+          '**[Plano](/ja/power-local-llm/plano-review)** — エージェント型アプリ向けの、Envoyベースのセルフホスト型AIプロキシ兼データプレーンで、LLMルーティング、可観測性、ガードレールを備えます（Apache-2.0）。',
+          '**[ClawRouter](/ja/power-local-llm/clawrouter-review)** — エージェント向けに設計されたセルフホスト型LLMルーターで、ルーティングの判断をローカルで行い、先端モデルと無料のオープンウェイトモデルに振り分けます（MIT）。',
+          '**[AIClient2API](/ja/power-local-llm/aiclient2api-review)** — Gemini CLI、Codex、Grok、Kiro、Antigravityのクライアントプロトコルを単一のOpenAI互換APIに変換する、セルフホスト型プロキシです（GPL-3.0）。',
           '**[vLLM](/ja/power-local-llm/vllm-explained)** — 実際にモデルの重みを提供するセルフホスト型推論エンジン（GPU必須）。LiteLLMと競合するというより組み合わせて使われることが多く、LiteLLMが1つ以上のvLLMデプロイの手前でルーティング層として機能する。',
           '**[LocalAI](/ja/power-local-llm/localai-explained)** — オープンモデルをローカルで実行するための、セルフホスト型でOpenAI互換のAPIサーバー。LiteLLMとは異なる問題（提供 vs. ルーティング）を解決するが、似たOpenAI形式のAPIを公開しており、両者の混同の一般的な原因となっている。',
           '**[LangChain](/ja/power-local-llm/langchain-review)** — チェーン、エージェント、メモリなどLLM搭載アプリを構築するためのアプリケーションフレームワーク。LiteLLMが行うことを置き換えるのではなく、モデルアクセス層としてLiteLLM（または任意のプロバイダーを直接）を呼び出せる。',
@@ -1540,14 +1611,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'LiteLLMとは何ですか？', a: 'LiteLLM（[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)）は、アプリケーションが単一のOpenAI互換インターフェースで100以上のLLMプロバイダーAPIを呼び出せるようにするオープンソースのゲートウェイで、Python SDKとして、またはルーティング・コスト追跡・レート制限を備えたセルフホスト型プロキシサーバーとして利用できます。' },
-          { q: 'LiteLLMは無料ですか？', a: 'オープンソースのSDKとProxy Serverは無料です — 基盤プロバイダーAPI呼び出しの費用と自身のホスティング費用のみ支払います。別途有償のLiteLLM EnterpriseティアがSSOと専任サポートを追加しますが、料金は公開されておらず、LiteLLMへの直接問い合わせが必要です。' },
+          { q: 'LiteLLMは無料ですか？', a: 'オープンソースのSDKとProxy Serverは無料です — 基盤プロバイダーAPI呼び出しの費用と自身のホスティング費用のみ支払います。有償のLiteLLM Enterpriseは、5ユーザーを超えるSSO、監査ログ、SLA付きの24時間365日サポートを追加します。料金は年額の見積もり制で、リクエスト容量に応じて決まり、トークン単位ではありません。30日間のトライアルキーがありますが、料金は公開されていません。' },
+          { q: 'LiteLLMは企業での利用に向いていますか？', a: 'はい。MITライセンスのコア（`enterprise/`以外のすべて）は商用利用でき、チームは仮想キー、予算、支出追跡を備えた共有の社内ゲートウェイとして運用しています。5ユーザーを超えるSSO、SCIM、監査ログ、SLA付きサポートには有償のEnterpriseライセンスが必要で、そのページにはSOC 2 Type 2とISO 27001が記載されています（ベンダーの表明であり、本レビューでは未検証）。データ保護規制への適合は、ルーティング先のプロバイダーと設定次第です。これは法的助言ではありません。データ保護の担当者にご確認ください。' },
           { q: 'LiteLLMはどのライセンスを使っていますか？', a: 'コアリポジトリは、リポジトリ自身のLICENSEファイルによればMITライセンスです。`enterprise/`サブディレクトリにのみ別のライセンスが`enterprise/LICENSE`の下で適用されます — 本レビューではリポジトリのLICENSEファイルを直接確認して検証しました。' },
           { q: 'LiteLLMにGPUは必要ですか？', a: 'いいえ。LiteLLMはモデル推論エンジンではなくリクエストルーターです — 自らモデルの重みを実行するのではなく、プロバイダー（クラウドAPIやOllamaのようなローカルランタイム）へ呼び出しを転送するため、CPUのみのハードウェアでも問題なく動作します。' },
           { q: 'LiteLLMのインストール方法は？', a: 'Python SDKの場合：`pip install litellm`。セルフホスト型プロキシの場合：`pip install \'litellm[proxy]\'`の後`litellm --model gpt-4o`を実行するか、`config.yaml`をマウントしてDockerイメージ`docker.litellm.ai/berriai/litellm:latest`を実行します。Helm、AWS ECS Fargate、Google Cloud Runのオプションは上のインストール表を参照してください。' },
           { q: 'LiteLLMプロキシにはデータベースが必要ですか？', a: '本番利用でははい — LiteLLM自身のデプロイドキュメントによれば、PostgreSQLが仮想キーと支出データを永続化し、Redisが複数のプロキシインスタンス間でレート制限を一貫させます。簡単なローカルテストであればどちらもなしで動作しますが、それらの機能は失われます。' },
           { q: 'LiteLLMはローカルにホストされたモデルへルーティングできますか？', a: 'はい。OpenAIやAnthropicを指す`config.yaml`の同じ`model_list`が、ローカルの[Ollama](https://ollama.com)や[vLLM](/ja/power-local-llm/vllm-explained)エンドポイントを同様に指すことができ、1つのゲートウェイでクラウドモデルとローカルモデルを混在させられます。' },
           { q: 'LiteLLMはOpenRouterとどう比較されますか？', a: 'どちらも複数のLLMプロバイダーを単一インターフェースの背後に統合します。LiteLLMは自分で運用するセルフホスト型インフラ（オープンソースのプロキシまたはSDK）であり、OpenRouterは自前で運用する代わりに呼び出すサードパーティのホスト型ルーティングサービスです。ゼロ運用（OpenRouter）を望むか、ルータープロバイダーによるリクエストあたりのマークアップなしの完全な制御（セルフホスト型LiteLLM）を望むかで選択します。' },
-          { q: 'LiteLLMは誰が開発していますか？', a: '[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)リポジトリを運営する組織BerriAIです。本レビュー時点で約58,663スター、11,415フォークを示しています。' },
+          { q: 'LiteLLMは誰が開発していますか？', a: '[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)リポジトリを運営する組織BerriAIです。本レビュー時点で' + st.ja('litellm', 'bare') + '以上のスターを示しています。' },
         ],
       },
       sources: {
@@ -1561,6 +1633,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'LiteLLM Docker クイックスタート', description: '本レビューのインストールセクションで使用した公式のdocker runコマンド、イメージ名、管理UIログイン情報。' },
           { url: 'https://pypi.org/project/litellm/', title: 'PyPI上のlitellm', description: 'Pythonパッケージlitellmの現在のリリースバージョンとリリース履歴を示す公式パッケージページ。' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: '有償Enterpriseティア（SSO、優先機能、専任サポート）を説明するプロジェクト自身のページ。' },
+          { url: 'https://www.litellm.ai/pricing', title: 'LiteLLMの料金ページ', description: '公式の料金ページ。無料のセルフホスト型オープンソース版、年額・見積もり制のEnterprise料金（トークン単位ではない）、30日間のEnterpriseトライアルキーについて記載。' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'LiteLLM管理UIのSSOドキュメント', description: 'v1.76.0以降、SSOは5ユーザーまで無料で、それを超えるとエンタープライズライセンスが必要になると記載する公式ドキュメント。' },
         ],
       },
       relatedReading: {
@@ -1576,12 +1650,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: '需要通过单一接口将应用流量路由到多个LLM提供商API的开发者与平台团队',
     primaryTerm: 'LiteLLM',
@@ -1597,20 +1672,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '自托管LLM网关',
       'LiteLLM Docker 部署',
     ],
-    leadAnswerBlock: '**LiteLLM（[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)）是一个开源网关，让你的代码通过单一的OpenAI兼容接口调用100多个LLM提供商API，而不必为每个提供商编写单独的集成代码。** 它既可作为Python SDK（`pip install litellm`）直接嵌入应用代码使用，也可作为带虚拟密钥管理仪表盘的自托管代理服务器，面向需要跨多个应用和用户实现集中路由、成本追踪与速率限制的团队。核心仓库根据其自身LICENSE文件采用MIT许可，另有单独的企业许可例外仅适用于`enterprise/`子目录——本评测已直接核对仓库的LICENSE文件加以验证。截至本评测时，GitHub显示约58,663个星标和11,415个fork。',
+    leadAnswerBlock: '**LiteLLM（[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)）是一个开源网关，让你的代码通过单一的OpenAI兼容接口调用100多个LLM提供商API，而不必为每个提供商编写单独的集成代码。**',
     quickAnswerTop: {
       zh: {
         question: 'LiteLLM是什么？运行它需要GPU吗？',
         answer: 'LiteLLM是一个开源网关，将100多个LLM提供商API统一在单一的OpenAI兼容接口之后，具备请求路由、故障转移、成本追踪和速率限制功能。不需要——LiteLLM不需要GPU。它是一个将请求转发给外部提供商API（或Ollama这类本地运行时）的路由器，本身并不执行模型权重，因此在纯CPU硬件上也能正常运行。',
         bullets: [
-          '在GitHub（[BerriAI/litellm](https://github.com/BerriAI/litellm)）开源，截至本评测（2026年9月）约有58,663个星标和11,415个fork',
+          '在GitHub（[BerriAI/litellm](https://github.com/BerriAI/litellm)）开源，截至本评测超过' + st.zh('litellm', 'bare') + '个星标',
           '核心仓库许可协议：根据仓库自身的LICENSE文件为MIT——另有单独的企业许可例外仅适用于`enterprise/`子目录',
           '两种使用方式：Python SDK `litellm`，以及带`/ui`管理界面的自托管代理服务器（`litellm[proxy]`）',
           '在统一的OpenAI兼容请求/响应格式之后，将调用路由到100多个提供商（OpenAI、Anthropic、Google Gemini、AWS Bedrock、Azure OpenAI、Ollama等）',
           '无需GPU——它是请求路由器，而非模型推理引擎；生产环境的代理部署需要PostgreSQL和Redis，而非GPU',
           '可通过Docker、Helm charts、AWS ECS Fargate（官方Terraform模块）、Google Cloud Run（官方Terraform模块）或Render/Railway一键部署按钮进行部署',
+          '最新标记版本：v1.106.3；项目最近一次更新：' + lastUpdate('zh'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1636,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '如果你的应用今天要对接OpenAI，明天又要对接Anthropic或本地的Ollama模型，通常你得为每一个重写集成代码。LiteLLM居中充当翻译层，把每个提供商的API都转换成同一种类OpenAI格式，这样你的代码只需学会一种格式——而代理版本还额外提供一个仪表盘，用来查看谁花了多少钱。' },
         ],
         items: [
-          '在[GitHub](https://github.com/BerriAI/litellm)（BerriAI/litellm）开源；截至本评测约有58,663个星标和11,415个fork',
+          '在[GitHub](https://github.com/BerriAI/litellm)（BerriAI/litellm）开源；截至本评测超过' + st.zh('litellm', 'bare') + '个星标',
           '核心仓库根据其自身LICENSE文件采用MIT许可；另有单独许可仅适用于`enterprise/`子目录——本评测已直接核对LICENSE文件加以验证',
           '两款产品：**Python SDK `litellm`**（`pip install litellm`），用于直接从代码调用提供商；以及**LiteLLM Proxy Server**（`pip install \'litellm[proxy]\'`或Docker），作为带管理仪表盘的自托管网关',
           '根据项目自身README，将100多个提供商API（OpenAI、Anthropic、Google Gemini、AWS Bedrock、Azure OpenAI、Ollama等）统一在同一请求/响应格式之后',
@@ -1649,7 +1725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'LiteLLM是什么？',
-        content: '**LiteLLM是一个网关，将单一的OpenAI兼容请求格式转换为对100多个不同LLM提供商API的调用。** 它自身的[GitHub README](https://github.com/BerriAI/litellm)将其描述为"最快、最轻量的AI网关"，采用Rust核心加Python SDK的架构——这是相较项目早期纯Python实现的一次转变。应用无需为OpenAI API、Anthropic API和本地Ollama服务器分别编写客户端代码，只需调用一次LiteLLM，由LiteLLM将请求转发给该模型名称所配置的提供商。',
+        content: '**LiteLLM是一个网关，将单一的OpenAI兼容请求格式转换为对100多个不同LLM提供商API的调用。** 它自身的[GitHub仓库简介](https://github.com/BerriAI/litellm)将其描述为"最快、最轻量的AI网关"，采用Rust核心加Python SDK的架构——这是相较项目早期纯Python实现的一次转变。应用无需为OpenAI API、Anthropic API和本地Ollama服务器分别编写客户端代码，只需调用一次LiteLLM，由LiteLLM将请求转发给该模型名称所配置的提供商。',
         items: [
           '核心功能：接收OpenAI的`chat/completions`格式（或目标提供商的原生格式）请求，转发给已配置的提供商，并返回标准化响应',
           '两种接入方式：直接导入应用代码的Python SDK `litellm`，以及供其他应用通过HTTP调用的独立服务LiteLLM Proxy Server',
@@ -1719,6 +1795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '你仍需向所路由到的提供商付费——LiteLLM并不降低OpenAI、Anthropic或Bedrock的API价格，只是将其统一并记录',
           '自托管代理有其自身的基础设施成本：服务器或容器托管，外加生产使用所需的PostgreSQL和Redis',
           '根据[litellm.ai/enterprise](https://litellm.ai/enterprise)，LiteLLM Enterprise在同一开源核心之上增加SSO、优先支持及其他商业功能——价格未公开，需联系公司获取',
+          'Enterprise定价按年计费，根据网关的请求容量、部署架构和支持需求确定，绝不按token计费（据[litellm.ai/pricing](https://www.litellm.ai/pricing)）；提供30天Enterprise试用密钥，报价需通过销售团队获取',
+          '据[LiteLLM的SSO文档](https://docs.litellm.ai/docs/proxy/admin_ui_sso)，自v1.76.0起，单点登录（SSO）最多5个用户免费，超出后需要企业许可证',
         ],
         note: '仓库自身的LICENSE文件说明，`enterprise/`目录之外的内容采用MIT许可，而`enterprise/`目录内的所有内容（如果你的检出中存在该目录）则根据`enterprise/LICENSE`单独授权——本评测已直接核对仓库的LICENSE文件加以验证。相比笼统地说整个项目"只是MIT"，这是一种更精确、更有限的表述——在基于`enterprise/`路径下的代码进行再分发或构建商业产品之前，请自行核查LICENSE文件。',
       },
@@ -1765,8 +1843,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM 对比其他网关与框架',
-        content: '截至本评测时，LiteLLM是PromptQuorum[本地LLM软件目录](/zh/directory)中第一款拥有专门评测的路由器/网关类工具——目前还没有第二款同一细分领域（路由器/网关）的工具可供直接对比。因此，最接近的有用比较来自目录中同属"运行与服务"部分的相邻工具，以及目录之外一个广为人知的托管替代方案。',
+        content: 'LiteLLM属于PromptQuorum[本地LLM软件目录](/zh/directory)中的路由器/网关细分领域，该领域另有三篇专门评测，列在下方最前面。其余对比来自目录中同属“Run & Serve”部分的相邻工具，以及目录之外一个广为人知的托管替代方案。',
         items: [
+          '**[Plano](/zh/power-local-llm/plano-review)** — 面向智能体应用的自托管、基于Envoy的AI代理与数据平面，具备LLM路由、可观测性和防护栏（Apache-2.0）。',
+          '**[ClawRouter](/zh/power-local-llm/clawrouter-review)** — 为智能体设计的自托管LLM路由器，在本地做出路由决策，在前沿模型与免费开放权重模型之间分配请求（MIT）。',
+          '**[AIClient2API](/zh/power-local-llm/aiclient2api-review)** — 自托管代理，将Gemini CLI、Codex、Grok、Kiro和Antigravity的客户端协议转换为统一的OpenAI兼容API（GPL-3.0）。',
           '**[vLLM](/zh/power-local-llm/vllm-explained)** — 一个真正提供模型权重服务的自托管推理引擎（需要GPU）；通常与LiteLLM搭配使用而非与之竞争，由LiteLLM作为路由层置于一个或多个vLLM部署之前。',
           '**[LocalAI](/zh/power-local-llm/localai-explained)** — 一个用于本地运行开放模型的自托管、OpenAI兼容API服务器；它解决的是与LiteLLM不同的问题（提供服务 vs. 路由），但暴露出类似的OpenAI格式API，这也是两者常被混淆的原因。',
           '**[LangChain](/zh/power-local-llm/langchain-review)** — 一个用于构建LLM驱动应用（链、智能体、记忆）的应用框架；它可以调用LiteLLM（或直接调用任何提供商）作为其模型访问层，而不是取代LiteLLM所做的事情。',
@@ -1802,14 +1883,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'LiteLLM是什么？', a: 'LiteLLM（[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)）是一个开源网关，让应用通过单一的OpenAI兼容接口调用100多个LLM提供商API，可作为Python SDK使用，也可作为具备路由、成本追踪和速率限制功能的自托管代理服务器使用。' },
-          { q: 'LiteLLM是免费的吗？', a: '开源SDK和Proxy Server是免费的——你只需为底层提供商API调用和自己的托管付费。单独的付费LiteLLM Enterprise层级增加了SSO和专属支持；其价格未公开，需直接联系LiteLLM。' },
+          { q: 'LiteLLM是免费的吗？', a: '开源SDK和Proxy Server是免费的——你只需为底层提供商API调用和自己的托管付费。付费的LiteLLM Enterprise增加了超过5个用户的SSO、审计日志和带SLA的7×24小时支持；它按年通过销售报价，依据请求容量确定，绝不按token计费。提供30天试用密钥，但未公布价格。' },
+          { q: 'LiteLLM适合企业使用吗？', a: '适合。采用MIT许可的核心（`enterprise/`之外的全部内容）可用于商业用途，团队通常将其作为共享的内部网关，配合虚拟密钥、预算和支出追踪使用。超过5个用户的SSO、SCIM、审计日志以及带SLA的支持需要付费的Enterprise许可证；其页面列出了SOC 2 Type 2和ISO 27001（厂商声明，本评测未核实）。数据保护合规性取决于你路由到的提供商和你的配置。这不构成法律建议，请咨询你的数据保护负责人。' },
           { q: 'LiteLLM使用哪种许可协议？', a: '根据仓库自身的LICENSE文件，核心仓库采用MIT许可。另有单独许可仅适用于`enterprise/`子目录，见`enterprise/LICENSE`——本评测已直接核对仓库的LICENSE文件加以验证。' },
           { q: 'LiteLLM需要GPU吗？', a: '不需要。LiteLLM是请求路由器，而非模型推理引擎——它将调用转发给提供商（云端API或Ollama等本地运行时），而不是自己执行模型权重，因此在纯CPU硬件上也能良好运行。' },
           { q: '如何安装LiteLLM？', a: 'Python SDK：`pip install litellm`。自托管代理：`pip install \'litellm[proxy]\'`，然后`litellm --model gpt-4o`；或挂载`config.yaml`运行Docker镜像`docker.litellm.ai/berriai/litellm:latest`。Helm、AWS ECS Fargate和Google Cloud Run选项参见上方安装表格。' },
           { q: 'LiteLLM代理需要数据库吗？', a: '生产使用需要——根据LiteLLM自身的部署文档，PostgreSQL持久化虚拟密钥和支出数据，Redis在多个代理实例间保持速率限制一致。快速本地测试可以不用两者运行，但会失去这些功能。' },
           { q: 'LiteLLM能否路由到本地托管的模型？', a: '可以。指向OpenAI或Anthropic的同一份`config.yaml`中的`model_list`，同样可以指向本地的[Ollama](https://ollama.com)或[vLLM](/zh/power-local-llm/vllm-explained)端点，使一个网关能够混合云端和本地模型。' },
           { q: 'LiteLLM与OpenRouter相比如何？', a: '两者都在单一接口之后统一了多个LLM提供商。LiteLLM是你自行运维的自托管基础设施（开源代理或SDK）；OpenRouter是你调用而非自行运维的第三方托管路由服务。选择取决于你是想要零运维（OpenRouter），还是想要没有路由提供商按请求加价的完全掌控（自托管LiteLLM）。' },
-          { q: 'LiteLLM由谁开发？', a: 'BerriAI，即[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)仓库背后的组织，截至本评测显示约有58,663个星标和11,415个fork。' },
+          { q: 'LiteLLM由谁开发？', a: 'BerriAI，即[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)仓库背后的组织，截至本评测显示超过' + st.zh('litellm', 'bare') + '个星标。' },
         ],
       },
       sources: {
@@ -1823,6 +1905,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'LiteLLM Docker快速入门', description: '本评测安装部分所使用的官方docker run命令、镜像名称及管理界面登录信息。' },
           { url: 'https://pypi.org/project/litellm/', title: 'PyPI上的litellm', description: '展示Python包litellm当前版本及发布历史的官方包页面。' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: '项目自身介绍付费Enterprise层级（SSO、优先功能、专属支持）的页面。' },
+          { url: 'https://www.litellm.ai/pricing', title: 'LiteLLM定价页面', description: '官方定价页面：免费的自托管开源版、按年计费并需销售报价的Enterprise定价（不按token计费），以及30天Enterprise试用密钥。' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'LiteLLM管理界面SSO文档', description: '官方文档，说明自v1.76.0起SSO最多5个用户免费，超出后需要企业许可证。' },
         ],
       },
       relatedReading: {
@@ -1838,19 +1922,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: 'المطورون وفرق المنصات الذين يوجّهون حركة تطبيقاتهم عبر واجهات برمجة متعددة لمزوّدي نماذج اللغة من خلال واجهة واحدة',
     primaryTerm: 'LiteLLM',
     title: 'مراجعة LiteLLM: بوابة واحدة لأكثر من 100 واجهة برمجة لمزوّدي نماذج اللغة',
-    seoTitle: 'LiteLLM: بوابة لأكثر من 100 واجهة برمجة',
+    seoTitle: 'LiteLLM: بوابة لأكثر من 100 واجهة برمجة لنماذج اللغة',
     intro: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)، والتوثيق على [docs.litellm.ai](https://docs.litellm.ai)) هي بوابة مفتوحة المصدر لنماذج اللغة تمنح شيفرتك البرمجية واجهة واحدة متوافقة مع OpenAI لاستدعاء أكثر من 100 واجهة برمجة لمزوّدين مختلفين — OpenAI وAnthropic وGoogle Gemini وAWS Bedrock وAzure وOllama وغيرها الكثير — بدلاً من كتابة شيفرة تكامل منفصلة لكل مزوّد. تتوفر بطريقتين: حزمة تطوير برمجيات (SDK) بلغة Python قابلة للاستيراد (`pip install litellm`)، وخادم وكيل (proxy) مستضاف ذاتيًا مزوّد بلوحة تحكم إدارية، قابل للنشر عبر Docker أو Helm أو AWS ECS Fargate أو Google Cloud Run. تتناول هذه المراجعة ما تقوم به LiteLLM فعليًا، وكيفية تثبيت وتشغيل كلا الوضعين، وترخيصها (الذي ليس ببساطة "MIT" للمستودع بأكمله)، وموقعها مقارنةً بـ vLLM وLocalAI وخدمات التوجيه المستضافة مثل OpenRouter.',
-    metaDescription: 'LiteLLM بوابة مفتوحة المصدر لنماذج اللغة (رخصة MIT مع استثناء enterprise منفصل) توحّد أكثر من 100 واجهة برمجة لمزوّدين خلف واجهة متوافقة مع OpenAI. دليل SDK والوكيل لعام 2026.',
+    metaDescription: 'LiteLLM بوابة مفتوحة المصدر لنماذج اللغة (نواة MIT وترخيص enterprise منفصل) توحّد أكثر من 100 واجهة برمجة خلف واجهة متوافقة مع OpenAI.',
     readTime: '12 دقيقة قراءة',
     targetKeywords: [
       'مراجعة LiteLLM',
@@ -1859,20 +1944,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'بوابة LLM مستضافة ذاتيًا',
       'تثبيت LiteLLM عبر Docker',
     ],
-    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) هي بوابة مفتوحة المصدر تتيح لشيفرتك البرمجية استدعاء أكثر من 100 واجهة برمجة لمزوّدي نماذج اللغة من خلال واجهة واحدة متوافقة مع OpenAI، بدلاً من كتابة شيفرة تكامل منفصلة لكل مزوّد.** تتوفر كحزمة Python (`pip install litellm`) للاستخدام المباشر داخل التطبيق، وكخادم وكيل مستضاف ذاتيًا مزوّد بلوحة إدارة للمفاتيح الافتراضية، موجّه للفرق التي تريد توجيهًا مركزيًا وتتبع التكاليف وتحديد معدل الطلبات عبر عدة تطبيقات ومستخدمين. المستودع الأساسي مرخّص بموجب MIT وفق ملف LICENSE الخاص به، مع استثناء ترخيص enterprise منفصل ينطبق فقط على الدليل الفرعي `enterprise/` — تم التحقق من ذلك مباشرةً من ملف LICENSE الخاص بالمستودع لهذه المراجعة. حتى وقت هذه المراجعة، يُظهر GitHub نحو 58,663 نجمة و11,415 نسخة متفرعة (fork).',
+    leadAnswerBlock: '**LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) هي بوابة مفتوحة المصدر تتيح لشيفرتك البرمجية استدعاء أكثر من 100 واجهة برمجة لمزوّدي نماذج اللغة من خلال واجهة واحدة متوافقة مع OpenAI، بدلاً من كتابة شيفرة تكامل منفصلة لكل مزوّد.**',
     quickAnswerTop: {
       ar: {
         question: 'ما هي LiteLLM، وهل أحتاج إلى وحدة معالجة رسومية (GPU) لتشغيلها؟',
         answer: 'LiteLLM بوابة مفتوحة المصدر توحّد أكثر من 100 واجهة برمجة لمزوّدي نماذج اللغة خلف واجهة واحدة متوافقة مع OpenAI، مع توجيه الطلبات والتراجع الاحتياطي وتتبع التكاليف وتحديد معدل الطلبات. لا — لا تحتاج LiteLLM إلى وحدة معالجة رسومية. فهي موجّه (router) يعيد توجيه الطلبات إلى واجهات برمجة لمزوّدين خارجيين (أو إلى بيئة تشغيل محلية مثل Ollama)؛ ولا تُشغّل أوزان النموذج بنفسها، لذا تعمل جيدًا على أجهزة تعتمد على المعالج المركزي (CPU) فقط.',
         bullets: [
-          'مفتوحة المصدر على GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm))، بنحو 58,663 نجمة و11,415 نسخة متفرعة حتى وقت هذه المراجعة (سبتمبر 2026)',
+          'مفتوحة المصدر على GitHub ([BerriAI/litellm](https://github.com/BerriAI/litellm))، بأكثر من ' + st.ar('litellm', 'bare') + ' نجمة حتى وقت هذه المراجعة',
           'ترخيص المستودع الأساسي: MIT وفق ملف LICENSE الخاص به — استثناء ترخيص enterprise منفصل ينطبق فقط على الدليل الفرعي `enterprise/`',
           'طريقتان للاستخدام: حزمة Python باسم `litellm`، وخادم وكيل مستضاف ذاتيًا (`litellm[proxy]`) بواجهة إدارة على `/ui`',
           'يوجّه الاستدعاءات إلى أكثر من 100 مزوّد (OpenAI وAnthropic وGoogle Gemini وAWS Bedrock وAzure OpenAI وOllama وغيرها) خلف تنسيق طلب/استجابة موحّد متوافق مع OpenAI',
           'لا حاجة إلى وحدة معالجة رسومية — فهي موجّه طلبات وليست محرك استدلال؛ تتطلب عمليات نشر الوكيل في بيئة الإنتاج PostgreSQL وRedis، لا وحدة معالجة رسومية',
           'قابلة للنشر عبر Docker، أو مخططات Helm، أو AWS ECS Fargate (وحدة Terraform رسمية)، أو Google Cloud Run (وحدة Terraform رسمية)، أو أزرار نشر بنقرة واحدة على Render/Railway',
+          'أحدث إصدار موسوم: v1.106.3؛ آخر تحديث للمشروع: ' + lastUpdate('ar'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1898,7 +1984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'إذا كان تطبيقك يحتاج إلى التحدث مع OpenAI اليوم، ومع Anthropic أو نموذج Ollama محلي غدًا، فعادةً ما تضطر لإعادة كتابة شيفرة التكامل لكل واحد منهما. تقف LiteLLM في المنتصف وتترجم واجهة برمجة كل مزوّد إلى نفس التنسيق الشبيه بـ OpenAI، بحيث لا تحتاج شيفرتك إلا إلى تعلّم تنسيق واحد — وتضيف نسخة الوكيل لوحة تحكم لمعرفة من ينفق كم.' },
         ],
         items: [
-          'مفتوحة المصدر على [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm)؛ بنحو 58,663 نجمة و11,415 نسخة متفرعة حتى وقت هذه المراجعة',
+          'مفتوحة المصدر على [GitHub](https://github.com/BerriAI/litellm) (BerriAI/litellm)؛ بأكثر من ' + st.ar('litellm', 'bare') + ' نجمة حتى وقت هذه المراجعة',
           'المستودع الأساسي مرخّص بموجب MIT وفق ملف LICENSE الخاص به؛ ينطبق ترخيص منفصل فقط على الدليل الفرعي `enterprise/`، وتم التحقق من ذلك مباشرةً من ملف LICENSE لهذه المراجعة',
           'منتجان: **حزمة Python باسم `litellm`** (`pip install litellm`) لاستدعاء المزوّدين مباشرةً من الشيفرة، و**LiteLLM Proxy Server** (`pip install \'litellm[proxy]\'`، أو Docker) كبوابة مستضافة ذاتيًا بلوحة إدارة',
           'توحّد أكثر من 100 واجهة برمجة لمزوّدين (OpenAI وAnthropic وGoogle Gemini وAWS Bedrock وAzure OpenAI وOllama وغيرها) خلف تنسيق طلب/استجابة واحد، وفق ملف README الخاص بالمشروع',
@@ -1911,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'ما هي LiteLLM؟',
-        content: '**LiteLLM بوابة تترجم تنسيق طلب واحد متوافق مع OpenAI إلى استدعاءات لأكثر من 100 واجهة برمجة مختلفة لمزوّدي نماذج اللغة.** يصفها ملف [README](https://github.com/BerriAI/litellm) الخاص بها بأنها "أسرع وأخف بوابة ذكاء اصطناعي"، مبنية بنواة Rust وحزمة Python فوقها — وهو تحوّل عن التنفيذ القائم بالكامل على Python في السنوات الأولى للمشروع. فبدلاً من كتابة شيفرة عميل منفصلة لواجهة برمجة OpenAI وواجهة برمجة Anthropic وخادم Ollama محلي، يستدعي التطبيق LiteLLM مرة واحدة، وتقوم LiteLLM بإعادة توجيه الطلب إلى المزوّد المُهيّأ لاسم ذلك النموذج.',
+        content: '**LiteLLM بوابة تترجم تنسيق طلب واحد متوافق مع OpenAI إلى استدعاءات لأكثر من 100 واجهة برمجة مختلفة لمزوّدي نماذج اللغة.** يصفها وصف [مستودع GitHub](https://github.com/BerriAI/litellm) الخاص بها بأنها "أسرع وأخف بوابة ذكاء اصطناعي"، مبنية بنواة Rust وحزمة Python فوقها — وهو تحوّل عن التنفيذ القائم بالكامل على Python في السنوات الأولى للمشروع. فبدلاً من كتابة شيفرة عميل منفصلة لواجهة برمجة OpenAI وواجهة برمجة Anthropic وخادم Ollama محلي، يستدعي التطبيق LiteLLM مرة واحدة، وتقوم LiteLLM بإعادة توجيه الطلب إلى المزوّد المُهيّأ لاسم ذلك النموذج.',
         items: [
           'الوظيفة الأساسية: استقبال طلب بتنسيق `chat/completions` الخاص بـ OpenAI (أو بالتنسيق الأصلي للمزوّد المستهدف)، وإعادة توجيهه إلى المزوّد المُهيّأ، وإرجاع استجابة موحّدة',
           'وضعا وصول: حزمة Python باسم `litellm`، تُستورد مباشرةً في شيفرة التطبيق، وLiteLLM Proxy Server، وهي خدمة مستقلة تستدعيها تطبيقات أخرى عبر HTTP',
@@ -1981,6 +2067,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ستظل تدفع للمزوّد الذي توجّه إليه — لا تُخفّض LiteLLM أسعار واجهات برمجة OpenAI أو Anthropic أو Bedrock، بل توحّدها وتسجّلها فقط',
           'استضافة الوكيل ذاتيًا لها تكلفة بنية تحتية خاصة بها: خادم أو مضيف حاويات، بالإضافة إلى PostgreSQL وRedis للاستخدام في بيئة الإنتاج',
           'تضيف LiteLLM Enterprise تسجيل الدخول الموحّد ودعمًا ذا أولوية وميزات أخرى للأعمال فوق نفس النواة مفتوحة المصدر، وفق [litellm.ai/enterprise](https://litellm.ai/enterprise) — الأسعار غير منشورة وتتطلب التواصل مع الشركة',
+          'تُحتسب أسعار Enterprise سنويًا وتُحدَّد وفق سعة الطلبات في البوابة ومعمارية النشر واحتياجات الدعم، وليس لكل رمز (token) أبدًا، بحسب [litellm.ai/pricing](https://www.litellm.ai/pricing)؛ يتوفر مفتاح تجريبي لـ Enterprise لمدة 30 يومًا، وتُقدَّم عروض الأسعار عبر فريق المبيعات',
+          'تسجيل الدخول الموحّد (SSO) مجاني لما يصل إلى 5 مستخدمين اعتبارًا من الإصدار v1.76.0، وما يتجاوز ذلك يتطلب ترخيص Enterprise، بحسب [وثائق SSO في LiteLLM](https://docs.litellm.ai/docs/proxy/admin_ui_sso)',
         ],
         note: 'ينص ملف LICENSE الخاص بالمستودع نفسه على أن المحتوى خارج الدليل `enterprise/` مرخّص بموجب MIT، وأن كل ما يقع داخل `enterprise/` (إن وُجد هذا الدليل في نسختك) مرخّص بشكل منفصل بموجب `enterprise/LICENSE` — وتم التحقق من ذلك مباشرةً من ملف LICENSE الخاص بالمستودع لهذه المراجعة. هذا ادّعاء أضيق وأدق من القول بأن المشروع بأكمله "مجرد MIT" — راجع ملف LICENSE بنفسك قبل إعادة توزيع أو بناء منتج تجاري على شيفرة قادمة تحديدًا من مسار `enterprise/`.',
       },
@@ -2027,8 +2115,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM مقابل بوابات وأطر عمل أخرى',
-        content: 'حتى وقت هذه المراجعة، تُعد LiteLLM أول أداة في فئة الموجّهات/البوابات تحظى بمراجعة مخصصة خاصة بها ضمن [دليل برمجيات نماذج اللغة المحلية](/ar/directory) الخاص بـ PromptQuorum — ولا توجد بعد أداة ثانية في نفس الفئة (موجّه/بوابة) للمقارنة المباشرة. لذا تأتي أقرب المقارنات المفيدة من أدوات مجاورة ضمن قسم "التشغيل والتقديم" نفسه في الدليل، إلى جانب بديل مُستضاف معروف على نطاق واسع خارج الدليل.',
+        content: 'تنتمي LiteLLM إلى فئة الموجّهات/البوابات في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) من PromptQuorum، والذي يضم ثلاث مراجعات مخصصة أخرى مذكورة أولًا أدناه. أما بقية المقارنات فمصدرها أدوات مجاورة في جزء "Run & Serve" نفسه من الدليل، إضافةً إلى بديل مستضاف معروف خارج الدليل.',
         items: [
+          '**[Plano](/ar/power-local-llm/plano-review)** — وكيل ذكاء اصطناعي مستضاف ذاتيًا قائم على Envoy ومستوى بيانات للتطبيقات القائمة على الوكلاء، مع توجيه LLM وقابلية المراقبة وحواجز الحماية (Apache-2.0).',
+          '**[ClawRouter](/ar/power-local-llm/clawrouter-review)** — موجّه LLM مستضاف ذاتيًا مصمَّم للوكلاء، يتخذ قرارات التوجيه محليًا بين النماذج المتقدمة والنماذج المفتوحة الأوزان المجانية (MIT).',
+          '**[AIClient2API](/ar/power-local-llm/aiclient2api-review)** — وكيل مستضاف ذاتيًا يحوّل بروتوكولات عملاء Gemini CLI وCodex وGrok وKiro وAntigravity إلى واجهة برمجة واحدة متوافقة مع OpenAI (GPL-3.0).',
           '**[vLLM](/ar/power-local-llm/vllm-explained)** — محرك استدلال مستضاف ذاتيًا يُقدّم أوزان النموذج فعليًا (يتطلب وحدة معالجة رسومية)؛ غالبًا ما يُستخدم إلى جانب LiteLLM بدلاً من منافستها، حيث تقف LiteLLM كطبقة توجيه أمام واحد أو أكثر من عمليات نشر vLLM.',
           '**[LocalAI](/ar/power-local-llm/localai-explained)** — خادم واجهة برمجة مستضاف ذاتيًا ومتوافق مع OpenAI لتشغيل نماذج مفتوحة محليًا؛ يحل مشكلة مختلفة عن LiteLLM (التقديم مقابل التوجيه) لكنه يعرض واجهة برمجة بتنسيق OpenAI مشابهة، وهو مصدر شائع للخلط بين الأداتين.',
           '**[LangChain](/ar/power-local-llm/langchain-review)** — إطار عمل تطبيقات لبناء تطبيقات مدعومة بنماذج اللغة (سلاسل، عملاء ذكيون، ذاكرة)؛ يمكنه استدعاء LiteLLM (أو أي مزوّد مباشرةً) كطبقة وصوله إلى النماذج بدلاً من استبدال ما تقوم به LiteLLM.',
@@ -2064,14 +2155,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هي LiteLLM؟', a: 'LiteLLM ([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)) بوابة مفتوحة المصدر تتيح للتطبيقات استدعاء أكثر من 100 واجهة برمجة لمزوّدي نماذج اللغة من خلال واجهة واحدة متوافقة مع OpenAI، وتتوفر كحزمة Python أو كخادم وكيل مستضاف ذاتيًا يوفّر التوجيه وتتبع التكاليف وتحديد معدل الطلبات.' },
-          { q: 'هل LiteLLM مجانية؟', a: 'حزمة SDK مفتوحة المصدر وProxy Server مجانيتان — تدفع فقط مقابل استدعاءات واجهة برمجة المزوّد الأساسي واستضافتك الخاصة. تضيف فئة مدفوعة منفصلة باسم LiteLLM Enterprise تسجيل الدخول الموحّد (SSO) ودعمًا مخصصًا؛ وأسعارها غير منشورة وتتطلب التواصل المباشر مع LiteLLM.' },
+          { q: 'هل LiteLLM مجانية؟', a: 'حزمة SDK مفتوحة المصدر وProxy Server مجانيتان — تدفع فقط مقابل استدعاءات واجهة برمجة المزوّد الأساسي واستضافتك الخاصة. تضيف فئة LiteLLM Enterprise المدفوعة تسجيل الدخول الموحّد (SSO) لأكثر من خمسة مستخدمين وسجلات التدقيق ودعمًا على مدار الساعة طوال أيام الأسبوع مع اتفاقيات مستوى الخدمة؛ وتُباع سنويًا بعرض سعر من المبيعات وتُحدَّد وفق سعة الطلبات وليس لكل رمز (token). يتوفر مفتاح تجريبي لمدة 30 يومًا، ولا تُنشر أسعار.' },
+          { q: 'هل LiteLLM مناسبة للاستخدام في الشركات؟', a: 'نعم. يمكن استخدام النواة المرخّصة بموجب MIT (كل ما هو خارج `enterprise/`) تجاريًا، وتشغّلها الفرق كبوابة داخلية مشتركة مع مفاتيح افتراضية وميزانيات وتتبّع للإنفاق. يتطلب SSO لأكثر من خمسة مستخدمين وSCIM وسجلات التدقيق والدعم المرتبط باتفاقيات مستوى الخدمة ترخيص Enterprise المدفوع؛ وتذكر صفحته SOC 2 Type 2 وISO 27001 (إفادة من المورّد لم نتحقق منها هنا). يعتمد الامتثال لحماية البيانات على المزوّدين الذين توجّه إليهم الطلبات وعلى إعداداتك. هذا لا يُعد استشارة قانونية؛ استشر مسؤول حماية البيانات لديك.' },
           { q: 'ما الترخيص الذي تستخدمه LiteLLM؟', a: 'المستودع الأساسي مرخّص بموجب MIT، وفق ملف LICENSE الخاص به. ينطبق ترخيص منفصل فقط على الدليل الفرعي `enterprise/`، بموجب `enterprise/LICENSE` — وتم التحقق من ذلك مباشرةً من ملف LICENSE الخاص بالمستودع لهذه المراجعة.' },
           { q: 'هل تحتاج LiteLLM إلى وحدة معالجة رسومية؟', a: 'لا. LiteLLM موجّه طلبات، لا محرك استدلال نماذج — تعيد توجيه الاستدعاءات إلى المزوّدين (واجهات برمجة سحابية أو بيئات تشغيل محلية مثل Ollama) بدلاً من تشغيل أوزان النموذج بنفسها، لذا تعمل جيدًا على أجهزة تعتمد على المعالج المركزي فقط.' },
           { q: 'كيف أثبّت LiteLLM؟', a: 'لحزمة Python: `pip install litellm`. للوكيل المستضاف ذاتيًا: `pip install \'litellm[proxy]\'` ثم `litellm --model gpt-4o`، أو شغّل صورة Docker `docker.litellm.ai/berriai/litellm:latest` مع تحميل `config.yaml`. راجع جدول التثبيت أعلاه لخيارات Helm وAWS ECS Fargate وGoogle Cloud Run.' },
           { q: 'هل يتطلب وكيل LiteLLM قاعدة بيانات؟', a: 'للاستخدام في بيئة الإنتاج، نعم — يحفظ PostgreSQL المفاتيح الافتراضية وبيانات الإنفاق، ويحافظ Redis على اتساق تحديد معدل الطلبات عبر عدة نُسخ من الوكيل، وفق توثيق النشر الخاص بـ LiteLLM. يمكن تشغيل اختبار محلي سريع دون أيّ منهما، لكن هذا يفقد تلك الميزات.' },
           { q: 'هل يمكن لـ LiteLLM التوجيه إلى نموذج مستضاف محليًا؟', a: 'نعم. يمكن لنفس `model_list` في `config.yaml` التي تشير إلى OpenAI أو Anthropic أن تشير بالمثل إلى نقطة نهاية محلية من [Ollama](https://ollama.com) أو [vLLM](/ar/power-local-llm/vllm-explained)، مما يتيح لبوابة واحدة مزج النماذج السحابية والمحلية.' },
           { q: 'كيف تُقارَن LiteLLM بـ OpenRouter؟', a: 'يوحّد كلاهما عدة مزوّدين لنماذج اللغة خلف واجهة واحدة. LiteLLM بنية تحتية مستضافة ذاتيًا تُشغّلها بنفسك (وكيل أو حزمة مفتوحا المصدر)؛ أما OpenRouter فهي خدمة توجيه مُستضافة من طرف ثالث تستدعيها بدلاً من تشغيل خدمتك الخاصة. يعتمد الاختيار على ما إذا كنت تريد صفر تشغيل ذاتي (OpenRouter) أو تحكمًا كاملًا دون هامش ربح إضافي لكل طلب من مزوّد توجيه (LiteLLM المستضافة ذاتيًا).' },
-          { q: 'من يطوّر LiteLLM؟', a: 'BerriAI، المؤسسة الواقفة خلف مستودع [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)، والذي يُظهر نحو 58,663 نجمة و11,415 نسخة متفرعة حتى وقت هذه المراجعة.' },
+          { q: 'من يطوّر LiteLLM؟', a: 'BerriAI، المؤسسة الواقفة خلف مستودع [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)، والذي يُظهر أكثر من ' + st.ar('litellm', 'bare') + ' نجمة حتى وقت هذه المراجعة.' },
         ],
       },
       sources: {
@@ -2085,6 +2177,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'البدء السريع لـ LiteLLM عبر Docker', description: 'أمر docker run الرسمي، واسم الصورة، وتفاصيل تسجيل الدخول إلى لوحة التحكم الإدارية المستخدمة في قسم التثبيت من هذه المراجعة.' },
           { url: 'https://pypi.org/project/litellm/', title: 'litellm على PyPI', description: 'صفحة الحزمة الرسمية التي تعرض إصدار الحزمة الحالي وسجل إصدارات حزمة Python باسم litellm.' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: 'صفحة المشروع نفسه التي تصف فئة Enterprise المدفوعة (تسجيل الدخول الموحّد، ميزات ذات أولوية، دعم مخصص).' },
+          { url: 'https://www.litellm.ai/pricing', title: 'أسعار LiteLLM', description: 'صفحة الأسعار الرسمية: فئة مفتوحة المصدر مستضافة ذاتيًا مجانية، وأسعار Enterprise سنوية بعرض سعر من المبيعات (وليس لكل رمز)، ومفتاح تجريبي لـ Enterprise لمدة 30 يومًا.' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'وثائق SSO في واجهة إدارة LiteLLM', description: 'وثائق رسمية تنص على أن SSO مجاني لما يصل إلى 5 مستخدمين اعتبارًا من v1.76.0 ويتطلب ترخيص Enterprise بعد ذلك.' },
         ],
       },
       relatedReading: {
@@ -2100,19 +2194,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/litellm-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-14',
+    next_refresh_due: '2027-04-24',
     publishDate: '2026-09-14',
-    dateModified: '2026-09-14',
+    dateModified: '2026-10-24',
     educationalLevel: 'Advanced',
     audience: '여러 LLM 제공업체 API로 애플리케이션 트래픽을 하나의 인터페이스로 라우팅하는 개발자 및 플랫폼 팀',
     primaryTerm: 'LiteLLM',
     title: 'LiteLLM 리뷰: 100개 이상 LLM 제공업체 API를 위한 단일 게이트웨이',
     seoTitle: 'LiteLLM: 100개 이상 LLM API 게이트웨이',
     intro: 'LiteLLM([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm), 문서는 [docs.litellm.ai](https://docs.litellm.ai))은 OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Ollama 등 100개 이상의 서로 다른 제공업체 API를, 제공업체마다 별도의 통합 코드를 작성하지 않고도 단일한 OpenAI 호환 인터페이스로 호출할 수 있게 해주는 오픈소스 LLM 게이트웨이입니다. 제공 방식은 두 가지로, 애플리케이션에 바로 가져다 쓰는 Python SDK(`pip install litellm`)와 관리 대시보드가 딸린 셀프호스팅 프록시 서버가 있으며, Docker, Helm, AWS ECS Fargate, Google Cloud Run을 통해 배포할 수 있습니다. 이 리뷰는 LiteLLM이 실제로 무엇을 하는지, 두 방식을 어떻게 설치하고 운영하는지, 라이선스(저장소 전체가 단순히 "MIT"인 것은 아님)는 어떻게 되는지, 그리고 vLLM·LocalAI·OpenRouter 같은 호스팅 라우팅 서비스와 비교했을 때 어디에 위치하는지를 다룹니다.',
-    metaDescription: 'LiteLLM은 100개 이상의 제공업체 API를 OpenAI 호환 인터페이스 뒤로 통합하는 오픈소스 LLM 게이트웨이(MIT, 별도의 enterprise 예외 있음)입니다. 2026년 SDK 및 프록시 설정을 다룹니다.',
+    metaDescription: 'LiteLLM은 100개 이상의 제공업체 API를 OpenAI 호환 인터페이스로 통합하는 오픈소스 LLM 게이트웨이입니다. MIT 코어, 별도 enterprise 라이선스.',
     readTime: '12분 소요',
     targetKeywords: [
       'LiteLLM 리뷰',
@@ -2121,20 +2216,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '셀프호스팅 LLM 게이트웨이',
       'LiteLLM Docker 설치',
     ],
-    leadAnswerBlock: '**LiteLLM([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm))은 제공업체마다 별도의 통합 코드를 작성하는 대신, 단일한 OpenAI 호환 인터페이스로 100개 이상의 LLM 제공업체 API를 호출할 수 있게 해주는 오픈소스 게이트웨이입니다.** 애플리케이션 내에서 바로 사용하는 Python SDK(`pip install litellm`)로 제공되며, 여러 앱과 사용자에 걸친 중앙화된 라우팅·비용 추적·속도 제한을 원하는 팀을 위해 가상 키 관리 대시보드가 딸린 셀프호스팅 프록시 서버로도 제공됩니다. 핵심 저장소는 자체 LICENSE 파일에 따르면 MIT 라이선스이며, `enterprise/` 하위 디렉터리에만 적용되는 별도의 enterprise 라이선스 예외가 있습니다 — 이 리뷰를 위해 저장소의 LICENSE 파일을 직접 확인했습니다. 이 리뷰 작성 시점 기준 GitHub는 약 58,663개의 스타와 11,415개의 포크를 보여줍니다.',
+    leadAnswerBlock: '**LiteLLM([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm))은 제공업체마다 별도의 통합 코드를 작성하는 대신, 단일한 OpenAI 호환 인터페이스로 100개 이상의 LLM 제공업체 API를 호출할 수 있게 해주는 오픈소스 게이트웨이입니다.**',
     quickAnswerTop: {
       ko: {
         question: 'LiteLLM이란 무엇이며, 실행하는 데 GPU가 필요한가요?',
         answer: 'LiteLLM은 요청 라우팅, 폴백, 비용 추적, 속도 제한 기능을 갖추고 100개 이상의 LLM 제공업체 API를 단일한 OpenAI 호환 인터페이스 뒤로 통합하는 오픈소스 게이트웨이입니다. 아니요 — LiteLLM에는 GPU가 필요하지 않습니다. 외부 제공업체 API(또는 Ollama 같은 로컬 런타임)로 요청을 전달하는 라우터이며, 스스로 모델 가중치를 실행하지 않으므로 CPU만 있는 하드웨어에서도 잘 작동합니다.',
         bullets: [
-          'GitHub([BerriAI/litellm](https://github.com/BerriAI/litellm))에 오픈소스로 공개, 이 리뷰 작성 시점(2026년 9월) 기준 약 58,663개 스타와 11,415개 포크',
+          'GitHub([BerriAI/litellm](https://github.com/BerriAI/litellm))에 오픈소스로 공개, 이 리뷰 작성 시점 기준 ' + st.ko('litellm', 'bare') + '개 이상의 스타',
           '핵심 저장소 라이선스: 저장소 자체 LICENSE 파일에 따르면 MIT — 별도의 enterprise 라이선스 예외가 `enterprise/` 하위 디렉터리에만 적용됨',
           '두 가지 이용 방식: Python SDK인 `litellm`, 그리고 `/ui`에 관리 인터페이스가 있는 셀프호스팅 프록시 서버(`litellm[proxy]`)',
           '단일한 OpenAI 호환 요청/응답 형식 뒤에서 100개 이상의 제공업체(OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama 등)로 호출을 라우팅',
           'GPU가 필요 없음 — 모델 추론 엔진이 아니라 요청 라우터이며, 프로덕션 프록시 배포에는 GPU가 아니라 PostgreSQL과 Redis가 필요함',
           'Docker, Helm 차트, AWS ECS Fargate(공식 Terraform 모듈), Google Cloud Run(공식 Terraform 모듈), 또는 Render/Railway의 원클릭 배포 버튼을 통해 배포 가능',
+          '최신 태그 릴리스: v1.106.3, 프로젝트 최종 업데이트: ' + lastUpdate('ko'),
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2160,7 +2256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '오늘은 OpenAI와, 내일은 Anthropic이나 로컬 Ollama 모델과 이야기해야 하는 앱이라면 보통 그때마다 통합 코드를 다시 작성해야 합니다. LiteLLM은 그 사이에 위치해 각 제공업체의 API를 동일한 OpenAI 스타일 형식으로 번역해주므로, 코드는 한 가지 형식만 익히면 되고, 프록시 버전에는 누가 얼마를 쓰고 있는지 보여주는 대시보드까지 추가됩니다.' },
         ],
         items: [
-          '[GitHub](https://github.com/BerriAI/litellm)(BerriAI/litellm)에 오픈소스로 공개; 이 리뷰 작성 시점 기준 약 58,663개 스타와 11,415개 포크',
+          '[GitHub](https://github.com/BerriAI/litellm)(BerriAI/litellm)에 오픈소스로 공개; 이 리뷰 작성 시점 기준 ' + st.ko('litellm', 'bare') + '개 이상의 스타',
           '핵심 저장소는 저장소 자체 LICENSE 파일에 따르면 MIT 라이선스이며, `enterprise/` 하위 디렉터리에만 별도 라이선스가 적용됨 — 이 리뷰를 위해 LICENSE 파일을 직접 확인해 검증함',
           '두 가지 제품: 코드에서 직접 제공업체를 호출하는 **Python SDK `litellm`**(`pip install litellm`), 그리고 관리 대시보드가 딸린 셀프호스팅 게이트웨이인 **LiteLLM Proxy Server**(`pip install \'litellm[proxy]\'` 또는 Docker)',
           '프로젝트 자체 README에 따르면 100개 이상의 제공업체 API(OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama 등)를 단일 요청/응답 형식 뒤로 통합',
@@ -2173,7 +2269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-litellm',
         title: 'LiteLLM이란?',
-        content: '**LiteLLM은 단일한 OpenAI 호환 요청 형식을 100개 이상의 서로 다른 LLM 제공업체 API 호출로 변환해주는 게이트웨이입니다.** 자체 [GitHub README](https://github.com/BerriAI/litellm)에서는 스스로를 "가장 빠르고 가벼운 AI 게이트웨이"라고 설명하며, Rust 코어 위에 Python SDK를 얹은 구조로 되어 있습니다 — 이는 프로젝트 초기의 순수 Python 구현에서 벗어난 변화입니다. OpenAI API, Anthropic API, 로컬 Ollama 서버 각각에 대해 별도의 클라이언트 코드를 작성하는 대신, 애플리케이션은 LiteLLM을 한 번 호출하면 되고 LiteLLM이 해당 모델 이름에 설정된 제공업체로 요청을 전달합니다.',
+        content: '**LiteLLM은 단일한 OpenAI 호환 요청 형식을 100개 이상의 서로 다른 LLM 제공업체 API 호출로 변환해주는 게이트웨이입니다.** 자체 [GitHub 저장소 설명](https://github.com/BerriAI/litellm)에서는 스스로를 "가장 빠르고 가벼운 AI 게이트웨이"라고 설명하며, Rust 코어 위에 Python SDK를 얹은 구조로 되어 있습니다 — 이는 프로젝트 초기의 순수 Python 구현에서 벗어난 변화입니다. OpenAI API, Anthropic API, 로컬 Ollama 서버 각각에 대해 별도의 클라이언트 코드를 작성하는 대신, 애플리케이션은 LiteLLM을 한 번 호출하면 되고 LiteLLM이 해당 모델 이름에 설정된 제공업체로 요청을 전달합니다.',
         items: [
           '핵심 기능: OpenAI의 `chat/completions` 형식(또는 대상 제공업체의 네이티브 형식)으로 요청을 받아, 설정된 제공업체로 전달하고, 정규화된 응답을 반환',
           '두 가지 접근 방식: 애플리케이션 코드에 직접 가져다 쓰는 Python SDK `litellm`, 그리고 다른 애플리케이션이 HTTP로 호출하는 독립 서비스인 LiteLLM Proxy Server',
@@ -2243,6 +2339,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '라우팅 대상 제공업체에는 여전히 비용을 지불함 — LiteLLM은 OpenAI, Anthropic, Bedrock의 API 가격을 낮추지 않으며, 이를 통합하고 기록할 뿐임',
           '프록시를 셀프호스팅하는 데는 자체 인프라 비용이 있음: 서버 또는 컨테이너 호스트, 그리고 프로덕션 사용을 위한 PostgreSQL과 Redis',
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)에 따르면 LiteLLM Enterprise는 동일한 오픈소스 코어 위에 SSO, 우선 지원, 기타 비즈니스 기능을 추가함 — 가격은 공개되지 않았으며 회사에 문의해야 함',
+          'Enterprise 요금은 연 단위이며 게이트웨이 요청 용량, 배포 구조, 지원 요구에 따라 책정되고 토큰 단위가 아닙니다([litellm.ai/pricing](https://www.litellm.ai/pricing) 기준). 30일 Enterprise 체험 키를 제공하며 견적은 영업팀을 통해 받습니다',
+          '[LiteLLM SSO 문서](https://docs.litellm.ai/docs/proxy/admin_ui_sso)에 따르면 v1.76.0부터 SSO는 최대 5명까지 무료이며, 그 이상은 enterprise 라이선스가 필요합니다',
         ],
         note: '저장소 자체 LICENSE 파일에는 `enterprise/` 디렉터리 밖의 콘텐츠는 MIT 라이선스이며, `enterprise/` 안의 모든 것(해당 디렉터리가 체크아웃에 존재하는 경우)은 `enterprise/LICENSE`에 따라 별도로 라이선스된다고 명시되어 있습니다 — 이 리뷰를 위해 저장소의 LICENSE 파일을 직접 확인해 검증했습니다. 이는 프로젝트 전체가 "그냥 MIT"라고 말하는 것보다 더 좁고 정확한 주장입니다 — 특히 `enterprise/` 경로에서 나온 코드를 재배포하거나 이를 기반으로 상용 제품을 만들기 전에는 LICENSE 파일을 직접 확인하세요.',
       },
@@ -2289,8 +2387,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. 다른 게이트웨이 및 프레임워크',
-        content: '이 리뷰 작성 시점 기준, LiteLLM은 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에서 전용 리뷰를 갖춘 최초의 라우터/게이트웨이 카테고리 도구입니다 — 아직 직접 비교할 수 있는 동일 세그먼트(라우터/게이트웨이)의 두 번째 도구는 없습니다. 대신 가장 유용한 비교는 디렉터리 내 동일한 "실행 및 서빙" 영역의 인접 도구, 그리고 디렉터리 밖에서 널리 알려진 호스팅 대안 하나에서 나옵니다.',
+        content: 'LiteLLM은 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory) 중 라우터/게이트웨이 분야에 속하며, 같은 분야에 전용 리뷰가 세 건 더 있어 아래 목록의 앞부분에 두었습니다. 나머지 비교 대상은 디렉터리의 같은 "Run & Serve" 영역에 있는 인접 도구와 디렉터리 밖의 잘 알려진 호스팅형 대안입니다.',
         items: [
+          '**[Plano](/ko/power-local-llm/plano-review)** — 에이전트형 앱을 위한 Envoy 기반 셀프 호스팅 AI 프록시 겸 데이터 플레인으로, LLM 라우팅, 관측성, 가드레일을 제공합니다(Apache-2.0).',
+          '**[ClawRouter](/ko/power-local-llm/clawrouter-review)** — 에이전트용으로 설계된 셀프 호스팅 LLM 라우터로, 라우팅 결정을 로컬에서 내리며 최신 프런티어 모델과 무료 오픈 웨이트 모델 사이에서 요청을 분배합니다(MIT).',
+          '**[AIClient2API](/ko/power-local-llm/aiclient2api-review)** — Gemini CLI, Codex, Grok, Kiro, Antigravity의 클라이언트 프로토콜을 하나의 OpenAI 호환 API로 변환하는 셀프 호스팅 프록시입니다(GPL-3.0).',
           '**[vLLM](/ko/power-local-llm/vllm-explained)** — 실제로 모델 가중치를 서빙하는 셀프호스팅 추론 엔진(GPU 필요). LiteLLM과 경쟁하기보다 함께 쓰이는 경우가 흔하며, LiteLLM이 하나 이상의 vLLM 배포 앞단에서 라우팅 계층 역할을 함.',
           '**[LocalAI](/ko/power-local-llm/localai-explained)** — 오픈 모델을 로컬에서 실행하기 위한 셀프호스팅, OpenAI 호환 API 서버. LiteLLM과는 다른 문제(서빙 vs. 라우팅)를 해결하지만 비슷한 OpenAI 형식 API를 제공해 둘 사이에 흔한 혼동을 일으킴.',
           '**[LangChain](/ko/power-local-llm/langchain-review)** — 체인, 에이전트, 메모리 등 LLM 기반 앱을 만들기 위한 애플리케이션 프레임워크. LiteLLM이 하는 일을 대체하는 대신, 모델 접근 계층으로 LiteLLM(또는 임의의 제공업체를 직접)을 호출할 수 있음.',
@@ -2326,14 +2427,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'LiteLLM이란 무엇인가요?', a: 'LiteLLM([github.com/BerriAI/litellm](https://github.com/BerriAI/litellm))은 애플리케이션이 단일한 OpenAI 호환 인터페이스로 100개 이상의 LLM 제공업체 API를 호출할 수 있게 해주는 오픈소스 게이트웨이로, Python SDK로 이용하거나 라우팅·비용 추적·속도 제한을 갖춘 셀프호스팅 프록시 서버로 이용할 수 있습니다.' },
-          { q: 'LiteLLM은 무료인가요?', a: '오픈소스 SDK와 Proxy Server는 무료입니다 — 기본 제공업체 API 호출 비용과 자체 호스팅 비용만 지불하면 됩니다. 별도의 유료 LiteLLM Enterprise 등급은 SSO와 전담 지원을 추가하며, 가격은 공개되어 있지 않아 LiteLLM에 직접 문의해야 합니다.' },
+          { q: 'LiteLLM은 무료인가요?', a: '오픈소스 SDK와 Proxy Server는 무료입니다 — 기본 제공업체 API 호출 비용과 자체 호스팅 비용만 지불하면 됩니다. 유료 LiteLLM Enterprise 등급은 5명을 넘는 SSO, 감사 로그, SLA가 포함된 24시간 연중무휴 지원을 추가하며, 영업팀 견적에 따른 연간 요금으로 요청 용량에 맞춰 책정되고 토큰 단위로 과금되지 않습니다. 30일 체험 키를 제공하며 요금은 공개되어 있지 않습니다.' },
+          { q: 'LiteLLM은 기업 환경에서 사용하기에 적합한가요?', a: '네. MIT 라이선스의 코어(`enterprise/` 외의 모든 부분)는 상업적으로 사용할 수 있으며, 팀들은 가상 키, 예산, 지출 추적을 갖춘 공용 사내 게이트웨이로 운영합니다. 5명을 넘는 SSO, SCIM, 감사 로그, SLA가 포함된 지원에는 유료 Enterprise 라이선스가 필요하며, 해당 페이지에는 SOC 2 Type 2와 ISO 27001이 기재되어 있습니다(공급업체의 주장이며 이 리뷰에서는 검증하지 않았습니다). 개인정보 보호 규정 준수 여부는 요청을 보내는 제공업체와 구성에 따라 달라집니다. 이는 법률 자문이 아니므로 개인정보 보호 담당자와 상의하시기 바랍니다.' },
           { q: 'LiteLLM은 어떤 라이선스를 사용하나요?', a: '핵심 저장소는 자체 LICENSE 파일에 따르면 MIT 라이선스입니다. `enterprise/` 하위 디렉터리에만 `enterprise/LICENSE`에 따른 별도 라이선스가 적용됩니다 — 이 리뷰를 위해 저장소의 LICENSE 파일을 직접 확인해 검증했습니다.' },
           { q: 'LiteLLM에 GPU가 필요한가요?', a: '아니요. LiteLLM은 모델 추론 엔진이 아니라 요청 라우터입니다 — 스스로 모델 가중치를 실행하는 대신 제공업체(클라우드 API 또는 Ollama 같은 로컬 런타임)로 호출을 전달하므로 CPU만 있는 하드웨어에서도 잘 작동합니다.' },
           { q: 'LiteLLM은 어떻게 설치하나요?', a: 'Python SDK: `pip install litellm`. 셀프호스팅 프록시: `pip install \'litellm[proxy]\'` 후 `litellm --model gpt-4o`를 실행하거나, `config.yaml`을 마운트해 Docker 이미지 `docker.litellm.ai/berriai/litellm:latest`를 실행합니다. Helm, AWS ECS Fargate, Google Cloud Run 옵션은 위의 설치 표를 참고하세요.' },
           { q: 'LiteLLM 프록시에는 데이터베이스가 필요한가요?', a: '프로덕션 사용에는 필요합니다 — LiteLLM 자체 배포 문서에 따르면 PostgreSQL이 가상 키와 지출 데이터를 영구 저장하고, Redis가 여러 프록시 인스턴스에 걸쳐 속도 제한을 일관되게 유지합니다. 빠른 로컬 테스트는 둘 다 없이도 실행할 수 있지만 이러한 기능은 잃게 됩니다.' },
           { q: 'LiteLLM은 로컬 호스팅 모델로 라우팅할 수 있나요?', a: '네. OpenAI나 Anthropic을 가리키는 `config.yaml`의 동일한 `model_list`가 로컬 [Ollama](https://ollama.com)나 [vLLM](/ko/power-local-llm/vllm-explained) 엔드포인트도 똑같이 가리킬 수 있어, 하나의 게이트웨이로 클라우드 모델과 로컬 모델을 섞어 쓸 수 있습니다.' },
           { q: 'LiteLLM은 OpenRouter와 비교하면 어떤가요?', a: '둘 다 여러 LLM 제공업체를 하나의 인터페이스 뒤로 통합합니다. LiteLLM은 직접 운영하는 셀프호스팅 인프라(오픈소스 프록시 또는 SDK)이고, OpenRouter는 직접 운영하는 대신 호출하는 제3자 호스팅 라우팅 서비스입니다. 운영 부담이 없는 것(OpenRouter)을 원하는지, 라우터 제공업체의 요청당 마크업 없이 완전한 통제권(셀프호스팅 LiteLLM)을 원하는지에 따라 선택이 달라집니다.' },
-          { q: 'LiteLLM은 누가 개발하나요?', a: '[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm) 저장소를 운영하는 조직인 BerriAI이며, 이 리뷰 작성 시점 기준 약 58,663개의 스타와 11,415개의 포크를 보여줍니다.' },
+          { q: 'LiteLLM은 누가 개발하나요?', a: '[github.com/BerriAI/litellm](https://github.com/BerriAI/litellm) 저장소를 운영하는 조직인 BerriAI이며, 이 리뷰 작성 시점 기준 ' + st.ko('litellm', 'bare') + '개 이상의 스타를 보여줍니다.' },
         ],
       },
       sources: {
@@ -2347,6 +2449,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.litellm.ai/docs/proxy/docker_quick_start', title: 'LiteLLM Docker 빠른 시작', description: '이 리뷰의 설치 섹션에서 사용한 공식 docker run 명령, 이미지 이름, 관리 UI 로그인 정보.' },
           { url: 'https://pypi.org/project/litellm/', title: 'PyPI의 litellm', description: 'Python 패키지 litellm의 현재 릴리스 버전과 릴리스 이력을 보여주는 공식 패키지 페이지.' },
           { url: 'https://litellm.ai/enterprise', title: 'LiteLLM Enterprise', description: '유료 Enterprise 등급(SSO, 우선 기능, 전담 지원)을 설명하는 프로젝트 자체 페이지.' },
+          { url: 'https://www.litellm.ai/pricing', title: 'LiteLLM 가격 안내', description: '공식 가격 페이지: 무료 셀프 호스팅 오픈소스 등급, 영업팀 견적 기반 연간 Enterprise 요금(토큰 단위 아님), 30일 Enterprise 체험 키.' },
+          { url: 'https://docs.litellm.ai/docs/proxy/admin_ui_sso', title: 'LiteLLM 관리자 UI SSO 문서', description: 'v1.76.0부터 SSO가 최대 5명까지 무료이며 그 이상은 enterprise 라이선스가 필요하다고 명시한 공식 문서.' },
         ],
       },
       relatedReading: {
