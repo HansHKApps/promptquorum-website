@@ -81,6 +81,7 @@ import { article as a_openrag_review } from './articles/openrag-review'
 import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review'
 import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
+import { article as a_ensu_review } from './articles/ensu-review'
 import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_obscurify_review } from './articles/obscurify-review'
@@ -711,6 +712,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'arynwood-mcp-review':                           a_arynwood_mcp_review,
   'localmindai-review':                            a_localmindai_review,
   'murmur-review':                                 a_murmur_review,
+  'ensu-review':                                   a_ensu_review,
   'caelum-review':                                 a_caelum_review,
   'lm-mini-review':                                a_lm_mini_review,
   'obscurify-review':                              a_obscurify_review,
