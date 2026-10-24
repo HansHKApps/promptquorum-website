@@ -132,6 +132,7 @@ import { app as app_castmates } from './apps/castmates'
 import { app as app_frankly_ai } from './apps/frankly-ai'
 import { app as app_haplo_ai } from './apps/haplo-ai'
 import { app as app_pixlstash } from './apps/pixlstash'
+import { app as app_photoprism } from './apps/photoprism'
 import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_hiwaifu } from './apps/hiwaifu'
 import { app as app_memoryai } from './apps/memoryai'
@@ -240,12 +241,21 @@ import { app as app_openclient } from './apps/openclient'
 import { app as app_zero1llm } from './apps/zero1llm'
 import { app as app_mlx_audio } from './apps/mlx-audio'
 import { app as app_speechbrain } from './apps/speechbrain'
+import { app as app_handy } from './apps/handy'
 import { app as app_localmcp } from './apps/localmcp'
 import { app as app_libredb_studio } from './apps/libredb-studio'
 import { app as app_openrag } from './apps/openrag'
 import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
+import { app as app_buzz_captions } from './apps/buzz-captions'
+import { app as app_logseq } from './apps/logseq'
+import { app as app_searxng } from './apps/searxng'
+import { app as app_linkwarden } from './apps/linkwarden'
+import { app as app_tolaria } from './apps/tolaria'
+import { app as app_subtitle_edit } from './apps/subtitle-edit'
+import { app as app_home_assistant_assist } from './apps/home-assistant-assist'
+import { app as app_ente_photos } from './apps/ente-photos'
 import { app as app_local_operator } from './apps/local-operator'
 import { app as app_nekoni } from './apps/nekoni'
 import { app as app_compactifai_app } from './apps/compactifai-app'
@@ -502,12 +512,21 @@ export const localAiApps: ToolRecord[] = [
   app_zero1llm,
   app_mlx_audio,
   app_speechbrain,
+  app_handy,
   app_localmcp,
   app_libredb_studio,
   app_openrag,
   app_arynwood_mcp,
   app_localmindai,
   app_murmur,
+  app_buzz_captions,
+  app_logseq,
+  app_searxng,
+  app_linkwarden,
+  app_tolaria,
+  app_subtitle_edit,
+  app_home_assistant_assist,
+  app_ente_photos,
   app_local_operator,
   app_nekoni,
   app_iimagine_desktop,
@@ -585,6 +604,7 @@ export const localAiApps: ToolRecord[] = [
   app_frankly_ai,
   app_haplo_ai,
   app_pixlstash,
+  app_photoprism,
   app_hiwaifu,
   app_memoryai,
   app_on_device_ai_translator,

@@ -58,6 +58,7 @@ import { article as a_return_editor_review } from './articles/return-editor-revi
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
 import { article as a_local_ai_chat_pocket_review } from './articles/local-ai-chat-pocket-review'
 import { article as a_pixlstash_review } from './articles/pixlstash-review'
+import { article as a_photoprism_review } from './articles/photoprism-review'
 import { article as a_whisper_notes_review } from './articles/whisper-notes-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
@@ -83,6 +84,15 @@ import { article as a_openrag_review } from './articles/openrag-review'
 import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review'
 import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
+import { article as a_buzz_captions_review } from './articles/buzz-captions-review'
+import { article as a_logseq_review } from './articles/logseq-review'
+import { article as a_searxng_review } from './articles/searxng-review'
+import { article as a_linkwarden_review } from './articles/linkwarden-review'
+import { article as a_handy_review } from './articles/handy-review'
+import { article as a_tolaria_review } from './articles/tolaria-review'
+import { article as a_subtitle_edit_review } from './articles/subtitle-edit-review'
+import { article as a_home_assistant_assist_review } from './articles/home-assistant-assist-review'
+import { article as a_ente_photos_review } from './articles/ente-photos-review'
 import { article as a_local_operator_review } from './articles/local-operator-review'
 import { article as a_nekoni_review } from './articles/nekoni-review'
 import { article as a_iimagine_desktop_review } from './articles/iimagine-desktop-review'
@@ -698,6 +708,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'mlxhub-review':                                 a_mlxhub_review,
   'local-ai-chat-pocket-review':                   a_local_ai_chat_pocket_review,
   'pixlstash-review':                              a_pixlstash_review,
+  'photoprism-review':                             a_photoprism_review,
   'whisper-notes-review':                          a_whisper_notes_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
@@ -723,6 +734,15 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'arynwood-mcp-review':                           a_arynwood_mcp_review,
   'localmindai-review':                            a_localmindai_review,
   'murmur-review':                                 a_murmur_review,
+  'buzz-captions-review':                          a_buzz_captions_review,
+  'logseq-review':                                 a_logseq_review,
+  'searxng-review':                                a_searxng_review,
+  'linkwarden-review':                             a_linkwarden_review,
+  'handy-review':                                  a_handy_review,
+  'tolaria-review':                                a_tolaria_review,
+  'subtitle-edit-review':                          a_subtitle_edit_review,
+  'home-assistant-assist-review':                  a_home_assistant_assist_review,
+  'ente-photos-review':                            a_ente_photos_review,
   'local-operator-review':                         a_local_operator_review,
   'nekoni-review':                                 a_nekoni_review,
   'iimagine-desktop-review':                       a_iimagine_desktop_review,

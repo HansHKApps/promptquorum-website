@@ -312,6 +312,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
   'whisper-cpp-review',
+  // Handy review (Voice, Speech & Multimodal, offline dictation) — 2026-10-24
+  'handy-review',
   'faster-whisper-review',
   'dograh-review',
   // exo review — 2026-09-12
@@ -594,6 +596,22 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localmindai-review',
   // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
   'murmur-review',
+  // Buzz review (Voice, Speech & Multimodal, free offline Whisper transcription app) - 2026-10-24
+  'buzz-captions-review',
+  // Logseq review (Productivity & Knowledge Tools, core note-taking app) — 2026-10-24
+  'logseq-review',
+  // SearXNG review (RAG & Document Chat, self-hosted web-search backend) — 2026-10-24
+  'searxng-review',
+  // Linkwarden review (Productivity & Knowledge Tools, self-hosted bookmark manager) — 2026-10-24
+  'linkwarden-review',
+  // Tolaria review (Productivity & Knowledge Tools, Markdown notes with Git and AI agents) — 2026-10-24
+  'tolaria-review',
+  // Subtitle Edit review (Voice, Speech & Multimodal, subtitle editor with local Whisper and auto-translate) — 2026-10-24
+  'subtitle-edit-review',
+  // Home Assistant Assist review (Voice, Speech & Multimodal, voice pipeline inside Home Assistant) — 2026-10-24
+  'home-assistant-assist-review',
+  // Ente Photos review (Images & Video, encrypted photo backup with on-device AI search) — 2026-10-24
+  'ente-photos-review',
   'local-operator-review',
   // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
   'iimagine-desktop-review',
@@ -660,6 +678,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // PixlStash review (Image & Video Generation) — 2026-10-17
   'pixlstash-review',
+  'photoprism-review',
 
   // Whisper Notes review (Voice, Speech & Multimodal) — 2026-10-18
   'whisper-notes-review',

@@ -964,6 +964,11 @@
     "urlSlug": "speechbrain-review",
     "url": "/power-local-llm/speechbrain-review"
   },
+  "handy": {
+    "cluster": "power-local-llm",
+    "urlSlug": "handy-review",
+    "url": "/power-local-llm/handy-review"
+  },
   "localmcp": {
     "cluster": "power-local-llm",
     "urlSlug": "localmcp-review",
@@ -993,6 +998,46 @@
     "cluster": "power-local-llm",
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
+  },
+  "buzz-captions": {
+    "cluster": "power-local-llm",
+    "urlSlug": "buzz-captions-review",
+    "url": "/power-local-llm/buzz-captions-review"
+  },
+  "logseq": {
+    "cluster": "power-local-llm",
+    "urlSlug": "logseq-review",
+    "url": "/power-local-llm/logseq-review"
+  },
+  "searxng": {
+    "cluster": "power-local-llm",
+    "urlSlug": "searxng-review",
+    "url": "/power-local-llm/searxng-review"
+  },
+  "linkwarden": {
+    "cluster": "power-local-llm",
+    "urlSlug": "linkwarden-review",
+    "url": "/power-local-llm/linkwarden-review"
+  },
+  "tolaria": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tolaria-review",
+    "url": "/power-local-llm/tolaria-review"
+  },
+  "subtitle-edit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "subtitle-edit-review",
+    "url": "/power-local-llm/subtitle-edit-review"
+  },
+  "home-assistant-assist": {
+    "cluster": "power-local-llm",
+    "urlSlug": "home-assistant-assist-review",
+    "url": "/power-local-llm/home-assistant-assist-review"
+  },
+  "ente-photos": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ente-photos-review",
+    "url": "/power-local-llm/ente-photos-review"
   },
   "local-operator": {
     "cluster": "power-local-llm",
@@ -1378,6 +1423,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "pixlstash-review",
     "url": "/power-local-llm/pixlstash-review"
+  },
+  "photoprism": {
+    "cluster": "power-local-llm",
+    "urlSlug": "photoprism-review",
+    "url": "/power-local-llm/photoprism-review"
   },
   "hiwaifu": {
     "cluster": "power-local-llm",
