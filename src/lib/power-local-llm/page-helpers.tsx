@@ -1105,6 +1105,7 @@ const HUB_THEMES: Array<{
       'frankly-ai-review',
       'caelum-review',
       'lm-mini-review',
+      'pocketllm-lite-review',
       'llm-hub-review',
       'lm-playground-review',
       'localmind-review',

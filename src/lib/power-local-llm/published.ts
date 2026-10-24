@@ -596,6 +596,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'caelum-review',
   // LM Mini review (Mobile & Edge LLMs) — 2026-10-24
   'lm-mini-review',
+  // PocketLLM Lite review (Android local-first chat app, MIT) — 2026-10-24
+  'pocketllm-lite-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',
   // Frankly AI review (Mobile & Edge LLMs) — 2026-10-24
