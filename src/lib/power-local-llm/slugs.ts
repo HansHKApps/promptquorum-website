@@ -557,6 +557,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'arynwood-mcp-review':                      'arynwood-mcp-review',
   'localmindai-review':                       'localmindai-review',
   'murmur-review':                            'murmur-review',
+  'asiden-review':                            'asiden-review',
   'caelum-review':                            'caelum-review',
   'lm-mini-review':                           'lm-mini-review',
   'ensu-review':                              'ensu-review',

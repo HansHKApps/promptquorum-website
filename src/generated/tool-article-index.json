@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 173,
+    "totalCount": 174,
     "capped": true
   },
   "vLLM": {
@@ -1423,6 +1423,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1446,7 +1454,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Enchanted": {
@@ -7901,22 +7909,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "Second Me": {
@@ -9860,6 +9868,20 @@
         "slug": "murmur-review",
         "title": "Murmur Review: On-Device AI Music Generator for iPhone",
         "url": "/power-local-llm/murmur-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Asiden": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "asiden-review",
+        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
+        "url": "/power-local-llm/asiden-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
