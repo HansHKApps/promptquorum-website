@@ -600,6 +600,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'logseq-review',
   // SearXNG review (RAG & Document Chat, self-hosted web-search backend) — 2026-10-24
   'searxng-review',
+  // Linkwarden review (Productivity & Knowledge Tools, self-hosted bookmark manager) — 2026-10-24
+  'linkwarden-review',
   'local-operator-review',
   // IIMAGINE Desktop review (Easiest Desktop Apps, open-source local chat app) — 2026-10-24
   'iimagine-desktop-review',

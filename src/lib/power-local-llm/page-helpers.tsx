@@ -1176,6 +1176,7 @@ const HUB_THEMES: Array<{
       'siyuan-review',
       'logseq-review',
       'karakeep-review',
+      'linkwarden-review',
       'blinko-review',
       'baserow-review',
       'surf-review',
