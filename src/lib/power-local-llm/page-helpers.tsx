@@ -1218,6 +1218,7 @@ const HUB_THEMES: Array<{
       'voice-ai-writers-cloud-vs-local',
       'local-llm-voice-audio-compared',
       'macwhisper-review',
+      'buzz-captions-review',
       'aquavoice-review',
       'meetily-review',
       'funclip-review',

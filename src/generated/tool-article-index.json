@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 314,
+    "totalCount": 315,
     "capped": true
   },
   "llama.cpp": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 152,
+    "totalCount": 153,
     "capped": true
   },
   "Atomic Chat": {
@@ -5045,6 +5045,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "buzz-captions-review",
+        "title": "Buzz Review: Free Offline Whisper Transcription and Captions",
+        "url": "/power-local-llm/buzz-captions-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llamatik-review",
         "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
         "url": "/power-local-llm/llamatik-review",
@@ -5106,17 +5114,9 @@
         "url": "/power-local-llm/izwi-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "willow-inference-server-review",
-        "title": "Willow Inference Server Review: Self-Hosted Whisper ASR and TTS",
-        "url": "/power-local-llm/willow-inference-server-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "faster-whisper": {
@@ -9881,6 +9881,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Buzz": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "buzz-captions-review",
+        "title": "Buzz Review: Free Offline Whisper Transcription and Captions",
+        "url": "/power-local-llm/buzz-captions-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Local Operator": {
