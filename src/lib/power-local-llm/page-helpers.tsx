@@ -1102,6 +1102,7 @@ const HUB_THEMES: Array<{
       'on-device-ai-translator-review',
       'llamatik-review',
       'castmates-review',
+      'frankly-ai-review',
       'caelum-review',
       'lm-mini-review',
       'llm-hub-review',

@@ -66,6 +66,7 @@ import { article as a_memoryai_review } from './articles/memoryai-review'
 import { article as a_on_device_ai_translator_review } from './articles/on-device-ai-translator-review'
 import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
+import { article as a_frankly_ai_review } from './articles/frankly-ai-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
 import { article as a_strata_review } from './articles/strata-review'
 import { article as a_coil_review } from './articles/coil-review'
@@ -695,6 +696,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'on-device-ai-translator-review':                a_on_device_ai_translator_review,
   'llamatik-review':                               a_llamatik_review,
   'castmates-review':                              a_castmates_review,
+  'frankly-ai-review':                             a_frankly_ai_review,
   'surfsense-review':                              a_surfsense_review,
   'strata-review':                                 a_strata_review,
   'coil-review':                                   a_coil_review,

@@ -902,7 +902,7 @@
       "images": []
     },
     "lobechat-review": {
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -6591,7 +6591,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6609,7 +6609,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 8 categories of a local LLM stack: 273 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
+          "title": "The 8 categories of a local LLM stack: 284 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -8848,7 +8848,7 @@
       "images": []
     },
     "gpt4all-review": {
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-09-07",
       "hasSections": true,
@@ -11174,6 +11174,24 @@
       ],
       "images": []
     },
+    "frankly-ai-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "surfsense-review": {
       "dateModified": "2026-10-21",
       "lastFactChecked": null,
@@ -11210,10 +11228,100 @@
       ],
       "images": []
     },
+    "localghost-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "llm-studio-go-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "openclient-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "zero1llm-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "speechbrain-review": {
       "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-23",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "localmcp-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
       "hasSections": true,
       "langs": [
         "en",
@@ -11264,6 +11372,60 @@
       ],
       "images": []
     },
+    "arynwood-mcp-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "localmindai-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "murmur-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "caelum-review": {
       "dateModified": "2026-10-21",
       "lastFactChecked": null,
@@ -11282,10 +11444,46 @@
       ],
       "images": []
     },
+    "lm-mini-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "obscurify-review": {
       "dateModified": "2026-10-23",
       "lastFactChecked": null,
       "publishDate": "2026-10-23",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "genva-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
       "hasSections": true,
       "langs": [
         "en",

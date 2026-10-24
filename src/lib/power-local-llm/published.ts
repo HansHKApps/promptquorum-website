@@ -598,6 +598,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'lm-mini-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',
+  // Frankly AI review (Mobile & Edge LLMs) — 2026-10-24
+  'frankly-ai-review',
+
   // Genva review (Image & Video Generation) — 2026-10-24
   'genva-review',
 
