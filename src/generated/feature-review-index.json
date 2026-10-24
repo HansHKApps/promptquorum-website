@@ -1349,6 +1349,11 @@
     "urlSlug": "caelum-review",
     "url": "/power-local-llm/caelum-review"
   },
+  "lm-mini": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lm-mini-review",
+    "url": "/power-local-llm/lm-mini-review"
+  },
   "obscurify": {
     "cluster": "power-local-llm",
     "urlSlug": "obscurify-review",

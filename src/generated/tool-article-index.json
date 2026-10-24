@@ -35,6 +35,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openclient-review",
         "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
         "url": "/power-local-llm/openclient-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/best-local-llm-frontends",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "fastest-local-llms-low-end-pcs",
-        "title": "Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide",
-        "url": "/local-llms/fastest-local-llms-low-end-pcs",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 308,
+    "totalCount": 309,
     "capped": true
   },
   "llama.cpp": {
@@ -860,6 +860,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
         "dateModified": "2026-10-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
-        "tier": "about"
       }
     ],
-    "totalCount": 150,
+    "totalCount": 151,
     "capped": true
   },
   "Atomic Chat": {
@@ -1000,6 +1000,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -1054,17 +1062,9 @@
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "docker-model-runner-review",
-        "title": "Docker Model Runner Review: Local LLMs via the Docker CLI",
-        "url": "/power-local-llm/docker-model-runner-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 44,
+    "totalCount": 45,
     "capped": true
   },
   "GPT4All": {
@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 43,
     "capped": true
   },
   "Pocket AI": {
@@ -6775,6 +6775,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -6836,17 +6844,9 @@
         "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "controlnet-review",
-        "title": "ControlNet Review: Structural Control for Stable Diffusion",
-        "url": "/power-local-llm/controlnet-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -6857,6 +6857,14 @@
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -6922,17 +6930,9 @@
         "url": "/power-local-llm/invokeai-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-review",
-        "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
-        "url": "/local-llms/text-generation-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "Invoke AI": {
@@ -10778,6 +10778,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -10834,7 +10842,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "openai-edge-tts": {
@@ -10931,6 +10939,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "on-device-ai-translator-review",
         "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
         "url": "/power-local-llm/on-device-ai-translator-review",
@@ -10984,17 +11000,9 @@
         "url": "/power-local-llm/ecc-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-review",
-        "title": "LM Studio Review: The GUI-First Local AI Desktop App",
-        "url": "/power-local-llm/lm-studio-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 212,
+    "totalCount": 213,
     "capped": true
   },
   "Qdrant": {
@@ -11649,6 +11657,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "on-device-ai-translator-review",
         "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
         "url": "/power-local-llm/on-device-ai-translator-review",
@@ -11702,17 +11718,9 @@
         "url": "/power-local-llm/mlxhub-review",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anyllm-review",
-        "title": "AnyLLM Review: BYOK AI Chat Client for Android",
-        "url": "/power-local-llm/anyllm-review",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "LLM Hub": {
@@ -12003,6 +12011,20 @@
         "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
         "url": "/power-local-llm/llamatik-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "LM Mini": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-mini-review",
+        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
+        "url": "/power-local-llm/lm-mini-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],

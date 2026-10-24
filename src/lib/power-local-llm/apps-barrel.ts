@@ -136,6 +136,7 @@ import { app as app_memoryai } from './apps/memoryai'
 import { app as app_on_device_ai_translator } from './apps/on-device-ai-translator'
 import { app as app_llamatik } from './apps/llamatik'
 import { app as app_caelum } from './apps/caelum'
+import { app as app_lm_mini } from './apps/lm-mini'
 import { app as app_obscurify } from './apps/obscurify'
 import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
@@ -565,6 +566,7 @@ export const localAiApps: ToolRecord[] = [
   app_on_device_ai_translator,
   app_llamatik,
   app_caelum,
+  app_lm_mini,
   app_obscurify,
   app_genva,
   app_whisper_notes,

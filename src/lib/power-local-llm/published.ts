@@ -590,6 +590,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
   'caelum-review',
+  // LM Mini review (Mobile & Edge LLMs) — 2026-10-24
+  'lm-mini-review',
   // Obscurify review (Local AI Agents & Tool Use) — 2026-10-23
   'obscurify-review',
   // Genva review (Image & Video Generation) — 2026-10-24
