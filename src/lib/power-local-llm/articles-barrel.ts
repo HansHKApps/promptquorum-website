@@ -63,16 +63,27 @@ import { article as a_transcriptionsuite_review } from './articles/transcription
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
 import { article as a_memoryai_review } from './articles/memoryai-review'
+import { article as a_on_device_ai_translator_review } from './articles/on-device-ai-translator-review'
 import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
 import { article as a_strata_review } from './articles/strata-review'
 import { article as a_coil_review } from './articles/coil-review'
+import { article as a_localghost_review } from './articles/localghost-review'
+import { article as a_llm_studio_go_review } from './articles/llm-studio-go-review'
+import { article as a_openclient_review } from './articles/openclient-review'
+import { article as a_zero1llm_review } from './articles/zero1llm-review'
 import { article as a_speechbrain_review } from './articles/speechbrain-review'
+import { article as a_localmcp_review } from './articles/localmcp-review'
 import { article as a_libredb_studio_review } from './articles/libredb-studio-review'
 import { article as a_openrag_review } from './articles/openrag-review'
+import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review'
+import { article as a_localmindai_review } from './articles/localmindai-review'
+import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_caelum_review } from './articles/caelum-review'
+import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_obscurify_review } from './articles/obscurify-review'
+import { article as a_genva_review } from './articles/genva-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
@@ -681,16 +692,27 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
   'memoryai-review':                               a_memoryai_review,
+  'on-device-ai-translator-review':                a_on_device_ai_translator_review,
   'llamatik-review':                               a_llamatik_review,
   'castmates-review':                              a_castmates_review,
   'surfsense-review':                              a_surfsense_review,
   'strata-review':                                 a_strata_review,
   'coil-review':                                   a_coil_review,
+  'localghost-review':                             a_localghost_review,
+  'llm-studio-go-review':                          a_llm_studio_go_review,
+  'openclient-review':                             a_openclient_review,
+  'zero1llm-review':                               a_zero1llm_review,
   'speechbrain-review':                            a_speechbrain_review,
+  'localmcp-review':                               a_localmcp_review,
   'libredb-studio-review':                         a_libredb_studio_review,
   'openrag-review':                                a_openrag_review,
+  'arynwood-mcp-review':                           a_arynwood_mcp_review,
+  'localmindai-review':                            a_localmindai_review,
+  'murmur-review':                                 a_murmur_review,
   'caelum-review':                                 a_caelum_review,
+  'lm-mini-review':                                a_lm_mini_review,
   'obscurify-review':                              a_obscurify_review,
+  'genva-review':                                  a_genva_review,
   'anyllm-review':                                 a_anyllm_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06

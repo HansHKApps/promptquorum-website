@@ -133,9 +133,12 @@ import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_hiwaifu } from './apps/hiwaifu'
 import { app as app_memoryai } from './apps/memoryai'
+import { app as app_on_device_ai_translator } from './apps/on-device-ai-translator'
 import { app as app_llamatik } from './apps/llamatik'
 import { app as app_caelum } from './apps/caelum'
+import { app as app_lm_mini } from './apps/lm-mini'
 import { app as app_obscurify } from './apps/obscurify'
+import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
@@ -227,10 +230,18 @@ import { app as app_blinko } from './apps/blinko'
 import { app as app_surfsense } from './apps/surfsense'
 import { app as app_strata } from './apps/strata'
 import { app as app_coil } from './apps/coil'
+import { app as app_localghost } from './apps/localghost'
+import { app as app_llm_studio_go } from './apps/llm-studio-go'
+import { app as app_openclient } from './apps/openclient'
+import { app as app_zero1llm } from './apps/zero1llm'
 import { app as app_mlx_audio } from './apps/mlx-audio'
 import { app as app_speechbrain } from './apps/speechbrain'
+import { app as app_localmcp } from './apps/localmcp'
 import { app as app_libredb_studio } from './apps/libredb-studio'
 import { app as app_openrag } from './apps/openrag'
+import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
+import { app as app_localmindai } from './apps/localmindai'
+import { app as app_murmur } from './apps/murmur'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
@@ -473,10 +484,18 @@ export const localAiApps: ToolRecord[] = [
   app_surfsense,
   app_strata,
   app_coil,
+  app_localghost,
+  app_llm_studio_go,
+  app_openclient,
+  app_zero1llm,
   app_mlx_audio,
   app_speechbrain,
+  app_localmcp,
   app_libredb_studio,
   app_openrag,
+  app_arynwood_mcp,
+  app_localmindai,
+  app_murmur,
   app_candle_vllm,
   app_chroma,
   app_claude_code_local,
@@ -548,9 +567,12 @@ export const localAiApps: ToolRecord[] = [
   app_pixlstash,
   app_hiwaifu,
   app_memoryai,
+  app_on_device_ai_translator,
   app_llamatik,
   app_caelum,
+  app_lm_mini,
   app_obscurify,
+  app_genva,
   app_whisper_notes,
   app_anyllm,
   app_local_ai_geetmark,
