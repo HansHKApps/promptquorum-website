@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "tolaria": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tolaria-review",
+    "url": "/power-local-llm/tolaria-review"
+  },
   "local-operator": {
     "cluster": "power-local-llm",
     "urlSlug": "local-operator-review",

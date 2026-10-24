@@ -1175,6 +1175,7 @@ const HUB_THEMES: Array<{
       'siyuan-review',
       'karakeep-review',
       'blinko-review',
+      'tolaria-review',
       'baserow-review',
       'surf-review',
       'translate-books-with-llms-review',

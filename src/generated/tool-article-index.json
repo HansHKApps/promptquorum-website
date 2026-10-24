@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 314,
+    "totalCount": 315,
     "capped": true
   },
   "llama.cpp": {
@@ -876,6 +876,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "tolaria-review",
+        "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
+        "url": "/power-local-llm/tolaria-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -922,17 +930,9 @@
         "url": "/local-llms/run-qwen-vl-locally-2026",
         "dateModified": "2026-10-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-offline-china-self-hosted-2026",
-        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
-        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 152,
+    "totalCount": 153,
     "capped": true
   },
   "Atomic Chat": {
@@ -4969,6 +4969,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tolaria-review",
+        "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
+        "url": "/power-local-llm/tolaria-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -4984,7 +4992,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Msty Go": {
@@ -8321,6 +8329,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tolaria-review",
+        "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
+        "url": "/power-local-llm/tolaria-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "zeno-review",
         "title": "Zeno Review: Free Private AI Workspace for Mac",
         "url": "/power-local-llm/zeno-review",
@@ -8342,17 +8358,9 @@
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "longmemory-review",
-        "title": "LongMemory Review: A Temporal Memory Engine for AI Agents",
-        "url": "/power-local-llm/longmemory-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "MaxKB": {
@@ -9881,6 +9889,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Tolaria": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "tolaria-review",
+        "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
+        "url": "/power-local-llm/tolaria-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Local Operator": {
