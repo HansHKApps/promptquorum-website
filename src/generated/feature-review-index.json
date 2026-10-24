@@ -929,6 +929,16 @@
     "urlSlug": "llm-studio-go-review",
     "url": "/power-local-llm/llm-studio-go-review"
   },
+  "openclient": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openclient-review",
+    "url": "/power-local-llm/openclient-review"
+  },
+  "zero1llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "zero1llm-review",
+    "url": "/power-local-llm/zero1llm-review"
+  },
   "mlx-audio": {
     "cluster": "power-local-llm",
     "urlSlug": "mlx-audio-review",
@@ -939,6 +949,11 @@
     "urlSlug": "speechbrain-review",
     "url": "/power-local-llm/speechbrain-review"
   },
+  "localmcp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localmcp-review",
+    "url": "/power-local-llm/localmcp-review"
+  },
   "libredb-studio": {
     "cluster": "power-local-llm",
     "urlSlug": "libredb-studio-review",
@@ -948,6 +963,16 @@
     "cluster": "power-local-llm",
     "urlSlug": "openrag-review",
     "url": "/power-local-llm/openrag-review"
+  },
+  "arynwood-mcp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "arynwood-mcp-review",
+    "url": "/power-local-llm/arynwood-mcp-review"
+  },
+  "localmindai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localmindai-review",
+    "url": "/power-local-llm/localmindai-review"
   },
   "candle-vllm": {
     "cluster": "power-local-llm",
@@ -1304,6 +1329,11 @@
     "urlSlug": "memoryai-review",
     "url": "/power-local-llm/memoryai-review"
   },
+  "on-device-ai-translator": {
+    "cluster": "power-local-llm",
+    "urlSlug": "on-device-ai-translator-review",
+    "url": "/power-local-llm/on-device-ai-translator-review"
+  },
   "llamatik": {
     "cluster": "power-local-llm",
     "urlSlug": "llamatik-review",
@@ -1318,6 +1348,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "obscurify-review",
     "url": "/power-local-llm/obscurify-review"
+  },
+  "genva": {
+    "cluster": "power-local-llm",
+    "urlSlug": "genva-review",
+    "url": "/power-local-llm/genva-review"
   },
   "whisper-notes": {
     "cluster": "power-local-llm",

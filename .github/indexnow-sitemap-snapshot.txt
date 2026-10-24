@@ -335,6 +335,7 @@ https://www.promptquorum.com/power-local-llm/dspy-review
 https://www.promptquorum.com/power-local-llm/dynamo-review
 https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux
 https://www.promptquorum.com/power-local-llm/easy-diffusion-review
+https://www.promptquorum.com/power-local-llm/ecc-review
 https://www.promptquorum.com/power-local-llm/edge-ai-hardware-for-local-llms
 https://www.promptquorum.com/power-local-llm/ekorbia-review
 https://www.promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts
@@ -390,6 +391,7 @@ https://www.promptquorum.com/power-local-llm/lemonade-review
 https://www.promptquorum.com/power-local-llm/leon-ai-review
 https://www.promptquorum.com/power-local-llm/letta-review
 https://www.promptquorum.com/power-local-llm/librechat-review
+https://www.promptquorum.com/power-local-llm/libredb-studio-review
 https://www.promptquorum.com/power-local-llm/liquid-apollo-review
 https://www.promptquorum.com/power-local-llm/litellm-review
 https://www.promptquorum.com/power-local-llm/little-coder-review
@@ -462,6 +464,7 @@ https://www.promptquorum.com/power-local-llm/milvus-review
 https://www.promptquorum.com/power-local-llm/mission-control-review
 https://www.promptquorum.com/power-local-llm/mlc-chat-review
 https://www.promptquorum.com/power-local-llm/mlc-llm-explained
+https://www.promptquorum.com/power-local-llm/mlx-audio-review
 https://www.promptquorum.com/power-local-llm/mlx-lm-explained
 https://www.promptquorum.com/power-local-llm/mlx-serve-review
 https://www.promptquorum.com/power-local-llm/mlxcel-review
@@ -494,6 +497,7 @@ https://www.promptquorum.com/power-local-llm/opencode-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/openllm-review
 https://www.promptquorum.com/power-local-llm/openmontage-review
+https://www.promptquorum.com/power-local-llm/openrag-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/oscilla-review
 https://www.promptquorum.com/power-local-llm/page-assist-hands-on-test
@@ -547,6 +551,7 @@ https://www.promptquorum.com/power-local-llm/smart-connections-review
 https://www.promptquorum.com/power-local-llm/snug-protocol-review
 https://www.promptquorum.com/power-local-llm/solair-ai-review
 https://www.promptquorum.com/power-local-llm/sourcegraph-cody-review
+https://www.promptquorum.com/power-local-llm/speechbrain-review
 https://www.promptquorum.com/power-local-llm/spiritbox-ultimate-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-forge-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-review

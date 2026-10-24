@@ -202,16 +202,23 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'anyllm':                                  'anyllm',
   'hiwaifu':                                 'hiwaifu',
   'memoryai':                                'memoryai',
+  'on-device-ai-translator':                 'on-device-ai-translator',
   'llamatik':                                'llamatik',
+  'arynwood-mcp':                            'arynwood-mcp',
   'caelum':                                  'caelum',
   'obscurify':                               'obscurify',
+  'genva':                                   'genva',
   'strata':                                  'strata',
   'llm-studio-go':                           'llm-studio-go',
+  'zero1llm':                                'zero1llm',
   'mlx-audio':                               'mlx-audio',
   'speechbrain':                             'speechbrain',
+  'localmcp':                                'localmcp',
   'ecc':                                     'ecc',
   'libredb-studio':                          'libredb-studio',
   'openrag':                                 'openrag',
+  'openclient':                              'openclient',
+  'localmindai':                             'localmindai',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
