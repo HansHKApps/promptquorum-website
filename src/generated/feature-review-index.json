@@ -999,6 +999,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "open-llm-vtuber": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-llm-vtuber-review",
+    "url": "/power-local-llm/open-llm-vtuber-review"
+  },
   "buzz-captions": {
     "cluster": "power-local-llm",
     "urlSlug": "buzz-captions-review",
