@@ -1299,6 +1299,11 @@
     "urlSlug": "memoryai-review",
     "url": "/power-local-llm/memoryai-review"
   },
+  "on-device-ai-translator": {
+    "cluster": "power-local-llm",
+    "urlSlug": "on-device-ai-translator-review",
+    "url": "/power-local-llm/on-device-ai-translator-review"
+  },
   "llamatik": {
     "cluster": "power-local-llm",
     "urlSlug": "llamatik-review",

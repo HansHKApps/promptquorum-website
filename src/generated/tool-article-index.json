@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 169,
+    "totalCount": 170,
     "capped": true
   },
   "vLLM": {
@@ -5932,7 +5932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 40,
+    "totalCount": 41,
     "capped": true
   },
   "Pocket AI": {
@@ -10840,6 +10840,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "on-device-ai-translator-review",
+        "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
+        "url": "/power-local-llm/on-device-ai-translator-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -10902,17 +10910,9 @@
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlx-audio-review",
-        "title": "MLX-Audio Review: Local Speech and Audio Models on Apple Silicon",
-        "url": "/power-local-llm/mlx-audio-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 210,
+    "totalCount": 211,
     "capped": true
   },
   "Qdrant": {
@@ -11567,6 +11567,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "on-device-ai-translator-review",
+        "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
+        "url": "/power-local-llm/on-device-ai-translator-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llamatik-review",
         "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
         "url": "/power-local-llm/llamatik-review",
@@ -11620,17 +11628,9 @@
         "url": "/power-local-llm/anyllm-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "honey-llm-review",
-        "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
-        "url": "/power-local-llm/honey-llm-review",
-        "dateModified": "2026-10-16",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "LLM Hub": {
@@ -11885,6 +11885,20 @@
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "On-Device AI Translator": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "on-device-ai-translator-review",
+        "title": "On-Device AI Translator Review: Offline LLM Translation for iPhone",
+        "url": "/power-local-llm/on-device-ai-translator-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],

@@ -202,6 +202,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'anyllm':                                  'anyllm',
   'hiwaifu':                                 'hiwaifu',
   'memoryai':                                'memoryai',
+  'on-device-ai-translator':                 'on-device-ai-translator',
   'llamatik':                                'llamatik',
   'caelum':                                  'caelum',
   'obscurify':                               'obscurify',
