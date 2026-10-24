@@ -71,6 +71,7 @@ import { article as a_strata_review } from './articles/strata-review'
 import { article as a_openclient_review } from './articles/openclient-review'
 import { article as a_zero1llm_review } from './articles/zero1llm-review'
 import { article as a_speechbrain_review } from './articles/speechbrain-review'
+import { article as a_localmcp_review } from './articles/localmcp-review'
 import { article as a_libredb_studio_review } from './articles/libredb-studio-review'
 import { article as a_openrag_review } from './articles/openrag-review'
 import { article as a_localmindai_review } from './articles/localmindai-review'
@@ -692,6 +693,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'openclient-review':                             a_openclient_review,
   'zero1llm-review':                               a_zero1llm_review,
   'speechbrain-review':                            a_speechbrain_review,
+  'localmcp-review':                               a_localmcp_review,
   'libredb-studio-review':                         a_libredb_studio_review,
   'openrag-review':                                a_openrag_review,
   'localmindai-review':                            a_localmindai_review,
