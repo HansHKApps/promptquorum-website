@@ -994,6 +994,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "linkwarden": {
+    "cluster": "power-local-llm",
+    "urlSlug": "linkwarden-review",
+    "url": "/power-local-llm/linkwarden-review"
+  },
   "local-operator": {
     "cluster": "power-local-llm",
     "urlSlug": "local-operator-review",

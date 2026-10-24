@@ -1174,6 +1174,7 @@ const HUB_THEMES: Array<{
       'llama-factory-review',
       'siyuan-review',
       'karakeep-review',
+      'linkwarden-review',
       'blinko-review',
       'baserow-review',
       'surf-review',

@@ -43,6 +43,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "linkwarden-review",
+        "title": "Linkwarden Review: Self-Hosted Bookmarks with Local AI Tagging",
+        "url": "/power-local-llm/linkwarden-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/nekoni-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openclient-review",
-        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
-        "url": "/power-local-llm/openclient-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 314,
+    "totalCount": 315,
     "capped": true
   },
   "llama.cpp": {
@@ -9883,6 +9883,28 @@
     "totalCount": 2,
     "capped": false
   },
+  "Linkwarden": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "linkwarden-review",
+        "title": "Linkwarden Review: Self-Hosted Bookmarks with Local AI Tagging",
+        "url": "/power-local-llm/linkwarden-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "karakeep-review",
+        "title": "Karakeep Review: Self-Hosted Bookmarks with AI Auto-Tagging",
+        "url": "/power-local-llm/karakeep-review",
+        "dateModified": "2026-09-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "Local Operator": {
     "articles": [
       {
@@ -10355,6 +10377,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "linkwarden-review",
+        "title": "Linkwarden Review: Self-Hosted Bookmarks with Local AI Tagging",
+        "url": "/power-local-llm/linkwarden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "surf-review",
         "title": "Surf Review: Deta's Open-Source AI Notebook",
         "url": "/power-local-llm/surf-review",
@@ -10362,7 +10392,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "KServe": {
@@ -11129,6 +11159,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "linkwarden-review",
+        "title": "Linkwarden Review: Self-Hosted Bookmarks with Local AI Tagging",
+        "url": "/power-local-llm/linkwarden-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11166,17 +11204,9 @@
         "url": "/power-local-llm/zero1llm-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 217,
+    "totalCount": 218,
     "capped": true
   },
   "Qdrant": {
