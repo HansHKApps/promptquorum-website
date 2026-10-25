@@ -47,6 +47,7 @@ export function AboutHeroClient({
   ctaEcosystem,
   ctaMcp,
 }: AboutHeroClientProps) {
+  const lp = (href: string) => (lang === 'en' ? href : `/${lang}${href}`)
   return (
     <div className="border-b border-hub-violet-edge bg-hub-violet-tint pt-24 pb-12">
      <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -63,10 +64,10 @@ export function AboutHeroClient({
       </p>
 
       <div className="flex flex-wrap gap-3">
-        <AboutTrackedLink href="/directory" via="hero_directory" className={PRIMARY_BTN}>
+        <AboutTrackedLink href={lp('/directory')} via="hero_directory" className={PRIMARY_BTN}>
           {ctaDirectory}
         </AboutTrackedLink>
-        <AboutTrackedLink href="/directory?hw=1#hw-profile-widget" via="hero_hardware" className={SECONDARY_BTN}>
+        <AboutTrackedLink href={lp('/directory?hw=1#hw-profile-widget')} via="hero_hardware" className={SECONDARY_BTN}>
           {ctaHardware}
         </AboutTrackedLink>
         <AboutTrackedLink href="#ecosystem" via="hero_ecosystem" className={SECONDARY_BTN}>

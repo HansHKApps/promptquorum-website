@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
@@ -16,7 +17,10 @@ const PATH_LOCALE_RE = /^\/(de|fr|ja|zh|es|pt|ar|ko)(\/|$)/
  * After hydration, reads window.location and updates on popstate events.
  */
 export function useLang(initialLang?: Lang): Lang {
-  const [lang, setLang] = useState<Lang>(initialLang ?? 'en')
+  // usePathname() is the same on server and client, so a path-prefixed URL renders in its own
+  // language in the server HTML (header, nav) instead of English until hydration.
+  const pathLang = (usePathname() ?? '').match(PATH_LOCALE_RE)?.[1] as Lang | undefined
+  const [lang, setLang] = useState<Lang>(initialLang ?? pathLang ?? 'en')
 
   useEffect(() => {
     const read = () => {
