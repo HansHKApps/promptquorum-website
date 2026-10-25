@@ -5,6 +5,7 @@ export const SITE = 'https://www.promptquorum.com'
 export const SERIES = 'The State of Local AI'
 export const HUB_PATH = '/about/state-of-local-ai'
 export const NEXT_ISSUE = 'January 2027'
+export const NEXT_ISSUE_ISO = '2027-01-01'
 export const PRESS_CONTACT = 'hello@promptquorum.com'
 
 export interface Issue {

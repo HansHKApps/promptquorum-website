@@ -171,6 +171,13 @@ export const es: AboutCopy = {
     'Construir la aplicación reveló un vacío más grande: las personas que quieren una IA confiable y privada no tienen un mapa fiable del mundo de la IA local. Así que la aplicación creció hasta convertirse en un ecosistema, con un directorio, una base de conocimientos y un servidor MCP apuntando al mismo objetivo.',
   founderBioP3: 'La privacidad y el control del usuario son principios de diseño no negociables.',
   founderBioSmall: 'Independiente, con sede en Alemania. Más de 30 años en consultoría y dirección general, en más de 20 países.',
+  solaH2: 'The State of Local AI',
+  solaLead: 'Un informe trimestral sobre en qué punto está la IA local, con cifras con fuentes, pruebas prácticas y supuestos señalados. Aquí encuentras todos los informes.',
+  solaNextLabel: 'Próximo informe:',
+  solaReadLink: 'Leer el informe',
+  solaAllLink: 'Todos los informes',
+  solaEnglishNote: 'Los informes se publican en inglés.',
+
   roadmapH2: 'Hacia dónde va esto',
   roadmapLead:
     'Dónde se ejecuta la IA está cambiando: de ser exclusivamente en la nube a una mezcla de nube, local, híbrido y edge. PromptQuorum se está construyendo para ese cambio. En la hoja de ruta:',

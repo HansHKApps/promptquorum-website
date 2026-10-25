@@ -171,6 +171,13 @@ export const zh: AboutCopy = {
     '在开发这款应用的过程中，一个更大的空白浮现出来：想要可靠、私密 AI 的人，却没有一份值得信赖的本地 AI 世界地图。于是这款应用逐渐发展成了一个生态系统，目录、知识库和 MCP 服务器都指向同一个目标。',
   founderBioP3: '隐私与用户掌控权，是不容妥协的设计原则。',
   founderBioSmall: '独立运营，总部位于德国。拥有 30 多年咨询与综合管理经验，足迹遍及 20 多个国家。',
+  solaH2: 'The State of Local AI',
+  solaLead: '按季度发布的本地 AI 现状报告，包含有来源的数据、实测结果和明确标注的假设。所有报告都列在这里。',
+  solaNextLabel: '下一期报告：',
+  solaReadLink: '阅读报告',
+  solaAllLink: '全部报告',
+  solaEnglishNote: '报告以英文发布。',
+
   roadmapH2: '未来的方向',
   roadmapLead:
     'AI 的运行方式正在改变：从纯云端，转向云端、本地、混合与边缘并存的格局。PromptQuorum 正是为这一转变而打造。路线图包括：',

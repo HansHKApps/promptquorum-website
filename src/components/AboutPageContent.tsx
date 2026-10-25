@@ -9,6 +9,8 @@ import { CATEGORY_GROUPS } from '@/lib/power-local-llm/apps/categories'
 import { getHomeStats } from '@/lib/home/stats'
 import { MCP_SERVER_URL } from '@/lib/mcp/clients'
 import { ABOUT_COPY } from '@/lib/about/copy'
+import { ISSUES, HUB_PATH, NEXT_ISSUE_ISO, issuePath } from '@/lib/state-of-local-ai/issues'
+import { formatDisplayDate, formatDisplayMonthYear } from '@/lib/formatDisplayDate'
 import { fillTokens } from '@/lib/about/types'
 import { HUB_TONES, cycleTone, type HubTone } from '@/components/hub-template/palette'
 
@@ -339,6 +341,27 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             <p className="text-text-primary font-medium mt-6">{copy.wavesClosing}</p>
           </section>
 
+          {/* The State of Local AI: list of all reports, entry point to the series */}
+          <section id="state-of-local-ai" className="mb-20 scroll-mt-24">
+            <h2 className={H2}>{copy.solaH2}</h2>
+            <p className={`${BODY} mb-2`}>{copy.solaLead}</p>
+            <p className="text-sm text-text-muted mb-6">{copy.solaEnglishNote}</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {ISSUES.map((issue) => (
+                <a key={issue.slug} href={issuePath(issue)} lang="en" dir="ltr" className={`${CARD} block hover:border-hub-violet transition-colors`}>
+                  <p className="text-sm font-semibold text-hub-violet mb-1">{issue.label} · {issue.quarter}</p>
+                  <p className="text-lg font-bold text-text-primary mb-2">{issue.title}</p>
+                  <p className={`${BODY} text-sm mb-3`}>{issue.summary}</p>
+                  <p className="text-sm text-text-muted">{formatDisplayDate(issue.isoDate, 'en')}</p>
+                </a>
+              ))}
+            </div>
+            <p className={`${BODY} mt-6`}>
+              {copy.solaNextLabel} {formatDisplayMonthYear(NEXT_ISSUE_ISO, lang)} ·{' '}
+              <a href={HUB_PATH} className={LINK}>{copy.solaAllLink} {arrow}</a>
+            </p>
+          </section>
+
           {/* Philosophy */}
           <section id="why-local" className="mb-20 scroll-mt-24">
             <h2 className={H2}>{copy.believeH2}</h2>
@@ -598,17 +621,6 @@ export function AboutPageContent({ lang }: { lang: Language }) {
               </div>
             </div>
           </section>
-
-          {/* The State of Local AI: English-only until translated */}
-          {lang === 'en' && (
-            <section className="mb-20">
-              <h2 className={H2}>The State of Local AI</h2>
-              <p className={BODY}>
-                A quarterly report on where local AI stands, with sourced figures, hands-on tests and labelled assumptions.{' '}
-                <a href="/about/state-of-local-ai" className={LINK}>Read the series</a>
-              </p>
-            </section>
-          )}
 
           {/* Roadmap */}
           <section className="mb-20">

@@ -180,6 +180,13 @@ export const en: AboutCopy = {
   founderBioP3: 'Privacy and user control are non-negotiable design principles.',
   founderBioSmall: 'Independent, based in Germany. 30+ years in consulting and general management, in more than 20 countries.',
 
+  solaH2: 'The State of Local AI',
+  solaLead: 'A quarterly report on where local AI stands, with sourced figures, hands-on tests and labelled assumptions. Every report is listed here.',
+  solaNextLabel: 'Next report:',
+  solaReadLink: 'Read the report',
+  solaAllLink: 'All reports',
+  solaEnglishNote: 'The reports are published in English.',
+
   roadmapH2: 'Where this is going',
   roadmapLead:
     'Where AI runs is changing: from cloud-only to a mix of cloud, local, hybrid and edge. PromptQuorum is being built for that shift. On the roadmap:',
