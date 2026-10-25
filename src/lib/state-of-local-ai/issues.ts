@@ -83,11 +83,12 @@ export const evidencePath = (i: Issue) => `${HUB_PATH}/${i.slug}/evidence`
 export const kicker = (i: Issue) => `${SERIES} · ${i.label} · ${i.quarter}`
 
 /** Read a content fragment and adapt markup only (wording is untouched). */
-export function loadFragment(slug: string, name: 'article' | 'evidence'): string {
-  const file = path.join(process.cwd(), 'src/lib/state-of-local-ai/content', slug, `${name}.html`)
+export function loadFragment(slug: string, name: 'article' | 'evidence', lang = 'en', tableLabel = 'Scrollable table'): string {
+  const base = name === 'article' && lang !== 'en' ? `article.${lang}` : name
+  const file = path.join(process.cwd(), 'src/lib/state-of-local-ai/content', slug, `${base}.html`)
   let html = fs.readFileSync(file, 'utf8')
   html = html.replace(/<table class="">/g, '<table>')
-  html = html.replace(/<table>/g, '<div class="sola-scroll" role="region" tabindex="0" aria-label="Scrollable table"><table>')
+  html = html.replace(/<table>/g, `<div class="sola-scroll" role="region" tabindex="0" aria-label="${tableLabel}"><table>`)
   html = html.replace(/<\/table>/g, '</table></div>')
   // Accessible names for charts: <title> + <desc> from the existing aria-label.
   html = html.replace(/<svg ([^>]*?)aria-label="([^"]*)">/g, (_m, pre, label) =>

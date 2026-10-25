@@ -1,21 +1,31 @@
 import type { Metadata } from 'next'
-import { SITE, SERIES, HUB_PATH, type Issue, kicker } from '@/lib/state-of-local-ai/issues'
+import type { Language } from '@/lib/blog/blogContent'
+import { SITE, HUB_PATH, type Issue } from '@/lib/state-of-local-ai/issues'
+import { SOLA_STRINGS } from '@/lib/state-of-local-ai/i18n'
+import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
+
+/** Locale-prefixed path: English stays unprefixed. */
+export const localePath = (path: string, lang: Language) => (lang === 'en' ? path : `/${lang}${path}`)
 
 export const NOINDEX: Metadata['robots'] = { index: false, follow: true }
 
-export function pageMetadata(opts: { title: string; description: string; path: string; ogTitle?: string }): Metadata {
+export function pageMetadata(opts: { title: string; description: string; path: string; ogTitle?: string; lang?: Language; hreflang?: boolean }): Metadata {
+  const lang = opts.lang ?? 'en'
+  const url = `${SITE}${localePath(opts.path, lang)}`
   return {
     title: { absolute: opts.title },
     description: opts.description,
     robots: NOINDEX,
-    alternates: { canonical: `${SITE}${opts.path}` },
+    alternates: opts.hreflang ? generateAlternates(opts.path, lang, true, undefined, [...PATH_PREFIX_LANGS]) : { canonical: url },
     openGraph: {
       title: opts.ogTitle ?? opts.title,
       description: opts.description,
-      url: `${SITE}${opts.path}`,
+      url,
       type: 'article',
       siteName: 'PromptQuorum',
-      locale: 'en_US',
+      ...(lang === 'en' ? {} : { images: [{ url: `${SITE}${opts.path}/opengraph-image` }] }),
+      ...ogLocale(lang),
     },
     twitter: { card: 'summary_large_image', title: opts.ogTitle ?? opts.title, description: opts.description },
   }
@@ -28,6 +38,7 @@ export function JsonLd({ data }: { data: object }) {
 export type Crumb = { name: string; path?: string }
 
 export function crumbSchema(crumbs: Crumb[], selfPath: string) {
+  // selfPath and crumb paths are already locale-resolved by the caller
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -55,14 +66,22 @@ export function Breadcrumb({ crumbs }: { crumbs: Crumb[] }) {
   )
 }
 
-export const hubCrumbs = (): Crumb[] => [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: SERIES, path: HUB_PATH },
-]
+export const hubCrumbs = (lang: Language = 'en'): Crumb[] => {
+  const t = SOLA_STRINGS[lang]
+  return [
+    { name: t.home, path: lang === 'en' ? '/' : `/${lang}` },
+    { name: t.about, path: localePath('/about', lang) },
+    { name: t.series, path: localePath(HUB_PATH, lang) },
+  ]
+}
 
-export function Kicker({ issue }: { issue: Issue }) {
-  return <p className="inline-block rounded-full border border-hub-violet-edge bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-hub-violet-ink mb-4">{kicker(issue)}</p>
+export const kickerFor = (issue: Issue, lang: Language = 'en') => {
+  const t = SOLA_STRINGS[lang]
+  return `${t.series} · ${t.reportLabel.replace(/\d+/, String(issue.number).padStart(2, '0'))} · ${issue.quarter}`
+}
+
+export function Kicker({ issue, lang = 'en' }: { issue: Issue; lang?: Language }) {
+  return <p className="inline-block rounded-full border border-hub-violet-edge bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-hub-violet-ink mb-4">{kickerFor(issue, lang)}</p>
 }
 
 /** Tinted header band, the same violet-tint treatment as the site's article heroes. */
@@ -82,10 +101,10 @@ export function Lede({ children }: { children: React.ReactNode }) {
 export const BTN = 'sola-btn inline-block rounded-lg bg-hub-violet px-5 py-2.5 text-sm font-semibold hover:opacity-90'
 export const CARD = 'bg-white border border-hub-violet-edge rounded-xl p-6'
 
-export function CiteBox({ issue }: { issue: Issue }) {
+export function CiteBox({ issue, lang = 'en' }: { issue: Issue; lang?: Language }) {
   return (
     <section aria-labelledby="cite-h" className={`${CARD} my-8`}>
-      <h2 id="cite-h" className="!mt-0 !text-xl">Cite this report</h2>
+      <h2 id="cite-h" className="!mt-0 !text-xl">{SOLA_STRINGS[lang].citeThisReport}</h2>
       <p className="!mb-0 text-text-secondary text-base select-all">{issue.citeAs}</p>
     </section>
   )

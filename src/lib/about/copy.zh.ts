@@ -176,7 +176,6 @@ export const zh: AboutCopy = {
   solaNextLabel: '下一期报告：',
   solaReadLink: '阅读报告',
   solaAllLink: '全部报告',
-  solaEnglishNote: '报告以英文发布。',
 
   roadmapH2: '未来的方向',
   roadmapLead:
