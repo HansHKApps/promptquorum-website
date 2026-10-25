@@ -40,8 +40,8 @@
 
   <!-- Row 6: Price -->
   <text x="50" y="430" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#79747E">Price (Jul 2026)</text>
-  <text x="560" y="430" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F">~$439 barebones – $649 / 32 GB</text>
-  <text x="930" y="430" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F">~$650 / 32 GB</text>
+  <text x="560" y="430" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F">~$440 barebones – $824 / 32 GB</text>
+  <text x="930" y="430" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F">~$799 / 24 GB</text>
   <line x1="30" y1="447" x2="1170" y2="447" stroke="#E8DEF8" stroke-width="1.5"/>
 
   <text x="600" y="495" font-family="system-ui, sans-serif" font-size="12.5" fill="#49454F" text-anchor="middle">Same CPU/iGPU tier — the UM890 Pro's premium buys a 96 GB RAM ceiling, dual 2.5GbE, and an OCuLink port for a fast external GPU.</text>

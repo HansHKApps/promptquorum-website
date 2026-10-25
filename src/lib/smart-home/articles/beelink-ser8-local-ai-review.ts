@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-25',
@@ -17,11 +17,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Beelink SER8 Review: Specs, Price & 32GB vs 64GB (2026)',
     seoTitle: 'Beelink SER8 Review 2026: Official Specs, Price, 32GB/64GB',
     intro:
-      'The Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) is the best-value mini PC for a local-AI smart home in 2026 — the 32 GB / 1 TB configuration runs Home Assistant, Frigate, Whisper, and a 7B model on Ollama on one quiet box for roughly $799–849 (August 2026, price volatile by retailer and config). This review verifies every spec against Beelink and independent sources, sets honest expectations for local-LLM speed as estimates rather than measured benchmarks, and covers what changed since launch — including Beelink\'s newer SER9 and SER10 lines.',
+      'The Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) is the best-value mini PC for a local-AI smart home in 2026 — the 32 GB / 1 TB configuration runs Home Assistant, Frigate, Whisper, and a 7B model on Ollama on one quiet box; the official Beelink store lists the 24 GB / 1 TB configuration at a $799 list price (checked 2026-10-25), and 32 GB configurations should be checked on the current listing. This review verifies every spec against Beelink and independent sources, sets honest expectations for local-LLM speed as estimates rather than measured benchmarks, and covers what changed since launch — including Beelink\'s newer SER9 and SER10 lines.',
     metaDescription:
       'Beelink SER8 official specs verified: Ryzen 7 8845HS, current price by config, 32GB vs 64GB, idle power, dimensions. Runs Home Assistant + a 7B local LLM.',
     twitterDescription:
-      'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, from ~$799. Which config to buy for Home Assistant + a local LLM — 32GB vs 64GB, specs, and current price.',
+      'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, official store list price $799 (24GB/1TB). Which config to buy for Home Assistant + a local LLM — 32GB vs 64GB, specs, and current price.',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'Buyers choosing a value mini PC for Home Assistant and a local LLM',
@@ -34,18 +34,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs mini pc',
     ],
     leadAnswerBlock:
-      '**Yes — buy the Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) if you want Home Assistant, Frigate, and a small local LLM running quietly on one box.** It runs the hub, Frigate, Whisper, and a 7B model on Ollama for roughly $799–849 (32 GB/1 TB, August 2026, volatile) — about half the price of a GEEKOM A9 Max for most of the same smart-home work. Best for: HA + Frigate + a 7B–8B assistant. Not for: 32B+ models — see the GPU-server alternative below.',
+      '**Yes — buy the Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) if you want Home Assistant, Frigate, and a small local LLM running quietly on one box.** It runs the hub, Frigate, Whisper, and a 7B model on Ollama (official store list price $799 for the 24 GB/1 TB configuration, checked 2026-10-25; for 32 GB, check the current listing) — roughly half to three-fifths of the GEEKOM A9 Max\'s $1,299–1,599 list price for most of the same smart-home work. Best for: HA + Frigate + a 7B–8B assistant. Not for: 32B+ models — see the GPU-server alternative below.',
     quickAnswerTop: {
       en: {
         question: 'Should I buy the Beelink SER8 for local AI and Home Assistant?',
         answer:
-          'Yes, if your target is Home Assistant plus Frigate plus a 7B–8B local LLM — buy the 32 GB/1 TB configuration (Ryzen 7 8845HS, Radeon 780M) for about $799–849 (August 2026, volatile). It comfortably runs a 7B model, loads 13B–14B at 4-bit but slower, and gets tight above that. Go 64 GB/1 TB (~$1,239) only if you specifically want 14B models to feel comfortable rather than usable. Skip it entirely for 32B+ models — see the GPU-server comparison below.',
+          'Yes, if your target is Home Assistant plus Frigate plus a 7B–8B local LLM — buy the 32 GB/1 TB configuration (Ryzen 7 8845HS, Radeon 780M). The official Beelink store lists the 24 GB/1 TB configuration at $799 (official store list price, checked 2026-10-25); for 32 GB configurations, check the current listing. It comfortably runs a 7B model, loads 13B–14B at 4-bit but slower, and gets tight above that. Go 64 GB/1 TB (check current listing) only if you specifically want 14B models to feel comfortable rather than usable. Skip it entirely for 32B+ models — see the GPU-server comparison below.',
         bullets: [
           'CPU: Ryzen 7 8845HS — 8 cores/16 threads, Radeon 780M (12 CU, RDNA 3)',
           'Confirm the CPU on the listing: Beelink also sells a cheaper SER8 with the 8745HS chip (lower boost clock, same name) — this review covers the 8845HS unit only',
           'RAM: dual SO-DIMM, user-replaceable; 32 GB is the hero config, 64 GB for headroom',
           'Local LLM (estimated from specs, not benchmarked): 7B comfortable; 13B–14B usable but slower; 32B+ not recommended',
-          'Price: 32 GB/1 TB ~$799–849; 64 GB/1 TB ~$1,239 (August 2026, check current price — varies by retailer and RAM SKU)',
+          'Price: official store list price $799 for 24 GB/1 TB (checked 2026-10-25); 32 GB and 64 GB configurations — check current listing (varies by retailer and RAM SKU)',
           'Beelink has since released the SER9 and SER10 Pro/Max lines — the SER8 is not the newest Beelink model, but remains the better value for this specific job',
         ],
         updatedDate: '2026-08',
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Final Buying Decision', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'The Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) is a $799–849 mini PC that runs Home Assistant, Frigate, and a 7B local LLM on Ollama on one quiet box, making it the best-value pick for a local-AI smart home in 2026.' },
+      { type: 'one-sentence', content: 'The Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) is a mini PC (from $799 official store list price, 24 GB/1 TB) that runs Home Assistant, Frigate, and a 7B local LLM on Ollama on one quiet box, making it the best-value pick for a local-AI smart home in 2026.' },
       { type: 'plain-terms', content: 'A mini PC is a small, quiet, always-on computer. The SER8 pairs a fast AMD processor with strong built-in graphics and enough memory to run your whole smart home hub plus a mid-size AI chat model at the same time, without the price of a high-end machine. The memory sits in two replaceable slots, so you can add more later — the 32 GB version is the one most buyers should get; 64 GB is only worth the extra cost if you specifically want a bigger model to feel comfortable rather than just usable.' },
     ],
     sections: {
@@ -81,11 +81,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         items: [
-          'Buy the 32 GB/1 TB SER8 (Ryzen 7 8845HS) — it runs Home Assistant, Frigate, Whisper, and a 7B local LLM on one box for about $799–849 (August 2026, volatile)',
+          'Buy the 32 GB/1 TB SER8 (Ryzen 7 8845HS) — it runs Home Assistant, Frigate, Whisper, and a 7B local LLM on one box — official store list price $799 for the 24 GB/1 TB configuration (checked 2026-10-25), 32 GB: check current listing',
           'Confirm the listing says 8845HS, not the cheaper 8745HS variant Beelink also sells under the same SER8 name',
-          '32 GB is the hero config for most buyers; go 64 GB (~$1,239) only if you want 14B models to feel comfortable',
+          '32 GB is the hero config for most buyers; go 64 GB (check current listing) only if you want 14B models to feel comfortable',
           'Beelink has released newer SER9 and SER10 Pro/Max lines since this review\'s original publish — the SER8 is not the current flagship, but it is still the better value for HA + Frigate + a 7B model',
-          'Cheaper and simpler than a [GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review) (now $1,099–1,799); far more capable than an Intel N150 box',
+          'Cheaper and simpler than a [GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review) ($1,299–1,599 official list price); far more capable than an Intel N150 box',
           'Skip it entirely for 32B+ models — see the GPU-server comparison for that job',
         ],
       },
@@ -93,9 +93,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict & Best Config',
         content:
-          '**YES — buy the Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) if you want Home Assistant, Frigate, and a small local LLM running quietly on one machine.** Recommended configuration: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Best for: a home-server all-in-one — Home Assistant, Ollama, Whisper, and Frigate together, with a 7B assistant comfortable and 13B–14B usable but slower.\n\nCurrent price: check live price — prices vary by RAM/storage configuration and retailer; researched range for 32 GB/1 TB is roughly $799–849 (August 2026). Not for: anyone planning to run 30B-plus models routinely — the RAM ceiling and shared-memory iGPU make that a poor fit even at 64 GB. See the [GPU-server alternative](#vs-gpu-server) instead.',
+          '**YES — buy the Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) if you want Home Assistant, Frigate, and a small local LLM running quietly on one machine.** Recommended configuration: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Best for: a home-server all-in-one — Home Assistant, Ollama, Whisper, and Frigate together, with a 7B assistant comfortable and 13B–14B usable but slower.\n\nCurrent price: check live price — prices vary by RAM/storage configuration and retailer; the official Beelink store lists the 24 GB/1 TB configuration at $799 (official store list price, checked 2026-10-25); for 32 GB configurations, check the current listing. Not for: anyone planning to run 30B-plus models routinely — the RAM ceiling and shared-memory iGPU make that a poor fit even at 64 GB. See the [GPU-server alternative](#vs-gpu-server) instead.',
         affiliateLinks: [
-          { label: 'Check current SER8 price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Check current SER8 price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'Compare SER8 configurations', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8 (all configs)', productCategory: 'Mini PC' },
         ],
       },
@@ -128,18 +128,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Buy 32GB/1TB if: your target is a 7B–8B model, you run Home Assistant + Frigate + Whisper alongside it, and you want the lowest price that still does the job comfortably.',
           'Buy 64GB/1TB if: you plan to run 13B–14B models regularly and want them to feel as responsive as the 7B tier feels on 32 GB, or you want extra RAM headroom for running multiple services (HA, Frigate, a vector database, Ollama) without swapping.',
           'Both configs share the same Radeon 780M iGPU and DDR5-5600 memory bandwidth — 64 GB does not make inference faster, it only lets larger models fit.',
-          'The 64 GB SKU currently costs roughly $400–450 more than the 32 GB SKU — worth it only if the larger model tier is the actual goal, not "just in case."',
+          'The 64 GB SKU costs more than the 32 GB SKU (check the current listing for the difference) — worth it only if the larger model tier is the actual goal, not "just in case."',
         ],
         affiliateLinks: [
-          { label: 'Check current price — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
-          { label: 'Check current price — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '$1,239' },
+          { label: 'Check current price — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Check current price — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: 'Specifications',
         content:
-          '**All specs below were re-verified against Beelink\'s own listing and independent retailer/review sources in August 2026.** Beelink sells the SER8 name under two different CPUs — confirm the listing says "8845HS" (this review\'s subject, 5.1 GHz boost) and not the cheaper "8745HS" variant (4.9 GHz boost, otherwise similar) before buying. RAM as sold varies by SKU (16, 24, 32, or 64 GB); this table reflects the 32 GB / 1 TB unit as the reference config.',
+          '**All specs below were verified against Beelink\'s own listing and independent retailer/review sources; prices were last checked against the official store on 2026-10-25.** Beelink sells the SER8 name under two different CPUs — confirm the listing says "8845HS" (this review\'s subject, 5.1 GHz boost) and not the cheaper "8745HS" variant (4.9 GHz boost, otherwise similar) before buying. RAM as sold varies by SKU (16, 24, 32, or 64 GB); this table reflects the 32 GB / 1 TB unit as the reference config.',
         columns: ['Spec', 'Beelink SER8 (8845HS)'],
         rows: [
           { Spec: 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS (Zen 4, 4 nm)' },
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spec: 'TDP', 'Beelink SER8 (8845HS)': '54–65 W (runs at 65 W sustained)' },
           { Spec: 'Dimensions', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm, ~0.75 kg' },
           { Spec: 'OS', 'Beelink SER8 (8845HS)': 'Windows 11 Pro (Linux/Proxmox install supported)' },
-          { Spec: 'Price (32GB/1TB)', 'Beelink SER8 (8845HS)': '~$799–849 (Aug 2026 — volatile, check current price)' },
+          { Spec: 'Price (official list)', 'Beelink SER8 (8845HS)': '$799 official store list price for 24GB/1TB (checked 2026-10-25); 32GB: check current listing' },
         ],
         items: [
           'No discrete GPU: all AI inference runs on the CPU and Radeon 780M iGPU sharing system RAM.',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Build this exact setup: see [Connect Ollama to Home Assistant](/smart-home/home-assistant-ollama-integration) and [Running Your Smart Home on a Local LLM](/smart-home/local-llm-smart-home-complete-guide).',
         ],
         affiliateLinks: [
-          { label: 'Check current SER8 price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Check current SER8 price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Radeon 780M iGPU: strong enough for 7B-model inference and Frigate\'s video decode without a discrete GPU\'s power draw or noise.',
         ],
         affiliateLinks: [
-          { label: 'Check current SER8 price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Check current SER8 price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Why I like it, and why I wouldn\'t buy it for every job.**',
         items: [
           '**Why I like it**',
-          'Best value for a capable local-AI box — $799–849 for a machine that comfortably runs a 7B model plus a full smart-home stack',
+          'Best value for a capable local-AI box — $799 official store list price (24 GB/1 TB) for a machine that comfortably runs a 7B model plus a full smart-home stack',
           'User-replaceable RAM and two M.2 slots mean the machine grows with you instead of forcing a replacement',
           '2.5GbE and USB4 cover the actual bottlenecks of a home server (network throughput, external storage) that cheaper boxes skip',
           'Runs at 65 W under load and roughly 8–12 W at idle — inexpensive to leave on 24/7',
@@ -273,19 +273,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8 vs Alternatives',
         content: '**If the SER8 is not the right fit, four boxes bracket it on price and capability — each is covered in its own review with its own product card below.**',
-        columns: ['Mini PC', 'Price (approx.)', 'RAM ceiling (tested)', 'Best for'],
+        columns: ['Mini PC', 'Official list price', 'RAM ceiling (manufacturer spec)', 'Best for'],
         rows: [
-          { 'Mini PC': 'Beelink SER8', 'Price (approx.)': '$799–849 (32GB/1TB)', 'RAM ceiling (tested)': '~64–96GB', 'Best for': 'Best value: HA + 7B model' },
-          { 'Mini PC': 'Beelink EQ14', 'Price (approx.)': '$180–230', 'RAM ceiling (tested)': '16GB', 'Best for': 'HA only, tiny model' },
-          { 'Mini PC': 'Minisforum UM890 Pro', 'Price (approx.)': '$700–850', 'RAM ceiling (tested)': '~64–96GB', 'Best for': 'Dual 2.5GbE, eGPU port' },
-          { 'Mini PC': 'GEEKOM A9 Max (2026)', 'Price (approx.)': '$1,099–1,799', 'RAM ceiling (tested)': '128GB', 'Best for': 'Max headroom, Wi-Fi 7' },
-          { 'Mini PC': 'GMKtec G3 Plus', 'Price (approx.)': '$200–260', 'RAM ceiling (tested)': '32GB', 'Best for': 'Budget, upgradeable' },
+          { 'Mini PC': 'Beelink SER8', 'Official list price': '$799 (24GB/1TB)', 'RAM ceiling (manufacturer spec)': '~64–96GB', 'Best for': 'Best value: HA + 7B model' },
+          { 'Mini PC': 'Beelink EQ14', 'Official list price': '$385 (16GB/500GB)', 'RAM ceiling (manufacturer spec)': '16GB', 'Best for': 'HA only, tiny model' },
+          { 'Mini PC': 'Minisforum UM890 Pro', 'Official list price': '$439.90 barebone / $823.90 (32GB/1TB)', 'RAM ceiling (manufacturer spec)': '~64–96GB', 'Best for': 'Dual 2.5GbE, eGPU port' },
+          { 'Mini PC': 'GEEKOM A9 Max (2026)', 'Official list price': '$1,299–1,599', 'RAM ceiling (manufacturer spec)': '128GB', 'Best for': 'Max headroom, Wi-Fi 7' },
+          { 'Mini PC': 'GMKtec G3 Plus', 'Official list price': '$399.99–499.99', 'RAM ceiling (manufacturer spec)': '32GB', 'Best for': 'N150, upgradeable RAM' },
         ],
         items: [
-          '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review) — the headroom pick: 128 GB RAM ceiling and Wi-Fi 7, but now $1,099–1,799 (2026 Edition, Ryzen AI 9 HX 370/HX 470) — more than double, often triple the SER8\'s price.',
-          '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) — similar Radeon 780M performance, but adds dual 2.5GbE, Wi-Fi 6E, and an OCuLink eGPU port for a modest premium.',
-          '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review) — budget Intel N150 box for Home Assistant plus a tiny model only; skip if you want a 7B assistant.',
-          '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — another budget N150 option with upgradeable RAM.',
+          '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review) — the headroom pick: 128 GB RAM ceiling and Wi-Fi 7, but $1,299–1,599 official list price (2026 Edition, Ryzen AI 9 HX 370/HX 470) — roughly 1.6x–2.0x the SER8\'s $799 list price.',
+          '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) — similar Radeon 780M performance, but adds dual 2.5GbE, Wi-Fi 6E, and an OCuLink eGPU port; official page list prices are $439.90 barebone and $823.90 with 32 GB/1 TB, shown as sold out when checked 2026-10-25.',
+          '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review) — Intel N150 box for Home Assistant plus a tiny model only ($385 official list price for 16 GB/500 GB, labelled pre-order when checked 2026-10-25); skip if you want a 7B assistant.',
+          '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — another N150 option with upgradeable RAM ($399.99–499.99 official list price; all variants shown as sold out when checked 2026-10-25).',
           'Beelink\'s own SER9 and SER10 Pro/Max (launched CES 2026, Ryzen AI 9 HX 470, 10GbE on some SKUs) are the current flagship line — worth it only if 10GbE or the newer NPU generation matters to you specifically; for HA + Frigate + a 7B model, they do not change the recommendation.',
           'Still comparing? Start from the [best mini PCs for Home Assistant + local AI roundup](/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
@@ -296,13 +296,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Two channels are the real, verifiable options: Beelink\'s official store (direct warranty support) and Amazon (fast delivery, easy returns).** Prices move week to week and by RAM/storage SKU — check the live price rather than trusting a fixed figure.',
         items: [
-          'Beelink official store: direct manufacturer warranty and support; occasionally the highest price of the two channels.',
-          'Amazon: usually the more competitive price, plus Amazon\'s standard return policy — the practical default for most buyers.',
+          'Beelink official store: direct manufacturer warranty and support; the store lists the 24 GB/1 TB configuration at $799 (checked 2026-10-25).',
+          'Amazon: fast delivery and Amazon\'s standard return policy; Amazon prices were not verified for this page and can differ from the official store, so compare before buying.',
           'Confirm the RAM SKU (16, 24, 32, or 64 GB) and the CPU (8845HS, not 8745HS) on the listing before buying — Beelink sells multiple variants under the same "SER8" name.',
         ],
         affiliateLinks: [
-          { label: 'Check price — Beelink official store', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
-          { label: 'Check price — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Check price — Beelink official store', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Check price — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -324,14 +324,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: 'Total Setup Cost',
-        content: '**A realistic full build — SER8 plus the bundle above — lands around $930–1,070 (USD, August 2026), not just the mini PC\'s sticker price.**',
+        content: '**A realistic full build — SER8 plus the bundle above — lands around $1,009–1,074 (USD, using the $799 official store list price for the 24 GB/1 TB SER8, checked 2026-10-25), not just the mini PC\'s sticker price.**',
         columns: ['Item', 'Approx. price'],
         rows: [
-          { Item: 'Beelink SER8 32GB/1TB', 'Approx. price': '$799–849' },
+          { Item: 'Beelink SER8 24GB/1TB (official list)', 'Approx. price': '$799' },
           { Item: 'SONOFF ZBDongle-E (Zigbee)', 'Approx. price': '$20–25' },
           { Item: 'Reolink RLC-810A × 2 (PoE cameras)', 'Approx. price': '$120–180' },
           { Item: 'Hailo-8L M.2 (Frigate accelerator)', 'Approx. price': '~$70' },
-          { Item: 'Total (approx.)', 'Approx. price': '$1,009–1,124+' },
+          { Item: 'Total (approx.)', 'Approx. price': '$1,009–1,074+' },
         ],
         items: [
           'This total excludes PoE switch/injector and cabling, which vary by home and are usually a one-time cost shared across other network devices.',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**If 32B or 70B models are the actual goal, don\'t buy the SER8 just because it\'s cheaper — a discrete-GPU system is the honest answer for that workload.** The comparison below is deliberately unfavorable to the SER8 outside its real strengths, because a reader planning a 70B setup should not end up here disappointed.',
         columns: ['Factor', 'SER8 (iGPU)', 'GPU server (24GB+ VRAM)'],
         rows: [
-          { Factor: 'Price', 'SER8 (iGPU)': '$799–849', 'GPU server (24GB+ VRAM)': '$1,500+' },
+          { Factor: 'Price', 'SER8 (iGPU)': '$799 (24GB/1TB list)', 'GPU server (24GB+ VRAM)': '$1,500+' },
           { Factor: 'Power draw', 'SER8 (iGPU)': '65 W load / ~10 W idle', 'GPU server (24GB+ VRAM)': '300–600 W load' },
           { Factor: '7B model', 'SER8 (iGPU)': 'Comfortable', 'GPU server (24GB+ VRAM)': 'Fast, overkill' },
           { Factor: '14B model', 'SER8 (iGPU)': 'Usable', 'GPU server (24GB+ VRAM)': 'Fast' },
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'US: Section 301 tariffs on Chinese electronics remain in force in 2026; the separate 2025 "IEEPA" tariffs were struck down by the Supreme Court in February 2026 and replaced by a temporary, capped Section 122 tariff. The sub-$800 duty-free "de minimis" exemption for direct imports has also ended.',
           'EU (affects DE/FR): there is no broad EU tariff on finished mini PCs, but from July 2026 the €150 duty-free threshold on low-value direct-from-China parcels was removed and a small per-parcel handling fee added.',
           'Assumption (macro trend, not a per-product fact): redirected Chinese export capacity has kept availability of these brands high in the EU and US, which broadly supports competitive pricing.',
-          'Net effect: verify the current price at the retailer before buying — the ranges on this page are indicative and date-stamped August 2026.',
+          'Net effect: verify the current price at the retailer before buying — the figures on this page are official store list prices checked 2026-10-25 and are indicative only.',
         ],
       },
       priceSanityCheck: {
@@ -379,14 +379,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'If the SER8 32GB/1TB is priced within ~$100 of a GEEKOM A9 Max sale price, the A9 Max\'s 128 GB ceiling and Wi-Fi 7 likely justify the difference for anyone who might grow into larger models.',
           'If the SER8 and SER9 are priced close together, check whether the SER9\'s spec improvements (verify current SER9 pricing and specs at purchase time) matter enough to you — otherwise the SER8 remains the value pick.',
-          'Don\'t buy on brand momentum alone — the recommendation on this page is tied to the 32GB/1TB config at roughly $799–849; re-check before purchase.',
+          'Don\'t buy on brand momentum alone — the recommendation on this page is tied to the 32GB/1TB config (check the current listing; the official store list price for 24GB/1TB is $799); re-check before purchase.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is the current price of the Beelink SER8?', a: 'Researched range for the 32 GB/1 TB configuration (Ryzen 7 8845HS) is roughly $799–849, with the 16 GB/500 GB base config typically lower (check current price) and the 64 GB/1 TB config higher (~$1,239). Prices vary by retailer and change weekly — check the live price before buying rather than relying on this figure.' },
+          { q: 'What is the current price of the Beelink SER8?', a: 'The official Beelink store lists the 24 GB/1 TB configuration (Ryzen 7 8845HS) at $799 (official store list price, checked 2026-10-25; it showed a compare-at price of $959). For 32 GB and 64 GB configurations, check the current listing. Prices vary by retailer and change often — check the live price before buying rather than relying on this figure.' },
           { q: 'What are the official Beelink SER8 specs?', a: 'AMD Ryzen 7 8845HS (8 cores/16 threads, up to 5.1 GHz), Radeon 780M iGPU (12 CU, RDNA 3), 16 TOPS NPU, DDR5-5600 dual SO-DIMM RAM (16/24/32/64 GB SKUs), 2× M.2 2280 PCIe 4.0 storage, 2.5GbE, Wi-Fi 6, USB4, 54–65 W TDP. Beelink also sells a cheaper SER8 variant with the 8745HS chip (4.9 GHz boost) — confirm the CPU on the listing.' },
           { q: 'What are the Beelink SER8 dimensions?', a: '135 × 135 × 44.7 mm, approximately 0.75 kg — small enough to sit behind a monitor or mount out of sight.' },
           { q: 'Can the Beelink SER8 run local LLMs?', a: 'Yes. With 32 GB of RAM and the Radeon 780M iGPU it comfortably runs a 7B–8B model on Ollama and can load a 13B–14B model at 4-bit, though slower. These are estimates from its verified hardware, not a PromptQuorum-measured benchmark, because actual speed depends on the model, quantization, and backend.' },
@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is the SER8\'s idle power consumption?', a: 'Roughly 8–12 W by independent measurements — inexpensive to run continuously as a home server. Under sustained load it draws up to 65 W. Exact figures depend on the workload and power profile.' },
           { q: 'Does the 16-TOPS NPU speed up local AI on the SER8?', a: 'No. Mainstream LLM runtimes (Ollama, llama.cpp, LM Studio) do not use the NPU for inference in 2026 — they run on the CPU and Radeon 780M iGPU instead. The NPU accelerates specific vision/audio workloads in supported frameworks, not general chat inference.' },
           { q: 'Is there a newer Beelink model than the SER8?', a: 'Yes. Beelink released the SER9 and, at CES 2026, the SER10 Pro and SER10 Max (Ryzen AI 9 HX 470, up to 10GbE networking). These are the current flagship line. For the specific job this review covers — Home Assistant, Frigate, and a 7B–14B local model — the SER8 remains the better value; the newer NPU generation does not meaningfully help this workload (see the NPU note above).' },
-          { q: 'SER8 or GEEKOM A9 Max?', a: 'The SER8 is the value choice at $799–849 and covers most local-AI smart-home needs. Choose the A9 Max only if you need its 128 GB RAM ceiling or Wi-Fi 7 — it costs $1,099–1,799, roughly 1.3x–2.2x the SER8\'s price depending on config, so it should be a deliberate choice, not a default upgrade.' },
+          { q: 'SER8 or GEEKOM A9 Max?', a: 'The SER8 is the value choice at a $799 official store list price (24 GB/1 TB) and covers most local-AI smart-home needs. Choose the A9 Max only if you need its 128 GB RAM ceiling or Wi-Fi 7 — it lists at $1,299–1,599, roughly 1.6x–2.0x the SER8\'s list price depending on config, so it should be a deliberate choice, not a default upgrade.' },
           { q: 'Is the RAM upgradeable?', a: 'Yes. The SER8 uses two standard DDR5 SO-DIMM slots that are user-replaceable, so you can start at 32 GB and move to 64 GB later. It also has two M.2 slots for storage expansion.' },
           { q: 'Where is the Beelink SER8 made, and does that affect price?', a: 'It is manufactured in China. In 2026, US import measures (Section 301 tariffs, the end of the sub-$800 de minimis exemption) and the EU removal of the €150 low-value parcel exemption can affect landed cost, so check the current retailer price rather than relying on a fixed number.' },
         ],
@@ -416,13 +416,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Final Buying Decision',
         content: '**Three paths, one clear default.**',
         items: [
-          '**YES, buy the 32 GB/1 TB SER8 if:** you want Home Assistant, Frigate, and a 7B–8B local assistant on one quiet, inexpensive box — this is the default recommendation for most readers of this page.',
+          '**YES, buy the 32 GB/1 TB SER8 if:** you want Home Assistant, Frigate, and a 7B–8B local assistant on one quiet, low-power box — this is the default recommendation for most readers of this page.',
           '**YES, but choose 64 GB/1 TB if:** 13B–14B models are your actual target and you want them to feel responsive, not just technically loaded.',
           '**NO if:** 32B or 70B models are your primary use case — buy a discrete-GPU system instead; see the [local-AI workstation build guide](/power-local-llm/best-workstation-build-local-ai-2026).',
           '**My pick: SER8 32GB/1TB — check today\'s price and buy that configuration.**',
         ],
         affiliateLinks: [
-          { label: 'Check today\'s SER8 32GB/1TB price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Check today\'s SER8 32GB/1TB price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -431,9 +431,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Beelink SER8 Review: Specs, Price & 32GB vs 64GB (2026)',
       reviewBody:
-        'The Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) 32 GB/1 TB configuration runs Home Assistant, Frigate, and a 7B local LLM on Ollama for roughly $799–849 (August 2026). It is the best-value local-AI mini PC for this specific workload, though Beelink has since released newer SER9 and SER10 lines.',
+        'The Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) 32 GB/1 TB configuration runs Home Assistant, Frigate, and a 7B local LLM on Ollama at a $799 official store list price for the 24 GB/1 TB configuration (checked 2026-10-25). It is the best-value local-AI mini PC for this specific workload, though Beelink has since released newer SER9 and SER10 lines.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -459,8 +459,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-de.webp',
@@ -468,11 +468,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Beelink-SER8-Rezension: Specs, Preis & 32GB vs. 64GB (2026)',
     seoTitle: 'Beelink-SER8-Rezension 2026 — Specs, Preis, 32GB vs. 64GB',
     intro:
-      'Der Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) ist der Mini-PC mit dem besten Preis-Leistungs-Verhältnis für ein lokales KI-Smart-Home im Jahr 2026 — die Konfiguration mit 32 GB / 1 TB betreibt Home Assistant, Frigate, Whisper und ein 7B-Modell auf Ollama auf einer leisen Box für rund 999 € (August 2026, je nach Händler und Konfiguration schwankend). Diese Rezension prüft jede Spezifikation gegen Beelink und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs als Schätzung statt gemessenem Benchmark, und deckt ab, was sich seit dem Launch geändert hat — einschließlich der neueren Beelink-Serien SER9 und SER10.',
+      'Der Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) ist der Mini-PC mit dem besten Preis-Leistungs-Verhältnis für ein lokales KI-Smart-Home im Jahr 2026 — die Konfiguration mit 32 GB / 1 TB betreibt Home Assistant, Frigate, Whisper und ein 7B-Modell auf Ollama auf einer leisen Box; der offizielle Beelink-Store führt die Konfiguration mit 24 GB / 1 TB zu einem Listenpreis von 799 $ (offizieller US-Store-Listenpreis, geprüft am 2026-10-25; Preise in Deutschland weichen ab), für 32-GB-Konfigurationen den aktuellen Eintrag prüfen. Diese Rezension prüft jede Spezifikation gegen Beelink und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs als Schätzung statt gemessenem Benchmark, und deckt ab, was sich seit dem Launch geändert hat — einschließlich der neueren Beelink-Serien SER9 und SER10.',
     metaDescription:
-      'Beelink-SER8-Rezension 2026: Ryzen 7 8845HS Specs, aktueller Preis je Konfiguration, 32GB vs. 64GB, Idle-Verbrauch, Abmessungen. Betreibt Home Assistant plus ein 7B-LLM lokal — komplette Analyse.',
+      'Beelink SER8 Rezension 2026: Ryzen 7 8845HS Specs, Preis je Konfiguration, 32GB vs. 64GB, Idle-Verbrauch, Maße. Home Assistant plus lokales 7B-LLM.',
     twitterDescription:
-      'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, ab ca. 999 €. Welche Konfiguration für Home Assistant plus lokales LLM — 32GB vs. 64GB, Specs und aktueller Preis.',
+      'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, offizieller US-Listenpreis 799 $ (24GB/1TB). Welche Konfiguration für Home Assistant plus lokales LLM — 32GB vs. 64GB, Specs und aktueller Preis.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die einen preiswerten Mini-PC für Home Assistant und ein lokales LLM auswählen',
@@ -485,18 +485,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs mini pc',
     ],
     leadAnswerBlock:
-      '**Ja — kaufen Sie den Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS), wenn Sie Home Assistant, Frigate und ein kleines lokales LLM leise auf einer Box betreiben möchten.** Er betreibt die Zentrale, Frigate, Whisper und ein 7B-Modell auf Ollama für rund 999 € (32 GB/1 TB, August 2026, schwankend) — günstiger als ein GEEKOM A9 Max für den Großteil derselben Smart-Home-Arbeit. Am besten für: Home Assistant + Frigate + einen 7B–8B-Assistenten. Nicht für: Modelle ab 32B — siehe die GPU-Server-Alternative unten.',
+      '**Ja — kaufen Sie den Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS), wenn Sie Home Assistant, Frigate und ein kleines lokales LLM leise auf einer Box betreiben möchten.** Er betreibt die Zentrale, Frigate, Whisper und ein 7B-Modell auf Ollama (offizieller US-Store-Listenpreis 799 $ für 24 GB/1 TB, geprüft am 2026-10-25; für 32 GB den aktuellen Eintrag prüfen) — grob die Hälfte bis drei Fünftel des GEEKOM-A9-Max-Listenpreises von 1.299–1.599 $ für den Großteil derselben Smart-Home-Arbeit. Am besten für: Home Assistant + Frigate + einen 7B–8B-Assistenten. Nicht für: Modelle ab 32B — siehe die GPU-Server-Alternative unten.',
     quickAnswerTop: {
       de: {
         question: 'Sollte ich den Beelink SER8 für lokale KI und Home Assistant kaufen?',
         answer:
-          'Ja, wenn Ihr Ziel Home Assistant plus Frigate plus ein lokales 7B–8B-LLM ist — kaufen Sie die Konfiguration mit 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) für rund 999 € (August 2026, schwankend). Sie betreibt komfortabel ein 7B-Modell, lädt 13B–14B in 4-Bit, aber langsamer, und wird darüber hinaus knapp. Wählen Sie 64 GB/1 TB (ca. 1.499 €) nur, wenn Sie speziell wollen, dass 14B-Modelle sich komfortabel statt nur nutzbar anfühlen. Überspringen Sie ihn komplett für Modelle ab 32B — siehe den GPU-Server-Vergleich unten.',
+          'Ja, wenn Ihr Ziel Home Assistant plus Frigate plus ein lokales 7B–8B-LLM ist — kaufen Sie die Konfiguration mit 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M). Der offizielle Beelink-Store führt die Konfiguration mit 24 GB/1 TB zu 799 $ (offizieller US-Store-Listenpreis, geprüft am 2026-10-25; Preise in Deutschland weichen ab); für 32-GB-Konfigurationen den aktuellen Eintrag prüfen. Sie betreibt komfortabel ein 7B-Modell, lädt 13B–14B in 4-Bit, aber langsamer, und wird darüber hinaus knapp. Wählen Sie 64 GB/1 TB (aktuellen Eintrag prüfen) nur, wenn Sie speziell wollen, dass 14B-Modelle sich komfortabel statt nur nutzbar anfühlen. Überspringen Sie ihn komplett für Modelle ab 32B — siehe den GPU-Server-Vergleich unten.',
         bullets: [
           'CPU: Ryzen 7 8845HS — 8 Kerne/16 Threads, Radeon 780M (12 CU, RDNA 3)',
           'Prüfen Sie die CPU im Angebot: Beelink verkauft auch einen günstigeren SER8 mit dem 8745HS-Chip (niedrigerer Boost-Takt, gleicher Name) — diese Rezension behandelt nur die 8845HS-Einheit',
           'RAM: duales SO-DIMM, vom Nutzer austauschbar; 32 GB ist die Standardkonfiguration, 64 GB für Spielraum',
           'Lokales LLM (aus Specs geschätzt, nicht benchmarkt): 7B komfortabel; 13B–14B nutzbar, aber langsamer; ab 32B nicht empfohlen',
-          'Preis: 32 GB/1 TB ca. 999 €; 64 GB/1 TB ca. 1.499 € (August 2026, aktuellen Preis prüfen — variiert je Händler und RAM-SKU)',
+          'Preis: offizieller US-Store-Listenpreis 799 $ für 24 GB/1 TB (geprüft am 2026-10-25); 32-GB- und 64-GB-Konfigurationen — aktuellen Eintrag prüfen (variiert je Händler und RAM-SKU; Preise in Deutschland weichen ab)',
           'Beelink hat inzwischen die SER9- und SER10-Pro/Max-Serien veröffentlicht — der SER8 ist nicht mehr das neueste Beelink-Modell, bleibt aber für diese konkrete Aufgabe die bessere Wahl',
         ],
         updatedDate: '2026-08',
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Finale Kaufentscheidung', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Der Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) ist ein Mini-PC für 999 €, der Home Assistant, Frigate und ein lokales 7B-LLM auf Ollama auf einer leisen Box betreibt und damit 2026 die beste Preis-Leistungs-Wahl für ein lokales KI-Smart-Home ist.' },
+      { type: 'one-sentence', content: 'Der Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) ist ein Mini-PC (ab 799 $ offizieller US-Store-Listenpreis, 24 GB/1 TB), der Home Assistant, Frigate und ein lokales 7B-LLM auf Ollama auf einer leisen Box betreibt und damit 2026 die beste Preis-Leistungs-Wahl für ein lokales KI-Smart-Home ist.' },
       { type: 'plain-terms', content: 'Ein Mini-PC ist ein kleiner, leiser Dauerbetrieb-Rechner. Der SER8 kombiniert einen schnellen AMD-Prozessor mit starker integrierter Grafik und genug Speicher, um Ihre komplette Smart-Home-Zentrale plus ein mittelgroßes KI-Chat-Modell gleichzeitig zu betreiben, ohne den Preis einer High-End-Maschine. Der Speicher sitzt in zwei austauschbaren Steckplätzen, sodass Sie später aufrüsten können — die 32-GB-Version ist die richtige Wahl für die meisten Käufer; 64 GB lohnt sich nur, wenn Sie speziell wollen, dass ein größeres Modell komfortabel statt nur nutzbar läuft.' },
     ],
     sections: {
@@ -532,11 +532,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Kurzfassung',
         isTldr: true,
         items: [
-          'Kaufen Sie den SER8 mit 32 GB/1 TB (Ryzen 7 8845HS) — er betreibt Home Assistant, Frigate, Whisper und ein lokales 7B-LLM auf einer Box für rund 999 € (August 2026, schwankend)',
+          'Kaufen Sie den SER8 mit 32 GB/1 TB (Ryzen 7 8845HS) — er betreibt Home Assistant, Frigate, Whisper und ein lokales 7B-LLM auf einer Box — offizieller US-Store-Listenpreis 799 $ für 24 GB/1 TB (geprüft am 2026-10-25), 32 GB: aktuellen Eintrag prüfen',
           'Prüfen Sie, dass im Angebot „8845HS" steht, nicht die günstigere „8745HS"-Variante, die Beelink unter demselben Namen SER8 verkauft',
-          '32 GB ist die Standardkonfiguration für die meisten Käufer; wählen Sie 64 GB (ca. 1.499 €) nur, wenn 14B-Modelle komfortabel laufen sollen',
+          '32 GB ist die Standardkonfiguration für die meisten Käufer; wählen Sie 64 GB (aktuellen Eintrag prüfen) nur, wenn 14B-Modelle komfortabel laufen sollen',
           'Beelink hat seit der Erstveröffentlichung dieser Rezension die neueren Serien SER9 und SER10 Pro/Max veröffentlicht — der SER8 ist nicht mehr das aktuelle Flaggschiff, bleibt aber für Home Assistant + Frigate + ein 7B-Modell die bessere Wahl',
-          'Günstiger und einfacher als ein [GEEKOM A9 Max](/de/smart-home/geekom-a9-max-local-ai-review) (jetzt 1.099–1.799 $); weit leistungsfähiger als eine Intel-N150-Box',
+          'Günstiger und einfacher als ein [GEEKOM A9 Max](/de/smart-home/geekom-a9-max-local-ai-review) (1.299–1.599 $ offizieller Listenpreis); weit leistungsfähiger als eine Intel-N150-Box',
           'Überspringen Sie ihn komplett für Modelle ab 32B — siehe den GPU-Server-Vergleich für diese Aufgabe',
         ],
       },
@@ -544,9 +544,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit & beste Konfiguration',
         content:
-          '**JA — kaufen Sie den Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M), wenn Sie Home Assistant, Frigate und ein kleines lokales LLM leise auf einer Maschine betreiben möchten.** Empfohlene Konfiguration: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Am besten für: einen All-in-One-Heimserver — Home Assistant, Ollama, Whisper und Frigate zusammen, mit einem komfortablen 7B-Assistenten und einem nutzbaren, aber langsameren 13B–14B.\n\nAktueller Preis: Live-Preis prüfen — er variiert je nach RAM-/Speicherkonfiguration und Händler; recherchierte Spanne für 32 GB/1 TB liegt bei rund 999 € (August 2026). Nicht für: alle, die regelmäßig Modelle ab 30B betreiben wollen — die RAM-Obergrenze und die geteilte iGPU-Speicherarchitektur machen das selbst bei 64 GB zu einer schlechten Wahl. Siehe stattdessen die [GPU-Server-Alternative](#vs-gpu-server).',
+          '**JA — kaufen Sie den Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M), wenn Sie Home Assistant, Frigate und ein kleines lokales LLM leise auf einer Maschine betreiben möchten.** Empfohlene Konfiguration: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Am besten für: einen All-in-One-Heimserver — Home Assistant, Ollama, Whisper und Frigate zusammen, mit einem komfortablen 7B-Assistenten und einem nutzbaren, aber langsameren 13B–14B.\n\nAktueller Preis: Live-Preis prüfen — er variiert je nach RAM-/Speicherkonfiguration und Händler; der offizielle Beelink-Store führt die Konfiguration mit 24 GB/1 TB zu 799 $ (offizieller US-Store-Listenpreis, geprüft am 2026-10-25; Preise in Deutschland weichen ab); für 32-GB-Konfigurationen den aktuellen Eintrag prüfen. Nicht für: alle, die regelmäßig Modelle ab 30B betreiben wollen — die RAM-Obergrenze und die geteilte iGPU-Speicherarchitektur machen das selbst bei 64 GB zu einer schlechten Wahl. Siehe stattdessen die [GPU-Server-Alternative](#vs-gpu-server).',
         affiliateLinks: [
-          { label: 'Aktuellen SER8-Preis prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Aktuellen SER8-Preis prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'SER8-Konfigurationen vergleichen', url: 'https://www.amazon.de/-/en/beelink-ser8/s?k=beelink+ser8', productName: 'Beelink SER8 (alle Konfigurationen)', productCategory: 'Mini PC' },
         ],
       },
@@ -579,18 +579,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kaufen Sie 32 GB/1 TB, wenn: Ihr Ziel ein 7B–8B-Modell ist, Sie daneben Home Assistant, Frigate und Whisper betreiben und den niedrigsten Preis wollen, der die Aufgabe trotzdem komfortabel erledigt.',
           'Kaufen Sie 64 GB/1 TB, wenn: Sie regelmäßig 13B–14B-Modelle betreiben möchten und diese sich so reaktionsschnell anfühlen sollen wie die 7B-Klasse bei 32 GB, oder Sie zusätzlichen RAM-Spielraum für mehrere Dienste gleichzeitig (HA, Frigate, eine Vektordatenbank, Ollama) ohne Swapping wollen.',
           'Beide Konfigurationen teilen sich dieselbe Radeon-780M-iGPU und dieselbe DDR5-5600-Speicherbandbreite — 64 GB macht die Inferenz nicht schneller, sondern erlaubt nur größere Modelle.',
-          'Die 64-GB-SKU kostet derzeit rund 500 € mehr als die 32-GB-SKU — lohnt sich nur, wenn die größere Modellklasse das tatsächliche Ziel ist, nicht „nur für den Fall der Fälle".',
+          'Die 64-GB-SKU kostet mehr als die 32-GB-SKU (den Unterschied im aktuellen Eintrag prüfen) — lohnt sich nur, wenn die größere Modellklasse das tatsächliche Ziel ist, nicht „nur für den Fall der Fälle".',
         ],
         affiliateLinks: [
-          { label: 'Aktuellen Preis prüfen — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
-          { label: 'Aktuellen Preis prüfen — SER8 64GB/1TB', url: 'https://www.amazon.de/-/en/beelink-ser8/s?k=beelink+ser8+64gb', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '1.499 €' },
+          { label: 'Aktuellen Preis prüfen — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Aktuellen Preis prüfen — SER8 64GB/1TB', url: 'https://www.amazon.de/-/en/beelink-ser8/s?k=beelink+ser8+64gb', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: 'Spezifikationen',
         content:
-          '**Alle Spezifikationen unten wurden im August 2026 erneut gegen Beelinks eigenes Angebot und unabhängige Händler-/Testquellen geprüft.** Beelink verkauft den Namen SER8 unter zwei verschiedenen CPUs — prüfen Sie vor dem Kauf, ob im Angebot „8845HS" steht (Thema dieser Rezension, 5,1-GHz-Boost) und nicht die günstigere „8745HS"-Variante (4,9-GHz-Boost, sonst ähnlich). Der ab Werk verbaute RAM variiert je nach SKU (16, 24, 32 oder 64 GB); diese Tabelle bildet die 32-GB-/1-TB-Einheit als Referenzkonfiguration ab.',
+          '**Alle Spezifikationen unten wurden gegen Beelinks eigenes Angebot und unabhängige Händler-/Testquellen geprüft; die Preise wurden zuletzt am 2026-10-25 gegen den offiziellen Store geprüft.** Beelink verkauft den Namen SER8 unter zwei verschiedenen CPUs — prüfen Sie vor dem Kauf, ob im Angebot „8845HS" steht (Thema dieser Rezension, 5,1-GHz-Boost) und nicht die günstigere „8745HS"-Variante (4,9-GHz-Boost, sonst ähnlich). Der ab Werk verbaute RAM variiert je nach SKU (16, 24, 32 oder 64 GB); diese Tabelle bildet die 32-GB-/1-TB-Einheit als Referenzkonfiguration ab.',
         columns: ['Spezifikation', 'Beelink SER8 (8845HS)'],
         rows: [
           { Spezifikation: 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS (Zen 4, 4 nm)' },
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spezifikation: 'TDP', 'Beelink SER8 (8845HS)': '54–65 W (läuft dauerhaft mit 65 W)' },
           { Spezifikation: 'Abmessungen', 'Beelink SER8 (8845HS)': '135 × 135 × 44,7 mm, ~0,75 kg' },
           { Spezifikation: 'Betriebssystem', 'Beelink SER8 (8845HS)': 'Windows 11 Pro (Installation von Linux/Proxmox unterstützt)' },
-          { Spezifikation: 'Preis (32GB/1TB)', 'Beelink SER8 (8845HS)': '~999 € (Aug. 2026 — schwankend, aktuellen Preis prüfen)' },
+          { Spezifikation: 'Preis (offizieller Listenpreis)', 'Beelink SER8 (8845HS)': '799 $ für 24GB/1TB (US-Store, geprüft am 2026-10-25); 32GB: aktuellen Eintrag prüfen' },
         ],
         items: [
           'Keine dedizierte GPU: die gesamte KI-Inferenz läuft auf der CPU und der Radeon-780M-iGPU, die sich den System-RAM teilen.',
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Genau diesen Aufbau realisieren: siehe [Ollama mit Home Assistant verbinden](/de/smart-home/home-assistant-ollama-integration) und [Ihr Smart Home auf einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide).',
         ],
         affiliateLinks: [
-          { label: 'Aktuellen SER8-Preis prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Aktuellen SER8-Preis prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Radeon-780M-iGPU: stark genug für 7B-Modell-Inferenz und Frigates Video-Dekodierung, ohne den Stromverbrauch oder die Lautstärke einer dedizierten GPU.',
         ],
         affiliateLinks: [
-          { label: 'Aktuellen SER8-Preis prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Aktuellen SER8-Preis prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Warum ich ihn mag, und warum ich ihn nicht für jede Aufgabe kaufen würde.**',
         items: [
           '**Warum ich ihn mag**',
-          'Bestes Preis-Leistungs-Verhältnis für eine leistungsfähige lokale KI-Box — 999 € für eine Maschine, die komfortabel ein 7B-Modell plus einen vollständigen Smart-Home-Stack betreibt',
+          'Bestes Preis-Leistungs-Verhältnis für eine leistungsfähige lokale KI-Box — 799 $ offizieller US-Store-Listenpreis (24 GB/1 TB) für eine Maschine, die komfortabel ein 7B-Modell plus einen vollständigen Smart-Home-Stack betreibt',
           'Vom Nutzer austauschbarer RAM und zwei M.2-Steckplätze bedeuten, dass die Maschine mit Ihnen wächst, statt einen Neukauf zu erzwingen',
           '2.5GbE und USB4 decken die tatsächlichen Engpässe eines Heimservers (Netzwerkdurchsatz, externer Speicher) ab, die günstigere Boxen auslassen',
           'Läuft mit 65 W unter Last und etwa 8–12 W im Leerlauf — günstig im 24/7-Dauerbetrieb',
@@ -724,19 +724,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8 vs. Alternativen',
         content: '**Wenn der SER8 nicht passt, rahmen ihn vier Boxen bei Preis und Leistung ein — jede hat einen eigenen Test mit eigener Produktkarte unten.**',
-        columns: ['Mini-PC', 'Preis (ca.)', 'RAM-Obergrenze (getestet)', 'Am besten für'],
+        columns: ['Mini-PC', 'Offizieller Listenpreis', 'RAM-Obergrenze (laut Hersteller)', 'Am besten für'],
         rows: [
-          { 'Mini-PC': 'Beelink SER8', 'Preis (ca.)': '999 € (32GB/1TB)', 'RAM-Obergrenze (getestet)': '~64–96 GB', 'Am besten für': 'Beste Wahl: HA + 7B-Modell' },
-          { 'Mini-PC': 'Beelink EQ14', 'Preis (ca.)': '170–210 €', 'RAM-Obergrenze (getestet)': '16 GB', 'Am besten für': 'Nur HA, winziges Modell' },
-          { 'Mini-PC': 'Minisforum UM890 Pro', 'Preis (ca.)': '650–780 €', 'RAM-Obergrenze (getestet)': '~64–96 GB', 'Am besten für': 'Doppel-2.5GbE, eGPU-Port' },
-          { 'Mini-PC': 'GEEKOM A9 Max (2026)', 'Preis (ca.)': '1.010–1.650 €', 'RAM-Obergrenze (getestet)': '128 GB', 'Am besten für': 'Maximaler Spielraum, Wi-Fi 7' },
-          { 'Mini-PC': 'GMKtec G3 Plus', 'Preis (ca.)': '185–240 €', 'RAM-Obergrenze (getestet)': '32 GB', 'Am besten für': 'Budget, aufrüstbar' },
+          { 'Mini-PC': 'Beelink SER8', 'Offizieller Listenpreis': '799 $ (24GB/1TB)', 'RAM-Obergrenze (laut Hersteller)': '~64–96 GB', 'Am besten für': 'Beste Wahl: HA + 7B-Modell' },
+          { 'Mini-PC': 'Beelink EQ14', 'Offizieller Listenpreis': '385 $ (16GB/500GB)', 'RAM-Obergrenze (laut Hersteller)': '16 GB', 'Am besten für': 'Nur HA, winziges Modell' },
+          { 'Mini-PC': 'Minisforum UM890 Pro', 'Offizieller Listenpreis': '439,90 $ Barebone / 823,90 $ (32GB/1TB)', 'RAM-Obergrenze (laut Hersteller)': '~64–96 GB', 'Am besten für': 'Doppel-2.5GbE, eGPU-Port' },
+          { 'Mini-PC': 'GEEKOM A9 Max (2026)', 'Offizieller Listenpreis': '1.299–1.599 $', 'RAM-Obergrenze (laut Hersteller)': '128 GB', 'Am besten für': 'Maximaler Spielraum, Wi-Fi 7' },
+          { 'Mini-PC': 'GMKtec G3 Plus', 'Offizieller Listenpreis': '399,99–499,99 $', 'RAM-Obergrenze (laut Hersteller)': '32 GB', 'Am besten für': 'N150, aufrüstbarer RAM' },
         ],
         items: [
-          '[GEEKOM A9 Max](/de/smart-home/geekom-a9-max-local-ai-review) — die Wahl für Spielraum: 128-GB-RAM-Obergrenze und Wi-Fi 7, aber jetzt 1.010–1.650 € (2026 Edition, Ryzen AI 9 HX 370/HX 470) — spürbar teurer als der SER8, aber inzwischen kein großer Preissprung mehr — vor dem Kauf beide Live-Preise vergleichen.',
-          '[Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) — ähnliche Radeon-780M-Leistung, aber mit dualem 2.5GbE, Wi-Fi 6E und einem OCuLink-eGPU-Port für einen moderaten Aufpreis.',
-          '[Beelink EQ14](/de/smart-home/beelink-eq14-local-ai-review) — günstige Intel-N150-Box nur für Home Assistant plus ein winziges Modell; überspringen Sie ihn, wenn Sie einen 7B-Assistenten wollen.',
-          '[GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — eine weitere günstige N150-Option mit aufrüstbarem RAM.',
+          '[GEEKOM A9 Max](/de/smart-home/geekom-a9-max-local-ai-review) — die Wahl für Spielraum: 128-GB-RAM-Obergrenze und Wi-Fi 7, aber 1.299–1.599 $ offizieller Listenpreis (2026 Edition, Ryzen AI 9 HX 370/HX 470) — grob das 1,6- bis 2,0-Fache des SER8-Listenpreises von 799 $; vor dem Kauf beide Live-Preise vergleichen.',
+          '[Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) — ähnliche Radeon-780M-Leistung, aber mit dualem 2.5GbE, Wi-Fi 6E und einem OCuLink-eGPU-Port; laut offizieller Seite 439,90 $ als Barebone und 823,90 $ mit 32 GB/1 TB, bei der Prüfung am 2026-10-25 als ausverkauft angezeigt.',
+          '[Beelink EQ14](/de/smart-home/beelink-eq14-local-ai-review) — Intel-N150-Box nur für Home Assistant plus ein winziges Modell (385 $ offizieller Listenpreis für 16 GB/500 GB, bei der Prüfung am 2026-10-25 als Vorbestellung gekennzeichnet); überspringen Sie ihn, wenn Sie einen 7B-Assistenten wollen.',
+          '[GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — eine weitere N150-Option mit aufrüstbarem RAM (399,99–499,99 $ offizieller Listenpreis; bei der Prüfung am 2026-10-25 alle Varianten als ausverkauft angezeigt).',
           'Beelinks eigene SER9- und SER10-Pro/Max-Serien (gelauncht zur CES 2026, Ryzen AI 9 HX 470, 10GbE bei manchen SKUs) sind die aktuelle Flaggschiff-Linie — lohnt sich nur, wenn Ihnen speziell 10GbE oder die neuere NPU-Generation wichtig sind; für HA + Frigate + ein 7B-Modell ändern sie die Empfehlung nicht.',
           'Noch am Vergleichen? Starten Sie mit dem [Überblick der besten Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
@@ -747,13 +747,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Zwei Kanäle sind die echten, verifizierbaren Optionen: Beelinks offizieller Store (direkter Garantiesupport) und Amazon (schnelle Lieferung, einfache Rückgabe).** Die Preise bewegen sich Woche für Woche und je RAM-/Speicher-SKU — prüfen Sie den Live-Preis, statt sich auf eine feste Angabe zu verlassen.',
         items: [
-          'Beelinks offizieller Store: direkte Herstellergarantie und -support; gelegentlich der höhere Preis der beiden Kanäle.',
-          'Amazon: meist der wettbewerbsfähigere Preis, plus Amazons Standard-Rückgaberecht — der praktische Standard für die meisten Käufer.',
+          'Beelinks offizieller Store: direkte Herstellergarantie und -support; der Store führt die Konfiguration mit 24 GB/1 TB zu 799 $ (geprüft am 2026-10-25).',
+          'Amazon: schnelle Lieferung und Amazons Standard-Rückgaberecht; Amazon-Preise wurden für diese Seite nicht geprüft und können vom offiziellen Store abweichen — vor dem Kauf vergleichen.',
           'Bestätigen Sie vor dem Kauf die RAM-SKU (16, 24, 32 oder 64 GB) und die CPU (8845HS, nicht 8745HS) im Angebot — Beelink verkauft mehrere Varianten unter demselben Namen „SER8".',
         ],
         affiliateLinks: [
-          { label: 'Preis prüfen — Beelink offizieller Store', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
-          { label: 'Preis prüfen — Amazon', url: 'https://www.amazon.de/-/en/beelink-ser8/s?k=beelink+ser8+32gb', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Preis prüfen — Beelink offizieller Store', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Preis prüfen — Amazon', url: 'https://www.amazon.de/-/en/beelink-ser8/s?k=beelink+ser8+32gb', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -775,14 +775,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: 'Gesamtkosten des Setups',
-        content: '**Ein realistischer kompletter Aufbau — SER8 plus das Bundle oben — landet bei rund 1.197–1.272 € (August 2026), nicht nur beim Listenpreis des Mini-PCs.**',
+        content: '**Ein realistischer kompletter Aufbau — SER8 plus das Bundle oben — landet bei rund 799 $ (offizieller US-Store-Listenpreis für den SER8 mit 24 GB/1 TB, geprüft am 2026-10-25) plus ca. 198–273 € für das Zubehör (Zubehörspannen unverändert), nicht nur beim Listenpreis des Mini-PCs.**',
         columns: ['Posten', 'Preis (ca.)'],
         rows: [
-          { Posten: 'Beelink SER8 32GB/1TB', 'Preis (ca.)': '999 €' },
+          { Posten: 'Beelink SER8 24GB/1TB (offizieller Listenpreis)', 'Preis (ca.)': '799 $' },
           { Posten: 'SONOFF ZBDongle-E (Zigbee)', 'Preis (ca.)': '18–23 €' },
           { Posten: 'Reolink RLC-810A × 2 (PoE-Kameras)', 'Preis (ca.)': '110–170 €' },
           { Posten: 'Hailo-8L M.2 (Frigate-Beschleuniger)', 'Preis (ca.)': 'ca. 70–80 €' },
-          { Posten: 'Gesamt (ca.)', 'Preis (ca.)': '1.197–1.272 €+' },
+          { Posten: 'Gesamt (ca.)', 'Preis (ca.)': '799 $ + 198–273 €' },
         ],
         items: [
           'Diese Summe schließt PoE-Switch/Injektor und Verkabelung aus, die je nach Haushalt variieren und meist eine einmalige, mit anderen Netzwerkgeräten geteilte Kosten sind.',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wenn 32B- oder 70B-Modelle das eigentliche Ziel sind, kaufen Sie den SER8 nicht nur, weil er günstiger ist — ein System mit dedizierter GPU ist die ehrliche Antwort für diese Aufgabe.** Der Vergleich unten ist bewusst außerhalb der eigentlichen Stärken des SER8 zu seinem Nachteil gehalten, weil ein Leser, der ein 70B-Setup plant, hier nicht enttäuscht landen soll.',
         columns: ['Faktor', 'SER8 (iGPU)', 'GPU-Server (24 GB+ VRAM)'],
         rows: [
-          { Faktor: 'Preis', 'SER8 (iGPU)': '999 €', 'GPU-Server (24 GB+ VRAM)': 'ab 1.400 €' },
+          { Faktor: 'Preis', 'SER8 (iGPU)': '799 $ (24GB/1TB, Liste)', 'GPU-Server (24 GB+ VRAM)': 'ab 1.400 €' },
           { Faktor: 'Stromverbrauch', 'SER8 (iGPU)': '65 W Last / ~10 W Leerlauf', 'GPU-Server (24 GB+ VRAM)': '300–600 W Last' },
           { Faktor: '7B-Modell', 'SER8 (iGPU)': 'Komfortabel', 'GPU-Server (24 GB+ VRAM)': 'Schnell, überdimensioniert' },
           { Faktor: '14B-Modell', 'SER8 (iGPU)': 'Nutzbar', 'GPU-Server (24 GB+ VRAM)': 'Schnell' },
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'USA: Die Section-301-Zölle auf chinesische Elektronik bleiben 2026 in Kraft; die separaten „IEEPA"-Zölle von 2025 wurden im Februar 2026 vom Supreme Court gekippt und durch einen befristeten, gedeckelten Section-122-Zoll ersetzt. Die zollfreie „De-minimis"-Ausnahme unter 800 $ für Direktimporte ist ebenfalls entfallen.',
           'EU (betrifft DE/FR): Es gibt keinen breiten EU-Zoll auf fertige Mini-PCs, aber ab Juli 2026 wurde die Freigrenze von 150 € für geringwertige Direktpakete aus China gestrichen und eine kleine Bearbeitungsgebühr pro Paket hinzugefügt.',
           'Annahme (Makrotrend, keine Produkttatsache): Umgeleitete chinesische Exportkapazitäten haben die Verfügbarkeit dieser Marken in EU und USA hoch gehalten, was insgesamt eine wettbewerbsfähige Preisgestaltung stützt.',
-          'Nettoeffekt: Prüfen Sie vor dem Kauf den aktuellen Preis beim Händler — die Spannen auf dieser Seite sind indikativ und auf August 2026 datiert.',
+          'Nettoeffekt: Prüfen Sie vor dem Kauf den aktuellen Preis beim Händler — die Angaben auf dieser Seite sind offizielle Store-Listenpreise vom 2026-10-25 und nur indikativ.',
         ],
       },
       priceSanityCheck: {
@@ -830,14 +830,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Wenn der SER8 32GB/1TB innerhalb von rund 100 € eines GEEKOM-A9-Max-Sale-Preises liegt, rechtfertigen die 128-GB-Obergrenze und Wi-Fi 7 des A9 Max den Unterschied wahrscheinlich für alle, die eventuell zu größeren Modellen wechseln.',
           'Wenn SER8 und SER9 preislich nah beieinander liegen, prüfen Sie, ob die Spec-Verbesserungen des SER9 (aktuellen SER9-Preis und -Specs beim Kauf prüfen) Ihnen wichtig genug sind — andernfalls bleibt der SER8 die Preis-Leistungs-Wahl.',
-          'Kaufen Sie nicht allein wegen der Markendynamik — die Empfehlung dieser Seite bezieht sich auf die 32GB/1TB-Konfiguration bei rund 999 €; prüfen Sie dies vor dem Kauf erneut.',
+          'Kaufen Sie nicht allein wegen der Markendynamik — die Empfehlung dieser Seite bezieht sich auf die 32GB/1TB-Konfiguration (aktuellen Eintrag prüfen; offizieller US-Store-Listenpreis für 24GB/1TB: 799 $); prüfen Sie dies vor dem Kauf erneut.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Wie viel kostet der Beelink SER8 aktuell?', a: 'Die recherchierte Spanne für die Konfiguration mit 32 GB/1 TB (Ryzen 7 8845HS) liegt bei rund 999 € (Stand August 2026), die Basiskonfiguration mit 16 GB/500 GB liegt typischerweise darunter (aktuellen Preis prüfen) und die Konfiguration mit 64 GB/1 TB liegt bei rund 1.499 €. Preise variieren je Händler und ändern sich wöchentlich — prüfen Sie den Live-Preis vor dem Kauf, statt sich auf diese Zahl zu verlassen.' },
+          { q: 'Wie viel kostet der Beelink SER8 aktuell?', a: 'Der offizielle Beelink-Store führt die Konfiguration mit 24 GB/1 TB (Ryzen 7 8845HS) zu 799 $ (offizieller US-Store-Listenpreis, geprüft am 2026-10-25; dort war ein Vergleichspreis von 959 $ angegeben). Für Konfigurationen mit 32 GB und 64 GB den aktuellen Eintrag prüfen; Preise in Deutschland weichen von US-Listenpreisen ab. Preise variieren je Händler und ändern sich häufig — prüfen Sie den Live-Preis vor dem Kauf, statt sich auf diese Zahl zu verlassen.' },
           { q: 'Was sind die offiziellen Beelink-SER8-Spezifikationen?', a: 'AMD Ryzen 7 8845HS (8 Kerne/16 Threads, bis zu 5,1 GHz), Radeon-780M-iGPU (12 CU, RDNA 3), 16-TOPS-NPU, DDR5-5600 duales SO-DIMM-RAM (16/24/32/64-GB-SKUs), 2× M.2-2280-PCIe-4.0-Speicher, 2.5GbE, Wi-Fi 6, USB4, 54–65 W TDP. Beelink verkauft außerdem eine günstigere SER8-Variante mit dem 8745HS-Chip (4,9-GHz-Boost) — prüfen Sie die CPU im Angebot.' },
           { q: 'Wie groß ist der Beelink SER8?', a: '135 × 135 × 44,7 mm, etwa 0,75 kg — klein genug, um hinter einem Monitor zu stehen oder unsichtbar montiert zu werden.' },
           { q: 'Kann der Beelink SER8 lokale LLMs betreiben?', a: 'Ja. Mit 32 GB RAM und der Radeon-780M-iGPU betreibt er komfortabel ein 7B–8B-Modell auf Ollama und kann ein 13B–14B-Modell in 4-Bit laden, wenn auch langsamer. Dies sind Schätzungen aus der geprüften Hardware, kein von PromptQuorum gemessener Benchmark, da die tatsächliche Geschwindigkeit vom Modell, der Quantisierung und dem Backend abhängt.' },
@@ -845,10 +845,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie hoch ist der Idle-Stromverbrauch des SER8?', a: 'Laut unabhängigen Messungen etwa 8–12 W — günstig im Dauerbetrieb als Heimserver. Unter Dauerlast zieht er bis zu 65 W. Genaue Werte hängen von der Arbeitslast und dem Energieprofil ab.' },
           { q: 'Beschleunigt die 16-TOPS-NPU lokale KI auf dem SER8?', a: 'Nein. Gängige LLM-Laufzeiten (Ollama, llama.cpp, LM Studio) nutzen die NPU 2026 nicht für Inferenz — sie laufen stattdessen auf der CPU und der Radeon-780M-iGPU. Die NPU beschleunigt bestimmte Vision-/Audio-Workloads in unterstützten Frameworks, nicht die allgemeine Chat-Inferenz.' },
           { q: 'Gibt es ein neueres Beelink-Modell als den SER8?', a: 'Ja. Beelink hat den SER9 und, zur CES 2026, den SER10 Pro und SER10 Max veröffentlicht (Ryzen AI 9 HX 470, bis zu 10GbE-Netzwerk). Das ist die aktuelle Flaggschiff-Linie. Für die konkrete Aufgabe dieser Rezension — Home Assistant, Frigate und ein lokales 7B–14B-Modell — bleibt der SER8 die bessere Preis-Leistungs-Wahl; die neuere NPU-Generation hilft dieser Aufgabe nicht spürbar (siehe den NPU-Hinweis oben).' },
-          { q: 'SER8 oder GEEKOM A9 Max?', a: 'Der SER8 ist die Preis-Leistungs-Wahl bei 999 € und deckt die meisten lokalen KI-Smart-Home-Anforderungen ab. Wählen Sie den A9 Max nur, wenn Sie seine 128-GB-RAM-Obergrenze oder Wi-Fi 7 brauchen — Stand August 2026 kostet er 1.010–1.650 €, spürbar mehr, aber inzwischen kein Vielfaches des SER8-Preises mehr — beide Live-Preise vor dem Kauf vergleichen.' },
+          { q: 'SER8 oder GEEKOM A9 Max?', a: 'Der SER8 ist die Preis-Leistungs-Wahl bei einem offiziellen US-Store-Listenpreis von 799 $ (24 GB/1 TB) und deckt die meisten lokalen KI-Smart-Home-Anforderungen ab. Wählen Sie den A9 Max nur, wenn Sie seine 128-GB-RAM-Obergrenze oder Wi-Fi 7 brauchen — er wird zu 1.299–1.599 $ gelistet (offizieller Listenpreis), grob das 1,6- bis 2,0-Fache des SER8-Listenpreises — beide Live-Preise vor dem Kauf vergleichen.' },
           { q: 'Ist der RAM aufrüstbar?', a: 'Ja. Der SER8 nutzt zwei standardmäßige DDR5-SO-DIMM-Steckplätze, die vom Nutzer austauschbar sind, sodass Sie bei 32 GB beginnen und später auf 64 GB umsteigen können. Er hat außerdem zwei M.2-Steckplätze für die Speichererweiterung.' },
           { q: 'Wo wird der Beelink SER8 hergestellt, und beeinflusst das den Preis?', a: 'Er wird in China gefertigt. 2026 können US-Einfuhrmaßnahmen (Section-301-Zölle, das Ende der De-minimis-Ausnahme unter 800 $) und die EU-Streichung der Freigrenze von 150 € für geringwertige Pakete den Landepreis beeinflussen, prüfen Sie daher den aktuellen Händlerpreis, statt sich auf eine feste Zahl zu verlassen.' },
-          { q: 'Wie viel kostet der Beelink SER8 in Deutschland und der EU?', a: 'Stand August 2026 liegt die Konfiguration mit 32 GB/1 TB bei rund 999 € auf Amazon.de und im EU-Store von Beelink, der Preis schwankt jedoch. Seit Juli 2026 ist die EU-Freigrenze von 150 € für geringwertige Direktpakete aus China entfallen und eine kleine Bearbeitungsgebühr pro Paket hinzugekommen, sodass ein Kauf bei einem in der EU gelagerten Händler die Zollabwicklung am Zoll vermeiden kann. Prüfen Sie immer den Live-Preis, da Straßenpreise oft unter dem offiziellen Store liegen.' },
+          { q: 'Wie viel kostet der Beelink SER8 in Deutschland und der EU?', a: 'Für Deutschland und die EU wurde auf dieser Seite kein Preis geprüft: Der offizielle US-Store von Beelink führt die Konfiguration mit 24 GB/1 TB zu 799 $ (US-Listenpreis, geprüft am 2026-10-25), Preise in Deutschland und der EU weichen ab. Seit Juli 2026 ist die EU-Freigrenze von 150 € für geringwertige Direktpakete aus China entfallen und eine kleine Bearbeitungsgebühr pro Paket hinzugekommen, sodass ein Kauf bei einem in der EU gelagerten Händler die Zollabwicklung am Zoll vermeiden kann. Prüfen Sie immer den Live-Preis, da Händlerpreise vom offiziellen Store abweichen können.' },
           { q: 'Ist der Beelink SER8 DSGVO-konform für den deutschen Mittelstand?', a: 'Ja, und genau das ist eine seiner Stärken. Weil der SER8 das LLM, Whisper und Frigate lokal betreibt, verlassen Sprach-, Video- und Chat-Daten Ihr Netzwerk nicht — das unterstützt die Datenresidenz- und Verarbeitungspflichten nach DSGVO-Artikel 28 und passt zum Ansatz der BSI-Grundschutz-Kataloge. Für den deutschen Mittelstand ist eine lokale Box wie diese eine kostengünstige Möglichkeit, KI-Funktionen bereitzustellen, ohne personenbezogene Daten an eine Cloud außerhalb der EU zu senden.' },
         ],
       },
@@ -869,13 +869,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Finale Kaufentscheidung',
         content: '**Drei Wege, ein klarer Standard.**',
         items: [
-          '**JA, kaufen Sie den SER8 32 GB/1 TB, wenn:** Sie Home Assistant, Frigate und einen lokalen 7B–8B-Assistenten auf einer leisen, günstigen Box wollen — dies ist die Standardempfehlung für die meisten Leser dieser Seite.',
+          '**JA, kaufen Sie den SER8 32 GB/1 TB, wenn:** Sie Home Assistant, Frigate und einen lokalen 7B–8B-Assistenten auf einer leisen, stromsparenden Box wollen — dies ist die Standardempfehlung für die meisten Leser dieser Seite.',
           '**JA, aber wählen Sie 64 GB/1 TB, wenn:** 13B–14B-Modelle Ihr tatsächliches Ziel sind und diese reaktionsschnell wirken sollen, nicht nur technisch geladen.',
           '**NEIN, wenn:** Modelle ab 32B oder 70B Ihr primärer Anwendungsfall sind — kaufen Sie stattdessen ein System mit dedizierter GPU; siehe den [Leitfaden zum Bau einer lokalen KI-Workstation](/de/power-local-llm/best-workstation-build-local-ai-2026).',
           '**Meine Wahl: SER8 32GB/1TB — prüfen Sie den heutigen Preis und kaufen Sie diese Konfiguration.**',
         ],
         affiliateLinks: [
-          { label: 'Heutigen Preis des SER8 32GB/1TB prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Heutigen Preis des SER8 32GB/1TB prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -884,9 +884,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Beelink-SER8-Rezension: Specs, Preis & 32GB vs. 64GB (2026)',
       reviewBody:
-        'Der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) betreibt in der Konfiguration mit 32 GB/1 TB Home Assistant, Frigate und ein lokales 7B-LLM auf Ollama für rund 999 € (August 2026). Er ist die beste Preis-Leistungs-Wahl unter den lokalen KI-Mini-PCs für diese konkrete Aufgabe, auch wenn Beelink inzwischen die neueren Serien SER9 und SER10 veröffentlicht hat.',
+        'Der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) betreibt in der Konfiguration mit 32 GB/1 TB Home Assistant, Frigate und ein lokales 7B-LLM auf Ollama zu einem offiziellen US-Store-Listenpreis von 799 $ für die Konfiguration mit 24 GB/1 TB (geprüft am 2026-10-25). Er ist die beste Preis-Leistungs-Wahl unter den lokalen KI-Mini-PCs für diese konkrete Aufgabe, auch wenn Beelink inzwischen die neueren Serien SER9 und SER10 veröffentlicht hat.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -912,8 +912,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-fr.webp',
@@ -921,11 +921,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test Beelink SER8 : specs, prix & 32 Go vs 64 Go (2026)',
     seoTitle: 'Test Beelink SER8 2026 — Specs, prix, 32 Go vs 64 Go',
     intro:
-      "Le Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) est le mini-PC au meilleur rapport qualité-prix pour une maison connectée à IA locale en 2026 — la configuration 32 Go / 1 To fait tourner Home Assistant, Frigate, Whisper et un modèle 7B sur Ollama sur une seule machine silencieuse pour environ 999 € (août 2026, prix variable selon revendeur et configuration). Ce test vérifie chaque spécification auprès de Beelink et de sources indépendantes, fixe des attentes honnêtes sur la vitesse des LLM locaux en tant qu'estimations plutôt que benchmarks mesurés, et couvre ce qui a changé depuis le lancement — y compris les gammes plus récentes SER9 et SER10 de Beelink.",
+      "Le Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) est le mini-PC au meilleur rapport qualité-prix pour une maison connectée à IA locale en 2026 — la configuration 32 Go / 1 To fait tourner Home Assistant, Frigate, Whisper et un modèle 7B sur Ollama sur une seule machine silencieuse ; la boutique officielle de Beelink affiche la configuration 24 Go / 1 To à un prix catalogue de 799 $ (prix catalogue officiel de la boutique américaine, vérifié le 2026-10-25 ; les prix en France diffèrent), et pour les configurations 32 Go, il faut consulter l'annonce actuelle. Ce test vérifie chaque spécification auprès de Beelink et de sources indépendantes, fixe des attentes honnêtes sur la vitesse des LLM locaux en tant qu'estimations plutôt que benchmarks mesurés, et couvre ce qui a changé depuis le lancement — y compris les gammes plus récentes SER9 et SER10 de Beelink.",
     metaDescription:
-      "Test Beelink SER8 2026 : specs Ryzen 7 8845HS, prix actuel par configuration, 32 Go vs 64 Go, conso au repos, dimensions. Fait tourner Home Assistant plus un LLM 7B local — analyse complète.",
+      "Test Beelink SER8 2026 : specs Ryzen 7 8845HS, prix actuel par configuration, 32 Go vs 64 Go, conso au repos, dimensions. Home Assistant plus LLM 7B local.",
     twitterDescription:
-      'Beelink SER8 (2026) : Ryzen 7 8845HS, Radeon 780M, DDR5, à partir de 999 €. Quelle config choisir pour Home Assistant plus un LLM local — 32 Go vs 64 Go, specs et prix actuel.',
+      'Beelink SER8 (2026) : Ryzen 7 8845HS, Radeon 780M, DDR5, prix catalogue officiel américain 799 $ (24 Go/1 To). Quelle config choisir pour Home Assistant plus un LLM local — 32 Go vs 64 Go, specs et prix actuel.',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs choisissant un mini-PC économique pour Home Assistant et un LLM local',
@@ -938,18 +938,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs mini pc',
     ],
     leadAnswerBlock:
-      "**Oui — achetez le Beelink SER8 32 Go/1 To (Ryzen 7 8845HS) si vous voulez Home Assistant, Frigate et un petit LLM local tournant silencieusement sur une seule machine.** Il fait tourner le hub, Frigate, Whisper et un modèle 7B sur Ollama pour environ 999 € (32 Go/1 To, août 2026, volatil) — moins cher qu'un GEEKOM A9 Max pour l'essentiel du même travail domotique. Idéal pour : HA + Frigate + un assistant 7B–8B. Pas pour : les modèles 32B et plus — voir l'alternative serveur GPU ci-dessous.",
+      "**Oui — achetez le Beelink SER8 32 Go/1 To (Ryzen 7 8845HS) si vous voulez Home Assistant, Frigate et un petit LLM local tournant silencieusement sur une seule machine.** Il fait tourner le hub, Frigate, Whisper et un modèle 7B sur Ollama (prix catalogue officiel américain 799 $ pour la configuration 24 Go/1 To, vérifié le 2026-10-25 ; pour 32 Go, consulter l'annonce actuelle) — environ la moitié aux trois cinquièmes du prix catalogue du GEEKOM A9 Max (1 299–1 599 $) pour l'essentiel du même travail domotique. Idéal pour : HA + Frigate + un assistant 7B–8B. Pas pour : les modèles 32B et plus — voir l'alternative serveur GPU ci-dessous.",
     quickAnswerTop: {
       fr: {
         question: "Dois-je acheter le Beelink SER8 pour l'IA locale et Home Assistant ?",
         answer:
-          "Oui, si votre objectif est Home Assistant plus Frigate plus un LLM local 7B–8B — achetez la configuration 32 Go/1 To (Ryzen 7 8845HS, Radeon 780M) pour environ 999 € (août 2026, volatil). Elle fait tourner confortablement un modèle 7B, charge un 13B–14B en 4 bits mais plus lentement, et devient juste au-delà. Passez à 64 Go/1 To (env. 1 499 €) seulement si vous voulez spécifiquement que les modèles 14B se sentent confortables plutôt que simplement utilisables. Évitez-le complètement pour les modèles 32B+ — voir la comparaison avec un serveur GPU ci-dessous.",
+          "Oui, si votre objectif est Home Assistant plus Frigate plus un LLM local 7B–8B — achetez la configuration 32 Go/1 To (Ryzen 7 8845HS, Radeon 780M). La boutique officielle de Beelink affiche la configuration 24 Go/1 To à 799 $ (prix catalogue officiel de la boutique américaine, vérifié le 2026-10-25 ; les prix en France diffèrent) ; pour les configurations 32 Go, consultez l'annonce actuelle. Elle fait tourner confortablement un modèle 7B, charge un 13B–14B en 4 bits mais plus lentement, et devient juste au-delà. Passez à 64 Go/1 To (consulter l'annonce actuelle) seulement si vous voulez spécifiquement que les modèles 14B se sentent confortables plutôt que simplement utilisables. Évitez-le complètement pour les modèles 32B+ — voir la comparaison avec un serveur GPU ci-dessous.",
         bullets: [
           'CPU : Ryzen 7 8845HS — 8 cœurs/16 threads, Radeon 780M (12 CU, RDNA 3)',
           "Vérifiez le CPU sur l'annonce : Beelink vend aussi un SER8 moins cher avec la puce 8745HS (fréquence boost plus basse, même nom) — ce test couvre uniquement l'unité 8845HS",
           'RAM : double SO-DIMM, remplaçable par l\'utilisateur ; 32 Go est la configuration vedette, 64 Go pour la marge',
           "LLM local (estimé d'après les specs, non benchmarké) : 7B confortable ; 13B–14B utilisable mais plus lent ; 32B+ non recommandé",
-          'Prix : 32 Go/1 To env. 999 € ; 64 Go/1 To env. 1 499 € (août 2026, vérifier le prix actuel — varie selon revendeur et référence RAM)',
+          'Prix : prix catalogue officiel américain 799 $ pour 24 Go/1 To (vérifié le 2026-10-25) ; configurations 32 Go et 64 Go — consulter l\'annonce actuelle (varie selon revendeur et référence RAM ; les prix en France diffèrent)',
           "Beelink a depuis lancé les gammes SER9 et SER10 Pro/Max — le SER8 n'est plus le modèle Beelink le plus récent, mais reste le meilleur choix qualité-prix pour cet usage précis",
         ],
         updatedDate: '2026-08',
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Décision d\'achat finale', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Le Beelink SER8 32 Go/1 To (Ryzen 7 8845HS) est un mini-PC à 999 € qui fait tourner Home Assistant, Frigate et un LLM 7B local sur Ollama sur une seule machine silencieuse, ce qui en fait le meilleur choix qualité-prix pour une maison connectée à IA locale en 2026.' },
+      { type: 'one-sentence', content: 'Le Beelink SER8 32 Go/1 To (Ryzen 7 8845HS) est un mini-PC (à partir de 799 $, prix catalogue officiel américain, 24 Go/1 To) qui fait tourner Home Assistant, Frigate et un LLM 7B local sur Ollama sur une seule machine silencieuse, ce qui en fait le meilleur choix qualité-prix pour une maison connectée à IA locale en 2026.' },
       { type: 'plain-terms', content: "Un mini-PC est un petit ordinateur silencieux toujours allumé. Le SER8 associe un processeur AMD rapide, un circuit graphique intégré puissant et assez de mémoire pour faire tourner toute votre centrale domotique plus un modèle de chat IA de taille moyenne en même temps, sans le prix d'une machine haut de gamme. La mémoire occupe deux emplacements remplaçables, vous pouvez donc en ajouter plus tard — la version 32 Go est celle que la plupart des acheteurs devraient prendre ; 64 Go ne vaut le surcoût que si vous voulez spécifiquement qu'un modèle plus grand se sente confortable plutôt que juste utilisable." },
     ],
     sections: {
@@ -985,11 +985,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Résumé',
         isTldr: true,
         items: [
-          'Achetez le SER8 32 Go/1 To (Ryzen 7 8845HS) — il fait tourner Home Assistant, Frigate, Whisper et un LLM 7B local sur une machine pour environ 999 € (août 2026, volatil)',
+          'Achetez le SER8 32 Go/1 To (Ryzen 7 8845HS) — il fait tourner Home Assistant, Frigate, Whisper et un LLM 7B local sur une machine — prix catalogue officiel américain 799 $ pour 24 Go/1 To (vérifié le 2026-10-25), 32 Go : consulter l\'annonce actuelle',
           'Vérifiez que l\'annonce indique bien « 8845HS », pas la variante « 8745HS » moins chère que Beelink vend aussi sous le même nom SER8',
-          '32 Go est la config vedette pour la plupart des acheteurs ; passez à 64 Go (env. 1 499 €) seulement si vous voulez que les modèles 14B soient confortables',
+          '32 Go est la config vedette pour la plupart des acheteurs ; passez à 64 Go (consulter l\'annonce actuelle) seulement si vous voulez que les modèles 14B soient confortables',
           "Beelink a lancé les gammes plus récentes SER9 et SER10 Pro/Max depuis la publication initiale de ce test — le SER8 n'est plus le porte-étendard actuel, mais reste le meilleur choix pour HA + Frigate + un modèle 7B",
-          'Moins cher et plus simple qu\'un [GEEKOM A9 Max](/fr/smart-home/geekom-a9-max-local-ai-review) (désormais 1 099–1 799 $) ; bien plus capable qu\'un boîtier Intel N150',
+          'Moins cher et plus simple qu\'un [GEEKOM A9 Max](/fr/smart-home/geekom-a9-max-local-ai-review) (1 299–1 599 $ prix catalogue officiel) ; bien plus capable qu\'un boîtier Intel N150',
           'Évitez-le complètement pour les modèles 32B+ — voir la comparaison avec un serveur GPU pour cet usage',
         ],
       },
@@ -997,9 +997,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict & meilleure config',
         content:
-          "**OUI — achetez le Beelink SER8 32 Go/1 To (Ryzen 7 8845HS, Radeon 780M) si vous voulez Home Assistant, Frigate et un petit LLM local tournant silencieusement sur une seule machine.** Configuration recommandée : Ryzen 7 8845HS · 32 Go DDR5 · 1 To NVMe. Idéal pour : un serveur maison tout-en-un — Home Assistant, Ollama, Whisper et Frigate ensemble, avec un assistant 7B confortable et un 13B–14B utilisable mais plus lent.\n\nPrix actuel : vérifiez le prix en direct — il varie selon la configuration RAM/stockage et le revendeur ; la fourchette recherchée pour le 32 Go/1 To est d'environ 999 € (août 2026). Pas pour : quiconque prévoit de faire tourner des modèles de 30B et plus régulièrement — le plafond de RAM et l'architecture à mémoire partagée de l'iGPU en font un mauvais choix même à 64 Go. Voir plutôt [l'alternative serveur GPU](#vs-gpu-server).",
+          "**OUI — achetez le Beelink SER8 32 Go/1 To (Ryzen 7 8845HS, Radeon 780M) si vous voulez Home Assistant, Frigate et un petit LLM local tournant silencieusement sur une seule machine.** Configuration recommandée : Ryzen 7 8845HS · 32 Go DDR5 · 1 To NVMe. Idéal pour : un serveur maison tout-en-un — Home Assistant, Ollama, Whisper et Frigate ensemble, avec un assistant 7B confortable et un 13B–14B utilisable mais plus lent.\n\nPrix actuel : vérifiez le prix en direct — il varie selon la configuration RAM/stockage et le revendeur ; la boutique officielle de Beelink affiche la configuration 24 Go/1 To à 799 $ (prix catalogue officiel de la boutique américaine, vérifié le 2026-10-25 ; les prix en France diffèrent) ; pour les configurations 32 Go, consultez l'annonce actuelle. Pas pour : quiconque prévoit de faire tourner des modèles de 30B et plus régulièrement — le plafond de RAM et l'architecture à mémoire partagée de l'iGPU en font un mauvais choix même à 64 Go. Voir plutôt [l'alternative serveur GPU](#vs-gpu-server).",
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel du SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Vérifier le prix actuel du SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'Comparer les configurations SER8', url: 'https://www.amazon.fr/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8 (toutes configs)', productCategory: 'Mini PC' },
         ],
       },
@@ -1032,18 +1032,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Achetez 32 Go/1 To si : votre cible est un modèle 7B–8B, vous faites tourner Home Assistant + Frigate + Whisper à côté, et vous voulez le prix le plus bas qui fait quand même le travail confortablement.',
           "Achetez 64 Go/1 To si : vous prévoyez de faire tourner régulièrement des modèles 13B–14B et voulez qu'ils soient aussi réactifs que la classe 7B l'est sur 32 Go, ou vous voulez une marge RAM supplémentaire pour plusieurs services en même temps (HA, Frigate, une base vectorielle, Ollama) sans swap.",
           "Les deux configurations partagent la même iGPU Radeon 780M et la même bande passante DDR5-5600 — 64 Go ne rend pas l'inférence plus rapide, cela permet seulement de charger des modèles plus grands.",
-          'La référence 64 Go coûte actuellement environ 500 € de plus que la référence 32 Go — cela vaut le coup seulement si la classe de modèle plus grande est l\'objectif réel, pas « juste au cas où ».',
+          'La référence 64 Go coûte plus cher que la référence 32 Go (consultez l\'annonce actuelle pour l\'écart) — cela vaut le coup seulement si la classe de modèle plus grande est l\'objectif réel, pas « juste au cas où ».',
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel — SER8 32 Go/1 To', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
-          { label: 'Vérifier le prix actuel — SER8 64 Go/1 To', url: 'https://www.amazon.fr/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '1 499 €' },
+          { label: 'Vérifier le prix actuel — SER8 32 Go/1 To', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Vérifier le prix actuel — SER8 64 Go/1 To', url: 'https://www.amazon.fr/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: 'Spécifications',
         content:
-          "**Toutes les specs ci-dessous ont été revérifiées auprès de l'offre de Beelink et de sources de revendeurs/tests indépendantes en août 2026.** Beelink vend le nom SER8 avec deux CPU différents — vérifiez avant d'acheter que l'annonce indique « 8845HS » (sujet de ce test, boost à 5,1 GHz) et non la variante moins chère « 8745HS » (boost à 4,9 GHz, sinon similaire). La RAM à la vente varie selon la référence (16, 24, 32 ou 64 Go) ; ce tableau reflète l'unité 32 Go / 1 To comme configuration de référence.",
+          "**Toutes les specs ci-dessous ont été vérifiées auprès de l'offre de Beelink et de sources de revendeurs/tests indépendantes ; les prix ont été vérifiés pour la dernière fois sur la boutique officielle le 2026-10-25.** Beelink vend le nom SER8 avec deux CPU différents — vérifiez avant d'acheter que l'annonce indique « 8845HS » (sujet de ce test, boost à 5,1 GHz) et non la variante moins chère « 8745HS » (boost à 4,9 GHz, sinon similaire). La RAM à la vente varie selon la référence (16, 24, 32 ou 64 Go) ; ce tableau reflète l'unité 32 Go / 1 To comme configuration de référence.",
         columns: ['Spécification', 'Beelink SER8 (8845HS)'],
         rows: [
           { Spécification: 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS (Zen 4, 4 nm)' },
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spécification: 'TDP', 'Beelink SER8 (8845HS)': '54–65 W (fonctionne à 65 W en continu)' },
           { Spécification: 'Dimensions', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm, ~0.75 kg' },
           { Spécification: 'OS', 'Beelink SER8 (8845HS)': 'Windows 11 Pro (installation Linux/Proxmox prise en charge)' },
-          { Spécification: 'Prix (32 Go/1 To)', 'Beelink SER8 (8845HS)': '~999 € (août 2026 — volatil, vérifier le prix actuel)' },
+          { Spécification: 'Prix (catalogue officiel)', 'Beelink SER8 (8845HS)': '799 $ pour 24 Go/1 To (boutique US, vérifié le 2026-10-25) ; 32 Go : consulter l\'annonce actuelle' },
         ],
         items: [
           'Pas de GPU dédié : toute l\'inférence IA tourne sur le CPU et l\'iGPU Radeon 780M qui partagent la RAM système.',
@@ -1117,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Réalisez exactement cette configuration : voir [Connecter Ollama à Home Assistant](/fr/smart-home/home-assistant-ollama-integration) et [Faire tourner votre maison connectée sur un LLM local](/fr/smart-home/local-llm-smart-home-complete-guide).",
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel du SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Vérifier le prix actuel du SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iGPU Radeon 780M : assez puissante pour l\'inférence d\'un modèle 7B et le décodage vidéo de Frigate, sans la consommation ni le bruit d\'une GPU dédiée.',
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel du SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Vérifier le prix actuel du SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -1161,7 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Pourquoi je l\'aime, et pourquoi je ne l\'achèterais pas pour tous les usages.**',
         items: [
           '**Pourquoi je l\'aime**',
-          'Meilleur rapport qualité-prix pour un boîtier IA locale capable — 999 € pour une machine qui fait tourner confortablement un modèle 7B plus une pile domotique complète',
+          'Meilleur rapport qualité-prix pour un boîtier IA locale capable — 799 $ (prix catalogue officiel américain, 24 Go/1 To) pour une machine qui fait tourner confortablement un modèle 7B plus une pile domotique complète',
           'La RAM remplaçable par l\'utilisateur et deux emplacements M.2 font que la machine évolue avec vous au lieu d\'imposer un remplacement',
           'USB4 et 2.5GbE couvrent les vrais goulots d\'étranglement d\'un serveur maison (débit réseau, stockage externe) que les boîtiers moins chers ignorent',
           'Fonctionne à 65 W en charge et environ 8–12 W au repos — peu coûteux à laisser allumé 24h/24',
@@ -1177,19 +1177,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8 vs alternatives',
         content: '**Si le SER8 ne convient pas, quatre boîtiers l\'encadrent en prix et en capacité — chacun a son propre test avec sa propre fiche produit ci-dessous.**',
-        columns: ['Mini-PC', 'Prix (env.)', 'Plafond RAM (testé)', 'Idéal pour'],
+        columns: ['Mini-PC', 'Prix catalogue officiel', 'Plafond RAM (selon le fabricant)', 'Idéal pour'],
         rows: [
-          { 'Mini-PC': 'Beelink SER8', 'Prix (env.)': '999 € (32 Go/1 To)', 'Plafond RAM (testé)': '~64–96 Go', 'Idéal pour': 'Meilleur choix : HA + modèle 7B' },
-          { 'Mini-PC': 'Beelink EQ14', 'Prix (env.)': '170–210 €', 'Plafond RAM (testé)': '16 Go', 'Idéal pour': 'HA seul, tout petit modèle' },
-          { 'Mini-PC': 'Minisforum UM890 Pro', 'Prix (env.)': '650–780 €', 'Plafond RAM (testé)': '~64–96 Go', 'Idéal pour': 'Double 2.5GbE, port eGPU' },
-          { 'Mini-PC': 'GEEKOM A9 Max (2026)', 'Prix (env.)': '1 010–1 650 €', 'Plafond RAM (testé)': '128 Go', 'Idéal pour': 'Marge maximale, Wi-Fi 7' },
-          { 'Mini-PC': 'GMKtec G3 Plus', 'Prix (env.)': '185–240 €', 'Plafond RAM (testé)': '32 Go', 'Idéal pour': 'Économique, évolutif' },
+          { 'Mini-PC': 'Beelink SER8', 'Prix catalogue officiel': '799 $ (24 Go/1 To)', 'Plafond RAM (selon le fabricant)': '~64–96 Go', 'Idéal pour': 'Meilleur choix : HA + modèle 7B' },
+          { 'Mini-PC': 'Beelink EQ14', 'Prix catalogue officiel': '385 $ (16 Go/500 Go)', 'Plafond RAM (selon le fabricant)': '16 Go', 'Idéal pour': 'HA seul, tout petit modèle' },
+          { 'Mini-PC': 'Minisforum UM890 Pro', 'Prix catalogue officiel': '439,90 $ nu / 823,90 $ (32 Go/1 To)', 'Plafond RAM (selon le fabricant)': '~64–96 Go', 'Idéal pour': 'Double 2.5GbE, port eGPU' },
+          { 'Mini-PC': 'GEEKOM A9 Max (2026)', 'Prix catalogue officiel': '1 299–1 599 $', 'Plafond RAM (selon le fabricant)': '128 Go', 'Idéal pour': 'Marge maximale, Wi-Fi 7' },
+          { 'Mini-PC': 'GMKtec G3 Plus', 'Prix catalogue officiel': '399,99–499,99 $', 'Plafond RAM (selon le fabricant)': '32 Go', 'Idéal pour': 'N150, RAM évolutive' },
         ],
         items: [
-          "[GEEKOM A9 Max](/fr/smart-home/geekom-a9-max-local-ai-review) — le choix pour la marge : plafond de 128 Go de RAM et Wi-Fi 7, mais désormais 1 010–1 650 € (édition 2026, Ryzen AI 9 HX 370/HX 470) — sensiblement plus cher, mais plus l'écart massif d'autrefois — comparez les deux prix en direct avant d'acheter.",
-          '[Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) — performance Radeon 780M similaire, mais ajoute un double 2.5GbE, le Wi-Fi 6E et un port eGPU OCuLink pour un surcoût modéré.',
-          '[Beelink EQ14](/fr/smart-home/beelink-eq14-local-ai-review) — boîtier Intel N150 économique pour Home Assistant plus un tout petit modèle uniquement ; évitez-le si vous voulez un assistant 7B.',
-          '[GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — une autre option N150 économique avec RAM évolutive.',
+          "[GEEKOM A9 Max](/fr/smart-home/geekom-a9-max-local-ai-review) — le choix pour la marge : plafond de 128 Go de RAM et Wi-Fi 7, mais 1 299–1 599 $ au prix catalogue officiel (édition 2026, Ryzen AI 9 HX 370/HX 470) — environ 1,6 à 2,0 fois le prix catalogue du SER8 (799 $) ; comparez les deux prix en direct avant d'acheter.",
+          '[Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) — performance Radeon 780M similaire, mais ajoute un double 2.5GbE, le Wi-Fi 6E et un port eGPU OCuLink ; selon la page officielle, 439,90 $ nu et 823,90 $ avec 32 Go/1 To, affiché comme épuisé lors de la vérification du 2026-10-25.',
+          '[Beelink EQ14](/fr/smart-home/beelink-eq14-local-ai-review) — boîtier Intel N150 pour Home Assistant plus un tout petit modèle uniquement (385 $ au prix catalogue officiel pour 16 Go/500 Go, indiqué en précommande lors de la vérification du 2026-10-25) ; évitez-le si vous voulez un assistant 7B.',
+          '[GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — une autre option N150 avec RAM évolutive (399,99–499,99 $ au prix catalogue officiel ; toutes les variantes affichées comme épuisées lors de la vérification du 2026-10-25).',
           'Les propres gammes SER9 et SER10 Pro/Max de Beelink (lancées au CES 2026, Ryzen AI 9 HX 470, 10GbE sur certaines références) sont la gamme phare actuelle — cela vaut le coup seulement si le 10GbE ou la nouvelle génération de NPU compte spécifiquement pour vous ; pour HA + Frigate + un modèle 7B, elles ne changent pas la recommandation.',
           'Toujours en comparaison ? Partez du [comparatif des meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
@@ -1200,13 +1200,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Deux canaux sont les options réelles et vérifiables : la boutique officielle de Beelink (support garantie direct) et Amazon (livraison rapide, retours faciles).** Les prix bougent d'une semaine à l'autre et selon la référence RAM/stockage — vérifiez le prix en direct plutôt que de vous fier à un chiffre figé.",
         items: [
-          'Boutique officielle Beelink : garantie et support constructeur directs ; parfois le prix le plus élevé des deux canaux.',
-          'Amazon : généralement le prix le plus compétitif, plus la politique de retour standard d\'Amazon — le choix pratique par défaut pour la plupart des acheteurs.',
+          'Boutique officielle Beelink : garantie et support constructeur directs ; la boutique affiche la configuration 24 Go/1 To à 799 $ (vérifié le 2026-10-25).',
+          'Amazon : livraison rapide et politique de retour standard d\'Amazon ; les prix Amazon n\'ont pas été vérifiés pour cette page et peuvent différer de la boutique officielle — comparez avant d\'acheter.',
           'Confirmez la référence RAM (16, 24, 32 ou 64 Go) et le CPU (8845HS, pas 8745HS) sur l\'annonce avant d\'acheter — Beelink vend plusieurs variantes sous le même nom « SER8 ».',
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix — boutique officielle Beelink', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
-          { label: 'Vérifier le prix — Amazon', url: 'https://www.amazon.fr/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Vérifier le prix — boutique officielle Beelink', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Vérifier le prix — Amazon', url: 'https://www.amazon.fr/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -1228,14 +1228,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: 'Coût total du setup',
-        content: '**Une installation complète réaliste — SER8 plus le bundle ci-dessus — atteint environ 1 197–1 272 € (août 2026), pas seulement le prix affiché du mini-PC.**',
+        content: '**Une installation complète réaliste — SER8 plus le bundle ci-dessus — atteint environ 799 $ (prix catalogue officiel américain du SER8 24 Go/1 To, vérifié le 2026-10-25) plus env. 198–273 € d\'accessoires (fourchettes d\'accessoires inchangées), pas seulement le prix affiché du mini-PC.**',
         columns: ['Élément', 'Prix (env.)'],
         rows: [
-          { Élément: 'Beelink SER8 32 Go/1 To', 'Prix (env.)': '999 €' },
+          { Élément: 'Beelink SER8 24 Go/1 To (prix catalogue officiel)', 'Prix (env.)': '799 $' },
           { Élément: 'SONOFF ZBDongle-E (Zigbee)', 'Prix (env.)': '18–23 €' },
           { Élément: 'Reolink RLC-810A × 2 (caméras PoE)', 'Prix (env.)': '110–170 €' },
           { Élément: 'Hailo-8L M.2 (accélérateur Frigate)', 'Prix (env.)': 'environ 70–80 €' },
-          { Élément: 'Total (env.)', 'Prix (env.)': '1 197–1 272 €+' },
+          { Élément: 'Total (env.)', 'Prix (env.)': '799 $ + 198–273 €' },
         ],
         items: [
           'Ce total exclut le switch/injecteur PoE et le câblage, qui varient selon le logement et sont généralement un coût unique partagé avec d\'autres appareils réseau.',
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Si les modèles 32B ou 70B sont l'objectif réel, n'achetez pas le SER8 juste parce qu'il est moins cher — un système avec GPU dédiée est la réponse honnête pour cette charge de travail.** La comparaison ci-dessous est délibérément défavorable au SER8 en dehors de ses véritables forces, car un lecteur qui prévoit une installation 70B ne doit pas finir déçu ici.",
         columns: ['Facteur', 'SER8 (iGPU)', 'Serveur GPU (24 Go+ VRAM)'],
         rows: [
-          { Facteur: 'Prix', 'SER8 (iGPU)': '999 €', 'Serveur GPU (24 Go+ VRAM)': 'à partir de 1 400 €' },
+          { Facteur: 'Prix', 'SER8 (iGPU)': '799 $ (24 Go/1 To, catalogue)', 'Serveur GPU (24 Go+ VRAM)': 'à partir de 1 400 €' },
           { Facteur: 'Consommation', 'SER8 (iGPU)': '65 W en charge / ~10 W au repos', 'Serveur GPU (24 Go+ VRAM)': '300–600 W en charge' },
           { Facteur: 'Modèle 7B', 'SER8 (iGPU)': 'Confortable', 'Serveur GPU (24 Go+ VRAM)': 'Rapide, surdimensionné' },
           { Facteur: 'Modèle 14B', 'SER8 (iGPU)': 'Utilisable', 'Serveur GPU (24 Go+ VRAM)': 'Rapide' },
@@ -1272,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "USA : les droits Section 301 sur l'électronique chinoise restent en vigueur en 2026 ; les droits « IEEPA » distincts de 2025 ont été invalidés par la Cour suprême en février 2026 et remplacés par un droit Section 122 temporaire et plafonné. L'exemption de minimis en franchise de droits sous 800 $ pour les importations directes a également pris fin.",
           "UE (concerne DE/FR) : il n'y a pas de droit UE large sur les mini-PC finis, mais depuis juillet 2026 le seuil de franchise de 150 € sur les colis directs de faible valeur en provenance de Chine a été supprimé et de petits frais de traitement par colis ajoutés.",
           "Hypothèse (tendance macro, pas un fait produit) : la capacité d'exportation chinoise redirigée a maintenu une forte disponibilité de ces marques en UE et aux USA, ce qui soutient globalement des prix compétitifs.",
-          "Effet net : vérifiez le prix actuel chez le revendeur avant d'acheter — les fourchettes de cette page sont indicatives et datées d'août 2026.",
+          "Effet net : vérifiez le prix actuel chez le revendeur avant d'acheter — les chiffres de cette page sont des prix catalogue officiels vérifiés le 2026-10-25 et restent indicatifs.",
         ],
       },
       priceSanityCheck: {
@@ -1283,14 +1283,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "Si le SER8 32 Go/1 To est à moins d'environ 100 € d'un prix promo du GEEKOM A9 Max, le plafond de 128 Go et le Wi-Fi 7 de l'A9 Max justifient probablement la différence pour quiconque pourrait évoluer vers des modèles plus grands.",
           "Si le SER8 et le SER9 sont proches en prix, vérifiez si les améliorations du SER9 (vérifiez le prix et les specs actuels du SER9 au moment de l'achat) comptent assez pour vous — sinon le SER8 reste le choix qualité-prix.",
-          "N'achetez pas sur la seule dynamique de marque — la recommandation de cette page concerne la config 32 Go/1 To à environ 999 € ; revérifiez avant l'achat.",
+          "N'achetez pas sur la seule dynamique de marque — la recommandation de cette page concerne la config 32 Go/1 To (consulter l'annonce actuelle ; prix catalogue officiel américain pour 24 Go/1 To : 799 $) ; revérifiez avant l'achat.",
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quel est le prix actuel du Beelink SER8 ?', a: "La fourchette recherchée pour la configuration 32 Go/1 To (Ryzen 7 8845HS) est d'environ 999 € en août 2026, la configuration de base 16 Go/500 Go étant généralement moins chère (vérifier le prix actuel) et la configuration 64 Go/1 To plus chère (env. 1 499 €). Les prix varient selon le revendeur et changent chaque semaine — vérifiez le prix en direct avant d'acheter plutôt que de vous fier à ce chiffre." },
+          { q: 'Quel est le prix actuel du Beelink SER8 ?', a: "La boutique officielle de Beelink affiche la configuration 24 Go/1 To (Ryzen 7 8845HS) à 799 $ (prix catalogue officiel de la boutique américaine, vérifié le 2026-10-25 ; un prix de comparaison de 959 $ y était indiqué). Pour les configurations 32 Go et 64 Go, consultez l'annonce actuelle ; les prix en France diffèrent des prix catalogue américains. Les prix varient selon le revendeur et changent souvent — vérifiez le prix en direct avant d'acheter plutôt que de vous fier à ce chiffre." },
           { q: 'Quelles sont les specs officielles du Beelink SER8 ?', a: "AMD Ryzen 7 8845HS (8 cœurs/16 threads, jusqu'à 5,1 GHz), iGPU Radeon 780M (12 CU, RDNA 3), NPU 16 TOPS, RAM DDR5-5600 double SO-DIMM (références 16/24/32/64 Go), stockage 2× M.2 2280 PCIe 4.0, 2.5GbE, Wi-Fi 6, USB4, TDP 54–65 W. Beelink vend aussi une variante SER8 moins chère avec la puce 8745HS (boost 4,9 GHz) — vérifiez le CPU sur l'annonce." },
           { q: 'Quelles sont les dimensions du Beelink SER8 ?', a: "135 × 135 × 44,7 mm, environ 0,75 kg — assez petit pour être placé derrière un écran ou monté hors de vue." },
           { q: 'Le Beelink SER8 peut-il faire tourner des LLM locaux ?', a: "Oui. Avec 32 Go de RAM et l'iGPU Radeon 780M, il fait tourner sans peine un modèle 7B–8B sur Ollama et peut charger un modèle 13B–14B en 4 bits, bien que plus lentement. Ce sont des estimations d'après son matériel vérifié, pas un benchmark mesuré par PromptQuorum, car la vitesse réelle dépend du modèle, de la quantification et du backend." },
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quelle est la consommation au repos du SER8 ?', a: "Environ 8–12 W selon des mesures indépendantes — peu coûteux à faire tourner en continu comme serveur maison. En charge soutenue, il tire jusqu'à 65 W. Les chiffres exacts dépendent de la charge de travail et du profil d'alimentation." },
           { q: 'La NPU 16 TOPS accélère-t-elle l\'IA locale sur le SER8 ?', a: "Non. Les runtimes LLM courants (Ollama, llama.cpp, LM Studio) n'utilisent pas la NPU pour l'inférence en 2026 — ils tournent sur le CPU et l'iGPU Radeon 780M à la place. La NPU accélère des charges vision/audio spécifiques dans les frameworks pris en charge, pas l'inférence de chat générale." },
           { q: 'Existe-t-il un modèle Beelink plus récent que le SER8 ?', a: "Oui. Beelink a lancé le SER9 et, au CES 2026, le SER10 Pro et le SER10 Max (Ryzen AI 9 HX 470, réseau jusqu'à 10GbE). C'est la gamme phare actuelle. Pour l'usage précis couvert par ce test — Home Assistant, Frigate et un modèle local 7B–14B — le SER8 reste le meilleur choix qualité-prix ; la nouvelle génération de NPU n'aide pas sensiblement cet usage (voir la note NPU ci-dessus)." },
-          { q: 'SER8 ou GEEKOM A9 Max ?', a: "Le SER8 est le choix qualité-prix à 999 € et couvre l'essentiel des besoins IA locale d'une maison connectée. Choisissez l'A9 Max seulement si vous avez besoin de son plafond de 128 Go de RAM ou du Wi-Fi 7 — en août 2026, il coûte 1 010–1 650 €, nettement plus, mais plus le multiple qu'il était autrefois — comparez les deux prix en direct, et faites-en un choix délibéré, pas une mise à niveau par défaut." },
+          { q: 'SER8 ou GEEKOM A9 Max ?', a: "Le SER8 est le choix qualité-prix à un prix catalogue officiel américain de 799 $ (24 Go/1 To) et couvre l'essentiel des besoins IA locale d'une maison connectée. Choisissez l'A9 Max seulement si vous avez besoin de son plafond de 128 Go de RAM ou du Wi-Fi 7 — il est affiché à 1 299–1 599 $ (prix catalogue officiel), soit environ 1,6 à 2,0 fois le prix catalogue du SER8 — comparez les deux prix en direct, et faites-en un choix délibéré, pas une mise à niveau par défaut." },
           { q: 'La RAM est-elle évolutive ?', a: "Oui. Le SER8 utilise deux emplacements SO-DIMM DDR5 standard remplaçables par l'utilisateur, vous pouvez donc démarrer à 32 Go et passer à 64 Go plus tard. Il a aussi deux emplacements M.2 pour l'extension de stockage." },
           { q: 'Où le Beelink SER8 est-il fabriqué, et cela affecte-t-il le prix ?', a: "Il est fabriqué en Chine. En 2026, les mesures d'importation américaines (droits Section 301, fin de l'exemption de minimis sous 800 $) et la suppression par l'UE de l'exemption de 150 € sur les colis de faible valeur peuvent affecter le coût rendu, alors vérifiez le prix actuel chez le revendeur plutôt que de vous fier à un chiffre figé." },
         ],
@@ -1320,13 +1320,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Décision d\'achat finale',
         content: '**Trois voies, un choix par défaut clair.**',
         items: [
-          '**OUI, achetez le SER8 32 Go/1 To si :** vous voulez Home Assistant, Frigate et un assistant local 7B–8B sur une seule machine silencieuse et peu coûteuse — c\'est la recommandation par défaut pour la plupart des lecteurs de cette page.',
+          '**OUI, achetez le SER8 32 Go/1 To si :** vous voulez Home Assistant, Frigate et un assistant local 7B–8B sur une seule machine silencieuse et économe en énergie — c\'est la recommandation par défaut pour la plupart des lecteurs de cette page.',
           '**OUI, mais choisissez 64 Go/1 To si :** les modèles 13B–14B sont votre cible réelle et vous voulez qu\'ils soient réactifs, pas seulement chargés techniquement.',
           '**NON si :** les modèles 32B ou 70B sont votre usage principal — achetez plutôt un système avec GPU dédiée ; voir le [guide de montage d\'une station de travail IA locale](/fr/power-local-llm/best-workstation-build-local-ai-2026).',
           '**Mon choix : SER8 32 Go/1 To — vérifiez le prix du jour et achetez cette configuration.**',
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix du jour — SER8 32 Go/1 To', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Vérifier le prix du jour — SER8 32 Go/1 To', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -1335,9 +1335,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Test Beelink SER8 : specs, prix & 32 Go vs 64 Go (2026)',
       reviewBody:
-        "Le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M), en configuration 32 Go/1 To, fait tourner Home Assistant, Frigate et un LLM 7B local sur Ollama pour environ 999 € (août 2026). C'est le meilleur choix qualité-prix parmi les mini-PC IA locale pour cet usage précis, même si Beelink a depuis lancé les gammes plus récentes SER9 et SER10.",
+        "Le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M), en configuration 32 Go/1 To, fait tourner Home Assistant, Frigate et un LLM 7B local sur Ollama à un prix catalogue officiel américain de 799 $ pour la configuration 24 Go/1 To (vérifié le 2026-10-25). C'est le meilleur choix qualité-prix parmi les mini-PC IA locale pour cet usage précis, même si Beelink a depuis lancé les gammes plus récentes SER9 et SER10.",
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1363,8 +1363,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-es.webp',
@@ -1372,11 +1372,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Beelink SER8: análisis, precio y 32GB vs 64GB (2026)',
     seoTitle: 'Análisis Beelink SER8 2026 — Specs, precio, 32GB vs 64GB',
     intro:
-      'El Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) es el mini PC con mejor relación calidad-precio para un hogar inteligente con IA local en 2026 — la configuración de 32 GB / 1 TB ejecuta Home Assistant, Frigate, Whisper y un modelo 7B en Ollama en un solo equipo silencioso por unos 999 € (~$1,050–1,150 en Latinoamérica; agosto de 2026, precio volátil según tienda y configuración). Este análisis reverifica cada especificación con Beelink y fuentes independientes, fija expectativas honestas sobre la velocidad del LLM local como estimaciones y no benchmarks medidos, y cubre qué ha cambiado desde el lanzamiento — incluidas las gamas más recientes SER9 y SER10 de Beelink.',
+      'El Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) es el mini PC con mejor relación calidad-precio para un hogar inteligente con IA local en 2026 — la configuración de 32 GB / 1 TB ejecuta Home Assistant, Frigate, Whisper y un modelo 7B en Ollama en un solo equipo silencioso; la tienda oficial de Beelink lista la configuración de 24 GB / 1 TB a un precio de lista de $799 (precio de lista oficial de la tienda de EE. UU., comprobado el 2026-10-25; los precios en tu país pueden variar), y para las configuraciones de 32 GB conviene consultar el anuncio actual. Este análisis reverifica cada especificación con Beelink y fuentes independientes, fija expectativas honestas sobre la velocidad del LLM local como estimaciones y no benchmarks medidos, y cubre qué ha cambiado desde el lanzamiento — incluidas las gamas más recientes SER9 y SER10 de Beelink.',
     metaDescription:
-      'Análisis Beelink SER8 2026: specs Ryzen 7 8845HS, precio actual por configuración, 32GB vs 64GB, consumo en reposo, dimensiones. Ejecuta Home Assistant más un LLM 7B local — desglose completo.',
+      'Análisis Beelink SER8 2026: specs Ryzen 7 8845HS, precio por configuración, 32GB vs 64GB, consumo en reposo, medidas. Home Assistant más un LLM 7B local.',
     twitterDescription:
-      'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, desde ~999 €. Qué configuración comprar para Home Assistant más un LLM local — 32GB vs 64GB, specs y precio actual.',
+      'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, precio de lista oficial en EE. UU. $799 (24GB/1TB). Qué configuración comprar para Home Assistant más un LLM local — 32GB vs 64GB, specs y precio actual.',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores que eligen un mini PC económico para Home Assistant y un LLM local',
@@ -1389,18 +1389,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs mini pc',
     ],
     leadAnswerBlock:
-      '**Sí — compra el Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) si quieres Home Assistant, Frigate y un LLM local pequeño funcionando en silencio en un solo equipo.** Ejecuta el hub, Frigate, Whisper y un modelo 7B en Ollama por unos 999 € (32 GB/1 TB, agosto de 2026, volátil) — más barato que un GEEKOM A9 Max para casi el mismo trabajo domótico. Mejor para: HA + Frigate + un asistente 7B–8B. No para: modelos de 32B en adelante — mira la alternativa de servidor con GPU abajo.',
+      '**Sí — compra el Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) si quieres Home Assistant, Frigate y un LLM local pequeño funcionando en silencio en un solo equipo.** Ejecuta el hub, Frigate, Whisper y un modelo 7B en Ollama (precio de lista oficial en EE. UU. $799 para la configuración de 24 GB/1 TB, comprobado el 2026-10-25; para 32 GB, consulta el anuncio actual) — aproximadamente entre la mitad y tres quintos del precio de lista del GEEKOM A9 Max ($1.299–1.599) para casi el mismo trabajo domótico. Mejor para: HA + Frigate + un asistente 7B–8B. No para: modelos de 32B en adelante — mira la alternativa de servidor con GPU abajo.',
     quickAnswerTop: {
       es: {
         question: '¿Debo comprar el Beelink SER8 para IA local y Home Assistant?',
         answer:
-          'Sí, si tu objetivo es Home Assistant más Frigate más un LLM local 7B–8B — compra la configuración de 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) por unos 999 € (agosto de 2026, volátil). Ejecuta con comodidad un modelo 7B, carga un 13B–14B a 4 bits pero más lento, y se ajusta por encima de eso. Sube a 64 GB/1 TB (~1.499 €) solo si quieres específicamente que los modelos 14B se sientan cómodos y no solo usables. Evítalo por completo para modelos de 32B en adelante — ver la comparación con servidor GPU abajo. Los precios en tu país pueden variar por impuestos locales.',
+          'Sí, si tu objetivo es Home Assistant más Frigate más un LLM local 7B–8B — compra la configuración de 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M). La tienda oficial de Beelink lista la configuración de 24 GB/1 TB a $799 (precio de lista oficial de la tienda de EE. UU., comprobado el 2026-10-25; los precios en tu país pueden variar); para las configuraciones de 32 GB, consulta el anuncio actual. Ejecuta con comodidad un modelo 7B, carga un 13B–14B a 4 bits pero más lento, y se ajusta por encima de eso. Sube a 64 GB/1 TB (consulta el anuncio actual) solo si quieres específicamente que los modelos 14B se sientan cómodos y no solo usables. Evítalo por completo para modelos de 32B en adelante — ver la comparación con servidor GPU abajo. Los precios en tu país pueden variar por impuestos locales.',
         bullets: [
           'CPU: Ryzen 7 8845HS — 8 núcleos/16 hilos, Radeon 780M (12 CU, RDNA 3)',
           'Confirma la CPU en el anuncio: Beelink también vende un SER8 más barato con el chip 8745HS (reloj boost más bajo, mismo nombre) — este análisis cubre solo la unidad 8845HS',
           'RAM: SO-DIMM dual, reemplazable por el usuario; 32 GB es la configuración estrella, 64 GB para margen extra',
           'LLM local (estimado por especificaciones, no evaluado con benchmark): 7B cómodo; 13B–14B usable pero más lento; 32B+ no recomendado',
-          'Precio: 32 GB/1 TB ~999 €; 64 GB/1 TB ~1.499 € (agosto de 2026, consulta el precio actual — varía según tienda y modelo de RAM)',
+          'Precio: precio de lista oficial en EE. UU. $799 para 24 GB/1 TB (comprobado el 2026-10-25); configuraciones de 32 GB y 64 GB — consulta el anuncio actual (varía según tienda y modelo de RAM; los precios en tu país pueden variar)',
           'Beelink ha lanzado desde entonces las gamas SER9 y SER10 Pro/Max — el SER8 ya no es el modelo Beelink más reciente, pero sigue siendo la mejor opción calidad-precio para esta tarea específica',
         ],
         updatedDate: '2026-08',
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Decisión de compra final', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'El Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) es un mini PC de 999 € que ejecuta Home Assistant, Frigate y un LLM 7B local en Ollama en un solo equipo silencioso, la mejor opción calidad-precio para un hogar inteligente con IA local en 2026.' },
+      { type: 'one-sentence', content: 'El Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) es un mini PC (desde $799, precio de lista oficial en EE. UU., 24 GB/1 TB) que ejecuta Home Assistant, Frigate y un LLM 7B local en Ollama en un solo equipo silencioso, la mejor opción calidad-precio para un hogar inteligente con IA local en 2026.' },
       { type: 'plain-terms', content: 'Un mini PC es un equipo pequeño, silencioso y siempre encendido. El SER8 combina un procesador AMD rápido, gráfica integrada potente y suficiente memoria para ejecutar toda tu central domótica más un modelo de chat IA de tamaño medio a la vez, sin el precio de una máquina de gama alta. La memoria va en dos ranuras reemplazables, así que puedes ampliar después — la versión de 32 GB es la que debería elegir la mayoría; 64 GB solo merece el sobrecoste si quieres específicamente que un modelo más grande se sienta cómodo, no solo usable.' },
     ],
     sections: {
@@ -1436,11 +1436,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumen',
         isTldr: true,
         items: [
-          'Compra el SER8 32 GB/1 TB (Ryzen 7 8845HS) — ejecuta Home Assistant, Frigate, Whisper y un LLM 7B local en un equipo por unos 999 € (agosto de 2026, volátil)',
+          'Compra el SER8 32 GB/1 TB (Ryzen 7 8845HS) — ejecuta Home Assistant, Frigate, Whisper y un LLM 7B local en un equipo — precio de lista oficial en EE. UU. $799 para 24 GB/1 TB (comprobado el 2026-10-25), 32 GB: consulta el anuncio actual',
           'Confirma que el anuncio dice «8845HS», no la variante más barata «8745HS» que Beelink también vende bajo el mismo nombre SER8',
-          '32 GB es la configuración estrella para la mayoría; sube a 64 GB (~1.499 €) solo si quieres que los modelos 14B se sientan cómodos',
+          '32 GB es la configuración estrella para la mayoría; sube a 64 GB (consulta el anuncio actual) solo si quieres que los modelos 14B se sientan cómodos',
           'Beelink ha lanzado las gamas más recientes SER9 y SER10 Pro/Max desde la publicación original de este análisis — el SER8 ya no es el buque insignia actual, pero sigue siendo la mejor opción para HA + Frigate + un modelo 7B',
-          'Más barato y sencillo que un [GEEKOM A9 Max](/es/smart-home/geekom-a9-max-local-ai-review) (ahora $1.099–1.799); mucho más capaz que un equipo Intel N150',
+          'Más barato y sencillo que un [GEEKOM A9 Max](/es/smart-home/geekom-a9-max-local-ai-review) ($1.299–1.599 precio de lista oficial); mucho más capaz que un equipo Intel N150',
           'Evítalo por completo para modelos de 32B en adelante — ver la comparación con servidor GPU para esa tarea',
         ],
       },
@@ -1448,9 +1448,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto y mejor configuración',
         content:
-          '**SÍ — compra el Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) si quieres Home Assistant, Frigate y un LLM local pequeño funcionando en silencio en una sola máquina.** Configuración recomendada: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Mejor para: un servidor doméstico todo en uno — Home Assistant, Ollama, Whisper y Frigate juntos, con un asistente 7B cómodo y un 13B–14B usable pero más lento.\n\nPrecio actual: consulta el precio en vivo — varía según la configuración de RAM/almacenamiento y la tienda; la horquilla investigada para 32 GB/1 TB es de unos 999 € (agosto de 2026). No para: nadie que planee ejecutar modelos de 30B en adelante de forma habitual — el techo de RAM y la arquitectura de memoria compartida de la iGPU lo convierten en mala opción incluso con 64 GB. Ver en su lugar la [alternativa de servidor con GPU](#vs-gpu-server).',
+          '**SÍ — compra el Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) si quieres Home Assistant, Frigate y un LLM local pequeño funcionando en silencio en una sola máquina.** Configuración recomendada: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Mejor para: un servidor doméstico todo en uno — Home Assistant, Ollama, Whisper y Frigate juntos, con un asistente 7B cómodo y un 13B–14B usable pero más lento.\n\nPrecio actual: consulta el precio en vivo — varía según la configuración de RAM/almacenamiento y la tienda; la tienda oficial de Beelink lista la configuración de 24 GB/1 TB a $799 (precio de lista oficial de la tienda de EE. UU., comprobado el 2026-10-25; los precios en tu país pueden variar); para las configuraciones de 32 GB, consulta el anuncio actual. No para: nadie que planee ejecutar modelos de 30B en adelante de forma habitual — el techo de RAM y la arquitectura de memoria compartida de la iGPU lo convierten en mala opción incluso con 64 GB. Ver en su lugar la [alternativa de servidor con GPU](#vs-gpu-server).',
         affiliateLinks: [
-          { label: 'Consultar precio actual del SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Consultar precio actual del SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'Comparar configuraciones del SER8', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8 (todas las configs)', productCategory: 'Mini PC' },
         ],
       },
@@ -1483,18 +1483,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Compra 32GB/1TB si: tu objetivo es un modelo 7B–8B, ejecutas Home Assistant + Frigate + Whisper junto a él, y quieres el precio más bajo que aun así hace el trabajo con comodidad.',
           'Compra 64GB/1TB si: planeas ejecutar modelos 13B–14B con regularidad y quieres que se sientan tan ágiles como la clase 7B en 32 GB, o quieres margen extra de RAM para varios servicios a la vez (HA, Frigate, una base de datos vectorial, Ollama) sin intercambio de memoria.',
           'Ambas configuraciones comparten la misma iGPU Radeon 780M y el mismo ancho de banda DDR5-5600 — 64 GB no hace la inferencia más rápida, solo permite cargar modelos más grandes.',
-          'El modelo de 64 GB cuesta actualmente unos 500 € más que el de 32 GB — merece la pena solo si la clase de modelo más grande es el objetivo real, no «por si acaso».',
+          'El modelo de 64 GB cuesta más que el de 32 GB (consulta el anuncio actual para ver la diferencia) — merece la pena solo si la clase de modelo más grande es el objetivo real, no «por si acaso».',
         ],
         affiliateLinks: [
-          { label: 'Consultar precio actual — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
-          { label: 'Consultar precio actual — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '1.499 €' },
+          { label: 'Consultar precio actual — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Consultar precio actual — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: 'Especificaciones',
         content:
-          '**Todas las especificaciones siguientes se reverificaron con la propia oferta de Beelink y fuentes de tiendas/análisis independientes en agosto de 2026.** Beelink vende el nombre SER8 con dos CPU distintas — confirma antes de comprar que el anuncio dice «8845HS» (objeto de este análisis, boost de 5,1 GHz) y no la variante más barata «8745HS» (boost de 4,9 GHz, similar por lo demás). La RAM de fábrica varía según el modelo (16, 24, 32 o 64 GB); esta tabla refleja la unidad de 32 GB / 1 TB como configuración de referencia.',
+          '**Todas las especificaciones siguientes se verificaron con la propia oferta de Beelink y fuentes de tiendas/análisis independientes; los precios se comprobaron por última vez en la tienda oficial el 2026-10-25.** Beelink vende el nombre SER8 con dos CPU distintas — confirma antes de comprar que el anuncio dice «8845HS» (objeto de este análisis, boost de 5,1 GHz) y no la variante más barata «8745HS» (boost de 4,9 GHz, similar por lo demás). La RAM de fábrica varía según el modelo (16, 24, 32 o 64 GB); esta tabla refleja la unidad de 32 GB / 1 TB como configuración de referencia.',
         columns: ['Especificación', 'Beelink SER8 (8845HS)'],
         rows: [
           { Especificación: 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS (Zen 4, 4 nm)' },
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Especificación: 'TDP', 'Beelink SER8 (8845HS)': '54–65 W (funciona a 65 W sostenidos)' },
           { Especificación: 'Dimensiones', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm, ~0.75 kg' },
           { Especificación: 'SO', 'Beelink SER8 (8845HS)': 'Windows 11 Pro (instalación de Linux/Proxmox compatible)' },
-          { Especificación: 'Precio (32GB/1TB)', 'Beelink SER8 (8845HS)': '~999 € (ago. 2026 — volátil, consulta el precio actual)' },
+          { Especificación: 'Precio (lista oficial)', 'Beelink SER8 (8845HS)': '$799 para 24GB/1TB (tienda de EE. UU., comprobado el 2026-10-25); 32GB: consulta el anuncio actual' },
         ],
         items: [
           'Sin GPU dedicada: toda la inferencia de IA corre en la CPU y la iGPU Radeon 780M compartiendo la RAM del sistema.',
@@ -1568,7 +1568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Monta exactamente esta configuración: consulta [Conecta Ollama a Home Assistant](/es/smart-home/home-assistant-ollama-integration) y [Ejecuta tu hogar inteligente en un LLM local](/es/smart-home/local-llm-smart-home-complete-guide).',
         ],
         affiliateLinks: [
-          { label: 'Consultar precio actual del SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Consultar precio actual del SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -1603,7 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iGPU Radeon 780M: suficientemente potente para la inferencia de un modelo 7B y la decodificación de vídeo de Frigate, sin el consumo ni el ruido de una GPU dedicada.',
         ],
         affiliateLinks: [
-          { label: 'Consultar precio actual del SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Consultar precio actual del SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -1612,7 +1612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Por qué me gusta, y por qué no lo compraría para cualquier tarea.**',
         items: [
           '**Por qué me gusta**',
-          'Mejor relación calidad-precio para un equipo de IA local capaz — 999 € por una máquina que ejecuta con comodidad un modelo 7B más una pila domótica completa',
+          'Mejor relación calidad-precio para un equipo de IA local capaz — $799 (precio de lista oficial en EE. UU., 24 GB/1 TB) por una máquina que ejecuta con comodidad un modelo 7B más una pila domótica completa',
           'La RAM reemplazable por el usuario y dos ranuras M.2 hacen que la máquina crezca contigo en lugar de forzar un reemplazo',
           'USB4 y 2.5GbE cubren los cuellos de botella reales de un servidor doméstico (rendimiento de red, almacenamiento externo) que los equipos más baratos omiten',
           'Funciona a 65 W bajo carga y unos 8–12 W en reposo — barato de dejar encendido 24/7',
@@ -1628,19 +1628,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8 vs alternativas',
         content: '**Si el SER8 no encaja, cuatro equipos lo enmarcan en precio y capacidad — cada uno tiene su propio análisis con su propia ficha de producto abajo.**',
-        columns: ['Mini PC', 'Precio (aprox.)', 'Techo RAM (probado)', 'Mejor para'],
+        columns: ['Mini PC', 'Precio de lista oficial', 'Techo RAM (según el fabricante)', 'Mejor para'],
         rows: [
-          { 'Mini PC': 'Beelink SER8', 'Precio (aprox.)': '999 € (32GB/1TB)', 'Techo RAM (probado)': '~64–96GB', 'Mejor para': 'Mejor opción: HA + modelo 7B' },
-          { 'Mini PC': 'Beelink EQ14', 'Precio (aprox.)': '160–200 €', 'Techo RAM (probado)': '16GB', 'Mejor para': 'Solo HA, modelo diminuto' },
-          { 'Mini PC': 'Minisforum UM890 Pro', 'Precio (aprox.)': '600–730 €', 'Techo RAM (probado)': '~64–96GB', 'Mejor para': 'Doble 2.5GbE, puerto eGPU' },
-          { 'Mini PC': 'GEEKOM A9 Max (2026)', 'Precio (aprox.)': '950–1.550 €', 'Techo RAM (probado)': '128GB', 'Mejor para': 'Margen máximo, Wi-Fi 7' },
-          { 'Mini PC': 'GMKtec G3 Plus', 'Precio (aprox.)': '170–220 €', 'Techo RAM (probado)': '32GB', 'Mejor para': 'Económico, ampliable' },
+          { 'Mini PC': 'Beelink SER8', 'Precio de lista oficial': '$799 (24GB/1TB)', 'Techo RAM (según el fabricante)': '~64–96GB', 'Mejor para': 'Mejor opción: HA + modelo 7B' },
+          { 'Mini PC': 'Beelink EQ14', 'Precio de lista oficial': '$385 (16GB/500GB)', 'Techo RAM (según el fabricante)': '16GB', 'Mejor para': 'Solo HA, modelo diminuto' },
+          { 'Mini PC': 'Minisforum UM890 Pro', 'Precio de lista oficial': '$439,90 barebone / $823,90 (32GB/1TB)', 'Techo RAM (según el fabricante)': '~64–96GB', 'Mejor para': 'Doble 2.5GbE, puerto eGPU' },
+          { 'Mini PC': 'GEEKOM A9 Max (2026)', 'Precio de lista oficial': '$1.299–1.599', 'Techo RAM (según el fabricante)': '128GB', 'Mejor para': 'Margen máximo, Wi-Fi 7' },
+          { 'Mini PC': 'GMKtec G3 Plus', 'Precio de lista oficial': '$399,99–499,99', 'Techo RAM (según el fabricante)': '32GB', 'Mejor para': 'N150, RAM ampliable' },
         ],
         items: [
-          '[GEEKOM A9 Max](/es/smart-home/geekom-a9-max-local-ai-review) — la opción con más margen: techo de 128 GB de RAM y Wi-Fi 7, pero ahora 950–1.550 € (edición 2026, Ryzen AI 9 HX 370/HX 470) — notablemente más caro, pero ya no la diferencia enorme de antes — compara ambos precios en vivo antes de comprar.',
-          '[Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) — rendimiento Radeon 780M similar, pero añade doble 2.5GbE, Wi-Fi 6E y un puerto eGPU OCuLink por un sobrecoste moderado.',
-          '[Beelink EQ14](/es/smart-home/beelink-eq14-local-ai-review) — equipo Intel N150 económico solo para Home Assistant más un modelo diminuto; evítalo si quieres un asistente 7B.',
-          '[GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — otra opción N150 económica con RAM ampliable.',
+          '[GEEKOM A9 Max](/es/smart-home/geekom-a9-max-local-ai-review) — la opción con más margen: techo de 128 GB de RAM y Wi-Fi 7, pero $1.299–1.599 de precio de lista oficial (edición 2026, Ryzen AI 9 HX 370/HX 470) — aproximadamente 1,6 a 2,0 veces el precio de lista del SER8 ($799); compara ambos precios en vivo antes de comprar.',
+          '[Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) — rendimiento Radeon 780M similar, pero añade doble 2.5GbE, Wi-Fi 6E y un puerto eGPU OCuLink; según la página oficial, $439,90 barebone y $823,90 con 32 GB/1 TB, mostrado como agotado al comprobarlo el 2026-10-25.',
+          '[Beelink EQ14](/es/smart-home/beelink-eq14-local-ai-review) — equipo Intel N150 solo para Home Assistant más un modelo diminuto ($385 de precio de lista oficial para 16 GB/500 GB, marcado como reserva al comprobarlo el 2026-10-25); evítalo si quieres un asistente 7B.',
+          '[GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — otra opción N150 con RAM ampliable ($399,99–499,99 de precio de lista oficial; todas las variantes aparecían agotadas al comprobarlo el 2026-10-25).',
           'Las propias gamas SER9 y SER10 Pro/Max de Beelink (lanzadas en el CES 2026, Ryzen AI 9 HX 470, 10GbE en algunos modelos) son la gama insignia actual — merece la pena solo si el 10GbE o la nueva generación de NPU te importan específicamente; para HA + Frigate + un modelo 7B, no cambian la recomendación.',
           '¿Aún comparando? Empieza por el [resumen de los mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
@@ -1651,13 +1651,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Dos canales son las opciones reales y verificables: la tienda oficial de Beelink (soporte de garantía directo) y Amazon (entrega rápida, devoluciones fáciles).** Los precios se mueven de una semana a otra y según el modelo de RAM/almacenamiento — consulta el precio en vivo en lugar de fiarte de una cifra fija.',
         items: [
-          'Tienda oficial de Beelink: garantía y soporte directos del fabricante; a veces el precio más alto de los dos canales.',
-          'Amazon: normalmente el precio más competitivo, además de la política de devoluciones estándar de Amazon — la opción práctica por defecto para la mayoría de compradores.',
+          'Tienda oficial de Beelink: garantía y soporte directos del fabricante; la tienda lista la configuración de 24 GB/1 TB a $799 (comprobado el 2026-10-25).',
+          'Amazon: entrega rápida y la política de devoluciones estándar de Amazon; los precios de Amazon no se verificaron para esta página y pueden diferir de la tienda oficial — compara antes de comprar.',
           'Confirma el modelo de RAM (16, 24, 32 o 64 GB) y la CPU (8845HS, no 8745HS) en el anuncio antes de comprar — Beelink vende varias variantes bajo el mismo nombre «SER8».',
         ],
         affiliateLinks: [
-          { label: 'Consultar precio — tienda oficial Beelink', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
-          { label: 'Consultar precio — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Consultar precio — tienda oficial Beelink', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Consultar precio — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -1679,14 +1679,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: 'Coste total del montaje',
-        content: '**Un montaje completo realista — SER8 más el paquete de arriba — se sitúa en torno a 1.197–1.272 € (agosto de 2026), no solo el precio de etiqueta del mini PC.**',
+        content: '**Un montaje completo realista — SER8 más el paquete de arriba — se sitúa en torno a $799 (precio de lista oficial en EE. UU. del SER8 de 24 GB/1 TB, comprobado el 2026-10-25) más unos 198–273 € de accesorios (rangos de accesorios sin cambios), no solo el precio de etiqueta del mini PC.**',
         columns: ['Elemento', 'Precio (aprox.)'],
         rows: [
-          { Elemento: 'Beelink SER8 32GB/1TB', 'Precio (aprox.)': '999 €' },
+          { Elemento: 'Beelink SER8 24GB/1TB (lista oficial)', 'Precio (aprox.)': '$799' },
           { Elemento: 'SONOFF ZBDongle-E (Zigbee)', 'Precio (aprox.)': '18–23 €' },
           { Elemento: 'Reolink RLC-810A × 2 (cámaras PoE)', 'Precio (aprox.)': '110–170 €' },
           { Elemento: 'Hailo-8L M.2 (acelerador Frigate)', 'Precio (aprox.)': '~70–80 €' },
-          { Elemento: 'Total (aprox.)', 'Precio (aprox.)': '1.197–1.272 €+' },
+          { Elemento: 'Total (aprox.)', 'Precio (aprox.)': '$799 + 198–273 €' },
         ],
         items: [
           'Este total excluye el switch/inyector PoE y el cableado, que varían según la vivienda y suelen ser un coste único compartido con otros dispositivos de red.',
@@ -1700,7 +1700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Si los modelos de 32B o 70B son el objetivo real, no compres el SER8 solo porque es más barato — un sistema con GPU dedicada es la respuesta honesta para esa carga de trabajo.** La comparación de abajo es deliberadamente desfavorable al SER8 fuera de sus verdaderas fortalezas, porque un lector que planea un montaje 70B no debería acabar decepcionado aquí.',
         columns: ['Factor', 'SER8 (iGPU)', 'Servidor GPU (24GB+ VRAM)'],
         rows: [
-          { Factor: 'Precio', 'SER8 (iGPU)': '999 €', 'Servidor GPU (24GB+ VRAM)': 'desde 1.400 €' },
+          { Factor: 'Precio', 'SER8 (iGPU)': '$799 (24GB/1TB, lista)', 'Servidor GPU (24GB+ VRAM)': 'desde 1.400 €' },
           { Factor: 'Consumo', 'SER8 (iGPU)': '65 W en carga / ~10 W en reposo', 'Servidor GPU (24GB+ VRAM)': '300–600 W en carga' },
           { Factor: 'Modelo 7B', 'SER8 (iGPU)': 'Cómodo', 'Servidor GPU (24GB+ VRAM)': 'Rápido, excesivo' },
           { Factor: 'Modelo 14B', 'SER8 (iGPU)': 'Usable', 'Servidor GPU (24GB+ VRAM)': 'Rápido' },
@@ -1723,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EE. UU.: los aranceles de la Sección 301 sobre la electrónica china siguen vigentes en 2026; los aranceles «IEEPA» de 2025, aparte, fueron anulados por el Tribunal Supremo en febrero de 2026 y sustituidos por un arancel temporal y con tope de la Sección 122. La exención «de minimis» libre de aranceles por debajo de 800 $ para importaciones directas también terminó.',
           'UE (afecta a DE/FR): no hay un arancel general de la UE sobre mini PC terminados, pero desde julio de 2026 se eliminó el umbral libre de aranceles de 150 € en paquetes directos de bajo valor desde China y se añadió una pequeña tasa de gestión por paquete.',
           'Suposición (tendencia macro, no un dato del producto): la capacidad de exportación china redirigida ha mantenido alta la disponibilidad de estas marcas en la UE y EE. UU., lo que en general respalda precios competitivos.',
-          'Efecto neto: verifica el precio actual en la tienda antes de comprar — las horquillas de esta página son indicativas y fechadas en agosto de 2026.',
+          'Efecto neto: verifica el precio actual en la tienda antes de comprar — las cifras de esta página son precios de lista oficiales comprobados el 2026-10-25 y solo son indicativas.',
         ],
       },
       priceSanityCheck: {
@@ -1734,14 +1734,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Si el SER8 32GB/1TB está a menos de unos 80 € de un precio de oferta del GEEKOM A9 Max, el techo de 128 GB y el Wi-Fi 7 del A9 Max probablemente justifiquen la diferencia para quien pueda crecer hacia modelos más grandes.',
           'Si el SER8 y el SER9 tienen precios cercanos, comprueba si las mejoras de especificaciones del SER9 (verifica el precio y las specs actuales del SER9 en el momento de la compra) te importan lo suficiente — si no, el SER8 sigue siendo la opción calidad-precio.',
-          'No compres solo por el impulso de la marca — la recomendación de esta página se refiere a la configuración de 32GB/1TB a unos 999 €; vuelve a comprobarlo antes de comprar.',
+          'No compres solo por el impulso de la marca — la recomendación de esta página se refiere a la configuración de 32GB/1TB (consulta el anuncio actual; precio de lista oficial en EE. UU. para 24GB/1TB: $799); vuelve a comprobarlo antes de comprar.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Cuál es el precio actual del Beelink SER8?', a: 'La horquilla investigada para la configuración de 32 GB/1 TB (Ryzen 7 8845HS) es de unos 999 € a fecha de agosto de 2026, con la configuración base de 16 GB/500 GB normalmente más barata (consulta el precio actual) y la configuración de 64 GB/1 TB más cara (~1.499 €). Los precios varían según la tienda y cambian cada semana — consulta el precio en vivo antes de comprar en lugar de fiarte de esta cifra.' },
+          { q: '¿Cuál es el precio actual del Beelink SER8?', a: 'La tienda oficial de Beelink lista la configuración de 24 GB/1 TB (Ryzen 7 8845HS) a $799 (precio de lista oficial de la tienda de EE. UU., comprobado el 2026-10-25; mostraba un precio de comparación de $959). Para las configuraciones de 32 GB y 64 GB, consulta el anuncio actual; los precios en tu país pueden diferir de los de lista de EE. UU. Los precios varían según la tienda y cambian a menudo — consulta el precio en vivo antes de comprar en lugar de fiarte de esta cifra.' },
           { q: '¿Cuáles son las especificaciones oficiales del Beelink SER8?', a: 'AMD Ryzen 7 8845HS (8 núcleos/16 hilos, hasta 5,1 GHz), iGPU Radeon 780M (12 CU, RDNA 3), NPU de 16 TOPS, RAM DDR5-5600 SO-DIMM dual (modelos 16/24/32/64 GB), almacenamiento 2× M.2 2280 PCIe 4.0, 2.5GbE, Wi-Fi 6, USB4, TDP de 54–65 W. Beelink también vende una variante SER8 más barata con el chip 8745HS (boost 4,9 GHz) — confirma la CPU en el anuncio.' },
           { q: '¿Cuáles son las dimensiones del Beelink SER8?', a: '135 × 135 × 44,7 mm, aproximadamente 0,75 kg — lo bastante pequeño para colocarlo detrás de un monitor o montarlo fuera de la vista.' },
           { q: '¿Puede el Beelink SER8 ejecutar LLM locales?', a: 'Sí. Con 32 GB de RAM y la iGPU Radeon 780M ejecuta con comodidad un modelo 7B–8B en Ollama y puede cargar un modelo 13B–14B a 4 bits, aunque más lento. Son estimaciones a partir de su hardware verificado, no un benchmark medido por PromptQuorum, porque la velocidad real depende del modelo, la cuantización y el backend.' },
@@ -1749,7 +1749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cuál es el consumo en reposo del SER8?', a: 'Aproximadamente 8–12 W según mediciones independientes — barato de operar de forma continua como servidor doméstico. Bajo carga sostenida consume hasta 65 W. Las cifras exactas dependen de la carga de trabajo y el perfil de energía.' },
           { q: '¿La NPU de 16 TOPS acelera la IA local en el SER8?', a: 'No. Los runtimes de LLM habituales (Ollama, llama.cpp, LM Studio) no usan la NPU para inferencia en 2026 — corren en la CPU y la iGPU Radeon 780M en su lugar. La NPU acelera cargas específicas de visión/audio en los frameworks compatibles, no la inferencia de chat general.' },
           { q: '¿Hay un modelo Beelink más reciente que el SER8?', a: 'Sí. Beelink lanzó el SER9 y, en el CES 2026, el SER10 Pro y el SER10 Max (Ryzen AI 9 HX 470, red de hasta 10GbE). Esa es la gama insignia actual. Para la tarea concreta de este análisis — Home Assistant, Frigate y un modelo local 7B–14B — el SER8 sigue siendo la mejor opción calidad-precio; la nueva generación de NPU no ayuda de forma notable en este uso (ver la nota sobre la NPU arriba).' },
-          { q: '¿SER8 o GEEKOM A9 Max?', a: 'El SER8 es la opción calidad-precio a 999 € y cubre la mayoría de necesidades de IA local de un hogar inteligente. Elige el A9 Max solo si necesitas su techo de 128 GB de RAM o el Wi-Fi 7 — a fecha de agosto de 2026 cuesta 950–1.550 €, notablemente más, pero ya no el múltiplo que era antes — compara ambos precios en vivo, y que sea una elección deliberada, no una mejora por defecto.' },
+          { q: '¿SER8 o GEEKOM A9 Max?', a: 'El SER8 es la opción calidad-precio con un precio de lista oficial en EE. UU. de $799 (24 GB/1 TB) y cubre la mayoría de necesidades de IA local de un hogar inteligente. Elige el A9 Max solo si necesitas su techo de 128 GB de RAM o el Wi-Fi 7 — figura a $1.299–1.599 (precio de lista oficial), aproximadamente 1,6 a 2,0 veces el precio de lista del SER8 — compara ambos precios en vivo, y que sea una elección deliberada, no una mejora por defecto.' },
           { q: '¿Es ampliable la RAM?', a: 'Sí. El SER8 usa dos ranuras SO-DIMM DDR5 estándar reemplazables por el usuario, así que puedes empezar en 32 GB y pasar a 64 GB después. También tiene dos ranuras M.2 para ampliar el almacenamiento.' },
           { q: '¿Dónde se fabrica el Beelink SER8 y afecta eso al precio?', a: 'Se fabrica en China. En 2026, las medidas de importación de EE. UU. (aranceles de la Sección 301, el fin de la exención de minimis por debajo de 800 $) y la eliminación por la UE de la exención de 150 € para paquetes de bajo valor pueden afectar al coste final, así que consulta el precio actual en la tienda en lugar de fiarte de una cifra fija.' },
         ],
@@ -1771,13 +1771,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decisión de compra final',
         content: '**Tres caminos, un valor por defecto claro.**',
         items: [
-          '**SÍ, compra el SER8 32 GB/1 TB si:** quieres Home Assistant, Frigate y un asistente local 7B–8B en un solo equipo silencioso y económico — esta es la recomendación por defecto para la mayoría de lectores de esta página.',
+          '**SÍ, compra el SER8 32 GB/1 TB si:** quieres Home Assistant, Frigate y un asistente local 7B–8B en un solo equipo silencioso y de bajo consumo — esta es la recomendación por defecto para la mayoría de lectores de esta página.',
           '**SÍ, pero elige 64 GB/1 TB si:** los modelos 13B–14B son tu objetivo real y quieres que se sientan ágiles, no solo técnicamente cargados.',
           '**NO si:** los modelos de 32B o 70B son tu caso de uso principal — compra en su lugar un sistema con GPU dedicada; consulta la [guía de montaje de una estación de trabajo de IA local](/es/power-local-llm/best-workstation-build-local-ai-2026).',
           '**Mi elección: SER8 32GB/1TB — consulta el precio de hoy y compra esa configuración.**',
         ],
         affiliateLinks: [
-          { label: 'Consultar el precio de hoy — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Consultar el precio de hoy — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -1786,9 +1786,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Beelink SER8: análisis, precio y 32GB vs 64GB (2026)',
       reviewBody:
-        'El Beelink SER8 (Ryzen 7 8845HS, Radeon 780M), en configuración de 32 GB/1 TB, ejecuta Home Assistant, Frigate y un LLM 7B local en Ollama por unos 999 € (agosto de 2026). Es la mejor opción calidad-precio entre los mini PC de IA local para esta tarea concreta, aunque Beelink ha lanzado desde entonces las gamas más recientes SER9 y SER10.',
+        'El Beelink SER8 (Ryzen 7 8845HS, Radeon 780M), en configuración de 32 GB/1 TB, ejecuta Home Assistant, Frigate y un LLM 7B local en Ollama con un precio de lista oficial en EE. UU. de $799 para la configuración de 24 GB/1 TB (comprobado el 2026-10-25). Es la mejor opción calidad-precio entre los mini PC de IA local para esta tarea concreta, aunque Beelink ha lanzado desde entonces las gamas más recientes SER9 y SER10.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1814,16 +1814,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: 'Beelink SER8レビュー: スペック・価格・32GB vs 64GB（2026）',
-    seoTitle: 'Beelink SER8 レビュー 2026 — スペック・価格・32GB対64GB',
+    seoTitle: 'Beelink SER8レビュー2026：仕様・価格',
     intro:
-      'Beelink SER8（AMD Ryzen 7 8845HS、Radeon 780M、DDR5）は、2026年のローカルAIスマートホームに最もコスパの良いミニPCです。32 GB / 1 TB構成はHome Assistant、Frigate、Whisper、そしてOllama上の7Bモデルを1台の静かな筐体で動かせ、価格は現在価格要確認（2026年8月、販売店と構成により変動）です。本レビューはBeelinkおよび独立系情報源に対して全スペックを再検証し、ローカルLLM速度について実測ベンチマークではなく推定値として正直な期待値を示し、発売以降の変化（Beelinkの新しいSER9・SER10シリーズを含む）をカバーします。',
+      'Beelink SER8（AMD Ryzen 7 8845HS、Radeon 780M、DDR5）は、2026年のローカルAIスマートホームに最もコスパの良いミニPCです。32 GB / 1 TB構成はHome Assistant、Frigate、Whisper、そしてOllama上の7Bモデルを1台の静かな筐体で動かせ。Beelink公式ストアは24 GB / 1 TB構成を定価$799（米国公式ストアの定価、2026-10-25確認。日本での価格は異なります）で掲載しており、32 GB構成は現在の掲載情報を確認してください。本レビューはBeelinkおよび独立系情報源に対して全スペックを再検証し、ローカルLLM速度について実測ベンチマークではなく推定値として正直な期待値を示し、発売以降の変化（Beelinkの新しいSER9・SER10シリーズを含む）をカバーします。',
     metaDescription:
       'Beelink SER8 レビュー 2026: Ryzen 7 8845HSスペック、構成別の現在価格、32GB対64GB、アイドル消費電力、寸法。Home Assistantと7BローカルLLMを実行 — 完全な内訳。',
     twitterDescription:
@@ -1840,18 +1840,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs ミニpc',
     ],
     leadAnswerBlock:
-      '**はい — Home Assistant、Frigate、小型ローカルLLMを1台で静かに動かしたいなら、Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）を購入してください。** ハブ、Frigate、Whisper、Ollama上の7Bモデルを現在価格要確認（32 GB/1 TB、2026年8月、変動あり）で実行でき、ほぼ同じスマートホーム作業をGEEKOM A9 Maxより安価にカバーします。最適: HA + Frigate + 7B〜8Bアシスタント。不向き: 32B以上のモデル — 下記のGPUサーバー代替案を参照してください。',
+      '**はい — Home Assistant、Frigate、小型ローカルLLMを1台で静かに動かしたいなら、Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）を購入してください。** ハブ、Frigate、Whisper、Ollama上の7Bモデルを実行でき（米国公式ストアの定価は24 GB/1 TB構成で$799、2026-10-25確認。32 GBは現在の掲載情報を確認）、ほぼ同じスマートホーム作業をGEEKOM A9 Max（定価$1,299〜1,599）のおよそ2分の1から5分の3の価格でカバーします。最適: HA + Frigate + 7B〜8Bアシスタント。不向き: 32B以上のモデル — 下記のGPUサーバー代替案を参照してください。',
     quickAnswerTop: {
       ja: {
         question: 'ローカルAIとHome Assistant向けにBeelink SER8を買うべきですか？',
         answer:
-          'はい、目的がHome Assistant + Frigate + ローカル7B〜8B LLMなら、32 GB/1 TB構成（Ryzen 7 8845HS、Radeon 780M）を現在価格要確認（2026年8月、変動あり）で購入してください。7Bモデルは快適に動き、13B〜14Bは4bitで読み込めますが遅くなります。それ以上は厳しくなります。14Bモデルを「使える」レベルではなく「快適」に動かしたい場合のみ、64 GB/1 TB（現在価格要確認（32GBより高め））を選んでください。32B以上のモデルには完全に不向きです — 下記のGPUサーバー比較を参照してください。',
+          'はい、目的がHome Assistant + Frigate + ローカル7B〜8B LLMなら、32 GB/1 TB構成（Ryzen 7 8845HS、Radeon 780M）を購入してください。Beelink公式ストアは24 GB/1 TB構成を定価$799（米国公式ストアの定価、2026-10-25確認。日本での価格は異なります）で掲載しており、32 GB構成は現在の掲載情報を確認してください。7Bモデルは快適に動き、13B〜14Bは4bitで読み込めますが遅くなります。それ以上は厳しくなります。14Bモデルを「使える」レベルではなく「快適」に動かしたい場合のみ、64 GB/1 TB（現在価格要確認（32GBより高め））を選んでください。32B以上のモデルには完全に不向きです — 下記のGPUサーバー比較を参照してください。',
         bullets: [
           'CPU: Ryzen 7 8845HS — 8コア/16スレッド、Radeon 780M（12 CU、RDNA 3）',
           '出品情報でCPUを確認: Beelinkは同じSER8の名前で8745HSチップ（ブースト周波数が低い）を使った安価版も販売しています — 本レビューは8845HS搭載機のみを対象とします',
           'RAM: デュアルSO-DIMM、ユーザー交換可能。32 GBが標準構成、64 GBは余裕を持たせたい場合向け',
           'ローカルLLM（スペックからの推定、ベンチマークではない）: 7Bは快適、13B〜14Bは使えるが遅い、32B以上は非推奨',
-          '価格: 32 GB/1 TBは現在価格要確認、64 GB/1 TBは現在価格要確認（32GBより高め）（2026年8月、現在の価格を確認 — 販売店とRAM SKUにより変動）',
+          '価格: 米国公式ストアの定価は24 GB/1 TBで$799（2026-10-25確認）、32 GB・64 GB構成は現在の掲載情報を確認（販売店とRAM SKUにより変動、日本での価格は異なります）',
           'Beelinkはその後SER9およびSER10 Pro/Maxシリーズを発売しました — SER8はもはや最新モデルではありませんが、この用途に限れば依然としてコスパで優れています',
         ],
         updatedDate: '2026-08',
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '最終的な購入判断', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）は現在価格要確認のミニPCで、Home Assistant、Frigate、Ollama上の7BローカルLLMを1台の静かな筐体で動かせ、2026年のローカルAIスマートホームに最もコスパの良い選択肢です。' },
+      { type: 'one-sentence', content: 'Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）は定価$799から（米国公式ストア、24 GB/1 TB）のミニPCで、Home Assistant、Frigate、Ollama上の7BローカルLLMを1台の静かな筐体で動かせ、2026年のローカルAIスマートホームに最もコスパの良い選択肢です。' },
       { type: 'plain-terms', content: 'ミニPCとは、小型で静かな常時稼働のコンピューターです。SER8は高速なAMDプロセッサーと強力な内蔵グラフィックス、スマートホームのハブと中規模のAIチャットモデルを同時に動かせるだけのメモリを、ハイエンド機の価格をかけずに備えています。メモリは交換可能な2つのスロットにあり、後から増設できます — ほとんどの購入者には32 GB版が適しており、64 GBは大きめのモデルを「使える」ではなく「快適」に動かしたい場合にのみ追加費用の価値があります。' },
     ],
     sections: {
@@ -1887,11 +1887,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '重要ポイント',
         isTldr: true,
         items: [
-          '32 GB/1 TBのSER8（Ryzen 7 8845HS）を購入してください — Home Assistant、Frigate、Whisper、ローカル7B LLMを1台で現在価格要確認（2026年8月、変動あり）で動かせます',
+          '32 GB/1 TBのSER8（Ryzen 7 8845HS）を購入してください — Home Assistant、Frigate、Whisper、ローカル7B LLMを1台で動かせます（米国公式ストアの定価は24 GB/1 TBで$799、2026-10-25確認。32 GBは現在の掲載情報を確認）',
           '出品情報が「8845HS」であることを確認してください。Beelinkは同じSER8の名前でより安価な「8745HS」版も販売しています',
           '32 GBはほとんどの購入者向けの標準構成です。14Bモデルを快適に動かしたい場合のみ64 GB（現在価格要確認（32GBより高め））を選んでください',
           'Beelinkはこのレビューの初回公開以降、新しいSER9およびSER10 Pro/Maxシリーズを発売しました — SER8は現行の最上位機種ではありませんが、HA + Frigate + 7Bモデルの用途では依然として優れた選択です',
-          '[GEEKOM A9 Max](/ja/smart-home/geekom-a9-max-local-ai-review)（現在$1,099〜1,799）より安価でシンプル、Intel N150機よりはるかに高性能',
+          '[GEEKOM A9 Max](/ja/smart-home/geekom-a9-max-local-ai-review)（定価$1,299〜1,599）より安価でシンプル、Intel N150機よりはるかに高性能',
           '32B以上のモデルには完全に不向きです — その用途にはGPUサーバー比較を参照してください',
         ],
       },
@@ -1899,9 +1899,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '評価とベスト構成',
         content:
-          '**はい — Home Assistant、Frigate、小型ローカルLLMを1台で静かに動かしたいなら、Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS、Radeon 780M）を購入してください。** 推奨構成: Ryzen 7 8845HS・32 GB DDR5・1 TB NVMe。最適: Home Assistant、Ollama、Whisper、Frigateを1台でまとめて動かすオールインワンのホームサーバーで、7Bアシスタントは快適、13B〜14Bは使えるが遅い、という組み合わせです。\n\n現在の価格: ライブ価格を確認してください — RAM/ストレージ構成と販売店により変動します。32 GB/1 TBの調査済みレンジは現在価格要確認（2026年8月）です。不向き: 30B以上のモデルを日常的に動かしたい人 — RAMの上限とiGPUの共有メモリ構成により、64 GBでも力不足です。代わりに[GPUサーバー代替案](#vs-gpu-server)を参照してください。',
+          '**はい — Home Assistant、Frigate、小型ローカルLLMを1台で静かに動かしたいなら、Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS、Radeon 780M）を購入してください。** 推奨構成: Ryzen 7 8845HS・32 GB DDR5・1 TB NVMe。最適: Home Assistant、Ollama、Whisper、Frigateを1台でまとめて動かすオールインワンのホームサーバーで、7Bアシスタントは快適、13B〜14Bは使えるが遅い、という組み合わせです。\n\n現在の価格: ライブ価格を確認してください — RAM/ストレージ構成と販売店により変動します。Beelink公式ストアは24 GB/1 TB構成を定価$799（米国公式ストアの定価、2026-10-25確認。日本での価格は異なります）で掲載しており、32 GB構成は現在の掲載情報を確認してください。不向き: 30B以上のモデルを日常的に動かしたい人 — RAMの上限とiGPUの共有メモリ構成により、64 GBでも力不足です。代わりに[GPUサーバー代替案](#vs-gpu-server)を参照してください。',
         affiliateLinks: [
-          { label: 'SER8の現在価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認' },
+          { label: 'SER8の現在価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'SER8の構成を比較', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8（全構成）', productCategory: 'Mini PC' },
         ],
       },
@@ -1937,15 +1937,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '64 GB SKUは32 GB SKUより高くなります（差額は変動するため現在価格を確認してください） — 大きなモデルクラスが実際の目標である場合にのみ価値があり、「念のため」では割に合いません。',
         ],
         affiliateLinks: [
-          { label: '現在の価格を確認 — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認' },
-          { label: '現在の価格を確認 — SER8 64GB/1TB', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認（32GBより高め）' },
+          { label: '現在の価格を確認 — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: '現在の価格を確認 — SER8 64GB/1TB', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: 'スペック',
         content:
-          '**以下のスペックはすべて、2026年8月にBeelink自身の出品情報および独立系販売店・レビューの情報源と照合して再検証しました。** BeelinkはSER8という名前を2つの異なるCPUで販売しています — 購入前に出品情報が「8845HS」（本レビューの対象、ブースト5.1 GHz）であり、より安価な「8745HS」版（ブースト4.9 GHz、その他はほぼ同様）でないことを確認してください。販売時のRAMはSKUにより異なり（16、24、32、64 GB）、この表は参照構成として32 GB / 1 TBモデルを反映しています。',
+          '**以下のスペックはすべて、Beelink自身の出品情報および独立系販売店・レビューの情報源と照合して検証しました。価格は2026-10-25に公式ストアで最後に確認しています。** BeelinkはSER8という名前を2つの異なるCPUで販売しています — 購入前に出品情報が「8845HS」（本レビューの対象、ブースト5.1 GHz）であり、より安価な「8745HS」版（ブースト4.9 GHz、その他はほぼ同様）でないことを確認してください。販売時のRAMはSKUにより異なり（16、24、32、64 GB）、この表は参照構成として32 GB / 1 TBモデルを反映しています。',
         columns: ['項目', 'Beelink SER8 (8845HS)'],
         rows: [
           { '項目': 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS（Zen 4、4 nm）' },
@@ -1959,7 +1959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'TDP', 'Beelink SER8 (8845HS)': '54〜65 W（65 W持続で動作）' },
           { '項目': '寸法', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm、約0.75 kg' },
           { '項目': 'OS', 'Beelink SER8 (8845HS)': 'Windows 11 Pro（Linux/Proxmoxのインストールに対応）' },
-          { '項目': '価格（32GB/1TB）', 'Beelink SER8 (8845HS)': '現在価格要確認（2026年8月 — 変動、現在の価格を確認）' },
+          { '項目': '価格（公式定価）', 'Beelink SER8 (8845HS)': '24GB/1TBで$799（米国ストア、2026-10-25確認）、32GBは現在の掲載情報を確認' },
         ],
         items: [
           '専用GPUなし: すべてのAI推論は、システムRAMを共有するCPUとRadeon 780M iGPUで動作します。',
@@ -2019,7 +2019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'この構成をそのまま構築する方法: [Ollama を Home Assistant に接続する](/ja/smart-home/home-assistant-ollama-integration)と[ローカルLLMでスマートホームを運用する](/ja/smart-home/local-llm-smart-home-complete-guide)を参照してください。',
         ],
         affiliateLinks: [
-          { label: 'SER8の現在価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認' },
+          { label: 'SER8の現在価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -2054,7 +2054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Radeon 780M iGPU: 専用GPUの消費電力や騒音なしで、7Bモデルの推論とFrigateの映像デコードに十分な性能を持ちます。',
         ],
         affiliateLinks: [
-          { label: 'SER8の現在価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認' },
+          { label: 'SER8の現在価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -2063,7 +2063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**気に入っている点と、すべての用途には買わない理由。**',
         items: [
           '**気に入っている点**',
-          '有能なローカルAIボックスとして最もコスパが良い — 7Bモデルとフルのスマートホームスタックを快適に動かせるマシンが現在価格要確認',
+          '有能なローカルAIボックスとして最もコスパが良い — 7Bモデルとフルのスマートホームスタックを快適に動かせるマシンが米国公式ストアの定価$799（24 GB/1 TB）',
           'ユーザー交換可能なRAMと2つのM.2スロットにより、買い替えを強いられず、必要に応じてマシンが成長できる',
           '2.5GbEとUSB4は、安価な機種が省略しがちなホームサーバーの実際のボトルネック（ネットワークスループット、外部ストレージ）をカバーする',
           '負荷時65 W、アイドル時約8〜12 Wで動作 — 24時間365日つけっぱなしにしても安価',
@@ -2079,19 +2079,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8対代替候補',
         content: '**SER8が適さない場合、価格と性能の両面でこれを挟む4機種があります — それぞれ独自のレビューと下記の独自の製品カードがあります。**',
-        columns: ['ミニPC', '価格（目安）', 'RAM上限（実証済み）', '最適な用途'],
+        columns: ['ミニPC', '公式定価', 'RAM上限（メーカー公表）', '最適な用途'],
         rows: [
-          { 'ミニPC': 'Beelink SER8', '価格（目安）': '現在価格要確認（32GB/1TB）', 'RAM上限（実証済み）': '約64〜96GB', '最適な用途': '最もコスパ良好: HA + 7Bモデル' },
-          { 'ミニPC': 'Beelink EQ14', '価格（目安）': '約2.7万〜3.4万円', 'RAM上限（実証済み）': '16GB', '最適な用途': 'HAのみ、極小モデル' },
-          { 'ミニPC': 'Minisforum UM890 Pro', '価格（目安）': '約10.5万〜12.7万円', 'RAM上限（実証済み）': '約64〜96GB', '最適な用途': 'デュアル2.5GbE、eGPUポート' },
-          { 'ミニPC': 'GEEKOM A9 Max（2026）', '価格（目安）': '約16.5万〜27万円', 'RAM上限（実証済み）': '128GB', '最適な用途': '最大の余裕、Wi-Fi 7' },
-          { 'ミニPC': 'GMKtec G3 Plus', '価格（目安）': '約3万〜3.9万円', 'RAM上限（実証済み）': '32GB', '最適な用途': '低価格、増設可能' },
+          { 'ミニPC': 'Beelink SER8', '公式定価': '$799（24GB/1TB）', 'RAM上限（メーカー公表）': '約64〜96GB', '最適な用途': '最もコスパ良好: HA + 7Bモデル' },
+          { 'ミニPC': 'Beelink EQ14', '公式定価': '$385（16GB/500GB）', 'RAM上限（メーカー公表）': '16GB', '最適な用途': 'HAのみ、極小モデル' },
+          { 'ミニPC': 'Minisforum UM890 Pro', '公式定価': '$439.90（ベアボーン）/ $823.90（32GB/1TB）', 'RAM上限（メーカー公表）': '約64〜96GB', '最適な用途': 'デュアル2.5GbE、eGPUポート' },
+          { 'ミニPC': 'GEEKOM A9 Max（2026）', '公式定価': '$1,299〜1,599', 'RAM上限（メーカー公表）': '128GB', '最適な用途': '最大の余裕、Wi-Fi 7' },
+          { 'ミニPC': 'GMKtec G3 Plus', '公式定価': '$399.99〜499.99', 'RAM上限（メーカー公表）': '32GB', '最適な用途': 'N150、RAM増設可' },
         ],
         items: [
-          '[GEEKOM A9 Max](/ja/smart-home/geekom-a9-max-local-ai-review) — 余裕を重視する選択: 128 GBのRAM上限とWi-Fi 7を備えますが、今では約16.5万〜27万円（2026年エディション、Ryzen AI 9 HX 370/HX 470）— SER8より明らかに高価ですが、購入前に両方の現在価格を比較してください。',
-          '[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review) — Radeon 780Mの性能はほぼ同等ですが、デュアル2.5GbE、Wi-Fi 6E、OCuLink eGPUポートが控えめな価格差で追加されます。',
-          '[Beelink EQ14](/ja/smart-home/beelink-eq14-local-ai-review) — Home Assistantと極小モデル専用の低価格Intel N150機です。7Bアシスタントが欲しいなら避けてください。',
-          '[GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — RAM増設可能な、もう一つの低価格N150オプションです。',
+          '[GEEKOM A9 Max](/ja/smart-home/geekom-a9-max-local-ai-review) — 余裕を重視する選択: 128 GBのRAM上限とWi-Fi 7を備えますが、定価は$1,299〜1,599（2026年エディション、Ryzen AI 9 HX 370/HX 470）— SER8の定価$799のおよそ1.6〜2.0倍です。購入前に両方の現在価格を比較してください。',
+          '[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review) — Radeon 780Mの性能はほぼ同等ですが、デュアル2.5GbE、Wi-Fi 6E、OCuLink eGPUポートが追加されます。公式ページの定価はベアボーン$439.90、32 GB/1 TB構成$823.90で、2026-10-25の確認時は売り切れ表示でした。',
+          '[Beelink EQ14](/ja/smart-home/beelink-eq14-local-ai-review) — Home Assistantと極小モデル専用のIntel N150機です（16 GB/500 GBの公式定価は$385、2026-10-25の確認時は予約受付表示）。7Bアシスタントが欲しいなら避けてください。',
+          '[GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — RAM増設可能な、もう一つのN150オプションです（公式定価は$399.99〜499.99、2026-10-25の確認時は全バリエーションが売り切れ表示）。',
           'BeelinkのSER9とSER10 Pro/Max（CES 2026で発表、Ryzen AI 9 HX 470、一部SKUで10GbE）が現行の最上位ラインです — 10GbEや新世代NPUが特に重要な人にのみ価値があります。HA + Frigate + 7Bモデルという用途では、これらはこのページの推奨を変えません。',
           'まだ比較検討中ですか？[Home Assistant + ローカルAI向けベストミニPCまとめ](/ja/smart-home/best-mini-pc-home-assistant-local-ai)から始めてください。',
         ],
@@ -2102,13 +2102,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Beelink公式ストア（直接保証サポート）とAmazon（迅速な配送、簡単な返品）の2つが実在し検証可能な購入経路です。** 価格は週ごとに、またRAM/ストレージSKUごとに変動します — 固定の数字を信頼せず、実際のライブ価格を確認してください。',
         items: [
-          'Beelink公式ストア: メーカー直接の保証とサポート。2つの経路のうち高い価格になることもあります。',
-          'Amazon: 通常はより競争力のある価格に加え、Amazon標準の返品ポリシーが利用でき、ほとんどの購入者にとって実用的な標準の選択肢です。',
+          'Beelink公式ストア: メーカー直接の保証とサポート。24 GB/1 TB構成を$799で掲載（2026-10-25確認）。',
+          'Amazon: 迅速な配送とAmazon標準の返品ポリシーが利用できます。Amazonの価格は本ページでは未検証で、公式ストアと異なる場合があるため、購入前に比較してください。',
           '購入前に出品情報でRAM SKU（16、24、32、64 GB）とCPU（8745HSではなく8845HS）を確認してください — Beelinkは同じ「SER8」の名前で複数のバリエーションを販売しています。',
         ],
         affiliateLinks: [
-          { label: '価格を確認 — Beelink公式ストア', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認' },
-          { label: '価格を確認 — Amazon', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認' },
+          { label: '価格を確認 — Beelink公式ストア', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: '価格を確認 — Amazon', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -2130,14 +2130,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: '合計セットアップ費用',
-        content: '**現実的なフル構築 — SER8に上記のバンドルを加えると — ミニPC単体の表示価格だけでなく、現在のSER8価格に周辺機器を加えた合計になります（現在価格を確認してください）。**',
+        content: '**現実的なフル構築 — SER8に上記のバンドルを加えると — ミニPC単体の表示価格だけでなく、現在のSER8価格に周辺機器を加えた合計になります（SER8は米国公式ストアの定価$799・24 GB/1 TB、2026-10-25確認。周辺機器の目安は約3.1万〜4.1万円）。**',
         columns: ['項目', '価格（目安）'],
         rows: [
-          { '項目': 'Beelink SER8 32GB/1TB', '価格（目安）': '現在価格要確認' },
+          { '項目': 'Beelink SER8 24GB/1TB（公式定価）', '価格（目安）': '$799' },
           { '項目': 'SONOFF ZBDongle-E（Zigbee）', '価格（目安）': '約3,000〜3,800円' },
           { '項目': 'Reolink RLC-810A × 2（PoEカメラ）', '価格（目安）': '約1.8万〜2.7万円' },
           { '項目': 'Hailo-8L M.2（Frigateアクセラレーター）', '価格（目安）': '約10,000円' },
-          { '項目': '合計（目安）', '価格（目安）': '現在価格要確認' },
+          { '項目': '合計（目安）', '価格（目安）': '$799 + 約3.1万〜4.1万円' },
         ],
         items: [
           'この合計には、住宅によって異なり通常は他のネットワーク機器と共有される一度限りの費用であるPoEスイッチ/インジェクターと配線は含まれていません。',
@@ -2151,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**32Bや70Bモデルが実際の目標なら、安いというだけの理由でSER8を買わないでください — そのワークロードに対する正直な答えは専用GPUを搭載したシステムです。** 下記の比較は、SER8の本来の強みの外側では意図的に不利な内容になっています。70B構成を計画している読者がここでがっかりして終わることのないようにするためです。',
         columns: ['要素', 'SER8（iGPU）', 'GPUサーバー（24GB+ VRAM）'],
         rows: [
-          { '要素': '価格', 'SER8（iGPU）': '現在価格要確認', 'GPUサーバー（24GB+ VRAM）': '約22万円以上' },
+          { '要素': '価格', 'SER8（iGPU）': '$799（24GB/1TB、定価）', 'GPUサーバー（24GB+ VRAM）': '約22万円以上' },
           { '要素': '消費電力', 'SER8（iGPU）': '負荷時65 W／アイドル時約10 W', 'GPUサーバー（24GB+ VRAM）': '負荷時300〜600 W' },
           { '要素': '7Bモデル', 'SER8（iGPU）': '快適', 'GPUサーバー（24GB+ VRAM）': '高速、過剰' },
           { '要素': '14Bモデル', 'SER8（iGPU）': '使える', 'GPUサーバー（24GB+ VRAM）': '高速' },
@@ -2174,7 +2174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '米国: 中国製電子機器への通商法301条関税は2026年も引き続き有効です。別枠の2025年「IEEPA」関税は2026年2月に最高裁により無効とされ、期間限定で上限付きの通商法122条関税に置き換えられました。800ドル未満の直接輸入に対する関税免除（デミニミス）も終了しています。',
           'EU（DE/FRに影響）: 完成品ミニPCに対する広範なEU関税はありませんが、2026年7月から中国発の低価格直送小包に対する150ユーロの免税枠が撤廃され、小包ごとの少額処理手数料が追加されました。',
           '前提（マクロトレンドであり、個別製品の事実ではない）: 中国の輸出能力の振り向けにより、これらのブランドのEUと米国での供給は高水準を維持しており、全体として競争力のある価格設定を支えています。',
-          '正味の影響: 購入前に販売店で現在の価格を確認してください — このページの数値は目安であり、2026年8月時点のものです。',
+          '正味の影響: 購入前に販売店で現在の価格を確認してください — このページの数値は2026-10-25に確認した公式ストアの定価であり、目安です。',
         ],
       },
       priceSanityCheck: {
@@ -2185,14 +2185,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'SER8 32GB/1TBがGEEKOM A9 Maxのセール価格に近い場合、大きなモデルに移行する可能性がある人にとって、A9 Maxの128 GB上限とWi-Fi 7がその差額を正当化する可能性が高いです。',
           'SER8とSER9の価格が近い場合、SER9のスペック向上（購入時に現在のSER9の価格とスペックを確認してください）が十分に重要かどうかを確認してください — そうでなければSER8がコスパの良い選択のままです。',
-          'ブランドの勢いだけで購入しないでください — このページの推奨は現在価格要確認の32GB/1TB構成に紐づいています。購入前に再確認してください。',
+          'ブランドの勢いだけで購入しないでください — このページの推奨は32GB/1TB構成に紐づいています（現在の掲載情報を確認してください。24GB/1TBの米国公式ストア定価は$799）。購入前に再確認してください。',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'Beelink SER8の現在の価格は？', a: '32 GB/1 TB構成（Ryzen 7 8845HS）の調査済みレンジは、2026年8月時点で現在価格要確認です。16 GB/500 GBの基本構成はそれより安く、64 GB/1 TB構成はより高くなります。価格は販売店により異なり毎週大きく変動するため、この数字に頼らず購入前に必ずライブ価格を確認してください。' },
+          { q: 'Beelink SER8の現在の価格は？', a: 'Beelink公式ストアは24 GB/1 TB構成（Ryzen 7 8845HS）を定価$799で掲載しています（米国公式ストアの定価、2026-10-25確認。比較用の価格として$959が併記されていました）。32 GBと64 GBの構成は現在の掲載情報を確認してください。日本での価格は米国の定価とは異なります。価格は販売店により異なり頻繁に変動するため、この数字に頼らず購入前に必ずライブ価格を確認してください。' },
           { q: 'Beelink SER8の公式スペックは？', a: 'AMD Ryzen 7 8845HS（8コア/16スレッド、最大5.1 GHz）、Radeon 780M iGPU（12 CU、RDNA 3）、16-TOPS NPU、DDR5-5600デュアルSO-DIMM RAM（16/24/32/64 GB SKU）、2× M.2 2280 PCIe 4.0ストレージ、2.5GbE、Wi-Fi 6、USB4、54〜65 W TDP。Beelinkは8745HSチップ（ブースト4.9 GHz）を使ったより安価なSER8バリエーションも販売しています — 出品情報でCPUを確認してください。' },
           { q: 'Beelink SER8の寸法は？', a: '135 × 135 × 44.7 mm、重量約0.75 kg — モニターの後ろに置いたり、目立たない場所に取り付けたりできる小ささです。' },
           { q: 'Beelink SER8はローカルLLMを実行できますか？', a: 'はい。32 GBのRAMとRadeon 780M iGPUにより、Ollama上で7B〜8Bモデルを快適に実行でき、13B〜14Bモデルを4bitで読み込むこともできますが、その場合は動作が遅くなります。これらは検証済みハードウェアからの推定であり、PromptQuorumが測定したベンチマークではありません。実際の速度はモデル、量子化、バックエンドによって変わるためです。' },
@@ -2200,7 +2200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SER8のアイドル時消費電力は？', a: '独立した測定によればおよそ8〜12 Wです — ホームサーバーとして常時稼働させても安価です。持続的な負荷時には最大65 Wを消費します。正確な数値はワークロードと電源プロファイルによって異なります。' },
           { q: '16-TOPS NPUはSER8でローカルAIを高速化しますか？', a: 'いいえ。主流のLLMランタイム（Ollama、llama.cpp、LM Studio）は2026年時点で推論にNPUを使用せず、代わりにCPUとRadeon 780M iGPUで動作します。NPUは対応フレームワークにおける特定の画像/音声処理を高速化するものであり、一般的なチャット推論ではありません。' },
           { q: 'SER8より新しいBeelinkモデルはありますか？', a: 'はい。BeelinkはSER9を発売し、CES 2026ではSER10 ProとSER10 Max（Ryzen AI 9 HX 470、最大10GbEネットワーク）を発表しました。これらが現行の最上位ラインです。本レビューが扱う具体的な用途 — Home Assistant、Frigate、ローカル7B〜14Bモデル — に関しては、SER8が依然としてコスパの良い選択です。新世代のNPUはこの用途に意味のある形では役立ちません（上記のNPUに関する注記を参照）。' },
-          { q: 'SER8とGEEKOM A9 Max、どちらを選ぶべきですか？', a: 'SER8は現在価格要確認のコスパの良い選択で、ほとんどのローカルAIスマートホームのニーズをカバーします。A9 Maxは128 GBのRAM上限やWi-Fi 7が必要な場合にのみ選んでください — SER8より明らかに高価です。購入前に両方の現在価格を比較し、デフォルトのアップグレードではなく意図的な選択にすべきです。' },
+          { q: 'SER8とGEEKOM A9 Max、どちらを選ぶべきですか？', a: 'SER8は米国公式ストアの定価$799（24 GB/1 TB）でコスパの良い選択で、ほとんどのローカルAIスマートホームのニーズをカバーします。A9 Maxは128 GBのRAM上限やWi-Fi 7が必要な場合にのみ選んでください — 定価は$1,299〜1,599で、SER8のおよそ1.6〜2.0倍です。購入前に両方の現在価格を比較し、デフォルトのアップグレードではなく意図的な選択にすべきです。' },
           { q: 'RAMは増設できますか？', a: 'はい。SER8はユーザーが交換可能な標準DDR5 SO-DIMMスロットを2つ使用しており、32 GBから始めて後で64 GBに移行できます。ストレージ拡張用のM.2スロットも2つあります。' },
           { q: 'Beelink SER8はどこで製造されており、それは価格に影響しますか？', a: '中国で製造されています。2026年には米国の輸入措置（通商法301条関税、800ドル未満のデミニミス免除の終了）や、EUによる低価値小包に対する150ユーロ免税枠の撤廃が到着コストに影響する可能性があるため、固定の数字に頼らず販売店の現在価格を確認してください。' },
         ],
@@ -2222,13 +2222,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '最終的な購入判断',
         content: '**3つの道と、1つの明確なデフォルト。**',
         items: [
-          '**はい、SER8 32 GB/1 TBを購入すべき場合:** Home Assistant、Frigate、ローカル7B〜8Bアシスタントを1台の静かで安価な機器で動かしたい場合 — これがこのページのほとんどの読者にとってのデフォルトの推奨です。',
+          '**はい、SER8 32 GB/1 TBを購入すべき場合:** Home Assistant、Frigate、ローカル7B〜8Bアシスタントを1台の静かで省電力な機器で動かしたい場合 — これがこのページのほとんどの読者にとってのデフォルトの推奨です。',
           '**はい、ただし64 GB/1 TBを選ぶべき場合:** 13B〜14Bモデルが実際の目標で、それを単に技術的に読み込めるだけでなく反応良く感じたい場合。',
           '**いいえの場合:** 32Bや70Bモデルが主な用途なら — 代わりに専用GPUを搭載したシステムを購入してください。[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026)を参照してください。',
           '**私のおすすめ: SER8 32GB/1TB — 今日の価格を確認して、この構成を購入してください。**',
         ],
         affiliateLinks: [
-          { label: '今日のSER8 32GB/1TB価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '現在価格要確認' },
+          { label: '今日のSER8 32GB/1TB価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -2237,9 +2237,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Beelink SER8レビュー: スペック・価格・32GB vs 64GB（2026）',
       reviewBody:
-        'Beelink SER8（Ryzen 7 8845HS、Radeon 780M）の32 GB/1 TB構成は、Home Assistant、Frigate、Ollama上の7BローカルLLMを現在価格要確認（2026年8月）で動かせます。この具体的な用途においては、ローカルAI向けミニPCの中で最もコスパの良い選択肢ですが、Beelinkはその後より新しいSER9・SER10シリーズを発売しています。',
+        'Beelink SER8（Ryzen 7 8845HS、Radeon 780M）の32 GB/1 TB構成は、Home Assistant、Frigate、Ollama上の7BローカルLLMを動かせます（24 GB/1 TB構成の米国公式ストア定価は$799、2026-10-25確認）。この具体的な用途においては、ローカルAI向けミニPCの中で最もコスパの良い選択肢ですが、Beelinkはその後より新しいSER9・SER10シリーズを発売しています。',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2265,16 +2265,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: 'Beelink SER8评测：规格、价格与32GB对64GB（2026）',
-    seoTitle: 'Beelink SER8评测2026 — 规格、价格、32GB对64GB',
+    seoTitle: 'Beelink SER8评测2026：规格与价格',
     intro:
-      'Beelink SER8（AMD Ryzen 7 8845HS、Radeon 780M、DDR5）是2026年本地AI智能家居中性价比最高的迷你PC——32 GB / 1 TB配置可在一台安静的机器上运行Home Assistant、Frigate、Whisper以及Ollama上的7B模型，价格约为799–849美元（2026年8月，因零售商和配置而波动）。本评测对照Beelink官方及独立来源重新核实了每一项规格，把本地LLM速度的预期诚实地表述为估算而非实测基准，并涵盖了自发布以来发生的变化——包括Beelink更新的SER9和SER10系列。',
+      'Beelink SER8（AMD Ryzen 7 8845HS、Radeon 780M、DDR5）是2026年本地AI智能家居中性价比最高的迷你PC——32 GB / 1 TB配置可在一台安静的机器上运行Home Assistant、Frigate、Whisper以及Ollama上的7B模型，Beelink官方商店将24 GB / 1 TB配置标价为799美元（美国官方商店标价，2026-10-25核对；各地区价格会有差异），32 GB配置请查看当前listing。本评测对照Beelink官方及独立来源重新核实了每一项规格，把本地LLM速度的预期诚实地表述为估算而非实测基准，并涵盖了自发布以来发生的变化——包括Beelink更新的SER9和SER10系列。',
     metaDescription:
       'Beelink SER8评测2026：Ryzen 7 8845HS规格、各配置当前价格、32GB对64GB、待机功耗、尺寸。运行Home Assistant加7B本地LLM——完整拆解。',
     twitterDescription:
@@ -2291,18 +2291,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs 迷你pc',
     ],
     leadAnswerBlock:
-      '**是的——如果你想在一台安静的机器上运行Home Assistant、Frigate和一个小型本地LLM，请购买Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）。** 它能以约799–849美元（32 GB/1 TB，2026年8月，波动）运行中枢、Frigate、Whisper以及Ollama上的7B模型——比GEEKOM A9 Max更便宜，却能完成大部分相同的智能家居工作。最适合：HA + Frigate + 7B–8B助手。不适合：32B及以上模型——见下文的GPU服务器替代方案。',
+      '**是的——如果你想在一台安静的机器上运行Home Assistant、Frigate和一个小型本地LLM，请购买Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）。** 它能运行中枢、Frigate、Whisper以及Ollama上的7B模型（美国官方商店24 GB/1 TB配置标价799美元，2026-10-25核对；32 GB请查看当前listing）——价格约为GEEKOM A9 Max标价（1,299–1,599美元）的一半到五分之三，却能完成大部分相同的智能家居工作。最适合：HA + Frigate + 7B–8B助手。不适合：32B及以上模型——见下文的GPU服务器替代方案。',
     quickAnswerTop: {
       zh: {
         question: '本地AI和Home Assistant值得买Beelink SER8吗？',
         answer:
-          '值得，如果你的目标是Home Assistant加Frigate加本地7B–8B LLM——请购买32 GB/1 TB配置（Ryzen 7 8845HS、Radeon 780M），价格约799–849美元（2026年8月，波动）。它能舒适运行7B模型，可以4bit加载13B–14B模型但速度较慢，超过这个范围就会吃紧。只有当你特别希望14B模型运行得舒适而非仅仅可用时，才选择64 GB/1 TB（约1,239美元）。对于32B以上的模型请完全避开——见下文的GPU服务器对比。',
+          '值得，如果你的目标是Home Assistant加Frigate加本地7B–8B LLM——请购买32 GB/1 TB配置（Ryzen 7 8845HS、Radeon 780M）。Beelink官方商店将24 GB/1 TB配置标价为799美元（美国官方商店标价，2026-10-25核对；各地区价格会有差异）；32 GB配置请查看当前listing。它能舒适运行7B模型，可以4bit加载13B–14B模型但速度较慢，超过这个范围就会吃紧。只有当你特别希望14B模型运行得舒适而非仅仅可用时，才选择64 GB/1 TB（请查看当前listing）。对于32B以上的模型请完全避开——见下文的GPU服务器对比。',
         bullets: [
           'CPU：Ryzen 7 8845HS——8核/16线程，Radeon 780M（12 CU，RDNA 3）',
           '在listing中确认CPU型号：Beelink也用同样的SER8名称销售搭载8745HS芯片（加速频率更低）的更便宜版本——本评测只针对8845HS机型',
           '内存：双SO-DIMM，用户可更换；32 GB是主推配置，64 GB用于需要余量的场景',
           '本地LLM（根据规格估算，非实测基准）：7B舒适；13B–14B可用但较慢；不建议32B以上',
-          '价格：32 GB/1 TB约799–849美元；64 GB/1 TB约1,239美元（2026年8月，请查看当前价格——因零售商和内存型号而异）',
+          '价格：美国官方商店24 GB/1 TB标价799美元（2026-10-25核对）；32 GB和64 GB配置请查看当前listing（因零售商和内存型号而异；各地区价格会有差异）',
           'Beelink此后已发布SER9和SER10 Pro/Max系列——SER8已不是Beelink最新机型，但就这一具体用途而言仍是更划算的选择',
         ],
         updatedDate: '2026-08',
@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '最终购买决策', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）是一台售价约799–849美元的迷你PC，能在一台安静的机器上运行Home Assistant、Frigate和Ollama上的7B本地LLM，是2026年本地AI智能家居中性价比最高的选择。' },
+      { type: 'one-sentence', content: 'Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS）是一台起售价799美元（美国官方商店标价，24 GB/1 TB）的迷你PC，能在一台安静的机器上运行Home Assistant、Frigate和Ollama上的7B本地LLM，是2026年本地AI智能家居中性价比最高的选择。' },
       { type: 'plain-terms', content: '迷你PC是一台体积小、噪音低、可全天候运行的电脑。SER8将快速的AMD处理器与强劲的核显、足以同时运行整个智能家居中枢和一个中等规模AI聊天模型的内存结合在一起，而无需高端机型的价格。内存位于两个可更换插槽中，日后可以升级——32 GB版本适合大多数买家；只有当你特别希望更大的模型运行得舒适而不仅仅是可用时，64 GB才值得多花的钱。' },
     ],
     sections: {
@@ -2338,11 +2338,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点速览',
         isTldr: true,
         items: [
-          '购买32 GB/1 TB的SER8（Ryzen 7 8845HS）——它能在一台机器上以约799–849美元（2026年8月，波动）运行Home Assistant、Frigate、Whisper和本地7B LLM',
+          '购买32 GB/1 TB的SER8（Ryzen 7 8845HS）——它能在一台机器上运行Home Assistant、Frigate、Whisper和本地7B LLM（美国官方商店24 GB/1 TB标价799美元，2026-10-25核对；32 GB请查看当前listing）',
           '确认listing写的是"8845HS"，而不是Beelink以同样SER8名称销售的更便宜的"8745HS"版本',
-          '32 GB对大多数买家是主推配置；只有想让14B模型运行舒适时才选64 GB（约1,239美元）',
+          '32 GB对大多数买家是主推配置；只有想让14B模型运行舒适时才选64 GB（请查看当前listing）',
           '自本评测首次发布以来，Beelink已推出更新的SER9和SER10 Pro/Max系列——SER8已不是当前旗舰机型，但对于HA + Frigate + 7B模型这一用途仍是更好的选择',
-          '比[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review)（现售价1,099–1,799美元）更便宜、更简单；比Intel N150机型强大得多',
+          '比[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review)（标价1,299–1,599美元）更便宜、更简单；比Intel N150机型强大得多',
           '对于32B以上模型请完全避开——该用途请参见GPU服务器对比',
         ],
       },
@@ -2350,9 +2350,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论与最佳配置',
         content:
-          '**是的——如果你想在一台机器上安静地运行Home Assistant、Frigate和一个小型本地LLM，请购买Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS、Radeon 780M）。** 推荐配置：Ryzen 7 8845HS·32 GB DDR5·1 TB NVMe。最适合：一体化家庭服务器——Home Assistant、Ollama、Whisper和Frigate一起运行，7B助手运行舒适，13B–14B可用但较慢。\n\n当前价格：请查看实时价格——会因内存/存储配置和零售商而异；32 GB/1 TB的调研区间约为799–849美元（2026年8月）。不适合：任何计划经常运行30B以上模型的人——即使64 GB，RAM上限和核显共享内存的架构也难以胜任。请改用[GPU服务器替代方案](#vs-gpu-server)。',
+          '**是的——如果你想在一台机器上安静地运行Home Assistant、Frigate和一个小型本地LLM，请购买Beelink SER8 32 GB/1 TB（Ryzen 7 8845HS、Radeon 780M）。** 推荐配置：Ryzen 7 8845HS·32 GB DDR5·1 TB NVMe。最适合：一体化家庭服务器——Home Assistant、Ollama、Whisper和Frigate一起运行，7B助手运行舒适，13B–14B可用但较慢。\n\n当前价格：请查看实时价格——会因内存/存储配置和零售商而异；Beelink官方商店将24 GB/1 TB配置标价为799美元（美国官方商店标价，2026-10-25核对；各地区价格会有差异）；32 GB配置请查看当前listing。不适合：任何计划经常运行30B以上模型的人——即使64 GB，RAM上限和核显共享内存的架构也难以胜任。请改用[GPU服务器替代方案](#vs-gpu-server)。',
         affiliateLinks: [
-          { label: '查看SER8当前价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '799–849美元' },
+          { label: '查看SER8当前价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: '比较SER8各配置', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8（全部配置）', productCategory: 'Mini PC' },
         ],
       },
@@ -2385,18 +2385,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '如果满足以下情况请购买32GB/1TB：目标是7B–8B模型，同时运行Home Assistant + Frigate + Whisper，并希望以最低价格仍能舒适完成任务。',
           '如果满足以下情况请购买64GB/1TB：计划经常运行13B–14B模型，希望它们像32 GB上的7B级别那样反应灵敏，或者需要额外的内存余量来同时运行多个服务（HA、Frigate、向量数据库、Ollama）而不发生交换。',
           '两种配置共享相同的Radeon 780M核显和相同的DDR5-5600内存带宽——64 GB并不会让推理更快，只是允许加载更大的模型。',
-          '64 GB型号目前比32 GB型号贵约400–450美元——只有当更大的模型级别是真实目标时才值得，而不是"以防万一"。',
+          '64 GB型号比32 GB型号贵（差价请查看当前listing）——只有当更大的模型级别是真实目标时才值得，而不是"以防万一"。',
         ],
         affiliateLinks: [
-          { label: '查看当前价格——SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '799–849美元' },
-          { label: '查看当前价格——SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '1,239美元' },
+          { label: '查看当前价格——SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: '查看当前价格——SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: '规格参数',
         content:
-          '**以下所有规格均于2026年8月对照Beelink自身的listing以及独立零售商/评测来源重新核实。** Beelink用SER8这一名称销售两种不同的CPU——购买前请确认listing写的是"8845HS"（本评测对象，加速频率5.1 GHz），而非更便宜的"8745HS"版本（加速频率4.9 GHz，其余相似）。出厂内存因型号而异（16、24、32或64 GB）；此表以32 GB / 1 TB机型作为参考配置。',
+          '**以下所有规格均已对照Beelink自身的listing以及独立零售商/评测来源核实；价格最近一次于2026-10-25对照官方商店核对。** Beelink用SER8这一名称销售两种不同的CPU——购买前请确认listing写的是"8845HS"（本评测对象，加速频率5.1 GHz），而非更便宜的"8745HS"版本（加速频率4.9 GHz，其余相似）。出厂内存因型号而异（16、24、32或64 GB）；此表以32 GB / 1 TB机型作为参考配置。',
         columns: ['规格', 'Beelink SER8（8845HS）'],
         rows: [
           { '规格': 'CPU', 'Beelink SER8（8845HS）': 'AMD Ryzen 7 8845HS（Zen 4，4 nm）' },
@@ -2410,7 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '规格': 'TDP', 'Beelink SER8（8845HS）': '54–65 W（持续运行在65 W）' },
           { '规格': '尺寸', 'Beelink SER8（8845HS）': '135 × 135 × 44.7 mm，约0.75 kg' },
           { '规格': '操作系统', 'Beelink SER8（8845HS）': 'Windows 11 Pro（支持安装Linux/Proxmox）' },
-          { '规格': '价格（32GB/1TB）', 'Beelink SER8（8845HS）': '约799–849美元（2026年8月——波动，请查看当前价格）' },
+          { '规格': '价格（官方标价）', 'Beelink SER8（8845HS）': '24GB/1TB为799美元（美国商店，2026-10-25核对）；32GB请查看当前listing' },
         ],
         items: [
           '没有独立显卡：所有AI推理都在CPU和共享系统内存的Radeon 780M核显上运行。',
@@ -2470,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '要搭建这套确切的配置：请参见[将Ollama连接到Home Assistant](/zh/smart-home/home-assistant-ollama-integration)和[在本地LLM上运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide)。',
         ],
         affiliateLinks: [
-          { label: '查看SER8当前价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '799–849美元' },
+          { label: '查看SER8当前价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -2505,7 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Radeon 780M核显：足以胜任7B模型推理和Frigate的视频解码，而没有独立显卡的功耗或噪音。',
         ],
         affiliateLinks: [
-          { label: '查看SER8当前价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '799–849美元' },
+          { label: '查看SER8当前价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**为什么我喜欢它，以及为什么不会在所有场景下购买它。**',
         items: [
           '**为什么我喜欢它**',
-          '作为一款有能力的本地AI设备，性价比最高——约799–849美元即可获得一台能舒适运行7B模型加完整智能家居栈的机器',
+          '作为一款有能力的本地AI设备，性价比最高——美国官方商店标价799美元（24 GB/1 TB）即可获得一台能舒适运行7B模型加完整智能家居栈的机器',
           '用户可更换内存和两个M.2插槽意味着机器能随你的需求成长，而不是逼你换新机',
           'USB4和2.5GbE覆盖了家庭服务器真正的瓶颈（网络吞吐量、外部存储），这些是更便宜机型常常省略的',
           '负载下运行在65 W，待机时约8–12 W——全天候开机成本很低',
@@ -2530,19 +2530,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8对比替代品',
         content: '**如果SER8不适合你，有四款设备在价格和能力上将其框定——每一款都有各自的评测和下方各自的产品卡片。**',
-        columns: ['迷你PC', '价格（约）', 'RAM上限（已测试）', '最适合'],
+        columns: ['迷你PC', '官方标价', 'RAM上限（厂商标称）', '最适合'],
         rows: [
-          { '迷你PC': 'Beelink SER8', '价格（约）': '799–849美元（32GB/1TB）', 'RAM上限（已测试）': '约64–96GB', '最适合': '性价比最高：HA + 7B模型' },
-          { '迷你PC': 'Beelink EQ14', '价格（约）': '180–230美元', 'RAM上限（已测试）': '16GB', '最适合': '仅HA，极小模型' },
-          { '迷你PC': 'Minisforum UM890 Pro', '价格（约）': '700–850美元', 'RAM上限（已测试）': '约64–96GB', '最适合': '双2.5GbE、eGPU接口' },
-          { '迷你PC': 'GEEKOM A9 Max（2026）', '价格（约）': '1,099–1,799美元', 'RAM上限（已测试）': '128GB', '最适合': '最大余量、Wi-Fi 7' },
-          { '迷你PC': 'GMKtec G3 Plus', '价格（约）': '200–260美元', 'RAM上限（已测试）': '32GB', '最适合': '经济实惠、可升级' },
+          { '迷你PC': 'Beelink SER8', '官方标价': '799美元（24GB/1TB）', 'RAM上限（厂商标称）': '约64–96GB', '最适合': '性价比最高：HA + 7B模型' },
+          { '迷你PC': 'Beelink EQ14', '官方标价': '385美元（16GB/500GB）', 'RAM上限（厂商标称）': '16GB', '最适合': '仅HA，极小模型' },
+          { '迷你PC': 'Minisforum UM890 Pro', '官方标价': '439.90美元（准系统）/ 823.90美元（32GB/1TB）', 'RAM上限（厂商标称）': '约64–96GB', '最适合': '双2.5GbE、eGPU接口' },
+          { '迷你PC': 'GEEKOM A9 Max（2026）', '官方标价': '1,299–1,599美元', 'RAM上限（厂商标称）': '128GB', '最适合': '最大余量、Wi-Fi 7' },
+          { '迷你PC': 'GMKtec G3 Plus', '官方标价': '399.99–499.99美元', 'RAM上限（厂商标称）': '32GB', '最适合': 'N150、内存可升级' },
         ],
         items: [
-          '[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review)——追求余量的选择：128 GB内存上限和Wi-Fi 7，但现在售价1,099–1,799美元（2026版，Ryzen AI 9 HX 370/HX 470）——明显高于SER8，但购买前请比较两者的实时价格。',
-          '[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)——Radeon 780M性能相近，但增加了双2.5GbE、Wi-Fi 6E和OCuLink eGPU接口，只需适度加价。',
-          '[Beelink EQ14](/zh/smart-home/beelink-eq14-local-ai-review)——仅适合Home Assistant加极小模型的经济型Intel N150机型；如果想要7B助手请避开。',
-          '[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review)——另一款带可升级内存的经济型N150选择。',
+          '[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review)——追求余量的选择：128 GB内存上限和Wi-Fi 7，但标价1,299–1,599美元（2026版，Ryzen AI 9 HX 370/HX 470）——约为SER8标价（799美元）的1.6至2.0倍；购买前请比较两者的实时价格。',
+          '[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)——Radeon 780M性能相近，但增加了双2.5GbE、Wi-Fi 6E和OCuLink eGPU接口；官方页面标价准系统439.90美元、32 GB/1 TB配置823.90美元，2026-10-25核对时显示售罄。',
+          '[Beelink EQ14](/zh/smart-home/beelink-eq14-local-ai-review)——仅适合Home Assistant加极小模型的Intel N150机型（16 GB/500 GB官方标价385美元，2026-10-25核对时标注为预购）；如果想要7B助手请避开。',
+          '[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review)——另一款带可升级内存的N150选择（官方标价399.99–499.99美元；2026-10-25核对时所有型号显示售罄）。',
           'Beelink自家的SER9和SER10 Pro/Max（2026年CES发布，Ryzen AI 9 HX 470，部分型号支持10GbE）是当前的旗舰系列——只有当10GbE或更新一代NPU对你特别重要时才值得考虑；对于HA + Frigate + 7B模型这一用途，它们并不改变本页的推荐。',
           '还在比较？可从[Home Assistant + 本地AI最佳迷你PC汇总](/zh/smart-home/best-mini-pc-home-assistant-local-ai)开始。',
         ],
@@ -2553,13 +2553,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**两个渠道是真实可核实的选项：Beelink官方商店（直接质保支持）和Amazon（快速配送、便捷退货）。** 价格每周都会波动，也会因内存/存储型号而异——请查看实时价格，不要依赖固定数字。',
         items: [
-          'Beelink官方商店：厂商直接质保和支持；有时是两个渠道中价格较高的一方。',
-          'Amazon：通常价格更具竞争力，加上Amazon标准的退货政策——对大多数买家而言是实用的默认选择。',
+          'Beelink官方商店：厂商直接质保和支持；商店将24 GB/1 TB配置标价为799美元（2026-10-25核对）。',
+          'Amazon：配送快，并提供Amazon标准的退货政策；本页未核实Amazon的价格，可能与官方商店不同——购买前请比较。',
           '购买前请在listing上确认内存型号（16、24、32或64 GB）和CPU型号（8845HS，而非8745HS）——Beelink以同样的"SER8"名称销售多个不同版本。',
         ],
         affiliateLinks: [
-          { label: '查看价格——Beelink官方商店', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '799–849美元' },
-          { label: '查看价格——Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '799–849美元' },
+          { label: '查看价格——Beelink官方商店', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: '查看价格——Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -2581,14 +2581,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: '总搭建成本',
-        content: '**一套现实的完整搭建——SER8加上上方的套装——总价约在1,009–1,124美元（2026年8月），而不仅仅是迷你PC本身的标价。**',
+        content: '**一套现实的完整搭建——SER8加上上方的套装——总价约在1,009–1,074美元（以SER8 24 GB/1 TB的官方商店标价799美元计，2026-10-25核对），而不仅仅是迷你PC本身的标价。**',
         columns: ['项目', '价格（约）'],
         rows: [
-          { '项目': 'Beelink SER8 32GB/1TB', '价格（约）': '799–849美元' },
+          { '项目': 'Beelink SER8 24GB/1TB（官方标价）', '价格（约）': '799美元' },
           { '项目': 'SONOFF ZBDongle-E（Zigbee）', '价格（约）': '20–25美元' },
           { '项目': 'Reolink RLC-810A × 2（PoE摄像头）', '价格（约）': '120–180美元' },
           { '项目': 'Hailo-8L M.2（Frigate加速器）', '价格（约）': '约70美元' },
-          { '项目': '总计（约）', '价格（约）': '1,009–1,124美元以上' },
+          { '项目': '总计（约）', '价格（约）': '1,009–1,074美元以上' },
         ],
         items: [
           '此总价不包含PoE交换机/注入器及布线，这些因住所而异，通常是与其他网络设备共享的一次性成本。',
@@ -2602,7 +2602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**如果32B或70B模型才是真正的目标，不要只因为SER8更便宜就购买它——配备独立GPU的系统才是这项工作负载的诚实答案。** 下方的对比在SER8真正的优势范围之外故意对其不利，因为计划搭建70B系统的读者不应在此感到失望。',
         columns: ['因素', 'SER8（核显）', 'GPU服务器（24GB+显存）'],
         rows: [
-          { '因素': '价格', 'SER8（核显）': '799–849美元', 'GPU服务器（24GB+显存）': '1,500美元以上' },
+          { '因素': '价格', 'SER8（核显）': '799美元（24GB/1TB，标价）', 'GPU服务器（24GB+显存）': '1,500美元以上' },
           { '因素': '功耗', 'SER8（核显）': '负载65 W／待机约10 W', 'GPU服务器（24GB+显存）': '负载300–600 W' },
           { '因素': '7B模型', 'SER8（核显）': '舒适', 'GPU服务器（24GB+显存）': '快速，性能过剩' },
           { '因素': '14B模型', 'SER8（核显）': '可用', 'GPU服务器（24GB+显存）': '快速' },
@@ -2625,7 +2625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '美国：针对中国电子产品的301条款关税在2026年依然有效；另外2025年的"IEEPA"关税已于2026年2月被最高法院裁定无效，并被临时性、有上限的122条款关税取代。针对直接进口低于800美元货物的免税"最低限度"豁免也已终止。',
           '欧盟（影响DE/FR）：对成品迷你PC没有大范围的欧盟关税，但自2026年7月起，针对来自中国低价值直邮包裹的150欧元免税门槛已被取消，并新增了少量的每件包裹处理费。',
           '假设（宏观趋势，而非单品事实）：中国转移的出口产能使这些品牌在欧盟和美国维持了较高供货量，总体上支撑了具有竞争力的价格。',
-          '净效应：购买前请在零售商处核实当前价格——本页的价格区间仅供参考，标注日期为2026年8月。',
+          '净效应：购买前请在零售商处核实当前价格——本页数字为2026-10-25核对的官方商店标价，仅供参考。',
         ],
       },
       priceSanityCheck: {
@@ -2636,14 +2636,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '如果SER8 32GB/1TB的价格与GEEKOM A9 Max的促销价相差不到约100美元，那么对可能升级到更大模型的人来说，A9 Max的128 GB上限和Wi-Fi 7很可能值得这个差价。',
           '如果SER8和SER9价格接近，请核实SER9的规格提升（购买时请核实SER9当前的价格和规格）对你是否足够重要——否则SER8仍是性价比之选。',
-          '不要仅凭品牌热度购买——本页的推荐针对的是约799–849美元的32GB/1TB配置；购买前请重新核实。',
+          '不要仅凭品牌热度购买——本页的推荐针对的是32GB/1TB配置（请查看当前listing；24GB/1TB的美国官方商店标价为799美元）；购买前请重新核实。',
         ],
       },
       faqSection: {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'Beelink SER8目前的价格是多少？', a: '截至2026年8月，32 GB/1 TB配置（Ryzen 7 8845HS）的调研价格区间约为799–849美元，16 GB/500 GB基础配置通常更低（购买前请查看当前价格），64 GB/1 TB配置更高（约1,239美元）。价格因零售商而异，且每周都会变动——购买前请查看实时价格，不要依赖这一数字。' },
+          { q: 'Beelink SER8目前的价格是多少？', a: 'Beelink官方商店将24 GB/1 TB配置（Ryzen 7 8845HS）标价为799美元（美国官方商店标价，2026-10-25核对；页面同时显示959美元的对比价）。32 GB和64 GB配置请查看当前listing；各地区价格与美国标价会有差异。价格因零售商而异，且经常变动——购买前请查看实时价格，不要依赖这一数字。' },
           { q: 'Beelink SER8的官方规格是什么？', a: 'AMD Ryzen 7 8845HS（8核/16线程，最高5.1 GHz）、Radeon 780M核显（12 CU，RDNA 3）、16-TOPS NPU、DDR5-5600双SO-DIMM内存（16/24/32/64 GB型号）、2× M.2 2280 PCIe 4.0存储、2.5GbE、Wi-Fi 6、USB4、54–65 W TDP。Beelink还销售搭载8745HS芯片（加速4.9 GHz）的更便宜SER8版本——请在listing上确认CPU型号。' },
           { q: 'Beelink SER8的尺寸是多少？', a: '135 × 135 × 44.7 mm，重量约0.75 kg——足够小，可以放在显示器后面或安装在不显眼的位置。' },
           { q: 'Beelink SER8能运行本地LLM吗？', a: '可以。凭借32 GB内存和Radeon 780M核显，它能在Ollama上舒适运行7B–8B模型，也能以4bit加载13B–14B模型，只是速度较慢。这些是根据已验证硬件得出的估算，而非PromptQuorum实测的基准，因为实际速度取决于模型、量化方式和后端。' },
@@ -2651,7 +2651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SER8的待机功耗是多少？', a: '根据独立测量约为8–12 W——作为家庭服务器全天候运行成本很低。持续负载下最高可达65 W。具体数值取决于工作负载和电源模式。' },
           { q: '16-TOPS NPU能加速SER8上的本地AI吗？', a: '不能。2026年主流LLM运行时（Ollama、llama.cpp、LM Studio）在推理时并不使用NPU，而是在CPU和Radeon 780M核显上运行。NPU在受支持的框架中加速特定的视觉/音频负载，而不是通用聊天推理。' },
           { q: '有比SER8更新的Beelink机型吗？', a: '有。Beelink已发布SER9，并在2026年CES上发布了SER10 Pro和SER10 Max（Ryzen AI 9 HX 470，最高支持10GbE网络）。这些是当前的旗舰系列。就本评测所涉及的具体用途——Home Assistant、Frigate和本地7B–14B模型——而言，SER8仍是性价比更高的选择；更新一代的NPU对这一用途并无明显帮助（参见上方的NPU说明）。' },
-          { q: 'SER8还是GEEKOM A9 Max？', a: 'SER8以799–849美元的价格是性价比之选，能覆盖大多数本地AI智能家居需求。只有当你需要它128 GB的内存上限或Wi-Fi 7时才选择A9 Max——截至2026年8月，它的售价为1,099–1,799美元，明显更贵，购买前请比较两者的实时价格，并将其作为深思熟虑的选择，而不是默认升级。' },
+          { q: 'SER8还是GEEKOM A9 Max？', a: 'SER8以799美元的美国官方商店标价（24 GB/1 TB）是性价比之选，能覆盖大多数本地AI智能家居需求。只有当你需要它128 GB的内存上限或Wi-Fi 7时才选择A9 Max——它的标价为1,299–1,599美元，约为SER8标价的1.6至2.0倍，购买前请比较两者的实时价格，并将其作为深思熟虑的选择，而不是默认升级。' },
           { q: '内存可以升级吗？', a: '可以。SER8使用两个用户可更换的标准DDR5 SO-DIMM插槽，因此你可以从32 GB起步，日后升级到64 GB。它还有两个M.2插槽用于存储扩展。' },
           { q: 'Beelink SER8在哪里制造，这会影响价格吗？', a: '在中国制造。2026年，美国的进口措施（301条款关税、低于800美元的最低限度豁免终止）以及欧盟取消150欧元低价值包裹豁免，都可能影响到岸成本，因此请核实零售商的当前价格，而不要依赖固定数字。' },
         ],
@@ -2673,13 +2673,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '最终购买决策',
         content: '**三条路径，一个明确的默认选择。**',
         items: [
-          '**值得购买32 GB/1 TB的SER8，如果：** 你想在一台安静、经济的机器上运行Home Assistant、Frigate和本地7B–8B助手——这是本页大多数读者的默认推荐。',
+          '**值得购买32 GB/1 TB的SER8，如果：** 你想在一台安静、低功耗的机器上运行Home Assistant、Frigate和本地7B–8B助手——这是本页大多数读者的默认推荐。',
           '**值得购买，但请选64 GB/1 TB，如果：** 13B–14B模型才是你真正的目标，并且希望它们运行得反应灵敏，而不只是在技术上能加载。',
           '**不值得购买，如果：** 32B或70B模型是你的主要用途——请改为购买配备独立GPU的系统；参见[本地AI工作站搭建指南](/zh/power-local-llm/best-workstation-build-local-ai-2026)。',
           '**我的选择：SER8 32GB/1TB——查看今日价格并购买这一配置。**',
         ],
         affiliateLinks: [
-          { label: '查看今日SER8 32GB/1TB价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '799–849美元' },
+          { label: '查看今日SER8 32GB/1TB价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -2688,9 +2688,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Beelink SER8评测：规格、价格与32GB对64GB（2026）',
       reviewBody:
-        'Beelink SER8（Ryzen 7 8845HS、Radeon 780M）的32 GB/1 TB配置能以约799–849美元（2026年8月）运行Home Assistant、Frigate和Ollama上的7B本地LLM。就这一具体用途而言，它是本地AI迷你PC中性价比最高的选择，尽管Beelink此后已推出更新的SER9和SER10系列。',
+        'Beelink SER8（Ryzen 7 8845HS、Radeon 780M）的32 GB/1 TB配置能运行Home Assistant、Frigate和Ollama上的7B本地LLM（24 GB/1 TB配置的美国官方商店标价为799美元，2026-10-25核对）。就这一具体用途而言，它是本地AI迷你PC中性价比最高的选择，尽管Beelink此后已推出更新的SER9和SER10系列。',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2716,8 +2716,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-pt.webp',
@@ -2725,9 +2725,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Beelink SER8: análise, preço e 32GB vs 64GB (2026)',
     seoTitle: 'Análise Beelink SER8 2026 — Specs, preço, 32GB vs 64GB',
     intro:
-      'O Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) é o mini PC com melhor custo-benefício para uma casa inteligente com IA local em 2026 — a configuração de 32 GB / 1 TB roda Home Assistant, Frigate, Whisper e um modelo 7B no Ollama em uma única máquina silenciosa por um preço a confirmar (agosto de 2026, preço muito volátil devido a impostos de importação e câmbio, variando por loja e configuração). Esta análise reverifica cada especificação com a Beelink e fontes independentes, define expectativas honestas sobre a velocidade do LLM local como estimativas — não benchmarks medidos — e cobre o que mudou desde o lançamento, incluindo as linhas mais recentes SER9 e SER10 da Beelink.',
+      'O Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) é o mini PC com melhor custo-benefício para uma casa inteligente com IA local em 2026 — a configuração de 32 GB / 1 TB roda Home Assistant, Frigate, Whisper e um modelo 7B no Ollama em uma única máquina silenciosa; a loja oficial da Beelink lista a configuração de 24 GB / 1 TB a um preço de tabela de US$ 799 (preço de tabela da loja oficial dos EUA, verificado em 2026-10-25; os preços no Brasil podem variar bastante devido a impostos de importação e câmbio), e para as configurações de 32 GB vale conferir o anúncio atual. Esta análise reverifica cada especificação com a Beelink e fontes independentes, define expectativas honestas sobre a velocidade do LLM local como estimativas — não benchmarks medidos — e cobre o que mudou desde o lançamento, incluindo as linhas mais recentes SER9 e SER10 da Beelink.',
     metaDescription:
-      'Análise Beelink SER8 2026: specs Ryzen 7 8845HS, preço atual por configuração, 32GB vs 64GB, consumo em repouso, dimensões. Roda Home Assistant mais um LLM 7B local — análise completa.',
+      'Análise Beelink SER8 2026: specs Ryzen 7 8845HS, preço por configuração, 32GB vs 64GB, consumo em repouso, medidas. Home Assistant mais um LLM 7B local.',
     twitterDescription:
       'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, — confira o preço atual. Qual configuração comprar para Home Assistant mais um LLM local — 32GB vs 64GB, specs e preço atual.',
     readTime: '9 min de leitura',
@@ -2742,18 +2742,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs mini pc',
     ],
     leadAnswerBlock:
-      '**Sim — compre o Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) se você quer Home Assistant, Frigate e um LLM local pequeno rodando silenciosamente em uma única máquina.** Ele roda o hub, o Frigate, o Whisper e um modelo 7B no Ollama por um preço a confirmar (32 GB/1 TB, agosto de 2026, volátil) — normalmente mais barato que um GEEKOM A9 Max para a maior parte do mesmo trabalho de casa inteligente — compare os preços atuais antes de comprar. Melhor para: HA + Frigate + um assistente 7B–8B. Não é para: modelos de 32B em diante — veja a alternativa de servidor com GPU abaixo.',
+      '**Sim — compre o Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) se você quer Home Assistant, Frigate e um LLM local pequeno rodando silenciosamente em uma única máquina.** Ele roda o hub, o Frigate, o Whisper e um modelo 7B no Ollama (preço de tabela da loja oficial dos EUA: US$ 799 para a configuração de 24 GB/1 TB, verificado em 2026-10-25; para 32 GB, confira o anúncio atual) — cerca de metade a três quintos do preço de tabela do GEEKOM A9 Max (US$ 1.299–1.599) para a maior parte do mesmo trabalho de casa inteligente — compare os preços atuais antes de comprar. Melhor para: HA + Frigate + um assistente 7B–8B. Não é para: modelos de 32B em diante — veja a alternativa de servidor com GPU abaixo.',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena comprar o Beelink SER8 para IA local e Home Assistant?',
         answer:
-          'Vale, se o seu objetivo é Home Assistant mais Frigate mais um LLM local 7B–8B — compre a configuração de 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) por um preço a confirmar (agosto de 2026, volátil). Ela roda confortavelmente um modelo 7B, carrega um 13B–14B em 4 bits mas mais devagar, e fica apertada acima disso. Só suba para 64 GB/1 TB (um preço a confirmar (acima do 32GB)) se você quer especificamente que modelos 14B fiquem confortáveis, não apenas utilizáveis. Evite completamente para modelos de 32B em diante — veja a comparação com servidor de GPU abaixo. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+          'Vale, se o seu objetivo é Home Assistant mais Frigate mais um LLM local 7B–8B — compre a configuração de 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M). A loja oficial da Beelink lista a configuração de 24 GB/1 TB a US$ 799 (preço de tabela da loja oficial dos EUA, verificado em 2026-10-25; os preços no Brasil podem variar bastante devido a impostos de importação e câmbio). Para as configurações de 32 GB, confira o anúncio atual. Ela roda confortavelmente um modelo 7B, carrega um 13B–14B em 4 bits mas mais devagar, e fica apertada acima disso. Só suba para 64 GB/1 TB (confira o anúncio atual) se você quer especificamente que modelos 14B fiquem confortáveis, não apenas utilizáveis. Evite completamente para modelos de 32B em diante — veja a comparação com servidor de GPU abaixo. Os preços no Brasil podem variar bastante devido a impostos de importação.',
         bullets: [
           'CPU: Ryzen 7 8845HS — 8 núcleos/16 threads, Radeon 780M (12 CU, RDNA 3)',
           'Confirme a CPU no anúncio: a Beelink também vende um SER8 mais barato com o chip 8745HS (clock de boost menor, mesmo nome) — esta análise cobre apenas a unidade 8845HS',
           'RAM: SO-DIMM dupla, substituível pelo usuário; 32 GB é a configuração principal, 64 GB para folga extra',
           'LLM local (estimado pelas especificações, sem benchmark): 7B confortável; 13B–14B utilizável mas mais lento; 32B+ não recomendado',
-          'Preço: 32 GB/1 TB preço a confirmar; 64 GB/1 TB preço a confirmar (acima do 32GB) (agosto de 2026, confira o preço atual — varia por loja e SKU de RAM)',
+          'Preço: preço de tabela da loja oficial dos EUA de US$ 799 para 24 GB/1 TB (verificado em 2026-10-25); configurações de 32 GB e 64 GB — confira o anúncio atual (varia por loja e SKU de RAM; os preços no Brasil podem variar bastante)',
           'A Beelink já lançou as linhas SER9 e SER10 Pro/Max desde então — o SER8 não é mais o modelo mais recente da Beelink, mas continua sendo a melhor opção de custo-benefício para essa finalidade específica',
         ],
         updatedDate: '2026-08',
@@ -2780,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Decisão de compra final', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'O Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) é um mini PC de preço a confirmar que roda Home Assistant, Frigate e um LLM 7B local no Ollama em uma única máquina silenciosa, sendo a melhor opção de custo-benefício para uma casa inteligente com IA local em 2026.' },
+      { type: 'one-sentence', content: 'O Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS) é um mini PC (a partir de US$ 799, preço de tabela da loja oficial dos EUA, 24 GB/1 TB) que roda Home Assistant, Frigate e um LLM 7B local no Ollama em uma única máquina silenciosa, sendo a melhor opção de custo-benefício para uma casa inteligente com IA local em 2026.' },
       { type: 'plain-terms', content: 'Um mini PC é um computador pequeno, silencioso e sempre ligado. O SER8 combina um processador AMD rápido, uma placa de vídeo integrada forte e memória suficiente para rodar toda a sua central de casa inteligente mais um modelo de chat de IA de porte médio ao mesmo tempo, sem o preço de uma máquina de topo. A memória fica em dois slots substituíveis, então você pode ampliar depois — a versão de 32 GB é a que a maioria dos compradores deveria escolher; 64 GB só vale o custo extra se você quer especificamente que um modelo maior fique confortável, não apenas utilizável.' },
     ],
     sections: {
@@ -2789,11 +2789,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumo',
         isTldr: true,
         items: [
-          'Compre o SER8 de 32 GB/1 TB (Ryzen 7 8845HS) — ele roda Home Assistant, Frigate, Whisper e um LLM 7B local em uma máquina por um preço a confirmar (agosto de 2026, volátil)',
+          'Compre o SER8 de 32 GB/1 TB (Ryzen 7 8845HS) — ele roda Home Assistant, Frigate, Whisper e um LLM 7B local em uma máquina — preço de tabela da loja oficial dos EUA: US$ 799 para 24 GB/1 TB (verificado em 2026-10-25), 32 GB: confira o anúncio atual',
           'Confirme que o anúncio diz "8845HS", não a variante mais barata "8745HS" que a Beelink também vende sob o mesmo nome SER8',
-          '32 GB é a configuração principal para a maioria dos compradores; suba para 64 GB (preço a confirmar (acima do 32GB)) só se quiser que modelos 14B fiquem confortáveis',
+          '32 GB é a configuração principal para a maioria dos compradores; suba para 64 GB (confira o anúncio atual) só se quiser que modelos 14B fiquem confortáveis',
           'A Beelink lançou as linhas mais recentes SER9 e SER10 Pro/Max desde a publicação original desta análise — o SER8 não é mais o topo de linha atual, mas continua sendo a melhor opção para HA + Frigate + um modelo 7B',
-          'Mais barato e simples que um [GEEKOM A9 Max](/pt/smart-home/geekom-a9-max-local-ai-review) (agora US$ 1.099–1.799); muito mais capaz que um aparelho Intel N150',
+          'Mais barato e simples que um [GEEKOM A9 Max](/pt/smart-home/geekom-a9-max-local-ai-review) (US$ 1.299–1.599, preço de tabela oficial); muito mais capaz que um aparelho Intel N150',
           'Evite completamente para modelos de 32B em diante — veja a comparação com servidor de GPU para essa finalidade',
         ],
       },
@@ -2801,9 +2801,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito e melhor configuração',
         content:
-          '**SIM — compre o Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) se você quer Home Assistant, Frigate e um LLM local pequeno rodando silenciosamente em uma única máquina.** Configuração recomendada: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Melhor para: um servidor doméstico tudo em um — Home Assistant, Ollama, Whisper e Frigate juntos, com um assistente 7B confortável e um 13B–14B utilizável, mas mais lento.\n\nPreço atual: confira o preço ao vivo — ele varia conforme a configuração de RAM/armazenamento e a loja; a faixa pesquisada para 32 GB/1 TB é de cerca de preço a confirmar (agosto de 2026). Não é para: quem planeja rodar modelos de 30B em diante rotineiramente — o teto de RAM e a arquitetura de memória compartilhada da iGPU tornam isso ruim mesmo com 64 GB. Veja em vez disso a [alternativa de servidor com GPU](#vs-gpu-server).',
+          '**SIM — compre o Beelink SER8 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) se você quer Home Assistant, Frigate e um LLM local pequeno rodando silenciosamente em uma única máquina.** Configuração recomendada: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. Melhor para: um servidor doméstico tudo em um — Home Assistant, Ollama, Whisper e Frigate juntos, com um assistente 7B confortável e um 13B–14B utilizável, mas mais lento.\n\nPreço atual: confira o preço ao vivo — ele varia conforme a configuração de RAM/armazenamento e a loja; a loja oficial da Beelink lista a configuração de 24 GB/1 TB a US$ 799 (preço de tabela da loja oficial dos EUA, verificado em 2026-10-25; os preços no Brasil podem variar bastante devido a impostos de importação e câmbio); para as configurações de 32 GB, confira o anúncio atual. Não é para: quem planeja rodar modelos de 30B em diante rotineiramente — o teto de RAM e a arquitetura de memória compartilhada da iGPU tornam isso ruim mesmo com 64 GB. Veja em vez disso a [alternativa de servidor com GPU](#vs-gpu-server).',
         affiliateLinks: [
-          { label: 'Ver preço atual do SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar' },
+          { label: 'Ver preço atual do SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'Comparar configurações do SER8', url: 'https://www.amazon.com.br/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8 (todas as configs)', productCategory: 'Mini PC' },
         ],
       },
@@ -2839,15 +2839,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O SKU de 64 GB custa mais que o de 32 GB (a diferença varia — confira os preços atuais) — vale a pena só se a classe de modelo maior for o objetivo real, não "só por precaução".',
         ],
         affiliateLinks: [
-          { label: 'Ver preço atual — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar' },
-          { label: 'Ver preço atual — SER8 64GB/1TB', url: 'https://www.amazon.com.br/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar (acima do 32GB)' },
+          { label: 'Ver preço atual — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Ver preço atual — SER8 64GB/1TB', url: 'https://www.amazon.com.br/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: 'Especificações',
         content:
-          '**Todas as especificações abaixo foram reverificadas com o anúncio da própria Beelink e fontes independentes de lojas/análises em agosto de 2026.** A Beelink vende o nome SER8 com duas CPUs diferentes — confirme antes de comprar que o anúncio diz "8845HS" (objeto desta análise, boost de 5,1 GHz) e não a variante mais barata "8745HS" (boost de 4,9 GHz, semelhante fora isso). A RAM de fábrica varia por SKU (16, 24, 32 ou 64 GB); esta tabela reflete a unidade de 32 GB / 1 TB como configuração de referência.',
+          '**Todas as especificações abaixo foram verificadas com o anúncio da própria Beelink e fontes independentes de lojas/análises; os preços foram conferidos pela última vez na loja oficial em 2026-10-25.** A Beelink vende o nome SER8 com duas CPUs diferentes — confirme antes de comprar que o anúncio diz "8845HS" (objeto desta análise, boost de 5,1 GHz) e não a variante mais barata "8745HS" (boost de 4,9 GHz, semelhante fora isso). A RAM de fábrica varia por SKU (16, 24, 32 ou 64 GB); esta tabela reflete a unidade de 32 GB / 1 TB como configuração de referência.',
         columns: ['Especificação', 'Beelink SER8 (8845HS)'],
         rows: [
           { Especificação: 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS (Zen 4, 4 nm)' },
@@ -2861,7 +2861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Especificação: 'TDP', 'Beelink SER8 (8845HS)': '54–65 W (roda a 65 W sustentado)' },
           { Especificação: 'Dimensões', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm, ~0.75 kg' },
           { Especificação: 'SO', 'Beelink SER8 (8845HS)': 'Windows 11 Pro (instalação de Linux/Proxmox suportada)' },
-          { Especificação: 'Preço (32GB/1TB)', 'Beelink SER8 (8845HS)': 'preço a confirmar (ago. de 2026 — volátil, confira o preço atual)' },
+          { Especificação: 'Preço (tabela oficial)', 'Beelink SER8 (8845HS)': 'US$ 799 para 24GB/1TB (loja dos EUA, verificado em 2026-10-25); 32GB: confira o anúncio atual' },
         ],
         items: [
           'Sem GPU dedicada: toda a inferência de IA roda na CPU e na iGPU Radeon 780M, que compartilham a RAM do sistema.',
@@ -2921,7 +2921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Monte exatamente essa configuração: veja [Conecte o Ollama ao Home Assistant](/pt/smart-home/home-assistant-ollama-integration) e [Rode sua casa inteligente em um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide).',
         ],
         affiliateLinks: [
-          { label: 'Ver preço atual do SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar' },
+          { label: 'Ver preço atual do SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -2956,7 +2956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iGPU Radeon 780M: forte o suficiente para inferência de modelo 7B e decodificação de vídeo do Frigate, sem o consumo ou o ruído de uma GPU dedicada.',
         ],
         affiliateLinks: [
-          { label: 'Ver preço atual do SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar' },
+          { label: 'Ver preço atual do SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -2965,7 +2965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Por que eu gosto dele, e por que eu não o compraria para qualquer tarefa.**',
         items: [
           '**Por que eu gosto dele**',
-          'Melhor custo-benefício para uma caixa de IA local capaz — preço a confirmar por uma máquina que roda confortavelmente um modelo 7B mais uma pilha completa de casa inteligente',
+          'Melhor custo-benefício para uma caixa de IA local capaz — US$ 799 (preço de tabela da loja oficial dos EUA, 24 GB/1 TB) por uma máquina que roda confortavelmente um modelo 7B mais uma pilha completa de casa inteligente',
           'RAM substituível pelo usuário e dois slots M.2 fazem a máquina crescer com você, em vez de forçar uma substituição',
           'USB4 e 2.5GbE cobrem os gargalos reais de um servidor doméstico (throughput de rede, armazenamento externo) que aparelhos mais baratos deixam de lado',
           'Roda a 65 W sob carga e cerca de 8–12 W em repouso — barato de deixar ligado 24 horas por dia',
@@ -2981,19 +2981,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8 vs alternativas',
         content: '**Se o SER8 não encaixa, quatro aparelhos o enquadram em preço e capacidade — cada um tem sua própria análise com seu próprio card de produto abaixo.**',
-        columns: ['Mini PC', 'Preço (aprox.)', 'Teto de RAM (testado)', 'Melhor para'],
+        columns: ['Mini PC', 'Preço de tabela oficial', 'Teto de RAM (segundo o fabricante)', 'Melhor para'],
         rows: [
-          { 'Mini PC': 'Beelink SER8', 'Preço (aprox.)': 'preço a confirmar (32GB/1TB)', 'Teto de RAM (testado)': '~64–96GB', 'Melhor para': 'Melhor custo-benefício: HA + modelo 7B' },
-          { 'Mini PC': 'Beelink EQ14', 'Preço (aprox.)': 'R$ 1.700–2.200', 'Teto de RAM (testado)': '16GB', 'Melhor para': 'Só HA, modelo minúsculo' },
-          { 'Mini PC': 'Minisforum UM890 Pro', 'Preço (aprox.)': 'R$ 6.700–8.100', 'Teto de RAM (testado)': '~64–96GB', 'Melhor para': 'Dupla 2.5GbE, porta eGPU' },
-          { 'Mini PC': 'GEEKOM A9 Max (2026)', 'Preço (aprox.)': 'preço a confirmar', 'Teto de RAM (testado)': '128GB', 'Melhor para': 'Folga máxima, Wi-Fi 7' },
-          { 'Mini PC': 'GMKtec G3 Plus', 'Preço (aprox.)': 'R$ 1.900–2.500', 'Teto de RAM (testado)': '32GB', 'Melhor para': 'Econômico, ampliável' },
+          { 'Mini PC': 'Beelink SER8', 'Preço de tabela oficial': 'US$ 799 (24GB/1TB)', 'Teto de RAM (segundo o fabricante)': '~64–96GB', 'Melhor para': 'Melhor custo-benefício: HA + modelo 7B' },
+          { 'Mini PC': 'Beelink EQ14', 'Preço de tabela oficial': 'US$ 385 (16GB/500GB)', 'Teto de RAM (segundo o fabricante)': '16GB', 'Melhor para': 'Só HA, modelo minúsculo' },
+          { 'Mini PC': 'Minisforum UM890 Pro', 'Preço de tabela oficial': 'US$ 439,90 barebone / US$ 823,90 (32GB/1TB)', 'Teto de RAM (segundo o fabricante)': '~64–96GB', 'Melhor para': 'Dupla 2.5GbE, porta eGPU' },
+          { 'Mini PC': 'GEEKOM A9 Max (2026)', 'Preço de tabela oficial': 'US$ 1.299–1.599', 'Teto de RAM (segundo o fabricante)': '128GB', 'Melhor para': 'Folga máxima, Wi-Fi 7' },
+          { 'Mini PC': 'GMKtec G3 Plus', 'Preço de tabela oficial': 'US$ 399,99–499,99', 'Teto de RAM (segundo o fabricante)': '32GB', 'Melhor para': 'N150, RAM ampliável' },
         ],
         items: [
-          '[GEEKOM A9 Max](/pt/smart-home/geekom-a9-max-local-ai-review) — a escolha com mais folga: teto de 128 GB de RAM e Wi-Fi 7, mas agora US$ 1.099–1.799 (edição 2026, Ryzen AI 9 HX 370/HX 470) — mais que o dobro, muitas vezes o triplo do preço do SER8.',
-          '[Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) — desempenho Radeon 780M semelhante, mas adiciona 2.5GbE duplo, Wi-Fi 6E e uma porta eGPU OCuLink por um custo extra moderado.',
-          '[Beelink EQ14](/pt/smart-home/beelink-eq14-local-ai-review) — aparelho Intel N150 econômico apenas para Home Assistant mais um modelo minúsculo; evite se você quer um assistente 7B.',
-          '[GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — outra opção N150 econômica com RAM ampliável.',
+          '[GEEKOM A9 Max](/pt/smart-home/geekom-a9-max-local-ai-review) — a escolha com mais folga: teto de 128 GB de RAM e Wi-Fi 7, mas US$ 1.299–1.599 de preço de tabela oficial (edição 2026, Ryzen AI 9 HX 370/HX 470) — cerca de 1,6 a 2,0 vezes o preço de tabela do SER8 (US$ 799).',
+          '[Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) — desempenho Radeon 780M semelhante, mas adiciona 2.5GbE duplo, Wi-Fi 6E e uma porta eGPU OCuLink; segundo a página oficial, US$ 439,90 como barebone e US$ 823,90 com 32 GB/1 TB, exibido como esgotado na verificação de 2026-10-25.',
+          '[Beelink EQ14](/pt/smart-home/beelink-eq14-local-ai-review) — aparelho Intel N150 apenas para Home Assistant mais um modelo minúsculo (preço de tabela oficial de US$ 385 para 16 GB/500 GB, marcado como pré-venda na verificação de 2026-10-25); evite se você quer um assistente 7B.',
+          '[GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — outra opção N150 com RAM ampliável (preço de tabela oficial de US$ 399,99–499,99; todas as variantes exibidas como esgotadas na verificação de 2026-10-25).',
           'As próprias linhas SER9 e SER10 Pro/Max da Beelink (lançadas na CES 2026, Ryzen AI 9 HX 470, 10GbE em alguns SKUs) são a linha principal atual — vale a pena só se 10GbE ou a geração mais nova de NPU importar especificamente para você; para HA + Frigate + um modelo 7B, elas não mudam a recomendação.',
           'Ainda comparando? Comece pelo [resumo dos melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
@@ -3004,13 +3004,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Dois canais são as opções reais e verificáveis: a loja oficial da Beelink (suporte de garantia direto) e a Amazon (entrega rápida, devoluções fáceis).** Os preços mudam semana a semana e por SKU de RAM/armazenamento — confira o preço ao vivo em vez de confiar em um número fixo.',
         items: [
-          'Loja oficial da Beelink: garantia e suporte diretos do fabricante; às vezes o preço mais alto entre os dois canais.',
-          'Amazon: geralmente o preço mais competitivo, além da política de devolução padrão da Amazon — o padrão prático para a maioria dos compradores.',
+          'Loja oficial da Beelink: garantia e suporte diretos do fabricante; a loja lista a configuração de 24 GB/1 TB a US$ 799 (verificado em 2026-10-25).',
+          'Amazon: entrega rápida e a política de devolução padrão da Amazon; os preços da Amazon não foram verificados para esta página e podem diferir da loja oficial — compare antes de comprar.',
           'Confirme o SKU de RAM (16, 24, 32 ou 64 GB) e a CPU (8845HS, não 8745HS) no anúncio antes de comprar — a Beelink vende várias variantes sob o mesmo nome "SER8".',
         ],
         affiliateLinks: [
-          { label: 'Ver preço — loja oficial Beelink', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar' },
-          { label: 'Ver preço — Amazon', url: 'https://www.amazon.com.br/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar' },
+          { label: 'Ver preço — loja oficial Beelink', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'Ver preço — Amazon', url: 'https://www.amazon.com.br/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -3032,14 +3032,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: 'Custo total da montagem',
-        content: '**Uma montagem completa realista — SER8 mais o pacote acima — custa bem mais do que apenas o preço de etiqueta do mini PC; confira os preços atuais de cada item para calcular o total.**',
+        content: '**Uma montagem completa realista — SER8 mais o pacote acima — custa bem mais do que apenas o preço de etiqueta do mini PC; o SER8 de 24 GB/1 TB tem preço de tabela de US$ 799 na loja oficial dos EUA (verificado em 2026-10-25) e os acessórios somam cerca de R$ 1.950–2.700 pelos preços acima; confira os preços atuais de cada item para calcular o total.**',
         columns: ['Item', 'Preço (aprox.)'],
         rows: [
-          { Item: 'Beelink SER8 32GB/1TB', 'Preço (aprox.)': 'preço a confirmar' },
+          { Item: 'Beelink SER8 24GB/1TB (tabela oficial)', 'Preço (aprox.)': 'US$ 799' },
           { Item: 'SONOFF ZBDongle-E (Zigbee)', 'Preço (aprox.)': '~R$ 150–200' },
           { Item: 'Reolink RLC-810A × 2 (câmeras PoE)', 'Preço (aprox.)': '~R$ 1.100–1.700' },
           { Item: 'Hailo-8L M.2 (acelerador Frigate)', 'Preço (aprox.)': '~R$ 700–800' },
-          { Item: 'Total (aprox.)', 'Preço (aprox.)': 'preço a confirmar' },
+          { Item: 'Total (aprox.)', 'Preço (aprox.)': 'US$ 799 + ~R$ 1.950–2.700' },
         ],
         items: [
           'Este total exclui switch/injetor PoE e cabeamento, que variam conforme a residência e costumam ser um custo único compartilhado com outros dispositivos de rede.',
@@ -3053,7 +3053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Se modelos de 32B ou 70B são o objetivo real, não compre o SER8 só porque é mais barato — um sistema com GPU dedicada é a resposta honesta para essa carga de trabalho.** A comparação abaixo é deliberadamente desfavorável ao SER8 fora de suas verdadeiras forças, porque um leitor planejando uma montagem 70B não deveria acabar decepcionado aqui.',
         columns: ['Fator', 'SER8 (iGPU)', 'Servidor com GPU (24GB+ VRAM)'],
         rows: [
-          { Fator: 'Preço', 'SER8 (iGPU)': 'preço a confirmar', 'Servidor com GPU (24GB+ VRAM)': 'a partir de R$ 14.000' },
+          { Fator: 'Preço', 'SER8 (iGPU)': 'US$ 799 (24GB/1TB, tabela)', 'Servidor com GPU (24GB+ VRAM)': 'a partir de R$ 14.000' },
           { Fator: 'Consumo', 'SER8 (iGPU)': '65 W em carga / ~10 W em repouso', 'Servidor com GPU (24GB+ VRAM)': '300–600 W em carga' },
           { Fator: 'Modelo 7B', 'SER8 (iGPU)': 'Confortável', 'Servidor com GPU (24GB+ VRAM)': 'Rápido, exagerado' },
           { Fator: 'Modelo 14B', 'SER8 (iGPU)': 'Utilizável', 'Servidor com GPU (24GB+ VRAM)': 'Rápido' },
@@ -3076,7 +3076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EUA: as tarifas da Seção 301 sobre eletrônicos chineses seguem em vigor em 2026; as tarifas "IEEPA" separadas de 2025 foram derrubadas pela Suprema Corte em fevereiro de 2026 e substituídas por uma tarifa temporária e limitada da Seção 122. A isenção "de minimis" livre de tarifas abaixo de US$ 800 para importações diretas também terminou.',
           'UE (afeta DE/FR): não há uma tarifa ampla da UE sobre mini PCs prontos, mas desde julho de 2026 o limite de isenção de € 150 em pacotes de baixo valor vindos diretamente da China foi removido e uma pequena taxa de processamento por pacote foi adicionada.',
           'Suposição (tendência macro, não um fato do produto): a capacidade de exportação chinesa redirecionada manteve alta a disponibilidade dessas marcas na UE e nos EUA, o que sustenta preços competitivos de forma geral.',
-          'Efeito líquido: verifique o preço atual na loja antes de comprar — as faixas nesta página são indicativas e datadas de agosto de 2026. No Brasil, impostos de importação e o câmbio fazem o preço variar ainda mais.',
+          'Efeito líquido: verifique o preço atual na loja antes de comprar — os valores nesta página são preços de tabela da loja oficial verificados em 2026-10-25 e são apenas indicativos. No Brasil, impostos de importação e o câmbio fazem o preço variar ainda mais.',
         ],
       },
       priceSanityCheck: {
@@ -3087,14 +3087,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Se o SER8 32GB/1TB estiver com preço próximo a uma promoção do GEEKOM A9 Max, o teto de 128 GB e o Wi-Fi 7 do A9 Max provavelmente justificam a diferença para quem pode crescer para modelos maiores.',
           'Se o SER8 e o SER9 tiverem preços próximos, verifique se as melhorias de especificações do SER9 (confira o preço e as specs atuais do SER9 no momento da compra) importam o suficiente para você — caso contrário, o SER8 continua sendo a escolha de custo-benefício.',
-          'Não compre só pelo impulso da marca — a recomendação desta página é para a configuração de 32GB/1TB a cerca de preço a confirmar; reconfira antes de comprar.',
+          'Não compre só pelo impulso da marca — a recomendação desta página é para a configuração de 32GB/1TB (confira o anúncio atual; preço de tabela oficial dos EUA para 24GB/1TB: US$ 799); reconfira antes de comprar.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qual é o preço atual do Beelink SER8?', a: 'A faixa pesquisada para a configuração de 32 GB/1 TB (Ryzen 7 8845HS) é de cerca de preço a confirmar em agosto de 2026, com a configuração base de 16 GB/500 GB mais barata (~R$ 4.500–5.100) e a de 64 GB/1 TB mais cara (preço a confirmar (acima do 32GB)). Os preços variam por loja e mudam semanalmente — confira o preço ao vivo antes de comprar em vez de confiar neste número. No Brasil, impostos de importação e câmbio fazem o preço variar bastante.' },
+          { q: 'Qual é o preço atual do Beelink SER8?', a: 'A loja oficial da Beelink lista a configuração de 24 GB/1 TB (Ryzen 7 8845HS) a US$ 799 (preço de tabela da loja oficial dos EUA, verificado em 2026-10-25; a página mostrava um preço de comparação de US$ 959). Para as configurações de 32 GB e 64 GB, confira o anúncio atual. Os preços variam por loja e mudam com frequência — confira o preço ao vivo antes de comprar em vez de confiar neste número. No Brasil, impostos de importação e câmbio fazem o preço variar bastante.' },
           { q: 'Quais são as especificações oficiais do Beelink SER8?', a: 'AMD Ryzen 7 8845HS (8 núcleos/16 threads, até 5,1 GHz), iGPU Radeon 780M (12 CU, RDNA 3), NPU de 16 TOPS, RAM DDR5-5600 SO-DIMM dupla (SKUs de 16/24/32/64 GB), armazenamento 2× M.2 2280 PCIe 4.0, 2.5GbE, Wi-Fi 6, USB4, TDP de 54–65 W. A Beelink também vende uma variante SER8 mais barata com o chip 8745HS (boost de 4,9 GHz) — confirme a CPU no anúncio.' },
           { q: 'Quais são as dimensões do Beelink SER8?', a: '135 × 135 × 44,7 mm, aproximadamente 0,75 kg — pequeno o suficiente para ficar atrás de um monitor ou montado fora de vista.' },
           { q: 'O Beelink SER8 consegue rodar LLMs locais?', a: 'Sim. Com 32 GB de RAM e a iGPU Radeon 780M, ele roda confortavelmente um modelo 7B–8B no Ollama e consegue carregar um modelo 13B–14B em 4 bits, embora mais devagar. Essas são estimativas a partir do hardware verificado, não um benchmark medido pela PromptQuorum, porque a velocidade real depende do modelo, da quantização e do backend.' },
@@ -3102,7 +3102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qual é o consumo em repouso do SER8?', a: 'Aproximadamente 8–12 W segundo medições independentes — barato de operar continuamente como servidor doméstico. Sob carga sustentada, consome até 65 W. Os números exatos dependem da carga de trabalho e do perfil de energia.' },
           { q: 'A NPU de 16 TOPS acelera a IA local no SER8?', a: 'Não. Os runtimes de LLM comuns (Ollama, llama.cpp, LM Studio) não usam a NPU para inferência em 2026 — eles rodam na CPU e na iGPU Radeon 780M em vez disso. A NPU acelera cargas específicas de visão/áudio em frameworks compatíveis, não a inferência de chat geral.' },
           { q: 'Existe um modelo Beelink mais recente que o SER8?', a: 'Sim. A Beelink lançou o SER9 e, na CES 2026, o SER10 Pro e o SER10 Max (Ryzen AI 9 HX 470, rede de até 10GbE). Essa é a linha principal atual. Para a tarefa específica coberta por esta análise — Home Assistant, Frigate e um modelo local 7B–14B — o SER8 continua sendo a melhor opção de custo-benefício; a geração mais nova de NPU não ajuda de forma significativa nesse uso (veja a nota sobre a NPU acima).' },
-          { q: 'SER8 ou GEEKOM A9 Max?', a: 'O SER8 é a escolha de custo-benefício e cobre a maioria das necessidades de IA local de casa inteligente. Escolha o A9 Max apenas se você precisar do teto de 128 GB de RAM ou do Wi-Fi 7 — ele custa bem mais que o SER8, então compare os preços atuais e faça uma escolha deliberada, não um upgrade padrão.' },
+          { q: 'SER8 ou GEEKOM A9 Max?', a: 'O SER8 é a escolha de custo-benefício, com preço de tabela oficial de US$ 799 (24 GB/1 TB) nos EUA, e cobre a maioria das necessidades de IA local de casa inteligente. Escolha o A9 Max apenas se você precisar do teto de 128 GB de RAM ou do Wi-Fi 7 — ele tem preço de tabela de US$ 1.299–1.599, cerca de 1,6 a 2,0 vezes o do SER8, então compare os preços atuais e faça uma escolha deliberada, não um upgrade padrão.' },
           { q: 'A RAM é ampliável?', a: 'Sim. O SER8 usa dois slots SO-DIMM DDR5 padrão substituíveis pelo usuário, então você pode começar com 32 GB e migrar para 64 GB depois. Ele também tem dois slots M.2 para expansão de armazenamento.' },
           { q: 'Onde o Beelink SER8 é fabricado, e isso afeta o preço?', a: 'Ele é fabricado na China. Em 2026, medidas de importação dos EUA (tarifas da Seção 301, o fim da isenção de minimis abaixo de US$ 800) e a remoção pela UE da isenção de € 150 para pacotes de baixo valor podem afetar o custo final, então confira o preço atual na loja em vez de confiar em um número fixo.' },
           { q: 'Quanto custa o Beelink SER8 no Brasil?', a: 'O preço da configuração de 32 GB/1 TB em lojas brasileiras é bastante volátil por causa de impostos de importação e da variação cambial — confira o preço ao vivo antes de comprar. Compare o preço na loja oficial da Beelink, na Amazon.com.br e em varejistas locais antes de comprar, e confirme se o preço já inclui tributos ou se há custos adicionais na alfândega.' },
@@ -3125,13 +3125,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decisão de compra final',
         content: '**Três caminhos, um padrão claro.**',
         items: [
-          '**SIM, compre o SER8 32 GB/1 TB se:** você quer Home Assistant, Frigate e um assistente local 7B–8B em uma única máquina silenciosa e barata — esta é a recomendação padrão para a maioria dos leitores desta página.',
+          '**SIM, compre o SER8 32 GB/1 TB se:** você quer Home Assistant, Frigate e um assistente local 7B–8B em uma única máquina silenciosa e de baixo consumo — esta é a recomendação padrão para a maioria dos leitores desta página.',
           '**SIM, mas escolha 64 GB/1 TB se:** modelos 13B–14B são seu alvo real e você quer que fiquem responsivos, não apenas tecnicamente carregados.',
           '**NÃO se:** modelos de 32B ou 70B são seu caso de uso principal — compre um sistema com GPU dedicada em vez disso; veja o [guia de montagem de workstation de IA local](/pt/power-local-llm/best-workstation-build-local-ai-2026).',
           '**Minha escolha: SER8 32GB/1TB — confira o preço de hoje e compre essa configuração.**',
         ],
         affiliateLinks: [
-          { label: 'Ver o preço de hoje — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: 'preço a confirmar' },
+          { label: 'Ver o preço de hoje — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -3140,9 +3140,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Beelink SER8: análise, preço e 32GB vs 64GB (2026)',
       reviewBody:
-        'O Beelink SER8 (Ryzen 7 8845HS, Radeon 780M), na configuração de 32 GB/1 TB, roda Home Assistant, Frigate e um LLM 7B local no Ollama por um preço a confirmar (agosto de 2026). É a melhor opção de custo-benefício entre os mini PCs de IA local para essa tarefa específica, embora a Beelink já tenha lançado as linhas mais recentes SER9 e SER10.',
+        'O Beelink SER8 (Ryzen 7 8845HS, Radeon 780M), na configuração de 32 GB/1 TB, roda Home Assistant, Frigate e um LLM 7B local no Ollama; a configuração de 24 GB/1 TB tem preço de tabela de US$ 799 na loja oficial dos EUA (verificado em 2026-10-25). É a melhor opção de custo-benefício entre os mini PCs de IA local para essa tarefa específica, embora a Beelink já tenha lançado as linhas mais recentes SER9 e SER10.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3168,18 +3168,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-ar.webp',
     affiliateDisclosure: true,
     title: 'مراجعة Beelink SER8: المواصفات والسعر و32GB مقابل 64GB (2026)',
-    seoTitle: 'مراجعة Beelink SER8 2026 — المواصفات والسعر و32GB مقابل 64GB',
+    seoTitle: 'مراجعة Beelink SER8 2026: المواصفات والسعر و32GB/64GB',
     intro:
-      'يُعد Beelink SER8 (بمعالج AMD Ryzen 7 8845HS، وRadeon 780M، وذاكرة DDR5) أفضل حاسوب صغير من حيث القيمة مقابل السعر لمنزل ذكي يعمل بالذكاء الاصطناعي المحلي في 2026 — تُشغّل نسخة 32 GB / 1 TB منه Home Assistant وFrigate وWhisper ونموذجًا 7B على Ollama في جهاز واحد هادئ بسعر يتراوح تقريبًا بين $799–849 (أغسطس 2026، السعر متقلب حسب البائع والتكوين). تعيد هذه المراجعة التحقق من كل مواصفة مقابل Beelink ومصادر مستقلة، وتضع توقعات صادقة لسرعة النموذج اللغوي المحلي كتقديرات لا كنتائج قياس فعلية، وتغطي ما تغيّر منذ الإطلاق — بما في ذلك سلسلتا SER9 وSER10 الأحدث من Beelink.',
+      'يُعد Beelink SER8 (بمعالج AMD Ryzen 7 8845HS، وRadeon 780M، وذاكرة DDR5) أفضل حاسوب صغير من حيث القيمة مقابل السعر لمنزل ذكي يعمل بالذكاء الاصطناعي المحلي في 2026 — تُشغّل نسخة 32 GB / 1 TB منه Home Assistant وFrigate وWhisper ونموذجًا 7B على Ollama في جهاز واحد هادئ؛ ويُدرج متجر Beelink الرسمي تكوين 24 GB / 1 TB بسعر قائمة قدره $799 (سعر القائمة الرسمي في متجر الولايات المتحدة، تم التحقق منه في 2026-10-25؛ وقد تختلف الأسعار في بلدك)، أما تكوينات 32 GB فراجع الإعلان الحالي. تعيد هذه المراجعة التحقق من كل مواصفة مقابل Beelink ومصادر مستقلة، وتضع توقعات صادقة لسرعة النموذج اللغوي المحلي كتقديرات لا كنتائج قياس فعلية، وتغطي ما تغيّر منذ الإطلاق — بما في ذلك سلسلتا SER9 وSER10 الأحدث من Beelink.',
     metaDescription:
-      'مراجعة Beelink SER8 2026: مواصفات Ryzen 7 8845HS، السعر الحالي لكل تكوين، 32GB مقابل 64GB، استهلاك الطاقة في وضع الخمول، الأبعاد. يُشغّل Home Assistant مع نموذج LLM 7B محلي — تحليل كامل.',
+      'مراجعة Beelink SER8 2026: مواصفات Ryzen 7 8845HS، السعر الحالي لكل تكوين، 32GB مقابل 64GB، استهلاك الخمول. يشغّل Home Assistant مع LLM 7B محلي.',
     twitterDescription:
       'Beelink SER8 (2026): Ryzen 7 8845HS، وRadeon 780M، وDDR5، بدءًا من نحو $799. أي تكوين تشتري لتشغيل Home Assistant مع نموذج محلي — 32GB مقابل 64GB، والمواصفات، والسعر الحالي.',
     readTime: '9 دقائق للقراءة',
@@ -3194,18 +3194,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs حاسوب صغير',
     ],
     leadAnswerBlock:
-      '**نعم — اشترِ Beelink SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS) إذا كنت تريد تشغيل Home Assistant وFrigate ونموذج LLM محلي صغير بهدوء في جهاز واحد.** يُشغّل المحور وFrigate وWhisper ونموذجًا 7B على Ollama بسعر يتراوح تقريبًا بين $799–849 (32 GB/1 TB، أغسطس 2026، متقلب) — وهو أرخص من GEEKOM A9 Max مقابل معظم أعمال المنزل الذكي نفسها. الأفضل لـ: Home Assistant + Frigate + مساعد 7B–8B. غير مناسب لـ: النماذج من فئة 32B فما فوق — راجع بديل خادم GPU أدناه.',
+      '**نعم — اشترِ Beelink SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS) إذا كنت تريد تشغيل Home Assistant وFrigate ونموذج LLM محلي صغير بهدوء في جهاز واحد.** يُشغّل المحور وFrigate وWhisper ونموذجًا 7B على Ollama (سعر القائمة الرسمي في الولايات المتحدة $799 لتكوين 24 GB/1 TB، تم التحقق منه في 2026-10-25؛ وبالنسبة لـ32 GB راجع الإعلان الحالي) — أي ما بين نصف وثلاثة أخماس سعر قائمة GEEKOM A9 Max ($1,299–1,599) مقابل معظم أعمال المنزل الذكي نفسها. الأفضل لـ: Home Assistant + Frigate + مساعد 7B–8B. غير مناسب لـ: النماذج من فئة 32B فما فوق — راجع بديل خادم GPU أدناه.',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق شراء Beelink SER8 للذكاء الاصطناعي المحلي و Home Assistant؟',
         answer:
-          'نعم، إذا كان هدفك هو Home Assistant مع Frigate مع نموذج LLM محلي بحجم 7B–8B — اشترِ تكوين 32 GB/1 TB (Ryzen 7 8845HS، Radeon 780M) بسعر يتراوح تقريبًا بين $799–849 (أغسطس 2026، متقلب). يُشغّل نموذج 7B براحة، ويُحمّل نموذج 13B–14B بدقة 4 بت لكن بسرعة أبطأ، ويصبح ضيقًا فيما يتجاوز ذلك. انتقل إلى 64 GB/1 TB (نحو $1,239) فقط إذا كنت تريد تحديدًا أن تشعر النماذج من فئة 14B بالراحة لا بمجرد إمكانية الاستخدام. تجنّبه تمامًا للنماذج من فئة 32B فما فوق — راجع مقارنة خادم GPU أدناه.',
+          'نعم، إذا كان هدفك هو Home Assistant مع Frigate مع نموذج LLM محلي بحجم 7B–8B — اشترِ تكوين 32 GB/1 TB (Ryzen 7 8845HS، Radeon 780M). ويُدرج متجر Beelink الرسمي تكوين 24 GB/1 TB بسعر $799 (سعر القائمة الرسمي في متجر الولايات المتحدة، تم التحقق منه في 2026-10-25؛ وقد تختلف الأسعار في بلدك)؛ أما تكوينات 32 GB فراجع الإعلان الحالي. يُشغّل نموذج 7B براحة، ويُحمّل نموذج 13B–14B بدقة 4 بت لكن بسرعة أبطأ، ويصبح ضيقًا فيما يتجاوز ذلك. انتقل إلى 64 GB/1 TB (راجع الإعلان الحالي) فقط إذا كنت تريد تحديدًا أن تشعر النماذج من فئة 14B بالراحة لا بمجرد إمكانية الاستخدام. تجنّبه تمامًا للنماذج من فئة 32B فما فوق — راجع مقارنة خادم GPU أدناه.',
         bullets: [
           'المعالج: Ryzen 7 8845HS — 8 أنوية/16 خيطًا، Radeon 780M (12 CU، RDNA 3)',
           'تحقق من المعالج في الإعلان: تبيع Beelink أيضًا نسخة أرخص من SER8 بشريحة 8745HS (تردد تعزيز أقل، الاسم نفسه) — تغطي هذه المراجعة وحدة 8845HS فقط',
           'الذاكرة: SO-DIMM مزدوجة، قابلة للاستبدال من المستخدم؛ 32 GB هو التكوين الأساسي، و64 GB لمن يريد هامشًا إضافيًا',
           'النموذج المحلي (تقدير من المواصفات، غير مقاس بمعيار قياسي): 7B مريح؛ 13B–14B قابل للاستخدام لكنه أبطأ؛ لا يُنصح بـ32B فما فوق',
-          'السعر: 32 GB/1 TB نحو $799–849؛ 64 GB/1 TB نحو $1,239 (أغسطس 2026، تحقق من السعر الحالي — يختلف حسب البائع وسعة الذاكرة)',
+          'السعر: سعر القائمة الرسمي في الولايات المتحدة $799 لتكوين 24 GB/1 TB (تم التحقق منه في 2026-10-25)؛ أما تكوينات 32 GB و64 GB فراجع الإعلان الحالي (يختلف حسب البائع وسعة الذاكرة، وقد تختلف الأسعار في بلدك)',
           'أصدرت Beelink منذ ذلك الحين سلسلتَي SER9 وSER10 Pro/Max — لم يعد SER8 أحدث طرازات Beelink، لكنه يبقى الخيار الأفضل من حيث القيمة لهذه المهمة تحديدًا',
         ],
         updatedDate: '2026-08',
@@ -3232,7 +3232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قرار الشراء النهائي', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Beelink SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS) حاسوب صغير بسعر $799–849 يُشغّل Home Assistant وFrigate ونموذج LLM 7B محلي على Ollama في جهاز واحد هادئ، ما يجعله الخيار الأفضل من حيث القيمة لمنزل ذكي بذكاء اصطناعي محلي في 2026.' },
+      { type: 'one-sentence', content: 'Beelink SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS) حاسوب صغير (يبدأ من $799 سعر القائمة الرسمي في الولايات المتحدة، 24 GB/1 TB) يُشغّل Home Assistant وFrigate ونموذج LLM 7B محلي على Ollama في جهاز واحد هادئ، ما يجعله الخيار الأفضل من حيث القيمة لمنزل ذكي بذكاء اصطناعي محلي في 2026.' },
       { type: 'plain-terms', content: 'الحاسوب الصغير جهاز صغير وهادئ يعمل باستمرار. يجمع SER8 بين معالج AMD سريع، ورسوميات مدمجة قوية، وذاكرة كافية لتشغيل مركز منزلك الذكي بالكامل مع نموذج محادثة ذكاء اصطناعي متوسط الحجم في آنٍ واحد، دون سعر جهاز راقٍ. توجد الذاكرة في منفذين قابلين للاستبدال، فيمكنك الترقية لاحقًا — نسخة 32 GB هي التي ينبغي لمعظم المشترين اختيارها؛ ولا تستحق 64 GB الفرق في السعر إلا إذا أردت تحديدًا أن يشعر نموذج أكبر بالراحة لا بمجرد إمكانية الاستخدام.' },
     ],
     sections: {
@@ -3241,11 +3241,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة',
         isTldr: true,
         items: [
-          'اشترِ SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS) — يُشغّل Home Assistant وFrigate وWhisper ونموذج LLM 7B محلي في جهاز واحد بسعر يتراوح تقريبًا بين $799–849 (أغسطس 2026، متقلب)',
+          'اشترِ SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS) — يُشغّل Home Assistant وFrigate وWhisper ونموذج LLM 7B محلي في جهاز واحد — سعر القائمة الرسمي في الولايات المتحدة $799 لتكوين 24 GB/1 TB (تم التحقق منه في 2026-10-25)، أما 32 GB فراجع الإعلان الحالي',
           'تحقق من أن الإعلان يذكر "8845HS" لا نسخة "8745HS" الأرخص التي تبيعها Beelink أيضًا تحت اسم SER8 نفسه',
-          '32 GB هو التكوين الأساسي لمعظم المشترين؛ انتقل إلى 64 GB (نحو $1,239) فقط إذا أردت أن تشعر نماذج 14B بالراحة',
+          '32 GB هو التكوين الأساسي لمعظم المشترين؛ انتقل إلى 64 GB (راجع الإعلان الحالي) فقط إذا أردت أن تشعر نماذج 14B بالراحة',
           'أصدرت Beelink سلسلتَي SER9 وSER10 Pro/Max الأحدث منذ النشر الأصلي لهذه المراجعة — لم يعد SER8 الطراز الرائد الحالي، لكنه يبقى الخيار الأفضل لتشغيل Home Assistant + Frigate + نموذج 7B',
-          'أرخص وأبسط من [GEEKOM A9 Max](/ar/smart-home/geekom-a9-max-local-ai-review) (يبلغ سعره الآن $1,099–1,799)؛ وأقدر بكثير من جهاز Intel N150',
+          'أرخص وأبسط من [GEEKOM A9 Max](/ar/smart-home/geekom-a9-max-local-ai-review) (سعر قائمته الرسمي $1,299–1,599)؛ وأقدر بكثير من جهاز Intel N150',
           'تجنّبه تمامًا للنماذج من فئة 32B فما فوق — راجع مقارنة خادم GPU لهذه المهمة',
         ],
       },
@@ -3253,9 +3253,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم وأفضل تكوين',
         content:
-          '**نعم — اشترِ Beelink SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS، Radeon 780M) إذا كنت تريد تشغيل Home Assistant وFrigate ونموذج LLM محلي صغير بهدوء في جهاز واحد.** التكوين الموصى به: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. الأفضل لـ: خادم منزلي متكامل — يجمع بين Home Assistant وOllama وWhisper وFrigate معًا، مع مساعد 7B مريح ونموذج 13B–14B قابل للاستخدام لكنه أبطأ.\n\nالسعر الحالي: تحقق من السعر المباشر — يختلف حسب تكوين الذاكرة/التخزين والبائع؛ يتراوح النطاق الذي تم البحث عنه لتكوين 32 GB/1 TB تقريبًا بين $799–849 (أغسطس 2026). غير مناسب لـ: من يخطط لتشغيل نماذج من فئة 30B فما فوق بشكل روتيني — إذ يجعل سقف الذاكرة وبنية الذاكرة المشتركة لمعالج الرسوميات المدمج هذا خيارًا سيئًا حتى مع 64 GB. راجع بدلًا من ذلك [بديل خادم GPU](#vs-gpu-server).',
+          '**نعم — اشترِ Beelink SER8 بسعة 32 GB/1 TB (Ryzen 7 8845HS، Radeon 780M) إذا كنت تريد تشغيل Home Assistant وFrigate ونموذج LLM محلي صغير بهدوء في جهاز واحد.** التكوين الموصى به: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. الأفضل لـ: خادم منزلي متكامل — يجمع بين Home Assistant وOllama وWhisper وFrigate معًا، مع مساعد 7B مريح ونموذج 13B–14B قابل للاستخدام لكنه أبطأ.\n\nالسعر الحالي: تحقق من السعر المباشر — يختلف حسب تكوين الذاكرة/التخزين والبائع؛ يُدرج متجر Beelink الرسمي تكوين 24 GB/1 TB بسعر $799 (سعر القائمة الرسمي في متجر الولايات المتحدة، تم التحقق منه في 2026-10-25؛ وقد تختلف الأسعار في بلدك)؛ أما تكوينات 32 GB فراجع الإعلان الحالي. غير مناسب لـ: من يخطط لتشغيل نماذج من فئة 30B فما فوق بشكل روتيني — إذ يجعل سقف الذاكرة وبنية الذاكرة المشتركة لمعالج الرسوميات المدمج هذا خيارًا سيئًا حتى مع 64 GB. راجع بدلًا من ذلك [بديل خادم GPU](#vs-gpu-server).',
         affiliateLinks: [
-          { label: 'تحقق من سعر SER8 الحالي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'تحقق من سعر SER8 الحالي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'قارن تكوينات SER8', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8 (جميع التكوينات)', productCategory: 'Mini PC' },
         ],
       },
@@ -3288,18 +3288,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'اشترِ 32GB/1TB إذا: كان هدفك نموذجًا بحجم 7B–8B، وتُشغّل Home Assistant + Frigate + Whisper إلى جانبه، وتريد أقل سعر لا يزال يؤدي المهمة براحة.',
           'اشترِ 64GB/1TB إذا: كنت تخطط لتشغيل نماذج 13B–14B بانتظام وتريدها بنفس سرعة استجابة فئة 7B على 32 GB، أو تريد هامش ذاكرة إضافيًا لتشغيل عدة خدمات في آنٍ واحد (HA وFrigate وقاعدة بيانات متجهية وOllama) دون تبديل ذاكرة.',
           'يشترك التكوينان في معالج الرسوميات المدمج Radeon 780M نفسه وعرض نطاق DDR5-5600 نفسه — لا يجعل 64 GB الاستدلال أسرع، بل يسمح فقط بتحميل نماذج أكبر.',
-          'يكلّف طراز 64 GB حاليًا نحو $400–450 أكثر من طراز 32 GB — يستحق ذلك فقط إذا كانت فئة النموذج الأكبر هدفًا فعليًا، لا مجرد احتياط "لكل احتمال".',
+          'يكلّف طراز 64 GB أكثر من طراز 32 GB (راجع الإعلان الحالي لمعرفة الفرق) — يستحق ذلك فقط إذا كانت فئة النموذج الأكبر هدفًا فعليًا، لا مجرد احتياط "لكل احتمال".',
         ],
         affiliateLinks: [
-          { label: 'تحقق من السعر الحالي — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
-          { label: 'تحقق من السعر الحالي — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '$1,239' },
+          { label: 'تحقق من السعر الحالي — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'تحقق من السعر الحالي — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: 'المواصفات',
         content:
-          '**أعيد التحقق من جميع المواصفات أدناه مقابل إعلان Beelink نفسها ومصادر بائعين ومراجعات مستقلة في أغسطس 2026.** تبيع Beelink اسم SER8 بمعالجَين مختلفين — تحقق قبل الشراء من أن الإعلان يذكر "8845HS" (موضوع هذه المراجعة، بتردد تعزيز 5.1 غيغاهرتز) لا النسخة الأرخص "8745HS" (بتردد تعزيز 4.9 غيغاهرتز، متشابهة فيما عدا ذلك). تختلف الذاكرة عند البيع حسب الطراز (16 أو 24 أو 32 أو 64 غيغابايت)؛ يعكس هذا الجدول وحدة 32 GB / 1 TB بوصفها التكوين المرجعي.',
+          '**تم التحقق من جميع المواصفات أدناه مقابل إعلان Beelink نفسها ومصادر بائعين ومراجعات مستقلة؛ وجرى التحقق من الأسعار آخر مرة في المتجر الرسمي بتاريخ 2026-10-25.** تبيع Beelink اسم SER8 بمعالجَين مختلفين — تحقق قبل الشراء من أن الإعلان يذكر "8845HS" (موضوع هذه المراجعة، بتردد تعزيز 5.1 غيغاهرتز) لا النسخة الأرخص "8745HS" (بتردد تعزيز 4.9 غيغاهرتز، متشابهة فيما عدا ذلك). تختلف الذاكرة عند البيع حسب الطراز (16 أو 24 أو 32 أو 64 غيغابايت)؛ يعكس هذا الجدول وحدة 32 GB / 1 TB بوصفها التكوين المرجعي.',
         columns: ['المواصفة', 'Beelink SER8 (8845HS)'],
         rows: [
           { 'المواصفة': 'المعالج', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS (Zen 4، 4 نانومتر)' },
@@ -3313,7 +3313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المواصفة': 'استهلاك الطاقة (TDP)', 'Beelink SER8 (8845HS)': '54–65 واط (يعمل عند 65 واط بشكل مستمر)' },
           { 'المواصفة': 'الأبعاد', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 ملم، نحو 0.75 كغ' },
           { 'المواصفة': 'نظام التشغيل', 'Beelink SER8 (8845HS)': 'Windows 11 Pro (تثبيت Linux/Proxmox مدعوم)' },
-          { 'المواصفة': 'السعر (32GB/1TB)', 'Beelink SER8 (8845HS)': 'نحو $799–849 (أغسطس 2026 — متقلب، تحقق من السعر الحالي)' },
+          { 'المواصفة': 'السعر (القائمة الرسمية)', 'Beelink SER8 (8845HS)': '$799 لتكوين 24GB/1TB (متجر الولايات المتحدة، تم التحقق منه في 2026-10-25)؛ أما 32GB فراجع الإعلان الحالي' },
         ],
         items: [
           'بلا بطاقة رسومات منفصلة: يعمل كل استدلال الذكاء الاصطناعي على المعالج ومعالج الرسوميات المدمج Radeon 780M اللذين يتشاركان ذاكرة النظام.',
@@ -3373,7 +3373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أنشئ هذا الإعداد بالضبط: راجع [توصيل Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration) و[تشغيل منزلك الذكي على نموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide).',
         ],
         affiliateLinks: [
-          { label: 'تحقق من سعر SER8 الحالي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'تحقق من سعر SER8 الحالي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -3408,7 +3408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'معالج الرسوميات المدمج Radeon 780M: قوي بما يكفي لاستدلال نموذج 7B وفك ترميز فيديو Frigate، دون استهلاك الطاقة أو الضجيج اللذين تسببهما بطاقة رسومات منفصلة.',
         ],
         affiliateLinks: [
-          { label: 'تحقق من سعر SER8 الحالي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'تحقق من سعر SER8 الحالي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -3417,7 +3417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**لماذا أُعجبت به، ولماذا لن أشتريه لكل مهمة.**',
         items: [
           '**لماذا أُعجبت به**',
-          'أفضل قيمة مقابل السعر لجهاز ذكاء اصطناعي محلي قادر — $799–849 مقابل جهاز يُشغّل براحة نموذج 7B إلى جانب حزمة كاملة لمنزل ذكي',
+          'أفضل قيمة مقابل السعر لجهاز ذكاء اصطناعي محلي قادر — $799 سعر القائمة الرسمي في الولايات المتحدة (24 GB/1 TB) مقابل جهاز يُشغّل براحة نموذج 7B إلى جانب حزمة كاملة لمنزل ذكي',
           'الذاكرة القابلة للاستبدال من المستخدم ومنفذا M.2 يعنيان أن الجهاز ينمو معك بدلًا من إجبارك على الاستبدال',
           'يغطي USB4 و2.5GbE اختناقات خادم منزلي حقيقية (سرعة الشبكة، التخزين الخارجي) تتجاهلها الأجهزة الأرخص',
           'يعمل عند 65 واط تحت الحِمل ونحو 8–12 واط في وضع الخمول — رخيص لتركه يعمل على مدار الساعة',
@@ -3433,19 +3433,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8 مقابل البدائل',
         content: '**إذا لم يكن SER8 مناسبًا، توجد أربعة أجهزة تحيط به من ناحية السعر والقدرة — لكل منها مراجعته الخاصة وبطاقة منتجه الخاصة أدناه.**',
-        columns: ['الحاسوب الصغير', 'السعر (تقريبي)', 'سقف الذاكرة (مُختبَر)', 'الأفضل لـ'],
+        columns: ['الحاسوب الصغير', 'سعر القائمة الرسمي', 'سقف الذاكرة (حسب الشركة المصنّعة)', 'الأفضل لـ'],
         rows: [
-          { 'الحاسوب الصغير': 'Beelink SER8', 'السعر (تقريبي)': '$799–849 (32GB/1TB)', 'سقف الذاكرة (مُختبَر)': 'نحو 64–96GB', 'الأفضل لـ': 'الأفضل قيمة: HA + نموذج 7B' },
-          { 'الحاسوب الصغير': 'Beelink EQ14', 'السعر (تقريبي)': '$180–230', 'سقف الذاكرة (مُختبَر)': '16GB', 'الأفضل لـ': 'HA فقط، نموذج صغير جدًا' },
-          { 'الحاسوب الصغير': 'Minisforum UM890 Pro', 'السعر (تقريبي)': '$700–850', 'سقف الذاكرة (مُختبَر)': 'نحو 64–96GB', 'الأفضل لـ': '2.5GbE مزدوج، منفذ eGPU' },
-          { 'الحاسوب الصغير': 'GEEKOM A9 Max (2026)', 'السعر (تقريبي)': '$1,099–1,799', 'سقف الذاكرة (مُختبَر)': '128GB', 'الأفضل لـ': 'أقصى هامش، Wi-Fi 7' },
-          { 'الحاسوب الصغير': 'GMKtec G3 Plus', 'السعر (تقريبي)': '$200–260', 'سقف الذاكرة (مُختبَر)': '32GB', 'الأفضل لـ': 'اقتصادي، قابل للترقية' },
+          { 'الحاسوب الصغير': 'Beelink SER8', 'سعر القائمة الرسمي': '$799 (24GB/1TB)', 'سقف الذاكرة (حسب الشركة المصنّعة)': 'نحو 64–96GB', 'الأفضل لـ': 'الأفضل قيمة: HA + نموذج 7B' },
+          { 'الحاسوب الصغير': 'Beelink EQ14', 'سعر القائمة الرسمي': '$385 (16GB/500GB)', 'سقف الذاكرة (حسب الشركة المصنّعة)': '16GB', 'الأفضل لـ': 'HA فقط، نموذج صغير جدًا' },
+          { 'الحاسوب الصغير': 'Minisforum UM890 Pro', 'سعر القائمة الرسمي': '$439.90 هيكل فقط / $823.90 (32GB/1TB)', 'سقف الذاكرة (حسب الشركة المصنّعة)': 'نحو 64–96GB', 'الأفضل لـ': '2.5GbE مزدوج، منفذ eGPU' },
+          { 'الحاسوب الصغير': 'GEEKOM A9 Max (2026)', 'سعر القائمة الرسمي': '$1,299–1,599', 'سقف الذاكرة (حسب الشركة المصنّعة)': '128GB', 'الأفضل لـ': 'أقصى هامش، Wi-Fi 7' },
+          { 'الحاسوب الصغير': 'GMKtec G3 Plus', 'سعر القائمة الرسمي': '$399.99–499.99', 'سقف الذاكرة (حسب الشركة المصنّعة)': '32GB', 'الأفضل لـ': 'N150، ذاكرة قابلة للترقية' },
         ],
         items: [
-          '[GEEKOM A9 Max](/ar/smart-home/geekom-a9-max-local-ai-review) — الخيار الأفضل للهامش: سقف ذاكرة 128 غيغابايت وWi-Fi 7، لكن سعره الآن $1,099–1,799 (إصدار 2026، Ryzen AI 9 HX 370/HX 470) — أغلى بوضوح من SER8، لكن تحقق من كلا السعرين المباشرين قبل الشراء.',
-          '[Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) — أداء مشابه لـRadeon 780M، لكنه يضيف 2.5GbE مزدوجًا وWi-Fi 6E ومنفذ eGPU من نوع OCuLink مقابل فارق سعر معتدل.',
-          '[Beelink EQ14](/ar/smart-home/beelink-eq14-local-ai-review) — جهاز Intel N150 اقتصادي مخصص لـHome Assistant مع نموذج صغير جدًا فقط؛ تجنّبه إذا أردت مساعدًا من فئة 7B.',
-          '[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — خيار اقتصادي آخر من فئة N150 بذاكرة قابلة للترقية.',
+          '[GEEKOM A9 Max](/ar/smart-home/geekom-a9-max-local-ai-review) — الخيار الأفضل للهامش: سقف ذاكرة 128 غيغابايت وWi-Fi 7، لكن سعر قائمته الرسمي $1,299–1,599 (إصدار 2026، Ryzen AI 9 HX 370/HX 470) — أي نحو 1.6 إلى 2.0 ضعف سعر قائمة SER8 ($799)؛ تحقق من كلا السعرين المباشرين قبل الشراء.',
+          '[Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) — أداء مشابه لـRadeon 780M، لكنه يضيف 2.5GbE مزدوجًا وWi-Fi 6E ومنفذ eGPU من نوع OCuLink؛ وبحسب الصفحة الرسمية يبلغ السعر $439.90 للهيكل فقط و$823.90 مع 32 GB/1 TB، وكان معروضًا كنافد عند التحقق في 2026-10-25.',
+          '[Beelink EQ14](/ar/smart-home/beelink-eq14-local-ai-review) — جهاز Intel N150 مخصص لـHome Assistant مع نموذج صغير جدًا فقط (سعر القائمة الرسمي $385 لتكوين 16 GB/500 GB، ومُصنَّف كطلب مسبق عند التحقق في 2026-10-25)؛ تجنّبه إذا أردت مساعدًا من فئة 7B.',
+          '[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — خيار آخر من فئة N150 بذاكرة قابلة للترقية (سعر القائمة الرسمي $399.99–499.99؛ وكانت جميع الإصدارات معروضة كنافدة عند التحقق في 2026-10-25).',
           'تُعد سلسلتا Beelink الخاصتان SER9 وSER10 Pro/Max (أُطلقتا في معرض CES 2026، بمعالج Ryzen AI 9 HX 470، وشبكة 10GbE في بعض الطرازات) الخط الرائد الحالي — تستحق فقط إذا كانت شبكة 10GbE أو جيل NPU الأحدث مهمَّين لك تحديدًا؛ أما لتشغيل Home Assistant + Frigate + نموذج 7B، فلا تُغيّران التوصية.',
           'ما زلت تقارن؟ ابدأ من [تجميعة أفضل الحواسيب الصغيرة لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
@@ -3456,13 +3456,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**قناتان هما الخياران الحقيقيان القابلان للتحقق: متجر Beelink الرسمي (دعم ضمان مباشر) وAmazon (توصيل سريع، إرجاع سهل).** تتحرك الأسعار أسبوعًا بعد أسبوع وبحسب طراز الذاكرة/التخزين — تحقق من السعر المباشر بدلًا من الوثوق برقم ثابت.',
         items: [
-          'متجر Beelink الرسمي: ضمان ودعم مباشران من الشركة المصنّعة؛ قد يكون أحيانًا الأعلى سعرًا بين القناتين.',
-          'Amazon: عادة ما يكون السعر الأكثر تنافسية، إلى جانب سياسة إرجاع Amazon القياسية — الخيار العملي الافتراضي لمعظم المشترين.',
+          'متجر Beelink الرسمي: ضمان ودعم مباشران من الشركة المصنّعة؛ ويُدرج المتجر تكوين 24 GB/1 TB بسعر $799 (تم التحقق منه في 2026-10-25).',
+          'Amazon: توصيل سريع وسياسة إرجاع Amazon القياسية؛ ولم يتم التحقق من أسعار Amazon لهذه الصفحة وقد تختلف عن المتجر الرسمي — قارن قبل الشراء.',
           'تأكد من طراز الذاكرة (16 أو 24 أو 32 أو 64 غيغابايت) والمعالج (8845HS لا 8745HS) في الإعلان قبل الشراء — تبيع Beelink عدة نسخ تحت الاسم "SER8" نفسه.',
         ],
         affiliateLinks: [
-          { label: 'تحقق من السعر — متجر Beelink الرسمي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
-          { label: 'تحقق من السعر — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'تحقق من السعر — متجر Beelink الرسمي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: 'تحقق من السعر — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -3484,14 +3484,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: 'التكلفة الإجمالية للإعداد',
-        content: '**يقترب إعداد كامل واقعي — SER8 مضافًا إليه الحزمة أعلاه — من $1,009–1,124 (أغسطس 2026)، لا سعر ملصق الحاسوب الصغير وحده.**',
+        content: '**يقترب إعداد كامل واقعي — SER8 مضافًا إليه الحزمة أعلاه — من $1,009–1,074 (باستخدام سعر القائمة الرسمي $799 لجهاز SER8 بسعة 24 GB/1 TB، تم التحقق منه في 2026-10-25)، لا سعر ملصق الحاسوب الصغير وحده.**',
         columns: ['البند', 'السعر (تقريبي)'],
         rows: [
-          { 'البند': 'Beelink SER8 بسعة 32GB/1TB', 'السعر (تقريبي)': '$799–849' },
+          { 'البند': 'Beelink SER8 بسعة 24GB/1TB (القائمة الرسمية)', 'السعر (تقريبي)': '$799' },
           { 'البند': 'SONOFF ZBDongle-E (Zigbee)', 'السعر (تقريبي)': 'نحو $20–25' },
           { 'البند': 'كاميرتا Reolink RLC-810A × 2 (PoE)', 'السعر (تقريبي)': '$120–180' },
           { 'البند': 'Hailo-8L M.2 (مُسرّع Frigate)', 'السعر (تقريبي)': 'نحو $70' },
-          { 'البند': 'الإجمالي (تقريبي)', 'السعر (تقريبي)': '$1,009–1,124 فأكثر' },
+          { 'البند': 'الإجمالي (تقريبي)', 'السعر (تقريبي)': '$1,009–1,074 فأكثر' },
         ],
         items: [
           'يستثني هذا الإجمالي مبدّل/حاقن PoE والأسلاك، التي تختلف حسب المنزل وعادة ما تكون تكلفة لمرة واحدة تُشارك مع أجهزة شبكة أخرى.',
@@ -3505,7 +3505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**إذا كانت نماذج 32B أو 70B هي الهدف الفعلي، فلا تشترِ SER8 لمجرد أنه أرخص — نظام ببطاقة رسومات منفصلة هو الإجابة الصادقة لهذا الحِمل.** المقارنة أدناه غير منصفة عمدًا لـSER8 خارج نقاط قوته الحقيقية، لأن القارئ الذي يخطط لإعداد 70B لا ينبغي أن ينتهي به الأمر خائبًا هنا.',
         columns: ['العامل', 'SER8 (معالج رسوميات مدمج)', 'خادم GPU (24GB+ من ذاكرة الفيديو)'],
         rows: [
-          { 'العامل': 'السعر', 'SER8 (معالج رسوميات مدمج)': '$799–849', 'خادم GPU (24GB+ من ذاكرة الفيديو)': 'بدءًا من $1,500' },
+          { 'العامل': 'السعر', 'SER8 (معالج رسوميات مدمج)': '$799 (24GB/1TB، القائمة)', 'خادم GPU (24GB+ من ذاكرة الفيديو)': 'بدءًا من $1,500' },
           { 'العامل': 'استهلاك الطاقة', 'SER8 (معالج رسوميات مدمج)': '65 واط تحت الحِمل / نحو 10 واط في الخمول', 'خادم GPU (24GB+ من ذاكرة الفيديو)': '300–600 واط تحت الحِمل' },
           { 'العامل': 'نموذج 7B', 'SER8 (معالج رسوميات مدمج)': 'مريح', 'خادم GPU (24GB+ من ذاكرة الفيديو)': 'سريع، مبالغ فيه' },
           { 'العامل': 'نموذج 14B', 'SER8 (معالج رسوميات مدمج)': 'قابل للاستخدام', 'خادم GPU (24GB+ من ذاكرة الفيديو)': 'سريع' },
@@ -3528,7 +3528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الولايات المتحدة: تظل رسوم القسم 301 على الإلكترونيات الصينية سارية في 2026؛ وأبطلت المحكمة العليا في فبراير 2026 رسوم "IEEPA" المنفصلة لعام 2025 واستُبدلت برسوم مؤقتة محدودة السقف من القسم 122. كما انتهى إعفاء "de minimis" المعفي من الرسوم للواردات المباشرة دون 800 دولار.',
           'الاتحاد الأوروبي (يؤثر على ألمانيا/فرنسا): لا يوجد رسم عام على مستوى الاتحاد الأوروبي على الحواسيب الصغيرة الجاهزة، لكن منذ يوليو 2026 أُلغي حد الإعفاء البالغ 150 يورو على الطرود منخفضة القيمة الواردة مباشرة من الصين، وأُضيفت رسوم معالجة صغيرة لكل طرد.',
           'افتراض (اتجاه كلي، لا حقيقة خاصة بمنتج بعينه): أبقت قدرة التصدير الصينية المعاد توجيهها على توفر هذه العلامات التجارية مرتفعًا في الاتحاد الأوروبي والولايات المتحدة، ما يدعم عمومًا أسعارًا تنافسية.',
-          'الأثر الصافي: تحقق من السعر الحالي لدى البائع قبل الشراء — النطاقات في هذه الصفحة إرشادية ومؤرَّخة في أغسطس 2026.',
+          'الأثر الصافي: تحقق من السعر الحالي لدى البائع قبل الشراء — الأرقام في هذه الصفحة هي أسعار القائمة الرسمية التي جرى التحقق منها في 2026-10-25 وهي إرشادية فقط.',
         ],
       },
       priceSanityCheck: {
@@ -3539,14 +3539,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'إذا كان سعر SER8 بسعة 32GB/1TB ضمن نحو 100 دولار من سعر عرض GEEKOM A9 Max، فمن المرجّح أن يبرر سقف ذاكرته البالغ 128 غيغابايت وWi-Fi 7 الفرق لمن قد ينتقل إلى نماذج أكبر.',
           'إذا تقارب سعرا SER8 وSER9، تحقق مما إذا كانت تحسينات مواصفات SER9 (تحقق من سعر SER9 ومواصفاته الحاليين وقت الشراء) مهمة بما يكفي بالنسبة لك — وإلا يبقى SER8 الخيار الأفضل من حيث القيمة.',
-          'لا تشترِ بدافع زخم العلامة التجارية وحده — ترتبط توصية هذه الصفحة بتكوين 32GB/1TB بسعر نحو $799–849؛ أعِد التحقق قبل الشراء.',
+          'لا تشترِ بدافع زخم العلامة التجارية وحده — ترتبط توصية هذه الصفحة بتكوين 32GB/1TB (راجع الإعلان الحالي؛ سعر القائمة الرسمي في الولايات المتحدة لتكوين 24GB/1TB هو $799)؛ أعِد التحقق قبل الشراء.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هو السعر الحالي لجهاز Beelink SER8؟', a: 'يتراوح النطاق الذي تم البحث عنه لتكوين 32 GB/1 TB (Ryzen 7 8845HS) تقريبًا بين $799–849 اعتبارًا من أغسطس 2026، مع تكوين أساسي بسعة 16 GB/500 GB أرخص عادة (تحقق من السعر الحالي) وتكوين 64 GB/1 TB أغلى (نحو $1,239). تختلف الأسعار حسب البائع وتتغير أسبوعيًا — تحقق من السعر المباشر قبل الشراء بدلًا من الاعتماد على هذا الرقم.' },
+          { q: 'ما هو السعر الحالي لجهاز Beelink SER8؟', a: 'يُدرج متجر Beelink الرسمي تكوين 24 GB/1 TB (Ryzen 7 8845HS) بسعر $799 (سعر القائمة الرسمي في متجر الولايات المتحدة، تم التحقق منه في 2026-10-25؛ وكان يعرض سعر مقارنة قدره $959). أما تكوينات 32 GB و64 GB فراجع الإعلان الحالي؛ وقد تختلف الأسعار في بلدك عن أسعار القائمة الأمريكية. تختلف الأسعار حسب البائع وتتغير كثيرًا — تحقق من السعر المباشر قبل الشراء بدلًا من الاعتماد على هذا الرقم.' },
           { q: 'ما هي المواصفات الرسمية لـBeelink SER8؟', a: 'معالج AMD Ryzen 7 8845HS (8 أنوية/16 خيطًا، حتى 5.1 غيغاهرتز)، ومعالج رسوميات مدمج Radeon 780M (12 CU، RDNA 3)، ووحدة NPU بقدرة 16 TOPS، وذاكرة DDR5-5600 من نوع SO-DIMM مزدوجة (طرازات 16/24/32/64 غيغابايت)، وتخزين بمنفذَي M.2 2280 PCIe 4.0، وشبكة 2.5GbE، وWi-Fi 6، وUSB4، واستهلاك طاقة 54–65 واط. تبيع Beelink أيضًا نسخة أرخص من SER8 بشريحة 8745HS (تردد تعزيز 4.9 غيغاهرتز) — تحقق من المعالج في الإعلان.' },
           { q: 'ما هي أبعاد Beelink SER8؟', a: '135 × 135 × 44.7 ملم، بوزن نحو 0.75 كغ — صغير بما يكفي ليوضع خلف شاشة أو يُركَّب بعيدًا عن الأنظار.' },
           { q: 'هل يستطيع Beelink SER8 تشغيل نماذج LLM محلية؟', a: 'نعم. بذاكرة 32 غيغابايت ومعالج الرسوميات المدمج Radeon 780M، يُشغّل براحة نموذجًا من فئة 7B–8B على Ollama ويستطيع تحميل نموذج 13B–14B بدقة 4 بت، وإن كان ذلك أبطأ. هذه تقديرات من أجهزته الموثّقة، لا معيارًا قاسته PromptQuorum، لأن السرعة الفعلية تعتمد على النموذج والتكميم والواجهة الخلفية.' },
@@ -3554,7 +3554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما استهلاك الطاقة في وضع الخمول لجهاز SER8؟', a: 'نحو 8–12 واط وفق قياسات مستقلة — رخيص لتشغيله باستمرار كخادم منزلي. يستهلك تحت الحِمل المستمر حتى 65 واط. تعتمد الأرقام الدقيقة على الحِمل ونمط الطاقة.' },
           { q: 'هل تُسرّع وحدة NPU ذات 16 TOPS الذكاء الاصطناعي المحلي على SER8؟', a: 'لا. لا تستخدم واجهات تشغيل LLM السائدة (Ollama وllama.cpp وLM Studio) وحدة NPU للاستدلال في 2026 — بل تعمل على المعالج ومعالج الرسوميات المدمج Radeon 780M بدلًا من ذلك. تُسرّع وحدة NPU أحمالًا محددة من الرؤية/الصوت في الأطر المدعومة، لا استدلال الدردشة العام.' },
           { q: 'هل يوجد طراز Beelink أحدث من SER8؟', a: 'نعم. أصدرت Beelink طراز SER9، وفي معرض CES 2026، طرازَي SER10 Pro وSER10 Max (بمعالج Ryzen AI 9 HX 470، وشبكة تصل حتى 10GbE). هذه هي السلسلة الرائدة الحالية. أما بالنسبة للمهمة المحددة التي تغطيها هذه المراجعة — Home Assistant وFrigate ونموذج محلي من فئة 7B–14B — فيبقى SER8 الخيار الأفضل من حيث القيمة؛ فجيل NPU الأحدث لا يساعد هذا الاستخدام بشكل ملموس (راجع ملاحظة NPU أعلاه).' },
-          { q: 'SER8 أم GEEKOM A9 Max؟', a: 'يُعد SER8 الخيار الأفضل من حيث القيمة بسعر $799–849 ويغطي معظم احتياجات المنزل الذكي بذكاء اصطناعي محلي. اختر A9 Max فقط إذا احتجت إلى سقف ذاكرته البالغ 128 غيغابايت أو Wi-Fi 7 — اعتبارًا من أغسطس 2026، يبلغ سعره $1,099–1,799، أي أغلى بوضوح، لكن تحقق من كلا السعرين المباشرين قبل الشراء، واجعله اختيارًا مقصودًا لا ترقية افتراضية.' },
+          { q: 'SER8 أم GEEKOM A9 Max؟', a: 'يُعد SER8 الخيار الأفضل من حيث القيمة بسعر القائمة الرسمي في الولايات المتحدة $799 (24 GB/1 TB) ويغطي معظم احتياجات المنزل الذكي بذكاء اصطناعي محلي. اختر A9 Max فقط إذا احتجت إلى سقف ذاكرته البالغ 128 غيغابايت أو Wi-Fi 7 — يبلغ سعر قائمته $1,299–1,599، أي نحو 1.6 إلى 2.0 ضعف سعر قائمة SER8، لكن تحقق من كلا السعرين المباشرين قبل الشراء، واجعله اختيارًا مقصودًا لا ترقية افتراضية.' },
           { q: 'هل الذاكرة قابلة للترقية؟', a: 'نعم. يستخدم SER8 منفذَي SO-DIMM DDR5 قياسيَّين قابلَين للاستبدال من المستخدم، فيمكنك البدء بـ32 غيغابايت والانتقال إلى 64 غيغابايت لاحقًا. كما يحتوي على منفذَي M.2 لتوسعة التخزين.' },
           { q: 'أين يُصنَّع Beelink SER8، وهل يؤثر ذلك على السعر؟', a: 'يُصنَّع في الصين. في 2026، قد تؤثر التدابير الأمريكية على الاستيراد (رسوم القسم 301، وانتهاء إعفاء de minimis دون 800 دولار) وإلغاء الاتحاد الأوروبي لإعفاء 150 يورو للطرود منخفضة القيمة على التكلفة النهائية، لذا تحقق من السعر الحالي لدى البائع بدلًا من الاعتماد على رقم ثابت.' },
         ],
@@ -3576,13 +3576,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قرار الشراء النهائي',
         content: '**ثلاثة مسارات، وخيار افتراضي واضح.**',
         items: [
-          '**نعم، اشترِ SER8 بسعة 32 GB/1 TB إذا كنت:** تريد تشغيل Home Assistant وFrigate ومساعد محلي من فئة 7B–8B في جهاز واحد هادئ واقتصادي — هذه هي التوصية الافتراضية لمعظم قراء هذه الصفحة.',
+          '**نعم، اشترِ SER8 بسعة 32 GB/1 TB إذا كنت:** تريد تشغيل Home Assistant وFrigate ومساعد محلي من فئة 7B–8B في جهاز واحد هادئ ومنخفض استهلاك الطاقة — هذه هي التوصية الافتراضية لمعظم قراء هذه الصفحة.',
           '**نعم، لكن اختر 64 GB/1 TB إذا كانت:** نماذج 13B–14B هدفك الفعلي وتريدها سريعة الاستجابة، لا مجرد محمَّلة تقنيًا.',
           '**لا إذا كانت:** نماذج 32B أو 70B استخدامك الأساسي — اشترِ بدلًا من ذلك نظامًا ببطاقة رسومات منفصلة؛ راجع [دليل بناء محطة عمل ذكاء اصطناعي محلي](/ar/power-local-llm/best-workstation-build-local-ai-2026).',
           '**اختياري: SER8 بسعة 32GB/1TB — تحقق من سعر اليوم واشترِ هذا التكوين.**',
         ],
         affiliateLinks: [
-          { label: 'تحقق من سعر اليوم — SER8 بسعة 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'تحقق من سعر اليوم — SER8 بسعة 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -3591,9 +3591,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'مراجعة Beelink SER8: المواصفات والسعر و32GB مقابل 64GB (2026)',
       reviewBody:
-        'يُشغّل تكوين 32 GB/1 TB من Beelink SER8 (Ryzen 7 8845HS، Radeon 780M) تطبيق Home Assistant وFrigate ونموذج LLM 7B محلي على Ollama بسعر يتراوح تقريبًا بين $799–849 (أغسطس 2026). إنه الخيار الأفضل من حيث القيمة بين الحواسيب الصغيرة للذكاء الاصطناعي المحلي لهذه المهمة تحديدًا، مع أن Beelink أصدرت منذ ذلك الحين سلسلتَي SER9 وSER10 الأحدث.',
+        'يُشغّل تكوين 32 GB/1 TB من Beelink SER8 (Ryzen 7 8845HS، Radeon 780M) تطبيق Home Assistant وFrigate ونموذج LLM 7B محلي على Ollama (سعر القائمة الرسمي في متجر الولايات المتحدة لتكوين 24 GB/1 TB هو $799، تم التحقق منه في 2026-10-25). إنه الخيار الأفضل من حيث القيمة بين الحواسيب الصغيرة للذكاء الاصطناعي المحلي لهذه المهمة تحديدًا، مع أن Beelink أصدرت منذ ذلك الحين سلسلتَي SER9 وSER10 الأحدث.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3619,18 +3619,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: 'Beelink SER8 리뷰: 사양, 가격, 32GB 대 64GB (2026)',
-    seoTitle: 'Beelink SER8 리뷰 2026 — 사양, 가격, 32GB 대 64GB',
+    seoTitle: 'Beelink SER8 리뷰 2026: 사양·가격·32GB/64GB',
     intro:
-      'Beelink SER8(AMD Ryzen 7 8845HS, Radeon 780M, DDR5)은 2026년 로컬 AI 스마트홈에 가장 가성비가 좋은 미니 PC입니다. 32 GB / 1 TB 구성은 Home Assistant, Frigate, Whisper, 그리고 Ollama의 7B 모델을 조용한 기기 한 대에서 실행하며, 가격은 확인이 필요합니다(2026년 8월, 판매처와 구성에 따라 변동). 이 리뷰는 Beelink 및 독립 정보원을 대상으로 모든 사양을 재검증하고, 로컬 LLM 속도에 대해 실측 벤치마크가 아닌 추정치로서 정직한 기대치를 제시하며, 출시 이후 달라진 점(Beelink의 새로운 SER9 및 SER10 시리즈 포함)을 다룹니다.',
+      'Beelink SER8(AMD Ryzen 7 8845HS, Radeon 780M, DDR5)은 2026년 로컬 AI 스마트홈에 가장 가성비가 좋은 미니 PC입니다. 32 GB / 1 TB 구성은 Home Assistant, Frigate, Whisper, 그리고 Ollama의 7B 모델을 조용한 기기 한 대에서 실행하며, Beelink 공식 스토어는 24 GB / 1 TB 구성을 정가 $799(미국 공식 스토어 정가, 2026-10-25 확인, 국내 가격은 다를 수 있습니다)로 게시하고 있으며, 32 GB 구성은 현재 판매 페이지를 확인하세요. 이 리뷰는 Beelink 및 독립 정보원을 대상으로 모든 사양을 재검증하고, 로컬 LLM 속도에 대해 실측 벤치마크가 아닌 추정치로서 정직한 기대치를 제시하며, 출시 이후 달라진 점(Beelink의 새로운 SER9 및 SER10 시리즈 포함)을 다룹니다.',
     metaDescription:
-      'Beelink SER8 리뷰 2026: Ryzen 7 8845HS 사양, 구성별 현재 가격, 32GB 대 64GB, 유휴 전력 소비, 크기. Home Assistant와 7B 로컬 LLM 실행 — 완전한 분석.',
+      'Beelink SER8 리뷰 2026: Ryzen 7 8845HS 사양, 구성별 현재 가격, 32GB 대 64GB, 유휴 전력, 크기. Home Assistant와 7B 로컬 LLM 실행.',
     twitterDescription:
       'Beelink SER8(2026): Ryzen 7 8845HS, Radeon 780M, DDR5, — 현재 가격을 확인하세요. Home Assistant와 로컬 모델에 어떤 구성을 사야 할까 — 32GB 대 64GB, 사양, 현재 가격.',
     readTime: '9분 소요',
@@ -3645,18 +3645,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 7 8845hs 미니pc',
     ],
     leadAnswerBlock:
-      '**네 — Home Assistant, Frigate, 소형 로컬 LLM을 조용한 기기 한 대에서 실행하고 싶다면 Beelink SER8 32 GB/1 TB(Ryzen 7 8845HS)를 구매하세요.** 허브, Frigate, Whisper, 그리고 Ollama의 7B 모델을 (현재가 확인 필요, 32 GB/1 TB, 2026년 8월, 변동)에 실행할 수 있으며, 거의 같은 스마트홈 작업을 GEEKOM A9 Max보다 저렴하게 해냅니다. 최적: HA + Frigate + 7B~8B 어시스턴트. 부적합: 32B 이상 모델 — 아래 GPU 서버 대안을 참조하세요.',
+      '**네 — Home Assistant, Frigate, 소형 로컬 LLM을 조용한 기기 한 대에서 실행하고 싶다면 Beelink SER8 32 GB/1 TB(Ryzen 7 8845HS)를 구매하세요.** 허브, Frigate, Whisper, 그리고 Ollama의 7B 모델을 실행할 수 있으며(미국 공식 스토어 정가는 24 GB/1 TB 구성 기준 $799, 2026-10-25 확인, 32 GB는 현재 판매 페이지 확인), 거의 같은 스마트홈 작업을 GEEKOM A9 Max 정가($1,299~1,599)의 절반에서 5분의 3 수준에 해냅니다. 최적: HA + Frigate + 7B~8B 어시스턴트. 부적합: 32B 이상 모델 — 아래 GPU 서버 대안을 참조하세요.',
     quickAnswerTop: {
       ko: {
         question: '로컬 AI와 Home Assistant용으로 Beelink SER8을 사야 할까요?',
         answer:
-          '네, 목표가 Home Assistant + Frigate + 로컬 7B~8B LLM이라면 32 GB/1 TB 구성(Ryzen 7 8845HS, Radeon 780M)을 (현재가 확인 필요, 2026년 8월, 변동)에 구매하세요. 7B 모델은 여유롭게 실행되고, 13B~14B는 4비트로 불러올 수 있지만 느려지며, 그 이상은 빠듯해집니다. 14B 모델을 "사용 가능"이 아니라 "여유롭게" 실행하고 싶은 경우에만 64 GB/1 TB(현재가 확인 필요(32GB보다 높음))를 선택하세요. 32B 이상 모델에는 완전히 적합하지 않습니다 — 아래 GPU 서버 비교를 참조하세요.',
+          '네, 목표가 Home Assistant + Frigate + 로컬 7B~8B LLM이라면 32 GB/1 TB 구성(Ryzen 7 8845HS, Radeon 780M)을 구매하세요. Beelink 공식 스토어는 24 GB/1 TB 구성을 정가 $799(미국 공식 스토어 정가, 2026-10-25 확인, 국내 가격은 다를 수 있습니다)로 게시하고 있으며, 32 GB 구성은 현재 판매 페이지를 확인하세요. 7B 모델은 여유롭게 실행되고, 13B~14B는 4비트로 불러올 수 있지만 느려지며, 그 이상은 빠듯해집니다. 14B 모델을 "사용 가능"이 아니라 "여유롭게" 실행하고 싶은 경우에만 64 GB/1 TB(현재가 확인 필요(32GB보다 높음))를 선택하세요. 32B 이상 모델에는 완전히 적합하지 않습니다 — 아래 GPU 서버 비교를 참조하세요.',
         bullets: [
           'CPU: Ryzen 7 8845HS — 8코어/16스레드, Radeon 780M(12 CU, RDNA 3)',
           '판매 페이지에서 CPU를 확인하세요: Beelink는 동일한 SER8 이름으로 부스트 클럭이 낮은 8745HS 칩을 탑재한 더 저렴한 버전도 판매합니다 — 이 리뷰는 8845HS 기종만 다룹니다',
           'RAM: 듀얼 SO-DIMM, 사용자 교체 가능; 32 GB가 기본 구성, 64 GB는 여유가 필요한 경우',
           '로컬 LLM(사양 기반 추정, 벤치마크 아님): 7B 여유로움; 13B~14B 사용 가능하나 느림; 32B 이상은 권장하지 않음',
-          '가격: 32 GB/1 TB 현재가 확인 필요; 64 GB/1 TB 현재가 확인 필요(32GB보다 높음)(2026년 8월, 현재 가격 확인 — 판매처와 RAM 사양에 따라 다름)',
+          '가격: 미국 공식 스토어 정가는 24 GB/1 TB 구성 기준 $799(2026-10-25 확인); 32 GB 및 64 GB 구성은 현재 판매 페이지 확인(판매처와 RAM 사양에 따라 다르며 국내 가격은 다를 수 있음)',
           'Beelink는 이후 SER9 및 SER10 Pro/Max 시리즈를 출시했습니다 — SER8은 더 이상 Beelink의 최신 기종은 아니지만, 이 구체적인 용도에서는 여전히 더 나은 가성비를 제공합니다',
         ],
         updatedDate: '2026-08',
@@ -3683,7 +3683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '최종 구매 결정', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Beelink SER8 32 GB/1 TB(Ryzen 7 8845HS)는 (현재가 확인 필요) 미니 PC로, Home Assistant, Frigate, 그리고 Ollama의 7B 로컬 LLM을 조용한 기기 한 대에서 실행할 수 있어 2026년 로컬 AI 스마트홈에 가장 가성비가 좋은 선택입니다.' },
+      { type: 'one-sentence', content: 'Beelink SER8 32 GB/1 TB(Ryzen 7 8845HS)는 (미국 공식 스토어 정가 $799부터, 24 GB/1 TB) 미니 PC로, Home Assistant, Frigate, 그리고 Ollama의 7B 로컬 LLM을 조용한 기기 한 대에서 실행할 수 있어 2026년 로컬 AI 스마트홈에 가장 가성비가 좋은 선택입니다.' },
       { type: 'plain-terms', content: '미니 PC는 작고 조용하며 항상 켜져 있는 컴퓨터입니다. SER8은 빠른 AMD 프로세서와 강력한 내장 그래픽, 스마트홈 허브와 중간 규모의 AI 채팅 모델을 동시에 실행할 수 있는 충분한 메모리를 고급 기기의 가격 없이 결합합니다. 메모리는 교체 가능한 두 개의 슬롯에 있어 나중에 업그레이드할 수 있습니다 — 대부분의 구매자에게는 32 GB 버전이 적합하며, 64 GB는 더 큰 모델을 "사용 가능"이 아니라 "여유롭게" 실행하고 싶은 경우에만 추가 비용의 가치가 있습니다.' },
     ],
     sections: {
@@ -3692,11 +3692,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '핵심 요약',
         isTldr: true,
         items: [
-          '32 GB/1 TB SER8(Ryzen 7 8845HS)을 구매하세요 — Home Assistant, Frigate, Whisper, 로컬 7B LLM을 기기 한 대에서 현재가 확인 필요(2026년 8월, 변동)에 실행할 수 있습니다',
+          '32 GB/1 TB SER8(Ryzen 7 8845HS)을 구매하세요 — Home Assistant, Frigate, Whisper, 로컬 7B LLM을 기기 한 대에서 실행할 수 있습니다(미국 공식 스토어 정가는 24 GB/1 TB 기준 $799, 2026-10-25 확인, 32 GB는 현재 판매 페이지 확인)',
           '판매 페이지에 "8845HS"라고 명시되어 있는지 확인하세요. Beelink는 같은 SER8 이름으로 더 저렴한 "8745HS" 버전도 판매합니다',
           '32 GB는 대부분의 구매자에게 기본 구성입니다. 14B 모델을 여유롭게 실행하고 싶은 경우에만 64 GB(현재가 확인 필요(32GB보다 높음))를 선택하세요',
           'Beelink는 이 리뷰가 처음 게시된 이후 새로운 SER9 및 SER10 Pro/Max 시리즈를 출시했습니다 — SER8은 더 이상 현재의 최상위 기종은 아니지만, HA + Frigate + 7B 모델 용도로는 여전히 더 나은 선택입니다',
-          '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review)(현재 $1,099~1,799)보다 저렴하고 단순함; Intel N150 기기보다 훨씬 강력함',
+          '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review)(정가 $1,299~1,599)보다 저렴하고 단순함; Intel N150 기기보다 훨씬 강력함',
           '32B 이상 모델에는 완전히 적합하지 않습니다 — 해당 용도는 GPU 서버 비교를 참조하세요',
         ],
       },
@@ -3704,9 +3704,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론과 최적 구성',
         content:
-          '**네 — Home Assistant, Frigate, 소형 로컬 LLM을 조용한 기기 한 대에서 실행하고 싶다면 Beelink SER8 32 GB/1 TB(Ryzen 7 8845HS, Radeon 780M)를 구매하세요.** 추천 구성: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. 최적: Home Assistant, Ollama, Whisper, Frigate를 함께 실행하는 올인원 홈 서버로, 7B 어시스턴트는 여유롭고 13B~14B는 사용 가능하지만 느립니다.\n\n현재 가격: 실시간 가격을 확인하세요 — RAM/스토리지 구성과 판매처에 따라 다릅니다. 32 GB/1 TB 조사 범위는 현재가 확인 필요(2026년 8월)입니다. 부적합: 30B 이상 모델을 일상적으로 실행하려는 사람 — RAM 한도와 iGPU의 공유 메모리 구조 때문에 64 GB로도 적합하지 않습니다. 대신 [GPU 서버 대안](#vs-gpu-server)을 참조하세요.',
+          '**네 — Home Assistant, Frigate, 소형 로컬 LLM을 조용한 기기 한 대에서 실행하고 싶다면 Beelink SER8 32 GB/1 TB(Ryzen 7 8845HS, Radeon 780M)를 구매하세요.** 추천 구성: Ryzen 7 8845HS · 32 GB DDR5 · 1 TB NVMe. 최적: Home Assistant, Ollama, Whisper, Frigate를 함께 실행하는 올인원 홈 서버로, 7B 어시스턴트는 여유롭고 13B~14B는 사용 가능하지만 느립니다.\n\n현재 가격: 실시간 가격을 확인하세요 — RAM/스토리지 구성과 판매처에 따라 다릅니다. Beelink 공식 스토어는 24 GB/1 TB 구성을 정가 $799(미국 공식 스토어 정가, 2026-10-25 확인, 국내 가격은 다를 수 있습니다)로 게시하고 있으며, 32 GB 구성은 현재 판매 페이지를 확인하세요. 부적합: 30B 이상 모델을 일상적으로 실행하려는 사람 — RAM 한도와 iGPU의 공유 메모리 구조 때문에 64 GB로도 적합하지 않습니다. 대신 [GPU 서버 대안](#vs-gpu-server)을 참조하세요.',
         affiliateLinks: [
-          { label: 'SER8 현재 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요' },
+          { label: 'SER8 현재 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
           { label: 'SER8 구성 비교', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS', productName: 'Beelink SER8(전체 구성)', productCategory: 'Mini PC' },
         ],
       },
@@ -3742,15 +3742,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '64 GB 사양은 32 GB 사양보다 더 비쌉니다 (차액은 변동하므로 현재 가격을 확인하세요) — "혹시 몰라서"가 아니라 더 큰 모델 등급이 실제 목표일 때만 가치가 있습니다.',
         ],
         affiliateLinks: [
-          { label: '현재 가격 확인 — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요' },
-          { label: '현재 가격 확인 — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요(32GB보다 높음)' },
+          { label: '현재 가격 확인 — SER8 32GB/1TB', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: '현재 가격 확인 — SER8 64GB/1TB', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+64GB', productName: 'Beelink SER8 64GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       specs: {
         id: 'specs',
         title: '사양',
         content:
-          '**아래 모든 사양은 2026년 8월에 Beelink 자체 판매 페이지 및 독립 판매처/리뷰 정보원을 대상으로 재검증했습니다.** Beelink는 SER8이라는 이름으로 두 가지 다른 CPU를 판매합니다 — 구매 전 판매 페이지에 "8845HS"(이 리뷰의 대상, 부스트 5.1 GHz)라고 명시되어 있는지, 더 저렴한 "8745HS" 버전(부스트 4.9 GHz, 그 외에는 유사)이 아닌지 확인하세요. 판매되는 RAM은 사양에 따라 다르며(16, 24, 32, 64 GB), 이 표는 참조 구성으로 32 GB / 1 TB 기종을 반영합니다.',
+          '**아래 모든 사양은 Beelink 자체 판매 페이지 및 독립 판매처/리뷰 정보원을 대상으로 검증했으며, 가격은 2026-10-25에 공식 스토어에서 마지막으로 확인했습니다.** Beelink는 SER8이라는 이름으로 두 가지 다른 CPU를 판매합니다 — 구매 전 판매 페이지에 "8845HS"(이 리뷰의 대상, 부스트 5.1 GHz)라고 명시되어 있는지, 더 저렴한 "8745HS" 버전(부스트 4.9 GHz, 그 외에는 유사)이 아닌지 확인하세요. 판매되는 RAM은 사양에 따라 다르며(16, 24, 32, 64 GB), 이 표는 참조 구성으로 32 GB / 1 TB 기종을 반영합니다.',
         columns: ['항목', 'Beelink SER8 (8845HS)'],
         rows: [
           { '항목': 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS(Zen 4, 4nm)' },
@@ -3764,7 +3764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': 'TDP', 'Beelink SER8 (8845HS)': '54~65 W(65 W 지속 동작)' },
           { '항목': '크기', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm, 약 0.75 kg' },
           { '항목': 'OS', 'Beelink SER8 (8845HS)': 'Windows 11 Pro(Linux/Proxmox 설치 지원)' },
-          { '항목': '가격(32GB/1TB)', 'Beelink SER8 (8845HS)': '현재가 확인 필요(2026년 8월 — 변동, 현재 가격 확인)' },
+          { '항목': '가격(공식 정가)', 'Beelink SER8 (8845HS)': '24GB/1TB 기준 $799(미국 스토어, 2026-10-25 확인); 32GB는 현재 판매 페이지 확인' },
         ],
         items: [
           '별도 GPU 없음: 모든 AI 추론은 시스템 RAM을 공유하는 CPU와 Radeon 780M iGPU에서 실행됩니다.',
@@ -3824,7 +3824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 구성을 그대로 구축하려면 [Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration)와 [로컬 LLM으로 스마트홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide)를 참조하세요.',
         ],
         affiliateLinks: [
-          { label: 'SER8 현재 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요' },
+          { label: 'SER8 현재 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       bundle: {
@@ -3859,7 +3859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Radeon 780M iGPU: 별도 GPU의 전력 소비나 소음 없이 7B 모델 추론과 Frigate의 비디오 디코딩을 감당할 만큼 강력합니다.',
         ],
         affiliateLinks: [
-          { label: 'SER8 현재 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요' },
+          { label: 'SER8 현재 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       prosCons: {
@@ -3868,7 +3868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**제가 마음에 드는 점, 그리고 모든 용도에 사지는 않을 이유.**',
         items: [
           '**마음에 드는 점**',
-          '유능한 로컬 AI 기기로서 가성비 최고 — 7B 모델과 전체 스마트홈 스택을 여유롭게 실행하는 기기가 현재가 확인 필요',
+          '유능한 로컬 AI 기기로서 가성비 최고 — 7B 모델과 전체 스마트홈 스택을 여유롭게 실행하는 기기가 미국 공식 스토어 정가 $799(24 GB/1 TB)',
           '사용자 교체 가능한 RAM과 두 개의 M.2 슬롯 덕분에 기기 교체를 강요받지 않고 필요에 따라 성장할 수 있음',
           'USB4와 2.5GbE는 저렴한 기기들이 생략하곤 하는 홈 서버의 실제 병목(네트워크 처리량, 외장 스토리지)을 커버함',
           '부하 시 65 W, 유휴 시 약 8~12 W로 동작 — 24시간 켜두어도 저렴함',
@@ -3884,19 +3884,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'SER8 대 대안',
         content: '**SER8이 적합하지 않다면, 가격과 성능 면에서 이를 둘러싼 네 가지 기기가 있습니다 — 각각 아래에 자체 리뷰와 자체 제품 카드가 있습니다.**',
-        columns: ['미니 PC', '가격(대략)', 'RAM 한도(테스트됨)', '최적 용도'],
+        columns: ['미니 PC', '공식 정가', 'RAM 한도(제조사 공표)', '최적 용도'],
         rows: [
-          { '미니 PC': 'Beelink SER8', '가격(대략)': '현재가 확인 필요(32GB/1TB)', 'RAM 한도(테스트됨)': '약 64~96GB', '최적 용도': '가성비 최고: HA + 7B 모델' },
-          { '미니 PC': 'Beelink EQ14', '가격(대략)': '약 25만~32만 원', 'RAM 한도(테스트됨)': '16GB', '최적 용도': 'HA만, 초소형 모델' },
-          { '미니 PC': 'Minisforum UM890 Pro', '가격(대략)': '약 97만~117만 원', 'RAM 한도(테스트됨)': '약 64~96GB', '최적 용도': '듀얼 2.5GbE, eGPU 포트' },
-          { '미니 PC': 'GEEKOM A9 Max(2026)', '가격(대략)': '약 152만~248만 원', 'RAM 한도(테스트됨)': '128GB', '최적 용도': '최대 여유, Wi-Fi 7' },
-          { '미니 PC': 'GMKtec G3 Plus', '가격(대략)': '약 28만~36만 원', 'RAM 한도(테스트됨)': '32GB', '최적 용도': '경제적, 업그레이드 가능' },
+          { '미니 PC': 'Beelink SER8', '공식 정가': '$799(24GB/1TB)', 'RAM 한도(제조사 공표)': '약 64~96GB', '최적 용도': '가성비 최고: HA + 7B 모델' },
+          { '미니 PC': 'Beelink EQ14', '공식 정가': '$385(16GB/500GB)', 'RAM 한도(제조사 공표)': '16GB', '최적 용도': 'HA만, 초소형 모델' },
+          { '미니 PC': 'Minisforum UM890 Pro', '공식 정가': '$439.90(베어본) / $823.90(32GB/1TB)', 'RAM 한도(제조사 공표)': '약 64~96GB', '최적 용도': '듀얼 2.5GbE, eGPU 포트' },
+          { '미니 PC': 'GEEKOM A9 Max(2026)', '공식 정가': '$1,299~1,599', 'RAM 한도(제조사 공표)': '128GB', '최적 용도': '최대 여유, Wi-Fi 7' },
+          { '미니 PC': 'GMKtec G3 Plus', '공식 정가': '$399.99~499.99', 'RAM 한도(제조사 공표)': '32GB', '최적 용도': 'N150, RAM 업그레이드 가능' },
         ],
         items: [
-          '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review) — 여유를 위한 선택: 128 GB RAM 한도와 Wi-Fi 7을 갖췄지만, 현재 $1,099~1,799(2026년형, Ryzen AI 9 HX 370/HX 470)로 SER8 가격의 두 배 이상, 종종 세 배에 달합니다.',
-          '[Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review) — Radeon 780M 성능은 비슷하지만, 듀얼 2.5GbE, Wi-Fi 6E, OCuLink eGPU 포트를 적당한 추가 비용으로 더합니다.',
-          '[Beelink EQ14](/ko/smart-home/beelink-eq14-local-ai-review) — Home Assistant와 초소형 모델만을 위한 저가 Intel N150 기기입니다. 7B 어시스턴트를 원한다면 피하세요.',
-          '[GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 업그레이드 가능한 RAM을 갖춘 또 다른 저가 N150 옵션입니다.',
+          '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review) — 여유를 위한 선택: 128 GB RAM 한도와 Wi-Fi 7을 갖췄지만, 정가 $1,299~1,599(2026년형, Ryzen AI 9 HX 370/HX 470)로 SER8 정가($799)의 약 1.6~2.0배입니다.',
+          '[Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review) — Radeon 780M 성능은 비슷하지만, 듀얼 2.5GbE, Wi-Fi 6E, OCuLink eGPU 포트를 더합니다. 공식 페이지 정가는 베어본 $439.90, 32 GB/1 TB 구성 $823.90이며, 2026-10-25 확인 시 품절로 표시되었습니다.',
+          '[Beelink EQ14](/ko/smart-home/beelink-eq14-local-ai-review) — Home Assistant와 초소형 모델만을 위한 Intel N150 기기입니다(16 GB/500 GB 공식 정가 $385, 2026-10-25 확인 시 예약 주문으로 표시). 7B 어시스턴트를 원한다면 피하세요.',
+          '[GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 업그레이드 가능한 RAM을 갖춘 또 다른 N150 옵션입니다(공식 정가 $399.99~499.99, 2026-10-25 확인 시 모든 변형이 품절로 표시).',
           'Beelink 자체의 SER9 및 SER10 Pro/Max(2026년 CES에서 출시, Ryzen AI 9 HX 470, 일부 사양에서 10GbE)는 현재 최상위 라인입니다 — 10GbE나 새로운 세대의 NPU가 구체적으로 중요한 경우에만 가치가 있으며, HA + Frigate + 7B 모델 용도로는 추천을 바꾸지 않습니다.',
           '아직 비교 중이신가요? [Home Assistant + 로컬 AI를 위한 최고의 미니 PC 종합 정리](/ko/smart-home/best-mini-pc-home-assistant-local-ai)부터 시작하세요.',
         ],
@@ -3907,13 +3907,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Beelink 공식 스토어(직접 보증 지원)와 Amazon(빠른 배송, 쉬운 반품)이 실제로 검증 가능한 두 가지 옵션입니다.** 가격은 주마다, 그리고 RAM/스토리지 사양에 따라 달라집니다 — 고정된 수치를 신뢰하기보다 실시간 가격을 확인하세요.',
         items: [
-          'Beelink 공식 스토어: 제조사의 직접 보증과 지원; 두 채널 중 더 높은 가격일 때도 있습니다.',
-          'Amazon: 보통 더 경쟁력 있는 가격에 Amazon의 표준 반품 정책까지 — 대부분의 구매자에게 실용적인 기본 선택입니다.',
+          'Beelink 공식 스토어: 제조사의 직접 보증과 지원; 24 GB/1 TB 구성을 $799로 게시(2026-10-25 확인).',
+          'Amazon: 빠른 배송과 Amazon의 표준 반품 정책을 이용할 수 있습니다. Amazon 가격은 이 페이지에서 확인하지 않았으며 공식 스토어와 다를 수 있으므로 구매 전 비교하세요.',
           '구매 전 판매 페이지에서 RAM 사양(16, 24, 32, 64 GB)과 CPU(8745HS가 아닌 8845HS)를 확인하세요 — Beelink는 같은 "SER8" 이름으로 여러 버전을 판매합니다.',
         ],
         affiliateLinks: [
-          { label: '가격 확인 — Beelink 공식 스토어', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요' },
-          { label: '가격 확인 — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요' },
+          { label: '가격 확인 — Beelink 공식 스토어', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
+          { label: '가격 확인 — Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8+8845HS+32GB', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
       upgrades: {
@@ -3935,14 +3935,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       totalCost: {
         id: 'total-cost',
         title: '총 구축 비용',
-        content: '**현실적인 전체 구축 — SER8에 위 번들을 더하면 — 미니 PC 자체 가격표뿐 아니라 번들 전체의 현재 가격을 합산해야 합니다(각 항목의 현재 가격을 확인하세요).**',
+        content: '**현실적인 전체 구축 — SER8에 위 번들을 더하면 — 미니 PC 자체 가격표뿐 아니라 번들 전체의 현재 가격을 합산해야 합니다(SER8은 미국 공식 스토어 정가 $799, 24 GB/1 TB, 2026-10-25 확인; 액세서리는 약 29만~38만 원; 각 항목의 현재 가격을 확인하세요).**',
         columns: ['항목', '가격(대략)'],
         rows: [
-          { '항목': 'Beelink SER8 32GB/1TB', '가격(대략)': '현재가 확인 필요' },
+          { '항목': 'Beelink SER8 24GB/1TB(공식 정가)', '가격(대략)': '$799' },
           { '항목': 'SONOFF ZBDongle-E(Zigbee)', '가격(대략)': '약 27,000~35,000원' },
           { '항목': 'Reolink RLC-810A × 2(PoE 카메라)', '가격(대략)': '약 166,000~248,000원' },
           { '항목': 'Hailo-8L M.2(Frigate 가속기)', '가격(대략)': '약 97,000원' },
-          { '항목': '합계(대략)', '가격(대략)': '현재가 확인 필요' },
+          { '항목': '합계(대략)', '가격(대략)': '$799 + 약 29만~38만 원' },
         ],
         items: [
           '이 합계에는 가정마다 다르고 보통 다른 네트워크 장치와 공유되는 일회성 비용인 PoE 스위치/인젝터와 배선이 포함되지 않습니다.',
@@ -3956,7 +3956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**32B 또는 70B 모델이 실제 목표라면, 단지 저렴하다는 이유로 SER8을 사지 마세요 — 별도 GPU 시스템이 그 작업량에 대한 정직한 답입니다.** 아래 비교는 SER8의 진짜 강점 밖에서는 의도적으로 불리하게 구성되어 있습니다. 70B 구축을 계획하는 독자가 여기서 실망한 채로 끝나서는 안 되기 때문입니다.',
         columns: ['요소', 'SER8(iGPU)', 'GPU 서버(24GB+ VRAM)'],
         rows: [
-          { '요소': '가격', 'SER8(iGPU)': '현재가 확인 필요', 'GPU 서버(24GB+ VRAM)': '210만 원 이상' },
+          { '요소': '가격', 'SER8(iGPU)': '$799(24GB/1TB, 정가)', 'GPU 서버(24GB+ VRAM)': '210만 원 이상' },
           { '요소': '전력 소비', 'SER8(iGPU)': '부하 65 W / 유휴 약 10 W', 'GPU 서버(24GB+ VRAM)': '부하 300~600 W' },
           { '요소': '7B 모델', 'SER8(iGPU)': '여유로움', 'GPU 서버(24GB+ VRAM)': '빠름, 과잉' },
           { '요소': '14B 모델', 'SER8(iGPU)': '사용 가능', 'GPU 서버(24GB+ VRAM)': '빠름' },
@@ -3979,7 +3979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '미국: 중국산 전자제품에 대한 통상법 301조 관세는 2026년에도 계속 유효합니다. 별도의 2025년 "IEEPA" 관세는 2026년 2월 대법원에 의해 무효화되었고, 기간 한정에 상한이 있는 통상법 122조 관세로 대체되었습니다. 직접 수입 800달러 미만에 적용되던 면세 "최소 기준(de minimis)" 예외도 종료되었습니다.',
           'EU(DE/FR에 영향): 완제품 미니 PC에 대한 광범위한 EU 관세는 없지만, 2026년 7월부터 중국발 저가치 직배송 소포에 대한 150유로 면세 기준이 폐지되었고 소포당 소액 처리 수수료가 추가되었습니다.',
           '가정(거시적 추세이며 개별 제품에 관한 사실은 아님): 재조정된 중국의 수출 역량 덕분에 이러한 브랜드들의 EU 및 미국 내 공급이 높은 수준을 유지하며, 전반적으로 경쟁력 있는 가격을 뒷받침하고 있습니다.',
-          '순효과: 구매 전 판매처에서 현재 가격을 확인하세요 — 이 페이지의 가격 범위는 참고용이며 2026년 8월 기준입니다.',
+          '순효과: 구매 전 판매처에서 현재 가격을 확인하세요 — 이 페이지의 수치는 2026-10-25에 확인한 공식 스토어 정가이며 참고용입니다.',
         ],
       },
       priceSanityCheck: {
@@ -3990,14 +3990,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'SER8 32GB/1TB 가격이 GEEKOM A9 Max 할인가에 가까워진다면, 더 큰 모델로 성장할 가능성이 있는 사람에게는 A9 Max의 128 GB 한도와 Wi-Fi 7이 그 차액을 정당화할 가능성이 높습니다.',
           'SER8과 SER9의 가격이 비슷하다면, SER9의 사양 개선점(구매 시점에 SER9의 현재 가격과 사양을 확인하세요)이 여러분에게 충분히 중요한지 확인하세요 — 그렇지 않다면 SER8이 여전히 가성비 선택입니다.',
-          '브랜드의 인기만 보고 구매하지 마세요 — 이 페이지의 추천은 현재가 확인 필요의 32GB/1TB 구성을 기준으로 합니다. 구매 전 다시 확인하세요.',
+          '브랜드의 인기만 보고 구매하지 마세요 — 이 페이지의 추천은 32GB/1TB 구성을 기준으로 합니다(현재 판매 페이지를 확인하세요. 24GB/1TB의 미국 공식 스토어 정가는 $799입니다). 구매 전 다시 확인하세요.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'Beelink SER8의 현재 가격은 얼마인가요?', a: '32 GB/1 TB 구성(Ryzen 7 8845HS)의 조사 범위는 2026년 8월 기준 현재가 확인 필요이며, 16 GB/500 GB 기본 구성은 일반적으로 더 저렴하고, 64 GB/1 TB 구성은 더 비쌉니다. 가격은 판매처에 따라 다르며 매주 변동하므로, 이 수치에 의존하기보다 구매 전 실시간 가격을 확인하세요.' },
+          { q: 'Beelink SER8의 현재 가격은 얼마인가요?', a: 'Beelink 공식 스토어는 24 GB/1 TB 구성(Ryzen 7 8845HS)을 정가 $799로 게시하고 있습니다(미국 공식 스토어 정가, 2026-10-25 확인, 비교 가격 $959가 함께 표시됨). 32 GB 및 64 GB 구성은 현재 판매 페이지를 확인하세요. 국내 가격은 미국 정가와 다를 수 있습니다. 가격은 판매처에 따라 다르며 자주 변동하므로, 이 수치에 의존하기보다 구매 전 실시간 가격을 확인하세요.' },
           { q: 'Beelink SER8의 공식 사양은 무엇인가요?', a: 'AMD Ryzen 7 8845HS(8코어/16스레드, 최대 5.1 GHz), Radeon 780M iGPU(12 CU, RDNA 3), 16-TOPS NPU, DDR5-5600 듀얼 SO-DIMM RAM(16/24/32/64 GB 사양), 2× M.2 2280 PCIe 4.0 스토리지, 2.5GbE, Wi-Fi 6, USB4, 54~65 W TDP. Beelink는 8745HS 칩(부스트 4.9 GHz)을 탑재한 더 저렴한 SER8 버전도 판매합니다 — 판매 페이지에서 CPU를 확인하세요.' },
           { q: 'Beelink SER8의 크기는 어떻게 되나요?', a: '135 × 135 × 44.7 mm, 약 0.75 kg — 모니터 뒤에 놓거나 눈에 띄지 않는 곳에 설치할 수 있을 만큼 작습니다.' },
           { q: 'Beelink SER8은 로컬 LLM을 실행할 수 있나요?', a: '네. 32 GB RAM과 Radeon 780M iGPU를 활용해 Ollama에서 7B~8B 모델을 여유롭게 실행하고, 13B~14B 모델을 4비트로 불러올 수 있지만 더 느립니다. 이는 검증된 하드웨어를 기반으로 한 추정치이며 PromptQuorum이 측정한 벤치마크가 아닙니다. 실제 속도는 모델, 양자화, 백엔드에 따라 달라지기 때문입니다.' },
@@ -4005,7 +4005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SER8의 유휴 전력 소비는 얼마인가요?', a: '독립적인 측정에 따르면 약 8~12 W입니다 — 홈 서버로 계속 운영해도 저렴합니다. 지속적인 부하에서는 최대 65 W를 소비합니다. 정확한 수치는 작업량과 전원 프로필에 따라 다릅니다.' },
           { q: '16-TOPS NPU가 SER8에서 로컬 AI를 가속하나요?', a: '아니요. 주류 LLM 런타임(Ollama, llama.cpp, LM Studio)은 2026년 기준 추론에 NPU를 사용하지 않으며, 대신 CPU와 Radeon 780M iGPU에서 실행됩니다. NPU는 지원되는 프레임워크에서 특정 비전/오디오 작업을 가속하는 것이지, 일반적인 채팅 추론이 아닙니다.' },
           { q: 'SER8보다 더 새로운 Beelink 모델이 있나요?', a: '네. Beelink는 SER9을 출시했고, 2026년 CES에서 SER10 Pro와 SER10 Max(Ryzen AI 9 HX 470, 최대 10GbE 네트워크)를 발표했습니다. 이들이 현재의 최상위 라인입니다. 이 리뷰가 다루는 구체적인 용도 — Home Assistant, Frigate, 로컬 7B~14B 모델 — 에 대해서는 SER8이 여전히 더 나은 가성비이며, 새로운 세대의 NPU는 이 용도에 의미 있는 도움이 되지 않습니다(위의 NPU 관련 참고 사항 참조).' },
-          { q: 'SER8인가요, GEEKOM A9 Max인가요?', a: 'SER8은 현재가 확인 필요의 가성비 선택이며 대부분의 로컬 AI 스마트홈 요구 사항을 커버합니다. A9 Max는 128 GB RAM 한도나 Wi-Fi 7이 필요한 경우에만 선택하세요 — 2026년 8월 기준 SER8보다 확연히 비싸므로, 구매 전 두 제품의 실시간 가격을 비교하고 기본 업그레이드가 아니라 신중한 선택을 하세요.' },
+          { q: 'SER8인가요, GEEKOM A9 Max인가요?', a: 'SER8은 미국 공식 스토어 정가 $799(24 GB/1 TB)의 가성비 선택이며 대부분의 로컬 AI 스마트홈 요구 사항을 커버합니다. A9 Max는 128 GB RAM 한도나 Wi-Fi 7이 필요한 경우에만 선택하세요 — 정가 $1,299~1,599로 SER8 정가의 약 1.6~2.0배이므로, 구매 전 두 제품의 실시간 가격을 비교하고 기본 업그레이드가 아니라 신중한 선택을 하세요.' },
           { q: 'RAM을 업그레이드할 수 있나요?', a: '네. SER8은 사용자가 교체할 수 있는 표준 DDR5 SO-DIMM 슬롯 두 개를 사용하므로, 32 GB로 시작해서 나중에 64 GB로 이전할 수 있습니다. 스토리지 확장을 위한 M.2 슬롯도 두 개 있습니다.' },
           { q: 'Beelink SER8은 어디에서 제조되며, 이것이 가격에 영향을 미치나요?', a: '중국에서 제조됩니다. 2026년에는 미국의 수입 조치(통상법 301조 관세, 800달러 미만 최소 기준 예외의 종료)와 저가치 소포에 대한 EU의 150유로 면세 기준 폐지가 도착 비용에 영향을 미칠 수 있으므로, 고정된 수치에 의존하기보다 판매처의 현재 가격을 확인하세요.' },
         ],
@@ -4027,13 +4027,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '최종 구매 결정',
         content: '**세 가지 경로, 하나의 명확한 기본값.**',
         items: [
-          '**다음의 경우 32 GB/1 TB SER8을 구매하세요:** 조용하고 저렴한 기기 한 대에서 Home Assistant, Frigate, 로컬 7B~8B 어시스턴트를 실행하고 싶은 경우 — 이 페이지의 대부분 독자에게 기본 추천입니다.',
+          '**다음의 경우 32 GB/1 TB SER8을 구매하세요:** 조용하고 저전력인 기기 한 대에서 Home Assistant, Frigate, 로컬 7B~8B 어시스턴트를 실행하고 싶은 경우 — 이 페이지의 대부분 독자에게 기본 추천입니다.',
           '**다음의 경우 64 GB/1 TB를 선택하되 구매하세요:** 13B~14B 모델이 실제 목표이고 단순히 기술적으로 불러오는 것이 아니라 반응이 빠르길 원하는 경우.',
           '**다음의 경우 구매하지 마세요:** 32B 또는 70B 모델이 주된 용도인 경우 — 대신 별도 GPU 시스템을 구매하세요. [로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/best-workstation-build-local-ai-2026)를 참조하세요.',
           '**제 선택: SER8 32GB/1TB — 오늘의 가격을 확인하고 이 구성을 구매하세요.**',
         ],
         affiliateLinks: [
-          { label: '오늘의 SER8 32GB/1TB 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC', priceRange: '현재가 확인 필요' },
+          { label: '오늘의 SER8 32GB/1TB 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8 32GB/1TB', productCategory: 'Mini PC' },
         ],
       },
     },
@@ -4042,9 +4042,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Beelink SER8 리뷰: 사양, 가격, 32GB 대 64GB (2026)',
       reviewBody:
-        'Beelink SER8(Ryzen 7 8845HS, Radeon 780M)의 32 GB/1 TB 구성은 Home Assistant, Frigate, 그리고 Ollama의 7B 로컬 LLM을 현재가 확인 필요(2026년 8월)에 실행합니다. 이 구체적인 용도에서는 로컬 AI 미니 PC 중 가성비가 가장 좋은 선택이지만, Beelink는 이후 더 새로운 SER9 및 SER10 시리즈를 출시했습니다.',
+        'Beelink SER8(Ryzen 7 8845HS, Radeon 780M)의 32 GB/1 TB 구성은 Home Assistant, Frigate, 그리고 Ollama의 7B 로컬 LLM을 실행합니다(24 GB/1 TB 구성의 미국 공식 스토어 정가는 $799, 2026-10-25 확인). 이 구체적인 용도에서는 로컬 AI 미니 PC 중 가성비가 가장 좋은 선택이지만, Beelink는 이후 더 새로운 SER9 및 SER10 시리즈를 출시했습니다.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',

@@ -5588,5 +5588,87 @@
       "period": "28d to 2026-10-21"
     },
     "deployedAt": null
+  },
+  {
+    "id": "80199bad-4c5f-419d-a19d-992eb28062f5",
+    "slug": "/smart-home/best-mini-pc-home-assistant-local-ai",
+    "date": "2026-10-25T12:22:23.390Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best mini PC for Home Assistant 2026: Beelink SER8 (~$799–849) for Frigate + a 7B model; Intel N150 boxes (~$180–230) for budget; GEEKOM A9 Max (~$1,299+) for on-device AI. Compared side by side.",
+        "new": "Best mini PC for Home Assistant 2026: Beelink SER8 (from ~$799) for Frigate + a 7B model, N150 boxes (~$385–500) for budget, GEEKOM A9 Max for AI."
+      }
+    ],
+    "reason": "EN: meta aligned to refreshed official-store prices and trimmed into budget; targets top EN queries",
+    "queries": [
+      "best mini pc for home assistant",
+      "mini pc for home assistant",
+      "mini pc home assistant",
+      "cheap mini pc for home assistant",
+      "local ai mini pc"
+    ],
+    "baseline": {
+      "position": 5.3,
+      "impressions": 204,
+      "clicks": 5,
+      "ctr": 0.024509803921568627,
+      "period": "28d to 2026-10-25"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "34540cf8-92a3-4d5e-ba81-d53bc2b1ae59",
+    "slug": "/de/smart-home/best-mini-pc-home-assistant-local-ai",
+    "date": "2026-10-25T12:22:23.486Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~999 €) für Frigate plus 7B-Modell, Intel-N150-Rechner ab ~180 € fürs Budget. Empfehlung nach Bedarf.",
+        "new": "Welcher Mini-PC für Home Assistant? Beelink SER8 ab ~799 $ für Frigate + 7B-Modell, N150-Geräte ab ~385 $ fürs Budget, GEEKOM A9 Max für KI. Vergleich."
+      }
+    ],
+    "reason": "DE: question-led meta (welcher Mini-PC) for the largest query pool; 7 FAQs now in every locale",
+    "queries": [
+      "mini pc für home assistant",
+      "welcher mini pc für home assistant",
+      "welchen mini pc für home assistant",
+      "mini pc für lokale ki",
+      "bester mini pc für home assistant"
+    ],
+    "baseline": {
+      "position": 6.3,
+      "impressions": 1076,
+      "clicks": 25,
+      "ctr": 0.023234200743494422,
+      "period": "28d to 2026-10-25"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bfba068b-401a-463d-a4bb-7c98c312480b",
+    "slug": "/ja/smart-home/best-mini-pc-home-assistant-local-ai",
+    "date": "2026-10-25T12:22:23.582Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Home Assistant + ローカルAIに最適なミニPC 2026年版ガイド",
+        "new": "Home Assistant向けローカルAIミニPC 2026"
+      }
+    ],
+    "reason": "JA: seoTitle leads with ローカルAIミニPC (query terms) and fits CJK budget",
+    "queries": [
+      "ローカルai ミニpc",
+      "ミニpc ローカルai",
+      "home assistant ミニpc"
+    ],
+    "baseline": {
+      "position": 8.8,
+      "impressions": 46,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-10-25"
+    },
+    "deployedAt": null
   }
 ]
