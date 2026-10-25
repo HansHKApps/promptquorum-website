@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useLang } from '@/hooks/useLang'
 import { getLangDir } from '@/lib/i18n/constants'
 import { claimPromptSlot, releasePromptSlot } from '@/lib/promptSlot'
+import { useConsent } from '@/hooks/useConsent'
 
 const STORAGE_KEY = 'push_prompt_dismissed_until'
 const SESSION_COUNT_KEY = 'pq_session_count'
@@ -396,7 +397,10 @@ function PushPromptBannerInner() {
 }
 
 export function PushPromptBanner() {
+  // Web push is a Marketing category: nothing mounts (no timers, no counters, no prompt)
+  // until the visitor allows it, and withdrawing consent unmounts it again.
+  const marketing = useConsent('marketing')
   // No Suspense boundary needed since useSearchParams() is gone — usePathname()
   // and useLang() do not suspend.
-  return <PushPromptBannerInner />
+  return marketing ? <PushPromptBannerInner /> : null
 }

@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { useLang } from '@/hooks/useLang'
+import { useConsent } from '@/hooks/useConsent'
 
 interface OneSignalType {
   init: (config: {
@@ -30,10 +31,12 @@ declare global {
 
 export function OneSignalInit() {
   const lang = useLang()
+  // Web push is a Marketing category: the SDK is not even downloaded without consent.
+  const marketing = useConsent('marketing')
 
   useEffect(() => {
     const appId = process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID
-    if (!appId) return
+    if (!appId || !marketing) return
 
     // Inject SDK script once
     if (!document.getElementById('onesignal-sdk')) {
@@ -63,7 +66,7 @@ export function OneSignalInit() {
         await OneSignal.User.addTags({ lang })
       }
     })
-  }, [lang])
+  }, [lang, marketing])
 
   return null
 }

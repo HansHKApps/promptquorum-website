@@ -1,23 +1,15 @@
 'use client'
 
-const LABELS: Record<string, string> = {
-  en: 'Cookie Settings',
-  de: 'Cookie-Einstellungen',
-  fr: 'Paramètres des cookies',
-  ja: 'Cookie設定',
-  zh: 'Cookie 设置',
-  es: 'Configuración de cookies',
-  pt: 'Configurações de cookies',
-  ar: 'إعدادات ملفات تعريف الارتباط',
-  ko: '쿠키 설정',
-}
+import { COOKIE_COPY } from '@/lib/cookie-consent-copy'
+import { OPEN_CONSENT_EVENT } from '@/lib/consent'
+import type { Lang } from '@/hooks/useLang'
 
 export function CookieSettingsLink({ lang = 'en', className }: { lang?: string; className?: string }) {
-  const label = (LABELS[lang as keyof typeof LABELS] ?? LABELS.en)!
+  const label = (COOKIE_COPY[lang as Lang] ?? COOKIE_COPY.en).title
   return (
     <button
       type="button"
-      onClick={() => window.dispatchEvent(new CustomEvent('open-cookie-banner'))}
+      onClick={() => window.dispatchEvent(new CustomEvent(OPEN_CONSENT_EVENT))}
       className={className ?? 'hover:text-primary transition-colors bg-transparent border-0 p-0 cursor-pointer text-inherit font-inherit'}
     >
       {label}

@@ -7,6 +7,7 @@ const TTL_SECONDS = 60 * 60 * 24 * 30 * 25 // 25 months
 type ConsentBody = {
   state?: 'granted' | 'denied' | 'custom'
   analytics?: boolean
+  recordings?: boolean
   marketing?: boolean
   version?: number
   lang?: string
@@ -23,7 +24,7 @@ function hashIp(ip: string): string {
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as ConsentBody
-    if (!body || typeof body.state !== 'string') {
+    if (!body || (body.state !== 'granted' && body.state !== 'denied' && body.state !== 'custom')) {
       return NextResponse.json({ error: 'Invalid body.' }, { status: 400 })
     }
 
@@ -35,6 +36,7 @@ export async function POST(req: NextRequest) {
     const record = {
       state: body.state,
       analytics: !!body.analytics,
+      recordings: !!body.recordings,
       marketing: !!body.marketing,
       version: body.version ?? 1,
       lang: typeof body.lang === 'string' ? body.lang.slice(0, 8) : 'en',

@@ -1,3 +1,5 @@
+import { hasConsent } from '@/lib/consent'
+
 // Engagement popup on review pages (DirectoryPopup). Tunables live here so the
 // numbers in the brief are changed in exactly one place.
 
@@ -20,23 +22,9 @@ export const POPUP_DISMISS_KEY = 'pq_dir_popup_dismissed_until'
 /** sessionStorage: set once the popup was shown in this session. */
 export const POPUP_SESSION_KEY = 'pq_dir_popup_shown'
 
-const CONSENT_STORAGE_KEY = 'analytics_consent'
-
-/**
- * Same reading of CookieBanner's consent record as hardwareProfile.ts: the
- * legacy 'granted' string, or `{ analytics: true }`. Anything else (including
- * no record at all, or unreadable storage) is "no consent".
- */
+/** Analytics consent from the shared record in lib/consent.ts; no record means "no consent". */
 export function hasAnalyticsConsent(): boolean {
-  try {
-    const raw = window.localStorage.getItem(CONSENT_STORAGE_KEY)
-    if (!raw) return false
-    if (raw === 'granted') return true
-    if (raw === 'denied') return false
-    return !!(JSON.parse(raw) as { analytics?: boolean }).analytics
-  } catch {
-    return false
-  }
+  return hasConsent('analytics')
 }
 
 const BOT_UA = /bot|crawl|spider|slurp|headless|lighthouse|gtmetrix|pagespeed|prerender|phantom|puppeteer|playwright/i

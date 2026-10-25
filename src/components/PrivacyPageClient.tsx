@@ -176,6 +176,12 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS4Row6Data}</Td>
                     <Td>{t.privacyS4Row6Loc}</Td>
                   </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><strong>{t.privacyS4Row7Proc}</strong></Td>
+                    <Td>{t.privacyS4Row7Role}</Td>
+                    <Td>{t.privacyS4Row7Data}</Td>
+                    <Td>{t.privacyS4Row7Loc}</Td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -246,11 +252,35 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS7Row6Purpose}</Td>
                     <Td>{t.privacyS7Row6Duration}</Td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-gray-100">
                     <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row7Cookie}</code></Td>
                     <Td>{t.privacyS7Row7SetBy}</Td>
                     <Td>{t.privacyS7Row7Purpose}</Td>
                     <Td>{t.privacyS7Row7Duration}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row8Cookie}</code></Td>
+                    <Td>{t.privacyS7Row8SetBy}</Td>
+                    <Td>{t.privacyS7Row8Purpose}</Td>
+                    <Td>{t.privacyS7Row8Duration}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row9Cookie}</code></Td>
+                    <Td>{t.privacyS7Row9SetBy}</Td>
+                    <Td>{t.privacyS7Row9Purpose}</Td>
+                    <Td>{t.privacyS7Row9Duration}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row10Cookie}</code></Td>
+                    <Td>{t.privacyS7Row10SetBy}</Td>
+                    <Td>{t.privacyS7Row10Purpose}</Td>
+                    <Td>{t.privacyS7Row10Duration}</Td>
+                  </tr>
+                  <tr>
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row11Cookie}</code></Td>
+                    <Td>{t.privacyS7Row11SetBy}</Td>
+                    <Td>{t.privacyS7Row11Purpose}</Td>
+                    <Td>{t.privacyS7Row11Duration}</Td>
                   </tr>
                 </tbody>
               </table>

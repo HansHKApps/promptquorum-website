@@ -32,7 +32,7 @@ test.beforeEach(async ({ context }) => {
   await context.addInitScript(() => {
     localStorage.setItem(
       'analytics_consent',
-      JSON.stringify({ state: 'denied', analytics: false, marketing: false, ts: Date.now(), version: 1 }),
+      JSON.stringify({ state: 'denied', analytics: false, recordings: false, marketing: false, ts: Date.now(), version: 2 }),
     )
   })
 })
@@ -475,7 +475,14 @@ test.describe('navigation', () => {
     await expect(page.locator('h1').first()).toBeVisible()
   })
 
-  test('selection is recorded in sessionStorage as pq_last_search', async ({ page }) => {
+  test('selection is recorded in sessionStorage as pq_last_search (with Analytics consent)', async ({ page }) => {
+    // pq_last_search is a reading-behaviour signal: it is only written with Analytics consent.
+    await page.addInitScript(() => {
+      localStorage.setItem(
+        'analytics_consent',
+        JSON.stringify({ state: 'custom', analytics: true, recordings: false, marketing: false, ts: Date.now(), version: 2 }),
+      )
+    })
     await openSearch(page)
     await query(page, 'ollama')
     await options(page).first().click()
@@ -487,6 +494,14 @@ test.describe('navigation', () => {
     expect(parsed.resultId).toBeTruthy()
     expect(parsed.resultHub).toBeTruthy()
     expect(typeof parsed.timestamp).toBe('number')
+  })
+
+  test('selection is NOT recorded without Analytics consent', async ({ page }) => {
+    await openSearch(page)
+    await query(page, 'ollama')
+    await options(page).first().click()
+    await expect(dialog(page)).toHaveCount(0)
+    expect(await page.evaluate(() => sessionStorage.getItem('pq_last_search'))).toBeNull()
   })
 
   test('every top-5 result URL for a broad query resolves 200', async ({ page, request }) => {
