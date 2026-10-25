@@ -133,7 +133,7 @@ export const de: SolaStrings = {
       metaDescription:
         'Bericht 01 (Q4 2026): Wenige Computer führen gute lokale KI aus, noch weniger Apps lohnen sich. Belegte Zahlen, neun Praxistests, Behauptungsregister.',
       keyFindings: [
-        'In der Steam-Hardwareumfrage vom Juli 2026 hatten 25,9 % der erfassten Systeme 16 GB Grafikspeicher und 5,4 % 24 GB.',
+        'In der Steam-Hardwareumfrage vom September 2026 hatten 27,2 % der erfassten Systeme 16 GB Grafikspeicher und 5,5 % 24 GB.',
         'Auf einem Mac mit 24 GB belegte das System in den Tests des Autors direkt nach dem Start 9,67 GB Speicher, noch bevor ein Modell geladen war.',
         'Von neun vom Autor getesteten Apps für lokale KI ließen sich acht bewerten; vier dieser acht erhielten bei der Kernfunktion 2 Punkte oder weniger.',
         'Laut drei Quellen mit Kartendaten zahlen zwischen 2,2 % und 4,5 % der US-Haushalte oder -Verbraucher für einen KI-Chatbot. Das obere 1 % der Zahlenden macht 19,5 % der Verbraucherausgaben für KI aus.',
@@ -147,7 +147,7 @@ export const de: SolaStrings = {
         'Der Autor hat PromptQuorum gegründet, eine Content-Seite und ein Verzeichnis für Apps zu lokaler KI, und hat Apps getestet, die dort gelistet sind. Jedes Testprotokoll mit Belegkennzeichnungen und den eigenen Fehlern des Testers ist aus der Belegdatei verlinkt. In den Testnotizen ist weder eine Zahlung noch ein Sponsoring vermerkt.',
       correction: 'Version 1.0: Erstveröffentlichung.',
       pressStats: [
-        { figure: '5,4 %', text: 'der Systeme in der Steam-Hardwareumfrage vom Juli 2026 hatten 24 GB Grafikspeicher; 25,9 % hatten 16 GB.', source: 'Steam Hardware & Software Survey, Juli 2026, über Sekundärberichte (Primärseite von Valve nicht abgerufen)' },
+        { figure: '5,5 %', text: 'der Systeme in der Steam-Hardwareumfrage vom September 2026 hatten 24 GB Grafikspeicher; 27,2 % hatten 16 GB.', source: 'Steam Hardware & Software Survey, September 2026 (Primärseite von Valve)' },
         { figure: '4 von 8', text: 'bewertbaren Apps für lokale KI erhielten bei der Kernfunktion 2 Punkte oder weniger (neun wurden getestet, acht ließen sich bewerten).', source: 'Praxistests des Autors, 9.–24. Oktober 2026' },
         { figure: '9,67 GB', text: 'Speicher waren auf einem Mac mit 24 GB direkt nach dem Start belegt, noch bevor ein Modell geladen war.', source: 'Praxistests des Autors, Mac mit 24 GB' },
         { figure: '$3,999 bis $6,950', text: 'Listenpreis des NVIDIA DGX Spark mit 128 GB, vom Marktstart bis Oktober 2026 ($4,699 im Februar 2026).', source: 'NVIDIA-Entwicklerforum (primär); Implicator.ai (sekundär)' },
@@ -156,7 +156,7 @@ export const de: SolaStrings = {
         { figure: '10 und 29', text: 'Treffer für „local AI“ im deutschen App Store von Apple und in Google Play, bei rund 2,75 Millionen beziehungsweise 2,65 Millionen Apps.', source: 'Store-Suchen vom 23. Oktober 2026; Store-Statistiken von 42matters' },
       ],
       pressQuotes: [
-        'Lokale KI hat heute wenige Hühner und noch weniger Eier. In der Steam-Umfrage vom Juli 2026 hatten nur 5,4 % der Systeme 24 GB Grafikspeicher, und vier der acht Apps für lokale KI, die ich bewerten konnte, erhielten bei ihrer Kernfunktion 2 Punkte oder weniger. (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
+        'Lokale KI hat heute wenige Hühner und noch weniger Eier. In der Steam-Umfrage vom September 2026 hatten nur 5,5 % der Systeme 24 GB Grafikspeicher, und vier der acht Apps für lokale KI, die ich bewerten konnte, erhielten bei ihrer Kernfunktion 2 Punkte oder weniger. (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
         'Der Listenpreis des NVIDIA DGX Spark mit 128 GB stieg von $3,999 zum Marktstart auf $6,950 im Oktober 2026. Die Hardware, mit der lokale KI komfortabel läuft, wird teurer, nicht günstiger. (Hans Kuepper, Der Stand der lokalen KI, Bericht 01, Q4 2026)',
       ],
       pressAuthor:

@@ -131,7 +131,7 @@ export const es: SolaStrings = {
       metaDescription:
         'Informe 01 (Q4 2026): pocos equipos ejecutan buenos modelos de IA local y aún menos aplicaciones valen la pena. Cifras con fuentes y nueve pruebas.',
       keyFindings: [
-        'En la encuesta de hardware de Steam de julio de 2026, el 25.9% de los sistemas encuestados tenía 16 GB de memoria gráfica y el 5.4% tenía 24 GB.',
+        'En la encuesta de hardware de Steam de septiembre de 2026, el 27.2% de los sistemas encuestados tenía 16 GB de memoria gráfica y el 5.5% tenía 24 GB.',
         'En un Mac de 24 GB, en las pruebas del autor, el sistema usó 9.67 GB de memoria justo después del arranque, antes de cargar ningún modelo.',
         'De las nueve aplicaciones de IA local que probó el autor, ocho pudieron puntuarse; cuatro de esas ocho obtuvieron 2 o menos en su función principal.',
         'Entre el 2.2% y el 4.5% de los hogares o consumidores de EE. UU. paga por un chatbot de IA, según tres fuentes de datos de tarjetas. El 1% de mayores pagadores concentra el 19.5% del gasto de consumo en IA.',
@@ -145,7 +145,7 @@ export const es: SolaStrings = {
         'El autor fundó PromptQuorum, un sitio de contenidos y directorio sobre aplicaciones de IA local, y probó aplicaciones que figuran allí. Cada registro de prueba práctica, con sus etiquetas de evidencia y los propios errores del probador, está enlazado desde el archivo de evidencias. En las notas de prueba no consta ningún pago ni patrocinio.',
       correction: 'Versión 1.0: primera publicación.',
       pressStats: [
-        { figure: '5.4%', text: 'de los sistemas de la encuesta de hardware de Steam de julio de 2026 tenía 24 GB de memoria gráfica; el 25.9% tenía 16 GB.', source: 'Encuesta de hardware y software de Steam, julio de 2026, a través de informes secundarios (no se consultó la página primaria de Valve)' },
+        { figure: '5.5%', text: 'de los sistemas de la encuesta de hardware de Steam de septiembre de 2026 tenía 24 GB de memoria gráfica; el 27.2% tenía 16 GB.', source: 'Encuesta de hardware y software de Steam, septiembre de 2026 (Valve, página primaria)' },
         { figure: '4 de 8', text: 'aplicaciones de IA local que el autor pudo puntuar obtuvieron 2 o menos en su función principal (se probaron nueve, ocho se puntuaron).', source: 'Pruebas prácticas del autor, 9-24 de octubre de 2026' },
         { figure: '9.67 GB', text: 'de memoria en uso en un Mac de 24 GB justo después del arranque, antes de cargar ningún modelo.', source: 'Pruebas prácticas del autor, Mac de 24 GB' },
         { figure: '$3,999 a $6,950', text: 'precio de lista del NVIDIA DGX Spark de 128 GB, del lanzamiento a octubre de 2026 ($4,699 en febrero de 2026).', source: 'Foro de desarrolladores de NVIDIA (primaria); Implicator.ai (secundaria)' },
@@ -154,7 +154,7 @@ export const es: SolaStrings = {
         { figure: '10 y 29', text: 'resultados para "local AI" en la App Store alemana de Apple y en Google Play, entre unos 2.75 millones y 2.65 millones de aplicaciones.', source: 'Búsquedas en tiendas registradas el 23 de octubre de 2026; estadísticas de tiendas de 42matters' },
       ],
       pressQuotes: [
-        'La IA local tiene hoy pocas gallinas y aún menos huevos. En la encuesta de Steam de julio de 2026, solo el 5.4% de los sistemas tenía 24 GB de memoria gráfica, y cuatro de las ocho aplicaciones de IA local que pude puntuar obtuvieron 2 o menos en su función principal. (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
+        'La IA local tiene hoy pocas gallinas y aún menos huevos. En la encuesta de Steam de septiembre de 2026, solo el 5.5% de los sistemas tenía 24 GB de memoria gráfica, y cuatro de las ocho aplicaciones de IA local que pude puntuar obtuvieron 2 o menos en su función principal. (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
         'El precio de lista del DGX Spark de 128 GB de NVIDIA pasó de $3,999 en el lanzamiento a $6,950 en octubre de 2026. El hardware que hace cómoda la IA local se está encareciendo, no abaratando. (Hans Kuepper, El estado de la IA local, Informe 01, Q4 2026)',
       ],
       pressAuthor: 'Hans Kuepper es el fundador de PromptQuorum, con sede en Fráncfort, y cuenta con más de 30 años de experiencia en consultoría y dirección general. Probó él mismo las nueve aplicaciones de este informe.',

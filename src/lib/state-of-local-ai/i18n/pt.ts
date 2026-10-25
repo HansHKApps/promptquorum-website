@@ -131,7 +131,7 @@ export const pt: SolaStrings = {
       metaDescription:
         'Relatório 01 (Q4 2026): poucos PCs rodam bons modelos de IA local e poucos apps valem a pena. Números com fontes, nove testes e registro de afirmações.',
       keyFindings: [
-        'Na pesquisa de hardware da Steam de julho de 2026, 25.9% dos sistemas pesquisados tinham 16 GB de memória de vídeo e 5.4% tinham 24 GB.',
+        'Na pesquisa de hardware da Steam de setembro de 2026, 27.2% dos sistemas pesquisados tinham 16 GB de memória de vídeo e 5.5% tinham 24 GB.',
         'Num Mac de 24 GB, nos testes do autor, o sistema usou 9.67 GB de memória logo após a inicialização, antes de qualquer modelo ser carregado.',
         'Dos nove apps de IA local que o autor testou, oito puderam receber nota; quatro desses oito tiraram 2 ou menos na função principal.',
         'Entre 2.2% e 4.5% dos domicílios ou consumidores dos EUA pagam por um chatbot de IA, segundo três fontes de dados de cartão. O 1% que mais paga responde por 19.5% do gasto do consumidor com IA.',
@@ -145,7 +145,7 @@ export const pt: SolaStrings = {
         'O autor fundou o PromptQuorum, um site de conteúdo e diretório sobre apps de IA local, e testou apps que estão listados lá. Cada registro de teste prático, com rótulos de evidência e os próprios erros do testador, está vinculado a partir do arquivo de evidências. Nenhum pagamento ou patrocínio consta nas notas de teste.',
       correction: 'Versão 1.0: primeira publicação.',
       pressStats: [
-        { figure: '5.4%', text: 'dos sistemas na pesquisa de hardware da Steam de julho de 2026 tinham 24 GB de memória de vídeo; 25.9% tinham 16 GB.', source: 'Steam Hardware & Software Survey, julho de 2026, via relatórios secundários (página primária da Valve não consultada)' },
+        { figure: '5.5%', text: 'dos sistemas na pesquisa de hardware da Steam de setembro de 2026 tinham 24 GB de memória de vídeo; 27.2% tinham 16 GB.', source: 'Steam Hardware & Software Survey, setembro de 2026 (página primária da Valve)' },
         { figure: '4 de 8', text: 'apps de IA local que o autor pôde avaliar tiraram 2 ou menos na função principal (nove foram testados, oito receberam nota).', source: 'Testes práticos do autor, 9 a 24 de outubro de 2026' },
         { figure: '9.67 GB', text: 'de memória em uso num Mac de 24 GB logo após a inicialização, antes de qualquer modelo ser carregado.', source: 'Testes práticos do autor, Mac de 24 GB' },
         { figure: '$3,999 a $6,950', text: 'preço de tabela do NVIDIA DGX Spark de 128 GB, do lançamento a outubro de 2026 ($4,699 em fevereiro de 2026).', source: 'Fórum de desenvolvedores da NVIDIA (primária); Implicator.ai (secundária)' },
@@ -154,7 +154,7 @@ export const pt: SolaStrings = {
         { figure: '10 e 29', text: 'resultados para "local AI" na App Store alemã da Apple e no Google Play, entre cerca de 2.75 milhões e 2.65 milhões de apps.', source: 'Buscas nas lojas registradas em 23 de outubro de 2026; estatísticas de lojas da 42matters' },
       ],
       pressQuotes: [
-        'Hoje a IA local tem poucas galinhas e menos ovos ainda. Na pesquisa da Steam de julho de 2026, apenas 5.4% dos sistemas tinham 24 GB de memória de vídeo, e quatro dos oito apps de IA local que pude avaliar tiraram 2 ou menos na função principal. (Hans Kuepper, O Estado da IA Local, Relatório 01, Q4 2026)',
+        'Hoje a IA local tem poucas galinhas e menos ovos ainda. Na pesquisa da Steam de setembro de 2026, apenas 5.5% dos sistemas tinham 24 GB de memória de vídeo, e quatro dos oito apps de IA local que pude avaliar tiraram 2 ou menos na função principal. (Hans Kuepper, O Estado da IA Local, Relatório 01, Q4 2026)',
         'O preço de tabela do DGX Spark de 128 GB da NVIDIA passou de $3,999 no lançamento para $6,950 em outubro de 2026. O hardware que torna a IA local confortável está ficando mais caro, não mais barato. (Hans Kuepper, O Estado da IA Local, Relatório 01, Q4 2026)',
       ],
       pressAuthor: 'Hans Kuepper é o fundador do PromptQuorum, com sede em Frankfurt, e tem mais de 30 anos de experiência em consultoria e gestão geral. Ele mesmo testou os nove apps deste relatório.',

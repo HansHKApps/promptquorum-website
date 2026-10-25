@@ -1,15 +1,15 @@
 [
   {
     "id": "S1",
-    "description": "Steam Hardware & Software Survey, July 2026 (secondary reports: tBreak, Hardware Busters, Club386). Valve primary page not retrieved.",
-    "url": "https://tbreak.com/steam-hardware-survey-16gb-vram-overtakes-8gb/",
-    "date": "Jul 2026",
+    "description": "Steam Hardware & Software Survey, September 2026 (Valve, primary; all platforms combined).",
+    "url": "https://store.steampowered.com/hwsurvey",
+    "date": "Sep 2026",
     "note": ""
   },
   {
     "id": "S2",
-    "description": "Steam survey, September 2026: platform share, macOS 1.92% of systems (Digital Citizen; TechSpot). Valve primary page not retrieved.",
-    "url": "https://www.digitalcitizen.life/32gb-ram-overtakes-16gb-steam-hardware-survey-september-2026/",
+    "description": "Steam survey, September 2026: platform share, macOS 1.92% of systems (Valve, primary).",
+    "url": "https://store.steampowered.com/hwsurvey",
     "date": "Sep 2026",
     "note": ""
   },

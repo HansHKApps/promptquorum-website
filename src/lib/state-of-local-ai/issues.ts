@@ -67,7 +67,7 @@ export const ISSUES: Issue[] = [
       'Kuepper, Hans. "Few Chickens and Even Fewer Eggs." The State of Local AI, Report 01 (Q4 2026). PromptQuorum, October 23, 2026. https://www.promptquorum.com/about/state-of-local-ai/2026-q4.',
     press: {
       stats: [
-        { figure: '5.4%', text: 'of systems in the July 2026 Steam hardware survey had 24 GB of graphics memory; 25.9% had 16 GB.', source: 'Steam Hardware & Software Survey, July 2026, via secondary reports (Valve primary page not retrieved)', ids: ['S1'] },
+        { figure: '5.5%', text: 'of systems in the September 2026 Steam hardware survey had 24 GB of graphics memory; 27.2% had 16 GB.', source: 'Steam Hardware & Software Survey, September 2026 (Valve primary page)', ids: ['S1'] },
         { figure: '4 of 8', text: 'local AI apps the author could score rated 2 or below on core function (nine were tested, eight scored).', source: "Author's hands-on tests, 9-24 October 2026", ids: ['S22'] },
         { figure: '9.67 GB', text: 'of memory in use on a 24 GB Mac right after startup, before any model was loaded.', source: "Author's hands-on tests, 24 GB Mac", ids: ['S22'] },
         { figure: '$3,999 to $6,950', text: 'list price of the 128 GB NVIDIA DGX Spark, launch to October 2026 ($4,699 in February 2026).', source: 'NVIDIA developer forum (primary); Implicator.ai (secondary)', ids: ['S3', 'S4'] },
@@ -76,7 +76,7 @@ export const ISSUES: Issue[] = [
         { figure: '10 and 29', text: 'results for "local AI" in the German Apple App Store and in Google Play, out of about 2.75 million and 2.65 million apps.', source: 'Store searches captured 23 October 2026; 42matters store statistics', ids: ['S34', 'S35', 'S36'] },
       ],
       quotes: [
-        'Local AI today has few chickens and even fewer eggs. In the July 2026 Steam survey, only 5.4% of systems had 24 GB of graphics memory, and four of the eight local AI apps I could score rated 2 or below on their core function. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
+        'Local AI today has few chickens and even fewer eggs. In the September 2026 Steam survey, only 5.5% of systems had 24 GB of graphics memory, and four of the eight local AI apps I could score rated 2 or below on their core function. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
         'The list price of NVIDIA\u2019s 128 GB DGX Spark went from $3,999 at launch to $6,950 in October 2026. The hardware that makes local AI comfortable is getting more expensive, not cheaper. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
       ],
       author: 'Hans Kuepper is the founder of PromptQuorum, based in Frankfurt, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself.',
@@ -97,7 +97,7 @@ export const ISSUES: Issue[] = [
     },
     corrections: [{ date: '23 October 2026', text: 'Version 1.0: first publication.' }],
     keyFindings: [
-      { text: 'In the July 2026 Steam hardware survey, 25.9% of surveyed systems had 16 GB of graphics memory and 5.4% had 24 GB.', sources: ['S1'] },
+      { text: 'In the September 2026 Steam hardware survey, 27.2% of surveyed systems had 16 GB of graphics memory and 5.5% had 24 GB.', sources: ['S1'] },
       { text: "On a 24 GB Mac in the author's tests, the system used 9.67 GB of memory right after startup, before any model was loaded.", sources: ['S22'] },
       { text: 'Of nine local AI apps the author tested, eight could be scored; four of those eight rated 2 or below on core function.', sources: ['S22'] },
       { text: 'Between 2.2% and 4.5% of US households or consumers pay for an AI chatbot, according to three card-data sources. The top 1% of payers account for 19.5% of consumer AI spend.', sources: ['S11', 'S12', 'S13'] },
