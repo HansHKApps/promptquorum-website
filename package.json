@@ -42,6 +42,7 @@
     "test:article-skin": "npx -y tsx scripts/test-article-skin.tsx",
     "check:page-updater": "node scripts/check-page-updater-complete.mjs",
     "test:above-fold": "playwright test -c playwright.above-the-fold.config.ts",
+    "test:consent": "playwright test -c playwright.consent.config.ts",
     "query-coverage": "node scripts/query-coverage.mjs",
     "gsc:import": "python3 scripts/gsc-import.py",
     "test:affiliate-clicks": "node scripts/test-affiliate-clicks.mjs",

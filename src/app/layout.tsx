@@ -39,6 +39,8 @@ import { CookieBanner } from '@/components/CookieBanner'
 import { PageTracker } from '@/components/PageTracker'
 import { ClarityRouteTracker } from '@/components/ClarityRouteTracker'
 import { OneSignalInit } from '@/components/OneSignalInit'
+import { ClarityLoader } from '@/components/ClarityLoader'
+import { ConsentEnforcer } from '@/components/ConsentEnforcer'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
 import { McpFloatingCta } from '@/components/McpFloatingCta'
 import { TableOfContentsButton } from '@/components/TableOfContentsButton'
@@ -261,10 +263,10 @@ export default function RootLayout({
           <TableOfContentsButton />
           <GooglePreferredSourcesCard />
 
-          {/* Cookieless analytics — load for every visitor, no consent required.
-              Umami (cookieless by design, proxied same-origin via /lib/s) and
-              Microsoft Clarity (cookieless consentv2, loaded directly from clarity.ms, afterInteractive so its history-API
-              patch installs post-hydration and catches App Router client-side navigations).
+          {/* Umami: cookieless and anonymous, proxied same-origin via /lib/s, so it is
+              listed under "Necessary" in the cookie dialog and the privacy policy.
+              Microsoft Clarity (session recording) is NOT loaded here: ClarityLoader
+              injects it only after the visitor allows "Session recordings".
               GA4 removed. ConsentedAnalytics is a no-op stub kept for reversibility. */}
           <Script
             id="umami-script"
@@ -273,13 +275,8 @@ export default function RootLayout({
             data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
             data-host-url="/lib/s"
           />
-          {/* Microsoft Clarity — cookieless mode (consentv2 storage denied), no consent
-              required (§ 25 TDDDG). afterInteractive mirrors Umami so Clarity's own
-              history-API patch installs after hydration and tracks SPA navigations. */}
-          <Script
-            id="clarity-init"
-            strategy="afterInteractive"
-          >{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wtwpeavhum");window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"denied"});`}</Script>
+          <ClarityLoader />
+          <ConsentEnforcer />
           <ConsentedAnalytics />
         </Providers>
       </body>

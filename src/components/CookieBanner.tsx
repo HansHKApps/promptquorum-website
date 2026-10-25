@@ -1,173 +1,16 @@
 'use client'
 
-import { useEffect, useState, Suspense } from 'react'
+import { useCallback, useEffect, useRef, useState, Suspense } from 'react'
 import { useLang, type Lang } from '@/hooks/useLang'
+import { COOKIE_COPY } from '@/lib/cookie-consent-copy'
+import {
+  OPEN_CONSENT_EVENT,
+  getConsent,
+  setConsent,
+  type ConsentCategory,
+} from '@/lib/consent'
 
-const STORAGE_KEY = 'analytics_consent'
-const RECORD_VERSION = 1
-const MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000
-
-export type ConsentRecord = {
-  state: 'granted' | 'denied' | 'custom'
-  analytics: boolean
-  marketing: boolean
-  ts: number
-  version: number
-}
-
-type Copy = {
-  intro: string
-  policy: string
-  rejectAll: string
-  customize: string
-  acceptAll: string
-  essential: string
-  essentialDesc: string
-  analytics: string
-  analyticsDesc: string
-  marketing: string
-  marketingDesc: string
-  alwaysOn: string
-  save: string
-}
-
-const COPY: Partial<Record<Lang, Copy>> = {
-  en: {
-    intro: 'We use cookies and similar tech to understand how visitors use this site. Choose what to enable — you can change this anytime via "Cookie Settings" in the footer.',
-    policy: 'Privacy Policy',
-    rejectAll: 'Reject all',
-    customize: 'Customize',
-    acceptAll: 'Accept all',
-    essential: 'Essential',
-    essentialDesc: 'Required for the site to function (e.g. your language and consent choice).',
-    analytics: 'Analytics',
-    analyticsDesc: 'Umami, Microsoft Clarity — anonymous usage stats.',
-    marketing: 'Marketing',
-    marketingDesc: 'Ad personalization and remarketing signals (none currently active).',
-    alwaysOn: 'Always on',
-    save: 'Save preferences',
-  },
-  de: {
-    intro: 'Wir verwenden Cookies und ähnliche Technologien, um zu verstehen, wie Besucher diese Website nutzen. Wählen Sie, was aktiviert werden soll – Sie können dies jederzeit über „Cookie-Einstellungen" im Footer ändern.',
-    policy: 'Datenschutzerklärung',
-    rejectAll: 'Alle ablehnen',
-    customize: 'Anpassen',
-    acceptAll: 'Alle akzeptieren',
-    essential: 'Erforderlich',
-    essentialDesc: 'Notwendig für die Funktion der Website (z. B. Sprache und Einwilligungsauswahl).',
-    analytics: 'Analyse',
-    analyticsDesc: 'Umami, Microsoft Clarity – anonyme Nutzungsstatistiken.',
-    marketing: 'Marketing',
-    marketingDesc: 'Anzeigenpersonalisierung und Remarketing-Signale (derzeit nicht aktiv).',
-    alwaysOn: 'Immer aktiv',
-    save: 'Einstellungen speichern',
-  },
-  fr: {
-    intro: "Nous utilisons des cookies et technologies similaires pour comprendre comment les visiteurs utilisent ce site. Choisissez ce que vous souhaitez activer — vous pouvez modifier ce choix à tout moment via « Paramètres des cookies » dans le pied de page.",
-    policy: 'Politique de confidentialité',
-    rejectAll: 'Tout refuser',
-    customize: 'Personnaliser',
-    acceptAll: 'Tout accepter',
-    essential: 'Essentiels',
-    essentialDesc: 'Nécessaires au fonctionnement du site (langue et choix de consentement).',
-    analytics: 'Analyses',
-    analyticsDesc: 'Umami, Microsoft Clarity — statistiques d\'usage anonymes.',
-    marketing: 'Marketing',
-    marketingDesc: 'Personnalisation publicitaire et signaux de remarketing (aucun actif actuellement).',
-    alwaysOn: 'Toujours actif',
-    save: 'Enregistrer mes préférences',
-  },
-  ja: {
-    intro: '当サイトでは、訪問者の利用状況を把握するためにCookieおよび類似技術を使用します。有効にする項目を選択してください — フッターの「Cookie設定」からいつでも変更できます。',
-    policy: 'プライバシーポリシー',
-    rejectAll: 'すべて拒否',
-    customize: 'カスタマイズ',
-    acceptAll: 'すべて受け入れる',
-    essential: '必須',
-    essentialDesc: 'サイトの機能に必要です（言語設定、同意の保存など）。',
-    analytics: '分析',
-    analyticsDesc: 'Umami、Microsoft Clarity — 匿名の利用統計。',
-    marketing: 'マーケティング',
-    marketingDesc: '広告のパーソナライズおよびリマーケティング信号（現在は無効）。',
-    alwaysOn: '常時オン',
-    save: '設定を保存',
-  },
-  zh: {
-    intro: '我们使用 Cookie 和类似技术来了解访客如何使用本网站。请选择启用项 — 您可以随时通过页脚的"Cookie 设置"更改。',
-    policy: '隐私政策',
-    rejectAll: '全部拒绝',
-    customize: '自定义',
-    acceptAll: '全部接受',
-    essential: '必要',
-    essentialDesc: '网站正常运行所必需（如语言和同意选择）。',
-    analytics: '分析',
-    analyticsDesc: 'Umami、Microsoft Clarity — 匿名使用统计。',
-    marketing: '营销',
-    marketingDesc: '广告个性化和再营销信号（当前未启用）。',
-    alwaysOn: '始终开启',
-    save: '保存偏好',
-  },
-  es: {
-    intro: 'Usamos cookies y tecnologías similares para entender cómo los visitantes utilizan este sitio. Elija qué activar — puede cambiarlo en cualquier momento desde «Configuración de cookies» en el pie de página.',
-    policy: 'Política de privacidad',
-    rejectAll: 'Rechazar todo',
-    customize: 'Personalizar',
-    acceptAll: 'Aceptar todo',
-    essential: 'Esenciales',
-    essentialDesc: 'Necesarias para el funcionamiento del sitio (p. ej., su idioma y su elección de consentimiento).',
-    analytics: 'Analítica',
-    analyticsDesc: 'Umami, Microsoft Clarity — estadísticas de uso anónimas.',
-    marketing: 'Marketing',
-    marketingDesc: 'Personalización publicitaria y señales de remarketing (ninguna activa actualmente).',
-    alwaysOn: 'Siempre activas',
-    save: 'Guardar preferencias',
-  },
-  pt: {
-    intro: 'Usamos cookies e tecnologias semelhantes para entender como os visitantes utilizam este site. Escolha o que ativar — você pode alterar isso a qualquer momento em «Configurações de cookies» no rodapé.',
-    policy: 'Política de Privacidade',
-    rejectAll: 'Rejeitar tudo',
-    customize: 'Personalizar',
-    acceptAll: 'Aceitar tudo',
-    essential: 'Essenciais',
-    essentialDesc: 'Necessários para o funcionamento do site (por exemplo, seu idioma e sua escolha de consentimento).',
-    analytics: 'Análise',
-    analyticsDesc: 'Umami, Microsoft Clarity — estatísticas de uso anônimas.',
-    marketing: 'Marketing',
-    marketingDesc: 'Personalização de anúncios e sinais de remarketing (nenhum ativo no momento).',
-    alwaysOn: 'Sempre ativo',
-    save: 'Salvar preferências',
-  },
-  ar: {
-    intro: 'نستخدم ملفات تعريف الارتباط وتقنيات مماثلة لفهم كيفية استخدام الزوار لهذا الموقع. اختر ما تريد تفعيله — يمكنك تغيير ذلك في أي وقت عبر «إعدادات ملفات تعريف الارتباط» في تذييل الصفحة.',
-    policy: 'سياسة الخصوصية',
-    rejectAll: 'رفض الكل',
-    customize: 'تخصيص',
-    acceptAll: 'قبول الكل',
-    essential: 'ضرورية',
-    essentialDesc: 'مطلوبة لكي يعمل الموقع (مثل لغتك واختيار الموافقة).',
-    analytics: 'التحليلات',
-    analyticsDesc: 'Umami وMicrosoft Clarity — إحصاءات استخدام مجهولة الهوية.',
-    marketing: 'التسويق',
-    marketingDesc: 'تخصيص الإعلانات وإشارات إعادة التسويق (لا يوجد نشط حاليًا).',
-    alwaysOn: 'مفعّل دائمًا',
-    save: 'حفظ التفضيلات',
-  },
-  ko: {
-    intro: '당사는 방문자가 이 사이트를 이용하는 방식을 파악하기 위해 쿠키 및 유사 기술을 사용합니다. 활성화할 항목을 선택하십시오 — 푸터의 «쿠키 설정»을 통해 언제든지 변경하실 수 있습니다.',
-    policy: '개인 정보 처리 방침',
-    rejectAll: '모두 거부',
-    customize: '설정',
-    acceptAll: '모두 허용',
-    essential: '필수',
-    essentialDesc: '사이트 작동에 필요합니다(예: 언어 및 동의 선택 사항).',
-    analytics: '분석',
-    analyticsDesc: 'Umami, Microsoft Clarity — 익명 사용 통계.',
-    marketing: '마케팅',
-    marketingDesc: '광고 개인화 및 리마케팅 신호(현재 활성화된 항목 없음).',
-    alwaysOn: '항상 활성',
-    save: '설정 저장',
-  },
-}
+export type { ConsentRecord } from '@/lib/consent'
 
 const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 
@@ -183,51 +26,11 @@ function readLangCookie(): Lang | null {
   return value && VALID_LANGS.includes(value) ? value : null
 }
 
-function readConsent(): ConsentRecord | null {
-  if (typeof window === 'undefined') return null
-  const raw = localStorage.getItem(STORAGE_KEY)
-  if (!raw) return null
-  if (raw === 'granted' || raw === 'denied') {
-    // Migrate legacy string values
-    const analytics = raw === 'granted'
-    return { state: raw, analytics, marketing: false, ts: Date.now(), version: RECORD_VERSION }
-  }
-  try {
-    const parsed = JSON.parse(raw) as Partial<ConsentRecord>
-    if (typeof parsed.ts !== 'number' || typeof parsed.version !== 'number') return null
-    return {
-      state: parsed.state ?? 'denied',
-      analytics: !!parsed.analytics,
-      marketing: !!parsed.marketing,
-      ts: parsed.ts,
-      version: parsed.version,
-    }
-  } catch {
-    return null
-  }
-}
+type Choices = Record<ConsentCategory, boolean>
+const NONE: Choices = { analytics: false, recordings: false, marketing: false }
+const ALL: Choices = { analytics: true, recordings: true, marketing: true }
 
-function writeConsent(r: ConsentRecord, lang: string) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(r))
-  window.dispatchEvent(new CustomEvent('consent-changed', { detail: r }))
-  // Fire-and-forget server-side log (GDPR Art. 7(1) proof). Never block UI.
-  fetch('/api/consent', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      state: r.state,
-      analytics: r.analytics,
-      marketing: r.marketing,
-      version: r.version,
-      lang,
-    }),
-    keepalive: true,
-  }).catch(() => {})
-}
-
-function isStale(r: ConsentRecord): boolean {
-  return r.version !== RECORD_VERSION || Date.now() - r.ts > MAX_AGE_MS
-}
+const FOCUSABLE = 'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
 
 function CookieBannerInner() {
   const urlLang = useLang()
@@ -235,146 +38,201 @@ function CookieBannerInner() {
   // Prefer the language explicit in the URL (matches the page the visitor is on);
   // otherwise fall back to the pq_lang cookie set by the middleware; else English.
   const lang: Lang = urlLang !== 'en' ? urlLang : (cookieLang ?? 'en')
-  const c = (COPY[lang] ?? COPY.en)!
+  const c = COOKIE_COPY[lang] ?? COOKIE_COPY.en
   const isRtl = lang === 'ar'
+
   const [visible, setVisible] = useState(false)
-  const [showCustom, setShowCustom] = useState(false)
-  const [analyticsOn, setAnalyticsOn] = useState(false)
-  const [marketingOn, setMarketingOn] = useState(false)
+  // True when the visitor has already answered, so the dialog may be dismissed
+  // without a choice (Escape, backdrop). On the first visit it may not.
+  const [hasAnswered, setHasAnswered] = useState(false)
+  const [choices, setChoices] = useState<Choices>(NONE)
+  const dialogRef = useRef<HTMLDivElement>(null)
+  const returnFocusRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     setCookieLang(readLangCookie())
   }, [])
 
   useEffect(() => {
-    const stored = readConsent()
-    if (!stored || isStale(stored)) {
-      setVisible(true)
-    }
+    const stored = getConsent()
+    if (!stored) setVisible(true)
 
+    // Reopened from the footer: show what is currently saved, not a blank form.
     const openHandler = () => {
-      setShowCustom(false)
-      setAnalyticsOn(false)
-      setMarketingOn(false)
+      const current = getConsent()
+      setHasAnswered(!!current)
+      setChoices(
+        current
+          ? { analytics: current.analytics, recordings: current.recordings, marketing: current.marketing }
+          : NONE,
+      )
+      returnFocusRef.current = document.activeElement as HTMLElement | null
       setVisible(true)
     }
-    window.addEventListener('open-cookie-banner', openHandler)
-    return () => window.removeEventListener('open-cookie-banner', openHandler)
+    window.addEventListener(OPEN_CONSENT_EVENT, openHandler)
+    return () => window.removeEventListener(OPEN_CONSENT_EVENT, openHandler)
   }, [])
 
-  function commit(r: ConsentRecord) {
-    writeConsent(r, lang)
+  const close = useCallback(() => {
     setVisible(false)
-  }
+    returnFocusRef.current?.focus?.()
+    returnFocusRef.current = null
+  }, [])
 
-  function rejectAll() {
-    commit({ state: 'denied', analytics: false, marketing: false, ts: Date.now(), version: RECORD_VERSION })
-  }
+  const commit = useCallback(
+    (next: Choices) => {
+      setConsent(next, lang)
+      setHasAnswered(true)
+      close()
+    },
+    [lang, close],
+  )
 
-  function acceptAll() {
-    commit({ state: 'granted', analytics: true, marketing: true, ts: Date.now(), version: RECORD_VERSION })
-  }
+  // Focus the dialog on open, lock page scroll behind it, trap Tab, close on Escape
+  // only when closing is allowed.
+  useEffect(() => {
+    if (!visible) return
+    const dialog = dialogRef.current
+    dialog?.querySelector<HTMLElement>('button')?.focus()
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
 
-  function saveCustom() {
-    commit({
-      state: 'custom',
-      analytics: analyticsOn,
-      marketing: marketingOn,
-      ts: Date.now(),
-      version: RECORD_VERSION,
-    })
-  }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && hasAnswered) {
+        e.preventDefault()
+        close()
+        return
+      }
+      if (e.key !== 'Tab' || !dialog) return
+      const items = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE))
+      if (items.length === 0) return
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = prevOverflow
+    }
+  }, [visible, hasAnswered, close])
 
   if (!visible) return null
 
-  const btnStyle: React.CSSProperties = {
-    padding: '6px 12px',
-    borderRadius: '100px',
-    border: '1px solid #CAC4D0',
-    background: 'transparent',
-    color: '#E6E1E5',
-    fontSize: '12px',
+  const toggle = (k: ConsentCategory) => (v: boolean) => setChoices((p) => ({ ...p, [k]: v }))
+
+  const btnBase: React.CSSProperties = {
+    padding: '10px 18px',
+    borderRadius: '8px',
+    fontSize: '14px',
     fontWeight: 600,
     cursor: 'pointer',
     fontFamily: "'Plus Jakarta Sans', sans-serif",
     whiteSpace: 'nowrap',
-    flex: '1 1 0',
-    minWidth: 0,
   }
+  const btnPrimary: React.CSSProperties = { ...btnBase, background: '#D0BCFF', color: '#1C1B1F', border: '1px solid #D0BCFF' }
+  const btnSecondary: React.CSSProperties = { ...btnBase, background: 'transparent', color: '#E6E1E5', border: '1px solid #CAC4D0' }
 
   return (
     <div
-      role="dialog"
-      aria-label="Cookie consent"
-      dir={isRtl ? 'rtl' : 'ltr'}
+      onMouseDown={(e) => {
+        if (e.target === e.currentTarget && hasAnswered) close()
+      }}
       style={{
         position: 'fixed',
-        bottom: '16px',
-        ...(isRtl ? { right: '16px' } : { left: '16px' }),
+        inset: 0,
         zIndex: 9998,
-        background: '#1C1B1F',
-        border: '1px solid #49454F',
-        borderRadius: '12px',
-        padding: '14px 16px',
-        maxWidth: '320px',
-        width: 'calc(100vw - 32px)',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-        fontFamily: "'Plus Jakarta Sans', sans-serif",
+        background: 'rgba(0,0,0,0.55)',
         display: 'flex',
-        flexDirection: 'column',
-        gap: '12px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '16px',
       }}
     >
-      <p style={{ margin: 0, fontSize: '13px', color: '#CAC4D0', lineHeight: 1.5 }}>
-        {c.intro}{' '}
-        <a href="/privacy" style={{ color: '#D0BCFF', textDecoration: 'underline' }}>
-          {c.policy}
-        </a>
-        {' · '}
-        <a href="/impressum" style={{ color: '#D0BCFF', textDecoration: 'underline' }}>
-          Impressum
-        </a>
-        .
-      </p>
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cookie-dialog-title"
+        dir={isRtl ? 'rtl' : 'ltr'}
+        style={{
+          background: '#1C1B1F',
+          border: '1px solid #49454F',
+          borderRadius: '16px',
+          width: '100%',
+          maxWidth: '520px',
+          maxHeight: 'calc(100vh - 32px)',
+          display: 'flex',
+          flexDirection: 'column',
+          boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
+          color: '#E6E1E5',
+        }}
+      >
+        <div style={{ padding: '20px 24px 8px' }}>
+          <h2 id="cookie-dialog-title" style={{ margin: 0, fontSize: '17px', fontWeight: 700 }}>
+            {c.title}
+          </h2>
+          <p style={{ margin: '8px 0 0', fontSize: '13px', color: '#CAC4D0', lineHeight: 1.5 }}>
+            {c.intro}{' '}
+            <a href="/privacy" style={{ color: '#D0BCFF', textDecoration: 'underline' }}>
+              {c.policy}
+            </a>
+            {' · '}
+            <a href="/impressum" style={{ color: '#D0BCFF', textDecoration: 'underline' }}>
+              Impressum
+            </a>
+          </p>
+        </div>
 
-      <div style={{ display: 'flex', gap: '10px' }}>
-        <button onClick={rejectAll} style={btnStyle}>{c.rejectAll}</button>
-        <button
-          onClick={() => setShowCustom((v) => !v)}
-          style={btnStyle}
-          aria-expanded={showCustom}
-        >
-          {c.customize} {showCustom ? '▴' : '▾'}
-        </button>
-        <button onClick={acceptAll} style={btnStyle}>{c.acceptAll}</button>
-      </div>
-
-      {showCustom && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid #49454F', paddingTop: '14px', maxHeight: '220px', overflowY: 'auto' }}>
-          <CategoryRow
-            title={c.essential}
-            desc={c.essentialDesc}
-            checked
-            disabled
-            badge={c.alwaysOn}
-          />
+        <div style={{ overflowY: 'auto', padding: '0 24px' }}>
+          <CategoryRow title={c.necessary} desc={c.necessaryDesc} checked locked badge={c.alwaysOn} />
           <CategoryRow
             title={c.analytics}
             desc={c.analyticsDesc}
-            checked={analyticsOn}
-            onChange={setAnalyticsOn}
+            checked={choices.analytics}
+            onChange={toggle('analytics')}
+          />
+          <CategoryRow
+            title={c.recordings}
+            desc={c.recordingsDesc}
+            checked={choices.recordings}
+            onChange={toggle('recordings')}
           />
           <CategoryRow
             title={c.marketing}
             desc={c.marketingDesc}
-            checked={marketingOn}
-            onChange={setMarketingOn}
+            checked={choices.marketing}
+            onChange={toggle('marketing')}
           />
-          <button onClick={saveCustom} style={{ ...btnStyle, flex: '0 0 auto', alignSelf: 'flex-end', padding: '8px 22px' }}>
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '10px',
+            padding: '16px 24px 20px',
+            borderTop: '1px solid #49454F',
+          }}
+        >
+          <button type="button" onClick={() => commit(ALL)} style={btnPrimary}>
+            {c.acceptAll}
+          </button>
+          <button type="button" onClick={() => commit(choices)} style={btnSecondary}>
             {c.save}
           </button>
+          <button type="button" onClick={() => commit(NONE)} style={btnSecondary}>
+            {c.rejectAll}
+          </button>
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -383,38 +241,61 @@ function CategoryRow({
   title,
   desc,
   checked,
-  disabled,
+  locked,
   badge,
   onChange,
 }: {
   title: string
   desc: string
   checked: boolean
-  disabled?: boolean
+  locked?: boolean
   badge?: string
   onChange?: (v: boolean) => void
 }) {
   return (
-    <label style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', cursor: disabled ? 'default' : 'pointer' }}>
-      <input
-        type="checkbox"
-        checked={checked}
-        disabled={disabled}
-        onChange={(e) => onChange?.(e.target.checked)}
-        style={{ marginTop: '3px', accentColor: '#D0BCFF', cursor: disabled ? 'default' : 'pointer' }}
-      />
-      <span style={{ display: 'flex', flexDirection: 'column', gap: '2px', flex: 1 }}>
-        <span style={{ fontSize: '13px', fontWeight: 600, color: '#E6E1E5' }}>
-          {title}
-          {badge && (
-            <span style={{ marginLeft: '8px', fontSize: '11px', fontWeight: 500, color: '#938F99' }}>
-              ({badge})
-            </span>
-          )}
-        </span>
-        <span style={{ fontSize: '12px', color: '#CAC4D0', lineHeight: 1.5 }}>{desc}</span>
-      </span>
-    </label>
+    <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', padding: '14px 0', borderTop: '1px solid #49454F' }}>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ fontSize: '14px', fontWeight: 600 }}>{title}</div>
+        <p style={{ margin: '4px 0 0', fontSize: '12.5px', color: '#CAC4D0', lineHeight: 1.55 }}>{desc}</p>
+      </div>
+      {locked ? (
+        <span style={{ fontSize: '12.5px', color: '#938F99', whiteSpace: 'nowrap', paddingTop: '2px' }}>{badge}</span>
+      ) : (
+        <button
+          type="button"
+          role="switch"
+          aria-checked={checked}
+          aria-label={title}
+          onClick={() => onChange?.(!checked)}
+          style={{
+            flex: '0 0 auto',
+            width: '40px',
+            height: '24px',
+            borderRadius: '12px',
+            border: 'none',
+            padding: 0,
+            cursor: 'pointer',
+            position: 'relative',
+            background: checked ? '#D0BCFF' : '#49454F',
+            transition: 'background 0.15s',
+          }}
+        >
+          <span
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              top: '3px',
+              insetInlineStart: checked ? '19px' : '3px',
+              width: '18px',
+              height: '18px',
+              borderRadius: '50%',
+              background: checked ? '#1C1B1F' : '#E6E1E5',
+              transition: 'inset-inline-start 0.15s',
+            }}
+          />
+        </button>
+      )}
+    </div>
   )
 }
 

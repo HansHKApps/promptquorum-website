@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { readHubSignals, type HubSignal } from './hub-utils'
+import { hasConsent } from '@/lib/consent'
 
 export function useHubSignals(slugToThemeId?: Record<string, string>) {
   const [signal, setSignal] = useState<HubSignal>({ type: 'none' })
@@ -27,6 +28,8 @@ export function useHubSignals(slugToThemeId?: Record<string, string>) {
   const setLevel = (level: string) => {
     const newSignal: HubSignal = { type: 'level', level }
     setSignal(newSignal)
+    // The level still applies for this page view; it is only remembered with Analytics consent.
+    if (!hasConsent('analytics')) return
     try {
       sessionStorage.setItem('pq_level_selection', JSON.stringify({
         hub: 'prompt-engineering',

@@ -7,6 +7,7 @@ import { useSearch } from './useSearch'
 import { orderByRelevance, type SearchEntry } from './search-utils'
 import { SearchResultItem } from './SearchResultItem'
 import { translations } from '@/translations'
+import { hasConsent } from '@/lib/consent'
 
 interface Props {
   isOpen: boolean
@@ -60,7 +61,7 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
   const handleSelect = useCallback(
     (entry: SearchEntry) => {
       try {
-        sessionStorage.setItem(
+        if (hasConsent('analytics')) sessionStorage.setItem(
           'pq_last_search',
           JSON.stringify({
             query,

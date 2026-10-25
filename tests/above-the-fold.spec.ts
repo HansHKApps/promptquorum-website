@@ -169,6 +169,14 @@ test.describe('above the fold', () => {
       const url = `${loc === 'en' ? '' : `/${loc}`}${path}`
       test(`${url}`, async ({ page }) => {
         const failures: string[] = []
+        // The cookie dialog is a centered modal on a visitor's first visit and would cover
+        // every page, so measure the layout as an already-answered visitor.
+        await page.addInitScript(() => {
+          localStorage.setItem(
+            'analytics_consent',
+            JSON.stringify({ state: 'denied', analytics: false, recordings: false, marketing: false, ts: Date.now(), version: 2 }),
+          )
+        })
         for (const vp of VIEWPORTS) {
           await page.setViewportSize({ width: vp.width, height: vp.height })
           await page.goto(url, { waitUntil: 'load' })

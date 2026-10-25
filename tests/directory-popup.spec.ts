@@ -39,7 +39,7 @@ async function grantConsent(page: Page) {
   await actHuman(page)
   await capOtherPrompts(page)
   await page.addInitScript(() => {
-    window.localStorage.setItem('analytics_consent', JSON.stringify({ state: 'accepted', analytics: true, marketing: false, ts: Date.now(), version: 1 }))
+    window.localStorage.setItem('analytics_consent', JSON.stringify({ state: 'custom', analytics: true, recordings: false, marketing: false, ts: Date.now(), version: 2 }))
   })
 }
 
@@ -170,7 +170,7 @@ test.describe('directory popup', () => {
   test('never shown to automated browsers (navigator.webdriver)', async ({ page }) => {
     // consent granted, full interaction — but no actHuman(): Playwright's own webdriver flag is true
     await page.addInitScript(() => {
-      window.localStorage.setItem('analytics_consent', JSON.stringify({ state: 'accepted', analytics: true, marketing: false, ts: Date.now(), version: 1 }))
+      window.localStorage.setItem('analytics_consent', JSON.stringify({ state: 'custom', analytics: true, recordings: false, marketing: false, ts: Date.now(), version: 2 }))
     })
     await open(page, REVIEW)
     await interact(page)
