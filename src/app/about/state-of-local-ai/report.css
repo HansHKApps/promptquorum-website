@@ -1,7 +1,9 @@
 /* The State of Local AI: scoped styling for the imported report fragments.
    Site tokens only; the site has no dark mode (tailwind darkMode: false). */
 .sola { --sola-line: hsl(var(--border)); --sola-mut: #79747E; --sola-fg: #1C1B1F; --sola-acc: var(--hub-violet-ink, #4a2a8a);
-  --ok:#2e7d4f; --part:#9a6a12; --bad:#b3392f; --unv:#5f6670; --op:#5b4b8a; color: var(--sola-fg); }
+  --ok:#2e7d4f; --part:#9a6a12; --bad:#b3392f; --unv:#5f6670; --op:#5b4b8a; color: var(--sola-fg); overflow-x: clip; }
+.sola nav[aria-label="Breadcrumb"] ol { margin: 0; list-style: none; }
+.sola a.sola-btn { color: #fff; text-decoration: none; }
 .sola .prose-body { max-width: 44rem; margin: 0 auto; font-size: 1.125rem; line-height: 1.7; }
 .sola .evidence { max-width: 60rem; margin: 0 auto; font-size: 1rem; line-height: 1.62; }
 .sola p { margin: 0 0 1rem; }
@@ -19,6 +21,20 @@
 .sola .legend div { margin: .3rem 0; }
 .sola nav.toc { border: 1px solid var(--sola-line); border-radius: .5rem; padding: .9rem 1.25rem; margin: 1.5rem 0; font-size: .95rem; line-height: 1.7; }
 .sola nav.toc ol { margin: .4rem 0 0 1.25rem; }
+/* One-click inline evidence: the whole evidence file opens in place, no download needed. */
+.sola details.evidence-all { margin: 2rem 0; }
+.sola details.evidence-all > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  background: #fff; border: 1px solid hsl(var(--border)); border-color: var(--hub-violet-edge, #d9cff0); border-radius: .75rem; padding: 1.1rem 1.4rem; }
+.sola details.evidence-all > summary::-webkit-details-marker { display: none; }
+.sola details.evidence-all > summary:hover { background: var(--hub-violet-tint, #eee9f8); }
+.sola details.evidence-all > summary:focus-visible { outline: 3px solid var(--hub-violet, #6750a4); outline-offset: 2px; }
+.sola details.evidence-all .ev-title { display: block; font-size: 1.15rem; font-weight: 700; color: var(--sola-fg); }
+.sola details.evidence-all .ev-sub { display: block; font-size: .92rem; font-weight: 400; color: var(--sola-mut); margin-top: .2rem; }
+.sola details.evidence-all .ev-chev { flex: none; width: 1.5rem; height: 1.5rem; border-radius: 9999px; background: var(--hub-violet-tint, #eee9f8); color: var(--sola-acc); display: grid; place-items: center; font-weight: 700; transition: transform .15s; }
+.sola details.evidence-all[open] > summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; background: var(--hub-violet-tint, #eee9f8); }
+.sola details.evidence-all[open] .ev-chev { transform: rotate(180deg); }
+.sola details.evidence-all .ev-body { border: 1px solid var(--hub-violet-edge, #d9cff0); border-top: 0; border-radius: 0 0 .75rem .75rem; padding: 1.25rem 1.4rem 1.6rem; background: #fff; }
+.sola details.evidence-all .evidence h2:first-of-type { margin-top: 1.5rem; }
 /* Labels carry their meaning in text; colour is secondary. */
 .sola .tag { display: inline-block; font-size: .65rem; font-weight: 700; letter-spacing: .08em; padding: .25rem .45rem; border-radius: 3px; color: #fff; vertical-align: middle; margin-right: .25rem; border: 1px solid rgba(0,0,0,.25); }
 .sola .t-fact { background: var(--ok); } .sola .t-meas { background: #0f6b78; } .sola .t-assume { background: var(--part); }
@@ -51,6 +67,7 @@
 .sola ol.src li:target { background: #fff8e6; outline: 2px solid var(--part); }
 @media (max-width: 640px) { .sola .prose-body { font-size: 1.0625rem; } .sola p.verdict { font-size: 1.3rem; } }
 @media print {
+  .sola details.evidence-all > summary { display: none; }
   header, footer, nav[aria-label="Breadcrumb"], .scroll-progress-bar, .no-print { display: none !important; }
   .sola .prose-body { font-size: 11pt; } .sola .sola-scroll { overflow: visible; } .sola table { min-width: 0; font-size: 8.5pt; }
   .sola a { color: #000; } .sola figure.chart, .sola tr { break-inside: avoid; }

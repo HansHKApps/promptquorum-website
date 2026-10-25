@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import {
   SITE, SERIES, HUB_PATH, NEXT_ISSUE, PRESS_CONTACT, ISSUES, LATEST, issuePath, evidencePath, kicker,
 } from '@/lib/state-of-local-ai/issues'
-import { Breadcrumb, JsonLd, crumbSchema, pageMetadata, CARD, BTN, CiteBox } from '@/components/state-of-local-ai/shared'
+import { Breadcrumb, JsonLd, Hero, crumbSchema, pageMetadata, CARD, BTN, CiteBox } from '@/components/state-of-local-ai/shared'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -19,15 +19,16 @@ export default function HubPage() {
   return (
     <div className="sola">
       <JsonLd data={crumbSchema(crumbs, HUB_PATH)} />
-      <div className="container mx-auto px-4 pt-24 pb-16 max-w-3xl">
+      <Hero>
         <Breadcrumb crumbs={crumbs} />
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">{SERIES}</h1>
-        <div className="text-lg text-text-secondary leading-relaxed space-y-3 mb-10">
+        <div className="text-lg text-text-secondary leading-relaxed space-y-3">
           <p>The State of Local AI is a quarterly report on where local AI stands today. It is written from the author&rsquo;s experience building PromptQuorum and testing local-AI apps.</p>
           <p>Facts are labelled, sources are numbered, and assumptions name who makes them and what they rest on.</p>
-          <p>Next issue: {NEXT_ISSUE}.</p>
+          <p className="!mb-0">Next issue: {NEXT_ISSUE}.</p>
         </div>
-
+      </Hero>
+      <div className="container mx-auto px-4 pt-10 pb-16 max-w-3xl">
         <section aria-labelledby="latest-h" className={`${CARD} mb-10`}>
           <h2 id="latest-h" className="!mt-0 !text-sm uppercase tracking-wide text-text-muted">Latest report</h2>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-hub-violet-ink !mb-1">{kicker(LATEST)}</p>
