@@ -12,6 +12,7 @@ import { EvidenceController } from '@/components/state-of-local-ai/EvidenceContr
 export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
   const issue = getIssue(slug)!
   const t = SOLA_STRINGS[lang]
+  const x = t.extras
   const text = t.issues[slug]
   const crumbs = [...hubCrumbs(lang), { name: t.reportLabel.replace(/\d+/, String(issue.number).padStart(2, '0')) }]
   const selfPath = localePath(issuePath(issue), lang)
@@ -49,15 +50,11 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
         <p className="text-sm text-text-muted">
           {t.by} <a href={aboutHref}>Hans Kuepper</a>, PromptQuorum · {formatDisplayDate(issue.isoDate, lang)} · {t.dataCutOff} {formatDisplayDate(issue.isoDate, lang)} · {t.version} {issue.version}
         </p>
-        {english && (
-          <>
-            <p className="flex flex-wrap gap-3 mt-4 no-print">
-              <a href={issue.files.reportPdf} download className="sola-btn inline-block rounded-lg bg-hub-violet px-4 py-2 text-sm font-semibold hover:opacity-90">Download report (PDF)</a>
-              <a href={issue.files.appendixPdf} download className="inline-block rounded-lg border border-hub-violet-edge bg-white px-4 py-2 text-sm font-semibold hover:bg-hub-violet-tint">Download appendix with all evidence (PDF)</a>
-            </p>
-            <p className="mt-4 text-sm no-print"><b>Free to quote and reuse with credit and a link</b> · <a href="#reuse">How to link</a> · <a href="#press">Press kit</a> · <a href="#symbols">Chicken and egg symbols</a> · <a href="#cite-h">Cite</a></p>
-          </>
-        )}
+        <p className="flex flex-wrap gap-3 mt-4 no-print">
+          <a href={issue.files.reportPdf} download className="sola-btn inline-block rounded-lg bg-hub-violet px-4 py-2 text-sm font-semibold hover:opacity-90">{x.downloadReport}</a>
+          <a href={issue.files.appendixPdf} download className="inline-block rounded-lg border border-hub-violet-edge bg-white px-4 py-2 text-sm font-semibold hover:bg-hub-violet-tint">{x.downloadAppendix}</a>
+        </p>
+        <p className="mt-4 text-sm no-print"><b>{x.quickFree}</b> · <a href="#reuse">{x.quickHowToLink}</a> · <a href="#press">{x.quickPress}</a> · <a href="#symbols">{x.quickSymbols}</a> · <a href="#cite-h">{x.quickCite}</a></p>
         {t.translatedNote && (
           <p className="text-sm text-text-muted mt-2">{t.translatedNote} <a href={issuePath(issue)} hrefLang="en">English</a></p>
         )}
@@ -75,7 +72,7 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
               ))}
             </ol>
           </section>
-          {english && <PressKit issue={issue} evidencePath={ev} />}
+          <PressKit issue={issue} evidencePath={ev} lang={lang} />
         </div>
 
         <div className="prose-body" dangerouslySetInnerHTML={{ __html: loadFragment(issue.slug, 'article', lang, t.scrollableTable) }} />
@@ -96,8 +93,8 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          {english && <ReuseBox issue={issue} />}
-          {english && <SymbolKit issue={issue} evidencePath={ev} />}
+          <ReuseBox issue={issue} lang={lang} />
+          <SymbolKit issue={issue} evidencePath={ev} lang={lang} />
           <CiteBox issue={issue} lang={lang} />
 
           <section aria-labelledby="about-h" className="mb-8">
@@ -111,11 +108,11 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
           <section aria-labelledby="links-h" className="mb-8 no-print">
             <h2 id="links-h" className="!mt-0">{t.evidenceAndDownloads}</h2>
             <ul>
-              {english && <li><a href="#reuse">Free to quote and reuse (licence and link)</a></li>}
+              <li><a href="#reuse">{x.listReuse}</a></li>
               <li><a href={ev}>{t.evidenceFileSeparate}</a></li>
-              {english && <li><a href={issue.files.reportPdf} download>Report (PDF)</a></li>}
-              {english && <li><a href={issue.files.appendixPdf} download>Appendix with all evidence (PDF)</a></li>}
-              {english && <li><a href="#symbols">Chicken and egg symbols (SVG, zip)</a></li>}
+              <li><a href={issue.files.reportPdf} download>{x.listReportPdf}</a></li>
+              <li><a href={issue.files.appendixPdf} download>{x.listAppendixPdf}</a></li>
+              <li><a href="#symbols">{x.listSymbols}</a></li>
               <li><a href={issue.files.claims} download>{t.claimRegister}</a></li>
               <li><a href={issue.files.sources} download>{t.sources} (sources.csv)</a></li>
               <li><a href={issue.files.sourcesJson} download>{t.sources} (sources.json)</a></li>
