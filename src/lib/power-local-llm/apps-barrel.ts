@@ -269,6 +269,7 @@ import { app as app_zeno } from './apps/zeno'
 import { app as app_asiden } from './apps/asiden'
 import { app as app_ensu } from './apps/ensu'
 import { app as app_kernelai } from './apps/kernelai'
+import { app as app_llama_app } from './apps/llama-app'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
@@ -545,6 +546,7 @@ export const localAiApps: ToolRecord[] = [
   app_asiden,
   app_ensu,
   app_kernelai,
+  app_llama_app,
   app_candle_vllm,
   app_chroma,
   app_claude_code_local,

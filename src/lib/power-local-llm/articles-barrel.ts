@@ -105,6 +105,7 @@ import { article as a_zeno_review } from './articles/zeno-review'
 import { article as a_asiden_review } from './articles/asiden-review'
 import { article as a_ensu_review } from './articles/ensu-review'
 import { article as a_kernelai_review } from './articles/kernelai-review'
+import { article as a_llama_app_review } from './articles/llama-app-review'
 import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_compactifai_app_review } from './articles/compactifai-app-review'
@@ -761,6 +762,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'asiden-review':                                 a_asiden_review,
   'ensu-review':                                   a_ensu_review,
   'kernelai-review':                               a_kernelai_review,
+  'llama-app-review':                              a_llama_app_review,
   'caelum-review':                                 a_caelum_review,
   'lm-mini-review':                                a_lm_mini_review,
   'compactifai-app-review':                        a_compactifai_app_review,

@@ -75,14 +75,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-operator-review",
-        "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
-        "url": "/power-local-llm/local-operator-review",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
-    "totalCount": 322,
+    "totalCount": 323,
     "capped": true
   },
   "llama.cpp": {
@@ -100,6 +100,22 @@
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-app-review",
+        "title": "Llama App Review: llama.cpp Desktop App for Mac and Windows",
+        "url": "/power-local-llm/llama-app-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
       },
@@ -150,25 +166,9 @@
         "url": "/power-local-llm/best-local-ai-app-low-end-pc",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamatik-review",
-        "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
-        "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 177,
+    "totalCount": 178,
     "capped": true
   },
   "vLLM": {
@@ -186,6 +186,14 @@
         "slug": "litellm-review",
         "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
         "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
       },
@@ -239,14 +247,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "candle-vllm-review",
         "title": "candle-vllm Review: Rust-Native LLM Serving on CUDA and Metal",
         "url": "/power-local-llm/candle-vllm-review",
@@ -277,6 +277,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -289,14 +297,6 @@
         "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
         "url": "/power-local-llm/local-ai-geetmark-review",
         "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -403,18 +403,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
-        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "dateModified": "2026-09-25",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-09-25",
         "tier": "mentioned"
       },
       {
@@ -441,18 +441,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-23",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -506,7 +506,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -592,7 +592,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -635,6 +635,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -646,14 +654,6 @@
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
       },
@@ -775,6 +775,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -795,14 +803,6 @@
         "title": "Unsloth Review: Free Fine-Tuning for LLMs, Images & Audio",
         "url": "/power-local-llm/unsloth-review",
         "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -869,6 +869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -922,17 +930,9 @@
         "url": "/local-llms/qwen-local-deployment-guide-2026",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 158,
+    "totalCount": 159,
     "capped": true
   },
   "Atomic Chat": {
@@ -1009,6 +1009,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -1054,17 +1062,9 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 45,
+    "totalCount": 46,
     "capped": true
   },
   "GPT4All": {
@@ -1299,18 +1299,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "openclient-review",
-        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
-        "url": "/power-local-llm/openclient-review",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "openclient-review",
+        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
+        "url": "/power-local-llm/openclient-review",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
@@ -1566,7 +1566,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       }
     ],
@@ -1905,17 +1905,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "slug": "local-llm-chat-assistants-compared",
+        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
+        "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
       }
@@ -2256,7 +2256,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -3010,6 +3010,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
@@ -3031,14 +3039,6 @@
         "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
         "url": "/power-local-llm/cursor-local-mode-review",
         "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
         "tier": "mentioned"
       },
       {
@@ -8120,7 +8120,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -8158,7 +8158,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -8429,18 +8429,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "llm-hub-review",
-        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
-        "url": "/power-local-llm/llm-hub-review",
-        "dateModified": "2026-10-03",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "llm-hub-review",
+        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
+        "url": "/power-local-llm/llm-hub-review",
+        "dateModified": "2026-10-03",
         "tier": "mentioned"
       }
     ],
@@ -8612,7 +8612,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -8642,7 +8642,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -8772,7 +8772,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -8880,7 +8880,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -9369,18 +9369,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "openclient-review",
-        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
-        "url": "/power-local-llm/openclient-review",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "openclient-review",
+        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
+        "url": "/power-local-llm/openclient-review",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -9562,7 +9562,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -10409,6 +10409,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Llama (llama.app)": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-app-review",
+        "title": "Llama App Review: llama.cpp Desktop App for Mac and Windows",
+        "url": "/power-local-llm/llama-app-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "candle-vllm": {
     "articles": [
       {
@@ -10424,7 +10438,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -10529,18 +10543,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "snug-protocol-review",
-        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
-        "url": "/power-local-llm/snug-protocol-review",
-        "dateModified": "2026-10-18",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "snug-protocol-review",
+        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
+        "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-18",
         "tier": "mentioned"
       }
     ],
@@ -10570,7 +10584,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       }
     ],
@@ -10625,18 +10639,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "mentioned"
       }
     ],
@@ -10658,7 +10672,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -10846,7 +10860,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -11006,7 +11020,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -11120,7 +11134,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -11158,7 +11172,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -11337,18 +11351,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
-        "dateModified": "2026-10-23",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "omlx-review",
+        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
+        "url": "/power-local-llm/omlx-review",
+        "dateModified": "2026-10-23",
         "tier": "about"
       }
     ],
@@ -11370,7 +11384,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -11400,7 +11414,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -11426,19 +11440,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
         "dateModified": "2026-10-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -11522,7 +11536,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       }
     ],
@@ -11642,7 +11656,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 225,
+    "totalCount": 226,
     "capped": true
   },
   "Qdrant": {
@@ -11746,7 +11760,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -11838,7 +11852,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
@@ -11972,7 +11986,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -12016,7 +12030,7 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
       {
@@ -12043,18 +12057,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
-        "dateModified": "2026-10-23",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
+        "slug": "omlx-review",
+        "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
+        "url": "/power-local-llm/omlx-review",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {

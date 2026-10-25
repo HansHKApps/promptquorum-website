@@ -578,6 +578,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'zeno-review':                              'zeno-review',
   'asiden-review':                            'asiden-review',
   'kernelai-review':                          'kernelai-review',
+  'llama-app-review':                         'llama-app-review',
   'caelum-review':                            'caelum-review',
   'lm-mini-review':                           'lm-mini-review',
   'compactifai-app-review':                   'compactifai-app-review',

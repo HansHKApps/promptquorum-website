@@ -628,6 +628,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'asiden-review',
   // KernelAI review (Mobile & Edge LLMs, free offline chat app for iPhone/iPad/Android) — 2026-10-24
   'kernelai-review',
+  // Llama app (llama.app) review (Easiest Desktop Apps) — 2026-10-24
+  'llama-app-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
