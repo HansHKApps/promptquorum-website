@@ -1,0 +1,80 @@
+{
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "Hans Kuepper, PromptQuorum, The State of Local AI, Report 01",
+  "link": "https://www.promptquorum.com/about/state-of-local-ai/2026-q4",
+  "symbols": [
+    {
+      "name": "chicken",
+      "title": "Chicken: capable hardware",
+      "description": "A violet chicken. In the State of Local AI report, a chicken stands for a computer that can run a good local AI model.",
+      "file": "chicken.svg",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "name": "egg",
+      "title": "Egg: an app worth using",
+      "description": "A cream egg with a violet outline. In the State of Local AI report, an egg stands for a local AI app that is worth using.",
+      "file": "egg.svg",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "name": "chicken-egg-pair",
+      "title": "Chicken and egg",
+      "description": "A chicken and an egg side by side: hardware and apps.",
+      "file": "chicken-egg-pair.svg",
+      "width": 420,
+      "height": 236
+    },
+    {
+      "name": "few-chickens",
+      "title": "Few chickens",
+      "description": "Three small chickens in a row. Illustrative, not to scale: few computers can run a good local AI model.",
+      "file": "few-chickens.svg",
+      "width": 420,
+      "height": 150
+    },
+    {
+      "name": "even-fewer-eggs",
+      "title": "Even fewer eggs",
+      "description": "One egg and two empty dashed nests. Illustrative, not to scale: even fewer local AI apps are worth using.",
+      "file": "even-fewer-eggs.svg",
+      "width": 420,
+      "height": 150
+    },
+    {
+      "name": "persona-home-user",
+      "title": "Egg-seeker: home user",
+      "description": "A green egg with a house. The reader who wants to download an app and use it without a terminal.",
+      "file": "persona-home-user.svg",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "name": "persona-developer",
+      "title": "Chicken-keeper: developer",
+      "description": "A violet chicken with code brackets on its body. The developer and early adopter who runs models today.",
+      "file": "persona-developer.svg",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "name": "persona-enterprise-it",
+      "title": "Flock manager: enterprise IT",
+      "description": "An amber chicken with a shield on its body. The buyer who cares about fleets, budgets and supply.",
+      "file": "persona-enterprise-it.svg",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "name": "persona-journalist",
+      "title": "Egg-checker: journalist and analyst",
+      "description": "A red egg with quotation marks. The reader who quotes figures and checks sources.",
+      "file": "persona-journalist.svg",
+      "width": 256,
+      "height": 256
+    }
+  ]
+}

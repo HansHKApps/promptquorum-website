@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="12 28 232 214" width="232" height="214" role="img" aria-labelledby="t d">
+<title id="t">Egg-checker: journalist and analyst</title>
+<desc id="d">A red egg with quotation marks. The reader who quotes figures and checks sources.</desc>
+<metadata>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Credit: Hans Kuepper, PromptQuorum, The State of Local AI, Report 01. Link: https://www.promptquorum.com/about/state-of-local-ai/2026-q4</metadata>
+<g>
+<path d="M128 36 C80 36 54 128 54 160 C54 206 88 234 128 234 C168 234 202 206 202 160 C202 128 176 36 128 36 Z" fill="#fdf3d8" stroke="#b3392f" stroke-width="9"/>
+<path d="M96 120 C100 96 110 80 122 70" stroke="#fff" stroke-width="9" stroke-linecap="round" fill="none"/>
+<g fill="#b3392f"><circle cx="106" cy="150" r="14"/><circle cx="152" cy="150" r="14"/><path d="M93 152 Q94 176 80 186 Q108 184 112 156 Z"/><path d="M139 152 Q140 176 126 186 Q154 184 158 156 Z"/></g></g>
+</svg>

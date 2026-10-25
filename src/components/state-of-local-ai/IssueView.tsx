@@ -6,6 +6,7 @@ import {
 } from '@/lib/state-of-local-ai/issues'
 import { SOLA_STRINGS } from '@/lib/state-of-local-ai/i18n'
 import { Breadcrumb, JsonLd, Kicker, Hero, Lede, crumbSchema, CARD, CiteBox, ReuseBox, PressKit, hubCrumbs, localePath } from '@/components/state-of-local-ai/shared'
+import { SymbolKit } from '@/components/state-of-local-ai/SymbolKit'
 import { EvidenceController } from '@/components/state-of-local-ai/EvidenceController'
 
 export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
@@ -54,7 +55,7 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
               <a href={issue.files.reportPdf} download className="sola-btn inline-block rounded-lg bg-hub-violet px-4 py-2 text-sm font-semibold hover:opacity-90">Download report (PDF)</a>
               <a href={issue.files.appendixPdf} download className="inline-block rounded-lg border border-hub-violet-edge bg-white px-4 py-2 text-sm font-semibold hover:bg-hub-violet-tint">Download appendix with all evidence (PDF)</a>
             </p>
-            <p className="mt-4 text-sm no-print"><b>Free to quote and reuse with credit and a link</b> · <a href="#reuse">How to link</a> · <a href="#press">Press kit</a> · <a href="#cite-h">Cite</a></p>
+            <p className="mt-4 text-sm no-print"><b>Free to quote and reuse with credit and a link</b> · <a href="#reuse">How to link</a> · <a href="#press">Press kit</a> · <a href="#symbols">Chicken and egg symbols</a> · <a href="#cite-h">Cite</a></p>
           </>
         )}
         {t.translatedNote && (
@@ -96,6 +97,7 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
 
         <div className="max-w-3xl mx-auto">
           {english && <ReuseBox issue={issue} />}
+          {english && <SymbolKit issue={issue} evidencePath={ev} />}
           <CiteBox issue={issue} lang={lang} />
 
           <section aria-labelledby="about-h" className="mb-8">
@@ -113,6 +115,7 @@ export function IssueView({ slug, lang }: { slug: string; lang: Language }) {
               <li><a href={ev}>{t.evidenceFileSeparate}</a></li>
               {english && <li><a href={issue.files.reportPdf} download>Report (PDF)</a></li>}
               {english && <li><a href={issue.files.appendixPdf} download>Appendix with all evidence (PDF)</a></li>}
+              {english && <li><a href="#symbols">Chicken and egg symbols (SVG, zip)</a></li>}
               <li><a href={issue.files.claims} download>{t.claimRegister}</a></li>
               <li><a href={issue.files.sources} download>{t.sources} (sources.csv)</a></li>
               <li><a href={issue.files.sourcesJson} download>{t.sources} (sources.json)</a></li>
