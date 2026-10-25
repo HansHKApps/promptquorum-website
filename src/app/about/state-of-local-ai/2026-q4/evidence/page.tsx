@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getIssue, issuePath, evidencePath, loadFragment, HUB_PATH, SERIES } from '@/lib/state-of-local-ai/issues'
+import { getIssue, issuePath, evidencePath, loadFragment, HUB_PATH, SERIES, SITE, LICENSE_NAME, LICENSE_URL } from '@/lib/state-of-local-ai/issues'
 import { Breadcrumb, JsonLd, Hero, Lede, crumbSchema, pageMetadata, hubCrumbs } from '@/components/state-of-local-ai/shared'
 
 export const dynamic = 'force-static'
@@ -30,7 +30,11 @@ export default function EvidencePage() {
       </Hero>
       <div className="container mx-auto px-4 pt-10 pb-16 max-w-5xl">
         <div className="evidence" dangerouslySetInnerHTML={{ __html: loadFragment(issue.slug, 'evidence') }} />
-        <section aria-labelledby="dl-h" className="mt-10 max-w-3xl mx-auto no-print">
+        <p className="mt-10 max-w-3xl mx-auto text-sm text-text-muted">
+          Free to quote and reuse under <a href={LICENSE_URL} rel="license noopener" target="_blank">{LICENSE_NAME}</a>: credit Hans Kuepper and PromptQuorum, link to{' '}
+          <a href={issuePath(issue)}>{`${SITE}${issuePath(issue)}`}</a> and say if you changed anything. Third-party sources stay under their owners&apos; terms.
+        </p>
+        <section aria-labelledby="dl-h" className="mt-6 max-w-3xl mx-auto no-print">
           <h2 id="dl-h">Downloads</h2>
           <ul>
             <li><a href={issue.files.appendixPdf} download>Appendix with all evidence (PDF)</a></li>

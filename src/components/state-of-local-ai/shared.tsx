@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { SITE, SERIES, HUB_PATH, PRESS_CONTACT, type Issue, kicker } from '@/lib/state-of-local-ai/issues'
+import { SITE, SERIES, HUB_PATH, PRESS_CONTACT, LICENSE_NAME, LICENSE_URL, issuePath, type Issue, kicker } from '@/lib/state-of-local-ai/issues'
+import { CopyButton } from './CopyButton'
 
 export const NOINDEX: Metadata['robots'] = { index: false, follow: true }
 
@@ -82,6 +83,41 @@ export function Lede({ children }: { children: React.ReactNode }) {
 export const BTN = 'sola-btn inline-block rounded-lg bg-hub-violet px-5 py-2.5 text-sm font-semibold hover:opacity-90'
 export const CARD = 'bg-white border border-hub-violet-edge rounded-xl p-6'
 
+/** Plain-language permission to quote and reuse, plus a ready-made link for backlinks. */
+export function ReuseBox({ issue }: { issue: Issue }) {
+  const url = `${SITE}${issuePath(issue)}`
+  const linkText = `${SERIES}, Report ${String(issue.number).padStart(2, '0')} (${issue.quarter}) – PromptQuorum`
+  const html = `<a href="${url}">${linkText}</a>`
+  return (
+    <section id="reuse" aria-labelledby="reuse-h" className={`${CARD} my-8`}>
+      <h2 id="reuse-h" className="!mt-0 !text-xl">Free to quote and reuse</h2>
+      <p>
+        You may quote any sentence or figure from this report, and reuse its charts and tables, in articles, newsletters, talks and social posts, without asking.
+        This applies to the PDFs and CSV files as well. It is licensed under{' '}
+        <a href={LICENSE_URL} rel="license noopener" target="_blank">{LICENSE_NAME}</a>.
+        What we ask: name the author and PromptQuorum, <b>link to this page</b>, and say if you changed anything.
+      </p>
+      <p className="text-sm text-text-muted">
+        This covers our own text, figures, charts and tables. The third-party sources behind the numbers (the [S…] references) stay under their owners&apos; terms; cite those at the source.
+        Please quote figures with their source label and the data cut-off date ({issue.dataCutOff}), because the numbers change with each report.
+      </p>
+      <div className="space-y-3">
+        <div>
+          <p className="!mb-1 text-xs font-semibold uppercase tracking-wide text-text-muted">Link to this report</p>
+          <p className="!mb-1 flex flex-wrap items-center gap-2"><code className="select-all break-all" dir="ltr">{url}</code><CopyButton text={url} label="Copy URL" /></p>
+        </div>
+        <div>
+          <p className="!mb-1 text-xs font-semibold uppercase tracking-wide text-text-muted">HTML link for your page</p>
+          <p className="!mb-1 flex flex-wrap items-center gap-2"><code className="select-all break-all" dir="ltr">{html}</code><CopyButton text={html} label="Copy HTML" /></p>
+        </div>
+      </div>
+      <p className="!mb-0 mt-3 text-sm">
+        Questions, a quote check or a corrected number: <a dir="ltr" href={`mailto:${PRESS_CONTACT}`}>{PRESS_CONTACT}</a>. If you publish something based on this report, send us the link and we will list it here.
+      </p>
+    </section>
+  )
+}
+
 export function CiteBox({ issue }: { issue: Issue }) {
   const formats = [['APA', issue.citeApa], ['Chicago', issue.citeChicago], ['Plain text', issue.citeAs]]
   return (
@@ -130,7 +166,7 @@ export function PressKit({ issue, evidencePath }: { issue: Issue; evidencePath: 
         <p>{author}</p>
         <p>{method}</p>
         <p className="!mb-0 text-sm">
-          <a href="#cite-h">Cite this report</a> · <a href={issue.files.reportPdf} download>Report (PDF)</a> · <a href={issue.files.appendixPdf} download>Appendix (PDF)</a> · <a href={issue.files.claims} download>Claim register (CSV)</a> · <a href={issue.files.sources} download>Sources (CSV)</a> · <a href={evidencePath}>Full evidence</a> · Press contact: <a dir="ltr" href={`mailto:${PRESS_CONTACT}`}>{PRESS_CONTACT}</a>
+          <a href="#reuse">Free to quote and reuse</a> · <a href="#cite-h">Cite this report</a> · <a href={issue.files.reportPdf} download>Report (PDF)</a> · <a href={issue.files.appendixPdf} download>Appendix (PDF)</a> · <a href={issue.files.claims} download>Claim register (CSV)</a> · <a href={issue.files.sources} download>Sources (CSV)</a> · <a href={evidencePath}>Full evidence</a> · Press contact: <a dir="ltr" href={`mailto:${PRESS_CONTACT}`}>{PRESS_CONTACT}</a>
         </p>
       </div>
     </details>

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import {
-  SITE, SERIES, HUB_PATH, PRESS_CONTACT, getIssue, issuePath, evidencePath, loadFragment,
+  SITE, SERIES, HUB_PATH, PRESS_CONTACT, LICENSE_URL, getIssue, issuePath, evidencePath, loadFragment,
 } from '@/lib/state-of-local-ai/issues'
-import { Breadcrumb, JsonLd, Kicker, Hero, Lede, crumbSchema, pageMetadata, CARD, CiteBox, PressKit, hubCrumbs } from '@/components/state-of-local-ai/shared'
+import { Breadcrumb, JsonLd, Kicker, Hero, Lede, crumbSchema, pageMetadata, CARD, CiteBox, ReuseBox, PressKit, hubCrumbs } from '@/components/state-of-local-ai/shared'
 import { EvidenceController } from '@/components/state-of-local-ai/EvidenceController'
 
 export const dynamic = 'force-static'
@@ -29,6 +29,9 @@ export default function IssuePage() {
     image: `${SITE}${issuePath(issue)}/opengraph-image`,
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: `${SITE}/about` },
     publisher: { '@id': `${SITE}/#organization` },
+    license: LICENSE_URL,
+    creditText: `Kuepper, H. ${SERIES}, Report ${String(issue.number).padStart(2, '0')}. PromptQuorum`,
+    copyrightHolder: { '@id': `${SITE}/#organization` },
     isPartOf: { '@type': 'CreativeWorkSeries', name: SERIES, url: `${SITE}${HUB_PATH}` },
   }
   return (
@@ -48,6 +51,7 @@ export default function IssuePage() {
           <a href={issue.files.reportPdf} download className="sola-btn inline-block rounded-lg bg-hub-violet px-4 py-2 text-sm font-semibold hover:opacity-90">Download report (PDF)</a>
           <a href={issue.files.appendixPdf} download className="inline-block rounded-lg border border-hub-violet-edge bg-white px-4 py-2 text-sm font-semibold hover:bg-hub-violet-tint">Download appendix with all evidence (PDF)</a>
         </p>
+        <p className="mt-4 text-sm no-print"><b>Free to quote and reuse with credit and a link</b> · <a href="#reuse">How to link</a> · <a href="#press">Press kit</a> · <a href="#cite-h">Cite</a></p>
       </Hero>
       <div className="container mx-auto px-4 pt-10 pb-16">
         <div className="max-w-3xl mx-auto">
@@ -83,6 +87,7 @@ export default function IssuePage() {
         </div>
 
         <div className="max-w-3xl mx-auto">
+          <ReuseBox issue={issue} />
           <CiteBox issue={issue} />
 
           <section aria-labelledby="about-h" className="mb-8">
@@ -96,6 +101,7 @@ export default function IssuePage() {
           <section aria-labelledby="links-h" className="mb-8 no-print">
             <h2 id="links-h" className="!mt-0">Evidence and downloads</h2>
             <ul>
+              <li><a href="#reuse">Free to quote and reuse (licence and link)</a></li>
               <li><a href={ev}>Evidence file as a separate page</a></li>
               <li><a href={issue.files.reportPdf} download>Report (PDF)</a></li>
               <li><a href={issue.files.appendixPdf} download>Appendix with all evidence (PDF)</a></li>
