@@ -216,6 +216,8 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
             <a href={`${langPrefix}/about`} className="hover:text-primary transition-colors">{t.about}</a>
             <span aria-hidden="true">•</span>
+            <a href="/about/state-of-local-ai" className="hover:text-primary transition-colors">The State of Local AI</a>
+            <span aria-hidden="true">•</span>
             <a href={`${langPrefix}/privacy`} className="hover:text-primary transition-colors">{t.privacy}</a>
             <span aria-hidden="true">•</span>
             <a href="/impressum" className="hover:text-primary transition-colors">{t.impressum}</a>

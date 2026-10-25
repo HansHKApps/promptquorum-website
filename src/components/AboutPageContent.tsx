@@ -599,6 +599,17 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             </div>
           </section>
 
+          {/* The State of Local AI: English-only until translated */}
+          {lang === 'en' && (
+            <section className="mb-20">
+              <h2 className={H2}>The State of Local AI</h2>
+              <p className={BODY}>
+                A quarterly report on where local AI stands, with sourced figures, hands-on tests and labelled assumptions.{' '}
+                <a href="/about/state-of-local-ai" className={LINK}>Read the series</a>
+              </p>
+            </section>
+          )}
+
           {/* Roadmap */}
           <section className="mb-20">
             <h2 className={H2}>{copy.roadmapH2}</h2>

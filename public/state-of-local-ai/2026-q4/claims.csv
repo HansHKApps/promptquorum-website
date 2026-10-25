@@ -1,0 +1,33 @@
+id,claim,status,evidence,sources
+C01,Few computers can run great local models; few have dedicated GPUs or 32 GB+ VRAM,Partly supported,Steam Jul 2026: 51.4% have 10 GB+; 5.4% have 24 GB; 32 GB bucket not retrieved; gamer sample.,S1
+C02,A 24 GB Mac uses ~10 GB with a few windows open,Confirmed,"Measured 9.67 GB after startup, 12.92 GB with apps open.",S22
+C03,Even 32 GB VRAM may not suffice with other apps open,Opinion / assumption,Extrapolation; no 32 GB test.,S22
+C04,"DGX Spark started at ~$4,000, now $6-7k",Confirmed,"$3,999 to $4,699 (Feb) to $6,950 (Oct, 128 GB); 64 GB at $4,999; partner systems $7-9k.","S3, S4"
+C05,High-end Apple computers cost like a small car did ten years ago,Unverified,Comparison not sourced. Top configurations cost several thousand dollars; no primary-source figure verified. Recommend dropping the comparison.,-
+C06,2-3% of US households pay for AI (credit card analysis),Confirmed,"BofA ~3%, PNC 2.2%. Banks and card panels, not 'credit card companies'. a16z: 4.5% of consumers.","S11, S12, S13"
+C07,97% of users use AI for free,Corrected,"Replaced by US card-data range: 2.2-4.5% of households or consumers pay. Menlo 2025 (~3%) is an implied revenue ratio; Menlo 2026 reports 55% of AI users pay (survey, different denominator, not used in the report body).","S9, S10, S11, S12, S13"
+C08,Local AI is 'cheaper' but most people already use AI for free,Opinion / assumption,Cost argument matters mainly to paying minority; top 1% = 19.5% of spend.,S13
+C09,Privacy is a weak argument; users accept Meta/Google trade-offs,Opinion / assumption,"Surveys show high stated concern, high disclosure, low awareness.","S20, S21"
+C10,Half the apps are underwhelming; the other half deliver but below frontier,Partly supported,Result of the author's own tests (linked in 4.2): 4 of 8 scored apps at 2 or below; n=9.,S22
+C11,More than 75% of apps show no download time estimate,Corrected,60% of 5 evaluated apps (3 of 5); 3 of 8 at minimum.,S22
+C12,No app tells the user the model's cut-off date,Unverified,Not recorded in tests.,S22
+C13,Apps list many models without size or purpose,Partly supported,"True for Draw Things, DiffusionBee; not for BoBe, Msty.",S22
+C14,Local image apps cannot refine a single picture (cruise ship),Narrowed,"One app, one model; control misuse suspected; other edit tools untested.",S22
+C15,Image model could not render Heidelberg castle; ChatGPT (5) could a year ago,Partly supported,First half observed in the DiffusionBee test. Second half is the author's recollection (ChatGPT 5); the earlier output was not kept.,S22
+C16,Local models are 6-12 months behind frontier,Partly supported,~4 months for largest open models; 6-12 for consumer-GPU size; practical lag likely longer.,"S14, S15"
+C17,The 6-12 month claim assumes you have the right computer,Confirmed,Epoch limits it to models fitting 24-32 GB GPUs.,S15
+C18,Google Trends interest in local AI fell substantially since summer 2026,Confirmed,"'local ai' peak 100 (31 May 2026), 15 on 18 Oct 2026; 36% below Oct-Nov 2025 on four-week averages; abrupt step in the week of 12 Jul. Unexplained: other indicators (Ollama developers, Hugging Face downloads, author's other trends) rise while Trends falls. Worldwide index, 12 months.",S29
+C19,China is a big local-AI market; other countries minuscule,Unverified,Model supply data only; no user data.,S19
+C20,Technology trends spread in waves from the US,Narrowed,Uneven diffusion from advanced economies is documented; the US is not first in AI usage (rank 21); local-AI pattern untested.,"S30, S31"
+C21,"AI hardware gets more expensive, unlike normal tech",Confirmed,Spark +74%; DRAM +49% QoQ; Dell/Lenovo +15-20%. Apple RAM upgrades unchanged in March.,S3-S7
+C22,Hundreds of millions of capable devices by 2030,Partly supported,"Gartner AI-PC shipments 220.8M (2025-26 forecast); NPU-based, not LLM-capable.",S8
+C23,Mobile will churn faster; Apple users will pay for on-device AI,Opinion / assumption,Not measured.,S24
+C24,Hundreds of thousands of new apps within 1-2 years via vibe coding,Opinion / assumption,No app-count series; HF downloads concentrated.,S19
+C25,About ten local-LLM apps in the iOS App Store,Partly supported,"Apple DE search 'local AI': 10 results, 9 local-AI apps. A search page, not a store count.",S34
+C26,Most iOS apps are chatbot extensions,Unverified,Not checked per app; 1 of 9 is an image generator. Directory: 74 of up to 315 listings are chat clients (all platforms).,"S23, S34"
+C27,Little corporate or venture involvement,Partly supported,"Runtime layer: funded (Ollama $65M, LM Studio ~$19M). Application layer: traces for 2 of 8 named apps, both small or old (GPT4All/Nomic $17M, 2023; AnythingLLM $0.5M note); none for 5. Author's inference: rounds are normally public, so few exist, early market. Author reports one contact app now has an investor (unverified, unnamed). No paid database queried.","S17, S18, S27, S28"
+C28,A local email-organising app would be a success,Opinion / assumption,Product opinion.,-
+C29,Local AI will grow faster than the AI market overall,Opinion / assumption,Not tested.,-
+C30,A local coding model could not read screenshots,Narrowed,True for Qwen3-Coder (text-only input); not for Qwen3-VL. Model used in the test to be confirmed.,"S32, S33"
+C31,"Very few local-AI apps have a good, fully developed user interface",Partly supported,"In the author's 9 tests one app (LU) scored above 3 on onboarding (7 scored); four interface patterns recur. n=9, one tester, tester misreadings in at least 5 records; no data on typical users.",S22
+C32,Hardware and apps are likely to improve over the coming years if local AI follows the general technology path; AI coding tools speed up app development,Opinion / assumption,"Supported directionally: efficiency trend (to Apr 2025), memory capacity forecast from 2027-2028 (forecasts conflict), new app releases +60-104%. No projection of machines able to run a 30B model; app data not specific to local AI.","S37, S38, S41"

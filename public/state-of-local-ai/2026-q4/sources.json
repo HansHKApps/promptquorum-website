@@ -1,0 +1,324 @@
+[
+  {
+    "id": "S1",
+    "description": "Steam Hardware & Software Survey, July 2026 (secondary reports: tBreak, Hardware Busters, Club386). Valve primary page not retrieved.",
+    "url": "https://tbreak.com/steam-hardware-survey-16gb-vram-overtakes-8gb/",
+    "date": "Jul 2026",
+    "note": ""
+  },
+  {
+    "id": "S2",
+    "description": "Steam survey, September 2026: platform share, macOS 1.92% of systems (Digital Citizen; TechSpot). Valve primary page not retrieved.",
+    "url": "https://www.digitalcitizen.life/32gb-ram-overtakes-16gb-steam-hardware-survey-september-2026/",
+    "date": "Sep 2026",
+    "note": ""
+  },
+  {
+    "id": "S3",
+    "description": "NVIDIA developer forum: DGX Spark price change announcement (MSRP $3,999 to $4,699). Primary.",
+    "url": "https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713",
+    "date": "23 Feb 2026",
+    "note": ""
+  },
+  {
+    "id": "S4",
+    "description": "Implicator.ai: 64 GB DGX Spark at $4,999; 128 GB at $6,950; partner systems $7,000-9,000 (NVIDIA primary not retrieved).",
+    "url": "https://www.implicator.ai/nvidia-adds-64gb-dgx-spark-at-4-999-as-128gb-model-climbs-to-6-950/",
+    "date": "Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S5",
+    "description": "9to5Mac: Apple M5 MacBook pricing, RAM upgrade prices unchanged.",
+    "url": "https://9to5mac.com/2026/03/03/apple-macbook-price-increase-ram-same/",
+    "date": "3 Mar 2026",
+    "note": ""
+  },
+  {
+    "id": "S6",
+    "description": "Digital Citizen citing Sigmaintell: 16 Gb DRAM $19.2 (Q1) to $28.5 (Q2 2026). A second outlet (ProPakistani) states +89%; the underlying figures give +49%.",
+    "url": "https://www.digitalcitizen.life/dram-and-ssd-prices-surge-again-as-memory-shortages-hit-pcs-and-phones/",
+    "date": "Jun 2026",
+    "note": ""
+  },
+  {
+    "id": "S7",
+    "description": "IDC via TechSpot: DRAM/NAND shortage into 2027; PC shipments could fall up to 8.9%. TrendForce via TweakTown: Dell/Lenovo +15-20%.",
+    "url": "https://www.techspot.com/news/110679-memory-shortages-raise-pc-smartphone-prices-8-2026.html",
+    "date": "Dec 2025",
+    "note": ""
+  },
+  {
+    "id": "S8",
+    "description": "Gartner press release: AI PCs 31% of market 2025, 55% in 2026, 'the norm' by 2029.",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-28-gartner-says-artificial-intelligence-pcs-will-represent-31-percent-of-worldwide-pc-market-by-the-end-of-2025",
+    "date": "28 Aug 2025",
+    "note": "older"
+  },
+  {
+    "id": "S9",
+    "description": "Menlo Ventures, 2025 State of Consumer AI ($12B spend, ~3% implied payers; survey of 5,031 US adults).",
+    "url": "https://menlovc.com/perspective/2025-the-state-of-consumer-ai/",
+    "date": "26 Jun 2025",
+    "note": "older"
+  },
+  {
+    "id": "S10",
+    "description": "Menlo Ventures, 2026 State of Consumer AI (55% of AI users report paying for at least one AI product). PDF text extract only.",
+    "url": "https://menlovc.com/wp-content/uploads/2026/09/menlo_ventures_consumer_ai_report-2026.pdf",
+    "date": "Sep 2026",
+    "note": ""
+  },
+  {
+    "id": "S11",
+    "description": "Bank of America Institute, 'Not quite mAInstream' (~3% of BofA households pay for AI).",
+    "url": "https://institute.bankofamerica.com/economic-insights/consumer-ai-usage.html",
+    "date": "Mar 2026",
+    "note": ""
+  },
+  {
+    "id": "S12",
+    "description": "TechDogs summarising PNC Consumer Report: 2.2% of PNC households paid for GenAI in May 2026 (secondary).",
+    "url": "https://www.techdogs.com/tech-news/td-newsdesk/only-22-of-pnc-households-pay-for-genai-as-monthly-spend-climbs-to-31",
+    "date": "Jun 2026",
+    "note": ""
+  },
+  {
+    "id": "S13",
+    "description": "AI Weekly summarising a16z Top 100 Gen AI Consumer Apps (YipitData card panel): 4.5% of US consumers pay for ChatGPT/Gemini/Claude, top 1% of payers = 19.5% of spend (secondary).",
+    "url": "https://aiweekly.co/alerts/a16z-top-1-of-us-ai-payers-drive-195-of-consumer-spend",
+    "date": "Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S14",
+    "description": "Epoch AI Data Insight: open-weight models lag closed frontier by ~4 months (ECI) since Jan 2026.",
+    "url": "https://epoch.ai/data-insights/open-closed-eci-gap",
+    "date": "29 May 2026",
+    "note": ""
+  },
+  {
+    "id": "S15",
+    "description": "Epoch AI Data Insight: models runnable on a single consumer GPU match frontier with a 6-12 month lag (<=28B params for RTX 4090, <=40B for RTX 5090). Publication date not shown in retrieved copy; text refers to mid-2026 as a future date, so written in 2025.",
+    "url": "https://epoch.ai/data-insights/consumer-gpu-model-gap",
+    "date": "2025 (undated)",
+    "note": "older"
+  },
+  {
+    "id": "S16",
+    "description": "Epoch AI Data Insight: ~3 months average open-vs-closed gap, Jan 2023 - Oct 2025.",
+    "url": "https://epoch.ai/data-insights/open-weights-vs-closed-weights-models",
+    "date": "30 Oct 2025",
+    "note": ""
+  },
+  {
+    "id": "S17",
+    "description": "SiliconANGLE / Pulse 2.0 / OpenSourceForU: Ollama $65M Series B (Theory Ventures), $88M total, 8.9M monthly active developers (company-stated).",
+    "url": "https://siliconangle.com/?p=787680",
+    "date": "9 Jul 2026",
+    "note": ""
+  },
+  {
+    "id": "S18",
+    "description": "CB Insights: LM Studio ~$19.3M raised (aggregator data, unverified by company).",
+    "url": "https://www.cbinsights.com/company/lm-studio/financials",
+    "date": "2025",
+    "note": "older"
+  },
+  {
+    "id": "S19",
+    "description": "Hugging Face Hub analysis Jan-Aug 2026 (via baeke.info); Qwen downloads (Business Standard/Bloomberg; EqualOcean).",
+    "url": "https://news.baeke.info/articles/hugging-face-hub-analysis-chinese-labs-dominate-largest-open-models-as-small-models-drive-most-downloads",
+    "date": "14-18 Aug 2026",
+    "note": ""
+  },
+  {
+    "id": "S20",
+    "description": "DuckDuckGo survey, n=1,944 US adults, 17-27 Jun 2026 (vendor with commercial interest in privacy), via CyberInsider.",
+    "url": "https://cyberinsider.com/duckduckgo-finds-one-third-of-ai-users-share-secrets-they-hide-from-people/",
+    "date": "Jun-Jul 2026",
+    "note": ""
+  },
+  {
+    "id": "S21",
+    "description": "arXiv 2508.06760: privacy norms around LLM chatbots, n=300 respondents.",
+    "url": "https://arxiv.org/pdf/2508.06760",
+    "date": "Aug 2025",
+    "note": "older"
+  },
+  {
+    "id": "S22",
+    "description": "PromptQuorum hands-on tests (author's own), nine tests published 9-24 Oct 2026. Index of test pages: https://www.promptquorum.com/power-local-llm/ . Individual slugs: draw-things, bobe, page-assist, msty, unsloth, diffusionbee, ltx-desktop, caelum, locally-uncensored (suffix -hands-on-test).",
+    "url": "https://www.promptquorum.com/power-local-llm/unsloth-hands-on-test",
+    "date": "9-21 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S23",
+    "description": "PromptQuorum Local LLM Software Directory: category listing counts as of 23 Oct 2026 (author's own directory).",
+    "url": "https://www.promptquorum.com/",
+    "date": "23 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S24",
+    "description": "Callstack: on-device AI after WWDC 2026 (Foundation Models with image input, Core AI).",
+    "url": "https://callstack.com/blog/on-device-ai-after-wwdc-2026-whats-new",
+    "date": "2026",
+    "note": ""
+  },
+  {
+    "id": "S25",
+    "description": "TechTarget-derived article (via kapernikov mirror): '$285 billion' software-stock loss in early Feb 2026 attributed to vibe-coding fears. Weak provenance; not independently verified.",
+    "url": "https://lidarmonitor.kapernikov.com/news/vibe-coding-what-it-leaders-need-to-know-techtarget",
+    "date": "2026",
+    "note": ""
+  },
+  {
+    "id": "S26",
+    "description": "NVIDIA developer forum thread: user-reported EU marketplace price of DGX Spark 4,800 EUR (unverified).",
+    "url": "https://forums.developer.nvidia.com/t/dgx-spark-price-increase/361640",
+    "date": "Feb 2026",
+    "note": ""
+  },
+  {
+    "id": "S27",
+    "description": "Startupintros: Nomic AI (GPT4All) $17M Series A led by Coatue (aggregator page; primary announcement not retrieved).",
+    "url": "https://startupintros.com/news/2023-07-01-nomic-ai-series-a",
+    "date": "1 Jul 2023",
+    "note": "older"
+  },
+  {
+    "id": "S28",
+    "description": "CB Insights: Mintplex Labs (AnythingLLM) $0.5M convertible note; investors Y Combinator, UpHonest Capital, Pioneer Fund (partial, second round paywalled).",
+    "url": "https://www.cbinsights.com/company/mintplex-labs/financials",
+    "date": "2022 (round date as listed)",
+    "note": "older"
+  },
+  {
+    "id": "S29",
+    "description": "Google Trends export supplied by the author: terms 'local llm' and 'local ai', Worldwide, All categories, weekly, 19 Oct 2025 to 18 Oct 2026 (53 weeks). Index 0-100 relative to the highest point of the two terms.",
+    "url": "https://trends.google.com/trends/explore",
+    "date": "export 23 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S30",
+    "description": "Microsoft, 'The state of global AI diffusion in 2026': 17.8% of the world's working-age population used AI in Q1 2026 (16.3% before); Global North 27.5%, Global South 15.4%; UAE 70.1%; US 31.3%, rank 21 (was 24). Method not reviewed here.",
+    "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/",
+    "date": "7 May 2026",
+    "note": ""
+  },
+  {
+    "id": "S31",
+    "description": "Comin and Hobijn, New York Fed Staff Report 169 (cross-country technology adoption): new technologies typically appear in advanced economies and 'trickle down' to lagging countries; diffusion sped up after World War II. Publication year not retrieved; the report series number places it well before 2026 (assumption).",
+    "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr169.html",
+    "date": "year not retrieved",
+    "note": "older"
+  },
+  {
+    "id": "S32",
+    "description": "Ollama model library, qwen3-vl: described as the most powerful Qwen vision-language model; accepts image and video input.",
+    "url": "https://registry.ollama.ai/library/qwen3-vl:2b",
+    "date": "captured 23 Oct 2026 (page shows '5 months ago')",
+    "note": ""
+  },
+  {
+    "id": "S33",
+    "description": "Ollama model library, qwen3-coder: listed input type is text only; sizes 30B (19 GB) and 480B (290 GB).",
+    "url": "https://ollama.com/library/qwen3-coder",
+    "date": "captured 23 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S34",
+    "description": "Apple App Store search 'local AI' (apple.com/de), screenshot PDF supplied by the author, captured 23 Oct 2026 15:23: 10 results.",
+    "url": "https://www.apple.com/de/search/",
+    "date": "23 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S35",
+    "description": "Google Play search 'local ai' (Germany, German interface), screenshot PDF supplied by the author, captured 23 Oct 2026 15:22: 16 pages, 29 app listings.",
+    "url": "https://play.google.com/store/search?q=local%20ai&c=apps&hl=de",
+    "date": "23 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S36",
+    "description": "42matters store statistics: 2,749,633 apps in the Apple App Store and 2,651,095 in Google Play (page dated 23 Oct 2026, aggregator).",
+    "url": "https://data.42matters.com/stats",
+    "date": "23 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S37",
+    "description": "Tsinghua University: Densing Law of LLMs (Nature Machine Intelligence cover article). Maximum capability density of open-source LLMs roughly doubles every 3.5 months; a model with half the parameters can match the state of the art about every 3.5 months. Dataset: 51 open models, Feb 2023 to Apr 2025. Assumes models trained equally well have the same density; describes the best open models, not typical ones.",
+    "url": "https://www.tsinghua.edu.cn/en/info/1245/14611.htm",
+    "date": "issue of 20 Nov (year not stated on page); data to Apr 2025",
+    "note": "older"
+  },
+  {
+    "id": "S38",
+    "description": "BigGo Finance report on a Counterpoint Research forecast (Kang Kyung-soo, iForum 2026, 22 Oct 2026): new memory output from SK Hynix and Micron from 2027, Samsung and CXMT expansions ramp in 2028; headline cites prices reversing to a 20-30% decline by 2028. Same article: TrendForce expects consumer memory prices to keep rising next year; Q3 2026 DRAM contract prices +13-18% quarter on quarter.",
+    "url": "https://finance.biggo.com/news/c3a3fef8-8dfc-4a8b-9acf-c3ae851ea8c8",
+    "date": "22 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S39",
+    "description": "TweakTown headline: 'Memory shortages will get only worse in 2027 and 2028, warns Samsung'. Article could not be retrieved; headline only, treat as unverified.",
+    "url": "https://www.tweaktown.com/news/112966/memory-shortages-will-get-only-worse-in-2027-and-2028-warns-samsung/index.html",
+    "date": "2026 (date not retrieved)",
+    "note": ""
+  },
+  {
+    "id": "S40",
+    "description": "God Is A Geek: RTX 6090 rumoured for H1 2027 (Moore's Law Is Dead, 14 Sep 2026); leakers dispute it and suggest 2028; up to 32 GB GDDR7 in unattributed leaks. NVIDIA has announced nothing.",
+    "url": "https://godisageek.com/2026/09/nvidia-rtx-6090-h1-2027-rumor/",
+    "date": "Sep 2026",
+    "note": ""
+  },
+  {
+    "id": "S41",
+    "description": "TechCrunch, citing Appfigures: new app releases Q1 2026 versus Q1 2025 +60% worldwide (+80% on iOS); April 2026 to date +104% (+89% iOS). AI coding tools are the suspected cause, not measured.",
+    "url": "https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/",
+    "date": "18 Apr 2026",
+    "note": ""
+  },
+  {
+    "id": "S42",
+    "description": "9to5Mac, citing The Information and Sensor Tower: new App Store apps grew 30% to nearly 600,000 in 2025 versus 2024; the report suggests vibe-coding tools are the main contributors but cannot say how many apps were AI-built.",
+    "url": "https://9to5mac.com/2026-04-06/app-store-sees-84-surge-in-new-apps-as-ai-coding-tools-take-off/",
+    "date": "6 Apr 2026",
+    "note": ""
+  },
+  {
+    "id": "S43",
+    "description": "IDC and Omdia Q3 2026 PC shipments, as reported by Digital Today (Korea) and Windows Latest: IDC -20.1% to 62.7M units (from 78.5M); Omdia -21.2% to 58.1M (laptops, desktops, workstations). Both attribute the fall to the AI-driven memory squeeze. Neither article gives an AI-PC share.",
+    "url": "https://www.windowslatest.com/2026/10/11/ai-was-supposed-to-sell-pcs-instead-pc-shipments-just-crashed-20-as-ai-eats-the-worlds-ram-and-windows-11s-copilot-agents-arent-convincing-buyers/",
+    "date": "11 Oct 2026",
+    "note": ""
+  },
+  {
+    "id": "S44",
+    "description": "Canalys, as reported by Vivre and Computer Weekly: AI-capable PCs were 14% of global shipments in Q2 2024 (8.8M units) and 20% in Q3 2024 (13.3M units). Definition: a desktop or notebook with a chipset or block for dedicated AI workloads, such as a neural processing unit (NPU).",
+    "url": "https://www.computerweekly.com/news/366615506/A-fifth-of-new-PCs-shipped-this-quarter-are-AI-optimised",
+    "date": "Aug and Nov 2024",
+    "note": "older"
+  },
+  {
+    "id": "S45",
+    "description": "Tom's Hardware, 'What is an AI PC': Microsoft Copilot+ PC requires an NPU of at least 40 TOPS, 16 GB RAM and 256 GB storage; Intel defines an AI PC as having a CPU, GPU and NPU with AI acceleration. The article does not say whether these PCs can run large language models locally.",
+    "url": "https://www.tomshardware.com/laptops/what-is-an-ai-pc",
+    "date": "15 Jun 2024",
+    "note": "older"
+  },
+  {
+    "id": "S46",
+    "description": "GitHub topic pages, public repositories matching the topic: 'ollama' 5,794 and 'local-llm' 9,477 (page counts, 25 Oct 2026). Counts include libraries, tools and forks, not only end-user apps; overlap between topics not removed.",
+    "url": "https://github.com/topics/local-llm",
+    "date": "25 Oct 2026",
+    "note": ""
+  }
+]
