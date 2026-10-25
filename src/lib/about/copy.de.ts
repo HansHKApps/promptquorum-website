@@ -171,6 +171,13 @@ export const de: AboutCopy = {
     'Bei der Entwicklung der App zeigte sich eine größere Lücke: Wer zuverlässige, private KI nutzen möchte, hat keine vertrauenswürdige Landkarte der Welt lokaler KI. Also wuchs die App zu einem Ökosystem heran, mit einem Verzeichnis, einer Wissensdatenbank und einem MCP-Server, die alle auf dasselbe Ziel einzahlen.',
   founderBioP3: 'Datenschutz und Nutzerkontrolle sind nicht verhandelbare Designprinzipien.',
   founderBioSmall: 'Unabhängig, mit Sitz in Deutschland. Über 30 Jahre Erfahrung in Beratung und Unternehmensführung, in mehr als 20 Ländern.',
+  solaH2: 'The State of Local AI',
+  solaLead: 'Ein Quartalsbericht dazu, wo lokale KI steht – mit belegten Zahlen, praktischen Tests und gekennzeichneten Annahmen. Hier finden Sie jeden Bericht.',
+  solaNextLabel: 'Nächster Bericht:',
+  solaReadLink: 'Bericht lesen',
+  solaAllLink: 'Alle Berichte',
+  solaEnglishNote: 'Die Berichte erscheinen auf Englisch.',
+
   roadmapH2: 'Wohin die Reise geht',
   roadmapLead:
     'Wo KI läuft, verändert sich: von reinem Cloud-Betrieb hin zu einer Mischung aus Cloud, lokal, hybrid und Edge. PromptQuorum wird genau auf diesen Wandel hin gebaut. Auf der Roadmap:',

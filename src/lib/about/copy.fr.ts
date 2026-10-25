@@ -171,6 +171,13 @@ export const fr: AboutCopy = {
     'En construisant l’application, un problème plus vaste est apparu : ceux qui veulent une IA fiable et privée n’ont aucune carte digne de confiance de l’univers de l’IA locale. L’application s’est donc transformée en écosystème, avec un annuaire, une base de connaissances et un serveur MCP au service du même objectif.',
   founderBioP3: 'La confidentialité et le contrôle laissé à l’utilisateur sont des principes de conception non négociables.',
   founderBioSmall: 'Indépendant, basé en Allemagne. Plus de 30 ans de conseil et de direction générale, dans plus de 20 pays.',
+  solaH2: 'The State of Local AI',
+  solaLead: 'Un rapport trimestriel sur l’état de l’IA locale, avec des chiffres sourcés, des tests pratiques et des hypothèses signalées. Tous les rapports sont listés ici.',
+  solaNextLabel: 'Prochain rapport :',
+  solaReadLink: 'Lire le rapport',
+  solaAllLink: 'Tous les rapports',
+  solaEnglishNote: 'Les rapports sont publiés en anglais.',
+
   roadmapH2: 'Où cela nous mène',
   roadmapLead:
     'L’endroit où tourne l’IA est en train de changer : du tout-cloud à un mélange de cloud, de local, d’hybride et d’edge. PromptQuorum se construit pour accompagner cette évolution. Au programme :',

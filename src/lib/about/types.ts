@@ -130,6 +130,14 @@ export interface AboutCopy {
   founderBioP3: string
   founderBioSmall: string
 
+  // The State of Local AI
+  solaH2: string
+  solaLead: string
+  solaNextLabel: string
+  solaReadLink: string
+  solaAllLink: string
+  solaEnglishNote: string
+
   // Roadmap
   roadmapH2: string
   roadmapLead: string
