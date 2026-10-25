@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { getIssue, issuePath, evidencePath, loadFragment, HUB_PATH, SERIES } from '@/lib/state-of-local-ai/issues'
-import { Breadcrumb, JsonLd, crumbSchema, pageMetadata, hubCrumbs } from '@/components/state-of-local-ai/shared'
+import { Breadcrumb, JsonLd, Hero, Lede, crumbSchema, pageMetadata, hubCrumbs } from '@/components/state-of-local-ai/shared'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -22,11 +22,13 @@ export default function EvidencePage() {
   return (
     <div className="sola">
       <JsonLd data={crumbSchema(crumbs, evidencePath(issue))} />
-      <div className="container mx-auto px-4 pt-24 pb-16 max-w-4xl">
+      <Hero narrow={false}>
         <Breadcrumb crumbs={crumbs} />
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-3">{TITLE}</h1>
-        <p className="text-lg text-text-secondary mb-2">The same findings with labels, calculations, assumption boxes, a claim register and sources. Cite from here.</p>
-        <p className="text-sm text-text-muted mb-4">{SERIES} · {issue.label} · {issue.quarter} · <a href={issuePath(issue)}>Read the report</a></p>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">{TITLE}</h1>
+        <Lede>The same findings with labels, calculations, assumption boxes, a claim register and sources. Cite from here.</Lede>
+        <p className="text-sm text-text-muted">{SERIES} · {issue.label} · {issue.quarter} · <a href={issuePath(issue)}>Read the report</a></p>
+      </Hero>
+      <div className="container mx-auto px-4 pt-10 pb-16 max-w-5xl">
         <div className="evidence" dangerouslySetInnerHTML={{ __html: loadFragment(issue.slug, 'evidence') }} />
         <section aria-labelledby="dl-h" className="mt-10 max-w-3xl mx-auto no-print">
           <h2 id="dl-h">Downloads</h2>

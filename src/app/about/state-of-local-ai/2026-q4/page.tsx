@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import {
   SITE, SERIES, HUB_PATH, PRESS_CONTACT, getIssue, issuePath, evidencePath, loadFragment,
 } from '@/lib/state-of-local-ai/issues'
-import { Breadcrumb, JsonLd, Kicker, crumbSchema, pageMetadata, CARD, CiteBox, hubCrumbs } from '@/components/state-of-local-ai/shared'
+import { Breadcrumb, JsonLd, Kicker, Hero, Lede, crumbSchema, pageMetadata, CARD, CiteBox, hubCrumbs } from '@/components/state-of-local-ai/shared'
+import { EvidenceController } from '@/components/state-of-local-ai/EvidenceController'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -34,16 +35,18 @@ export default function IssuePage() {
     <div className="sola">
       <JsonLd data={article} />
       <JsonLd data={crumbSchema(crumbs, issuePath(issue))} />
-      <div className="container mx-auto px-4 pt-24 pb-16">
+      <EvidenceController evidencePathname={ev} />
+      <Hero>
+        <Breadcrumb crumbs={crumbs} />
+        <Kicker issue={issue} />
+        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-text-primary mb-4">{issue.title}</h1>
+        <Lede>{issue.subtitle}</Lede>
+        <p className="text-sm text-text-muted">
+          By <a href="/about">Hans Kuepper</a>, PromptQuorum · {issue.displayDate} · Data cut-off {issue.dataCutOff} · Version {issue.version}
+        </p>
+      </Hero>
+      <div className="container mx-auto px-4 pt-10 pb-16">
         <div className="max-w-3xl mx-auto">
-          <Breadcrumb crumbs={crumbs} />
-          <Kicker issue={issue} />
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-text-primary mb-3">{issue.title}</h1>
-          <p className="text-xl text-text-secondary leading-snug mb-3">{issue.subtitle}</p>
-          <p className="text-sm text-text-muted mb-8">
-            By Hans Kuepper, PromptQuorum · {issue.displayDate} · Data cut-off {issue.dataCutOff} · Version {issue.version}
-          </p>
-
           <section aria-labelledby="kf-h" className={`${CARD} mb-10`}>
             <h2 id="kf-h" className="!mt-0 !text-xl">Key findings</h2>
             <ol className="!ml-5 space-y-2 text-base">
@@ -59,21 +62,36 @@ export default function IssuePage() {
 
         <div className="prose-body" dangerouslySetInnerHTML={{ __html: loadFragment(issue.slug, 'article') }} />
 
-        <div className="max-w-3xl mx-auto mt-10">
+        <div className="max-w-5xl mx-auto mt-10">
+          <details id="evidence" className="evidence-all">
+            <summary>
+              <span>
+                <span className="ev-title">Full evidence and addenda</span>
+                <span className="ev-sub">Every method note, calculation, assumption box, table, the claim register and all numbered sources. Opens right here, no download needed.</span>
+              </span>
+              <span className="ev-chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 5l4 4 4-4" /></svg></span>
+            </summary>
+            <div className="ev-body">
+              <div className="evidence" dangerouslySetInnerHTML={{ __html: loadFragment(issue.slug, 'evidence') }} />
+            </div>
+          </details>
+        </div>
+
+        <div className="max-w-3xl mx-auto">
           <CiteBox issue={issue} />
 
           <section aria-labelledby="about-h" className="mb-8">
             <h2 id="about-h" className="!mt-0">About this report</h2>
             <p>{issue.disclosure}</p>
             <p><a href="/about">Hans Kuepper</a> is the founder of PromptQuorum, based in Frankfurt, with more than 30 years of consulting and general management experience.</p>
-            <p>The method, labels, assumptions and sources are in the <a href={ev}>evidence file</a>.</p>
+            <p>The method, labels, assumptions and sources are in the <a href="#evidence">full evidence section</a> above, which also exists as a <a href={ev}>separate page</a>.</p>
             <p>Press contact: <a dir="ltr" href={`mailto:${PRESS_CONTACT}`}>{PRESS_CONTACT}</a></p>
           </section>
 
           <section aria-labelledby="links-h" className="mb-8 no-print">
             <h2 id="links-h" className="!mt-0">Evidence and downloads</h2>
             <ul>
-              <li><a href={ev}>Evidence file</a></li>
+              <li><a href={ev}>Evidence file as a separate page</a></li>
               <li><a href={issue.files.claims} download>Claim register (claims.csv)</a></li>
               <li><a href={issue.files.sources} download>Sources (sources.csv)</a></li>
               <li><a href={issue.files.sourcesJson} download>Sources (sources.json)</a></li>

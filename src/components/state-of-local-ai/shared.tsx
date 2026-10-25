@@ -46,8 +46,8 @@ export function Breadcrumb({ crumbs }: { crumbs: Crumb[] }) {
       <ol className="flex flex-wrap gap-x-2 gap-y-1">
         {crumbs.map((c, i) => (
           <li key={c.name} className="flex gap-2">
-            {c.path ? <a href={c.path} className="hover:text-primary underline-offset-2 hover:underline">{c.name}</a> : <span aria-current="page">{c.name}</span>}
-            {i < crumbs.length - 1 && <span aria-hidden="true">›</span>}
+            {c.path ? <a href={c.path} className="!no-underline hover:!underline underline-offset-2 !text-text-muted hover:!text-primary">{c.name}</a> : <span aria-current="page">{c.name}</span>}
+            {i < crumbs.length - 1 && <span aria-hidden="true">/</span>}
           </li>
         ))}
       </ol>
@@ -62,10 +62,24 @@ export const hubCrumbs = (): Crumb[] => [
 ]
 
 export function Kicker({ issue }: { issue: Issue }) {
-  return <p className="text-xs font-semibold uppercase tracking-[0.14em] text-hub-violet-ink mb-2">{kicker(issue)}</p>
+  return <p className="inline-block rounded-full border border-hub-violet-edge bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-hub-violet-ink mb-4">{kicker(issue)}</p>
 }
 
-export const BTN = 'inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 no-underline'
+/** Tinted header band, the same violet-tint treatment as the site's article heroes. */
+export function Hero({ children, narrow = true }: { children: React.ReactNode; narrow?: boolean }) {
+  return (
+    <div className="bg-hub-violet-tint border-b border-hub-violet-edge">
+      <div className={`container mx-auto px-4 pt-24 pb-10 ${narrow ? 'max-w-3xl' : 'max-w-5xl'}`}>{children}</div>
+    </div>
+  )
+}
+
+/** Deck under the H1: violet rule on the left, like the lead answer on article pages. */
+export function Lede({ children }: { children: React.ReactNode }) {
+  return <p className="border-l-4 border-hub-violet pl-4 text-xl text-text-secondary leading-snug mb-4">{children}</p>
+}
+
+export const BTN = 'sola-btn inline-block rounded-lg bg-hub-violet px-5 py-2.5 text-sm font-semibold hover:opacity-90'
 export const CARD = 'bg-white border border-hub-violet-edge rounded-xl p-6'
 
 export function CiteBox({ issue }: { issue: Issue }) {
