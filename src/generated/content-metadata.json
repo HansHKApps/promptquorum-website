@@ -9555,7 +9555,7 @@
       "images": []
     },
     "local-llm-run-serve-compared": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -11445,6 +11445,24 @@
       "images": []
     },
     "murmur-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "llama-app-review": {
       "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-10-24",

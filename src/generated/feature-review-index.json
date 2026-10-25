@@ -1099,6 +1099,11 @@
     "urlSlug": "kernelai-review",
     "url": "/power-local-llm/kernelai-review"
   },
+  "llama-app": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llama-app-review",
+    "url": "/power-local-llm/llama-app-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
