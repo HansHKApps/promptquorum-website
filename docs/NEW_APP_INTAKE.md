@@ -95,6 +95,14 @@ verified against the project's own README/site with a verification-date comment.
 `reviewSlug` on the `ToolRecord` now that the review exists. The comparison table is
 data-driven — nothing is hand-edited in the article file. Run `npm run validate-category-compare`.
 
+### 4b. Add it to the platform roundups (iOS / Android apps)
+The category comparison is data-driven, but `best-local-llm-apps-iphone-2026` and
+`best-local-llm-apps-android-2026` are **hand-written** (9 locale blocks each) and nothing updates
+them automatically. If the tile lists `ios` and/or `android` and is a chat/LLM app (not a note or
+bookmark tool), add it to the matching roundup(s): a section in all 9 locales, a TOC entry, a
+`dateModified` bump (block + schema). Never invent benchmark numbers — if the app was not measured on
+the test phones, say so in the section. Check with `npm run validate-platform-roundups` (warn-only).
+
 ### 5. Regenerate generated indexes
 `node scripts/generate-feature-review-index.mjs` (and the tool-article-index generator) so
 MCP `search_apps`/`get_app_details` and directory search surface the new review.
@@ -114,6 +122,7 @@ sitemap edit needed.
 - Directory hub renders it: `src/app/directory/page.tsx` + each `src/app/{locale}/directory/page.tsx`
 - Review article live at `/power-local-llm/<slug>` (and per-locale)
 - Category comparison table includes it
+- iOS/Android app: present in the iPhone / Android roundup (`npm run validate-platform-roundups`)
 - `npm run build` passes clean (validators above all run in `prebuild`/`postbuild`)
 - Sitemap includes the new URL(s)
 

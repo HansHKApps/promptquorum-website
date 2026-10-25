@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -92,6 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat: Apple Silicon Optimisation', anchor: '#mlc-chat' },
       { label: 'LLM Farm: Not on the App Store, Source Still Available', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: System-Integrated On-Device AI', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)', anchor: '#memoryai' },
       { label: 'Models by iPhone Tier', anchor: '#models-by-tier' },
       { label: 'Battery Drain and Thermal Throttling', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri, and Sideloading', anchor: '#ios-integration' },
@@ -354,6 +355,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)',
+        content:
+          '**MemoryAI is a free offline chat app for iPhone with document Q&A, an editable on-device memory and a PIN-locked Kid Mode.** It was added after the main comparison, so it is not in the comparison table and was not part of our testing.',
+        items: [
+          '**Model library:** Models download inside the app (0.3–4 GB each), and custom GGUF files can be imported from Hugging Face. It uses two inference engines: llama.cpp and Google\'s LiteRT.',
+          '**Features:** Document Q&A, an Agent Memory you can open, edit and delete, hands-free voice (on-device speech input and read-aloud), image understanding with vision models, and a Kid Mode locked behind a parent PIN.',
+          '**Requirements and price:** iOS 16.4+, 4 GB+ RAM. Free, with no ads, subscriptions or in-app purchases.',
+          '**Privacy and licence:** Chat, documents and memories stay on the device after the model download. The app sends usage events and crash reports (no chat content, per the developer), and it is closed source.',
+          '**Install path:** App Store. First released on 30 March 2026, so it is a young app.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the store listings, the privacy policy and the developer, who reviewed our write-up; we have not timed MemoryAI on our test phones. Full notes: [MemoryAI review](/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Models by iPhone Tier',
@@ -560,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -643,6 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat: Apple-Silicon-Optimierung', anchor: '#mlc-chat' },
       { label: 'LLM Farm: Nicht im App Store, Quellcode weiterhin verfügbar', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: Systemintegrierte On-Device-KI', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)', anchor: '#memoryai' },
       { label: 'Modelle nach iPhone-Modell', anchor: '#models-by-tier' },
       { label: 'Akkuverbrauch und thermisches Throttling', anchor: '#battery-heat' },
       { label: 'iOS Kurzbefehle, Siri und Sideloading', anchor: '#ios-integration' },
@@ -905,6 +926,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)',
+        content:
+          '**MemoryAI ist eine kostenlose Offline-Chat-App für das iPhone mit Dokumentenfragen, einem editierbaren Gedächtnis auf dem Gerät und einem PIN-geschützten Kindermodus.** Sie wurde nach dem Hauptvergleich ergänzt, steht deshalb nicht in der Vergleichstabelle und war nicht Teil unserer Tests.',
+        items: [
+          '**Modellbibliothek:** Modelle werden in der App heruntergeladen (je 0,3–4 GB), und eigene GGUF-Dateien lassen sich von Hugging Face importieren. Die App nutzt zwei Inferenz-Engines: llama.cpp und Googles LiteRT.',
+          '**Funktionen:** Dokumentenfragen, ein Agent Memory, das Sie öffnen, bearbeiten und löschen können, Freisprech-Sprachmodus (Spracheingabe und Vorlesen auf dem Gerät), Bildverständnis mit Vision-Modellen und ein Kindermodus hinter einer Eltern-PIN.',
+          '**Voraussetzungen und Preis:** iOS 16.4+, mindestens 4 GB RAM. Kostenlos, ohne Werbung, Abos oder In-App-Käufe.',
+          '**Datenschutz und Lizenz:** Chats, Dokumente und Erinnerungen bleiben nach dem Modell-Download auf dem Gerät. Die App sendet Nutzungsereignisse und Absturzberichte (laut Entwickler ohne Chat-Inhalte) und ist Closed Source.',
+          '**Installation:** App Store. Erstveröffentlichung am 30. März 2026, die App ist also noch jung.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus den Store-Einträgen, der Datenschutzerklärung und vom Entwickler, der unseren Text geprüft hat; MemoryAI wurde von uns nicht auf unseren Testgeräten gemessen. Alle Details: [MemoryAI-Review](/de/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelle nach iPhone-Modell',
@@ -1119,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1202,6 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat：Apple Siliconに最適化', anchor: '#mlc-chat' },
       { label: 'LLM Farm：App Store非掲載、ソースは入手可能', anchor: '#llm-farm' },
       { label: 'Apple Intelligence：システム統合型オンデバイスAI', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)', anchor: '#memoryai' },
       { label: 'iPhoneモデル別推奨モデル', anchor: '#models-by-tier' },
       { label: 'バッテリー消耗と熱スロットリング', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts、Siri、サイドローディング', anchor: '#ios-integration' },
@@ -1464,6 +1505,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)',
+        content:
+          '**MemoryAIは、iPhone向けの無料オフラインチャットアプリで、文書Q&A、端末内で編集できるメモリ、PIN付きのキッズモードを備えています。** 主な比較の後に追加したため、比較表には含まれず、当サイトのテスト対象でもありません。',
+        items: [
+          '**モデルライブラリ:** モデルはアプリ内でダウンロードし(各0.3〜4GB)、独自のGGUFファイルをHugging Faceから取り込めます。推論エンジンはllama.cppとGoogleのLiteRTの2種類です。',
+          '**機能:** 文書Q&A、開いて編集・削除できるエージェントメモリ、ハンズフリー音声(端末内の音声入力と読み上げ)、ビジョンモデルによる画像理解、保護者用PINでロックされるキッズモード。',
+          '**要件と価格:** iOS 16.4以降、RAM 4GB以上。無料で、広告、サブスクリプション、アプリ内課金はありません。',
+          '**プライバシーとライセンス:** モデルのダウンロード後、チャット、文書、メモリは端末内にとどまります。アプリは利用イベントとクラッシュレポートを送信し(開発者によればチャット内容は含まれません)、クローズドソースです。',
+          '**入手方法:** App Store。初回リリースは2026年3月30日で、新しいアプリです。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はストアの掲載情報、プライバシーポリシー、そして当サイトの記事を確認した開発者の情報に基づいています。MemoryAIを当サイトのテスト端末で計測したわけではありません。詳しくは[MemoryAIレビュー](/ja/power-local-llm/memoryai-review)をご覧ください。',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'iPhoneモデル別推奨モデル',
@@ -1670,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1753,6 +1813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat : optimisé pour Apple Silicon', anchor: '#mlc-chat' },
       { label: 'LLM Farm : absent de l\'App Store, sources toujours disponibles', anchor: '#llm-farm' },
       { label: 'Apple Intelligence : IA on-device intégrée au système', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)', anchor: '#memoryai' },
       { label: 'Modèles par génération d\'iPhone', anchor: '#models-by-tier' },
       { label: 'Autonomie et surchauffe', anchor: '#battery-heat' },
       { label: 'Raccourcis iOS, Siri et chargement latéral', anchor: '#ios-integration' },
@@ -2015,6 +2076,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)',
+        content:
+          '**MemoryAI est une application de chat gratuite et hors ligne pour iPhone, avec questions sur vos documents, une mémoire modifiable sur l\'appareil et un Kid Mode protégé par PIN.** Elle a été ajoutée après la comparaison principale : elle ne figure donc pas dans le tableau comparatif et n\'a pas fait partie de nos tests.',
+        items: [
+          '**Bibliothèque de modèles :** les modèles se téléchargent dans l\'application (0,3 à 4 Go chacun) et des fichiers GGUF personnalisés peuvent être importés depuis Hugging Face. Elle utilise deux moteurs d\'inférence : llama.cpp et LiteRT de Google.',
+          '**Fonctions :** questions sur vos documents, une mémoire d\'agent que vous pouvez ouvrir, modifier et supprimer, un mode vocal mains libres (saisie vocale et lecture à voix haute sur l\'appareil), la compréhension d\'images avec des modèles de vision et un Kid Mode verrouillé par un code PIN parental.',
+          '**Prérequis et prix :** iOS 16.4+, 4 Go de RAM minimum. Gratuite, sans publicité, abonnement ni achat intégré.',
+          '**Confidentialité et licence :** les conversations, documents et souvenirs restent sur l\'appareil après le téléchargement du modèle. L\'application envoie des événements d\'usage et des rapports de plantage (sans contenu des conversations, selon le développeur) et son code est fermé.',
+          '**Installation :** App Store. Première version publiée le 30 mars 2026 : c\'est donc une application jeune.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent des fiches des stores, de la politique de confidentialité et du développeur, qui a relu notre texte ; nous n\'avons pas chronométré MemoryAI sur nos téléphones de test. Notes complètes : [test de MemoryAI](/fr/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modèles par génération d\'iPhone',
@@ -2221,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2304,6 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat：苹果芯片专项优化', anchor: '#mlc-chat' },
       { label: 'LLM Farm：不在App Store上，源码仍可获取', anchor: '#llm-farm' },
       { label: 'Apple Intelligence：系统级内置AI', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI:带可编辑记忆的离线聊天(未实测)', anchor: '#memoryai' },
       { label: '按iPhone档次推荐模型', anchor: '#models-by-tier' },
       { label: '电池消耗与过热问题', anchor: '#battery-heat' },
       { label: 'iOS快捷指令、Siri与侧载', anchor: '#ios-integration' },
@@ -2566,6 +2647,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI:带可编辑记忆的离线聊天(未实测)',
+        content:
+          '**MemoryAI 是一款面向 iPhone 的免费离线聊天应用,支持文档问答、可在设备上编辑的记忆,以及带 PIN 锁的儿童模式。** 它是在主要对比之后加入的,因此不在对比表中,也不属于我们的测试范围。',
+        items: [
+          '**模型库:** 模型在应用内下载(每个 0.3–4 GB),也可以从 Hugging Face 导入自定义 GGUF 文件。它使用两种推理引擎:llama.cpp 和 Google 的 LiteRT。',
+          '**功能:** 文档问答、可打开、编辑和删除的智能体记忆、免提语音(设备端语音输入和朗读)、借助视觉模型的图像理解,以及锁在家长 PIN 之后的儿童模式。',
+          '**要求与价格:** iOS 16.4 及以上,至少 4 GB 内存。免费,无广告、无订阅、无应用内购买。',
+          '**隐私与许可:** 模型下载完成后,聊天、文档和记忆都留在设备上。应用会发送使用事件和崩溃报告(据开发者称不含聊天内容),并且是闭源的。',
+          '**安装方式:** App Store。2026 年 3 月 30 日首次发布,所以还是一款较新的应用。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上信息来自应用商店页面、隐私政策以及审阅过我们文章的开发者;我们没有在自己的测试手机上对 MemoryAI 计时。完整说明见[MemoryAI 评测](/zh/power-local-llm/memoryai-review)。',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: '按iPhone档次推荐模型',
@@ -2772,7 +2872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2855,6 +2955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat: optimización para Apple Silicon', anchor: '#mlc-chat' },
       { label: 'LLM Farm: fuera del App Store, código fuente aún disponible', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: IA en dispositivo integrada en el sistema', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI: chat sin conexión con memoria editable (sin medir)', anchor: '#memoryai' },
       { label: 'Modelos según el modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de batería y throttling térmico', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri y carga lateral', anchor: '#ios-integration' },
@@ -3117,6 +3218,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI: chat sin conexión con memoria editable (sin medir)',
+        content:
+          '**MemoryAI es una app de chat gratuita y sin conexión para iPhone, con preguntas sobre documentos, una memoria editable en el dispositivo y un Kid Mode protegido con PIN.** Se añadió después de la comparación principal, por lo que no aparece en la tabla comparativa y no formó parte de nuestras pruebas.',
+        items: [
+          '**Biblioteca de modelos:** los modelos se descargan dentro de la app (de 0,3 a 4 GB cada uno) y se pueden importar archivos GGUF propios desde Hugging Face. Usa dos motores de inferencia: llama.cpp y LiteRT de Google.',
+          '**Funciones:** preguntas sobre documentos, una memoria de agente que puedes abrir, editar y borrar, voz manos libres (entrada de voz y lectura en voz alta en el dispositivo), comprensión de imágenes con modelos de visión y un Kid Mode bloqueado tras un PIN de madre o padre.',
+          '**Requisitos y precio:** iOS 16.4+, 4 GB de RAM o más. Gratuita, sin anuncios, suscripciones ni compras dentro de la app.',
+          '**Privacidad y licencia:** el chat, los documentos y los recuerdos se quedan en el dispositivo tras la descarga del modelo. La app envía eventos de uso e informes de fallos (sin contenido del chat, según el desarrollador) y es de código cerrado.',
+          '**Instalación:** App Store. Se lanzó por primera vez el 30 de marzo de 2026, así que es una app joven.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden de las fichas de las tiendas, la política de privacidad y el desarrollador, que revisó nuestro texto; no hemos medido MemoryAI en nuestros teléfonos de prueba. Notas completas: [análisis de MemoryAI](/es/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelos según el modelo de iPhone',
@@ -3323,7 +3443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -3406,6 +3526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat: Apple Silicon 최적화', anchor: '#mlc-chat' },
       { label: 'LLM Farm: App Store에는 없지만 소스는 계속 제공됩니다', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: 시스템 내장 기기 내 AI', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)', anchor: '#memoryai' },
       { label: 'iPhone 등급별 모델', anchor: '#models-by-tier' },
       { label: '배터리 소모와 열 제한', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri 및 사이드로딩', anchor: '#ios-integration' },
@@ -3670,6 +3791,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)',
+        content:
+          '**MemoryAI는 iPhone용 무료 오프라인 채팅 앱으로, 문서 질의응답, 기기 안에서 편집할 수 있는 메모리, PIN으로 잠그는 키즈 모드를 갖추고 있습니다.** 주요 비교 이후에 추가되었기 때문에 비교표에는 없고 저희 테스트 대상도 아니었습니다.',
+        items: [
+          '**모델 라이브러리:** 모델은 앱 안에서 내려받으며(각 0.3–4GB), Hugging Face에서 직접 만든 GGUF 파일을 가져올 수 있습니다. 추론 엔진은 llama.cpp와 Google의 LiteRT 두 가지를 씁니다.',
+          '**기능:** 문서 질의응답, 열어서 편집·삭제할 수 있는 에이전트 메모리, 핸즈프리 음성(기기 내 음성 입력과 읽어주기), 비전 모델을 이용한 이미지 이해, 부모 PIN으로 잠그는 키즈 모드.',
+          '**요구 사항과 가격:** iOS 16.4 이상, RAM 4GB 이상. 무료이며 광고, 구독, 인앱 구매가 없습니다.',
+          '**개인정보와 라이선스:** 모델을 내려받은 뒤에는 채팅, 문서, 메모리가 기기에 남습니다. 앱은 사용 이벤트와 충돌 보고서를 전송하며(개발자에 따르면 채팅 내용은 포함되지 않음), 클로즈드 소스입니다.',
+          '**설치 경로:** App Store. 2026년 3월 30일에 처음 출시된 비교적 새로운 앱입니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 스토어 정보, 개인정보 처리방침, 그리고 저희 글을 검토한 개발자의 설명에 근거합니다. MemoryAI를 저희 테스트 폰에서 직접 측정하지는 않았습니다. 자세한 내용은 [MemoryAI 리뷰](/ko/power-local-llm/memoryai-review)를 참고하세요.',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'iPhone 등급별 모델',
@@ -3879,7 +4019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -3962,6 +4102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat: otimização para Apple Silicon', anchor: '#mlc-chat' },
       { label: 'LLM Farm: fora da App Store, código-fonte ainda disponível', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: IA no aparelho integrada ao sistema', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI: chat offline com memória editável (não medido)', anchor: '#memoryai' },
       { label: 'Modelos conforme o modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de bateria e limitação térmica', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri e sideloading', anchor: '#ios-integration' },
@@ -4224,6 +4365,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI: chat offline com memória editável (não medido)',
+        content:
+          '**MemoryAI é um app de chat gratuito e offline para iPhone, com perguntas sobre documentos, uma memória editável no dispositivo e um Modo Criança protegido por PIN.** Foi adicionado depois da comparação principal, por isso não está na tabela comparativa e não fez parte dos nossos testes.',
+        items: [
+          '**Biblioteca de modelos:** os modelos são baixados dentro do app (de 0,3 a 4 GB cada) e arquivos GGUF próprios podem ser importados do Hugging Face. Usa dois motores de inferência: llama.cpp e o LiteRT do Google.',
+          '**Recursos:** perguntas sobre documentos, uma memória de agente que você pode abrir, editar e apagar, voz mãos livres (entrada de voz e leitura em voz alta no dispositivo), compreensão de imagens com modelos de visão e um Modo Criança travado por um PIN dos responsáveis.',
+          '**Requisitos e preço:** iOS 16.4+, 4 GB de RAM ou mais. Gratuito, sem anúncios, assinaturas ou compras no app.',
+          '**Privacidade e licença:** conversas, documentos e memórias ficam no dispositivo depois do download do modelo. O app envia eventos de uso e relatórios de falhas (sem conteúdo das conversas, segundo o desenvolvedor) e é de código fechado.',
+          '**Instalação:** App Store. Lançado em 30 de março de 2026, portanto é um app jovem.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm das páginas das lojas, da política de privacidade e do desenvolvedor, que revisou o nosso texto; não medimos o MemoryAI nos nossos celulares de teste. Notas completas: [análise do MemoryAI](/pt/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelos conforme o modelo de iPhone',
@@ -4430,7 +4590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-25',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4513,6 +4673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MLC Chat: تحسين لـ Apple Silicon', anchor: '#mlc-chat' },
       { label: 'LLM Farm: خارج App Store والمصدر لا يزال متاحاً', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: ذكاء اصطناعي على الجهاز مدمج في النظام', anchor: '#apple-intelligence' },
+      { label: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)', anchor: '#memoryai' },
       { label: 'النماذج حسب فئة iPhone', anchor: '#models-by-tier' },
       { label: 'استنزاف البطارية والتباطؤ الحراري', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts وSiri والتحميل الجانبي', anchor: '#ios-integration' },
@@ -4772,6 +4933,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'إذا كان Apple Intelligence هو حاجتك الوحيدة (إعادة كتابة الرسائل، تلخيص الإشعارات)، فلا تحتاج إلى تطبيق دردشة منفصل. وإذا أردت طرح أسئلة على النموذج مثل "اشرح النفق الكمي بمصطلحات بسيطة" أو "ضع خطة مشروع لـ X"، فثبّت تطبيق دردشة — سواء كان تطبيقاً مخصصاً مثل PocketPal AI، أو Locally AI القادر على وضع نموذج Apple ذاته على الجهاز خلف نافذة دردشة.',
+          },
+        ],
+      },
+      memoryAI: {
+        id: 'memoryai',
+        title: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)',
+        content:
+          '**MemoryAI تطبيق دردشة مجاني يعمل دون اتصال على iPhone، مع أسئلة عن المستندات وذاكرة قابلة للتعديل على الجهاز ووضع أطفال برمز PIN.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في جدول المقارنة ولم يكن جزءاً من اختباراتنا.',
+        items: [
+          '**مكتبة النماذج:** تُنزَّل النماذج داخل التطبيق (من 0.3 إلى 4 جيجابايت لكل نموذج)، ويمكن استيراد ملفات GGUF مخصصة من Hugging Face. يستخدم محرّكَي استدلال: llama.cpp وLiteRT من Google.',
+          '**الميزات:** أسئلة عن المستندات، وذاكرة وكيل يمكنك فتحها وتعديلها وحذفها، ووضع صوتي حر اليدين (إدخال صوتي وقراءة بصوت عالٍ على الجهاز)، وفهم الصور بنماذج الرؤية، ووضع أطفال مقفل برمز PIN للوالدين.',
+          '**المتطلبات والسعر:** iOS 16.4 أو أحدث، وذاكرة وصول عشوائي 4 جيجابايت أو أكثر. مجاني، بلا إعلانات أو اشتراكات أو مشتريات داخل التطبيق.',
+          '**الخصوصية والترخيص:** تبقى المحادثات والمستندات والذكريات على الجهاز بعد تنزيل النموذج. يرسل التطبيق أحداث استخدام وتقارير أعطال (دون محتوى المحادثات بحسب المطوّر)، وهو مغلق المصدر.',
+          '**طريقة التثبيت:** App Store. صدر لأول مرة في 30 مارس 2026، فهو تطبيق حديث.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'تأتي التفاصيل أعلاه من صفحات المتاجر وسياسة الخصوصية والمطوّر الذي راجع نصنا؛ لم نقِس سرعة MemoryAI على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة MemoryAI](/ar/power-local-llm/memoryai-review).',
           },
         ],
       },

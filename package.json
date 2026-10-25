@@ -54,6 +54,7 @@
     "validate-local-ai-apps": "node scripts/validate-local-ai-apps.mjs",
     "validate-app-versions": "node scripts/validate-app-versions.mjs",
     "validate-category-compare": "node scripts/validate-category-compare.mjs",
+    "validate-platform-roundups": "node scripts/validate-platform-roundups.mjs",
     "check-app-versions": "node scripts/check-app-versions.mjs",
     "refresh-app-stars": "node scripts/refresh-app-stars.mjs",
     "validate-volatile-numbers": "node scripts/validate-volatile-numbers.mjs"
