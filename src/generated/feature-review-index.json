@@ -999,6 +999,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "presenton": {
+    "cluster": "power-local-llm",
+    "urlSlug": "presenton-review",
+    "url": "/power-local-llm/presenton-review"
+  },
   "buzz-captions": {
     "cluster": "power-local-llm",
     "urlSlug": "buzz-captions-review",

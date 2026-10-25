@@ -1183,6 +1183,7 @@ const HUB_THEMES: Array<{
       'baserow-review',
       'surf-review',
       'translate-books-with-llms-review',
+      'presenton-review',
     ],
   },
   {
