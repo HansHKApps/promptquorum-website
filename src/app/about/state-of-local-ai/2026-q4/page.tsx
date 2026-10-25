@@ -44,6 +44,10 @@ export default function IssuePage() {
         <p className="text-sm text-text-muted">
           By <a href="/about">Hans Kuepper</a>, PromptQuorum · {issue.displayDate} · Data cut-off {issue.dataCutOff} · Version {issue.version}
         </p>
+        <p className="flex flex-wrap gap-3 mt-4 no-print">
+          <a href={issue.files.reportPdf} download className="sola-btn inline-block rounded-lg bg-hub-violet px-4 py-2 text-sm font-semibold hover:opacity-90">Download report (PDF)</a>
+          <a href={issue.files.appendixPdf} download className="inline-block rounded-lg border border-hub-violet-edge bg-white px-4 py-2 text-sm font-semibold hover:bg-hub-violet-tint">Download appendix with all evidence (PDF)</a>
+        </p>
       </Hero>
       <div className="container mx-auto px-4 pt-10 pb-16">
         <div className="max-w-3xl mx-auto">
@@ -93,6 +97,8 @@ export default function IssuePage() {
             <h2 id="links-h" className="!mt-0">Evidence and downloads</h2>
             <ul>
               <li><a href={ev}>Evidence file as a separate page</a></li>
+              <li><a href={issue.files.reportPdf} download>Report (PDF)</a></li>
+              <li><a href={issue.files.appendixPdf} download>Appendix with all evidence (PDF)</a></li>
               <li><a href={issue.files.claims} download>Claim register (claims.csv)</a></li>
               <li><a href={issue.files.sources} download>Sources (sources.csv)</a></li>
               <li><a href={issue.files.sourcesJson} download>Sources (sources.json)</a></li>

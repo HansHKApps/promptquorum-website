@@ -33,6 +33,8 @@ export default function EvidencePage() {
         <section aria-labelledby="dl-h" className="mt-10 max-w-3xl mx-auto no-print">
           <h2 id="dl-h">Downloads</h2>
           <ul>
+            <li><a href={issue.files.appendixPdf} download>Appendix with all evidence (PDF)</a></li>
+            <li><a href={issue.files.reportPdf} download>Report (PDF)</a></li>
             <li><a href={issue.files.claims} download>Claim register (claims.csv)</a></li>
             <li><a href={issue.files.sources} download>Sources (sources.csv)</a></li>
             <li><a href={issue.files.sourcesJson} download>Sources (sources.json)</a></li>

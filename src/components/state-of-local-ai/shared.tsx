@@ -130,7 +130,7 @@ export function PressKit({ issue, evidencePath }: { issue: Issue; evidencePath: 
         <p>{author}</p>
         <p>{method}</p>
         <p className="!mb-0 text-sm">
-          <a href="#cite-h">Cite this report</a> · <a href={issue.files.claims} download>Claim register (CSV)</a> · <a href={issue.files.sources} download>Sources (CSV)</a> · <a href={evidencePath}>Full evidence</a> · Press contact: <a dir="ltr" href={`mailto:${PRESS_CONTACT}`}>{PRESS_CONTACT}</a>
+          <a href="#cite-h">Cite this report</a> · <a href={issue.files.reportPdf} download>Report (PDF)</a> · <a href={issue.files.appendixPdf} download>Appendix (PDF)</a> · <a href={issue.files.claims} download>Claim register (CSV)</a> · <a href={issue.files.sources} download>Sources (CSV)</a> · <a href={evidencePath}>Full evidence</a> · Press contact: <a dir="ltr" href={`mailto:${PRESS_CONTACT}`}>{PRESS_CONTACT}</a>
         </p>
       </div>
     </details>

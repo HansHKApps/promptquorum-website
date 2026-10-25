@@ -34,7 +34,7 @@ export interface Issue {
   disclosure: string
   datePublished: string
   dateModified: string
-  files: { claims: string; sources: string; sourcesJson: string }
+  files: { claims: string; sources: string; sourcesJson: string; reportPdf: string; appendixPdf: string }
   corrections: { date: string; text: string }[]
   keyFindings: { text: string; sources: string[] }[]
 }
@@ -89,6 +89,8 @@ export const ISSUES: Issue[] = [
       claims: '/state-of-local-ai/2026-q4/claims.csv',
       sources: '/state-of-local-ai/2026-q4/sources.csv',
       sourcesJson: '/state-of-local-ai/2026-q4/sources.json',
+      reportPdf: '/state-of-local-ai/2026-q4/state-of-local-ai-2026-q4-report.pdf',
+      appendixPdf: '/state-of-local-ai/2026-q4/state-of-local-ai-2026-q4-appendix.pdf',
     },
     corrections: [{ date: '23 October 2026', text: 'Version 1.0: first publication.' }],
     keyFindings: [
