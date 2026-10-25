@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-23',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -33,20 +33,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs mini pc oculink',
     ],
     leadAnswerBlock:
-      '**The Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, up to 96 GB DDR5) runs Home Assistant plus a 7B local LLM like a Beelink SER8 but adds dual 2.5GbE, Wi-Fi 6E, and an OCuLink port for an external GPU — from about $439 barebones to $649 with 32 GB (August 2026, volatile).** Buy it if you want an expandable home server with a real path to faster large-model inference.',
+      '**The Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, up to 96 GB DDR5) runs Home Assistant plus a 7B local LLM like a Beelink SER8 but adds dual 2.5GbE, Wi-Fi 6E, and an OCuLink port for an external GPU — from $439.90 barebones to $823.90 with 32 GB and 1 TB (official store list price, checked 2026-10-25; sold out on the official page at that check).** Buy it if you want an expandable home server with a real path to faster large-model inference.',
     quickAnswerTop: {
       en: {
         question: 'Is the Minisforum UM890 Pro good for local AI and Home Assistant?',
         answer:
-          'Yes — it is the expandable step-up pick. The Ryzen 9 8945HS (8 cores/16 threads), Radeon 780M iGPU, and up to 96 GB of DDR5 run Home Assistant, Ollama, Whisper, and Frigate together; a 7B model is comfortable and 13B–14B fits with more RAM. Its differentiators are dual 2.5GbE, Wi-Fi 6E, and an OCuLink port that connects an external GPU for genuinely fast large-model inference. Priced from about $439 barebones to $649 with 32 GB (August 2026, volatile), it costs a little more than a Beelink SER8 but adds real expansion.',
+          'Yes — it is the expandable step-up pick. The Ryzen 9 8945HS (8 cores/16 threads), Radeon 780M iGPU, and up to 96 GB of DDR5 run Home Assistant, Ollama, Whisper, and Frigate together; a 7B model is comfortable and 13B–14B fits with more RAM. Its differentiators are dual 2.5GbE, Wi-Fi 6E, and an OCuLink port that connects an external GPU for genuinely fast large-model inference. Official store list prices run from $439.90 barebones to $823.90 with 32 GB and 1 TB (checked 2026-10-25; sold out on the official page at that check). The Beelink SER8 is listed at $799 for 24 GB and 1 TB, so the configurations differ, but the UM890 Pro adds real expansion.',
         bullets: [
           'CPU: Ryzen 9 8945HS — 8 cores / 16 threads, Radeon 780M (12 CU, RDNA 3)',
           'RAM: DDR5-5600 dual channel, two user-upgradeable SO-DIMMs, up to 96 GB',
           'Local LLM (estimated from specs): 7B comfortable; 13B–14B with more RAM; OCuLink eGPU for fast large models',
           'Networking/expansion: dual 2.5GbE, Wi-Fi 6E, 2× USB4, OCuLink eGPU port',
-          'Price ~$439 barebones / ~$649 with 32 GB (August 2026, volatile) — expandable step-up',
+          'Official store list price: $439.90 barebones / $823.90 with 32 GB + 1 TB (sold out at last check) — expandable step-up',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You want to start with a 7B local LLM on Home Assistant and upgrade to fast 13B–30B inference later with an external GPU',
           'You need more than one network link (dual 2.5GbE or Wi-Fi 6E) for a reliable home server',
           'You value a user-upgradeable path — RAM and storage are both easy to swap',
-          'The OCuLink eGPU port is worth the $150–200 step-up over a Beelink SER8',
+          'The OCuLink eGPU port is worth the extra cost over a Beelink SER8',
           '**Skip the UM890 Pro if:**',
           'You only run a 7B model and never plan an external GPU — a Beelink SER8 saves money for the same iGPU performance',
           'You need a truly compact box — the 67 mm height is bulkier than most mini PCs',
@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS: 8 cores/16 threads, Radeon 780M iGPU, up to 96 GB DDR5 on two upgradeable SO-DIMMs',
           'Differentiators vs a [Beelink SER8](/smart-home/beelink-ser8-local-ai-review): dual 2.5GbE, Wi-Fi 6E, and an OCuLink eGPU port',
           'OCuLink gives a real path to fast large-model inference with an external GPU',
-          'Priced from ~$439 barebones to ~$649 with 32 GB — the expandable step-up',
+          'Official store list price from $439.90 barebones to $823.90 with 32 GB + 1 TB — the expandable step-up',
           'Made in China — factor 2026 US/EU import measures into landed cost (see trade note)',
         ],
       },
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**All specs below were verified against Minisforum and independent review sources in August 2026.** The RAM ceiling is 96 GB on the official page (some retailers still list 64 GB). It ships barebones or pre-built by SKU.',
         image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
-        imageCaption: 'Minisforum UM890 Pro vs Beelink SER8 spec comparison: same Ryzen 8945HS/8845HS + Radeon 780M 12 CU tier, but the UM890 Pro adds a 96 GB RAM ceiling, dual 2.5GbE, Wi-Fi 6E, and an OCuLink PCIe 4.0 x4 eGPU port for about $439–649 vs ~$650.',
+        imageCaption: 'Minisforum UM890 Pro vs Beelink SER8 spec comparison: same Ryzen 8945HS/8845HS + Radeon 780M 12 CU tier, but the UM890 Pro adds a 96 GB RAM ceiling, dual 2.5GbE, Wi-Fi 6E, and an OCuLink PCIe 4.0 x4 eGPU port.',
         columns: ['Spec', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { Spec: 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spec: 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W base, configurable to ~70 W' },
           { Spec: 'Dimensions', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { Spec: 'OS', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro on pre-built SKUs (Linux/Proxmox supported)' },
-          { Spec: 'Price (indicative)', 'Minisforum UM890 Pro (8945HS)': '~$439 barebones / ~$649 with 32 GB (August 2026 — volatile, check current price)' },
+          { Spec: 'Price (indicative)', 'Minisforum UM890 Pro (8945HS)': 'Official list: $439.90 barebone / $823.90 (32 GB+1 TB) / $999.90 (64 GB+1 TB); sold out at last check' },
         ],
         items: [
           'The OCuLink port (PCIe 4.0 ×4, ~64 Gbps) connects an external GPU dock — a faster path than USB4/Thunderbolt for a discrete GPU.',
@@ -144,36 +144,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'Which Configuration Should You Buy?',
         content: 'The UM890 Pro comes in barebones and pre-configured SKUs. This table shows who each tier suits.',
-        columns: ['Configuration', 'Typical Price (Aug 2026)', 'Best For', 'Next Step'],
+        columns: ['Configuration', 'Official List Price', 'Best For', 'Next Step'],
         rows: [
           {
             Configuration: 'Barebones (no RAM/SSD)',
-            'Typical Price (Aug 2026)': '~$439',
-            'Best For': 'You already own DDR5 SO-DIMMs and NVMe SSD; saves $50–100 vs pre-built',
-            'Next Step': 'Add 32–64 GB DDR5 and fast 1 TB NVMe (budget ~$100–180 total)',
+            'Official List Price': '$439.90',
+            'Best For': 'You already own DDR5 SO-DIMMs and NVMe SSD; lowest list price of the official SKUs',
+            'Next Step': 'Add 32–64 GB DDR5 and fast 1 TB NVMe (check current RAM and SSD prices)',
           },
           {
             Configuration: '32 GB DDR5 + 1 TB SSD',
-            'Typical Price (Aug 2026)': '~$649',
+            'Official List Price': '$823.90',
             'Best For': 'Comfortable 7B model, entry-level expansion, single system buy',
             'Next Step': 'Upgrade to 64 GB RAM later or add an OCuLink GPU within a year',
           },
           {
             Configuration: '64 GB DDR5 + 1 TB SSD',
-            'Typical Price (Aug 2026)': '~$799',
+            'Official List Price': '$999.90',
             'Best For': 'Run 13B–14B models comfortably, or a 7B model with much room to grow',
             'Next Step': 'Ready for an OCuLink GPU when you want 30B+ speed',
           },
           {
             Configuration: '96 GB DDR5 + 2 TB SSD',
-            'Typical Price (Aug 2026)': '~$1,099',
+            'Official List Price': 'Check current listing',
             'Best For': 'Max out the iGPU with 30B models, or reserve for future OS/apps bloat',
             'Next Step': 'Just add an OCuLink GPU — no RAM upgrade needed for years',
           },
         ],
         items: [
           '**Estimated from specs, not measured.** All RAM/model combinations assume Ollama with Q4_K_M quantization.',
-          'Prices move week to week; check the retailer before buying. These are August 2026 snapshots.',
+          'Prices move week to week; check the retailer before buying. The figures are official store list prices (checked 2026-10-25); a 96 GB + 2 TB SKU is not on the official page, so check the current listing.',
           'SSD speed matters less for local LLMs than for OS boot; a SATA SSD works fine, NVMe is better.',
         ],
         affiliateLinks: [
@@ -230,15 +230,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Feature: 'Price (barebones)',
-            'UM890 Pro': '~$439',
-            SER8: '~$449',
+            'UM890 Pro': '$439.90',
+            SER8: 'Check current listing',
             Winner: 'Tie / check current price',
           },
           {
             Feature: 'Price (32 GB configured)',
-            'UM890 Pro': '~$649',
-            SER8: '~$649',
-            Winner: 'Tie',
+            'UM890 Pro': '$823.90',
+            SER8: 'Check current listing (24 GB + 1 TB: $799)',
+            Winner: 'Check current listing',
           },
           {
             Feature: 'Best for',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Estimated from specs, not measured.** Real-world performance on 7B models is virtually identical on the iGPU.',
-          'Prices move week to week — check both retailers before deciding.',
+          'Prices move week to week — check both retailers before deciding. The official Beelink store lists the SER8 at $799 for 24 GB + 1 TB; no 32 GB configuration was verified there.',
           'See the full [Beelink SER8 review](/smart-home/beelink-ser8-local-ai-review) for details.',
         ],
         affiliateLinks: [
@@ -300,11 +300,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'Pricing & Availability (2026)',
         content:
-          '**Prices move week to week. Check the live price at the retailer before buying.** The figures below are August 2026 snapshots and reflect current import tariffs on goods from China.',
+          '**Prices move week to week. Check the live price at the retailer before buying.** The figures below are official store list prices (US, checked 2026-10-25) and may not include import tariffs or local taxes.',
         items: [
-          'Prices range from ~$439 barebones to ~$799 for a 64GB+1TB SKU. Exact cost depends on retailer, country, and current tariff pass-through.',
+          'Official list prices range from $439.90 barebones to $999.90 for a 64GB+1TB SKU ($823.90 for 32GB+1TB). Exact cost depends on retailer, country, and current tariff pass-through.',
           'Made in China: US Section 301 tariffs (consumer electronics), EU low-value parcel fee (August 2026 onwards), and similar measures in other regions affect landed cost.',
-          'Stock is typically available from Minisforum.com and major retailers in the US, EU, and Asia-Pacific.',
+          'Availability varies: at the last check (2026-10-25) the official product page showed every configuration as sold out; third-party retailer prices and stock were not verified.',
           'No affiliate program: this review does not earn a commission. The CTA links to Minisforum for price transparency.',
         ],
       },
@@ -312,12 +312,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: 'Where to Buy',
         content:
-          '**Check the current price at Minisforum.com — prices change frequently and depend on your region and import tariffs.** Stock availability also fluctuates; as of this review\'s last check (August 2026), Minisforum.com listed every configuration of this model as sold out across its US, UK, EU, and JP storefronts, so budget extra time or check Amazon/Newegg resellers if you need one now.',
+          '**Check the current price at Minisforum.com — prices change frequently and depend on your region and import tariffs.** Stock availability also fluctuates; as of the last check (2026-10-25), the official Minisforum product page listed every configuration as sold out, so budget extra time or check third-party resellers (whose prices and stock were not verified here) if you need one now.',
         items: [
-          'Barebones ($~439) is cheaper if you already have DDR5 SO-DIMMs and an NVMe SSD.',
-          '32GB+1TB ($~649) is the entry-level configured option; ready to run Home Assistant and a 7B model out of the box.',
-          '64GB+1TB ($~799) and 96GB+2TB ($~1,099) are available for buyers who want more model headroom now.',
-          'Minisforum.com direct is currently sold out on all SKUs (checked August 2026) — Amazon and Newegg have carried the same barebones and 32 GB configurations, sometimes at different prices, so compare before buying.',
+          'Barebones ($439.90 official list price) is cheaper if you already have DDR5 SO-DIMMs and an NVMe SSD.',
+          '32GB+1TB ($823.90 official list price) is the entry-level configured option; ready to run Home Assistant and a 7B model out of the box.',
+          '64GB+1TB ($999.90 official list price) gives more model headroom; a 96GB+2TB SKU was not on the official page at the last check, so check the current listing.',
+          'The official Minisforum page showed all SKUs sold out (checked 2026-10-25) — third-party retailers such as Amazon or Newegg may list the same configurations at different prices, which were not verified here, so compare before buying.',
           'See the [Pricing & Availability section](#trade-note) for tariff context and regional differences.',
         ],
         affiliateLinks: [
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Alternatives to Consider',
         content: '**If the UM890 Pro is not the right fit, these bracket it on price and expansion.**',
         items: [
-          '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — the value pick with similar iGPU performance for less, minus OCuLink and dual LAN',
+          '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — the value pick with similar iGPU performance, minus OCuLink and dual LAN',
           '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review) — premium headroom box with a 128 GB RAM ceiling and Wi-Fi 7',
           '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review) — budget Intel N150 box for Home Assistant plus a tiny model',
           '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — another budget N150 option with upgradeable RAM',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'UM890 Pro or Beelink SER8?', a: 'Day to day they perform alike on a 7B model. Choose the UM890 Pro for its OCuLink eGPU path, dual 2.5GbE, Wi-Fi 6E, and 96 GB RAM ceiling; choose the SER8 to save money if you do not need that expansion.' },
           { q: 'Where is the Minisforum UM890 Pro made, and does that affect price?', a: 'It is manufactured in China. In 2026 US import measures (Section 301 tariffs, the end of the sub-$800 de minimis exemption) and the EU removal of the €150 low-value parcel exemption can affect landed cost, so check the current retailer price rather than relying on a fixed number.' },
           { q: 'Is 32 GB enough, or should I go for 64 GB?', a: 'For a single 7B model, 32 GB is comfortable. If you want to run multiple models, a second app alongside LLMs (like Frigate), or prepare for 13B–14B models, go to 64 GB. The mid-tier provides more room without the cost of 96 GB.' },
-          { q: 'Is the barebones SKU worth buying?', a: 'Yes, if you already own DDR5 SO-DIMMs and an NVMe SSD (from a prior upgrade or laptop purchase). Barebones saves $50–150 compared to a configured SKU, but requires you to assemble and test it. If you do not have spare RAM/SSD, the pre-configured options are simpler.' },
+          { q: 'Is the barebones SKU worth buying?', a: 'Yes, if you already own DDR5 SO-DIMMs and an NVMe SSD (from a prior upgrade or laptop purchase). Barebones lists at $439.90 versus $823.90 for the 32 GB + 1 TB SKU (official store list prices), before you add RAM and an SSD, but requires you to assemble and test it. If you do not have spare RAM/SSD, the pre-configured options are simpler.' },
           { q: 'Can I add an NVIDIA GPU via the OCuLink port?', a: 'Yes. OCuLink (PCIe 4.0 x4) supports external GPU docks that can hold an NVIDIA RTX or similar card. You will need an OCuLink dock (e.g., Sonnet eGPU), which adds $150–400. This is the UM890 Pro\'s main upgrade path for genuinely fast 13B–30B inference.' },
           { q: 'Is it good for 24/7 operation?', a: 'Yes, the 45 W base draw and efficient Ryzen 8945HS make it suitable for always-on Home Assistant and LLM use. It is not completely silent (small fan under load), but it is quieter than a desktop. No long-term durability testing has been done by us.' },
           { q: 'What is the difference between the Ryzen 8945HS and 8845HS (vs Beelink SER8)?', a: 'The 8945HS is slightly newer and has a 200 MHz higher base clock than the 8845HS, but real-world performance for LLMs is nearly identical. Both have the same Radeon 780M iGPU.' },
@@ -372,9 +372,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Minisforum UM890 Pro Review (2026): Specs, Price & Local AI Performance',
       reviewBody:
-        'The Minisforum UM890 Pro is a Ryzen 9 8945HS mini PC with a Radeon 780M iGPU, up to 96 GB DDR5, and an OCuLink port for an external GPU. It runs Home Assistant plus a 7B local LLM and is the expandable step-up box, from about $439 barebones. This review covers verified specifications, current pricing, configuration options, and honest performance expectations.',
+        'The Minisforum UM890 Pro is a Ryzen 9 8945HS mini PC with a Radeon 780M iGPU, up to 96 GB DDR5, and an OCuLink port for an external GPU. It runs Home Assistant plus a 7B local LLM and is the expandable step-up box, from $439.90 barebones (official store list price). This review covers verified specifications, current pricing, configuration options, and honest performance expectations.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -400,8 +400,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-01-03',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -409,9 +409,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     title: 'Minisforum-UM890-Pro-Rezension (2026): Lokaler-KI-Heimserver',
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-de.webp',
-    seoTitle: 'Minisforum-UM890-Pro-Rezension 2026: Offizielle Specs & Preis',
+    seoTitle: 'Minisforum UM890 Pro Test 2026: Offizielle Specs & Preis',
     intro:
-      'Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5) ist der vielseitige Aufstiegs-Mini-PC für ein Smart Home mit lokaler KI. Ab ca. 489 € als Barebone bis ca. 649 € mit 32 GB (August 2026, schwankend) erreicht er beim lokalen Modell das Niveau eines Beelink SER8, bietet aber zusätzlich zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-Anschluss für eine externe GPU. Diese Rezension prüft die Spezifikationen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und erklärt, wer den Aufpreis gegenüber einem SER8 zahlen sollte.',
+      'Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5) ist der vielseitige Aufstiegs-Mini-PC für ein Smart Home mit lokaler KI. Ab 439,90 $ als Barebone bis 823,90 $ mit 32 GB und 1 TB (offizieller Store-Listenpreis in USD, geprüft am 2026-10-25; Preise in Deutschland weichen ab) erreicht er beim lokalen Modell das Niveau eines Beelink SER8, bietet aber zusätzlich zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-Anschluss für eine externe GPU. Diese Rezension prüft die Spezifikationen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und erklärt, wer den Aufpreis gegenüber einem SER8 zahlen sollte.',
     metaDescription:
       'Offizielle Minisforum UM890 Pro Specs 2026: Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5, OCuLink-eGPU, zwei 2,5GbE. Für Home Assistant + 7B-LLM.',
     twitterDescription:
@@ -428,20 +428,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs mini pc oculink',
     ],
     leadAnswerBlock:
-      '**Der Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5) betreibt Home Assistant plus ein lokales 7B-LLM wie ein Beelink SER8, bietet aber zusätzlich zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-Anschluss für eine externe GPU — ab ca. 489 € als Barebone bis ca. 649 € mit 32 GB (August 2026, schwankend).** Kaufen Sie ihn, wenn Sie einen erweiterbaren Heimserver mit echtem Weg zu schnellerer Inferenz großer Modelle wollen.',
+      '**Der Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5) betreibt Home Assistant plus ein lokales 7B-LLM wie ein Beelink SER8, bietet aber zusätzlich zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-Anschluss für eine externe GPU — ab 439,90 $ als Barebone bis 823,90 $ mit 32 GB und 1 TB (offizieller Store-Listenpreis in USD, geprüft am 2026-10-25; auf der offiziellen Seite ausverkauft).** Kaufen Sie ihn, wenn Sie einen erweiterbaren Heimserver mit echtem Weg zu schnellerer Inferenz großer Modelle wollen.',
     quickAnswerTop: {
       de: {
         question: 'Ist der Minisforum UM890 Pro gut für lokale KI und Home Assistant?',
         answer:
-          'Ja — er ist die erweiterbare Aufstiegswahl. Der Ryzen 9 8945HS (8 Kerne/16 Threads), die Radeon-780M-iGPU und bis zu 96 GB DDR5 betreiben Home Assistant, Ollama, Whisper und Frigate gemeinsam; ein 7B-Modell läuft bequem, und 13B–14B passen mit mehr RAM. Seine Unterscheidungsmerkmale sind zwei 2,5GbE-Ports, Wi-Fi 6E und ein OCuLink-Anschluss, der eine externe GPU für wirklich schnelle Inferenz großer Modelle anbindet. Ab ca. 489 € als Barebone bis ca. 649 € mit 32 GB (August 2026, schwankend) kostet er etwas mehr als ein Beelink SER8, bietet aber echte Erweiterbarkeit.',
+          'Ja — er ist die erweiterbare Aufstiegswahl. Der Ryzen 9 8945HS (8 Kerne/16 Threads), die Radeon-780M-iGPU und bis zu 96 GB DDR5 betreiben Home Assistant, Ollama, Whisper und Frigate gemeinsam; ein 7B-Modell läuft bequem, und 13B–14B passen mit mehr RAM. Seine Unterscheidungsmerkmale sind zwei 2,5GbE-Ports, Wi-Fi 6E und ein OCuLink-Anschluss, der eine externe GPU für wirklich schnelle Inferenz großer Modelle anbindet. Die offiziellen Store-Listenpreise reichen von 439,90 $ als Barebone bis 823,90 $ mit 32 GB und 1 TB (geprüft am 2026-10-25, auf der offiziellen Seite ausverkauft); der Beelink SER8 steht dort mit 799 $ für 24 GB und 1 TB, die Konfigurationen unterscheiden sich also, doch der UM890 Pro bietet echte Erweiterbarkeit.',
         bullets: [
           'CPU: Ryzen 9 8945HS — 8 Kerne / 16 Threads, Radeon 780M (12 CU, RDNA 3)',
           'RAM: DDR5-5600 Dual-Channel, zwei nutzeraufrüstbare SO-DIMMs, bis zu 96 GB',
           'Lokales LLM (aus Spezifikationen geschätzt): 7B bequem; 13B–14B mit mehr RAM; OCuLink-eGPU für schnelle große Modelle',
           'Netzwerk/Erweiterung: zwei 2,5GbE, Wi-Fi 6E, 2× USB4, OCuLink-eGPU-Anschluss',
-          'Preis ca. 489 € als Barebone / ca. 649 € mit 32 GB (August 2026, schwankend) — erweiterbarer Aufstieg',
+          'Offizieller Store-Listenpreis: 439,90 $ als Barebone / 823,90 $ mit 32 GB + 1 TB (zuletzt ausverkauft) — erweiterbarer Aufstieg',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sie mit einem 7B-Modell auf Home Assistant starten und später mit einer externen GPU zu schneller 13B–30B-Inferenz aufrüsten wollen',
           'Sie mehr als eine Netzwerkverbindung brauchen (Dual 2,5GbE oder Wi-Fi 6E) für einen zuverlässigen Heimserver',
           'Sie einen nutzeraufrüstbaren Pfad schätzen — RAM und Speicher lassen sich beide leicht tauschen',
-          'Der OCuLink-eGPU-Anschluss ist der 150–200 € Aufpreis über einen Beelink SER8 wert',
+          'Der OCuLink-eGPU-Anschluss ist den Mehrpreis gegenüber einem Beelink SER8 wert',
           '**Nicht kaufen wenn:**',
           'Sie nur ein 7B-Modell betreiben und nie eine externe GPU planen — ein Beelink SER8 spart Geld bei gleicher iGPU-Leistung',
           'Sie eine wirklich kompakte Box brauchen — die 67 mm Höhe ist sperriger als die meisten Mini-PCs',
@@ -485,36 +485,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'Welche Konfiguration sollten Sie kaufen?',
         content: 'Der UM890 Pro wird als Barebone und vorkonfiguriert angeboten. Diese Tabelle zeigt, welche Stufe wem entspricht.',
-        columns: ['Konfiguration', 'Typischer Preis (Aug 2026)', 'Beste für', 'Nächster Schritt'],
+        columns: ['Konfiguration', 'Offizieller Listenpreis', 'Beste für', 'Nächster Schritt'],
         rows: [
           {
             Konfiguration: 'Barebone (kein RAM/SSD)',
-            'Typischer Preis (Aug 2026)': '~489 €',
-            'Beste für': 'Sie besitzen bereits DDR5-SO-DIMMs und eine NVMe-SSD; spart 50–100 € gegenüber Vorkonfiguriert',
-            'Nächster Schritt': 'Ergänzen Sie 32–64 GB DDR5 und eine schnelle 1-TB-NVMe (Budget ~100–180 € gesamt)',
+            'Offizieller Listenpreis': '439,90 $',
+            'Beste für': 'Sie besitzen bereits DDR5-SO-DIMMs und eine NVMe-SSD; niedrigster Listenpreis der offiziellen SKUs',
+            'Nächster Schritt': 'Ergänzen Sie 32–64 GB DDR5 und eine schnelle 1-TB-NVMe (aktuelle RAM- und SSD-Preise prüfen)',
           },
           {
             Konfiguration: '32 GB DDR5 + 1 TB SSD',
-            'Typischer Preis (Aug 2026)': '~649 €',
+            'Offizieller Listenpreis': '823,90 $',
             'Beste für': 'Komfortables 7B-Modell, Einstieg in die Erweiterbarkeit, einzelne Systembeschaffung',
             'Nächster Schritt': 'Später auf 64 GB RAM aufrüsten oder innerhalb eines Jahres eine OCuLink-GPU hinzufügen',
           },
           {
             Konfiguration: '64 GB DDR5 + 1 TB SSD',
-            'Typischer Preis (Aug 2026)': '~799 €',
+            'Offizieller Listenpreis': '999,90 $',
             'Beste für': 'Betreiben Sie 13B–14B-Modelle komfortabel oder ein 7B-Modell mit großem Spielraum',
             'Nächster Schritt': 'Bereit für eine OCuLink-GPU, wenn Sie 30B+-Geschwindigkeit wollen',
           },
           {
             Konfiguration: '96 GB DDR5 + 2 TB SSD',
-            'Typischer Preis (Aug 2026)': '~1.099 €',
+            'Offizieller Listenpreis': 'Aktuelles Angebot prüfen',
             'Beste für': 'Schöpfen Sie die iGPU mit 30B-Modellen aus oder reservieren Sie für zukünftige OS/App-Bloat',
             'Nächster Schritt': 'Fügen Sie einfach eine OCuLink-GPU hinzu — keine RAM-Aufrüstung über Jahre nötig',
           },
         ],
         items: [
           '**Aus Spezifikationen geschätzt, nicht gemessen.** Alle RAM-/Modellkombinationen setzen Ollama mit Q4_K_M-Quantisierung voraus.',
-          'Preise ändern sich wöchentlich; prüfen Sie den Händler vor dem Kauf. Dies sind August-2026-Snapshots.',
+          'Preise ändern sich wöchentlich; prüfen Sie den Händler vor dem Kauf. Die Angaben sind offizielle Store-Listenpreise in USD (geprüft am 2026-10-25); eine 96GB+2TB-SKU steht nicht auf der offiziellen Seite, prüfen Sie das aktuelle Angebot.',
           'SSD-Geschwindigkeit spielt für lokale LLMs weniger Rolle als beim OS-Boot; eine SATA-SSD funktioniert, NVMe ist besser.',
         ],
         affiliateLinks: [
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS: 8 Kerne/16 Threads, Radeon-780M-iGPU, bis zu 96 GB DDR5 auf zwei aufrüstbaren SO-DIMMs',
           'Unterscheidungsmerkmale gegenüber einem [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review): zwei 2,5GbE, Wi-Fi 6E und ein OCuLink-eGPU-Anschluss',
           'OCuLink bietet einen echten Weg zu schneller Inferenz großer Modelle mit einer externen GPU',
-          'Ab ca. 489 € als Barebone bis ca. 649 € mit 32 GB — der erweiterbare Aufstieg',
+          'Offizieller Store-Listenpreis ab 439,90 $ als Barebone bis 823,90 $ mit 32 GB + 1 TB — der erweiterbare Aufstieg',
           'In China gefertigt — beziehen Sie die US-/EU-Importmaßnahmen 2026 in die Endkosten ein (siehe Zollhinweis)',
         ],
       },
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spezifikation: 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W Basis, konfigurierbar bis ca. 70 W' },
           { Spezifikation: 'Abmessungen', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { Spezifikation: 'OS', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro auf vorkonfigurierten SKUs (Linux/Proxmox unterstützt)' },
-          { Spezifikation: 'Preis (indikativ)', 'Minisforum UM890 Pro (8945HS)': 'ca. 489 € Barebone / ca. 649 € mit 32 GB (August 2026 — schwankend, aktuellen Preis prüfen)' },
+          { Spezifikation: 'Preis (indikativ)', 'Minisforum UM890 Pro (8945HS)': 'Listenpreis: 439,90 $ Barebone / 823,90 $ (32 GB+1 TB) / 999,90 $ (64 GB+1 TB); zuletzt ausverkauft' },
         ],
         items: [
           'Der OCuLink-Anschluss (PCIe 4.0 ×4, ~64 Gbps) verbindet ein externes GPU-Dock — ein schnellerer Weg als USB4/Thunderbolt für eine dedizierte GPU.',
@@ -602,15 +602,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Merkmal: 'Preis (Barebone)',
-            'UM890 Pro': '~489 €',
-            SER8: '~449 €',
+            'UM890 Pro': '439,90 $',
+            SER8: 'Aktuelles Angebot prüfen',
             Gewinner: 'Unentschieden / aktuellen Preis prüfen',
           },
           {
             Merkmal: 'Preis (32 GB konfiguriert)',
-            'UM890 Pro': '~649 €',
-            SER8: '~649 €',
-            Gewinner: 'Unentschieden',
+            'UM890 Pro': '823,90 $',
+            SER8: 'Aktuelles Angebot prüfen (24 GB+1 TB: 799 $)',
+            Gewinner: 'Aktuelles Angebot prüfen',
           },
           {
             Merkmal: 'Beste für',
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Aus Spezifikationen geschätzt, nicht gemessen.** Die Leistung bei 7B-Modellen auf der iGPU ist praktisch identisch.',
-          'Preise ändern sich wöchentlich — prüfen Sie beide Händler, bevor Sie entscheiden.',
+          'Preise ändern sich wöchentlich — prüfen Sie beide Händler, bevor Sie entscheiden. Der Beelink-Store listet den SER8 mit 799 $ für 24 GB + 1 TB; eine 32-GB-Konfiguration wurde dort nicht verifiziert.',
           'Siehe den vollständigen [Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review) für Details.',
         ],
         affiliateLinks: [
@@ -690,11 +690,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'Käuferkontext: Zölle & Verfügbarkeit (2026)',
         content:
-          '**Preise ändern sich von Woche zu Woche. Prüfen Sie den Live-Preis beim Händler, bevor Sie kaufen.** Die Zahlen unten sind August-2026-Snapshots und reflektieren aktuelle Importzölle auf Waren aus China.',
+          '**Preise ändern sich von Woche zu Woche. Prüfen Sie den Live-Preis beim Händler, bevor Sie kaufen.** Die Zahlen unten sind offizielle Store-Listenpreise in USD (geprüft am 2026-10-25) und enthalten möglicherweise keine Importzölle oder lokalen Steuern.',
         items: [
-          'Preise rangieren von ~489 € Barebone bis ~799 € für eine 64GB+1TB-SKU. Die genauen Kosten hängen vom Händler, Land und aktuellem Zoll-Pass-Through ab.',
+          'Die offiziellen Listenpreise reichen von 439,90 $ als Barebone bis 999,90 $ für eine 64GB+1TB-SKU (823,90 $ für 32GB+1TB). Die genauen Kosten hängen vom Händler, Land und aktuellem Zoll-Pass-Through ab.',
           'In China gefertigt: US-Section-301-Zölle (Elektronik), EU-Bearbeitungsgebühr für geringwertige Pakete ab August 2026 und ähnliche Maßnahmen in anderen Regionen beeinflussen die Endkosten.',
-          'Verfügbarkeit ist typisch von Minisforum.com und großen Händlern in den USA, EU und Asien-Pazifik.',
+          'Die Verfügbarkeit schwankt: Bei der letzten Prüfung (2026-10-25) waren auf der offiziellen Produktseite alle Konfigurationen ausverkauft; Preise und Bestände bei Drittanbietern wurden nicht verifiziert.',
           'Kein Affiliate-Programm: Diese Rezension verdient keine Provision. Der CTA-Link geht zu Minisforum für Preistransparenz.',
         ],
       },
@@ -702,12 +702,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: 'Wo kaufen',
         content:
-          '**Prüfen Sie den aktuellen Preis bei Minisforum.com — Preise ändern sich häufig und hängen von Ihrer Region und Importzöllen ab.** Auch die Verfügbarkeit schwankt: Bei der letzten Prüfung für diese Rezension (August 2026) waren auf Minisforum.com alle Konfigurationen dieses Modells in den Storefronts für US, UK, EU und JP als ausverkauft gelistet — planen Sie also etwas Zeit ein oder prüfen Sie Amazon/Newegg als Alternative.',
+          '**Prüfen Sie den aktuellen Preis bei Minisforum.com — Preise ändern sich häufig und hängen von Ihrer Region und Importzöllen ab.** Auch die Verfügbarkeit schwankt: Bei der letzten Prüfung (2026-10-25) waren auf der offiziellen Minisforum-Produktseite alle Konfigurationen als ausverkauft gelistet — planen Sie also etwas Zeit ein oder prüfen Sie Drittanbieter-Händler (deren Preise und Bestände hier nicht verifiziert wurden).',
         items: [
-          'Barebone (~489 €) ist günstiger, wenn Sie bereits DDR5-SO-DIMMs und eine NVMe-SSD besitzen.',
-          '32GB+1TB (~649 €) ist die vorkonfigurierte Einstiegsoption; betriebsbereit für Home Assistant und ein 7B-Modell aus der Box.',
-          '64GB+1TB (~799 €) und 96GB+2TB (~1.099 €) sind verfügbar für Käufer, die jetzt mehr Modellspielraum wollen.',
-          'Minisforum.com direkt ist derzeit bei allen SKUs ausverkauft (Stand August 2026) — Amazon und Newegg führten dieselben Barebone- und 32-GB-Konfigurationen teils zu abweichenden Preisen, also vergleichen Sie vor dem Kauf.',
+          'Barebone (439,90 $ offizieller Listenpreis) ist günstiger, wenn Sie bereits DDR5-SO-DIMMs und eine NVMe-SSD besitzen.',
+          '32GB+1TB (823,90 $ offizieller Listenpreis) ist die vorkonfigurierte Einstiegsoption; betriebsbereit für Home Assistant und ein 7B-Modell aus der Box.',
+          '64GB+1TB (999,90 $ offizieller Listenpreis) bietet mehr Modellspielraum; eine 96GB+2TB-SKU stand bei der letzten Prüfung nicht auf der offiziellen Seite, prüfen Sie das aktuelle Angebot.',
+          'Die offizielle Minisforum-Seite zeigte alle SKUs als ausverkauft (geprüft am 2026-10-25) — Drittanbieter wie Amazon oder Newegg können dieselben Konfigurationen zu abweichenden, hier nicht verifizierten Preisen listen, vergleichen Sie also vor dem Kauf.',
           'Siehe den [Abschnitt Käuferkontext](#trade-note) für Zollkontext und regionale Unterschiede.',
         ],
         affiliateLinks: [
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Alternativen im Blick',
         content: '**Wenn der UM890 Pro nicht die richtige Wahl ist, rahmen diese ihn bei Preis und Erweiterbarkeit ein.**',
         items: [
-          '[Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — die Preis-Leistungs-Wahl mit ähnlicher iGPU-Leistung für weniger, ohne OCuLink und Dual-LAN',
+          '[Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — die Preis-Leistungs-Wahl mit ähnlicher iGPU-Leistung, ohne OCuLink und Dual-LAN',
           '[GEEKOM A9 Max](/de/smart-home/geekom-a9-max-local-ai-review) — Premium-Box mit Reserven, 128-GB-RAM-Obergrenze und Wi-Fi 7',
           '[Beelink EQ14](/de/smart-home/beelink-eq14-local-ai-review) — günstige Intel-N150-Box für Home Assistant plus ein kleines Modell',
           '[GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — weitere günstige N150-Option mit aufrüstbarem RAM',
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'UM890 Pro oder Beelink SER8?', a: 'Im Alltag leisten sie bei einem 7B-Modell gleich. Wählen Sie den UM890 Pro für seinen OCuLink-eGPU-Pfad, zwei 2,5GbE, Wi-Fi 6E und die 96-GB-RAM-Obergrenze; wählen Sie den SER8, um Geld zu sparen, wenn Sie diese Erweiterung nicht brauchen.' },
           { q: 'Wo wird der Minisforum UM890 Pro gefertigt, und beeinflusst das den Preis?', a: 'Er wird in China gefertigt. 2026 können US-Importmaßnahmen (Section-301-Zölle, das Ende der De-minimis-Befreiung unter 800 $) und die EU-Abschaffung der 150-€-Grenze für geringwertige Sendungen die Endkosten beeinflussen, prüfen Sie daher den aktuellen Händlerpreis statt sich auf eine feste Zahl zu verlassen.' },
           { q: 'Hilft der UM890 Pro bei der DSGVO-Konformität im Smart Home?', a: 'Ja, indirekt. Weil KI-Inferenz und Sprachverarbeitung lokal auf dem Gerät laufen, verlassen Kamerabilder, Sprachbefehle und Sensordaten Ihr Heimnetz nicht — das unterstützt „Privacy by Design” nach DSGVO-Artikel 25 und die Datenminimierung. Es gibt keinen Cloud-Anbieter, mit dem ein Auftragsverarbeitungsvertrag nach Artikel 28 nötig wäre. Für Gewerbetreibende erleichtert die lokale Verarbeitung zudem die Ausrichtung an den BSI-Grundschutz-Katalogen.' },
-          { q: 'Was kostet der UM890 Pro in Deutschland und was ist beim Import zu beachten?', a: 'Im EU-Store und bei EU-Händlern startet der UM890 Pro bei ca. 489 € als Barebone und ca. 649 € mit 32 GB (August 2026, schwankend). Seit August 2026 ist die zollfreie 150-€-Grenze für geringwertige Direktsendungen aus China entfallen und es kommt eine kleine Bearbeitungsgebühr pro Paket hinzu; kaufen Sie daher bevorzugt bei einem EU-Händler mit lokaler Gewährleistung, um Zoll- und Einfuhrüberraschungen zu vermeiden.' },
+          { q: 'Was kostet der UM890 Pro in Deutschland und was ist beim Import zu beachten?', a: 'Der offizielle Store listet den UM890 Pro in USD ab 439,90 $ als Barebone und 823,90 $ mit 32 GB und 1 TB (US-Listenpreise, geprüft am 2026-10-25, zuletzt ausverkauft); Euro-Preise für die EU wurden nicht verifiziert und können abweichen. Seit August 2026 ist die zollfreie 150-€-Grenze für geringwertige Direktsendungen aus China entfallen und es kommt eine kleine Bearbeitungsgebühr pro Paket hinzu; kaufen Sie daher bevorzugt bei einem EU-Händler mit lokaler Gewährleistung, um Zoll- und Einfuhrüberraschungen zu vermeiden.' },
         ],
       },
       relatedReading: {
@@ -759,9 +759,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Minisforum-UM890-Pro-Rezension (2026): Lokaler-KI-Heimserver',
       reviewBody:
-        'Der Minisforum UM890 Pro ist ein Ryzen-9-8945HS-Mini-PC mit Radeon-780M-iGPU, bis zu 96 GB DDR5 und einem OCuLink-Anschluss für eine externe GPU. Er betreibt Home Assistant plus ein lokales 7B-LLM und ist die erweiterbare Aufstiegs-Box, ab ca. 489 € als Barebone (August 2026).',
+        'Der Minisforum UM890 Pro ist ein Ryzen-9-8945HS-Mini-PC mit Radeon-780M-iGPU, bis zu 96 GB DDR5 und einem OCuLink-Anschluss für eine externe GPU. Er betreibt Home Assistant plus ein lokales 7B-LLM und ist die erweiterbare Aufstiegs-Box, ab 439,90 $ als Barebone (offizieller Store-Listenpreis in USD).',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -787,8 +787,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-24',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -798,9 +798,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-fr.webp',
     seoTitle: 'Test Minisforum UM890 Pro 2026 : specs officielles & prix',
     intro:
-      'Le Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, jusqu\'à 96 GB DDR5) est le mini-PC polyvalent de montée en gamme pour une maison connectée à IA locale. À partir d\'environ 489 € en barebone jusqu\'à 649 € avec 32 GB (août 2026, variable), il égale un Beelink SER8 sur le modèle local mais ajoute deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink pour un GPU externe. Ce test vérifie ses caractéristiques, pose des attentes honnêtes sur la vitesse des LLM locaux et explique qui devrait payer le surcoût face à un SER8.',
+      'Le Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, jusqu\'à 96 GB DDR5) est le mini-PC polyvalent de montée en gamme pour une maison connectée à IA locale. Prix catalogue du magasin officiel de 439,90 $ en barebone à 823,90 $ avec 32 GB et 1 TB (prix US en USD, vérifié le 2026-10-25 ; les prix en France diffèrent), il égale un Beelink SER8 sur le modèle local mais ajoute deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink pour un GPU externe. Ce test vérifie ses caractéristiques, pose des attentes honnêtes sur la vitesse des LLM locaux et explique qui devrait payer le surcoût face à un SER8.',
     metaDescription:
-      "Specs officielles Minisforum UM890 Pro 2026 : Ryzen 9 8945HS, Radeon 780M, jusqu'à 96 GB DDR5, eGPU OCuLink, deux 2.5GbE. Pour Home Assistant + LLM local 7B.",
+      "Specs officielles Minisforum UM890 Pro 2026 : Ryzen 9 8945HS, Radeon 780M, 96 GB DDR5 max, eGPU OCuLink, deux 2.5GbE. Pour Home Assistant + LLM 7B local.",
     twitterDescription:
       'Minisforum UM890 Pro (2026) : Ryzen 9 8945HS, Radeon 780M, jusqu\'à 96 GB DDR5, OCuLink pour un GPU externe, deux 2.5GbE. Le serveur IA local évolutif — voici l\'analyse.',
     readTime: '7 min de lecture',
@@ -815,20 +815,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs mini pc oculink',
     ],
     leadAnswerBlock:
-      '**Le Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, jusqu\'à 96 GB DDR5) fait tourner Home Assistant plus un LLM local 7B comme un Beelink SER8, mais ajoute deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink pour un GPU externe — à partir d\'environ 489 € en barebone jusqu\'à 649 € avec 32 GB (août 2026, variable).** Choisissez-le si vous voulez un serveur maison évolutif avec une vraie voie vers une inférence plus rapide des grands modèles.',
+      '**Le Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, jusqu\'à 96 GB DDR5) fait tourner Home Assistant plus un LLM local 7B comme un Beelink SER8, mais ajoute deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink pour un GPU externe — à partir de 439,90 $ en barebone jusqu\'à 823,90 $ avec 32 GB et 1 TB (prix catalogue du magasin officiel en USD, vérifié le 2026-10-25 ; épuisé sur la page officielle).** Choisissez-le si vous voulez un serveur maison évolutif avec une vraie voie vers une inférence plus rapide des grands modèles.',
     quickAnswerTop: {
       fr: {
         question: 'Le Minisforum UM890 Pro est-il bon pour l\'IA locale et Home Assistant ?',
         answer:
-          'Oui — c\'est le choix évolutif de montée en gamme. Le Ryzen 9 8945HS (8 cœurs/16 threads), l\'iGPU Radeon 780M et jusqu\'à 96 GB DDR5 font tourner ensemble Home Assistant, Ollama, Whisper et Frigate ; un modèle 7B est confortable et 13B–14B passent avec plus de RAM. Ses différenciateurs sont deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink qui connecte un GPU externe pour une inférence des grands modèles vraiment rapide. À partir d\'environ 489 € en barebone jusqu\'à 649 € avec 32 GB (août 2026, variable), il coûte un peu plus qu\'un Beelink SER8 mais ajoute une vraie évolutivité.',
+          'Oui — c\'est le choix évolutif de montée en gamme. Le Ryzen 9 8945HS (8 cœurs/16 threads), l\'iGPU Radeon 780M et jusqu\'à 96 GB DDR5 font tourner ensemble Home Assistant, Ollama, Whisper et Frigate ; un modèle 7B est confortable et 13B–14B passent avec plus de RAM. Ses différenciateurs sont deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink qui connecte un GPU externe pour une inférence des grands modèles vraiment rapide. Les prix catalogue du magasin officiel vont de 439,90 $ en barebone à 823,90 $ avec 32 GB et 1 TB (vérifié le 2026-10-25, épuisé sur la page officielle) ; le Beelink SER8 y est listé à 799 $ pour 24 GB et 1 TB, les configurations diffèrent donc, mais l\'UM890 Pro ajoute une vraie évolutivité.',
         bullets: [
           'CPU : Ryzen 9 8945HS — 8 cœurs / 16 threads, Radeon 780M (12 CU, RDNA 3)',
           'RAM : DDR5-5600 double canal, deux SO-DIMM évolutifs par l\'utilisateur, jusqu\'à 96 GB',
           'LLM local (estimé d\'après les specs) : 7B confortable ; 13B–14B avec plus de RAM ; eGPU OCuLink pour les grands modèles rapides',
           'Réseau/extension : deux 2.5GbE, Wi-Fi 6E, 2× USB4, port eGPU OCuLink',
-          'Prix ~489 € en barebone / ~649 € avec 32 GB (août 2026, variable) — montée en gamme évolutive',
+          'Prix catalogue du magasin officiel : 439,90 $ en barebone / 823,90 $ avec 32 GB + 1 TB (épuisé au dernier contrôle) — montée en gamme évolutive',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vous voulez commencer avec un LLM local 7B sur Home Assistant et passer à une inférence rapide 13B–30B plus tard avec un GPU externe',
           'Vous avez besoin de plus d\'une connexion réseau (double 2.5GbE ou Wi-Fi 6E) pour un serveur maison fiable',
           'Vous valorisez une voie évolutive — RAM et stockage sont tous deux faciles à échanger',
-          'Le port eGPU OCuLink justifie la différence de ~150–200 € face à un Beelink SER8',
+          'Le port eGPU OCuLink justifie le surcoût face à un Beelink SER8',
           '**Ne pas acheter le UM890 Pro si :**',
           'Vous ne lancez qu\'un modèle 7B et ne prévoyez jamais un GPU externe — un Beelink SER8 économise de l\'argent pour la même performance iGPU',
           'Vous avez besoin d\'une box vraiment compacte — la hauteur de 67 mm est plus imposante que la plupart des mini-PC',
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS : 8 cœurs/16 threads, iGPU Radeon 780M, jusqu\'à 96 GB DDR5 sur deux SO-DIMM évolutifs',
           'Différenciateurs face à un [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) : deux 2.5GbE, Wi-Fi 6E et un port eGPU OCuLink',
           'OCuLink offre une vraie voie vers une inférence rapide des grands modèles avec un GPU externe',
-          'À partir de ~489 € en barebone jusqu\'à ~649 € avec 32 GB — la montée en gamme évolutive',
+          'Prix catalogue du magasin officiel de 439,90 $ en barebone à 823,90 $ avec 32 GB + 1 TB — la montée en gamme évolutive',
           'Fabriqué en Chine — intégrez les mesures d\'importation US/UE 2026 dans le coût final (voir la note douanière)',
         ],
       },
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Caractéristique': 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W de base, configurable jusqu\'à ~70 W' },
           { 'Caractéristique': 'Dimensions', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { 'Caractéristique': 'OS', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro sur les SKU préassemblées (Linux/Proxmox pris en charge)' },
-          { 'Caractéristique': 'Prix (indicatif)', 'Minisforum UM890 Pro (8945HS)': '~489 € barebone / ~649 € avec 32 GB (août 2026 — variable, vérifiez le prix actuel)' },
+          { 'Caractéristique': 'Prix (indicatif)', 'Minisforum UM890 Pro (8945HS)': 'Catalogue : 439,90 $ barebone / 823,90 $ (32 GB+1 TB) / 999,90 $ (64 GB+1 TB) ; épuisé au dernier contrôle' },
         ],
         items: [
           'Le port OCuLink (PCIe 4.0 ×4, ~64 Gbps) connecte un dock GPU externe — une voie plus rapide que USB4/Thunderbolt pour un GPU dédié.',
@@ -920,37 +920,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichConfig: {
         id: 'which-config',
         title: 'Quelle configuration choisir ?',
-        content: 'Le UM890 Pro est vendu en plusieurs variantes. Voici comment choisir en fonction de votre charge de travail. **Tous les prix ci-dessous sont des estimations d\'août 2026** — consultez le revendeur pour les tarifs actuels.',
-        columns: ['Configuration', 'Utilisation type', 'Prix estimé', 'Modèle max recommandé'],
+        content: 'Le UM890 Pro est vendu en plusieurs variantes. Voici comment choisir en fonction de votre charge de travail. **Les prix ci-dessous sont des prix catalogue du magasin officiel en USD (vérifié le 2026-10-25 ; les prix en France diffèrent)** — consultez le revendeur pour les tarifs actuels.',
+        columns: ['Configuration', 'Utilisation type', 'Prix catalogue', 'Modèle max recommandé'],
         rows: [
           {
             Configuration: 'Barebone (aucune RAM/SSD)',
-            'Utilisation type': 'Vous possédez déjà des SO-DIMM DDR5 et une SSD NVMe ; économise 50–100 € vs préassemblé',
-            'Prix estimé': '~489 €',
+            'Utilisation type': 'Vous possédez déjà des SO-DIMM DDR5 et une SSD NVMe ; prix catalogue le plus bas des SKU officielles',
+            'Prix catalogue': '439,90 $',
             'Modèle max recommandé': '7B (avec 32 GB RAM ajoutée)',
           },
           {
             Configuration: '32 GB DDR5 + 1 TB SSD',
             'Utilisation type': 'Entrée de gamme : Home Assistant, modèle local 7B, Whisper',
-            'Prix estimé': '~649 €',
+            'Prix catalogue': '823,90 $',
             'Modèle max recommandé': '7B confortable',
           },
           {
             Configuration: '64 GB DDR5 + 1 TB SSD',
             'Utilisation type': 'Montée en gamme : 13B–14B plus sûr, Frigate + IA, Whisper concurrent',
-            'Prix estimé': '~799 €',
+            'Prix catalogue': '999,90 $',
             'Modèle max recommandé': '13B–14B confortable',
           },
           {
             Configuration: '96 GB DDR5 + 2 TB SSD',
             'Utilisation type': 'Puissance maximale : 30B à faible débit, plusieurs modèles concurrents, OCuLink GPU prêt',
-            'Prix estimé': '~1.099 €',
+            'Prix catalogue': 'Voir l\'offre actuelle',
             'Modèle max recommandé': '30B Q4 ou 13B×2 concurrents',
           },
         ],
         items: [
           '**Estimé d\'après les spécifications, non mesuré.** Toutes les combinaisons RAM/modèles supposent Ollama avec quantification Q4_K_M.',
-          'Les prix changent chaque semaine ; consultez le revendeur avant d\'acheter. Ce sont des snapshots d\'août 2026.',
+          'Les prix changent chaque semaine ; consultez le revendeur avant d\'acheter. Ces chiffres sont des prix catalogue du magasin officiel en USD (vérifié le 2026-10-25) ; une SKU 96 GB + 2 TB ne figure pas sur la page officielle, consultez l\'offre actuelle.',
           'La vitesse du SSD compte moins pour les LLMs locaux que pour le démarrage du système ; une SSD SATA fonctionne, NVMe est mieux.',
         ],
         affiliateLinks: [
@@ -1008,15 +1008,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Aspect: 'Prix (barebones)',
-            'UM890 Pro': '~489 €',
-            SER8: '~449 €',
+            'UM890 Pro': '439,90 $',
+            SER8: 'Voir l\'offre actuelle',
             Gagnant: 'Égalité / vérifier le prix actuel',
           },
           {
             Aspect: 'Prix (32 GB configuré)',
-            'UM890 Pro': '~649 €',
-            SER8: '~649 €',
-            Gagnant: 'Égalité',
+            'UM890 Pro': '823,90 $',
+            SER8: 'Voir l\'offre actuelle (24 GB+1 TB : 799 $)',
+            Gagnant: 'Voir l\'offre actuelle',
           },
           {
             Aspect: 'Meilleur pour',
@@ -1052,10 +1052,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qui ne devrait pas l\'acheter',
         content: '**Le UM890 Pro n\'est pas pour tout le monde.** Si vous ressemblez à l\'un des profils ci-dessous, un modèle moins cher pourrait faire l\'affaire.',
         items: [
-          'Vous ne lancerez qu\'un seul modèle 7B à perpétuité — le SER8 économise 150–300 € pour la même performance iGPU.',
+          'Vous ne lancerez qu\'un seul modèle 7B à perpétuité — le SER8 offre la même performance iGPU sans payer l\'extensibilité.',
           'Votre espace est compté en centimètres — ses 67 mm de haut le rendent moins compact qu\'un Beelink.',
           'Votre réseau n\'utilise pas la fibre — un seul lien Gigabit vous suffit ; payer pour le double 2,5GbE n\'a pas de sens.',
-          'Vous n\'avez pas 800+ € pour la montée en gamme 96 GB — le barebone + SO-DIMM à bas prix est OK, mais sinon, les box N150 économiques (Beelink EQ14) coûtent bien moins cher.',
+          'Vous ne souhaitez pas payer une montée en gamme à 96 GB — le barebone + SO-DIMM à bas prix est OK, mais sinon, les box N150 économiques (Beelink EQ14) coûtent bien moins cher.',
           'Vous voulez une box GPU intégrée dès le départ — l\'OCuLink est une voie de mise à niveau, pas une GPU embarquée. Pour cela, regardez le GEEKOM A9 Max (iGPU similaire, plafond RAM 128 GB, pas OCuLink).',
         ],
       },
@@ -1087,17 +1087,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'États-Unis : les droits Section 301 sur l\'électronique chinoise restent en vigueur en 2026 ; les droits « IEEPA » distincts de 2025 ont été invalidés par la Cour suprême en février 2026 et remplacés par un droit Section 122 temporaire et plafonné. L\'exemption « de minimis » en franchise sous 800 $ pour les imports directs a aussi pris fin.',
           'UE (concerne DE/FR) : il n\'y a pas de droit UE général sur les mini-PC finis, mais depuis août 2026 le seuil de franchise de 150 € sur les petits colis directs de Chine a été supprimé et de petits frais de traitement par colis ajoutés.',
           'Hypothèse (tendance macro, pas un fait par produit) : la capacité d\'export chinoise redirigée a maintenu une forte disponibilité de ces marques en UE et aux États-Unis, ce qui soutient globalement des prix compétitifs.',
-          'Effet net : vérifiez le prix actuel chez le revendeur avant d\'acheter — les chiffres ici sont indicatifs et datés de août 2026.',
+          'Effet net : vérifiez le prix actuel chez le revendeur avant d\'acheter — les chiffres ici sont des prix catalogue du magasin officiel en USD (vérifié le 2026-10-25) et restent indicatifs.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Où acheter & prix actuel',
         content:
-          '**Les prix bougent d\'une semaine à l\'autre, vérifiez donc le prix en direct plutôt que de vous fier à un chiffre figé.** En août 2026, le UM890 Pro va d\'environ 489 € en barebone à 649 € avec 32 GB et 729 € avec 64 GB. La disponibilité varie aussi : lors de la dernière vérification pour ce test (août 2026), Minisforum.com affichait toutes les configurations comme épuisées sur ses boutiques US, UK, EU et JP — prévoyez un délai ou vérifiez chez Amazon/Newegg.',
+          '**Les prix bougent d\'une semaine à l\'autre, vérifiez donc le prix en direct plutôt que de vous fier à un chiffre figé.** Au 2026-10-25, le magasin officiel (prix US en USD) liste le UM890 Pro de 439,90 $ en barebone à 823,90 $ avec 32 GB et 1 TB, et 999,90 $ avec 64 GB et 1 TB. La disponibilité varie aussi : lors de ce contrôle, la page produit officielle affichait toutes les configurations comme épuisées — prévoyez un délai ou vérifiez chez des revendeurs tiers (prix et stocks non vérifiés ici).',
         items: [
           'Décidez barebone vs préassemblé : le barebone est moins cher si vous avez déjà des SO-DIMM DDR5 et un SSD NVMe.',
-          'Minisforum.com en direct est actuellement épuisé sur tous les SKU (vérifié en août 2026) — Amazon et Newegg ont proposé les mêmes configurations barebone et 32 Go, parfois à des prix différents, donc comparez avant d\'acheter.',
+          'La page officielle de Minisforum affichait tous les SKU comme épuisés (vérifié le 2026-10-25) — des revendeurs tiers comme Amazon ou Newegg peuvent lister les mêmes configurations à des prix différents, non vérifiés ici, donc comparez avant d\'acheter.',
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -1108,7 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Alternatives à considérer',
         content: '**Si le UM890 Pro n\'est pas le bon choix, celles-ci l\'encadrent en prix et en évolutivité.**',
         items: [
-          '[Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — le choix rapport qualité-prix avec des performances iGPU similaires pour moins cher, sans OCuLink ni double LAN',
+          '[Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — le choix rapport qualité-prix avec des performances iGPU similaires, sans OCuLink ni double LAN',
           '[GEEKOM A9 Max](/fr/smart-home/geekom-a9-max-local-ai-review) — box premium avec plafond RAM de 128 GB et Wi-Fi 7',
           '[Beelink EQ14](/fr/smart-home/beelink-eq14-local-ai-review) — box Intel N150 économique pour Home Assistant plus un petit modèle',
           '[GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — autre option N150 économique avec RAM évolutive',
@@ -1146,9 +1146,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Test Minisforum UM890 Pro (2026) : serveur IA local',
       reviewBody:
-        'Le Minisforum UM890 Pro est un mini-PC Ryzen 9 8945HS doté d\'un iGPU Radeon 780M, jusqu\'à 96 GB DDR5 et d\'un port OCuLink pour un GPU externe. Il fait tourner Home Assistant plus un LLM local 7B et constitue la box évolutive de montée en gamme, à partir d\'environ 489 € en barebone (août 2026).',
+        'Le Minisforum UM890 Pro est un mini-PC Ryzen 9 8945HS doté d\'un iGPU Radeon 780M, jusqu\'à 96 GB DDR5 et d\'un port OCuLink pour un GPU externe. Il fait tourner Home Assistant plus un LLM local 7B et constitue la box évolutive de montée en gamme, à partir de 439,90 $ en barebone (prix catalogue du magasin officiel en USD).',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1174,8 +1174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-24',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -1183,11 +1183,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     title: 'Análisis Minisforum UM890 Pro (2026): servidor de IA local',
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-es.webp',
-    seoTitle: 'Análisis Minisforum UM890 Pro 2026: specs oficiales y precio',
+    seoTitle: 'Minisforum UM890 Pro 2026: specs oficiales y precio',
     intro:
-      'El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5) es el mini PC versátil de gama superior para un hogar inteligente con IA local. Desde unos €489 en versión barebones hasta €649 con 32 GB (agosto de 2026, variable), iguala a un Beelink SER8 en el modelo local pero añade dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink para una GPU externa. Este análisis verifica sus especificaciones, fija expectativas honestas sobre la velocidad del LLM local y explica quién debería pagar el sobrecoste frente a un SER8.',
+      'El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5) es el mini PC versátil de gama superior para un hogar inteligente con IA local. Con precios de lista de la tienda oficial desde $439.90 en versión barebones hasta $823.90 con 32 GB y 1 TB (precios de EE. UU. en USD, comprobado el 2026-10-25; los precios en tu país pueden variar según impuestos locales), iguala a un Beelink SER8 en el modelo local pero añade dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink para una GPU externa. Este análisis verifica sus especificaciones, fija expectativas honestas sobre la velocidad del LLM local y explica quién debería pagar el sobrecoste frente a un SER8.',
     metaDescription:
-      'Specs oficiales Minisforum UM890 Pro 2026: Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5, eGPU OCuLink, dos 2.5GbE. Ejecuta Home Assistant + un LLM local 7B.',
+      'Specs oficiales Minisforum UM890 Pro 2026: Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5, eGPU OCuLink, dos 2.5GbE. Para Home Assistant + LLM local 7B.',
     twitterDescription:
       'Minisforum UM890 Pro (2026): Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5, OCuLink para una GPU externa, dos 2.5GbE. El servidor de IA local ampliable — aquí el desglose.',
     readTime: '7 min de lectura',
@@ -1202,20 +1202,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs mini pc oculink',
     ],
     leadAnswerBlock:
-      '**El Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5) ejecuta Home Assistant más un LLM local 7B como un Beelink SER8, pero añade dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink para una GPU externa — desde unos €489 en barebones hasta €649 con 32 GB (agosto de 2026, variable).** Cómpralo si quieres un servidor doméstico ampliable con una vía real hacia una inferencia más rápida de modelos grandes.',
+      '**El Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5) ejecuta Home Assistant más un LLM local 7B como un Beelink SER8, pero añade dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink para una GPU externa — desde $439.90 en barebones hasta $823.90 con 32 GB y 1 TB (precio de lista de la tienda oficial en USD, comprobado el 2026-10-25; agotado en la página oficial).** Cómpralo si quieres un servidor doméstico ampliable con una vía real hacia una inferencia más rápida de modelos grandes.',
     quickAnswerTop: {
       es: {
         question: '¿Es bueno el Minisforum UM890 Pro para IA local y Home Assistant?',
         answer:
-          'Sí — es la opción ampliable de gama superior. El Ryzen 9 8945HS (8 núcleos/16 hilos), la iGPU Radeon 780M y hasta 96 GB de DDR5 ejecutan Home Assistant, Ollama, Whisper y Frigate a la vez; un modelo 7B va cómodo y 13B–14B caben con más RAM. Sus diferenciadores son dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink que conecta una GPU externa para una inferencia de modelos grandes realmente rápida. Desde unos €489 en barebones hasta €649 con 32 GB (agosto de 2026, variable), cuesta algo más que un Beelink SER8 pero añade ampliación real.',
+          'Sí — es la opción ampliable de gama superior. El Ryzen 9 8945HS (8 núcleos/16 hilos), la iGPU Radeon 780M y hasta 96 GB de DDR5 ejecutan Home Assistant, Ollama, Whisper y Frigate a la vez; un modelo 7B va cómodo y 13B–14B caben con más RAM. Sus diferenciadores son dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink que conecta una GPU externa para una inferencia de modelos grandes realmente rápida. Los precios de lista de la tienda oficial van desde $439.90 en barebones hasta $823.90 con 32 GB y 1 TB (comprobado el 2026-10-25, agotado en la página oficial); el Beelink SER8 figura allí a $799 con 24 GB y 1 TB, así que las configuraciones difieren, pero el UM890 Pro añade ampliación real.',
         bullets: [
           'CPU: Ryzen 9 8945HS — 8 núcleos / 16 hilos, Radeon 780M (12 CU, RDNA 3)',
           'RAM: DDR5-5600 doble canal, dos SO-DIMM ampliables por el usuario, hasta 96 GB',
           'LLM local (estimado a partir de las specs): 7B cómodo; 13B–14B con más RAM; eGPU OCuLink para modelos grandes rápidos',
           'Red/ampliación: dos 2.5GbE, Wi-Fi 6E, 2× USB4, puerto eGPU OCuLink',
-          'Precio ~€489 barebones / ~€649 con 32 GB (agosto de 2026, variable) — gama superior ampliable',
+          'Precio de lista de la tienda oficial: $439.90 barebones / $823.90 con 32 GB + 1 TB (agotado en la última comprobación) — gama superior ampliable',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quieres empezar con un LLM local 7B en Home Assistant y ampliar más adelante a una inferencia rápida de 13B–30B con una GPU externa',
           'Necesitas más de un enlace de red (dos 2.5GbE o Wi-Fi 6E) para un servidor doméstico fiable',
           'Valoras una vía ampliable por el usuario — la RAM y el almacenamiento se cambian con facilidad',
-          'El puerto eGPU OCuLink vale el sobrecoste de 150–200 € frente a un Beelink SER8',
+          'El puerto eGPU OCuLink vale el sobrecoste frente a un Beelink SER8',
           '**Pasa del UM890 Pro si:**',
           'Solo vas a ejecutar un modelo 7B y nunca planeas una GPU externa — un Beelink SER8 ahorra dinero con el mismo rendimiento de iGPU',
           'Necesitas una caja realmente compacta — los 67 mm de altura son más voluminosos que la mayoría de mini PCs',
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS: 8 núcleos/16 hilos, iGPU Radeon 780M, hasta 96 GB DDR5 en dos SO-DIMM ampliables',
           'Diferenciadores frente a un [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review): dos 2.5GbE, Wi-Fi 6E y un puerto eGPU OCuLink',
           'OCuLink ofrece una vía real hacia una inferencia rápida de modelos grandes con una GPU externa',
-          'Desde ~€489 barebones hasta ~€649 con 32 GB — la gama superior ampliable',
+          'Precio de lista de la tienda oficial desde $439.90 barebones hasta $823.90 con 32 GB + 1 TB — la gama superior ampliable',
           'Fabricado en China — incluye las medidas de importación de EE. UU./UE de 2026 en el coste final (ver nota arancelaria)',
         ],
       },
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Especificación': 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W base, configurable hasta ~70 W' },
           { 'Especificación': 'Dimensiones', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { 'Especificación': 'SO', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro en las SKU preconfiguradas (Linux/Proxmox compatible)' },
-          { 'Especificación': 'Precio (indicativo)', 'Minisforum UM890 Pro (8945HS)': '~€489 barebones / ~€649 con 32 GB (agosto de 2026 — variable, consulta el precio actual)' },
+          { 'Especificación': 'Precio (indicativo)', 'Minisforum UM890 Pro (8945HS)': 'Lista: $439.90 barebones / $823.90 (32 GB+1 TB) / $999.90 (64 GB+1 TB); agotado en la última comprobación' },
         ],
         items: [
           'El puerto OCuLink (PCIe 4.0 ×4, ~64 Gbps) conecta un dock de GPU externa — una vía más rápida que USB4/Thunderbolt para una GPU dedicada.',
@@ -1308,37 +1308,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichConfig: {
         id: 'which-config',
         title: '¿Qué configuración elegir?',
-        content: 'El UM890 Pro se vende en varias variantes. Aquí te mostramos cómo elegir según tu carga de trabajo. **Todos los precios de abajo son estimaciones de agosto de 2026** — consulta al minorista para los precios actuales.',
-        columns: ['Configuración', 'Ideal para', 'Precio estimado', 'Modelo máx recomendado'],
+        content: 'El UM890 Pro se vende en varias variantes. Aquí te mostramos cómo elegir según tu carga de trabajo. **Los precios de abajo son precios de lista de la tienda oficial en USD (comprobado el 2026-10-25; los precios en tu país pueden variar según impuestos locales)** — consulta al minorista para los precios actuales.',
+        columns: ['Configuración', 'Ideal para', 'Precio de lista', 'Modelo máx recomendado'],
         rows: [
           {
             Configuración: 'Barebone (sin RAM/SSD)',
-            'Ideal para': 'Ya tienes SO-DIMM DDR5 y SSD NVMe; ahorras 50–100 € vs versiones preconfiguradas',
-            'Precio estimado': '~489 €',
+            'Ideal para': 'Ya tienes SO-DIMM DDR5 y SSD NVMe; precio de lista más bajo de las SKU oficiales',
+            'Precio de lista': '$439.90',
             'Modelo máx recomendado': '7B (con 32 GB RAM añadida)',
           },
           {
             Configuración: '32 GB DDR5 + 1 TB SSD',
             'Ideal para': 'Nivel inicial: Home Assistant, modelo local 7B, Whisper',
-            'Precio estimado': '~649 €',
+            'Precio de lista': '$823.90',
             'Modelo máx recomendado': '7B cómodo',
           },
           {
             Configuración: '64 GB DDR5 + 1 TB SSD',
             'Ideal para': 'Escalada: 13B–14B más seguro, Frigate + IA, Whisper concurrente',
-            'Precio estimado': '~799 €',
+            'Precio de lista': '$999.90',
             'Modelo máx recomendado': '13B–14B cómodo',
           },
           {
             Configuración: '96 GB DDR5 + 2 TB SSD',
             'Ideal para': 'Máxima potencia: 30B a bajo rendimiento, múltiples modelos concurrentes, OCuLink GPU listo',
-            'Precio estimado': '~1.099 €',
+            'Precio de lista': 'Consulta la oferta actual',
             'Modelo máx recomendado': '30B Q4 o 13B×2 concurrentes',
           },
         ],
         items: [
           '**Estimado a partir de especificaciones, no medido.** Todas las combinaciones RAM/modelo asumen Ollama con cuantización Q4_K_M.',
-          'Los precios cambian cada semana; consulta al minorista antes de comprar. Estos son snapshots de agosto 2026.',
+          'Los precios cambian cada semana; consulta al minorista antes de comprar. Estas cifras son precios de lista de la tienda oficial en USD (comprobado el 2026-10-25); una SKU de 96 GB + 2 TB no figura en la página oficial, consulta la oferta actual.',
           'La velocidad del SSD importa menos para LLM locales que para el arranque del OS; una SSD SATA funciona, NVMe es mejor.',
         ],
         affiliateLinks: [
@@ -1396,15 +1396,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Aspecto: 'Precio (barebones)',
-            'UM890 Pro': '~489 €',
-            SER8: '~449 €',
+            'UM890 Pro': '$439.90',
+            SER8: 'Consulta la oferta actual',
             Ganador: 'Empate / verifica el precio actual',
           },
           {
             Aspecto: 'Precio (32 GB configurado)',
-            'UM890 Pro': '~649 €',
-            SER8: '~649 €',
-            Ganador: 'Empate',
+            'UM890 Pro': '$823.90',
+            SER8: 'Consulta la oferta actual (24 GB+1 TB: $799)',
+            Ganador: 'Consulta la oferta actual',
           },
           {
             Aspecto: 'Mejor para',
@@ -1441,10 +1441,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quién no debería comprarlo',
         content: '**El UM890 Pro no es para todos.** Si te identificas con alguno de los perfiles de abajo, un modelo más barato podría funcionar.',
         items: [
-          'Solo ejecutarás un modelo 7B para siempre — el SER8 ahorra 150–300 € para el mismo rendimiento iGPU.',
+          'Solo ejecutarás un modelo 7B para siempre — el SER8 ofrece el mismo rendimiento iGPU sin pagar la ampliación.',
           'Tu espacio es limitado — sus 67 mm de alto lo hacen menos compacto que un Beelink.',
           'Tu red no usa fibra — un único enlace Gigabit te basta; pagar por dual 2,5GbE no tiene sentido.',
-          'No tienes 800+ € para la escalada a 96 GB — el barebone + SO-DIMM barato va bien, pero sino, las cajas N150 económicas (Beelink EQ14) cuestan mucho menos.',
+          'No quieres pagar la escalada a 96 GB — el barebone + SO-DIMM barato va bien, pero sino, las cajas N150 económicas (Beelink EQ14) cuestan mucho menos.',
           'Quieres una caja con GPU integrada ya — OCuLink es una vía de mejora, no una GPU embebida. Para eso, mira el GEEKOM A9 Max (iGPU similar, límite RAM 128 GB, sin OCuLink).',
         ],
       },
@@ -1475,17 +1475,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EE. UU.: los aranceles de la Sección 301 sobre la electrónica china siguen vigentes en 2026; los aranceles «IEEPA» separados de 2025 fueron anulados por el Tribunal Supremo en febrero de 2026 y sustituidos por un arancel temporal y limitado de la Sección 122. La exención «de minimis» libre de aranceles por debajo de 800 $ para importaciones directas también terminó.',
           'UE (afecta a DE/FR): no hay un arancel general de la UE sobre los mini PC terminados, pero desde agosto de 2026 se eliminó el umbral libre de aranceles de 150 € para paquetes directos de bajo valor desde China y se añadió una pequeña tasa de gestión por paquete.',
           'Supuesto (tendencia macro, no un dato por producto): la capacidad de exportación china redirigida ha mantenido alta la disponibilidad de estas marcas en la UE y EE. UU., lo que respalda en general precios competitivos.',
-          'Efecto neto: verifica el precio actual en la tienda antes de comprar — las cifras aquí son indicativas y con fecha de agosto de 2026.',
+          'Efecto neto: verifica el precio actual en la tienda antes de comprar — las cifras aquí son precios de lista de la tienda oficial en USD (comprobado el 2026-10-25) e indicativas.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Dónde comprar y precio actual',
         content:
-          '**Los precios cambian de una semana a otra, así que consulta el precio en vivo en lugar de fiarte de una cifra fija.** En agosto de 2026, el UM890 Pro va desde unos €489 en barebones hasta €649 con 32 GB y €729 con 64 GB. La disponibilidad también varía: en la última comprobación para este análisis (agosto de 2026), Minisforum.com mostraba todas las configuraciones como agotadas en sus tiendas de EE. UU., Reino Unido, UE y Japón — cuenta con algo de espera o revisa Amazon/Newegg.',
+          '**Los precios cambian de una semana a otra, así que consulta el precio en vivo en lugar de fiarte de una cifra fija.** El 2026-10-25, la tienda oficial (precios de EE. UU. en USD) lista el UM890 Pro desde $439.90 en barebones hasta $823.90 con 32 GB y 1 TB, y $999.90 con 64 GB y 1 TB. La disponibilidad también varía: en esa comprobación, la página oficial del producto mostraba todas las configuraciones como agotadas — cuenta con algo de espera o revisa vendedores externos (sus precios y existencias no se verificaron aquí).',
         items: [
           'Decide barebones vs preconfigurado: barebones es más barato si ya tienes SO-DIMM DDR5 y un SSD NVMe.',
-          'Minisforum.com directo está agotado en todas las SKU ahora mismo (comprobado en agosto de 2026) — Amazon y Newegg han tenido las mismas configuraciones barebones y de 32 GB, a veces a precios distintos, así que compara antes de comprar.',
+          'La página oficial de Minisforum mostraba todas las SKU agotadas (comprobado el 2026-10-25) — vendedores externos como Amazon o Newegg pueden listar las mismas configuraciones a precios distintos, no verificados aquí, así que compara antes de comprar.',
         ],
         affiliateLinks: [
           { label: 'Consultar precio actual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -1496,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Alternativas a considerar',
         content: '**Si el UM890 Pro no es lo tuyo, estas lo enmarcan en precio y ampliación.**',
         items: [
-          '[Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — la opción de valor con un rendimiento iGPU similar por menos, sin OCuLink ni LAN dual',
+          '[Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — la opción de valor con un rendimiento iGPU similar, sin OCuLink ni LAN dual',
           '[GEEKOM A9 Max](/es/smart-home/geekom-a9-max-local-ai-review) — caja premium con margen, techo de 128 GB de RAM y Wi-Fi 7',
           '[Beelink EQ14](/es/smart-home/beelink-eq14-local-ai-review) — caja Intel N150 económica para Home Assistant más un modelo pequeño',
           '[GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — otra opción N150 económica con RAM ampliable',
@@ -1534,9 +1534,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análisis Minisforum UM890 Pro (2026): servidor de IA local',
       reviewBody:
-        'El Minisforum UM890 Pro es un mini PC Ryzen 9 8945HS con iGPU Radeon 780M, hasta 96 GB DDR5 y un puerto OCuLink para una GPU externa. Ejecuta Home Assistant más un LLM local 7B y es la caja ampliable de gama superior, desde unos €489 en barebones (agosto de 2026).',
+        'El Minisforum UM890 Pro es un mini PC Ryzen 9 8945HS con iGPU Radeon 780M, hasta 96 GB DDR5 y un puerto OCuLink para una GPU externa. Ejecuta Home Assistant más un LLM local 7B y es la caja ampliable de gama superior, desde $439.90 en barebones (precio de lista de la tienda oficial en USD).',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1562,8 +1562,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-24',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -1571,11 +1571,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     title: 'Minisforum UM890 Pro レビュー（2026）: ローカルAIホームサーバー',
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ja.webp',
-    seoTitle: 'Minisforum UM890 Pro公式スペック・価格レビュー2026',
+    seoTitle: 'Minisforum UM890 Pro公式仕様・価格2026',
     intro:
-      'Minisforum UM890 Pro（AMD Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5）は、ローカルAIスマートホーム向けの多用途なワンランク上のミニPCです。ベアボーンで約¥69,800、32GB版で約¥94,800（2026年8月時点、変動あり）で、ローカルモデルの性能はBeelink SER8と同等ながら、2基の2.5GbE、Wi-Fi 6E、外付けGPU用のOCuLinkポートを追加します。このレビューでは仕様を検証し、ローカルLLMの速度について現実的な期待値を示し、SER8より高い価格を払う価値がある人を説明します。',
+      'Minisforum UM890 Pro（AMD Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5）は、ローカルAIスマートホーム向けの多用途なワンランク上のミニPCです。公式ストアの定価（米国USD、2026-10-25確認、日本での価格は異なります）はベアボーンで$439.90、32GB＋1TB版で$823.90で、ローカルモデルの性能はBeelink SER8と同等ながら、2基の2.5GbE、Wi-Fi 6E、外付けGPU用のOCuLinkポートを追加します。このレビューでは仕様を検証し、ローカルLLMの速度について現実的な期待値を示し、SER8より高い価格を払う価値がある人を説明します。',
     metaDescription:
-      'Minisforum UM890 Pro公式スペック2026：Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5、OCuLink eGPU、2基の2.5GbE。Home Assistant + ローカル7B LLMを実行。',
+      'Minisforum UM890 Pro公式スペック2026：Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5、OCuLink eGPU、2.5GbE×2。HA＋ローカル7B LLM。',
     twitterDescription:
       'Minisforum UM890 Pro（2026）: Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5、外付けGPU用OCuLink、2基の2.5GbE。拡張可能なローカルAIホームサーバーを詳しく解説します。',
     readTime: '7分で読める',
@@ -1590,20 +1590,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs ミニpc oculink',
     ],
     leadAnswerBlock:
-      '**Minisforum UM890 Pro（Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5）は、Beelink SER8と同様にHome Assistantとローカル7B LLMを実行しつつ、2基の2.5GbE、Wi-Fi 6E、外付けGPU用のOCuLinkポートを追加します — ベアボーンで約¥69,800、32GB版で約¥94,800（2026年8月時点、変動あり）。** 大規模モデルの推論を高速化する現実的な道筋を持つ拡張可能なホームサーバーが欲しいなら、これを選びましょう。',
+      '**Minisforum UM890 Pro（Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5）は、Beelink SER8と同様にHome Assistantとローカル7B LLMを実行しつつ、2基の2.5GbE、Wi-Fi 6E、外付けGPU用のOCuLinkポートを追加します — 公式ストアの定価はベアボーンで$439.90、32GB＋1TB版で$823.90（米国USD、2026-10-25確認、公式ページでは在庫切れ）。** 大規模モデルの推論を高速化する現実的な道筋を持つ拡張可能なホームサーバーが欲しいなら、これを選びましょう。',
     quickAnswerTop: {
       ja: {
         question: 'Minisforum UM890 ProはローカルAIとHome Assistantに向いていますか？',
         answer:
-          'はい — 拡張可能なワンランク上の選択肢です。Ryzen 9 8945HS（8コア/16スレッド）、Radeon 780M iGPU、最大96 GBのDDR5が、Home Assistant、Ollama、Whisper、Frigateを同時に実行します。7Bモデルは快適で、RAMを増やせば13B–14Bも収まります。差別化点は、2基の2.5GbE、Wi-Fi 6E、そして外付けGPUを接続して大規模モデルの推論を本当に高速化するOCuLinkポートです。ベアボーンで約¥69,800、32GB版で約¥94,800（2026年8月時点、変動あり）で、Beelink SER8より少し高いものの、実際の拡張性を備えています。',
+          'はい — 拡張可能なワンランク上の選択肢です。Ryzen 9 8945HS（8コア/16スレッド）、Radeon 780M iGPU、最大96 GBのDDR5が、Home Assistant、Ollama、Whisper、Frigateを同時に実行します。7Bモデルは快適で、RAMを増やせば13B–14Bも収まります。差別化点は、2基の2.5GbE、Wi-Fi 6E、そして外付けGPUを接続して大規模モデルの推論を本当に高速化するOCuLinkポートです。公式ストアの定価はベアボーンで$439.90、32GB＋1TB版で$823.90です（2026-10-25確認、公式ページでは在庫切れ）。Beelink SER8は同ストアで24GB＋1TBが$799と構成が異なりますが、UM890 Proは実際の拡張性を備えています。',
         bullets: [
           'CPU: Ryzen 9 8945HS — 8コア / 16スレッド、Radeon 780M（12 CU、RDNA 3）',
           'RAM: DDR5-5600 デュアルチャネル、ユーザー増設可能なSO-DIMM 2枚、最大96 GB',
           'ローカルLLM（仕様から推定）: 7Bは快適、RAM増設で13B–14B、大規模モデルの高速化にはOCuLink eGPU',
           'ネットワーク/拡張: 2基の2.5GbE、Wi-Fi 6E、2× USB4、OCuLink eGPUポート',
-          '価格 約¥69,800（ベアボーン）/ 約¥94,800（32GB版）（2026年8月時点、変動あり） — 拡張可能なワンランク上',
+          '公式ストア定価: $439.90（ベアボーン）/ $823.90（32GB＋1TB版）（前回確認時は在庫切れ） — 拡張可能なワンランク上',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home AssistantでまずローカルLLM 7Bから始め、後で外付けGPUを使って13B–30Bの高速推論にアップグレードしたい',
           '信頼性の高いホームサーバーのために、複数のネットワーク接続（デュアル2.5GbEまたはWi-Fi 6E）が必要',
           'ユーザーがアップグレードできる構成を重視する — RAMもストレージも簡単に交換できる',
-          'OCuLink eGPUポートは、Beelink SER8との価格差（150–200ドル相当）に見合う価値がある',
+          'OCuLink eGPUポートは、Beelink SER8との価格差に見合う価値がある',
           '**次に当てはまるならUM890 Proは見送りましょう：**',
           '7Bモデルしか使わず、外付けGPUを導入する予定がない — 同等のiGPU性能ならBeelink SER8の方が安く済む',
           '本当にコンパクトな筐体が必要 — 高さ67mmはほとんどのミニPCより大きい',
@@ -1653,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS: 8コア/16スレッド、Radeon 780M iGPU、増設可能なSO-DIMM 2枚で最大96 GB DDR5',
           '[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review)との差別化点: 2基の2.5GbE、Wi-Fi 6E、OCuLink eGPUポート',
           'OCuLinkは、外付けGPUによる大規模モデルの高速推論への現実的な道筋を提供します',
-          '約¥69,800（ベアボーン）から約¥94,800（32GB版） — 拡張可能なワンランク上',
+          '公式ストア定価 $439.90（ベアボーン）から $823.90（32GB＋1TB版） — 拡張可能なワンランク上',
           '中国製 — 2026年の米国/EUの輸入措置を最終価格に織り込みましょう（関税の項を参照）',
         ],
       },
@@ -1686,42 +1686,42 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '仕様': 'TDP', 'Minisforum UM890 Pro (8945HS)': '基準45 W、約70 Wまで設定可能' },
           { '仕様': '寸法', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { '仕様': 'OS', 'Minisforum UM890 Pro (8945HS)': 'プリインストール済みSKUではWindows 11 Pro（Linux/Proxmox対応）' },
-          { '仕様': '価格（目安）', 'Minisforum UM890 Pro (8945HS)': '約¥69,800（ベアボーン）/ 約¥94,800（32GB版）（2026年8月 — 変動あり、現在の価格を確認）' },
+          { '仕様': '価格（目安）', 'Minisforum UM890 Pro (8945HS)': '定価: $439.90（ベアボーン）/ $823.90（32GB＋1TB）/ $999.90（64GB＋1TB）、前回確認時は在庫切れ' },
         ],
       whichConfig: {
         id: 'which-config',
         title: 'どの構成を選ぶ?',
-        content: 'UM890 Proはいくつかのバリエーションで販売されています。ワークロードに応じて選ぶ方法を以下に示します。**以下のすべての価格は2026年8月の見積もりです** — 現在の価格についてはリテーラーに確認してください。',
-        columns: ['構成', '理想的', '見積価格', '最大推奨モデル'],
+        content: 'UM890 Proはいくつかのバリエーションで販売されています。ワークロードに応じて選ぶ方法を以下に示します。**以下の価格は公式ストアの米国USD定価です（2026-10-25確認、日本での価格は異なります）** — 現在の価格についてはリテーラーに確認してください。',
+        columns: ['構成', '理想的', '公式定価', '最大推奨モデル'],
         rows: [
           {
             構成: 'Barebone(RAM/SSDなし)',
-            理想的: 'すでにDDR5 SO-DIMM と NVMe SSD を持っている場合は、事前構成版より50～100€節約できます',
-            見積価格: '~489€',
+            理想的: 'すでにDDR5 SO-DIMM と NVMe SSD を持っている場合は、公式SKUの中で定価が最も低い構成です',
+            公式定価: '$439.90',
             最大推奨モデル: '7B(32GB RAM追加)',
           },
           {
             構成: '32 GB DDR5 + 1 TB SSD',
             理想的: 'エントリーレベル: Home Assistant、ローカル7Bモデル、Whisper',
-            見積価格: '~649€',
+            公式定価: '$823.90',
             最大推奨モデル: '7B快適',
           },
           {
             構成: '64 GB DDR5 + 1 TB SSD',
             理想的: 'スケーリング: 13B～14Bより安全、Frigate + AI、Whisper並行',
-            見積価格: '~799€',
+            公式定価: '$999.90',
             最大推奨モデル: '13B～14B快適',
           },
           {
             構成: '96 GB DDR5 + 2 TB SSD',
             理想的: '最大パワー: 低スループット30B、複数並行モデル、OCuLink GPU対応',
-            見積価格: '~1.099€',
+            公式定価: '現在の掲載価格を確認',
             最大推奨モデル: '30B Q4または13B×2並行',
           },
         ],
         items: [
           '**仕様から推定、測定なし。** すべてのRAM/モデル組み合わせはQ4_K_M量子化でOllamaを想定します。',
-          '価格は毎週変わります。購入前にリテーラーに確認してください。これらは2026年8月のスナップショットです。',
+          '価格は毎週変わります。購入前にリテーラーに確認してください。これらの数値は公式ストアの米国USD定価です（2026-10-25確認）。96GB＋2TB構成は公式ページに掲載がないため、現在の掲載価格を確認してください。',
           'SSD速度はローカルLLMではOSブートよりも重要性が低い。SATA SSDで動作し、NVMeがより良い。',
         ],
         affiliateLinks: [
@@ -1761,15 +1761,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             側面: '価格(Barebone)',
-            'UM890 Pro': '~489€',
-            SER8: '~449€',
+            'UM890 Pro': '$439.90',
+            SER8: '現在の掲載価格を確認',
             勝者: 'タイ/現在の価格確認',
           },
           {
             側面: '価格(32GB構成)',
-            'UM890 Pro': '~649€',
-            SER8: '~649€',
-            勝者: 'タイ',
+            'UM890 Pro': '$823.90',
+            SER8: '現在の掲載価格を確認（24GB＋1TB: $799）',
+            勝者: '現在の掲載価格を確認',
           },
           {
             側面: '最適用途',
@@ -1829,10 +1829,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '購入すべきでない人',
         content: '**UM890 Proはすべての人向けではありません。** 以下のプロファイルのいずれかに該当する場合は、より安いモデルが機能する可能性があります。',
         items: [
-          'あなたは永遠に1つの7Bモデルだけを実行します — SER8は同じiGPUパフォーマンスで150～300€節約します。',
+          'あなたは永遠に1つの7Bモデルだけを実行します — SER8は拡張性にお金をかけずに同じiGPUパフォーマンスを得られます。',
           'スペースが限られています — 67mmの高さはBeelinkよりコンパクトではありません。',
           'ネットワークがファイバーを使用していません — 単一のギガビットリンクで十分。デュアル2.5GbEの支払いは意味がありません。',
-          '96GBスケーリングに€800+がない場合 — 安いベアボーン + SO-DIMMは大丈夫ですが、経済的なN150ボックス(Beelink EQ14)の方がはるかに安いです。',
+          '96GBへの拡張に費用をかけたくない場合 — 安いベアボーン + SO-DIMMは大丈夫ですが、経済的なN150ボックス(Beelink EQ14)の方がはるかに安いです。',
           '統合GPUボックスが最初から必要です — OCuLinkはアップグレードパスであり、統合GPUではありません。その場合、GEEKOM A9 Max(同じiGPU、128GBRAMリミット、OCuLinkなし)をご覧ください。',
         ],
       },
@@ -1863,17 +1863,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '米国: 中国製電子機器へのSection 301関税は2026年も有効です。2025年の別枠「IEEPA」関税は2026年2月に最高裁で無効とされ、暫定的で上限のあるSection 122関税に置き換えられました。直接輸入向けの800ドル未満の免税「デミニミス」枠も終了しました。',
           'EU（DE/FRに影響）: 完成品ミニPCへの広範なEU関税はありませんが、2026年8月から中国からの少額直送小包に対する150ユーロの免税枠が撤廃され、小包ごとの少額の取扱手数料が追加されました。',
           '前提（製品別の事実ではなくマクロ的傾向）: 転換された中国の輸出能力により、これらのブランドのEUと米国での入手性は高く保たれており、総じて競争力のある価格を支えています。',
-          '正味の影響: 購入前に販売店で現在の価格を確認してください — ここの数値は目安であり、2026年8月時点のものです。',
+          '正味の影響: 購入前に販売店で現在の価格を確認してください — ここの数値は公式ストアの米国USD定価（2026-10-25確認）に基づく目安です。',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: '購入先と現在の価格',
         content:
-          '**価格は週ごとに動くため、固定の数字を信じるのではなく、リアルタイムの価格を確認してください。** 2026年8月時点で、UM890 Proは約¥69,800（ベアボーン）から約¥94,800（32GB版）、約¥104,800（64GB版）です。在庫状況も変動します。本レビューの最終確認時点（2026年8月）では、Minisforum.comの米国・英国・EU・日本の各ストアですべての構成が在庫切れでした——余裕を持つか、Amazon／Neweggも確認してください。',
+          '**価格は週ごとに動くため、固定の数字を信じるのではなく、リアルタイムの価格を確認してください。** 2026-10-25時点で、公式ストア（米国USD価格）の定価はベアボーン$439.90、32GB＋1TB版$823.90、64GB＋1TB版$999.90です。在庫状況も変動します。この確認時点では、公式製品ページですべての構成が在庫切れでした——余裕を持つか、サードパーティ販売店（価格・在庫は本稿では未確認）も確認してください。',
         items: [
           'ベアボーンかプリインストール済みかを判断しましょう: DDR5 SO-DIMMとNVMe SSDを既に持っているなら、ベアボーンのほうが安く済みます。',
-          'Minisforum.com直販は現在全構成で在庫切れです（2026年8月確認）。AmazonやNeweggでは同じベアボーンおよび32GB構成が、時に異なる価格で扱われているため、購入前に比較してください。',
+          'Minisforum公式ページではすべての構成が在庫切れでした（2026-10-25確認）。AmazonやNeweggなどの販売店では同じ構成が異なる価格で扱われている場合があり（本稿では未確認）、購入前に比較してください。',
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '検討したい代替製品',
         content: '**UM890 Proが合わない場合、これらが価格と拡張性で前後を固めます。**',
         items: [
-          '[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — 同等のiGPU性能をより安く得られるコスパ重視の選択肢。OCuLinkとデュアルLANは非搭載',
+          '[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — 同等のiGPU性能を得られる選択肢。OCuLinkとデュアルLANは非搭載',
           '[GEEKOM A9 Max](/ja/smart-home/geekom-a9-max-local-ai-review) — 128 GBのRAM上限とWi-Fi 7を備えた余裕あるプレミアム機',
           '[Beelink EQ14](/ja/smart-home/beelink-eq14-local-ai-review) — Home Assistantと小型モデル向けの手頃なIntel N150機',
           '[GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — RAM増設可能なもう一つの手頃なN150機',
@@ -1922,9 +1922,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Minisforum UM890 Pro レビュー（2026）: ローカルAIホームサーバー',
       reviewBody:
-        'Minisforum UM890 Proは、Radeon 780M iGPU、最大96 GB DDR5、外付けGPU用のOCuLinkポートを備えたRyzen 9 8945HSのミニPCです。Home Assistantとローカル7B LLMを実行し、ベアボーン約¥69,800（2026年8月）からの拡張可能なワンランク上の機種です。',
+        'Minisforum UM890 Proは、Radeon 780M iGPU、最大96 GB DDR5、外付けGPU用のOCuLinkポートを備えたRyzen 9 8945HSのミニPCです。Home Assistantとローカル7B LLMを実行し、公式ストア定価でベアボーン$439.90（米国USD）からの拡張可能なワンランク上の機種です。',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1950,8 +1950,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-24',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -1959,11 +1959,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     title: 'Minisforum UM890 Pro 评测（2026）：本地 AI 家庭服务器',
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-zh.webp',
-    seoTitle: 'Minisforum UM890 Pro官方规格与价格评测2026',
+    seoTitle: 'Minisforum UM890 Pro官方规格与价格2026',
     intro:
-      'Minisforum UM890 Pro（AMD Ryzen 9 8945HS、Radeon 780M、最高 96 GB DDR5）是本地 AI 智能家居中多用途的进阶迷你主机。准系统约 $439，32 GB 版约 $649（2026 年 8 月，价格波动），本地模型性能与 Beelink SER8 相当，但增加了双 2.5GbE、Wi-Fi 6E 以及用于外接 GPU 的 OCuLink 接口。本评测核实其规格，对本地 LLM 速度给出务实的预期，并说明谁值得为它比 SER8 多付这笔溢价。',
+      'Minisforum UM890 Pro（AMD Ryzen 9 8945HS、Radeon 780M、最高 96 GB DDR5）是本地 AI 智能家居中多用途的进阶迷你主机。官方商店标价（美国美元价格，2026-10-25 核实，各地价格不同）准系统 $439.90，32 GB + 1 TB 版 $823.90，本地模型性能与 Beelink SER8 相当，但增加了双 2.5GbE、Wi-Fi 6E 以及用于外接 GPU 的 OCuLink 接口。本评测核实其规格，对本地 LLM 速度给出务实的预期，并说明谁值得为它比 SER8 多付这笔溢价。',
     metaDescription:
-      'Minisforum UM890 Pro官方规格2026：Ryzen 9 8945HS、Radeon 780M、最高96 GB DDR5、OCuLink eGPU、双2.5GbE。运行Home Assistant + 本地7B LLM。',
+      'Minisforum UM890 Pro官方规格2026：Ryzen 9 8945HS、Radeon 780M、最高96 GB DDR5、OCuLink eGPU、双2.5GbE。运行HA与本地7B LLM。',
     twitterDescription:
       'Minisforum UM890 Pro（2026）：Ryzen 9 8945HS、Radeon 780M、最高 96 GB DDR5、用于外接 GPU 的 OCuLink、双 2.5GbE。可扩展的本地 AI 家庭服务器——完整解析。',
     readTime: '阅读约7分钟',
@@ -1978,20 +1978,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs 迷你主机 oculink',
     ],
     leadAnswerBlock:
-      '**Minisforum UM890 Pro（Ryzen 9 8945HS、Radeon 780M、最高 96 GB DDR5）像 Beelink SER8 一样运行 Home Assistant 加本地 7B LLM，但增加了双 2.5GbE、Wi-Fi 6E 以及用于外接 GPU 的 OCuLink 接口——准系统约 $439，32 GB 版约 $649（2026 年 8 月，价格波动）。** 如果你想要一台可扩展、并有清晰路径实现更快大模型推理的家庭服务器，就选它。',
+      '**Minisforum UM890 Pro（Ryzen 9 8945HS、Radeon 780M、最高 96 GB DDR5）像 Beelink SER8 一样运行 Home Assistant 加本地 7B LLM，但增加了双 2.5GbE、Wi-Fi 6E 以及用于外接 GPU 的 OCuLink 接口——官方商店标价：准系统 $439.90，32 GB + 1 TB 版 $823.90（美国美元价格，2026-10-25 核实，官方页面显示缺货）。** 如果你想要一台可扩展、并有清晰路径实现更快大模型推理的家庭服务器，就选它。',
     quickAnswerTop: {
       zh: {
         question: 'Minisforum UM890 Pro 适合本地 AI 和 Home Assistant 吗？',
         answer:
-          '适合——它是可扩展的进阶之选。Ryzen 9 8945HS（8 核/16 线程）、Radeon 780M 核显以及最高 96 GB DDR5 可同时运行 Home Assistant、Ollama、Whisper 和 Frigate；7B 模型运行从容，增加内存后 13B–14B 也能容纳。它的差异化在于双 2.5GbE、Wi-Fi 6E 以及一个 OCuLink 接口，可接入外接 GPU 实现真正快速的大模型推理。准系统约 $439，32 GB 版约 $649（2026 年 8 月，价格波动），比 Beelink SER8 略贵，但带来真正的扩展能力。',
+          '适合——它是可扩展的进阶之选。Ryzen 9 8945HS（8 核/16 线程）、Radeon 780M 核显以及最高 96 GB DDR5 可同时运行 Home Assistant、Ollama、Whisper 和 Frigate；7B 模型运行从容，增加内存后 13B–14B 也能容纳。它的差异化在于双 2.5GbE、Wi-Fi 6E 以及一个 OCuLink 接口，可接入外接 GPU 实现真正快速的大模型推理。官方商店标价为准系统 $439.90、32 GB + 1 TB 版 $823.90（2026-10-25 核实，官方页面显示缺货）；Beelink SER8 在该商店标价 $799（24 GB + 1 TB），配置不同，但 UM890 Pro 带来真正的扩展能力。',
         bullets: [
           'CPU：Ryzen 9 8945HS — 8 核 / 16 线程，Radeon 780M（12 CU，RDNA 3）',
           '内存：DDR5-5600 双通道，两根用户可升级的 SO-DIMM，最高 96 GB',
           '本地 LLM（据规格估算）：7B 从容；增加内存后 13B–14B；OCuLink eGPU 用于快速大模型',
           '网络/扩展：双 2.5GbE、Wi-Fi 6E、2× USB4、OCuLink eGPU 接口',
-          '价格约 $439（准系统）/ 约 $649（32 GB 版）（2026 年 8 月，价格波动）——可扩展的进阶',
+          '官方商店标价：$439.90（准系统）/ $823.90（32 GB + 1 TB 版）（上次核实时缺货）——可扩展的进阶',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2021,7 +2021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '你想先在Home Assistant上运行本地7B模型，之后再用外接GPU升级到快速的13B–30B推理',
           '你需要不止一条网络链路（双2.5GbE或Wi-Fi 6E）来保证家庭服务器的可靠性',
           '你看重用户可升级的路径——内存和存储都很容易更换',
-          'OCuLink eGPU接口值得比Beelink SER8多付的150–200美元',
+          'OCuLink eGPU接口值得比Beelink SER8多付的费用',
           '**符合以下情况就跳过UM890 Pro：**',
           '你只运行7B模型，且从不打算加外接GPU——同等核显性能下Beelink SER8更省钱',
           '你需要真正紧凑的机箱——67mm的机身比大多数迷你主机更厚重',
@@ -2041,7 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS：8 核/16 线程，Radeon 780M 核显，两根可升级 SO-DIMM 最高 96 GB DDR5',
           '相较 [Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) 的差异化：双 2.5GbE、Wi-Fi 6E 以及 OCuLink eGPU 接口',
           'OCuLink 提供了通过外接 GPU 实现快速大模型推理的现实路径',
-          '约 $439（准系统）至约 $649（32 GB 版）——可扩展的进阶',
+          '官方商店标价 $439.90（准系统）至 $823.90（32 GB + 1 TB 版）——可扩展的进阶',
           '中国制造——将 2026 年美国/欧盟进口措施计入到手成本（见关税说明）',
         ],
       },
@@ -2079,37 +2079,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichConfig: {
         id: 'which-config',
         title: '选择哪种配置？',
-        content: 'UM890 Pro 有多种配置可选。以下是根据你的工作负载选择的方法。**下面的所有价格都是 2026 年 8 月的估算值** — 请向零售商咨询当前价格。',
-        columns: ['配置', '适合人群', '估算价格', '推荐最大模型'],
+        content: 'UM890 Pro 有多种配置可选。以下是根据你的工作负载选择的方法。**下面的价格是官方商店的美国美元标价（2026-10-25 核实，各地价格不同）** — 请向零售商咨询当前价格。',
+        columns: ['配置', '适合人群', '官方标价', '推荐最大模型'],
         rows: [
           {
             配置: '裸机(无 RAM/SSD)',
-            适合人群: '已有 DDR5 SO-DIMM 和 NVMe SSD；相比预配置版节省 50-100€',
-            估算价格: '~489€',
+            适合人群: '已有 DDR5 SO-DIMM 和 NVMe SSD；官方 SKU 中标价最低',
+            官方标价: '$439.90',
             推荐最大模型: '7B(加 32GB RAM)',
           },
           {
             配置: '32 GB DDR5 + 1 TB SSD',
             适合人群: '入门级：Home Assistant、本地 7B 模型、Whisper',
-            估算价格: '~649€',
+            官方标价: '$823.90',
             推荐最大模型: '7B 舒适',
           },
           {
             配置: '64 GB DDR5 + 1 TB SSD',
             适合人群: '升级版：13B-14B 更稳定、Frigate + AI、并发 Whisper',
-            估算价格: '~799€',
+            官方标价: '$999.90',
             推荐最大模型: '13B-14B 舒适',
           },
           {
             配置: '96 GB DDR5 + 2 TB SSD',
             适合人群: '最大功率：低吞吐量 30B、多个并发模型、OCuLink GPU 就绪',
-            估算价格: '~1.099€',
+            官方标价: '请查看当前报价',
             推荐最大模型: '30B Q4 或 13B×2 并发',
           },
         ],
         items: [
           '**根据规格估算，未测量。** 所有 RAM/模型组合假设 Ollama 使用 Q4_K_M 量化。',
-          '价格每周变化；购买前请咨询零售商。这些是 2026 年 8 月的快照。',
+          '价格每周变化；购买前请咨询零售商。这些数字是官方商店的美国美元标价（2026-10-25 核实）；官方页面未列出 96 GB + 2 TB 配置，请查看当前报价。',
           'SSD 速度对本地 LLM 的重要性不如对 OS 启动的重要性大；SATA SSD 可以工作，NVMe 更好。',
         ],
         affiliateLinks: [
@@ -2148,15 +2148,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             方面: '价格(裸机)',
-            'UM890 Pro': '~489€',
-            SER8: '~449€',
+            'UM890 Pro': '$439.90',
+            SER8: '请查看当前报价',
             获胜者: '平手/检查当前价格',
           },
           {
             方面: '价格(32GB 配置)',
-            'UM890 Pro': '~649€',
-            SER8: '~649€',
-            获胜者: '平手',
+            'UM890 Pro': '$823.90',
+            SER8: '请查看当前报价（24 GB + 1 TB：$799）',
+            获胜者: '请查看当前报价',
           },
           {
             方面: '最适合',
@@ -2209,10 +2209,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '不应该购买的人',
         content: '**UM890 Pro 并非适合所有人。** 如果你符合以下任何一个条件，更便宜的型号可能就够了。',
         items: [
-          '你永远只会运行一个 7B 模型 — SER8 以相同的 iGPU 性能节省 150-300€。',
+          '你永远只会运行一个 7B 模型 — SER8 无需为扩展能力付费，iGPU 性能相同。',
           '你的空间有限 — 其 67 毫米的高度不如 Beelink 紧凑。',
           '你的网络不使用光纤 — 单个千兆链路就足够了；为双 2.5GbE 支付费用没有意义。',
-          '你没有 800€+ 用于升级到 96GB — 便宜的裸机 + SO-DIMM 可以，但否则经济型 N150 盒(Beelink EQ14)便宜得多。',
+          '你不愿为升级到 96GB 付费 — 便宜的裸机 + SO-DIMM 可以，但否则经济型 N150 盒(Beelink EQ14)便宜得多。',
           '你需要集成 GPU 的盒子 — OCuLink 是升级路径，不是集成 GPU。为此，请看 GEEKOM A9 Max(相同 iGPU、128GB RAM 限制、无 OCuLink)。',
         ],
       },
@@ -2243,17 +2243,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '美国：对中国电子产品的 301 条款关税在 2026 年仍然有效；另行的 2025 年「IEEPA」关税已于 2026 年 2 月被最高法院推翻，并被临时且设上限的 122 条款关税取代。针对直邮进口低于 800 美元的免税「小额豁免（de minimis）」也已终止。',
           '欧盟（影响 DE/FR）：对成品迷你主机没有普遍的欧盟关税，但自 2026 年 8 月起，中国直邮低价值包裹 150 欧元的免税门槛被取消，并增加了每件包裹的少量处理费。',
           '假设（宏观趋势，而非逐一产品的事实）：转向的中国出口产能使这些品牌在欧盟和美国保持较高供应，总体上支撑了具有竞争力的价格。',
-          '净效果：购买前请在零售商处核实当前价格——这里的数字为参考，并标注为 2026 年 8 月。',
+          '净效果：购买前请在零售商处核实当前价格——这里的数字为官方商店的美元标价（2026-10-25 核实），仅供参考。',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: '购买渠道与当前价格',
         content:
-          '**价格逐周变动，因此请查看实时价格，而不要相信一个固定数字。** 截至 2026 年 8 月，UM890 Pro 约 $439（准系统）至 $649（32 GB 版）以及 $729（64 GB 版）。库存情况同样会波动：本评测最后一次核实时（2026 年 8 月），Minisforum.com 在美国、英国、欧盟和日本的官方商店中，全部配置均显示缺货——请留出等待时间，或查看 Amazon、Newegg 等渠道。',
+          '**价格逐周变动，因此请查看实时价格，而不要相信一个固定数字。** 截至 2026-10-25，官方商店（美国美元价格）标价为准系统 $439.90、32 GB + 1 TB 版 $823.90、64 GB + 1 TB 版 $999.90。库存情况同样会波动：本次核实时，官方产品页面显示全部配置缺货——请留出等待时间，或查看第三方渠道（其价格与库存本文未核实）。',
         items: [
           '决定准系统还是预装：如果你已有 DDR5 SO-DIMM 和 NVMe SSD，准系统更便宜。',
-          'Minisforum.com 官方直销目前所有型号均缺货（2026 年 8 月核实）——Amazon 和 Newegg 曾提供相同的准系统及 32 GB 配置，价格有时不同，购买前请先比价。',
+          'Minisforum 官方页面显示所有型号均缺货（2026-10-25 核实）——Amazon、Newegg 等渠道可能以不同价格列出相同配置（本文未核实），购买前请先比价。',
         ],
         affiliateLinks: [
           { label: '查看当前价格 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -2264,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '可考虑的替代方案',
         content: '**如果 UM890 Pro 不合适，这些在价格与扩展性上前后包夹它。**',
         items: [
-          '[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 以更低价格提供相近核显性能的性价比之选，但没有 OCuLink 和双 LAN',
+          '[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 提供相近核显性能的选择，但没有 OCuLink 和双 LAN',
           '[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review) — 拥有 128 GB 内存上限和 Wi-Fi 7 的高端余量机型',
           '[Beelink EQ14](/zh/smart-home/beelink-eq14-local-ai-review) — 面向 Home Assistant 加小模型的低价 Intel N150 机型',
           '[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 另一款内存可升级的低价 N150 选择',
@@ -2302,9 +2302,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Minisforum UM890 Pro 评测（2026）：本地 AI 家庭服务器',
       reviewBody:
-        'Minisforum UM890 Pro 是一台 Ryzen 9 8945HS 迷你主机，配备 Radeon 780M 核显、最高 96 GB DDR5 以及用于外接 GPU 的 OCuLink 接口。它运行 Home Assistant 加本地 7B LLM，是可扩展的进阶机型，准系统约 $439 起（2026 年 8 月）。',
+        'Minisforum UM890 Pro 是一台 Ryzen 9 8945HS 迷你主机，配备 Radeon 780M 核显、最高 96 GB DDR5 以及用于外接 GPU 的 OCuLink 接口。它运行 Home Assistant 加本地 7B LLM，是可扩展的进阶机型，官方商店标价准系统 $439.90 起（美国美元价格）。',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2330,8 +2330,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-24',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -2341,9 +2341,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ko.webp',
     seoTitle: 'Minisforum UM890 Pro 공식 사양·가격 리뷰 2026',
     intro:
-      'Minisforum UM890 Pro(AMD Ryzen 9 8945HS, Radeon 780M, 최대 96 GB DDR5)는 로컬 AI 스마트홈을 위한 다재다능한 상위 단계 미니 PC입니다. 베어본 약 $439에서 32 GB 구성 약 $649까지(2026년 8월 기준, 가격 변동)이며, 로컬 모델 성능은 Beelink SER8과 대등하지만 듀얼 2.5GbE, Wi-Fi 6E, 외장 GPU용 OCuLink 포트를 더합니다. 이 리뷰는 사양을 검증하고 로컬 LLM 속도에 대한 현실적인 기대치를 제시하며, SER8보다 더 지불할 가치가 있는 사용자를 설명합니다.',
+      'Minisforum UM890 Pro(AMD Ryzen 9 8945HS, Radeon 780M, 최대 96 GB DDR5)는 로컬 AI 스마트홈을 위한 다재다능한 상위 단계 미니 PC입니다. 공식 스토어 정가는 베어본 $439.90에서 32 GB + 1 TB 구성 $823.90까지(미국 USD 가격, 2026-10-25 확인, 국내 가격은 다를 수 있습니다)이며, 로컬 모델 성능은 Beelink SER8과 대등하지만 듀얼 2.5GbE, Wi-Fi 6E, 외장 GPU용 OCuLink 포트를 더합니다. 이 리뷰는 사양을 검증하고 로컬 LLM 속도에 대한 현실적인 기대치를 제시하며, SER8보다 더 지불할 가치가 있는 사용자를 설명합니다.',
     metaDescription:
-      'Minisforum UM890 Pro 공식 사양 2026: Ryzen 9 8945HS, Radeon 780M, 최대 96 GB DDR5, OCuLink eGPU, 듀얼 2.5GbE. Home Assistant + 로컬 7B LLM 실행.',
+      'Minisforum UM890 Pro 공식 사양: Ryzen 9 8945HS, Radeon 780M, 최대 96GB DDR5, OCuLink eGPU, 2.5GbE×2. HA + 로컬 7B LLM.',
     twitterDescription:
       'Minisforum UM890 Pro(2026): Ryzen 9 8945HS, Radeon 780M, 최대 96 GB DDR5, 외장 GPU용 OCuLink, 듀얼 2.5GbE. 확장형 로컬 AI 홈 서버를 자세히 분석합니다.',
     readTime: '7분 읽기',
@@ -2358,20 +2358,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs 미니 pc oculink',
     ],
     leadAnswerBlock:
-      '**Minisforum UM890 Pro(Ryzen 9 8945HS, Radeon 780M, 최대 96 GB DDR5)는 Beelink SER8처럼 Home Assistant와 로컬 7B LLM을 실행하면서 듀얼 2.5GbE, Wi-Fi 6E, 외장 GPU용 OCuLink 포트를 더합니다 — 베어본 약 $439에서 32 GB 구성 약 $649까지(2026년 8월 기준, 가격 변동).** 더 빠른 대형 모델 추론으로 가는 현실적인 경로를 갖춘 확장형 홈 서버를 원한다면 이 제품을 선택하십시오.',
+      '**Minisforum UM890 Pro(Ryzen 9 8945HS, Radeon 780M, 최대 96 GB DDR5)는 Beelink SER8처럼 Home Assistant와 로컬 7B LLM을 실행하면서 듀얼 2.5GbE, Wi-Fi 6E, 외장 GPU용 OCuLink 포트를 더합니다 — 공식 스토어 정가 베어본 $439.90에서 32 GB + 1 TB 구성 $823.90까지(미국 USD 가격, 2026-10-25 확인, 공식 페이지에서 품절).** 더 빠른 대형 모델 추론으로 가는 현실적인 경로를 갖춘 확장형 홈 서버를 원한다면 이 제품을 선택하십시오.',
     quickAnswerTop: {
       ko: {
         question: 'Minisforum UM890 Pro는 로컬 AI와 Home Assistant에 적합합니까?',
         answer:
-          '적합합니다 — 확장형 상위 단계 선택지입니다. Ryzen 9 8945HS(8코어/16스레드), Radeon 780M iGPU, 최대 96 GB DDR5가 Home Assistant, Ollama, Whisper, Frigate를 함께 실행합니다. 7B 모델은 여유롭게 돌아가고 RAM을 늘리면 13B–14B도 들어갑니다. 차별점은 듀얼 2.5GbE, Wi-Fi 6E, 그리고 외장 GPU를 연결해 대형 모델 추론을 진정으로 빠르게 만드는 OCuLink 포트입니다. 베어본 약 $439에서 32 GB 구성 약 $649까지(2026년 8월 기준, 가격 변동)로 Beelink SER8보다 조금 비싸지만 실질적인 확장성을 제공합니다.',
+          '적합합니다 — 확장형 상위 단계 선택지입니다. Ryzen 9 8945HS(8코어/16스레드), Radeon 780M iGPU, 최대 96 GB DDR5가 Home Assistant, Ollama, Whisper, Frigate를 함께 실행합니다. 7B 모델은 여유롭게 돌아가고 RAM을 늘리면 13B–14B도 들어갑니다. 차별점은 듀얼 2.5GbE, Wi-Fi 6E, 그리고 외장 GPU를 연결해 대형 모델 추론을 진정으로 빠르게 만드는 OCuLink 포트입니다. 공식 스토어 정가는 베어본 $439.90에서 32 GB + 1 TB 구성 $823.90까지입니다(2026-10-25 확인, 공식 페이지에서 품절). Beelink SER8은 같은 스토어에서 24 GB + 1 TB가 $799로 구성이 다르지만, UM890 Pro는 실질적인 확장성을 제공합니다.',
         bullets: [
           'CPU: Ryzen 9 8945HS — 8코어 / 16스레드, Radeon 780M(12 CU, RDNA 3)',
           'RAM: DDR5-5600 듀얼 채널, 사용자 업그레이드 가능한 SO-DIMM 2개, 최대 96 GB',
           '로컬 LLM(사양 기반 추정): 7B 여유; RAM 확장 시 13B–14B; 빠른 대형 모델에는 OCuLink eGPU',
           '네트워크/확장: 듀얼 2.5GbE, Wi-Fi 6E, 2× USB4, OCuLink eGPU 포트',
-          '가격 약 $439(베어본) / 약 $649(32 GB 구성)(2026년 8월 기준, 가격 변동) — 확장형 상위 단계',
+          '공식 스토어 정가: $439.90(베어본) / $823.90(32 GB + 1 TB 구성)(마지막 확인 시 품절) — 확장형 상위 단계',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2401,7 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant에서 로컬 7B LLM으로 시작해 나중에 외장 GPU로 빠른 13B–30B 추론으로 업그레이드하고 싶다',
           '안정적인 홈 서버를 위해 하나 이상의 네트워크 연결(듀얼 2.5GbE 또는 Wi-Fi 6E)이 필요하다',
           '사용자가 직접 업그레이드할 수 있는 경로를 중요하게 생각한다 — RAM과 저장 장치 모두 쉽게 교체 가능하다',
-          'OCuLink eGPU 포트는 Beelink SER8 대비 $150–200 추가 비용을 지불할 가치가 있다',
+          'OCuLink eGPU 포트는 Beelink SER8 대비 추가 비용을 지불할 가치가 있다',
           '**다음에 해당하면 UM890 Pro는 건너뛰십시오:**',
           '7B 모델만 실행할 것이며 외장 GPU를 계획하지 않는다 — 동일한 iGPU 성능이라면 Beelink SER8이 비용을 절약해 준다',
           '정말 컴팩트한 기기가 필요하다 — 67mm 높이는 대부분의 미니 PC보다 부피가 크다',
@@ -2421,7 +2421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS: 8코어/16스레드, Radeon 780M iGPU, 업그레이드 가능한 SO-DIMM 2개로 최대 96 GB DDR5',
           '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) 대비 차별점: 듀얼 2.5GbE, Wi-Fi 6E, OCuLink eGPU 포트',
           'OCuLink는 외장 GPU로 빠른 대형 모델 추론에 이르는 현실적인 경로를 제공합니다',
-          '약 $439(베어본)에서 약 $649(32 GB 구성)까지 — 확장형 상위 단계',
+          '공식 스토어 정가 $439.90(베어본)에서 $823.90(32 GB + 1 TB 구성)까지 — 확장형 상위 단계',
           '중국 제조 — 2026년 미국/EU 수입 조치를 최종 비용에 반영하십시오(관세 참고 참조)',
         ],
       },
@@ -2460,36 +2460,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: '어떤 구성을 구매해야 합니까?',
         content: 'UM890 Pro는 베어본과 사전 구성 SKU로 제공됩니다. 이 표는 각 등급에 적합한 사용자를 보여 줍니다.',
-        columns: ['구성', '예상 가격', '최적 사용층', '다음 단계'],
+        columns: ['구성', '공식 정가', '최적 사용층', '다음 단계'],
         rows: [
           {
             '구성': '베어본(RAM/SSD 제외)',
-            '예상 가격': '약 $439',
-            '최적 사용층': 'DDR5 SO-DIMM과 NVMe SSD를 이미 소유 중이며, 사전 구성 제품 대비 $50–100 절감',
-            '다음 단계': 'DDR5 32–64 GB와 빠른 1 TB NVMe 추가(총 예산 약 $100–180)',
+            '공식 정가': '$439.90',
+            '최적 사용층': 'DDR5 SO-DIMM과 NVMe SSD를 이미 소유 중이며, 공식 SKU 중 정가가 가장 낮음',
+            '다음 단계': 'DDR5 32–64 GB와 빠른 1 TB NVMe 추가(RAM과 SSD의 현재 가격 확인)',
           },
           {
             '구성': '32 GB DDR5 + 1 TB SSD',
-            '예상 가격': '약 $649',
+            '공식 정가': '$823.90',
             '최적 사용층': '7B 모델 충분히 실행 가능, 입문 수준 확장성, 단일 시스템 구매',
             '다음 단계': '나중에 64 GB RAM으로 업그레이드하거나 1년 내 OCuLink GPU 추가',
           },
           {
             '구성': '64 GB DDR5 + 1 TB SSD',
-            '예상 가격': '약 $799',
+            '공식 정가': '$999.90',
             '최적 사용층': '13B–14B 모델 충분히 실행, 또는 7B 모델에 훨씬 여유로운 확장 공간 제공',
             '다음 단계': '30B+ 속도가 필요할 때 OCuLink GPU 추가 준비 완료',
           },
           {
             '구성': '96 GB DDR5 + 2 TB SSD',
-            '예상 가격': '약 $1,099',
+            '공식 정가': '현재 판매 정보 확인',
             '최적 사용층': 'iGPU로 30B 모델 최대 활용, 또는 향후 OS/앱 용량 증가 대비',
             '다음 단계': 'OCuLink GPU 추가만 하면 됨 — 수년간 RAM 업그레이드 불필요',
           },
         ],
         items: [
           '**사양 기반 추정, 실측 아님.** 모든 RAM/모델 조합은 Ollama와 Q4_K_M 양자화를 가정합니다.',
-          '가격은 매주 변동하니 구매 전 판매점에 확인하십시오. 이는 2026년 8월의 스냅샷입니다.',
+          '가격은 매주 변동하니 구매 전 판매점에 확인하십시오. 이 수치는 공식 스토어의 미국 USD 정가입니다(2026-10-25 확인). 96GB+2TB SKU는 공식 페이지에 없으므로 현재 판매 정보를 확인하십시오.',
           'SSD 속도는 OS 부팅보다는 로컬 LLM에서 덜 중요합니다. SATA SSD도 작동하지만 NVMe가 더 낫습니다.',
         ],
         affiliateLinks: [
@@ -2546,15 +2546,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '기능': '가격(베어본)',
-            'UM890 Pro': '약 $439',
-            'SER8': '약 $449',
+            'UM890 Pro': '$439.90',
+            'SER8': '현재 판매 정보 확인',
             '승자': '동등 / 현재 가격 확인',
           },
           {
             '기능': '가격(32 GB 구성)',
-            'UM890 Pro': '약 $649',
-            'SER8': '약 $649',
-            '승자': '동등',
+            'UM890 Pro': '$823.90',
+            'SER8': '현재 판매 정보 확인(24 GB + 1 TB: $799)',
+            '승자': '현재 판매 정보 확인',
           },
           {
             '기능': '최적 사용층',
@@ -2616,11 +2616,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: '가격, 배송 및 이용 가능성(2026)',
         content:
-          '**가격은 매주 변동합니다. 구매 전 판매점에서 실시간 가격을 확인하십시오.** 아래 수치는 2026년 8월의 스냅샷이며 현재 관세 전가를 반영합니다.',
+          '**가격은 매주 변동합니다. 구매 전 판매점에서 실시간 가격을 확인하십시오.** 아래 수치는 공식 스토어의 미국 USD 정가(2026-10-25 확인)이며 수입 관세나 현지 세금은 포함되지 않을 수 있습니다.',
         items: [
-          '가격은 베어본 약 $439에서 64GB+1TB SKU 약 $799까지 다양합니다. 정확한 비용은 판매점, 국가, 현재 관세 전가에 따라 달라집니다.',
+          '공식 정가는 베어본 $439.90에서 64GB+1TB SKU $999.90까지이며 32GB+1TB는 $823.90입니다. 정확한 비용은 판매점, 국가, 현재 관세 전가에 따라 달라집니다.',
           '중국 제조: 미국의 Section 301 관세(소비자 전자제품), EU의 저가 소포 수수료(2026년 8월 이후), 기타 지역의 유사한 조치가 최종 비용에 영향을 줍니다.',
-          '재고는 일반적으로 Minisforum.com 및 미국, EU, 아시아태평양의 주요 판매점에서 이용 가능합니다.',
+          '재고 상황은 변동합니다. 마지막 확인(2026-10-25) 시 공식 제품 페이지에서 모든 구성이 품절이었으며, 제3자 판매점의 가격과 재고는 확인하지 않았습니다.',
           '제휴 프로그램 없음: 이 리뷰는 수수료를 받지 않습니다. CTA 링크는 가격 투명성을 위해 Minisforum으로 연결됩니다.',
         ],
       },
@@ -2628,12 +2628,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: '구매처',
         content:
-          '**Minisforum.com에서 현재 가격을 확인하십시오 — 가격은 자주 변경되며 지역과 수입 관세에 따라 달라집니다.** 재고 상황도 변동합니다. 이 리뷰를 마지막으로 확인한 시점(2026년 8월) 기준, Minisforum.com은 미국·영국·EU·일본 스토어 전체에서 이 모델의 모든 구성이 품절로 표시되어 있었습니다 — 여유를 두거나 Amazon/Newegg 재판매처를 확인하십시오.',
+          '**Minisforum.com에서 현재 가격을 확인하십시오 — 가격은 자주 변경되며 지역과 수입 관세에 따라 달라집니다.** 재고 상황도 변동합니다. 마지막으로 확인한 시점(2026-10-25) 기준, Minisforum 공식 제품 페이지에는 이 모델의 모든 구성이 품절로 표시되어 있었습니다 — 여유를 두거나 제3자 재판매처(가격과 재고는 여기서 확인하지 않음)를 확인하십시오.',
         items: [
-          '베어본(약 $439)은 DDR5 SO-DIMM과 NVMe SSD가 이미 있다면 더 저렴합니다.',
-          '32GB+1TB(약 $649)는 입문 수준의 구성 옵션이며, 즉시 Home Assistant와 7B 모델을 실행할 준비가 됩니다.',
-          '64GB+1TB(약 $799)와 96GB+2TB(약 $1,099)는 더 큰 모델 여유 공간을 원하는 구매자를 위해 제공됩니다.',
-          'Minisforum.com 직접 판매는 현재 모든 SKU가 품절 상태입니다(2026년 8월 확인). Amazon과 Newegg에서 동일한 베어본 및 32 GB 구성을 취급한 적이 있으며 가격이 다를 수 있으니 구매 전 비교하십시오.',
+          '베어본(공식 정가 $439.90)은 DDR5 SO-DIMM과 NVMe SSD가 이미 있다면 더 저렴합니다.',
+          '32GB+1TB(공식 정가 $823.90)는 입문 수준의 구성 옵션이며, 즉시 Home Assistant와 7B 모델을 실행할 준비가 됩니다.',
+          '64GB+1TB(공식 정가 $999.90)는 더 큰 모델 여유 공간을 제공합니다. 96GB+2TB SKU는 마지막 확인 시 공식 페이지에 없었으므로 현재 판매 정보를 확인하십시오.',
+          'Minisforum 공식 페이지에서 모든 SKU가 품절로 표시되었습니다(2026-10-25 확인). Amazon, Newegg 등 판매점은 같은 구성을 다른 가격에 취급할 수 있으며(여기서는 확인하지 않음) 구매 전 비교하십시오.',
           '[가격 및 이용 가능성 섹션](#trade-note)에서 관세 배경 및 지역별 차이를 참조하십시오.',
         ],
         affiliateLinks: [
@@ -2645,7 +2645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '함께 검토할 대안',
         content: '**UM890 Pro가 적합하지 않다면, 아래 제품들이 가격과 확장성에서 이를 둘러쌉니다.**',
         items: [
-          '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 비슷한 iGPU 성능을 더 저렴하게 제공하는 가성비 선택지이나 OCuLink와 듀얼 LAN은 없음',
+          '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 비슷한 iGPU 성능을 제공하는 가성비 선택지이나 OCuLink와 듀얼 LAN은 없음',
           '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review) — 128 GB RAM 상한과 Wi-Fi 7을 갖춘 여유로운 프리미엄 기기',
           '[Beelink EQ14](/ko/smart-home/beelink-eq14-local-ai-review) — Home Assistant와 소형 모델을 위한 저가 Intel N150 기기',
           '[GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — RAM 업그레이드 가능한 또 다른 저가 N150 선택지',
@@ -2666,7 +2666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Minisforum UM890 Pro는 어디서 제조되며 그것이 가격에 영향을 줍니까?', a: '중국에서 제조됩니다. 2026년 미국 수입 조치(Section 301 관세, 800달러 미만 de minimis 면제 종료)와 EU의 150유로 저가 소포 기준 폐지가 최종 비용에 영향을 줄 수 있으므로, 고정된 수치에 의존하지 말고 판매점에서 현재 가격을 확인하십시오.' },
           { q: '64 GB는 충분합니까, 아니면 96 GB를 가져야 합니까?', a: '단일 7B 모델의 경우 32 GB로 충분합니다. 여러 모델을 실행하거나 LLM 옆에 Frigate 같은 두 번째 앱을 함께 실행하려면 또는 13B–14B 모델에 대비하려면 64 GB로 이동하십시오. 중간 등급은 96 GB 비용 없이 더 많은 여유를 제공합니다.' },
           { q: 'UM890 Pro와 함께 NVIDIA GPU를 OCuLink 포트를 통해 추가할 수 있습니까?', a: '네. OCuLink(PCIe 4.0 x4)는 NVIDIA RTX 또는 유사한 카드를 담을 수 있는 외장 GPU 도크를 지원합니다. OCuLink 도크(예: Sonnet eGPU)가 필요하며, 이는 $150–400을 더합니다. 이것이 13B–30B 추론의 진정한 빠른 성능을 위한 UM890 Pro의 주요 업그레이드 경로입니다.' },
-          { q: '베어본 SKU를 구매할 가치가 있습니까?', a: '네, DDR5 SO-DIMM과 NVMe SSD가 이미 있다면(이전 업그레이드나 노트북 구매에서). 베어본은 구성 SKU 대비 $50–150을 절감하지만, 직접 조립하고 테스트해야 합니다. 예비 RAM/SSD가 없다면 사전 구성 옵션이 더 간단합니다.' },
+          { q: '베어본 SKU를 구매할 가치가 있습니까?', a: '네, DDR5 SO-DIMM과 NVMe SSD가 이미 있다면(이전 업그레이드나 노트북 구매에서). 베어본은 공식 정가 $439.90로 구성 SKU(32 GB + 1 TB는 $823.90)보다 낮지만, 직접 조립하고 테스트해야 합니다. 예비 RAM/SSD가 없다면 사전 구성 옵션이 더 간단합니다.' },
           { q: '24/7 운영에 적합합니까?', a: '네, 45 W 기본 전력 소비와 효율적인 Ryzen 8945HS가 항상 켜 두는 Home Assistant와 LLM 사용에 적합합니다. 완전히 조용하지는 않습니다(부하 시 작은 팬), 하지만 데스크톱보다 조용습니다. 우리가 장기 내구성 테스트는 하지 않았습니다.' },
           { q: 'Ryzen 8945HS와 8845HS(vs Beelink SER8)의 차이는 무엇입니까?', a: '8945HS가 약간 더 최신이며 8845HS보다 기본 클록이 200 MHz 높지만, LLM의 실제 성능은 거의 동일합니다. 둘 다 동일한 Radeon 780M iGPU를 갖고 있습니다.' },
           { q: '32 GB가 충분합니까, 아니면 64 GB로 가야 합니까?', a: '단일 7B 모델의 경우 32 GB가 충분합니다. 여러 모델을 실행하거나 Frigate 같은 두 번째 앱과 함께 LLM을 사용하려면, 또는 13B–14B 모델에 준비하려면 64 GB로 업그레이드하십시오. 중간 등급은 96 GB의 비용 없이 더 많은 공간을 제공합니다.' },
@@ -2689,9 +2689,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Minisforum UM890 Pro 리뷰(2026): 로컬 AI 홈 서버',
       reviewBody:
-        'Minisforum UM890 Pro는 Radeon 780M iGPU, 최대 96 GB DDR5, 외장 GPU용 OCuLink 포트를 갖춘 Ryzen 9 8945HS 미니 PC입니다. Home Assistant와 로컬 7B LLM을 실행하며, 베어본 약 $439부터 시작하는 확장형 상위 단계 기기입니다(2026년 8월).',
+        'Minisforum UM890 Pro는 Radeon 780M iGPU, 최대 96 GB DDR5, 외장 GPU용 OCuLink 포트를 갖춘 Ryzen 9 8945HS 미니 PC입니다. Home Assistant와 로컬 7B LLM을 실행하며, 공식 스토어 정가 기준 베어본 $439.90부터 시작하는 확장형 상위 단계 기기입니다.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2717,8 +2717,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-24',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -2728,7 +2728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-pt.webp',
     seoTitle: 'Análise Minisforum UM890 Pro 2026: specs oficiais e preço',
     intro:
-      'O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5) é o mini PC versátil de nível superior para uma casa inteligente com IA local. No exterior custa de cerca de $439 na versão barebone a $649 com 32 GB (agosto de 2026, volátil); no Brasil, os preços variam bastante por causa dos impostos de importação (indicativamente, a partir de cerca de R$ 3.900 na versão barebone). Ele iguala um Beelink SER8 no modelo local, mas adiciona duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink para uma GPU externa. Esta análise verifica as especificações, define expectativas honestas sobre a velocidade do LLM local e explica quem deve pagar a diferença em relação a um SER8.',
+      'O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5) é o mini PC versátil de nível superior para uma casa inteligente com IA local. O preço de tabela da loja oficial (EUA, em USD, verificado em 2026-10-25) vai de US$ 439,90 na versão barebone a US$ 823,90 com 32 GB e 1 TB; no Brasil, os preços variam bastante por causa dos impostos de importação. Ele iguala um Beelink SER8 no modelo local, mas adiciona duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink para uma GPU externa. Esta análise verifica as especificações, define expectativas honestas sobre a velocidade do LLM local e explica quem deve pagar a diferença em relação a um SER8.',
     metaDescription:
       'Specs oficiais Minisforum UM890 Pro 2026: Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5, eGPU OCuLink, duas 2.5GbE. Roda Home Assistant + um LLM local 7B.',
     twitterDescription:
@@ -2745,20 +2745,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs mini pc oculink',
     ],
     leadAnswerBlock:
-      '**O Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5) roda Home Assistant mais um LLM local 7B como um Beelink SER8, mas adiciona duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink para uma GPU externa — de cerca de $439 na versão barebone a $649 com 32 GB no exterior (agosto de 2026, volátil); no Brasil, indicativamente a partir de cerca de R$ 3.900 devido aos impostos de importação.** Compre se você quer um servidor doméstico expansível com um caminho real para uma inferência mais rápida de modelos grandes.',
+      '**O Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5) roda Home Assistant mais um LLM local 7B como um Beelink SER8, mas adiciona duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink para uma GPU externa — de US$ 439,90 na versão barebone a US$ 823,90 com 32 GB e 1 TB (preço de tabela da loja oficial nos EUA, verificado em 2026-10-25; esgotado na página oficial); no Brasil, os preços variam bastante por causa dos impostos de importação.** Compre se você quer um servidor doméstico expansível com um caminho real para uma inferência mais rápida de modelos grandes.',
     quickAnswerTop: {
       pt: {
         question: 'O Minisforum UM890 Pro é bom para IA local e Home Assistant?',
         answer:
-          'Sim — é a escolha expansível de nível superior. O Ryzen 9 8945HS (8 núcleos/16 threads), a iGPU Radeon 780M e até 96 GB de DDR5 rodam Home Assistant, Ollama, Whisper e Frigate juntos; um modelo 7B fica confortável e 13B–14B cabem com mais RAM. Seus diferenciais são duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink que conecta uma GPU externa para uma inferência de modelos grandes realmente rápida. No exterior custa de cerca de $439 (barebone) a $649 com 32 GB (agosto de 2026, volátil); no Brasil, os preços variam muito por causa dos impostos de importação (indicativamente, a partir de cerca de R$ 3.900). Custa um pouco mais que um Beelink SER8, mas adiciona expansão real.',
+          'Sim — é a escolha expansível de nível superior. O Ryzen 9 8945HS (8 núcleos/16 threads), a iGPU Radeon 780M e até 96 GB de DDR5 rodam Home Assistant, Ollama, Whisper e Frigate juntos; um modelo 7B fica confortável e 13B–14B cabem com mais RAM. Seus diferenciais são duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink que conecta uma GPU externa para uma inferência de modelos grandes realmente rápida. O preço de tabela da loja oficial nos EUA vai de US$ 439,90 (barebone) a US$ 823,90 com 32 GB e 1 TB (verificado em 2026-10-25, esgotado na página oficial); no Brasil, os preços variam muito por causa dos impostos de importação. O Beelink SER8 aparece ali a US$ 799 com 24 GB e 1 TB, então as configurações diferem, mas o UM890 Pro adiciona expansão real.',
         bullets: [
           'CPU: Ryzen 9 8945HS — 8 núcleos / 16 threads, Radeon 780M (12 CU, RDNA 3)',
           'RAM: DDR5-5600 dois canais, dois SO-DIMMs atualizáveis pelo usuário, até 96 GB',
           'LLM local (estimado pelas specs): 7B confortável; 13B–14B com mais RAM; eGPU OCuLink para modelos grandes rápidos',
           'Rede/expansão: duas 2.5GbE, Wi-Fi 6E, 2× USB4, porta eGPU OCuLink',
-          'Preço ~$439 (barebone) / ~$649 com 32 GB no exterior (agosto de 2026, volátil); no Brasil a partir de ~R$ 3.900 (importação) — nível superior expansível',
+          'Preço de tabela da loja oficial (EUA): US$ 439,90 (barebone) / US$ 823,90 com 32 GB + 1 TB (esgotado na última verificação); no Brasil, verifique a oferta atual (impostos de importação) — nível superior expansível',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2788,7 +2788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Você quer começar com um LLM local 7B no Home Assistant e depois fazer upgrade para inferência rápida de 13B–30B com uma GPU externa',
           'Você precisa de mais de um link de rede (dupla 2.5GbE ou Wi-Fi 6E) para um servidor doméstico confiável',
           'Você valoriza um caminho atualizável pelo usuário — RAM e armazenamento são fáceis de trocar',
-          'A porta eGPU OCuLink vale o acréscimo de ~$150–200 (no exterior) sobre um Beelink SER8',
+          'A porta eGPU OCuLink vale o acréscimo sobre um Beelink SER8',
           '**Pule o UM890 Pro se:**',
           'Você só vai rodar um modelo 7B e nunca planeja uma GPU externa — um Beelink SER8 economiza dinheiro com o mesmo desempenho de iGPU',
           'Você precisa de uma caixa realmente compacta — os 67 mm de altura são mais volumosos que a maioria dos mini PCs',
@@ -2808,7 +2808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS: 8 núcleos/16 threads, iGPU Radeon 780M, até 96 GB DDR5 em dois SO-DIMMs atualizáveis',
           'Diferenciais em relação a um [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review): duas 2.5GbE, Wi-Fi 6E e uma porta eGPU OCuLink',
           'A OCuLink oferece um caminho real para uma inferência rápida de modelos grandes com uma GPU externa',
-          'De cerca de $439 (barebone) a $649 com 32 GB no exterior; no Brasil a partir de ~R$ 3.900 (importação) — o nível superior expansível',
+          'Preço de tabela da loja oficial (EUA) de US$ 439,90 (barebone) a US$ 823,90 com 32 GB + 1 TB; no Brasil, verifique a oferta atual (importação) — o nível superior expansível',
           'Fabricado na China — inclua as medidas de importação EUA/UE de 2026 no custo final (veja a nota sobre tarifas)',
         ],
       },
@@ -2846,37 +2846,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichConfig: {
         id: 'which-config',
         title: 'Qual configuração escolher?',
-        content: 'O UM890 Pro é vendido em várias variantes. Aqui está como escolher com base na sua carga de trabalho. **Todos os preços abaixo são estimativas de agosto de 2026** — verifique com o varejista os preços atuais.',
-        columns: ['Configuração', 'Ideal para', 'Preço estimado', 'Modelo máx recomendado'],
+        content: 'O UM890 Pro é vendido em várias variantes. Aqui está como escolher com base na sua carga de trabalho. **Os preços abaixo são preços de tabela da loja oficial nos EUA, em USD (verificado em 2026-10-25; no Brasil os preços variam bastante por causa dos impostos de importação)** — verifique com o varejista os preços atuais.',
+        columns: ['Configuração', 'Ideal para', 'Preço de tabela', 'Modelo máx recomendado'],
         rows: [
           {
             Configuração: 'Barebone (sem RAM/SSD)',
-            'Ideal para': 'Você já possui SO-DIMM DDR5 e SSD NVMe; economiza 50-100€ vs versões pré-configuradas',
-            'Preço estimado': '~489€',
+            'Ideal para': 'Você já possui SO-DIMM DDR5 e SSD NVMe; menor preço de tabela entre as SKUs oficiais',
+            'Preço de tabela': 'US$ 439,90',
             'Modelo máx recomendado': '7B (com 32GB RAM adicionado)',
           },
           {
             Configuração: '32 GB DDR5 + 1 TB SSD',
             'Ideal para': 'Nível de entrada: Home Assistant, modelo local 7B, Whisper',
-            'Preço estimado': '~649€',
+            'Preço de tabela': 'US$ 823,90',
             'Modelo máx recomendado': '7B confortável',
           },
           {
             Configuração: '64 GB DDR5 + 1 TB SSD',
             'Ideal para': 'Escala: 13B-14B mais seguro, Frigate + IA, Whisper concorrente',
-            'Preço estimado': '~799€',
+            'Preço de tabela': 'US$ 999,90',
             'Modelo máx recomendado': '13B-14B confortável',
           },
           {
             Configuração: '96 GB DDR5 + 2 TB SSD',
             'Ideal para': 'Potência máxima: 30B com baixo rendimento, múltiplos modelos concorrentes, OCuLink GPU pronto',
-            'Preço estimado': '~1.099€',
+            'Preço de tabela': 'Verifique a oferta atual',
             'Modelo máx recomendado': '30B Q4 ou 13B×2 concorrentes',
           },
         ],
         items: [
           '**Estimado a partir das especificações, não medido.** Todas as combinações RAM/modelo assumem Ollama com quantização Q4_K_M.',
-          'Os preços mudam a cada semana; verifique com o varejista antes de comprar. Estes são snapshots de agosto de 2026.',
+          'Os preços mudam a cada semana; verifique com o varejista antes de comprar. Estes valores são preços de tabela da loja oficial em USD (verificado em 2026-10-25); a SKU 96GB+2TB não está na página oficial, verifique a oferta atual.',
           'A velocidade do SSD importa menos para LLMs locais do que para inicialização do OS; SSD SATA funciona, NVMe é melhor.',
         ],
         affiliateLinks: [
@@ -2933,15 +2933,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Aspecto: 'Preço (barebone)',
-            'UM890 Pro': '~489€',
-            SER8: '~449€',
+            'UM890 Pro': 'US$ 439,90',
+            SER8: 'Verifique a oferta atual',
             Vencedor: 'Empate / verificar preço atual',
           },
           {
             Aspecto: 'Preço (32GB configurado)',
-            'UM890 Pro': '~649€',
-            SER8: '~649€',
-            Vencedor: 'Empate',
+            'UM890 Pro': 'US$ 823,90',
+            SER8: 'Verifique a oferta atual (24GB+1TB: US$ 799)',
+            Vencedor: 'Verifique a oferta atual',
           },
           {
             Aspecto: 'Melhor para',
@@ -2977,10 +2977,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quem não deve comprar',
         content: '**O UM890 Pro não é para todos.** Se você se enquadra em qualquer um dos perfis abaixo, um modelo mais barato pode funcionar.',
         items: [
-          'Você só executará um modelo 7B para sempre — o SER8 economiza 150-300€ pelo mesmo desempenho iGPU.',
+          'Você só executará um modelo 7B para sempre — o SER8 oferece o mesmo desempenho iGPU sem pagar pela expansão.',
           'Seu espaço é limitado — sua altura de 67mm não é tão compacta quanto um Beelink.',
           'Sua rede não usa fibra — um único link de gigabit é suficiente; não há motivo para pagar por dupla 2,5GbE.',
-          'Você não tem €800+ para escalar para 96GB — barebone barato + SO-DIMM funciona, mas caso contrário, caixas N150 econômicas (Beelink EQ14) são muito mais baratas.',
+          'Você não quer pagar para escalar para 96GB — barebone barato + SO-DIMM funciona, mas caso contrário, caixas N150 econômicas (Beelink EQ14) são muito mais baratas.',
           'Você precisa de uma caixa com GPU integrada — OCuLink é um caminho de upgrade, não uma GPU integrada. Para isso, veja GEEKOM A9 Max (iGPU idêntica, limite de RAM 128GB, sem OCuLink).',
         ],
       },
@@ -3012,17 +3012,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EUA: as tarifas da Seção 301 sobre eletrônicos chineses continuam em vigor em 2026; as tarifas "IEEPA" separadas de 2025 foram derrubadas pela Suprema Corte em fevereiro de 2026 e substituídas por uma tarifa temporária e limitada da Seção 122. A isenção "de minimis" livre de tarifas abaixo de US$ 800 para importações diretas também acabou.',
           'UE (afeta DE/FR): não há uma tarifa ampla da UE sobre mini PCs acabados, mas desde agosto de 2026 o limite livre de tarifas de 150 € para pequenas encomendas diretas da China foi removido e uma pequena taxa de processamento por encomenda foi adicionada.',
           'Brasil: importações têm carga tributária alta (imposto de importação, ICMS e taxas), por isso os preços em reais costumam ser bem maiores que a conversão direta do dólar; compre de vendedores brasileiros com nota fiscal quando possível.',
-          'Efeito líquido: verifique o preço atual na loja antes de comprar — os números aqui são indicativos e datados de agosto de 2026.',
+          'Efeito líquido: verifique o preço atual na loja antes de comprar — os números aqui são preços de tabela da loja oficial em USD (verificado em 2026-10-25) e são indicativos.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Onde comprar e preço atual',
         content:
-          '**Os preços mudam de semana para semana, então verifique o preço ao vivo em vez de confiar em um valor fixo.** Em agosto de 2026, o UM890 Pro vai de cerca de $439 (barebone) a $649 com 32 GB e $729 com 64 GB no exterior; no Brasil, com impostos de importação, os valores em reais são bem mais altos e variam bastante entre lojas. A disponibilidade também varia: na última verificação para esta análise (agosto de 2026), o Minisforum.com mostrava todas as configurações como esgotadas nas lojas dos EUA, Reino Unido, UE e Japão — conte com algum tempo de espera ou verifique revendedores como Amazon e Newegg.',
+          '**Os preços mudam de semana para semana, então verifique o preço ao vivo em vez de confiar em um valor fixo.** Em 2026-10-25, a loja oficial (preços dos EUA, em USD) lista o UM890 Pro de US$ 439,90 (barebone) a US$ 823,90 com 32 GB e 1 TB e US$ 999,90 com 64 GB e 1 TB; no Brasil, com impostos de importação, os valores em reais são bem mais altos e variam bastante entre lojas. A disponibilidade também varia: nessa verificação, a página oficial do produto mostrava todas as configurações como esgotadas — conte com algum tempo de espera ou verifique revendedores terceiros (preços e estoque não verificados aqui).',
         items: [
           'Decida barebone vs pré-montado: barebone é mais barato se você já tem SO-DIMMs DDR5 e um SSD NVMe.',
-          'O Minisforum.com direto está esgotado em todas as SKUs no momento (verificado em agosto de 2026) — a Amazon e a Newegg já venderam as mesmas configurações barebone e 32 GB, às vezes por preços diferentes, então compare antes de comprar.',
+          'A página oficial da Minisforum mostrava todas as SKUs esgotadas (verificado em 2026-10-25) — revendedores como Amazon e Newegg podem listar as mesmas configurações por preços diferentes, não verificados aqui, então compare antes de comprar.',
         ],
         affiliateLinks: [
           { label: 'Ver preço atual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -3033,7 +3033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Alternativas a considerar',
         content: '**Se o UM890 Pro não for a escolha certa, estas o cercam em preço e expansão.**',
         items: [
-          '[Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — a escolha de custo-benefício com desempenho de iGPU semelhante por menos, sem OCuLink e LAN dupla',
+          '[Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — a escolha de custo-benefício com desempenho de iGPU semelhante, sem OCuLink e LAN dupla',
           '[GEEKOM A9 Max](/pt/smart-home/geekom-a9-max-local-ai-review) — caixa premium com folga, teto de 128 GB de RAM e Wi-Fi 7',
           '[Beelink EQ14](/pt/smart-home/beelink-eq14-local-ai-review) — caixa Intel N150 econômica para Home Assistant mais um modelo pequeno',
           '[GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — outra opção N150 econômica com RAM atualizável',
@@ -3071,9 +3071,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análise Minisforum UM890 Pro (2026): servidor de IA local',
       reviewBody:
-        'O Minisforum UM890 Pro é um mini PC Ryzen 9 8945HS com iGPU Radeon 780M, até 96 GB DDR5 e uma porta OCuLink para uma GPU externa. Ele roda Home Assistant mais um LLM local 7B e é o mini PC expansível de nível superior, a partir de cerca de $439 na versão barebone no exterior (agosto de 2026).',
+        'O Minisforum UM890 Pro é um mini PC Ryzen 9 8945HS com iGPU Radeon 780M, até 96 GB DDR5 e uma porta OCuLink para uma GPU externa. Ele roda Home Assistant mais um LLM local 7B e é o mini PC expansível de nível superior, a partir de US$ 439,90 na versão barebone (preço de tabela da loja oficial nos EUA, em USD).',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3099,8 +3099,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2027-02-24',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     affiliateLinks: [
@@ -3108,11 +3108,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     title: 'مراجعة Minisforum UM890 Pro (2026): خادم منزلي بذكاء اصطناعي محلي',
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ar.webp',
-    seoTitle: 'مراجعة Minisforum UM890 Pro 2026: المواصفات الرسمية والسعر',
+    seoTitle: 'مراجعة Minisforum UM890 Pro 2026: المواصفات والسعر',
     intro:
-      'جهاز Minisforum UM890 Pro (بمعالج AMD Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5) هو حاسوب mini PC متعدد الاستخدامات من الفئة الأعلى لمنزل ذكي يعتمد الذكاء الاصطناعي المحلي. بسعر يبدأ من نحو $439 بنسخة barebones وحتى $649 مع 32 GB (أغسطس 2026، متقلب)، يوازي Beelink SER8 في النموذج المحلي لكنه يضيف منفذَي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink لبطاقة رسوميات خارجية. تتحقق هذه المراجعة من مواصفاته، وتضع توقعات صادقة لسرعة الـ LLM المحلي، وتوضح مَن ينبغي أن يدفع الفارق مقابل SER8.',
+      'جهاز Minisforum UM890 Pro (بمعالج AMD Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5) هو حاسوب mini PC متعدد الاستخدامات من الفئة الأعلى لمنزل ذكي يعتمد الذكاء الاصطناعي المحلي. بسعر قائمة في المتجر الرسمي يبدأ من $439.90 بنسخة barebones وحتى $823.90 مع 32 GB و1 TB (أسعار أمريكية بالدولار، جرى التحقق في 2026-10-25؛ تختلف الأسعار المحلية)، يوازي Beelink SER8 في النموذج المحلي لكنه يضيف منفذَي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink لبطاقة رسوميات خارجية. تتحقق هذه المراجعة من مواصفاته، وتضع توقعات صادقة لسرعة الـ LLM المحلي، وتوضح مَن ينبغي أن يدفع الفارق مقابل SER8.',
     metaDescription:
-      'المواصفات الرسمية لـMinisforum UM890 Pro 2026: Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5، وeGPU عبر OCuLink. يشغّل Home Assistant + نموذج LLM محلي 7B.',
+      'المواصفات الرسمية لـMinisforum UM890 Pro 2026: Ryzen 9 8945HS، Radeon 780M، حتى 96 GB DDR5، eGPU عبر OCuLink. يشغّل Home Assistant + LLM محلي 7B.',
     twitterDescription:
       'Minisforum UM890 Pro (2026): Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5، وOCuLink لبطاقة رسوميات خارجية، ومنفذا 2.5GbE. الخادم المنزلي القابل للتوسّع بذكاء اصطناعي محلي — إليك التحليل.',
     readTime: '7 دقائق للقراءة',
@@ -3127,20 +3127,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen 9 8945hs mini pc oculink',
     ],
     leadAnswerBlock:
-      '**جهاز Minisforum UM890 Pro (Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5) يشغّل Home Assistant إضافةً إلى نموذج LLM محلي 7B مثل Beelink SER8، لكنه يضيف منفذَي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink لبطاقة رسوميات خارجية — بسعر يبدأ من نحو $439 بنسخة barebones وحتى $649 مع 32 GB (أغسطس 2026، متقلب).** اشترِه إذا أردت خادماً منزلياً قابلاً للتوسّع مع مسار حقيقي نحو استدلال أسرع للنماذج الكبيرة.',
+      '**جهاز Minisforum UM890 Pro (Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5) يشغّل Home Assistant إضافةً إلى نموذج LLM محلي 7B مثل Beelink SER8، لكنه يضيف منفذَي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink لبطاقة رسوميات خارجية — بسعر قائمة في المتجر الرسمي يبدأ من $439.90 بنسخة barebones وحتى $823.90 مع 32 GB و1 TB (بالدولار، جرى التحقق في 2026-10-25؛ نفد من الصفحة الرسمية).** اشترِه إذا أردت خادماً منزلياً قابلاً للتوسّع مع مسار حقيقي نحو استدلال أسرع للنماذج الكبيرة.',
     quickAnswerTop: {
       ar: {
         question: 'هل Minisforum UM890 Pro جيد للذكاء الاصطناعي المحلي و Home Assistant؟',
         answer:
-          'نعم — إنه الخيار القابل للتوسّع من الفئة الأعلى. يشغّل معالج Ryzen 9 8945HS (8 أنوية/16 خيطاً) وكرت Radeon 780M المدمج وحتى 96 GB من DDR5 كلاً من Home Assistant وOllama وWhisper وFrigate في آنٍ واحد؛ ونموذج 7B يعمل بأريحية، ونماذج 13B–14B تتسع مع مزيد من الذاكرة. أما مميّزاته فهي منفذا 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink الذي يوصّل بطاقة رسوميات خارجية لاستدلال سريع فعلاً للنماذج الكبيرة. بسعر يبدأ من نحو $439 بنسخة barebones وحتى $649 مع 32 GB (أغسطس 2026، متقلب)، يكلّف أكثر قليلاً من Beelink SER8 لكنه يضيف توسّعاً حقيقياً.',
+          'نعم — إنه الخيار القابل للتوسّع من الفئة الأعلى. يشغّل معالج Ryzen 9 8945HS (8 أنوية/16 خيطاً) وكرت Radeon 780M المدمج وحتى 96 GB من DDR5 كلاً من Home Assistant وOllama وWhisper وFrigate في آنٍ واحد؛ ونموذج 7B يعمل بأريحية، ونماذج 13B–14B تتسع مع مزيد من الذاكرة. أما مميّزاته فهي منفذا 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink الذي يوصّل بطاقة رسوميات خارجية لاستدلال سريع فعلاً للنماذج الكبيرة. أسعار القائمة في المتجر الرسمي تمتد من $439.90 بنسخة barebones إلى $823.90 مع 32 GB و1 TB (جرى التحقق في 2026-10-25، ونفد من الصفحة الرسمية)؛ ويُدرج المتجر نفسه Beelink SER8 بسعر $799 مع 24 GB و1 TB، فالتكوينات تختلف، لكن UM890 Pro يضيف توسّعاً حقيقياً.',
         bullets: [
           'المعالج: Ryzen 9 8945HS — 8 أنوية / 16 خيطاً، Radeon 780M (12 CU، RDNA 3)',
           'الذاكرة: DDR5-5600 ثنائية القناة، منفذا SO-DIMM قابلان للترقية من المستخدم، حتى 96 GB',
           'LLM محلي (مقدَّر من المواصفات): 7B مريح؛ 13B–14B مع مزيد من الذاكرة؛ eGPU عبر OCuLink للنماذج الكبيرة السريعة',
           'الشبكة/التوسّع: منفذا 2.5GbE، وWi-Fi 6E، و2× USB4، ومنفذ eGPU عبر OCuLink',
-          'السعر ~$439 barebones / ~$649 مع 32 GB (أغسطس 2026، متقلب) — الفئة الأعلى القابلة للتوسّع',
+          'سعر القائمة في المتجر الرسمي: $439.90 barebones / $823.90 مع 32 GB + 1 TB (نفد عند آخر تحقق) — الفئة الأعلى القابلة للتوسّع',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -3170,7 +3170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أردت البدء بنموذج LLM محلي 7B على Home Assistant، ثم الترقية لاحقاً إلى استدلال سريع لنماذج 13B–30B عبر بطاقة رسوميات خارجية',
           'احتجت إلى أكثر من رابط شبكة واحد (2.5GbE مزدوج أو Wi-Fi 6E) لخادم منزلي موثوق',
           'قدّرت مساراً قابلاً للترقية من قِبل المستخدم — الذاكرة والتخزين كلاهما سهل الاستبدال',
-          'كان منفذ OCuLink لبطاقة رسوميات خارجية يستحق فارق $150–200 مقابل Beelink SER8',
+          'منفذ OCuLink لبطاقة رسوميات خارجية يستحق الفارق في السعر مقابل Beelink SER8',
           '**تخطَّ UM890 Pro إذا:**',
           'كنت ستشغّل نموذج 7B فقط ولا تخطط أبداً لبطاقة رسوميات خارجية — يوفّر Beelink SER8 المال بنفس أداء الكرت المدمج',
           'احتجت إلى جهاز مضغوط حقاً — ارتفاع 67 مم أضخم من معظم أجهزة mini PC',
@@ -3190,7 +3190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen 9 8945HS: 8 أنوية/16 خيطاً، وكرت Radeon 780M مدمج، وحتى 96 GB DDR5 على منفذَي SO-DIMM قابلين للترقية',
           'مميّزات مقابل [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review): منفذا 2.5GbE، وWi-Fi 6E، ومنفذ eGPU عبر OCuLink',
           'يوفّر OCuLink مساراً حقيقياً نحو استدلال سريع للنماذج الكبيرة ببطاقة رسوميات خارجية',
-          'بسعر يبدأ من ~$439 barebones وحتى ~$649 مع 32 GB — الفئة الأعلى القابلة للتوسّع',
+          'بسعر قائمة رسمي يبدأ من $439.90 barebones وحتى $823.90 مع 32 GB + 1 TB — الفئة الأعلى القابلة للتوسّع',
           'مصنوع في الصين — احسب إجراءات الاستيراد الأمريكية/الأوروبية لعام 2026 ضمن التكلفة النهائية (انظر ملاحظة الرسوم)',
         ],
       },
@@ -3229,36 +3229,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'أي تكوين تشتري؟',
         content: 'يأتي UM890 Pro بنسخة barebones وطرازات مُعدّة مسبقاً. يوضح هذا الجدول لمن يناسب كل مستوى.',
-        columns: ['التكوين', 'السعر النموذجي (أغسطس 2026)', 'الأفضل لـ', 'الخطوة التالية'],
+        columns: ['التكوين', 'سعر القائمة الرسمي', 'الأفضل لـ', 'الخطوة التالية'],
         rows: [
           {
             'التكوين': 'Barebones (بدون ذاكرة/SSD)',
-            'السعر النموذجي (أغسطس 2026)': '~$439',
-            'الأفضل لـ': 'لديك بالفعل ذاكرة SO-DIMM من نوع DDR5 وقرص NVMe؛ توفّر $50–100 مقابل النسخة المُعدّة',
-            'الخطوة التالية': 'أضف 32–64 GB DDR5 وقرص NVMe سريع بـ 1 TB (ميزانية ~$100–180 إجمالاً)',
+            'سعر القائمة الرسمي': '$439.90',
+            'الأفضل لـ': 'لديك بالفعل ذاكرة SO-DIMM من نوع DDR5 وقرص NVMe؛ أقل سعر قائمة بين الطرازات الرسمية',
+            'الخطوة التالية': 'أضف 32–64 GB DDR5 وقرص NVMe سريع بـ 1 TB (تحقق من أسعار الذاكرة والقرص الحالية)',
           },
           {
             'التكوين': '32 GB DDR5 + 1 TB SSD',
-            'السعر النموذجي (أغسطس 2026)': '~$649',
+            'سعر القائمة الرسمي': '$823.90',
             'الأفضل لـ': 'نموذج 7B مريح، توسّع دخول أساسي، شراء نظام واحد',
             'الخطوة التالية': 'رقّ إلى 64 GB ذاكرة لاحقاً أو أضف بطاقة رسوميات عبر OCuLink في السنة الأولى',
           },
           {
             'التكوين': '64 GB DDR5 + 1 TB SSD',
-            'السعر النموذجي (أغسطس 2026)': '~$799',
+            'سعر القائمة الرسمي': '$999.90',
             'الأفضل لـ': 'شغّل نماذج 13B–14B براحة، أو نموذج 7B مع مساحة كبيرة للنمو',
             'الخطوة التالية': 'مستعد لبطاقة رسوميات عبر OCuLink حين تريد سرعة 30B وأكبر',
           },
           {
             'التكوين': '96 GB DDR5 + 2 TB SSD',
-            'السعر النموذجي (أغسطس 2026)': '~$1,099',
+            'سعر القائمة الرسمي': 'تحقق من العرض الحالي',
             'الأفضل لـ': 'استنزف كامل إمكانية الكرت المدمج مع نماذج 30B، أو احتفظ للمستقبل مع منظومة تضخم',
             'الخطوة التالية': 'أضف فقط بطاقة رسوميات عبر OCuLink — لا حاجة لترقية الذاكرة لسنوات',
           },
         ],
         items: [
           '**مقدَّر من المواصفات، لا اختباراً.** كل مزيجات الذاكرة/النموذج تفترض Ollama مع تكميم Q4_K_M.',
-          'تتحرك الأسعار أسبوعاً تلو الآخر؛ تحقق من البائع قبل الشراء. هذه لقطات من أغسطس 2026.',
+          'تتحرك الأسعار أسبوعاً تلو الآخر؛ تحقق من البائع قبل الشراء. هذه الأرقام أسعار القائمة في المتجر الرسمي بالدولار (جرى التحقق في 2026-10-25)؛ طراز 96GB+2TB غير مدرج في الصفحة الرسمية، فتحقق من العرض الحالي.',
           'سرعة SSD تهم أقل للـ LLM المحلية مقابل إقلاع النظام؛ قرص SATA SSD يعمل بشكل جيد، NVMe أفضل.',
         ],
         affiliateLinks: [
@@ -3315,15 +3315,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الميزة': 'السعر (barebones)',
-            'UM890 Pro': '~$439',
-            'SER8': '~$449',
+            'UM890 Pro': '$439.90',
+            'SER8': 'تحقق من العرض الحالي',
             'الفائز': 'تعادل / تحقق من السعر الحالي',
           },
           {
             'الميزة': 'السعر (32 GB مُعدّ)',
-            'UM890 Pro': '~$649',
-            'SER8': '~$649',
-            'الفائز': 'تعادل',
+            'UM890 Pro': '$823.90',
+            'SER8': 'تحقق من العرض الحالي (24 GB + 1 TB: $799)',
+            'الفائز': 'تحقق من العرض الحالي',
           },
           {
             'الميزة': 'الأفضل لـ',
@@ -3387,11 +3387,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'trade-note',
         title: 'السعر والشحن والتوفر (2026)',
         content:
-          '**تتحرك الأسعار أسبوعاً تلو الآخر. تحقق من السعر الحالي لدى البائع قبل الشراء.** الأرقام أدناه لقطات من أغسطس 2026 وتعكس إجراءات الاستيراد الحالية على السلع من الصين.',
+          '**تتحرك الأسعار أسبوعاً تلو الآخر. تحقق من السعر الحالي لدى البائع قبل الشراء.** الأرقام أدناه أسعار القائمة في المتجر الرسمي بالدولار (جرى التحقق في 2026-10-25) وقد لا تشمل رسوم الاستيراد أو الضرائب المحلية.',
         items: [
-          'تتراوح الأسعار من نحو $439 barebones إلى $799 لطراز 64GB+1TB. يعتمد السعر الدقيق على البائع والدولة وجوازات الرسوم الحالية.',
+          'تتراوح أسعار القائمة الرسمية من $439.90 barebones إلى $999.90 لطراز 64GB+1TB ($823.90 لطراز 32GB+1TB). يعتمد السعر الدقيق على البائع والدولة وجوازات الرسوم الحالية.',
           'مصنوع في الصين: قد تؤثر الرسوم الأمريكية Section 301 على الإلكترونيات الاستهلاكية، ورسوم الاتحاد الأوروبي على الطرود منخفضة القيمة (أغسطس 2026 فما بعده)، وإجراءات مشابهة في مناطق أخرى على التكلفة النهائية.',
-          'التوفر عادة متاح من Minisforum.com والبائعين الرئيسيين في الولايات المتحدة والاتحاد الأوروبي ومنطقة آسيا والمحيط الهادئ.',
+          'يتغيّر التوفر؛ عند آخر تحقق (2026-10-25) أظهرت صفحة المنتج الرسمية نفاد جميع التكوينات، ولم يُتحقق هنا من أسعار ومخزون البائعين الآخرين.',
           'لا توجد برنامج عمولة: لا تربح هذه المراجعة عمولة. يرجع رابط CTA إلى Minisforum من أجل الشفافية في الأسعار.',
         ],
       },
@@ -3399,12 +3399,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: 'أين تشتري',
         content:
-          '**تحقق من السعر الحالي على Minisforum.com — الأسعار تتحرك بشكل متكرر وتعتمد على منطقتك والرسوم الجمركية.** يتغيّر توفر المخزون أيضاً: عند آخر تحقق لهذه المراجعة (أغسطس 2026)، أظهر Minisforum.com جميع تكوينات هذا الطراز على أنها نفدت من متاجره في الولايات المتحدة والمملكة المتحدة والاتحاد الأوروبي واليابان — لذا خصّص بعض الوقت أو تحقق من Amazon/Newegg كبديل.',
+          '**تحقق من السعر الحالي على Minisforum.com — الأسعار تتحرك بشكل متكرر وتعتمد على منطقتك والرسوم الجمركية.** يتغيّر توفر المخزون أيضاً: عند آخر تحقق (2026-10-25)، أظهرت صفحة المنتج الرسمية على Minisforum.com جميع التكوينات على أنها نفدت — لذا خصّص بعض الوقت أو تحقق من بائعين آخرين (لم يُتحقق هنا من أسعارهم ومخزونهم).',
         items: [
-          'Barebones (~$439) أرخص إذا كان لديك بالفعل ذاكرة SO-DIMM من نوع DDR5 وقرص NVMe.',
-          '32GB+1TB (~$649) خيار الدخول الأساسي؛ جاهز لتشغيل Home Assistant ونموذج 7B خارج الصندوق.',
-          '64GB+1TB (~$799) و96GB+2TB (~$1,099) متاحان للمشترين الذين يريدون مساحة أكبر للنموذج الآن.',
-          'متجر Minisforum.com المباشر نافدة كل طرازاته حالياً (تحقق في أغسطس 2026) — عرض Amazon وNewegg نفس تكوينات barebones و32GB سابقاً، أحياناً بأسعار مختلفة، فقارن قبل الشراء.',
+          'Barebones ($439.90 سعر القائمة الرسمي) أرخص إذا كان لديك بالفعل ذاكرة SO-DIMM من نوع DDR5 وقرص NVMe.',
+          '32GB+1TB ($823.90 سعر القائمة الرسمي) خيار الدخول الأساسي؛ جاهز لتشغيل Home Assistant ونموذج 7B خارج الصندوق.',
+          '64GB+1TB ($999.90 سعر القائمة الرسمي) يمنح مساحة أكبر للنموذج؛ أما طراز 96GB+2TB فلم يكن مدرجاً في الصفحة الرسمية عند آخر تحقق، فتحقق من العرض الحالي.',
+          'أظهرت صفحة Minisforum الرسمية نفاد جميع الطرازات (تحقق في 2026-10-25) — قد يعرض بائعون مثل Amazon وNewegg التكوينات نفسها بأسعار مختلفة (لم يُتحقق منها هنا)، فقارن قبل الشراء.',
           'انظر [قسم السعر والتوفر](#trade-note) للسياق الجمركي والفروقات الإقليمية.',
         ],
         affiliateLinks: [
@@ -3416,7 +3416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'بدائل تستحق النظر',
         content: '**إذا لم يكن UM890 Pro الخيار المناسب لك، فهذه تحيط به من حيث السعر والتوسّع.**',
         items: [
-          '[Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — الخيار القيمي بأداء كرت مدمج مشابه بسعر أقل، دون OCuLink وشبكة LAN مزدوجة',
+          '[Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — الخيار القيمي بأداء كرت مدمج مشابه، دون OCuLink وشبكة LAN مزدوجة',
           '[GEEKOM A9 Max](/ar/smart-home/geekom-a9-max-local-ai-review) — جهاز متميز بهامش كبير وسقف ذاكرة 128 GB وWi-Fi 7',
           '[Beelink EQ14](/ar/smart-home/beelink-eq14-local-ai-review) — جهاز Intel N150 اقتصادي لـ Home Assistant إضافةً إلى نموذج صغير',
           '[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — خيار N150 اقتصادي آخر بذاكرة قابلة للترقية',
@@ -3436,9 +3436,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'UM890 Pro أم Beelink SER8؟', a: 'في الاستخدام اليومي يؤديان بالمثل مع نموذج 7B. اختر UM890 Pro من أجل مسار eGPU عبر OCuLink، ومنفذَي 2.5GbE، وWi-Fi 6E، وسقف ذاكرة 96 GB؛ واختر SER8 لتوفير المال إذا لم تكن بحاجة إلى ذلك التوسّع.' },
           { q: 'أين يُصنَّع Minisforum UM890 Pro، وهل يؤثر ذلك في السعر؟', a: 'يُصنَّع في الصين. في 2026 قد تؤثر إجراءات الاستيراد الأمريكية (رسوم القسم 301، وانتهاء إعفاء de minimis دون 800 دولار) وإلغاء الاتحاد الأوروبي لعتبة 150 يورو للطرود منخفضة القيمة في التكلفة النهائية، لذا تحقق من السعر الحالي لدى البائع بدل الاعتماد على رقم ثابت.' },
           { q: 'هل يساعد UM890 Pro في امتثال GDPR للمنزل الذكي؟', a: 'نعم، بشكل غير مباشر. لأن استدلال الذكاء الاصطناعي ومعالجة الكلام تعمل محلياً على الجهاز، فإن صور الكاميرا والأوامر الصوتية وبيانات الاستشعار لا تترك شبكتك المنزلية — وهذا يدعم "الخصوصية من التصميم" وفق المادة 25 من GDPR وتقليل البيانات. لا توجد مزود سحابة تحتاج إلى عقد معالج بيانات بموجب المادة 28. للعاملين بالتجارة، تسهّل المعالجة المحلية أيضاً الامتثال لكتالوجات BSI Grundschutz.' },
-          { q: 'كم يكلف UM890 Pro في ألمانيا، وما الذي يجب مراعاته في الاستيراد؟', a: 'في متجر الاتحاد الأوروبي والبائعين الأوروبيين، يبدأ UM890 Pro من نحو €489 barebones ونحو €649 مع 32 GB (أغسطس 2026، متقلب). مع أغسطس 2026، انتهت عتبة الإعفاء المجانية البالغة 150 يورو للطرود منخفضة القيمة المباشرة من الصين وتُضاف رسوم معالجة صغيرة لكل طرد؛ اشترِ بالتالي بتفضيل من بائع أوروبي برضاء محلي لتجنب مفاجآت جمركية واستيراد.' },
+          { q: 'كم يكلف UM890 Pro في ألمانيا، وما الذي يجب مراعاته في الاستيراد؟', a: 'يُدرج المتجر الرسمي UM890 Pro بالدولار من $439.90 بنسخة barebones و$823.90 مع 32 GB و1 TB (أسعار أمريكية، جرى التحقق في 2026-10-25، ونفد عند آخر تحقق)؛ ولم تُتحقق الأسعار باليورو وقد تختلف. مع أغسطس 2026، انتهت عتبة الإعفاء المجانية البالغة 150 يورو للطرود منخفضة القيمة المباشرة من الصين وتُضاف رسوم معالجة صغيرة لكل طرد؛ اشترِ بالتالي بتفضيل من بائع أوروبي برضاء محلي لتجنب مفاجآت جمركية واستيراد.' },
           { q: 'هل 32 GB كافية، أم يجب أن أختار 64 GB؟', a: 'لنموذج 7B واحد، 32 GB كافية. إذا أردت تشغيل عدة نماذج، تطبيق آخر إلى جانب الـ LLMs (مثل Frigate)، أو التحضير لنماذج 13B–14B، انتقل إلى 64 GB. المستوى الأوسط يوفّر مساحة أكبر دون تكلفة 96 GB.' },
-          { q: 'هل تستحق نسخة barebones الشراء؟', a: 'نعم، إذا كان لديك بالفعل ذاكرة SO-DIMM من نوع DDR5 وقرص NVMe SSD (من ترقية سابقة أو شراء حاسوب محمول). تأتي nسخة barebones بـ $50–150 أرخص من طراز مُعدّ، لكنها تتطلب تجميع واختبار. إذا لم تكن لديك ذاكرة/SSD إضافية، فإن الخيارات المُعدّة مسبقاً أبسط.' },
+          { q: 'هل تستحق نسخة barebones الشراء؟', a: 'نعم، إذا كان لديك بالفعل ذاكرة SO-DIMM من نوع DDR5 وقرص NVMe SSD (من ترقية سابقة أو شراء حاسوب محمول). يبلغ سعر القائمة الرسمي لنسخة barebones $439.90 مقابل $823.90 لطراز 32 GB + 1 TB، لكنها تتطلب تجميع واختبار. إذا لم تكن لديك ذاكرة/SSD إضافية، فإن الخيارات المُعدّة مسبقاً أبسط.' },
           { q: 'هل يمكنني إضافة بطاقة NVIDIA عبر منفذ OCuLink؟', a: 'نعم. OCuLink (PCIe 4.0 x4) يدعم قواعد GPU خارجية يمكن أن تحتوي على بطاقة NVIDIA RTX أو مشابهة. ستحتاج إلى قاعدة OCuLink (مثل Sonnet eGPU)، وهذا يضيف $150–400. هذا هو مسار ترقية UM890 Pro الرئيسي لاستدلال سريع فعلاً بحجم 13B–30B.' },
           { q: 'هل هو جيد للعمل 24/7؟', a: 'نعم، استهلاك 45 W الأساسي و Ryzen 8945HS الفعال يجعلانه مناسباً لـ Home Assistant والاستخدام المستمر للـ LLM. لا يكون صامتاً تماماً (مروحة صغيرة تحت الحمل)، لكنه أهدأ من جهاز سطح المكتب. لم يتم إجراء أي اختبار متانة طويل الأجل من قبلنا.' },
         ],
@@ -3460,9 +3460,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'مراجعة Minisforum UM890 Pro (2026): خادم منزلي بذكاء اصطناعي محلي',
       reviewBody:
-        'جهاز Minisforum UM890 Pro هو حاسوب mini PC بمعالج Ryzen 9 8945HS مع كرت Radeon 780M مدمج، وحتى 96 GB DDR5، ومنفذ OCuLink لبطاقة رسوميات خارجية. يشغّل Home Assistant إضافةً إلى نموذج LLM محلي 7B وهو الجهاز القابل للتوسّع من الفئة الأعلى، بسعر يبدأ من نحو $439 بنسخة barebones (أغسطس 2026).',
+        'جهاز Minisforum UM890 Pro هو حاسوب mini PC بمعالج Ryzen 9 8945HS مع كرت Radeon 780M مدمج، وحتى 96 GB DDR5، ومنفذ OCuLink لبطاقة رسوميات خارجية. يشغّل Home Assistant إضافةً إلى نموذج LLM محلي 7B وهو الجهاز القابل للتوسّع من الفئة الأعلى، بسعر قائمة في المتجر الرسمي يبدأ من $439.90 بنسخة barebones.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',

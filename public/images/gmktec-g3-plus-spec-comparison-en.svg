@@ -41,9 +41,9 @@
   <line x1="18" y1="314" x2="782" y2="314" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 6: Price -->
-  <text x="34" y="340" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#49454F">Price (Jul 2026)</text>
-  <text x="400" y="344" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">~$180–230</text>
-  <text x="640" y="344" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">~$170–220</text>
+  <text x="34" y="340" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#49454F">Official list price</text>
+  <text x="400" y="344" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">~$400–500</text>
+  <text x="640" y="344" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">~$385</text>
 
   <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Both use the Intel N150. The G3 Plus trades a second 2.5GbE port for a 32 GB RAM ceiling — the EQ14 caps at 16 GB.</text>
 <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

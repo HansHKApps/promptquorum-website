@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-25',
@@ -17,9 +17,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'GEEKOM A9 Max Review (2026): Is It the Best Mini PC for Local AI?',
     seoTitle: 'GEEKOM A9 Max Review 2026 — Local AI & Home Server',
     intro:
-      'The GEEKOM A9 Max is a premium mini PC built on the AMD Ryzen AI 9 HX 370 or HX 470 (12 cores, Radeon 890M, up to 128 GB DDR5). For a local-AI smart home it is the headroom pick: it runs Home Assistant, Frigate, and a 7B–13B model on Ollama with room to spare. But its price has moved significantly since launch — GEEKOM\'s own current pricing runs $1,299–1,599 (August 2026, HX 370/32GB/1TB to HX 470/32GB/2TB), well above the $1,099–1,299 this review originally quoted. That gap changes the recommendation: this review verifies current specs and pricing against GEEKOM\'s own listing, sets honest expectations for local-LLM speed, and says exactly who should still buy it at today\'s price versus who should buy a Beelink SER8 instead.',
+      'The GEEKOM A9 Max is a premium mini PC built on the AMD Ryzen AI 9 HX 370 or HX 470 (12 cores, Radeon 890M, up to 128 GB DDR5). For a local-AI smart home it is the headroom pick: it runs Home Assistant, Frigate, and a 7B–13B model on Ollama with room to spare. But its price has moved significantly since launch — GEEKOM\'s own current pricing runs $1,299–1,599 (GEEKOM official store list price, HX 370/32GB/1TB to HX 470/32GB/2TB), well above the $1,099–1,299 this review originally quoted. That gap changes the recommendation: this review verifies current specs and pricing against GEEKOM\'s own listing, sets honest expectations for local-LLM speed, and says exactly who should still buy it at today\'s price versus who should buy a Beelink SER8 instead.',
     metaDescription:
-      'GEEKOM A9 Max review 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, up to 128 GB DDR5, current price by config. Runs Home Assistant + a 7B–13B local LLM — honest verdict on whether it is worth the premium.',
+      'GEEKOM A9 Max review 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, up to 128GB DDR5, config prices. Runs Home Assistant + 7B–13B local LLM; premium verdict.',
     twitterDescription:
       'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370/HX 470, 128 GB DDR5 ceiling, Wi-Fi 7, now $1,299–1,599. The NPU does not speed up LLMs — RAM and the iGPU do. Here is who should actually buy it.',
     readTime: '10 min read',
@@ -34,18 +34,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 mini pc',
     ],
     leadAnswerBlock:
-      '**Yes, but only if you need the headroom — the GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, up to 128 GB DDR5) is the most capable mini PC in this comparison set for local AI, and it now costs $1,299–1,599 (GEEKOM\'s own pricing, August 2026), roughly 1.5–2x a Beelink SER8.** Buy it for the 128 GB RAM ceiling, dual NVMe, Wi-Fi 7, and vision headroom. Don\'t buy it just because the spec sheet says "AI" — if you only need Home Assistant plus a 7B model, the SER8 does that for about half the price.',
+      '**Yes, but only if you need the headroom — the GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, up to 128 GB DDR5) is the most capable mini PC in this comparison set for local AI, and it now costs $1,299–1,599 (GEEKOM official store list price), roughly 1.6–2x the Beelink SER8\'s official $799 list price (24GB/1TB).** Buy it for the 128 GB RAM ceiling, dual NVMe, Wi-Fi 7, and vision headroom. Don\'t buy it just because the spec sheet says "AI" — if you only need Home Assistant plus a 7B model, the SER8 does that for well under two-thirds of the price.',
     quickAnswerTop: {
       en: {
         question: 'Is the GEEKOM A9 Max good for local AI and Home Assistant?',
         answer:
-          'Yes, but it is a premium pick whose price has risen since launch. The Ryzen AI 9 HX 370 (12 cores/24 threads), Radeon 890M iGPU, and up to 128 GB of DDR5 run Home Assistant, Ollama, Whisper, and Frigate on one box with large headroom — a 7B–8B model is comfortable and 13B–14B (4-bit) fits with room for context. Its NPU (80 TOPS total on HX 370, 86 TOPS on HX 470) helps vision tasks like Frigate but does not accelerate local LLMs, which run on the CPU and iGPU. GEEKOM currently prices it at $1,299–1,599 (August 2026, volatile) — roughly 1.5–2x a Beelink SER8 — so it is a headroom-and-future-proofing buy, not a value one.',
+          'Yes, but it is a premium pick whose price has risen since launch. The Ryzen AI 9 HX 370 (12 cores/24 threads), Radeon 890M iGPU, and up to 128 GB of DDR5 run Home Assistant, Ollama, Whisper, and Frigate on one box with large headroom — a 7B–8B model is comfortable and 13B–14B (4-bit) fits with room for context. Its NPU (80 TOPS total on HX 370, 86 TOPS on HX 470) helps vision tasks like Frigate but does not accelerate local LLMs, which run on the CPU and iGPU. GEEKOM currently prices it at $1,299–1,599 (GEEKOM official store list price, volatile) — roughly 1.6–2x the Beelink SER8\'s official $799 list price (24GB/1TB) — so it is a headroom-and-future-proofing buy, not a value one.',
         bullets: [
           'CPU: Ryzen AI 9 HX 370 or HX 470 — 12 cores / 24 threads, Radeon 890M (16 CU, RDNA 3.5)',
           'RAM: 32 GB DDR5 standard, two SO-DIMM slots, up to 128 GB (user-replaceable)',
           'Local LLM (estimated from specs): 7B–8B comfortable, 13B–14B 4-bit fits; 64–128 GB opens 30B–70B (slow, bandwidth-limited)',
           'NPU (80–86 TOPS total) helps Frigate vision, not LLM speed; the iGPU and RAM bandwidth set LLM latency',
-          'Price: GEEKOM lists $1,299 (HX370/32GB/1TB) to $1,599 (HX470/32GB/2TB) — a Beelink SER8 covers most needs for $799–849',
+          'Price: GEEKOM lists $1,299 (HX370/32GB/1TB) to $1,599 (HX470/32GB/2TB) — a Beelink SER8 covers most needs from $799 (24GB/1TB, official store list price)',
         ],
         updatedDate: '2026-08',
       },
@@ -86,9 +86,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'The A9 Max runs Home Assistant, Frigate, Whisper, and a 7B–13B local LLM on one box with real headroom',
           'Ryzen AI 9 HX 370/HX 470: 12 cores/24 threads, Radeon 890M iGPU, up to 128 GB DDR5 (two user-replaceable SO-DIMMs)',
-          'Price has risen sharply since launch — GEEKOM now lists $1,299–1,599 (August 2026), not the $1,099–1,299 this review originally quoted',
+          'Price has risen sharply since launch — GEEKOM now lists $1,299–1,599 (GEEKOM official store list price), not the $1,099–1,299 this review originally quoted',
           'Local-LLM speed comes from the iGPU and RAM bandwidth — the 80–86-TOPS NPU accelerates vision, not chat models',
-          'At current pricing it is roughly 1.5–2x a [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) ($799–849) — buy it for the 128 GB ceiling, dual NVMe, and Wi-Fi 7, not to save money',
+          'At current pricing it is roughly 1.6–2x a [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) ($799 for 24GB/1TB, official store list price) — buy it for the 128 GB ceiling, dual NVMe, and Wi-Fi 7, not to save money',
           'Made in China — factor 2026 US/EU import measures into landed cost (see trade note)',
         ],
       },
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spec: 'TDP', 'GEEKOM A9 Max': '54 W' },
           { Spec: 'Dimensions', 'GEEKOM A9 Max': '135 × 132 × 46 mm' },
           { Spec: 'OS', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2 (Linux/Proxmox install supported)' },
-          { Spec: 'Price (32GB/1TB, HX370)', 'GEEKOM A9 Max': '$1,299 (Aug 2026, GEEKOM listing — volatile, check current price)' },
+          { Spec: 'Price (32GB/1TB, HX370)', 'GEEKOM A9 Max': '$1,299 (GEEKOM official store list price — volatile, check current price)' },
         ],
         items: [
           'No discrete GPU: all AI inference runs on the CPU and Radeon 890M iGPU sharing system RAM.',
@@ -187,13 +187,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Which Configuration Should You Buy?',
         content:
           '**GEEKOM currently sells the A9 Max as HX370/32GB/1TB, HX370/32GB/2TB, and HX470/32GB/2TB, with 64GB and 128GB reachable via the user-replaceable SO-DIMM slots.** Prices below reflect GEEKOM\'s own listing — always verify the live price and any active discount code before buying.',
-        columns: ['Configuration', 'Approx. price (Aug 2026)', 'Best for'],
+        columns: ['Configuration', 'Official list price', 'Best for'],
         rows: [
-          { Configuration: 'HX370 / 32GB / 1TB', 'Approx. price (Aug 2026)': '$1,299', 'Best for': 'Home Assistant, office, development, small local models — buy if price is the priority' },
-          { Configuration: 'HX370 / 32GB / 2TB', 'Approx. price (Aug 2026)': '$1,399', 'Best for': 'Best overall starting point — enough RAM for most users, enough storage for several local models' },
-          { Configuration: 'HX470 / 32GB / 2TB ("2026 Edition")', 'Approx. price (Aug 2026)': '$1,599', 'Best for': 'Only if extra NPU TOPS or the newer CPU matter to you — doesn\'t speed up local LLMs' },
-          { Configuration: '64GB (self-upgraded)', 'Approx. price (Aug 2026)': 'Base price + SO-DIMM kit cost', 'Best for': 'Serious local AI — our preferred configuration if available at a reasonable premium' },
-          { Configuration: '128GB (self-upgraded)', 'Approx. price (Aug 2026)': 'Base price + SO-DIMM kit cost', 'Best for': 'Only with a specific workload that needs it — large models, multiple services, heavy RAG' },
+          { Configuration: 'HX370 / 32GB / 1TB', 'Official list price': '$1,299', 'Best for': 'Home Assistant, office, development, small local models — buy if price is the priority' },
+          { Configuration: 'HX370 / 32GB / 2TB', 'Official list price': '$1,399', 'Best for': 'Best overall starting point — enough RAM for most users, enough storage for several local models' },
+          { Configuration: 'HX470 / 32GB / 2TB ("2026 Edition")', 'Official list price': '$1,599', 'Best for': 'Only if extra NPU TOPS or the newer CPU matter to you — doesn\'t speed up local LLMs' },
+          { Configuration: '64GB (self-upgraded)', 'Official list price': 'Base price + SO-DIMM kit cost', 'Best for': 'Serious local AI — our preferred configuration if available at a reasonable premium' },
+          { Configuration: '128GB (self-upgraded)', 'Official list price': 'Base price + SO-DIMM kit cost', 'Best for': 'Only with a specific workload that needs it — large models, multiple services, heavy RAG' },
         ],
         items: [
           'GEEKOM frequently runs discount codes (e.g. 10–15% off) — check for an active promo before paying list price.',
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Factor: 'Storage', 'A9 Max': '2× NVMe (2280+2230)', 'Beelink SER8': '2× NVMe (1× SATA)' },
           { Factor: 'Networking', 'A9 Max': '2× 2.5GbE, Wi-Fi 7', 'Beelink SER8': '1× 2.5GbE, Wi-Fi 6' },
           { Factor: 'USB4', 'A9 Max': '2 ports', 'Beelink SER8': 'None' },
-          { Factor: 'Price (Aug 2026)', 'A9 Max': '$1,299–1,599', 'Beelink SER8': '$799–849 (32GB) / $1,239 (64GB)' },
+          { Factor: 'Price (official list)', 'A9 Max': '$1,299–1,599', 'Beelink SER8': '$799 (24GB/1TB) / 32GB: check listing' },
           { Factor: 'Best for', 'A9 Max': 'Maximum headroom, years of runway', 'Beelink SER8': 'Best value for HA + a 7B model' },
         ],
         items: [
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Our verdict: SER8 = better value. A9 Max = more capable machine.** That distinction matters — the SER8 covers many of the same workloads at substantially lower cost, while the A9 Max\'s real advantages are headroom, memory ceiling, and stronger integrated graphics, not raw "AI" branding.',
         ],
         affiliateLinks: [
-          { label: 'Compare with the Beelink SER8 review', url: '/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Compare with the Beelink SER8 review', url: '/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: 'from $799' },
         ],
       },
       vsUm890: {
@@ -231,12 +231,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max vs Minisforum UM890 Pro',
         content: '**Another comparison worth making before you buy.**',
         items: [
-          '**Buy the UM890 Pro** for value and local-AI capability with an OCuLink port that keeps a discrete-GPU upgrade path open — it runs from $439 barebones to about $649 with 32 GB, well under the A9 Max.',
+          '**Buy the UM890 Pro** for value and local-AI capability with an OCuLink port that keeps a discrete-GPU upgrade path open — its official store lists $439.90 barebone and $823.90 with 32 GB/1TB (currently sold out), still well under the A9 Max.',
           '**Buy the A9 Max** for maximum compact-system headroom and connectivity — its strongest differentiators are the Radeon 890M, up to 128 GB, Wi-Fi 7, dual 2.5GbE, and dual USB4 in a genuinely premium compact platform.',
           'If the UM890 Pro is substantially cheaper at purchase time — which it usually is — the value argument favors Minisforum. We\'re not going to hide that on this page; it actually makes the eventual A9 Max recommendation more credible when we do point to it.',
         ],
         affiliateLinks: [
-          { label: 'Read the Minisforum UM890 Pro review', url: '/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439–649' },
+          { label: 'Read the Minisforum UM890 Pro review', url: '/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439.90–823.90' },
         ],
       },
       worthIt: {
@@ -251,8 +251,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Current price': '~$1,500+', 'Our take': 'Compare very carefully against discrete-GPU desktop systems before buying' },
         ],
         items: [
-          '**Price rule we\'d apply ourselves:** if the A9 Max is only ~$100–200 more than the closest alternative at the moment you\'re buying, the extra headroom is usually worthwhile. If the premium is several hundred dollars — which is the current situation at GEEKOM\'s $1,299–1,599 pricing versus the SER8\'s $799–849 — compare the SER8 and UM890 Pro seriously before buying.',
-          'GEEKOM\'s pricing has moved up materially since this review first published — treat any dollar figure on this page as a snapshot dated August 2026, not a promise.',
+          '**Price rule we\'d apply ourselves:** if the A9 Max is only ~$100–200 more than the closest alternative at the moment you\'re buying, the extra headroom is usually worthwhile. If the premium is several hundred dollars — which is the current situation at GEEKOM\'s $1,299–1,599 pricing versus the SER8\'s $799 — compare the SER8 and UM890 Pro seriously before buying.',
+          'GEEKOM\'s pricing has moved up materially since this review first published — treat any dollar figure on this page as a snapshot of GEEKOM\'s official store list price, not a promise.',
         ],
       },
       prosCons: {
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'US: Section 301 tariffs on Chinese electronics remain in force in 2026; the separate 2025 "IEEPA" tariffs were struck down by the Supreme Court in February 2026 and replaced by a temporary, capped Section 122 tariff. The sub-$800 duty-free "de minimis" exemption for direct imports has also ended.',
           'EU (affects DE/FR): there is no broad EU tariff on finished mini PCs, but from July 2026 the €150 duty-free threshold on low-value direct-from-China parcels was removed and a small per-parcel handling fee added.',
-          'Net effect: verify the current price at the retailer before buying — the figures in this review are indicative and date-stamped August 2026.',
+          'Net effect: verify the current price at the retailer before buying — the figures in this review are indicative and based on GEEKOM\'s official store list price.',
         ],
       },
       whereToBuy: {
@@ -307,13 +307,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mini PC', 'Price (approx.)', 'RAM ceiling', 'Best for'],
         rows: [
           { 'Mini PC': 'GEEKOM A9 Max', 'Price (approx.)': '$1,299–1,599', 'RAM ceiling': '128 GB', 'Best for': 'Maximum headroom + connectivity' },
-          { 'Mini PC': 'Beelink SER8', 'Price (approx.)': '$799–849 (32GB) / $1,239 (64GB)', 'RAM ceiling': '~64–96 GB', 'Best for': 'Best value for HA + 7B model' },
-          { 'Mini PC': 'Minisforum UM890 Pro', 'Price (approx.)': '$439–649', 'RAM ceiling': '~96 GB', 'Best for': 'Value + eGPU upgrade path via OCuLink' },
-          { 'Mini PC': 'GMKtec G3 Plus', 'Price (approx.)': 'from €159.99 / $140–200', 'RAM ceiling': '32 GB', 'Best for': 'Budget HA hub, light AI as a bonus' },
-          { 'Mini PC': 'Beelink EQ14', 'Price (approx.)': '$189–199', 'RAM ceiling': '16 GB', 'Best for': 'Budget HA, dual 2.5GbE' },
+          { 'Mini PC': 'Beelink SER8', 'Price (approx.)': '$799 (24GB/1TB)', 'RAM ceiling': '~64–96 GB', 'Best for': 'Best value for HA + 7B model' },
+          { 'Mini PC': 'Minisforum UM890 Pro', 'Price (approx.)': '$439.90–823.90', 'RAM ceiling': '~96 GB', 'Best for': 'Value + eGPU upgrade path via OCuLink' },
+          { 'Mini PC': 'GMKtec G3 Plus', 'Price (approx.)': '$399.99–499.99 (list, sold out)', 'RAM ceiling': '32 GB', 'Best for': 'Budget HA hub, light AI as a bonus' },
+          { 'Mini PC': 'Beelink EQ14', 'Price (approx.)': '$385 (list, pre-order)', 'RAM ceiling': '16 GB', 'Best for': 'Budget HA, dual 2.5GbE' },
         ],
         items: [
-          '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — the value pick: Ryzen 7 8845HS, runs a 7B model comfortably for about half the A9 Max\'s price',
+          '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — the value pick: Ryzen 7 8845HS, runs a 7B model comfortably for well under two-thirds of the A9 Max\'s price',
           '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) — adds an OCuLink port for an external GPU if you want faster large-model inference later, at a much lower entry price',
           '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review) — budget Intel N150 box for Home Assistant plus a tiny model',
           '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — another budget N150 option with upgradeable RAM',
@@ -335,14 +335,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is the current price of the GEEKOM A9 Max?', a: 'GEEKOM\'s own store lists the HX370/32GB/1TB configuration at $1,299, HX370/32GB/2TB at $1,399, and the newer HX470/32GB/2TB "2026 Edition" at $1,599,. This is materially higher than the $1,099–1,299 this review originally quoted — check the live price and any active discount code before buying.' },
+          { q: 'What is the current price of the GEEKOM A9 Max?', a: 'GEEKOM\'s own store lists the HX370/32GB/1TB configuration at $1,299, HX370/32GB/2TB at $1,399, and the newer HX470/32GB/2TB "2026 Edition" at $1,599 (GEEKOM official store list prices). This is materially higher than the $1,099–1,299 this review originally quoted — check the live price and any active discount code before buying.' },
           { q: 'Can the GEEKOM A9 Max run local LLMs?', a: 'Yes. With 32 GB of RAM it comfortably runs a 7B–8B model on Ollama and fits a 13B–14B model at 4-bit quantization with room for context. This is estimated from its verified hardware rather than a fixed benchmark, because speed depends on the model, quantization, and backend.' },
           { q: 'How big a model fits in its RAM?', a: 'At 32 GB, up to a 13B–14B model at 4-bit is realistic. Upgrading to 64 GB opens 30B-class models, and the 128 GB ceiling lets a 70B model load at 4-bit — though very large models run slowly because the iGPU shares system memory and has no dedicated VRAM.' },
           { q: 'Does the NPU make local LLMs faster?', a: 'No. The NPU (80 TOPS total on HX370, 86 TOPS on HX470) accelerates vision and some Windows AI features, but mainstream local-LLM runtimes such as Ollama and llama.cpp run the model on the CPU and Radeon 890M iGPU. Treat the NPU as a benefit for Frigate camera detection, not chat-model speed.' },
           { q: 'Is the A9 Max good for Home Assistant and always-on use?', a: 'Yes. It runs Home Assistant, Ollama, Whisper, and Frigate together with headroom, and its 54 W sustained draw keeps always-on running cost modest. Its dual 2.5GbE and Wi-Fi 7 also suit a wired home-server role.' },
           { q: 'Is the RAM upgradeable?', a: 'Yes. The A9 Max uses two standard DDR5 SO-DIMM slots that are user-replaceable, so you can start at 32 GB and move to 64 GB or 128 GB later. This is a genuine advantage over mini PCs with soldered memory.' },
           { q: 'Is the A9 Max worth it over a Beelink SER8?', a: 'Only if you want the extra headroom. The SER8 runs Home Assistant plus a 7B model for roughly half to two-thirds of the A9 Max\'s current price. The A9 Max is worth the premium if you need the 128 GB RAM ceiling, dual NVMe, Wi-Fi 7, or vision headroom for the years ahead — not by default.' },
-          { q: 'Is the A9 Max better than the Minisforum UM890 Pro?', a: 'Not universally. The A9 Max\'s advantages are the Radeon 890M platform, 128 GB memory ceiling, Wi-Fi 7, dual 2.5GbE, and dual USB4. The UM890 Pro, at $439–649, is very often the better value choice — check current pricing on both before deciding.' },
+          { q: 'Is the A9 Max better than the Minisforum UM890 Pro?', a: 'Not universally. The A9 Max\'s advantages are the Radeon 890M platform, 128 GB memory ceiling, Wi-Fi 7, dual 2.5GbE, and dual USB4. The UM890 Pro, at $439.90 barebone to $823.90 with 32 GB (currently sold out at the official store), is very often the better value choice — check current pricing on both before deciding.' },
           { q: 'Can it run 70B models?', a: 'A 128 GB configuration gives you enough system memory to experiment with large quantized models, but that does not mean 70B inference will be fast. If 70B performance is a primary requirement, a dedicated high-VRAM GPU system is generally the better choice.' },
           { q: 'Where is the GEEKOM A9 Max made, and does that affect price?', a: 'It is manufactured in China. In 2026 US import measures (Section 301 tariffs, the end of the sub-$800 de minimis exemption) and the EU removal of the €150 low-value parcel exemption can affect landed cost, so check the current retailer price rather than relying on a fixed number.' },
         ],
@@ -366,9 +366,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GEEKOM A9 Max Review (2026): Is It the Best Mini PC for Local AI?',
       reviewBody:
-        'The GEEKOM A9 Max is a premium Ryzen AI 9 mini PC that runs Home Assistant plus a 7B–13B local LLM with a 128 GB RAM ceiling. Priced at $1,299–1,599 (up from $1,099–1,299 at launch), it is a headroom and future-proofing pick, roughly 1.5–2x a Beelink SER8.',
+        'The GEEKOM A9 Max is a premium Ryzen AI 9 mini PC that runs Home Assistant plus a 7B–13B local LLM with a 128 GB RAM ceiling. Priced at $1,299–1,599 (up from $1,099–1,299 at launch), it is a headroom and future-proofing pick, roughly 1.6–2x a Beelink SER8.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -394,8 +394,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-de.webp',
@@ -403,11 +403,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'GEEKOM-A9-Max-Rezension (2026): Der beste Mini-PC für lokale KI?',
     seoTitle: 'GEEKOM-A9-Max-Rezension 2026 — Lokale KI & Heimserver',
     intro:
-      'Der GEEKOM A9 Max ist ein Premium-Mini-PC auf Basis des AMD Ryzen AI 9 HX 370 oder HX 470 (12 Kerne, Radeon 890M, bis zu 128 GB DDR5). Für ein Smart Home mit lokaler KI ist er die Wahl mit maximalem Spielraum: Er betreibt Home Assistant, Frigate und ein 7B–13B-Modell auf Ollama mit Reserve. Doch der Preis ist seit dem Launch deutlich gestiegen — GEEKOMs eigener aktueller Preis liegt bei 1.399–1.899 € (August 2026, je nach Konfiguration und Rabattcode), deutlich über den 1.199–1.399 €, die diese Rezension ursprünglich nannte. Diese Lücke verändert die Empfehlung: Diese Rezension prüft aktuelle Spezifikationen und Preise gegen GEEKOMs eigenen Store, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und sagt genau, wer ihn zum heutigen Preis noch kaufen sollte — und wer stattdessen zum Beelink SER8 greifen sollte.',
+      'Der GEEKOM A9 Max ist ein Premium-Mini-PC auf Basis des AMD Ryzen AI 9 HX 370 oder HX 470 (12 Kerne, Radeon 890M, bis zu 128 GB DDR5). Für ein Smart Home mit lokaler KI ist er die Wahl mit maximalem Spielraum: Er betreibt Home Assistant, Frigate und ein 7B–13B-Modell auf Ollama mit Reserve. Doch der Preis ist seit dem Launch deutlich gestiegen — GEEKOMs offizieller Store-Listenpreis in den USA liegt bei 1.299–1.599 $ (je nach Konfiguration und Rabattcode), deutlich über den 1.099–1.299 $, die diese Rezension ursprünglich nannte. Diese Lücke verändert die Empfehlung: Diese Rezension prüft aktuelle Spezifikationen und Preise gegen GEEKOMs eigenen Store, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und sagt genau, wer ihn zum heutigen Preis noch kaufen sollte — und wer stattdessen zum Beelink SER8 greifen sollte.',
     metaDescription:
-      'GEEKOM-A9-Max-Rezension 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis zu 128 GB DDR5, aktueller Preis je Konfiguration. Betreibt Home Assistant plus ein 7B–13B-LLM — ehrliches Urteil, ob sich der Aufpreis lohnt.',
+      'GEEKOM A9 Max Rezension 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis 128 GB DDR5, Preis je Variante. Home Assistant + 7B–13B-LLM, Urteil zum Aufpreis.',
     twitterDescription:
-      'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370/HX 470, 128-GB-DDR5-Obergrenze, Wi-Fi 7, jetzt ab 1.399 €. Der NPU beschleunigt keine LLMs — RAM und iGPU tun das. Wer ihn wirklich kaufen sollte.',
+      'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370/HX 470, 128-GB-DDR5-Obergrenze, Wi-Fi 7, jetzt ab 1.299 $ (US-Listenpreis). Der NPU beschleunigt keine LLMs — RAM und iGPU tun das. Wer ihn wirklich kaufen sollte.',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die entscheiden, ob sich der Aufpreis des GEEKOM A9 Max für einen lokalen KI-Heimserver lohnt',
@@ -420,18 +420,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 mini pc',
     ],
     leadAnswerBlock:
-      '**Ja, aber nur wenn Sie den Spielraum brauchen — der GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis zu 128 GB DDR5) ist der leistungsfähigste Mini-PC in diesem Vergleich für lokale KI, und er kostet jetzt 1.399–1.899 € (GEEKOMs eigener Preis, August 2026), etwa das 1,4- bis 1,9-Fache eines Beelink SER8.** Kaufen Sie ihn für die 128-GB-RAM-Obergrenze, doppeltes NVMe, Wi-Fi 7 und Vision-Spielraum. Kaufen Sie ihn nicht nur, weil auf dem Datenblatt „KI" steht — wenn Sie nur Home Assistant plus ein 7B-Modell brauchen, erledigt das der SER8 für etwa die Hälfte.',
+      '**Ja, aber nur wenn Sie den Spielraum brauchen — der GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis zu 128 GB DDR5) ist der leistungsfähigste Mini-PC in diesem Vergleich für lokale KI, und er kostet jetzt 1.299–1.599 $ (Listenpreis im offiziellen GEEKOM-Store), etwa das 1,6- bis 2-Fache des SER8-Listenpreises von 799 $ (24GB/1TB).** Kaufen Sie ihn für die 128-GB-RAM-Obergrenze, doppeltes NVMe, Wi-Fi 7 und Vision-Spielraum. Kaufen Sie ihn nicht nur, weil auf dem Datenblatt „KI" steht — wenn Sie nur Home Assistant plus ein 7B-Modell brauchen, erledigt das der SER8 für deutlich weniger als zwei Drittel des Preises.',
     quickAnswerTop: {
       de: {
         question: 'Ist der GEEKOM A9 Max gut für lokale KI und Home Assistant?',
         answer:
-          'Ja, aber er ist eine Premium-Wahl, deren Preis seit dem Launch gestiegen ist. Der Ryzen AI 9 HX 370 (12 Kerne/24 Threads), die Radeon-890M-iGPU und bis zu 128 GB DDR5 betreiben Home Assistant, Ollama, Whisper und Frigate auf einer Box mit großem Spielraum — ein 7B–8B-Modell läuft komfortabel, und 13B–14B (4-Bit) passt mit Raum für Kontext. Der NPU (80 TOPS gesamt beim HX 370, 86 TOPS beim HX 470) hilft bei Vision-Aufgaben wie Frigate, beschleunigt aber keine lokalen LLMs. GEEKOM verlangt aktuell 1.399–1.899 € (August 2026, schwankend) — etwa das 1,4- bis 1,9-Fache eines Beelink SER8 —, ist also ein Kauf für Spielraum und Zukunftssicherheit, kein Preis-Leistungs-Kauf.',
+          'Ja, aber er ist eine Premium-Wahl, deren Preis seit dem Launch gestiegen ist. Der Ryzen AI 9 HX 370 (12 Kerne/24 Threads), die Radeon-890M-iGPU und bis zu 128 GB DDR5 betreiben Home Assistant, Ollama, Whisper und Frigate auf einer Box mit großem Spielraum — ein 7B–8B-Modell läuft komfortabel, und 13B–14B (4-Bit) passt mit Raum für Kontext. Der NPU (80 TOPS gesamt beim HX 370, 86 TOPS beim HX 470) hilft bei Vision-Aufgaben wie Frigate, beschleunigt aber keine lokalen LLMs. GEEKOM verlangt aktuell 1.299–1.599 $ (Listenpreis im offiziellen Store, schwankend) — etwa das 1,6- bis 2-Fache des SER8-Listenpreises von 799 $ (24GB/1TB) —, ist also ein Kauf für Spielraum und Zukunftssicherheit, kein Preis-Leistungs-Kauf.',
         bullets: [
           'CPU: Ryzen AI 9 HX 370 oder HX 470 — 12 Kerne / 24 Threads, Radeon 890M (16 CU, RDNA 3.5)',
           'RAM: 32 GB DDR5 im Standard, zwei SO-DIMM-Steckplätze, bis zu 128 GB (austauschbar)',
           'Lokales LLM (aus Specs geschätzt): 7B–8B komfortabel, 13B–14B in 4-Bit passt; 64–128 GB öffnet 30B–70B (langsam, bandbreitenbegrenzt)',
           'NPU (80–86 TOPS gesamt) hilft bei Frigate-Vision, nicht bei LLM-Geschwindigkeit; iGPU und RAM-Bandbreite bestimmen die LLM-Latenz',
-          'Preis: GEEKOM listet 1.399–1.899 € je nach Konfiguration (Stand August 2026) — ein Beelink SER8 deckt die meisten Bedürfnisse für 999 €',
+          'Preis: GEEKOM listet 1.299–1.599 $ je nach Konfiguration (offizieller Store-Listenpreis) — ein Beelink SER8 deckt die meisten Bedürfnisse ab 799 $ (24GB/1TB, offizieller Listenpreis)',
         ],
         updatedDate: '2026-08',
       },
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Der GEEKOM A9 Max ist ein Premium-Mini-PC mit Ryzen AI 9, jetzt ab 1.399 €, der Home Assistant plus ein 7B–13B-lokales LLM mit einer 128-GB-RAM-Obergrenze betreibt, die ein Beelink SER8 nicht erreicht.' },
+      { type: 'one-sentence', content: 'Der GEEKOM A9 Max ist ein Premium-Mini-PC mit Ryzen AI 9, jetzt ab 1.299 $, der Home Assistant plus ein 7B–13B-lokales LLM mit einer 128-GB-RAM-Obergrenze betreibt, die ein Beelink SER8 nicht erreicht.' },
       { type: 'plain-terms', content: 'Ein Mini-PC ist ein kleiner, leiser Computer, der den ganzen Tag laufen kann. Der A9 Max ist ein High-End-Modell: schneller Prozessor, starke integrierte Grafik und Platz für viel Speicher. Diese Speicherobergrenze ist der Grund, warum er größere KI-Modelle betreiben kann als günstigere Boxen — aber er kostet inzwischen deutlich mehr als beim Launch, und sein dedizierter KI-Chip (der NPU) hilft bei der Kameraerkennung, nicht beim Chat-Modell.' },
     ],
     sections: {
@@ -472,9 +472,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Der A9 Max betreibt Home Assistant, Frigate, Whisper und ein 7B–13B-lokales LLM auf einer Box mit echtem Spielraum',
           'Ryzen AI 9 HX 370/HX 470: 12 Kerne/24 Threads, Radeon-890M-iGPU, bis zu 128 GB DDR5 (zwei austauschbare SO-DIMMs)',
-          'Der Preis ist seit dem Launch deutlich gestiegen — GEEKOM verlangt jetzt 1.399–1.899 € (August 2026), nicht die 1.199–1.399 €, die diese Rezension ursprünglich nannte',
+          'Der Preis ist seit dem Launch deutlich gestiegen — GEEKOM verlangt jetzt 1.299–1.599 $ (offizieller Store-Listenpreis), nicht die 1.099–1.299 $, die diese Rezension ursprünglich nannte',
           'Lokale-LLM-Geschwindigkeit kommt von iGPU und RAM-Bandbreite — der 80–86-TOPS-NPU beschleunigt Vision, nicht Chat-Modelle',
-          'Zum aktuellen Preis kostet er etwa das 1,4- bis 1,9-Fache eines [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) (999 €) — kaufen Sie ihn für die 128-GB-Obergrenze, doppeltes NVMe und Wi-Fi 7, nicht um zu sparen',
+          'Zum aktuellen Preis kostet er etwa das 1,6- bis 2-Fache eines [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) (799 $ für 24GB/1TB, offizieller Listenpreis) — kaufen Sie ihn für die 128-GB-Obergrenze, doppeltes NVMe und Wi-Fi 7, nicht um zu sparen',
           'In China gefertigt — kalkulieren Sie die US-/EU-Importmaßnahmen 2026 in die Endkosten ein (siehe Zollhinweis)',
         ],
       },
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Kaufen Sie den GEEKOM A9 Max, wenn Sie einen einzelnen Mini-PC wollen, der ein Smart Home mit lokaler KI über Jahre mit Spielraum betreibt, und Sie bereit sind, den aktuellen Preisaufschlag gegenüber einem Beelink SER8 für diesen Spielraum zu zahlen.** Sein 12-Kern-Ryzen-AI-9, die Radeon-890M-iGPU und die 128-GB-RAM-Obergrenze machen ihn zur zukunftssichersten Box in diesem Vergleich. Wenn Ihr Ziel die günstigste fähige Maschine ist, lesen Sie stattdessen den SER8-Test — der A9 Max ist für eine Zentrale plus ein einzelnes 7B-Modell überdimensioniert.\n\n**Kaufen Sie den A9 Max nicht nur, weil „KI" draufsteht.** Wenn Sie nur Home Assistant und ein paar Zigbee-Geräte wollen, ist er überdimensioniert. Wenn Sie Home Assistant plus lokale KI plus Frigate plus Speicher plus Automatisierung auf einer Maschine wollen, wird er deutlich leichter zu rechtfertigen — aber nur zu einem Preis, den Sie tatsächlich geprüft haben, nicht zu der Zahl, die diese Seite beim Launch hatte.',
         affiliateLinks: [
-          { label: 'Aktuellen GEEKOM-A9-Max-Preis prüfen', url: 'https://www.geekom.de/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1.399–1.899 €' },
+          { label: 'Aktuellen GEEKOM-A9-Max-Preis prüfen', url: 'https://www.geekom.de/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1.299–1.599 $' },
         ],
       },
       whoShouldBuy: {
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spezifikation: 'TDP', 'GEEKOM A9 Max': '54 W' },
           { Spezifikation: 'Abmessungen', 'GEEKOM A9 Max': '135 × 132 × 46 mm' },
           { Spezifikation: 'Betriebssystem', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2 (Linux/Proxmox-Installation unterstützt)' },
-          { Spezifikation: 'Preis (32GB/2TB, HX370)', 'GEEKOM A9 Max': 'ab 1.399 € (Aug. 2026, geizhals.de — schwankend, aktuellen Preis prüfen)' },
+          { Spezifikation: 'Preis (32GB/2TB, HX370)', 'GEEKOM A9 Max': 'ab 1.399 $ (offizieller Store-Listenpreis — schwankend, aktuellen Preis prüfen)' },
         ],
         items: [
           'Keine dedizierte GPU: die gesamte KI-Inferenz läuft auf der CPU und der Radeon-890M-iGPU, die sich den System-RAM teilen.',
@@ -572,21 +572,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'Welche Konfiguration sollten Sie kaufen?',
         content:
-          '**GEEKOM verkauft den A9 Max aktuell als HX370/32GB/1TB, HX370/32GB/2TB und HX470/32GB/2TB, wobei 64 GB und 128 GB über die austauschbaren SO-DIMM-Steckplätze erreichbar sind.** Die Preise unten spiegeln GEEKOMs eigenes Angebot und geizhals.de, Stand August 2026 — prüfen Sie vor dem Kauf immer den Live-Preis und einen eventuell aktiven Rabattcode.',
-        columns: ['Konfiguration', 'Ca. Preis (Aug. 2026)', 'Am besten für'],
+          '**GEEKOM verkauft den A9 Max aktuell als HX370/32GB/1TB, HX370/32GB/2TB und HX470/32GB/2TB, wobei 64 GB und 128 GB über die austauschbaren SO-DIMM-Steckplätze erreichbar sind.** Die Preise unten sind US-Listenpreise aus GEEKOMs offiziellem Store (am 2026-10-25 geprüft); Preise in Ihrem Land weichen ab — prüfen Sie vor dem Kauf immer den Live-Preis und einen eventuell aktiven Rabattcode.',
+        columns: ['Konfiguration', 'Listenpreis (US-Store)', 'Am besten für'],
         rows: [
-          { Konfiguration: 'HX370 / 32GB / 1TB', 'Ca. Preis (Aug. 2026)': 'ab ca. 1.399 €', 'Am besten für': 'Home Assistant, Büro, Entwicklung, kleine lokale Modelle — kaufen, wenn der Preis Priorität hat' },
-          { Konfiguration: 'HX370 / 32GB / 2TB', 'Ca. Preis (Aug. 2026)': 'ca. 1.399–1.563 €', 'Am besten für': 'Bester Gesamteinstieg — genug RAM für die meisten Nutzer, genug Speicher für mehrere lokale Modelle' },
-          { Konfiguration: 'HX470 / 32GB / 2TB („2026 Edition")', 'Ca. Preis (Aug. 2026)': 'ca. 1.563–1.899 €', 'Am besten für': 'Nur bei Interesse an zusätzlichen NPU-TOPS oder neuerer CPU — beschleunigt lokale LLMs nicht' },
-          { Konfiguration: '64 GB (selbst aufgerüstet)', 'Ca. Preis (Aug. 2026)': 'Grundpreis + Kosten für SO-DIMM-Kit', 'Am besten für': 'Ernsthafte lokale KI — unsere bevorzugte Konfiguration, wenn zu vertretbarem Aufpreis verfügbar' },
-          { Konfiguration: '128 GB (selbst aufgerüstet)', 'Ca. Preis (Aug. 2026)': 'Grundpreis + Kosten für SO-DIMM-Kit', 'Am besten für': 'Nur bei einem konkreten Workload, der es braucht — große Modelle, mehrere Dienste, umfangreiches RAG' },
+          { Konfiguration: 'HX370 / 32GB / 1TB', 'Listenpreis (US-Store)': '1.299 $', 'Am besten für': 'Home Assistant, Büro, Entwicklung, kleine lokale Modelle — kaufen, wenn der Preis Priorität hat' },
+          { Konfiguration: 'HX370 / 32GB / 2TB', 'Listenpreis (US-Store)': '1.399 $', 'Am besten für': 'Bester Gesamteinstieg — genug RAM für die meisten Nutzer, genug Speicher für mehrere lokale Modelle' },
+          { Konfiguration: 'HX470 / 32GB / 2TB („2026 Edition")', 'Listenpreis (US-Store)': '1.599 $', 'Am besten für': 'Nur bei Interesse an zusätzlichen NPU-TOPS oder neuerer CPU — beschleunigt lokale LLMs nicht' },
+          { Konfiguration: '64 GB (selbst aufgerüstet)', 'Listenpreis (US-Store)': 'Grundpreis + Kosten für SO-DIMM-Kit', 'Am besten für': 'Ernsthafte lokale KI — unsere bevorzugte Konfiguration, wenn zu vertretbarem Aufpreis verfügbar' },
+          { Konfiguration: '128 GB (selbst aufgerüstet)', 'Listenpreis (US-Store)': 'Grundpreis + Kosten für SO-DIMM-Kit', 'Am besten für': 'Nur bei einem konkreten Workload, der es braucht — große Modelle, mehrere Dienste, umfangreiches RAG' },
         ],
         items: [
           'GEEKOM bietet häufig Rabattcodes (z. B. 10–15 % Rabatt) an — prüfen Sie vor dem Kauf zum Listenpreis auf eine aktive Aktion.',
           'Kaufen Sie nicht 128 GB nur, weil das Datenblatt es unterstützt — kalkulieren Sie das RAM-Upgrade und gleichen Sie es zuerst mit einem konkreten Workload ab.',
         ],
         affiliateLinks: [
-          { label: 'Preis für HX370/32GB/2TB prüfen', url: 'https://www.geekom.de/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max HX370/32GB/2TB', productCategory: 'Mini PC', priceRange: 'ab 1.399 €' },
+          { label: 'Preis für HX370/32GB/2TB prüfen', url: 'https://www.geekom.de/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max HX370/32GB/2TB', productCategory: 'Mini PC', priceRange: '1.399 $' },
         ],
       },
       vsSer8: {
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Faktor: 'Speicher', 'A9 Max': '2× NVMe (2280+2230)', 'Beelink SER8': '2× NVMe (1× SATA)' },
           { Faktor: 'Netzwerk', 'A9 Max': '2× 2,5GbE, Wi-Fi 7', 'Beelink SER8': '1× 2,5GbE, Wi-Fi 6' },
           { Faktor: 'USB4', 'A9 Max': '2 Anschlüsse', 'Beelink SER8': 'Keine' },
-          { Faktor: 'Preis (Aug. 2026)', 'A9 Max': '1.399–1.899 €', 'Beelink SER8': '999 € (32GB) / 1.499 € (64GB)' },
+          { Faktor: 'Preis (Listenpreis)', 'A9 Max': '1.299–1.599 $', 'Beelink SER8': '799 $ (24GB/1TB) / 32GB: Listing prüfen' },
           { Faktor: 'Am besten für', 'A9 Max': 'Maximaler Spielraum, jahrelange Reserve', 'Beelink SER8': 'Beste Preis-Leistung für HA + 7B-Modell' },
         ],
         items: [
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Unser Urteil: SER8 = bessere Preis-Leistung. A9 Max = leistungsfähigere Maschine.** Diese Unterscheidung ist wichtig — der SER8 deckt viele derselben Workloads zu deutlich geringeren Kosten ab, während die echten Vorteile des A9 Max Spielraum, Speicherobergrenze und stärkere integrierte Grafik sind, nicht bloßes „KI"-Marketing.',
         ],
         affiliateLinks: [
-          { label: 'Mit dem Beelink-SER8-Test vergleichen', url: '/de/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Mit dem Beelink-SER8-Test vergleichen', url: '/de/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: 'ab 799 $' },
         ],
       },
       vsUm890: {
@@ -617,12 +617,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max vs. Minisforum UM890 Pro',
         content: '**Ein weiterer Vergleich, den Sie vor dem Kauf anstellen sollten.**',
         items: [
-          '**Kaufen Sie den UM890 Pro** für Preis-Leistung und lokale KI-Fähigkeit mit einem OCuLink-Anschluss, der einen Aufrüstpfad zu einer dedizierten GPU offenhält — er kostet ab 489 € als Barebone bis ca. 649 € mit 32 GB, deutlich unter dem A9 Max.',
+          '**Kaufen Sie den UM890 Pro** für Preis-Leistung und lokale KI-Fähigkeit mit einem OCuLink-Anschluss, der einen Aufrüstpfad zu einer dedizierten GPU offenhält — im offiziellen Store kostet er 439,90 $ als Barebone und 823,90 $ mit 32 GB/1TB (derzeit ausverkauft), weiterhin deutlich unter dem A9 Max.',
           '**Kaufen Sie den A9 Max** für maximalen Spielraum und Konnektivität in einem kompakten System — seine stärksten Unterscheidungsmerkmale sind die Radeon 890M, bis zu 128 GB, Wi-Fi 7, doppeltes 2,5GbE und doppeltes USB4 in einer echt hochwertigen kompakten Plattform.',
           'Wenn der UM890 Pro zum Kaufzeitpunkt deutlich günstiger ist — was meist der Fall ist —, spricht das Preis-Leistungs-Argument für Minisforum. Das verstecken wir auf dieser Seite nicht; es macht die eventuelle A9-Max-Empfehlung glaubwürdiger, wenn wir doch darauf verweisen.',
         ],
         affiliateLinks: [
-          { label: 'Den Minisforum-UM890-Pro-Test lesen', url: '/de/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '489–649 €' },
+          { label: 'Den Minisforum-UM890-Pro-Test lesen', url: '/de/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '439,90–823,90 $' },
         ],
       },
       worthIt: {
@@ -631,14 +631,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Dieser Abschnitt sollte die tatsächliche Kaufentscheidung leiten — kalkulieren Sie die Alternative, bevor Sie kaufen.**',
         columns: ['Aktueller Preis', 'Unsere Einschätzung'],
         rows: [
-          { 'Aktueller Preis': '~550–650 €', 'Unsere Einschätzung': 'Leichte Empfehlung — aber so günstig bietet GEEKOM ihn aktuell nicht; diese Stufe gehört SER8/UM890 Pro' },
-          { 'Aktueller Preis': '~750–950 €', 'Unsere Einschätzung': 'Starke Empfehlung für ernsthafte lokale KI, falls Sie ihn zu diesem Preis finden' },
-          { 'Aktueller Preis': '~1.000–1.400 €', 'Unsere Einschätzung': 'Nur bei konkretem Bedarf an RAM-/Konnektivitäts-Spielraum — GEEKOMs aktueller Einstiegspreis' },
-          { 'Aktueller Preis': '~1.500 €+', 'Unsere Einschätzung': 'Vor dem Kauf sehr genau mit Desktop-Systemen mit dedizierter GPU vergleichen' },
+          { 'Aktueller Preis': '~600–700 $', 'Unsere Einschätzung': 'Leichte Empfehlung — aber so günstig bietet GEEKOM ihn aktuell nicht; diese Stufe gehört SER8/UM890 Pro' },
+          { 'Aktueller Preis': '~800–1.000 $', 'Unsere Einschätzung': 'Starke Empfehlung für ernsthafte lokale KI, falls Sie ihn zu diesem Preis finden' },
+          { 'Aktueller Preis': '~1.100–1.300 $', 'Unsere Einschätzung': 'Nur bei konkretem Bedarf an RAM-/Konnektivitäts-Spielraum — GEEKOMs aktueller Einstiegspreis' },
+          { 'Aktueller Preis': '~1.500 $+', 'Unsere Einschätzung': 'Vor dem Kauf sehr genau mit Desktop-Systemen mit dedizierter GPU vergleichen' },
         ],
         items: [
-          '**Preisregel, die wir selbst anwenden würden:** Wenn der A9 Max zum Kaufzeitpunkt nur ~100–200 € mehr kostet als die nächstliegende Alternative, lohnt sich der zusätzliche Spielraum meist. Wenn der Aufpreis mehrere Hundert Euro beträgt — was bei GEEKOMs aktuellem Preis von 1.399–1.899 € gegenüber den 999 € des SER8 der Fall ist —, vergleichen Sie SER8 und UM890 Pro ernsthaft, bevor Sie kaufen.',
-          'GEEKOMs Preise sind seit der Erstveröffentlichung dieser Rezension deutlich gestiegen — behandeln Sie jede Zahl auf dieser Seite als Momentaufnahme vom August 2026, nicht als Versprechen.',
+          '**Preisregel, die wir selbst anwenden würden:** Wenn der A9 Max zum Kaufzeitpunkt nur ~100–200 $ mehr kostet als die nächstliegende Alternative, lohnt sich der zusätzliche Spielraum meist. Wenn der Aufpreis mehrere Hundert Dollar beträgt — was bei GEEKOMs aktuellem Preis von 1.299–1.599 $ gegenüber den 799 $ des SER8 der Fall ist —, vergleichen Sie SER8 und UM890 Pro ernsthaft, bevor Sie kaufen.',
+          'GEEKOMs Preise sind seit der Erstveröffentlichung dieser Rezension deutlich gestiegen — behandeln Sie jede Zahl auf dieser Seite als Momentaufnahme der US-Listenpreise im offiziellen Store, nicht als Versprechen.',
         ],
       },
       prosCons: {
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7, doppeltes 2,5GbE, zwei USB4-Anschlüsse — gut vernetzt für einen Heimserver',
           'Läuft mit moderaten 54 W für eine Dauerbetrieb-Box',
           '**Nachteile**',
-          'Teuer — 1.399–1.899 € Stand August 2026, deutlich über der ursprünglichen Zahl von 1.199–1.399 € in dieser Rezension',
+          'Teuer — 1.299–1.599 $ (offizieller Store-Listenpreis), deutlich über der ursprünglichen Zahl von 1.099–1.299 $ in dieser Rezension',
           'Der NPU beschleunigt keine lokalen LLMs — ein verbreiteter Irrtum, den diese Seite teilweise richtigstellen soll',
           'iGPU- und geteiltes-Speicher-Design ist für sehr große Modelle bandbreitenbegrenzt',
           'Aktive Kühlung — trotz Marketing-Sprache nicht lautlos unter Dauerlast',
@@ -668,20 +668,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'USA: Die Section-301-Zölle auf chinesische Elektronik gelten 2026 weiterhin; die separaten „IEEPA"-Zölle von 2025 wurden im Februar 2026 vom Obersten Gerichtshof gekippt und durch einen befristeten, gedeckelten Section-122-Zoll ersetzt. Die zollfreie „De-minimis"-Ausnahme unter 800 USD für Direktimporte ist ebenfalls entfallen.',
           'EU (betrifft DE/FR): Es gibt keinen breiten EU-Zoll auf fertige Mini-PCs, aber ab Juli 2026 wurde die zollfreie 150-€-Grenze für geringwertige Direktsendungen aus China aufgehoben und eine kleine Bearbeitungsgebühr pro Sendung eingeführt.',
-          'Nettoeffekt: Prüfen Sie den aktuellen Preis beim Händler vor dem Kauf — die Zahlen in dieser Rezension sind indikativ und mit Stand August 2026 datiert.',
+          'Nettoeffekt: Prüfen Sie den aktuellen Preis beim Händler vor dem Kauf — die Zahlen in dieser Rezension sind indikativ und beziehen sich auf die US-Listenpreise im offiziellen Store.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Wo kaufen & aktueller Preis',
         content:
-          '**Die Preise ändern sich von Woche zu Woche, prüfen Sie also den Live-Preis statt einer festen Zahl zu vertrauen.** Stand August 2026 listet GEEKOMs eigener Store die Konfiguration HX370/32GB/2TB ab etwa 1.563 € (Listenpreis 1.899 €, mit Rabattcode niedriger), während geizhals.de eine HX370-Konfiguration ab 1.399 € zeigt.',
+          '**Die Preise ändern sich von Woche zu Woche, prüfen Sie also den Live-Preis statt einer festen Zahl zu vertrauen.** GEEKOMs offizieller US-Store listet die Konfiguration HX370/32GB/1TB zu 1.299 $, HX370/32GB/2TB zu 1.399 $ und die neuere HX470/32GB/2TB „2026 Edition" zu 1.599 $ (Listenpreise, am 2026-10-25 geprüft; Preise in Ihrem Land weichen ab).',
         items: [
           'Bestätigen Sie die genaue SKU (HX 370 vs. HX 470, RAM- und Speicherkapazität) vor der Bestellung — Preise und Spezifikationen unterscheiden sich, und GEEKOM hat mehrere Generationen unter dem Namen „A9 Max" verkauft.',
           'Prüfen Sie beim Checkout auf einen aktiven Rabattcode — GEEKOM hat in seinem eigenen Store 10–15 % Rabattaktionen durchgeführt.',
         ],
         affiliateLinks: [
-          { label: 'Aktuellen Preis prüfen — GEEKOM offizieller Store', url: 'https://www.geekom.de/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1.399–1.899 €' },
+          { label: 'Aktuellen Preis prüfen — GEEKOM offizieller Store', url: 'https://www.geekom.de/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1.299–1.599 $' },
         ],
       },
       alternatives: {
@@ -692,14 +692,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'GEEKOM A9 Max vs. Beelink SER8 im Spezifikationsvergleich: Ryzen AI 9 HX 370 (12K/24T) mit 128-GB-RAM-Obergrenze und 7B–70B-Modellpassung gegenüber Ryzen 7 8845HS (8K/16T) mit ~64–96-GB-Obergrenze und komfortabler 7B–14B-Passung.',
         columns: ['Mini-PC', 'Preis (ca.)', 'RAM-Obergrenze', 'Am besten für'],
         rows: [
-          { 'Mini-PC': 'GEEKOM A9 Max', 'Preis (ca.)': '1.399–1.899 €', 'RAM-Obergrenze': '128 GB', 'Am besten für': 'Maximaler Spielraum + Konnektivität' },
-          { 'Mini-PC': 'Beelink SER8', 'Preis (ca.)': '999 € (32GB) / 1.499 € (64GB)', 'RAM-Obergrenze': '~64–96 GB', 'Am besten für': 'Beste Preis-Leistung für HA + 7B-Modell' },
-          { 'Mini-PC': 'Minisforum UM890 Pro', 'Preis (ca.)': '489–649 €', 'RAM-Obergrenze': '~96 GB', 'Am besten für': 'Preis-Leistung + eGPU-Aufrüstpfad via OCuLink' },
-          { 'Mini-PC': 'GMKtec G3 Plus', 'Preis (ca.)': 'ab 159,99 €', 'RAM-Obergrenze': '32 GB', 'Am besten für': 'Günstige HA-Zentrale, leichte KI als Bonus' },
-          { 'Mini-PC': 'Beelink EQ14', 'Preis (ca.)': 'ca. 185 €', 'RAM-Obergrenze': '16 GB', 'Am besten für': 'Günstige HA, doppeltes 2,5GbE' },
+          { 'Mini-PC': 'GEEKOM A9 Max', 'Preis (ca.)': '1.299–1.599 $', 'RAM-Obergrenze': '128 GB', 'Am besten für': 'Maximaler Spielraum + Konnektivität' },
+          { 'Mini-PC': 'Beelink SER8', 'Preis (ca.)': '799 $ (24GB/1TB)', 'RAM-Obergrenze': '~64–96 GB', 'Am besten für': 'Beste Preis-Leistung für HA + 7B-Modell' },
+          { 'Mini-PC': 'Minisforum UM890 Pro', 'Preis (ca.)': '439,90–823,90 $', 'RAM-Obergrenze': '~96 GB', 'Am besten für': 'Preis-Leistung + eGPU-Aufrüstpfad via OCuLink' },
+          { 'Mini-PC': 'GMKtec G3 Plus', 'Preis (ca.)': '399,99–499,99 $ (Liste, ausverkauft)', 'RAM-Obergrenze': '32 GB', 'Am besten für': 'Günstige HA-Zentrale, leichte KI als Bonus' },
+          { 'Mini-PC': 'Beelink EQ14', 'Preis (ca.)': '385 $ (Liste, Vorbestellung)', 'RAM-Obergrenze': '16 GB', 'Am besten für': 'Günstige HA, doppeltes 2,5GbE' },
         ],
         items: [
-          '[Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — die Preis-Leistungs-Wahl: Ryzen 7 8845HS, betreibt komfortabel ein 7B-Modell für etwa die Hälfte des A9-Max-Preises',
+          '[Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — die Preis-Leistungs-Wahl: Ryzen 7 8845HS, betreibt komfortabel ein 7B-Modell für deutlich weniger als zwei Drittel des A9-Max-Preises',
           '[Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) — bietet einen OCuLink-Anschluss für eine externe GPU, falls Sie später schnellere Inferenz großer Modelle wollen, zu deutlich niedrigerem Einstiegspreis',
           '[Beelink EQ14](/de/smart-home/beelink-eq14-local-ai-review) — günstige Intel-N150-Box für Home Assistant plus ein winziges Modell',
           '[GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — eine weitere günstige N150-Option mit aufrüstbarem RAM',
@@ -721,14 +721,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Wie viel kostet der GEEKOM A9 Max aktuell?', a: 'GEEKOMs eigener Store listet die Konfiguration HX370/32GB/2TB ab etwa 1.563 € (Listenpreis 1.899 €, mit Rabattcode niedriger), Stand August 2026; geizhals.de zeigt eine HX370-Konfiguration bereits ab 1.399 €. Das liegt deutlich über den 1.199–1.399 €, die diese Rezension ursprünglich nannte — prüfen Sie den Live-Preis und einen eventuell aktiven Rabattcode vor dem Kauf.' },
+          { q: 'Wie viel kostet der GEEKOM A9 Max aktuell?', a: 'GEEKOMs offizieller US-Store listet die Konfiguration HX370/32GB/1TB zu 1.299 $, HX370/32GB/2TB zu 1.399 $ und die neuere HX470/32GB/2TB „2026 Edition" zu 1.599 $ (Listenpreise, am 2026-10-25 geprüft; Preise in Ihrem Land weichen ab). Das liegt deutlich über den 1.099–1.299 $, die diese Rezension ursprünglich nannte — prüfen Sie den Live-Preis und einen eventuell aktiven Rabattcode vor dem Kauf.' },
           { q: 'Kann der GEEKOM A9 Max lokale LLMs betreiben?', a: 'Ja. Mit 32 GB RAM betreibt er komfortabel ein 7B–8B-Modell auf Ollama und passt ein 13B–14B-Modell in 4-Bit-Quantisierung mit Raum für Kontext. Dies ist aus seiner geprüften Hardware geschätzt, kein fester Benchmark, da die Geschwindigkeit vom Modell, der Quantisierung und dem Backend abhängt.' },
           { q: 'Wie groß darf ein Modell für seinen RAM sein?', a: 'Bei 32 GB ist ein 13B–14B-Modell in 4-Bit realistisch. Die Aufrüstung auf 64 GB öffnet Modelle der 30B-Klasse, und die 128-GB-Obergrenze lässt ein 70B-Modell in 4-Bit laden — sehr große Modelle laufen jedoch langsam, da die iGPU sich den Systemspeicher teilt und keinen dedizierten VRAM hat.' },
           { q: 'Macht der NPU lokale LLMs schneller?', a: 'Nein. Der NPU (80 TOPS gesamt beim HX370, 86 TOPS beim HX470) beschleunigt Vision- und einige Windows-KI-Funktionen, doch gängige lokale-LLM-Laufzeiten wie Ollama und llama.cpp führen das Modell auf CPU und Radeon-890M-iGPU aus. Betrachten Sie den NPU als Vorteil für die Frigate-Kameraerkennung, nicht für die Chat-Modell-Geschwindigkeit.' },
           { q: 'Ist der A9 Max gut für Home Assistant und Dauerbetrieb?', a: 'Ja. Er betreibt Home Assistant, Ollama, Whisper und Frigate gemeinsam mit Spielraum, und sein anhaltender Verbrauch von 54 W hält die Dauerbetriebskosten moderat. Doppeltes 2,5GbE und Wi-Fi 7 eignen sich zudem für eine kabelgebundene Heimserver-Rolle.' },
           { q: 'Ist der RAM aufrüstbar?', a: 'Ja. Der A9 Max nutzt zwei standardmäßige DDR5-SO-DIMM-Steckplätze, die nutzerseitig austauschbar sind, sodass Sie mit 32 GB starten und später auf 64 GB oder 128 GB umsteigen können. Das ist ein echter Vorteil gegenüber Mini-PCs mit verlötetem Speicher.' },
           { q: 'Lohnt sich der A9 Max gegenüber einem Beelink SER8?', a: 'Nur, wenn Sie den zusätzlichen Spielraum wollen. Der SER8 betreibt Home Assistant plus ein 7B-Modell für etwa die Hälfte bis zwei Drittel des aktuellen A9-Max-Preises. Der A9 Max lohnt den Aufpreis, wenn Sie die 128-GB-RAM-Obergrenze, doppeltes NVMe, Wi-Fi 7 oder Vision-Spielraum für die kommenden Jahre brauchen — nicht standardmäßig.' },
-          { q: 'Ist der A9 Max besser als der Minisforum UM890 Pro?', a: 'Nicht grundsätzlich. Die Vorteile des A9 Max sind die Radeon-890M-Plattform, die 128-GB-Speicherobergrenze, Wi-Fi 7, doppeltes 2,5GbE und doppeltes USB4. Der UM890 Pro ist bei 489–649 € sehr oft die bessere Preis-Leistungs-Wahl — prüfen Sie vor der Entscheidung die aktuellen Preise beider.' },
+          { q: 'Ist der A9 Max besser als der Minisforum UM890 Pro?', a: 'Nicht grundsätzlich. Die Vorteile des A9 Max sind die Radeon-890M-Plattform, die 128-GB-Speicherobergrenze, Wi-Fi 7, doppeltes 2,5GbE und doppeltes USB4. Der UM890 Pro ist bei 439,90 $ (Barebone) bis 823,90 $ (mit 32 GB, derzeit im offiziellen Store ausverkauft) sehr oft die bessere Preis-Leistungs-Wahl — prüfen Sie vor der Entscheidung die aktuellen Preise beider.' },
           { q: 'Kann er 70B-Modelle betreiben?', a: 'Eine 128-GB-Konfiguration gibt Ihnen genug Systemspeicher, um mit großen quantisierten Modellen zu experimentieren, bedeutet aber nicht, dass die 70B-Inferenz schnell sein wird. Wenn 70B-Leistung eine primäre Anforderung ist, ist ein dediziertes System mit viel VRAM in der Regel die bessere Wahl.' },
           { q: 'Wo wird der GEEKOM A9 Max gefertigt, und beeinflusst das den Preis?', a: 'Er wird in China gefertigt. 2026 können US-Importmaßnahmen (Section-301-Zölle, das Ende der De-minimis-Ausnahme unter 800 USD) und die EU-Aufhebung der 150-€-Grenze für geringwertige Sendungen die Endkosten beeinflussen, prüfen Sie also den aktuellen Händlerpreis, statt sich auf eine feste Zahl zu verlassen.' },
           { q: 'Muss ich bei der Nutzung des GEEKOM A9 Max für lokale KI die DSGVO beachten?', a: 'Genau die lokale Verarbeitung erleichtert die DSGVO-Konformität. Weil Home Assistant, das lokale Modell und Frigate die Daten auf dem Gerät halten, verlassen personenbezogene Daten nicht Ihr Netzwerk — das unterstützt die Datenresidenz- und Verarbeitungspflichten nach DSGVO-Artikel 28 und passt zu den BSI-Grundschutz-Katalogen. Für sensible Anwendungsfälle dokumentieren Sie den Datenfluss und sichern das Gerät im Netzwerk ab.' },
@@ -754,9 +754,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GEEKOM-A9-Max-Rezension (2026): Der beste Mini-PC für lokale KI?',
       reviewBody:
-        'Der GEEKOM A9 Max ist ein Premium-Mini-PC mit Ryzen AI 9, der Home Assistant plus ein 7B–13B-lokales LLM mit einer 128-GB-RAM-Obergrenze betreibt. Zum Preis von 1.399–1.899 € (Stand August 2026, gestiegen von 1.199–1.399 € beim Launch) ist er ein Kauf für Spielraum und Zukunftssicherheit, etwa das 1,4- bis 1,9-Fache eines Beelink SER8.',
+        'Der GEEKOM A9 Max ist ein Premium-Mini-PC mit Ryzen AI 9, der Home Assistant plus ein 7B–13B-lokales LLM mit einer 128-GB-RAM-Obergrenze betreibt. Zum Listenpreis von 1.299–1.599 $ im offiziellen Store (gestiegen von 1.099–1.299 $ beim Launch) ist er ein Kauf für Spielraum und Zukunftssicherheit, etwa das 1,6- bis 2-Fache eines Beelink SER8.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -782,8 +782,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-fr.webp',
@@ -791,11 +791,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test GEEKOM A9 Max (2026) : le meilleur mini-PC pour l\'IA locale ?',
     seoTitle: 'Test GEEKOM A9 Max 2026 — IA locale & serveur domestique',
     intro:
-      "Le GEEKOM A9 Max est un mini-PC premium construit autour de l'AMD Ryzen AI 9 HX 370 ou HX 470 (12 cœurs, Radeon 890M, jusqu'à 128 Go de DDR5). Pour une maison connectée à IA locale, c'est le choix qui offre le plus de marge : il fait tourner Home Assistant, Frigate et un modèle 7B–13B sur Ollama avec de la réserve. Mais son prix a nettement augmenté depuis son lancement — le prix actuel de GEEKOM se situe entre 1 350 € et 1 750 € (août 2026, selon la configuration et les codes promo), bien au-dessus des 999–1 199 € annoncés initialement dans ce test. Cet écart change la recommandation : ce test vérifie les spécifications et les prix actuels face à la boutique de GEEKOM, fixe des attentes honnêtes sur la vitesse des LLM locaux, et indique précisément qui devrait encore l'acheter au prix actuel — et qui devrait plutôt choisir un Beelink SER8.",
+      "Le GEEKOM A9 Max est un mini-PC premium construit autour de l'AMD Ryzen AI 9 HX 370 ou HX 470 (12 cœurs, Radeon 890M, jusqu'à 128 Go de DDR5). Pour une maison connectée à IA locale, c'est le choix qui offre le plus de marge : il fait tourner Home Assistant, Frigate et un modèle 7B–13B sur Ollama avec de la réserve. Mais son prix a nettement augmenté depuis son lancement — le prix catalogue de la boutique officielle GEEKOM aux États-Unis se situe entre 1 299 $ et 1 599 $ (selon la configuration et les codes promo), bien au-dessus des 1 099–1 299 $ annoncés initialement dans ce test. Cet écart change la recommandation : ce test vérifie les spécifications et les prix actuels face à la boutique de GEEKOM, fixe des attentes honnêtes sur la vitesse des LLM locaux, et indique précisément qui devrait encore l'acheter au prix actuel — et qui devrait plutôt choisir un Beelink SER8.",
     metaDescription:
-      "Test GEEKOM A9 Max 2026 : Ryzen AI 9 HX 370/HX 470, Radeon 890M, jusqu'à 128 Go de DDR5, prix actuel par configuration. Fait tourner Home Assistant plus un LLM local 7B–13B — verdict honnête sur si le surcoût en vaut la peine.",
+      "Test GEEKOM A9 Max 2026 : Ryzen AI 9 HX 370/HX 470, Radeon 890M, 128 Go DDR5 max, prix par config. Home Assistant + LLM 7B–13B, verdict sur le surcoût.",
     twitterDescription:
-      "GEEKOM A9 Max (2026) : Ryzen AI 9 HX 370/HX 470, plafond de 128 Go DDR5, Wi-Fi 7, désormais à partir de 1 350 €. Le NPU n'accélère pas les LLM — la RAM et l'iGPU si. Qui devrait vraiment l'acheter.",
+      "GEEKOM A9 Max (2026) : Ryzen AI 9 HX 370/HX 470, plafond de 128 Go DDR5, Wi-Fi 7, désormais à partir de 1 299 $ (prix catalogue US). Le NPU n'accélère pas les LLM — la RAM et l'iGPU si. Qui devrait vraiment l'acheter.",
     readTime: '10 min de lecture',
     educationalLevel: 'Intermediate',
     audience: "Acheteurs qui se demandent si le surcoût du GEEKOM A9 Max vaut le coup pour un serveur domestique à IA locale",
@@ -808,18 +808,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 mini pc',
     ],
     leadAnswerBlock:
-      "**Oui, mais seulement si vous avez besoin de cette marge — le GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, jusqu'à 128 Go de DDR5) est le mini-PC le plus capable de ce comparatif pour l'IA locale, et il coûte désormais 1 350–1 750 € (prix GEEKOM, août 2026), soit environ 1,4 à 1,8 fois un Beelink SER8.** Achetez-le pour le plafond de 128 Go de RAM, le double NVMe, le Wi-Fi 7 et la marge pour la vision par ordinateur. Ne l'achetez pas simplement parce que la fiche technique dit « IA » — si vous avez seulement besoin de Home Assistant plus un modèle 7B, le SER8 fait le travail pour environ la moitié du prix.",
+      "**Oui, mais seulement si vous avez besoin de cette marge — le GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, jusqu'à 128 Go de DDR5) est le mini-PC le plus capable de ce comparatif pour l'IA locale, et il coûte désormais 1 299–1 599 $ (prix catalogue de la boutique officielle GEEKOM), soit environ 1,6 à 2 fois le prix catalogue du SER8 (799 $, 24 Go/1 To).** Achetez-le pour le plafond de 128 Go de RAM, le double NVMe, le Wi-Fi 7 et la marge pour la vision par ordinateur. Ne l'achetez pas simplement parce que la fiche technique dit « IA » — si vous avez seulement besoin de Home Assistant plus un modèle 7B, le SER8 fait le travail pour nettement moins des deux tiers du prix.",
     quickAnswerTop: {
       fr: {
         question: "Le GEEKOM A9 Max est-il bon pour l'IA locale et Home Assistant ?",
         answer:
-          "Oui, mais c'est un choix premium dont le prix a augmenté depuis le lancement. Le Ryzen AI 9 HX 370 (12 cœurs/24 threads), le GPU intégré Radeon 890M et jusqu'à 128 Go de DDR5 font tourner Home Assistant, Ollama, Whisper et Frigate sur une seule machine avec une large marge — un modèle 7B–8B tourne confortablement et un 13B–14B (4 bits) tient avec de la place pour le contexte. Son NPU (80 TOPS au total sur le HX 370, 86 TOPS sur le HX 470) aide les tâches de vision comme Frigate mais n'accélère pas les LLM locaux. GEEKOM le facture actuellement 1 350–1 750 € (août 2026, volatil) — environ 1,4 à 1,8 fois un Beelink SER8 — c'est donc un achat pour la marge et la pérennité, pas pour le rapport qualité-prix.",
+          "Oui, mais c'est un choix premium dont le prix a augmenté depuis le lancement. Le Ryzen AI 9 HX 370 (12 cœurs/24 threads), le GPU intégré Radeon 890M et jusqu'à 128 Go de DDR5 font tourner Home Assistant, Ollama, Whisper et Frigate sur une seule machine avec une large marge — un modèle 7B–8B tourne confortablement et un 13B–14B (4 bits) tient avec de la place pour le contexte. Son NPU (80 TOPS au total sur le HX 370, 86 TOPS sur le HX 470) aide les tâches de vision comme Frigate mais n'accélère pas les LLM locaux. GEEKOM le facture actuellement 1 299–1 599 $ (prix catalogue de la boutique officielle, volatil) — environ 1,6 à 2 fois le prix catalogue du SER8 (799 $, 24 Go/1 To) — c'est donc un achat pour la marge et la pérennité, pas pour le rapport qualité-prix.",
         bullets: [
           'CPU : Ryzen AI 9 HX 370 ou HX 470 — 12 cœurs / 24 threads, Radeon 890M (16 CU, RDNA 3.5)',
           'RAM : 32 Go DDR5 en standard, deux emplacements SO-DIMM, jusqu\'à 128 Go (remplaçable)',
           "LLM local (estimé d'après les specs) : 7B–8B confortable, 13B–14B en 4 bits tient ; 64–128 Go ouvre 30B–70B (lent, limité par la bande passante)",
           "NPU (80–86 TOPS au total) aide la vision de Frigate, pas la vitesse des LLM ; l'iGPU et la bande passante RAM déterminent la latence des LLM",
-          "Prix : GEEKOM affiche 1 350–1 750 € selon la configuration (août 2026) — un Beelink SER8 couvre l'essentiel des besoins pour 999 €",
+          "Prix : GEEKOM affiche 1 299–1 599 $ selon la configuration (prix catalogue de la boutique officielle) — un Beelink SER8 couvre l'essentiel des besoins à partir de 799 $ (24 Go/1 To, prix catalogue officiel)",
         ],
         updatedDate: '2026-08',
       },
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: "Le GEEKOM A9 Max est un mini-PC premium à Ryzen AI 9, désormais à partir de 1 350 €, qui fait tourner Home Assistant plus un LLM local 7B–13B avec un plafond de 128 Go de RAM qu'un Beelink SER8 ne peut pas égaler." },
+      { type: 'one-sentence', content: "Le GEEKOM A9 Max est un mini-PC premium à Ryzen AI 9, désormais à partir de 1 299 $, qui fait tourner Home Assistant plus un LLM local 7B–13B avec un plafond de 128 Go de RAM qu'un Beelink SER8 ne peut pas égaler." },
       { type: 'plain-terms', content: "Un mini-PC est un petit ordinateur silencieux que vous pouvez laisser allumé toute la journée. L'A9 Max est un modèle haut de gamme : processeur rapide, graphismes intégrés puissants et beaucoup de place pour la mémoire. Ce plafond mémoire est la raison pour laquelle il peut faire tourner des modèles d'IA plus grands que des boîtiers moins chers — mais il coûte désormais bien plus cher qu'au lancement, et sa puce IA dédiée (le NPU) aide la détection des caméras, pas le modèle de chat." },
     ],
     sections: {
@@ -860,9 +860,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "L'A9 Max fait tourner Home Assistant, Frigate, Whisper et un LLM local 7B–13B sur une seule machine avec une vraie marge",
           "Ryzen AI 9 HX 370/HX 470 : 12 cœurs/24 threads, iGPU Radeon 890M, jusqu'à 128 Go de DDR5 (deux SO-DIMM remplaçables)",
-          "Le prix a fortement augmenté depuis le lancement — GEEKOM demande désormais 1 350–1 750 € (août 2026), pas les 999–1 199 € annoncés initialement dans ce test",
+          "Le prix a fortement augmenté depuis le lancement — GEEKOM demande désormais 1 299–1 599 $ (prix catalogue de la boutique officielle), pas les 1 099–1 299 $ annoncés initialement dans ce test",
           "La vitesse des LLM locaux vient de l'iGPU et de la bande passante RAM — le NPU de 80–86 TOPS accélère la vision, pas les modèles de chat",
-          "Au prix actuel, il coûte environ 1,4 à 1,8 fois un [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) (999 €) — achetez-le pour le plafond de 128 Go, le double NVMe et le Wi-Fi 7, pas pour économiser",
+          "Au prix actuel, il coûte environ 1,6 à 2 fois un [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) (799 $ pour 24 Go/1 To, prix catalogue officiel) — achetez-le pour le plafond de 128 Go, le double NVMe et le Wi-Fi 7, pas pour économiser",
           'Fabriqué en Chine — intégrez les mesures douanières US/UE de 2026 dans le coût final (voir la note commerciale)',
         ],
       },
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Achetez le GEEKOM A9 Max si vous voulez un seul mini-PC qui fait tourner une maison connectée à IA locale avec des années de marge devant vous, et que vous acceptez de payer le surcoût actuel par rapport à un Beelink SER8 pour cette marge.** Son Ryzen AI 9 à 12 cœurs, son iGPU Radeon 890M et son plafond de 128 Go de RAM en font le boîtier le plus pérenne de ce comparatif. Si votre objectif est la machine capable la moins chère, arrêtez-vous ici et lisez plutôt le test du SER8 — l'A9 Max est surdimensionné pour un hub plus un seul modèle 7B.\n\n**N'achetez pas l'A9 Max simplement parce qu'il est étiqueté « IA ».** Si vous voulez seulement Home Assistant et quelques appareils Zigbee, c'est surdimensionné. Si vous voulez Home Assistant + IA locale + Frigate + stockage + automatisation sur une seule machine, cela devient beaucoup plus facile à justifier — mais seulement à un prix que vous avez réellement vérifié, pas au chiffre que cette page affichait au lancement.",
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel du GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1 350–1 750 €' },
+          { label: 'Vérifier le prix actuel du GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1 299–1 599 $' },
         ],
       },
       whoShouldBuy: {
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spécification: 'TDP', 'GEEKOM A9 Max': '54 W' },
           { Spécification: 'Dimensions', 'GEEKOM A9 Max': '135 × 132 × 46 mm' },
           { Spécification: 'OS', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2 (installation Linux/Proxmox prise en charge)' },
-          { Spécification: 'Prix (32 Go/2 To, HX370)', 'GEEKOM A9 Max': "à partir d'env. 1 350 € (août 2026 — volatil, vérifier le prix actuel)" },
+          { Spécification: 'Prix (32 Go/2 To, HX370)', 'GEEKOM A9 Max': "à partir de 1 399 $ (prix catalogue de la boutique officielle — volatil, vérifier le prix actuel)" },
         ],
         items: [
           "Pas de GPU dédiée : toute l'inférence IA tourne sur le CPU et l'iGPU Radeon 890M qui partagent la RAM système.",
@@ -960,21 +960,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'Quelle configuration devriez-vous acheter ?',
         content:
-          "**GEEKOM vend actuellement l'A9 Max en HX370/32Go/1To, HX370/32Go/2To et HX470/32Go/2To, les 64 Go et 128 Go étant accessibles via les emplacements SO-DIMM remplaçables.** Les prix ci-dessous reflètent l'offre de GEEKOM et de geizhals.de, en date d'août 2026 — vérifiez toujours le prix en direct et un éventuel code promo actif avant d'acheter.",
-        columns: ['Configuration', 'Prix approx. (août 2026)', 'Idéal pour'],
+          "**GEEKOM vend actuellement l'A9 Max en HX370/32Go/1To, HX370/32Go/2To et HX470/32Go/2To, les 64 Go et 128 Go étant accessibles via les emplacements SO-DIMM remplaçables.** Les prix ci-dessous sont des prix catalogue américains de la boutique officielle GEEKOM (vérifiés le 2026-10-25) ; les prix dans votre pays diffèrent — vérifiez toujours le prix en direct et un éventuel code promo actif avant d'acheter.",
+        columns: ['Configuration', 'Prix catalogue (boutique US)', 'Idéal pour'],
         rows: [
-          { Configuration: 'HX370 / 32 Go / 1 To', 'Prix approx. (août 2026)': 'env. 1 250 €', 'Idéal pour': 'Home Assistant, bureautique, développement, petits modèles locaux — à acheter si le prix est la priorité' },
-          { Configuration: 'HX370 / 32 Go / 2 To', 'Prix approx. (août 2026)': 'env. 1 350–1 450 €', 'Idéal pour': "Meilleur point de départ global — assez de RAM pour la plupart des utilisateurs, assez de stockage pour plusieurs modèles locaux" },
-          { Configuration: 'HX470 / 32 Go / 2 To (« 2026 Edition »)', 'Prix approx. (août 2026)': 'env. 1 450–1 750 €', 'Idéal pour': "Seulement si les TOPS supplémentaires du NPU ou le CPU plus récent vous importent spécifiquement — ils n'accélèrent pas sensiblement les LLM locaux" },
-          { Configuration: '64 Go (mis à niveau soi-même)', 'Prix approx. (août 2026)': 'Prix de base + coût du kit SO-DIMM', 'Idéal pour': "IA locale sérieuse — notre configuration préférée si disponible à un surcoût raisonnable" },
-          { Configuration: '128 Go (mis à niveau soi-même)', 'Prix approx. (août 2026)': 'Prix de base + coût du kit SO-DIMM', 'Idéal pour': 'Seulement avec une charge de travail précise qui le nécessite — grands modèles, plusieurs services, RAG lourd' },
+          { Configuration: 'HX370 / 32 Go / 1 To', 'Prix catalogue (boutique US)': '1 299 $', 'Idéal pour': 'Home Assistant, bureautique, développement, petits modèles locaux — à acheter si le prix est la priorité' },
+          { Configuration: 'HX370 / 32 Go / 2 To', 'Prix catalogue (boutique US)': '1 399 $', 'Idéal pour': "Meilleur point de départ global — assez de RAM pour la plupart des utilisateurs, assez de stockage pour plusieurs modèles locaux" },
+          { Configuration: 'HX470 / 32 Go / 2 To (« 2026 Edition »)', 'Prix catalogue (boutique US)': '1 599 $', 'Idéal pour': "Seulement si les TOPS supplémentaires du NPU ou le CPU plus récent vous importent spécifiquement — ils n'accélèrent pas sensiblement les LLM locaux" },
+          { Configuration: '64 Go (mis à niveau soi-même)', 'Prix catalogue (boutique US)': 'Prix de base + coût du kit SO-DIMM', 'Idéal pour': "IA locale sérieuse — notre configuration préférée si disponible à un surcoût raisonnable" },
+          { Configuration: '128 Go (mis à niveau soi-même)', 'Prix catalogue (boutique US)': 'Prix de base + coût du kit SO-DIMM', 'Idéal pour': 'Seulement avec une charge de travail précise qui le nécessite — grands modèles, plusieurs services, RAG lourd' },
         ],
         items: [
           "GEEKOM propose fréquemment des codes promo (par ex. 10–15 % de réduction) — vérifiez une offre active avant de payer le prix affiché.",
           "N'achetez pas 128 Go simplement parce que la fiche technique le prend en charge — chiffrez la mise à niveau RAM et faites-la correspondre à un usage réel d'abord.",
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix du HX370/32Go/2To', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max HX370/32Go/2To', productCategory: 'Mini PC', priceRange: 'env. 1 350–1 450 €' },
+          { label: 'Vérifier le prix du HX370/32Go/2To', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max HX370/32Go/2To', productCategory: 'Mini PC', priceRange: '1 399 $' },
         ],
       },
       vsSer8: {
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Facteur: 'Stockage', 'A9 Max': '2× NVMe (2280+2230)', 'Beelink SER8': '2× NVMe (1× SATA)' },
           { Facteur: 'Réseau', 'A9 Max': '2× 2,5GbE, Wi-Fi 7', 'Beelink SER8': '1× 2,5GbE, Wi-Fi 6' },
           { Facteur: 'USB4', 'A9 Max': '2 ports', 'Beelink SER8': 'Aucun' },
-          { Facteur: 'Prix (août 2026)', 'A9 Max': '1 350–1 750 €', 'Beelink SER8': '999 € (32 Go) / 1 499 € (64 Go)' },
+          { Facteur: 'Prix (catalogue)', 'A9 Max': '1 299–1 599 $', 'Beelink SER8': '799 $ (24 Go/1 To) / 32 Go : voir la fiche' },
           { Facteur: 'Idéal pour', 'A9 Max': 'Marge maximale, réserve pour des années', 'Beelink SER8': 'Meilleur rapport qualité-prix pour HA + modèle 7B' },
         ],
         items: [
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Notre verdict : le SER8 = meilleur rapport qualité-prix. L'A9 Max = machine plus capable.** Cette distinction compte — le SER8 couvre beaucoup des mêmes usages à un coût nettement inférieur, tandis que les vrais avantages de l'A9 Max sont la marge, le plafond mémoire et des graphismes intégrés plus puissants, pas un simple argument marketing « IA ».",
         ],
         affiliateLinks: [
-          { label: 'Comparer avec le test du Beelink SER8', url: '/fr/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '999 €' },
+          { label: 'Comparer avec le test du Beelink SER8', url: '/fr/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: 'à partir de 799 $' },
         ],
       },
       vsUm890: {
@@ -1005,12 +1005,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max vs Minisforum UM890 Pro',
         content: "**Une autre comparaison à faire avant d'acheter.**",
         items: [
-          "**Achetez le UM890 Pro** pour le rapport qualité-prix et la capacité en IA locale, avec un port OCuLink qui garde ouverte une voie de mise à niveau vers une GPU dédiée — il coûte à partir de 470 € en barebone jusqu'à environ 630 € avec 32 Go, bien en dessous de l'A9 Max.",
+          "**Achetez le UM890 Pro** pour le rapport qualité-prix et la capacité en IA locale, avec un port OCuLink qui garde ouverte une voie de mise à niveau vers une GPU dédiée — sa boutique officielle l'affiche à 439,90 $ en barebone et 823,90 $ avec 32 Go/1 To (actuellement épuisé), toujours bien en dessous de l'A9 Max.",
           "**Achetez l'A9 Max** pour la marge maximale et la connectivité dans un système compact — ses plus forts atouts sont la Radeon 890M, jusqu'à 128 Go, le Wi-Fi 7, le double 2,5GbE et le double USB4 dans une plateforme compacte vraiment haut de gamme.",
           "Si le UM890 Pro est nettement moins cher au moment de l'achat — ce qui est généralement le cas —, l'argument du rapport qualité-prix penche pour Minisforum. Nous ne le cachons pas sur cette page ; cela rend d'ailleurs la recommandation finale de l'A9 Max plus crédible quand nous y renvoyons malgré tout.",
         ],
         affiliateLinks: [
-          { label: 'Lire le test du Minisforum UM890 Pro', url: '/fr/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '470–630 €' },
+          { label: 'Lire le test du Minisforum UM890 Pro', url: '/fr/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '439,90–823,90 $' },
         ],
       },
       worthIt: {
@@ -1019,14 +1019,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Cette section devrait guider la décision d'achat réelle — chiffrez l'alternative avant de cliquer sur acheter.**",
         columns: ['Prix actuel', 'Notre avis'],
         rows: [
-          { 'Prix actuel': '~500–600 €', 'Notre avis': "Recommandation facile — mais GEEKOM ne propose actuellement pas l'A9 Max à ce prix ; ce niveau revient au SER8/UM890 Pro" },
-          { 'Prix actuel': '~700–900 €', 'Notre avis': 'Forte recommandation pour une IA locale sérieuse, si vous le trouvez à ce prix' },
-          { 'Prix actuel': '~950–1 300 €', 'Notre avis': "À acheter seulement si vous avez spécifiquement besoin de la marge RAM/connectivité — c'est à peu près le prix d'entrée actuel de GEEKOM" },
-          { 'Prix actuel': '~1 400 €+', 'Notre avis': 'Comparez très soigneusement avec des systèmes de bureau à GPU dédiée avant d\'acheter' },
+          { 'Prix actuel': '~600–700 $', 'Notre avis': "Recommandation facile — mais GEEKOM ne propose actuellement pas l'A9 Max à ce prix ; ce niveau revient au SER8/UM890 Pro" },
+          { 'Prix actuel': '~800–1 000 $', 'Notre avis': 'Forte recommandation pour une IA locale sérieuse, si vous le trouvez à ce prix' },
+          { 'Prix actuel': '~1 100–1 300 $', 'Notre avis': "À acheter seulement si vous avez spécifiquement besoin de la marge RAM/connectivité — c'est à peu près le prix d'entrée actuel de GEEKOM" },
+          { 'Prix actuel': '~1 500 $+', 'Notre avis': 'Comparez très soigneusement avec des systèmes de bureau à GPU dédiée avant d\'acheter' },
         ],
         items: [
-          "**Règle de prix que nous appliquerions nous-mêmes :** si l'A9 Max ne coûte qu'environ 100–200 € de plus que l'alternative la plus proche au moment de l'achat, la marge supplémentaire vaut généralement le coup. Si le surcoût atteint plusieurs centaines d'euros — ce qui est la situation actuelle avec le prix de GEEKOM à 1 350–1 750 € contre 999 € pour le SER8 —, comparez sérieusement le SER8 et le UM890 Pro avant d'acheter.",
-          "Le prix de GEEKOM a nettement augmenté depuis la première publication de ce test — considérez tout chiffre en euros sur cette page comme une photo datée d'août 2026, pas une promesse.",
+          "**Règle de prix que nous appliquerions nous-mêmes :** si l'A9 Max ne coûte qu'environ 100–200 $ de plus que l'alternative la plus proche au moment de l'achat, la marge supplémentaire vaut généralement le coup. Si le surcoût atteint plusieurs centaines de dollars — ce qui est la situation actuelle avec le prix de GEEKOM à 1 299–1 599 $ contre 799 $ pour le SER8 —, comparez sérieusement le SER8 et le UM890 Pro avant d'acheter.",
+          "Le prix de GEEKOM a nettement augmenté depuis la première publication de ce test — considérez tout chiffre en dollars sur cette page comme une photo des prix catalogue de la boutique officielle, pas une promesse.",
         ],
       },
       prosCons: {
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7, double 2,5GbE, deux ports USB4 — bien connecté pour un serveur domestique',
           'Fonctionne à des 54 W modérés pour une machine en fonctionnement permanent',
           '**Inconvénients**',
-          'Cher — 1 350–1 750 € en août 2026, bien au-dessus du chiffre initial de 999–1 199 € de ce test',
+          'Cher — 1 299–1 599 $ (prix catalogue de la boutique officielle), bien au-dessus du chiffre initial de 1 099–1 299 $ de ce test',
           "Le NPU n'accélère pas les LLM locaux — une idée reçue courante que cette page vise en partie à corriger",
           "La conception iGPU + mémoire partagée est limitée en bande passante pour les très grands modèles",
           "Refroidissement actif — pas silencieux sous charge soutenue malgré le discours marketing",
@@ -1056,20 +1056,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "USA : les droits Section 301 sur l'électronique chinoise restent en vigueur en 2026 ; les droits « IEEPA » distincts de 2025 ont été invalidés par la Cour suprême en février 2026 et remplacés par un droit Section 122 temporaire et plafonné. L'exemption de minimis en franchise de droits sous 800 $ pour les importations directes a également pris fin.",
           "UE (concerne DE/FR) : il n'y a pas de droit UE large sur les mini-PC finis, mais depuis juillet 2026 le seuil de franchise de 150 € sur les colis directs de faible valeur en provenance de Chine a été supprimé et de petits frais de traitement par colis ajoutés.",
-          "Effet net : vérifiez le prix actuel chez le revendeur avant d'acheter — les chiffres de ce test sont indicatifs et datés d'août 2026.",
+          "Effet net : vérifiez le prix actuel chez le revendeur avant d'acheter — les chiffres de ce test sont indicatifs et reposent sur les prix catalogue de la boutique officielle GEEKOM.",
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Où acheter et prix actuel',
         content:
-          "**Les prix bougent d'une semaine à l'autre, vérifiez donc le prix en direct plutôt que de vous fier à un chiffre figé.** En août 2026, la boutique GEEKOM elle-même affiche la configuration HX370/32Go/2To à partir d'environ 1 350 €, tandis que geizhals.de montre une configuration HX370 dès 1 250 €.",
+          "**Les prix bougent d'une semaine à l'autre, vérifiez donc le prix en direct plutôt que de vous fier à un chiffre figé.** La boutique officielle américaine de GEEKOM affiche la configuration HX370/32Go/1To à 1 299 $, la HX370/32Go/2To à 1 399 $ et la plus récente HX470/32Go/2To « 2026 Edition » à 1 599 $ (prix catalogue, vérifiés le 2026-10-25 ; les prix dans votre pays diffèrent).",
         items: [
           "Confirmez le SKU exact (HX 370 vs HX 470, capacité de RAM et de stockage) avant de commander — le prix et les spécifications diffèrent, et GEEKOM a vendu plusieurs générations sous le nom « A9 Max ».",
           "Vérifiez un code promo actif au moment du paiement — GEEKOM a proposé des réductions de 10 à 15 % sur sa propre boutique.",
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel — boutique officielle GEEKOM', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1 350–1 750 €' },
+          { label: 'Vérifier le prix actuel — boutique officielle GEEKOM', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '1 299–1 599 $' },
         ],
       },
       alternatives: {
@@ -1080,14 +1080,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Comparaison des spécifications GEEKOM A9 Max vs Beelink SER8 : Ryzen AI 9 HX 370 (12c/24t) avec un plafond de 128 Go de RAM et une adéquation 7B–70B contre Ryzen 7 8845HS (8c/16t) avec un plafond de ~64–96 Go et une adéquation confortable 7B–14B.',
         columns: ['Mini-PC', 'Prix (env.)', 'Plafond RAM', 'Idéal pour'],
         rows: [
-          { 'Mini-PC': 'GEEKOM A9 Max', 'Prix (env.)': '1 350–1 750 €', 'Plafond RAM': '128 Go', 'Idéal pour': 'Marge maximale + connectivité' },
-          { 'Mini-PC': 'Beelink SER8', 'Prix (env.)': '999 € (32 Go) / 1 499 € (64 Go)', 'Plafond RAM': '~64–96 Go', 'Idéal pour': 'Meilleur rapport qualité-prix pour HA + modèle 7B' },
-          { 'Mini-PC': 'Minisforum UM890 Pro', 'Prix (env.)': '470–630 €', 'Plafond RAM': '~96 Go', 'Idéal pour': 'Rapport qualité-prix + voie eGPU via OCuLink' },
-          { 'Mini-PC': 'GMKtec G3 Plus', 'Prix (env.)': 'à partir de 170 €', 'Plafond RAM': '32 Go', 'Idéal pour': 'Hub HA économique, IA légère en bonus' },
-          { 'Mini-PC': 'Beelink EQ14', 'Prix (env.)': 'env. 185 €', 'Plafond RAM': '16 Go', 'Idéal pour': 'HA économique, double 2,5GbE' },
+          { 'Mini-PC': 'GEEKOM A9 Max', 'Prix (env.)': '1 299–1 599 $', 'Plafond RAM': '128 Go', 'Idéal pour': 'Marge maximale + connectivité' },
+          { 'Mini-PC': 'Beelink SER8', 'Prix (env.)': '799 $ (24 Go/1 To)', 'Plafond RAM': '~64–96 Go', 'Idéal pour': 'Meilleur rapport qualité-prix pour HA + modèle 7B' },
+          { 'Mini-PC': 'Minisforum UM890 Pro', 'Prix (env.)': '439,90–823,90 $', 'Plafond RAM': '~96 Go', 'Idéal pour': 'Rapport qualité-prix + voie eGPU via OCuLink' },
+          { 'Mini-PC': 'GMKtec G3 Plus', 'Prix (env.)': '399,99–499,99 $ (catalogue, épuisé)', 'Plafond RAM': '32 Go', 'Idéal pour': 'Hub HA économique, IA légère en bonus' },
+          { 'Mini-PC': 'Beelink EQ14', 'Prix (env.)': '385 $ (catalogue, précommande)', 'Plafond RAM': '16 Go', 'Idéal pour': 'HA économique, double 2,5GbE' },
         ],
         items: [
-          "[Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — le choix qualité-prix : Ryzen 7 8845HS, fait tourner confortablement un modèle 7B pour environ la moitié du prix de l'A9 Max",
+          "[Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — le choix qualité-prix : Ryzen 7 8845HS, fait tourner confortablement un modèle 7B pour nettement moins des deux tiers du prix de l'A9 Max",
           "[Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) — ajoute un port OCuLink pour une GPU externe si vous voulez une inférence de grands modèles plus rapide plus tard, à un prix d'entrée bien plus bas",
           "[Beelink EQ14](/fr/smart-home/beelink-eq14-local-ai-review) — boîtier Intel N150 économique pour Home Assistant plus un tout petit modèle",
           "[GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — une autre option N150 économique avec RAM évolutive",
@@ -1109,14 +1109,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quel est le prix actuel du GEEKOM A9 Max ?', a: "La boutique GEEKOM elle-même affiche la configuration HX370/32Go/2To à partir d'environ 1 350 €, en date d'août 2026 ; geizhals.de montre une configuration HX370 dès 1 250 €. C'est nettement au-dessus des 999–1 199 € annoncés initialement dans ce test — vérifiez le prix en direct et un éventuel code promo actif avant d'acheter." },
+          { q: 'Quel est le prix actuel du GEEKOM A9 Max ?', a: "La boutique officielle américaine de GEEKOM affiche la configuration HX370/32Go/1To à 1 299 $, la HX370/32Go/2To à 1 399 $ et la plus récente HX470/32Go/2To « 2026 Edition » à 1 599 $ (prix catalogue, vérifiés le 2026-10-25 ; les prix dans votre pays diffèrent). C'est nettement au-dessus des 1 099–1 299 $ annoncés initialement dans ce test — vérifiez le prix en direct et un éventuel code promo actif avant d'acheter." },
           { q: 'Le GEEKOM A9 Max peut-il faire tourner des LLM locaux ?', a: "Oui. Avec 32 Go de RAM, il fait tourner confortablement un modèle 7B–8B sur Ollama et fait tenir un modèle 13B–14B en quantification 4 bits avec de la place pour le contexte. Ceci est estimé d'après son matériel vérifié, pas un benchmark fixe, car la vitesse dépend du modèle, de la quantification et du backend." },
           { q: 'Quelle taille de modèle tient dans sa RAM ?', a: "À 32 Go, un modèle 13B–14B en 4 bits est réaliste. Passer à 64 Go ouvre les modèles de classe 30B, et le plafond de 128 Go permet de charger un modèle 70B en 4 bits — mais les très grands modèles tournent lentement car l'iGPU partage la mémoire système et n'a pas de VRAM dédiée." },
           { q: 'Le NPU rend-il les LLM locaux plus rapides ?', a: "Non. Le NPU (80 TOPS au total sur le HX370, 86 TOPS sur le HX470) accélère la vision et certaines fonctionnalités IA de Windows, mais les runtimes LLM locaux courants comme Ollama et llama.cpp exécutent le modèle sur le CPU et l'iGPU Radeon 890M. Considérez le NPU comme un avantage pour la détection caméra de Frigate, pas pour la vitesse du modèle de chat." },
           { q: "L'A9 Max convient-il à Home Assistant et à un usage permanent ?", a: "Oui. Il fait tourner Home Assistant, Ollama, Whisper et Frigate ensemble avec de la marge, et sa consommation soutenue de 54 W maintient un coût de fonctionnement permanent modéré. Son double 2,5GbE et son Wi-Fi 7 conviennent aussi à un rôle de serveur domestique filaire." },
           { q: 'La RAM est-elle évolutive ?', a: "Oui. L'A9 Max utilise deux emplacements SO-DIMM DDR5 standard remplaçables par l'utilisateur, vous pouvez donc démarrer à 32 Go et passer à 64 Go ou 128 Go plus tard. C'est un vrai avantage face aux mini-PC à mémoire soudée." },
           { q: "L'A9 Max vaut-il le coup face à un Beelink SER8 ?", a: "Seulement si vous voulez la marge supplémentaire. Le SER8 fait tourner Home Assistant plus un modèle 7B pour environ la moitié aux deux tiers du prix actuel de l'A9 Max. L'A9 Max justifie le surcoût si vous avez besoin du plafond de 128 Go de RAM, du double NVMe, du Wi-Fi 7 ou de la marge pour la vision pour les années à venir — pas par défaut." },
-          { q: "L'A9 Max est-il meilleur que le Minisforum UM890 Pro ?", a: "Pas universellement. Les avantages de l'A9 Max sont la plateforme Radeon 890M, le plafond mémoire de 128 Go, le Wi-Fi 7, le double 2,5GbE et le double USB4. Le UM890 Pro, à 470–630 €, est très souvent le meilleur choix qualité-prix — vérifiez les prix actuels des deux avant de décider." },
+          { q: "L'A9 Max est-il meilleur que le Minisforum UM890 Pro ?", a: "Pas universellement. Les avantages de l'A9 Max sont la plateforme Radeon 890M, le plafond mémoire de 128 Go, le Wi-Fi 7, le double 2,5GbE et le double USB4. Le UM890 Pro, à 439,90 $ en barebone et 823,90 $ avec 32 Go (actuellement épuisé dans la boutique officielle), est très souvent le meilleur choix qualité-prix — vérifiez les prix actuels des deux avant de décider." },
           { q: 'Peut-il faire tourner des modèles 70B ?', a: "Une configuration à 128 Go vous donne assez de mémoire système pour expérimenter avec de grands modèles quantifiés, mais cela ne signifie pas que l'inférence en 70B sera rapide. Si la performance en 70B est une exigence principale, un système dédié avec beaucoup de VRAM est généralement le meilleur choix." },
           { q: 'Où le GEEKOM A9 Max est-il fabriqué, et cela affecte-t-il le prix ?', a: "Il est fabriqué en Chine. En 2026, les mesures d'importation américaines (droits Section 301, fin de l'exemption de minimis sous 800 $) et la suppression par l'UE de l'exemption de 150 € pour les colis de faible valeur peuvent affecter le coût rendu, alors vérifiez le prix actuel chez le revendeur plutôt que de vous fier à un chiffre figé." },
         ],
@@ -1140,9 +1140,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: "Test GEEKOM A9 Max (2026) : le meilleur mini-PC pour l'IA locale ?",
       reviewBody:
-        "Le GEEKOM A9 Max est un mini-PC premium à Ryzen AI 9 qui fait tourner Home Assistant plus un LLM local 7B–13B avec un plafond de 128 Go de RAM. Au prix de 1 350–1 750 € (août 2026, en hausse par rapport aux 999–1 199 € du lancement), c'est un achat pour la marge et la pérennité, environ 1,4 à 1,8 fois un Beelink SER8.",
+        "Le GEEKOM A9 Max est un mini-PC premium à Ryzen AI 9 qui fait tourner Home Assistant plus un LLM local 7B–13B avec un plafond de 128 Go de RAM. Au prix catalogue de 1 299–1 599 $ (boutique officielle ; en hausse par rapport aux 1 099–1 299 $ du lancement), c'est un achat pour la marge et la pérennité, environ 1,6 à 2 fois un Beelink SER8.",
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1168,8 +1168,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-es.webp',
@@ -1179,7 +1179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       "El GEEKOM A9 Max es un mini PC premium construido sobre el AMD Ryzen AI 9 HX 370 o HX 470 (12 núcleos, Radeon 890M, hasta 128 GB de DDR5). Para un hogar inteligente con IA local, es la opción con más margen: ejecuta Home Assistant, Frigate y un modelo 7B–13B en Ollama con espacio de sobra. Pero su precio ha subido de forma notable desde su lanzamiento — el precio actual ronda los 1.439 € en España (idealo.es, agosto de 2026) y entre $1.299 y $1.599 USD en Estados Unidos (precio oficial de GEEKOM), muy por encima del rango que citaba originalmente este análisis. Esa diferencia cambia la recomendación: este análisis verifica las especificaciones y los precios actuales frente a la tienda oficial de GEEKOM, fija expectativas honestas sobre la velocidad de los LLM locales, y dice exactamente quién debería comprarlo al precio actual — y quién debería elegir un Beelink SER8 en su lugar.",
     metaDescription:
-      "Análisis del GEEKOM A9 Max 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, hasta 128 GB de DDR5, precio actual por configuración. Ejecuta Home Assistant más un LLM local 7B–13B — veredicto honesto sobre si el sobreprecio vale la pena.",
+      "Análisis GEEKOM A9 Max 2026: Ryzen AI 9 HX 370/470, Radeon 890M, hasta 128GB DDR5, precio por config. Home Assistant + LLM 7B–13B, ¿vale el sobreprecio?",
     twitterDescription:
       "GEEKOM A9 Max (2026): Ryzen AI 9 HX 370/HX 470, tope de 128 GB DDR5, Wi-Fi 7, ahora desde 1.439 € / $1.299 USD. El NPU no acelera los LLM — la RAM y la iGPU sí. Quién debería comprarlo realmente.",
     readTime: '10 min de lectura',
@@ -1194,18 +1194,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 mini pc',
     ],
     leadAnswerBlock:
-      '**Sí, pero solo si realmente necesitas ese margen — el GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, hasta 128 GB de DDR5) es el mini PC más capaz de esta comparativa para IA local, y ahora cuesta desde 1.439 € en España o $1.299–1.599 USD en Estados Unidos, aproximadamente 1,5 a 2 veces un Beelink SER8.** Cómpralo por el tope de 128 GB de RAM, el NVMe doble, el Wi-Fi 7 y el margen para visión por computadora. No lo compres solo porque la ficha técnica diga "IA" — si solo necesitas Home Assistant más un modelo 7B, el SER8 hace el mismo trabajo por aproximadamente la mitad del precio.',
+      '**Sí, pero solo si realmente necesitas ese margen — el GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, hasta 128 GB de DDR5) es el mini PC más capaz de esta comparativa para IA local, y ahora cuesta desde 1.439 € en España o $1.299–1.599 USD en Estados Unidos, aproximadamente 1,6 a 2 veces el precio de lista oficial de $799 del Beelink SER8 (24GB/1TB).** Cómpralo por el tope de 128 GB de RAM, el NVMe doble, el Wi-Fi 7 y el margen para visión por computadora. No lo compres solo porque la ficha técnica diga "IA" — si solo necesitas Home Assistant más un modelo 7B, el SER8 hace el mismo trabajo por bastante menos de dos tercios del precio.',
     quickAnswerTop: {
       es: {
         question: '¿Es bueno el GEEKOM A9 Max para IA local y Home Assistant?',
         answer:
-          'Sí, pero es una opción premium cuyo precio ha subido desde el lanzamiento. El Ryzen AI 9 HX 370 (12 núcleos/24 hilos), la iGPU Radeon 890M y hasta 128 GB de DDR5 ejecutan Home Assistant, Ollama, Whisper y Frigate en una sola máquina con amplio margen — un modelo 7B–8B funciona con comodidad y un 13B–14B (4 bits) cabe con espacio para contexto. Su NPU (80 TOPS en total en el HX 370, 86 TOPS en el HX 470) ayuda en tareas de visión como Frigate pero no acelera los LLM locales. GEEKOM lo cobra actualmente entre $1.299 y $1.599 USD (agosto de 2026, volátil) — aproximadamente 1,5 a 2 veces un Beelink SER8 — por lo que es una compra por margen y durabilidad, no por relación calidad-precio.',
+          'Sí, pero es una opción premium cuyo precio ha subido desde el lanzamiento. El Ryzen AI 9 HX 370 (12 núcleos/24 hilos), la iGPU Radeon 890M y hasta 128 GB de DDR5 ejecutan Home Assistant, Ollama, Whisper y Frigate en una sola máquina con amplio margen — un modelo 7B–8B funciona con comodidad y un 13B–14B (4 bits) cabe con espacio para contexto. Su NPU (80 TOPS en total en el HX 370, 86 TOPS en el HX 470) ayuda en tareas de visión como Frigate pero no acelera los LLM locales. GEEKOM lo cobra actualmente entre $1.299 y $1.599 USD (precio de lista oficial de GEEKOM, volátil) — aproximadamente 1,6 a 2 veces el precio de lista oficial de $799 del Beelink SER8 (24GB/1TB) — por lo que es una compra por margen y durabilidad, no por relación calidad-precio.',
         bullets: [
           'CPU: Ryzen AI 9 HX 370 o HX 470 — 12 núcleos/24 hilos, Radeon 890M (16 CU, RDNA 3.5)',
           'RAM: 32 GB DDR5 de serie, dos ranuras SO-DIMM, hasta 128 GB (reemplazable por el usuario)',
           'LLM local (estimado a partir de las especificaciones): 7B–8B cómodo, 13B–14B en 4 bits cabe; 64–128 GB abre 30B–70B (lento, limitado por el ancho de banda)',
           'El NPU (80–86 TOPS en total) ayuda a la visión de Frigate, no a la velocidad de LLM; la iGPU y el ancho de banda de RAM determinan la latencia del LLM',
-          'Precio: GEEKOM lo lista entre $1.299 y $1.599 USD según la configuración (agosto de 2026) — un Beelink SER8 cubre la mayoría de las necesidades por $799–849',
+          'Precio: GEEKOM lo lista entre $1.299 y $1.599 USD según la configuración (precio de lista oficial de GEEKOM) — un Beelink SER8 cubre la mayoría de las necesidades desde $799 (24GB/1TB, precio de lista de la tienda oficial)',
         ],
         updatedDate: '2026-08',
       },
@@ -1246,9 +1246,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'El A9 Max ejecuta Home Assistant, Frigate, Whisper y un LLM local 7B–13B en una sola máquina con margen real',
           'Ryzen AI 9 HX 370/HX 470: 12 núcleos/24 hilos, iGPU Radeon 890M, hasta 128 GB de DDR5 (dos SO-DIMM reemplazables por el usuario)',
-          'El precio ha subido mucho desde el lanzamiento — GEEKOM cobra ahora $1.299–1.599 USD (agosto de 2026), no el rango que citaba originalmente este análisis',
+          'El precio ha subido mucho desde el lanzamiento — GEEKOM cobra ahora $1.299–1.599 USD (precio de lista oficial de GEEKOM), no el rango que citaba originalmente este análisis',
           'La velocidad del LLM local viene de la iGPU y el ancho de banda de RAM — el NPU de 80–86 TOPS acelera la visión, no los modelos de chat',
-          'Al precio actual, cuesta aproximadamente 1,5 a 2 veces un [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) ($799–849) — cómpralo por el tope de 128 GB, el NVMe doble y el Wi-Fi 7, no para ahorrar',
+          'Al precio actual, cuesta aproximadamente 1,6 a 2 veces un [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) ($799 por 24GB/1TB, precio de lista de la tienda oficial) — cómpralo por el tope de 128 GB, el NVMe doble y el Wi-Fi 7, no para ahorrar',
           'Fabricado en China — ten en cuenta las medidas de importación de EE. UU./UE de 2026 en el coste final (ver la nota sobre aranceles)',
         ],
       },
@@ -1346,14 +1346,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: '¿Qué configuración deberías comprar?',
         content:
-          "**GEEKOM vende actualmente el A9 Max como HX370/32GB/1TB, HX370/32GB/2TB y HX470/32GB/2TB, con 64 GB y 128 GB alcanzables mediante las ranuras SO-DIMM reemplazables por el usuario.** Los precios de abajo reflejan la oferta de GEEKOM e idealo.es a fecha de agosto de 2026 — verifica siempre el precio en vivo y cualquier código de descuento activo antes de comprar.",
-        columns: ['Configuración', 'Precio aprox. (ago. 2026)', 'Ideal para'],
+          "**GEEKOM vende actualmente el A9 Max como HX370/32GB/1TB, HX370/32GB/2TB y HX470/32GB/2TB, con 64 GB y 128 GB alcanzables mediante las ranuras SO-DIMM reemplazables por el usuario.** Los precios de abajo reflejan el precio de lista oficial de GEEKOM (USD) y, para España, idealo.es (agosto de 2026) — verifica siempre el precio en vivo y cualquier código de descuento activo antes de comprar.",
+        columns: ['Configuración', 'Precio aprox.', 'Ideal para'],
         rows: [
-          { Configuración: 'HX370 / 32GB / 1TB', 'Precio aprox. (ago. 2026)': '$1.299 USD', 'Ideal para': 'Home Assistant, oficina, desarrollo, modelos locales pequeños — cómpralo si el precio es la prioridad' },
-          { Configuración: 'HX370 / 32GB / 2TB', 'Precio aprox. (ago. 2026)': '$1.399 USD / desde 1.439 € en España', 'Ideal para': 'Mejor punto de partida general — RAM y almacenamiento suficientes para varios modelos locales' },
-          { Configuración: 'HX470 / 32GB / 2TB («2026 Edition»)', 'Precio aprox. (ago. 2026)': '$1.599 USD', 'Ideal para': 'Solo si te importan los TOPS extra del NPU o la CPU nueva — no acelera los LLM locales' },
-          { Configuración: '64 GB (ampliado por tu cuenta)', 'Precio aprox. (ago. 2026)': 'Precio base + coste del kit SO-DIMM', 'Ideal para': 'IA local seria — nuestra configuración preferida si está disponible con un sobreprecio razonable' },
-          { Configuración: '128 GB (ampliado por tu cuenta)', 'Precio aprox. (ago. 2026)': 'Precio base + coste del kit SO-DIMM', 'Ideal para': 'Solo con una carga de trabajo concreta que lo necesite — modelos grandes, varios servicios, RAG pesado' },
+          { Configuración: 'HX370 / 32GB / 1TB', 'Precio aprox.': '$1.299 USD', 'Ideal para': 'Home Assistant, oficina, desarrollo, modelos locales pequeños — cómpralo si el precio es la prioridad' },
+          { Configuración: 'HX370 / 32GB / 2TB', 'Precio aprox.': '$1.399 USD / desde 1.439 € en España', 'Ideal para': 'Mejor punto de partida general — RAM y almacenamiento suficientes para varios modelos locales' },
+          { Configuración: 'HX470 / 32GB / 2TB («2026 Edition»)', 'Precio aprox.': '$1.599 USD', 'Ideal para': 'Solo si te importan los TOPS extra del NPU o la CPU nueva — no acelera los LLM locales' },
+          { Configuración: '64 GB (ampliado por tu cuenta)', 'Precio aprox.': 'Precio base + coste del kit SO-DIMM', 'Ideal para': 'IA local seria — nuestra configuración preferida si está disponible con un sobreprecio razonable' },
+          { Configuración: '128 GB (ampliado por tu cuenta)', 'Precio aprox.': 'Precio base + coste del kit SO-DIMM', 'Ideal para': 'Solo con una carga de trabajo concreta que lo necesite — modelos grandes, varios servicios, RAG pesado' },
         ],
         items: [
           "GEEKOM ofrece con frecuencia códigos de descuento (por ejemplo, 10–15 % de descuento) — comprueba si hay una promoción activa antes de pagar el precio de lista.",
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Factor: 'Almacenamiento', 'A9 Max': '2× NVMe (2280+2230)', 'Beelink SER8': '2× NVMe (1× SATA)' },
           { Factor: 'Red', 'A9 Max': '2× 2,5GbE, Wi-Fi 7', 'Beelink SER8': '1× 2,5GbE, Wi-Fi 6' },
           { Factor: 'USB4', 'A9 Max': '2 puertos', 'Beelink SER8': 'Ninguno' },
-          { Factor: 'Precio (ago. 2026)', 'A9 Max': '$1.299–1.599 / desde 1.439 €', 'Beelink SER8': '$799–849 (32GB) / $1.239 (64GB)' },
+          { Factor: 'Precio (lista oficial)', 'A9 Max': '$1.299–1.599 / desde 1.439 €', 'Beelink SER8': '$799 (24GB/1TB) / 32GB: ver listado' },
           { Factor: 'Ideal para', 'A9 Max': 'Máximo margen, años de recorrido', 'Beelink SER8': 'Mejor relación calidad-precio para HA + modelo 7B' },
         ],
         items: [
@@ -1383,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nuestro veredicto: SER8 = mejor relación calidad-precio. A9 Max = máquina más capaz.** Esa distinción importa — el SER8 cubre muchas de las mismas cargas de trabajo a un coste bastante menor, mientras que las verdaderas ventajas del A9 Max son el margen, el tope de memoria y unos gráficos integrados más potentes, no solo el marketing de «IA».',
         ],
         affiliateLinks: [
-          { label: 'Comparar con el análisis del Beelink SER8', url: '/es/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Comparar con el análisis del Beelink SER8', url: '/es/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: 'desde $799' },
         ],
       },
       vsUm890: {
@@ -1391,12 +1391,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max vs Minisforum UM890 Pro',
         content: '**Otra comparación que vale la pena hacer antes de comprar.**',
         items: [
-          '**Compra el UM890 Pro** por la relación calidad-precio y la capacidad de IA local, con un puerto OCuLink que mantiene abierta una vía de actualización a una GPU dedicada — cuesta desde $439 sin RAM/SSD hasta unos $649 con 32 GB, muy por debajo del A9 Max.',
+          '**Compra el UM890 Pro** por la relación calidad-precio y la capacidad de IA local, con un puerto OCuLink que mantiene abierta una vía de actualización a una GPU dedicada — su tienda oficial lista $439,90 sin RAM/SSD y $823,90 con 32 GB/1TB (actualmente agotado), muy por debajo del A9 Max.',
           '**Compra el A9 Max** por el máximo margen y conectividad en un sistema compacto — sus mayores diferenciadores son la Radeon 890M, hasta 128 GB, el Wi-Fi 7, el 2,5GbE doble y el USB4 doble en una plataforma compacta genuinamente premium.',
           'Si el UM890 Pro es sustancialmente más barato en el momento de la compra — que suele ser el caso —, el argumento de la relación calidad-precio favorece a Minisforum. No lo ocultamos en esta página; de hecho, eso hace que la eventual recomendación del A9 Max sea más creíble cuando aun así apuntamos a él.',
         ],
         affiliateLinks: [
-          { label: 'Leer el análisis del Minisforum UM890 Pro', url: '/es/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439–649' },
+          { label: 'Leer el análisis del Minisforum UM890 Pro', url: '/es/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439,90–823,90' },
         ],
       },
       worthIt: {
@@ -1411,8 +1411,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Precio actual (EE. UU.)': '~$1.500+', 'Nuestra opinión': 'Compara con mucho cuidado con sistemas de escritorio con GPU dedicada antes de comprar' },
         ],
         items: [
-          '**Regla de precio que aplicaríamos nosotros mismos:** si el A9 Max cuesta solo unos $100–200 más que la alternativa más cercana en el momento de la compra, el margen extra suele valer la pena. Si el sobreprecio llega a varios cientos de dólares — que es la situación actual con el precio de GEEKOM de $1.299–1.599 frente a los $799–849 del SER8 —, compara seriamente el SER8 y el UM890 Pro antes de comprar.',
-          'El precio de GEEKOM ha subido de forma notable desde que se publicó este análisis por primera vez — trata cualquier cifra en esta página como una foto de agosto de 2026, no como una promesa.',
+          '**Regla de precio que aplicaríamos nosotros mismos:** si el A9 Max cuesta solo unos $100–200 más que la alternativa más cercana en el momento de la compra, el margen extra suele valer la pena. Si el sobreprecio llega a varios cientos de dólares — que es la situación actual con el precio de GEEKOM de $1.299–1.599 frente a los $799 del SER8 —, compara seriamente el SER8 y el UM890 Pro antes de comprar.',
+          'El precio de GEEKOM ha subido de forma notable desde que se publicó este análisis por primera vez — trata cualquier cifra en esta página como una foto del precio de lista oficial de GEEKOM, no como una promesa.',
         ],
       },
       prosCons: {
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7, 2,5GbE doble, dos puertos USB4 — bien conectado para un servidor doméstico',
           'Funciona a unos moderados 54 W para una máquina siempre encendida',
           '**Desventajas**',
-          'Caro — $1.299–1.599 / desde 1.439 € a fecha de agosto de 2026, muy por encima de la cifra original que citaba este análisis',
+          'Caro — $1.299–1.599 (precio de lista oficial de GEEKOM) / desde 1.439 € (idealo.es, agosto de 2026), muy por encima de la cifra original que citaba este análisis',
           'El NPU no acelera los LLM locales — un error común que esta página existe en parte para corregir',
           'El diseño de iGPU + memoria compartida está limitado por el ancho de banda en modelos muy grandes',
           'Refrigeración activa — no es silenciosa bajo carga sostenida pese al discurso de marketing',
@@ -1443,14 +1443,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EE. UU.: los aranceles de la Sección 301 sobre electrónica china siguen vigentes en 2026; los aranceles «IEEPA» de 2025 fueron anulados por el Tribunal Supremo en febrero de 2026 y sustituidos por un arancel temporal y limitado de la Sección 122. La exención de minimis libre de impuestos por debajo de $800 para importaciones directas también terminó.',
           'UE (afecta a DE/FR): no hay un arancel amplio de la UE sobre mini PC terminados, pero desde julio de 2026 se eliminó el umbral de exención de 150 € para paquetes directos de bajo valor procedentes de China, y se añadió una pequeña tasa de gestión por paquete.',
           'España/LatAm: verifica el precio en la tienda oficial de GEEKOM, en Amazon.es o en tu mercado local, ya que los aranceles y el tipo de cambio hacen que el precio final varíe bastante fuera de Estados Unidos.',
-          'Efecto neto: verifica el precio actual en el minorista antes de comprar — las cifras de este análisis son indicativas y están fechadas en agosto de 2026.',
+          'Efecto neto: verifica el precio actual en el minorista antes de comprar — las cifras de este análisis son indicativas y se basan en el precio de lista oficial de GEEKOM y, para España, en idealo.es (agosto de 2026).',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Dónde comprar y precio actual',
         content:
-          '**Los precios cambian semana a semana, así que verifica el precio en vivo en vez de confiar en una cifra fija.** En agosto de 2026, la propia tienda de GEEKOM lista la configuración HX370/32GB/1TB a $1.299, la HX370/32GB/2TB a $1.399, y la más nueva HX470/32GB/2TB «2026 Edition» a $1.599 en Estados Unidos; en España, idealo.es muestra una configuración desde 1.439 €.',
+          '**Los precios cambian semana a semana, así que verifica el precio en vivo en vez de confiar en una cifra fija.** La propia tienda oficial de GEEKOM lista la configuración HX370/32GB/1TB a $1.299, la HX370/32GB/2TB a $1.399, y la más nueva HX470/32GB/2TB «2026 Edition» a $1.599 en Estados Unidos (precio de lista); en España, idealo.es mostraba en agosto de 2026 una configuración desde 1.439 €.',
         items: [
           'Confirma el SKU exacto (HX 370 vs HX 470, capacidad de RAM y almacenamiento) antes de pedir — el precio y las especificaciones difieren, y GEEKOM ha vendido varias generaciones bajo el nombre «A9 Max».',
           'Comprueba si hay un código de descuento activo al pagar — GEEKOM ha ofrecido promociones de 10–15 % de descuento en su propia tienda.',
@@ -1468,13 +1468,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mini PC', 'Precio (aprox.)', 'Tope de RAM', 'Ideal para'],
         rows: [
           { 'Mini PC': 'GEEKOM A9 Max', 'Precio (aprox.)': '$1.299–1.599 / desde 1.439 €', 'Tope de RAM': '128 GB', 'Ideal para': 'Máximo margen + conectividad' },
-          { 'Mini PC': 'Beelink SER8', 'Precio (aprox.)': '$799–849 (32GB) / $1.239 (64GB)', 'Tope de RAM': '~64–96 GB', 'Ideal para': 'Mejor relación calidad-precio para HA + modelo 7B' },
-          { 'Mini PC': 'Minisforum UM890 Pro', 'Precio (aprox.)': '$439–649', 'Tope de RAM': '~96 GB', 'Ideal para': 'Relación calidad-precio + vía eGPU vía OCuLink' },
-          { 'Mini PC': 'GMKtec G3 Plus', 'Precio (aprox.)': 'desde 159,99 € / $140–200', 'Tope de RAM': '32 GB', 'Ideal para': 'Hub HA económico, IA ligera de regalo' },
-          { 'Mini PC': 'Beelink EQ14', 'Precio (aprox.)': '$189–199', 'Tope de RAM': '16 GB', 'Ideal para': 'HA económico, 2,5GbE doble' },
+          { 'Mini PC': 'Beelink SER8', 'Precio (aprox.)': '$799 (24GB/1TB)', 'Tope de RAM': '~64–96 GB', 'Ideal para': 'Mejor relación calidad-precio para HA + modelo 7B' },
+          { 'Mini PC': 'Minisforum UM890 Pro', 'Precio (aprox.)': '$439,90–823,90', 'Tope de RAM': '~96 GB', 'Ideal para': 'Relación calidad-precio + vía eGPU vía OCuLink' },
+          { 'Mini PC': 'GMKtec G3 Plus', 'Precio (aprox.)': '$399,99–499,99 (lista, agotado)', 'Tope de RAM': '32 GB', 'Ideal para': 'Hub HA económico, IA ligera de regalo' },
+          { 'Mini PC': 'Beelink EQ14', 'Precio (aprox.)': '$385 (lista, reserva)', 'Tope de RAM': '16 GB', 'Ideal para': 'HA económico, 2,5GbE doble' },
         ],
         items: [
-          '[Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — la opción de calidad-precio: Ryzen 7 8845HS, ejecuta con comodidad un modelo 7B por aproximadamente la mitad del precio del A9 Max',
+          '[Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — la opción de calidad-precio: Ryzen 7 8845HS, ejecuta con comodidad un modelo 7B por bastante menos de dos tercios del precio del A9 Max',
           '[Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) — añade un puerto OCuLink para una GPU externa si más adelante quieres inferencia más rápida de modelos grandes, a un precio de entrada mucho menor',
           '[Beelink EQ14](/es/smart-home/beelink-eq14-local-ai-review) — equipo económico con Intel N150 para Home Assistant más un modelo pequeño',
           '[GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — otra opción económica con N150 y RAM ampliable',
@@ -1496,14 +1496,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Cuál es el precio actual del GEEKOM A9 Max?', a: 'La propia tienda de GEEKOM lista la configuración HX370/32GB/1TB a $1.299, la HX370/32GB/2TB a $1.399, y la más nueva HX470/32GB/2TB «2026 Edition» a $1.599 en Estados Unidos, a fecha de agosto de 2026; en España, idealo.es muestra una configuración desde 1.439 €. Esto es notablemente más alto que la cifra original que citaba este análisis — verifica el precio en vivo y cualquier código de descuento activo antes de comprar.' },
+          { q: '¿Cuál es el precio actual del GEEKOM A9 Max?', a: 'La propia tienda de GEEKOM lista la configuración HX370/32GB/1TB a $1.299, la HX370/32GB/2TB a $1.399, y la más nueva HX470/32GB/2TB «2026 Edition» a $1.599 en Estados Unidos (precio de lista oficial); en España, idealo.es mostraba en agosto de 2026 una configuración desde 1.439 €. Esto es notablemente más alto que la cifra original que citaba este análisis — verifica el precio en vivo y cualquier código de descuento activo antes de comprar.' },
           { q: '¿Puede el GEEKOM A9 Max ejecutar LLM locales?', a: 'Sí. Con 32 GB de RAM, ejecuta con comodidad un modelo 7B–8B en Ollama y hace caber un modelo 13B–14B en cuantización de 4 bits con espacio para contexto. Esto es una estimación a partir de su hardware verificado, no un benchmark fijo, porque la velocidad depende del modelo, la cuantización y el backend.' },
           { q: '¿Qué tamaño de modelo cabe en su RAM?', a: 'Con 32 GB, un modelo 13B–14B en 4 bits es realista. Actualizar a 64 GB abre los modelos de clase 30B, y el tope de 128 GB permite cargar un modelo 70B en 4 bits — aunque los modelos muy grandes funcionan lentamente porque la iGPU comparte la memoria del sistema y no tiene VRAM dedicada.' },
           { q: '¿El NPU hace que los LLM locales sean más rápidos?', a: 'No. El NPU (80 TOPS en total en el HX370, 86 TOPS en el HX470) acelera la visión y algunas funciones de IA de Windows, pero los runtimes de LLM local habituales como Ollama y llama.cpp ejecutan el modelo en la CPU y la iGPU Radeon 890M. Considera el NPU una ventaja para la detección de cámaras de Frigate, no para la velocidad del modelo de chat.' },
           { q: '¿Es bueno el A9 Max para Home Assistant y uso permanente?', a: 'Sí. Ejecuta Home Assistant, Ollama, Whisper y Frigate juntos con margen, y su consumo sostenido de 54 W mantiene el coste de funcionamiento continuo moderado. Su 2,5GbE doble y Wi-Fi 7 también sirven bien para un papel de servidor doméstico cableado.' },
           { q: '¿Es ampliable la RAM?', a: 'Sí. El A9 Max usa dos ranuras SO-DIMM DDR5 estándar reemplazables por el usuario, así que puedes empezar con 32 GB y pasar a 64 GB o 128 GB más adelante. Esa es una ventaja real frente a los mini PC con memoria soldada.' },
           { q: '¿Vale la pena el A9 Max frente a un Beelink SER8?', a: 'Solo si quieres el margen extra. El SER8 ejecuta Home Assistant más un modelo 7B por aproximadamente la mitad o dos tercios del precio actual del A9 Max. El A9 Max justifica el sobreprecio si necesitas el tope de 128 GB de RAM, el NVMe doble, el Wi-Fi 7 o el margen para visión por computadora para los próximos años — no por defecto.' },
-          { q: '¿Es el A9 Max mejor que el Minisforum UM890 Pro?', a: 'No de forma universal. Las ventajas del A9 Max son la plataforma Radeon 890M, el tope de memoria de 128 GB, el Wi-Fi 7, el 2,5GbE doble y el USB4 doble. El UM890 Pro, a $439–649, es muy a menudo la mejor opción de calidad-precio — comprueba el precio actual de ambos antes de decidir.' },
+          { q: '¿Es el A9 Max mejor que el Minisforum UM890 Pro?', a: 'No de forma universal. Las ventajas del A9 Max son la plataforma Radeon 890M, el tope de memoria de 128 GB, el Wi-Fi 7, el 2,5GbE doble y el USB4 doble. El UM890 Pro, a $439,90 sin RAM/SSD y $823,90 con 32 GB (actualmente agotado en la tienda oficial), es muy a menudo la mejor opción de calidad-precio — comprueba el precio actual de ambos antes de decidir.' },
           { q: '¿Puede ejecutar modelos de 70B?', a: 'Una configuración de 128 GB te da suficiente memoria de sistema para experimentar con modelos grandes cuantizados, pero eso no significa que la inferencia en 70B vaya a ser rápida. Si el rendimiento en 70B es un requisito principal, un sistema dedicado con mucha VRAM suele ser la mejor opción.' },
           { q: '¿Dónde se fabrica el GEEKOM A9 Max, y afecta eso al precio?', a: 'Se fabrica en China. En 2026, las medidas de importación de EE. UU. (aranceles de la Sección 301, el fin de la exención de minimis por debajo de $800) y la eliminación por la UE de la exención de 150 € para paquetes de bajo valor pueden afectar al coste final, así que verifica el precio actual del minorista en lugar de confiar en una cifra fija.' },
         ],
@@ -1527,9 +1527,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análisis del GEEKOM A9 Max (2026): ¿el mejor mini PC para IA local?',
       reviewBody:
-        'El GEEKOM A9 Max es un mini PC premium con Ryzen AI 9 que ejecuta Home Assistant más un LLM local 7B–13B con un tope de 128 GB de RAM. Con un precio de $1.299–1.599 / desde 1.439 € a fecha de agosto de 2026 (en aumento respecto al lanzamiento), es una compra por margen y durabilidad, aproximadamente 1,5 a 2 veces un Beelink SER8.',
+        'El GEEKOM A9 Max es un mini PC premium con Ryzen AI 9 que ejecuta Home Assistant más un LLM local 7B–13B con un tope de 128 GB de RAM. Con un precio de lista oficial de $1.299–1.599 (desde 1.439 € en España según idealo.es, agosto de 2026; en aumento respecto al lanzamiento), es una compra por margen y durabilidad, aproximadamente 1,6 a 2 veces un Beelink SER8.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1555,20 +1555,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: 'GEEKOM A9 Max レビュー（2026）：ローカルAIに最適なミニPCか？',
-    seoTitle: 'GEEKOM A9 Max レビュー2026 — ローカルAI＆ホームサーバー',
+    seoTitle: 'GEEKOM A9 Maxレビュー2026：ローカルAI機',
     intro:
-      'GEEKOM A9 MaxはAMD Ryzen AI 9 HX 370またはHX 470（12コア、Radeon 890M、最大128GB DDR5）を搭載したプレミアムミニPCです。ローカルAIスマートホーム向けとしては最も余裕のある選択肢で、Home Assistant、Frigate、Ollama上の7B〜13Bモデルを余裕を持って実行できます。しかし発売以来、価格は大きく上昇しています——GEEKOM公式の現在価格は約21万〜24万円台（2026年8月、構成やクーポンにより変動）で、このレビューが当初示した価格帯を大きく上回っています。この価格差は推奨内容に影響します。本レビューはGEEKOM公式の現行仕様と価格を検証し、ローカルLLM速度について現実的な期待値を示し、現在の価格で誰が実際に購入すべきか——そして誰がBeelink SER8を選ぶべきか——を明確にします。',
+      'GEEKOM A9 MaxはAMD Ryzen AI 9 HX 370またはHX 470（12コア、Radeon 890M、最大128GB DDR5）を搭載したプレミアムミニPCです。ローカルAIスマートホーム向けとしては最も余裕のある選択肢で、Home Assistant、Frigate、Ollama上の7B〜13Bモデルを余裕を持って実行できます。しかし発売以来、価格は大きく上昇しています——GEEKOM公式ストア（米国）の定価は$1,299–1,599（構成やクーポンにより変動）で、このレビューが当初示した$1,099–1,299を大きく上回っています。この価格差は推奨内容に影響します。本レビューはGEEKOM公式の現行仕様と価格を検証し、ローカルLLM速度について現実的な期待値を示し、現在の価格で誰が実際に購入すべきか——そして誰がBeelink SER8を選ぶべきか——を明確にします。',
     metaDescription:
-      'GEEKOM A9 Maxレビュー2026：Ryzen AI 9 HX 370/HX 470、Radeon 890M、最大128GB DDR5、構成別の現在価格。Home Assistant＋7B〜13Bのローカルモデルを実行——プレミアム価格に見合うかを正直に判定。',
+      'GEEKOM A9 Maxレビュー2026：Ryzen AI 9 HX 370/HX 470、Radeon 890M、最大128GB DDR5。HA＋7B〜13Bのローカルモデル実行、価格に見合うか判定。',
     twitterDescription:
-      'GEEKOM A9 Max（2026）：Ryzen AI 9 HX 370/HX 470、128GB DDR5上限、Wi-Fi 7、現在約21万円台〜。NPUはLLMを高速化しません——RAMとiGPUがカギです。誰が実際に買うべきか。',
+      'GEEKOM A9 Max（2026）：Ryzen AI 9 HX 370/HX 470、128GB DDR5上限、Wi-Fi 7、現在$1,299〜（米国公式定価）。NPUはLLMを高速化しません——RAMとiGPUがカギです。誰が実際に買うべきか。',
     readTime: '10分で読める',
     educationalLevel: 'Intermediate',
     audience: 'GEEKOM A9 MaxがローカルAIホームサーバーとして価格に見合うか判断したい購入者',
@@ -1581,18 +1581,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 ミニpc',
     ],
     leadAnswerBlock:
-      '**はい、ただし余裕が本当に必要な場合に限ります——GEEKOM A9 Max（Ryzen AI 9 HX 370/HX 470、Radeon 890M、最大128GB DDR5）はこの比較の中で最もローカルAIに強力なミニPCですが、現在の価格は約21万〜24万円台（GEEKOM公式、2026年8月）と、Beelink SER8のおおよそ1.4〜1.8倍です。** 128GBのRAM上限、デュアルNVMe、Wi-Fi 7、ビジョン処理の余裕のために購入してください。仕様書に「AI」と書いてあるからという理由だけで買わないでください——Home Assistantと7Bモデルだけで十分なら、SER8がほぼ半額でその役目を果たします。',
+      '**はい、ただし余裕が本当に必要な場合に限ります——GEEKOM A9 Max（Ryzen AI 9 HX 370/HX 470、Radeon 890M、最大128GB DDR5）はこの比較の中で最もローカルAIに強力なミニPCですが、現在の価格は$1,299–1,599（GEEKOM公式ストアの定価）と、Beelink SER8の公式定価$799（24GB/1TB）のおおよそ1.6〜2倍です。** 128GBのRAM上限、デュアルNVMe、Wi-Fi 7、ビジョン処理の余裕のために購入してください。仕様書に「AI」と書いてあるからという理由だけで買わないでください——Home Assistantと7Bモデルだけで十分なら、SER8が3分の2に満たない価格でその役目を果たします。',
     quickAnswerTop: {
       ja: {
         question: 'GEEKOM A9 Maxはローカルとホームアシスタントに適していますか？',
         answer:
-          'はい、ただし発売以来価格が上昇したプレミアムな選択です。Ryzen AI 9 HX 370（12コア/24スレッド）、Radeon 890M iGPU、そして最大128GBのDDR5は、Home Assistant、Ollama、Whisper、Frigateを1台で大きな余裕を持って実行します——7B〜8Bモデルは快適に動き、13B〜14B（4ビット）はコンテキストの余地を残して収まります。NPU（HX370で合計80TOPS、HX470で86TOPS）はFrigateなどのビジョン処理に役立ちますが、ローカルLLMは高速化しません。GEEKOMの現在価格は約21万〜24万円台（2026年8月、変動あり）——Beelink SER8のおおよそ1.4〜1.8倍——であり、コスパではなく余裕と将来性のための購入です。',
+          'はい、ただし発売以来価格が上昇したプレミアムな選択です。Ryzen AI 9 HX 370（12コア/24スレッド）、Radeon 890M iGPU、そして最大128GBのDDR5は、Home Assistant、Ollama、Whisper、Frigateを1台で大きな余裕を持って実行します——7B〜8Bモデルは快適に動き、13B〜14B（4ビット）はコンテキストの余地を残して収まります。NPU（HX370で合計80TOPS、HX470で86TOPS）はFrigateなどのビジョン処理に役立ちますが、ローカルLLMは高速化しません。GEEKOMの現在価格は$1,299–1,599（公式ストアの定価、変動あり）——Beelink SER8の公式定価$799（24GB/1TB）のおおよそ1.6〜2倍——であり、コスパではなく余裕と将来性のための購入です。',
         bullets: [
           'CPU：Ryzen AI 9 HX 370またはHX 470——12コア/24スレッド、Radeon 890M（16 CU、RDNA 3.5）',
           'RAM：標準32GB DDR5、SO-DIMMスロット2基、最大128GB（交換可能）',
           'ローカルLLM（仕様からの推定）：7B〜8Bは快適、13B〜14Bは4ビットで収まる；64〜128GBで30B〜70Bが開ける（遅く、帯域幅に制約あり）',
           'NPU（合計80〜86TOPS）はFrigateのビジョン処理に役立つが、LLM速度には寄与しない；iGPUとRAM帯域幅がLLMのレイテンシを決める',
-          '価格：GEEKOMは構成により約21万〜24万円台で販売（2026年8月時点）——Beelink SER8ならほとんどのニーズを約13万円台でカバー',
+          '価格：GEEKOMは構成により$1,299–1,599で販売（GEEKOM公式ストアの定価）——Beelink SER8なら$799（24GB/1TB、公式ストアの定価）からほとんどのニーズをカバー',
         ],
         updatedDate: '2026-08',
       },
@@ -1616,7 +1616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'GEEKOM A9 MaxはRyzen AI 9搭載のプレミアムミニPCで、現在約21万円台からとなり、Home Assistantと7B〜13Bのローカルモデルを、Beelink SER8には及ばない128GBのRAM上限で実行します。' },
+      { type: 'one-sentence', content: 'GEEKOM A9 MaxはRyzen AI 9搭載のプレミアムミニPCで、現在$1,299からとなり、Home Assistantと7B〜13Bのローカルモデルを、Beelink SER8には及ばない128GBのRAM上限で実行します。' },
       { type: 'plain-terms', content: 'ミニPCとは、一日中つけっぱなしにできる小型で静かなコンピューターです。A9 Maxはその中でも高性能なモデルで、高速なプロセッサ、強力な内蔵グラフィックス、そして大量のメモリを搭載できる余地があります。このメモリ上限のおかげで安価なボックスより大きなAIモデルを動かせますが、発売時よりかなり高価になっており、専用AIチップ（NPU）はチャットモデルではなくカメラ検出に役立つものです。' },
     ],
     sections: {
@@ -1633,9 +1633,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A9 MaxはHome Assistant、Frigate、Whisper、7B〜13Bのローカルモデルを1台で余裕を持って実行できる',
           'Ryzen AI 9 HX 370/HX 470：12コア/24スレッド、Radeon 890M iGPU、最大128GB DDR5（交換可能なSO-DIMM2基）',
-          '発売以来価格が大きく上昇——GEEKOMは現在約21万〜24万円台で販売しており、このレビューが当初示した価格帯を上回る',
+          '発売以来価格が大きく上昇——GEEKOMは現在$1,299–1,599（公式ストアの定価）で販売しており、このレビューが当初示した$1,099–1,299を上回る',
           'ローカルLLMの速度はiGPUとRAM帯域幅に由来する——80〜86TOPSのNPUはビジョン処理を高速化するが、チャットモデルではない',
-          '現在の価格では[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review)（約13万円台）のおおよそ1.4〜1.8倍——128GB上限、デュアルNVMe、Wi-Fi 7のために購入すべきで、節約のためではない',
+          '現在の価格では[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review)（24GB/1TBで$799、公式ストアの定価）のおおよそ1.6〜2倍——128GB上限、デュアルNVMe、Wi-Fi 7のために購入すべきで、節約のためではない',
           '中国製——2026年の米国・EU輸入措置を最終価格に織り込んで考える必要がある（貿易に関する注記を参照）',
         ],
       },
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**GEEKOM A9 Maxは、何年も余裕を持ってローカルAIスマートホームを運用できる1台のミニPCが欲しく、その余裕のために現在のBeelink SER8との価格差を払う意思がある場合に購入してください。** 12コアのRyzen AI 9、Radeon 890M iGPU、128GBのRAM上限は、この比較の中で最も将来性のあるボックスです。もし目的が最も安価で十分な性能のマシンであれば、ここで立ち止まって代わりにSER8のレビューを読んでください——A9 Maxはハブと1つの7Bモデルだけには過剰な性能です。\n\n**「AI」と書いてあるからという理由だけでA9 Maxを買わないでください。** Home AssistantといくつかのZigbeeデバイスだけが目的なら、これは過剰性能です。Home Assistant＋ローカルAI＋Frigate＋ストレージ＋自動化を1台でまとめたいなら、正当化しやすくなります——ただしそれは実際に確認した価格であるべきで、このページが発売時に示していた数字ではありません。',
         affiliateLinks: [
-          { label: 'GEEKOM A9 Maxの現在価格を確認', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '約21万〜24万円台' },
+          { label: 'GEEKOM A9 Maxの現在価格を確認', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '$1,299–1,599' },
         ],
       },
       whoShouldBuy: {
@@ -1684,7 +1684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 仕様: 'TDP', 'GEEKOM A9 Max': '54W' },
           { 仕様: '寸法', 'GEEKOM A9 Max': '135×132×46mm' },
           { 仕様: 'OS', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2（Linux/Proxmoxのインストールに対応）' },
-          { 仕様: '価格（32GB/2TB、HX370）', 'GEEKOM A9 Max': '2026年8月時点で約21万円台〜（変動あり、現在価格を確認）' },
+          { 仕様: '価格（32GB/2TB、HX370）', 'GEEKOM A9 Max': '$1,399〜（公式ストアの定価、変動あり、現在価格を確認）' },
         ],
         items: [
           '専用GPUなし：すべてのAI推論はCPUとRadeon 890M iGPUで行われ、システムRAMを共有します。',
@@ -1733,12 +1733,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'どの構成を購入すべきか',
         content:
-          '**GEEKOMは現在、HX370/32GB/1TB、HX370/32GB/2TB、HX470/32GB/2TBとしてA9 Maxを販売しており、64GBと128GBは交換可能なSO-DIMMスロット経由で到達できます。** 以下の価格はGEEKOM公式ストアおよびAmazon.co.jpの2026年8月時点の情報を反映しています——購入前に必ずライブ価格と有効なクーポンコードを確認してください。',
+          '**GEEKOMは現在、HX370/32GB/1TB、HX370/32GB/2TB、HX470/32GB/2TBとしてA9 Maxを販売しており、64GBと128GBは交換可能なSO-DIMMスロット経由で到達できます。** 以下の価格はGEEKOM公式ストア（米国）の定価（2026-10-25確認）で、日本国内の価格とは異なります——購入前に必ずライブ価格と有効なクーポンコードを確認してください。',
         columns: ['構成', 'おおよその価格', '最適な用途'],
         rows: [
-          { 構成: 'HX370 / 32GB / 1TB', 'おおよその価格': '約19万円台', '最適な用途': 'Home Assistant、オフィス、開発、小型ローカルモデル——価格優先なら購入' },
-          { 構成: 'HX370 / 32GB / 2TB', 'おおよその価格': '約21万円台', '最適な用途': '総合的に最良の出発点——ほとんどのユーザーに十分なRAM、複数のローカルモデルに十分なストレージ' },
-          { 構成: 'HX470 / 32GB / 2TB（「2026 Edition」）', 'おおよその価格': '約24万円台（Amazon.co.jp確認済み）', '最適な用途': '追加のNPU TOPSや新しいCPUが特に重要な場合のみ——ローカルLLMを目に見えて高速化するものではない' },
+          { 構成: 'HX370 / 32GB / 1TB', 'おおよその価格': '$1,299', '最適な用途': 'Home Assistant、オフィス、開発、小型ローカルモデル——価格優先なら購入' },
+          { 構成: 'HX370 / 32GB / 2TB', 'おおよその価格': '$1,399', '最適な用途': '総合的に最良の出発点——ほとんどのユーザーに十分なRAM、複数のローカルモデルに十分なストレージ' },
+          { 構成: 'HX470 / 32GB / 2TB（「2026 Edition」）', 'おおよその価格': '$1,599', '最適な用途': '追加のNPU TOPSや新しいCPUが特に重要な場合のみ——ローカルLLMを目に見えて高速化するものではない' },
           { 構成: '64GB（自己アップグレード）', 'おおよその価格': '本体価格＋SO-DIMMキット費用', '最適な用途': '本格的なローカルAI——適正な追加費用で入手できるなら、これが推奨構成' },
           { 構成: '128GB（自己アップグレード）', 'おおよその価格': '本体価格＋SO-DIMMキット費用', '最適な用途': 'それを必要とする具体的なワークロードがある場合のみ——大規模モデル、複数サービス、重いRAG' },
         ],
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '仕様書がサポートしているというだけの理由で128GBを購入しないでください——まずRAMアップグレードの価格を確認し、実際のワークロードと照らし合わせてください。',
         ],
         affiliateLinks: [
-          { label: 'HX370/32GB/2TBの価格を確認', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max HX370/32GB/2TB', productCategory: 'Mini PC', priceRange: '約21万円台' },
+          { label: 'HX370/32GB/2TBの価格を確認', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max HX370/32GB/2TB', productCategory: 'Mini PC', priceRange: '$1,399' },
         ],
       },
       vsSer8: {
@@ -1761,7 +1761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 要素: 'ストレージ', 'A9 Max': 'NVMe×2（2280+2230）', 'Beelink SER8': 'NVMe×2（うち1つはSATA）' },
           { 要素: 'ネットワーク', 'A9 Max': '2.5GbE×2、Wi-Fi 7', 'Beelink SER8': '2.5GbE×1、Wi-Fi 6' },
           { 要素: 'USB4', 'A9 Max': '2ポート', 'Beelink SER8': 'なし' },
-          { 要素: '価格', 'A9 Max': '約21万〜24万円台', 'Beelink SER8': '約13万円台（32GB）／約19万円台（64GB）' },
+          { 要素: '価格', 'A9 Max': '$1,299–1,599', 'Beelink SER8': '$799（24GB/1TB）／32GB：要確認' },
           { 要素: '最適な用途', 'A9 Max': '最大限の余裕、長期的な余力', 'Beelink SER8': 'HA＋7Bモデルの最良コスパ' },
         ],
         items: [
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**私たちの結論：SER8＝優れたコスパ。A9 Max＝より高性能なマシン。** この区別は重要です——SER8は同じワークロードの多くを大幅に低いコストでカバーする一方、A9 Maxの本当の利点は余裕、メモリ上限、より強力な内蔵グラフィックスであり、単なる「AI」ブランディングではありません。',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8レビューと比較', url: '/ja/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '約13万円台' },
+          { label: 'Beelink SER8レビューと比較', url: '/ja/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799〜' },
         ],
       },
       vsUm890: {
@@ -1778,12 +1778,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max vs Minisforum UM890 Pro',
         content: '**購入前にもう一つ検討すべき比較です。**',
         items: [
-          '**UM890 Proを選ぶ**理由：コスパとローカルAI能力、そして後で専用GPUへのアップグレード経路を残すOCuLinkポート——価格は裸機で約6.7万円台からRAM32GBで約9万円台程度と、A9 Maxよりかなり下です。',
+          '**UM890 Proを選ぶ**理由：コスパとローカルAI能力、そして後で専用GPUへのアップグレード経路を残すOCuLinkポート——公式ストアの定価は裸機で$439.90、32GB/1TB構成で$823.90（現在売り切れ）と、A9 Maxよりかなり下です。',
           '**A9 Maxを選ぶ**理由：コンパクトなシステムとしての最大限の余裕と接続性——最大の差別化要因はRadeon 890M、最大128GB、Wi-Fi 7、デュアル2.5GbE、デュアルUSB4を備えた本当にプレミアムなコンパクトプラットフォームであることです。',
           'UM890 Proが購入時点で大幅に安ければ——通常はそうですが——コスパの議論はMinisforumに軍配が上がります。それをこのページで隠すつもりはありません。むしろそれでもA9 Maxを勧める場合、その推奨の信頼性が高まります。',
         ],
         affiliateLinks: [
-          { label: 'Minisforum UM890 Proレビューを読む', url: '/ja/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '約6.7万〜9万円台' },
+          { label: 'Minisforum UM890 Proレビューを読む', url: '/ja/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439.90–823.90' },
         ],
       },
       worthIt: {
@@ -1792,14 +1792,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**このセクションが実際の購入判断を左右するはずです——購入をクリックする前に代替案の価格を確認してください。**',
         columns: ['現在の価格', '私たちの見解'],
         rows: [
-          { '現在の価格': '約9万〜10万円台', '私たちの見解': '簡単に推奨できる——ただしGEEKOMは現在A9 Maxをこの価格では提供していません；この価格帯はSER8/UM890 Proの領域です' },
-          { '現在の価格': '約12万〜15万円台', '私たちの見解': '本格的なローカルAI向けに強く推奨——この価格で見つけられれば' },
-          { '現在の価格': '約16万〜20万円台', '私たちの見解': 'RAM/接続性の余裕が具体的に必要な場合のみ購入——これがおおよそGEEKOMの現在の入門価格帯です' },
-          { '現在の価格': '約22万円台以上', '私たちの見解': '購入前にデスクトップの専用GPUシステムと非常に注意深く比較してください' },
+          { '現在の価格': '約$600–700', '私たちの見解': '簡単に推奨できる——ただしGEEKOMは現在A9 Maxをこの価格では提供していません；この価格帯はSER8/UM890 Proの領域です' },
+          { '現在の価格': '約$800–1,000', '私たちの見解': '本格的なローカルAI向けに強く推奨——この価格で見つけられれば' },
+          { '現在の価格': '約$1,100–1,300', '私たちの見解': 'RAM/接続性の余裕が具体的に必要な場合のみ購入——これがおおよそGEEKOMの現在の入門価格帯です' },
+          { '現在の価格': '約$1,500以上', '私たちの見解': '購入前にデスクトップの専用GPUシステムと非常に注意深く比較してください' },
         ],
         items: [
-          '**私たち自身が適用する価格ルール：** 購入時点でA9 Maxが最も近い代替案より1〜2万円程度しか高くないなら、追加の余裕は通常価値があります。GEEKOMの現在価格（約21万〜24万円台）とSER8（約13万円台）のように、差額が数万円に及ぶ現在の状況では、購入前にSER8とUM890 Proを真剣に比較してください。',
-          'GEEKOMの価格はこのレビューの初回公開以来大きく上昇しています——このページ上のどの金額も、2026年8月時点のスナップショットとして扱い、約束された金額として扱わないでください。',
+          '**私たち自身が適用する価格ルール：** 購入時点でA9 Maxが最も近い代替案より$100–200程度しか高くないなら、追加の余裕は通常価値があります。GEEKOMの現在価格（$1,299–1,599）とSER8（$799）のように、差額が数百ドルに及ぶ現在の状況では、購入前にSER8とUM890 Proを真剣に比較してください。',
+          'GEEKOMの価格はこのレビューの初回公開以来大きく上昇しています——このページ上のどの金額も、米国公式ストアの定価のスナップショットとして扱い、約束された金額として扱わないでください。',
         ],
       },
       prosCons: {
@@ -1814,7 +1814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7、デュアル2.5GbE、USB4ポート2基——ホームサーバーとして接続性が高い',
           '常時稼働のボックスとして控えめな54Wで動作',
           '**短所**',
-          '高価——2026年8月時点で約21万〜24万円台と、このレビューの当初価格帯を大きく上回る',
+          '高価——公式ストアの定価で$1,299–1,599と、このレビューの当初価格帯（$1,099–1,299）を大きく上回る',
           'NPUはローカルLLMを高速化しない——このページが一部訂正しようとしているよくある誤解',
           'iGPU＋共有メモリ設計は非常に大きなモデルでは帯域幅に制約される',
           'アクティブ冷却——マーケティング上の表現に反し、持続負荷下では静音ではない',
@@ -1829,20 +1829,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '米国：中国製電子機器に対するセクション301関税は2026年も引き続き有効です。2025年の別個の「IEEPA」関税は2026年2月に最高裁判所により無効とされ、期間限定で上限のあるセクション122関税に置き換えられました。直接輸入に対する800ドル未満の免税「デミニマス」免除も終了しました。',
           'EU（DE/FRに影響）：完成品ミニPCに対する広範なEU関税はありませんが、2026年7月から中国からの低額直送小包に対する150ユーロの免税基準が撤廃され、小包ごとの少額の取扱手数料が追加されました。',
-          '正味の影響：購入前に販売業者の現在価格を確認してください——このレビューの数字は目安であり、2026年8月時点のものです。',
+          '正味の影響：購入前に販売業者の現在価格を確認してください——このレビューの数字は目安であり、米国公式ストアの定価に基づいています。',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: '購入先と現在価格',
         content:
-          '**価格は週ごとに変動するため、固定の数字を信頼するのではなくライブ価格を確認してください。** 2026年8月時点で、Amazon.co.jpではHX470/32GB構成が約24万円（クーポン適用で約23万円台）で確認されています。',
+          '**価格は週ごとに変動するため、固定の数字を信頼するのではなくライブ価格を確認してください。** GEEKOM公式ストア（米国）では、HX370/32GB/1TB構成が$1,299、HX370/32GB/2TBが$1,399、新しいHX470/32GB/2TB「2026 Edition」が$1,599です（定価、2026-10-25確認。日本国内の価格とは異なります）。',
         items: [
           '注文前に正確なSKU（HX 370かHX 470か、RAMとストレージ容量）を確認してください——価格と仕様が異なり、GEEKOMは「A9 Max」という名称で複数世代を販売しています。',
           'チェックアウト時に有効なクーポンコードを確認してください——GEEKOMは公式ストアやAmazonで5〜15%割引のプロモーションを実施しています。',
         ],
         affiliateLinks: [
-          { label: '現在価格を確認——Amazon.co.jp', url: 'https://www.amazon.co.jp/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '約21万〜24万円台' },
+          { label: '現在価格を確認——Amazon.co.jp', url: 'https://www.amazon.co.jp/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC', priceRange: '$1,299–1,599' },
         ],
       },
       alternatives: {
@@ -1853,14 +1853,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'GEEKOM A9 Max対Beelink SER8の仕様比較：128GBのRAM上限と7B〜70Bモデル適合を持つRyzen AI 9 HX 370（12C/24T）対、約64〜96GB上限と快適な7B〜14B適合を持つRyzen 7 8845HS（8C/16T）。',
         columns: ['ミニPC', '価格（目安）', 'RAM上限', '最適な用途'],
         rows: [
-          { 'ミニPC': 'GEEKOM A9 Max', '価格（目安）': '約21万〜24万円台', 'RAM上限': '128GB', '最適な用途': '最大限の余裕＋接続性' },
-          { 'ミニPC': 'Beelink SER8', '価格（目安）': '約13万円台（32GB）／約19万円台（64GB）', 'RAM上限': '約64〜96GB', '最適な用途': 'HA＋7Bモデルの最良コスパ' },
-          { 'ミニPC': 'Minisforum UM890 Pro', '価格（目安）': '約6.7万〜9万円台', 'RAM上限': '約96GB', '最適な用途': 'コスパ＋OCuLink経由のeGPUアップグレード経路' },
-          { 'ミニPC': 'GMKtec G3 Plus', '価格（目安）': '現在価格要確認', 'RAM上限': '32GB', '最適な用途': '安価なHAハブ、ボーナスとしての軽量AI' },
-          { 'ミニPC': 'Beelink EQ14', '価格（目安）': '現在価格要確認', 'RAM上限': '16GB', '最適な用途': '安価なHA、デュアル2.5GbE' },
+          { 'ミニPC': 'GEEKOM A9 Max', '価格（目安）': '$1,299–1,599', 'RAM上限': '128GB', '最適な用途': '最大限の余裕＋接続性' },
+          { 'ミニPC': 'Beelink SER8', '価格（目安）': '$799（24GB/1TB）', 'RAM上限': '約64〜96GB', '最適な用途': 'HA＋7Bモデルの最良コスパ' },
+          { 'ミニPC': 'Minisforum UM890 Pro', '価格（目安）': '$439.90–823.90', 'RAM上限': '約96GB', '最適な用途': 'コスパ＋OCuLink経由のeGPUアップグレード経路' },
+          { 'ミニPC': 'GMKtec G3 Plus', '価格（目安）': '$399.99〜499.99（定価・在庫切れ）', 'RAM上限': '32GB', '最適な用途': '安価なHAハブ、ボーナスとしての軽量AI' },
+          { 'ミニPC': 'Beelink EQ14', '価格（目安）': '$385（定価・予約受付）', 'RAM上限': '16GB', '最適な用途': '安価なHA、デュアル2.5GbE' },
         ],
         items: [
-          '[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review)——コスパの選択：Ryzen 7 8845HS、A9 Maxの約半額で7Bモデルを快適に実行',
+          '[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review)——コスパの選択：Ryzen 7 8845HS、A9 Maxの3分の2に満たない価格で7Bモデルを快適に実行',
           '[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review)——後でより高速な大規模モデル推論が欲しい場合に外部GPUを接続できるOCuLinkポートを追加、はるかに低い入門価格',
           '[Beelink EQ14](/ja/smart-home/beelink-eq14-local-ai-review)——Home Assistantと小型モデル向けの安価なIntel N150ボックス',
           '[GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review)——アップグレード可能なRAMを備えたもう一つの安価なN150オプション',
@@ -1882,14 +1882,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'GEEKOM A9 Maxの現在価格はいくらですか？', a: 'Amazon.co.jpでは、2026年8月時点でHX470/32GB構成が約24万円（クーポン適用で約23万円台）で確認されています。これはこのレビューが当初示していた価格帯を大幅に上回っています——購入前にライブ価格と有効なクーポンコードを確認してください。' },
+          { q: 'GEEKOM A9 Maxの現在価格はいくらですか？', a: 'GEEKOM公式ストア（米国）の定価は、HX370/32GB/1TBが$1,299、HX370/32GB/2TBが$1,399、新しいHX470/32GB/2TB「2026 Edition」が$1,599です（2026-10-25確認。日本国内の価格とは異なります）。これはこのレビューが当初示していた$1,099–1,299を大幅に上回っています——購入前にライブ価格と有効なクーポンコードを確認してください。' },
           { q: 'GEEKOM A9 Maxはローカルllmを実行できますか？', a: 'はい。32GBのRAMがあれば、Ollama上で7B〜8Bモデルを快適に実行し、13B〜14Bモデルを4ビット量子化でコンテキストの余地を残して収めます。これは検証済みハードウェアからの推定であり、固定のベンチマークではありません。速度はモデル、量子化、バックエンドに依存するためです。' },
           { q: 'RAMにはどのくらいの大きさのモデルが収まりますか？', a: '32GBでは、13B〜14Bモデルを4ビットで動かすのが現実的です。64GBへのアップグレードで30Bクラスのモデルが視野に入り、128GBの上限では70Bモデルを4ビットで読み込めます——ただし非常に大きなモデルは、iGPUがシステムメモリを共有し専用VRAMを持たないため低速に動作します。' },
           { q: 'NPUはローカルLLMを高速化しますか？', a: 'いいえ。NPU（HX370で合計80TOPS、HX470で86TOPS）はビジョン処理やいくつかのWindows AI機能を高速化しますが、Ollamaやllama.cppなどの主流のローカルLLMランタイムはCPUとRadeon 890M iGPUでモデルを実行します。NPUはFrigateのカメラ検出には有利ですが、チャットモデルの速度には寄与しないと考えてください。' },
           { q: 'A9 MaxはHome Assistantや常時稼働の用途に適していますか？', a: 'はい。Home Assistant、Ollama、Whisper、Frigateを余裕を持ってまとめて実行でき、持続54Wの消費電力により常時稼働のコストは控えめです。デュアル2.5GbEとWi-Fi 7も有線ホームサーバーとしての役割に適しています。' },
           { q: 'RAMはアップグレード可能ですか？', a: 'はい。A9 Maxは標準的なDDR5 SO-DIMMスロット2基を使用しており、ユーザーが交換可能です。32GBから始めて後から64GBや128GBに移行できます。これは半田付けされたメモリを持つミニPCに対する真の利点です。' },
           { q: 'Beelink SER8よりA9 Maxを買う価値はありますか？', a: '追加の余裕が欲しい場合のみです。SER8はHome Assistantと7Bモデルを、A9 Maxの現在価格のおおよそ半分から3分の2の価格で実行します。128GBのRAM上限、デュアルNVMe、Wi-Fi 7、または今後数年のビジョン処理の余裕が必要な場合にA9 Maxの追加費用に価値があります——標準的な選択ではありません。' },
-          { q: 'A9 MaxはMinisforum UM890 Proより優れていますか？', a: '一律にそうとは言えません。A9 Maxの利点はRadeon 890Mプラットフォーム、128GBのメモリ上限、Wi-Fi 7、デュアル2.5GbE、デュアルUSB4です。UM890 Proは約6.7万〜9万円台と、非常にしばしば優れたコスパの選択です——決める前に両方の現在価格を確認してください。' },
+          { q: 'A9 MaxはMinisforum UM890 Proより優れていますか？', a: '一律にそうとは言えません。A9 Maxの利点はRadeon 890Mプラットフォーム、128GBのメモリ上限、Wi-Fi 7、デュアル2.5GbE、デュアルUSB4です。UM890 Proは裸機$439.90、32GB構成$823.90（公式ストアでは現在売り切れ）と、非常にしばしば優れたコスパの選択です——決める前に両方の現在価格を確認してください。' },
           { q: '70Bモデルを実行できますか？', a: '128GB構成であれば大規模な量子化モデルを試すのに十分なシステムメモリが得られますが、それは70B推論が高速であることを意味しません。70Bの性能が主な要件であるなら、一般的には大容量VRAMを備えた専用GPUシステムの方が良い選択です。' },
           { q: 'GEEKOM A9 Maxはどこで製造されており、それは価格に影響しますか？', a: '中国で製造されています。2026年の米国輸入措置（セクション301関税、800ドル未満のデミニマス免除の終了）とEUによる150ユーロの低額小包免除の撤廃は最終コストに影響する可能性があるため、固定の数字に頼るのではなく現在の販売業者価格を確認してください。' },
         ],
@@ -1913,9 +1913,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GEEKOM A9 Max レビュー（2026）：ローカルAIに最適なミニPCか？',
       reviewBody:
-        'GEEKOM A9 MaxはRyzen AI 9搭載のプレミアムミニPCで、Home Assistantと7B〜13Bのローカルモデルを128GBのRAM上限で実行します。2026年8月時点で約21万〜24万円台（発売時から上昇）であり、余裕と将来性のための購入で、Beelink SER8のおおよそ1.4〜1.8倍です。',
+        'GEEKOM A9 MaxはRyzen AI 9搭載のプレミアムミニPCで、Home Assistantと7B〜13Bのローカルモデルを128GBのRAM上限で実行します。公式ストアの定価は$1,299–1,599（発売時から上昇）であり、余裕と将来性のための購入で、Beelink SER8のおおよそ1.6〜2倍です。',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1940,18 +1940,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: 'GEEKOM A9 Max 评测（2026）：本地AI最佳迷你主机？',
-    seoTitle: 'GEEKOM A9 Max 评测2026 — 本地AI与家庭服务器',
+    seoTitle: 'GEEKOM A9 Max评测2026：本地AI主机',
     intro:
-      'GEEKOM A9 Max是一款搭载AMD Ryzen AI 9 HX 370或HX 470（12核、Radeon 890M、最高128GB DDR5）的高端迷你主机。对于本地AI智能家居而言，它是余量最充裕的选择——能够宽裕地运行Home Assistant、Frigate，以及Ollama上的7B–13B模型。但自发布以来，它的价格已大幅上涨——GEEKOM官方目前的售价为$1,299–1,599（2026年8月，视配置和促销码而定），远高于本文最初报道的$1,099–1,299。这一价差改变了推荐结论：本评测对照GEEKOM官方页面核实了最新规格和价格，对本地LLM速度给出诚实的预期，并明确说明在当前价格下谁仍应购买它——以及谁应该改选Beelink SER8。',
+      'GEEKOM A9 Max是一款搭载AMD Ryzen AI 9 HX 370或HX 470（12核、Radeon 890M、最高128GB DDR5）的高端迷你主机。对于本地AI智能家居而言，它是余量最充裕的选择——能够宽裕地运行Home Assistant、Frigate，以及Ollama上的7B–13B模型。但自发布以来，它的价格已大幅上涨——GEEKOM官方目前的售价为$1,299–1,599（GEEKOM官方商店标价，视配置和促销码而定），远高于本文最初报道的$1,099–1,299。这一价差改变了推荐结论：本评测对照GEEKOM官方页面核实了最新规格和价格，对本地LLM速度给出诚实的预期，并明确说明在当前价格下谁仍应购买它——以及谁应该改选Beelink SER8。',
     metaDescription:
-      'GEEKOM A9 Max评测2026：Ryzen AI 9 HX 370/HX 470，Radeon 890M，最高128GB DDR5，各配置当前价格。运行Home Assistant加7B–13B本地LLM——诚实评判这笔溢价是否值得。',
+      'GEEKOM A9 Max评测2026：Ryzen AI 9 HX 370/HX 470，Radeon 890M，最高128GB DDR5。运行Home Assistant加7B–13B本地LLM，评判溢价是否值得。',
     twitterDescription:
       'GEEKOM A9 Max（2026）：Ryzen AI 9 HX 370/HX 470，128GB DDR5上限，Wi-Fi 7，现售$1,299–1,599。NPU不会加速LLM——RAM和核显才是关键。谁真正该买它。',
     readTime: '阅读约10分钟',
@@ -1966,18 +1966,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 迷你主机',
     ],
     leadAnswerBlock:
-      '**值得——但仅限于你确实需要这份余量：GEEKOM A9 Max（Ryzen AI 9 HX 370/HX 470，Radeon 890M，最高128GB DDR5）是本对比中本地AI能力最强的迷你主机，目前售价$1,299–1,599（GEEKOM官方价，2026年8月），大约是Beelink SER8的1.5–2倍。** 为128GB内存上限、双NVMe、Wi-Fi 7和视觉处理余量而购买它。不要只因为规格表上写着"AI"就下单——如果你只需要Home Assistant加一个7B模型，SER8能以大约一半的价格完成同样的工作。',
+      '**值得——但仅限于你确实需要这份余量：GEEKOM A9 Max（Ryzen AI 9 HX 370/HX 470，Radeon 890M，最高128GB DDR5）是本对比中本地AI能力最强的迷你主机，目前售价$1,299–1,599（GEEKOM官方商店标价），大约是Beelink SER8官方标价$799（24GB/1TB）的1.6–2倍。** 为128GB内存上限、双NVMe、Wi-Fi 7和视觉处理余量而购买它。不要只因为规格表上写着"AI"就下单——如果你只需要Home Assistant加一个7B模型，SER8能以不到三分之二的价格完成同样的工作。',
     quickAnswerTop: {
       zh: {
         question: 'GEEKOM A9 Max适合本地AI和Home Assistant吗？',
         answer:
-          '适合，但这是一款自发布以来涨价的高端选择。Ryzen AI 9 HX 370（12核/24线程）、Radeon 890M核显，以及最高128GB的DDR5，能在一台主机上宽裕地运行Home Assistant、Ollama、Whisper和Frigate——7B–8B模型运行舒适，13B–14B（4-bit）也能装下并留有上下文空间。它的NPU（HX370总计80 TOPS，HX470为86 TOPS）有助于Frigate等视觉任务，但不会加速本地LLM。GEEKOM目前定价$1,299–1,599（2026年8月，价格波动）——大约是Beelink SER8的1.5–2倍——因此这是一笔为余量和面向未来买单的投资，而不是高性价比之选。',
+          '适合，但这是一款自发布以来涨价的高端选择。Ryzen AI 9 HX 370（12核/24线程）、Radeon 890M核显，以及最高128GB的DDR5，能在一台主机上宽裕地运行Home Assistant、Ollama、Whisper和Frigate——7B–8B模型运行舒适，13B–14B（4-bit）也能装下并留有上下文空间。它的NPU（HX370总计80 TOPS，HX470为86 TOPS）有助于Frigate等视觉任务，但不会加速本地LLM。GEEKOM目前定价$1,299–1,599（GEEKOM官方商店标价，价格波动）——大约是Beelink SER8官方标价$799（24GB/1TB）的1.6–2倍——因此这是一笔为余量和面向未来买单的投资，而不是高性价比之选。',
         bullets: [
           'CPU：Ryzen AI 9 HX 370或HX 470——12核/24线程，Radeon 890M（16 CU，RDNA 3.5）',
           '内存：标准32GB DDR5，两个SO-DIMM插槽，最高可扩展至128GB（用户可更换）',
           '本地LLM（基于规格的估算）：7B–8B运行舒适，13B–14B（4-bit）可装下；64–128GB可运行30B–70B（速度较慢，受带宽限制）',
           'NPU（总计80–86 TOPS）有助于Frigate视觉处理，但不影响LLM速度；核显和内存带宽决定LLM延迟',
-          '价格：GEEKOM按配置定价$1,299–1,599（截至2026年8月）——Beelink SER8能以$799–849满足大多数需求',
+          '价格：GEEKOM按配置定价$1,299–1,599（GEEKOM官方商店标价）——Beelink SER8起价$799（24GB/1TB，官方商店标价）即可满足大多数需求',
         ],
         updatedDate: '2026-08',
       },
@@ -2018,9 +2018,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A9 Max能在一台主机上运行Home Assistant、Frigate、Whisper和7B–13B本地LLM，且留有充足余量',
           'Ryzen AI 9 HX 370/HX 470：12核/24线程，Radeon 890M核显，最高128GB DDR5（两条用户可更换的SO-DIMM）',
-          '发布以来价格大幅上涨——GEEKOM目前定价$1,299–1,599（2026年8月），而不是本文最初报道的$1,099–1,299',
+          '发布以来价格大幅上涨——GEEKOM目前定价$1,299–1,599（GEEKOM官方商店标价），而不是本文最初报道的$1,099–1,299',
           '本地LLM速度来自核显和内存带宽——80–86 TOPS的NPU加速的是视觉处理，不是聊天模型',
-          '按当前价格计算，大约是[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review)（$799–849）的1.5–2倍——购买它是为了128GB上限、双NVMe和Wi-Fi 7，不是为了省钱',
+          '按当前价格计算，大约是[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review)（24GB/1TB官方商店标价$799）的1.6–2倍——购买它是为了128GB上限、双NVMe和Wi-Fi 7，不是为了省钱',
           '中国制造——需要将2026年美国/欧盟的进口措施计入到岸成本中（详见贸易须知部分）',
         ],
       },
@@ -2069,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 规格: 'TDP', 'GEEKOM A9 Max': '54W' },
           { 规格: '尺寸', 'GEEKOM A9 Max': '135×132×46mm' },
           { 规格: '操作系统', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2（支持安装Linux/Proxmox）' },
-          { 规格: '价格（32GB/2TB，HX370）', 'GEEKOM A9 Max': '2026年8月约$1,399起（价格波动，请查看当前价格）' },
+          { 规格: '价格（32GB/2TB，HX370）', 'GEEKOM A9 Max': '约$1,399起（GEEKOM官方商店标价，价格波动，请查看当前价格）' },
         ],
         items: [
           '无独立显卡：所有AI推理都在CPU和Radeon 890M核显上运行，并共享系统内存。',
@@ -2118,7 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: '应该购买哪个配置？',
         content:
-          '**GEEKOM目前将A9 Max分为HX370/32GB/1TB、HX370/32GB/2TB和HX470/32GB/2TB三种配置在售，64GB和128GB可通过用户可更换的SO-DIMM插槽实现。** 以下价格反映了GEEKOM官方页面截至2026年8月的信息——购买前请务必核实实时价格和是否有有效的优惠码。',
+          '**GEEKOM目前将A9 Max分为HX370/32GB/1TB、HX370/32GB/2TB和HX470/32GB/2TB三种配置在售，64GB和128GB可通过用户可更换的SO-DIMM插槽实现。** 以下价格反映了GEEKOM官方商店的标价——购买前请务必核实实时价格和是否有有效的优惠码。',
         columns: ['配置', '大致价格', '最适合'],
         rows: [
           { 配置: 'HX370 / 32GB / 1TB', '大致价格': '$1,299', '最适合': 'Home Assistant、办公、开发、小型本地模型——价格优先时选它' },
@@ -2146,7 +2146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 因素: '存储', 'A9 Max': '2×NVMe（2280+2230）', 'Beelink SER8': '2×NVMe（其中1个为SATA）' },
           { 因素: '网络', 'A9 Max': '2×2.5GbE，Wi-Fi 7', 'Beelink SER8': '1×2.5GbE，Wi-Fi 6' },
           { 因素: 'USB4', 'A9 Max': '2个接口', 'Beelink SER8': '无' },
-          { 因素: '价格', 'A9 Max': '$1,299–1,599', 'Beelink SER8': '$799–849（32GB）／$1,239（64GB）' },
+          { 因素: '价格', 'A9 Max': '$1,299–1,599', 'Beelink SER8': '$799（24GB/1TB）／32GB请查看列表' },
           { 因素: '最适合', 'A9 Max': '最大余量，多年使用空间', 'Beelink SER8': 'HA加7B模型的最佳性价比' },
         ],
         items: [
@@ -2155,7 +2155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**我们的结论：SER8＝更高性价比。A9 Max＝更强大的机器。** 这个区别很重要——SER8以低得多的成本覆盖了许多相同的工作负载，而A9 Max真正的优势在于余量、内存上限和更强的核显，而不是单纯的"AI"营销标签。',
         ],
         affiliateLinks: [
-          { label: '与Beelink SER8评测对比', url: '/zh/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: '与Beelink SER8评测对比', url: '/zh/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799起' },
         ],
       },
       vsUm890: {
@@ -2163,12 +2163,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max对比Minisforum UM890 Pro',
         content: '**购买前值得做的另一项对比。**',
         items: [
-          '**选择UM890 Pro**是为了性价比和本地AI能力，它的OCuLink接口还为未来升级独立显卡保留了一条通路——价格从裸机版的$439到配32GB内存约$649，远低于A9 Max。',
+          '**选择UM890 Pro**是为了性价比和本地AI能力，它的OCuLink接口还为未来升级独立显卡保留了一条通路——官方商店标价为裸机版$439.90、配32GB/1TB版$823.90（目前缺货），仍远低于A9 Max。',
           '**选择A9 Max**是为了在紧凑机型中获得最大余量和连接性——它最突出的差异化优势是Radeon 890M、最高128GB内存、Wi-Fi 7、双2.5GbE和双USB4，这些都集中在一台真正高端的紧凑平台上。',
           '如果购买时UM890 Pro的价格明显更低——这通常是事实——那么性价比这一论点就更有利于Minisforum。我们不会在这个页面上回避这一点；当我们最终仍然推荐A9 Max时，这反而让这个推荐更可信。',
         ],
         affiliateLinks: [
-          { label: '阅读Minisforum UM890 Pro评测', url: '/zh/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439–649' },
+          { label: '阅读Minisforum UM890 Pro评测', url: '/zh/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439.90–823.90' },
         ],
       },
       worthIt: {
@@ -2183,8 +2183,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '当前价格': '约$1,500以上', '我们的看法': '购买前请与配备独立显卡的台式机系统仔细比较' },
         ],
         items: [
-          '**我们自己会采用的价格原则：** 如果购买时A9 Max只比最接近的替代品贵$100–200左右，那么这份额外余量通常是值得的。如果溢价达到数百美元——正如目前GEEKOM定价$1,299–1,599而SER8只要$799–849的情况——那么在购买前请认真比较SER8和UM890 Pro。',
-          'GEEKOM的定价自本评测首次发布以来已明显上涨——请把本页上的任何美元数字都当作2026年8月的一个快照，而不是一个承诺。',
+          '**我们自己会采用的价格原则：** 如果购买时A9 Max只比最接近的替代品贵$100–200左右，那么这份额外余量通常是值得的。如果溢价达到数百美元——正如目前GEEKOM定价$1,299–1,599而SER8只要$799的情况——那么在购买前请认真比较SER8和UM890 Pro。',
+          'GEEKOM的定价自本评测首次发布以来已明显上涨——请把本页上的任何美元数字都当作GEEKOM官方商店标价的一个快照，而不是一个承诺。',
         ],
       },
       prosCons: {
@@ -2199,7 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7、双2.5GbE、两个USB4接口——作为家庭服务器连接性很好',
           '常年开机机型只消耗适中的54W',
           '**缺点**',
-          '价格昂贵——截至2026年8月为$1,299–1,599，远高于本评测最初报道的$1,099–1,299',
+          '价格昂贵——GEEKOM官方商店标价为$1,299–1,599，远高于本评测最初报道的$1,099–1,299',
           'NPU不会加速本地LLM——这是本页部分意图纠正的一个常见误解',
           '核显＋共享内存设计在处理超大模型时会受到带宽限制',
           '主动散热——尽管宣传语声称如此，持续负载下并非静音',
@@ -2214,14 +2214,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '美国：针对中国电子产品的301条款关税在2026年依然有效；另外2025年的"IEEPA"关税已于2026年2月被最高法院裁定无效，并被临时性、有上限的122条款关税取代。针对直接进口低于800美元货物的免税"最低限度"豁免也已终止。',
           '欧盟（影响DE/FR）：针对成品迷你主机没有广泛的欧盟关税，但自2026年7月起，针对中国直邮低价值包裹的150欧元免税门槛已被取消，并加征了少量的每件包裹处理费。',
-          '净效应：购买前请核实零售商的当前价格——本评测中的数字仅供参考，截至日期为2026年8月。',
+          '净效应：购买前请核实零售商的当前价格——本评测中的数字仅供参考，以GEEKOM官方商店标价为准。',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: '购买渠道与当前价格',
         content:
-          '**价格每周都在变动，因此请核实实时价格，而不要依赖某个固定数字。** 截至2026年8月，GEEKOM官方商店将HX370/32GB/1TB配置定价为$1,299，HX370/32GB/2TB为$1,399，更新的HX470/32GB/2TB"2026版"为$1,599——GEEKOM官方商店也经常推出促销优惠码。',
+          '**价格每周都在变动，因此请核实实时价格，而不要依赖某个固定数字。** GEEKOM官方商店将HX370/32GB/1TB配置标价为$1,299，HX370/32GB/2TB为$1,399，更新的HX470/32GB/2TB"2026版"为$1,599——GEEKOM官方商店也经常推出促销优惠码。',
         items: [
           '下单前请确认确切的型号（HX 370还是HX 470、内存和存储容量）——定价和规格有所不同，而且GEEKOM在"A9 Max"这一名称下销售过多代产品。',
           '结账时留意是否有有效的优惠码——GEEKOM在官方商店经常推出10–15%的折扣活动。',
@@ -2239,13 +2239,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['迷你主机', '价格（大致）', '内存上限', '最适合'],
         rows: [
           { '迷你主机': 'GEEKOM A9 Max', '价格（大致）': '$1,299–1,599', '内存上限': '128GB', '最适合': '最大余量＋连接性' },
-          { '迷你主机': 'Beelink SER8', '价格（大致）': '$799–849（32GB）／$1,239（64GB）', '内存上限': '约64–96GB', '最适合': 'HA加7B模型的最佳性价比' },
-          { '迷你主机': 'Minisforum UM890 Pro', '价格（大致）': '$439–649', '内存上限': '约96GB', '最适合': '性价比＋通过OCuLink的eGPU升级路径' },
-          { '迷你主机': 'GMKtec G3 Plus', '价格（大致）': '欧元起价€159.99／$140–200', '内存上限': '32GB', '最适合': '经济型HA中枢，附带轻量AI' },
-          { '迷你主机': 'Beelink EQ14', '价格（大致）': '$189–199', '内存上限': '16GB', '最适合': '经济型HA，双2.5GbE' },
+          { '迷你主机': 'Beelink SER8', '价格（大致）': '$799（24GB/1TB）', '内存上限': '约64–96GB', '最适合': 'HA加7B模型的最佳性价比' },
+          { '迷你主机': 'Minisforum UM890 Pro', '价格（大致）': '$439.90–823.90', '内存上限': '约96GB', '最适合': '性价比＋通过OCuLink的eGPU升级路径' },
+          { '迷你主机': 'GMKtec G3 Plus', '价格（大致）': '399.99–499.99美元（标价，缺货）', '内存上限': '32GB', '最适合': '经济型HA中枢，附带轻量AI' },
+          { '迷你主机': 'Beelink EQ14', '价格（大致）': '385美元（标价，预订）', '内存上限': '16GB', '最适合': '经济型HA，双2.5GbE' },
         ],
         items: [
-          '[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review)——性价比之选：Ryzen 7 8845HS，以A9 Max约一半的价格舒适运行7B模型',
+          '[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review)——性价比之选：Ryzen 7 8845HS，以不到A9 Max三分之二的价格舒适运行7B模型',
           '[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)——加装OCuLink接口，若日后想要更快的大模型推理可外接显卡，入门价格更低得多',
           '[Beelink EQ14](/zh/smart-home/beelink-eq14-local-ai-review)——面向Home Assistant加小型模型的经济型Intel N150机型',
           '[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review)——另一款配备可升级内存的经济型N150选项',
@@ -2267,14 +2267,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'GEEKOM A9 Max目前的价格是多少？', a: '截至2026年8月，GEEKOM官方商店将HX370/32GB/1TB配置定价为$1,299，HX370/32GB/2TB为$1,399，更新的HX470/32GB/2TB"2026版"为$1,599。这明显高于本评测最初报道的$1,099–1,299——购买前请核实实时价格以及是否有有效的优惠码。' },
+          { q: 'GEEKOM A9 Max目前的价格是多少？', a: 'GEEKOM官方商店将HX370/32GB/1TB配置标价为$1,299，HX370/32GB/2TB为$1,399，更新的HX470/32GB/2TB"2026版"为$1,599。这明显高于本评测最初报道的$1,099–1,299——购买前请核实实时价格以及是否有有效的优惠码。' },
           { q: 'GEEKOM A9 Max能运行本地LLM吗？', a: '可以。在32GB内存下，它能在Ollama上舒适运行7B–8B模型，并以4-bit量化装下13B–14B模型且留有上下文空间。这是基于其已验证硬件的估算，而非固定基准，因为速度取决于模型、量化方式和推理后端。' },
           { q: '它的内存能装下多大的模型？', a: '在32GB下，运行4-bit的13B–14B模型是现实可行的。升级到64GB可以运行30B级别的模型，128GB上限可以4-bit加载70B模型——不过超大模型运行较慢，因为核显与系统共享内存，没有专用显存。' },
           { q: 'NPU能让本地LLM运行更快吗？', a: '不能。NPU（HX370总计80 TOPS，HX470为86 TOPS）能加速视觉处理和部分Windows AI功能，但主流的本地LLM运行时（如Ollama和llama.cpp）会把模型放在CPU和Radeon 890M核显上运行。请把NPU视为对Frigate摄像头检测有利的因素，而不是提升聊天模型速度的因素。' },
           { q: 'A9 Max适合Home Assistant和常年开机使用吗？', a: '适合。它能宽裕地同时运行Home Assistant、Ollama、Whisper和Frigate，负载下持续54W的功耗让常年开机的运行成本保持适中。双2.5GbE和Wi-Fi 7也适合有线家庭服务器的角色。' },
           { q: '内存可以升级吗？', a: '可以。A9 Max使用两条标准的DDR5 SO-DIMM插槽，用户可自行更换，因此你可以从32GB起步，之后升级到64GB或128GB。相比焊死内存的迷你主机，这是一个真正的优势。' },
           { q: '相比Beelink SER8，A9 Max值得买吗？', a: '只有当你需要额外的余量时才值得。SER8能以A9 Max当前价格的大约一半到三分之二运行Home Assistant加一个7B模型。如果你在未来几年内需要128GB内存上限、双NVMe、Wi-Fi 7或视觉处理余量，那么A9 Max的溢价才值得——而不是默认如此。' },
-          { q: 'A9 Max比Minisforum UM890 Pro更好吗？', a: '并非一概而论。A9 Max的优势在于Radeon 890M平台、128GB内存上限、Wi-Fi 7、双2.5GbE和双USB4。而售价$439–649的UM890 Pro往往是更具性价比的选择——决定之前请核实两者的当前价格。' },
+          { q: 'A9 Max比Minisforum UM890 Pro更好吗？', a: '并非一概而论。A9 Max的优势在于Radeon 890M平台、128GB内存上限、Wi-Fi 7、双2.5GbE和双USB4。而售价为裸机版$439.90、配32GB版$823.90（官方商店目前缺货）的UM890 Pro往往是更具性价比的选择——决定之前请核实两者的当前价格。' },
           { q: '它能运行70B模型吗？', a: '128GB配置能提供足够的系统内存来尝试大型量化模型，但这并不意味着70B推理速度会很快。如果70B性能是你的主要需求，一般来说配备大容量显存的专用GPU系统才是更好的选择。' },
           { q: 'GEEKOM A9 Max在哪里制造，这会影响价格吗？', a: '它在中国制造。2026年，美国的进口措施（301条款关税、低于800美元的最低限度豁免终止）以及欧盟取消150欧元低价值包裹豁免，都可能影响到岸成本，因此请核实零售商的当前价格，而不要依赖固定数字。' },
         ],
@@ -2298,9 +2298,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GEEKOM A9 Max 评测（2026）：本地AI最佳迷你主机？',
       reviewBody:
-        'GEEKOM A9 Max是一款搭载Ryzen AI 9的高端迷你主机，能运行Home Assistant加7B–13B本地LLM，内存上限达128GB。截至2026年8月定价为$1,299–1,599（较发布时的$1,099–1,299有所上涨），这是一笔为余量和面向未来买单的投资，大约是Beelink SER8的1.5–2倍。',
+        'GEEKOM A9 Max是一款搭载Ryzen AI 9的高端迷你主机，能运行Home Assistant加7B–13B本地LLM，内存上限达128GB。GEEKOM官方商店标价为$1,299–1,599（较发布时的$1,099–1,299有所上涨），这是一笔为余量和面向未来买单的投资，大约是Beelink SER8的1.6–2倍。',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -2325,8 +2325,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-ko.webp',
@@ -2334,9 +2334,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'GEEKOM A9 Max 리뷰(2026): 로컬 AI에 최적인 미니PC인가?',
     seoTitle: 'GEEKOM A9 Max 리뷰 2026 — 로컬 AI & 홈서버',
     intro:
-      'GEEKOM A9 Max는 AMD Ryzen AI 9 HX 370 또는 HX 470(12코어, Radeon 890M, 최대 128GB DDR5)을 탑재한 프리미엄 미니PC입니다. 로컬 AI 스마트홈용으로는 여유 공간이 가장 넉넉한 선택지로, Home Assistant, Frigate, Ollama 상의 7B–13B 모델을 여유롭게 실행합니다. 하지만 출시 이후 가격이 크게 상승했습니다 — GEEKOM 공식 현재 가격은 $1,299–1,599(2026년 8월, 구성과 할인 코드에 따라 다름)로, 이 리뷰가 처음 언급했던 $1,099–1,299를 크게 웃돕니다. 이 격차는 추천 내용을 바꿉니다. 이 리뷰는 GEEKOM 공식 페이지를 기준으로 최신 사양과 가격을 검증하고, 로컬 LLM 속도에 대해 현실적인 기대치를 제시하며, 현재 가격 기준으로 누가 여전히 구매해야 하는지 — 그리고 누가 대신 Beelink SER8을 선택해야 하는지 정확히 알려드립니다.',
+      'GEEKOM A9 Max는 AMD Ryzen AI 9 HX 370 또는 HX 470(12코어, Radeon 890M, 최대 128GB DDR5)을 탑재한 프리미엄 미니PC입니다. 로컬 AI 스마트홈용으로는 여유 공간이 가장 넉넉한 선택지로, Home Assistant, Frigate, Ollama 상의 7B–13B 모델을 여유롭게 실행합니다. 하지만 출시 이후 가격이 크게 상승했습니다 — GEEKOM 공식 현재 가격은 $1,299–1,599(GEEKOM 공식 스토어 정가, 구성과 할인 코드에 따라 다름)로, 이 리뷰가 처음 언급했던 $1,099–1,299를 크게 웃돕니다. 이 격차는 추천 내용을 바꿉니다. 이 리뷰는 GEEKOM 공식 페이지를 기준으로 최신 사양과 가격을 검증하고, 로컬 LLM 속도에 대해 현실적인 기대치를 제시하며, 현재 가격 기준으로 누가 여전히 구매해야 하는지 — 그리고 누가 대신 Beelink SER8을 선택해야 하는지 정확히 알려드립니다.',
     metaDescription:
-      'GEEKOM A9 Max 리뷰 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, 최대 128GB DDR5, 구성별 현재 가격. Home Assistant와 7B–13B 로컬 LLM을 실행 — 프리미엄 가격이 그만한 가치가 있는지 솔직하게 판단.',
+      'GEEKOM A9 Max 리뷰 2026: Ryzen AI 9 HX 370/470, Radeon 890M, 최대 128GB DDR5. HA와 7B–13B 로컬 LLM 실행, 가격 판단.',
     twitterDescription:
       'GEEKOM A9 Max(2026): Ryzen AI 9 HX 370/HX 470, 128GB DDR5 상한, Wi-Fi 7, 현재 $1,299–1,599부터. NPU는 LLM을 가속하지 않습니다 — RAM과 iGPU가 핵심입니다. 누가 실제로 구매해야 할까요.',
     readTime: '10분 읽기',
@@ -2351,18 +2351,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 미니pc',
     ],
     leadAnswerBlock:
-      '**네, 하지만 그만한 여유 공간이 실제로 필요한 경우에만 그렇습니다 — GEEKOM A9 Max(Ryzen AI 9 HX 370/HX 470, Radeon 890M, 최대 128GB DDR5)는 이 비교군에서 로컬 AI에 가장 강력한 미니PC이며, 현재 가격은 $1,299–1,599(GEEKOM 공식 가격, 2026년 8월)로 Beelink SER8의 약 1.5~2배입니다.** 128GB RAM 상한, 듀얼 NVMe, Wi-Fi 7, 비전 처리 여유를 위해 구매하세요. 스펙시트에 "AI"라고 쓰여 있다는 이유만으로 구매하지 마세요 — Home Assistant와 7B 모델만 필요하다면 SER8이 절반 가격으로 같은 역할을 합니다.',
+      '**네, 하지만 그만한 여유 공간이 실제로 필요한 경우에만 그렇습니다 — GEEKOM A9 Max(Ryzen AI 9 HX 370/HX 470, Radeon 890M, 최대 128GB DDR5)는 이 비교군에서 로컬 AI에 가장 강력한 미니PC이며, 현재 가격은 $1,299–1,599(GEEKOM 공식 스토어 정가)로 Beelink SER8 공식 정가 $799(24GB/1TB)의 약 1.6~2배입니다.** 128GB RAM 상한, 듀얼 NVMe, Wi-Fi 7, 비전 처리 여유를 위해 구매하세요. 스펙시트에 "AI"라고 쓰여 있다는 이유만으로 구매하지 마세요 — Home Assistant와 7B 모델만 필요하다면 SER8이 3분의 2도 안 되는 가격으로 같은 역할을 합니다.',
     quickAnswerTop: {
       ko: {
         question: 'GEEKOM A9 Max는 로컬 AI와 Home Assistant에 적합한가요?',
         answer:
-          '네, 다만 출시 이후 가격이 오른 프리미엄 선택지입니다. Ryzen AI 9 HX 370(12코어/24스레드), Radeon 890M iGPU, 그리고 최대 128GB의 DDR5는 Home Assistant, Ollama, Whisper, Frigate를 한 대에서 넉넉한 여유를 두고 실행합니다 — 7B–8B 모델은 편안하게 동작하고 13B–14B(4비트)는 컨텍스트 여유를 남기고 들어갑니다. NPU(HX370은 총 80 TOPS, HX470은 86 TOPS)는 Frigate 같은 비전 작업에 도움이 되지만 로컬 LLM을 가속하지는 않습니다. GEEKOM은 현재 $1,299–1,599(2026년 8월, 변동 가능)에 판매하며 — Beelink SER8의 약 1.5~2배 — 따라서 이는 가성비가 아니라 여유와 미래 대비를 위한 구매입니다.',
+          '네, 다만 출시 이후 가격이 오른 프리미엄 선택지입니다. Ryzen AI 9 HX 370(12코어/24스레드), Radeon 890M iGPU, 그리고 최대 128GB의 DDR5는 Home Assistant, Ollama, Whisper, Frigate를 한 대에서 넉넉한 여유를 두고 실행합니다 — 7B–8B 모델은 편안하게 동작하고 13B–14B(4비트)는 컨텍스트 여유를 남기고 들어갑니다. NPU(HX370은 총 80 TOPS, HX470은 86 TOPS)는 Frigate 같은 비전 작업에 도움이 되지만 로컬 LLM을 가속하지는 않습니다. GEEKOM은 현재 $1,299–1,599(GEEKOM 공식 스토어 정가, 변동 가능)에 판매하며 — Beelink SER8 공식 정가 $799(24GB/1TB)의 약 1.6~2배 — 따라서 이는 가성비가 아니라 여유와 미래 대비를 위한 구매입니다.',
         bullets: [
           'CPU: Ryzen AI 9 HX 370 또는 HX 470 — 12코어/24스레드, Radeon 890M(16 CU, RDNA 3.5)',
           'RAM: 기본 32GB DDR5, SO-DIMM 슬롯 2개, 최대 128GB(사용자 교체 가능)',
           '로컬 LLM(사양 기반 추정): 7B–8B 편안함, 13B–14B는 4비트로 들어감; 64–128GB에서 30B–70B 가능(느리고 대역폭 제한)',
           'NPU(총 80–86 TOPS)는 Frigate 비전에 도움이 되지만 LLM 속도와는 무관; iGPU와 RAM 대역폭이 LLM 지연 시간을 결정',
-          '가격: GEEKOM은 구성에 따라 $1,299–1,599에 판매(2026년 8월 기준) — Beelink SER8은 $799–849로 대부분의 요구를 충족',
+          '가격: GEEKOM은 구성에 따라 $1,299–1,599에 판매(GEEKOM 공식 스토어 정가) — Beelink SER8은 $799(24GB/1TB, 공식 스토어 정가)부터로 대부분의 요구를 충족',
         ],
         updatedDate: '2026-08',
       },
@@ -2405,7 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ryzen AI 9 HX 370/HX 470: 12코어/24스레드, Radeon 890M iGPU, 최대 128GB DDR5(사용자 교체 가능한 SO-DIMM 2개)',
           '출시 이후 가격이 크게 상승 — GEEKOM은 현재 $1,299–1,599에 판매하며, 이는 이 리뷰가 처음 언급했던 $1,099–1,299가 아닙니다',
           '로컬 LLM 속도는 iGPU와 RAM 대역폭에서 나옵니다 — 80–86 TOPS의 NPU는 비전을 가속하지, 채팅 모델을 가속하지 않습니다',
-          '현재 가격 기준으로는 [Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review)($799–849)의 약 1.5~2배입니다 — 128GB 상한, 듀얼 NVMe, Wi-Fi 7을 위해 구매하는 것이지 절약을 위한 것이 아닙니다',
+          '현재 가격 기준으로는 [Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review)(24GB/1TB 공식 스토어 정가 $799)의 약 1.6~2배입니다 — 128GB 상한, 듀얼 NVMe, Wi-Fi 7을 위해 구매하는 것이지 절약을 위한 것이 아닙니다',
           '중국산 — 2026년 미국/EU 수입 조치를 최종 비용에 반영해야 합니다(관세 관련 참고 사항 참조)',
         ],
       },
@@ -2454,7 +2454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 사양: 'TDP', 'GEEKOM A9 Max': '54W' },
           { 사양: '크기', 'GEEKOM A9 Max': '135×132×46mm' },
           { 사양: 'OS', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2(Linux/Proxmox 설치 지원)' },
-          { 사양: '가격(32GB/2TB, HX370)', 'GEEKOM A9 Max': '2026년 8월 기준 $1,399부터(변동 가능, 현재 가격 확인)' },
+          { 사양: '가격(32GB/2TB, HX370)', 'GEEKOM A9 Max': '$1,399부터(GEEKOM 공식 스토어 정가, 변동 가능, 현재 가격 확인)' },
         ],
         items: [
           '전용 GPU 없음: 모든 AI 추론은 CPU와 Radeon 890M iGPU에서 실행되며 시스템 RAM을 공유합니다.',
@@ -2503,7 +2503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: '어떤 구성을 구매해야 하는가?',
         content:
-          '**GEEKOM은 현재 A9 Max를 HX370/32GB/1TB, HX370/32GB/2TB, HX470/32GB/2TB로 판매하며, 64GB와 128GB는 사용자 교체 가능한 SO-DIMM 슬롯을 통해 도달할 수 있습니다.** 아래 가격은 2026년 8월 기준 GEEKOM 자체 페이지를 반영한 것입니다 — 구매 전에 항상 실시간 가격과 유효한 할인 코드를 확인하세요.',
+          '**GEEKOM은 현재 A9 Max를 HX370/32GB/1TB, HX370/32GB/2TB, HX470/32GB/2TB로 판매하며, 64GB와 128GB는 사용자 교체 가능한 SO-DIMM 슬롯을 통해 도달할 수 있습니다.** 아래 가격은 GEEKOM 공식 스토어 정가를 반영한 것입니다 — 구매 전에 항상 실시간 가격과 유효한 할인 코드를 확인하세요.',
         columns: ['구성', '대략적인 가격', '최적 용도'],
         rows: [
           { 구성: 'HX370 / 32GB / 1TB', '대략적인 가격': '$1,299', '최적 용도': 'Home Assistant, 사무용, 개발, 소형 로컬 모델 — 가격이 우선이면 구매' },
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 요소: '저장장치', 'A9 Max': 'NVMe×2(2280+2230)', 'Beelink SER8': 'NVMe×2(SATA 1개 포함)' },
           { 요소: '네트워킹', 'A9 Max': '2.5GbE×2, Wi-Fi 7', 'Beelink SER8': '2.5GbE×1, Wi-Fi 6' },
           { 요소: 'USB4', 'A9 Max': '2포트', 'Beelink SER8': '없음' },
-          { 요소: '가격', 'A9 Max': '$1,299–1,599', 'Beelink SER8': '$799–849(32GB) / $1,239(64GB)' },
+          { 요소: '가격', 'A9 Max': '$1,299–1,599', 'Beelink SER8': '$799(24GB/1TB) / 32GB는 목록 확인' },
           { 요소: '최적 용도', 'A9 Max': '최대 여유, 수년간의 여지', 'Beelink SER8': 'HA + 7B 모델을 위한 최고 가성비' },
         ],
         items: [
@@ -2540,7 +2540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**저희의 결론: SER8 = 더 나은 가성비. A9 Max = 더 강력한 기기.** 이 구분은 중요합니다 — SER8은 훨씬 낮은 비용으로 많은 동일한 워크로드를 처리하는 반면, A9 Max의 진짜 장점은 단순한 "AI" 마케팅이 아니라 여유 공간, 메모리 상한, 그리고 더 강력한 내장 그래픽입니다.',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8 리뷰와 비교', url: '/ko/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'Beelink SER8 리뷰와 비교', url: '/ko/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799부터' },
         ],
       },
       vsUm890: {
@@ -2548,12 +2548,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max vs Minisforum UM890 Pro',
         content: '**구매 전에 해볼 만한 또 다른 비교입니다.**',
         items: [
-          '**UM890 Pro를 선택하세요** — 가성비와 로컬 AI 성능, 그리고 디스크리트 GPU로의 업그레이드 경로를 열어두는 OCuLink 포트를 위해서입니다. 베어본 $439부터 32GB 구성 약 $649까지로, A9 Max보다 훨씬 저렴합니다.',
+          '**UM890 Pro를 선택하세요** — 가성비와 로컬 AI 성능, 그리고 디스크리트 GPU로의 업그레이드 경로를 열어두는 OCuLink 포트를 위해서입니다. 공식 스토어 정가는 베어본 $439.90, 32GB/1TB 구성 $823.90(현재 품절)으로, 여전히 A9 Max보다 훨씬 저렴합니다.',
           '**A9 Max를 선택하세요** — 컴팩트 시스템으로서 최대한의 여유 공간과 연결성을 위해서입니다. 가장 큰 차별점은 Radeon 890M, 최대 128GB, Wi-Fi 7, 듀얼 2.5GbE, 듀얼 USB4를 갖춘 진짜 프리미엄 컴팩트 플랫폼이라는 점입니다.',
           '구매 시점에 UM890 Pro가 훨씬 저렴하다면 — 대체로 그렇습니다 — 가성비 논리는 Minisforum 쪽에 유리해집니다. 저희는 이 페이지에서 그 사실을 숨기지 않습니다. 오히려 그럼에도 A9 Max를 추천할 때 그 추천이 더 신뢰할 만해집니다.',
         ],
         affiliateLinks: [
-          { label: 'Minisforum UM890 Pro 리뷰 읽기', url: '/ko/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439–649' },
+          { label: 'Minisforum UM890 Pro 리뷰 읽기', url: '/ko/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439.90–823.90' },
         ],
       },
       worthIt: {
@@ -2568,8 +2568,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '현재 가격': '~$1,500 이상', '저희의 견해': '구매 전 디스크리트 GPU를 갖춘 데스크톱 시스템과 매우 신중하게 비교하세요' },
         ],
         items: [
-          '**저희가 직접 적용할 가격 원칙:** 구매 시점에 A9 Max가 가장 가까운 대안보다 약 $100–200 정도만 더 비싸다면, 추가 여유는 대체로 그만한 가치가 있습니다. GEEKOM의 현재 가격 $1,299–1,599와 SER8의 $799–849처럼 프리미엄이 수백 달러에 달한다면, 구매 전에 SER8과 UM890 Pro를 진지하게 비교하세요.',
-          'GEEKOM의 가격은 이 리뷰가 처음 게재된 이후 크게 상승했습니다 — 이 페이지의 어떤 달러 수치든 약속이 아니라 2026년 8월 시점의 스냅샷으로 여기세요.',
+          '**저희가 직접 적용할 가격 원칙:** 구매 시점에 A9 Max가 가장 가까운 대안보다 약 $100–200 정도만 더 비싸다면, 추가 여유는 대체로 그만한 가치가 있습니다. GEEKOM의 현재 가격 $1,299–1,599와 SER8의 $799처럼 프리미엄이 수백 달러에 달한다면, 구매 전에 SER8과 UM890 Pro를 진지하게 비교하세요.',
+          'GEEKOM의 가격은 이 리뷰가 처음 게재된 이후 크게 상승했습니다 — 이 페이지의 어떤 달러 수치든 약속이 아니라 GEEKOM 공식 스토어 정가의 스냅샷으로 여기세요.',
         ],
       },
       prosCons: {
@@ -2584,7 +2584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7, 듀얼 2.5GbE, 두 개의 USB4 포트 — 홈서버로서 연결성이 우수함',
           '상시 가동 기기치고 적당한 54W로 동작',
           '**단점**',
-          '비쌈 — 2026년 8월 기준 $1,299–1,599로, 이 리뷰의 최초 수치인 $1,099–1,299를 크게 웃돎',
+          '비쌈 — GEEKOM 공식 스토어 정가 $1,299–1,599로, 이 리뷰의 최초 수치인 $1,099–1,299를 크게 웃돎',
           'NPU는 로컬 LLM을 가속하지 않음 — 이 페이지가 부분적으로 바로잡으려는 흔한 오해',
           'iGPU + 공유 메모리 설계는 매우 큰 모델에서 대역폭 제한을 받음',
           '능동 냉각 — 마케팅 문구와 달리 지속 부하에서는 무소음이 아님',
@@ -2599,14 +2599,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '미국: 중국산 전자제품에 대한 섹션 301 관세는 2026년에도 계속 유효합니다. 별도의 2025년 "IEEPA" 관세는 2026년 2월 대법원에 의해 무효화되었고, 기간이 한정되고 상한이 있는 섹션 122 관세로 대체되었습니다. 직접 수입 800달러 미만에 대한 면세 "최소 기준" 예외도 종료되었습니다.',
           'EU(DE/FR에 영향): 완제품 미니PC에 대한 광범위한 EU 관세는 없지만, 2026년 7월부터 중국발 저가 직배송 소포에 대한 150유로 면세 기준이 폐지되고 소포당 소액의 처리 수수료가 추가되었습니다.',
-          '순효과: 구매 전 소매업체의 현재 가격을 확인하세요 — 이 리뷰의 수치는 참고용이며 2026년 8월 기준입니다.',
+          '순효과: 구매 전 소매업체의 현재 가격을 확인하세요 — 이 리뷰의 수치는 참고용이며 GEEKOM 공식 스토어 정가를 기준으로 합니다.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: '구매처와 현재 가격',
         content:
-          '**가격은 매주 변동하므로 고정된 수치를 믿기보다 실시간 가격을 확인하세요.** 2026년 8월 기준, GEEKOM 공식 스토어는 HX370/32GB/1TB 구성을 $1,299, HX370/32GB/2TB를 $1,399, 더 새로운 HX470/32GB/2TB "2026 에디션"을 $1,599에 판매하고 있습니다 — GEEKOM은 자체 스토어에서 프로모션 할인 코드도 자주 운영합니다.',
+          '**가격은 매주 변동하므로 고정된 수치를 믿기보다 실시간 가격을 확인하세요.** GEEKOM 공식 스토어는 HX370/32GB/1TB 구성을 정가 $1,299, HX370/32GB/2TB를 $1,399, 더 새로운 HX470/32GB/2TB "2026 에디션"을 $1,599에 판매하고 있습니다 — GEEKOM은 자체 스토어에서 프로모션 할인 코드도 자주 운영합니다.',
         items: [
           '주문 전 정확한 SKU(HX 370 vs HX 470, RAM 및 저장 용량)를 확인하세요 — 가격과 사양이 다르며, GEEKOM은 "A9 Max"라는 이름으로 여러 세대를 판매했습니다.',
           '결제 시 유효한 할인 코드가 있는지 확인하세요 — GEEKOM은 자체 스토어에서 10–15% 할인 프로모션을 운영해 왔습니다.',
@@ -2624,13 +2624,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['미니PC', '가격(대략)', 'RAM 상한', '최적 용도'],
         rows: [
           { '미니PC': 'GEEKOM A9 Max', '가격(대략)': '$1,299–1,599', 'RAM 상한': '128GB', '최적 용도': '최대 여유 + 연결성' },
-          { '미니PC': 'Beelink SER8', '가격(대략)': '$799–849(32GB) / $1,239(64GB)', 'RAM 상한': '약 64–96GB', '최적 용도': 'HA + 7B 모델을 위한 최고 가성비' },
-          { '미니PC': 'Minisforum UM890 Pro', '가격(대략)': '$439–649', 'RAM 상한': '약 96GB', '최적 용도': '가성비 + OCuLink를 통한 eGPU 업그레이드 경로' },
-          { '미니PC': 'GMKtec G3 Plus', '가격(대략)': '€159.99부터 / $140–200', 'RAM 상한': '32GB', '최적 용도': '저렴한 HA 허브, 보너스로 가벼운 AI' },
-          { '미니PC': 'Beelink EQ14', '가격(대략)': '$189–199', 'RAM 상한': '16GB', '최적 용도': '저렴한 HA, 듀얼 2.5GbE' },
+          { '미니PC': 'Beelink SER8', '가격(대략)': '$799(24GB/1TB)', 'RAM 상한': '약 64–96GB', '최적 용도': 'HA + 7B 모델을 위한 최고 가성비' },
+          { '미니PC': 'Minisforum UM890 Pro', '가격(대략)': '$439.90–823.90', 'RAM 상한': '약 96GB', '최적 용도': '가성비 + OCuLink를 통한 eGPU 업그레이드 경로' },
+          { '미니PC': 'GMKtec G3 Plus', '가격(대략)': '$399.99–499.99(정가, 품절)', 'RAM 상한': '32GB', '최적 용도': '저렴한 HA 허브, 보너스로 가벼운 AI' },
+          { '미니PC': 'Beelink EQ14', '가격(대략)': '$385(정가, 예약 주문)', 'RAM 상한': '16GB', '최적 용도': '저렴한 HA, 듀얼 2.5GbE' },
         ],
         items: [
-          '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 가성비 선택: Ryzen 7 8845HS, A9 Max 가격의 약 절반으로 7B 모델을 편안하게 실행',
+          '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 가성비 선택: Ryzen 7 8845HS, A9 Max 가격의 3분의 2도 안 되는 가격으로 7B 모델을 편안하게 실행',
           '[Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review) — 나중에 더 빠른 대형 모델 추론을 원한다면 외장 GPU를 위한 OCuLink 포트를 추가하며, 진입 가격이 훨씬 낮음',
           '[Beelink EQ14](/ko/smart-home/beelink-eq14-local-ai-review) — Home Assistant와 소형 모델을 위한 저렴한 Intel N150 기기',
           '[GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 업그레이드 가능한 RAM을 갖춘 또 다른 저렴한 N150 옵션',
@@ -2652,14 +2652,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'GEEKOM A9 Max의 현재 가격은 얼마인가요?', a: '2026년 8월 기준, GEEKOM 공식 스토어는 HX370/32GB/1TB 구성을 $1,299, HX370/32GB/2TB를 $1,399, 더 새로운 HX470/32GB/2TB "2026 에디션"을 $1,599에 판매합니다. 이는 이 리뷰가 처음 언급했던 $1,099–1,299를 크게 웃돕니다 — 구매 전 실시간 가격과 유효한 할인 코드를 확인하세요.' },
+          { q: 'GEEKOM A9 Max의 현재 가격은 얼마인가요?', a: 'GEEKOM 공식 스토어는 HX370/32GB/1TB 구성을 정가 $1,299, HX370/32GB/2TB를 $1,399, 더 새로운 HX470/32GB/2TB "2026 에디션"을 $1,599에 판매합니다. 이는 이 리뷰가 처음 언급했던 $1,099–1,299를 크게 웃돕니다 — 구매 전 실시간 가격과 유효한 할인 코드를 확인하세요.' },
           { q: 'GEEKOM A9 Max는 로컬 LLM을 실행할 수 있나요?', a: '네. 32GB RAM으로 Ollama에서 7B–8B 모델을 편안하게 실행하고, 13B–14B 모델을 4비트 양자화로 컨텍스트 여유를 두고 담을 수 있습니다. 이는 검증된 하드웨어에서 나온 추정치이며 고정된 벤치마크가 아닙니다. 속도는 모델, 양자화, 백엔드에 따라 달라지기 때문입니다.' },
           { q: 'RAM에 얼마나 큰 모델이 들어가나요?', a: '32GB에서는 4비트 13B–14B 모델이 현실적입니다. 64GB로 업그레이드하면 30B급 모델이 열리고, 128GB 상한에서는 70B 모델을 4비트로 로드할 수 있습니다 — 다만 iGPU가 시스템 메모리를 공유하고 전용 VRAM이 없기 때문에 매우 큰 모델은 느리게 동작합니다.' },
           { q: 'NPU가 로컬 LLM을 더 빠르게 만들어주나요?', a: '아닙니다. NPU(HX370은 총 80 TOPS, HX470은 86 TOPS)는 비전 처리와 일부 Windows AI 기능을 가속하지만, Ollama나 llama.cpp 같은 주류 로컬 LLM 런타임은 CPU와 Radeon 890M iGPU에서 모델을 실행합니다. NPU는 Frigate 카메라 인식에는 도움이 되지만 채팅 모델 속도에는 도움이 되지 않는다고 생각하세요.' },
           { q: 'A9 Max는 Home Assistant와 상시 가동에 적합한가요?', a: '네. Home Assistant, Ollama, Whisper, Frigate를 여유롭게 함께 실행하며, 부하 시 지속되는 54W 소비 전력은 상시 가동 비용을 적당한 수준으로 유지합니다. 듀얼 2.5GbE와 Wi-Fi 7도 유선 홈서버 역할에 적합합니다.' },
           { q: 'RAM은 업그레이드 가능한가요?', a: '네. A9 Max는 사용자가 교체 가능한 두 개의 표준 DDR5 SO-DIMM 슬롯을 사용하므로, 32GB로 시작해 나중에 64GB나 128GB로 옮겨갈 수 있습니다. 이는 메모리가 납땜된 미니PC 대비 진정한 장점입니다.' },
           { q: 'Beelink SER8보다 A9 Max를 살 가치가 있나요?', a: '추가 여유가 필요한 경우에만 그렇습니다. SER8은 A9 Max의 현재 가격의 대략 절반에서 3분의 2 가격으로 Home Assistant와 7B 모델을 실행합니다. 앞으로 몇 년간 128GB RAM 상한, 듀얼 NVMe, Wi-Fi 7, 또는 비전 처리 여유가 필요하다면 A9 Max의 프리미엄은 그만한 가치가 있습니다 — 기본값으로 그런 것은 아닙니다.' },
-          { q: 'A9 Max가 Minisforum UM890 Pro보다 나은가요?', a: '일률적으로 그렇지는 않습니다. A9 Max의 장점은 Radeon 890M 플랫폼, 128GB 메모리 상한, Wi-Fi 7, 듀얼 2.5GbE, 듀얼 USB4입니다. $439–649인 UM890 Pro가 매우 자주 더 나은 가성비 선택입니다 — 결정하기 전에 둘의 현재 가격을 확인하세요.' },
+          { q: 'A9 Max가 Minisforum UM890 Pro보다 나은가요?', a: '일률적으로 그렇지는 않습니다. A9 Max의 장점은 Radeon 890M 플랫폼, 128GB 메모리 상한, Wi-Fi 7, 듀얼 2.5GbE, 듀얼 USB4입니다. 베어본 $439.90, 32GB 구성 $823.90(공식 스토어에서 현재 품절)인 UM890 Pro가 매우 자주 더 나은 가성비 선택입니다 — 결정하기 전에 둘의 현재 가격을 확인하세요.' },
           { q: '70B 모델을 실행할 수 있나요?', a: '128GB 구성은 대형 양자화 모델을 실험하기에 충분한 시스템 메모리를 제공하지만, 그렇다고 70B 추론이 빠르다는 의미는 아닙니다. 70B 성능이 주된 요구 사항이라면 일반적으로 대용량 VRAM을 갖춘 전용 GPU 시스템이 더 나은 선택입니다.' },
           { q: 'GEEKOM A9 Max는 어디서 제조되며, 이것이 가격에 영향을 미치나요?', a: '중국에서 제조됩니다. 2026년 미국의 수입 조치(섹션 301 관세, 800달러 미만 최소 기준 면제 종료)와 EU의 150유로 저가 소포 면제 폐지는 최종 비용에 영향을 줄 수 있으므로, 고정된 숫자에 의존하기보다 현재 소매업체 가격을 확인하세요.' },
         ],
@@ -2683,9 +2683,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GEEKOM A9 Max 리뷰(2026): 로컬 AI에 최적인 미니PC인가?',
       reviewBody:
-        'GEEKOM A9 Max는 Ryzen AI 9를 탑재한 프리미엄 미니PC로, Home Assistant와 7B–13B 로컬 LLM을 128GB RAM 상한으로 실행합니다. 2026년 8월 기준 가격은 $1,299–1,599(출시 당시 $1,099–1,299에서 상승)이며, 여유와 미래 대비를 위한 구매로 Beelink SER8의 약 1.5~2배입니다.',
+        'GEEKOM A9 Max는 Ryzen AI 9를 탑재한 프리미엄 미니PC로, Home Assistant와 7B–13B 로컬 LLM을 128GB RAM 상한으로 실행합니다. GEEKOM 공식 스토어 정가는 $1,299–1,599(출시 당시 $1,099–1,299에서 상승)이며, 여유와 미래 대비를 위한 구매로 Beelink SER8의 약 1.6~2배입니다.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -2710,8 +2710,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-pt.webp',
@@ -2719,9 +2719,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Análise do GEEKOM A9 Max (2026): o melhor mini PC para IA local?',
     seoTitle: 'GEEKOM A9 Max 2026 — IA local e servidor doméstico',
     intro:
-      'O GEEKOM A9 Max é um mini PC premium construído sobre o AMD Ryzen AI 9 HX 370 ou HX 470 (12 núcleos, Radeon 890M, até 128 GB de DDR5). Para uma casa inteligente com IA local, é a opção com mais folga: roda o Home Assistant, o Frigate e um modelo 7B–13B no Ollama com espaço de sobra. Mas o preço subiu significativamente desde o lançamento — o preço atual da GEEKOM nos EUA fica entre US$1.299 e US$1.599 (agosto de 2026, conforme a configuração e cupons), bem acima da faixa original citada nesta análise. Essa diferença muda a recomendação: esta análise verifica as especificações e os preços atuais na loja oficial da GEEKOM, define expectativas honestas sobre a velocidade de LLMs locais, e diz exatamente quem ainda deveria comprá-lo no preço de hoje — e quem deveria escolher um Beelink SER8 em vez disso.',
+      'O GEEKOM A9 Max é um mini PC premium construído sobre o AMD Ryzen AI 9 HX 370 ou HX 470 (12 núcleos, Radeon 890M, até 128 GB de DDR5). Para uma casa inteligente com IA local, é a opção com mais folga: roda o Home Assistant, o Frigate e um modelo 7B–13B no Ollama com espaço de sobra. Mas o preço subiu significativamente desde o lançamento — o preço atual da GEEKOM nos EUA fica entre US$1.299 e US$1.599 (preço de lista oficial da GEEKOM, conforme a configuração e cupons), bem acima da faixa original citada nesta análise. Essa diferença muda a recomendação: esta análise verifica as especificações e os preços atuais na loja oficial da GEEKOM, define expectativas honestas sobre a velocidade de LLMs locais, e diz exatamente quem ainda deveria comprá-lo no preço de hoje — e quem deveria escolher um Beelink SER8 em vez disso.',
     metaDescription:
-      'Análise do GEEKOM A9 Max 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, até 128 GB de DDR5, preço atual por configuração. Roda Home Assistant mais um LLM local 7B–13B — veredito honesto sobre se o preço premium vale a pena.',
+      'Análise GEEKOM A9 Max 2026: Ryzen AI 9 HX 370/470, Radeon 890M, até 128 GB DDR5, preço por config. Home Assistant + LLM 7B–13B, vale o preço premium?',
     twitterDescription:
       'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370/HX 470, teto de 128 GB DDR5, Wi-Fi 7, agora US$1.299–1.599. O NPU não acelera LLMs — a RAM e a iGPU sim. Quem deveria realmente comprar.',
     readTime: '10 min de leitura',
@@ -2736,18 +2736,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 mini pc',
     ],
     leadAnswerBlock:
-      "**Sim, mas só se você realmente precisar dessa folga — o GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, até 128 GB de DDR5) é o mini PC mais capaz desta comparação para IA local, e agora custa US$1.299–1.599 nos EUA (preço oficial GEEKOM, agosto de 2026), cerca de 1,5 a 2 vezes um Beelink SER8.** Compre-o pelo teto de 128 GB de RAM, o NVMe duplo, o Wi-Fi 7 e a folga para visão computacional. Não compre só porque a ficha técnica diz \"IA\" — se você só precisa de Home Assistant mais um modelo 7B, o SER8 faz o trabalho por cerca de metade do preço.",
+      "**Sim, mas só se você realmente precisar dessa folga — o GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470, Radeon 890M, até 128 GB de DDR5) é o mini PC mais capaz desta comparação para IA local, e agora custa US$1.299–1.599 nos EUA (preço de lista oficial da GEEKOM), cerca de 1,6 a 2 vezes o preço de lista oficial de US$799 do Beelink SER8 (24GB/1TB).** Compre-o pelo teto de 128 GB de RAM, o NVMe duplo, o Wi-Fi 7 e a folga para visão computacional. Não compre só porque a ficha técnica diz \"IA\" — se você só precisa de Home Assistant mais um modelo 7B, o SER8 faz o trabalho por bem menos de dois terços do preço.",
     quickAnswerTop: {
       pt: {
         question: 'O GEEKOM A9 Max é bom para IA local e Home Assistant?',
         answer:
-          'Sim, mas é uma escolha premium cujo preço subiu desde o lançamento. O Ryzen AI 9 HX 370 (12 núcleos/24 threads), a iGPU Radeon 890M e até 128 GB de DDR5 rodam o Home Assistant, o Ollama, o Whisper e o Frigate em uma única máquina com grande folga — um modelo 7B–8B roda confortavelmente e um 13B–14B (4 bits) cabe com espaço para contexto. Seu NPU (80 TOPS no total no HX 370, 86 TOPS no HX 470) ajuda em tarefas de visão como o Frigate, mas não acelera LLMs locais. A GEEKOM cobra atualmente US$1.299–1.599 nos EUA (agosto de 2026, volátil) — cerca de 1,5 a 2 vezes um Beelink SER8 — portanto é uma compra pela folga e pela longevidade, não pelo custo-benefício.',
+          'Sim, mas é uma escolha premium cujo preço subiu desde o lançamento. O Ryzen AI 9 HX 370 (12 núcleos/24 threads), a iGPU Radeon 890M e até 128 GB de DDR5 rodam o Home Assistant, o Ollama, o Whisper e o Frigate em uma única máquina com grande folga — um modelo 7B–8B roda confortavelmente e um 13B–14B (4 bits) cabe com espaço para contexto. Seu NPU (80 TOPS no total no HX 370, 86 TOPS no HX 470) ajuda em tarefas de visão como o Frigate, mas não acelera LLMs locais. A GEEKOM cobra atualmente US$1.299–1.599 nos EUA (preço de lista oficial da GEEKOM, volátil) — cerca de 1,6 a 2 vezes o preço de lista oficial de US$799 do Beelink SER8 (24GB/1TB) — portanto é uma compra pela folga e pela longevidade, não pelo custo-benefício.',
         bullets: [
           'CPU: Ryzen AI 9 HX 370 ou HX 470 — 12 núcleos/24 threads, Radeon 890M (16 CU, RDNA 3.5)',
           'RAM: 32 GB DDR5 padrão, dois slots SO-DIMM, até 128 GB (substituível pelo usuário)',
           'LLM local (estimado a partir das especificações): 7B–8B confortável, 13B–14B em 4 bits cabe; 64–128 GB abre 30B–70B (lento, limitado por largura de banda)',
           'NPU (80–86 TOPS no total) ajuda na visão do Frigate, não na velocidade de LLM; a iGPU e a largura de banda de RAM definem a latência do LLM',
-          'Preço: a GEEKOM lista de US$1.299 a US$1.599 nos EUA conforme a configuração (agosto de 2026) — um Beelink SER8 cobre a maioria das necessidades por cerca de US$799–849',
+          'Preço: a GEEKOM lista de US$1.299 a US$1.599 nos EUA conforme a configuração (preço de lista oficial da GEEKOM) — um Beelink SER8 cobre a maioria das necessidades a partir de US$799 (24GB/1TB, preço de lista da loja oficial)',
         ],
         updatedDate: '2026-08',
       },
@@ -2788,9 +2788,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'O A9 Max roda o Home Assistant, o Frigate, o Whisper e um LLM local 7B–13B em uma única máquina com folga real',
           'Ryzen AI 9 HX 370/HX 470: 12 núcleos/24 threads, iGPU Radeon 890M, até 128 GB de DDR5 (dois SO-DIMMs substituíveis pelo usuário)',
-          'O preço subiu bastante desde o lançamento — a GEEKOM cobra agora US$1.299–1.599 nos EUA (agosto de 2026), não a faixa original citada nesta análise',
+          'O preço subiu bastante desde o lançamento — a GEEKOM cobra agora US$1.299–1.599 nos EUA (preço de lista oficial da GEEKOM), não a faixa original citada nesta análise',
           'A velocidade de LLM local vem da iGPU e da largura de banda de RAM — o NPU de 80–86 TOPS acelera a visão computacional, não os modelos de chat',
-          'No preço atual, custa cerca de 1,5 a 2 vezes um [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) (US$799–849) — compre-o pelo teto de 128 GB, o NVMe duplo e o Wi-Fi 7, não para economizar',
+          'No preço atual, custa cerca de 1,6 a 2 vezes um [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) (US$799 por 24GB/1TB, preço de lista da loja oficial) — compre-o pelo teto de 128 GB, o NVMe duplo e o Wi-Fi 7, não para economizar',
           'Fabricado na China — considere as medidas de importação de 2026 dos EUA/UE no custo final (veja o contexto sobre tarifas)',
         ],
       },
@@ -2839,7 +2839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Especificação: 'TDP', 'GEEKOM A9 Max': '54 W' },
           { Especificação: 'Dimensões', 'GEEKOM A9 Max': '135 × 132 × 46 mm' },
           { Especificação: 'SO', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2 (instalação de Linux/Proxmox suportada)' },
-          { Especificação: 'Preço (32GB/2TB, HX370)', 'GEEKOM A9 Max': 'a partir de US$1.399 nos EUA (ago. 2026 — volátil, verifique o preço atual)' },
+          { Especificação: 'Preço (32GB/2TB, HX370)', 'GEEKOM A9 Max': 'a partir de US$1.399 nos EUA (preço de lista oficial da GEEKOM — volátil, verifique o preço atual)' },
         ],
         items: [
           'Sem GPU dedicada: toda a inferência de IA roda na CPU e na iGPU Radeon 890M, que compartilham a RAM do sistema.',
@@ -2888,14 +2888,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'Qual configuração você deveria comprar?',
         content:
-          '**A GEEKOM vende atualmente o A9 Max como HX370/32GB/1TB, HX370/32GB/2TB e HX470/32GB/2TB, com 64GB e 128GB acessíveis pelos slots SO-DIMM substituíveis pelo usuário.** Os preços abaixo refletem a listagem oficial da GEEKOM em agosto de 2026 — sempre verifique o preço ao vivo e qualquer cupom de desconto ativo antes de comprar.',
-        columns: ['Configuração', 'Preço aprox. (ago. 2026)', 'Melhor para'],
+          '**A GEEKOM vende atualmente o A9 Max como HX370/32GB/1TB, HX370/32GB/2TB e HX470/32GB/2TB, com 64GB e 128GB acessíveis pelos slots SO-DIMM substituíveis pelo usuário.** Os preços abaixo refletem o preço de lista oficial da loja da GEEKOM — sempre verifique o preço ao vivo e qualquer cupom de desconto ativo antes de comprar.',
+        columns: ['Configuração', 'Preço de lista oficial', 'Melhor para'],
         rows: [
-          { Configuração: 'HX370 / 32GB / 1TB', 'Preço aprox. (ago. 2026)': 'US$1.299', 'Melhor para': 'Home Assistant, escritório, desenvolvimento, modelos locais pequenos — compre se o preço é a prioridade' },
-          { Configuração: 'HX370 / 32GB / 2TB', 'Preço aprox. (ago. 2026)': 'US$1.399', 'Melhor para': 'Melhor ponto de partida geral — RAM e armazenamento suficientes para vários modelos locais' },
-          { Configuração: 'HX470 / 32GB / 2TB ("2026 Edition")', 'Preço aprox. (ago. 2026)': 'US$1.599', 'Melhor para': 'Só se os TOPS extras do NPU ou a CPU nova importarem para você — não acelera LLMs locais' },
-          { Configuração: '64GB (atualizado por conta própria)', 'Preço aprox. (ago. 2026)': 'Preço base + custo do kit SO-DIMM', 'Melhor para': 'IA local séria — nossa configuração preferida se disponível com um prêmio razoável' },
-          { Configuração: '128GB (atualizado por conta própria)', 'Preço aprox. (ago. 2026)': 'Preço base + custo do kit SO-DIMM', 'Melhor para': 'Só com uma carga de trabalho específica que precise disso — modelos grandes, múltiplos serviços, RAG pesado' },
+          { Configuração: 'HX370 / 32GB / 1TB', 'Preço de lista oficial': 'US$1.299', 'Melhor para': 'Home Assistant, escritório, desenvolvimento, modelos locais pequenos — compre se o preço é a prioridade' },
+          { Configuração: 'HX370 / 32GB / 2TB', 'Preço de lista oficial': 'US$1.399', 'Melhor para': 'Melhor ponto de partida geral — RAM e armazenamento suficientes para vários modelos locais' },
+          { Configuração: 'HX470 / 32GB / 2TB ("2026 Edition")', 'Preço de lista oficial': 'US$1.599', 'Melhor para': 'Só se os TOPS extras do NPU ou a CPU nova importarem para você — não acelera LLMs locais' },
+          { Configuração: '64GB (atualizado por conta própria)', 'Preço de lista oficial': 'Preço base + custo do kit SO-DIMM', 'Melhor para': 'IA local séria — nossa configuração preferida se disponível com um prêmio razoável' },
+          { Configuração: '128GB (atualizado por conta própria)', 'Preço de lista oficial': 'Preço base + custo do kit SO-DIMM', 'Melhor para': 'Só com uma carga de trabalho específica que precise disso — modelos grandes, múltiplos serviços, RAG pesado' },
         ],
         items: [
           'A GEEKOM frequentemente tem cupons de desconto (por exemplo, 10–15% off) — verifique uma promoção ativa antes de pagar o preço de tabela.',
@@ -2916,7 +2916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Fator: 'Armazenamento', 'A9 Max': '2× NVMe (2280+2230)', 'Beelink SER8': '2× NVMe (1× SATA)' },
           { Fator: 'Rede', 'A9 Max': '2× 2,5GbE, Wi-Fi 7', 'Beelink SER8': '1× 2,5GbE, Wi-Fi 6' },
           { Fator: 'USB4', 'A9 Max': '2 portas', 'Beelink SER8': 'Nenhuma' },
-          { Fator: 'Preço (ago. 2026)', 'A9 Max': 'US$1.299–1.599', 'Beelink SER8': 'US$799–849 (32GB) / US$1.239 (64GB)' },
+          { Fator: 'Preço (lista oficial)', 'A9 Max': 'US$1.299–1.599', 'Beelink SER8': 'US$799 (24GB/1TB) / 32GB: ver listagem' },
           { Fator: 'Melhor para', 'A9 Max': 'Folga máxima, anos de fôlego', 'Beelink SER8': 'Melhor custo-benefício para HA + modelo 7B' },
         ],
         items: [
@@ -2925,7 +2925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nosso veredito: SER8 = melhor custo-benefício. A9 Max = máquina mais capaz.** Essa distinção importa — o SER8 cobre muitas das mesmas cargas de trabalho por um custo bem menor, enquanto as verdadeiras vantagens do A9 Max são folga, teto de memória e gráficos integrados mais fortes, não apenas o marketing de "IA".',
         ],
         affiliateLinks: [
-          { label: 'Comparar com a análise do Beelink SER8', url: '/pt/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: 'US$799–849' },
+          { label: 'Comparar com a análise do Beelink SER8', url: '/pt/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: 'a partir de US$799' },
         ],
       },
       vsUm890: {
@@ -2933,12 +2933,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max vs Minisforum UM890 Pro',
         content: '**Outra comparação que vale a pena fazer antes de comprar.**',
         items: [
-          '**Compre o UM890 Pro** pelo custo-benefício e pela capacidade de IA local, com uma porta OCuLink que mantém aberto um caminho de atualização para uma GPU dedicada — custa desde US$439 sem RAM/SSD até cerca de US$649 com 32 GB, bem abaixo do A9 Max. No Brasil, considerando impostos de importação, uma configuração equivalente parte de aproximadamente R$ 3.900.',
+          '**Compre o UM890 Pro** pelo custo-benefício e pela capacidade de IA local, com uma porta OCuLink que mantém aberto um caminho de atualização para uma GPU dedicada — a loja oficial lista US$439,90 sem RAM/SSD e US$823,90 com 32 GB/1TB (atualmente esgotado), bem abaixo do A9 Max. No Brasil, considerando impostos de importação, uma configuração equivalente parte de aproximadamente R$ 3.900.',
           '**Compre o A9 Max** pela folga máxima e conectividade em um sistema compacto — seus maiores diferenciais são a Radeon 890M, até 128 GB, Wi-Fi 7, 2,5GbE duplo e USB4 duplo em uma plataforma compacta genuinamente premium.',
           'Se o UM890 Pro for substancialmente mais barato no momento da compra — o que geralmente é o caso —, o argumento do custo-benefício favorece a Minisforum. Não escondemos isso nesta página; isso, na verdade, torna a eventual recomendação do A9 Max mais confiável quando ainda assim apontamos para ele.',
         ],
         affiliateLinks: [
-          { label: 'Ler a análise do Minisforum UM890 Pro', url: '/pt/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: 'US$439–649 / a partir de ~R$ 3.900 no Brasil' },
+          { label: 'Ler a análise do Minisforum UM890 Pro', url: '/pt/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: 'US$439,90–823,90 / a partir de ~R$ 3.900 no Brasil' },
         ],
       },
       worthIt: {
@@ -2953,8 +2953,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Preço atual (EUA)': '~US$1.500+', 'Nossa opinião': 'Compare com muito cuidado com sistemas desktop com GPU dedicada antes de comprar' },
         ],
         items: [
-          '**Regra de preço que aplicaríamos nós mesmos:** se o A9 Max custar apenas cerca de US$100–200 a mais que a alternativa mais próxima no momento da compra, a folga extra geralmente vale a pena. Se o prêmio chegar a várias centenas de dólares — que é a situação atual com o preço da GEEKOM de US$1.299–1.599 contra os US$799–849 do SER8 —, compare seriamente o SER8 e o UM890 Pro antes de comprar.',
-          'O preço da GEEKOM subiu materialmente desde que esta análise foi publicada pela primeira vez — trate qualquer valor em dólar nesta página como uma foto de agosto de 2026, não uma promessa. No Brasil, impostos de importação e câmbio fazem o preço final variar ainda mais.',
+          '**Regra de preço que aplicaríamos nós mesmos:** se o A9 Max custar apenas cerca de US$100–200 a mais que a alternativa mais próxima no momento da compra, a folga extra geralmente vale a pena. Se o prêmio chegar a várias centenas de dólares — que é a situação atual com o preço da GEEKOM de US$1.299–1.599 contra os US$799 do SER8 —, compare seriamente o SER8 e o UM890 Pro antes de comprar.',
+          'O preço da GEEKOM subiu materialmente desde que esta análise foi publicada pela primeira vez — trate qualquer valor em dólar nesta página como uma foto do preço de lista oficial da GEEKOM, não uma promessa. No Brasil, impostos de importação e câmbio fazem o preço final variar ainda mais.',
         ],
       },
       prosCons: {
@@ -2969,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7, 2,5GbE duplo, duas portas USB4 — bem conectado para um servidor doméstico',
           'Roda a 54 W moderados para uma máquina sempre ligada',
           '**Contras**',
-          'Caro — US$1.299–1.599 em agosto de 2026, bem acima do valor original citado nesta análise',
+          'Caro — US$1.299–1.599 (preço de lista oficial da GEEKOM), bem acima do valor original citado nesta análise',
           'O NPU não acelera LLMs locais — um equívoco comum que esta página existe em parte para corrigir',
           'O design de iGPU + memória compartilhada é limitado por largura de banda para modelos muito grandes',
           'Resfriamento ativo — não é silencioso sob carga sustentada, apesar do discurso de marketing',
@@ -2985,14 +2985,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EUA: as tarifas da Seção 301 sobre eletrônicos chineses continuam em vigor em 2026; as tarifas separadas "IEEPA" de 2025 foram derrubadas pela Suprema Corte em fevereiro de 2026 e substituídas por uma tarifa temporária e limitada da Seção 122. A isenção de minimis livre de impostos abaixo de US$800 para importações diretas também terminou.',
           'UE (afeta DE/FR): não há uma tarifa ampla da UE sobre mini PCs prontos, mas a partir de julho de 2026 o limite de isenção de €150 para pacotes de baixo valor vindos diretamente da China foi removido, com uma pequena taxa de manuseio por pacote adicionada.',
           'Brasil: impostos de importação e a variação cambial fazem o preço final oscilar bastante — compare o preço na loja oficial da GEEKOM, na Amazon.com.br e em varejistas locais antes de comprar, e confirme se o preço já inclui tributos ou se há custos adicionais na alfândega.',
-          'Efeito líquido: verifique o preço atual no varejista antes de comprar — os números desta análise são indicativos e datados de agosto de 2026.',
+          'Efeito líquido: verifique o preço atual no varejista antes de comprar — os números desta análise são indicativos e baseados no preço de lista oficial da GEEKOM.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Onde comprar e preço atual',
         content:
-          '**Os preços mudam semana a semana, então verifique o preço ao vivo em vez de confiar em um número fixo.** Em agosto de 2026, a própria loja da GEEKOM lista a configuração HX370/32GB/1TB a US$1.299, a HX370/32GB/2TB a US$1.399, e a mais nova HX470/32GB/2TB "2026 Edition" a US$1.599 — a GEEKOM também costuma rodar cupons de desconto em sua própria loja.',
+          '**Os preços mudam semana a semana, então verifique o preço ao vivo em vez de confiar em um número fixo.** A própria loja oficial da GEEKOM lista, como preço de lista, a configuração HX370/32GB/1TB a US$1.299, a HX370/32GB/2TB a US$1.399, e a mais nova HX470/32GB/2TB "2026 Edition" a US$1.599 — a GEEKOM também costuma rodar cupons de desconto em sua própria loja.',
         items: [
           'Confirme o SKU exato (HX 370 vs HX 470, capacidade de RAM e armazenamento) antes de pedir — o preço e as especificações diferem, e a GEEKOM já vendeu várias gerações sob o nome "A9 Max".',
           'Verifique um cupom de desconto ativo no checkout — a GEEKOM já rodou promoções de 10–15% de desconto em sua própria loja.',
@@ -3011,13 +3011,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mini PC', 'Preço (aprox.)', 'Teto de RAM', 'Melhor para'],
         rows: [
           { 'Mini PC': 'GEEKOM A9 Max', 'Preço (aprox.)': 'US$1.299–1.599', 'Teto de RAM': '128 GB', 'Melhor para': 'Folga máxima + conectividade' },
-          { 'Mini PC': 'Beelink SER8', 'Preço (aprox.)': 'US$799–849 (32GB) / US$1.239 (64GB)', 'Teto de RAM': '~64–96 GB', 'Melhor para': 'Melhor custo-benefício para HA + modelo 7B' },
-          { 'Mini PC': 'Minisforum UM890 Pro', 'Preço (aprox.)': 'US$439–649', 'Teto de RAM': '~96 GB', 'Melhor para': 'Custo-benefício + caminho de upgrade eGPU via OCuLink' },
-          { 'Mini PC': 'GMKtec G3 Plus', 'Preço (aprox.)': 'a partir de €159,99 / US$140–200', 'Teto de RAM': '32 GB', 'Melhor para': 'Hub HA econômico, IA leve como bônus' },
-          { 'Mini PC': 'Beelink EQ14', 'Preço (aprox.)': 'US$189–199', 'Teto de RAM': '16 GB', 'Melhor para': 'HA econômico, 2,5GbE duplo' },
+          { 'Mini PC': 'Beelink SER8', 'Preço (aprox.)': 'US$799 (24GB/1TB)', 'Teto de RAM': '~64–96 GB', 'Melhor para': 'Melhor custo-benefício para HA + modelo 7B' },
+          { 'Mini PC': 'Minisforum UM890 Pro', 'Preço (aprox.)': 'US$439,90–823,90', 'Teto de RAM': '~96 GB', 'Melhor para': 'Custo-benefício + caminho de upgrade eGPU via OCuLink' },
+          { 'Mini PC': 'GMKtec G3 Plus', 'Preço (aprox.)': 'US$399,99–499,99 (tabela, esgotado)', 'Teto de RAM': '32 GB', 'Melhor para': 'Hub HA econômico, IA leve como bônus' },
+          { 'Mini PC': 'Beelink EQ14', 'Preço (aprox.)': 'US$385 (tabela, pré-venda)', 'Teto de RAM': '16 GB', 'Melhor para': 'HA econômico, 2,5GbE duplo' },
         ],
         items: [
-          '[Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — a escolha de custo-benefício: Ryzen 7 8845HS, roda confortavelmente um modelo 7B por cerca de metade do preço do A9 Max',
+          '[Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — a escolha de custo-benefício: Ryzen 7 8845HS, roda confortavelmente um modelo 7B por bem menos de dois terços do preço do A9 Max',
           '[Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) — adiciona uma porta OCuLink para uma GPU externa se você quiser inferência mais rápida de modelos grandes depois, a um preço de entrada muito mais baixo',
           '[Beelink EQ14](/pt/smart-home/beelink-eq14-local-ai-review) — máquina econômica com Intel N150 para Home Assistant mais um modelo pequeno',
           '[GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — outra opção econômica com N150 e RAM atualizável',
@@ -3039,14 +3039,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qual é o preço atual do GEEKOM A9 Max?', a: 'A própria loja da GEEKOM lista a configuração HX370/32GB/1TB a US$1.299, a HX370/32GB/2TB a US$1.399, e a mais nova HX470/32GB/2TB "2026 Edition" a US$1.599, em agosto de 2026. Isso é materialmente mais alto que o valor original citado nesta análise — verifique o preço ao vivo e qualquer cupom de desconto ativo antes de comprar. No Brasil, verifique o preço em lojas locais, já que impostos e câmbio afetam bastante o valor final.' },
+          { q: 'Qual é o preço atual do GEEKOM A9 Max?', a: 'A própria loja da GEEKOM lista a configuração HX370/32GB/1TB a US$1.299, a HX370/32GB/2TB a US$1.399, e a mais nova HX470/32GB/2TB "2026 Edition" a US$1.599 (preço de lista oficial). Isso é materialmente mais alto que o valor original citado nesta análise — verifique o preço ao vivo e qualquer cupom de desconto ativo antes de comprar. No Brasil, verifique o preço em lojas locais, já que impostos e câmbio afetam bastante o valor final.' },
           { q: 'O GEEKOM A9 Max consegue rodar LLMs locais?', a: 'Sim. Com 32 GB de RAM, ele roda confortavelmente um modelo 7B–8B no Ollama e cabe um modelo 13B–14B em quantização de 4 bits com espaço para contexto. Isso é estimado a partir do hardware verificado, não um benchmark fixo, porque a velocidade depende do modelo, da quantização e do backend.' },
           { q: 'Que tamanho de modelo cabe na sua RAM?', a: 'Com 32 GB, um modelo 13B–14B em 4 bits é realista. Atualizar para 64 GB abre modelos de classe 30B, e o teto de 128 GB permite carregar um modelo 70B em 4 bits — embora modelos muito grandes rodem lentamente porque a iGPU compartilha a memória do sistema e não tem VRAM dedicada.' },
           { q: 'O NPU torna os LLMs locais mais rápidos?', a: 'Não. O NPU (80 TOPS no total no HX370, 86 TOPS no HX470) acelera visão computacional e alguns recursos de IA do Windows, mas runtimes de LLM local populares como o Ollama e o llama.cpp rodam o modelo na CPU e na iGPU Radeon 890M. Trate o NPU como uma vantagem para a detecção de câmeras do Frigate, não para a velocidade do modelo de chat.' },
           { q: 'O A9 Max é bom para Home Assistant e uso contínuo?', a: 'Sim. Ele roda o Home Assistant, o Ollama, o Whisper e o Frigate juntos com folga, e seu consumo sustentado de 54 W mantém o custo de operação contínua moderado. Seu 2,5GbE duplo e Wi-Fi 7 também servem bem a um papel de servidor doméstico cabeado.' },
           { q: 'A RAM é atualizável?', a: 'Sim. O A9 Max usa dois slots SO-DIMM DDR5 padrão substituíveis pelo usuário, então você pode começar com 32 GB e migrar para 64 GB ou 128 GB depois. Essa é uma vantagem real sobre mini PCs com memória soldada.' },
           { q: 'Vale a pena o A9 Max em vez de um Beelink SER8?', a: 'Só se você quiser a folga extra. O SER8 roda o Home Assistant mais um modelo 7B por cerca de metade a dois terços do preço atual do A9 Max. O A9 Max vale o prêmio se você precisar do teto de 128 GB de RAM, do NVMe duplo, do Wi-Fi 7 ou da folga para visão computacional nos próximos anos — não por padrão.' },
-          { q: 'O A9 Max é melhor que o Minisforum UM890 Pro?', a: 'Não universalmente. As vantagens do A9 Max são a plataforma Radeon 890M, o teto de memória de 128 GB, o Wi-Fi 7, o 2,5GbE duplo e o USB4 duplo. O UM890 Pro, a US$439–649, é com muita frequência a melhor escolha de custo-benefício — confira o preço atual de ambos antes de decidir.' },
+          { q: 'O A9 Max é melhor que o Minisforum UM890 Pro?', a: 'Não universalmente. As vantagens do A9 Max são a plataforma Radeon 890M, o teto de memória de 128 GB, o Wi-Fi 7, o 2,5GbE duplo e o USB4 duplo. O UM890 Pro, a US$439,90 sem RAM/SSD e US$823,90 com 32 GB (atualmente esgotado na loja oficial), é com muita frequência a melhor escolha de custo-benefício — confira o preço atual de ambos antes de decidir.' },
           { q: 'Ele consegue rodar modelos de 70B?', a: 'Uma configuração de 128 GB dá memória de sistema suficiente para experimentar com modelos grandes quantizados, mas isso não significa que a inferência em 70B será rápida. Se o desempenho em 70B é um requisito principal, um sistema dedicado com bastante VRAM geralmente é a melhor escolha.' },
           { q: 'Onde o GEEKOM A9 Max é fabricado, e isso afeta o preço?', a: 'Ele é fabricado na China. Em 2026, as medidas de importação dos EUA (tarifas da Seção 301, o fim da isenção de minimis abaixo de US$800) e a remoção pela UE da isenção de €150 para pacotes de baixo valor podem afetar o custo final, então verifique o preço atual do varejista em vez de confiar em um número fixo.' },
         ],
@@ -3070,9 +3070,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'Análise do GEEKOM A9 Max (2026): o melhor mini PC para IA local?',
       reviewBody:
-        'O GEEKOM A9 Max é um mini PC premium com Ryzen AI 9 que roda o Home Assistant mais um LLM local 7B–13B com um teto de 128 GB de RAM. Custando US$1.299–1.599 nos EUA em agosto de 2026 (subindo em relação ao valor de lançamento), é uma compra pela folga e pela longevidade, cerca de 1,5 a 2 vezes um Beelink SER8.',
+        'O GEEKOM A9 Max é um mini PC premium com Ryzen AI 9 que roda o Home Assistant mais um LLM local 7B–13B com um teto de 128 GB de RAM. Com preço de lista oficial de US$1.299–1.599 nos EUA (subindo em relação ao valor de lançamento), é uma compra pela folga e pela longevidade, cerca de 1,6 a 2 vezes um Beelink SER8.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3098,18 +3098,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-03',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-25',
+    dateModified: '2026-10-25',
+    next_refresh_due: '2027-04-25',
     last_full_refresh: '2026-08-25',
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-ar.webp',
     affiliateDisclosure: true,
     title: 'مراجعة GEEKOM A9 Max (2026): هل هو الأفضل للذكاء الاصطناعي المحلي؟',
-    seoTitle: 'مراجعة GEEKOM A9 Max 2026 — ذكاء اصطناعي محلي وخادم منزلي',
+    seoTitle: 'مراجعة GEEKOM A9 Max 2026: ذكاء اصطناعي محلي وخادم',
     intro:
-      'GEEKOM A9 Max هو جهاز كمبيوتر مصغّر متميز مبني على معالج AMD Ryzen AI 9 HX 370 أو HX 470 (12 نواة، رسومات Radeon 890M، حتى 128GB من ذاكرة DDR5). بالنسبة لمنزل ذكي بذكاء اصطناعي محلي، فهو الخيار الأكثر اتساعًا: يشغّل Home Assistant وFrigate ونموذجًا بحجم 7B–13B على Ollama مع هامش واسع. لكن سعره ارتفع بشكل ملحوظ منذ الإطلاق — يبلغ سعر GEEKOM الرسمي الحالي في الولايات المتحدة بين 1,299 و1,599 دولارًا (أغسطس 2026، حسب التكوين وأكواد الخصم)، وهو أعلى بكثير من النطاق الذي ذكرته هذه المراجعة في البداية. هذه الفجوة تغيّر التوصية: تتحقق هذه المراجعة من المواصفات والأسعار الحالية مقابل صفحة GEEKOM الرسمية، وتضع توقعات صادقة حول سرعة نماذج اللغة المحلية، وتوضح بدقة من ينبغي أن يشتريه بالسعر الحالي — ومن ينبغي أن يختار Beelink SER8 بدلًا منه.',
+      'GEEKOM A9 Max هو جهاز كمبيوتر مصغّر متميز مبني على معالج AMD Ryzen AI 9 HX 370 أو HX 470 (12 نواة، رسومات Radeon 890M، حتى 128GB من ذاكرة DDR5). بالنسبة لمنزل ذكي بذكاء اصطناعي محلي، فهو الخيار الأكثر اتساعًا: يشغّل Home Assistant وFrigate ونموذجًا بحجم 7B–13B على Ollama مع هامش واسع. لكن سعره ارتفع بشكل ملحوظ منذ الإطلاق — يبلغ سعر GEEKOM الرسمي الحالي في الولايات المتحدة بين 1,299 و1,599 دولارًا (سعر القائمة في متجر GEEKOM الرسمي، حسب التكوين وأكواد الخصم)، وهو أعلى بكثير من النطاق الذي ذكرته هذه المراجعة في البداية. هذه الفجوة تغيّر التوصية: تتحقق هذه المراجعة من المواصفات والأسعار الحالية مقابل صفحة GEEKOM الرسمية، وتضع توقعات صادقة حول سرعة نماذج اللغة المحلية، وتوضح بدقة من ينبغي أن يشتريه بالسعر الحالي — ومن ينبغي أن يختار Beelink SER8 بدلًا منه.',
     metaDescription:
-      'مراجعة GEEKOM A9 Max 2026: Ryzen AI 9 HX 370/HX 470، رسومات Radeon 890M، حتى 128GB من DDR5، السعر الحالي لكل تكوين. يشغّل Home Assistant مع نموذج لغوي محلي 7B–13B — حكم صادق حول ما إذا كان السعر المرتفع يستحق ذلك.',
+      'مراجعة GEEKOM A9 Max 2026: Ryzen AI 9 HX 370/470، Radeon 890M، حتى 128GB DDR5، السعر لكل تكوين. يشغّل Home Assistant مع LLM 7B–13B؛ هل يستحق السعر؟',
     twitterDescription:
       'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370/HX 470، سقف ذاكرة 128GB من DDR5، Wi-Fi 7، الآن بسعر $1,299–1,599. وحدة NPU لا تسرّع نماذج اللغة — الذاكرة ومعالج الرسوميات المدمج هما الأساس. إليك من يجب أن يشتريه فعليًا.',
     readTime: '10 دقائق للقراءة',
@@ -3124,18 +3124,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ryzen ai 9 hx 370 كمبيوتر مصغر',
     ],
     leadAnswerBlock:
-      '**نعم، لكن فقط إذا كنت بحاجة فعلية لهذا الهامش — يُعد GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470، رسومات Radeon 890M، حتى 128GB من DDR5) أقوى جهاز كمبيوتر مصغّر في هذه المقارنة للذكاء الاصطناعي المحلي، ويبلغ سعره الآن 1,299–1,599 دولارًا في الولايات المتحدة (سعر GEEKOM الرسمي، أغسطس 2026)، أي ما يقارب 1.5 إلى 2 ضعف سعر Beelink SER8.** اشترِه من أجل سقف ذاكرة 128GB، وفتحتَي NVMe، وWi-Fi 7، وهامش معالجة الرؤية. لا تشترِه لمجرد أن ورقة المواصفات تذكر كلمة "AI" — إذا كنت تحتاج فقط Home Assistant مع نموذج 7B، فإن SER8 يؤدي نفس المهمة بنحو نصف السعر.',
+      '**نعم، لكن فقط إذا كنت بحاجة فعلية لهذا الهامش — يُعد GEEKOM A9 Max (Ryzen AI 9 HX 370/HX 470، رسومات Radeon 890M، حتى 128GB من DDR5) أقوى جهاز كمبيوتر مصغّر في هذه المقارنة للذكاء الاصطناعي المحلي، ويبلغ سعره الآن 1,299–1,599 دولارًا في الولايات المتحدة (سعر القائمة في متجر GEEKOM الرسمي)، أي ما يقارب 1.6 إلى 2 ضعف سعر القائمة الرسمي لجهاز Beelink SER8 البالغ 799 دولارًا (24GB/1TB).** اشترِه من أجل سقف ذاكرة 128GB، وفتحتَي NVMe، وWi-Fi 7، وهامش معالجة الرؤية. لا تشترِه لمجرد أن ورقة المواصفات تذكر كلمة "AI" — إذا كنت تحتاج فقط Home Assistant مع نموذج 7B، فإن SER8 يؤدي نفس المهمة بأقل بكثير من ثلثي السعر.',
     quickAnswerTop: {
       ar: {
         question: 'هل يُعد GEEKOM A9 Max جيدًا للذكاء الاصطناعي المحلي وHome Assistant؟',
         answer:
-          'نعم، لكنه خيار متميز ارتفع سعره منذ الإطلاق. يشغّل معالج Ryzen AI 9 HX 370 (12 نواة/24 خيطًا)، ورسومات Radeon 890M المدمجة، وحتى 128GB من DDR5، برامج Home Assistant وOllama وWhisper وFrigate على جهاز واحد بهامش واسع — يعمل نموذج 7B–8B بارتياح، ويتسع نموذج 13B–14B (بدقة 4 بت) مع مساحة للسياق. تساعد وحدة NPU (80 TOPS إجمالاً على HX 370، و86 TOPS على HX 470) في مهام الرؤية مثل Frigate لكنها لا تسرّع نماذج اللغة المحلية. تفرض GEEKOM حاليًا سعرًا يتراوح بين 1,299 و1,599 دولارًا (أغسطس 2026، متقلب) — أي ما يقارب 1.5 إلى 2 ضعف سعر Beelink SER8 — لذا فهو شراء من أجل الهامش ومقاومة التقادم، لا من أجل القيمة مقابل السعر.',
+          'نعم، لكنه خيار متميز ارتفع سعره منذ الإطلاق. يشغّل معالج Ryzen AI 9 HX 370 (12 نواة/24 خيطًا)، ورسومات Radeon 890M المدمجة، وحتى 128GB من DDR5، برامج Home Assistant وOllama وWhisper وFrigate على جهاز واحد بهامش واسع — يعمل نموذج 7B–8B بارتياح، ويتسع نموذج 13B–14B (بدقة 4 بت) مع مساحة للسياق. تساعد وحدة NPU (80 TOPS إجمالاً على HX 370، و86 TOPS على HX 470) في مهام الرؤية مثل Frigate لكنها لا تسرّع نماذج اللغة المحلية. تفرض GEEKOM حاليًا سعرًا يتراوح بين 1,299 و1,599 دولارًا (سعر القائمة في متجر GEEKOM الرسمي، متقلب) — أي ما يقارب 1.6 إلى 2 ضعف سعر القائمة الرسمي لجهاز Beelink SER8 البالغ 799 دولارًا (24GB/1TB) — لذا فهو شراء من أجل الهامش ومقاومة التقادم، لا من أجل القيمة مقابل السعر.',
         bullets: [
           'المعالج: Ryzen AI 9 HX 370 أو HX 470 — 12 نواة/24 خيطًا، رسومات Radeon 890M (16 وحدة حوسبة، RDNA 3.5)',
           'الذاكرة: 32GB من DDR5 قياسيًا، فتحتا SO-DIMM، حتى 128GB (قابلة للاستبدال من المستخدم)',
           'نموذج لغوي محلي (تقدير من المواصفات): 7B–8B مريح، 13B–14B بدقة 4 بت يتسع؛ 64–128GB تفتح المجال لـ30B–70B (بطيء، محدود بعرض النطاق الترددي)',
           'وحدة NPU (80–86 TOPS إجمالاً) تساعد رؤية Frigate، لا سرعة نماذج اللغة؛ معالج الرسوميات المدمج وعرض النطاق الترددي للذاكرة هما ما يحددان زمن استجابة نموذج اللغة',
-          'السعر: تُدرج GEEKOM أسعارًا بين 1,299 و1,599 دولارًا حسب التكوين (اعتبارًا من أغسطس 2026) — يغطي Beelink SER8 معظم الاحتياجات بسعر 799–849 دولارًا',
+          'السعر: تُدرج GEEKOM أسعارًا بين 1,299 و1,599 دولارًا حسب التكوين (سعر القائمة في متجر GEEKOM الرسمي) — يغطي Beelink SER8 معظم الاحتياجات بدءًا من 799 دولارًا (24GB/1TB، سعر القائمة في المتجر الرسمي)',
         ],
         updatedDate: '2026-08',
       },
@@ -3176,9 +3176,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'يشغّل A9 Max برامج Home Assistant وFrigate وWhisper ونموذجًا لغويًا محليًا 7B–13B على جهاز واحد بهامش حقيقي',
           'Ryzen AI 9 HX 370/HX 470: 12 نواة/24 خيطًا، رسومات Radeon 890M المدمجة، حتى 128GB من DDR5 (فتحتا SO-DIMM قابلتان للاستبدال من المستخدم)',
-          'ارتفع السعر بشكل كبير منذ الإطلاق — تفرض GEEKOM الآن سعرًا يتراوح بين 1,299 و1,599 دولارًا في الولايات المتحدة (أغسطس 2026)، وليس النطاق الذي ذكرته هذه المراجعة في البداية',
+          'ارتفع السعر بشكل كبير منذ الإطلاق — تفرض GEEKOM الآن سعرًا يتراوح بين 1,299 و1,599 دولارًا في الولايات المتحدة (سعر القائمة في متجر GEEKOM الرسمي)، وليس النطاق الذي ذكرته هذه المراجعة في البداية',
           'تأتي سرعة نموذج اللغة المحلي من معالج الرسوميات المدمج وعرض النطاق الترددي للذاكرة — وحدة NPU بقدرة 80–86 TOPS تسرّع الرؤية، لا نماذج الدردشة',
-          'بالسعر الحالي، يبلغ ثمنه نحو 1.5 إلى 2 ضعف سعر [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) (799–849 دولارًا) — اشترِه من أجل سقف الـ128GB وفتحتَي NVMe وWi-Fi 7، لا من أجل التوفير',
+          'بالسعر الحالي، يبلغ ثمنه نحو 1.6 إلى 2 ضعف سعر [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) (799 دولارًا لطراز 24GB/1TB، سعر القائمة في المتجر الرسمي) — اشترِه من أجل سقف الـ128GB وفتحتَي NVMe وWi-Fi 7، لا من أجل التوفير',
           'مُصنَّع في الصين — احسب تدابير الاستيراد الأمريكية/الأوروبية لعام 2026 ضمن التكلفة النهائية (راجع ملاحظة السياسة التجارية)',
         ],
       },
@@ -3227,7 +3227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { المواصفة: 'استهلاك الطاقة (TDP)', 'GEEKOM A9 Max': '54 واط' },
           { المواصفة: 'الأبعاد', 'GEEKOM A9 Max': '135 × 132 × 46 ملم' },
           { المواصفة: 'نظام التشغيل', 'GEEKOM A9 Max': 'Windows 11 Pro 24H2 (تثبيت Linux/Proxmox مدعوم)' },
-          { المواصفة: 'السعر (32GB/2TB، HX370)', 'GEEKOM A9 Max': 'يبدأ من 1,399 دولارًا (أغسطس 2026 — متقلب، تحقق من السعر الحالي)' },
+          { المواصفة: 'السعر (32GB/2TB، HX370)', 'GEEKOM A9 Max': 'يبدأ من 1,399 دولارًا (سعر القائمة في متجر GEEKOM الرسمي — متقلب، تحقق من السعر الحالي)' },
         ],
         items: [
           'بلا وحدة معالجة رسومات منفصلة: تعمل كل عمليات استدلال الذكاء الاصطناعي على المعالج ومعالج الرسوميات المدمج Radeon 890M اللذين يتشاركان ذاكرة النظام.',
@@ -3276,14 +3276,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'أي تكوين يجب أن تشتري؟',
         content:
-          '**تبيع GEEKOM حاليًا A9 Max بتكوينات HX370/32GB/1TB وHX370/32GB/2TB وHX470/32GB/2TB، مع إمكانية الوصول إلى 64GB و128GB عبر فتحتَي SO-DIMM القابلتين للاستبدال من المستخدم.** تعكس الأسعار أدناه صفحة GEEKOM الرسمية اعتبارًا من أغسطس 2026 — تحقق دائمًا من السعر المباشر وأي كود خصم فعّال قبل الشراء.',
-        columns: ['التكوين', 'السعر التقريبي (أغسطس 2026)', 'الأفضل لـ'],
+          '**تبيع GEEKOM حاليًا A9 Max بتكوينات HX370/32GB/1TB وHX370/32GB/2TB وHX470/32GB/2TB، مع إمكانية الوصول إلى 64GB و128GB عبر فتحتَي SO-DIMM القابلتين للاستبدال من المستخدم.** تعكس الأسعار أدناه أسعار القائمة في متجر GEEKOM الرسمي — تحقق دائمًا من السعر المباشر وأي كود خصم فعّال قبل الشراء.',
+        columns: ['التكوين', 'سعر القائمة الرسمي', 'الأفضل لـ'],
         rows: [
-          { التكوين: 'HX370 / 32GB / 1TB', 'السعر التقريبي (أغسطس 2026)': '1,299 دولارًا', 'الأفضل لـ': 'Home Assistant، والمكتب، والتطوير، والنماذج المحلية الصغيرة — اشترِه إذا كان السعر هو الأولوية' },
-          { التكوين: 'HX370 / 32GB / 2TB', 'السعر التقريبي (أغسطس 2026)': '1,399 دولارًا', 'الأفضل لـ': 'أفضل نقطة انطلاق شاملة — ذاكرة كافية لمعظم المستخدمين، وتخزين كافٍ لعدة نماذج محلية' },
-          { التكوين: 'HX470 / 32GB / 2TB ("2026 Edition")', 'السعر التقريبي (أغسطس 2026)': '1,599 دولارًا', 'الأفضل لـ': 'فقط إذا كانت TOPS الإضافية أو المعالج الأحدث مهمَّين لك — لا تسرّع نماذج اللغة المحلية' },
-          { التكوين: '64GB (ترقية ذاتية)', 'السعر التقريبي (أغسطس 2026)': 'السعر الأساسي + تكلفة عتاد SO-DIMM', 'الأفضل لـ': 'الذكاء الاصطناعي المحلي الجاد — تكويننا المفضل إذا توفر بفارق سعر معقول' },
-          { التكوين: '128GB (ترقية ذاتية)', 'السعر التقريبي (أغسطس 2026)': 'السعر الأساسي + تكلفة عتاد SO-DIMM', 'الأفضل لـ': 'فقط مع عبء عمل محدد يحتاجها — نماذج كبيرة، خدمات متعددة، RAG ثقيل' },
+          { التكوين: 'HX370 / 32GB / 1TB', 'سعر القائمة الرسمي': '1,299 دولارًا', 'الأفضل لـ': 'Home Assistant، والمكتب، والتطوير، والنماذج المحلية الصغيرة — اشترِه إذا كان السعر هو الأولوية' },
+          { التكوين: 'HX370 / 32GB / 2TB', 'سعر القائمة الرسمي': '1,399 دولارًا', 'الأفضل لـ': 'أفضل نقطة انطلاق شاملة — ذاكرة كافية لمعظم المستخدمين، وتخزين كافٍ لعدة نماذج محلية' },
+          { التكوين: 'HX470 / 32GB / 2TB ("2026 Edition")', 'سعر القائمة الرسمي': '1,599 دولارًا', 'الأفضل لـ': 'فقط إذا كانت TOPS الإضافية أو المعالج الأحدث مهمَّين لك — لا تسرّع نماذج اللغة المحلية' },
+          { التكوين: '64GB (ترقية ذاتية)', 'سعر القائمة الرسمي': 'السعر الأساسي + تكلفة عتاد SO-DIMM', 'الأفضل لـ': 'الذكاء الاصطناعي المحلي الجاد — تكويننا المفضل إذا توفر بفارق سعر معقول' },
+          { التكوين: '128GB (ترقية ذاتية)', 'سعر القائمة الرسمي': 'السعر الأساسي + تكلفة عتاد SO-DIMM', 'الأفضل لـ': 'فقط مع عبء عمل محدد يحتاجها — نماذج كبيرة، خدمات متعددة، RAG ثقيل' },
         ],
         items: [
           'تقدّم GEEKOM أكواد خصم بشكل متكرر (مثل خصم 10–15%) — تحقق من وجود عرض فعّال قبل الدفع بالسعر المُعلن.',
@@ -3304,7 +3304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { العامل: 'التخزين', 'A9 Max': 'منفذا NVMe (2280+2230)', 'Beelink SER8': 'منفذا NVMe (أحدهما SATA)' },
           { العامل: 'الشبكة', 'A9 Max': 'منفذا 2.5GbE، وWi-Fi 7', 'Beelink SER8': 'منفذ 2.5GbE واحد، وWi-Fi 6' },
           { العامل: 'USB4', 'A9 Max': 'منفذان', 'Beelink SER8': 'لا يوجد' },
-          { العامل: 'السعر (أغسطس 2026)', 'A9 Max': '1,299–1,599 دولارًا', 'Beelink SER8': '799–849 دولارًا (32GB) / 1,239 دولارًا (64GB)' },
+          { العامل: 'السعر (القائمة الرسمية)', 'A9 Max': '1,299–1,599 دولارًا', 'Beelink SER8': '799 دولارًا (24GB/1TB) / 32GB: راجع القائمة' },
           { العامل: 'الأفضل لـ', 'A9 Max': 'أقصى هامش، فسحة تدوم سنوات', 'Beelink SER8': 'أفضل قيمة مقابل السعر لـHA + نموذج 7B' },
         ],
         items: [
@@ -3313,7 +3313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**حكمنا: SER8 = أفضل قيمة مقابل السعر. A9 Max = جهاز أكثر قدرة.** هذا التمييز مهم — يغطي SER8 كثيرًا من نفس الأعباء بتكلفة أقل بكثير، بينما المزايا الحقيقية لـA9 Max هي الهامش وسقف الذاكرة والرسومات المدمجة الأقوى، لا مجرد تسويق كلمة "AI".',
         ],
         affiliateLinks: [
-          { label: 'قارن مع مراجعة Beelink SER8', url: '/ar/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: '$799–849' },
+          { label: 'قارن مع مراجعة Beelink SER8', url: '/ar/smart-home/beelink-ser8-local-ai-review', productName: 'Beelink SER8', productCategory: 'Mini PC', priceRange: 'من $799' },
         ],
       },
       vsUm890: {
@@ -3321,12 +3321,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A9 Max مقابل Minisforum UM890 Pro',
         content: '**مقارنة أخرى تستحق النظر قبل الشراء.**',
         items: [
-          '**اشترِ UM890 Pro** من أجل القيمة مقابل السعر وقدرة الذكاء الاصطناعي المحلي، مع منفذ OCuLink الذي يبقي مسار الترقية إلى وحدة معالجة رسومات منفصلة مفتوحًا — يبدأ سعره من 439 دولارًا بدون ذاكرة/تخزين وحتى نحو 649 دولارًا مع 32GB، أي أقل بكثير من A9 Max.',
+          '**اشترِ UM890 Pro** من أجل القيمة مقابل السعر وقدرة الذكاء الاصطناعي المحلي، مع منفذ OCuLink الذي يبقي مسار الترقية إلى وحدة معالجة رسومات منفصلة مفتوحًا — يدرج متجره الرسمي 439.90 دولارًا بدون ذاكرة/تخزين و823.90 دولارًا مع 32GB/1TB (نفد من المخزون حاليًا)، وهو أقل بكثير من A9 Max.',
           '**اشترِ A9 Max** من أجل أقصى هامش وموصلية في نظام مدمج — أبرز ما يميزه هو Radeon 890M، وحتى 128GB، وWi-Fi 7، وشبكة 2.5GbE مزدوجة، وUSB4 مزدوج، ضمن منصة مدمجة راقية فعليًا.',
           'إذا كان UM890 Pro أرخص بكثير وقت الشراء — وهذا غالبًا ما يحدث — فإن حجة القيمة مقابل السعر تصب في صالح Minisforum. لن نخفي ذلك في هذه الصفحة؛ بل إن ذلك يجعل التوصية النهائية بـA9 Max أكثر مصداقية عندما نشير إليه رغم ذلك.',
         ],
         affiliateLinks: [
-          { label: 'اقرأ مراجعة Minisforum UM890 Pro', url: '/ar/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439–649' },
+          { label: 'اقرأ مراجعة Minisforum UM890 Pro', url: '/ar/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC', priceRange: '$439.90–823.90' },
         ],
       },
       worthIt: {
@@ -3341,8 +3341,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'السعر الحالي': '~1,500 دولار فأكثر', رأينا: 'قارن بعناية شديدة مع أنظمة سطح المكتب ذات وحدة معالجة الرسومات المنفصلة قبل الشراء' },
         ],
         items: [
-          '**قاعدة السعر التي سنطبّقها بأنفسنا:** إذا كان A9 Max أغلى بنحو 100–200 دولار فقط من أقرب بديل وقت الشراء، فإن الهامش الإضافي يستحق ذلك عادةً. إذا وصل الفارق إلى عدة مئات من الدولارات — كما هو الحال حاليًا مع سعر GEEKOM البالغ 1,299–1,599 دولارًا مقابل 799–849 دولارًا لـSER8 — فقارن بجدية بين SER8 وUM890 Pro قبل الشراء.',
-          'ارتفع سعر GEEKOM بشكل ملموس منذ نشر هذه المراجعة لأول مرة — تعامل مع أي رقم بالدولار في هذه الصفحة كلقطة بتاريخ أغسطس 2026، لا كوعد ثابت.',
+          '**قاعدة السعر التي سنطبّقها بأنفسنا:** إذا كان A9 Max أغلى بنحو 100–200 دولار فقط من أقرب بديل وقت الشراء، فإن الهامش الإضافي يستحق ذلك عادةً. إذا وصل الفارق إلى عدة مئات من الدولارات — كما هو الحال حاليًا مع سعر GEEKOM البالغ 1,299–1,599 دولارًا مقابل 799 دولارًا لـSER8 — فقارن بجدية بين SER8 وUM890 Pro قبل الشراء.',
+          'ارتفع سعر GEEKOM بشكل ملموس منذ نشر هذه المراجعة لأول مرة — تعامل مع أي رقم بالدولار في هذه الصفحة كلقطة لسعر القائمة في متجر GEEKOM الرسمي، لا كوعد ثابت.',
         ],
       },
       prosCons: {
@@ -3357,7 +3357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7، وشبكة 2.5GbE مزدوجة، ومنفذا USB4 — اتصال جيد لخادم منزلي',
           'يعمل باستهلاك معتدل يبلغ 54 واط لجهاز يعمل باستمرار',
           '**السلبيات**',
-          'باهظ الثمن — 1,299–1,599 دولارًا اعتبارًا من أغسطس 2026، أعلى بكثير من الرقم الأصلي الذي ذكرته هذه المراجعة',
+          'باهظ الثمن — 1,299–1,599 دولارًا (سعر القائمة في متجر GEEKOM الرسمي)، أعلى بكثير من الرقم الأصلي الذي ذكرته هذه المراجعة',
           'وحدة NPU لا تسرّع نماذج اللغة المحلية — وهذا سوء فهم شائع تسعى هذه الصفحة جزئيًا لتصحيحه',
           'تصميم الرسومات المدمجة مع الذاكرة المشتركة محدود بعرض النطاق الترددي للنماذج الكبيرة جدًا',
           'تبريد نشط — ليس صامتًا تحت الحمل المستمر رغم لغة التسويق',
@@ -3372,14 +3372,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'الولايات المتحدة: تظل رسوم القسم 301 على الإلكترونيات الصينية سارية في 2026؛ وقد أبطلت المحكمة العليا في فبراير 2026 رسوم "IEEPA" المنفصلة لعام 2025 واستُبدلت برسوم مؤقتة محدودة السقف بموجب القسم 122. كما انتهى الإعفاء الجمركي "الحد الأدنى" للواردات المباشرة دون 800 دولار.',
           'الاتحاد الأوروبي (يؤثر على ألمانيا/فرنسا): لا توجد رسوم أوروبية واسعة على أجهزة الكمبيوتر المصغّرة الجاهزة، لكن اعتبارًا من يوليو 2026 أُلغي حد الإعفاء الجمركي البالغ 150 يورو للطرود المباشرة منخفضة القيمة من الصين، وأُضيفت رسوم معالجة صغيرة لكل طرد.',
-          'الأثر الصافي: تحقق من السعر الحالي لدى تاجر التجزئة قبل الشراء — الأرقام في هذه المراجعة إرشادية ومؤرخة بأغسطس 2026.',
+          'الأثر الصافي: تحقق من السعر الحالي لدى تاجر التجزئة قبل الشراء — الأرقام في هذه المراجعة إرشادية وتستند إلى سعر القائمة في متجر GEEKOM الرسمي.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'أين تشتري والسعر الحالي',
         content:
-          '**تتغير الأسعار أسبوعيًا، لذا تحقق من السعر المباشر بدلًا من الاعتماد على رقم ثابت.** اعتبارًا من أغسطس 2026، يعرض متجر GEEKOM الرسمي تكوين HX370/32GB/1TB بسعر 1,299 دولارًا، وHX370/32GB/2TB بسعر 1,399 دولارًا، وطراز HX470/32GB/2TB الأحدث "2026 Edition" بسعر 1,599 دولارًا — كما تدير GEEKOM أكواد خصم ترويجية في متجرها الخاص.',
+          '**تتغير الأسعار أسبوعيًا، لذا تحقق من السعر المباشر بدلًا من الاعتماد على رقم ثابت.** يعرض متجر GEEKOM الرسمي، بسعر القائمة، تكوين HX370/32GB/1TB بسعر 1,299 دولارًا، وHX370/32GB/2TB بسعر 1,399 دولارًا، وطراز HX470/32GB/2TB الأحدث "2026 Edition" بسعر 1,599 دولارًا — كما تدير GEEKOM أكواد خصم ترويجية في متجرها الخاص.',
         items: [
           'تأكد من الطراز الدقيق (HX 370 أم HX 470، وسعة الذاكرة والتخزين) قبل الطلب — تختلف الأسعار والمواصفات، وقد باعت GEEKOM عدة أجيال تحت اسم "A9 Max".',
           'تحقق من وجود كود خصم فعّال عند الدفع — أدارت GEEKOM عروضًا بخصم 10–15% في متجرها الخاص.',
@@ -3397,13 +3397,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الكمبيوتر المصغّر', 'السعر (تقريبي)', 'سقف الذاكرة', 'الأفضل لـ'],
         rows: [
           { 'الكمبيوتر المصغّر': 'GEEKOM A9 Max', 'السعر (تقريبي)': '$1,299–1,599', 'سقف الذاكرة': '128GB', 'الأفضل لـ': 'أقصى هامش + موصلية' },
-          { 'الكمبيوتر المصغّر': 'Beelink SER8', 'السعر (تقريبي)': '$799–849 (32GB) / $1,239 (64GB)', 'سقف الذاكرة': '~64–96GB', 'الأفضل لـ': 'أفضل قيمة مقابل السعر لـHA + نموذج 7B' },
-          { 'الكمبيوتر المصغّر': 'Minisforum UM890 Pro', 'السعر (تقريبي)': '$439–649', 'سقف الذاكرة': '~96GB', 'الأفضل لـ': 'قيمة مقابل السعر + مسار ترقية eGPU عبر OCuLink' },
-          { 'الكمبيوتر المصغّر': 'GMKtec G3 Plus', 'السعر (تقريبي)': 'من €159.99 / $140–200', 'سقف الذاكرة': '32GB', 'الأفضل لـ': 'مركز HA اقتصادي، مع ذكاء اصطناعي خفيف كإضافة' },
-          { 'الكمبيوتر المصغّر': 'Beelink EQ14', 'السعر (تقريبي)': '$189–199', 'سقف الذاكرة': '16GB', 'الأفضل لـ': 'HA اقتصادي، شبكة 2.5GbE مزدوجة' },
+          { 'الكمبيوتر المصغّر': 'Beelink SER8', 'السعر (تقريبي)': '$799 (24GB/1TB)', 'سقف الذاكرة': '~64–96GB', 'الأفضل لـ': 'أفضل قيمة مقابل السعر لـHA + نموذج 7B' },
+          { 'الكمبيوتر المصغّر': 'Minisforum UM890 Pro', 'السعر (تقريبي)': '$439.90–823.90', 'سقف الذاكرة': '~96GB', 'الأفضل لـ': 'قيمة مقابل السعر + مسار ترقية eGPU عبر OCuLink' },
+          { 'الكمبيوتر المصغّر': 'GMKtec G3 Plus', 'السعر (تقريبي)': '‎$399.99–499.99‎ (قائمة رسمية، نفد)', 'سقف الذاكرة': '32GB', 'الأفضل لـ': 'مركز HA اقتصادي، مع ذكاء اصطناعي خفيف كإضافة' },
+          { 'الكمبيوتر المصغّر': 'Beelink EQ14', 'السعر (تقريبي)': '‎$385‎ (قائمة رسمية، طلب مسبق)', 'سقف الذاكرة': '16GB', 'الأفضل لـ': 'HA اقتصادي، شبكة 2.5GbE مزدوجة' },
         ],
         items: [
-          '[Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — خيار القيمة مقابل السعر: Ryzen 7 8845HS، يشغّل نموذج 7B بارتياح بنحو نصف سعر A9 Max',
+          '[Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — خيار القيمة مقابل السعر: Ryzen 7 8845HS، يشغّل نموذج 7B بارتياح بأقل بكثير من ثلثي سعر A9 Max',
           '[Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) — يضيف منفذ OCuLink لوحدة معالجة رسومات خارجية إذا أردت استدلالًا أسرع لنماذج أكبر لاحقًا، بسعر دخول أقل بكثير',
           '[Beelink EQ14](/ar/smart-home/beelink-eq14-local-ai-review) — جهاز اقتصادي بمعالج Intel N150 لـHome Assistant مع نموذج صغير',
           '[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — خيار اقتصادي آخر بمعالج N150 وذاكرة قابلة للترقية',
@@ -3425,14 +3425,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هو السعر الحالي لجهاز GEEKOM A9 Max؟', a: 'يعرض متجر GEEKOM الرسمي تكوين HX370/32GB/1TB بسعر 1,299 دولارًا، وHX370/32GB/2TB بسعر 1,399 دولارًا، وطراز HX470/32GB/2TB الأحدث "2026 Edition" بسعر 1,599 دولارًا، اعتبارًا من أغسطس 2026. وهذا أعلى بكثير من الرقم الأصلي الذي ذكرته هذه المراجعة — تحقق من السعر المباشر وأي كود خصم فعّال قبل الشراء.' },
+          { q: 'ما هو السعر الحالي لجهاز GEEKOM A9 Max؟', a: 'يعرض متجر GEEKOM الرسمي تكوين HX370/32GB/1TB بسعر 1,299 دولارًا، وHX370/32GB/2TB بسعر 1,399 دولارًا، وطراز HX470/32GB/2TB الأحدث "2026 Edition" بسعر 1,599 دولارًا (سعر القائمة الرسمي). وهذا أعلى بكثير من الرقم الأصلي الذي ذكرته هذه المراجعة — تحقق من السعر المباشر وأي كود خصم فعّال قبل الشراء.' },
           { q: 'هل يستطيع GEEKOM A9 Max تشغيل نماذج لغوية محلية؟', a: 'نعم. بذاكرة 32GB، يشغّل بارتياح نموذجًا بحجم 7B–8B على Ollama، ويتسع لنموذج 13B–14B بتكميم 4 بت مع مساحة للسياق. هذا تقدير مبني على أجهزته المُتحقَّق منها، وليس معيارًا ثابتًا، لأن السرعة تعتمد على النموذج والتكميم وبيئة التشغيل.' },
           { q: 'ما حجم النموذج الذي يتسع في ذاكرته؟', a: 'عند 32GB، يُعد نموذج 13B–14B بتكميم 4 بت واقعيًا. ترقية الذاكرة إلى 64GB تفتح المجال لنماذج من فئة 30B، ويسمح سقف 128GB بتحميل نموذج 70B بتكميم 4 بت — رغم أن النماذج الكبيرة جدًا تعمل ببطء لأن الرسومات المدمجة تتشارك ذاكرة النظام ولا تملك ذاكرة فيديو مخصصة.' },
           { q: 'هل تجعل وحدة NPU نماذج اللغة المحلية أسرع؟', a: 'لا. تسرّع وحدة NPU (80 TOPS إجمالاً على HX370، و86 TOPS على HX470) الرؤية وبعض ميزات الذكاء الاصطناعي في Windows، لكن بيئات تشغيل نماذج اللغة المحلية الشائعة مثل Ollama وllama.cpp تشغّل النموذج على المعالج ورسومات Radeon 890M المدمجة. اعتبر وحدة NPU فائدة لكشف الكاميرات في Frigate، لا لسرعة نموذج الدردشة.' },
           { q: 'هل A9 Max جيد لـHome Assistant والاستخدام المستمر؟', a: 'نعم. يشغّل Home Assistant وOllama وWhisper وFrigate معًا بهامش واسع، ويحافظ استهلاكه المستمر البالغ 54 واط على تكلفة تشغيل معتدلة على مدار الساعة. كما تناسب شبكة 2.5GbE المزدوجة وWi-Fi 7 دور خادم منزلي سلكي.' },
           { q: 'هل الذاكرة قابلة للترقية؟', a: 'نعم. يستخدم A9 Max فتحتَي SO-DIMM قياسيتين من نوع DDR5 قابلتين للاستبدال من المستخدم، لذا يمكنك البدء بـ32GB ثم الانتقال إلى 64GB أو 128GB لاحقًا. هذه ميزة حقيقية مقارنة بأجهزة الكمبيوتر المصغّرة ذات الذاكرة الملحومة.' },
           { q: 'هل يستحق A9 Max الشراء بدلًا من Beelink SER8؟', a: 'فقط إذا كنت تريد الهامش الإضافي. يشغّل SER8 برنامج Home Assistant مع نموذج 7B بنحو نصف إلى ثلثي سعر A9 Max الحالي. يستحق A9 Max الفارق في السعر إذا احتجت سقف ذاكرة 128GB، أو منفذَي NVMe، أو Wi-Fi 7، أو هامش معالجة الرؤية للسنوات القادمة — لا كخيار افتراضي.' },
-          { q: 'هل A9 Max أفضل من Minisforum UM890 Pro؟', a: 'ليس بشكل مطلق. تكمن مزايا A9 Max في منصة Radeon 890M، وسقف ذاكرة 128GB، وWi-Fi 7، وشبكة 2.5GbE مزدوجة، وUSB4 مزدوج. أما UM890 Pro بسعر 439–649 دولارًا، فغالبًا ما يكون الخيار الأفضل من حيث القيمة مقابل السعر — تحقق من السعر الحالي لكليهما قبل اتخاذ القرار.' },
+          { q: 'هل A9 Max أفضل من Minisforum UM890 Pro؟', a: 'ليس بشكل مطلق. تكمن مزايا A9 Max في منصة Radeon 890M، وسقف ذاكرة 128GB، وWi-Fi 7، وشبكة 2.5GbE مزدوجة، وUSB4 مزدوج. أما UM890 Pro بسعر 439.90 دولارًا بدون ذاكرة/تخزين و823.90 دولارًا مع 32GB (نفد من المخزون حاليًا في المتجر الرسمي)، فغالبًا ما يكون الخيار الأفضل من حيث القيمة مقابل السعر — تحقق من السعر الحالي لكليهما قبل اتخاذ القرار.' },
           { q: 'هل يمكنه تشغيل نماذج بحجم 70B؟', a: 'يوفر تكوين 128GB ذاكرة نظام كافية لتجربة نماذج كبيرة مكممة، لكن هذا لا يعني أن استدلال 70B سيكون سريعًا. إذا كان أداء 70B متطلبًا أساسيًا، فإن نظامًا مخصصًا بذاكرة فيديو كبيرة يُعد عمومًا الخيار الأفضل.' },
           { q: 'أين يُصنَّع GEEKOM A9 Max، وهل يؤثر ذلك على السعر؟', a: 'يُصنَّع في الصين. في عام 2026، يمكن أن تؤثر إجراءات الاستيراد الأمريكية (رسوم القسم 301، وإنهاء إعفاء الحد الأدنى دون 800 دولار) وإلغاء الاتحاد الأوروبي إعفاء الطرود منخفضة القيمة البالغ 150 يورو على التكلفة النهائية، لذا تحقق من سعر تاجر التجزئة الحالي بدلًا من الاعتماد على رقم ثابت.' },
         ],
@@ -3456,9 +3456,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'مراجعة GEEKOM A9 Max (2026): هل هو الأفضل للذكاء الاصطناعي المحلي؟',
       reviewBody:
-        'GEEKOM A9 Max هو جهاز كمبيوتر مصغّر متميز بمعالج Ryzen AI 9 يشغّل Home Assistant مع نموذج لغوي محلي 7B–13B بسقف ذاكرة 128GB. بسعر 1,299–1,599 دولارًا اعتبارًا من أغسطس 2026 (ارتفاعًا عن سعر الإطلاق)، فهو شراء من أجل الهامش ومقاومة التقادم، بنحو 1.5 إلى 2 ضعف سعر Beelink SER8.',
+        'GEEKOM A9 Max هو جهاز كمبيوتر مصغّر متميز بمعالج Ryzen AI 9 يشغّل Home Assistant مع نموذج لغوي محلي 7B–13B بسقف ذاكرة 128GB. بسعر القائمة الرسمي 1,299–1,599 دولارًا (ارتفاعًا عن سعر الإطلاق)، فهو شراء من أجل الهامش ومقاومة التقادم، بنحو 1.6 إلى 2 ضعف سعر Beelink SER8.',
       datePublished: '2026-07-03',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-25',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
