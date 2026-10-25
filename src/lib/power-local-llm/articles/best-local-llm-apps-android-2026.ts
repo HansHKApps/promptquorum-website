@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones',
     seoTitle: 'Android Local LLM Apps 2026: Speed, NPU & Setup Tested',
     intro:
-      'Six Android apps run large language models entirely offline in 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, and PocketPal AI. They differ on NPU utilization, model library breadth, and Android integration — and the best choice depends on whether you want speed (MLC Chat with Hexagon NPU), maximum model flexibility (Ollama via Termux), or a polished native UI (Layla or PocketPal AI). This guide compares all six on the Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), and OnePlus 13 (Snapdragon 8 Elite), covering Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5 inference, Android fragmentation realities, and how each app handles storage, background limits, and the Android share sheet.',
+      'Six Android apps run large language models entirely offline in 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, and PocketPal AI. They differ on NPU utilization, model library breadth, and Android integration — and the best choice depends on whether you want speed (MLC Chat with Hexagon NPU), maximum model flexibility (Ollama via Termux), or a polished native UI (Layla or PocketPal AI). This guide compares all six on the Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), and OnePlus 13 (Snapdragon 8 Elite), covering Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5 inference, Android fragmentation realities, and how each app handles storage, background limits, and the Android share sheet. MemoryAI was added after the main comparison and is not benchmarked.',
     metaDescription:
       'How local LLMs run on Android in 2026 — real benchmarks on S25 Ultra, Pixel 9 Pro, and OnePlus 13. NPU speeds, GGUF support, RAM limits. 6 apps compared.',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.webp',
@@ -108,6 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama via Termux is the only path to a full OpenAI-compatible local API on Android.** This matters for power users who want tool use, function calling, or the ability to connect local apps to their phone\'s model.',
           '**Tensor G5 (Pixel 9 Pro) does not expose its NPU to third-party apps.** All six apps run CPU-only on Pixel 9 Pro, delivering 10–18 tok/sec on Phi-4 Mini — slower than the equivalent Snapdragon 8 Elite result.',
           '**Maid is the F-Droid / de-Googled pick.** No Play Store dependency, no Google account required, and direct GGUF import from the file manager. The best choice for Android users who avoid Google services.',
+          '**MemoryAI is the pick for documents, a memory you can edit, or a child using the phone (added after the benchmarks, so not measured here).** It is free and offline, adds a PIN-locked Kid Mode and GGUF import, is closed source, and Google Play lists build 1.0.60.',
           '**Android background limits are the biggest usability issue.** Android aggressively kills background processes on most OEM ROMs (especially Samsung, OnePlus, and Xiaomi). Apps doing active inference need to be locked in the recent apps tray or configured in battery optimization settings to avoid mid-generation interruptions.',
           '**Model storage is the second biggest Android issue.** Each GGUF model is 1–8 GB. Android\'s split between internal storage partitions means models must be stored in the app\'s private directory or a specifically configured location — not in "Downloads" for most apps.',
           '**The Android advantage is real: Termux and sideloading unlock tools with no iOS equivalent.** Ollama via Termux is not possible on iPhone. F-Droid apps and ADB sideloading give Android users access to apps that Google Play may not carry.',
@@ -179,6 +180,12 @@ snippetBlocks: [
             'NPU support': 'Partial — Vulkan GPU on compatible devices',
             'Best for': 'Most users — best UI + full GGUF ecosystem',
           },
+          {
+            'App': '[MemoryAI](/power-local-llm/memoryai-review)',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': 'Not measured',
+            'NPU support': 'Not tested',
+            'Best for': 'Documents, editable memory, Kid Mode (added after the benchmarks)',
+          },
         ],
         callouts: [
           {
@@ -207,6 +214,7 @@ snippetBlocks: [
           '**Pixel 9 Pro (Tensor G5):** NPU advantage disappears — PocketPal AI is the top pick for UI quality and model breadth. MLC Chat drops to CPU-only on Tensor G5, removing its speed advantage.',
           '**Any Android, customization-first:** Ollama via Termux + a chat front-end (Alpaca, Open WebUI in Chrome) is the most capable setup. Requires ~30 minutes of terminal work but gives OpenAI-compatible API, tool use, and access to the full Ollama model library.',
           '**De-Googled / privacy phone:** Maid from F-Droid. Works on GrapheneOS, CalyxOS, and other de-Googled builds. No Play Services dependency.',
+          '**Documents, a memory you can edit, or a child using the phone:** MemoryAI (added after the benchmarks, not measured here). Free and offline, with a PIN-locked Kid Mode; the stores list 4 GB+ RAM.',
           '**8 GB RAM phone:** Any of the six apps with Qwen3 1.7B or SmolLM2 1.7B. PocketPal AI handles model storage most gracefully on constrained devices.',
           '**Samsung Galaxy (any model):** Be aware of Samsung\'s aggressive background kill. Lock the AI app in the recent apps tray and whitelist it in Device Care → Battery → Sleeping apps to prevent mid-inference termination.',
         ],
@@ -633,7 +641,7 @@ snippetBlocks: [
     title: 'Beste lokale LLM-Apps für Android 2026: 6 Apps im Vergleich auf echten Telefonen',
     seoTitle: 'Lokale LLMs auf Android 2026: NPU-Speed, GGUF & Setup-Leitfaden',
     intro:
-      'Sechs Android-Apps führen große Sprachmodelle 2026 vollständig offline aus: MLC Chat, Maid, Layla, Ollama via Termux, Private AI und PocketPal AI. Sie unterscheiden sich in NPU-Nutzung, Modellbibliotheksbreite und Android-Integration — und die beste Wahl hängt davon ab, ob Sie Geschwindigkeit wünschen (MLC Chat mit Hexagon NPU), maximale Modellflexibilität (Ollama via Termux) oder ein poliertes natives UI (Layla oder PocketPal AI). Dieser Leitfaden vergleicht alle sechs auf dem Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) und OnePlus 13 (Snapdragon 8 Elite) und behandelt Snapdragon Hexagon NPU vs. MediaTek APU vs. Tensor G5 Inferenz, Android-Fragmentierungsrealitäten und wie jede App Speicher, Hintergrundlimits und das Android Share Sheet handhabt.',
+      'Sechs Android-Apps führen große Sprachmodelle 2026 vollständig offline aus: MLC Chat, Maid, Layla, Ollama via Termux, Private AI und PocketPal AI. Sie unterscheiden sich in NPU-Nutzung, Modellbibliotheksbreite und Android-Integration — und die beste Wahl hängt davon ab, ob Sie Geschwindigkeit wünschen (MLC Chat mit Hexagon NPU), maximale Modellflexibilität (Ollama via Termux) oder ein poliertes natives UI (Layla oder PocketPal AI). Dieser Leitfaden vergleicht alle sechs auf dem Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) und OnePlus 13 (Snapdragon 8 Elite) und behandelt Snapdragon Hexagon NPU vs. MediaTek APU vs. Tensor G5 Inferenz, Android-Fragmentierungsrealitäten und wie jede App Speicher, Hintergrundlimits und das Android Share Sheet handhabt. MemoryAI wurde nach dem Hauptvergleich ergänzt und nicht gemessen.',
     metaDescription:
       'Wie lokale LLMs wirklich auf Android laufen — Benchmarks auf S25 Ultra, Pixel 9 Pro, OnePlus 13. NPU-Geschwindigkeit, GGUF-Support, RAM-Limits. 6 Apps verglichen.',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-de.webp',
@@ -722,6 +730,7 @@ snippetBlocks: [
           '**Ollama via Termux ist der einzige Weg zu einem vollständigen OpenAI-kompatiblen lokalen API auf Android.** Dies ist wichtig für Power-User, die Tool Use, Function Calling oder die Möglichkeit möchten, lokale Apps mit dem Modell ihres Telefons zu verbinden.',
           '**Tensor G5 (Pixel 9 Pro) macht die NPU nicht für Drittanbieter-Apps verfügbar.** Alle sechs Apps laufen nur auf der CPU auf dem Pixel 9 Pro, mit 10–18 Token/Sek. auf Phi-4 Mini — langsamer als das äquivalente Snapdragon 8 Elite Ergebnis.',
           '**Maid ist die F-Droid / De-Googled-Wahl.** Keine Play Store-Abhängigkeit, kein Google-Konto erforderlich und direkter GGUF-Import aus dem Dateimanager. Die beste Wahl für Android-Nutzer, die Google-Dienste vermeiden.',
+          '**MemoryAI ist die Wahl für Dokumente, ein editierbares Gedächtnis oder ein Kind am Telefon (nach den Benchmarks ergänzt, daher hier nicht gemessen).** Die App ist kostenlos und offline, bringt einen PIN-geschützten Kindermodus und GGUF-Import mit, ist Closed Source, und Google Play listet Build 1.0.60.',
           '**Android-Hintergrundlimits sind das größte Usability-Problem.** Android beendet Hintergrundprozesse aggressiv auf den meisten OEM-ROMs (besonders Samsung, OnePlus und Xiaomi). Apps, die aktive Inferenz durchführen, müssen in der Übersicht der aktuellen Apps fixiert oder in den Batterieoptimierungseinstellungen konfiguriert werden, um Unterbrechungen mitten in der Generierung zu vermeiden.',
           '**Modellspeicher ist das zweitgrößte Android-Problem.** Jedes GGUF-Modell ist 1–8 GB groß. Androids Aufteilung zwischen internen Speicherpartitionen bedeutet, dass Modelle im privaten Verzeichnis der App oder an einem speziell konfigurierten Ort gespeichert werden müssen — nicht im "Downloads"-Ordner für die meisten Apps.',
           '**Der Android-Vorteil ist real: Termux und Sideloading ermöglichen Tools ohne iOS-Äquivalent.** Ollama via Termux ist auf dem iPhone nicht möglich. F-Droid-Apps und ADB-Sideloading geben Android-Nutzern Zugang zu Apps, die der Google Play Store möglicherweise nicht anbietet.',
@@ -792,6 +801,12 @@ snippetBlocks: [
             'NPU-Support': 'Teilweise — Vulkan GPU auf kompatiblen Geräten',
             'Am besten geeignet für': 'Die meisten Nutzer — bestes UI + vollständiges GGUF-Ökosystem',
           },
+          {
+            'App': '[MemoryAI](/de/power-local-llm/memoryai-review)',
+            'Token/Sek. (S25 Ultra, Phi-4 Mini)': 'Nicht gemessen',
+            'NPU-Support': 'Nicht getestet',
+            'Am besten geeignet für': 'Dokumente, editierbares Gedächtnis, Kindermodus (nach den Benchmarks ergänzt)',
+          },
         ],
         callouts: [
           {
@@ -820,6 +835,7 @@ snippetBlocks: [
           '**Pixel 9 Pro (Tensor G5):** NPU-Vorteil verschwindet — PocketPal AI ist die Top-Wahl für UI-Qualität und Modellbreite. MLC Chat fällt auf Tensor G5 auf reine CPU zurück, wodurch sein Geschwindigkeitsvorteil verloren geht.',
           '**Jedes Android, Anpassung an erster Stelle:** Ollama via Termux + ein Chat-Frontend (Alpaca, Open WebUI im Chrome) ist das fähigste Setup. Erfordert ~30 Minuten Terminal-Arbeit, bietet aber OpenAI-kompatiblen API, Tool Use und Zugriff auf die vollständige Ollama-Modellbibliothek.',
           '**De-Googled / Privacy-Telefon:** Maid von F-Droid. Funktioniert auf GrapheneOS, CalyxOS und anderen De-Googled-Builds. Keine Play Services-Abhängigkeit.',
+          '**Dokumente, ein editierbares Gedächtnis oder ein Kind am Telefon:** MemoryAI (nach den Benchmarks ergänzt, hier nicht gemessen). Kostenlos und offline, mit PIN-geschütztem Kindermodus; die Stores nennen mindestens 4 GB RAM.',
           '**8 GB RAM-Telefon:** Jede der sechs Apps mit Qwen3 1,7B oder SmolLM2 1,7B. PocketPal AI handhabt Modellspeicher bei eingeschränkten Geräten am elegantesten.',
           '**Samsung Galaxy (jedes Modell):** Seien Sie sich Samsungs aggressivem Hintergrund-Kill bewusst. Sperren Sie die KI-App in der Übersicht der aktuellen Apps und fügen Sie sie in Gerätewartung → Batterie → Schlafende Apps hinzu, um Unterbrechungen mitten in der Inferenz zu vermeiden.',
         ],
@@ -1269,7 +1285,7 @@ snippetBlocks: [
     title: 'Meilleures applications LLM locales pour Android en 2026 : 6 applications testées sur de vrais téléphones',
     seoTitle: 'LLMs Locaux sur Android 2026 : Performance NPU & Configuration',
     intro:
-      'Six applications Android exécutent des modèles de langage volumineux entièrement hors ligne en 2026 : MLC Chat, Maid, Layla, Ollama via Termux, Private AI et PocketPal AI. Elles diffèrent par l\'utilisation du NPU, la portée de la bibliothèque de modèles et l\'intégration Android — et le meilleur choix dépend de votre priorité : la vitesse (MLC Chat avec NPU Hexagon), la flexibilité maximale (Ollama via Termux) ou une interface utilisateur native soignée (Layla ou PocketPal AI). Ce guide compare les six applications sur le Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) et OnePlus 13 (Snapdragon 8 Elite), couvrant l\'inférence Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, les réalités de la fragmentation Android et la façon dont chaque application gère le stockage, les limites d\'arrière-plan et la feuille de partage Android.',
+      'Six applications Android exécutent des modèles de langage volumineux entièrement hors ligne en 2026 : MLC Chat, Maid, Layla, Ollama via Termux, Private AI et PocketPal AI. Elles diffèrent par l\'utilisation du NPU, la portée de la bibliothèque de modèles et l\'intégration Android — et le meilleur choix dépend de votre priorité : la vitesse (MLC Chat avec NPU Hexagon), la flexibilité maximale (Ollama via Termux) ou une interface utilisateur native soignée (Layla ou PocketPal AI). Ce guide compare les six applications sur le Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) et OnePlus 13 (Snapdragon 8 Elite), couvrant l\'inférence Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, les réalités de la fragmentation Android et la façon dont chaque application gère le stockage, les limites d\'arrière-plan et la feuille de partage Android. MemoryAI a été ajoutée après la comparaison principale et n\'a pas été mesurée.',
     metaDescription:
       'Comment les LLMs locaux fonctionnent sur Android 2026 — benchmarks sur S25 Ultra, Pixel 9 Pro, OnePlus 13. Vitesses NPU, support GGUF, limites RAM. 6 apps comparées.',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-fr.webp',
@@ -1358,6 +1374,7 @@ snippetBlocks: [
           '**Ollama via Termux est le seul chemin vers une API locale complète compatible OpenAI sur Android.** Cela importe pour les utilisateurs avancés qui souhaitent l\'utilisation d\'outils, les appels de fonction ou la capacité à connecter les applications locales au modèle de leur téléphone.',
           '**Tensor G5 (Pixel 9 Pro) n\'expose pas son NPU aux applications tierces.** Les six applications s\'exécutent en CPU seul sur Pixel 9 Pro, livrant 10–18 tokens/sec sur Phi-4 Mini — plus lent que le résultat Snapdragon 8 Elite équivalent.',
           '**Maid est le choix F-Droid / dé-googlifié.** Pas de dépendance Play Store, pas de compte Google requis et importation GGUF directe depuis le gestionnaire de fichiers. Le meilleur choix pour les utilisateurs Android qui évitent les services Google.',
+          '**MemoryAI est le choix pour les documents, une mémoire modifiable ou un enfant qui utilise le téléphone (ajoutée après les benchmarks, donc non mesurée ici).** Elle est gratuite et hors ligne, apporte un Kid Mode protégé par PIN et l\'import GGUF, son code est fermé et Google Play affiche la version 1.0.60.',
           '**Les limites d\'arrière-plan d\'Android sont le plus grand problème d\'utilisabilité.** Android tue agressivement les processus d\'arrière-plan sur la plupart des ROM OEM (particulièrement Samsung, OnePlus et Xiaomi). Les applications effectuant une inférence active doivent être verrouillées dans la barre d\'applications récentes ou configurées dans les paramètres d\'optimisation de batterie pour éviter les interruptions au milieu de la génération.',
           '**Le stockage de modèle est le deuxième plus grand problème Android.** Chaque modèle GGUF fait 1–8 GB. La division d\'Android entre les partitions de stockage interne signifie que les modèles doivent être stockés dans le répertoire privé de l\'application ou à un emplacement spécifiquement configuré — pas dans "Téléchargements" pour la plupart des applications.',
           '**L\'avantage Android est réel : Termux et sideloading déverrouillent des outils sans équivalent iOS.** Ollama via Termux n\'est pas possible sur iPhone. Les applications F-Droid et le sideloading ADB donnent aux utilisateurs Android un accès à des applications que Google Play ne peut pas proposer.',
@@ -1428,6 +1445,12 @@ snippetBlocks: [
             'Support NPU': 'Partiel — GPU Vulkan sur appareils compatibles',
             'Meilleur pour': 'La plupart des utilisateurs — meilleure interface + écosystème GGUF complet',
           },
+          {
+            'Application': '[MemoryAI](/fr/power-local-llm/memoryai-review)',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': 'Non mesurée',
+            'Support NPU': 'Non testée',
+            'Meilleur pour': 'Documents, mémoire modifiable, Kid Mode (ajoutée après les benchmarks)',
+          },
         ],
         callouts: [
           {
@@ -1456,6 +1479,7 @@ snippetBlocks: [
           '**Pixel 9 Pro (Tensor G5) :** L\'avantage NPU disparaît — PocketPal AI est le meilleur choix pour la qualité d\'interface et la portée des modèles. MLC Chat bascule à CPU seul sur Tensor G5, perdant son avantage de vitesse.',
           '**N\'importe quel Android, personnalisation en premier :** Ollama via Termux + un frontend de chat (Alpaca, Open WebUI dans Chrome) est la configuration la plus capable. Requiert ~30 minutes de travail terminal mais offre une API compatible OpenAI, utilisation d\'outils et accès à la bibliothèque de modèles Ollama complète.',
           '**Téléphone dé-googlifié / confidentialité :** Maid depuis F-Droid. Fonctionne sur GrapheneOS, CalyxOS et autres builds dé-googlifiés. Pas de dépendance Play Services.',
+          '**Documents, mémoire modifiable ou enfant qui utilise le téléphone :** MemoryAI (ajoutée après les benchmarks, non mesurée ici). Gratuite et hors ligne, avec un Kid Mode protégé par PIN ; les stores indiquent 4 Go de RAM minimum.',
           '**Téléphone 8 GB RAM :** N\'importe quelle des six applications avec Qwen3 1.7B ou SmolLM2 1.7B. PocketPal AI gère le stockage de modèles le plus élégamment sur les appareils contraints.',
           '**Samsung Galaxy (n\'importe quel modèle) :** Soyez conscient du tueur d\'arrière-plan agressif de Samsung. Verrouillez l\'application IA dans la barre d\'applications récentes et ajoutez-la à Maintenance d\'appareil → Batterie → Applications en veille pour éviter les interruptions au milieu d\'une inférence.',
         ],
@@ -1886,7 +1910,7 @@ snippetBlocks: [
     title: '2026年 Android用ローカルLLMアプリの最良 : 6つのアプリ実機比較',
     seoTitle: 'スマホでローカルLLM 2026年：Android最速アプリ',
     intro:
-      '2026年、6つの Android アプリがローカル言語モデルを完全にオフラインで実行しています：MLC Chat、Maid、Layla、Ollama via Termux、Private AI、PocketPal AI。これらは NPU 利用、モデルライブラリの幅、Android 統合で異なります—最適な選択は、速度（MLC Chat with Hexagon NPU）、最大のモデル柔軟性（Ollama via Termux）、またはポーランド済みネイティブ UI（Layla または PocketPal AI）のどちらを優先するかによります。本ガイドは Samsung Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）、OnePlus 13（Snapdragon 8 Elite）での 6 つのアプリを比較し、Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5 推論、Android 断片化の現実、各アプリがストレージ、バックグラウンド制限、Android シェアシートをどう処理するかをカバーしています。',
+      '2026年、6つの Android アプリがローカル言語モデルを完全にオフラインで実行しています：MLC Chat、Maid、Layla、Ollama via Termux、Private AI、PocketPal AI。これらは NPU 利用、モデルライブラリの幅、Android 統合で異なります—最適な選択は、速度（MLC Chat with Hexagon NPU）、最大のモデル柔軟性（Ollama via Termux）、またはポーランド済みネイティブ UI（Layla または PocketPal AI）のどちらを優先するかによります。本ガイドは Samsung Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）、OnePlus 13（Snapdragon 8 Elite）での 6 つのアプリを比較し、Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5 推論、Android 断片化の現実、各アプリがストレージ、バックグラウンド制限、Android シェアシートをどう処理するかをカバーしています。MemoryAIは主な比較の後に追加したもので、計測はしていません。',
     metaDescription:
       'スマホでローカル LLM を動かす 2026年 — S25 Ultra、Pixel 9 Pro、OnePlus 13 の実機ベンチマーク。NPU 速度、GGUF 対応、RAM 制限、おすすめアプリ 6 本と使い方を比較。',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ja.webp',
@@ -1975,6 +1999,7 @@ snippetBlocks: [
           '**Ollama via Termux は Android 上の完全な OpenAI 互換ローカル API への唯一のパスです。** これはツール利用、機能呼び出し、またはローカルアプリをデバイスのモデルに接続する能力を望むパワーユーザーに重要です。',
           '**Tensor G5（Pixel 9 Pro）はサードパーティアプリに NPU を公開しません。** 6 つすべてのアプリは Pixel 9 Pro 上で CPU のみで実行し、Phi-4 Mini で 10–18 tokens/sec を提供します—同等の Snapdragon 8 Elite 結果より遅いです。',
           '**Maid は F-Droid / 脱 Google 選択肢です。** Play Store 依存なし、Google アカウント不要、ファイルマネージャーから GGUF 直接インポート。Google サービスを避ける Android ユーザーにとって最良の選択肢。',
+          '**MemoryAIは、文書、編集できるメモリ、またはお子さまがスマホを使う場合の選択肢です(ベンチマークの後に追加したため、ここでは計測していません)。** 無料でオフライン動作し、PIN付きキッズモードとGGUF取り込みを備えます。クローズドソースで、Google Playには1.0.60が掲載されています。',
           '**Android バックグラウンド制限は最大の使いやすさの問題です。** Android はほとんどの OEM ROM（特に Samsung、OnePlus、Xiaomi）上でバックグラウンドプロセスを積極的に終了します。アクティブな推論を行うアプリは最近のアプリトレイにロックするか、バッテリー最適化設定で構成する必要があります。',
           '**モデルストレージは 2 番目に大きい Android の問題です。** 各 GGUF モデルは 1–8 GB です。Android の内部ストレージパーティション間の分割は、モデルをアプリのプライベートディレクトリまたは特別に構成された場所に保存する必要があります—ほとんどのアプリの「ダウンロード」ではありません。',
           '**Android 利点は実です：Termux とサイドローディングは iOS 相当物のないツールをアンロック。** Ollama via Termux は iPhone では不可能です。F-Droid アプリと ADB サイドローディングは Google Play が実行しないアプリへの Android ユーザーアクセスを提供します。',
@@ -2045,6 +2070,12 @@ snippetBlocks: [
             'NPU対応': '部分的—互換デバイス上 Vulkan GPU',
             '最適用途': 'ほとんどのユーザー—最良 UI + 完全 GGUF エコシステム',
           },
+          {
+            'アプリ': '[MemoryAI](/ja/power-local-llm/memoryai-review)',
+            'トークン/秒（S25 Ultra、Phi-4 Mini）': '未計測',
+            'NPU対応': '未テスト',
+            '最適用途': '文書、編集できるメモリ、キッズモード(ベンチマークの後に追加)',
+          },
         ],
         callouts: [
           {
@@ -2073,6 +2104,7 @@ snippetBlocks: [
           '**Pixel 9 Pro（Tensor G5）：** NPU 利点は消失—UI 品質とモデル幅で PocketPal AI がトップ選択肢。MLC Chat は Tensor G5 で CPU のみに低下、速度利点を失う。',
           '**任意の Android、カスタマイズ優先：** Ollama via Termux + チャットフロントエンド（Alpaca、Chrome 内 Open WebUI）は最も能力のあるセットアップ。~30 分の端末作業を要求しますが、OpenAI 互換 API、ツール利用、完全 Ollama モデルライブラリアクセス提供。',
           '**脱 Google / プライバシーフォン：** F-Droid から Maid。GrapheneOS、CalyxOS、その他脱 Google ビルドで動作。Play Services 依存なし。',
+          '**文書、編集できるメモリ、またはお子さまがスマホを使う場合:** MemoryAI(ベンチマークの後に追加、ここでは未計測)。無料でオフライン動作し、PIN付きキッズモードを備えます。ストアの記載ではRAM 4GB以上です。',
           '**8 GB RAM フォン：** Qwen3 1.7B または SmolLM2 1.7B を持つ 6 つのいずれか。PocketPal AI は制約されたデバイス上でモデルストレージを最も優雅に処理。',
           '**Samsung Galaxy（任意のモデル）：** Samsung の積極的なバックグラウンド キルに注意。AI アプリを最近のアプリトレイに固定し、デバイスケア → バッテリー → スリープアプリに追加してしてを回避。',
         ],
@@ -2519,7 +2551,7 @@ snippetBlocks: [
     title: '2026年安卓最佳本地LLM应用：6款应用真机对比',
     seoTitle: 'Android 本地 LLM 运行 2026：速度、NPU 与配置深度指南',
     intro:
-      '2026年有6款安卓应用可以完全离线运行大型语言模型：MLC Chat、Maid、Layla、Ollama via Termux、Private AI 和 PocketPal AI。它们在 NPU 利用率、模型库广度和安卓系统集成方面各不相同——最佳选择取决于您更看重速度（MLC Chat 搭配 Hexagon NPU）、最大的模型灵活性（Ollama via Termux），还是精致的原生界面（Layla 或 PocketPal AI）。本指南在 Samsung Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）和 OnePlus 13（Snapdragon 8 Elite）上对这6款应用逐一对比，涵盖 Snapdragon Hexagon NPU、MediaTek APU 与 Tensor G5 的推理差异、安卓碎片化的现实，以及每款应用如何处理存储、后台限制和安卓分享菜单。',
+      '2026年有6款安卓应用可以完全离线运行大型语言模型：MLC Chat、Maid、Layla、Ollama via Termux、Private AI 和 PocketPal AI。它们在 NPU 利用率、模型库广度和安卓系统集成方面各不相同——最佳选择取决于您更看重速度（MLC Chat 搭配 Hexagon NPU）、最大的模型灵活性（Ollama via Termux），还是精致的原生界面（Layla 或 PocketPal AI）。本指南在 Samsung Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）和 OnePlus 13（Snapdragon 8 Elite）上对这6款应用逐一对比，涵盖 Snapdragon Hexagon NPU、MediaTek APU 与 Tensor G5 的推理差异、安卓碎片化的现实，以及每款应用如何处理存储、后台限制和安卓分享菜单。MemoryAI 是在主要对比之后加入的,未做实测。',
     metaDescription:
       'Android 上本地 LLM 的实际运行情况 2026 — S25 Ultra、Pixel 9 Pro、OnePlus 13 真机基准测试。NPU 速度、GGUF 支持、RAM 限制。6 款应用对比。',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-zh.webp',
@@ -2608,6 +2640,7 @@ snippetBlocks: [
           '**Ollama via Termux 是在安卓上获得完整兼容 OpenAI 的本地 API 的唯一途径。** 这对想要工具调用、函数调用，或想把本地应用连接到手机上模型的高级用户很重要。',
           '**Tensor G5（Pixel 9 Pro）不向第三方应用开放其 NPU。** 6款应用在 Pixel 9 Pro 上都只能用 CPU 运行，运行 Phi-4 Mini 为10–18 token/秒——比 Snapdragon 8 Elite 上的对应结果更慢。',
           '**Maid 是 F-Droid / 去 Google 化的首选。** 不依赖 Play Store，无需 Google 账户，可从文件管理器直接导入 GGUF。对避开 Google 服务的安卓用户来说是最佳选择。',
+          '**MemoryAI 适合文档、可编辑记忆,或孩子使用手机的场景(在基准测试之后加入,因此这里没有实测)。** 它免费且可离线使用,带 PIN 锁定的儿童模式和 GGUF 导入;闭源,Google Play 列出的版本为 1.0.60。',
           '**安卓后台限制是最大的可用性问题。** 在大多数 OEM 定制 ROM 上（尤其是 Samsung、OnePlus 和 Xiaomi），安卓会积极结束后台进程。正在推理的应用需要在最近任务列表中锁定，或在电池优化设置中单独配置，以免生成过程中被中断。',
           '**模型存储是安卓的第二大问题。** 每个 GGUF 模型为1–8 GB。安卓内部存储分区的划分意味着，多数应用的模型必须存放在应用私有目录或特定配置的位置，而不是“下载”文件夹。',
           '**安卓的优势是实实在在的：Termux 和侧载解锁了 iOS 上没有对应物的工具。** Ollama via Termux 无法在 iPhone 上实现。F-Droid 应用和 ADB 侧载让安卓用户能用到 Google Play 可能没有收录的应用。',
@@ -2679,6 +2712,12 @@ snippetBlocks: [
             'NPU 支持': '部分——兼容设备上用 Vulkan GPU',
             '最适合': '多数用户——最佳界面 + 完整 GGUF 生态',
           },
+          {
+            '应用': '[MemoryAI](/zh/power-local-llm/memoryai-review)',
+            'Phi-4 Mini 速度（S25 Ultra）': '未测量',
+            'NPU 支持': '未测试',
+            '最适合': '文档、可编辑记忆、儿童模式(基准测试之后加入)',
+          },
         ],
         callouts: [
           {
@@ -2707,6 +2746,7 @@ snippetBlocks: [
           '**Pixel 9 Pro（Tensor G5）：** NPU 优势消失——PocketPal AI 在界面质量和模型广度上是首选。MLC Chat 在 Tensor G5 上退回仅用 CPU，失去速度优势。',
           '**任意安卓手机，定制优先：** Ollama via Termux + 聊天前端（Alpaca，或在 Chrome 中使用 Open WebUI）是功能最强的组合。需要约30分钟的终端操作，但可获得兼容 OpenAI 的 API、工具调用，以及完整的 Ollama 模型库。',
           '**去 Google 化 / 隐私手机：** 从 F-Droid 安装 Maid。可在 GrapheneOS、CalyxOS 及其他去 Google 化的系统上运行，不依赖 Play Services。',
+          '**文档、可编辑记忆,或孩子使用手机:** MemoryAI(基准测试之后加入,此处未实测)。免费、可离线,带 PIN 锁定的儿童模式;应用商店标注需要 4 GB 以上内存。',
           '**8 GB RAM 手机：** 6款应用中的任何一款，搭配 Qwen3 1.7B 或 SmolLM2 1.7B。在内存受限的设备上，PocketPal AI 的模型存储处理最为妥帖。',
           '**Samsung Galaxy（任何型号）：** 请留意 Samsung 激进的后台查杀。把 AI 应用锁定在最近任务列表中，并在“设备维护 → 电池 → 休眠应用”中将其加入白名单，避免推理中途被终止。',
         ],
@@ -3133,7 +3173,7 @@ snippetBlocks: [
     title: 'Las mejores apps de LLM local para Android en 2026: 6 apps comparadas en teléfonos reales',
     seoTitle: 'LLMs Locales en Android 2026: Velocidad, NPU y Configuración',
     intro:
-      'Seis apps de Android ejecutan modelos de lenguaje grandes completamente sin conexión en 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI y PocketPal AI. Difieren en la utilización del NPU, la amplitud de la biblioteca de modelos y la integración con Android — y la mejor opción depende de si quieres velocidad (MLC Chat con NPU Hexagon), máxima flexibilidad de modelos (Ollama via Termux) o una interfaz nativa pulida (Layla o PocketPal AI). Esta guía compara las seis en el Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) y OnePlus 13 (Snapdragon 8 Elite), cubriendo la inferencia de Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, las realidades de la fragmentación de Android y cómo cada app gestiona el almacenamiento, los límites en segundo plano y el panel compartir de Android.',
+      'Seis apps de Android ejecutan modelos de lenguaje grandes completamente sin conexión en 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI y PocketPal AI. Difieren en la utilización del NPU, la amplitud de la biblioteca de modelos y la integración con Android — y la mejor opción depende de si quieres velocidad (MLC Chat con NPU Hexagon), máxima flexibilidad de modelos (Ollama via Termux) o una interfaz nativa pulida (Layla o PocketPal AI). Esta guía compara las seis en el Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) y OnePlus 13 (Snapdragon 8 Elite), cubriendo la inferencia de Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, las realidades de la fragmentación de Android y cómo cada app gestiona el almacenamiento, los límites en segundo plano y el panel compartir de Android. MemoryAI se añadió después de la comparación principal y no se ha medido.',
     metaDescription:
       'Cómo funcionan los LLMs locales en Android 2026 — benchmarks en S25 Ultra, Pixel 9 Pro y OnePlus 13. Velocidades NPU, soporte GGUF, límites RAM. 6 apps comparadas.',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-es.webp',
@@ -3222,6 +3262,7 @@ snippetBlocks: [
           '**Ollama via Termux es el único camino hacia una API local completa compatible con OpenAI en Android.** Esto importa para usuarios avanzados que quieren uso de herramientas, llamadas a funciones o la capacidad de conectar apps locales al modelo de su teléfono.',
           '**Tensor G5 (Pixel 9 Pro) no expone su NPU a apps de terceros.** Las seis apps corren solo-CPU en Pixel 9 Pro, entregando 10–18 tok/seg en Phi-4 Mini — más lento que el resultado equivalente en Snapdragon 8 Elite.',
           '**Maid es la opción F-Droid / sin Google.** Sin dependencia de Play Store, sin cuenta de Google requerida e importación GGUF directa desde el gestor de archivos. La mejor opción para usuarios de Android que evitan los servicios de Google.',
+          '**MemoryAI es la opción para documentos, una memoria editable o un niño que usa el teléfono (añadida después de las pruebas, por lo que no se midió aquí).** Es gratuita y offline, añade un Kid Mode con PIN e importación GGUF, es de código cerrado y Google Play lista la compilación 1.0.60.',
           '**Los límites en segundo plano de Android son el mayor problema de usabilidad.** Android elimina agresivamente los procesos en segundo plano en la mayoría de ROMs de fabricantes (especialmente Samsung, OnePlus y Xiaomi). Las apps que realizan inferencia activa necesitan estar fijadas en la bandeja de apps recientes o configuradas en los ajustes de optimización de batería para evitar interrupciones durante la generación.',
           '**El almacenamiento de modelos es el segundo mayor problema de Android.** Cada modelo GGUF ocupa 1–8 GB. La división de Android entre particiones de almacenamiento interno significa que los modelos deben almacenarse en el directorio privado de la app o en una ubicación configurada específicamente — no en "Descargas" para la mayoría de apps.',
           '**La ventaja de Android es real: Termux y el sideloading desbloquean herramientas sin equivalente en iOS.** Ollama via Termux no es posible en iPhone. Las apps de F-Droid y el sideloading con ADB dan a los usuarios de Android acceso a apps que Google Play puede no incluir.',
@@ -3292,6 +3333,12 @@ snippetBlocks: [
             'Soporte NPU': 'Parcial — GPU Vulkan en dispositivos compatibles',
             'Ideal para': 'La mayoría de usuarios — mejor interfaz + ecosistema GGUF completo',
           },
+          {
+            'App': '[MemoryAI](/es/power-local-llm/memoryai-review)',
+            'Tokens/seg (S25 Ultra, Phi-4 Mini)': 'No medido',
+            'Soporte NPU': 'No probado',
+            'Ideal para': 'Documentos, memoria editable, Kid Mode (añadida después de las pruebas)',
+          },
         ],
         callouts: [
           {
@@ -3320,6 +3367,7 @@ snippetBlocks: [
           '**Pixel 9 Pro (Tensor G5):** La ventaja del NPU desaparece — PocketPal AI es la mejor opción por calidad de interfaz y amplitud de modelos. MLC Chat pasa a solo-CPU en Tensor G5, perdiendo su ventaja de velocidad.',
           '**Cualquier Android, personalización primero:** Ollama via Termux + un front-end de chat (Alpaca, Open WebUI en Chrome) es la configuración más capaz. Requiere ~30 minutos de trabajo en terminal pero da acceso a API compatible con OpenAI, uso de herramientas y toda la biblioteca de modelos de Ollama.',
           '**Teléfono sin Google / privacidad:** Maid desde F-Droid. Funciona en GrapheneOS, CalyxOS y otras versiones sin Google. Sin dependencia de Play Services.',
+          '**Documentos, una memoria editable o un niño que usa el teléfono:** MemoryAI (añadida después de las pruebas, no medida aquí). Gratuita y offline, con Kid Mode protegido con PIN; las tiendas indican 4 GB de RAM o más.',
           '**Teléfono con 8 GB de RAM:** Cualquiera de las seis apps con Qwen3 1.7B o SmolLM2 1.7B. PocketPal AI gestiona el almacenamiento de modelos con mayor elegancia en dispositivos limitados.',
           '**Samsung Galaxy (cualquier modelo):** Ten en cuenta la eliminación agresiva de procesos en segundo plano de Samsung. Fija la app de IA en la bandeja de recientes y añádela en el exclusivo de Cuidado del dispositivo → Batería → Apps en modo sueño para evitar interrupciones durante la inferencia.',
         ],
@@ -3746,7 +3794,7 @@ snippetBlocks: [
     title: 'Os melhores apps de LLM local para Android em 2026: 6 apps comparados em celulares reais',
     seoTitle: 'LLMs Locais no Android 2026: Velocidade, NPU e Configuração',
     intro:
-      'Seis apps de Android executam modelos de linguagem grandes totalmente offline em 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI e PocketPal AI. Eles diferem na utilização do NPU, na amplitude da biblioteca de modelos e na integração com o Android — e a melhor opção depende de você querer velocidade (MLC Chat com NPU Hexagon), máxima flexibilidade de modelos (Ollama via Termux) ou uma interface nativa refinada (Layla ou PocketPal AI). Este guia compara os seis no Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) e OnePlus 13 (Snapdragon 8 Elite), cobrindo a inferência do Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, as realidades da fragmentação do Android e como cada app gerencia o armazenamento, os limites em segundo plano e o painel de compartilhamento do Android.',
+      'Seis apps de Android executam modelos de linguagem grandes totalmente offline em 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI e PocketPal AI. Eles diferem na utilização do NPU, na amplitude da biblioteca de modelos e na integração com o Android — e a melhor opção depende de você querer velocidade (MLC Chat com NPU Hexagon), máxima flexibilidade de modelos (Ollama via Termux) ou uma interface nativa refinada (Layla ou PocketPal AI). Este guia compara os seis no Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) e OnePlus 13 (Snapdragon 8 Elite), cobrindo a inferência do Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, as realidades da fragmentação do Android e como cada app gerencia o armazenamento, os limites em segundo plano e o painel de compartilhamento do Android. O MemoryAI foi adicionado depois da comparação principal e não foi medido.',
     metaDescription:
       'Como os LLMs locais rodam no Android 2026 — benchmarks no S25 Ultra, Pixel 9 Pro e OnePlus 13. Velocidades NPU, suporte GGUF, limites de RAM. 6 apps comparados.',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-pt.webp',
@@ -3835,6 +3883,7 @@ snippetBlocks: [
           '**Ollama via Termux é o único caminho para uma API local completa compatível com OpenAI no Android.** Isso importa para usuários avançados que querem uso de ferramentas, chamadas de funções ou a capacidade de conectar apps locais ao modelo do celular.',
           '**O Tensor G5 (Pixel 9 Pro) não expõe seu NPU para apps de terceiros.** Os seis apps rodam apenas-CPU no Pixel 9 Pro, entregando 10–18 tok/seg no Phi-4 Mini — mais lento que o resultado equivalente no Snapdragon 8 Elite.',
           '**Maid é a escolha F-Droid / sem Google.** Sem dependência da Play Store, sem conta Google necessária e com importação GGUF direta do gerenciador de arquivos. A melhor opção para usuários de Android que evitam os serviços do Google.',
+          '**O MemoryAI é a escolha para documentos, uma memória editável ou uma criança usando o celular (adicionado depois dos benchmarks, por isso não medido aqui).** É gratuito e offline, traz Modo Criança com PIN e importação de GGUF, é de código fechado e o Google Play lista a versão 1.0.60.',
           '**Os limites em segundo plano do Android são o maior problema de usabilidade.** O Android encerra agressivamente os processos em segundo plano na maioria das ROMs de fabricantes (especialmente Samsung, OnePlus e Xiaomi). Os apps que fazem inferência ativa precisam estar fixados na bandeja de apps recentes ou configurados nas configurações de otimização de bateria para evitar interrupções no meio da geração.',
           '**O armazenamento de modelos é o segundo maior problema do Android.** Cada modelo GGUF ocupa 1–8 GB. A divisão do Android entre partições de armazenamento interno significa que os modelos devem ser armazenados no diretório privado do app ou em um local configurado especificamente — não em "Downloads" para a maioria dos apps.',
           '**A vantagem do Android é real: Termux e sideloading desbloqueiam ferramentas sem equivalente no iOS.** Ollama via Termux não é possível no iPhone. Os apps do F-Droid e o sideloading com ADB dão aos usuários de Android acesso a apps que o Google Play pode não oferecer.',
@@ -3905,6 +3954,12 @@ snippetBlocks: [
             'NPU support': 'Parcial — GPU Vulkan em dispositivos compatíveis',
             'Best for': 'A maioria dos usuários — melhor interface + ecossistema GGUF completo',
           },
+          {
+            'App': '[MemoryAI](/pt/power-local-llm/memoryai-review)',
+            'Tokens/sec (S25 Ultra, Phi-4 Mini)': 'Não medido',
+            'NPU support': 'Não testado',
+            'Best for': 'Documentos, memória editável, Modo Criança (adicionado depois dos benchmarks)',
+          },
         ],
         callouts: [
           {
@@ -3933,6 +3988,7 @@ snippetBlocks: [
           '**Pixel 9 Pro (Tensor G5):** A vantagem do NPU desaparece — o PocketPal AI é a melhor escolha pela qualidade da interface e amplitude de modelos. O MLC Chat passa para apenas-CPU no Tensor G5, perdendo sua vantagem de velocidade.',
           '**Qualquer Android, personalização em primeiro lugar:** Ollama via Termux + um front-end de chat (Alpaca, Open WebUI no Chrome) é a configuração mais capaz. Requer ~30 minutos de trabalho no terminal, mas dá acesso a API compatível com OpenAI, uso de ferramentas e toda a biblioteca de modelos do Ollama.',
           '**Celular sem Google / privacidade:** Maid pelo F-Droid. Funciona no GrapheneOS, CalyxOS e outras versões sem Google. Sem dependência do Play Services.',
+          '**Documentos, uma memória editável ou uma criança usando o celular:** MemoryAI (adicionado depois dos benchmarks, não medido aqui). Gratuito e offline, com Modo Criança protegido por PIN; as lojas indicam 4 GB de RAM ou mais.',
           '**Celular com 8 GB de RAM:** Qualquer um dos seis apps com Qwen3 1.7B ou SmolLM2 1.7B. O PocketPal AI gerencia o armazenamento de modelos com mais elegância em dispositivos limitados.',
           '**Samsung Galaxy (qualquer modelo):** Esteja ciente do encerramento agressivo de processos em segundo plano da Samsung. Fixe o app de IA na bandeja de recentes e adicione-o à lista de exceções em Cuidado do dispositivo → Bateria → Apps em modo de suspensão para evitar a interrupção durante a inferência.',
         ],
@@ -4359,7 +4415,7 @@ snippetBlocks: [
     title: 'أفضل تطبيقات النماذج اللغوية المحلية لنظام ⁨Android⁩ في ⁨2026⁩: مقارنة ⁨6⁩ تطبيقات على هواتف حقيقية',
     seoTitle: '⁨LLMs⁩ محلية على ⁨Android 2026⁩: الأداء و⁨NPU⁩ والإعداد',
     intro:
-      'ستة تطبيقات Android تشغّل النماذج اللغوية الكبيرة بالكامل دون اتصال بالإنترنت في 2026: MLC Chat وMaid وLayla وOllama عبر Termux وPrivate AI وPocketPal AI. تتفاوت هذه التطبيقات في استخدام وحدة المعالجة العصبية (NPU) واتساع مكتبة النماذج والتكامل مع Android — ويعتمد الاختيار الأمثل على أولويتك: السرعة (MLC Chat مع NPU Hexagon) أو أقصى مرونة في النماذج (Ollama عبر Termux) أو واجهة مستخدم أصلية مصقولة (Layla أو PocketPal AI). يقارن هذا الدليل التطبيقات الستة على Samsung Galaxy S25 Ultra (Snapdragon 8 Elite) وPixel 9 Pro (Tensor G5) وOnePlus 13 (Snapdragon 8 Elite)، مع تغطية الاستدلال عبر Snapdragon Hexagon NPU مقابل MediaTek APU مقابل Tensor G5، وواقع تشرذم Android، وكيفية تعامل كل تطبيق مع التخزين وحدود الخلفية وقائمة المشاركة في Android.',
+      'ستة تطبيقات Android تشغّل النماذج اللغوية الكبيرة بالكامل دون اتصال بالإنترنت في 2026: MLC Chat وMaid وLayla وOllama عبر Termux وPrivate AI وPocketPal AI. تتفاوت هذه التطبيقات في استخدام وحدة المعالجة العصبية (NPU) واتساع مكتبة النماذج والتكامل مع Android — ويعتمد الاختيار الأمثل على أولويتك: السرعة (MLC Chat مع NPU Hexagon) أو أقصى مرونة في النماذج (Ollama عبر Termux) أو واجهة مستخدم أصلية مصقولة (Layla أو PocketPal AI). يقارن هذا الدليل التطبيقات الستة على Samsung Galaxy S25 Ultra (Snapdragon 8 Elite) وPixel 9 Pro (Tensor G5) وOnePlus 13 (Snapdragon 8 Elite)، مع تغطية الاستدلال عبر Snapdragon Hexagon NPU مقابل MediaTek APU مقابل Tensor G5، وواقع تشرذم Android، وكيفية تعامل كل تطبيق مع التخزين وحدود الخلفية وقائمة المشاركة في Android. أُضيف MemoryAI بعد المقارنة الرئيسية ولم يُقَس.',
     metaDescription:
       'أداء النماذج اللغوية المحلية فعلياً على Android 2026: قياسات على S25 Ultra وPixel 9 Pro. سرعات NPU ودعم GGUF وحدود RAM. 6 تطبيقات.',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ar.webp',
@@ -4448,6 +4504,7 @@ snippetBlocks: [
           '**برنامج Ollama عبر Termux هو المسار الوحيد نحو واجهة برمجية محلية كاملة متوافقة مع OpenAI على Android.** يهم ذلك المستخدمين المتقدمين الراغبين في استخدام الأدوات أو استدعاء الدوال أو القدرة على توصيل التطبيقات المحلية بالنموذج على هاتفهم.',
           '**Tensor G5 (Pixel 9 Pro) لا يكشف NPU للتطبيقات الخارجية.** التطبيقات الستة تعمل بالمعالج فقط على Pixel 9 Pro بسرعة 10–18 رمز/ث على Phi-4 Mini — أبطأ من النتيجة المكافئة على Snapdragon 8 Elite.',
           '**Maid هو الخيار الأمثل لمستخدمي F-Droid / بلا Google.** لا اعتماد على Play Store، ولا حاجة لحساب Google، واستيراد GGUF مباشر من مدير الملفات. الخيار الأنسب لمستخدمي Android الذين يتجنبون خدمات Google.',
+          '**MemoryAI خيار للمستندات أو لذاكرة قابلة للتعديل أو لطفل يستخدم الهاتف (أُضيف بعد اختبارات الأداء، لذلك لم يُقَس هنا).** وهو مجاني ويعمل دون اتصال، ويضيف وضع أطفال برمز PIN واستيراد GGUF، ومغلق المصدر، وتُدرج Google Play الإصدار 1.0.60.',
           '**حدود الخلفية في Android هي المشكلة الأكبر في قابلية الاستخدام.** يُنهي Android عمليات الخلفية بعدوانية في معظم نسخ المصنّعين (خاصة Samsung وOnePlus وXiaomi). التطبيقات التي تُجري استدلالاً نشطاً تحتاج إلى تثبيتها في درج التطبيقات الأخيرة أو إعدادها في إعدادات تحسين البطارية لتجنب انقطاع التوليد.',
           '**تخزين النماذج هو المشكلة الثانية الأكبر على Android.** كل نموذج GGUF يستهلك 1–8 غيغابايت. تشرذم Android بين أقسام التخزين الداخلي يعني أن النماذج يجب تخزينها في الدليل الخاص بالتطبيق أو في موقع مُهيَّأ خصيصاً — لا في مجلد "التنزيلات" لمعظم التطبيقات.',
           '**ميزة Android حقيقية: Termux والتحميل الجانبي يفتحان أدوات لا مكافئ لها على iOS.** برنامج Ollama عبر Termux غير ممكن على iPhone. تطبيقات F-Droid والتحميل الجانبي عبر ADB يمنحان مستخدمي Android وصولاً إلى تطبيقات قد لا يوفرها Google Play.',
@@ -4518,6 +4575,12 @@ snippetBlocks: [
             'دعم NPU': 'جزئي — GPU Vulkan على الأجهزة المدعومة',
             'الأنسب لـ': 'معظم المستخدمين — أفضل واجهة + منظومة GGUF كاملة',
           },
+          {
+            'التطبيق': '[MemoryAI](/ar/power-local-llm/memoryai-review)',
+            'الرموز/ث (S25 Ultra، Phi-4 Mini)': 'لم يُقَس',
+            'دعم NPU': 'لم يُختبر',
+            'الأنسب لـ': 'المستندات، ذاكرة قابلة للتعديل، وضع الأطفال (أُضيف بعد اختبارات الأداء)',
+          },
         ],
         callouts: [
           {
@@ -4546,6 +4609,7 @@ snippetBlocks: [
           '**Pixel 9 Pro (Tensor G5):** تختفي ميزة NPU — PocketPal AI هو الخيار الأمثل لجودة الواجهة واتساع النماذج. يتحول MLC Chat إلى CPU فقط على Tensor G5 فيفقد ميزة السرعة.',
           '**أي Android، التخصيص أولاً:** برنامج Ollama عبر Termux + واجهة دردشة أمامية (Alpaca أو Open WebUI في Chrome) هي الإعداد الأكثر قدرة. تستغرق ~30 دقيقة عمل في الطرفية لكنها تتيح واجهة برمجية متوافقة مع OpenAI واستخدام الأدوات وكامل مكتبة نماذج Ollama.',
           '**هاتف بلا Google / للخصوصية:** Maid من F-Droid. يعمل على GrapheneOS وCalyxOS وغيرهما من نسخ Android الخالية من Google. بلا اعتماد على Play Services.',
+          '**المستندات أو ذاكرة قابلة للتعديل أو طفل يستخدم الهاتف:** MemoryAI (أُضيف بعد اختبارات الأداء ولم يُقَس هنا). مجاني ويعمل دون اتصال، مع وضع أطفال برمز PIN؛ وتذكر المتاجر ذاكرة وصول عشوائي 4 جيجابايت أو أكثر.',
           '**هاتف بذاكرة 8 غيغابايت:** أي من التطبيقات الستة مع Qwen3 1.7B أو SmolLM2 1.7B. يدير PocketPal AI تخزين النماذج بأناقة أكبر على الأجهزة المحدودة.',
           '**Samsung Galaxy (أي طراز):** انتبه لإنهاء Samsung العدوانية للعمليات الخلفية. ثبّت تطبيق الذكاء الاصطناعي في درج التطبيقات الأخيرة وأضفه استثناءً في العناية بالجهاز ← البطارية ← التطبيقات في وضع السكون لتجنب انقطاع الاستدلال.',
         ],
@@ -4972,7 +5036,7 @@ snippetBlocks: [
     title: '2026년 Android용 최고의 로컬 LLM 앱: 실제 스마트폰으로 비교한 6가지 앱',
     seoTitle: 'Android 로컬 LLM 실행 2026: 속도, NPU 및 설정 가이드',
     intro:
-      '2026년에 6가지 Android 앱이 인터넷 연결 없이 대형 언어 모델을 완전히 오프라인으로 실행합니다: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, PocketPal AI. 각 앱은 NPU 활용 방식, 모델 라이브러리의 폭, Android 통합 수준에서 차이가 있습니다 — 최적의 선택은 속도(MLC Chat의 Hexagon NPU), 최대 모델 유연성(Ollama via Termux), 또는 세련된 네이티브 인터페이스(Layla 또는 PocketPal AI) 중 무엇을 원하느냐에 달려 있습니다. 이 가이드는 Samsung Galaxy S25 Ultra(Snapdragon 8 Elite), Pixel 9 Pro(Tensor G5), OnePlus 13(Snapdragon 8 Elite)에서 여섯 앱을 비교하며, Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5의 추론 성능, Android 파편화의 현실, 각 앱의 스토리지·백그라운드 제한·Android 공유 패널 처리 방식을 다룹니다.',
+      '2026년에 6가지 Android 앱이 인터넷 연결 없이 대형 언어 모델을 완전히 오프라인으로 실행합니다: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, PocketPal AI. 각 앱은 NPU 활용 방식, 모델 라이브러리의 폭, Android 통합 수준에서 차이가 있습니다 — 최적의 선택은 속도(MLC Chat의 Hexagon NPU), 최대 모델 유연성(Ollama via Termux), 또는 세련된 네이티브 인터페이스(Layla 또는 PocketPal AI) 중 무엇을 원하느냐에 달려 있습니다. 이 가이드는 Samsung Galaxy S25 Ultra(Snapdragon 8 Elite), Pixel 9 Pro(Tensor G5), OnePlus 13(Snapdragon 8 Elite)에서 여섯 앱을 비교하며, Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5의 추론 성능, Android 파편화의 현실, 각 앱의 스토리지·백그라운드 제한·Android 공유 패널 처리 방식을 다룹니다. MemoryAI는 주요 비교 이후에 추가되었으며 측정하지 않았습니다.',
     metaDescription:
       'Android에서 로컬 LLM이 실제로 작동하는 방식 2026 — S25 Ultra, Pixel 9 Pro, OnePlus 13에서 실제 벤치마크. NPU 속도, GGUF 지원, RAM 한계. 6개 앱 비교.',
     heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ko.webp',
@@ -5061,6 +5125,7 @@ snippetBlocks: [
           '**Ollama via Termux는 Android에서 완전한 OpenAI 호환 로컬 API로 가는 유일한 경로입니다.** 이는 도구 사용, 함수 호출, 또는 로컬 앱을 스마트폰 모델에 연결하려는 고급 사용자에게 중요합니다.',
           '**Tensor G5(Pixel 9 Pro)는 타사 앱에 NPU를 노출하지 않습니다.** 6개 앱 모두 Pixel 9 Pro에서 CPU 전용으로 실행되며 Phi-4 Mini 기준 10–18 tok/s를 제공합니다 — Snapdragon 8 Elite 기기의 동등한 결과보다 느립니다.',
           '**Maid는 F-Droid / Google 없는 선택입니다.** Play Store 의존 없음, Google 계정 불필요, 파일 관리자에서 직접 GGUF 가져오기. Google 서비스를 피하는 Android 사용자에게 최적입니다.',
+          '**MemoryAI는 문서, 편집 가능한 메모리, 또는 아이가 휴대폰을 쓰는 경우에 맞는 선택입니다(벤치마크 이후 추가되어 여기서는 측정하지 않았습니다).** 무료이며 오프라인으로 동작하고, PIN 잠금 키즈 모드와 GGUF 가져오기를 갖췄습니다. 클로즈드 소스이며 Google Play에는 1.0.60이 게재되어 있습니다.',
           '**Android 백그라운드 제한이 가장 큰 사용성 문제입니다.** Android는 대부분의 제조사 ROM(특히 Samsung, OnePlus, Xiaomi)에서 백그라운드 프로세스를 적극적으로 종료합니다. 활성 추론을 수행하는 앱은 최근 앱 트레이에 고정하거나 배터리 최적화 설정에서 예외로 설정해야 생성 중 중단을 피할 수 있습니다.',
           '**모델 스토리지가 Android의 두 번째 큰 문제입니다.** 각 GGUF 모델은 1–8 GB를 차지합니다. Android의 내부 스토리지 파티션 분할로 인해 모델은 앱의 프라이빗 디렉토리 또는 특별히 설정된 위치에 저장해야 합니다 — 대부분의 앱에서 "다운로드" 폴더는 작동하지 않습니다.',
           '**Android의 이점은 실재합니다: Termux와 사이드로딩으로 iOS에서 구현 불가능한 도구를 사용할 수 있습니다.** Ollama via Termux는 iPhone에서 불가능합니다. F-Droid 앱과 ADB 사이드로딩으로 Google Play에 없는 앱에 접근할 수 있습니다.',
@@ -5135,6 +5200,12 @@ snippetBlocks: [
             'NPU 지원': '부분 — 지원 기기에서 GPU Vulkan',
             '최적 사용 사례': '대부분의 사용자 — 최고의 인터페이스 + 전체 GGUF 생태계',
           },
+          {
+            '앱': '[MemoryAI](/ko/power-local-llm/memoryai-review)',
+            'tok/s(S25 Ultra, Phi-4 Mini)': '측정 안 함',
+            'NPU 지원': '테스트 안 함',
+            '최적 사용 사례': '문서, 편집 가능한 메모리, 키즈 모드(벤치마크 이후 추가)',
+          },
         ],
         callouts: [
           {
@@ -5163,6 +5234,7 @@ snippetBlocks: [
           '**Pixel 9 Pro(Tensor G5):** NPU 이점이 사라집니다 — PocketPal AI가 인터페이스 품질과 모델 폭으로 최고의 선택입니다. MLC Chat은 Tensor G5에서 CPU 전용으로 전환되어 속도 이점을 잃습니다.',
           '**모든 Android, 커스터마이징 우선:** Ollama via Termux + 채팅 프론트엔드(Alpaca, Chrome의 Open WebUI)가 가장 유능한 설정입니다. 약 30분의 터미널 작업이 필요하지만 OpenAI 호환 API 접근, 도구 사용, 전체 Ollama 모델 라이브러리를 제공합니다.',
           '**Google 없는 스마트폰/프라이버시:** F-Droid의 Maid. GrapheneOS, CalyxOS, 기타 Google 없는 빌드에서 작동합니다. Play Services 의존 없음.',
+          '**문서, 편집 가능한 메모리, 또는 아이가 휴대폰을 쓰는 경우:** MemoryAI(벤치마크 이후 추가, 여기서는 측정하지 않음). 무료이며 오프라인으로 동작하고 PIN 잠금 키즈 모드를 갖췄습니다. 스토어에는 RAM 4GB 이상으로 표기되어 있습니다.',
           '**RAM 8 GB 스마트폰:** 6개 앱 중 어느 것이든 Qwen3 1.7B 또는 SmolLM2 1.7B와 함께 사용하십시오. PocketPal AI는 제한된 기기에서 모델 스토리지를 더 우아하게 처리합니다.',
           '**Samsung Galaxy(모든 모델):** Samsung의 적극적인 백그라운드 프로세스 종료를 주의하십시오. AI 앱을 최근 앱 트레이에 고정하고 기기 케어 → 배터리 → 절전 모드 앱에서 예외로 추가하여 추론 중 중단을 피하십시오.',
         ],
