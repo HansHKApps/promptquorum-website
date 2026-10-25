@@ -200,6 +200,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
   const path = lang === 'en' ? '/about' : `/${lang}/about`
   const url = `${SITE}${path}`
   const openWeightHref = lang === 'en' ? '/local-llms/open-weight-vs-open-source-ai-models' : `/${lang}/local-llms/open-weight-vs-open-source-ai-models`
+  const lp = (href: string) => (lang === 'en' || href.startsWith('#') ? href : `/${lang}${href}`)
   const rtl = lang === 'ar'
   const arrow = rtl ? '←' : '→'
 
@@ -400,7 +401,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 oneLiner={copy.partFindOneLiner}
                 connectsLabel={copy.connectsLabel}
                 connects={copy.partFindConnects}
-                href="/directory"
+                href={lp('/directory')}
                 cta={copy.ctaOpenDirectory}
                 arrow={arrow}
                 via="part_directory"
@@ -415,7 +416,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 oneLiner={copy.partLearnOneLiner}
                 connectsLabel={copy.connectsLabel}
                 connects={copy.partLearnConnects}
-                href="/local-llms"
+                href={lp('/local-llms')}
                 cta={copy.ctaReadGuides}
                 arrow={arrow}
                 via="part_knowledge"
@@ -430,7 +431,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 oneLiner={copy.partUseOneLiner}
                 connectsLabel={copy.connectsLabel}
                 connects={copy.partUseConnects}
-                href="/pq-apps"
+                href={lp('/pq-apps')}
                 cta={copy.ctaAboutApp}
                 arrow={arrow}
                 via="part_app"
@@ -483,7 +484,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 return (
                   <li key={text}>
                     <AboutTrackedLink
-                      href={hrefs[i]}
+                      href={lp(hrefs[i])}
                       via={vias[i]}
                       className="block bg-hub-violet-tint border border-hub-violet-edge rounded-xl px-4 py-3 text-text-primary italic hover:border-hub-violet transition-colors"
                     >
@@ -494,10 +495,10 @@ export function AboutPageContent({ lang }: { lang: Language }) {
               })}
             </ul>
             <div className="flex flex-wrap gap-4 mb-10">
-              <AboutTrackedLink href="/directory" via="goal_browse" className={LINK}>
+              <AboutTrackedLink href={lp('/directory')} via="goal_browse" className={LINK}>
                 {copy.ctaBrowse} {arrow}
               </AboutTrackedLink>
-              <AboutTrackedLink href="/directory?hw=1#hw-profile-widget" via="goal_hardware" className={LINK}>
+              <AboutTrackedLink href={lp('/directory?hw=1#hw-profile-widget')} via="goal_hardware" className={LINK}>
                 {copy.ctaSetHardware} {arrow}
               </AboutTrackedLink>
             </div>
@@ -594,7 +595,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 ))}
               </span>
             </p>
-            <AboutTrackedLink href="/directory#mcp-connect-heading" via="mcp_guide" className={LINK}>
+            <AboutTrackedLink href={lp('/directory#mcp-connect-heading')} via="mcp_guide" className={LINK}>
               {copy.ctaMcpGuide} {arrow}
             </AboutTrackedLink>
           </section>
