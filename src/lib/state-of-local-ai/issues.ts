@@ -84,7 +84,7 @@ export const ISSUES: Issue[] = [
     },
     disclosure:
       "The author founded PromptQuorum, a content site and directory about local AI apps, and tested apps that are listed there. Each hands-on test record, with evidence labels and the tester's own errors, is linked from the evidence file. No payment or sponsorship is recorded in the test notes.",
-    // Set when the pages go live (brief §6). Placeholder = build date; confirm at the noindex flip.
+    // Pages went indexable 2026-10-25 (noindex flip); these are the go-live dates.
     datePublished: '2026-10-25',
     dateModified: '2026-10-25',
     files: {
