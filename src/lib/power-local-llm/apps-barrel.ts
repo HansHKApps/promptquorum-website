@@ -242,15 +242,19 @@ import { app as app_zero1llm } from './apps/zero1llm'
 import { app as app_mlx_audio } from './apps/mlx-audio'
 import { app as app_speechbrain } from './apps/speechbrain'
 import { app as app_handy } from './apps/handy'
+import { app as app_fluidvoice } from './apps/fluidvoice'
+import { app as app_openwhispr } from './apps/openwhispr'
 import { app as app_localmcp } from './apps/localmcp'
 import { app as app_libredb_studio } from './apps/libredb-studio'
 import { app as app_openrag } from './apps/openrag'
 import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
+import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
 import { app as app_buzz_captions } from './apps/buzz-captions'
 import { app as app_logseq } from './apps/logseq'
+import { app as app_anarlog } from './apps/anarlog'
 import { app as app_searxng } from './apps/searxng'
 import { app as app_linkwarden } from './apps/linkwarden'
 import { app as app_tolaria } from './apps/tolaria'
@@ -515,15 +519,19 @@ export const localAiApps: ToolRecord[] = [
   app_mlx_audio,
   app_speechbrain,
   app_handy,
+  app_fluidvoice,
+  app_openwhispr,
   app_localmcp,
   app_libredb_studio,
   app_openrag,
   app_arynwood_mcp,
   app_localmindai,
   app_murmur,
+  app_open_llm_vtuber,
   app_presenton,
   app_buzz_captions,
   app_logseq,
+  app_anarlog,
   app_searxng,
   app_linkwarden,
   app_tolaria,

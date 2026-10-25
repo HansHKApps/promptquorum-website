@@ -969,6 +969,16 @@
     "urlSlug": "handy-review",
     "url": "/power-local-llm/handy-review"
   },
+  "fluidvoice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "fluidvoice-review",
+    "url": "/power-local-llm/fluidvoice-review"
+  },
+  "openwhispr": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openwhispr-review",
+    "url": "/power-local-llm/openwhispr-review"
+  },
   "localmcp": {
     "cluster": "power-local-llm",
     "urlSlug": "localmcp-review",
@@ -999,6 +1009,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "open-llm-vtuber": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-llm-vtuber-review",
+    "url": "/power-local-llm/open-llm-vtuber-review"
+  },
   "presenton": {
     "cluster": "power-local-llm",
     "urlSlug": "presenton-review",
@@ -1013,6 +1028,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "logseq-review",
     "url": "/power-local-llm/logseq-review"
+  },
+  "anarlog": {
+    "cluster": "power-local-llm",
+    "urlSlug": "anarlog-review",
+    "url": "/power-local-llm/anarlog-review"
   },
   "searxng": {
     "cluster": "power-local-llm",

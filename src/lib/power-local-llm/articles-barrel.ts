@@ -84,12 +84,16 @@ import { article as a_openrag_review } from './articles/openrag-review'
 import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review'
 import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
+import { article as a_open_llm_vtuber_review } from './articles/open-llm-vtuber-review'
 import { article as a_presenton_review } from './articles/presenton-review'
 import { article as a_buzz_captions_review } from './articles/buzz-captions-review'
 import { article as a_logseq_review } from './articles/logseq-review'
+import { article as a_anarlog_review } from './articles/anarlog-review'
 import { article as a_searxng_review } from './articles/searxng-review'
 import { article as a_linkwarden_review } from './articles/linkwarden-review'
 import { article as a_handy_review } from './articles/handy-review'
+import { article as a_fluidvoice_review } from './articles/fluidvoice-review'
+import { article as a_openwhispr_review } from './articles/openwhispr-review'
 import { article as a_tolaria_review } from './articles/tolaria-review'
 import { article as a_subtitle_edit_review } from './articles/subtitle-edit-review'
 import { article as a_home_assistant_assist_review } from './articles/home-assistant-assist-review'
@@ -736,12 +740,16 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'arynwood-mcp-review':                           a_arynwood_mcp_review,
   'localmindai-review':                            a_localmindai_review,
   'murmur-review':                                 a_murmur_review,
+  'open-llm-vtuber-review':                        a_open_llm_vtuber_review,
   'presenton-review':                              a_presenton_review,
   'buzz-captions-review':                          a_buzz_captions_review,
   'logseq-review':                                 a_logseq_review,
+  'anarlog-review':                                a_anarlog_review,
   'searxng-review':                                a_searxng_review,
   'linkwarden-review':                             a_linkwarden_review,
   'handy-review':                                  a_handy_review,
+  'fluidvoice-review':                             a_fluidvoice_review,
+  'openwhispr-review':                             a_openwhispr_review,
   'tolaria-review':                                a_tolaria_review,
   'subtitle-edit-review':                          a_subtitle_edit_review,
   'home-assistant-assist-review':                  a_home_assistant_assist_review,

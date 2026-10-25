@@ -314,6 +314,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'whisper-cpp-review',
   // Handy review (Voice, Speech & Multimodal, offline dictation) — 2026-10-24
   'handy-review',
+  // FluidVoice review (Voice, Speech & Multimodal, Mac dictation) — 2026-10-24
+  'fluidvoice-review',
+  // OpenWhispr review (Voice, Speech & Multimodal, dictation and meeting notes) — 2026-10-24
+  'openwhispr-review',
   'faster-whisper-review',
   'dograh-review',
   // exo review — 2026-09-12
@@ -596,11 +600,14 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localmindai-review',
   // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
   'murmur-review',
+  'open-llm-vtuber-review',
   'presenton-review',
   // Buzz review (Voice, Speech & Multimodal, free offline Whisper transcription app) - 2026-10-24
   'buzz-captions-review',
   // Logseq review (Productivity & Knowledge Tools, core note-taking app) — 2026-10-24
   'logseq-review',
+  // Anarlog review (Voice, Speech & Multimodal, bot-free AI meeting notepad, formerly Hyprnote) — 2026-10-24
+  'anarlog-review',
   // SearXNG review (RAG & Document Chat, self-hosted web-search backend) — 2026-10-24
   'searxng-review',
   // Linkwarden review (Productivity & Knowledge Tools, self-hosted bookmark manager) — 2026-10-24

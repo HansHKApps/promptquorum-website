@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 320,
+    "totalCount": 322,
     "capped": true
   },
   "llama.cpp": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 94,
+    "totalCount": 95,
     "capped": true
   },
   "LocalAI": {
@@ -877,6 +877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "presenton-review",
+        "title": "Presenton Review: Open-Source AI Presentation Generator",
+        "url": "/power-local-llm/presenton-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "subtitle-edit-review",
         "title": "Subtitle Edit Review: Local Whisper Transcription and Auto-Translate",
         "url": "/power-local-llm/subtitle-edit-review",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "long-context-local-llms",
-        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
-        "url": "/local-llms/long-context-local-llms",
-        "dateModified": "2026-10-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 156,
+    "totalCount": 158,
     "capped": true
   },
   "Atomic Chat": {
@@ -5124,7 +5124,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 28,
+    "totalCount": 29,
     "capped": true
   },
   "faster-whisper": {
@@ -5545,6 +5545,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "open-llm-vtuber-review",
+        "title": "Open-LLM-VTuber Review: Self-Hosted Voice Chat with a Live2D Avatar",
+        "url": "/power-local-llm/open-llm-vtuber-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "willow-inference-server-review",
         "title": "Willow Inference Server Review: Self-Hosted Whisper ASR and TTS",
         "url": "/power-local-llm/willow-inference-server-review",
@@ -5558,17 +5566,9 @@
         "url": "/power-local-llm/piper-vs-kokoro-tts",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlc-chat-review",
-        "title": "MLC Chat Review: The Mobile App Built on MLC LLM, Assessed Honestly",
-        "url": "/power-local-llm/mlc-chat-review",
-        "dateModified": "2026-09-07",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "StyleTTS 2": {
@@ -9901,6 +9901,34 @@
     "totalCount": 11,
     "capped": true
   },
+  "FluidVoice": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "fluidvoice-review",
+        "title": "FluidVoice Review: Free Open-Source Mac Dictation App",
+        "url": "/power-local-llm/fluidvoice-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "OpenWhispr": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openwhispr-review",
+        "title": "OpenWhispr Review: Open-Source Dictation and Meeting Notes App",
+        "url": "/power-local-llm/openwhispr-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "LocalMCP": {
     "articles": [
       {
@@ -9991,6 +10019,34 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Open-LLM-VTuber": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "open-llm-vtuber-review",
+        "title": "Open-LLM-VTuber Review: Self-Hosted Voice Chat with a Live2D Avatar",
+        "url": "/power-local-llm/open-llm-vtuber-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Presenton": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "presenton-review",
+        "title": "Presenton Review: Open-Source AI Presentation Generator",
+        "url": "/power-local-llm/presenton-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Buzz": {
@@ -10092,6 +10148,20 @@
     ],
     "totalCount": 11,
     "capped": true
+  },
+  "Anarlog": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anarlog-review",
+        "title": "Anarlog Review: Open-Source AI Meeting Notes, Formerly Hyprnote",
+        "url": "/power-local-llm/anarlog-review",
+        "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   },
   "SearXNG": {
     "articles": [
@@ -11501,6 +11571,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anarlog-review",
+        "title": "Anarlog Review: Open-Source AI Meeting Notes, Formerly Hyprnote",
+        "url": "/power-local-llm/anarlog-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "compactifai-app-review",
         "title": "CompactifAI APP Review: Free Chat App with Offline and Cloud Models",
         "url": "/power-local-llm/compactifai-app-review",
@@ -11512,6 +11590,14 @@
         "slug": "ente-photos-review",
         "title": "Ente Photos Review: Encrypted Backup with On-Device AI Search",
         "url": "/power-local-llm/ente-photos-review",
+        "dateModified": "2026-10-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "fluidvoice-review",
+        "title": "FluidVoice Review: Free Open-Source Mac Dictation App",
+        "url": "/power-local-llm/fluidvoice-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
       },
@@ -11554,25 +11640,9 @@
         "url": "/power-local-llm/litellm-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-mini-review",
-        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
-        "url": "/power-local-llm/lm-mini-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-operator-review",
-        "title": "Local Operator Review: Free Desktop AI Agent for Your Computer",
-        "url": "/power-local-llm/local-operator-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 221,
+    "totalCount": 225,
     "capped": true
   },
   "Qdrant": {
