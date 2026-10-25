@@ -14,6 +14,7 @@ export function generateMetadata(): Metadata {
     description: 'The same findings with labels, calculations, assumption boxes, a claim register and sources. Cite from here.',
     path: evidencePath(issue),
     ogTitle: TITLE,
+    index: false, // English-only duplicate of the evidence section inside the report page
   })
 }
 

@@ -11,14 +11,15 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 export const localePath = (path: string, lang: Language) => (lang === 'en' ? path : `/${lang}${path}`)
 
 export const NOINDEX: Metadata['robots'] = { index: false, follow: true }
+export const INDEX: Metadata['robots'] = { index: true, follow: true }
 
-export function pageMetadata(opts: { title: string; description: string; path: string; ogTitle?: string; lang?: Language; hreflang?: boolean }): Metadata {
+export function pageMetadata(opts: { title: string; description: string; path: string; ogTitle?: string; lang?: Language; hreflang?: boolean; index?: boolean }): Metadata {
   const lang = opts.lang ?? 'en'
   const url = `${SITE}${localePath(opts.path, lang)}`
   return {
     title: { absolute: opts.title },
     description: opts.description,
-    robots: NOINDEX,
+    robots: opts.index === false ? NOINDEX : INDEX,
     alternates: opts.hreflang ? generateAlternates(opts.path, lang, true, undefined, [...PATH_PREFIX_LANGS]) : { canonical: url },
     openGraph: {
       title: opts.ogTitle ?? opts.title,
