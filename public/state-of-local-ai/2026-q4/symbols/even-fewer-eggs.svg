@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150" width="420" height="150" role="img" aria-labelledby="t d">
+<title id="t">Even fewer eggs</title>
+<desc id="d">One egg and two empty dashed nests. Illustrative, not to scale: even fewer local AI apps are worth using.</desc>
+<metadata>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Credit: Hans Kuepper, PromptQuorum, The State of Local AI, Report 01. Link: https://www.promptquorum.com/about/state-of-local-ai/2026-q4</metadata>
+<g transform="translate(10 5) scale(0.58)"><g>
+<path d="M128 36 C80 36 54 128 54 160 C54 206 88 234 128 234 C168 234 202 206 202 160 C202 128 176 36 128 36 Z" fill="#fdf3d8" stroke="#b3392f" stroke-width="9"/>
+<path d="M96 120 C100 96 110 80 122 70" stroke="#fff" stroke-width="9" stroke-linecap="round" fill="none"/>
+</g></g><g transform="translate(150 5) scale(0.58)"><g>
+<path d="M128 36 C80 36 54 128 54 160 C54 206 88 234 128 234 C168 234 202 206 202 160 C202 128 176 36 128 36 Z" fill="none" stroke="#b3392f" stroke-width="9" stroke-dasharray="14 12" stroke-opacity=".55"/>
+
+</g></g><g transform="translate(290 5) scale(0.58)"><g>
+<path d="M128 36 C80 36 54 128 54 160 C54 206 88 234 128 234 C168 234 202 206 202 160 C202 128 176 36 128 36 Z" fill="none" stroke="#b3392f" stroke-width="9" stroke-dasharray="14 12" stroke-opacity=".55"/>
+
+</g></g>
+</svg>

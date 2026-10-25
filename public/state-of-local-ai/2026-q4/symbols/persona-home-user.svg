@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="12 28 232 214" width="232" height="214" role="img" aria-labelledby="t d">
+<title id="t">Egg-seeker: home user</title>
+<desc id="d">A green egg with a house. The reader who wants to download an app and use it without a terminal.</desc>
+<metadata>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Credit: Hans Kuepper, PromptQuorum, The State of Local AI, Report 01. Link: https://www.promptquorum.com/about/state-of-local-ai/2026-q4</metadata>
+<g>
+<path d="M128 36 C80 36 54 128 54 160 C54 206 88 234 128 234 C168 234 202 206 202 160 C202 128 176 36 128 36 Z" fill="#fdf3d8" stroke="#2e7d4f" stroke-width="9"/>
+<path d="M96 120 C100 96 110 80 122 70" stroke="#fff" stroke-width="9" stroke-linecap="round" fill="none"/>
+<path d="M92 176 L128 142 L164 176 Z" fill="#2e7d4f"/><rect x="104" y="176" width="48" height="30" fill="#2e7d4f"/><rect x="120" y="188" width="16" height="18" fill="#fdf3d8"/></g>
+</svg>
