@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import {
   SITE, SERIES, HUB_PATH, PRESS_CONTACT, getIssue, issuePath, evidencePath, loadFragment,
 } from '@/lib/state-of-local-ai/issues'
-import { Breadcrumb, JsonLd, Kicker, Hero, Lede, crumbSchema, pageMetadata, CARD, CiteBox, hubCrumbs } from '@/components/state-of-local-ai/shared'
+import { Breadcrumb, JsonLd, Kicker, Hero, Lede, crumbSchema, pageMetadata, CARD, CiteBox, PressKit, hubCrumbs } from '@/components/state-of-local-ai/shared'
 import { EvidenceController } from '@/components/state-of-local-ai/EvidenceController'
 
 export const dynamic = 'force-static'
@@ -58,6 +58,7 @@ export default function IssuePage() {
               ))}
             </ol>
           </section>
+          <PressKit issue={issue} evidencePath={ev} />
         </div>
 
         <div className="prose-body" dangerouslySetInnerHTML={{ __html: loadFragment(issue.slug, 'article') }} />

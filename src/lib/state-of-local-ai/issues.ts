@@ -23,6 +23,14 @@ export interface Issue {
   seoTitle: string
   metaDescription: string
   citeAs: string
+  citeApa: string
+  citeChicago: string
+  press: {
+    stats: { figure: string; text: string; source: string; ids: string[] }[]
+    quotes: string[]
+    author: string
+    method: string
+  }
   disclosure: string
   datePublished: string
   dateModified: string
@@ -51,6 +59,27 @@ export const ISSUES: Issue[] = [
       'Report 01 (Q4 2026): few computers can run good local AI models and even fewer apps are worth using. Sourced figures, nine hands-on tests, claim register.',
     citeAs:
       'Kuepper, H. (2026). Few Chickens and Even Fewer Eggs. The State of Local AI, Report 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/about/state-of-local-ai/2026-q4',
+    citeApa:
+      'Kuepper, H. (2026, October 23). Few chickens and even fewer eggs (The State of Local AI, Report 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/about/state-of-local-ai/2026-q4',
+    citeChicago:
+      'Kuepper, Hans. "Few Chickens and Even Fewer Eggs." The State of Local AI, Report 01 (Q4 2026). PromptQuorum, October 23, 2026. https://www.promptquorum.com/about/state-of-local-ai/2026-q4.',
+    press: {
+      stats: [
+        { figure: '5.4%', text: 'of systems in the July 2026 Steam hardware survey had 24 GB of graphics memory; 25.9% had 16 GB.', source: 'Steam Hardware & Software Survey, July 2026, via secondary reports (Valve primary page not retrieved)', ids: ['S1'] },
+        { figure: '4 of 8', text: 'local AI apps the author could score rated 2 or below on core function (nine were tested, eight scored).', source: "Author's hands-on tests, 9-24 October 2026", ids: ['S22'] },
+        { figure: '9.67 GB', text: 'of memory in use on a 24 GB Mac right after startup, before any model was loaded.', source: "Author's hands-on tests, 24 GB Mac", ids: ['S22'] },
+        { figure: '$3,999 to $6,950', text: 'list price of the 128 GB NVIDIA DGX Spark, launch to October 2026 ($4,699 in February 2026).', source: 'NVIDIA developer forum (primary); Implicator.ai (secondary)', ids: ['S3', 'S4'] },
+        { figure: '2.2% to 4.5%', text: 'of US households or consumers pay for an AI chatbot; the top 1% of payers account for 19.5% of consumer AI spend.', source: 'Bank of America Institute, PNC (via TechDogs), a16z/YipitData (via AI Weekly)', ids: ['S11', 'S12', 'S13'] },
+        { figure: '-20.1% / -21.2%', text: 'Q3 2026 PC shipments, per IDC (62.7 million units) and Omdia (58.1 million units).', source: 'IDC and Omdia, as reported by Digital Today and Windows Latest (secondary)', ids: ['S43'] },
+        { figure: '10 and 29', text: 'results for "local AI" in the German Apple App Store and in Google Play, out of about 2.75 million and 2.65 million apps.', source: 'Store searches captured 23 October 2026; 42matters store statistics', ids: ['S34', 'S35', 'S36'] },
+      ],
+      quotes: [
+        'Local AI today has few chickens and even fewer eggs. In the July 2026 Steam survey, only 5.4% of systems had 24 GB of graphics memory, and four of the eight local AI apps I could score rated 2 or below on their core function. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
+        'The list price of NVIDIA\u2019s 128 GB DGX Spark went from $3,999 at launch to $6,950 in October 2026. The hardware that makes local AI comfortable is getting more expensive, not cheaper. (Hans Kuepper, The State of Local AI, Report 01, Q4 2026)',
+      ],
+      author: 'Hans Kuepper is the founder of PromptQuorum, based in Frankfurt, with more than 30 years of consulting and general management experience. He tested the nine apps in this report himself.',
+      method: 'Figures come from numbered sources; each claim carries an evidence label, and assumptions name who makes them and what they rest on. Secondary sources are marked as such. The claim register and all sources can be downloaded.',
+    },
     disclosure:
       "The author founded PromptQuorum, a content site and directory about local AI apps, and tested apps that are listed there. Each hands-on test record, with evidence labels and the tester's own errors, is linked from the evidence file. No payment or sponsorship is recorded in the test notes.",
     // Set when the pages go live (brief §6). Placeholder = build date; confirm at the noindex flip.
