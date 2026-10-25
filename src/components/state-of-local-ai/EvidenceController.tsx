@@ -20,6 +20,7 @@ export function EvidenceController({ evidencePathname }: { evidencePathname: str
     const fromHash = () => {
       const id = decodeURIComponent(window.location.hash.slice(1))
       if (!id) return
+      if (id === 'press') { (document.getElementById('press') as HTMLDetailsElement | null)?.setAttribute('open', ''); return }
       if (id === 'evidence') { box.open = true; return }
       if (box.querySelector(`[id="${CSS.escape(id)}"]`)) jump(id)
     }
@@ -38,7 +39,7 @@ export function EvidenceController({ evidencePathname }: { evidencePathname: str
     }
     document.addEventListener('click', onClick)
 
-    const open = () => { box.open = true }
+    const open = () => { box.open = true; document.getElementById('press')?.setAttribute('open', '') }
     window.addEventListener('beforeprint', open)
     return () => {
       window.removeEventListener('hashchange', fromHash)
