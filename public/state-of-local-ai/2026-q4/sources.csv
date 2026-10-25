@@ -1,6 +1,6 @@
 id,description,url,date,note
-S1,"Steam Hardware & Software Survey, July 2026 (secondary reports: tBreak, Hardware Busters, Club386). Valve primary page not retrieved.",https://tbreak.com/steam-hardware-survey-16gb-vram-overtakes-8gb/,Jul 2026,
-S2,"Steam survey, September 2026: platform share, macOS 1.92% of systems (Digital Citizen; TechSpot). Valve primary page not retrieved.",https://www.digitalcitizen.life/32gb-ram-overtakes-16gb-steam-hardware-survey-september-2026/,Sep 2026,
+S1,"Steam Hardware & Software Survey, September 2026 (Valve, primary; all platforms combined).",https://store.steampowered.com/hwsurvey,Sep 2026,
+S2,"Steam survey, September 2026: platform share, macOS 1.92% of systems (Valve, primary).",https://store.steampowered.com/hwsurvey,Sep 2026,
 S3,"NVIDIA developer forum: DGX Spark price change announcement (MSRP $3,999 to $4,699). Primary.",https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713,23 Feb 2026,
 S4,"Implicator.ai: 64 GB DGX Spark at $4,999; 128 GB at $6,950; partner systems $7,000-9,000 (NVIDIA primary not retrieved).",https://www.implicator.ai/nvidia-adds-64gb-dgx-spark-at-4-999-as-128gb-model-climbs-to-6-950/,Oct 2026,
 S5,"9to5Mac: Apple M5 MacBook pricing, RAM upgrade prices unchanged.",https://9to5mac.com/2026/03/03/apple-macbook-price-increase-ram-same/,3 Mar 2026,

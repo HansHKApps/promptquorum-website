@@ -7,7 +7,7 @@
 <h2 id="s1">1. Summary of findings</h2>
 <p>The report tests one hypothesis: that local AI adoption is held back by a small installed base of capable machines (the chickens) and a thin supply of applications that justify using them (the eggs). The table gives the result per component, with the strength of evidence.</p>
 <table class=""><thead><tr><th>#</th><th>Finding</th><th>Evidence</th><th>Strength</th></tr></thead><tbody>
-<tr><td>1</td><td>Capable hardware is a minority of even the best-case population. In the July 2026 Steam survey, 51.4% of opted-in PC gamers had 10 GB VRAM or more, 5.4% had 24 GB.<sup class="cite">[<a href="#S1">S1</a>]</sup></td><td><span class="tag t-fact">FACT</span></td><td>Medium: gamer sample, opt-in</td></tr>
+<tr><td>1</td><td>Capable hardware is a minority of even the best-case population. In the September 2026 Steam survey, 52.9% of opted-in gamers (all platforms) had 10 GB VRAM or more, 5.5% had 24 GB.<sup class="cite">[<a href="#S1">S1</a>]</sup></td><td><span class="tag t-fact">FACT</span></td><td>Medium: gamer sample, opt-in</td></tr>
 <tr><td>2</td><td>Memory budget is consumed by the system before any model loads. A 24 GB Mac used 9.67 GB right after startup and 12.92 GB with ordinary apps open.<sup class="cite">[<a href="#S22">S22</a>]</sup></td><td><span class="tag t-meas">AUTHOR-MEASURED</span></td><td>Medium: one machine</td></tr>
 <tr><td>3</td><td>Entry prices rose in 2026 while the usual pattern is falling prices. NVIDIA DGX Spark (128 GB): $3,999 at launch, $4,699 (Feb), $6,950 (Oct). 16 Gb DRAM: +49% from Q1 to Q2 2026.<sup class="cite">[<a href="#S3">S3</a>, <a href="#S4">S4</a>, <a href="#S6">S6</a>]</sup></td><td><span class="tag t-fact">FACT</span><span class="tag t-calc">CALCULATION</span></td><td>High for Spark (Feb), medium for Oct figure</td></tr>
 <tr><td>4</td><td>Few people pay. In the US, the most advanced market, 2.2% to 4.5% of households or consumers pay for a chatbot subscription (PNC 2.2%, Bank of America about 3%, YipitData/a16z 4.5%). No comparable EU data was found. Why it matters: cost saving is the main argument for local AI, and it only works if people spend money on AI today.<sup class="cite">[<a href="#S11">S11</a>, <a href="#S12">S12</a>, <a href="#S13">S13</a>]</sup></td><td><span class="tag t-fact">FACT</span></td><td>High: three independent card datasets</td></tr>
@@ -35,27 +35,27 @@
 <h2 id="s3">3. Few chickens: the hardware base</h2>
 <h3>3.1 Best available data: the Steam Hardware Survey</h3>
 <div class="box"><b>Two different memories.</b> A computer has <b>system memory (RAM)</b>, which every program shares, and a graphics card has its own <b>graphics memory (VRAM)</b>. A local AI model has to fit into one place to run at a usable speed, on a PC mostly the graphics card. This report therefore counts graphics memory (VRAM) only. Main-memory sizes are left out because they do not decide whether a PC can run a model: a PC can have 32 GB of RAM and 8 GB of VRAM. Macs and some other designs share one pool, so for them the single memory figure is the one that counts.</div><p>No public dataset reports the share of all personal computers that can run a given local model. The closest public proxy is Valve's monthly Steam survey. It is opt-in, covers gamers, and is therefore likely to overstate capability compared with the general PC population.</p>
-<figure class="chart"><figcaption>Steam survey, July 2026: share of surveyed systems by GPU memory (VRAM)</figcaption>
-<svg viewBox="0 0 760 186" role="img" aria-label="Steam survey, July 2026: share of surveyed systems by GPU memory (VRAM)">
+<figure class="chart"><figcaption>Steam survey, September 2026: share of surveyed systems by GPU memory (VRAM)</figcaption>
+<svg viewBox="0 0 760 186" role="img" aria-label="Steam survey, September 2026: share of surveyed systems by GPU memory (VRAM)">
 <text x="270" y="27" class="lbl" text-anchor="end">16 GB</text>
-<rect x="280" y="13" width="345.3" height="22" rx="3" class="bar gr"/>
-<text x="633.3" y="28" class="val">25.90%</text>
+<rect x="280" y="13" width="362.8" height="22" rx="3" class="bar gr"/>
+<text x="650.8" y="28" class="val">27.21%</text>
 <text x="270" y="61" class="lbl" text-anchor="end">8 GB</text>
-<rect x="280" y="47" width="337.6" height="22" rx="3" class="bar mid"/>
-<text x="625.6" y="62" class="val">25.32%</text>
+<rect x="280" y="47" width="356.1" height="22" rx="3" class="bar mid"/>
+<text x="644.1" y="62" class="val">26.71%</text>
 <text x="270" y="95" class="lbl" text-anchor="end">12 GB</text>
-<rect x="280" y="81" width="171.7" height="22" rx="3" class="bar gr"/>
-<text x="459.7" y="96" class="val">12.88%</text>
+<rect x="280" y="81" width="174.1" height="22" rx="3" class="bar gr"/>
+<text x="462.1" y="96" class="val">13.06%</text>
 <text x="270" y="129" class="lbl" text-anchor="end">24 GB</text>
-<rect x="280" y="115" width="72.4" height="22" rx="3" class="bar gr"/>
-<text x="360.4" y="130" class="val">5.43%</text>
+<rect x="280" y="115" width="73.3" height="22" rx="3" class="bar gr"/>
+<text x="361.3" y="130" class="val">5.50%</text>
 <text x="270" y="163" class="lbl" text-anchor="end">2 GB</text>
-<rect x="280" y="149" width="59.5" height="22" rx="3" class="bar hi"/>
-<text x="347.5" y="164" class="val">4.46%</text>
+<rect x="280" y="149" width="49.2" height="22" rx="3" class="bar hi"/>
+<text x="337.2" y="164" class="val">3.69%</text>
 </svg>
-<div class="cnote">Source: Steam July 2026 as reported by tBreak, Hardware Busters, Club386. Listed buckets total 74.0%; the remainder is other sizes. 10 GB or more: 51.42% (tBreak). The default Steam chart combines Windows, macOS and Linux; on <b>Windows only</b>, 8 GB remains the most common at 33.20%. September 2026: 16 GB 27.21%, 8 GB 26.71%.</div>
+<div class="cnote">Source: Valve, Steam Hardware &amp; Software Survey, September 2026 (primary page, all platforms combined). Listed buckets total 76.2%; the remainder is other sizes. 10 GB or more: 52.9% (sum of the 10, 11, 12, 16, 20, 22, 24, 32 and 64 GB buckets; the &quot;Other&quot; bucket of 1.26% is excluded). Valve also offers a Windows-only view, which this report did not capture.</div>
 </figure><sup class="cite">[<a href="#S1">S1</a>, <a href="#S2">S2</a>]</sup>
-<p><span class="tag t-fact">FACT</span> The July 2026 survey shows 16 GB VRAM as the largest single bucket for the first time (25.90%).<sup class="cite">[<a href="#S1">S1</a>]</sup> <span class="tag t-fact">FACT</span> Only 5.43% of respondents had 24 GB of VRAM, and a 32 GB bucket was not found in the retrieved reports. <span class="tag t-fact">FACT</span> macOS accounted for 1.92% of Steam systems in September 2026, so the survey says little about Mac users.<sup class="cite">[<a href="#S2">S2</a>]</sup></p>
+<p><span class="tag t-fact">FACT</span> The September 2026 survey shows 16 GB VRAM as the largest single bucket (27.21%), narrowly ahead of 8 GB (26.71%).<sup class="cite">[<a href="#S1">S1</a>]</sup> <span class="tag t-fact">FACT</span> Only 5.50% of respondents had 24 GB of VRAM and 1.41% had 32 GB. <span class="tag t-fact">FACT</span> macOS accounted for 1.92% of Steam systems in September 2026, so the survey says little about Mac users.<sup class="cite">[<a href="#S2">S2</a>]</sup></p>
 <div class="take"><b>Key takeaway.</b> Among opted-in gamers, the 16-32 GB range is now common, but 24 GB or more of VRAM is a minority. For the general population of laptops and PCs no comparable data exists, and the true share is probably lower (assumption above).</div>
 <h3>3.2 The system uses memory before the model does</h3>
 <p>A model size that fits in total memory does not fit in <i>free</i> memory. The author's tests give measured values on a 24 GB Apple Mac.</p>
@@ -95,7 +95,7 @@
 <rect x="280" y="115" width="249.9" height="22" rx="3" class="bar mid"/>
 <text x="538.0" y="130" class="val">$4,999</text>
 </svg>
-<div class="cnote">Sources: NVIDIA forum (Feb 2026, primary); Implicator.ai (Oct 2026, secondary, NVIDIA page not retrieved). Partner GB10 systems were reported at $7,000-9,000 (Tom's Hardware via Implicator.ai).</div>
+<div class="cnote">Sources: NVIDIA forum (Feb 2026, primary); Implicator.ai (Oct 2026, secondary: the $6,950 figure rests on this one report, as NVIDIA's product page lists no price). Partner GB10 systems were reported at $7,000-9,000 (Tom's Hardware via Implicator.ai).</div>
 </figure><sup class="cite">[<a href="#S3">S3</a>, <a href="#S4">S4</a>]</sup>
 <p><span class="tag t-calc">CALCULATION</span> $6,950 / $3,999 = 1.74, i.e. +74% since launch. The February increase was +$700 (+18%); the October increase was +$2,251 (+48%). NVIDIA attributed both to memory supply constraints.<sup class="cite">[<a href="#S3">S3</a>, <a href="#S4">S4</a>]</sup></p>
 <p><span class="tag t-fact">FACT</span> Component pricing shows the same direction: the average 16 Gb DRAM price rose from $19.2 to $28.5 between Q1 and Q2 2026.<sup class="cite">[<a href="#S6">S6</a>]</sup> <span class="tag t-calc">CALCULATION</span> 28.5 / 19.2 = 1.48, i.e. +48% to +49%. One outlet reports +89% for the same data; the underlying figures do not support it.<sup class="cite">[<a href="#S6">S6</a>]</sup></p>
@@ -159,7 +159,7 @@
 <tr><td><a href="https://www.promptquorum.com/power-local-llm/caelum-hands-on-test">Caelum (Android)</a></td><td>Phone chat app</td><td>Completed</td><td>2*</td><td>Yes (ETA shown)</td><td>No model name given</td><td>Would not keep</td></tr>
 <tr><td><a href="https://www.promptquorum.com/power-local-llm/ltx-desktop-hands-on-test">LTX Desktop</a></td><td>Video generation</td><td>Not completed</td><td>n/a</td><td>Not recorded</td><td>Downloads 129.1 GB listed</td><td>Stopped at setup; below vendor memory floor</td></tr>
 </tbody></table>
-<p class="cnote">*Score proposed from the evidence; the tester has to confirm. Core-function scores are the tester's dimension scores; the scale maximum is not stated in the data. n/a = not tested.</p>
+<p class="cnote">*Caelum's score of 2 is provisional (derived from the recorded evidence, not yet confirmed by the tester). Without it, 3 of 7 confirmed scores are 2 or below. Core-function scores are the tester's dimension scores on a 1 (poor) to 5 (very good) scale. n/a = not tested.</p>
 <figure class="chart"><figcaption>Core-function score per tested app (higher is better)</figcaption>
 <svg viewBox="0 0 760 288" role="img" aria-label="Core-function score per tested app (higher is better)">
 <text x="270" y="27" class="lbl" text-anchor="end">Draw Things</text>
@@ -187,7 +187,7 @@
 <rect x="280" y="251" width="80.0" height="22" rx="3" class="bar hi"/>
 <text x="368.0" y="266" class="val">1</text>
 </svg>
-<div class="cnote">Axis set to 0-5 (scale maximum is not stated in the test data). LTX Desktop is not scored.</div>
+<div class="cnote">Scale: 1 (poor) to 5 (very good), as used on the test pages. LTX Desktop is not scored.</div>
 </figure><sup class="cite">[<a href="#S22">S22</a>]</sup>
 <h4>User interface: what the tests recorded</h4>
 <p><span class="tag t-meas">AUTHOR-MEASURED</span> Each row lists interface problems from the test findings (finding IDs and evidence label as recorded; "observed" unless stated), the strengths recorded, and any misreading by the tester that touches the same point. Interface problems are not scored separately in the tests; the table is a reading of the findings.<sup class="cite">[<a href="#S22">S22</a>]</sup></p>
@@ -247,7 +247,7 @@
 <rect x="280" y="455" width="240.0" height="22" rx="3" class="bar mid"/>
 <text x="528.0" y="470" class="val">3</text>
 </svg>
-<div class="cnote">Source: dimension scores in the author's hands-on tests (S22). Caelum and LTX Desktop were not scored on these dimensions; LU is scored. Axis 0-5 (scale maximum is not stated in the test data).</div>
+<div class="cnote">Source: dimension scores in the author's hands-on tests (S22). Caelum and LTX Desktop were not scored on these dimensions; LU is scored. Scale: 1 (poor) to 5 (very good), as used on the test pages.</div>
 </figure><sup class="cite">[<a href="#S22">S22</a>]</sup>
 <h4>Patterns across the tests</h4>
 <table class=""><thead><tr><th>Pattern</th><th>Apps showing it</th><th>Apps showing the opposite</th><th>Not recorded</th></tr></thead><tbody>
@@ -434,21 +434,21 @@
 <h3>Proposed indicators to track every quarter</h3>
 <p>For the series to be quotable, each report should repeat the same measurements so that changes can be read as a time series.</p>
 <table class=""><thead><tr><th>Indicator</th><th>Source</th><th>Q4 2026 value</th></tr></thead><tbody>
-<tr><td>Share of Steam systems with 16 GB+ VRAM; 24 GB+; 32 GB+</td><td>Steam survey (primary page)</td><td>16 GB: 25.9% (Jul); 24 GB: 5.43%; 32 GB: not retrieved</td></tr>
+<tr><td>Share of Steam systems with 16 GB+ VRAM; 24 GB+; 32 GB+</td><td>Steam survey (primary page)</td><td>16 GB: 27.21% (Sep); 24 GB: 5.50%; 32 GB: 1.41%</td></tr>
 <tr><td>DGX Spark 128 GB list price; entry Apple Silicon price with 24 GB</td><td>NVIDIA, Apple</td><td>$6,950; to be recorded</td></tr>
 <tr><td>Open-weight lag (months), frontier and consumer-GPU</td><td>Epoch AI</td><td>~4; 6-12 (older)</td></tr>
 <tr><td>Share of US households / consumers paying for AI</td><td>BofA, PNC, YipitData/a16z</td><td>2.2-4.5%</td></tr>
 <tr><td>Ollama monthly active developers</td><td>Company</td><td>8.9M (Jul 2026)</td></tr>
-<tr><td>Directory listings; share rated 3+ in hands-on tests</td><td>PromptQuorum</td><td>315 upper bound; 3 of 7</td></tr>
+<tr><td>Directory listings; share rated 3+ in hands-on tests</td><td>PromptQuorum</td><td>315 upper bound; 4 of 8</td></tr>
 </tbody></table>
 <h2 id="s9">9. Claim register</h2>
 <p>Each claim in this report, with the result of the check.</p>
 <table class=""><thead><tr><th>ID</th><th>Claim</th><th>Result</th><th>Evidence</th><th>Source</th></tr></thead><tbody>
-<tr><td>C01</td><td>Few computers can run great local models; few have dedicated GPUs or 32 GB+ VRAM</td><td><span class="st st-part">Partly supported</span></td><td>Steam Jul 2026: 51.4% have 10 GB+; 5.4% have 24 GB; 32 GB bucket not retrieved; gamer sample.</td><td><sup class="cite">[<a href="#S1">S1</a>]</sup></td></tr>
+<tr><td>C01</td><td>Few computers can run great local models; few have dedicated GPUs or 32 GB+ VRAM</td><td><span class="st st-part">Partly supported</span></td><td>Steam Sep 2026 (Valve): 52.9% have 10 GB+; 5.5% have 24 GB; 1.4% have 32 GB; gamer sample.</td><td><sup class="cite">[<a href="#S1">S1</a>]</sup></td></tr>
 <tr><td>C02</td><td>A 24 GB Mac uses ~10 GB with a few windows open</td><td><span class="st st-ok">Confirmed</span></td><td>Measured 9.67 GB after startup, 12.92 GB with apps open.</td><td><sup class="cite">[<a href="#S22">S22</a>]</sup></td></tr>
 <tr><td>C03</td><td>Even 32 GB VRAM may not suffice with other apps open</td><td><span class="st st-op">Opinion / assumption</span></td><td>Extrapolation; no 32 GB test.</td><td><sup class="cite">[<a href="#S22">S22</a>]</sup></td></tr>
-<tr><td>C04</td><td>DGX Spark started at ~$4,000, now $6-7k</td><td><span class="st st-ok">Confirmed</span></td><td>$3,999 to $4,699 (Feb) to $6,950 (Oct, 128 GB); 64 GB at $4,999; partner systems $7-9k.</td><td><sup class="cite">[<a href="#S3">S3</a>, <a href="#S4">S4</a>]</sup></td></tr>
-<tr><td>C05</td><td>High-end Apple computers cost like a small car did ten years ago</td><td><span class="st st-unv">Unverified</span></td><td>Comparison not sourced. Top configurations cost several thousand dollars; no primary-source figure verified. Recommend dropping the comparison.</td><td>-</td></tr>
+<tr><td>C04</td><td>DGX Spark started at ~$4,000, now $6-7k</td><td><span class="st st-part">Partly supported</span></td><td>$3,999 to $4,699 (Feb, NVIDIA primary); $6,950 (Oct, 128 GB) and 64 GB at $4,999 from one secondary report; partner systems $7-9k.</td><td><sup class="cite">[<a href="#S3">S3</a>, <a href="#S4">S4</a>]</sup></td></tr>
+<tr><td>C05</td><td>High-end Apple computers cost like a small car did ten years ago</td><td><span class="st st-unv">Unverified</span></td><td>Comparison not sourced. Top configurations cost several thousand dollars; no primary-source figure verified. The report does not rely on this comparison.</td><td>-</td></tr>
 <tr><td>C06</td><td>2-3% of US households pay for AI (credit card analysis)</td><td><span class="st st-ok">Confirmed</span></td><td>BofA ~3%, PNC 2.2%. Banks and card panels, not 'credit card companies'. a16z: 4.5% of consumers.</td><td><sup class="cite">[<a href="#S11">S11</a>, <a href="#S12">S12</a>, <a href="#S13">S13</a>]</sup></td></tr>
 <tr><td>C07</td><td>97% of users use AI for free</td><td><span class="st st-bad">Corrected</span></td><td>Replaced by US card-data range: 2.2-4.5% of households or consumers pay. Menlo 2025 (~3%) is an implied revenue ratio; Menlo 2026 reports 55% of AI users pay (survey, different denominator, not used in the report body).</td><td><sup class="cite">[<a href="#S9">S9</a>, <a href="#S10">S10</a>, <a href="#S11">S11</a>, <a href="#S12">S12</a>, <a href="#S13">S13</a>]</sup></td></tr>
 <tr><td>C08</td><td>Local AI is 'cheaper' but most people already use AI for free</td><td><span class="st st-op">Opinion / assumption</span></td><td>Cost argument matters mainly to paying minority; top 1% = 19.5% of spend.</td><td><sup class="cite">[<a href="#S13">S13</a>]</sup></td></tr>
@@ -480,8 +480,8 @@
 <h2 id="s11">11. Sources</h2>
 <p>Sources are listed with publication date. <span class="old">older than 1 year</span> marks sources published before 23 October 2025. Secondary reports are named as such; where a primary page was not retrieved, this is stated.</p>
 <ol class="src">
-<li id="S1"><b class="id">S1</b>Steam Hardware &amp; Software Survey, July 2026 (secondary reports: tBreak, Hardware Busters, Club386). Valve primary page not retrieved. <i>Jul 2026</i><br><a href="https://tbreak.com/steam-hardware-survey-16gb-vram-overtakes-8gb/">https://tbreak.com/steam-hardware-survey-16gb-vram-overtakes-8gb/</a></li>
-<li id="S2"><b class="id">S2</b>Steam survey, September 2026: platform share, macOS 1.92% of systems (Digital Citizen; TechSpot). Valve primary page not retrieved. <i>Sep 2026</i><br><a href="https://www.digitalcitizen.life/32gb-ram-overtakes-16gb-steam-hardware-survey-september-2026/">https://www.digitalcitizen.life/32gb-ram-overtakes-16gb-steam-hardware-survey-september-2026/</a></li>
+<li id="S1"><b class="id">S1</b>Steam Hardware &amp; Software Survey, September 2026 (Valve, primary; all platforms combined). <i>Sep 2026</i><br><a href="https://store.steampowered.com/hwsurvey">https://store.steampowered.com/hwsurvey</a></li>
+<li id="S2"><b class="id">S2</b>Steam survey, September 2026: platform share, macOS 1.92% of systems (Valve, primary). <i>Sep 2026</i><br><a href="https://store.steampowered.com/hwsurvey">https://store.steampowered.com/hwsurvey</a></li>
 <li id="S3"><b class="id">S3</b>NVIDIA developer forum: DGX Spark price change announcement (MSRP $3,999 to $4,699). Primary. <i>23 Feb 2026</i><br><a href="https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713">https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713</a></li>
 <li id="S4"><b class="id">S4</b>Implicator.ai: 64 GB DGX Spark at $4,999; 128 GB at $6,950; partner systems $7,000-9,000 (NVIDIA primary not retrieved). <i>Oct 2026</i><br><a href="https://www.implicator.ai/nvidia-adds-64gb-dgx-spark-at-4-999-as-128gb-model-climbs-to-6-950/">https://www.implicator.ai/nvidia-adds-64gb-dgx-spark-at-4-999-as-128gb-model-climbs-to-6-950/</a></li>
 <li id="S5"><b class="id">S5</b>9to5Mac: Apple M5 MacBook pricing, RAM upgrade prices unchanged. <i>3 Mar 2026</i><br><a href="https://9to5mac.com/2026/03/03/apple-macbook-price-increase-ram-same/">https://9to5mac.com/2026/03/03/apple-macbook-price-increase-ram-same/</a></li>

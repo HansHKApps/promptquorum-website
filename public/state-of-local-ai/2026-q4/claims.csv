@@ -1,9 +1,9 @@
 id,claim,status,evidence,sources
-C01,Few computers can run great local models; few have dedicated GPUs or 32 GB+ VRAM,Partly supported,Steam Jul 2026: 51.4% have 10 GB+; 5.4% have 24 GB; 32 GB bucket not retrieved; gamer sample.,S1
+C01,Few computers can run great local models; few have dedicated GPUs or 32 GB+ VRAM,Partly supported,Steam Sep 2026 (Valve): 52.9% have 10 GB+; 5.5% have 24 GB; 1.4% have 32 GB; gamer sample.,S1
 C02,A 24 GB Mac uses ~10 GB with a few windows open,Confirmed,"Measured 9.67 GB after startup, 12.92 GB with apps open.",S22
 C03,Even 32 GB VRAM may not suffice with other apps open,Opinion / assumption,Extrapolation; no 32 GB test.,S22
-C04,"DGX Spark started at ~$4,000, now $6-7k",Confirmed,"$3,999 to $4,699 (Feb) to $6,950 (Oct, 128 GB); 64 GB at $4,999; partner systems $7-9k.","S3, S4"
-C05,High-end Apple computers cost like a small car did ten years ago,Unverified,Comparison not sourced. Top configurations cost several thousand dollars; no primary-source figure verified. Recommend dropping the comparison.,-
+C04,"DGX Spark started at ~$4,000, now $6-7k",Partly supported,"$3,999 to $4,699 (Feb, NVIDIA primary); $6,950 (Oct, 128 GB) and 64 GB at $4,999 from one secondary report; partner systems $7-9k.","S3, S4"
+C05,High-end Apple computers cost like a small car did ten years ago,Unverified,Comparison not sourced. Top configurations cost several thousand dollars; no primary-source figure verified. The report does not rely on this comparison.,-
 C06,2-3% of US households pay for AI (credit card analysis),Confirmed,"BofA ~3%, PNC 2.2%. Banks and card panels, not 'credit card companies'. a16z: 4.5% of consumers.","S11, S12, S13"
 C07,97% of users use AI for free,Corrected,"Replaced by US card-data range: 2.2-4.5% of households or consumers pay. Menlo 2025 (~3%) is an implied revenue ratio; Menlo 2026 reports 55% of AI users pay (survey, different denominator, not used in the report body).","S9, S10, S11, S12, S13"
 C08,Local AI is 'cheaper' but most people already use AI for free,Opinion / assumption,Cost argument matters mainly to paying minority; top 1% = 19.5% of spend.,S13
