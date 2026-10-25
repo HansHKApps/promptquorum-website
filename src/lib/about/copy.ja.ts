@@ -176,7 +176,6 @@ export const ja: AboutCopy = {
   solaNextLabel: '次回のレポート:',
   solaReadLink: 'レポートを読む',
   solaAllLink: 'すべてのレポート',
-  solaEnglishNote: 'レポートは英語で公開されています。',
 
   roadmapH2: '\u3053\u306E\u5148\u306E\u5C55\u671B',
   roadmapLead:

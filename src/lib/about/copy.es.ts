@@ -176,7 +176,6 @@ export const es: AboutCopy = {
   solaNextLabel: 'Próximo informe:',
   solaReadLink: 'Leer el informe',
   solaAllLink: 'Todos los informes',
-  solaEnglishNote: 'Los informes se publican en inglés.',
 
   roadmapH2: 'Hacia dónde va esto',
   roadmapLead:

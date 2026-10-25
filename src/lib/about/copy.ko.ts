@@ -176,7 +176,6 @@ export const ko: AboutCopy = {
   solaNextLabel: '다음 보고서:',
   solaReadLink: '보고서 읽기',
   solaAllLink: '모든 보고서',
-  solaEnglishNote: '보고서는 영어로 발행됩니다.',
 
   roadmapH2: '앞으로의 방향',
   roadmapLead:

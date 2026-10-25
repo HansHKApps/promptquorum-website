@@ -8,6 +8,7 @@ import { PreferredSourceConfirmDialog } from './PreferredSourceConfirmDialog'
 import { trackPrefSource } from '@/lib/preferredSource'
 import type { Language } from '@/lib/geo-schema'
 import { LOCALE_ROUTED_ROOTS } from '@/lib/i18n/constants'
+import { SOLA_SERIES_NAMES } from '@/lib/state-of-local-ai/series-names'
 
 // Icons (minimal set for footer)
 const Twitter = () => (
@@ -216,7 +217,7 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
             <a href={`${langPrefix}/about`} className="hover:text-primary transition-colors">{t.about}</a>
             <span aria-hidden="true">•</span>
-            <a href="/about/state-of-local-ai" className="hover:text-primary transition-colors">The State of Local AI</a>
+            <a href={`${langPrefix}/about/state-of-local-ai`} className="hover:text-primary transition-colors">{SOLA_SERIES_NAMES[effectiveLang]}</a>
             <span aria-hidden="true">•</span>
             <a href={`${langPrefix}/privacy`} className="hover:text-primary transition-colors">{t.privacy}</a>
             <span aria-hidden="true">•</span>

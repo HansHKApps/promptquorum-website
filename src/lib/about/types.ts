@@ -136,7 +136,6 @@ export interface AboutCopy {
   solaNextLabel: string
   solaReadLink: string
   solaAllLink: string
-  solaEnglishNote: string
 
   // Roadmap
   roadmapH2: string

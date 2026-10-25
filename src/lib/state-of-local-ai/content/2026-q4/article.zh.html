@@ -1,0 +1,70 @@
+<article class="article">
+<p class="byline">通俗版 &middot; 作者 Hans Kuepper &middot; 2026年10月23日 &middot; 作者的个人观点，基于他开发 PromptQuorum（一个围绕本地 AI 的生态）的经验</p>
+<p class="lede">本地 AI 还没到位。能运行好模型的电脑很少，值得为此折腾的应用更少，而围绕它的种种承诺——便宜、私密、不输大型云端模型——还没有给普通人一个转用的理由。作者把这种状况称为鸡很少，蛋更少。</p>
+<h2>鸡：硬件少得可怜</h2>
+<p>没有人公布过有多大比例的笔记本和台式机能运行好的本地模型。最接近的参照是 Valve 对玩家的 Steam 调查，而玩家的装备比大多数人都好。本地 AI 模型主要在显卡的显存中运行，显存与电脑的主内存是分开的。一台电脑可以有 32 GB 主内存，显卡却只有 8 GB 或 16 GB，而模型必须装得进显卡。即使在玩家当中，2026年7月也只有 25.9% 的系统拥有 16 GB 显存，拥有 24 GB 的占 5.4%。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S1">S1</a>]</sup>苹果的 Mac 则不同：一个共享内存池同时承担两种工作，所以 24 GB 的 Mac 才能拿来测试，也因此 Mac 仅占 1.9% 的 Steam 调查几乎说明不了 Mac 的情况。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S2">S2</a>]</sup>纸面上的内存也不等于可用内存：在作者测试的 24 GB Mac 上，系统本身在启动后就占用了 9.67 GB。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup></p>
+<figure class="chart"><figcaption>NVIDIA DGX Spark（128 GB）官方标价，单位：美元</figcaption>
+<svg viewBox="0 0 760 118" role="img" aria-label="NVIDIA DGX Spark (128 GB), list price in USD">
+<text x="270" y="27" class="lbl" text-anchor="end">发布时</text>
+<rect x="280" y="13" width="199.9" height="22" rx="3" class="bar bar"/>
+<text x="487.9" y="28" class="val">$3,999</text>
+<text x="270" y="61" class="lbl" text-anchor="end">2026年2月</text>
+<rect x="280" y="47" width="234.9" height="22" rx="3" class="bar mid"/>
+<text x="523.0" y="62" class="val">$4,699</text>
+<text x="270" y="95" class="lbl" text-anchor="end">2026年10月</text>
+<rect x="280" y="81" width="347.5" height="22" rx="3" class="bar hi"/>
+<text x="635.5" y="96" class="val">$6,950</text>
+</svg>
+<div class="cnote">来源：NVIDIA 价格公告的转述报道（S3、S4）；10月的数字记录较少。自发布以来涨幅：+74%（计算值）。</div>
+</figure>
+<p>能运行大模型的硬件不但没有变便宜，反而越来越贵，原因是内存紧缺。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S6">S6</a>, <a href="/about/state-of-local-ai/2026-q4/evidence#S7">S7</a>]</sup>2026年第三季度，新笔记本和台式机的销量下滑：IDC 报告出货量下降 20.1%，至 6270万台，Omdia 报告下降 21.2%，至 5810万台，两者都指向内存紧缺。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S43">S43</a>]</sup>所以，有能力的机器基数很小，入门价格还在上涨。</p>
+<p><b>新机器中有多大比例是“AI-enabled”，这意味着什么？</b>Gartner 预测，2025年出货的笔记本和 PC 中 31%、2026年中 54.7% 将是“AI PC”；该预测发布于2025年8月，在缺货之前（<span class="old">已超过1年</span>）。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S8">S8</a>]</sup>目前没有找到2026年的实测占比。找到的最后一批实测占比是 Canalys 的数字：2024年第二季度为 14%，第三季度为 20%（<span class="old">已超过1年</span>）。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S44">S44</a>]</sup>“AI-enabled”是按芯片来定义的。Canalys 把配有专用 AI 处理芯片组（例如神经网络处理器 NPU）的笔记本或台式机计入；微软的 Copilot+ PC 要求 NPU 算力至少达到每秒 40万亿次运算，并配备 16 GB 内存和 256 GB 存储。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S44">S44</a>, <a href="/about/state-of-local-ai/2026-q4/evidence#S45">S45</a>]</sup>找到的定义中，没有一个是以能否运行大型语言模型为依据的。</p>
+<h2>蛋：值得使用的应用更少</h2>
+<p>作者测试了九款本地 AI 应用，其中八款在 24 GB 的 Mac 上，一款在 Android 手机上。在能够评分的八款中，有四款的核心功能做得很差。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup>问题往往出在界面上。应用列出模型，却不说明模型有多大，也不说明电脑能否运行。有一款建议下载的内容比这台 Mac 的内存还大；另一款列出了 129 GB 的下载内容，仅主模型（41.5 GB）就大于 Mac 的 24 GB 内存，而且看不到任何内存警告。有四款不显示剩余下载时间。有一款始终不说明它安装了哪个模型。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup>系列中最完整的应用 LU 会显示每个模型的大小以及这台 Mac 能否运行，它的编程智能体做出了一个能运行的游戏；但它的文档聊天没能读取 PDF、Excel 或 Word 文件。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup></p>
+<p>目前几乎什么都没有。苹果 App Store 约有 275万个应用，Google Play 约有 265万个。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S36">S36</a>]</sup>在苹果德国商店搜索“local AI”得到 10 条结果，在 Google Play 得到 29 条，<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S34">S34</a>, <a href="/about/state-of-local-ai/2026-q4/evidence#S35">S35</a>]</sup>而总量以百万计。显示评分的应用，评分在 2.2 到 4.2 星之间。</p>
+<p>现有的大部分内容都放在 GitHub 上，这是一个为开发者而不是普通用户打造的平台。在作者的九份测试记录中，至少有五份（Page Assist、LTX Desktop、Unsloth、DiffusionBee、BoBe）以 GitHub 作为厂商页面、README 或发布来源。Page Assist 的 README 开头就是从源码构建，需要终端和一个叫 Bun 的工具，测试者第一次尝试就失败了。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup>而且数量很多：GitHub 上“ollama”主题下有 5,794 个公开仓库，“local-llm”主题下有 9,477 个。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S46">S46</a>]</sup>其中许多是彼此的分叉和副本。用作者的话说，这是一团乱麻，没人知道哪个是最新的、有人维护的或安全的。对普通用户来说，只存在于 GitHub 上的应用等于不可用。</p>
+<h2>承诺：便宜、私密、不输前沿模型</h2>
+<p><b>便宜。</b>省钱只对在 AI 上花钱的人才有意义。在最成熟的市场美国，只有 2.2% 到 4.5% 的家庭或消费者为 AI 聊天机器人付费。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S11">S11</a>, <a href="/about/state-of-local-ai/2026-q4/evidence#S12">S12</a>, <a href="/about/state-of-local-ai/2026-q4/evidence#S13">S13</a>]</sup>对其他所有人来说，云端工具本来就是免费的，本地应用没有可以压低的价格。要靠省订阅费赚回来，买家得先为上面提到的硬件付钱。</p>
+<p><b>私密。</b>隐私是最有力的承诺，却是最弱的卖点。在一项调查中，32% 的聊天机器人用户曾向聊天机器人说过对朋友、家人或医生都不曾透露的事，53% 的人不知道或不确定对话可能被用于 AI 训练。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S20">S20</a>]</sup>二十年来，人们一直用隐私换取 Google 等公司提供的优质免费服务，而一个比这些服务更差的本地应用改变不了这一点。在应用本身也足够好之前，本地 AI 的隐私承诺大多只是营销。</p>
+<p><b>不输前沿模型。</b>标准说法是开源模型只落后最好的云端模型几个月。最大的开源模型确实落后约四个月，<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S14">S14</a>]</sup>但它们至少需要 377 GB 内存（计算值），<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S19">S19</a>]</sup>远超任何消费级机器。据 Epoch AI，能装进一张游戏显卡的模型落后 6 到 12 个月，该机构还补充说实际落差可能更长（来源<span class="old">已超过1年</span>）。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S15">S15</a>]</sup>对于笔记本或手机，则没有相关数字。在作者测试的一部 Android 手机上，一个 1 GB 的模型声称一位在任国家元首遭到暗杀，而第三方来源与此相矛盾。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup>“只落后几个月”的说法是一种营销论点。用户期待这些应用达到前沿水平，却得不到：界面复杂，设置复杂，结果很差，甚至根本出不来。在作者的测试中，有一款应用卡在设置阶段，什么都没产出；一款在出第一张图之前就内存不足；还有一款在选错模型后返回了一个灰色方块。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup></p>
+<h2>资金：投入极少</h2>
+<p>资本追随市场，而它还没有到来。运行模型的软件 Ollama 在2026年7月融资 6500万美元。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S17">S17</a>]</sup>对于其上的应用，网络搜索只找到 GPT4All 开发商的一轮旧融资（2023年）和 AnythingLLM 开发商的一条小消息，另外五款点名的应用则一无所获。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S27">S27</a>, <a href="/about/state-of-local-ai/2026-q4/evidence#S28">S28</a>]</sup>风险投资的融资通常是公开的，所以作者认为这说明投入非常少。与他有联系的一款应用刚刚找到了投资人（未具名）。</p>
+<h2>还没到位</h2>
+<figure class="chart"><figcaption>Google Trends，全球，按周：“local ai”和“local llm”（指数 0-100）</figcaption>
+<svg viewBox="0 0 760 300" role="img" aria-label="Google Trends：local ai 与 local llm，2025年10月至2026年10月">
+<line x1="54" y1="250.0" x2="735" y2="250.0" stroke="#d9d6cf" stroke-width="1"/>
+<text x="46" y="254.0" class="small" text-anchor="end">0</text>
+<line x1="54" y1="192.5" x2="735" y2="192.5" stroke="#d9d6cf" stroke-width="1"/>
+<text x="46" y="196.5" class="small" text-anchor="end">25</text>
+<line x1="54" y1="135.0" x2="735" y2="135.0" stroke="#d9d6cf" stroke-width="1"/>
+<text x="46" y="139.0" class="small" text-anchor="end">50</text>
+<line x1="54" y1="77.5" x2="735" y2="77.5" stroke="#d9d6cf" stroke-width="1"/>
+<text x="46" y="81.5" class="small" text-anchor="end">75</text>
+<line x1="54" y1="20.0" x2="735" y2="20.0" stroke="#d9d6cf" stroke-width="1"/>
+<text x="46" y="24.0" class="small" text-anchor="end">100</text>
+<polyline points="54.0,178.7 67.1,183.3 80.2,176.4 93.3,178.7 106.4,171.8 119.5,155.7 132.6,146.5 145.7,153.4 158.8,158.0 171.9,181.0 185.0,181.0 198.1,176.4 211.2,167.2 224.2,162.6 237.3,153.4 250.4,155.7 263.5,160.3 276.6,148.8 289.7,139.6 302.8,114.3 315.9,107.4 329.0,107.4 342.1,102.8 355.2,95.9 368.3,100.5 381.4,91.3 394.5,100.5 407.6,89.0 420.7,40.7 433.8,47.6 446.9,47.6 460.0,22.3 473.1,20.0 486.2,33.8 499.3,56.8 512.4,54.5 525.5,54.5 538.6,84.4 551.7,155.7 564.8,144.2 577.8,158.0 590.9,183.3 604.0,169.5 617.1,178.7 630.2,192.5 643.3,174.1 656.4,171.8 669.5,162.6 682.6,137.3 695.7,185.6 708.8,204.0 721.9,213.2 735.0,215.5" fill="none" stroke="#1f4e79" stroke-width="2.4" stroke-linejoin="round"/>
+<polyline points="54.0,236.2 67.1,236.2 80.2,236.2 93.3,236.2 106.4,233.9 119.5,233.9 132.6,231.6 145.7,233.9 158.8,233.9 171.9,233.9 185.0,236.2 198.1,233.9 211.2,233.9 224.2,231.6 237.3,229.3 250.4,227.0 263.5,227.0 276.6,220.1 289.7,220.1 302.8,208.6 315.9,206.3 329.0,208.6 342.1,210.9 355.2,206.3 368.3,204.0 381.4,201.7 394.5,204.0 407.6,199.4 420.7,194.8 433.8,192.5 446.9,192.5 460.0,190.2 473.1,187.9 486.2,185.6 499.3,190.2 512.4,192.5 525.5,192.5 538.6,201.7 551.7,227.0 564.8,227.0 577.8,231.6 590.9,233.9 604.0,233.9 617.1,233.9 630.2,233.9 643.3,233.9 656.4,233.9 669.5,231.6 682.6,229.3 695.7,233.9 708.8,236.2 721.9,236.2 735.0,238.5" fill="none" stroke="#b7791f" stroke-width="2.4" stroke-linejoin="round"/>
+<text x="54.0" y="272" class="small" text-anchor="middle">2025-10-19</text>
+<text x="198.1" y="272" class="small" text-anchor="middle">2026-01-04</text>
+<text x="368.3" y="272" class="small" text-anchor="middle">2026-04-05</text>
+<text x="538.6" y="272" class="small" text-anchor="middle">2026-07-05</text>
+<text x="708.8" y="272" class="small" text-anchor="middle">2026-10-04</text>
+<circle cx="473.1" cy="20.0" r="4" fill="#1f4e79"/><text x="465.1" y="24.0" class="small" text-anchor="end">峰值 100，5月31日&#160;</text>
+<line x1="551.7" y1="20" x2="551.7" y2="250" stroke="#b3392f" stroke-dasharray="4 3"/>
+<text x="557.7" y="54" class="small" style="fill:#b3392f">7月12日当周：</text><text x="557.7" y="68" class="small" style="fill:#b3392f">两个词均下跌</text>
+<text x="64" y="292" class="small" style="fill:#1f4e79">&#9632; local ai</text><text x="144" y="292" class="small" style="fill:#b7791f">&#9632; local llm</text>
+</svg><div class="cnote">来源：作者提供的 Google Trends CSV（S29）。指数为相对值：100 = 窗口内两个词中最高的周值。仅有 12 个月的数据，因此看不出季节性。</div></figure>
+<p>Google 上“local ai”的搜索量在2026年5月下旬升至峰值，到10月中旬已降到一年前的一半。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S29">S29</a>]</sup>下降发生在7月的某一周，呈台阶式。<b>究竟发生了什么，无法从数据中解释。</b>其他指标向上，而 Google Trends 向下：Ollama 称其开发者群体在1月到7月间翻了一番，<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S17">S17</a>]</sup>作者称其他趋势仍在上升（8月至10月的情况此处未经核实）。</p>
+<p>本地 AI 在开发者中正在增长。对普通人来说，转用的理由还不存在：硬件太少，好应用太少，承诺在实际使用中兑现不了，改变这一切的资金也很少。</p>
+<h2>总结：只是刚刚开始</h2>
+<p>本地 AI 才刚刚起步。在开发者圈子里它广为人知：Ollama 的开发者群体在六个月内翻了一番，中国的实验室在2026年几乎每个月都发布最大的开源模型。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S17">S17</a>, <a href="/about/state-of-local-ai/2026-q4/evidence#S19">S19</a>]</sup>在普通大众中，它几乎无人知晓。大多数人甚至不知道有什么可能。</p>
+<p>那么当他们尝试时会怎样？首先撞上的是硬件。他们的笔记本或 PC 不够好，即使在游戏机器中，也只有一小部分拥有好模型所需的显存。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S1">S1</a>]</sup>然后他们开始使用这些应用，而这些应用的表现大多不如他们在云端熟悉的前沿模型。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S22">S22</a>]</sup></p>
+<p>所以，这个市场和每一个新技术市场一样，由尝鲜者和爱好者主导。这正在快速改变：同等体量的模型越来越强。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S37">S37</a>]</sup></p>
+<p>各国之间通常也是同样的规律。新技术往往先在发达经济体兴起，之后才扩散到其他地方。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S31">S31</a>]</sup>作者的印象是，美国和中国的本地 AI 走得最远，因为大多数 AI 模型诞生在这两国，最大的开源模型也来自中国的实验室，<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S19">S19</a>]</sup>而其他大多数国家才刚刚起步。目前没有国家层面的本地 AI 数据；唯一关于一般 AI 使用的国家数据显示，国家之间差距很大。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S30">S30</a>]</sup>作者预计这股浪潮会走向全球。</p>
+<p><b>硬件会跟上，但要付出代价。</b>电脑会越来越 AI-enabled，但它们的能力取决于价格。这是关键所在。要让 64 GB 及以上内存的设备大批量销售，价格需要大幅下降，而各种预测对此并不一致。Counterpoint 预计新增的内存产能会在2028年前压低价格，<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S38">S38</a>]</sup>但 TrendForce 预计消费级内存价格明年还会继续上涨，<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S38">S38</a>]</sup>IDC 则认为短缺会持续到2027年。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S7">S7</a>]</sup></p>
+<p><b>应用也会跟上。</b>据 Appfigures，2026年第一季度新应用发布量同比增长 60%，4月截至当时同比增长 104%。<sup class="cite">[<a href="/about/state-of-local-ai/2026-q4/evidence#S41">S41</a>]</sup>AI 编程工具是这波激增的推手，无论是在应用商店还是在 GitHub 上。创造力正转向个人，他们今天就能做到几年前做不到的事。个人可以使用本地 AI 并构建自己的应用，独一无二、贴合自身需求，而构建应用的成本已大幅下降。</p>
+<p>如果本地 AI 沿着其他技术的路径发展，硬件很可能会变得更强、更便宜，应用很可能会变得更好，AI 编程工具很可能会加快应用开发。作者预计未来将是混合式的：在隐私、成本或便利值得的地方，越来越多的 AI 会在用户自己的设备上运行，其余的则留在云端。</p>
+<p class="verdict"><b>我们就是还没到那一步。如今鸡很少，蛋更少。</b></p>
+<div class="box"><b>作者的观点。</b>本报告是作者对本地 AI 市场的个人印象。它基于他构建 PromptQuorum 的经验、他亲自测试的九款应用，以及所引用的公开数据。硬件和应用都还很薄弱、两者都会改进，这些结论是他自己的判断，不是来源给出的预测。</div>
+<div class="take"><b>核心结论。</b>鸡很少，蛋更少：如今能运行本地 AI 的硬件很少，值得使用的应用很少，低成本、隐私和前沿品质这些承诺对普通用户还兑现不了。但模型、硬件和应用都在快速发展，差距正在缩小。我们就是还没到那一步。</div>
+</article>
