@@ -13,6 +13,107 @@ export interface SolaIssueText {
   disclosure: string
   /** Text of the single correction entry ("Version 1.0: first publication."). */
   correction: string
+  /** Press kit, same order as ISSUES[].press.stats; source IDs are taken from there. */
+  pressStats: { figure: string; text: string; source: string }[]
+  pressQuotes: string[]
+  pressAuthor: string
+  pressMethod: string
+}
+
+export interface SolaSymbolText {
+  name: string
+  alt: string
+}
+
+export interface SolaPersonaText extends SolaSymbolText {
+  who: string
+  care: string
+}
+
+/** Strings for the press kit, reuse box, symbol kit and download links (added after the first release). */
+export interface SolaExtras {
+  // Hero
+  downloadReport: string
+  downloadAppendix: string
+  quickFree: string
+  quickHowToLink: string
+  quickPress: string
+  quickSymbols: string
+  quickCite: string
+
+  // Shared
+  copied: string
+  copyUrl: string
+  copyHtml: string
+
+  // Press kit
+  pressTitle: string
+  pressSub: string
+  keyFigures: string
+  sourcePrefix: string
+  quotesToCopy: string
+  authorAndMethod: string
+  linkFree: string
+  linkCite: string
+  linkReportPdf: string
+  linkAppendixPdf: string
+  linkClaimsCsv: string
+  linkSourcesCsv: string
+  linkFullEvidence: string
+
+  // Reuse box
+  reuseTitle: string
+  /** Rendered as: {reuseA}<licence link>{reuseB}<b>{reuseBold}</b>{reuseC} */
+  reuseA: string
+  reuseB: string
+  reuseBold: string
+  reuseC: string
+  /** Contains {date} for the data cut-off date. */
+  reuseNote: string
+  reuseLinkLabel: string
+  reuseHtmlLabel: string
+  /** Rendered as: {reuseContactA}<email>{reuseContactB} */
+  reuseContactA: string
+  reuseContactB: string
+
+  // Downloads list
+  listReuse: string
+  listSymbols: string
+  listReportPdf: string
+  listAppendixPdf: string
+
+  // Symbol kit
+  symbolsTitle: string
+  /** Rendered as: {symbolsA}<licence link>{symbolsB} */
+  symbolsA: string
+  symbolsB: string
+  whichReader: string
+  basicSet: string
+  copySvg: string
+  download: string
+  downloadAll: string
+  manifestLink: string
+  linkHardware: string
+  linkApps: string
+  linkLocalVsFrontier: string
+  linkTrade: string
+  linkOutlook: string
+  linkPressKit: string
+  linkClaimRegister: string
+  linkSources: string
+  personas: {
+    home: SolaPersonaText
+    developer: SolaPersonaText
+    enterprise: SolaPersonaText
+    journalist: SolaPersonaText
+  }
+  symbols: {
+    chicken: SolaSymbolText
+    egg: SolaSymbolText
+    pair: SolaSymbolText
+    fewChickens: SolaSymbolText
+    fewEggs: SolaSymbolText
+  }
 }
 
 export interface SolaStrings {
@@ -66,6 +167,8 @@ export interface SolaStrings {
   correctionsAndUpdates: string
   /** Shown at the top of translated issue pages: the report was translated, the evidence file is English. */
   translatedNote: string
+
+  extras: SolaExtras
 
   issues: Record<string, SolaIssueText>
 }

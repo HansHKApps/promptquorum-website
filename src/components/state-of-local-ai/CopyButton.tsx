@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 /** Copies `text` to the clipboard; the text stays visible and selectable next to it, so it also works without JavaScript. */
-export function CopyButton({ text, label = 'Copy' }: { text: string; label?: string }) {
+export function CopyButton({ text, label = 'Copy', doneLabel = 'Copied' }: { text: string; label?: string; doneLabel?: string }) {
   const [done, setDone] = useState(false)
   return (
     <button
@@ -16,7 +16,7 @@ export function CopyButton({ text, label = 'Copy' }: { text: string; label?: str
         }).catch(() => {})
       }}
     >
-      {done ? 'Copied' : label}
+      {done ? doneLabel : label}
     </button>
   )
 }
