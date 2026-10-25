@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Features:** Document Q&A, an Agent Memory you can open, edit and delete, hands-free voice (on-device speech input and read-aloud), image understanding with vision models, and a Kid Mode locked behind a parent PIN.',
           '**Requirements and price:** iOS 16.4+, 4 GB+ RAM. Free, with no ads, subscriptions or in-app purchases.',
           '**Privacy and licence:** Chat, documents and memories stay on the device after the model download. The app sends usage events and crash reports (no chat content, per the developer), and it is closed source.',
-          '**Install path:** App Store. First released on 30 March 2026, so it is a young app.',
+          '**Install path:** App Store. First released on 30 March 2026, so it is a young app. The App Store lists version 1.0.56; the developer says 1.0.60 is in Apple\'s review.',
         ],
         callouts: [
           {
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Funktionen:** Dokumentenfragen, ein Agent Memory, das Sie öffnen, bearbeiten und löschen können, Freisprech-Sprachmodus (Spracheingabe und Vorlesen auf dem Gerät), Bildverständnis mit Vision-Modellen und ein Kindermodus hinter einer Eltern-PIN.',
           '**Voraussetzungen und Preis:** iOS 16.4+, mindestens 4 GB RAM. Kostenlos, ohne Werbung, Abos oder In-App-Käufe.',
           '**Datenschutz und Lizenz:** Chats, Dokumente und Erinnerungen bleiben nach dem Modell-Download auf dem Gerät. Die App sendet Nutzungsereignisse und Absturzberichte (laut Entwickler ohne Chat-Inhalte) und ist Closed Source.',
-          '**Installation:** App Store. Erstveröffentlichung am 30. März 2026, die App ist also noch jung.',
+          '**Installation:** App Store. Erstveröffentlichung am 30. März 2026, die App ist also noch jung. Der App Store listet Version 1.0.56; laut Entwickler befindet sich 1.0.60 in der Apple-Prüfung.',
         ],
         callouts: [
           {
@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**機能:** 文書Q&A、開いて編集・削除できるエージェントメモリ、ハンズフリー音声(端末内の音声入力と読み上げ)、ビジョンモデルによる画像理解、保護者用PINでロックされるキッズモード。',
           '**要件と価格:** iOS 16.4以降、RAM 4GB以上。無料で、広告、サブスクリプション、アプリ内課金はありません。',
           '**プライバシーとライセンス:** モデルのダウンロード後、チャット、文書、メモリは端末内にとどまります。アプリは利用イベントとクラッシュレポートを送信し(開発者によればチャット内容は含まれません)、クローズドソースです。',
-          '**入手方法:** App Store。初回リリースは2026年3月30日で、新しいアプリです。',
+          '**入手方法:** App Store。初回リリースは2026年3月30日で、新しいアプリです。App Storeには1.0.56が掲載されており、開発者によれば1.0.60はAppleの審査中です。',
         ],
         callouts: [
           {
@@ -2086,7 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Fonctions :** questions sur vos documents, une mémoire d\'agent que vous pouvez ouvrir, modifier et supprimer, un mode vocal mains libres (saisie vocale et lecture à voix haute sur l\'appareil), la compréhension d\'images avec des modèles de vision et un Kid Mode verrouillé par un code PIN parental.',
           '**Prérequis et prix :** iOS 16.4+, 4 Go de RAM minimum. Gratuite, sans publicité, abonnement ni achat intégré.',
           '**Confidentialité et licence :** les conversations, documents et souvenirs restent sur l\'appareil après le téléchargement du modèle. L\'application envoie des événements d\'usage et des rapports de plantage (sans contenu des conversations, selon le développeur) et son code est fermé.',
-          '**Installation :** App Store. Première version publiée le 30 mars 2026 : c\'est donc une application jeune.',
+          '**Installation :** App Store. Première version publiée le 30 mars 2026 : c\'est donc une application jeune. L\'App Store affiche la version 1.0.56 ; selon le développeur, la 1.0.60 est en cours de validation chez Apple.',
         ],
         callouts: [
           {
@@ -2657,7 +2657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**功能:** 文档问答、可打开、编辑和删除的智能体记忆、免提语音(设备端语音输入和朗读)、借助视觉模型的图像理解,以及锁在家长 PIN 之后的儿童模式。',
           '**要求与价格:** iOS 16.4 及以上,至少 4 GB 内存。免费,无广告、无订阅、无应用内购买。',
           '**隐私与许可:** 模型下载完成后,聊天、文档和记忆都留在设备上。应用会发送使用事件和崩溃报告(据开发者称不含聊天内容),并且是闭源的。',
-          '**安装方式:** App Store。2026 年 3 月 30 日首次发布,所以还是一款较新的应用。',
+          '**安装方式:** App Store。2026 年 3 月 30 日首次发布,所以还是一款较新的应用。App Store 列出的版本为 1.0.56;开发者称 1.0.60 正在 Apple 审核中。',
         ],
         callouts: [
           {
@@ -3228,7 +3228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Funciones:** preguntas sobre documentos, una memoria de agente que puedes abrir, editar y borrar, voz manos libres (entrada de voz y lectura en voz alta en el dispositivo), comprensión de imágenes con modelos de visión y un Kid Mode bloqueado tras un PIN de madre o padre.',
           '**Requisitos y precio:** iOS 16.4+, 4 GB de RAM o más. Gratuita, sin anuncios, suscripciones ni compras dentro de la app.',
           '**Privacidad y licencia:** el chat, los documentos y los recuerdos se quedan en el dispositivo tras la descarga del modelo. La app envía eventos de uso e informes de fallos (sin contenido del chat, según el desarrollador) y es de código cerrado.',
-          '**Instalación:** App Store. Se lanzó por primera vez el 30 de marzo de 2026, así que es una app joven.',
+          '**Instalación:** App Store. Se lanzó por primera vez el 30 de marzo de 2026, así que es una app joven. La App Store lista la versión 1.0.56; el desarrollador indica que la 1.0.60 está en revisión de Apple.',
         ],
         callouts: [
           {
@@ -3801,7 +3801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**기능:** 문서 질의응답, 열어서 편집·삭제할 수 있는 에이전트 메모리, 핸즈프리 음성(기기 내 음성 입력과 읽어주기), 비전 모델을 이용한 이미지 이해, 부모 PIN으로 잠그는 키즈 모드.',
           '**요구 사항과 가격:** iOS 16.4 이상, RAM 4GB 이상. 무료이며 광고, 구독, 인앱 구매가 없습니다.',
           '**개인정보와 라이선스:** 모델을 내려받은 뒤에는 채팅, 문서, 메모리가 기기에 남습니다. 앱은 사용 이벤트와 충돌 보고서를 전송하며(개발자에 따르면 채팅 내용은 포함되지 않음), 클로즈드 소스입니다.',
-          '**설치 경로:** App Store. 2026년 3월 30일에 처음 출시된 비교적 새로운 앱입니다.',
+          '**설치 경로:** App Store. 2026년 3월 30일에 처음 출시된 비교적 새로운 앱입니다. App Store에는 1.0.56이 게재되어 있으며, 개발자는 1.0.60이 Apple 심사 중이라고 밝혔습니다.',
         ],
         callouts: [
           {
@@ -4375,7 +4375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Recursos:** perguntas sobre documentos, uma memória de agente que você pode abrir, editar e apagar, voz mãos livres (entrada de voz e leitura em voz alta no dispositivo), compreensão de imagens com modelos de visão e um Modo Criança travado por um PIN dos responsáveis.',
           '**Requisitos e preço:** iOS 16.4+, 4 GB de RAM ou mais. Gratuito, sem anúncios, assinaturas ou compras no app.',
           '**Privacidade e licença:** conversas, documentos e memórias ficam no dispositivo depois do download do modelo. O app envia eventos de uso e relatórios de falhas (sem conteúdo das conversas, segundo o desenvolvedor) e é de código fechado.',
-          '**Instalação:** App Store. Lançado em 30 de março de 2026, portanto é um app jovem.',
+          '**Instalação:** App Store. Lançado em 30 de março de 2026, portanto é um app jovem. A App Store lista a versão 1.0.56; o desenvolvedor afirma que a 1.0.60 está em análise na Apple.',
         ],
         callouts: [
           {
@@ -4946,7 +4946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الميزات:** أسئلة عن المستندات، وذاكرة وكيل يمكنك فتحها وتعديلها وحذفها، ووضع صوتي حر اليدين (إدخال صوتي وقراءة بصوت عالٍ على الجهاز)، وفهم الصور بنماذج الرؤية، ووضع أطفال مقفل برمز PIN للوالدين.',
           '**المتطلبات والسعر:** iOS 16.4 أو أحدث، وذاكرة وصول عشوائي 4 جيجابايت أو أكثر. مجاني، بلا إعلانات أو اشتراكات أو مشتريات داخل التطبيق.',
           '**الخصوصية والترخيص:** تبقى المحادثات والمستندات والذكريات على الجهاز بعد تنزيل النموذج. يرسل التطبيق أحداث استخدام وتقارير أعطال (دون محتوى المحادثات بحسب المطوّر)، وهو مغلق المصدر.',
-          '**طريقة التثبيت:** App Store. صدر لأول مرة في 30 مارس 2026، فهو تطبيق حديث.',
+          '**طريقة التثبيت:** App Store. صدر لأول مرة في 30 مارس 2026، فهو تطبيق حديث. يُدرج App Store الإصدار 1.0.56؛ ويقول المطوّر إن 1.0.60 قيد مراجعة Apple.',
         ],
         callouts: [
           {

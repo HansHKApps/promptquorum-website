@@ -419,7 +419,7 @@ snippetBlocks: [
           '**Features:** Document Q&A, an Agent Memory you can open, edit and delete, hands-free voice (on-device speech input and read-aloud), image understanding with vision models, and a Kid Mode locked behind a parent PIN.',
           '**Requirements and price:** Android 9+, 4 GB+ RAM. Free, with no ads, subscriptions or in-app purchases.',
           '**Privacy and licence:** Chat, documents and memories stay on the device after the model download. The app sends usage events and crash reports (no chat content, per the developer), and it is closed source.',
-          '**Install path:** Google Play Store (1K+ downloads). First released on 30 March 2026, so it is a young app.',
+          '**Install path:** Google Play Store (1K+ downloads). First released on 30 March 2026, so it is a young app. Google Play lists build 1.0.60 (updated 25 October 2026); its notes say the first model download starts by itself on Wi-Fi, models are grouped by what fits the device, and interrupted downloads resume.',
         ],
         callouts: [
           {
@@ -1032,7 +1032,7 @@ snippetBlocks: [
           '**Funktionen:** Dokumentenfragen, ein Agent Memory, das Sie öffnen, bearbeiten und löschen können, Freisprech-Sprachmodus (Spracheingabe und Vorlesen auf dem Gerät), Bildverständnis mit Vision-Modellen und ein Kindermodus hinter einer Eltern-PIN.',
           '**Voraussetzungen und Preis:** Android 9+, mindestens 4 GB RAM. Kostenlos, ohne Werbung, Abos oder In-App-Käufe.',
           '**Datenschutz und Lizenz:** Chats, Dokumente und Erinnerungen bleiben nach dem Modell-Download auf dem Gerät. Die App sendet Nutzungsereignisse und Absturzberichte (laut Entwickler ohne Chat-Inhalte) und ist Closed Source.',
-          '**Installation:** Google Play Store (über 1.000 Downloads). Erstveröffentlichung am 30. März 2026, die App ist also noch jung.',
+          '**Installation:** Google Play Store (über 1.000 Downloads). Erstveröffentlichung am 30. März 2026, die App ist also noch jung. Google Play listet Build 1.0.60 (aktualisiert am 25. Oktober 2026); laut den Hinweisen startet der Download des ersten Modells im WLAN von selbst, Modelle werden danach gruppiert, was auf das Gerät passt, und unterbrochene Downloads werden fortgesetzt.',
         ],
         callouts: [
           {
@@ -1668,7 +1668,7 @@ snippetBlocks: [
           '**Fonctions :** questions sur vos documents, une mémoire d\'agent que vous pouvez ouvrir, modifier et supprimer, un mode vocal mains libres (saisie vocale et lecture à voix haute sur l\'appareil), la compréhension d\'images avec des modèles de vision et un Kid Mode verrouillé par un code PIN parental.',
           '**Prérequis et prix :** Android 9+, 4 Go de RAM minimum. Gratuite, sans publicité, abonnement ni achat intégré.',
           '**Confidentialité et licence :** les conversations, documents et souvenirs restent sur l\'appareil après le téléchargement du modèle. L\'application envoie des événements d\'usage et des rapports de plantage (sans contenu des conversations, selon le développeur) et son code est fermé.',
-          '**Installation :** Google Play Store (plus de 1 000 téléchargements). Première version publiée le 30 mars 2026 : c\'est donc une application jeune.',
+          '**Installation :** Google Play Store (plus de 1 000 téléchargements). Première version publiée le 30 mars 2026 : c\'est donc une application jeune. Google Play affiche la version 1.0.60 (mise à jour le 25 octobre 2026) ; selon ses notes, le téléchargement du premier modèle démarre tout seul en Wi-Fi, les modèles sont regroupés selon ce qui convient à l\'appareil et les téléchargements interrompus reprennent.',
         ],
         callouts: [
           {
@@ -2285,7 +2285,7 @@ snippetBlocks: [
           '**機能:** 文書Q&A、開いて編集・削除できるエージェントメモリ、ハンズフリー音声(端末内の音声入力と読み上げ)、ビジョンモデルによる画像理解、保護者用PINでロックされるキッズモード。',
           '**要件と価格:** Android 9以降、RAM 4GB以上。無料で、広告、サブスクリプション、アプリ内課金はありません。',
           '**プライバシーとライセンス:** モデルのダウンロード後、チャット、文書、メモリは端末内にとどまります。アプリは利用イベントとクラッシュレポートを送信し(開発者によればチャット内容は含まれません)、クローズドソースです。',
-          '**入手方法:** Google Playストア(1,000回以上ダウンロード)。初回リリースは2026年3月30日で、新しいアプリです。',
+          '**入手方法:** Google Playストア(1,000回以上ダウンロード)。初回リリースは2026年3月30日で、新しいアプリです。Google Playには1.0.60(2026年10月25日更新)が掲載されており、リリースノートによれば、最初のモデルのダウンロードはWi-Fi接続時に自動で始まり、モデルは端末に適合するかどうかでグループ分けされ、中断したダウンロードは再開されます。',
         ],
         callouts: [
           {
@@ -2919,7 +2919,7 @@ snippetBlocks: [
           '**功能:** 文档问答、可打开、编辑和删除的智能体记忆、免提语音(设备端语音输入和朗读)、借助视觉模型的图像理解,以及锁在家长 PIN 之后的儿童模式。',
           '**要求与价格:** Android 9 及以上,至少 4 GB 内存。免费,无广告、无订阅、无应用内购买。',
           '**隐私与许可:** 模型下载完成后,聊天、文档和记忆都留在设备上。应用会发送使用事件和崩溃报告(据开发者称不含聊天内容),并且是闭源的。',
-          '**安装方式:** Google Play 商店(下载量 1000+)。2026 年 3 月 30 日首次发布,所以还是一款较新的应用。',
+          '**安装方式:** Google Play 商店(下载量 1000+)。2026 年 3 月 30 日首次发布,所以还是一款较新的应用。Google Play 列出的版本为 1.0.60(2026 年 10 月 25 日更新);据其更新说明,首个模型的下载会在 Wi-Fi 下自动开始,模型按设备能否运行分组,被中断的下载会继续。',
         ],
         callouts: [
           {
@@ -3532,7 +3532,7 @@ snippetBlocks: [
           '**Funciones:** preguntas sobre documentos, una memoria de agente que puedes abrir, editar y borrar, voz manos libres (entrada de voz y lectura en voz alta en el dispositivo), comprensión de imágenes con modelos de visión y un Kid Mode bloqueado tras un PIN de madre o padre.',
           '**Requisitos y precio:** Android 9+, 4 GB de RAM o más. Gratuita, sin anuncios, suscripciones ni compras dentro de la app.',
           '**Privacidad y licencia:** el chat, los documentos y los recuerdos se quedan en el dispositivo tras la descarga del modelo. La app envía eventos de uso e informes de fallos (sin contenido del chat, según el desarrollador) y es de código cerrado.',
-          '**Instalación:** Google Play Store (más de 1000 descargas). Se lanzó por primera vez el 30 de marzo de 2026, así que es una app joven.',
+          '**Instalación:** Google Play Store (más de 1000 descargas). Se lanzó por primera vez el 30 de marzo de 2026, así que es una app joven. Google Play lista la versión 1.0.60 (actualizada el 25 de octubre de 2026); según sus notas, la descarga del primer modelo empieza sola con Wi-Fi, los modelos se agrupan según lo que cabe en el dispositivo y las descargas interrumpidas se reanudan.',
         ],
         callouts: [
           {
@@ -4145,7 +4145,7 @@ snippetBlocks: [
           '**Recursos:** perguntas sobre documentos, uma memória de agente que você pode abrir, editar e apagar, voz mãos livres (entrada de voz e leitura em voz alta no dispositivo), compreensão de imagens com modelos de visão e um Modo Criança travado por um PIN dos responsáveis.',
           '**Requisitos e preço:** Android 9+, 4 GB de RAM ou mais. Gratuito, sem anúncios, assinaturas ou compras no app.',
           '**Privacidade e licença:** conversas, documentos e memórias ficam no dispositivo depois do download do modelo. O app envia eventos de uso e relatórios de falhas (sem conteúdo das conversas, segundo o desenvolvedor) e é de código fechado.',
-          '**Instalação:** Google Play Store (mais de 1 mil downloads). Lançado em 30 de março de 2026, portanto é um app jovem.',
+          '**Instalação:** Google Play Store (mais de 1 mil downloads). Lançado em 30 de março de 2026, portanto é um app jovem. O Google Play lista a versão 1.0.60 (atualizada em 25 de outubro de 2026); segundo as notas, o download do primeiro modelo começa sozinho no Wi-Fi, os modelos são agrupados pelo que cabe no aparelho e downloads interrompidos são retomados.',
         ],
         callouts: [
           {
@@ -4758,7 +4758,7 @@ snippetBlocks: [
           '**الميزات:** أسئلة عن المستندات، وذاكرة وكيل يمكنك فتحها وتعديلها وحذفها، ووضع صوتي حر اليدين (إدخال صوتي وقراءة بصوت عالٍ على الجهاز)، وفهم الصور بنماذج الرؤية، ووضع أطفال مقفل برمز PIN للوالدين.',
           '**المتطلبات والسعر:** Android 9 أو أحدث، وذاكرة وصول عشوائي 4 جيجابايت أو أكثر. مجاني، بلا إعلانات أو اشتراكات أو مشتريات داخل التطبيق.',
           '**الخصوصية والترخيص:** تبقى المحادثات والمستندات والذكريات على الجهاز بعد تنزيل النموذج. يرسل التطبيق أحداث استخدام وتقارير أعطال (دون محتوى المحادثات بحسب المطوّر)، وهو مغلق المصدر.',
-          '**طريقة التثبيت:** متجر Google Play (أكثر من 1000 تنزيل). صدر لأول مرة في 30 مارس 2026، فهو تطبيق حديث.',
+          '**طريقة التثبيت:** متجر Google Play (أكثر من 1000 تنزيل). صدر لأول مرة في 30 مارس 2026، فهو تطبيق حديث. تُدرج Google Play الإصدار 1.0.60 (حُدّث في 25 أكتوبر 2026)؛ وبحسب ملاحظاته يبدأ تنزيل النموذج الأول من تلقاء نفسه عبر Wi-Fi، وتُجمَّع النماذج بحسب ما يناسب الجهاز، وتُستأنف التنزيلات المنقطعة.',
         ],
         callouts: [
           {
@@ -5375,7 +5375,7 @@ snippetBlocks: [
           '**기능:** 문서 질의응답, 열어서 편집·삭제할 수 있는 에이전트 메모리, 핸즈프리 음성(기기 내 음성 입력과 읽어주기), 비전 모델을 이용한 이미지 이해, 부모 PIN으로 잠그는 키즈 모드.',
           '**요구 사항과 가격:** Android 9 이상, RAM 4GB 이상. 무료이며 광고, 구독, 인앱 구매가 없습니다.',
           '**개인정보와 라이선스:** 모델을 내려받은 뒤에는 채팅, 문서, 메모리가 기기에 남습니다. 앱은 사용 이벤트와 충돌 보고서를 전송하며(개발자에 따르면 채팅 내용은 포함되지 않음), 클로즈드 소스입니다.',
-          '**설치 경로:** Google Play 스토어(다운로드 1,000회 이상). 2026년 3월 30일에 처음 출시된 비교적 새로운 앱입니다.',
+          '**설치 경로:** Google Play 스토어(다운로드 1,000회 이상). 2026년 3월 30일에 처음 출시된 비교적 새로운 앱입니다. Google Play에는 1.0.60(2026년 10월 25일 업데이트)이 게재되어 있으며, 업데이트 노트에 따르면 첫 모델 다운로드는 Wi-Fi에서 자동으로 시작되고, 모델은 기기에 맞는지에 따라 묶이며, 중단된 다운로드는 이어집니다.',
         ],
         callouts: [
           {

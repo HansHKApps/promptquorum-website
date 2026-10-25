@@ -16,6 +16,7 @@
 // permission with a Settings switch and sends no notifications in Kid Mode; the policy (updated 2026-10-20) confirms all three. Re-verified from
 // primary sources: App Store lookup v1.0.56 released 2026-10-22 (free, iOS 16.4+, same privacy label), Google Play 1.0.56 updated 2026-10-23
 // (Data safety unchanged). The developer's note that iPhone 1.0.55 was still in Apple review is superseded: iOS is already on 1.0.56.
+// 2026-10-25: the developer wrote that 1.0.60 is out on Google Play and in Apple's review. Verified on Google Play 2026-10-25: 'Updated on Oct 25, 2026', build 1.0.60, What's new = first download starts by itself on Wi-Fi, models grouped by device fit, network-cut downloads resume. App Store lookup still v1.0.56 (2026-10-22). His claim of Gemma 4 E2B as first model on iPhones from 6 GB is email-only and NOT used. founderReviewedDate unchanged (1.0.60 text not re-approved by him).
 
 import type { ToolRecord } from './types'
 
@@ -57,8 +58,8 @@ export const app: ToolRecord = {
   // voice = on-device voice input plus text-to-speech and a hands-free continuous mode; visionInput = "Image Understanding"
   // with Vision AI models; importModels = custom GGUF import from Hugging Face.
   compare: { offline: true, importModels: true, modelDownloads: true, visionInput: true, voice: true },
-  lastVerifiedDate: '2026-10-23',
-  lastUpstreamUpdate: '2026-10-23', // Google Play "Updated on Oct 23, 2026" (page data: build 1.0.56); App Store v1.0.56 currentVersionReleaseDate 2026-10-22; read 2026-10-23
+  lastVerifiedDate: '2026-10-25',
+  lastUpstreamUpdate: '2026-10-25', // Google Play "Updated on Oct 25, 2026" (build 1.0.60); App Store v1.0.56 currentVersionReleaseDate 2026-10-22; read 2026-10-25
   lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=com.ts.memoryai',
   founderReviewedDate: '2026-10-19', // Alessandro Facchini reviewed the draft and supplied technical corrections plus a maker note 2026-10-19; drives the amber Founder-reviewed banner + star
   founder: {
