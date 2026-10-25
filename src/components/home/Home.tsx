@@ -18,6 +18,7 @@ import { PqAppBannerBlock } from './PqAppBannerBlock'
 import { McpBannerBlock } from './McpBannerBlock'
 import { LocalAiToolsBlock } from './LocalAiToolsBlock'
 import { t } from './home-i18n'
+import { StateOfLocalAiBanner } from './StateOfLocalAiBanner'
 import { getHomeStats } from '@/lib/home/stats'
 
 /**
@@ -42,6 +43,7 @@ export function Home({ lang }: { lang: Language }) {
           <p className="mt-2 max-w-[760px] text-sm text-text-secondary">{t('heroPlainExplainer', lang)}</p>
         </div>
       </div>
+      {lang === 'en' && <StateOfLocalAiBanner />}
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         {/* Just published — last 3 days, loudest element on the page; renders nothing when empty */}
         <FreshStripBlock lang={lang} />
