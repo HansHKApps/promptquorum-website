@@ -9,7 +9,7 @@ export const zh: AboutCopy = {
   heroSub:
     '开放权重与开源模型很容易下载，但该用哪个应用、你的硬件能否运行、又该如何配置，仍然是难题。PromptQuorum 填补的正是这一空白。',
   heroOpenWeightNote:
-    '"开放权重"（open-weight）是指训练好的模型文件本身——而不只是周边代码——可以自由下载并在任何地方运行，这与 GPT、Gemini 等只能在厂商自己服务器上运行的闭源模型不同。',
+    '“开放权重”（open-weight）是指训练好的模型文件本身——而不只是周边代码——可以自由下载并在任何地方运行，这与 GPT、Gemini 等只能在厂商自己服务器上运行的闭源模型不同。',
   heroOpenWeightLinkLabel: '开放权重 vs 开源，一文说清',
   ctaDirectory: '浏览目录',
   ctaHardware: '我的硬件能运行什么？',
@@ -76,7 +76,7 @@ export const zh: AboutCopy = {
   partFindTitle: '本地 AI 目录',
   partFindOneLiner: '可检索、结构化的本地 AI 软件地图。',
   partFindBody:
-    '和用自由文本堆出来的"最佳 AI 应用"榜单不同，这里的 {{appCount}} 款本地 AI 应用——分布在 {{groupCount}} 个分组、{{categoryCount}} 个类别中——全部使用同一套结构化字段描述：功能、支持平台、许可证、价格和硬件需求，并附有官方网站链接。正是这种统一结构让条目之间可以互相比较，也支撑了硬件匹配功能：设置一次硬件配置，每款应用都会显示在你的电脑上能流畅运行、勉强运行，还是无法运行。',
+    '和用自由文本堆出来的“最佳 AI 应用”榜单不同，这里的 {{appCount}} 款本地 AI 应用——分布在 {{groupCount}} 个分组、{{categoryCount}} 个类别中——全部使用同一套结构化字段描述：功能、支持平台、许可证、价格和硬件需求，并附有官方网站链接。正是这种统一结构让条目之间可以互相比较，也支撑了硬件匹配功能：设置一次硬件配置，每款应用都会显示在你的电脑上能流畅运行、勉强运行，还是无法运行。',
   partFindConnects: '各条目会链接到对应的 PromptQuorum 点评和使用指南（如果已有的话）。',
   partLearnTitle: '知识库',
   partLearnOneLiner: '每一条推荐背后的操作指南库。',
@@ -150,7 +150,7 @@ export const zh: AboutCopy = {
   mcpBenefit:
     '这些数据不只是被读取，而是成为你的助手可以进行推理的输入。它会把 PromptQuorum 返回的内容，与自身知识、对话中的其他文件以及正在进行的网络搜索结合起来，在同一个回答里给出结果。具体来说，你可以：',
   mcpExample:
-    '举个例子：问"哪些本地 AI 应用能在 16 GB 内存下运行，并且可以跟 PDF 对话？"，你的助手会直接查询 PromptQuorum 的目录和知识库，然后给出具体的应用名称，附带许可证和硬件适配情况——而不是凭可能已经过时的训练数据去猜测。',
+    '举个例子：问“哪些本地 AI 应用能在 16 GB 内存下运行，并且可以跟 PDF 对话？”，你的助手会直接查询 PromptQuorum 的目录和知识库，然后给出具体的应用名称，附带许可证和硬件适配情况——而不是凭可能已经过时的训练数据去猜测。',
   mcpBullets: [
     '无需离开对话，直接比较 PromptQuorum 点评过的应用，并继续追问细节',
     '对照你的使用场景核实工具的许可证，数据直接引用自 PromptQuorum',

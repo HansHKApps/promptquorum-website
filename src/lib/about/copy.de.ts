@@ -9,7 +9,7 @@ export const de: AboutCopy = {
   heroSub:
     'Open-Weight- und Open-Source-Modelle lassen sich leicht herunterladen. Zu wissen, welche App die richtige ist, ob die eigene Hardware sie ausführen kann und wie man sie einrichtet, ist dagegen nach wie vor schwierig. Genau diese Lücke schließt PromptQuorum.',
   heroOpenWeightNote:
-    '„Open Weight" bedeutet, dass die trainierte Modelldatei selbst – nicht nur der Code drumherum – frei heruntergeladen und überall ausgeführt werden kann, anders als geschlossene Modelle wie GPT oder Gemini, die nur auf den Servern ihres Anbieters laufen.',
+    '„Open Weight“ bedeutet, dass die trainierte Modelldatei selbst – nicht nur der Code drumherum – frei heruntergeladen und überall ausgeführt werden kann, anders als geschlossene Modelle wie GPT oder Gemini, die nur auf den Servern ihres Anbieters laufen.',
   heroOpenWeightLinkLabel: 'Open Weight vs. Open Source erklärt',
   ctaDirectory: 'Verzeichnis entdecken',
   ctaHardware: 'Was läuft auf meiner Hardware?',
@@ -31,7 +31,7 @@ export const de: AboutCopy = {
       title: 'Runtimes',
       solved: 'Machte Modelle lauffähig.',
       text: 'Ollama, LM Studio und llama.cpp machten aus einem Download ein laufendes Modell auf dem eigenen Rechner. Prompt eingeben, Antwort erhalten.',
-      catch: 'Die Nutzung bleibt schmal. Für die meisten ist es ein Chatfenster – und dabei bleibt es oft.',
+      catch: 'Die Nutzung bleibt begrenzt. Für die meisten ist es ein Chatfenster – und dabei bleibt es oft.',
       product: 'Ollama & LM Studio',
     },
     {
@@ -50,13 +50,13 @@ export const de: AboutCopy = {
   believeH2: 'Warum lokal: wovon wir überzeugt sind',
   believeQuoteTitle: 'Das Internet sollte offen sein. KI sollte es auch sein.',
   believeQuotePre:
-    'Das Web wurde nützlich, weil jeder darauf veröffentlichen und jeder es lesen konnte, und kein einzelnes Unternehmen entschied, was Sie tun durften. KI steht an derselben Weggabelung: etwas, das Sie bei wenigen Anbietern mieten, oder etwas, das Sie selbst besitzen und betreiben.',
+    'Das Web wurde nützlich, weil jeder darauf veröffentlichen und jeder es lesen konnte, und kein einzelnes Unternehmen entschied, was Sie tun durften. KI steht an derselben Weggabelung. Sie kann etwas sein, das Sie bei wenigen Anbietern mieten, oder etwas, das Sie selbst besitzen und betreiben.',
   believeQuoteBold: 'Wir sind überzeugt, dass lokale KI der bessere Weg ist',
   believeQuotePost:
     '– für die meisten Anwendungsfälle, die auf Dauer zählen: was es kostet, wer die Kontrolle hat, wer Ihre Daten sieht und ob es sie nächstes Jahr noch gibt.',
   beliefs: [
     ['Lokale Modelle sind offen.', 'Sie können die Gewichte herunterladen und auf Ihrer eigenen Hardware ausführen. Niemand muss Ihren Prompt genehmigen, und niemand steht zwischen Ihnen und dem Modell.'],
-    ['Die Kosten bleiben unter Ihrer Kontrolle.', 'Sobald ein Modell auf Ihrem eigenen Rechner läuft, gibt es keinen Zähler, keine Abrechnung pro Token und keine Preisänderung, der Sie nicht zugestimmt haben. Die Hardware ist die Kostenstelle, und Sie entscheiden, wie viel Sie dafür ausgeben.'],
+    ['Die Kosten bleiben unter Ihrer Kontrolle.', 'Sobald ein Modell auf Ihrem eigenen Rechner läuft, gibt es keinen Zähler, keine Abrechnung pro Token und keine Preisänderung, der Sie nicht zugestimmt haben. Kosten entstehen nur durch die Hardware, und Sie entscheiden, wie viel Sie dafür ausgeben.'],
     ['Es kann Ihnen nicht weggenommen werden.', 'Ein Cloud-Modell kann über Nacht geändert, eingeschränkt, im Preis angepasst oder abgeschaltet werden. Ein Modell, das Sie heruntergeladen haben, funktioniert weiter wie gewohnt, solange Sie die Datei behalten.'],
     ['Ihre Daten bleiben bei Ihnen.', 'Wenn App und Modell beide lokal laufen, verlassen Ihre Prompts und Dokumente niemals Ihren Rechner.'],
     ['Unabhängigkeit ist der Kern der Sache.', 'Lokale KI ist mehr als eine günstigere Alternative. Sie ist eine Möglichkeit, von niemandes Bedingungen, Servern oder Entscheidungen abhängig zu sein.'],
@@ -67,7 +67,7 @@ export const de: AboutCopy = {
     'Wir halten Cloud-KI nicht für schlecht. Wir sind überzeugt, dass Sie eine echte Wahl haben sollten – und dass die Entscheidung für lokal genauso einfach sein sollte wie die Entscheidung für die Cloud.',
   ecosystemH2: 'Ein Ökosystem, vier Teile, die zusammenspielen',
   ecosystemLead:
-    'PromptQuorum ist nicht nur eine App und nicht nur ein Verzeichnis. Es sind vier Teile, die auf dasselbe Ziel einzahlen, damit Sie von „Was sollte ich nutzen?“ zu einem funktionierenden Setup kommen, ohne die Seite zu verlassen.',
+    'PromptQuorum ist nicht nur eine App und nicht nur ein Verzeichnis. Es sind vier Teile, die auf dasselbe Ziel ausgerichtet sind, damit Sie von „Was sollte ich nutzen?“ zu einem funktionierenden Setup kommen, ohne die Seite zu verlassen.',
   connectsLabel: 'Zusammenspiel mit dem Rest:',
   findLabel: 'Finden',
   learnLabel: 'Lernen',
@@ -76,7 +76,7 @@ export const de: AboutCopy = {
   partFindTitle: 'Das Verzeichnis für lokale KI',
   partFindOneLiner: 'Die durchsuchbare, strukturierte Landkarte lokaler KI-Software.',
   partFindBody:
-    'Anders als eine allgemeine „Beste KI-Apps"-Liste aus Fließtext-Beschreibungen sind alle {{appCount}} lokalen KI-Apps hier – verteilt auf {{groupCount}} Gruppen und {{categoryCount}} Kategorien – mit denselben strukturierten Feldern beschrieben: was die App macht, Plattformen, Lizenz, Preis und Hardware-Anforderungen, plus einen Link zur offiziellen Website. Genau diese einheitliche Struktur macht Einträge vergleichbar und ermöglicht den Hardware-Abgleich: Legen Sie einmal ein Profil fest, und jede App zeigt an, ob sie gut läuft, nur eingeschränkt läuft oder auf Ihrem Rechner gar nicht läuft.',
+    'Anders als eine allgemeine „Beste KI-Apps“-Liste aus Fließtext-Beschreibungen sind alle {{appCount}} lokalen KI-Apps hier – verteilt auf {{groupCount}} Gruppen und {{categoryCount}} Kategorien – mit denselben strukturierten Feldern beschrieben: was die App macht, Plattformen, Lizenz, Preis und Hardware-Anforderungen, plus einen Link zur offiziellen Website. Genau diese einheitliche Struktur macht Einträge vergleichbar und ermöglicht den Hardware-Abgleich: Legen Sie einmal ein Profil fest, und jede App zeigt an, ob sie gut läuft, nur eingeschränkt läuft oder auf Ihrem Rechner gar nicht läuft.',
   partFindConnects: 'Einträge verlinken, wo vorhanden, zur passenden PromptQuorum-Bewertung und zu Anleitungen.',
   partLearnTitle: 'Die Wissensdatenbank',
   partLearnOneLiner: 'Die Anleitungs-Bibliothek hinter jeder Empfehlung.',
@@ -119,15 +119,15 @@ export const de: AboutCopy = {
   ctaSetHardware: 'Mein Hardware-Profil festlegen',
   forYouIfH3: 'PromptQuorum ist das Richtige für Sie, wenn …',
   forYouList: [
-    'Sie haben Ollama oder LM Studio installiert, eine Weile gechattet und sich gefragt, was Sie sonst noch damit machen können.',
-    'Sie wollen KI, die privat ist, offline funktioniert oder kein weiteres Abo braucht.',
-    'Sie wählen gerade lokale KI-Software aus und wollen für jede Option dieselben Fakten an einem Ort.',
-    'Sie entwickeln oder pflegen ein Tool für lokale KI und wollen dafür einen korrekten Eintrag.',
-    'Sie lesen lieber in einer anderen Sprache als Englisch und haben genug von rein englischsprachigen Einrichtungsanleitungen.',
-    'Sie möchten, dass Ihr eigener KI-Assistent Fragen zu lokaler KI aus einer gepflegten Quelle beantwortet.',
+    'Sie Ollama oder LM Studio installiert, eine Weile gechattet und sich gefragt haben, was Sie sonst noch damit machen können.',
+    'Sie KI wollen, die privat ist, offline funktioniert oder kein weiteres Abo braucht.',
+    'Sie gerade lokale KI-Software auswählen und für jede Option dieselben Fakten an einem Ort haben wollen.',
+    'Sie ein Tool für lokale KI entwickeln oder pflegen und dafür einen korrekten Eintrag haben wollen.',
+    'Sie lieber in einer anderen Sprache als Englisch lesen und genug von rein englischsprachigen Einrichtungsanleitungen haben.',
+    'Ihr eigener KI-Assistent Fragen zu lokaler KI aus einer gepflegten Quelle beantworten soll.',
   ],
   notForYouH3: 'Es ist wahrscheinlich nicht das Richtige für Sie, wenn …',
-  notForYouText: 'Sie brauchen lediglich einen gehosteten Chatbot und es ist Ihnen egal, wo er läuft. Cloud-KI ist ein gutes Werkzeug – wir decken einfach den anderen Weg ab.',
+  notForYouText: 'Sie lediglich einen gehosteten Chatbot brauchen und es Ihnen egal ist, wo er läuft. Cloud-KI ist ein gutes Werkzeug – wir decken einfach den anderen Weg ab.',
   neutralH2: 'Neutral aus Prinzip',
   neutralLead: 'Ein Nachschlagewerk ist nur dann nützlich, wenn man ihm vertrauen kann. Für jede Seite gelten dieselben Regeln:',
   neutral: [
@@ -146,13 +146,13 @@ export const de: AboutCopy = {
   mcpH2: 'PromptQuorum aus Ihrer KI heraus nutzen',
   mcpLead: 'Verbinden Sie PromptQuorum einmal mit Ihrem Assistenten, und er kann für Sie nachschlagen.',
   mcpFirstClaim:
-    'PromptQuorum ist das erste KI-App-Verzeichnis, das einen öffentlichen MCP-Endpunkt ohne Authentifizierung veröffentlicht. Verbinden Sie ihn einmal, und jeder MCP-kompatible Assistent — Claude, ChatGPT, Cursor und andere — kann die App-Datenbank, Lizenzdaten und Artikel von PromptQuorum direkt in Ihrer eigenen Unterhaltung abfragen, ganz ohne Kopieren zwischen Tabs.',
+    'PromptQuorum ist das erste KI-App-Verzeichnis, das einen öffentlichen MCP-Endpunkt ohne Authentifizierung veröffentlicht. Verbinden Sie ihn einmal, und jeder MCP-kompatible Assistent – Claude, ChatGPT, Cursor und andere – kann die App-Datenbank, Lizenzdaten und Artikel von PromptQuorum direkt in Ihrer eigenen Unterhaltung abfragen, ganz ohne Kopieren zwischen Tabs.',
   mcpBenefit:
-    'Diese Daten werden zu einer Grundlage, über die Ihr Assistent nachdenken kann, nicht nur liest. Er verbindet das, was PromptQuorum liefert, mit seinem eigenen Wissen, den anderen Dateien in Ihrer Unterhaltung und seiner eigenen Websuche — in derselben Antwort. In der Praxis bedeutet das:',
+    'Diese Daten werden zu einer Grundlage, über die Ihr Assistent nachdenken kann, nicht nur liest. Er verbindet das, was PromptQuorum liefert, mit seinem eigenen Wissen, den anderen Dateien in Ihrer Unterhaltung und seiner eigenen Websuche – in derselben Antwort. In der Praxis bedeutet das:',
   mcpExample:
-    'Zum Beispiel: Fragen Sie „Welche lokalen KI-Apps laufen mit 16 GB RAM und können mit PDFs chatten?", und Ihr Assistent fragt direkt das Verzeichnis und die Wissensdatenbank von PromptQuorum ab und nennt dann konkrete Apps mit Lizenz und Hardware-Eignung — statt anhand von möglicherweise veralteten Trainingsdaten zu raten.',
+    'Zum Beispiel: Fragen Sie „Welche lokalen KI-Apps laufen mit 16 GB RAM und können mit PDFs chatten?“, und Ihr Assistent fragt direkt das Verzeichnis und die Wissensdatenbank von PromptQuorum ab und nennt dann konkrete Apps mit Lizenz und Hardware-Eignung – statt anhand von möglicherweise veralteten Trainingsdaten zu raten.',
   mcpBullets: [
-    'Von PromptQuorum getestete Apps vergleichen, ohne den Chat zu verlassen, und direkt Rückfragen dazu stellen',
+    'Von PromptQuorum bewertete Apps vergleichen, ohne den Chat zu verlassen, und direkt Rückfragen dazu stellen',
     'Die Lizenz eines Tools gegen Ihren Anwendungsfall prüfen, direkt aus den Daten von PromptQuorum zitiert',
     'Die Hardware-Anforderungen von PromptQuorum mit Ihren eigenen Spezifikationen oder einem hochgeladenen Dokument abgleichen',
     'Die Verzeichnisdaten von PromptQuorum in die umfassendere Recherche einfließen lassen, die Ihr Assistent ohnehin im Web durchführt',
@@ -166,10 +166,10 @@ export const de: AboutCopy = {
   founderImgAlt: 'Hans Küpper, Gründer von PromptQuorum',
   founderTitle: 'Gründer, PromptQuorum',
   founderBioP1:
-    'PromptQuorum begann als Multi-Modell-App. Hans hat sie gebaut, weil sich eine einzelne KI-Antwort nur schwer überprüfen lässt. Stellt man mehreren Modellen dieselbe Frage, sieht man zumindest, wo sie übereinstimmen und wo nicht.',
+    'PromptQuorum begann als Multi-Modell-App. Hans hat sie entwickelt, weil sich eine einzelne KI-Antwort nur schwer überprüfen lässt. Stellt man mehreren Modellen dieselbe Frage, sieht man zumindest, wo sie übereinstimmen und wo nicht.',
   founderBioP2:
-    'Bei der Entwicklung der App zeigte sich eine größere Lücke: Wer zuverlässige, private KI nutzen möchte, hat keine vertrauenswürdige Landkarte der Welt lokaler KI. Also wuchs die App zu einem Ökosystem heran, mit einem Verzeichnis, einer Wissensdatenbank und einem MCP-Server, die alle auf dasselbe Ziel einzahlen.',
-  founderBioP3: 'Datenschutz und Nutzerkontrolle sind nicht verhandelbare Designprinzipien.',
+    'Bei der Entwicklung der App zeigte sich eine größere Lücke: Wer zuverlässige, private KI nutzen möchte, hat keine vertrauenswürdige Landkarte der lokalen KI-Welt. So wurde aus der App ein Ökosystem, mit einem Verzeichnis, einer Wissensdatenbank und einem MCP-Server, die alle demselben Ziel dienen.',
+  founderBioP3: 'Datenschutz und Nutzerkontrolle sind Designprinzipien, die nicht zur Disposition stehen.',
   founderBioSmall: 'Unabhängig, mit Sitz in Deutschland. Über 30 Jahre Erfahrung in Beratung und Unternehmensführung, in mehr als 20 Ländern.',
   solaH2: 'The State of Local AI',
   solaLead: 'Ein Quartalsbericht dazu, wo lokale KI steht – mit belegten Zahlen, praktischen Tests und gekennzeichneten Annahmen. Hier finden Sie jeden Bericht.',

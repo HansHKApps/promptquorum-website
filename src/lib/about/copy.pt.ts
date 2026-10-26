@@ -123,7 +123,7 @@ export const pt: AboutCopy = {
     'Você quer uma IA que seja privada, funcione offline ou não exija mais uma assinatura.',
     'Você está escolhendo um software de IA local e quer os mesmos fatos sobre cada opção em um só lugar.',
     'Você desenvolve ou mantém uma ferramenta de IA local e quer uma entrada precisa para ela.',
-    'Você lê em um idioma diferente do inglês e está cansado de guias de configuração só em inglês.',
+    'Você lê em um idioma diferente do inglês e já se cansou de guias de configuração só em inglês.',
     'Você quer que o seu próprio assistente de IA responda a perguntas sobre IA local a partir de uma fonte mantida atualizada.',
   ],
   notForYouH3: 'Provavelmente não é para você se…',
