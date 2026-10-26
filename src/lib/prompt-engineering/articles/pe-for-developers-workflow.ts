@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12 min de lectura',
     educationalLevel: 'Advanced',
     primaryTerm: 'Flujo de trabajo de prompt engineering',
-    leadAnswerBlock: '**Los desarrolladores necesitan un flujo de trabajo de prompt engineering que encaje en su proceso de desarrollo existente — control de versiones, CI/CD y pruebas locales — no un ecosistema de herramientas separado.** El flujo de trabajo cubre 5 etapas: escribir, probar localmente, versionar, controlar en CI/CD y monitorear en producción.',
+    leadAnswerBlock: '**Los desarrolladores necesitan un flujo de prompt engineering que encaje en su proceso existente — control de versiones, CI/CD y pruebas locales — no un ecosistema de herramientas aparte.** Tiene 5 etapas: escribir, probar localmente, versionar, controlar en CI/CD y monitorear en producción.',
     quickFacts: [
       'El bucle de prueba local con Promptfoo tarda menos de 30 segundos: escribir, probar en 3 entradas, comparar con la línea base, confirmar.',
       'Almacena los prompts como archivos .txt o .ts en un directorio /prompts. Nombra los archivos: [tarea]-[versión].txt (p. ej., customer-support-v3.txt).',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12 min de leitura',
     educationalLevel: 'Advanced',
     primaryTerm: 'Fluxo de trabalho de prompt engineering',
-    leadAnswerBlock: '**Os desenvolvedores precisam de um fluxo de trabalho de prompt engineering que se encaixe em seu processo de desenvolvimento existente — controle de versões, CI/CD e testes locais — não de um ecossistema de ferramentas separado.** O fluxo de trabalho cobre 5 etapas: escrever, testar localmente, versionar, controlar em CI/CD e monitorar em produção.',
+    leadAnswerBlock: '**Os desenvolvedores precisam de um fluxo de prompt engineering que se encaixe em seu processo existente — controle de versões, CI/CD e testes locais — não de um ecossistema de ferramentas à parte.** Ele tem 5 etapas: escrever, testar localmente, versionar, controlar em CI/CD e monitorar em produção.',
     quickFacts: [
       'O loop de teste local com Promptfoo leva menos de 30 segundos: escrever, testar em 3 entradas, comparar com a linha de base, confirmar.',
       'Armazene os prompts como arquivos .txt ou .ts em um diretório /prompts. Nomeie os arquivos: [tarefa]-[versão].txt (ex.: customer-support-v3.txt).',
