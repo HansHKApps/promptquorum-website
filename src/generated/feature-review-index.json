@@ -1494,6 +1494,11 @@
     "urlSlug": "lm-mini-review",
     "url": "/power-local-llm/lm-mini-review"
   },
+  "laria": {
+    "cluster": "power-local-llm",
+    "urlSlug": "laria-review",
+    "url": "/power-local-llm/laria-review"
+  },
   "compactifai-app": {
     "cluster": "power-local-llm",
     "urlSlug": "compactifai-app-review",
