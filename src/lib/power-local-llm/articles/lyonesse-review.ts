@@ -41,16 +41,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'offline ai meeting notes',
       'chat with pdf offline iphone',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse (version 2.0.7, updated on 23 October 2026) is an iPhone, iPad and Mac app for offline transcription, meeting notes and chat with your own documents.** The maker says audio, transcripts and documents are processed on the device and that no account is needed; every statement here comes from the App Store listing and the maker\'s own pages.',
+      '**Lyonesse (version 2.0.7, updated on 23 October 2026) is an iPhone, iPad and Mac app for offline transcription, meeting notes and chat with your own documents, and its Apple Watch app records on its own, without the iPhone nearby.** The maker says audio, transcripts and documents are processed on the device and that no account is needed. A recording made on the watch transfers to the iPhone when the watch is back in range, and the iPhone does the transcription and summaries. Every statement here comes from the App Store listing, the maker\'s own pages or the maker\'s review of this page.',
     quickAnswerTop: {
       en: {
         question: 'Does Lyonesse really work offline on iPhone and Mac?',
         answer:
           'Per the maker, yes: after the speech and AI models download once, recording, transcription, summaries and questions work in airplane mode. The privacy policy adds that audio never leaves the device, while anonymized usage and crash data are collected.',
         bullets: [
+          'Records on an Apple Watch on its own, with the iPhone out of range; the audio file transfers to the iPhone later, and the iPhone does the transcription and summaries.',
           'Live transcription with speaker labels in 15 languages, using Apple Speech or NVIDIA Parakeet.',
           'Summaries, key points and an Action Center that lists tasks, owners and due dates.',
           'Ask Lyonesse answers questions across notes, transcripts, PDFs and images, with citations.',
@@ -69,6 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Features Confirmed by the Sources', anchor: 'key-features' },
       { label: 'The Maker\'s Own Measurements', anchor: 'maker-measurements' },
       { label: 'Data Flow and Privacy', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
       { label: 'Competitors and Alternatives', anchor: 'vs-alternatives' },
@@ -93,11 +95,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch: records on its own, so the iPhone does not need to be nearby; when the watch is back in range the audio transfers to the iPhone, which transcribes and summarises it (maker).',
           'Maintenance: version 2.0.7 was released on 23 October 2026 after eight releases since 27 August, so no stale-project warning applies.',
           'Cost: free with one recording; after that a monthly or yearly subscription or a one-time lifetime purchase.',
           'Requirements: iOS, iPadOS or macOS 26.0 or later; the on-device AI works best on recent Apple hardware.',
           'Maker: an independent developer, with no published source code; the App Store seller also sells [Castmates](/power-local-llm/castmates-review).',
           'Evidence: the speed and privacy figures are the maker\'s own measurements, not independent tests.',
+          'Maker review: Josip Markovic, the developer, reviewed this page on 26 October 2026 and supplied corrections and a note (see From the Maker).',
         ],
         callouts: [
           {
@@ -116,6 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: 'Get It',
         content: [
           '**Lyonesse is an App Store download for iPhone, iPad and Mac; no Android, Windows or web version is listed.**',
@@ -124,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Option': 'iPhone and iPad', 'How to get it': '[Lyonesse on the App Store](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711), free with in-app purchases' },
           { 'Option': 'Mac', 'How to get it': 'Same App Store entry, macOS 26.0 or later per the listing' },
-          { 'Option': 'Apple Watch', 'How to get it': 'Recorder app, watchOS 11.0 or later; added in version 2.0.5' },
+          { 'Option': 'Apple Watch', 'How to get it': 'Recorder app, watchOS 11.0 or later; records on its own without the iPhone nearby and transfers the audio to the iPhone when back in range; added in version 2.0.5' },
           { 'Option': 'Paid options', 'How to get it': 'Monthly $7.99, yearly $29.99 or lifetime $59.99 (US store)' },
           { 'Option': 'Website', 'How to get it': '[lyonesse.app](https://lyonesse.app)' },
           { 'Option': 'Privacy policy', 'How to get it': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -138,11 +143,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse at a Glance',
         columns: ['Attribute', 'Lyonesse'],
         rows: [
-          { 'Attribute': 'Platform', 'Lyonesse': 'iPhone, iPad, Mac; Apple Watch recorder' },
+          { 'Attribute': 'Platform', 'Lyonesse': 'iPhone, iPad, Mac; Apple Watch records on its own' },
+          { 'Attribute': 'Apple Watch', 'Lyonesse': 'Standalone recorder; the iPhone transcribes and summarises the transferred audio' },
           { 'Attribute': 'Price', 'Lyonesse': 'Free first recording; subscription or lifetime' },
           { 'Attribute': 'License', 'Lyonesse': 'Proprietary, closed source' },
           { 'Attribute': 'Runs', 'Lyonesse': 'On the device; models download once' },
-          { 'Attribute': 'Languages', 'Lyonesse': '15 for transcription and summaries' },
+          { 'Attribute': 'Languages', 'Lyonesse': '15 for transcription; the app itself is translated into 14' },
           { 'Attribute': 'Real-time transcription', 'Lyonesse': 'Yes; live transcription and captions' },
           { 'Attribute': 'Speaker labels', 'Lyonesse': 'Yes' },
           { 'Attribute': 'Usable on CPU only', 'Lyonesse': 'Not stated; Apple hardware only' },
@@ -161,8 +167,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Item': 'Operating system', 'What the sources say': 'iOS, iPadOS, macOS and visionOS 26.0 or later; watchOS 11.0 for the Watch recorder (App Store)' },
           { 'Item': 'Best hardware', 'What the sources say': 'iPhone 15 Pro or later, iPad with an M-series chip, Mac with Apple silicon (maker\'s site)' },
-          { 'Item': 'AI engines', 'What the sources say': 'Apple Speech or NVIDIA Parakeet for transcription; Apple Intelligence or a downloadable local model for summaries and chat' },
-          { 'Item': 'Model download', 'What the sources say': 'Needed once, over a network; the maker\'s benchmark post lists Parakeet TDT v3 at about 467 MB' },
+          { 'Item': 'AI engines', 'What the sources say': 'Transcription: Apple SpeechAnalyzer where the language is supported, otherwise NVIDIA Parakeet TDT 0.6B v3, an open model from Hugging Face run through FluidAudio as CoreML. Speaker labels: FluidAudio\'s open diarization models. Summaries and chat: Apple Intelligence where the device has it, otherwise an open Qwen3 model (0.6B, 1.7B or 4B, 4-bit, from the mlx-community repositories on Hugging Face) running on MLX. Image understanding: Qwen2-VL 2B the same way (maker)' },
+          { 'Item': 'Apple Intelligence', 'What the sources say': 'Not required, per the maker: without it, summaries and chat use the downloadable local model; the terms, last updated on 28 October 2025, still say otherwise' },
+          { 'Item': 'Model download', 'What the sources say': 'Needed once, over a network, started from Settings; the maker puts the Parakeet model at about 485 MB and the speaker-label models at about 18 MB' },
           { 'Item': 'Memory', 'What the sources say': 'No RAM figure is stated anywhere' },
         ],
         note: 'The App Store entry decides whether the app installs; the maker\'s site lists no operating-system version.',
@@ -199,11 +206,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Every item below comes from the App Store description, its version history or the maker\'s website; none has been independently tested.**',
         ],
         items: [
+          '**Recording on the Apple Watch.** The Watch app records on its own, so the iPhone does not need to be nearby while you record. When the watch is back in range, the audio file transfers to the iPhone, which does the transcription and summaries (maker; version 2.0.5; PromptQuorum did not test the Watch app).',
           '**Transcription.** Live transcription with speaker labels in 15 languages; version 2.0.4 added live translated captions, custom vocabulary and a clean verbatim view.',
           '**Summaries and tasks.** AI summaries, key points and decisions, plus an Action Center that extracts tasks, owners and due dates.',
           '**Ask Lyonesse and document chat.** Questions across notes, transcripts, PDFs, Word, Excel, PowerPoint and images, with citations and on-device OCR; Projects group recordings and documents.',
           '**Meeting assistant.** Calendar linking, live captions, name-mention alerts, AI-drafted minutes and action items sent to Apple Reminders; on the Mac it records the microphone and system audio, so no bot joins the call.',
-          '**Apple ecosystem.** A Watch recorder (version 2.0.5), widgets, Siri and Shortcuts support (version 2.0.1) and optional iCloud sync.',
+          '**Apple ecosystem.** Widgets, Siri and Shortcuts support (version 2.0.1) and iCloud sync, which the maker says is on by default.',
         ],
         note: 'Version 2.0.6 reorganised the app into Notes, Tasks and Folders tabs plus Search, with meetings now inside Notes.',
       },
@@ -220,8 +228,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Data Flow and Privacy',
         content: [
-          '**The privacy policy, last updated on 9 October 2026, says audio recordings never leave the device and that transcription, summaries and document analysis run on it, with no data sent to external servers for processing.** No account is needed, and the policy states that Lyonesse integrates no third-party analytics, advertising or tracking services and does not collect recordings, transcripts, documents, names, emails, location or contacts.',
-          'Some data does move. The policy describes anonymized usage statistics (app opens, feature use, device type, system and app version) and crash reports without naming the tooling or saying how they are sent; the App Store privacy labels list device ID, product interaction and crash data as collected and not linked to you. Transcripts and summaries sync between your own devices through iCloud, and device backups include app data. The maker says it runs no sync servers and cannot see iCloud data. Apple Intelligence, the App Store, iCloud and backups fall under Apple\'s own policies.',
+          '**The privacy policy, last updated on 9 October 2026, says audio recordings never leave the device and that transcription, summaries and document analysis run on it, with no data sent to external servers for processing.** No account is needed, and the policy states that Lyonesse does not collect recordings, transcripts, documents, names, emails, location or contacts. Its line saying that no third-party analytics are integrated is out of date, according to the maker, who is correcting it.',
+          'Some data does move. The maker says the app sends anonymous usage events to Mixpanel and that RevenueCat handles subscriptions, never audio, transcripts or notes. The policy describes anonymized usage statistics (app opens, feature use, device type, system and app version) and crash reports; the App Store privacy labels list device ID, product interaction and crash data as collected and not linked to you. Transcripts and summaries sync between your own devices through iCloud, which the maker says is on by default, and device backups include app data. The maker says it runs no sync servers and cannot see iCloud data. Apple Intelligence, the App Store, iCloud and backups fall under Apple\'s own policies.',
         ],
         callouts: [
           {
@@ -229,6 +237,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'These are the developer\'s declarations, not audit results, and the source code is not published. PromptQuorum has not inspected the app\'s network traffic. The policy and terms name no legal entity or postal address; the App Store copyright line reads "Markovic Software, obrt za usluge" and the terms apply Croatian law.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Josip Markovic, the developer of Lyonesse, reviewed the draft of this review and sent corrections and the note below. It is presented as the developer\'s own words, not as PromptQuorum\'s independent editorial assessment. His corrections on languages, models, the Apple Watch recorder, the sync default, analytics and the hardware requirement are applied in this review:',
+          '"I built Lyonesse because I wanted meeting notes without a bot joining the call and without my audio going to someone\'s server. Everything runs on the device: Apple\'s speech model or Parakeet for transcription, Apple Intelligence or a small open model for summaries. When I measured it, a 10-minute meeting sent 0.02 MB from Lyonesse against 115.7 MB from Notion\'s meeting notes. Next up are the things users asked for: subfolders, a default note format per folder and one-off AI instructions on a note."',
+        ],
+        note: '— Josip Markovic, developer',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -244,9 +261,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What We Could Not Verify',
         items: [
           '**Accuracy in practice.** PromptQuorum did not record or transcribe anything, so transcript quality, speaker-label accuracy, summary quality and coverage of all 15 languages are not assessed.',
-          '**Sync default.** The privacy policy says iCloud sync is on by default, while the App Store description says optional iCloud sync is off by default.',
-          '**"Nothing leaves your device."** The site says nothing is uploaded, while the policy and App Store labels describe anonymized analytics and crash data; where those go is not stated.',
-          '**Hardware requirement.** The terms, last updated on 28 October 2025, say the app requires Apple Intelligence-capable hardware, while the site describes a downloadable local model as an alternative.',
+          '**Sync default.** The maker confirms that iCloud sync is on by default, as the privacy policy says; the App Store description, which says it is off, is wrong and he plans to fix it in the next release. PromptQuorum did not check the setting.',
+          '**"Nothing leaves your device."** The site says nothing is uploaded, while the maker says the app sends anonymous usage events to Mixpanel and the policy line about third-party analytics is being corrected. PromptQuorum has not inspected network traffic.',
+          '**Hardware requirement.** The terms, last updated on 28 October 2025, still say the app requires Apple Intelligence-capable hardware; the maker says that is outdated and that a downloadable local model takes over without it.',
           '**Track record.** The App Store showed only a handful of ratings when checked, and the app carried the name Inscribe until 3 September 2026.',
           '**Regulated use.** Suitability for medical, legal or other regulated recording was not assessed.',
         ],
@@ -267,6 +284,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+          {
+            q: 'Can I record with only the Apple Watch?',
+            a: 'Yes, per the maker: the Watch app records on its own, and the iPhone does not need to be nearby while you record. When the watch is back in range, the audio file transfers to the iPhone, where the transcription and summaries happen. PromptQuorum did not test the Watch app.',
+          },
           {
             q: 'What does Lyonesse cost outside the United States?',
             a: 'On the App Store storefronts checked on 26 October 2026, Monthly / Annual / lifetime Unlimited cost 8,99 € / 34,99 € / 69,99 € in Germany, Spain and France, ¥1,300 / ¥5,000 / ¥10,000 in Japan, ₩12,000 / ₩49,000 / ₩99,000 in South Korea and R$ 49,90 / R$ 199,90 / R$ 399,90 in Brazil.',
@@ -289,7 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Lyonesse is a broad, actively updated way to get transcripts, meeting notes and document chat on an iPhone or Mac, with one free recording to try it and a lifetime-purchase option next to the subscriptions. Against that, it is closed-source, comes from one independent developer, needs a 26-series operating system, rests its privacy and speed claims on the maker\'s own measurements, and states the iCloud sync default two different ways. It suits people with recent Apple hardware who want account-free notes and can test the free recording first; anyone recording sensitive or regulated material should read the privacy policy and the sync setting themselves before relying on it.',
+          'Lyonesse is a broad, actively updated way to get transcripts, meeting notes and document chat on an iPhone or Mac, and its Apple Watch app can record on its own, with the iPhone doing the transcription later. A free recording lets you try it, and a lifetime-purchase option sits next to the subscriptions. Against that, it is closed-source, comes from one independent developer, needs a 26-series operating system, rests its privacy and speed claims on the maker\'s own measurements, and still carries outdated wording in its terms, privacy policy and App Store text, which the maker says he is correcting. It suits people with recent Apple hardware who want account-free notes and can test the free recording first; anyone recording sensitive or regulated material should read the privacy policy and the sync setting themselves before relying on it.',
       },
       sources: {
         id: 'sources',
@@ -300,6 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lyonesse privacy policy](https://lyonesse.app/privacy.html) — data collection and sync, last updated 9 October 2026.',
           '[Lyonesse terms](https://lyonesse.app/terms.html) — subscriptions, refunds and recording consent, last updated 28 October 2025.',
           '[Speech benchmark post](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html) and [upload measurement post](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — the maker\'s own measurements.',
+          'Email from the developer to PromptQuorum, 26 October 2026 — corrections on languages, models, the Watch recorder, sync, analytics and requirements, plus the maker note; not independently verified.',
         ],
       },
       relatedReading: {
@@ -380,16 +402,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'offline ki meeting notizen',
       'mit pdf chatten offline iphone',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse (Version 2.0.7, aktualisiert am 23. Oktober 2026) ist eine App für iPhone, iPad und Mac für Offline-Transkription, Meeting-Notizen und den Chat mit Ihren eigenen Dokumenten.** Laut Hersteller werden Audio, Transkripte und Dokumente auf dem Gerät verarbeitet, und ein Konto ist nicht nötig; jede Aussage hier stammt aus dem App-Store-Eintrag und den eigenen Seiten des Herstellers.',
+      '**Lyonesse (Version 2.0.7, aktualisiert am 23. Oktober 2026) ist eine App für iPhone, iPad und Mac für Offline-Transkription, Meeting-Notizen und den Chat mit Ihren eigenen Dokumenten, und ihre Apple-Watch-App nimmt eigenständig auf, ohne dass das iPhone in der Nähe sein muss.** Laut Hersteller werden Audio, Transkripte und Dokumente auf dem Gerät verarbeitet, und ein Konto ist nicht nötig. Eine auf der Watch gemachte Aufnahme wird auf das iPhone übertragen, sobald die Watch wieder in Reichweite ist, und das iPhone übernimmt die Transkription und die Zusammenfassungen. Jede Aussage hier stammt aus dem App-Store-Eintrag, den eigenen Seiten des Herstellers oder der Durchsicht dieser Seite durch den Hersteller.',
     quickAnswerTop: {
       de: {
         question: 'Funktioniert Lyonesse auf iPhone und Mac wirklich offline?',
         answer:
           'Laut Hersteller ja: Nachdem die Sprach- und KI-Modelle einmalig heruntergeladen wurden, funktionieren Aufnahme, Transkription, Zusammenfassungen und Fragen im Flugmodus. Die Datenschutzerklärung ergänzt, dass Audio das Gerät nie verlässt, anonymisierte Nutzungs- und Absturzdaten jedoch erfasst werden.',
         bullets: [
+          'Nimmt auf einer Apple Watch eigenständig auf, auch wenn das iPhone außer Reichweite ist; die Audiodatei wird später auf das iPhone übertragen, und das iPhone übernimmt die Transkription und die Zusammenfassungen.',
           'Live-Transkription mit Sprecherkennzeichnung in 15 Sprachen, mit Apple Speech oder NVIDIA Parakeet.',
           'Zusammenfassungen, Kernpunkte und ein Action Center, das Aufgaben, Verantwortliche und Fristen auflistet.',
           'Ask Lyonesse beantwortet Fragen zu Notizen, Transkripten, PDFs und Bildern, mit Quellenangaben.',
@@ -408,6 +431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Von den Quellen bestätigte Funktionen', anchor: 'key-features' },
       { label: 'Die eigenen Messungen des Herstellers', anchor: 'maker-measurements' },
       { label: 'Datenfluss und Datenschutz', anchor: 'privacy' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Für wen sich die App eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
       { label: 'Wettbewerber und Alternativen', anchor: 'vs-alternatives' },
@@ -432,11 +456,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch: nimmt eigenständig auf, das iPhone muss also nicht in der Nähe sein; sobald die Watch wieder in Reichweite ist, wird das Audio auf das iPhone übertragen, das es transkribiert und zusammenfasst (Hersteller).',
           'Pflege: Version 2.0.7 erschien am 23. Oktober 2026 nach acht Releases seit dem 27. August; ein Warnhinweis für veraltete Projekte entfällt daher.',
           'Kosten: kostenlos mit einer Aufnahme; danach ein Monats- oder Jahresabo oder ein einmaliger Lifetime-Kauf.',
           'Anforderungen: iOS, iPadOS oder macOS 26.0 oder neuer; die KI auf dem Gerät arbeitet am besten auf aktueller Apple-Hardware.',
           'Hersteller: ein unabhängiger Entwickler, ohne veröffentlichten Quellcode; der App-Store-Anbieter verkauft auch [Castmates](/de/power-local-llm/castmates-review).',
           'Belege: Die Angaben zu Tempo und Datenschutz sind eigene Messungen des Herstellers, keine unabhängigen Tests.',
+          'Prüfung durch den Hersteller: Josip Markovic, der Entwickler, hat diese Seite am 26. Oktober 2026 durchgesehen und Korrekturen sowie eine Anmerkung geliefert (siehe Vom Entwickler).',
         ],
         callouts: [
           {
@@ -455,6 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: 'Bezugsquelle',
         content: [
           '**Lyonesse gibt es als Download im App Store für iPhone, iPad und Mac; eine Android-, Windows- oder Web-Version ist nicht gelistet.**',
@@ -463,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Option': 'iPhone und iPad', 'Bezug': '[Lyonesse im App Store](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711), kostenlos mit In-App-Käufen' },
           { 'Option': 'Mac', 'Bezug': 'Derselbe App-Store-Eintrag, laut Eintrag macOS 26.0 oder neuer' },
-          { 'Option': 'Apple Watch', 'Bezug': 'Recorder-App, watchOS 11.0 oder neuer; mit Version 2.0.5 hinzugekommen' },
+          { 'Option': 'Apple Watch', 'Bezug': 'Recorder-App, watchOS 11.0 oder neuer; nimmt eigenständig ohne iPhone in der Nähe auf und überträgt das Audio auf das iPhone, sobald die Watch wieder in Reichweite ist; mit Version 2.0.5 hinzugekommen' },
           { 'Option': 'Bezahloptionen', 'Bezug': 'Monatlich 8,99 €, jährlich 34,99 € oder Lifetime 69,99 € (deutscher Store)' },
           { 'Option': 'Website', 'Bezug': '[lyonesse.app](https://lyonesse.app)' },
           { 'Option': 'Datenschutzerklärung', 'Bezug': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -477,11 +504,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse im Überblick',
         columns: ['Merkmal', 'Lyonesse'],
         rows: [
-          { 'Merkmal': 'Plattform', 'Lyonesse': 'iPhone, iPad, Mac; Recorder für die Apple Watch' },
+          { 'Merkmal': 'Plattform', 'Lyonesse': 'iPhone, iPad, Mac; Apple Watch nimmt eigenständig auf' },
+          { 'Merkmal': 'Apple Watch', 'Lyonesse': 'Eigenständiger Recorder; das iPhone transkribiert und fasst das übertragene Audio zusammen' },
           { 'Merkmal': 'Preis', 'Lyonesse': 'Erste Aufnahme gratis; Abo oder Lifetime' },
           { 'Merkmal': 'Lizenz', 'Lyonesse': 'Proprietär, quellgeschlossen' },
           { 'Merkmal': 'Ausführung', 'Lyonesse': 'Auf dem Gerät; Modelle werden einmal geladen' },
-          { 'Merkmal': 'Sprachen', 'Lyonesse': '15 für Transkription und Zusammenfassungen' },
+          { 'Merkmal': 'Sprachen', 'Lyonesse': '15 für die Transkription; die App selbst ist in 14 Sprachen übersetzt' },
           { 'Merkmal': 'Echtzeit-Transkription', 'Lyonesse': 'Ja; Live-Transkription und Untertitel' },
           { 'Merkmal': 'Sprecherkennzeichnung', 'Lyonesse': 'Ja' },
           { 'Merkmal': 'Nur mit CPU nutzbar', 'Lyonesse': 'Nicht angegeben; nur Apple-Hardware' },
@@ -500,8 +528,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Punkt': 'Betriebssystem', 'Angaben der Quellen': 'iOS, iPadOS, macOS und visionOS 26.0 oder neuer; watchOS 11.0 für den Watch-Recorder (App Store)' },
           { 'Punkt': 'Beste Hardware', 'Angaben der Quellen': 'iPhone 15 Pro oder neuer, iPad mit M-Chip, Mac mit Apple Silicon (Website des Herstellers)' },
-          { 'Punkt': 'KI-Engines', 'Angaben der Quellen': 'Apple Speech oder NVIDIA Parakeet für die Transkription; Apple Intelligence oder ein ladbares lokales Modell für Zusammenfassungen und Chat' },
-          { 'Punkt': 'Modell-Download', 'Angaben der Quellen': 'Einmal über ein Netzwerk nötig; der Benchmark-Beitrag des Herstellers nennt für Parakeet TDT v3 etwa 467 MB' },
+          { 'Punkt': 'KI-Engines', 'Angaben der Quellen': 'Transkription: Apple SpeechAnalyzer, wo die Sprache unterstützt wird, andernfalls NVIDIA Parakeet TDT 0.6B v3, ein offenes Modell von Hugging Face, das über FluidAudio als CoreML ausgeführt wird. Sprecherkennzeichnung: die offenen Diarisierungsmodelle von FluidAudio. Zusammenfassungen und Chat: Apple Intelligence, wo das Gerät sie bietet, andernfalls ein offenes Qwen3-Modell (0.6B, 1.7B oder 4B, 4 Bit, aus den mlx-community-Repositories auf Hugging Face), das auf MLX läuft. Bildverständnis: Qwen2-VL 2B auf dieselbe Weise (Hersteller)' },
+          { 'Punkt': 'Apple Intelligence', 'Angaben der Quellen': 'Laut Hersteller nicht erforderlich: Ohne sie nutzen Zusammenfassungen und Chat das herunterladbare lokale Modell; die Nutzungsbedingungen, zuletzt aktualisiert am 28. Oktober 2025, sagen weiterhin etwas anderes' },
+          { 'Punkt': 'Modell-Download', 'Angaben der Quellen': 'Einmalig nötig, über ein Netzwerk, gestartet in den Einstellungen; der Hersteller beziffert das Parakeet-Modell auf etwa 485 MB und die Modelle für die Sprecherkennzeichnung auf etwa 18 MB' },
           { 'Punkt': 'Arbeitsspeicher', 'Angaben der Quellen': 'Nirgends wird ein RAM-Wert genannt' },
         ],
         note: 'Maßgeblich dafür, ob die App installiert werden kann, ist der App-Store-Eintrag; die Website des Herstellers nennt keine Betriebssystemversion.',
@@ -538,11 +567,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Jeder Punkt unten stammt aus der App-Store-Beschreibung, ihrem Versionsverlauf oder von der Website des Herstellers; keiner wurde unabhängig getestet.**',
         ],
         items: [
+          '**Aufnahme auf der Apple Watch.** Die Watch-App nimmt eigenständig auf, das iPhone muss also während der Aufnahme nicht in der Nähe sein. Sobald die Watch wieder in Reichweite ist, wird die Audiodatei auf das iPhone übertragen, das die Transkription und die Zusammenfassungen übernimmt (Hersteller; Version 2.0.5; PromptQuorum hat die Watch-App nicht getestet).',
           '**Transkription.** Live-Transkription mit Sprecherkennzeichnung in 15 Sprachen; Version 2.0.4 brachte übersetzte Live-Untertitel, ein eigenes Vokabular und eine bereinigte Wortlaut-Ansicht.',
           '**Zusammenfassungen und Aufgaben.** KI-Zusammenfassungen, Kernpunkte und Entscheidungen sowie ein Action Center, das Aufgaben, Verantwortliche und Fristen extrahiert.',
           '**Ask Lyonesse und Dokument-Chat.** Fragen zu Notizen, Transkripten, PDFs, Word, Excel, PowerPoint und Bildern, mit Quellenangaben und OCR auf dem Gerät; Projekte bündeln Aufnahmen und Dokumente.',
           '**Meeting-Assistent.** Kalenderverknüpfung, Live-Untertitel, Hinweise bei Namensnennung, von der KI entworfene Protokolle und Aufgaben, die an Apple Erinnerungen gesendet werden; auf dem Mac nimmt die App Mikrofon und Systemton auf, sodass kein Bot dem Gespräch beitritt.',
-          '**Apple-Umfeld.** Ein Watch-Recorder (Version 2.0.5), Widgets, Siri- und Kurzbefehle-Unterstützung (Version 2.0.1) und optionale iCloud-Synchronisierung.',
+          '**Apple-Umfeld.** Widgets, Siri- und Kurzbefehle-Unterstützung (Version 2.0.1) sowie iCloud-Synchronisierung, die laut Hersteller standardmäßig aktiviert ist.',
         ],
         note: 'Version 2.0.6 ordnete die App neu in die Tabs Notizen, Aufgaben und Ordner plus Suche; Meetings liegen nun in den Notizen.',
       },
@@ -559,8 +589,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Datenfluss und Datenschutz',
         content: [
-          '**Laut Datenschutzerklärung, zuletzt aktualisiert am 9. Oktober 2026, verlassen Audioaufnahmen das Gerät nie, und Transkription, Zusammenfassungen und Dokumentanalyse laufen darauf, ohne dass Daten zur Verarbeitung an externe Server gehen.** Ein Konto ist nicht nötig, und die Erklärung gibt an, dass Lyonesse keine Analyse-, Werbe- oder Tracking-Dienste von Drittanbietern einbindet und weder Aufnahmen, Transkripte, Dokumente, Namen, E-Mail-Adressen, Standort noch Kontakte erfasst.',
-          'Einige Daten bewegen sich dennoch. Die Erklärung beschreibt anonymisierte Nutzungsstatistiken (App-Starts, Funktionsnutzung, Gerätetyp, System- und App-Version) und Absturzberichte, ohne die eingesetzten Werkzeuge zu nennen oder zu sagen, wie sie gesendet werden; die Datenschutzangaben im App Store führen Geräte-ID, Produktinteraktion und Absturzdaten als erfasst und nicht mit Ihnen verknüpft auf. Transkripte und Zusammenfassungen werden über iCloud zwischen Ihren eigenen Geräten synchronisiert, und Geräte-Backups enthalten App-Daten. Der Hersteller gibt an, keine Sync-Server zu betreiben und iCloud-Daten nicht einsehen zu können. Apple Intelligence, der App Store, iCloud und Backups unterliegen Apples eigenen Richtlinien.',
+          '**Laut Datenschutzerklärung, zuletzt aktualisiert am 9. Oktober 2026, verlassen Audioaufnahmen das Gerät nie, und Transkription, Zusammenfassungen und Dokumentanalyse laufen darauf, ohne dass Daten zur Verarbeitung an externe Server gehen.** Ein Konto ist nicht nötig, und die Erklärung gibt an, dass Lyonesse weder Aufnahmen, Transkripte, Dokumente, Namen, E-Mail-Adressen, Standort noch Kontakte erfasst. Der Satz, dass keine Analysedienste von Drittanbietern eingebunden sind, ist laut Hersteller veraltet; er korrigiert ihn gerade.',
+          'Einige Daten werden dennoch übertragen. Der Hersteller sagt, dass die App anonyme Nutzungsereignisse an Mixpanel sendet und dass RevenueCat die Abonnements abwickelt, nie jedoch Audio, Transkripte oder Notizen. Die Erklärung beschreibt anonymisierte Nutzungsstatistiken (App-Starts, Funktionsnutzung, Gerätetyp, System- und App-Version) und Absturzberichte; die Datenschutzangaben im App Store führen Geräte-ID, Produktinteraktion und Absturzdaten als erfasst und nicht mit Ihnen verknüpft auf. Transkripte und Zusammenfassungen werden über iCloud zwischen Ihren eigenen Geräten synchronisiert, was laut Hersteller standardmäßig aktiviert ist, und Geräte-Backups enthalten App-Daten. Der Hersteller sagt, er betreibe keine Synchronisierungsserver und könne iCloud-Daten nicht einsehen. Apple Intelligence, der App Store, iCloud und Backups unterliegen den eigenen Richtlinien von Apple.',
         ],
         callouts: [
           {
@@ -568,6 +598,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Dies sind Angaben des Entwicklers, keine Prüfergebnisse, und der Quellcode ist nicht veröffentlicht. PromptQuorum hat den Netzwerkverkehr der App nicht untersucht. Erklärung und Bedingungen nennen weder ein Unternehmen noch eine Postanschrift; die Copyright-Zeile im App Store lautet „Markovic Software, obrt za usluge“, und die Bedingungen wenden kroatisches Recht an.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Josip Markovic, der Entwickler von Lyonesse, hat den Entwurf dieser Rezension durchgesehen und Korrekturen sowie die folgende Anmerkung geschickt. Sie wird als Aussage des Entwicklers wiedergegeben, nicht als unabhängige redaktionelle Bewertung von PromptQuorum. Seine Korrekturen zu Sprachen, Modellen, dem Apple-Watch-Recorder, dem Standard der Synchronisierung, den Analysediensten und der Hardware-Anforderung sind in diese Rezension eingearbeitet:',
+          '„Ich habe Lyonesse gebaut, weil ich Meeting-Notizen wollte, ohne dass ein Bot dem Gespräch beitritt und ohne dass mein Audio auf dem Server von irgendjemandem landet. Alles läuft auf dem Gerät: Apples Sprachmodell oder Parakeet für die Transkription, Apple Intelligence oder ein kleines offenes Modell für die Zusammenfassungen. Als ich es gemessen habe, sendete ein 10-minütiges Meeting 0,02 MB von Lyonesse, gegenüber 115,7 MB bei den Meeting-Notizen von Notion. Als Nächstes folgen die Dinge, die sich Nutzer gewünscht haben: Unterordner, ein Standard-Notizformat pro Ordner und einmalige KI-Anweisungen zu einer Notiz.“',
+        ],
+        note: '— Josip Markovic, Entwickler',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -583,9 +622,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was wir nicht überprüfen konnten',
         items: [
           '**Genauigkeit in der Praxis.** PromptQuorum hat nichts aufgenommen oder transkribiert; Qualität des Transkripts, Genauigkeit der Sprecherkennzeichnung, Qualität der Zusammenfassungen und die Abdeckung aller 15 Sprachen werden daher nicht bewertet.',
-          '**Standard der Synchronisierung.** Laut Datenschutzerklärung ist die iCloud-Synchronisierung standardmäßig aktiv, während die App-Store-Beschreibung sagt, die optionale iCloud-Synchronisierung sei standardmäßig aus.',
-          '**„Nothing leaves your device.“** Die Website sagt, nichts werde hochgeladen, während Erklärung und App-Store-Angaben anonymisierte Analyse- und Absturzdaten beschreiben; wohin diese gehen, ist nicht angegeben.',
-          '**Hardware-Voraussetzung.** Die Bedingungen, zuletzt aktualisiert am 28. Oktober 2025, sagen, die App setze Apple-Intelligence-fähige Hardware voraus, während die Website ein ladbares lokales Modell als Alternative beschreibt.',
+          '**Standard der Synchronisierung.** Der Hersteller bestätigt, dass die iCloud-Synchronisierung standardmäßig aktiviert ist, wie es die Datenschutzerklärung sagt; die Beschreibung im App Store, die das Gegenteil angibt, ist falsch, und er plant, sie mit der nächsten Version zu korrigieren. PromptQuorum hat die Einstellung nicht geprüft.',
+          '**„Nichts verlässt Ihr Gerät.“** Die Website sagt, es werde nichts hochgeladen, während der Hersteller angibt, dass die App anonyme Nutzungsereignisse an Mixpanel sendet und der Satz der Erklärung zu Analysediensten von Drittanbietern gerade korrigiert wird. PromptQuorum hat den Netzwerkverkehr nicht untersucht.',
+          '**Hardware-Anforderung.** Die Nutzungsbedingungen, zuletzt aktualisiert am 28. Oktober 2025, sagen weiterhin, die App setze Hardware mit Apple-Intelligence-Unterstützung voraus; der Hersteller sagt, das sei veraltet und ein herunterladbares lokales Modell übernehme ohne sie.',
           '**Erfahrungswerte.** Der App Store zeigte bei der Prüfung nur wenige Bewertungen, und die App hieß bis zum 3. September 2026 Inscribe.',
           '**Regulierter Einsatz.** Die Eignung für medizinische, juristische oder andere regulierte Aufnahmen wurde nicht bewertet.',
         ],
@@ -606,6 +645,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
+          {
+            q: 'Kann ich nur mit der Apple Watch aufnehmen?',
+            a: 'Ja, laut Hersteller: Die Watch-App nimmt eigenständig auf, und das iPhone muss während der Aufnahme nicht in der Nähe sein. Sobald die Watch wieder in Reichweite ist, wird die Audiodatei auf das iPhone übertragen, wo die Transkription und die Zusammenfassungen stattfinden. PromptQuorum hat die Watch-App nicht getestet.',
+          },
           {
             q: 'Was kostet Lyonesse außerhalb der USA?',
             a: 'In den am 26. Oktober 2026 geprüften App-Store-Ländern kosteten Monthly / Annual / lebenslanges Unlimited 8,99 € / 34,99 € / 69,99 € in Deutschland, Spanien und Frankreich, 1.300 ¥ / 5.000 ¥ / 10.000 ¥ in Japan, 12.000 ₩ / 49.000 ₩ / 99.000 ₩ in Südkorea und R$ 49,90 / R$ 199,90 / R$ 399,90 in Brasilien.',
@@ -628,7 +671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Lyonesse ist ein breit angelegter, aktiv gepflegter Weg, auf dem iPhone oder Mac Transkripte, Meeting-Notizen und Dokument-Chat zu erhalten, mit einer kostenlosen Aufnahme zum Ausprobieren und einer Lifetime-Option neben den Abos. Dem stehen gegenüber: Die App ist quellgeschlossen, stammt von einem einzelnen unabhängigen Entwickler, braucht ein Betriebssystem der Version 26, stützt ihre Aussagen zu Datenschutz und Tempo auf eigene Messungen des Herstellers und nennt den Standard der iCloud-Synchronisierung auf zwei verschiedene Arten. Sie passt zu Menschen mit aktueller Apple-Hardware, die Notizen ohne Konto möchten und zuerst die kostenlose Aufnahme testen können; wer sensible oder regulierte Inhalte aufnimmt, sollte die Datenschutzerklärung und die Sync-Einstellung selbst lesen, bevor er sich darauf verlässt.',
+          'Lyonesse ist ein breit angelegter, aktiv gepflegter Weg, auf dem iPhone oder Mac Transkripte, Meeting-Notizen und Dokument-Chat zu erhalten, und die Apple-Watch-App kann eigenständig aufnehmen, wobei das iPhone die Transkription später übernimmt. Eine kostenlose Aufnahme erlaubt das Ausprobieren, und neben den Abos gibt es einen einmaligen Lifetime-Kauf. Dem stehen gegenüber: Die App ist quellgeschlossen, stammt von einem einzelnen unabhängigen Entwickler, erfordert ein Betriebssystem der Version 26, stützt ihre Aussagen zu Datenschutz und Geschwindigkeit auf die eigenen Messungen des Herstellers und enthält in Nutzungsbedingungen, Datenschutzerklärung und App-Store-Text weiterhin veraltete Formulierungen, die der Hersteller nach eigener Aussage korrigiert. Sie eignet sich für Menschen mit aktueller Apple-Hardware, die Notizen ohne Konto wünschen und die kostenlose Aufnahme zuerst testen können; wer sensible oder regulierte Inhalte aufnimmt, sollte die Datenschutzerklärung und die Synchronisierungseinstellung selbst lesen, bevor er sich darauf verlässt.',
       },
       sources: {
         id: 'sources',
@@ -639,6 +682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Datenschutzerklärung von Lyonesse](https://lyonesse.app/privacy.html) — Datenerhebung und Synchronisierung, zuletzt aktualisiert am 9. Oktober 2026.',
           '[Nutzungsbedingungen von Lyonesse](https://lyonesse.app/terms.html) — Abos, Erstattungen und Aufnahmeeinwilligung, zuletzt aktualisiert am 28. Oktober 2025.',
           '[Sprach-Benchmark](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html) und [Upload-Messung](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — die eigenen Messungen des Herstellers.',
+          'E-Mail des Entwicklers an PromptQuorum, 26. Oktober 2026 — Korrekturen zu Sprachen, Modellen, dem Watch-Recorder, der Synchronisierung, den Analysediensten und den Anforderungen sowie die Anmerkung des Herstellers; nicht unabhängig überprüft.',
         ],
       },
       relatedReading: {
@@ -687,16 +731,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'notas de reuniones con ia sin conexión',
       'chat con pdf sin conexión en iphone',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse (versión 2.0.7, actualizada el 23 de octubre de 2026) es una app para iPhone, iPad y Mac de transcripción sin conexión, notas de reuniones y chat con tus propios documentos.** Según el creador, el audio, las transcripciones y los documentos se procesan en el dispositivo y no hace falta cuenta; todo lo que se afirma aquí procede de la ficha de la App Store y de las páginas del propio creador.',
+      '**Lyonesse (versión 2.0.7, actualizada el 23 de octubre de 2026) es una app para iPhone, iPad y Mac de transcripción sin conexión, notas de reuniones y chat con tus propios documentos, y su app para Apple Watch graba por sí sola, sin el iPhone cerca.** Según el creador, el audio, las transcripciones y los documentos se procesan en el dispositivo y no hace falta cuenta. Una grabación hecha en el reloj se transfiere al iPhone cuando el reloj vuelve a estar a su alcance, y es el iPhone quien hace la transcripción y los resúmenes. Todo lo que se afirma aquí procede de la ficha de la App Store, de las páginas del propio creador o de la revisión que el creador hizo de esta página.',
     quickAnswerTop: {
       es: {
         question: '¿Lyonesse funciona de verdad sin conexión en iPhone y Mac?',
         answer:
           'Según el creador, sí: tras descargar una sola vez los modelos de voz y de IA, la grabación, la transcripción, los resúmenes y las preguntas funcionan en modo avión. La política de privacidad añade que el audio nunca sale del dispositivo, aunque se recopilan datos anónimos de uso y de fallos.',
         bullets: [
+          'Graba por sí solo en un Apple Watch, con el iPhone fuera de alcance; el archivo de audio se transfiere después al iPhone, que hace la transcripción y los resúmenes.',
           'Transcripción en directo con etiquetas de hablante en 15 idiomas, con Apple Speech o NVIDIA Parakeet.',
           'Resúmenes, puntos clave y un Action Center que lista tareas, responsables y fechas límite.',
           'Ask Lyonesse responde preguntas sobre notas, transcripciones, PDF e imágenes, con citas.',
@@ -715,6 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Funciones confirmadas por las fuentes', anchor: 'key-features' },
       { label: 'Las mediciones del propio creador', anchor: 'maker-measurements' },
       { label: 'Flujo de datos y privacidad', anchor: 'privacy' },
+      { label: 'La palabra del desarrollador', anchor: 'from-the-maker' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
       { label: 'Competidores y alternativas', anchor: 'vs-alternatives' },
@@ -739,11 +785,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch: graba por sí solo, así que el iPhone no tiene que estar cerca; cuando el reloj vuelve a estar a su alcance, el audio se transfiere al iPhone, que lo transcribe y lo resume (creador).',
           'Mantenimiento: la versión 2.0.7 se publicó el 23 de octubre de 2026 tras ocho versiones desde el 27 de agosto, así que no se aplica ninguna advertencia de proyecto abandonado.',
           'Coste: gratis con una grabación; después, suscripción mensual o anual, o compra única vitalicia.',
           'Requisitos: iOS, iPadOS o macOS 26.0 o posterior; la IA en el dispositivo funciona mejor con hardware Apple reciente.',
           'Creador: un desarrollador independiente, sin código fuente publicado; el vendedor de la App Store también vende [Castmates](/es/power-local-llm/castmates-review).',
           'Evidencia: las cifras de velocidad y privacidad son mediciones del propio creador, no pruebas independientes.',
+          'Revisión del creador: Josip Markovic, el desarrollador, revisó esta página el 26 de octubre de 2026 y aportó correcciones y una nota (véase «La palabra del desarrollador»).',
         ],
         callouts: [
           {
@@ -762,6 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: 'Dónde conseguirlo',
         content: [
           '**Lyonesse se descarga desde la App Store para iPhone, iPad y Mac; no figura ninguna versión para Android, Windows ni web.**',
@@ -770,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Opción': 'iPhone y iPad', 'Cómo conseguirlo': '[Lyonesse en la App Store](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711), gratis con compras dentro de la app' },
           { 'Opción': 'Mac', 'Cómo conseguirlo': 'Misma ficha de la App Store, macOS 26.0 o posterior según la ficha' },
-          { 'Opción': 'Apple Watch', 'Cómo conseguirlo': 'App de grabación, watchOS 11.0 o posterior; añadida en la versión 2.0.5' },
+          { 'Opción': 'Apple Watch', 'Cómo conseguirlo': 'App de grabación, watchOS 11.0 o posterior; graba por sí sola sin el iPhone cerca y transfiere el audio al iPhone cuando vuelve a estar a su alcance; añadida en la versión 2.0.5' },
           { 'Opción': 'Opciones de pago', 'Cómo conseguirlo': 'Mensual 8,99 €, anual 34,99 € o vitalicia 69,99 € (tienda española)' },
           { 'Opción': 'Sitio web', 'Cómo conseguirlo': '[lyonesse.app](https://lyonesse.app)' },
           { 'Opción': 'Política de privacidad', 'Cómo conseguirlo': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -784,11 +833,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse de un vistazo',
         columns: ['Atributo', 'Lyonesse'],
         rows: [
-          { 'Atributo': 'Plataforma', 'Lyonesse': 'iPhone, iPad, Mac; app de grabación para Apple Watch' },
+          { 'Atributo': 'Plataforma', 'Lyonesse': 'iPhone, iPad, Mac; el Apple Watch graba por sí solo' },
+          { 'Atributo': 'Apple Watch', 'Lyonesse': 'Grabadora independiente; el iPhone transcribe y resume el audio transferido' },
           { 'Atributo': 'Precio', 'Lyonesse': 'Primera grabación gratis; suscripción o compra vitalicia' },
           { 'Atributo': 'Licencia', 'Lyonesse': 'Propietaria, código cerrado' },
           { 'Atributo': 'Se ejecuta', 'Lyonesse': 'En el dispositivo; los modelos se descargan una vez' },
-          { 'Atributo': 'Idiomas', 'Lyonesse': '15 para transcripción y resúmenes' },
+          { 'Atributo': 'Idiomas', 'Lyonesse': '15 para transcripción; la propia app está traducida a 14' },
           { 'Atributo': 'Transcripción en tiempo real', 'Lyonesse': 'Sí; transcripción y subtítulos en directo' },
           { 'Atributo': 'Etiquetas de hablante', 'Lyonesse': 'Sí' },
           { 'Atributo': 'Usable solo con CPU', 'Lyonesse': 'No se indica; solo hardware Apple' },
@@ -807,8 +857,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Elemento': 'Sistema operativo', 'Qué dicen las fuentes': 'iOS, iPadOS, macOS y visionOS 26.0 o posterior; watchOS 11.0 para la app de grabación del Watch (App Store)' },
           { 'Elemento': 'Mejor hardware', 'Qué dicen las fuentes': 'iPhone 15 Pro o posterior, iPad con chip de la serie M, Mac con Apple silicon (sitio del creador)' },
-          { 'Elemento': 'Motores de IA', 'Qué dicen las fuentes': 'Apple Speech o NVIDIA Parakeet para la transcripción; Apple Intelligence o un modelo local descargable para resúmenes y chat' },
-          { 'Elemento': 'Descarga de modelos', 'Qué dicen las fuentes': 'Necesaria una vez, con conexión; la publicación de pruebas del creador indica unos 467 MB para Parakeet TDT v3' },
+          { 'Elemento': 'Motores de IA', 'Qué dicen las fuentes': 'Transcripción: Apple SpeechAnalyzer cuando se admite el idioma; si no, NVIDIA Parakeet TDT 0.6B v3, un modelo abierto de Hugging Face que se ejecuta con FluidAudio como CoreML. Etiquetas de hablante: los modelos abiertos de diarización de FluidAudio. Resúmenes y chat: Apple Intelligence cuando el dispositivo la tiene; si no, un modelo abierto Qwen3 (0.6B, 1.7B o 4B, a 4 bits, de los repositorios mlx-community en Hugging Face) que se ejecuta en MLX. Comprensión de imágenes: Qwen2-VL 2B de la misma manera (creador)' },
+          { 'Elemento': 'Apple Intelligence', 'Qué dicen las fuentes': 'No es obligatoria, según el creador: sin ella, los resúmenes y el chat usan el modelo local descargable; los términos, actualizados por última vez el 28 de octubre de 2025, siguen diciendo lo contrario' },
+          { 'Elemento': 'Descarga de modelos', 'Qué dicen las fuentes': 'Necesaria una vez, con conexión, iniciada desde Ajustes; el creador calcula el modelo Parakeet en unos 485 MB y los modelos de etiquetas de hablante en unos 18 MB' },
           { 'Elemento': 'Memoria', 'Qué dicen las fuentes': 'No se indica ninguna cifra de RAM en ninguna fuente' },
         ],
         note: 'La ficha de la App Store es la que decide si la app se instala; el sitio del creador no indica ninguna versión del sistema operativo.',
@@ -845,11 +896,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cada punto de esta lista procede de la descripción de la App Store, de su historial de versiones o del sitio web del creador; ninguno se ha probado de forma independiente.**',
         ],
         items: [
+          '**Grabación en el Apple Watch.** La app del Watch graba por sí sola, así que el iPhone no tiene que estar cerca mientras grabas. Cuando el reloj vuelve a estar a su alcance, el archivo de audio se transfiere al iPhone, que hace la transcripción y los resúmenes (creador; versión 2.0.5; PromptQuorum no probó la app del Watch).',
           '**Transcripción.** Transcripción en directo con etiquetas de hablante en 15 idiomas; la versión 2.0.4 añadió subtítulos traducidos en directo, vocabulario personalizado y una vista literal limpia.',
           '**Resúmenes y tareas.** Resúmenes con IA, puntos clave y decisiones, además de un Action Center que extrae tareas, responsables y fechas límite.',
           '**Ask Lyonesse y chat con documentos.** Preguntas sobre notas, transcripciones, PDF, Word, Excel, PowerPoint e imágenes, con citas y OCR en el dispositivo; los Projects agrupan grabaciones y documentos.',
           '**Asistente de reuniones.** Vinculación con el calendario, subtítulos en directo, avisos cuando se menciona tu nombre, actas redactadas con IA y tareas enviadas a Recordatorios de Apple; en el Mac graba el micrófono y el audio del sistema, así que ningún bot se une a la llamada.',
-          '**Ecosistema Apple.** Una app de grabación para Watch (versión 2.0.5), widgets, compatibilidad con Siri y Atajos (versión 2.0.1) y sincronización opcional con iCloud.',
+          '**Ecosistema Apple.** Widgets, compatibilidad con Siri y Atajos (versión 2.0.1) y sincronización con iCloud, que según el creador está activada por defecto.',
         ],
         note: 'La versión 2.0.6 reorganizó la app en las pestañas Notas, Tareas y Carpetas más Búsqueda, y las reuniones pasaron a estar dentro de Notas.',
       },
@@ -866,8 +918,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Flujo de datos y privacidad',
         content: [
-          '**La política de privacidad, actualizada por última vez el 9 de octubre de 2026, dice que las grabaciones de audio nunca salen del dispositivo y que la transcripción, los resúmenes y el análisis de documentos se ejecutan en él, sin enviar datos a servidores externos para su procesamiento.** No hace falta cuenta, y la política afirma que Lyonesse no integra servicios de analítica, publicidad ni rastreo de terceros y que no recopila grabaciones, transcripciones, documentos, nombres, correos electrónicos, ubicación ni contactos.',
-          'Algunos datos sí se mueven. La política describe estadísticas de uso anonimizadas (aperturas de la app, uso de funciones, tipo de dispositivo, versión del sistema y de la app) e informes de fallos, sin nombrar las herramientas ni explicar cómo se envían; las etiquetas de privacidad de la App Store indican que se recopilan el identificador del dispositivo, la interacción con el producto y los datos de fallos, sin vincularlos a ti. Las transcripciones y los resúmenes se sincronizan entre tus propios dispositivos a través de iCloud, y las copias de seguridad del dispositivo incluyen los datos de la app. El creador dice que no gestiona servidores de sincronización y que no puede ver los datos de iCloud. Apple Intelligence, la App Store, iCloud y las copias de seguridad se rigen por las políticas de Apple.',
+          '**La política de privacidad, actualizada por última vez el 9 de octubre de 2026, dice que las grabaciones de audio nunca salen del dispositivo y que la transcripción, los resúmenes y el análisis de documentos se ejecutan en él, sin enviar datos a servidores externos para su procesamiento.** No hace falta cuenta, y la política afirma que Lyonesse no recopila grabaciones, transcripciones, documentos, nombres, correos electrónicos, ubicación ni contactos. Su línea que dice que no se integra ninguna analítica de terceros está desactualizada, según el creador, que la está corrigiendo.',
+          'Algunos datos sí se mueven. El creador dice que la app envía eventos de uso anónimos a Mixpanel y que RevenueCat gestiona las suscripciones, nunca el audio, las transcripciones ni las notas. La política describe estadísticas de uso anonimizadas (aperturas de la app, uso de funciones, tipo de dispositivo, versión del sistema y de la app) e informes de fallos; las etiquetas de privacidad de la App Store indican que se recopilan el identificador del dispositivo, la interacción con el producto y los datos de fallos, sin vincularlos a ti. Las transcripciones y los resúmenes se sincronizan entre tus propios dispositivos a través de iCloud, que según el creador está activada por defecto, y las copias de seguridad del dispositivo incluyen los datos de la app. El creador dice que no gestiona servidores de sincronización y que no puede ver los datos de iCloud. Apple Intelligence, la App Store, iCloud y las copias de seguridad se rigen por las políticas de Apple.',
         ],
         callouts: [
           {
@@ -875,6 +927,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Son declaraciones del desarrollador, no resultados de una auditoría, y el código fuente no está publicado. PromptQuorum no ha inspeccionado el tráfico de red de la app. La política y los términos no nombran ninguna entidad jurídica ni dirección postal; el copyright de la App Store dice "Markovic Software, obrt za usluge" y los términos aplican la ley croata.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La palabra del desarrollador',
+        content: [
+          'Josip Markovic, el desarrollador de Lyonesse, revisó el borrador de esta reseña y envió correcciones y la nota siguiente. Se presenta como palabras del propio desarrollador, no como valoración editorial independiente de PromptQuorum. Sus correcciones sobre idiomas, modelos, la grabadora del Apple Watch, la sincronización por defecto, la analítica y el requisito de hardware se han aplicado en esta reseña:',
+          '«Creé Lyonesse porque quería notas de reuniones sin que un bot se uniera a la llamada y sin que mi audio fuera al servidor de otra persona. Todo se ejecuta en el dispositivo: el modelo de voz de Apple o Parakeet para la transcripción, Apple Intelligence o un modelo abierto pequeño para los resúmenes. Cuando lo medí, una reunión de 10 minutos envió 0.02 MB desde Lyonesse frente a 115.7 MB de las notas de reuniones de Notion. Lo próximo son las cosas que pidieron los usuarios: subcarpetas, un formato de nota predeterminado por carpeta e instrucciones de IA puntuales en una nota.»',
+        ],
+        note: '— Josip Markovic, desarrollador',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -890,9 +951,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lo que no pudimos verificar',
         items: [
           '**Precisión en la práctica.** PromptQuorum no grabó ni transcribió nada, así que no se evalúan la calidad de las transcripciones, la precisión de las etiquetas de hablante, la calidad de los resúmenes ni la cobertura de los 15 idiomas.',
-          '**Sincronización por defecto.** La política de privacidad dice que la sincronización con iCloud está activada por defecto, mientras que la descripción de la App Store dice que la sincronización opcional con iCloud está desactivada por defecto.',
-          '**"Nada sale de tu dispositivo".** El sitio dice que no se sube nada, mientras que la política y las etiquetas de la App Store describen analítica anonimizada y datos de fallos; no se indica adónde van.',
-          '**Requisito de hardware.** Los términos, actualizados por última vez el 28 de octubre de 2025, dicen que la app requiere hardware compatible con Apple Intelligence, mientras que el sitio describe un modelo local descargable como alternativa.',
+          '**Sincronización por defecto.** El creador confirma que la sincronización con iCloud está activada por defecto, como dice la política de privacidad; la descripción de la App Store, que dice que está desactivada, es incorrecta y piensa corregirla en la próxima versión. PromptQuorum no comprobó el ajuste.',
+          '**"Nada sale de tu dispositivo".** El sitio dice que no se sube nada, mientras que el creador dice que la app envía eventos de uso anónimos a Mixpanel y que la línea de la política sobre analítica de terceros se está corrigiendo. PromptQuorum no ha inspeccionado el tráfico de red.',
+          '**Requisito de hardware.** Los términos, actualizados por última vez el 28 de octubre de 2025, siguen diciendo que la app requiere hardware compatible con Apple Intelligence; el creador dice que eso está desactualizado y que, sin ella, toma el relevo un modelo local descargable.',
           '**Trayectoria.** La App Store mostraba solo un puñado de valoraciones al consultarla, y la app se llamó Inscribe hasta el 3 de septiembre de 2026.',
           '**Uso regulado.** No se evaluó su idoneidad para grabaciones médicas, jurídicas u otras reguladas.',
         ],
@@ -913,6 +974,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
+          {
+            q: '¿Puedo grabar solo con el Apple Watch?',
+            a: 'Sí, según el creador: la app del Watch graba por sí sola y el iPhone no tiene que estar cerca mientras grabas. Cuando el reloj vuelve a estar a su alcance, el archivo de audio se transfiere al iPhone, donde se hacen la transcripción y los resúmenes. PromptQuorum no probó la app del Watch.',
+          },
           {
             q: '¿Cuánto cuesta Lyonesse fuera de Estados Unidos?',
             a: 'En las tiendas de la App Store consultadas el 26 de octubre de 2026, los planes mensual, anual y vitalicio Unlimited costaban 8,99 € / 34,99 € / 69,99 € en Alemania, España y Francia, ¥1,300 / ¥5,000 / ¥10,000 en Japón, ₩12,000 / ₩49,000 / ₩99,000 en Corea del Sur y R$ 49,90 / R$ 199,90 / R$ 399,90 en Brasil.',
@@ -935,7 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Lyonesse es una forma amplia y con actualizaciones activas de conseguir transcripciones, notas de reuniones y chat con documentos en un iPhone o un Mac, con una grabación gratuita para probarla y una opción de compra vitalicia junto a las suscripciones. En contra, es de código cerrado, procede de un único desarrollador independiente, necesita un sistema operativo de la serie 26, basa sus afirmaciones de privacidad y velocidad en mediciones del propio creador y indica de dos formas distintas la sincronización con iCloud por defecto. Encaja con quienes tienen hardware Apple reciente, quieren notas sin cuenta y pueden probar antes la grabación gratuita; quien grabe material sensible o regulado debería leer por sí mismo la política de privacidad y el ajuste de sincronización antes de fiarse de la app.',
+          'Lyonesse es una forma amplia y activamente actualizada de obtener transcripciones, notas de reuniones y chat con documentos en un iPhone o un Mac, y su app para Apple Watch puede grabar por sí sola, mientras el iPhone hace la transcripción más tarde. Una grabación gratuita permite probarla, y junto a las suscripciones hay una opción de compra única vitalicia. En contra, es de código cerrado, procede de un único desarrollador independiente, requiere un sistema operativo de la serie 26, basa sus afirmaciones de privacidad y velocidad en las mediciones del propio creador y todavía conserva redacción desactualizada en sus términos, su política de privacidad y el texto de la App Store, que según el creador está corrigiendo. Encaja con quienes tienen hardware Apple reciente, quieren notas sin cuenta y pueden probar antes la grabación gratuita; quien grabe material sensible o regulado debería leer por su cuenta la política de privacidad y el ajuste de sincronización antes de depender de ella.',
       },
       sources: {
         id: 'sources',
@@ -946,6 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Política de privacidad de Lyonesse](https://lyonesse.app/privacy.html) — recopilación de datos y sincronización, actualizada por última vez el 9 de octubre de 2026.',
           '[Términos de Lyonesse](https://lyonesse.app/terms.html) — suscripciones, reembolsos y consentimiento para grabar, actualizados por última vez el 28 de octubre de 2025.',
           '[Publicación de la prueba de voz](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html) y [publicación de la medición de subida de datos](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — las mediciones del propio creador.',
+          'Correo del desarrollador a PromptQuorum, 26 de octubre de 2026 — correcciones sobre idiomas, modelos, la grabadora del Watch, la sincronización, la analítica y los requisitos, más la nota del creador; no verificado de forma independiente.',
         ],
       },
       relatedReading: {
@@ -994,16 +1060,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'notes de réunion ia hors ligne',
       'chat avec pdf hors ligne iphone',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse (version 2.0.7, mise à jour le 23 octobre 2026) est une application iPhone, iPad et Mac de transcription hors ligne, de notes de réunion et de chat avec vos propres documents.** Selon le développeur, l’audio, les transcriptions et les documents sont traités sur l’appareil et aucun compte n’est nécessaire ; chaque affirmation ici provient de la fiche App Store et des pages du développeur.',
+      '**Lyonesse (version 2.0.7, mise à jour le 23 octobre 2026) est une application iPhone, iPad et Mac de transcription hors ligne, de notes de réunion et de chat avec vos propres documents, et son app Apple Watch enregistre de façon autonome, sans iPhone à proximité.** Selon le développeur, l’audio, les transcriptions et les documents sont traités sur l’appareil et aucun compte n’est nécessaire. Un enregistrement réalisé sur la montre est transféré vers l’iPhone dès que la montre est de nouveau à portée, et c’est l’iPhone qui assure la transcription et les résumés. Chaque affirmation ici provient de la fiche App Store, des pages du développeur ou de sa relecture de cette page.',
     quickAnswerTop: {
       fr: {
         question: 'Lyonesse fonctionne-t-elle vraiment hors ligne sur iPhone et Mac ?',
         answer:
           'Selon le développeur, oui : une fois les modèles de reconnaissance vocale et d’IA téléchargés, l’enregistrement, la transcription, les résumés et les questions fonctionnent en mode avion. La politique de confidentialité précise que l’audio ne quitte jamais l’appareil, mais que des données d’usage anonymisées et des rapports de plantage sont collectés.',
         bullets: [
+          'Enregistre sur une Apple Watch de façon autonome, iPhone hors de portée ; le fichier audio est transféré plus tard vers l’iPhone, qui assure la transcription et les résumés.',
           'Transcription en direct avec étiquettes de locuteurs dans 15 langues, via Apple Speech ou NVIDIA Parakeet.',
           'Résumés, points clés et un Action Center qui liste tâches, responsables et échéances.',
           'Ask Lyonesse répond à des questions sur les notes, transcriptions, PDF et images, avec citations.',
@@ -1022,6 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Fonctions confirmées par les sources', anchor: 'key-features' },
       { label: 'Les mesures du développeur', anchor: 'maker-measurements' },
       { label: 'Flux de données et confidentialité', anchor: 'privacy' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'À qui elle s’adresse', anchor: 'who-should-use' },
       { label: 'Ce que nous n’avons pas pu vérifier', anchor: 'who-should-not-use' },
       { label: 'Concurrents et alternatives', anchor: 'vs-alternatives' },
@@ -1046,11 +1114,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch : enregistre de façon autonome, sans que l’iPhone ait besoin d’être à proximité ; lorsque la montre est de nouveau à portée, l’audio est transféré vers l’iPhone, qui le transcrit et le résume (développeur).',
           'Maintenance : la version 2.0.7 est sortie le 23 octobre 2026, après huit versions depuis le 27 août ; aucun avertissement de projet délaissé ne s’applique.',
           'Coût : gratuite avec un enregistrement ; ensuite, abonnement mensuel ou annuel, ou achat unique à vie.',
           'Prérequis : iOS, iPadOS ou macOS 26.0 ou ultérieur ; l’IA sur l’appareil fonctionne mieux sur du matériel Apple récent.',
           'Éditeur : un développeur indépendant, sans code source publié ; le vendeur App Store propose aussi [Castmates](/fr/power-local-llm/castmates-review).',
           'Preuves : les chiffres de vitesse et de confidentialité sont des mesures du développeur, pas des tests indépendants.',
+          'Relecture du développeur : Josip Markovic, le développeur, a relu cette page le 26 octobre 2026 et a fourni des corrections ainsi qu’une note (voir Le mot du développeur).',
         ],
         callouts: [
           {
@@ -1069,6 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: 'Où l’obtenir',
         content: [
           '**Lyonesse se télécharge sur l’App Store pour iPhone, iPad et Mac ; aucune version Android, Windows ou web n’est proposée.**',
@@ -1077,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Option': 'iPhone et iPad', 'Comment l’obtenir': '[Lyonesse sur l’App Store](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711), gratuite avec achats intégrés' },
           { 'Option': 'Mac', 'Comment l’obtenir': 'Même fiche App Store, macOS 26.0 ou ultérieur selon la fiche' },
-          { 'Option': 'Apple Watch', 'Comment l’obtenir': 'App d’enregistrement, watchOS 11.0 ou ultérieur ; ajoutée en version 2.0.5' },
+          { 'Option': 'Apple Watch', 'Comment l’obtenir': 'App d’enregistrement, watchOS 11.0 ou ultérieur ; enregistre de façon autonome sans iPhone à proximité et transfère l’audio vers l’iPhone lorsque la montre est de nouveau à portée ; ajoutée en version 2.0.5' },
           { 'Option': 'Options payantes', 'Comment l’obtenir': 'Mensuel 8,99 €, annuel 34,99 € ou à vie 69,99 € (App Store français)' },
           { 'Option': 'Site web', 'Comment l’obtenir': '[lyonesse.app](https://lyonesse.app)' },
           { 'Option': 'Confidentialité', 'Comment l’obtenir': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -1091,11 +1162,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse en un coup d’œil',
         columns: ['Attribut', 'Lyonesse'],
         rows: [
-          { 'Attribut': 'Plateforme', 'Lyonesse': 'iPhone, iPad, Mac ; app d’enregistrement Apple Watch' },
+          { 'Attribut': 'Plateforme', 'Lyonesse': 'iPhone, iPad, Mac ; l’Apple Watch enregistre de façon autonome' },
+          { 'Attribut': 'Apple Watch', 'Lyonesse': 'Enregistreur autonome ; l’iPhone transcrit et résume l’audio transféré' },
           { 'Attribut': 'Prix', 'Lyonesse': 'Premier enregistrement gratuit ; abonnement ou achat à vie' },
           { 'Attribut': 'Licence', 'Lyonesse': 'Propriétaire, code fermé' },
           { 'Attribut': 'Exécution', 'Lyonesse': 'Sur l’appareil ; modèles téléchargés une fois' },
-          { 'Attribut': 'Langues', 'Lyonesse': '15 pour la transcription et les résumés' },
+          { 'Attribut': 'Langues', 'Lyonesse': '15 pour la transcription ; l’application elle-même est traduite en 14' },
           { 'Attribut': 'Transcription en temps réel', 'Lyonesse': 'Oui ; transcription et sous-titres en direct' },
           { 'Attribut': 'Étiquettes de locuteurs', 'Lyonesse': 'Oui' },
           { 'Attribut': 'Utilisable sur CPU seul', 'Lyonesse': 'Non précisé ; matériel Apple uniquement' },
@@ -1114,8 +1186,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Élément': 'Système', 'Ce que disent les sources': 'iOS, iPadOS, macOS et visionOS 26.0 ou ultérieur ; watchOS 11.0 pour l’app Watch (App Store)' },
           { 'Élément': 'Meilleur matériel', 'Ce que disent les sources': 'iPhone 15 Pro ou plus récent, iPad avec puce M, Mac à puce Apple (site du développeur)' },
-          { 'Élément': 'Moteurs d’IA', 'Ce que disent les sources': 'Apple Speech ou NVIDIA Parakeet pour la transcription ; Apple Intelligence ou un modèle local téléchargeable pour résumés et chat' },
-          { 'Élément': 'Téléchargement des modèles', 'Ce que disent les sources': 'Nécessaire une fois, via le réseau ; l’article de benchmark du développeur indique environ 467 MB pour Parakeet TDT v3' },
+          { 'Élément': 'Moteurs d’IA', 'Ce que disent les sources': 'Transcription : Apple SpeechAnalyzer lorsque la langue est prise en charge, sinon NVIDIA Parakeet TDT 0.6B v3, un modèle ouvert de Hugging Face exécuté via FluidAudio au format CoreML. Étiquettes de locuteurs : les modèles ouverts de diarisation de FluidAudio. Résumés et chat : Apple Intelligence lorsque l’appareil en dispose, sinon un modèle ouvert Qwen3 (0.6B, 1.7B ou 4B, 4 bits, issu des dépôts mlx-community sur Hugging Face) exécuté sur MLX. Compréhension d’images : Qwen2-VL 2B, de la même manière (développeur)' },
+          { 'Élément': 'Apple Intelligence', 'Ce que disent les sources': 'Non requise, selon le développeur : sans elle, les résumés et le chat utilisent le modèle local téléchargeable ; les conditions, mises à jour le 28 octobre 2025, disent encore le contraire' },
+          { 'Élément': 'Téléchargement des modèles', 'Ce que disent les sources': 'Nécessaire une fois, via le réseau, lancé depuis les Réglages ; le développeur situe le modèle Parakeet à environ 485 MB et les modèles d’étiquettes de locuteurs à environ 18 MB' },
           { 'Élément': 'Mémoire', 'Ce que disent les sources': 'Aucune valeur de RAM n’est indiquée nulle part' },
         ],
         note: 'C’est la fiche App Store qui détermine si l’application s’installe ; le site du développeur n’indique aucune version du système.',
@@ -1152,11 +1225,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Chaque point ci-dessous provient de la description App Store, de son historique des versions ou du site du développeur ; aucun n’a été testé de manière indépendante.**',
         ],
         items: [
+          '**Enregistrement sur l’Apple Watch.** L’app Watch enregistre de façon autonome : l’iPhone n’a pas besoin d’être à proximité pendant l’enregistrement. Lorsque la montre est de nouveau à portée, le fichier audio est transféré vers l’iPhone, qui assure la transcription et les résumés (développeur ; version 2.0.5 ; PromptQuorum n’a pas testé l’app Watch).',
           '**Transcription.** Transcription en direct avec étiquettes de locuteurs dans 15 langues ; la version 2.0.4 a ajouté les sous-titres traduits en direct, le vocabulaire personnalisé et un affichage verbatim propre.',
           '**Résumés et tâches.** Résumés IA, points clés et décisions, plus un Action Center qui extrait tâches, responsables et échéances.',
           '**Ask Lyonesse et chat de documents.** Questions sur les notes, transcriptions, PDF, fichiers Word, Excel, PowerPoint et images, avec citations et OCR sur l’appareil ; les Projets regroupent enregistrements et documents.',
           '**Assistant de réunion.** Liaison au calendrier, sous-titres en direct, alertes de mention de votre nom, comptes rendus rédigés par l’IA et actions envoyées à Rappels d’Apple ; sur Mac, elle enregistre le micro et l’audio système, sans bot dans l’appel.',
-          '**Écosystème Apple.** Une app d’enregistrement Watch (version 2.0.5), des widgets, la prise en charge de Siri et des Raccourcis (version 2.0.1) et une synchronisation iCloud facultative.',
+          '**Écosystème Apple.** Widgets, prise en charge de Siri et des Raccourcis (version 2.0.1) et synchronisation iCloud, qui est activée par défaut selon le développeur.',
         ],
         note: 'La version 2.0.6 a réorganisé l’application en onglets Notes, Tâches et Dossiers, plus la recherche, les réunions étant désormais dans Notes.',
       },
@@ -1173,8 +1247,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Flux de données et confidentialité',
         content: [
-          '**Selon la politique de confidentialité, mise à jour le 9 octobre 2026, les enregistrements audio ne quittent jamais l’appareil, et la transcription, les résumés et l’analyse de documents s’y exécutent, sans envoi de données à des serveurs externes pour le traitement.** Aucun compte n’est requis, et la politique indique que Lyonesse n’intègre aucun service tiers d’analyse, de publicité ou de suivi et ne collecte ni enregistrements, ni transcriptions, ni documents, ni noms, ni e-mails, ni localisation, ni contacts.',
-          'Certaines données circulent toutefois. La politique décrit des statistiques d’usage anonymisées (ouvertures de l’app, utilisation des fonctions, type d’appareil, versions du système et de l’app) et des rapports de plantage, sans nommer les outils ni dire comment ils sont envoyés ; les étiquettes de confidentialité de l’App Store listent l’identifiant de l’appareil, l’interaction avec le produit et les données de plantage comme collectés et non liés à vous. Transcriptions et résumés se synchronisent entre vos propres appareils via iCloud, et les sauvegardes de l’appareil incluent les données de l’app. Le développeur indique ne pas exploiter de serveurs de synchronisation et ne pas voir les données iCloud. Apple Intelligence, l’App Store, iCloud et les sauvegardes relèvent des politiques d’Apple.',
+          '**Selon la politique de confidentialité, mise à jour le 9 octobre 2026, les enregistrements audio ne quittent jamais l’appareil, et la transcription, les résumés et l’analyse de documents s’y exécutent, sans envoi de données à des serveurs externes pour le traitement.** Aucun compte n’est requis, et la politique indique que Lyonesse ne collecte ni enregistrements, ni transcriptions, ni documents, ni noms, ni e-mails, ni localisation, ni contacts. Sa mention selon laquelle aucun service tiers d’analyse n’est intégré est obsolète, d’après le développeur, qui la corrige.',
+          'Certaines données circulent toutefois. Le développeur indique que l’application envoie des événements d’usage anonymes à Mixpanel et que RevenueCat gère les abonnements, jamais l’audio, les transcriptions ni les notes. La politique décrit des statistiques d’usage anonymisées (ouvertures de l’app, utilisation des fonctions, type d’appareil, versions du système et de l’app) et des rapports de plantage ; les étiquettes de confidentialité de l’App Store listent l’identifiant de l’appareil, l’interaction avec le produit et les données de plantage comme collectés et non liés à vous. Transcriptions et résumés se synchronisent entre vos propres appareils via iCloud, qui est activé par défaut selon le développeur, et les sauvegardes de l’appareil incluent les données de l’app. Le développeur indique ne pas exploiter de serveurs de synchronisation et ne pas pouvoir voir les données iCloud. Apple Intelligence, l’App Store, iCloud et les sauvegardes relèvent des politiques propres à Apple.',
         ],
         callouts: [
           {
@@ -1182,6 +1256,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Il s’agit de déclarations du développeur, pas de résultats d’audit, et le code source n’est pas publié. PromptQuorum n’a pas inspecté le trafic réseau de l’application. La politique et les conditions n’indiquent ni entité juridique ni adresse postale ; le copyright de l’App Store est « Markovic Software, obrt za usluge » et les conditions appliquent le droit croate.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Josip Markovic, le développeur de Lyonesse, a relu le projet de ce test et envoyé des corrections ainsi que la note ci-dessous. Elle est présentée comme les propres mots du développeur, et non comme l’évaluation éditoriale indépendante de PromptQuorum. Ses corrections sur les langues, les modèles, l’enregistreur Apple Watch, la synchronisation par défaut, les analyses d’usage et le matériel requis sont appliquées dans ce test :',
+          '« J’ai créé Lyonesse parce que je voulais des notes de réunion sans qu’un bot rejoigne l’appel et sans que mon audio parte sur le serveur de quelqu’un d’autre. Tout s’exécute sur l’appareil : le modèle vocal d’Apple ou Parakeet pour la transcription, Apple Intelligence ou un petit modèle ouvert pour les résumés. Lors de ma mesure, une réunion de 10 minutes a envoyé 0.02 MB depuis Lyonesse contre 115.7 MB depuis les notes de réunion de Notion. La suite porte sur ce que les utilisateurs ont demandé : des sous-dossiers, un format de note par défaut pour chaque dossier et des instructions IA ponctuelles sur une note. »',
+        ],
+        note: '— Josip Markovic, développeur',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1197,9 +1280,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce que nous n’avons pas pu vérifier',
         items: [
           '**Précision en pratique.** PromptQuorum n’a rien enregistré ni transcrit : qualité des transcriptions, exactitude des étiquettes de locuteurs, qualité des résumés et couverture des 15 langues ne sont pas évaluées.',
-          '**Synchronisation par défaut.** La politique de confidentialité indique que la synchronisation iCloud est activée par défaut, tandis que la description App Store indique que la synchronisation iCloud facultative est désactivée par défaut.',
-          '**« Rien ne quitte votre appareil. »** Le site indique que rien n’est envoyé, alors que la politique et les étiquettes de l’App Store décrivent des statistiques anonymisées et des données de plantage ; leur destination n’est pas précisée.',
-          '**Matériel requis.** Les conditions, mises à jour le 28 octobre 2025, indiquent que l’application exige un matériel compatible Apple Intelligence, alors que le site présente un modèle local téléchargeable comme alternative.',
+          '**Synchronisation par défaut.** Le développeur confirme que la synchronisation iCloud est activée par défaut, comme l’indique la politique de confidentialité ; la description App Store, qui dit qu’elle est désactivée, est erronée et il prévoit de la corriger dans la prochaine version. PromptQuorum n’a pas vérifié ce réglage.',
+          '**« Rien ne quitte votre appareil. »** Le site indique que rien n’est envoyé, alors que le développeur affirme que l’application envoie des événements d’usage anonymes à Mixpanel et que la mention de la politique sur les services tiers d’analyse est en cours de correction. PromptQuorum n’a pas inspecté le trafic réseau.',
+          '**Matériel requis.** Les conditions, mises à jour le 28 octobre 2025, indiquent encore que l’application exige un matériel compatible Apple Intelligence ; le développeur affirme que c’est obsolète et qu’un modèle local téléchargeable prend le relais sans elle.',
           '**Historique.** L’App Store n’affichait que quelques notes lors de la consultation, et l’application s’appelait Inscribe jusqu’au 3 septembre 2026.',
           '**Usage réglementé.** L’adéquation à des enregistrements médicaux, juridiques ou autrement réglementés n’a pas été évaluée.',
         ],
@@ -1220,6 +1303,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
+          {
+            q: 'Puis-je enregistrer uniquement avec l’Apple Watch ?',
+            a: 'Oui, selon le développeur : l’app Watch enregistre de façon autonome, et l’iPhone n’a pas besoin d’être à proximité pendant l’enregistrement. Lorsque la montre est de nouveau à portée, le fichier audio est transféré vers l’iPhone, où ont lieu la transcription et les résumés. PromptQuorum n’a pas testé l’app Watch.',
+          },
           {
             q: 'Combien coûte Lyonesse en dehors des États-Unis ?',
             a: 'Sur les App Store consultés le 26 octobre 2026, les formules mensuelle, annuelle et à vie (Unlimited) coûtaient 8,99 € / 34,99 € / 69,99 € en Allemagne, en Espagne et en France, 1 300 ¥ / 5 000 ¥ / 10 000 ¥ au Japon, 12 000 ₩ / 49 000 ₩ / 99 000 ₩ en Corée du Sud et 49,90 R$ / 199,90 R$ / 399,90 R$ au Brésil.',
@@ -1242,7 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Lyonesse est un moyen large et activement mis à jour d’obtenir transcriptions, notes de réunion et chat de documents sur un iPhone ou un Mac, avec un enregistrement gratuit pour l’essayer et une option d’achat à vie à côté des abonnements. En contrepartie, son code est fermé, il provient d’un seul développeur indépendant, exige un système de la série 26, appuie ses affirmations de confidentialité et de vitesse sur les mesures du développeur, et présente de deux façons la synchronisation iCloud par défaut. Elle convient aux personnes disposant d’un matériel Apple récent qui veulent des notes sans compte et peuvent d’abord essayer l’enregistrement gratuit ; quiconque enregistre des contenus sensibles ou réglementés doit lire lui-même la politique de confidentialité et le réglage de synchronisation avant de s’y fier.',
+          'Lyonesse est un moyen large et activement mis à jour d’obtenir transcriptions, notes de réunion et chat de documents sur un iPhone ou un Mac, et son app Apple Watch peut enregistrer de façon autonome, l’iPhone se chargeant ensuite de la transcription. Un enregistrement gratuit permet de l’essayer, et une option d’achat à vie côtoie les abonnements. En contrepartie, son code est fermé, il provient d’un seul développeur indépendant, exige un système de la série 26, appuie ses affirmations de confidentialité et de vitesse sur les propres mesures du développeur, et comporte encore des formulations obsolètes dans ses conditions, sa politique de confidentialité et son texte App Store, que le développeur dit corriger. Elle convient aux personnes disposant d’un matériel Apple récent qui veulent des notes sans compte et peuvent d’abord essayer l’enregistrement gratuit ; quiconque enregistre des contenus sensibles ou réglementés devrait lire lui-même la politique de confidentialité et vérifier le réglage de synchronisation avant de s’y fier.',
       },
       sources: {
         id: 'sources',
@@ -1253,6 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Politique de confidentialité de Lyonesse](https://lyonesse.app/privacy.html) — collecte de données et synchronisation, mise à jour le 9 octobre 2026.',
           '[Conditions d’utilisation de Lyonesse](https://lyonesse.app/terms.html) — abonnements, remboursements et consentement à l’enregistrement, mises à jour le 28 octobre 2025.',
           '[Article de benchmark vocal](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html) et [article de mesure des envois](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — les mesures du développeur.',
+          'E-mail du développeur à PromptQuorum, 26 octobre 2026 — corrections sur les langues, les modèles, l’enregistreur Watch, la synchronisation, les analyses d’usage et les prérequis, ainsi que la note du développeur ; non vérifié de manière indépendante.',
         ],
       },
       relatedReading: {
@@ -1301,16 +1389,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'オフライン ai 議事録',
       'pdf チャット オフライン iphone',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse（バージョン2.0.7、2026年10月23日更新）は、オフラインでの文字起こし、会議メモ、自分のドキュメントとのチャットに対応したiPhone・iPad・Mac向けアプリです。**開発者によれば、音声、文字起こし、ドキュメントは端末上で処理され、アカウントは不要です。本記事の記載はすべて、App Storeの掲載情報と開発者自身のページに基づきます。',
+      '**Lyonesse（バージョン2.0.7、2026年10月23日更新）は、オフラインでの文字起こし、会議メモ、自分のドキュメントとのチャットに対応したiPhone・iPad・Mac向けアプリで、そのApple Watchアプリは、iPhoneが近くになくても単独で録音できます。**開発者によれば、音声、文字起こし、ドキュメントは端末上で処理され、アカウントは不要です。Watchで録音した音声は、Watchが再び通信範囲に入るとiPhoneに転送され、文字起こしと要約はiPhoneが行います。本記事の記載はすべて、App Storeの掲載情報、開発者自身のページ、または開発者によるこのページのレビューに基づきます。',
     quickAnswerTop: {
       ja: {
         question: 'LyonesseはiPhoneやMacで本当にオフラインで使えますか？',
         answer:
           '開発者によれば可能です。音声モデルとAIモデルを一度ダウンロードした後は、録音、文字起こし、要約、質問を機内モードでも利用できます。プライバシーポリシーでは、音声が端末の外に出ることはない一方、匿名化された利用データとクラッシュデータは収集されるとしています。',
         bullets: [
+          'Apple Watchで単独で録音でき、iPhoneが通信範囲外でも使えます。音声ファイルは後からiPhoneに転送され、文字起こしと要約はiPhoneが行います。',
           '15言語に対応し、話者ラベル付きのライブ文字起こしをApple SpeechまたはNVIDIA Parakeetで行います。',
           '要約、要点、タスク・担当者・期限を一覧にするAction Centerを備えます。',
           'Ask Lyonesseは、メモ、文字起こし、PDF、画像をまたいで引用付きで質問に答えます。',
@@ -1329,6 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '情報源で確認できた機能', anchor: 'key-features' },
       { label: '開発者自身の計測', anchor: 'maker-measurements' },
       { label: 'データの流れとプライバシー', anchor: 'privacy' },
+      { label: '開発者より', anchor: 'from-the-maker' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかった点', anchor: 'who-should-not-use' },
       { label: '競合と代替ツール', anchor: 'vs-alternatives' },
@@ -1353,11 +1443,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch：単独で録音するため、iPhoneが近くになくても使えます。Watchが再び通信範囲に入ると音声がiPhoneに転送され、iPhoneが文字起こしと要約を行います（開発者）。',
           'メンテナンス：バージョン2.0.7は2026年10月23日に公開され、8月27日以降に8回のリリースがあるため、更新停止の警告は対象外です。',
           '費用：最初の1回の録音は無料で、その後は月額または年額のサブスクリプション、もしくは買い切りです。',
           '動作要件：iOS、iPadOS、macOS 26.0以降。オンデバイスAIは新しめのApple製ハードウェアで最もよく動作します。',
           '開発元：独立系の開発者で、ソースコードは公開されていません。App Storeの販売元は[Castmates](/ja/power-local-llm/castmates-review)も販売しています。',
           '根拠：速度とプライバシーの数値は開発者自身の計測であり、第三者によるテストではありません。',
+          '開発者によるレビュー：開発者のJosip Markovic氏が2026年10月26日にこのページを確認し、訂正と一言コメントを寄せました（「開発者より」を参照）。',
         ],
         callouts: [
           {
@@ -1376,6 +1468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: '入手方法',
         content: [
           '**LyonesseはiPhone、iPad、Mac向けにApp Storeから入手します。Android版、Windows版、Web版は掲載されていません。**',
@@ -1384,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '項目': 'iPhoneとiPad', '入手方法': '[App StoreのLyonesse](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711)、無料（App内課金あり）' },
           { '項目': 'Mac', '入手方法': '同じApp Storeの掲載ページ。掲載情報ではmacOS 26.0以降' },
-          { '項目': 'Apple Watch', '入手方法': 'レコーダーアプリ、watchOS 11.0以降。バージョン2.0.5で追加' },
+          { '項目': 'Apple Watch', '入手方法': 'レコーダーアプリ、watchOS 11.0以降。iPhoneが近くになくても単独で録音し、通信範囲に戻ると音声をiPhoneに転送します。バージョン2.0.5で追加' },
           { '項目': '有料オプション', '入手方法': '月額¥1,300、年額¥5,000、買い切り¥10,000（日本のApp Store）' },
           { '項目': '公式サイト', '入手方法': '[lyonesse.app](https://lyonesse.app)' },
           { '項目': 'プライバシーポリシー', '入手方法': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -1398,11 +1491,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesseの概要',
         columns: ['項目', 'Lyonesse'],
         rows: [
-          { '項目': 'プラットフォーム', 'Lyonesse': 'iPhone、iPad、Mac。Apple Watchレコーダー' },
+          { '項目': 'プラットフォーム', 'Lyonesse': 'iPhone、iPad、Mac。Apple Watchは単独で録音' },
+          { '項目': 'Apple Watch', 'Lyonesse': '単独で動くレコーダー。転送された音声はiPhoneが文字起こしと要約を行う' },
           { '項目': '価格', 'Lyonesse': '最初の1回は無料。サブスクまたは買い切り' },
           { '項目': 'ライセンス', 'Lyonesse': 'プロプライエタリ、クローズドソース' },
           { '項目': '動作場所', 'Lyonesse': '端末上。モデルは初回のみダウンロード' },
-          { '項目': '対応言語', 'Lyonesse': '文字起こしと要約で15言語' },
+          { '項目': '対応言語', 'Lyonesse': '文字起こしは15言語。アプリ自体は14言語に翻訳済み' },
           { '項目': 'リアルタイム文字起こし', 'Lyonesse': '対応。ライブ文字起こしとライブキャプション' },
           { '項目': '話者ラベル', 'Lyonesse': '対応' },
           { '項目': 'CPUのみで利用可能', 'Lyonesse': '記載なし。Apple製ハードウェアのみ' },
@@ -1421,8 +1515,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '項目': 'OS', '情報源の記載': 'iOS、iPadOS、macOS、visionOS 26.0以降。WatchレコーダーはwatchOS 11.0（App Store）' },
           { '項目': '推奨ハードウェア', '情報源の記載': 'iPhone 15 Pro以降、Mシリーズ搭載のiPad、AppleシリコンのMac（開発者のサイト）' },
-          { '項目': 'AIエンジン', '情報源の記載': '文字起こしはApple SpeechまたはNVIDIA Parakeet。要約とチャットはApple Intelligenceまたはダウンロード型ローカルモデル' },
-          { '項目': 'モデルのダウンロード', '情報源の記載': 'ネットワーク経由で一度だけ必要。開発者のベンチマーク記事ではParakeet TDT v3は約467 MB' },
+          { '項目': 'AIエンジン', '情報源の記載': '文字起こし：言語が対応している場合はApple SpeechAnalyzer、それ以外はHugging Faceで公開されているオープンモデルのNVIDIA Parakeet TDT 0.6B v3をFluidAudio経由でCoreMLとして実行。話者ラベル：FluidAudioのオープンな話者分離モデル。要約とチャット：端末が対応していればApple Intelligence、それ以外はHugging Faceのmlx-communityリポジトリにあるオープンなQwen3モデル（0.6B、1.7B、4B、4ビット）をMLXで実行。画像の理解：同じ方法でQwen2-VL 2Bを使用（開発者）' },
+          { '項目': 'Apple Intelligence', '情報源の記載': '開発者によれば必須ではありません。なくても、要約とチャットにはダウンロード型のローカルモデルが使われます。2025年10月28日に最終更新された利用規約は、今も異なる記載のままです' },
+          { '項目': 'モデルのダウンロード', '情報源の記載': 'ネットワーク経由で一度だけ必要で、設定から開始します。開発者によれば、Parakeetモデルは約485 MB、話者ラベルのモデルは約18 MBです' },
           { '項目': 'メモリ', '情報源の記載': 'RAMの数値はどこにも記載されていません' },
         ],
         note: 'アプリをインストールできるかどうかを決めるのはApp Storeの記載です。開発者のサイトにはOSのバージョンの記載がありません。',
@@ -1459,11 +1554,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**以下の項目はすべてApp Storeの説明文、バージョン履歴、または開発者のサイトによるもので、独自のテストは行っていません。**',
         ],
         items: [
+          '**Apple Watchでの録音。**Watchアプリは単独で録音するため、録音中にiPhoneが近くになくても使えます。Watchが再び通信範囲に入ると、音声ファイルがiPhoneに転送され、iPhoneが文字起こしと要約を行います（開発者、バージョン2.0.5。PromptQuorumはWatchアプリをテストしていません）。',
           '**文字起こし。**15言語で話者ラベル付きのライブ文字起こしに対応。バージョン2.0.4でライブ翻訳キャプション、カスタム語彙、クリーンな逐語表示が追加されました。',
           '**要約とタスク。**AIによる要約、要点、決定事項に加え、タスク、担当者、期限を抽出するAction Centerがあります。',
           '**Ask Lyonesseとドキュメントチャット。**メモ、文字起こし、PDF、Word、Excel、PowerPoint、画像をまたいで、引用付きで質問できます。オンデバイスOCRにも対応し、Projectsで録音とドキュメントをまとめられます。',
           '**会議アシスタント。**カレンダー連携、ライブキャプション、名前呼びかけの通知、AIによる議事録の下書き、Apple リマインダーへのアクションアイテム送信に対応します。Macではマイクとシステム音声を録音するため、ボットが会議に参加しません。',
-          '**Appleのエコシステム。**Watchレコーダー（バージョン2.0.5）、ウィジェット、Siriとショートカットのサポート（バージョン2.0.1）、オプションのiCloud同期に対応します。',
+          '**Appleのエコシステム。**ウィジェット、Siriとショートカットのサポート（バージョン2.0.1）、そして開発者によれば初期状態でオンになっているiCloud同期に対応します。',
         ],
         note: 'バージョン2.0.6で、アプリはメモ、タスク、フォルダの3つのタブと検索に整理され、会議はメモの中に含まれるようになりました。',
       },
@@ -1480,8 +1576,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'データの流れとプライバシー',
         content: [
-          '**2026年10月9日に最終更新されたプライバシーポリシーによれば、音声の録音が端末の外に出ることはなく、文字起こし、要約、ドキュメント解析は端末上で実行され、処理のために外部サーバーへデータが送られることはありません。**アカウントは不要で、ポリシーでは、Lyonesseはサードパーティのアナリティクス、広告、トラッキングサービスを組み込んでおらず、録音、文字起こし、ドキュメント、氏名、メールアドレス、位置情報、連絡先を収集しないとしています。',
-          '一方で、一部のデータは移動します。ポリシーには、匿名化された利用統計（アプリの起動、機能の利用、端末の種類、システムとアプリのバージョン）とクラッシュレポートが記載されていますが、ツール名や送信方法は示されていません。App Storeのプライバシーラベルでは、デバイスID、製品の操作、クラッシュデータが収集され、ユーザーには紐づけられないと記載されています。文字起こしと要約は、お持ちのデバイス間でiCloud経由で同期され、デバイスのバックアップにはアプリのデータが含まれます。開発者は、同期用のサーバーを運用しておらず、iCloudのデータを見ることはできないとしています。Apple Intelligence、App Store、iCloud、バックアップにはAppleのポリシーが適用されます。',
+          '**2026年10月9日に最終更新されたプライバシーポリシーによれば、音声の録音が端末の外に出ることはなく、文字起こし、要約、ドキュメント解析は端末上で実行され、処理のために外部サーバーへデータが送られることはありません。**アカウントは不要で、ポリシーでは、Lyonesseは録音、文字起こし、ドキュメント、氏名、メールアドレス、位置情報、連絡先を収集しないとしています。サードパーティのアナリティクスは組み込まれていないという記載は古く、開発者が訂正中だとしています。',
+          '一方で、一部のデータは移動します。開発者によれば、アプリは匿名の利用イベントをMixpanelに送信し、RevenueCatはサブスクリプションを処理しますが、音声、文字起こし、メモは扱いません。ポリシーには、匿名化された利用統計（アプリの起動、機能の利用、端末の種類、システムとアプリのバージョン）とクラッシュレポートが記載されています。App Storeのプライバシーラベルでは、デバイスID、製品の操作、クラッシュデータが収集され、ユーザーには紐づけられないと記載されています。文字起こしと要約は、お持ちのデバイス間でiCloud経由で同期され、開発者によればこの同期は初期状態でオンです。デバイスのバックアップにはアプリのデータが含まれます。開発者は、同期用のサーバーを運用しておらず、iCloudのデータを見ることはできないとしています。Apple Intelligence、App Store、iCloud、バックアップにはAppleのポリシーが適用されます。',
         ],
         callouts: [
           {
@@ -1489,6 +1585,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'これらは開発者の申告であり監査結果ではなく、ソースコードも公開されていません。PromptQuorumはアプリのネットワーク通信を調べていません。ポリシーと利用規約には法人名も所在地も記載されていません。App Storeの著作権表示は「Markovic Software, obrt za usluge」で、利用規約にはクロアチア法が適用されるとあります。',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者より',
+        content: [
+          'Lyonesseの開発者であるJosip Markovic氏が、このレビューの草稿を確認し、訂正と以下の一言コメントを寄せました。これは開発者自身の言葉として掲載するもので、PromptQuorumの独立した編集上の評価ではありません。言語、モデル、Apple Watchレコーダー、同期の初期設定、アナリティクス、ハードウェア要件に関する訂正は、このレビューに反映しています。',
+          '「通話にボットが参加せず、自分の音声が誰かのサーバーに送られない会議メモが欲しくて、Lyonesseを作りました。すべて端末上で動きます。文字起こしはAppleの音声モデルかParakeet、要約はApple Intelligenceか小さなオープンモデルです。計測したところ、10分間の会議でLyonesseが送信したのは0.02 MB、Notionの議事録機能は115.7 MBでした。次は、ユーザーから要望の多かったサブフォルダ、フォルダごとのデフォルトのメモ形式、メモに対する一回限りのAI指示に取り組みます。」',
+        ],
+        note: '— Josip Markovic氏、開発者',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1504,9 +1609,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '確認できなかった点',
         items: [
           '**実際の精度。**PromptQuorumは録音も文字起こしも行っていないため、文字起こしの品質、話者ラベルの精度、要約の品質、15言語すべての対応状況は評価していません。',
-          '**同期の初期設定。**プライバシーポリシーではiCloud同期は初期状態でオンとされている一方、App Storeの説明文ではオプションのiCloud同期は初期状態でオフとされています。',
-          '**「データは端末の外に出ません」。**サイトでは何もアップロードされないとされていますが、ポリシーとApp Storeのラベルでは匿名化された分析データとクラッシュデータが記載されており、その送信先は示されていません。',
-          '**ハードウェア要件。**2025年10月28日に最終更新された利用規約では、アプリにはApple Intelligence対応のハードウェアが必要とされている一方、サイトではダウンロード型のローカルモデルが代替手段として説明されています。',
+          '**同期の初期設定。**開発者は、プライバシーポリシーのとおりiCloud同期が初期状態でオンであることを認めています。オフとしているApp Storeの説明文は誤りで、次のリリースで修正する予定です。PromptQuorumはこの設定を確認していません。',
+          '**「データは端末の外に出ません」。**サイトでは何もアップロードされないとされていますが、開発者は、アプリが匿名の利用イベントをMixpanelに送信していると述べており、サードパーティのアナリティクスに関するポリシーの記載は訂正中です。PromptQuorumはネットワーク通信を調べていません。',
+          '**ハードウェア要件。**2025年10月28日に最終更新された利用規約では、アプリにはApple Intelligence対応のハードウェアが必要とされたままですが、開発者はそれが古い記載であり、なくてもダウンロード型のローカルモデルが代わりに使われると述べています。',
           '**実績。**確認時点でApp Storeの評価は少数にとどまり、アプリは2026年9月3日までInscribeという名前でした。',
           '**規制対象の用途。**医療、法律などの規制対象となる録音への適合性は評価していません。',
         ],
@@ -1527,6 +1632,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+          {
+            q: 'Apple Watchだけで録音できますか？',
+            a: 'はい、開発者によれば可能です。Watchアプリは単独で録音するため、録音中にiPhoneが近くになくても使えます。Watchが再び通信範囲に入ると、音声ファイルがiPhoneに転送され、iPhoneで文字起こしと要約が行われます。PromptQuorumはWatchアプリをテストしていません。',
+          },
           {
             q: '米国以外ではLyonesseの料金はいくらですか？',
             a: '2026年10月26日に確認したApp Storeの各ストアでは、月額／年額／買い切り（Unlimited）は、ドイツ・スペイン・フランスで€8.99／€34.99／€69.99、日本で¥1,300／¥5,000／¥10,000、韓国で₩12,000／₩49,000／₩99,000、ブラジルでR$49.90／R$199.90／R$399.90でした。',
@@ -1549,7 +1658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'Lyonesseは、iPhoneやMacで文字起こし、会議メモ、ドキュメントチャットを手に入れるための、幅広く活発に更新されているアプリです。試せる無料の録音が1回あり、サブスクリプションと並んで買い切りの選択肢もあります。一方で、クローズドソースで、開発者は独立系の1人であり、26系のOSが必要で、プライバシーと速度に関する主張は開発者自身の計測に基づき、iCloud同期の初期設定の説明も2通りあります。新しめのApple製ハードウェアを使い、アカウント不要のメモを求め、先に無料の録音を試せる方に向いています。機密性の高い内容や規制対象の内容を録音する方は、利用する前にプライバシーポリシーと同期設定をご自身で確認してください。',
+          'Lyonesseは、iPhoneやMacで文字起こし、会議メモ、ドキュメントチャットを手に入れるための、幅広く活発に更新されているアプリで、Apple Watchアプリは単独で録音でき、文字起こしは後からiPhoneが行います。試せる無料の録音があり、サブスクリプションと並んで買い切りの選択肢もあります。一方で、クローズドソースで、開発者は独立系の1人であり、26系のOSが必要で、プライバシーと速度に関する主張は開発者自身の計測に基づき、利用規約、プライバシーポリシー、App Storeの説明文には古い記載が残っていて、開発者はそれを訂正中だとしています。新しめのApple製ハードウェアを使い、アカウント不要のメモを求め、先に無料の録音を試せる方に向いています。機密性の高い内容や規制対象の内容を録音する方は、利用する前にプライバシーポリシーと同期設定をご自身で確認してください。',
       },
       sources: {
         id: 'sources',
@@ -1560,6 +1669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lyonesseプライバシーポリシー](https://lyonesse.app/privacy.html) — データ収集と同期（2026年10月9日最終更新）。',
           '[Lyonesse利用規約](https://lyonesse.app/terms.html) — サブスクリプション、返金、録音の同意（2025年10月28日最終更新）。',
           '[音声認識ベンチマーク記事](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html)と[送信量の計測記事](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — 開発者自身による計測。',
+          '開発者からPromptQuorumへのメール（2026年10月26日）— 言語、モデル、Watchレコーダー、同期、アナリティクス、要件に関する訂正と、開発者の一言コメント。独立した検証はしていません。',
         ],
       },
       relatedReading: {
@@ -1608,16 +1718,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'notas de reunião com ia offline',
       'chat com pdf offline no iphone',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**O Lyonesse (versão 2.0.7, atualizada em 23 de outubro de 2026) é um app para iPhone, iPad e Mac de transcrição offline, notas de reunião e chat com seus próprios documentos.** O desenvolvedor afirma que áudio, transcrições e documentos são processados no aparelho e que não é preciso criar conta; tudo o que consta aqui vem da página da App Store e das páginas do próprio desenvolvedor.',
+      '**O Lyonesse (versão 2.0.7, atualizada em 23 de outubro de 2026) é um app para iPhone, iPad e Mac de transcrição offline, notas de reunião e chat com seus próprios documentos, e o app para Apple Watch grava sozinho, sem o iPhone por perto.** O desenvolvedor afirma que áudio, transcrições e documentos são processados no aparelho e que não é preciso criar conta. Uma gravação feita no relógio é transferida para o iPhone quando o relógio volta ao alcance, e o iPhone faz a transcrição e os resumos. Tudo o que consta aqui vem da página da App Store, das páginas do próprio desenvolvedor ou da revisão do desenvolvedor sobre esta página.',
     quickAnswerTop: {
       pt: {
         question: 'O Lyonesse realmente funciona offline no iPhone e no Mac?',
         answer:
           'Segundo o desenvolvedor, sim: depois de um download único dos modelos de fala e de IA, gravação, transcrição, resumos e perguntas funcionam no modo avião. A política de privacidade acrescenta que o áudio nunca sai do aparelho, enquanto dados anônimos de uso e de falhas são coletados.',
         bullets: [
+          'Grava no Apple Watch por conta própria, com o iPhone fora de alcance; o arquivo de áudio é transferido depois para o iPhone, que faz a transcrição e os resumos.',
           'Transcrição ao vivo com rótulos de falante em 15 idiomas, com Apple Speech ou NVIDIA Parakeet.',
           'Resumos, pontos-chave e uma Central de ações que lista tarefas, responsáveis e prazos.',
           'O Ask Lyonesse responde a perguntas sobre notas, transcrições, PDFs e imagens, com citações.',
@@ -1636,6 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Recursos confirmados pelas fontes', anchor: 'key-features' },
       { label: 'As medições do próprio desenvolvedor', anchor: 'maker-measurements' },
       { label: 'Fluxo de dados e privacidade', anchor: 'privacy' },
+      { label: 'A palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Para quem serve', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
       { label: 'Concorrentes e alternativas', anchor: 'vs-alternatives' },
@@ -1660,11 +1772,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch: grava sozinho, então o iPhone não precisa estar por perto; quando o relógio volta ao alcance, o áudio é transferido para o iPhone, que o transcreve e resume (desenvolvedor).',
           'Manutenção: a versão 2.0.7 foi lançada em 23 de outubro de 2026, após oito versões desde 27 de agosto, então não se aplica nenhum aviso de projeto parado.',
           'Custo: grátis com uma gravação; depois, assinatura mensal ou anual ou uma compra vitalícia única.',
           'Requisitos: iOS, iPadOS ou macOS 26.0 ou posterior; a IA no aparelho funciona melhor em hardware Apple recente.',
           'Desenvolvedor: independente, sem código-fonte publicado; o vendedor na App Store também vende o [Castmates](/pt/power-local-llm/castmates-review).',
           'Evidências: os números de velocidade e de privacidade são medições do próprio desenvolvedor, não testes independentes.',
+          'Revisão do desenvolvedor: Josip Markovic, o desenvolvedor, revisou esta página em 26 de outubro de 2026 e enviou correções e uma nota (veja A palavra do desenvolvedor).',
         ],
         callouts: [
           {
@@ -1683,6 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: 'Onde obter',
         content: [
           '**O Lyonesse é baixado pela App Store para iPhone, iPad e Mac; não há versão listada para Android, Windows ou web.**',
@@ -1691,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Opção': 'iPhone e iPad', 'Onde obter': '[Lyonesse na App Store](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711), grátis com compras no app' },
           { 'Opção': 'Mac', 'Onde obter': 'Mesma página da App Store, macOS 26.0 ou posterior segundo a página' },
-          { 'Opção': 'Apple Watch', 'Onde obter': 'App gravador, watchOS 11.0 ou posterior; adicionado na versão 2.0.5' },
+          { 'Opção': 'Apple Watch', 'Onde obter': 'App gravador, watchOS 11.0 ou posterior; grava sozinho sem o iPhone por perto e transfere o áudio para o iPhone quando volta ao alcance; adicionado na versão 2.0.5' },
           { 'Opção': 'Opções pagas', 'Onde obter': 'Mensal R$ 49,90, anual R$ 199,90 ou vitalícia R$ 399,90 (loja brasileira)' },
           { 'Opção': 'Site', 'Onde obter': '[lyonesse.app](https://lyonesse.app)' },
           { 'Opção': 'Política de privacidade', 'Onde obter': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -1705,11 +1820,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse em resumo',
         columns: ['Atributo', 'Lyonesse'],
         rows: [
-          { 'Atributo': 'Plataforma', 'Lyonesse': 'iPhone, iPad, Mac; gravador para Apple Watch' },
+          { 'Atributo': 'Plataforma', 'Lyonesse': 'iPhone, iPad, Mac; o Apple Watch grava sozinho' },
+          { 'Atributo': 'Apple Watch', 'Lyonesse': 'Gravador independente; o iPhone transcreve e resume o áudio transferido' },
           { 'Atributo': 'Preço', 'Lyonesse': 'Primeira gravação grátis; assinatura ou vitalícia' },
           { 'Atributo': 'Licença', 'Lyonesse': 'Proprietária, código fechado' },
           { 'Atributo': 'Execução', 'Lyonesse': 'No aparelho; modelos baixados uma vez' },
-          { 'Atributo': 'Idiomas', 'Lyonesse': '15 para transcrição e resumos' },
+          { 'Atributo': 'Idiomas', 'Lyonesse': '15 para transcrição; o próprio app está traduzido para 14' },
           { 'Atributo': 'Transcrição em tempo real', 'Lyonesse': 'Sim; transcrição e legendas ao vivo' },
           { 'Atributo': 'Rótulos de falante', 'Lyonesse': 'Sim' },
           { 'Atributo': 'Utilizável só com CPU', 'Lyonesse': 'Não informado; apenas hardware Apple' },
@@ -1728,8 +1844,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Item': 'Sistema operacional', 'O que as fontes dizem': 'iOS, iPadOS, macOS e visionOS 26.0 ou posterior; watchOS 11.0 para o gravador do Watch (App Store)' },
           { 'Item': 'Melhor hardware', 'O que as fontes dizem': 'iPhone 15 Pro ou posterior, iPad com chip da série M, Mac com Apple silicon (site do desenvolvedor)' },
-          { 'Item': 'Mecanismos de IA', 'O que as fontes dizem': 'Apple Speech ou NVIDIA Parakeet para transcrição; Apple Intelligence ou um modelo local baixável para resumos e chat' },
-          { 'Item': 'Download dos modelos', 'O que as fontes dizem': 'Necessário uma vez, pela rede; a publicação de benchmark do desenvolvedor indica cerca de 467 MB para o Parakeet TDT v3' },
+          { 'Item': 'Mecanismos de IA', 'O que as fontes dizem': 'Transcrição: Apple SpeechAnalyzer quando o idioma é compatível; caso contrário, NVIDIA Parakeet TDT 0.6B v3, um modelo aberto do Hugging Face executado pelo FluidAudio como CoreML. Rótulos de falante: os modelos abertos de diarização do FluidAudio. Resumos e chat: Apple Intelligence quando o aparelho a tem; caso contrário, um modelo Qwen3 aberto (0.6B, 1.7B ou 4B, 4 bits, dos repositórios mlx-community no Hugging Face) executado no MLX. Compreensão de imagens: Qwen2-VL 2B da mesma forma (desenvolvedor)' },
+          { 'Item': 'Apple Intelligence', 'O que as fontes dizem': 'Não é obrigatória, segundo o desenvolvedor: sem ela, os resumos e o chat usam o modelo local baixável; os termos, atualizados pela última vez em 28 de outubro de 2025, ainda dizem o contrário' },
+          { 'Item': 'Download dos modelos', 'O que as fontes dizem': 'Necessário uma vez, pela rede, iniciado em Ajustes; o desenvolvedor estima o modelo Parakeet em cerca de 485 MB e os modelos de rótulos de falante em cerca de 18 MB' },
           { 'Item': 'Memória', 'O que as fontes dizem': 'Nenhuma fonte informa a quantidade de RAM' },
         ],
         note: 'Quem decide se o app é instalado é a página da App Store; o site do desenvolvedor não indica nenhuma versão do sistema operacional.',
@@ -1766,11 +1883,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tudo o que está abaixo vem da descrição na App Store, do histórico de versões ou do site do desenvolvedor; nada foi testado de forma independente.**',
         ],
         items: [
+          '**Gravação no Apple Watch.** O app do Watch grava sozinho, então o iPhone não precisa estar por perto enquanto você grava. Quando o relógio volta ao alcance, o arquivo de áudio é transferido para o iPhone, que faz a transcrição e os resumos (desenvolvedor; versão 2.0.5; a PromptQuorum não testou o app do Watch).',
           '**Transcrição.** Transcrição ao vivo com rótulos de falante em 15 idiomas; a versão 2.0.4 acrescentou legendas traduzidas ao vivo, vocabulário personalizado e uma visualização literal limpa.',
           '**Resumos e tarefas.** Resumos com IA, pontos-chave e decisões, além de uma Central de ações que extrai tarefas, responsáveis e prazos.',
           '**Ask Lyonesse e chat com documentos.** Perguntas sobre notas, transcrições, PDFs, Word, Excel, PowerPoint e imagens, com citações e OCR no aparelho; os Projetos agrupam gravações e documentos.',
           '**Assistente de reuniões.** Vínculo com o calendário, legendas ao vivo, alertas de menção ao seu nome, atas redigidas por IA e ações enviadas ao app Lembretes da Apple; no Mac, grava o microfone e o áudio do sistema, então nenhum bot entra na chamada.',
-          '**Ecossistema Apple.** Um gravador para o Watch (versão 2.0.5), widgets, suporte a Siri e Atalhos (versão 2.0.1) e sincronização opcional pelo iCloud.',
+          '**Ecossistema Apple.** Widgets, suporte a Siri e Atalhos (versão 2.0.1) e sincronização pelo iCloud, que o desenvolvedor diz vir ativada por padrão.',
         ],
         note: 'A versão 2.0.6 reorganizou o app em abas Notas, Tarefas e Pastas mais Busca, com as reuniões agora dentro de Notas.',
       },
@@ -1787,8 +1905,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Fluxo de dados e privacidade',
         content: [
-          '**A política de privacidade, atualizada pela última vez em 9 de outubro de 2026, diz que as gravações de áudio nunca saem do aparelho e que a transcrição, os resumos e a análise de documentos são executados nele, sem envio de dados a servidores externos para processamento.** Não é preciso conta, e a política afirma que o Lyonesse não integra serviços de análise, publicidade ou rastreamento de terceiros e não coleta gravações, transcrições, documentos, nomes, e-mails, localização nem contatos.',
-          'Alguns dados, porém, se movem. A política descreve estatísticas de uso anonimizadas (aberturas do app, uso de recursos, tipo de aparelho, versão do sistema e do app) e relatórios de falhas, sem citar as ferramentas nem como são enviados; os rótulos de privacidade da App Store listam ID do dispositivo, interação com o produto e dados de falhas como coletados e não vinculados a você. Transcrições e resumos são sincronizados entre os seus próprios aparelhos pelo iCloud, e os backups do aparelho incluem os dados do app. O desenvolvedor diz que não mantém servidores de sincronização e não vê os dados do iCloud. Apple Intelligence, App Store, iCloud e backups seguem as políticas da própria Apple.',
+          '**A política de privacidade, atualizada pela última vez em 9 de outubro de 2026, diz que as gravações de áudio nunca saem do aparelho e que a transcrição, os resumos e a análise de documentos são executados nele, sem envio de dados a servidores externos para processamento.** Não é preciso conta, e a política afirma que o Lyonesse não coleta gravações, transcrições, documentos, nomes, e-mails, localização nem contatos. A linha que diz que nenhuma ferramenta de análise de terceiros está integrada está desatualizada, segundo o desenvolvedor, que está corrigindo isso.',
+          'Alguns dados, porém, se movem. O desenvolvedor diz que o app envia eventos de uso anônimos ao Mixpanel e que o RevenueCat cuida das assinaturas, nunca de áudio, transcrições ou notas. A política descreve estatísticas de uso anonimizadas (aberturas do app, uso de recursos, tipo de aparelho, versão do sistema e do app) e relatórios de falhas; os rótulos de privacidade da App Store listam ID do dispositivo, interação com o produto e dados de falhas como coletados e não vinculados a você. Transcrições e resumos são sincronizados entre os seus próprios aparelhos pelo iCloud, que o desenvolvedor diz vir ativado por padrão, e os backups do aparelho incluem os dados do app. O desenvolvedor diz que não mantém servidores de sincronização e não vê os dados do iCloud. Apple Intelligence, App Store, iCloud e backups seguem as políticas da própria Apple.',
         ],
         callouts: [
           {
@@ -1796,6 +1914,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Estas são declarações do desenvolvedor, não resultados de auditoria, e o código-fonte não é publicado. A PromptQuorum não inspecionou o tráfego de rede do app. A política e os termos não citam nenhuma entidade jurídica nem endereço postal; a linha de copyright da App Store diz "Markovic Software, obrt za usluge" e os termos aplicam a lei croata.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do desenvolvedor',
+        content: [
+          'Josip Markovic, o desenvolvedor do Lyonesse, revisou o rascunho desta análise e enviou correções e a nota abaixo. Ela é apresentada como palavras do próprio desenvolvedor, não como avaliação editorial independente da PromptQuorum. Suas correções sobre idiomas, modelos, o gravador para Apple Watch, o padrão da sincronização, a análise de uso e o requisito de hardware estão aplicadas nesta análise:',
+          '"Criei o Lyonesse porque queria notas de reunião sem um bot entrando na chamada e sem o meu áudio indo para o servidor de alguém. Tudo roda no aparelho: o modelo de fala da Apple ou o Parakeet para a transcrição, a Apple Intelligence ou um modelo aberto pequeno para os resumos. Quando medi, uma reunião de 10 minutos enviou 0.02 MB pelo Lyonesse, contra 115.7 MB pelas notas de reunião do Notion. Os próximos passos são o que os usuários pediram: subpastas, um formato de nota padrão por pasta e instruções de IA pontuais em uma nota."',
+        ],
+        note: '— Josip Markovic, desenvolvedor',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1811,9 +1938,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que não conseguimos verificar',
         items: [
           '**Precisão na prática.** A PromptQuorum não gravou nem transcreveu nada, então a qualidade da transcrição, a precisão dos rótulos de falante, a qualidade dos resumos e a cobertura dos 15 idiomas não são avaliadas.',
-          '**Padrão da sincronização.** A política de privacidade diz que a sincronização pelo iCloud vem ativada por padrão, enquanto a descrição na App Store diz que a sincronização opcional pelo iCloud vem desativada por padrão.',
-          '**"Nada sai do seu aparelho."** O site diz que nada é enviado, enquanto a política e os rótulos da App Store descrevem análises anonimizadas e dados de falhas; não se informa para onde eles vão.',
-          '**Requisito de hardware.** Os termos, atualizados pela última vez em 28 de outubro de 2025, dizem que o app exige hardware compatível com o Apple Intelligence, enquanto o site descreve um modelo local baixável como alternativa.',
+          '**Padrão da sincronização.** O desenvolvedor confirma que a sincronização pelo iCloud vem ativada por padrão, como diz a política de privacidade; a descrição na App Store, que diz que ela vem desativada, está errada, e ele pretende corrigi-la na próxima versão. A PromptQuorum não conferiu a configuração.',
+          '**"Nada sai do seu aparelho."** O site diz que nada é enviado, enquanto o desenvolvedor diz que o app envia eventos de uso anônimos ao Mixpanel e que a linha da política sobre ferramentas de análise de terceiros está sendo corrigida. A PromptQuorum não inspecionou o tráfego de rede.',
+          '**Requisito de hardware.** Os termos, atualizados pela última vez em 28 de outubro de 2025, ainda dizem que o app exige hardware compatível com a Apple Intelligence; o desenvolvedor diz que isso está desatualizado e que um modelo local baixável assume o lugar dela.',
           '**Histórico.** A App Store mostrava apenas algumas avaliações quando conferimos, e o app se chamou Inscribe até 3 de setembro de 2026.',
           '**Uso regulamentado.** A adequação para gravações médicas, jurídicas ou de outras áreas regulamentadas não foi avaliada.',
         ],
@@ -1834,6 +1961,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
+          {
+            q: 'Posso gravar só com o Apple Watch?',
+            a: 'Sim, segundo o desenvolvedor: o app do Watch grava sozinho, e o iPhone não precisa estar por perto enquanto você grava. Quando o relógio volta ao alcance, o arquivo de áudio é transferido para o iPhone, onde acontecem a transcrição e os resumos. A PromptQuorum não testou o app do Watch.',
+          },
           {
             q: 'Quanto o Lyonesse custa fora dos Estados Unidos?',
             a: 'Nas lojas da App Store conferidas em 26 de outubro de 2026, os planos Mensal / Anual / Unlimited vitalício custavam 8,99 € / 34,99 € / 69,99 € na Alemanha, Espanha e França, ¥1,300 / ¥5,000 / ¥10,000 no Japão, ₩12,000 / ₩49,000 / ₩99,000 na Coreia do Sul e R$ 49,90 / R$ 199,90 / R$ 399,90 no Brasil.',
@@ -1856,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'O Lyonesse é uma forma ampla e ativamente atualizada de ter transcrições, notas de reunião e chat com documentos no iPhone ou no Mac, com uma gravação gratuita para testar e uma compra vitalícia ao lado das assinaturas. Em contrapartida, tem código fechado, vem de um único desenvolvedor independente, exige um sistema operacional da série 26, baseia as afirmações de privacidade e velocidade nas medições do próprio desenvolvedor e descreve o padrão da sincronização pelo iCloud de duas maneiras diferentes. Serve para quem tem hardware Apple recente, quer notas sem conta e pode testar primeiro a gravação gratuita; quem grava material sensível ou regulamentado deve ler a política de privacidade e conferir a configuração de sincronização por conta própria antes de confiar no app.',
+          'O Lyonesse é uma forma ampla e ativamente atualizada de ter transcrições, notas de reunião e chat com documentos no iPhone ou no Mac, e o app para Apple Watch pode gravar sozinho, com o iPhone fazendo a transcrição depois. Uma gravação gratuita permite testá-lo, e há uma compra vitalícia ao lado das assinaturas. Em contrapartida, tem código fechado, vem de um único desenvolvedor independente, exige um sistema operacional da série 26, baseia as afirmações de privacidade e velocidade nas medições do próprio desenvolvedor e ainda traz trechos desatualizados nos termos, na política de privacidade e no texto da App Store, que o desenvolvedor diz estar corrigindo. Serve para quem tem hardware Apple recente, quer notas sem conta e pode testar primeiro a gravação gratuita; quem grava material sensível ou regulamentado deve ler a política de privacidade e conferir a configuração de sincronização por conta própria antes de confiar no app.',
       },
       sources: {
         id: 'sources',
@@ -1867,6 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Política de privacidade do Lyonesse](https://lyonesse.app/privacy.html) — coleta de dados e sincronização, atualizada pela última vez em 9 de outubro de 2026.',
           '[Termos do Lyonesse](https://lyonesse.app/terms.html) — assinaturas, reembolsos e consentimento para gravação, atualizados pela última vez em 28 de outubro de 2025.',
           '[Publicação do benchmark de fala](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html) e [publicação da medição de envio de dados](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — as medições do próprio desenvolvedor.',
+          'E-mail do desenvolvedor à PromptQuorum, 26 de outubro de 2026 — correções sobre idiomas, modelos, o gravador do Watch, sincronização, análise de uso e requisitos, além da nota do desenvolvedor; não verificado de forma independente.',
         ],
       },
       relatedReading: {
@@ -1915,16 +2047,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'محاضر اجتماعات بالذكاء الاصطناعي بدون إنترنت',
       'الدردشة مع ملفات pdf بدون إنترنت iphone',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse (الإصدار 2.0.7، حُدِّث في 23 أكتوبر 2026) تطبيق لأجهزة iPhone وiPad وMac للتفريغ الصوتي ومحاضر الاجتماعات والدردشة مع مستنداتك دون اتصال.** يقول المطوّر إن الصوت والنصوص المفرَّغة والمستندات تُعالَج على الجهاز وإنه لا يلزم حساب؛ وكل ما يرد هنا مصدره صفحة App Store وصفحات المطوّر نفسه.',
+      '**Lyonesse (الإصدار 2.0.7، حُدِّث في 23 أكتوبر 2026) تطبيق لأجهزة iPhone وiPad وMac للتفريغ الصوتي دون اتصال ومحاضر الاجتماعات والدردشة مع مستنداتك، ويسجّل تطبيقه على Apple Watch بمفرده دون الحاجة إلى وجود iPhone بالقرب منه.** يقول المطوّر إن الصوت والنصوص المفرَّغة والمستندات تُعالَج على الجهاز وإنه لا يلزم حساب. ينتقل التسجيل الذي يُنجز على الساعة إلى iPhone عندما تعود الساعة إلى النطاق، ويتولى iPhone التفريغ الصوتي والملخصات. كل ما يرد هنا مصدره صفحة App Store وصفحات المطوّر نفسه ومراجعة المطوّر لهذه الصفحة.',
     quickAnswerTop: {
       ar: {
         question: 'هل يعمل Lyonesse فعلًا دون اتصال على iPhone وMac؟',
         answer:
           'وفق المطوّر، نعم: بعد تنزيل نماذج الكلام والذكاء الاصطناعي مرة واحدة، تعمل التسجيلات والتفريغ والملخصات والأسئلة في وضع الطيران. وتضيف سياسة الخصوصية أن الصوت لا يغادر الجهاز أبدًا، بينما تُجمع بيانات استخدام مجهولة وبيانات أعطال.',
         bullets: [
+          'يسجّل على Apple Watch بمفرده، وiPhone خارج النطاق؛ ينتقل ملف الصوت إلى iPhone لاحقًا، ويتولى iPhone التفريغ الصوتي والملخصات.',
           'تفريغ صوتي مباشر مع تسمية المتحدثين بـ 15 لغة، باستخدام Apple Speech أو NVIDIA Parakeet.',
           'ملخصات ونقاط رئيسية ومركز إجراءات (Action Center) يسرد المهام ومسؤوليها ومواعيدها.',
           'يجيب Ask Lyonesse عن الأسئلة عبر الملاحظات والنصوص المفرَّغة وملفات PDF والصور مع الاستشهاد بالمصادر.',
@@ -1943,6 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الميزات التي أكدتها المصادر', anchor: 'key-features' },
       { label: 'قياسات المطوّر نفسه', anchor: 'maker-measurements' },
       { label: 'تدفق البيانات والخصوصية', anchor: 'privacy' },
+      { label: 'من مطوّر التطبيق', anchor: 'from-the-maker' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
       { label: 'المنافسون والبدائل', anchor: 'vs-alternatives' },
@@ -1967,11 +2101,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch: يسجّل بمفرده، فلا يلزم وجود iPhone بالقرب منه؛ وعندما تعود الساعة إلى النطاق ينتقل الصوت إلى iPhone الذي يفرّغه ويلخّصه (المطوّر).',
           'الصيانة: صدر الإصدار 2.0.7 في 23 أكتوبر 2026 بعد ثمانية إصدارات منذ 27 أغسطس، لذا لا ينطبق تحذير المشروع المتوقف.',
           'التكلفة: مجاني مع تسجيل واحد؛ وبعده اشتراك شهري أو سنوي أو شراء دائم لمرة واحدة.',
           'المتطلبات: iOS أو iPadOS أو macOS الإصدار 26.0 أو أحدث؛ ويعمل الذكاء الاصطناعي على الجهاز بأفضل صورة على عتاد Apple الحديث.',
           'المطوّر: مطوّر مستقل، وبلا شيفرة مصدرية منشورة؛ والبائع نفسه في App Store يبيع أيضًا [Castmates](/ar/power-local-llm/castmates-review).',
           'الدليل: أرقام السرعة والخصوصية هي قياسات المطوّر نفسه، لا اختبارات مستقلة.',
+          'مراجعة المطوّر: راجع Josip Markovic، مطوّر التطبيق، هذه الصفحة في 26 أكتوبر 2026 وقدّم تصحيحات وملاحظة (انظر «من مطوّر التطبيق»).',
         ],
         callouts: [
           {
@@ -1990,6 +2126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: 'كيف تحصل عليه',
         content: [
           '**Lyonesse متاح للتنزيل من App Store على iPhone وiPad وMac؛ ولا توجد نسخة مدرجة لـ Android أو Windows أو للويب.**',
@@ -1998,7 +2135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الخيار': 'iPhone وiPad', 'مصدر الحصول عليه': '[Lyonesse على App Store](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711)، مجاني مع شراء داخل التطبيق' },
           { 'الخيار': 'Mac', 'مصدر الحصول عليه': 'صفحة App Store نفسها، macOS 26.0 أو أحدث وفق الصفحة' },
-          { 'الخيار': 'Apple Watch', 'مصدر الحصول عليه': 'تطبيق تسجيل، watchOS 11.0 أو أحدث؛ أُضيف في الإصدار 2.0.5' },
+          { 'الخيار': 'Apple Watch', 'مصدر الحصول عليه': 'تطبيق تسجيل، watchOS 11.0 أو أحدث؛ يسجّل بمفرده دون الحاجة إلى وجود iPhone بالقرب منه، وينقل الصوت إلى iPhone عند العودة إلى النطاق؛ أُضيف في الإصدار 2.0.5' },
           { 'الخيار': 'الخيارات المدفوعة', 'مصدر الحصول عليه': 'شهري $7.99 أو سنوي $29.99 أو دائم $59.99 (المتجر الأمريكي)' },
           { 'الخيار': 'الموقع', 'مصدر الحصول عليه': '[lyonesse.app](https://lyonesse.app)' },
           { 'الخيار': 'سياسة الخصوصية', 'مصدر الحصول عليه': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -2012,11 +2149,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse في لمحة',
         columns: ['السمة', 'Lyonesse'],
         rows: [
-          { 'السمة': 'المنصة', 'Lyonesse': 'iPhone وiPad وMac؛ مع تطبيق تسجيل لـ Apple Watch' },
+          { 'السمة': 'المنصة', 'Lyonesse': 'iPhone وiPad وMac؛ ويسجّل Apple Watch بمفرده' },
+          { 'السمة': 'Apple Watch', 'Lyonesse': 'مسجّل مستقل؛ ويتولى iPhone تفريغ الصوت المنقول وتلخيصه' },
           { 'السمة': 'السعر', 'Lyonesse': 'أول تسجيل مجاني؛ اشتراك أو شراء دائم' },
           { 'السمة': 'الرخصة', 'Lyonesse': 'ملكية خاصة، مغلق المصدر' },
           { 'السمة': 'مكان التشغيل', 'Lyonesse': 'على الجهاز؛ تُنزَّل النماذج مرة واحدة' },
-          { 'السمة': 'اللغات', 'Lyonesse': '15 للتفريغ والملخصات' },
+          { 'السمة': 'اللغات', 'Lyonesse': '15 لغة للتفريغ الصوتي؛ والتطبيق نفسه مترجم إلى 14' },
           { 'السمة': 'التفريغ الفوري', 'Lyonesse': 'نعم؛ تفريغ وترجمة نصية مباشرة' },
           { 'السمة': 'تسمية المتحدثين', 'Lyonesse': 'نعم' },
           { 'السمة': 'يعمل بالمعالج فقط', 'Lyonesse': 'غير مذكور؛ عتاد Apple فقط' },
@@ -2035,8 +2173,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'البند': 'نظام التشغيل', 'ما تقوله المصادر': 'iOS وiPadOS وmacOS وvisionOS الإصدار 26.0 أو أحدث؛ وwatchOS 11.0 لتطبيق Watch (App Store)' },
           { 'البند': 'أفضل عتاد', 'ما تقوله المصادر': 'iPhone 15 Pro أو أحدث، وiPad بمعالج من سلسلة M، وMac بمعالج Apple silicon (موقع المطوّر)' },
-          { 'البند': 'محرّكات الذكاء الاصطناعي', 'ما تقوله المصادر': 'Apple Speech أو NVIDIA Parakeet للتفريغ؛ وApple Intelligence أو نموذج محلي قابل للتنزيل للملخصات والدردشة' },
-          { 'البند': 'تنزيل النماذج', 'ما تقوله المصادر': 'مطلوب مرة واحدة عبر الشبكة؛ ويذكر منشور القياس لدى المطوّر أن Parakeet TDT v3 يبلغ نحو 467 MB' },
+          { 'البند': 'محرّكات الذكاء الاصطناعي', 'ما تقوله المصادر': 'التفريغ الصوتي: Apple SpeechAnalyzer حيث تكون اللغة مدعومة، وإلا NVIDIA Parakeet TDT 0.6B v3، وهو نموذج مفتوح من Hugging Face يعمل عبر FluidAudio بصيغة CoreML. تسمية المتحدثين: نماذج تمييز المتحدثين المفتوحة في FluidAudio. الملخصات والدردشة: Apple Intelligence حيث يتوفر على الجهاز، وإلا نموذج Qwen3 مفتوح (0.6B أو 1.7B أو 4B، بدقة 4-bit، من مستودعات mlx-community على Hugging Face) يعمل على MLX. فهم الصور: Qwen2-VL 2B بالطريقة نفسها (المطوّر)' },
+          { 'البند': 'Apple Intelligence', 'ما تقوله المصادر': 'غير مطلوب وفق المطوّر: ففي غيابه تستخدم الملخصات والدردشة النموذج المحلي القابل للتنزيل؛ غير أن الشروط، المحدَّثة آخر مرة في 28 أكتوبر 2025، ما زالت تقول خلاف ذلك' },
+          { 'البند': 'تنزيل النماذج', 'ما تقوله المصادر': 'مطلوب مرة واحدة عبر الشبكة، ويُبدأ من الإعدادات؛ ويقدّر المطوّر حجم نموذج Parakeet بنحو 485 MB ونماذج تسمية المتحدثين بنحو 18 MB' },
           { 'البند': 'الذاكرة', 'ما تقوله المصادر': 'لا يرد أي رقم لذاكرة RAM في أي مصدر' },
         ],
         note: 'صفحة App Store هي التي تحدد إن كان التطبيق سيُثبَّت؛ ولا يذكر موقع المطوّر أي إصدار لنظام التشغيل.',
@@ -2073,11 +2212,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**كل بند أدناه مصدره وصف App Store أو سجل إصداراته أو موقع المطوّر؛ ولم يُختبر أي منها اختبارًا مستقلًا.**',
         ],
         items: [
+          '**التسجيل على Apple Watch.** يسجّل تطبيق Watch بمفرده، فلا يلزم وجود iPhone بالقرب منك أثناء التسجيل. وعندما تعود الساعة إلى النطاق ينتقل ملف الصوت إلى iPhone الذي يتولى التفريغ الصوتي والملخصات (المطوّر؛ الإصدار 2.0.5؛ ولم تختبر PromptQuorum تطبيق Watch).',
           '**التفريغ الصوتي.** تفريغ مباشر مع تسمية المتحدثين بـ 15 لغة؛ وأضاف الإصدار 2.0.4 ترجمة نصية مباشرة ومفردات مخصصة وعرضًا حرفيًا نظيفًا.',
           '**الملخصات والمهام.** ملخصات بالذكاء الاصطناعي ونقاط رئيسية وقرارات، إضافة إلى Action Center الذي يستخرج المهام ومسؤوليها ومواعيدها.',
           '**Ask Lyonesse والدردشة مع المستندات.** أسئلة عبر الملاحظات والنصوص المفرَّغة وملفات PDF وWord وExcel وPowerPoint والصور، مع استشهادات وتعرّف ضوئي على الحروف (OCR) على الجهاز؛ وتجمع Projects التسجيلات والمستندات.',
           '**مساعد الاجتماعات.** ربط بالتقويم وترجمة نصية مباشرة وتنبيهات عند ذكر اسمك ومحاضر مصوغة بالذكاء الاصطناعي وبنود إجراءات تُرسل إلى Apple Reminders؛ وعلى Mac يسجّل الميكروفون وصوت النظام، فلا ينضم أي بوت إلى المكالمة.',
-          '**منظومة Apple.** تطبيق تسجيل لـ Watch (الإصدار 2.0.5)، وأدوات (Widgets)، ودعم Siri وShortcuts (الإصدار 2.0.1)، ومزامنة iCloud اختيارية.',
+          '**منظومة Apple.** أدوات (Widgets) ودعم Siri وShortcuts (الإصدار 2.0.1) ومزامنة iCloud التي يقول المطوّر إنها مفعّلة افتراضيًا.',
         ],
         note: 'أعاد الإصدار 2.0.6 تنظيم التطبيق في تبويبات Notes وTasks وFolders إضافة إلى Search، وأصبحت الاجتماعات داخل Notes.',
       },
@@ -2094,8 +2234,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'تدفق البيانات والخصوصية',
         content: [
-          '**تقول سياسة الخصوصية، المحدَّثة آخر مرة في 9 أكتوبر 2026، إن التسجيلات الصوتية لا تغادر الجهاز أبدًا وإن التفريغ والملخصات وتحليل المستندات تعمل عليه، دون إرسال بيانات إلى خوادم خارجية للمعالجة.** لا يلزم حساب، وتنص السياسة على أن Lyonesse لا يدمج أي خدمات تحليلات أو إعلانات أو تتبع تابعة لجهات خارجية ولا يجمع التسجيلات ولا النصوص المفرَّغة ولا المستندات ولا الأسماء ولا عناوين البريد ولا الموقع ولا جهات الاتصال.',
-          'لكن بعض البيانات تنتقل. تصف السياسة إحصاءات استخدام مجهولة (مرات فتح التطبيق واستخدام الميزات ونوع الجهاز وإصدار النظام والتطبيق) وتقارير أعطال دون ذكر الأدوات المستخدمة أو طريقة إرسالها؛ وتدرج ملصقات الخصوصية في App Store معرّف الجهاز والتفاعل مع المنتج وبيانات الأعطال بوصفها بيانات تُجمع وغير مرتبطة بك. تُزامَن النصوص المفرَّغة والملخصات بين أجهزتك عبر iCloud، وتشمل النسخ الاحتياطية للجهاز بيانات التطبيق. ويقول المطوّر إنه لا يشغّل خوادم مزامنة ولا يستطيع رؤية بيانات iCloud. وتخضع Apple Intelligence وApp Store وiCloud والنسخ الاحتياطية لسياسات Apple نفسها.',
+          '**تقول سياسة الخصوصية، المحدَّثة آخر مرة في 9 أكتوبر 2026، إن التسجيلات الصوتية لا تغادر الجهاز أبدًا وإن التفريغ والملخصات وتحليل المستندات تعمل عليه، دون إرسال بيانات إلى خوادم خارجية للمعالجة.** لا يلزم حساب، وتنص السياسة على أن Lyonesse لا يجمع التسجيلات ولا النصوص المفرَّغة ولا المستندات ولا الأسماء ولا عناوين البريد الإلكتروني ولا الموقع ولا جهات الاتصال. أما سطرها القائل إنه لا تُدمج أي خدمات تحليلات تابعة لجهات خارجية فقد أصبح قديمًا بحسب المطوّر، وهو بصدد تصحيحه.',
+          'لكن بعض البيانات تنتقل. يقول المطوّر إن التطبيق يرسل أحداث استخدام مجهولة إلى Mixpanel وإن RevenueCat يتولى الاشتراكات، ولا يتلقى أبدًا الصوت ولا النصوص المفرَّغة ولا الملاحظات. وتصف السياسة إحصاءات استخدام مجهولة (مرات فتح التطبيق واستخدام الميزات ونوع الجهاز وإصدار النظام والتطبيق) وتقارير أعطال؛ وتدرج ملصقات الخصوصية في App Store معرّف الجهاز والتفاعل مع المنتج وبيانات الأعطال بوصفها بيانات تُجمع وغير مرتبطة بك. تُزامَن النصوص المفرَّغة والملخصات بين أجهزتك عبر iCloud الذي يقول المطوّر إنه مفعّل افتراضيًا، وتشمل النسخ الاحتياطية للجهاز بيانات التطبيق. ويقول المطوّر إنه لا يشغّل خوادم مزامنة ولا يستطيع الاطلاع على بيانات iCloud. وتخضع Apple Intelligence وApp Store وiCloud والنسخ الاحتياطية لسياسات Apple نفسها.',
         ],
         callouts: [
           {
@@ -2103,6 +2243,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'هذه تصريحات المطوّر وليست نتائج تدقيق، والشيفرة المصدرية غير منشورة. لم تفحص PromptQuorum حركة الشبكة الصادرة عن التطبيق. ولا تذكر السياسة ولا الشروط أي كيان قانوني أو عنوان بريدي؛ ويرد في سطر حقوق النشر في App Store "Markovic Software, obrt za usluge"، وتطبّق الشروط القانون الكرواتي.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من مطوّر التطبيق',
+        content: [
+          'راجع Josip Markovic، مطوّر Lyonesse، مسودة هذه المراجعة وأرسل تصحيحات والملاحظة أدناه. وهي معروضة بوصفها كلام المطوّر نفسه، لا بوصفها تقييمًا تحريريًا مستقلًا من PromptQuorum. وقد طُبّقت في هذه المراجعة تصحيحاته بشأن اللغات والنماذج وتطبيق التسجيل على Apple Watch والإعداد الافتراضي للمزامنة والتحليلات ومتطلب العتاد:',
+          '«بنيت Lyonesse لأنني أردت محاضر اجتماعات دون أن ينضم بوت إلى المكالمة ودون أن يذهب صوتي إلى خادم أحد. كل شيء يعمل على الجهاز: نموذج الكلام من Apple أو Parakeet للتفريغ الصوتي، وApple Intelligence أو نموذج مفتوح صغير للملخصات. وعندما قِستُه، أرسل اجتماع مدته 10 دقائق 0.02 MB من Lyonesse مقابل 115.7 MB من ملاحظات الاجتماعات في Notion. والخطوة التالية هي ما طلبه المستخدمون: مجلدات فرعية، وصيغة ملاحظة افتراضية لكل مجلد، وتعليمات ذكاء اصطناعي لمرة واحدة على ملاحظة.»',
+        ],
+        note: '— Josip Markovic، مطوّر التطبيق',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2118,9 +2267,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما لم نتمكن من التحقق منه',
         items: [
           '**الدقة عمليًا.** لم تسجّل PromptQuorum أو تفرّغ أي شيء، لذا لم تُقيَّم جودة النص المفرَّغ ولا دقة تسمية المتحدثين ولا جودة الملخصات ولا تغطية اللغات الخمس عشرة كلها.',
-          '**الإعداد الافتراضي للمزامنة.** تقول سياسة الخصوصية إن مزامنة iCloud مفعّلة افتراضيًا، بينما يقول وصف App Store إن مزامنة iCloud الاختيارية متوقفة افتراضيًا.',
-          '**"لا شيء يغادر جهازك".** يقول الموقع إن لا شيء يُرفع، بينما تصف السياسة وملصقات App Store تحليلات مجهولة وبيانات أعطال؛ ولا يُذكر إلى أين تُرسل.',
-          '**متطلب العتاد.** تقول الشروط، المحدَّثة آخر مرة في 28 أكتوبر 2025، إن التطبيق يتطلب عتادًا يدعم Apple Intelligence، بينما يصف الموقع نموذجًا محليًا قابلًا للتنزيل بديلًا.',
+          '**الإعداد الافتراضي للمزامنة.** يؤكد المطوّر أن مزامنة iCloud مفعّلة افتراضيًا، كما تقول سياسة الخصوصية؛ أما وصف App Store الذي يقول إنها متوقفة فهو خاطئ، وينوي تصحيحه في الإصدار القادم. ولم تتحقق PromptQuorum من هذا الإعداد.',
+          '**«لا شيء يغادر جهازك».** يقول الموقع إن لا شيء يُرفع، بينما يقول المطوّر إن التطبيق يرسل أحداث استخدام مجهولة إلى Mixpanel، ويجري تصحيح سطر السياسة المتعلق بالتحليلات التابعة لجهات خارجية. ولم تفحص PromptQuorum حركة الشبكة.',
+          '**متطلب العتاد.** ما زالت الشروط، المحدَّثة آخر مرة في 28 أكتوبر 2025، تقول إن التطبيق يتطلب عتادًا يدعم Apple Intelligence؛ ويقول المطوّر إن ذلك قديم وإن نموذجًا محليًا قابلًا للتنزيل يحل محلها في غيابها.',
           '**السجل العملي.** أظهر App Store عددًا قليلًا فقط من التقييمات عند المراجعة، وحمل التطبيق اسم Inscribe حتى 3 سبتمبر 2026.',
           '**الاستخدام المنظَّم.** لم تُقيَّم مدى ملاءمته للتسجيل الطبي أو القانوني أو غيره من المجالات المنظَّمة.',
         ],
@@ -2141,6 +2290,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+          {
+            q: 'هل يمكنني التسجيل باستخدام Apple Watch وحدها؟',
+            a: 'نعم، وفق المطوّر: يسجّل تطبيق Watch بمفرده، ولا يلزم وجود iPhone بالقرب منك أثناء التسجيل. وعندما تعود الساعة إلى النطاق ينتقل ملف الصوت إلى iPhone، حيث يجري التفريغ الصوتي والتلخيص. ولم تختبر PromptQuorum تطبيق Watch.',
+          },
           {
             q: 'كم يكلّف Lyonesse خارج الولايات المتحدة؟',
             a: 'في متاجر App Store التي رُوجعت في 26 أكتوبر 2026، كانت أسعار الاشتراك الشهري / السنوي / Unlimited الدائم 8.99 € / 34.99 € / 69.99 € في ألمانيا وإسبانيا وفرنسا، و¥1,300 / ¥5,000 / ¥10,000 في اليابان، و₩12,000 / ₩49,000 / ₩99,000 في كوريا الجنوبية، وR$ 49.90 / R$ 199.90 / R$ 399.90 في البرازيل.',
@@ -2163,7 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'Lyonesse وسيلة واسعة ومحدَّثة باستمرار للحصول على نصوص مفرَّغة ومحاضر اجتماعات ودردشة مع المستندات على iPhone أو Mac، مع تسجيل مجاني واحد للتجربة وخيار شراء دائم إلى جانب الاشتراكات. في المقابل، هو مغلق المصدر، ويأتي من مطوّر مستقل واحد، ويتطلب نظام تشغيل من سلسلة 26، ويقيم ادعاءاته عن الخصوصية والسرعة على قياسات المطوّر نفسه، ويذكر الإعداد الافتراضي لمزامنة iCloud بصيغتين مختلفتين. يناسب أصحاب عتاد Apple الحديث الذين يريدون ملاحظات دون حساب ويمكنهم تجربة التسجيل المجاني أولًا؛ أما من يسجّل مواد حساسة أو منظَّمة فعليه قراءة سياسة الخصوصية وإعداد المزامنة بنفسه قبل الاعتماد عليه.',
+          'Lyonesse وسيلة واسعة ومحدَّثة باستمرار للحصول على نصوص مفرَّغة ومحاضر اجتماعات ودردشة مع المستندات على iPhone أو Mac، ويستطيع تطبيقه على Apple Watch التسجيل بمفرده على أن يتولى iPhone التفريغ الصوتي لاحقًا. يتيح لك تسجيل مجاني تجربته، ويوجد خيار شراء دائم إلى جانب الاشتراكات. في المقابل، هو مغلق المصدر، ويأتي من مطوّر مستقل واحد، ويتطلب نظام تشغيل من سلسلة 26، ويقيم ادعاءاته عن الخصوصية والسرعة على قياسات المطوّر نفسه، وما زال يحمل صياغات قديمة في الشروط وسياسة الخصوصية ونص App Store، يقول المطوّر إنه يعمل على تصحيحها. يناسب من يملكون عتاد Apple حديثًا ويريدون ملاحظات دون حساب ويمكنهم تجربة التسجيل المجاني أولًا؛ أما من يسجّلون مواد حساسة أو خاضعة للتنظيم فعليهم قراءة سياسة الخصوصية وإعداد المزامنة بأنفسهم قبل الاعتماد عليه.',
       },
       sources: {
         id: 'sources',
@@ -2174,6 +2327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[سياسة خصوصية Lyonesse](https://lyonesse.app/privacy.html) — جمع البيانات والمزامنة، آخر تحديث في 9 أكتوبر 2026.',
           '[شروط Lyonesse](https://lyonesse.app/terms.html) — الاشتراكات واسترداد المبالغ وموافقة التسجيل، آخر تحديث في 28 أكتوبر 2025.',
           '[منشور اختبار الكلام](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html) و[منشور قياس الرفع](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — قياسات المطوّر نفسه.',
+          'رسالة بريد إلكتروني من المطوّر إلى PromptQuorum، 26 أكتوبر 2026 — تصحيحات بشأن اللغات والنماذج وتطبيق التسجيل على Watch والمزامنة والتحليلات والمتطلبات، إضافة إلى ملاحظة المطوّر؛ لم يجرِ التحقق منها بصورة مستقلة.',
         ],
       },
       relatedReading: {
@@ -2222,16 +2376,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '离线 ai 会议笔记',
       'iphone 离线 pdf 对话',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse（版本 2.0.7，2026年10月23日更新）是一款适用于 iPhone、iPad 和 Mac 的应用，提供离线转录、会议笔记以及与你自己的文档对话的功能。**开发者表示，音频、转录文本和文档都在设备本机处理，且无需账号；本文所有说法均来自 App Store 页面和开发者自己的网页。',
+      '**Lyonesse（版本 2.0.7，2026年10月23日更新）是一款适用于 iPhone、iPad 和 Mac 的应用，提供离线转录、会议笔记以及与你自己的文档对话的功能；其 Apple Watch 应用可独立录音，无需 iPhone 在身边。**开发者表示，音频、转录文本和文档都在设备本机处理，且无需账号。在手表上录制的内容会在手表回到连接范围后传输到 iPhone，由 iPhone 完成转录和摘要。本文所有说法均来自 App Store 页面、开发者自己的网页或开发者对本页的审阅。',
     quickAnswerTop: {
       zh: {
         question: 'Lyonesse 真的能在 iPhone 和 Mac 上离线使用吗？',
         answer:
           '按开发者的说法，可以：语音和 AI 模型一次性下载后，录音、转录、摘要和提问在飞行模式下也能使用。隐私政策还说明，音频不会离开设备，但会收集匿名的使用数据和崩溃数据。',
         bullets: [
+          '可在 Apple Watch 上独立录音，iPhone 不在连接范围内也行；音频文件稍后传输到 iPhone，由 iPhone 完成转录和摘要。',
           '实时转录并标注说话人，支持 15 种语言，使用 Apple Speech 或 NVIDIA Parakeet。',
           '生成摘要、要点，并通过 Action Center 列出任务、负责人和截止日期。',
           'Ask Lyonesse 可跨笔记、转录文本、PDF 和图片回答问题，并附带引用。',
@@ -2250,6 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '来源已证实的功能', anchor: 'key-features' },
       { label: '开发者自己的测量', anchor: 'maker-measurements' },
       { label: '数据流向与隐私', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '适合哪些人', anchor: 'who-should-use' },
       { label: '我们未能核实的内容', anchor: 'who-should-not-use' },
       { label: '竞品与替代方案', anchor: 'vs-alternatives' },
@@ -2274,11 +2430,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch：可独立录音，因此 iPhone 不必在身边；手表回到连接范围后，音频会传输到 iPhone，由 iPhone 转录并生成摘要（开发者）。',
           '维护状态：版本 2.0.7 于 2026年10月23日发布，自 8 月 27 日以来已发布八个版本，因此无需显示项目停更警告。',
           '费用：免费下载并含一次录音；之后可选月付或年付订阅，或一次性买断终身使用。',
           '运行要求：iOS、iPadOS 或 macOS 26.0 及以上；端侧 AI 在较新的 Apple 硬件上效果最好。',
           '开发者：一位独立开发者，未公开源代码；该 App Store 销售者还发布了 [Castmates](/zh/power-local-llm/castmates-review)。',
           '证据：速度和隐私方面的数据是开发者自己的测量结果，并非独立测试。',
+          '开发者审阅：开发者 Josip Markovic 于 2026年10月26日审阅了本页，并提供了更正和一段说明（见“来自开发者”）。',
         ],
         callouts: [
           {
@@ -2297,6 +2455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: '获取方式',
         content: [
           '**Lyonesse 通过 App Store 下载，适用于 iPhone、iPad 和 Mac；未列出 Android、Windows 或网页版本。**',
@@ -2305,7 +2464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '选项': 'iPhone 和 iPad', '获取方式': '[App Store 上的 Lyonesse](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711)，免费下载，含 App 内购买' },
           { '选项': 'Mac', '获取方式': '同一个 App Store 条目，据页面标注需 macOS 26.0 及以上' },
-          { '选项': 'Apple Watch', '获取方式': '录音应用，需 watchOS 11.0 及以上；2.0.5 版新增' },
+          { '选项': 'Apple Watch', '获取方式': '录音应用，需 watchOS 11.0 及以上；无需 iPhone 在身边即可独立录音，手表回到连接范围后将音频传输到 iPhone；2.0.5 版新增' },
           { '选项': '付费选项', '获取方式': '月付 $7.99、年付 $29.99 或终身 $59.99（美国商店）' },
           { '选项': '官网', '获取方式': '[lyonesse.app](https://lyonesse.app)' },
           { '选项': '隐私政策', '获取方式': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -2319,11 +2478,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse 一览',
         columns: ['属性', 'Lyonesse'],
         rows: [
-          { '属性': '平台', 'Lyonesse': 'iPhone、iPad、Mac；Apple Watch 录音应用' },
+          { '属性': '平台', 'Lyonesse': 'iPhone、iPad、Mac；Apple Watch 可独立录音' },
+          { '属性': 'Apple Watch', 'Lyonesse': '独立录音应用；由 iPhone 转录并总结传输过来的音频' },
           { '属性': '价格', 'Lyonesse': '首次录音免费；订阅或终身买断' },
           { '属性': '许可证', 'Lyonesse': '专有软件，闭源' },
           { '属性': '运行方式', 'Lyonesse': '在设备本机运行；模型仅下载一次' },
-          { '属性': '语言', 'Lyonesse': '转录和摘要支持 15 种' },
+          { '属性': '语言', 'Lyonesse': '转录支持 15 种；应用界面翻译为 14 种' },
           { '属性': '实时转录', 'Lyonesse': '支持；实时转录和实时字幕' },
           { '属性': '说话人标签', 'Lyonesse': '支持' },
           { '属性': '仅 CPU 可用', 'Lyonesse': '未说明；仅限 Apple 硬件' },
@@ -2342,8 +2502,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '项目': '操作系统', '来源说明': 'iOS、iPadOS、macOS 和 visionOS 26.0 及以上；Watch 录音应用需 watchOS 11.0（App Store）' },
           { '项目': '推荐硬件', '来源说明': 'iPhone 15 Pro 或更新机型、搭载 M 系列芯片的 iPad、搭载 Apple 芯片的 Mac（开发者官网）' },
-          { '项目': 'AI 引擎', '来源说明': '转录使用 Apple Speech 或 NVIDIA Parakeet；摘要和对话使用 Apple Intelligence 或可下载的本地模型' },
-          { '项目': '模型下载', '来源说明': '需联网下载一次；开发者的基准测试文章称 Parakeet TDT v3 约 467 MB' },
+          { '项目': 'AI 引擎', '来源说明': '转录：在支持该语言时使用 Apple SpeechAnalyzer，否则使用 NVIDIA Parakeet TDT 0.6B v3，这是 Hugging Face 上的开放模型，通过 FluidAudio 以 CoreML 方式运行。说话人标签：FluidAudio 的开放说话人分离模型。摘要和对话：设备支持时使用 Apple Intelligence，否则使用在 MLX 上运行的开放 Qwen3 模型（0.6B、1.7B 或 4B，4 位量化，来自 Hugging Face 上的 mlx-community 仓库）。图像理解：以同样方式运行 Qwen2-VL 2B（开发者）' },
+          { '项目': 'Apple Intelligence', '来源说明': '按开发者的说法并非必需：没有它时，摘要和对话使用可下载的本地模型；2025年10月28日最后更新的服务条款仍然写的是相反的内容' },
+          { '项目': '模型下载', '来源说明': '需要联网下载一次，在“设置”中启动；开发者称 Parakeet 模型约 485 MB，说话人标签模型约 18 MB' },
           { '项目': '内存', '来源说明': '各处均未给出内存（RAM）要求' },
         ],
         note: '能否安装以 App Store 条目为准；开发者官网没有列出操作系统版本。',
@@ -2380,11 +2541,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**以下各项均来自 App Store 描述、版本历史或开发者官网，均未经独立测试。**',
         ],
         items: [
+          '**在 Apple Watch 上录音。**Watch 应用可独立录音，因此录音时 iPhone 不必在身边。手表回到连接范围后，音频文件会传输到 iPhone，由 iPhone 完成转录和摘要（开发者；2.0.5 版；PromptQuorum 未测试 Watch 应用）。',
           '**转录。**实时转录并标注说话人，支持 15 种语言；2.0.4 版新增实时翻译字幕、自定义词汇和纯净逐字视图。',
           '**摘要与任务。**AI 摘要、要点和决定，外加可提取任务、负责人和截止日期的 Action Center。',
           '**Ask Lyonesse 与文档对话。**可跨笔记、转录文本、PDF、Word、Excel、PowerPoint 和图片提问，附带引用和端侧 OCR；Projects 可把录音和文档归类到一起。',
           '**会议助手。**关联日历、实时字幕、被点名提醒、AI 起草的会议纪要，以及发送到 Apple“提醒事项”的待办事项；在 Mac 上可录制麦克风和系统音频，因此无需机器人加入通话。',
-          '**Apple 生态。**Watch 录音应用（2.0.5 版）、小组件、Siri 和快捷指令支持（2.0.1 版），以及可选的 iCloud 同步。',
+          '**Apple 生态。**小组件、Siri 和快捷指令支持（2.0.1 版），以及 iCloud 同步，开发者称该同步默认开启。',
         ],
         note: '2.0.6 版把应用重新整理为“笔记”“任务”“文件夹”三个标签页外加搜索，会议现在归入“笔记”。',
       },
@@ -2401,8 +2563,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '数据流向与隐私',
         content: [
-          '**隐私政策（最后更新于 2026年10月9日）称，音频录音绝不会离开设备，转录、摘要和文档分析都在设备上运行，不会把数据发送到外部服务器进行处理。**无需账号；政策声明 Lyonesse 未集成任何第三方分析、广告或追踪服务，也不收集录音、转录文本、文档、姓名、邮箱、位置或联系人。',
-          '部分数据确实会流出。政策描述了匿名的使用统计（应用打开次数、功能使用情况、设备类型、系统和应用版本）以及崩溃报告，但没有说明所用工具，也没有说明如何发送；App Store 隐私标签则把设备 ID、产品交互和崩溃数据列为“已收集但未与你关联”。转录文本和摘要通过 iCloud 在你自己的设备之间同步，设备备份也包含应用数据。开发者称自己不运行同步服务器，也看不到 iCloud 数据。Apple Intelligence、App Store、iCloud 和备份适用 Apple 自己的政策。',
+          '**隐私政策（最后更新于 2026年10月9日）称，音频录音绝不会离开设备，转录、摘要和文档分析都在设备上运行，不会把数据发送到外部服务器进行处理。**无需账号；政策声明 Lyonesse 不收集录音、转录文本、文档、姓名、邮箱、位置或联系人。据开发者称，政策中“未集成任何第三方分析”这一句已经过时，他正在更正。',
+          '部分数据确实会流出。开发者称，应用会把匿名的使用事件发送到 Mixpanel，RevenueCat 负责处理订阅，从不接触音频、转录文本或笔记。政策描述了匿名的使用统计（应用打开次数、功能使用情况、设备类型、系统和应用版本）以及崩溃报告；App Store 隐私标签则把设备 ID、产品交互和崩溃数据列为“已收集但未与你关联”。转录文本和摘要通过 iCloud 在你自己的设备之间同步，开发者称该同步默认开启，设备备份也包含应用数据。开发者称自己不运行同步服务器，也看不到 iCloud 数据。Apple Intelligence、App Store、iCloud 和备份适用 Apple 自己的政策。',
         ],
         callouts: [
           {
@@ -2410,6 +2572,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '以上是开发者的声明，并非审计结果，且源代码未公开。PromptQuorum 未检查该应用的网络流量。政策和条款都没有列出法律实体或邮寄地址；App Store 的版权信息为“Markovic Software, obrt za usluge”，条款适用克罗地亚法律。',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'Lyonesse 的开发者 Josip Markovic 审阅了本评测的草稿，并发来了更正和下面的说明。以下内容作为开发者自己的话呈现，并非 PromptQuorum 的独立编辑评价。他提出的关于语言、模型、Apple Watch 录音应用、同步默认设置、分析工具和硬件要求的更正，已在本评测中采纳：',
+          '“我开发 Lyonesse，是因为我想要不需要机器人加入通话、音频也不会传到别人服务器上的会议笔记。一切都在设备上运行：转录用 Apple 的语音模型或 Parakeet，摘要用 Apple Intelligence 或一个小型开放模型。我测量过：一场 10 分钟的会议，Lyonesse 发送了 0.02 MB，而 Notion 的会议笔记发送了 115.7 MB。接下来要做的是用户提出的需求：子文件夹、每个文件夹的默认笔记格式，以及针对单条笔记的一次性 AI 指令。”',
+        ],
+        note: '— Josip Markovic,开发者',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2425,9 +2596,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '我们未能核实的内容',
         items: [
           '**实际准确度。**PromptQuorum 没有录制或转录任何内容，因此不评价转录质量、说话人标签的准确度、摘要质量，以及全部 15 种语言的覆盖情况。',
-          '**同步默认设置。**隐私政策称 iCloud 同步默认开启，而 App Store 描述称可选的 iCloud 同步默认关闭。',
-          '**“数据不会离开你的设备。”**官网称不会上传任何内容，而政策和 App Store 标签描述了匿名分析和崩溃数据；这些数据发往何处并未说明。',
-          '**硬件要求。**最后更新于 2025年10月28日的条款称，应用需要支持 Apple Intelligence 的硬件，而官网则把可下载的本地模型描述为替代方案。',
+          '**同步默认设置。**开发者确认 iCloud 同步默认开启，与隐私政策一致；App Store 描述称其默认关闭，这是错误的，他计划在下一个版本中修正。PromptQuorum 未核对该设置。',
+          '**“没有任何内容离开你的设备。”**官网称不会上传任何内容，而开发者称应用会把匿名的使用事件发送到 Mixpanel，政策中关于第三方分析的那一句正在更正。PromptQuorum 未检查网络流量。',
+          '**硬件要求。**2025年10月28日最后更新的服务条款仍写明该应用需要支持 Apple Intelligence 的硬件；开发者称这已经过时，没有它时会由可下载的本地模型接替。',
           '**过往记录。**核对时 App Store 上只有寥寥几条评分，且该应用在 2026年9月3日之前一直叫 Inscribe。',
           '**受监管场景。**未评估其是否适用于医疗、法律或其他受监管的录音场景。',
         ],
@@ -2448,6 +2619,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          {
+            q: '只用 Apple Watch 能录音吗？',
+            a: '可以，依据是开发者的说法：Watch 应用可独立录音，录音时 iPhone 不必在身边。手表回到连接范围后，音频文件会传输到 iPhone，在那里完成转录和摘要。PromptQuorum 未测试 Watch 应用。',
+          },
           {
             q: 'Lyonesse 在美国以外的价格是多少？',
             a: '在 2026年10月26日核对的各地区 App Store 中，月付 / 年付 / 终身 Unlimited 的价格在德国、西班牙和法国为 €8.99 / €34.99 / €69.99，日本为 ¥1,300 / ¥5,000 / ¥10,000（日元），韩国为 ₩12,000 / ₩49,000 / ₩99,000，巴西为 R$49.90 / R$199.90 / R$399.90。',
@@ -2470,7 +2645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Lyonesse 覆盖面广、更新活跃，可在 iPhone 或 Mac 上获得转录文本、会议笔记和文档对话，提供一次免费录音供试用，并在订阅之外提供终身买断选项。另一方面，它闭源、出自一位独立开发者、需要 26 系列操作系统，其隐私和速度方面的说法依赖开发者自己的测量，而且对 iCloud 同步的默认设置有两种不同的说法。它适合使用较新 Apple 硬件、想要无需账号的笔记并能先试用免费录音的用户；录制敏感或受监管内容的用户，在依赖它之前应自行阅读隐私政策并确认同步设置。',
+          'Lyonesse 覆盖面广、更新活跃，可在 iPhone 或 Mac 上获得转录文本、会议笔记和文档对话，其 Apple Watch 应用可独立录音，之后由 iPhone 完成转录。它提供一次免费录音供试用，并在订阅之外提供终身买断选项。另一方面，它闭源、出自一位独立开发者、需要 26 系列操作系统，其隐私和速度方面的说法依赖开发者自己的测量，而且服务条款、隐私政策和 App Store 文字中仍有过时的表述，开发者称正在更正。它适合使用较新 Apple 硬件、想要无需账号的笔记并能先试用免费录音的用户；录制敏感或受监管内容的用户，在依赖它之前应自行阅读隐私政策并确认同步设置。',
       },
       sources: {
         id: 'sources',
@@ -2481,6 +2656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lyonesse 隐私政策](https://lyonesse.app/privacy.html) — 数据收集与同步，最后更新于 2026年10月9日。',
           '[Lyonesse 服务条款](https://lyonesse.app/terms.html) — 订阅、退款和录音同意，最后更新于 2025年10月28日。',
           '[语音基准测试文章](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html)和[上传量测量文章](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — 开发者自己的测量。',
+          '开发者致 PromptQuorum 的邮件，2026年10月26日 — 对语言、模型、Watch 录音应用、同步、分析工具和运行要求的更正，以及开发者说明；未经独立验证。',
         ],
       },
       relatedReading: {
@@ -2529,16 +2705,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '오프라인 ai 회의 노트',
       '오프라인 pdf 채팅 아이폰',
     ],
-    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence'],
+    current_models_mentioned: ['Apple Speech', 'NVIDIA Parakeet', 'Apple Intelligence', 'Qwen3', 'Qwen2-VL', 'FluidAudio'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac', 'Apple Watch', 'iPhone 15 Pro'],
     leadAnswerBlock:
-      '**Lyonesse(버전 2.0.7, 2026년 10월 23일 업데이트)는 오프라인 받아쓰기, 회의 노트, 내 문서와의 채팅을 제공하는 iPhone·iPad·Mac 앱입니다.** 개발자는 오디오, 대화 내용, 문서가 기기에서 처리되며 계정이 필요 없다고 밝힙니다. 이 글의 모든 내용은 App Store 페이지와 개발자의 자체 페이지에 근거합니다.',
+      '**Lyonesse(버전 2.0.7, 2026년 10월 23일 업데이트)는 오프라인 받아쓰기, 회의 노트, 내 문서와의 채팅을 제공하는 iPhone·iPad·Mac 앱이며, Apple Watch 앱은 iPhone이 근처에 없어도 단독으로 녹음합니다.** 개발자는 오디오, 대화 내용, 문서가 기기에서 처리되며 계정이 필요 없다고 밝힙니다. 워치에서 한 녹음은 워치가 다시 연결 범위에 들어오면 iPhone으로 전송되고, 받아쓰기와 요약은 iPhone이 수행합니다. 이 글의 모든 내용은 App Store 페이지, 개발자의 자체 페이지 또는 이 페이지에 대한 개발자의 검토에 근거합니다.',
     quickAnswerTop: {
       ko: {
         question: 'Lyonesse는 정말 iPhone과 Mac에서 오프라인으로 작동합니까?',
         answer:
           '개발자에 따르면 그렇습니다. 음성 모델과 AI 모델을 한 번 내려받은 뒤에는 녹음, 받아쓰기, 요약, 질문이 비행기 모드에서도 작동합니다. 개인정보 처리방침은 오디오가 기기를 떠나지 않는다고 덧붙이며, 익명 처리된 사용 데이터와 충돌 데이터는 수집됩니다.',
         bullets: [
+          'Apple Watch에서 iPhone이 범위 밖에 있어도 단독으로 녹음하며, 오디오 파일은 나중에 iPhone으로 전송되고 받아쓰기와 요약은 iPhone이 수행합니다.',
           'Apple Speech 또는 NVIDIA Parakeet을 사용해 15개 언어로 화자 구분과 함께 실시간 받아쓰기를 제공합니다.',
           '요약, 핵심 포인트, 작업·담당자·기한을 정리하는 Action Center를 제공합니다.',
           'Ask Lyonesse는 노트, 대화 내용, PDF, 이미지 전반에 걸친 질문에 출처 표시와 함께 답합니다.',
@@ -2557,6 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '출처로 확인된 기능', anchor: 'key-features' },
       { label: '개발자 자체 측정 결과', anchor: 'maker-measurements' },
       { label: '데이터 흐름과 개인정보', anchor: 'privacy' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '이런 분께 적합합니다', anchor: 'who-should-use' },
       { label: '확인하지 못한 사항', anchor: 'who-should-not-use' },
       { label: '경쟁 제품과 대안', anchor: 'vs-alternatives' },
@@ -2581,11 +2759,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
+          'Apple Watch: 단독으로 녹음하므로 iPhone이 근처에 있을 필요가 없으며, 워치가 다시 연결 범위에 들어오면 오디오가 iPhone으로 전송되어 받아쓰기와 요약이 이루어집니다(개발자).',
           '유지 관리: 8월 27일 이후 여덟 차례 릴리스된 끝에 버전 2.0.7이 2026년 10월 23일에 출시되었으므로, 업데이트 중단 경고는 해당하지 않습니다.',
           '비용: 녹음 1건은 무료이며, 이후에는 월간 또는 연간 구독이나 1회 평생 구매로 이용합니다.',
           '요구 사항: iOS, iPadOS 또는 macOS 26.0 이상이며, 온디바이스 AI는 최신 Apple 기기에서 가장 잘 작동합니다.',
           '개발자: 독립 개발자 1인이 만들며 공개된 소스 코드는 없습니다. App Store 판매자는 [Castmates](/ko/power-local-llm/castmates-review)도 판매합니다.',
           '근거: 속도와 개인정보 보호 수치는 독립적인 테스트가 아니라 개발자 자체 측정 결과입니다.',
+          '개발자 검토: 개발자 Josip Markovic이 2026년 10월 26일에 이 페이지를 검토하고 정정 사항과 메모를 보내 왔습니다(개발자의 말 참조).',
         ],
         callouts: [
           {
@@ -2604,6 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       getIt: {
         id: 'get-it',
+        itemHeadings: true,
         title: '입수 방법',
         content: [
           '**Lyonesse는 App Store에서 내려받는 iPhone·iPad·Mac 앱이며, Android, Windows, 웹 버전은 등록되어 있지 않습니다.**',
@@ -2612,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '옵션': 'iPhone 및 iPad', '입수 방법': '[App Store의 Lyonesse](https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711), 무료 다운로드, 앱 내 구입 있음' },
           { '옵션': 'Mac', '입수 방법': 'App Store 페이지 기준 같은 항목, macOS 26.0 이상' },
-          { '옵션': 'Apple Watch', '입수 방법': '레코더 앱, watchOS 11.0 이상, 버전 2.0.5에서 추가' },
+          { '옵션': 'Apple Watch', '입수 방법': '레코더 앱, watchOS 11.0 이상. iPhone이 근처에 없어도 단독으로 녹음하고 다시 연결 범위에 들어오면 오디오를 iPhone으로 전송함. 버전 2.0.5에서 추가' },
           { '옵션': '유료 옵션', '입수 방법': '월 ₩12,000, 연 ₩49,000, 평생 ₩99,000(한국 스토어)' },
           { '옵션': '웹사이트', '입수 방법': '[lyonesse.app](https://lyonesse.app)' },
           { '옵션': '개인정보 처리방침', '입수 방법': '[lyonesse.app/privacy](https://lyonesse.app/privacy.html)' },
@@ -2626,11 +2807,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lyonesse 한눈에 보기',
         columns: ['속성', 'Lyonesse'],
         rows: [
-          { '속성': '플랫폼', 'Lyonesse': 'iPhone, iPad, Mac / Apple Watch 레코더' },
+          { '속성': '플랫폼', 'Lyonesse': 'iPhone, iPad, Mac / Apple Watch는 단독으로 녹음' },
+          { '속성': 'Apple Watch', 'Lyonesse': '독립형 레코더 / 전송된 오디오의 받아쓰기와 요약은 iPhone이 수행' },
           { '속성': '가격', 'Lyonesse': '첫 녹음 무료 / 구독 또는 평생 구매' },
           { '속성': '라이선스', 'Lyonesse': '독점, 비공개 소스' },
           { '속성': '실행 위치', 'Lyonesse': '기기에서 실행 / 모델은 1회 다운로드' },
-          { '속성': '언어', 'Lyonesse': '받아쓰기와 요약 15개 언어' },
+          { '속성': '언어', 'Lyonesse': '받아쓰기 15개 / 앱 자체는 14개 언어로 번역됨' },
           { '속성': '실시간 받아쓰기', 'Lyonesse': '지원 / 실시간 받아쓰기와 자막' },
           { '속성': '화자 구분', 'Lyonesse': '지원' },
           { '속성': 'CPU만으로 사용 가능', 'Lyonesse': '명시 없음 / Apple 기기 전용' },
@@ -2649,8 +2831,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '항목': '운영체제', '출처의 설명': 'iOS, iPadOS, macOS, visionOS 26.0 이상 / Watch 레코더는 watchOS 11.0(App Store)' },
           { '항목': '권장 하드웨어', '출처의 설명': 'iPhone 15 Pro 이상, M 시리즈 칩 탑재 iPad, Apple silicon Mac(개발자 사이트)' },
-          { '항목': 'AI 엔진', '출처의 설명': '받아쓰기는 Apple Speech 또는 NVIDIA Parakeet / 요약과 채팅은 Apple Intelligence 또는 내려받는 로컬 모델' },
-          { '항목': '모델 다운로드', '출처의 설명': '네트워크를 통해 1회 필요 / 개발자의 벤치마크 게시물은 Parakeet TDT v3를 약 467 MB로 표기' },
+          { '항목': 'AI 엔진', '출처의 설명': '받아쓰기: 언어가 지원되면 Apple SpeechAnalyzer, 그렇지 않으면 Hugging Face의 오픈 모델인 NVIDIA Parakeet TDT 0.6B v3를 FluidAudio를 통해 CoreML로 실행. 화자 구분: FluidAudio의 오픈 화자 구분 모델. 요약과 채팅: 기기가 지원하면 Apple Intelligence, 그렇지 않으면 Hugging Face의 mlx-community 저장소에서 받는 오픈 Qwen3 모델(0.6B, 1.7B 또는 4B, 4비트)을 MLX로 실행. 이미지 이해: 같은 방식으로 Qwen2-VL 2B 실행(개발자)' },
+          { '항목': 'Apple Intelligence', '출처의 설명': '개발자에 따르면 필수가 아님: 없으면 요약과 채팅에 내려받는 로컬 모델을 사용함. 2025년 10월 28일에 마지막으로 업데이트된 약관에는 아직 다르게 적혀 있음' },
+          { '항목': '모델 다운로드', '출처의 설명': '네트워크를 통해 1회 필요하며 설정에서 시작함. 개발자는 Parakeet 모델을 약 485 MB, 화자 구분 모델을 약 18 MB로 표기함' },
           { '항목': '메모리', '출처의 설명': 'RAM 수치는 어디에도 명시되어 있지 않음' },
         ],
         note: '앱 설치 가능 여부를 결정하는 것은 App Store 항목이며, 개발자 사이트에는 운영체제 버전이 표기되어 있지 않습니다.',
@@ -2687,11 +2870,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**아래 항목은 모두 App Store 설명, 버전 기록 또는 개발자 웹사이트에 근거하며, 독립적으로 테스트한 것은 없습니다.**',
         ],
         items: [
+          '**Apple Watch 녹음.** Watch 앱은 단독으로 녹음하므로 녹음하는 동안 iPhone이 근처에 있을 필요가 없습니다. 워치가 다시 연결 범위에 들어오면 오디오 파일이 iPhone으로 전송되고, iPhone이 받아쓰기와 요약을 수행합니다(개발자, 버전 2.0.5. PromptQuorum은 Watch 앱을 테스트하지 않았습니다).',
           '**받아쓰기.** 15개 언어로 화자 구분과 함께 실시간 받아쓰기를 제공하며, 버전 2.0.4에서 실시간 번역 자막, 사용자 지정 어휘, 깔끔한 원문 보기가 추가되었습니다.',
           '**요약과 작업.** AI 요약, 핵심 포인트, 결정 사항과 함께 작업, 담당자, 기한을 추출하는 Action Center를 제공합니다.',
           '**Ask Lyonesse와 문서 채팅.** 노트, 대화 내용, PDF, Word, Excel, PowerPoint, 이미지 전반에 걸친 질문에 출처 표시와 온디바이스 OCR로 답하며, Projects로 녹음과 문서를 묶을 수 있습니다.',
           '**회의 어시스턴트.** 캘린더 연동, 실시간 자막, 이름 언급 알림, AI가 작성한 회의록, Apple 미리 알림으로 보내는 실행 항목을 제공합니다. Mac에서는 마이크와 시스템 오디오를 녹음하므로 봇이 통화에 참여하지 않습니다.',
-          '**Apple 생태계.** Watch 레코더(버전 2.0.5), 위젯, Siri 및 단축어 지원(버전 2.0.1), 선택형 iCloud 동기화를 제공합니다.',
+          '**Apple 생태계.** 위젯, Siri 및 단축어 지원(버전 2.0.1)과 iCloud 동기화를 제공하며, 개발자에 따르면 iCloud 동기화는 기본으로 켜져 있습니다.',
         ],
         note: '버전 2.0.6에서 앱이 노트, 작업, 폴더 탭과 검색으로 재구성되었으며, 회의는 이제 노트 안에 포함됩니다.',
       },
@@ -2708,8 +2892,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: '데이터 흐름과 개인정보',
         content: [
-          '**2026년 10월 9일에 마지막으로 업데이트된 개인정보 처리방침에 따르면 오디오 녹음은 기기를 떠나지 않으며, 받아쓰기, 요약, 문서 분석은 기기에서 실행되고 처리를 위해 외부 서버로 전송되는 데이터는 없습니다.** 계정이 필요 없으며, 처리방침은 Lyonesse가 제3자 분석, 광고, 추적 서비스를 연동하지 않고 녹음, 대화 내용, 문서, 이름, 이메일, 위치, 연락처를 수집하지 않는다고 명시합니다.',
-          '이동하는 데이터도 있습니다. 처리방침은 익명 처리된 사용 통계(앱 실행, 기능 사용, 기기 유형, 시스템 및 앱 버전)와 충돌 보고서를 설명하지만 사용 도구의 이름이나 전송 방식은 밝히지 않으며, App Store 개인정보 레이블에는 기기 ID, 제품 상호작용, 충돌 데이터가 수집되며 사용자에게 연결되지 않는 항목으로 표시되어 있습니다. 대화 내용과 요약은 iCloud를 통해 사용자의 기기 간에 동기화되며, 기기 백업에는 앱 데이터가 포함됩니다. 개발자는 자체 동기화 서버를 운영하지 않으며 iCloud 데이터를 볼 수 없다고 밝힙니다. Apple Intelligence, App Store, iCloud, 백업에는 Apple의 자체 정책이 적용됩니다.',
+          '**2026년 10월 9일에 마지막으로 업데이트된 개인정보 처리방침에 따르면 오디오 녹음은 기기를 떠나지 않으며, 받아쓰기, 요약, 문서 분석은 기기에서 실행되고 처리를 위해 외부 서버로 전송되는 데이터는 없습니다.** 계정이 필요 없으며, 처리방침은 Lyonesse가 녹음, 대화 내용, 문서, 이름, 이메일, 위치, 연락처를 수집하지 않는다고 명시합니다. 제3자 분석 도구를 연동하지 않는다는 문구는 개발자에 따르면 더 이상 맞지 않으며, 개발자가 이를 정정하고 있습니다.',
+          '이동하는 데이터도 있습니다. 개발자는 앱이 익명 사용 이벤트를 Mixpanel로 전송하며 RevenueCat이 구독을 처리하되 오디오, 대화 내용, 노트는 처리하지 않는다고 밝힙니다. 처리방침은 익명 처리된 사용 통계(앱 실행, 기능 사용, 기기 유형, 시스템 및 앱 버전)와 충돌 보고서를 설명하며, App Store 개인정보 레이블에는 기기 ID, 제품 상호작용, 충돌 데이터가 수집되며 사용자에게 연결되지 않는 항목으로 표시되어 있습니다. 대화 내용과 요약은 iCloud를 통해 사용자의 기기 간에 동기화되며 개발자에 따르면 이 동기화는 기본으로 켜져 있고, 기기 백업에는 앱 데이터가 포함됩니다. 개발자는 자체 동기화 서버를 운영하지 않으며 iCloud 데이터를 볼 수 없다고 밝힙니다. Apple Intelligence, App Store, iCloud, 백업에는 Apple의 자체 정책이 적용됩니다.',
         ],
         callouts: [
           {
@@ -2717,6 +2901,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '이는 개발자의 선언이지 감사 결과가 아니며, 소스 코드도 공개되지 않았습니다. PromptQuorum은 앱의 네트워크 트래픽을 점검하지 않았습니다. 처리방침과 약관에는 법인명이나 우편 주소가 없으며, App Store 저작권 표기는 "Markovic Software, obrt za usluge"이고 약관은 크로아티아 법을 적용합니다.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'Lyonesse의 개발자 Josip Markovic이 이 리뷰의 초안을 검토하고 정정 사항과 아래 메모를 보내 왔습니다. 이는 개발자 본인의 말로 제시되며 PromptQuorum의 독립적인 편집 평가가 아닙니다. 언어, 모델, Apple Watch 레코더, 동기화 기본값, 분석, 하드웨어 요구 사항에 관한 개발자의 정정 사항은 이 리뷰에 반영되어 있습니다.',
+          '"저는 통화에 봇이 들어오지 않고 제 오디오가 남의 서버로 가지 않는 회의 노트를 원해서 Lyonesse를 만들었습니다. 모든 작업은 기기에서 실행됩니다. 받아쓰기에는 Apple의 음성 모델 또는 Parakeet을, 요약에는 Apple Intelligence 또는 작은 오픈 모델을 사용합니다. 측정해 보니 10분짜리 회의에서 Lyonesse는 0.02 MB를 전송한 반면 Notion의 회의 노트는 115.7 MB를 전송했습니다. 다음 계획은 사용자 여러분이 요청하신 하위 폴더, 폴더별 기본 노트 형식, 노트별 일회성 AI 지시입니다."',
+        ],
+        note: '— Josip Markovic, 개발자',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2732,9 +2925,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '확인하지 못한 사항',
         items: [
           '**실제 정확도.** PromptQuorum은 녹음이나 받아쓰기를 해 보지 않았으므로 대화 내용의 품질, 화자 구분의 정확도, 요약의 품질, 15개 언어 전체의 지원 수준은 평가하지 않았습니다.',
-          '**동기화 기본값.** 개인정보 처리방침은 iCloud 동기화가 기본으로 켜져 있다고 설명하지만, App Store 설명은 선택형 iCloud 동기화가 기본으로 꺼져 있다고 설명합니다.',
-          '**"기기 밖으로 나가는 것은 없습니다."** 사이트는 아무것도 업로드되지 않는다고 말하지만, 처리방침과 App Store 레이블은 익명 처리된 분석 및 충돌 데이터를 설명하며 그 데이터가 어디로 가는지는 명시되어 있지 않습니다.',
-          '**하드웨어 요구 사항.** 2025년 10월 28일에 마지막으로 업데이트된 약관은 앱이 Apple Intelligence 지원 하드웨어를 필요로 한다고 말하지만, 사이트는 내려받는 로컬 모델을 대안으로 설명합니다.',
+          '**동기화 기본값.** 개발자는 개인정보 처리방침에 적힌 대로 iCloud 동기화가 기본으로 켜져 있음을 확인했으며, 꺼져 있다고 설명하는 App Store 설명은 잘못되었으므로 다음 릴리스에서 고칠 예정이라고 밝혔습니다. PromptQuorum은 이 설정을 확인하지 않았습니다.',
+          '**"기기 밖으로 나가는 것은 없습니다."** 사이트는 아무것도 업로드되지 않는다고 말하지만, 개발자는 앱이 익명 사용 이벤트를 Mixpanel로 전송한다고 밝히며 제3자 분석에 관한 처리방침 문구는 정정 중입니다. PromptQuorum은 네트워크 트래픽을 점검하지 않았습니다.',
+          '**하드웨어 요구 사항.** 2025년 10월 28일에 마지막으로 업데이트된 약관에는 앱이 Apple Intelligence를 지원하는 하드웨어를 필요로 한다고 아직 적혀 있습니다. 개발자는 이것이 오래된 내용이며 그 경우에는 내려받는 로컬 모델이 대신한다고 밝힙니다.',
           '**실적.** 확인 시점에 App Store의 평점 수는 얼마 되지 않았으며, 앱은 2026년 9월 3일까지 Inscribe라는 이름이었습니다.',
           '**규제 대상 용도.** 의료, 법률 등 규제 대상 녹음에 대한 적합성은 평가하지 않았습니다.',
         ],
@@ -2755,6 +2948,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          {
+            q: 'Apple Watch만으로 녹음할 수 있습니까?',
+            a: '개발자에 따르면 그렇습니다. Watch 앱은 단독으로 녹음하며 녹음하는 동안 iPhone이 근처에 있을 필요가 없습니다. 워치가 다시 연결 범위에 들어오면 오디오 파일이 iPhone으로 전송되고, 그곳에서 받아쓰기와 요약이 이루어집니다. PromptQuorum은 Watch 앱을 테스트하지 않았습니다.',
+          },
           {
             q: '미국 외 지역에서 Lyonesse 가격은 얼마입니까?',
             a: '2026년 10월 26일에 확인한 App Store 스토어별 월간 / 연간 / 평생(Unlimited) 가격은 독일·스페인·프랑스 €8.99 / €34.99 / €69.99, 일본 ¥1,300 / ¥5,000 / ¥10,000, 한국 ₩12,000 / ₩49,000 / ₩99,000, 브라질 R$49.90 / R$199.90 / R$399.90이었습니다.',
@@ -2777,7 +2974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'Lyonesse는 iPhone이나 Mac에서 대화 내용, 회의 노트, 문서 채팅을 얻을 수 있는, 폭넓고 활발히 업데이트되는 앱으로, 체험용 무료 녹음 1건과 구독 옆에 평생 구매 옵션을 제공합니다. 반면 비공개 소스이고 독립 개발자 1인이 만들며, 26 계열 운영체제가 필요하고, 개인정보 보호와 속도에 관한 주장이 개발자 자체 측정 결과에 의존하며, iCloud 동기화 기본값을 두 가지로 다르게 설명합니다. 최신 Apple 기기를 사용하며 계정 없는 노트를 원하고 먼저 무료 녹음으로 시험해 볼 수 있는 분께 적합합니다. 민감하거나 규제 대상인 내용을 녹음하는 분은 의존하기 전에 개인정보 처리방침과 동기화 설정을 직접 확인해야 합니다.',
+          'Lyonesse는 iPhone이나 Mac에서 대화 내용, 회의 노트, 문서 채팅을 얻을 수 있는, 폭넓고 활발히 업데이트되는 앱이며, Apple Watch 앱은 단독으로 녹음하고 받아쓰기는 나중에 iPhone이 수행합니다. 체험용 무료 녹음이 있고 구독 옆에 평생 구매 옵션이 있습니다. 반면 비공개 소스이고 독립 개발자 1인이 만들며, 26 계열 운영체제가 필요하고, 개인정보 보호와 속도에 관한 주장이 개발자 자체 측정 결과에 의존하며, 약관, 개인정보 처리방침, App Store 문구에 아직 오래된 표현이 남아 있어 개발자가 이를 정정하고 있다고 밝힙니다. 최신 Apple 기기를 사용하며 계정 없이 노트를 원하고 무료 녹음을 먼저 시험해 볼 수 있는 분에게 적합하며, 민감하거나 규제 대상인 자료를 녹음하는 분은 의존하기 전에 개인정보 처리방침과 동기화 설정을 직접 확인하십시오.',
       },
       sources: {
         id: 'sources',
@@ -2788,6 +2985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lyonesse 개인정보 처리방침](https://lyonesse.app/privacy.html) — 데이터 수집과 동기화, 2026년 10월 9일 최종 업데이트.',
           '[Lyonesse 이용 약관](https://lyonesse.app/terms.html) — 구독, 환불, 녹음 동의, 2025년 10월 28일 최종 업데이트.',
           '[음성 벤치마크 게시물](https://lyonesse.app/blog/parakeet-moss-apple-speech-benchmark.html)과 [업로드 측정 게시물](https://lyonesse.app/blog/meeting-notes-upload-measured.html) — 개발자 자체 측정 결과.',
+          '개발자가 PromptQuorum에 보낸 이메일, 2026년 10월 26일 — 언어, 모델, Watch 레코더, 동기화, 분석, 요구 사항에 관한 정정 사항과 개발자 메모. 독립적으로 검증되지 않음.',
         ],
       },
       relatedReading: {

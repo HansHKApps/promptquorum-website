@@ -6,7 +6,7 @@
 // its privacy policy, all checked 2026-10-26 — no hands-on testing. Storefront prices (Pro monthly / yearly / lifetime): US $7.99/$39.99/$69.99,
 // DE/ES/FR €8,99/€44,99/€79,99, JP ¥1,300/¥6,000/¥11,000, BR R$ 49,90/R$ 249,90/R$ 499,90, KR ₩12,000/₩66,000/₩110,000 (plan labels read from each storefront page).
 // Developer: Josip Markovic confirmed by email on 2026-10-26 that he also develops Castmates and Lyonesse; the App Store seller name is identical on all three
-// and the Pajdo and Lyonesse listings carry the copyright line "Markovic Software". No maker quote about this review exists, so no "From the Maker" section.
+// and the Pajdo and Lyonesse listings carry the copyright line "Markovic Software". The developer reviewed this page and sent a maker note on 2026-10-26 (From the Maker section, founder block on the tile).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -68,6 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'How to Get Started', anchor: 'getting-started' },
       { label: 'Features Confirmed by the Sources', anchor: 'key-features' },
       { label: 'Privacy and Network Use', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
       { label: 'Frequently Asked Questions', anchor: 'faq' },
@@ -96,6 +97,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Track record: the App Store shows no ratings yet, so there is almost no public feedback.',
           'Requirements: iOS or iPadOS 26.0 or later; an Apple Watch is optional but adds sleep and heart data.',
           'Languages: the app follows the iPhone language and lists 17, including eight of this site\'s nine languages (not Arabic).',
+          'Maker review: Josip Markovic, the developer, reviewed this page on 26 October 2026 and supplied a note (see From the Maker).',
         ],
         callouts: [
           {
@@ -203,6 +205,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Josip Markovic, the developer of Pajdo, reviewed the draft of this review and sent the note below. It is presented as the developer\'s own words, not as PromptQuorum\'s independent editorial assessment. He adds that the health data never leaves the phone, not to him, not to iCloud and not to a cloud AI service; PromptQuorum could not verify this in code, because the app is closed source:',
+          '"I wanted my Apple Watch data explained like a friend would, without sending my health data anywhere. So the numbers are done by plain code, Apple\'s on-device model only puts them into words, and Pajdo\'s face shows how you\'re doing at a glance. It\'s a wellness buddy, not a medical app, and it never diagnoses. Next up is more coaching for runners and for sleep, based on what people actually ask it."',
+        ],
+        note: '— Josip Markovic, developer',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Who Should Use It',
@@ -264,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Pajdo website](https://get-pajdo.app) — features, plans, AI and privacy claims and languages, checked 26 October 2026.',
           '[Pajdo privacy policy](https://get-pajdo.app/privacy/) — operator, data handling, analytics and retention, updated 25 October 2026.',
           '[Pajdo press page](https://get-pajdo.app/press/) — developer location and press kit.',
-          'Developer email to PromptQuorum, 26 October 2026 — confirms the same developer as Castmates and Lyonesse; not independently verified.',
+          'Email from the developer to PromptQuorum, 26 October 2026 — confirms the same developer as Castmates and Lyonesse and supplies the maker note; not independently verified.',
         ],
       },
       relatedReading: {
@@ -366,6 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'So gelingt der Einstieg', anchor: 'getting-started' },
       { label: 'Von den Quellen bestätigte Funktionen', anchor: 'key-features' },
       { label: 'Datenschutz und Netzwerknutzung', anchor: 'privacy' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Für wen sich die App eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
@@ -394,6 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Erfahrungswerte: Der App Store zeigt noch keine Bewertungen, es gibt also kaum öffentliche Rückmeldungen.',
           'Anforderungen: iOS bzw. iPadOS 26.0 oder neuer; eine Apple Watch ist optional, liefert aber Schlaf- und Herzdaten.',
           'Sprachen: Die App folgt der iPhone-Sprache und nennt 17, darunter acht der neun Sprachen dieser Website (ohne Arabisch).',
+          'Prüfung durch den Hersteller: Josip Markovic, der Entwickler, hat diese Seite am 26. Oktober 2026 durchgesehen und eine Anmerkung geliefert (siehe Vom Entwickler).',
         ],
         callouts: [
           {
@@ -501,6 +514,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Josip Markovic, der Entwickler von Pajdo, hat den Entwurf dieser Rezension durchgesehen und die folgende Anmerkung geschickt. Sie wird als Aussage des Entwicklers wiedergegeben, nicht als unabhängige redaktionelle Bewertung von PromptQuorum. Er ergänzt, dass die Gesundheitsdaten das Telefon nie verlassen, weder zu ihm noch zu iCloud noch zu einem Cloud-KI-Dienst; PromptQuorum konnte das im Code nicht überprüfen, weil die App quellgeschlossen ist:',
+          '„Ich wollte meine Apple-Watch-Daten so erklärt bekommen, wie ein Freund es tun würde, ohne meine Gesundheitsdaten irgendwohin zu schicken. Deshalb werden die Zahlen von einfachem Code berechnet, Apples Modell auf dem Gerät formuliert sie nur in Worte, und Pajdos Gesicht zeigt auf einen Blick, wie es Ihnen geht. Es ist ein Wellness-Begleiter, keine medizinische App, und es stellt nie Diagnosen. Als Nächstes folgt mehr Coaching für Läufer und für den Schlaf, basierend darauf, was die Leute tatsächlich fragen.“',
+        ],
+        note: '— Josip Markovic, Entwickler',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Für wen sich die App eignet',
@@ -562,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Pajdo-Website](https://get-pajdo.app) — Funktionen, Tarife, Angaben zu KI und Datenschutz sowie Sprachen, geprüft am 26. Oktober 2026.',
           '[Pajdo-Datenschutzerklärung](https://get-pajdo.app/privacy/) — Betreiber, Datenverarbeitung, Analysen und Aufbewahrung, Stand 25. Oktober 2026.',
           '[Pajdo-Presseseite](https://get-pajdo.app/press/) — Standort des Entwicklers und Pressekit.',
-          'E-Mail des Entwicklers an PromptQuorum, 26. Oktober 2026 — bestätigt denselben Entwickler wie bei Castmates und Lyonesse; nicht unabhängig verifiziert.',
+          'E-Mail des Entwicklers an PromptQuorum, 26. Oktober 2026 — bestätigt, dass es derselbe Entwickler wie bei Castmates und Lyonesse ist, und liefert die Anmerkung des Herstellers; nicht unabhängig überprüft.',
         ],
       },
       relatedReading: {
@@ -632,6 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cómo empezar', anchor: 'getting-started' },
       { label: 'Funciones confirmadas por las fuentes', anchor: 'key-features' },
       { label: 'Privacidad y uso de red', anchor: 'privacy' },
+      { label: 'La palabra del desarrollador', anchor: 'from-the-maker' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
@@ -660,6 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Historial: el App Store todavía no muestra valoraciones, así que casi no hay opiniones públicas.',
           'Requisitos: iOS o iPadOS 26.0 o posterior; un Apple Watch es opcional, pero aporta datos de sueño y de corazón.',
           'Idiomas: la app sigue el idioma del iPhone y enumera 17, entre ellos ocho de los nueve idiomas de este sitio (no el árabe).',
+          'Revisión del creador: Josip Markovic, el desarrollador, revisó esta página el 26 de octubre de 2026 y aportó una nota (véase «La palabra del desarrollador»).',
         ],
         callouts: [
           {
@@ -767,6 +791,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La palabra del desarrollador',
+        content: [
+          'Josip Markovic, el desarrollador de Pajdo, revisó el borrador de esta reseña y envió la nota siguiente. Se presenta como palabras del propio desarrollador, no como valoración editorial independiente de PromptQuorum. Añade que los datos de salud nunca salen del teléfono: ni hacia él, ni hacia iCloud, ni hacia un servicio de IA en la nube; PromptQuorum no pudo verificarlo en el código, porque la app es de código cerrado:',
+          '«Quería que mis datos del Apple Watch me los explicaran como lo haría un amigo, sin enviar mis datos de salud a ninguna parte. Por eso las cifras las calcula código simple, el modelo de Apple en el dispositivo solo las pone en palabras, y la carita de Pajdo muestra de un vistazo cómo estás. Es un compañero de bienestar, no una app médica, y nunca diagnostica. Lo siguiente es más coaching para corredores y para el sueño, según lo que la gente le pregunte de verdad.»',
+        ],
+        note: '— Josip Markovic, desarrollador',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quién es',
@@ -828,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Sitio web de Pajdo](https://get-pajdo.app) — funciones, planes, afirmaciones sobre IA y privacidad e idiomas, comprobados el 26 de octubre de 2026.',
           '[Política de privacidad de Pajdo](https://get-pajdo.app/privacy/) — operador, tratamiento de datos, analítica y conservación, actualizada el 25 de octubre de 2026.',
           '[Página de prensa de Pajdo](https://get-pajdo.app/press/) — ubicación del desarrollador y kit de prensa.',
-          'Correo del desarrollador a PromptQuorum, 26 de octubre de 2026 — confirma que es el mismo desarrollador que Castmates y Lyonesse; no verificado de forma independiente.',
+          'Correo del desarrollador a PromptQuorum, 26 de octubre de 2026 — confirma que es el mismo desarrollador que Castmates y Lyonesse y aporta la nota del creador; no verificado de forma independiente.',
         ],
       },
       relatedReading: {
@@ -898,6 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pour bien démarrer', anchor: 'getting-started' },
       { label: 'Fonctions confirmées par les sources', anchor: 'key-features' },
       { label: 'Vie privée et usage du réseau', anchor: 'privacy' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'À qui s\'adresse-t-elle', anchor: 'who-should-use' },
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
       { label: 'Questions fréquentes', anchor: 'faq' },
@@ -926,6 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Retours : l\'App Store n\'affiche pas encore de notes, il n\'y a donc presque aucun avis public.',
           'Prérequis : iOS ou iPadOS 26.0 ou plus récent ; une Apple Watch est facultative mais ajoute les données de sommeil et de cœur.',
           'Langues : l\'appli suit la langue de l\'iPhone et en annonce 17, dont huit des neuf langues de ce site (pas l\'arabe).',
+          'Relecture du développeur : Josip Markovic, le développeur, a relu cette page le 26 octobre 2026 et a fourni une note (voir Le mot du développeur).',
         ],
         callouts: [
           {
@@ -1033,6 +1068,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Josip Markovic, le développeur de Pajdo, a relu le projet de ce test et envoyé la note ci-dessous. Elle est présentée comme les propres mots du développeur, et non comme l’évaluation éditoriale indépendante de PromptQuorum. Il ajoute que les données de santé ne quittent jamais le téléphone, ni vers lui, ni vers iCloud, ni vers un service d’IA dans le cloud ; PromptQuorum n’a pas pu le vérifier dans le code, car l’application est à code fermé :',
+          '« Je voulais que mes données Apple Watch soient expliquées comme le ferait un ami, sans envoyer mes données de santé où que ce soit. Les chiffres sont donc calculés par du code simple, le modèle d’Apple sur l’appareil ne fait que les mettre en mots, et le visage de Pajdo montre d’un coup d’œil comment vous allez. C’est un compagnon de bien-être, pas une application médicale, et il ne pose jamais de diagnostic. La suite, ce sera davantage de coaching pour les coureurs et pour le sommeil, à partir de ce que les gens lui demandent réellement. »',
+        ],
+        note: '— Josip Markovic, développeur',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'À qui s\'adresse-t-elle',
@@ -1094,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Site web de Pajdo](https://get-pajdo.app) — fonctions, offres, affirmations sur l\'IA et la vie privée, et langues, vérifiés le 26 octobre 2026.',
           '[Politique de confidentialité de Pajdo](https://get-pajdo.app/privacy/) — exploitant, traitement des données, analyses et conservation, mise à jour le 25 octobre 2026.',
           '[Page presse de Pajdo](https://get-pajdo.app/press/) — localisation du développeur et kit presse.',
-          'E-mail du développeur à PromptQuorum, 26 octobre 2026 — confirme que le développeur est le même que celui de Castmates et Lyonesse ; non vérifié de manière indépendante.',
+          'E-mail du développeur à PromptQuorum, 26 octobre 2026 — confirme qu’il s’agit du même développeur que Castmates et Lyonesse et fournit la note du développeur ; non vérifié de manière indépendante.',
         ],
       },
       relatedReading: {
@@ -1164,6 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'はじめ方', anchor: 'getting-started' },
       { label: '情報源で確認できた機能', anchor: 'key-features' },
       { label: 'プライバシーとネットワーク利用', anchor: 'privacy' },
+      { label: '開発者より', anchor: 'from-the-maker' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかったこと', anchor: 'who-should-not-use' },
       { label: 'よくある質問', anchor: 'faq' },
@@ -1192,6 +1237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '利用実績：App Storeにはまだ評価がなく、公開されたフィードバックはほとんどありません。',
           '要件：iOS／iPadOS 26.0以降。Apple Watchは必須ではありませんが、睡眠と心拍のデータが加わります。',
           '言語：アプリはiPhoneの言語に従い、17言語に対応します。当サイトの9言語のうち8言語が含まれます（アラビア語は含まれません）。',
+          '開発者によるレビュー：開発者のJosip Markovic氏が2026年10月26日にこのページを確認し、一言コメントを寄せました（「開発者より」を参照）。',
         ],
         callouts: [
           {
@@ -1299,6 +1345,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者より',
+        content: [
+          'Pajdoの開発者であるJosip Markovic氏が、このレビューの草稿を確認し、以下の一言コメントを寄せました。これは開発者自身の言葉として掲載するもので、PromptQuorumの独立した編集上の評価ではありません。開発者はさらに、健康データは開発者にも、iCloudにも、クラウド上のAIサービスにも送られず、iPhoneの外に出ることはないと述べています。アプリはクローズドソースのため、PromptQuorumはコードでこれを確認できませんでした。',
+          '「Apple Watchのデータを、健康データをどこにも送ることなく、友人のように説明してほしかったのです。そのため、数値はふつうのコードで計算し、Appleの端末上のモデルはそれを言葉にするだけで、Pajdoの顔でひと目で今の調子がわかります。これはウェルネスの相棒であって医療アプリではなく、診断は決してしません。次は、ユーザーが実際に尋ねる内容をもとに、ランナーや睡眠向けのコーチングを増やしていきます。」',
+        ],
+        note: '— Josip Markovic氏、開発者',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '向いている人',
@@ -1360,7 +1415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Pajdo公式サイト](https://get-pajdo.app) — 機能、プラン、AIとプライバシーに関する主張、対応言語。2026年10月26日確認。',
           '[Pajdoプライバシーポリシー](https://get-pajdo.app/privacy/) — 運営者、データの扱い、分析、保持期間。2026年10月25日更新。',
           '[Pajdoプレスページ](https://get-pajdo.app/press/) — 開発者の所在地とプレスキット。',
-          '開発者からPromptQuorumへのメール（2026年10月26日）— CastmatesおよびLyonesseと同じ開発者であることの確認。独立した検証はしていません。',
+          '開発者からPromptQuorumへのメール（2026年10月26日）— CastmatesおよびLyonesseと同じ開発者であることの確認と、開発者の一言コメント。独立した検証はしていません。',
         ],
       },
       relatedReading: {
@@ -1430,6 +1485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Como começar', anchor: 'getting-started' },
       { label: 'Recursos confirmados pelas fontes', anchor: 'key-features' },
       { label: 'Privacidade e uso de rede', anchor: 'privacy' },
+      { label: 'A palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Para quem é', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
@@ -1458,6 +1514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Histórico: a App Store ainda não mostra avaliações, então quase não há opiniões públicas.',
           'Requisitos: iOS ou iPadOS 26.0 ou posterior; um Apple Watch é opcional, mas acrescenta dados de sono e de coração.',
           'Idiomas: o app segue o idioma do iPhone e lista 17, incluindo oito dos nove idiomas deste site (não o árabe).',
+          'Revisão do desenvolvedor: Josip Markovic, o desenvolvedor, revisou esta página em 26 de outubro de 2026 e enviou uma nota (veja A palavra do desenvolvedor).',
         ],
         callouts: [
           {
@@ -1565,6 +1622,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do desenvolvedor',
+        content: [
+          'Josip Markovic, o desenvolvedor do Pajdo, revisou o rascunho desta análise e enviou a nota abaixo. Ela é apresentada como palavras do próprio desenvolvedor, não como avaliação editorial independente da PromptQuorum. Ele acrescenta que os dados de saúde nunca saem do celular, nem para ele, nem para o iCloud, nem para um serviço de IA na nuvem; a PromptQuorum não pôde verificar isso no código, porque o app é de código fechado:',
+          '"Eu queria meus dados do Apple Watch explicados como um amigo explicaria, sem enviar meus dados de saúde para lugar nenhum. Por isso, os números são calculados por código simples, o modelo da Apple no aparelho só os transforma em palavras, e o rosto do Pajdo mostra como você está num relance. É um companheiro de bem-estar, não um app médico, e nunca faz diagnósticos. Os próximos passos são mais orientação para corredores e para o sono, com base no que as pessoas realmente perguntam."',
+        ],
+        note: '— Josip Markovic, desenvolvedor',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quem é',
@@ -1626,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Site do Pajdo](https://get-pajdo.app) — recursos, planos, afirmações sobre IA e privacidade e idiomas, verificados em 26 de outubro de 2026.',
           '[Política de privacidade do Pajdo](https://get-pajdo.app/privacy/) — operador, tratamento de dados, análises e retenção, atualizada em 25 de outubro de 2026.',
           '[Página de imprensa do Pajdo](https://get-pajdo.app/press/) — localização do desenvolvedor e kit de imprensa.',
-          'E-mail do desenvolvedor à PromptQuorum, 26 de outubro de 2026 — confirma que é o mesmo desenvolvedor do Castmates e do Lyonesse; não verificado de forma independente.',
+          'E-mail do desenvolvedor à PromptQuorum, 26 de outubro de 2026 — confirma que é o mesmo desenvolvedor do Castmates e do Lyonesse e envia a nota do desenvolvedor; não verificado de forma independente.',
         ],
       },
       relatedReading: {
@@ -1696,6 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'كيف تبدأ', anchor: 'getting-started' },
       { label: 'ميزات أكدتها المصادر', anchor: 'key-features' },
       { label: 'الخصوصية واستخدام الشبكة', anchor: 'privacy' },
+      { label: 'من مطوّر التطبيق', anchor: 'from-the-maker' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
@@ -1724,6 +1791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السجل: لا يعرض App Store أي تقييمات بعد، فالآراء العامة تكاد تنعدم.',
           'المتطلبات: iOS أو iPadOS 26.0 أو أحدث؛ وساعة Apple Watch اختيارية لكنها تضيف بيانات النوم والقلب.',
           'اللغات: يتبع التطبيق لغة iPhone ويذكر 17 لغة، من بينها ثماني لغات من لغات هذا الموقع التسع (ليس من بينها العربية).',
+          'مراجعة المطوّر: راجع Josip Markovic، مطوّر التطبيق، هذه الصفحة في 26 أكتوبر 2026 وقدّم ملاحظة (انظر «من مطوّر التطبيق»).',
         ],
         callouts: [
           {
@@ -1831,6 +1899,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من مطوّر التطبيق',
+        content: [
+          'راجع Josip Markovic، مطوّر Pajdo، مسودة هذه المراجعة وأرسل الملاحظة أدناه. وهي معروضة بوصفها كلام المطوّر نفسه، لا بوصفها تقييمًا تحريريًا مستقلًا من PromptQuorum. ويضيف أن البيانات الصحية لا تغادر الهاتف أبدًا، لا إليه ولا إلى iCloud ولا إلى خدمة ذكاء اصطناعي سحابية؛ ولم تستطع PromptQuorum التحقق من ذلك في الشيفرة لأن التطبيق مغلق المصدر:',
+          '«أردت أن تُشرح لي بيانات Apple Watch كما يشرحها صديق، دون إرسال بياناتي الصحية إلى أي مكان. لذلك تُجرى الأرقام بشيفرة عادية، ولا يقوم نموذج Apple على الجهاز إلا بصياغتها في كلمات، ويُظهر وجه Pajdo حالتك في لمحة. إنه رفيق للعافية لا تطبيق طبي، ولا يشخّص أبدًا. والخطوة التالية مزيد من التدريب للعدّائين وللنوم، بحسب ما يسأل عنه الناس فعلًا.»',
+        ],
+        note: '— Josip Markovic، مطوّر التطبيق',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'لمن يناسب',
@@ -1892,7 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[موقع Pajdo](https://get-pajdo.app) — الميزات والخطط وادعاءات الذكاء الاصطناعي والخصوصية واللغات، جرى التحقق منها في 26 أكتوبر 2026.',
           '[سياسة خصوصية Pajdo](https://get-pajdo.app/privacy/) — الجهة المشغّلة ومعالجة البيانات والتحليلات والاحتفاظ بالبيانات، محدّثة في 25 أكتوبر 2026.',
           '[صفحة الصحافة في Pajdo](https://get-pajdo.app/press/) — موقع المطوّر وحزمة الصحافة.',
-          'رسالة بريد إلكتروني من المطوّر إلى PromptQuorum، 26 أكتوبر 2026 — تؤكد أنه المطوّر نفسه الذي صنع Castmates وLyonesse؛ لم يجرِ التحقق منها بصورة مستقلة.',
+          'رسالة بريد إلكتروني من المطوّر إلى PromptQuorum، 26 أكتوبر 2026 — تؤكد أنه المطوّر نفسه الذي صنع Castmates وLyonesse وتقدّم ملاحظة المطوّر؛ لم يجرِ التحقق منها بصورة مستقلة.',
         ],
       },
       relatedReading: {
@@ -1962,6 +2039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '上手步骤', anchor: 'getting-started' },
       { label: '来源确认的功能', anchor: 'key-features' },
       { label: '隐私与网络使用', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '适合谁用', anchor: 'who-should-use' },
       { label: '我们未能核实的内容', anchor: 'who-should-not-use' },
       { label: '常见问题', anchor: 'faq' },
@@ -1990,6 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '使用记录：App Store 上暂时没有评分，几乎没有公开反馈。',
           '要求：iOS 或 iPadOS 26.0 及以上；Apple Watch 为可选，但会增加睡眠和心脏数据。',
           '语言：应用跟随 iPhone 的语言，列出 17 种，涵盖本站九种语言中的八种（不含阿拉伯语）。',
+          '开发者审阅：开发者 Josip Markovic 于 2026 年 10 月 26 日审阅了本页，并提供了一段说明（见“来自开发者”）。',
         ],
         callouts: [
           {
@@ -2097,6 +2176,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'Pajdo 的开发者 Josip Markovic 审阅了本评测的草稿，并发来了下面的说明。以下内容作为开发者自己的话呈现，并非 PromptQuorum 的独立编辑评价。他补充说，健康数据从不离开手机，不会发给他，不会进入 iCloud，也不会发给云端的 AI 服务；由于该应用闭源，PromptQuorum 无法在代码中核实这一点：',
+          '“我希望我的 Apple Watch 数据能像朋友那样给我讲清楚，同时不把我的健康数据发到任何地方。所以数字由普通代码计算，Apple 的设备端模型只负责把它们说成话，Pajdo 的表情则让你一眼看出自己的状态。它是一个健康陪伴应用，不是医疗应用，也从不做诊断。接下来会根据用户实际提出的问题，为跑者和睡眠增加更多指导。”',
+        ],
+        note: '— Josip Markovic,开发者',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '适合谁用',
@@ -2158,7 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Pajdo 官网](https://get-pajdo.app) — 功能、方案、AI 与隐私说法以及语言，2026 年 10 月 26 日核对。',
           '[Pajdo 隐私政策](https://get-pajdo.app/privacy/) — 运营方、数据处理、分析和保留期限，2026 年 10 月 25 日更新。',
           '[Pajdo 新闻页面](https://get-pajdo.app/press/) — 开发者所在地和新闻素材包。',
-          '开发者致 PromptQuorum 的邮件，2026 年 10 月 26 日 — 确认与 Castmates 和 Lyonesse 出自同一位开发者；未经独立验证。',
+          '开发者致 PromptQuorum 的邮件，2026 年 10 月 26 日 — 确认与 Castmates 和 Lyonesse 出自同一位开发者，并提供了开发者说明；未经独立验证。',
         ],
       },
       relatedReading: {
@@ -2228,6 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '시작하기', anchor: 'getting-started' },
       { label: '출처로 확인된 기능', anchor: 'key-features' },
       { label: '개인정보와 네트워크 사용', anchor: 'privacy' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '추천 대상', anchor: 'who-should-use' },
       { label: '확인하지 못한 내용', anchor: 'who-should-not-use' },
       { label: '자주 묻는 질문', anchor: 'faq' },
@@ -2256,6 +2345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이용 실적: App Store에 아직 평점이 없어 공개된 의견이 거의 없습니다.',
           '요구 사항: iOS 또는 iPadOS 26.0 이상이며, Apple Watch는 선택 사항이지만 수면과 심장 데이터를 더해 줍니다.',
           '언어: 앱은 iPhone 언어를 따르며 17개 언어를 제공하는데, 이 사이트의 9개 언어 중 8개가 포함됩니다(아랍어는 제외).',
+          '개발자 검토: 개발자 Josip Markovic이 2026년 10월 26일에 이 페이지를 검토하고 메모를 보내 왔습니다(개발자의 말 참조).',
         ],
         callouts: [
           {
@@ -2363,6 +2453,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'Pajdo의 개발자 Josip Markovic이 이 리뷰의 초안을 검토하고 아래 메모를 보내 왔습니다. 이는 개발자 본인의 말로 제시되며 PromptQuorum의 독립적인 편집 평가가 아닙니다. 개발자는 건강 데이터가 휴대폰을 떠나지 않으며 자신에게도, iCloud에도, 클라우드 AI 서비스에도 전송되지 않는다고 덧붙입니다. 앱이 비공개 소스이므로 PromptQuorum은 이를 코드로 확인할 수 없었습니다.',
+          '"저는 건강 데이터를 어디에도 보내지 않으면서 Apple Watch 데이터를 친구가 설명해 주듯 풀어 주기를 원했습니다. 그래서 수치는 일반 코드로 계산하고, Apple의 온디바이스 모델은 그것을 말로 풀어 줄 뿐이며, Pajdo의 얼굴은 지금 상태가 어떤지 한눈에 보여 줍니다. 이 앱은 의료 앱이 아니라 웰니스 도우미이며 진단하지 않습니다. 다음 계획은 사용자 여러분이 실제로 묻는 내용을 바탕으로 러너와 수면을 위한 코칭을 늘리는 것입니다."',
+        ],
+        note: '— Josip Markovic, 개발자',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '추천 대상',
@@ -2424,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Pajdo 웹사이트](https://get-pajdo.app) — 기능, 플랜, AI 및 개인정보 주장, 언어. 2026년 10월 26일 확인.',
           '[Pajdo 개인정보 처리방침](https://get-pajdo.app/privacy/) — 운영 주체, 데이터 처리, 분석, 보관 기간. 2026년 10월 25일 업데이트.',
           '[Pajdo 보도 자료 페이지](https://get-pajdo.app/press/) — 개발자 소재지와 보도 자료 키트.',
-          '개발자가 PromptQuorum에 보낸 이메일, 2026년 10월 26일 — Castmates, Lyonesse와 같은 개발자임을 확인. 독립적으로 검증되지 않음.',
+          '개발자가 PromptQuorum에 보낸 이메일, 2026년 10월 26일 — Castmates, Lyonesse와 같은 개발자임을 확인하고 개발자 메모를 제공. 독립적으로 검증되지 않음.',
         ],
       },
       relatedReading: {
