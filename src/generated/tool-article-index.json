@@ -10054,9 +10054,17 @@
         "url": "/power-local-llm/lyonesse-review",
         "dateModified": "2026-10-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pajdo-review",
+        "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
+        "url": "/power-local-llm/pajdo-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Open-LLM-VTuber": {
@@ -10364,9 +10372,17 @@
         "url": "/power-local-llm/nekoni-review",
         "dateModified": "2026-10-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pajdo-review",
+        "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
+        "url": "/power-local-llm/pajdo-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "IIMAGINE Desktop": {
@@ -11655,6 +11671,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pajdo-review",
+        "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
+        "url": "/power-local-llm/pajdo-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -11692,17 +11716,9 @@
         "url": "/power-local-llm/fluidvoice-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 226,
+    "totalCount": 227,
     "capped": true
   },
   "Qdrant": {
