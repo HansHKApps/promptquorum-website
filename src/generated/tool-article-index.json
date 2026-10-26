@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "chaterminal-review",
+        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
+        "url": "/power-local-llm/chaterminal-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/litellm-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-mini-review",
-        "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
-        "url": "/power-local-llm/lm-mini-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 324,
+    "totalCount": 325,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chaterminal-review",
+        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
+        "url": "/power-local-llm/chaterminal-review",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/subtitle-edit-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 179,
+    "totalCount": 180,
     "capped": true
   },
   "vLLM": {
@@ -5940,7 +5940,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 48,
+    "totalCount": 50,
     "capped": true
   },
   "Pocket AI": {
@@ -6555,6 +6555,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "on-device-llm-review",
+        "title": "On Device LLM Review: Free Offline Android Chat App",
+        "url": "/power-local-llm/on-device-llm-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -6562,7 +6570,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Locally AI": {
@@ -8952,9 +8960,17 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "on-device-llm-review",
+        "title": "On Device LLM Review: Free Offline Android Chat App",
+        "url": "/power-local-llm/on-device-llm-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "ToolNeuron": {
@@ -11411,6 +11427,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "chaterminal-review",
+        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
+        "url": "/power-local-llm/chaterminal-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -11418,7 +11442,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "oMLX": {
@@ -12319,6 +12343,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "on-device-llm-review",
+        "title": "On Device LLM Review: Free Offline Android Chat App",
+        "url": "/power-local-llm/on-device-llm-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
@@ -12364,17 +12396,9 @@
         "url": "/power-local-llm/on-device-ai-translator-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamatik-review",
-        "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
-        "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "LLM Hub": {
@@ -12723,6 +12747,20 @@
         "title": "Llamatik Review: Free Open-Source Offline AI Chatbot for Android, iPhone and Desktop",
         "url": "/power-local-llm/llamatik-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Mobile LM Server": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "chaterminal-review",
+        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
+        "url": "/power-local-llm/chaterminal-review",
+        "dateModified": "2026-10-26",
         "tier": "about"
       }
     ],
