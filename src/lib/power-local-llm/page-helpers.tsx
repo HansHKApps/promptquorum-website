@@ -1246,6 +1246,7 @@ const HUB_THEMES: Array<{
       'parrot-review',
       'transcriptionsuite-review',
       'whisper-notes-review',
+      'lyonesse-review',
       'willow-inference-server-review',
     ],
   },

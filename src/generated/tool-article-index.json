@@ -10045,6 +10045,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Lyonesse": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "lyonesse-review",
+        "title": "Lyonesse Review: Offline AI Transcription and Meeting Notes for iPhone and Mac",
+        "url": "/power-local-llm/lyonesse-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Open-LLM-VTuber": {
     "articles": [
       {
