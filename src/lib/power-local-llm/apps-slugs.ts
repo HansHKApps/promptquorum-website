@@ -211,6 +211,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'caelum':                                  'caelum',
   'chaterminal':                             'chaterminal',
   'lm-mini':                                 'lm-mini',
+  'compass-local-ai':                        'compass-local-ai',
   'laria':                                   'laria',
   'pocketllm-lite':                          'pocketllm-lite',
   'obscurify':                               'obscurify',

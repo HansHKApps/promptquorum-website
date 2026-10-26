@@ -11,18 +11,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "chaterminal-review",
-        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
-        "url": "/power-local-llm/chaterminal-review",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "slug": "chaterminal-review",
+        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
+        "url": "/power-local-llm/chaterminal-review",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -97,18 +97,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "chaterminal-review",
-        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
-        "url": "/power-local-llm/chaterminal-review",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "slug": "chaterminal-review",
+        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
+        "url": "/power-local-llm/chaterminal-review",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 160,
+    "totalCount": 161,
     "capped": true
   },
   "Atomic Chat": {
@@ -2339,6 +2339,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "castmates-review",
+        "title": "Castmates Review: Offline AI Character Chat for iPhone",
+        "url": "/power-local-llm/castmates-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "uncensored-local-llm-creative-writing-ethics",
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
@@ -2400,14 +2408,6 @@
         "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 17,
@@ -5802,7 +5802,7 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -5872,7 +5872,7 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -5940,7 +5940,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 50,
+    "totalCount": 51,
     "capped": true
   },
   "Pocket AI": {
@@ -6182,7 +6182,7 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -6236,7 +6236,7 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -6617,6 +6617,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "compass-local-ai-review",
+        "title": "Compass - Local AI Review: Free On-Device AI Chat for iPhone",
+        "url": "/power-local-llm/compass-local-ai-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kernelai-review",
         "title": "KernelAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/kernelai-review",
@@ -6648,7 +6656,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Arbiter": {
@@ -7933,22 +7941,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "castmates-review",
+        "title": "Castmates Review: Offline AI Character Chat for iPhone",
+        "url": "/power-local-llm/castmates-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "asiden-review",
         "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
         "url": "/power-local-llm/asiden-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "Second Me": {
@@ -11612,7 +11620,15 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "castmates-review",
+        "title": "Castmates Review: Offline AI Character Chat for iPhone",
+        "url": "/power-local-llm/castmates-review",
+        "dateModified": "2026-10-26",
         "tier": "mentioned"
       },
       {
@@ -11668,14 +11684,6 @@
         "slug": "handy-review",
         "title": "Handy Review: Free Offline Speech-to-Text Dictation App",
         "url": "/power-local-llm/handy-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kruvo-review",
-        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
-        "url": "/power-local-llm/kruvo-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
       }
@@ -12710,7 +12718,7 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -12762,9 +12770,17 @@
         "url": "/power-local-llm/chaterminal-review",
         "dateModified": "2026-10-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-26",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "LM Mini": {
@@ -12781,6 +12797,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Compass - Local AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "compass-local-ai-review",
+        "title": "Compass - Local AI Review: Free On-Device AI Chat for iPhone",
+        "url": "/power-local-llm/compass-local-ai-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Laria": {
     "articles": [
       {
@@ -12790,9 +12820,17 @@
         "url": "/power-local-llm/laria-review",
         "dateModified": "2026-10-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-26",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "CompactifAI APP": {
