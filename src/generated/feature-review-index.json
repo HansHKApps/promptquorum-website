@@ -1489,6 +1489,11 @@
     "urlSlug": "caelum-review",
     "url": "/power-local-llm/caelum-review"
   },
+  "chaterminal": {
+    "cluster": "power-local-llm",
+    "urlSlug": "chaterminal-review",
+    "url": "/power-local-llm/chaterminal-review"
+  },
   "lm-mini": {
     "cluster": "power-local-llm",
     "urlSlug": "lm-mini-review",

@@ -580,6 +580,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'kernelai-review':                          'kernelai-review',
   'llama-app-review':                         'llama-app-review',
   'caelum-review':                            'caelum-review',
+  'chaterminal-review':                       'chaterminal-review',
   'lm-mini-review':                           'lm-mini-review',
   'laria-review':                             'laria-review',
   'compactifai-app-review':                   'compactifai-app-review',
