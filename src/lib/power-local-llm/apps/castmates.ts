@@ -6,6 +6,7 @@
 // The App Store privacy label reads "Data Not Linked to You" (developer-corrected); the policy says anonymous usage
 // events go to Mixpanel and RevenueCat tracks subscription status (no message content). Developer self-report, not independently verified.
 // Age rating 18+ (character roleplay incl. romance genre).
+// Updated 2026-10-26: App Store record now v1.2.3 (released 2026-10-25 UTC; release notes: voice calls, lorebooks, edit/continue/branch, share card, notifications); website now states 35 characters, 127 scenarios, voice calls (~360 MB, English only, free 3 call messages/day) and character-card import. Developer message 2026-10-26 added the on-device speech/voice engine names; model, RAM and privacy label unchanged.
 
 import type { ToolRecord } from './types'
 
@@ -30,28 +31,29 @@ export const app: ToolRecord = {
     appStore: 'https://apps.apple.com/us/app/castmates-ai-characters/id6785844694',
   },
   installEffort: 'installer',
-  installEvidence: 'App Store listing id6785844694 (free, iOS/iPadOS 17.0+, 35.6 MB plus a ~1.9 GB in-app model download), read 2026-10-19',
+  installEvidence: 'App Store listing id6785844694 (free, iOS/iPadOS 17.0+, 68.6 MB plus a ~1.9 GB in-app model download and an optional ~360 MB voice download), read 2026-10-26',
   tagline: {
-    en: 'Offline iPhone character chat with 32 ready-made characters, custom characters and no account',
-    de: 'Offline-Charakter-Chat für das iPhone mit 32 fertigen Charakteren, eigenen Charakteren und ohne Konto',
-    fr: 'Chat de personnages hors ligne pour iPhone avec 32 personnages prêts à l’emploi, personnages personnalisés et sans compte',
-    ja: 'iPhone向けのオフライン・キャラクターチャット。32体の用意済みキャラクターとカスタムキャラクターに対応、アカウント不要',
-    zh: 'iPhone 离线角色聊天应用，内置 32 个角色，支持自定义角色，无需账号',
-    es: 'Chat de personajes sin conexión para iPhone con 32 personajes incluidos, personajes propios y sin cuenta',
-    pt: 'Chat de personagens offline para iPhone com 32 personagens prontos, personagens próprios e sem conta',
-    ar: 'دردشة شخصيات دون إنترنت لـ iPhone مع 32 شخصية جاهزة وشخصيات مخصصة ودون حساب',
-    ko: 'iPhone용 오프라인 캐릭터 채팅 앱. 기본 캐릭터 32종과 커스텀 캐릭터를 제공하며 계정이 필요 없음',
+    en: 'Offline iPhone character chat with 35 ready-made characters, custom characters and no account',
+    de: 'Offline-Charakter-Chat für das iPhone mit 35 fertigen Charakteren, eigenen Charakteren und ohne Konto',
+    fr: 'Chat de personnages hors ligne pour iPhone avec 35 personnages prêts à l’emploi, personnages personnalisés et sans compte',
+    ja: 'iPhone向けのオフライン・キャラクターチャット。35体の用意済みキャラクターとカスタムキャラクターに対応、アカウント不要',
+    zh: 'iPhone 离线角色聊天应用，内置 35 个角色，支持自定义角色，无需账号',
+    es: 'Chat de personajes sin conexión para iPhone con 35 personajes incluidos, personajes propios y sin cuenta',
+    pt: 'Chat de personagens offline para iPhone com 35 personagens prontos, personagens próprios e sem conta',
+    ar: 'دردشة شخصيات دون إنترنت لـ iPhone مع 35 شخصية جاهزة وشخصيات مخصصة ودون حساب',
+    ko: 'iPhone용 오프라인 캐릭터 채팅 앱. 기본 캐릭터 35종과 커스텀 캐릭터를 제공하며 계정이 필요 없음',
   },
-  // Comparison attributes: the roleplay segment only defines lorebooks / groupChats; neither is stated on the listing or site, so `compare` stays unset (not stated, never false).
+  // Comparison attributes: the roleplay segment only defines lorebooks / groupChats. Lorebooks are stated in the v1.2.3 App Store release notes (checked 2026-10-26); group chats are not stated anywhere, so that key stays unset (not stated, never false).
+  compare: { lorebooks: true },
   reviewSlug: 'castmates-review',
   pqReview: {
-    date: '2026-10-19',
-    version: '1.1.7',
+    date: '2026-10-26',
+    version: '1.2.3',
     versionSourceUrl: 'https://apps.apple.com/us/app/castmates-ai-characters/id6785844694',
   },
   verdict: 'Best for adults who want free, account-less offline character roleplay on iPhone; limited by being closed source and only three months old, English only, a small 3B model and a 6 GB RAM iPhone requirement.',
-  lastVerifiedDate: '2026-10-19',
-  lastUpstreamUpdate: '2026-10-19', // App Store version 1.1.7, currentVersionReleaseDate via iTunes lookup 2026-10-19
+  lastVerifiedDate: '2026-10-26',
+  lastUpstreamUpdate: '2026-10-25', // App Store version 1.2.3, currentVersionReleaseDate 2026-10-25T23:52:25Z via iTunes lookup and the App Store page, read 2026-10-26
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/castmates-ai-characters/id6785844694',
   founderReviewedDate: '2026-10-19', // Josip Markovic supplied his own comment 2026-10-19; drives the amber Founder-reviewed banner + star on tile, drawer and review
   founder: {
