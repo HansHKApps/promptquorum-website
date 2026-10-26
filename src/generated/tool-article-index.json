@@ -12697,6 +12697,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Localhosted": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "localhosted-review",
+        "title": "Localhosted Review: Web Directory of Local and Self-Hosted AI Tools",
+        "url": "/power-local-llm/localhosted-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "PhotoPrism": {
     "articles": [
       {
