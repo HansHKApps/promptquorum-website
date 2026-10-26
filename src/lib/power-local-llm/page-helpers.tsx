@@ -1231,6 +1231,7 @@ const HUB_THEMES: Array<{
       'handy-review',
       'fluidvoice-review',
       'openwhispr-review',
+      'voicebox-review',
       'xtts-v2-review',
       'elevenlabs-vs-local-tts-piper-xtts',
       'voice-ai-writers-cloud-vs-local',

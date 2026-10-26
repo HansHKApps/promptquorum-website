@@ -2820,7 +2820,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 43,
+    "totalCount": 44,
     "capped": true
   },
   "Atlarix": {
@@ -2911,6 +2911,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "voicebox-review",
+        "title": "Voicebox Review: Open-Source Local Voice Studio",
+        "url": "/power-local-llm/voicebox-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "zed-review",
         "title": "Zed Review: The Rust-Based Editor With Local AI Support",
         "url": "/power-local-llm/zed-review",
@@ -2932,17 +2940,9 @@
         "url": "/power-local-llm/codegpt-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pearai-review",
-        "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
-        "url": "/power-local-llm/pearai-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Sourcegraph Cody": {
@@ -9947,6 +9947,20 @@
         "title": "OpenWhispr Review: Open-Source Dictation and Meeting Notes App",
         "url": "/power-local-llm/openwhispr-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Voicebox": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "voicebox-review",
+        "title": "Voicebox Review: Open-Source Local Voice Studio",
+        "url": "/power-local-llm/voicebox-review",
+        "dateModified": "2026-10-26",
         "tier": "about"
       }
     ],

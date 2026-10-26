@@ -979,6 +979,11 @@
     "urlSlug": "openwhispr-review",
     "url": "/power-local-llm/openwhispr-review"
   },
+  "voicebox": {
+    "cluster": "power-local-llm",
+    "urlSlug": "voicebox-review",
+    "url": "/power-local-llm/voicebox-review"
+  },
   "localmcp": {
     "cluster": "power-local-llm",
     "urlSlug": "localmcp-review",
