@@ -130,17 +130,17 @@ export const translations = {
     privacyS2Row1_3: "Beta launch notification; product update emails",
     privacyS2Row1_4: "Consent (Art. 6(1)(a) GDPR)",
     privacyS2Row2_1: "Anonymous usage analytics",
-    privacyS2Row2_2: "Cookieless analytics (Umami); session recording (Microsoft Clarity, only with consent)",
+    privacyS2Row2_2: "Cookieless analytics (Umami); session analytics (Microsoft Clarity, cookieless; with cookies and recordings only with consent)",
     privacyS2Row2_3: "Understand which pages are visited; improve the site",
-    privacyS2Row2_4: "Umami: legitimate interest (Art. 6(1)(f) GDPR); Clarity: consent (Art. 6(1)(a) GDPR) — see §3 and §7",
+    privacyS2Row2_4: "Umami: legitimate interest (Art. 6(1)(f) GDPR); Clarity: legitimate interest in cookieless mode (Art. 6(1)(f) GDPR), consent for cookies and recordings (Art. 6(1)(a) GDPR) — see §3 and §7",
     privacyS2Closure: "We do not collect names, phone numbers, payment information or any special-category data under Art. 9 GDPR. IP addresses are processed only as described in this section.",
 
     // Section 3
     privacyS3Title: "Lawful basis for processing",
     privacyS3Sub1: "Consent — email address",
     privacyS3Para1: "When you enter your email and click \"Join Waitlist\", you give us explicit consent to contact you with beta launch announcements and product updates. Consent is the lawful basis under Art. 6(1)(a) GDPR. You may withdraw consent at any time by clicking the unsubscribe link in any email we send, or by emailing {{email}}. Withdrawal of consent does not affect the lawfulness of processing before withdrawal.",
-    privacyS3Sub2: "Analytics — legitimate interest (Umami) and consent (Clarity)",
-    privacyS3Para2: "We use Umami, a privacy-friendly, cookieless analytics tool, to understand how visitors use the site in aggregate. Umami sets no cookies; only aggregated, non-identifying usage data is processed, on the basis of our legitimate interest under Art. 6(1)(f) GDPR, and you can object to this processing at any time by emailing us. Microsoft Clarity (session recordings and heatmaps) is different: it loads only after you allow “Session recordings” in the cookie dialog, and its processing rests on your consent (Art. 6(1)(a) GDPR, § 25 TDDDG). You can withdraw it at any time via “Cookie settings” in the footer.",
+    privacyS3Sub2: "Analytics — legitimate interest (Umami, Clarity cookieless) and consent (Clarity cookies and recordings)",
+    privacyS3Para2: "We use Umami, a privacy-friendly, cookieless analytics tool, to understand how visitors use the site in aggregate. Umami sets no cookies; only aggregated, non-identifying usage data is processed, on the basis of our legitimate interest under Art. 6(1)(f) GDPR, and you can object to this processing at any time by emailing us. Microsoft Clarity (session analytics and heatmaps) loads for every visitor in cookieless mode: it sets no cookies and no persistent visitor ID, on the basis of our legitimate interest (Art. 6(1)(f) GDPR), and you can object at any time by emailing us. Only if you allow “Session recordings” in the cookie dialog does Clarity switch to full mode and set its cookies (_clck, _clsk); that rests on your consent (Art. 6(1)(a) GDPR, § 25 TDDDG). You can withdraw it at any time via “Cookie settings” in the footer.",
 
     // Section 4
     privacyS4Title: "Data processors and third parties",
@@ -179,14 +179,14 @@ export const translations = {
     privacyS5Title: "International data transfers",
     privacyS5Intro: "Some of our processors are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:",
     privacyS5Bullet1: "Resend: Transfer is covered by Standard Contractual Clauses (SCCs) adopted by the European Commission under GDPR Art. 46(2)(c). Resend's Data Processing Agreement is available at resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) is US-based and only loads if you allow session recordings. Transfers are safeguarded by Standard Contractual Clauses (SCCs) under GDPR Art. 46; Microsoft additionally participates in the EU–US Data Privacy Framework. Umami is hosted in the EU, so no transfer occurs.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) is US-based and loads in cookieless mode for every visitor; its cookies are set only if you allow session recordings. Transfers are safeguarded by Standard Contractual Clauses (SCCs) under GDPR Art. 46; Microsoft additionally participates in the EU–US Data Privacy Framework. Umami is hosted in the EU, so no transfer occurs.",
     privacyS5Bullet3: "Both providers are US-based. Transfers rely on Standard Contractual Clauses (SCCs) under GDPR Art. 46(2)(c) in their Data Processing Agreements and, where the provider is certified, on the EU–US Data Privacy Framework. MCP profiles are stored in an EU region.",
     privacyS5Closure: "You may request a copy of the applicable SCCs by emailing {{email}}.",
 
     // Section 6
     privacyS6Title: "Data retention",
     privacyS6Para1: "We retain your email address for 24 months from the date of submission, or until you unsubscribe — whichever comes first. After this period, your email address is permanently deleted from all systems, including our email service provider's list.",
-    privacyS6Para2: "Umami stores only aggregated, non-identifying data. Microsoft Clarity, if you allow it, stores session data in line with its standard retention period; if you withdraw consent, recording stops and the Clarity cookies in your browser are deleted.",
+    privacyS6Para2: "Umami stores only aggregated, non-identifying data. Microsoft Clarity stores session data in line with its standard retention period; its cookies are set only if you allow “Session recordings”, and if you withdraw consent they are deleted and Clarity returns to cookieless mode.",
     privacyS6Para3: "Resend retains transactional email logs for up to 30 days. Audience contact records (your email address and subscription status) are retained for as long as your subscription is active, or until you request deletion.",
 
     // Section 7
@@ -440,17 +440,17 @@ export const translations = {
     privacyS2Row1_3: "Beta-Start-Benachrichtigung; Produkt-Update-E-Mails",
     privacyS2Row1_4: "Einwilligung (Art. 6(1)(a) DSGVO)",
     privacyS2Row2_1: "Anonyme Nutzungsanalytik",
-    privacyS2Row2_2: "Cookielose Analyse (Umami); Sitzungsaufzeichnung (Microsoft Clarity, nur mit Einwilligung)",
+    privacyS2Row2_2: "Cookielose Analyse (Umami); Sitzungsanalyse (Microsoft Clarity, cookielos; Cookies und Aufzeichnungen nur mit Einwilligung)",
     privacyS2Row2_3: "Verstehen, welche Seiten besucht werden; Website verbessern",
-    privacyS2Row2_4: "Umami: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO); Clarity: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) – siehe §3 und §7",
+    privacyS2Row2_4: "Umami: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO); Clarity: berechtigtes Interesse im cookielosen Modus (Art. 6 Abs. 1 lit. f DSGVO), Einwilligung für Cookies und Aufzeichnungen (Art. 6 Abs. 1 lit. a DSGVO) – siehe §3 und §7",
     privacyS2Closure: "Wir erheben keine Namen, Telefonnummern, Zahlungsinformationen oder besonderen Kategorien von Daten gemäß Art. 9 DSGVO. IP-Adressen werden nur so verarbeitet, wie in diesem Abschnitt beschrieben.",
 
     // Section 3
     privacyS3Title: "Rechtliche Grundlage für die Verarbeitung",
     privacyS3Sub1: "Einwilligung — E-Mail-Adresse",
     privacyS3Para1: "Wenn Sie Ihre E-Mail eingeben und auf \"Warteliste beitreten\" klicken, erteilen Sie uns ausdrückliche Zustimmung, Sie mit Beta-Start-Ankündigungen und Produkt-Updates zu kontaktieren. Die Einwilligung ist die rechtliche Grundlage nach Art. 6(1)(a) DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie auf den Abmeldelink in einer E-Mail klicken, die wir Ihnen senden, oder indem Sie uns unter {{email}} anschreiben. Der Widerruf der Einwilligung hat keine Auswirkungen auf die Rechtmäßigkeit der Verarbeitung vor dem Widerruf.",
-    privacyS3Sub2: "Analyse — berechtigtes Interesse (Umami) und Einwilligung (Clarity)",
-    privacyS3Para2: "Wir verwenden Umami, ein datenschutzfreundliches, cookieloses Analysewerkzeug, um die Nutzung der Website in aggregierter Form zu verstehen. Umami setzt keine Cookies; verarbeitet werden ausschließlich aggregierte, nicht identifizierende Nutzungsdaten auf Grundlage unseres berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO. Sie können dieser Verarbeitung jederzeit per E-Mail widersprechen. Microsoft Clarity (Sitzungsaufzeichnungen und Heatmaps) funktioniert anders: Es wird erst geladen, nachdem Sie im Cookie-Dialog „Sitzungsaufzeichnungen“ erlaubt haben, und die Verarbeitung beruht auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 TDDDG). Sie können sie jederzeit über „Cookie-Einstellungen“ im Footer widerrufen.",
+    privacyS3Sub2: "Analyse — berechtigtes Interesse (Umami, Clarity cookielos) und Einwilligung (Clarity-Cookies und Aufzeichnungen)",
+    privacyS3Para2: "Wir verwenden Umami, ein datenschutzfreundliches, cookieloses Analysewerkzeug, um die Nutzung der Website in aggregierter Form zu verstehen. Umami setzt keine Cookies; verarbeitet werden ausschließlich aggregierte, nicht identifizierende Nutzungsdaten auf Grundlage unseres berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO. Sie können dieser Verarbeitung jederzeit per E-Mail widersprechen. Microsoft Clarity (Sitzungsanalyse und Heatmaps) wird für alle Besucher im cookielosen Modus geladen: Es setzt keine Cookies und keine dauerhafte Besucher-ID, auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO); Sie können jederzeit per E-Mail widersprechen. Nur wenn Sie im Cookie-Dialog „Sitzungsaufzeichnungen“ erlauben, wechselt Clarity in den Vollmodus und setzt seine Cookies (_clck, _clsk); das beruht auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 TDDDG). Sie können sie jederzeit über „Cookie-Einstellungen“ im Footer widerrufen.",
 
     // Section 4
     privacyS4Title: "Datenverarbeiter und Dritte",
@@ -489,14 +489,14 @@ export const translations = {
     privacyS5Title: "Internationale Datenübertragungen",
     privacyS5Intro: "Einige unserer Verarbeiter sind in den USA ansässig. Übertragungen personenbezogener Daten aus dem Europäischen Wirtschaftsraum (EWR) oder dem Vereinigten Königreich (UK) in die USA unterliegen angemessenen Schutzmaßnahmen:",
     privacyS5Bullet1: "Resend: Die Übertragung wird durch Standardvertragsklauseln (SVK) abgedeckt, die von der Europäischen Kommission unter DSGVO Art. 46(2)(c) angenommen wurden. Die Datenverarbeitungsvereinbarung von Resend ist unter resend.com/legal/dpa verfügbar.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) hat seinen Sitz in den USA und wird nur geladen, wenn Sie Sitzungsaufzeichnungen erlauben. Übermittlungen sind durch Standardvertragsklauseln (SCCs) nach DSGVO Art. 46 abgesichert; Microsoft nimmt zusätzlich am EU-US Data Privacy Framework teil. Umami wird in der EU gehostet, sodass keine Übermittlung stattfindet.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) hat seinen Sitz in den USA und wird für alle Besucher im cookielosen Modus geladen; seine Cookies werden nur gesetzt, wenn Sie Sitzungsaufzeichnungen erlauben. Übermittlungen sind durch Standardvertragsklauseln (SCCs) nach DSGVO Art. 46 abgesichert; Microsoft nimmt zusätzlich am EU-US Data Privacy Framework teil. Umami wird in der EU gehostet, sodass keine Übermittlung stattfindet.",
     privacyS5Bullet3: "Beide Anbieter haben ihren Sitz in den USA. Übermittlungen stützen sich auf Standardvertragsklauseln (SCCs) nach Art. 46 Abs. 2 lit. c DSGVO in ihren Auftragsverarbeitungsverträgen und, soweit der Anbieter zertifiziert ist, auf das EU-US Data Privacy Framework. MCP-Profile werden in einer EU-Region gespeichert.",
     privacyS5Closure: "Sie können eine Kopie der geltenden SVK anfordern, indem Sie {{email}} eine E-Mail senden.",
 
     // Section 6
     privacyS6Title: "Datenspeicherung",
     privacyS6Para1: "Wir speichern Ihre E-Mail-Adresse 24 Monate lang ab dem Einreichungsdatum oder bis zur Abmeldung — je nachdem, was zuerst eintritt. Nach diesem Zeitraum wird Ihre E-Mail-Adresse dauerhaft aus allen Systemen gelöscht, einschließlich der Liste unseres E-Mail-Dienstanbieters.",
-    privacyS6Para2: "Umami speichert nur aggregierte, nicht identifizierende Daten. Microsoft Clarity speichert – sofern Sie es erlauben – Sitzungsdaten gemäß seiner üblichen Aufbewahrungsfrist; wenn Sie Ihre Einwilligung widerrufen, endet die Aufzeichnung und die Clarity-Cookies in Ihrem Browser werden gelöscht.",
+    privacyS6Para2: "Umami speichert nur aggregierte, nicht identifizierende Daten. Microsoft Clarity speichert Sitzungsdaten gemäß seiner üblichen Aufbewahrungsfrist; seine Cookies werden nur gesetzt, wenn Sie „Sitzungsaufzeichnungen“ erlauben, und bei Widerruf der Einwilligung gelöscht – Clarity kehrt dann in den cookielosen Modus zurück.",
     privacyS6Para3: "Resend speichert Transaktions-E-Mail-Logs bis zu 30 Tage lang. Zielgruppen-Kontaktdatensätze (Ihre E-Mail-Adresse und Ihr Abonnementstatus) werden so lange gespeichert, wie Ihr Abonnement aktiv ist, oder bis Sie die Löschung anfordern.",
 
     // Section 7
@@ -758,17 +758,17 @@ export const translations = {
     privacyS2Row1_3: "Notification de lancement bêta; e-mails de mise à jour des produits",
     privacyS2Row1_4: "Consentement (Art. 6(1)(a) RGPD)",
     privacyS2Row2_1: "Analytique d'utilisation anonyme",
-    privacyS2Row2_2: "Analyse sans cookies (Umami) ; enregistrement de session (Microsoft Clarity, uniquement avec consentement)",
+    privacyS2Row2_2: "Analyse sans cookies (Umami) ; analyse de session (Microsoft Clarity, sans cookies ; cookies et enregistrements uniquement avec consentement)",
     privacyS2Row2_3: "Comprendre quelles pages sont visitées; améliorer le site",
-    privacyS2Row2_4: "Umami : intérêt légitime (art. 6(1)(f) du RGPD) ; Clarity : consentement (art. 6(1)(a) du RGPD) — voir §3 et §7",
+    privacyS2Row2_4: "Umami : intérêt légitime (art. 6(1)(f) du RGPD) ; Clarity : intérêt légitime en mode sans cookies (art. 6(1)(f) du RGPD), consentement pour les cookies et les enregistrements (art. 6(1)(a) du RGPD) — voir §3 et §7",
     privacyS2Closure: "Nous ne collectons pas de noms, de numéros de téléphone, d'informations de paiement ni de catégories particulières de données au sens de l'art. 9 RGPD. Les adresses IP sont traitées uniquement comme décrit dans cette section.",
 
     // Section 3
     privacyS3Title: "Fondement juridique du traitement",
     privacyS3Sub1: "Consentement — adresse e-mail",
     privacyS3Para1: "Lorsque vous entrez votre e-mail et cliquez sur \"Rejoindre la liste d'attente\", vous nous donnez un consentement explicite pour vous contacter avec les annonces de lancement bêta et les mises à jour de produits. Le consentement est le fondement juridique en vertu de l'art. 6(1)(a) RGPD. Vous pouvez retirer votre consentement à tout moment en cliquant sur le lien de désinscription dans tout e-mail que nous vous envoyons, ou en nous envoyant un e-mail à {{email}}. Le retrait du consentement n'affecte pas la licéité du traitement avant le retrait.",
-    privacyS3Sub2: "Analytique — intérêt légitime (Umami) et consentement (Clarity)",
-    privacyS3Para2: "Nous utilisons Umami, un outil d'analyse respectueux de la vie privée et sans cookie, afin de comprendre, de manière agrégée, comment les visiteurs utilisent le site. Umami ne dépose aucun cookie ; seules des données d'utilisation agrégées et non identifiantes sont traitées, sur la base de notre intérêt légitime au titre de l'art. 6(1)(f) du RGPD, et vous pouvez vous opposer à ce traitement à tout moment en nous écrivant. Microsoft Clarity (enregistrements de session et cartes de chaleur) fonctionne différemment : il ne se charge qu'après que vous avez autorisé « Enregistrements de session » dans la fenêtre des cookies, et son traitement repose sur votre consentement (art. 6(1)(a) du RGPD, § 25 TDDDG). Vous pouvez le retirer à tout moment via « Paramètres des cookies » en pied de page.",
+    privacyS3Sub2: "Analytique — intérêt légitime (Umami, Clarity sans cookies) et consentement (cookies et enregistrements Clarity)",
+    privacyS3Para2: "Nous utilisons Umami, un outil d'analyse respectueux de la vie privée et sans cookie, afin de comprendre, de manière agrégée, comment les visiteurs utilisent le site. Umami ne dépose aucun cookie ; seules des données d'utilisation agrégées et non identifiantes sont traitées, sur la base de notre intérêt légitime au titre de l'art. 6(1)(f) du RGPD, et vous pouvez vous opposer à ce traitement à tout moment en nous écrivant. Microsoft Clarity (analyse de session et cartes de chaleur) se charge pour tous les visiteurs en mode sans cookies : il ne dépose aucun cookie ni identifiant de visiteur persistant, sur la base de notre intérêt légitime (art. 6(1)(f) du RGPD), et vous pouvez vous y opposer à tout moment en nous écrivant. Ce n'est que si vous autorisez « Enregistrements de session » dans la fenêtre des cookies que Clarity passe en mode complet et dépose ses cookies (_clck, _clsk) ; cela repose sur votre consentement (art. 6(1)(a) du RGPD, § 25 TDDDG). Vous pouvez le retirer à tout moment via « Paramètres des cookies » en pied de page.",
 
     // Section 4
     privacyS4Title: "Sous-traitants et tiers",
@@ -807,14 +807,14 @@ export const translations = {
     privacyS5Title: "Transferts de données internationaux",
     privacyS5Intro: "Certains de nos sous-traitants sont basés aux États-Unis. Les transferts de données personnelles de l'Espace économique européen (EEE) ou du Royaume-Uni (RU) vers les États-Unis sont soumis à des garanties appropriées:",
     privacyS5Bullet1: "Resend: Le transfert est couvert par les clauses contractuelles types (CCT) adoptées par la Commission européenne en vertu de l'art. 46(2)(c) du RGPD. L'accord de traitement des données de Resend est disponible à resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) est basé aux États-Unis et n'est chargé que si vous autorisez les enregistrements de session. Les transferts sont encadrés par des clauses contractuelles types (CCT) au titre de l'art. 46 du RGPD ; Microsoft participe en outre au cadre de protection des données UE–États-Unis. Umami est hébergé dans l'UE : aucun transfert n'a lieu.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) est basé aux États-Unis et se charge en mode sans cookies pour tous les visiteurs ; ses cookies ne sont déposés que si vous autorisez les enregistrements de session. Les transferts sont encadrés par des clauses contractuelles types (CCT) au titre de l'art. 46 du RGPD ; Microsoft participe en outre au cadre de protection des données UE–États-Unis. Umami est hébergé dans l'UE : aucun transfert n'a lieu.",
     privacyS5Bullet3: "Les deux prestataires sont basés aux États-Unis. Les transferts reposent sur les clauses contractuelles types (CCT) au titre de l'art. 46, § 2, point c RGPD prévues dans leurs accords de traitement des données et, lorsque le prestataire est certifié, sur le cadre de protection des données UE–États-Unis. Les profils MCP sont stockés dans une région de l'UE.",
     privacyS5Closure: "Vous pouvez demander une copie des CCT applicables en envoyant un e-mail à {{email}}.",
 
     // Section 6
     privacyS6Title: "Conservation des données",
     privacyS6Para1: "Nous conservons votre adresse e-mail pendant 24 mois à partir de la date de soumission, ou jusqu'à ce que vous vous désabonniez — selon ce qui se produit en premier. Après cette période, votre adresse e-mail est définitivement supprimée de tous les systèmes, y compris la liste de notre fournisseur de services de messagerie.",
-    privacyS6Para2: "Umami ne conserve que des données agrégées et non identifiantes. Microsoft Clarity, si vous l'autorisez, conserve des données de session selon sa durée de conservation habituelle ; si vous retirez votre consentement, l'enregistrement s'arrête et les cookies Clarity de votre navigateur sont supprimés.",
+    privacyS6Para2: "Umami ne conserve que des données agrégées et non identifiantes. Microsoft Clarity conserve des données de session selon sa durée de conservation habituelle ; ses cookies ne sont déposés que si vous autorisez « Enregistrements de session », et si vous retirez votre consentement ils sont supprimés et Clarity revient au mode sans cookies.",
     privacyS6Para3: "Resend conserve les journaux de courrier électronique transactionnel jusqu'à 30 jours. Les dossiers de contact d'audience (votre adresse e-mail et votre statut d'abonnement) sont conservés aussi longtemps que votre abonnement est actif, ou jusqu'à ce que vous demandiez la suppression.",
 
     // Section 7
@@ -1068,17 +1068,17 @@ export const translations = {
     privacyS2Row1_3: "ベータ版起動通知; 製品更新メール",
     privacyS2Row1_4: "同意(GDPR第6条(1)(a))",
     privacyS2Row2_1: "匿名使用分析",
-    privacyS2Row2_2: "クッキーレス分析（Umami）、セッション記録（Microsoft Clarity、同意がある場合のみ）",
+    privacyS2Row2_2: "クッキーレス分析（Umami）、セッション分析（Microsoft Clarity、クッキーレス。cookieと記録は同意がある場合のみ）",
     privacyS2Row2_3: "訪問されたページを理解する; サイトを改善する",
-    privacyS2Row2_4: "Umami：正当な利益（GDPR第6条(1)(f)）、Clarity：同意（GDPR第6条(1)(a)）— §3および§7を参照",
+    privacyS2Row2_4: "Umami：正当な利益（GDPR第6条(1)(f)）、Clarity：クッキーレスモードでは正当な利益（GDPR第6条(1)(f)）、cookieと記録については同意（GDPR第6条(1)(a)）— §3および§7を参照",
     privacyS2Closure: "私たちは、氏名、電話番号、支払い情報、またはGDPR第9条に定める特別カテゴリーのデータを収集しません。IPアドレスは、このセクションに記載する範囲でのみ処理します。",
 
     // Section 3
     privacyS3Title: "処理の法的根拠",
     privacyS3Sub1: "同意 — メールアドレス",
     privacyS3Para1: "メールを入力して\"ウェイティングリストに参加\"をクリックすると、ベータ版起動アナウンスと製品更新であなたに連絡する明示的な同意を与えます。同意はGDPR第6条(1)(a)に基づく法的根拠です。あなたが送信した電子メール内の登録解除リンクをクリックするか、{{email}}にメールを送信することで、いつでも同意を撤回できます。同意の撤回は、撤回前の処理の適法性に影響しません。",
-    privacyS3Sub2: "分析 — 正当な利益（Umami）と同意（Clarity）",
-    privacyS3Para2: "当サイトでは、プライバシーに配慮したクッキーレスの分析ツールUmamiを使用し、訪問者のサイト利用状況を集計ベースで把握しています。Umamiはcookieを設定せず、処理されるのは集計された識別不能な利用データのみで、当社の正当な利益（GDPR第6条(1)(f)）に基づきます。この処理にはいつでもメールで異議を申し立てることができます。Microsoft Clarity（セッション記録とヒートマップ）は異なります。cookie設定ダイアログで「セッション記録」を許可していただいた後にのみ読み込まれ、処理はお客様の同意（GDPR第6条(1)(a)、TDDDG第25条）に基づきます。同意は、フッターの「Cookie設定」からいつでも撤回できます。",
+    privacyS3Sub2: "分析 — 正当な利益（Umami、クッキーレスのClarity）と同意（Clarityのcookieと記録）",
+    privacyS3Para2: "当サイトでは、プライバシーに配慮したクッキーレスの分析ツールUmamiを使用し、訪問者のサイト利用状況を集計ベースで把握しています。Umamiはcookieを設定せず、処理されるのは集計された識別不能な利用データのみで、当社の正当な利益（GDPR第6条(1)(f)）に基づきます。この処理にはいつでもメールで異議を申し立てることができます。Microsoft Clarity（セッション分析とヒートマップ）は、すべての訪問者に対してクッキーレスモードで読み込まれます。cookieも永続的な訪問者IDも設定せず、当社の正当な利益（GDPR第6条(1)(f)）に基づき、いつでもメールで異議を申し立てることができます。cookie設定ダイアログで「セッション記録」を許可していただいた場合にのみ、Clarityはフルモードに切り替わり、cookie（_clck、_clsk）を設定します。これはお客様の同意（GDPR第6条(1)(a)、TDDDG第25条）に基づき、フッターの「Cookie設定」からいつでも撤回できます。",
 
     // Section 4
     privacyS4Title: "データ処理業者と第三者",
@@ -1117,14 +1117,14 @@ export const translations = {
     privacyS5Title: "国際的なデータ転送",
     privacyS5Intro: "私たちの処理業者の一部は米国に拠点を置いています。ヨーロッパ経済地域(EEA)または英国(UK)から米国への個人データの転送には、適切な保護措置が適用されます:",
     privacyS5Bullet1: "Resend: 転送はGDPR第46条(2)(c)の下で欧州委員会により採択された標準契約条項(SCC)によってカバーされています。Resendのデータ処理契約はresend.com/legal/dpaで利用可能です。",
-    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）は米国の事業者で、セッション記録を許可した場合にのみ読み込まれます。移転はGDPR第46条に基づく標準契約条項（SCC）で保護されており、Microsoftは加えてEU・米国間データプライバシーフレームワークにも参加しています。UmamiはEU内でホストされているため、移転は発生しません。",
+    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）は米国の事業者で、すべての訪問者に対してクッキーレスモードで読み込まれ、cookieはセッション記録を許可した場合にのみ設定されます。移転はGDPR第46条に基づく標準契約条項（SCC）で保護されており、Microsoftは加えてEU・米国間データプライバシーフレームワークにも参加しています。UmamiはEU内でホストされているため、移転は発生しません。",
     privacyS5Bullet3: "両プロバイダーとも米国に拠点があります。移転は、データ処理契約に含まれるGDPR第46条第2項(c)の標準契約条項（SCC）に基づき、プロバイダーが認証を受けている場合はEU・米国データプライバシーフレームワークにも基づきます。MCPプロフィールはEUリージョンに保存されます。",
     privacyS5Closure: "{{email}}にメールを送信することで、適用されるSCCのコピーをリクエストできます。",
 
     // Section 6
     privacyS6Title: "データ保持",
     privacyS6Para1: "提出日から24ヶ月間、またはあなたが登録を解除するまで — どちらか先に来たかに関わらず、あなたのメールアドレスを保持します。このその後、あなたのメールアドレスは、電子メールサービスプロバイダーのリストを含むすべてのシステムから完全に削除されます。",
-    privacyS6Para2: "Umamiは、集計済みで個人を特定しないデータのみを保存します。Microsoft Clarityは、許可いただいた場合に限り、通常の保持期間に従ってセッションデータを保存します。同意を撤回すると記録が停止し、お使いのブラウザ内のClarityのcookieが削除されます。",
+    privacyS6Para2: "Umamiは、集計済みで個人を特定しないデータのみを保存します。Microsoft Clarityは、通常の保持期間に従ってセッションデータを保存します。cookieは「セッション記録」を許可いただいた場合にのみ設定され、同意を撤回するとcookieが削除され、Clarityはクッキーレスモードに戻ります。",
     privacyS6Para3: "Resendは最大30日間トランザクションメールログを保持します。オーディエンス連絡先レコード(あなたのメールアドレスとサブスクリプションステータス)は、あなたのサブスクリプションがアクティブである限り、またはあなたが削除をリクエストするまで保持されます。",
 
     // Section 7
@@ -1378,17 +1378,17 @@ export const translations = {
     privacyS2Row1_3: "测试版启动通知; 产品更新电子邮件",
     privacyS2Row1_4: "同意(GDPR第6条(1)(a))",
     privacyS2Row2_1: "匿名使用分析",
-    privacyS2Row2_2: "无Cookie分析（Umami）；会话录制（Microsoft Clarity，仅在同意后）",
+    privacyS2Row2_2: "无Cookie分析（Umami）；会话分析（Microsoft Clarity，无 Cookie 模式；Cookie 和录制仅在同意后）",
     privacyS2Row2_3: "了解访问的页面; 改进网站",
-    privacyS2Row2_4: "Umami：合法利益（GDPR第6(1)(f)条）；Clarity：同意（GDPR第6(1)(a)条）— 参见第3节和第7节",
+    privacyS2Row2_4: "Umami：合法利益（GDPR第6(1)(f)条）；Clarity：无 Cookie 模式下为合法利益（GDPR第6(1)(f)条），Cookie 和录制需同意（GDPR第6(1)(a)条）— 参见第3节和第7节",
     privacyS2Closure: "我们不收集姓名、电话号码、付款信息或 GDPR 第 9 条下的任何特殊类别数据。IP 地址仅按本节所述方式处理。",
 
     // Section 3
     privacyS3Title: "处理的法律依据",
     privacyS3Sub1: "同意 — 电子邮件地址",
     privacyS3Para1: "当您输入电子邮件地址并点击\"加入候补名单\"时,您明确同意我们使用测试版启动公告和产品更新与您联系。同意是GDPR第6条(1)(a)下的法律依据。您可以通过点击我们发送给您的任何电子邮件中的取消订阅链接或向{{email}}发送电子邮件,随时撤回您的同意。撤回同意不影响撤回前处理的合法性。",
-    privacyS3Sub2: "分析 — 合法利益（Umami）与同意（Clarity）",
-    privacyS3Para2: "我们使用注重隐私、不使用 Cookie 的分析工具 Umami，以汇总方式了解访问者如何使用本网站。Umami 不设置 Cookie，仅处理汇总的、不可识别身份的使用数据，依据我们的合法利益（GDPR第6(1)(f)条）；您可以随时通过电子邮件反对此项处理。Microsoft Clarity（会话录制和热力图）则不同：仅在您于 Cookie 对话框中允许“会话录制”后才会加载，其处理基于您的同意（GDPR第6(1)(a)条、TDDDG第25条），您可随时通过页脚的“Cookie 设置”撤回。",
+    privacyS3Sub2: "分析 — 合法利益（Umami、无 Cookie 模式的 Clarity）与同意（Clarity 的 Cookie 和录制）",
+    privacyS3Para2: "我们使用注重隐私、不使用 Cookie 的分析工具 Umami，以汇总方式了解访问者如何使用本网站。Umami 不设置 Cookie，仅处理汇总的、不可识别身份的使用数据，依据我们的合法利益（GDPR第6(1)(f)条）；您可以随时通过电子邮件反对此项处理。Microsoft Clarity（会话分析和热力图）对所有访问者以无 Cookie 模式加载：不设置 Cookie，也不设置持久的访问者 ID，依据我们的合法利益（GDPR第6(1)(f)条），您可随时通过电子邮件反对。仅当您在 Cookie 对话框中允许“会话录制”时，Clarity 才会切换到完整模式并设置其 Cookie（_clck、_clsk），此项处理基于您的同意（GDPR第6(1)(a)条、TDDDG第25条），您可随时通过页脚的“Cookie 设置”撤回。",
 
     // Section 4
     privacyS4Title: "数据处理人和第三方",
@@ -1427,14 +1427,14 @@ export const translations = {
     privacyS5Title: "国际数据转移",
     privacyS5Intro: "我们的一些处理人位于美国。从欧洲经济区(EEA)或英国(UK)向美国转移个人数据受适当的保护措施约束:",
     privacyS5Bullet1: "Resend: 转移受欧盟委员会在GDPR第46条(2)(c)下采用的标准合同条款(SCC)的保护。Resend的数据处理协议可在resend.com/legal/dpa获取。",
-    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）总部位于美国，仅在您允许会话录制后才会加载。数据传输受 GDPR 第 46 条规定的标准合同条款（SCC）保护；Microsoft 还参与了欧盟—美国数据隐私框架。Umami 托管于欧盟，因此不发生跨境传输。",
+    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）总部位于美国，对所有访问者以无 Cookie 模式加载；仅在您允许会话录制后才会设置其 Cookie。数据传输受 GDPR 第 46 条规定的标准合同条款（SCC）保护；Microsoft 还参与了欧盟—美国数据隐私框架。Umami 托管于欧盟，因此不发生跨境传输。",
     privacyS5Bullet3: "两家服务商均位于美国。数据传输依据其数据处理协议中的标准合同条款（SCC，GDPR 第 46 条第 2 款 c 项），在服务商已获认证的情况下还依据欧盟—美国数据隐私框架。MCP 档案存储在欧盟区域。",
     privacyS5Closure: "您可以通过向{{email}}发送电子邮件来请求适用SCC的副本。",
 
     // Section 6
     privacyS6Title: "数据保留",
     privacyS6Para1: "从提交之日起24个月或直到您取消订阅为止(以较早者为准),我们保留您的电子邮件地址。在此期间之后,您的电子邮件地址将从所有系统(包括我们的电子邮件服务提供商列表)中永久删除。",
-    privacyS6Para2: "Umami 仅存储汇总的、不可识别个人身份的数据。Microsoft Clarity 在您允许的情况下，按其标准保留期限存储会话数据；您撤回同意后，录制即停止，您浏览器中的 Clarity Cookie 也会被删除。",
+    privacyS6Para2: "Umami 仅存储汇总的、不可识别个人身份的数据。Microsoft Clarity 按其标准保留期限存储会话数据；其 Cookie 仅在您允许“会话录制”后才会设置，您撤回同意后这些 Cookie 会被删除，Clarity 恢复为无 Cookie 模式。",
     privacyS6Para3: "Resend保留最多30天的事务性电子邮件日志。受众联系记录(您的电子邮件地址和订阅状态)只要您的订阅处于活跃状态就保留,或直到您请求删除。",
 
     // Section 7
@@ -1688,17 +1688,17 @@ export const translations = {
     privacyS2Row1_3: "Notificación de lanzamiento beta; emails de actualización del producto",
     privacyS2Row1_4: "Consentimiento (Art. 6(1)(a) RGPD)",
     privacyS2Row2_1: "Analítica de uso anónima",
-    privacyS2Row2_2: "Analítica sin cookies (Umami); grabación de sesiones (Microsoft Clarity, solo con consentimiento)",
+    privacyS2Row2_2: "Analítica sin cookies (Umami); análisis de sesiones (Microsoft Clarity, sin cookies; cookies y grabaciones solo con consentimiento)",
     privacyS2Row2_3: "Entender qué páginas se visitan; mejorar el sitio",
-    privacyS2Row2_4: "Umami: interés legítimo (art. 6(1)(f) del RGPD); Clarity: consentimiento (art. 6(1)(a) del RGPD) — véase §3 y §7",
+    privacyS2Row2_4: "Umami: interés legítimo (art. 6(1)(f) del RGPD); Clarity: interés legítimo en modo sin cookies (art. 6(1)(f) del RGPD), consentimiento para cookies y grabaciones (art. 6(1)(a) del RGPD) — véase §3 y §7",
     privacyS2Closure: "No recopilamos nombres, números de teléfono, información de pago ni datos de categorías especiales según el Art. 9 del RGPD. Las direcciones IP se tratan únicamente como se describe en esta sección.",
 
     // Section 3
     privacyS3Title: "Base jurídica del tratamiento",
     privacyS3Sub1: "Consentimiento — dirección de email",
     privacyS3Para1: "Cuando introduces tu email y haces clic en \"Unirse a la lista de espera\", nos das consentimiento explícito para contactarte con anuncios de lanzamiento beta y actualizaciones del producto. El consentimiento es la base jurídica según el Art. 6(1)(a) del RGPD. Puedes retirar el consentimiento en cualquier momento haciendo clic en el enlace de cancelación de suscripción de cualquier email que te enviemos, o enviando un email a {{email}}. La retirada del consentimiento no afecta a la licitud del tratamiento anterior.",
-    privacyS3Sub2: "Analítica — interés legítimo (Umami) y consentimiento (Clarity)",
-    privacyS3Para2: "Utilizamos Umami, una herramienta de analítica respetuosa con la privacidad y sin cookies, para entender de forma agregada cómo usan el sitio los visitantes. Umami no establece cookies; solo se tratan datos de uso agregados y no identificativos, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD), y puedes oponerte a este tratamiento en cualquier momento escribiéndonos un correo. Microsoft Clarity (grabaciones de sesión y mapas de calor) es distinto: solo se carga después de que permitas «Grabaciones de sesión» en el cuadro de cookies, y su tratamiento se basa en tu consentimiento (art. 6(1)(a) del RGPD, § 25 TDDDG). Puedes retirarlo en cualquier momento desde «Configuración de cookies» en el pie de página.",
+    privacyS3Sub2: "Analítica — interés legítimo (Umami, Clarity sin cookies) y consentimiento (cookies y grabaciones de Clarity)",
+    privacyS3Para2: "Utilizamos Umami, una herramienta de analítica respetuosa con la privacidad y sin cookies, para entender de forma agregada cómo usan el sitio los visitantes. Umami no establece cookies; solo se tratan datos de uso agregados y no identificativos, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD), y puedes oponerte a este tratamiento en cualquier momento escribiéndonos un correo. Microsoft Clarity (análisis de sesiones y mapas de calor) se carga para todos los visitantes en modo sin cookies: no establece cookies ni un identificador de visitante persistente, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD), y puedes oponerte en cualquier momento escribiéndonos un correo. Solo si permites «Grabaciones de sesión» en el cuadro de cookies, Clarity pasa al modo completo y establece sus cookies (_clck, _clsk); eso se basa en tu consentimiento (art. 6(1)(a) del RGPD, § 25 TDDDG). Puedes retirarlo en cualquier momento desde «Configuración de cookies» en el pie de página.",
 
     // Section 4
     privacyS4Title: "Encargados del tratamiento y terceros",
@@ -1737,14 +1737,14 @@ export const translations = {
     privacyS5Title: "Transferencias internacionales de datos",
     privacyS5Intro: "Algunos de nuestros encargados del tratamiento tienen su sede en Estados Unidos. Las transferencias de datos personales desde el Espacio Económico Europeo (EEE) o el Reino Unido (RU) a Estados Unidos están sujetas a garantías adecuadas:",
     privacyS5Bullet1: "Resend: la transferencia está cubierta por Cláusulas Contractuales Tipo (CCT) adoptadas por la Comisión Europea en virtud del Art. 46(2)(c) del RGPD. El Acuerdo de Tratamiento de Datos de Resend está disponible en resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) tiene su sede en Estados Unidos y solo se carga si permites las grabaciones de sesión. Las transferencias están amparadas por cláusulas contractuales tipo (CCT) conforme al art. 46 del RGPD; además, Microsoft participa en el Marco de Privacidad de Datos UE-EE. UU. Umami se aloja en la UE, por lo que no hay transferencia.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) tiene su sede en Estados Unidos y se carga en modo sin cookies para todos los visitantes; sus cookies solo se establecen si permites las grabaciones de sesión. Las transferencias están amparadas por cláusulas contractuales tipo (CCT) conforme al art. 46 del RGPD; además, Microsoft participa en el Marco de Privacidad de Datos UE-EE. UU. Umami se aloja en la UE, por lo que no hay transferencia.",
     privacyS5Bullet3: "Ambos proveedores tienen su sede en Estados Unidos. Las transferencias se basan en las cláusulas contractuales tipo (CCT) del art. 46.2.c RGPD incluidas en sus acuerdos de encargo del tratamiento y, cuando el proveedor está certificado, en el Marco de Privacidad de Datos UE-EE. UU. Los perfiles MCP se almacenan en una región de la UE.",
     privacyS5Closure: "Puedes solicitar una copia de las CCT aplicables enviando un email a {{email}}.",
 
     // Section 6
     privacyS6Title: "Conservación de datos",
     privacyS6Para1: "Conservamos tu dirección de email durante 24 meses desde la fecha de envío, o hasta que canceles la suscripción — lo que ocurra primero. Después de este período, tu dirección de email se elimina permanentemente de todos los sistemas, incluida la lista de nuestro proveedor de servicios de email.",
-    privacyS6Para2: "Umami solo almacena datos agregados y no identificativos. Microsoft Clarity, si lo permites, almacena datos de sesión según su plazo de conservación habitual; si retiras tu consentimiento, la grabación se detiene y se eliminan las cookies de Clarity de tu navegador.",
+    privacyS6Para2: "Umami solo almacena datos agregados y no identificativos. Microsoft Clarity almacena datos de sesión según su plazo de conservación habitual; sus cookies solo se establecen si permites «Grabaciones de sesión», y si retiras tu consentimiento se eliminan y Clarity vuelve al modo sin cookies.",
     privacyS6Para3: "Resend conserva los registros de email transaccional hasta 30 días. Los registros de contacto de audiencia (tu dirección de email y estado de suscripción) se conservan mientras tu suscripción esté activa, o hasta que solicites la eliminación.",
 
     // Section 7
@@ -1998,17 +1998,17 @@ export const translations = {
     privacyS2Row1_3: "Notificação de lançamento beta; e-mails de atualização do produto",
     privacyS2Row1_4: "Consentimento (Art. 6(1)(a) GDPR / Art. 7 LGPD)",
     privacyS2Row2_1: "Análise de uso anônima",
-    privacyS2Row2_2: "Análise sem cookies (Umami); gravação de sessões (Microsoft Clarity, somente com consentimento)",
+    privacyS2Row2_2: "Análise sem cookies (Umami); análise de sessões (Microsoft Clarity, sem cookies; cookies e gravações somente com consentimento)",
     privacyS2Row2_3: "Entender quais páginas são visitadas; melhorar o site",
-    privacyS2Row2_4: "Umami: interesse legítimo (art. 6(1)(f) do GDPR); Clarity: consentimento (art. 6(1)(a) do GDPR) — veja §3 e §7",
+    privacyS2Row2_4: "Umami: interesse legítimo (art. 6(1)(f) do GDPR); Clarity: interesse legítimo no modo sem cookies (art. 6(1)(f) do GDPR), consentimento para cookies e gravações (art. 6(1)(a) do GDPR) — veja §3 e §7",
     privacyS2Closure: "Não coletamos nomes, números de telefone, informações de pagamento nem dados de categorias especiais nos termos do Art. 9 do GDPR / Art. 11 da LGPD. Endereços IP são tratados apenas conforme descrito nesta seção.",
 
     // Section 3
     privacyS3Title: "Base jurídica para o tratamento",
     privacyS3Sub1: "Consentimento — endereço de e-mail",
     privacyS3Para1: "Quando você insere seu e-mail e clica em \"Entrar na lista de espera\", nos dá consentimento explícito para contatá-lo com anúncios de lançamento beta e atualizações do produto. O consentimento é a base jurídica nos termos do Art. 6(1)(a) do GDPR e do Art. 7 da LGPD. Você pode retirar o consentimento a qualquer momento clicando no link de cancelamento de inscrição em qualquer e-mail que enviamos, ou enviando um e-mail para {{email}}. A retirada do consentimento não afeta a licitude do tratamento anterior.",
-    privacyS3Sub2: "Análise — interesse legítimo (Umami) e consentimento (Clarity)",
-    privacyS3Para2: "Usamos o Umami, uma ferramenta de análise que respeita a privacidade e não usa cookies, para entender, de forma agregada, como os visitantes usam o site. O Umami não define cookies; são tratados apenas dados de uso agregados e não identificáveis, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR), e você pode se opor a esse tratamento a qualquer momento enviando um e-mail para nós. O Microsoft Clarity (gravações de sessão e mapas de calor) é diferente: ele só é carregado depois que você permite «Gravações de sessão» na caixa de cookies, e o tratamento se baseia no seu consentimento (art. 6(1)(a) do GDPR, § 25 TDDDG). Você pode retirá-lo a qualquer momento em «Configurações de cookies», no rodapé.",
+    privacyS3Sub2: "Análise — interesse legítimo (Umami, Clarity sem cookies) e consentimento (cookies e gravações do Clarity)",
+    privacyS3Para2: "Usamos o Umami, uma ferramenta de análise que respeita a privacidade e não usa cookies, para entender, de forma agregada, como os visitantes usam o site. O Umami não define cookies; são tratados apenas dados de uso agregados e não identificáveis, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR), e você pode se opor a esse tratamento a qualquer momento enviando um e-mail para nós. O Microsoft Clarity (análise de sessões e mapas de calor) é carregado para todos os visitantes no modo sem cookies: não define cookies nem um identificador de visitante persistente, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR), e você pode se opor a qualquer momento enviando um e-mail para nós. Somente se você permitir «Gravações de sessão» na caixa de cookies, o Clarity passa para o modo completo e define seus cookies (_clck, _clsk); isso se baseia no seu consentimento (art. 6(1)(a) do GDPR, § 25 TDDDG). Você pode retirá-lo a qualquer momento em «Configurações de cookies», no rodapé.",
 
     // Section 4
     privacyS4Title: "Processadores de dados e terceiros",
@@ -2047,14 +2047,14 @@ export const translations = {
     privacyS5Title: "Transferências internacionais de dados",
     privacyS5Intro: "Alguns de nossos processadores estão sediados nos Estados Unidos. As transferências de dados pessoais da Área Econômica Europeia (AEE) ou do Reino Unido (RU) para os Estados Unidos estão sujeitas a salvaguardas adequadas:",
     privacyS5Bullet1: "Resend: a transferência é coberta por Cláusulas Contratuais Padrão (CCPs) adotadas pela Comissão Europeia nos termos do Art. 46(2)(c) do GDPR. O Contrato de Processamento de Dados da Resend está disponível em resend.com/legal/dpa.",
-    privacyS5Bullet2: "O Microsoft Clarity (Microsoft Corporation) tem sede nos EUA e só é carregado se você permitir as gravações de sessão. As transferências são protegidas por Cláusulas Contratuais Padrão (SCCs) nos termos do art. 46 do GDPR; a Microsoft também participa do Data Privacy Framework UE–EUA. O Umami é hospedado na UE, portanto não há transferência.",
+    privacyS5Bullet2: "O Microsoft Clarity (Microsoft Corporation) tem sede nos EUA e é carregado no modo sem cookies para todos os visitantes; seus cookies só são definidos se você permitir as gravações de sessão. As transferências são protegidas por Cláusulas Contratuais Padrão (SCCs) nos termos do art. 46 do GDPR; a Microsoft também participa do Data Privacy Framework UE–EUA. O Umami é hospedado na UE, portanto não há transferência.",
     privacyS5Bullet3: "Ambos os provedores têm sede nos Estados Unidos. As transferências baseiam-se nas cláusulas contratuais padrão (SCCs) do art. 46(2)(c) do GDPR constantes de seus acordos de tratamento de dados e, quando o provedor é certificado, no EU–US Data Privacy Framework. Os perfis MCP são armazenados em uma região da UE.",
     privacyS5Closure: "Você pode solicitar uma cópia das CCPs aplicáveis enviando um e-mail para {{email}}.",
 
     // Section 6
     privacyS6Title: "Retenção de dados",
     privacyS6Para1: "Retemos seu endereço de e-mail por 24 meses a partir da data de envio, ou até que você cancele a inscrição — o que ocorrer primeiro. Após esse período, seu endereço de e-mail é excluído permanentemente de todos os sistemas, incluindo a lista do nosso provedor de serviços de e-mail.",
-    privacyS6Para2: "O Umami armazena apenas dados agregados e não identificáveis. O Microsoft Clarity, se você permitir, armazena dados de sessão conforme seu prazo de retenção padrão; se você retirar o consentimento, a gravação é interrompida e os cookies do Clarity no seu navegador são excluídos.",
+    privacyS6Para2: "O Umami armazena apenas dados agregados e não identificáveis. O Microsoft Clarity armazena dados de sessão conforme seu prazo de retenção padrão; seus cookies só são definidos se você permitir «Gravações de sessão», e, se você retirar o consentimento, eles são excluídos e o Clarity volta ao modo sem cookies.",
     privacyS6Para3: "A Resend retém registros de e-mail transacional por até 30 dias. Os registros de contato de audiência (seu endereço de e-mail e status de assinatura) são retidos enquanto sua assinatura estiver ativa, ou até que você solicite a exclusão.",
 
     // Section 7
@@ -2308,17 +2308,17 @@ export const translations = {
     privacyS2Row1_3: "إشعار إطلاق النسخة التجريبية؛ رسائل بريد إلكتروني بتحديثات المنتج",
     privacyS2Row1_4: "الموافقة (المادة 6(1)(أ) RGPD)",
     privacyS2Row2_1: "تحليلات استخدام مجهولة الهوية",
-    privacyS2Row2_2: "تحليلات بدون ملفات تعريف الارتباط (Umami)؛ تسجيل الجلسات (Microsoft Clarity، بموافقتك فقط)",
+    privacyS2Row2_2: "تحليلات بدون ملفات تعريف الارتباط (Umami)؛ تحليل الجلسات (Microsoft Clarity، بدون ملفات تعريف الارتباط؛ ملفات تعريف الارتباط والتسجيلات بموافقتك فقط)",
     privacyS2Row2_3: "فهم الصفحات التي يُزارها؛ تحسين الموقع",
-    privacyS2Row2_4: "Umami: المصلحة المشروعة (المادة 6(1)(و) من RGPD)؛ Clarity: الموافقة (المادة 6(1)(أ) من RGPD) — انظر §3 و§7",
+    privacyS2Row2_4: "Umami: المصلحة المشروعة (المادة 6(1)(و) من RGPD)؛ Clarity: المصلحة المشروعة في الوضع بدون ملفات تعريف الارتباط (المادة 6(1)(و) من RGPD)، والموافقة لملفات تعريف الارتباط والتسجيلات (المادة 6(1)(أ) من RGPD) — انظر §3 و§7",
     privacyS2Closure: "لا نجمع أسماء أو أرقام هاتف أو معلومات دفع أو أي بيانات من الفئات الخاصة بموجب المادة 9 من GDPR. تُعالَج عناوين IP فقط على النحو الموصوف في هذا القسم.",
 
     // Section 3
     privacyS3Title: "الأساس القانوني للمعالجة",
     privacyS3Sub1: "الموافقة — عنوان البريد الإلكتروني",
     privacyS3Para1: "عندما تُدخل بريدك الإلكتروني وتنقر على \"الانضمام إلى قائمة الانتظار\"، تمنحنا موافقة صريحة للتواصل معك بشأن إعلانات إطلاق النسخة التجريبية وتحديثات المنتج. الموافقة هي الأساس القانوني بموجب المادة 6(1)(أ) من RGPD. يمكنك سحب الموافقة في أي وقت بالنقر على رابط إلغاء الاشتراك في أي بريد إلكتروني نرسله إليك، أو بإرسال بريد إلكتروني إلى {{email}}. لا يؤثر سحب الموافقة في مشروعية المعالجة السابقة.",
-    privacyS3Sub2: "التحليلات — المصلحة المشروعة (Umami) والموافقة (Clarity)",
-    privacyS3Para2: "نستخدم Umami، وهي أداة تحليلات تحترم الخصوصية وتعمل بدون ملفات تعريف ارتباط، لفهم كيفية استخدام الزوار للموقع بصورة مجمَّعة. لا يُعيِّن Umami أي ملفات تعريف ارتباط؛ وتُعالَج فقط بيانات استخدام مجمَّعة وغير معرِّفة، استنادًا إلى مصلحتنا المشروعة (المادة 6(1)(و) من RGPD)، ويمكنك الاعتراض على هذه المعالجة في أي وقت بمراسلتنا. أما Microsoft Clarity (تسجيلات الجلسات والخرائط الحرارية) فيختلف: لا يُحمَّل إلا بعد أن تسمح بـ«تسجيلات الجلسات» في نافذة ملفات تعريف الارتباط، وتستند معالجته إلى موافقتك (المادة 6(1)(أ) من RGPD، § 25 TDDDG). ويمكنك سحبها في أي وقت عبر «إعدادات ملفات تعريف الارتباط» في تذييل الصفحة.",
+    privacyS3Sub2: "التحليلات — المصلحة المشروعة (Umami وClarity بدون ملفات تعريف الارتباط) والموافقة (ملفات تعريف الارتباط والتسجيلات في Clarity)",
+    privacyS3Para2: "نستخدم Umami، وهي أداة تحليلات تحترم الخصوصية وتعمل بدون ملفات تعريف ارتباط، لفهم كيفية استخدام الزوار للموقع بصورة مجمَّعة. لا يُعيِّن Umami أي ملفات تعريف ارتباط؛ وتُعالَج فقط بيانات استخدام مجمَّعة وغير معرِّفة، استنادًا إلى مصلحتنا المشروعة (المادة 6(1)(و) من RGPD)، ويمكنك الاعتراض على هذه المعالجة في أي وقت بمراسلتنا. أما Microsoft Clarity (تحليل الجلسات والخرائط الحرارية) فيُحمَّل لجميع الزوار في الوضع بدون ملفات تعريف الارتباط: فلا يُعيِّن أي ملفات تعريف ارتباط ولا معرّف زائر دائمًا، استنادًا إلى مصلحتنا المشروعة (المادة 6(1)(و) من RGPD)، ويمكنك الاعتراض في أي وقت بمراسلتنا. وفقط إذا سمحت بـ«تسجيلات الجلسات» في نافذة ملفات تعريف الارتباط ينتقل Clarity إلى الوضع الكامل ويعيّن ملفاته (_clck و_clsk)؛ وتستند هذه المعالجة إلى موافقتك (المادة 6(1)(أ) من RGPD، § 25 TDDDG). ويمكنك سحبها في أي وقت عبر «إعدادات ملفات تعريف الارتباط» في تذييل الصفحة.",
 
     // Section 4
     privacyS4Title: "المعالجون المفوَّضون والأطراف الثالثة",
@@ -2357,14 +2357,14 @@ export const translations = {
     privacyS5Title: "النقل الدولي للبيانات",
     privacyS5Intro: "يتخذ بعض معالجينا المفوَّضين من الولايات المتحدة مقرًا لهم. تخضع نقلات البيانات الشخصية من المنطقة الاقتصادية الأوروبية (EEE) أو المملكة المتحدة إلى الولايات المتحدة لضمانات مناسبة:",
     privacyS5Bullet1: "Resend: النقل مشمول بالبنود التعاقدية القياسية (CCT) المعتمدة من المفوضية الأوروبية بموجب المادة 46(2)(ج) من RGPD. اتفاقية معالجة بيانات Resend متاحة على resend.com/legal/dpa.",
-    privacyS5Bullet2: "تقع Microsoft Clarity (Microsoft Corporation) في الولايات المتحدة، ولا تُحمَّل إلا إذا سمحت بتسجيلات الجلسات. وتُؤمَّن عمليات النقل بالبنود التعاقدية النموذجية (SCCs) بموجب المادة 46 من اللائحة العامة لحماية البيانات (GDPR)؛ كما تشارك Microsoft في إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة. أما Umami فيُستضاف في الاتحاد الأوروبي، فلا يحدث نقل للبيانات.",
+    privacyS5Bullet2: "تقع Microsoft Clarity (Microsoft Corporation) في الولايات المتحدة، وتُحمَّل لجميع الزوار في الوضع بدون ملفات تعريف الارتباط؛ ولا تُعيَّن ملفاتها إلا إذا سمحت بتسجيلات الجلسات. وتُؤمَّن عمليات النقل بالبنود التعاقدية النموذجية (SCCs) بموجب المادة 46 من اللائحة العامة لحماية البيانات (GDPR)؛ كما تشارك Microsoft في إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة. أما Umami فيُستضاف في الاتحاد الأوروبي، فلا يحدث نقل للبيانات.",
     privacyS5Bullet3: "كلا المزوّدين مقرّه في الولايات المتحدة. تستند عمليات النقل إلى البنود التعاقدية النموذجية (SCCs) بموجب المادة 46(2)(ج) من GDPR الواردة في اتفاقيات معالجة البيانات الخاصة بهما، وإلى إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة حيثما كان المزوّد معتمدًا. تُخزَّن ملفات MCP الشخصية في منطقة داخل الاتحاد الأوروبي.",
     privacyS5Closure: "يمكنك طلب نسخة من CCT المعمول بها بإرسال بريد إلكتروني إلى {{email}}.",
 
     // Section 6
     privacyS6Title: "الاحتفاظ بالبيانات",
     privacyS6Para1: "نحتفظ بعنوان بريدك الإلكتروني لمدة 24 شهرًا من تاريخ التقديم، أو حتى إلغاء اشتراكك — أيهما يقع أولًا. بعد هذه المدة، يُحذف عنوان بريدك الإلكتروني نهائيًا من جميع الأنظمة، بما فيها قائمة مزود خدمة البريد الإلكتروني لدينا.",
-    privacyS6Para2: "يخزّن Umami بيانات مجمَّعة لا تحدّد هوية أحد فقط. أما Microsoft Clarity فتخزّن بيانات الجلسات وفق مدة الاحتفاظ المعتادة لديها، إذا سمحت بذلك؛ وعند سحب موافقتك يتوقف التسجيل وتُحذف ملفات تعريف الارتباط الخاصة بـ Clarity من متصفحك.",
+    privacyS6Para2: "يخزّن Umami بيانات مجمَّعة لا تحدّد هوية أحد فقط. أما Microsoft Clarity فتخزّن بيانات الجلسات وفق مدة الاحتفاظ المعتادة لديها؛ ولا تُعيَّن ملفات تعريف الارتباط الخاصة بها إلا إذا سمحت بـ«تسجيلات الجلسات»، وعند سحب موافقتك تُحذف ويعود Clarity إلى الوضع بدون ملفات تعريف الارتباط.",
     privacyS6Para3: "يحتفظ Resend بسجلات البريد الإلكتروني التعاملي لمدة 30 يومًا. تُحتفظ سجلات جهات اتصال الجمهور (عنوان بريدك الإلكتروني وحالة الاشتراك) طالما كان اشتراكك نشطًا، أو حتى تطلب الحذف.",
 
     // Section 7
@@ -2618,17 +2618,17 @@ export const translations = {
     privacyS2Row1_3: "베타 출시 알림, 제품 업데이트 이메일",
     privacyS2Row1_4: "동의(GDPR 제6조 제1항 (a)호)",
     privacyS2Row2_1: "익명 사용 분석",
-    privacyS2Row2_2: "쿠키 없는 분석(Umami), 세션 녹화(Microsoft Clarity, 동의 시에만)",
+    privacyS2Row2_2: "쿠키 없는 분석(Umami), 세션 분석(Microsoft Clarity, 쿠키 없는 모드. 쿠키와 녹화는 동의 시에만)",
     privacyS2Row2_3: "방문 페이지 파악, 사이트 개선",
-    privacyS2Row2_4: "Umami: 정당한 이익(GDPR 제6조 제1항 (f)호), Clarity: 동의(GDPR 제6조 제1항 (a)호) — §3 및 §7 참조",
+    privacyS2Row2_4: "Umami: 정당한 이익(GDPR 제6조 제1항 (f)호), Clarity: 쿠키 없는 모드는 정당한 이익(GDPR 제6조 제1항 (f)호), 쿠키와 녹화는 동의(GDPR 제6조 제1항 (a)호) — §3 및 §7 참조",
     privacyS2Closure: "당사는 이름, 전화번호, 결제 정보 또는 GDPR 제9조에 따른 특수 카테고리 데이터를 수집하지 않습니다. IP 주소는 이 섹션에 설명된 범위에서만 처리합니다.",
 
     // Section 3
     privacyS3Title: "처리의 법적 근거",
     privacyS3Sub1: "동의 — 이메일 주소",
     privacyS3Para1: "이메일을 입력하고 \"대기자 명단 등록\"을 클릭하면 베타 출시 공지 및 제품 업데이트에 대한 명시적 동의를 제공하는 것입니다. 동의는 GDPR 제6조 제1항 (a)호에 따른 법적 근거입니다. 당사가 보내는 이메일의 수신 거부 링크를 클릭하거나 {{email}}로 이메일을 보내 언제든지 동의를 철회할 수 있습니다. 동의 철회는 철회 전 처리의 적법성에 영향을 미치지 않습니다.",
-    privacyS3Sub2: "분석 — 정당한 이익(Umami) 및 동의(Clarity)",
-    privacyS3Para2: "당사는 집계 방식으로 방문자가 사이트를 사용하는 방법을 이해하기 위해 개인정보를 존중하는 쿠키 없는 분석 도구 Umami를 사용합니다. Umami는 쿠키를 설정하지 않으며, GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 집계된 비식별 사용 데이터만 처리합니다. 언제든지 이메일로 이 처리에 이의를 제기하실 수 있습니다. Microsoft Clarity(세션 녹화 및 히트맵)는 다릅니다. 쿠키 대화상자에서 «세션 녹화»를 허용하신 후에만 로드되며, 처리는 귀하의 동의(GDPR 제6조 제1항 (a)호, TDDDG 제25조)에 근거합니다. 동의는 푸터의 «쿠키 설정»을 통해 언제든지 철회하실 수 있습니다.",
+    privacyS3Sub2: "분석 — 정당한 이익(Umami, 쿠키 없는 Clarity) 및 동의(Clarity 쿠키와 녹화)",
+    privacyS3Para2: "당사는 집계 방식으로 방문자가 사이트를 사용하는 방법을 이해하기 위해 개인정보를 존중하는 쿠키 없는 분석 도구 Umami를 사용합니다. Umami는 쿠키를 설정하지 않으며, GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 집계된 비식별 사용 데이터만 처리합니다. 언제든지 이메일로 이 처리에 이의를 제기하실 수 있습니다. Microsoft Clarity(세션 분석 및 히트맵)는 모든 방문자에게 쿠키 없는 모드로 로드됩니다. 쿠키도 지속적인 방문자 ID도 설정하지 않으며, GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 하고, 언제든지 이메일로 이의를 제기하실 수 있습니다. 쿠키 대화상자에서 «세션 녹화»를 허용하신 경우에만 Clarity가 전체 모드로 전환되어 쿠키(_clck, _clsk)를 설정하며, 이는 귀하의 동의(GDPR 제6조 제1항 (a)호, TDDDG 제25조)에 근거합니다. 동의는 푸터의 «쿠키 설정»을 통해 언제든지 철회하실 수 있습니다.",
 
     // Section 4
     privacyS4Title: "데이터 처리자 및 제3자",
@@ -2667,14 +2667,14 @@ export const translations = {
     privacyS5Title: "국제 데이터 이전",
     privacyS5Intro: "일부 처리자는 미국에 위치합니다. 유럽경제지역(EEA) 또는 영국(UK)에서 미국으로의 개인 데이터 이전은 적절한 보호 조치를 따릅니다:",
     privacyS5Bullet1: "Resend: 이전은 GDPR 제46조 제2항 (c)호에 따라 유럽 위원회가 채택한 표준 계약 조항(SCC)으로 보호됩니다. Resend의 데이터 처리 계약은 resend.com/legal/dpa에서 확인하실 수 있습니다.",
-    privacyS5Bullet2: "Microsoft Clarity(Microsoft Corporation)는 미국 기업이며 세션 녹화를 허용하신 경우에만 로드됩니다. 전송은 GDPR 제46조에 따른 표준계약조항(SCC)으로 보호되며, Microsoft는 추가로 EU–미국 데이터 프라이버시 프레임워크에도 참여하고 있습니다. Umami는 EU에서 호스팅되므로 전송이 발생하지 않습니다.",
+    privacyS5Bullet2: "Microsoft Clarity(Microsoft Corporation)는 미국 기업이며 모든 방문자에게 쿠키 없는 모드로 로드되며, 쿠키는 세션 녹화를 허용하신 경우에만 설정됩니다. 전송은 GDPR 제46조에 따른 표준계약조항(SCC)으로 보호되며, Microsoft는 추가로 EU–미국 데이터 프라이버시 프레임워크에도 참여하고 있습니다. Umami는 EU에서 호스팅되므로 전송이 발생하지 않습니다.",
     privacyS5Bullet3: "두 제공업체 모두 미국에 기반을 두고 있습니다. 전송은 데이터 처리 계약에 포함된 GDPR 제46조 제2항 (c)의 표준 계약 조항(SCC)에 근거하며, 제공업체가 인증을 받은 경우 EU–미국 데이터 프라이버시 프레임워크에도 근거합니다. MCP 프로필은 EU 리전에 저장됩니다.",
     privacyS5Closure: "적용 가능한 SCC 사본은 {{email}}로 이메일을 보내 요청하실 수 있습니다.",
 
     // Section 6
     privacyS6Title: "데이터 보존",
     privacyS6Para1: "귀하의 이메일 주소는 제출일로부터 24개월 또는 구독을 취소할 때까지(먼저 도달하는 시점까지) 보존됩니다. 이 기간이 지나면 이메일 서비스 제공업체의 목록을 포함한 모든 시스템에서 이메일 주소가 영구 삭제됩니다.",
-    privacyS6Para2: "Umami는 집계된 비식별 데이터만 저장합니다. Microsoft Clarity는 허용하신 경우에 한하여 표준 보관 기간에 따라 세션 데이터를 저장하며, 동의를 철회하시면 녹화가 중지되고 브라우저에 있는 Clarity 쿠키가 삭제됩니다.",
+    privacyS6Para2: "Umami는 집계된 비식별 데이터만 저장합니다. Microsoft Clarity는 표준 보관 기간에 따라 세션 데이터를 저장합니다. 쿠키는 «세션 녹화»를 허용하신 경우에만 설정되며, 동의를 철회하시면 쿠키가 삭제되고 Clarity는 쿠키 없는 모드로 돌아갑니다.",
     privacyS6Para3: "Resend는 트랜잭션 이메일 로그를 최대 30일간 보존합니다. 잠재 고객 연락처 기록(이메일 주소 및 구독 상태)은 구독이 활성 상태인 동안 또는 삭제를 요청할 때까지 보존됩니다.",
 
     // Section 7

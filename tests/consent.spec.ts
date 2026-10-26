@@ -7,12 +7,12 @@ import { expect, test, type Page } from '@playwright/test'
 
 const DIALOG = '[role="dialog"][aria-labelledby="cookie-dialog-title"]'
 
-/** Requests to the two consent-gated vendors, collected for the whole test. */
+/** Requests to the consent-gated vendor (OneSignal), collected for the whole test. Clarity always loads, cookieless. */
 function trackVendors(page: Page) {
   const hits: string[] = []
   page.on('request', (r) => {
     const u = r.url()
-    if (/clarity\.ms|onesignal\.com/.test(u)) hits.push(u)
+    if (/onesignal\.com/.test(u)) hits.push(u)
   })
   return hits
 }
@@ -24,12 +24,15 @@ const stored = (page: Page) =>
   })
 
 test.describe('cookie dialog', () => {
-  test('first visit: dialog shown, no vendor request, no pq_* storage', async ({ page }) => {
+  test('first visit: dialog shown, Clarity loads cookieless (no _clck), no pq_* storage', async ({ page }) => {
     const hits = trackVendors(page)
+    const clarity = page.waitForRequest(/clarity\.ms\/tag\//)
     await page.goto('/')
     await expect(page.locator(DIALOG)).toBeVisible()
+    await clarity
     await page.waitForTimeout(1500)
     expect(hits).toEqual([])
+    expect((await page.context().cookies()).filter((c) => /^_cl(ck|sk)$/.test(c.name))).toEqual([])
     const keys = await page.evaluate(() => [...Object.keys(localStorage), ...Object.keys(sessionStorage)])
     expect(keys.filter((k) => k.startsWith('pq_') && k !== 'pq_lang')).toEqual([])
   })
@@ -51,7 +54,7 @@ test.describe('cookie dialog', () => {
     expect(hits).toEqual([])
   })
 
-  test('Accept all: loads Clarity, stores a granted record', async ({ page }) => {
+  test('Accept all: Clarity upgrades to full mode, stores a granted record', async ({ page }) => {
     const clarity = page.waitForRequest(/clarity\.ms\/tag\//)
     await page.goto('/')
     await page.locator(DIALOG).getByRole('button', { name: 'Accept all' }).click()
@@ -59,7 +62,7 @@ test.describe('cookie dialog', () => {
     expect(await stored(page)).toMatchObject({ state: 'granted', analytics: true, recordings: true, marketing: true, version: 2 })
   })
 
-  test('Save choices with only Analytics: no Clarity, custom record', async ({ page }) => {
+  test('Save choices with only Analytics: Clarity stays cookieless, custom record', async ({ page }) => {
     const hits = trackVendors(page)
     await page.goto('/')
     const dialog = page.locator(DIALOG)
@@ -67,7 +70,7 @@ test.describe('cookie dialog', () => {
     await dialog.getByRole('button', { name: 'Save choices' }).click()
     expect(await stored(page)).toMatchObject({ state: 'custom', analytics: true, recordings: false, marketing: false })
     await page.waitForTimeout(1500)
-    expect(hits.filter((u) => /clarity\.ms/.test(u))).toEqual([])
+    expect(hits).toEqual([])
   })
 
   test('footer link reopens the dialog with the saved choices, and withdrawal clears pq_* keys', async ({ page }) => {
