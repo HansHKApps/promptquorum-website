@@ -28,24 +28,23 @@ function injectClarity() {
 }
 
 /**
- * Microsoft Clarity records sessions (replay + heatmaps), so it is its own consent
- * category. The tag is not downloaded until the visitor allows "Session recordings";
- * withdrawing stops recording and deletes Clarity's cookies.
+ * Microsoft Clarity always loads, in cookieless mode (consentv2 storage denied): it
+ * counts visits without cookies or persistent IDs, as before the cookie dialog.
+ * Allowing "Session recordings" upgrades it to full mode (cookies + replay);
+ * withdrawing drops back to cookieless and deletes Clarity's cookies.
  */
 export function ClarityLoader() {
   useEffect(() => {
-    let loaded = false
+    injectClarity()
+    window.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' })
+    let upgraded = false
     return onConsentChange(() => {
       if (hasConsent('recordings')) {
-        if (!loaded) {
-          injectClarity()
-          loaded = true
-        }
+        upgraded = true
         window.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' })
-        window.clarity?.('start')
-      } else if (loaded) {
+      } else if (upgraded) {
+        upgraded = false
         window.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' })
-        window.clarity?.('stop')
         clearClarityCookies()
       }
     })
