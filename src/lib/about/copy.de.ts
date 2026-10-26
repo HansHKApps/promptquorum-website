@@ -38,7 +38,7 @@ export const de: AboutCopy = {
       n: 'Welle 3',
       title: 'Anwendungen',
       solved: 'Macht lokale KI nutzbar.',
-      text: 'Darauf aufbauende Apps: mit den eigenen Dokumenten chatten, im Editor programmieren, Agenten ausführen, transkribieren und sprechen, Bilder und Videos generieren, das eigene Zuhause automatisieren. Sie greifen direkt auf das Modell zu oder nutzen Ollama, LM Studio und andere Schnittstellen.',
+      text: 'Darauf aufbauende Apps: mit den eigenen Dokumenten chatten, im Editor programmieren, Agenten ausführen, Sprache transkribieren und ausgeben, Bilder und Videos generieren, das eigene Zuhause automatisieren. Sie greifen direkt auf das Modell zu oder nutzen Ollama, LM Studio und andere Schnittstellen.',
       catch: 'Es gibt Hunderte davon, verstreut über GitHub-READMEs, Discord-Threads und Changelogs, meist auf Englisch und schnell veraltet.',
       product: 'Apps',
     },
@@ -59,7 +59,7 @@ export const de: AboutCopy = {
     ['Die Kosten bleiben unter Ihrer Kontrolle.', 'Sobald ein Modell auf Ihrem eigenen Rechner läuft, gibt es keinen Zähler, keine Abrechnung pro Token und keine Preisänderung, der Sie nicht zugestimmt haben. Kosten entstehen nur durch die Hardware, und Sie entscheiden, wie viel Sie dafür ausgeben.'],
     ['Es kann Ihnen nicht weggenommen werden.', 'Ein Cloud-Modell kann über Nacht geändert, eingeschränkt, im Preis angepasst oder abgeschaltet werden. Ein Modell, das Sie heruntergeladen haben, funktioniert weiter wie gewohnt, solange Sie die Datei behalten.'],
     ['Ihre Daten bleiben bei Ihnen.', 'Wenn App und Modell beide lokal laufen, verlassen Ihre Prompts und Dokumente niemals Ihren Rechner.'],
-    ['Unabhängigkeit ist der Kern der Sache.', 'Lokale KI ist mehr als eine günstigere Alternative. Sie ist eine Möglichkeit, von niemandes Bedingungen, Servern oder Entscheidungen abhängig zu sein.'],
+    ['Unabhängigkeit ist der Kern des Ganzen.', 'Lokale KI ist mehr als eine günstigere Alternative. Sie macht Sie unabhängig von den Bedingungen, Servern und Entscheidungen anderer.'],
   ],
   believeClosing:
     'Unabhängigkeit von fremder Kontrolle ist das Thema, das sich durch die gesamte Seite zieht. Deshalb ist das Verzeichnis neutral, deshalb verlinkt jeder Eintrag zur offiziellen Quelle, und deshalb veröffentlichen wir in neun Sprachen.',
@@ -131,13 +131,13 @@ export const de: AboutCopy = {
   neutralH2: 'Neutral aus Prinzip',
   neutralLead: 'Ein Nachschlagewerk ist nur dann nützlich, wenn man ihm vertrauen kann. Für jede Seite gelten dieselben Regeln:',
   neutral: [
-    ['Redaktionelle Integrität statt Bezahlung.', 'Aufnahme und Rangfolge im Verzeichnis werden verdient. Kein Unternehmen kann sich einen besseren Platz erkaufen.'],
-    ['Dasselbe Format für jeden Eintrag.', 'Ein Projekt, das eine einzelne Person betreibt, bekommt dieselbe Seitenstruktur wie eines mit Venture-Capital-Finanzierung.'],
+    ['Redaktionelle Integrität statt Bezahlung.', 'Aufnahme und Platzierung im Verzeichnis muss man sich verdienen. Kein Unternehmen kann sich einen besseren Platz erkaufen.'],
+    ['Dasselbe Format für jeden Eintrag.', 'Ein Projekt, das von einer einzelnen Person betrieben wird, bekommt dieselbe Seitenstruktur wie eines mit Wagniskapital im Rücken.'],
     ['Immer die offizielle Quelle.', 'Jeder Eintrag verlinkt zur eigenen Website des jeweiligen Tools.'],
     ['Transparenter Bewertungsstatus.', 'Jeder Eintrag hat einen PromptQuorum-Bewertungsbereich. Wurde ein Tool noch nicht bewertet, steht dort „Noch nicht bewertet“ – statt die Lücke zu verstecken.'],
-    ['Angaben der Macher sind gekennzeichnet.', 'Wenn die Macher eines Tools zusätzlichen Kontext hinzufügen, wird das eindeutig als Angabe der Macher gekennzeichnet.'],
+    ['Angaben der Entwickler sind gekennzeichnet.', 'Ergänzt der Entwickler eines Tools weitere Hinweise, wird das eindeutig als Angabe des Entwicklers gekennzeichnet.'],
     ['Korrekturen sind willkommen.', 'Verzeichnisdaten können veralten. Jeder kann Fehler melden, Gründerinnen und Gründer ganz besonders: hello@promptquorum.com.'],
-    ['Aufnahmekriterien sind öffentlich.', 'Wir listen echte Apps mit einer richtigen Website und einem Update innerhalb der letzten sechs Monate, mit Fokus auf die lokale Nutzung von LLMs.'],
+    ['Aufnahmekriterien sind öffentlich.', 'Wir führen nur echte Apps auf, die eine richtige Website haben und in den letzten sechs Monaten aktualisiert wurden – mit Schwerpunkt auf der lokalen Nutzung von LLMs.'],
   ],
   languagesH2: 'Von Anfang an in neun Sprachen',
   languagesLead: 'Lokale KI ist eine globale Bewegung, aber die meisten Informationen darüber gibt es nur auf Englisch. PromptQuorum veröffentlicht in neun Sprachen:',
@@ -181,7 +181,7 @@ export const de: AboutCopy = {
   roadmapLead:
     'Wo KI läuft, verändert sich: von reinem Cloud-Betrieb hin zu einer Mischung aus Cloud, lokal, hybrid und Edge. PromptQuorum wird genau auf diesen Wandel hin gebaut. Auf der Roadmap:',
   roadmap: [
-    ['Verifizierung durch Gründer:', 'Tool-Macher bestätigen und ergänzen ihre eigenen Einträge.'],
+    ['Verifizierung durch Gründer:', 'Die Entwickler der Tools bestätigen und ergänzen ihre Einträge selbst.'],
     ['Hardware-Abgleich auf der gesamten Seite:', 'Ihr Hardware-Profil zeigt die Kompatibilität auf jeder Seite, die ein Tool erwähnt, nicht nur im Verzeichnis.'],
     ['Kuratiertes Video:', 'zu jeder App das beste Walkthrough-Video.'],
     ['Cloud-↔-lokal-Zuordnung:', 'zu jedem Cloud-Dienst die lokale Alternative – und umgekehrt.'],
@@ -189,7 +189,7 @@ export const de: AboutCopy = {
   roadmapClosing:
     'Das Ziel: Wenn jemand – Mensch oder KI – fragt „Wie nutze ich Open-Weight- und Open-Source-KI?“, ist PromptQuorum eine Quelle, auf die man sich verlassen kann.',
   involvedH2: 'Mitmachen',
-  foundersLabel: 'Gründer und Macher:',
+  foundersLabel: 'Gründer und Entwickler:',
   foundersText: 'Ihr Tool eintragen lassen, Ihren Eintrag korrigieren oder Gründerhinweise hinzufügen:',
   pressLabel: 'Presse und Partnerschaften:',
   followLabel: 'Folgen Sie uns:',
