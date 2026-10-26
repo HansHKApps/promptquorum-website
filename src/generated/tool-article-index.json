@@ -34,6 +34,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-prompts-for-fiction-writers",
+        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
+        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-review",
         "title": "LobeHub Review (Formerly LobeChat): Agent Workspace With Desktop Apps and Self-Hosting",
@@ -70,14 +78,6 @@
         "slug": "kruvo-review",
         "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
         "url": "/power-local-llm/kruvo-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "linkwarden-review",
-        "title": "Linkwarden Review: Self-Hosted Bookmarks with Local AI Tagging",
-        "url": "/power-local-llm/linkwarden-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -869,6 +869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-prompts-for-fiction-writers",
+        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
+        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -921,14 +929,6 @@
         "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
         "url": "/power-local-llm/tolaria-review",
         "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-23",
         "tier": "about"
       }
     ],
@@ -7839,6 +7839,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-prompts-for-fiction-writers",
+        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
+        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-creative-writing",
         "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
         "url": "/power-local-llm/best-local-llm-creative-writing",
@@ -7859,14 +7867,6 @@
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
         "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chapper-review",
-        "title": "Chapper Review: AI & LM Studio Client for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/chapper-review",
-        "dateModified": "2026-09-06",
         "tier": "mentioned"
       }
     ],
