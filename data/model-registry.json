@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-18",
+  "last_updated": "2026-10-25",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -1108,10 +1108,10 @@
       "model": "Kimi K3",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Kimi K3.1 Pro",
       "source_url": "https://platform.kimi.ai",
-      "verified_date": "2026-09-14",
+      "verified_date": "2026-10-25",
       "notes": "'Kimi's most capable flagship model to date' per Moonshot's own platform page, 1M-token context, positioned for software engineering / knowledge work / deep reasoning. Supersedes Kimi K2.6 as the general-purpose flagship. Kimi K2.7 Code (coding-specialist) remains a separate current entry, not superseded by K3. CORRECTION (2026-08-27, same-cycle re-check): confirmed via huggingface.co/moonshotai/Kimi-K3 that K3 ships under a proprietary \"Kimi K3 License\", not open-weight -- unlike K2.6/K2.7 Code. It is NOT a valid local/Ollama substitute for K2.6. Do not treat K2.6 as stale in any local-LLM/Ollama context; K3 supersedes it only as the closed hosted-API flagship."
     },
     {
@@ -2260,11 +2260,11 @@
       "model": "Mistral Nemo 12B",
       "type": "open-weight",
       "release_date": "2024-07-18",
-      "status": "current",
+      "status": "deprecated",
       "superseded_by": null,
       "source_url": "https://mistral.ai/news/mistral-nemo/",
-      "verified_date": "2026-09-25",
-      "notes": "Co-developed with NVIDIA, 128K context, Apache 2.0. Deprecated by Mistral effective 2026-10-22 in favor of Qwen3.5-9B per their own deprecation notice — deprecation is in 4 days as of 2026-10-18, still marked current until that date passes."
+      "verified_date": "2026-10-25",
+      "notes": "Co-developed with NVIDIA, 128K context, Apache 2.0. Deprecated by Mistral effective 2026-10-22 in favor of Qwen3.5-9B per their own deprecation notice. Status updated from 'current' to 'deprecated' on 2026-10-25 now that the deprecation date has passed."
     },
     {
       "company": "Microsoft",
@@ -3321,6 +3321,126 @@
       "source_url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
       "verified_date": "2026-10-18",
       "notes": "7B text-to-image generation model. Qwen HF org page (2026-10-18 fetch) shows 'updated 6 days ago'. Also a Qwen-Image-2.1-Turbo (7B, same age) and Qwen-Image-2.1-PE-I2I / PE-T2I (9B, ~28 days old) variants. Distinct from the existing 'Qwen-Image' registry entry (20B, Apache 2.0, Aug 2025) — this is a newer but smaller generation. License and exact benchmarks not verified from the marketing page alone; re-check HF model card before citing performance specs."
+    },
+    {
+      "company": "xAI",
+      "family": "Grok",
+      "model": "Grok Voice 3.0",
+      "type": "closed",
+      "release_date": "2026-10-14",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://x.ai/blog",
+      "verified_date": "2026-10-25",
+      "notes": "xAI's current voice/speech model per x.ai/blog (2026-10-25 fetch via agent). Released 2026-10-14. Supersedes Grok Voice 2.0, which xAI deprecated this same cycle per the Grok 4.7 registry entry's notes."
+    },
+    {
+      "company": "Amazon",
+      "family": "Nova",
+      "model": "Nova 2 Sonic",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "Nova 2.5 Sonic",
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-10-25",
+      "notes": "Amazon's second-generation speech-to-speech model, referenced in the Nova 2 Lite registry entry's notes as part of the current generation. Superseded by Nova 2.5 Sonic per Amazon's own Bedrock model cards (2026-10-25 fetch via agent)."
+    },
+    {
+      "company": "Amazon",
+      "family": "Nova",
+      "model": "Nova 2.5 Sonic",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
+      "verified_date": "2026-10-25",
+      "notes": "Amazon's current speech-to-speech model per Amazon's own Bedrock model cards (2026-10-25 fetch via agent). Adds improved reasoning and tool calling vs Nova 2 Sonic. Release date not published on the page."
+    },
+    {
+      "company": "Moonshot AI",
+      "family": "Kimi",
+      "model": "Kimi K3.1 Pro",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.kimi.ai",
+      "verified_date": "2026-10-25",
+      "notes": "Moonshot AI's current flagship per platform.kimi.ai (2026-10-25 fetch via agent). 1M-token context, vision input, described as superior to Kimi K3 for software engineering and knowledge work. Kimi K3.1 Pro Highspeed (same model, ~2-3x speed) confirmed as a separate API endpoint. Release date not published. Closed/proprietary license — not open-weight, not a valid Ollama substitute for Kimi K2.6 (same caveat as Kimi K3). Supersedes Kimi K3 as the closed hosted-API flagship."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Voxtral TTS 3",
+      "type": "closed",
+      "release_date": "2026-10-20",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.mistral.ai/models/overview",
+      "verified_date": "2026-10-25",
+      "notes": "Mistral's current text-to-speech model (version v3.0, Premier tier), per docs.mistral.ai/models/overview and mistral.ai/news (2026-10-25 fetch via agent). Supports zero-shot synthesis and voice cloning. Release date from news archive. API-only, not locally deployable. Covers 'Voxtral TTS 3' and 'Voxtral 3' site mentions."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Mistral OCR 4.1",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.mistral.ai/models/overview",
+      "verified_date": "2026-10-25",
+      "notes": "Mistral's current OCR model (version v4.1, Premier tier), per docs.mistral.ai/models/overview (2026-10-25 fetch via agent). Structured OCR with bounding boxes. API-only. First OCR entry in this registry — no prior Mistral OCR entry existed; any older 'Mistral OCR' site mentions likely refer to this or an earlier version of the same product."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Shieldstral 1.0",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.mistral.ai/models/overview",
+      "verified_date": "2026-10-25",
+      "notes": "Mistral's safety/content-moderation model (version v1.0), per docs.mistral.ai/models/overview (2026-10-25 fetch via agent). First safety-model entry in this registry for the Mistral family. API-only. No release date published on the page."
+    },
+    {
+      "company": "Cohere",
+      "family": "Command",
+      "model": "Rerank 5",
+      "type": "closed",
+      "release_date": "2026-10-21",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://cohere.com/blog",
+      "verified_date": "2026-10-25",
+      "notes": "Cohere's latest reranking model per cohere.com/blog (2026-10-25 fetch via agent). Released 2026-10-21. 'Passage-level precision' per Cohere's own description. API-only. First Cohere Rerank entry in this registry (prior Cohere coverage was Command/Embed families only)."
+    },
+    {
+      "company": "Cohere",
+      "family": "Command",
+      "model": "Embed 5",
+      "type": "closed",
+      "release_date": "2026-09-30",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://cohere.com/blog",
+      "verified_date": "2026-10-25",
+      "notes": "Cohere's latest embedding model per cohere.com/blog (2026-10-25 fetch via agent). Released 2026-09-30. First Cohere Embed entry in this registry (prior coverage was Command family only). API-only."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemma",
+      "model": "EmbeddingGemma 2",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ai.google.dev/gemma/docs",
+      "verified_date": "2026-10-25",
+      "notes": "Google's multimodal embedding model per ai.google.dev/gemma/docs (2026-10-25 fetch via agent). Accepts text, image, audio, and video input; designed for RAG and semantic search. Part of the Gemma family alongside Gemma 4 and ShieldGemma 2. Note: the ai.google.dev docs portal itself now carries a deprecation banner redirecting to gemma.ai — the model is not deprecated, only the docs URL is changing."
     }
   ],
   "sources": [
