@@ -318,6 +318,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'fluidvoice-review',
   // OpenWhispr review (Voice, Speech & Multimodal, dictation and meeting notes) — 2026-10-24
   'openwhispr-review',
+  // Voicebox review (Voice, Speech & Multimodal, local voice cloning, text-to-speech and dictation) — 2026-10-26
+  'voicebox-review',
   'faster-whisper-review',
   'dograh-review',
   // exo review — 2026-09-12
