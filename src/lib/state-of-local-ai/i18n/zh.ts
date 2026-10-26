@@ -29,6 +29,7 @@ export const zh: SolaStrings = {
   evidenceEnglishNote: '完整证据文件（论断、计算与来源）仅提供英文版。',
   scrollableTable: '可滚动表格',
   citeThisReport: '引用本报告',
+  citePlainLabel: '纯文本',
   aboutThisReport: '关于本报告',
   founderLine: '是 PromptQuorum 的创始人，常驻法兰克福，拥有 30 多年的咨询与综合管理经验。',
   methodPre: '方法、标注、假设和来源见上方的',
@@ -123,6 +124,12 @@ export const zh: SolaStrings = {
   issues: {
     '2026-q4': {
       title: '鸡很少，蛋更少',
+      citeAs:
+        'Kuepper, H. (2026). 鸡很少，蛋更少. 本地 AI 现状, 报告 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/zh/about/state-of-local-ai/2026-q4',
+      citeApa:
+        'Kuepper, H. (2026年10月23日). 鸡很少，蛋更少 (本地 AI 现状, 报告 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/zh/about/state-of-local-ai/2026-q4',
+      citeChicago:
+        'Kuepper, Hans. “鸡很少，蛋更少.” 本地 AI 现状, 报告 01 (Q4 2026). PromptQuorum, 2026年10月23日. https://www.promptquorum.com/zh/about/state-of-local-ai/2026-q4.',
       subtitle: '本地 AI 增长很快，但可用的硬件存量极小，出色的应用更少。',
       summary:
         '能运行好的本地 AI 模型的电脑很少，值得为此折腾的应用更少。九项实测、有来源的数据和论断登记表，展示本地 AI 如今的处境。',

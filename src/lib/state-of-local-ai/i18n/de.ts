@@ -30,6 +30,7 @@ export const de: SolaStrings = {
     'Die vollständige Belegdatei (Behauptungen, Berechnungen, Quellen) liegt nur auf Englisch vor.',
   scrollableTable: 'Scrollbare Tabelle',
   citeThisReport: 'Diesen Bericht zitieren',
+  citePlainLabel: 'Nur Text',
   aboutThisReport: 'Über diesen Bericht',
   founderLine:
     'ist Gründer von PromptQuorum mit Sitz in Frankfurt und verfügt über mehr als 30 Jahre Erfahrung in Beratung und Geschäftsführung.',
@@ -125,6 +126,12 @@ export const de: SolaStrings = {
   issues: {
     '2026-q4': {
       title: 'Wenige Hühner, noch weniger Eier',
+      citeAs:
+        'Kuepper, H. (2026). Wenige Hühner, noch weniger Eier. Der Stand der lokalen KI, Bericht 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/de/about/state-of-local-ai/2026-q4',
+      citeApa:
+        'Kuepper, H. (2026, 23. Oktober). Wenige Hühner, noch weniger Eier (Der Stand der lokalen KI, Bericht 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/de/about/state-of-local-ai/2026-q4',
+      citeChicago:
+        'Kuepper, Hans. „Wenige Hühner, noch weniger Eier.“ Der Stand der lokalen KI, Bericht 01 (Q4 2026). PromptQuorum, 23. Oktober 2026. https://www.promptquorum.com/de/about/state-of-local-ai/2026-q4.',
       subtitle:
         'Lokale KI wächst schnell, doch die nutzbare installierte Hardware-Basis ist winzig. Wirklich gute Anwendungen sind noch dünner gesät.',
       summary:

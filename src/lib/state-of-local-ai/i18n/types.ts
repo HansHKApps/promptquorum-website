@@ -8,6 +8,10 @@ export interface SolaIssueText {
   summary: string
   seoTitle: string
   metaDescription: string
+  /** Citation formats in this language (localized title, series, date and URL); author name and PromptQuorum stay as-is. */
+  citeAs: string
+  citeApa: string
+  citeChicago: string
   /** One entry per key finding, same order as ISSUES[].keyFindings (source IDs are taken from there). */
   keyFindings: string[]
   disclosure: string
@@ -149,6 +153,7 @@ export interface SolaStrings {
   evidenceEnglishNote: string
   scrollableTable: string
   citeThisReport: string
+  citePlainLabel: string
   aboutThisReport: string
   founderLine: string
   /** Rendered as: {methodPre}<a>{methodLink1}</a>{methodMid}<a>{methodLink2}</a>{methodPost} */

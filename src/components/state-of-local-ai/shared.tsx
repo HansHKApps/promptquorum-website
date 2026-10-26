@@ -138,18 +138,12 @@ export function ReuseBox({ issue, lang = 'en' }: { issue: Issue; lang?: Language
 }
 
 export function CiteBox({ issue, lang = 'en' }: { issue: Issue; lang?: Language }) {
-  if (lang !== 'en') {
-    return (
-      <section aria-labelledby="cite-h" className={`${CARD} my-8`}>
-        <h2 id="cite-h" className="!mt-0 !text-xl">{SOLA_STRINGS[lang].citeThisReport}</h2>
-        <p className="!mb-0 text-text-secondary text-base select-all">{issue.citeAs}</p>
-      </section>
-    )
-  }
-  const formats = [['APA', issue.citeApa], ['Chicago', issue.citeChicago], ['Plain text', issue.citeAs]]
+  const t = SOLA_STRINGS[lang]
+  const c = t.issues[issue.slug]
+  const formats = [['APA', c.citeApa], ['Chicago', c.citeChicago], [t.citePlainLabel, c.citeAs]]
   return (
     <section aria-labelledby="cite-h" className={`${CARD} my-8`}>
-      <h2 id="cite-h" className="!mt-0 !text-xl">Cite this report</h2>
+      <h2 id="cite-h" className="!mt-0 !text-xl">{t.citeThisReport}</h2>
       <dl className="space-y-3 !mb-0">
         {formats.map(([name, text]) => (
           <div key={name}>

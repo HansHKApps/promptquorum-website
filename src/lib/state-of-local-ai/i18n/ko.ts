@@ -29,6 +29,7 @@ export const ko: SolaStrings = {
   evidenceEnglishNote: '전체 증거 파일(주장, 계산, 출처)은 영어로만 제공됩니다.',
   scrollableTable: '스크롤 가능한 표',
   citeThisReport: '이 보고서 인용하기',
+  citePlainLabel: '일반 텍스트',
   aboutThisReport: '이 보고서에 대하여',
   founderLine: '는 프랑크푸르트에 기반을 둔 PromptQuorum의 창업자로, 30년 넘게 컨설팅과 경영 일선에서 일해 왔습니다.',
   methodPre: '방법, 표시, 가정, 출처는 위의 ',
@@ -123,6 +124,12 @@ export const ko: SolaStrings = {
   issues: {
     '2026-q4': {
       title: '닭은 몇 마리 안 되고, 달걀은 더 적다',
+      citeAs:
+        'Kuepper, H. (2026). 닭은 몇 마리 안 되고, 달걀은 더 적다. 로컬 AI 현황, 보고서 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/ko/about/state-of-local-ai/2026-q4',
+      citeApa:
+        'Kuepper, H. (2026년 10월 23일). 닭은 몇 마리 안 되고, 달걀은 더 적다 (로컬 AI 현황, 보고서 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/ko/about/state-of-local-ai/2026-q4',
+      citeChicago:
+        'Kuepper, Hans. “닭은 몇 마리 안 되고, 달걀은 더 적다.” 로컬 AI 현황, 보고서 01 (Q4 2026). PromptQuorum, 2026년 10월 23일. https://www.promptquorum.com/ko/about/state-of-local-ai/2026-q4.',
       subtitle:
         '로컬 AI는 빠르게 성장하고 있지만, 실제로 쓸 수 있는 하드웨어 보급 기반은 극히 작습니다. 훌륭한 앱은 그보다 더 드뭅니다.',
       summary:
