@@ -210,6 +210,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'arynwood-mcp':                            'arynwood-mcp',
   'caelum':                                  'caelum',
   'lm-mini':                                 'lm-mini',
+  'laria':                                   'laria',
   'pocketllm-lite':                          'pocketllm-lite',
   'obscurify':                               'obscurify',
   'genva':                                   'genva',
