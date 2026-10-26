@@ -233,6 +233,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'openclient':                              'openclient',
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
+  'lyonesse':                                'lyonesse',
   'open-llm-vtuber':                         'open-llm-vtuber',
   'presenton':                               'presenton',
   'buzz-captions':                           'buzz-captions',

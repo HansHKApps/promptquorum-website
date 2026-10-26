@@ -1009,6 +1009,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "lyonesse": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lyonesse-review",
+    "url": "/power-local-llm/lyonesse-review"
+  },
   "open-llm-vtuber": {
     "cluster": "power-local-llm",
     "urlSlug": "open-llm-vtuber-review",

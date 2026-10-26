@@ -604,6 +604,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localmindai-review',
   // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
   'murmur-review',
+  // Lyonesse review (Voice, Speech & Multimodal, iPhone/iPad/Mac transcription) — 2026-10-26
+  'lyonesse-review',
   'open-llm-vtuber-review',
   'presenton-review',
   // Buzz review (Voice, Speech & Multimodal, free offline Whisper transcription app) - 2026-10-24

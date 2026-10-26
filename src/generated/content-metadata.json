@@ -6179,7 +6179,7 @@
       ]
     },
     "best-local-llm-apps-android-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6206,7 +6206,7 @@
       ]
     },
     "best-local-llm-apps-iphone-2026": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6609,7 +6609,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 8 categories of a local LLM stack: 286 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
+          "title": "The 8 categories of a local LLM stack: 316 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7291,11 +7291,11 @@
       "images": [
         {
           "url": "/images/local-vision-models-llava-ollama-2026-vram-comparison-en.svg",
-          "title": "Local vision model comparison by VRAM and OCR quality: Moondream 2 runs in 2 GB, Qwen3-VL 8B leads document OCR at 6 GB, and Gemma 4 delivers the best general quality from 8 GB (E4B) to 24 GB (26B and 31B) via Ollama."
+          "title": "Local vision models compared by VRAM and OCR quality: Moondream 2 at 2 GB up to Gemma 4 at 24 GB."
         },
         {
           "url": "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-en.svg",
-          "title": "Ollama vision model setup pipeline: install Ollama, pull a vision model such as gemma4:e4b, run it via the CLI with the image path in the prompt or POST to the HTTP API at localhost:11434, and receive text output for OCR, Q&A, or image description."
+          "title": "Ollama vision setup: install, pull gemma4:e4b, run via CLI or API at localhost:11434, receive text."
         }
       ]
     },
@@ -9069,7 +9069,7 @@
       "images": []
     },
     "liquid-apollo-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-10-26",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -10347,7 +10347,7 @@
       "images": []
     },
     "litellm-review": {
-      "dateModified": "2026-09-14",
+      "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-09-14",
       "hasSections": true,
@@ -11030,6 +11030,24 @@
       ],
       "images": []
     },
+    "photoprism-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "whisper-notes-review": {
       "dateModified": "2026-10-18",
       "lastFactChecked": null,
@@ -11103,7 +11121,7 @@
       "images": []
     },
     "memoryai-review": {
-      "dateModified": "2026-10-23",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
       "hasSections": true,
@@ -11157,7 +11175,7 @@
       "images": []
     },
     "castmates-review": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-26",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
       "hasSections": true,
@@ -11247,6 +11265,24 @@
       "images": []
     },
     "coil-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "kruvo-review": {
       "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-10-24",
@@ -11462,10 +11498,424 @@
       ],
       "images": []
     },
+    "lyonesse-review": {
+      "dateModified": "2026-10-26",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-26",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "open-llm-vtuber-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "presenton-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "buzz-captions-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "logseq-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "anarlog-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "searxng-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "linkwarden-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "handy-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "fluidvoice-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "openwhispr-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "tolaria-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "subtitle-edit-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "home-assistant-assist-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ente-photos-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-operator-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "nekoni-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "iimagine-desktop-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "zeno-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "asiden-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ensu-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "kernelai-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "llama-app-review": {
       "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "on-device-llm-review": {
+      "dateModified": "2026-10-26",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-26",
       "hasSections": true,
       "langs": [
         "en",
@@ -11498,7 +11948,79 @@
       ],
       "images": []
     },
+    "chaterminal-review": {
+      "dateModified": "2026-10-26",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-26",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "lm-mini-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "laria-review": {
+      "dateModified": "2026-10-26",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-26",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "compactifai-app-review": {
+      "dateModified": "2026-10-24",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-24",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pocketllm-lite-review": {
       "dateModified": "2026-10-24",
       "lastFactChecked": null,
       "publishDate": "2026-10-24",
@@ -16175,7 +16697,7 @@
       ]
     },
     "best-mini-pc-home-assistant-local-ai": {
-      "dateModified": "2026-09-13",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,
@@ -16256,7 +16778,7 @@
       ]
     },
     "geekom-a9-max-local-ai-review": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -16283,7 +16805,7 @@
       ]
     },
     "beelink-ser8-local-ai-review": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -16310,7 +16832,7 @@
       ]
     },
     "beelink-eq14-local-ai-review": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -16328,7 +16850,7 @@
       "images": []
     },
     "gmktec-g3-plus-local-ai-review": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -16346,7 +16868,7 @@
       "images": [
         {
           "url": "/images/gmktec-g3-plus-spec-comparison-en.svg",
-          "title": "GMKtec G3 Plus vs Beelink EQ14 spec comparison: 32 GB RAM ceiling and one 2.5GbE port on the G3 Plus versus 16 GB and two 2.5GbE ports on the EQ14, both around $180–200."
+          "title": "GMKtec G3 Plus vs Beelink EQ14 spec comparison: 32 GB RAM ceiling and one 2.5GbE port on the G3 Plus versus 16 GB and two 2.5GbE ports on the EQ14."
         },
         {
           "url": "/images/gmktec-g3-plus-model-fit-by-ram-en.svg",
@@ -16355,7 +16877,7 @@
       ]
     },
     "minisforum-um890-pro-local-ai-review": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-10-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -16373,7 +16895,7 @@
       "images": [
         {
           "url": "/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg",
-          "title": "Minisforum UM890 Pro vs Beelink SER8 spec comparison: same Ryzen 8945HS/8845HS + Radeon 780M 12 CU tier, but the UM890 Pro adds a 96 GB RAM ceiling, dual 2.5GbE, Wi-Fi 6E, and an OCuLink PCIe 4.0 x4 eGPU port for about $439–649 vs ~$650."
+          "title": "Minisforum UM890 Pro vs Beelink SER8 spec comparison: same Ryzen 8945HS/8845HS + Radeon 780M 12 CU tier, but the UM890 Pro adds a 96 GB RAM ceiling, dual 2.5GbE, Wi-Fi 6E, and an OCuLink PCIe 4.0 x4 eGPU port."
         },
         {
           "url": "/images/minisforum-um890-pro-local-llm-ram-fit-en.svg",
