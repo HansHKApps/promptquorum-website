@@ -10372,17 +10372,9 @@
         "url": "/power-local-llm/nekoni-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pajdo-review",
-        "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
-        "url": "/power-local-llm/pajdo-review",
-        "dateModified": "2026-10-26",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 1,
     "capped": false
   },
   "IIMAGINE Desktop": {

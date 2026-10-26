@@ -28,7 +28,8 @@ function hasMobilePlatformSupport(ctx: MobilePlatformContext, machine: 'ios' | '
   // confirmed a mobile build exists, so don't penalize a tool for a
   // still-open platforms field by claiming the wrong OS specifically.
   if (!ctx.platforms) return true
-  return ctx.platforms.includes(machine)
+  // The 'ios' machine type covers iPhone and iPad, so an iPadOS-only build counts too.
+  return ctx.platforms.includes(machine) || (machine === 'ios' && ctx.platforms.includes('ipados'))
 }
 
 const STORAGE_KEY = 'pq-directory-machine'

@@ -20,7 +20,7 @@ export const app: ToolRecord = {
   categories: ['speech-to-text', 'document-pdf-chat'],
   interfaces: ['mobile', 'desktop'],
   locality: 'local', // developer: transcription, summaries and Q&A run on the device; policy lists anonymized analytics and crash reports, and iCloud sync of text (see review)
-  platforms: ['ios', 'mac'], // universal app: iPhone, iPad, Mac (macOS 26.0+, Apple silicon recommended), plus an Apple Watch recorder (watchOS 11.0+); visionOS listed by the App Store
+  platforms: ['ios', 'ipados', 'mac', 'watchos'], // universal app: iPhone, iPad, Mac (macOS 26.0+, Apple silicon recommended), plus an Apple Watch recorder (watchOS 11.0+); visionOS listed by the App Store
   worksWith: ['Apple Intelligence', 'Apple Speech', 'NVIDIA Parakeet', 'iCloud', 'Apple Reminders'],
   engine: 'builtin', // Apple Speech or NVIDIA Parakeet for transcription; Apple Intelligence or a downloadable local model for summaries and chat (maker, v2.0.0 notes: model chosen to suit the device)
   license: 'Closed source',

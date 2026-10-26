@@ -95,7 +95,7 @@ const MACHINE_PLATFORMS: Record<MachineType, readonly string[]> = {
   apple: ['mac', 'web'],
   dgpu: ['win', 'linux', 'web'],
   cpu: ['win', 'linux', 'web'],
-  ios: ['ios', 'web'],
+  ios: ['ios', 'ipados', 'watchos', 'web'],
   android: ['android', 'web'],
 }
 

@@ -20,7 +20,7 @@ export const app: ToolRecord = {
   categories: ['general-chat-clients'],
   interfaces: ['mobile'],
   locality: 'hybrid', // on-device models + your own LM Studio/Ollama/Jan/oMLX server + LM Mini Connect remote access + optional cloud APIs, per the App Store description
-  platforms: ['ios', 'mac'], // iPhone and iPad (iOS 16+); listed for Mac (macOS 14+), Apple Watch and Vision too — the listing does not say whether the Mac build is native or the iPad app
+  platforms: ['ios', 'ipados', 'mac'], // iPhone and iPad (iOS 16+); listed for Mac (macOS 14+), Apple Watch and Vision too — the listing does not say whether the Mac build is native or the iPad app
   worksWith: ['LM Studio', 'Ollama', 'Jan', 'oMLX', 'ComfyUI', 'Automatic1111', 'SearXNG', 'OpenAI', 'OpenRouter', 'Mistral', 'DeepSeek', 'Google Gemini'],
   engine: 'both', // downloads and runs models on the phone itself AND connects to external servers; the on-device runtime is not named
   license: 'Closed source', // no public source repository found; the listing states only the Apple standard EULA

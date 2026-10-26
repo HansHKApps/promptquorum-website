@@ -37,6 +37,7 @@ const GROUP_ACCENT: Record<CategoryGroupKey, { wash: string; bar: string; chip: 
   'voice-audio': { wash: 'border-hub-rose-edge bg-gradient-to-b from-hub-rose-tint to-white hover:border-hub-rose', bar: 'bg-hub-rose', chip: 'bg-hub-rose-tint text-hub-rose-ink', avatar: 'bg-hub-rose-tint text-hub-rose-ink' },
   'images-video': { wash: 'border-hub-orchid-edge bg-gradient-to-b from-hub-orchid-tint to-white hover:border-hub-orchid', bar: 'bg-hub-orchid', chip: 'bg-hub-orchid-tint text-hub-orchid-ink', avatar: 'bg-hub-orchid-tint text-hub-orchid-ink' },
   'train-operate': { wash: 'border-hub-amber-edge bg-gradient-to-b from-hub-amber-tint to-white hover:border-hub-amber', bar: 'bg-hub-amber', chip: 'bg-hub-amber-tint text-hub-amber-ink', avatar: 'bg-hub-amber-tint text-hub-amber-ink' },
+  'other-niches': { wash: 'border-hub-blue-edge bg-gradient-to-b from-hub-blue-tint to-white hover:border-hub-blue', bar: 'bg-hub-blue', chip: 'bg-hub-blue-tint text-hub-blue-ink', avatar: 'bg-hub-blue-tint text-hub-blue-ink' },
   'at-the-edge': { wash: 'border-hub-orange-edge bg-gradient-to-b from-hub-orange-tint to-white hover:border-hub-orange', bar: 'bg-hub-orange', chip: 'bg-hub-orange-tint text-hub-orange-ink', avatar: 'bg-hub-orange-tint text-hub-orange-ink' },
 }
 
@@ -61,10 +62,10 @@ const PRICE_BADGE: Record<'free' | 'freemium' | 'paid', string> = {
 
 const MCP_BADGE = 'bg-hub-violet-tint text-hub-violet-ink border-hub-violet-edge'
 
-// Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
+// Platform values (macOS/Windows/Linux/iOS/iPadOS/watchOS/Android/Web) are OS product
 // names — kept identical across locales rather than "translated".
 const PLATFORM_LABEL: Record<string, string> = {
-  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web',
+  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
 }
 
 type ToolArticleEntry = { url: string; tier: 'about' | 'mentioned' }
@@ -285,7 +286,7 @@ export function ToolCard({
               </span>
             ))}
             {app.platforms?.map((p) => (
-              <span key={p} className="rounded-full bg-gray-50 border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-text-secondary">
+              <span key={p} className={p === 'watchos' ? 'rounded-full bg-hub-rose-tint border border-hub-rose-edge px-2 py-0.5 text-[11px] font-semibold text-hub-rose-ink' : 'rounded-full bg-gray-50 border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-text-secondary'}>
                 {PLATFORM_LABEL[p] ?? p}
               </span>
             ))}

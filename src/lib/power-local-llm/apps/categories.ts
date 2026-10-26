@@ -33,6 +33,7 @@ export type CategoryGroupKey =
   | 'images-video'
   | 'train-operate'
   | 'at-the-edge'
+  | 'other-niches'
 
 export type CategorySubKey =
   // Run & Serve
@@ -81,6 +82,8 @@ export type CategorySubKey =
   // At the Edge
   | 'emerging-protocols'
   | 'experimental-concepts'
+  // Other & Niche
+  | 'health-wellness'
 
 export type InterfaceKey = 'desktop' | 'web' | 'cli' | 'plugin' | 'mobile' | 'library'
 
@@ -93,6 +96,7 @@ export const CATEGORY_GROUP_LABEL: Record<CategoryGroupKey, string> = {
   'images-video': 'Images & Video',
   'train-operate': 'Train & Operate',
   'at-the-edge': 'At the Edge',
+  'other-niches': 'Other & Niche',
 }
 
 export const TOTAL_CATEGORY_GROUP_COUNT = Object.keys(CATEGORY_GROUP_LABEL).length
@@ -135,6 +139,7 @@ export const CATEGORY_SUB_LABEL: Record<CategorySubKey, Record<Language, string>
   observability: { en: 'Observability', de: 'Observability', fr: 'Observabilité', ja: 'オブザーバビリティ', zh: '可观测性', es: 'Observabilidad', pt: 'Observabilidade', ar: 'قابلية الملاحظة', ko: '옵저버빌리티' },
   'model-hubs': { en: 'Model hubs', de: 'Modell-Hubs', fr: 'Hubs de modèles', ja: 'モデルハブ', zh: '模型枢纽', es: 'Repositorios de modelos', pt: 'Repositórios de modelos', ar: 'مراكز النماذج', ko: '모델 허브' },
   'emerging-protocols': { en: 'Emerging protocols & open standards', de: 'Neue Protokolle & offene Standards', fr: 'Protocoles émergents et standards ouverts', ja: '新興プロトコル＆オープン標準', zh: '新兴协议与开放标准', es: 'Protocolos emergentes y estándares abiertos', pt: 'Protocolos emergentes e padrões abertos', ar: 'البروتوكولات الناشئة والمعايير المفتوحة', ko: '신흥 프로토콜 및 개방형 표준' },
+  'health-wellness': { en: 'Health & wellness', de: 'Gesundheit & Wellness', fr: 'Santé et bien-être', ja: 'ヘルス＆ウェルネス', zh: '健康与养生', es: 'Salud y bienestar', pt: 'Saúde e bem-estar', ar: 'الصحة والعافية', ko: '건강 및 웰니스' },
   'experimental-concepts': { en: 'Experimental concepts', de: 'Experimentelle Konzepte', fr: 'Concepts expérimentaux', ja: '実験的コンセプト', zh: '实验性概念', es: 'Conceptos experimentales', pt: 'Conceitos experimentais', ar: 'مفاهيم تجريبية', ko: '실험적 개념' },
 }
 
@@ -178,6 +183,7 @@ export const CATEGORY_SUB_GROUP: Record<CategorySubKey, CategoryGroupKey> = {
   'model-hubs': 'train-operate',
   'emerging-protocols': 'at-the-edge',
   'experimental-concepts': 'at-the-edge',
+  'health-wellness': 'other-niches',
 }
 
 export const CATEGORY_GROUPS: { key: CategoryGroupKey; subs: CategorySubKey[] }[] = [
@@ -189,6 +195,7 @@ export const CATEGORY_GROUPS: { key: CategoryGroupKey; subs: CategorySubKey[] }[
   { key: 'images-video', subs: ['image-generation', 'editing-upscaling', 'vision-ocr', 'video-generation', 'avatars-3d'] },
   { key: 'train-operate', subs: ['fine-tuning-lora', 'datasets-synthetic-data', 'evaluation-benchmarking', 'observability', 'model-hubs'] },
   { key: 'at-the-edge', subs: ['emerging-protocols', 'experimental-concepts'] },
+  { key: 'other-niches', subs: ['health-wellness'] },
 ]
 
 export const INTERFACE_LABEL: Record<InterfaceKey, Record<Language, string>> = {

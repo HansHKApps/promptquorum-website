@@ -1,7 +1,7 @@
 // Pajdo Review: Apple Health Companion That Answers on the iPhone
 // Slug: pajdo-review
-// Companion to: castmates-review (same developer), lyonesse-review (same developer), nekoni-review, on-device-ai-translator-review,
-// memoryai-review, best-local-llm-apps-iphone-2026
+// Companion to: castmates-review (same developer), lyonesse-review (same developer), best-local-llm-apps-iphone-2026
+// No competitors section on purpose: the directory has no other app that reads health data (own category: health-wellness).
 // Sources: App Store listing (US/DE/ES/FR/JP/BR storefronts) and iTunes lookup record, the product website (get-pajdo.app), its press page and
 // its privacy policy, all checked 2026-10-26 — no hands-on testing. Storefront prices (Pro monthly / yearly / lifetime): US $7.99/$39.99/$69.99,
 // DE/ES/FR €8,99/€44,99/€79,99, JP ¥1,300/¥6,000/¥11,000, BR R$ 49,90/R$ 249,90/R$ 499,90, KR ₩12,000/₩66,000/₩110,000 (plan labels read from each storefront page).
@@ -70,7 +70,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Privacy and Network Use', anchor: 'privacy' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
-      { label: 'Competitors and Alternatives', anchor: 'vs-alternatives' },
       { label: 'Frequently Asked Questions', anchor: 'faq' },
       { label: 'Verdict', anchor: 'verdict' },
       { label: 'Sources', anchor: 'sources' },
@@ -225,21 +224,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Medical use.** The developer states it is not a medical device and never diagnoses; talk to a doctor about persistent changes.',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: 'Competitors and Alternatives',
-        content: [
-          'The directory lists no other Apple Health app. These are the closest iPhone entries in the same personal-assistant category; none of them reads health data.',
-        ],
-        columns: ['App', 'Platforms', 'Price / license', 'Key difference'],
-        rows: [
-          { 'App': '[Nekoni](/power-local-llm/nekoni-review)', 'Platforms': 'macOS, Linux, iOS, web', 'Price / license': 'Free / MIT', 'Key difference': 'Open-source personal agent on your own computer, chatted with from an iPhone' },
-          { 'App': '[On-Device AI Translator](/power-local-llm/on-device-ai-translator-review)', 'Platforms': 'iOS', 'Price / license': 'Free + in-app purchase / closed source', 'Key difference': 'Closed-source iPhone app that runs translation models on the device' },
-          { 'App': '[MemoryAI](/power-local-llm/memoryai-review)', 'Platforms': 'iOS, Android', 'Price / license': 'Free / closed source', 'Key difference': 'Offline chat with editable memory, not tied to health data' },
-        ],
-        note: 'Competitor details change often; confirm each app\'s current price, license and platforms on its own listing.',
-      },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -270,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Pajdo is a free Apple Health companion that says its question answering runs on the iPhone through Apple Intelligence, with eight moods, charts behind every finding and Pro tools for workout planning. Against that, it is closed source, two weeks old, unrated, requires iOS 26, and the on-device claim cannot be checked. It suits Apple Watch owners who want their numbers explained and accept a young, closed app; readers who want open code can compare [Nekoni](/power-local-llm/nekoni-review), and readers looking for the same developer\'s other work can read the [Lyonesse review](/power-local-llm/lyonesse-review).',
+          'Pajdo is a free Apple Health companion that says its question answering runs on the iPhone through Apple Intelligence, with eight moods, charts behind every finding and Pro tools for workout planning. Against that, it is closed source, two weeks old, unrated, requires iOS 26, and the on-device claim cannot be checked. It suits Apple Watch owners who want their numbers explained and accept a young, closed app; readers looking for the same developer\'s other work can read the [Lyonesse review](/power-local-llm/lyonesse-review).',
       },
       sources: {
         id: 'sources',
@@ -289,7 +273,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lyonesse Review](/power-local-llm/lyonesse-review) — the same developer\'s on-device transcription and document chat app.',
           '[Castmates Review](/power-local-llm/castmates-review) — the same developer\'s offline AI character chat app.',
-          '[MemoryAI Review](/power-local-llm/memoryai-review) — a free offline chat app with editable memory.',
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — the broader iPhone roundup.',
         ],
       },
@@ -385,7 +368,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Datenschutz und Netzwerknutzung', anchor: 'privacy' },
       { label: 'Für wen sich die App eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
-      { label: 'Wettbewerber und Alternativen', anchor: 'vs-alternatives' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
       { label: 'Fazit', anchor: 'verdict' },
       { label: 'Quellen', anchor: 'sources' },
@@ -540,21 +522,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Medizinische Nutzung.** Der Entwickler erklärt, sie sei kein Medizinprodukt und stelle nie Diagnosen; sprechen Sie dauerhafte Veränderungen mit einer Ärztin oder einem Arzt an.',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: 'Wettbewerber und Alternativen',
-        content: [
-          'Das Verzeichnis führt keine weitere Apple-Health-App. Die folgenden Einträge sind die nächstliegenden iPhone-Angebote derselben Kategorie persönlicher Assistenten; keiner davon liest Gesundheitsdaten.',
-        ],
-        columns: ['App', 'Plattformen', 'Preis / Lizenz', 'Hauptunterschied'],
-        rows: [
-          { 'App': '[Nekoni](/de/power-local-llm/nekoni-review)', 'Plattformen': 'macOS, Linux, iOS, Web', 'Preis / Lizenz': 'Kostenlos / MIT', 'Hauptunterschied': 'Quelloffener persönlicher Agent auf dem eigenen Computer, mit dem Sie vom iPhone aus chatten' },
-          { 'App': '[On-Device AI Translator](/de/power-local-llm/on-device-ai-translator-review)', 'Plattformen': 'iOS', 'Preis / Lizenz': 'Kostenlos + In-App-Kauf / nicht quelloffen', 'Hauptunterschied': 'Nicht quelloffene iPhone-App, die Übersetzungsmodelle auf dem Gerät ausführt' },
-          { 'App': '[MemoryAI](/de/power-local-llm/memoryai-review)', 'Plattformen': 'iOS, Android', 'Preis / Lizenz': 'Kostenlos / nicht quelloffen', 'Hauptunterschied': 'Offline-Chat mit editierbarem Gedächtnis, nicht an Gesundheitsdaten gebunden' },
-        ],
-        note: 'Details der Wettbewerber ändern sich oft; prüfen Sie Preis, Lizenz und Plattformen im jeweiligen Eintrag.',
-      },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -585,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Pajdo ist ein kostenloser Apple-Health-Begleiter, der laut Entwickler Fragen über Apple Intelligence auf dem iPhone beantwortet, mit acht Stimmungen, Diagrammen hinter jeder Aussage und Pro-Werkzeugen für die Trainingsplanung. Dagegen steht: Die App ist nicht quelloffen, zwei Wochen alt, noch unbewertet, erfordert iOS 26, und die Aussage zur Ausführung auf dem Gerät lässt sich nicht prüfen. Sie eignet sich für Apple-Watch-Besitzer, die ihre Werte erklärt haben möchten und eine junge, geschlossene App akzeptieren; wer offenen Code möchte, kann [Nekoni](/de/power-local-llm/nekoni-review) vergleichen, und wer die übrigen Apps desselben Entwicklers sucht, findet sie in der [Lyonesse-Rezension](/de/power-local-llm/lyonesse-review).',
+          'Pajdo ist ein kostenloser Apple-Health-Begleiter, der laut Entwickler Fragen über Apple Intelligence auf dem iPhone beantwortet, mit acht Stimmungen, Diagrammen hinter jeder Aussage und Pro-Werkzeugen für die Trainingsplanung. Dagegen steht: Die App ist nicht quelloffen, zwei Wochen alt, noch unbewertet, erfordert iOS 26, und die Aussage zur Ausführung auf dem Gerät lässt sich nicht prüfen. Sie eignet sich für Apple-Watch-Besitzer, die ihre Werte erklärt haben möchten und eine junge, geschlossene App akzeptieren; wer die übrigen Apps desselben Entwicklers sucht, findet sie in der [Lyonesse-Rezension](/de/power-local-llm/lyonesse-review).',
       },
       sources: {
         id: 'sources',
@@ -604,7 +571,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lyonesse-Rezension](/de/power-local-llm/lyonesse-review) — die Transkriptions- und Dokumenten-Chat-App auf dem Gerät vom selben Entwickler.',
           '[Castmates-Rezension](/de/power-local-llm/castmates-review) — die Offline-KI-Charakterchat-App vom selben Entwickler.',
-          '[MemoryAI-Rezension](/de/power-local-llm/memoryai-review) — eine kostenlose Offline-Chat-App mit editierbarem Gedächtnis.',
           '[Die besten lokalen LLM-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — die breitere Übersicht für das iPhone.',
         ],
       },
@@ -668,7 +634,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Privacidad y uso de red', anchor: 'privacy' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
-      { label: 'Competidores y alternativas', anchor: 'vs-alternatives' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
       { label: 'Veredicto', anchor: 'verdict' },
       { label: 'Fuentes', anchor: 'sources' },
@@ -823,21 +788,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Uso médico.** El desarrollador afirma que no es un producto sanitario y que nunca diagnostica; habla con un médico si los cambios persisten.',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: 'Competidores y alternativas',
-        content: [
-          'El directorio no incluye ninguna otra app de Apple Health. Estas son las entradas de iPhone más cercanas de la misma categoría de asistentes personales; ninguna lee datos de salud.',
-        ],
-        columns: ['App', 'Plataformas', 'Precio / licencia', 'Diferencia clave'],
-        rows: [
-          { 'App': '[Nekoni](/es/power-local-llm/nekoni-review)', 'Plataformas': 'macOS, Linux, iOS, web', 'Precio / licencia': 'Gratis / MIT', 'Diferencia clave': 'Agente personal de código abierto en tu propio ordenador, al que chateas desde un iPhone' },
-          { 'App': '[On-Device AI Translator](/es/power-local-llm/on-device-ai-translator-review)', 'Plataformas': 'iOS', 'Precio / licencia': 'Gratis + compra en la app / código cerrado', 'Diferencia clave': 'App de iPhone de código cerrado que ejecuta modelos de traducción en el dispositivo' },
-          { 'App': '[MemoryAI](/es/power-local-llm/memoryai-review)', 'Plataformas': 'iOS, Android', 'Precio / licencia': 'Gratis / código cerrado', 'Diferencia clave': 'Chat sin conexión con memoria editable, sin relación con datos de salud' },
-        ],
-        note: 'Los detalles de los competidores cambian a menudo; confirma el precio, la licencia y las plataformas actuales en la ficha de cada app.',
-      },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -868,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Pajdo es un compañero de Apple Health gratuito que dice ejecutar las respuestas a tus preguntas en el iPhone mediante Apple Intelligence, con ocho estados de ánimo, gráficos detrás de cada hallazgo y herramientas Pro para planificar entrenamientos. En contra: es de código cerrado, tiene dos semanas, no tiene valoraciones, requiere iOS 26 y la afirmación sobre el funcionamiento en el dispositivo no puede comprobarse. Encaja con quienes tienen Apple Watch y quieren que les expliquen sus cifras y aceptan una app joven y cerrada; quien quiera código abierto puede comparar [Nekoni](/es/power-local-llm/nekoni-review), y quien busque el resto del trabajo del mismo desarrollador puede leer la [reseña de Lyonesse](/es/power-local-llm/lyonesse-review).',
+          'Pajdo es un compañero de Apple Health gratuito que dice ejecutar las respuestas a tus preguntas en el iPhone mediante Apple Intelligence, con ocho estados de ánimo, gráficos detrás de cada hallazgo y herramientas Pro para planificar entrenamientos. En contra: es de código cerrado, tiene dos semanas, no tiene valoraciones, requiere iOS 26 y la afirmación sobre el funcionamiento en el dispositivo no puede comprobarse. Encaja con quienes tienen Apple Watch y quieren que les expliquen sus cifras y aceptan una app joven y cerrada; quien busque el resto del trabajo del mismo desarrollador puede leer la [reseña de Lyonesse](/es/power-local-llm/lyonesse-review).',
       },
       sources: {
         id: 'sources',
@@ -887,7 +837,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reseña de Lyonesse](/es/power-local-llm/lyonesse-review) — la app de transcripción en el dispositivo y chat de documentos del mismo desarrollador.',
           '[Reseña de Castmates](/es/power-local-llm/castmates-review) — la app de chat de personajes con IA sin conexión del mismo desarrollador.',
-          '[Reseña de MemoryAI](/es/power-local-llm/memoryai-review) — una app de chat sin conexión gratuita con memoria editable.',
           '[Las mejores apps de LLM local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026) — el resumen más amplio para iPhone.',
         ],
       },
@@ -951,7 +900,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Vie privée et usage du réseau', anchor: 'privacy' },
       { label: 'À qui s\'adresse-t-elle', anchor: 'who-should-use' },
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
-      { label: 'Concurrents et alternatives', anchor: 'vs-alternatives' },
       { label: 'Questions fréquentes', anchor: 'faq' },
       { label: 'Verdict', anchor: 'verdict' },
       { label: 'Sources', anchor: 'sources' },
@@ -1106,21 +1054,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Usage médical.** Le développeur déclare qu\'elle n\'est pas un dispositif médical et ne pose jamais de diagnostic ; parlez à un médecin de tout changement persistant.',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: 'Concurrents et alternatives',
-        content: [
-          'Le répertoire ne liste aucune autre appli Apple Health. Voici les fiches iPhone les plus proches dans la même catégorie d\'assistants personnels ; aucune ne lit de données de santé.',
-        ],
-        columns: ['Appli', 'Plateformes', 'Prix / licence', 'Différence clé'],
-        rows: [
-          { 'Appli': '[Nekoni](/fr/power-local-llm/nekoni-review)', 'Plateformes': 'macOS, Linux, iOS, web', 'Prix / licence': 'Gratuit / MIT', 'Différence clé': 'Agent personnel open source sur votre propre ordinateur, avec lequel vous discutez depuis un iPhone' },
-          { 'Appli': '[On-Device AI Translator](/fr/power-local-llm/on-device-ai-translator-review)', 'Plateformes': 'iOS', 'Prix / licence': 'Gratuit + achat intégré / propriétaire', 'Différence clé': 'Appli iPhone propriétaire qui exécute des modèles de traduction sur l\'appareil' },
-          { 'Appli': '[MemoryAI](/fr/power-local-llm/memoryai-review)', 'Plateformes': 'iOS, Android', 'Prix / licence': 'Gratuit / propriétaire', 'Différence clé': 'Chat hors ligne avec mémoire modifiable, sans lien avec les données de santé' },
-        ],
-        note: 'Les détails des concurrents changent souvent ; vérifiez le prix, la licence et les plateformes actuels sur la fiche de chaque appli.',
-      },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
@@ -1151,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Pajdo est un compagnon Apple Health gratuit qui dit répondre aux questions sur l\'iPhone grâce à Apple Intelligence, avec huit humeurs, des graphiques derrière chaque conclusion et des outils Pro pour planifier ses entraînements. En face : l\'appli est propriétaire, vieille de deux semaines, sans note, exige iOS 26, et l\'affirmation d\'un fonctionnement sur l\'appareil ne peut pas être vérifiée. Elle convient aux propriétaires d\'Apple Watch qui veulent comprendre leurs chiffres et acceptent une appli jeune et fermée ; ceux qui veulent du code ouvert peuvent comparer [Nekoni](/fr/power-local-llm/nekoni-review), et ceux qui cherchent les autres réalisations du même développeur peuvent lire le [test de Lyonesse](/fr/power-local-llm/lyonesse-review).',
+          'Pajdo est un compagnon Apple Health gratuit qui dit répondre aux questions sur l\'iPhone grâce à Apple Intelligence, avec huit humeurs, des graphiques derrière chaque conclusion et des outils Pro pour planifier ses entraînements. En face : l\'appli est propriétaire, vieille de deux semaines, sans note, exige iOS 26, et l\'affirmation d\'un fonctionnement sur l\'appareil ne peut pas être vérifiée. Elle convient aux propriétaires d\'Apple Watch qui veulent comprendre leurs chiffres et acceptent une appli jeune et fermée ; ceux qui cherchent les autres réalisations du même développeur peuvent lire le [test de Lyonesse](/fr/power-local-llm/lyonesse-review).',
       },
       sources: {
         id: 'sources',
@@ -1170,7 +1103,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Test de Lyonesse](/fr/power-local-llm/lyonesse-review) — l\'appli de transcription et de chat de documents sur l\'appareil du même développeur.',
           '[Test de Castmates](/fr/power-local-llm/castmates-review) — l\'appli de chat de personnages IA hors ligne du même développeur.',
-          '[Test de MemoryAI](/fr/power-local-llm/memoryai-review) — une appli de chat hors ligne gratuite avec mémoire modifiable.',
           '[Les meilleures applis de LLM local pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — le panorama plus large pour iPhone.',
         ],
       },
@@ -1234,7 +1166,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'プライバシーとネットワーク利用', anchor: 'privacy' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかったこと', anchor: 'who-should-not-use' },
-      { label: '競合と代替', anchor: 'vs-alternatives' },
       { label: 'よくある質問', anchor: 'faq' },
       { label: '結論', anchor: 'verdict' },
       { label: '情報源', anchor: 'sources' },
@@ -1389,21 +1320,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**医療での利用。** 開発者は、医療機器ではなく診断も行わないと述べています。続く変化があれば医師に相談してください。',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: '競合と代替',
-        content: [
-          'ディレクトリには、ほかにApple Healthアプリはありません。以下は同じパーソナルアシスタントのカテゴリで最も近いiPhone向けの項目ですが、いずれも健康データは読み取りません。',
-        ],
-        columns: ['アプリ', '対応環境', '価格／ライセンス', '主な違い'],
-        rows: [
-          { 'アプリ': '[Nekoni](/ja/power-local-llm/nekoni-review)', '対応環境': 'macOS、Linux、iOS、Web', '価格／ライセンス': '無料／MIT', '主な違い': '自分のコンピューター上で動くオープンソースのパーソナルエージェント。iPhoneからチャットする' },
-          { 'アプリ': '[On-Device AI Translator](/ja/power-local-llm/on-device-ai-translator-review)', '対応環境': 'iOS', '価格／ライセンス': '無料＋アプリ内課金／クローズドソース', '主な違い': '翻訳モデルを端末上で動かすクローズドソースのiPhoneアプリ' },
-          { 'アプリ': '[MemoryAI](/ja/power-local-llm/memoryai-review)', '対応環境': 'iOS、Android', '価格／ライセンス': '無料／クローズドソース', '主な違い': '編集可能なメモリを備えたオフラインチャット。健康データとは無関係' },
-        ],
-        note: '競合の詳細は頻繁に変わります。各アプリの最新の価格、ライセンス、対応環境は、それぞれの掲載情報で確認してください。',
-      },
       faq: {
         id: 'faq',
         title: 'よくある質問',
@@ -1434,7 +1350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'Pajdoは、質問への回答がApple IntelligenceによってiPhone上で動くと説明する無料のApple Healthコンパニオンで、8つのムード、すべての結果の裏にあるグラフ、ワークアウト計画のためのPro機能を備えています。一方で、クローズドソースで、公開から2週間、評価もなく、iOS 26が必要で、端末上で動作するという主張は確認できません。自分の数値を説明してほしく、新しくてクローズドなアプリを受け入れられるApple Watchユーザーに向いています。オープンなコードを求める方は[Nekoni](/ja/power-local-llm/nekoni-review)と比べられます。同じ開発者の別のアプリは[Lyonesseレビュー](/ja/power-local-llm/lyonesse-review)で読めます。',
+          'Pajdoは、質問への回答がApple IntelligenceによってiPhone上で動くと説明する無料のApple Healthコンパニオンで、8つのムード、すべての結果の裏にあるグラフ、ワークアウト計画のためのPro機能を備えています。一方で、クローズドソースで、公開から2週間、評価もなく、iOS 26が必要で、端末上で動作するという主張は確認できません。自分の数値を説明してほしく、新しくてクローズドなアプリを受け入れられるApple Watchユーザーに向いています。同じ開発者の別のアプリは[Lyonesseレビュー](/ja/power-local-llm/lyonesse-review)で読めます。',
       },
       sources: {
         id: 'sources',
@@ -1453,7 +1369,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lyonesseレビュー](/ja/power-local-llm/lyonesse-review) — 同じ開発者による、端末上の文字起こしとドキュメントチャットのアプリ。',
           '[Castmatesレビュー](/ja/power-local-llm/castmates-review) — 同じ開発者による、オフラインのAIキャラクターチャットアプリ。',
-          '[MemoryAIレビュー](/ja/power-local-llm/memoryai-review) — 編集可能なメモリを備えた無料のオフラインチャットアプリ。',
           '[2026年のiPhone向けローカルLLMアプリ ベスト](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone向けのより広い比較。',
         ],
       },
@@ -1517,7 +1432,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Privacidade e uso de rede', anchor: 'privacy' },
       { label: 'Para quem é', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
-      { label: 'Concorrentes e alternativas', anchor: 'vs-alternatives' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
       { label: 'Veredito', anchor: 'verdict' },
       { label: 'Fontes', anchor: 'sources' },
@@ -1672,21 +1586,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Uso médico.** O desenvolvedor afirma que não é um dispositivo médico e que nunca faz diagnósticos; fale com um médico sobre mudanças persistentes.',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: 'Concorrentes e alternativas',
-        content: [
-          'O diretório não lista nenhum outro app do Apple Health. Estas são as entradas de iPhone mais próximas da mesma categoria de assistentes pessoais; nenhuma lê dados de saúde.',
-        ],
-        columns: ['App', 'Plataformas', 'Preço / licença', 'Diferença principal'],
-        rows: [
-          { 'App': '[Nekoni](/pt/power-local-llm/nekoni-review)', 'Plataformas': 'macOS, Linux, iOS, web', 'Preço / licença': 'Grátis / MIT', 'Diferença principal': 'Agente pessoal de código aberto no seu próprio computador, com chat a partir de um iPhone' },
-          { 'App': '[On-Device AI Translator](/pt/power-local-llm/on-device-ai-translator-review)', 'Plataformas': 'iOS', 'Preço / licença': 'Grátis + compra no app / código fechado', 'Diferença principal': 'App de iPhone de código fechado que executa modelos de tradução no aparelho' },
-          { 'App': '[MemoryAI](/pt/power-local-llm/memoryai-review)', 'Plataformas': 'iOS, Android', 'Preço / licença': 'Grátis / código fechado', 'Diferença principal': 'Chat offline com memória editável, sem ligação com dados de saúde' },
-        ],
-        note: 'Os detalhes dos concorrentes mudam com frequência; confirme preço, licença e plataformas atuais na página de cada app.',
-      },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -1717,7 +1616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Pajdo é um companheiro do Apple Health gratuito que diz executar as respostas às suas perguntas no iPhone por meio da Apple Intelligence, com oito humores, gráficos por trás de cada conclusão e ferramentas Pro para planejar treinos. Em contrapartida, é de código fechado, tem duas semanas, não tem avaliações, exige iOS 26 e a afirmação sobre o funcionamento no aparelho não pode ser verificada. Serve para donos de Apple Watch que querem os números explicados e aceitam um app jovem e fechado; quem quer código aberto pode comparar o [Nekoni](/pt/power-local-llm/nekoni-review), e quem procura o outro trabalho do mesmo desenvolvedor pode ler a [análise do Lyonesse](/pt/power-local-llm/lyonesse-review).',
+          'O Pajdo é um companheiro do Apple Health gratuito que diz executar as respostas às suas perguntas no iPhone por meio da Apple Intelligence, com oito humores, gráficos por trás de cada conclusão e ferramentas Pro para planejar treinos. Em contrapartida, é de código fechado, tem duas semanas, não tem avaliações, exige iOS 26 e a afirmação sobre o funcionamento no aparelho não pode ser verificada. Serve para donos de Apple Watch que querem os números explicados e aceitam um app jovem e fechado; quem procura o outro trabalho do mesmo desenvolvedor pode ler a [análise do Lyonesse](/pt/power-local-llm/lyonesse-review).',
       },
       sources: {
         id: 'sources',
@@ -1736,7 +1635,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Lyonesse](/pt/power-local-llm/lyonesse-review) — o app de transcrição no aparelho e chat de documentos do mesmo desenvolvedor.',
           '[Análise do Castmates](/pt/power-local-llm/castmates-review) — o app de chat de personagens com IA offline do mesmo desenvolvedor.',
-          '[Análise do MemoryAI](/pt/power-local-llm/memoryai-review) — um app de chat offline gratuito com memória editável.',
           '[Os melhores apps de LLM local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — o panorama mais amplo para iPhone.',
         ],
       },
@@ -1800,7 +1698,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الخصوصية واستخدام الشبكة', anchor: 'privacy' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
-      { label: 'المنافسون والبدائل', anchor: 'vs-alternatives' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
       { label: 'الخلاصة', anchor: 'verdict' },
       { label: 'المصادر', anchor: 'sources' },
@@ -1955,21 +1852,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الاستخدام الطبي.** يذكر المطوّر أنه ليس جهازًا طبيًا ولا يشخّص أبدًا؛ استشر طبيبًا بشأن أي تغيرات مستمرة.',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: 'المنافسون والبدائل',
-        content: [
-          'لا يسرد الدليل أي تطبيق آخر لـ Apple Health. هذه أقرب مدخلات iPhone في فئة المساعدين الشخصيين نفسها؛ ولا يقرأ أي منها بيانات صحية.',
-        ],
-        columns: ['التطبيق', 'المنصات', 'السعر / الترخيص', 'الفرق الرئيسي'],
-        rows: [
-          { 'التطبيق': '[Nekoni](/ar/power-local-llm/nekoni-review)', 'المنصات': 'macOS وLinux وiOS وويب', 'السعر / الترخيص': 'مجاني / MIT', 'الفرق الرئيسي': 'وكيل شخصي مفتوح المصدر على حاسوبك تدردش معه من iPhone' },
-          { 'التطبيق': '[On-Device AI Translator](/ar/power-local-llm/on-device-ai-translator-review)', 'المنصات': 'iOS', 'السعر / الترخيص': 'مجاني + شراء داخل التطبيق / مغلق المصدر', 'الفرق الرئيسي': 'تطبيق iPhone مغلق المصدر يشغّل نماذج الترجمة على الجهاز' },
-          { 'التطبيق': '[MemoryAI](/ar/power-local-llm/memoryai-review)', 'المنصات': 'iOS وAndroid', 'السعر / الترخيص': 'مجاني / مغلق المصدر', 'الفرق الرئيسي': 'دردشة دون إنترنت بذاكرة قابلة للتعديل، وغير مرتبطة بالبيانات الصحية' },
-        ],
-        note: 'تتغير تفاصيل المنافسين كثيرًا؛ تحقق من السعر والترخيص والمنصات الحالية في صفحة كل تطبيق.',
-      },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -2000,7 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'Pajdo رفيق مجاني لبيانات Apple Health يقول إن الإجابة عن الأسئلة فيه تعمل على iPhone عبر Apple Intelligence، مع ثماني حالات مزاجية ورسوم بيانية خلف كل نتيجة وأدوات Pro لتخطيط التمارين. في المقابل هو مغلق المصدر، وعمره أسبوعان، وبلا تقييمات، ويتطلب iOS 26، ولا يمكن التحقق من ادعاء التشغيل على الجهاز. يناسب مالكي Apple Watch الذين يريدون شرح أرقامهم ويقبلون تطبيقًا حديثًا ومغلقًا؛ ومن يريد شفرة مفتوحة يمكنه مقارنة [Nekoni](/ar/power-local-llm/nekoni-review)، ومن يبحث عن أعمال المطوّر نفسه الأخرى يمكنه قراءة [مراجعة Lyonesse](/ar/power-local-llm/lyonesse-review).',
+          'Pajdo رفيق مجاني لبيانات Apple Health يقول إن الإجابة عن الأسئلة فيه تعمل على iPhone عبر Apple Intelligence، مع ثماني حالات مزاجية ورسوم بيانية خلف كل نتيجة وأدوات Pro لتخطيط التمارين. في المقابل هو مغلق المصدر، وعمره أسبوعان، وبلا تقييمات، ويتطلب iOS 26، ولا يمكن التحقق من ادعاء التشغيل على الجهاز. يناسب مالكي Apple Watch الذين يريدون شرح أرقامهم ويقبلون تطبيقًا حديثًا ومغلقًا؛ ومن يبحث عن أعمال المطوّر نفسه الأخرى يمكنه قراءة [مراجعة Lyonesse](/ar/power-local-llm/lyonesse-review).',
       },
       sources: {
         id: 'sources',
@@ -2019,7 +1901,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Lyonesse](/ar/power-local-llm/lyonesse-review) — تطبيق التفريغ الصوتي والدردشة مع المستندات على الجهاز من المطوّر نفسه.',
           '[مراجعة Castmates](/ar/power-local-llm/castmates-review) — تطبيق دردشة الشخصيات بالذكاء الاصطناعي دون إنترنت من المطوّر نفسه.',
-          '[مراجعة MemoryAI](/ar/power-local-llm/memoryai-review) — تطبيق دردشة مجاني دون إنترنت بذاكرة قابلة للتعديل.',
           '[أفضل تطبيقات LLM المحلية لـ iPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — النظرة الأوسع على iPhone.',
         ],
       },
@@ -2083,7 +1964,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '隐私与网络使用', anchor: 'privacy' },
       { label: '适合谁用', anchor: 'who-should-use' },
       { label: '我们未能核实的内容', anchor: 'who-should-not-use' },
-      { label: '竞品与替代', anchor: 'vs-alternatives' },
       { label: '常见问题', anchor: 'faq' },
       { label: '结论', anchor: 'verdict' },
       { label: '来源', anchor: 'sources' },
@@ -2238,21 +2118,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**医疗用途。** 开发者称它不是医疗器械，也从不做诊断；如有持续的变化，请咨询医生。',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: '竞品与替代',
-        content: [
-          '目录中没有其他 Apple Health 应用。以下是同一个个人助理类别中最接近的 iPhone 条目，它们都不读取健康数据。',
-        ],
-        columns: ['应用', '平台', '价格 / 许可证', '主要区别'],
-        rows: [
-          { '应用': '[Nekoni](/zh/power-local-llm/nekoni-review)', '平台': 'macOS、Linux、iOS、网页', '价格 / 许可证': '免费 / MIT', '主要区别': '运行在你自己电脑上的开源个人智能体，可用 iPhone 与其聊天' },
-          { '应用': '[On-Device AI Translator](/zh/power-local-llm/on-device-ai-translator-review)', '平台': 'iOS', '价格 / 许可证': '免费 + 应用内购买 / 闭源', '主要区别': '在设备上运行翻译模型的闭源 iPhone 应用' },
-          { '应用': '[MemoryAI](/zh/power-local-llm/memoryai-review)', '平台': 'iOS、Android', '价格 / 许可证': '免费 / 闭源', '主要区别': '带可编辑记忆的离线聊天，与健康数据无关' },
-        ],
-        note: '竞品信息变化很快；请在各应用自己的商店页面确认当前价格、许可证和平台。',
-      },
       faq: {
         id: 'faq',
         title: '常见问题',
@@ -2283,7 +2148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Pajdo 是一款免费的 Apple Health 助手，称其问题回答通过 Apple Intelligence 在 iPhone 上运行，有八种心情、每项结论背后的图表，以及用于运动计划的 Pro 工具。但另一方面，它闭源、上架两周、尚无评分、需要 iOS 26，且设备端运行的说法无法核实。它适合想让别人解读自己数据、并能接受一款较新且封闭应用的 Apple Watch 用户；想要开放代码的读者可以对比 [Nekoni](/zh/power-local-llm/nekoni-review)，想了解同一位开发者其他作品的读者可以阅读 [Lyonesse 评测](/zh/power-local-llm/lyonesse-review)。',
+          'Pajdo 是一款免费的 Apple Health 助手，称其问题回答通过 Apple Intelligence 在 iPhone 上运行，有八种心情、每项结论背后的图表，以及用于运动计划的 Pro 工具。但另一方面，它闭源、上架两周、尚无评分、需要 iOS 26，且设备端运行的说法无法核实。它适合想让别人解读自己数据、并能接受一款较新且封闭应用的 Apple Watch 用户；想了解同一位开发者其他作品的读者可以阅读 [Lyonesse 评测](/zh/power-local-llm/lyonesse-review)。',
       },
       sources: {
         id: 'sources',
@@ -2302,7 +2167,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lyonesse 评测](/zh/power-local-llm/lyonesse-review) — 同一位开发者的设备端转写与文档对话应用。',
           '[Castmates 评测](/zh/power-local-llm/castmates-review) — 同一位开发者的离线 AI 角色聊天应用。',
-          '[MemoryAI 评测](/zh/power-local-llm/memoryai-review) — 带可编辑记忆的免费离线聊天应用。',
           '[2026 年 iPhone 本地大模型应用推荐](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 更广泛的 iPhone 应用盘点。',
         ],
       },
@@ -2366,7 +2230,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '개인정보와 네트워크 사용', anchor: 'privacy' },
       { label: '추천 대상', anchor: 'who-should-use' },
       { label: '확인하지 못한 내용', anchor: 'who-should-not-use' },
-      { label: '경쟁 앱과 대안', anchor: 'vs-alternatives' },
       { label: '자주 묻는 질문', anchor: 'faq' },
       { label: '결론', anchor: 'verdict' },
       { label: '출처', anchor: 'sources' },
@@ -2521,21 +2384,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**의료 용도.** 개발자는 의료기기가 아니며 진단하지 않는다고 밝힙니다. 지속적인 변화는 의사와 상담하십시오.',
         ],
       },
-      vsAlternatives: {
-        id: 'vs-alternatives',
-        itemHeadings: true,
-        title: '경쟁 앱과 대안',
-        content: [
-          '디렉터리에는 다른 Apple Health 앱이 없습니다. 다음은 같은 개인 비서 카테고리에서 가장 가까운 iPhone 항목이며, 어느 것도 건강 데이터를 읽지 않습니다.',
-        ],
-        columns: ['앱', '플랫폼', '가격 / 라이선스', '주요 차이'],
-        rows: [
-          { '앱': '[Nekoni](/ko/power-local-llm/nekoni-review)', '플랫폼': 'macOS, Linux, iOS, 웹', '가격 / 라이선스': '무료 / MIT', '주요 차이': '내 컴퓨터에서 실행되는 오픈 소스 개인 에이전트를 iPhone에서 채팅으로 사용' },
-          { '앱': '[On-Device AI Translator](/ko/power-local-llm/on-device-ai-translator-review)', '플랫폼': 'iOS', '가격 / 라이선스': '무료 + 앱 내 구입 / 비공개 소스', '주요 차이': '번역 모델을 기기에서 실행하는 비공개 소스 iPhone 앱' },
-          { '앱': '[MemoryAI](/ko/power-local-llm/memoryai-review)', '플랫폼': 'iOS, Android', '가격 / 라이선스': '무료 / 비공개 소스', '주요 차이': '수정 가능한 메모리를 갖춘 오프라인 채팅, 건강 데이터와는 무관' },
-        ],
-        note: '경쟁 앱의 세부 정보는 자주 바뀝니다. 각 앱의 현재 가격, 라이선스, 플랫폼은 해당 앱의 페이지에서 확인하십시오.',
-      },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
@@ -2566,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'Pajdo는 질문 응답이 Apple Intelligence를 통해 iPhone에서 실행된다고 밝히는 무료 Apple Health 도우미로, 기분 8종, 모든 결과 뒤의 차트, 운동 계획용 Pro 도구를 제공합니다. 반면 비공개 소스이고, 출시 2주째이며, 평점이 없고, iOS 26이 필요하며, 기기 내 실행 주장은 확인할 수 없습니다. 수치를 설명받고 싶고 새롭고 비공개인 앱을 받아들일 수 있는 Apple Watch 사용자에게 적합합니다. 오픈 소스 코드를 원하는 분은 [Nekoni](/ko/power-local-llm/nekoni-review)를 비교해 볼 수 있고, 같은 개발자의 다른 앱이 궁금한 분은 [Lyonesse 리뷰](/ko/power-local-llm/lyonesse-review)를 읽어 보십시오.',
+          'Pajdo는 질문 응답이 Apple Intelligence를 통해 iPhone에서 실행된다고 밝히는 무료 Apple Health 도우미로, 기분 8종, 모든 결과 뒤의 차트, 운동 계획용 Pro 도구를 제공합니다. 반면 비공개 소스이고, 출시 2주째이며, 평점이 없고, iOS 26이 필요하며, 기기 내 실행 주장은 확인할 수 없습니다. 수치를 설명받고 싶고 새롭고 비공개인 앱을 받아들일 수 있는 Apple Watch 사용자에게 적합합니다. 같은 개발자의 다른 앱이 궁금한 분은 [Lyonesse 리뷰](/ko/power-local-llm/lyonesse-review)를 읽어 보십시오.',
       },
       sources: {
         id: 'sources',
@@ -2585,7 +2433,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lyonesse 리뷰](/ko/power-local-llm/lyonesse-review) — 같은 개발자의 기기 내 음성 받아쓰기 및 문서 채팅 앱.',
           '[Castmates 리뷰](/ko/power-local-llm/castmates-review) — 같은 개발자의 오프라인 AI 캐릭터 채팅 앱.',
-          '[MemoryAI 리뷰](/ko/power-local-llm/memoryai-review) — 수정 가능한 메모리를 갖춘 무료 오프라인 채팅 앱.',
           '[2026년 iPhone용 로컬 LLM 앱 추천](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone용 더 넓은 비교.',
         ],
       },

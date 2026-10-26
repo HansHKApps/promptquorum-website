@@ -64,6 +64,9 @@
     --cat-at-the-edge: 24 70% 42%;
     --cat-at-the-edge-tint: 24 85% 96%;
     --cat-at-the-edge-edge: 24 60% 78%;
+    --cat-other-niches: 210 60% 38%;
+    --cat-other-niches-tint: 210 70% 96%;
+    --cat-other-niches-edge: 210 45% 78%;
 
     /* Hub template palette (src/components/hub-template). Solid = tile fill, tint = card fill,
        ink = text on tint, edge = border on tint. Hex on purpose: values are the approved

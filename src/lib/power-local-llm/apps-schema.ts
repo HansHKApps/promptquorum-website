@@ -32,6 +32,8 @@ const OS_LABELS: Record<OSKey, string> = {
   win: 'WINDOWS',
   linux: 'LINUX',
   ios: 'IOS',
+  ipados: 'IPADOS',
+  watchos: 'WATCHOS',
   android: 'ANDROID',
   web: 'WEB',
 }
