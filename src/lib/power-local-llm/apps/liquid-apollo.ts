@@ -36,7 +36,8 @@ export const app: ToolRecord = {
   reviewSlug: 'liquid-apollo-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { modelDownloads: true },
-  lastVerifiedDate: '2026-09-12',
-  lastUpstreamUpdate: '2026-10-03', // App Store version history, read 2026-10-16
-  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/liquid-apollo/id6448019325',
+  pqReview: { date: '2026-10-26', version: '2.2.7', versionSourceUrl: 'https://apps.apple.com/us/app/liquid-apollo/id6448019325' }, // App Store 2.2.7 released 2026-10-03; ratings 4.5 / 662
+  lastVerifiedDate: '2026-10-26',
+  lastUpstreamUpdate: '2026-10-19', // newer of App Store 2.2.7 (2026-10-03) and Google Play "Updated on" (2026-10-19), both read 2026-10-26
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=ai.liquid.chatapp',
 }
