@@ -61,4 +61,59 @@ export const app: ToolRecord = {
   lastVerifiedDate: '2026-10-26',
   lastUpstreamUpdate: '2026-10-23', // App Store version 2.0.7, currentVersionReleaseDate 2026-10-23T20:17:04Z via the iTunes lookup, read 2026-10-26
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/lyonesse-ai-transcript-chat/id6754086711',
+  founderReviewedDate: '2026-10-26', // Josip Markovic (developer) reviewed the finished review draft and supplied corrections plus a maker note by email on 2026-10-26; drives the Founder-reviewed banner + star
+  founder: {
+    who: {
+      en: 'Josip Markovic, developer',
+      de: 'Josip Markovic, Entwickler',
+      es: 'Josip Markovic, desarrollador',
+      fr: 'Josip Markovic, développeur',
+      ja: 'Josip Markovic氏、開発者',
+      pt: 'Josip Markovic, desenvolvedor',
+      ar: 'Josip Markovic، مطوّر التطبيق',
+      zh: 'Josip Markovic,开发者',
+      ko: 'Josip Markovic, 개발자',
+    },
+    providedDate: '2026-10-26',
+    why: {
+      en: 'I built Lyonesse because I wanted meeting notes without a bot joining the call and without my audio going to someone\'s server.',
+      de: 'Ich habe Lyonesse gebaut, weil ich Meeting-Notizen wollte, ohne dass ein Bot dem Gespräch beitritt und ohne dass mein Audio auf dem Server von irgendjemandem landet.',
+      es: 'Creé Lyonesse porque quería notas de reuniones sin que un bot se uniera a la llamada y sin que mi audio fuera al servidor de otra persona.',
+      fr: 'J’ai créé Lyonesse parce que je voulais des notes de réunion sans qu’un bot rejoigne l’appel et sans que mon audio parte sur le serveur de quelqu’un d’autre.',
+      ja: '通話にボットが参加せず、自分の音声が誰かのサーバーに送られない会議メモが欲しくて、Lyonesseを作りました。',
+      pt: 'Criei o Lyonesse porque queria notas de reunião sem um bot entrando na chamada e sem o meu áudio indo para o servidor de alguém.',
+      ar: 'بنيت Lyonesse لأنني أردت محاضر اجتماعات دون أن ينضم بوت إلى المكالمة ودون أن يذهب صوتي إلى خادم أحد.',
+      zh: '我开发 Lyonesse，是因为我想要不需要机器人加入通话、音频也不会传到别人服务器上的会议笔记。',
+      ko: '저는 통화에 봇이 들어오지 않고 제 오디오가 남의 서버로 가지 않는 회의 노트를 원해서 Lyonesse를 만들었습니다.',
+    },
+    fullQuote: {
+      en: [
+        'I built Lyonesse because I wanted meeting notes without a bot joining the call and without my audio going to someone\'s server. Everything runs on the device: Apple\'s speech model or Parakeet for transcription, Apple Intelligence or a small open model for summaries. When I measured it, a 10-minute meeting sent 0.02 MB from Lyonesse against 115.7 MB from Notion\'s meeting notes. Next up are the things users asked for: subfolders, a default note format per folder and one-off AI instructions on a note.',
+      ],
+      de: [
+        'Ich habe Lyonesse gebaut, weil ich Meeting-Notizen wollte, ohne dass ein Bot dem Gespräch beitritt und ohne dass mein Audio auf dem Server von irgendjemandem landet. Alles läuft auf dem Gerät: Apples Sprachmodell oder Parakeet für die Transkription, Apple Intelligence oder ein kleines offenes Modell für die Zusammenfassungen. Als ich es gemessen habe, sendete ein 10-minütiges Meeting 0,02 MB von Lyonesse, gegenüber 115,7 MB bei den Meeting-Notizen von Notion. Als Nächstes folgen die Dinge, die sich Nutzer gewünscht haben: Unterordner, ein Standard-Notizformat pro Ordner und einmalige KI-Anweisungen zu einer Notiz.',
+      ],
+      es: [
+        'Creé Lyonesse porque quería notas de reuniones sin que un bot se uniera a la llamada y sin que mi audio fuera al servidor de otra persona. Todo se ejecuta en el dispositivo: el modelo de voz de Apple o Parakeet para la transcripción, Apple Intelligence o un modelo abierto pequeño para los resúmenes. Cuando lo medí, una reunión de 10 minutos envió 0.02 MB desde Lyonesse frente a 115.7 MB de las notas de reuniones de Notion. Lo próximo son las cosas que pidieron los usuarios: subcarpetas, un formato de nota predeterminado por carpeta e instrucciones de IA puntuales en una nota.',
+      ],
+      fr: [
+        'J’ai créé Lyonesse parce que je voulais des notes de réunion sans qu’un bot rejoigne l’appel et sans que mon audio parte sur le serveur de quelqu’un d’autre. Tout s’exécute sur l’appareil : le modèle vocal d’Apple ou Parakeet pour la transcription, Apple Intelligence ou un petit modèle ouvert pour les résumés. Lors de ma mesure, une réunion de 10 minutes a envoyé 0.02 MB depuis Lyonesse contre 115.7 MB depuis les notes de réunion de Notion. La suite porte sur ce que les utilisateurs ont demandé : des sous-dossiers, un format de note par défaut pour chaque dossier et des instructions IA ponctuelles sur une note.',
+      ],
+      ja: [
+        '通話にボットが参加せず、自分の音声が誰かのサーバーに送られない会議メモが欲しくて、Lyonesseを作りました。すべて端末上で動きます。文字起こしはAppleの音声モデルかParakeet、要約はApple Intelligenceか小さなオープンモデルです。計測したところ、10分間の会議でLyonesseが送信したのは0.02 MB、Notionの議事録機能は115.7 MBでした。次は、ユーザーから要望の多かったサブフォルダ、フォルダごとのデフォルトのメモ形式、メモに対する一回限りのAI指示に取り組みます。',
+      ],
+      pt: [
+        'Criei o Lyonesse porque queria notas de reunião sem um bot entrando na chamada e sem o meu áudio indo para o servidor de alguém. Tudo roda no aparelho: o modelo de fala da Apple ou o Parakeet para a transcrição, a Apple Intelligence ou um modelo aberto pequeno para os resumos. Quando medi, uma reunião de 10 minutos enviou 0.02 MB pelo Lyonesse, contra 115.7 MB pelas notas de reunião do Notion. Os próximos passos são o que os usuários pediram: subpastas, um formato de nota padrão por pasta e instruções de IA pontuais em uma nota.',
+      ],
+      ar: [
+        'بنيت Lyonesse لأنني أردت محاضر اجتماعات دون أن ينضم بوت إلى المكالمة ودون أن يذهب صوتي إلى خادم أحد. كل شيء يعمل على الجهاز: نموذج الكلام من Apple أو Parakeet للتفريغ الصوتي، وApple Intelligence أو نموذج مفتوح صغير للملخصات. وعندما قِستُه، أرسل اجتماع مدته 10 دقائق 0.02 MB من Lyonesse مقابل 115.7 MB من ملاحظات الاجتماعات في Notion. والخطوة التالية هي ما طلبه المستخدمون: مجلدات فرعية، وصيغة ملاحظة افتراضية لكل مجلد، وتعليمات ذكاء اصطناعي لمرة واحدة على ملاحظة.',
+      ],
+      zh: [
+        '我开发 Lyonesse，是因为我想要不需要机器人加入通话、音频也不会传到别人服务器上的会议笔记。一切都在设备上运行：转录用 Apple 的语音模型或 Parakeet，摘要用 Apple Intelligence 或一个小型开放模型。我测量过：一场 10 分钟的会议，Lyonesse 发送了 0.02 MB，而 Notion 的会议笔记发送了 115.7 MB。接下来要做的是用户提出的需求：子文件夹、每个文件夹的默认笔记格式，以及针对单条笔记的一次性 AI 指令。',
+      ],
+      ko: [
+        '저는 통화에 봇이 들어오지 않고 제 오디오가 남의 서버로 가지 않는 회의 노트를 원해서 Lyonesse를 만들었습니다. 모든 작업은 기기에서 실행됩니다. 받아쓰기에는 Apple의 음성 모델 또는 Parakeet을, 요약에는 Apple Intelligence 또는 작은 오픈 모델을 사용합니다. 측정해 보니 10분짜리 회의에서 Lyonesse는 0.02 MB를 전송한 반면 Notion의 회의 노트는 115.7 MB를 전송했습니다. 다음 계획은 사용자 여러분이 요청하신 하위 폴더, 폴더별 기본 노트 형식, 노트별 일회성 AI 지시입니다.',
+      ],
+    },
+  },
 }
