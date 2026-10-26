@@ -703,6 +703,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // PixlStash review (Image & Video Generation) — 2026-10-17
   'pixlstash-review',
   'photoprism-review',
+  'immich-review',
 
   // Whisper Notes review (Voice, Speech & Multimodal) — 2026-10-18
   'whisper-notes-review',

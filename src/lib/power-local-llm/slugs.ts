@@ -408,6 +408,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'pixlstash-review':                        'pixlstash-review',
   'localhosted-review':                      'localhosted-review',
   'photoprism-review':                       'photoprism-review',
+  'immich-review':                           'immich-review',
   'whisper-notes-review':                   'whisper-notes-review',
   'transcriptionsuite-review':              'transcriptionsuite-review',
   'parrot-review':                          'parrot-review',

@@ -1484,6 +1484,11 @@
     "urlSlug": "photoprism-review",
     "url": "/power-local-llm/photoprism-review"
   },
+  "immich": {
+    "cluster": "power-local-llm",
+    "urlSlug": "immich-review",
+    "url": "/power-local-llm/immich-review"
+  },
   "hiwaifu": {
     "cluster": "power-local-llm",
     "urlSlug": "hiwaifu-review",
