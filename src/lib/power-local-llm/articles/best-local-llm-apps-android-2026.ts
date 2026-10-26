@@ -88,6 +88,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)', anchor: '#memoryai' },
+      { label: 'Laria: Paid Local and Cloud Model Assistant (Not Benchmarked)', anchor: '#laria' },
+      { label: 'Mobile LM Server: Local API Server on Your Phone (Not Benchmarked)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM: Simple Offline Chat with Built-in Models (Not Benchmarked)', anchor: '#on-device-llm' },
       { label: 'Android Fragmentation: Storage, RAM, and Background Limits', anchor: '#android-fragmentation' },
       { label: 'Android Share Sheet Integration', anchor: '#share-sheet' },
       { label: 'Sideload and Termux Paths', anchor: '#sideload-paths' },
@@ -109,7 +112,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tensor G5 (Pixel 9 Pro) does not expose its NPU to third-party apps.** All six apps run CPU-only on Pixel 9 Pro, delivering 10–18 tok/sec on Phi-4 Mini — slower than the equivalent Snapdragon 8 Elite result.',
           '**Maid is the F-Droid / de-Googled pick.** No Play Store dependency, no Google account required, and direct GGUF import from the file manager. The best choice for Android users who avoid Google services.',
           '**MemoryAI is the pick for documents, a memory you can edit, or a child using the phone (added after the benchmarks, so not measured here).** It is free and offline, adds a PIN-locked Kid Mode and GGUF import, is closed source, and Google Play lists build 1.0.60.',
-          '**Three more Android apps were added after the benchmarks and are not measured here: [Laria](/power-local-llm/laria-review), [Mobile LM Server](/power-local-llm/chaterminal-review) and [On Device LLM](/power-local-llm/on-device-llm-review).** Laria is a paid app that mixes local models with cloud endpoints, Mobile LM Server runs a local API server and contains ads and in-app purchases, and On Device LLM is a young free app with seven built-in models. All three are closed source and untested by us, so read each review before installing.',
+          '**Laria is the paid pick for local models and cloud endpoints in one app (added after the benchmarks, so not measured here).** It is closed source and costs $4.99 on the US store, and the developer\'s page shows explicit sample content.',
+          '**Mobile LM Server is the pick for an OpenAI- or Ollama-style API on the phone (added after the benchmarks, so not measured here).** It is a free install with ads and in-app purchases, closed source, and its privacy policy and Data safety card differ on location.',
+          '**On Device LLM is a simple free offline chat with seven built-in models (added after the benchmarks, so not measured here).** It is a version 1.0 app with 100+ installs and closed source.',
           '**Android background limits are the biggest usability issue.** Android aggressively kills background processes on most OEM ROMs (especially Samsung, OnePlus, and Xiaomi). Apps doing active inference need to be locked in the recent apps tray or configured in battery optimization settings to avoid mid-generation interruptions.',
           '**Model storage is the second biggest Android issue.** Each GGUF model is 1–8 GB. Android\'s split between internal storage partitions means models must be stored in the app\'s private directory or a specifically configured location — not in "Downloads" for most apps.',
           '**The Android advantage is real: Termux and sideloading unlock tools with no iOS equivalent.** Ollama via Termux is not possible on iPhone. F-Droid apps and ADB sideloading give Android users access to apps that Google Play may not carry.',
@@ -234,6 +239,9 @@ snippetBlocks: [
           '**Any Android, customization-first:** Ollama via Termux + a chat front-end (Alpaca, Open WebUI in Chrome) is the most capable setup. Requires ~30 minutes of terminal work but gives OpenAI-compatible API, tool use, and access to the full Ollama model library.',
           '**De-Googled / privacy phone:** Maid from F-Droid. Works on GrapheneOS, CalyxOS, and other de-Googled builds. No Play Services dependency.',
           '**Documents, a memory you can edit, or a child using the phone:** MemoryAI (added after the benchmarks, not measured here). Free and offline, with a PIN-locked Kid Mode; the stores list 4 GB+ RAM.',
+          '**Local models and cloud endpoints in one paid app:** Laria (added after the benchmarks, not measured here). Read its content and age-rating notes first.',
+          '**A local OpenAI- or Ollama-style API on the phone:** Mobile LM Server (added after the benchmarks, not measured here). Expect ads and in-app purchases.',
+          '**A simple free offline chat with built-in models:** On Device LLM (added after the benchmarks, not measured here). It is a young version 1.0 app.',
           '**8 GB RAM phone:** Any of the six apps with Qwen3 1.7B or SmolLM2 1.7B. PocketPal AI handles model storage most gracefully on constrained devices.',
           '**Samsung Galaxy (any model):** Be aware of Samsung\'s aggressive background kill. Lock the AI app in the recent apps tray and whitelist it in Device Care → Battery → Sleeping apps to prevent mid-inference termination.',
         ],
@@ -452,6 +460,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: 'The details above come from the store listings, the privacy policy and the developer, who reviewed our write-up; we have not timed MemoryAI on our test phones. Full notes: [MemoryAI review](/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria: Paid Local and Cloud Model Assistant (Not Benchmarked)',
+        content:
+          '**Laria is a paid Android assistant that mixes downloadable local models with optional cloud endpoints.** It was added after the main comparison, so it is not in the speed numbers.',
+        items: [
+          '**Models and endpoints:** Downloads local models (Gemma, Granite, Qwen, Phi, SmolLM, Mistral and others, in LiteRT, ONNX and GGUF builds, per the developer) and can also connect to cloud and server endpoints such as OpenAI, Anthropic, Gemini, OpenRouter, Ollama and LM Studio, so not everything stays on the phone.',
+          '**Features:** Chat with image input and voice. The model scores on the developer\'s page come from its own benchmark runs, not ours.',
+          '**Price and update:** Paid install ($4.99 on the US Play store; other storefronts price it locally). Last updated 23 October 2026, 1K+ downloads. No version number is published.',
+          '**Privacy and content:** The developer\'s privacy notice says nothing is collected when a local model is used, but the Play Data safety card also lists location as possibly shared. Closed source. Sample replies on the developer\'s model page include sexually explicit companion-style text, and Play shows a Teen rating.',
+          '**Install path:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the Play listing and the developer\'s pages; we have not opened Laria on our test phones. Full notes: [Laria review](/power-local-llm/laria-review).',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server: Local API Server on Your Phone (Not Benchmarked)',
+        content:
+          '**Mobile LM Server (Play title "Mobile LM Server - Local AI") runs models on the phone and offers an OpenAI- and Ollama-compatible API server.** It was added after the main comparison, so it is not in the speed numbers.',
+        items: [
+          '**Engines and API:** LiteRT-LM and llama.cpp (GGUF) engines, an OpenAI- and Ollama-compatible API server and optional hybrid routing to the cloud, per the listing.',
+          '**Cost and ads:** Free install, but Play labels it "Contains ads" and "In-app purchases"; what the purchases unlock is not documented.',
+          '**Update and reach:** Version 1.1.10, updated 22 October 2026, Android 7.0+, 1K+ downloads, rated 3.8 from 45 ratings.',
+          '**Privacy and licence:** The privacy policy says prompts and replies are never uploaded, but lists launch and model events, crash logs and approximate location for ad serving; the Data safety card says "No data collected" yet lists location as possibly shared. Closed source. "Chaterminal" is only the developer name, unrelated to the GitHub terminal tool of that name.',
+          '**Install path:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the Play listing and the developer\'s privacy policy; we have not opened Mobile LM Server on our test phones. Full notes: [Mobile LM Server review](/power-local-llm/chaterminal-review).',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM: Simple Offline Chat with Built-in Models (Not Benchmarked)',
+        content:
+          '**On Device LLM (Play title "Local LLM", by Feather AI) is a free Android chat app with seven built-in models and an optional local API.** It was added after the main comparison, so it is not in the speed numbers.',
+        items: [
+          '**Models:** Seven built-in models plus a pasted GGUF link; downloads come from Hugging Face by default. The inference engine is not named.',
+          '**Local API:** An optional OpenAI-compatible API on port 11434, off by default and without authentication.',
+          '**Price and update:** Free install, no ads per the description. Version 1.0, updated 11 September 2026, Android 7.0+ (64-bit), 100+ installs.',
+          '**Privacy and licence:** The Play Data safety card says "No data collected", but the privacy policy says Firebase Analytics records anonymous events, and its contact address is a placeholder (SUPPORT@EXAMPLE.COM). Closed source.',
+          '**Install path:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the Play listing and the developer\'s pages; we have not opened On Device LLM on our test phones. Full notes: [On Device LLM review](/power-local-llm/on-device-llm-review).',
           },
         ],
       },
@@ -729,6 +794,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)', anchor: '#memoryai' },
+      { label: 'Laria: kostenpflichtiger Assistent mit lokalen und Cloud-Modellen (nicht gemessen)', anchor: '#laria' },
+      { label: 'Mobile LM Server: lokaler API-Server auf dem Telefon (nicht gemessen)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM: einfacher Offline-Chat mit integrierten Modellen (nicht gemessen)', anchor: '#on-device-llm' },
       { label: 'Android-Fragmentierung: Speicher, RAM und Hintergrundlimits', anchor: '#android-fragmentation' },
       { label: 'Android Share Sheet Integration', anchor: '#share-sheet' },
       { label: 'Sideload- und Termux-Wege', anchor: '#sideload-paths' },
@@ -750,7 +818,9 @@ snippetBlocks: [
           '**Tensor G5 (Pixel 9 Pro) macht die NPU nicht für Drittanbieter-Apps verfügbar.** Alle sechs Apps laufen nur auf der CPU auf dem Pixel 9 Pro, mit 10–18 Token/Sek. auf Phi-4 Mini — langsamer als das äquivalente Snapdragon 8 Elite Ergebnis.',
           '**Maid ist die F-Droid / De-Googled-Wahl.** Keine Play Store-Abhängigkeit, kein Google-Konto erforderlich und direkter GGUF-Import aus dem Dateimanager. Die beste Wahl für Android-Nutzer, die Google-Dienste vermeiden.',
           '**MemoryAI ist die Wahl für Dokumente, ein editierbares Gedächtnis oder ein Kind am Telefon (nach den Benchmarks ergänzt, daher hier nicht gemessen).** Die App ist kostenlos und offline, bringt einen PIN-geschützten Kindermodus und GGUF-Import mit, ist Closed Source, und Google Play listet Build 1.0.60.',
-          '**Drei weitere Android-Apps wurden nach den Benchmarks ergänzt und hier nicht gemessen: [Laria](/de/power-local-llm/laria-review), [Mobile LM Server](/de/power-local-llm/chaterminal-review) und [On Device LLM](/de/power-local-llm/on-device-llm-review).** Laria ist eine kostenpflichtige App, die lokale Modelle mit Cloud-Endpunkten kombiniert, Mobile LM Server betreibt einen lokalen API-Server und enthält Werbung und In-App-Käufe, und On Device LLM ist eine junge, kostenlose App mit sieben integrierten Modellen. Alle drei sind Closed Source und von uns ungetestet; lesen Sie vor der Installation jeweils den Test.',
+          '**Laria ist die kostenpflichtige Wahl für lokale Modelle und Cloud-Endpunkte in einer App (nach den Benchmarks ergänzt, daher hier nicht gemessen).** Sie ist Closed Source, kostet im US-Store 4,99 $, und die Seite des Entwicklers zeigt explizite Beispielinhalte.',
+          '**Mobile LM Server ist die Wahl für eine API im OpenAI- oder Ollama-Stil auf dem Telefon (nach den Benchmarks ergänzt, daher hier nicht gemessen).** Er ist kostenlos installierbar, mit Werbung und In-App-Käufen, Closed Source, und Datenschutzerklärung und Data-Safety-Karte widersprechen sich beim Standort.',
+          '**On Device LLM ist ein einfacher, kostenloser Offline-Chat mit sieben integrierten Modellen (nach den Benchmarks ergänzt, daher hier nicht gemessen).** Die App ist Version 1.0 mit über 100 Installationen und Closed Source.',
           '**Android-Hintergrundlimits sind das größte Usability-Problem.** Android beendet Hintergrundprozesse aggressiv auf den meisten OEM-ROMs (besonders Samsung, OnePlus und Xiaomi). Apps, die aktive Inferenz durchführen, müssen in der Übersicht der aktuellen Apps fixiert oder in den Batterieoptimierungseinstellungen konfiguriert werden, um Unterbrechungen mitten in der Generierung zu vermeiden.',
           '**Modellspeicher ist das zweitgrößte Android-Problem.** Jedes GGUF-Modell ist 1–8 GB groß. Androids Aufteilung zwischen internen Speicherpartitionen bedeutet, dass Modelle im privaten Verzeichnis der App oder an einem speziell konfigurierten Ort gespeichert werden müssen — nicht im "Downloads"-Ordner für die meisten Apps.',
           '**Der Android-Vorteil ist real: Termux und Sideloading ermöglichen Tools ohne iOS-Äquivalent.** Ollama via Termux ist auf dem iPhone nicht möglich. F-Droid-Apps und ADB-Sideloading geben Android-Nutzern Zugang zu Apps, die der Google Play Store möglicherweise nicht anbietet.',
@@ -874,6 +944,9 @@ snippetBlocks: [
           '**Jedes Android, Anpassung an erster Stelle:** Ollama via Termux + ein Chat-Frontend (Alpaca, Open WebUI im Chrome) ist das fähigste Setup. Erfordert ~30 Minuten Terminal-Arbeit, bietet aber OpenAI-kompatiblen API, Tool Use und Zugriff auf die vollständige Ollama-Modellbibliothek.',
           '**De-Googled / Privacy-Telefon:** Maid von F-Droid. Funktioniert auf GrapheneOS, CalyxOS und anderen De-Googled-Builds. Keine Play Services-Abhängigkeit.',
           '**Dokumente, ein editierbares Gedächtnis oder ein Kind am Telefon:** MemoryAI (nach den Benchmarks ergänzt, hier nicht gemessen). Kostenlos und offline, mit PIN-geschütztem Kindermodus; die Stores nennen mindestens 4 GB RAM.',
+          '**Lokale Modelle und Cloud-Endpunkte in einer kostenpflichtigen App:** Laria (nach den Benchmarks ergänzt, hier nicht gemessen). Lesen Sie zuerst die Hinweise zu Inhalten und Altersfreigabe.',
+          '**Eine lokale API im OpenAI- oder Ollama-Stil auf dem Telefon:** Mobile LM Server (nach den Benchmarks ergänzt, hier nicht gemessen). Rechnen Sie mit Werbung und In-App-Käufen.',
+          '**Ein einfacher, kostenloser Offline-Chat mit integrierten Modellen:** On Device LLM (nach den Benchmarks ergänzt, hier nicht gemessen). Es ist eine junge Version-1.0-App.',
           '**8 GB RAM-Telefon:** Jede der sechs Apps mit Qwen3 1,7B oder SmolLM2 1,7B. PocketPal AI handhabt Modellspeicher bei eingeschränkten Geräten am elegantesten.',
           '**Samsung Galaxy (jedes Modell):** Seien Sie sich Samsungs aggressivem Hintergrund-Kill bewusst. Sperren Sie die KI-App in der Übersicht der aktuellen Apps und fügen Sie sie in Gerätewartung → Batterie → Schlafende Apps hinzu, um Unterbrechungen mitten in der Inferenz zu vermeiden.',
         ],
@@ -1092,6 +1165,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: 'Die Angaben stammen aus den Store-Einträgen, der Datenschutzerklärung und vom Entwickler, der unseren Text geprüft hat; MemoryAI wurde von uns nicht auf unseren Testgeräten gemessen. Alle Details: [MemoryAI-Review](/de/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria: kostenpflichtiger Assistent mit lokalen und Cloud-Modellen (nicht gemessen)',
+        content:
+          '**Laria ist ein kostenpflichtiger Android-Assistent, der herunterladbare lokale Modelle mit optionalen Cloud-Endpunkten kombiniert.** Er wurde nach dem Hauptvergleich ergänzt und steht deshalb nicht in den Geschwindigkeitswerten.',
+        items: [
+          '**Modelle und Endpunkte:** Lädt lokale Modelle herunter (laut Entwickler Gemma, Granite, Qwen, Phi, SmolLM, Mistral und weitere, als LiteRT-, ONNX- und GGUF-Builds) und kann sich auch mit Cloud- und Server-Endpunkten wie OpenAI, Anthropic, Gemini, OpenRouter, Ollama und LM Studio verbinden; nicht alles bleibt also auf dem Telefon.',
+          '**Funktionen:** Chat mit Bildeingabe und Sprache. Die Modellbewertungen auf der Seite des Entwicklers stammen aus dessen eigenen Benchmark-Läufen, nicht von uns.',
+          '**Preis und Update:** Kostenpflichtige Installation (4,99 $ im US-Play-Store; andere Länder haben lokale Preise). Zuletzt aktualisiert am 23. Oktober 2026, über 1.000 Downloads. Eine Versionsnummer wird nicht veröffentlicht.',
+          '**Datenschutz und Inhalte:** Laut Datenschutzhinweis des Entwicklers wird bei lokalen Modellen nichts erhoben, die Data-Safety-Karte in Play nennt jedoch den Standort als möglicherweise geteilt. Closed Source. Beispielantworten auf der Modellseite des Entwicklers enthalten sexuell explizite Begleiter-Texte, und Play zeigt eine Altersfreigabe „Teen“.',
+          '**Installation:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem Play-Eintrag und den Seiten des Entwicklers; wir haben Laria nicht auf unseren Testgeräten geöffnet. Alle Details: [Laria-Review](/de/power-local-llm/laria-review).',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server: lokaler API-Server auf dem Telefon (nicht gemessen)',
+        content:
+          '**Mobile LM Server (Play-Titel „Mobile LM Server - Local AI“) führt Modelle auf dem Telefon aus und bietet einen OpenAI- und Ollama-kompatiblen API-Server.** Er wurde nach dem Hauptvergleich ergänzt und steht deshalb nicht in den Geschwindigkeitswerten.',
+        items: [
+          '**Engines und API:** Laut Eintrag LiteRT-LM- und llama.cpp-Engines (GGUF), ein OpenAI- und Ollama-kompatibler API-Server und optionales Hybrid-Routing in die Cloud.',
+          '**Kosten und Werbung:** Kostenlos installierbar, aber Play kennzeichnet ihn mit „Enthält Werbung“ und „In-App-Käufe“; was die Käufe freischalten, ist nicht dokumentiert.',
+          '**Update und Reichweite:** Version 1.1.10, aktualisiert am 22. Oktober 2026, Android 7.0+, über 1.000 Downloads, Bewertung 3,8 aus 45 Bewertungen.',
+          '**Datenschutz und Lizenz:** Die Datenschutzerklärung sagt, Prompts und Antworten würden nie hochgeladen, nennt aber Start- und Modellereignisse, Absturzprotokolle und den ungefähren Standort für die Werbeauslieferung; die Data-Safety-Karte sagt „Keine Daten erhoben“, nennt den Standort aber als möglicherweise geteilt. Closed Source. „Chaterminal“ ist nur der Entwicklername und hat nichts mit dem gleichnamigen GitHub-Terminal-Tool zu tun.',
+          '**Installation:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem Play-Eintrag und der Datenschutzerklärung des Entwicklers; wir haben Mobile LM Server nicht auf unseren Testgeräten geöffnet. Alle Details: [Mobile-LM-Server-Review](/de/power-local-llm/chaterminal-review).',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM: einfacher Offline-Chat mit integrierten Modellen (nicht gemessen)',
+        content:
+          '**On Device LLM (Play-Titel „Local LLM“, von Feather AI) ist eine kostenlose Android-Chat-App mit sieben integrierten Modellen und einer optionalen lokalen API.** Sie wurde nach dem Hauptvergleich ergänzt und steht deshalb nicht in den Geschwindigkeitswerten.',
+        items: [
+          '**Modelle:** Sieben integrierte Modelle plus ein eingefügter GGUF-Link; Downloads kommen standardmäßig von Hugging Face. Die Inferenz-Engine wird nicht genannt.',
+          '**Lokale API:** Eine optionale OpenAI-kompatible API auf Port 11434, standardmäßig aus und ohne Authentifizierung.',
+          '**Preis und Update:** Kostenlos installierbar, laut Beschreibung ohne Werbung. Version 1.0, aktualisiert am 11. September 2026, Android 7.0+ (64 Bit), über 100 Installationen.',
+          '**Datenschutz und Lizenz:** Die Data-Safety-Karte in Play sagt „Keine Daten erhoben“, die Datenschutzerklärung nennt jedoch anonyme Ereignisse über Firebase Analytics, und ihre Kontaktadresse ist ein Platzhalter (SUPPORT@EXAMPLE.COM). Closed Source.',
+          '**Installation:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem Play-Eintrag und den Seiten des Entwicklers; wir haben On Device LLM nicht auf unseren Testgeräten geöffnet. Alle Details: [On-Device-LLM-Review](/de/power-local-llm/on-device-llm-review).',
           },
         ],
       },
@@ -1392,6 +1522,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)', anchor: '#memoryai' },
+      { label: 'Laria : assistant payant avec modèles locaux et cloud (non mesuré)', anchor: '#laria' },
+      { label: 'Mobile LM Server : serveur API local sur votre téléphone (non mesuré)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM : chat hors ligne simple avec modèles intégrés (non mesuré)', anchor: '#on-device-llm' },
       { label: 'Fragmentation Android : Stockage, RAM et limites d\'arrière-plan', anchor: '#android-fragmentation' },
       { label: 'Intégration feuille de partage Android', anchor: '#share-sheet' },
       { label: 'Chemins de sideload et Termux : L\'avantage Android', anchor: '#sideload-paths' },
@@ -1413,7 +1546,9 @@ snippetBlocks: [
           '**Tensor G5 (Pixel 9 Pro) n\'expose pas son NPU aux applications tierces.** Les six applications s\'exécutent en CPU seul sur Pixel 9 Pro, livrant 10–18 tokens/sec sur Phi-4 Mini — plus lent que le résultat Snapdragon 8 Elite équivalent.',
           '**Maid est le choix F-Droid / dé-googlifié.** Pas de dépendance Play Store, pas de compte Google requis et importation GGUF directe depuis le gestionnaire de fichiers. Le meilleur choix pour les utilisateurs Android qui évitent les services Google.',
           '**MemoryAI est le choix pour les documents, une mémoire modifiable ou un enfant qui utilise le téléphone (ajoutée après les benchmarks, donc non mesurée ici).** Elle est gratuite et hors ligne, apporte un Kid Mode protégé par PIN et l\'import GGUF, son code est fermé et Google Play affiche la version 1.0.60.',
-          '**Trois autres applis Android ont été ajoutées après les benchmarks et ne sont pas mesurées ici : [Laria](/fr/power-local-llm/laria-review), [Mobile LM Server](/fr/power-local-llm/chaterminal-review) et [On Device LLM](/fr/power-local-llm/on-device-llm-review).** Laria est payante et associe modèles locaux et points d\'accès cloud, Mobile LM Server exécute un serveur API local et contient des publicités et des achats intégrés, et On Device LLM est une appli récente et gratuite avec sept modèles intégrés. Toutes trois sont à code fermé et non testées par nous : lisez chaque test avant l\'installation.',
+          '**Laria est le choix payant pour réunir modèles locaux et points d\'accès cloud dans une seule appli (ajoutée après les benchmarks, donc non mesurée ici).** Son code est fermé, elle coûte 4,99 $ sur le store américain et la page du développeur montre des exemples de contenu explicite.',
+          '**Mobile LM Server est le choix pour une API de type OpenAI ou Ollama sur le téléphone (ajoutée après les benchmarks, donc non mesurée ici).** L\'installation est gratuite, avec publicités et achats intégrés, le code est fermé, et sa politique de confidentialité et sa fiche Sécurité des données divergent sur la position.',
+          '**On Device LLM est un chat hors ligne simple et gratuit avec sept modèles intégrés (ajouté après les benchmarks, donc non mesuré ici).** C\'est une appli en version 1.0 avec plus de 100 installations, à code fermé.',
           '**Les limites d\'arrière-plan d\'Android sont le plus grand problème d\'utilisabilité.** Android tue agressivement les processus d\'arrière-plan sur la plupart des ROM OEM (particulièrement Samsung, OnePlus et Xiaomi). Les applications effectuant une inférence active doivent être verrouillées dans la barre d\'applications récentes ou configurées dans les paramètres d\'optimisation de batterie pour éviter les interruptions au milieu de la génération.',
           '**Le stockage de modèle est le deuxième plus grand problème Android.** Chaque modèle GGUF fait 1–8 GB. La division d\'Android entre les partitions de stockage interne signifie que les modèles doivent être stockés dans le répertoire privé de l\'application ou à un emplacement spécifiquement configuré — pas dans "Téléchargements" pour la plupart des applications.',
           '**L\'avantage Android est réel : Termux et sideloading déverrouillent des outils sans équivalent iOS.** Ollama via Termux n\'est pas possible sur iPhone. Les applications F-Droid et le sideloading ADB donnent aux utilisateurs Android un accès à des applications que Google Play ne peut pas proposer.',
@@ -1537,6 +1672,9 @@ snippetBlocks: [
           '**N\'importe quel Android, personnalisation en premier :** Ollama via Termux + un frontend de chat (Alpaca, Open WebUI dans Chrome) est la configuration la plus capable. Requiert ~30 minutes de travail terminal mais offre une API compatible OpenAI, utilisation d\'outils et accès à la bibliothèque de modèles Ollama complète.',
           '**Téléphone dé-googlifié / confidentialité :** Maid depuis F-Droid. Fonctionne sur GrapheneOS, CalyxOS et autres builds dé-googlifiés. Pas de dépendance Play Services.',
           '**Documents, mémoire modifiable ou enfant qui utilise le téléphone :** MemoryAI (ajoutée après les benchmarks, non mesurée ici). Gratuite et hors ligne, avec un Kid Mode protégé par PIN ; les stores indiquent 4 Go de RAM minimum.',
+          '**Modèles locaux et points d\'accès cloud dans une appli payante :** Laria (ajoutée après les benchmarks, non mesurée ici). Lisez d\'abord les notes sur le contenu et la classification d\'âge.',
+          '**Une API locale de type OpenAI ou Ollama sur le téléphone :** Mobile LM Server (ajoutée après les benchmarks, non mesurée ici). Prévoyez publicités et achats intégrés.',
+          '**Un chat hors ligne simple et gratuit avec modèles intégrés :** On Device LLM (ajouté après les benchmarks, non mesuré ici). C\'est une jeune appli en version 1.0.',
           '**Téléphone 8 GB RAM :** N\'importe quelle des six applications avec Qwen3 1.7B ou SmolLM2 1.7B. PocketPal AI gère le stockage de modèles le plus élégamment sur les appareils contraints.',
           '**Samsung Galaxy (n\'importe quel modèle) :** Soyez conscient du tueur d\'arrière-plan agressif de Samsung. Verrouillez l\'application IA dans la barre d\'applications récentes et ajoutez-la à Maintenance d\'appareil → Batterie → Applications en veille pour éviter les interruptions au milieu d\'une inférence.',
         ],
@@ -1755,6 +1893,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: 'Les informations ci-dessus proviennent des fiches des stores, de la politique de confidentialité et du développeur, qui a relu notre texte ; nous n\'avons pas chronométré MemoryAI sur nos téléphones de test. Notes complètes : [test de MemoryAI](/fr/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria : assistant payant avec modèles locaux et cloud (non mesuré)',
+        content:
+          '**Laria est un assistant Android payant qui associe des modèles locaux téléchargeables à des points d\'accès cloud optionnels.** Il a été ajouté après la comparaison principale : il ne figure donc pas dans les mesures de vitesse.',
+        items: [
+          '**Modèles et points d\'accès :** télécharge des modèles locaux (Gemma, Granite, Qwen, Phi, SmolLM, Mistral et d\'autres, en versions LiteRT, ONNX et GGUF, selon le développeur) et peut aussi se connecter à des points d\'accès cloud et serveur comme OpenAI, Anthropic, Gemini, OpenRouter, Ollama et LM Studio : tout ne reste donc pas sur le téléphone.',
+          '**Fonctions :** chat avec saisie d\'images et voix. Les scores de modèles de la page du développeur viennent de ses propres benchmarks, pas des nôtres.',
+          '**Prix et mise à jour :** installation payante (4,99 $ sur le Play Store américain ; les autres pays ont un prix local). Dernière mise à jour le 23 octobre 2026, plus de 1 000 téléchargements. Aucun numéro de version n\'est publié.',
+          '**Confidentialité et contenu :** la notice de confidentialité du développeur indique que rien n\'est collecté avec un modèle local, mais la fiche Sécurité des données de Play mentionne aussi la position comme pouvant être partagée. Code fermé. Des exemples de réponses sur la page des modèles du développeur contiennent des textes de compagnon sexuellement explicites, et Play affiche une classification Teen.',
+          '**Installation :** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent de la fiche Play et des pages du développeur ; nous n\'avons pas ouvert Laria sur nos téléphones de test. Notes complètes : [test de Laria](/fr/power-local-llm/laria-review).',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server : serveur API local sur votre téléphone (non mesuré)',
+        content:
+          '**Mobile LM Server (titre Play « Mobile LM Server - Local AI ») exécute des modèles sur le téléphone et propose un serveur API compatible OpenAI et Ollama.** Il a été ajouté après la comparaison principale : il ne figure donc pas dans les mesures de vitesse.',
+        items: [
+          '**Moteurs et API :** moteurs LiteRT-LM et llama.cpp (GGUF), serveur API compatible OpenAI et Ollama et routage hybride optionnel vers le cloud, selon la fiche.',
+          '**Coût et publicité :** installation gratuite, mais Play indique « Contient des annonces » et « Achats intégrés » ; ce que débloquent les achats n\'est pas documenté.',
+          '**Mise à jour et audience :** version 1.1.10, mise à jour le 22 octobre 2026, Android 7.0+, plus de 1 000 téléchargements, note de 3,8 sur 45 avis.',
+          '**Confidentialité et licence :** la politique de confidentialité dit que les prompts et réponses ne sont jamais envoyés, mais cite des événements de lancement et de modèle, des journaux de plantage et la position approximative pour la publicité ; la fiche Sécurité des données dit « Aucune donnée collectée » tout en citant la position comme pouvant être partagée. Code fermé. « Chaterminal » n\'est que le nom du développeur, sans lien avec l\'outil de terminal GitHub du même nom.',
+          '**Installation :** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent de la fiche Play et de la politique de confidentialité du développeur ; nous n\'avons pas ouvert Mobile LM Server sur nos téléphones de test. Notes complètes : [test de Mobile LM Server](/fr/power-local-llm/chaterminal-review).',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM : chat hors ligne simple avec modèles intégrés (non mesuré)',
+        content:
+          '**On Device LLM (titre Play « Local LLM », de Feather AI) est une appli de chat Android gratuite avec sept modèles intégrés et une API locale optionnelle.** Elle a été ajoutée après la comparaison principale : elle ne figure donc pas dans les mesures de vitesse.',
+        items: [
+          '**Modèles :** sept modèles intégrés et un lien GGUF à coller ; les téléchargements viennent de Hugging Face par défaut. Le moteur d\'inférence n\'est pas nommé.',
+          '**API locale :** une API optionnelle compatible OpenAI sur le port 11434, désactivée par défaut et sans authentification.',
+          '**Prix et mise à jour :** installation gratuite, sans publicité selon la description. Version 1.0, mise à jour le 11 septembre 2026, Android 7.0+ (64 bits), plus de 100 installations.',
+          '**Confidentialité et licence :** la fiche Sécurité des données de Play dit « Aucune donnée collectée », mais la politique de confidentialité indique que Firebase Analytics enregistre des événements anonymes, et son adresse de contact est un texte provisoire (SUPPORT@EXAMPLE.COM). Code fermé.',
+          '**Installation :** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent de la fiche Play et des pages du développeur ; nous n\'avons pas ouvert On Device LLM sur nos téléphones de test. Notes complètes : [test d\'On Device LLM](/fr/power-local-llm/on-device-llm-review).',
           },
         ],
       },
@@ -2036,6 +2231,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)', anchor: '#memoryai' },
+      { label: 'Laria:ローカルモデルとクラウドモデルを使える有料アシスタント(未計測)', anchor: '#laria' },
+      { label: 'Mobile LM Server:スマホで動くローカルAPIサーバー(未計測)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM:内蔵モデルで使えるシンプルなオフラインチャット(未計測)', anchor: '#on-device-llm' },
       { label: 'Android の断片化：ストレージ、RAM、バックグラウンド制限', anchor: '#android-fragmentation' },
       { label: 'Android シェアシート統合', anchor: '#share-sheet' },
       { label: 'サイドロードと Termux パス：Android の利点', anchor: '#sideload-paths' },
@@ -2057,7 +2255,9 @@ snippetBlocks: [
           '**Tensor G5（Pixel 9 Pro）はサードパーティアプリに NPU を公開しません。** 6 つすべてのアプリは Pixel 9 Pro 上で CPU のみで実行し、Phi-4 Mini で 10–18 tokens/sec を提供します—同等の Snapdragon 8 Elite 結果より遅いです。',
           '**Maid は F-Droid / 脱 Google 選択肢です。** Play Store 依存なし、Google アカウント不要、ファイルマネージャーから GGUF 直接インポート。Google サービスを避ける Android ユーザーにとって最良の選択肢。',
           '**MemoryAIは、文書、編集できるメモリ、またはお子さまがスマホを使う場合の選択肢です(ベンチマークの後に追加したため、ここでは計測していません)。** 無料でオフライン動作し、PIN付きキッズモードとGGUF取り込みを備えます。クローズドソースで、Google Playには1.0.60が掲載されています。',
-          '**ベンチマークの後にAndroidアプリを3本追加しました。ここでは計測していません:[Laria](/ja/power-local-llm/laria-review)、[Mobile LM Server](/ja/power-local-llm/chaterminal-review)、[On Device LLM](/ja/power-local-llm/on-device-llm-review)。** Lariaはローカルモデルとクラウドエンドポイントを組み合わせる有料アプリ、Mobile LM Serverは端末上でローカルAPIサーバーを動かし、広告とアプリ内課金があります。On Device LLMは7つの内蔵モデルを持つ新しい無料アプリです。3つともクローズドソースで、当サイトでは未テストのため、インストール前に各レビューをお読みください。',
+          '**Lariaは、ローカルモデルとクラウドエンドポイントを1つのアプリで使いたい人向けの有料の選択肢です(ベンチマークの後に追加したため、ここでは計測していません)。** クローズドソースで、米国ストアでは4.99ドル。開発者のページには露骨なサンプルが掲載されています。',
+          '**Mobile LM Serverは、スマホでOpenAIやOllama風のAPIを使いたい人向けの選択肢です(ベンチマークの後に追加したため、ここでは計測していません)。** インストールは無料ですが、広告とアプリ内課金があり、クローズドソースで、プライバシーポリシーとデータセーフティの記載は位置情報について食い違っています。',
+          '**On Device LLMは、7つの内蔵モデルで使えるシンプルな無料のオフラインチャットです(ベンチマークの後に追加したため、ここでは計測していません)。** バージョン1.0で100回以上のインストール、クローズドソースです。',
           '**Android バックグラウンド制限は最大の使いやすさの問題です。** Android はほとんどの OEM ROM（特に Samsung、OnePlus、Xiaomi）上でバックグラウンドプロセスを積極的に終了します。アクティブな推論を行うアプリは最近のアプリトレイにロックするか、バッテリー最適化設定で構成する必要があります。',
           '**モデルストレージは 2 番目に大きい Android の問題です。** 各 GGUF モデルは 1–8 GB です。Android の内部ストレージパーティション間の分割は、モデルをアプリのプライベートディレクトリまたは特別に構成された場所に保存する必要があります—ほとんどのアプリの「ダウンロード」ではありません。',
           '**Android 利点は実です：Termux とサイドローディングは iOS 相当物のないツールをアンロック。** Ollama via Termux は iPhone では不可能です。F-Droid アプリと ADB サイドローディングは Google Play が実行しないアプリへの Android ユーザーアクセスを提供します。',
@@ -2181,6 +2381,9 @@ snippetBlocks: [
           '**任意の Android、カスタマイズ優先：** Ollama via Termux + チャットフロントエンド（Alpaca、Chrome 内 Open WebUI）は最も能力のあるセットアップ。~30 分の端末作業を要求しますが、OpenAI 互換 API、ツール利用、完全 Ollama モデルライブラリアクセス提供。',
           '**脱 Google / プライバシーフォン：** F-Droid から Maid。GrapheneOS、CalyxOS、その他脱 Google ビルドで動作。Play Services 依存なし。',
           '**文書、編集できるメモリ、またはお子さまがスマホを使う場合:** MemoryAI(ベンチマークの後に追加、ここでは未計測)。無料でオフライン動作し、PIN付きキッズモードを備えます。ストアの記載ではRAM 4GB以上です。',
+          '**ローカルモデルとクラウドエンドポイントを1つの有料アプリで:** Laria(ベンチマークの後に追加、ここでは未計測)。先にコンテンツと年齢区分の注意をお読みください。',
+          '**スマホ上のOpenAI・Ollama風ローカルAPI:** Mobile LM Server(ベンチマークの後に追加、ここでは未計測)。広告とアプリ内課金があります。',
+          '**内蔵モデルで使えるシンプルな無料のオフラインチャット:** On Device LLM(ベンチマークの後に追加、ここでは未計測)。バージョン1.0の新しいアプリです。',
           '**8 GB RAM フォン：** Qwen3 1.7B または SmolLM2 1.7B を持つ 6 つのいずれか。PocketPal AI は制約されたデバイス上でモデルストレージを最も優雅に処理。',
           '**Samsung Galaxy（任意のモデル）：** Samsung の積極的なバックグラウンド キルに注意。AI アプリを最近のアプリトレイに固定し、デバイスケア → バッテリー → スリープアプリに追加してしてを回避。',
         ],
@@ -2399,6 +2602,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: '上記はストアの掲載情報、プライバシーポリシー、そして当サイトの記事を確認した開発者の情報に基づいています。MemoryAIを当サイトのテスト端末で計測したわけではありません。詳しくは[MemoryAIレビュー](/ja/power-local-llm/memoryai-review)をご覧ください。',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria:ローカルモデルとクラウドモデルを使える有料アシスタント(未計測)',
+        content:
+          '**Lariaは、ダウンロードできるローカルモデルと任意のクラウドエンドポイントを組み合わせる有料のAndroidアシスタントです。** 主な比較の後に追加したため、速度の数値には含まれていません。',
+        items: [
+          '**モデルとエンドポイント:** ローカルモデルをダウンロードして使います(開発者によればGemma、Granite、Qwen、Phi、SmolLM、Mistralなど。LiteRT、ONNX、GGUF形式)。OpenAI、Anthropic、Gemini、OpenRouter、Ollama、LM Studioなどのクラウド/サーバーのエンドポイントにも接続できるため、すべてが端末内にとどまるわけではありません。',
+          '**機能:** 画像入力と音声に対応したチャット。開発者のページにあるモデルのスコアは、当サイトではなく開発者自身のベンチマークによるものです。',
+          '**価格と更新:** 有料(米国のPlayストアで4.99ドル。他の国ではその国の価格)。最終更新は2026年10月23日、1,000回以上ダウンロード。バージョン番号は公開されていません。',
+          '**プライバシーとコンテンツ:** 開発者のプライバシー通知では、ローカルモデル使用時は何も収集しないとされていますが、Playのデータセーフティには位置情報が共有される可能性があるとも記載されています。クローズドソースです。開発者のモデルページのサンプル返信にはコンパニオン風の性的に露骨な文面が含まれ、Playの年齢区分はTeenです。',
+          '**入手方法:** Google Playストア。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はPlayの掲載情報と開発者のページに基づいています。Lariaを当サイトのテスト端末で開いたわけではありません。詳しくは[Lariaレビュー](/ja/power-local-llm/laria-review)をご覧ください。',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server:スマホで動くローカルAPIサーバー(未計測)',
+        content:
+          '**Mobile LM Server(Playでの名称は「Mobile LM Server - Local AI」)は、端末上でモデルを動かし、OpenAI・Ollama互換のAPIサーバーを提供します。** 主な比較の後に追加したため、速度の数値には含まれていません。',
+        items: [
+          '**エンジンとAPI:** 掲載情報によれば、LiteRT-LMとllama.cpp(GGUF)のエンジン、OpenAI・Ollama互換のAPIサーバー、クラウドへの任意のハイブリッドルーティングを備えます。',
+          '**費用と広告:** インストールは無料ですが、Playでは「広告を含む」「アプリ内課金」と表示されており、課金で何が解放されるかは記載がありません。',
+          '**更新と利用状況:** バージョン1.1.10、2026年10月22日更新、Android 7.0以降、1,000回以上ダウンロード、評価は45件で3.8。',
+          '**プライバシーとライセンス:** プライバシーポリシーではプロンプトと返信はアップロードされないとされていますが、起動・モデルのイベント、クラッシュログ、広告配信のためのおおよその位置情報が挙げられています。データセーフティは「データは収集されません」としつつ、位置情報が共有される可能性も記載しています。クローズドソースです。「Chaterminal」は開発者名にすぎず、同名のGitHubのターミナルツールとは無関係です。',
+          '**入手方法:** Google Playストア。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はPlayの掲載情報と開発者のプライバシーポリシーに基づいています。Mobile LM Serverを当サイトのテスト端末で開いたわけではありません。詳しくは[Mobile LM Serverレビュー](/ja/power-local-llm/chaterminal-review)をご覧ください。',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM:内蔵モデルで使えるシンプルなオフラインチャット(未計測)',
+        content:
+          '**On Device LLM(Playでの名称は「Local LLM」、開発元はFeather AI)は、7つの内蔵モデルと任意のローカルAPIを備えた無料のAndroidチャットアプリです。** 主な比較の後に追加したため、速度の数値には含まれていません。',
+        items: [
+          '**モデル:** 内蔵モデルが7つあり、GGUFのリンクを貼り付けることもできます。ダウンロードは既定でHugging Faceから行われます。推論エンジンは明記されていません。',
+          '**ローカルAPI:** ポート11434のOpenAI互換APIを任意で使えます。既定ではオフで、認証はありません。',
+          '**価格と更新:** インストールは無料で、説明によれば広告なし。バージョン1.0、2026年9月11日更新、Android 7.0以降(64ビット)、100回以上インストール。',
+          '**プライバシーとライセンス:** Playのデータセーフティは「データは収集されません」ですが、プライバシーポリシーではFirebase Analyticsが匿名のイベントを記録するとされ、連絡先のアドレスはプレースホルダー(SUPPORT@EXAMPLE.COM)です。クローズドソースです。',
+          '**入手方法:** Google Playストア。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はPlayの掲載情報と開発者のページに基づいています。On Device LLMを当サイトのテスト端末で開いたわけではありません。詳しくは[On Device LLMレビュー](/ja/power-local-llm/on-device-llm-review)をご覧ください。',
           },
         ],
       },
@@ -2696,6 +2956,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI:带可编辑记忆的离线聊天(未实测)', anchor: '#memoryai' },
+      { label: 'Laria:同时支持本地与云端模型的付费助手(未实测)', anchor: '#laria' },
+      { label: 'Mobile LM Server:手机上的本地 API 服务器(未实测)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM:内置模型的简单离线聊天(未实测)', anchor: '#on-device-llm' },
       { label: '安卓碎片化：存储、RAM 与后台限制', anchor: '#android-fragmentation' },
       { label: '安卓分享菜单集成', anchor: '#share-sheet' },
       { label: '侧载与 Termux 路径', anchor: '#sideload-paths' },
@@ -2717,7 +2980,9 @@ snippetBlocks: [
           '**Tensor G5（Pixel 9 Pro）不向第三方应用开放其 NPU。** 6款应用在 Pixel 9 Pro 上都只能用 CPU 运行，运行 Phi-4 Mini 为10–18 token/秒——比 Snapdragon 8 Elite 上的对应结果更慢。',
           '**Maid 是 F-Droid / 去 Google 化的首选。** 不依赖 Play Store，无需 Google 账户，可从文件管理器直接导入 GGUF。对避开 Google 服务的安卓用户来说是最佳选择。',
           '**MemoryAI 适合文档、可编辑记忆,或孩子使用手机的场景(在基准测试之后加入,因此这里没有实测)。** 它免费且可离线使用,带 PIN 锁定的儿童模式和 GGUF 导入;闭源,Google Play 列出的版本为 1.0.60。',
-          '**基准测试之后又加入了三款 Android 应用,此处未实测:[Laria](/zh/power-local-llm/laria-review)、[Mobile LM Server](/zh/power-local-llm/chaterminal-review) 和 [On Device LLM](/zh/power-local-llm/on-device-llm-review)。** Laria 是付费应用,将本地模型与云端接口结合;Mobile LM Server 在手机上运行本地 API 服务器,含广告和应用内购买;On Device LLM 是一款较新的免费应用,内置七个模型。三者均为闭源,我们也未测试,安装前请先阅读各自的评测。',
+          '**Laria 是想在一款应用里同时使用本地模型和云端接口时的付费选择(在基准测试之后加入,因此这里没有实测)。** 它是闭源的,美国商店定价 4.99 美元,开发者页面上有露骨的示例内容。',
+          '**Mobile LM Server 适合想在手机上使用 OpenAI 或 Ollama 风格 API 的人(在基准测试之后加入,因此这里没有实测)。** 免费安装,但含广告和应用内购买,闭源,隐私政策与数据安全卡片在位置信息上说法不一致。',
+          '**On Device LLM 是一款简单的免费离线聊天应用,内置七个模型(在基准测试之后加入,因此这里没有实测)。** 它是 1.0 版应用,安装量 100+,闭源。',
           '**安卓后台限制是最大的可用性问题。** 在大多数 OEM 定制 ROM 上（尤其是 Samsung、OnePlus 和 Xiaomi），安卓会积极结束后台进程。正在推理的应用需要在最近任务列表中锁定，或在电池优化设置中单独配置，以免生成过程中被中断。',
           '**模型存储是安卓的第二大问题。** 每个 GGUF 模型为1–8 GB。安卓内部存储分区的划分意味着，多数应用的模型必须存放在应用私有目录或特定配置的位置，而不是“下载”文件夹。',
           '**安卓的优势是实实在在的：Termux 和侧载解锁了 iOS 上没有对应物的工具。** Ollama via Termux 无法在 iPhone 上实现。F-Droid 应用和 ADB 侧载让安卓用户能用到 Google Play 可能没有收录的应用。',
@@ -2842,6 +3107,9 @@ snippetBlocks: [
           '**任意安卓手机，定制优先：** Ollama via Termux + 聊天前端（Alpaca，或在 Chrome 中使用 Open WebUI）是功能最强的组合。需要约30分钟的终端操作，但可获得兼容 OpenAI 的 API、工具调用，以及完整的 Ollama 模型库。',
           '**去 Google 化 / 隐私手机：** 从 F-Droid 安装 Maid。可在 GrapheneOS、CalyxOS 及其他去 Google 化的系统上运行，不依赖 Play Services。',
           '**文档、可编辑记忆,或孩子使用手机:** MemoryAI(基准测试之后加入,此处未实测)。免费、可离线,带 PIN 锁定的儿童模式;应用商店标注需要 4 GB 以上内存。',
+          '**一款付费应用里同时有本地模型和云端接口:** Laria(基准测试之后加入,此处未实测)。请先阅读其内容和年龄分级说明。',
+          '**手机上的 OpenAI 或 Ollama 风格本地 API:** Mobile LM Server(基准测试之后加入,此处未实测)。会有广告和应用内购买。',
+          '**内置模型的简单免费离线聊天:** On Device LLM(基准测试之后加入,此处未实测)。这是一款较新的 1.0 版应用。',
           '**8 GB RAM 手机：** 6款应用中的任何一款，搭配 Qwen3 1.7B 或 SmolLM2 1.7B。在内存受限的设备上，PocketPal AI 的模型存储处理最为妥帖。',
           '**Samsung Galaxy（任何型号）：** 请留意 Samsung 激进的后台查杀。把 AI 应用锁定在最近任务列表中，并在“设备维护 → 电池 → 休眠应用”中将其加入白名单，避免推理中途被终止。',
         ],
@@ -3060,6 +3328,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: '以上信息来自应用商店页面、隐私政策以及审阅过我们文章的开发者;我们没有在自己的测试手机上对 MemoryAI 计时。完整说明见[MemoryAI 评测](/zh/power-local-llm/memoryai-review)。',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria:同时支持本地与云端模型的付费助手(未实测)',
+        content:
+          '**Laria 是一款付费的 Android 助手,将可下载的本地模型与可选的云端接口结合在一起。** 它是在主要对比之后加入的,因此不在速度数据中。',
+        items: [
+          '**模型与接口:** 可下载本地模型(据开发者称包括 Gemma、Granite、Qwen、Phi、SmolLM、Mistral 等,提供 LiteRT、ONNX 和 GGUF 版本),也可连接 OpenAI、Anthropic、Gemini、OpenRouter、Ollama 和 LM Studio 等云端和服务器接口,因此并非所有内容都留在手机上。',
+          '**功能:** 支持图片输入和语音的聊天。开发者页面上的模型评分来自其自己的基准测试,而非我们的测试。',
+          '**价格与更新:** 付费安装(美国 Play 商店 4.99 美元;其他地区按当地定价)。最近更新于 2026 年 10 月 23 日,下载量 1000+。未公布版本号。',
+          '**隐私与内容:** 开发者的隐私声明称使用本地模型时不收集任何数据,但 Play 的数据安全卡片同时把位置列为可能共享。闭源。开发者模型页面上的示例回复包含带有性暗示的陪伴式文字,Play 显示的年龄分级为 Teen。',
+          '**安装方式:** Google Play 商店。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上信息来自 Play 页面和开发者的页面;我们没有在自己的测试手机上打开过 Laria。完整说明见[Laria 评测](/zh/power-local-llm/laria-review)。',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server:手机上的本地 API 服务器(未实测)',
+        content:
+          '**Mobile LM Server(Play 标题为“Mobile LM Server - Local AI”)在手机上运行模型,并提供兼容 OpenAI 和 Ollama 的 API 服务器。** 它是在主要对比之后加入的,因此不在速度数据中。',
+        items: [
+          '**引擎与 API:** 据页面所述,使用 LiteRT-LM 和 llama.cpp(GGUF)引擎,提供兼容 OpenAI 和 Ollama 的 API 服务器,并可选择混合路由到云端。',
+          '**费用与广告:** 免费安装,但 Play 标注“含广告”和“应用内购买”;购买内容能解锁什么并无说明。',
+          '**更新与使用情况:** 版本 1.1.10,2026 年 10 月 22 日更新,需要 Android 7.0 及以上,下载量 1000+,45 条评分平均 3.8。',
+          '**隐私与许可:** 隐私政策称提示词和回复从不上传,但列出了启动和模型事件、崩溃日志以及用于投放广告的大致位置;数据安全卡片写着“未收集数据”,同时又把位置列为可能共享。闭源。“Chaterminal”只是开发者名称,与同名的 GitHub 终端工具无关。',
+          '**安装方式:** Google Play 商店。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上信息来自 Play 页面和开发者的隐私政策;我们没有在自己的测试手机上打开过 Mobile LM Server。完整说明见[Mobile LM Server 评测](/zh/power-local-llm/chaterminal-review)。',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM:内置模型的简单离线聊天(未实测)',
+        content:
+          '**On Device LLM(Play 标题为“Local LLM”,开发方 Feather AI)是一款免费的 Android 聊天应用,内置七个模型,并带有可选的本地 API。** 它是在主要对比之后加入的,因此不在速度数据中。',
+        items: [
+          '**模型:** 内置七个模型,也可粘贴 GGUF 链接;下载默认来自 Hugging Face。未说明推理引擎。',
+          '**本地 API:** 可选的兼容 OpenAI 的 API,端口 11434,默认关闭且无认证。',
+          '**价格与更新:** 免费安装,据描述无广告。版本 1.0,2026 年 9 月 11 日更新,需要 Android 7.0 及以上(64 位),安装量 100+。',
+          '**隐私与许可:** Play 的数据安全卡片写着“未收集数据”,但隐私政策称 Firebase Analytics 会记录匿名事件,且其联系邮箱是占位符(SUPPORT@EXAMPLE.COM)。闭源。',
+          '**安装方式:** Google Play 商店。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上信息来自 Play 页面和开发者的页面;我们没有在自己的测试手机上打开过 On Device LLM。完整说明见[On Device LLM 评测](/zh/power-local-llm/on-device-llm-review)。',
           },
         ],
       },
@@ -3337,6 +3662,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI: chat sin conexión con memoria editable (sin medir)', anchor: '#memoryai' },
+      { label: 'Laria: asistente de pago con modelos locales y en la nube (sin medir)', anchor: '#laria' },
+      { label: 'Mobile LM Server: servidor API local en tu teléfono (sin medir)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM: chat sin conexión sencillo con modelos integrados (sin medir)', anchor: '#on-device-llm' },
       { label: 'Fragmentación Android: almacenamiento, RAM y límites en segundo plano', anchor: '#android-fragmentation' },
       { label: 'Integración con el panel compartir de Android', anchor: '#share-sheet' },
       { label: 'Rutas de sideload y Termux', anchor: '#sideload-paths' },
@@ -3358,7 +3686,9 @@ snippetBlocks: [
           '**Tensor G5 (Pixel 9 Pro) no expone su NPU a apps de terceros.** Las seis apps corren solo-CPU en Pixel 9 Pro, entregando 10–18 tok/seg en Phi-4 Mini — más lento que el resultado equivalente en Snapdragon 8 Elite.',
           '**Maid es la opción F-Droid / sin Google.** Sin dependencia de Play Store, sin cuenta de Google requerida e importación GGUF directa desde el gestor de archivos. La mejor opción para usuarios de Android que evitan los servicios de Google.',
           '**MemoryAI es la opción para documentos, una memoria editable o un niño que usa el teléfono (añadida después de las pruebas, por lo que no se midió aquí).** Es gratuita y offline, añade un Kid Mode con PIN e importación GGUF, es de código cerrado y Google Play lista la compilación 1.0.60.',
-          '**Se añadieron tres apps de Android más después de las pruebas y aquí no se han medido: [Laria](/es/power-local-llm/laria-review), [Mobile LM Server](/es/power-local-llm/chaterminal-review) y [On Device LLM](/es/power-local-llm/on-device-llm-review).** Laria es de pago y combina modelos locales con endpoints en la nube, Mobile LM Server ejecuta un servidor API local y contiene anuncios y compras integradas, y On Device LLM es una app joven y gratuita con siete modelos integrados. Las tres son de código cerrado y no las hemos probado; lee cada análisis antes de instalar.',
+          '**Laria es la opción de pago para tener modelos locales y endpoints en la nube en una sola app (añadida después de las pruebas, por lo que no se midió aquí).** Es de código cerrado, cuesta 4,99 $ en la tienda de EE. UU. y la página del desarrollador muestra contenido de ejemplo explícito.',
+          '**Mobile LM Server es la opción para una API estilo OpenAI u Ollama en el teléfono (añadida después de las pruebas, por lo que no se midió aquí).** Se instala gratis, con anuncios y compras integradas, es de código cerrado y su política de privacidad y su ficha de seguridad de los datos difieren en la ubicación.',
+          '**On Device LLM es un chat sin conexión sencillo y gratuito con siete modelos integrados (añadida después de las pruebas, por lo que no se midió aquí).** Es una app en versión 1.0 con más de 100 instalaciones y de código cerrado.',
           '**Los límites en segundo plano de Android son el mayor problema de usabilidad.** Android elimina agresivamente los procesos en segundo plano en la mayoría de ROMs de fabricantes (especialmente Samsung, OnePlus y Xiaomi). Las apps que realizan inferencia activa necesitan estar fijadas en la bandeja de apps recientes o configuradas en los ajustes de optimización de batería para evitar interrupciones durante la generación.',
           '**El almacenamiento de modelos es el segundo mayor problema de Android.** Cada modelo GGUF ocupa 1–8 GB. La división de Android entre particiones de almacenamiento interno significa que los modelos deben almacenarse en el directorio privado de la app o en una ubicación configurada específicamente — no en "Descargas" para la mayoría de apps.',
           '**La ventaja de Android es real: Termux y el sideloading desbloquean herramientas sin equivalente en iOS.** Ollama via Termux no es posible en iPhone. Las apps de F-Droid y el sideloading con ADB dan a los usuarios de Android acceso a apps que Google Play puede no incluir.',
@@ -3482,6 +3812,9 @@ snippetBlocks: [
           '**Cualquier Android, personalización primero:** Ollama via Termux + un front-end de chat (Alpaca, Open WebUI en Chrome) es la configuración más capaz. Requiere ~30 minutos de trabajo en terminal pero da acceso a API compatible con OpenAI, uso de herramientas y toda la biblioteca de modelos de Ollama.',
           '**Teléfono sin Google / privacidad:** Maid desde F-Droid. Funciona en GrapheneOS, CalyxOS y otras versiones sin Google. Sin dependencia de Play Services.',
           '**Documentos, una memoria editable o un niño que usa el teléfono:** MemoryAI (añadida después de las pruebas, no medida aquí). Gratuita y offline, con Kid Mode protegido con PIN; las tiendas indican 4 GB de RAM o más.',
+          '**Modelos locales y endpoints en la nube en una app de pago:** Laria (añadida después de las pruebas, no medida aquí). Lee antes las notas sobre contenido y clasificación por edad.',
+          '**Una API local estilo OpenAI u Ollama en el teléfono:** Mobile LM Server (añadida después de las pruebas, no medida aquí). Cuenta con anuncios y compras integradas.',
+          '**Un chat sin conexión sencillo y gratuito con modelos integrados:** On Device LLM (añadida después de las pruebas, no medida aquí). Es una app joven en versión 1.0.',
           '**Teléfono con 8 GB de RAM:** Cualquiera de las seis apps con Qwen3 1.7B o SmolLM2 1.7B. PocketPal AI gestiona el almacenamiento de modelos con mayor elegancia en dispositivos limitados.',
           '**Samsung Galaxy (cualquier modelo):** Ten en cuenta la eliminación agresiva de procesos en segundo plano de Samsung. Fija la app de IA en la bandeja de recientes y añádela en el exclusivo de Cuidado del dispositivo → Batería → Apps en modo sueño para evitar interrupciones durante la inferencia.',
         ],
@@ -3700,6 +4033,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: 'Los datos anteriores proceden de las fichas de las tiendas, la política de privacidad y el desarrollador, que revisó nuestro texto; no hemos medido MemoryAI en nuestros teléfonos de prueba. Notas completas: [análisis de MemoryAI](/es/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria: asistente de pago con modelos locales y en la nube (sin medir)',
+        content:
+          '**Laria es un asistente de Android de pago que combina modelos locales descargables con endpoints en la nube opcionales.** Se añadió después de la comparación principal, por lo que no aparece en las cifras de velocidad.',
+        items: [
+          '**Modelos y endpoints:** descarga modelos locales (Gemma, Granite, Qwen, Phi, SmolLM, Mistral y otros, en versiones LiteRT, ONNX y GGUF, según el desarrollador) y también puede conectarse a endpoints en la nube y de servidor como OpenAI, Anthropic, Gemini, OpenRouter, Ollama y LM Studio, así que no todo se queda en el teléfono.',
+          '**Funciones:** chat con entrada de imagen y voz. Las puntuaciones de modelos de la página del desarrollador salen de sus propias pruebas, no de las nuestras.',
+          '**Precio y actualización:** instalación de pago (4,99 $ en la Play Store de EE. UU.; otros países tienen precio local). Última actualización el 23 de octubre de 2026, más de 1000 descargas. No se publica número de versión.',
+          '**Privacidad y contenido:** el aviso de privacidad del desarrollador dice que no se recopila nada con un modelo local, pero la ficha de seguridad de los datos de Play también indica la ubicación como posiblemente compartida. Código cerrado. Las respuestas de ejemplo de la página de modelos del desarrollador incluyen textos de acompañante sexualmente explícitos, y Play muestra una clasificación Teen.',
+          '**Instalación:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden de la ficha de Play y de las páginas del desarrollador; no hemos abierto Laria en nuestros teléfonos de prueba. Notas completas: [análisis de Laria](/es/power-local-llm/laria-review).',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server: servidor API local en tu teléfono (sin medir)',
+        content:
+          '**Mobile LM Server (título en Play «Mobile LM Server - Local AI») ejecuta modelos en el teléfono y ofrece un servidor API compatible con OpenAI y Ollama.** Se añadió después de la comparación principal, por lo que no aparece en las cifras de velocidad.',
+        items: [
+          '**Motores y API:** motores LiteRT-LM y llama.cpp (GGUF), un servidor API compatible con OpenAI y Ollama y enrutamiento híbrido opcional a la nube, según la ficha.',
+          '**Coste y anuncios:** instalación gratuita, pero Play la marca con «Contiene anuncios» y «Compras dentro de la aplicación»; lo que desbloquean las compras no está documentado.',
+          '**Actualización y alcance:** versión 1.1.10, actualizada el 22 de octubre de 2026, Android 7.0+, más de 1000 descargas, valoración de 3,8 con 45 opiniones.',
+          '**Privacidad y licencia:** la política de privacidad dice que los prompts y las respuestas nunca se suben, pero cita eventos de inicio y de modelo, registros de fallos y la ubicación aproximada para mostrar anuncios; la ficha de seguridad de los datos dice «No se recopilan datos», aunque indica la ubicación como posiblemente compartida. Código cerrado. «Chaterminal» es solo el nombre del desarrollador y no tiene relación con la herramienta de terminal de GitHub del mismo nombre.',
+          '**Instalación:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden de la ficha de Play y de la política de privacidad del desarrollador; no hemos abierto Mobile LM Server en nuestros teléfonos de prueba. Notas completas: [análisis de Mobile LM Server](/es/power-local-llm/chaterminal-review).',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM: chat sin conexión sencillo con modelos integrados (sin medir)',
+        content:
+          '**On Device LLM (título en Play «Local LLM», de Feather AI) es una app de chat gratuita para Android con siete modelos integrados y una API local opcional.** Se añadió después de la comparación principal, por lo que no aparece en las cifras de velocidad.',
+        items: [
+          '**Modelos:** siete modelos integrados y un enlace GGUF que se puede pegar; las descargas vienen de Hugging Face por defecto. No se nombra el motor de inferencia.',
+          '**API local:** una API opcional compatible con OpenAI en el puerto 11434, desactivada por defecto y sin autenticación.',
+          '**Precio y actualización:** instalación gratuita, sin anuncios según la descripción. Versión 1.0, actualizada el 11 de septiembre de 2026, Android 7.0+ (64 bits), más de 100 instalaciones.',
+          '**Privacidad y licencia:** la ficha de seguridad de los datos de Play dice «No se recopilan datos», pero la política de privacidad indica que Firebase Analytics registra eventos anónimos, y su dirección de contacto es un marcador (SUPPORT@EXAMPLE.COM). Código cerrado.',
+          '**Instalación:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden de la ficha de Play y de las páginas del desarrollador; no hemos abierto On Device LLM en nuestros teléfonos de prueba. Notas completas: [análisis de On Device LLM](/es/power-local-llm/on-device-llm-review).',
           },
         ],
       },
@@ -3977,6 +4367,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI: chat offline com memória editável (não medido)', anchor: '#memoryai' },
+      { label: 'Laria: assistente pago com modelos locais e na nuvem (não medido)', anchor: '#laria' },
+      { label: 'Mobile LM Server: servidor de API local no seu celular (não medido)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM: chat offline simples com modelos integrados (não medido)', anchor: '#on-device-llm' },
       { label: 'Fragmentação do Android: armazenamento, RAM e limites em segundo plano', anchor: '#android-fragmentation' },
       { label: 'Integração com o painel de compartilhamento do Android', anchor: '#share-sheet' },
       { label: 'Caminhos de sideload e Termux', anchor: '#sideload-paths' },
@@ -3998,7 +4391,9 @@ snippetBlocks: [
           '**O Tensor G5 (Pixel 9 Pro) não expõe seu NPU para apps de terceiros.** Os seis apps rodam apenas-CPU no Pixel 9 Pro, entregando 10–18 tok/seg no Phi-4 Mini — mais lento que o resultado equivalente no Snapdragon 8 Elite.',
           '**Maid é a escolha F-Droid / sem Google.** Sem dependência da Play Store, sem conta Google necessária e com importação GGUF direta do gerenciador de arquivos. A melhor opção para usuários de Android que evitam os serviços do Google.',
           '**O MemoryAI é a escolha para documentos, uma memória editável ou uma criança usando o celular (adicionado depois dos benchmarks, por isso não medido aqui).** É gratuito e offline, traz Modo Criança com PIN e importação de GGUF, é de código fechado e o Google Play lista a versão 1.0.60.',
-          '**Mais três apps Android foram adicionados depois dos benchmarks e não foram medidos aqui: [Laria](/pt/power-local-llm/laria-review), [Mobile LM Server](/pt/power-local-llm/chaterminal-review) e [On Device LLM](/pt/power-local-llm/on-device-llm-review).** O Laria é pago e mistura modelos locais com endpoints na nuvem, o Mobile LM Server executa um servidor de API local e tem anúncios e compras no app, e o On Device LLM é um app jovem e gratuito com sete modelos integrados. Os três são de código fechado e não foram testados por nós; leia cada análise antes de instalar.',
+          '**O Laria é a opção paga para ter modelos locais e endpoints na nuvem em um só app (adicionado depois dos benchmarks, por isso não medido aqui).** É de código fechado, custa US$ 4,99 na loja dos EUA, e a página do desenvolvedor mostra conteúdo de exemplo explícito.',
+          '**O Mobile LM Server é a opção para uma API no estilo OpenAI ou Ollama no celular (adicionado depois dos benchmarks, por isso não medido aqui).** Instala de graça, com anúncios e compras no app, é de código fechado, e a política de privacidade e o cartão de segurança dos dados divergem sobre a localização.',
+          '**O On Device LLM é um chat offline simples e gratuito com sete modelos integrados (adicionado depois dos benchmarks, por isso não medido aqui).** É um app na versão 1.0 com mais de 100 instalações e de código fechado.',
           '**Os limites em segundo plano do Android são o maior problema de usabilidade.** O Android encerra agressivamente os processos em segundo plano na maioria das ROMs de fabricantes (especialmente Samsung, OnePlus e Xiaomi). Os apps que fazem inferência ativa precisam estar fixados na bandeja de apps recentes ou configurados nas configurações de otimização de bateria para evitar interrupções no meio da geração.',
           '**O armazenamento de modelos é o segundo maior problema do Android.** Cada modelo GGUF ocupa 1–8 GB. A divisão do Android entre partições de armazenamento interno significa que os modelos devem ser armazenados no diretório privado do app ou em um local configurado especificamente — não em "Downloads" para a maioria dos apps.',
           '**A vantagem do Android é real: Termux e sideloading desbloqueiam ferramentas sem equivalente no iOS.** Ollama via Termux não é possível no iPhone. Os apps do F-Droid e o sideloading com ADB dão aos usuários de Android acesso a apps que o Google Play pode não oferecer.',
@@ -4122,6 +4517,9 @@ snippetBlocks: [
           '**Qualquer Android, personalização em primeiro lugar:** Ollama via Termux + um front-end de chat (Alpaca, Open WebUI no Chrome) é a configuração mais capaz. Requer ~30 minutos de trabalho no terminal, mas dá acesso a API compatível com OpenAI, uso de ferramentas e toda a biblioteca de modelos do Ollama.',
           '**Celular sem Google / privacidade:** Maid pelo F-Droid. Funciona no GrapheneOS, CalyxOS e outras versões sem Google. Sem dependência do Play Services.',
           '**Documentos, uma memória editável ou uma criança usando o celular:** MemoryAI (adicionado depois dos benchmarks, não medido aqui). Gratuito e offline, com Modo Criança protegido por PIN; as lojas indicam 4 GB de RAM ou mais.',
+          '**Modelos locais e endpoints na nuvem em um app pago:** Laria (adicionado depois dos benchmarks, não medido aqui). Leia antes as notas sobre conteúdo e classificação etária.',
+          '**Uma API local no estilo OpenAI ou Ollama no celular:** Mobile LM Server (adicionado depois dos benchmarks, não medido aqui). Espere anúncios e compras no app.',
+          '**Um chat offline simples e gratuito com modelos integrados:** On Device LLM (adicionado depois dos benchmarks, não medido aqui). É um app jovem na versão 1.0.',
           '**Celular com 8 GB de RAM:** Qualquer um dos seis apps com Qwen3 1.7B ou SmolLM2 1.7B. O PocketPal AI gerencia o armazenamento de modelos com mais elegância em dispositivos limitados.',
           '**Samsung Galaxy (qualquer modelo):** Esteja ciente do encerramento agressivo de processos em segundo plano da Samsung. Fixe o app de IA na bandeja de recentes e adicione-o à lista de exceções em Cuidado do dispositivo → Bateria → Apps em modo de suspensão para evitar a interrupção durante a inferência.',
         ],
@@ -4340,6 +4738,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: 'Os dados acima vêm das páginas das lojas, da política de privacidade e do desenvolvedor, que revisou o nosso texto; não medimos o MemoryAI nos nossos celulares de teste. Notas completas: [análise do MemoryAI](/pt/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria: assistente pago com modelos locais e na nuvem (não medido)',
+        content:
+          '**O Laria é um assistente Android pago que combina modelos locais baixáveis com endpoints na nuvem opcionais.** Foi adicionado depois da comparação principal, por isso não está nos números de velocidade.',
+        items: [
+          '**Modelos e endpoints:** baixa modelos locais (Gemma, Granite, Qwen, Phi, SmolLM, Mistral e outros, em versões LiteRT, ONNX e GGUF, segundo o desenvolvedor) e também pode se conectar a endpoints na nuvem e de servidor, como OpenAI, Anthropic, Gemini, OpenRouter, Ollama e LM Studio, então nem tudo fica no celular.',
+          '**Recursos:** chat com entrada de imagem e voz. As pontuações de modelos na página do desenvolvedor vêm de seus próprios benchmarks, não dos nossos.',
+          '**Preço e atualização:** instalação paga (US$ 4,99 na Play Store dos EUA; outros países têm preço local). Última atualização em 23 de outubro de 2026, mais de 1 mil downloads. Nenhum número de versão é divulgado.',
+          '**Privacidade e conteúdo:** o aviso de privacidade do desenvolvedor diz que nada é coletado com um modelo local, mas o cartão de segurança dos dados do Play também lista a localização como possivelmente compartilhada. Código fechado. Respostas de exemplo na página de modelos do desenvolvedor incluem textos de companhia sexualmente explícitos, e o Play mostra classificação Teen.',
+          '**Instalação:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm da ficha do Play e das páginas do desenvolvedor; não abrimos o Laria nos nossos celulares de teste. Notas completas: [análise do Laria](/pt/power-local-llm/laria-review).',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server: servidor de API local no seu celular (não medido)',
+        content:
+          '**O Mobile LM Server (título no Play “Mobile LM Server - Local AI”) executa modelos no celular e oferece um servidor de API compatível com OpenAI e Ollama.** Foi adicionado depois da comparação principal, por isso não está nos números de velocidade.',
+        items: [
+          '**Motores e API:** motores LiteRT-LM e llama.cpp (GGUF), um servidor de API compatível com OpenAI e Ollama e roteamento híbrido opcional para a nuvem, segundo a ficha.',
+          '**Custo e anúncios:** instalação gratuita, mas o Play marca “Contém anúncios” e “Compras no app”; o que as compras liberam não está documentado.',
+          '**Atualização e alcance:** versão 1.1.10, atualizada em 22 de outubro de 2026, Android 7.0+, mais de 1 mil downloads, nota 3,8 em 45 avaliações.',
+          '**Privacidade e licença:** a política de privacidade diz que prompts e respostas nunca são enviados, mas lista eventos de abertura e de modelo, registros de falhas e localização aproximada para exibição de anúncios; o cartão de segurança dos dados diz “Nenhum dado coletado”, mas lista a localização como possivelmente compartilhada. Código fechado. “Chaterminal” é só o nome do desenvolvedor, sem relação com a ferramenta de terminal do GitHub de mesmo nome.',
+          '**Instalação:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm da ficha do Play e da política de privacidade do desenvolvedor; não abrimos o Mobile LM Server nos nossos celulares de teste. Notas completas: [análise do Mobile LM Server](/pt/power-local-llm/chaterminal-review).',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM: chat offline simples com modelos integrados (não medido)',
+        content:
+          '**O On Device LLM (título no Play “Local LLM”, da Feather AI) é um app de chat Android gratuito com sete modelos integrados e uma API local opcional.** Foi adicionado depois da comparação principal, por isso não está nos números de velocidade.',
+        items: [
+          '**Modelos:** sete modelos integrados e um link GGUF colável; os downloads vêm do Hugging Face por padrão. O motor de inferência não é citado.',
+          '**API local:** uma API opcional compatível com OpenAI na porta 11434, desativada por padrão e sem autenticação.',
+          '**Preço e atualização:** instalação gratuita, sem anúncios segundo a descrição. Versão 1.0, atualizada em 11 de setembro de 2026, Android 7.0+ (64 bits), mais de 100 instalações.',
+          '**Privacidade e licença:** o cartão de segurança dos dados do Play diz “Nenhum dado coletado”, mas a política de privacidade diz que o Firebase Analytics registra eventos anônimos, e o endereço de contato dela é um texto provisório (SUPPORT@EXAMPLE.COM). Código fechado.',
+          '**Instalação:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm da ficha do Play e das páginas do desenvolvedor; não abrimos o On Device LLM nos nossos celulares de teste. Notas completas: [análise do On Device LLM](/pt/power-local-llm/on-device-llm-review).',
           },
         ],
       },
@@ -4617,6 +5072,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)', anchor: '#memoryai' },
+      { label: 'Laria: مساعد مدفوع بنماذج محلية وسحابية (لم يُقَس)', anchor: '#laria' },
+      { label: 'Mobile LM Server: خادم API محلي على هاتفك (لم يُقَس)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM: دردشة بسيطة دون اتصال بنماذج مدمجة (لم يُقَس)', anchor: '#on-device-llm' },
       { label: 'تشرذم Android: التخزين والذاكرة وحدود الخلفية', anchor: '#android-fragmentation' },
       { label: 'التكامل مع قائمة المشاركة في Android', anchor: '#share-sheet' },
       { label: 'مسارات التحميل الجانبي وTermux', anchor: '#sideload-paths' },
@@ -4638,7 +5096,9 @@ snippetBlocks: [
           '**Tensor G5 (Pixel 9 Pro) لا يكشف NPU للتطبيقات الخارجية.** التطبيقات الستة تعمل بالمعالج فقط على Pixel 9 Pro بسرعة 10–18 رمز/ث على Phi-4 Mini — أبطأ من النتيجة المكافئة على Snapdragon 8 Elite.',
           '**Maid هو الخيار الأمثل لمستخدمي F-Droid / بلا Google.** لا اعتماد على Play Store، ولا حاجة لحساب Google، واستيراد GGUF مباشر من مدير الملفات. الخيار الأنسب لمستخدمي Android الذين يتجنبون خدمات Google.',
           '**MemoryAI خيار للمستندات أو لذاكرة قابلة للتعديل أو لطفل يستخدم الهاتف (أُضيف بعد اختبارات الأداء، لذلك لم يُقَس هنا).** وهو مجاني ويعمل دون اتصال، ويضيف وضع أطفال برمز PIN واستيراد GGUF، ومغلق المصدر، وتُدرج Google Play الإصدار 1.0.60.',
-          '**أُضيفت ثلاثة تطبيقات أندرويد أخرى بعد اختبارات الأداء ولم تُقَس هنا: [Laria](/ar/power-local-llm/laria-review) و[Mobile LM Server](/ar/power-local-llm/chaterminal-review) و[On Device LLM](/ar/power-local-llm/on-device-llm-review).** Laria تطبيق مدفوع يجمع بين النماذج المحلية ونقاط النهاية السحابية، وMobile LM Server يشغّل خادم API محلياً ويتضمن إعلانات ومشتريات داخل التطبيق، وOn Device LLM تطبيق حديث ومجاني بسبعة نماذج مدمجة. الثلاثة مغلقة المصدر ولم نختبرها، فاقرأ مراجعة كل منها قبل التثبيت.',
+          '**Laria هو الخيار المدفوع لمن يريد نماذج محلية ونقاط نهاية سحابية في تطبيق واحد (أُضيف بعد اختبارات الأداء، لذلك لم يُقَس هنا).** وهو مغلق المصدر ويكلّف 4.99 دولار في المتجر الأمريكي، وتعرض صفحة المطوّر محتوى نموذجياً صريحاً.',
+          '**Mobile LM Server خيار لمن يريد API بأسلوب OpenAI أو Ollama على الهاتف (أُضيف بعد اختبارات الأداء، لذلك لم يُقَس هنا).** تثبيته مجاني مع إعلانات ومشتريات داخل التطبيق، وهو مغلق المصدر، وتختلف سياسة الخصوصية وبطاقة أمان البيانات في شأن الموقع.',
+          '**On Device LLM دردشة بسيطة ومجانية دون اتصال بسبعة نماذج مدمجة (أُضيف بعد اختبارات الأداء، لذلك لم يُقَس هنا).** وهو تطبيق بإصدار 1.0 وأكثر من 100 تثبيت ومغلق المصدر.',
           '**حدود الخلفية في Android هي المشكلة الأكبر في قابلية الاستخدام.** يُنهي Android عمليات الخلفية بعدوانية في معظم نسخ المصنّعين (خاصة Samsung وOnePlus وXiaomi). التطبيقات التي تُجري استدلالاً نشطاً تحتاج إلى تثبيتها في درج التطبيقات الأخيرة أو إعدادها في إعدادات تحسين البطارية لتجنب انقطاع التوليد.',
           '**تخزين النماذج هو المشكلة الثانية الأكبر على Android.** كل نموذج GGUF يستهلك 1–8 غيغابايت. تشرذم Android بين أقسام التخزين الداخلي يعني أن النماذج يجب تخزينها في الدليل الخاص بالتطبيق أو في موقع مُهيَّأ خصيصاً — لا في مجلد "التنزيلات" لمعظم التطبيقات.',
           '**ميزة Android حقيقية: Termux والتحميل الجانبي يفتحان أدوات لا مكافئ لها على iOS.** برنامج Ollama عبر Termux غير ممكن على iPhone. تطبيقات F-Droid والتحميل الجانبي عبر ADB يمنحان مستخدمي Android وصولاً إلى تطبيقات قد لا يوفرها Google Play.',
@@ -4762,6 +5222,9 @@ snippetBlocks: [
           '**أي Android، التخصيص أولاً:** برنامج Ollama عبر Termux + واجهة دردشة أمامية (Alpaca أو Open WebUI في Chrome) هي الإعداد الأكثر قدرة. تستغرق ~30 دقيقة عمل في الطرفية لكنها تتيح واجهة برمجية متوافقة مع OpenAI واستخدام الأدوات وكامل مكتبة نماذج Ollama.',
           '**هاتف بلا Google / للخصوصية:** Maid من F-Droid. يعمل على GrapheneOS وCalyxOS وغيرهما من نسخ Android الخالية من Google. بلا اعتماد على Play Services.',
           '**المستندات أو ذاكرة قابلة للتعديل أو طفل يستخدم الهاتف:** MemoryAI (أُضيف بعد اختبارات الأداء ولم يُقَس هنا). مجاني ويعمل دون اتصال، مع وضع أطفال برمز PIN؛ وتذكر المتاجر ذاكرة وصول عشوائي 4 جيجابايت أو أكثر.',
+          '**نماذج محلية ونقاط نهاية سحابية في تطبيق مدفوع واحد:** Laria (أُضيف بعد اختبارات الأداء ولم يُقَس هنا). اقرأ أولاً ملاحظات المحتوى والتصنيف العمري.',
+          '**API محلي بأسلوب OpenAI أو Ollama على الهاتف:** Mobile LM Server (أُضيف بعد اختبارات الأداء ولم يُقَس هنا). توقّع إعلانات ومشتريات داخل التطبيق.',
+          '**دردشة بسيطة ومجانية دون اتصال بنماذج مدمجة:** On Device LLM (أُضيف بعد اختبارات الأداء ولم يُقَس هنا). وهو تطبيق حديث بإصدار 1.0.',
           '**هاتف بذاكرة 8 غيغابايت:** أي من التطبيقات الستة مع Qwen3 1.7B أو SmolLM2 1.7B. يدير PocketPal AI تخزين النماذج بأناقة أكبر على الأجهزة المحدودة.',
           '**Samsung Galaxy (أي طراز):** انتبه لإنهاء Samsung العدوانية للعمليات الخلفية. ثبّت تطبيق الذكاء الاصطناعي في درج التطبيقات الأخيرة وأضفه استثناءً في العناية بالجهاز ← البطارية ← التطبيقات في وضع السكون لتجنب انقطاع الاستدلال.',
         ],
@@ -4980,6 +5443,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: 'تأتي التفاصيل أعلاه من صفحات المتاجر وسياسة الخصوصية والمطوّر الذي راجع نصنا؛ لم نقِس سرعة MemoryAI على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة MemoryAI](/ar/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria: مساعد مدفوع بنماذج محلية وسحابية (لم يُقَس)',
+        content:
+          '**Laria مساعد أندرويد مدفوع يجمع بين نماذج محلية قابلة للتنزيل ونقاط نهاية سحابية اختيارية.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في أرقام السرعة.',
+        items: [
+          '**النماذج ونقاط النهاية:** ينزّل نماذج محلية (بحسب المطوّر: Gemma وGranite وQwen وPhi وSmolLM وMistral وغيرها بصيغ LiteRT وONNX وGGUF) ويمكنه أيضاً الاتصال بنقاط نهاية سحابية وخادمية مثل OpenAI وAnthropic وGemini وOpenRouter وOllama وLM Studio، لذا لا يبقى كل شيء على الهاتف.',
+          '**الميزات:** دردشة مع إدخال الصور والصوت. درجات النماذج في صفحة المطوّر مصدرها اختبارات الأداء الخاصة به لا اختباراتنا.',
+          '**السعر والتحديث:** تثبيت مدفوع (4.99 دولار في متجر Play الأمريكي، وللدول الأخرى أسعار محلية). آخر تحديث في 23 أكتوبر 2026، وأكثر من 1000 تنزيل. لا يُنشر رقم إصدار.',
+          '**الخصوصية والمحتوى:** يقول إشعار الخصوصية لدى المطوّر إن شيئاً لا يُجمع عند استخدام نموذج محلي، لكن بطاقة أمان البيانات في Play تُدرج الموقع أيضاً على أنه قد يُشارك. مغلق المصدر. تتضمن الردود النموذجية في صفحة نماذج المطوّر نصوصاً بأسلوب الرفيق ذات طابع جنسي صريح، ويعرض Play تصنيفاً عمرياً Teen.',
+          '**طريقة التثبيت:** متجر Google Play.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'تأتي التفاصيل أعلاه من صفحة Play وصفحات المطوّر؛ لم نفتح Laria على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة Laria](/ar/power-local-llm/laria-review).',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server: خادم API محلي على هاتفك (لم يُقَس)',
+        content:
+          '**Mobile LM Server (عنوانه في Play «Mobile LM Server - Local AI») يشغّل النماذج على الهاتف ويوفّر خادم API متوافقاً مع OpenAI وOllama.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في أرقام السرعة.',
+        items: [
+          '**المحركات وAPI:** بحسب الصفحة، محركا LiteRT-LM وllama.cpp (GGUF)، وخادم API متوافق مع OpenAI وOllama، وتوجيه هجين اختياري إلى السحابة.',
+          '**التكلفة والإعلانات:** تثبيت مجاني، لكن Play يضع عليه «يحتوي على إعلانات» و«عمليات شراء داخل التطبيق»؛ وما تفتحه المشتريات غير موثّق.',
+          '**التحديث والانتشار:** الإصدار 1.1.10، حُدّث في 22 أكتوبر 2026، أندرويد 7.0 أو أحدث، وأكثر من 1000 تنزيل، وتقييم 3.8 من 45 تقييماً.',
+          '**الخصوصية والترخيص:** تقول سياسة الخصوصية إن الأوامر والردود لا تُرفع أبداً، لكنها تُدرج أحداث التشغيل والنموذج وسجلات الأعطال والموقع التقريبي لعرض الإعلانات؛ وتقول بطاقة أمان البيانات «لا تُجمع بيانات» مع إدراج الموقع على أنه قد يُشارك. مغلق المصدر. «Chaterminal» مجرد اسم المطوّر ولا علاقة له بأداة الطرفية على GitHub التي تحمل الاسم نفسه.',
+          '**طريقة التثبيت:** متجر Google Play.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'تأتي التفاصيل أعلاه من صفحة Play وسياسة خصوصية المطوّر؛ لم نفتح Mobile LM Server على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة Mobile LM Server](/ar/power-local-llm/chaterminal-review).',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM: دردشة بسيطة دون اتصال بنماذج مدمجة (لم يُقَس)',
+        content:
+          '**On Device LLM (عنوانه في Play «Local LLM» من Feather AI) تطبيق دردشة أندرويد مجاني بسبعة نماذج مدمجة وAPI محلي اختياري.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في أرقام السرعة.',
+        items: [
+          '**النماذج:** سبعة نماذج مدمجة مع إمكانية لصق رابط GGUF؛ وتأتي التنزيلات افتراضياً من Hugging Face. لا يُذكر محرك الاستدلال.',
+          '**API المحلي:** API اختياري متوافق مع OpenAI على المنفذ 11434، معطّل افتراضياً وبلا مصادقة.',
+          '**السعر والتحديث:** تثبيت مجاني وبلا إعلانات بحسب الوصف. الإصدار 1.0، حُدّث في 11 سبتمبر 2026، أندرويد 7.0 أو أحدث (64 بت)، وأكثر من 100 تثبيت.',
+          '**الخصوصية والترخيص:** تقول بطاقة أمان البيانات في Play «لا تُجمع بيانات»، لكن سياسة الخصوصية تذكر أن Firebase Analytics يسجّل أحداثاً مجهولة، وعنوان التواصل فيها نص مؤقت (SUPPORT@EXAMPLE.COM). مغلق المصدر.',
+          '**طريقة التثبيت:** متجر Google Play.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'تأتي التفاصيل أعلاه من صفحة Play وصفحات المطوّر؛ لم نفتح On Device LLM على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة On Device LLM](/ar/power-local-llm/on-device-llm-review).',
           },
         ],
       },
@@ -5257,6 +5777,9 @@ snippetBlocks: [
       { label: 'Private AI', anchor: '#private-ai' },
       { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
       { label: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)', anchor: '#memoryai' },
+      { label: 'Laria: 로컬·클라우드 모델을 함께 쓰는 유료 어시스턴트(미측정)', anchor: '#laria' },
+      { label: 'Mobile LM Server: 휴대폰에서 돌리는 로컬 API 서버(미측정)', anchor: '#mobile-lm-server' },
+      { label: 'On Device LLM: 내장 모델로 쓰는 간단한 오프라인 채팅(미측정)', anchor: '#on-device-llm' },
       { label: 'Android 파편화: 스토리지, RAM, 백그라운드 제한', anchor: '#android-fragmentation' },
       { label: 'Android 공유 패널 통합', anchor: '#share-sheet' },
       { label: '사이드로드 및 Termux 경로', anchor: '#sideload-paths' },
@@ -5278,7 +5801,9 @@ snippetBlocks: [
           '**Tensor G5(Pixel 9 Pro)는 타사 앱에 NPU를 노출하지 않습니다.** 6개 앱 모두 Pixel 9 Pro에서 CPU 전용으로 실행되며 Phi-4 Mini 기준 10–18 tok/s를 제공합니다 — Snapdragon 8 Elite 기기의 동등한 결과보다 느립니다.',
           '**Maid는 F-Droid / Google 없는 선택입니다.** Play Store 의존 없음, Google 계정 불필요, 파일 관리자에서 직접 GGUF 가져오기. Google 서비스를 피하는 Android 사용자에게 최적입니다.',
           '**MemoryAI는 문서, 편집 가능한 메모리, 또는 아이가 휴대폰을 쓰는 경우에 맞는 선택입니다(벤치마크 이후 추가되어 여기서는 측정하지 않았습니다).** 무료이며 오프라인으로 동작하고, PIN 잠금 키즈 모드와 GGUF 가져오기를 갖췄습니다. 클로즈드 소스이며 Google Play에는 1.0.60이 게재되어 있습니다.',
-          '**벤치마크 이후 Android 앱 세 개를 더 추가했으며 여기서는 측정하지 않았습니다: [Laria](/ko/power-local-llm/laria-review), [Mobile LM Server](/ko/power-local-llm/chaterminal-review), [On Device LLM](/ko/power-local-llm/on-device-llm-review).** Laria는 로컬 모델과 클라우드 엔드포인트를 함께 쓰는 유료 앱이고, Mobile LM Server는 휴대폰에서 로컬 API 서버를 실행하며 광고와 인앱 구매가 있고, On Device LLM은 내장 모델 7개를 갖춘 새로운 무료 앱입니다. 셋 모두 클로즈드 소스이고 저희가 테스트하지 않았으니 설치 전에 각 리뷰를 읽어 보세요.',
+          '**Laria는 로컬 모델과 클라우드 엔드포인트를 앱 하나에서 쓰고 싶을 때의 유료 선택지입니다(벤치마크 이후 추가되어 여기서는 측정하지 않았습니다).** 클로즈드 소스이고 미국 스토어에서 4.99달러이며, 개발자 페이지에는 노골적인 예시 콘텐츠가 있습니다.',
+          '**Mobile LM Server는 휴대폰에서 OpenAI나 Ollama 방식의 API를 쓰고 싶을 때의 선택지입니다(벤치마크 이후 추가되어 여기서는 측정하지 않았습니다).** 설치는 무료이지만 광고와 인앱 구매가 있고, 클로즈드 소스이며, 개인정보 처리방침과 데이터 보안 카드가 위치에 대해 서로 다르게 말합니다.',
+          '**On Device LLM은 내장 모델 7개로 쓰는 간단한 무료 오프라인 채팅입니다(벤치마크 이후 추가되어 여기서는 측정하지 않았습니다).** 버전 1.0, 설치 100회 이상의 클로즈드 소스 앱입니다.',
           '**Android 백그라운드 제한이 가장 큰 사용성 문제입니다.** Android는 대부분의 제조사 ROM(특히 Samsung, OnePlus, Xiaomi)에서 백그라운드 프로세스를 적극적으로 종료합니다. 활성 추론을 수행하는 앱은 최근 앱 트레이에 고정하거나 배터리 최적화 설정에서 예외로 설정해야 생성 중 중단을 피할 수 있습니다.',
           '**모델 스토리지가 Android의 두 번째 큰 문제입니다.** 각 GGUF 모델은 1–8 GB를 차지합니다. Android의 내부 스토리지 파티션 분할로 인해 모델은 앱의 프라이빗 디렉토리 또는 특별히 설정된 위치에 저장해야 합니다 — 대부분의 앱에서 "다운로드" 폴더는 작동하지 않습니다.',
           '**Android의 이점은 실재합니다: Termux와 사이드로딩으로 iOS에서 구현 불가능한 도구를 사용할 수 있습니다.** Ollama via Termux는 iPhone에서 불가능합니다. F-Droid 앱과 ADB 사이드로딩으로 Google Play에 없는 앱에 접근할 수 있습니다.',
@@ -5406,6 +5931,9 @@ snippetBlocks: [
           '**모든 Android, 커스터마이징 우선:** Ollama via Termux + 채팅 프론트엔드(Alpaca, Chrome의 Open WebUI)가 가장 유능한 설정입니다. 약 30분의 터미널 작업이 필요하지만 OpenAI 호환 API 접근, 도구 사용, 전체 Ollama 모델 라이브러리를 제공합니다.',
           '**Google 없는 스마트폰/프라이버시:** F-Droid의 Maid. GrapheneOS, CalyxOS, 기타 Google 없는 빌드에서 작동합니다. Play Services 의존 없음.',
           '**문서, 편집 가능한 메모리, 또는 아이가 휴대폰을 쓰는 경우:** MemoryAI(벤치마크 이후 추가, 여기서는 측정하지 않음). 무료이며 오프라인으로 동작하고 PIN 잠금 키즈 모드를 갖췄습니다. 스토어에는 RAM 4GB 이상으로 표기되어 있습니다.',
+          '**로컬 모델과 클라우드 엔드포인트를 유료 앱 하나에서:** Laria(벤치마크 이후 추가, 여기서는 측정하지 않음). 먼저 콘텐츠와 연령 등급 안내를 읽어 보세요.',
+          '**휴대폰의 OpenAI·Ollama 방식 로컬 API:** Mobile LM Server(벤치마크 이후 추가, 여기서는 측정하지 않음). 광고와 인앱 구매가 있습니다.',
+          '**내장 모델로 쓰는 간단한 무료 오프라인 채팅:** On Device LLM(벤치마크 이후 추가, 여기서는 측정하지 않음). 버전 1.0의 새로운 앱입니다.',
           '**RAM 8 GB 스마트폰:** 6개 앱 중 어느 것이든 Qwen3 1.7B 또는 SmolLM2 1.7B와 함께 사용하십시오. PocketPal AI는 제한된 기기에서 모델 스토리지를 더 우아하게 처리합니다.',
           '**Samsung Galaxy(모든 모델):** Samsung의 적극적인 백그라운드 프로세스 종료를 주의하십시오. AI 앱을 최근 앱 트레이에 고정하고 기기 케어 → 배터리 → 절전 모드 앱에서 예외로 추가하여 추론 중 중단을 피하십시오.',
         ],
@@ -5624,6 +6152,63 @@ snippetBlocks: [
           {
             type: 'tip',
             text: '위 내용은 스토어 정보, 개인정보 처리방침, 그리고 저희 글을 검토한 개발자의 설명에 근거합니다. MemoryAI를 저희 테스트 폰에서 직접 측정하지는 않았습니다. 자세한 내용은 [MemoryAI 리뷰](/ko/power-local-llm/memoryai-review)를 참고하세요.',
+          },
+        ],
+      },
+      laria: {
+        id: 'laria',
+        title: 'Laria: 로컬·클라우드 모델을 함께 쓰는 유료 어시스턴트(미측정)',
+        content:
+          '**Laria는 내려받는 로컬 모델과 선택형 클라우드 엔드포인트를 함께 쓰는 유료 Android 어시스턴트입니다.** 주요 비교 이후에 추가되어 속도 수치에는 포함되지 않았습니다.',
+        items: [
+          '**모델과 엔드포인트:** 로컬 모델을 내려받아 사용하며(개발자에 따르면 Gemma, Granite, Qwen, Phi, SmolLM, Mistral 등이며 LiteRT, ONNX, GGUF 빌드), OpenAI, Anthropic, Gemini, OpenRouter, Ollama, LM Studio 같은 클라우드·서버 엔드포인트에도 연결할 수 있어 모든 것이 휴대폰에 남는 것은 아닙니다.',
+          '**기능:** 이미지 입력과 음성을 지원하는 채팅. 개발자 페이지의 모델 점수는 저희가 아니라 개발자 자신의 벤치마크 결과입니다.',
+          '**가격과 업데이트:** 유료 설치(미국 Play 스토어 기준 4.99달러, 다른 나라는 현지 가격). 마지막 업데이트는 2026년 10월 23일, 다운로드 1,000회 이상. 버전 번호는 공개되어 있지 않습니다.',
+          '**개인정보와 콘텐츠:** 개발자의 개인정보 고지는 로컬 모델 사용 시 아무것도 수집하지 않는다고 하지만, Play의 데이터 보안 카드에는 위치가 공유될 수 있다고도 적혀 있습니다. 클로즈드 소스입니다. 개발자의 모델 페이지 예시 답변에는 컴패니언 스타일의 성적으로 노골적인 문장이 포함되어 있으며, Play 등급은 Teen입니다.',
+          '**설치 경로:** Google Play 스토어.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 Play 게재 정보와 개발자의 페이지에 근거합니다. Laria를 저희 테스트 폰에서 직접 열어 보지는 않았습니다. 자세한 내용은 [Laria 리뷰](/ko/power-local-llm/laria-review)를 참고하세요.',
+          },
+        ],
+      },
+      mobileLMServer: {
+        id: 'mobile-lm-server',
+        title: 'Mobile LM Server: 휴대폰에서 돌리는 로컬 API 서버(미측정)',
+        content:
+          '**Mobile LM Server(Play 표기 「Mobile LM Server - Local AI」)는 휴대폰에서 모델을 실행하고 OpenAI·Ollama 호환 API 서버를 제공합니다.** 주요 비교 이후에 추가되어 속도 수치에는 포함되지 않았습니다.',
+        items: [
+          '**엔진과 API:** 게재 정보에 따르면 LiteRT-LM과 llama.cpp(GGUF) 엔진, OpenAI·Ollama 호환 API 서버, 클라우드로의 선택형 하이브리드 라우팅을 갖췄습니다.',
+          '**비용과 광고:** 설치는 무료이지만 Play에 「광고 포함」과 「인앱 구매」가 표시되어 있으며, 구매로 무엇이 열리는지는 문서화되어 있지 않습니다.',
+          '**업데이트와 이용 현황:** 버전 1.1.10, 2026년 10월 22일 업데이트, Android 7.0 이상, 다운로드 1,000회 이상, 평점 3.8(45건).',
+          '**개인정보와 라이선스:** 개인정보 처리방침은 프롬프트와 답변을 업로드하지 않는다고 하면서도 실행·모델 이벤트, 충돌 로그, 광고 게재를 위한 대략적인 위치를 명시합니다. 데이터 보안 카드는 「수집된 데이터 없음」이라고 하면서 위치가 공유될 수 있다고도 적습니다. 클로즈드 소스입니다. 「Chaterminal」은 개발자 이름일 뿐 같은 이름의 GitHub 터미널 도구와는 무관합니다.',
+          '**설치 경로:** Google Play 스토어.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 Play 게재 정보와 개발자의 개인정보 처리방침에 근거합니다. Mobile LM Server를 저희 테스트 폰에서 직접 열어 보지는 않았습니다. 자세한 내용은 [Mobile LM Server 리뷰](/ko/power-local-llm/chaterminal-review)를 참고하세요.',
+          },
+        ],
+      },
+      onDeviceLLM: {
+        id: 'on-device-llm',
+        title: 'On Device LLM: 내장 모델로 쓰는 간단한 오프라인 채팅(미측정)',
+        content:
+          '**On Device LLM(Play 표기 「Local LLM」, 개발사 Feather AI)은 내장 모델 7개와 선택형 로컬 API를 갖춘 무료 Android 채팅 앱입니다.** 주요 비교 이후에 추가되어 속도 수치에는 포함되지 않았습니다.',
+        items: [
+          '**모델:** 내장 모델 7개와 붙여 넣을 수 있는 GGUF 링크를 지원하며, 다운로드는 기본적으로 Hugging Face에서 받습니다. 추론 엔진은 명시되어 있지 않습니다.',
+          '**로컬 API:** 포트 11434의 선택형 OpenAI 호환 API로, 기본값은 꺼짐이며 인증이 없습니다.',
+          '**가격과 업데이트:** 설치는 무료이며 설명에 따르면 광고가 없습니다. 버전 1.0, 2026년 9월 11일 업데이트, Android 7.0 이상(64비트), 설치 100회 이상.',
+          '**개인정보와 라이선스:** Play 데이터 보안 카드는 「수집된 데이터 없음」이라고 하지만, 개인정보 처리방침은 Firebase Analytics가 익명 이벤트를 기록한다고 하며 연락처 주소는 자리 표시자(SUPPORT@EXAMPLE.COM)입니다. 클로즈드 소스입니다.',
+          '**설치 경로:** Google Play 스토어.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 Play 게재 정보와 개발자의 페이지에 근거합니다. On Device LLM을 저희 테스트 폰에서 직접 열어 보지는 않았습니다. 자세한 내용은 [On Device LLM 리뷰](/ko/power-local-llm/on-device-llm-review)를 참고하세요.',
           },
         ],
       },

@@ -82,7 +82,7 @@ Register in `src/lib/power-local-llm/slugs.ts` + `articles-barrel.ts`.
 Generate localized hero images (facts strip: RAM/VRAM, license, price, platform pills) per
 repo `CLAUDE.md` hero-image process — one per locale, `public/images/<slug>-hero-<lang>.webp`.
 
-Do **not** add to `published.ts` yet.
+Add it to `published.ts` in the same run as soon as all 9 locales and the risk gate are done (index gate in `CLAUDE.md`: never leave a content page noindex).
 
 ### 3. Translate all 8 non-EN locales
 Run `/geo-translation` per locale. Never translate code-side identifiers (`theme`, `slug`,
@@ -113,8 +113,8 @@ not just EN (translation waves can turn a hedged EN claim into an absolute one).
 CRITICAL finding — fix and re-run before proceeding.
 
 ### 7. Publish
-Add the slug to `src/lib/power-local-llm/published.ts` — only once all 9 locale blocks exist
-and risk-checker passed. This is the actual "go live" switch: it flips `noindex` off and the
+Add the slug to `src/lib/power-local-llm/published.ts` in the same run — once all 9 locale blocks exist
+and risk-checker passed (never leave it noindex). This is the actual "go live" switch: it flips `noindex` off and the
 sitemap (`src/lib/sitemap/pages/power-local-llm.ts`) picks it up automatically. No manual
 sitemap edit needed.
 

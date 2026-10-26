@@ -12,6 +12,8 @@ Before writing or editing any user-facing text on this website, read and apply t
 
 **Risk gate (mandatory):** every new article and every page-updater run must pass the `risk-checker` skill (`/risk-checker <article file>`) before commit — GEO Rule 35b and `docs/PAGE_UPDATER.md` Step 5.7. `BLOCK` never ships. Site-wide triage: `npm run risk:scan`.
 
+**Index gate (owner rule, 2026-10-26, HARD — never again):** never leave a normal content page `noindex`, and never ship one that way — no "publish later", no scaffold stage, no waiting on open items. A new article, app review, comparison or roundup is added to its `published.ts` allowlist **in the same run that finishes it** (all 9 locales + risk gate), so the first deploy serves it indexable and in the sitemap. Open items and risk findings go into the report as notes; they are never a reason to hold indexing back. `noindex` is only for utility pages (`/download`, `/waitlist`, `/unsubscribed`, `/not-found`) and genuine stubs with no content. Deploy stays on demand ([Deployments are on demand] below), but the *indexable* state must already be on main.
+
 Summary of non-negotiable rules:
 - **Answer-first:** Lead every section with the direct answer or key fact. Explanation follows.
 - **Structure:** Use H2/H3 headings, bullet lists, short paragraphs (≤3 sentences each).
