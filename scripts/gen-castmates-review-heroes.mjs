@@ -19,15 +19,15 @@ const article = mod.exports.article
 const stripMd = (s) => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\s+/g, ' ').trim()
 
 const L = {
-  en: { hl: ['Chats run on your iPhone', '32 ready-made characters', 'No account needed'], price: 'Price', priceV: 'Freemium', lic: 'License', licV: 'Closed source', plat: 'Platforms', footer: 'PromptQuorum Guide' },
-  de: { hl: ['Chats laufen auf dem iPhone', '32 fertige Charaktere', 'Kein Konto nötig'], price: 'Preis', priceV: 'Freemium', lic: 'Lizenz', licV: 'Closed Source', plat: 'Plattformen', footer: 'PromptQuorum-Leitfaden' },
-  fr: { hl: ['Chats sur votre iPhone', '32 personnages prêts', 'Aucun compte requis'], price: 'Prix', priceV: 'Freemium', lic: 'Licence', licV: 'Code fermé', plat: 'Plateformes', footer: 'Guide PromptQuorum' },
-  es: { hl: ['Chats en tu iPhone', '32 personajes listos', 'Sin cuenta'], price: 'Precio', priceV: 'Freemium', lic: 'Licencia', licV: 'Código cerrado', plat: 'Plataformas', footer: 'Guía de PromptQuorum' },
-  ja: { hl: ['iPhone上で会話を生成', '32体のキャラクター', 'アカウント不要'], price: '価格', priceV: 'フリーミアム', lic: 'ライセンス', licV: 'クローズドソース', plat: '対応プラットフォーム', footer: 'PromptQuorumガイド' },
-  zh: { hl: ['聊天在 iPhone 上运行', '内置 32 个角色', '无需账号'], price: '价格', priceV: '免费增值', lic: '许可证', licV: '闭源', plat: '支持平台', footer: 'PromptQuorum 指南' },
-  pt: { hl: ['Chats no seu iPhone', '32 personagens prontos', 'Sem conta'], price: 'Preço', priceV: 'Freemium', lic: 'Licença', licV: 'Código fechado', plat: 'Plataformas', footer: 'Guia PromptQuorum' },
-  ar: { hl: ['الدردشة على iPhone', '32 شخصية جاهزة', 'دون حساب'], price: 'السعر', priceV: 'مجاني جزئيًا', lic: 'الترخيص', licV: 'مغلق المصدر', plat: 'المنصات', footer: 'دليل PromptQuorum' },
-  ko: { hl: ['iPhone에서 채팅 실행', '기본 캐릭터 32종', '계정 불필요'], price: '가격', priceV: '부분 무료', lic: '라이선스', licV: '클로즈드 소스', plat: '플랫폼', footer: 'PromptQuorum 가이드' },
+  en: { hl: ['Chats run on your iPhone', '35 ready-made characters', 'No account needed'], price: 'Price', priceV: 'Freemium', lic: 'License', licV: 'Closed source', plat: 'Platforms', footer: 'PromptQuorum Guide' },
+  de: { hl: ['Chats laufen auf dem iPhone', '35 fertige Charaktere', 'Kein Konto nötig'], price: 'Preis', priceV: 'Freemium', lic: 'Lizenz', licV: 'Closed Source', plat: 'Plattformen', footer: 'PromptQuorum-Leitfaden' },
+  fr: { hl: ['Chats sur votre iPhone', '35 personnages prêts', 'Aucun compte requis'], price: 'Prix', priceV: 'Freemium', lic: 'Licence', licV: 'Code fermé', plat: 'Plateformes', footer: 'Guide PromptQuorum' },
+  es: { hl: ['Chats en tu iPhone', '35 personajes listos', 'Sin cuenta'], price: 'Precio', priceV: 'Freemium', lic: 'Licencia', licV: 'Código cerrado', plat: 'Plataformas', footer: 'Guía de PromptQuorum' },
+  ja: { hl: ['iPhone上で会話を生成', '35体のキャラクター', 'アカウント不要'], price: '価格', priceV: 'フリーミアム', lic: 'ライセンス', licV: 'クローズドソース', plat: '対応プラットフォーム', footer: 'PromptQuorumガイド' },
+  zh: { hl: ['聊天在 iPhone 上运行', '内置 35 个角色', '无需账号'], price: '价格', priceV: '免费增值', lic: '许可证', licV: '闭源', plat: '支持平台', footer: 'PromptQuorum 指南' },
+  pt: { hl: ['Chats no seu iPhone', '35 personagens prontos', 'Sem conta'], price: 'Preço', priceV: 'Freemium', lic: 'Licença', licV: 'Código fechado', plat: 'Plataformas', footer: 'Guia PromptQuorum' },
+  ar: { hl: ['الدردشة على iPhone', '35 شخصية جاهزة', 'دون حساب'], price: 'السعر', priceV: 'مجاني جزئيًا', lic: 'الترخيص', licV: 'مغلق المصدر', plat: 'المنصات', footer: 'دليل PromptQuorum' },
+  ko: { hl: ['iPhone에서 채팅 실행', '기본 캐릭터 35종', '계정 불필요'], price: '가격', priceV: '부분 무료', lic: '라이선스', licV: '클로즈드 소스', plat: '플랫폼', footer: 'PromptQuorum 가이드' },
 }
 
 let generated = 0
