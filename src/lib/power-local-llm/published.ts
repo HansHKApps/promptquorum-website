@@ -572,6 +572,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'on-device-ai-translator-review',
   // Castmates review (Mobile & Edge LLMs) — 2026-10-19
   'castmates-review',
+  // Pajdo review (Mobile & Edge LLMs) — 2026-10-26
+  'pajdo-review',
   // SurfSense review (RAG & Document Chat) — 2026-10-21
   'surfsense-review',
   // Strata review (Run & Serve, inference engine) — 2026-10-23

@@ -1114,6 +1114,7 @@ const HUB_THEMES: Array<{
       'on-device-ai-translator-review',
       'llamatik-review',
       'castmates-review',
+      'pajdo-review',
       'frankly-ai-review',
       'haplo-ai-review',
       'caelum-review',

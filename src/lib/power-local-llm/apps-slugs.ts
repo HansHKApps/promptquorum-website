@@ -195,6 +195,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'mlxhub':                                  'mlxhub',
   'local-ai-chat-pocket':                    'local-ai-chat-pocket',
   'castmates':                               'castmates',
+  'pajdo':                                   'pajdo',
   'frankly-ai':                              'frankly-ai',
   'haplo-ai':                                'haplo-ai',
   'pixlstash':                               'pixlstash',
