@@ -10,9 +10,11 @@
 // Last upstream update: 2026-10-26 (newer of latest release 2026-10-21 and last push) -> NOT stale (3-month rule).
 // Immich is NOT an LLM app: its "AI" is CLIP-style smart search and face recognition models in a separate machine-learning container. No chat, no LLM
 // features were found in the docs. Listed because the models run on the user's own server (same reasoning as PhotoPrism and Ente Photos).
-// Conflicts/gaps stated in the review rather than resolved: the docs pages read do not say outright that smart search is local (they say the model is
-// downloaded once and then needs no network unless version check is on); the docs call the ML hardware acceleration "experimental"; the Play data-safety
-// section and the Purchase page (buy.immich.app, client-rendered) could not be read, so purchase prices are not stated.
+// Stated in the review: the docs pages read do not say outright that smart search is local (they say the model is downloaded once and then needs no network
+// unless version check is on); the docs call the ML hardware acceleration "experimental"; the Purchase page (buy.immich.app, client-rendered) could not be
+// read, so purchase prices are not stated. Resolved 2026-10-26 from primary sources: the docs say the version check contacts GitHub, but the server source
+// (server/src/repositories/config.repository.ts) sends it to version.immich.cloud, the "Version Service" of the privacy policy; Android minSdk 26 (Android 8.0)
+// from mobile/android/app/build.gradle; Play data safety = no data shared with third parties, may collect photos/videos and device or other IDs, encrypted in transit.
 
 import type { ToolRecord } from './types'
 
@@ -21,7 +23,7 @@ export const app: ToolRecord = {
   name: 'Immich',
   categories: ['vision-ocr', 'local-search'],
   interfaces: ['web', 'mobile', 'cli'], // browser UI served by your own server, iOS and Android apps for backup and browsing, plus an immich CLI for bulk upload
-  locality: 'local', // library, smart-search and face-recognition models stay on your server (docs); optional outbound: GitHub version check, FUTO tile server (can be disabled), model downloads from Hugging Face
+  locality: 'local', // library, smart-search and face-recognition models stay on your server (docs); optional outbound: version check to version.immich.cloud, Immich tile server (can be disabled), model downloads from Hugging Face
   platforms: ['linux', 'ios', 'android', 'web'], // the server runs in Docker (64-bit Linux recommended; macOS/Windows via Docker Desktop are "possible but discouraged" per install/requirements); clients are the mobile apps and any browser
   worksWith: ['Docker', 'PostgreSQL', 'VectorChord', 'Google Takeout (immich-go)', 'OAuth/OIDC'], // install and overview docs
   engine: 'builtin', // CLIP smart search and face detection/recognition run in the bundled immich-machine-learning container; models download on first use (Hugging Face)

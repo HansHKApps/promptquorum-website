@@ -8,6 +8,8 @@
 // (app.alextran.immich, "Updated on Oct 20, 2026", 500K+ downloads). The request came from the site owner (link from localhosted.com), not from the Immich team: no maker comment exists.
 // Immich is NOT an LLM app: it has no chat or LLM feature in the docs read. Its "AI" is CLIP smart search and face recognition in a separate machine-learning container.
 // Last upstream update 2026-10-26 => no stale warning. The Purchase page (buy.immich.app) is client-rendered and unreadable here, so no purchase prices are stated.
+// Follow-up 2026-10-26: server source (server/src/repositories/config.repository.ts) sends the version check to https://version.immich.cloud/version, NOT GitHub as the docs say;
+// Android minSdk 26 = Android 8.0 (mobile/android/app/build.gradle); Play data safety: no data shared with third parties, may collect photos/videos + device or other IDs, encrypted in transit.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -150,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Item': 'Storage', 'What the sources say': 'Unix-compatible filesystem; thumbnails and transcodes add 10-20%; the database should sit on a local SSD, not a network share' },
           { 'Item': 'Docker', 'What the sources say': 'Docker with the Compose plugin; the old docker-compose command is not supported' },
           { 'Item': 'GPU', 'What the sources say': 'Optional for the ML container; the docs call the acceleration experimental' },
-          { 'Item': 'Phone', 'What the sources say': 'iOS 15.0 or later per the App Store; Android requirement not read' },
+          { 'Item': 'Phone', 'What the sources say': 'iOS 15.0 or later per the App Store; Android 8.0 (API level 26) or later per the [app build file](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)' },
         ],
         note: 'These minimums come from the project\'s docs; PromptQuorum did not measure indexing time or memory use on any hardware.',
       },
@@ -214,12 +216,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Data Flow and Privacy',
         content: [
           '**The docs say that once a smart-search model is downloaded, Immich needs no network connection unless the version check is enabled, and that reverse geocoding runs on your own server from GeoNames data.** Photos and the database therefore stay on your hardware unless you share them.',
-          'Outside requests named in the sources: model downloads from Hugging Face, the optional version check to GitHub, and map tiles. The privacy policy, last updated on 6 April 2026, lists a Tile Server and a Version Service that log request metadata (the requested tile or the user agent, the IP address and timing); it says the tile server is optional and can be disabled. Server-side email goes through an SMTP server you configure.',
+          'Outside requests named in the sources: model downloads from Hugging Face, the optional version check, which the [server source](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts) sends to Immich\'s own version service rather than to GitHub, and map tiles. The privacy policy, last updated on 6 April 2026, lists a Tile Server and a Version Service that log request metadata (the requested tile or the user agent, the IP address and timing); it says the tile server is optional and can be disabled. Server-side email goes through an SMTP server you configure. The Google Play listing declares that no data is shared with third parties, that photos and videos and device or other IDs may be collected, and that data is encrypted in transit.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'These are the project\'s declarations, not audit results. The docs and the policy name different services for the version check, and PromptQuorum has not inspected network traffic or the source code.',
+            text: 'These are the project\'s declarations, not audit results. The docs name GitHub for the version check, while the server source and the policy name Immich\'s own Version Service, and PromptQuorum has not inspected network traffic or read the rest of the source code.',
           },
         ],
       },
@@ -240,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Backups.** The docs warn that the database holds only metadata and that you must back up the upload folder yourself, and the README asks for a 3-2-1 backup plan.',
           '**Trash behaviour.** The FAQ says original files that were trashed are deleted when the trash is emptied in Immich.',
           '**Purchase terms.** The purchase page could not be read, so prices are not stated; the docs say purchasing is voluntary support.',
-          '**Mobile details.** The Android version requirement and the stores\' data-safety sections were not read.',
+          '**Store declarations.** The Google Play data-safety summary is the developer\'s own declaration, and the App Store privacy label was not read.',
         ],
       },
       vsAlternatives: {
@@ -480,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Punkt': 'Speicher', 'Angaben der Quellen': 'Unix-kompatibles Dateisystem; Vorschaubilder und Transkodierungen kommen mit 10–20 % hinzu; die Datenbank gehört auf eine lokale SSD, nicht auf eine Netzwerkfreigabe' },
           { 'Punkt': 'Docker', 'Angaben der Quellen': 'Docker mit dem Compose-Plugin; der alte Befehl docker-compose wird nicht unterstützt' },
           { 'Punkt': 'GPU', 'Angaben der Quellen': 'Für den ML-Container optional; die Dokumentation nennt die Beschleunigung experimentell' },
-          { 'Punkt': 'Smartphone', 'Angaben der Quellen': 'iOS 15.0 oder neuer laut App Store; die Android-Anforderung wurde nicht gelesen' },
+          { 'Punkt': 'Smartphone', 'Angaben der Quellen': 'iOS 15.0 oder neuer laut App Store; Android 8.0 (API-Level 26) oder neuer laut der [Build-Datei der App](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)' },
         ],
         note: 'Diese Mindestwerte stammen aus der Dokumentation des Projekts; PromptQuorum hat weder Indexierungsdauer noch Speicherbedarf auf irgendeiner Hardware gemessen.',
       },
@@ -544,12 +546,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenfluss und Datenschutz',
         content: [
           '**Laut Dokumentation braucht Immich nach dem Download eines Smart-Search-Modells keine Netzwerkverbindung, sofern die Versionsprüfung nicht aktiviert ist, und das Reverse-Geocoding läuft auf Ihrem eigenen Server mit Daten von GeoNames.** Fotos und Datenbank bleiben also auf Ihrer Hardware, solange Sie sie nicht freigeben.',
-          'In den Quellen genannte Anfragen nach außen: Modell-Downloads von Hugging Face, die optionale Versionsprüfung bei GitHub und Kartenkacheln. Die Datenschutzerklärung, zuletzt aktualisiert am 6. April 2026, führt einen Tile Server und einen Version Service auf, die Metadaten der Anfrage protokollieren (die angeforderte Kachel beziehungsweise den User-Agent, die IP-Adresse und den Zeitpunkt); der Tile Server sei optional und lasse sich deaktivieren. E-Mails des Servers laufen über einen SMTP-Server, den Sie selbst konfigurieren.',
+          'In den Quellen genannte Anfragen nach außen: Modell-Downloads von Hugging Face, die optionale Versionsprüfung, die der [Server-Quellcode](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts) an Immichs eigenen Versionsdienst statt an GitHub schickt und Kartenkacheln. Die Datenschutzerklärung, zuletzt aktualisiert am 6. April 2026, führt einen Tile Server und einen Version Service auf, die Metadaten der Anfrage protokollieren (die angeforderte Kachel beziehungsweise den User-Agent, die IP-Adresse und den Zeitpunkt); der Tile Server sei optional und lasse sich deaktivieren. E-Mails des Servers laufen über einen SMTP-Server, den Sie selbst konfigurieren. Der Google-Play-Eintrag gibt an, dass keine Daten an Dritte weitergegeben werden, Fotos und Videos sowie Geräte- oder andere IDs erhoben werden können und die Daten bei der Übertragung verschlüsselt sind.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Dies sind Erklärungen des Projekts, keine Prüfergebnisse. Dokumentation und Datenschutzerklärung nennen für die Versionsprüfung unterschiedliche Dienste, und PromptQuorum hat weder den Netzwerkverkehr noch den Quellcode untersucht.',
+            text: 'Dies sind Erklärungen des Projekts, keine Prüfergebnisse. Die Dokumentation nennt für die Versionsprüfung GitHub, während Server-Quellcode und Datenschutzerklärung Immichs eigenen Version Service nennen; PromptQuorum hat weder den Netzwerkverkehr untersucht noch den übrigen Quellcode gelesen.',
           },
         ],
       },
@@ -570,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Datensicherung.** Die Dokumentation warnt, dass die Datenbank nur Metadaten enthält und Sie den Upload-Ordner selbst sichern müssen, und die README verlangt einen 3-2-1-Backup-Plan.',
           '**Verhalten des Papierkorbs.** Laut FAQ werden Originaldateien im Papierkorb gelöscht, wenn der Papierkorb in Immich geleert wird.',
           '**Kaufbedingungen.** Die Kaufseite ließ sich nicht lesen, daher werden keine Preise genannt; laut Dokumentation ist der Kauf eine freiwillige Unterstützung.',
-          '**Mobile Details.** Die Android-Versionsanforderung und die Datensicherheitsangaben der Stores wurden nicht gelesen.',
+          '**Store-Angaben.** Die Datensicherheitsübersicht bei Google Play ist die eigene Erklärung des Entwicklers; das Datenschutzlabel im App Store wurde nicht gelesen.',
         ],
       },
       vsAlternatives: {
@@ -779,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Elemento': 'Almacenamiento', 'Qué dicen las fuentes': 'Sistema de archivos compatible con Unix; las miniaturas y las transcodificaciones añaden un 10-20%; la base de datos debería estar en un SSD local, no en un recurso de red' },
           { 'Elemento': 'Docker', 'Qué dicen las fuentes': 'Docker con el plugin Compose; el antiguo comando docker-compose no es compatible' },
           { 'Elemento': 'GPU', 'Qué dicen las fuentes': 'Opcional para el contenedor de ML; la documentación califica la aceleración de experimental' },
-          { 'Elemento': 'Móvil', 'Qué dicen las fuentes': 'iOS 15.0 o posterior según la App Store; no se consultó el requisito de Android' },
+          { 'Elemento': 'Móvil', 'Qué dicen las fuentes': 'iOS 15.0 o posterior según la App Store; Android 8.0 (nivel de API 26) o posterior según el [archivo de compilación de la app](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)' },
         ],
         note: 'Estos mínimos proceden de la documentación del proyecto; PromptQuorum no midió el tiempo de indexación ni el uso de memoria en ningún hardware.',
       },
@@ -843,12 +845,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Flujo de datos y privacidad',
         content: [
           '**La documentación dice que, una vez descargado un modelo de búsqueda inteligente, Immich no necesita conexión de red salvo que la comprobación de versión esté activada, y que la geocodificación inversa se ejecuta en tu propio servidor con datos de GeoNames.** Por tanto, las fotos y la base de datos permanecen en tu hardware mientras no las compartas.',
-          'Conexiones externas que nombran las fuentes: descargas de modelos desde Hugging Face, la comprobación de versión opcional hacia GitHub y las teselas de mapa. La política de privacidad, actualizada por última vez el 6 de abril de 2026, enumera un Tile Server y un Version Service que registran metadatos de las solicitudes (la tesela solicitada o el user agent, la dirección IP y la hora); indica que el servidor de teselas es opcional y se puede desactivar. El correo electrónico del servidor pasa por un servidor SMTP que configuras tú.',
+          'Conexiones externas que nombran las fuentes: descargas de modelos desde Hugging Face, la comprobación de versión opcional, que según el [código del servidor](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts) se envía al servicio de versiones propio de Immich y no a GitHub y las teselas de mapa. La política de privacidad, actualizada por última vez el 6 de abril de 2026, enumera un Tile Server y un Version Service que registran metadatos de las solicitudes (la tesela solicitada o el user agent, la dirección IP y la hora); indica que el servidor de teselas es opcional y se puede desactivar. El correo electrónico del servidor pasa por un servidor SMTP que configuras tú. La ficha de Google Play declara que no se comparten datos con terceros, que se pueden recopilar fotos y vídeos e identificadores del dispositivo u otros, y que los datos se cifran en tránsito.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Son declaraciones del proyecto, no resultados de una auditoría. La documentación y la política nombran servicios distintos para la comprobación de versión, y PromptQuorum no ha inspeccionado el tráfico de red ni el código fuente.',
+            text: 'Son declaraciones del proyecto, no resultados de una auditoría. La documentación nombra GitHub para la comprobación de versión, mientras que el código del servidor y la política nombran el Version Service propio de Immich; PromptQuorum no ha inspeccionado el tráfico de red ni ha leído el resto del código fuente.',
           },
         ],
       },
@@ -869,7 +871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Copias de seguridad.** La documentación advierte de que la base de datos solo guarda metadatos y de que debes hacer tú mismo la copia de la carpeta de subidas, y el README pide un plan de copias 3-2-1.',
           '**Comportamiento de la papelera.** Las preguntas frecuentes dicen que los archivos originales enviados a la papelera se eliminan cuando la vacías en Immich.',
           '**Condiciones de compra.** No se pudo leer la página de compra, así que no se indican precios; la documentación dice que comprar es un apoyo voluntario.',
-          '**Detalles del móvil.** No se consultaron el requisito de versión de Android ni las secciones de seguridad de los datos de las tiendas.',
+          '**Declaraciones de las tiendas.** El resumen de seguridad de los datos de Google Play es una declaración del propio desarrollador; la etiqueta de privacidad de la App Store no se consultó.',
         ],
       },
       vsAlternatives: {
@@ -1078,7 +1080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Élément': 'Stockage', 'Ce que disent les sources': 'Système de fichiers compatible Unix ; les miniatures et les transcodages ajoutent 10 à 20 % ; la base de données doit se trouver sur un SSD local, pas sur un partage réseau' },
           { 'Élément': 'Docker', 'Ce que disent les sources': 'Docker avec le plugin Compose ; l’ancienne commande docker-compose n’est pas prise en charge' },
           { 'Élément': 'GPU', 'Ce que disent les sources': 'Facultatif pour le conteneur d’apprentissage automatique ; la documentation qualifie l’accélération d’expérimentale' },
-          { 'Élément': 'Téléphone', 'Ce que disent les sources': 'iOS 15.0 ou ultérieur selon l’App Store ; prérequis Android non consulté' },
+          { 'Élément': 'Téléphone', 'Ce que disent les sources': 'iOS 15.0 ou ultérieur selon l’App Store ; Android 8.0 (niveau d’API 26) ou ultérieur selon le [fichier de build de l’application](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)' },
         ],
         note: 'Ces minimums viennent de la documentation du projet ; PromptQuorum n’a mesuré ni la durée d’indexation ni l’usage mémoire sur aucun matériel.',
       },
@@ -1142,12 +1144,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Flux de données et confidentialité',
         content: [
           '**Selon la documentation, une fois un modèle de recherche intelligente téléchargé, Immich n’a besoin d’aucune connexion réseau, sauf si la vérification de version est activée, et le géocodage inversé s’exécute sur votre propre serveur à partir des données GeoNames.** Les photos et la base de données restent donc sur votre matériel tant que vous ne les partagez pas.',
-          'Requêtes sortantes citées dans les sources : téléchargements de modèles depuis Hugging Face, vérification de version facultative auprès de GitHub et tuiles de carte. La politique de confidentialité, mise à jour le 6 avril 2026, mentionne un Tile Server et un Version Service qui consignent des métadonnées de requête (la tuile demandée ou l’agent utilisateur, l’adresse IP et l’horaire) ; elle précise que le serveur de tuiles est facultatif et peut être désactivé. Les e-mails envoyés par le serveur passent par un serveur SMTP que vous configurez.',
+          'Requêtes sortantes citées dans les sources : téléchargements de modèles depuis Hugging Face, vérification de version facultative, que le [code du serveur](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts) envoie au service de versions propre à Immich et non à GitHub et tuiles de carte. La politique de confidentialité, mise à jour le 6 avril 2026, mentionne un Tile Server et un Version Service qui consignent des métadonnées de requête (la tuile demandée ou l’agent utilisateur, l’adresse IP et l’horaire) ; elle précise que le serveur de tuiles est facultatif et peut être désactivé. Les e-mails envoyés par le serveur passent par un serveur SMTP que vous configurez. La fiche Google Play déclare qu’aucune donnée n’est partagée avec des tiers, que des photos et vidéos ainsi que des identifiants d’appareil ou autres peuvent être collectés, et que les données sont chiffrées en transit.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Ce sont des déclarations du projet, pas des résultats d’audit. La documentation et la politique citent des services différents pour la vérification de version, et PromptQuorum n’a inspecté ni le trafic réseau ni le code source.',
+            text: 'Ce sont des déclarations du projet, pas des résultats d’audit. La documentation cite GitHub pour la vérification de version, alors que le code du serveur et la politique citent le Version Service propre à Immich ; PromptQuorum n’a pas inspecté le trafic réseau ni lu le reste du code source.',
           },
         ],
       },
@@ -1168,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sauvegardes.** La documentation avertit que la base de données ne contient que des métadonnées et que vous devez sauvegarder vous-même le dossier d’envoi, et le README demande un plan de sauvegarde 3-2-1.',
           '**Comportement de la corbeille.** La FAQ indique que les fichiers originaux placés dans la corbeille sont supprimés quand la corbeille est vidée dans Immich.',
           '**Conditions d’achat.** La page d’achat n’a pas pu être lue ; les prix ne sont donc pas indiqués, et la documentation précise que l’achat est un soutien volontaire.',
-          '**Détails mobiles.** Le prérequis de version Android et les sections de sécurité des données des stores n’ont pas été consultés.',
+          '**Déclarations des stores.** Le résumé de sécurité des données de Google Play est une déclaration du développeur lui-même ; l’étiquette de confidentialité de l’App Store n’a pas été consultée.',
         ],
       },
       vsAlternatives: {
@@ -1377,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'ストレージ', '情報源の記載': 'Unix互換のファイルシステム。サムネイルとトランスコードで10～20%増え、データベースはネットワーク共有ではなくローカルSSDに置くべき' },
           { '項目': 'Docker', '情報源の記載': 'Composeプラグイン付きのDocker。従来のdocker-composeコマンドは非対応' },
           { '項目': 'GPU', '情報源の記載': 'MLコンテナでは任意。ドキュメントはこの高速化を実験的としている' },
-          { '項目': 'スマートフォン', '情報源の記載': 'App StoreによればiOS 15.0以降。Androidの要件は未確認' },
+          { '項目': 'スマートフォン', '情報源の記載': 'App StoreによればiOS 15.0以降。Androidは[アプリのビルドファイル](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)によればAndroid 8.0（APIレベル26）以降' },
         ],
         note: 'これらの最低要件はプロジェクトのドキュメントによるもので、PromptQuorumはどのハードウェアでもインデックス作成時間やメモリ使用量を計測していません。',
       },
@@ -1441,12 +1443,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'データの流れとプライバシー',
         content: [
           '**ドキュメントによれば、スマート検索のモデルを一度ダウンロードすれば、バージョン確認を有効にしない限りImmichにネットワーク接続は不要で、逆ジオコーディングはGeoNamesのデータを使って自分のサーバー上で実行されます。**そのため、共有しない限り、写真とデータベースは自分のハードウェアに留まります。',
-          '情報源が挙げる外部へのリクエストは、Hugging Faceからのモデルのダウンロード、GitHubへの任意のバージョン確認、地図タイルです。2026年4月6日更新のプライバシーポリシーは、リクエストのメタデータ（要求されたタイル、またはユーザーエージェント、IPアドレス、タイミング）を記録するタイルサーバーとバージョンサービスを挙げており、タイルサーバーは任意で無効にできると述べています。サーバー側のメール送信は、自分で設定したSMTPサーバーを経由します。',
+          '情報源が挙げる外部へのリクエストは、Hugging Faceからのモデルのダウンロード、[サーバーのソースコード](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts)によればGitHubではなくImmich自身のバージョンサービスに送られる任意のバージョン確認、地図タイルです。2026年4月6日更新のプライバシーポリシーは、リクエストのメタデータ（要求されたタイル、またはユーザーエージェント、IPアドレス、タイミング）を記録するタイルサーバーとバージョンサービスを挙げており、タイルサーバーは任意で無効にできると述べています。サーバー側のメール送信は、自分で設定したSMTPサーバーを経由します。Google Playの掲載情報は、第三者とのデータ共有はないこと、写真・動画およびデバイスなどのIDが収集される場合があること、データは転送中に暗号化されることを申告しています。',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'これらはプロジェクトの申告であり、監査結果ではありません。バージョン確認について、ドキュメントとポリシーは異なるサービスを挙げています。PromptQuorumはネットワーク通信もソースコードも調べていません。',
+            text: 'これらはプロジェクトの申告であり、監査結果ではありません。ドキュメントはバージョン確認の送信先としてGitHubを挙げていますが、サーバーのソースコードとポリシーはImmich自身のVersion Serviceを挙げています。PromptQuorumはネットワーク通信を調べておらず、ソースコードの残りも読んでいません。',
           },
         ],
       },
@@ -1467,7 +1469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**バックアップ。**ドキュメントは、データベースにはメタデータしか入らず、アップロード用フォルダーは自分でバックアップする必要があると警告しており、READMEは3-2-1バックアップ計画を求めています。',
           '**ゴミ箱の挙動。**FAQによれば、ゴミ箱に入れた元のファイルは、Immichでゴミ箱を空にすると削除されます。',
           '**購入条件。**購入ページを読めなかったため価格は記載していません。ドキュメントは、購入は任意の支援だと述べています。',
-          '**モバイルの詳細。**Androidのバージョン要件と、各ストアのデータセーフティの項目は確認していません。',
+          '**ストアの申告。**Google Playのデータセーフティの概要は開発者自身の申告であり、App Storeのプライバシーラベルは確認していません。',
         ],
       },
       vsAlternatives: {
@@ -1676,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Item': 'Armazenamento', 'O que dizem as fontes': 'Sistema de arquivos compatível com Unix; miniaturas e transcodificações somam 10-20%; o banco de dados deve ficar em um SSD local, não em um compartilhamento de rede' },
           { 'Item': 'Docker', 'O que dizem as fontes': 'Docker com o plugin Compose; o antigo comando docker-compose não é aceito' },
           { 'Item': 'GPU', 'O que dizem as fontes': 'Opcional para o contêiner de ML; a documentação chama a aceleração de experimental' },
-          { 'Item': 'Celular', 'O que dizem as fontes': 'iOS 15.0 ou posterior segundo a App Store; requisito do Android não consultado' },
+          { 'Item': 'Celular', 'O que dizem as fontes': 'iOS 15.0 ou posterior segundo a App Store; Android 8.0 (nível de API 26) ou posterior segundo o [arquivo de build do app](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)' },
         ],
         note: 'Esses mínimos vêm da documentação do projeto; a PromptQuorum não mediu o tempo de indexação nem o uso de memória em nenhum hardware.',
       },
@@ -1740,12 +1742,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxo de dados e privacidade',
         content: [
           '**A documentação diz que, depois de baixado um modelo de busca inteligente, o Immich não precisa de conexão de rede, a menos que a verificação de versão esteja ativada, e que a geocodificação reversa roda no seu próprio servidor a partir de dados do GeoNames.** Assim, as fotos e o banco de dados permanecem no seu hardware, a menos que você os compartilhe.',
-          'Requisições externas citadas nas fontes: downloads de modelos do Hugging Face, a verificação de versão opcional para o GitHub e os tiles de mapa. A política de privacidade, atualizada em 6 de abril de 2026, lista um Tile Server e um Version Service que registram metadados das requisições (o tile solicitado ou o user agent, o endereço IP e o horário); ela diz que o servidor de tiles é opcional e pode ser desativado. O e-mail enviado pelo servidor passa por um servidor SMTP que você configura.',
+          'Requisições externas citadas nas fontes: downloads de modelos do Hugging Face, a verificação de versão opcional, que o [código do servidor](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts) envia ao serviço de versões próprio do Immich e não ao GitHub e os tiles de mapa. A política de privacidade, atualizada em 6 de abril de 2026, lista um Tile Server e um Version Service que registram metadados das requisições (o tile solicitado ou o user agent, o endereço IP e o horário); ela diz que o servidor de tiles é opcional e pode ser desativado. O e-mail enviado pelo servidor passa por um servidor SMTP que você configura. A página do Google Play declara que nenhum dado é compartilhado com terceiros, que fotos e vídeos e identificadores do dispositivo ou outros podem ser coletados e que os dados são criptografados em trânsito.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Estas são declarações do projeto, não resultados de auditoria. A documentação e a política citam serviços diferentes para a verificação de versão, e a PromptQuorum não inspecionou o tráfego de rede nem o código-fonte.',
+            text: 'Estas são declarações do projeto, não resultados de auditoria. A documentação cita o GitHub para a verificação de versão, enquanto o código do servidor e a política citam o Version Service próprio do Immich; a PromptQuorum não inspecionou o tráfego de rede nem leu o restante do código-fonte.',
           },
         ],
       },
@@ -1766,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Backups.** A documentação avisa que o banco de dados guarda apenas metadados e que você mesmo deve fazer backup da pasta de uploads, e o README pede um plano de backup 3-2-1.',
           '**Comportamento da lixeira.** O FAQ diz que os arquivos originais que foram para a lixeira são excluídos quando a lixeira é esvaziada no Immich.',
           '**Termos de compra.** A página de compra não pôde ser lida, então os preços não são informados; a documentação diz que a compra é um apoio voluntário.',
-          '**Detalhes do celular.** O requisito de versão do Android e as seções de segurança de dados das lojas não foram consultados.',
+          '**Declarações das lojas.** O resumo de segurança de dados do Google Play é uma declaração do próprio desenvolvedor; o rótulo de privacidade da App Store não foi consultado.',
         ],
       },
       vsAlternatives: {
@@ -1975,7 +1977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'البند': 'التخزين', 'ما تقوله المصادر': 'نظام ملفات متوافق مع Unix؛ وتضيف الصور المصغّرة والتحويلات 10-20%؛ ويجب أن تكون قاعدة البيانات على SSD محلي لا على مجلد شبكي' },
           { 'البند': 'Docker', 'ما تقوله المصادر': 'Docker مع إضافة Compose؛ والأمر القديم docker-compose غير مدعوم' },
           { 'البند': 'وحدة GPU', 'ما تقوله المصادر': 'اختيارية لحاوية التعلّم الآلي؛ وتصف الوثائق التسريع بأنه تجريبي' },
-          { 'البند': 'الهاتف', 'ما تقوله المصادر': 'iOS 15.0 أو أحدث بحسب App Store؛ ولم نقرأ متطلبات Android' },
+          { 'البند': 'الهاتف', 'ما تقوله المصادر': 'iOS 15.0 أو أحدث بحسب App Store؛ وAndroid 8.0 (مستوى API 26) أو أحدث بحسب [ملف بناء التطبيق](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)' },
         ],
         note: 'هذه الحدود الدنيا من وثائق المشروع؛ ولم تقِس PromptQuorum زمن الفهرسة ولا استهلاك الذاكرة على أي عتاد.',
       },
@@ -2039,12 +2041,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تدفق البيانات والخصوصية',
         content: [
           '**تقول الوثائق إنه بعد تنزيل نموذج البحث الذكي لا يحتاج Immich إلى اتصال بالشبكة ما لم يُفعَّل فحص الإصدار، وإن الترميز الجغرافي العكسي يعمل على خادمك من بيانات GeoNames.** وبالتالي تبقى الصور وقاعدة البيانات على عتادك ما لم تشاركها.',
-          'الطلبات الخارجية المذكورة في المصادر: تنزيل النماذج من Hugging Face، وفحص الإصدار الاختياري إلى GitHub، وبلاطات الخرائط. وتسرد سياسة الخصوصية، التي حُدّثت آخر مرة في 6 أبريل 2026، خادم بلاطات (Tile Server) وخدمة إصدارات (Version Service) تسجّلان بيانات وصفية للطلب (البلاطة المطلوبة أو user agent، وعنوان IP، والتوقيت)؛ وتقول إن خادم البلاطات اختياري ويمكن تعطيله. ويمر البريد الإلكتروني من جهة الخادم عبر خادم SMTP تضبطه بنفسك.',
+          'الطلبات الخارجية المذكورة في المصادر: تنزيل النماذج من Hugging Face، وفحص الإصدار الاختياري الذي يرسله [الكود المصدري للخادم](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts) إلى خدمة الإصدارات الخاصة بـ Immich لا إلى GitHub، وبلاطات الخرائط. وتسرد سياسة الخصوصية، التي حُدّثت آخر مرة في 6 أبريل 2026، خادم بلاطات (Tile Server) وخدمة إصدارات (Version Service) تسجّلان بيانات وصفية للطلب (البلاطة المطلوبة أو user agent، وعنوان IP، والتوقيت)؛ وتقول إن خادم البلاطات اختياري ويمكن تعطيله. ويمر البريد الإلكتروني من جهة الخادم عبر خادم SMTP تضبطه بنفسك. وتصرّح صفحة Google Play بأن أي بيانات لا تُشارَك مع جهات خارجية، وبأنه قد تُجمع الصور ومقاطع الفيديو ومعرّفات الجهاز أو غيرها، وبأن البيانات مشفّرة أثناء النقل.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'هذه إفادات من المشروع وليست نتائج تدقيق. تسمّي الوثائق والسياسة خدمتين مختلفتين لفحص الإصدار، ولم تفحص PromptQuorum حركة الشبكة ولا الشيفرة المصدرية.',
+            text: 'هذه إفادات من المشروع وليست نتائج تدقيق. تذكر الوثائق GitHub لفحص الإصدار، بينما يذكر الكود المصدري للخادم وسياسة الخصوصية خدمة Version Service الخاصة بـ Immich؛ ولم تفحص PromptQuorum حركة الشبكة ولم تقرأ بقية الكود المصدري.',
           },
         ],
       },
@@ -2065,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**النسخ الاحتياطي.** تحذّر الوثائق من أن قاعدة البيانات تحتوي البيانات الوصفية فقط وأن عليك نسخ مجلد الرفع احتياطيًا بنفسك، ويطلب README خطة نسخ احتياطي بقاعدة 3-2-1.',
           '**سلوك سلة المحذوفات.** تقول الأسئلة الشائعة إن الملفات الأصلية التي نُقلت إلى سلة المحذوفات تُحذف عند إفراغ السلة في Immich.',
           '**شروط الشراء.** تعذّرت قراءة صفحة الشراء، لذا لا نذكر الأسعار؛ وتقول الوثائق إن الشراء دعم طوعي.',
-          '**تفاصيل الجوال.** لم نقرأ متطلبات إصدار Android ولا أقسام سلامة البيانات في المتاجر.',
+          '**إفادات المتاجر.** ملخص سلامة البيانات في Google Play هو إفادة من المطوّر نفسه، ولم نقرأ ملصق الخصوصية في App Store.',
         ],
       },
       vsAlternatives: {
@@ -2274,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '项目': '存储', '来源说明': '兼容 Unix 的文件系统；缩略图和转码文件会额外增加 10-20%；数据库应放在本地 SSD 上，而不是网络共享' },
           { '项目': 'Docker', '来源说明': '带 Compose 插件的 Docker；不支持旧版 docker-compose 命令' },
           { '项目': 'GPU', '来源说明': '对机器学习容器是可选项；文档称该加速功能为实验性' },
-          { '项目': '手机', '来源说明': '据 App Store，需要 iOS 15.0 或更高版本；Android 的要求未查阅' },
+          { '项目': '手机', '来源说明': '据 App Store，需要 iOS 15.0 或更高版本；据[应用的构建文件](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle)，Android 需要 8.0（API 级别 26）或更高版本' },
         ],
         note: '这些最低要求来自项目文档；PromptQuorum 没有在任何硬件上测量索引耗时或内存占用。',
       },
@@ -2338,12 +2340,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '数据流向与隐私',
         content: [
           '**文档称，智能搜索模型下载完成后，除非启用版本检查，Immich 无需网络连接；反向地理编码则在你自己的服务器上，基于 GeoNames 数据运行。**因此，除非你主动分享，照片和数据库都会留在你的硬件上。',
-          '来源中提到的对外请求有：从 Hugging Face 下载模型、可选的向 GitHub 的版本检查，以及地图瓦片。隐私政策（最后更新于 2026 年 4 月 6 日）列出了瓦片服务器（Tile Server）和版本服务（Version Service），它们会记录请求元数据（请求的瓦片或 user agent、IP 地址和时间）；政策称瓦片服务器是可选的，可以关闭。服务器端的电子邮件通过你自己配置的 SMTP 服务器发送。',
+          '来源中提到的对外请求有：从 Hugging Face 下载模型、可选的版本检查（据[服务器源码](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts)，它发往 Immich 自己的版本服务，而不是 GitHub），以及地图瓦片。隐私政策（最后更新于 2026 年 4 月 6 日）列出了瓦片服务器（Tile Server）和版本服务（Version Service），它们会记录请求元数据（请求的瓦片或 user agent、IP 地址和时间）；政策称瓦片服务器是可选的，可以关闭。服务器端的电子邮件通过你自己配置的 SMTP 服务器发送。Google Play 页面声明：不与第三方共享数据，可能收集照片和视频以及设备或其他 ID，数据在传输中加密。',
         ],
         callouts: [
           {
             type: 'note',
-            text: '这些是项目的声明，不是审计结果。文档和政策对版本检查所指的服务不同，PromptQuorum 没有检查网络流量或源代码。',
+            text: '这些是项目的声明，不是审计结果。文档称版本检查指向 GitHub，而服务器源码和隐私政策指向 Immich 自己的 Version Service；PromptQuorum 没有检查网络流量，也没有阅读其余源码。',
           },
         ],
       },
@@ -2364,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**备份。**文档提醒，数据库只保存元数据，上传文件夹必须由你自己备份，README 还建议采用 3-2-1 备份方案。',
           '**回收站行为。**常见问题称，在 Immich 中清空回收站时，已进入回收站的原始文件会被删除。',
           '**购买条款。**购买页面无法读取，因此未写出价格；文档称购买属于自愿支持。',
-          '**手机端细节。**Android 版本要求和各应用商店的数据安全部分均未查阅。',
+          '**商店声明。**Google Play 的数据安全摘要是开发者自己的声明，App Store 的隐私标签未查阅。',
         ],
       },
       vsAlternatives: {
@@ -2573,7 +2575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '저장소', '출처의 설명': 'Unix 호환 파일 시스템, 썸네일과 트랜스코드가 10-20% 추가, 데이터베이스는 네트워크 공유가 아닌 로컬 SSD에 두어야 함' },
           { '항목': 'Docker', '출처의 설명': 'Compose 플러그인이 있는 Docker, 이전 docker-compose 명령은 지원하지 않음' },
           { '항목': 'GPU', '출처의 설명': 'ML 컨테이너에는 선택 사항이며, 문서는 가속을 실험적 기능이라고 설명' },
-          { '항목': '휴대폰', '출처의 설명': 'App Store 기준 iOS 15.0 이상, Android 요구 사항은 확인하지 않음' },
+          { '항목': '휴대폰', '출처의 설명': 'App Store 기준 iOS 15.0 이상, [앱의 빌드 파일](https://github.com/immich-app/immich/blob/main/mobile/android/app/build.gradle) 기준 Android 8.0(API 레벨 26) 이상' },
         ],
         note: '이 최소 사양은 프로젝트 문서에 따른 것이며, PromptQuorum은 어떤 하드웨어에서도 인덱싱 시간이나 메모리 사용량을 측정하지 않았습니다.',
       },
@@ -2637,12 +2639,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '데이터 흐름과 개인정보',
         content: [
           '**문서에 따르면 스마트 검색 모델을 한 번 내려받은 뒤에는 버전 확인을 켜지 않는 한 Immich에 네트워크 연결이 필요 없으며, 역지오코딩은 GeoNames 데이터를 사용해 내 서버에서 실행됩니다.** 따라서 사진과 데이터베이스는 내가 공유하지 않는 한 내 하드웨어에 머뭅니다.',
-          '출처에 언급된 외부 요청은 Hugging Face의 모델 다운로드, GitHub로의 선택적 버전 확인, 지도 타일입니다. 2026년 4월 6일에 마지막으로 갱신된 개인정보 처리방침은 요청 메타데이터(요청한 타일 또는 user agent, IP 주소, 시간)를 기록하는 Tile Server와 Version Service를 나열하며, 타일 서버는 선택 사항이고 끌 수 있다고 밝힙니다. 서버 측 이메일은 내가 설정한 SMTP 서버를 통해 전송됩니다.',
+          '출처에 언급된 외부 요청은 Hugging Face의 모델 다운로드, [서버 소스 코드](https://github.com/immich-app/immich/blob/main/server/src/repositories/config.repository.ts)에 따르면 GitHub가 아니라 Immich 자체 버전 서비스로 보내지는 선택적 버전 확인, 지도 타일입니다. 2026년 4월 6일에 마지막으로 갱신된 개인정보 처리방침은 요청 메타데이터(요청한 타일 또는 user agent, IP 주소, 시간)를 기록하는 Tile Server와 Version Service를 나열하며, 타일 서버는 선택 사항이고 끌 수 있다고 밝힙니다. 서버 측 이메일은 내가 설정한 SMTP 서버를 통해 전송됩니다. Google Play 페이지는 제3자와 공유되는 데이터가 없고, 사진·동영상과 기기 또는 기타 ID가 수집될 수 있으며, 데이터가 전송 중 암호화된다고 밝힙니다.',
         ],
         callouts: [
           {
             type: 'note',
-            text: '이는 프로젝트의 선언이며 감사 결과가 아닙니다. 문서와 방침은 버전 확인에 대해 서로 다른 서비스를 언급하며, PromptQuorum은 네트워크 트래픽이나 소스 코드를 검사하지 않았습니다.',
+            text: '이는 프로젝트의 선언이며 감사 결과가 아닙니다. 문서는 버전 확인에 GitHub를 언급하지만 서버 소스 코드와 방침은 Immich 자체 Version Service를 언급하며, PromptQuorum은 네트워크 트래픽을 검사하지 않았고 나머지 소스 코드도 읽지 않았습니다.',
           },
         ],
       },
@@ -2663,7 +2665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**백업.** 문서는 데이터베이스에 메타데이터만 있으므로 업로드 폴더를 직접 백업해야 한다고 경고하며, README는 3-2-1 백업 계획을 요구합니다.',
           '**휴지통 동작.** FAQ에 따르면 휴지통에 넣은 원본 파일은 Immich에서 휴지통을 비울 때 삭제됩니다.',
           '**구매 조건.** 구매 페이지를 읽을 수 없어 가격은 밝히지 않았으며, 문서는 구매가 자발적 후원이라고 설명합니다.',
-          '**모바일 세부 사항.** Android 버전 요구 사항과 스토어의 데이터 보안 항목은 확인하지 않았습니다.',
+          '**스토어 선언.** Google Play의 데이터 보안 요약은 개발자 자신의 선언이며, App Store의 개인정보 라벨은 확인하지 않았습니다.',
         ],
       },
       vsAlternatives: {
