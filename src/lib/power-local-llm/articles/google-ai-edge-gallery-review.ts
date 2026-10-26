@@ -9,16 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-en.webp',
     title: 'Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone',
-    seoTitle: 'Google AI Edge Gallery Review: iOS Gemma App',
+    seoTitle: 'Google AI Edge Gallery Review: iPhone, iPad & Mac App',
     intro:
-      'Google AI Edge Gallery is a free app from [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) that runs open-source AI models entirely on an iPhone, iPad, or Mac, using Google\'s [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) on-device inference runtime. This review covers the iOS App Store listing specifically (App Store ID 6749645337, version 1.0.10, 4.0 stars from 160+ ratings as of this review) — a companion to [Google AI Edge Gallery\'s entry in the Local LLM Software Directory](/directory). The app is the consumer front end for a broader open-source project, [google-ai-edge/gallery on GitHub](https://github.com/google-ai-edge/gallery), which also ships on Android and as a direct APK download — this review does not evaluate the Android build. On iOS it runs Google\'s Gemma model family, including the current Gemma 4 generation, fully offline once a model is downloaded, and lets users import additional models from [Hugging Face](https://huggingface.co/) in LiteRT format. The practical question for a reader comparing on-device iPhone apps is how a free, Google-maintained, officially "experimental Beta" app compares with paid, more polished alternatives like [Private LLM](/power-local-llm/private-llm-review) or free ones like [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
+      'Google AI Edge Gallery is a free app from [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) that runs open-source AI models entirely on an iPhone, iPad, or Mac, using Google\'s [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) on-device inference runtime. This review covers the iOS App Store listing specifically (App Store ID 6749645337, version 1.0.13, 4.1 stars from 165 ratings as of 2026-10-26) — a companion to [Google AI Edge Gallery\'s entry in the Local LLM Software Directory](/directory). The app is the consumer front end for a broader open-source project, [google-ai-edge/gallery on GitHub](https://github.com/google-ai-edge/gallery), which also ships on Android (Google Play and a direct APK) and as a separate macOS DMG — this review does not evaluate the Android build. On iOS it runs Google\'s Gemma model family, including the current Gemma 4 generation, fully offline once a model is downloaded, and lets users import additional models from [Hugging Face](https://huggingface.co/) in LiteRT format. The practical question for a reader comparing on-device iPhone apps is how a free, Google-maintained, officially "experimental Beta" app compares with paid, more polished alternatives like [Private LLM](/power-local-llm/private-llm-review) or free ones like [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
     metaDescription:
-      'Google AI Edge Gallery review 2026: free iOS app (App Store ID 6749645337), Gemma 4 on-device chat via LiteRT-LM, 4.0 stars/160+ ratings. Features, privacy, and how it compares to Private LLM and PocketPal AI.',
+      'Google AI Edge Gallery review: free iPhone, iPad and Mac app (v1.0.13) that runs Gemma 4 on-device. Features, privacy label and a PocketPal AI comparison.',
     twitterDescription:
       'Google AI Edge Gallery review 2026: Google\'s free iOS app for running Gemma 4 fully on-device via LiteRT-LM. Features, the App Store privacy label, and how it stacks up against Private LLM and PocketPal AI.',
     audience:
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Also available as an open-source Android app and direct APK at github.com/google-ai-edge/gallery — this review covers the iOS listing only.',
           'App Store privacy label lists device ID, performance data, and diagnostics as collected — chat content itself stays on-device, but this is not a "zero data" app.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery is a free iOS app (App Store ID 6749645337, version 1.0.10) that runs Gemma 4 and other open-source models entirely on-device via Google\'s LiteRT-LM runtime, labeled an "experimental Beta" by Google.',
+            text: 'Google AI Edge Gallery is a free iOS app (App Store ID 6749645337, version 1.0.13) that runs Gemma 4 and other open-source models entirely on-device via Google\'s LiteRT-LM runtime, labeled an "experimental Beta" by Google.',
           },
           {
             type: 'plain-terms',
@@ -90,9 +90,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Price: free on the [Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337); no subscription and no in-app purchases.',
-          'Developer: Google LLC, current version 1.0.10 (released September 4, 2026), rated 4.0 out of 5 from 160+ ratings.',
+          'Developer: Google LLC, current App Store version 1.0.13 (released October 8, 2026), rated 4.1 out of 5 from 165 ratings; last upstream activity on GitHub on October 26, 2026.',
           'Platforms (iOS listing): iPhone and iPad on iOS 17.0+, Mac on macOS 14.0+ with Apple M1 or later, and Apple Vision Pro on visionOS 1.0+.',
-          'Models: Gemma 4 family (E2B, E4B, 26B, 31B, and the multimodal 12B Unified variant), plus Gemma 3n; custom models can be imported from Hugging Face in LiteRT format.',
+          'Models: Gemma 4 family (E2B, E4B, 26B, 31B, and the multimodal 12B Unified variant), plus Gemma 3n, EmbeddingGemma 2 for media search and FunctionGemma 270m finetunes for Mobile Actions; custom models can be imported from Hugging Face in LiteRT format.',
           'Open source: the underlying project, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), is Apache 2.0 licensed and also ships on Android and as a direct APK — this review covers the iOS App Store build.',
           'Status: Google\'s own GitHub README describes the project as an "experimental Beta release."',
           'Privacy: the App Store privacy label lists device ID, performance data, and diagnostics as data linked to identity, plus coarse location, product interaction, and crash reports as data not linked to identity — chat prompts run on-device, but this is not a zero-telemetry app.',
@@ -103,8 +103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Google AI Edge Gallery Is',
         content: [
           '**Google AI Edge Gallery is Google\'s own showcase app for running open-source generative AI models directly on a phone, tablet, or Mac, with no server round-trip for inference.** It is built on [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM), Google\'s production inference framework for large language models on edge devices, which itself succeeded the older MediaPipe LLM Inference API used by earlier versions of the project.',
-          'The iOS listing reviewed here is [Google AI Edge Gallery on the Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App Store ID 6749645337), developed and published by Google LLC, currently at version 1.0.10 and rated 4.0 out of 5 stars from more than 160 ratings. It is a free download with no subscription tier.',
-          'This same app is one distribution channel of a larger open-source project, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), which Google describes as "the premier destination for running the world\'s most powerful open-source Large Language Models (LLMs) on your mobile device." That project also ships an Android build (via Google Play and direct APK download) and desktop builds. Google\'s own project documentation labels the whole effort an **"experimental Beta release"** rather than a finished consumer product — a distinction this review treats as material, not a formality, given that Google AI Edge Gallery is compared throughout this cluster against apps built specifically as polished consumer products.',
+          'The iOS listing reviewed here is [Google AI Edge Gallery on the Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App Store ID 6749645337), developed and published by Google LLC, currently at version 1.0.13 and rated 4.1 out of 5 stars from 165 ratings. It is a free download with no subscription tier.',
+          'This same app is one distribution channel of a larger open-source project, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), which Google describes as "the premier destination for running the world\'s most powerful open-source Large Language Models (LLMs) on your mobile device." That project also ships an Android build (via Google Play and direct APK download) and a macOS DMG. Google\'s own project documentation labels the whole effort an **"experimental Beta release"** rather than a finished consumer product — a distinction this review treats as material, not a formality, given that Google AI Edge Gallery is compared throughout this cluster against apps built specifically as polished consumer products.',
         ],
       },
       getItCTA: {
@@ -125,7 +125,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Platform': 'Mac',
             'Where to get it': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'Notes': 'Same App Store listing; requires macOS 14.0+ and Apple M1 or later.',
+            'Notes': 'Same App Store listing, which Apple marks "Not verified for macOS"; requires macOS 14.0+ and Apple M1 or later.',
+          },
+          {
+            'Platform': 'Mac (direct)',
+            'Where to get it': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            'Notes': 'DMG linked from the project README; a separate build from the App Store listing and not tested for this review.',
           },
           {
             'Platform': 'Apple Vision Pro',
@@ -134,16 +139,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Platform': 'Android',
-            'Where to get it': '[google-ai-edge/gallery on GitHub](https://github.com/google-ai-edge/gallery)',
-            'Notes': 'A separate build of the same open-source project, distributed via Google Play or a direct APK — not covered by this review.',
+            'Where to get it': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) or [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            'Notes': 'A separate build of the same open-source project; the README requires Android 12 or later. The APK is the fallback for devices without Google Play. Not covered by this review.',
           },
           {
             'Platform': 'Source code',
             'Where to get it': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             'Notes': 'Apache 2.0 license; the repository behind every distribution channel above.',
           },
+          {
+            'Platform': 'Website',
+            'Where to get it': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            'Notes': 'The App Store "Developer website" link points here; no separate product site was found. Background documentation: [Google AI Edge](https://ai.google.dev/edge).',
+          },
+          {
+            'Platform': 'Privacy policy',
+            'Where to get it': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            'Notes': 'Google\'s general privacy policy, as linked from the App Store listing; no separate app-specific policy was found.',
+          },
         ],
-        note: 'App Store availability, pricing, and version numbers can change without notice. Confirm the current listing on the [App Store page](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) before installing. Verified for this review on 2026-09-12.',
+        note: 'App Store availability, pricing, and version numbers can change without notice. Confirm the current listing on the [App Store page](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) before installing. Verified for this review on 2026-10-26.',
       },
       models: {
         id: 'models',
@@ -151,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery centers on Google\'s Gemma model family, currently the Gemma 4 generation released April 2, 2026.** Gemma 4 ships in multiple sizes — E2B and E4B (designed for phones), a 26B mixture-of-experts variant, a 31B variant, and a multimodal **Gemma 4 12B Unified** model that handles text, image, and (per Google\'s own documentation) audio input in a single architecture. The app also supports **Gemma 3n**, an earlier Gemma release, which added audio understanding to the on-device stack before Gemma 4 shipped.',
           'Beyond the bundled Gemma models, the app lets users **import their own models from Hugging Face in LiteRT format**, using a model-card URL inside the app\'s model-management screen. Google\'s own project documentation confirms this Hugging Face integration exists for model discovery and download, but does not spell out details like whether a Hugging Face access token is required for gated model repositories — this review treats that as unconfirmed rather than assuming a specific token flow, and readers should check the current in-app instructions before attempting to import a gated model.',
-          'Feature-wise, the app packages several distinct modes around these models: **AI Chat with Thinking Mode** (which surfaces the model\'s intermediate reasoning steps), **Ask Image** (multimodal analysis of a photo from the camera or gallery), **Audio Scribe** (on-device speech transcription and translation), **Agent Skills** (external tool access, such as a Wikipedia lookup, layered on top of the base model), and a **model management and benchmarking** screen for comparing download size and on-device performance across models before committing to one.',
+          'Feature-wise, the app packages several distinct modes around these models: **AI Chat with Thinking Mode** (which surfaces the model\'s intermediate reasoning steps, starting with the Gemma 4 family), **Ask Image** (multimodal analysis of a photo from the camera or gallery), **Audio Scribe** (on-device speech transcription and translation), **Agent Skills** (external tools such as Wikipedia lookups, interactive maps and visual summary cards, layered on top of the base model), **Instant Media Search** and **Video Moment Finder** (natural-language search of photos and videos, powered by EmbeddingGemma 2), **Prompt Lab** (single-turn prompt tests with temperature and top-k controls), **Mobile Actions** and **Tiny Garden** (offline device controls and an experimental mini-game, both built on a FunctionGemma 270m finetune), and a **model management and benchmarking** screen for comparing download size and on-device performance across models before committing to one. The listing and README describe the image features as analyzing or searching photos you already have; none is described as creating new images.',
         ],
       },
       platforms: {
@@ -168,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Platform': 'Mac',
             'What to expect': 'Requires macOS 14.0 or later with an Apple M1 chip or newer.',
-            'Important note': 'Same universal binary and App Store listing as the iPhone/iPad app; Intel Macs are not supported per the listed requirement.',
+            'Important note': 'Same App Store listing as the iPhone/iPad app; Intel Macs are not supported per the listed requirement. The project README also links a separate macOS DMG, which this review did not test.',
           },
           {
             'Platform': 'Apple Vision Pro',
@@ -177,12 +192,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Platform': 'Android',
-            'What to expect': 'A separate build of the same open-source project is available via Google Play (moved from GitHub-only to open beta on Google Play in a Google announcement dated September 9, 2025) or a direct APK from GitHub.',
+            'What to expect': 'A separate build of the same open-source project is available via Google Play (moved from GitHub-only to open beta on Google Play in a Google announcement dated September 9, 2025) or a direct APK from GitHub Releases (latest release 1.0.20, October 6, 2026), for Android 12 or later per the README.',
             'Important note': 'Not the same install as the iOS App Store app this review covers; do not assume iOS-specific behavior (e.g. the exact App Store privacy label) carries over to the Android build.',
           },
           {
             'Platform': 'The broader OSS project',
-            'What to expect': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) is Apache 2.0 licensed and spans Android, iOS, and desktop distribution.',
+            'What to expect': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) is Apache 2.0 licensed and spans Android, iOS, and macOS distribution.',
             'Important note': 'Google\'s own documentation labels the whole effort an "experimental Beta release" — this status applies across every platform, not just iOS.',
           },
         ],
@@ -193,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy: What the App Store Label Actually Says',
         content: [
           '**Inference happens on-device once a model is downloaded — chat prompts and model output are not sent to a Google server to generate a response.** That said, this is not the same claim as "the app collects no data," and this review treats those as two separate statements rather than conflating them.',
-          'Apple\'s privacy nutrition label for the [Google AI Edge Gallery App Store listing](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) states that **data linked to your identity** includes device ID, performance data, and diagnostics, and that **data not linked to your identity** includes coarse location, product interaction data, and crash reports. This is Apple\'s standard, developer-declared privacy label format, not an independent PromptQuorum audit of the app\'s network traffic.',
+          'Apple\'s privacy nutrition label for the [Google AI Edge Gallery App Store listing](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) states that **data linked to your identity** includes device ID, performance data, diagnostics, and unspecified other data types, and that **data not linked to your identity** includes coarse location, product interaction data, and crash reports. This is Apple\'s standard, developer-declared privacy label format, not an independent PromptQuorum audit of the app\'s network traffic.',
           'The practical distinction for a privacy-conscious reader: the content of your conversations and any images or audio you feed the model stay on the device during inference, but Google does collect telemetry-style data (device identifiers, performance/diagnostic data, coarse location, crash reports) about how the app itself is used. Readers who need a stricter "collects nothing at all" posture should compare this against [Private LLM](/power-local-llm/private-llm-review)\'s App Store privacy label, which states no data is collected from that app.',
         ],
         items: [
@@ -215,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**September 9, 2025.** Google\'s own [announcement blog post](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) confirmed the project moved from GitHub-only distribution to an open beta on the Google Play Store, and added audio support (speech-to-text and speech-to-translated-text) via Gemma 3n through the MediaPipe LLM Inference API. Google\'s own post states the project reached 500,000 APK downloads within two months of the GitHub launch, and described a future plan to "bring the app to iOS users."',
           '**April 2, 2026.** Google DeepMind released **Gemma 4** under the Apache 2.0 license, in E2B, E4B, 26B, and 31B sizes, with a later multimodal **Gemma 4 12B Unified** variant following on June 3, 2026.',
           '**iOS App Store availability.** Google AI Edge Gallery reached the App Store as [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App Store ID 6749645337), fulfilling the iOS plan announced in the September 2025 blog post; independent coverage described the app climbing into the top downloaded productivity apps on the App Store around the time of the Gemma 4 launch.',
-          '**Version 1.0.10 (September 4, 2026).** The current release as of this review, adding what its release notes describe as "global translation and localization support across 100 different countries" plus bug fixes.',
+          '**Version 1.0.13 (October 8, 2026).** The current App Store release as of this review, following 1.0.12 on October 6. The listing\'s feature text now names Agent Skills, Instant Media Search, Video Moment Finder, Mobile Actions and Tiny Garden; version 1.0.10 (September 4, 2026) had added what its release notes describe as "global translation and localization support across 100 different countries."',
         ],
         note: 'Version history and dates are sourced from Google\'s own developer blog and the project\'s GitHub repository. Confirm the current version and release notes directly in the App Store before relying on a specific feature being present.',
       },
@@ -328,18 +343,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is Google AI Edge Gallery free?',
-            a: 'Yes. The [App Store listing](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) is free to download, with no subscription and no in-app purchases, verified for this review on 2026-09-12.',
+            a: 'Yes. The [App Store listing](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) is free to download, with no subscription and no in-app purchases, verified for this review on 2026-10-26.',
           },
           {
             q: 'What models does Google AI Edge Gallery run?',
-            a: 'It runs Google\'s Gemma model family, currently the Gemma 4 generation (E2B, E4B, 26B, 31B, and the multimodal 12B Unified variant, released between April and June 2026), plus the earlier Gemma 3n. Users can also import custom models from Hugging Face in LiteRT format.',
+            a: 'It runs Google\'s Gemma model family, currently the Gemma 4 generation (E2B, E4B, 26B, 31B, and the multimodal 12B Unified variant, released between April and June 2026), plus the earlier Gemma 3n, EmbeddingGemma 2 for media search and FunctionGemma 270m finetunes for Mobile Actions. Users can also import custom models from Hugging Face in LiteRT format.',
           },
           {
             q: 'Does Google AI Edge Gallery work on Android too?',
-            a: 'Yes, but as a separate distribution. The underlying open-source project, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), ships an Android build via Google Play and direct APK download, in addition to the iOS App Store listing this review covers.',
+            a: 'Yes, but as a separate distribution. The underlying open-source project, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), ships an Android build via Google Play and direct APK download (Android 12 or later per the README), in addition to the iOS App Store listing this review covers.',
           },
           {
-            q: 'Does Google AI Edge Gallery collect my data?',
+            q: 'Is Google AI Edge Gallery private, and does it collect my data?',
             a: 'Chat prompts and model responses are processed on-device once a model is downloaded, but Apple\'s privacy label for the iOS listing states that device ID, performance data, and diagnostics are linked to your identity, and coarse location, product interaction data, and crash reports are collected without being linked to your identity. This is not a zero-data app, even though inference itself runs locally.',
           },
           {
@@ -356,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What devices does the iOS version support?',
-            a: 'Per the App Store listing: iPhone and iPad on iOS 17.0 or later, Mac on macOS 14.0 or later with an Apple M1 chip or newer, and Apple Vision Pro on visionOS 1.0 or later.',
+            a: 'Per the App Store listing: iPhone and iPad on iOS 17.0 or later, Mac on macOS 14.0 or later with an Apple M1 chip or newer (Apple marks it "Not verified for macOS"), and Apple Vision Pro on visionOS 1.0 or later. The listing names no minimum iPhone model or RAM, and the project README additionally links a separate macOS DMG.',
           },
           {
             q: 'How does Google AI Edge Gallery compare to Private LLM?',
@@ -365,6 +380,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Does Google AI Edge Gallery support audio and image input?',
             a: 'Yes, depending on the model loaded. Ask Image provides multimodal photo analysis, and Audio Scribe provides on-device speech transcription and translation; audio support in the underlying Gemma models started with Gemma 3n and continues in specific Gemma 4 sizes, including the 12B Unified variant.',
+          },
+          {
+            q: 'Can Google AI Edge Gallery generate images?',
+            a: 'No image-generation mode is listed on the [App Store page](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) or in the project README. Ask Image answers questions about photos you provide, and Instant Media Search and Video Moment Finder search your existing media; this review did not test the app for image generation.',
+          },
+          {
+            q: 'Which languages does Google AI Edge Gallery support?',
+            a: 'The App Store listing shows "English and 97 more" languages, and the version 1.0.10 release notes cite translation and localization support across 100 countries. Output quality in a given language depends on the model you load; this review did not test individual languages such as Arabic.',
+          },
+          {
+            q: 'How does Google AI Edge Gallery compare to PocketPal AI?',
+            a: 'Both are free and open source. Google AI Edge Gallery loads LiteRT-format models and adds Google-built modes such as Agent Skills and Thinking Mode, while [PocketPal AI](/power-local-llm/pocketpal-ai-review) loads any GGUF file you source yourself and is not tied to Gemma or LiteRT-LM. Choose Google AI Edge Gallery for Google\'s own models and features, and PocketPal AI for a wider model pool.',
           },
         ],
       },
@@ -382,6 +409,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[google-ai-edge/gallery on GitHub](https://github.com/google-ai-edge/gallery) — project overview, supported platforms, Hugging Face import, license, and beta status.',
           '[LiteRT-LM on GitHub](https://github.com/google-ai-edge/LiteRT-LM) — the on-device inference runtime the app is built on.',
           '[Google AI Edge Gallery announcement blog post](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — September 9, 2025 announcement of audio support and Google Play availability.',
+          '[Google Privacy Policy](https://policies.google.com/privacy) — the policy linked from the App Store listing.',
+          '[Google AI Edge documentation](https://ai.google.dev/edge) — background on the on-device runtime and tooling behind the app.',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — Android release 1.0.20 (October 6, 2026), APK assets and the macOS DMG link.',
         ],
       },
       relatedReading: {
@@ -400,16 +430,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-de.webp',
     title: 'Google-AI-Edge-Gallery-Rezension: Gemma 4 On-Device-Chat fürs iPhone',
-    seoTitle: 'Google-AI-Edge-Gallery-Rezension: iOS-Gemma-App',
+    seoTitle: 'Google-AI-Edge-Gallery-Rezension: iPhone, iPad & Mac',
     intro:
-      'Google AI Edge Gallery ist eine kostenlose App von [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), die Open-Source-KI-Modelle vollständig auf dem iPhone, iPad oder Mac ausführt — mithilfe von Googles [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)-Laufzeitumgebung für On-Device-Inferenz. Diese Rezension behandelt speziell den iOS-App-Store-Eintrag (App-Store-ID 6749645337, Version 1.0.10, 4,0 von 5 Sternen bei über 160 Bewertungen zum Zeitpunkt dieser Rezension) — als Begleitartikel zu [Google AI Edge Gallerys Eintrag im lokalen KI-Software-Verzeichnis](/de/directory). Die App ist die Nutzerfront eines größeren Open-Source-Projekts, [google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery), das auch für Android und als direkter APK-Download erhältlich ist — diese Bewertung prüft die Android-Version nicht. Auf iOS führt sie Googles Gemma-Modellfamilie aus, einschließlich der aktuellen Gemma-4-Generation, vollständig offline nach dem Herunterladen eines Modells, und erlaubt den Import zusätzlicher Modelle von [Hugging Face](https://huggingface.co/) im LiteRT-Format. Die praktische Frage für Leser, die On-Device-iPhone-Apps vergleichen, ist, wie eine kostenlose, von Google gepflegte, offiziell als „experimentelle Beta" bezeichnete App gegenüber kostenpflichtigen, ausgereifteren Alternativen wie [Private LLM](/de/power-local-llm/private-llm-review) oder kostenlosen wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) abschneidet.',
+      'Google AI Edge Gallery ist eine kostenlose App von [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), die Open-Source-KI-Modelle vollständig auf dem iPhone, iPad oder Mac ausführt — mithilfe von Googles [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)-Laufzeitumgebung für On-Device-Inferenz. Diese Rezension behandelt speziell den iOS-App-Store-Eintrag (App-Store-ID 6749645337, Version 1.0.13, 4,1 von 5 Sternen bei 165 Bewertungen, Stand 2026-10-26) — als Begleitartikel zu [Google AI Edge Gallerys Eintrag im lokalen KI-Software-Verzeichnis](/de/directory). Die App ist die Nutzerfront eines größeren Open-Source-Projekts, [google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery), das auch für Android (Google Play und direkte APK) sowie als separate macOS-DMG erhältlich ist — diese Bewertung prüft die Android-Version nicht. Auf iOS führt sie Googles Gemma-Modellfamilie aus, einschließlich der aktuellen Gemma-4-Generation, vollständig offline nach dem Herunterladen eines Modells, und erlaubt den Import zusätzlicher Modelle von [Hugging Face](https://huggingface.co/) im LiteRT-Format. Die praktische Frage für Leser, die On-Device-iPhone-Apps vergleichen, ist, wie eine kostenlose, von Google gepflegte, offiziell als „experimentelle Beta" bezeichnete App gegenüber kostenpflichtigen, ausgereifteren Alternativen wie [Private LLM](/de/power-local-llm/private-llm-review) oder kostenlosen wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) abschneidet.',
     metaDescription:
-      'Google-AI-Edge-Gallery-Rezension 2026: kostenlose iOS-App (App-Store-ID 6749645337), Gemma-4-Chat auf dem Gerät via LiteRT-LM, 4,0 Sterne/160+ Bewertungen. Funktionen, Datenschutz und Vergleich mit Private LLM und PocketPal AI.',
+      'Google-AI-Edge-Gallery-Rezension: kostenlose iPhone-, iPad- und Mac-App (v1.0.13) mit Gemma 4 auf dem Gerät. Funktionen, Datenschutz, PocketPal-Vergleich.',
     twitterDescription:
       'Google-AI-Edge-Gallery-Rezension 2026: Googles kostenlose iOS-App für Gemma 4 vollständig auf dem Gerät via LiteRT-LM. Funktionen, App-Store-Datenschutzlabel und Vergleich mit Private LLM und PocketPal AI.',
     audience:
@@ -444,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Auch als Open-Source-Android-App und direkte APK auf github.com/google-ai-edge/gallery verfügbar — diese Rezension behandelt nur die iOS-Version.',
           'App-Store-Datenschutzlabel nennt Geräte-ID, Leistungsdaten und Diagnosen als erfasst — Chat-Inhalte selbst bleiben auf dem Gerät, aber dies ist keine „Null-Daten"-App.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -472,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery ist eine kostenlose iOS-App (App-Store-ID 6749645337, Version 1.0.10), die Gemma 4 und andere Open-Source-Modelle vollständig auf dem Gerät über Googles LiteRT-LM-Laufzeitumgebung ausführt und von Google selbst als „experimentelle Beta" bezeichnet wird.',
+            text: 'Google AI Edge Gallery ist eine kostenlose iOS-App (App-Store-ID 6749645337, Version 1.0.13), die Gemma 4 und andere Open-Source-Modelle vollständig auf dem Gerät über Googles LiteRT-LM-Laufzeitumgebung ausführt und von Google selbst als „experimentelle Beta" bezeichnet wird.',
           },
           {
             type: 'plain-terms',
@@ -481,9 +511,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Preis: kostenlos im [Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337); kein Abonnement, keine In-App-Käufe.',
-          'Entwickler: Google LLC, aktuelle Version 1.0.10 (veröffentlicht 4. September 2026), bewertet mit 4,0 von 5 bei über 160 Bewertungen.',
+          'Entwickler: Google LLC, aktuelle App-Store-Version 1.0.13 (veröffentlicht am 8. Oktober 2026), bewertet mit 4,1 von 5 bei 165 Bewertungen; letzte Upstream-Aktivität auf GitHub am 26. Oktober 2026.',
           'Plattformen (iOS-Eintrag): iPhone und iPad ab iOS 17.0, Mac ab macOS 14.0 mit Apple M1 oder neuer, Apple Vision Pro ab visionOS 1.0.',
-          'Modelle: Gemma-4-Familie (E2B, E4B, 26B, 31B und die multimodale 12B-Unified-Variante) sowie Gemma 3n; eigene Modelle können im LiteRT-Format von Hugging Face importiert werden.',
+          'Modelle: Gemma-4-Familie (E2B, E4B, 26B, 31B und die multimodale 12B-Unified-Variante) sowie Gemma 3n, EmbeddingGemma 2 für die Mediensuche und FunctionGemma-270m-Finetunes für Mobile Actions; eigene Modelle können im LiteRT-Format von Hugging Face importiert werden.',
           'Open Source: das zugrunde liegende Projekt [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) steht unter Apache-2.0-Lizenz und erscheint auch für Android sowie als direkte APK — diese Rezension behandelt die iOS-App-Store-Version.',
           'Status: Googles eigenes GitHub-README beschreibt das Projekt als „experimentelle Beta-Version".',
           'Datenschutz: Das App-Store-Datenschutzlabel nennt Geräte-ID, Leistungsdaten und Diagnosen als mit der Identität verknüpfte Daten sowie ungefähren Standort, Produktinteraktionsdaten und Absturzberichte als nicht verknüpfte Daten — Chat-Eingaben laufen auf dem Gerät, aber dies ist keine telemetriefreie App.',
@@ -494,8 +524,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Google AI Edge Gallery ist',
         content: [
           '**Google AI Edge Gallery ist Googles eigene Showcase-App, um Open-Source-KI-Modelle direkt auf einem Smartphone, Tablet oder Mac auszuführen, ohne dass die Inferenz auf einen Server geht.** Sie basiert auf [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM), Googles produktionsreifer Inferenz-Laufzeitumgebung für große Sprachmodelle auf Edge-Geräten, die selbst die ältere MediaPipe-LLM-Inference-API früherer Projektversionen ablöste.',
-          'Die hier getestete iOS-Version ist [Google AI Edge Gallery im Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App-Store-ID 6749645337), entwickelt und veröffentlicht von Google LLC, derzeit Version 1.0.10, bewertet mit 4,0 von 5 Sternen bei über 160 Bewertungen. Der Download ist kostenlos, es gibt keine Abo-Stufe.',
-          'Dieselbe App ist ein Vertriebskanal eines größeren Open-Source-Projekts, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), das Google als „das führende Ziel, um die leistungsstärksten Open-Source-Sprachmodelle der Welt auf dem eigenen Mobilgerät auszuführen" beschreibt. Das Projekt bietet auch eine Android-Version (über Google Play und direkten APK-Download) sowie Desktop-Builds. Googles eigene Projektdokumentation bezeichnet das gesamte Vorhaben als **„experimentelle Beta-Version"** und nicht als fertiges Verbraucherprodukt — eine Unterscheidung, die diese Rezension als wesentlich und nicht als Formalität behandelt, da Google AI Edge Gallery in diesem Cluster durchgehend mit Apps verglichen wird, die gezielt als ausgereifte Verbraucherprodukte gebaut wurden.',
+          'Die hier getestete iOS-Version ist [Google AI Edge Gallery im Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App-Store-ID 6749645337), entwickelt und veröffentlicht von Google LLC, derzeit Version 1.0.13, bewertet mit 4,1 von 5 Sternen bei 165 Bewertungen. Der Download ist kostenlos, es gibt keine Abo-Stufe.',
+          'Dieselbe App ist ein Vertriebskanal eines größeren Open-Source-Projekts, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), das Google als „das führende Ziel, um die leistungsstärksten Open-Source-Sprachmodelle der Welt auf dem eigenen Mobilgerät auszuführen" beschreibt. Das Projekt bietet auch eine Android-Version (über Google Play und direkten APK-Download) sowie eine macOS-DMG. Googles eigene Projektdokumentation bezeichnet das gesamte Vorhaben als **„experimentelle Beta-Version"** und nicht als fertiges Verbraucherprodukt — eine Unterscheidung, die diese Rezension als wesentlich und nicht als Formalität behandelt, da Google AI Edge Gallery in diesem Cluster durchgehend mit Apps verglichen wird, die gezielt als ausgereifte Verbraucherprodukte gebaut wurden.',
         ],
       },
       getItCTA: {
@@ -516,7 +546,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Mac',
             'Wo man sie bekommt': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'Hinweise': 'Derselbe App-Store-Eintrag; erfordert macOS 14.0+ und Apple M1 oder neuer.',
+            'Hinweise': 'Derselbe App-Store-Eintrag, den Apple mit „Not verified for macOS" kennzeichnet; erfordert macOS 14.0+ und Apple M1 oder neuer.',
+          },
+          {
+            'Plattform': 'Mac (direkt)',
+            'Wo man sie bekommt': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            'Hinweise': 'DMG, die im Projekt-README verlinkt ist; ein vom App-Store-Eintrag getrennter Build, für diese Rezension nicht getestet.',
           },
           {
             'Plattform': 'Apple Vision Pro',
@@ -525,16 +560,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plattform': 'Android',
-            'Wo man sie bekommt': '[google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery)',
-            'Hinweise': 'Eine separate Version desselben Open-Source-Projekts über Google Play oder direkte APK — nicht Teil dieser Rezension.',
+            'Wo man sie bekommt': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) oder [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            'Hinweise': 'Eine separate Version desselben Open-Source-Projekts; laut README ist Android 12 oder neuer erforderlich. Die APK ist die Alternative für Geräte ohne Google Play. Nicht Teil dieser Rezension.',
           },
           {
             'Plattform': 'Quellcode',
             'Wo man sie bekommt': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             'Hinweise': 'Apache-2.0-Lizenz; das Repository hinter allen oben genannten Vertriebskanälen.',
           },
+          {
+            'Plattform': 'Website',
+            'Wo man sie bekommt': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            'Hinweise': 'Der Link „Developer website" im App Store führt hierher; eine eigene Produktwebsite wurde nicht gefunden. Hintergrunddokumentation: [Google AI Edge](https://ai.google.dev/edge).',
+          },
+          {
+            'Plattform': 'Datenschutzerklärung',
+            'Wo man sie bekommt': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            'Hinweise': 'Googles allgemeine Datenschutzerklärung, wie im App-Store-Eintrag verlinkt; eine eigene App-Erklärung wurde nicht gefunden.',
+          },
         ],
-        note: 'Verfügbarkeit, Preise und Versionsnummern im App Store können sich ohne Vorankündigung ändern. Prüfen Sie den aktuellen Eintrag auf der [App-Store-Seite](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), bevor Sie installieren. Verifiziert für diese Rezension am 2026-09-12.',
+        note: 'Verfügbarkeit, Preise und Versionsnummern im App Store können sich ohne Vorankündigung ändern. Prüfen Sie den aktuellen Eintrag auf der [App-Store-Seite](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), bevor Sie installieren. Verifiziert für diese Rezension am 2026-10-26.',
       },
       models: {
         id: 'models',
@@ -542,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery konzentriert sich auf Googles Gemma-Modellfamilie, aktuell die am 2. April 2026 veröffentlichte Gemma-4-Generation.** Gemma 4 erscheint in mehreren Größen — E2B und E4B (für Smartphones konzipiert), eine 26B-Mixture-of-Experts-Variante, eine 31B-Variante sowie ein multimodales **Gemma 4 12B Unified**-Modell, das laut Googles eigener Dokumentation Text-, Bild- und Audioeingaben in einer einzigen Architektur verarbeitet. Die App unterstützt auch **Gemma 3n**, eine frühere Gemma-Version, die dem On-Device-Stack Audioverständnis hinzufügte, bevor Gemma 4 erschien.',
           'Über die mitgelieferten Gemma-Modelle hinaus können Nutzer **eigene Modelle von Hugging Face im LiteRT-Format importieren**, über eine Modellkarten-URL im Modellverwaltungsbildschirm der App. Googles eigene Projektdokumentation bestätigt diese Hugging-Face-Integration für Modellsuche und -download, macht aber keine Angaben zu Details wie einem eventuell erforderlichen Hugging-Face-Zugangstoken für gesperrte Modell-Repositories — diese Rezension behandelt das als unbestätigt statt einen bestimmten Token-Ablauf anzunehmen; Leser sollten die aktuellen App-Anleitungen prüfen, bevor sie ein gesperrtes Modell importieren.',
-          'Funktional bündelt die App mehrere Modi rund um diese Modelle: **AI Chat mit Thinking Mode** (zeigt die Zwischenschritte des Modell-Reasonings), **Ask Image** (multimodale Analyse eines Fotos aus Kamera oder Galerie), **Audio Scribe** (On-Device-Sprachtranskription und -übersetzung), **Agent Skills** (externer Werkzeugzugriff, etwa Wikipedia-Nachschlagen, oberhalb des Basismodells) und ein Bildschirm für **Modellverwaltung und Benchmarking**, um Downloadgröße und On-Device-Leistung verschiedener Modelle vor der Wahl zu vergleichen.',
+          'Funktional bündelt die App mehrere Modi rund um diese Modelle: **AI Chat mit Thinking Mode** (zeigt die Zwischenschritte des Modell-Reasonings, beginnend mit der Gemma-4-Familie), **Ask Image** (multimodale Analyse eines Fotos aus Kamera oder Galerie), **Audio Scribe** (On-Device-Sprachtranskription und -übersetzung), **Agent Skills** (externe Werkzeuge wie Wikipedia-Abfragen, interaktive Karten und visuelle Zusammenfassungskarten, oberhalb des Basismodells), **Instant Media Search** und **Video Moment Finder** (Suche in Fotos und Videos per natürlicher Sprache, auf Basis von EmbeddingGemma 2), **Prompt Lab** (Einzel-Prompt-Tests mit Temperatur- und Top-k-Reglern), **Mobile Actions** und **Tiny Garden** (Offline-Gerätesteuerung und ein experimentelles Minispiel, beide auf einem FunctionGemma-270m-Finetune) sowie ein Bildschirm für **Modellverwaltung und Benchmarking**, um Downloadgröße und On-Device-Leistung verschiedener Modelle vor der Wahl zu vergleichen. Eintrag und README beschreiben die Bildfunktionen als Analyse oder Suche in Fotos, die Sie bereits besitzen; keine wird als Erzeugung neuer Bilder beschrieben.',
         ],
       },
       platforms: {
@@ -559,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Mac',
             'Was Sie erwartet': 'Erfordert macOS 14.0 oder neuer mit einem Apple-M1-Chip oder neuer.',
-            'Wichtiger Hinweis': 'Derselbe universelle Binärcode und App-Store-Eintrag wie die iPhone/iPad-App; Intel-Macs werden laut Anforderung nicht unterstützt.',
+            'Wichtiger Hinweis': 'Derselbe App-Store-Eintrag wie die iPhone/iPad-App; Intel-Macs werden laut Anforderung nicht unterstützt. Das Projekt-README verlinkt zusätzlich eine separate macOS-DMG, die diese Rezension nicht getestet hat.',
           },
           {
             'Plattform': 'Apple Vision Pro',
@@ -568,12 +613,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plattform': 'Android',
-            'Was Sie erwartet': 'Eine separate Version desselben Open-Source-Projekts ist über Google Play verfügbar (laut Google-Ankündigung vom 9. September 2025 von reinem GitHub-Vertrieb zu Open Beta auf Google Play gewechselt) oder als direkte APK von GitHub.',
+            'Was Sie erwartet': 'Eine separate Version desselben Open-Source-Projekts ist über Google Play verfügbar (laut Google-Ankündigung vom 9. September 2025 von reinem GitHub-Vertrieb zu Open Beta auf Google Play gewechselt) oder als direkte APK aus GitHub Releases (aktuelle Version 1.0.20, 6. Oktober 2026), laut README ab Android 12.',
             'Wichtiger Hinweis': 'Nicht dieselbe Installation wie die iOS-App-Store-App dieser Rezension; iOS-spezifisches Verhalten (z. B. das genaue App-Store-Datenschutzlabel) ist nicht automatisch auf die Android-Version übertragbar.',
           },
           {
             'Plattform': 'Das größere OSS-Projekt',
-            'Was Sie erwartet': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) steht unter Apache-2.0-Lizenz und umfasst Android-, iOS- und Desktop-Vertrieb.',
+            'Was Sie erwartet': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) steht unter Apache-2.0-Lizenz und umfasst Android-, iOS- und macOS-Vertrieb.',
             'Wichtiger Hinweis': 'Googles eigene Dokumentation bezeichnet das gesamte Vorhaben als „experimentelle Beta-Version" — dieser Status gilt für alle Plattformen, nicht nur iOS.',
           },
         ],
@@ -584,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz: Was das App-Store-Label wirklich sagt',
         content: [
           '**Die Inferenz erfolgt auf dem Gerät, sobald ein Modell heruntergeladen wurde — Chat-Eingaben und Modellausgaben werden nicht zur Antwortgenerierung an einen Google-Server gesendet.** Das ist jedoch nicht dieselbe Aussage wie „die App erfasst keine Daten", und diese Rezension behandelt diese beiden Aussagen getrennt statt sie zu vermischen.',
-          'Apples Datenschutz-Kennzeichnung für den [Google AI Edge Gallery App-Store-Eintrag](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) gibt an, dass **mit Ihrer Identität verknüpfte Daten** Geräte-ID, Leistungsdaten und Diagnosen umfassen und **nicht mit Ihrer Identität verknüpfte Daten** ungefähren Standort, Produktinteraktionsdaten und Absturzberichte umfassen. Dies ist Apples standardmäßiges, vom Entwickler selbst deklariertes Datenschutzlabel-Format, kein unabhängiges Audit des Netzwerkverkehrs der App durch PromptQuorum.',
+          'Apples Datenschutz-Kennzeichnung für den [Google AI Edge Gallery App-Store-Eintrag](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) gibt an, dass **mit Ihrer Identität verknüpfte Daten** Geräte-ID, Leistungsdaten, Diagnosen und nicht näher bezeichnete weitere Datentypen umfassen und **nicht mit Ihrer Identität verknüpfte Daten** ungefähren Standort, Produktinteraktionsdaten und Absturzberichte umfassen. Dies ist Apples standardmäßiges, vom Entwickler selbst deklariertes Datenschutzlabel-Format, kein unabhängiges Audit des Netzwerkverkehrs der App durch PromptQuorum.',
           'Der praktische Unterschied für datenschutzbewusste Leser: Der Inhalt Ihrer Gespräche sowie Bilder oder Audio, die Sie dem Modell geben, verbleiben während der Inferenz auf dem Gerät, aber Google erfasst weiterhin telemetrieartige Daten (Gerätekennungen, Leistungs-/Diagnosedaten, ungefährer Standort, Absturzberichte) darüber, wie die App selbst genutzt wird. Leser, die eine strengere „erfasst überhaupt nichts"-Haltung benötigen, sollten dies mit [Private LLMs](/de/power-local-llm/private-llm-review) App-Store-Datenschutzlabel vergleichen, das angibt, dass keine Daten von dieser App erfasst werden.',
         ],
         items: [
@@ -606,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**9. September 2025.** Googles eigener [Ankündigungs-Blogbeitrag](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) bestätigte den Wechsel von reinem GitHub-Vertrieb zu einer Open Beta im Google Play Store und fügte Audiounterstützung (Sprache-zu-Text und Sprache-zu-übersetztem-Text) über Gemma 3n via die MediaPipe-LLM-Inference-API hinzu. Googles eigener Beitrag gibt an, dass das Projekt innerhalb von zwei Monaten nach dem GitHub-Start 500.000 APK-Downloads erreichte, und beschrieb den Plan, „die App für iOS-Nutzer bereitzustellen".',
           '**2. April 2026.** Google DeepMind veröffentlichte **Gemma 4** unter Apache-2.0-Lizenz, in den Größen E2B, E4B, 26B und 31B, mit einer später folgenden multimodalen **Gemma 4 12B Unified**-Variante am 3. Juni 2026.',
           '**iOS-App-Store-Verfügbarkeit.** Google AI Edge Gallery erreichte den App Store als [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App-Store-ID 6749645337) und erfüllte damit den im September-2025-Blogbeitrag angekündigten iOS-Plan; unabhängige Berichterstattung beschrieb, wie die App um die Zeit des Gemma-4-Starts in die Top-Downloads unter Produktivitäts-Apps im App Store aufstieg.',
-          '**Version 1.0.10 (4. September 2026).** Die aktuelle Version zum Zeitpunkt dieser Rezension, die laut Release-Notes „globale Übersetzungs- und Lokalisierungsunterstützung für 100 verschiedene Länder" sowie Fehlerbehebungen hinzufügt.',
+          '**Version 1.0.13 (8. Oktober 2026).** Die aktuelle App-Store-Version zum Zeitpunkt dieser Rezension, nach 1.0.12 vom 6. Oktober. Der Funktionstext im Eintrag nennt nun Agent Skills, Instant Media Search, Video Moment Finder, Mobile Actions und Tiny Garden; Version 1.0.10 (4. September 2026) hatte laut Release-Notes „globale Übersetzungs- und Lokalisierungsunterstützung für 100 verschiedene Länder" ergänzt.',
         ],
         note: 'Versionsgeschichte und Daten stammen aus Googles eigenem Entwickler-Blog und dem GitHub-Repository des Projekts. Prüfen Sie die aktuelle Version und Release-Notes direkt im App Store, bevor Sie sich auf ein bestimmtes Feature verlassen.',
       },
@@ -719,18 +764,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist Google AI Edge Gallery kostenlos?',
-            a: 'Ja. Der [App-Store-Eintrag](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ist kostenlos herunterladbar, ohne Abonnement und ohne In-App-Käufe, verifiziert für diese Rezension am 2026-09-12.',
+            a: 'Ja. Der [App-Store-Eintrag](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ist kostenlos herunterladbar, ohne Abonnement und ohne In-App-Käufe, verifiziert für diese Rezension am 2026-10-26.',
           },
           {
             q: 'Welche Modelle führt Google AI Edge Gallery aus?',
-            a: 'Sie führt Googles Gemma-Modellfamilie aus, aktuell die Gemma-4-Generation (E2B, E4B, 26B, 31B und die multimodale 12B-Unified-Variante, veröffentlicht zwischen April und Juni 2026), sowie das frühere Gemma 3n. Nutzer können auch eigene Modelle im LiteRT-Format von Hugging Face importieren.',
+            a: 'Sie führt Googles Gemma-Modellfamilie aus, aktuell die Gemma-4-Generation (E2B, E4B, 26B, 31B und die multimodale 12B-Unified-Variante, veröffentlicht zwischen April und Juni 2026), sowie das frühere Gemma 3n, EmbeddingGemma 2 für die Mediensuche und FunctionGemma-270m-Finetunes für Mobile Actions. Nutzer können auch eigene Modelle im LiteRT-Format von Hugging Face importieren.',
           },
           {
             q: 'Funktioniert Google AI Edge Gallery auch auf Android?',
-            a: 'Ja, aber als separate Verteilung. Das zugrunde liegende Open-Source-Projekt [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) bietet eine Android-Version über Google Play und direkten APK-Download, zusätzlich zum iOS-App-Store-Eintrag dieser Rezension.',
+            a: 'Ja, aber als separate Verteilung. Das zugrunde liegende Open-Source-Projekt [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) bietet eine Android-Version über Google Play und direkten APK-Download (laut README ab Android 12), zusätzlich zum iOS-App-Store-Eintrag dieser Rezension.',
           },
           {
-            q: 'Erfasst Google AI Edge Gallery meine Daten?',
+            q: 'Ist Google AI Edge Gallery privat, und erfasst sie meine Daten?',
             a: 'Chat-Eingaben und Modellantworten werden nach dem Herunterladen eines Modells auf dem Gerät verarbeitet, aber Apples Datenschutzlabel für den iOS-Eintrag gibt an, dass Geräte-ID, Leistungsdaten und Diagnosen mit Ihrer Identität verknüpft sind und ungefährer Standort, Produktinteraktionsdaten und Absturzberichte erfasst werden, ohne mit Ihrer Identität verknüpft zu sein. Dies ist keine datenfreie App, auch wenn die Inferenz selbst lokal läuft.',
           },
           {
@@ -747,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Geräte unterstützt die iOS-Version?',
-            a: 'Laut App-Store-Eintrag: iPhone und iPad ab iOS 17.0, Mac ab macOS 14.0 mit Apple-M1-Chip oder neuer, und Apple Vision Pro ab visionOS 1.0.',
+            a: 'Laut App-Store-Eintrag: iPhone und iPad ab iOS 17.0, Mac ab macOS 14.0 mit Apple-M1-Chip oder neuer (Apple kennzeichnet sie mit „Not verified for macOS"), und Apple Vision Pro ab visionOS 1.0. Der Eintrag nennt weder ein Mindest-iPhone-Modell noch einen Mindest-RAM; das Projekt-README verlinkt zusätzlich eine separate macOS-DMG.',
           },
           {
             q: 'Wie schneidet Google AI Edge Gallery im Vergleich zu Private LLM ab?',
@@ -756,6 +801,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Unterstützt Google AI Edge Gallery Audio- und Bildeingaben?',
             a: 'Ja, je nach geladenem Modell. Ask Image bietet multimodale Fotoanalyse, und Audio Scribe bietet On-Device-Sprachtranskription und -übersetzung; Audiounterstützung in den zugrunde liegenden Gemma-Modellen begann mit Gemma 3n und setzt sich bei bestimmten Gemma-4-Größen fort, einschließlich der 12B-Unified-Variante.',
+          },
+          {
+            q: 'Kann Google AI Edge Gallery Bilder erzeugen?',
+            a: 'Ein Modus zur Bilderzeugung ist weder auf der [App-Store-Seite](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) noch im Projekt-README aufgeführt. Ask Image beantwortet Fragen zu Fotos, die Sie bereitstellen, und Instant Media Search sowie Video Moment Finder durchsuchen Ihre vorhandenen Medien; diese Rezension hat die App nicht auf Bilderzeugung getestet.',
+          },
+          {
+            q: 'Welche Sprachen unterstützt Google AI Edge Gallery?',
+            a: 'Der App-Store-Eintrag nennt „English and 97 more" Sprachen, und die Release-Notes zu Version 1.0.10 erwähnen Übersetzungs- und Lokalisierungsunterstützung für 100 Länder. Die Ausgabequalität in einer bestimmten Sprache hängt vom geladenen Modell ab; diese Rezension hat einzelne Sprachen wie Arabisch nicht getestet.',
+          },
+          {
+            q: 'Wie schneidet Google AI Edge Gallery im Vergleich zu PocketPal AI ab?',
+            a: 'Beide sind kostenlos und Open Source. Google AI Edge Gallery lädt Modelle im LiteRT-Format und ergänzt von Google entwickelte Modi wie Agent Skills und Thinking Mode, während [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) jede GGUF-Datei lädt, die Sie selbst beschaffen, und nicht an Gemma oder LiteRT-LM gebunden ist. Wählen Sie Google AI Edge Gallery für Googles eigene Modelle und Funktionen, PocketPal AI für einen größeren Modellpool.',
           },
         ],
       },
@@ -773,6 +830,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery) — Projektübersicht, unterstützte Plattformen, Hugging-Face-Import, Lizenz und Beta-Status.',
           '[LiteRT-LM auf GitHub](https://github.com/google-ai-edge/LiteRT-LM) — die On-Device-Inferenz-Laufzeitumgebung, auf der die App basiert.',
           '[Google AI Edge Gallery Ankündigungs-Blogpost](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — Ankündigung vom 9. September 2025 zu Audiounterstützung und Google-Play-Verfügbarkeit.',
+          '[Google-Datenschutzerklärung](https://policies.google.com/privacy) — die im App-Store-Eintrag verlinkte Erklärung.',
+          '[Google-AI-Edge-Dokumentation](https://ai.google.dev/edge) — Hintergrund zur On-Device-Laufzeitumgebung und den Werkzeugen hinter der App.',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — Android-Version 1.0.20 (6. Oktober 2026), APK-Dateien und der Link zur macOS-DMG.',
         ],
       },
       relatedReading: {
@@ -791,16 +851,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-fr.webp',
     title: 'Google AI Edge Gallery: test — chat Gemma 4 sur l\'appareil pour iPhone',
-    seoTitle: 'Google AI Edge Gallery: app Gemma iOS',
+    seoTitle: 'Test Google AI Edge Gallery : app iPhone, iPad et Mac',
     intro:
-      'Google AI Edge Gallery est une application gratuite de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) qui exécute des modèles d\'IA open source entièrement sur iPhone, iPad ou Mac, grâce au moteur d\'inférence sur l\'appareil [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) de Google. Ce test porte spécifiquement sur la fiche App Store iOS (ID App Store 6749645337, version 1.0.10, 4,0 étoiles sur plus de 160 avis au moment de ce test) — un article complémentaire à [la fiche de Google AI Edge Gallery dans le répertoire de logiciels IA locaux](/fr/directory). L\'application est la façade grand public d\'un projet open source plus large, [google-ai-edge/gallery sur GitHub](https://github.com/google-ai-edge/gallery), également disponible sur Android et en APK direct — ce test n\'évalue pas la version Android. Sur iOS, elle exécute la famille de modèles Gemma de Google, y compris la génération actuelle Gemma 4, entièrement hors ligne une fois un modèle téléchargé, et permet d\'importer d\'autres modèles depuis [Hugging Face](https://huggingface.co/) au format LiteRT. La question pratique pour un lecteur comparant les apps IA sur iPhone est de savoir comment une application gratuite, maintenue par Google, officiellement qualifiée de « bêta expérimentale », se compare à des alternatives payantes plus abouties comme [Private LLM](/fr/power-local-llm/private-llm-review) ou gratuites comme [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
+      'Google AI Edge Gallery est une application gratuite de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) qui exécute des modèles d\'IA open source entièrement sur iPhone, iPad ou Mac, grâce au moteur d\'inférence sur l\'appareil [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) de Google. Ce test porte spécifiquement sur la fiche App Store iOS (ID App Store 6749645337, version 1.0.13, 4,1 étoiles sur 165 avis au 2026-10-26) — un article complémentaire à [la fiche de Google AI Edge Gallery dans le répertoire de logiciels IA locaux](/fr/directory). L\'application est la façade grand public d\'un projet open source plus large, [google-ai-edge/gallery sur GitHub](https://github.com/google-ai-edge/gallery), également disponible sur Android (Google Play et APK direct) et en DMG macOS distincte — ce test n\'évalue pas la version Android. Sur iOS, elle exécute la famille de modèles Gemma de Google, y compris la génération actuelle Gemma 4, entièrement hors ligne une fois un modèle téléchargé, et permet d\'importer d\'autres modèles depuis [Hugging Face](https://huggingface.co/) au format LiteRT. La question pratique pour un lecteur comparant les apps IA sur iPhone est de savoir comment une application gratuite, maintenue par Google, officiellement qualifiée de « bêta expérimentale », se compare à des alternatives payantes plus abouties comme [Private LLM](/fr/power-local-llm/private-llm-review) ou gratuites comme [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
     metaDescription:
-      'Google AI Edge Gallery, test 2026 : app iOS gratuite (ID App Store 6749645337), chat Gemma 4 sur l\'appareil via LiteRT-LM, 4,0 étoiles/160+ avis. Fonctions, confidentialité et comparaison avec Private LLM et PocketPal AI.',
+      'Test Google AI Edge Gallery : app gratuite iPhone, iPad et Mac (v1.0.13) avec Gemma 4 sur l\'appareil. Fonctions, confidentialité, comparaison PocketPal AI.',
     twitterDescription:
       'Google AI Edge Gallery, test 2026 : l\'app iOS gratuite de Google pour faire tourner Gemma 4 entièrement sur l\'appareil via LiteRT-LM. Fonctions, étiquette de confidentialité App Store et comparaison avec Private LLM et PocketPal AI.',
     audience:
@@ -835,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Également disponible en app Android open source et en APK direct sur github.com/google-ai-edge/gallery — ce test couvre uniquement la fiche iOS.',
           'L\'étiquette de confidentialité App Store liste l\'identifiant appareil, les données de performance et les diagnostics comme collectés — le contenu des conversations reste sur l\'appareil, mais ce n\'est pas une app « zéro donnée ».',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -863,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery est une application iOS gratuite (ID App Store 6749645337, version 1.0.10) qui exécute Gemma 4 et d\'autres modèles open source entièrement sur l\'appareil via le moteur LiteRT-LM de Google, qualifiée par Google lui-même de « bêta expérimentale ».',
+            text: 'Google AI Edge Gallery est une application iOS gratuite (ID App Store 6749645337, version 1.0.13) qui exécute Gemma 4 et d\'autres modèles open source entièrement sur l\'appareil via le moteur LiteRT-LM de Google, qualifiée par Google lui-même de « bêta expérimentale ».',
           },
           {
             type: 'plain-terms',
@@ -872,9 +932,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Prix : gratuit sur l\'[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ; pas d\'abonnement, pas d\'achats intégrés.',
-          'Développeur : Google LLC, version actuelle 1.0.10 (publiée le 4 septembre 2026), notée 4,0 sur 5 pour plus de 160 avis.',
+          'Développeur : Google LLC, version App Store actuelle 1.0.13 (publiée le 8 octobre 2026), notée 4,1 sur 5 pour 165 avis ; dernière activité en amont sur GitHub le 26 octobre 2026.',
           'Plateformes (fiche iOS) : iPhone et iPad sous iOS 17.0+, Mac sous macOS 14.0+ avec puce Apple M1 ou plus récente, Apple Vision Pro sous visionOS 1.0+.',
-          'Modèles : famille Gemma 4 (E2B, E4B, 26B, 31B et la variante multimodale 12B Unified), plus Gemma 3n ; import possible de modèles personnalisés depuis Hugging Face au format LiteRT.',
+          'Modèles : famille Gemma 4 (E2B, E4B, 26B, 31B et la variante multimodale 12B Unified), plus Gemma 3n, EmbeddingGemma 2 pour la recherche de médias et des finetunes FunctionGemma 270m pour Mobile Actions ; import possible de modèles personnalisés depuis Hugging Face au format LiteRT.',
           'Open source : le projet sous-jacent [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) est sous licence Apache 2.0 et disponible aussi sur Android et en APK direct — ce test couvre la version App Store iOS.',
           'Statut : le README GitHub de Google décrit le projet comme une « version bêta expérimentale ».',
           'Confidentialité : l\'étiquette App Store liste l\'identifiant appareil, les données de performance et les diagnostics comme liés à l\'identité, plus la localisation approximative, les données d\'interaction produit et les rapports de plantage comme non liés à l\'identité — les messages tournent sur l\'appareil, mais ce n\'est pas une app sans télémétrie.',
@@ -885,8 +945,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce qu\'est Google AI Edge Gallery',
         content: [
           '**Google AI Edge Gallery est l\'application vitrine de Google pour exécuter des modèles d\'IA générative open source directement sur un téléphone, une tablette ou un Mac, sans aller-retour serveur pour l\'inférence.** Elle repose sur [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM), le framework d\'inférence de production de Google pour les grands modèles de langage sur appareils périphériques, qui a lui-même succédé à l\'ancienne API MediaPipe LLM Inference utilisée par les versions précédentes du projet.',
-          'La fiche iOS testée ici est [Google AI Edge Gallery sur l\'Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID App Store 6749645337), développée et publiée par Google LLC, actuellement en version 1.0.10 et notée 4,0 sur 5 étoiles pour plus de 160 avis. Le téléchargement est gratuit, sans palier d\'abonnement.',
-          'Cette même app est un canal de distribution d\'un projet open source plus vaste, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), que Google décrit comme « la destination de choix pour exécuter les grands modèles de langage open source les plus puissants au monde sur votre appareil mobile ». Ce projet propose aussi une version Android (via Google Play et APK direct) ainsi que des versions bureau. La documentation de Google qualifie l\'ensemble du projet de **« version bêta expérimentale »** plutôt que de produit grand public fini — une distinction que ce test considère comme substantielle et non formelle, Google AI Edge Gallery étant comparé tout au long de ce dossier à des apps conçues spécifiquement comme des produits grand public aboutis.',
+          'La fiche iOS testée ici est [Google AI Edge Gallery sur l\'Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID App Store 6749645337), développée et publiée par Google LLC, actuellement en version 1.0.13 et notée 4,1 sur 5 étoiles pour 165 avis. Le téléchargement est gratuit, sans palier d\'abonnement.',
+          'Cette même app est un canal de distribution d\'un projet open source plus vaste, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), que Google décrit comme « la destination de choix pour exécuter les grands modèles de langage open source les plus puissants au monde sur votre appareil mobile ». Ce projet propose aussi une version Android (via Google Play et APK direct) ainsi qu\'une DMG macOS. La documentation de Google qualifie l\'ensemble du projet de **« version bêta expérimentale »** plutôt que de produit grand public fini — une distinction que ce test considère comme substantielle et non formelle, Google AI Edge Gallery étant comparé tout au long de ce dossier à des apps conçues spécifiquement comme des produits grand public aboutis.',
         ],
       },
       getItCTA: {
@@ -907,7 +967,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plateforme': 'Mac',
             'Où l\'obtenir': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'Remarques': 'Même fiche App Store ; nécessite macOS 14.0+ et une puce Apple M1 ou plus récente.',
+            'Remarques': 'Même fiche App Store, qu\'Apple signale « Not verified for macOS » ; nécessite macOS 14.0+ et une puce Apple M1 ou plus récente.',
+          },
+          {
+            'Plateforme': 'Mac (direct)',
+            'Où l\'obtenir': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            'Remarques': 'DMG liée dans le README du projet ; build distinct de la fiche App Store, non testé pour ce test.',
           },
           {
             'Plateforme': 'Apple Vision Pro',
@@ -916,16 +981,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plateforme': 'Android',
-            'Où l\'obtenir': '[google-ai-edge/gallery sur GitHub](https://github.com/google-ai-edge/gallery)',
-            'Remarques': 'Une version distincte du même projet open source via Google Play ou APK direct — non couverte par ce test.',
+            'Où l\'obtenir': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) ou [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            'Remarques': 'Une version distincte du même projet open source ; le README exige Android 12 ou plus récent. L\'APK sert d\'alternative aux appareils sans Google Play. Non couverte par ce test.',
           },
           {
             'Plateforme': 'Code source',
             'Où l\'obtenir': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             'Remarques': 'Licence Apache 2.0 ; le dépôt derrière tous les canaux de distribution ci-dessus.',
           },
+          {
+            'Plateforme': 'Site web',
+            'Où l\'obtenir': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            'Remarques': 'Le lien « Developer website » de l\'App Store pointe ici ; aucun site produit distinct n\'a été trouvé. Documentation de fond : [Google AI Edge](https://ai.google.dev/edge).',
+          },
+          {
+            'Plateforme': 'Politique de confidentialité',
+            'Où l\'obtenir': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            'Remarques': 'Politique de confidentialité générale de Google, liée depuis la fiche App Store ; aucune politique propre à l\'app n\'a été trouvée.',
+          },
         ],
-        note: 'La disponibilité, le prix et les numéros de version sur l\'App Store peuvent changer sans préavis. Vérifiez la fiche actuelle sur la [page App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) avant d\'installer. Vérifié pour ce test le 2026-09-12.',
+        note: 'La disponibilité, le prix et les numéros de version sur l\'App Store peuvent changer sans préavis. Vérifiez la fiche actuelle sur la [page App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) avant d\'installer. Vérifié pour ce test le 2026-10-26.',
       },
       models: {
         id: 'models',
@@ -933,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery se concentre sur la famille de modèles Gemma de Google, actuellement la génération Gemma 4 sortie le 2 avril 2026.** Gemma 4 existe en plusieurs tailles — E2B et E4B (conçues pour les téléphones), une variante 26B mixture-of-experts, une variante 31B, et un modèle multimodal **Gemma 4 12B Unified** qui traite texte, image et, selon la documentation de Google, audio dans une seule architecture. L\'app prend aussi en charge **Gemma 3n**, une version Gemma antérieure qui a ajouté la compréhension audio à la pile sur l\'appareil avant la sortie de Gemma 4.',
           'Au-delà des modèles Gemma inclus, l\'app permet d\'**importer ses propres modèles depuis Hugging Face au format LiteRT**, via une URL de fiche modèle dans l\'écran de gestion des modèles. La documentation de Google confirme cette intégration Hugging Face pour la découverte et le téléchargement de modèles, mais ne précise pas si un jeton d\'accès Hugging Face est requis pour les dépôts de modèles restreints — ce test traite ce point comme non confirmé plutôt que de supposer un flux de jeton spécifique ; vérifiez les instructions actuelles dans l\'app avant d\'importer un modèle restreint.',
-          'Côté fonctionnalités, l\'app regroupe plusieurs modes autour de ces modèles : **AI Chat avec Thinking Mode** (affiche les étapes de raisonnement intermédiaires du modèle), **Ask Image** (analyse multimodale d\'une photo depuis l\'appareil photo ou la galerie), **Audio Scribe** (transcription et traduction vocale sur l\'appareil), **Agent Skills** (accès à des outils externes, comme une recherche Wikipédia, au-dessus du modèle de base), et un écran de **gestion des modèles et de benchmarking** pour comparer taille de téléchargement et performance sur l\'appareil avant de choisir.',
+          'Côté fonctionnalités, l\'app regroupe plusieurs modes autour de ces modèles : **AI Chat avec Thinking Mode** (affiche les étapes de raisonnement intermédiaires du modèle, à partir de la famille Gemma 4), **Ask Image** (analyse multimodale d\'une photo depuis l\'appareil photo ou la galerie), **Audio Scribe** (transcription et traduction vocale sur l\'appareil), **Agent Skills** (outils externes comme la recherche Wikipédia, des cartes interactives et des cartes de synthèse visuelles, au-dessus du modèle de base), **Instant Media Search** et **Video Moment Finder** (recherche de photos et de vidéos en langage naturel, via EmbeddingGemma 2), **Prompt Lab** (tests de prompts à tour unique avec réglages de température et de top-k), **Mobile Actions** et **Tiny Garden** (commandes d\'appareil hors ligne et mini-jeu expérimental, tous deux basés sur un finetune FunctionGemma 270m), et un écran de **gestion des modèles et de benchmarking** pour comparer taille de téléchargement et performance sur l\'appareil avant de choisir. La fiche et le README décrivent les fonctions d\'image comme l\'analyse ou la recherche de photos que vous possédez déjà ; aucune n\'est décrite comme créant de nouvelles images.',
         ],
       },
       platforms: {
@@ -950,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plateforme': 'Mac',
             'À quoi s\'attendre': 'Nécessite macOS 14.0 ou plus récent avec une puce Apple M1 ou plus récente.',
-            'Remarque importante': 'Même binaire universel et même fiche App Store que l\'app iPhone/iPad ; les Mac Intel ne sont pas pris en charge selon l\'exigence listée.',
+            'Remarque importante': 'Même fiche App Store que l\'app iPhone/iPad ; les Mac Intel ne sont pas pris en charge selon l\'exigence listée. Le README du projet lie aussi une DMG macOS distincte, que ce test n\'a pas évaluée.',
           },
           {
             'Plateforme': 'Apple Vision Pro',
@@ -959,12 +1034,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plateforme': 'Android',
-            'À quoi s\'attendre': 'Une version distincte du même projet open source est disponible via Google Play (passée d\'une distribution GitHub uniquement à une bêta ouverte sur Google Play selon une annonce de Google du 9 septembre 2025) ou en APK direct depuis GitHub.',
+            'À quoi s\'attendre': 'Une version distincte du même projet open source est disponible via Google Play (passée d\'une distribution GitHub uniquement à une bêta ouverte sur Google Play selon une annonce de Google du 9 septembre 2025) ou en APK direct depuis GitHub Releases (dernière version 1.0.20, 6 octobre 2026), pour Android 12 ou plus récent selon le README.',
             'Remarque importante': 'Pas la même installation que l\'app App Store iOS couverte par ce test ; ne pas supposer que le comportement spécifique à iOS (par ex. l\'étiquette de confidentialité exacte) se retrouve sur la version Android.',
           },
           {
             'Plateforme': 'Le projet open source plus large',
-            'À quoi s\'attendre': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) est sous licence Apache 2.0 et couvre la distribution Android, iOS et bureau.',
+            'À quoi s\'attendre': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) est sous licence Apache 2.0 et couvre la distribution Android, iOS et macOS.',
             'Remarque importante': 'La documentation de Google qualifie l\'ensemble du projet de « version bêta expérimentale » — ce statut s\'applique à toutes les plateformes, pas seulement iOS.',
           },
         ],
@@ -975,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confidentialité : ce que dit vraiment l\'étiquette App Store',
         content: [
           '**L\'inférence se fait sur l\'appareil une fois un modèle téléchargé — les messages et les réponses du modèle ne sont pas envoyés à un serveur Google pour générer une réponse.** Cela dit, ce n\'est pas la même affirmation que « l\'app ne collecte aucune donnée », et ce test traite ces deux affirmations séparément plutôt que de les confondre.',
-          'L\'étiquette de confidentialité d\'Apple pour la [fiche App Store de Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) indique que les **données liées à votre identité** incluent l\'identifiant appareil, les données de performance et les diagnostics, et que les **données non liées à votre identité** incluent la localisation approximative, les données d\'interaction produit et les rapports de plantage. Il s\'agit du format standard d\'étiquette de confidentialité déclarée par le développeur chez Apple, pas d\'un audit indépendant du trafic réseau de l\'app par PromptQuorum.',
+          'L\'étiquette de confidentialité d\'Apple pour la [fiche App Store de Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) indique que les **données liées à votre identité** incluent l\'identifiant appareil, les données de performance, les diagnostics et d\'autres types de données non précisés, et que les **données non liées à votre identité** incluent la localisation approximative, les données d\'interaction produit et les rapports de plantage. Il s\'agit du format standard d\'étiquette de confidentialité déclarée par le développeur chez Apple, pas d\'un audit indépendant du trafic réseau de l\'app par PromptQuorum.',
           'La distinction pratique pour un lecteur soucieux de sa confidentialité : le contenu de vos conversations et les images ou l\'audio fournis au modèle restent sur l\'appareil pendant l\'inférence, mais Google collecte tout de même des données de type télémétrie (identifiants appareil, données de performance/diagnostic, localisation approximative, rapports de plantage) sur l\'utilisation de l\'app elle-même. Les lecteurs qui exigent une posture plus stricte de « ne collecte absolument rien » devraient comparer avec l\'étiquette de confidentialité App Store de [Private LLM](/fr/power-local-llm/private-llm-review), qui indique qu\'aucune donnée n\'est collectée par cette app.',
         ],
         items: [
@@ -997,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**9 septembre 2025.** [L\'article de blog d\'annonce](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) de Google a confirmé le passage d\'une distribution GitHub uniquement à une bêta ouverte sur le Google Play Store, et a ajouté la prise en charge audio (voix-vers-texte et voix-vers-texte-traduit) via Gemma 3n grâce à l\'API MediaPipe LLM Inference. L\'article de Google indique que le projet a atteint 500 000 téléchargements APK en deux mois depuis le lancement GitHub, et décrivait un plan futur pour « apporter l\'app aux utilisateurs iOS ».',
           '**2 avril 2026.** Google DeepMind a publié **Gemma 4** sous licence Apache 2.0, en tailles E2B, E4B, 26B et 31B, avec une variante multimodale **Gemma 4 12B Unified** publiée ensuite le 3 juin 2026.',
           '**Disponibilité sur l\'App Store iOS.** Google AI Edge Gallery est arrivée sur l\'App Store sous le nom [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID App Store 6749645337), concrétisant le plan iOS annoncé dans l\'article de septembre 2025 ; une couverture indépendante a décrit l\'app grimpant parmi les apps de productivité les plus téléchargées sur l\'App Store autour du lancement de Gemma 4.',
-          '**Version 1.0.10 (4 septembre 2026).** La version actuelle au moment de ce test, ajoutant selon ses notes de version « la prise en charge de la traduction et de la localisation mondiale dans 100 pays différents » ainsi que des corrections de bugs.',
+          '**Version 1.0.13 (8 octobre 2026).** La version App Store actuelle au moment de ce test, après la 1.0.12 du 6 octobre. Le texte de fonctionnalités de la fiche cite désormais Agent Skills, Instant Media Search, Video Moment Finder, Mobile Actions et Tiny Garden ; la version 1.0.10 (4 septembre 2026) avait ajouté, selon ses notes de version, « la prise en charge de la traduction et de la localisation mondiale dans 100 pays différents ».',
         ],
         note: 'L\'historique des versions et les dates proviennent du blog développeur de Google et du dépôt GitHub du projet. Vérifiez la version actuelle et les notes de version directement dans l\'App Store avant de vous fier à une fonctionnalité précise.',
       },
@@ -1110,18 +1185,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Google AI Edge Gallery est-elle gratuite ?',
-            a: 'Oui. La [fiche App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) est gratuite à télécharger, sans abonnement ni achats intégrés, vérifié pour ce test le 2026-09-12.',
+            a: 'Oui. La [fiche App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) est gratuite à télécharger, sans abonnement ni achats intégrés, vérifié pour ce test le 2026-10-26.',
           },
           {
             q: 'Quels modèles Google AI Edge Gallery exécute-t-elle ?',
-            a: 'Elle exécute la famille de modèles Gemma de Google, actuellement la génération Gemma 4 (E2B, E4B, 26B, 31B et la variante multimodale 12B Unified, publiées entre avril et juin 2026), plus l\'ancien Gemma 3n. Les utilisateurs peuvent aussi importer des modèles personnalisés depuis Hugging Face au format LiteRT.',
+            a: 'Elle exécute la famille de modèles Gemma de Google, actuellement la génération Gemma 4 (E2B, E4B, 26B, 31B et la variante multimodale 12B Unified, publiées entre avril et juin 2026), plus l\'ancien Gemma 3n, EmbeddingGemma 2 pour la recherche de médias et des finetunes FunctionGemma 270m pour Mobile Actions. Les utilisateurs peuvent aussi importer des modèles personnalisés depuis Hugging Face au format LiteRT.',
           },
           {
             q: 'Google AI Edge Gallery fonctionne-t-elle aussi sur Android ?',
-            a: 'Oui, mais en tant que distribution distincte. Le projet open source sous-jacent, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), propose une version Android via Google Play et APK direct, en plus de la fiche App Store iOS couverte par ce test.',
+            a: 'Oui, mais en tant que distribution distincte. Le projet open source sous-jacent, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), propose une version Android via Google Play et APK direct (Android 12 ou plus récent selon le README), en plus de la fiche App Store iOS couverte par ce test.',
           },
           {
-            q: 'Google AI Edge Gallery collecte-t-elle mes données ?',
+            q: 'Google AI Edge Gallery est-elle privée, et collecte-t-elle mes données ?',
             a: 'Les messages et réponses du modèle sont traités sur l\'appareil une fois un modèle téléchargé, mais l\'étiquette de confidentialité d\'Apple pour la fiche iOS indique que l\'identifiant appareil, les données de performance et les diagnostics sont liés à votre identité, et que la localisation approximative, les données d\'interaction produit et les rapports de plantage sont collectés sans être liés à votre identité. Ce n\'est pas une app sans données, même si l\'inférence elle-même tourne localement.',
           },
           {
@@ -1138,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quels appareils la version iOS prend-elle en charge ?',
-            a: 'Selon la fiche App Store : iPhone et iPad sous iOS 17.0 ou plus récent, Mac sous macOS 14.0 ou plus récent avec puce Apple M1 ou plus récente, et Apple Vision Pro sous visionOS 1.0 ou plus récent.',
+            a: 'Selon la fiche App Store : iPhone et iPad sous iOS 17.0 ou plus récent, Mac sous macOS 14.0 ou plus récent avec puce Apple M1 ou plus récente (Apple la signale « Not verified for macOS »), et Apple Vision Pro sous visionOS 1.0 ou plus récent. La fiche n\'indique ni modèle d\'iPhone minimal ni RAM minimale ; le README du projet lie en outre une DMG macOS distincte.',
           },
           {
             q: 'Comment Google AI Edge Gallery se compare-t-elle à Private LLM ?',
@@ -1147,6 +1222,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Google AI Edge Gallery prend-elle en charge l\'audio et l\'image en entrée ?',
             a: 'Oui, selon le modèle chargé. Ask Image propose une analyse photo multimodale, et Audio Scribe propose une transcription et traduction vocale sur l\'appareil ; la prise en charge audio dans les modèles Gemma sous-jacents a commencé avec Gemma 3n et se poursuit avec certaines tailles de Gemma 4, dont la variante 12B Unified.',
+          },
+          {
+            q: 'Google AI Edge Gallery peut-elle générer des images ?',
+            a: 'Aucun mode de génération d\'images n\'est listé sur la [page App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ni dans le README du projet. Ask Image répond à des questions sur des photos que vous fournissez, et Instant Media Search ainsi que Video Moment Finder recherchent dans vos médias existants ; ce test n\'a pas vérifié la génération d\'images.',
+          },
+          {
+            q: 'Quelles langues Google AI Edge Gallery prend-elle en charge ?',
+            a: 'La fiche App Store indique « English and 97 more » langues, et les notes de version 1.0.10 citent la prise en charge de la traduction et de la localisation dans 100 pays. La qualité de sortie dans une langue donnée dépend du modèle chargé ; ce test n\'a pas évalué des langues individuelles comme l\'arabe.',
+          },
+          {
+            q: 'Comment Google AI Edge Gallery se compare-t-elle à PocketPal AI ?',
+            a: 'Les deux sont gratuites et open source. Google AI Edge Gallery charge des modèles au format LiteRT et ajoute des modes conçus par Google comme Agent Skills et Thinking Mode, tandis que [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) charge tout fichier GGUF que vous vous procurez et n\'est lié ni à Gemma ni à LiteRT-LM. Choisissez Google AI Edge Gallery pour les modèles et fonctions de Google, PocketPal AI pour un choix de modèles plus large.',
           },
         ],
       },
@@ -1164,6 +1251,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[google-ai-edge/gallery sur GitHub](https://github.com/google-ai-edge/gallery) — présentation du projet, plateformes prises en charge, import Hugging Face, licence et statut bêta.',
           '[LiteRT-LM sur GitHub](https://github.com/google-ai-edge/LiteRT-LM) — le moteur d\'inférence sur l\'appareil sur lequel l\'app est construite.',
           '[Article de blog d\'annonce de Google AI Edge Gallery](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — annonce du 9 septembre 2025 du support audio et de la disponibilité sur Google Play.',
+          '[Politique de confidentialité de Google](https://policies.google.com/privacy) — la politique liée depuis la fiche App Store.',
+          '[Documentation Google AI Edge](https://ai.google.dev/edge) — contexte sur le moteur d\'exécution sur l\'appareil et les outils derrière l\'app.',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — version Android 1.0.20 (6 octobre 2026), fichiers APK et lien vers la DMG macOS.',
         ],
       },
       relatedReading: {
@@ -1182,16 +1272,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-es.webp',
     title: 'Google AI Edge Gallery: reseña — chat Gemma 4 en el dispositivo para iPhone',
-    seoTitle: 'Google AI Edge Gallery: app Gemma para iOS',
+    seoTitle: 'Reseña Google AI Edge Gallery: app para iPhone, iPad y Mac',
     intro:
-      'Google AI Edge Gallery es una aplicación gratuita de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que ejecuta modelos de IA de código abierto completamente en un iPhone, iPad o Mac, usando el motor de inferencia en el dispositivo de Google, [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). Esta reseña cubre específicamente la ficha de la App Store de iOS (ID de App Store 6749645337, versión 1.0.10, 4,0 estrellas con más de 160 valoraciones al momento de esta reseña) — un artículo complementario a [la ficha de Google AI Edge Gallery en el directorio de software de IA local](/es/directory). La app es la cara al usuario de un proyecto de código abierto más amplio, [google-ai-edge/gallery en GitHub](https://github.com/google-ai-edge/gallery), que también se distribuye en Android y como APK directo — esta reseña no evalúa la versión de Android. En iOS ejecuta la familia de modelos Gemma de Google, incluida la generación actual Gemma 4, completamente sin conexión una vez descargado un modelo, y permite importar modelos adicionales desde [Hugging Face](https://huggingface.co/) en formato LiteRT. La pregunta práctica para un lector que compara apps de IA en el dispositivo para iPhone es cómo se compara una app gratuita, mantenida por Google, oficialmente etiquetada como "beta experimental", frente a alternativas de pago más pulidas como [Private LLM](/es/power-local-llm/private-llm-review) o gratuitas como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
+      'Google AI Edge Gallery es una aplicación gratuita de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que ejecuta modelos de IA de código abierto completamente en un iPhone, iPad o Mac, usando el motor de inferencia en el dispositivo de Google, [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). Esta reseña cubre específicamente la ficha de la App Store de iOS (ID de App Store 6749645337, versión 1.0.13, 4,1 estrellas con 165 valoraciones a 2026-10-26) — un artículo complementario a [la ficha de Google AI Edge Gallery en el directorio de software de IA local](/es/directory). La app es la cara al usuario de un proyecto de código abierto más amplio, [google-ai-edge/gallery en GitHub](https://github.com/google-ai-edge/gallery), que también se distribuye en Android (Google Play y APK directo) y como DMG de macOS aparte — esta reseña no evalúa la versión de Android. En iOS ejecuta la familia de modelos Gemma de Google, incluida la generación actual Gemma 4, completamente sin conexión una vez descargado un modelo, y permite importar modelos adicionales desde [Hugging Face](https://huggingface.co/) en formato LiteRT. La pregunta práctica para un lector que compara apps de IA en el dispositivo para iPhone es cómo se compara una app gratuita, mantenida por Google, oficialmente etiquetada como "beta experimental", frente a alternativas de pago más pulidas como [Private LLM](/es/power-local-llm/private-llm-review) o gratuitas como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
     metaDescription:
-      'Google AI Edge Gallery, reseña 2026: app iOS gratuita (ID App Store 6749645337), chat Gemma 4 en el dispositivo vía LiteRT-LM, 4,0 estrellas/160+ valoraciones. Funciones, privacidad y comparación con Private LLM y PocketPal AI.',
+      'Reseña de Google AI Edge Gallery: app gratuita para iPhone, iPad y Mac (v1.0.13) con Gemma 4 en el dispositivo. Funciones, privacidad y PocketPal AI.',
     twitterDescription:
       'Google AI Edge Gallery, reseña 2026: la app iOS gratuita de Google para ejecutar Gemma 4 completamente en el dispositivo vía LiteRT-LM. Funciones, etiqueta de privacidad de la App Store y comparación con Private LLM y PocketPal AI.',
     audience:
@@ -1226,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'También disponible como app Android de código abierto y APK directo en github.com/google-ai-edge/gallery — esta reseña cubre solo la ficha de iOS.',
           'La etiqueta de privacidad de la App Store indica que se recopilan el identificador del dispositivo, datos de rendimiento y diagnósticos — el contenido del chat permanece en el dispositivo, pero no es una app de "cero datos".',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -1254,7 +1344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery es una app iOS gratuita (ID App Store 6749645337, versión 1.0.10) que ejecuta Gemma 4 y otros modelos de código abierto completamente en el dispositivo vía el motor LiteRT-LM de Google, etiquetada por el propio Google como "beta experimental".',
+            text: 'Google AI Edge Gallery es una app iOS gratuita (ID App Store 6749645337, versión 1.0.13) que ejecuta Gemma 4 y otros modelos de código abierto completamente en el dispositivo vía el motor LiteRT-LM de Google, etiquetada por el propio Google como "beta experimental".',
           },
           {
             type: 'plain-terms',
@@ -1263,9 +1353,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Precio: gratis en la [Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337); sin suscripción, sin compras dentro de la app.',
-          'Desarrollador: Google LLC, versión actual 1.0.10 (lanzada el 4 de septiembre de 2026), valorada con 4,0 de 5 en más de 160 valoraciones.',
+          'Desarrollador: Google LLC, versión actual de la App Store 1.0.13 (lanzada el 8 de octubre de 2026), valorada con 4,1 de 5 en 165 valoraciones; última actividad upstream en GitHub el 26 de octubre de 2026.',
           'Plataformas (ficha iOS): iPhone y iPad con iOS 17.0+, Mac con macOS 14.0+ y chip Apple M1 o posterior, Apple Vision Pro con visionOS 1.0+.',
-          'Modelos: familia Gemma 4 (E2B, E4B, 26B, 31B y la variante multimodal 12B Unified), además de Gemma 3n; se pueden importar modelos personalizados desde Hugging Face en formato LiteRT.',
+          'Modelos: familia Gemma 4 (E2B, E4B, 26B, 31B y la variante multimodal 12B Unified), además de Gemma 3n, EmbeddingGemma 2 para la búsqueda de medios y finetunes de FunctionGemma 270m para Mobile Actions; se pueden importar modelos personalizados desde Hugging Face en formato LiteRT.',
           'Código abierto: el proyecto subyacente [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) tiene licencia Apache 2.0 y también existe para Android y como APK directo — esta reseña cubre la versión de la App Store de iOS.',
           'Estado: el propio README de GitHub de Google describe el proyecto como una "versión beta experimental".',
           'Privacidad: la etiqueta de la App Store indica que el identificador del dispositivo, los datos de rendimiento y los diagnósticos están vinculados a tu identidad, y que la ubicación aproximada, los datos de interacción con el producto y los informes de fallos se recopilan sin vincularse a tu identidad — los mensajes de chat se procesan en el dispositivo, pero no es una app sin telemetría.',
@@ -1276,8 +1366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué es Google AI Edge Gallery',
         content: [
           '**Google AI Edge Gallery es la app de muestra propia de Google para ejecutar modelos de IA generativa de código abierto directamente en un teléfono, tableta o Mac, sin viaje de ida y vuelta a un servidor para la inferencia.** Está construida sobre [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM), el framework de inferencia orientado a producción de Google para modelos de lenguaje grandes en dispositivos periféricos, que a su vez sucedió a la antigua API MediaPipe LLM Inference usada en versiones anteriores del proyecto.',
-          'La ficha de iOS reseñada aquí es [Google AI Edge Gallery en la Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID de App Store 6749645337), desarrollada y publicada por Google LLC, actualmente en la versión 1.0.10 y valorada con 4,0 de 5 estrellas en más de 160 valoraciones. Es una descarga gratuita, sin nivel de suscripción.',
-          'Esta misma app es un canal de distribución de un proyecto de código abierto más amplio, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), que Google describe como "el destino preferido para ejecutar los modelos de lenguaje grandes (LLM) de código abierto más potentes del mundo en tu dispositivo móvil". Ese proyecto también incluye una versión Android (vía Google Play y APK directo) y versiones de escritorio. La propia documentación del proyecto de Google etiqueta todo el esfuerzo como una **"versión beta experimental"** en lugar de un producto de consumo terminado — una distinción que esta reseña trata como sustancial, no como formalidad, dado que Google AI Edge Gallery se compara a lo largo de este grupo con apps construidas específicamente como productos de consumo pulidos.',
+          'La ficha de iOS reseñada aquí es [Google AI Edge Gallery en la Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID de App Store 6749645337), desarrollada y publicada por Google LLC, actualmente en la versión 1.0.13 y valorada con 4,1 de 5 estrellas en 165 valoraciones. Es una descarga gratuita, sin nivel de suscripción.',
+          'Esta misma app es un canal de distribución de un proyecto de código abierto más amplio, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), que Google describe como "el destino preferido para ejecutar los modelos de lenguaje grandes (LLM) de código abierto más potentes del mundo en tu dispositivo móvil". Ese proyecto también incluye una versión Android (vía Google Play y APK directo) y un DMG de macOS. La propia documentación del proyecto de Google etiqueta todo el esfuerzo como una **"versión beta experimental"** en lugar de un producto de consumo terminado — una distinción que esta reseña trata como sustancial, no como formalidad, dado que Google AI Edge Gallery se compara a lo largo de este grupo con apps construidas específicamente como productos de consumo pulidos.',
         ],
       },
       getItCTA: {
@@ -1298,7 +1388,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Mac',
             'Dónde conseguirla': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'Notas': 'Misma ficha de App Store; requiere macOS 14.0+ y Apple M1 o posterior.',
+            'Notas': 'Misma ficha de App Store, que Apple marca como "Not verified for macOS"; requiere macOS 14.0+ y Apple M1 o posterior.',
+          },
+          {
+            'Plataforma': 'Mac (directo)',
+            'Dónde conseguirla': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            'Notas': 'DMG enlazado en el README del proyecto; una compilación aparte de la ficha de App Store, no probada para esta reseña.',
           },
           {
             'Plataforma': 'Apple Vision Pro',
@@ -1307,16 +1402,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Android',
-            'Dónde conseguirla': '[google-ai-edge/gallery en GitHub](https://github.com/google-ai-edge/gallery)',
-            'Notas': 'Una versión separada del mismo proyecto de código abierto vía Google Play o APK directo — no cubierta por esta reseña.',
+            'Dónde conseguirla': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) o [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            'Notas': 'Una versión separada del mismo proyecto de código abierto; el README exige Android 12 o posterior. El APK es la alternativa para dispositivos sin Google Play. No cubierta por esta reseña.',
           },
           {
             'Plataforma': 'Código fuente',
             'Dónde conseguirla': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             'Notas': 'Licencia Apache 2.0; el repositorio detrás de todos los canales de distribución anteriores.',
           },
+          {
+            'Plataforma': 'Sitio web',
+            'Dónde conseguirla': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            'Notas': 'El enlace "Developer website" de la App Store apunta aquí; no se encontró un sitio de producto aparte. Documentación de contexto: [Google AI Edge](https://ai.google.dev/edge).',
+          },
+          {
+            'Plataforma': 'Política de privacidad',
+            'Dónde conseguirla': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            'Notas': 'Política de privacidad general de Google, enlazada desde la ficha de App Store; no se encontró una política específica de la app.',
+          },
         ],
-        note: 'La disponibilidad, el precio y los números de versión en la App Store pueden cambiar sin previo aviso. Confirma la ficha actual en la [página de la App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) antes de instalar. Verificado para esta reseña el 2026-09-12.',
+        note: 'La disponibilidad, el precio y los números de versión en la App Store pueden cambiar sin previo aviso. Confirma la ficha actual en la [página de la App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) antes de instalar. Verificado para esta reseña el 2026-10-26.',
       },
       models: {
         id: 'models',
@@ -1324,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery se centra en la familia de modelos Gemma de Google, actualmente la generación Gemma 4 lanzada el 2 de abril de 2026.** Gemma 4 se distribuye en varios tamaños — E2B y E4B (diseñados para teléfonos), una variante 26B de mezcla de expertos, una variante 31B, y un modelo multimodal **Gemma 4 12B Unified** que maneja texto, imagen y, según la propia documentación de Google, entrada de audio en una sola arquitectura. La app también admite **Gemma 3n**, una versión Gemma anterior que añadió comprensión de audio a la pila en el dispositivo antes del lanzamiento de Gemma 4.',
           'Más allá de los modelos Gemma incluidos, la app permite **importar tus propios modelos desde Hugging Face en formato LiteRT**, mediante una URL de ficha de modelo dentro de la pantalla de gestión de modelos de la app. La propia documentación de Google confirma esta integración con Hugging Face para descubrimiento y descarga de modelos, pero no detalla si se requiere un token de acceso de Hugging Face para repositorios de modelos restringidos — esta reseña trata ese punto como no confirmado en lugar de asumir un flujo de token específico; verifica las instrucciones actuales dentro de la app antes de intentar importar un modelo restringido.',
-          'En cuanto a funciones, la app agrupa varios modos en torno a estos modelos: **AI Chat con Thinking Mode** (que muestra los pasos de razonamiento intermedios del modelo), **Ask Image** (análisis multimodal de una foto de la cámara o la galería), **Audio Scribe** (transcripción y traducción de voz en el dispositivo), **Agent Skills** (acceso a herramientas externas, como una búsqueda en Wikipedia, sobre el modelo base), y una pantalla de **gestión de modelos y benchmarking** para comparar el tamaño de descarga y el rendimiento en el dispositivo antes de decidirse por uno.',
+          'En cuanto a funciones, la app agrupa varios modos en torno a estos modelos: **AI Chat con Thinking Mode** (que muestra los pasos de razonamiento intermedios del modelo, a partir de la familia Gemma 4), **Ask Image** (análisis multimodal de una foto de la cámara o la galería), **Audio Scribe** (transcripción y traducción de voz en el dispositivo), **Agent Skills** (herramientas externas como búsquedas en Wikipedia, mapas interactivos y tarjetas de resumen visual, sobre el modelo base), **Instant Media Search** y **Video Moment Finder** (búsqueda de fotos y vídeos en lenguaje natural, con EmbeddingGemma 2), **Prompt Lab** (pruebas de prompts de un solo turno con controles de temperatura y top-k), **Mobile Actions** y **Tiny Garden** (controles del dispositivo sin conexión y un minijuego experimental, ambos basados en un finetune de FunctionGemma 270m), y una pantalla de **gestión de modelos y benchmarking** para comparar el tamaño de descarga y el rendimiento en el dispositivo antes de decidirse por uno. La ficha y el README describen las funciones de imagen como análisis o búsqueda de fotos que ya tienes; ninguna se describe como creadora de imágenes nuevas.',
         ],
       },
       platforms: {
@@ -1341,7 +1446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Mac',
             'Qué esperar': 'Requiere macOS 14.0 o posterior con chip Apple M1 o más reciente.',
-            'Nota importante': 'Mismo binario universal y ficha de App Store que la app de iPhone/iPad; los Mac Intel no son compatibles según el requisito indicado.',
+            'Nota importante': 'Misma ficha de App Store que la app de iPhone/iPad; los Mac Intel no son compatibles según el requisito indicado. El README del proyecto enlaza además un DMG de macOS aparte, que esta reseña no probó.',
           },
           {
             'Plataforma': 'Apple Vision Pro',
@@ -1350,12 +1455,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Android',
-            'Qué esperar': 'Una versión separada del mismo proyecto de código abierto está disponible vía Google Play (pasó de distribución solo por GitHub a beta abierta en Google Play, según un anuncio de Google del 9 de septiembre de 2025) o como APK directo desde GitHub.',
+            'Qué esperar': 'Una versión separada del mismo proyecto de código abierto está disponible vía Google Play (pasó de distribución solo por GitHub a beta abierta en Google Play, según un anuncio de Google del 9 de septiembre de 2025) o como APK directo desde GitHub Releases (última versión 1.0.20, 6 de octubre de 2026), para Android 12 o posterior según el README.',
             'Nota importante': 'No es la misma instalación que la app de la App Store de iOS que cubre esta reseña; no asumas que el comportamiento específico de iOS (por ejemplo, la etiqueta de privacidad exacta) se traslada a la versión Android.',
           },
           {
             'Plataforma': 'El proyecto de código abierto más amplio',
-            'Qué esperar': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) tiene licencia Apache 2.0 y abarca distribución en Android, iOS y escritorio.',
+            'Qué esperar': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) tiene licencia Apache 2.0 y abarca distribución en Android, iOS y macOS.',
             'Nota importante': 'La propia documentación de Google etiqueta todo el esfuerzo como una "versión beta experimental" — este estado aplica a todas las plataformas, no solo a iOS.',
           },
         ],
@@ -1366,7 +1471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidad: qué dice realmente la etiqueta de la App Store',
         content: [
           '**La inferencia ocurre en el dispositivo una vez descargado un modelo — los mensajes de chat y las respuestas del modelo no se envían a un servidor de Google para generar una respuesta.** Dicho esto, esta no es la misma afirmación que "la app no recopila ningún dato", y esta reseña trata ambas afirmaciones por separado en lugar de mezclarlas.',
-          'La etiqueta de privacidad de Apple para la [ficha de App Store de Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) indica que los **datos vinculados a tu identidad** incluyen el identificador del dispositivo, datos de rendimiento y diagnósticos, y que los **datos no vinculados a tu identidad** incluyen ubicación aproximada, datos de interacción con el producto e informes de fallos. Este es el formato estándar de etiqueta de privacidad declarada por el desarrollador de Apple, no una auditoría independiente de PromptQuorum del tráfico de red de la app.',
+          'La etiqueta de privacidad de Apple para la [ficha de App Store de Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) indica que los **datos vinculados a tu identidad** incluyen el identificador del dispositivo, datos de rendimiento, diagnósticos y otros tipos de datos sin especificar, y que los **datos no vinculados a tu identidad** incluyen ubicación aproximada, datos de interacción con el producto e informes de fallos. Este es el formato estándar de etiqueta de privacidad declarada por el desarrollador de Apple, no una auditoría independiente de PromptQuorum del tráfico de red de la app.',
           'La distinción práctica para un lector preocupado por la privacidad: el contenido de tus conversaciones y cualquier imagen o audio que le des al modelo permanecen en el dispositivo durante la inferencia, pero Google sí recopila datos de tipo telemetría (identificadores del dispositivo, datos de rendimiento/diagnóstico, ubicación aproximada, informes de fallos) sobre cómo se usa la app en sí. Los lectores que necesiten una postura más estricta de "no recopila absolutamente nada" deberían comparar esto con la etiqueta de privacidad de App Store de [Private LLM](/es/power-local-llm/private-llm-review), que indica que no se recopilan datos de esa app.',
         ],
         items: [
@@ -1388,7 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**9 de septiembre de 2025.** La [publicación de blog de anuncio](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) de Google confirmó el paso de una distribución exclusiva de GitHub a una beta abierta en Google Play Store, y añadió soporte de audio (voz a texto y voz a texto traducido) vía Gemma 3n mediante la API MediaPipe LLM Inference. La propia publicación de Google indica que el proyecto alcanzó 500.000 descargas de APK en dos meses desde el lanzamiento en GitHub, y describía un plan futuro para "llevar la app a los usuarios de iOS".',
           '**2 de abril de 2026.** Google DeepMind lanzó **Gemma 4** bajo licencia Apache 2.0, en tamaños E2B, E4B, 26B y 31B, con una variante multimodal **Gemma 4 12B Unified** lanzada después, el 3 de junio de 2026.',
           '**Disponibilidad en la App Store de iOS.** Google AI Edge Gallery llegó a la App Store como [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID de App Store 6749645337), cumpliendo el plan de iOS anunciado en la publicación de blog de septiembre de 2025; cobertura independiente describió a la app escalando entre las apps de productividad más descargadas en la App Store en torno al lanzamiento de Gemma 4.',
-          '**Versión 1.0.10 (4 de septiembre de 2026).** La versión actual al momento de esta reseña, añadiendo, según sus notas de versión, "soporte de traducción y localización global en 100 países diferentes" además de correcciones de errores.',
+          '**Versión 1.0.13 (8 de octubre de 2026).** La versión actual de la App Store al momento de esta reseña, tras la 1.0.12 del 6 de octubre. El texto de funciones de la ficha ahora menciona Agent Skills, Instant Media Search, Video Moment Finder, Mobile Actions y Tiny Garden; la versión 1.0.10 (4 de septiembre de 2026) había añadido, según sus notas de versión, "soporte de traducción y localización global en 100 países diferentes".',
         ],
         note: 'El historial de versiones y las fechas provienen del blog de desarrolladores de Google y del repositorio de GitHub del proyecto. Confirma la versión actual y las notas de versión directamente en la App Store antes de depender de una función específica.',
       },
@@ -1501,18 +1606,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Es gratis Google AI Edge Gallery?',
-            a: 'Sí. La [ficha de App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) es gratuita para descargar, sin suscripción ni compras dentro de la app, verificado para esta reseña el 2026-09-12.',
+            a: 'Sí. La [ficha de App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) es gratuita para descargar, sin suscripción ni compras dentro de la app, verificado para esta reseña el 2026-10-26.',
           },
           {
             q: '¿Qué modelos ejecuta Google AI Edge Gallery?',
-            a: 'Ejecuta la familia de modelos Gemma de Google, actualmente la generación Gemma 4 (E2B, E4B, 26B, 31B y la variante multimodal 12B Unified, lanzadas entre abril y junio de 2026), además del anterior Gemma 3n. Los usuarios también pueden importar modelos personalizados desde Hugging Face en formato LiteRT.',
+            a: 'Ejecuta la familia de modelos Gemma de Google, actualmente la generación Gemma 4 (E2B, E4B, 26B, 31B y la variante multimodal 12B Unified, lanzadas entre abril y junio de 2026), además del anterior Gemma 3n, EmbeddingGemma 2 para la búsqueda de medios y finetunes de FunctionGemma 270m para Mobile Actions. Los usuarios también pueden importar modelos personalizados desde Hugging Face en formato LiteRT.',
           },
           {
             q: '¿Google AI Edge Gallery funciona también en Android?',
-            a: 'Sí, pero como una distribución separada. El proyecto de código abierto subyacente, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), ofrece una versión Android vía Google Play y APK directo, además de la ficha de App Store de iOS que cubre esta reseña.',
+            a: 'Sí, pero como una distribución separada. El proyecto de código abierto subyacente, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), ofrece una versión Android vía Google Play y APK directo (Android 12 o posterior según el README), además de la ficha de App Store de iOS que cubre esta reseña.',
           },
           {
-            q: '¿Google AI Edge Gallery recopila mis datos?',
+            q: '¿Es privada Google AI Edge Gallery y recopila mis datos?',
             a: 'Los mensajes de chat y las respuestas del modelo se procesan en el dispositivo una vez descargado un modelo, pero la etiqueta de privacidad de Apple para la ficha de iOS indica que el identificador del dispositivo, datos de rendimiento y diagnósticos están vinculados a tu identidad, y que la ubicación aproximada, datos de interacción con el producto e informes de fallos se recopilan sin vincularse a tu identidad. No es una app sin datos, aunque la inferencia en sí se ejecuta localmente.',
           },
           {
@@ -1529,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué dispositivos admite la versión de iOS?',
-            a: 'Según la ficha de App Store: iPhone y iPad con iOS 17.0 o posterior, Mac con macOS 14.0 o posterior y chip Apple M1 o más reciente, y Apple Vision Pro con visionOS 1.0 o posterior.',
+            a: 'Según la ficha de App Store: iPhone y iPad con iOS 17.0 o posterior, Mac con macOS 14.0 o posterior y chip Apple M1 o más reciente (Apple la marca como "Not verified for macOS"), y Apple Vision Pro con visionOS 1.0 o posterior. La ficha no indica un modelo mínimo de iPhone ni RAM mínima; el README del proyecto enlaza además un DMG de macOS aparte.',
           },
           {
             q: '¿Cómo se compara Google AI Edge Gallery con Private LLM?',
@@ -1538,6 +1643,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Google AI Edge Gallery admite entrada de audio e imagen?',
             a: 'Sí, dependiendo del modelo cargado. Ask Image ofrece análisis multimodal de fotos, y Audio Scribe ofrece transcripción y traducción de voz en el dispositivo; el soporte de audio en los modelos Gemma subyacentes comenzó con Gemma 3n y continúa en ciertos tamaños de Gemma 4, incluida la variante 12B Unified.',
+          },
+          {
+            q: '¿Puede Google AI Edge Gallery generar imágenes?',
+            a: 'No hay ningún modo de generación de imágenes en la [página de la App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ni en el README del proyecto. Ask Image responde preguntas sobre fotos que le proporcionas, e Instant Media Search y Video Moment Finder buscan en tus medios existentes; esta reseña no probó la app para generar imágenes.',
+          },
+          {
+            q: '¿Qué idiomas admite Google AI Edge Gallery?',
+            a: 'La ficha de App Store muestra "English and 97 more" idiomas, y las notas de la versión 1.0.10 citan soporte de traducción y localización en 100 países. La calidad de la salida en un idioma concreto depende del modelo cargado; esta reseña no probó idiomas individuales como el árabe.',
+          },
+          {
+            q: '¿Cómo se compara Google AI Edge Gallery con PocketPal AI?',
+            a: 'Ambas son gratuitas y de código abierto. Google AI Edge Gallery carga modelos en formato LiteRT y añade modos creados por Google como Agent Skills y Thinking Mode, mientras que [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) carga cualquier archivo GGUF que consigas tú mismo y no está ligada a Gemma ni a LiteRT-LM. Elige Google AI Edge Gallery por los modelos y funciones de Google, y PocketPal AI por un abanico de modelos más amplio.',
           },
         ],
       },
@@ -1555,6 +1672,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[google-ai-edge/gallery en GitHub](https://github.com/google-ai-edge/gallery) — descripción del proyecto, plataformas compatibles, importación de Hugging Face, licencia y estado beta.',
           '[LiteRT-LM en GitHub](https://github.com/google-ai-edge/LiteRT-LM) — el motor de inferencia en el dispositivo sobre el que se construye la app.',
           '[Publicación de blog de anuncio de Google AI Edge Gallery](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — anuncio del 9 de septiembre de 2025 sobre soporte de audio y disponibilidad en Google Play.',
+          '[Política de privacidad de Google](https://policies.google.com/privacy) — la política enlazada desde la ficha de App Store.',
+          '[Documentación de Google AI Edge](https://ai.google.dev/edge) — contexto sobre el motor de ejecución en el dispositivo y las herramientas detrás de la app.',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — versión Android 1.0.20 (6 de octubre de 2026), archivos APK y enlace al DMG de macOS.',
         ],
       },
       relatedReading: {
@@ -1573,16 +1693,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-pt.webp',
     title: 'Google AI Edge Gallery: análise — chat Gemma 4 no dispositivo para iPhone',
-    seoTitle: 'Google AI Edge Gallery: app Gemma para iOS',
+    seoTitle: 'Análise Google AI Edge Gallery: app para iPhone, iPad, Mac',
     intro:
-      'Google AI Edge Gallery é um aplicativo gratuito da [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que executa modelos de IA de código aberto inteiramente em um iPhone, iPad ou Mac, usando o mecanismo de inferência no dispositivo da Google, [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). Esta análise cobre especificamente a ficha da App Store para iOS (ID da App Store 6749645337, versão 1.0.10, 4,0 estrelas com mais de 160 avaliações no momento desta análise) — um artigo complementar à [ficha do Google AI Edge Gallery no diretório de software de IA local](/pt/directory). O app é a interface para o usuário de um projeto de código aberto mais amplo, [google-ai-edge/gallery no GitHub](https://github.com/google-ai-edge/gallery), também distribuído no Android e como APK direto — esta análise não avalia a versão Android. No iOS, ele executa a família de modelos Gemma da Google, incluindo a geração atual Gemma 4, totalmente offline após o download de um modelo, e permite importar modelos adicionais do [Hugging Face](https://huggingface.co/) no formato LiteRT. A questão prática para um leitor comparando apps de IA no dispositivo para iPhone é como um app gratuito, mantido pela Google, oficialmente rotulado como "beta experimental", se compara a alternativas pagas mais polidas como [Private LLM](/pt/power-local-llm/private-llm-review) ou gratuitas como [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
+      'Google AI Edge Gallery é um aplicativo gratuito da [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que executa modelos de IA de código aberto inteiramente em um iPhone, iPad ou Mac, usando o mecanismo de inferência no dispositivo da Google, [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). Esta análise cobre especificamente a ficha da App Store para iOS (ID da App Store 6749645337, versão 1.0.13, 4,1 estrelas com 165 avaliações em 2026-10-26) — um artigo complementar à [ficha do Google AI Edge Gallery no diretório de software de IA local](/pt/directory). O app é a interface para o usuário de um projeto de código aberto mais amplo, [google-ai-edge/gallery no GitHub](https://github.com/google-ai-edge/gallery), também distribuído no Android (Google Play e APK direto) e como DMG de macOS à parte — esta análise não avalia a versão Android. No iOS, ele executa a família de modelos Gemma da Google, incluindo a geração atual Gemma 4, totalmente offline após o download de um modelo, e permite importar modelos adicionais do [Hugging Face](https://huggingface.co/) no formato LiteRT. A questão prática para um leitor comparando apps de IA no dispositivo para iPhone é como um app gratuito, mantido pela Google, oficialmente rotulado como "beta experimental", se compara a alternativas pagas mais polidas como [Private LLM](/pt/power-local-llm/private-llm-review) ou gratuitas como [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
     metaDescription:
-      'Google AI Edge Gallery, análise 2026: app iOS gratuito (ID App Store 6749645337), chat Gemma 4 no dispositivo via LiteRT-LM, 4,0 estrelas/160+ avaliações. Recursos, privacidade e comparação com Private LLM e PocketPal AI.',
+      'Análise do Google AI Edge Gallery: app gratuito para iPhone, iPad e Mac (v1.0.13) com Gemma 4 no dispositivo. Recursos, privacidade e PocketPal AI.',
     twitterDescription:
       'Google AI Edge Gallery, análise 2026: o app iOS gratuito da Google para rodar Gemma 4 totalmente no dispositivo via LiteRT-LM. Recursos, rótulo de privacidade da App Store e comparação com Private LLM e PocketPal AI.',
     audience:
@@ -1617,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Também disponível como app Android de código aberto e APK direto em github.com/google-ai-edge/gallery — esta análise cobre apenas a ficha iOS.',
           'O rótulo de privacidade da App Store lista identificador do dispositivo, dados de desempenho e diagnósticos como coletados — o conteúdo do chat permanece no dispositivo, mas não é um app de "zero dados".',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -1645,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery é um app iOS gratuito (ID App Store 6749645337, versão 1.0.10) que executa o Gemma 4 e outros modelos de código aberto inteiramente no dispositivo via mecanismo LiteRT-LM da Google, rotulado pela própria Google como "beta experimental".',
+            text: 'Google AI Edge Gallery é um app iOS gratuito (ID App Store 6749645337, versão 1.0.13) que executa o Gemma 4 e outros modelos de código aberto inteiramente no dispositivo via mecanismo LiteRT-LM da Google, rotulado pela própria Google como "beta experimental".',
           },
           {
             type: 'plain-terms',
@@ -1654,9 +1774,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Preço: gratuito na [Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337); sem assinatura, sem compras no app.',
-          'Desenvolvedor: Google LLC, versão atual 1.0.10 (lançada em 4 de setembro de 2026), avaliada com 4,0 de 5 em mais de 160 avaliações.',
+          'Desenvolvedor: Google LLC, versão atual da App Store 1.0.13 (lançada em 8 de outubro de 2026), avaliada com 4,1 de 5 em 165 avaliações; última atividade upstream no GitHub em 26 de outubro de 2026.',
           'Plataformas (ficha iOS): iPhone e iPad com iOS 17.0+, Mac com macOS 14.0+ e chip Apple M1 ou posterior, Apple Vision Pro com visionOS 1.0+.',
-          'Modelos: família Gemma 4 (E2B, E4B, 26B, 31B e a variante multimodal 12B Unified), além do Gemma 3n; modelos personalizados podem ser importados do Hugging Face no formato LiteRT.',
+          'Modelos: família Gemma 4 (E2B, E4B, 26B, 31B e a variante multimodal 12B Unified), além do Gemma 3n, do EmbeddingGemma 2 para busca de mídia e de finetunes do FunctionGemma 270m para Mobile Actions; modelos personalizados podem ser importados do Hugging Face no formato LiteRT.',
           'Código aberto: o projeto subjacente [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) tem licença Apache 2.0 e também é distribuído para Android e como APK direto — esta análise cobre a versão da App Store para iOS.',
           'Status: o próprio README do GitHub da Google descreve o projeto como uma "versão beta experimental".',
           'Privacidade: o rótulo da App Store indica que identificador do dispositivo, dados de desempenho e diagnósticos estão vinculados à sua identidade, e que localização aproximada, dados de interação com o produto e relatórios de falhas são coletados sem vínculo com sua identidade — as mensagens de chat rodam no dispositivo, mas não é um app sem telemetria.',
@@ -1667,8 +1787,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Google AI Edge Gallery',
         content: [
           '**Google AI Edge Gallery é o próprio app-vitrine da Google para rodar modelos de IA generativa de código aberto diretamente em um celular, tablet ou Mac, sem ida e volta a um servidor para a inferência.** É construído sobre o [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM), o framework de inferência voltado para produção da Google para modelos de linguagem grandes em dispositivos de borda, que sucedeu a antiga API MediaPipe LLM Inference usada em versões anteriores do projeto.',
-          'A ficha iOS analisada aqui é o [Google AI Edge Gallery na Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID da App Store 6749645337), desenvolvido e publicado pela Google LLC, atualmente na versão 1.0.10 e avaliado com 4,0 de 5 estrelas em mais de 160 avaliações. É um download gratuito, sem nível de assinatura.',
-          'Esse mesmo app é um canal de distribuição de um projeto de código aberto maior, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), que a Google descreve como "o destino principal para rodar os modelos de linguagem grandes (LLMs) de código aberto mais poderosos do mundo no seu dispositivo móvel". Esse projeto também tem uma versão Android (via Google Play e APK direto) e versões para desktop. A própria documentação do projeto da Google rotula todo o esforço como uma **"versão beta experimental"** em vez de um produto de consumo finalizado — uma distinção que esta análise trata como substancial, não formal, já que o Google AI Edge Gallery é comparado ao longo deste grupo com apps construídos especificamente como produtos de consumo polidos.',
+          'A ficha iOS analisada aqui é o [Google AI Edge Gallery na Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID da App Store 6749645337), desenvolvido e publicado pela Google LLC, atualmente na versão 1.0.13 e avaliado com 4,1 de 5 estrelas em 165 avaliações. É um download gratuito, sem nível de assinatura.',
+          'Esse mesmo app é um canal de distribuição de um projeto de código aberto maior, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), que a Google descreve como "o destino principal para rodar os modelos de linguagem grandes (LLMs) de código aberto mais poderosos do mundo no seu dispositivo móvel". Esse projeto também tem uma versão Android (via Google Play e APK direto) e um DMG de macOS. A própria documentação do projeto da Google rotula todo o esforço como uma **"versão beta experimental"** em vez de um produto de consumo finalizado — uma distinção que esta análise trata como substancial, não formal, já que o Google AI Edge Gallery é comparado ao longo deste grupo com apps construídos especificamente como produtos de consumo polidos.',
         ],
       },
       getItCTA: {
@@ -1689,7 +1809,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Mac',
             'Onde conseguir': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'Notas': 'Mesma ficha da App Store; requer macOS 14.0+ e Apple M1 ou posterior.',
+            'Notas': 'Mesma ficha da App Store, que a Apple marca como "Not verified for macOS"; requer macOS 14.0+ e Apple M1 ou posterior.',
+          },
+          {
+            'Plataforma': 'Mac (direto)',
+            'Onde conseguir': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            'Notas': 'DMG linkado no README do projeto; um build à parte da ficha da App Store, não testado para esta análise.',
           },
           {
             'Plataforma': 'Apple Vision Pro',
@@ -1698,16 +1823,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Android',
-            'Onde conseguir': '[google-ai-edge/gallery no GitHub](https://github.com/google-ai-edge/gallery)',
-            'Notas': 'Uma versão separada do mesmo projeto de código aberto via Google Play ou APK direto — não coberta por esta análise.',
+            'Onde conseguir': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) ou [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            'Notas': 'Uma versão separada do mesmo projeto de código aberto; o README exige Android 12 ou posterior. O APK é a alternativa para dispositivos sem Google Play. Não coberta por esta análise.',
           },
           {
             'Plataforma': 'Código-fonte',
             'Onde conseguir': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             'Notas': 'Licença Apache 2.0; o repositório por trás de todos os canais de distribuição acima.',
           },
+          {
+            'Plataforma': 'Site',
+            'Onde conseguir': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            'Notas': 'O link "Developer website" da App Store aponta para cá; não foi encontrado um site de produto separado. Documentação de contexto: [Google AI Edge](https://ai.google.dev/edge).',
+          },
+          {
+            'Plataforma': 'Política de privacidade',
+            'Onde conseguir': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            'Notas': 'Política de privacidade geral da Google, linkada na ficha da App Store; não foi encontrada uma política específica do app.',
+          },
         ],
-        note: 'Disponibilidade, preço e números de versão na App Store podem mudar sem aviso. Confirme a ficha atual na [página da App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) antes de instalar. Verificado para esta análise em 2026-09-12.',
+        note: 'Disponibilidade, preço e números de versão na App Store podem mudar sem aviso. Confirme a ficha atual na [página da App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) antes de instalar. Verificado para esta análise em 2026-10-26.',
       },
       models: {
         id: 'models',
@@ -1715,7 +1850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery é centrado na família de modelos Gemma da Google, atualmente a geração Gemma 4 lançada em 2 de abril de 2026.** O Gemma 4 vem em vários tamanhos — E2B e E4B (projetados para celulares), uma variante 26B de mistura de especialistas, uma variante 31B, e um modelo multimodal **Gemma 4 12B Unified** que processa texto, imagem e, segundo a própria documentação da Google, entrada de áudio em uma única arquitetura. O app também suporta o **Gemma 3n**, uma versão Gemma anterior que adicionou compreensão de áudio à pilha no dispositivo antes do lançamento do Gemma 4.',
           'Além dos modelos Gemma incluídos, o app permite **importar seus próprios modelos do Hugging Face no formato LiteRT**, por meio de uma URL de ficha de modelo na tela de gerenciamento de modelos do app. A própria documentação da Google confirma essa integração com o Hugging Face para descoberta e download de modelos, mas não detalha se um token de acesso do Hugging Face é necessário para repositórios de modelos restritos — esta análise trata isso como não confirmado em vez de assumir um fluxo específico de token; verifique as instruções atuais no app antes de tentar importar um modelo restrito.',
-          'Em termos de recursos, o app reúne vários modos em torno desses modelos: **AI Chat com Thinking Mode** (que exibe as etapas intermediárias de raciocínio do modelo), **Ask Image** (análise multimodal de uma foto da câmera ou da galeria), **Audio Scribe** (transcrição e tradução de voz no dispositivo), **Agent Skills** (acesso a ferramentas externas, como uma busca na Wikipédia, sobre o modelo base), e uma tela de **gerenciamento de modelos e benchmarking** para comparar tamanho de download e desempenho no dispositivo antes de escolher um.',
+          'Em termos de recursos, o app reúne vários modos em torno desses modelos: **AI Chat com Thinking Mode** (que exibe as etapas intermediárias de raciocínio do modelo, a partir da família Gemma 4), **Ask Image** (análise multimodal de uma foto da câmera ou da galeria), **Audio Scribe** (transcrição e tradução de voz no dispositivo), **Agent Skills** (ferramentas externas como buscas na Wikipédia, mapas interativos e cartões de resumo visual, sobre o modelo base), **Instant Media Search** e **Video Moment Finder** (busca de fotos e vídeos em linguagem natural, com o EmbeddingGemma 2), **Prompt Lab** (testes de prompt de um só turno com controles de temperatura e top-k), **Mobile Actions** e **Tiny Garden** (controles do dispositivo offline e um minijogo experimental, ambos baseados em um finetune do FunctionGemma 270m), e uma tela de **gerenciamento de modelos e benchmarking** para comparar tamanho de download e desempenho no dispositivo antes de escolher um. A ficha e o README descrevem os recursos de imagem como análise ou busca de fotos que você já tem; nenhum é descrito como criador de imagens novas.',
         ],
       },
       platforms: {
@@ -1732,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Mac',
             'O que esperar': 'Requer macOS 14.0 ou posterior com chip Apple M1 ou mais recente.',
-            'Nota importante': 'Mesmo binário universal e ficha de App Store que o app iPhone/iPad; Macs Intel não são suportados segundo o requisito listado.',
+            'Nota importante': 'Mesma ficha da App Store que o app iPhone/iPad; Macs Intel não são suportados segundo o requisito listado. O README do projeto também linka um DMG de macOS à parte, que esta análise não testou.',
           },
           {
             'Plataforma': 'Apple Vision Pro',
@@ -1741,12 +1876,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Android',
-            'O que esperar': 'Uma versão separada do mesmo projeto de código aberto está disponível via Google Play (passou de distribuição exclusiva pelo GitHub para beta aberto no Google Play, segundo um anúncio da Google de 9 de setembro de 2025) ou como APK direto do GitHub.',
+            'O que esperar': 'Uma versão separada do mesmo projeto de código aberto está disponível via Google Play (passou de distribuição exclusiva pelo GitHub para beta aberto no Google Play, segundo um anúncio da Google de 9 de setembro de 2025) ou como APK direto do GitHub Releases (última versão 1.0.20, 6 de outubro de 2026), para Android 12 ou posterior segundo o README.',
             'Nota importante': 'Não é a mesma instalação que o app da App Store iOS coberto por esta análise; não assuma que o comportamento específico do iOS (por exemplo, o rótulo exato de privacidade) se aplique à versão Android.',
           },
           {
             'Plataforma': 'O projeto de código aberto mais amplo',
-            'O que esperar': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) tem licença Apache 2.0 e abrange distribuição para Android, iOS e desktop.',
+            'O que esperar': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) tem licença Apache 2.0 e abrange distribuição para Android, iOS e macOS.',
             'Nota importante': 'A própria documentação da Google rotula todo o esforço como uma "versão beta experimental" — esse status se aplica a todas as plataformas, não só ao iOS.',
           },
         ],
@@ -1757,7 +1892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidade: o que o rótulo da App Store realmente diz',
         content: [
           '**A inferência acontece no dispositivo depois que um modelo é baixado — mensagens de chat e respostas do modelo não são enviadas a um servidor da Google para gerar uma resposta.** Dito isso, essa não é a mesma afirmação que "o app não coleta nenhum dado", e esta análise trata as duas afirmações separadamente em vez de misturá-las.',
-          'O rótulo de privacidade da Apple para a [ficha da App Store do Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) informa que **dados vinculados à sua identidade** incluem identificador do dispositivo, dados de desempenho e diagnósticos, e que **dados não vinculados à sua identidade** incluem localização aproximada, dados de interação com o produto e relatórios de falhas. Este é o formato padrão de rótulo de privacidade declarado pelo desenvolvedor da Apple, não uma auditoria independente do tráfego de rede do app pela PromptQuorum.',
+          'O rótulo de privacidade da Apple para a [ficha da App Store do Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) informa que **dados vinculados à sua identidade** incluem identificador do dispositivo, dados de desempenho, diagnósticos e outros tipos de dados não especificados, e que **dados não vinculados à sua identidade** incluem localização aproximada, dados de interação com o produto e relatórios de falhas. Este é o formato padrão de rótulo de privacidade declarado pelo desenvolvedor da Apple, não uma auditoria independente do tráfego de rede do app pela PromptQuorum.',
           'A distinção prática para um leitor preocupado com privacidade: o conteúdo das suas conversas e quaisquer imagens ou áudios que você fornecer ao modelo permanecem no dispositivo durante a inferência, mas a Google ainda coleta dados do tipo telemetria (identificadores do dispositivo, dados de desempenho/diagnóstico, localização aproximada, relatórios de falhas) sobre como o app em si é usado. Leitores que precisem de uma postura mais rígida de "não coleta absolutamente nada" devem comparar isso com o rótulo de privacidade da App Store do [Private LLM](/pt/power-local-llm/private-llm-review), que declara que nenhum dado é coletado por aquele app.',
         ],
         items: [
@@ -1779,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**9 de setembro de 2025.** A [publicação de blog de anúncio](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) da própria Google confirmou a mudança de distribuição exclusiva pelo GitHub para um beta aberto na Google Play Store, e adicionou suporte a áudio (fala-para-texto e fala-para-texto-traduzido) via Gemma 3n por meio da API MediaPipe LLM Inference. A própria publicação da Google afirma que o projeto atingiu 500.000 downloads de APK em dois meses após o lançamento no GitHub, e descreveu um plano futuro para "trazer o app para usuários de iOS".',
           '**2 de abril de 2026.** A Google DeepMind lançou o **Gemma 4** sob licença Apache 2.0, nos tamanhos E2B, E4B, 26B e 31B, com uma variante multimodal **Gemma 4 12B Unified** lançada depois, em 3 de junho de 2026.',
           '**Disponibilidade na App Store para iOS.** O Google AI Edge Gallery chegou à App Store como [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (ID da App Store 6749645337), cumprindo o plano para iOS anunciado na publicação de blog de setembro de 2025; cobertura independente descreveu o app subindo entre os apps de produtividade mais baixados na App Store por volta do lançamento do Gemma 4.',
-          '**Versão 1.0.10 (4 de setembro de 2026).** A versão atual no momento desta análise, adicionando, segundo suas notas de versão, "suporte de tradução e localização global em 100 países diferentes" além de correções de bugs.',
+          '**Versão 1.0.13 (8 de outubro de 2026).** A versão atual da App Store no momento desta análise, após a 1.0.12 de 6 de outubro. O texto de recursos da ficha agora cita Agent Skills, Instant Media Search, Video Moment Finder, Mobile Actions e Tiny Garden; a versão 1.0.10 (4 de setembro de 2026) havia adicionado, segundo suas notas de versão, "suporte de tradução e localização global em 100 países diferentes".',
         ],
         note: 'Histórico de versões e datas têm como fonte o blog de desenvolvedores da Google e o repositório GitHub do projeto. Confirme a versão atual e as notas de versão diretamente na App Store antes de contar com um recurso específico.',
       },
@@ -1892,18 +2027,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O Google AI Edge Gallery é gratuito?',
-            a: 'Sim. A [ficha da App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) é gratuita para baixar, sem assinatura e sem compras no app, verificado para esta análise em 2026-09-12.',
+            a: 'Sim. A [ficha da App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) é gratuita para baixar, sem assinatura e sem compras no app, verificado para esta análise em 2026-10-26.',
           },
           {
             q: 'Quais modelos o Google AI Edge Gallery executa?',
-            a: 'Ele executa a família de modelos Gemma da Google, atualmente a geração Gemma 4 (E2B, E4B, 26B, 31B e a variante multimodal 12B Unified, lançadas entre abril e junho de 2026), além do anterior Gemma 3n. Usuários também podem importar modelos personalizados do Hugging Face no formato LiteRT.',
+            a: 'Ele executa a família de modelos Gemma da Google, atualmente a geração Gemma 4 (E2B, E4B, 26B, 31B e a variante multimodal 12B Unified, lançadas entre abril e junho de 2026), além do anterior Gemma 3n, do EmbeddingGemma 2 para busca de mídia e de finetunes do FunctionGemma 270m para Mobile Actions. Usuários também podem importar modelos personalizados do Hugging Face no formato LiteRT.',
           },
           {
             q: 'O Google AI Edge Gallery funciona no Android também?',
-            a: 'Sim, mas como uma distribuição separada. O projeto de código aberto subjacente, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), oferece uma versão Android via Google Play e APK direto, além da ficha da App Store para iOS coberta por esta análise.',
+            a: 'Sim, mas como uma distribuição separada. O projeto de código aberto subjacente, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), oferece uma versão Android via Google Play e APK direto (Android 12 ou posterior segundo o README), além da ficha da App Store para iOS coberta por esta análise.',
           },
           {
-            q: 'O Google AI Edge Gallery coleta meus dados?',
+            q: 'O Google AI Edge Gallery é privado e coleta meus dados?',
             a: 'Mensagens de chat e respostas do modelo são processadas no dispositivo depois que um modelo é baixado, mas o rótulo de privacidade da Apple para a ficha iOS informa que identificador do dispositivo, dados de desempenho e diagnósticos estão vinculados à sua identidade, e que localização aproximada, dados de interação com o produto e relatórios de falhas são coletados sem vínculo com sua identidade. Não é um app sem dados, mesmo que a inferência em si rode localmente.',
           },
           {
@@ -1920,7 +2055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais dispositivos a versão iOS suporta?',
-            a: 'Segundo a ficha da App Store: iPhone e iPad com iOS 17.0 ou posterior, Mac com macOS 14.0 ou posterior com chip Apple M1 ou mais recente, e Apple Vision Pro com visionOS 1.0 ou posterior.',
+            a: 'Segundo a ficha da App Store: iPhone e iPad com iOS 17.0 ou posterior, Mac com macOS 14.0 ou posterior com chip Apple M1 ou mais recente (a Apple marca como "Not verified for macOS"), e Apple Vision Pro com visionOS 1.0 ou posterior. A ficha não informa um modelo mínimo de iPhone nem RAM mínima; o README do projeto também linka um DMG de macOS à parte.',
           },
           {
             q: 'Como o Google AI Edge Gallery se compara ao Private LLM?',
@@ -1929,6 +2064,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'O Google AI Edge Gallery suporta entrada de áudio e imagem?',
             a: 'Sim, dependendo do modelo carregado. O Ask Image oferece análise multimodal de fotos, e o Audio Scribe oferece transcrição e tradução de fala no dispositivo; o suporte a áudio nos modelos Gemma subjacentes começou com o Gemma 3n e continua em tamanhos específicos do Gemma 4, incluindo a variante 12B Unified.',
+          },
+          {
+            q: 'O Google AI Edge Gallery gera imagens?',
+            a: 'Nenhum modo de geração de imagens consta na [página da App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) nem no README do projeto. O Ask Image responde perguntas sobre fotos que você fornece, e o Instant Media Search e o Video Moment Finder buscam na sua mídia existente; esta análise não testou o app quanto à geração de imagens.',
+          },
+          {
+            q: 'Quais idiomas o Google AI Edge Gallery suporta?',
+            a: 'A ficha da App Store mostra "English and 97 more" idiomas, e as notas da versão 1.0.10 citam suporte de tradução e localização em 100 países. A qualidade da saída em um idioma específico depende do modelo carregado; esta análise não testou idiomas individuais como o árabe.',
+          },
+          {
+            q: 'Como o Google AI Edge Gallery se compara ao PocketPal AI?',
+            a: 'Ambos são gratuitos e de código aberto. O Google AI Edge Gallery carrega modelos no formato LiteRT e acrescenta modos criados pela Google, como Agent Skills e Thinking Mode, enquanto o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) carrega qualquer arquivo GGUF que você mesmo obtiver e não está preso ao Gemma nem ao LiteRT-LM. Escolha o Google AI Edge Gallery pelos modelos e recursos da Google, e o PocketPal AI por um leque de modelos maior.',
           },
         ],
       },
@@ -1946,6 +2093,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[google-ai-edge/gallery no GitHub](https://github.com/google-ai-edge/gallery) — visão geral do projeto, plataformas suportadas, importação do Hugging Face, licença e status beta.',
           '[LiteRT-LM no GitHub](https://github.com/google-ai-edge/LiteRT-LM) — o mecanismo de inferência no dispositivo sobre o qual o app é construído.',
           '[Publicação de blog de anúncio do Google AI Edge Gallery](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — anúncio de 9 de setembro de 2025 sobre suporte a áudio e disponibilidade no Google Play.',
+          '[Política de privacidade da Google](https://policies.google.com/privacy) — a política linkada na ficha da App Store.',
+          '[Documentação do Google AI Edge](https://ai.google.dev/edge) — contexto sobre o mecanismo de execução no dispositivo e as ferramentas por trás do app.',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — versão Android 1.0.20 (6 de outubro de 2026), arquivos APK e link do DMG de macOS.',
         ],
       },
       relatedReading: {
@@ -1964,16 +2114,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-ja.webp',
     title: 'Google AI Edge Gallery レビュー：iPhone向けGemma 4オンデバイスチャット',
-    seoTitle: 'Google AI Edge Gallery レビュー：iOS版Gemmaアプリ',
+    seoTitle: 'Google AI Edge Gallery レビュー（iOS・Mac）',
     intro:
-      'Google AI Edge Gallery は、[Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) が提供する無料アプリで、Googleのオンデバイス推論ランタイム [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) を使い、オープンソースAIモデルをiPhone・iPad・Macで完全に実行します。本レビューはiOS版App Store掲載（App Store ID 6749645337、バージョン1.0.10、レビュー時点で4.0つ星・160件超の評価）を対象としています——[ローカルLLMソフトウェアディレクトリ内のGoogle AI Edge Gallery掲載](/ja/directory)の関連記事です。このアプリは、より大きなオープンソースプロジェクト [GitHub上のgoogle-ai-edge/gallery](https://github.com/google-ai-edge/gallery) のユーザー向け窓口であり、同プロジェクトはAndroid版や直接APKダウンロードも提供していますが、本レビューではAndroid版は評価対象外です。iOS版では、現行のGemma 4世代を含むGoogleのGemmaモデルファミリーを、モデルダウンロード後は完全オフラインで実行し、[Hugging Face](https://huggingface.co/) からLiteRT形式で追加モデルをインポートすることもできます。iPhone向けオンデバイスアプリを比較する読者にとって実務的な問いは、Googleが公式に「実験的ベータ版」と位置づける無料アプリが、[Private LLM](/ja/power-local-llm/private-llm-review) のようなより洗練された有料アプリや、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review) のような無料アプリとどう比較されるかです。',
+      'Google AI Edge Gallery は、[Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) が提供する無料アプリで、Googleのオンデバイス推論ランタイム [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) を使い、オープンソースAIモデルをiPhone・iPad・Macで完全に実行します。本レビューはiOS版App Store掲載（App Store ID 6749645337、バージョン1.0.13、2026-10-26時点で4.1つ星・165件の評価）を対象としています——[ローカルLLMソフトウェアディレクトリ内のGoogle AI Edge Gallery掲載](/ja/directory)の関連記事です。このアプリは、より大きなオープンソースプロジェクト [GitHub上のgoogle-ai-edge/gallery](https://github.com/google-ai-edge/gallery) のユーザー向け窓口であり、同プロジェクトはAndroid版（Google Playと直接APK）や別途macOS用DMGも提供していますが、本レビューではAndroid版は評価対象外です。iOS版では、現行のGemma 4世代を含むGoogleのGemmaモデルファミリーを、モデルダウンロード後は完全オフラインで実行し、[Hugging Face](https://huggingface.co/) からLiteRT形式で追加モデルをインポートすることもできます。iPhone向けオンデバイスアプリを比較する読者にとって実務的な問いは、Googleが公式に「実験的ベータ版」と位置づける無料アプリが、[Private LLM](/ja/power-local-llm/private-llm-review) のようなより洗練された有料アプリや、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review) のような無料アプリとどう比較されるかです。',
     metaDescription:
-      'Google AI Edge Gallery レビュー2026：無料iOSアプリ（App Store ID 6749645337）、LiteRT-LM経由のGemma 4オンデバイスチャット、4.0つ星・160件超の評価。機能、プライバシー、Private LLMやPocketPal AIとの比較。',
+      'Google AI Edge Gallery レビュー：iPhone・iPad・Mac向け無料アプリ（v1.0.13）でGemma 4をオンデバイス実行。機能、プライバシー、PocketPal AIとの比較。',
     twitterDescription:
       'Google AI Edge Gallery レビュー2026：LiteRT-LM経由でGemma 4を完全にオンデバイス実行するGoogleの無料iOSアプリ。機能、App Storeプライバシーラベル、Private LLM・PocketPal AIとの比較。',
     audience:
@@ -2008,7 +2158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'github.com/google-ai-edge/galleryではオープンソースAndroidアプリと直接APKも提供——本レビューはiOS版のみを対象。',
           'App Storeプライバシーラベルには、デバイスID、パフォーマンスデータ、診断情報の収集が記載——チャット内容自体はデバイス上に留まるが「データゼロ」のアプリではない。',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -2036,7 +2186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Galleryは無料のiOSアプリ（App Store ID 6749645337、バージョン1.0.10）で、GoogleのLiteRT-LMランタイム経由でGemma 4や他のオープンソースモデルを完全にオンデバイスで実行し、Google自身が「実験的ベータ版」と位置づけています。',
+            text: 'Google AI Edge Galleryは無料のiOSアプリ（App Store ID 6749645337、バージョン1.0.13）で、GoogleのLiteRT-LMランタイム経由でGemma 4や他のオープンソースモデルを完全にオンデバイスで実行し、Google自身が「実験的ベータ版」と位置づけています。',
           },
           {
             type: 'plain-terms',
@@ -2045,9 +2195,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '価格：[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) で無料。サブスクリプションもアプリ内課金もなし。',
-          '開発元：Google LLC。現行バージョンは1.0.10（2026年9月4日リリース）、160件超の評価で5点満点中4.0点。',
+          '開発元：Google LLC。現行のApp Storeバージョンは1.0.13（2026年10月8日リリース）、165件の評価で5点満点中4.1点。GitHubでの最新のアップストリーム更新は2026年10月26日。',
           'プラットフォーム（iOS版）：iOS 17以降のiPhone・iPad、macOS 14以降かつApple M1以降のMac、visionOS 1.0以降のApple Vision Pro。',
-          'モデル：Gemma 4ファミリー（E2B、E4B、26B、31B、マルチモーダルの12B Unified）に加えGemma 3n。Hugging FaceからLiteRT形式でカスタムモデルをインポート可能。',
+          'モデル：Gemma 4ファミリー（E2B、E4B、26B、31B、マルチモーダルの12B Unified）に加えGemma 3n、メディア検索用のEmbeddingGemma 2、Mobile Actions用のFunctionGemma 270mファインチューン。Hugging FaceからLiteRT形式でカスタムモデルをインポート可能。',
           'オープンソース：基盤プロジェクト [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) はApache 2.0ライセンスで、Android版・直接APKも提供——本レビューはiOS App Store版を対象。',
           'ステータス：GoogleのGitHub README自体がこのプロジェクトを「実験的ベータ版」と説明。',
           'プライバシー：App Storeラベルによると、デバイスID・パフォーマンスデータ・診断情報が識別情報に紐づけられ、おおよその位置情報・製品操作データ・クラッシュレポートは識別情報に紐づけずに収集される——チャット入力はデバイス上で処理されるが、テレメトリが全くないアプリではない。',
@@ -2058,8 +2208,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Google AI Edge Galleryとは',
         content: [
           '**Google AI Edge Galleryは、推論のためのサーバー往復なしにスマホ・タブレット・Mac上で直接オープンソース生成AIモデルを実行するための、Google自身のショーケースアプリです。** これはエッジデバイス上で大規模言語モデルを実行するためのGoogleの本番向け推論フレームワーク [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) 上に構築されており、同フレームワーク自体は、このプロジェクトの以前のバージョンで使われていた旧MediaPipe LLM Inference APIの後継です。',
-          '本レビューが対象とするiOS版は [Apple App Store上のGoogle AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)（App Store ID 6749645337）で、Google LLCが開発・公開しており、現行バージョンは1.0.10、160件超の評価で5点満点中4.0点です。無料ダウンロードで、サブスクリプション階層はありません。',
-          'このアプリ自体は、Googleが「世界で最も強力なオープンソース大規模言語モデル（LLM）をモバイルデバイス上で実行するための第一の目的地」と表現する、より大きなオープンソースプロジェクト [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) の配信チャネルの一つです。同プロジェクトはAndroid版（Google Playと直接APK経由）やデスクトップ版も提供しています。Google自身のプロジェクトドキュメントはこの取り組み全体を完成した消費者向け製品ではなく **「実験的ベータ版」** と位置づけています——本レビューはこの区別を形式的なものではなく実質的なものとして扱います。この記事群を通じてGoogle AI Edge Galleryは、消費者向け製品として洗練されるべく特に設計されたアプリと比較されるためです。',
+          '本レビューが対象とするiOS版は [Apple App Store上のGoogle AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)（App Store ID 6749645337）で、Google LLCが開発・公開しており、現行バージョンは1.0.13、165件の評価で5点満点中4.1点です。無料ダウンロードで、サブスクリプション階層はありません。',
+          'このアプリ自体は、Googleが「世界で最も強力なオープンソース大規模言語モデル（LLM）をモバイルデバイス上で実行するための第一の目的地」と表現する、より大きなオープンソースプロジェクト [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) の配信チャネルの一つです。同プロジェクトはAndroid版（Google Playと直接APK経由）やmacOS用DMGも提供しています。Google自身のプロジェクトドキュメントはこの取り組み全体を完成した消費者向け製品ではなく **「実験的ベータ版」** と位置づけています——本レビューはこの区別を形式的なものではなく実質的なものとして扱います。この記事群を通じてGoogle AI Edge Galleryは、消費者向け製品として洗練されるべく特に設計されたアプリと比較されるためです。',
         ],
       },
       getItCTA: {
@@ -2080,7 +2230,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'プラットフォーム': 'Mac',
             '入手先': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            '備考': '同じApp Store掲載。macOS 14以降とApple M1以降が必要。',
+            '備考': '同じApp Store掲載（Appleは「Not verified for macOS」と表示）。macOS 14以降とApple M1以降が必要。',
+          },
+          {
+            'プラットフォーム': 'Mac（直接）',
+            '入手先': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            '備考': 'プロジェクトのREADMEからリンクされたDMG。App Store掲載とは別ビルドで、本レビューでは未検証。',
           },
           {
             'プラットフォーム': 'Apple Vision Pro',
@@ -2089,16 +2244,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム': 'Android',
-            '入手先': '[GitHub上のgoogle-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
-            '備考': '同じオープンソースプロジェクトの別ビルドで、Google Playまたは直接APK経由——本レビューの対象外。',
+            '入手先': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery)または[GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            '備考': '同じオープンソースプロジェクトの別ビルド。READMEではAndroid 12以降が必要。APKはGoogle Playを使えない端末向けの代替手段。本レビューの対象外。',
           },
           {
             'プラットフォーム': 'ソースコード',
             '入手先': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             '備考': 'Apache 2.0ライセンス。上記すべての配信チャネルの背後にあるリポジトリ。',
           },
+          {
+            'プラットフォーム': 'ウェブサイト',
+            '入手先': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            '備考': 'App Storeの「Developer website」リンクはここを指しており、独立した製品サイトは見つかりませんでした。背景資料：[Google AI Edge](https://ai.google.dev/edge)。',
+          },
+          {
+            'プラットフォーム': 'プライバシーポリシー',
+            '入手先': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            '備考': 'App Store掲載からリンクされたGoogle全般のプライバシーポリシー。アプリ専用のポリシーは見つかりませんでした。',
+          },
         ],
-        note: 'App Storeの提供状況、価格、バージョン番号は予告なく変更される可能性があります。インストール前に[App Storeページ](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)で最新の掲載内容を確認してください。本レビューの確認日：2026-09-12。',
+        note: 'App Storeの提供状況、価格、バージョン番号は予告なく変更される可能性があります。インストール前に[App Storeページ](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)で最新の掲載内容を確認してください。本レビューの確認日：2026-10-26。',
       },
       models: {
         id: 'models',
@@ -2106,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge GalleryはGoogleのGemmaモデルファミリー、現在は2026年4月2日にリリースされたGemma 4世代を中心としています。** Gemma 4には複数のサイズがあります——E2BとE4B（スマホ向け）、26Bのmixture-of-expertsバリアント、31Bバリアント、そしてGoogle自身のドキュメントによればテキスト・画像・音声入力を単一アーキテクチャで扱うマルチモーダルモデル **Gemma 4 12B Unified** です。アプリはGemma 4リリース以前にオンデバイススタックに音声理解を追加した以前のGemmaリリースである **Gemma 3n** もサポートしています。',
           'バンドルされたGemmaモデルに加え、アプリのモデル管理画面内でモデルカードURLを使い、**Hugging Faceから自分自身のモデルをLiteRT形式でインポート**することもできます。Googleのプロジェクトドキュメントはモデルの発見とダウンロードのためのこのHugging Face統合の存在を確認していますが、ゲート付きモデルリポジトリにHugging Faceアクセストークンが必要かどうかなどの詳細は明記していません——本レビューは特定のトークンフローを想定するのではなく、これを未確認事項として扱います。ゲート付きモデルのインポートを試みる前に最新のアプリ内手順を確認してください。',
-          '機能面では、アプリはこれらのモデルを中心に複数の異なるモードをまとめています：モデルの中間推論ステップを表示する**Thinking Mode付きAIチャット**、カメラやギャラリーの写真をマルチモーダルで分析する**Ask Image**、オンデバイス音声文字起こし・翻訳の**Audio Scribe**、ベースモデルの上にウィキペディア検索などの外部ツールアクセスを重ねる**Agent Skills**、そしてモデルを選ぶ前にダウンロードサイズとオンデバイス性能を比較するための**モデル管理・ベンチマーク**画面です。',
+          '機能面では、アプリはこれらのモデルを中心に複数の異なるモードをまとめています：モデルの中間推論ステップを表示する**Thinking Mode付きAIチャット**（Gemma 4ファミリーから対応）、カメラやギャラリーの写真をマルチモーダルで分析する**Ask Image**、オンデバイス音声文字起こし・翻訳の**Audio Scribe**、ベースモデルの上にウィキペディア検索・インタラクティブマップ・ビジュアル要約カードなどの外部ツールを重ねる**Agent Skills**、EmbeddingGemma 2による写真・動画の自然言語検索**Instant Media Search**と**Video Moment Finder**、温度やtop-kを調整できる単発プロンプトテストの**Prompt Lab**、FunctionGemma 270mファインチューンを基盤とするオフラインのデバイス操作**Mobile Actions**と実験的ミニゲーム**Tiny Garden**、そしてモデルを選ぶ前にダウンロードサイズとオンデバイス性能を比較するための**モデル管理・ベンチマーク**画面です。掲載とREADMEは画像関連の機能を、すでにお持ちの写真の分析・検索として説明しており、新しい画像の生成として説明されているものはありません。',
         ],
       },
       platforms: {
@@ -2123,7 +2288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'プラットフォーム': 'Mac',
             '想定される内容': 'macOS 14以降とApple M1以降のチップが必要。',
-            '重要な注意点': 'iPhone/iPadアプリと同一のユニバーサルバイナリ・App Store掲載。記載された要件によればIntel Macは非対応。',
+            '重要な注意点': 'iPhone/iPadアプリと同一のApp Store掲載。記載された要件によればIntel Macは非対応。プロジェクトのREADMEは別のmacOS用DMGもリンクしていますが、本レビューでは未検証です。',
           },
           {
             'プラットフォーム': 'Apple Vision Pro',
@@ -2132,12 +2297,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム': 'Android',
-            '想定される内容': '同じオープンソースプロジェクトの別ビルドがGoogle Play経由で利用可能（2025年9月9日のGoogleの発表によりGitHub限定配信からGoogle Playでのオープンベータへ移行）、またはGitHubからの直接APK経由。',
+            '想定される内容': '同じオープンソースプロジェクトの別ビルドがGoogle Play経由で利用可能（2025年9月9日のGoogleの発表によりGitHub限定配信からGoogle Playでのオープンベータへ移行）、またはGitHub Releasesからの直接APK経由（最新版1.0.20、2026年10月6日）。READMEではAndroid 12以降が必要。',
             '重要な注意点': '本レビューが対象とするiOS App Storeアプリと同一のインストールではありません。iOS固有の挙動（例：正確なApp Storeプライバシーラベル）がAndroid版にそのまま当てはまるとは想定しないでください。',
           },
           {
             'プラットフォーム': 'より広いOSSプロジェクト',
-            '想定される内容': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) はApache 2.0ライセンスで、Android・iOS・デスクトップ配信にまたがります。',
+            '想定される内容': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) はApache 2.0ライセンスで、Android・iOS・macOS配信にまたがります。',
             '重要な注意点': 'Google自身のドキュメントはこの取り組み全体を「実験的ベータ版」と位置づけています——このステータスはiOSだけでなくすべてのプラットフォームに適用されます。',
           },
         ],
@@ -2148,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシー：App Storeラベルが実際に伝えていること',
         content: [
           '**モデルがダウンロードされれば推論はデバイス上で行われます——応答生成のためにチャットのプロンプトやモデル出力がGoogleのサーバーへ送信されることはありません。** とはいえ、これは「アプリが一切データを収集しない」という主張とは異なるものであり、本レビューはこの二つを混同せず別々に扱います。',
-          '[Google AI Edge GalleryのApp Store掲載](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)に対するAppleのプライバシー・ニュートリション・ラベルは、**あなたの識別情報に紐づくデータ**としてデバイスID、パフォーマンスデータ、診断情報を挙げ、**あなたの識別情報に紐づかないデータ**としておおよその位置情報、製品操作データ、クラッシュレポートを挙げています。これはApple標準の、開発者自身が申告するプライバシーラベル形式であり、PromptQuorumによるアプリのネットワークトラフィックの独立監査ではありません。',
+          '[Google AI Edge GalleryのApp Store掲載](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)に対するAppleのプライバシー・ニュートリション・ラベルは、**あなたの識別情報に紐づくデータ**としてデバイスID、パフォーマンスデータ、診断情報、詳細不明のその他のデータ種別を挙げ、**あなたの識別情報に紐づかないデータ**としておおよその位置情報、製品操作データ、クラッシュレポートを挙げています。これはApple標準の、開発者自身が申告するプライバシーラベル形式であり、PromptQuorumによるアプリのネットワークトラフィックの独立監査ではありません。',
           'プライバシーを重視する読者にとっての実務的な区別は次の通りです：会話の内容やモデルに渡す画像・音声は推論中デバイス上に留まりますが、Googleはアプリ自体がどう使われているかについて、テレメトリ的なデータ（デバイス識別子、パフォーマンス／診断データ、おおよその位置情報、クラッシュレポート）を依然として収集しています。「一切何も収集しない」というより厳格な立場を求める読者は、これを[Private LLM](/ja/power-local-llm/private-llm-review)のApp Storeプライバシーラベル（そのアプリからはデータが収集されないと記載）と比較すべきです。',
         ],
         items: [
@@ -2170,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2025年9月9日。** Google自身の[発表ブログ投稿](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/)は、GitHub限定配信からGoogle Play Storeでのオープンベータへの移行を確認し、MediaPipe LLM Inference API経由でGemma 3nによる音声サポート（音声からテキスト、音声から翻訳テキスト）を追加しました。Google自身の投稿によれば、GitHubでのローンチから2か月以内にプロジェクトは50万件のAPKダウンロードに達し、「iOSユーザー向けにアプリを提供する」という将来計画が記されていました。',
           '**2026年4月2日。** Google DeepMindがApache 2.0ライセンスで**Gemma 4**をE2B、E4B、26B、31Bのサイズでリリースし、続く2026年6月3日にはマルチモーダルの**Gemma 4 12B Unified**バリアントがリリースされました。',
           '**iOS App Storeでの提供開始。** Google AI Edge Galleryは[Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)（App Store ID 6749645337）としてApp Storeに登場し、2025年9月のブログ投稿で発表されたiOS計画を実現しました。独立系の報道によれば、Gemma 4のローンチ時期にアプリはApp Storeの生産性アプリダウンロードランキング上位に浮上したとされています。',
-          '**バージョン1.0.10（2026年9月4日）。** 本レビュー時点の最新版で、リリースノートによれば「100か国にわたるグローバル翻訳・ローカライゼーションサポート」とバグ修正が追加されました。',
+          '**バージョン1.0.13（2026年10月8日）。** 本レビュー時点のApp Store最新版で、10月6日の1.0.12に続くものです。掲載の機能説明にはAgent Skills、Instant Media Search、Video Moment Finder、Mobile Actions、Tiny Gardenが挙げられています。バージョン1.0.10（2026年9月4日）は、リリースノートによれば「100か国にわたるグローバル翻訳・ローカライゼーションサポート」を追加していました。',
         ],
         note: 'バージョン履歴と日付はGoogle自身の開発者ブログとプロジェクトのGitHubリポジトリを出典としています。特定の機能の存在に依拠する前に、App Storeで最新バージョンとリリースノートを直接確認してください。',
       },
@@ -2283,18 +2448,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Google AI Edge Galleryは無料ですか？',
-            a: 'はい。[App Store掲載](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)は無料でダウンロードでき、サブスクリプションもアプリ内課金もありません。本レビューでの確認日は2026-09-12です。',
+            a: 'はい。[App Store掲載](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)は無料でダウンロードでき、サブスクリプションもアプリ内課金もありません。本レビューでの確認日は2026-10-26です。',
           },
           {
             q: 'Google AI Edge Galleryはどのモデルを実行しますか？',
-            a: 'GoogleのGemmaモデルファミリー、現在は2026年4月から6月にかけてリリースされたGemma 4世代（E2B、E4B、26B、31B、マルチモーダルの12B Unifiedバリアント）に加え、以前のGemma 3nを実行します。ユーザーはHugging FaceからLiteRT形式でカスタムモデルをインポートすることもできます。',
+            a: 'GoogleのGemmaモデルファミリー、現在は2026年4月から6月にかけてリリースされたGemma 4世代（E2B、E4B、26B、31B、マルチモーダルの12B Unifiedバリアント）に加え、以前のGemma 3n、メディア検索用のEmbeddingGemma 2、Mobile Actions用のFunctionGemma 270mファインチューンを実行します。ユーザーはHugging FaceからLiteRT形式でカスタムモデルをインポートすることもできます。',
           },
           {
             q: 'Google AI Edge GalleryはAndroidでも動作しますか？',
-            a: 'はい、ただし別個の配信としてです。基盤となるオープンソースプロジェクト [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) は、本レビューが対象とするiOS App Store掲載に加え、Google Playと直接APK経由でAndroid版を提供しています。',
+            a: 'はい、ただし別個の配信としてです。基盤となるオープンソースプロジェクト [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) は、本レビューが対象とするiOS App Store掲載に加え、Google Playと直接APK経由（READMEではAndroid 12以降）でAndroid版を提供しています。',
           },
           {
-            q: 'Google AI Edge Galleryは私のデータを収集しますか？',
+            q: 'Google AI Edge Galleryはプライベートですか、データを収集しますか？',
             a: 'モデルがダウンロードされれば、チャットのプロンプトとモデルの応答はデバイス上で処理されますが、iOS版に対するAppleのプライバシーラベルによれば、デバイスID、パフォーマンスデータ、診断情報はあなたの識別情報に紐づけられ、おおよその位置情報、製品操作データ、クラッシュレポートは識別情報に紐づけずに収集されます。推論自体はローカルで動作しますが、データが全くないアプリではありません。',
           },
           {
@@ -2311,7 +2476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'iOS版はどのデバイスに対応していますか？',
-            a: 'App Store掲載によれば：iOS 17以降のiPhoneとiPad、macOS 14以降かつApple M1以降のチップを搭載したMac、visionOS 1.0以降のApple Vision Proです。',
+            a: 'App Store掲載によれば：iOS 17以降のiPhoneとiPad、macOS 14以降かつApple M1以降のチップを搭載したMac（Appleは「Not verified for macOS」と表示）、visionOS 1.0以降のApple Vision Proです。掲載には最低限のiPhone機種やRAMの記載はなく、プロジェクトのREADMEは別のmacOS用DMGもリンクしています。',
           },
           {
             q: 'Google AI Edge GalleryはPrivate LLMと比べてどうですか？',
@@ -2320,6 +2485,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Google AI Edge Galleryは音声や画像の入力に対応していますか？',
             a: 'はい、読み込んだモデル次第です。Ask Imageはマルチモーダルな写真分析を、Audio Scribeはオンデバイス音声文字起こしと翻訳を提供します。基盤となるGemmaモデルにおける音声サポートはGemma 3nから始まり、12B Unifiedバリアントを含む特定のGemma 4サイズで継続しています。',
+          },
+          {
+            q: 'Google AI Edge Galleryは画像を生成できますか？',
+            a: '[App Storeページ](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)にもプロジェクトのREADMEにも、画像生成モードは記載されていません。Ask Imageはユーザーが提供した写真についての質問に答え、Instant Media SearchとVideo Moment Finderは既存のメディアを検索します。本レビューでは画像生成についてアプリを検証していません。',
+          },
+          {
+            q: 'Google AI Edge Galleryはどの言語に対応していますか？',
+            a: 'App Store掲載には「English and 97 more」の言語が表示され、バージョン1.0.10のリリースノートは100か国にわたる翻訳・ローカライゼーションサポートに言及しています。特定言語での出力品質は読み込んだモデルに依存します。本レビューではアラビア語など個別の言語は検証していません。',
+          },
+          {
+            q: 'Google AI Edge GalleryはPocketPal AIとどう違いますか？',
+            a: 'どちらも無料でオープンソースです。Google AI Edge GalleryはLiteRT形式のモデルを読み込み、Agent SkillsやThinking ModeといったGoogle製のモードを備えています。一方、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)はユーザーが自分で入手した任意のGGUFファイルを読み込み、GemmaやLiteRT-LMには縛られません。Googleのモデルと機能ならGoogle AI Edge Gallery、より幅広いモデルから選ぶならPocketPal AIです。',
           },
         ],
       },
@@ -2337,6 +2514,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub上のgoogle-ai-edge/gallery](https://github.com/google-ai-edge/gallery) — プロジェクト概要、対応プラットフォーム、Hugging Faceインポート、ライセンス、ベータステータス。',
           '[GitHub上のLiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) — このアプリの基盤となるオンデバイス推論ランタイム。',
           '[Google AI Edge Gallery発表ブログ投稿](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — 2025年9月9日発表の音声サポートとGoogle Play提供開始について。',
+          '[Googleプライバシーポリシー](https://policies.google.com/privacy) — App Store掲載からリンクされたポリシー。',
+          '[Google AI Edgeドキュメント](https://ai.google.dev/edge) — アプリの基盤となるオンデバイスランタイムとツールの背景。',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — Android版1.0.20（2026年10月6日）、APKファイル、macOS用DMGへのリンク。',
         ],
       },
       relatedReading: {
@@ -2355,16 +2535,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-zh.webp',
     title: 'Google AI Edge Gallery 评测：iPhone 上的 Gemma 4 设备端聊天',
-    seoTitle: 'Google AI Edge Gallery 评测：iOS版Gemma应用',
+    seoTitle: 'Google AI Edge Gallery 评测：iOS与Mac应用',
     intro:
-      'Google AI Edge Gallery 是 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 推出的一款免费应用，使用谷歌的设备端推理运行时 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)，完全在 iPhone、iPad 或 Mac 上运行开源 AI 模型。本评测专门针对 iOS App Store 的应用列表（App Store ID 6749645337，版本 1.0.10，撰写本评测时评分为 4.0 星，超过 160 条评价）——是[本地 LLM 软件目录中 Google AI Edge Gallery 条目](/zh/directory)的配套文章。该应用是一个更大的开源项目——[GitHub 上的 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)——面向用户的前端，该项目也提供 Android 版本和直接 APK 下载，本评测不评估 Android 版本。在 iOS 上，它运行谷歌的 Gemma 模型系列，包括当前的 Gemma 4 代际，模型下载完成后完全离线运行，并允许从 [Hugging Face](https://huggingface.co/) 以 LiteRT 格式导入其他模型。对于比较设备端 iPhone 应用的读者来说，实际问题在于：一款免费、由谷歌维护、官方标注为"实验性测试版"的应用，与 [Private LLM](/zh/power-local-llm/private-llm-review) 这类更成熟的付费应用，或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 这类免费应用相比如何。',
+      'Google AI Edge Gallery 是 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 推出的一款免费应用，使用谷歌的设备端推理运行时 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)，完全在 iPhone、iPad 或 Mac 上运行开源 AI 模型。本评测专门针对 iOS App Store 的应用列表（App Store ID 6749645337，版本 1.0.13，截至 2026-10-26 评分为 4.1 星，共 165 条评价）——是[本地 LLM 软件目录中 Google AI Edge Gallery 条目](/zh/directory)的配套文章。该应用是一个更大的开源项目——[GitHub 上的 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)——面向用户的前端，该项目也提供 Android 版本（Google Play 和直接 APK）以及单独的 macOS DMG，本评测不评估 Android 版本。在 iOS 上，它运行谷歌的 Gemma 模型系列，包括当前的 Gemma 4 代际，模型下载完成后完全离线运行，并允许从 [Hugging Face](https://huggingface.co/) 以 LiteRT 格式导入其他模型。对于比较设备端 iPhone 应用的读者来说，实际问题在于：一款免费、由谷歌维护、官方标注为"实验性测试版"的应用，与 [Private LLM](/zh/power-local-llm/private-llm-review) 这类更成熟的付费应用，或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 这类免费应用相比如何。',
     metaDescription:
-      'Google AI Edge Gallery 评测2026：免费iOS应用（App Store ID 6749645337），通过LiteRT-LM实现Gemma 4设备端聊天，4.0星/160+评价。功能、隐私，以及与Private LLM、PocketPal AI的比较。',
+      'Google AI Edge Gallery 评测：免费的 iPhone、iPad、Mac 应用（v1.0.13），在设备端运行 Gemma 4。功能、隐私标签，以及与 PocketPal AI 的比较。',
     twitterDescription:
       'Google AI Edge Gallery 评测2026：谷歌的免费iOS应用，通过LiteRT-LM完全在设备端运行Gemma 4。功能、App Store隐私标签，以及与Private LLM、PocketPal AI的比较。',
     audience:
@@ -2399,7 +2579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在 github.com/google-ai-edge/gallery 上也提供开源 Android 应用和直接 APK——本评测仅涵盖 iOS 版本。',
           'App Store 隐私标签列出了设备 ID、性能数据和诊断信息作为已收集数据——聊天内容本身留在设备上，但这并非"零数据"应用。',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -2427,7 +2607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery 是一款免费 iOS 应用（App Store ID 6749645337，版本 1.0.10），通过谷歌的 LiteRT-LM 运行时完全在设备端运行 Gemma 4 及其他开源模型，谷歌自己将其标注为"实验性测试版"。',
+            text: 'Google AI Edge Gallery 是一款免费 iOS 应用（App Store ID 6749645337，版本 1.0.13），通过谷歌的 LiteRT-LM 运行时完全在设备端运行 Gemma 4 及其他开源模型，谷歌自己将其标注为"实验性测试版"。',
           },
           {
             type: 'plain-terms',
@@ -2436,9 +2616,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '价格：在 [Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 上免费；无订阅，无应用内购买。',
-          '开发者：Google LLC，当前版本 1.0.10（2026年9月4日发布），超过 160 条评价中评分为 4.0 分（满分5分）。',
+          '开发者：Google LLC，当前 App Store 版本 1.0.13（2026年10月8日发布），165 条评价中评分为 4.1 分（满分5分）；GitHub 上最近一次上游更新为 2026年10月26日。',
           '平台（iOS版本）：iOS 17.0+ 的 iPhone 和 iPad，macOS 14.0+ 且搭载 Apple M1 或更新芯片的 Mac，visionOS 1.0+ 的 Apple Vision Pro。',
-          '模型：Gemma 4 系列（E2B、E4B、26B、31B 及多模态的 12B Unified 变体），以及 Gemma 3n；可从 Hugging Face 以 LiteRT 格式导入自定义模型。',
+          '模型：Gemma 4 系列（E2B、E4B、26B、31B 及多模态的 12B Unified 变体），以及 Gemma 3n、用于媒体搜索的 EmbeddingGemma 2 和用于 Mobile Actions 的 FunctionGemma 270m 微调版；可从 Hugging Face 以 LiteRT 格式导入自定义模型。',
           '开源：底层项目 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) 采用 Apache 2.0 许可证，也提供 Android 版本和直接 APK——本评测涵盖 iOS App Store 版本。',
           '状态：谷歌自己的 GitHub README 将该项目描述为"实验性测试版"。',
           '隐私：App Store 标签指出，设备 ID、性能数据和诊断信息与身份相关联，大致位置、产品交互数据和崩溃报告在收集时不与身份关联——聊天提示词在设备上处理，但这并非零遥测应用。',
@@ -2449,8 +2629,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Google AI Edge Gallery 是什么',
         content: [
           '**Google AI Edge Gallery 是谷歌自己的展示应用，用于直接在手机、平板电脑或 Mac 上运行开源生成式 AI 模型，推理过程无需服务器往返。** 它构建在 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) 之上——谷歌面向生产环境、用于在边缘设备上运行大语言模型的推理框架，该框架本身取代了该项目早期版本使用的旧版 MediaPipe LLM Inference API。',
-          '本文评测的 iOS 版本是 [Apple App Store 上的 Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)（App Store ID 6749645337），由 Google LLC 开发并发布，当前版本为 1.0.10，超过 160 条评价中评分为 4.0 分（满分5分）。免费下载，无订阅层级。',
-          '这款应用本身是一个更大的开源项目——[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)——的一个分发渠道，谷歌将该项目描述为"在你的移动设备上运行世界上最强大的开源大语言模型（LLM）的首选目的地"。该项目还提供 Android 版本（通过 Google Play 和直接 APK）以及桌面版本。谷歌自己的项目文档将整个项目标注为 **"实验性测试版"**，而非成品消费级产品——本评测将这一区分视为实质性的，而非形式上的，因为在本系列文章中，Google AI Edge Gallery 始终与专门打造成成熟消费级产品的应用进行比较。',
+          '本文评测的 iOS 版本是 [Apple App Store 上的 Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)（App Store ID 6749645337），由 Google LLC 开发并发布，当前版本为 1.0.13，165 条评价中评分为 4.1 分（满分5分）。免费下载，无订阅层级。',
+          '这款应用本身是一个更大的开源项目——[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)——的一个分发渠道，谷歌将该项目描述为"在你的移动设备上运行世界上最强大的开源大语言模型（LLM）的首选目的地"。该项目还提供 Android 版本（通过 Google Play 和直接 APK）以及一个 macOS DMG。谷歌自己的项目文档将整个项目标注为 **"实验性测试版"**，而非成品消费级产品——本评测将这一区分视为实质性的，而非形式上的，因为在本系列文章中，Google AI Edge Gallery 始终与专门打造成成熟消费级产品的应用进行比较。',
         ],
       },
       getItCTA: {
@@ -2471,7 +2651,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '平台': 'Mac',
             '获取渠道': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            '备注': '同一 App Store 列表；需要 macOS 14.0+ 及 Apple M1 或更新芯片。',
+            '备注': '同一 App Store 列表，苹果将其标注为“Not verified for macOS”；需要 macOS 14.0+ 及 Apple M1 或更新芯片。',
+          },
+          {
+            '平台': 'Mac（直接下载）',
+            '获取渠道': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            '备注': '项目 README 中链接的 DMG；与 App Store 列表是不同的构建版本，本评测未测试。',
           },
           {
             '平台': 'Apple Vision Pro',
@@ -2480,16 +2665,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台': 'Android',
-            '获取渠道': '[GitHub 上的 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
-            '备注': '同一开源项目的独立构建版本，通过 Google Play 或直接 APK 分发——本评测不涵盖。',
+            '获取渠道': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) 或 [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            '备注': '同一开源项目的独立构建版本；README 要求 Android 12 或更新版本。APK 是没有 Google Play 的设备的备选方案。本评测不涵盖。',
           },
           {
             '平台': '源代码',
             '获取渠道': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             '备注': 'Apache 2.0 许可证；上述所有分发渠道背后的仓库。',
           },
+          {
+            '平台': '网站',
+            '获取渠道': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            '备注': 'App Store 的“Developer website”链接指向这里；未找到独立的产品网站。背景文档：[Google AI Edge](https://ai.google.dev/edge)。',
+          },
+          {
+            '平台': '隐私政策',
+            '获取渠道': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            '备注': 'App Store 列表所链接的谷歌通用隐私政策；未找到针对该应用的单独政策。',
+          },
         ],
-        note: 'App Store 的可用性、价格和版本号可能随时变更，恕不另行通知。安装前请在 [App Store 页面](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 上确认当前信息。本评测的核实日期为 2026-09-12。',
+        note: 'App Store 的可用性、价格和版本号可能随时变更，恕不另行通知。安装前请在 [App Store 页面](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 上确认当前信息。本评测的核实日期为 2026-10-26。',
       },
       models: {
         id: 'models',
@@ -2497,7 +2692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery 以谷歌的 Gemma 模型系列为核心，目前是 2026 年 4 月 2 日发布的 Gemma 4 代际。** Gemma 4 提供多种尺寸——为手机设计的 E2B 和 E4B、26B 混合专家变体、31B 变体，以及多模态的 **Gemma 4 12B Unified** 模型，根据谷歌自己的文档，该模型在单一架构中处理文本、图像及音频输入。该应用还支持 **Gemma 3n**，这是 Gemma 4 发布之前为设备端技术栈增加音频理解能力的早期 Gemma 版本。',
           '除了内置的 Gemma 模型外，该应用还允许通过应用模型管理界面中的模型卡片 URL，**以 LiteRT 格式从 Hugging Face 导入用户自己的模型**。谷歌自己的项目文档确认了这一用于模型发现和下载的 Hugging Face 集成功能，但没有说明诸如受限模型仓库是否需要 Hugging Face 访问令牌等细节——本评测将其视为未经证实的信息，而非假定某种特定的令牌流程；在尝试导入受限模型之前，请查看当前的应用内说明。',
-          '在功能方面，该应用围绕这些模型打包了几种不同的模式：显示模型中间推理步骤的 **带思考模式的 AI 聊天**、对相机或相册中照片进行多模态分析的 **Ask Image**、设备端语音转录和翻译的 **Audio Scribe**、在基础模型之上叠加维基百科查询等外部工具访问的 **Agent Skills**，以及用于在选定模型前比较下载大小和设备端性能的 **模型管理与基准测试** 界面。',
+          '在功能方面，该应用围绕这些模型打包了几种不同的模式：显示模型中间推理步骤的 **带思考模式的 AI 聊天**（从 Gemma 4 系列起支持）、对相机或相册中照片进行多模态分析的 **Ask Image**、设备端语音转录和翻译的 **Audio Scribe**、在基础模型之上叠加维基百科查询、交互式地图和可视化摘要卡片等外部工具的 **Agent Skills**、借助 EmbeddingGemma 2 用自然语言搜索照片和视频的 **Instant Media Search** 与 **Video Moment Finder**、可调节温度和 top-k 的单轮提示词测试 **Prompt Lab**、基于 FunctionGemma 270m 微调版的离线设备控制 **Mobile Actions** 与实验性小游戏 **Tiny Garden**，以及用于在选定模型前比较下载大小和设备端性能的 **模型管理与基准测试** 界面。列表和 README 将图像相关功能描述为分析或搜索你已有的照片；没有一项被描述为生成新图像。',
         ],
       },
       platforms: {
@@ -2514,7 +2709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '平台': 'Mac',
             '预期情况': '需要 macOS 14.0 或更新版本，且搭载 Apple M1 或更新芯片。',
-            '重要说明': '与 iPhone/iPad 应用相同的通用二进制文件和 App Store 列表；根据列出的要求，Intel Mac 不受支持。',
+            '重要说明': '与 iPhone/iPad 应用相同的 App Store 列表；根据列出的要求，Intel Mac 不受支持。项目 README 另外链接了一个单独的 macOS DMG，本评测未测试。',
           },
           {
             '平台': 'Apple Vision Pro',
@@ -2523,12 +2718,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台': 'Android',
-            '预期情况': '同一开源项目的独立构建版本可通过 Google Play 获取（根据谷歌 2025 年 9 月 9 日的公告，已从仅限 GitHub 分发转为 Google Play 上的公开测试版），或通过 GitHub 直接下载 APK。',
+            '预期情况': '同一开源项目的独立构建版本可通过 Google Play 获取（根据谷歌 2025 年 9 月 9 日的公告，已从仅限 GitHub 分发转为 Google Play 上的公开测试版），或通过 GitHub Releases 直接下载 APK（最新版本 1.0.20，2026年10月6日），README 要求 Android 12 或更新版本。',
             '重要说明': '与本评测所涵盖的 iOS App Store 应用并非同一安装；不要假定 iOS 特有的行为（例如确切的 App Store 隐私标签）同样适用于 Android 版本。',
           },
           {
             '平台': '更广泛的开源项目',
-            '预期情况': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) 采用 Apache 2.0 许可证，涵盖 Android、iOS 和桌面端分发。',
+            '预期情况': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) 采用 Apache 2.0 许可证，涵盖 Android、iOS 和 macOS 分发。',
             '重要说明': '谷歌自己的文档将整个项目标注为"实验性测试版"——这一状态适用于所有平台，而不仅仅是 iOS。',
           },
         ],
@@ -2539,7 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私：App Store标签实际说了什么',
         content: [
           '**模型下载完成后，推理在设备上进行——聊天提示词和模型输出不会为了生成响应而发送到谷歌服务器。** 不过，这与"该应用不收集任何数据"的说法并不相同，本评测将这两种说法分开处理，而非混为一谈。',
-          '苹果针对 [Google AI Edge Gallery 的 App Store 列表](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 的隐私营养标签指出，**与你的身份相关联的数据**包括设备 ID、性能数据和诊断信息，而**与你的身份不相关联的数据**包括大致位置、产品交互数据和崩溃报告。这是苹果标准的、由开发者自行声明的隐私标签格式，并非 PromptQuorum 对该应用网络流量的独立审计。',
+          '苹果针对 [Google AI Edge Gallery 的 App Store 列表](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 的隐私营养标签指出，**与你的身份相关联的数据**包括设备 ID、性能数据、诊断信息和未具体说明的其他数据类型，而**与你的身份不相关联的数据**包括大致位置、产品交互数据和崩溃报告。这是苹果标准的、由开发者自行声明的隐私标签格式，并非 PromptQuorum 对该应用网络流量的独立审计。',
           '对于关注隐私的读者而言，实际的区别在于：你的对话内容以及你提供给模型的任何图像或音频，在推理过程中都留在设备上，但谷歌仍会收集有关该应用本身使用情况的类似遥测的数据（设备标识符、性能/诊断数据、大致位置、崩溃报告）。需要更严格的"完全不收集任何数据"立场的读者，应将其与 [Private LLM](/zh/power-local-llm/private-llm-review) 的 App Store 隐私标签进行比较，后者声明该应用不收集任何数据。',
         ],
         items: [
@@ -2561,7 +2756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2025年9月9日。** 谷歌自己的[发布公告博客文章](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/)确认该项目从仅限 GitHub 分发转为 Google Play Store 上的公开测试版，并通过 MediaPipe LLM Inference API 借助 Gemma 3n 增加了音频支持（语音转文字和语音转翻译文字）。谷歌自己的文章指出，该项目自 GitHub 上线两个月内 APK 下载量达到 50 万次，并描述了未来"将该应用带给 iOS 用户"的计划。',
           '**2026年4月2日。** 谷歌 DeepMind 在 Apache 2.0 许可证下发布了 **Gemma 4**，提供 E2B、E4B、26B 和 31B 尺寸，随后于 2026 年 6 月 3 日发布了多模态的 **Gemma 4 12B Unified** 变体。',
           '**iOS App Store 上线。** Google AI Edge Gallery 以 [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)（App Store ID 6749645337）登陆 App Store，实现了 2025 年 9 月博客文章中宣布的 iOS 计划；独立报道描述该应用在 Gemma 4 发布前后跻身 App Store 生产力类应用下载量前列。',
-          '**版本 1.0.10（2026年9月4日）。** 撰写本评测时的当前版本，根据其发行说明，新增了"覆盖 100 个不同国家的全球翻译和本地化支持"以及错误修复。',
+          '**版本 1.0.13（2026年10月8日）。** 撰写本评测时的 App Store 当前版本，继 10月6日的 1.0.12 之后发布。列表中的功能说明现已提到 Agent Skills、Instant Media Search、Video Moment Finder、Mobile Actions 和 Tiny Garden；版本 1.0.10（2026年9月4日）根据其发行说明，新增了“覆盖 100 个不同国家的全球翻译和本地化支持”。',
         ],
         note: '版本历史和日期来源于谷歌自己的开发者博客和该项目的 GitHub 仓库。在依赖某个特定功能之前，请直接在 App Store 中确认当前版本和发行说明。',
       },
@@ -2674,18 +2869,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Google AI Edge Gallery 是免费的吗？',
-            a: '是的。[App Store 列表](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)可免费下载，无订阅，无应用内购买，本评测于 2026-09-12 对此进行了核实。',
+            a: '是的。[App Store 列表](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)可免费下载，无订阅，无应用内购买，本评测于 2026-10-26 对此进行了核实。',
           },
           {
             q: 'Google AI Edge Gallery 运行哪些模型？',
-            a: '它运行谷歌的 Gemma 模型系列，目前是 Gemma 4 代际（E2B、E4B、26B、31B 及多模态 12B Unified 变体，于 2026 年 4 月至 6 月间发布），以及更早的 Gemma 3n。用户还可以从 Hugging Face 以 LiteRT 格式导入自定义模型。',
+            a: '它运行谷歌的 Gemma 模型系列，目前是 Gemma 4 代际（E2B、E4B、26B、31B 及多模态 12B Unified 变体，于 2026 年 4 月至 6 月间发布），以及更早的 Gemma 3n、用于媒体搜索的 EmbeddingGemma 2 和用于 Mobile Actions 的 FunctionGemma 270m 微调版。用户还可以从 Hugging Face 以 LiteRT 格式导入自定义模型。',
           },
           {
             q: 'Google AI Edge Gallery 在 Android 上也能用吗？',
-            a: '可以，但作为独立分发版本。底层开源项目 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) 除了本评测所涵盖的 iOS App Store 列表外，还通过 Google Play 和直接 APK 提供 Android 版本。',
+            a: '可以，但作为独立分发版本。底层开源项目 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) 除了本评测所涵盖的 iOS App Store 列表外，还通过 Google Play 和直接 APK 提供 Android 版本（README 要求 Android 12 或更新版本）。',
           },
           {
-            q: 'Google AI Edge Gallery 会收集我的数据吗？',
+            q: 'Google AI Edge Gallery 是否私密，会收集我的数据吗？',
             a: '模型下载完成后，聊天提示词和模型响应在设备上处理，但苹果针对 iOS 列表的隐私标签指出，设备 ID、性能数据和诊断信息与你的身份相关联，而大致位置、产品交互数据和崩溃报告在收集时不与你的身份关联。这并非一款无数据应用，尽管推理本身在本地运行。',
           },
           {
@@ -2702,7 +2897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'iOS 版本支持哪些设备？',
-            a: '根据 App Store 列表：iOS 17.0 或更新版本的 iPhone 和 iPad，macOS 14.0 或更新版本且搭载 Apple M1 或更新芯片的 Mac，以及 visionOS 1.0 或更新版本的 Apple Vision Pro。',
+            a: '根据 App Store 列表：iOS 17.0 或更新版本的 iPhone 和 iPad，macOS 14.0 或更新版本且搭载 Apple M1 或更新芯片的 Mac（苹果将其标注为“Not verified for macOS”），以及 visionOS 1.0 或更新版本的 Apple Vision Pro。列表未给出最低 iPhone 型号或内存要求，项目 README 另外链接了一个单独的 macOS DMG。',
           },
           {
             q: 'Google AI Edge Gallery 与 Private LLM 相比如何？',
@@ -2711,6 +2906,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Google AI Edge Gallery 支持音频和图像输入吗？',
             a: '支持，取决于所加载的模型。Ask Image 提供多模态照片分析，Audio Scribe 提供设备端语音转录和翻译；底层 Gemma 模型的音频支持始于 Gemma 3n，并在包括 12B Unified 变体在内的特定 Gemma 4 尺寸中延续。',
+          },
+          {
+            q: 'Google AI Edge Gallery 能生成图像吗？',
+            a: '[App Store 页面](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)和项目 README 都没有列出图像生成模式。Ask Image 回答关于你提供的照片的问题，Instant Media Search 和 Video Moment Finder 搜索你已有的媒体；本评测没有测试该应用的图像生成。',
+          },
+          {
+            q: 'Google AI Edge Gallery 支持哪些语言？',
+            a: 'App Store 列表显示支持“English and 97 more”种语言，版本 1.0.10 的发行说明提到覆盖 100 个国家的翻译和本地化支持。特定语言的输出质量取决于所加载的模型；本评测没有测试阿拉伯语等个别语言。',
+          },
+          {
+            q: 'Google AI Edge Gallery 与 PocketPal AI 相比如何？',
+            a: '两者都免费且开源。Google AI Edge Gallery 加载 LiteRT 格式的模型，并提供 Agent Skills 和思考模式等谷歌打造的模式；[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 则加载你自己获取的任何 GGUF 文件，不绑定 Gemma 或 LiteRT-LM。想用谷歌自己的模型和功能，选 Google AI Edge Gallery；想要更广的模型选择，选 PocketPal AI。',
           },
         ],
       },
@@ -2728,6 +2935,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub 上的 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) — 项目概览、支持的平台、Hugging Face 导入、许可证及测试版状态。',
           '[GitHub 上的 LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) — 该应用所基于的设备端推理运行时。',
           '[Google AI Edge Gallery 发布公告博客文章](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — 2025年9月9日关于音频支持和 Google Play 可用性的公告。',
+          '[谷歌隐私政策](https://policies.google.com/privacy) — App Store 列表所链接的政策。',
+          '[Google AI Edge 文档](https://ai.google.dev/edge) — 该应用背后的设备端运行时和工具的背景资料。',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — Android 版本 1.0.20（2026年10月6日）、APK 文件和 macOS DMG 链接。',
         ],
       },
       relatedReading: {
@@ -2746,16 +2956,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-ar.webp',
     title: 'مراجعة Google AI Edge Gallery: دردشة Gemma 4 على الجهاز لـiPhone',
-    seoTitle: 'مراجعة Google AI Edge Gallery: تطبيق Gemma لـiOS',
+    seoTitle: 'مراجعة Google AI Edge Gallery: تطبيق iPhone وiPad وMac',
     intro:
-      'Google AI Edge Gallery تطبيق مجاني من [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) يُشغِّل نماذج ذكاء اصطناعي مفتوحة المصدر بالكامل على iPhone أو iPad أو Mac، باستخدام بيئة تشغيل الاستدلال على الجهاز من جوجل، [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). تتناول هذه المراجعة تحديداً صفحة App Store لـiOS (معرّف App Store 6749645337، الإصدار 1.0.10، تقييم 4.0 من 5 نجوم من أكثر من 160 تقييماً وقت كتابة هذه المراجعة) — وهي مقالة مرافقة [لإدراج Google AI Edge Gallery في دليل برامج الذكاء الاصطناعي المحلية](/ar/directory). التطبيق هو الواجهة الاستهلاكية لمشروع مفتوح المصدر أكبر، [google-ai-edge/gallery على GitHub](https://github.com/google-ai-edge/gallery)، والذي يُوزَّع أيضاً على Android وكملف APK مباشر — لا تُقيِّم هذه المراجعة نسخة Android. على iOS، يُشغِّل التطبيق عائلة نماذج Gemma من جوجل، بما في ذلك جيل Gemma 4 الحالي، بلا اتصال تماماً بعد تنزيل النموذج، ويتيح استيراد نماذج إضافية من [Hugging Face](https://huggingface.co/) بصيغة LiteRT. السؤال العملي للقارئ الذي يقارن تطبيقات الذكاء الاصطناعي على الجهاز لـiPhone هو كيف يقارَن تطبيق مجاني، تصونه جوجل، ومُصنَّف رسمياً بأنه "نسخة تجريبية اختبارية"، ببدائل مدفوعة أكثر نضجاً مثل [Private LLM](/ar/power-local-llm/private-llm-review) أو مجانية مثل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
+      'Google AI Edge Gallery تطبيق مجاني من [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) يُشغِّل نماذج ذكاء اصطناعي مفتوحة المصدر بالكامل على iPhone أو iPad أو Mac، باستخدام بيئة تشغيل الاستدلال على الجهاز من جوجل، [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). تتناول هذه المراجعة تحديداً صفحة App Store لـiOS (معرّف App Store 6749645337، الإصدار 1.0.13، تقييم 4.1 من 5 نجوم من 165 تقييماً حتى 2026-10-26) — وهي مقالة مرافقة [لإدراج Google AI Edge Gallery في دليل برامج الذكاء الاصطناعي المحلية](/ar/directory). التطبيق هو الواجهة الاستهلاكية لمشروع مفتوح المصدر أكبر، [google-ai-edge/gallery على GitHub](https://github.com/google-ai-edge/gallery)، والذي يُوزَّع أيضاً على Android (عبر Google Play وملف APK مباشر) وكملف DMG منفصل لنظام macOS — لا تُقيِّم هذه المراجعة نسخة Android. على iOS، يُشغِّل التطبيق عائلة نماذج Gemma من جوجل، بما في ذلك جيل Gemma 4 الحالي، بلا اتصال تماماً بعد تنزيل النموذج، ويتيح استيراد نماذج إضافية من [Hugging Face](https://huggingface.co/) بصيغة LiteRT. السؤال العملي للقارئ الذي يقارن تطبيقات الذكاء الاصطناعي على الجهاز لـiPhone هو كيف يقارَن تطبيق مجاني، تصونه جوجل، ومُصنَّف رسمياً بأنه "نسخة تجريبية اختبارية"، ببدائل مدفوعة أكثر نضجاً مثل [Private LLM](/ar/power-local-llm/private-llm-review) أو مجانية مثل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
     metaDescription:
-      'مراجعة Google AI Edge Gallery 2026: تطبيق iOS مجاني (معرّف App Store 6749645337)، دردشة Gemma 4 على الجهاز عبر LiteRT-LM، 4.0 نجوم/160+ تقييماً. الميزات، الخصوصية، والمقارنة مع Private LLM وPocketPal AI.',
+      'مراجعة Google AI Edge Gallery: تطبيق مجاني لأجهزة iPhone وiPad وMac (v1.0.13) يشغّل Gemma 4 على الجهاز. الميزات وملصق الخصوصية والمقارنة مع PocketPal AI.',
     twitterDescription:
       'مراجعة Google AI Edge Gallery 2026: تطبيق iOS المجاني من جوجل لتشغيل Gemma 4 بالكامل على الجهاز عبر LiteRT-LM. الميزات، ملصق خصوصية App Store، والمقارنة مع Private LLM وPocketPal AI.',
     audience:
@@ -2790,7 +3000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متوفر أيضاً كتطبيق Android مفتوح المصدر وكملف APK مباشر على github.com/google-ai-edge/gallery — تغطي هذه المراجعة صفحة iOS فقط.',
           'ملصق خصوصية App Store يذكر معرّف الجهاز وبيانات الأداء والتشخيصات ضمن البيانات المُجمَّعة — يبقى محتوى الدردشة نفسه على الجهاز، لكن هذا ليس تطبيقاً "بلا بيانات على الإطلاق".',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -2818,7 +3028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery تطبيق iOS مجاني (معرّف App Store 6749645337، الإصدار 1.0.10) يُشغِّل Gemma 4 ونماذج أخرى مفتوحة المصدر بالكامل على الجهاز عبر بيئة تشغيل LiteRT-LM من جوجل، وتُصنِّفه جوجل نفسها بأنه "نسخة تجريبية اختبارية".',
+            text: 'Google AI Edge Gallery تطبيق iOS مجاني (معرّف App Store 6749645337، الإصدار 1.0.13) يُشغِّل Gemma 4 ونماذج أخرى مفتوحة المصدر بالكامل على الجهاز عبر بيئة تشغيل LiteRT-LM من جوجل، وتُصنِّفه جوجل نفسها بأنه "نسخة تجريبية اختبارية".',
           },
           {
             type: 'plain-terms',
@@ -2827,9 +3037,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'السعر: مجاني على [Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)؛ بلا اشتراك وبلا مشتريات داخل التطبيق.',
-          'المطوّر: Google LLC، الإصدار الحالي 1.0.10 (صدر في 4 سبتمبر 2026)، بتقييم 4.0 من 5 من أكثر من 160 تقييماً.',
+          'المطوّر: Google LLC، الإصدار الحالي في App Store هو 1.0.13 (صدر في 8 أكتوبر 2026)، بتقييم 4.1 من 5 من 165 تقييماً؛ وآخر نشاط في المصدر الأصلي على GitHub كان في 26 أكتوبر 2026.',
           'المنصات (صفحة iOS): iPhone وiPad بنظام iOS 17.0+، Mac بنظام macOS 14.0+ ومعالج Apple M1 أو أحدث، Apple Vision Pro بنظام visionOS 1.0+.',
-          'النماذج: عائلة Gemma 4 (E2B وE4B و26B و31B والنسخة متعددة الوسائط 12B Unified)، بالإضافة إلى Gemma 3n؛ يمكن استيراد نماذج مخصصة من Hugging Face بصيغة LiteRT.',
+          'النماذج: عائلة Gemma 4 (E2B وE4B و26B و31B والنسخة متعددة الوسائط 12B Unified)، بالإضافة إلى Gemma 3n وEmbeddingGemma 2 للبحث في الوسائط ونسخ FunctionGemma 270m المُعدَّلة لميزة Mobile Actions؛ يمكن استيراد نماذج مخصصة من Hugging Face بصيغة LiteRT.',
           'مفتوح المصدر: المشروع الأساسي [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) مرخّص بموجب Apache 2.0 ومتوفر أيضاً لـAndroid وكملف APK مباشر — تغطي هذه المراجعة نسخة App Store لـiOS.',
           'الحالة: ملف README الخاص بجوجل نفسها على GitHub يصف المشروع بأنه "نسخة تجريبية اختبارية".',
           'الخصوصية: يذكر ملصق App Store أن معرّف الجهاز وبيانات الأداء والتشخيصات مرتبطة بهويتك، بينما الموقع التقريبي وبيانات التفاعل مع المنتج وتقارير الأعطال تُجمَع دون ربطها بهويتك — تتم معالجة رسائل الدردشة على الجهاز، لكن هذا ليس تطبيقاً بلا قياس عن بُعد.',
@@ -2840,8 +3050,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Google AI Edge Gallery',
         content: [
           '**Google AI Edge Gallery هو تطبيق العرض التوضيحي الخاص بجوجل لتشغيل نماذج ذكاء اصطناعي توليدي مفتوحة المصدر مباشرة على هاتف أو جهاز لوحي أو Mac، دون رحلة ذهاب وإياب إلى خادم من أجل الاستدلال.** يُبنى على [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)، إطار عمل الاستدلال الموجّه للإنتاج من جوجل لتشغيل نماذج اللغة الكبيرة على أجهزة الحافة، والذي خلف بدوره واجهة برمجة MediaPipe LLM Inference القديمة المستخدمة في إصدارات سابقة من المشروع.',
-          'صفحة iOS التي تُراجَع هنا هي [Google AI Edge Gallery على Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (معرّف App Store 6749645337)، طورتها ونشرتها Google LLC، وهي حالياً في الإصدار 1.0.10 وتقييمها 4.0 من 5 نجوم من أكثر من 160 تقييماً. التنزيل مجاني، دون مستوى اشتراك.',
-          'هذا التطبيق نفسه هو أحد قنوات توزيع مشروع مفتوح المصدر أكبر، [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)، الذي تصفه جوجل بأنه "الوجهة الأولى لتشغيل أقوى نماذج اللغة الكبيرة (LLM) مفتوحة المصدر في العالم على جهازك المحمول". يوفر هذا المشروع أيضاً نسخة Android (عبر Google Play وملف APK مباشر) ونسخ لسطح المكتب. توثيق المشروع الخاص بجوجل نفسه يُصنِّف كل هذا الجهد بأنه **"نسخة تجريبية اختبارية"** وليس منتجاً استهلاكياً منتهياً — وهو تمييز تعامله هذه المراجعة كأمر جوهري لا شكلي، إذ تتم مقارنة Google AI Edge Gallery طوال هذه المجموعة بتطبيقات صُمِّمت خصيصاً لتكون منتجات استهلاكية مصقولة.',
+          'صفحة iOS التي تُراجَع هنا هي [Google AI Edge Gallery على Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (معرّف App Store 6749645337)، طورتها ونشرتها Google LLC، وهي حالياً في الإصدار 1.0.13 وتقييمها 4.1 من 5 نجوم من 165 تقييماً. التنزيل مجاني، دون مستوى اشتراك.',
+          'هذا التطبيق نفسه هو أحد قنوات توزيع مشروع مفتوح المصدر أكبر، [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)، الذي تصفه جوجل بأنه "الوجهة الأولى لتشغيل أقوى نماذج اللغة الكبيرة (LLM) مفتوحة المصدر في العالم على جهازك المحمول". يوفر هذا المشروع أيضاً نسخة Android (عبر Google Play وملف APK مباشر) وملف DMG لنظام macOS. توثيق المشروع الخاص بجوجل نفسه يُصنِّف كل هذا الجهد بأنه **"نسخة تجريبية اختبارية"** وليس منتجاً استهلاكياً منتهياً — وهو تمييز تعامله هذه المراجعة كأمر جوهري لا شكلي، إذ تتم مقارنة Google AI Edge Gallery طوال هذه المجموعة بتطبيقات صُمِّمت خصيصاً لتكون منتجات استهلاكية مصقولة.',
         ],
       },
       getItCTA: {
@@ -2862,7 +3072,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'المنصة': 'Mac',
             'أين تجده': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'ملاحظات': 'نفس صفحة App Store؛ يتطلب macOS 14.0+ ومعالج Apple M1 أو أحدث.',
+            'ملاحظات': 'نفس صفحة App Store التي تصفها Apple بعبارة "Not verified for macOS"؛ يتطلب macOS 14.0+ ومعالج Apple M1 أو أحدث.',
+          },
+          {
+            'المنصة': 'Mac (تنزيل مباشر)',
+            'أين تجده': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            'ملاحظات': 'ملف DMG مرتبط من README المشروع؛ إصدار منفصل عن صفحة App Store ولم تختبره هذه المراجعة.',
           },
           {
             'المنصة': 'Apple Vision Pro',
@@ -2871,16 +3086,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة': 'Android',
-            'أين تجده': '[google-ai-edge/gallery على GitHub](https://github.com/google-ai-edge/gallery)',
-            'ملاحظات': 'نسخة منفصلة من نفس المشروع مفتوح المصدر عبر Google Play أو ملف APK مباشر — لا تغطيها هذه المراجعة.',
+            'أين تجده': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) أو [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            'ملاحظات': 'نسخة منفصلة من نفس المشروع مفتوح المصدر؛ يشترط README نظام Android 12 أو أحدث. ملف APK هو البديل للأجهزة التي لا تحتوي على Google Play. لا تغطيها هذه المراجعة.',
           },
           {
             'المنصة': 'الكود المصدري',
             'أين تجده': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             'ملاحظات': 'مرخّص بموجب Apache 2.0؛ المستودع الذي يقف خلف كل قنوات التوزيع أعلاه.',
           },
+          {
+            'المنصة': 'الموقع الإلكتروني',
+            'أين تجده': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            'ملاحظات': 'رابط "Developer website" في App Store يشير إلى هنا؛ لم يُعثر على موقع منتج منفصل. وثائق خلفية: [Google AI Edge](https://ai.google.dev/edge).',
+          },
+          {
+            'المنصة': 'سياسة الخصوصية',
+            'أين تجده': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            'ملاحظات': 'سياسة الخصوصية العامة لجوجل كما هي مرتبطة من صفحة App Store؛ ولم يُعثر على سياسة مخصصة للتطبيق.',
+          },
         ],
-        note: 'قد تتغير إتاحة App Store والسعر وأرقام الإصدارات دون إشعار مسبق. تحقق من الصفحة الحالية على [صفحة App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) قبل التثبيت. تم التحقق لهذه المراجعة بتاريخ 2026-09-12.',
+        note: 'قد تتغير إتاحة App Store والسعر وأرقام الإصدارات دون إشعار مسبق. تحقق من الصفحة الحالية على [صفحة App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) قبل التثبيت. تم التحقق لهذه المراجعة بتاريخ 2026-10-26.',
       },
       models: {
         id: 'models',
@@ -2888,7 +3113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يتمحور Google AI Edge Gallery حول عائلة نماذج Gemma من جوجل، وحالياً جيل Gemma 4 الصادر في 2 أبريل 2026.** يتوفر Gemma 4 بأحجام متعددة — E2B وE4B (مصممتان للهواتف)، ونسخة 26B من نوع مزيج الخبراء، ونسخة 31B، ونموذج **Gemma 4 12B Unified** متعدد الوسائط الذي يعالج، وفق توثيق جوجل نفسها، النص والصورة (والصوت) في بنية واحدة. يدعم التطبيق أيضاً **Gemma 3n**، وهو إصدار Gemma أقدم أضاف فهم الصوت إلى المكدس على الجهاز قبل صدور Gemma 4.',
           'بالإضافة إلى نماذج Gemma المُضمَّنة، يتيح التطبيق **استيراد نماذجك الخاصة من Hugging Face بصيغة LiteRT**، باستخدام رابط URL لبطاقة النموذج داخل شاشة إدارة النماذج بالتطبيق. يؤكد توثيق جوجل نفسه وجود هذا التكامل مع Hugging Face لاكتشاف النماذج وتنزيلها، لكنه لا يوضح تفاصيل مثل ما إذا كان يلزم رمز وصول Hugging Face لمستودعات النماذج المقيّدة — تتعامل هذه المراجعة مع هذا الأمر كغير مؤكد بدلاً من افتراض آلية رمز محددة؛ تحقق من التعليمات الحالية داخل التطبيق قبل محاولة استيراد نموذج مقيَّد.',
-          'من ناحية الميزات، يُجمِّع التطبيق عدة أوضاع مختلفة حول هذه النماذج: **دردشة ذكاء اصطناعي مع وضع التفكير** (يعرض خطوات الاستدلال الوسيطة للنموذج)، و**Ask Image** (تحليل متعدد الوسائط لصورة من الكاميرا أو المعرض)، و**Audio Scribe** (نسخ صوتي وترجمة على الجهاز)، و**Agent Skills** (وصول لأدوات خارجية، مثل بحث ويكيبيديا، فوق النموذج الأساسي)، وشاشة **إدارة النماذج والقياس المرجعي** لمقارنة حجم التنزيل والأداء على الجهاز قبل اختيار نموذج.',
+          'من ناحية الميزات، يُجمِّع التطبيق عدة أوضاع مختلفة حول هذه النماذج: **دردشة ذكاء اصطناعي مع وضع التفكير** (يعرض خطوات الاستدلال الوسيطة للنموذج، بدءاً من عائلة Gemma 4)، و**Ask Image** (تحليل متعدد الوسائط لصورة من الكاميرا أو المعرض)، و**Audio Scribe** (نسخ صوتي وترجمة على الجهاز)، و**Agent Skills** (أدوات خارجية مثل بحث ويكيبيديا والخرائط التفاعلية وبطاقات الملخصات المرئية، فوق النموذج الأساسي)، و**Instant Media Search** و**Video Moment Finder** (بحث في الصور ومقاطع الفيديو بلغة طبيعية عبر EmbeddingGemma 2)، و**Prompt Lab** (اختبارات موجّهات من دور واحد مع التحكم في درجة الحرارة وtop-k)، و**Mobile Actions** و**Tiny Garden** (تحكم في الجهاز دون اتصال ولعبة صغيرة تجريبية، وكلاهما مبني على نسخة FunctionGemma 270m مُعدَّلة)، وشاشة **إدارة النماذج والقياس المرجعي** لمقارنة حجم التنزيل والأداء على الجهاز قبل اختيار نموذج. تصف الصفحة وREADME ميزات الصور بأنها تحليل أو بحث في صور تملكها بالفعل؛ ولا تُوصَف أي منها بأنها تُنشئ صوراً جديدة.',
         ],
       },
       platforms: {
@@ -2905,7 +3130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'المنصة': 'Mac',
             'ما تتوقعه': 'يتطلب macOS 14.0 أو أحدث بمعالج Apple M1 أو أحدث.',
-            'ملاحظة مهمة': 'نفس الملف التنفيذي الشامل ونفس صفحة App Store مثل تطبيق iPhone/iPad؛ أجهزة Mac بمعالج Intel غير مدعومة وفق المتطلب المذكور.',
+            'ملاحظة مهمة': 'نفس صفحة App Store مثل تطبيق iPhone/iPad؛ أجهزة Mac بمعالج Intel غير مدعومة وفق المتطلب المذكور. كما يربط README المشروع ملف DMG منفصلاً لنظام macOS لم تختبره هذه المراجعة.',
           },
           {
             'المنصة': 'Apple Vision Pro',
@@ -2914,12 +3139,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة': 'Android',
-            'ما تتوقعه': 'تتوفر نسخة منفصلة من نفس المشروع مفتوح المصدر عبر Google Play (انتقلت من التوزيع الحصري عبر GitHub إلى نسخة تجريبية مفتوحة على Google Play وفق إعلان جوجل بتاريخ 9 سبتمبر 2025) أو كملف APK مباشر من GitHub.',
+            'ما تتوقعه': 'تتوفر نسخة منفصلة من نفس المشروع مفتوح المصدر عبر Google Play (انتقلت من التوزيع الحصري عبر GitHub إلى نسخة تجريبية مفتوحة على Google Play وفق إعلان جوجل بتاريخ 9 سبتمبر 2025) أو كملف APK مباشر من GitHub Releases (أحدث إصدار 1.0.20 بتاريخ 6 أكتوبر 2026)، لنظام Android 12 أو أحدث وفق README.',
             'ملاحظة مهمة': 'ليست نفس التثبيت مثل تطبيق App Store لـiOS الذي تغطيه هذه المراجعة؛ لا تفترض أن السلوك الخاص بـiOS (مثل ملصق الخصوصية الدقيق) ينتقل إلى نسخة Android.',
           },
           {
             'المنصة': 'المشروع مفتوح المصدر الأوسع',
-            'ما تتوقعه': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) مرخّص بموجب Apache 2.0 ويشمل التوزيع على Android وiOS وسطح المكتب.',
+            'ما تتوقعه': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) مرخّص بموجب Apache 2.0 ويشمل التوزيع على Android وiOS وmacOS.',
             'ملاحظة مهمة': 'توثيق جوجل نفسه يُصنِّف كل هذا الجهد بأنه "نسخة تجريبية اختبارية" — تنطبق هذه الحالة على جميع المنصات، وليس iOS فقط.',
           },
         ],
@@ -2930,7 +3155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخصوصية: ما يقوله ملصق App Store فعلاً',
         content: [
           '**يحدث الاستدلال على الجهاز بمجرد تنزيل نموذج — لا تُرسَل رسائل الدردشة ومخرجات النموذج إلى خادم جوجل لتوليد استجابة.** مع ذلك، هذا ليس نفس الادعاء بأن "التطبيق لا يجمع أي بيانات"، وتتعامل هذه المراجعة مع هاتين الجملتين بشكل منفصل بدلاً من الخلط بينهما.',
-          'يذكر ملصق خصوصية Apple لـ[صفحة App Store الخاصة بـGoogle AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) أن **البيانات المرتبطة بهويتك** تشمل معرّف الجهاز وبيانات الأداء والتشخيصات، وأن **البيانات غير المرتبطة بهويتك** تشمل الموقع التقريبي وبيانات التفاعل مع المنتج وتقارير الأعطال. هذا هو الشكل القياسي لملصق الخصوصية المُعلَن من قِبل المطوّر لدى Apple، وليس تدقيقاً مستقلاً من PromptQuorum لحركة شبكة التطبيق.',
+          'يذكر ملصق خصوصية Apple لـ[صفحة App Store الخاصة بـGoogle AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) أن **البيانات المرتبطة بهويتك** تشمل معرّف الجهاز وبيانات الأداء والتشخيصات وأنواع أخرى من البيانات غير محددة، وأن **البيانات غير المرتبطة بهويتك** تشمل الموقع التقريبي وبيانات التفاعل مع المنتج وتقارير الأعطال. هذا هو الشكل القياسي لملصق الخصوصية المُعلَن من قِبل المطوّر لدى Apple، وليس تدقيقاً مستقلاً من PromptQuorum لحركة شبكة التطبيق.',
           'التمييز العملي للقارئ المهتم بالخصوصية: يبقى محتوى محادثاتك وأي صور أو مقاطع صوتية تُقدِّمها للنموذج على الجهاز أثناء الاستدلال، لكن جوجل تجمع مع ذلك بيانات شبيهة بالقياس عن بُعد (معرّفات الجهاز، بيانات الأداء/التشخيص، الموقع التقريبي، تقارير الأعطال) حول كيفية استخدام التطبيق نفسه. القرّاء الذين يحتاجون موقفاً أكثر صرامة من نوع "لا يجمع أي شيء على الإطلاق" يجب أن يقارنوا هذا بملصق خصوصية App Store الخاص بـ[Private LLM](/ar/power-local-llm/private-llm-review)، الذي يذكر أنه لا تُجمَع أي بيانات من ذلك التطبيق.',
         ],
         items: [
@@ -2952,7 +3177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**9 سبتمبر 2025.** أكد [منشور مدونة الإعلان](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) الخاص بجوجل نفسها الانتقال من التوزيع الحصري عبر GitHub إلى نسخة تجريبية مفتوحة على Google Play Store، وأضاف دعم الصوت (تحويل الكلام إلى نص وتحويل الكلام إلى نص مترجَم) عبر Gemma 3n من خلال واجهة برمجة MediaPipe LLM Inference. يذكر منشور جوجل نفسه أن المشروع بلغ 500,000 عملية تنزيل لملف APK خلال شهرين من إطلاقه على GitHub، ووصف خطة مستقبلية "لجلب التطبيق لمستخدمي iOS".',
           '**2 أبريل 2026.** أصدرت Google DeepMind **Gemma 4** بموجب ترخيص Apache 2.0، بأحجام E2B وE4B و26B و31B، تلتها نسخة متعددة الوسائط **Gemma 4 12B Unified** في 3 يونيو 2026.',
           '**توفر التطبيق على App Store لـiOS.** وصل Google AI Edge Gallery إلى App Store باسم [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (معرّف App Store 6749645337)، محققاً خطة iOS المُعلَنة في منشور مدونة سبتمبر 2025؛ وصفت تغطية مستقلة صعود التطبيق ضمن أكثر تطبيقات الإنتاجية تنزيلاً على App Store قرب وقت إطلاق Gemma 4.',
-          '**الإصدار 1.0.10 (4 سبتمبر 2026).** الإصدار الحالي وقت كتابة هذه المراجعة، يضيف وفق ملاحظات إصداره "دعم الترجمة والتوطين العالمي عبر 100 دولة مختلفة" بالإضافة إلى إصلاحات أخطاء.',
+          '**الإصدار 1.0.13 (8 أكتوبر 2026).** الإصدار الحالي في App Store وقت كتابة هذه المراجعة، بعد الإصدار 1.0.12 الصادر في 6 أكتوبر. يذكر نص الميزات في الصفحة الآن Agent Skills وInstant Media Search وVideo Moment Finder وMobile Actions وTiny Garden؛ أما الإصدار 1.0.10 (4 سبتمبر 2026) فقد أضاف وفق ملاحظات إصداره "دعم الترجمة والتوطين العالمي عبر 100 دولة مختلفة".',
         ],
         note: 'تاريخ الإصدارات والتواريخ مصدرها مدونة مطوّري جوجل ومستودع GitHub الخاص بالمشروع. تحقق من الإصدار الحالي وملاحظات الإصدار مباشرة في App Store قبل الاعتماد على وجود ميزة محددة.',
       },
@@ -3065,18 +3290,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Google AI Edge Gallery مجاني؟',
-            a: 'نعم. [صفحة App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) مجانية التنزيل، دون اشتراك ودون مشتريات داخل التطبيق، تم التحقق لهذه المراجعة بتاريخ 2026-09-12.',
+            a: 'نعم. [صفحة App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) مجانية التنزيل، دون اشتراك ودون مشتريات داخل التطبيق، تم التحقق لهذه المراجعة بتاريخ 2026-10-26.',
           },
           {
             q: 'ما النماذج التي يُشغِّلها Google AI Edge Gallery؟',
-            a: 'يُشغِّل عائلة نماذج Gemma من جوجل، حالياً جيل Gemma 4 (E2B وE4B و26B و31B ونسخة 12B Unified متعددة الوسائط، الصادرة بين أبريل ويونيو 2026)، بالإضافة إلى Gemma 3n الأقدم. يمكن للمستخدمين أيضاً استيراد نماذج مخصصة من Hugging Face بصيغة LiteRT.',
+            a: 'يُشغِّل عائلة نماذج Gemma من جوجل، حالياً جيل Gemma 4 (E2B وE4B و26B و31B ونسخة 12B Unified متعددة الوسائط، الصادرة بين أبريل ويونيو 2026)، بالإضافة إلى Gemma 3n الأقدم وEmbeddingGemma 2 للبحث في الوسائط ونسخ FunctionGemma 270m المُعدَّلة لميزة Mobile Actions. يمكن للمستخدمين أيضاً استيراد نماذج مخصصة من Hugging Face بصيغة LiteRT.',
           },
           {
             q: 'هل يعمل Google AI Edge Gallery على Android أيضاً؟',
-            a: 'نعم، لكن كتوزيع منفصل. يوفر المشروع مفتوح المصدر الأساسي، [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)، نسخة Android عبر Google Play وملف APK مباشر، بالإضافة إلى صفحة App Store لـiOS التي تغطيها هذه المراجعة.',
+            a: 'نعم، لكن كتوزيع منفصل. يوفر المشروع مفتوح المصدر الأساسي، [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)، نسخة Android عبر Google Play وملف APK مباشر (لنظام Android 12 أو أحدث وفق README)، بالإضافة إلى صفحة App Store لـiOS التي تغطيها هذه المراجعة.',
           },
           {
-            q: 'هل يجمع Google AI Edge Gallery بياناتي؟',
+            q: 'هل Google AI Edge Gallery خاص، وهل يجمع بياناتي؟',
             a: 'تُعالَج رسائل الدردشة واستجابات النموذج على الجهاز بمجرد تنزيل نموذج، لكن ملصق خصوصية Apple لصفحة iOS يذكر أن معرّف الجهاز وبيانات الأداء والتشخيصات مرتبطة بهويتك، وأن الموقع التقريبي وبيانات التفاعل مع المنتج وتقارير الأعطال تُجمَع دون ربطها بهويتك. هذا ليس تطبيقاً بلا بيانات، رغم أن الاستدلال نفسه يعمل محلياً.',
           },
           {
@@ -3093,7 +3318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما الأجهزة التي تدعمها نسخة iOS؟',
-            a: 'وفق صفحة App Store: iPhone وiPad بنظام iOS 17.0 أو أحدث، Mac بنظام macOS 14.0 أو أحدث ومعالج Apple M1 أو أحدث، وApple Vision Pro بنظام visionOS 1.0 أو أحدث.',
+            a: 'وفق صفحة App Store: iPhone وiPad بنظام iOS 17.0 أو أحدث، Mac بنظام macOS 14.0 أو أحدث ومعالج Apple M1 أو أحدث (تصفه Apple بعبارة "Not verified for macOS")، وApple Vision Pro بنظام visionOS 1.0 أو أحدث. لا تذكر الصفحة حداً أدنى لطراز iPhone أو لذاكرة RAM، كما يربط README المشروع ملف DMG منفصلاً لنظام macOS.',
           },
           {
             q: 'كيف يقارَن Google AI Edge Gallery بـPrivate LLM؟',
@@ -3102,6 +3327,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'هل يدعم Google AI Edge Gallery إدخال الصوت والصورة؟',
             a: 'نعم، حسب النموذج المُحمَّل. يوفر Ask Image تحليلاً متعدد الوسائط للصور، ويوفر Audio Scribe نسخاً صوتياً وترجمة على الجهاز؛ بدأ دعم الصوت في نماذج Gemma الأساسية مع Gemma 3n ويستمر في أحجام معينة من Gemma 4، بما فيها نسخة 12B Unified.',
+          },
+          {
+            q: 'هل يستطيع Google AI Edge Gallery إنشاء الصور؟',
+            a: 'لا يظهر وضع لإنشاء الصور في [صفحة App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ولا في README المشروع. يجيب Ask Image عن أسئلة حول صور تقدمها أنت، ويبحث Instant Media Search وVideo Moment Finder في وسائطك الموجودة؛ ولم تختبر هذه المراجعة التطبيق في إنشاء الصور.',
+          },
+          {
+            q: 'ما اللغات التي يدعمها Google AI Edge Gallery؟',
+            a: 'تعرض صفحة App Store عبارة "English and 97 more" لغة، وتشير ملاحظات الإصدار 1.0.10 إلى دعم الترجمة والتوطين عبر 100 دولة. تعتمد جودة المخرجات في لغة بعينها على النموذج المحمَّل؛ ولم تختبر هذه المراجعة لغات فردية مثل العربية.',
+          },
+          {
+            q: 'كيف يقارَن Google AI Edge Gallery بـPocketPal AI؟',
+            a: 'كلاهما مجاني ومفتوح المصدر. يحمّل Google AI Edge Gallery نماذج بصيغة LiteRT ويضيف أوضاعاً من تصميم جوجل مثل Agent Skills ووضع التفكير، بينما يحمّل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أي ملف GGUF تحصل عليه بنفسك وليس مرتبطاً بـGemma أو LiteRT-LM. اختر Google AI Edge Gallery لنماذج جوجل وميزاتها، واختر PocketPal AI لمجموعة نماذج أوسع.',
           },
         ],
       },
@@ -3119,6 +3356,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[google-ai-edge/gallery على GitHub](https://github.com/google-ai-edge/gallery) — نظرة عامة على المشروع، المنصات المدعومة، استيراد Hugging Face، الترخيص، وحالة النسخة التجريبية.',
           '[LiteRT-LM على GitHub](https://github.com/google-ai-edge/LiteRT-LM) — بيئة تشغيل الاستدلال على الجهاز التي بُني عليها التطبيق.',
           '[منشور مدونة إعلان Google AI Edge Gallery](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — إعلان بتاريخ 9 سبتمبر 2025 عن دعم الصوت وتوفر Google Play.',
+          '[سياسة خصوصية جوجل](https://policies.google.com/privacy) — السياسة المرتبطة من صفحة App Store.',
+          '[وثائق Google AI Edge](https://ai.google.dev/edge) — خلفية عن بيئة التشغيل على الجهاز والأدوات التي يقوم عليها التطبيق.',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — إصدار Android 1.0.20 (6 أكتوبر 2026) وملفات APK ورابط ملف DMG لنظام macOS.',
         ],
       },
       relatedReading: {
@@ -3137,16 +3377,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
-    next_refresh_due: '2027-03-12',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-ko.webp',
     title: 'Google AI Edge Gallery 리뷰: iPhone용 Gemma 4 온디바이스 채팅',
-    seoTitle: 'Google AI Edge Gallery 리뷰: iOS Gemma 앱',
+    seoTitle: 'Google AI Edge Gallery 리뷰: iOS·Mac 앱',
     intro:
-      'Google AI Edge Gallery는 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)가 제공하는 무료 앱으로, 구글의 온디바이스 추론 런타임인 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)을 사용해 iPhone, iPad, Mac에서 오픈소스 AI 모델을 완전히 온디바이스로 실행합니다. 이 리뷰는 iOS 앱스토어 등재 정보(앱스토어 ID 6749645337, 버전 1.0.10, 이 리뷰 작성 시점 기준 160개 이상의 평가로 별점 4.0)를 구체적으로 다루며, [로컬 LLM 소프트웨어 디렉터리 내 Google AI Edge Gallery 항목](/ko/directory)의 관련 기사입니다. 이 앱은 더 큰 오픈소스 프로젝트인 [GitHub의 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)의 사용자용 전면부이며, 이 프로젝트는 Android와 직접 APK 다운로드로도 배포됩니다 — 이 리뷰는 Android 버전을 평가하지 않습니다. iOS에서는 현재 세대인 Gemma 4를 포함한 구글의 Gemma 모델 계열을 모델 다운로드 후 완전히 오프라인으로 실행하며, [Hugging Face](https://huggingface.co/)에서 LiteRT 형식으로 추가 모델을 가져올 수도 있습니다. iPhone용 온디바이스 앱을 비교하는 독자에게 실질적인 질문은, 구글이 유지관리하며 공식적으로 "실험적 베타"라고 표시한 무료 앱이 [Private LLM](/ko/power-local-llm/private-llm-review)과 같이 더 완성도 높은 유료 대안이나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 같은 무료 대안과 비교해 어떤지입니다.',
+      'Google AI Edge Gallery는 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)가 제공하는 무료 앱으로, 구글의 온디바이스 추론 런타임인 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)을 사용해 iPhone, iPad, Mac에서 오픈소스 AI 모델을 완전히 온디바이스로 실행합니다. 이 리뷰는 iOS 앱스토어 등재 정보(앱스토어 ID 6749645337, 버전 1.0.13, 2026-10-26 기준 165개의 평가로 별점 4.1)를 구체적으로 다루며, [로컬 LLM 소프트웨어 디렉터리 내 Google AI Edge Gallery 항목](/ko/directory)의 관련 기사입니다. 이 앱은 더 큰 오픈소스 프로젝트인 [GitHub의 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)의 사용자용 전면부이며, 이 프로젝트는 Android(Google Play 및 직접 APK)와 별도의 macOS DMG로도 배포됩니다 — 이 리뷰는 Android 버전을 평가하지 않습니다. iOS에서는 현재 세대인 Gemma 4를 포함한 구글의 Gemma 모델 계열을 모델 다운로드 후 완전히 오프라인으로 실행하며, [Hugging Face](https://huggingface.co/)에서 LiteRT 형식으로 추가 모델을 가져올 수도 있습니다. iPhone용 온디바이스 앱을 비교하는 독자에게 실질적인 질문은, 구글이 유지관리하며 공식적으로 "실험적 베타"라고 표시한 무료 앱이 [Private LLM](/ko/power-local-llm/private-llm-review)과 같이 더 완성도 높은 유료 대안이나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 같은 무료 대안과 비교해 어떤지입니다.',
     metaDescription:
-      'Google AI Edge Gallery 2026 리뷰: 무료 iOS 앱(앱스토어 ID 6749645337), LiteRT-LM을 통한 Gemma 4 온디바이스 채팅, 별점 4.0/160개 이상 평가. 기능, 개인정보 보호, Private LLM 및 PocketPal AI와의 비교.',
+      'Google AI Edge Gallery 리뷰: iPhone·iPad·Mac용 무료 앱(v1.0.13), Gemma 4 온디바이스 실행. 기능, 개인정보 보호, PocketPal AI 비교.',
     twitterDescription:
       'Google AI Edge Gallery 2026 리뷰: LiteRT-LM을 통해 Gemma 4를 완전히 온디바이스로 실행하는 구글의 무료 iOS 앱. 기능, 앱스토어 개인정보 보호 라벨, Private LLM 및 PocketPal AI와의 비교.',
     audience:
@@ -3181,7 +3421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'github.com/google-ai-edge/gallery에서 오픈소스 Android 앱과 직접 APK로도 제공 — 이 리뷰는 iOS 등재 정보만 다룹니다.',
           '앱스토어 개인정보 보호 라벨에는 기기 ID, 성능 데이터, 진단 정보가 수집되는 것으로 명시 — 채팅 내용 자체는 기기에 남지만 "데이터 전무" 앱은 아닙니다.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -3209,7 +3449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Google AI Edge Gallery는 무료 iOS 앱(앱스토어 ID 6749645337, 버전 1.0.10)으로, 구글의 LiteRT-LM 런타임을 통해 Gemma 4 및 기타 오픈소스 모델을 완전히 온디바이스로 실행하며, 구글 스스로 "실험적 베타"로 표시합니다.',
+            text: 'Google AI Edge Gallery는 무료 iOS 앱(앱스토어 ID 6749645337, 버전 1.0.13)으로, 구글의 LiteRT-LM 런타임을 통해 Gemma 4 및 기타 오픈소스 모델을 완전히 온디바이스로 실행하며, 구글 스스로 "실험적 베타"로 표시합니다.',
           },
           {
             type: 'plain-terms',
@@ -3218,9 +3458,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '가격: [Apple 앱스토어](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)에서 무료; 구독 없음, 인앱 구매 없음.',
-          '개발사: Google LLC, 현재 버전 1.0.10(2026년 9월 4일 출시), 160개 이상의 평가에서 5점 만점에 4.0점.',
+          '개발사: Google LLC, 현재 앱스토어 버전 1.0.13(2026년 10월 8일 출시), 165개의 평가에서 5점 만점에 4.1점; GitHub의 최근 업스트림 활동은 2026년 10월 26일입니다.',
           '플랫폼(iOS 등재): iOS 17.0+ iPhone 및 iPad, macOS 14.0+ 및 Apple M1 이상 칩을 탑재한 Mac, visionOS 1.0+ Apple Vision Pro.',
-          '모델: Gemma 4 계열(E2B, E4B, 26B, 31B, 멀티모달 12B Unified 변형)과 Gemma 3n; Hugging Face에서 LiteRT 형식으로 커스텀 모델 가져오기 가능.',
+          '모델: Gemma 4 계열(E2B, E4B, 26B, 31B, 멀티모달 12B Unified 변형)과 Gemma 3n, 미디어 검색용 EmbeddingGemma 2, Mobile Actions용 FunctionGemma 270m 파인튜닝; Hugging Face에서 LiteRT 형식으로 커스텀 모델 가져오기 가능.',
           '오픈소스: 기반 프로젝트인 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)는 Apache 2.0 라이선스이며 Android 버전과 직접 APK로도 제공 — 이 리뷰는 iOS 앱스토어 버전을 다룹니다.',
           '상태: 구글 자체 GitHub README는 이 프로젝트를 "실험적 베타 릴리스"로 설명합니다.',
           '개인정보 보호: 앱스토어 라벨에 따르면 기기 ID, 성능 데이터, 진단 정보는 사용자 신원과 연결되며, 대략적인 위치, 제품 상호작용 데이터, 충돌 보고서는 신원과 연결되지 않은 채로 수집됩니다 — 채팅 프롬프트는 기기에서 처리되지만 텔레메트리가 전혀 없는 앱은 아닙니다.',
@@ -3231,8 +3471,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Google AI Edge Gallery란',
         content: [
           '**Google AI Edge Gallery는 추론을 위해 서버를 왕복하지 않고 휴대폰, 태블릿, Mac에서 직접 오픈소스 생성형 AI 모델을 실행하기 위한 구글 자체의 쇼케이스 앱입니다.** 이 앱은 엣지 기기에서 대규모 언어 모델을 실행하기 위한 구글의 프로덕션 지향 추론 프레임워크인 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) 위에 구축되었으며, 이는 이 프로젝트의 이전 버전에서 사용되던 구형 MediaPipe LLM Inference API를 계승한 것입니다.',
-          '여기서 리뷰하는 iOS 등재 정보는 [Apple 앱스토어의 Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)(앱스토어 ID 6749645337)로, Google LLC가 개발 및 게시했으며, 현재 버전 1.0.10에 160개 이상의 평가에서 5점 만점에 4.0점입니다. 무료 다운로드이며 구독 등급이 없습니다.',
-          '이 동일한 앱은 구글이 "모바일 기기에서 세계에서 가장 강력한 오픈소스 대규모 언어 모델(LLM)을 실행하기 위한 최고의 목적지"라고 설명하는 더 큰 오픈소스 프로젝트인 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)의 배포 채널 중 하나입니다. 이 프로젝트는 Google Play와 직접 APK 다운로드를 통한 Android 버전과 데스크톱 빌드도 제공합니다. 구글 자체의 프로젝트 문서는 이 전체 노력을 완성된 소비자 제품이 아니라 **"실험적 베타 릴리스"**로 표시합니다 — 이 리뷰는 이 구분을 형식적인 것이 아니라 실질적인 것으로 다룹니다. 이 기사군 전반에서 Google AI Edge Gallery는 완성도 높은 소비자 제품으로 특별히 설계된 앱들과 비교되기 때문입니다.',
+          '여기서 리뷰하는 iOS 등재 정보는 [Apple 앱스토어의 Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)(앱스토어 ID 6749645337)로, Google LLC가 개발 및 게시했으며, 현재 버전 1.0.13에 165개의 평가에서 5점 만점에 4.1점입니다. 무료 다운로드이며 구독 등급이 없습니다.',
+          '이 동일한 앱은 구글이 "모바일 기기에서 세계에서 가장 강력한 오픈소스 대규모 언어 모델(LLM)을 실행하기 위한 최고의 목적지"라고 설명하는 더 큰 오픈소스 프로젝트인 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)의 배포 채널 중 하나입니다. 이 프로젝트는 Google Play와 직접 APK 다운로드를 통한 Android 버전과 macOS DMG도 제공합니다. 구글 자체의 프로젝트 문서는 이 전체 노력을 완성된 소비자 제품이 아니라 **"실험적 베타 릴리스"**로 표시합니다 — 이 리뷰는 이 구분을 형식적인 것이 아니라 실질적인 것으로 다룹니다. 이 기사군 전반에서 Google AI Edge Gallery는 완성도 높은 소비자 제품으로 특별히 설계된 앱들과 비교되기 때문입니다.',
         ],
       },
       getItCTA: {
@@ -3253,7 +3493,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '플랫폼': 'Mac',
             '받는 곳': '[Apple 앱스토어](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            '참고 사항': '동일한 앱스토어 등재; macOS 14.0+ 및 Apple M1 이상 필요.',
+            '참고 사항': '동일한 앱스토어 등재로, Apple은 "Not verified for macOS"로 표시합니다; macOS 14.0+ 및 Apple M1 이상 필요.',
+          },
+          {
+            '플랫폼': 'Mac(직접 다운로드)',
+            '받는 곳': '[GoogleAIEdgeGallery-0.1.0.dmg](https://dl.google.com/google-ai-edge-gallery/macos/dmg/GoogleAIEdgeGallery-0.1.0.dmg)',
+            '참고 사항': '프로젝트 README에 링크된 DMG; 앱스토어 등재와는 별도의 빌드이며 이 리뷰에서 테스트하지 않았습니다.',
           },
           {
             '플랫폼': 'Apple Vision Pro',
@@ -3262,16 +3507,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼': 'Android',
-            '받는 곳': '[GitHub의 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
-            '참고 사항': 'Google Play 또는 직접 APK를 통한 동일 오픈소스 프로젝트의 별도 빌드 — 이 리뷰에서 다루지 않습니다.',
+            '받는 곳': '[Google Play](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) 또는 [GitHub Releases](https://github.com/google-ai-edge/gallery/releases/latest/)',
+            '참고 사항': '동일 오픈소스 프로젝트의 별도 빌드이며, README는 Android 12 이상을 요구합니다. APK는 Google Play를 사용할 수 없는 기기를 위한 대안입니다. 이 리뷰에서 다루지 않습니다.',
           },
           {
             '플랫폼': '소스 코드',
             '받는 곳': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
             '참고 사항': 'Apache 2.0 라이선스; 위의 모든 배포 채널 뒤에 있는 저장소.',
           },
+          {
+            '플랫폼': '웹사이트',
+            '받는 곳': '[github.com/google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)',
+            '참고 사항': '앱스토어의 "Developer website" 링크가 이곳을 가리키며, 별도의 제품 웹사이트는 찾지 못했습니다. 배경 문서: [Google AI Edge](https://ai.google.dev/edge).',
+          },
+          {
+            '플랫폼': '개인정보 처리방침',
+            '받는 곳': '[policies.google.com/privacy](https://policies.google.com/privacy)',
+            '참고 사항': '앱스토어 등재에서 링크된 구글의 일반 개인정보 처리방침이며, 앱 전용 방침은 찾지 못했습니다.',
+          },
         ],
-        note: '앱스토어의 제공 여부, 가격, 버전 번호는 예고 없이 변경될 수 있습니다. 설치 전 [앱스토어 페이지](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)에서 현재 등재 정보를 확인하세요. 이 리뷰의 확인 날짜는 2026-09-12입니다.',
+        note: '앱스토어의 제공 여부, 가격, 버전 번호는 예고 없이 변경될 수 있습니다. 설치 전 [앱스토어 페이지](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)에서 현재 등재 정보를 확인하세요. 이 리뷰의 확인 날짜는 2026-10-26입니다.',
       },
       models: {
         id: 'models',
@@ -3279,7 +3534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery는 구글의 Gemma 모델 계열, 현재는 2026년 4월 2일 출시된 Gemma 4 세대를 중심으로 합니다.** Gemma 4는 여러 크기로 제공됩니다 — 휴대폰용으로 설계된 E2B와 E4B, 26B 전문가 혼합(mixture-of-experts) 변형, 31B 변형, 그리고 구글 자체 문서에 따르면 텍스트, 이미지, (오디오) 입력을 단일 아키텍처에서 처리하는 멀티모달 **Gemma 4 12B Unified** 모델입니다. 이 앱은 Gemma 4 출시 전에 온디바이스 스택에 오디오 이해 기능을 추가한 이전 Gemma 릴리스인 **Gemma 3n**도 지원합니다.',
           '번들로 제공되는 Gemma 모델 외에도, 이 앱은 앱의 모델 관리 화면 내 모델 카드 URL을 사용해 **Hugging Face에서 LiteRT 형식으로 자체 모델을 가져올** 수 있게 해줍니다. 구글 자체 프로젝트 문서는 모델 검색 및 다운로드를 위한 이 Hugging Face 통합의 존재를 확인하지만, 게이트가 있는 모델 저장소에 Hugging Face 액세스 토큰이 필요한지 등의 세부 사항은 명시하지 않습니다 — 이 리뷰는 특정 토큰 흐름을 가정하는 대신 이를 미확인 사항으로 다룹니다. 게이트가 있는 모델을 가져오기 전에 현재의 앱 내 안내를 확인하세요.',
-          '기능 면에서, 이 앱은 이러한 모델을 중심으로 여러 개의 개별 모드를 패키징합니다: 모델의 중간 추론 단계를 보여주는 **씽킹 모드가 있는 AI 채팅**, 카메라나 갤러리의 사진을 멀티모달로 분석하는 **Ask Image**, 온디바이스 음성 전사 및 번역인 **Audio Scribe**, 기본 모델 위에 위키피디아 조회 같은 외부 도구 접근을 얹은 **Agent Skills**, 그리고 모델을 선택하기 전에 다운로드 크기와 온디바이스 성능을 비교할 수 있는 **모델 관리 및 벤치마킹** 화면입니다.',
+          '기능 면에서, 이 앱은 이러한 모델을 중심으로 여러 개의 개별 모드를 패키징합니다: 모델의 중간 추론 단계를 보여주는 **씽킹 모드가 있는 AI 채팅**(Gemma 4 계열부터 지원), 카메라나 갤러리의 사진을 멀티모달로 분석하는 **Ask Image**, 온디바이스 음성 전사 및 번역인 **Audio Scribe**, 기본 모델 위에 위키피디아 조회, 인터랙티브 지도, 시각적 요약 카드 같은 외부 도구를 얹은 **Agent Skills**, EmbeddingGemma 2로 사진과 동영상을 자연어로 검색하는 **Instant Media Search**와 **Video Moment Finder**, 온도와 top-k를 조절하며 단일 턴 프롬프트를 테스트하는 **Prompt Lab**, FunctionGemma 270m 파인튜닝 기반의 오프라인 기기 제어 **Mobile Actions**와 실험적 미니게임 **Tiny Garden**, 그리고 모델을 선택하기 전에 다운로드 크기와 온디바이스 성능을 비교할 수 있는 **모델 관리 및 벤치마킹** 화면입니다. 등재 정보와 README는 이미지 관련 기능을 이미 가지고 있는 사진의 분석 또는 검색으로 설명하며, 새 이미지를 생성한다고 설명하는 기능은 없습니다.',
         ],
       },
       platforms: {
@@ -3296,7 +3551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '플랫폼': 'Mac',
             '예상되는 내용': 'macOS 14.0 이상과 Apple M1 이상 칩 필요.',
-            '중요 참고 사항': 'iPhone/iPad 앱과 동일한 유니버설 바이너리 및 앱스토어 등재; 명시된 요건에 따르면 Intel Mac은 지원되지 않습니다.',
+            '중요 참고 사항': 'iPhone/iPad 앱과 동일한 앱스토어 등재; 명시된 요건에 따르면 Intel Mac은 지원되지 않습니다. 프로젝트 README는 별도의 macOS DMG도 링크하지만 이 리뷰에서는 테스트하지 않았습니다.',
           },
           {
             '플랫폼': 'Apple Vision Pro',
@@ -3305,12 +3560,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼': 'Android',
-            '예상되는 내용': '동일한 오픈소스 프로젝트의 별도 빌드가 Google Play를 통해 제공됩니다(2025년 9월 9일 구글 발표에 따르면 GitHub 전용 배포에서 Google Play의 오픈 베타로 전환), 또는 GitHub에서 직접 APK로 제공됩니다.',
+            '예상되는 내용': '동일한 오픈소스 프로젝트의 별도 빌드가 Google Play를 통해 제공됩니다(2025년 9월 9일 구글 발표에 따르면 GitHub 전용 배포에서 Google Play의 오픈 베타로 전환), 또는 GitHub Releases에서 직접 APK로 제공됩니다(최신 버전 1.0.20, 2026년 10월 6일). README에 따르면 Android 12 이상이 필요합니다.',
             '중요 참고 사항': '이 리뷰가 다루는 iOS 앱스토어 앱과 동일한 설치가 아닙니다. iOS 고유의 동작(예: 정확한 앱스토어 개인정보 보호 라벨)이 Android 버전에도 그대로 적용된다고 가정하지 마세요.',
           },
           {
             '플랫폼': '더 넓은 OSS 프로젝트',
-            '예상되는 내용': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)는 Apache 2.0 라이선스이며 Android, iOS, 데스크톱 배포에 걸쳐 있습니다.',
+            '예상되는 내용': '[google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)는 Apache 2.0 라이선스이며 Android, iOS, macOS 배포에 걸쳐 있습니다.',
             '중요 참고 사항': '구글 자체 문서는 이 전체 노력을 "실험적 베타 릴리스"로 표시합니다 — 이 상태는 iOS뿐 아니라 모든 플랫폼에 적용됩니다.',
           },
         ],
@@ -3321,7 +3576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보 보호: 앱스토어 라벨이 실제로 말하는 것',
         content: [
           '**모델이 다운로드되면 추론은 기기에서 이루어집니다 — 응답을 생성하기 위해 채팅 프롬프트와 모델 출력이 구글 서버로 전송되지 않습니다.** 하지만 이는 "앱이 어떤 데이터도 수집하지 않는다"는 주장과는 다르며, 이 리뷰는 이 두 가지를 혼동하지 않고 별개로 다룹니다.',
-          '[Google AI Edge Gallery 앱스토어 등재](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)에 대한 Apple의 개인정보 보호 영양 라벨은 **사용자 신원과 연결된 데이터**로 기기 ID, 성능 데이터, 진단 정보를, **사용자 신원과 연결되지 않은 데이터**로 대략적인 위치, 제품 상호작용 데이터, 충돌 보고서를 명시합니다. 이는 Apple의 표준적인, 개발자가 직접 신고하는 개인정보 보호 라벨 형식이며, PromptQuorum이 앱의 네트워크 트래픽을 독립적으로 감사한 결과가 아닙니다.',
+          '[Google AI Edge Gallery 앱스토어 등재](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)에 대한 Apple의 개인정보 보호 영양 라벨은 **사용자 신원과 연결된 데이터**로 기기 ID, 성능 데이터, 진단 정보, 구체적으로 명시되지 않은 기타 데이터 유형을, **사용자 신원과 연결되지 않은 데이터**로 대략적인 위치, 제품 상호작용 데이터, 충돌 보고서를 명시합니다. 이는 Apple의 표준적인, 개발자가 직접 신고하는 개인정보 보호 라벨 형식이며, PromptQuorum이 앱의 네트워크 트래픽을 독립적으로 감사한 결과가 아닙니다.',
           '개인정보 보호를 중시하는 독자를 위한 실질적인 구분은 다음과 같습니다: 대화 내용과 모델에 제공하는 이미지나 오디오는 추론 중 기기에 남아 있지만, 구글은 여전히 앱 자체가 어떻게 사용되는지에 대해 텔레메트리 성격의 데이터(기기 식별자, 성능/진단 데이터, 대략적인 위치, 충돌 보고서)를 수집합니다. "아무것도 전혀 수집하지 않는다"는 더 엄격한 입장을 필요로 하는 독자는 이를 [Private LLM](/ko/power-local-llm/private-llm-review)의 앱스토어 개인정보 보호 라벨과 비교해야 합니다. 그 앱은 어떤 데이터도 수집하지 않는다고 명시되어 있습니다.',
         ],
         items: [
@@ -3343,7 +3598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2025년 9월 9일.** 구글 자체의 [발표 블로그 게시물](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/)은 GitHub 전용 배포에서 Google Play 스토어의 오픈 베타로 전환되었음을 확인했으며, MediaPipe LLM Inference API를 통해 Gemma 3n으로 오디오 지원(음성-텍스트 변환 및 음성-번역 텍스트 변환)을 추가했습니다. 구글 자체 게시물에 따르면 이 프로젝트는 GitHub 출시 후 2개월 안에 APK 다운로드 50만 건에 도달했으며, "iOS 사용자에게 앱을 제공하겠다"는 향후 계획을 설명했습니다.',
           '**2026년 4월 2일.** Google DeepMind가 Apache 2.0 라이선스로 **Gemma 4**를 E2B, E4B, 26B, 31B 크기로 출시했으며, 이후 2026년 6월 3일에 멀티모달 **Gemma 4 12B Unified** 변형이 뒤따랐습니다.',
           '**iOS 앱스토어 제공 개시.** Google AI Edge Gallery는 [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)(앱스토어 ID 6749645337)로 앱스토어에 등장하여 2025년 9월 블로그 게시물에서 발표된 iOS 계획을 실현했습니다. 독립적인 보도에 따르면 Gemma 4 출시 시기 전후로 이 앱은 앱스토어의 생산성 앱 다운로드 상위권에 올랐습니다.',
-          '**버전 1.0.10(2026년 9월 4일).** 이 리뷰 작성 시점의 현재 버전으로, 릴리스 노트에 따르면 "100개 다른 국가에 걸친 전 세계 번역 및 현지화 지원"과 버그 수정을 추가했습니다.',
+          '**버전 1.0.13(2026년 10월 8일).** 이 리뷰 작성 시점의 현재 앱스토어 버전으로, 10월 6일의 1.0.12에 이은 릴리스입니다. 등재 정보의 기능 설명에는 이제 Agent Skills, Instant Media Search, Video Moment Finder, Mobile Actions, Tiny Garden이 언급됩니다. 버전 1.0.10(2026년 9월 4일)은 릴리스 노트에 따르면 "100개 다른 국가에 걸친 전 세계 번역 및 현지화 지원"을 추가했습니다.',
         ],
         note: '버전 이력과 날짜는 구글 자체 개발자 블로그와 프로젝트의 GitHub 저장소를 출처로 합니다. 특정 기능의 존재에 의존하기 전에 앱스토어에서 현재 버전과 릴리스 노트를 직접 확인하세요.',
       },
@@ -3456,18 +3711,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Google AI Edge Gallery는 무료인가요?',
-            a: '네. [앱스토어 등재](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)는 무료로 다운로드할 수 있으며 구독이나 인앱 구매가 없습니다. 이 리뷰의 확인 날짜는 2026-09-12입니다.',
+            a: '네. [앱스토어 등재](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)는 무료로 다운로드할 수 있으며 구독이나 인앱 구매가 없습니다. 이 리뷰의 확인 날짜는 2026-10-26입니다.',
           },
           {
             q: 'Google AI Edge Gallery는 어떤 모델을 실행하나요?',
-            a: '구글의 Gemma 모델 계열, 현재는 Gemma 4 세대(E2B, E4B, 26B, 31B, 멀티모달 12B Unified 변형, 2026년 4월에서 6월 사이 출시)와 이전의 Gemma 3n을 실행합니다. 사용자는 Hugging Face에서 LiteRT 형식으로 커스텀 모델을 가져올 수도 있습니다.',
+            a: '구글의 Gemma 모델 계열, 현재는 Gemma 4 세대(E2B, E4B, 26B, 31B, 멀티모달 12B Unified 변형, 2026년 4월에서 6월 사이 출시)와 이전의 Gemma 3n, 미디어 검색용 EmbeddingGemma 2, Mobile Actions용 FunctionGemma 270m 파인튜닝을 실행합니다. 사용자는 Hugging Face에서 LiteRT 형식으로 커스텀 모델을 가져올 수도 있습니다.',
           },
           {
             q: 'Google AI Edge Gallery는 Android에서도 작동하나요?',
-            a: '네, 하지만 별도의 배포로 작동합니다. 기반 오픈소스 프로젝트인 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)는 이 리뷰가 다루는 iOS 앱스토어 등재 외에 Google Play와 직접 APK를 통한 Android 버전도 제공합니다.',
+            a: '네, 하지만 별도의 배포로 작동합니다. 기반 오픈소스 프로젝트인 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)는 이 리뷰가 다루는 iOS 앱스토어 등재 외에 Google Play와 직접 APK를 통한 Android 버전도 제공합니다(README에 따르면 Android 12 이상).',
           },
           {
-            q: 'Google AI Edge Gallery는 제 데이터를 수집하나요?',
+            q: 'Google AI Edge Gallery는 개인정보가 보호되나요, 제 데이터를 수집하나요?',
             a: '모델이 다운로드되면 채팅 프롬프트와 모델 응답은 기기에서 처리되지만, iOS 등재에 대한 Apple의 개인정보 보호 라벨은 기기 ID, 성능 데이터, 진단 정보가 사용자 신원과 연결되며, 대략적인 위치, 제품 상호작용 데이터, 충돌 보고서는 신원과 연결되지 않은 채로 수집된다고 명시합니다. 추론 자체는 로컬에서 실행되지만 데이터가 전혀 없는 앱은 아닙니다.',
           },
           {
@@ -3484,7 +3739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'iOS 버전은 어떤 기기를 지원하나요?',
-            a: '앱스토어 등재에 따르면: iOS 17.0 이상의 iPhone과 iPad, macOS 14.0 이상과 Apple M1 이상 칩을 탑재한 Mac, visionOS 1.0 이상의 Apple Vision Pro입니다.',
+            a: '앱스토어 등재에 따르면: iOS 17.0 이상의 iPhone과 iPad, macOS 14.0 이상과 Apple M1 이상 칩을 탑재한 Mac(Apple은 "Not verified for macOS"로 표시), visionOS 1.0 이상의 Apple Vision Pro입니다. 등재 정보에는 최소 iPhone 기종이나 RAM이 명시되어 있지 않으며, 프로젝트 README는 별도의 macOS DMG도 링크합니다.',
           },
           {
             q: 'Google AI Edge Gallery는 Private LLM과 비교하면 어떤가요?',
@@ -3493,6 +3748,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Google AI Edge Gallery는 오디오와 이미지 입력을 지원하나요?',
             a: '네, 로드된 모델에 따라 다릅니다. Ask Image는 멀티모달 사진 분석을 제공하고, Audio Scribe는 온디바이스 음성 전사 및 번역을 제공합니다. 기반 Gemma 모델의 오디오 지원은 Gemma 3n에서 시작되었으며 12B Unified 변형을 포함한 특정 Gemma 4 크기에서 계속됩니다.',
+          },
+          {
+            q: 'Google AI Edge Gallery로 이미지를 생성할 수 있나요?',
+            a: '[앱스토어 페이지](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)와 프로젝트 README 어디에도 이미지 생성 모드는 나와 있지 않습니다. Ask Image는 사용자가 제공한 사진에 대한 질문에 답하고, Instant Media Search와 Video Moment Finder는 이미 가지고 있는 미디어를 검색합니다. 이 리뷰에서는 이미지 생성 여부를 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Google AI Edge Gallery는 어떤 언어를 지원하나요?',
+            a: '앱스토어 등재에는 "English and 97 more" 언어가 표시되며, 버전 1.0.10 릴리스 노트는 100개 국가에 걸친 번역 및 현지화 지원을 언급합니다. 특정 언어에서의 출력 품질은 불러온 모델에 따라 달라집니다. 이 리뷰에서는 아랍어 같은 개별 언어를 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Google AI Edge Gallery와 PocketPal AI는 어떻게 비교되나요?',
+            a: '둘 다 무료이며 오픈소스입니다. Google AI Edge Gallery는 LiteRT 형식의 모델을 불러오고 Agent Skills와 씽킹 모드 같은 구글이 만든 모드를 더하는 반면, [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)는 사용자가 직접 구한 모든 GGUF 파일을 불러오며 Gemma나 LiteRT-LM에 묶여 있지 않습니다. 구글의 모델과 기능을 원한다면 Google AI Edge Gallery를, 더 넓은 모델 선택을 원한다면 PocketPal AI를 선택하십시오.',
           },
         ],
       },
@@ -3510,6 +3777,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub의 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) — 프로젝트 개요, 지원 플랫폼, Hugging Face 가져오기, 라이선스, 베타 상태.',
           '[GitHub의 LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) — 이 앱이 구축된 온디바이스 추론 런타임.',
           '[Google AI Edge Gallery 발표 블로그 게시물](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) — 2025년 9월 9일 오디오 지원 및 Google Play 제공 발표.',
+          '[구글 개인정보 처리방침](https://policies.google.com/privacy) — 앱스토어 등재에서 링크된 방침.',
+          '[Google AI Edge 문서](https://ai.google.dev/edge) — 앱의 기반이 되는 온디바이스 런타임과 도구에 대한 배경 자료.',
+          '[GitHub Releases](https://github.com/google-ai-edge/gallery/releases) — Android 버전 1.0.20(2026년 10월 6일), APK 파일, macOS DMG 링크.',
         ],
       },
       relatedReading: {

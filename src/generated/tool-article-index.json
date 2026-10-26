@@ -26,6 +26,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-review",
         "title": "LobeHub Review (Formerly LobeChat): Agent Workspace With Desktop Apps and Self-Hosting",
@@ -70,14 +78,6 @@
         "slug": "linkwarden-review",
         "title": "Linkwarden Review: Self-Hosted Bookmarks with Local AI Tagging",
         "url": "/power-local-llm/linkwarden-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -920,14 +928,6 @@
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-23",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-on-laptop",
-        "title": "Local LLM on a Laptop: What Runs on 8GB, 16GB & Apple Silicon (2026)",
-        "url": "/local-llms/local-llm-on-laptop",
         "dateModified": "2026-10-23",
         "tier": "about"
       }
@@ -5877,6 +5877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "google-ai-edge-gallery-review",
+        "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
+        "url": "/power-local-llm/google-ai-edge-gallery-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -5930,14 +5938,6 @@
         "url": "/power-local-llm/paios-review",
         "dateModified": "2026-10-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "oscilla-review",
-        "title": "Oscilla Review: Free On-Device AI Chat for iPhone",
-        "url": "/power-local-llm/oscilla-review",
-        "dateModified": "2026-10-04",
-        "tier": "about"
       }
     ],
     "totalCount": 51,
@@ -5985,6 +5985,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "google-ai-edge-gallery-review",
+        "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
+        "url": "/power-local-llm/google-ai-edge-gallery-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -6012,22 +6028,6 @@
         "slug": "ai-on-device-review",
         "title": "AI on Device Review: A $4.99 Apple Intelligence-Only App",
         "url": "/power-local-llm/ai-on-device-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "google-ai-edge-gallery-review",
-        "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
-        "url": "/power-local-llm/google-ai-edge-gallery-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       },
@@ -6066,7 +6066,7 @@
         "slug": "google-ai-edge-gallery-review",
         "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -6406,7 +6406,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-26",
         "tier": "mentioned"
       },
       {
@@ -6433,18 +6433,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-09-12",
+        "slug": "local-llm-chat-assistants-compared",
+        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
+        "url": "/power-local-llm/local-llm-chat-assistants-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6482,7 +6482,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -6682,7 +6682,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-26",
         "tier": "mentioned"
       }
     ],
@@ -11633,6 +11633,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "google-ai-edge-gallery-review",
+        "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
+        "url": "/power-local-llm/google-ai-edge-gallery-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -11676,14 +11684,6 @@
         "slug": "gpt4all-review",
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "handy-review",
-        "title": "Handy Review: Free Offline Speech-to-Text Dictation App",
-        "url": "/power-local-llm/handy-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
       }
