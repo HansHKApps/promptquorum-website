@@ -139,7 +139,9 @@ import { app as app_memoryai } from './apps/memoryai'
 import { app as app_on_device_ai_translator } from './apps/on-device-ai-translator'
 import { app as app_llamatik } from './apps/llamatik'
 import { app as app_caelum } from './apps/caelum'
+import { app as app_chaterminal } from './apps/chaterminal'
 import { app as app_lm_mini } from './apps/lm-mini'
+import { app as app_laria } from './apps/laria'
 import { app as app_pocketllm_lite } from './apps/pocketllm-lite'
 import { app as app_obscurify } from './apps/obscurify'
 import { app as app_genva } from './apps/genva'
@@ -270,6 +272,7 @@ import { app as app_asiden } from './apps/asiden'
 import { app as app_ensu } from './apps/ensu'
 import { app as app_kernelai } from './apps/kernelai'
 import { app as app_llama_app } from './apps/llama-app'
+import { app as app_on_device_llm } from './apps/on-device-llm'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
@@ -547,6 +550,7 @@ export const localAiApps: ToolRecord[] = [
   app_ensu,
   app_kernelai,
   app_llama_app,
+  app_on_device_llm,
   app_candle_vllm,
   app_chroma,
   app_claude_code_local,
@@ -624,7 +628,9 @@ export const localAiApps: ToolRecord[] = [
   app_on_device_ai_translator,
   app_llamatik,
   app_caelum,
+  app_chaterminal,
   app_lm_mini,
+  app_laria,
   app_compactifai_app,
   app_pocketllm_lite,
   app_obscurify,

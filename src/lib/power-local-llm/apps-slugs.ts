@@ -209,7 +209,9 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'llamatik':                                'llamatik',
   'arynwood-mcp':                            'arynwood-mcp',
   'caelum':                                  'caelum',
+  'chaterminal':                             'chaterminal',
   'lm-mini':                                 'lm-mini',
+  'laria':                                   'laria',
   'pocketllm-lite':                          'pocketllm-lite',
   'obscurify':                               'obscurify',
   'genva':                                   'genva',
@@ -251,6 +253,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'ensu':                                    'ensu',
   'kernelai':                                'kernelai',
   'llama-app':                               'llama-app',
+  'on-device-llm':                           'on-device-llm',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

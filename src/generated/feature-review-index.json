@@ -1104,6 +1104,11 @@
     "urlSlug": "llama-app-review",
     "url": "/power-local-llm/llama-app-review"
   },
+  "on-device-llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "on-device-llm-review",
+    "url": "/power-local-llm/on-device-llm-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
@@ -1489,10 +1494,20 @@
     "urlSlug": "caelum-review",
     "url": "/power-local-llm/caelum-review"
   },
+  "chaterminal": {
+    "cluster": "power-local-llm",
+    "urlSlug": "chaterminal-review",
+    "url": "/power-local-llm/chaterminal-review"
+  },
   "lm-mini": {
     "cluster": "power-local-llm",
     "urlSlug": "lm-mini-review",
     "url": "/power-local-llm/lm-mini-review"
+  },
+  "laria": {
+    "cluster": "power-local-llm",
+    "urlSlug": "laria-review",
+    "url": "/power-local-llm/laria-review"
   },
   "compactifai-app": {
     "cluster": "power-local-llm",
