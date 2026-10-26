@@ -3,7 +3,7 @@ import type { AboutCopy } from './types'
 export const es: AboutCopy = {
   kicker: 'Acerca de PromptQuorum',
   h1: 'Tu guía de la IA de pesos abiertos y de código abierto.',
-  h1PlainExplainer: '(en términos simples: ejecutar un modelo de IA gratis en tu propio ordenador)',
+  h1PlainExplainer: '(en términos simples: ejecutar un modelo de IA gratis en tu propio equipo)',
   heroLead:
     'PromptQuorum te ayuda a ejecutar IA en privado, en tu propio hardware, en lugar de alquilarla a un proveedor en la nube: un directorio de {{appCount}} aplicaciones de IA local, una base de conocimientos con {{articleCount}} artículos en nueve idiomas y una aplicación gratuita que coloca varios modelos lado a lado.',
   heroSub:
@@ -123,7 +123,7 @@ export const es: AboutCopy = {
     'Quieres una IA que sea privada, funcione sin conexión o no necesite otra suscripción más.',
     'Estás eligiendo software de IA local y quieres los mismos datos para cada opción en un solo lugar.',
     'Desarrollas o mantienes una herramienta de IA local y quieres que tenga una entrada precisa.',
-    'Lees en un idioma distinto al inglés y estás cansado de las guías de configuración que solo existen en inglés.',
+    'Lees en un idioma distinto al inglés y ya te cansaron las guías de configuración que solo existen en inglés.',
     'Quieres que tu propio asistente de IA responda preguntas sobre IA local a partir de una fuente que se mantiene actualizada.',
   ],
   notForYouH3: 'Probablemente no es para ti si…',
@@ -181,7 +181,7 @@ export const es: AboutCopy = {
   roadmapLead:
     'Dónde se ejecuta la IA está cambiando: de ser exclusivamente en la nube a una mezcla de nube, local, híbrido y edge. PromptQuorum se está construyendo para ese cambio. En la hoja de ruta:',
   roadmap: [
-    ['Verificación de fundadores:', 'los creadores de las herramientas confirman y amplian sus propias entradas.'],
+    ['Verificación de fundadores:', 'los creadores de las herramientas confirman y amplían sus propias entradas.'],
     ['Reconocimiento de hardware en todo el sitio:', 'tu perfil de hardware muestra la compatibilidad en cada página que menciona una herramienta, no solo en el directorio.'],
     ['Video seleccionado:', 'el mejor video tutorial asociado a cada aplicación.'],
     ['Emparejamiento nube ↔ local:', 'para cada servicio en la nube, la alternativa local, y viceversa.'],
