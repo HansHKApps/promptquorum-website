@@ -60,6 +60,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'Prompt Version Control' },
       ],
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'How to run the local prompt testing loop',
+      inLanguage: 'en',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Write or edit the prompt in your IDE' },
+        { '@type': 'HowToStep', position: 2, name: 'Run the prompt against 3 representative inputs' },
+        { '@type': 'HowToStep', position: 3, name: 'Compare the output against the baseline (the last committed version)' },
+        { '@type': 'HowToStep', position: 4, name: 'Commit with a conventional message if quality holds or improves' },
+      ],
+    },
     sections: {
       tldr: {
         id: 'tldr',
@@ -237,6 +249,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       image: buildOgImageObject(OG_SLUG, 'de'),
       inLanguage: 'de',
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'So führen Sie die lokale Prompt-Testschleife aus',
+      inLanguage: 'de',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Prompt im IDE schreiben oder bearbeiten' },
+        { '@type': 'HowToStep', position: 2, name: 'Prompt gegen 3 repräsentative Eingaben ausführen' },
+        { '@type': 'HowToStep', position: 3, name: 'Ausgabe mit der Baseline (letzte committete Version) vergleichen' },
+        { '@type': 'HowToStep', position: 4, name: 'Bei gleichbleibender oder besserer Qualität mit einer Conventional-Commit-Nachricht committen' },
+      ],
+    },
     sections: {
       tldr: {
         id: 'tldr',
@@ -412,6 +436,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       image: buildOgImageObject(OG_SLUG, 'es'),
       inLanguage: 'es',
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Cómo ejecutar el ciclo de pruebas local de prompts',
+      inLanguage: 'es',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Escribir o editar el prompt en tu IDE' },
+        { '@type': 'HowToStep', position: 2, name: 'Ejecutar el prompt con 3 entradas representativas' },
+        { '@type': 'HowToStep', position: 3, name: 'Comparar la salida con la línea base (la última versión confirmada)' },
+        { '@type': 'HowToStep', position: 4, name: 'Confirmar el commit con un mensaje convencional si la calidad se mantiene o mejora' },
+      ],
+    },
     sections: {
       tldr: {
         id: 'tldr',
@@ -585,6 +621,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       image: buildOgImageObject(OG_SLUG, 'pt'),
       inLanguage: 'pt-BR',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como executar o ciclo de testes local de prompts',
+      inLanguage: 'pt-BR',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Escrever ou editar o prompt no seu IDE' },
+        { '@type': 'HowToStep', position: 2, name: 'Executar o prompt com 3 entradas representativas' },
+        { '@type': 'HowToStep', position: 3, name: 'Comparar a saída com a linha de base (a última versão commitada)' },
+        { '@type': 'HowToStep', position: 4, name: 'Fazer o commit com uma mensagem convencional se a qualidade se mantiver ou melhorar' },
+      ],
     },
     sections: {
       tldr: {
@@ -761,6 +809,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       image: buildOgImageObject(OG_SLUG, 'fr'),
       inLanguage: 'fr',
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Comment exécuter la boucle de test locale des prompts',
+      inLanguage: 'fr',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Écrire ou modifier le prompt dans votre IDE' },
+        { '@type': 'HowToStep', position: 2, name: 'Exécuter le prompt sur 3 entrées représentatives' },
+        { '@type': 'HowToStep', position: 3, name: 'Comparer la sortie à la référence (la dernière version validée)' },
+        { '@type': 'HowToStep', position: 4, name: 'Valider le commit avec un message conventionnel si la qualité se maintient ou s\'améliore' },
+      ],
+    },
     sections: {
       tldr: {
         id: 'tldr',
@@ -935,6 +995,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: buildOgImageObject(OG_SLUG, 'ja'),
       inLanguage: 'ja',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'ローカルのプロンプトテストループの実行方法',
+      inLanguage: 'ja',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'IDEでプロンプトを書く、または編集する' },
+        { '@type': 'HowToStep', position: 2, name: '代表的な3つの入力でプロンプトを実行する' },
+        { '@type': 'HowToStep', position: 3, name: '出力をベースライン（直近のコミット版）と比較する' },
+        { '@type': 'HowToStep', position: 4, name: '品質が維持または向上していれば、規約に沿ったメッセージでコミットする' },
+      ],
     },
     sections: {
       tldr: {
@@ -1111,6 +1183,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       image: buildOgImageObject(OG_SLUG, 'zh'),
       inLanguage: 'zh',
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '如何运行本地提示词测试循环',
+      inLanguage: 'zh',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: '在IDE中编写或编辑提示词' },
+        { '@type': 'HowToStep', position: 2, name: '用3个有代表性的输入运行提示词' },
+        { '@type': 'HowToStep', position: 3, name: '将输出与基线（最近一次提交的版本）对比' },
+        { '@type': 'HowToStep', position: 4, name: '若质量保持或提升，用规范化的提交信息提交' },
+      ],
+    },
     sections: {
       tldr: {
         id: 'tldr',
@@ -1285,6 +1369,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: buildOgImageObject(OG_SLUG, 'ar'),
       inLanguage: 'ar',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'كيفية تشغيل حلقة اختبار البرومبت المحلية',
+      inLanguage: 'ar',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'اكتب البرومبت أو عدّله في بيئة التطوير' },
+        { '@type': 'HowToStep', position: 2, name: 'شغّل البرومبت على 3 مدخلات تمثيلية' },
+        { '@type': 'HowToStep', position: 3, name: 'قارن المخرجات بخط الأساس (آخر إصدار تم الالتزام به)' },
+        { '@type': 'HowToStep', position: 4, name: 'أجرِ الالتزام برسالة اصطلاحية إذا بقيت الجودة كما هي أو تحسّنت' },
+      ],
     },
     sections: {
       tldr: {
@@ -1464,6 +1560,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: '프롬프트 엔지니어링 워크플로우' },
         { '@type': 'Thing', name: 'LLM용 CI/CD' },
         { '@type': 'Thing', name: '프롬프트 버전 관리' },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '로컬 프롬프트 테스트 루프 실행 방법',
+      inLanguage: 'ko',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'IDE에서 프롬프트를 작성하거나 편집합니다' },
+        { '@type': 'HowToStep', position: 2, name: '대표 입력 3개로 프롬프트를 실행합니다' },
+        { '@type': 'HowToStep', position: 3, name: '출력을 베이스라인(마지막으로 커밋한 버전)과 비교합니다' },
+        { '@type': 'HowToStep', position: 4, name: '품질이 유지되거나 개선되면 규칙에 맞는 메시지로 커밋합니다' },
       ],
     },
     sections: {
