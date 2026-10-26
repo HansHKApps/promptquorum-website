@@ -319,6 +319,7 @@ https://www.promptquorum.com/power-local-llm/cognira-review
 https://www.promptquorum.com/power-local-llm/coil-review
 https://www.promptquorum.com/power-local-llm/comfyui-review
 https://www.promptquorum.com/power-local-llm/compactifai-app-review
+https://www.promptquorum.com/power-local-llm/compass-local-ai-review
 https://www.promptquorum.com/power-local-llm/continue-dev-review
 https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local
 https://www.promptquorum.com/power-local-llm/controlnet-review
@@ -483,6 +484,7 @@ https://www.promptquorum.com/power-local-llm/longmemory-review
 https://www.promptquorum.com/power-local-llm/lorax-review
 https://www.promptquorum.com/power-local-llm/ltx-desktop-hands-on-test
 https://www.promptquorum.com/power-local-llm/lucebox-review
+https://www.promptquorum.com/power-local-llm/lyonesse-review
 https://www.promptquorum.com/power-local-llm/macwhisper-review
 https://www.promptquorum.com/power-local-llm/maid-review
 https://www.promptquorum.com/power-local-llm/maxkb-review
@@ -540,6 +542,7 @@ https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/oscilla-review
 https://www.promptquorum.com/power-local-llm/page-assist-hands-on-test
 https://www.promptquorum.com/power-local-llm/paios-review
+https://www.promptquorum.com/power-local-llm/pajdo-review
 https://www.promptquorum.com/power-local-llm/parlor-review
 https://www.promptquorum.com/power-local-llm/parrot-review
 https://www.promptquorum.com/power-local-llm/pcai-photo-retouch-review
