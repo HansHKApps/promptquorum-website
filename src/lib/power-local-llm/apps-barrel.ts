@@ -139,6 +139,7 @@ import { app as app_memoryai } from './apps/memoryai'
 import { app as app_on_device_ai_translator } from './apps/on-device-ai-translator'
 import { app as app_llamatik } from './apps/llamatik'
 import { app as app_caelum } from './apps/caelum'
+import { app as app_chaterminal } from './apps/chaterminal'
 import { app as app_lm_mini } from './apps/lm-mini'
 import { app as app_pocketllm_lite } from './apps/pocketllm-lite'
 import { app as app_obscurify } from './apps/obscurify'
@@ -624,6 +625,7 @@ export const localAiApps: ToolRecord[] = [
   app_on_device_ai_translator,
   app_llamatik,
   app_caelum,
+  app_chaterminal,
   app_lm_mini,
   app_compactifai_app,
   app_pocketllm_lite,

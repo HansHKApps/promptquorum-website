@@ -107,6 +107,7 @@ import { article as a_ensu_review } from './articles/ensu-review'
 import { article as a_kernelai_review } from './articles/kernelai-review'
 import { article as a_llama_app_review } from './articles/llama-app-review'
 import { article as a_caelum_review } from './articles/caelum-review'
+import { article as a_chaterminal_review } from './articles/chaterminal-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_compactifai_app_review } from './articles/compactifai-app-review'
 import { article as a_pocketllm_lite_review } from './articles/pocketllm-lite-review'
@@ -764,6 +765,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'kernelai-review':                               a_kernelai_review,
   'llama-app-review':                              a_llama_app_review,
   'caelum-review':                                 a_caelum_review,
+  'chaterminal-review':                            a_chaterminal_review,
   'lm-mini-review':                                a_lm_mini_review,
   'compactifai-app-review':                        a_compactifai_app_review,
   'pocketllm-lite-review':                         a_pocketllm_lite_review,

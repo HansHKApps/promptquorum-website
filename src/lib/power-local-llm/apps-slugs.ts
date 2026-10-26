@@ -209,6 +209,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'llamatik':                                'llamatik',
   'arynwood-mcp':                            'arynwood-mcp',
   'caelum':                                  'caelum',
+  'chaterminal':                             'chaterminal',
   'lm-mini':                                 'lm-mini',
   'pocketllm-lite':                          'pocketllm-lite',
   'obscurify':                               'obscurify',
