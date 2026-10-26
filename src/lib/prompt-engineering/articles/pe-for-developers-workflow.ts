@@ -78,6 +78,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         content: 'The developer prompt engineering workflow has 5 stages: write in Cursor or VS Code, run a local test loop with Promptfoo in under 30 seconds, version prompts as .txt or .ts files in /prompts, gate changes in CI/CD with a GitHub Actions workflow that blocks on < 85% pass rate, and monitor quality in production with alerts on 10% drops. Use PromptQuorum to test across multiple models.',
+        items: [
+          'Use Cursor for cloud-API work next to your application code. Use VS Code + Cline for local models or open-source requirements.',
+          'The local test loop has 4 steps: write, test on 3 representative inputs, compare against baseline, commit if passing. Target under 30 seconds with Promptfoo.',
+          'Store prompts as .txt or .ts files in /prompts. Use naming convention [task]-[version].txt. Tag production-deployed versions in Git.',
+          'Add a GitHub Actions CI/CD gate that fails the build if pass rate drops below 85%. Raise to 95% after 3 months of stable tests.',
+          'Log prompt identifier, model, token counts, latency, and quality score in production. Alert on quality score drops greater than 10% over 24 hours.',
+          'Monitor all prompts handling user data with quality scoring. Log-only monitoring is acceptable for internal-only prompts.',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -152,18 +160,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Testing on one model only', problem: 'A prompt that works on one model may fail on another', fix: 'Run your test suite against at least 2 models in CI/CD.' },
         ],
       },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: 'Key Takeaways',
-        items: [
-          'Use Cursor for cloud-API work next to your application code. Use VS Code + Cline for local models or open-source requirements.',
-          'The local test loop has 4 steps: write, test on 3 representative inputs, compare against baseline, commit if passing. Target under 30 seconds with Promptfoo.',
-          'Store prompts as .txt or .ts files in /prompts. Use naming convention [task]-[version].txt. Tag production-deployed versions in Git.',
-          'Add a GitHub Actions CI/CD gate that fails the build if pass rate drops below 85%. Raise to 95% after 3 months of stable tests.',
-          'Log prompt identifier, model, token counts, latency, and quality score in production. Alert on quality score drops greater than 10% over 24 hours.',
-          'Monitor all prompts handling user data with quality scoring. Log-only monitoring is acceptable for internal-only prompts.',
-        ],
-      },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -215,7 +211,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12 Min. Lesezeit',
     educationalLevel: 'Fortgeschritten',
     primaryTerm: 'Prompt-Engineering-Workflow',
-    intro: '**Entwickler benötigen einen Prompt-Engineering-Workflow, der in ihren bestehenden Entwicklungsprozess passt — Versionskontrolle, CI/CD und lokale Tests — kein separates Tool-Ökosystem.** Der Workflow umfasst 5 Phasen: Schreiben, lokal testen, versionieren, in CI/CD absichern und in der Produktion überwachen.',
     leadAnswerBlock: '**Entwickler benötigen einen Prompt-Engineering-Workflow, der in ihren bestehenden Entwicklungsprozess passt — Versionskontrolle, CI/CD und lokale Tests — kein separates Tool-Ökosystem.** Der Workflow umfasst 5 Phasen: Schreiben, lokal testen, versionieren, in CI/CD absichern und in der Produktion überwachen.',
     quickFacts: [
       'Die lokale Prompt-Testschleife mit Promptfoo dauert unter 30 Sekunden: schreiben, auf 3 Eingaben testen, mit Baseline vergleichen, committen.',
@@ -267,6 +262,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Kurzfassung',
         isTldr: true,
         content: 'Der Entwickler-Prompt-Engineering-Workflow hat 5 Phasen: In Cursor oder VS Code schreiben, lokale Testschleife mit Promptfoo in unter 30 Sekunden, Prompts als .txt- oder .ts-Dateien in /prompts versionieren, Änderungen in CI/CD mit einem GitHub Actions Workflow absichern, der bei < 85% Bestehensquote blockiert, und Qualität in der Produktion mit Alerts bei 10% Abfall monitoren.',
+        items: [
+          'Cursor für Cloud-API-Arbeit neben dem Anwendungscode verwenden. VS Code + Cline für lokale Modelle oder Open-Source-Anforderungen.',
+          'Die lokale Testschleife hat 4 Schritte: schreiben, auf 3 repräsentativen Eingaben testen, mit der Baseline vergleichen, committen. Ziel: unter 30 Sekunden mit Promptfoo.',
+          'Prompts als .txt- oder .ts-Dateien in /prompts speichern. Namenskonvention [task]-[version].txt. Produktionsversionen in Git taggen.',
+          'GitHub Actions CI/CD-Gate hinzufügen, das den Build scheitern lässt, wenn die Bestehensquote unter 85% fällt. Nach 3 Monaten stabiler Tests auf 95% erhöhen.',
+          'In der Produktion Prompt-Identifier, Modell, Token-Anzahl, Latenz und Qualitätsscore loggen. Bei Qualitätsscore-Abfällen von mehr als 10% über 24 Stunden alarmieren.',
+          'Alle Prompts, die Nutzerdaten verarbeiten, mit Qualitätsscoring überwachen. Reines Logging genügt für rein interne Prompts.',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -339,18 +342,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Nur auf einem Modell testen', problem: 'Ein Prompt, der auf einem Modell funktioniert, kann auf einem anderen scheitern', fix: 'Die Testsuite in CI/CD gegen mindestens 2 Modelle ausführen.' },
         ],
       },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: 'Zusammenfassung',
-        items: [
-          'Cursor für Cloud-API-Arbeit neben dem Anwendungscode verwenden. VS Code + Cline für lokale Modelle oder Open-Source-Anforderungen.',
-          'Die lokale Testschleife hat 4 Schritte: schreiben, auf 3 repräsentativen Eingaben testen, mit der Baseline vergleichen, committen. Ziel: unter 30 Sekunden mit Promptfoo.',
-          'Prompts als .txt- oder .ts-Dateien in /prompts speichern. Namenskonvention [task]-[version].txt. Produktionsversionen in Git taggen.',
-          'GitHub Actions CI/CD-Gate hinzufügen, das den Build scheitern lässt, wenn die Bestehensquote unter 85% fällt. Nach 3 Monaten stabiler Tests auf 95% erhöhen.',
-          'In der Produktion Prompt-Identifier, Modell, Token-Anzahl, Latenz und Qualitätsscore loggen. Bei Qualitätsscore-Abfällen von mehr als 10% über 24 Stunden alarmieren.',
-          'Alle Prompts, die Nutzerdaten verarbeiten, mit Qualitätsscoring überwachen. Reines Logging genügt für rein interne Prompts.',
-        ],
-      },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -402,8 +393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12 min de lectura',
     educationalLevel: 'Advanced',
     primaryTerm: 'Flujo de trabajo de prompt engineering',
-    intro: '**Los desarrolladores necesitan un flujo de trabajo de prompt engineering que encaje en su proceso de desarrollo existente — control de versiones, CI/CD y pruebas locales — no un ecosistema de herramientas separado.** El flujo de trabajo cubre 5 etapas: escribir, probar localmente, versionar, controlar en CI/CD y monitorear en producción.',
-    leadAnswerBlock: '**Los desarrolladores necesitan un flujo de trabajo de prompt engineering que encaje en su proceso de desarrollo existente — control de versiones, CI/CD y pruebas locales — no un ecosistema de herramientas separado.** El flujo de trabajo cubre 5 etapas.',
+    leadAnswerBlock: '**Los desarrolladores necesitan un flujo de trabajo de prompt engineering que encaje en su proceso de desarrollo existente — control de versiones, CI/CD y pruebas locales — no un ecosistema de herramientas separado.** El flujo de trabajo cubre 5 etapas: escribir, probar localmente, versionar, controlar en CI/CD y monitorear en producción.',
     quickFacts: [
       'El bucle de prueba local con Promptfoo tarda menos de 30 segundos: escribir, probar en 3 entradas, comparar con la línea base, confirmar.',
       'Almacena los prompts como archivos .txt o .ts en un directorio /prompts. Nombra los archivos: [tarea]-[versión].txt (p. ej., customer-support-v3.txt).',
@@ -454,6 +444,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         content: 'El flujo de trabajo de prompt engineering para desarrolladores tiene 5 etapas: escribir en Cursor o VS Code, ejecutar un bucle de prueba local con Promptfoo en menos de 30 segundos, versionar los prompts como archivos .txt o .ts en /prompts, controlar los cambios en CI/CD con un flujo de GitHub Actions que bloquea si la tasa de aprobación cae por debajo del 85%, y monitorear la calidad en producción con alertas ante caídas del 10%. Usa PromptQuorum para probar en múltiples modelos.',
+        items: [
+          'Usa Cursor para trabajar con APIs en la nube junto al código de tu aplicación. Usa VS Code + Cline para modelos locales o requisitos de código abierto.',
+          'El ciclo de pruebas local tiene 4 pasos: escribir, probar con 3 entradas representativas, comparar con la línea base y confirmar el commit si pasa. Objetivo: menos de 30 segundos con Promptfoo.',
+          'Guarda los prompts como archivos .txt o .ts en /prompts. Usa la convención [task]-[version].txt. Etiqueta en Git las versiones desplegadas en producción.',
+          'Añade un gate de CI/CD en GitHub Actions que falle el build si la tasa de aprobación cae por debajo del 85%. Súbelo al 95% tras 3 meses de pruebas estables.',
+          'En producción, registra el identificador del prompt, el modelo, el número de tokens, la latencia y la puntuación de calidad. Alerta ante caídas de la puntuación superiores al 10% en 24 horas.',
+          'Monitorea con puntuación de calidad todos los prompts que manejan datos de usuario. Para prompts solo internos basta con registrar.',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -526,18 +524,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Probar con un solo modelo', problem: 'Un prompt que funciona en un modelo puede fallar en otro', fix: 'Ejecuta tu suite de pruebas con al menos 2 modelos en CI/CD.' },
         ],
       },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: 'Puntos clave',
-        items: [
-          'Usa Cursor para trabajar con APIs en la nube junto al código de tu aplicación. Usa VS Code + Cline para modelos locales o requisitos de código abierto.',
-          'El ciclo de pruebas local tiene 4 pasos: escribir, probar con 3 entradas representativas, comparar con la línea base y confirmar el commit si pasa. Objetivo: menos de 30 segundos con Promptfoo.',
-          'Guarda los prompts como archivos .txt o .ts en /prompts. Usa la convención [task]-[version].txt. Etiqueta en Git las versiones desplegadas en producción.',
-          'Añade un gate de CI/CD en GitHub Actions que falle el build si la tasa de aprobación cae por debajo del 85%. Súbelo al 95% tras 3 meses de pruebas estables.',
-          'En producción, registra el identificador del prompt, el modelo, el número de tokens, la latencia y la puntuación de calidad. Alerta ante caídas de la puntuación superiores al 10% en 24 horas.',
-          'Monitorea con puntuación de calidad todos los prompts que manejan datos de usuario. Para prompts solo internos basta con registrar.',
-        ],
-      },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -588,8 +574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12 min de leitura',
     educationalLevel: 'Advanced',
     primaryTerm: 'Fluxo de trabalho de prompt engineering',
-    intro: '**Os desenvolvedores precisam de um fluxo de trabalho de prompt engineering que se encaixe em seu processo de desenvolvimento existente — controle de versões, CI/CD e testes locais — não de um ecossistema de ferramentas separado.** O fluxo de trabalho cobre 5 etapas: escrever, testar localmente, versionar, controlar em CI/CD e monitorar em produção.',
-    leadAnswerBlock: '**Os desenvolvedores precisam de um fluxo de trabalho de prompt engineering que se encaixe em seu processo de desenvolvimento existente — controle de versões, CI/CD e testes locais — não de um ecossistema de ferramentas separado.** O fluxo de trabalho cobre 5 etapas.',
+    leadAnswerBlock: '**Os desenvolvedores precisam de um fluxo de trabalho de prompt engineering que se encaixe em seu processo de desenvolvimento existente — controle de versões, CI/CD e testes locais — não de um ecossistema de ferramentas separado.** O fluxo de trabalho cobre 5 etapas: escrever, testar localmente, versionar, controlar em CI/CD e monitorar em produção.',
     quickFacts: [
       'O loop de teste local com Promptfoo leva menos de 30 segundos: escrever, testar em 3 entradas, comparar com a linha de base, confirmar.',
       'Armazene os prompts como arquivos .txt ou .ts em um diretório /prompts. Nomeie os arquivos: [tarefa]-[versão].txt (ex.: customer-support-v3.txt).',
@@ -640,6 +625,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         content: 'O fluxo de trabalho de prompt engineering para desenvolvedores tem 5 etapas: escrever no Cursor ou VS Code, executar um loop de teste local com Promptfoo em menos de 30 segundos, versionar os prompts como arquivos .txt ou .ts em /prompts, controlar as mudanças em CI/CD com um fluxo do GitHub Actions que bloqueia se a taxa de aprovação cair abaixo de 85%, e monitorar a qualidade em produção com alertas para quedas de 10%. Use o PromptQuorum para testar em vários modelos.',
+        items: [
+          'Use o Cursor para trabalhar com APIs na nuvem junto ao código da sua aplicação. Use o VS Code + Cline para modelos locais ou requisitos de código aberto.',
+          'O ciclo de testes local tem 4 etapas: escrever, testar com 3 entradas representativas, comparar com a linha de base e fazer o commit se passar. Meta: menos de 30 segundos com o Promptfoo.',
+          'Armazene os prompts como arquivos .txt ou .ts em /prompts. Use a convenção [task]-[version].txt. Marque com tags no Git as versões implantadas em produção.',
+          'Adicione um gate de CI/CD no GitHub Actions que falhe o build se a taxa de aprovação cair abaixo de 85%. Suba para 95% após 3 meses de testes estáveis.',
+          'Em produção, registre o identificador do prompt, o modelo, o número de tokens, a latência e a pontuação de qualidade. Alerte para quedas da pontuação superiores a 10% em 24 horas.',
+          'Monitore com pontuação de qualidade todos os prompts que tratam dados de usuários. Para prompts somente internos, basta registrar.',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -712,18 +705,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Testar com um único modelo', problem: 'Um prompt que funciona em um modelo pode falhar em outro', fix: 'Execute sua suíte de testes em pelo menos 2 modelos em CI/CD.' },
         ],
       },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: 'Pontos-chave',
-        items: [
-          'Use o Cursor para trabalhar com APIs na nuvem junto ao código da sua aplicação. Use o VS Code + Cline para modelos locais ou requisitos de código aberto.',
-          'O ciclo de testes local tem 4 etapas: escrever, testar com 3 entradas representativas, comparar com a linha de base e fazer o commit se passar. Meta: menos de 30 segundos com o Promptfoo.',
-          'Armazene os prompts como arquivos .txt ou .ts em /prompts. Use a convenção [task]-[version].txt. Marque com tags no Git as versões implantadas em produção.',
-          'Adicione um gate de CI/CD no GitHub Actions que falhe o build se a taxa de aprovação cair abaixo de 85%. Suba para 95% após 3 meses de testes estáveis.',
-          'Em produção, registre o identificador do prompt, o modelo, o número de tokens, a latência e a pontuação de qualidade. Alerte para quedas da pontuação superiores a 10% em 24 horas.',
-          'Monitore com pontuação de qualidade todos os prompts que tratam dados de usuários. Para prompts somente internos, basta registrar.',
-        ],
-      },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -775,7 +756,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12 min de lecture',
     educationalLevel: 'Avancé',
     primaryTerm: 'Workflow de prompt engineering',
-    intro: '**Les développeurs ont besoin d\'un workflow de prompt engineering qui s\'intègre dans leur processus de développement existant — contrôle de version, CI/CD et tests locaux — et non d\'un écosystème d\'outils séparé.** Le workflow couvre 5 étapes : écrire, tester localement, versionner, bloquer en CI/CD et monitorer en production.',
     leadAnswerBlock: '**Les développeurs ont besoin d\'un workflow de prompt engineering qui s\'intègre dans leur processus de développement existant — contrôle de version, CI/CD et tests locaux — et non d\'un écosystème d\'outils séparé.** Le workflow couvre 5 étapes : écrire, tester localement, versionner, bloquer en CI/CD et monitorer en production.',
     quickFacts: [
       'La boucle de test locale avec Promptfoo prend moins de 30 secondes : écrire, tester sur 3 entrées, comparer à la baseline, committer.',
@@ -827,6 +807,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'En résumé',
         isTldr: true,
         content: 'Le workflow de prompt engineering pour développeurs comporte 5 étapes : écrire dans Cursor ou VS Code, exécuter une boucle de test locale avec Promptfoo en moins de 30 secondes, versionner les prompts comme fichiers .txt ou .ts dans /prompts, bloquer les changements en CI/CD avec un workflow GitHub Actions qui bloque à < 85% de taux de réussite, et monitorer la qualité en production avec des alertes sur les chutes de 10%.',
+        items: [
+          'Utiliser Cursor pour le travail avec des API cloud à côté du code de l\'application. Utiliser VS Code + Cline pour les modèles locaux ou les exigences open source.',
+          'La boucle de test locale compte 4 étapes : écrire, tester sur 3 entrées représentatives, comparer à la référence, valider le commit si les tests passent. Objectif : moins de 30 secondes avec Promptfoo.',
+          'Stocker les prompts en fichiers .txt ou .ts dans /prompts. Convention de nommage [task]-[version].txt. Taguer dans Git les versions déployées en production.',
+          'Ajouter un gate CI/CD GitHub Actions qui fait échouer le build si le taux de réussite descend sous 85%. Passer à 95% après 3 mois de tests stables.',
+          'En production, journaliser l\'identifiant du prompt, le modèle, le nombre de tokens, la latence et le score de qualité. Alerter sur les baisses de score supérieures à 10% en 24 heures.',
+          'Surveiller avec un scoring de qualité tous les prompts qui traitent des données utilisateur. La simple journalisation suffit pour les prompts purement internes.',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -899,18 +887,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Tester sur un seul modèle', problem: 'Un prompt qui fonctionne sur un modèle peut échouer sur un autre', fix: 'Exécuter la suite de tests sur au moins 2 modèles en CI/CD.' },
         ],
       },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: 'Points clés',
-        items: [
-          'Utiliser Cursor pour le travail avec des API cloud à côté du code de l\'application. Utiliser VS Code + Cline pour les modèles locaux ou les exigences open source.',
-          'La boucle de test locale compte 4 étapes : écrire, tester sur 3 entrées représentatives, comparer à la référence, valider le commit si les tests passent. Objectif : moins de 30 secondes avec Promptfoo.',
-          'Stocker les prompts en fichiers .txt ou .ts dans /prompts. Convention de nommage [task]-[version].txt. Taguer dans Git les versions déployées en production.',
-          'Ajouter un gate CI/CD GitHub Actions qui fait échouer le build si le taux de réussite descend sous 85%. Passer à 95% après 3 mois de tests stables.',
-          'En production, journaliser l\'identifiant du prompt, le modèle, le nombre de tokens, la latence et le score de qualité. Alerter sur les baisses de score supérieures à 10% en 24 heures.',
-          'Surveiller avec un scoring de qualité tous les prompts qui traitent des données utilisateur. La simple journalisation suffit pour les prompts purement internes.',
-        ],
-      },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
@@ -962,8 +938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12分で読める',
     educationalLevel: '上級',
     primaryTerm: 'プロンプトエンジニアリングワークフロー',
-    intro: '**開発者は、バージョン管理、CI/CD、ローカルテストという既存の開発プロセスに適合するプロンプトエンジニアリングワークフローが必要であり、別のツールエコシステムは必要ありません。** ワークフローは5つのステージをカバーします：書く、ローカルでテストする、バージョン管理する、CI/CDでゲートする、本番環境で監視する。',
-    leadAnswerBlock: '**開発者は、バージョン管理、CI/CD、ローカルテストという既存の開発プロセスに適合するプロンプトエンジニアリングワークフローが必要であり、別のツールエコシステムは必要ありません。** ワークフローは5つのステージをカバーします。',
+    leadAnswerBlock: '**開発者は、バージョン管理、CI/CD、ローカルテストという既存の開発プロセスに適合するプロンプトエンジニアリングワークフローが必要であり、別のツールエコシステムは必要ありません。** ワークフローは5つのステージをカバーします：書く、ローカルでテストする、バージョン管理する、CI/CDでゲートする、本番環境で監視する。',
     quickFacts: [
       'Promptfooを使用したローカルプロンプトテストループは30秒未満：記述、3つの入力でテスト、ベースラインと比較、コミット。',
       'プロンプトを/promptsディレクトリに.txtまたは.tsファイルとして保存。命名：[task]-[version].txt（例：customer-support-v3.txt）。',
@@ -1014,6 +989,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '要約',
         isTldr: true,
         content: '開発者プロンプトエンジニアリングワークフローは5つのステージで構成されます：CursorまたはVS Codeで記述し、Promptfooで30秒未満のローカルテストループを実行し、/promptsに.txtまたは.tsファイルとしてバージョン管理し、85%未満の合格率でブロックするGitHub ActionsワークフローでCI/CDゲートし、10%の低下でアラートを発する本番環境で品質を監視します。',
+        items: [
+          'アプリケーションコードの隣でクラウドAPIを扱うならCursor、ローカルモデルやオープンソースの要件にはVS Code + Clineを使います。',
+          'ローカルのテストループは4ステップです。書く、代表的な3つの入力でテストする、ベースラインと比較する、通ればコミットする。Promptfooで30秒未満が目標です。',
+          'プロンプトは/prompts内に.txtまたは.tsファイルとして保存します。命名規則は[task]-[version].txtです。本番にデプロイしたバージョンにはGitでタグを付けます。',
+          '合格率が85%を下回ったらビルドを失敗させるGitHub ActionsのCI/CDゲートを追加します。3か月安定したら95%に引き上げます。',
+          '本番では、プロンプトの識別子、モデル、トークン数、レイテンシ、品質スコアを記録します。24時間で品質スコアが10%を超えて低下したらアラートを出します。',
+          'ユーザーデータを扱うすべてのプロンプトを品質スコアリングで監視します。社内専用のプロンプトは記録のみの監視でも構いません。',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -1086,18 +1069,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: '1つのモデルだけでテストする', problem: 'あるモデルで動くプロンプトが別のモデルでは失敗することがある', fix: 'CI/CDで、少なくとも2つのモデルに対してテストスイートを実行する。' },
         ],
       },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: '重要なポイント',
-        items: [
-          'アプリケーションコードの隣でクラウドAPIを扱うならCursor、ローカルモデルやオープンソースの要件にはVS Code + Clineを使います。',
-          'ローカルのテストループは4ステップです。書く、代表的な3つの入力でテストする、ベースラインと比較する、通ればコミットする。Promptfooで30秒未満が目標です。',
-          'プロンプトは/prompts内に.txtまたは.tsファイルとして保存します。命名規則は[task]-[version].txtです。本番にデプロイしたバージョンにはGitでタグを付けます。',
-          '合格率が85%を下回ったらビルドを失敗させるGitHub ActionsのCI/CDゲートを追加します。3か月安定したら95%に引き上げます。',
-          '本番では、プロンプトの識別子、モデル、トークン数、レイテンシ、品質スコアを記録します。24時間で品質スコアが10%を超えて低下したらアラートを出します。',
-          'ユーザーデータを扱うすべてのプロンプトを品質スコアリングで監視します。社内専用のプロンプトは記録のみの監視でも構いません。',
-        ],
-      },
       faq: {
         id: 'faq',
         title: 'よくある質問',
@@ -1149,8 +1120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12分钟阅读',
     educationalLevel: '高级',
     primaryTerm: '提示词工程工作流',
-    intro: '**开发者需要一个融入现有开发流程的提示词工程工作流 — 版本控制、CI/CD和本地测试 — 而不是一个独立的工具生态系统。** 在中国，《数据安全法》和《个人信息保护法》（PIPL）要求对AI系统的输入和输出进行记录和审计，这使得系统化的提示词工程工作流对于合规性尤为重要。',
-    leadAnswerBlock: '**开发者需要一个融入现有开发流程的提示词工程工作流 — 版本控制、CI/CD和本地测试 — 而不是一个独立的工具生态系统。** 工作流涵盖5个阶段：编写、本地测试、版本控制、CI/CD门控和生产监控。',
+    leadAnswerBlock: '**开发者需要一个融入现有开发流程的提示词工程工作流 — 版本控制、CI/CD和本地测试 — 而不是一个独立的工具生态系统。** 在中国，《数据安全法》和《个人信息保护法》（PIPL）要求对AI系统的输入和输出进行记录和审计，这使得系统化的提示词工程工作流对于合规性尤为重要。',
     quickFacts: [
       '使用Promptfoo的本地提示词测试循环不到30秒：编写、在3个输入上测试、与基线比较、提交。',
       '将提示词存储为/prompts目录中的.txt或.ts文件。命名：[task]-[version].txt（如customer-support-v3.txt）。',
@@ -1201,6 +1171,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '摘要',
         isTldr: true,
         content: '开发者提示词工程工作流有5个阶段：在Cursor或VS Code中编写，使用Promptfoo在30秒内运行本地测试循环，将提示词作为.txt或.ts文件版本控制在/prompts中，使用当通过率低于85%时阻止的GitHub Actions工作流在CI/CD中门控更改，以及在生产环境中通过10%下降警报监控质量。使用PromptQuorum跨多个模型进行测试。',
+        items: [
+          '在应用代码旁使用云端API时用Cursor。需要本地模型或有开源要求时，用VS Code + Cline。',
+          '本地测试循环有4步：编写、用3个有代表性的输入测试、与基线对比、通过则提交。目标是用Promptfoo在30秒内完成。',
+          '把提示词作为.txt或.ts文件存放在/prompts中，命名规范为[task]-[version].txt，并在Git中为已部署到生产环境的版本打标签。',
+          '添加GitHub Actions的CI/CD门控，通过率低于85%时让构建失败。稳定测试3个月后提高到95%。',
+          '在生产环境中记录提示词标识符、模型、令牌数、延迟和质量分数。24小时内质量分数下降超过10%时发出警报。',
+          '用质量评分监控所有处理用户数据的提示词。仅供内部使用的提示词只记录日志即可。',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -1273,18 +1251,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: '只在一个模型上测试', problem: '在一个模型上有效的提示词可能在另一个模型上失败', fix: '在CI/CD中针对至少2个模型运行测试套件。' },
         ],
       },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: '关键要点',
-        items: [
-          '在应用代码旁使用云端API时用Cursor。需要本地模型或有开源要求时，用VS Code + Cline。',
-          '本地测试循环有4步：编写、用3个有代表性的输入测试、与基线对比、通过则提交。目标是用Promptfoo在30秒内完成。',
-          '把提示词作为.txt或.ts文件存放在/prompts中，命名规范为[task]-[version].txt，并在Git中为已部署到生产环境的版本打标签。',
-          '添加GitHub Actions的CI/CD门控，通过率低于85%时让构建失败。稳定测试3个月后提高到95%。',
-          '在生产环境中记录提示词标识符、模型、令牌数、延迟和质量分数。24小时内质量分数下降超过10%时发出警报。',
-          '用质量评分监控所有处理用户数据的提示词。仅供内部使用的提示词只记录日志即可。',
-        ],
-      },
       faq: {
         id: 'faq',
         title: '常见问题',
@@ -1336,8 +1302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '12 دقيقة للقراءة',
     educationalLevel: 'Advanced',
     primaryTerm: 'سير عمل هندسة البرومبت',
-    intro: '**يحتاج المطوّرون إلى سير عمل لهندسة البرومبت يندمج في عملية التطوير القائمة — التحكم في الإصدارات والتكامل المستمر والاختبار المحلي — لا منظومة أدوات منفصلة.** يتضمّن سير العمل 5 مراحل: الكتابة والاختبار المحلي والإصدار والتحكم في CI/CD والمراقبة في الإنتاج.',
-    leadAnswerBlock: '**يحتاج المطوّرون إلى سير عمل لهندسة البرومبت يندمج في عملية التطوير القائمة — التحكم في الإصدارات والتكامل المستمر والاختبار المحلي — لا منظومة أدوات منفصلة.** يتضمّن سير العمل 5 مراحل.',
+    leadAnswerBlock: '**يحتاج المطوّرون إلى سير عمل لهندسة البرومبت يندمج في عملية التطوير القائمة — التحكم في الإصدارات والتكامل المستمر والاختبار المحلي — لا منظومة أدوات منفصلة.** يتضمّن سير العمل 5 مراحل: الكتابة والاختبار المحلي والإصدار والتحكم في CI/CD والمراقبة في الإنتاج.',
     quickFacts: [
       'حلقة الاختبار المحلي مع Promptfoo تستغرق أقل من 30 ثانية: اكتب، اختبر على 3 مدخلات، قارن بالخط الأساسي، أكّد.',
       'احفظ البرومبتات كملفات .txt أو .ts في مجلد /prompts. التسمية: [مهمة]-[إصدار].txt (مثلاً: customer-support-v3.txt).',
@@ -1388,6 +1353,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'ملخص',
         isTldr: true,
         content: 'يتضمّن سير عمل هندسة البرومبت للمطوّرين 5 مراحل: الكتابة في Cursor أو VS Code، تشغيل حلقة اختبار محلي مع Promptfoo في أقل من 30 ثانية، إصدار البرومبتات كملفات .txt أو .ts في /prompts، التحكم في التغييرات عبر CI/CD بسير عمل GitHub Actions يُوقف البناء إذا انخفضت نسبة النجاح دون 85%، ومراقبة الجودة في الإنتاج مع تنبيهات عند انخفاضات بنسبة 10%. استخدم PromptQuorum للاختبار عبر نماذج متعددة.',
+        items: [
+          'استخدم Cursor للعمل مع واجهات API السحابية بجوار كود تطبيقك. واستخدم VS Code + Cline للنماذج المحلية أو متطلبات المصدر المفتوح.',
+          'حلقة الاختبار المحلية من 4 خطوات: اكتب، واختبر على 3 مدخلات تمثيلية، وقارن بخط الأساس، وأجرِ الالتزام إذا نجح الاختبار. الهدف أقل من 30 ثانية مع Promptfoo.',
+          'احفظ البرومبتات كملفات .txt أو .ts في /prompts. استخدم اصطلاح التسمية [task]-[version].txt. ووسِم في Git الإصدارات المنشورة في الإنتاج.',
+          'أضف بوابة CI/CD في GitHub Actions تُفشل البناء إذا انخفضت نسبة النجاح دون 85%. وارفعها إلى 95% بعد 3 أشهر من الاختبارات المستقرة.',
+          'سجّل في الإنتاج معرّف البرومبت والنموذج وعدد الرموز وزمن الاستجابة ودرجة الجودة. وأطلق تنبيهاً عند انخفاض درجة الجودة بأكثر من 10% خلال 24 ساعة.',
+          'راقب جميع البرومبتات التي تعالج بيانات المستخدمين بتقييم الجودة. ويكفي التسجيل فقط للبرومبتات الداخلية.',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -1458,18 +1431,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'الاختبار محلياً فقط وليس في CI/CD', problem: 'تُتخطّى الاختبارات المحلية تحت ضغط الوقت؛ وبوابات CI/CD إلزامية', fix: 'أضف خطوة اختبار Promptfoo إلى GitHub Actions، وامنع الدمج إذا انخفضت نسبة النجاح دون 85%.' },
           { mistake: 'عدم وجود مراقبة في الإنتاج', problem: 'تتدهور جودة البرومبتات بعد النشر دون أن يلاحظ أحد', fix: 'سجّل درجة الجودة لكل برومبت، وأطلق تنبيهاً إذا انخفضت بأكثر من 10% خلال نافذة متحرّكة مدتها 24 ساعة.' },
           { mistake: 'الاختبار على نموذج واحد فقط', problem: 'قد يفشل برومبت يعمل على نموذج ما على نموذج آخر', fix: 'شغّل مجموعة اختباراتك على نموذجين على الأقل في CI/CD.' },
-        ],
-      },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: 'النقاط الرئيسية',
-        items: [
-          'استخدم Cursor للعمل مع واجهات API السحابية بجوار كود تطبيقك. واستخدم VS Code + Cline للنماذج المحلية أو متطلبات المصدر المفتوح.',
-          'حلقة الاختبار المحلية من 4 خطوات: اكتب، واختبر على 3 مدخلات تمثيلية، وقارن بخط الأساس، وأجرِ الالتزام إذا نجح الاختبار. الهدف أقل من 30 ثانية مع Promptfoo.',
-          'احفظ البرومبتات كملفات .txt أو .ts في /prompts. استخدم اصطلاح التسمية [task]-[version].txt. ووسِم في Git الإصدارات المنشورة في الإنتاج.',
-          'أضف بوابة CI/CD في GitHub Actions تُفشل البناء إذا انخفضت نسبة النجاح دون 85%. وارفعها إلى 95% بعد 3 أشهر من الاختبارات المستقرة.',
-          'سجّل في الإنتاج معرّف البرومبت والنموذج وعدد الرموز وزمن الاستجابة ودرجة الجودة. وأطلق تنبيهاً عند انخفاض درجة الجودة بأكثر من 10% خلال 24 ساعة.',
-          'راقب جميع البرومبتات التي تعالج بيانات المستخدمين بتقييم الجودة. ويكفي التسجيل فقط للبرومبتات الداخلية.',
         ],
       },
       faq: {
@@ -1580,6 +1541,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         content: '개발자 프롬프트 엔지니어링 워크플로우는 5단계로 구성됩니다: Cursor 또는 VS Code에서 작성, 30초 미만으로 Promptfoo 로컬 테스트 루프 실행, /prompts에 .txt 또는 .ts 파일로 프롬프트 버전 관리, 85% 미만 통과율을 차단하는 GitHub Actions 워크플로우로 CI/CD에서 변경사항 게이팅, 그리고 10% 하락 시 알림을 통한 프로덕션 품질 모니터링. 여러 모델 간 테스트에는 PromptQuorum을 활용하십시오.',
+        items: [
+          '애플리케이션 코드 옆에서 클라우드 API를 다룰 때는 Cursor를 사용하십시오. 로컬 모델이나 오픈소스 요건에는 VS Code + Cline을 사용하십시오.',
+          '로컬 테스트 루프는 4단계입니다. 작성, 대표 입력 3개로 테스트, 베이스라인과 비교, 통과하면 커밋. Promptfoo로 30초 이내를 목표로 하십시오.',
+          '프롬프트를 /prompts에 .txt 또는 .ts 파일로 저장하십시오. 명명 규칙은 [task]-[version].txt입니다. 프로덕션에 배포한 버전은 Git에 태그를 다십시오.',
+          '통과율이 85% 아래로 떨어지면 빌드를 실패시키는 GitHub Actions CI/CD 게이트를 추가하십시오. 3개월간 안정적인 테스트 후 95%로 올리십시오.',
+          '프로덕션에서는 프롬프트 식별자, 모델, 토큰 수, 지연 시간, 품질 점수를 기록하십시오. 24시간 동안 품질 점수가 10% 넘게 떨어지면 알림을 보내십시오.',
+          '사용자 데이터를 처리하는 모든 프롬프트를 품질 점수로 모니터링하십시오. 내부 전용 프롬프트는 기록만 하는 모니터링으로도 충분합니다.',
+        ],
       },
       ide_setup: {
         id: 'ide-setup',
@@ -1652,18 +1621,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: '로컬에서만 테스트하고 CI/CD에서는 테스트하지 않음', problem: '로컬 테스트는 시간이 촉박하면 건너뛰게 되며, CI/CD 게이트는 필수입니다', fix: 'GitHub Actions에 Promptfoo 테스트 단계를 추가하십시오. 통과율이 85% 아래로 떨어지면 병합을 막으십시오.' },
           { mistake: '프로덕션 모니터링 없음', problem: '배포 후 프롬프트 품질이 떨어져도 알아차리지 못합니다', fix: '프롬프트별 품질 점수를 기록하십시오. 24시간 롤링 윈도우에서 10% 넘게 떨어지면 알림을 보내십시오.' },
           { mistake: '하나의 모델로만 테스트', problem: '한 모델에서 작동하는 프롬프트가 다른 모델에서는 실패할 수 있습니다', fix: 'CI/CD에서 최소 2개 모델에 대해 테스트 스위트를 실행하십시오.' },
-        ],
-      },
-      key_takeaways: {
-        id: 'key-takeaways',
-        title: '핵심 요점',
-        items: [
-          '애플리케이션 코드 옆에서 클라우드 API를 다룰 때는 Cursor를 사용하십시오. 로컬 모델이나 오픈소스 요건에는 VS Code + Cline을 사용하십시오.',
-          '로컬 테스트 루프는 4단계입니다. 작성, 대표 입력 3개로 테스트, 베이스라인과 비교, 통과하면 커밋. Promptfoo로 30초 이내를 목표로 하십시오.',
-          '프롬프트를 /prompts에 .txt 또는 .ts 파일로 저장하십시오. 명명 규칙은 [task]-[version].txt입니다. 프로덕션에 배포한 버전은 Git에 태그를 다십시오.',
-          '통과율이 85% 아래로 떨어지면 빌드를 실패시키는 GitHub Actions CI/CD 게이트를 추가하십시오. 3개월간 안정적인 테스트 후 95%로 올리십시오.',
-          '프로덕션에서는 프롬프트 식별자, 모델, 토큰 수, 지연 시간, 품질 점수를 기록하십시오. 24시간 동안 품질 점수가 10% 넘게 떨어지면 알림을 보내십시오.',
-          '사용자 데이터를 처리하는 모든 프롬프트를 품질 점수로 모니터링하십시오. 내부 전용 프롬프트는 기록만 하는 모니터링으로도 충분합니다.',
         ],
       },
       faq: {
