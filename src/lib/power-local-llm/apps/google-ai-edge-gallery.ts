@@ -9,7 +9,7 @@ export const app: ToolRecord = {
   categories: ['general-chat-clients'],
   interfaces: ['mobile'],
   locality: 'local',
-  platforms: ['ios', 'android'],
+  platforms: ['ios', 'android', 'mac'],
   worksWith: null,
   engine: 'builtin',
   license: 'Apache 2.0',
@@ -19,7 +19,14 @@ export const app: ToolRecord = {
   addedDate: '2026-09-12',
   status: 'listed',
   uses: ['phone', 'chat'],
-  url: 'apps.apple.com/us/app/google-ai-edge-gallery/id6749645337',
+  url: 'github.com/google-ai-edge/gallery', // no separate product site: the App Store "Developer website" link points at this repo (checked 2026-10-26)
+  storeLinks: {
+    appStore: 'https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337',
+    googlePlay: 'https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery',
+    github: 'https://github.com/google-ai-edge/gallery',
+  },
+  installEffort: 'installer',
+  installEvidence: 'App Store listing (iOS 17+, Apple-silicon Mac), Google Play listing (README: Android 12+), GitHub Releases 1.0.20 with ai-edge-gallery.apk plus per-chipset APKs, macOS DMG GoogleAIEdgeGallery-0.1.0.dmg linked from the README (HTTP 200); checked 2026-10-26',
   tagline: {
     en: 'Google\'s free on-device Gemma 4 app for iPhone',
     de: 'Googles kostenlose On-Device-Gemma-4-App für iPhone',
@@ -34,7 +41,8 @@ export const app: ToolRecord = {
   reviewSlug: 'google-ai-edge-gallery-review', // dedicated PromptQuorum review
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { voice: true, offline: true, importModels: true, modelDownloads: true, visionInput: true },
-  lastVerifiedDate: '2026-09-12',
-  lastUpstreamUpdate: '2026-10-23', // GitHub API (latest release or push, whichever is newer), read 2026-10-23
+  pqReview: { date: '2026-10-26', version: '1.0.13', versionSourceUrl: 'https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337' }, // iOS App Store version history: 1.0.13 on Oct 8 (listing shows no year); Android GitHub release is 1.0.20 (2026-10-06)
+  lastVerifiedDate: '2026-10-26',
+  lastUpstreamUpdate: '2026-10-26', // GitHub API (latest release 1.0.20 on 2026-10-06; repo pushed 2026-10-26, whichever is newer), read 2026-10-26
   lastUpstreamUpdateSource: 'https://github.com/google-ai-edge/gallery',
 }
