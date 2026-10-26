@@ -253,6 +253,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'ensu':                                    'ensu',
   'kernelai':                                'kernelai',
   'llama-app':                               'llama-app',
+  'on-device-llm':                           'on-device-llm',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
