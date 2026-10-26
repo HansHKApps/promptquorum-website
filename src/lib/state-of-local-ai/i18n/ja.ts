@@ -29,6 +29,7 @@ export const ja: SolaStrings = {
   evidenceEnglishNote: '根拠ファイル（主張、計算、出典）の全文は英語版のみです。',
   scrollableTable: 'スクロールできる表',
   citeThisReport: 'このレポートの引用方法',
+  citePlainLabel: 'プレーンテキスト',
   aboutThisReport: 'このレポートについて',
   founderLine: 'はPromptQuorumの創業者で、フランクフルトを拠点に、30年以上にわたりコンサルティングと経営に携わってきました。',
   methodPre: '手法、ラベル、前提、出典は、上の',
@@ -123,6 +124,12 @@ export const ja: SolaStrings = {
   issues: {
     '2026-q4': {
       title: '鶏は少なく、卵はさらに少ない',
+      citeAs:
+        'Kuepper, H. (2026). 鶏は少なく、卵はさらに少ない. ローカルAIの現状, レポート01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/ja/about/state-of-local-ai/2026-q4',
+      citeApa:
+        'Kuepper, H. (2026年10月23日). 鶏は少なく、卵はさらに少ない (ローカルAIの現状, レポート01, Q4 2026). PromptQuorum. https://www.promptquorum.com/ja/about/state-of-local-ai/2026-q4',
+      citeChicago:
+        'Kuepper, Hans. 「鶏は少なく、卵はさらに少ない.」 ローカルAIの現状, レポート01 (Q4 2026). PromptQuorum, 2026年10月23日. https://www.promptquorum.com/ja/about/state-of-local-ai/2026-q4.',
       subtitle:
         'ローカルAIは急成長していますが、実際に使えるハードウェアの数はごくわずかです。優れたアプリはさらに少ないのが現状です。',
       summary:

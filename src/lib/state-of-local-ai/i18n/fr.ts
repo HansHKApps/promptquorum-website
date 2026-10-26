@@ -29,6 +29,7 @@ export const fr: SolaStrings = {
   evidenceEnglishNote: 'Le dossier de preuves complet (affirmations, calculs, sources) n’est disponible qu’en anglais.',
   scrollableTable: 'Tableau défilant',
   citeThisReport: 'Citer ce rapport',
+  citePlainLabel: 'Texte brut',
   aboutThisReport: 'À propos de ce rapport',
   founderLine: 'est le fondateur de PromptQuorum, basé à Francfort, avec plus de 30 ans d’expérience dans le conseil et la direction générale.',
   methodPre: 'La méthode, les libellés, les hypothèses et les sources figurent dans la ',
@@ -123,6 +124,12 @@ export const fr: SolaStrings = {
   issues: {
     '2026-q4': {
       title: 'Peu de poules, encore moins d’œufs',
+      citeAs:
+        'Kuepper, H. (2026). Peu de poules, encore moins d’œufs. L’état de l’IA locale, Rapport 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/fr/about/state-of-local-ai/2026-q4',
+      citeApa:
+        'Kuepper, H. (2026, 23 octobre). Peu de poules, encore moins d’œufs (L’état de l’IA locale, Rapport 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/fr/about/state-of-local-ai/2026-q4',
+      citeChicago:
+        'Kuepper, Hans. « Peu de poules, encore moins d’œufs. » L’état de l’IA locale, Rapport 01 (Q4 2026). PromptQuorum, 23 octobre 2026. https://www.promptquorum.com/fr/about/state-of-local-ai/2026-q4.',
       subtitle:
         'L’IA locale progresse vite, mais le parc de matériel réellement utilisable est minuscule. Les excellentes applications sont plus rares encore.',
       summary:

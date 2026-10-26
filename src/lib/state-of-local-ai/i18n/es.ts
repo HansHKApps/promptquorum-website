@@ -29,6 +29,7 @@ export const es: SolaStrings = {
   evidenceEnglishNote: 'El archivo completo de evidencias (afirmaciones, cálculos y fuentes) solo está disponible en inglés.',
   scrollableTable: 'Tabla desplazable',
   citeThisReport: 'Citar este informe',
+  citePlainLabel: 'Texto sin formato',
   aboutThisReport: 'Acerca de este informe',
   founderLine: 'es el fundador de PromptQuorum, con sede en Fráncfort, y cuenta con más de 30 años de experiencia en consultoría y dirección general.',
   methodPre: 'El método, las etiquetas, los supuestos y las fuentes se encuentran en la ',
@@ -123,6 +124,12 @@ export const es: SolaStrings = {
   issues: {
     '2026-q4': {
       title: 'Pocas gallinas y aún menos huevos',
+      citeAs:
+        'Kuepper, H. (2026). Pocas gallinas y aún menos huevos. El estado de la IA local, Informe 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/es/about/state-of-local-ai/2026-q4',
+      citeApa:
+        'Kuepper, H. (2026, 23 de octubre). Pocas gallinas y aún menos huevos (El estado de la IA local, Informe 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/es/about/state-of-local-ai/2026-q4',
+      citeChicago:
+        'Kuepper, Hans. «Pocas gallinas y aún menos huevos.» El estado de la IA local, Informe 01 (Q4 2026). PromptQuorum, 23 de octubre de 2026. https://www.promptquorum.com/es/about/state-of-local-ai/2026-q4.',
       subtitle:
         'La IA local crece rápido, pero la base instalada de hardware realmente utilizable es minúscula. Las grandes aplicaciones son todavía más escasas.',
       summary:

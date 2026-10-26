@@ -29,6 +29,7 @@ export const ar: SolaStrings = {
   evidenceEnglishNote: 'ملف الأدلة الكامل (الادعاءات والحسابات والمصادر) متاح باللغة الإنجليزية فقط.',
   scrollableTable: 'جدول قابل للتمرير',
   citeThisReport: 'اقتبس هذا التقرير',
+  citePlainLabel: 'نص عادي',
   aboutThisReport: 'حول هذا التقرير',
   founderLine: 'هو مؤسس PromptQuorum ومقرّه فرانكفورت، ولديه أكثر من 30 عامًا من الخبرة في الاستشارات والإدارة العامة.',
   methodPre: 'المنهجية والتصنيفات والافتراضات والمصادر موجودة في ',
@@ -123,6 +124,12 @@ export const ar: SolaStrings = {
   issues: {
     '2026-q4': {
       title: 'دجاجات قليلة وبيض أقل',
+      citeAs:
+        'Kuepper, H. (2026). دجاجات قليلة وبيض أقل. حالة الذكاء الاصطناعي المحلي, التقرير 01 (Q4 2026). PromptQuorum. https://www.promptquorum.com/ar/about/state-of-local-ai/2026-q4',
+      citeApa:
+        'Kuepper, H. (2026، 23 أكتوبر). دجاجات قليلة وبيض أقل (حالة الذكاء الاصطناعي المحلي, التقرير 01, Q4 2026). PromptQuorum. https://www.promptquorum.com/ar/about/state-of-local-ai/2026-q4',
+      citeChicago:
+        'Kuepper, Hans. «دجاجات قليلة وبيض أقل.» حالة الذكاء الاصطناعي المحلي, التقرير 01 (Q4 2026). PromptQuorum, 23 أكتوبر 2026. https://www.promptquorum.com/ar/about/state-of-local-ai/2026-q4.',
       subtitle:
         'الذكاء الاصطناعي المحلي ينمو بسرعة، لكن قاعدة العتاد القابلة للاستخدام ضئيلة جدًا، والتطبيقات الممتازة أشحّ منها.',
       summary:
