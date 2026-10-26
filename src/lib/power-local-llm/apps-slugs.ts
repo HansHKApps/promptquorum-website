@@ -200,6 +200,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'haplo-ai':                                'haplo-ai',
   'pixlstash':                               'pixlstash',
   'photoprism':                              'photoprism',
+  'immich':                                  'immich',
   'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',

@@ -134,6 +134,7 @@ import { app as app_frankly_ai } from './apps/frankly-ai'
 import { app as app_haplo_ai } from './apps/haplo-ai'
 import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_photoprism } from './apps/photoprism'
+import { app as app_immich } from './apps/immich'
 import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_hiwaifu } from './apps/hiwaifu'
 import { app as app_memoryai } from './apps/memoryai'
@@ -628,6 +629,7 @@ export const localAiApps: ToolRecord[] = [
   app_haplo_ai,
   app_pixlstash,
   app_photoprism,
+  app_immich,
   app_hiwaifu,
   app_memoryai,
   app_on_device_ai_translator,

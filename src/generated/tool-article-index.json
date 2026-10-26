@@ -11663,6 +11663,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "immich-review",
+        "title": "Immich Review: Self-Hosted Photo Library with Smart Search",
+        "url": "/power-local-llm/immich-review",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pajdo-review",
         "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
         "url": "/power-local-llm/pajdo-review",
@@ -11700,17 +11708,9 @@
         "url": "/power-local-llm/ente-photos-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "fluidvoice-review",
-        "title": "FluidVoice Review: Free Open-Source Mac Dictation App",
-        "url": "/power-local-llm/fluidvoice-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 227,
+    "totalCount": 228,
     "capped": true
   },
   "Qdrant": {
@@ -12705,6 +12705,20 @@
         "title": "PhotoPrism Review: Self-Hosted AI Photo Library for Your Server",
         "url": "/power-local-llm/photoprism-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Immich": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "immich-review",
+        "title": "Immich Review: Self-Hosted Photo Library with Smart Search",
+        "url": "/power-local-llm/immich-review",
+        "dateModified": "2026-10-26",
         "tier": "about"
       }
     ],
