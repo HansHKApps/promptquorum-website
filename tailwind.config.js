@@ -29,6 +29,8 @@ module.exports = {
 					'voice-audio': { DEFAULT: 'hsl(var(--cat-voice-audio))', tint: 'hsl(var(--cat-voice-audio-tint))', edge: 'hsl(var(--cat-voice-audio-edge))' },
 					'images-video': { DEFAULT: 'hsl(var(--cat-images-video))', tint: 'hsl(var(--cat-images-video-tint))', edge: 'hsl(var(--cat-images-video-edge))' },
 					'train-operate': { DEFAULT: 'hsl(var(--cat-train-operate))', tint: 'hsl(var(--cat-train-operate-tint))', edge: 'hsl(var(--cat-train-operate-edge))' },
+					'at-the-edge': { DEFAULT: 'hsl(var(--cat-at-the-edge))', tint: 'hsl(var(--cat-at-the-edge-tint))', edge: 'hsl(var(--cat-at-the-edge-edge))' },
+					'other-niches': { DEFAULT: 'hsl(var(--cat-other-niches))', tint: 'hsl(var(--cat-other-niches-tint))', edge: 'hsl(var(--cat-other-niches-edge))' },
 				},
 				// Hub template palette — tokens live in src/app/globals.css (--hub-*).
 				hub: {

@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-05',
     theme: 'Overview & Reference',
     title: 'The Complete Local AI & LLM Software Directory: ' + TOTAL_TOOL_COUNT + ' Apps & Tools for Running AI Locally (2026)',
@@ -91,14 +91,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, ' + TOTAL_TOOL_COUNT + ' projects, one map.** Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, and At the Edge (emerging protocols and unproven ideas) — most popular projects in 2026 fit in one primary category, and many span more than one.',
+          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, ' + TOTAL_TOOL_COUNT + ' projects, one map.** Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge (emerging protocols and unproven ideas), and Other & Niche (apps with no direct competitor, such as health) — most popular projects in 2026 fit in one primary category, and many span more than one.',
           '**Pick a runtime first.** Ollama is the right default for ~95% of readers; llama.cpp is the foundational engine underneath most other tools; vLLM is the production-serving pick for multi-user setups.',
           '**Most categories above Run & Serve are optional.** A desktop app OR a web UI is enough for chat. Add a code assistant or CLI tool only when you want code help; add a RAG system only when you want to chat with your own documents; add an agent framework only when one-shot calls stop being enough; add Images & Video only when you need visual output.',
           '**Licence matters for commercial use.** MIT and Apache 2.0 dominate the ecosystem. AGPL appears on a handful of UIs (text-generation-webui, KoboldCpp, Jan, SillyTavern) — fine for personal use, more deliberate for commercial deployments. The "License" column below names every one explicitly; see [AI & open-source software licenses explained](/power-local-llm/ai-tool-licenses-explained) for what MIT, Apache-2.0, AGPL-3.0, and the other license types below actually require.',
           '**Multi-tool stacks are normal.** Ollama + Open WebUI + AnythingLLM + Cline + Stable Diffusion is a single-machine setup that covers chat, RAG, coding, and image generation without compromise. The "Common Real-World Stacks" table below names the recipes that actually work in 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-en.svg',
-        imageCaption: 'The ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories of a local LLM stack: ' + TOTAL_TOOL_COUNT + ' actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge.',
+        imageCaption: 'The ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories of a local LLM stack: ' + TOTAL_TOOL_COUNT + ' actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche.',
       },
       runtimes: {
         id: 'runtimes',
@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Das vollständige Verzeichnis für lokale KI- & LLM-Software: ' + TOTAL_TOOL_COUNT + ' Apps und Tools, um KI lokal auszuführen (2026)',
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Entdecken Sie ' + TOTAL_TOOL_COUNT + ' lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge. Lizenzen, Links & primäre URLs. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
+      TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Lizenzen, Links & primäre URLs. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored besuchen',
@@ -690,7 +690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Multi-Tool-Stacks sind die Norm.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion ist ein Single-Machine-Setup, das Chat, RAG, Coding und Bildgenerierung ohne Kompromisse abdeckt. Die Tabelle „Praktische Einsatz-Stacks" unten nennt die Rezepte, die in 2026 tatsächlich funktionieren.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-de.svg',
-        imageCaption: 'Die ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien eines lokalen LLM-Stacks: ' + TOTAL_TOOL_COUNT + ' aktiv gepflegte Projekte in Ausführen & Bereitstellen (Ollama, llama.cpp, vLLM), Chat & Assistenten (LM Studio, Jan, GPT4All), Code & Entwicklung (Cline, LangChain, CrewAI), Wissen & Abruf (AnythingLLM, PrivateGPT), Sprache & Audio (Whisper.cpp, Piper), Bilder & Video (Stable Diffusion, ComfyUI) Training & Betrieb und An der Grenze.',
+        imageCaption: 'Die ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien eines lokalen LLM-Stacks: ' + TOTAL_TOOL_COUNT + ' aktiv gepflegte Projekte in Ausführen & Bereitstellen (Ollama, llama.cpp, vLLM), Chat & Assistenten (LM Studio, Jan, GPT4All), Code & Entwicklung (Cline, LangChain, CrewAI), Wissen & Abruf (AnythingLLM, PrivateGPT), Sprache & Audio (Whisper.cpp, Piper), Bilder & Video (Stable Diffusion, ComfyUI) Training & Betrieb, An der Grenze und Sonstiges & Nischen.',
       },
       runtimes: {
         id: 'runtimes',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels d\'IA et de LLM locaux : ' + TOTAL_TOOL_COUNT + ' apps et outils pour exécuter l\'IA en local (2026)',
@@ -1207,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Parcourez ' + TOTAL_TOOL_COUNT + ' apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' outils LLM locaux en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge. Licences, liens & URL primaires. La carte d\'orientation avant de choisir votre stack.',
+      TOTAL_TOOL_COUNT + ' outils LLM locaux en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Licences, liens & URL primaires. La carte d\'orientation avant de choisir votre stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Visiter Locally Uncensored',
@@ -1285,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les stacks multi-outils sont la norme.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion couvre le chat, le RAG, le codage et la génération d\'images sur une seule machine, sans compromis. Le tableau « Stacks courants en production » ci-dessous liste les recettes qui fonctionnent réellement en 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-fr.svg',
-        imageCaption: 'Les ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories d\'une pile LLM locale : ' + TOTAL_TOOL_COUNT + ' projets actifs couvrant Exécution & Hébergement (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Développement (Cline, LangChain, CrewAI), Connaissances & Recherche (AnythingLLM, PrivateGPT), Voix & Audio (Whisper.cpp, Piper), Images & Vidéo (Stable Diffusion, ComfyUI) Entraînement & Exploitation et À la pointe.',
+        imageCaption: 'Les ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories d\'une pile LLM locale : ' + TOTAL_TOOL_COUNT + ' projets actifs couvrant Exécution & Hébergement (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Développement (Cline, LangChain, CrewAI), Connaissances & Recherche (AnythingLLM, PrivateGPT), Voix & Audio (Whisper.cpp, Piper), Images & Vidéo (Stable Diffusion, ComfyUI) Entraînement & Exploitation, À la pointe et Autres et niches.',
       },
       runtimes: {
         id: 'runtimes',
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす' + TOTAL_TOOL_COUNT + 'のアプリ＆ツール（2026年版）',
@@ -1793,7 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを' + TOTAL_TOOL_COUNT + '件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。',
     twitterDescription:
-      'ローカルLLMツール' + TOTAL_TOOL_COUNT + '件を' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで網羅 — Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate、At the Edge。ライセンス・リンク・主要URL付き。スタックを決める前の「全体像」マップです。',
+      'ローカルLLMツール' + TOTAL_TOOL_COUNT + '件を' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで網羅 — Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate、At the Edge、Other & Niche。ライセンス・リンク・主要URL付き。スタックを決める前の「全体像」マップです。',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored を訪問',
@@ -1864,14 +1864,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリ・' + TOTAL_TOOL_COUNT + 'プロジェクト・1つの地図。** 実行＆配信、チャット＆アシスタント、コード＆開発、ナレッジ＆検索、音声＆オーディオ、画像＆動画、トレーニング＆運用、最前線 — 2026年の主要プロジェクトはほぼすべて正確に1つのカテゴリに収まり、複数にまたがるものも少なくありません。',
+          '**' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリ・' + TOTAL_TOOL_COUNT + 'プロジェクト・1つの地図。** 実行＆配信、チャット＆アシスタント、コード＆開発、ナレッジ＆検索、音声＆オーディオ、画像＆動画、トレーニング＆運用、最前線、その他＆ニッチ — 2026年の主要プロジェクトはほぼすべて正確に1つのカテゴリに収まり、複数にまたがるものも少なくありません。',
           '**まずランタイムを選ぶ。** Ollamaは読者の約95%に適したデフォルト。llama.cppは他の多くのツールの基盤エンジン。vLLMはマルチユーザーGPUデプロイの本番向け選択肢です。',
           '**ランタイム上の層はほとんどがオプション。** チャットにはデスクトップアプリまたはWeb UIのどちらか一方で十分です。コード支援が必要な場合のみIDE統合を追加。CLIワークフローが必要な場合のみターミナルツールを追加。自分のドキュメントを参照したい場合のみRAGシステムを追加。ワンショット呼び出しでは足りなくなった場合のみエージェントフレームワークを追加。ビジュアル出力が必要な場合のみ画像生成を追加してください。',
           '**ライセンスは商用利用で重要。** MITとApache 2.0がエコシステムを占めています。AGPLは一部のUI（text-generation-webui、KoboldCpp、Jan、SillyTavern）に見られます — 個人利用は問題なし、商用デプロイは要確認。',
           '**マルチツールスタックが標準的。** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusionは1台のマシンでチャット・RAG・コーディング・画像生成を妥協なくカバーします。下の「実用的なスタック構成」テーブルに実際に機能する組み合わせを掲載しています。',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-ja.svg',
-        imageCaption: 'ローカルLLMスタックの' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリ：実行＆配信（Ollama、llama.cpp、vLLM）、チャット＆アシスタント（LM Studio、Jan、GPT4All）、コード＆開発（Cline、LangChain、CrewAI）、ナレッジ＆検索（AnythingLLM、PrivateGPT）、音声＆オーディオ（Whisper.cpp、Piper）、画像＆動画（Stable Diffusion、ComfyUI）、トレーニング＆運用、最前線にわたる' + TOTAL_TOOL_COUNT + 'プロジェクトの全体マップ。',
+        imageCaption: 'ローカルLLMスタックの' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリ：実行＆配信（Ollama、llama.cpp、vLLM）、チャット＆アシスタント（LM Studio、Jan、GPT4All）、コード＆開発（Cline、LangChain、CrewAI）、ナレッジ＆検索（AnythingLLM、PrivateGPT）、音声＆オーディオ（Whisper.cpp、Piper）、画像＆動画（Stable Diffusion、ComfyUI）、トレーニング＆運用、最前線、その他＆ニッチにわたる' + TOTAL_TOOL_COUNT + 'プロジェクトの全体マップ。',
       },
       runtimes: {
         id: 'runtimes',
@@ -2370,7 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地AI与LLM软件完整目录：' + TOTAL_TOOL_COUNT + '款应用与工具，在本地运行AI（2026）',
@@ -2381,7 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       '收录' + TOTAL_TOOL_COUNT + '款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。',
     twitterDescription:
-      '本地LLM工具' + TOTAL_TOOL_COUNT + '款，覆盖' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate、At the Edge。含许可证、链接与主要网址。确定技术栈前的"现有工具"全景图。',
+      '本地LLM工具' + TOTAL_TOOL_COUNT + '款，覆盖' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate、At the Edge、Other & Niche。含许可证、链接与主要网址。确定技术栈前的"现有工具"全景图。',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: '访问 Locally Uncensored',
@@ -2452,14 +2452,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**' + TOTAL_CATEGORY_GROUP_COUNT + '大类别，' + TOTAL_TOOL_COUNT + '个项目，一份全景图。**运行与部署、聊天与助手、代码与开发、知识与检索、语音与音频、图像与视频、训练与运维、前沿探索——2026年几乎所有主流项目都能归入其中一个主要类别，也有不少横跨多个类别。',
+          '**' + TOTAL_CATEGORY_GROUP_COUNT + '大类别，' + TOTAL_TOOL_COUNT + '个项目，一份全景图。**运行与部署、聊天与助手、代码与开发、知识与检索、语音与音频、图像与视频、训练与运维、前沿探索、其他与细分——2026年几乎所有主流项目都能归入其中一个主要类别，也有不少横跨多个类别。',
           '**优先选择运行时。**Ollama是约95%用户的默认选择；llama.cpp是大多数其他工具底层的核心引擎；vLLM适合在真实GPU上为多用户提供并发推理服务。',
           '**运行时以上的大多数层都是可选的。**聊天只需一个桌面应用或Web界面即可。仅当需要代码辅助时才添加IDE集成；仅当需要CLI工作流时才添加终端工具；仅当需要基于自有文档问答时才添加RAG系统；仅当单次调用不够用时才添加智能体框架；仅当需要视觉输出时才添加图像生成。',
           '**商业使用时许可证至关重要。**MIT和Apache 2.0许可证主导生态系统。少数Web界面（text-generation-webui、KoboldCpp、Jan、SillyTavern）采用AGPL——个人使用无碍，商业部署前需仔细评估。下方"许可证"列已明确列出每个项目的许可证。',
           '**多工具组合技术栈是常态。**Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion在单台机器上即可同时覆盖聊天、RAG、编程和图像生成需求，互不冲突。下方"常见实用技术栈"表格列出了2026年经验证、实际可用的配方。',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-zh.svg',
-        imageCaption: '本地LLM技术栈的' + TOTAL_CATEGORY_GROUP_COUNT + '大类别：' + TOTAL_TOOL_COUNT + '个活跃项目，涵盖运行与部署（Ollama、llama.cpp、vLLM）、聊天与助手（LM Studio、Jan、GPT4All）、代码与开发（Cline、LangChain、CrewAI）、知识与检索（AnythingLLM、PrivateGPT）、语音与音频（Whisper.cpp、Piper）、图像与视频（Stable Diffusion、ComfyUI）训练与运维以及前沿探索的完整生态地图。',
+        imageCaption: '本地LLM技术栈的' + TOTAL_CATEGORY_GROUP_COUNT + '大类别：' + TOTAL_TOOL_COUNT + '个活跃项目，涵盖运行与部署（Ollama、llama.cpp、vLLM）、聊天与助手（LM Studio、Jan、GPT4All）、代码与开发（Cline、LangChain、CrewAI）、知识与检索（AnythingLLM、PrivateGPT）、语音与音频（Whisper.cpp、Piper）、图像与视频（Stable Diffusion、ComfyUI）训练与运维、前沿探索以及其他与细分的完整生态地图。',
       },
       runtimes: {
         id: 'runtimes',
@@ -2958,7 +2958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'El directorio completo de software de IA y LLM local: ' + TOTAL_TOOL_COUNT + ' apps y herramientas para ejecutar IA en local (2026)',
@@ -2969,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Explora ' + TOTAL_TOOL_COUNT + ' apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge. Licencias, enlaces y URLs principales. El mapa de "qué existe" antes de elegir tu stack.',
+      TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Licencias, enlaces y URLs principales. El mapa de "qué existe" antes de elegir tu stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Visita Locally Uncensored',
@@ -3047,7 +3047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los stacks multiherramienta son la norma.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion es una configuración de una sola máquina que cubre chat, RAG, código y generación de imágenes sin compromiso. La tabla "Stacks comunes en producción" a continuación nombra las recetas que realmente funcionan en 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-es.svg',
-        imageCaption: 'Las ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías de un stack LLM local: ' + TOTAL_TOOL_COUNT + ' proyectos en mantenimiento activo que abarcan Ejecución y despliegue (Ollama, llama.cpp, vLLM), Chat y asistentes (LM Studio, Jan, GPT4All), Código y desarrollo (Cline, LangChain, CrewAI), Conocimiento y recuperación (AnythingLLM, PrivateGPT), Voz y audio (Whisper.cpp, Piper), Imágenes y vídeo (Stable Diffusion, ComfyUI) Entrenamiento y operación y En la frontera.',
+        imageCaption: 'Las ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías de un stack LLM local: ' + TOTAL_TOOL_COUNT + ' proyectos en mantenimiento activo que abarcan Ejecución y despliegue (Ollama, llama.cpp, vLLM), Chat y asistentes (LM Studio, Jan, GPT4All), Código y desarrollo (Cline, LangChain, CrewAI), Conocimiento y recuperación (AnythingLLM, PrivateGPT), Voz y audio (Whisper.cpp, Piper), Imágenes y vídeo (Stable Diffusion, ComfyUI) Entrenamiento y operación, En la frontera y Otros y nichos.',
       },
       runtimes: {
         id: 'runtimes',
@@ -3560,7 +3560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas para executar IA localmente (2026)',
@@ -3571,7 +3571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Explore ' + TOTAL_TOOL_COUNT + ' apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' ferramentas LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge. Licenças, links e URLs principais. O mapa de "o que existe" antes de escolher seu stack.',
+      TOTAL_TOOL_COUNT + ' ferramentas LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Licenças, links e URLs principais. O mapa de "o que existe" antes de escolher seu stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Visite Locally Uncensored',
@@ -3642,14 +3642,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias, ' + TOTAL_TOOL_COUNT + ' projetos, um mapa.** Execução e Implantação, Chat e Assistentes, Código e Desenvolvimento, Conhecimento e Busca, Voz e Áudio, Imagens e Vídeo, Treinamento e Operação e Na fronteira — quase todos os projetos populares de 2026 se encaixam em uma categoria principal, e muitos abrangem mais de uma.',
+          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias, ' + TOTAL_TOOL_COUNT + ' projetos, um mapa.** Execução e Implantação, Chat e Assistentes, Código e Desenvolvimento, Conhecimento e Busca, Voz e Áudio, Imagens e Vídeo, Treinamento e Operação, Na fronteira e Outros e nichos — quase todos os projetos populares de 2026 se encaixam em uma categoria principal, e muitos abrangem mais de uma.',
           '**Escolha primeiro um runtime.** Ollama é a opção padrão adequada para ~95% dos leitores; llama.cpp é o motor fundamental por trás da maioria das outras ferramentas; vLLM é a opção de produção para implantações multiusuário em GPU real.',
           '**A maioria das camadas acima do runtime são opcionais.** Um app de desktop OU uma interface web é suficiente para o chat. Adicione uma integração IDE apenas quando quiser assistência de código; ferramentas de terminal apenas quando quiser fluxos de trabalho CLI; um sistema RAG apenas quando quiser conversar com seus próprios documentos; um framework de agentes apenas quando as chamadas de uma única etapa deixarem de ser suficientes; geração de imagens apenas quando precisar de saída visual.',
           '**A licença importa para uso comercial.** MIT e Apache 2.0 dominam o ecossistema. AGPL aparece em algumas interfaces (text-generation-webui, KoboldCpp, Jan, SillyTavern) — perfeito para uso pessoal, mais deliberado para implantações comerciais.',
           '**Os stacks de múltiplas ferramentas são a norma.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion é uma configuração de uma única máquina que cobre chat, RAG, código e geração de imagens sem compromisso.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-pt.svg',
-        imageCaption: 'As ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias de um stack LLM local: ' + TOTAL_TOOL_COUNT + ' projetos em manutenção ativa abrangendo Execução e Implantação (Ollama, llama.cpp, vLLM), Chat e Assistentes (LM Studio, Jan, GPT4All), Código e Desenvolvimento (Cline, LangChain, CrewAI), Conhecimento e Busca (AnythingLLM, PrivateGPT), Voz e Áudio (Whisper.cpp, Piper), Imagens e Vídeo (Stable Diffusion, ComfyUI) Treinamento e Operação e Na fronteira.',
+        imageCaption: 'As ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias de um stack LLM local: ' + TOTAL_TOOL_COUNT + ' projetos em manutenção ativa abrangendo Execução e Implantação (Ollama, llama.cpp, vLLM), Chat e Assistentes (LM Studio, Jan, GPT4All), Código e Desenvolvimento (Cline, LangChain, CrewAI), Conhecimento e Busca (AnythingLLM, PrivateGPT), Voz e Áudio (Whisper.cpp, Piper), Imagens e Vídeo (Stable Diffusion, ComfyUI) Treinamento e Operação, Na fronteira e Outros e nichos.',
       },
       runtimes: {
         id: 'runtimes',
@@ -4161,7 +4161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)',
@@ -4172,7 +4172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'تصفّح ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وCode & Development وKnowledge & Retrieval وVoice & Audio وImages & Video وTrain & Operate وAt the Edge. التراخيص والروابط وعناوين URL الرئيسية. خريطة "ما الموجود" قبل اختيار stack.',
+      TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وCode & Development وKnowledge & Retrieval وVoice & Audio وImages & Video وTrain & Operate وAt the Edge وOther & Niche. التراخيص والروابط وعناوين URL الرئيسية. خريطة "ما الموجود" قبل اختيار stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'زيارة Locally Uncensored',
@@ -4243,14 +4243,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات و' + TOTAL_TOOL_COUNT + ' مشروعاً وخريطة واحدة.** التشغيل والنشر، الدردشة والمساعدون، الكود والتطوير، المعرفة والاسترجاع، الصوت والصوتيات، الصور والفيديو، والتدريب والتشغيل، وعلى الحافة — تقع معظم المشاريع الشائعة في 2026 في فئة أساسية واحدة، ويمتد كثير منها عبر أكثر من فئة.',
+          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات و' + TOTAL_TOOL_COUNT + ' مشروعاً وخريطة واحدة.** التشغيل والنشر، الدردشة والمساعدون، الكود والتطوير، المعرفة والاسترجاع، الصوت والصوتيات، الصور والفيديو، والتدريب والتشغيل، وعلى الحافة، وأخرى ومجالات متخصصة — تقع معظم المشاريع الشائعة في 2026 في فئة أساسية واحدة، ويمتد كثير منها عبر أكثر من فئة.',
           '**اختر runtime أولاً.** Ollama هو الخيار الافتراضي المناسب لـ~95% من القراء؛ llama.cpp هو المحرك الأساسي وراء معظم الأدوات الأخرى؛ vLLM هو الخيار الإنتاجي لنشر متعدد المستخدمين على GPU حقيقي.',
           '**معظم الطبقات فوق runtime اختيارية.** تطبيق سطح مكتب أو واجهة ويب واحدة كافية للدردشة. أضف تكامل IDE فقط عند الحاجة لمساعدة في الكود؛ أضف أدوات طرفية فقط عند الرغبة في سير عمل CLI؛ أضف نظام RAG فقط عند الرغبة في الدردشة مع مستنداتك؛ أضف إطار عملاء ذكيين فقط حين لا تعود استدعاءات الخطوة الواحدة كافية؛ أضف توليد الصور فقط عند الحاجة لمخرجات بصرية.',
           '**الترخيص مهم للاستخدام التجاري.** MIT وApache 2.0 يسيطران على المنظومة. AGPL يظهر في بعض الواجهات (text-generation-webui وKoboldCpp وJan وSillyTavern) — مثالي للاستخدام الشخصي، يتطلب تأملاً أكثر للنشر التجاري.',
           '**الـstacks متعددة الأدوات هي القاعدة.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion هو إعداد جهاز واحد يغطي الدردشة وRAG والكود وتوليد الصور بدون تنازلات.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-ar.svg',
-        imageCaption: 'فئات stack النماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' مشروعاً نشطاً تغطي التشغيل والنشر (Ollama وllama.cpp وvLLM) والدردشة والمساعدون (LM Studio وJan وGPT4All) والكود والتطوير (Cline وLangChain وCrewAI) والمعرفة والاسترجاع (AnythingLLM وPrivateGPT) والصوت والصوتيات (Whisper.cpp وPiper) والصور والفيديو (Stable Diffusion وComfyUI) والتدريب والتشغيل وعلى الحافة.',
+        imageCaption: 'فئات stack النماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' مشروعاً نشطاً تغطي التشغيل والنشر (Ollama وllama.cpp وvLLM) والدردشة والمساعدون (LM Studio وJan وGPT4All) والكود والتطوير (Cline وLangChain وCrewAI) والمعرفة والاسترجاع (AnythingLLM وPrivateGPT) والصوت والصوتيات (Whisper.cpp وPiper) والصور والفيديو (Stable Diffusion وComfyUI) والتدريب والتشغيل وعلى الحافة وأخرى ومجالات متخصصة.',
       },
       runtimes: {
         id: 'runtimes',
@@ -4762,7 +4762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-26',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 ' + TOTAL_TOOL_COUNT + '개 앱과 도구 (2026)',
@@ -4773,7 +4773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.',
     twitterDescription:
-      '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리 — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge. 라이선스·링크·주요 URL 수록. 스택 선택 전 전체 지도 확인.',
+      '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리 — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. 라이선스·링크·주요 URL 수록. 스택 선택 전 전체 지도 확인.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored 방문',
@@ -4844,18 +4844,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리, ' + TOTAL_TOOL_COUNT + '개 프로젝트, 하나의 지도.** 실행 및 배포, 채팅 및 어시스턴트, 코드 및 개발, 지식 및 검색, 음성 및 오디오, 이미지 및 비디오, 학습 및 운영, 최전선 — 2026년의 거의 모든 인기 프로젝트는 하나의 주요 카테고리에 속하며, 여러 카테고리에 걸치는 경우도 많습니다.',
+          '**' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리, ' + TOTAL_TOOL_COUNT + '개 프로젝트, 하나의 지도.** 실행 및 배포, 채팅 및 어시스턴트, 코드 및 개발, 지식 및 검색, 음성 및 오디오, 이미지 및 비디오, 학습 및 운영, 최전선, 기타 및 틈새 — 2026년의 거의 모든 인기 프로젝트는 하나의 주요 카테고리에 속하며, 여러 카테고리에 걸치는 경우도 많습니다.',
           '**먼저 런타임을 선택하십시오.** Ollama는 독자의 ~95%에게 적합한 기본 선택입니다. llama.cpp는 대부분의 다른 도구 뒤에 있는 기반 엔진이며, vLLM은 실제 GPU에서 멀티유저 배포 시 프로덕션 선택입니다.',
           '**런타임 위의 대부분 레이어는 선택적입니다.** 채팅에는 데스크톱 앱 OR 웹 UI 하나로 충분합니다. 코드 지원이 필요할 때만 IDE 통합을, CLI 워크플로가 필요할 때만 터미널 도구를, 자신의 문서와 대화할 때만 RAG 시스템을, 단일 단계 호출로 충분하지 않을 때만 에이전트 프레임워크를, 시각적 출력이 필요할 때만 이미지 생성을 추가하십시오.',
           '**상업적 사용 시 라이선스가 중요합니다.** MIT와 Apache 2.0이 생태계를 지배합니다. AGPL은 일부 인터페이스(text-generation-webui, KoboldCpp, Jan, SillyTavern)에 적용됩니다 — 개인 사용에는 적합하지만 상업적 배포 시에는 더 신중하게 검토해야 합니다.',
           '**멀티툴 스택이 일반적입니다.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion은 채팅, RAG, 코딩, 이미지 생성을 타협 없이 커버하는 단일 머신 구성입니다. 아래의 "실제 사용 스택" 표에 2026년에 실제로 작동하는 레시피가 나열되어 있습니다.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: '2026년 로컬 LLM 생태계는 실행 및 배포, 채팅 및 어시스턴트, 코드 및 개발, 지식 및 검색, 음성 및 오디오, 이미지 및 비디오, 학습 및 운영, 최전선의 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리에 걸쳐 ' + TOTAL_TOOL_COUNT + '개의 활성 프로젝트를 보유하고 있습니다.' },
+          { type: 'one-sentence', text: '2026년 로컬 LLM 생태계는 실행 및 배포, 채팅 및 어시스턴트, 코드 및 개발, 지식 및 검색, 음성 및 오디오, 이미지 및 비디오, 학습 및 운영, 최전선, 기타 및 틈새의 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리에 걸쳐 ' + TOTAL_TOOL_COUNT + '개의 활성 프로젝트를 보유하고 있습니다.' },
           { type: 'plain-terms', text: '로컬 LLM 소프트웨어는 인터넷 없이 개인 컴퓨터에서 AI를 실행하는 도구입니다. Ollama 같은 런타임이 모델을 로드하고, LM Studio 같은 앱이 채팅 화면을 제공하며, AnythingLLM 같은 도구는 사용자 문서를 참조할 수 있게 합니다.' },
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-ko.svg',
-        imageCaption: '로컬 LLM 스택의 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리: 실행 및 배포(Ollama, llama.cpp, vLLM), 채팅 및 어시스턴트(LM Studio, Jan, GPT4All), 코드 및 개발(Cline, LangChain, CrewAI), 지식 및 검색(AnythingLLM, PrivateGPT), 음성 및 오디오(Whisper.cpp, Piper), 이미지 및 비디오(Stable Diffusion, ComfyUI), 학습 및 운영, 최전선에 걸친 ' + TOTAL_TOOL_COUNT + '개의 활성 프로젝트.',
+        imageCaption: '로컬 LLM 스택의 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리: 실행 및 배포(Ollama, llama.cpp, vLLM), 채팅 및 어시스턴트(LM Studio, Jan, GPT4All), 코드 및 개발(Cline, LangChain, CrewAI), 지식 및 검색(AnythingLLM, PrivateGPT), 음성 및 오디오(Whisper.cpp, Piper), 이미지 및 비디오(Stable Diffusion, ComfyUI), 학습 및 운영, 최전선, 기타 및 틈새에 걸친 ' + TOTAL_TOOL_COUNT + '개의 활성 프로젝트.',
       },
       runtimes: {
         id: 'runtimes',

@@ -37,6 +37,7 @@ const GROUP_ACCENT: Record<CategoryGroupKey, { wash: string; bar: string; chip: 
   'voice-audio': { wash: 'border-hub-rose-edge bg-gradient-to-b from-hub-rose-tint to-white hover:border-hub-rose', bar: 'bg-hub-rose', chip: 'bg-hub-rose-tint text-hub-rose-ink', avatar: 'bg-hub-rose-tint text-hub-rose-ink' },
   'images-video': { wash: 'border-hub-orchid-edge bg-gradient-to-b from-hub-orchid-tint to-white hover:border-hub-orchid', bar: 'bg-hub-orchid', chip: 'bg-hub-orchid-tint text-hub-orchid-ink', avatar: 'bg-hub-orchid-tint text-hub-orchid-ink' },
   'train-operate': { wash: 'border-hub-amber-edge bg-gradient-to-b from-hub-amber-tint to-white hover:border-hub-amber', bar: 'bg-hub-amber', chip: 'bg-hub-amber-tint text-hub-amber-ink', avatar: 'bg-hub-amber-tint text-hub-amber-ink' },
+  'other-niches': { wash: 'border-hub-blue-edge bg-gradient-to-b from-hub-blue-tint to-white hover:border-hub-blue', bar: 'bg-hub-blue', chip: 'bg-hub-blue-tint text-hub-blue-ink', avatar: 'bg-hub-blue-tint text-hub-blue-ink' },
   'at-the-edge': { wash: 'border-hub-orange-edge bg-gradient-to-b from-hub-orange-tint to-white hover:border-hub-orange', bar: 'bg-hub-orange', chip: 'bg-hub-orange-tint text-hub-orange-ink', avatar: 'bg-hub-orange-tint text-hub-orange-ink' },
 }
 

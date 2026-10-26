@@ -45,6 +45,8 @@ export interface CompareSegment {
 export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
   // At the Edge holds emerging protocols and unproven concepts — too heterogeneous for a like-for-like table, so no segments.
   'at-the-edge': [],
+  // Other & Niche holds apps with no real competitors in the directory (a lone health companion so far) — nothing to compare like for like.
+  'other-niches': [],
   // Pilot category — attributes are proposals until each is confirmed against the tools' reviews.
   'voice-audio': [
     {
@@ -377,4 +379,5 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'images-video': 'local-llm-images-video-compared',
   'train-operate': 'local-llm-train-operate-compared',
   'at-the-edge': null,
+  'other-niches': null,
 }
