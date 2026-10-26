@@ -84,7 +84,7 @@ function run(toolName: McpToolName, fn: () => unknown) {
   })
 }
 
-const OS_ENUM = z.enum(['mac', 'win', 'linux', 'ios', 'android', 'web'])
+const OS_ENUM = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
 const SERVER_VERSION = '2.0.0'
 const SITE = 'https://www.promptquorum.com'
 const mdResource = (uri: URL, text: string) => ({ contents: [{ uri: uri.href, mimeType: 'text/markdown', text }] })
@@ -211,7 +211,7 @@ const handler = createMcpHandler(
           query: z.string().optional().describe('Free-text goal, e.g. "image generation" or "chat with PDFs"'),
           category: z.string().optional().describe('Category or group key from list_categories, e.g. "image-generation" or "voice-audio"'),
           useCase: z.enum(['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']).optional(),
-          os: z.enum(['mac', 'win', 'linux', 'ios', 'android', 'web']).optional().describe("User's operating system"),
+          os: z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web']).optional().describe("User's operating system"),
           ramGb: z.number().min(0).optional().describe("User's system RAM in GB; apps needing more are excluded"),
           vramGb: z.number().min(0).optional().describe("User's GPU VRAM in GB (unified memory counts on Apple Silicon); apps needing more are excluded"),
           price: z.enum(['free', 'freemium', 'paid']).optional(),

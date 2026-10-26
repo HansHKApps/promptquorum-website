@@ -22,7 +22,7 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { CategorySubKey, InterfaceKey } from './categories'
 
-export type OSKey = 'mac' | 'win' | 'linux' | 'ios' | 'android' | 'web'
+export type OSKey = 'mac' | 'win' | 'linux' | 'ios' | 'ipados' | 'watchos' | 'android' | 'web'
 
 export type UseCaseKey =
   | 'chat'

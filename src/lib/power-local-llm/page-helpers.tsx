@@ -40,7 +40,7 @@ const SPDX_LICENSES = new Set(['MIT', 'Apache-2.0', 'GPL-3.0', 'AGPL-3.0', 'BSD-
 function buildReviewedAppSchema(app: (typeof localAiApps)[number], canonicalUrl: string, lang: Parameters<typeof toOutputLocale>[0]) {
   const sameAs = Object.values(app.storeLinks ?? {}).filter(Boolean)
   const officialUrl = app.storeLinks?.web ?? (app.url ? `https://${app.url}` : undefined)
-  const mobileOnly = !!app.platforms?.length && app.platforms.every((p) => p === 'ios' || p === 'android')
+  const mobileOnly = !!app.platforms?.length && app.platforms.every((p) => p === 'ios' || p === 'ipados' || p === 'watchos' || p === 'android')
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',

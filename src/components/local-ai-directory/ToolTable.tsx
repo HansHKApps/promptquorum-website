@@ -17,10 +17,10 @@ import type { HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { t } from './directory-i18n'
 import { getListingFreshness, getAppActivity } from './staleness'
 
-// Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
+// Platform values (macOS/Windows/Linux/iOS/iPadOS/watchOS/Android/Web) are OS product
 // names — kept identical across locales, matching ToolCard.tsx's own map.
 const PLATFORM_LABEL: Record<string, string> = {
-  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web',
+  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
 }
 
 export function ToolTable({

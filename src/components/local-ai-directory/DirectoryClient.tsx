@@ -40,7 +40,7 @@ import { INSTALL_EFFORT_KEYS } from '@/lib/power-local-llm/apps/types'
 const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
 const MOBILE_MACHINES: readonly MachineType[] = ['ios', 'android']
 
-const OS_FILTER_VALUES: readonly string[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
+const OS_FILTER_VALUES: readonly string[] = ['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web']
 const PRICE_FILTER_VALUES: readonly string[] = ['free', 'freemium', 'paid']
 const INSTALL_FILTER_VALUES: readonly string[] = INSTALL_EFFORT_KEYS
 

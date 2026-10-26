@@ -30,7 +30,7 @@ import { MODEL_SIZES, QUANT_BITS, CONTEXT_OVERHEAD, BATCH_MULTIPLIER, estimateVr
 const SITE = 'https://www.promptquorum.com'
 const VRAM_CALCULATOR_URL = `${SITE}/local-llms/vram-calculator-local-llm`
 
-const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
+const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web']
 
 // Plain-language goal words → directory use-case tag, so find_best_apps can
 // take "chat with my PDFs" without the caller knowing the taxonomy.
@@ -94,7 +94,7 @@ export function findBestApps(args: FindBestAppsArgs) {
   }
 
   const missingInfo: string[] = []
-  if (!args.os) missingInfo.push('os (mac, win, linux, ios, android, web)')
+  if (!args.os) missingInfo.push('os (mac, win, linux, ios, ipados, watchos, android, web)')
   if (args.ramGb === undefined && args.vramGb === undefined) missingInfo.push('ramGb / vramGb — without them hardwareFit stays "unknown"')
   if (!args.experience) missingInfo.push('experience (beginner, intermediate, advanced)')
 

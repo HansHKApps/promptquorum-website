@@ -134,6 +134,8 @@ const OS_LABEL: Record<OSKey, string> = {
   win: 'Windows',
   linux: 'Linux',
   ios: 'iOS',
+  ipados: 'iPadOS',
+  watchos: 'watchOS',
   android: 'Android',
   web: 'Web',
 }

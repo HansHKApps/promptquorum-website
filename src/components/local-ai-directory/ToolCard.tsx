@@ -62,10 +62,10 @@ const PRICE_BADGE: Record<'free' | 'freemium' | 'paid', string> = {
 
 const MCP_BADGE = 'bg-hub-violet-tint text-hub-violet-ink border-hub-violet-edge'
 
-// Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
+// Platform values (macOS/Windows/Linux/iOS/iPadOS/watchOS/Android/Web) are OS product
 // names — kept identical across locales rather than "translated".
 const PLATFORM_LABEL: Record<string, string> = {
-  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web',
+  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
 }
 
 type ToolArticleEntry = { url: string; tier: 'about' | 'mentioned' }
@@ -286,7 +286,7 @@ export function ToolCard({
               </span>
             ))}
             {app.platforms?.map((p) => (
-              <span key={p} className="rounded-full bg-gray-50 border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-text-secondary">
+              <span key={p} className={p === 'watchos' ? 'rounded-full bg-hub-rose-tint border border-hub-rose-edge px-2 py-0.5 text-[11px] font-semibold text-hub-rose-ink' : 'rounded-full bg-gray-50 border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-text-secondary'}>
                 {PLATFORM_LABEL[p] ?? p}
               </span>
             ))}

@@ -16,11 +16,11 @@ import type { Language } from '@/lib/blog/blogContent'
 import { t, type DirUi } from './directory-ui-client'
 import { INSTALL_EFFORT_UI } from './installEffort'
 
-// Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
+// Platform values (macOS/Windows/Linux/iOS/iPadOS/watchOS/Android/Web) are OS product
 // names — kept identical across locales, same as elsewhere on the site,
 // rather than "translated".
 const PLATFORM_VALUE_LABEL: Record<string, string> = {
-  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web',
+  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
 }
 
 function getGroupLabels(ui: DirUi): Record<keyof FilterState, string> {

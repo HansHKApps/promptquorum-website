@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   categories: ['health-wellness'], // own niche: no other app in the directory reads health data, so it is not filed under personal assistants,
   interfaces: ['mobile'],
   locality: 'local', // developer states health data, the math and the question answering stay on the iPhone (Apple Intelligence); no account, no cloud AI service
-  platforms: ['ios'], // iPhone and iPad (iOS/iPadOS 26.0+) plus an Apple Watch app; no Android or desktop version mentioned
+  platforms: ['ios', 'ipados', 'watchos'], // iPhone and iPad (iOS/iPadOS 26.0+) plus an Apple Watch app; no Android or desktop version mentioned
   worksWith: ['Apple Intelligence', 'Apple Health'],
   engine: 'builtin', // answers come from Apple's on-device Apple Intelligence model; without it the app falls back to prewritten replies (website)
   license: 'Closed source',

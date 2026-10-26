@@ -283,7 +283,7 @@ export function explainLicense(args: { licenseString: string; useCase?: LicenseU
 // yet researched", so those apps are kept but flagged, never silently dropped.
 
 const USE_CASES: UseCaseKey[] = ['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']
-const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
+const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web']
 
 // listedApps: excludes 'planned'/archived entries so counts and exampleApps
 // match what search_apps would actually return — see MCP response-quality

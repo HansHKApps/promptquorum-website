@@ -12,7 +12,7 @@ export const INSTALL_EFFORT_UI: Record<InstallEffortKey, { label: DirUiKey; tip:
 }
 
 // OS product names stay identical across locales, same as the platform chips elsewhere in the directory.
-const OS_NAME: Record<OSKey, string> = { mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web' }
+const OS_NAME: Record<OSKey, string> = { mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: 'watchOS', android: 'Android', web: 'Web' }
 
 /**
  * " · Windows" when the install tier only holds on some of the tool's platforms (ToolRecord.installOn),
