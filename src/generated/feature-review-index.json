@@ -1104,6 +1104,11 @@
     "urlSlug": "llama-app-review",
     "url": "/power-local-llm/llama-app-review"
   },
+  "on-device-llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "on-device-llm-review",
+    "url": "/power-local-llm/on-device-llm-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",
