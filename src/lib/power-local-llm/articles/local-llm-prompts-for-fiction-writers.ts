@@ -1,37 +1,41 @@
 // Power Local LLM — Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)
 // Slug: local-llm-prompts-for-fiction-writers
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales (en, de, fr, ja, zh, es, pt, ar, ko) in this file. Refreshed 2026-10-26 (no-GSC data-free review).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-en.webp',
     title: 'Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)',
     seoTitle: 'Local LLM Prompts for Fiction Writers: 15 Templates 2026',
     intro:
-      'Local LLMs produce measurably better fiction when you give them structured prompts rather than open-ended requests. This guide covers 15 prompt templates that work — for scene-writing, character development, dialogue, worldbuilding, style transfer, revision, and editorial tasks — all tested against Llama 3.3 70B, Qwen3 32B, and Mistral Large running locally through Ollama or LM Studio. Every template is copy-paste ready and includes what to adjust per genre.',
+      'Local LLMs produce more useful fiction when you give them structured prompts rather than open-ended requests. This guide covers 15 prompt templates for scene-writing, character development, dialogue, worldbuilding, style transfer, revision, and editorial tasks. They are written for instruction-tuned open-weight models such as Gemma 4, Qwen3.8-27B, and Llama 3.3 70B running locally through Ollama or LM Studio. Every template is copy-paste ready and includes what to adjust per genre.',
     metaDescription:
-      '15 prompt templates for fiction writers using local LLMs. Scene-writing, character development, dialogue, worldbuilding, style transfer, revision, and editorial templates — copy-paste ready for Ollama and LM Studio.',
+      '15 copy-paste prompt templates for fiction with local LLMs: scenes, characters, dialogue, worldbuilding, style transfer, editing. For Ollama and LM Studio.',
     twitterDescription:
-      '15 prompt templates for local LLM fiction: scene-writing, dialogue, character development, worldbuilding, style transfer, revision, editorial. Tested on Llama 3.3 70B, Qwen3 32B.',
+      '15 prompt templates for local LLM fiction: scene-writing, dialogue, character development, worldbuilding, style transfer, revision, editorial. Written for Gemma 4, Qwen3.8-27B and Llama 3.3 70B.',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      '32 GB Apple Silicon Mac',
+      '48 GB unified memory Mac',
     ],
     audience:
       'Novelists, short-story writers, screenwriters, and game narrative designers using local LLMs as drafting partners, looking for reliable prompt structures that produce consistent, usable output.',
@@ -47,12 +51,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'worldbuilding prompt template',
     ],
     leadAnswerBlock:
-      '**The single biggest improvement in local LLM fiction output comes from switching from "write a scene" to a structured 5-part prompt: genre + POV + sensory constraint + emotional beat + word-count ceiling. That format alone cuts flat, summarising output by ~60% in practice — the model produces showing-not-telling prose instead of plot summary because the prompt leaves no room for the easy shortcut. For character development, the most reliable template is the "contradiction prompt": give the character one dominant trait and one contradicting behaviour, then ask the model to write a scene that reveals both without stating either. For dialogue, set the subtext first — what the character wants to say but won\'t — then let the model write the spoken lines around that hidden message. For editorial work, use the Plot Consistency Check to catch continuity errors, Pacing Analysis to identify flat zones, and Exposition Smoothing to redistribute information dumps.**',
+      '**The single biggest improvement in local LLM fiction output comes from switching from "write a scene" to a structured 5-part prompt: genre + POV + sensory constraint + emotional beat + word-count ceiling. That format leaves no room for the easy shortcut, so the model tends to produce showing-not-telling prose instead of plot summary. For character development, the most reliable template is the "contradiction prompt": give the character one dominant trait and one contradicting behaviour, then ask the model to write a scene that reveals both without stating either. For dialogue, set the subtext first — what the character wants to say but won\'t — then let the model write the spoken lines around that hidden message. For editorial work, use the Plot Consistency Check to catch continuity errors, Pacing Analysis to identify flat zones, and Exposition Smoothing to redistribute information dumps.**',
     quickAnswerTop: {
       en: {
         question: 'What are the best prompt templates for fiction writers using local LLMs?',
         answer:
-          'The most reliable prompt structure for fiction writing is: genre + POV + sensory constraint + emotional beat + word-count ceiling. This produces showing-not-telling prose instead of plot summary. For character development, use the "contradiction prompt" (one dominant trait + one contradicting behaviour, reveal both without stating either). For dialogue, set subtext first (what the character wants but won\'t say), then write the spoken lines. For worldbuilding, anchor to a single sensory detail before expanding outward. These templates work on any instruction-tuned model; larger models (Llama 3.3 70B, Qwen3 32B) maintain constraint adherence better over long completions.',
+          'The most reliable prompt structure for fiction writing is: genre + POV + sensory constraint + emotional beat + word-count ceiling. This produces showing-not-telling prose instead of plot summary. For character development, use the "contradiction prompt" (one dominant trait + one contradicting behaviour, reveal both without stating either). For dialogue, set subtext first (what the character wants but won\'t say), then write the spoken lines. For worldbuilding, anchor to a single sensory detail before expanding outward. These templates work on any instruction-tuned model; larger models (Gemma 4 31B, Qwen3.8-27B, Llama 3.3 70B) tend to hold constraints better over long completions.',
         bullets: [
           'Scene prompt: genre + POV + 1–2 sensory details + emotional beat + word-count ceiling (150–400 words).',
           'Character development: one dominant trait + one contradicting behaviour, reveal both without stating either.',
@@ -61,9 +65,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Style transfer: name 2–3 specific techniques of the target author, paste a 2-sentence sample, then generate using those techniques.',
           'Revision: paste the draft, name the specific problem (passive voice, adverb overload, head-hopping), ask for rewrite.',
           'Editorial: Plot Consistency Check catches continuity errors; Pacing Analysis maps chapter pacing; Exposition Smoothing redistributes info-dumps.',
-          'Larger models maintain constraint adherence better; Llama 3.3 70B is the default pick for most fiction tasks.',
+          'Larger models tend to hold constraints better: Gemma 4 31B or Qwen3.8-27B on a 24 GB GPU, Llama 3.3 70B with 48 GB or more.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -91,11 +95,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Structured prompts outperform open-ended requests for fiction.** A 5-part scene prompt (genre + POV + sensory constraint + emotional beat + word ceiling) produces showing-not-telling prose; "write a scene" produces plot summary. The template is the technique.',
           '**The contradiction prompt is the most reliable character-development structure.** Give the model one dominant trait and one contradicting behaviour; ask it to reveal both without naming either. This produces layered characters the reader has to infer.',
-          '**Dialogue quality doubles when you set subtext before spoken lines.** Tell the model what the character wants but won\'t say first. The spoken words then work around that hidden message naturally.',
+          '**Dialogue improves when you set subtext before spoken lines.** Tell the model what the character wants but won\'t say first. The spoken words then work around that hidden message naturally.',
           '**Word-count ceilings prevent bloat.** A 200-word ceiling on a scene prompt forces compression; the model must be precise. Raise it in 100-word increments when you need more, but always set a ceiling.',
-          '**Revision prompts need a named problem.** "Rewrite this" produces minimal change. "Rewrite: eliminate all passive voice, every sentence must start with a concrete noun or a strong verb" produces measurable improvement.',
+          '**Revision prompts need a named problem.** "Rewrite this" produces minimal change. "Rewrite: eliminate all passive voice, every sentence must start with a concrete noun or a strong verb" tends to produce a clearer improvement.',
           '**Editorial templates operate at manuscript level.** Plot Consistency Check, Pacing Analysis, and Exposition Smoothing work on completed scenes and chapters — run them after drafting, not during.',
-          '**Larger models maintain constraint adherence better over long completions.** Llama 3.3 70B and Qwen3 32B follow 5-part scene constraints reliably; smaller models drift after ~200 tokens.',
+          '**Larger models tend to hold constraints better over long completions.** Gemma 4 31B, Qwen3.8-27B and Llama 3.3 70B are the models this page is written around; smaller models tend to drift sooner.',
           '**The frontend matters less than the model and prompt.** Ollama, LM Studio, SillyTavern, and Agnai all pass your prompt verbatim — the fiction quality difference is model + prompt, not frontend.',
         ],
       },
@@ -104,11 +108,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quick Facts',
         items: [
           '**Templates covered:** 15 total — scene-writing (2), character development (3), dialogue (2), worldbuilding (2), style transfer (2), revision (1), editorial (3).',
-          '**Tested on:** Llama 3.3 70B, Qwen3 32B, Mistral Large — all via Ollama on Apple M5 Max 64 GB and NVIDIA RTX 4090 24 GB.',
+          '**Written for:** instruction-tuned open-weight models run through Ollama or LM Studio, such as Gemma 4 31B, Qwen3.8-27B, Mistral Small 3 24B and Llama 3.3 70B.',
           '**Word-count ceilings:** 150–400 words for scenes; 100–200 words for dialogue; 300–600 words for worldbuilding passages.',
-          '**Best all-round model for fiction:** Llama 3.3 70B (strong instruction following, narrative coherence, long context).',
-          '**Best for style transfer:** Mistral Large (consistent prose register; reproduces author voice patterns reliably).',
-          '**Best for dialogue:** Command A+ or Hermes 3 (character voice differentiation; naturalistic spoken register).',
+          '**Starting model on a 24 GB GPU:** Gemma 4 31B or Qwen3.8-27B, both with a 256K context window; Llama 3.3 70B with 48 GB or more (see the model table below).',
+          '**Style transfer:** Mistral Small 3 24B on a 16 GB GPU, or the largest model that fits your memory; keep the technique sample to 2–3 sentences.',
+          '**Dialogue and low-refusal fiction:** Hermes 4.3 36B; Command A+ (218B parameters, mixture-of-experts) needs server-class GPUs.',
           '**System prompt:** set genre and POV in a system message, not in the user turn — it anchors every completion in the session.',
         ],
       },
@@ -188,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'scene-writing',
         title: 'Scene-Writing Templates (Templates 1–2)',
         content:
-          '**The 5-part scene template is the foundation: genre + POV + sensory anchor + emotional beat + word ceiling.** Every element does specific work — remove any one and output quality drops measurably.',
+          '**The 5-part scene template is the foundation: genre + POV + sensory anchor + emotional beat + word ceiling.** Every element does specific work — remove any one and output quality tends to drop.',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           '5-part scene prompt structure for local LLM fiction: genre, POV, sensory anchor, emotional beat, and a 150–400 word ceiling — each constraint is load-bearing.',
@@ -214,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'template-1',
         title: 'Template 1 — Scene 5-Part Structure',
         content:
-          'The foundation template. All five elements are load-bearing — remove any one and output quality drops measurably.',
+          'The foundation template. All five elements are load-bearing — remove any one and output quality tends to drop.',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -406,7 +410,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: 'Mistral Large for style transfer. Mistral Large maintains consistent prose register across long completions better than most locally-runnable models. For style transfer tasks where register consistency matters across multiple paragraphs, prefer Mistral Large over Llama 3.3 70B. For style transfer in shorter bursts (under 300 words), any 30B+ model performs adequately.',
+            text: 'Match the model to the task length. For multi-paragraph style transfer, use the largest model that fits your memory (Gemma 4 31B, Qwen3.8-27B or Llama 3.3 70B) and keep the technique sample to 2–3 sentences. For shorter bursts (under 300 words), a 24B model such as Mistral Small 3 is usually adequate.',
           },
         ],
       },
@@ -445,7 +449,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: 'Revision Templates (Template 12)',
         content:
-          '**Revision prompts need a named problem, not a general instruction to improve.** "Make this better" produces minimal surface-level edits. "Eliminate every passive construction; every sentence must begin with a concrete noun or a strong active verb" produces measurable structural change.',
+          '**Revision prompts need a named problem, not a general instruction to improve.** "Make this better" produces minimal surface-level edits. "Eliminate every passive construction; every sentence must begin with a concrete noun or a strong active verb" tends to produce a clearer structural change.',
         items: [
           '**Always paste the draft, not a description.** Revision prompts only work when you paste the actual draft text. Describing the problem without showing the prose produces generic advice rather than a rewritten passage.',
           '**Name the specific problem.** "Rewrite" is not enough. Identify one structural issue: passive voice, adverb overload, head-hopping, bloat, or info-dump.',
@@ -543,20 +547,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: 'Model Recommendations for Fiction Writing',
         content:
-          '**Model choice matters less than prompt structure, but it matters.** A well-structured prompt on a 7B model will outperform a vague prompt on a 70B model — but given equivalent prompts, larger models maintain constraint adherence over longer completions and differentiate character voices more reliably.',
+          '**Model choice matters less than prompt structure, but it matters.** A well-structured prompt on a 7B model can outperform a vague prompt on a 70B model — but given equivalent prompts, larger models maintain constraint adherence over longer completions and differentiate character voices more reliably.',
         columns: ['Task', 'Recommended Model', 'Why'],
         rows: [
-          { 'Task': 'General scene writing', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Strong instruction following, narrative coherence, best all-round for constrained prose' },
-          { 'Task': 'Style transfer', 'Recommended Model': 'Mistral Large', 'Why': 'Consistent prose register across long completions; best register fidelity of locally-runnable models' },
-          { 'Task': 'Dialogue / character voice', 'Recommended Model': 'Command A+ or Hermes 3', 'Why': 'Naturalistic speech register; differentiates character voices reliably across extended exchanges' },
-          { 'Task': 'Worldbuilding', 'Recommended Model': 'Qwen3 32B', 'Why': 'Strong at structured detail generation; maintains the concentric-ring expansion pattern reliably' },
-          { 'Task': 'Revision / editing', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Best at following specific structural rewrite instructions across a full paragraph' },
-          { 'Task': 'Dark / uncensored fiction', 'Recommended Model': 'Hermes 3 Llama 3.1', 'Why': 'Fine-tuned for fewer content refusals; no cloud terms-of-service constraints when run locally' },
+          { 'Task': 'General scene writing', 'Recommended Model': 'Gemma 4 31B', 'Why': 'Prose pick on a 24 GB GPU (19–20 GB download, 256K context); Llama 3.3 70B if you have 48 GB or more' },
+          { 'Task': 'Style transfer', 'Recommended Model': 'Mistral Small 3 24B', 'Why': 'Fits a 16 GB GPU (14 GB download, 32K context); keep the technique sample short' },
+          { 'Task': 'Dialogue / character voice', 'Recommended Model': 'Hermes 4.3 36B', 'Why': 'Low-refusal fine-tune; try it on your own dialogue scenes' },
+          { 'Task': 'Worldbuilding', 'Recommended Model': 'Qwen3.8-27B', 'Why': '256K context keeps a long world bible in the prompt (18 GB download)' },
+          { 'Task': 'Revision / editing', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Long-standing default for rewrite instructions; about 43 GB download, so 48 GB or more' },
+          { 'Task': 'Dark / uncensored fiction', 'Recommended Model': 'Hermes 4.3 36B or Dolphin 3.0', 'Why': 'Fine-tuned to refuse less; no cloud terms of service apply when run locally' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Hardware minimums for fiction models. Llama 3.3 70B at Q4 quantisation requires ~40 GB VRAM or unified memory (NVIDIA RTX 4090 24 GB dual-GPU, or Apple M5 Max 64 GB). Qwen3 32B at Q4 runs on 20–24 GB. Mistral Large at Q4 requires ~24 GB. For 16 GB rigs, Qwen3 14B and Mistral Small are the practical ceiling — both follow scene templates reliably at shorter generation lengths.',
+            text: 'Hardware tiers. Download sizes from the Ollama library, weights only; add 2–6 GB for the KV cache on long scenes. Gemma 4 31B (19–20 GB) and Qwen3.8-27B (18 GB) fit a 24 GB GPU or a 32 GB Mac; Gemma 4 12B (about 8 GB) fits 12 GB; Mistral Small 3 24B (14 GB) fits 16 GB; Llama 3.3 70B (about 43 GB) needs 48 GB or more. Command A+ (218B mixture-of-experts, two H100 GPUs per Cohere) and Mistral Large (123B, 73 GB download, research license) are server-class and not covered by these tiers.',
           },
         ],
       },
@@ -575,11 +579,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: 'Sources',
         items: [
-          'Llama 3.3 70B model card and instruction-following benchmarks — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B technical report — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Mistral Large model documentation — [Mistral AI](https://mistral.ai)',
-          'Command A+ specification — [Cohere](https://cohere.com)',
-          'Hermes 3 fine-tune methodology — [Nous Research](https://nousresearch.com)',
+          'Llama 3.3 70B model card and download size — [Ollama library](https://ollama.com/library/llama3.3)',
+          'Gemma 4 and Qwen3.8 tags, sizes and context windows — [Ollama: Gemma 4](https://ollama.com/library/gemma4), [Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3 and Mistral Large sizes, context and licenses — [Ollama: Mistral Small](https://ollama.com/library/mistral-small), [Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'Command A+ release (May 2026, 218B mixture-of-experts, Apache 2.0) — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Hermes fine-tune methodology — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -596,7 +600,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Do these prompt templates work on smaller models (7B–14B)?',
-            a: 'Yes, but constraint adherence degrades after ~150 tokens. Smaller models follow the first 2–3 constraints in a 5-part prompt, then drift toward their base register. For 7B–14B models: reduce the word ceiling (max 150 words), use fewer simultaneous constraints (3-part instead of 5-part), and expect to revise or reprompt more frequently. Qwen3 14B is the strongest small model tested for fiction-specific prompt following.',
+            a: 'Yes, but constraint adherence tends to degrade as the completion gets longer. Smaller models follow the first 2–3 constraints in a 5-part prompt, then drift toward their base register. For 7B–14B models: reduce the word ceiling (max 150 words), use fewer simultaneous constraints (3-part instead of 5-part), and expect to revise or reprompt more frequently. Gemma 4 12B (about 8 GB) is a sensible starting point on a 12 GB GPU.',
           },
           {
             q: 'How do I maintain character voice consistency across a full novel session?',
@@ -604,7 +608,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'What is the best local LLM for writing dark or mature fiction?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, or any model fine-tuned to reduce content refusals. When running locally, there are no cloud terms-of-service restrictions — the model\'s base fine-tune determines what it will and won\'t generate. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) for a full breakdown of uncensored model options and ethical framing.',
+            a: 'Hermes 4.3 36B, Dolphin 3.0, or any model fine-tuned to reduce content refusals. When running locally, there are no cloud terms-of-service restrictions — the model\'s base fine-tune determines what it will and won\'t generate. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) for a full breakdown of uncensored model options and ethical framing.',
           },
           {
             q: 'Can I use these templates in SillyTavern or Agnai?',
@@ -612,11 +616,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'How long should a scene prompt be?',
-            a: 'A scene prompt of 50–100 words produces the best results in practice. Longer prompts (200+ words) can work for complex scenes but increase the chance the model ignores some constraints. For complex scenes, break the prompt into two passes: first generate the scene, then run a revision prompt that adds the constraint you withheld.',
+            a: 'A scene prompt of 50–100 words usually works best. Longer prompts (200+ words) can work for complex scenes but increase the chance the model ignores some constraints. For complex scenes, break the prompt into two passes: first generate the scene, then run a revision prompt that adds the constraint you withheld.',
           },
           {
             q: 'Do style transfer prompts violate copyright?',
-            a: 'Replicating an author\'s technique (sentence structure, punctuation choices, narrative register) is not copyright infringement — style is not copyrightable. Reproducing substantial verbatim passages from copyrighted text is infringement. The templates in this guide use 2–3 sentence samples as technique anchors, which falls within standard educational fair use, and the generated output replicates technique rather than content.',
+            a: 'In most jurisdictions copyright protects specific expression rather than style, so replicating an author\'s technique (sentence structure, punctuation choices, narrative register) is generally not infringement, while reproducing substantial verbatim passages from copyrighted text can be. The templates in this guide use 2–3 sentence samples as technique anchors and ask for technique, not content. Rules differ by country and case, and this is general information, not legal advice.',
+          },
+          {
+            q: 'How do I write a system prompt for fiction?',
+            a: 'Put genre, POV and prose register in the system message rather than the user turn, so every generation in the session inherits them. A basic form: "You are a [genre] fiction assistant. All prose you write is in [POV, e.g. close third person, past tense] and favours [e.g. sensory detail and subtext]." For long sessions, add a short character sheet (name, dominant trait, contradicting behaviour, speech register). LM Studio and SillyTavern have a dedicated system prompt field; in Ollama, set it with a Modelfile SYSTEM line or the system message of the API.',
+          },
+          {
+            q: 'How do I use these templates in LM Studio?',
+            a: 'Paste the genre, POV and register constraints into the System Prompt field in LM Studio\'s chat sidebar, then type a scene, dialogue or worldbuilding template from this guide as the user message. LM Studio can also run an OpenAI-compatible local server, so you can send the system and user prompts separately over the API. The templates are plain text, so the same text works in Ollama and LM Studio.',
+          },
+          {
+            q: 'Can the local model write the prompts for me?',
+            a: 'Yes. Ask it to draft a 5-part prompt (genre, POV, sensory constraint, emotional beat, word ceiling) for your scene and you get a starting point. Generated prompts tend to be vaguer than the templates in this guide, so treat the output as a draft and tighten the constraints yourself.',
           },
         ],
       },
@@ -635,31 +651,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     },
   },
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-de.webp',
     title: 'Lokale LLM-Prompts für Belletristik-Autoren: 15 Vorlagen & Techniken (2026)',
     seoTitle: 'LLM-Prompts für Romanautoren 2026: Belletristik schreiben',
     intro:
-      'Lokale LLMs produzieren messbar bessere Belletristik, wenn sie strukturierte Prompts statt offener Anfragen erhalten. Dieser Leitfaden enthält 15 Prompt-Vorlagen, die funktionieren — für Szenen-Schreiben, Charakterentwicklung, Dialog, Weltenbau, Stiltransfer, Überarbeitung und redaktionelle Aufgaben — alle getestet mit Llama 3.3 70B, Qwen3 32B und Mistral Large lokal über Ollama oder LM Studio. Jede Vorlage ist kopierfertig und enthält Hinweise zur Genre-Anpassung.',
+      'Lokale LLMs produzieren nützlichere Belletristik, wenn sie strukturierte Prompts statt offener Anfragen erhalten. Dieser Leitfaden enthält 15 Prompt-Vorlagen für Szenen-Schreiben, Charakterentwicklung, Dialog, Weltenbau, Stiltransfer, Überarbeitung und redaktionelle Aufgaben. Sie sind für Instruction-tuned Open-Weight-Modelle wie Gemma 4, Qwen3.8-27B und Llama 3.3 70B geschrieben, die lokal über Ollama oder LM Studio laufen. Jede Vorlage ist kopierfertig und enthält Hinweise zur Genre-Anpassung.',
     metaDescription:
-      '15 Prompt-Vorlagen für Belletristik-Autoren mit lokalen LLMs: Szenen, Charaktere, Dialog, Weltenbau und Überarbeitung – kopierfertig für Ollama und LM Studio.',
+      '15 Prompt-Vorlagen für Belletristik mit lokalen LLMs: Szenen, Charaktere, Dialog, Weltenbau und Überarbeitung – kopierfertig für Ollama und LM Studio.',
     twitterDescription:
-      '15 Prompt-Vorlagen für lokale LLM-Belletristik: Szenen, Dialog, Charakterentwicklung, Weltenbau, Stiltransfer, Überarbeitung, Lektorat. Getestet mit Llama 3.3 70B, Qwen3 32B.',
+      '15 Prompt-Vorlagen für lokale LLM-Belletristik: Szenen, Dialog, Charakterentwicklung, Weltenbau, Stiltransfer, Überarbeitung, Lektorat. Geschrieben für Gemma 4, Qwen3.8-27B und Llama 3.3 70B.',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      'Apple Silicon Mac 32 GB',
+      'Apple Silicon Mac 48 GB',
     ],
     audience:
       'Romanautoren, Kurzgeschichten-Schreiber, Drehbuchautoren und Narrative Designer, die lokale LLMs als Entwurfspartner verwenden und zuverlässige Prompt-Strukturen für konsistente, nutzbare Ausgaben suchen.',
@@ -675,12 +695,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'weltenbau prompt vorlage',
     ],
     leadAnswerBlock:
-      '**Die größte Einzelverbesserung bei lokalen LLM-Belletristik-Ausgaben ergibt sich aus dem Wechsel von „schreib eine Szene" zu einem strukturierten 5-teiligen Prompt: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze. Dieses Format allein reduziert flache, zusammenfassende Ausgaben um ~60 % in der Praxis — das Modell erzeugt Zeigen-statt-Erzählen-Prosa statt Handlungszusammenfassung, weil der Prompt keinen Raum für die einfache Abkürzung lässt. Für Charakterentwicklung ist die zuverlässigste Vorlage der „Widerspruchs-Prompt": Einem Charakter ein dominantes Merkmal und ein widersprechendes Verhalten geben, dann das Modell eine Szene schreiben lassen, die beides zeigt, ohne es zu benennen. Für Dialog den Subtext zuerst festlegen — was der Charakter sagen möchte, aber nicht sagt — und dann das Modell die gesprochenen Zeilen um diese versteckte Botschaft herum schreiben lassen. Für redaktionelle Arbeit den Plot-Konsistenz-Check für Kontinuitätsfehler, die Pacing-Analyse für flache Zonen und das Exposition-Smoothing für Informations-Dumps verwenden.**',
+      '**Die größte Einzelverbesserung bei lokalen LLM-Belletristik-Ausgaben ergibt sich aus dem Wechsel von „schreib eine Szene" zu einem strukturierten 5-teiligen Prompt: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze. Dieses Format lässt keinen Raum für die einfache Abkürzung, sodass das Modell tendenziell Zeigen-statt-Erzählen-Prosa statt Handlungszusammenfassung erzeugt. Für Charakterentwicklung ist die zuverlässigste Vorlage der „Widerspruchs-Prompt": Einem Charakter ein dominantes Merkmal und ein widersprechendes Verhalten geben, dann das Modell eine Szene schreiben lassen, die beides zeigt, ohne es zu benennen. Für Dialog den Subtext zuerst festlegen — was der Charakter sagen möchte, aber nicht sagt — und dann das Modell die gesprochenen Zeilen um diese versteckte Botschaft herum schreiben lassen. Für redaktionelle Arbeit den Plot-Konsistenz-Check für Kontinuitätsfehler, die Pacing-Analyse für flache Zonen und das Exposition-Smoothing für Informations-Dumps verwenden.**',
     quickAnswerTop: {
       de: {
         question: 'Was sind die besten Prompt-Vorlagen für Belletristik-Autoren mit lokalen LLMs?',
         answer:
-          'Die zuverlässigste Prompt-Struktur für Belletristik ist: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze. Dies erzeugt Zeigen-statt-Erzählen-Prosa statt Handlungszusammenfassung. Für Charakterentwicklung den „Widerspruchs-Prompt" verwenden (ein dominantes Merkmal + ein widersprechendes Verhalten, beides zeigen ohne es zu benennen). Für Dialog den Subtext zuerst festlegen (was der Charakter möchte, aber nicht sagt), dann die gesprochenen Zeilen schreiben. Für Weltenbau an einem einzelnen Sinnesdetail verankern und von dort aus nach außen expandieren. Diese Vorlagen funktionieren auf jedem Instruction-tuned-Modell; größere Modelle (Llama 3.3 70B, Qwen3 32B) halten Einschränkungs-Treue über lange Completions besser aufrecht.',
+          'Die zuverlässigste Prompt-Struktur für Belletristik ist: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze. Dies erzeugt Zeigen-statt-Erzählen-Prosa statt Handlungszusammenfassung. Für Charakterentwicklung den „Widerspruchs-Prompt" verwenden (ein dominantes Merkmal + ein widersprechendes Verhalten, beides zeigen ohne es zu benennen). Für Dialog den Subtext zuerst festlegen (was der Charakter möchte, aber nicht sagt), dann die gesprochenen Zeilen schreiben. Für Weltenbau an einem einzelnen Sinnesdetail verankern und von dort aus nach außen expandieren. Diese Vorlagen funktionieren auf jedem Instruction-tuned-Modell; größere Modelle (Gemma 4 31B, Qwen3.8-27B, Llama 3.3 70B) halten Einschränkungen über lange Completions tendenziell besser ein.',
         bullets: [
           'Szenen-Prompt: Genre + POV + 1–2 Sinnesdetails + emotionaler Beat + Wort-Obergrenze (150–400 Wörter).',
           'Charakterentwicklung: ein dominantes Merkmal + ein widersprechendes Verhalten, beides zeigen ohne es zu benennen.',
@@ -688,9 +708,10 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           'Weltenbau: an einem Sinnesdetail verankern, nach außen expandieren in konzentrischen Ringen (Raum → Gebäude → Viertel → Welt).',
           'Stiltransfer: 2–3 spezifische Techniken des Zielautors benennen, 2-Satz-Sample einfügen, dann mit diesen Techniken generieren.',
           'Überarbeitung: Entwurf einfügen, spezifisches Problem benennen (Passiv, Adverb-Überfluss, Head-Hopping), Umschreiben anfordern.',
-          'Größere Modelle halten Einschränkungs-Treue besser; Llama 3.3 70B ist der Standard-Pick für die meisten Belletristik-Aufgaben.',
+          'Lektorat: Plot-Konsistenz-Check findet Kontinuitätsfehler; Pacing-Analyse kartiert das Kapitel-Tempo; Exposition-Smoothing verteilt Info-Dumps neu.',
+          'Größere Modelle halten Einschränkungen tendenziell besser ein: Gemma 4 31B oder Qwen3.8-27B auf einer 24-GB-GPU, Llama 3.3 70B ab 48 GB.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -718,11 +739,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**Strukturierte Prompts übertreffen offene Anfragen bei Belletristik.** Ein 5-teiliger Szenen-Prompt (Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze) erzeugt Zeigen-statt-Erzählen-Prosa; „schreib eine Szene" erzeugt Handlungszusammenfassung. Die Vorlage ist die Technik.',
           '**Der Widerspruchs-Prompt ist die zuverlässigste Charakterentwicklungs-Struktur.** Dem Modell ein dominantes Merkmal und ein widersprechendes Verhalten geben; es eine Szene schreiben lassen, die beides zeigt, ohne beides zu benennen. Ergibt vielschichtige Charaktere, die der Leser erschließen muss.',
-          '**Dialog-Qualität verdoppelt sich, wenn man den Subtext vor den gesprochenen Zeilen festlegt.** Dem Modell zuerst sagen, was der Charakter möchte, aber nicht sagt. Die gesprochenen Wörter umgehen dann diese versteckte Botschaft natürlich.',
+          '**Dialog wird besser, wenn man den Subtext vor den gesprochenen Zeilen festlegt.** Dem Modell zuerst sagen, was der Charakter möchte, aber nicht sagt. Die gesprochenen Wörter umgehen dann diese versteckte Botschaft natürlich.',
           '**Wort-Obergrenzen verhindern Aufblähung.** Eine 200-Wort-Obergrenze bei einem Szenen-Prompt erzwingt Kompression; das Modell muss präzise sein. In 100-Wort-Schritten erhöhen wenn mehr benötigt wird, aber immer eine Obergrenze setzen.',
-          '**Überarbeitungs-Prompts brauchen ein benanntes Problem.** „Überarbeite das" erzeugt minimale Änderung. „Überarbeite: eliminiere alle Passiv-Konstruktionen, jeder Satz muss mit einem konkreten Substantiv oder einem starken Verb beginnen" erzeugt messbare Verbesserung.',
+          '**Überarbeitungs-Prompts brauchen ein benanntes Problem.** „Überarbeite das" erzeugt minimale Änderung. „Überarbeite: eliminiere alle Passiv-Konstruktionen, jeder Satz muss mit einem konkreten Substantiv oder einem starken Verb beginnen" führt tendenziell zu einer klareren Verbesserung.',
           '**Redaktionelle Vorlagen arbeiten auf Manuskript-Ebene.** Plot-Konsistenz-Check, Pacing-Analyse und Exposition-Smoothing funktionieren auf abgeschlossenen Szenen und Kapiteln — nach dem Entwurf ausführen, nicht währenddessen.',
-          '**Größere Modelle halten Einschränkungs-Treue über lange Completions besser aufrecht.** Llama 3.3 70B und Qwen3 32B folgen 5-teiligen Szenen-Einschränkungen zuverlässig; kleinere Modelle driften nach ~200 Token.',
+          '**Größere Modelle halten Einschränkungen über lange Completions tendenziell besser ein.** Gemma 4 31B, Qwen3.8-27B und Llama 3.3 70B sind die Modelle, an denen sich diese Seite orientiert; kleinere Modelle driften tendenziell früher.',
           '**Das Frontend ist weniger wichtig als das Modell und der Prompt.** Ollama, LM Studio, SillyTavern und Agnai leiten den Prompt wörtlich weiter — der Belletristik-Qualitätsunterschied liegt in Modell + Prompt, nicht im Frontend.',
         ],
       },
@@ -731,11 +752,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Kurzfakten',
         items: [
           '**Vorlagen abgedeckt:** 15 gesamt — Szenen-Schreiben (2), Charakterentwicklung (3), Dialog (2), Weltenbau (2), Stiltransfer (2), Überarbeitung (1), redaktionell (3).',
-          '**Getestet auf:** Llama 3.3 70B, Qwen3 32B, Mistral Large — alle über Ollama auf Apple M5 Max 64 GB und NVIDIA RTX 4090 24 GB.',
+          '**Geschrieben für:** Instruction-tuned Open-Weight-Modelle, die über Ollama oder LM Studio laufen, etwa Gemma 4 31B, Qwen3.8-27B, Mistral Small 3 24B und Llama 3.3 70B.',
           '**Wort-Obergrenzen:** 150–400 Wörter für Szenen; 100–200 Wörter für Dialog; 300–600 Wörter für Weltenbau-Passagen.',
-          '**Bestes Allround-Modell für Belletristik:** Llama 3.3 70B (starkes Anweisungsfolgen, narrative Kohärenz, langer Kontext).',
-          '**Bestes für Stiltransfer:** Mistral Large (konsistentes Prosa-Register; reproduziert Autoren-Stimmmuster zuverlässig).',
-          '**Bestes für Dialog:** Command A+ oder Hermes 3 (Charakterstimm-Differenzierung; naturalistisches Sprachregister).',
+          '**Startmodell auf einer 24-GB-GPU:** Gemma 4 31B oder Qwen3.8-27B, beide mit 256K Kontextfenster; Llama 3.3 70B ab 48 GB (siehe Modelltabelle unten).',
+          '**Stiltransfer:** Mistral Small 3 24B auf einer 16-GB-GPU oder das größte Modell, das in Ihren Speicher passt; das Technik-Sample auf 2–3 Sätze begrenzen.',
+          '**Dialog und Belletristik mit wenigen Ablehnungen:** Hermes 4.3 36B; Command A+ (218B Parameter, Mixture-of-Experts) benötigt Server-GPUs.',
           '**System-Prompt:** Genre und POV in einer System-Message, nicht im User-Turn, setzen — es verankert jede Completion in der Session.',
         ],
       },
@@ -815,7 +836,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: 'Szenen-Vorlagen (Vorlagen 1–2)',
         content:
-          '**Die 5-teilige Szenen-Vorlage ist die Grundlage: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze.** Jedes Element leistet spezifische Arbeit — entferne eines davon und die Ausgabequalität sinkt messbar.',
+          '**Die 5-teilige Szenen-Vorlage ist die Grundlage: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze.** Jedes Element leistet spezifische Arbeit — entferne eines davon und die Ausgabequalität sinkt tendenziell.',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           '5-teilige Szenen-Prompt-Struktur für lokale LLM-Fiction: Genre, POV, Sinnes-Anker, emotionaler Beat und eine Wort-Obergrenze von 150–400 Wörtern — jede Einschränkung ist tragend.',
@@ -841,7 +862,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: 'Vorlage 1 — Szenen 5-Teil-Struktur',
         content:
-          'Die Grundvorlage. Alle fünf Elemente sind tragende Elemente — entferne eines und die Ausgabequalität sinkt messbar.',
+          'Die Grundvorlage. Alle fünf Elemente sind tragende Elemente — entferne eines und die Ausgabequalität sinkt tendenziell.',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -1033,7 +1054,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: 'Mistral Large für Stiltransfer. Mistral Large hält konsistentes Prosa-Register über lange Completions besser aufrecht als die meisten lokal ausführbaren Modelle. Für Stiltransfer-Aufgaben, bei denen Register-Konsistenz über mehrere Absätze wichtig ist, Mistral Large gegenüber Llama 3.3 70B bevorzugen.',
+            text: 'Das Modell an die Aufgabenlänge anpassen. Für Stiltransfer über mehrere Absätze das größte Modell verwenden, das in Ihren Speicher passt (Gemma 4 31B, Qwen3.8-27B oder Llama 3.3 70B), und das Technik-Sample auf 2–3 Sätze begrenzen. Für kürzere Passagen (unter 300 Wörter) genügt meist ein 24B-Modell wie Mistral Small 3.',
           },
         ],
       },
@@ -1072,7 +1093,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: 'Überarbeitungs-Vorlagen (Vorlage 12)',
         content:
-          '**Überarbeitungs-Prompts brauchen ein benanntes Problem, keine allgemeine Anweisung zur Verbesserung.** „Mache das besser" erzeugt minimale Oberflächenbearbeitungen. „Eliminiere jede Passiv-Konstruktion; jeder Satz muss mit einem konkreten Substantiv oder einem starken aktiven Verb beginnen" erzeugt messbare strukturelle Veränderung.',
+          '**Überarbeitungs-Prompts brauchen ein benanntes Problem, keine allgemeine Anweisung zur Verbesserung.** „Mache das besser" erzeugt minimale Oberflächenbearbeitungen. „Eliminiere jede Passiv-Konstruktion; jeder Satz muss mit einem konkreten Substantiv oder einem starken aktiven Verb beginnen" führt tendenziell zu einer klareren strukturellen Veränderung.',
         items: [
           '**Immer den Entwurf einfügen, nicht eine Beschreibung.** Überarbeitungs-Prompts funktionieren nur, wenn der tatsächliche Entwurftext eingefügt wird. Das Problem beschreiben ohne die Prosa zu zeigen, erzeugt allgemeine Ratschläge statt eines überarbeiteten Absatzes.',
           '**Das spezifische Problem benennen.** „Überarbeite" reicht nicht. Ein strukturelles Problem identifizieren: Passiv, Adverb-Überfluss, Head-Hopping, Aufblähung oder Info-Dump.',
@@ -1170,20 +1191,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: 'Modellempfehlungen für Belletristik-Schreiben',
         content:
-          '**Modellwahl ist weniger wichtig als Prompt-Struktur, aber sie ist wichtig.** Ein gut strukturierter Prompt auf einem 7B-Modell übertrifft einen vagen Prompt auf einem 70B-Modell — aber bei äquivalenten Prompts halten größere Modelle Einschränkungs-Treue über längere Completions besser aufrecht.',
+          '**Modellwahl ist weniger wichtig als Prompt-Struktur, aber sie ist wichtig.** Ein gut strukturierter Prompt auf einem 7B-Modell kann einen vagen Prompt auf einem 70B-Modell übertreffen — aber bei äquivalenten Prompts halten größere Modelle Einschränkungs-Treue über längere Completions besser aufrecht.',
         columns: ['Aufgabe', 'Empfohlenes Modell', 'Warum'],
         rows: [
-          { 'Aufgabe': 'Allgemeines Szenen-Schreiben', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Starkes Anweisungsfolgen, narrative Kohärenz, bester Allrounder für eingeschränkte Prosa' },
-          { 'Aufgabe': 'Stiltransfer', 'Empfohlenes Modell': 'Mistral Large', 'Warum': 'Konsistentes Prosa-Register über lange Completions; beste Register-Treue lokal ausführbarer Modelle' },
-          { 'Aufgabe': 'Dialog / Charakterstimme', 'Empfohlenes Modell': 'Command A+ oder Hermes 3', 'Warum': 'Naturalistisches Sprachregister; differenziert Charakterstimmen zuverlässig über längere Exchanges' },
-          { 'Aufgabe': 'Weltenbau', 'Empfohlenes Modell': 'Qwen3 32B', 'Warum': 'Stark bei strukturierter Detailgenerierung; hält das konzentrische Ring-Erweiterungsmuster zuverlässig' },
-          { 'Aufgabe': 'Überarbeitung / Lektorat', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Bestes Anweisungsfolgen für spezifische strukturelle Umschreib-Anweisungen über einen vollständigen Absatz' },
-          { 'Aufgabe': 'Dunkle / Uncensored Belletristik', 'Empfohlenes Modell': 'Hermes 3 Llama 3.1', 'Warum': 'Fine-tuned für weniger Inhaltsablehnungen; keine Cloud-Nutzungsbedingungen bei lokalem Betrieb' },
+          { 'Aufgabe': 'Allgemeines Szenen-Schreiben', 'Empfohlenes Modell': 'Gemma 4 31B', 'Warum': 'Prosa-Empfehlung für eine 24-GB-GPU (19–20 GB Download, 256K Kontext); Llama 3.3 70B ab 48 GB' },
+          { 'Aufgabe': 'Stiltransfer', 'Empfohlenes Modell': 'Mistral Small 3 24B', 'Warum': 'Passt auf eine 16-GB-GPU (14 GB Download, 32K Kontext); das Technik-Sample kurz halten' },
+          { 'Aufgabe': 'Dialog / Charakterstimme', 'Empfohlenes Modell': 'Hermes 4.3 36B', 'Warum': 'Fine-Tune mit wenigen Ablehnungen; am besten an eigenen Dialogszenen ausprobieren' },
+          { 'Aufgabe': 'Weltenbau', 'Empfohlenes Modell': 'Qwen3.8-27B', 'Warum': '256K Kontext hält eine lange Weltenbibel im Prompt (18 GB Download)' },
+          { 'Aufgabe': 'Überarbeitung / Lektorat', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Bewährter Standard für Umschreib-Anweisungen; ca. 43 GB Download, also ab 48 GB' },
+          { 'Aufgabe': 'Dunkle / Uncensored Belletristik', 'Empfohlenes Modell': 'Hermes 4.3 36B oder Dolphin 3.0', 'Warum': 'Darauf feinabgestimmt, weniger abzulehnen; bei lokalem Betrieb gelten keine Cloud-Nutzungsbedingungen' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Hardware-Mindestanforderungen für Belletristik-Modelle. Llama 3.3 70B bei Q4-Quantisierung benötigt ~40 GB VRAM oder Unified Memory (NVIDIA RTX 4090 24 GB Dual-GPU oder Apple M5 Max 64 GB). Qwen3 32B bei Q4 läuft auf 20–24 GB. Mistral Large bei Q4 benötigt ~24 GB. Für 16-GB-Systeme sind Qwen3 14B und Mistral Small die praktische Obergrenze.',
+            text: 'Hardware-Stufen. Download-Größen aus der Ollama-Bibliothek, nur Gewichte; für den KV-Cache bei langen Szenen 2–6 GB hinzurechnen. Gemma 4 31B (19–20 GB) und Qwen3.8-27B (18 GB) passen auf eine 24-GB-GPU oder einen 32-GB-Mac; Gemma 4 12B (ca. 8 GB) auf 12 GB; Mistral Small 3 24B (14 GB) auf 16 GB; Llama 3.3 70B (ca. 43 GB) benötigt 48 GB oder mehr. Command A+ (218B Mixture-of-Experts, laut Cohere zwei H100-GPUs) und Mistral Large (123B, 73 GB Download, Forschungslizenz) sind Server-Klasse und nicht Teil dieser Stufen.',
           },
         ],
       },
@@ -1202,11 +1223,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: 'Quellen',
         items: [
-          'Llama 3.3 70B Modellkarte und Instruction-Following-Benchmarks — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B technischer Bericht — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Mistral Large Modelldokumentation — [Mistral AI](https://mistral.ai)',
-          'Command A+ Spezifikation — [Cohere](https://cohere.com)',
-          'Hermes 3 Fine-tune-Methodik — [Nous Research](https://nousresearch.com)',
+          'Llama 3.3 70B Modellkarte und Download-Größe — [Ollama-Bibliothek](https://ollama.com/library/llama3.3)',
+          'Gemma 4 und Qwen3.8: Tags, Größen und Kontextfenster — [Ollama: Gemma 4](https://ollama.com/library/gemma4), [Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3 und Mistral Large: Größen, Kontext und Lizenzen — [Ollama: Mistral Small](https://ollama.com/library/mistral-small), [Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'Command A+ Veröffentlichung (Mai 2026, 218B Mixture-of-Experts, Apache 2.0) — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Hermes Fine-tune-Methodik — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -1223,7 +1244,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Funktionieren diese Prompt-Vorlagen auf kleineren Modellen (7B–14B)?',
-            a: 'Ja, aber die Einschränkungs-Treue verschlechtert sich nach ~150 Token. Kleinere Modelle folgen den ersten 2–3 Einschränkungen in einem 5-teiligen Prompt, driften dann in ihr Basis-Register. Für 7B–14B-Modelle: Wort-Obergrenze reduzieren (max. 150 Wörter), weniger gleichzeitige Einschränkungen verwenden (3-teilig statt 5-teilig) und häufigeres Überarbeiten oder Neu-Prompten erwarten. Qwen3 14B ist das stärkste kleine Modell im Test für belletristik-spezifisches Prompt-Folgen.',
+            a: 'Ja, aber die Einhaltung der Einschränkungen lässt tendenziell nach, je länger die Completion wird. Kleinere Modelle folgen den ersten 2–3 Einschränkungen in einem 5-teiligen Prompt, driften dann in ihr Basis-Register. Für 7B–14B-Modelle: Wort-Obergrenze reduzieren (max. 150 Wörter), weniger gleichzeitige Einschränkungen verwenden (3-teilig statt 5-teilig) und häufigeres Überarbeiten oder Neu-Prompten erwarten. Gemma 4 12B (ca. 8 GB) ist ein sinnvoller Startpunkt auf einer 12-GB-GPU.',
           },
           {
             q: 'Wie halte ich die Charakterstimme über eine vollständige Roman-Session konsistent?',
@@ -1231,7 +1252,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Was ist das beste lokale LLM für das Schreiben von dunkler oder reifer Belletristik?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
+            a: 'Hermes 4.3 36B, Dolphin 3.0 oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
           },
           {
             q: 'Kann ich diese Vorlagen in SillyTavern oder Agnai verwenden?',
@@ -1239,11 +1260,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Wie lang sollte ein Szenen-Prompt sein?',
-            a: 'Ein Szenen-Prompt von 50–100 Wörtern erzeugt in der Praxis die besten Ergebnisse. Längere Prompts (200+ Wörter) können für komplexe Szenen funktionieren, erhöhen aber die Chance, dass das Modell einige Einschränkungen ignoriert. Für komplexe Szenen den Prompt in zwei Durchgänge aufteilen: zuerst die Szene generieren, dann einen Überarbeitungs-Prompt mit der zurückgehaltenen Einschränkung ausführen.',
+            a: 'Ein Szenen-Prompt von 50–100 Wörtern funktioniert in der Regel am besten. Längere Prompts (200+ Wörter) können für komplexe Szenen funktionieren, erhöhen aber die Chance, dass das Modell einige Einschränkungen ignoriert. Für komplexe Szenen den Prompt in zwei Durchgänge aufteilen: zuerst die Szene generieren, dann einen Überarbeitungs-Prompt mit der zurückgehaltenen Einschränkung ausführen.',
           },
           {
             q: 'Verletzen Stiltransfer-Prompts das Urheberrecht?',
-            a: 'Die Technik eines Autors zu replizieren (Satzstruktur, Zeichensetzung, narratives Register) ist keine Urheberrechtsverletzung — Stil ist nicht urheberrechtlich geschützt. Erhebliche wörtliche Passagen aus urheberrechtlich geschütztem Text zu reproduzieren ist eine Verletzung. Die Vorlagen in diesem Leitfaden verwenden 2–3 Satz-Samples als Technik-Anker, was unter das standardmäßige Bildungs-Fair-Use fällt, und die generierte Ausgabe repliziert Technik statt Inhalt.',
+            a: 'In den meisten Rechtsordnungen schützt das Urheberrecht die konkrete Ausdrucksform und nicht den Stil. Die Technik eines Autors zu replizieren (Satzstruktur, Zeichensetzung, narratives Register) ist daher in der Regel keine Verletzung, während die Wiedergabe erheblicher wörtlicher Passagen aus urheberrechtlich geschütztem Text eine sein kann. Die Vorlagen in diesem Leitfaden verwenden Samples von 2–3 Sätzen als Technik-Anker und verlangen Technik statt Inhalt. Die Regeln unterscheiden sich je nach Land und Einzelfall; dies ist eine allgemeine Information, keine Rechtsberatung.',
+          },
+          {
+            q: 'Wie schreibe ich einen System-Prompt für Belletristik?',
+            a: 'Genre, POV und Prosa-Register gehören in die System-Nachricht statt in den Nutzer-Turn, damit jede Generierung der Session sie übernimmt. Eine Grundform: „Du bist ein Assistent für [Genre]-Belletristik. Alle Prosa, die du schreibst, steht in [POV, z. B. close third person, Vergangenheit] und betont [z. B. Sinnesdetails und Subtext].“ Für lange Sessions ein kurzes Charakterblatt ergänzen (Name, dominantes Merkmal, widersprechendes Verhalten, Sprachregister). LM Studio und SillyTavern haben ein eigenes Feld für den System-Prompt; in Ollama setzen Sie ihn über eine SYSTEM-Zeile im Modelfile oder die System-Nachricht der API.',
+          },
+          {
+            q: 'Wie nutze ich diese Vorlagen in LM Studio?',
+            a: 'Fügen Sie Genre-, POV- und Register-Vorgaben in das Feld „System Prompt“ in der Chat-Seitenleiste von LM Studio ein und geben Sie dann eine Szenen-, Dialog- oder Weltenbau-Vorlage aus diesem Leitfaden als Nutzer-Nachricht ein. LM Studio kann außerdem einen OpenAI-kompatiblen lokalen Server starten, sodass Sie System- und Nutzer-Prompt getrennt über die API senden können. Die Vorlagen sind reiner Text, derselbe Text funktioniert also in Ollama und in LM Studio.',
+          },
+          {
+            q: 'Kann das lokale Modell die Prompts für mich schreiben?',
+            a: 'Ja. Bitten Sie es, für Ihre Szene einen 5-teiligen Prompt zu entwerfen (Genre, POV, Sinnes-Anker, emotionaler Beat, Wort-Obergrenze), und Sie erhalten eine Ausgangsbasis. Generierte Prompts sind tendenziell vager als die Vorlagen in diesem Leitfaden; behandeln Sie das Ergebnis daher als Entwurf und schärfen Sie die Vorgaben selbst nach.',
           },
           {
             q: 'Muss ich bei der Nutzung lokaler LLMs für Belletristik die DSGVO beachten?',
@@ -1251,7 +1284,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Welche deutschen Gesetze gelten beim Einsatz lokaler LLMs für kreatives Schreiben?',
-            a: 'Für Standard-Belletristik ohne reale identifizierbare Personen, ohne Minderjährige in sexuellen Kontexten und ohne strafbare Inhalte ist lokale Generierung rechtlich vergleichbar mit dem Schreiben mit jedem anderen Werkzeug. Relevant werden §184b StGB (Kinderpornografie — absolutes Verbot, gilt auch für KI-generierte Inhalte) und §184c StGB (Jugendpornografie). Für Stiltransfer-Prompts gilt: die Technik eines Autors replizieren ist erlaubt; wörtliche Texte reproduzieren kann Urheberrecht verletzen. „Lokal generiert" ist in keinem dieser Fälle eine Verteidigung.',
+            a: 'Für Standard-Belletristik ohne reale identifizierbare Personen, ohne Minderjährige in sexuellen Kontexten und ohne strafbare Inhalte ist lokale Generierung rechtlich vergleichbar mit dem Schreiben mit jedem anderen Werkzeug. Relevant werden §184b StGB (Kinderpornografie — absolutes Verbot, gilt auch für KI-generierte Inhalte) und §184c StGB (Jugendpornografie). Für Stiltransfer-Prompts gilt: die Technik eines Autors zu replizieren ist in der Regel zulässig; wörtliche Texte reproduzieren kann Urheberrecht verletzen. „Lokal generiert" ist in keinem dieser Fälle eine Verteidigung. Dies ist eine allgemeine Information, keine Rechtsberatung; bei konkreten Fragen wenden Sie sich an eine Fachanwältin oder einen Fachanwalt für Straf- oder Urheberrecht.',
           },
         ],
       },
@@ -1270,31 +1303,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-fr.webp',
     title: 'Prompts LLM locaux pour auteurs de fiction : 15 modèles et techniques (2026)',
-    seoTitle: 'Prompts LLM locaux pour auteurs de fiction 2026',
+    seoTitle: 'Prompts LLM locaux pour auteurs de fiction : 15 modèles',
     intro:
-      'Les LLM locaux produisent une fiction mesurément meilleure quand on leur fournit des prompts structurés plutôt que des demandes ouvertes. Ce guide couvre 15 modèles de prompts qui fonctionnent — pour l\'écriture de scènes, le développement de personnages, le dialogue, la construction de mondes, le transfert de style, la révision et les tâches éditoriales — tous testés sur Llama 3.3 70B, Qwen3 32B et Mistral Large tournant localement via Ollama ou LM Studio. Chaque modèle est prêt à copier-coller et indique ce qu\'il faut ajuster par genre.',
+      'Les LLM locaux produisent une fiction plus utile quand on leur fournit des prompts structurés plutôt que des demandes ouvertes. Ce guide couvre 15 modèles de prompts pour l\'écriture de scènes, le développement de personnages, le dialogue, la construction de mondes, le transfert de style, la révision et les tâches éditoriales. Ils sont écrits pour des modèles open-weight instruction-tuned comme Gemma 4, Qwen3.8-27B et Llama 3.3 70B, exécutés localement via Ollama ou LM Studio. Chaque modèle est prêt à copier-coller et indique ce qu\'il faut ajuster par genre.',
     metaDescription:
-      '15 modèles de prompts pour la fiction avec LLM locaux. Scènes, personnages, dialogue, construction de monde, révision — prêts à copier pour Ollama et LM Studio.',
+      '15 modèles de prompts pour la fiction avec LLM locaux : scènes, personnages, dialogue, mondes, révision. Prêts à copier pour Ollama et LM Studio.',
     twitterDescription:
-      '15 modèles de prompts pour la fiction locale : scènes, dialogue, personnages, construction de monde, transfert de style, révision, éditorial. Testés sur Llama 3.3 70B, Qwen3 32B.',
+      '15 modèles de prompts pour la fiction locale : scènes, dialogue, personnages, construction de monde, transfert de style, révision, éditorial. Écrits pour Gemma 4, Qwen3.8-27B et Llama 3.3 70B.',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 Go',
       'NVIDIA RTX 4090 24 Go',
-      'Apple M5 Max 64 Go',
+      'Apple Silicon Mac 32 Go',
+      'Apple Silicon Mac 48 Go',
     ],
     audience:
       'Romanciers, auteurs de nouvelles, scénaristes et concepteurs narratifs de jeux utilisant des LLM locaux comme partenaires de rédaction, à la recherche de structures de prompts fiables qui produisent des sorties cohérentes et exploitables.',
@@ -1310,12 +1347,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'modèle prompt construction monde',
     ],
     leadAnswerBlock:
-      '**La plus grande amélioration des sorties fiction d\'un LLM local vient du passage de "écris une scène" à un prompt structuré en 5 parties : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots. Ce format seul réduit les sorties plates et résumées d\'environ 60% en pratique — le modèle produit de la prose qui montre au lieu de raconter parce que le prompt ne laisse aucune place au raccourci facile. Pour le développement de personnages, le modèle le plus fiable est le "prompt par contradiction" : donner au personnage un trait dominant et un comportement contradictoire, puis demander au modèle d\'écrire une scène qui révèle les deux sans énoncer aucun. Pour le dialogue, poser le sous-texte en premier — ce que le personnage veut dire mais ne dira pas — puis laisser le modèle écrire les répliques autour de ce message caché. Pour le travail éditorial, utiliser la Vérification de cohérence de l\'intrigue pour les erreurs de continuité, l\'Analyse du rythme pour les zones plates, et le Lissage de l\'exposition pour redistribuer les blocs d\'information.**',
+      '**La plus grande amélioration des sorties fiction d\'un LLM local vient du passage de "écris une scène" à un prompt structuré en 5 parties : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots. Ce format ne laisse aucune place au raccourci facile : le modèle tend alors à produire une prose qui montre au lieu de raconter, plutôt qu\'un résumé de l\'intrigue. Pour le développement de personnages, le modèle le plus fiable est le "prompt par contradiction" : donner au personnage un trait dominant et un comportement contradictoire, puis demander au modèle d\'écrire une scène qui révèle les deux sans énoncer aucun. Pour le dialogue, poser le sous-texte en premier — ce que le personnage veut dire mais ne dira pas — puis laisser le modèle écrire les répliques autour de ce message caché. Pour le travail éditorial, utiliser la Vérification de cohérence de l\'intrigue pour les erreurs de continuité, l\'Analyse du rythme pour les zones plates, et le Lissage de l\'exposition pour redistribuer les blocs d\'information.**',
     quickAnswerTop: {
       fr: {
         question: 'Quels sont les meilleurs modèles de prompts pour auteurs de fiction utilisant des LLM locaux ?',
         answer:
-          'La structure de prompt la plus fiable pour la fiction est : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots. Cela produit une prose qui montre au lieu de raconter plutôt qu\'un résumé de l\'intrigue. Pour le développement de personnages, utiliser le "prompt par contradiction" (un trait dominant + un comportement contradictoire, révéler les deux sans les énoncer). Pour le dialogue, poser le sous-texte en premier (ce que le personnage veut mais ne dira pas), puis écrire les répliques. Pour la construction de mondes, ancrer à un seul détail sensoriel avant d\'élargir vers l\'extérieur. Ces modèles fonctionnent sur n\'importe quel modèle instruction-tuned ; les modèles plus grands (Llama 3.3 70B, Qwen3 32B) maintiennent mieux l\'adhérence aux contraintes sur les longues générations.',
+          'La structure de prompt la plus fiable pour la fiction est : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots. Cela produit une prose qui montre au lieu de raconter plutôt qu\'un résumé de l\'intrigue. Pour le développement de personnages, utiliser le "prompt par contradiction" (un trait dominant + un comportement contradictoire, révéler les deux sans les énoncer). Pour le dialogue, poser le sous-texte en premier (ce que le personnage veut mais ne dira pas), puis écrire les répliques. Pour la construction de mondes, ancrer à un seul détail sensoriel avant d\'élargir vers l\'extérieur. Ces modèles fonctionnent sur n\'importe quel modèle instruction-tuned ; les modèles plus grands (Gemma 4 31B, Qwen3.8-27B, Llama 3.3 70B) tendent à mieux respecter les contraintes sur les longues générations.',
         bullets: [
           'Prompt de scène : genre + PDV + 1–2 détails sensoriels + beat émotionnel + plafond de mots (150–400 mots).',
           'Développement de personnage : un trait dominant + un comportement contradictoire, révéler les deux sans les énoncer.',
@@ -1324,9 +1361,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           'Transfert de style : nommer 2–3 techniques spécifiques de l\'auteur cible, coller un échantillon de 2 phrases, puis générer avec ces techniques.',
           'Révision : coller le brouillon, nommer le problème spécifique (voix passive, surcharge d\'adverbes, changement de PDV), demander une réécriture.',
           'Éditorial : Vérification de cohérence détecte les erreurs de continuité ; Analyse du rythme cartographie le rythme des chapitres ; Lissage de l\'exposition redistribue les blocs d\'info.',
-          'Les modèles plus grands maintiennent mieux l\'adhérence aux contraintes ; Llama 3.3 70B est le choix par défaut pour la plupart des tâches de fiction.',
+          'Les modèles plus grands tendent à mieux respecter les contraintes : Gemma 4 31B ou Qwen3.8-27B sur un GPU de 24 Go, Llama 3.3 70B à partir de 48 Go.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -1354,11 +1391,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**Les prompts structurés surpassent les demandes ouvertes pour la fiction.** Un prompt de scène en 5 parties (genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots) produit une prose qui montre ; "écris une scène" produit un résumé de l\'intrigue. Le modèle est la technique.',
           '**Le prompt par contradiction est la structure de développement de personnage la plus fiable.** Donner au modèle un trait dominant et un comportement contradictoire ; lui demander de révéler les deux sans en nommer aucun. Cela produit des personnages à couches que le lecteur doit interpréter.',
-          '**La qualité du dialogue double quand on pose le sous-texte avant les répliques.** Indiquer d\'abord ce que le personnage veut mais ne dira pas. Les répliques travaillent alors naturellement autour de ce message caché.',
+          '**Le dialogue s\'améliore quand on pose le sous-texte avant les répliques.** Indiquer d\'abord ce que le personnage veut mais ne dira pas. Les répliques travaillent alors naturellement autour de ce message caché.',
           '**Les plafonds de mots empêchent le remplissage.** Un plafond de 200 mots sur un prompt de scène force la compression ; le modèle doit être précis. L\'augmenter par incréments de 100 mots quand on en a besoin, mais toujours fixer un plafond.',
-          '**Les prompts de révision nécessitent un problème nommé.** "Réécris ceci" produit un changement minimal. "Réécris : élimine toute voix passive, chaque phrase doit commencer par un nom concret ou un verbe fort" produit une amélioration mesurable.',
+          '**Les prompts de révision nécessitent un problème nommé.** "Réécris ceci" produit un changement minimal. "Réécris : élimine toute voix passive, chaque phrase doit commencer par un nom concret ou un verbe fort" tend à produire une amélioration plus nette.',
           '**Les modèles éditoriaux opèrent au niveau du manuscrit.** Vérification de cohérence de l\'intrigue, Analyse du rythme et Lissage de l\'exposition fonctionnent sur des scènes et chapitres terminés — les exécuter après la rédaction, pas pendant.',
-          '**Les modèles plus grands maintiennent mieux l\'adhérence aux contraintes sur les longues générations.** Llama 3.3 70B et Qwen3 32B suivent les contraintes de scène en 5 parties de façon fiable ; les modèles plus petits dérivent après ~200 tokens.',
+          '**Les modèles plus grands tendent à mieux respecter les contraintes sur les longues générations.** Gemma 4 31B, Qwen3.8-27B et Llama 3.3 70B sont les modèles autour desquels cette page est écrite ; les modèles plus petits tendent à dériver plus tôt.',
           '**L\'interface compte moins que le modèle et le prompt.** Ollama, LM Studio, SillyTavern et Agnai passent tous ton prompt verbatim — la différence de qualité de fiction est dans le modèle + prompt, pas dans l\'interface.',
         ],
       },
@@ -1367,11 +1404,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Chiffres clés',
         items: [
           '**Modèles couverts :** 15 au total — écriture de scènes (2), développement de personnage (3), dialogue (2), construction de monde (2), transfert de style (2), révision (1), éditorial (3).',
-          '**Testés sur :** Llama 3.3 70B, Qwen3 32B, Mistral Large — tous via Ollama sur Apple M5 Max 64 Go et NVIDIA RTX 4090 24 Go.',
+          '**Écrits pour :** des modèles open-weight instruction-tuned exécutés via Ollama ou LM Studio, comme Gemma 4 31B, Qwen3.8-27B, Mistral Small 3 24B et Llama 3.3 70B.',
           '**Plafonds de mots :** 150–400 mots pour les scènes ; 100–200 mots pour le dialogue ; 300–600 mots pour les passages de construction de monde.',
-          '**Meilleur modèle polyvalent pour la fiction :** Llama 3.3 70B (bon suivi des instructions, cohérence narrative, long contexte).',
-          '**Meilleur pour le transfert de style :** Mistral Large (registre de prose cohérent ; reproduit les schémas de voix d\'auteur de façon fiable).',
-          '**Meilleur pour le dialogue :** Command A+ ou Hermes 3 (différenciation des voix ; registre oral naturaliste).',
+          '**Modèle de départ sur un GPU de 24 Go :** Gemma 4 31B ou Qwen3.8-27B, tous deux avec une fenêtre de contexte de 256K ; Llama 3.3 70B à partir de 48 Go (voir le tableau des modèles ci-dessous).',
+          '**Transfert de style :** Mistral Small 3 24B sur un GPU de 16 Go, ou le plus grand modèle qui tient dans votre mémoire ; limiter l\'échantillon de technique à 2–3 phrases.',
+          '**Dialogue et fiction avec peu de refus :** Hermes 4.3 36B ; Command A+ (218 milliards de paramètres, mixture d\'experts) exige des GPU de classe serveur.',
           '**Prompt système :** définir le genre et le PDV dans un message système, pas dans le tour utilisateur — cela ancre chaque génération de la session.',
         ],
       },
@@ -1451,7 +1488,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: 'Modèles pour l\'écriture de scènes (Modèles 1–2)',
         content:
-          '**Le modèle de scène en 5 parties est le fondement : genre + PDV + ancre sensorielle + beat émotionnel + plafond de mots.** Chaque élément fait un travail spécifique — enlever n\'importe lequel et la qualité de sortie chute de façon mesurable.',
+          '**Le modèle de scène en 5 parties est le fondement : genre + PDV + ancre sensorielle + beat émotionnel + plafond de mots.** Chaque élément fait un travail spécifique — enlever n\'importe lequel et la qualité de sortie tend à chuter.',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           'Structure de prompt de scène en 5 parties pour la fiction en LLM local : genre, point de vue, ancrage sensoriel, beat émotionnel et un plafond de 150 à 400 mots — chaque contrainte est essentielle.',
@@ -1477,7 +1514,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: 'Modèle 1 — Structure en 5 parties pour une scène',
         content:
-          'Le modèle fondateur. Les cinq éléments sont porteurs de sens — en retirer n\'importe lequel et la qualité de sortie chute de façon mesurable.',
+          'Le modèle fondateur. Les cinq éléments sont porteurs de sens — en retirer n\'importe lequel et la qualité de sortie tend à chuter.',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -1669,7 +1706,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: 'Mistral Large pour le transfert de style. Mistral Large maintient un registre de prose cohérent sur de longues générations mieux que la plupart des modèles exécutables localement. Pour les tâches de transfert de style où la cohérence du registre compte sur plusieurs paragraphes, préférer Mistral Large à Llama 3.3 70B. Pour le transfert de style en courtes rafales (moins de 300 mots), tout modèle 30B+ est adéquat.',
+            text: 'Adapter le modèle à la longueur de la tâche. Pour un transfert de style sur plusieurs paragraphes, utiliser le plus grand modèle qui tient dans votre mémoire (Gemma 4 31B, Qwen3.8-27B ou Llama 3.3 70B) et limiter l\'échantillon de technique à 2–3 phrases. Pour de courtes rafales (moins de 300 mots), un modèle 24B comme Mistral Small 3 suffit généralement.',
           },
         ],
       },
@@ -1708,7 +1745,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: 'Modèles de révision (Modèle 12)',
         content:
-          '**Les prompts de révision nécessitent un problème nommé, pas une instruction générale d\'amélioration.** "Rends ça mieux" produit des modifications superficielles minimales. "Éliminer toute construction passive ; chaque phrase doit commencer par un nom concret ou un verbe actif fort" produit un changement structurel mesurable.',
+          '**Les prompts de révision nécessitent un problème nommé, pas une instruction générale d\'amélioration.** "Rends ça mieux" produit des modifications superficielles minimales. "Éliminer toute construction passive ; chaque phrase doit commencer par un nom concret ou un verbe actif fort" tend à produire un changement structurel plus net.',
         items: [
           '**Toujours coller le brouillon, pas une description.** Les prompts de révision ne fonctionnent que quand on colle le vrai texte du brouillon. Décrire le problème sans montrer la prose produit des conseils génériques plutôt qu\'un passage réécrit.',
           '**Nommer le problème spécifique.** "Réécrire" ne suffit pas. Identifier un problème structurel : voix passive, surcharge d\'adverbes, changement de PDV, remplissage ou dump d\'info.',
@@ -1806,20 +1843,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: 'Recommandations de modèles pour l\'écriture de fiction',
         content:
-          '**Le choix du modèle compte moins que la structure du prompt, mais il compte.** Un prompt bien structuré sur un modèle 7B surpassera un prompt vague sur un modèle 70B — mais à prompts équivalents, les modèles plus grands maintiennent mieux l\'adhérence aux contraintes sur les longues générations et différencient les voix des personnages plus fiablement.',
+          '**Le choix du modèle compte moins que la structure du prompt, mais il compte.** Un prompt bien structuré sur un modèle 7B peut surpasser un prompt vague sur un modèle 70B — mais à prompts équivalents, les modèles plus grands maintiennent mieux l\'adhérence aux contraintes sur les longues générations et différencient les voix des personnages plus fiablement.',
         columns: ['Tâche', 'Modèle recommandé', 'Pourquoi'],
         rows: [
-          { 'Tâche': 'Écriture de scènes générale', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Bon suivi des instructions, cohérence narrative, meilleur polyvalent pour la prose contrainte' },
-          { 'Tâche': 'Transfert de style', 'Modèle recommandé': 'Mistral Large', 'Pourquoi': 'Registre de prose cohérent sur les longues générations ; meilleure fidélité au registre parmi les modèles exécutables localement' },
-          { 'Tâche': 'Dialogue / voix des personnages', 'Modèle recommandé': 'Command A+ ou Hermes 3', 'Pourquoi': 'Registre de parole naturaliste ; différenciation fiable des voix sur les échanges longs' },
-          { 'Tâche': 'Construction de monde', 'Modèle recommandé': 'Qwen3 32B', 'Pourquoi': 'Bon pour la génération de détails structurés ; maintient fiablement le schéma d\'expansion en anneaux concentriques' },
-          { 'Tâche': 'Révision / correction', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Meilleur pour suivre des instructions de réécriture structurelles spécifiques sur un paragraphe entier' },
-          { 'Tâche': 'Fiction sombre / non censurée', 'Modèle recommandé': 'Hermes 3 Llama 3.1', 'Pourquoi': 'Fine-tuné pour moins de refus de contenu ; aucune restriction des conditions d\'utilisation cloud lors de l\'exécution locale' },
+          { 'Tâche': 'Écriture de scènes générale', 'Modèle recommandé': 'Gemma 4 31B', 'Pourquoi': 'Choix pour la prose sur un GPU de 24 Go (19–20 Go à télécharger, contexte 256K) ; Llama 3.3 70B à partir de 48 Go' },
+          { 'Tâche': 'Transfert de style', 'Modèle recommandé': 'Mistral Small 3 24B', 'Pourquoi': 'Tient sur un GPU de 16 Go (14 Go à télécharger, contexte 32K) ; garder l\'échantillon de technique court' },
+          { 'Tâche': 'Dialogue / voix des personnages', 'Modèle recommandé': 'Hermes 4.3 36B', 'Pourquoi': 'Fine-tune à faibles refus ; à essayer sur vos propres scènes de dialogue' },
+          { 'Tâche': 'Construction de monde', 'Modèle recommandé': 'Qwen3.8-27B', 'Pourquoi': 'Le contexte 256K garde une longue bible du monde dans le prompt (18 Go à télécharger)' },
+          { 'Tâche': 'Révision / correction', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Choix de longue date pour les consignes de réécriture ; environ 43 Go à télécharger, donc 48 Go ou plus' },
+          { 'Tâche': 'Fiction sombre / non censurée', 'Modèle recommandé': 'Hermes 4.3 36B ou Dolphin 3.0', 'Pourquoi': 'Fine-tunés pour refuser moins ; aucune condition d\'utilisation cloud en exécution locale' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Minimums matériels pour les modèles de fiction. Llama 3.3 70B en quantification Q4 nécessite ~40 Go de VRAM ou mémoire unifiée (NVIDIA RTX 4090 24 Go double GPU, ou Apple M5 Max 64 Go). Qwen3 32B en Q4 tourne sur 20–24 Go. Mistral Large en Q4 nécessite ~24 Go. Pour les rigs de 16 Go, Qwen3 14B et Mistral Small sont le plafond pratique — les deux suivent les modèles de scènes de façon fiable pour des longueurs de génération courtes.',
+            text: 'Paliers matériels. Tailles de téléchargement issues de la bibliothèque Ollama, poids seuls ; ajouter 2–6 Go pour le cache KV sur les longues scènes. Gemma 4 31B (19–20 Go) et Qwen3.8-27B (18 Go) tiennent sur un GPU de 24 Go ou un Mac de 32 Go ; Gemma 4 12B (environ 8 Go) sur 12 Go ; Mistral Small 3 24B (14 Go) sur 16 Go ; Llama 3.3 70B (environ 43 Go) exige 48 Go ou plus. Command A+ (218 milliards de paramètres en mixture d\'experts, deux GPU H100 selon Cohere) et Mistral Large (123 milliards, 73 Go à télécharger, licence de recherche) relèvent de la classe serveur et ne sont pas couverts par ces paliers.',
           },
         ],
       },
@@ -1838,11 +1875,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: 'Sources',
         items: [
-          'Fiche modèle Llama 3.3 70B et benchmarks de suivi des instructions — [Meta AI Research](https://ai.meta.com)',
-          'Rapport technique Qwen3 32B — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Documentation modèle Mistral Large — [Mistral AI](https://mistral.ai)',
-          'Spécification Command A+ — [Cohere](https://cohere.com)',
-          'Méthodologie de fine-tune Hermes 3 — [Nous Research](https://nousresearch.com)',
+          'Fiche modèle Llama 3.3 70B et taille de téléchargement — [Bibliothèque Ollama](https://ollama.com/library/llama3.3)',
+          'Gemma 4 et Qwen3.8 : tags, tailles et fenêtres de contexte — [Ollama : Gemma 4](https://ollama.com/library/gemma4), [Ollama : Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3 et Mistral Large : tailles, contexte et licences — [Ollama : Mistral Small](https://ollama.com/library/mistral-small), [Ollama : Mistral Large](https://ollama.com/library/mistral-large)',
+          'Sortie de Command A+ (mai 2026, 218 milliards de paramètres en mixture d\'experts, Apache 2.0) — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Méthodologie de fine-tune Hermes — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -1859,7 +1896,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Ces modèles de prompts fonctionnent-ils sur les petits modèles (7B–14B) ?',
-            a: 'Oui, mais l\'adhérence aux contraintes se dégrade après ~150 tokens. Les petits modèles suivent les 2–3 premières contraintes d\'un prompt en 5 parties, puis dérivent vers leur registre de base. Pour les modèles 7B–14B : réduire le plafond de mots (max 150 mots), utiliser moins de contraintes simultanées (3 parties au lieu de 5), et s\'attendre à réviser ou repromter plus fréquemment. Qwen3 14B est le modèle de petite taille le plus solide testé pour le suivi de prompts spécifiques à la fiction.',
+            a: 'Oui, mais le respect des contraintes tend à se dégrader à mesure que la génération s\'allonge. Les petits modèles suivent les 2–3 premières contraintes d\'un prompt en 5 parties, puis dérivent vers leur registre de base. Pour les modèles 7B–14B : réduire le plafond de mots (max 150 mots), utiliser moins de contraintes simultanées (3 parties au lieu de 5), et s\'attendre à réviser ou repromter plus fréquemment. Gemma 4 12B (environ 8 Go) est un point de départ raisonnable sur un GPU de 12 Go.',
           },
           {
             q: 'Comment maintenir la cohérence de la voix des personnages sur une session de roman complet ?',
@@ -1867,7 +1904,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Quel est le meilleur LLM local pour écrire de la fiction sombre ou mature ?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
+            a: 'Hermes 4.3 36B, Dolphin 3.0, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
           },
           {
             q: 'Puis-je utiliser ces modèles dans SillyTavern ou Agnai ?',
@@ -1875,11 +1912,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Quelle longueur doit avoir un prompt de scène ?',
-            a: 'Un prompt de scène de 50–100 mots produit les meilleurs résultats en pratique. Les prompts plus longs (200+ mots) peuvent fonctionner pour les scènes complexes mais augmentent le risque que le modèle ignore certaines contraintes. Pour les scènes complexes, décomposer le prompt en deux passes : d\'abord générer la scène, puis exécuter un prompt de révision qui ajoute la contrainte retenue.',
+            a: 'Un prompt de scène de 50–100 mots fonctionne généralement le mieux. Les prompts plus longs (200+ mots) peuvent fonctionner pour les scènes complexes mais augmentent le risque que le modèle ignore certaines contraintes. Pour les scènes complexes, décomposer le prompt en deux passes : d\'abord générer la scène, puis exécuter un prompt de révision qui ajoute la contrainte retenue.',
           },
           {
             q: 'Les prompts de transfert de style violent-ils les droits d\'auteur ?',
-            a: 'Répliquer la technique d\'un auteur (structure des phrases, choix de ponctuation, registre narratif) n\'est pas une violation des droits d\'auteur — le style n\'est pas protégeable. Reproduire des passages verbatim substantiels d\'un texte sous droits d\'auteur est une violation. Les modèles de ce guide utilisent des échantillons de 2–3 phrases comme ancres de technique, ce qui s\'inscrit dans le cadre standard de l\'usage équitable éducatif, et la sortie générée réplique la technique plutôt que le contenu.',
+            a: 'Dans la plupart des juridictions, le droit d\'auteur protège l\'expression concrète plutôt que le style. Répliquer la technique d\'un auteur (structure des phrases, choix de ponctuation, registre narratif) n\'est donc généralement pas une violation, alors que reproduire des passages verbatim substantiels d\'un texte protégé peut l\'être. Les modèles de ce guide utilisent des échantillons de 2–3 phrases comme ancres de technique et demandent la technique, pas le contenu. Les règles varient selon le pays et le cas ; il s\'agit d\'une information générale, pas d\'un conseil juridique.',
+          },
+          {
+            q: 'Comment rédiger un prompt système pour la fiction ?',
+            a: 'Placez le genre, le PDV et le registre de prose dans le message système plutôt que dans le tour de l\'utilisateur, afin que chaque génération de la session les hérite. Forme de base : « Tu es un assistant de fiction [genre]. Toute la prose que tu écris est à [PDV, p. ex. la troisième personne rapprochée, au passé] et privilégie [p. ex. les détails sensoriels et le sous-texte]. » Pour les longues sessions, ajoutez une courte fiche de personnage (nom, trait dominant, comportement contradictoire, registre de parole). LM Studio et SillyTavern disposent d\'un champ dédié au prompt système ; dans Ollama, on le définit avec une ligne SYSTEM dans le Modelfile ou le message système de l\'API.',
+          },
+          {
+            q: 'Comment utiliser ces modèles dans LM Studio ?',
+            a: 'Collez les contraintes de genre, de PDV et de registre dans le champ « System Prompt » de la barre latérale de discussion de LM Studio, puis saisissez comme message utilisateur un modèle de scène, de dialogue ou de construction de monde de ce guide. LM Studio peut aussi lancer un serveur local compatible OpenAI, ce qui permet d\'envoyer séparément le prompt système et le prompt utilisateur via l\'API. Les modèles sont du texte brut : le même texte fonctionne dans Ollama et dans LM Studio.',
+          },
+          {
+            q: 'Le modèle local peut-il écrire les prompts à ma place ?',
+            a: 'Oui. Demandez-lui de rédiger un prompt en 5 parties (genre, PDV, contrainte sensorielle, beat émotionnel, plafond de mots) pour votre scène : vous obtenez un point de départ. Les prompts générés sont en général plus vagues que les modèles de ce guide ; considérez donc le résultat comme un brouillon et resserrez vous-même les contraintes.',
           },
           {
             q: 'L\'utilisation d\'un LLM local pour la fiction est-elle concernée par le RGPD ?',
@@ -1887,7 +1936,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Quelles limites légales s\'appliquent en France à la génération de contenu sensible avec un LLM local ?',
-            a: 'L\'hébergement local ne modifie pas le droit applicable à l\'artefact produit. En France, l\'article 227-23 du Code pénal (représentation de mineurs à caractère pornographique) constitue une interdiction absolue — la génération locale, le cadrage fictionnel ou l\'usage privé ne constituent pas des exceptions. L\'article 24 de la loi du 29 juillet 1881 interdit l\'incitation à la haine ou à la discrimination. Pour les prompts de transfert de style : répliquer la technique d\'un auteur est autorisé ; reproduire des passages verbatim substantiels peut violer le droit d\'auteur. La génération locale de fiction standard entre personnages adultes fictifs ne fait pas l\'objet d\'une prohibition générale.',
+            a: 'L\'hébergement local ne modifie pas le droit applicable à l\'artefact produit. En France, l\'article 227-23 du Code pénal (représentation de mineurs à caractère pornographique) constitue une interdiction absolue — la génération locale, le cadrage fictionnel ou l\'usage privé ne constituent pas des exceptions. L\'article 24 de la loi du 29 juillet 1881 interdit l\'incitation à la haine ou à la discrimination. Pour les prompts de transfert de style : répliquer la technique d\'un auteur n\'est en principe pas interdit ; reproduire des passages verbatim substantiels peut violer le droit d\'auteur. La génération locale de fiction standard entre personnages adultes fictifs ne fait pas l\'objet d\'une prohibition générale. Il s\'agit d\'une information générale, pas d\'un conseil juridique ; pour un cas précis, consultez un avocat spécialisé en droit pénal ou en propriété intellectuelle.',
           },
         ],
       },
@@ -1906,31 +1955,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ja.webp',
     title: '小説家のためのローカルLLMプロンプト：15のテンプレートとテクニック（2026）',
     seoTitle: '小説家向けローカルLLMプロンプト：15テンプレート 2026',
     intro:
-      'ローカルLLMは、漠然としたリクエストよりも構造化されたプロンプトを与えると、測定可能なほど優れたフィクションを生成します。本ガイドでは、シーン執筆・キャラクター開発・ダイアログ・世界構築・スタイル転換・修正・編集タスクに対して機能する15のプロンプトテンプレートを紹介します——全てOllamaまたはLM Studioを通じてローカルで動作するLlama 3.3 70B、Qwen3 32B、Mistral Largeでテスト済みです。全テンプレートはコピーペースト可能で、ジャンルごとの調整方法も含まれています。',
+      'ローカルLLMは、漠然としたリクエストよりも構造化されたプロンプトを与えると、より使えるフィクションを生成します。本ガイドでは、シーン執筆・キャラクター開発・ダイアログ・世界構築・スタイル転換・修正・編集タスク向けの15のプロンプトテンプレートを紹介します——OllamaまたはLM Studioでローカル実行するGemma 4、Qwen3.8-27B、Llama 3.3 70Bなどのinstruction-tunedオープンウェイトモデルを想定して書かれています。全テンプレートはコピーペースト可能で、ジャンルごとの調整方法も含まれています。',
     metaDescription:
       'ローカルLLMを使った小説執筆向け15プロンプトテンプレート。シーン・キャラクター・ダイアログ・世界構築・修正——OllamaとLM Studio対応でコピーペースト可能。',
     twitterDescription:
-      'ローカルLLM小説執筆用15プロンプトテンプレート：シーン・ダイアログ・キャラクター開発・世界構築・スタイル転換・修正・編集。Llama 3.3 70B、Qwen3 32Bでテスト済み。',
+      'ローカルLLM小説執筆用15プロンプトテンプレート：シーン・ダイアログ・キャラクター開発・世界構築・スタイル転換・修正・編集。Gemma 4、Qwen3.8-27B、Llama 3.3 70B向けに作成。',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      'Apple Silicon Mac 32 GB',
+      'Apple Silicon Mac 48 GB',
     ],
     audience:
       'ローカルLLMを起草パートナーとして使用し、一貫した使用可能な出力を生成する信頼できるプロンプト構造を求めている小説家・短編小説家・脚本家・ゲームナラティブデザイナー。',
@@ -1946,12 +1999,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       '世界構築 プロンプトテンプレート',
     ],
     leadAnswerBlock:
-      '**ローカルLLMのフィクション出力で最大の改善は、「シーンを書いて」から構造化された5パートプロンプトへの移行から来ます：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限。このフォーマットだけで、実際には平坦で要約的な出力を約60%削減します——プロンプトが簡単な近道を残さないため、モデルはプロット要約の代わりに「見せる」散文を生成します。キャラクター開発では、最も信頼できるテンプレートは「矛盾プロンプト」です：キャラクターに1つの支配的な特性と1つの矛盾する行動を与え、どちらも述べずに両方を明らかにするシーンを書くようモデルに依頼します。ダイアログでは、まずサブテキストを設定します——キャラクターが言いたいが言わないこと——そしてモデルにその隠されたメッセージの周りに発話行を書かせます。編集作業には、連続性エラーにはプロット整合性チェックを、平坦なゾーンにはペース分析を、情報ダンプの再分配には説明文スムージングを使用してください。**',
+      '**ローカルLLMのフィクション出力で最大の改善は、「シーンを書いて」から構造化された5パートプロンプトへの移行から来ます：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限。このフォーマットは簡単な近道を残さないため、モデルはプロット要約ではなく「見せる」散文を生成しやすくなります。キャラクター開発では、最も信頼できるテンプレートは「矛盾プロンプト」です：キャラクターに1つの支配的な特性と1つの矛盾する行動を与え、どちらも述べずに両方を明らかにするシーンを書くようモデルに依頼します。ダイアログでは、まずサブテキストを設定します——キャラクターが言いたいが言わないこと——そしてモデルにその隠されたメッセージの周りに発話行を書かせます。編集作業には、連続性エラーにはプロット整合性チェックを、平坦なゾーンにはペース分析を、情報ダンプの再分配には説明文スムージングを使用してください。**',
     quickAnswerTop: {
       ja: {
         question: 'ローカルLLMを使う小説家にとって最良のプロンプトテンプレートは何ですか？',
         answer:
-          'フィクション執筆に最も信頼できるプロンプト構造は：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限です。これはプロット要約の代わりに「見せる」散文を生成します。キャラクター開発には「矛盾プロンプト」（1つの支配的な特性＋1つの矛盾する行動、どちらも述べずに両方を明らかにする）を使用します。ダイアログには、まずサブテキストを設定し（キャラクターが言いたいが言わないこと）、発話行を生成します。世界構築では、外側に広げる前に1つの感覚的詳細に固定します。これらのテンプレートは全てのinstruction-tunedモデルで機能します；大きいモデル（Llama 3.3 70B、Qwen3 32B）は長い生成全体にわたって制約への準拠をより良く維持します。',
+          'フィクション執筆に最も信頼できるプロンプト構造は：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限です。これはプロット要約の代わりに「見せる」散文を生成します。キャラクター開発には「矛盾プロンプト」（1つの支配的な特性＋1つの矛盾する行動、どちらも述べずに両方を明らかにする）を使用します。ダイアログには、まずサブテキストを設定し（キャラクターが言いたいが言わないこと）、発話行を生成します。世界構築では、外側に広げる前に1つの感覚的詳細に固定します。これらのテンプレートは全てのinstruction-tunedモデルで機能します；大きいモデル（Gemma 4 31B、Qwen3.8-27B、Llama 3.3 70B）は長い生成でも制約を守りやすい傾向があります。',
         bullets: [
           'シーンプロンプト：ジャンル＋POV＋感覚的詳細1〜2つ＋感情的ビート＋語数上限（150〜400語）。',
           'キャラクター開発：1つの支配的な特性＋1つの矛盾する行動、どちらも述べずに両方を明らかにする。',
@@ -1960,9 +2013,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           'スタイル転換：目標著者の具体的なテクニック2〜3つを名付け、2文サンプルを貼り付け、それらのテクニックを使って生成する。',
           '修正：草稿を貼り付け、特定の問題（受動態・副詞過多・POV切り替え）を名付け、書き直しを依頼する。',
           '編集：プロット整合性チェックは連続性エラーを検出；ペース分析は章のペースをマップ；説明文スムージングは情報ダンプを再分配。',
-          '大きいモデルは制約への準拠をより良く維持します；Llama 3.3 70Bはほとんどのフィクションタスクのデフォルト選択です。',
+          '大きいモデルは制約を守りやすい傾向があります：24 GBのGPUならGemma 4 31BまたはQwen3.8-27B、48 GB以上ならLlama 3.3 70B。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -1990,11 +2043,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**構造化プロンプトはフィクションにおいて漠然としたリクエストを上回ります。** 5パートのシーンプロンプト（ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限）は「見せる」散文を生成します；「シーンを書いて」はプロット要約を生成します。テンプレートがテクニックです。',
           '**矛盾プロンプトは最も信頼できるキャラクター開発構造です。** モデルに1つの支配的な特性と1つの矛盾する行動を与え；どちらも名付けずに両方を明らかにするよう依頼します。これは読者が推測しなければならない層のあるキャラクターを生成します。',
-          '**発話行の前にサブテキストを設定するとダイアログの質が倍になります。** まずキャラクターが言いたいが言わないことを伝えます。発話語は自然にその隠されたメッセージの周りに機能します。',
+          '**発話行の前にサブテキストを設定すると、ダイアログが良くなります。** まずキャラクターが言いたいが言わないことを伝えます。発話語は自然にその隠されたメッセージの周りに機能します。',
           '**語数上限はブロートを防ぎます。** シーンプロンプトの200語上限は圧縮を強制します；モデルは正確でなければなりません。必要に応じて100語単位で上げますが、常に上限を設定してください。',
-          '**修正プロンプトは名付けられた問題が必要です。** 「これを書き直して」は最小限の変更を生成します。「書き直し：全ての受動態を排除し、全ての文は具体的な名詞または強い動詞で始まらなければならない」は測定可能な改善を生成します。',
+          '**修正プロンプトは名付けられた問題が必要です。** 「これを書き直して」は最小限の変更を生成します。「書き直し：全ての受動態を排除し、全ての文は具体的な名詞または強い動詞で始まらなければならない」は、より明確な改善につながりやすくなります。',
           '**編集テンプレートはマニュスクリプトレベルで動作します。** プロット整合性チェック・ペース分析・説明文スムージングは完成したシーンと章で機能します——起草中ではなく、起草後に実行してください。',
-          '**大きいモデルは長い生成全体にわたって制約への準拠をより良く維持します。** Llama 3.3 70BとQwen3 32Bは5パートシーン制約に確実に従います；小さいモデルは約200トークン後にドリフトします。',
+          '**大きいモデルは長い生成でも制約を守りやすい傾向があります。** このページはGemma 4 31B、Qwen3.8-27B、Llama 3.3 70Bを想定して書かれており、小さいモデルは早めにドリフトしやすくなります。',
           '**フロントエンドはモデルとプロンプトよりも重要ではありません。** Ollama・LM Studio・SillyTavern・Agnaiは全てプロンプトをそのままパスします——フィクション品質の違いはモデル＋プロンプトにあり、フロントエンドにはありません。',
         ],
       },
@@ -2003,11 +2056,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: '基本情報',
         items: [
           '**カバーするテンプレート：** 合計15——シーン執筆（2）、キャラクター開発（3）、ダイアログ（2）、世界構築（2）、スタイル転換（2）、修正（1）、編集（3）。',
-          '**テスト環境：** Llama 3.3 70B、Qwen3 32B、Mistral Large——全てApple M5 Max 64 GBとNVIDIA RTX 4090 24 GBでOllama経由。',
+          '**想定モデル：** OllamaまたはLM Studioで動かすinstruction-tunedのオープンウェイトモデル（Gemma 4 31B、Qwen3.8-27B、Mistral Small 3 24B、Llama 3.3 70Bなど）。',
           '**語数上限：** シーンには150〜400語；ダイアログには100〜200語；世界構築の文章には300〜600語。',
-          '**フィクションに最良の汎用モデル：** Llama 3.3 70B（優れた命令追従、物語の一貫性、長いコンテキスト）。',
-          '**スタイル転換に最良：** Mistral Large（一貫した散文レジスター；著者の声パターンを確実に再現）。',
-          '**ダイアログに最良：** Command A+またはHermes 3（キャラクターの声の分化；ナチュラルな話し言葉レジスター）。',
+          '**24 GB GPUでの出発点：** Gemma 4 31BまたはQwen3.8-27B（どちらも256Kコンテキスト）。48 GB以上ならLlama 3.3 70B（下のモデル表を参照）。',
+          '**スタイル転換：** 16 GB GPUならMistral Small 3 24B、またはメモリに収まる最大のモデル。技術サンプルは2〜3文にとどめます。',
+          '**ダイアログと拒否の少ないフィクション：** Hermes 4.3 36B。Command A+（2180億パラメータのMixture-of-Experts）にはサーバー級GPUが必要です。',
           '**システムプロンプト：** ジャンルとPOVはユーザーターンではなくシステムメッセージで設定してください——それはセッション内の全ての生成を固定します。',
         ],
       },
@@ -2087,7 +2140,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: 'シーン執筆テンプレート（テンプレート1〜2）',
         content:
-          '**5パートのシーンテンプレートが基盤です：ジャンル＋POV＋感覚的アンカー＋感情的ビート＋語数上限。** 各要素は特定の働きをします——どれか1つを取り除くと出力品質は測定可能なほど低下します。',
+          '**5パートのシーンテンプレートが基盤です：ジャンル＋POV＋感覚的アンカー＋感情的ビート＋語数上限。** 各要素は特定の働きをします——どれか1つを取り除くと出力品質は低下しやすくなります。',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           'ローカルLLMフィクション向けの5要素シーン・プロンプト構造:ジャンル、視点(POV)、感覚アンカー、感情のビート、150〜400語の上限—各要素が不可欠。',
@@ -2113,7 +2166,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: 'テンプレート1 — シーン5パート構造',
         content:
-          '基盤テンプレートです。5つの要素全てが構造的な役割を担っています——どれか1つを取り除くと出力品質は測定可能なほど低下します。',
+          '基盤テンプレートです。5つの要素全てが構造的な役割を担っています——どれか1つを取り除くと出力品質は低下しやすくなります。',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -2305,7 +2358,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: 'スタイル転換にはMistral Largeを使用してください。Mistral Largeは長い生成全体にわたって一貫した散文レジスターを最もローカル実行可能なモデルよりもよく維持します。複数の段落にわたってレジスターの一貫性が重要なスタイル転換タスクには、Llama 3.3 70BよりもMistral Largeを優先してください。より短いバースト（300語未満）のスタイル転換には、30B以上のどのモデルでも十分に機能します。',
+            text: 'モデルはタスクの長さに合わせて選びます。複数段落にわたるスタイル転換には、メモリに収まる最大のモデル（Gemma 4 31B、Qwen3.8-27B、Llama 3.3 70B）を使い、技術サンプルは2〜3文にとどめてください。300語未満の短いバーストなら、Mistral Small 3のような24Bモデルで通常は十分です。',
           },
         ],
       },
@@ -2344,7 +2397,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: '修正テンプレート（テンプレート12）',
         content:
-          '**修正プロンプトは一般的な改善命令ではなく名付けられた問題が必要です。** 「これをもっとよくして」は最小限の表面的な編集を生成します。「全ての受動態構造を排除してください；全ての文は具体的な名詞または強い能動動詞で始まらなければなりません」は測定可能な構造的変更を生成します。',
+          '**修正プロンプトは一般的な改善命令ではなく名付けられた問題が必要です。** 「これをもっとよくして」は最小限の表面的な編集を生成します。「全ての受動態構造を排除してください；全ての文は具体的な名詞または強い能動動詞で始まらなければなりません」は、より明確な構造的変更につながりやすくなります。',
         items: [
           '**常に草稿を貼り付け、説明ではなく。** 修正プロンプトは実際の草稿テキストを貼り付けるときのみ機能します。散文を見せずに問題を説明すると、書き直した文章ではなく一般的なアドバイスが生成されます。',
           '**具体的な問題を名付ける。** 「書き直し」だけでは不十分です。1つの構造的問題を特定してください：受動態・副詞過多・POV切り替え・ブロート・情報ダンプ。',
@@ -2442,20 +2495,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: '小説執筆のためのモデル推薦',
         content:
-          '**モデルの選択はプロンプト構造よりも重要ではありませんが、重要です。** 7Bモデルでのよく構造化されたプロンプトは70Bモデルでの漠然としたプロンプトを上回ります——しかし同等のプロンプトでは、大きいモデルは長い生成全体にわたって制約への準拠をより良く維持し、キャラクターの声をより確実に分化させます。',
+          '**モデルの選択はプロンプト構造よりも重要ではありませんが、重要です。** 7Bモデルでのよく構造化されたプロンプトは70Bモデルでの漠然としたプロンプトを上回ることがあります——しかし同等のプロンプトでは、大きいモデルは長い生成全体にわたって制約への準拠をより良く維持し、キャラクターの声をより確実に分化させます。',
         columns: ['タスク', 'おすすめモデル', '理由'],
         rows: [
-          { 'タスク': '一般シーン執筆', 'おすすめモデル': 'Llama 3.3 70B', '理由': '優れた命令追従・物語の一貫性・制約された散文の汎用ベスト' },
-          { 'タスク': 'スタイル転換', 'おすすめモデル': 'Mistral Large', '理由': '長い生成全体にわたる一貫した散文レジスター；ローカル実行可能モデルの中で最高のレジスター忠実性' },
-          { 'タスク': 'ダイアログ／キャラクターの声', 'おすすめモデル': 'Command A+ またはHermes 3', '理由': 'ナチュラルな話し言葉レジスター；長い交換にわたる信頼できるキャラクターの声の分化' },
-          { 'タスク': '世界構築', 'おすすめモデル': 'Qwen3 32B', '理由': '構造化詳細生成に優秀；同心円状拡張パターンを確実に維持' },
-          { 'タスク': '修正／編集', 'おすすめモデル': 'Llama 3.3 70B', '理由': '完全な段落にわたる特定の構造的書き直し命令への追従に最高' },
-          { 'タスク': 'ダーク／無検閲フィクション', 'おすすめモデル': 'Hermes 3 Llama 3.1', '理由': 'コンテンツ拒否が少ないようにファインチューニングされている；ローカル実行時のクラウド利用規約制限なし' },
+          { 'タスク': '一般シーン執筆', 'おすすめモデル': 'Gemma 4 31B', '理由': '24 GB GPUでの文章向けの第一候補（ダウンロード19〜20 GB、256Kコンテキスト）。48 GB以上ならLlama 3.3 70B' },
+          { 'タスク': 'スタイル転換', 'おすすめモデル': 'Mistral Small 3 24B', '理由': '16 GB GPUに収まります（ダウンロード14 GB、32Kコンテキスト）；技術サンプルは短く' },
+          { 'タスク': 'ダイアログ／キャラクターの声', 'おすすめモデル': 'Hermes 4.3 36B', '理由': '拒否の少ないファインチューン；自分のダイアログシーンで試してください' },
+          { 'タスク': '世界構築', 'おすすめモデル': 'Qwen3.8-27B', '理由': '256Kコンテキストで長い世界設定資料をプロンプトに収められます（ダウンロード18 GB）' },
+          { 'タスク': '修正／編集', 'おすすめモデル': 'Llama 3.3 70B', '理由': '書き直し指示の定番；ダウンロード約43 GBのため48 GB以上が目安' },
+          { 'タスク': 'ダーク／無検閲フィクション', 'おすすめモデル': 'Hermes 4.3 36BまたはDolphin 3.0', '理由': '拒否を減らすようファインチューニング済み；ローカル実行時はクラウド利用規約の制限なし' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'フィクションモデルのハードウェア最小要件。Llama 3.3 70B（Q4量子化）は約40 GBのVRAMまたはユニファイドメモリが必要です（NVIDIA RTX 4090 24 GBデュアルGPU、またはApple M5 Max 64 GB）。Qwen3 32B（Q4）は20〜24 GBで動作します。Mistral Large（Q4）は約24 GBが必要です。16 GBリグには、Qwen3 14BとMistral Smallが実用的な上限です——両方ともより短い生成長でシーンテンプレートに確実に従います。',
+            text: 'ハードウェアの目安。ダウンロードサイズはOllamaライブラリの値で重みのみです。長いシーンではKVキャッシュ用に2〜6 GBを加えてください。Gemma 4 31B（19〜20 GB）とQwen3.8-27B（18 GB）は24 GB GPUまたは32 GB Macに収まり、Gemma 4 12B（約8 GB）は12 GB、Mistral Small 3 24B（14 GB）は16 GB、Llama 3.3 70B（約43 GB）は48 GB以上が必要です。Command A+（2180億パラメータのMixture-of-Experts、Cohereによれば2枚のH100）とMistral Large（123B、ダウンロード73 GB、研究用ライセンス）はサーバー級で、この目安の対象外です。',
           },
         ],
       },
@@ -2474,11 +2527,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: '参考文献',
         items: [
-          'Llama 3.3 70Bモデルカードと命令追従ベンチマーク — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B技術レポート — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Mistral Largeモデルドキュメント — [Mistral AI](https://mistral.ai)',
-          'Command A+仕様 — [Cohere](https://cohere.com)',
-          'Hermes 3ファインチューン手法 — [Nous Research](https://nousresearch.com)',
+          'Llama 3.3 70Bモデルカードとダウンロードサイズ — [Ollamaライブラリ](https://ollama.com/library/llama3.3)',
+          'Gemma 4とQwen3.8のタグ・サイズ・コンテキスト長 — [Ollama: Gemma 4](https://ollama.com/library/gemma4)、[Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3とMistral Largeのサイズ・コンテキスト・ライセンス — [Ollama: Mistral Small](https://ollama.com/library/mistral-small)、[Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'Command A+のリリース（2026年5月、2180億パラメータのMixture-of-Experts、Apache 2.0） — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Hermesファインチューン手法 — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -2495,7 +2548,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'これらのプロンプトテンプレートは小さいモデル（7B〜14B）で機能しますか？',
-            a: 'はい、ただし制約への準拠は約150トークン後に低下します。小さいモデルは5パートプロンプトの最初の2〜3つの制約に従い、その後ベースレジスターにドリフトします。7B〜14Bモデルには：語数上限を下げてください（最大150語）、同時制約を少なくしてください（5パートではなく3パート）、より頻繁に修正または再プロンプトすることを想定してください。Qwen3 14Bは小説特定のプロンプト追従でテストされた最強の小さいモデルです。',
+            a: 'はい、ただし生成が長くなるほど制約への準拠は低下しやすくなります。小さいモデルは5パートプロンプトの最初の2〜3つの制約に従い、その後ベースレジスターにドリフトします。7B〜14Bモデルには：語数上限を下げてください（最大150語）、同時制約を少なくしてください（5パートではなく3パート）、より頻繁に修正または再プロンプトすることを想定してください。12 GB GPUなら、Gemma 4 12B（約8 GB）が妥当な出発点です。',
           },
           {
             q: '長編小説セッション全体でキャラクターの声の一貫性を維持するにはどうすればよいですか？',
@@ -2503,7 +2556,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ダークまたは成熟したフィクションを書くための最良のローカルLLMは何ですか？',
-            a: 'Hermes 3 Llama 3.1・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing)をご覧ください。',
+            a: 'Hermes 4.3 36B・Dolphin 3.0、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing)をご覧ください。',
           },
           {
             q: 'これらのテンプレートはSillyTavernやAgnaiで使用できますか？',
@@ -2511,11 +2564,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'シーンプロンプトはどのくらいの長さにすべきですか？',
-            a: '50〜100語のシーンプロンプトが実際には最良の結果を生成します。より長いプロンプト（200語以上）は複雑なシーンで機能しますが、モデルがいくつかの制約を無視するリスクが増加します。複雑なシーンには、プロンプトを2パスに分けてください：まずシーンを生成し、次に保留した制約を追加する修正プロンプトを実行します。',
+            a: '50〜100語のシーンプロンプトが通常は最も良い結果になります。より長いプロンプト（200語以上）は複雑なシーンで機能しますが、モデルがいくつかの制約を無視するリスクが増加します。複雑なシーンには、プロンプトを2パスに分けてください：まずシーンを生成し、次に保留した制約を追加する修正プロンプトを実行します。',
           },
           {
             q: 'スタイル転換プロンプトは著作権を侵害しますか？',
-            a: '著者のテクニック（文構造・句読点の選択・物語レジスター）を複製することは著作権侵害ではありません——スタイルは著作権で保護されません。著作権で保護されたテキストから実質的な逐語的文章を複製することは侵害です。本ガイドのテンプレートはテクニックアンカーとして2〜3文のサンプルを使用しますが、これは標準的な教育的フェアユースの範囲内であり、生成された出力はコンテンツではなくテクニックを複製します。',
+            a: 'ほとんどの法域で、著作権が保護するのは具体的な表現であり、文体そのものではありません。そのため、著者のテクニック（文構造・句読点の選択・物語レジスター）を再現することは通常は侵害にあたりませんが、著作権で保護されたテキストから相当量の文章を逐語的に複製すると侵害になり得ます。本ガイドのテンプレートは2〜3文のサンプルをテクニックのアンカーとして使い、内容ではなくテクニックを求めます。ルールは国や個別の事情によって異なり、これは一般的な情報であって法的助言ではありません。',
           },
           {
             q: 'ローカルLLMを小説執筆に使う場合、個人情報保護法は関係しますか？',
@@ -2523,19 +2576,19 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '日本でローカルLLMを使って成人向けコンテンツを生成する場合、法的な注意点はありますか？',
-            a: '「児童買春・児童ポルノに係る行為等の処罰及び児童の保護等に関する法律」（いわゆる児童ポルノ禁止法）第7条は、AIによる生成物・フィクションを問わず、18歳未満の者を性的に描写するコンテンツの製造・所持・提供を絶対的に禁止しています。ローカル生成・非公開であっても例外ではありません。成人同士のフィクションコンテンツについては、刑法第175条（わいせつ物頒布罪）は「頒布・公然と陳列」する行為を規制しており、未公開の私的生成は一般に適用外です。スタイル転換プロンプトについては、著者のテクニックを複製することは許容されます；実質的な文章を逐語的に複製することは著作権を侵害する可能性があります。ローカルで標準的なフィクションを生成することには一般的な禁止事項はありません。',
+            a: '「児童買春・児童ポルノに係る行為等の処罰及び児童の保護等に関する法律」（いわゆる児童ポルノ禁止法）第7条は、18歳未満の者を性的に描写するコンテンツの製造・所持・提供を禁止しています。AI生成物や架空の人物の描写にどこまで適用されるかは事案ごとに判断が分かれ得るため、ローカル生成・非公開であっても例外になるとは限りません。成人同士のフィクションコンテンツについては、刑法第175条（わいせつ物頒布罪）は「頒布・公然と陳列」する行為を規制しており、未公開の私的生成は一般に適用外です。スタイル転換プロンプトについては、著者のテクニックを複製することは通常は許容されます；実質的な文章を逐語的に複製することは著作権を侵害する可能性があります。ローカルで標準的なフィクションを生成することには一般的な禁止事項はありません。以上は一般的な情報であり法的助言ではありません。具体的なケースでは弁護士などの専門家に確認してください。',
           },
           {
             q: 'フィクション執筆用のシステムプロンプトはどう書けばいいですか？',
-            a: 'ジャンル・POV（視点）・文体レジスターをユーザーターンではなくシステムメッセージに設定してください——これによりセッション内の全ての生成がその制約を自動的に継承し、ターンごとに繰り返す必要がなくなります。基本形は「あなたは[ジャンル]小説のアシスタントです。生成する散文は全て[POV：例、過去時制の密着した三人称]で書かれ、[重視する要素：例、感覚的詳細とサブテキスト]を重視します」です。長編セッションでは、キャラクターシート（名前・支配的な特性・矛盾する行動・話し言葉レジスター）もシステムメッセージに含めると、声の一貫性が大幅に向上します。Ollama・LM Studio・SillyTavernのいずれも、システムプロンプトフィールドは同じ働きをします——チャットの最初のユーザーメッセージではなく、専用のシステムプロンプト欄に入力してください。',
+            a: 'ジャンル・POV（視点）・文体レジスターは、ユーザーターンではなくシステムメッセージに入れてください。そうすればセッション内のすべての生成がそれらを引き継ぎます。基本形は「あなたは[ジャンル]小説のアシスタントです。生成する散文はすべて[POV：例、過去時制の密着した三人称]で書かれ、[重視する要素：例、感覚的詳細とサブテキスト]を重視します」です。長いセッションでは、短いキャラクターシート（名前・支配的な特性・矛盾する行動・話し言葉レジスター）も加えてください。LM StudioとSillyTavernには専用のシステムプロンプト欄があり、OllamaではModelfileのSYSTEM行またはAPIのシステムメッセージで設定します。',
           },
           {
             q: 'LM Studioでこれらのプロンプトテンプレートをどう使えばいいですか？',
-            a: 'LM Studioのチャット画面右側にある「System Prompt」欄に、ジャンル・POV・文体の制約を貼り付けてください（Ollamaの`--system`フラグやModelfileの`SYSTEM`命令と同じ役割です）。その後、通常のチャット入力欄に本ガイドのシーン・ダイアログ・世界構築などのテンプレートをユーザーメッセージとして入力します。LM StudioはOpenAI互換のローカルサーバーも起動できるため、システムプロンプトとユーザープロンプトをAPI経由で分けて送信することも可能です——結果はチャットUIから直接使う場合と同じです。テンプレート自体はフロントエンドに依存しないプレーンテキストなので、Ollama用に書かれたものもそのままLM Studioで使えます。',
+            a: 'LM Studioのチャットサイドバーにある「System Prompt」欄にジャンル・POV・レジスターの制約を貼り付け、本ガイドのシーン・ダイアログ・世界構築のテンプレートをユーザーメッセージとして入力します。LM StudioはOpenAI互換のローカルサーバーも起動できるため、システムプロンプトとユーザープロンプトをAPI経由で分けて送ることもできます。テンプレートはプレーンテキストなので、同じ文面がOllamaでもLM Studioでも使えます。',
           },
           {
             q: 'ローカルLLM自体にフィクション用のプロンプトを生成させることはできますか？',
-            a: 'はい。モデルに「[ジャンル]の小説シーンを書くための、ジャンル・POV・感覚的制約・感情的ビート・語数上限を含む5パートプロンプトを作成してください」のように依頼すれば、本ガイドの構造に沿ったプロンプトの土台を生成できます。ただし、モデルが自動生成したプロンプトは制約が曖昧になりがちなので、そのまま使うより本ガイドのテンプレートを土台にして自分で微調整する方が、一貫して良い結果を得られます。プロンプト生成そのものを目的にするより、まずは既製のテンプレートから始めて、自分の作品に合わせて語数上限や感覚的詳細を調整していくのが実用的です。',
+            a: 'はい。シーンに合わせた5パートプロンプト（ジャンル・POV・感覚的制約・感情的ビート・語数上限）を作るよう依頼すれば、たたき台が得られます。生成されたプロンプトは本ガイドのテンプレートより曖昧になりがちなので、出力は下書きとして扱い、制約は自分で絞り込んでください。',
           },
         ],
       },
@@ -2554,31 +2607,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-zh.webp',
     title: '本地LLM小说写作提示词：15个模板与技巧（2026）',
     seoTitle: '本地LLM小说写作提示词：15个模板（2026）',
     intro:
-      '本地LLM在使用结构化提示词而非开放式请求时，会产出明显更好的小说内容。本指南涵盖15个经过验证的提示词模板——用于场景写作、角色开发、对话、世界构建、风格转换、修改和编辑任务——均通过Ollama或LM Studio本地运行的Llama 3.3 70B、Qwen3 32B和Mistral Large测试完成。每个模板均可直接复制使用，并附有各类型的调整说明。',
+      '本地LLM在使用结构化提示词而非开放式请求时，会产出更有用的小说内容。本指南涵盖15个提示词模板——用于场景写作、角色开发、对话、世界构建、风格转换、修改和编辑任务——专为通过Ollama或LM Studio本地运行的Gemma 4、Qwen3.8-27B和Llama 3.3 70B等指令调优开放权重模型编写。每个模板均可直接复制使用，并附有各类型的调整说明。',
     metaDescription:
       '面向小说写作者的15个本地LLM提示词模板。场景写作、角色开发、对话、世界构建、风格转换、修改和编辑模板——适用于Ollama和LM Studio，即用即取。',
     twitterDescription:
-      '本地LLM小说创作的15个提示词模板：场景写作、对话、角色开发、世界构建、风格转换、修改、编辑。在Llama 3.3 70B、Qwen3 32B上测试完成。',
+      '本地LLM小说创作的15个提示词模板：场景写作、对话、角色开发、世界构建、风格转换、修改、编辑。为Gemma 4、Qwen3.8-27B和Llama 3.3 70B编写。',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      'Apple Silicon Mac 32 GB',
+      'Apple Silicon Mac 48 GB',
     ],
     audience:
       '使用本地LLM作为起草伙伴的小说家、短篇故事作者、编剧和游戏叙事设计师，寻求能产出一致、可用输出的可靠提示词结构。',
@@ -2594,12 +2651,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'worldbuilding prompt template',
     ],
     leadAnswerBlock:
-      '**本地LLM小说输出最大的单项改善，来自将"写一个场景"替换为结构化5部分提示词：类型+POV+感官约束+情感节拍+字数上限。仅这一格式在实践中就能将平淡的概述性输出减少约60%——模型会产出"展示而非讲述"的散文，而非情节摘要，因为提示词没有留下走捷径的空间。对于角色开发，最可靠的模板是"矛盾提示词"：给角色一个主导特质和一个与之矛盾的行为，然后让模型写一个场景展示两者但不明说任何一个。对于对话，先设定潜台词——角色想说但不会说的话——然后让模型围绕那个隐藏信息写出的台词。对于编辑工作，用情节一致性检查捕捉连续性错误，用节奏分析识别平淡区域，用叙述展开处理信息堆砌。**',
+      '**本地LLM小说输出最大的单项改善，来自将"写一个场景"替换为结构化5部分提示词：类型+POV+感官约束+情感节拍+字数上限。这一格式没有给走捷径留下空间，因此模型更倾向于产出"展示而非讲述"的散文，而非情节摘要。对于角色开发，最可靠的模板是"矛盾提示词"：给角色一个主导特质和一个与之矛盾的行为，然后让模型写一个场景展示两者但不明说任何一个。对于对话，先设定潜台词——角色想说但不会说的话——然后让模型围绕那个隐藏信息写出的台词。对于编辑工作，用情节一致性检查捕捉连续性错误，用节奏分析识别平淡区域，用叙述展开处理信息堆砌。**',
     quickAnswerTop: {
       zh: {
         question: '使用本地LLM进行小说写作的最佳提示词模板有哪些？',
         answer:
-          '最可靠的小说写作提示词结构是：类型+POV+感官约束+情感节拍+字数上限。这能产出"展示而非讲述"的散文，而非情节摘要。对于角色开发，使用"矛盾提示词"（一个主导特质+一个矛盾行为，展示两者但不明说任何一个）。对于对话，先设定潜台词（角色想要但不会说的），再写台词。对于世界构建，先锚定一个感官细节，再向外展开。这些模板适用于任何指令调优模型；较大的模型（Llama 3.3 70B、Qwen3 32B）在长篇补全中能更好地保持约束遵从性。',
+          '最可靠的小说写作提示词结构是：类型+POV+感官约束+情感节拍+字数上限。这能产出"展示而非讲述"的散文，而非情节摘要。对于角色开发，使用"矛盾提示词"（一个主导特质+一个矛盾行为，展示两者但不明说任何一个）。对于对话，先设定潜台词（角色想要但不会说的），再写台词。对于世界构建，先锚定一个感官细节，再向外展开。这些模板适用于任何指令调优模型；较大的模型（Gemma 4 31B、Qwen3.8-27B、Llama 3.3 70B）在长篇补全中往往更能保持约束遵从性。',
         bullets: [
           '场景提示词：类型+POV+1–2个感官细节+情感节拍+字数上限（150–400字）。',
           '角色开发：一个主导特质+一个矛盾行为，展示两者但不明说任何一个。',
@@ -2608,9 +2665,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           '风格转换：命名目标作者的2–3个具体技巧，粘贴2句样本，再用这些技巧生成。',
           '修改：粘贴草稿，命名具体问题（被动语态、副词过多、视角跳跃），要求重写。',
           '编辑：情节一致性检查捕捉连续性错误；节奏分析映射章节节奏；叙述展开重新分配信息堆砌。',
-          '较大的模型保持约束遵从性更好；Llama 3.3 70B是大多数小说任务的默认选择。',
+          '较大的模型往往更能保持约束：24 GB GPU用Gemma 4 31B或Qwen3.8-27B，48 GB以上用Llama 3.3 70B。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -2638,11 +2695,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**结构化提示词在小说写作上优于开放式请求。** 5部分场景提示词（类型+POV+感官约束+情感节拍+字数上限）产出"展示而非讲述"的散文；"写一个场景"产出情节摘要。模板本身就是技巧。',
           '**矛盾提示词是最可靠的角色开发结构。** 给模型一个主导特质和一个矛盾行为；让它展示两者但不命名任何一个。这能产出读者需要自己推断的有层次的角色。',
-          '**先设定潜台词能让对话质量翻倍。** 先告诉模型角色想要但不会说的话。台词就会自然地围绕那个隐藏信息展开。',
+          '**先设定潜台词，对话通常会更好。** 先告诉模型角色想要但不会说的话。台词就会自然地围绕那个隐藏信息展开。',
           '**字数上限防止臃肿。** 200字的上限强迫压缩；模型必须精确。当需要更多时以100字为增量提高，但始终设置上限。',
-          '**修改提示词需要命名问题。** "重写这个"产出最小的表面修改。"重写：消除所有被动语态，每句话必须以具体名词或强动词开头"产出可量化的结构改善。',
+          '**修改提示词需要命名问题。** "重写这个"产出最小的表面修改。"重写：消除所有被动语态，每句话必须以具体名词或强动词开头"往往能带来更明显的改善。',
           '**编辑模板在手稿层面运作。** 情节一致性检查、节奏分析和叙述展开适用于已完成的场景和章节——在起草后运行，而非起草中。',
-          '**较大的模型在长篇补全中更好地保持约束遵从性。** Llama 3.3 70B和Qwen3 32B可靠地遵循5部分场景约束；较小的模型在约200 token后开始偏离。',
+          '**较大的模型在长篇补全中往往更能保持约束。** 本页围绕Gemma 4 31B、Qwen3.8-27B和Llama 3.3 70B编写；较小的模型往往更早开始偏离。',
           '**前端的影响远小于模型和提示词。** Ollama、LM Studio、SillyTavern和Agnai都原样传递你的提示词——小说质量的差异来自模型+提示词，而非前端。',
         ],
       },
@@ -2651,11 +2708,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: '快速参考',
         items: [
           '**涵盖模板：** 共15个——场景写作（2）、角色开发（3）、对话（2）、世界构建（2）、风格转换（2）、修改（1）、编辑（3）。',
-          '**测试平台：** Llama 3.3 70B、Qwen3 32B、Mistral Large——均通过Ollama在Apple M5 Max 64 GB和NVIDIA RTX 4090 24 GB上运行。',
+          '**适用模型：** 通过Ollama或LM Studio运行的指令调优开放权重模型，例如Gemma 4 31B、Qwen3.8-27B、Mistral Small 3 24B和Llama 3.3 70B。',
           '**字数上限：** 场景150–400字；对话100–200字；世界构建段落300–600字。',
-          '**最佳全能小说模型：** Llama 3.3 70B（指令遵从性强、叙事连贯性好、长上下文能力强）。',
-          '**最佳风格转换模型：** Mistral Large（长篇补全中保持一致的散文语域；本地可运行模型中语域忠实度最佳）。',
-          '**最佳对话模型：** Command A+或Hermes 3（角色声音区分度高；自然的口语语域）。',
+          '**24 GB GPU上的起点：** Gemma 4 31B或Qwen3.8-27B（均为256K上下文）；有48 GB及以上则用Llama 3.3 70B（见下方模型表）。',
+          '**风格转换：** 16 GB GPU用Mistral Small 3 24B，或选内存能容纳的最大模型；技巧样本控制在2–3句。',
+          '**对话与低拒绝率小说：** Hermes 4.3 36B；Command A+（2180亿参数的混合专家模型）需要服务器级GPU。',
           '**系统提示词：** 在系统消息中设置类型和POV，而非在用户轮次中——它能锚定整个会话中的每次补全。',
         ],
       },
@@ -2735,7 +2792,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: '场景写作模板（模板1–2）',
         content:
-          '**5部分场景模板是基础：类型+POV+感官锚点+情感节拍+字数上限。** 每个元素都承担着具体的工作——去掉任何一个，输出质量都会明显下降。',
+          '**5部分场景模板是基础：类型+POV+感官锚点+情感节拍+字数上限。** 每个元素都承担着具体的工作——去掉任何一个，输出质量往往会下降。',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           '本地LLM小说写作的5要素场景提示结构:类型、视角(POV)、感官锚点、情感节点、150–400字上限——每个要素都不可或缺。',
@@ -2761,7 +2818,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: '模板1——场景5部分结构',
         content:
-          '基础模板。所有五个元素都是承重的——去掉任何一个，输出质量都会明显下降。',
+          '基础模板。所有五个元素都是承重的——去掉任何一个，输出质量往往会下降。',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -2953,7 +3010,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: '风格转换用Mistral Large。Mistral Large在长篇补全中比大多数本地可运行模型更好地保持一致的散文语域。对于语域一致性在多段落中很重要的风格转换任务，优先选Mistral Large而非Llama 3.3 70B。对于短暂的风格转换（300字以内），任何30B以上的模型都表现充分。',
+            text: '让模型与任务长度相匹配。对于跨多个段落的风格转换，请使用内存能容纳的最大模型（Gemma 4 31B、Qwen3.8-27B或Llama 3.3 70B），并把技巧样本控制在2–3句。对于300字以内的短篇幅，Mistral Small 3这类24B模型通常已经够用。',
           },
         ],
       },
@@ -2992,7 +3049,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: '修改模板（模板12）',
         content:
-          '**修改提示词需要命名问题，而非笼统地要求改善。** "让这个更好"产出最小的表面修改。"消除每个被动结构；每句话必须使用主动语态。如果主语不清楚，虚构一个具体的主语。150字以内"产出可量化的结构变化。',
+          '**修改提示词需要命名问题，而非笼统地要求改善。** "让这个更好"产出最小的表面修改。"消除每个被动结构；每句话必须使用主动语态。如果主语不清楚，虚构一个具体的主语。150字以内"往往能带来更明显的结构变化。',
         items: [
           '**始终粘贴草稿，而非描述。** 修改提示词只在粘贴实际草稿文本时有效。在不展示散文的情况下描述问题，产出的是通用建议，而非重写的段落。',
           '**命名具体问题。** "重写"不够。识别一个结构问题：被动语态、副词过多、视角跳跃、臃肿或信息堆砌。',
@@ -3090,20 +3147,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: '小说写作的模型推荐',
         content:
-          '**模型选择的影响小于提示词结构，但确实有影响。** 一个结构良好的提示词在7B模型上会胜过7B模型上模糊提示词——但在等效提示词的情况下，较大的模型在较长补全中更好地保持约束遵从性，并更可靠地区分角色声音。',
+          '**模型选择的影响小于提示词结构，但确实有影响。** 一个结构良好的提示词在7B模型上可能胜过70B模型上的模糊提示词——但在等效提示词的情况下，较大的模型在较长补全中更好地保持约束遵从性，并更可靠地区分角色声音。',
         columns: ['任务', '推荐模型', '原因'],
         rows: [
-          { '任务': '通用场景写作', '推荐模型': 'Llama 3.3 70B', '原因': '指令遵从性强、叙事连贯性好，是约束性散文的最佳全能选择' },
-          { '任务': '风格转换', '推荐模型': 'Mistral Large', '原因': '长篇补全中保持一致的散文语域；本地可运行模型中语域忠实度最佳' },
-          { '任务': '对话/角色声音', '推荐模型': 'Command A+或Hermes 3', '原因': '自然的口语语域；在长篇交流中可靠地区分角色声音' },
-          { '任务': '世界构建', '推荐模型': 'Qwen3 32B', '原因': '擅长结构化细节生成；可靠地保持同心圆扩展模式' },
-          { '任务': '修改/编辑', '推荐模型': 'Llama 3.3 70B', '原因': '最擅长在整个段落中遵循特定的结构重写指令' },
-          { '任务': '黑暗/无审查小说', '推荐模型': 'Hermes 3 Llama 3.1', '原因': '针对更少内容拒绝进行微调；本地运行时无云端服务条款限制' },
+          { '任务': '通用场景写作', '推荐模型': 'Gemma 4 31B', '原因': '24 GB GPU上的文笔首选（下载19–20 GB，256K上下文）；有48 GB及以上则用Llama 3.3 70B' },
+          { '任务': '风格转换', '推荐模型': 'Mistral Small 3 24B', '原因': '可放入16 GB GPU（下载14 GB，32K上下文）；技巧样本保持简短' },
+          { '任务': '对话/角色声音', '推荐模型': 'Hermes 4.3 36B', '原因': '低拒绝率微调模型；建议用自己的对话场景试一试' },
+          { '任务': '世界构建', '推荐模型': 'Qwen3.8-27B', '原因': '256K上下文可让较长的世界设定文档留在提示词中（下载18 GB）' },
+          { '任务': '修改/编辑', '推荐模型': 'Llama 3.3 70B', '原因': '改写指令的老牌默认选择；下载约43 GB，因此需要48 GB及以上' },
+          { '任务': '黑暗/无审查小说', '推荐模型': 'Hermes 4.3 36B或Dolphin 3.0', '原因': '针对减少拒绝进行了微调；本地运行时无云端服务条款限制' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: '小说模型的硬件最低要求。Llama 3.3 70B在Q4量化下需要约40 GB VRAM或统一内存（NVIDIA RTX 4090 24 GB双GPU，或Apple M5 Max 64 GB）。Qwen3 32B在Q4下运行需要20–24 GB。Mistral Large在Q4下需要约24 GB。对于16 GB配置，Qwen3 14B和Mistral Small是实际的上限——两者都在较短的生成长度下可靠地遵循场景模板。',
+            text: '硬件档位。下载大小取自Ollama库，仅含权重；长场景请为KV缓存另加2–6 GB。Gemma 4 31B（19–20 GB）和Qwen3.8-27B（18 GB）可放入24 GB GPU或32 GB Mac；Gemma 4 12B（约8 GB）适合12 GB；Mistral Small 3 24B（14 GB）适合16 GB；Llama 3.3 70B（约43 GB）需要48 GB及以上。Command A+（2180亿参数的混合专家模型，据Cohere称需两块H100）和Mistral Large（123B，下载73 GB，研究用许可）属于服务器级，不在上述档位之内。',
           },
         ],
       },
@@ -3122,11 +3179,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: '参考来源',
         items: [
-          'Llama 3.3 70B模型卡和指令遵从基准 — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B技术报告 — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Mistral Large模型文档 — [Mistral AI](https://mistral.ai)',
-          'Command A+规格 — [Cohere](https://cohere.com)',
-          'Hermes 3微调方法论 — [Nous Research](https://nousresearch.com)',
+          'Llama 3.3 70B模型卡与下载大小 — [Ollama库](https://ollama.com/library/llama3.3)',
+          'Gemma 4与Qwen3.8的标签、大小和上下文窗口 — [Ollama: Gemma 4](https://ollama.com/library/gemma4)、[Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3与Mistral Large的大小、上下文和许可证 — [Ollama: Mistral Small](https://ollama.com/library/mistral-small)、[Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'Command A+发布（2026年5月，2180亿参数混合专家模型，Apache 2.0） — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Hermes微调方法论 — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -3143,7 +3200,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '这些提示词模板在较小的模型（7B–14B）上有效吗？',
-            a: '有效，但约束遵从性在约150 token后会下降。较小的模型遵循5部分提示词中的前2–3个约束，然后向其基础语域漂移。对于7B–14B模型：减少字数上限（最多150字），使用更少的同时约束（3部分而非5部分），并预期需要更频繁地修改或重新提示。Qwen3 14B是测试中针对特定小说提示词遵从性最强的小模型。',
+            a: '有效，但随着生成变长，约束遵从性往往会下降。较小的模型遵循5部分提示词中的前2–3个约束，然后向其基础语域漂移。对于7B–14B模型：减少字数上限（最多150字），使用更少的同时约束（3部分而非5部分），并预期需要更频繁地修改或重新提示。12 GB GPU上，Gemma 4 12B（约8 GB）是合理的起点。',
           },
           {
             q: '如何在完整的小说会话中保持角色声音一致性？',
@@ -3151,7 +3208,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '写黑暗或成熟小说最好的本地LLM是什么？',
-            a: 'Hermes 3 Llama 3.1、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing)。',
+            a: 'Hermes 4.3 36B、Dolphin 3.0，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing)。',
           },
           {
             q: '我可以在SillyTavern或Agnai中使用这些模板吗？',
@@ -3159,11 +3216,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '场景提示词应该多长？',
-            a: '50–100字的场景提示词在实践中产出最好的结果。较长的提示词（200字以上）对复杂场景可以有效，但增加了模型忽略某些约束的机会。对于复杂场景，将提示词分为两步：首先生成场景，然后运行添加你保留的约束的修改提示词。',
+            a: '50–100字的场景提示词通常效果最好。较长的提示词（200字以上）对复杂场景可以有效，但增加了模型忽略某些约束的机会。对于复杂场景，将提示词分为两步：首先生成场景，然后运行添加你保留的约束的修改提示词。',
           },
           {
             q: '风格转换提示词是否侵犯版权？',
-            a: '复制作者的技巧（句子结构、标点选择、叙事语域）不是版权侵犯——风格不受版权保护。从受版权保护的文本中复制实质性的逐字段落是侵权。本指南中的模板使用2–3句样本作为技巧锚点，这属于标准教育合理使用范围，生成的输出复制的是技巧而非内容。',
+            a: '在大多数法域，版权保护的是具体表达而非风格。因此，复制作者的技巧（句子结构、标点选择、叙事语域）通常不构成侵权，而逐字复制受版权保护文本中的大量段落则可能构成侵权。本指南中的模板使用2–3句样本作为技巧锚点，要求的是技巧而非内容。各国规则和个案情况不同，以上仅为一般性信息，不构成法律意见。',
+          },
+          {
+            q: '如何为小说写作编写系统提示词？',
+            a: '把类型、POV和散文语域写进系统消息，而不是用户轮次，这样会话中的每次生成都会沿用它们。基本写法：“你是一位[类型]小说助手。你写的所有散文都采用[POV，例如过去时的贴身第三人称]，并侧重[例如感官细节和潜台词]。”长会话中可再加一份简短的角色卡（姓名、主导特质、矛盾行为、说话语域）。LM Studio和SillyTavern有专门的系统提示词字段；在Ollama中，可通过Modelfile的SYSTEM行或API的系统消息来设置。',
+          },
+          {
+            q: '如何在LM Studio中使用这些提示词模板？',
+            a: '把类型、POV和语域约束粘贴到LM Studio聊天侧边栏的“System Prompt”字段，然后把本指南中的场景、对话或世界构建模板作为用户消息输入。LM Studio还可以运行兼容OpenAI的本地服务器，因此也可以通过API分别发送系统提示词和用户提示词。模板是纯文本，同一段文字在Ollama和LM Studio中都能使用。',
+          },
+          {
+            q: '本地模型可以帮我写提示词吗？',
+            a: '可以。让它为你的场景起草一个5部分提示词（类型、POV、感官约束、情感节拍、字数上限），你就得到了一个起点。生成的提示词往往比本指南中的模板更笼统，因此请把输出当作草稿，自己再收紧约束。',
           },
           {
             q: '在中国大陆使用本地LLM进行小说写作，是否涉及《个人信息保护法》？',
@@ -3171,7 +3240,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '在中国大陆使用本地LLM生成成人创意内容，是否合法？',
-            a: '根据《刑法》第363条，制作、复制、出版、贩卖或传播淫秽物品属于违法行为；第364条进一步规范了传播行为。本地生成且不对外发布的私人内容，与"传播"的构成要件有所不同，但具体情形仍需以实际案例和司法解释为准。描绘未成年人的性内容在任何情况下均属绝对禁止，不论生成手段或是否公开。《网络安全法》第12条同样禁止利用网络制作或传播违法信息。本地运行LLM意味着数据不上云，但生成内容的法律责任仍由作者承担。关于风格转换提示词，复制作者技巧是允许的；逐字复制大量文本可能侵犯版权。',
+            a: '根据《刑法》第363条，制作、复制、出版、贩卖或传播淫秽物品属于违法行为；第364条进一步规范了传播行为。本地生成且不对外发布的私人内容，与"传播"的构成要件有所不同，但具体情形仍需以实际案例和司法解释为准。描绘未成年人的性内容在任何情况下均属绝对禁止，不论生成手段或是否公开。《网络安全法》第12条同样禁止利用网络制作或传播违法信息。本地运行LLM意味着数据不上云，但生成内容的法律责任仍由作者承担。关于风格转换提示词，复制作者技巧通常不构成侵权；逐字复制大量文本可能侵犯版权。以上仅为一般性信息，不构成法律意见；涉及具体情形，请咨询专业律师。',
           },
         ],
       },
@@ -3190,31 +3259,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-es.webp',
     title: 'Prompts para LLM local para escritores de ficción: 15 plantillas y técnicas (2026)',
     seoTitle: '15 prompts de LLM local para escritores de ficción 2026',
     intro:
-      'Los LLM locales producen ficción notablemente mejor cuando les das prompts estructurados en lugar de solicitudes abiertas. Esta guía cubre 15 plantillas de prompts que funcionan — para escritura de escenas, desarrollo de personajes, diálogo, construcción de mundos, transferencia de estilo, revisión y tareas editoriales — todas probadas con Llama 3.3 70B, Qwen3 32B y Mistral Large ejecutándose localmente a través de Ollama o LM Studio. Cada plantilla está lista para copiar y pegar e incluye qué ajustar según el género.',
+      'Los LLM locales producen ficción más útil cuando les das prompts estructurados en lugar de solicitudes abiertas. Esta guía cubre 15 plantillas de prompts para escritura de escenas, desarrollo de personajes, diálogo, construcción de mundos, transferencia de estilo, revisión y tareas editoriales. Están escritas para modelos open-weight instruction-tuned como Gemma 4, Qwen3.8-27B y Llama 3.3 70B que se ejecutan localmente con Ollama o LM Studio. Cada plantilla está lista para copiar y pegar e incluye qué ajustar según el género.',
     metaDescription:
       '15 plantillas de prompts para escritores de ficción con LLM locales: escenas, personajes, diálogo, mundos y estilo. Listas para Ollama y LM Studio.',
     twitterDescription:
-      '15 plantillas de prompts para ficción con LLM local: escenas, diálogo, personajes, construcción de mundos, transferencia de estilo, revisión, editorial. Probadas con Llama 3.3 70B, Qwen3 32B.',
+      '15 plantillas de prompts para ficción con LLM local: escenas, diálogo, personajes, construcción de mundos, transferencia de estilo, revisión, editorial. Escritas para Gemma 4, Qwen3.8-27B y Llama 3.3 70B.',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      'Apple Silicon Mac 32 GB',
+      'Apple Silicon Mac 48 GB',
     ],
     audience:
       'Novelistas, escritores de cuentos, guionistas y diseñadores de narrativa de videojuegos que usan LLM locales como socios de borrador, buscando estructuras de prompts confiables que produzcan resultados consistentes y utilizables.',
@@ -3230,12 +3303,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'plantilla prompt construccion mundo',
     ],
     leadAnswerBlock:
-      '**La mejora más significativa en los resultados de ficción de un LLM local viene de pasar de "escribe una escena" a un prompt estructurado de 5 partes: género + POV + restricción sensorial + beat emocional + límite de palabras. Solo ese formato reduce la salida plana y resumida en ~60% en la práctica — el modelo produce prosa que muestra en vez de contar porque el prompt no deja espacio para el atajo fácil. Para el desarrollo de personajes, la plantilla más confiable es el "prompt de contradicción": darle al personaje un rasgo dominante y un comportamiento contradictorio, luego pedirle al modelo que escriba una escena que revele ambos sin enunciar ninguno. Para el diálogo, establecer el subtexto primero — lo que el personaje quiere decir pero no dirá — y luego dejar que el modelo escriba las líneas habladas alrededor de ese mensaje oculto. Para el trabajo editorial, usa la Verificación de coherencia de trama para detectar errores de continuidad, el Análisis de ritmo para identificar zonas planas, y el Suavizado de exposición para redistribuir bloques de información.**',
+      '**La mejora más significativa en los resultados de ficción de un LLM local viene de pasar de "escribe una escena" a un prompt estructurado de 5 partes: género + POV + restricción sensorial + beat emocional + límite de palabras. Ese formato no deja espacio para el atajo fácil, así que el modelo tiende a producir prosa que muestra en vez de contar, en lugar de un resumen de trama. Para el desarrollo de personajes, la plantilla más confiable es el "prompt de contradicción": darle al personaje un rasgo dominante y un comportamiento contradictorio, luego pedirle al modelo que escriba una escena que revele ambos sin enunciar ninguno. Para el diálogo, establecer el subtexto primero — lo que el personaje quiere decir pero no dirá — y luego dejar que el modelo escriba las líneas habladas alrededor de ese mensaje oculto. Para el trabajo editorial, usa la Verificación de coherencia de trama para detectar errores de continuidad, el Análisis de ritmo para identificar zonas planas, y el Suavizado de exposición para redistribuir bloques de información.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuáles son las mejores plantillas de prompts para escritores de ficción que usan LLM locales?',
         answer:
-          'La estructura de prompt más confiable para la ficción es: género + POV + restricción sensorial + beat emocional + límite de palabras. Esto produce prosa que muestra en vez de contar en lugar de un resumen de trama. Para el desarrollo de personajes, usa el "prompt de contradicción" (un rasgo dominante + un comportamiento contradictorio, revelar ambos sin enunciar ninguno). Para el diálogo, establece el subtexto primero (lo que el personaje quiere pero no dirá), luego escribe las líneas habladas. Para la construcción de mundos, ancla a un solo detalle sensorial antes de expandirse hacia afuera. Estas plantillas funcionan en cualquier modelo instruction-tuned; los modelos más grandes (Llama 3.3 70B, Qwen3 32B) mantienen mejor la adherencia a las restricciones en generaciones largas.',
+          'La estructura de prompt más confiable para la ficción es: género + POV + restricción sensorial + beat emocional + límite de palabras. Esto produce prosa que muestra en vez de contar en lugar de un resumen de trama. Para el desarrollo de personajes, usa el "prompt de contradicción" (un rasgo dominante + un comportamiento contradictorio, revelar ambos sin enunciar ninguno). Para el diálogo, establece el subtexto primero (lo que el personaje quiere pero no dirá), luego escribe las líneas habladas. Para la construcción de mundos, ancla a un solo detalle sensorial antes de expandirse hacia afuera. Estas plantillas funcionan en cualquier modelo instruction-tuned; los modelos más grandes (Gemma 4 31B, Qwen3.8-27B, Llama 3.3 70B) tienden a mantener mejor las restricciones en generaciones largas.',
         bullets: [
           'Prompt de escena: género + POV + 1–2 detalles sensoriales + beat emocional + límite de palabras (150–400 palabras).',
           'Desarrollo de personajes: un rasgo dominante + un comportamiento contradictorio, revelar ambos sin enunciar ninguno.',
@@ -3244,9 +3317,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           'Transferencia de estilo: nombra 2–3 técnicas específicas del autor objetivo, pega una muestra de 2 oraciones, luego genera usando esas técnicas.',
           'Revisión: pega el borrador, nombra el problema específico (voz pasiva, exceso de adverbios, cambio de POV), solicita la reescritura.',
           'Editorial: la Verificación de coherencia detecta errores de continuidad; el Análisis de ritmo mapea el ritmo por capítulo; el Suavizado de exposición redistribuye bloques de información.',
-          'Los modelos más grandes mantienen mejor la adherencia a las restricciones; Llama 3.3 70B es la opción predeterminada para la mayoría de las tareas de ficción.',
+          'Los modelos más grandes tienden a mantener mejor las restricciones: Gemma 4 31B o Qwen3.8-27B en una GPU de 24 GB, Llama 3.3 70B con 48 GB o más.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -3274,11 +3347,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**Los prompts estructurados superan a las solicitudes abiertas para la ficción.** Un prompt de escena de 5 partes (género + POV + restricción sensorial + beat emocional + límite de palabras) produce prosa que muestra en vez de contar; "escribe una escena" produce un resumen de trama. La plantilla es la técnica.',
           '**El prompt de contradicción es la estructura de desarrollo de personajes más confiable.** Darle al modelo un rasgo dominante y un comportamiento contradictorio; pedirle que revele ambos sin nombrar ninguno. Esto produce personajes con capas que el lector debe inferir.',
-          '**La calidad del diálogo se duplica cuando estableces el subtexto antes de las líneas habladas.** Dile al modelo primero lo que el personaje quiere pero no dirá. Las palabras habladas entonces funcionan alrededor de ese mensaje oculto de forma natural.',
+          '**El diálogo mejora cuando estableces el subtexto antes de las líneas habladas.** Dile al modelo primero lo que el personaje quiere pero no dirá. Las palabras habladas entonces funcionan alrededor de ese mensaje oculto de forma natural.',
           '**Los límites de palabras previenen el relleno.** Un límite de 200 palabras en un prompt de escena fuerza la compresión; el modelo debe ser preciso. Auméntalo en incrementos de 100 palabras cuando necesites más, pero siempre establece un límite.',
-          '**Los prompts de revisión necesitan un problema nombrado.** "Reescribe esto" produce un cambio mínimo. "Reescribe: elimina toda voz pasiva, cada oración debe comenzar con un sustantivo concreto o un verbo fuerte" produce una mejora medible.',
+          '**Los prompts de revisión necesitan un problema nombrado.** "Reescribe esto" produce un cambio mínimo. "Reescribe: elimina toda voz pasiva, cada oración debe comenzar con un sustantivo concreto o un verbo fuerte" tiende a producir una mejora más clara.',
           '**Las plantillas editoriales operan al nivel del manuscrito.** La Verificación de coherencia de trama, el Análisis de ritmo y el Suavizado de exposición funcionan en escenas y capítulos completados — ejecútalos después de redactar, no durante.',
-          '**Los modelos más grandes mantienen mejor la adherencia a las restricciones en generaciones largas.** Llama 3.3 70B y Qwen3 32B siguen las restricciones de escena de 5 partes de forma confiable; los modelos más pequeños se desvían después de ~200 tokens.',
+          '**Los modelos más grandes tienden a mantener mejor las restricciones en generaciones largas.** Gemma 4 31B, Qwen3.8-27B y Llama 3.3 70B son los modelos en los que se basa esta página; los modelos más pequeños tienden a desviarse antes.',
           '**La interfaz importa menos que el modelo y el prompt.** Ollama, LM Studio, SillyTavern y Agnai todos pasan tu prompt textualmente — la diferencia de calidad en la ficción está en el modelo + prompt, no en la interfaz.',
         ],
       },
@@ -3287,11 +3360,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Datos rápidos',
         items: [
           '**Plantillas cubiertas:** 15 en total — escritura de escenas (2), desarrollo de personajes (3), diálogo (2), construcción de mundos (2), transferencia de estilo (2), revisión (1), editorial (3).',
-          '**Probadas en:** Llama 3.3 70B, Qwen3 32B, Mistral Large — todas vía Ollama en Apple M5 Max 64 GB y NVIDIA RTX 4090 24 GB.',
+          '**Escritas para:** modelos open-weight instruction-tuned ejecutados con Ollama o LM Studio, como Gemma 4 31B, Qwen3.8-27B, Mistral Small 3 24B y Llama 3.3 70B.',
           '**Límites de palabras:** 150–400 palabras para escenas; 100–200 palabras para diálogo; 300–600 palabras para pasajes de construcción de mundos.',
-          '**Mejor modelo general para ficción:** Llama 3.3 70B (fuerte seguimiento de instrucciones, coherencia narrativa, contexto largo).',
-          '**Mejor para transferencia de estilo:** Mistral Large (registro de prosa consistente; reproduce patrones de voz de autor de forma confiable).',
-          '**Mejor para diálogo:** Command A+ o Hermes 3 (diferenciación de voces de personajes; registro hablado naturalista).',
+          '**Modelo de partida en una GPU de 24 GB:** Gemma 4 31B o Qwen3.8-27B, ambos con ventana de contexto de 256K; Llama 3.3 70B con 48 GB o más (consulta la tabla de modelos más abajo).',
+          '**Transferencia de estilo:** Mistral Small 3 24B en una GPU de 16 GB, o el modelo más grande que quepa en tu memoria; limita la muestra de técnica a 2–3 oraciones.',
+          '**Diálogo y ficción con pocos rechazos:** Hermes 4.3 36B; Command A+ (218B de parámetros, mezcla de expertos) requiere GPU de clase servidor.',
           '**Prompt de sistema:** establece el género y el POV en un mensaje de sistema, no en el turno del usuario — ancla cada generación de la sesión.',
         ],
       },
@@ -3371,7 +3444,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: 'Plantillas de escritura de escenas (Plantillas 1–2)',
         content:
-          '**La plantilla de escena de 5 partes es el fundamento: género + POV + ancla sensorial + beat emocional + límite de palabras.** Cada elemento realiza un trabajo específico — elimina cualquiera y la calidad del resultado cae de forma medible.',
+          '**La plantilla de escena de 5 partes es el fundamento: género + POV + ancla sensorial + beat emocional + límite de palabras.** Cada elemento realiza un trabajo específico — elimina cualquiera y la calidad del resultado tiende a caer.',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           'Estructura de prompt de escena en 5 partes para ficción con LLM local: género, punto de vista, ancla sensorial, beat emocional y un límite de 150–400 palabras — cada restricción es esencial.',
@@ -3397,7 +3470,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: 'Plantilla 1 — Estructura de escena de 5 partes',
         content:
-          'La plantilla fundamental. Los cinco elementos son esenciales — elimina cualquiera y la calidad del resultado cae de forma medible.',
+          'La plantilla fundamental. Los cinco elementos son esenciales — elimina cualquiera y la calidad del resultado tiende a caer.',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -3589,7 +3662,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: 'Mistral Large para la transferencia de estilo. Mistral Large mantiene un registro de prosa consistente en generaciones largas mejor que la mayoría de los modelos ejecutables localmente. Para tareas de transferencia de estilo donde la consistencia del registro importa en múltiples párrafos, prefiere Mistral Large sobre Llama 3.3 70B. Para transferencia de estilo en ráfagas cortas (menos de 300 palabras), cualquier modelo de 30B+ funciona adecuadamente.',
+            text: 'Ajusta el modelo a la longitud de la tarea. Para transferencia de estilo en varios párrafos, usa el modelo más grande que quepa en tu memoria (Gemma 4 31B, Qwen3.8-27B o Llama 3.3 70B) y limita la muestra de técnica a 2–3 oraciones. Para ráfagas cortas (menos de 300 palabras), un modelo de 24B como Mistral Small 3 suele bastar.',
           },
         ],
       },
@@ -3628,7 +3701,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: 'Plantillas de revisión (Plantilla 12)',
         content:
-          '**Los prompts de revisión necesitan un problema nombrado, no una instrucción general de mejora.** "Haz esto mejor" produce ediciones superficiales mínimas. "Elimina toda construcción pasiva; cada oración debe comenzar con un sustantivo concreto o un verbo activo fuerte" produce un cambio estructural medible.',
+          '**Los prompts de revisión necesitan un problema nombrado, no una instrucción general de mejora.** "Haz esto mejor" produce ediciones superficiales mínimas. "Elimina toda construcción pasiva; cada oración debe comenzar con un sustantivo concreto o un verbo activo fuerte" tiende a producir un cambio estructural más claro.',
         items: [
           '**Siempre pega el borrador, no una descripción.** Los prompts de revisión solo funcionan cuando pegas el texto real del borrador. Describir el problema sin mostrar la prosa produce consejos genéricos en lugar de un pasaje reescrito.',
           '**Nombra el problema específico.** "Reescribe" no es suficiente. Identifica un problema estructural: voz pasiva, exceso de adverbios, cambio de POV, relleno o volcado de información.',
@@ -3726,20 +3799,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: 'Recomendaciones de modelos para la escritura de ficción',
         content:
-          '**La elección del modelo importa menos que la estructura del prompt, pero importa.** Un prompt bien estructurado en un modelo de 7B superará a un prompt vago en un modelo de 70B — pero dados prompts equivalentes, los modelos más grandes mantienen la adherencia a las restricciones en generaciones largas de forma más confiable y diferencian las voces de los personajes con mayor fiabilidad.',
+          '**La elección del modelo importa menos que la estructura del prompt, pero importa.** Un prompt bien estructurado en un modelo de 7B puede superar a un prompt vago en un modelo de 70B — pero dados prompts equivalentes, los modelos más grandes mantienen la adherencia a las restricciones en generaciones largas de forma más confiable y diferencian las voces de los personajes con mayor fiabilidad.',
         columns: ['Tarea', 'Modelo recomendado', 'Por qué'],
         rows: [
-          { 'Tarea': 'Escritura de escenas general', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Fuerte seguimiento de instrucciones, coherencia narrativa, la mejor opción para prosa con restricciones' },
-          { 'Tarea': 'Transferencia de estilo', 'Modelo recomendado': 'Mistral Large', 'Por qué': 'Registro de prosa consistente en generaciones largas; mejor fidelidad de registro entre los modelos ejecutables localmente' },
-          { 'Tarea': 'Diálogo / voz de personaje', 'Modelo recomendado': 'Command A+ o Hermes 3', 'Por qué': 'Registro de habla naturalista; diferencia las voces de los personajes de forma confiable en intercambios extensos' },
-          { 'Tarea': 'Construcción de mundos', 'Modelo recomendado': 'Qwen3 32B', 'Por qué': 'Fuerte en la generación de detalles estructurados; mantiene el patrón de expansión de anillos concéntricos de forma confiable' },
-          { 'Tarea': 'Revisión / edición', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Mejor en seguir instrucciones de reescritura estructural específicas a lo largo de un párrafo completo' },
-          { 'Tarea': 'Ficción oscura / sin censura', 'Modelo recomendado': 'Hermes 3 Llama 3.1', 'Por qué': 'Ajustado para menos rechazos de contenido; sin restricciones de términos de servicio en la nube al ejecutarse localmente' },
+          { 'Tarea': 'Escritura de escenas general', 'Modelo recomendado': 'Gemma 4 31B', 'Por qué': 'Opción para prosa en una GPU de 24 GB (descarga de 19–20 GB, contexto de 256K); Llama 3.3 70B con 48 GB o más' },
+          { 'Tarea': 'Transferencia de estilo', 'Modelo recomendado': 'Mistral Small 3 24B', 'Por qué': 'Cabe en una GPU de 16 GB (descarga de 14 GB, contexto de 32K); mantén corta la muestra de técnica' },
+          { 'Tarea': 'Diálogo / voz de personaje', 'Modelo recomendado': 'Hermes 4.3 36B', 'Por qué': 'Ajuste con pocos rechazos; pruébalo con tus propias escenas de diálogo' },
+          { 'Tarea': 'Construcción de mundos', 'Modelo recomendado': 'Qwen3.8-27B', 'Por qué': 'El contexto de 256K mantiene una biblia de mundo larga en el prompt (descarga de 18 GB)' },
+          { 'Tarea': 'Revisión / edición', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Opción habitual para instrucciones de reescritura; unos 43 GB de descarga, así que 48 GB o más' },
+          { 'Tarea': 'Ficción oscura / sin censura', 'Modelo recomendado': 'Hermes 4.3 36B o Dolphin 3.0', 'Por qué': 'Ajustados para rechazar menos; sin términos de servicio en la nube al ejecutarse localmente' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Requisitos mínimos de hardware para modelos de ficción. Llama 3.3 70B con cuantización Q4 requiere ~40 GB de VRAM o memoria unificada (NVIDIA RTX 4090 24 GB en doble GPU, o Apple M5 Max 64 GB). Qwen3 32B en Q4 funciona con 20–24 GB. Mistral Large en Q4 requiere ~24 GB. Para equipos de 16 GB, Qwen3 14B y Mistral Small son el techo práctico — ambos siguen las plantillas de escena de forma confiable en generaciones más cortas.',
+            text: 'Niveles de hardware. Tamaños de descarga de la biblioteca de Ollama, solo pesos; añade 2–6 GB para la caché KV en escenas largas. Gemma 4 31B (19–20 GB) y Qwen3.8-27B (18 GB) caben en una GPU de 24 GB o un Mac de 32 GB; Gemma 4 12B (unos 8 GB) en 12 GB; Mistral Small 3 24B (14 GB) en 16 GB; Llama 3.3 70B (unos 43 GB) requiere 48 GB o más. Command A+ (218B en mezcla de expertos, dos GPU H100 según Cohere) y Mistral Large (123B, 73 GB de descarga, licencia de investigación) son de clase servidor y quedan fuera de estos niveles.',
           },
         ],
       },
@@ -3758,11 +3831,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: 'Fuentes',
         items: [
-          'Ficha de modelo Llama 3.3 70B y benchmarks de seguimiento de instrucciones — [Meta AI Research](https://ai.meta.com)',
-          'Informe técnico de Qwen3 32B — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Documentación del modelo Mistral Large — [Mistral AI](https://mistral.ai)',
-          'Especificación de Command A+ — [Cohere](https://cohere.com)',
-          'Metodología de ajuste fino de Hermes 3 — [Nous Research](https://nousresearch.com)',
+          'Ficha de modelo de Llama 3.3 70B y tamaño de descarga — [Biblioteca de Ollama](https://ollama.com/library/llama3.3)',
+          'Gemma 4 y Qwen3.8: etiquetas, tamaños y ventanas de contexto — [Ollama: Gemma 4](https://ollama.com/library/gemma4), [Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3 y Mistral Large: tamaños, contexto y licencias — [Ollama: Mistral Small](https://ollama.com/library/mistral-small), [Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'Lanzamiento de Command A+ (mayo de 2026, 218B en mezcla de expertos, Apache 2.0) — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Metodología de ajuste fino de Hermes — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -3779,7 +3852,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '¿Estas plantillas de prompts funcionan en modelos más pequeños (7B–14B)?',
-            a: 'Sí, pero la adherencia a las restricciones se degrada después de ~150 tokens. Los modelos más pequeños siguen las primeras 2–3 restricciones en un prompt de 5 partes, luego se desvían hacia su registro base. Para modelos de 7B–14B: reduce el límite de palabras (máximo 150 palabras), usa menos restricciones simultáneas (3 partes en lugar de 5), y espera revisar o volver a hacer prompts con más frecuencia. Qwen3 14B es el modelo pequeño más sólido probado para el seguimiento de prompts específico de ficción.',
+            a: 'Sí, pero la adherencia a las restricciones tiende a degradarse a medida que la generación se alarga. Los modelos más pequeños siguen las primeras 2–3 restricciones en un prompt de 5 partes, luego se desvían hacia su registro base. Para modelos de 7B–14B: reduce el límite de palabras (máximo 150 palabras), usa menos restricciones simultáneas (3 partes en lugar de 5), y espera revisar o volver a hacer prompts con más frecuencia. Gemma 4 12B (unos 8 GB) es un punto de partida razonable en una GPU de 12 GB.',
           },
           {
             q: '¿Cómo mantengo la consistencia de la voz del personaje a lo largo de una sesión de novela completa?',
@@ -3787,7 +3860,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '¿Cuál es el mejor LLM local para escribir ficción oscura o madura?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, o cualquier modelo ajustado para reducir los rechazos de contenido. Cuando se ejecuta localmente, no hay restricciones de términos de servicio en la nube — el ajuste fino base del modelo determina lo que generará y lo que no. Ver [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) para un desglose completo de las opciones de modelos sin censura y el marco ético.',
+            a: 'Hermes 4.3 36B, Dolphin 3.0, o cualquier modelo ajustado para reducir los rechazos de contenido. Cuando se ejecuta localmente, no hay restricciones de términos de servicio en la nube — el ajuste fino base del modelo determina lo que generará y lo que no. Ver [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) para un desglose completo de las opciones de modelos sin censura y el marco ético.',
           },
           {
             q: '¿Puedo usar estas plantillas en SillyTavern o Agnai?',
@@ -3795,11 +3868,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '¿Qué tan largo debe ser un prompt de escena?',
-            a: 'Un prompt de escena de 50–100 palabras produce los mejores resultados en la práctica. Los prompts más largos (200+ palabras) pueden funcionar para escenas complejas pero aumentan la posibilidad de que el modelo ignore algunas restricciones. Para escenas complejas, divide el prompt en dos pasadas: primero genera la escena, luego ejecuta un prompt de revisión que añada la restricción que retuviste.',
+            a: 'Un prompt de escena de 50–100 palabras suele funcionar mejor. Los prompts más largos (200+ palabras) pueden funcionar para escenas complejas pero aumentan la posibilidad de que el modelo ignore algunas restricciones. Para escenas complejas, divide el prompt en dos pasadas: primero genera la escena, luego ejecuta un prompt de revisión que añada la restricción que retuviste.',
           },
           {
             q: '¿Los prompts de transferencia de estilo violan los derechos de autor?',
-            a: 'Replicar la técnica de un autor (estructura de oración, elecciones de puntuación, registro narrativo) no es infracción de derechos de autor — el estilo no es protegible por derechos de autor. Reproducir pasajes verbatim sustanciales de texto con derechos de autor es infracción. Las plantillas de esta guía usan muestras de 2–3 oraciones como anclas de técnica, lo que cae dentro del uso justo educativo estándar, y el resultado generado replica la técnica en lugar del contenido.',
+            a: 'En la mayoría de las jurisdicciones, el derecho de autor protege la expresión concreta y no el estilo. Por eso, replicar la técnica de un autor (estructura de oración, elecciones de puntuación, registro narrativo) normalmente no es infracción, mientras que reproducir pasajes verbatim sustanciales de un texto protegido sí puede serlo. Las plantillas de esta guía usan muestras de 2–3 oraciones como anclas de técnica y piden técnica, no contenido. Las reglas varían según el país y el caso; esto es información general, no asesoramiento legal.',
+          },
+          {
+            q: '¿Cómo escribo un prompt de sistema para ficción?',
+            a: 'Pon el género, el POV y el registro de prosa en el mensaje de sistema y no en el turno del usuario, para que cada generación de la sesión los herede. Una forma básica: «Eres un asistente de ficción de [género]. Toda la prosa que escribas está en [POV, p. ej. tercera persona cercana, en pasado] y prioriza [p. ej. el detalle sensorial y el subtexto].» Para sesiones largas, añade una ficha breve del personaje (nombre, rasgo dominante, comportamiento contradictorio, registro de habla). LM Studio y SillyTavern tienen un campo propio para el prompt de sistema; en Ollama se define con una línea SYSTEM en el Modelfile o con el mensaje de sistema de la API.',
+          },
+          {
+            q: '¿Cómo uso estas plantillas en LM Studio?',
+            a: 'Pega las restricciones de género, POV y registro en el campo «System Prompt» de la barra lateral del chat de LM Studio y luego escribe como mensaje de usuario una plantilla de escena, diálogo o construcción de mundos de esta guía. LM Studio también puede ejecutar un servidor local compatible con OpenAI, de modo que puedes enviar por separado el prompt de sistema y el del usuario mediante la API. Las plantillas son texto plano, así que el mismo texto sirve en Ollama y en LM Studio.',
+          },
+          {
+            q: '¿Puede el modelo local escribir los prompts por mí?',
+            a: 'Sí. Pídele que redacte un prompt de 5 partes (género, POV, restricción sensorial, beat emocional, límite de palabras) para tu escena y tendrás un punto de partida. Los prompts generados suelen ser más vagos que las plantillas de esta guía, así que trata el resultado como un borrador y ajusta tú las restricciones.',
           },
         ],
       },
@@ -3832,31 +3917,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
 },
 
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-pt.webp',
     title: 'Prompts para LLM local para escritores de ficção: 15 modelos e técnicas (2026)',
     seoTitle: '15 prompts de LLM local para escritores de ficção 2026',
     intro:
-      'Os LLMs locais produzem ficção notavelmente melhor quando você lhes dá prompts estruturados em vez de solicitações abertas. Este guia cobre 15 modelos de prompts que funcionam — para escrita de cenas, desenvolvimento de personagens, diálogo, construção de mundos, transferência de estilo, revisão e tarefas editoriais — todos testados com Llama 3.3 70B, Qwen3 32B e Mistral Large rodando localmente através de Ollama ou LM Studio. Cada modelo está pronto para copiar e colar e inclui o que ajustar conforme o gênero.',
+      'Os LLMs locais produzem ficção mais útil quando você lhes dá prompts estruturados em vez de solicitações abertas. Este guia cobre 15 modelos de prompts para escrita de cenas, desenvolvimento de personagens, diálogo, construção de mundos, transferência de estilo, revisão e tarefas editoriais. Eles foram escritos para modelos open-weight instruction-tuned como Gemma 4, Qwen3.8-27B e Llama 3.3 70B rodando localmente com Ollama ou LM Studio. Cada modelo está pronto para copiar e colar e inclui o que ajustar conforme o gênero.',
     metaDescription:
       '15 modelos de prompts para escritores de ficção com LLMs locais: cenas, personagens, diálogo, mundos e estilo. Prontos para Ollama e LM Studio.',
     twitterDescription:
-      '15 modelos de prompts para ficção com LLM local: cenas, diálogo, personagens, construção de mundos, transferência de estilo, revisão, editorial. Testados com Llama 3.3 70B, Qwen3 32B.',
+      '15 modelos de prompts para ficção com LLM local: cenas, diálogo, personagens, construção de mundos, transferência de estilo, revisão, editorial. Escritos para Gemma 4, Qwen3.8-27B e Llama 3.3 70B.',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      'Apple Silicon Mac 32 GB',
+      'Apple Silicon Mac 48 GB',
     ],
     audience:
       'Romancistas, contistas, roteiristas e designers de narrativa de jogos que usam LLMs locais como parceiros de rascunho, em busca de estruturas de prompts confiáveis que produzam resultados consistentes e utilizáveis.',
@@ -3872,12 +3961,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'modelo prompt construcao mundo',
     ],
     leadAnswerBlock:
-      '**A melhoria mais significativa nos resultados de ficção de um LLM local vem de passar de "escreva uma cena" para um prompt estruturado de 5 partes: gênero + POV + restrição sensorial + beat emocional + limite de palavras. Só esse formato reduz a saída plana e resumida em ~60% na prática — o modelo produz prosa que mostra em vez de contar porque o prompt não deixa espaço para o atalho fácil. Para o desenvolvimento de personagens, o modelo mais confiável é o "prompt de contradição": dar ao personagem um traço dominante e um comportamento contraditório, depois pedir ao modelo que escreva uma cena que revele ambos sem enunciar nenhum. Para o diálogo, estabelecer o subtexto primeiro — o que o personagem quer dizer mas não dirá — e depois deixar o modelo escrever as falas em torno dessa mensagem oculta. Para o trabalho editorial, use a Verificação de coerência de trama para detectar erros de continuidade, a Análise de ritmo para identificar zonas planas, e o Suavizamento de exposição para redistribuir blocos de informação.**',
+      '**A melhoria mais significativa nos resultados de ficção de um LLM local vem de passar de "escreva uma cena" para um prompt estruturado de 5 partes: gênero + POV + restrição sensorial + beat emocional + limite de palavras. Esse formato não deixa espaço para o atalho fácil, então o modelo tende a produzir prosa que mostra em vez de contar, e não um resumo de trama. Para o desenvolvimento de personagens, o modelo mais confiável é o "prompt de contradição": dar ao personagem um traço dominante e um comportamento contraditório, depois pedir ao modelo que escreva uma cena que revele ambos sem enunciar nenhum. Para o diálogo, estabelecer o subtexto primeiro — o que o personagem quer dizer mas não dirá — e depois deixar o modelo escrever as falas em torno dessa mensagem oculta. Para o trabalho editorial, use a Verificação de coerência de trama para detectar erros de continuidade, a Análise de ritmo para identificar zonas planas, e o Suavizamento de exposição para redistribuir blocos de informação.**',
     quickAnswerTop: {
       pt: {
         question: 'Quais são os melhores modelos de prompts para escritores de ficção que usam LLMs locais?',
         answer:
-          'A estrutura de prompt mais confiável para a ficção é: gênero + POV + restrição sensorial + beat emocional + limite de palavras. Isso produz prosa que mostra em vez de contar em vez de um resumo de trama. Para o desenvolvimento de personagens, use o "prompt de contradição" (um traço dominante + um comportamento contraditório, revelar ambos sem enunciar nenhum). Para o diálogo, estabeleça o subtexto primeiro (o que o personagem quer mas não dirá), depois escreva as falas. Para a construção de mundos, ancore em um único detalhe sensorial antes de se expandir para fora. Esses modelos funcionam em qualquer modelo instruction-tuned; os modelos maiores (Llama 3.3 70B, Qwen3 32B) mantêm melhor a aderência às restrições em gerações longas.',
+          'A estrutura de prompt mais confiável para a ficção é: gênero + POV + restrição sensorial + beat emocional + limite de palavras. Isso produz prosa que mostra em vez de contar em vez de um resumo de trama. Para o desenvolvimento de personagens, use o "prompt de contradição" (um traço dominante + um comportamento contraditório, revelar ambos sem enunciar nenhum). Para o diálogo, estabeleça o subtexto primeiro (o que o personagem quer mas não dirá), depois escreva as falas. Para a construção de mundos, ancore em um único detalhe sensorial antes de se expandir para fora. Esses modelos funcionam em qualquer modelo instruction-tuned; os modelos maiores (Gemma 4 31B, Qwen3.8-27B, Llama 3.3 70B) tendem a manter melhor as restrições em gerações longas.',
         bullets: [
           'Prompt de cena: gênero + POV + 1–2 detalhes sensoriais + beat emocional + limite de palavras (150–400 palavras).',
           'Desenvolvimento de personagens: um traço dominante + um comportamento contraditório, revelar ambos sem enunciar nenhum.',
@@ -3886,9 +3975,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           'Transferência de estilo: nomeie 2–3 técnicas específicas do autor-alvo, cole uma amostra de 2 frases, depois gere usando essas técnicas.',
           'Revisão: cole o rascunho, nomeie o problema específico (voz passiva, excesso de advérbios, troca de POV), solicite a reescrita.',
           'Editorial: a Verificação de coerência detecta erros de continuidade; a Análise de ritmo mapeia o ritmo por capítulo; o Suavizamento de exposição redistribui blocos de informação.',
-          'Os modelos maiores mantêm melhor a aderência às restrições; o Llama 3.3 70B é a opção padrão para a maioria das tarefas de ficção.',
+          'Os modelos maiores tendem a manter melhor as restrições: Gemma 4 31B ou Qwen3.8-27B em uma GPU de 24 GB, Llama 3.3 70B com 48 GB ou mais.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -3916,11 +4005,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**Os prompts estruturados superam as solicitações abertas para a ficção.** Um prompt de cena de 5 partes (gênero + POV + restrição sensorial + beat emocional + limite de palavras) produz prosa que mostra em vez de contar; "escreva uma cena" produz um resumo de trama. O modelo é a técnica.',
           '**O prompt de contradição é a estrutura de desenvolvimento de personagens mais confiável.** Dar ao modelo um traço dominante e um comportamento contraditório; pedir que revele ambos sem nomear nenhum. Isso produz personagens em camadas que o leitor precisa inferir.',
-          '**A qualidade do diálogo dobra quando você estabelece o subtexto antes das falas.** Diga ao modelo primeiro o que o personagem quer mas não dirá. As palavras faladas então funcionam em torno dessa mensagem oculta de forma natural.',
+          '**O diálogo melhora quando você estabelece o subtexto antes das falas.** Diga ao modelo primeiro o que o personagem quer mas não dirá. As palavras faladas então funcionam em torno dessa mensagem oculta de forma natural.',
           '**Os limites de palavras evitam o excesso.** Um limite de 200 palavras em um prompt de cena força a compressão; o modelo precisa ser preciso. Aumente-o em incrementos de 100 palavras quando precisar de mais, mas sempre defina um limite.',
-          '**Os prompts de revisão precisam de um problema nomeado.** "Reescreva isto" produz uma mudança mínima. "Reescreva: elimine toda voz passiva, cada frase deve começar com um substantivo concreto ou um verbo forte" produz uma melhoria mensurável.',
+          '**Os prompts de revisão precisam de um problema nomeado.** "Reescreva isto" produz uma mudança mínima. "Reescreva: elimine toda voz passiva, cada frase deve começar com um substantivo concreto ou um verbo forte" tende a produzir uma melhoria mais clara.',
           '**Os modelos editoriais operam no nível do manuscrito.** A Verificação de coerência de trama, a Análise de ritmo e o Suavizamento de exposição funcionam em cenas e capítulos concluídos — execute-os depois de redigir, não durante.',
-          '**Os modelos maiores mantêm melhor a aderência às restrições em gerações longas.** Llama 3.3 70B e Qwen3 32B seguem as restrições de cena de 5 partes de forma confiável; os modelos menores se desviam depois de ~200 tokens.',
+          '**Os modelos maiores tendem a manter melhor as restrições em gerações longas.** Gemma 4 31B, Qwen3.8-27B e Llama 3.3 70B são os modelos em que esta página se baseia; os modelos menores tendem a se desviar mais cedo.',
           '**A interface importa menos do que o modelo e o prompt.** Ollama, LM Studio, SillyTavern e Agnai todos passam o seu prompt literalmente — a diferença de qualidade na ficção está no modelo + prompt, não na interface.',
         ],
       },
@@ -3929,11 +4018,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Dados rápidos',
         items: [
           '**Modelos cobertos:** 15 no total — escrita de cenas (2), desenvolvimento de personagens (3), diálogo (2), construção de mundos (2), transferência de estilo (2), revisão (1), editorial (3).',
-          '**Testados em:** Llama 3.3 70B, Qwen3 32B, Mistral Large — todos via Ollama em Apple M5 Max 64 GB e NVIDIA RTX 4090 24 GB.',
+          '**Escritos para:** modelos open-weight instruction-tuned executados com Ollama ou LM Studio, como Gemma 4 31B, Qwen3.8-27B, Mistral Small 3 24B e Llama 3.3 70B.',
           '**Limites de palavras:** 150–400 palavras para cenas; 100–200 palavras para diálogo; 300–600 palavras para passagens de construção de mundos.',
-          '**Melhor modelo geral para ficção:** Llama 3.3 70B (forte seguimento de instruções, coerência narrativa, contexto longo).',
-          '**Melhor para transferência de estilo:** Mistral Large (registro de prosa consistente; reproduz padrões de voz de autor de forma confiável).',
-          '**Melhor para diálogo:** Command A+ ou Hermes 3 (diferenciação de vozes de personagens; registro falado naturalista).',
+          '**Modelo inicial em uma GPU de 24 GB:** Gemma 4 31B ou Qwen3.8-27B, ambos com janela de contexto de 256K; Llama 3.3 70B com 48 GB ou mais (veja a tabela de modelos abaixo).',
+          '**Transferência de estilo:** Mistral Small 3 24B em uma GPU de 16 GB, ou o maior modelo que caiba na sua memória; limite a amostra de técnica a 2–3 frases.',
+          '**Diálogo e ficção com poucas recusas:** Hermes 4.3 36B; o Command A+ (218B de parâmetros, mistura de especialistas) exige GPUs de classe servidor.',
           '**System prompt:** defina o gênero e o POV em uma mensagem de sistema, não no turno do usuário — isso ancora cada geração da sessão.',
         ],
       },
@@ -4013,7 +4102,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: 'Modelos de escrita de cenas (Modelos 1–2)',
         content:
-          '**O modelo de cena de 5 partes é o fundamento: gênero + POV + âncora sensorial + beat emocional + limite de palavras.** Cada elemento realiza um trabalho específico — remova qualquer um e a qualidade do resultado cai de forma mensurável.',
+          '**O modelo de cena de 5 partes é o fundamento: gênero + POV + âncora sensorial + beat emocional + limite de palavras.** Cada elemento realiza um trabalho específico — remova qualquer um e a qualidade do resultado tende a cair.',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           'Estrutura de prompt de cena em 5 partes para ficção com LLM local: gênero, ponto de vista, âncora sensorial, beat emocional e um limite de 150–400 palavras — cada restrição é essencial.',
@@ -4039,7 +4128,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: 'Modelo 1 — Estrutura de cena de 5 partes',
         content:
-          'O modelo fundamental. Os cinco elementos são essenciais — remova qualquer um e a qualidade do resultado cai de forma mensurável.',
+          'O modelo fundamental. Os cinco elementos são essenciais — remova qualquer um e a qualidade do resultado tende a cair.',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -4231,7 +4320,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: 'Mistral Large para a transferência de estilo. O Mistral Large mantém um registro de prosa consistente em gerações longas melhor do que a maioria dos modelos executáveis localmente. Para tarefas de transferência de estilo em que a consistência do registro importa ao longo de múltiplos parágrafos, prefira o Mistral Large ao Llama 3.3 70B. Para transferência de estilo em rajadas curtas (menos de 300 palavras), qualquer modelo de 30B+ funciona adequadamente.',
+            text: 'Ajuste o modelo ao tamanho da tarefa. Para transferência de estilo em vários parágrafos, use o maior modelo que caiba na sua memória (Gemma 4 31B, Qwen3.8-27B ou Llama 3.3 70B) e limite a amostra de técnica a 2–3 frases. Para rajadas curtas (menos de 300 palavras), um modelo de 24B como o Mistral Small 3 costuma bastar.',
           },
         ],
       },
@@ -4270,7 +4359,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: 'Modelos de revisão (Modelo 12)',
         content:
-          '**Os prompts de revisão precisam de um problema nomeado, não de uma instrução geral de melhoria.** "Deixe isto melhor" produz edições superficiais mínimas. "Elimine toda construção passiva; cada frase deve começar com um substantivo concreto ou um verbo ativo forte" produz uma mudança estrutural mensurável.',
+          '**Os prompts de revisão precisam de um problema nomeado, não de uma instrução geral de melhoria.** "Deixe isto melhor" produz edições superficiais mínimas. "Elimine toda construção passiva; cada frase deve começar com um substantivo concreto ou um verbo ativo forte" tende a produzir uma mudança estrutural mais clara.',
         items: [
           '**Sempre cole o rascunho, não uma descrição.** Os prompts de revisão só funcionam quando você cola o texto real do rascunho. Descrever o problema sem mostrar a prosa produz conselhos genéricos em vez de uma passagem reescrita.',
           '**Nomeie o problema específico.** "Reescreva" não é suficiente. Identifique um problema estrutural: voz passiva, excesso de advérbios, troca de POV, excesso ou despejo de informação.',
@@ -4368,20 +4457,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: 'Recomendações de modelos para a escrita de ficção',
         content:
-          '**A escolha do modelo importa menos do que a estrutura do prompt, mas importa.** Um prompt bem estruturado em um modelo de 7B superará um prompt vago em um modelo de 70B — mas, dados prompts equivalentes, os modelos maiores mantêm a aderência às restrições em gerações longas de forma mais confiável e diferenciam as vozes dos personagens com maior fidelidade.',
+          '**A escolha do modelo importa menos do que a estrutura do prompt, mas importa.** Um prompt bem estruturado em um modelo de 7B pode superar um prompt vago em um modelo de 70B — mas, dados prompts equivalentes, os modelos maiores mantêm a aderência às restrições em gerações longas de forma mais confiável e diferenciam as vozes dos personagens com maior fidelidade.',
         columns: ['Tarefa', 'Modelo recomendado', 'Por quê'],
         rows: [
-          { 'Tarefa': 'Escrita de cenas geral', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Forte seguimento de instruções, coerência narrativa, a melhor opção para prosa com restrições' },
-          { 'Tarefa': 'Transferência de estilo', 'Modelo recomendado': 'Mistral Large', 'Por quê': 'Registro de prosa consistente em gerações longas; melhor fidelidade de registro entre os modelos executáveis localmente' },
-          { 'Tarefa': 'Diálogo / voz de personagem', 'Modelo recomendado': 'Command A+ ou Hermes 3', 'Por quê': 'Registro de fala naturalista; diferencia as vozes dos personagens de forma confiável em trocas extensas' },
-          { 'Tarefa': 'Construção de mundos', 'Modelo recomendado': 'Qwen3 32B', 'Por quê': 'Forte na geração de detalhes estruturados; mantém o padrão de expansão de anéis concêntricos de forma confiável' },
-          { 'Tarefa': 'Revisão / edição', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Melhor em seguir instruções de reescrita estrutural específicas ao longo de um parágrafo completo' },
-          { 'Tarefa': 'Ficção sombria / sem censura', 'Modelo recomendado': 'Hermes 3 Llama 3.1', 'Por quê': 'Ajustado para menos recusas de conteúdo; sem restrições de termos de serviço na nuvem ao rodar localmente' },
+          { 'Tarefa': 'Escrita de cenas geral', 'Modelo recomendado': 'Gemma 4 31B', 'Por quê': 'Opção para prosa em uma GPU de 24 GB (download de 19–20 GB, contexto de 256K); Llama 3.3 70B com 48 GB ou mais' },
+          { 'Tarefa': 'Transferência de estilo', 'Modelo recomendado': 'Mistral Small 3 24B', 'Por quê': 'Cabe em uma GPU de 16 GB (download de 14 GB, contexto de 32K); mantenha curta a amostra de técnica' },
+          { 'Tarefa': 'Diálogo / voz de personagem', 'Modelo recomendado': 'Hermes 4.3 36B', 'Por quê': 'Ajuste com poucas recusas; teste com as suas próprias cenas de diálogo' },
+          { 'Tarefa': 'Construção de mundos', 'Modelo recomendado': 'Qwen3.8-27B', 'Por quê': 'O contexto de 256K mantém uma bíblia de mundo longa no prompt (download de 18 GB)' },
+          { 'Tarefa': 'Revisão / edição', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Opção habitual para instruções de reescrita; cerca de 43 GB de download, então 48 GB ou mais' },
+          { 'Tarefa': 'Ficção sombria / sem censura', 'Modelo recomendado': 'Hermes 4.3 36B ou Dolphin 3.0', 'Por quê': 'Ajustados para recusar menos; sem termos de serviço na nuvem ao rodar localmente' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Requisitos mínimos de hardware para modelos de ficção. O Llama 3.3 70B com quantização Q4 requer ~40 GB de VRAM ou memória unificada (NVIDIA RTX 4090 24 GB em GPU dupla, ou Apple M5 Max 64 GB). O Qwen3 32B em Q4 funciona com 20–24 GB. O Mistral Large em Q4 requer ~24 GB. Para equipamentos de 16 GB, o Qwen3 14B e o Mistral Small são o teto prático — ambos seguem os modelos de cena de forma confiável em gerações mais curtas.',
+            text: 'Faixas de hardware. Tamanhos de download da biblioteca do Ollama, apenas pesos; some 2–6 GB para o cache KV em cenas longas. O Gemma 4 31B (19–20 GB) e o Qwen3.8-27B (18 GB) cabem em uma GPU de 24 GB ou em um Mac de 32 GB; o Gemma 4 12B (cerca de 8 GB) em 12 GB; o Mistral Small 3 24B (14 GB) em 16 GB; o Llama 3.3 70B (cerca de 43 GB) exige 48 GB ou mais. O Command A+ (218B em mistura de especialistas, duas GPUs H100 segundo a Cohere) e o Mistral Large (123B, 73 GB de download, licença de pesquisa) são de classe servidor e ficam fora destas faixas.',
           },
         ],
       },
@@ -4400,11 +4489,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: 'Fontes',
         items: [
-          'Model card do Llama 3.3 70B e benchmarks de seguimento de instruções — [Meta AI Research](https://ai.meta.com)',
-          'Relatório técnico do Qwen3 32B — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Documentação do modelo Mistral Large — [Mistral AI](https://mistral.ai)',
-          'Especificação do Command A+ — [Cohere](https://cohere.com)',
-          'Metodologia de fine-tuning do Hermes 3 — [Nous Research](https://nousresearch.com)',
+          'Model card do Llama 3.3 70B e tamanho de download — [Biblioteca do Ollama](https://ollama.com/library/llama3.3)',
+          'Gemma 4 e Qwen3.8: tags, tamanhos e janelas de contexto — [Ollama: Gemma 4](https://ollama.com/library/gemma4), [Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3 e Mistral Large: tamanhos, contexto e licenças — [Ollama: Mistral Small](https://ollama.com/library/mistral-small), [Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'Lançamento do Command A+ (maio de 2026, 218B em mistura de especialistas, Apache 2.0) — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Metodologia de fine-tuning do Hermes — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -4421,7 +4510,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Esses modelos de prompts funcionam em modelos menores (7B–14B)?',
-            a: 'Sim, mas a aderência às restrições se degrada depois de ~150 tokens. Os modelos menores seguem as primeiras 2–3 restrições em um prompt de 5 partes, depois se desviam para o seu registro base. Para modelos de 7B–14B: reduza o limite de palavras (máximo 150 palavras), use menos restrições simultâneas (3 partes em vez de 5), e espere revisar ou refazer prompts com mais frequência. O Qwen3 14B é o modelo pequeno mais sólido testado para o seguimento de prompts específico de ficção.',
+            a: 'Sim, mas a aderência às restrições tende a se degradar à medida que a geração fica mais longa. Os modelos menores seguem as primeiras 2–3 restrições em um prompt de 5 partes, depois se desviam para o seu registro base. Para modelos de 7B–14B: reduza o limite de palavras (máximo 150 palavras), use menos restrições simultâneas (3 partes em vez de 5), e espere revisar ou refazer prompts com mais frequência. O Gemma 4 12B (cerca de 8 GB) é um ponto de partida razoável em uma GPU de 12 GB.',
           },
           {
             q: 'Como mantenho a consistência da voz do personagem ao longo de uma sessão de romance completa?',
@@ -4429,7 +4518,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Qual é o melhor LLM local para escrever ficção sombria ou madura?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou qualquer modelo ajustado para reduzir as recusas de conteúdo. Quando rodado localmente, não há restrições de termos de serviço na nuvem — o fine-tuning base do modelo determina o que ele gerará e o que não gerará. Veja [Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing) para um detalhamento completo das opções de modelos sem censura e o enquadramento ético.',
+            a: 'Hermes 4.3 36B, Dolphin 3.0, ou qualquer modelo ajustado para reduzir as recusas de conteúdo. Quando rodado localmente, não há restrições de termos de serviço na nuvem — o fine-tuning base do modelo determina o que ele gerará e o que não gerará. Veja [Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing) para um detalhamento completo das opções de modelos sem censura e o enquadramento ético.',
           },
           {
             q: 'Posso usar esses modelos no SillyTavern ou no Agnai?',
@@ -4437,11 +4526,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Quão longo deve ser um prompt de cena?',
-            a: 'Um prompt de cena de 50–100 palavras produz os melhores resultados na prática. Os prompts mais longos (200+ palavras) podem funcionar para cenas complexas, mas aumentam a chance de o modelo ignorar algumas restrições. Para cenas complexas, divida o prompt em duas passadas: primeiro gere a cena, depois execute um prompt de revisão que adicione a restrição que você reteve.',
+            a: 'Um prompt de cena de 50–100 palavras costuma funcionar melhor. Os prompts mais longos (200+ palavras) podem funcionar para cenas complexas, mas aumentam a chance de o modelo ignorar algumas restrições. Para cenas complexas, divida o prompt em duas passadas: primeiro gere a cena, depois execute um prompt de revisão que adicione a restrição que você reteve.',
           },
           {
             q: 'Os prompts de transferência de estilo violam direitos autorais?',
-            a: 'Replicar a técnica de um autor (estrutura de frase, escolhas de pontuação, registro narrativo) não é violação de direitos autorais — o estilo não é protegível por direitos autorais. Reproduzir passagens literais substanciais de texto com direitos autorais é violação. Os modelos deste guia usam amostras de 2–3 frases como âncoras de técnica, o que se enquadra no uso justo educacional padrão, e o resultado gerado replica a técnica em vez do conteúdo.',
+            a: 'Na maioria das jurisdições, o direito autoral protege a expressão concreta e não o estilo. Por isso, replicar a técnica de um autor (estrutura de frase, escolhas de pontuação, registro narrativo) normalmente não é violação, enquanto reproduzir passagens literais substanciais de um texto protegido pode ser. Os modelos deste guia usam amostras de 2–3 frases como âncoras de técnica e pedem técnica, não conteúdo. As regras variam conforme o país e o caso; isto é informação geral, não aconselhamento jurídico.',
+          },
+          {
+            q: 'Como escrevo um prompt de sistema para ficção?',
+            a: 'Coloque o gênero, o POV e o registro de prosa na mensagem de sistema, e não no turno do usuário, para que cada geração da sessão os herde. Uma forma básica: "Você é um assistente de ficção de [gênero]. Toda a prosa que você escrever está em [POV, p. ex. terceira pessoa próxima, no passado] e prioriza [p. ex. detalhe sensorial e subtexto]." Em sessões longas, acrescente uma ficha curta do personagem (nome, traço dominante, comportamento contraditório, registro de fala). O LM Studio e o SillyTavern têm um campo próprio para o prompt de sistema; no Ollama, ele é definido com uma linha SYSTEM no Modelfile ou com a mensagem de sistema da API.',
+          },
+          {
+            q: 'Como uso estes modelos no LM Studio?',
+            a: 'Cole as restrições de gênero, POV e registro no campo "System Prompt" da barra lateral do chat do LM Studio e depois digite como mensagem do usuário um modelo de cena, diálogo ou construção de mundos deste guia. O LM Studio também pode executar um servidor local compatível com a OpenAI, então você pode enviar o prompt de sistema e o do usuário separadamente pela API. Os modelos são texto simples, por isso o mesmo texto funciona no Ollama e no LM Studio.',
+          },
+          {
+            q: 'O modelo local pode escrever os prompts por mim?',
+            a: 'Sim. Peça que ele redija um prompt de 5 partes (gênero, POV, restrição sensorial, beat emocional, limite de palavras) para a sua cena e você terá um ponto de partida. Os prompts gerados costumam ser mais vagos do que os modelos deste guia, então trate o resultado como um rascunho e aperte você mesmo as restrições.',
           },
         ],
       },
@@ -4473,31 +4574,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     },
 },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ar.webp',
     title: 'أوامر النماذج اللغوية المحلية لكتّاب الخيال الأدبي: ⁨15⁩ قالباً وتقنية (⁨2026⁩)',
     seoTitle: '⁨15⁩ قالب أوامر ⁨LLM⁩ لكتّاب الروايات والخيال الأدبي',
     intro:
-      'تُنتج النماذج اللغوية المحلية نصوصاً روائية أفضل بشكل ملحوظ عند تزويدها بأوامر مُهيكلة بدلاً من الطلبات المفتوحة. يتضمن هذا الدليل 15 قالب أوامر فعّالاً — لكتابة المشاهد وتطوير الشخصيات والحوار وبناء العوالم ونقل الأسلوب والمراجعة والمهام التحريرية — جميعها مختبرة على Llama 3.3 70B وQwen3 32B وMistral Large تعمل محلياً عبر Ollama أو LM Studio. كل قالب جاهز للنسخ واللصق ويتضمن ما يمكن تعديله بحسب النوع الأدبي.',
+      'تُنتج النماذج اللغوية المحلية نصوصاً روائية أكثر فائدة عند تزويدها بأوامر مُهيكلة بدلاً من الطلبات المفتوحة. يتضمن هذا الدليل 15 قالب أوامر لكتابة المشاهد وتطوير الشخصيات والحوار وبناء العوالم ونقل الأسلوب والمراجعة والمهام التحريرية. كُتبت هذه القوالب لنماذج مفتوحة الأوزان مضبوطة على الإرشاد مثل Gemma 4 وQwen3.8-27B وLlama 3.3 70B تعمل محلياً عبر Ollama أو LM Studio. كل قالب جاهز للنسخ واللصق ويتضمن ما يمكن تعديله بحسب النوع الأدبي.',
     metaDescription:
-      '15 قالب أوامر مُختبر مع Llama 3.3 70B وQwen3 32B وMistral على Ollama وLM Studio: المشاهد والحوار والشخصيات وبناء العوالم، جاهزة للنسخ.',
+      '15 قالب أوامر لكتّاب الخيال الأدبي مع النماذج اللغوية المحلية: المشاهد والحوار والشخصيات وبناء العوالم، جاهزة للنسخ في Ollama وLM Studio.',
     twitterDescription:
-      '15 قالب أوامر للخيال الأدبي مع النماذج اللغوية المحلية: كتابة المشاهد والحوار وتطوير الشخصيات وبناء العوالم ونقل الأسلوب والمراجعة والتحرير. مختبرة على Llama 3.3 70B وQwen3 32B.',
+      '15 قالب أوامر للخيال الأدبي مع النماذج اللغوية المحلية: كتابة المشاهد والحوار وتطوير الشخصيات وبناء العوالم ونقل الأسلوب والمراجعة والتحرير. مكتوبة لـ Gemma 4 وQwen3.8-27B وLlama 3.3 70B.',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      'Apple Silicon Mac 32 GB',
+      'Apple Silicon Mac 48 GB',
     ],
     audience:
       'الروائيون وكتّاب القصص القصيرة والسينارييست ومصممو السرد في الألعاب، الذين يستخدمون النماذج اللغوية المحلية شركاءَ في الكتابة الأولى، ويبحثون عن هياكل أوامر موثوقة تُنتج مخرجات متسقة وقابلة للاستخدام.',
@@ -4513,12 +4618,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'قالب أوامر بناء عالم',
     ],
     leadAnswerBlock:
-      '**أكثر تحسين ملموس في نتائج الخيال الأدبي من النموذج اللغوي المحلي يأتي من الانتقال من "اكتب مشهداً" إلى أمر مُهيكل من 5 أجزاء: النوع الأدبي + زاوية الرؤية + القيد الحسي + النبضة العاطفية + سقف عدد الكلمات. هذا الشكل وحده يُقلل المخرجات المسطحة والتلخيصية بنسبة ~60% من الناحية العملية — إذ يُنتج النموذج نثراً يُريك بدلاً من أن يُخبرك، لأن الأمر لا يترك مجالاً للهروب السهل. لتطوير الشخصيات، أكثر قالب موثوق هو "أمر التناقض": إعطاء الشخصية سمة مهيمنة وسلوكاً متناقضاً، ثم مطالبة النموذج بكتابة مشهد يكشف كليهما دون تسمية أي منهما. للحوار، حدد النص المضمر أولاً — ما يريد الشخصية قوله لكنه لن يقوله — ثم دع النموذج يكتب الجمل المنطوقة حول ذلك المعنى الخفي. للعمل التحريري، استخدم التحقق من اتساق الحبكة لاكتشاف أخطاء الاستمرارية، وتحليل الإيقاع لتحديد المناطق الرتيبة، وتوزيع الشرح لإعادة توزيع كتل المعلومات.**',
+      '**أكثر تحسين ملموس في نتائج الخيال الأدبي من النموذج اللغوي المحلي يأتي من الانتقال من "اكتب مشهداً" إلى أمر مُهيكل من 5 أجزاء: النوع الأدبي + زاوية الرؤية + القيد الحسي + النبضة العاطفية + سقف عدد الكلمات. هذا الشكل لا يترك مجالاً للهروب السهل، ولذلك يميل النموذج إلى إنتاج نثر يُريك بدلاً من أن يُخبرك. لتطوير الشخصيات، أكثر قالب موثوق هو "أمر التناقض": إعطاء الشخصية سمة مهيمنة وسلوكاً متناقضاً، ثم مطالبة النموذج بكتابة مشهد يكشف كليهما دون تسمية أي منهما. للحوار، حدد النص المضمر أولاً — ما يريد الشخصية قوله لكنه لن يقوله — ثم دع النموذج يكتب الجمل المنطوقة حول ذلك المعنى الخفي. للعمل التحريري، استخدم التحقق من اتساق الحبكة لاكتشاف أخطاء الاستمرارية، وتحليل الإيقاع لتحديد المناطق الرتيبة، وتوزيع الشرح لإعادة توزيع كتل المعلومات.**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل قوالب الأوامر لكتّاب الخيال الأدبي الذين يستخدمون النماذج اللغوية المحلية؟',
         answer:
-          'أكثر هيكل أوامر موثوق للخيال الأدبي هو: النوع الأدبي + زاوية الرؤية + القيد الحسي + النبضة العاطفية + سقف عدد الكلمات. ينتج هذا نثراً يُريك بدلاً من ملخص للحبكة. لتطوير الشخصيات، استخدم "أمر التناقض" (سمة مهيمنة + سلوك متناقض، كشف كليهما دون تسمية أي منهما). للحوار، حدد النص المضمر أولاً (ما تريده الشخصية لكنها لن تقوله)، ثم اكتب الجمل المنطوقة. لبناء العوالم، أرسِّخ في تفصيل حسي واحد قبل التوسع للخارج. تعمل هذه القوالب مع أي نموذج مضبوط على الإرشاد؛ النماذج الأكبر (Llama 3.3 70B وQwen3 32B) تحافظ على الالتزام بالقيود بشكل أفضل في التوليد الطويل.',
+          'أكثر هيكل أوامر موثوق للخيال الأدبي هو: النوع الأدبي + زاوية الرؤية + القيد الحسي + النبضة العاطفية + سقف عدد الكلمات. ينتج هذا نثراً يُريك بدلاً من ملخص للحبكة. لتطوير الشخصيات، استخدم "أمر التناقض" (سمة مهيمنة + سلوك متناقض، كشف كليهما دون تسمية أي منهما). للحوار، حدد النص المضمر أولاً (ما تريده الشخصية لكنها لن تقوله)، ثم اكتب الجمل المنطوقة. لبناء العوالم، أرسِّخ في تفصيل حسي واحد قبل التوسع للخارج. تعمل هذه القوالب مع أي نموذج مضبوط على الإرشاد؛ النماذج الأكبر (Gemma 4 31B وQwen3.8-27B وLlama 3.3 70B) تميل إلى الالتزام بالقيود بشكل أفضل في التوليد الطويل.',
         bullets: [
           'أمر المشهد: النوع الأدبي + زاوية الرؤية + 1–2 تفاصيل حسية + نبضة عاطفية + سقف عدد الكلمات (150–400 كلمة).',
           'تطوير الشخصيات: سمة مهيمنة + سلوك متناقض، كشف كليهما دون تسمية أي منهما.',
@@ -4527,9 +4632,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           'نقل الأسلوب: سمِّ 2–3 تقنيات محددة للكاتب المستهدف، الصق عينة جملتين، ثم ولّد باستخدام تلك التقنيات.',
           'المراجعة: الصق المسودة، سمِّ المشكلة المحددة (صوت مبني للمجهول، إفراط في الظروف، تحول زاوية رؤية)، اطلب إعادة الكتابة.',
           'التحرير: يكشف التحقق من الاتساق أخطاء الاستمرارية؛ يُعيِّن تحليل الإيقاع الفصولَ البطيئة؛ توزيع الشرح يُعيد توزيع كتل المعلومات.',
-          'النماذج الأكبر تحافظ على الالتزام بالقيود بشكل أفضل؛ Llama 3.3 70B هو الخيار الافتراضي لمعظم مهام الخيال الأدبي.',
+          'النماذج الأكبر تميل إلى الالتزام بالقيود بشكل أفضل: Gemma 4 31B أو Qwen3.8-27B على وحدة GPU بسعة 24 GB، وLlama 3.3 70B عند توفر 48 GB أو أكثر.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -4557,11 +4662,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**الأوامر المُهيكلة تتفوق على الطلبات المفتوحة في الخيال الأدبي.** أمر مشهد من 5 أجزاء (النوع الأدبي + زاوية الرؤية + القيد الحسي + النبضة العاطفية + سقف الكلمات) يُنتج نثراً يُريك؛ "اكتب مشهداً" يُنتج ملخص حبكة. القالب هو التقنية.',
           '**أمر التناقض هو أكثر هيكل موثوق لتطوير الشخصيات.** أعطِ النموذج سمة مهيمنة وسلوكاً متناقضاً؛ اطلب منه الكشف عن كليهما دون تسمية أي منهما. ينتج هذا شخصيات ذات طبقات يجب على القارئ استنتاجها.',
-          '**جودة الحوار تتضاعف حين تحدد النص المضمر قبل الجمل المنطوقة.** أخبر النموذج أولاً بما تريده الشخصية لكنها لن تقوله. تعمل الكلمات المنطوقة بعدها حول ذلك المعنى الخفي بشكل طبيعي.',
+          '**يتحسن الحوار حين تحدد النص المضمر قبل الجمل المنطوقة.** أخبر النموذج أولاً بما تريده الشخصية لكنها لن تقوله. تعمل الكلمات المنطوقة بعدها حول ذلك المعنى الخفي بشكل طبيعي.',
           '**حدود الكلمات تمنع الحشو.** حد 200 كلمة في أمر مشهد يُجبر على الضغط؛ النموذج يجب أن يكون دقيقاً. زِده بزيادات 100 كلمة عند الحاجة، لكن دائماً حدد سقفاً.',
-          '**أوامر المراجعة تحتاج مشكلة مُسمَّاة.** "أعد كتابة هذا" يُنتج تغييراً ضئيلاً. "أعد الكتابة: احذف كل المبني للمجهول، يجب أن تبدأ كل جملة باسم ملموس أو فعل قوي" يُنتج تحسناً قابلاً للقياس.',
+          '**أوامر المراجعة تحتاج مشكلة مُسمَّاة.** "أعد كتابة هذا" يُنتج تغييراً ضئيلاً. "أعد الكتابة: احذف كل المبني للمجهول، يجب أن تبدأ كل جملة باسم ملموس أو فعل قوي" يميل إلى إحداث تحسن أوضح.',
           '**القوالب التحريرية تعمل على مستوى المخطوطة.** التحقق من اتساق الحبكة وتحليل الإيقاع وتوزيع الشرح تعمل على المشاهد والفصول المكتملة — شغِّلها بعد الصياغة، ليس أثناءها.',
-          '**النماذج الأكبر تحافظ على الالتزام بالقيود بشكل أفضل في التوليدات الطويلة.** Llama 3.3 70B وQwen3 32B يتبعان قيود مشهد 5 أجزاء بشكل موثوق؛ النماذج الأصغر تنحرف بعد ~200 رمز.',
+          '**النماذج الأكبر تميل إلى الالتزام بالقيود بشكل أفضل في التوليدات الطويلة.** Gemma 4 31B وQwen3.8-27B وLlama 3.3 70B هي النماذج التي كُتبت هذه الصفحة حولها؛ والنماذج الأصغر تميل إلى الانحراف أبكر.',
           '**الواجهة أقل أهمية من النموذج والأمر.** Ollama وLM Studio وSillyTavern وAgnai كلها تمرر أمرك نصياً — الفرق في جودة الخيال الأدبي يكمن في النموذج + الأمر، ليس في الواجهة.',
         ],
       },
@@ -4570,11 +4675,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'حقائق سريعة',
         items: [
           '**القوالب المغطاة:** 15 إجمالاً — كتابة المشاهد (2)، تطوير الشخصيات (3)، الحوار (2)، بناء العوالم (2)، نقل الأسلوب (2)، المراجعة (1)، التحرير (3).',
-          '**مختبرة على:** Llama 3.3 70B وQwen3 32B وMistral Large — جميعها عبر Ollama على Apple M5 Max 64 GB وNVIDIA RTX 4090 24 GB.',
+          '**كُتبت من أجل:** نماذج مفتوحة الأوزان مضبوطة على الإرشاد تعمل عبر Ollama أو LM Studio، مثل Gemma 4 31B وQwen3.8-27B وMistral Small 3 24B وLlama 3.3 70B.',
           '**حدود الكلمات:** 150–400 كلمة للمشاهد؛ 100–200 كلمة للحوار؛ 300–600 كلمة لمقاطع بناء العوالم.',
-          '**أفضل نموذج عام للخيال الأدبي:** Llama 3.3 70B (اتباع تعليمات قوي، تماسك سردي، سياق طويل).',
-          '**الأفضل لنقل الأسلوب:** Mistral Large (سجل نثري متسق في التوليدات الطويلة؛ يُعيد إنتاج أنماط صوت الكاتب بشكل موثوق).',
-          '**الأفضل للحوار:** Command A+ أو Hermes 3 (تمييز أصوات الشخصيات؛ سجل محكي طبيعي).',
+          '**نموذج البداية على GPU بسعة 24 GB:** Gemma 4 31B أو Qwen3.8-27B، ولكل منهما نافذة سياق 256K؛ وLlama 3.3 70B عند توفر 48 GB أو أكثر (انظر جدول النماذج أدناه).',
+          '**نقل الأسلوب:** Mistral Small 3 24B على GPU بسعة 16 GB، أو أكبر نموذج يتسع في ذاكرتك؛ اجعل عينة التقنية من 2–3 جمل.',
+          '**الحوار والخيال الأدبي بقيود رفض أقل:** Hermes 4.3 36B؛ أما Command A+ (218B معامل، مزيج خبراء) فيحتاج إلى وحدات GPU بمستوى الخوادم.',
           '**أمر النظام:** حدد النوع الأدبي وزاوية الرؤية في رسالة نظام، ليس في دور المستخدم — يُرسِّخ كل توليد في الجلسة.',
         ],
       },
@@ -4654,7 +4759,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: 'قوالب كتابة المشاهد (القوالب 1–2)',
         content:
-          '**قالب المشهد من 5 أجزاء هو الأساس: النوع الأدبي + زاوية الرؤية + المرساة الحسية + النبضة العاطفية + سقف الكلمات.** كل عنصر يؤدي دوراً محدداً — احذف أياً منها وتنخفض جودة المخرج بشكل قابل للقياس.',
+          '**قالب المشهد من 5 أجزاء هو الأساس: النوع الأدبي + زاوية الرؤية + المرساة الحسية + النبضة العاطفية + سقف الكلمات.** كل عنصر يؤدي دوراً محدداً — احذف أياً منها وتميل جودة المخرج إلى الانخفاض.',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           'بنية موجه المشهد المكونة من 5 أجزاء للخيال بنماذج اللغة المحلية: النوع الأدبي، وجهة النظر، المرساة الحسية، اللحظة العاطفية، وسقف كلمات من 150–400 كلمة — كل قيد أساسي.',
@@ -4680,7 +4785,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: 'القالب 1 — هيكل مشهد من 5 أجزاء',
         content:
-          'القالب الأساسي. العناصر الخمسة ضرورية — احذف أياً منها وتنخفض جودة المخرج بشكل قابل للقياس.',
+          'القالب الأساسي. العناصر الخمسة ضرورية — احذف أياً منها وتميل جودة المخرج إلى الانخفاض.',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -4872,7 +4977,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: 'Mistral Large لنقل الأسلوب. يحافظ Mistral Large على سجل نثري متسق في التوليدات الطويلة أفضل من معظم النماذج القابلة للتشغيل محلياً. لمهام نقل الأسلوب حيث يهم اتساق السجل عبر فقرات متعددة، فضِّل Mistral Large على Llama 3.3 70B. لنقل الأسلوب في دفعات قصيرة (أقل من 300 كلمة)، أي نموذج 30B+ يعمل بشكل كافٍ.',
+            text: 'اختر النموذج بحسب طول المهمة. لنقل الأسلوب عبر عدة فقرات، استخدم أكبر نموذج يتسع في ذاكرتك (Gemma 4 31B أو Qwen3.8-27B أو Llama 3.3 70B) واجعل عينة التقنية من 2–3 جمل. أما للدفعات القصيرة (أقل من 300 كلمة) فعادةً يكفي نموذج 24B مثل Mistral Small 3.',
           },
         ],
       },
@@ -4911,7 +5016,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: 'قوالب المراجعة (القالب 12)',
         content:
-          '**أوامر المراجعة تحتاج مشكلة مُسمَّاة، لا تعليمة تحسين عامة.** "اجعل هذا أفضل" يُنتج تعديلات سطحية ضئيلة. "احذف كل البناء للمجهول؛ يجب أن تبدأ كل جملة باسم ملموس أو فعل مضارع نشط قوي" يُنتج تغييراً هيكلياً قابلاً للقياس.',
+          '**أوامر المراجعة تحتاج مشكلة مُسمَّاة، لا تعليمة تحسين عامة.** "اجعل هذا أفضل" يُنتج تعديلات سطحية ضئيلة. "احذف كل البناء للمجهول؛ يجب أن تبدأ كل جملة باسم ملموس أو فعل مضارع نشط قوي" يميل إلى إحداث تغيير هيكلي أوضح.',
         items: [
           '**دائماً الصق المسودة، لا وصفاً لها.** أوامر المراجعة تعمل فقط حين تلصق النص الفعلي للمسودة. وصف المشكلة دون إظهار النثر يُنتج نصائح عامة بدلاً من مقطع مُعاد كتابته.',
           '**سمِّ المشكلة المحددة.** "أعد الكتابة" ليس كافياً. حدد مشكلة هيكلية: صوت مبني للمجهول، إفراط في الظروف، تحول زاوية رؤية، حشو أو إلقاء معلومات.',
@@ -5009,20 +5114,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: 'توصيات النماذج لكتابة الخيال الأدبي',
         content:
-          '**اختيار النموذج أقل أهمية من هيكل الأمر، لكنه مهم.** أمر جيد الهيكلة على نموذج 7B سيتفوق على أمر غامض على نموذج 70B — لكن مع أوامر متكافئة، تحافظ النماذج الأكبر على الالتزام بالقيود في التوليدات الطويلة بشكل أكثر موثوقية وتُميز أصوات الشخصيات بدقة أعلى.',
+          '**اختيار النموذج أقل أهمية من هيكل الأمر، لكنه مهم.** أمر جيد الهيكلة على نموذج 7B قد يتفوق على أمر غامض على نموذج 70B — لكن مع أوامر متكافئة، تحافظ النماذج الأكبر على الالتزام بالقيود في التوليدات الطويلة بشكل أكثر موثوقية وتُميز أصوات الشخصيات بدقة أعلى.',
         columns: ['المهمة', 'النموذج الموصى به', 'السبب'],
         rows: [
-          { 'المهمة': 'كتابة المشاهد العامة', 'النموذج الموصى به': 'Llama 3.3 70B', 'السبب': 'اتباع تعليمات قوي، تماسك سردي، الخيار الأفضل للنثر المقيَّد' },
-          { 'المهمة': 'نقل الأسلوب', 'النموذج الموصى به': 'Mistral Large', 'السبب': 'سجل نثري متسق في التوليدات الطويلة؛ أفضل دقة سجل بين النماذج القابلة للتشغيل محلياً' },
-          { 'المهمة': 'الحوار / صوت الشخصية', 'النموذج الموصى به': 'Command A+ أو Hermes 3', 'السبب': 'سجل محكي طبيعي؛ يُميز أصوات الشخصيات بشكل موثوق في التبادلات الموسَّعة' },
-          { 'المهمة': 'بناء العوالم', 'النموذج الموصى به': 'Qwen3 32B', 'السبب': 'قوي في توليد التفاصيل المُهيكلة؛ يحافظ على نمط توسع الحلقات المتحدة المركز بشكل موثوق' },
-          { 'المهمة': 'المراجعة / التحرير', 'النموذج الموصى به': 'Llama 3.3 70B', 'السبب': 'الأفضل في اتباع تعليمات إعادة الكتابة الهيكلية المحددة عبر فقرة كاملة' },
-          { 'المهمة': 'الخيال الداكن / غير المقيَّد', 'النموذج الموصى به': 'Hermes 3 Llama 3.1', 'السبب': 'مضبوط لرفض أقل للمحتوى؛ بدون قيود شروط خدمة سحابية عند التشغيل محلياً' },
+          { 'المهمة': 'كتابة المشاهد العامة', 'النموذج الموصى به': 'Gemma 4 31B', 'السبب': 'خيار النثر على GPU بسعة 24 GB (تنزيل 19–20 GB، سياق 256K)؛ وLlama 3.3 70B عند توفر 48 GB أو أكثر' },
+          { 'المهمة': 'نقل الأسلوب', 'النموذج الموصى به': 'Mistral Small 3 24B', 'السبب': 'يتسع في GPU بسعة 16 GB (تنزيل 14 GB، سياق 32K)؛ أبقِ عينة التقنية قصيرة' },
+          { 'المهمة': 'الحوار / صوت الشخصية', 'النموذج الموصى به': 'Hermes 4.3 36B', 'السبب': 'ضبط دقيق بقيود رفض أقل؛ جرّبه على مشاهد الحوار الخاصة بك' },
+          { 'المهمة': 'بناء العوالم', 'النموذج الموصى به': 'Qwen3.8-27B', 'السبب': 'سياق 256K يُبقي دليل العالم الطويل داخل الأمر (تنزيل 18 GB)' },
+          { 'المهمة': 'المراجعة / التحرير', 'النموذج الموصى به': 'Llama 3.3 70B', 'السبب': 'الخيار المعتاد لتعليمات إعادة الكتابة؛ تنزيل نحو 43 GB، أي 48 GB أو أكثر' },
+          { 'المهمة': 'الخيال الداكن / غير المقيَّد', 'النموذج الموصى به': 'Hermes 4.3 36B أو Dolphin 3.0', 'السبب': 'مضبوطان لرفض أقل؛ لا تنطبق شروط خدمة سحابية عند التشغيل محلياً' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'الحد الأدنى من متطلبات الأجهزة لنماذج الخيال الأدبي. Llama 3.3 70B مع تكميم Q4 يتطلب ~40 GB من VRAM أو ذاكرة موحدة (NVIDIA RTX 4090 24 GB على GPU مزدوج، أو Apple M5 Max 64 GB). Qwen3 32B بـQ4 يعمل بـ20–24 GB. Mistral Large بـQ4 يتطلب ~24 GB. للأجهزة ذات 16 GB، Qwen3 14B وMistral Small هما السقف العملي — كلاهما يتبع قوالب المشهد بشكل موثوق في التوليدات الأقصر.',
+            text: 'مستويات العتاد. أحجام التنزيل من مكتبة Ollama وتشمل الأوزان فقط؛ أضف 2–6 GB لذاكرة KV المؤقتة في المشاهد الطويلة. يتسع Gemma 4 31B (19–20 GB) وQwen3.8-27B (18 GB) في GPU بسعة 24 GB أو Mac بسعة 32 GB؛ وGemma 4 12B (نحو 8 GB) في 12 GB؛ وMistral Small 3 24B (14 GB) في 16 GB؛ أما Llama 3.3 70B (نحو 43 GB) فيحتاج إلى 48 GB أو أكثر. Command A+ (218B بمعمارية مزيج الخبراء، ووحدتا H100 بحسب Cohere) وMistral Large (123B، تنزيل 73 GB، ترخيص بحثي) من فئة الخوادم وخارج هذه المستويات.',
           },
         ],
       },
@@ -5041,11 +5146,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: 'المصادر',
         items: [
-          'ورقة نموذج Llama 3.3 70B ومعايير اتباع التعليمات — [Meta AI Research](https://ai.meta.com)',
-          'التقرير التقني لـ Qwen3 32B — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'توثيق نموذج Mistral Large — [Mistral AI](https://mistral.ai)',
-          'مواصفات Command A+ — [Cohere](https://cohere.com)',
-          'منهجية الضبط الدقيق لـ Hermes 3 — [Nous Research](https://nousresearch.com)',
+          'ورقة نموذج Llama 3.3 70B وحجم التنزيل — [مكتبة Ollama](https://ollama.com/library/llama3.3)',
+          'وسوم Gemma 4 وQwen3.8 وأحجامها ونوافذ السياق — [Ollama: Gemma 4](https://ollama.com/library/gemma4)، [Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'أحجام Mistral Small 3 وMistral Large وسياقهما وتراخيصهما — [Ollama: Mistral Small](https://ollama.com/library/mistral-small)، [Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'إطلاق Command A+ (مايو 2026، 218B بمعمارية مزيج الخبراء، Apache 2.0) — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'منهجية الضبط الدقيق لـ Hermes — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -5062,7 +5167,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'هل تعمل قوالب الأوامر هذه مع النماذج الأصغر (7B–14B)؟',
-            a: 'نعم، لكن الالتزام بالقيود يتدهور بعد ~150 رمزاً. النماذج الأصغر تتبع أول 2–3 قيود في أمر 5 أجزاء، ثم تنجرف نحو سجلها الأساسي. للنماذج 7B–14B: قلل سقف الكلمات (150 كلمة كحد أقصى)، استخدم قيوداً أقل في وقت واحد (3 أجزاء بدلاً من 5)، وتوقع مراجعة أو إعادة أمر أكثر تكراراً. Qwen3 14B هو أقوى نموذج صغير تم اختباره لاتباع الأوامر الخاصة بالخيال الأدبي.',
+            a: 'نعم، لكن الالتزام بالقيود يميل إلى التراجع كلما طال التوليد. النماذج الأصغر تتبع أول 2–3 قيود في أمر 5 أجزاء، ثم تنجرف نحو سجلها الأساسي. للنماذج 7B–14B: قلل سقف الكلمات (150 كلمة كحد أقصى)، استخدم قيوداً أقل في وقت واحد (3 أجزاء بدلاً من 5)، وتوقع مراجعة أو إعادة أمر أكثر تكراراً. يُعد Gemma 4 12B (نحو 8 GB) نقطة بداية معقولة على GPU بسعة 12 GB.',
           },
           {
             q: 'كيف أحافظ على اتساق صوت الشخصية عبر جلسة رواية كاملة؟',
@@ -5070,7 +5175,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ما أفضل نموذج لغوي محلي لكتابة الخيال الداكن أو الناضج؟',
-            a: 'Hermes 3 Llama 3.1 وDolphin 3.0 Mistral، أو أي نموذج مضبوط لتقليل رفض المحتوى. عند التشغيل محلياً، لا توجد قيود شروط خدمة سحابية — الضبط الدقيق الأساسي للنموذج يحدد ما سيولّده وما لن يولّده. انظر [أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing) للاطلاع على تفصيل كامل لخيارات النماذج غير المقيَّدة والإطار الأخلاقي.',
+            a: 'Hermes 4.3 36B وDolphin 3.0، أو أي نموذج مضبوط لتقليل رفض المحتوى. عند التشغيل محلياً، لا توجد قيود شروط خدمة سحابية — الضبط الدقيق الأساسي للنموذج يحدد ما سيولّده وما لن يولّده. انظر [أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing) للاطلاع على تفصيل كامل لخيارات النماذج غير المقيَّدة والإطار الأخلاقي.',
           },
           {
             q: 'هل يمكنني استخدام هذه القوالب في SillyTavern أو Agnai؟',
@@ -5078,11 +5183,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ما الطول المناسب لأمر المشهد؟',
-            a: 'أمر مشهد من 50–100 كلمة يُنتج أفضل النتائج من الناحية العملية. الأوامر الأطول (200+ كلمة) يمكن أن تعمل للمشاهد المعقدة لكنها تزيد احتمال تجاهل النموذج لبعض القيود. للمشاهد المعقدة، قسِّم الأمر إلى مرحلتين: ولِّد المشهد أولاً، ثم شغِّل أمر مراجعة يضيف القيد الذي احتجزته.',
+            a: 'أمر مشهد من 50–100 كلمة يُعطي عادةً أفضل النتائج. الأوامر الأطول (200+ كلمة) يمكن أن تعمل للمشاهد المعقدة لكنها تزيد احتمال تجاهل النموذج لبعض القيود. للمشاهد المعقدة، قسِّم الأمر إلى مرحلتين: ولِّد المشهد أولاً، ثم شغِّل أمر مراجعة يضيف القيد الذي احتجزته.',
           },
           {
             q: 'هل أوامر نقل الأسلوب تنتهك حقوق النشر؟',
-            a: 'نسخ تقنية الكاتب (هيكل الجملة، اختيارات الترقيم، السجل السردي) لا يُعد انتهاكاً لحقوق النشر — الأسلوب لا تحميه حقوق النشر. نسخ مقاطع نصية مطوَّلة من نص محمي بحقوق النشر يُعد انتهاكاً. تستخدم قوالب هذا الدليل عينات من 2–3 جمل كمراسٍ تقنية، وهو ما يقع ضمن الاستخدام التعليمي العادل القياسي، والمخرج المُولَّد يُعيد إنتاج التقنية لا المحتوى.',
+            a: 'في معظم الولايات القضائية تحمي حقوق النشر التعبير المحدد لا الأسلوب. لذلك فإن نسخ تقنية الكاتب (هيكل الجملة، اختيارات الترقيم، السجل السردي) لا يُعد عادةً انتهاكاً، بينما قد يُعد نسخ مقاطع نصية مطوَّلة حرفياً من نص محمي انتهاكاً. تستخدم قوالب هذا الدليل عينات من 2–3 جمل كمراسٍ تقنية وتطلب التقنية لا المحتوى. تختلف القواعد باختلاف البلد والحالة، وهذه معلومات عامة وليست استشارة قانونية.',
+          },
+          {
+            q: 'كيف أكتب أمر نظام (system prompt) للخيال الأدبي؟',
+            a: 'ضع النوع الأدبي وزاوية الرؤية والسجل النثري في رسالة النظام بدلاً من دور المستخدم، فترثها كل عملية توليد في الجلسة. صيغة أساسية: «أنت مساعد خيال أدبي من نوع [النوع]. كل نثر تكتبه يكون بـ[زاوية الرؤية، مثل الشخص الثالث القريب بصيغة الماضي] ويُركّز على [مثل التفاصيل الحسية والنص المضمر].» وللجلسات الطويلة أضف بطاقة شخصية قصيرة (الاسم، السمة المهيمنة، السلوك المتناقض، سجل الكلام). لدى LM Studio وSillyTavern حقل مخصص لأمر النظام؛ وفي Ollama يُضبط عبر سطر SYSTEM في Modelfile أو عبر رسالة النظام في واجهة API.',
+          },
+          {
+            q: 'كيف أستخدم هذه القوالب في LM Studio؟',
+            a: 'الصق قيود النوع الأدبي وزاوية الرؤية والسجل في حقل «System Prompt» في الشريط الجانبي للدردشة في LM Studio، ثم اكتب قالب مشهد أو حوار أو بناء عوالم من هذا الدليل كرسالة مستخدم. يمكن لـ LM Studio أيضاً تشغيل خادم محلي متوافق مع OpenAI، فيمكنك إرسال أمر النظام وأمر المستخدم منفصلين عبر API. القوالب نص عادي، لذا يعمل النص نفسه في Ollama وLM Studio.',
+          },
+          {
+            q: 'هل يستطيع النموذج المحلي كتابة الأوامر بدلاً مني؟',
+            a: 'نعم. اطلب منه صياغة أمر من 5 أجزاء (النوع الأدبي، زاوية الرؤية، القيد الحسي، النبضة العاطفية، سقف عدد الكلمات) لمشهدك فتحصل على نقطة بداية. تميل الأوامر المولَّدة إلى أن تكون أقل تحديداً من قوالب هذا الدليل، لذا تعامل مع الناتج كمسودة وشدِّد القيود بنفسك.',
           },
         ],
       },
@@ -5114,31 +5231,35 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     },
 },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ko.webp',
     title: '소설 작가를 위한 로컬 LLM 프롬프트: 15가지 템플릿과 기법 (2026)',
     seoTitle: '소설 작가를 위한 로컬 LLM 프롬프트 15가지 2026',
     intro:
-      '로컬 LLM은 열린 요청 대신 구조화된 프롬프트를 제공할 때 현저히 뛰어난 소설을 생성합니다. 이 가이드는 실제로 작동하는 프롬프트 템플릿 15가지를 다룹니다 — 장면 쓰기, 인물 개발, 대화, 세계관 구축, 문체 이전, 퇴고 및 편집 작업 — 모두 Ollama 또는 LM Studio를 통해 로컬에서 실행되는 Llama 3.3 70B, Qwen3 32B, Mistral Large로 테스트되었습니다. 각 템플릿은 복사하여 바로 사용할 수 있으며 장르에 따라 조정할 부분도 포함되어 있습니다.',
+      '로컬 LLM은 열린 요청 대신 구조화된 프롬프트를 제공할 때 더 쓸모 있는 소설을 생성합니다. 이 가이드는 장면 쓰기, 인물 개발, 대화, 세계관 구축, 문체 이전, 퇴고 및 편집 작업을 위한 프롬프트 템플릿 15가지를 다룹니다. 이 템플릿은 Ollama 또는 LM Studio를 통해 로컬에서 실행되는 Gemma 4, Qwen3.8-27B, Llama 3.3 70B 같은 instruction-tuned 오픈 웨이트 모델을 기준으로 작성되었습니다. 각 템플릿은 복사하여 바로 사용할 수 있으며 장르에 따라 조정할 부분도 포함되어 있습니다.',
     metaDescription:
       '로컬 LLM을 사용하는 소설 작가를 위한 프롬프트 템플릿 15가지: 장면, 인물, 대화, 세계관, 문체. Ollama와 LM Studio에 바로 사용 가능.',
     twitterDescription:
-      '로컬 LLM 소설용 프롬프트 템플릿 15가지: 장면, 대화, 인물, 세계관 구축, 문체 이전, 퇴고, 편집. Llama 3.3 70B, Qwen3 32B로 테스트.',
+      '로컬 LLM 소설용 프롬프트 템플릿 15가지: 장면, 대화, 인물, 세계관 구축, 문체 이전, 퇴고, 편집. Gemma 4, Qwen3.8-27B, Llama 3.3 70B 기준으로 작성.',
     current_models_mentioned: [
+      'Gemma 4 31B',
+      'Qwen3.8-27B',
+      'Gemma 4 12B',
+      'Mistral Small 3 24B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
+      'Hermes 4.3 36B',
+      'Dolphin 3.0',
       'Command A+',
-      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
-      'Apple M5 MacBook Pro 16 GB',
       'NVIDIA RTX 4090 24 GB',
-      'Apple M5 Max 64 GB',
+      'Apple Silicon Mac 32 GB',
+      'Apple Silicon Mac 48 GB',
     ],
     audience:
       '로컬 LLM을 초안 작성 파트너로 활용하는 소설가, 단편 작가, 시나리오 작가, 게임 내러티브 디자이너로, 일관되고 활용 가능한 결과물을 생성하는 신뢰할 수 있는 프롬프트 구조를 원하는 분들입니다.',
@@ -5154,12 +5275,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       '세계관 구축 프롬프트 템플릿',
     ],
     leadAnswerBlock:
-      '**로컬 LLM의 소설 출력에서 가장 큰 개선은 "장면을 써줘"에서 5부 구조 프롬프트(장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한)로 전환할 때 나타납니다. 이 형식만으로도 실제로 평범하고 요약 위주의 출력이 약 60% 감소합니다 — 모델이 쉬운 지름길을 택할 여지가 없기 때문에 묘사하는 산문을 생성합니다. 인물 개발을 위한 가장 신뢰할 수 있는 템플릿은 "모순 프롬프트"입니다: 인물에게 지배적인 성격과 모순되는 행동을 부여한 뒤, 어느 쪽도 명시하지 않고 두 가지를 모두 드러내는 장면을 써달라고 요청합니다. 대화의 경우, 먼저 하위 텍스트(인물이 말하고 싶지만 말하지 않을 것)를 설정한 뒤 그 숨겨진 메시지 주변의 대사를 생성하게 합니다. 편집 작업의 경우, 플롯 일관성 확인으로 연속성 오류를 감지하고, 리듬 분석으로 평탄한 구역을 파악하며, 노출 완화로 정보 블록을 재배치합니다.**',
+      '**로컬 LLM의 소설 출력에서 가장 큰 개선은 "장면을 써줘"에서 5부 구조 프롬프트(장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한)로 전환할 때 나타납니다. 이 형식은 쉬운 지름길을 택할 여지를 남기지 않으므로, 모델이 줄거리 요약 대신 묘사하는 산문을 생성하는 경향이 있습니다. 인물 개발을 위한 가장 신뢰할 수 있는 템플릿은 "모순 프롬프트"입니다: 인물에게 지배적인 성격과 모순되는 행동을 부여한 뒤, 어느 쪽도 명시하지 않고 두 가지를 모두 드러내는 장면을 써달라고 요청합니다. 대화의 경우, 먼저 하위 텍스트(인물이 말하고 싶지만 말하지 않을 것)를 설정한 뒤 그 숨겨진 메시지 주변의 대사를 생성하게 합니다. 편집 작업의 경우, 플롯 일관성 확인으로 연속성 오류를 감지하고, 리듬 분석으로 평탄한 구역을 파악하며, 노출 완화로 정보 블록을 재배치합니다.**',
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM을 사용하는 소설 작가에게 가장 좋은 프롬프트 템플릿은 무엇입니까?',
         answer:
-          '소설에 가장 신뢰할 수 있는 프롬프트 구조는 장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한입니다. 이는 줄거리 요약이 아닌 묘사하는 산문을 생성합니다. 인물 개발을 위해서는 "모순 프롬프트"(지배적인 성격 + 모순되는 행동, 어느 쪽도 명시하지 않고 두 가지 모두 드러냄)를 사용하십시오. 대화의 경우, 먼저 하위 텍스트(인물이 원하지만 말하지 않을 것)를 설정한 뒤 대사를 씁니다. 세계관 구축은 하나의 감각적 세부 사항에 고정하고 바깥쪽으로 확장합니다. 이 템플릿들은 instruction-tuned 모델에서 작동하며, 더 큰 모델(Llama 3.3 70B, Qwen3 32B)은 긴 생성에서 제약 조건 준수를 더 잘 유지합니다.',
+          '소설에 가장 신뢰할 수 있는 프롬프트 구조는 장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한입니다. 이는 줄거리 요약이 아닌 묘사하는 산문을 생성합니다. 인물 개발을 위해서는 "모순 프롬프트"(지배적인 성격 + 모순되는 행동, 어느 쪽도 명시하지 않고 두 가지 모두 드러냄)를 사용하십시오. 대화의 경우, 먼저 하위 텍스트(인물이 원하지만 말하지 않을 것)를 설정한 뒤 대사를 씁니다. 세계관 구축은 하나의 감각적 세부 사항에 고정하고 바깥쪽으로 확장합니다. 이 템플릿들은 instruction-tuned 모델에서 작동하며, 더 큰 모델(Gemma 4 31B, Qwen3.8-27B, Llama 3.3 70B)은 긴 생성에서 제약 조건을 더 잘 지키는 경향이 있습니다.',
         bullets: [
           '장면 프롬프트: 장르 + 시점 + 감각적 세부 사항 1–2개 + 감정 비트 + 단어 제한 (150–400단어).',
           '인물 개발: 지배적인 성격 + 모순되는 행동, 어느 쪽도 명시하지 않고 두 가지 모두 드러냄.',
@@ -5168,9 +5289,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           '문체 이전: 목표 작가의 특정 기법 2–3가지를 명시하고, 2문장 샘플을 붙여넣은 뒤 그 기법을 사용하여 생성.',
           '퇴고: 초안을 붙여넣고, 특정 문제(수동태, 부사 과다, 시점 전환)를 명시한 뒤 재작성 요청.',
           '편집: 일관성 확인으로 연속성 오류 감지; 리듬 분석으로 챕터별 속도 매핑; 노출 완화로 정보 블록 재배치.',
-          '더 큰 모델이 제약 조건 준수를 더 잘 유지하며, Llama 3.3 70B가 대부분의 소설 작업에 기본 선택입니다.',
+          '더 큰 모델이 제약 조건을 더 잘 지키는 경향이 있습니다: 24 GB GPU에서는 Gemma 4 31B 또는 Qwen3.8-27B, 48 GB 이상에서는 Llama 3.3 70B입니다.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -5198,11 +5319,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         items: [
           '**구조화된 프롬프트가 소설에서 열린 요청을 능가합니다.** 5부 장면 프롬프트(장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한)는 묘사하는 산문을 생성하고, "장면을 써줘"는 줄거리 요약을 생성합니다. 템플릿이 곧 기법입니다.',
           '**모순 프롬프트가 가장 신뢰할 수 있는 인물 개발 구조입니다.** 모델에게 지배적인 성격과 모순되는 행동을 부여하고, 어느 쪽도 명시하지 않고 두 가지를 모두 드러내달라고 요청하십시오. 독자가 추론해야 하는 다층적인 인물이 탄생합니다.',
-          '**대사를 쓰기 전에 하위 텍스트를 먼저 설정하면 대화 품질이 두 배가 됩니다.** 인물이 원하지만 말하지 않을 것을 먼저 모델에게 알리십시오. 그러면 대사가 자연스럽게 그 숨겨진 메시지 주변에서 작동합니다.',
+          '**대사를 쓰기 전에 하위 텍스트를 먼저 설정하면 대화가 좋아집니다.** 인물이 원하지만 말하지 않을 것을 먼저 모델에게 알리십시오. 그러면 대사가 자연스럽게 그 숨겨진 메시지 주변에서 작동합니다.',
           '**단어 제한이 채우기를 방지합니다.** 장면 프롬프트에 200단어 제한을 설정하면 압축이 강제됩니다. 모델은 정확해야 합니다. 더 많이 필요할 때는 100단어 단위로 늘리되, 항상 제한을 설정하십시오.',
-          '**퇴고 프롬프트에는 명시된 문제가 필요합니다.** "이것을 다시 써줘"는 최소한의 변화만 만들어냅니다. "다시 써줘: 모든 수동태를 제거하고, 각 문장은 구체적인 명사나 강한 동사로 시작해야 해"는 측정 가능한 개선을 만들어냅니다.',
+          '**퇴고 프롬프트에는 명시된 문제가 필요합니다.** "이것을 다시 써줘"는 최소한의 변화만 만들어냅니다. "다시 써줘: 모든 수동태를 제거하고, 각 문장은 구체적인 명사나 강한 동사로 시작해야 해"는 더 뚜렷한 개선으로 이어지는 경향이 있습니다.',
           '**편집 템플릿은 원고 수준에서 작동합니다.** 플롯 일관성 확인, 리듬 분석, 노출 완화는 완성된 장면과 챕터에서 작동합니다 — 초안 작성 중이 아닌 초안 작성 후에 실행하십시오.',
-          '**더 큰 모델이 긴 생성에서 제약 조건 준수를 더 잘 유지합니다.** Llama 3.3 70B와 Qwen3 32B는 5부 장면 제약 조건을 안정적으로 따르며, 더 작은 모델은 약 200토큰 이후 벗어납니다.',
+          '**더 큰 모델이 긴 생성에서 제약 조건을 더 잘 지키는 경향이 있습니다.** 이 페이지는 Gemma 4 31B, Qwen3.8-27B, Llama 3.3 70B를 기준으로 작성되었으며, 더 작은 모델은 더 일찍 벗어나는 경향이 있습니다.',
           '**인터페이스는 모델과 프롬프트보다 중요하지 않습니다.** Ollama, LM Studio, SillyTavern, Agnai 모두 프롬프트를 그대로 전달합니다 — 소설의 품질 차이는 모델 + 프롬프트에 있지, 인터페이스에 있지 않습니다.',
         ],
       },
@@ -5211,11 +5332,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: '빠른 사실',
         items: [
           '**다루는 템플릿:** 총 15가지 — 장면 쓰기 (2), 인물 개발 (3), 대화 (2), 세계관 구축 (2), 문체 이전 (2), 퇴고 (1), 편집 (3).',
-          '**테스트된 환경:** Llama 3.3 70B, Qwen3 32B, Mistral Large — 모두 Apple M5 Max 64 GB와 NVIDIA RTX 4090 24 GB에서 Ollama를 통해 실행.',
+          '**대상 모델:** Ollama 또는 LM Studio로 실행하는 instruction-tuned 오픈 웨이트 모델(Gemma 4 31B, Qwen3.8-27B, Mistral Small 3 24B, Llama 3.3 70B 등).',
           '**단어 제한:** 장면은 150–400단어; 대화는 100–200단어; 세계관 구축 구절은 300–600단어.',
-          '**소설용 최고의 전반적인 모델:** Llama 3.3 70B (강력한 지시 추종, 서사 일관성, 긴 컨텍스트).',
-          '**문체 이전 최고:** Mistral Large (일관된 산문 레지스터; 작가 음성 패턴을 안정적으로 재현).',
-          '**대화 최고:** Command A+ 또는 Hermes 3 (인물 목소리 차별화; 자연스러운 구어체 레지스터).',
+          '**24 GB GPU의 출발점:** Gemma 4 31B 또는 Qwen3.8-27B(둘 다 256K 컨텍스트), 48 GB 이상이면 Llama 3.3 70B(아래 모델 표 참조).',
+          '**문체 이전:** 16 GB GPU에서는 Mistral Small 3 24B, 또는 메모리에 들어가는 가장 큰 모델. 기법 샘플은 2–3문장으로 제한합니다.',
+          '**대화 및 거부가 적은 소설:** Hermes 4.3 36B. Command A+(2,180억 파라미터 Mixture-of-Experts)는 서버급 GPU가 필요합니다.',
           '**시스템 프롬프트:** 장르와 시점을 사용자 턴이 아닌 시스템 메시지에 설정하세요 — 세션의 모든 생성을 고정합니다.',
         ],
       },
@@ -5295,7 +5416,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'scene-writing',
         title: '장면 쓰기 템플릿 (템플릿 1–2)',
         content:
-          '**5부 장면 템플릿이 기초입니다: 장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한.** 각 요소는 특정 역할을 하며 — 어느 것이든 제거하면 출력 품질이 측정 가능하게 떨어집니다.',
+          '**5부 장면 템플릿이 기초입니다: 장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한.** 각 요소는 특정 역할을 하며 — 어느 것이든 제거하면 출력 품질이 떨어지는 경향이 있습니다.',
         image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
         imageCaption:
           '로컬 LLM 픽션을 위한 5부 장면 프롬프트 구조: 장르, 시점(POV), 감각적 앵커, 감정적 비트, 150–400단어 상한선—각 제약 조건은 필수적이다.',
@@ -5321,7 +5442,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'template-1',
         title: '템플릿 1 — 5부 장면 구조',
         content:
-          '기본 템플릿입니다. 다섯 요소는 필수적입니다 — 어느 것이든 제거하면 출력 품질이 측정 가능하게 떨어집니다.',
+          '기본 템플릿입니다. 다섯 요소는 필수적입니다 — 어느 것이든 제거하면 출력 품질이 떨어지는 경향이 있습니다.',
         codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
 POV: [first person / close third, character name]
 Sensory anchor: [one specific sensory detail — smell, texture, sound]
@@ -5513,7 +5634,7 @@ Describe the interior of a building used by this faction — only through the ob
         callouts: [
           {
             type: 'tip',
-            text: '문체 이전에는 Mistral Large를 사용하십시오. Mistral Large는 로컬에서 실행 가능한 대부분의 모델보다 긴 생성에서 일관된 산문 레지스터를 유지합니다. 여러 단락에 걸쳐 레지스터 일관성이 중요한 문체 이전 작업의 경우 Llama 3.3 70B보다 Mistral Large를 선호하십시오. 짧은 문체 이전(300단어 미만)의 경우 30B+ 모델이면 충분합니다.',
+            text: '작업 길이에 맞춰 모델을 고르십시오. 여러 단락에 걸친 문체 이전에는 메모리에 들어가는 가장 큰 모델(Gemma 4 31B, Qwen3.8-27B 또는 Llama 3.3 70B)을 사용하고 기법 샘플은 2–3문장으로 제한하십시오. 300단어 미만의 짧은 구간에는 Mistral Small 3 같은 24B 모델이면 보통 충분합니다.',
           },
         ],
       },
@@ -5552,7 +5673,7 @@ Rewrite the following passage in [target register]. Do not change any plot infor
         id: 'revision',
         title: '퇴고 템플릿 (템플릿 12)',
         content:
-          '**퇴고 프롬프트에는 일반적인 개선 지시가 아닌 명시된 문제가 필요합니다.** "이것을 더 좋게 만들어줘"는 최소한의 표면적인 편집만 만들어냅니다. "모든 수동 구문을 제거하십시오; 각 문장은 능동태를 사용해야 합니다. 주어가 명확하지 않으면 구체적인 주어를 만들어내세요"는 측정 가능한 구조적 변화를 만들어냅니다.',
+          '**퇴고 프롬프트에는 일반적인 개선 지시가 아닌 명시된 문제가 필요합니다.** "이것을 더 좋게 만들어줘"는 최소한의 표면적인 편집만 만들어냅니다. "모든 수동 구문을 제거하십시오; 각 문장은 능동태를 사용해야 합니다. 주어가 명확하지 않으면 구체적인 주어를 만들어내세요"는 더 뚜렷한 구조적 변화로 이어지는 경향이 있습니다.',
         items: [
           '**항상 묘사가 아닌 초안을 붙여넣으십시오.** 퇴고 프롬프트는 실제 초안 텍스트를 붙여넣을 때만 작동합니다. 산문을 보여주지 않고 문제를 묘사하면 재작성된 구절이 아닌 일반적인 조언이 나옵니다.',
           '**특정 문제를 명시하십시오.** "다시 써주세요"만으로는 충분하지 않습니다. 구조적 문제를 식별하십시오: 수동태, 부사 과다, 시점 전환, 채우기 또는 정보 덤프.',
@@ -5650,20 +5771,20 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         itemHeadings: true,
         title: '소설 쓰기를 위한 모델 추천',
         content:
-          '**모델 선택은 프롬프트 구조보다 덜 중요하지만, 중요합니다.** 7B 모델에서 잘 구조화된 프롬프트가 70B 모델에서 모호한 프롬프트를 능가할 것입니다 — 하지만 동등한 프롬프트 기준으로 더 큰 모델이 긴 생성에서 더 안정적으로 제약 조건을 따르고 인물 목소리를 더 신뢰할 수 있게 구별합니다.',
+          '**모델 선택은 프롬프트 구조보다 덜 중요하지만, 중요합니다.** 7B 모델에서 잘 구조화된 프롬프트가 70B 모델에서 모호한 프롬프트를 능가할 수 있습니다 — 하지만 동등한 프롬프트 기준으로 더 큰 모델이 긴 생성에서 더 안정적으로 제약 조건을 따르고 인물 목소리를 더 신뢰할 수 있게 구별합니다.',
         columns: ['작업', '추천 모델', '이유'],
         rows: [
-          { '작업': '일반 장면 쓰기', '추천 모델': 'Llama 3.3 70B', '이유': '강력한 지시 추종, 서사 일관성, 제약이 있는 산문에 최선' },
-          { '작업': '문체 이전', '추천 모델': 'Mistral Large', '이유': '긴 생성에서 일관된 산문 레지스터; 로컬에서 실행 가능한 모델 중 최고의 레지스터 충실도' },
-          { '작업': '대화 / 인물 목소리', '추천 모델': 'Command A+ 또는 Hermes 3', '이유': '자연스러운 구어체 레지스터; 광범위한 교환에서 인물 목소리를 안정적으로 구별' },
-          { '작업': '세계관 구축', '추천 모델': 'Qwen3 32B', '이유': '구조화된 세부 사항 생성에 강함; 동심원 고리 확장 패턴을 안정적으로 유지' },
-          { '작업': '퇴고 / 편집', '추천 모델': 'Llama 3.3 70B', '이유': '전체 단락에 걸쳐 특정 구조적 재작성 지시를 따르는 데 최선' },
-          { '작업': '다크 / 무검열 소설', '추천 모델': 'Hermes 3 Llama 3.1', '이유': '콘텐츠 거부를 줄이도록 조정됨; 로컬에서 실행 시 클라우드 서비스 약관 제한 없음' },
+          { '작업': '일반 장면 쓰기', '추천 모델': 'Gemma 4 31B', '이유': '24 GB GPU에서 산문용 우선 선택(다운로드 19–20 GB, 256K 컨텍스트); 48 GB 이상이면 Llama 3.3 70B' },
+          { '작업': '문체 이전', '추천 모델': 'Mistral Small 3 24B', '이유': '16 GB GPU에 들어감(다운로드 14 GB, 32K 컨텍스트); 기법 샘플은 짧게' },
+          { '작업': '대화 / 인물 목소리', '추천 모델': 'Hermes 4.3 36B', '이유': '거부가 적은 파인튜닝 모델; 직접 쓴 대화 장면으로 시험해 보십시오' },
+          { '작업': '세계관 구축', '추천 모델': 'Qwen3.8-27B', '이유': '256K 컨텍스트로 긴 세계관 문서를 프롬프트에 유지(다운로드 18 GB)' },
+          { '작업': '퇴고 / 편집', '추천 모델': 'Llama 3.3 70B', '이유': '재작성 지시의 오랜 기본 선택; 다운로드 약 43 GB이므로 48 GB 이상' },
+          { '작업': '다크 / 무검열 소설', '추천 모델': 'Hermes 4.3 36B 또는 Dolphin 3.0', '이유': '거부를 줄이도록 조정됨; 로컬 실행 시 클라우드 서비스 약관 제한 없음' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: '소설 모델을 위한 최소 하드웨어 요구 사항. Q4 양자화의 Llama 3.3 70B는 약 40GB의 VRAM 또는 통합 메모리가 필요합니다 (NVIDIA RTX 4090 24 GB 듀얼 GPU, 또는 Apple M5 Max 64 GB). Q4의 Qwen3 32B는 20–24GB로 작동합니다. Q4의 Mistral Large는 약 24GB가 필요합니다. 16GB 머신의 경우 Qwen3 14B와 Mistral Small이 실제 상한입니다 — 두 모델 모두 더 짧은 생성에서 장면 템플릿을 안정적으로 따릅니다.',
+            text: '하드웨어 구간. 다운로드 크기는 Ollama 라이브러리 기준이며 가중치만 해당합니다. 긴 장면에서는 KV 캐시용으로 2–6 GB를 더하십시오. Gemma 4 31B(19–20 GB)와 Qwen3.8-27B(18 GB)는 24 GB GPU 또는 32 GB Mac에 들어가고, Gemma 4 12B(약 8 GB)는 12 GB, Mistral Small 3 24B(14 GB)는 16 GB, Llama 3.3 70B(약 43 GB)는 48 GB 이상이 필요합니다. Command A+(2,180억 파라미터 Mixture-of-Experts, Cohere 설명으로는 H100 두 장)와 Mistral Large(123B, 다운로드 73 GB, 연구용 라이선스)는 서버급이라 이 구간에 포함되지 않습니다.',
           },
         ],
       },
@@ -5682,11 +5803,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'sources',
         title: '출처',
         items: [
-          'Llama 3.3 70B 모델 카드 및 지시 추종 벤치마크 — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B 기술 보고서 — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Mistral Large 모델 문서 — [Mistral AI](https://mistral.ai)',
-          'Command A+ 사양 — [Cohere](https://cohere.com)',
-          'Hermes 3 파인튜닝 방법론 — [Nous Research](https://nousresearch.com)',
+          'Llama 3.3 70B 모델 카드 및 다운로드 크기 — [Ollama 라이브러리](https://ollama.com/library/llama3.3)',
+          'Gemma 4와 Qwen3.8의 태그, 크기, 컨텍스트 창 — [Ollama: Gemma 4](https://ollama.com/library/gemma4), [Ollama: Qwen3.8](https://ollama.com/library/qwen3.8)',
+          'Mistral Small 3와 Mistral Large의 크기, 컨텍스트, 라이선스 — [Ollama: Mistral Small](https://ollama.com/library/mistral-small), [Ollama: Mistral Large](https://ollama.com/library/mistral-large)',
+          'Command A+ 출시(2026년 5월, 2,180억 파라미터 Mixture-of-Experts, Apache 2.0) — [The Decoder](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)',
+          'Hermes 파인튜닝 방법론 — [Nous Research](https://nousresearch.com)',
         ],
       },
       faq: {
@@ -5703,7 +5824,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '이 프롬프트 템플릿이 더 작은 모델(7B–14B)에서도 작동합니까?',
-            a: '예, 하지만 제약 조건 준수가 약 150토큰 이후에 저하됩니다. 더 작은 모델은 5부 프롬프트의 처음 2–3개 제약 조건을 따르다가 기본 레지스터로 벗어납니다. 7B–14B 모델의 경우: 단어 제한을 줄이고(최대 150단어), 동시 제약 조건을 줄이고(5부 대신 3부), 더 자주 퇴고하거나 다시 프롬프트할 것으로 예상하십시오. Qwen3 14B가 소설 특정 프롬프트 추종에서 테스트된 가장 견고한 소형 모델입니다.',
+            a: '예, 다만 생성이 길어질수록 제약 조건 준수는 떨어지는 경향이 있습니다. 더 작은 모델은 5부 프롬프트의 처음 2–3개 제약 조건을 따르다가 기본 레지스터로 벗어납니다. 7B–14B 모델의 경우: 단어 제한을 줄이고(최대 150단어), 동시 제약 조건을 줄이고(5부 대신 3부), 더 자주 퇴고하거나 다시 프롬프트할 것으로 예상하십시오. 12 GB GPU에서는 Gemma 4 12B(약 8 GB)가 합리적인 출발점입니다.',
           },
           {
             q: '전체 소설 세션에 걸쳐 인물 목소리의 일관성을 어떻게 유지합니까?',
@@ -5711,7 +5832,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '다크 또는 성인 소설을 쓰기에 가장 좋은 로컬 LLM은 무엇입니까?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, 또는 콘텐츠 거부를 줄이도록 조정된 모든 모델. 로컬에서 실행할 때 클라우드 서비스 약관 제한이 없습니다 — 모델의 기본 파인튜닝이 무엇을 생성할지와 생성하지 않을지를 결정합니다. 무검열 모델 옵션 및 윤리적 프레임워크에 대한 전체 내용은 [소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing)을 참조하십시오.',
+            a: 'Hermes 4.3 36B, Dolphin 3.0, 또는 콘텐츠 거부를 줄이도록 조정된 모든 모델. 로컬에서 실행할 때 클라우드 서비스 약관 제한이 없습니다 — 모델의 기본 파인튜닝이 무엇을 생성할지와 생성하지 않을지를 결정합니다. 무검열 모델 옵션 및 윤리적 프레임워크에 대한 전체 내용은 [소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing)을 참조하십시오.',
           },
           {
             q: 'SillyTavern이나 Agnai에서 이 템플릿을 사용할 수 있습니까?',
@@ -5719,11 +5840,23 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '장면 프롬프트는 얼마나 길어야 합니까?',
-            a: '50–100단어의 장면 프롬프트가 실제로 최상의 결과를 냅니다. 더 긴 프롬프트(200단어 이상)는 복잡한 장면에서 작동할 수 있지만 모델이 일부 제약을 무시할 가능성이 높아집니다. 복잡한 장면의 경우 프롬프트를 두 패스로 나누십시오: 먼저 장면을 생성한 다음, 유지했던 제약을 추가하는 퇴고 프롬프트를 실행하십시오.',
+            a: '50–100단어의 장면 프롬프트가 보통 가장 좋은 결과를 냅니다. 더 긴 프롬프트(200단어 이상)는 복잡한 장면에서 작동할 수 있지만 모델이 일부 제약을 무시할 가능성이 높아집니다. 복잡한 장면의 경우 프롬프트를 두 패스로 나누십시오: 먼저 장면을 생성한 다음, 유지했던 제약을 추가하는 퇴고 프롬프트를 실행하십시오.',
           },
           {
             q: '문체 이전 프롬프트가 저작권을 침해합니까?',
-            a: '작가의 기법(문장 구조, 구두점 선택, 서사 레지스터)을 복제하는 것은 저작권 침해가 아닙니다 — 문체는 저작권 보호 대상이 아닙니다. 저작권이 있는 텍스트의 실질적인 verbatim 구절을 복제하는 것은 침해입니다. 이 가이드의 템플릿은 2–3문장 샘플을 기법 앵커로 사용하며, 이는 표준 교육적 공정 사용 범위에 해당하고, 생성된 출력은 내용이 아닌 기법을 복제합니다.',
+            a: '대부분의 법역에서 저작권은 구체적인 표현을 보호하며 문체 자체를 보호하지는 않습니다. 따라서 작가의 기법(문장 구조, 구두점 선택, 서사 레지스터)을 복제하는 것은 보통 침해가 아니지만, 저작권이 있는 텍스트의 상당한 분량을 그대로 복제하는 것은 침해가 될 수 있습니다. 이 가이드의 템플릿은 2–3문장 샘플을 기법 앵커로 사용하며 내용이 아닌 기법을 요청합니다. 규칙은 국가와 사안에 따라 다르며, 이는 일반적인 정보이지 법률 자문이 아닙니다.',
+          },
+          {
+            q: '소설 쓰기용 시스템 프롬프트는 어떻게 작성합니까?',
+            a: '장르, 시점, 산문 레지스터는 사용자 턴이 아니라 시스템 메시지에 넣으십시오. 그러면 세션의 모든 생성이 이를 이어받습니다. 기본 형태는 다음과 같습니다: "당신은 [장르] 소설 어시스턴트입니다. 당신이 쓰는 모든 산문은 [시점: 예, 과거 시제의 밀착 3인칭]으로 작성되며 [예: 감각적 세부와 하위 텍스트]를 중시합니다." 긴 세션에서는 짧은 인물 시트(이름, 지배적인 성격, 모순되는 행동, 말투 레지스터)를 추가하십시오. LM Studio와 SillyTavern에는 전용 시스템 프롬프트 입력란이 있으며, Ollama에서는 Modelfile의 SYSTEM 줄이나 API의 시스템 메시지로 설정합니다.',
+          },
+          {
+            q: 'LM Studio에서 이 템플릿을 어떻게 사용합니까?',
+            a: 'LM Studio 채팅 사이드바의 "System Prompt" 입력란에 장르, 시점, 레지스터 제약 조건을 붙여 넣은 뒤, 이 가이드의 장면·대화·세계관 구축 템플릿을 사용자 메시지로 입력하십시오. LM Studio는 OpenAI 호환 로컬 서버도 실행할 수 있어, API로 시스템 프롬프트와 사용자 프롬프트를 따로 보낼 수도 있습니다. 템플릿은 일반 텍스트이므로 같은 문장이 Ollama와 LM Studio에서 모두 작동합니다.',
+          },
+          {
+            q: '로컬 모델이 프롬프트를 대신 써 줄 수 있습니까?',
+            a: '예. 장면에 맞는 5부 프롬프트(장르, 시점, 감각적 제약, 감정 비트, 단어 제한)를 작성해 달라고 요청하면 출발점을 얻을 수 있습니다. 생성된 프롬프트는 이 가이드의 템플릿보다 모호한 경향이 있으므로, 결과물은 초안으로 보고 제약 조건은 직접 다듬으십시오.',
           },
         ],
       },

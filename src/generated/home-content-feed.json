@@ -23168,27 +23168,27 @@
   {
     "lang": "en",
     "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
-    "excerpt": "15 prompt templates for fiction writers using local LLMs. Scene-writing, character development, dialogue, worldbuilding, style transfer, revision, and editorial templates — copy-paste ready for Ollama and LM Studio.",
+    "excerpt": "15 copy-paste prompt templates for fiction with local LLMs: scenes, characters, dialogue, worldbuilding, style transfer, editing. For Ollama and LM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Lokale LLM-Prompts für Belletristik-Autoren: 15 Vorlagen & Techniken (2026)",
-    "excerpt": "15 Prompt-Vorlagen für Belletristik-Autoren mit lokalen LLMs: Szenen, Charaktere, Dialog, Weltenbau und Überarbeitung – kopierfertig für Ollama und LM Studio.",
+    "excerpt": "15 Prompt-Vorlagen für Belletristik mit lokalen LLMs: Szenen, Charaktere, Dialog, Weltenbau und Überarbeitung – kopierfertig für Ollama und LM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/de/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Prompts LLM locaux pour auteurs de fiction : 15 modèles et techniques (2026)",
-    "excerpt": "15 modèles de prompts pour la fiction avec LLM locaux. Scènes, personnages, dialogue, construction de monde, révision — prêts à copier pour Ollama et LM Studio.",
+    "excerpt": "15 modèles de prompts pour la fiction avec LLM locaux : scènes, personnages, dialogue, mondes, révision. Prêts à copier pour Ollama et LM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/fr/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23197,7 +23197,7 @@
     "title": "小説家のためのローカルLLMプロンプト：15のテンプレートとテクニック（2026）",
     "excerpt": "ローカルLLMを使った小説執筆向け15プロンプトテンプレート。シーン・キャラクター・ダイアログ・世界構築・修正——OllamaとLM Studio対応でコピーペースト可能。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-26",
     "url": "/ja/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23206,7 +23206,7 @@
     "title": "本地LLM小说写作提示词：15个模板与技巧（2026）",
     "excerpt": "面向小说写作者的15个本地LLM提示词模板。场景写作、角色开发、对话、世界构建、风格转换、修改和编辑模板——适用于Ollama和LM Studio，即用即取。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/zh/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23215,7 +23215,7 @@
     "title": "Prompts para LLM local para escritores de ficción: 15 plantillas y técnicas (2026)",
     "excerpt": "15 plantillas de prompts para escritores de ficción con LLM locales: escenas, personajes, diálogo, mundos y estilo. Listas para Ollama y LM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/es/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23224,16 +23224,16 @@
     "title": "Prompts para LLM local para escritores de ficção: 15 modelos e técnicas (2026)",
     "excerpt": "15 modelos de prompts para escritores de ficção com LLMs locais: cenas, personagens, diálogo, mundos e estilo. Prontos para Ollama e LM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/pt/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "أوامر النماذج اللغوية المحلية لكتّاب الخيال الأدبي: ⁨15⁩ قالباً وتقنية (⁨2026⁩)",
-    "excerpt": "15 قالب أوامر مُختبر مع Llama 3.3 70B وQwen3 32B وMistral على Ollama وLM Studio: المشاهد والحوار والشخصيات وبناء العوالم، جاهزة للنسخ.",
+    "excerpt": "15 قالب أوامر لكتّاب الخيال الأدبي مع النماذج اللغوية المحلية: المشاهد والحوار والشخصيات وبناء العوالم، جاهزة للنسخ في Ollama وLM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/ar/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23242,7 +23242,7 @@
     "title": "소설 작가를 위한 로컬 LLM 프롬프트: 15가지 템플릿과 기법 (2026)",
     "excerpt": "로컬 LLM을 사용하는 소설 작가를 위한 프롬프트 템플릿 15가지: 장면, 인물, 대화, 세계관, 문체. Ollama와 LM Studio에 바로 사용 가능.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/ko/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
