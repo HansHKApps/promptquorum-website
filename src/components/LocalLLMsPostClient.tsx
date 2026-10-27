@@ -948,7 +948,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
             {article.theme}
           </span>
           <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
-            {renderHubTitle(article.title, skin, lang)}
+            {renderHubTitle(article.title ?? '', skin, lang)}
           </h1>
           <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
             <time dateTime={article.dateModified ?? article.publishDate} className={skinCls.updatedBadge}>
