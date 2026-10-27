@@ -388,6 +388,7 @@ https://www.promptquorum.com/power-local-llm/honey-llm-review
 https://www.promptquorum.com/power-local-llm/hyperlink-nexa-review
 https://www.promptquorum.com/power-local-llm/idefics-review
 https://www.promptquorum.com/power-local-llm/iimagine-desktop-review
+https://www.promptquorum.com/power-local-llm/immich-review
 https://www.promptquorum.com/power-local-llm/intentkit-review
 https://www.promptquorum.com/power-local-llm/invokeai-review
 https://www.promptquorum.com/power-local-llm/izwi-review
@@ -471,6 +472,7 @@ https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison
 https://www.promptquorum.com/power-local-llm/localai-apexcreator-review
 https://www.promptquorum.com/power-local-llm/localai-explained
 https://www.promptquorum.com/power-local-llm/localghost-review
+https://www.promptquorum.com/power-local-llm/localhosted-review
 https://www.promptquorum.com/power-local-llm/locally-ai-review
 https://www.promptquorum.com/power-local-llm/locally-uncensored-hands-on-test
 https://www.promptquorum.com/power-local-llm/locally-uncensored-review
@@ -634,6 +636,7 @@ https://www.promptquorum.com/power-local-llm/vllm-mlx-review
 https://www.promptquorum.com/power-local-llm/vlm-video-analytics-drones-edge
 https://www.promptquorum.com/power-local-llm/voice-ai-writers-cloud-vs-local
 https://www.promptquorum.com/power-local-llm/voice-assistant-local-mobile-offline
+https://www.promptquorum.com/power-local-llm/voicebox-review
 https://www.promptquorum.com/power-local-llm/voxa-review
 https://www.promptquorum.com/power-local-llm/weaviate-review
 https://www.promptquorum.com/power-local-llm/web-search-mcp-review
