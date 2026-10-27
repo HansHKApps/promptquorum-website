@@ -6241,7 +6241,7 @@
     "title": "Prompt Engineering Workflow for Developers: IDE Setup, Testing, and CI/CD Integration",
     "excerpt": "5-stage prompt workflow: write in Cursor/VS Code, test with Promptfoo in 30s, version in Git, gate CI/CD at 85% pass rate, monitor production.",
     "publishDate": "2026-05-02",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/prompt-engineering/prompt-engineering-for-developers-workflow",
     "cluster": "prompt-engineering"
   },
@@ -6257,7 +6257,7 @@
   {
     "lang": "fr",
     "title": "Workflow de prompt engineering pour les développeurs : configuration IDE, tests et intégration CI/CD",
-    "excerpt": "Workflow prompt en 5 étapes : Cursor/VS Code, Promptfoo en 30s, versionnement Git, gate CI/CD à 85% pass-rate, monitoring production.",
+    "excerpt": "Workflow de prompts en 5 étapes : Cursor/VS Code, tests Promptfoo en 30 s, versionnement Git, gate CI/CD à 85% de réussite et monitoring en production.",
     "publishDate": "2026-05-02",
     "dateModified": "2026-05-02",
     "url": "/fr/prompt-engineering/prompt-engineering-for-developers-workflow",
@@ -6284,7 +6284,7 @@
   {
     "lang": "es",
     "title": "Flujo de trabajo de prompt engineering para desarrolladores: configuración de IDE, pruebas e integración CI/CD",
-    "excerpt": "Flujo de trabajo de prompts en 5 etapas: Cursor/VS Code, Promptfoo en 30s, versionado en Git, gate CI/CD al 85%, monitoreo en producción.",
+    "excerpt": "Flujo de trabajo de prompts en 5 etapas: Cursor/VS Code, pruebas con Promptfoo en 30 s, versionado en Git, gate CI/CD al 85% y monitoreo en producción.",
     "publishDate": "2026-05-02",
     "dateModified": "2026-05-02",
     "url": "/es/prompt-engineering/prompt-engineering-for-developers-workflow",
