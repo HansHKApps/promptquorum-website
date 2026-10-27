@@ -1502,7 +1502,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             {article.theme}
           </span>
           <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
-            {renderHubTitle(article.title, skin, lang)}
+            {renderHubTitle(article.title ?? '', skin, lang)}
           </h1>
           <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
             <time dateTime={article.dateModified ?? article.publishDate} className={isDirectoryPage ? 'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : skinCls.updatedBadge}>
