@@ -7108,7 +7108,7 @@
       ]
     },
     "local-llm-screenwriting-and-novel-drafting": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-10-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -7126,11 +7126,11 @@
       "images": [
         {
           "url": "/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg",
-          "title": "Context window reliability for local LLMs: the practical attention ceiling is 32K tokens (~24,000 words) versus the 128K technical limit, covering Llama 3.3 70B, Qwen3 32B, Mistral Large, and Kimi-K2.6's 1M-token context requiring ~480 GB VRAM."
+          "title": "Context planning: a 32K-token (~24,000 words) working limit versus the 128K–262,144 tokens that open models now list."
         },
         {
           "url": "/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg",
-          "title": "Four-phase novel drafting workflow with local LLMs: outline (10–30 chapters), beat sheets (3–8 scenes per chapter), scene generation (200–600 words per session), and revision passes, built around a session document under 4,000 tokens."
+          "title": "Four-phase novel workflow with a local LLM: outline, beat sheets, scene generation and revision, around a session document."
         }
       ]
     },
