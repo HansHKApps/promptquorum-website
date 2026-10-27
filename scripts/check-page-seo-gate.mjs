@@ -188,7 +188,9 @@ async function check(url) {
   if (article) {
     const au = article.url ?? article.mainEntityOfPage?.['@id']
     if (au && au.replace(/\/$/, '') !== expectCanon.replace(/\/$/, '')) add('B1', `article url ${au} != canonical`)
-    const h1Text = stripTags(html.match(/<h1\b[\s\S]*?<\/h1>/i)?.[0] ?? '').trim()
+    // Inline wrappers (the hub skin highlights part of the H1 in a <span>) must not insert a space: in ja/zh/ko
+    // that turned "ローカル" + "LLM…" into "ローカル LLM…" and made the H1 look different from the headline.
+    const h1Text = stripTags((html.match(/<h1\b[\s\S]*?<\/h1>/i)?.[0] ?? '').replace(/<\/?(?:span|em|strong|b|i|mark|small|abbr)\b[^>]*>/gi, '')).trim()
     const hl = (article.headline ?? '').trim()
     const same = (x) => x && (x === hl || x.startsWith(hl.slice(0, 20)) || hl.startsWith(x.slice(0, 20)))
     if (hl && !same(title) && !same(h1Text)) add('B1', `article headline "${hl}" matches neither <title> nor <h1>`)
