@@ -5320,8 +5320,8 @@
       "images": []
     },
     "prompt-review-workflow-for-teams": {
-      "dateModified": "2026-07-13",
-      "lastFactChecked": "2026-04-30 — GPT-5.5, Claude, Braintrust, GitHub Actions, GitLab CI verified",
+      "dateModified": "2026-10-26",
+      "lastFactChecked": "2026-10-26 — Braintrust, PromptLayer, Vellum, GitHub branch protection and every cited source re-checked",
       "publishDate": "2026-04-29",
       "hasSections": true,
       "langs": [
