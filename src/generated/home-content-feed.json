@@ -5249,7 +5249,7 @@
   {
     "lang": "ar",
     "title": "سير عمل مراجعة التعليمات للفرق: قائمة التحقق وبوابات ⁨CI/CD⁩",
-    "excerpt": "سير عمل مراجعة التعليمات للفرق: قائمة تحقق من 7 نقاط و3 أدوار مراجعة وبوابات CI/CD تمنع التعليمات غير المعتمدة. أتمت الفحوصات الروتينية وراجع القصد يدوياً.",
+    "excerpt": "سير عمل مراجعة التعليمات للفرق: قائمة تحقق من 7 نقاط و3 أدوار مراجعة وبوابات CI/CD تمنع التعليمات غير المعتمدة. أتمت الفحوصات الروتينية وراجع القصد.",
     "publishDate": "2026-04-29",
     "dateModified": "2026-10-26",
     "url": "/ar/prompt-engineering/prompt-review-workflow-for-teams",
@@ -23249,9 +23249,9 @@
   {
     "lang": "en",
     "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
-    "excerpt": "Full workflow for using local LLMs in screenwriting and novel drafting: model selection, context management, chapter scaffolding, scene generation, and tool integrations for writers.",
+    "excerpt": "How to use local LLMs for screenwriting and novel drafting: model starting points, context management, scene generation and writer tool integrations.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
@@ -23260,52 +23260,52 @@
     "title": "Romane und Drehbücher mit lokalen LLMs verfassen: Workflow-Leitfaden für 100K+ Wörter",
     "excerpt": "Workflow für lokale LLMs beim Roman- und Drehbuchschreiben: Modellauswahl, Kontextverwaltung, Kapitelstruktur, Szenengenerierung und Tool-Integration.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/de/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Rédiger des romans et des scénarios avec des LLM locaux : guide de workflow 100 000+ mots",
-    "excerpt": "Workflow complet pour utiliser les LLM locaux en écriture de romans et de scénarios : sélection du modèle, gestion du contexte, structure des chapitres, génération de scènes et intégrations d'outils.",
+    "excerpt": "Utiliser des LLM locaux pour écrire romans et scénarios : modèles de départ, gestion du contexte, structure des chapitres, génération de scènes et outils.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/fr/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカルLLMで小説・脚本を執筆する：10万語以上のワークフロー完全ガイド",
-    "excerpt": "小説執筆におすすめのローカルLLMモデルを用途別に比較（Llama 3.3 70B、Qwen3 32Bほか）。コンテキスト管理・章構造・シーン生成・ツール統合も解説。",
+    "excerpt": "ローカルLLMで小説・脚本を書く完全ワークフロー：モデルの出発点、コンテキスト管理、章構成、シーン生成、執筆ツールとの連携まで丁寧に解説します。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-26",
     "url": "/ja/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "使用本地LLM创作小说与剧本：10万字以上工作流完整指南",
-    "excerpt": "本地LLM小说与剧本写作完整工作流：模型选择、上下文管理、章节结构、场景生成及工具集成详解。",
+    "excerpt": "使用本地LLM创作小说与剧本的完整工作流：模型起点、上下文管理、章节结构、场景生成及写作工具集成全面详解，并核对各模型卡上标注的上下文窗口信息。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-26",
     "url": "/zh/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Redactar novelas y guiones con LLMs locales: guía de flujo de trabajo para más de 100.000 palabras",
-    "excerpt": "Flujo completo para escribir novelas y guiones con LLMs locales: selección de modelos, gestión del contexto, andamiaje por capítulos y generación de escenas.",
+    "excerpt": "Flujo para escribir novelas y guiones con LLMs locales: modelos de partida, gestión del contexto, andamiaje por capítulos y generación de escenas.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/es/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Redigir romances e roteiros com LLMs locais: guia de fluxo de trabalho para mais de 100.000 palavras",
-    "excerpt": "Fluxo completo para escrever romances e roteiros com LLMs locais: seleção de modelos, gerenciamento do contexto, estruturação por capítulos e geração de cenas.",
+    "excerpt": "Fluxo para escrever romances e roteiros com LLMs locais: modelos de partida, gerenciamento do contexto, estruturação por capítulos e geração de cenas.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/pt/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
@@ -23314,16 +23314,16 @@
     "title": "صياغة الروايات والسيناريوهات بالنماذج اللغوية المحلية: دليل سير العمل لأكثر من ⁨100⁩,⁨000⁩ كلمة",
     "excerpt": "سير عمل طويل الشكل مع LLMs المحلية: اختيار النموذج لـ 100,000 كلمة، إدارة نافذة السياق، هيكلة الفصول وتوليد المشاهد — بدون اتصال أو قيود.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/ar/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM으로 소설과 시나리오 집필하기: 10만 단어 이상을 위한 워크플로 가이드",
-    "excerpt": "로컬 LLM으로 소설·시나리오 집필하는 완전한 워크플로: 모델 선택, 컨텍스트 관리, 챕터 스캐폴딩, 장면 생성.",
+    "excerpt": "로컬 LLM으로 소설·시나리오를 집필하는 워크플로: 모델 출발점, 컨텍스트 관리, 챕터 스캐폴딩, 장면 생성, 집필 도구 연동을 설명합니다.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-26",
     "url": "/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting",
     "cluster": "power-local-llm"
   },

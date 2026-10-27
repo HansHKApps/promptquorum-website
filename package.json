@@ -39,7 +39,7 @@
     "seo:gate": "node scripts/check-page-seo-gate.mjs",
     "seo:gate:changed": "node scripts/check-page-seo-gate.mjs --changed --strict --base=http://localhost:3000",
     "seo:measure": "node scripts/seo-measure.mjs",
-    "test:article-skin": "npx -y tsx scripts/test-article-skin.tsx",
+    "test:article-skin": "npx -y tsx@4.21.0 scripts/test-article-skin.tsx",
     "check:page-updater": "node scripts/check-page-updater-complete.mjs",
     "test:above-fold": "playwright test -c playwright.above-the-fold.config.ts",
     "test:consent": "playwright test -c playwright.consent.config.ts",

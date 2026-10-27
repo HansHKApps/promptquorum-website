@@ -42,6 +42,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-screenwriting-and-novel-drafting",
+        "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
+        "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
+        "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-review",
         "title": "LobeHub Review (Formerly LobeChat): Agent Workspace With Desktop Apps and Self-Hosting",
@@ -70,14 +78,6 @@
         "slug": "home-assistant-assist-review",
         "title": "Home Assistant Assist Review: Local Voice Control and LLM Agents",
         "url": "/power-local-llm/home-assistant-assist-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kruvo-review",
-        "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
-        "url": "/power-local-llm/kruvo-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -11685,6 +11685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-screenwriting-and-novel-drafting",
+        "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
+        "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
+        "dateModified": "2026-10-26",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pajdo-review",
         "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
         "url": "/power-local-llm/pajdo-review",
@@ -11712,14 +11720,6 @@
         "slug": "compactifai-app-review",
         "title": "CompactifAI APP Review: Free Chat App with Offline and Cloud Models",
         "url": "/power-local-llm/compactifai-app-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ente-photos-review",
-        "title": "Ente Photos Review: Encrypted Backup with On-Device AI Search",
-        "url": "/power-local-llm/ente-photos-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
       }

@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'worldbuilding prompt template',
     ],
     leadAnswerBlock:
-      '**The single biggest improvement in local LLM fiction output comes from switching from "write a scene" to a structured 5-part prompt: genre + POV + sensory constraint + emotional beat + word-count ceiling. That format leaves no room for the easy shortcut, so the model tends to produce showing-not-telling prose instead of plot summary. For character development, the most reliable template is the "contradiction prompt": give the character one dominant trait and one contradicting behaviour, then ask the model to write a scene that reveals both without stating either. For dialogue, set the subtext first — what the character wants to say but won\'t — then let the model write the spoken lines around that hidden message. For editorial work, use the Plot Consistency Check to catch continuity errors, Pacing Analysis to identify flat zones, and Exposition Smoothing to redistribute information dumps.**',
+      '**The single biggest improvement in local LLM fiction output comes from switching from "write a scene" to a structured 5-part prompt: genre + POV + sensory constraint + emotional beat + word-count ceiling.**',
     quickAnswerTop: {
       en: {
         question: 'What are the best prompt templates for fiction writers using local LLMs?',
@@ -695,7 +695,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'weltenbau prompt vorlage',
     ],
     leadAnswerBlock:
-      '**Die größte Einzelverbesserung bei lokalen LLM-Belletristik-Ausgaben ergibt sich aus dem Wechsel von „schreib eine Szene" zu einem strukturierten 5-teiligen Prompt: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze. Dieses Format lässt keinen Raum für die einfache Abkürzung, sodass das Modell tendenziell Zeigen-statt-Erzählen-Prosa statt Handlungszusammenfassung erzeugt. Für Charakterentwicklung ist die zuverlässigste Vorlage der „Widerspruchs-Prompt": Einem Charakter ein dominantes Merkmal und ein widersprechendes Verhalten geben, dann das Modell eine Szene schreiben lassen, die beides zeigt, ohne es zu benennen. Für Dialog den Subtext zuerst festlegen — was der Charakter sagen möchte, aber nicht sagt — und dann das Modell die gesprochenen Zeilen um diese versteckte Botschaft herum schreiben lassen. Für redaktionelle Arbeit den Plot-Konsistenz-Check für Kontinuitätsfehler, die Pacing-Analyse für flache Zonen und das Exposition-Smoothing für Informations-Dumps verwenden.**',
+      '**Die größte Einzelverbesserung bei lokalen LLM-Belletristik-Ausgaben ergibt sich aus dem Wechsel von „schreib eine Szene" zu einem strukturierten 5-teiligen Prompt: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze.**',
     quickAnswerTop: {
       de: {
         question: 'Was sind die besten Prompt-Vorlagen für Belletristik-Autoren mit lokalen LLMs?',
@@ -1347,7 +1347,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'modèle prompt construction monde',
     ],
     leadAnswerBlock:
-      '**La plus grande amélioration des sorties fiction d\'un LLM local vient du passage de "écris une scène" à un prompt structuré en 5 parties : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots. Ce format ne laisse aucune place au raccourci facile : le modèle tend alors à produire une prose qui montre au lieu de raconter, plutôt qu\'un résumé de l\'intrigue. Pour le développement de personnages, le modèle le plus fiable est le "prompt par contradiction" : donner au personnage un trait dominant et un comportement contradictoire, puis demander au modèle d\'écrire une scène qui révèle les deux sans énoncer aucun. Pour le dialogue, poser le sous-texte en premier — ce que le personnage veut dire mais ne dira pas — puis laisser le modèle écrire les répliques autour de ce message caché. Pour le travail éditorial, utiliser la Vérification de cohérence de l\'intrigue pour les erreurs de continuité, l\'Analyse du rythme pour les zones plates, et le Lissage de l\'exposition pour redistribuer les blocs d\'information.**',
+      '**La plus grande amélioration des sorties fiction d\'un LLM local vient du passage de "écris une scène" à un prompt structuré en 5 parties : genre + PDV + contrainte sensorielle + beat émotionnel + plafond de mots.**',
     quickAnswerTop: {
       fr: {
         question: 'Quels sont les meilleurs modèles de prompts pour auteurs de fiction utilisant des LLM locaux ?',
@@ -1999,7 +1999,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       '世界構築 プロンプトテンプレート',
     ],
     leadAnswerBlock:
-      '**ローカルLLMのフィクション出力で最大の改善は、「シーンを書いて」から構造化された5パートプロンプトへの移行から来ます：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限。このフォーマットは簡単な近道を残さないため、モデルはプロット要約ではなく「見せる」散文を生成しやすくなります。キャラクター開発では、最も信頼できるテンプレートは「矛盾プロンプト」です：キャラクターに1つの支配的な特性と1つの矛盾する行動を与え、どちらも述べずに両方を明らかにするシーンを書くようモデルに依頼します。ダイアログでは、まずサブテキストを設定します——キャラクターが言いたいが言わないこと——そしてモデルにその隠されたメッセージの周りに発話行を書かせます。編集作業には、連続性エラーにはプロット整合性チェックを、平坦なゾーンにはペース分析を、情報ダンプの再分配には説明文スムージングを使用してください。**',
+      '**ローカルLLMのフィクション出力で最大の改善は、「シーンを書いて」から構造化された5パートプロンプトへの移行から来ます：ジャンル＋POV＋感覚的制約＋感情的ビート＋語数上限。**',
     quickAnswerTop: {
       ja: {
         question: 'ローカルLLMを使う小説家にとって最良のプロンプトテンプレートは何ですか？',
@@ -2651,7 +2651,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'worldbuilding prompt template',
     ],
     leadAnswerBlock:
-      '**本地LLM小说输出最大的单项改善，来自将"写一个场景"替换为结构化5部分提示词：类型+POV+感官约束+情感节拍+字数上限。这一格式没有给走捷径留下空间，因此模型更倾向于产出"展示而非讲述"的散文，而非情节摘要。对于角色开发，最可靠的模板是"矛盾提示词"：给角色一个主导特质和一个与之矛盾的行为，然后让模型写一个场景展示两者但不明说任何一个。对于对话，先设定潜台词——角色想说但不会说的话——然后让模型围绕那个隐藏信息写出的台词。对于编辑工作，用情节一致性检查捕捉连续性错误，用节奏分析识别平淡区域，用叙述展开处理信息堆砌。**',
+      '**本地LLM小说输出最大的单项改善，来自将"写一个场景"替换为结构化5部分提示词：类型+POV+感官约束+情感节拍+字数上限。**',
     quickAnswerTop: {
       zh: {
         question: '使用本地LLM进行小说写作的最佳提示词模板有哪些？',
@@ -3303,7 +3303,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'plantilla prompt construccion mundo',
     ],
     leadAnswerBlock:
-      '**La mejora más significativa en los resultados de ficción de un LLM local viene de pasar de "escribe una escena" a un prompt estructurado de 5 partes: género + POV + restricción sensorial + beat emocional + límite de palabras. Ese formato no deja espacio para el atajo fácil, así que el modelo tiende a producir prosa que muestra en vez de contar, en lugar de un resumen de trama. Para el desarrollo de personajes, la plantilla más confiable es el "prompt de contradicción": darle al personaje un rasgo dominante y un comportamiento contradictorio, luego pedirle al modelo que escriba una escena que revele ambos sin enunciar ninguno. Para el diálogo, establecer el subtexto primero — lo que el personaje quiere decir pero no dirá — y luego dejar que el modelo escriba las líneas habladas alrededor de ese mensaje oculto. Para el trabajo editorial, usa la Verificación de coherencia de trama para detectar errores de continuidad, el Análisis de ritmo para identificar zonas planas, y el Suavizado de exposición para redistribuir bloques de información.**',
+      '**La mejora más significativa en los resultados de ficción de un LLM local viene de pasar de "escribe una escena" a un prompt estructurado de 5 partes: género + POV + restricción sensorial + beat emocional + límite de palabras.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuáles son las mejores plantillas de prompts para escritores de ficción que usan LLM locales?',
@@ -3961,7 +3961,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'modelo prompt construcao mundo',
     ],
     leadAnswerBlock:
-      '**A melhoria mais significativa nos resultados de ficção de um LLM local vem de passar de "escreva uma cena" para um prompt estruturado de 5 partes: gênero + POV + restrição sensorial + beat emocional + limite de palavras. Esse formato não deixa espaço para o atalho fácil, então o modelo tende a produzir prosa que mostra em vez de contar, e não um resumo de trama. Para o desenvolvimento de personagens, o modelo mais confiável é o "prompt de contradição": dar ao personagem um traço dominante e um comportamento contraditório, depois pedir ao modelo que escreva uma cena que revele ambos sem enunciar nenhum. Para o diálogo, estabelecer o subtexto primeiro — o que o personagem quer dizer mas não dirá — e depois deixar o modelo escrever as falas em torno dessa mensagem oculta. Para o trabalho editorial, use a Verificação de coerência de trama para detectar erros de continuidade, a Análise de ritmo para identificar zonas planas, e o Suavizamento de exposição para redistribuir blocos de informação.**',
+      '**A melhoria mais significativa nos resultados de ficção de um LLM local vem de passar de "escreva uma cena" para um prompt estruturado de 5 partes: gênero + POV + restrição sensorial + beat emocional + limite de palavras.**',
     quickAnswerTop: {
       pt: {
         question: 'Quais são os melhores modelos de prompts para escritores de ficção que usam LLMs locais?',
@@ -4618,7 +4618,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'قالب أوامر بناء عالم',
     ],
     leadAnswerBlock:
-      '**أكثر تحسين ملموس في نتائج الخيال الأدبي من النموذج اللغوي المحلي يأتي من الانتقال من "اكتب مشهداً" إلى أمر مُهيكل من 5 أجزاء: النوع الأدبي + زاوية الرؤية + القيد الحسي + النبضة العاطفية + سقف عدد الكلمات. هذا الشكل لا يترك مجالاً للهروب السهل، ولذلك يميل النموذج إلى إنتاج نثر يُريك بدلاً من أن يُخبرك. لتطوير الشخصيات، أكثر قالب موثوق هو "أمر التناقض": إعطاء الشخصية سمة مهيمنة وسلوكاً متناقضاً، ثم مطالبة النموذج بكتابة مشهد يكشف كليهما دون تسمية أي منهما. للحوار، حدد النص المضمر أولاً — ما يريد الشخصية قوله لكنه لن يقوله — ثم دع النموذج يكتب الجمل المنطوقة حول ذلك المعنى الخفي. للعمل التحريري، استخدم التحقق من اتساق الحبكة لاكتشاف أخطاء الاستمرارية، وتحليل الإيقاع لتحديد المناطق الرتيبة، وتوزيع الشرح لإعادة توزيع كتل المعلومات.**',
+      '**أكثر تحسين ملموس في نتائج الخيال الأدبي من النموذج اللغوي المحلي يأتي من الانتقال من "اكتب مشهداً" إلى أمر مُهيكل من 5 أجزاء: النوع الأدبي + زاوية الرؤية + القيد الحسي + النبضة العاطفية + سقف عدد الكلمات.**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل قوالب الأوامر لكتّاب الخيال الأدبي الذين يستخدمون النماذج اللغوية المحلية؟',
@@ -5275,7 +5275,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       '세계관 구축 프롬프트 템플릿',
     ],
     leadAnswerBlock:
-      '**로컬 LLM의 소설 출력에서 가장 큰 개선은 "장면을 써줘"에서 5부 구조 프롬프트(장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한)로 전환할 때 나타납니다. 이 형식은 쉬운 지름길을 택할 여지를 남기지 않으므로, 모델이 줄거리 요약 대신 묘사하는 산문을 생성하는 경향이 있습니다. 인물 개발을 위한 가장 신뢰할 수 있는 템플릿은 "모순 프롬프트"입니다: 인물에게 지배적인 성격과 모순되는 행동을 부여한 뒤, 어느 쪽도 명시하지 않고 두 가지를 모두 드러내는 장면을 써달라고 요청합니다. 대화의 경우, 먼저 하위 텍스트(인물이 말하고 싶지만 말하지 않을 것)를 설정한 뒤 그 숨겨진 메시지 주변의 대사를 생성하게 합니다. 편집 작업의 경우, 플롯 일관성 확인으로 연속성 오류를 감지하고, 리듬 분석으로 평탄한 구역을 파악하며, 노출 완화로 정보 블록을 재배치합니다.**',
+      '**로컬 LLM의 소설 출력에서 가장 큰 개선은 "장면을 써줘"에서 5부 구조 프롬프트(장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한)로 전환할 때 나타납니다.**',
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM을 사용하는 소설 작가에게 가장 좋은 프롬프트 템플릿은 무엇입니까?',
