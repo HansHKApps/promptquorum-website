@@ -1,31 +1,33 @@
 // Power Local LLM — How to Run a Local LLM for Screenwriting and Novel Drafting
 // Slug: local-llm-screenwriting-and-novel-drafting
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales (en, de, es, fr, ja, pt, ar, zh, ko). Refreshed 2026-10-26 in no-GSC (data-free) mode: model landscape, context facts, Final Draft/Fountain, KDP and Clarkesworld policy re-checked against primary sources.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-26',
+    next_refresh_due: '2027-04-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-en.webp',
     title: 'Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)',
-    seoTitle: 'Local LLM Screenwriting & Novel Drafting 2026',
+    seoTitle: 'Local LLM Screenwriting & Novel Drafting Guide 2026',
     intro:
       'Local LLMs integrated into a screenwriting or novel-drafting workflow let you generate scene drafts, beat sheets, dialogue passes, and revision runs without internet access, cloud logging, or usage limits. This guide covers the full workflow: model selection, context-window management for long-form work, chapter scaffolding, scene generation, and the tools that connect a local LLM to your writing software.',
     metaDescription:
-      'Full workflow for using local LLMs in screenwriting and novel drafting: model selection, context management, chapter scaffolding, scene generation, and tool integrations for writers.',
+      'How to use local LLMs for screenwriting and novel drafting: model starting points, context management, scene generation and writer tool integrations.',
     twitterDescription:
       'How to use local LLMs for screenwriting and novel drafting: context-window management, chapter scaffolding, scene generation, dialogue passes, and tool integrations.',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -46,22 +48,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'scene generation local model',
     ],
     leadAnswerBlock:
-      '**The primary technical challenge for writers using local LLMs on long-form work is context-window management: most local models have a 128K context window on paper, but attention quality degrades significantly after 32K tokens (~24,000 words) in practice. The solution is structured context injection — a "session document" technique where you maintain a compressed summary of prior chapters, the current scene\'s setup, and relevant character sheets, and inject only those elements at the start of each generation session. Combined with scene-by-scene generation (one scene prompt per session rather than asking the model to continue a growing document), this approach produces consistent long-form output at any novel length. For screenwriting specifically, the beat-sheet-first workflow — where you generate a scene-level beat sheet before any prose — produces formatted script pages that match the structure rather than drifting from it.**',
+      '**The main challenge with local LLMs on long-form fiction is context management: plan around about 32K tokens per generation and give the model a compressed "session document" (character sheets, chapter summaries, current scene setup) for one scene at a time, instead of the whole manuscript.**',
     quickAnswerTop: {
       en: {
         question: 'How do you use a local LLM for novel writing or screenwriting without losing context?',
         answer:
-          'The key technique is structured context injection — rather than pasting your entire manuscript into the context window, maintain a compressed session document: a character sheet (name, dominant trait, speech register), a plot summary of completed chapters (100–200 words per chapter), and the current scene\'s setup (beat, POV, word ceiling). Inject this session document at the start of each writing session. Generate one scene at a time rather than asking the model to continue a growing document. This approach works at any novel length and prevents the context-drift and voice-loss that happens when writers try to fit a full manuscript into a 128K context window.',
+        'The key technique is structured context injection — rather than pasting your entire manuscript into the context window, maintain a compressed session document: a character sheet (name, dominant trait, speech register), a plot summary of completed chapters (100–200 words per chapter), and the current scene\'s setup (beat, POV, word ceiling). Inject this session document at the start of each writing session. Generate one scene at a time rather than asking the model to continue a growing document. Because each call carries only the compressed state, this approach scales to any novel length and reduces the context drift and voice loss that writers report when they try to fit a full manuscript into one long context window.',
         bullets: [
           'Session document technique: inject character sheets + chapter summaries + current scene setup at session start.',
-          'Generate one scene at a time — never ask the model to "continue" a growing document beyond 32K tokens.',
+          'Generate one scene at a time — avoid asking the model to "continue" a growing document beyond about 32K tokens.',
           'Beat-sheet-first for screenwriting: generate the beat sheet before any prose; use it as the structural scaffold.',
-          'Best model for long-form work: Llama 3.3 70B (strong context adherence, best instruction following).',
-          'Ollama + Obsidian or Scrivener is the most common writer workflow in 2026.',
-          'Context window reality: 128K is the technical limit; 32K tokens is the practical quality ceiling for most models.',
-          'Uncensored models (Hermes 3) pair with this workflow for mature fiction without setup changes.',
+          'Model starting points (specs from the model cards): Qwen3.6 27B, Gemma 4 31B, Llama 3.3 70B; PromptQuorum has not benchmarked them for fiction.',
+          'Ollama + Obsidian is a common writer workflow; Scrivener documents no plugin API, so output is pasted in.',
+          'Context window planning rule: models list 128K–262,144 tokens; plan around about 32K per generation, because long-context quality is uneven.',
+          'Low-refusal fine-tunes such as Hermes 4 70B use the same workflow for mature fiction; check each model\'s licence.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -84,26 +86,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Context window reality: 128K tokens on paper, 32K tokens in practice.** Attention quality in most local models degrades noticeably after 32K tokens (~24,000 words). Do not paste your full manuscript into the context window — use the session document technique instead.',
+          '**Context window planning rule: 128K–262,144 tokens listed, about 32K planned.** Models use the middle of long inputs less reliably ("Lost in the Middle"), so plan around about 32K tokens (~24,000 words) per generation and use the session document technique, not the full manuscript.',
           '**Session document technique is the core skill.** Maintain a compressed text file containing: active character sheets (one per character, 150 words each), chapter summaries (100–200 words per completed chapter), and the current scene\'s setup. Inject this at the start of every generation session.',
-          '**Generate one scene at a time.** Ask the model to write one scene (200–600 words) per session rather than asking it to "continue" a growing document. One scene per session eliminates context drift and produces consistent voice.',
+          '**Generate one scene at a time.** Ask the model to write one scene (200–600 words) per session rather than asking it to "continue" a growing document. One scene per session reduces context drift and helps keep the voice consistent.',
           '**Beat-sheet-first for screenwriting.** Before generating any script pages, generate a scene-level beat sheet (INT./EXT. LOCATION — what happens, what changes, what the scene accomplishes in one sentence). Use the beat sheet as the scaffold for each page generation.',
-          '**Llama 3.3 70B is the best model for long-form work.** Strong context adherence, best instruction following at longer generation lengths, and reliable character voice consistency across extended sessions.',
-          '**Ollama + a plain-text writing tool is the most reliable integration.** Scrivener, Obsidian, and VS Code all work as the manuscript layer; Ollama serves the model through an API that companion apps or scripts can call.',
-          '**Uncensored models (Hermes 3) slot into this workflow without setup changes.** For mature fiction, swap the Ollama model to Hermes 3; the session document and scene generation techniques are identical.',
+          '**Pick a model you can run, then test it on one of your own scenes.** Dense models in the 27B–31B class (Qwen3.6 27B, Gemma 4 31B) and Llama 3.3 70B are common starting points; PromptQuorum has not benchmarked any of them for fiction, and public creative-writing leaderboards rank models differently from one another.',
+          '**Ollama + a plain-text writing tool is a dependable integration.** Scrivener, Obsidian, and VS Code can all hold the manuscript; Ollama serves the model through an API that companion apps or scripts can call.',
+          '**Low-refusal models (Hermes 4 70B) slot into this workflow without setup changes.** For mature fiction, swap the Ollama model; the session document and scene generation techniques are identical. Check each model\'s licence for your use.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Best model for long-form fiction:** Llama 3.3 70B (strongest context adherence and instruction following).',
-          '**Context window practical limit:** ~32K tokens (~24,000 words) for reliable attention quality; 128K is the technical ceiling.',
+          '**Model starting points (from the model cards):** Qwen3.6 27B (dense, Apache-2.0, 262,144-token context), Gemma 4 31B (dense, Apache-2.0, 256K context), Llama 3.3 70B (dense, 128K context, Llama 3.3 Community License).',
+          '**Context window planning limit:** ~32K tokens (~24,000 words) per generation; models list 128K–262,144 tokens, which is a ceiling, not a quality guarantee.',
           '**Session document size:** target under 4,000 tokens (character sheets + chapter summaries + current scene setup).',
           '**Scene generation target:** 200–600 words per generation call; longer scenes via multiple sequential prompts.',
           '**Screenwriting format:** combine Ollama with Fountain-format output instructions for screenplay-format text.',
-          '**Writing tools that pair with Ollama:** Scrivener (via API companion scripts), Obsidian (via local plugin or scripts), VS Code (via Continue.dev or direct API calls), plain terminal.',
-          '**Uncensored option:** Hermes 3 Llama 3.1 for mature fiction; same workflow, same session document technique.',
+          '**Writing tools that pair with Ollama:** Scrivener (paste output; no documented plugin API), Obsidian (via local plugin or scripts), VS Code (via Continue.dev or direct API calls), plain terminal.',
+          '**Low-refusal option:** Hermes 4 70B (Llama-3.1-70B base) for mature fiction; same workflow, same session document technique.',
         ],
       },
       contextWindow: {
@@ -111,29 +113,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'The Context Window Problem for Long-Form Writing',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          "Context window reliability for local LLMs: the practical attention ceiling is 32K tokens (~24,000 words) versus the 128K technical limit, covering Llama 3.3 70B, Qwen3 32B, Mistral Large, and Kimi-K2.6's 1M-token context requiring ~480 GB VRAM.",
+          'Context planning: a 32K-token (~24,000 words) working limit versus the 128K–262,144 tokens that open models now list.',
         content:
-          '**The practical context limit for most local models is 32K tokens — not the 128K advertised.** Attention quality (the model\'s ability to refer accurately to earlier content) degrades in most models after 32K tokens. At 128K tokens, many models lose accurate reference to content from the first quarter of the context. For a novel, this means you cannot simply paste your manuscript-so-far and ask for the next chapter.\n\nKimi-K2.6 from Moonshot AI offers a genuine 1M-token context window with stronger attention-quality preservation than most 128K-context models. Running Kimi-K2.6 locally is impractical for most writers — it requires roughly 480 GB of VRAM at Q4 quantization, well beyond consumer hardware. For writers who genuinely need 1M context, Moonshot\'s hosted API is the practical access point; the workflow techniques in this guide (session document, scene-by-scene generation) still apply but are less critical at that context scale. For writers using locally-runnable models (Llama 3.3 70B, Qwen3 32B, Mistral Large), the 32K practical ceiling is the constraint.',
+        '**Plan around about 32K tokens per generation, even when a model lists far more.** This is a conservative PromptQuorum planning rule, not a measured limit: long-context research (Liu et al., "Lost in the Middle") found that models use information at the start and end of a long input more reliably than information in the middle, and that quality can fall as inputs grow. Newer models list much larger windows — Qwen3.6 27B lists 262,144 tokens natively and Gemma 4 31B lists 256K — so test your own model. For a novel, pasting the manuscript-so-far and asking for the next chapter is still the least reliable approach, and a long context also uses more memory because the KV cache grows with it.\n\nKimi-K2.6 from Moonshot AI lists a 256K-token (262,144) context window, the same class as the models above, but it is a mixture-of-experts model with about 1 trillion total parameters (32 billion active) shipped with native int4 weights. Even at 4 bits the weights alone come to roughly 500 GB (PromptQuorum estimate: 1 trillion parameters × 0.5 byte), so it is a server-class model, not a laptop one. The session document technique and scene-by-scene generation apply to locally runnable models of any context size.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'The practical quality ceiling for context adherence in most local LLMs is around 32K tokens (~24,000 words) — beyond this, models lose accurate reference to earlier content, causing voice drift and plot inconsistencies that accumulate across a long manuscript.',
+            text: 'A conservative planning ceiling for context adherence in local LLMs is around 32K tokens (~24,000 words) per generation — beyond this, long-context research finds less reliable use of earlier content, which can show up as voice drift and plot inconsistencies across a long manuscript.',
           },
           {
             type: 'plain-terms',
-            text: 'You cannot fit a 90,000-word novel into a 128K context window and expect the model to remember what happened in chapter 3 while writing chapter 20. Instead, compress what the model needs to know — character sheets, chapter summaries, current scene setup — into a "session document" under 4,000 tokens, and inject that at the start of every writing session. The model only ever needs to know what is relevant to the scene it is generating right now.',
+            text: 'You cannot reliably expect a model to remember what happened in chapter 3 while writing chapter 20 just because your whole manuscript fits in its context window. Instead, compress what the model needs to know — character sheets, chapter summaries, current scene setup — into a "session document" under 4,000 tokens, and inject that at the start of every writing session. The model only ever needs to know what is relevant to the scene it is generating right now.',
           },
         ],
         items: [
-          '**Token-to-word conversion:** 1 token ≈ 0.75 words in English. 32K tokens ≈ 24,000 words. 128K tokens ≈ 96,000 words (one full novel).',
-          '**Attention degradation:** models lose reliable reference to content from early in a long context window. This shows up as character name errors, forgotten plot points, and voice drift from the established register.',
-          '**The asymmetry:** models attend to the beginning (system prompt) and end (last few hundred tokens) of the context window best. Content in the middle of a long context is least reliably attended to.',
+          '**Token-to-word conversion:** 1 token ≈ 0.75 words in English (rule of thumb). 32K tokens ≈ 24,000 words. 128K tokens ≈ 96,000 words (about one novel); 262,144 tokens ≈ 196,000 words.',
+          '**Attention degradation:** models can lose reliable reference to content from early in a long context window. This shows up as character name errors, forgotten plot points, and voice drift from the established register.',
+          '**The asymmetry:** in the Lost in the Middle study, models used the beginning and the end of the input best and content in the middle least reliably. The study tested models available in 2023, so test current models rather than assuming the same pattern.',
           '**Session document as the solution:** compress everything the model needs into a short structured document. Inject at the start. Generate the scene. End the session. Reset. Start fresh with the same session document updated to reflect the new scene.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Do not paste your full manuscript into the context. If your novel is over 10,000 words and you paste the full draft to ask for the next chapter, you will get context drift — the model will forget early character details, contradict established plot points, and regress toward a generic register. Use the session document technique instead.',
+            text: 'Do not paste your full manuscript into the context. If your novel is over 10,000 words and you paste the full draft to ask for the next chapter, you risk context drift — the model may forget early character details, contradict established plot points, and regress toward a generic register. Use the session document technique instead.',
           },
         ],
       },
@@ -141,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'Session Document Technique',
         content:
-          'The session document technique in this section was tested across drafting work on multiple long-form projects (one 90,000-word literary novel, two screenplay drafts). The 4,000-token session document size, scene-by-scene generation cadence, and continuity check timing all come from observed failure modes during that drafting work, not from theoretical modeling.\n\n**The session document is a plain-text file you maintain alongside your manuscript — it is the compressed state of your novel that the model needs to know to generate consistent content.** It has three sections: active character sheets, chapter summaries, and the current scene setup.',
+          'The session document technique is a PromptQuorum workflow recommendation built on the context limits described above. PromptQuorum has not run a controlled test of it, and the sizes below (4,000 tokens, 150 words per character sheet, 100–150 words per chapter summary) are planning guidelines, not measured thresholds.\n\n**The session document is a plain-text file you maintain alongside your manuscript — it is the compressed state of your novel that the model needs to know to generate consistent content.** It has three sections: active character sheets, chapter summaries, and the current scene setup.',
         promptExamples: [
           {
             label: 'Session Document Template',
@@ -167,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Novel Drafting Workflow',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          'Four-phase novel drafting workflow with local LLMs: outline (10–30 chapters), beat sheets (3–8 scenes per chapter), scene generation (200–600 words per session), and revision passes, built around a session document under 4,000 tokens.',
+          'Four-phase novel workflow with a local LLM: outline, beat sheets, scene generation and revision, around a session document.',
         content:
           '**The novel drafting workflow with a local LLM has four phases: outline, chapter beat sheets, scene generation, and revision passes.** Each phase uses a different prompt structure.',
         items: [
@@ -200,10 +202,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Format in the system prompt, not the user turn.** Putting screenplay format instructions in the system message means every generation in the session follows the format without repeating the instruction.',
-          '**Fountain-compatible output:** Fountain is a plain-text markup format for screenplays supported by Final Draft, Highland, WriterDuet, and many other tools. Asking the model to generate "Fountain-compatible plain text" produces output you can import directly into your screenplay software.',
+          '**Fountain-compatible output:** Fountain is a plain-text markup format for screenplays; Highland and Fade In read it, among other apps listed in the [Fountain app directory](https://fountain.io/apps). Asking the model to generate "Fountain-compatible plain text" produces output you can open in those tools or convert for others (see the Final Draft question in the FAQ).',
           '**Slug lines first:** generate the slug line (INT./EXT. LOCATION — DAY/NIGHT) as a separate one-line prompt before generating the scene content. This anchors the physical location before the model starts generating action.',
           '**Dialogue passes:** after generating action lines, run a separate dialogue pass: "The action lines are set. Write the dialogue for [Character A] and [Character B] in this scene. Character A wants [X]. Character B wants [Y]. No dialogue tags. 5–8 exchanges."',
-          '**Page count management:** a standard screenplay page is approximately 55–60 words of action and dialogue combined. Use word ceilings calibrated to page targets: 1 page ≈ 60 words, 2 pages ≈ 120 words, 3 pages ≈ 180 words.',
+          '**Page count management:** there is no fixed words-per-page figure, and "one page equals one minute" is only a rule of thumb. Count the average words per page of your own script and set word ceilings from that.',
         ],
         callouts: [
           {
@@ -220,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'For long-form fiction, the most reliable generation pattern is: session document in the system prompt → single scene prompt in the user turn → review → update session document → repeat, one scene per session.',
+            text: 'For long-form fiction, a dependable generation pattern is: session document in the system prompt → single scene prompt in the user turn → review → update session document → repeat, one scene per session.',
           },
           {
             type: 'plain-terms',
@@ -258,8 +260,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'SillyTavern', 'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integration': 'OpenAI-compatible API → Ollama', 'Best For': 'Roleplay-style fiction and character-card-driven drafting; persistent character memory' },
           { 'Tool': 'Plain terminal', 'Integration': '`ollama run [model]` or curl to Ollama API', 'Best For': 'Scriptable workflows; writers who want maximum control with minimal UI overhead' },
           { 'Tool': 'LM Studio', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Integration': 'Built-in chat UI + local server API', 'Best For': 'Writers who want a GUI model manager without installing Ollama separately' },
-          { 'Tool': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integration': 'Built-in AI integration; supports OpenAI-compatible endpoints (point at Ollama)', 'Best For': 'Writers who want chapter-level AI assistance inside a single novel-focused app; closest to "AI-native novel writing tool" in 2026' },
-          { 'Tool': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integration': 'Manual workflow: structure novels in Plottr, paste scenes/beats into Ollama externally', 'Best For': 'Plot-heavy genre fiction (mystery, thriller, fantasy) where structural plotting is the workflow centerpiece' },
+          { 'Tool': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integration': 'Built-in AI integration; its help pages list LM Studio, Ollama and OpenAI-API-compatible connections', 'Best For': 'Writers who want chapter-level AI assistance inside a single novel-focused app' },
+          { 'Tool': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integration': 'Manual workflow: structure novels in Plottr, paste scenes/beats into Ollama externally (Plottr states it is not adding AI features)', 'Best For': 'Plot-heavy genre fiction (mystery, thriller, fantasy) where structural plotting is the workflow centerpiece' },
         ],
         callouts: [
           {
@@ -273,22 +275,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Model Recommendations for Long-Form Work',
         content:
-          '**Long-form drafting has different model requirements than short-form fiction.** Context adherence, instruction-following consistency across extended sessions, and the ability to maintain voice over multiple generation calls are the decision-relevant factors. For the broader model landscape across all use cases, see [Best Local LLMs in 2026](/local-llms/best-local-llms-2026).',
+          '**Long-form drafting has different model requirements than short-form fiction.** Context adherence, instruction-following consistency across extended sessions, and the ability to maintain voice over multiple generation calls are the decision-relevant factors. The rows below are starting points taken from each model\'s card; PromptQuorum has not benchmarked these models for fiction, and public creative-writing leaderboards rank models differently from one another, so test two candidates on one of your own scenes. Server-class open models such as Command A+ (218B total parameters, 25B active, Apache 2.0) and Mistral Large 3 (675B total parameters, 256K context, Apache 2.0) are outside consumer hardware range. For the broader model landscape across all use cases, see [Best Local LLMs in 2026](/local-llms/best-local-llms-2026).',
         columns: ['Task', 'Recommended Model', 'Why'],
         rows: [
-          { 'Task': 'Novel drafting (primary)', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Best context adherence and instruction following for multi-session long-form work; most consistent voice' },
-          { 'Task': 'Screenwriting', 'Recommended Model': 'Llama 3.3 70B or Mistral Large', 'Why': 'Llama 3.3 for complex character dynamics; Mistral Large for consistent format adherence in Fountain output' },
-          { 'Task': 'Beat sheet / outline generation', 'Recommended Model': 'Qwen3 32B', 'Why': 'Strong structural generation; follows numbered-list and constraint-heavy outline prompts reliably' },
-          { 'Task': 'Dialogue passes', 'Recommended Model': 'Command A+', 'Why': 'Best naturalistic speech register and character voice differentiation across extended exchanges' },
-          { 'Task': 'Revision (structural)', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Best at following specific named structural constraints in rewrite instructions' },
-          { 'Task': 'Mature / dark fiction', 'Recommended Model': 'Hermes 3 Llama 3.1 70B', 'Why': 'Same base as Llama 3.1 70B; uncensored fine-tune; identical context adherence for long-form work' },
+          { 'Task': 'Novel drafting (primary)', 'Recommended Model': 'Qwen3.6 27B or Gemma 4 31B', 'Why': 'Dense 27B–31B models listing 256K+ context under Apache licences; a size class that suits a 24 GB GPU or 32 GB+ unified memory at 4-bit (estimate)' },
+          { 'Task': 'Screenwriting', 'Recommended Model': 'Qwen3.6 27B or Llama 3.3 70B', 'Why': 'Format adherence depends mostly on the system prompt; test one Fountain scene on two models. Llama 3.3 70B is dense, lists 128K context and needs roughly 40 GB at 4-bit (estimate)' },
+          { 'Task': 'Beat sheet / outline generation', 'Recommended Model': 'Qwen3.6 35B-A3B', 'Why': 'Mixture-of-experts with 3B of 35B parameters active per token (Apache-2.0), so generation is faster per token; outline quality not benchmarked by PromptQuorum' },
+          { 'Task': 'Dialogue passes', 'Recommended Model': 'The model whose samples fit', 'Why': 'Run dialogue as a separate pass on the model whose calibration lines match your character\'s register; there is no verified ranking of models for dialogue' },
+          { 'Task': 'Revision (structural)', 'Recommended Model': 'The model you drafted with', 'Why': 'Revision prompts that name one structural constraint per call work on any instruction-following model; one scene per call' },
+          { 'Task': 'Mature / dark fiction', 'Recommended Model': 'Hermes 4 70B', 'Why': 'Built on Llama-3.1-70B; Nous Research describes broadly neutral alignment and lower refusal rates; Llama 3 licence; hybrid reasoning mode' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Common Mistakes',
         items: [
-          '**Pasting the full manuscript into the context.** Even with a 128K context window, attention quality degrades significantly after 32K tokens. Use the session document technique — compressed character sheets and chapter summaries — instead.',
+          '**Pasting the full manuscript into the context.** Even when a model lists a 128K–262K window, long inputs are used less reliably, so plan around about 32K tokens. Use the session document technique — compressed character sheets and chapter summaries — instead.',
           '**Asking the model to "continue" an open-ended document.** "Continue the novel" produces drift. "Write the next scene: [specific setup, POV, word ceiling]" produces a consistent, bounded output you can evaluate and paste.',
           '**No beat sheets for screenwriting.** Generating script pages without a scene beat produces pages that drift in length and lose their structural function. Generate the beat sheet first, always.',
           '**Ignoring session document updates.** If you do not update the chapter summary after generating a scene, the session document becomes stale. A stale session document produces inconsistencies within a few sessions.',
@@ -299,10 +301,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          'Llama 3.3 70B long-context benchmarks — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B technical report including context window benchmarks — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP research](https://arxiv.org/abs/2307.03172)',
-          'Fountain screenplay format specification — [Fountain.io](https://fountain.io)',
+          '[Qwen3.6-27B model card](https://huggingface.co/Qwen/Qwen3.6-27B) and [Qwen3.6-35B-A3B model card](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — parameters, 262,144-token native context, YaRN extension, Apache-2.0, read 26 October 2026',
+          '[Gemma 4 31B model card](https://huggingface.co/google/gemma-4-31B-it) — dense 31B, 256K context, Apache 2.0, read 26 October 2026',
+          '[Llama 3.3 70B Instruct model card](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B, 128K context, Llama 3.3 Community License, released 6 December 2024',
+          '[Hermes 4 70B model card](https://huggingface.co/NousResearch/Hermes-4-70B) — Llama-3.1-70B base, hybrid reasoning, "broadly neutral alignment"',
+          '[Kimi-K2.6 model card](https://huggingface.co/moonshotai/Kimi-K2.6) — 1T total and 32B active parameters, 256K context, native int4',
+          '[Command A+ documentation](https://docs.cohere.com/docs/command-a-plus) and [Mistral Large 3 model card](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — parameter counts and licences of the server-class models',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023',
+          '[Fountain.io](https://fountain.io) — Fountain screenplay format specification and [list of apps](https://fountain.io/apps)',
+          '[Final Draft help center](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — states Final Draft cannot import .fountain files directly',
+          '[Amazon KDP AI-content rules, Publishers Weekly](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html) and [Clarkesworld submissions](https://clarkesworldmagazine.com/submissions/) — publisher and platform AI policies; check the current wording before submitting',
+          '[Scrivener release notes](https://www.literatureandlatte.com/scrivener/release-notes) — versions 3.4.0 to 3.5.2 (December 2025): no plugin or API entries; "Scrivener itself contains no AI"; read 26 October 2026',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/) and [NovelCrafter AI connections help](https://www.novelcrafter.com/help/categories/ai-connections) — Plottr says it is not building AI features; NovelCrafter lists LM Studio, Ollama and OpenAI-API-compatible connections',
           'Ollama API documentation — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -312,11 +322,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Can a local LLM write a full novel?',
-            a: 'A local LLM can generate the prose for a full novel — but the structural and editorial intelligence has to come from the writer. The model generates scenes when prompted with specific setups; it does not plan, evaluate, or make thematic decisions autonomously. Writers who use local LLMs as drafting tools describe them as a "very fast first-draft generator for scenes I already know how to write." The model saves time on the blank-page problem; the writer still makes every significant decision.',
+            a: 'A local LLM can generate the prose for a full novel — but the structural and editorial intelligence has to come from the writer. The model generates scenes when prompted with specific setups; it does not plan, evaluate, or make thematic decisions on its own. Treat it as a fast first-draft generator for scenes you already know how to write: it saves time on the blank-page problem, while the writer still makes every significant decision. Check publisher and platform AI policies before submitting (see the publishers question below).',
           },
           {
             q: 'What is the maximum context window I can use reliably?',
-            a: 'In practice, plan for reliable attention quality up to about 32K tokens (~24,000 words) with most local models including Llama 3.3 70B and Qwen3 32B. Beyond this, models start losing accurate reference to content from the early part of the context. The session document technique keeps the working context under 4,000–6,000 tokens, which means every generation call operates in the most reliable part of the attention window.',
+            a: 'Models list 128K to 262,144 tokens, but PromptQuorum recommends planning around about 32K tokens (~24,000 words) per generation, because long-context research finds that models use the middle of long inputs less reliably. That is a conservative planning rule, not a measured limit for every model, so test yours. The session document technique keeps the working context under 4,000–6,000 tokens, so every generation call stays well inside that range.',
           },
           {
             q: 'How do I stop the model from changing my character\'s voice mid-novel?',
@@ -324,11 +334,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use Scrivener with a local LLM?',
-            a: 'Not natively — Scrivener does not have a plugin system for external API calls as of 2026. The most common workflow is: generate in Ollama (via terminal or a companion script), copy the output, paste it into the relevant Scrivener document. Some writers use Obsidian as the AI drafting layer and import completed chapters into Scrivener for final structuring. Scripts that call the Ollama API and copy output to clipboard are the closest to native integration.',
+            a: 'Not natively — Scrivener 3 has no documented plugin system, and its official release notes through version 3.5.2 (December 2025) mention no AI integration: the 3.4.0 notes say "Scrivener itself contains no AI" and add support for Apple\'s Writing Tools, a macOS system feature. A common workflow is: generate in Ollama (via terminal or a companion script), copy the output, paste it into the relevant Scrivener document. Some writers use Obsidian as the AI drafting layer and import completed chapters into Scrivener for final structuring. Scripts that call the Ollama API and copy output to clipboard are the closest to native integration.',
           },
           {
             q: 'Which is better for screenwriting: Ollama or a cloud AI?',
-            a: 'For screenwriters who need to generate mature content (violence, dark psychology, morally complex characters), local Ollama with Llama 3.3 70B or Hermes 3 is more reliable — cloud models refuse specific content that often appears in dramatic scripts. For format consistency and page-count discipline, both cloud and local models perform equivalently when given format instructions in the system prompt. The choice is primarily about content freedom and privacy, not output quality.',
+            a: 'For screenwriters who need to generate mature content (violence, dark psychology, morally complex characters), a local model gives you control over the model and its refusal behaviour — some hosted models decline or soften content that appears in dramatic scripts, and hosted policies change over time. A low-refusal local model such as Hermes 4 70B has fewer built-in refusals, though you remain responsible for the content you generate and publish. Format consistency depends mostly on the instructions in the system prompt, which work with both. The choice is mainly about content control, privacy and cost; PromptQuorum has not compared output quality between hosted and local models for screenwriting.',
           },
           {
             q: 'How do I generate dialogue that sounds like a specific character?',
@@ -336,23 +346,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do I need a GPU to use a local LLM for novel drafting?',
-            a: 'A GPU accelerates generation speed significantly but is not required. On Apple Silicon (M3 or later), the unified memory architecture means even a MacBook Pro 16 GB can run Qwen3 14B comfortably for drafting work — generation speed is slower than a 24 GB GPU rig but acceptable for a writing workflow where you are reading and evaluating output between generations. A dedicated NVIDIA GPU with 24 GB VRAM (RTX 4090, RTX 3090) runs 70B models at usable generation speeds.',
+            a: 'A GPU speeds up generation significantly but is not required. On Apple Silicon, unified memory lets a MacBook Pro with 16 GB run smaller models (roughly the 8B–14B class at 4-bit, an estimate) — slower than a 24 GB GPU rig, but acceptable when you read and evaluate output between generations. A 24 GB NVIDIA GPU (RTX 4090, RTX 3090) fits 27B–32B-class models at 4-bit (estimate); 70B-class models need roughly 40 GB or more at 4-bit, so they require two GPUs, a 48 GB card, 64 GB of unified memory, or slower CPU offload.',
           },
           {
             q: 'Can I use local LLMs with Final Draft or other professional screenwriting software?',
-            a: 'Not directly. Final Draft does not have an external API integration. The workflow is: generate script pages in Fountain plain-text format via Ollama, then import the Fountain file into Final Draft using its built-in importer (File → Import → Fountain). Highland, WriterDuet, and Fade In all support Fountain import natively. Generate in Ollama, format as Fountain, import into your screenwriting software.',
+            a: 'Not directly. Per Final Draft\'s help center, Final Draft cannot import .fountain files; its guidance is to save the text as plain .txt and choose Script (not Text) when importing, or to bring it in as FDX from an app that exports that format. Highland converts between Fountain, FDX and PDF, and Fade In imports and exports Fountain (per the Fountain app directory). Workflow: generate Fountain-format text in Ollama, open it in Highland or Fade In, and export FDX for Final Draft.',
           },
           {
             q: 'Can I use Kimi-K2.6 locally for novel drafting?',
-            a: 'Kimi-K2.6 has a genuine 1M-token context window — useful for single-shot novel-length work — but is impractical to run locally on consumer hardware (approximately 480 GB VRAM at Q4 quantization). For writers who need 1M context for whole-manuscript work, Moonshot\'s hosted API is the practical option. For fully-local workflows, the session document technique with Llama 3.3 70B (128K context, ~32K practical) handles novel-length work without needing the 1M ceiling. Most writers do not actually need 1M context if the session document workflow is applied.',
+            a: 'Kimi-K2.6 lists a 256K-token context window, the same class as Qwen3.6 27B and Gemma 4 31B, but it is a mixture-of-experts model with about 1 trillion total parameters (32 billion active) and native int4 weights. The weights alone come to roughly 500 GB (PromptQuorum estimate), so it needs a multi-GPU server or a very large unified-memory machine and is impractical on consumer hardware. For fully local workflows, a 27B–70B dense model with the session document technique covers novel-length work without a trillion-parameter model.',
           },
           {
             q: 'How do publishers feel about AI-drafted manuscripts?',
-            a: 'Mixed and evolving as of 2026. Most major fiction publishers (Big Five, mid-size literary) have policies requiring disclosure of substantial AI use in submitted manuscripts; some prohibit it entirely. Self-publishing platforms (Amazon KDP) require attestation that AI-generated content is disclosed. Genre publishers and short fiction markets are split — Clarkesworld notably bans AI-generated submissions; others evaluate case-by-case. Writers using local LLMs as drafting assistants (with substantial human revision) typically describe the AI as a tool rather than co-author, which most policies accept; pure AI-generated submissions are increasingly rejected. Verify the specific publisher\'s policy before submitting.',
+            a: 'Policies vary by publisher and platform and are still changing as of 2026, so check the specific one before submitting. Amazon KDP requires you to tell it when text, images or translations are AI-generated, and treats content created by an AI tool as AI-generated even if you edit it substantially; work you wrote yourself that AI only helped edit or refine is "AI-assisted" and needs no disclosure (per Amazon\'s rules as reported by Publishers Weekly in September 2023). Some magazines reject AI-involved work outright — Clarkesworld\'s submission guidelines say it is not considering stories written, co-written or assisted by AI. Scene text generated by a local LLM falls under policies like KDP\'s "AI-generated" definition, so disclose it where required. This is general information, not legal advice.',
           },
           {
-            q: 'What hardware do I need for 1M context models?',
-            a: 'Running a 1M-context model locally requires far more VRAM than typical local LLM workflows — Kimi-K2.6 needs approximately 480 GB at Q4 quantization, achievable only with multi-GPU server setups (8x H100 or equivalent). For consumer hardware (24–64 GB VRAM rigs), 128K context models are the practical ceiling, and the 32K practical attention quality limit applies. The session document technique in this article is designed precisely for this gap — getting consistent long-form output without needing 1M context.',
+            q: 'What hardware do I need for million-token contexts?',
+            a: 'Qwen3.6 27B and Qwen3.6 35B-A3B list a native 262,144-token context that can be extended to about 1,010,000 tokens with YaRN scaling (per their model cards). A long context needs memory for the KV cache on top of the weights, so a million-token run needs far more memory than a typical consumer setup; PromptQuorum has not measured the requirement. The session document technique in this article is designed for exactly this gap — consistent long-form output without relying on a million-token window.',
           },
         ],
       },
@@ -373,9 +383,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-es.webp',
     title: 'Redactar novelas y guiones con LLMs locales: guía de flujo de trabajo para más de 100.000 palabras',
@@ -383,15 +394,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Los LLMs locales integrados en un flujo de trabajo de redacción de novelas o guiones te permiten generar borradores de escenas, beat sheets, pasadas de diálogo y rondas de revisión sin acceso a internet, registro en la nube ni límites de uso. Esta guía cubre el flujo de trabajo completo: selección de modelos, gestión de la ventana de contexto para trabajos de formato largo, andamiaje por capítulos, generación de escenas y las herramientas que conectan un LLM local con tu software de escritura.',
     metaDescription:
-      'Flujo completo para escribir novelas y guiones con LLMs locales: selección de modelos, gestión del contexto, andamiaje por capítulos y generación de escenas.',
+      'Flujo para escribir novelas y guiones con LLMs locales: modelos de partida, gestión del contexto, andamiaje por capítulos y generación de escenas.',
     twitterDescription:
       'Cómo usar LLMs locales para redactar novelas y guiones: gestión de ventana de contexto, andamiaje por capítulos, generación de escenas, pasadas de diálogo e integraciones de herramientas.',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -412,22 +423,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'generación de escenas modelo local',
     ],
     leadAnswerBlock:
-      '**El principal desafío técnico para los escritores que usan LLMs locales en trabajos de formato largo es la gestión de la ventana de contexto: la mayoría de los modelos locales tienen una ventana de contexto de 128K en papel, pero la calidad de atención se degrada significativamente después de 32K tokens (~24.000 palabras) en la práctica. La solución es la inyección de contexto estructurada — la técnica del "documento de sesión": mantener un resumen comprimido de los capítulos anteriores, la configuración de la escena actual y las fichas de personajes relevantes, e inyectar solo esos elementos al inicio de cada sesión de escritura. Combinado con la generación escena por escena (un prompt de escena por sesión en lugar de pedir al modelo que continúe un documento en crecimiento), este enfoque produce resultados de formato largo consistentes en cualquier extensión de novela. Para la redacción de guiones en particular, el flujo de trabajo beat-sheet-first — donde se genera un beat sheet a nivel de escena antes de cualquier prosa — produce páginas de guion formateadas que coinciden con la estructura en lugar de desviarse de ella.**',
+      '**El principal reto de los LLMs locales en ficción larga es la gestión del contexto: planifica unos 32.000 tokens por generación y da al modelo un "documento de sesión" comprimido (fichas, resúmenes de capítulos, escena actual) en lugar del manuscrito entero.**',
     quickAnswerTop: {
       es: {
         question: '¿Cómo usar un LLM local para escribir una novela o un guion sin perder el contexto?',
         answer:
-          'La técnica clave es la inyección de contexto estructurada: en lugar de pegar todo el manuscrito en la ventana de contexto, mantén un documento de sesión comprimido: una ficha de personaje (nombre, rasgo dominante, registro de habla), un resumen de la trama de los capítulos completados (100–200 palabras por capítulo) y la configuración de la escena actual (beat, punto de vista, límite de palabras). Inyecta este documento de sesión al inicio de cada sesión de escritura. Genera una escena a la vez en lugar de pedir al modelo que continúe un documento en crecimiento más allá de 32K tokens.',
+          'La técnica clave es la inyección de contexto estructurada: en lugar de pegar todo el manuscrito en la ventana de contexto, mantén un documento de sesión comprimido: una ficha de personaje (nombre, rasgo dominante, registro de habla), un resumen de la trama de los capítulos completados (100–200 palabras por capítulo) y la configuración de la escena actual (beat, punto de vista, límite de palabras). Inyecta este documento al inicio de cada sesión de escritura. Genera una escena a la vez en lugar de pedir al modelo que continúe un documento en crecimiento. Como cada llamada lleva solo el estado comprimido, el método escala a cualquier longitud de novela y reduce la deriva de contexto y la pérdida de voz que señalan los escritores cuando intentan meter un manuscrito completo en una sola ventana de contexto larga.',
         bullets: [
           'Técnica del documento de sesión: inyecta fichas de personajes + resúmenes de capítulos + configuración de la escena actual al inicio de la sesión.',
-          'Genera una escena a la vez — nunca pidas al modelo que "continúe" un documento en crecimiento más allá de 32K tokens.',
+          'Genera una escena a la vez — evita pedir al modelo que "continúe" un documento en crecimiento más allá de unos 32K tokens.',
           'Beat-sheet-first para guiones: genera el beat sheet antes de cualquier prosa; úsalo como andamio estructural.',
-          'Mejor modelo para trabajos de formato largo: Llama 3.3 70B (fuerte adherencia al contexto, mejor seguimiento de instrucciones).',
-          'Ollama + Obsidian o Scrivener es el flujo de trabajo más común para escritores en 2026.',
-          'Realidad de la ventana de contexto: 128K es el límite técnico; 32K tokens es el techo práctico de calidad para la mayoría de modelos.',
-          'Los modelos sin censura (Hermes 3) encajan en este flujo de trabajo sin cambios de configuración.',
+          'Modelos de partida (datos de las fichas de modelo): Qwen3.6 27B, Gemma 4 31B, Llama 3.3 70B; PromptQuorum no los ha evaluado para ficción.',
+          'Ollama + Obsidian es un flujo de trabajo habitual entre escritores; Scrivener no documenta ninguna API de plugins, así que la salida se pega.',
+          'Regla de planificación de la ventana de contexto: los modelos anuncian 128K–262.144 tokens; planifica en torno a 32K por generación, porque la calidad con contextos largos es irregular.',
+          'Los fine-tunes con pocos rechazos, como Hermes 4 70B, usan el mismo flujo para ficción madura; revisa la licencia de cada modelo.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -450,26 +461,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Realidad de la ventana de contexto: 128K tokens en papel, 32K tokens en la práctica.** La calidad de atención en la mayoría de los modelos locales se degrada notablemente después de 32K tokens (~24.000 palabras). No pegues el manuscrito completo en la ventana de contexto — usa la técnica del documento de sesión.',
+          '**Regla de planificación de la ventana de contexto: 128K–262.144 tokens anunciados, unos 32K planificados.** Los modelos usan con menos fiabilidad el medio de entradas largas ("Lost in the Middle"); planifica unos 32K tokens por generación.',
           '**La técnica del documento de sesión es la habilidad fundamental.** Mantén un archivo de texto comprimido que contenga: fichas de personajes activos (150 palabras por personaje), resúmenes de capítulos (100–200 palabras por capítulo completado) y la configuración de la escena actual. Inyéctalo al inicio de cada sesión de generación.',
-          '**Genera una escena a la vez.** Pide al modelo que escriba una escena (200–600 palabras) por sesión en lugar de pedirle que "continúe" un documento en crecimiento. Una escena por sesión elimina la deriva de contexto y produce una voz consistente.',
+          '**Genera una escena a la vez.** Pide al modelo que escriba una escena (200–600 palabras) por sesión en lugar de pedirle que "continúe" un documento en crecimiento. Una escena por sesión reduce la deriva de contexto y ayuda a mantener una voz consistente.',
           '**Beat-sheet-first para guiones.** Antes de generar páginas de guion, genera un beat sheet a nivel de escena. Úsalo como andamio para cada generación de página.',
-          '**Llama 3.3 70B es el mejor modelo para trabajos de formato largo.** Fuerte adherencia al contexto, mejor seguimiento de instrucciones en generaciones más largas y consistencia confiable de voz de personaje en sesiones extensas.',
-          '**Ollama + una herramienta de escritura de texto plano es la integración más confiable.** Scrivener, Obsidian y VS Code funcionan como la capa de manuscrito; Ollama sirve el modelo a través de una API que aplicaciones o scripts pueden llamar.',
-          '**Los modelos sin censura (Hermes 3) encajan en este flujo de trabajo sin cambios de configuración.** Para ficción madura, cambia el modelo de Ollama a Hermes 3; las técnicas de documento de sesión y generación de escenas son idénticas.',
+          '**Elige un modelo que puedas ejecutar y pruébalo con una escena tuya.** Los modelos densos de la clase 27B–31B (Qwen3.6 27B, Gemma 4 31B) y Llama 3.3 70B son puntos de partida habituales; PromptQuorum no ha evaluado ninguno para ficción, y las clasificaciones públicas de escritura creativa puntúan los modelos de forma distinta.',
+          '**Ollama + una herramienta de escritura de texto plano es una integración fiable.** Scrivener, Obsidian y VS Code pueden alojar el manuscrito; Ollama sirve el modelo a través de una API que aplicaciones o scripts pueden llamar.',
+          '**Los modelos con pocos rechazos (Hermes 4 70B) encajan en este flujo de trabajo sin cambios de configuración.** Para ficción madura, cambia el modelo de Ollama; las técnicas de documento de sesión y generación de escenas son idénticas. Revisa la licencia de cada modelo para tu uso.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**Mejor modelo para ficción de formato largo:** Llama 3.3 70B (mayor adherencia al contexto y seguimiento de instrucciones).',
-          '**Límite práctico de la ventana de contexto:** ~32K tokens (~24.000 palabras) para calidad de atención confiable; 128K es el techo técnico.',
+          '**Modelos de partida (según las fichas de modelo):** Qwen3.6 27B (denso, Apache-2.0, contexto de 262.144 tokens), Gemma 4 31B (denso, Apache-2.0, contexto de 256K), Llama 3.3 70B (denso, contexto de 128K, Llama 3.3 Community License).',
+          '**Límite de planificación de la ventana de contexto:** ~32K tokens (~24.000 palabras) por generación; los modelos anuncian 128K–262.144 tokens, que es un techo, no una garantía de calidad.',
           '**Tamaño del documento de sesión:** objetivo de menos de 4.000 tokens (fichas de personajes + resúmenes de capítulos + configuración de la escena actual).',
           '**Objetivo de generación de escenas:** 200–600 palabras por llamada de generación; escenas más largas mediante múltiples prompts secuenciales.',
           '**Formato de guion:** combina Ollama con instrucciones de salida en formato Fountain para texto con formato de guion.',
-          '**Herramientas de escritura que funcionan con Ollama:** Scrivener (mediante scripts API), Obsidian (mediante plugin local o scripts), VS Code (mediante Continue.dev o llamadas API directas), terminal pura.',
-          '**Opción sin censura:** Hermes 3 Llama 3.1 para ficción madura; mismo flujo de trabajo, misma técnica de documento de sesión.',
+          '**Herramientas de escritura que funcionan con Ollama:** Scrivener (pega la salida; sin API de plugins documentada), Obsidian (mediante plugin local o scripts), VS Code (mediante Continue.dev o llamadas API directas), terminal pura.',
+          '**Opción con pocos rechazos:** Hermes 4 70B (base Llama-3.1-70B) para ficción madura; mismo flujo de trabajo, misma técnica de documento de sesión.',
         ],
       },
       contextWindow: {
@@ -477,29 +488,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'El problema de la ventana de contexto para escritura de formato largo',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          'Fiabilidad de la ventana de contexto en LLMs locales: el techo práctico de atención es de 32K tokens (~24.000 palabras) frente al límite técnico de 128K, para Llama 3.3 70B, Qwen3 32B y Mistral Large; la ventana de 1M de tokens de Kimi-K2.6 requiere ~480 GB de VRAM en Q4.',
+          'Planificación del contexto: límite de trabajo de 32K tokens (~24.000 palabras) frente a los 128K–262.144 anunciados.',
         content:
-          '**El límite de contexto práctico para la mayoría de los modelos locales es 32.000 tokens — no los 128K anunciados.** La calidad de atención (la capacidad del modelo para hacer referencia con precisión al contenido anterior) se degrada en la mayoría de los modelos después de 32.000 tokens. Con 128K tokens, muchos modelos pierden la referencia precisa al contenido del primer cuarto del contexto. Para una novela, esto significa que no puedes simplemente pegar el manuscrito hasta el momento y pedir el siguiente capítulo.\n\nKimi-K2.6 de Moonshot AI ofrece una ventana de contexto genuina de 1 millón de tokens con mayor preservación de la calidad de atención que la mayoría de los modelos con contexto de 128K. Ejecutar Kimi-K2.6 localmente es impractical para la mayoría de los escritores — requiere aproximadamente 480 GB de VRAM en cuantización Q4, muy por encima del hardware de consumo. Para escritores que genuinamente necesitan 1M de contexto, la API alojada de Moonshot es el punto de acceso práctico. Para escritores que usan modelos ejecutables localmente (Llama 3.3 70B, Qwen3 32B, Mistral Large), el techo práctico de 32K es la restricción.',
+          '**Planifica en torno a 32K tokens por generación, aunque un modelo anuncie mucho más.** Es una regla de planificación prudente de PromptQuorum, no un límite medido: la investigación sobre contextos largos (Liu et al., "Lost in the Middle") encontró que los modelos usan con más fiabilidad la información del inicio y del final de una entrada larga que la del medio, y que la calidad puede caer al crecer la entrada. Los modelos nuevos anuncian ventanas mucho mayores — Qwen3.6 27B anuncia 262.144 tokens nativos y Gemma 4 31B, 256K —, así que prueba tu propio modelo. Para una novela, pegar el manuscrito hasta ahora y pedir el siguiente capítulo sigue siendo el método menos fiable, y un contexto largo también consume más memoria porque la caché KV crece con él.\n\nKimi-K2.6 de Moonshot AI anuncia una ventana de contexto de 256K tokens (262.144), de la misma clase que los modelos anteriores, pero es un modelo de mezcla de expertos con en torno a 1 billón de parámetros totales (32.000 millones activos) y pesos int4 nativos. Incluso a 4 bits, solo los pesos suman unos 500 GB (estimación de PromptQuorum: 1 billón de parámetros × 0,5 byte), así que es un modelo de clase servidor, no de portátil. La técnica del documento de sesión y la generación escena por escena se aplican a modelos ejecutables en local de cualquier tamaño de contexto.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'El techo práctico de calidad para la adherencia al contexto en la mayoría de los LLMs locales es de aproximadamente 32.000 tokens (~24.000 palabras) — más allá de esto, los modelos pierden la referencia precisa al contenido anterior, causando deriva de voz e inconsistencias de trama que se acumulan a lo largo de un manuscrito largo.',
+            text: 'Un techo de planificación prudente para la adherencia al contexto en LLMs locales es de unos 32.000 tokens (~24.000 palabras) por generación — más allá, la investigación sobre contextos largos encuentra un uso menos fiable del contenido anterior, lo que puede notarse como deriva de voz e inconsistencias de trama a lo largo de un manuscrito largo.',
           },
           {
             type: 'plain-terms',
-            text: 'No puedes meter una novela de 90.000 palabras en una ventana de contexto de 128K y esperar que el modelo recuerde lo que pasó en el capítulo 3 mientras escribe el capítulo 20. En cambio, comprime lo que el modelo necesita saber — fichas de personajes, resúmenes de capítulos, configuración de la escena actual — en un "documento de sesión" de menos de 4.000 tokens, e inyecta eso al inicio de cada sesión de escritura. El modelo solo necesita saber lo que es relevante para la escena que está generando en ese momento.',
+            text: 'No puedes esperar que el modelo recuerde lo que pasó en el capítulo 3 mientras escribe el capítulo 20 solo porque todo tu manuscrito cabe en su ventana de contexto. En cambio, comprime lo que el modelo necesita saber — fichas de personajes, resúmenes de capítulos, configuración de la escena actual — en un "documento de sesión" de menos de 4.000 tokens, e inyecta eso al inicio de cada sesión de escritura. El modelo solo necesita saber lo que es relevante para la escena que está generando ahora mismo.',
           },
         ],
         items: [
-          '**Conversión token a palabra:** 1 token ≈ 0,75 palabras en inglés. 32K tokens ≈ 24.000 palabras. 128K tokens ≈ 96.000 palabras (una novela completa).',
-          '**Degradación de la atención:** los modelos pierden la referencia confiable al contenido del inicio de una ventana de contexto larga. Esto se manifiesta como errores en nombres de personajes, puntos de trama olvidados y deriva de voz respecto al registro establecido.',
-          '**La asimetría:** los modelos atienden mejor al inicio (prompt del sistema) y al final (últimos cientos de tokens) de la ventana de contexto. El contenido en el medio de un contexto largo es el que menos se atiende de forma confiable.',
+          '**Conversión token a palabra:** 1 token ≈ 0,75 palabras en inglés (regla general). 32K tokens ≈ 24.000 palabras. 128K tokens ≈ 96.000 palabras (aproximadamente una novela); 262.144 tokens ≈ 196.000 palabras.',
+          '**Degradación de la atención:** los modelos pueden perder la referencia confiable al contenido del inicio de una ventana de contexto larga. Esto se manifiesta como errores en nombres de personajes, puntos de trama olvidados y deriva de voz respecto al registro establecido.',
+          '**La asimetría:** en el estudio Lost in the Middle, los modelos usaron mejor el inicio y el final de la entrada y el contenido del medio de forma menos fiable. El estudio probó modelos disponibles en 2023, así que prueba los modelos actuales en lugar de asumir el mismo patrón.',
           '**El documento de sesión como solución:** comprime todo lo que el modelo necesita en un documento estructurado corto. Inyéctalo al inicio. Genera la escena. Termina la sesión. Reinicia. Comienza de nuevo con el mismo documento de sesión actualizado para reflejar la nueva escena.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'No pegues el manuscrito completo en el contexto. Si tu novela supera las 10.000 palabras y pegas el borrador completo para pedir el siguiente capítulo, obtendrás deriva de contexto — el modelo olvidará detalles tempranos de personajes, contradirá puntos de trama establecidos y regresará a un registro genérico. Usa la técnica del documento de sesión.',
+            text: 'No pegues el manuscrito completo en el contexto. Si tu novela supera las 10.000 palabras y pegas el borrador completo para pedir el siguiente capítulo, corres el riesgo de deriva de contexto — el modelo puede olvidar detalles tempranos de personajes, contradecir puntos de trama establecidos y regresar a un registro genérico. Usa la técnica del documento de sesión.',
           },
         ],
       },
@@ -507,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'Técnica del documento de sesión',
         content:
-          'La técnica del documento de sesión de esta sección fue probada durante el trabajo de redacción en múltiples proyectos de formato largo (una novela literaria de 90.000 palabras, dos borradores de guion). El tamaño de 4.000 tokens del documento de sesión, el ritmo de generación escena por escena y el momento de las comprobaciones de continuidad provienen de los modos de fallo observados durante ese trabajo de redacción, no de modelos teóricos.\n\n**El documento de sesión es un archivo de texto plano que mantienes junto a tu manuscrito — es el estado comprimido de tu novela que el modelo necesita conocer para generar contenido consistente.** Tiene tres secciones: fichas de personajes activos, resúmenes de capítulos y la configuración de la escena actual.',
+          'La técnica del documento de sesión es una recomendación de flujo de trabajo de PromptQuorum basada en los límites de contexto descritos arriba. PromptQuorum no la ha sometido a una prueba controlada, y los tamaños de abajo (4.000 tokens, 150 palabras por ficha de personaje, 100–150 palabras por resumen de capítulo) son pautas de planificación, no umbrales medidos.\n\n**El documento de sesión es un archivo de texto plano que mantienes junto a tu manuscrito — es el estado comprimido de tu novela que el modelo necesita conocer para generar contenido consistente.** Tiene tres secciones: fichas de personajes activos, resúmenes de capítulos y la configuración de la escena actual.',
         promptExamples: [
           {
             label: 'Plantilla del documento de sesión',
@@ -533,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Flujo de trabajo para redacción de novelas',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          'Flujo de trabajo de redacción de novelas en 4 fases con LLMs locales: esquema (10–30 capítulos), beat sheets (3–8 escenas por capítulo), generación de escenas (200–600 palabras por sesión) y pasadas de revisión, con un documento de sesión de menos de 4.000 tokens.',
+          'Flujo de novela en cuatro fases con un LLM local: esquema, beat sheets, escenas y revisión, con un documento de sesión.',
         content:
           '**El flujo de trabajo de redacción de novelas con un LLM local tiene cuatro fases: esquema, beat sheets por capítulo, generación de escenas y pasadas de revisión.** Cada fase usa una estructura de prompt diferente.',
         items: [
@@ -566,10 +577,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**El formato va en el prompt del sistema, no en el turno del usuario.** Colocar las instrucciones de formato de guion en el mensaje del sistema significa que cada generación de la sesión sigue el formato sin repetir la instrucción.',
-          '**Salida compatible con Fountain:** Fountain es un formato de marcado de texto plano para guiones compatible con Final Draft, Highland, WriterDuet y muchas otras herramientas. Pedir al modelo que genere "texto plano compatible con Fountain" produce una salida que puedes importar directamente a tu software de guiones.',
+          '**Salida compatible con Fountain:** Fountain es un formato de marcado de texto plano para guiones; Highland y Fade In lo leen, igual que otras apps del [directorio de apps de Fountain](https://fountain.io/apps). Pedir al modelo que genere "texto plano compatible con Fountain" produce una salida que puedes abrir en esas herramientas o convertir para otras (consulta la pregunta sobre Final Draft en las preguntas frecuentes).',
           '**Las slug lines primero:** genera la slug line (INT./EXT. UBICACIÓN — DÍA/NOCHE) como un prompt de una sola línea separado antes de generar el contenido de la escena. Esto ancla la ubicación física antes de que el modelo comience a generar la acción.',
           '**Pasadas de diálogo:** después de generar las líneas de acción, ejecuta una pasada de diálogo separada: "Las líneas de acción están definidas. Escribe el diálogo para [Personaje A] y [Personaje B] en esta escena. El personaje A quiere [X]. El personaje B quiere [Y]. Sin etiquetas de diálogo. 5–8 intercambios."',
-          '**Gestión del recuento de páginas:** una página estándar de guion tiene aproximadamente 55–60 palabras de acción y diálogo combinadas. Usa límites de palabras calibrados según el objetivo de páginas: 1 página ≈ 60 palabras, 2 páginas ≈ 120 palabras, 3 páginas ≈ 180 palabras.',
+          '**Gestión del recuento de páginas:** no hay una cifra fija de palabras por página, y "una página equivale a un minuto" es solo una regla general. Cuenta el promedio de palabras por página de tu propio guion y fija los límites de palabras a partir de ahí.',
         ],
         callouts: [
           {
@@ -586,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Para ficción de formato largo, el patrón de generación más confiable es: documento de sesión en el prompt del sistema → único prompt de escena en el turno del usuario → revisar → actualizar el documento de sesión → repetir, una escena por sesión.',
+            text: 'Para ficción de formato largo, un patrón de generación confiable es: documento de sesión en el prompt del sistema → único prompt de escena en el turno del usuario → revisar → actualizar el documento de sesión → repetir, una escena por sesión.',
           },
           {
             type: 'plain-terms',
@@ -624,8 +635,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'SillyTavern', 'Enlace': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integración': 'API compatible con OpenAI → Ollama', 'Ideal para': 'Ficción de tipo roleplay y redacción guiada por fichas de personajes; memoria persistente de personajes' },
           { 'Herramienta': 'Terminal pura', 'Integración': '`ollama run [model]` o curl a la API de Ollama', 'Ideal para': 'Flujos de trabajo scriptables; escritores que quieren máximo control con mínima sobrecarga de interfaz' },
           { 'Herramienta': 'LM Studio', 'Enlace': '[lmstudio.ai](https://lmstudio.ai)', 'Integración': 'Interfaz de chat integrada + API de servidor local', 'Ideal para': 'Escritores que quieren un gestor de modelos con GUI sin instalar Ollama por separado' },
-          { 'Herramienta': 'NovelCrafter', 'Enlace': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integración': 'Integración de IA incorporada; admite endpoints compatibles con OpenAI (apuntando a Ollama)', 'Ideal para': 'Escritores que quieren asistencia de IA a nivel de capítulo dentro de una única app enfocada en novelas; la más cercana a una "herramienta de escritura de novelas nativa de IA" en 2026' },
-          { 'Herramienta': 'Plottr', 'Enlace': '[plottr.com](https://plottr.com)', 'Integración': 'Flujo de trabajo manual: estructura novelas en Plottr, pega escenas/beats en Ollama externamente', 'Ideal para': 'Ficción de género con mucha trama (misterio, thriller, fantasía) donde el trazado estructural de la trama es el eje del flujo de trabajo' },
+          { 'Herramienta': 'NovelCrafter', 'Enlace': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integración': 'Integración de IA incorporada; sus páginas de ayuda enumeran conexiones con LM Studio, Ollama y endpoints compatibles con la API de OpenAI', 'Ideal para': 'Escritores que quieren asistencia de IA a nivel de capítulo dentro de una única app enfocada en novelas' },
+          { 'Herramienta': 'Plottr', 'Enlace': '[plottr.com](https://plottr.com)', 'Integración': 'Flujo de trabajo manual: estructura novelas en Plottr, pega escenas/beats en Ollama externamente (Plottr indica que no añadirá funciones de IA)', 'Ideal para': 'Ficción de género con mucha trama (misterio, thriller, fantasía) donde el trazado estructural de la trama es el eje del flujo de trabajo' },
         ],
         callouts: [
           {
@@ -639,22 +650,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Recomendaciones de modelos para trabajos de formato largo',
         content:
-          '**La redacción de formato largo tiene requisitos de modelo diferentes a los de la ficción de formato corto.** La adherencia al contexto, la consistencia en el seguimiento de instrucciones a lo largo de sesiones extensas y la capacidad de mantener la voz en múltiples llamadas de generación son los factores decisivos. Para el panorama más amplio de modelos en todos los casos de uso, consulta [Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026).',
+          '**La redacción de formato largo tiene requisitos de modelo diferentes a los de la ficción de formato corto.** La adherencia al contexto, la consistencia en el seguimiento de instrucciones a lo largo de sesiones extensas y la capacidad de mantener la voz en múltiples llamadas de generación son los factores decisivos. Las filas de abajo son puntos de partida tomados de la ficha de cada modelo; PromptQuorum no ha evaluado estos modelos para ficción, y las clasificaciones públicas de escritura creativa puntúan los modelos de forma distinta, así que prueba dos candidatos con una escena tuya. Los modelos abiertos de clase servidor como Command A+ (218.000 millones de parámetros totales, 25.000 millones activos, Apache 2.0) y Mistral Large 3 (675.000 millones de parámetros totales, contexto de 256K, Apache 2.0) quedan fuera del alcance del hardware de consumo. Para el panorama más amplio de modelos en todos los casos de uso, consulta [Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026).',
         columns: ['Tarea', 'Modelo recomendado', 'Por qué'],
         rows: [
-          { 'Tarea': 'Redacción de novela (principal)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Mejor adherencia al contexto y seguimiento de instrucciones para trabajos de formato largo de múltiples sesiones; voz más consistente' },
-          { 'Tarea': 'Redacción de guion', 'Modelo recomendado': 'Llama 3.3 70B o Mistral Large', 'Por qué': 'Llama 3.3 para dinámicas de personajes complejas; Mistral Large para adherencia consistente al formato en salida Fountain' },
-          { 'Tarea': 'Generación de beat sheet / esquema', 'Modelo recomendado': 'Qwen3 32B', 'Por qué': 'Generación estructural fuerte; sigue de forma confiable prompts de esquema con listas numeradas y restricciones estrictas' },
-          { 'Tarea': 'Pasadas de diálogo', 'Modelo recomendado': 'Command A+', 'Por qué': 'Mejor registro de habla naturalista y diferenciación de voz de personaje en intercambios extendidos' },
-          { 'Tarea': 'Revisión (estructural)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Mejor en seguir restricciones estructurales específicas nombradas en instrucciones de reescritura' },
-          { 'Tarea': 'Ficción madura / oscura', 'Modelo recomendado': 'Hermes 3 Llama 3.1 70B', 'Por qué': 'Misma base que Llama 3.3 70B; fine-tune sin censura; adherencia al contexto idéntica para trabajos de formato largo' },
+          { 'Tarea': 'Redacción de novela (principal)', 'Modelo recomendado': 'Qwen3.6 27B o Gemma 4 31B', 'Por qué': 'Modelos densos de 27B–31B con contexto anunciado de 256K+ y licencias Apache; una clase de tamaño que encaja en una GPU de 24 GB o en 32 GB+ de memoria unificada a 4 bits (estimación)' },
+          { 'Tarea': 'Redacción de guion', 'Modelo recomendado': 'Qwen3.6 27B o Llama 3.3 70B', 'Por qué': 'La adherencia al formato depende sobre todo del prompt del sistema; prueba una escena en Fountain con dos modelos. Llama 3.3 70B es denso, anuncia contexto de 128K y necesita unos 40 GB a 4 bits (estimación)' },
+          { 'Tarea': 'Generación de beat sheet / esquema', 'Modelo recomendado': 'Qwen3.6 35B-A3B', 'Por qué': 'Mezcla de expertos con 3B de 35B parámetros activos por token (Apache-2.0), por lo que genera más rápido por token; PromptQuorum no ha evaluado la calidad de los esquemas' },
+          { 'Tarea': 'Pasadas de diálogo', 'Modelo recomendado': 'El modelo cuyas muestras encajen', 'Por qué': 'Haz el diálogo como pasada aparte con el modelo cuyas líneas de calibración coincidan con el registro de tu personaje; no hay una clasificación verificada de modelos para diálogo' },
+          { 'Tarea': 'Revisión (estructural)', 'Modelo recomendado': 'El modelo con el que redactaste', 'Por qué': 'Los prompts de revisión que nombran una restricción estructural por llamada funcionan con cualquier modelo que siga instrucciones; una escena por llamada' },
+          { 'Tarea': 'Ficción madura / oscura', 'Modelo recomendado': 'Hermes 4 70B', 'Por qué': 'Base Llama-3.1-70B; Nous Research describe una alineación en general neutral y menos rechazos; licencia Llama 3; modo de razonamiento híbrido' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Errores comunes',
         items: [
-          '**Pegar el manuscrito completo en el contexto.** Incluso con una ventana de contexto de 128K, la calidad de atención se degrada significativamente después de 32K tokens. Usa la técnica del documento de sesión — fichas de personajes y resúmenes de capítulos comprimidos.',
+          '**Pegar el manuscrito completo en el contexto.** Aunque un modelo anuncie una ventana de 128K–262K, las entradas largas se usan con menos fiabilidad, así que planifica en torno a 32K tokens. Usa la técnica del documento de sesión — fichas de personajes y resúmenes de capítulos comprimidos.',
           '**Pedir al modelo que "continúe" un documento abierto.** "Continúa la novela" produce deriva. "Escribe la siguiente escena: [configuración específica, punto de vista, límite de palabras]" produce una salida consistente y acotada que puedes evaluar y pegar.',
           '**Sin beat sheets para guiones.** Generar páginas de guion sin un beat de escena produce páginas que derivan en longitud y pierden su función estructural. Genera siempre el beat sheet primero.',
           '**Ignorar las actualizaciones del documento de sesión.** Si no actualizas el resumen del capítulo después de generar una escena, el documento de sesión queda obsoleto. Un documento de sesión obsoleto produce inconsistencias en pocas sesiones.',
@@ -665,10 +676,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          'Benchmarks de contexto largo de Llama 3.3 70B — [Meta AI Research](https://ai.meta.com)',
-          'Informe técnico de Qwen3 32B con benchmarks de ventana de contexto — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'Especificación del formato de guion Fountain — [Fountain.io](https://fountain.io)',
+          '[Ficha de modelo Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) y [ficha de modelo Qwen3.6-35B-A3B](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — parámetros, contexto nativo de 262.144 tokens, extensión YaRN, Apache-2.0, consultadas el 26 de octubre de 2026',
+          '[Ficha de modelo Gemma 4 31B](https://huggingface.co/google/gemma-4-31B-it) — 31B denso, contexto de 256K, Apache 2.0, consultada el 26 de octubre de 2026',
+          '[Ficha de modelo Llama 3.3 70B Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B, contexto de 128K, Llama 3.3 Community License, publicado el 6 de diciembre de 2024',
+          '[Ficha de modelo Hermes 4 70B](https://huggingface.co/NousResearch/Hermes-4-70B) — base Llama-3.1-70B, razonamiento híbrido, "broadly neutral alignment"',
+          '[Ficha de modelo Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6) — 1 billón de parámetros totales y 32.000 millones activos, contexto de 256K, int4 nativo',
+          '[Documentación de Command A+](https://docs.cohere.com/docs/command-a-plus) y [ficha de modelo Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — recuento de parámetros y licencias de los modelos de clase servidor',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023',
+          '[Fountain.io](https://fountain.io) — especificación del formato de guion Fountain y [lista de apps](https://fountain.io/apps)',
+          '[Centro de ayuda de Final Draft](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — indica que Final Draft no puede importar archivos .fountain directamente',
+          '[Reglas de IA de Amazon KDP, Publishers Weekly](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html) y [envíos a Clarkesworld](https://clarkesworldmagazine.com/submissions/) — políticas de IA de editoriales y plataformas; comprueba la redacción vigente antes de enviar',
+          '[Notas de versión de Scrivener](https://www.literatureandlatte.com/scrivener/release-notes) — versiones 3.4.0 a 3.5.2 (diciembre de 2025): sin entradas de plugins ni API; "Scrivener itself contains no AI"; consultadas el 26 de octubre de 2026',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/) y [ayuda de NovelCrafter sobre conexiones de IA](https://www.novelcrafter.com/help/categories/ai-connections) — Plottr indica que no desarrolla funciones de IA; NovelCrafter enumera conexiones con LM Studio, Ollama y endpoints compatibles con la API de OpenAI',
           'Documentación de la API de Ollama — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -678,11 +697,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Puede un LLM local escribir una novela completa?',
-            a: 'Un LLM local puede generar la prosa de una novela completa — pero la inteligencia estructural y editorial tiene que venir del escritor. El modelo genera escenas cuando se le provee de configuraciones específicas; no planifica, evalúa ni toma decisiones temáticas de forma autónoma. Los escritores que usan LLMs locales como herramientas de borrador los describen como "un generador de primer borrador muy rápido para escenas que ya sé cómo escribir". El modelo ahorra tiempo en el problema de la página en blanco; el escritor sigue tomando todas las decisiones significativas.',
+            a: 'Un LLM local puede generar la prosa de una novela completa, pero la inteligencia estructural y editorial tiene que venir del escritor. El modelo genera escenas cuando recibe planteamientos concretos; no planifica, evalúa ni toma decisiones temáticas por sí solo. Úsalo como un generador rápido de primeros borradores de escenas que ya sabes escribir: ahorra tiempo frente a la página en blanco, mientras que el escritor sigue tomando todas las decisiones importantes. Revisa las políticas de IA de editoriales y plataformas antes de enviar (consulta la pregunta sobre editores más abajo).',
           },
           {
             q: '¿Cuál es la ventana de contexto máxima que puedo usar de forma confiable?',
-            a: 'En la práctica, planifica una calidad de atención confiable de hasta unos 32K tokens (~24.000 palabras) con la mayoría de los modelos locales, incluidos Llama 3.3 70B y Qwen3 32B. Más allá de esto, los modelos empiezan a perder la referencia precisa al contenido del inicio del contexto. La técnica del documento de sesión mantiene el contexto de trabajo por debajo de 4.000–6.000 tokens, lo que significa que cada llamada de generación opera en la parte más confiable de la ventana de atención.',
+            a: 'Los modelos anuncian de 128K a 262.144 tokens, pero PromptQuorum recomienda planificar en torno a 32K tokens (~24.000 palabras) por generación, porque la investigación sobre contextos largos indica que los modelos usan con menos fiabilidad el medio de entradas largas. Es una regla de planificación prudente, no un límite medido para todos los modelos, así que prueba el tuyo. La técnica del documento de sesión mantiene el contexto de trabajo por debajo de 4.000–6.000 tokens, de modo que cada llamada de generación queda bien dentro de ese rango.',
           },
           {
             q: '¿Cómo evito que el modelo cambie la voz de mi personaje a mitad de la novela?',
@@ -690,11 +709,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar Scrivener con un LLM local?',
-            a: 'No de forma nativa — Scrivener no tiene un sistema de plugins para llamadas a API externas a partir de 2026. El flujo de trabajo más común es: generar en Ollama (mediante terminal o un script de acompañamiento), copiar la salida, pegarla en el documento de Scrivener correspondiente. Algunos escritores usan Obsidian como la capa de borrador con IA e importan los capítulos completados a Scrivener para la estructuración final. Los scripts que llaman a la API de Ollama y copian la salida al portapapeles son lo más cercano a una integración nativa.',
+            a: 'No de forma nativa — Scrivener 3 no documenta ningún sistema de plugins, y sus notas de versión oficiales hasta la 3.5.2 (diciembre de 2025) no mencionan ninguna integración de IA: las notas de la 3.4.0 dicen "Scrivener itself contains no AI" y añaden compatibilidad con las Writing Tools de Apple, una función del sistema macOS. Un flujo habitual es: generar en Ollama (por terminal o con un script auxiliar), copiar la salida y pegarla en el documento de Scrivener correspondiente. Algunos escritores usan Obsidian como capa de redacción con IA e importan los capítulos terminados a Scrivener para la estructura final. Los scripts que llaman a la API de Ollama y copian la salida al portapapeles son lo más parecido a una integración nativa.',
           },
           {
             q: '¿Qué es mejor para redactar guiones: Ollama o una IA en la nube?',
-            a: 'Para guionistas que necesitan generar contenido maduro (violencia, psicología oscura, personajes moralmente complejos), Ollama local con Llama 3.3 70B o Hermes 3 es más confiable — los modelos en la nube rechazan contenido específico que a menudo aparece en guiones dramáticos. Para la consistencia de formato y la disciplina del recuento de páginas, tanto los modelos en la nube como los locales tienen un rendimiento equivalente cuando se les dan instrucciones de formato en el prompt del sistema. La elección es principalmente sobre libertad de contenido y privacidad, no sobre la calidad de la salida.',
+            a: 'Para guionistas que necesitan generar contenido maduro (violencia, psicología oscura, personajes moralmente complejos), un modelo local da control sobre el modelo y su comportamiento de rechazo: algunos modelos alojados rechazan o suavizan contenido que aparece en guiones dramáticos, y las políticas de los servicios alojados cambian con el tiempo. Un modelo local con pocos rechazos, como Hermes 4 70B, tiene menos rechazos incorporados, aunque sigues siendo responsable del contenido que generas y publicas. La consistencia de formato depende sobre todo de las instrucciones del prompt del sistema, que funcionan en ambos casos. La elección trata sobre todo de control del contenido, privacidad y coste; PromptQuorum no ha comparado la calidad de salida entre modelos alojados y locales para guion.',
           },
           {
             q: '¿Cómo genero diálogo que suene como un personaje específico?',
@@ -702,23 +721,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Necesito una GPU para usar un LLM local en la redacción de novelas?',
-            a: 'Una GPU acelera significativamente la velocidad de generación pero no es obligatoria. En Apple Silicon (M3 o posterior), la arquitectura de memoria unificada significa que incluso un MacBook Pro 16 GB puede ejecutar Qwen3 14B cómodamente para trabajos de borrador — la velocidad de generación es más lenta que un equipo con GPU de 24 GB pero aceptable para un flujo de trabajo de escritura donde estás leyendo y evaluando la salida entre generaciones. Una GPU NVIDIA dedicada con 24 GB de VRAM (RTX 4090, RTX 3090) ejecuta modelos de 70B a velocidades de generación utilizables.',
+            a: 'Una GPU acelera mucho la generación, pero no es obligatoria. En Apple Silicon, la memoria unificada permite que un MacBook Pro de 16 GB ejecute modelos más pequeños (aproximadamente la clase de 8B–14B a 4 bits, una estimación) — más lento que un equipo con GPU de 24 GB, pero aceptable cuando lees y evalúas la salida entre generaciones. Una GPU NVIDIA de 24 GB (RTX 4090, RTX 3090) admite modelos de la clase 27B–32B a 4 bits (estimación); los modelos de clase 70B necesitan unos 40 GB o más a 4 bits, por lo que requieren dos GPU, una tarjeta de 48 GB, 64 GB de memoria unificada o descarga a la CPU, más lenta.',
           },
           {
             q: '¿Puedo usar LLMs locales con Final Draft u otro software profesional de guiones?',
-            a: 'No directamente. Final Draft no tiene integración de API externa. El flujo de trabajo es: genera páginas de guion en formato de texto plano Fountain mediante Ollama, luego importa el archivo Fountain a Final Draft usando su importador integrado (Archivo → Importar → Fountain). Highland, WriterDuet y Fade In admiten la importación de Fountain de forma nativa. Genera en Ollama, formatea como Fountain, importa a tu software de guiones.',
+            a: 'No directamente. Según el centro de ayuda de Final Draft, Final Draft no puede importar archivos .fountain; su recomendación es guardar el texto como .txt sin formato y elegir Script (no Text) al importar, o traerlo como FDX desde una app que exporte ese formato. Highland convierte entre Fountain, FDX y PDF, y Fade In importa y exporta Fountain (según el directorio de apps de Fountain). Flujo: genera texto en formato Fountain con Ollama, ábrelo en Highland o Fade In y exporta FDX para Final Draft.',
           },
           {
             q: '¿Puedo usar Kimi-K2.6 localmente para redactar novelas?',
-            a: 'Kimi-K2.6 tiene una ventana de contexto genuina de 1 millón de tokens — útil para trabajos de extensión de novela en una sola pasada — pero es impractical ejecutarlo localmente en hardware de consumo (aproximadamente 480 GB de VRAM en cuantización Q4). Para flujos de trabajo completamente locales, la técnica del documento de sesión con Llama 3.3 70B (contexto de 128K, ~32K práctico) maneja trabajos de extensión de novela sin necesitar el techo de 1M. La mayoría de los escritores no necesitan realmente 1M de contexto si se aplica el flujo de trabajo del documento de sesión.',
+            a: 'Kimi-K2.6 anuncia una ventana de contexto de 256K tokens, de la misma clase que Qwen3.6 27B y Gemma 4 31B, pero es un modelo de mezcla de expertos con en torno a 1 billón de parámetros totales (32.000 millones activos) y pesos int4 nativos. Solo los pesos suman unos 500 GB (estimación de PromptQuorum), así que necesita un servidor con varias GPU o un equipo con memoria unificada enorme y es poco práctico en hardware de consumo. Para flujos totalmente locales, un modelo denso de 27B–70B con la técnica del documento de sesión cubre trabajos de longitud de novela sin un modelo de un billón de parámetros.',
           },
           {
             q: '¿Qué opinan los editores sobre los manuscritos asistidos por IA?',
-            a: 'Opinión mixta y en evolución a partir de 2026. La mayoría de los grandes editores de ficción (los Cinco Grandes, editoriales literarias de tamaño medio) tienen políticas que requieren la divulgación del uso sustancial de IA en los manuscritos enviados; algunos lo prohíben por completo. Las plataformas de autopublicación (Amazon KDP) requieren la confirmación de que el contenido generado por IA está divulgado. Los editores de género y los mercados de ficción corta están divididos. Los escritores que usan LLMs locales como herramientas de borrador (con revisión humana sustancial) generalmente describen la IA como una herramienta en lugar de coautor, lo que la mayoría de las políticas aceptan. Verifica la política específica del editor antes de enviar.',
+            a: 'Las políticas varían según la editorial y la plataforma y siguen cambiando en 2026, así que consulta la concreta antes de enviar. Amazon KDP exige avisar cuando el texto, las imágenes o las traducciones son generados por IA, y trata el contenido creado con una herramienta de IA como generado por IA aunque lo edites a fondo; el texto que escribiste tú y que la IA solo ayudó a editar o pulir es "asistido por IA" y no requiere declaración (según las normas de Amazon recogidas por Publishers Weekly en septiembre de 2023). Algunas revistas rechazan de plano el trabajo con IA — las pautas de envío de Clarkesworld dicen que no considera relatos escritos, coescritos o asistidos por IA. El texto de escenas generado por un LLM local entra en definiciones como la de "generado por IA" de KDP, así que decláralo donde se exija. Esta es información general, no asesoramiento legal.',
           },
           {
-            q: '¿Qué hardware necesito para modelos de contexto de 1M?',
-            a: 'Ejecutar un modelo de contexto de 1M localmente requiere mucha más VRAM que los flujos de trabajo típicos de LLM local — Kimi-K2.6 necesita aproximadamente 480 GB en cuantización Q4, alcanzable solo con configuraciones de servidor multi-GPU (8x H100 o equivalente). Para hardware de consumo (rigs de 24–64 GB de VRAM), los modelos de contexto de 128K son el techo práctico, y el límite práctico de calidad de atención de 32K se aplica. La técnica del documento de sesión de este artículo está diseñada precisamente para esta brecha — obtener resultados de formato largo consistentes sin necesitar contexto de 1M.',
+            q: '¿Qué hardware necesito para contextos de un millón de tokens?',
+            a: 'Qwen3.6 27B y Qwen3.6 35B-A3B anuncian un contexto nativo de 262.144 tokens que, según sus fichas de modelo, puede ampliarse hasta unos 1.010.000 tokens con escalado YaRN. Un contexto largo necesita memoria para la caché KV además de los pesos, así que una ejecución de un millón de tokens exige mucha más memoria que una configuración de consumo típica; PromptQuorum no ha medido el requisito. La técnica del documento de sesión de este artículo está pensada justo para ese hueco: salida consistente de formato largo sin depender de una ventana de un millón de tokens.',
           },
         ],
       },
@@ -745,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-13',
+      dateModified: '2026-10-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -753,9 +772,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-de.webp',
     title: 'Romane und Drehbücher mit lokalen LLMs verfassen: Workflow-Leitfaden für 100K+ Wörter',
@@ -767,11 +787,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Lokale LLMs für Roman- und Drehbuchautoren: Kontextfensterverwaltung, Kapitelstruktur, Szenengenerierung, Dialogdurchläufe und Tool-Integrationen.',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -792,22 +812,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Szenengenerierung lokales Modell',
     ],
     leadAnswerBlock:
-      '**Die wichtigste technische Herausforderung für Autoren, die lokale LLMs für Langformarbeiten einsetzen, ist die Kontextfensterverwaltung: Die meisten lokalen Modelle haben technisch ein 128K-Kontextfenster, doch die Aufmerksamkeitsqualität nimmt in der Praxis nach rund 32.000 Token (~24.000 Wörter) deutlich ab. Die Lösung ist strukturiertes Context-Injection — die „Session-Dokument"-Technik: eine komprimierte Zusammenfassung vorheriger Kapitel, das Setup der aktuellen Szene und relevante Charakterbögen pflegen und nur diese Elemente zu Beginn jeder Schreibsitzung injizieren. Kombiniert mit der Szene-für-Szene-Generierung produziert dieser Ansatz konsistente Langformausgaben bei jeder Romanlänge. Speziell beim Drehbuchschreiben liefert der Beat-Sheet-First-Workflow — bei dem zunächst ein szenenweises Beat Sheet generiert wird — formatierte Skriptseiten, die der Struktur folgen, statt von ihr abzudriften.**',
+      '**Die größte Herausforderung bei lokalen LLMs für Langform-Fiktion ist die Kontextverwaltung: etwa 32.000 Token pro Generierung einplanen und je Szene ein komprimiertes „Session-Dokument“ (Charakterbögen, Kapitelzusammenfassungen, Szenen-Setup) statt des ganzen Manuskripts geben.**',
     quickAnswerTop: {
       de: {
         question: 'Wie verwendet man ein lokales LLM für Roman- oder Drehbucharbeiten, ohne den Kontext zu verlieren?',
         answer:
-          'Die Kerntechnik ist strukturiertes Context-Injection: Statt das gesamte Manuskript in das Kontextfenster einzufügen, ein komprimiertes Session-Dokument pflegen — Charakterbogen (Name, dominantes Merkmal, Sprachregister), Handlungszusammenfassung abgeschlossener Kapitel (100–200 Wörter pro Kapitel) und Setup der aktuellen Szene. Dieses Dokument zu Beginn jeder Schreibsitzung injizieren. Eine Szene nach der anderen generieren — das Modell nie bitten, ein wachsendes Dokument über 32.000 Token fortzusetzen.',
+          'Die Kerntechnik ist strukturiertes Context-Injection: Statt das gesamte Manuskript in das Kontextfenster einzufügen, ein komprimiertes Session-Dokument pflegen — Charakterbogen (Name, dominantes Merkmal, Sprachregister), Handlungszusammenfassung abgeschlossener Kapitel (100–200 Wörter pro Kapitel) und Setup der aktuellen Szene (Beat, POV, Wortobergrenze). Dieses Dokument zu Beginn jeder Schreibsitzung injizieren. Eine Szene nach der anderen generieren, statt das Modell ein wachsendes Dokument fortsetzen zu lassen. Da jeder Aufruf nur den komprimierten Stand enthält, skaliert der Ansatz auf jede Romanlänge und verringert den Kontextdrift und Stimmverlust, von dem Autoren berichten, wenn sie ein ganzes Manuskript in ein einziges langes Kontextfenster packen.',
         bullets: [
           'Session-Dokument-Technik: Charakterbögen + Kapitelzusammenfassungen + aktuelles Szenen-Setup zu Sitzungsbeginn injizieren.',
-          'Eine Szene pro Sitzung generieren — nie über 32.000 Token fortsetzen.',
+          'Eine Szene nach der anderen generieren — das Modell möglichst nicht bitten, ein wachsendes Dokument über etwa 32.000 Token hinaus „fortzusetzen“.',
           'Beat-Sheet-First beim Drehbuchschreiben: Beat Sheet vor der Prosa generieren; als strukturelles Gerüst verwenden.',
-          'Bestes Modell für Langformarbeiten: Llama 3.3 70B (starke Kontextadhärenz, beste Instruktionsbefolgung).',
-          'Ollama + Obsidian oder Scrivener ist der verbreitetste Autoren-Workflow.',
-          'Kontextfenster-Realität: 128K ist das technische Limit; ~32.000 Token ist die praktische Qualitätsgrenze.',
-          'Uncensored Modelle (Hermes 3) fügen sich ohne Setup-Änderungen in diesen Workflow ein.',
+          'Modell-Ausgangspunkte (Angaben laut Modellkarten): Qwen3.6 27B, Gemma 4 31B, Llama 3.3 70B; PromptQuorum hat sie nicht für Fiktion getestet.',
+          'Ollama + Obsidian ist ein verbreiteter Autoren-Workflow; für Scrivener ist keine Plugin-API dokumentiert, die Ausgabe wird daher eingefügt.',
+          'Faustregel zum Kontextfenster: Modelle geben 128K–262.144 Token an; pro Generierung etwa 32.000 einplanen, weil die Qualität bei langen Kontexten uneinheitlich ist.',
+          'Low-Refusal-Fine-Tunes wie Hermes 4 70B nutzen denselben Workflow für reife Fiktion; die Lizenz des jeweiligen Modells prüfen.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -830,26 +850,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Kontextfenster-Realität: 128K Token auf dem Papier, 32K Token in der Praxis.** Die Aufmerksamkeitsqualität der meisten lokalen Modelle nimmt nach 32.000 Token (~24.000 Wörter) merklich ab. Nicht das vollständige Manuskript in das Kontextfenster laden — stattdessen die Session-Dokument-Technik verwenden.',
+          '**Faustregel zum Kontextfenster: 128K–262.144 Token angegeben, etwa 32K geplant.** Modelle nutzen die Mitte langer Eingaben weniger zuverlässig („Lost in the Middle“); etwa 32.000 Token pro Generierung einplanen.',
           '**Die Session-Dokument-Technik ist die Kernkompetenz.** Eine komprimierte Textdatei pflegen: aktive Charakterbögen (150 Wörter pro Charakter), Kapitelzusammenfassungen (100–200 Wörter pro Kapitel) und das Setup der aktuellen Szene. Zu Beginn jeder Sitzung injizieren.',
-          '**Eine Szene pro Sitzung generieren.** Das Modell eine Szene (200–600 Wörter) schreiben lassen, statt es zu bitten, ein wachsendes Dokument fortzusetzen. Eine Szene pro Sitzung eliminiert Kontextdrift und liefert konsistente Stimme.',
+          '**Eine Szene pro Sitzung generieren.** Das Modell eine Szene (200–600 Wörter) schreiben lassen, statt es zu bitten, ein wachsendes Dokument fortzusetzen. Eine Szene pro Sitzung verringert Kontextdrift und hilft, die Stimme konsistent zu halten.',
           '**Beat-Sheet-First beim Drehbuchschreiben.** Vor dem Generieren von Skriptseiten zunächst ein szenenweises Beat Sheet generieren. Das Beat Sheet als Gerüst für jede Seitengenerierung nutzen.',
-          '**Llama 3.3 70B ist das beste Modell für Langformarbeiten.** Starke Kontextadhärenz, beste Instruktionsbefolgung bei längeren Generierungslängen und zuverlässige Charakterstimmkonsistenz.',
-          '**Ollama + ein Nur-Text-Schreibtool ist die zuverlässigste Integration.** Scrivener, Obsidian und VS Code funktionieren als Manuskriptebene; Ollama stellt das Modell über eine API bereit.',
-          '**Uncensored Modelle (Hermes 3) fügen sich ohne Setup-Änderungen ein.** Für reife Fiktion das Ollama-Modell auf Hermes 3 umstellen; Session-Dokument- und Szenengenerierungs-Techniken bleiben identisch.',
+          '**Ein Modell wählen, das sich ausführen lässt, und es an einer eigenen Szene testen.** Dichte Modelle der 27B–31B-Klasse (Qwen3.6 27B, Gemma 4 31B) und Llama 3.3 70B sind gängige Ausgangspunkte; PromptQuorum hat keines davon für Fiktion getestet, und öffentliche Ranglisten zum kreativen Schreiben bewerten Modelle unterschiedlich.',
+          '**Ollama + ein Nur-Text-Schreibtool ist eine verlässliche Integration.** Scrivener, Obsidian und VS Code können das Manuskript aufnehmen; Ollama stellt das Modell über eine API bereit, die Begleit-Apps oder Skripte aufrufen können.',
+          '**Low-Refusal-Modelle (Hermes 4 70B) fügen sich ohne Setup-Änderungen in diesen Workflow ein.** Für reife Fiktion das Ollama-Modell wechseln; Session-Dokument- und Szenengenerierungs-Techniken bleiben identisch. Die Lizenz jedes Modells für den eigenen Einsatz prüfen.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Schnellfakten',
         items: [
-          '**Bestes Modell für Langformfiktion:** Llama 3.3 70B (stärkste Kontextadhärenz und Instruktionsbefolgung).',
-          '**Praktisches Kontextfensterlimit:** ~32.000 Token (~24.000 Wörter) für zuverlässige Aufmerksamkeitsqualität; 128K ist die technische Obergrenze.',
+          '**Modell-Ausgangspunkte (laut Modellkarten):** Qwen3.6 27B (dicht, Apache-2.0, 262.144 Token Kontext), Gemma 4 31B (dicht, Apache-2.0, 256K Kontext), Llama 3.3 70B (dicht, 128K Kontext, Llama 3.3 Community License).',
+          '**Planungsgrenze für das Kontextfenster:** ~32.000 Token (~24.000 Wörter) pro Generierung; Modelle geben 128K–262.144 Token an — das ist eine Obergrenze, keine Qualitätsgarantie.',
           '**Größe des Session-Dokuments:** Ziel unter 4.000 Token (Charakterbögen + Kapitelzusammenfassungen + aktuelles Szenen-Setup).',
           '**Szenengenerierungsziel:** 200–600 Wörter pro Generierungsaufruf; längere Szenen über mehrere sequenzielle Prompts.',
           '**Drehbuchformat:** Ollama mit Fountain-Format-Ausgabeanweisungen kombinieren für Skript-formatierten Text.',
-          '**Schreibtools, die mit Ollama funktionieren:** Scrivener (über API-Begleitskripte), Obsidian (über lokales Plugin oder Skripte), VS Code (über Continue.dev oder direkte API-Aufrufe), reines Terminal.',
-          '**Uncensored-Option:** Hermes 3 Llama 3.1 für reife Fiktion; gleicher Workflow, gleiche Session-Dokument-Technik.',
+          '**Schreibtools, die mit Ollama funktionieren:** Scrivener (Ausgabe einfügen; keine dokumentierte Plugin-API), Obsidian (über lokales Plugin oder Skripte), VS Code (über Continue.dev oder direkte API-Aufrufe), reines Terminal.',
+          '**Low-Refusal-Option:** Hermes 4 70B (Basis Llama-3.1-70B) für reife Fiktion; gleicher Workflow, gleiche Session-Dokument-Technik.',
         ],
       },
       contextWindow: {
@@ -857,29 +877,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Das Kontextfensterproblem beim Langformschreiben',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          'Kontextfenster-Zuverlässigkeit bei lokalen LLMs: Die praktische Aufmerksamkeitsgrenze liegt bei 32K Tokens (~24.000 Wörter) gegenüber dem technischen Limit von 128K, für Llama 3.3 70B, Qwen3 32B und Mistral Large; das 1-Mio.-Token-Fenster von Kimi-K2.6 benötigt ~480 GB VRAM bei Q4.',
+          'Kontextplanung: 32K Token (~24.000 Wörter) als Arbeitsgrenze, gegenüber den 128K–262.144 Token, die offene Modelle angeben.',
         content:
-          '**Das praktische Kontextlimit der meisten lokalen Modelle beträgt 32.000 Token — nicht die beworbenen 128K.** Die Aufmerksamkeitsqualität nimmt bei den meisten Modellen nach 32.000 Token ab. Bei 128K Token verlieren viele Modelle die korrekte Referenz auf Inhalte aus dem ersten Viertel des Kontextfensters. Bei einem Roman bedeutet das: Der bisherige Entwurf kann nicht einfach eingefügt und nach dem nächsten Kapitel gefragt werden.\n\nKimi-K2.6 von Moonshot AI bietet ein echtes 1-Millionen-Token-Kontextfenster mit stärkerer Aufmerksamkeitsqualitätserhaltung. Kimi-K2.6 lokal auszuführen ist für die meisten Autoren unpraktisch — es erfordert etwa 480 GB VRAM bei Q4-Quantisierung. Für Autoren, die tatsächlich 1M Kontext benötigen, ist Moonshots gehostete API die praktische Zugangsmöglichkeit. Für lokal ausführbare Modelle (Llama 3.3 70B, Qwen3 32B, Mistral Large) ist die 32K-Praxisgrenze die relevante Einschränkung.',
+          '**Pro Generierung etwa 32.000 Token einplanen — auch wenn ein Modell weit mehr angibt.** Das ist eine vorsichtige PromptQuorum-Planungsregel, kein gemessenes Limit: Forschung zu langen Kontexten (Liu et al., „Lost in the Middle“) fand, dass Modelle Informationen am Anfang und am Ende einer langen Eingabe zuverlässiger nutzen als solche in der Mitte und dass die Qualität mit wachsender Eingabe sinken kann. Neuere Modelle geben deutlich größere Fenster an — Qwen3.6 27B nativ 262.144 Token, Gemma 4 31B 256K —, daher das eigene Modell testen. Bei einem Roman bleibt es der unzuverlässigste Weg, den bisherigen Entwurf einzufügen und nach dem nächsten Kapitel zu fragen; zudem braucht ein langer Kontext mehr Speicher, weil der KV-Cache mitwächst.\n\nKimi-K2.6 von Moonshot AI gibt ein Kontextfenster von 256K Token (262.144) an, also in derselben Klasse wie die genannten Modelle, ist aber ein Mixture-of-Experts-Modell mit rund 1 Billion Gesamtparametern (32 Milliarden aktiv) und nativen int4-Gewichten. Selbst mit 4 Bit kommen allein die Gewichte auf etwa 500 GB (PromptQuorum-Schätzung: 1 Billion Parameter × 0,5 Byte) — ein Serverklassen-Modell, kein Laptop-Modell. Die Session-Dokument-Technik und die Szene-für-Szene-Generierung gelten für lokal ausführbare Modelle jeder Kontextgröße.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Die praktische Qualitätsgrenze für Kontextadhärenz bei den meisten lokalen LLMs liegt bei etwa 32.000 Token (~24.000 Wörter) — darüber hinaus verlieren Modelle die genaue Referenz auf früheren Inhalt, was zu Stimmungsdrift und Plotwidersprüchen führt.',
+            text: 'Eine vorsichtige Planungsgrenze für Kontextadhärenz bei lokalen LLMs liegt bei etwa 32.000 Token (~24.000 Wörter) pro Generierung — darüber hinaus nutzen Modelle laut Forschung zu langen Kontexten früheren Inhalt weniger zuverlässig, was sich als Stimmdrift und Plotwidersprüche über ein langes Manuskript zeigen kann.',
           },
           {
             type: 'plain-terms',
-            text: 'Man kann einen 90.000-Wörter-Roman nicht in ein 128K-Kontextfenster laden und erwarten, dass das Modell sich daran erinnert, was in Kapitel 3 passiert ist, während es Kapitel 20 schreibt. Stattdessen: alles, was das Modell wissen muss — Charakterbögen, Kapitelzusammenfassungen, aktuelles Szenen-Setup — in ein Session-Dokument mit unter 4.000 Token komprimieren und dieses zu Beginn jeder Schreibsitzung injizieren.',
+            text: 'Man kann nicht darauf vertrauen, dass ein Modell sich an Kapitel 3 erinnert, während es Kapitel 20 schreibt, nur weil das gesamte Manuskript in sein Kontextfenster passt. Stattdessen: alles, was das Modell wissen muss — Charakterbögen, Kapitelzusammenfassungen, aktuelles Szenen-Setup — in ein Session-Dokument mit unter 4.000 Token komprimieren und dieses zu Beginn jeder Schreibsitzung injizieren. Das Modell muss immer nur wissen, was für die Szene relevant ist, die es gerade generiert.',
           },
         ],
         items: [
-          '**Token-zu-Wort-Umrechnung:** 1 Token ≈ 0,75 Wörter auf Englisch. 32K Token ≈ 24.000 Wörter. 128K Token ≈ 96.000 Wörter (ein vollständiger Roman).',
-          '**Aufmerksamkeitsdegradation:** Modelle verlieren die zuverlässige Referenz auf Inhalte aus dem frühen Teil eines langen Kontextfensters — Charakternamensfehler, vergessene Handlungspunkte und Stimmungsdrift.',
-          '**Die Asymmetrie:** Modelle beachten den Anfang (System-Prompt) und das Ende des Kontextfensters am besten. Inhalte in der Mitte werden am wenigsten zuverlässig berücksichtigt.',
+          '**Token-zu-Wort-Umrechnung:** 1 Token ≈ 0,75 Wörter auf Englisch (Faustregel). 32K Token ≈ 24.000 Wörter. 128K Token ≈ 96.000 Wörter (etwa ein Roman); 262.144 Token ≈ 196.000 Wörter.',
+          '**Aufmerksamkeitsdegradation:** Modelle können die zuverlässige Referenz auf Inhalte aus dem frühen Teil eines langen Kontextfensters verlieren — Charakternamensfehler, vergessene Handlungspunkte und Stimmdrift.',
+          '**Die Asymmetrie:** In der Studie „Lost in the Middle“ nutzten Modelle den Anfang und das Ende der Eingabe am besten und Inhalte in der Mitte am wenigsten zuverlässig. Die Studie testete Modelle, die 2023 verfügbar waren; aktuelle Modelle daher selbst testen, statt dasselbe Muster anzunehmen.',
           '**Session-Dokument als Lösung:** Alles komprimieren, was das Modell benötigt. Zu Beginn injizieren. Szene generieren. Sitzung beenden. Zurücksetzen. Mit aktualisiertem Session-Dokument neu beginnen.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Nicht das vollständige Manuskript in den Kontext einfügen. Über 10.000 Wörter entsteht Kontextdrift — das Modell vergisst frühe Charakterdetails, widerspricht Handlungspunkten und kehrt zu einem generischen Register zurück. Stattdessen die Session-Dokument-Technik verwenden.',
+            text: 'Nicht das vollständige Manuskript in den Kontext einfügen. Über 10.000 Wörter droht Kontextdrift — das Modell kann frühe Charakterdetails vergessen, Handlungspunkten widersprechen und zu einem generischen Register zurückkehren. Stattdessen die Session-Dokument-Technik verwenden.',
           },
         ],
       },
@@ -887,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'Session-Dokument-Technik',
         content:
-          'Die Session-Dokument-Technik in diesem Abschnitt wurde in Entwurfsarbeiten für mehrere Langformprojekte erprobt (ein literarischer Roman mit 90.000 Wörtern, zwei Drehbuchentwürfe). Die 4.000-Token-Größe, der szene-für-szene Generierungsrhythmus und der Zeitpunkt der Kontinuitätsprüfungen basieren auf beobachteten Fehlermustern.\n\n**Das Session-Dokument ist eine Nur-Text-Datei neben dem Manuskript — der komprimierte Zustand des Romans, den das Modell kennen muss.** Es hat drei Abschnitte: aktive Charakterbögen, Kapitelzusammenfassungen und das aktuelle Szenen-Setup.',
+          'Die Session-Dokument-Technik ist eine PromptQuorum-Workflow-Empfehlung auf Grundlage der oben beschriebenen Kontextgrenzen. PromptQuorum hat sie nicht in einem kontrollierten Test geprüft, und die Größenangaben unten (4.000 Token, 150 Wörter pro Charakterbogen, 100–150 Wörter pro Kapitelzusammenfassung) sind Planungsrichtwerte, keine gemessenen Schwellen.\n\n**Das Session-Dokument ist eine Nur-Text-Datei neben dem Manuskript — der komprimierte Zustand des Romans, den das Modell kennen muss, um konsistenten Inhalt zu generieren.** Es hat drei Abschnitte: aktive Charakterbögen, Kapitelzusammenfassungen und das aktuelle Szenen-Setup.',
         promptExamples: [
           {
             label: 'Session-Dokument-Vorlage',
@@ -913,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Roman-Drafting-Workflow',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          'Vierphasiger Roman-Drafting-Workflow mit lokalen LLMs: Gliederung (10–30 Kapitel), Beat Sheets (3–8 Szenen pro Kapitel), Szenengenerierung (200–600 Wörter pro Sitzung) und Überarbeitungsdurchgänge, aufgebaut um ein Session-Dokument unter 4.000 Tokens.',
+          'Roman-Workflow in vier Phasen mit lokalem LLM: Outline, Beat Sheets, Szenen, Überarbeitung rund um ein Session-Dokument.',
         content:
           '**Der Roman-Drafting-Workflow mit einem lokalen LLM hat vier Phasen: Outline, Kapitel-Beat-Sheets, Szenengenerierung und Überarbeitungsdurchläufe.** Jede Phase verwendet eine andere Prompt-Struktur.',
         items: [
@@ -946,10 +966,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Format im System-Prompt, nicht im User-Turn.** Formatanweisungen in der Systemnachricht bedeuten, dass jede Generierung der Sitzung dem Format folgt, ohne die Anweisung zu wiederholen.',
-          '**Fountain-kompatibler Output:** Fountain ist ein Nur-Text-Markup-Format für Drehbücher, das von Final Draft, Highland, WriterDuet und anderen Tools unterstützt wird. Output kann direkt in Drehbuchsoftware importiert werden.',
+          '**Fountain-kompatibler Output:** Fountain ist ein Nur-Text-Markup-Format für Drehbücher; Highland und Fade In lesen es, ebenso weitere Apps im [Fountain-App-Verzeichnis](https://fountain.io/apps). Wird das Modell um „Fountain-compatible plain text“ gebeten, entsteht Output, den man in diesen Tools öffnen oder für andere konvertieren kann (siehe die Final-Draft-Frage in den FAQs).',
           '**Slug Lines zuerst:** Die Slug Line als separaten Einzeiler-Prompt generieren, bevor der Szeneninhalt generiert wird. Dies verankert den physischen Ort.',
           '**Dialogdurchläufe:** Nach Action Lines einen separaten Dialogdurchlauf: „Die Action Lines sind gesetzt. Schreibe den Dialog für [Charakter A] und [Charakter B]. Charakter A will [X]. Charakter B will [Y]. Keine Dialognachführer. 5–8 Austausche."',
-          '**Seitenanzahlverwaltung:** Eine Standard-Drehbuchseite umfasst etwa 55–60 Wörter. Wörterobergrenzen kalibrieren: 1 Seite ≈ 60 Wörter, 2 Seiten ≈ 120 Wörter, 3 Seiten ≈ 180 Wörter.',
+          '**Seitenanzahlverwaltung:** Es gibt keine feste Wörterzahl pro Seite, und „eine Seite entspricht einer Minute“ ist nur eine Faustregel. Die durchschnittliche Wörterzahl pro Seite im eigenen Drehbuch zählen und die Wörterobergrenzen daraus ableiten.',
         ],
         callouts: [
           {
@@ -966,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Das zuverlässigste Generierungsmuster für Langformfiktion: Session-Dokument im System-Prompt → einzelner Szenen-Prompt im User-Turn → überprüfen → Session-Dokument aktualisieren → wiederholen, eine Szene pro Sitzung.',
+            text: 'Ein zuverlässiges Generierungsmuster für Langformfiktion: Session-Dokument im System-Prompt → einzelner Szenen-Prompt im User-Turn → überprüfen → Session-Dokument aktualisieren → wiederholen, eine Szene pro Sitzung.',
           },
           {
             type: 'plain-terms',
@@ -1004,8 +1024,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'SillyTavern', 'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integration': 'OpenAI-kompatible API → Ollama', 'Ideal für': 'Roleplay-Fiktion und charakterkarten-gesteuertes Drafting; persistentes Charaktergedächtnis' },
           { 'Tool': 'Reines Terminal', 'Integration': '`ollama run [model]` oder curl zur Ollama API', 'Ideal für': 'Skriptierbare Workflows; maximale Kontrolle mit minimalem UI-Overhead' },
           { 'Tool': 'LM Studio', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Integration': 'Integrierte Chat-Benutzeroberfläche + lokale Server-API', 'Ideal für': 'Autoren, die einen GUI-Modellmanager ohne separaten Ollama-Install wünschen' },
-          { 'Tool': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integration': 'Integrierte KI-Integration; unterstützt OpenAI-kompatible Endpunkte (auf Ollama zeigen)', 'Ideal für': 'Autoren, die kapitelebene KI-Unterstützung in einer einzigen roman-fokussierten App wünschen' },
-          { 'Tool': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integration': 'Manueller Workflow: Romane in Plottr strukturieren, Szenen/Beats extern in Ollama einfügen', 'Ideal für': 'Plot-intensive Genrefiktion (Krimi, Thriller, Fantasy) mit strukturellem Plotten als Workflow-Mittelpunkt' },
+          { 'Tool': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integration': 'Integrierte KI-Anbindung; die Hilfeseiten nennen Verbindungen zu LM Studio, Ollama und OpenAI-API-kompatiblen Endpunkten', 'Ideal für': 'Autoren, die kapitelbezogene KI-Unterstützung in einer einzigen roman-fokussierten App wünschen' },
+          { 'Tool': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integration': 'Manueller Workflow: Romane in Plottr strukturieren, Szenen/Beats extern in Ollama einfügen (Plottr gibt an, keine KI-Funktionen zu ergänzen)', 'Ideal für': 'Plot-intensive Genrefiktion (Krimi, Thriller, Fantasy) mit strukturellem Plotten als Workflow-Mittelpunkt' },
         ],
         callouts: [
           {
@@ -1019,22 +1039,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Modellempfehlungen für Langformarbeiten',
         content:
-          '**Langform-Drafting hat andere Modellanforderungen als Kurzformfiktion.** Kontextadhärenz, konsistente Instruktionsbefolgung und die Fähigkeit, die Stimme über mehrere Generierungsaufrufe beizubehalten, sind die entscheidenden Faktoren. Für das breitere Modellspektrum über alle Anwendungsfälle, siehe [Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026).',
+          '**Langform-Drafting hat andere Modellanforderungen als Kurzformfiktion.** Kontextadhärenz, konsistente Instruktionsbefolgung über lange Sitzungen und die Fähigkeit, die Stimme über mehrere Generierungsaufrufe beizubehalten, sind die entscheidenden Faktoren. Die Zeilen unten sind Ausgangspunkte aus den jeweiligen Modellkarten; PromptQuorum hat diese Modelle nicht für Fiktion getestet, und öffentliche Ranglisten zum kreativen Schreiben bewerten Modelle unterschiedlich — daher zwei Kandidaten an einer eigenen Szene testen. Serverklassen-Modelle wie Command A+ (218 Mrd. Gesamtparameter, 25 Mrd. aktiv, Apache 2.0) und Mistral Large 3 (675 Mrd. Gesamtparameter, 256K Kontext, Apache 2.0) liegen außerhalb der Reichweite von Consumer-Hardware. Für das breitere Modellspektrum über alle Anwendungsfälle, siehe [Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026).',
         columns: ['Aufgabe', 'Empfohlenes Modell', 'Warum'],
         rows: [
-          { 'Aufgabe': 'Roman-Drafting (primär)', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Beste Kontextadhärenz und Instruktionsbefolgung für sitzungsübergreifende Langformarbeiten; konsistenteste Stimme' },
-          { 'Aufgabe': 'Drehbuchschreiben', 'Empfohlenes Modell': 'Llama 3.3 70B oder Mistral Large', 'Warum': 'Llama 3.3 für komplexe Charakterdynamiken; Mistral Large für konsistente Formatadhärenz im Fountain-Output' },
-          { 'Aufgabe': 'Beat Sheet / Outline-Generierung', 'Empfohlenes Modell': 'Qwen3 32B', 'Warum': 'Starke strukturelle Generierung; folgt constraint-schweren Outline-Prompts zuverlässig' },
-          { 'Aufgabe': 'Dialogdurchläufe', 'Empfohlenes Modell': 'Command A+', 'Warum': 'Bestes naturalistisches Sprachregister und Charakterstimmdifferenzierung über ausgedehnte Austausche' },
-          { 'Aufgabe': 'Überarbeitung (strukturell)', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Am besten darin, spezifische strukturelle Einschränkungen in Umschreibanweisungen zu befolgen' },
-          { 'Aufgabe': 'Reife / dunkle Fiktion', 'Empfohlenes Modell': 'Hermes 3 Llama 3.1 70B', 'Warum': 'Gleiche Basis wie Llama 3.3 70B; uncensored Fine-Tune; identische Kontextadhärenz für Langformarbeiten' },
+          { 'Aufgabe': 'Roman-Drafting (primär)', 'Empfohlenes Modell': 'Qwen3.6 27B oder Gemma 4 31B', 'Warum': 'Dichte 27B–31B-Modelle mit 256K+ angegebenem Kontext unter Apache-Lizenzen; eine Größenklasse, die zu einer 24-GB-GPU oder 32 GB+ Unified Memory bei 4 Bit passt (Schätzung)' },
+          { 'Aufgabe': 'Drehbuchschreiben', 'Empfohlenes Modell': 'Qwen3.6 27B oder Llama 3.3 70B', 'Warum': 'Formatadhärenz hängt vor allem vom System-Prompt ab; eine Fountain-Szene an zwei Modellen testen. Llama 3.3 70B ist dicht, gibt 128K Kontext an und braucht bei 4 Bit grob 40 GB (Schätzung)' },
+          { 'Aufgabe': 'Beat Sheet / Outline-Generierung', 'Empfohlenes Modell': 'Qwen3.6 35B-A3B', 'Warum': 'Mixture-of-Experts mit 3B von 35B aktiven Parametern pro Token (Apache-2.0), daher schnellere Generierung pro Token; Outline-Qualität von PromptQuorum nicht getestet' },
+          { 'Aufgabe': 'Dialogdurchläufe', 'Empfohlenes Modell': 'Das Modell, dessen Beispiele passen', 'Warum': 'Dialog als separaten Durchlauf mit dem Modell fahren, dessen Kalibrierzeilen zum Sprachregister der Figur passen; es gibt keine belastbare Rangliste von Modellen für Dialog' },
+          { 'Aufgabe': 'Überarbeitung (strukturell)', 'Empfohlenes Modell': 'Das Modell, mit dem entworfen wurde', 'Warum': 'Überarbeitungs-Prompts, die pro Aufruf eine strukturelle Einschränkung nennen, funktionieren mit jedem instruktionsfolgenden Modell; eine Szene pro Aufruf' },
+          { 'Aufgabe': 'Reife / dunkle Fiktion', 'Empfohlenes Modell': 'Hermes 4 70B', 'Warum': 'Basis Llama-3.1-70B; Nous Research beschreibt eine weitgehend neutrale Ausrichtung und geringere Ablehnungsraten; Llama-3-Lizenz; hybrider Reasoning-Modus' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Häufige Fehler',
         items: [
-          '**Das vollständige Manuskript in den Kontext einfügen.** Auch mit einem 128K-Kontextfenster nimmt die Aufmerksamkeitsqualität nach 32.000 Token deutlich ab. Die Session-Dokument-Technik verwenden.',
+          '**Das vollständige Manuskript in den Kontext einfügen.** Auch wenn ein Modell ein 128K–262K-Fenster angibt, werden lange Eingaben weniger zuverlässig genutzt — daher etwa 32.000 Token einplanen. Stattdessen die Session-Dokument-Technik verwenden — komprimierte Charakterbögen und Kapitelzusammenfassungen.',
           '**Das Modell bitten, ein offenes Dokument „fortzusetzen".** „Setze den Roman fort" führt zu Drift. „Schreibe die nächste Szene: [spezifisches Setup, POV, Wörtergrenze]" produziert einen konsistenten, begrenzten Output.',
           '**Keine Beat Sheets beim Drehbuchschreiben.** Skriptseiten ohne einen Szenen-Beat produzieren Seiten, die in Länge und struktureller Funktion abdriften. Das Beat Sheet immer zuerst generieren.',
           '**Session-Dokument-Aktualisierungen ignorieren.** Ein veraltetes Session-Dokument produziert innerhalb weniger Sitzungen Inkonsistenzen.',
@@ -1045,10 +1065,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          'Llama 3.3 70B Langkontext-Benchmarks — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B technischer Bericht inkl. Kontextfenster-Benchmarks — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'Fountain-Drehbuchformat-Spezifikation — [Fountain.io](https://fountain.io)',
+          '[Qwen3.6-27B-Modellkarte](https://huggingface.co/Qwen/Qwen3.6-27B) und [Qwen3.6-35B-A3B-Modellkarte](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — Parameter, nativer Kontext von 262.144 Token, YaRN-Erweiterung, Apache-2.0, gelesen am 26. Oktober 2026',
+          '[Gemma-4-31B-Modellkarte](https://huggingface.co/google/gemma-4-31B-it) — dichtes 31B-Modell, 256K Kontext, Apache 2.0, gelesen am 26. Oktober 2026',
+          '[Llama-3.3-70B-Instruct-Modellkarte](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B, 128K Kontext, Llama 3.3 Community License, veröffentlicht am 6. Dezember 2024',
+          '[Hermes-4-70B-Modellkarte](https://huggingface.co/NousResearch/Hermes-4-70B) — Basis Llama-3.1-70B, hybrides Reasoning, „broadly neutral alignment“',
+          '[Kimi-K2.6-Modellkarte](https://huggingface.co/moonshotai/Kimi-K2.6) — 1 Billion Gesamt- und 32 Milliarden aktive Parameter, 256K Kontext, natives int4',
+          '[Command-A+-Dokumentation](https://docs.cohere.com/docs/command-a-plus) und [Mistral-Large-3-Modellkarte](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — Parameterzahlen und Lizenzen der Serverklassen-Modelle',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023',
+          '[Fountain.io](https://fountain.io) — Fountain-Drehbuchformat-Spezifikation und [App-Liste](https://fountain.io/apps)',
+          '[Final-Draft-Hilfecenter](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — nennt, dass Final Draft .fountain-Dateien nicht direkt importieren kann',
+          '[Amazon-KDP-KI-Regeln, Publishers Weekly](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html) und [Clarkesworld-Einreichungen](https://clarkesworldmagazine.com/submissions/) — KI-Richtlinien von Verlagen und Plattformen; vor dem Einreichen den aktuellen Wortlaut prüfen',
+          '[Scrivener-Release-Notes](https://www.literatureandlatte.com/scrivener/release-notes) — Versionen 3.4.0 bis 3.5.2 (Dezember 2025): keine Plugin- oder API-Einträge; „Scrivener itself contains no AI“; gelesen am 26. Oktober 2026',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/) und [NovelCrafter-Hilfe zu KI-Verbindungen](https://www.novelcrafter.com/help/categories/ai-connections) — Plottr gibt an, keine KI-Funktionen zu entwickeln; NovelCrafter nennt Verbindungen zu LM Studio, Ollama und OpenAI-API-kompatiblen Endpunkten',
           'Ollama API-Dokumentation — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -1058,11 +1086,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Kann ein lokales LLM einen vollständigen Roman schreiben?',
-            a: 'Ein lokales LLM kann die Prosa für einen vollständigen Roman generieren — aber die strukturelle und redaktionelle Intelligenz muss vom Autor kommen. Das Modell generiert Szenen, wenn es mit spezifischen Setups aufgefordert wird; es plant, bewertet oder trifft thematische Entscheidungen nicht autonom. Autoren beschreiben es als „sehr schnellen Erstenhtwurf-Generator für Szenen, die ich bereits weiß, wie ich schreiben soll."',
+            a: 'Ein lokales LLM kann die Prosa für einen vollständigen Roman generieren — die strukturelle und redaktionelle Intelligenz muss jedoch vom Autor kommen. Das Modell generiert Szenen auf Basis konkreter Vorgaben; es plant, bewertet oder trifft thematische Entscheidungen nicht selbstständig. Am besten versteht man es als schnellen Erstentwurfs-Generator für Szenen, die man ohnehin schreiben kann: Es spart Zeit gegenüber dem leeren Blatt, während der Autor jede wesentliche Entscheidung trifft. Vor dem Einreichen die KI-Richtlinien von Verlagen und Plattformen prüfen (siehe die Verlagsfrage unten).',
           },
           {
             q: 'Was ist das maximale Kontextfenster, das ich zuverlässig verwenden kann?',
-            a: 'In der Praxis bis zu etwa 32.000 Token (~24.000 Wörter) mit den meisten lokalen Modellen. Darüber verlieren Modelle genaue Referenzen auf frühe Kontextinhalte. Die Session-Dokument-Technik hält den Arbeitskontext unter 4.000–6.000 Token.',
+            a: 'Modelle geben 128K bis 262.144 Token an, doch PromptQuorum empfiehlt, pro Generierung etwa 32.000 Token (~24.000 Wörter) einzuplanen, weil Forschung zu langen Kontexten zeigt, dass Modelle die Mitte langer Eingaben weniger zuverlässig nutzen. Das ist eine vorsichtige Planungsregel, kein gemessenes Limit für jedes Modell — das eigene Modell also testen. Die Session-Dokument-Technik hält den Arbeitskontext unter 4.000–6.000 Token, sodass jeder Generierungsaufruf deutlich innerhalb dieses Bereichs bleibt.',
           },
           {
             q: 'Wie verhindere ich, dass das Modell die Stimme meines Charakters ändert?',
@@ -1070,11 +1098,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich Scrivener mit einem lokalen LLM verwenden?',
-            a: 'Nicht nativ — Scrivener hat kein Plugin-System für externe API-Aufrufe. Der gebräuchlichste Workflow: in Ollama generieren, Output kopieren, in das relevante Scrivener-Dokument einfügen. Manche Autoren verwenden Obsidian als KI-Drafting-Ebene und importieren abgeschlossene Kapitel zur finalen Strukturierung in Scrivener.',
+            a: 'Nicht nativ — für Scrivener 3 ist kein Plugin-System dokumentiert, und die offiziellen Release Notes bis Version 3.5.2 (Dezember 2025) nennen keine KI-Integration: Die Notizen zu 3.4.0 sagen „Scrivener itself contains no AI“ und ergänzen die Unterstützung für Apples Writing Tools, eine macOS-Systemfunktion. Ein gängiger Workflow: in Ollama generieren (über Terminal oder ein Begleitskript), die Ausgabe kopieren und in das passende Scrivener-Dokument einfügen. Manche Autoren nutzen Obsidian als KI-Entwurfsebene und importieren fertige Kapitel zur finalen Strukturierung in Scrivener. Skripte, die die Ollama-API aufrufen und die Ausgabe in die Zwischenablage kopieren, kommen einer nativen Integration am nächsten.',
           },
           {
             q: 'Was ist besser fürs Drehbuchschreiben: Ollama oder eine Cloud-KI?',
-            a: 'Für reife Inhalte (Gewalt, dunkle Psychologie, moralisch komplexe Charaktere) ist lokales Ollama mit Llama 3.3 70B oder Hermes 3 zuverlässiger — Cloud-Modelle verweigern Inhalte, die in dramatischen Skripten häufig vorkommen. Für Formatkonsistenz liefern beide äquivalente Ergebnisse mit Formatanweisungen im System-Prompt.',
+            a: 'Für Drehbuchautoren, die reife Inhalte erzeugen müssen (Gewalt, dunkle Psychologie, moralisch komplexe Figuren), gibt ein lokales Modell Kontrolle über das Modell und sein Ablehnungsverhalten — manche gehostete Modelle lehnen Inhalte ab oder entschärfen sie, die in dramatischen Drehbüchern vorkommen, und gehostete Richtlinien ändern sich mit der Zeit. Ein lokales Low-Refusal-Modell wie Hermes 4 70B hat weniger eingebaute Ablehnungen; für die erzeugten und veröffentlichten Inhalte bleibt man dennoch selbst verantwortlich. Die Formatkonsistenz hängt vor allem von den Anweisungen im System-Prompt ab, die bei beiden funktionieren. Die Wahl betrifft hauptsächlich Inhaltskontrolle, Datenschutz und Kosten; PromptQuorum hat die Ausgabequalität gehosteter und lokaler Modelle für das Drehbuchschreiben nicht verglichen.',
           },
           {
             q: 'Wie generiere ich Dialog, der wie ein bestimmter Charakter klingt?',
@@ -1082,19 +1110,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Brauche ich eine GPU für ein lokales LLM beim Roman-Drafting?',
-            a: 'Eine GPU beschleunigt erheblich, ist aber nicht zwingend erforderlich. Auf Apple Silicon (M3 oder später) kann selbst ein MacBook Pro 16 GB Qwen3 14B für Drafting-Arbeiten ausführen — langsamer als ein 24-GB-GPU-Rig, aber akzeptabel. Eine dedizierte NVIDIA GPU mit 24 GB VRAM führt 70B-Modelle mit nutzbaren Geschwindigkeiten aus.',
+            a: 'Eine GPU beschleunigt die Generierung deutlich, ist aber nicht erforderlich. Bei Apple Silicon erlaubt Unified Memory einem MacBook Pro mit 16 GB, kleinere Modelle auszuführen (grob die 8B–14B-Klasse bei 4 Bit, eine Schätzung) — langsamer als ein 24-GB-GPU-Rechner, aber akzeptabel, wenn man die Ausgabe zwischen den Generierungen liest und bewertet. Eine NVIDIA-GPU mit 24 GB (RTX 4090, RTX 3090) fasst Modelle der 27B–32B-Klasse bei 4 Bit (Schätzung); Modelle der 70B-Klasse brauchen bei 4 Bit grob 40 GB oder mehr und erfordern daher zwei GPUs, eine 48-GB-Karte, 64 GB Unified Memory oder langsameres CPU-Offloading.',
           },
           {
             q: 'Kann ich lokale LLMs mit Final Draft oder anderer professioneller Drehbuchsoftware verwenden?',
-            a: 'Nicht direkt. Final Draft hat keine externe API-Integration. Workflow: Skriptseiten im Fountain-Nur-Text-Format über Ollama generieren, dann mit Final Drafts integriertem Importer importieren (Datei → Importieren → Fountain). Highland, WriterDuet und Fade In unterstützen Fountain-Import nativ.',
+            a: 'Nicht direkt. Laut Hilfecenter von Final Draft kann Final Draft keine .fountain-Dateien importieren; empfohlen wird, den Text als reine .txt-Datei zu speichern und beim Import „Script“ (nicht „Text“) zu wählen, oder ihn als FDX aus einer App zu übernehmen, die dieses Format exportiert. Highland konvertiert zwischen Fountain, FDX und PDF, und Fade In importiert und exportiert Fountain (laut Fountain-App-Verzeichnis). Workflow: Fountain-Text in Ollama generieren, in Highland oder Fade In öffnen und FDX für Final Draft exportieren.',
           },
           {
             q: 'Kann ich Kimi-K2.6 lokal für Roman-Drafting verwenden?',
-            a: 'Kimi-K2.6 hat ein echtes 1-Millionen-Token-Kontextfenster, ist aber für die meisten Autoren unpraktisch lokal auszuführen (ca. 480 GB VRAM bei Q4-Quantisierung). Für vollständig lokale Workflows handhabt die Session-Dokument-Technik mit lokal ausführbaren Modellen Romanlängenarbeit ohne 1M-Decke.',
+            a: 'Kimi-K2.6 gibt ein Kontextfenster von 256K Token an, also dieselbe Klasse wie Qwen3.6 27B und Gemma 4 31B, ist aber ein Mixture-of-Experts-Modell mit rund 1 Billion Gesamtparametern (32 Milliarden aktiv) und nativen int4-Gewichten. Allein die Gewichte kommen auf etwa 500 GB (PromptQuorum-Schätzung); es braucht einen Multi-GPU-Server oder einen Rechner mit sehr großem Unified Memory und ist auf Consumer-Hardware unpraktisch. Für vollständig lokale Workflows deckt ein dichtes 27B–70B-Modell mit der Session-Dokument-Technik Arbeiten in Romanlänge ab, ohne ein Billionen-Parameter-Modell.',
           },
           {
             q: 'Wie stehen Verlage zu KI-gestützten Manuskripten?',
-            a: 'Gemischt und im Wandel. Die meisten großen Belletristik-Verlage verlangen eine Offenlegung wesentlicher KI-Nutzung; manche verbieten sie vollständig. Self-Publishing-Plattformen verlangen Attestation für KI-generierten Inhalt. Autoren, die lokale LLMs als Drafting-Assistenten mit wesentlicher menschlicher Überarbeitung verwenden, beschreiben die KI als Werkzeug statt als Co-Autor. Die spezifische Verlagsrichtlinie vor der Einreichung prüfen.',
+            a: 'Die Richtlinien unterscheiden sich je nach Verlag und Plattform und ändern sich 2026 weiter — vor dem Einreichen also die jeweilige prüfen. Amazon KDP verlangt, dass man mitteilt, wenn Text, Bilder oder Übersetzungen KI-generiert sind, und behandelt von einem KI-Tool erzeugte Inhalte auch nach umfangreicher Bearbeitung als KI-generiert; selbst verfasste Texte, bei denen KI nur beim Bearbeiten oder Verfeinern half, gelten als „KI-unterstützt“ und müssen nicht offengelegt werden (laut Amazons Regeln, wie von Publishers Weekly im September 2023 berichtet). Manche Magazine lehnen KI-beteiligte Arbeiten grundsätzlich ab — die Einreichungsrichtlinien von Clarkesworld besagen, dass das Magazin keine Geschichten in Betracht zieht, die von KI geschrieben, mitgeschrieben oder unterstützt wurden. Von einem lokalen LLM generierter Szenentext fällt unter Definitionen wie die „KI-generiert“-Definition von KDP; daher dort offenlegen, wo es verlangt wird. Dies sind allgemeine Informationen und keine Rechtsberatung.',
+          },
+          {
+            q: 'Welche Hardware brauche ich für Kontexte mit einer Million Token?',
+            a: 'Qwen3.6 27B und Qwen3.6 35B-A3B geben einen nativen Kontext von 262.144 Token an, der sich laut Modellkarten mit YaRN-Skalierung auf rund 1.010.000 Token erweitern lässt. Ein langer Kontext braucht zusätzlich zu den Gewichten Speicher für den KV-Cache; ein Lauf mit einer Million Token braucht daher weit mehr Speicher als ein typisches Consumer-Setup; PromptQuorum hat den Bedarf nicht gemessen. Die Session-Dokument-Technik in diesem Artikel ist genau für diese Lücke gedacht — konsistente Langformausgaben, ohne auf ein Fenster von einer Million Token angewiesen zu sein.',
           },
           {
             q: 'Muss ich bei der Verwendung eines lokalen LLMs zum Schreiben von Romanen oder Drehbüchern die DSGVO beachten?',
@@ -1123,9 +1155,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-fr.webp',
     title: 'Rédiger des romans et des scénarios avec des LLM locaux : guide de workflow 100 000+ mots',
@@ -1133,15 +1166,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Les LLM locaux s\'intègrent dans le workflow d\'écriture de romans et de scénarios : brouillons de scènes, beat sheets, passes de dialogue et révisions — sans accès internet, journalisation dans le cloud ni limites d\'utilisation. Ce guide couvre le workflow complet : sélection du modèle, gestion de la fenêtre de contexte pour les longs formats, structuration des chapitres, génération de scènes et outils reliant un LLM local à votre logiciel d\'écriture.',
     metaDescription:
-      'Workflow complet pour utiliser les LLM locaux en écriture de romans et de scénarios : sélection du modèle, gestion du contexte, structure des chapitres, génération de scènes et intégrations d\'outils.',
+      'Utiliser des LLM locaux pour écrire romans et scénarios : modèles de départ, gestion du contexte, structure des chapitres, génération de scènes et outils.',
     twitterDescription:
       'LLM locaux pour romanciers et scénaristes : gestion de la fenêtre de contexte, structure des chapitres, génération de scènes, passes de dialogue et intégrations.',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1162,22 +1195,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'génération scène modèle local',
     ],
     leadAnswerBlock:
-      '**Le principal défi technique pour les auteurs utilisant des LLM locaux sur des projets longs est la gestion de la fenêtre de contexte : la plupart des modèles locaux ont techniquement une fenêtre de 128 000 tokens, mais la qualité d\'attention se dégrade significativement après 32 000 tokens (~24 000 mots) en pratique. La solution est l\'injection de contexte structurée — la technique du « document de session » : maintenir un résumé compressé des chapitres précédents, la configuration de la scène actuelle et les fiches de personnages pertinentes, puis injecter uniquement ces éléments au début de chaque session d\'écriture. Combinée à la génération scène par scène, cette approche produit des résultats longs cohérents quelle que soit la longueur du roman. Pour les scénarios, le workflow beat-sheet-first — où l\'on génère d\'abord un beat sheet par scène — produit des pages de script correspondant à la structure plutôt qu\'en dérivant.**',
+      '**Le principal défi des LLM locaux en fiction longue est la gestion du contexte : prévoir environ 32 000 tokens par génération et fournir un « document de session » compressé (fiches personnages, résumés de chapitres, scène en cours) plutôt que le manuscrit entier, une scène à la fois.**',
     quickAnswerTop: {
       fr: {
         question: 'Comment utiliser un LLM local pour l\'écriture d\'un roman ou d\'un scénario sans perdre le contexte ?',
         answer:
-          'La technique clé est l\'injection de contexte structurée : plutôt que de coller tout le manuscrit dans la fenêtre de contexte, maintenir un document de session compressé — fiche de personnage (nom, trait dominant, registre de parole), résumé de l\'intrigue des chapitres terminés (100–200 mots par chapitre) et configuration de la scène actuelle. Injecter ce document au début de chaque session. Générer une scène à la fois — jamais demander au modèle de continuer un document croissant au-delà de 32 000 tokens.',
+          'La technique clé est l\'injection de contexte structurée : plutôt que de coller tout le manuscrit dans la fenêtre de contexte, maintenir un document de session compressé — fiche de personnage (nom, trait dominant, registre de parole), résumé de l\'intrigue des chapitres terminés (100–200 mots par chapitre) et configuration de la scène en cours (beat, point de vue, plafond de mots). Injecter ce document au début de chaque session d\'écriture. Générer une scène à la fois plutôt que de demander au modèle de poursuivre un document qui grossit. Comme chaque appel ne porte que l\'état compressé, l\'approche s\'adapte à n\'importe quelle longueur de roman et réduit la dérive de contexte et la perte de voix que signalent les auteurs lorsqu\'ils tentent de faire tenir un manuscrit entier dans une seule longue fenêtre de contexte.',
         bullets: [
-          'Technique du document de session : fiches personnages + résumés chapitres + configuration scène actuelle injectés en début de session.',
-          'Générer une scène à la fois — ne jamais dépasser 32 000 tokens en continu.',
-          'Beat-sheet-first pour les scénarios : générer le beat sheet avant la prose ; l\'utiliser comme scaffold structurel.',
-          'Meilleur modèle pour le long format : Llama 3.3 70B (meilleure adhérence au contexte, meilleur suivi des instructions).',
-          'Ollama + Obsidian ou Scrivener est le workflow le plus répandu chez les auteurs.',
-          'Réalité de la fenêtre de contexte : 128K est la limite technique ; ~32 000 tokens est le plafond pratique de qualité.',
-          'Les modèles non censurés (Hermes 3) s\'intègrent à ce workflow sans modification de configuration.',
+          'Technique du document de session : fiches personnages + résumés de chapitres + configuration de la scène en cours injectés en début de session.',
+          'Générer une scène à la fois — éviter de demander au modèle de « poursuivre » un document qui grossit au-delà d\'environ 32 000 tokens.',
+          'Beat-sheet-first pour les scénarios : générer le beat sheet avant la prose ; l\'utiliser comme armature structurelle.',
+          'Modèles de départ (données des fiches de modèle) : Qwen3.6 27B, Gemma 4 31B, Llama 3.3 70B ; PromptQuorum ne les a pas évalués pour la fiction.',
+          'Ollama + Obsidian est un workflow courant chez les auteurs ; Scrivener ne documente aucune API de plugins, la sortie est donc collée.',
+          'Règle de planification de la fenêtre de contexte : les modèles annoncent 128K–262 144 tokens ; prévoir environ 32 000 par génération, car la qualité sur contexte long est inégale.',
+          'Les fine-tunes à faible taux de refus, comme Hermes 4 70B, suivent le même workflow pour la fiction adulte ; vérifier la licence de chaque modèle.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -1200,26 +1233,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Réalité de la fenêtre de contexte : 128K tokens sur le papier, 32K en pratique.** La qualité d\'attention se dégrade nettement après 32 000 tokens (~24 000 mots). Ne pas coller le manuscrit complet — utiliser la technique du document de session.',
+          '**Règle de planification de la fenêtre de contexte : 128K–262 144 tokens annoncés, environ 32K prévus.** Les modèles exploitent moins fiablement le milieu des longues entrées (« Lost in the Middle ») ; prévoir environ 32 000 tokens par génération plutôt que de coller le manuscrit complet.',
           '**La technique du document de session est la compétence fondamentale.** Maintenir un fichier texte compressé : fiches de personnages actifs (150 mots par personnage), résumés de chapitres (100–200 mots par chapitre terminé) et configuration de la scène actuelle. Injecter au début de chaque session.',
-          '**Générer une scène à la fois.** Demander au modèle d\'écrire une scène (200–600 mots) plutôt que de continuer un document croissant. Une scène par session élimine la dérive de contexte.',
+          '**Générer une scène à la fois.** Demander au modèle d\'écrire une scène (200–600 mots) par session plutôt que de poursuivre un document qui grossit. Une scène par session réduit la dérive de contexte et aide à garder une voix cohérente.',
           '**Beat-sheet-first pour les scénarios.** Avant de générer des pages de script, générer un beat sheet par scène. Utiliser le beat sheet comme scaffold pour chaque génération de page.',
-          '**Llama 3.3 70B est le meilleur modèle pour le long format.** Forte adhérence au contexte, meilleur suivi des instructions sur des générations longues, cohérence de voix sur plusieurs sessions.',
-          '**Ollama + un outil d\'écriture texte brut est l\'intégration la plus fiable.** Scrivener, Obsidian et VS Code fonctionnent tous comme couche manuscrit ; Ollama sert le modèle via une API.',
-          '**Les modèles non censurés (Hermes 3) s\'intègrent sans changements de configuration.** Pour la fiction adulte, basculer le modèle Ollama vers Hermes 3 ; les techniques restent identiques.',
+          '**Choisir un modèle que l\'on peut exécuter, puis le tester sur l\'une de ses propres scènes.** Les modèles denses de la classe 27B–31B (Qwen3.6 27B, Gemma 4 31B) et Llama 3.3 70B sont des points de départ courants ; PromptQuorum n\'en a évalué aucun pour la fiction, et les classements publics d\'écriture créative notent les modèles différemment.',
+          '**Ollama + un outil d\'écriture en texte brut est une intégration fiable.** Scrivener, Obsidian et VS Code peuvent accueillir le manuscrit ; Ollama sert le modèle via une API que des applications ou des scripts peuvent appeler.',
+          '**Les modèles à faible taux de refus (Hermes 4 70B) s\'intègrent sans changement de configuration.** Pour la fiction adulte, changer le modèle Ollama ; les techniques du document de session et de génération de scènes restent identiques. Vérifier la licence de chaque modèle pour son usage.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**Meilleur modèle pour la fiction longue :** Llama 3.3 70B (meilleure adhérence au contexte et suivi des instructions).',
-          '**Limite pratique de la fenêtre de contexte :** ~32 000 tokens (~24 000 mots) pour une qualité d\'attention fiable ; 128K est le plafond technique.',
+          '**Modèles de départ (d\'après les fiches de modèle) :** Qwen3.6 27B (dense, Apache-2.0, contexte de 262 144 tokens), Gemma 4 31B (dense, Apache-2.0, contexte de 256K), Llama 3.3 70B (dense, contexte de 128K, Llama 3.3 Community License).',
+          '**Limite de planification de la fenêtre de contexte :** ~32 000 tokens (~24 000 mots) par génération ; les modèles annoncent 128K–262 144 tokens, ce qui est un plafond, pas une garantie de qualité.',
           '**Taille du document de session :** viser moins de 4 000 tokens (fiches personnages + résumés chapitres + configuration scène actuelle).',
           '**Cible de génération de scène :** 200–600 mots par appel de génération ; scènes plus longues via plusieurs prompts séquentiels.',
           '**Format scénario :** combiner Ollama avec des instructions de sortie au format Fountain pour du texte formaté screenplay.',
-          '**Outils d\'écriture compatibles Ollama :** Scrivener (via scripts API compagnons), Obsidian (via plugin local ou scripts), VS Code (via Continue.dev ou appels API directs), terminal brut.',
-          '**Option non censurée :** Hermes 3 Llama 3.1 pour la fiction adulte ; même workflow, même technique du document de session.',
+          '**Outils d\'écriture compatibles Ollama :** Scrivener (coller la sortie ; pas d\'API de plugins documentée), Obsidian (via plugin local ou scripts), VS Code (via Continue.dev ou appels API directs), terminal brut.',
+          '**Option à faible taux de refus :** Hermes 4 70B (base Llama-3.1-70B) pour la fiction adulte ; même workflow, même technique du document de session.',
         ],
       },
       contextWindow: {
@@ -1227,29 +1260,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Le problème de la fenêtre de contexte pour l\'écriture longue',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          "Fiabilité de la fenêtre de contexte pour les LLM locaux : le plafond pratique d'attention est de 32K tokens (~24 000 mots) contre la limite technique de 128K, pour Llama 3.3 70B, Qwen3 32B et Mistral Large ; la fenêtre de 1M de tokens de Kimi-K2.6 nécessite ~480 Go de VRAM en Q4.",
+          'Planification du contexte : limite de travail de 32K tokens (~24 000 mots) contre 128K–262 144 annoncés par les modèles.',
         content:
-          '**La limite pratique de contexte de la plupart des modèles locaux est de 32 000 tokens — pas les 128K annoncés.** La qualité d\'attention se dégrade après 32 000 tokens. À 128K tokens, beaucoup de modèles perdent la référence précise au contenu du premier quart de la fenêtre. Pour un roman, cela signifie qu\'on ne peut pas simplement coller le manuscrit en cours et demander le chapitre suivant.\n\nKimi-K2.6 de Moonshot AI offre une véritable fenêtre de 1 million de tokens avec une meilleure préservation de la qualité d\'attention. Exécuter Kimi-K2.6 localement est impraticable pour la plupart des auteurs — il requiert environ 480 Go de VRAM en quantisation Q4. Pour les auteurs ayant besoin de 1M de contexte, l\'API hébergée de Moonshot est l\'option pratique. Pour les modèles exécutables localement (Llama 3.3 70B, Qwen3 32B, Mistral Large), le plafond pratique de 32K est la contrainte pertinente.',
+          '**Prévoir environ 32 000 tokens par génération, même quand un modèle en annonce bien davantage.** Il s\'agit d\'une règle de planification prudente de PromptQuorum, non d\'une limite mesurée : la recherche sur les contextes longs (Liu et al., « Lost in the Middle ») a constaté que les modèles exploitent plus fiablement les informations du début et de la fin d\'une longue entrée que celles du milieu, et que la qualité peut baisser à mesure que l\'entrée s\'allonge. Les modèles récents annoncent des fenêtres bien plus grandes — Qwen3.6 27B annonce 262 144 tokens en natif et Gemma 4 31B 256K —, il faut donc tester son propre modèle. Pour un roman, coller le manuscrit écrit jusque-là et demander le chapitre suivant reste l\'approche la moins fiable, et un long contexte consomme aussi plus de mémoire, car le cache KV grossit avec lui.\n\nKimi-K2.6 de Moonshot AI annonce une fenêtre de contexte de 256K tokens (262 144), de la même classe que les modèles ci-dessus, mais c\'est un modèle à mélange d\'experts d\'environ 1 000 milliards de paramètres au total (32 milliards actifs) livré avec des poids int4 natifs. Même en 4 bits, les poids seuls représentent environ 500 Go (estimation PromptQuorum : 1 000 milliards de paramètres × 0,5 octet) ; c\'est un modèle de classe serveur, pas un modèle de portable. La technique du document de session et la génération scène par scène s\'appliquent aux modèles exécutables en local, quelle que soit la taille de leur contexte.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Le plafond pratique de qualité pour l\'adhérence au contexte dans la plupart des LLM locaux est d\'environ 32 000 tokens (~24 000 mots) — au-delà, les modèles perdent la référence précise au contenu antérieur, causant dérive de voix et incohérences de plot.',
+            text: 'Un plafond de planification prudent pour l\'adhérence au contexte des LLM locaux est d\'environ 32 000 tokens (~24 000 mots) par génération — au-delà, la recherche sur les contextes longs constate une exploitation moins fiable du contenu antérieur, ce qui peut se traduire par une dérive de voix et des incohérences d\'intrigue sur un long manuscrit.',
           },
           {
             type: 'plain-terms',
-            text: 'On ne peut pas charger un roman de 90 000 mots dans une fenêtre de 128K et espérer que le modèle se souvienne de ce qui s\'est passé au chapitre 3 en écrivant le chapitre 20. À la place : compresser ce que le modèle doit savoir — fiches personnages, résumés de chapitres, configuration de la scène actuelle — dans un document de session de moins de 4 000 tokens, et l\'injecter au début de chaque session.',
+            text: 'On ne peut pas compter sur un modèle pour se souvenir de ce qui s\'est passé au chapitre 3 en écrivant le chapitre 20 simplement parce que tout le manuscrit tient dans sa fenêtre de contexte. À la place : compresser ce que le modèle doit savoir — fiches personnages, résumés de chapitres, configuration de la scène en cours — dans un document de session de moins de 4 000 tokens, et l\'injecter au début de chaque session d\'écriture. Le modèle n\'a besoin de connaître que ce qui est pertinent pour la scène qu\'il génère à cet instant.',
           },
         ],
         items: [
-          '**Conversion token-mot :** 1 token ≈ 0,75 mot en anglais. 32K tokens ≈ 24 000 mots. 128K tokens ≈ 96 000 mots (un roman complet).',
-          '**Dégradation de l\'attention :** les modèles perdent la référence fiable au contenu du début d\'une longue fenêtre — erreurs de noms de personnages, points de plot oubliés, dérive de voix.',
-          '**L\'asymétrie :** les modèles traitent le mieux le début (system prompt) et la fin du contexte. Le contenu au milieu d\'un long contexte est le moins fiablement traité.',
+          '**Conversion token-mot :** 1 token ≈ 0,75 mot en anglais (règle empirique). 32K tokens ≈ 24 000 mots. 128K tokens ≈ 96 000 mots (environ un roman) ; 262 144 tokens ≈ 196 000 mots.',
+          '**Dégradation de l\'attention :** les modèles peuvent perdre la référence fiable au contenu du début d\'une longue fenêtre — erreurs de noms de personnages, points d\'intrigue oubliés, dérive de voix.',
+          '**L\'asymétrie :** dans l\'étude Lost in the Middle, les modèles exploitaient le mieux le début et la fin de l\'entrée, et le moins fiablement le contenu du milieu. L\'étude portait sur des modèles disponibles en 2023 ; il faut donc tester les modèles actuels plutôt que de supposer le même schéma.',
           '**Document de session comme solution :** compresser tout ce dont le modèle a besoin dans un court document structuré. Injecter au début. Générer la scène. Terminer la session. Réinitialiser. Recommencer avec le document mis à jour.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Ne pas coller le manuscrit complet dans le contexte. Au-delà de 10 000 mots, la dérive de contexte s\'installe — le modèle oublie les détails de personnages, contredit les points de plot et régresse vers un registre générique. Utiliser la technique du document de session.',
+            text: 'Ne pas coller le manuscrit complet dans le contexte. Au-delà de 10 000 mots, le risque de dérive de contexte apparaît — le modèle peut oublier les détails des personnages, contredire les points d\'intrigue établis et retomber vers un registre générique. Utiliser la technique du document de session.',
           },
         ],
       },
@@ -1257,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'Technique du document de session',
         content:
-          'La technique du document de session présentée ici a été testée sur plusieurs projets longs (un roman littéraire de 90 000 mots, deux scénarios). La taille de 4 000 tokens, le rythme scène par scène et le timing des vérifications de continuité découlent de modes d\'échec observés pendant ce travail.\n\n**Le document de session est un fichier texte brut maintenu à côté du manuscrit — l\'état compressé du roman que le modèle doit connaître pour générer du contenu cohérent.** Il comporte trois sections : fiches de personnages actifs, résumés de chapitres et configuration de la scène actuelle.',
+          'La technique du document de session est une recommandation de workflow de PromptQuorum, fondée sur les limites de contexte décrites plus haut. PromptQuorum ne l\'a pas soumise à un test contrôlé, et les tailles ci-dessous (4 000 tokens, 150 mots par fiche de personnage, 100–150 mots par résumé de chapitre) sont des repères de planification, non des seuils mesurés.\n\n**Le document de session est un fichier texte brut maintenu à côté du manuscrit — l\'état compressé du roman que le modèle doit connaître pour générer du contenu cohérent.** Il comporte trois sections : fiches de personnages actifs, résumés de chapitres et configuration de la scène en cours.',
         promptExamples: [
           {
             label: 'Modèle de document de session',
@@ -1283,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Workflow d\'écriture de roman',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          "Workflow de rédaction de roman en 4 phases avec des LLM locaux : plan (10 à 30 chapitres), beat sheets (3 à 8 scènes par chapitre), génération de scènes (200 à 600 mots par session) et passes de révision, organisé autour d'un document de session de moins de 4 000 tokens.",
+          'Roman en quatre phases avec un LLM local : outline, beat sheets, scènes et révision, autour d\'un document de session.',
         content:
           '**Le workflow d\'écriture de roman avec un LLM local comporte quatre phases : outline, beat sheets de chapitres, génération de scènes et passes de révision.** Chaque phase utilise une structure de prompt différente.',
         items: [
@@ -1316,10 +1349,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Format dans le system prompt, pas dans le tour utilisateur.** Placer les instructions de format dans le message système signifie que chaque génération de la session suit le format sans répéter l\'instruction.',
-          '**Sortie compatible Fountain :** Fountain est un format de balisage texte brut pour scénarios supporté par Final Draft, Highland, WriterDuet et d\'autres. Demander « Fountain-compatible plain text » produit une sortie importable directement dans le logiciel de scénario.',
+          '**Sortie compatible Fountain :** Fountain est un format de balisage en texte brut pour scénarios ; Highland et Fade In le lisent, comme d\'autres applications du [répertoire d\'applications Fountain](https://fountain.io/apps). Demander « Fountain-compatible plain text » produit une sortie que l\'on peut ouvrir dans ces outils ou convertir pour d\'autres (voir la question sur Final Draft dans la FAQ).',
           '**Slug lines d\'abord :** générer la slug line comme prompt d\'une ligne avant de générer le contenu de la scène. Cela ancre le lieu physique avant que le modèle commence.',
           '**Passes de dialogue :** après les lignes d\'action, faire une passe séparée : « Les lignes d\'action sont définies. Écrire le dialogue pour [Personnage A] et [Personnage B]. Personnage A veut [X]. Personnage B veut [Y]. Pas de balises de dialogue. 5–8 échanges. »',
-          '**Gestion du nombre de pages :** une page de scénario standard fait environ 55–60 mots d\'action et dialogue combinés. Calibrer les plafonds de mots : 1 page ≈ 60 mots, 2 pages ≈ 120 mots, 3 pages ≈ 180 mots.',
+          '**Gestion du nombre de pages :** il n\'existe pas de nombre de mots par page fixe, et « une page égale une minute » n\'est qu\'une règle empirique. Compter la moyenne de mots par page de son propre script et fixer les plafonds de mots à partir de là.',
         ],
         callouts: [
           {
@@ -1336,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pour la fiction longue, le schéma de génération le plus fiable est : document de session dans le system prompt → unique prompt de scène dans le tour utilisateur → réviser → mettre à jour le document de session → répéter, une scène par session.',
+            text: 'Pour la fiction longue, un schéma de génération fiable est : document de session dans le system prompt → unique prompt de scène dans le tour utilisateur → réviser → mettre à jour le document de session → répéter, une scène par session.',
           },
           {
             type: 'plain-terms',
@@ -1374,8 +1407,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'SillyTavern', 'Lien': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Intégration': 'API compatible OpenAI → Ollama', 'Idéal pour': 'Fiction roleplay et rédaction guidée par fiches personnages ; mémoire de personnage persistante' },
           { 'Outil': 'Terminal brut', 'Intégration': '`ollama run [model]` ou curl vers l\'API Ollama', 'Idéal pour': 'Workflows scriptables ; contrôle maximal avec overhead d\'interface minimal' },
           { 'Outil': 'LM Studio', 'Lien': '[lmstudio.ai](https://lmstudio.ai)', 'Intégration': 'Interface de chat intégrée + API serveur local', 'Idéal pour': 'Auteurs souhaitant un gestionnaire de modèles GUI sans installer Ollama séparément' },
-          { 'Outil': 'NovelCrafter', 'Lien': '[novelcrafter.com](https://www.novelcrafter.com)', 'Intégration': 'Intégration IA intégrée ; supporte les endpoints compatibles OpenAI (pointer vers Ollama)', 'Idéal pour': 'Auteurs souhaitant une assistance IA au niveau chapitre dans une seule app dédiée au roman' },
-          { 'Outil': 'Plottr', 'Lien': '[plottr.com](https://plottr.com)', 'Intégration': 'Workflow manuel : structurer les romans dans Plottr, coller scènes/beats dans Ollama en externe', 'Idéal pour': 'Fiction de genre à plot dense (polar, thriller, fantasy) où la structure narrative est le cœur du workflow' },
+          { 'Outil': 'NovelCrafter', 'Lien': '[novelcrafter.com](https://www.novelcrafter.com)', 'Intégration': 'Intégration IA intégrée ; ses pages d\'aide mentionnent des connexions LM Studio, Ollama et des endpoints compatibles avec l\'API OpenAI', 'Idéal pour': 'Auteurs souhaitant une assistance IA au niveau chapitre dans une seule app dédiée au roman' },
+          { 'Outil': 'Plottr', 'Lien': '[plottr.com](https://plottr.com)', 'Intégration': 'Workflow manuel : structurer les romans dans Plottr, coller scènes/beats dans Ollama en externe (Plottr indique ne pas ajouter de fonctions d\'IA)', 'Idéal pour': 'Fiction de genre à plot dense (polar, thriller, fantasy) où la structure narrative est le cœur du workflow' },
         ],
         callouts: [
           {
@@ -1389,22 +1422,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Recommandations de modèles pour le long format',
         content:
-          '**Le long format a des exigences différentes de la fiction courte.** L\'adhérence au contexte, la cohérence du suivi des instructions sur des sessions longues et la capacité à maintenir la voix sur plusieurs appels de génération sont les facteurs décisifs. Pour le panorama complet des modèles, voir [Meilleurs LLM locaux en 2026](/fr/local-llms/best-local-llms-2026).',
+          '**Le long format a des exigences différentes de la fiction courte.** L\'adhérence au contexte, la cohérence du suivi des instructions sur des sessions longues et la capacité à maintenir la voix sur plusieurs appels de génération sont les facteurs décisifs. Les lignes ci-dessous sont des points de départ tirés de la fiche de chaque modèle ; PromptQuorum n\'a pas évalué ces modèles pour la fiction, et les classements publics d\'écriture créative notent les modèles différemment — il faut donc tester deux candidats sur l\'une de ses propres scènes. Les modèles ouverts de classe serveur comme Command A+ (218 milliards de paramètres au total, 25 milliards actifs, Apache 2.0) et Mistral Large 3 (675 milliards de paramètres au total, contexte de 256K, Apache 2.0) dépassent la portée du matériel grand public. Pour le panorama complet des modèles, voir [Meilleurs LLM locaux en 2026](/fr/local-llms/best-local-llms-2026).',
         columns: ['Tâche', 'Modèle recommandé', 'Pourquoi'],
         rows: [
-          { 'Tâche': 'Rédaction de roman (principal)', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Meilleure adhérence au contexte et suivi des instructions pour le long format multi-sessions ; voix la plus cohérente' },
-          { 'Tâche': 'Écriture de scénarios', 'Modèle recommandé': 'Llama 3.3 70B ou Mistral Large', 'Pourquoi': 'Llama 3.3 pour les dynamiques de personnages complexes ; Mistral Large pour l\'adhérence au format Fountain' },
-          { 'Tâche': 'Génération de beat sheet / outline', 'Modèle recommandé': 'Qwen3 32B', 'Pourquoi': 'Forte génération structurelle ; suit fiablement les prompts d\'outline à contraintes multiples' },
-          { 'Tâche': 'Passes de dialogue', 'Modèle recommandé': 'Command A+', 'Pourquoi': 'Meilleur registre de parole naturel et différenciation des voix de personnages sur des échanges longs' },
-          { 'Tâche': 'Révision (structurelle)', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Meilleur pour suivre des contraintes structurelles nommées dans les instructions de réécriture' },
-          { 'Tâche': 'Fiction adulte / sombre', 'Modèle recommandé': 'Hermes 3 Llama 3.1 70B', 'Pourquoi': 'Même base que Llama 3.3 70B ; fine-tune non censuré ; adhérence au contexte identique pour le long format' },
+          { 'Tâche': 'Rédaction de roman (principal)', 'Modèle recommandé': 'Qwen3.6 27B ou Gemma 4 31B', 'Pourquoi': 'Modèles denses de 27B–31B annonçant 256K+ de contexte sous licences Apache ; une classe de taille adaptée à un GPU de 24 Go ou à 32 Go+ de mémoire unifiée en 4 bits (estimation)' },
+          { 'Tâche': 'Écriture de scénarios', 'Modèle recommandé': 'Qwen3.6 27B ou Llama 3.3 70B', 'Pourquoi': 'L\'adhérence au format dépend surtout du prompt système ; tester une scène Fountain sur deux modèles. Llama 3.3 70B est dense, annonce 128K de contexte et demande environ 40 Go en 4 bits (estimation)' },
+          { 'Tâche': 'Génération de beat sheet / outline', 'Modèle recommandé': 'Qwen3.6 35B-A3B', 'Pourquoi': 'Mélange d\'experts avec 3B de 35B paramètres actifs par token (Apache-2.0), donc génération plus rapide par token ; qualité des outlines non évaluée par PromptQuorum' },
+          { 'Tâche': 'Passes de dialogue', 'Modèle recommandé': 'Le modèle dont les échantillons conviennent', 'Pourquoi': 'Faire le dialogue en passe séparée avec le modèle dont les lignes de calibration correspondent au registre du personnage ; il n\'existe pas de classement vérifié des modèles pour le dialogue' },
+          { 'Tâche': 'Révision (structurelle)', 'Modèle recommandé': 'Le modèle utilisé pour le premier jet', 'Pourquoi': 'Les prompts de révision qui nomment une contrainte structurelle par appel fonctionnent avec tout modèle suivant les instructions ; une scène par appel' },
+          { 'Tâche': 'Fiction adulte / sombre', 'Modèle recommandé': 'Hermes 4 70B', 'Pourquoi': 'Base Llama-3.1-70B ; Nous Research décrit un alignement globalement neutre et moins de refus ; licence Llama 3 ; mode de raisonnement hybride' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Erreurs fréquentes',
         items: [
-          '**Coller le manuscrit complet dans le contexte.** Même avec une fenêtre de 128K tokens, la qualité d\'attention se dégrade significativement après 32 000 tokens. Utiliser la technique du document de session.',
+          '**Coller le manuscrit complet dans le contexte.** Même quand un modèle annonce une fenêtre de 128K–262K, les longues entrées sont exploitées moins fiablement ; il faut donc prévoir environ 32 000 tokens. Utiliser la technique du document de session — fiches de personnages et résumés de chapitres compressés.',
           '**Demander au modèle de « continuer » un document ouvert.** « Continue le roman » produit de la dérive. « Écris la scène suivante : [configuration spécifique, PDV, plafond de mots] » produit une sortie bornée et cohérente.',
           '**Pas de beat sheets pour les scénarios.** Générer des pages sans beat sheet produit des scènes qui dérivent en longueur et perdent leur fonction structurelle. Générer le beat sheet en premier, toujours.',
           '**Ignorer les mises à jour du document de session.** Un document de session obsolète produit des incohérences en quelques sessions.',
@@ -1415,10 +1448,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          'Benchmarks long contexte Llama 3.3 70B — [Meta AI Research](https://ai.meta.com)',
-          'Rapport technique Qwen3 32B incluant benchmarks fenêtre de contexte — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'Spécification du format Fountain pour scénarios — [Fountain.io](https://fountain.io)',
+          '[Fiche de modèle Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) et [fiche de modèle Qwen3.6-35B-A3B](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — paramètres, contexte natif de 262 144 tokens, extension YaRN, Apache-2.0, consultées le 26 octobre 2026',
+          '[Fiche de modèle Gemma 4 31B](https://huggingface.co/google/gemma-4-31B-it) — 31B dense, contexte de 256K, Apache 2.0, consultée le 26 octobre 2026',
+          '[Fiche de modèle Llama 3.3 70B Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B, contexte de 128K, Llama 3.3 Community License, publié le 6 décembre 2024',
+          '[Fiche de modèle Hermes 4 70B](https://huggingface.co/NousResearch/Hermes-4-70B) — base Llama-3.1-70B, raisonnement hybride, « broadly neutral alignment »',
+          '[Fiche de modèle Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6) — 1 000 milliards de paramètres au total et 32 milliards actifs, contexte de 256K, int4 natif',
+          '[Documentation Command A+](https://docs.cohere.com/docs/command-a-plus) et [fiche de modèle Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — nombre de paramètres et licences des modèles de classe serveur',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023',
+          '[Fountain.io](https://fountain.io) — spécification du format de scénario Fountain et [liste d\'applications](https://fountain.io/apps)',
+          '[Centre d\'aide Final Draft](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — indique que Final Draft ne peut pas importer directement les fichiers .fountain',
+          '[Règles d\'IA d\'Amazon KDP, Publishers Weekly](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html) et [soumissions à Clarkesworld](https://clarkesworldmagazine.com/submissions/) — politiques d\'IA des éditeurs et plateformes ; vérifier la formulation en vigueur avant d\'envoyer',
+          '[Notes de version Scrivener](https://www.literatureandlatte.com/scrivener/release-notes) — versions 3.4.0 à 3.5.2 (décembre 2025) : aucune entrée sur les plugins ou l\'API ; « Scrivener itself contains no AI » ; consultées le 26 octobre 2026',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/) et [aide NovelCrafter sur les connexions IA](https://www.novelcrafter.com/help/categories/ai-connections) — Plottr indique ne pas développer de fonctions d\'IA ; NovelCrafter mentionne des connexions LM Studio, Ollama et des endpoints compatibles avec l\'API OpenAI',
           'Documentation API Ollama — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -1428,11 +1469,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Un LLM local peut-il écrire un roman complet ?',
-            a: 'Un LLM local peut générer la prose d\'un roman complet — mais l\'intelligence structurelle et éditoriale doit venir de l\'auteur. Le modèle génère des scènes quand on lui fournit des configurations spécifiques ; il ne planifie pas, n\'évalue pas et ne prend pas de décisions thématiques de façon autonome. Les auteurs qui utilisent des LLM locaux comme outils de rédaction les décrivent comme « un générateur de premier brouillon très rapide pour des scènes que je sais déjà comment écrire ».',
+            a: 'Un LLM local peut générer la prose d\'un roman complet — mais l\'intelligence structurelle et éditoriale doit venir de l\'auteur. Le modèle génère des scènes à partir de consignes précises ; il ne planifie, n\'évalue ni ne prend de décisions thématiques de lui-même. Il vaut mieux le voir comme un générateur rapide de premiers jets pour des scènes que l\'on sait déjà écrire : il fait gagner du temps face à la page blanche, tandis que l\'auteur prend toutes les décisions importantes. Vérifier les politiques d\'IA des éditeurs et des plateformes avant d\'envoyer (voir la question sur les éditeurs plus bas).',
           },
           {
             q: 'Quelle est la fenêtre de contexte maximale utilisable de façon fiable ?',
-            a: 'En pratique, compter sur une qualité d\'attention fiable jusqu\'à environ 32 000 tokens (~24 000 mots) avec la plupart des modèles locaux. Au-delà, les modèles commencent à perdre la référence précise au contenu du début du contexte. La technique du document de session maintient le contexte de travail sous 4 000–6 000 tokens.',
+            a: 'Les modèles annoncent de 128K à 262 144 tokens, mais PromptQuorum recommande de prévoir environ 32 000 tokens (~24 000 mots) par génération, car la recherche sur les contextes longs montre que les modèles exploitent moins fiablement le milieu des longues entrées. C\'est une règle de planification prudente, non une limite mesurée pour chaque modèle — il faut tester le sien. La technique du document de session garde le contexte de travail sous 4 000–6 000 tokens, de sorte que chaque appel de génération reste bien dans cette plage.',
           },
           {
             q: 'Comment empêcher le modèle de changer la voix de mon personnage en cours de roman ?',
@@ -1440,11 +1481,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je utiliser Scrivener avec un LLM local ?',
-            a: 'Pas nativement — Scrivener n\'a pas de système de plugin pour les appels API externes. Le workflow le plus courant : générer dans Ollama (via terminal ou script compagnon), copier la sortie, la coller dans le document Scrivener pertinent. Certains auteurs utilisent Obsidian comme couche de rédaction IA et importent les chapitres terminés dans Scrivener.',
+            a: 'Pas nativement — Scrivener 3 ne documente aucun système de plugins, et ses notes de version officielles jusqu\'à la 3.5.2 (décembre 2025) ne mentionnent aucune intégration d\'IA : les notes de la 3.4.0 indiquent « Scrivener itself contains no AI » et ajoutent la prise en charge des Writing Tools d\'Apple, une fonction système de macOS. Un workflow courant : générer dans Ollama (via le terminal ou un script compagnon), copier la sortie, la coller dans le document Scrivener concerné. Certains auteurs utilisent Obsidian comme couche de rédaction assistée et importent les chapitres terminés dans Scrivener pour la structuration finale. Les scripts qui appellent l\'API Ollama et copient la sortie dans le presse-papiers sont ce qui se rapproche le plus d\'une intégration native.',
           },
           {
             q: 'Qu\'est-ce qui est mieux pour les scénarios : Ollama ou une IA cloud ?',
-            a: 'Pour les scénaristes devant générer du contenu adulte (violence, psychologie sombre, personnages moralement complexes), Ollama local avec Llama 3.3 70B ou Hermes 3 est plus fiable — les modèles cloud refusent du contenu qui apparaît fréquemment dans les scripts dramatiques. Pour la cohérence du format, les deux sont équivalents avec des instructions de format dans le system prompt.',
+            a: 'Pour les scénaristes qui doivent générer du contenu adulte (violence, psychologie sombre, personnages moralement complexes), un modèle local donne le contrôle du modèle et de son comportement de refus — certains modèles hébergés refusent ou adoucissent des contenus présents dans les scripts dramatiques, et les politiques des services hébergés évoluent avec le temps. Un modèle local à faible taux de refus comme Hermes 4 70B a moins de refus intégrés, mais l\'on reste responsable du contenu généré et publié. La cohérence du format dépend surtout des instructions du prompt système, qui fonctionnent dans les deux cas. Le choix porte surtout sur le contrôle du contenu, la confidentialité et le coût ; PromptQuorum n\'a pas comparé la qualité de sortie entre modèles hébergés et locaux pour le scénario.',
           },
           {
             q: 'Comment générer du dialogue qui ressemble à un personnage spécifique ?',
@@ -1452,19 +1493,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ai-je besoin d\'un GPU pour utiliser un LLM local pour la rédaction de roman ?',
-            a: 'Un GPU accélère significativement mais n\'est pas requis. Sur Apple Silicon (M3 ou ultérieur), même un MacBook Pro 16 Go peut faire tourner Qwen3 14B pour la rédaction — plus lent qu\'un rig GPU 24 Go mais acceptable pour un workflow d\'écriture. Un GPU NVIDIA dédié avec 24 Go de VRAM fait tourner les modèles 70B à des vitesses utilisables.',
+            a: 'Un GPU accélère nettement la génération mais n\'est pas indispensable. Sur Apple Silicon, la mémoire unifiée permet à un MacBook Pro de 16 Go d\'exécuter des modèles plus petits (environ la classe 8B–14B en 4 bits, une estimation) — plus lent qu\'une machine à GPU de 24 Go, mais acceptable quand on lit et évalue la sortie entre deux générations. Un GPU NVIDIA de 24 Go (RTX 4090, RTX 3090) accueille des modèles de la classe 27B–32B en 4 bits (estimation) ; les modèles de classe 70B demandent environ 40 Go ou plus en 4 bits et nécessitent donc deux GPU, une carte de 48 Go, 64 Go de mémoire unifiée ou un déchargement vers le CPU, plus lent.',
           },
           {
             q: 'Puis-je utiliser des LLM locaux avec Final Draft ou d\'autres logiciels de scénario professionnels ?',
-            a: 'Pas directement. Final Draft n\'a pas d\'intégration API externe. Le workflow : générer les pages de script au format Fountain via Ollama, puis importer le fichier Fountain dans Final Draft via son importateur intégré (Fichier → Importer → Fountain). Highland, WriterDuet et Fade In supportent l\'import Fountain nativement.',
+            a: 'Pas directement. Selon le centre d\'aide de Final Draft, Final Draft ne peut pas importer les fichiers .fountain ; sa recommandation est d\'enregistrer le texte en .txt brut et de choisir Script (et non Text) à l\'import, ou de l\'importer en FDX depuis une application qui exporte ce format. Highland convertit entre Fountain, FDX et PDF, et Fade In importe et exporte Fountain (d\'après le répertoire d\'applications Fountain). Workflow : générer du texte au format Fountain dans Ollama, l\'ouvrir dans Highland ou Fade In, puis exporter en FDX pour Final Draft.',
           },
           {
             q: 'Puis-je utiliser Kimi-K2.6 localement pour la rédaction de roman ?',
-            a: 'Kimi-K2.6 a une véritable fenêtre de 1 million de tokens — utile pour du travail en une seule passe sur la longueur d\'un roman — mais est impraticable à exécuter localement pour la plupart des auteurs (~480 Go de VRAM en quantisation Q4). Pour les workflows entièrement locaux, la technique du document de session avec des modèles exécutables localement gère le travail de longueur roman.',
+            a: 'Kimi-K2.6 annonce une fenêtre de contexte de 256K tokens, de la même classe que Qwen3.6 27B et Gemma 4 31B, mais c\'est un modèle à mélange d\'experts d\'environ 1 000 milliards de paramètres au total (32 milliards actifs) avec des poids int4 natifs. Les poids seuls représentent environ 500 Go (estimation PromptQuorum) ; il faut un serveur multi-GPU ou une machine à très grande mémoire unifiée, et il est peu pratique sur du matériel grand public. Pour des workflows entièrement locaux, un modèle dense de 27B–70B avec la technique du document de session couvre un travail de la longueur d\'un roman sans modèle à mille milliards de paramètres.',
           },
           {
             q: 'Quelle est la position des éditeurs sur les manuscrits assistés par IA ?',
-            a: 'Mitigée et en évolution. La plupart des grands éditeurs de fiction exigent une divulgation de l\'usage substantiel de l\'IA dans les manuscrits soumis ; certains l\'interdisent totalement. Les plateformes d\'auto-publication exigent une attestation pour le contenu généré par IA. Les auteurs utilisant des LLM locaux comme assistants de rédaction avec révision humaine substantielle décrivent l\'IA comme un outil plutôt qu\'un co-auteur. Vérifier la politique spécifique de l\'éditeur avant soumission.',
+            a: 'Les politiques varient selon l\'éditeur et la plateforme et continuent d\'évoluer en 2026 ; il faut donc vérifier celle qui s\'applique avant d\'envoyer. Amazon KDP exige de signaler quand le texte, les images ou les traductions sont générés par IA, et considère un contenu créé par un outil d\'IA comme généré par IA même après une retouche importante ; un texte écrit par soi-même que l\'IA a seulement aidé à relire ou à affiner est « assisté par IA » et n\'a pas à être déclaré (d\'après les règles d\'Amazon rapportées par Publishers Weekly en septembre 2023). Certaines revues rejettent d\'emblée tout travail impliquant l\'IA — les consignes de soumission de Clarkesworld indiquent que la revue n\'étudie pas les récits écrits, coécrits ou assistés par IA. Un texte de scène généré par un LLM local relève de définitions comme celle de « généré par IA » de KDP : le déclarer là où c\'est exigé. Il s\'agit d\'informations générales, et non d\'un conseil juridique.',
+          },
+          {
+            q: 'De quel matériel ai-je besoin pour des contextes d\'un million de tokens ?',
+            a: 'Qwen3.6 27B et Qwen3.6 35B-A3B annoncent un contexte natif de 262 144 tokens, extensible jusqu\'à environ 1 010 000 tokens avec la mise à l\'échelle YaRN (d\'après leurs fiches de modèle). Un long contexte demande de la mémoire pour le cache KV en plus des poids ; une exécution à un million de tokens exige donc bien plus de mémoire qu\'une configuration grand public typique ; PromptQuorum n\'a pas mesuré ce besoin. La technique du document de session de cet article est conçue précisément pour cet écart : obtenir une sortie longue et cohérente sans dépendre d\'une fenêtre d\'un million de tokens.',
           },
           {
             q: 'Dois-je respecter le RGPD en utilisant un LLM local pour écrire des romans ou des scénarios ?',
@@ -1493,9 +1538,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ja.webp',
     title: 'ローカルLLMで小説・脚本を執筆する：10万語以上のワークフロー完全ガイド',
@@ -1503,15 +1549,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルLLMを小説・脚本のワークフローに統合することで、シーン草稿・ビートシート・ダイアログパス・リビジョンをインターネット接続なし、クラウドロギングなし、利用制限なしで実行できます。本ガイドでは完全なワークフローを解説します：タスク別のおすすめモデル、長編作業のためのコンテキストウィンドウ管理、章の足場構築、シーン生成、そしてローカルLLMをライティングソフトウェアと連携させるツール。',
     metaDescription:
-      '小説執筆におすすめのローカルLLMモデルを用途別に比較（Llama 3.3 70B、Qwen3 32Bほか）。コンテキスト管理・章構造・シーン生成・ツール統合も解説。',
+      'ローカルLLMで小説・脚本を書く完全ワークフロー：モデルの出発点、コンテキスト管理、章構成、シーン生成、執筆ツールとの連携まで丁寧に解説します。',
     twitterDescription:
       'ローカルLLMで小説・脚本を書く方法：コンテキストウィンドウ管理、章構造、シーン生成、ダイアログパス、ツール統合。',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1532,22 +1578,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'シーン生成 ローカルモデル',
     ],
     leadAnswerBlock:
-      '**長編作業でローカルLLMを使うライターが直面する主な技術的課題はコンテキストウィンドウ管理です：ほとんどのローカルモデルは技術的に128Kのコンテキストウィンドウを持ちますが、実際には32Kトークン（約24,000語）を超えると注意品質が著しく低下します。解決策は構造化コンテキストインジェクション——「セッションドキュメント」技術：前の章の圧縮サマリー、現在のシーンのセットアップ、関連するキャラクターシートを維持し、各ライティングセッションの開始時にそれらの要素のみを注入します。シーンごとの生成（増大するドキュメントの継続を求めるのではなく、1セッションに1シーンプロンプト）と組み合わせることで、どの小説の長さでも一貫した長編出力が生まれます。脚本では特に、ビートシートファーストワークフロー——散文の前にシーンレベルのビートシートを生成する——が、構造から逸脱せず対応したフォーマットのスクリプトページを生み出します。**',
+      '**長編フィクションでローカルLLMを使う際の主な課題はコンテキスト管理です：1回の生成は約32Kトークンで計画し、原稿全体ではなく圧縮した「セッションドキュメント」（キャラクターシート、章サマリー、現在のシーン設定）を渡して、1シーンずつ生成します。**',
     quickAnswerTop: {
       ja: {
         question: 'コンテキストを失わずにローカルLLMで小説や脚本を執筆するには？',
         answer:
-          '核心技術は構造化コンテキストインジェクションです。原稿全体をコンテキストウィンドウに貼り付ける代わりに、圧縮されたセッションドキュメントを維持します：キャラクターシート（名前、支配的特性、話し言葉のレジスター）、完成した章のプロットサマリー（1章あたり100〜200語）、現在のシーンのセットアップ（ビート、POV、語数上限）。このセッションドキュメントを各ライティングセッションの開始時に注入します。32Kトークンを超えて増大するドキュメントの継続を求めず、1シーンずつ生成します。',
+          '核心技術は構造化コンテキストインジェクションです。原稿全体をコンテキストウィンドウに貼り付ける代わりに、圧縮されたセッションドキュメントを維持します：キャラクターシート（名前、支配的特性、話し言葉のレジスター）、完成した章のプロットサマリー（1章あたり100〜200語）、現在のシーンのセットアップ（ビート、POV、語数上限）。このセッションドキュメントを各ライティングセッションの開始時に注入します。増大するドキュメントの継続を求めず、1シーンずつ生成します。各呼び出しには圧縮した状態だけが載るため、どの小説の長さにも対応でき、原稿全体を1つの長いコンテキストウィンドウに詰め込もうとしたときにライターが報告するコンテキストドリフトや声の喪失を減らせます。',
         bullets: [
           'セッションドキュメント技術：キャラクターシート＋章サマリー＋現在のシーンセットアップをセッション開始時に注入。',
-          '1セッションに1シーン生成——32Kトークンを超えて増大するドキュメントの継続を求めない。',
+          '1セッションに1シーン生成——増大するドキュメントを約32Kトークンを超えて「継続」させるのは避ける。',
           '脚本はビートシートファースト：散文の前にビートシートを生成し、構造的な足場として使う。',
-          '長編作業に最適なモデル：Llama 3.3 70B（強いコンテキスト遵守性、最良の命令追随）。',
-          'Ollama＋ObsidianまたはScrivenerが最も一般的なライタービルワークフロー。',
-          'コンテキストウィンドウの現実：128Kは技術的上限；32Kトークンが実用的な品質上限。',
-          'アンセンサードモデル（Hermes 3）はセットアップ変更なしでこのワークフローに組み込める。',
+          'モデルの出発点（モデルカードの仕様）：Qwen3.6 27B、Gemma 4 31B、Llama 3.3 70B。PromptQuorumは小説向けに評価していません。',
+          'Ollama＋Obsidianは一般的なライターのワークフロー。ScrivenerにはドキュメントされたプラグインAPIがないため、出力は貼り付けます。',
+          'コンテキストウィンドウの計画目安：モデルは128K〜262,144トークンを掲げますが、長いコンテキストでは品質が不均一なため、1回の生成は約32Kで計画します。',
+          'Hermes 4 70Bのような拒否の少ないファインチューンも同じワークフローで成熟したフィクションに使えます。モデルごとのライセンスを確認してください。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -1570,26 +1616,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**コンテキストウィンドウの現実：紙上では128Kトークン、実際は32Kトークン。** ほとんどのローカルモデルの注意品質は32Kトークン（〜24,000語）を超えると著しく低下します。原稿全体をコンテキストウィンドウに貼り付けず、セッションドキュメント技術を使ってください。',
+          '**コンテキストウィンドウの計画目安：掲げられているのは128K〜262,144トークン、計画は約32K。** モデルは長い入力の中間を使う信頼性が下がる（「Lost in the Middle」）ため、1回の生成は約32Kトークン（〜24,000語）で計画し、原稿全体ではなくセッションドキュメント技術を使ってください。',
           '**セッションドキュメント技術がコアスキル。** 圧縮テキストファイルを維持します：アクティブなキャラクターシート（各キャラクター150語）、章サマリー（完成した章ごとに100〜200語）、現在のシーンのセットアップ。各生成セッションの開始時に注入します。',
-          '**1セッションに1シーン生成。** 増大するドキュメントの継続を求めるのではなく、1シーン（200〜600語）を生成します。1セッション1シーンはコンテキストドリフトを排除し、一貫した声を生み出します。',
+          '**1セッションに1シーン生成。** 増大するドキュメントの継続を求めるのではなく、1セッションにつき1シーン（200〜600語）を生成します。1セッション1シーンはコンテキストドリフトを減らし、一貫した声を保つ助けになります。',
           '**脚本はビートシートファースト。** スクリプトページを生成する前に、シーンレベルのビートシートを生成します。ビートシートを各ページ生成の足場として使います。',
-          '**Llama 3.3 70Bが長編作業に最適なモデル。** 強いコンテキスト遵守性、長い生成での最良の命令追随、長いセッションにわたる信頼できるキャラクター声の一貫性。',
-          '**Ollama＋プレーンテキストライティングツールが最も信頼できる統合。** Scrivener、Obsidian、VS CodeはすべてAPIを通じてOllamaと連携できます。',
-          '**アンセンサードモデル（Hermes 3）はセットアップ変更なしに組み込める。** 成熟したフィクション向けに、OllamaモデルをHermes 3に切り替えるだけ；セッションドキュメントと生成技術は同一。',
+          '**実行できるモデルを選び、自分のシーンで試してください。** 27B〜31Bクラスの密モデル（Qwen3.6 27B、Gemma 4 31B）とLlama 3.3 70Bが一般的な出発点です。PromptQuorumはどれも小説向けに評価しておらず、公開されている創作ライティングのリーダーボードもモデルの順位付けが一致しません。',
+          '**Ollama＋プレーンテキストライティングツールは信頼できる統合です。** Scrivener、Obsidian、VS Codeは原稿を保持でき、OllamaはAPIを通じてモデルを提供し、コンパニオンアプリやスクリプトから呼び出せます。',
+          '**拒否の少ないモデル（Hermes 4 70B）はセットアップ変更なしに組み込めます。** 成熟したフィクション向けには、Ollamaのモデルを切り替えるだけ；セッションドキュメントと生成技術は同一です。用途に合うか、モデルごとのライセンスを確認してください。',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**長編フィクションに最適なモデル：** Llama 3.3 70B（最強のコンテキスト遵守性と命令追随）。',
-          '**コンテキストウィンドウの実用的上限：** 信頼できる注意品質のために〜32Kトークン（〜24,000語）；128Kは技術的上限。',
+          '**モデルの出発点（モデルカードより）：** Qwen3.6 27B（密、Apache-2.0、コンテキスト262,144トークン）、Gemma 4 31B（密、Apache-2.0、コンテキスト256K）、Llama 3.3 70B（密、コンテキスト128K、Llama 3.3 Community License）。',
+          '**コンテキストウィンドウの計画上限：** 1回の生成あたり〜32Kトークン（〜24,000語）；モデルは128K〜262,144トークンを掲げますが、これは上限であり品質の保証ではありません。',
           '**セッションドキュメントのサイズ：** 4,000トークン未満を目標（キャラクターシート＋章サマリー＋現在のシーンセットアップ）。',
           '**シーン生成の目標：** 1生成呼び出しあたり200〜600語；複数の連続プロンプトで長いシーンを生成。',
           '**脚本フォーマット：** Fountain形式の出力命令とOllamaを組み合わせてスクリプトフォーマットのテキストを生成。',
-          '**Ollamaと連携するライティングツール：** Scrivener（APIスクリプト経由）、Obsidian（プラグインまたはスクリプト経由）、VS Code（Continue.dev経由）、ターミナル。',
-          '**アンセンサードオプション：** 成熟したフィクション向けHermes 3 Llama 3.1；同じワークフロー、同じセッションドキュメント技術。',
+          '**Ollamaと連携するライティングツール：** Scrivener（出力を貼り付け；文書化されたプラグインAPIなし）、Obsidian（プラグインまたはスクリプト経由）、VS Code（Continue.dev経由）、ターミナル。',
+          '**拒否の少ないオプション：** 成熟したフィクション向けHermes 4 70B（Llama-3.1-70Bベース）；同じワークフロー、同じセッションドキュメント技術。',
         ],
       },
       contextWindow: {
@@ -1597,29 +1643,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '長編執筆のコンテキストウィンドウ問題',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          'ローカルLLMのコンテキストウィンドウの信頼性:実用的な注意力の上限は32Kトークン(約24,000語)で、Llama 3.3 70B、Qwen3 32B、Mistral Largeの技術的上限128Kと対照的。Kimi-K2.6の100万トークンウィンドウはQ4量子化で約480GBのVRAMが必要。',
+          'コンテキスト計画：作業上限は32Kトークン（約24,000語）。オープンモデルは128K〜262,144トークンを掲げる。',
         content:
-          '**ほとんどのローカルモデルの実用的なコンテキスト上限は32,000トークン——広告されている128Kではありません。** 注意品質はほとんどのモデルで32,000トークンを超えると低下します。128Kトークンでは、多くのモデルがコンテキストウィンドウの最初の4分の1のコンテンツへの正確な参照を失います。小説では、原稿をそのまま貼り付けて次の章を求めることはできません。\n\nMoonshot AIのKimi-K2.6は真の100万トークンのコンテキストウィンドウを提供します。Kimi-K2.6をローカルで実行することはほとんどのライターにとって非現実的です——Q4量子化で約480GBのVRAMが必要です。ローカルで実行可能なモデル（Llama 3.3 70B、Qwen3 32B、Mistral Large）を使うライターには、32Kの実用的上限が制約です。',
+          '**モデルがはるかに大きなウィンドウを掲げていても、1回の生成あたり約32Kトークンで計画してください。** これはPromptQuorumの慎重な計画ルールであり、測定された上限ではありません：長いコンテキストの研究（Liu et al.「Lost in the Middle」）では、モデルは長い入力の先頭と末尾の情報を中間の情報より確実に使い、入力が長くなるほど品質が下がり得ることが報告されています。新しいモデルはさらに大きなウィンドウを掲げており——Qwen3.6 27Bはネイティブで262,144トークン、Gemma 4 31Bは256K——ご自身のモデルで試す必要があります。小説では、ここまでの原稿をそのまま貼り付けて次の章を求める方法が依然として最も信頼できず、長いコンテキストはKVキャッシュが増えるためメモリも多く消費します。\n\nMoonshot AIのKimi-K2.6は256Kトークン（262,144）のコンテキストウィンドウを掲げており、上記のモデルと同じクラスですが、総パラメータ約1兆（アクティブ320億）のMixture-of-Expertsモデルで、ネイティブint4の重みで提供されています。4ビットでも重みだけで約500GBになり（PromptQuorumの推定：1兆パラメータ×0.5バイト）、ノートPC向けではなくサーバークラスのモデルです。セッションドキュメント技術とシーンごとの生成は、コンテキストサイズを問わずローカルで実行可能なモデルに適用できます。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ほとんどのローカルLLMにおけるコンテキスト遵守の実用的な品質上限は約32,000トークン（〜24,000語）で、これを超えるとモデルは以前のコンテンツへの正確な参照を失い、長い原稿にわたって蓄積する声のドリフトやプロットの不一致を引き起こします。',
+            text: 'ローカルLLMにおけるコンテキスト遵守の慎重な計画上限は、1回の生成あたり約32,000トークン（〜24,000語）です——これを超えると、長いコンテキストの研究では以前の内容の利用が不安定になると報告されており、長い原稿にわたって声のドリフトやプロットの不一致として現れることがあります。',
           },
           {
             type: 'plain-terms',
-            text: '90,000語の小説を128Kのコンテキストウィンドウに収めて、第20章を書きながら第3章で何が起きたかをモデルが覚えていることを期待することはできません。代わりに：モデルが知る必要があることを——キャラクターシート、章サマリー、現在のシーンセットアップを——4,000トークン未満の「セッションドキュメント」に圧縮し、各ライティングセッションの開始時にそれを注入します。',
+            text: '原稿全体がコンテキストウィンドウに収まるからといって、第20章を書きながら第3章で何が起きたかをモデルが確実に覚えているとは期待できません。代わりに：モデルが知る必要があることを——キャラクターシート、章サマリー、現在のシーンセットアップを——4,000トークン未満の「セッションドキュメント」に圧縮し、各ライティングセッションの開始時にそれを注入します。モデルは、今生成しているシーンに関係することだけを知っていれば十分です。',
           },
         ],
         items: [
-          '**トークン対語数変換：** 英語で1トークン≈0.75語。32Kトークン≈24,000語。128Kトークン≈96,000語（小説1冊分）。',
-          '**注意の劣化：** モデルは長いコンテキストウィンドウの早い部分のコンテンツへの信頼できる参照を失います——キャラクター名の誤り、忘れられたプロットポイント、声のドリフト。',
-          '**非対称性：** モデルはコンテキストウィンドウの最初（システムプロンプト）と最後を最も良く注意します。長いコンテキストの中間は最も信頼性が低い。',
+          '**トークン対語数変換：** 英語で1トークン≈0.75語（目安）。32Kトークン≈24,000語。128Kトークン≈96,000語（小説1冊分ほど）；262,144トークン≈196,000語。',
+          '**注意の劣化：** モデルは長いコンテキストウィンドウの早い部分のコンテンツへの信頼できる参照を失うことがあります——キャラクター名の誤り、忘れられたプロットポイント、声のドリフト。',
+          '**非対称性：** Lost in the Middleの研究では、モデルは入力の先頭と末尾を最もよく使い、中間の内容を最も不確実にしか使いませんでした。この研究は2023年に利用できたモデルを対象にしているため、同じ傾向を前提とせず現行モデルで試してください。',
           '**解決策としてのセッションドキュメント：** モデルが必要とするすべてのものを短い構造化ドキュメントに圧縮します。開始時に注入。シーンを生成。セッションを終了。リセット。更新されたドキュメントで新鮮に始めます。',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '原稿全体をコンテキストに貼り付けないでください。10,000語を超える原稿を貼り付けると、コンテキストドリフトが起きます——モデルは初期のキャラクター詳細を忘れ、確立されたプロットポイントと矛盾し、一般的なレジスターに戻ります。代わりにセッションドキュメント技術を使ってください。',
+            text: '原稿全体をコンテキストに貼り付けないでください。10,000語を超える原稿を貼り付けると、コンテキストドリフトのリスクがあります——モデルは初期のキャラクター詳細を忘れ、確立されたプロットポイントと矛盾し、一般的なレジスターに戻ることがあります。代わりにセッションドキュメント技術を使ってください。',
           },
         ],
       },
@@ -1627,7 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'セッションドキュメント技術',
         content:
-          'このセクションのセッションドキュメント技術は、複数の長編プロジェクト（90,000語の文学小説1作、脚本草稿2作）での執筆作業でテストされました。4,000トークンのサイズ、シーンごとの生成リズム、連続性チェックのタイミングはすべて、その執筆作業中に観察された失敗パターンから来ています。\n\n**セッションドキュメントは原稿の隣に保管するプレーンテキストファイルです——モデルが一貫したコンテンツを生成するために知る必要がある、小説の圧縮された状態。** 3つのセクションがあります：アクティブなキャラクターシート、章サマリー、現在のシーンセットアップ。',
+          'セッションドキュメント技術は、上で説明したコンテキストの制約に基づくPromptQuorumのワークフロー推奨です。PromptQuorumは管理された試験を行っておらず、以下のサイズ（4,000トークン、キャラクターシート1件あたり150語、章サマリー1件あたり100〜150語）は計画上の目安であり、測定された閾値ではありません。\n\n**セッションドキュメントは原稿の隣に保管するプレーンテキストファイルです——モデルが一貫したコンテンツを生成するために知る必要がある、小説の圧縮された状態。** 3つのセクションがあります：アクティブなキャラクターシート、章サマリー、現在のシーンセットアップ。',
         promptExamples: [
           {
             label: 'セッションドキュメントテンプレート',
@@ -1653,7 +1699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '小説執筆ワークフロー',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          'ローカルLLMによる4段階の小説執筆ワークフロー:アウトライン(10〜30章)、ビートシート(章あたり3〜8シーン)、シーン生成(セッションあたり200〜600語)、修正パス。4,000トークン未満のセッションドキュメントを中心に構成。',
+          '小説執筆の4フェーズ：アウトライン、ビートシート、シーン生成、リビジョン。',
         content:
           '**ローカルLLMを使った小説執筆ワークフローには4つのフェーズがあります：アウトライン、章ビートシート、シーン生成、リビジョンパス。** 各フェーズは異なるプロンプト構造を使います。',
         items: [
@@ -1686,10 +1732,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**フォーマットはユーザーターンではなくシステムプロンプトで。** フォーマット命令をシステムメッセージに置くと、セッション中のすべての生成が命令を繰り返さずにフォーマットに従います。',
-          '**Fountain互換出力：** FountainはFinal Draft、Highland、WriterDuet、その他多くのツールがサポートするスクリプト用プレーンテキストマークアップフォーマット。「Fountain-compatible plain text」の生成を求めると、脚本ソフトウェアに直接インポートできる出力が得られます。',
+          '**Fountain互換出力：** Fountainは脚本用のプレーンテキストマークアップフォーマットで、Highland、Fade In、および[Fountainアプリ一覧](https://fountain.io/apps)の他のアプリが読み込めます。「Fountain-compatible plain text」の生成を求めると、それらのツールで開ける、または他のツール向けに変換できる出力が得られます（FAQのFinal Draftの質問を参照）。',
           '**スラグラインを先に：** シーンコンテンツを生成する前に、スラグライン（INT./EXT. 場所——昼/夜）を別の1行プロンプトとして生成します。',
           '**ダイアログパス：** アクションラインを生成した後、別のダイアログパスを実行：「アクションラインは設定されました。このシーンで[キャラクターA]と[キャラクターB]のダイアログを書いてください。ダイアログタグなし。5〜8回の交換。」',
-          '**ページ数管理：** 標準的な脚本ページはアクションとダイアログ合わせて約55〜60語。語数上限キャリブレーション：1ページ≈60語、2ページ≈120語、3ページ≈180語。',
+          '**ページ数管理：** 1ページあたりの語数に決まった数値はなく、「1ページ＝1分」はあくまで目安です。ご自身の脚本の1ページあたり平均語数を数え、そこから語数上限を設定してください。',
         ],
         callouts: [
           {
@@ -1706,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '長編フィクションで最も信頼できる生成パターン：システムプロンプトにセッションドキュメント→ユーザーターンに単一のシーンプロンプト→確認→セッションドキュメントを更新→繰り返し、1セッション1シーン。',
+            text: '長編フィクションで信頼できる生成パターンの一つ：システムプロンプトにセッションドキュメント→ユーザーターンに単一のシーンプロンプト→確認→セッションドキュメントを更新→繰り返し、1セッション1シーン。',
           },
           {
             type: 'plain-terms',
@@ -1744,8 +1790,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'SillyTavern', 'リンク': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', '連携方法': 'OpenAI互換API→Ollama', '用途': 'ロールプレイ形式のフィクションとキャラクターカード駆動の執筆；永続的なキャラクター記憶' },
           { 'ツール': 'プレーンターミナル', '連携方法': '`ollama run [model]`またはOllama APIへのcurl', '用途': 'スクリプタブルなワークフロー；最小限のUIオーバーヘッドで最大限のコントロール' },
           { 'ツール': 'LM Studio', 'リンク': '[lmstudio.ai](https://lmstudio.ai)', '連携方法': '組み込みチャットUI＋ローカルサーバーAPI', '用途': 'Ollamaを別にインストールせずGUIモデルマネージャーを望むライター' },
-          { 'ツール': 'NovelCrafter', 'リンク': '[novelcrafter.com](https://www.novelcrafter.com)', '連携方法': '組み込みAI統合；OpenAI互換エンドポイントをサポート（Ollamaに向ける）', '用途': '小説専用アプリで章レベルのAI支援を望むライター' },
-          { 'ツール': 'Plottr', 'リンク': '[plottr.com](https://plottr.com)', '連携方法': '手動ワークフロー：PlottrでStory構造化、シーン/ビートを外部でOllamaに貼り付け', '用途': '構造的プロッティングがワークフローの中心であるプロット重視のジャンルフィクション' },
+          { 'ツール': 'NovelCrafter', 'リンク': '[novelcrafter.com](https://www.novelcrafter.com)', '連携方法': '組み込みAI統合；ヘルプページにLM Studio、Ollama、OpenAI API互換の接続が記載されている', '用途': '小説専用アプリで章レベルのAI支援を望むライター' },
+          { 'ツール': 'Plottr', 'リンク': '[plottr.com](https://plottr.com)', '連携方法': '手動ワークフロー：Plottrで物語を構造化し、シーン/ビートを外部でOllamaに貼り付け（PlottrはAI機能を追加しない方針と表明）', '用途': '構造的プロッティングがワークフローの中心であるプロット重視のジャンルフィクション' },
         ],
         callouts: [
           {
@@ -1759,22 +1805,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '長編作業のモデル推薦',
         content:
-          '**長編執筆には短編フィクションとは異なるモデル要件があります。** コンテキスト遵守性、長いセッションにわたる命令追随の一貫性、複数の生成呼び出しにわたって声を維持する能力が意思決定に関連する要素です。すべてのユースケースにわたるモデル景観については、[ローカルLLMベスト2026](/ja/local-llms/best-local-llms-2026)を参照。',
+          '**長編執筆には短編フィクションとは異なるモデル要件があります。** コンテキスト遵守性、長いセッションにわたる命令追随の一貫性、複数の生成呼び出しにわたって声を維持する能力が意思決定に関連する要素です。以下の行は各モデルカードに基づく出発点であり、PromptQuorumはこれらのモデルを小説向けに評価していません。公開されている創作ライティングのリーダーボードもモデルの順位付けが一致しないため、自分のシーンで2つの候補を試してください。Command A+（総パラメータ2,180億、アクティブ250億、Apache 2.0）やMistral Large 3（総パラメータ6,750億、コンテキスト256K、Apache 2.0）のようなサーバークラスのオープンモデルは、一般消費者向けハードウェアの範囲外です。すべてのユースケースにわたるモデル景観については、[ローカルLLMベスト2026](/ja/local-llms/best-local-llms-2026)を参照。',
         columns: ['タスク', 'おすすめモデル', '理由'],
         rows: [
-          { 'タスク': '小説執筆（主要）', 'おすすめモデル': 'Llama 3.3 70B', '理由': 'マルチセッション長編作業での最良のコンテキスト遵守性と命令追随；最も一貫した声' },
-          { 'タスク': '脚本作業', 'おすすめモデル': 'Llama 3.3 70BまたはMistral Large', '理由': '複雑なキャラクターダイナミクスにはLlama 3.3；Fountain出力での一貫したフォーマット遵守にはMistral Large' },
-          { 'タスク': 'ビートシート/アウトライン生成', 'おすすめモデル': 'Qwen3 32B', '理由': '強い構造的生成；番号付きリストと制約の多いアウトラインプロンプトに確実に従う' },
-          { 'タスク': 'ダイアログパス', 'おすすめモデル': 'Command A+', '理由': '長い交換にわたる最良の自然な話し言葉レジスターとキャラクター声の差別化' },
-          { 'タスク': 'リビジョン（構造的）', 'おすすめモデル': 'Llama 3.3 70B', '理由': '書き直し命令で具体的な名前付き構造的制約に従うのが最良' },
-          { 'タスク': '成熟した/暗いフィクション', 'おすすめモデル': 'Hermes 3 Llama 3.1 70B', '理由': 'Llama 3.3 70Bと同じベース；アンセンサードファインチューン；長編作業での同一のコンテキスト遵守性' },
+          { 'タスク': '小説執筆（主要）', 'おすすめモデル': 'Qwen3.6 27BまたはGemma 4 31B', '理由': '256K以上のコンテキストを掲げるApacheライセンスの27B〜31B密モデル；4ビットで24GB GPUまたは32GB以上のユニファイドメモリに収まるサイズクラス（推定）' },
+          { 'タスク': '脚本作業', 'おすすめモデル': 'Qwen3.6 27BまたはLlama 3.3 70B', '理由': 'フォーマット遵守は主にシステムプロンプト次第；Fountainの1シーンを2つのモデルで試す。Llama 3.3 70Bは密モデルでコンテキスト128K、4ビットで約40GB必要（推定）' },
+          { 'タスク': 'ビートシート/アウトライン生成', 'おすすめモデル': 'Qwen3.6 35B-A3B', '理由': 'トークンあたり350億パラメータ中30億がアクティブなMixture-of-Experts（Apache-2.0）のため、トークンあたりの生成が速い；アウトライン品質はPromptQuorumが未評価' },
+          { 'タスク': 'ダイアログパス', 'おすすめモデル': 'サンプルが合うモデル', '理由': 'キャラクターのレジスターに合うキャリブレーション行を出したモデルで、ダイアログを別パスとして実行；ダイアログ向けモデルの検証済みランキングはない' },
+          { 'タスク': 'リビジョン（構造的）', 'おすすめモデル': '初稿に使ったモデル', '理由': '1回の呼び出しにつき構造的制約を1つ指定するリビジョンプロンプトは、命令追随するどのモデルでも機能；1回の呼び出しにつき1シーン' },
+          { 'タスク': '成熟した/暗いフィクション', 'おすすめモデル': 'Hermes 4 70B', '理由': 'Llama-3.1-70Bベース；Nous Researchはおおむね中立的なアラインメントと低い拒否率と説明；Llama 3ライセンス；ハイブリッド推論モード' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'よくある間違い',
         items: [
-          '**原稿全体をコンテキストに貼り付ける。** 128Kのコンテキストウィンドウでも、注意品質は32Kトークンを超えると著しく低下します。セッションドキュメント技術を使ってください。',
+          '**原稿全体をコンテキストに貼り付ける。** モデルが128K〜262Kのウィンドウを掲げていても、長い入力は使われる信頼性が下がるため、約32Kトークンで計画します。セッションドキュメント技術——圧縮したキャラクターシートと章サマリー——を使ってください。',
           '**モデルにオープンエンドのドキュメントを「継続」させる。** 「小説を続けて」はドリフトを生みます。「次のシーンを書いて：[特定のセットアップ、POV、語数上限]」は一貫した境界付き出力を生みます。',
           '**脚本にビートシートがない。** シーンビートなしでスクリプトページを生成すると、長さと構造的機能が逸脱したページになります。ビートシートを常に最初に生成してください。',
           '**セッションドキュメントの更新を無視する。** セッションドキュメントを更新しないと、数セッション以内に不整合が生じます。',
@@ -1785,10 +1831,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'ソース',
         items: [
-          'Llama 3.3 70B 長コンテキストベンチマーク — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B テクニカルレポート（コンテキストウィンドウベンチマーク含む） — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'Fountain脚本フォーマット仕様 — [Fountain.io](https://fountain.io)',
+          '[Qwen3.6-27Bモデルカード](https://huggingface.co/Qwen/Qwen3.6-27B)および[Qwen3.6-35B-A3Bモデルカード](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — パラメータ、ネイティブ262,144トークンのコンテキスト、YaRN拡張、Apache-2.0、2026年10月26日確認',
+          '[Gemma 4 31Bモデルカード](https://huggingface.co/google/gemma-4-31B-it) — 密31B、256Kコンテキスト、Apache 2.0、2026年10月26日確認',
+          '[Llama 3.3 70B Instructモデルカード](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B、128Kコンテキスト、Llama 3.3 Community License、2024年12月6日公開',
+          '[Hermes 4 70Bモデルカード](https://huggingface.co/NousResearch/Hermes-4-70B) — Llama-3.1-70Bベース、ハイブリッド推論、「broadly neutral alignment」',
+          '[Kimi-K2.6モデルカード](https://huggingface.co/moonshotai/Kimi-K2.6) — 総パラメータ1兆・アクティブ320億、256Kコンテキスト、ネイティブint4',
+          '[Command A+ドキュメント](https://docs.cohere.com/docs/command-a-plus)および[Mistral Large 3モデルカード](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — サーバークラスモデルのパラメータ数とライセンス',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023',
+          '[Fountain.io](https://fountain.io) — Fountain脚本フォーマット仕様と[アプリ一覧](https://fountain.io/apps)',
+          '[Final Draftヘルプセンター](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — Final Draftが.fountainファイルを直接インポートできないと記載',
+          '[Amazon KDPのAIコンテンツ規則（Publishers Weekly）](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html)および[Clarkesworld投稿案内](https://clarkesworldmagazine.com/submissions/) — 出版社・プラットフォームのAI方針；投稿前に最新の文言を確認',
+          '[Scrivenerリリースノート](https://www.literatureandlatte.com/scrivener/release-notes) — 3.4.0〜3.5.2（2025年12月）：プラグインやAPIの記載なし；「Scrivener itself contains no AI」；2026年10月26日確認',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/)および[NovelCrafterのAI接続ヘルプ](https://www.novelcrafter.com/help/categories/ai-connections) — PlottrはAI機能を開発していないと表明；NovelCrafterはLM Studio、Ollama、OpenAI API互換の接続を記載',
           'Ollama APIドキュメント — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -1797,16 +1851,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           {
-            q: '小説執筆に最もおすすめのローカルLLMモデルは？',
-            a: '用途によって最適なモデルは異なります。長編小説の執筆（メインの生成タスク）にはLlama 3.3 70Bが最良の選択です——マルチセッションにわたるコンテキスト遵守性と命令追随が最も一貫しています。ビートシートやアウトラインの生成にはQwen3 32Bが構造的な制約に確実に従います。ダイアログパスにはCommand A+が自然な話し言葉レジスターとキャラクターごとの声の差別化に優れます。脚本のFountain形式出力にはMistral Largeが一貫したフォーマット遵守を示します。成熟した/暗いフィクションには、Llama 3.3 70Bと同じベースでアンセンサードファインチューンのHermes 3 Llama 3.1 70Bが、同一のワークフローとコンテキスト遵守性のまま使えます。迷ったらLlama 3.3 70Bから始め、特定のタスク（アウトラインやダイアログ）で物足りなさを感じたら該当タスク用のモデルに切り替えるのが実用的です。',
+            q: '小説執筆でまず試すローカルLLMモデルは？',
+            a: '用途によって最適なモデルは異なり、PromptQuorumはこれらのモデルを小説向けに評価していません。出発点としては、27B〜31Bクラスの密モデル（Qwen3.6 27BまたはGemma 4 31B。どちらもモデルカードで256K以上のコンテキストとApacheライセンスが確認できます）か、実績のある70BクラスのLlama 3.3 70Bが現実的です。ビートシートやアウトラインにはアクティブパラメータが少なく生成が速いQwen3.6 35B-A3Bも選択肢です。ダイアログパスやFountain形式の出力は、ご自身のシーンで2つのモデルを比べて、キャラクターのレジスターやフォーマットに合う方を選んでください。成熟した/暗いフィクションには、拒否の少ないHermes 4 70B（Llama-3.1-70Bベース、Llama 3ライセンス）が同じワークフローで使えます。迷ったら1つの密モデルから始め、特定のタスクで物足りなさを感じたら別のモデルを試すのが実用的です。',
           },
           {
             q: 'ローカルLLMは完全な小説を書けますか？',
-            a: 'ローカルLLMは完全な小説の散文を生成できます——しかし構造的・編集的な知性はライターから来なければなりません。モデルは特定のセットアップでプロンプトされたときにシーンを生成します；自律的に計画、評価、テーマ的な決定を行いません。ローカルLLMを執筆ツールとして使うライターは「すでに書き方を知っているシーンのための非常に高速な初稿生成器」と説明します。',
+            a: 'ローカルLLMは完全な小説の散文を生成できますが、構成と編集の知性は書き手から来る必要があります。モデルは具体的なセットアップを与えられるとシーンを生成しますが、自分で計画したり、評価したり、テーマ上の判断をしたりはしません。すでに書き方が分かっているシーンのための高速な初稿ジェネレーターと考えるのが適切です：白紙の状態からの時間を節約してくれますが、重要な判断はすべて書き手が行います。投稿前に出版社やプラットフォームのAI方針を確認してください（下の出版社の質問を参照）。',
           },
           {
             q: '信頼できる最大のコンテキストウィンドウはどれくらいですか？',
-            a: '実際には、Llama 3.3 70BやQwen3 32Bを含むほとんどのローカルモデルで約32,000トークン（〜24,000語）まで信頼できる注意品質を期待できます。これを超えると、モデルはコンテキストの早い部分のコンテンツへの正確な参照を失い始めます。セッションドキュメント技術は作業コンテキストを4,000〜6,000トークン未満に保ちます。',
+            a: 'モデルは128Kから262,144トークンを掲げていますが、PromptQuorumは1回の生成あたり約32,000トークン（〜24,000語）で計画することを勧めます。長いコンテキストの研究では、モデルは長い入力の中間を使う信頼性が下がると報告されているためです。これは慎重な計画ルールであり、すべてのモデルについて測定された上限ではないため、ご自身のモデルで試してください。セッションドキュメント技術は作業コンテキストを4,000〜6,000トークン未満に保つので、どの生成呼び出しもその範囲内に十分収まります。',
           },
           {
             q: '小説の途中でモデルがキャラクターの声を変えるのを防ぐには？',
@@ -1814,11 +1868,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ScrivenerをローカルLLMで使えますか？',
-            a: 'ネイティブには使えません——Scrivenerには外部API呼び出しのプラグインシステムがありません。最も一般的なワークフロー：Ollamaで生成（ターミナルまたはコンパニオンスクリプト経由）、出力をコピー、関連するScrivenerドキュメントに貼り付けます。',
+            a: 'ネイティブには使えません——Scrivener 3にはドキュメント化されたプラグインシステムがなく、3.5.2（2025年12月）までの公式リリースノートにもAI統合の記載はありません：3.4.0のノートには「Scrivener itself contains no AI」とあり、macOSのシステム機能であるAppleのWriting Toolsへの対応が追加されています。一般的なワークフロー：Ollamaで生成（ターミナルまたはコンパニオンスクリプト経由）、出力をコピー、関連するScrivenerドキュメントに貼り付けます。ObsidianをAI執筆レイヤーとして使い、完成した章を最終構成のためにScrivenerにインポートするライターもいます。OllamaのAPIを呼び出して出力をクリップボードにコピーするスクリプトが、ネイティブ統合に最も近い方法です。',
           },
           {
             q: '脚本にはOllamaとクラウドAIどちらが良いですか？',
-            a: '成熟したコンテンツ（暴力、暗い心理、道徳的に複雑なキャラクター）を生成する必要がある脚本家には、Llama 3.3 70BまたはHermes 3を使ったローカルOllamaの方が信頼できます——クラウドモデルはドラマチックなスクリプトに頻繁に現れる特定のコンテンツを拒否します。フォーマットの一貫性については、システムプロンプトにフォーマット命令があれば両方が同等のパフォーマンスを発揮します。',
+            a: '成熟したコンテンツ（暴力、暗い心理、道徳的に複雑なキャラクター）を生成する必要がある脚本家にとって、ローカルモデルはモデルとその拒否の挙動を自分で制御できる点が利点です——ホスト型モデルの中にはドラマチックな脚本に現れる内容を拒否したり和らげたりするものがあり、ホスト型の方針は時間とともに変わります。Hermes 4 70Bのような拒否の少ないローカルモデルは組み込みの拒否が少ないものの、生成・公開する内容の責任は自分にあります。フォーマットの一貫性は主にシステムプロンプトの指示で決まり、どちらでも機能します。選択は主にコンテンツの制御、プライバシー、コストの問題です。PromptQuorumは脚本向けにホスト型とローカルモデルの出力品質を比較していません。',
           },
           {
             q: '特定のキャラクターのように聞こえるダイアログを生成するには？',
@@ -1826,19 +1880,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '小説執筆のためにローカルLLMにGPUが必要ですか？',
-            a: 'GPUは生成速度を大幅に加速しますが必須ではありません。Apple Silicon（M3以降）では、ユニファイドメモリアーキテクチャのおかげでMacBook Pro 16GBでもQwen3 14Bを快適に実行できます。24GB VRAMの専用NVIDIA GPU（RTX 4090、RTX 3090）は使用可能な生成速度で70Bモデルを実行できます。',
+            a: 'GPUは生成速度を大幅に高めますが必須ではありません。Apple Siliconでは、ユニファイドメモリのおかげで16GBのMacBook Proでも小さめのモデル（4ビットでおおむね8B〜14Bクラス、推定）を実行できます——24GB GPUの機材より遅いものの、生成の合間に出力を読んで評価する執筆ワークフローなら許容範囲です。24GBのNVIDIA GPU（RTX 4090、RTX 3090）は4ビットで27B〜32Bクラスのモデルを収められます（推定）。70Bクラスは4ビットで約40GB以上が必要なため、GPU2枚、48GBカード、64GBのユニファイドメモリ、または速度の落ちるCPUオフロードが必要です。',
           },
           {
             q: 'Final Draftや他のプロの脚本ソフトウェアでローカルLLMを使えますか？',
-            a: '直接は使えません。Final Draftには外部API統合がありません。ワークフロー：OllamaでFountainプレーンテキスト形式でスクリプトページを生成し、組み込みインポーター（ファイル→インポート→Fountain）でFinal Draftにインポートします。Highland、WriterDuet、Fade InはすべてFountainインポートをネイティブにサポートしています。',
+            a: '直接は使えません。Final Draftのヘルプセンターによれば、Final Draftは.fountainファイルをインポートできません。推奨されているのは、テキストをプレーンな.txtとして保存し、インポート時にScript（Textではなく）を選ぶか、FDXを書き出せるアプリ経由でFDXとして取り込む方法です。HighlandはFountain、FDX、PDFの間で変換でき、Fade InはFountainのインポートとエクスポートに対応しています（Fountainアプリ一覧による）。ワークフロー：OllamaでFountain形式のテキストを生成し、HighlandまたはFade Inで開き、Final Draft用にFDXを書き出します。',
           },
           {
             q: '小説執筆にKimi-K2.6をローカルで使えますか？',
-            a: 'Kimi-K2.6は真の100万トークンのコンテキストウィンドウを持ちますが、ほとんどのライターにとってローカルで実行するのは非現実的です（Q4量子化で約480GB VRAM）。完全にローカルなワークフローでは、ローカルで実行可能なモデルのセッションドキュメント技術が1Mの上限なしで小説の長さの作業を処理できます。',
+            a: 'Kimi-K2.6は256Kトークンのコンテキストウィンドウを掲げており、Qwen3.6 27BやGemma 4 31Bと同じクラスですが、総パラメータ約1兆（アクティブ320億）のMixture-of-Expertsモデルで、ネイティブint4の重みを持ちます。重みだけで約500GBになり（PromptQuorumの推定）、マルチGPUサーバーか非常に大きなユニファイドメモリの機材が必要で、一般消費者向けハードウェアでは非現実的です。完全にローカルなワークフローでは、27B〜70Bの密モデルとセッションドキュメント技術で、1兆パラメータのモデルなしでも小説の長さの作業を処理できます。',
           },
           {
             q: '出版社はAI支援の原稿についてどう感じていますか？',
-            a: '混在しており進化中です。ほとんどの主要なフィクション出版社は提出された原稿における重大なAI使用の開示を要求しています；一部は完全に禁止しています。重大な人間によるリビジョンを伴う執筆ツールとしてローカルLLMを使うライターは通常AIをコーオーサーではなくツールとして説明し、ほとんどのポリシーはこれを受け入れます。提出前に特定の出版社のポリシーを確認してください。',
+            a: '方針は出版社やプラットフォームによって異なり、2026年時点でも変化し続けているため、投稿前に該当するものを確認してください。Amazon KDPは、テキスト・画像・翻訳がAI生成の場合に申告を求め、AIツールで作成したコンテンツは大幅に編集してもAI生成として扱います。自分で書いた文章をAIが編集や推敲を手伝っただけなら「AI支援」で、申告は不要です（2023年9月にPublishers Weeklyが報じたAmazonの規則による）。一部の雑誌はAIが関与した作品を一切受け付けません——ClarkesworldはAIが執筆・共同執筆・支援した作品は検討しないと投稿案内に記しています。ローカルLLMが生成したシーンのテキストはKDPの「AI生成」の定義のような基準に該当するため、求められる場面では申告してください。これは一般的な情報であり、法的助言ではありません。',
+          },
+          {
+            q: '100万トークン級のコンテキストにはどんなハードウェアが必要ですか？',
+            a: 'Qwen3.6 27BとQwen3.6 35B-A3Bはネイティブで262,144トークンのコンテキストを掲げており、モデルカードによればYaRNスケーリングで約1,010,000トークンまで拡張できます。長いコンテキストでは重みに加えてKVキャッシュ用のメモリが必要なため、100万トークンでの実行には一般的な消費者向け環境よりはるかに多くのメモリが必要です。PromptQuorumは必要量を測定していません。この記事のセッションドキュメント技術は、まさにこのギャップのために設計されています——100万トークンのウィンドウに頼らずに一貫した長編出力を得るためです。',
           },
           {
             q: 'ローカルLLMを使って小説や脚本を執筆する際に個人情報保護法は関係しますか？',
@@ -1867,9 +1925,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-zh.webp',
     title: '使用本地LLM创作小说与剧本：10万字以上工作流完整指南',
@@ -1877,15 +1936,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '将本地LLM整合到小说与剧本的写作工作流中，无需互联网连接、云端日志记录或使用限制，即可生成场景草稿、节拍表、对话轮次和修改润色。本指南涵盖完整工作流：模型选择、长篇写作的上下文窗口管理、章节结构搭建、场景生成，以及将本地LLM与写作软件相连接的工具。',
     metaDescription:
-      '本地LLM小说与剧本写作完整工作流：模型选择、上下文管理、章节结构、场景生成及工具集成详解。',
+      '使用本地LLM创作小说与剧本的完整工作流：模型起点、上下文管理、章节结构、场景生成及写作工具集成全面详解，并核对各模型卡上标注的上下文窗口信息。',
     twitterDescription:
       '本地LLM创作小说与剧本的方法：上下文窗口管理、章节结构、场景生成、对话轮次和工具集成。',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1906,22 +1965,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '场景生成 本地模型',
     ],
     leadAnswerBlock:
-      '**使用本地LLM进行长篇写作时，作者面临的主要技术挑战是上下文窗口管理：大多数本地模型技术上具有128K的上下文窗口，但实际上超过32K token（约24,000字）后注意力质量会显著下降。解决方案是结构化上下文注入——"会话文档"技术：维护对前几章的压缩摘要、当前场景的设置以及相关角色卡，并在每个写作会话开始时仅注入这些元素。结合逐场景生成（每个会话一个场景提示词，而非要求模型继续不断增长的文档），这种方法能在任何小说长度下产生一致的长篇输出。对于剧本写作，节拍表优先工作流——在写任何散文之前先生成场景级节拍表——能产生符合结构而非偏离结构的格式化剧本页面。**',
+      '**用本地LLM写长篇小说的主要挑战是上下文管理：每次生成按约32,000 token规划，并向模型提供压缩的"会话文档"（角色卡、章节摘要、当前场景设置）而非整部手稿，一次只写一个场景。**',
     quickAnswerTop: {
       zh: {
         question: '如何在不丢失上下文的情况下使用本地LLM创作小说或剧本？',
         answer:
-          '核心技术是结构化上下文注入：不是将整个手稿粘贴到上下文窗口中，而是维护一份压缩的会话文档——角色卡（名字、主导特质、说话风格）、已完成章节的情节摘要（每章100-200字）以及当前场景的设置（节拍、视角、字数上限）。在每个写作会话开始时注入这份文档。每次生成一个场景，绝不要求模型在超过32K token后继续增长的文档。',
+          '核心技术是结构化上下文注入：不是将整个手稿粘贴到上下文窗口中，而是维护一份压缩的会话文档——角色卡（名字、主导特质、说话风格）、已完成章节的情节摘要（每章100-200字）以及当前场景的设置（节拍、视角、字数上限）。在每个写作会话开始时注入这份文档。每次生成一个场景，而不是要求模型继续不断增长的文档。由于每次调用只携带压缩后的状态，这种方法可适用于任何小说长度，并减少作者把整部手稿塞进单个长上下文窗口时报告的上下文漂移和声音丢失。',
         bullets: [
           '会话文档技术：在会话开始时注入角色卡＋章节摘要＋当前场景设置。',
-          '每次生成一个场景——绝不超过32K token地持续增长文档。',
+          '每次生成一个场景——避免要求模型在超过约32K token后"继续"不断增长的文档。',
           '剧本写作节拍表优先：在写散文之前先生成节拍表，用作结构支架。',
-          '长篇写作最佳模型：Llama 3.3 70B（强大的上下文遵循性，最佳指令跟随）。',
-          'Ollama＋Obsidian或Scrivener是最常见的作者工作流。',
-          '上下文窗口现实：128K是技术上限；约32K token是实用质量上限。',
-          '无审查模型（Hermes 3）无需更改设置即可融入此工作流。',
+          '模型起点（来自模型卡的规格）：Qwen3.6 27B、Gemma 4 31B、Llama 3.3 70B；PromptQuorum未针对小说写作对它们做过评测。',
+          'Ollama＋Obsidian是常见的作者工作流；Scrivener没有公开文档的插件API，因此输出需要粘贴。',
+          '上下文窗口规划规则：模型标称128K–262,144 token；每次生成按约32K规划，因为长上下文的质量并不稳定。',
+          'Hermes 4 70B等低拒答微调模型可用同一工作流写成熟小说；请查看各模型的许可证。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -1944,26 +2003,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**上下文窗口现实：纸面上128K token，实际只有32K。** 大多数本地模型的注意力质量在超过32K token（约24,000字）后会明显下降。不要将整个手稿粘贴到上下文窗口——使用会话文档技术。',
+          '**上下文窗口规划规则：标称128K–262,144 token，规划约32K。** 模型对长输入中间部分的利用可靠性较低（"Lost in the Middle"），因此每次生成按约32K token（约24,000字）规划，并使用会话文档技术而非整部手稿。',
           '**会话文档技术是核心技能。** 维护一个压缩文本文件，包含：活跃角色卡（每个角色150字）、章节摘要（每个已完成章节100-200字）和当前场景设置。在每个生成会话开始时注入。',
-          '**每次生成一个场景。** 要求模型写一个场景（200-600字），而非要求其继续不断增长的文档。每次一个场景可消除上下文漂移并产生一致的声音。',
+          '**每次生成一个场景。** 每个会话要求模型写一个场景（200-600字），而非要求其继续不断增长的文档。每次一个场景可减少上下文漂移，并有助于保持声音一致。',
           '**剧本写作节拍表优先。** 在生成任何剧本页面之前，先生成场景级节拍表。将节拍表用作每次页面生成的结构支架。',
-          '**Llama 3.3 70B是长篇写作的最佳模型。** 强大的上下文遵循性、长生成时的最佳指令跟随、跨多个会话可靠的角色声音一致性。',
-          '**Ollama＋纯文本写作工具是最可靠的集成。** Scrivener、Obsidian和VS Code均可作为手稿层；Ollama通过API提供模型服务。',
-          '**无审查模型（Hermes 3）无需更改设置即可融入工作流。** 对于成熟小说，只需将Ollama模型切换到Hermes 3；会话文档和场景生成技术完全相同。',
+          '**选一个自己能运行的模型，并用自己的一个场景来测试。** 27B–31B级稠密模型（Qwen3.6 27B、Gemma 4 31B）和Llama 3.3 70B是常见的起点；PromptQuorum未针对小说写作评测其中任何一个，公开的创意写作排行榜对模型的排名也互不一致。',
+          '**Ollama＋纯文本写作工具是可靠的集成。** Scrivener、Obsidian和VS Code都可以存放手稿；Ollama通过API提供模型服务，配套应用或脚本可以调用。',
+          '**低拒答模型（Hermes 4 70B）无需更改设置即可融入工作流。** 对于成熟小说，只需切换Ollama模型；会话文档和场景生成技术完全相同。请按自己的用途查看各模型的许可证。',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: '快速事实',
         items: [
-          '**长篇小说最佳模型：** Llama 3.3 70B（最强的上下文遵循性和指令跟随）。',
-          '**上下文窗口实用上限：** 约32K token（约24,000字）可获得可靠的注意力质量；128K是技术上限。',
+          '**模型起点（来自模型卡）：** Qwen3.6 27B（稠密，Apache-2.0，262,144 token上下文）、Gemma 4 31B（稠密，Apache-2.0，256K上下文）、Llama 3.3 70B（稠密，128K上下文，Llama 3.3 Community License）。',
+          '**上下文窗口规划上限：** 每次生成约32K token（约24,000字）；模型标称128K–262,144 token，这是上限，而非质量保证。',
           '**会话文档大小：** 目标低于4,000 token（角色卡＋章节摘要＋当前场景设置）。',
           '**场景生成目标：** 每次生成调用200-600字；通过多个连续提示词生成较长场景。',
           '**剧本格式：** 将Ollama与Fountain格式输出指令结合，生成剧本格式文本。',
-          '**与Ollama配合的写作工具：** Scrivener（通过API配套脚本）、Obsidian（通过本地插件或脚本）、VS Code（通过Continue.dev或直接API调用）、纯终端。',
-          '**无审查选项：** 成熟小说用Hermes 3 Llama 3.1；相同工作流，相同会话文档技术。',
+          '**与Ollama配合的写作工具：** Scrivener（粘贴输出；无公开文档的插件API）、Obsidian（通过本地插件或脚本）、VS Code（通过Continue.dev或直接API调用）、纯终端。',
+          '**低拒答选项：** 成熟小说用Hermes 4 70B（基于Llama-3.1-70B）；相同工作流，相同会话文档技术。',
         ],
       },
       contextWindow: {
@@ -1971,29 +2030,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '长篇写作的上下文窗口问题',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          '本地LLM上下文窗口可靠性:实际注意力上限为32K tokens(约24,000词),而Llama 3.3 70B、Qwen3 32B和Mistral Large的技术上限为128K;Kimi-K2.6的100万token窗口在Q4量化下需要约480GB显存。',
+          '上下文规划：工作上限32K token（约24,000字），开源模型标称128K–262,144 token。',
         content:
-          '**大多数本地模型的实用上下文上限是32,000 token——而非宣传的128K。** 注意力质量（模型准确引用早期内容的能力）在大多数模型超过32,000 token后下降。在128K token时，许多模型会失去对上下文窗口前四分之一内容的准确引用。对于小说而言，这意味着无法简单地粘贴目前的手稿并要求下一章。\n\nMoonshot AI的Kimi-K2.6提供真正的百万token上下文窗口，注意力质量保持优于大多数128K上下文模型。在本地运行Kimi-K2.6对大多数作者而言不切实际——在Q4量化下需要约480GB VRAM，远超消费级硬件。对于真正需要1M上下文的作者，Moonshot的托管API是实际的访问方式。对于使用本地可运行模型（Llama 3.3 70B、Qwen3 32B、Mistral Large）的作者，32K实用上限是制约因素。',
+          '**即使模型标称大得多的窗口，每次生成也应按约32K token规划。** 这是PromptQuorum的保守规划规则，而非实测上限：长上下文研究（Liu等，"Lost in the Middle"）发现，模型对长输入开头和结尾信息的利用比对中间信息更可靠，并且随着输入变长质量可能下降。较新的模型标称更大的窗口——Qwen3.6 27B原生标称262,144 token，Gemma 4 31B标称256K——因此应自己测试所用模型。对小说而言，粘贴目前的手稿并要求下一章仍是最不可靠的做法，而且长上下文还会占用更多内存，因为KV缓存会随之增长。\n\nMoonshot AI的Kimi-K2.6标称256K token（262,144）的上下文窗口，与上述模型属于同一级别，但它是总参数约1万亿（激活320亿）的混合专家模型，并以原生int4权重发布。即使按4位计算，仅权重就约500 GB（PromptQuorum估算：1万亿参数×0.5字节），因此它是服务器级模型，而非笔记本级模型。会话文档技术和逐场景生成适用于任何上下文大小的本地可运行模型。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '大多数本地LLM中上下文遵循的实用质量上限约为32,000 token（约24,000字）——超过此限制，模型会失去对早期内容的准确引用，导致在长篇手稿中累积的声音漂移和情节不一致。',
+            text: '本地LLM上下文遵循的保守规划上限约为每次生成32,000 token（约24,000字）——超过此限制，长上下文研究发现模型对早期内容的利用可靠性较低，这可能在长篇手稿中表现为声音漂移和情节不一致。',
           },
           {
             type: 'plain-terms',
-            text: '你无法将一部9万字的小说放入128K上下文窗口，并期望模型在写第20章时还记得第3章发生了什么。替代方案：将模型需要知道的内容——角色卡、章节摘要、当前场景设置——压缩到不超过4,000 token的"会话文档"中，并在每个写作会话开始时注入。模型只需要知道与它正在生成的场景相关的内容。',
+            text: '不能因为整部手稿放得进上下文窗口，就指望模型在写第20章时可靠地记得第3章发生了什么。替代方案：将模型需要知道的内容——角色卡、章节摘要、当前场景设置——压缩到不超过4,000 token的"会话文档"中，并在每个写作会话开始时注入。模型只需要知道与它正在生成的场景相关的内容。',
           },
         ],
         items: [
-          '**Token与字数换算：** 英文中1个token约0.75个词。32K token约24,000个词。128K token约96,000个词（一部完整小说）。',
-          '**注意力退化：** 模型会失去对长上下文窗口早期内容的可靠引用——表现为角色名字错误、遗忘情节点和从已建立风格的声音漂移。',
-          '**不对称性：** 模型对上下文窗口的开头（系统提示）和结尾（最后几百个token）关注最好。长上下文中间的内容可靠性最低。',
+          '**Token与字数换算：** 英文中1个token约0.75个词（经验法则）。32K token约24,000个词。128K token约96,000个词（约一部小说）；262,144 token约196,000个词。',
+          '**注意力退化：** 模型可能失去对长上下文窗口早期内容的可靠引用——表现为角色名字错误、遗忘情节点和声音漂移。',
+          '**不对称性：** 在Lost in the Middle研究中，模型对输入开头和结尾的利用最好，对中间内容的利用最不可靠。该研究测试的是2023年可用的模型，因此应测试当前模型，而不是假定模式相同。',
           '**会话文档作为解决方案：** 将模型需要的所有内容压缩到简短的结构化文档中。开始时注入。生成场景。结束会话。重置。用更新后的文档重新开始。',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '不要将完整手稿粘贴到上下文中。如果你的小说超过10,000字并粘贴完整草稿来要求下一章，你会得到上下文漂移——模型会忘记早期角色细节，与已建立的情节点矛盾，并退回到通用风格。请改用会话文档技术。',
+            text: '不要将完整手稿粘贴到上下文中。如果你的小说超过10,000字并粘贴完整草稿来要求下一章，就有上下文漂移的风险——模型可能忘记早期角色细节，与已建立的情节点矛盾，并退回到通用风格。请改用会话文档技术。',
           },
         ],
       },
@@ -2001,7 +2060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: '会话文档技术',
         content:
-          '本节中的会话文档技术经过多个长篇项目的写作实践测试（一部9万字的文学小说，两部剧本草稿）。4,000 token的会话文档大小、逐场景生成节奏和连续性检查时机均来自该写作过程中观察到的失败模式，而非理论建模。\n\n**会话文档是你在手稿旁边维护的纯文本文件——它是模型需要了解的、用于生成一致内容的小说压缩状态。** 它有三个部分：活跃角色卡、章节摘要和当前场景设置。',
+          '会话文档技术是PromptQuorum基于上文所述上下文限制提出的工作流建议。PromptQuorum未对其做过对照测试，下列大小（4,000 token、每张角色卡150字、每章摘要100-150字）是规划参考值，而非实测阈值。\n\n**会话文档是你在手稿旁边维护的纯文本文件——它是模型需要了解的、用于生成一致内容的小说压缩状态。** 它有三个部分：活跃角色卡、章节摘要和当前场景设置。',
         promptExamples: [
           {
             label: '会话文档模板',
@@ -2027,7 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '小说写作工作流',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          '本地LLM四阶段小说写作工作流:大纲(10-30章)、节拍表(每章3-8个场景)、场景生成(每次会话200-600字)和修订环节,围绕不超过4,000 token的会话文档展开。',
+          '本地LLM小说写作四阶段：大纲、节拍表、场景生成、修改，围绕会话文档展开。',
         content:
           '**使用本地LLM的小说写作工作流有四个阶段：大纲、章节节拍表、场景生成和修改轮次。** 每个阶段使用不同的提示词结构。',
         items: [
@@ -2060,10 +2119,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**格式放在系统提示中，而非用户轮次。** 将剧本格式指令放入系统消息意味着会话中的每次生成都遵循格式，无需重复指令。',
-          '**Fountain兼容输出：** Fountain是Final Draft、Highland、WriterDuet等众多工具支持的剧本纯文本标记格式。要求生成"Fountain兼容纯文本"会产生可直接导入剧本软件的输出。',
+          '**Fountain兼容输出：** Fountain是剧本纯文本标记格式；Highland和Fade In可读取它，[Fountain应用目录](https://fountain.io/apps)中的其他应用也可以。要求生成"Fountain兼容纯文本"会产生可在这些工具中打开或转换给其他工具使用的输出（见常见问题中关于Final Draft的问题）。',
           '**先生成slug line：** 在生成场景内容之前，先将slug line（INT./EXT. 地点——白天/夜晚）作为单独的单行提示词生成。这在模型开始生成动作描述之前确定了物理地点。',
           '**对话轮次：** 生成动作描述后，运行单独的对话轮次：「动作描述已定。为这个场景写[角色A]和[角色B]的对话。角色A想要[X]。角色B想要[Y]。不要对话标签。5-8次交换。」',
-          '**页数管理：** 标准剧本页面约包含55-60字的动作描述和对话。按页面目标校准字数上限：1页≈60字，2页≈120字，3页≈180字。',
+          '**页数管理：** 每页字数没有固定数值，"一页等于一分钟"也只是经验法则。统计自己剧本每页的平均字数，并据此设定字数上限。',
         ],
         callouts: [
           {
@@ -2080,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '长篇小说最可靠的生成模式：系统提示中放会话文档→用户轮次中放单个场景提示词→审查→更新会话文档→重复，每次会话一个场景。',
+            text: '长篇小说可靠的生成模式之一：系统提示中放会话文档→用户轮次中放单个场景提示词→审查→更新会话文档→重复，每次会话一个场景。',
           },
           {
             type: 'plain-terms',
@@ -2118,8 +2177,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'SillyTavern', '链接': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', '集成方式': 'OpenAI兼容API→Ollama', '适用场景': '角色扮演式小说和角色卡驱动的写作；持久化角色记忆' },
           { '工具': '纯终端', '集成方式': '`ollama run [model]`或curl到Ollama API', '适用场景': '可脚本化工作流；希望以最小UI开销获得最大控制权的作者' },
           { '工具': 'LM Studio', '链接': '[lmstudio.ai](https://lmstudio.ai)', '集成方式': '内置聊天界面＋本地服务器API', '适用场景': '希望有GUI模型管理器而无需单独安装Ollama的作者' },
-          { '工具': 'NovelCrafter', '链接': '[novelcrafter.com](https://www.novelcrafter.com)', '集成方式': '内置AI集成；支持OpenAI兼容端点（指向Ollama）', '适用场景': '希望在单个小说专用应用中获得章节级AI辅助的作者' },
-          { '工具': 'Plottr', '链接': '[plottr.com](https://plottr.com)', '集成方式': '手动工作流：在Plottr中构建故事结构，外部将场景/节拍粘贴到Ollama', '适用场景': '以结构性情节设计为工作流核心的情节密集型类型小说（悬疑、惊悚、奇幻）' },
+          { '工具': 'NovelCrafter', '链接': '[novelcrafter.com](https://www.novelcrafter.com)', '集成方式': '内置AI集成；其帮助页面列出了LM Studio、Ollama和OpenAI API兼容连接', '适用场景': '希望在单个小说专用应用中获得章节级AI辅助的作者' },
+          { '工具': 'Plottr', '链接': '[plottr.com](https://plottr.com)', '集成方式': '手动工作流：在Plottr中构建故事结构，外部将场景/节拍粘贴到Ollama（Plottr表示不会加入AI功能）', '适用场景': '以结构性情节设计为工作流核心的情节密集型类型小说（悬疑、惊悚、奇幻）' },
         ],
         callouts: [
           {
@@ -2133,22 +2192,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '长篇写作模型推荐',
         content:
-          '**长篇写作与短篇小说的模型要求不同。** 上下文遵循性、跨长会话的指令跟随一致性，以及跨多次生成调用维持声音的能力，是决策相关因素。关于所有使用场景的更广泛模型概览，参见[本地LLM最佳选择2026](/zh/local-llms/best-local-llms-2026)。',
+          '**长篇写作与短篇小说的模型要求不同。** 上下文遵循性、跨长会话的指令跟随一致性，以及跨多次生成调用维持声音的能力，是决策相关因素。下面各行是取自各模型卡的起点；PromptQuorum未针对小说写作评测这些模型，公开的创意写作排行榜对模型的排名也互不一致，因此请用自己的一个场景测试两个候选模型。Command A+（总参数2,180亿，激活250亿，Apache 2.0）和Mistral Large 3（总参数6,750亿，256K上下文，Apache 2.0）等服务器级开源模型超出了消费级硬件的范围。关于所有使用场景的更广泛模型概览，参见[本地LLM最佳选择2026](/zh/local-llms/best-local-llms-2026)。',
         columns: ['任务', '推荐模型', '原因'],
         rows: [
-          { '任务': '小说写作（主要）', '推荐模型': 'Llama 3.3 70B', '原因': '多会话长篇写作中最佳的上下文遵循性和指令跟随；最一致的声音' },
-          { '任务': '剧本写作', '推荐模型': 'Llama 3.3 70B或Mistral Large', '原因': '复杂角色动态用Llama 3.3；Fountain输出中一致格式遵循用Mistral Large' },
-          { '任务': '节拍表/大纲生成', '推荐模型': 'Qwen3 32B', '原因': '强大的结构生成；可靠地遵循编号列表和约束密集的大纲提示词' },
-          { '任务': '对话轮次', '推荐模型': 'Command A+', '原因': '跨长交换的最佳自然语言风格和角色声音差异化' },
-          { '任务': '修改（结构性）', '推荐模型': 'Llama 3.3 70B', '原因': '最擅长在改写指令中遵循具体命名的结构约束' },
-          { '任务': '成熟/黑暗小说', '推荐模型': 'Hermes 3 Llama 3.1 70B', '原因': '与Llama 3.3 70B相同基础；无审查微调；长篇写作中相同的上下文遵循性' },
+          { '任务': '小说写作（主要）', '推荐模型': 'Qwen3.6 27B或Gemma 4 31B', '原因': '标称256K+上下文、采用Apache许可证的27B–31B稠密模型；4位下适合24 GB GPU或32 GB以上统一内存的规模级别（估算）' },
+          { '任务': '剧本写作', '推荐模型': 'Qwen3.6 27B或Llama 3.3 70B', '原因': '格式遵循主要取决于系统提示词；用两个模型各测试一个Fountain场景。Llama 3.3 70B为稠密模型，标称128K上下文，4位下约需40 GB（估算）' },
+          { '任务': '节拍表/大纲生成', '推荐模型': 'Qwen3.6 35B-A3B', '原因': '混合专家模型，每个token激活350亿参数中的30亿（Apache-2.0），因此每token生成更快；大纲质量未经PromptQuorum评测' },
+          { '任务': '对话轮次', '推荐模型': '样例最贴合的模型', '原因': '将对话作为单独一轮，交给校准台词最贴合角色说话风格的模型；目前没有经过验证的对话类模型排名' },
+          { '任务': '修改（结构性）', '推荐模型': '初稿所用的模型', '原因': '每次调用只指明一个结构性约束的修改提示词，适用于任何能遵循指令的模型；每次调用一个场景' },
+          { '任务': '成熟/黑暗小说', '推荐模型': 'Hermes 4 70B', '原因': '基于Llama-3.1-70B；Nous Research称其对齐总体中立、拒答率较低；Llama 3许可证；混合推理模式' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: '常见错误',
         items: [
-          '**将完整手稿粘贴到上下文中。** 即使使用128K上下文窗口，注意力质量也会在超过32K token后显著下降。改用会话文档技术——压缩的角色卡和章节摘要。',
+          '**将完整手稿粘贴到上下文中。** 即使模型标称128K–262K的窗口，长输入的利用可靠性也较低，因此应按约32K token规划。改用会话文档技术——压缩的角色卡和章节摘要。',
           '**要求模型"继续"开放式文档。** "继续这部小说"会产生漂移。"写下一个场景：[具体设置、视角、字数上限]"会产生可评估和粘贴的一致有界输出。',
           '**剧本写作没有节拍表。** 没有场景节拍就生成剧本页面会产生在长度和结构功能上漂移的页面。始终先生成节拍表。',
           '**忽略会话文档更新。** 如果不在生成场景后更新章节摘要，会话文档会变得过时。过时的会话文档会在几次会话内产生不一致。',
@@ -2159,10 +2218,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '参考来源',
         items: [
-          'Llama 3.3 70B长上下文基准测试 — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B技术报告（含上下文窗口基准测试） — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'Fountain剧本格式规范 — [Fountain.io](https://fountain.io)',
+          '[Qwen3.6-27B模型卡](https://huggingface.co/Qwen/Qwen3.6-27B)和[Qwen3.6-35B-A3B模型卡](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — 参数、原生262,144 token上下文、YaRN扩展、Apache-2.0，2026年10月26日查阅',
+          '[Gemma 4 31B模型卡](https://huggingface.co/google/gemma-4-31B-it) — 稠密31B、256K上下文、Apache 2.0，2026年10月26日查阅',
+          '[Llama 3.3 70B Instruct模型卡](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B、128K上下文、Llama 3.3 Community License，2024年12月6日发布',
+          '[Hermes 4 70B模型卡](https://huggingface.co/NousResearch/Hermes-4-70B) — 基于Llama-3.1-70B、混合推理、"broadly neutral alignment"',
+          '[Kimi-K2.6模型卡](https://huggingface.co/moonshotai/Kimi-K2.6) — 总参数1万亿、激活320亿、256K上下文、原生int4',
+          '[Command A+文档](https://docs.cohere.com/docs/command-a-plus)和[Mistral Large 3模型卡](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — 服务器级模型的参数量和许可证',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu等，2023',
+          '[Fountain.io](https://fountain.io) — Fountain剧本格式规范及[应用列表](https://fountain.io/apps)',
+          '[Final Draft帮助中心](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — 说明Final Draft无法直接导入.fountain文件',
+          '[Amazon KDP的AI内容规则（Publishers Weekly）](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html)和[Clarkesworld投稿须知](https://clarkesworldmagazine.com/submissions/) — 出版社和平台的AI政策；投稿前请核对最新措辞',
+          '[Scrivener发布说明](https://www.literatureandlatte.com/scrivener/release-notes) — 3.4.0至3.5.2（2025年12月）：没有插件或API条目；"Scrivener itself contains no AI"；2026年10月26日查阅',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/)和[NovelCrafter AI连接帮助](https://www.novelcrafter.com/help/categories/ai-connections) — Plottr表示不开发AI功能；NovelCrafter列出了LM Studio、Ollama和OpenAI API兼容连接',
           'Ollama API文档 — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -2172,15 +2239,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '如何让本地LLM生成小说的下一章内容？',
-            a: '不要直接要求模型"继续写下一章"——超过32K token后模型会开始漂移，生成的内容会逐渐偏离已建立的情节和人物声音。正确做法是使用会话文档技术：在提示中提供压缩的角色卡（姓名、主导特质、说话方式）、已完成章节的情节摘要（每章100-200字），以及新章节的具体设定（场景、视角、目标字数），然后要求模型只生成这一章/一个场景，而不是延续整份不断增长的文档。每次生成一章后，将该章的摘要追加到会话文档中，供下一次生成使用。',
+            a: '不要直接要求模型"继续写下一章"——输入变长后，模型对早期内容的利用可靠性会下降，生成内容可能逐渐偏离已建立的情节和人物声音（保守的规划上限约为每次生成32K token）。正确做法是使用会话文档技术：在提示中提供压缩的角色卡（姓名、主导特质、说话方式）、已完成章节的情节摘要（每章100-200字），以及新章节的具体设定（场景、视角、目标字数），然后要求模型只生成这一章/一个场景，而不是延续整份不断增长的文档。每次生成一章后，将该章的摘要追加到会话文档中，供下一次生成使用。',
           },
           {
             q: '本地LLM可以写一整部小说吗？',
-            a: '本地LLM可以生成完整小说的散文——但结构性和编辑性智识必须来自作者。模型在给定具体设置时生成场景；它不会自主地计划、评估或做出主题决策。将本地LLM用作写作工具的作者将其描述为"我已经知道如何写的场景的非常快速的初稿生成器"。模型节省了空白页面问题的时间；作者仍然做出每一个重大决定。',
+            a: '本地LLM可以生成整部小说的文字，但结构性和编辑层面的判断必须来自作者。模型在获得具体设定时生成场景；它不会自行规划、评估或做出主题层面的决定。可以把它看作针对你本来就知道怎么写的场景的快速初稿生成器：它节省面对空白页的时间，而每一个重要决定仍由作者做出。投稿前请核对出版社和平台的AI政策（见下方关于出版商的问题）。',
           },
           {
             q: '我可以可靠地使用的最大上下文窗口是多少？',
-            a: '在实践中，对于包括Llama 3.3 70B和Qwen3 32B在内的大多数本地模型，可靠的注意力质量上限约为32,000 token（约24,000字）。超过这个限制，模型开始失去对上下文早期内容的准确引用。会话文档技术将工作上下文保持在4,000-6,000 token以下，意味着每次生成调用都在注意力窗口最可靠的部分运行。',
+            a: '模型标称128K至262,144 token，但PromptQuorum建议每次生成按约32K token（约24,000字）规划，因为长上下文研究表明模型对长输入中间部分的利用可靠性较低。这是保守的规划规则，而非对每个模型实测的上限，因此请测试你自己的模型。会话文档技术把工作上下文控制在4,000–6,000 token以内，因此每次生成调用都远低于这一范围。',
           },
           {
             q: '如何防止模型在小说中途改变角色的声音？',
@@ -2188,11 +2255,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我可以在本地LLM中使用Scrivener吗？',
-            a: '不能原生使用——Scrivener没有外部API调用的插件系统。最常见的工作流：在Ollama中生成（通过终端或配套脚本），复制输出，粘贴到相关的Scrivener文档中。一些作者使用Obsidian作为AI写作层，并将完成的章节导入Scrivener进行最终结构化。',
+            a: '不能原生使用——Scrivener 3没有公开文档的插件系统，截至3.5.2（2025年12月）的官方发布说明也未提及AI集成：3.4.0的说明写明"Scrivener itself contains no AI"，并新增了对Apple Writing Tools（macOS系统功能）的支持。常见的工作流是：在Ollama中生成（通过终端或配套脚本），复制输出，粘贴到相应的Scrivener文档。有些作者把Obsidian用作AI写作层，再将完成的章节导入Scrivener做最终结构整理。调用Ollama API并把输出复制到剪贴板的脚本最接近原生集成。',
           },
           {
             q: '剧本写作用Ollama还是云端AI更好？',
-            a: '对于需要生成成熟内容（暴力、黑暗心理、道德复杂角色）的剧本作家，使用Llama 3.3 70B或Hermes 3的本地Ollama更可靠——云端模型会拒绝戏剧性剧本中经常出现的特定内容。对于格式一致性和页数规范，在系统提示中有格式指令时两者表现相当。',
+            a: '对于需要生成成熟内容（暴力、阴暗心理、道德复杂的角色）的编剧，本地模型让你可以控制模型及其拒答行为——一些托管模型会拒绝或淡化戏剧剧本中常出现的内容，而且托管服务的政策会随时间变化。Hermes 4 70B这类低拒答本地模型内置的拒答较少，但你仍需对自己生成和发布的内容负责。格式一致性主要取决于系统提示词中的指令，两者都适用。选择主要取决于内容控制、隐私和成本；PromptQuorum没有针对剧本写作比较托管模型与本地模型的输出质量。',
           },
           {
             q: '如何生成听起来像特定角色的对话？',
@@ -2200,19 +2267,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '小说写作需要GPU才能使用本地LLM吗？',
-            a: 'GPU会显著加快生成速度，但不是必需的。在Apple Silicon（M3或更新版本）上，统一内存架构意味着即使是MacBook Pro 16GB也可以为写作工作舒适地运行Qwen3 14B——比24GB GPU装置慢，但对于在生成之间读取和评估的写作工作流来说是可以接受的。配备24GB VRAM的专用NVIDIA GPU（RTX 4090、RTX 3090）以可用的生成速度运行70B模型。',
+            a: 'GPU能显著加快生成速度，但不是必需的。在Apple Silicon上，统一内存让16 GB的MacBook Pro可以运行较小的模型（4位下大约8B–14B级，属估算）——比24 GB GPU的机器慢，但在你于两次生成之间阅读和评估输出时是可以接受的。24 GB的NVIDIA GPU（RTX 4090、RTX 3090）在4位下可容纳27B–32B级模型（估算）；70B级模型在4位下约需40 GB或更多，因此需要两块GPU、48 GB显卡、64 GB统一内存，或速度较慢的CPU卸载。',
           },
           {
             q: '我可以将本地LLM与Final Draft或其他专业剧本软件一起使用吗？',
-            a: '不能直接使用。Final Draft没有外部API集成。工作流：通过Ollama以Fountain纯文本格式生成剧本页面，然后使用Final Draft内置导入器（文件→导入→Fountain）导入Fountain文件。Highland、WriterDuet和Fade In均原生支持Fountain导入。',
+            a: '不能直接使用。据Final Draft帮助中心，Final Draft无法导入.fountain文件；其建议是将文本保存为纯.txt，并在导入时选择Script（而非Text），或通过能导出FDX的应用以FDX格式导入。Highland可在Fountain、FDX和PDF之间转换，Fade In可导入并导出Fountain（据Fountain应用目录）。工作流：在Ollama中生成Fountain格式文本，在Highland或Fade In中打开，再导出FDX供Final Draft使用。',
           },
           {
             q: '我可以在本地使用Kimi-K2.6进行小说写作吗？',
-            a: 'Kimi-K2.6有真正的百万token上下文窗口——对小说长度的单次工作有用——但对大多数作者来说本地运行不切实际（Q4量化需要约480GB VRAM）。对于完全本地的工作流，使用本地可运行模型的会话文档技术无需1M上限即可处理小说长度的写作。',
+            a: 'Kimi-K2.6标称256K token的上下文窗口，与Qwen3.6 27B和Gemma 4 31B属于同一级别，但它是总参数约1万亿（激活320亿）的混合专家模型，采用原生int4权重。仅权重就约500 GB（PromptQuorum估算），需要多GPU服务器或超大统一内存的机器，在消费级硬件上不现实。对于完全本地的工作流，27B–70B的稠密模型配合会话文档技术即可处理小说篇幅的工作，而无需万亿参数模型。',
           },
           {
             q: '出版商如何看待AI辅助手稿？',
-            a: '褒贬不一，且在不断演变。大多数主要小说出版商要求披露提交手稿中的重大AI使用；有些完全禁止。自出版平台要求对AI生成内容进行声明。将本地LLM用作写作工具（配合大量人工修改）的作者通常将AI描述为工具而非联合作者，大多数政策接受这一点。提交前请核实特定出版商的政策。',
+            a: '各出版社和平台的政策不同，并在2026年仍在变化，因此投稿前请核对具体的政策。Amazon KDP要求在文字、图片或翻译由AI生成时告知，并且即使经过大幅编辑，由AI工具创作的内容仍视为AI生成；你自己撰写、AI只是帮助编辑或润色的文字属于"AI辅助"，无需披露（据Publishers Weekly在2023年9月报道的Amazon规则）。一些杂志直接拒收有AI参与的作品——Clarkesworld的投稿须知称其不考虑由AI撰写、合写或辅助的故事。由本地LLM生成的场景文字属于KDP"AI生成"定义这类标准的范围，因此在需要时请予以披露。这是一般性信息，不构成法律建议。',
+          },
+          {
+            q: '百万token级上下文需要什么硬件？',
+            a: 'Qwen3.6 27B和Qwen3.6 35B-A3B标称原生262,144 token的上下文，据其模型卡，可通过YaRN缩放扩展到约1,010,000 token。长上下文除权重外还需要KV缓存的内存，因此运行百万token所需内存远超典型的消费级配置；PromptQuorum没有测量具体需求。本文的会话文档技术正是为这一缺口设计的——无需依赖百万token窗口，也能获得一致的长篇输出。',
           },
           {
             q: '在中国使用本地LLM创作小说或剧本时，个人信息保护法有什么影响？',
@@ -2241,9 +2312,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-pt.webp',
     title: 'Redigir romances e roteiros com LLMs locais: guia de fluxo de trabalho para mais de 100.000 palavras',
@@ -2251,15 +2323,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Os LLMs locais integrados a um fluxo de trabalho de redação de romances ou roteiros permitem que você gere rascunhos de cenas, beat sheets, passagens de diálogo e rodadas de revisão sem acesso à internet, registro na nuvem ou limites de uso. Este guia cobre o fluxo de trabalho completo: seleção de modelos, gerenciamento da janela de contexto para trabalhos de formato longo, estruturação por capítulos, geração de cenas e as ferramentas que conectam um LLM local ao seu software de escrita.',
     metaDescription:
-      'Fluxo completo para escrever romances e roteiros com LLMs locais: seleção de modelos, gerenciamento do contexto, estruturação por capítulos e geração de cenas.',
+      'Fluxo para escrever romances e roteiros com LLMs locais: modelos de partida, gerenciamento do contexto, estruturação por capítulos e geração de cenas.',
     twitterDescription:
       'Como usar LLMs locais para redigir romances e roteiros: gerenciamento de janela de contexto, estruturação por capítulos, geração de cenas, passagens de diálogo e integrações de ferramentas.',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2280,22 +2352,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'geração de cenas modelo local',
     ],
     leadAnswerBlock:
-      '**O principal desafio técnico para escritores que usam LLMs locais em trabalhos de formato longo é o gerenciamento da janela de contexto: a maioria dos modelos locais tem uma janela de contexto de 128K no papel, mas a qualidade de atenção se degrada significativamente após 32K tokens (~24.000 palavras) na prática. A solução é a injeção de contexto estruturada — a técnica do "documento de sessão": manter um resumo comprimido dos capítulos anteriores, a configuração da cena atual e as fichas de personagens relevantes, e injetar apenas esses elementos no início de cada sessão de escrita. Combinado com a geração cena por cena (um prompt de cena por sessão em vez de pedir ao modelo que continue um documento em crescimento), essa abordagem produz resultados de formato longo consistentes em qualquer extensão de romance. Para a redação de roteiros em particular, o fluxo de trabalho beat-sheet-first — em que se gera um beat sheet em nível de cena antes de qualquer prosa — produz páginas de roteiro formatadas que coincidem com a estrutura em vez de se desviarem dela.**',
+      '**O principal desafio dos LLMs locais na ficção longa é o gerenciamento do contexto: planeje cerca de 32.000 tokens por geração e dê ao modelo um "documento de sessão" comprimido (fichas, resumos de capítulos, cena atual) em vez do manuscrito inteiro.**',
     quickAnswerTop: {
       pt: {
         question: 'Como usar um LLM local para escrever um romance ou um roteiro sem perder o contexto?',
         answer:
-          'A técnica-chave é a injeção de contexto estruturada: em vez de colar todo o manuscrito na janela de contexto, mantenha um documento de sessão comprimido: uma ficha de personagem (nome, traço dominante, registro de fala), um resumo do enredo dos capítulos concluídos (100–200 palavras por capítulo) e a configuração da cena atual (beat, ponto de vista, limite de palavras). Injete esse documento de sessão no início de cada sessão de escrita. Gere uma cena por vez em vez de pedir ao modelo que continue um documento em crescimento além de 32K tokens.',
+          'A técnica-chave é a injeção de contexto estruturada: em vez de colar todo o manuscrito na janela de contexto, mantenha um documento de sessão comprimido: uma ficha de personagem (nome, traço dominante, registro de fala), um resumo do enredo dos capítulos concluídos (100–200 palavras por capítulo) e a configuração da cena atual (beat, ponto de vista, limite de palavras). Injete esse documento no início de cada sessão de escrita. Gere uma cena por vez em vez de pedir ao modelo que continue um documento em crescimento. Como cada chamada leva apenas o estado comprimido, o método escala para qualquer extensão de romance e reduz o desvio de contexto e a perda de voz que escritores relatam ao tentar encaixar um manuscrito inteiro em uma única janela de contexto longa.',
         bullets: [
           'Técnica do documento de sessão: injete fichas de personagens + resumos de capítulos + configuração da cena atual no início da sessão.',
-          'Gere uma cena por vez — nunca peça ao modelo que "continue" um documento em crescimento além de 32K tokens.',
+          'Gere uma cena por vez — evite pedir ao modelo que "continue" um documento em crescimento além de cerca de 32K tokens.',
           'Beat-sheet-first para roteiros: gere o beat sheet antes de qualquer prosa; use-o como andaime estrutural.',
-          'Melhor modelo para trabalhos de formato longo: Llama 3.3 70B (forte aderência ao contexto, melhor seguimento de instruções).',
-          'Ollama + Obsidian ou Scrivener é o fluxo de trabalho mais comum para escritores em 2026.',
-          'Realidade da janela de contexto: 128K é o limite técnico; 32K tokens é o teto prático de qualidade para a maioria dos modelos.',
-          'Os modelos sem censura (Hermes 3) se encaixam nesse fluxo de trabalho sem mudanças de configuração.',
+          'Modelos de partida (dados dos cartões de modelo): Qwen3.6 27B, Gemma 4 31B, Llama 3.3 70B; a PromptQuorum não os avaliou para ficção.',
+          'Ollama + Obsidian é um fluxo de trabalho comum entre escritores; o Scrivener não documenta nenhuma API de plugins, então a saída é colada.',
+          'Regra de planejamento da janela de contexto: os modelos anunciam 128K–262.144 tokens; planeje cerca de 32K por geração, porque a qualidade em contextos longos é irregular.',
+          'Fine-tunes com poucas recusas, como o Hermes 4 70B, usam o mesmo fluxo para ficção madura; confira a licença de cada modelo.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -2318,26 +2390,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Realidade da janela de contexto: 128K tokens no papel, 32K tokens na prática.** A qualidade de atenção na maioria dos modelos locais se degrada notavelmente após 32K tokens (~24.000 palavras). Não cole o manuscrito completo na janela de contexto — use a técnica do documento de sessão.',
+          '**Regra de planejamento da janela de contexto: 128K–262.144 tokens anunciados, cerca de 32K planejados.** Os modelos usam com menos confiabilidade o meio de entradas longas ("Lost in the Middle"); planeje cerca de 32K tokens por geração.',
           '**A técnica do documento de sessão é a habilidade fundamental.** Mantenha um arquivo de texto comprimido que contenha: fichas de personagens ativos (150 palavras por personagem), resumos de capítulos (100–200 palavras por capítulo concluído) e a configuração da cena atual. Injete-o no início de cada sessão de geração.',
-          '**Gere uma cena por vez.** Peça ao modelo que escreva uma cena (200–600 palavras) por sessão em vez de pedir que ele "continue" um documento em crescimento. Uma cena por sessão elimina o desvio de contexto e produz uma voz consistente.',
+          '**Gere uma cena por vez.** Peça ao modelo que escreva uma cena (200–600 palavras) por sessão em vez de pedir que ele "continue" um documento em crescimento. Uma cena por sessão reduz o desvio de contexto e ajuda a manter uma voz consistente.',
           '**Beat-sheet-first para roteiros.** Antes de gerar páginas de roteiro, gere um beat sheet em nível de cena. Use-o como andaime para cada geração de página.',
-          '**Llama 3.3 70B é o melhor modelo para trabalhos de formato longo.** Forte aderência ao contexto, melhor seguimento de instruções em gerações mais longas e consistência confiável de voz de personagem em sessões extensas.',
-          '**Ollama + uma ferramenta de escrita de texto puro é a integração mais confiável.** Scrivener, Obsidian e VS Code funcionam como a camada de manuscrito; o Ollama serve o modelo através de uma API que aplicativos ou scripts podem chamar.',
-          '**Os modelos sem censura (Hermes 3) se encaixam nesse fluxo de trabalho sem mudanças de configuração.** Para ficção madura, troque o modelo do Ollama para o Hermes 3; as técnicas de documento de sessão e geração de cenas são idênticas.',
+          '**Escolha um modelo que você consiga executar e teste-o com uma cena sua.** Modelos densos da classe 27B–31B (Qwen3.6 27B, Gemma 4 31B) e o Llama 3.3 70B são pontos de partida comuns; a PromptQuorum não avaliou nenhum deles para ficção, e os rankings públicos de escrita criativa classificam os modelos de formas diferentes.',
+          '**Ollama + uma ferramenta de escrita de texto puro é uma integração confiável.** Scrivener, Obsidian e VS Code podem abrigar o manuscrito; o Ollama serve o modelo através de uma API que aplicativos ou scripts podem chamar.',
+          '**Os modelos com poucas recusas (Hermes 4 70B) se encaixam nesse fluxo de trabalho sem mudanças de configuração.** Para ficção madura, troque o modelo do Ollama; as técnicas de documento de sessão e geração de cenas são idênticas. Confira a licença de cada modelo para o seu uso.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Fatos rápidos',
         items: [
-          '**Melhor modelo para ficção de formato longo:** Llama 3.3 70B (maior aderência ao contexto e seguimento de instruções).',
-          '**Limite prático da janela de contexto:** ~32K tokens (~24.000 palavras) para qualidade de atenção confiável; 128K é o teto técnico.',
+          '**Modelos de partida (conforme os cartões de modelo):** Qwen3.6 27B (denso, Apache-2.0, contexto de 262.144 tokens), Gemma 4 31B (denso, Apache-2.0, contexto de 256K), Llama 3.3 70B (denso, contexto de 128K, Llama 3.3 Community License).',
+          '**Limite de planejamento da janela de contexto:** ~32K tokens (~24.000 palavras) por geração; os modelos anunciam 128K–262.144 tokens, que é um teto, não uma garantia de qualidade.',
           '**Tamanho do documento de sessão:** meta de menos de 4.000 tokens (fichas de personagens + resumos de capítulos + configuração da cena atual).',
           '**Meta de geração de cenas:** 200–600 palavras por chamada de geração; cenas mais longas por meio de múltiplos prompts sequenciais.',
           '**Formato de roteiro:** combine o Ollama com instruções de saída no formato Fountain para texto com formato de roteiro.',
-          '**Ferramentas de escrita que funcionam com o Ollama:** Scrivener (por meio de scripts de API), Obsidian (por meio de plugin local ou scripts), VS Code (por meio do Continue.dev ou chamadas de API diretas), terminal puro.',
-          '**Opção sem censura:** Hermes 3 Llama 3.1 para ficção madura; mesmo fluxo de trabalho, mesma técnica de documento de sessão.',
+          '**Ferramentas de escrita que funcionam com o Ollama:** Scrivener (cole a saída; sem API de plugins documentada), Obsidian (por meio de plugin local ou scripts), VS Code (por meio do Continue.dev ou chamadas de API diretas), terminal puro.',
+          '**Opção com poucas recusas:** Hermes 4 70B (base Llama-3.1-70B) para ficção madura; mesmo fluxo de trabalho, mesma técnica de documento de sessão.',
         ],
       },
       contextWindow: {
@@ -2345,29 +2417,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O problema da janela de contexto para escrita de formato longo',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          'Confiabilidade da janela de contexto em LLMs locais: o teto prático de atenção é de 32K tokens (~24.000 palavras) contra o limite técnico de 128K, para Llama 3.3 70B, Qwen3 32B e Mistral Large; a janela de 1M de tokens do Kimi-K2.6 exige ~480 GB de VRAM em Q4.',
+          'Planejamento de contexto: limite de trabalho de 32K tokens (~24.000 palavras) contra os 128K–262.144 anunciados.',
         content:
-          '**O limite de contexto prático para a maioria dos modelos locais é 32.000 tokens — não os 128K anunciados.** A qualidade de atenção (a capacidade do modelo de fazer referência com precisão ao conteúdo anterior) se degrada na maioria dos modelos após 32.000 tokens. Com 128K tokens, muitos modelos perdem a referência precisa ao conteúdo do primeiro quarto do contexto. Para um romance, isso significa que você não pode simplesmente colar o manuscrito até o momento e pedir o próximo capítulo.\n\nO Kimi-K2.6 da Moonshot AI oferece uma janela de contexto genuína de 1 milhão de tokens com maior preservação da qualidade de atenção que a maioria dos modelos com contexto de 128K. Executar o Kimi-K2.6 localmente é impraticável para a maioria dos escritores — requer aproximadamente 480 GB de VRAM em quantização Q4, muito acima do hardware de consumidor. Para escritores que genuinamente precisam de 1M de contexto, a API hospedada da Moonshot é o ponto de acesso prático. Para escritores que usam modelos executáveis localmente (Llama 3.3 70B, Qwen3 32B, Mistral Large), o teto prático de 32K é a restrição.',
+          '**Planeje cerca de 32K tokens por geração, mesmo quando um modelo anuncia muito mais.** Essa é uma regra de planejamento prudente da PromptQuorum, não um limite medido: pesquisas sobre contextos longos (Liu et al., "Lost in the Middle") constataram que os modelos usam com mais confiabilidade as informações do início e do fim de uma entrada longa do que as do meio, e que a qualidade pode cair conforme a entrada cresce. Modelos novos anunciam janelas bem maiores — o Qwen3.6 27B anuncia 262.144 tokens nativos e o Gemma 4 31B, 256K —, então teste o seu próprio modelo. Para um romance, colar o manuscrito até agora e pedir o próximo capítulo continua sendo a abordagem menos confiável, e um contexto longo também consome mais memória, porque o cache KV cresce junto.\n\nO Kimi-K2.6 da Moonshot AI anuncia uma janela de contexto de 256K tokens (262.144), da mesma classe dos modelos acima, mas é um modelo de mistura de especialistas com cerca de 1 trilhão de parâmetros no total (32 bilhões ativos) e pesos int4 nativos. Mesmo em 4 bits, só os pesos somam cerca de 500 GB (estimativa da PromptQuorum: 1 trilhão de parâmetros × 0,5 byte), então é um modelo de classe servidor, não de notebook. A técnica do documento de sessão e a geração cena por cena se aplicam a modelos executáveis localmente, de qualquer tamanho de contexto.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O teto prático de qualidade para a aderência ao contexto na maioria dos LLMs locais é de aproximadamente 32.000 tokens (~24.000 palavras) — além disso, os modelos perdem a referência precisa ao conteúdo anterior, causando desvio de voz e inconsistências de enredo que se acumulam ao longo de um manuscrito longo.',
+            text: 'Um teto de planejamento prudente para a aderência ao contexto em LLMs locais é de cerca de 32.000 tokens (~24.000 palavras) por geração — além disso, pesquisas sobre contextos longos constatam um uso menos confiável do conteúdo anterior, o que pode aparecer como desvio de voz e inconsistências de enredo ao longo de um manuscrito longo.',
           },
           {
             type: 'plain-terms',
-            text: 'Você não pode colocar um romance de 90.000 palavras em uma janela de contexto de 128K e esperar que o modelo lembre o que aconteceu no capítulo 3 enquanto escreve o capítulo 20. Em vez disso, comprima o que o modelo precisa saber — fichas de personagens, resumos de capítulos, configuração da cena atual — em um "documento de sessão" de menos de 4.000 tokens, e injete isso no início de cada sessão de escrita. O modelo só precisa saber o que é relevante para a cena que está gerando naquele momento.',
+            text: 'Você não pode esperar que o modelo lembre o que aconteceu no capítulo 3 enquanto escreve o capítulo 20 só porque o manuscrito inteiro cabe na janela de contexto dele. Em vez disso, comprima o que o modelo precisa saber — fichas de personagens, resumos de capítulos, configuração da cena atual — em um "documento de sessão" de menos de 4.000 tokens e injete isso no início de cada sessão de escrita. O modelo só precisa saber o que é relevante para a cena que está gerando agora.',
           },
         ],
         items: [
-          '**Conversão token para palavra:** 1 token ≈ 0,75 palavras em inglês. 32K tokens ≈ 24.000 palavras. 128K tokens ≈ 96.000 palavras (um romance completo).',
-          '**Degradação da atenção:** os modelos perdem a referência confiável ao conteúdo do início de uma janela de contexto longa. Isso se manifesta como erros em nomes de personagens, pontos de enredo esquecidos e desvio de voz em relação ao registro estabelecido.',
-          '**A assimetria:** os modelos atendem melhor ao início (prompt do sistema) e ao final (últimas centenas de tokens) da janela de contexto. O conteúdo no meio de um contexto longo é o que menos é atendido de forma confiável.',
+          '**Conversão token para palavra:** 1 token ≈ 0,75 palavras em inglês (regra prática). 32K tokens ≈ 24.000 palavras. 128K tokens ≈ 96.000 palavras (cerca de um romance); 262.144 tokens ≈ 196.000 palavras.',
+          '**Degradação da atenção:** os modelos podem perder a referência confiável ao conteúdo do início de uma janela de contexto longa. Isso se manifesta como erros em nomes de personagens, pontos de enredo esquecidos e desvio de voz em relação ao registro estabelecido.',
+          '**A assimetria:** no estudo Lost in the Middle, os modelos usaram melhor o início e o fim da entrada e o conteúdo do meio de forma menos confiável. O estudo testou modelos disponíveis em 2023, então teste os modelos atuais em vez de presumir o mesmo padrão.',
           '**O documento de sessão como solução:** comprima tudo o que o modelo precisa em um documento estruturado curto. Injete-o no início. Gere a cena. Termine a sessão. Reinicie. Comece de novo com o mesmo documento de sessão atualizado para refletir a nova cena.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Não cole o manuscrito completo no contexto. Se o seu romance ultrapassa 10.000 palavras e você cola o rascunho completo para pedir o próximo capítulo, você obterá desvio de contexto — o modelo esquecerá detalhes iniciais de personagens, contradirá pontos de enredo estabelecidos e regressará a um registro genérico. Use a técnica do documento de sessão.',
+            text: 'Não cole o manuscrito completo no contexto. Se o seu romance ultrapassa 10.000 palavras e você cola o rascunho completo para pedir o próximo capítulo, há risco de desvio de contexto — o modelo pode esquecer detalhes iniciais de personagens, contradizer pontos de enredo estabelecidos e voltar a um registro genérico. Use a técnica do documento de sessão.',
           },
         ],
       },
@@ -2375,7 +2447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'Técnica do documento de sessão',
         content:
-          'A técnica do documento de sessão desta seção foi testada durante o trabalho de redação em múltiplos projetos de formato longo (um romance literário de 90.000 palavras, dois rascunhos de roteiro). O tamanho de 4.000 tokens do documento de sessão, o ritmo de geração cena por cena e o momento das verificações de continuidade vêm dos modos de falha observados durante esse trabalho de redação, não de modelos teóricos.\n\n**O documento de sessão é um arquivo de texto puro que você mantém junto ao seu manuscrito — é o estado comprimido do seu romance que o modelo precisa conhecer para gerar conteúdo consistente.** Ele tem três seções: fichas de personagens ativos, resumos de capítulos e a configuração da cena atual.',
+          'A técnica do documento de sessão é uma recomendação de fluxo de trabalho da PromptQuorum baseada nos limites de contexto descritos acima. A PromptQuorum não a submeteu a um teste controlado, e os tamanhos abaixo (4.000 tokens, 150 palavras por ficha de personagem, 100–150 palavras por resumo de capítulo) são diretrizes de planejamento, não limiares medidos.\n\n**O documento de sessão é um arquivo de texto puro que você mantém junto ao seu manuscrito — é o estado comprimido do seu romance que o modelo precisa conhecer para gerar conteúdo consistente.** Ele tem três seções: fichas de personagens ativos, resumos de capítulos e a configuração da cena atual.',
         promptExamples: [
           {
             label: 'Modelo do documento de sessão',
@@ -2401,7 +2473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxo de trabalho para redação de romances',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          'Fluxo de trabalho de redação de romances em 4 fases com LLMs locais: esboço (10–30 capítulos), beat sheets (3–8 cenas por capítulo), geração de cenas (200–600 palavras por sessão) e passes de revisão, estruturado em torno de um documento de sessão com menos de 4.000 tokens.',
+          'Romance em quatro fases com um LLM local: esboço, beat sheets, cenas e revisão, com um documento de sessão.',
         content:
           '**O fluxo de trabalho de redação de romances com um LLM local tem quatro fases: esboço, beat sheets por capítulo, geração de cenas e passagens de revisão.** Cada fase usa uma estrutura de prompt diferente.',
         items: [
@@ -2434,10 +2506,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**O formato vai no prompt do sistema, não no turno do usuário.** Colocar as instruções de formato de roteiro na mensagem do sistema significa que cada geração da sessão segue o formato sem repetir a instrução.',
-          '**Saída compatível com Fountain:** Fountain é um formato de marcação de texto puro para roteiros compatível com Final Draft, Highland, WriterDuet e muitas outras ferramentas. Pedir ao modelo que gere "texto puro compatível com Fountain" produz uma saída que você pode importar diretamente para o seu software de roteiros.',
+          '**Saída compatível com Fountain:** Fountain é um formato de marcação de texto puro para roteiros; o Highland e o Fade In o leem, assim como outros apps do [diretório de apps do Fountain](https://fountain.io/apps). Pedir ao modelo que gere "texto puro compatível com Fountain" produz uma saída que você pode abrir nessas ferramentas ou converter para outras (veja a pergunta sobre o Final Draft nas perguntas frequentes).',
           '**As slug lines primeiro:** gere a slug line (INT./EXT. LOCALIZAÇÃO — DIA/NOITE) como um prompt de uma única linha separado antes de gerar o conteúdo da cena. Isso ancora a localização física antes de o modelo começar a gerar a ação.',
           '**Passagens de diálogo:** depois de gerar as linhas de ação, execute uma passagem de diálogo separada: "As linhas de ação estão definidas. Escreva o diálogo para [Personagem A] e [Personagem B] nesta cena. O personagem A quer [X]. O personagem B quer [Y]. Sem etiquetas de diálogo. 5–8 trocas."',
-          '**Gerenciamento da contagem de páginas:** uma página padrão de roteiro tem aproximadamente 55–60 palavras de ação e diálogo combinadas. Use limites de palavras calibrados conforme a meta de páginas: 1 página ≈ 60 palavras, 2 páginas ≈ 120 palavras, 3 páginas ≈ 180 palavras.',
+          '**Gerenciamento da contagem de páginas:** não há um número fixo de palavras por página, e "uma página equivale a um minuto" é só uma regra prática. Conte a média de palavras por página do seu próprio roteiro e defina os limites de palavras a partir daí.',
         ],
         callouts: [
           {
@@ -2454,7 +2526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Para ficção de formato longo, o padrão de geração mais confiável é: documento de sessão no prompt do sistema → único prompt de cena no turno do usuário → revisar → atualizar o documento de sessão → repetir, uma cena por sessão.',
+            text: 'Para ficção de formato longo, um padrão de geração confiável é: documento de sessão no prompt do sistema → único prompt de cena no turno do usuário → revisar → atualizar o documento de sessão → repetir, uma cena por sessão.',
           },
           {
             type: 'plain-terms',
@@ -2492,8 +2564,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'SillyTavern', 'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integração': 'API compatível com OpenAI → Ollama', 'Ideal para': 'Ficção do tipo roleplay e redação guiada por fichas de personagens; memória persistente de personagens' },
           { 'Ferramenta': 'Terminal puro', 'Integração': '`ollama run [model]` ou curl para a API do Ollama', 'Ideal para': 'Fluxos de trabalho scriptáveis; escritores que querem controle máximo com mínima sobrecarga de interface' },
           { 'Ferramenta': 'LM Studio', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Integração': 'Interface de chat integrada + API de servidor local', 'Ideal para': 'Escritores que querem um gerenciador de modelos com GUI sem instalar o Ollama separadamente' },
-          { 'Ferramenta': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integração': 'Integração de IA incorporada; suporta endpoints compatíveis com OpenAI (apontando para o Ollama)', 'Ideal para': 'Escritores que querem assistência de IA em nível de capítulo dentro de um único app focado em romances; a mais próxima de uma "ferramenta de escrita de romances nativa de IA" em 2026' },
-          { 'Ferramenta': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integração': 'Fluxo de trabalho manual: estruture romances no Plottr, cole cenas/beats no Ollama externamente', 'Ideal para': 'Ficção de gênero com muito enredo (mistério, thriller, fantasia) onde o traçado estrutural do enredo é o eixo do fluxo de trabalho' },
+          { 'Ferramenta': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integração': 'Integração de IA incorporada; as páginas de ajuda listam conexões com LM Studio, Ollama e endpoints compatíveis com a API da OpenAI', 'Ideal para': 'Escritores que querem assistência de IA em nível de capítulo dentro de um único app focado em romances' },
+          { 'Ferramenta': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integração': 'Fluxo de trabalho manual: estruture romances no Plottr, cole cenas/beats no Ollama externamente (o Plottr afirma que não vai adicionar recursos de IA)', 'Ideal para': 'Ficção de gênero com muito enredo (mistério, thriller, fantasia) onde o traçado estrutural do enredo é o eixo do fluxo de trabalho' },
         ],
         callouts: [
           {
@@ -2507,22 +2579,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Recomendações de modelos para trabalhos de formato longo',
         content:
-          '**A redação de formato longo tem requisitos de modelo diferentes dos da ficção de formato curto.** A aderência ao contexto, a consistência no seguimento de instruções ao longo de sessões extensas e a capacidade de manter a voz em múltiplas chamadas de geração são os fatores decisivos. Para o panorama mais amplo de modelos em todos os casos de uso, consulte [Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026).',
+          '**A redação de formato longo tem requisitos de modelo diferentes dos da ficção de formato curto.** A aderência ao contexto, a consistência no seguimento de instruções ao longo de sessões extensas e a capacidade de manter a voz em múltiplas chamadas de geração são os fatores decisivos. As linhas abaixo são pontos de partida tirados do cartão de cada modelo; a PromptQuorum não avaliou esses modelos para ficção, e os rankings públicos de escrita criativa classificam os modelos de formas diferentes, então teste dois candidatos com uma cena sua. Modelos abertos de classe servidor, como o Command A+ (218 bilhões de parâmetros no total, 25 bilhões ativos, Apache 2.0) e o Mistral Large 3 (675 bilhões de parâmetros no total, contexto de 256K, Apache 2.0), ficam fora do alcance de hardware de consumo. Para o panorama mais amplo de modelos em todos os casos de uso, veja [Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026).',
         columns: ['Tarefa', 'Modelo recomendado', 'Por quê'],
         rows: [
-          { 'Tarefa': 'Redação de romance (principal)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Melhor aderência ao contexto e seguimento de instruções para trabalhos de formato longo de múltiplas sessões; voz mais consistente' },
-          { 'Tarefa': 'Redação de roteiro', 'Modelo recomendado': 'Llama 3.3 70B ou Mistral Large', 'Por quê': 'Llama 3.3 para dinâmicas de personagens complexas; Mistral Large para aderência consistente ao formato na saída Fountain' },
-          { 'Tarefa': 'Geração de beat sheet / esboço', 'Modelo recomendado': 'Qwen3 32B', 'Por quê': 'Geração estrutural forte; segue de forma confiável prompts de esboço com listas numeradas e restrições rígidas' },
-          { 'Tarefa': 'Passagens de diálogo', 'Modelo recomendado': 'Command A+', 'Por quê': 'Melhor registro de fala naturalista e diferenciação de voz de personagem em trocas estendidas' },
-          { 'Tarefa': 'Revisão (estrutural)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Melhor em seguir restrições estruturais específicas nomeadas em instruções de reescrita' },
-          { 'Tarefa': 'Ficção madura / sombria', 'Modelo recomendado': 'Hermes 3 Llama 3.1 70B', 'Por quê': 'Mesma base que o Llama 3.3 70B; fine-tune sem censura; aderência ao contexto idêntica para trabalhos de formato longo' },
+          { 'Tarefa': 'Redação de romance (principal)', 'Modelo recomendado': 'Qwen3.6 27B ou Gemma 4 31B', 'Por quê': 'Modelos densos de 27B–31B com contexto anunciado de 256K+ e licenças Apache; uma classe de tamanho que cabe em uma GPU de 24 GB ou em 32 GB+ de memória unificada em 4 bits (estimativa)' },
+          { 'Tarefa': 'Redação de roteiro', 'Modelo recomendado': 'Qwen3.6 27B ou Llama 3.3 70B', 'Por quê': 'A aderência ao formato depende sobretudo do prompt do sistema; teste uma cena em Fountain com dois modelos. O Llama 3.3 70B é denso, anuncia contexto de 128K e precisa de cerca de 40 GB em 4 bits (estimativa)' },
+          { 'Tarefa': 'Geração de beat sheet / esboço', 'Modelo recomendado': 'Qwen3.6 35B-A3B', 'Por quê': 'Mistura de especialistas com 3B de 35B parâmetros ativos por token (Apache-2.0), por isso gera mais rápido por token; a PromptQuorum não avaliou a qualidade dos esboços' },
+          { 'Tarefa': 'Passagens de diálogo', 'Modelo recomendado': 'O modelo cujas amostras combinem', 'Por quê': 'Faça o diálogo como passagem separada com o modelo cujas linhas de calibração combinem com o registro do seu personagem; não há ranking verificado de modelos para diálogo' },
+          { 'Tarefa': 'Revisão (estrutural)', 'Modelo recomendado': 'O modelo com o qual você redigiu', 'Por quê': 'Prompts de revisão que nomeiam uma restrição estrutural por chamada funcionam com qualquer modelo que siga instruções; uma cena por chamada' },
+          { 'Tarefa': 'Ficção madura / sombria', 'Modelo recomendado': 'Hermes 4 70B', 'Por quê': 'Base Llama-3.1-70B; a Nous Research descreve um alinhamento em geral neutro e menos recusas; licença Llama 3; modo de raciocínio híbrido' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Erros comuns',
         items: [
-          '**Colar o manuscrito completo no contexto.** Mesmo com uma janela de contexto de 128K, a qualidade de atenção se degrada significativamente após 32K tokens. Use a técnica do documento de sessão — fichas de personagens e resumos de capítulos comprimidos.',
+          '**Colar o manuscrito completo no contexto.** Mesmo quando um modelo anuncia uma janela de 128K–262K, entradas longas são usadas com menos confiabilidade, então planeje cerca de 32K tokens. Use a técnica do documento de sessão — fichas de personagens e resumos de capítulos comprimidos.',
           '**Pedir ao modelo que "continue" um documento aberto.** "Continue o romance" produz desvio. "Escreva a próxima cena: [configuração específica, ponto de vista, limite de palavras]" produz uma saída consistente e delimitada que você pode avaliar e colar.',
           '**Sem beat sheets para roteiros.** Gerar páginas de roteiro sem um beat de cena produz páginas que desviam em comprimento e perdem a sua função estrutural. Gere sempre o beat sheet primeiro.',
           '**Ignorar as atualizações do documento de sessão.** Se você não atualizar o resumo do capítulo depois de gerar uma cena, o documento de sessão fica obsoleto. Um documento de sessão obsoleto produz inconsistências em poucas sessões.',
@@ -2533,10 +2605,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          'Benchmarks de contexto longo do Llama 3.3 70B — [Meta AI Research](https://ai.meta.com)',
-          'Relatório técnico do Qwen3 32B com benchmarks de janela de contexto — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'Especificação do formato de roteiro Fountain — [Fountain.io](https://fountain.io)',
+          '[Cartão de modelo Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) e [cartão de modelo Qwen3.6-35B-A3B](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — parâmetros, contexto nativo de 262.144 tokens, extensão YaRN, Apache-2.0, consultados em 26 de outubro de 2026',
+          '[Cartão de modelo Gemma 4 31B](https://huggingface.co/google/gemma-4-31B-it) — 31B denso, contexto de 256K, Apache 2.0, consultado em 26 de outubro de 2026',
+          '[Cartão de modelo Llama 3.3 70B Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B, contexto de 128K, Llama 3.3 Community License, publicado em 6 de dezembro de 2024',
+          '[Cartão de modelo Hermes 4 70B](https://huggingface.co/NousResearch/Hermes-4-70B) — base Llama-3.1-70B, raciocínio híbrido, "broadly neutral alignment"',
+          '[Cartão de modelo Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6) — 1 trilhão de parâmetros no total e 32 bilhões ativos, contexto de 256K, int4 nativo',
+          '[Documentação do Command A+](https://docs.cohere.com/docs/command-a-plus) e [cartão de modelo Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — contagem de parâmetros e licenças dos modelos de classe servidor',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu et al., 2023',
+          '[Fountain.io](https://fountain.io) — especificação do formato de roteiro Fountain e [lista de apps](https://fountain.io/apps)',
+          '[Central de ajuda do Final Draft](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — informa que o Final Draft não importa arquivos .fountain diretamente',
+          '[Regras de IA da Amazon KDP, Publishers Weekly](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html) e [envios à Clarkesworld](https://clarkesworldmagazine.com/submissions/) — políticas de IA de editoras e plataformas; confira o texto vigente antes de enviar',
+          '[Notas de versão do Scrivener](https://www.literatureandlatte.com/scrivener/release-notes) — versões 3.4.0 a 3.5.2 (dezembro de 2025): sem entradas de plugins ou API; "Scrivener itself contains no AI"; consultadas em 26 de outubro de 2026',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/) e [ajuda do NovelCrafter sobre conexões de IA](https://www.novelcrafter.com/help/categories/ai-connections) — o Plottr afirma que não está desenvolvendo recursos de IA; o NovelCrafter lista conexões com LM Studio, Ollama e endpoints compatíveis com a API da OpenAI',
           'Documentação da API do Ollama — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -2546,11 +2626,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Um LLM local pode escrever um romance completo?',
-            a: 'Um LLM local pode gerar a prosa de um romance completo — mas a inteligência estrutural e editorial precisa vir do escritor. O modelo gera cenas quando recebe configurações específicas; ele não planeja, avalia nem toma decisões temáticas de forma autônoma. Os escritores que usam LLMs locais como ferramentas de rascunho os descrevem como "um gerador de primeiro rascunho muito rápido para cenas que eu já sei como escrever". O modelo economiza tempo no problema da página em branco; o escritor continua tomando todas as decisões significativas.',
+            a: 'Um LLM local pode gerar a prosa de um romance completo, mas a inteligência estrutural e editorial precisa vir do escritor. O modelo gera cenas quando recebe configurações específicas; ele não planeja, avalia nem toma decisões temáticas sozinho. Pense nele como um gerador rápido de primeiros rascunhos de cenas que você já sabe escrever: economiza tempo diante da página em branco, enquanto o escritor continua tomando todas as decisões importantes. Confira as políticas de IA das editoras e plataformas antes de enviar (veja a pergunta sobre editores abaixo).',
           },
           {
             q: 'Qual é a janela de contexto máxima que eu posso usar de forma confiável?',
-            a: 'Na prática, planeje uma qualidade de atenção confiável de até cerca de 32K tokens (~24.000 palavras) com a maioria dos modelos locais, incluindo Llama 3.3 70B e Qwen3 32B. Além disso, os modelos começam a perder a referência precisa ao conteúdo do início do contexto. A técnica do documento de sessão mantém o contexto de trabalho abaixo de 4.000–6.000 tokens, o que significa que cada chamada de geração opera na parte mais confiável da janela de atenção.',
+            a: 'Os modelos anunciam de 128K a 262.144 tokens, mas a PromptQuorum recomenda planejar cerca de 32K tokens (~24.000 palavras) por geração, porque pesquisas sobre contextos longos mostram que os modelos usam com menos confiabilidade o meio de entradas longas. É uma regra de planejamento prudente, não um limite medido para todos os modelos, então teste o seu. A técnica do documento de sessão mantém o contexto de trabalho abaixo de 4.000–6.000 tokens, de modo que cada chamada de geração fica bem dentro dessa faixa.',
           },
           {
             q: 'Como eu evito que o modelo mude a voz do meu personagem no meio do romance?',
@@ -2558,11 +2638,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usar o Scrivener com um LLM local?',
-            a: 'Não de forma nativa — o Scrivener não tem um sistema de plugins para chamadas a API externas a partir de 2026. O fluxo de trabalho mais comum é: gerar no Ollama (por meio do terminal ou de um script de acompanhamento), copiar a saída, colá-la no documento correspondente do Scrivener. Alguns escritores usam o Obsidian como a camada de rascunho com IA e importam os capítulos concluídos para o Scrivener para a estruturação final. Os scripts que chamam a API do Ollama e copiam a saída para a área de transferência são o mais próximo de uma integração nativa.',
+            a: 'Não nativamente — o Scrivener 3 não documenta nenhum sistema de plugins, e suas notas de versão oficiais até a 3.5.2 (dezembro de 2025) não mencionam integração de IA: as notas da 3.4.0 dizem "Scrivener itself contains no AI" e acrescentam suporte às Writing Tools da Apple, um recurso de sistema do macOS. Um fluxo comum é: gerar no Ollama (pelo terminal ou com um script auxiliar), copiar a saída e colá-la no documento correspondente do Scrivener. Alguns escritores usam o Obsidian como camada de redação com IA e importam os capítulos prontos para o Scrivener para a estruturação final. Scripts que chamam a API do Ollama e copiam a saída para a área de transferência são o que mais se aproxima de uma integração nativa.',
           },
           {
             q: 'O que é melhor para redigir roteiros: Ollama ou uma IA na nuvem?',
-            a: 'Para roteiristas que precisam gerar conteúdo maduro (violência, psicologia sombria, personagens moralmente complexos), o Ollama local com Llama 3.3 70B ou Hermes 3 é mais confiável — os modelos na nuvem recusam conteúdo específico que muitas vezes aparece em roteiros dramáticos. Para a consistência de formato e a disciplina da contagem de páginas, tanto os modelos na nuvem quanto os locais têm um desempenho equivalente quando recebem instruções de formato no prompt do sistema. A escolha é principalmente sobre liberdade de conteúdo e privacidade, não sobre a qualidade da saída.',
+            a: 'Para roteiristas que precisam gerar conteúdo maduro (violência, psicologia sombria, personagens moralmente complexos), um modelo local dá controle sobre o modelo e seu comportamento de recusa — alguns modelos hospedados recusam ou suavizam conteúdo que aparece em roteiros dramáticos, e as políticas de serviços hospedados mudam com o tempo. Um modelo local com poucas recusas, como o Hermes 4 70B, tem menos recusas embutidas, embora você continue responsável pelo conteúdo que gera e publica. A consistência de formato depende sobretudo das instruções no prompt do sistema, que funcionam nos dois casos. A escolha é principalmente sobre controle de conteúdo, privacidade e custo; a PromptQuorum não comparou a qualidade de saída entre modelos hospedados e locais para roteiro.',
           },
           {
             q: 'Como eu gero diálogo que soe como um personagem específico?',
@@ -2570,23 +2650,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Preciso de uma GPU para usar um LLM local na redação de romances?',
-            a: 'Uma GPU acelera significativamente a velocidade de geração, mas não é obrigatória. No Apple Silicon (M3 ou posterior), a arquitetura de memória unificada significa que até um MacBook Pro 16 GB pode executar o Qwen3 14B confortavelmente para trabalhos de rascunho — a velocidade de geração é mais lenta que um equipamento com GPU de 24 GB, mas aceitável para um fluxo de trabalho de escrita em que você está lendo e avaliando a saída entre gerações. Uma GPU NVIDIA dedicada com 24 GB de VRAM (RTX 4090, RTX 3090) executa modelos de 70B a velocidades de geração utilizáveis.',
+            a: 'Uma GPU acelera bastante a geração, mas não é obrigatória. Em Apple Silicon, a memória unificada permite que um MacBook Pro de 16 GB execute modelos menores (aproximadamente a classe de 8B–14B em 4 bits, uma estimativa) — mais lento que um equipamento com GPU de 24 GB, mas aceitável quando você lê e avalia a saída entre as gerações. Uma GPU NVIDIA de 24 GB (RTX 4090, RTX 3090) comporta modelos da classe 27B–32B em 4 bits (estimativa); modelos da classe 70B precisam de cerca de 40 GB ou mais em 4 bits, portanto exigem duas GPUs, uma placa de 48 GB, 64 GB de memória unificada ou descarga para a CPU, mais lenta.',
           },
           {
             q: 'Posso usar LLMs locais com o Final Draft ou outro software profissional de roteiros?',
-            a: 'Não diretamente. O Final Draft não tem integração de API externa. O fluxo de trabalho é: gere páginas de roteiro em formato de texto puro Fountain por meio do Ollama, depois importe o arquivo Fountain para o Final Draft usando o seu importador integrado (Arquivo → Importar → Fountain). Highland, WriterDuet e Fade In suportam a importação de Fountain de forma nativa. Gere no Ollama, formate como Fountain, importe para o seu software de roteiros.',
+            a: 'Não diretamente. Segundo a central de ajuda do Final Draft, o Final Draft não importa arquivos .fountain; a orientação é salvar o texto como .txt simples e escolher Script (não Text) ao importar, ou trazê-lo como FDX a partir de um app que exporte esse formato. O Highland converte entre Fountain, FDX e PDF, e o Fade In importa e exporta Fountain (conforme o diretório de apps do Fountain). Fluxo: gere texto em formato Fountain no Ollama, abra-o no Highland ou no Fade In e exporte FDX para o Final Draft.',
           },
           {
             q: 'Posso usar o Kimi-K2.6 localmente para redigir romances?',
-            a: 'O Kimi-K2.6 tem uma janela de contexto genuína de 1 milhão de tokens — útil para trabalhos de extensão de romance em uma única passada — mas é impraticável executá-lo localmente em hardware de consumidor (aproximadamente 480 GB de VRAM em quantização Q4). Para fluxos de trabalho totalmente locais, a técnica do documento de sessão com Llama 3.3 70B (contexto de 128K, ~32K prático) lida com trabalhos de extensão de romance sem precisar do teto de 1M. A maioria dos escritores não precisa realmente de 1M de contexto se o fluxo de trabalho do documento de sessão for aplicado.',
+            a: 'O Kimi-K2.6 anuncia uma janela de contexto de 256K tokens, da mesma classe do Qwen3.6 27B e do Gemma 4 31B, mas é um modelo de mistura de especialistas com cerca de 1 trilhão de parâmetros no total (32 bilhões ativos) e pesos int4 nativos. Só os pesos somam cerca de 500 GB (estimativa da PromptQuorum), então ele exige um servidor com várias GPUs ou um equipamento com memória unificada enorme e é impraticável em hardware de consumo. Para fluxos totalmente locais, um modelo denso de 27B–70B com a técnica do documento de sessão cobre trabalhos do tamanho de um romance sem um modelo de um trilhão de parâmetros.',
           },
           {
             q: 'O que os editores acham dos manuscritos assistidos por IA?',
-            a: 'Opinião mista e em evolução a partir de 2026. A maioria das grandes editoras de ficção (as Cinco Grandes, editoras literárias de porte médio) tem políticas que exigem a divulgação do uso substancial de IA nos manuscritos enviados; algumas o proíbem por completo. As plataformas de autopublicação (Amazon KDP) exigem a confirmação de que o conteúdo gerado por IA está divulgado. As editoras de gênero e os mercados de ficção curta estão divididos. Os escritores que usam LLMs locais como ferramentas de rascunho (com revisão humana substancial) geralmente descrevem a IA como uma ferramenta em vez de coautora, o que a maioria das políticas aceita. Verifique a política específica da editora antes de enviar.',
+            a: 'As políticas variam conforme a editora e a plataforma e continuam mudando em 2026, então confira a específica antes de enviar. A Amazon KDP exige que você informe quando texto, imagens ou traduções são gerados por IA e trata o conteúdo criado por uma ferramenta de IA como gerado por IA mesmo após edição substancial; texto que você mesmo escreveu e que a IA apenas ajudou a editar ou refinar é "assistido por IA" e não precisa ser declarado (conforme as regras da Amazon relatadas pela Publishers Weekly em setembro de 2023). Algumas revistas rejeitam de vez trabalhos com IA — as diretrizes de envio da Clarkesworld dizem que ela não considera histórias escritas, coescritas ou assistidas por IA. O texto de cenas gerado por um LLM local se enquadra em definições como a de "gerado por IA" da KDP, então declare-o onde for exigido. Estas são informações gerais, não aconselhamento jurídico.',
           },
           {
-            q: 'Qual hardware eu preciso para modelos de contexto de 1M?',
-            a: 'Executar um modelo de contexto de 1M localmente requer muito mais VRAM que os fluxos de trabalho típicos de LLM local — o Kimi-K2.6 precisa de aproximadamente 480 GB em quantização Q4, alcançável apenas com configurações de servidor multi-GPU (8x H100 ou equivalente). Para hardware de consumidor (equipamentos de 24–64 GB de VRAM), os modelos de contexto de 128K são o teto prático, e o limite prático de qualidade de atenção de 32K se aplica. A técnica do documento de sessão deste artigo foi projetada precisamente para essa lacuna — obter resultados de formato longo consistentes sem precisar de contexto de 1M.',
+            q: 'Qual hardware eu preciso para contextos de um milhão de tokens?',
+            a: 'O Qwen3.6 27B e o Qwen3.6 35B-A3B anunciam um contexto nativo de 262.144 tokens que, segundo os cartões de modelo, pode ser estendido a cerca de 1.010.000 tokens com escalonamento YaRN. Um contexto longo precisa de memória para o cache KV além dos pesos, então uma execução com um milhão de tokens exige muito mais memória do que uma configuração de consumo típica; a PromptQuorum não mediu o requisito. A técnica do documento de sessão deste artigo foi pensada exatamente para essa lacuna: saída consistente de formato longo sem depender de uma janela de um milhão de tokens.',
           },
         ],
       },
@@ -2613,20 +2693,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-13',
+      dateModified: '2026-10-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
     },
 },
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ar.webp',
     title: 'صياغة الروايات والسيناريوهات بالنماذج اللغوية المحلية: دليل سير العمل لأكثر من ⁨100⁩,⁨000⁩ كلمة',
-    seoTitle: 'كتابة الروايات والسيناريوهات بنماذج ⁨LLM⁩ المحلية ⁨2026⁩',
+    seoTitle: 'كتابة الروايات والسيناريوهات بـ⁨LLM⁩ محلي ⁨2026⁩',
     intro:
       'تُتيح النماذج اللغوية المحلية المدمجة في سير عمل كتابة الروايات والسيناريوهات توليد مسودات المشاهد والبيت شيت ومراجعات الحوار وجولات المراجعة بدون اتصال إنترنت أو تسجيل سحابي أو قيود على الاستخدام. يغطي هذا الدليل سير العمل الكامل: اختيار النماذج وإدارة نافذة السياق للأعمال الطويلة والسقالات الفصلية وتوليد المشاهد والأدوات التي تربط النموذج اللغوي المحلي ببرنامج الكتابة الخاص بك.',
     metaDescription:
@@ -2634,11 +2715,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'كيفية استخدام النماذج اللغوية المحلية لصياغة الروايات والسيناريوهات: إدارة نافذة السياق والسقالات الفصلية وتوليد المشاهد ومراجعات الحوار وتكاملات الأدوات.',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2659,22 +2740,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'توليد مشاهد نموذج محلي',
     ],
     leadAnswerBlock:
-      '**أكبر تحدٍّ تقني للكتّاب الذين يستخدمون النماذج اللغوية المحلية في الأعمال الطويلة هو إدارة نافذة السياق: معظم النماذج المحلية لها نافذة سياق 128K على الورق، لكن جودة الانتباه تتدهور بشكل ملحوظ بعد 32K رمز (~24,000 كلمة) من الناحية العملية. الحل هو حقن السياق المُهيكل — تقنية "وثيقة الجلسة": الاحتفاظ بملخص مضغوط للفصول السابقة وإعداد المشهد الحالي وبطاقات الشخصيات ذات الصلة، وحقن هذه العناصر فقط في بداية كل جلسة كتابة. مقترنة بتوليد مشهد بمشهد، ينتج هذا النهج نتائج طويلة الشكل متسقة بأي طول للرواية. بالنسبة لكتابة السيناريو بشكل خاص، يُنتج سير عمل البيت شيت أولاً — حيث يُولَّد بيت شيت على مستوى المشاهد قبل أي نثر — صفحات سيناريو منسقة تتطابق مع الهيكل بدلاً من الانحراف عنه.**',
+      '**التحدي الرئيسي للنماذج المحلية في الخيال الطويل هو إدارة السياق: خطِّط لنحو 32,000 رمز في كل عملية توليد، وأعطِ النموذج بدلاً من المخطوطة كاملة "وثيقة جلسة" مضغوطة (بطاقات الشخصيات وملخصات الفصول وإعداد المشهد الحالي)، مشهداً واحداً في كل مرة.**',
     quickAnswerTop: {
       ar: {
         question: 'كيف تستخدم نموذجاً لغوياً محلياً لكتابة رواية أو سيناريو دون فقدان السياق؟',
         answer:
-          'التقنية الأساسية هي حقن السياق المُهيكل: بدلاً من لصق المخطوطة بالكامل في نافذة السياق، احتفظ بوثيقة جلسة مضغوطة: بطاقة شخصية (الاسم والسمة المهيمنة وسجل الكلام)، ملخص حبكة الفصول المكتملة (100–200 كلمة لكل فصل)، وإعداد المشهد الحالي. احقن هذه الوثيقة في بداية كل جلسة كتابة. ولِّد مشهداً واحداً في كل مرة — لا تطلب من النموذج أبداً "الاستمرار" في وثيقة متنامية تتجاوز 32K رمز.',
+          'التقنية الأساسية هي حقن السياق المُهيكل: بدلاً من لصق المخطوطة بالكامل في نافذة السياق، احتفظ بوثيقة جلسة مضغوطة: بطاقة شخصية (الاسم والسمة المهيمنة وسجل الكلام)، ملخص حبكة الفصول المكتملة (100–200 كلمة لكل فصل)، وإعداد المشهد الحالي (البيت، وجهة النظر، سقف الكلمات). احقن هذه الوثيقة في بداية كل جلسة كتابة. ولِّد مشهداً واحداً في كل مرة بدلاً من مطالبة النموذج بمواصلة وثيقة متنامية. ولأن كل استدعاء يحمل الحالة المضغوطة فقط، فإن الأسلوب يتسع لأي طول من الروايات ويقلل انجراف السياق وفقدان الصوت اللذين يشير إليهما الكتّاب عند محاولة حشر مخطوطة كاملة في نافذة سياق طويلة واحدة.',
         bullets: [
           'تقنية وثيقة الجلسة: احقن بطاقات الشخصيات + ملخصات الفصول + إعداد المشهد الحالي في بداية الجلسة.',
-          'ولِّد مشهداً واحداً في كل مرة — لا تستمر أبداً فوق 32K رمز.',
+          'ولِّد مشهداً واحداً في كل مرة — تجنب مطالبة النموذج بـ"الاستمرار" في وثيقة متنامية تتجاوز نحو 32K رمز.',
           'البيت شيت أولاً لكتابة السيناريو: ولِّد البيت شيت قبل أي نثر؛ استخدمه كسقالة هيكلية.',
-          'أفضل نموذج للأعمال الطويلة: Llama 3.3 70B (التزام قوي بالسياق، أفضل اتباع للتعليمات).',
-          'Ollama + Obsidian أو Scrivener هو سير العمل الأكثر شيوعاً للكتّاب.',
-          'واقع نافذة السياق: 128K هو الحد التقني؛ 32K رمز هو السقف العملي للجودة لمعظم النماذج.',
-          'النماذج غير المقيدة (Hermes 3) تندمج في سير العمل هذا بدون تغييرات في الإعداد.',
+          'نماذج للبدء (مواصفات من بطاقات النماذج): Qwen3.6 27B وGemma 4 31B وLlama 3.3 70B؛ لم تقيّمها PromptQuorum للخيال.',
+          'Ollama + Obsidian سير عمل شائع بين الكتّاب؛ أما Scrivener فلا يوثّق أي API للإضافات، لذا يُلصق الناتج.',
+          'قاعدة تخطيط نافذة السياق: تعلن النماذج عن 128K–262,144 رمزاً؛ خطِّط لنحو 32K في كل عملية توليد لأن جودة السياقات الطويلة غير متسقة.',
+          'النماذج المضبوطة بقليل من الرفض مثل Hermes 4 70B تعمل بسير العمل نفسه للخيال الناضج؛ تحقق من ترخيص كل نموذج.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -2697,26 +2778,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**واقع نافذة السياق: 128K رمز على الورق، 32K رمز من الناحية العملية.** تتدهور جودة الانتباه في معظم النماذج المحلية بشكل ملحوظ بعد 32K رمز (~24,000 كلمة). لا تلصق المخطوطة كاملة في نافذة السياق — استخدم تقنية وثيقة الجلسة.',
+          '**قاعدة تخطيط نافذة السياق: 128K–262,144 رمزاً معلنة، ونحو 32K مخطَّطة.** تستخدم النماذج منتصف المدخلات الطويلة بموثوقية أقل ("Lost in the Middle")؛ خطِّط لنحو 32K رمز (~24,000 كلمة) في كل عملية توليد واستخدم تقنية وثيقة الجلسة بدلاً من المخطوطة كاملة.',
           '**تقنية وثيقة الجلسة هي المهارة الأساسية.** احتفظ بملف نصي مضغوط يحتوي: بطاقات الشخصيات النشطة (150 كلمة لكل شخصية)، ملخصات الفصول (100–200 كلمة لكل فصل مكتمل)، وإعداد المشهد الحالي. احقنه في بداية كل جلسة توليد.',
-          '**ولِّد مشهداً واحداً في كل مرة.** اطلب من النموذج كتابة مشهد (200–600 كلمة) لكل جلسة بدلاً من طلب "الاستمرار" في وثيقة متنامية. مشهد واحد لكل جلسة يُزيل انجراف السياق وينتج صوتاً متسقاً.',
+          '**ولِّد مشهداً واحداً في كل مرة.** اطلب من النموذج كتابة مشهد (200–600 كلمة) لكل جلسة بدلاً من طلب "الاستمرار" في وثيقة متنامية. مشهد واحد لكل جلسة يقلل انجراف السياق ويساعد على إبقاء الصوت متسقاً.',
           '**البيت شيت أولاً لكتابة السيناريو.** قبل توليد صفحات السيناريو، ولِّد بيت شيت على مستوى المشاهد. استخدمه كسقالة لكل توليد صفحة.',
-          '**Llama 3.3 70B هو أفضل نموذج للأعمال الطويلة.** التزام قوي بالسياق، وأفضل اتباع للتعليمات في التوليدات الأطول، واتساق موثوق في صوت الشخصية عبر الجلسات الممتدة.',
-          '**Ollama + أداة كتابة نص عادي هو التكامل الأكثر موثوقية.** Scrivener وObsidian وVS Code تعمل كطبقة مخطوطة؛ يخدم Ollama النموذج عبر API يمكن للتطبيقات أو السكريبتات استدعاؤها.',
-          '**النماذج غير المقيدة (Hermes 3) تندمج في سير العمل هذا بدون تغييرات في الإعداد.** للخيال الناضج، غيِّر نموذج Ollama إلى Hermes 3؛ تقنيات وثيقة الجلسة وتوليد المشاهد متطابقة.',
+          '**اختر نموذجاً يمكنك تشغيله ثم جرِّبه على مشهد من كتابتك.** النماذج الكثيفة من فئة 27B–31B (Qwen3.6 27B وGemma 4 31B) وLlama 3.3 70B نقاط انطلاق شائعة؛ لم تقيّم PromptQuorum أياً منها للخيال، وتصنّف لوحات الصدارة العامة للكتابة الإبداعية النماذج بشكل مختلف.',
+          '**Ollama + أداة كتابة نص عادي تكامل يمكن الاعتماد عليه.** يمكن لـ Scrivener وObsidian وVS Code استضافة المخطوطة؛ ويخدم Ollama النموذج عبر API يمكن للتطبيقات أو السكريبتات استدعاؤها.',
+          '**النماذج المضبوطة بقليل من الرفض (Hermes 4 70B) تندمج في سير العمل هذا بدون تغييرات في الإعداد.** للخيال الناضج، غيِّر نموذج Ollama؛ تقنيات وثيقة الجلسة وتوليد المشاهد متطابقة. تحقق من ترخيص كل نموذج لاستخدامك.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**أفضل نموذج للخيال الطويل:** Llama 3.3 70B (أقوى التزام بالسياق واتباع للتعليمات).',
-          '**الحد العملي لنافذة السياق:** ~32K رمز (~24,000 كلمة) لجودة انتباه موثوقة؛ 128K هو السقف التقني.',
+          '**نماذج للبدء (من بطاقات النماذج):** Qwen3.6 27B (كثيف، Apache-2.0، سياق 262,144 رمز)، Gemma 4 31B (كثيف، Apache-2.0، سياق 256K)، Llama 3.3 70B (كثيف، سياق 128K، Llama 3.3 Community License).',
+          '**حد تخطيط نافذة السياق:** ~32K رمز (~24,000 كلمة) في كل عملية توليد؛ تعلن النماذج عن 128K–262,144 رمزاً، وهذا سقف وليس ضماناً للجودة.',
           '**حجم وثيقة الجلسة:** الهدف أقل من 4,000 رمز (بطاقات الشخصيات + ملخصات الفصول + إعداد المشهد الحالي).',
           '**هدف توليد المشاهد:** 200–600 كلمة لكل استدعاء توليد؛ مشاهد أطول عبر أوامر تسلسلية متعددة.',
           '**تنسيق السيناريو:** اجمع Ollama مع تعليمات إخراج بتنسيق Fountain لنص منسق كسيناريو.',
-          '**أدوات الكتابة التي تعمل مع Ollama:** Scrivener (عبر سكريبتات API مرافقة)، Obsidian (عبر إضافة محلية أو سكريبتات)، VS Code (عبر Continue.dev أو استدعاءات API مباشرة)، الطرفية الخالصة.',
-          '**الخيار غير المقيد:** Hermes 3 Llama 3.1 للخيال الناضج؛ نفس سير العمل، نفس تقنية وثيقة الجلسة.',
+          '**أدوات الكتابة التي تعمل مع Ollama:** Scrivener (الصق الناتج؛ بلا API موثّقة للإضافات)، Obsidian (عبر إضافة محلية أو سكريبتات)، VS Code (عبر Continue.dev أو استدعاءات API مباشرة)، الطرفية الخالصة.',
+          '**خيار قليل الرفض:** Hermes 4 70B (أساس Llama-3.1-70B) للخيال الناضج؛ نفس سير العمل، نفس تقنية وثيقة الجلسة.',
         ],
       },
       contextWindow: {
@@ -2724,29 +2805,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مشكلة نافذة السياق للكتابة الطويلة',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          'موثوقية نافذة السياق في النماذج اللغوية المحلية: السقف العملي للانتباه هو 32 ألف رمز (نحو 24,000 كلمة) مقابل الحد التقني البالغ 128 ألف رمز، لنماذج Llama 3.3 70B وQwen3 32B وMistral Large؛ نافذة المليون رمز في Kimi-K2.6 تتطلب نحو 480 غيغابايت من ذاكرة VRAM بدقة Q4.',
+          'تخطيط السياق: حد عمل بـ32K رمز (~24,000 كلمة) مقابل 128K–262,144 رمز تعلنها النماذج المفتوحة.',
         content:
-          '**الحد العملي للسياق لمعظم النماذج المحلية هو 32,000 رمز — ليس 128K المُعلن عنه.** تتدهور جودة الانتباه (قدرة النموذج على الإشارة بدقة إلى المحتوى السابق) في معظم النماذج بعد 32,000 رمز. عند 128K رمز، تفقد كثير من النماذج الإشارة الدقيقة إلى محتوى الربع الأول من السياق. بالنسبة للرواية، هذا يعني أنك لا تستطيع ببساطة لصق المسودة حتى الآن وطلب الفصل التالي.\n\nيوفر Kimi-K2.6 من Moonshot AI نافذة سياق حقيقية بمليون رمز مع حفاظ أقوى على جودة الانتباه. تشغيل Kimi-K2.6 محلياً غير عملي لمعظم الكتّاب — يتطلب ~480 GB من VRAM بتكميم Q4. للكتّاب الذين يستخدمون نماذج قابلة للتشغيل محلياً (Llama 3.3 70B وQwen3 32B وMistral Large)، فإن السقف العملي البالغ 32K هو القيد ذو الصلة.',
+          '**خطِّط لنحو 32K رمز في كل عملية توليد، حتى عندما يعلن النموذج عن أكثر من ذلك بكثير.** هذه قاعدة تخطيط حذرة من PromptQuorum وليست حداً مقيساً: وجدت أبحاث السياقات الطويلة (Liu وآخرون، "Lost in the Middle") أن النماذج تستخدم المعلومات في بداية المدخل الطويل ونهايته بموثوقية أكبر من المعلومات في منتصفه، وأن الجودة قد تنخفض كلما طال المدخل. وتعلن النماذج الأحدث عن نوافذ أكبر بكثير — يعلن Qwen3.6 27B عن 262,144 رمزاً أصلياً ويعلن Gemma 4 31B عن 256K — لذا اختبر نموذجك بنفسك. وبالنسبة للرواية، يبقى لصق المخطوطة حتى الآن وطلب الفصل التالي هو الأسلوب الأقل موثوقية، كما أن السياق الطويل يستهلك ذاكرة أكبر لأن ذاكرة KV المؤقتة تنمو معه.\n\nيعلن Kimi-K2.6 من Moonshot AI عن نافذة سياق بحجم 256K رمز (262,144)، من الفئة نفسها للنماذج المذكورة أعلاه، لكنه نموذج مزيج خبراء بنحو تريليون معامل إجمالي (32 مليار نشط) وأوزان int4 أصلية. وحتى عند 4 بت تبلغ الأوزان وحدها نحو 500 GB (تقدير PromptQuorum: تريليون معامل × 0.5 بايت)، فهو نموذج بفئة الخوادم لا الحواسيب المحمولة. وتنطبق تقنية وثيقة الجلسة والتوليد مشهداً بمشهد على النماذج القابلة للتشغيل محلياً مهما كان حجم سياقها.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'السقف العملي للجودة للالتزام بالسياق في معظم النماذج اللغوية المحلية هو حوالي 32,000 رمز (~24,000 كلمة) — بعد ذلك، تفقد النماذج الإشارة الدقيقة إلى المحتوى السابق، مما يتسبب في انجراف الصوت وتناقضات الحبكة.',
+            text: 'سقف التخطيط الحذر للالتزام بالسياق في النماذج اللغوية المحلية هو نحو 32,000 رمز (~24,000 كلمة) في كل عملية توليد — وبعد ذلك تجد أبحاث السياقات الطويلة استخداماً أقل موثوقية للمحتوى السابق، وقد يظهر ذلك كانجراف في الصوت وتناقضات في الحبكة عبر مخطوطة طويلة.',
           },
           {
             type: 'plain-terms',
-            text: 'لا يمكنك إدراج رواية من 90,000 كلمة في نافذة سياق 128K وتوقع أن يتذكر النموذج ما حدث في الفصل الثالث بينما يكتب الفصل العشرين. بدلاً من ذلك، اضغط ما يحتاج النموذج معرفته — بطاقات الشخصيات وملخصات الفصول وإعداد المشهد الحالي — في "وثيقة جلسة" بأقل من 4,000 رمز، واحقن ذلك في بداية كل جلسة كتابة.',
+            text: 'لا يمكنك أن تتوقع أن يتذكر النموذج ما حدث في الفصل الثالث وهو يكتب الفصل العشرين لمجرد أن المخطوطة كلها تتسع في نافذة سياقه. بدلاً من ذلك، اضغط ما يحتاج النموذج معرفته — بطاقات الشخصيات وملخصات الفصول وإعداد المشهد الحالي — في "وثيقة جلسة" بأقل من 4,000 رمز، واحقن ذلك في بداية كل جلسة كتابة. يحتاج النموذج فقط إلى معرفة ما يخص المشهد الذي يولّده الآن.',
           },
         ],
         items: [
-          '**تحويل الرمز إلى كلمة:** 1 رمز ≈ 0.75 كلمة إنجليزية. 32K رمز ≈ 24,000 كلمة. 128K رمز ≈ 96,000 كلمة (رواية كاملة).',
-          '**تدهور الانتباه:** تفقد النماذج الإشارة الموثوقة إلى المحتوى من بداية نافذة سياق طويلة. يتجلى هذا كأخطاء في أسماء الشخصيات ونقاط حبكة منسية وانجراف الصوت.',
-          '**اللاتماثل:** تنتبه النماذج بشكل أفضل للبداية (أمر النظام) والنهاية (آخر مئات الرموز) من نافذة السياق. المحتوى في منتصف سياق طويل هو الأقل انتباهاً بشكل موثوق.',
+          '**تحويل الرمز إلى كلمة:** 1 رمز ≈ 0.75 كلمة إنجليزية (قاعدة تقريبية). 32K رمز ≈ 24,000 كلمة. 128K رمز ≈ 96,000 كلمة (نحو رواية كاملة)؛ 262,144 رمز ≈ 196,000 كلمة.',
+          '**تدهور الانتباه:** قد تفقد النماذج الإشارة الموثوقة إلى المحتوى من بداية نافذة سياق طويلة. يتجلى هذا كأخطاء في أسماء الشخصيات ونقاط حبكة منسية وانجراف الصوت.',
+          '**اللاتماثل:** في دراسة Lost in the Middle، استخدمت النماذج بداية المدخل ونهايته بأفضل شكل، واستخدمت المحتوى في المنتصف بأقل موثوقية. اختبرت الدراسة نماذج متاحة في 2023، لذا اختبر النماذج الحالية بدلاً من افتراض النمط نفسه.',
           '**وثيقة الجلسة كحل:** اضغط كل ما يحتاجه النموذج في وثيقة مُهيكلة قصيرة. احقنها في البداية. ولِّد المشهد. أنهِ الجلسة. أعد التشغيل. ابدأ من جديد بنفس وثيقة الجلسة المحدَّثة.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'لا تلصق المخطوطة الكاملة في السياق. إذا تجاوزت روايتك 10,000 كلمة ولصقت المسودة الكاملة لطلب الفصل التالي، ستحصل على انجراف سياقي — سينسى النموذج التفاصيل المبكرة للشخصيات ويتناقض مع نقاط الحبكة ويعود إلى سجل عام. استخدم تقنية وثيقة الجلسة.',
+            text: 'لا تلصق المخطوطة الكاملة في السياق. إذا تجاوزت روايتك 10,000 كلمة ولصقت المسودة الكاملة لطلب الفصل التالي، فهناك خطر انجراف سياقي — قد ينسى النموذج التفاصيل المبكرة للشخصيات ويتناقض مع نقاط الحبكة ويعود إلى سجل عام. استخدم تقنية وثيقة الجلسة.',
           },
         ],
       },
@@ -2754,7 +2835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: 'تقنية وثيقة الجلسة',
         content:
-          'تقنية وثيقة الجلسة في هذا القسم اختُبرت خلال أعمال الصياغة في مشاريع طويلة متعددة (رواية أدبية من 90,000 كلمة، مسودتا سيناريو). حجم 4,000 رمز ووتيرة التوليد مشهداً بمشهد وتوقيت فحوصات الاستمرارية مستمدة من أنماط الفشل المُلاحَظة.\n\n**وثيقة الجلسة هي ملف نص عادي تحتفظ به جنباً إلى جنب مع مخطوطتك — هي الحالة المضغوطة لروايتك التي يحتاج النموذج معرفتها لتوليد محتوى متسق.** لها ثلاثة أقسام: بطاقات الشخصيات النشطة وملخصات الفصول وإعداد المشهد الحالي.',
+          'تقنية وثيقة الجلسة توصية في سير العمل من PromptQuorum مبنية على حدود السياق الموضحة أعلاه. لم تُجرِ PromptQuorum اختباراً مضبوطاً لها، والأحجام أدناه (4,000 رمز، و150 كلمة لكل بطاقة شخصية، و100–150 كلمة لكل ملخص فصل) إرشادات تخطيط وليست عتبات مقيسة.\n\n**وثيقة الجلسة هي ملف نص عادي تحتفظ به جنباً إلى جنب مع مخطوطتك — هي الحالة المضغوطة لروايتك التي يحتاج النموذج معرفتها لتوليد محتوى متسق.** لها ثلاثة أقسام: بطاقات الشخصيات النشطة وملخصات الفصول وإعداد المشهد الحالي.',
         promptExamples: [
           {
             label: 'قالب وثيقة الجلسة',
@@ -2780,7 +2861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'سير عمل صياغة الروايات',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          'سير عمل صياغة الرواية بأربع مراحل باستخدام النماذج اللغوية المحلية: المخطط العام (10-30 فصلاً)، أوراق الإيقاع (3-8 مشاهد لكل فصل)، توليد المشاهد (200-600 كلمة لكل جلسة)، وجلسات المراجعة، وكل ذلك حول مستند جلسة أقل من 4,000 رمز.',
+          'سير عمل رواية من أربع مراحل بنموذج محلي: مخطط وبيت شيت وتوليد مشاهد ومراجعة حول وثيقة جلسة.',
         content:
           '**سير عمل صياغة الروايات مع نموذج لغوي محلي له أربع مراحل: المخطط والبيت شيت الفصلية وتوليد المشاهد وجولات المراجعة.** كل مرحلة تستخدم هيكل أمر مختلفاً.',
         items: [
@@ -2813,10 +2894,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**التنسيق في أمر النظام، ليس في دور المستخدم.** وضع تعليمات تنسيق السيناريو في رسالة النظام يعني أن كل توليد في الجلسة يتبع التنسيق دون تكرار التعليمة.',
-          '**إخراج متوافق مع Fountain:** Fountain هو تنسيق ترميز نص عادي للسيناريوهات متوافق مع Final Draft وHighland وWriterDuet وأدوات أخرى كثيرة. طلب توليد "نص عادي متوافق مع Fountain" ينتج إخراجاً يمكنك استيراده مباشرة إلى برنامج السيناريو الخاص بك.',
+          '**إخراج متوافق مع Fountain:** Fountain هو تنسيق ترميز نص عادي للسيناريوهات؛ يقرأه Highland وFade In، وكذلك تطبيقات أخرى في [دليل تطبيقات Fountain](https://fountain.io/apps). طلب توليد "نص عادي متوافق مع Fountain" ينتج إخراجاً يمكنك فتحه في هذه الأدوات أو تحويله لأدوات أخرى (انظر سؤال Final Draft في الأسئلة الشائعة).',
           '**سطور Slug أولاً:** ولِّد سطر slug (INT./EXT. الموقع — نهار/ليل) كأمر سطر واحد منفصل قبل توليد محتوى المشهد. هذا يُرسِّخ الموقع الجسدي قبل أن يبدأ النموذج في توليد الحركة.',
           '**جولات الحوار:** بعد توليد خطوط الحركة، شغِّل جولة حوار منفصلة: "خطوط الحركة محددة. اكتب الحوار لـ[الشخصية أ] و[الشخصية ب] في هذا المشهد. الشخصية أ تريد [X]. الشخصية ب تريد [Y]. بدون علامات حوار. 5–8 تبادلات."',
-          '**إدارة عدد الصفحات:** صفحة سيناريو قياسية تحتوي ~55–60 كلمة من الحركة والحوار مجتمعَين. استخدم حدود كلمات معايَرة وفق هدف الصفحات: 1 صفحة ≈ 60 كلمة، 2 صفحات ≈ 120 كلمة، 3 صفحات ≈ 180 كلمة.',
+          '**إدارة عدد الصفحات:** لا يوجد رقم ثابت لعدد الكلمات في الصفحة، و"صفحة واحدة تساوي دقيقة" مجرد قاعدة تقريبية. احسب متوسط الكلمات في صفحات سيناريوك أنت، وحدد سقوف الكلمات انطلاقاً منه.',
         ],
         callouts: [
           {
@@ -2833,7 +2914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'للخيال الطويل، أكثر نمط توليد موثوق هو: وثيقة الجلسة في أمر النظام → أمر مشهد واحد في دور المستخدم → مراجعة → تحديث وثيقة الجلسة → تكرار، مشهد واحد لكل جلسة.',
+            text: 'للخيال الطويل، نمط توليد موثوق هو: وثيقة الجلسة في أمر النظام → أمر مشهد واحد في دور المستخدم → مراجعة → تحديث وثيقة الجلسة → تكرار، مشهد واحد لكل جلسة.',
           },
           {
             type: 'plain-terms',
@@ -2871,8 +2952,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'SillyTavern', 'الرابط': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'التكامل': 'API متوافق مع OpenAI → Ollama', 'الأمثل لـ': 'خيال رواية الأدوار والكتابة الموجهة ببطاقات الشخصيات؛ ذاكرة شخصيات دائمة' },
           { 'الأداة': 'الطرفية الخالصة', 'التكامل': '`ollama run [model]` أو curl لـ API لـ Ollama', 'الأمثل لـ': 'سير العمل القابل للبرمجة؛ الكتّاب الذين يريدون أقصى تحكم بأدنى عبء للواجهة' },
           { 'الأداة': 'LM Studio', 'الرابط': '[lmstudio.ai](https://lmstudio.ai)', 'التكامل': 'واجهة دردشة مدمجة + API خادم محلي', 'الأمثل لـ': 'الكتّاب الذين يريدون مدير نماذج بواجهة رسومية بدون تثبيت Ollama بشكل منفصل' },
-          { 'الأداة': 'NovelCrafter', 'الرابط': '[novelcrafter.com](https://www.novelcrafter.com)', 'التكامل': 'تكامل ذكاء اصطناعي مدمج؛ يدعم نقاط نهاية متوافقة مع OpenAI (موجَّهة لـ Ollama)', 'الأمثل لـ': 'الكتّاب الذين يريدون مساعدة ذكاء اصطناعي على مستوى الفصول داخل تطبيق واحد متخصص في الروايات' },
-          { 'الأداة': 'Plottr', 'الرابط': '[plottr.com](https://plottr.com)', 'التكامل': 'سير عمل يدوي: هيكل الروايات في Plottr، الصق المشاهد/البيت شيت في Ollama خارجياً', 'الأمثل لـ': 'خيال النوع الأدبي الغني بالحبكة (غموض، إثارة، خيال) حيث رسم الحبكة الهيكلي هو محور سير العمل' },
+          { 'الأداة': 'NovelCrafter', 'الرابط': '[novelcrafter.com](https://www.novelcrafter.com)', 'التكامل': 'تكامل ذكاء اصطناعي مدمج؛ تذكر صفحات المساعدة اتصالات مع LM Studio وOllama ونقاط نهاية متوافقة مع OpenAI API', 'الأمثل لـ': 'الكتّاب الذين يريدون مساعدة ذكاء اصطناعي على مستوى الفصول داخل تطبيق واحد متخصص في الروايات' },
+          { 'الأداة': 'Plottr', 'الرابط': '[plottr.com](https://plottr.com)', 'التكامل': 'سير عمل يدوي: هيكل الروايات في Plottr، الصق المشاهد/البيت شيت في Ollama خارجياً (يذكر Plottr أنه لن يضيف ميزات ذكاء اصطناعي)', 'الأمثل لـ': 'خيال النوع الأدبي الغني بالحبكة (غموض، إثارة، خيال) حيث رسم الحبكة الهيكلي هو محور سير العمل' },
         ],
         callouts: [
           {
@@ -2886,22 +2967,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'توصيات النماذج للأعمال الطويلة',
         content:
-          '**للكتابة الطويلة متطلبات نماذج مختلفة عن الخيال القصير.** الالتزام بالسياق والاتساق في اتباع التعليمات عبر جلسات ممتدة والقدرة على الحفاظ على الصوت عبر استدعاءات توليد متعددة هي العوامل الحاسمة. للاطلاع على المشهد الأوسع للنماذج عبر جميع حالات الاستخدام، انظر [أفضل النماذج اللغوية المحلية في 2026](/ar/local-llms/best-local-llms-2026).',
+          '**للكتابة الطويلة متطلبات نماذج مختلفة عن الخيال القصير.** الالتزام بالسياق والاتساق في اتباع التعليمات عبر جلسات ممتدة والقدرة على الحفاظ على الصوت عبر استدعاءات توليد متعددة هي العوامل الحاسمة. الصفوف أدناه نقاط انطلاق مأخوذة من بطاقة كل نموذج؛ لم تقيّم PromptQuorum هذه النماذج للخيال، وتصنّف لوحات الصدارة العامة للكتابة الإبداعية النماذج بشكل مختلف، لذا جرّب مرشحين اثنين على مشهد من كتابتك. أما النماذج المفتوحة بفئة الخوادم مثل Command A+ (218 مليار معامل إجمالي، 25 مليار نشط، Apache 2.0) وMistral Large 3 (675 مليار معامل إجمالي، سياق 256K، Apache 2.0) فتقع خارج متناول عتاد المستهلك. للاطلاع على المشهد الأوسع للنماذج عبر جميع حالات الاستخدام، انظر [أفضل النماذج اللغوية المحلية في 2026](/ar/local-llms/best-local-llms-2026).',
         columns: ['المهمة', 'النموذج الموصى به', 'السبب'],
         rows: [
-          { 'المهمة': 'صياغة الروايات (رئيسي)', 'النموذج الموصى به': 'Llama 3.3 70B', 'السبب': 'أفضل التزام بالسياق واتباع للتعليمات للأعمال الطويلة متعددة الجلسات؛ صوت أكثر اتساقاً' },
-          { 'المهمة': 'كتابة السيناريو', 'النموذج الموصى به': 'Llama 3.3 70B أو Mistral Large', 'السبب': 'Llama 3.3 لديناميكيات شخصيات معقدة؛ Mistral Large للالتزام المتسق بالتنسيق في إخراج Fountain' },
-          { 'المهمة': 'توليد البيت شيت / المخطط', 'النموذج الموصى به': 'Qwen3 32B', 'السبب': 'توليد هيكلي قوي؛ يتبع بشكل موثوق أوامر المخطط بقوائم مرقمة وقيود صارمة' },
-          { 'المهمة': 'جولات الحوار', 'النموذج الموصى به': 'Command A+', 'السبب': 'أفضل سجل محكي طبيعي وتمييز صوت الشخصية في التبادلات الممتدة' },
-          { 'المهمة': 'المراجعة (هيكلية)', 'النموذج الموصى به': 'Llama 3.3 70B', 'السبب': 'الأفضل في اتباع قيود هيكلية محددة مُسمَّاة في تعليمات إعادة الكتابة' },
-          { 'المهمة': 'خيال ناضج / داكن', 'النموذج الموصى به': 'Hermes 3 Llama 3.1 70B', 'السبب': 'نفس أساس Llama 3.3 70B؛ ضبط دقيق غير مقيد؛ التزام متطابق بالسياق للأعمال الطويلة' },
+          { 'المهمة': 'صياغة الروايات (رئيسي)', 'النموذج الموصى به': 'Qwen3.6 27B أو Gemma 4 31B', 'السبب': 'نماذج كثيفة بحجم 27B–31B تعلن عن سياق 256K+ بتراخيص Apache؛ فئة حجم تناسب بطاقة GPU بسعة 24 GB أو ذاكرة موحدة بسعة 32 GB+ عند 4 بت (تقدير)' },
+          { 'المهمة': 'كتابة السيناريو', 'النموذج الموصى به': 'Qwen3.6 27B أو Llama 3.3 70B', 'السبب': 'يعتمد الالتزام بالتنسيق أساساً على أمر النظام؛ جرّب مشهداً بتنسيق Fountain على نموذجين. Llama 3.3 70B كثيف ويعلن عن سياق 128K ويحتاج نحو 40 GB عند 4 بت (تقدير)' },
+          { 'المهمة': 'توليد البيت شيت / المخطط', 'النموذج الموصى به': 'Qwen3.6 35B-A3B', 'السبب': 'مزيج خبراء بـ3B من 35B معامل نشط لكل رمز (Apache-2.0)، لذا يولّد أسرع لكل رمز؛ لم تقيّم PromptQuorum جودة المخططات' },
+          { 'المهمة': 'جولات الحوار', 'النموذج الموصى به': 'النموذج الذي تناسب عيناته', 'السبب': 'نفّذ الحوار كجولة منفصلة على النموذج الذي تطابق أسطر المعايرة فيه سجل شخصيتك؛ لا يوجد ترتيب موثق للنماذج في الحوار' },
+          { 'المهمة': 'المراجعة (هيكلية)', 'النموذج الموصى به': 'النموذج الذي صغت به المسودة', 'السبب': 'تعمل أوامر المراجعة التي تسمّي قيداً هيكلياً واحداً في كل استدعاء مع أي نموذج يتبع التعليمات؛ مشهد واحد لكل استدعاء' },
+          { 'المهمة': 'خيال ناضج / داكن', 'النموذج الموصى به': 'Hermes 4 70B', 'السبب': 'أساس Llama-3.1-70B؛ تصف Nous Research توافقاً محايداً بوجه عام ونسب رفض أقل؛ ترخيص Llama 3؛ وضع استدلال هجين' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'أخطاء شائعة',
         items: [
-          '**لصق المخطوطة الكاملة في السياق.** حتى مع نافذة سياق 128K، تتدهور جودة الانتباه بشكل ملحوظ بعد 32K رمز. استخدم تقنية وثيقة الجلسة — بطاقات شخصيات وملخصات فصول مضغوطة.',
+          '**لصق المخطوطة الكاملة في السياق.** حتى عندما يعلن النموذج عن نافذة 128K–262K، تُستخدم المدخلات الطويلة بموثوقية أقل، لذا خطِّط لنحو 32K رمز. استخدم تقنية وثيقة الجلسة — بطاقات شخصيات وملخصات فصول مضغوطة.',
           '**طلب "الاستمرار" في وثيقة مفتوحة.** "استمر في الرواية" ينتج انجرافاً. "اكتب المشهد التالي: [إعداد محدد، زاوية رؤية، حد كلمات]" ينتج مخرجاً متسقاً ومحدوداً يمكنك تقييمه ولصقه.',
           '**بدون بيت شيت لكتابة السيناريو.** توليد صفحات سيناريو بدون نبضة مشهد ينتج صفحات تنجرف في الطول وتفقد وظيفتها الهيكلية. ولِّد البيت شيت دائماً أولاً.',
           '**إهمال تحديثات وثيقة الجلسة.** إذا لم تحدِّث ملخص الفصل بعد توليد مشهد، تصبح وثيقة الجلسة قديمة. وثيقة الجلسة القديمة تنتج تناقضات في غضون جلسات قليلة.',
@@ -2912,10 +2993,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          'معايير السياق الطويل لـ Llama 3.3 70B — [Meta AI Research](https://ai.meta.com)',
-          'التقرير التقني لـ Qwen3 32B مع معايير نافذة السياق — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'ضائع في المنتصف: كيف تستخدم النماذج اللغوية السياقات الطويلة — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'مواصفات تنسيق السيناريو Fountain — [Fountain.io](https://fountain.io)',
+          '[بطاقة نموذج Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) و[بطاقة نموذج Qwen3.6-35B-A3B](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — المعاملات، والسياق الأصلي 262,144 رمز، وتمديد YaRN، وApache-2.0، اطُّلع عليهما في 26 أكتوبر 2026',
+          '[بطاقة نموذج Gemma 4 31B](https://huggingface.co/google/gemma-4-31B-it) — نموذج كثيف بحجم 31B، وسياق 256K، وApache 2.0، اطُّلع عليها في 26 أكتوبر 2026',
+          '[بطاقة نموذج Llama 3.3 70B Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B، وسياق 128K، وLlama 3.3 Community License، نُشر في 6 ديسمبر 2024',
+          '[بطاقة نموذج Hermes 4 70B](https://huggingface.co/NousResearch/Hermes-4-70B) — أساس Llama-3.1-70B، واستدلال هجين، و"broadly neutral alignment"',
+          '[بطاقة نموذج Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6) — تريليون معامل إجمالي و32 مليار نشط، وسياق 256K، وint4 أصلي',
+          '[توثيق Command A+](https://docs.cohere.com/docs/command-a-plus) و[بطاقة نموذج Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — عدد المعاملات وتراخيص النماذج بفئة الخوادم',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu وآخرون، 2023',
+          '[Fountain.io](https://fountain.io) — مواصفات تنسيق السيناريو Fountain و[قائمة التطبيقات](https://fountain.io/apps)',
+          '[مركز مساعدة Final Draft](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — يذكر أن Final Draft لا يستورد ملفات .fountain مباشرة',
+          '[قواعد الذكاء الاصطناعي في Amazon KDP، Publishers Weekly](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html) و[تقديمات Clarkesworld](https://clarkesworldmagazine.com/submissions/) — سياسات الذكاء الاصطناعي لدى دور النشر والمنصات؛ تحقق من النص الحالي قبل التقديم',
+          '[ملاحظات إصدار Scrivener](https://www.literatureandlatte.com/scrivener/release-notes) — الإصدارات من 3.4.0 إلى 3.5.2 (ديسمبر 2025): لا إدخالات للإضافات أو API؛ "Scrivener itself contains no AI"؛ اطُّلع عليها في 26 أكتوبر 2026',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/) و[مساعدة NovelCrafter حول اتصالات الذكاء الاصطناعي](https://www.novelcrafter.com/help/categories/ai-connections) — يذكر Plottr أنه لا يطوّر ميزات ذكاء اصطناعي؛ ويسرد NovelCrafter اتصالات مع LM Studio وOllama ونقاط نهاية متوافقة مع OpenAI API',
           'توثيق API لـ Ollama — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -2925,11 +3014,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل يمكن لنموذج لغوي محلي كتابة رواية كاملة؟',
-            a: 'يمكن لنموذج لغوي محلي توليد نثر رواية كاملة — لكن الذكاء الهيكلي والتحريري يجب أن يأتي من الكاتب. يولِّد النموذج المشاهد عند تزويده بإعدادات محددة؛ لا يُخطط أو يُقيِّم أو يتخذ قرارات موضوعية بشكل مستقل. الكتّاب الذين يستخدمون النماذج اللغوية المحلية كأدوات صياغة يصفونها بأنها "مولِّد مسودة أولى سريع جداً للمشاهد التي أعرف بالفعل كيف أكتبها". النموذج يوفر الوقت في مشكلة الصفحة البيضاء؛ الكاتب لا يزال يتخذ جميع القرارات الجوهرية.',
+            a: 'يمكن لنموذج لغوي محلي توليد نثر رواية كاملة، لكن الذكاء الهيكلي والتحريري يجب أن يأتي من الكاتب. يولّد النموذج المشاهد عندما يُعطى إعدادات محددة؛ ولا يخطط أو يقيّم أو يتخذ قرارات موضوعية من تلقاء نفسه. تعامل معه كمولّد سريع للمسودات الأولى لمشاهد تعرف كيف تكتبها: يوفر الوقت أمام الصفحة البيضاء، بينما يتخذ الكاتب كل القرارات المهمة. تحقق من سياسات الذكاء الاصطناعي لدى دور النشر والمنصات قبل التقديم (انظر سؤال الناشرين أدناه).',
           },
           {
             q: 'ما الحد الأقصى لنافذة السياق التي يمكنني استخدامها بشكل موثوق؟',
-            a: 'من الناحية العملية، خطط لجودة انتباه موثوقة حتى ~32K رمز (~24,000 كلمة) مع معظم النماذج المحلية بما فيها Llama 3.3 70B وQwen3 32B. بعد ذلك، تبدأ النماذج في فقدان الإشارة الدقيقة إلى المحتوى من بداية السياق. تقنية وثيقة الجلسة تُبقي السياق العامل دون 4,000–6,000 رمز، مما يعني أن كل استدعاء توليد يعمل في الجزء الأكثر موثوقية من نافذة الانتباه.',
+            a: 'تعلن النماذج عن 128K إلى 262,144 رمز، لكن PromptQuorum توصي بالتخطيط لنحو 32K رمز (~24,000 كلمة) في كل عملية توليد، لأن أبحاث السياقات الطويلة تُظهر أن النماذج تستخدم منتصف المدخلات الطويلة بموثوقية أقل. هذه قاعدة تخطيط حذرة وليست حداً مقيساً لكل نموذج، لذا اختبر نموذجك. تُبقي تقنية وثيقة الجلسة سياق العمل دون 4,000–6,000 رمز، فيبقى كل استدعاء توليد ضمن هذا النطاق بهامش واسع.',
           },
           {
             q: 'كيف أمنع النموذج من تغيير صوت شخصيتي في منتصف الرواية؟',
@@ -2937,11 +3026,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدام Scrivener مع نموذج لغوي محلي؟',
-            a: 'ليس بشكل أصلي — لا يوجد نظام إضافات لاستدعاءات API الخارجية في Scrivener. سير العمل الأكثر شيوعاً هو: التوليد في Ollama (عبر الطرفية أو سكريبت مرافق)، نسخ المخرج، لصقه في وثيقة Scrivener المقابلة. بعض الكتّاب يستخدمون Obsidian كطبقة المسودة بمساعدة الذكاء الاصطناعي ويستوردون الفصول المكتملة إلى Scrivener للهيكلة النهائية.',
+            a: 'ليس أصلياً — لا يوثّق Scrivener 3 أي نظام إضافات، ولا تذكر ملاحظات الإصدار الرسمية حتى 3.5.2 (ديسمبر 2025) أي تكامل مع الذكاء الاصطناعي: تقول ملاحظات 3.4.0 "Scrivener itself contains no AI" وتضيف دعم Writing Tools من Apple، وهي ميزة نظام في macOS. سير عمل شائع: التوليد في Ollama (عبر الطرفية أو سكريبت مرافق)، ونسخ الناتج، ولصقه في مستند Scrivener المناسب. يستخدم بعض الكتّاب Obsidian كطبقة صياغة بالذكاء الاصطناعي ثم يستوردون الفصول المكتملة إلى Scrivener للهيكلة النهائية. والسكريبتات التي تستدعي Ollama API وتنسخ الناتج إلى الحافظة هي الأقرب إلى التكامل الأصلي.',
           },
           {
             q: 'ما الأفضل لكتابة السيناريو: Ollama أم ذكاء اصطناعي سحابي؟',
-            a: 'لكتّاب السيناريو الذين يحتاجون توليد محتوى ناضج (عنف، علم نفس داكن، شخصيات معقدة أخلاقياً)، Ollama المحلي مع Llama 3.3 70B أو Hermes 3 أكثر موثوقية — النماذج السحابية ترفض محتوى محدداً يظهر كثيراً في السيناريوهات الدرامية. لاتساق التنسيق وانضباط عدد الصفحات، كل من النماذج السحابية والمحلية أداؤها متكافئ عند تزويدها بتعليمات تنسيق في أمر النظام.',
+            a: 'بالنسبة لكتّاب السيناريو الذين يحتاجون إلى توليد محتوى ناضج (عنف، علم نفس مظلم، شخصيات معقدة أخلاقياً)، يمنحك النموذج المحلي تحكماً في النموذج وسلوك الرفض لديه — فبعض النماذج المستضافة ترفض أو تخفف محتوى يظهر في السيناريوهات الدرامية، وتتغير سياسات الخدمات المستضافة بمرور الوقت. والنموذج المحلي قليل الرفض مثل Hermes 4 70B لديه رفض مدمج أقل، لكنك تظل مسؤولاً عن المحتوى الذي تولّده وتنشره. ويعتمد اتساق التنسيق أساساً على التعليمات في أمر النظام، وهي تعمل في الحالتين. الاختيار يتعلق أساساً بالتحكم في المحتوى والخصوصية والتكلفة؛ ولم تقارن PromptQuorum جودة المخرجات بين النماذج المستضافة والمحلية في كتابة السيناريو.',
           },
           {
             q: 'كيف أولِّد حواراً يبدو مثل شخصية محددة؟',
@@ -2949,23 +3038,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل أحتاج GPU لاستخدام نموذج لغوي محلي في كتابة الروايات؟',
-            a: 'تُسرِّع GPU سرعة التوليد بشكل ملحوظ لكنها ليست إلزامية. على Apple Silicon (M3 أو أحدث)، معمارية الذاكرة الموحدة تعني أن MacBook Pro 16 GB يمكنه تشغيل Qwen3 14B بشكل مريح لأعمال الصياغة — سرعة التوليد أبطأ من جهاز بـGPU 24 GB لكنها مقبولة لسير عمل الكتابة. GPU NVIDIA مخصصة بـ24 GB من VRAM (RTX 4090، RTX 3090) تشغِّل نماذج 70B بسرعات توليد قابلة للاستخدام.',
+            a: 'تسرّع وحدة GPU التوليد كثيراً لكنها ليست شرطاً. على Apple Silicon تتيح الذاكرة الموحدة لجهاز MacBook Pro بسعة 16 GB تشغيل نماذج أصغر (نحو فئة 8B–14B عند 4 بت، وهو تقدير) — أبطأ من جهاز بـGPU سعة 24 GB لكنه مقبول عندما تقرأ المخرجات وتقيّمها بين عمليات التوليد. تتسع بطاقة NVIDIA بسعة 24 GB (RTX 4090 وRTX 3090) لنماذج فئة 27B–32B عند 4 بت (تقدير)؛ أما نماذج فئة 70B فتحتاج نحو 40 GB أو أكثر عند 4 بت، فتتطلب بطاقتي GPU أو بطاقة 48 GB أو ذاكرة موحدة 64 GB أو تفريغاً إلى المعالج أبطأ.',
           },
           {
             q: 'هل يمكنني استخدام النماذج اللغوية المحلية مع Final Draft أو برنامج سيناريو مهني آخر؟',
-            a: 'ليس مباشرة. لا يوجد تكامل API خارجي في Final Draft. سير العمل هو: ولِّد صفحات سيناريو بتنسيق نص عادي Fountain عبر Ollama، ثم استورد ملف Fountain إلى Final Draft باستخدام المستورد المدمج (ملف → استيراد → Fountain). Highland وWriterDuet وFade In يدعمون استيراد Fountain بشكل أصلي.',
+            a: 'ليس مباشرة. بحسب مركز مساعدة Final Draft، لا يستطيع Final Draft استيراد ملفات .fountain؛ والإرشاد هو حفظ النص كملف .txt عادي واختيار Script (وليس Text) عند الاستيراد، أو جلبه بصيغة FDX من تطبيق يصدّر هذه الصيغة. يحوّل Highland بين Fountain وFDX وPDF، ويستورد Fade In صيغة Fountain ويصدّرها (بحسب دليل تطبيقات Fountain). سير العمل: ولِّد نصاً بتنسيق Fountain في Ollama، وافتحه في Highland أو Fade In، ثم صدِّر FDX إلى Final Draft.',
           },
           {
             q: 'هل يمكنني استخدام Kimi-K2.6 محلياً لصياغة الروايات؟',
-            a: 'Kimi-K2.6 لديه نافذة سياق حقيقية بمليون رمز — مفيدة للأعمال بطول الروايات في مرور واحد — لكن تشغيله محلياً غير عملي على أجهزة المستهلكين (~480 GB من VRAM بتكميم Q4). لسير العمل المحلي بالكامل، تقنية وثيقة الجلسة مع Llama 3.3 70B (سياق 128K، ~32K عملي) تتعامل مع الأعمال بطول الروايات دون الحاجة لسقف 1M. معظم الكتّاب لا يحتاجون فعلاً إلى 1M سياق إذا طُبِّق سير عمل وثيقة الجلسة.',
+            a: 'يعلن Kimi-K2.6 عن نافذة سياق بحجم 256K رمز، من الفئة نفسها لـQwen3.6 27B وGemma 4 31B، لكنه نموذج مزيج خبراء بنحو تريليون معامل إجمالي (32 مليار نشط) وأوزان int4 أصلية. تبلغ الأوزان وحدها نحو 500 GB (تقدير PromptQuorum)، فيحتاج إلى خادم متعدد وحدات GPU أو جهاز بذاكرة موحدة ضخمة جداً، وهو غير عملي على عتاد المستهلك. وفي سير العمل المحلي بالكامل، يغطي نموذج كثيف بحجم 27B–70B مع تقنية وثيقة الجلسة أعمالاً بطول رواية دون نموذج بتريليون معامل.',
           },
           {
             q: 'ما رأي المحررين في المخطوطات التي ساعد عليها الذكاء الاصطناعي؟',
-            a: 'آراء متباينة ومتطورة اعتباراً من 2026. معظم ناشري الخيال الكبار لديهم سياسات تتطلب الإفصاح عن الاستخدام الجوهري للذكاء الاصطناعي؛ بعضهم يحظره كلياً. تتطلب منصات النشر الذاتي (Amazon KDP) تأكيد إفصاح المحتوى المُولَّد بالذكاء الاصطناعي. تحقق من سياسة الناشر المحدد قبل التقديم.',
+            a: 'تختلف السياسات بحسب الناشر والمنصة وما زالت تتغير في 2026، لذا تحقق من السياسة المعنية قبل التقديم. تشترط Amazon KDP إبلاغها عندما يكون النص أو الصور أو الترجمات مولَّدة بالذكاء الاصطناعي، وتعامل المحتوى الذي أنشأته أداة ذكاء اصطناعي على أنه مولَّد بالذكاء الاصطناعي حتى بعد تحرير جوهري؛ أما النص الذي كتبته بنفسك وساعدك الذكاء الاصطناعي فقط في تحريره أو صقله فهو "بمساعدة الذكاء الاصطناعي" ولا يحتاج إلى إفصاح (بحسب قواعد Amazon كما نقلتها Publishers Weekly في سبتمبر 2023). وترفض بعض المجلات الأعمال التي شارك فيها الذكاء الاصطناعي رفضاً قاطعاً — إذ تنص إرشادات التقديم في Clarkesworld على أنها لا تنظر في القصص المكتوبة أو المشارَك في كتابتها أو المدعومة بالذكاء الاصطناعي. ونص المشاهد الذي يولّده نموذج لغوي محلي يندرج تحت تعريفات مثل تعريف "المولَّد بالذكاء الاصطناعي" لدى KDP، لذا أفصح عنه حيثما يُطلب. هذه معلومات عامة وليست استشارة قانونية.',
           },
           {
-            q: 'ما الأجهزة التي أحتاجها لنماذج سياق 1M؟',
-            a: 'تشغيل نموذج سياق 1M محلياً يتطلب VRAM أكثر بكثير من سير عمل النموذج اللغوي المحلي النموذجية — Kimi-K2.6 يحتاج ~480 GB بتكميم Q4، وهو قابل للتحقيق فقط مع إعدادات خادم متعدد GPU. لأجهزة المستهلكين (24–64 GB من VRAM)، نماذج سياق 128K هي السقف العملي. تقنية وثيقة الجلسة في هذا المقال مُصمَّمة لهذه الفجوة تحديداً — الحصول على نتائج طويلة الشكل متسقة دون الحاجة لسياق 1M.',
+            q: 'ما الأجهزة التي أحتاجها لسياقات بحجم مليون رمز؟',
+            a: 'يعلن Qwen3.6 27B وQwen3.6 35B-A3B عن سياق أصلي بحجم 262,144 رمز يمكن تمديده إلى نحو 1,010,000 رمز بمعايرة YaRN (بحسب بطاقتي النموذجين). يحتاج السياق الطويل إلى ذاكرة لذاكرة KV المؤقتة فوق الأوزان، لذا يتطلب تشغيل بحجم مليون رمز ذاكرة أكبر بكثير من إعداد المستهلك المعتاد؛ ولم تقِس PromptQuorum هذا المتطلب. وقد صُممت تقنية وثيقة الجلسة في هذه المقالة لسد هذه الفجوة تحديداً — مخرجات طويلة متسقة دون الاعتماد على نافذة بحجم مليون رمز.',
           },
         ],
       },
@@ -2992,32 +3081,33 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-13',
+      dateModified: '2026-10-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
     },
 },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-26',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ko.webp',
     title: '로컬 LLM으로 소설과 시나리오 집필하기: 10만 단어 이상을 위한 워크플로 가이드',
-    seoTitle: '로컬 LLM 시나리오·소설 오프라인 집필 2026',
+    seoTitle: '로컬 LLM 시나리오·소설 오프라인 집필 가이드 2026',
     intro:
       '소설이나 시나리오 집필 워크플로에 통합된 로컬 LLM은 인터넷 접속, 클라우드 로그, 사용량 제한 없이 장면 초안, beat sheet, 대화 검토, 수정 라운드를 생성할 수 있습니다. 이 가이드는 모델 선택, 장문 작업을 위한 컨텍스트 윈도 관리, 챕터별 스캐폴딩, 장면 생성, 그리고 로컬 LLM을 집필 소프트웨어와 연결하는 도구들을 포함한 전체 워크플로를 다룹니다.',
     metaDescription:
-      '로컬 LLM으로 소설·시나리오 집필하는 완전한 워크플로: 모델 선택, 컨텍스트 관리, 챕터 스캐폴딩, 장면 생성.',
+      '로컬 LLM으로 소설·시나리오를 집필하는 워크플로: 모델 출발점, 컨텍스트 관리, 챕터 스캐폴딩, 장면 생성, 집필 도구 연동을 설명합니다.',
     twitterDescription:
       '로컬 LLM으로 소설과 시나리오를 집필하는 방법: 컨텍스트 윈도 관리, 챕터 스캐폴딩, 장면 생성, 대화 검토, 도구 통합.',
     current_models_mentioned: [
+      'Qwen3.6 27B',
+      'Gemma 4 31B',
       'Llama 3.3 70B',
-      'Qwen3 32B',
-      'Mistral Large',
-      'Command A+',
-      'Hermes 3 Llama 3.1',
+      'Hermes 4 70B',
+      'Kimi-K2.6',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -3038,22 +3128,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '장면 생성 로컬 모델',
     ],
     leadAnswerBlock:
-      '**로컬 LLM을 장문 작업에 활용하는 작가들이 직면하는 핵심 기술적 과제는 컨텍스트 윈도 관리입니다. 대부분의 로컬 모델은 명목상 128K 컨텍스트 윈도를 갖추고 있지만, 실제로는 32K 토큰(약 24,000 단어) 이후부터 어텐션 품질이 현저히 저하됩니다. 해결책은 구조화된 컨텍스트 주입, 즉 "세션 문서" 기법입니다. 이전 챕터의 압축 요약, 현재 장면 설정, 관련 인물 카드만 유지하고, 매 집필 세션 시작 시 해당 요소들만 주입합니다. 장면별 생성(성장하는 문서를 계속 이어 달라고 요청하는 대신 세션당 하나의 장면 프롬프트)과 결합하면, 이 접근법은 어떤 분량의 소설에서도 일관된 장문 결과물을 만들어 냅니다. 특히 시나리오 집필에서는 beat sheet 우선 워크플로 — 산문 작성 전에 장면 수준의 beat sheet를 먼저 생성 — 가 구조에서 이탈하지 않는 형식화된 스크립트 페이지를 생성합니다.**',
+      '**로컬 LLM으로 장문 소설을 쓸 때의 핵심 과제는 컨텍스트 관리입니다. 1회 생성당 약 32,000 토큰으로 계획하고, 원고 전체 대신 압축한 "세션 문서"(인물 카드, 챕터 요약, 현재 장면 설정)를 주어 한 번에 한 장면씩 생성하십시오.**',
     quickAnswerTop: {
       ko: {
         question: '컨텍스트를 잃지 않고 로컬 LLM으로 소설이나 시나리오를 집필하는 방법은 무엇입니까?',
         answer:
-          '핵심 기법은 구조화된 컨텍스트 주입입니다. 전체 원고를 컨텍스트 윈도에 붙여넣는 대신, 압축된 세션 문서를 유지하십시오. 인물 카드(이름, 지배적 특성, 말하기 방식), 완료된 챕터의 줄거리 요약(챕터당 100–200 단어), 현재 장면 설정(beat, 시점, 단어 상한)을 포함합니다. 이 세션 문서를 매 집필 세션 시작 시 주입하십시오. 32K 토큰을 초과하는 성장하는 문서를 이어 달라고 요청하는 대신, 한 번에 한 장면씩 생성하십시오.',
+          '핵심 기법은 구조화된 컨텍스트 주입입니다. 전체 원고를 컨텍스트 윈도에 붙여넣는 대신, 압축된 세션 문서를 유지하십시오. 인물 카드(이름, 지배적 특성, 말하기 방식), 완료된 챕터의 줄거리 요약(챕터당 100–200 단어), 현재 장면 설정(beat, 시점, 단어 상한)을 포함합니다. 이 세션 문서를 매 집필 세션 시작 시 주입하십시오. 성장하는 문서를 이어 달라고 요청하는 대신, 한 번에 한 장면씩 생성하십시오. 각 호출에는 압축된 상태만 담기므로 이 방식은 어떤 소설 길이에도 적용되며, 작가들이 원고 전체를 하나의 긴 컨텍스트 윈도에 넣으려 할 때 보고하는 컨텍스트 이탈과 목소리 상실을 줄여 줍니다.',
         bullets: [
           '세션 문서 기법: 인물 카드 + 챕터 요약 + 현재 장면 설정을 세션 시작 시 주입합니다.',
-          '한 번에 한 장면 생성 — 32K 토큰을 초과하는 문서를 "이어 쓰도록" 요청하지 마십시오.',
+          '한 번에 한 장면 생성 — 성장하는 문서를 약 32K 토큰 이상 "이어 쓰도록" 요청하지 마십시오.',
           '시나리오는 beat sheet 우선: 산문 작성 전에 beat sheet를 생성하고 구조적 스캐폴드로 사용하십시오.',
-          '장문 작업에 가장 적합한 모델: Llama 3.3 70B (강한 컨텍스트 준수, 우수한 지시 따르기).',
-          'Ollama + Obsidian 또는 Scrivener가 2026년 작가들에게 가장 일반적인 워크플로입니다.',
-          '컨텍스트 윈도 현실: 128K가 기술적 한계이며, 32K 토큰이 대부분 모델의 실질적 품질 상한입니다.',
-          '무검열 모델(Hermes 3)은 설정 변경 없이 이 워크플로에 적합합니다.',
+          '모델 출발점(모델 카드의 사양): Qwen3.6 27B, Gemma 4 31B, Llama 3.3 70B. PromptQuorum은 소설용으로 평가하지 않았습니다.',
+          'Ollama + Obsidian은 흔한 작가 워크플로입니다. Scrivener에는 문서화된 플러그인 API가 없어 출력을 붙여넣습니다.',
+          '컨텍스트 윈도 계획 기준: 모델은 128K–262,144 토큰을 내세우지만 긴 컨텍스트의 품질은 고르지 않으므로 1회 생성당 약 32K로 계획하십시오.',
+          'Hermes 4 70B 같은 거부가 적은 fine-tune도 같은 워크플로로 성숙한 소설에 쓸 수 있습니다. 모델별 라이선스를 확인하십시오.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-10-26',
       },
     },
     toc: [
@@ -3076,26 +3166,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**컨텍스트 윈도 현실: 명목상 128K 토큰, 실제로는 32K 토큰.** 대부분의 로컬 모델에서 어텐션 품질은 32K 토큰(약 24,000 단어) 이후 눈에 띄게 저하됩니다. 전체 원고를 컨텍스트 윈도에 붙여넣지 말고 세션 문서 기법을 사용하십시오.',
+          '**컨텍스트 윈도 계획 기준: 명목상 128K–262,144 토큰, 계획은 약 32K.** 모델은 긴 입력의 중간을 덜 안정적으로 활용하므로("Lost in the Middle") 1회 생성당 약 32K 토큰(약 24,000 단어)으로 계획하고, 전체 원고 대신 세션 문서 기법을 사용하십시오.',
           '**세션 문서 기법이 핵심 기술입니다.** 활성 인물 카드(인물당 150 단어), 챕터 요약(완료된 챕터당 100–200 단어), 현재 장면 설정을 담은 압축 텍스트 파일을 유지하십시오. 매 생성 세션 시작 시 주입하십시오.',
-          '**한 번에 한 장면을 생성하십시오.** 성장하는 문서를 "이어 쓰도록" 요청하는 대신, 세션당 하나의 장면(200–600 단어)을 작성하도록 모델에 요청하십시오. 세션당 한 장면은 컨텍스트 이탈을 제거하고 일관된 목소리를 만들어 냅니다.',
+          '**한 번에 한 장면을 생성하십시오.** 성장하는 문서를 "이어 쓰도록" 요청하는 대신, 세션당 하나의 장면(200–600 단어)을 작성하도록 모델에 요청하십시오. 세션당 한 장면은 컨텍스트 이탈을 줄이고 일관된 목소리를 유지하는 데 도움이 됩니다.',
           '**시나리오는 beat sheet 우선으로 시작하십시오.** 스크립트 페이지를 생성하기 전에 장면 수준의 beat sheet를 먼저 생성하십시오. 이를 각 페이지 생성의 스캐폴드로 활용하십시오.',
-          '**Llama 3.3 70B가 장문 작업에 가장 적합한 모델입니다.** 강한 컨텍스트 준수, 더 긴 생성에서 우수한 지시 따르기, 긴 세션에서 신뢰할 수 있는 인물 목소리 일관성을 제공합니다.',
-          '**Ollama + 일반 텍스트 집필 도구가 가장 안정적인 통합입니다.** Scrivener, Obsidian, VS Code는 원고 레이어로 작동하며, Ollama는 앱이나 스크립트가 호출할 수 있는 API를 통해 모델을 제공합니다.',
-          '**무검열 모델(Hermes 3)은 설정 변경 없이 이 워크플로에 적합합니다.** 성숙한 소설을 위해 Ollama 모델을 Hermes 3로 전환하기만 하면 되며, 세션 문서 및 장면 생성 기법은 동일합니다.',
+          '**실행할 수 있는 모델을 고르고, 본인의 장면으로 시험해 보십시오.** 27B–31B급 dense 모델(Qwen3.6 27B, Gemma 4 31B)과 Llama 3.3 70B가 흔한 출발점입니다. PromptQuorum은 이 중 어느 것도 소설용으로 평가하지 않았으며, 공개된 창작 글쓰기 리더보드도 모델 순위가 서로 다릅니다.',
+          '**Ollama + 일반 텍스트 집필 도구는 안정적인 통합입니다.** Scrivener, Obsidian, VS Code가 원고를 담을 수 있으며, Ollama는 앱이나 스크립트가 호출할 수 있는 API를 통해 모델을 제공합니다.',
+          '**거부가 적은 모델(Hermes 4 70B)은 설정 변경 없이 이 워크플로에 적합합니다.** 성숙한 소설을 위해 Ollama 모델만 전환하면 되며, 세션 문서 및 장면 생성 기법은 동일합니다. 용도에 맞는지 모델별 라이선스를 확인하십시오.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: '빠른 사실',
         items: [
-          '**장문 소설에 가장 적합한 모델:** Llama 3.3 70B (가장 강한 컨텍스트 준수 및 지시 따르기).',
-          '**실질적 컨텍스트 윈도 한계:** 신뢰할 수 있는 어텐션 품질을 위해 ~32K 토큰(~24,000 단어); 128K는 기술적 상한입니다.',
+          '**모델 출발점(모델 카드 기준):** Qwen3.6 27B(dense, Apache-2.0, 262,144 토큰 컨텍스트), Gemma 4 31B(dense, Apache-2.0, 256K 컨텍스트), Llama 3.3 70B(dense, 128K 컨텍스트, Llama 3.3 Community License).',
+          '**컨텍스트 윈도 계획 상한:** 1회 생성당 ~32K 토큰(~24,000 단어); 모델은 128K–262,144 토큰을 내세우지만 이는 상한일 뿐 품질 보증이 아닙니다.',
           '**세션 문서 크기:** 4,000 토큰 미만 목표 (인물 카드 + 챕터 요약 + 현재 장면 설정).',
           '**장면 생성 목표:** 생성 호출당 200–600 단어; 더 긴 장면은 여러 순차 프롬프트를 통해 생성합니다.',
           '**시나리오 형식:** Fountain 형식 출력 지시와 함께 Ollama를 사용하면 스크립트 형식의 텍스트를 생성합니다.',
-          '**Ollama와 함께 작동하는 집필 도구:** Scrivener (API 스크립트를 통해), Obsidian (로컬 플러그인 또는 스크립트를 통해), VS Code (Continue.dev 또는 직접 API 호출을 통해), 순수 터미널.',
-          '**무검열 옵션:** 성숙한 소설을 위한 Hermes 3 Llama 3.1; 동일한 워크플로, 동일한 세션 문서 기법.',
+          '**Ollama와 함께 작동하는 집필 도구:** Scrivener (출력 붙여넣기; 문서화된 플러그인 API 없음), Obsidian (로컬 플러그인 또는 스크립트를 통해), VS Code (Continue.dev 또는 직접 API 호출을 통해), 순수 터미널.',
+          '**거부가 적은 옵션:** 성숙한 소설을 위한 Hermes 4 70B(Llama-3.1-70B 기반); 동일한 워크플로, 동일한 세션 문서 기법.',
         ],
       },
       contextWindow: {
@@ -3103,29 +3193,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '장문 집필을 위한 컨텍스트 윈도 문제',
         image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
         imageCaption:
-          '로컬 LLM의 컨텍스트 윈도 신뢰성: 실질적인 주의력 한계는 32K 토큰(약 24,000단어)으로, Llama 3.3 70B, Qwen3 32B, Mistral Large의 기술적 한계인 128K와 대조된다. Kimi-K2.6의 100만 토큰 윈도는 Q4 양자화 기준 약 480GB VRAM이 필요하다.',
+          '컨텍스트 계획: 작업 상한 32K 토큰(약 24,000단어), 오픈 모델은 128K–262,144 토큰을 내세움.',
         content:
-          '**대부분의 로컬 모델에서 실질적인 컨텍스트 한계는 32,000 토큰입니다 — 광고된 128K가 아닙니다.** 어텐션 품질(모델이 이전 콘텐츠를 정확하게 참조하는 능력)은 대부분의 모델에서 32,000 토큰 이후 저하됩니다. 128K 토큰에서는 많은 모델이 컨텍스트 첫 번째 사분위의 콘텐츠에 대한 정확한 참조를 잃습니다. 소설의 경우, 이는 지금까지의 원고를 단순히 붙여넣고 다음 챕터를 요청할 수 없다는 것을 의미합니다.\n\nMoonshot AI의 Kimi-K2.6은 128K 컨텍스트를 가진 대부분의 모델보다 어텐션 품질 보존이 뛰어난 진정한 100만 토큰 컨텍스트 윈도를 제공합니다. 대부분의 작가들에게 Kimi-K2.6을 로컬에서 실행하는 것은 비실용적입니다 — Q4 양자화에서 약 480 GB의 VRAM이 필요하여 소비자 하드웨어를 훨씬 초과합니다. 1M 컨텍스트가 실제로 필요한 작가들에게는 Moonshot의 호스팅 API가 실용적인 접근 지점입니다. 로컬에서 실행 가능한 모델(Llama 3.3 70B, Qwen3 32B, Mistral Large)을 사용하는 작가들에게는 32K 실질 상한이 제약입니다.',
+          '**모델이 훨씬 큰 윈도를 내세우더라도 1회 생성당 약 32K 토큰으로 계획하십시오.** 이는 PromptQuorum의 보수적인 계획 규칙이며 측정된 한계가 아닙니다. 긴 컨텍스트 연구(Liu 외, "Lost in the Middle")에서는 모델이 긴 입력의 처음과 끝에 있는 정보를 중간에 있는 정보보다 더 안정적으로 활용하고, 입력이 길어질수록 품질이 떨어질 수 있다고 보고되어 있습니다. 새 모델은 훨씬 큰 윈도를 내세우므로 — Qwen3.6 27B는 네이티브 262,144 토큰, Gemma 4 31B는 256K — 사용하는 모델을 직접 시험해야 합니다. 소설의 경우, 지금까지의 원고를 붙여넣고 다음 챕터를 요청하는 방식은 여전히 가장 신뢰하기 어려우며, 긴 컨텍스트는 KV 캐시가 함께 커지기 때문에 메모리도 더 많이 사용합니다.\n\nMoonshot AI의 Kimi-K2.6은 256K 토큰(262,144)의 컨텍스트 윈도를 내세워 위 모델들과 같은 급이지만, 총 파라미터 약 1조 개(활성 320억 개)의 Mixture-of-Experts 모델이며 네이티브 int4 가중치로 제공됩니다. 4비트에서도 가중치만 약 500 GB가 되므로(PromptQuorum 추정: 1조 파라미터 × 0.5바이트) 노트북용이 아니라 서버급 모델입니다. 세션 문서 기법과 장면별 생성은 컨텍스트 크기와 관계없이 로컬에서 실행 가능한 모델에 적용됩니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '대부분의 로컬 LLM에서 컨텍스트 준수의 실질적 품질 상한은 약 32,000 토큰(~24,000 단어)입니다 — 이를 초과하면 모델은 이전 콘텐츠에 대한 정확한 참조를 잃어 목소리 이탈과 줄거리 불일치가 장편 원고 전체에 걸쳐 누적됩니다.',
+            text: '로컬 LLM에서 컨텍스트 준수의 보수적인 계획 상한은 1회 생성당 약 32,000 토큰(~24,000 단어)입니다 — 이를 초과하면 긴 컨텍스트 연구에서는 이전 콘텐츠의 활용이 덜 안정적이라고 보고되어 있으며, 장편 원고 전체에 걸쳐 목소리 이탈과 줄거리 불일치로 나타날 수 있습니다.',
           },
           {
             type: 'plain-terms',
-            text: '90,000 단어 소설을 128K 컨텍스트 윈도에 넣고 모델이 챕터 20을 쓰면서 챕터 3에서 무슨 일이 있었는지 기억할 것이라고 기대할 수 없습니다. 대신, 모델이 알아야 할 것들 — 인물 카드, 챕터 요약, 현재 장면 설정 — 을 4,000 토큰 미만의 "세션 문서"로 압축하고, 매 집필 세션 시작 시 그것을 주입하십시오. 모델은 현재 생성 중인 장면과 관련된 것만 알면 됩니다.',
+            text: '원고 전체가 컨텍스트 윈도에 들어간다고 해서 모델이 챕터 20을 쓰면서 챕터 3에서 무슨 일이 있었는지 기억할 것이라고 기대할 수는 없습니다. 대신, 모델이 알아야 할 것들 — 인물 카드, 챕터 요약, 현재 장면 설정 — 을 4,000 토큰 미만의 "세션 문서"로 압축하고, 매 집필 세션 시작 시 그것을 주입하십시오. 모델은 현재 생성 중인 장면과 관련된 것만 알면 됩니다.',
           },
         ],
         items: [
-          '**토큰-단어 변환:** 1 토큰 ≈ 영어 기준 0.75 단어. 32K 토큰 ≈ 24,000 단어. 128K 토큰 ≈ 96,000 단어 (완전한 소설 한 편).',
-          '**어텐션 저하:** 모델은 긴 컨텍스트 윈도의 초반부 콘텐츠에 대한 신뢰할 수 있는 참조를 잃습니다. 이는 인물 이름 오류, 잊혀진 줄거리 포인트, 확립된 어조에서의 목소리 이탈로 나타납니다.',
-          '**비대칭성:** 모델은 컨텍스트 윈도의 시작부(시스템 프롬프트)와 끝부(마지막 수백 토큰)에 가장 잘 주의를 기울입니다. 긴 컨텍스트 중간의 콘텐츠는 가장 신뢰할 수 없게 처리됩니다.',
+          '**토큰-단어 변환:** 1 토큰 ≈ 영어 기준 0.75 단어(경험칙). 32K 토큰 ≈ 24,000 단어. 128K 토큰 ≈ 96,000 단어(소설 한 편 정도); 262,144 토큰 ≈ 196,000 단어.',
+          '**어텐션 저하:** 모델은 긴 컨텍스트 윈도의 초반부 콘텐츠에 대한 신뢰할 수 있는 참조를 잃을 수 있습니다. 이는 인물 이름 오류, 잊혀진 줄거리 포인트, 확립된 어조에서의 목소리 이탈로 나타납니다.',
+          '**비대칭성:** Lost in the Middle 연구에서 모델은 입력의 처음과 끝을 가장 잘 활용했고 중간의 콘텐츠는 가장 덜 안정적으로 활용했습니다. 이 연구는 2023년에 쓸 수 있던 모델을 대상으로 했으므로, 같은 패턴을 가정하지 말고 현재 모델을 직접 시험하십시오.',
           '**해결책으로서의 세션 문서:** 모델이 필요한 모든 것을 짧은 구조화 문서로 압축하십시오. 시작 시 주입하십시오. 장면을 생성하십시오. 세션을 종료하십시오. 재시작하십시오. 새 장면을 반영하도록 업데이트된 동일한 세션 문서로 다시 시작하십시오.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '전체 원고를 컨텍스트에 붙여넣지 마십시오. 소설이 10,000 단어를 초과한 상태에서 전체 초안을 붙여넣고 다음 챕터를 요청하면 컨텍스트 이탈이 발생합니다 — 모델은 초기 인물 세부 사항을 잊고, 확립된 줄거리 포인트와 모순되며, 일반적인 어조로 돌아갑니다. 세션 문서 기법을 사용하십시오.',
+            text: '전체 원고를 컨텍스트에 붙여넣지 마십시오. 소설이 10,000 단어를 초과한 상태에서 전체 초안을 붙여넣고 다음 챕터를 요청하면 컨텍스트 이탈의 위험이 있습니다 — 모델이 초기 인물 세부 사항을 잊고, 확립된 줄거리 포인트와 모순되며, 일반적인 어조로 돌아갈 수 있습니다. 세션 문서 기법을 사용하십시오.',
           },
         ],
       },
@@ -3133,7 +3223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'session-document',
         title: '세션 문서 기법',
         content:
-          '이 섹션의 세션 문서 기법은 여러 장문 프로젝트(90,000 단어 문학 소설 한 편, 시나리오 초안 두 편)에서의 실제 집필 작업을 통해 검증되었습니다. 4,000 토큰의 세션 문서 크기, 장면별 생성 리듬, 연속성 확인 타이밍은 이론적 모델이 아닌 실제 집필 작업에서 관찰된 실패 패턴으로부터 도출된 것입니다.\n\n**세션 문서는 원고 옆에 보관하는 일반 텍스트 파일로, 모델이 일관된 콘텐츠를 생성하기 위해 알아야 하는 소설의 압축 상태입니다.** 세 섹션으로 구성됩니다: 활성 인물 카드, 챕터 요약, 현재 장면 설정.',
+          '세션 문서 기법은 위에서 설명한 컨텍스트 한계를 바탕으로 한 PromptQuorum의 워크플로 권장 사항입니다. PromptQuorum은 통제된 시험을 하지 않았으며, 아래 크기(4,000 토큰, 인물 카드당 150 단어, 챕터 요약당 100–150 단어)는 계획용 가이드라인이지 측정된 임계값이 아닙니다.\n\n**세션 문서는 원고 옆에 보관하는 일반 텍스트 파일로, 모델이 일관된 콘텐츠를 생성하기 위해 알아야 하는 소설의 압축 상태입니다.** 세 섹션으로 구성됩니다: 활성 인물 카드, 챕터 요약, 현재 장면 설정.',
         promptExamples: [
           {
             label: '세션 문서 템플릿',
@@ -3159,7 +3249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '소설 집필 워크플로',
         image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
         imageCaption:
-          '로컬 LLM을 활용한 4단계 소설 집필 워크플로: 개요(10~30장), 비트 시트(장당 3~8개 장면), 장면 생성(세션당 200~600단어), 수정 단계로 구성되며 4,000토큰 미만의 세션 문서를 중심으로 한다.',
+          '로컬 LLM 소설 집필 4단계: 개요, beat sheet, 장면 생성, 수정. 세션 문서를 중심으로 진행.',
         content:
           '**로컬 LLM을 사용한 소설 집필 워크플로는 네 단계로 구성됩니다: 개요 작성, 챕터별 beat sheet, 장면 생성, 수정 검토.** 각 단계는 서로 다른 프롬프트 구조를 사용합니다.',
         items: [
@@ -3192,10 +3282,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**형식은 사용자 턴이 아닌 시스템 프롬프트에 넣으십시오.** 시스템 메시지에 시나리오 형식 지시를 배치하면 지시를 반복하지 않고도 세션의 모든 생성이 형식을 따르게 됩니다.',
-          '**Fountain 호환 출력:** Fountain은 Final Draft, Highland, WriterDuet 및 기타 많은 도구와 호환되는 시나리오용 일반 텍스트 마크업 형식입니다. "Fountain 호환 일반 텍스트"를 생성하도록 모델에 요청하면 시나리오 소프트웨어에 직접 가져올 수 있는 출력이 생성됩니다.',
+          '**Fountain 호환 출력:** Fountain은 시나리오용 일반 텍스트 마크업 형식으로, Highland와 Fade In 및 [Fountain 앱 목록](https://fountain.io/apps)의 다른 앱이 읽을 수 있습니다. "Fountain 호환 일반 텍스트"를 생성하도록 모델에 요청하면 해당 도구에서 열거나 다른 도구용으로 변환할 수 있는 출력이 생성됩니다(FAQ의 Final Draft 질문 참조).',
           '**Slug line 먼저:** 장면 콘텐츠를 생성하기 전에 slug line(INT./EXT. 위치 — 낮/밤)을 별도의 단일 행 프롬프트로 생성하십시오. 이렇게 하면 모델이 액션을 생성하기 시작하기 전에 물리적 위치가 고정됩니다.',
           '**대화 검토:** 액션 라인을 생성한 후, 별도의 대화 검토를 실행하십시오: "액션 라인이 설정되었습니다. 이 장면에서 [인물 A]와 [인물 B]의 대화를 작성하라. 인물 A는 [X]를 원한다. 인물 B는 [Y]를 원한다. 대화 태그 없음. 5–8 교환."',
-          '**페이지 수 관리:** 표준 시나리오 페이지는 액션과 대화를 합쳐 약 55–60 단어입니다. 페이지 목표에 맞게 단어 상한을 조정하십시오: 1 페이지 ≈ 60 단어, 2 페이지 ≈ 120 단어, 3 페이지 ≈ 180 단어.',
+          '**페이지 수 관리:** 페이지당 단어 수에는 정해진 수치가 없으며, "한 페이지는 1분"은 경험칙일 뿐입니다. 본인 시나리오의 페이지당 평균 단어 수를 세어 그에 맞춰 단어 상한을 정하십시오.',
         ],
         callouts: [
           {
@@ -3212,7 +3302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '장문 소설을 위한 가장 신뢰할 수 있는 생성 패턴은 다음과 같습니다: 시스템 프롬프트의 세션 문서 → 사용자 턴의 단일 장면 프롬프트 → 검토 → 세션 문서 업데이트 → 반복, 세션당 한 장면.',
+            text: '장문 소설을 위한 신뢰할 수 있는 생성 패턴은 다음과 같습니다: 시스템 프롬프트의 세션 문서 → 사용자 턴의 단일 장면 프롬프트 → 검토 → 세션 문서 업데이트 → 반복, 세션당 한 장면.',
           },
           {
             type: 'plain-terms',
@@ -3250,8 +3340,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'SillyTavern', '링크': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', '통합 방법': 'OpenAI 호환 API → Ollama', '적합한 경우': '롤플레이 유형 소설 및 인물 카드 기반 집필; 지속적인 인물 기억' },
           { '도구': '순수 터미널', '통합 방법': '`ollama run [model]` 또는 Ollama API에 curl', '적합한 경우': '스크립트 가능한 워크플로; 최소한의 인터페이스 오버헤드로 최대 제어를 원하는 작가' },
           { '도구': 'LM Studio', '링크': '[lmstudio.ai](https://lmstudio.ai)', '통합 방법': '내장 채팅 인터페이스 + 로컬 서버 API', '적합한 경우': 'Ollama를 별도로 설치하지 않고 GUI 모델 관리자를 원하는 작가' },
-          { '도구': 'NovelCrafter', '링크': '[novelcrafter.com](https://www.novelcrafter.com)', '통합 방법': '내장 AI 통합; OpenAI 호환 엔드포인트 지원 (Ollama를 가리킴)', '적합한 경우': '단일 소설 중심 앱 내에서 챕터 수준의 AI 지원을 원하는 작가; 2026년 기준 "AI 네이티브 소설 쓰기 도구"에 가장 가까운 것' },
-          { '도구': 'Plottr', '링크': '[plottr.com](https://plottr.com)', '통합 방법': '수동 워크플로: Plottr에서 소설 구조화, 외부적으로 Ollama에 장면/beat 붙여넣기', '적합한 경우': '플롯 집약적 장르 소설(미스터리, 스릴러, 판타지)로 구조적 플롯 매핑이 워크플로의 축인 경우' },
+          { '도구': 'NovelCrafter', '링크': '[novelcrafter.com](https://www.novelcrafter.com)', '통합 방법': '내장 AI 통합; 도움말 페이지에 LM Studio, Ollama, OpenAI API 호환 연결이 나열되어 있음', '적합한 경우': '단일 소설 중심 앱 내에서 챕터 수준의 AI 지원을 원하는 작가' },
+          { '도구': 'Plottr', '링크': '[plottr.com](https://plottr.com)', '통합 방법': '수동 워크플로: Plottr에서 소설 구조화, 외부적으로 Ollama에 장면/beat 붙여넣기 (Plottr는 AI 기능을 추가하지 않는다고 밝힘)', '적합한 경우': '플롯 집약적 장르 소설(미스터리, 스릴러, 판타지)로 구조적 플롯 매핑이 워크플로의 축인 경우' },
         ],
         callouts: [
           {
@@ -3265,22 +3355,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: '장문 작업을 위한 모델 추천',
         content:
-          '**장문 집필은 단편 소설과 다른 모델 요구 사항을 가집니다.** 컨텍스트 준수, 긴 세션에 걸친 일관된 지시 따르기, 여러 생성 호출에 걸쳐 목소리를 유지하는 능력이 결정적 요소입니다. 모든 사용 사례에 걸친 더 넓은 모델 환경에 대해서는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
+          '**장문 집필은 단편 소설과 다른 모델 요구 사항을 가집니다.** 컨텍스트 준수, 긴 세션에 걸친 일관된 지시 따르기, 여러 생성 호출에 걸쳐 목소리를 유지하는 능력이 결정적 요소입니다. 아래 행은 각 모델 카드에서 가져온 출발점이며, PromptQuorum은 이 모델들을 소설용으로 평가하지 않았습니다. 공개된 창작 글쓰기 리더보드도 모델 순위가 서로 다르므로, 본인의 장면으로 두 후보를 시험하십시오. Command A+(총 파라미터 2,180억 개, 활성 250억 개, Apache 2.0)와 Mistral Large 3(총 파라미터 6,750억 개, 256K 컨텍스트, Apache 2.0) 같은 서버급 오픈 모델은 소비자용 하드웨어의 범위를 벗어납니다. 모든 사용 사례에 걸친 더 넓은 모델 환경에 대해서는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
         columns: ['작업', '추천 모델', '이유'],
         rows: [
-          { '작업': '소설 집필 (주요)', '추천 모델': 'Llama 3.3 70B', '이유': '다중 세션 장문 작업에서 최고의 컨텍스트 준수 및 지시 따르기; 가장 일관된 목소리' },
-          { '작업': '시나리오 집필', '추천 모델': 'Llama 3.3 70B 또는 Mistral Large', '이유': 'Llama 3.3은 복잡한 인물 역학을 위해; Mistral Large는 Fountain 출력에서 일관된 형식 준수를 위해' },
-          { '작업': 'Beat sheet / 개요 생성', '추천 모델': 'Qwen3 32B', '이유': '강한 구조적 생성; 번호 매긴 목록과 엄격한 제약 조건이 있는 개요 프롬프트를 신뢰할 수 있게 따름' },
-          { '작업': '대화 검토', '추천 모델': 'Command A+', '이유': '긴 교환에서 최고의 자연스러운 말하기 방식과 인물 목소리 차별화' },
-          { '작업': '수정 (구조적)', '추천 모델': 'Llama 3.3 70B', '이유': '다시 쓰기 지시에 명명된 특정 구조적 제약을 따르는 데 최고' },
-          { '작업': '성숙한 / 어두운 소설', '추천 모델': 'Hermes 3 Llama 3.1 70B', '이유': 'Llama 3.3 70B와 동일한 기반; 무검열 fine-tune; 장문 작업에서 동일한 컨텍스트 준수' },
+          { '작업': '소설 집필 (주요)', '추천 모델': 'Qwen3.6 27B 또는 Gemma 4 31B', '이유': '256K 이상의 컨텍스트를 내세우는 Apache 라이선스의 27B–31B dense 모델; 4비트에서 24 GB GPU 또는 32 GB 이상 통합 메모리에 맞는 크기급(추정)' },
+          { '작업': '시나리오 집필', '추천 모델': 'Qwen3.6 27B 또는 Llama 3.3 70B', '이유': '형식 준수는 주로 시스템 프롬프트에 달려 있음; Fountain 장면 하나를 두 모델로 시험. Llama 3.3 70B는 dense 모델로 128K 컨텍스트를 내세우며 4비트에서 약 40 GB 필요(추정)' },
+          { '작업': 'Beat sheet / 개요 생성', '추천 모델': 'Qwen3.6 35B-A3B', '이유': '토큰당 350억 파라미터 중 30억 개가 활성인 Mixture-of-Experts(Apache-2.0)라 토큰당 생성이 빠름; 개요 품질은 PromptQuorum이 평가하지 않음' },
+          { '작업': '대화 검토', '추천 모델': '샘플이 잘 맞는 모델', '이유': '인물의 말하기 방식에 맞는 보정 대사를 내놓는 모델로 대화를 별도 패스로 실행; 대화용 모델의 검증된 순위는 없음' },
+          { '작업': '수정 (구조적)', '추천 모델': '초안에 사용한 모델', '이유': '호출당 구조적 제약 하나를 명시하는 수정 프롬프트는 지시를 따르는 어떤 모델에서도 작동; 호출당 한 장면' },
+          { '작업': '성숙한 / 어두운 소설', '추천 모델': 'Hermes 4 70B', '이유': 'Llama-3.1-70B 기반; Nous Research는 대체로 중립적인 정렬과 낮은 거부율이라고 설명; Llama 3 라이선스; 하이브리드 추론 모드' },
         ],
       },
       commonMistakes: {
         id: 'common-mistakes',
         title: '흔한 실수',
         items: [
-          '**전체 원고를 컨텍스트에 붙여넣기.** 128K 컨텍스트 윈도에서도 어텐션 품질은 32K 토큰 이후 현저히 저하됩니다. 세션 문서 기법 — 압축된 인물 카드와 챕터 요약 — 을 사용하십시오.',
+          '**전체 원고를 컨텍스트에 붙여넣기.** 모델이 128K–262K 윈도를 내세우더라도 긴 입력은 덜 안정적으로 활용되므로 약 32K 토큰으로 계획하십시오. 세션 문서 기법 — 압축된 인물 카드와 챕터 요약 — 을 사용하십시오.',
           '**모델에게 열린 문서를 "계속 쓰도록" 요청하기.** "소설을 계속 써라"는 이탈을 만들어 냅니다. "다음 장면을 써라: [특정 설정, 시점, 단어 상한]"은 평가하고 붙여넣을 수 있는 일관되고 경계가 있는 출력을 만들어 냅니다.',
           '**시나리오에 beat sheet 없이 진행하기.** Beat 없이 시나리오 페이지를 생성하면 분량이 늘어나고 구조적 기능을 잃는 페이지가 만들어집니다. 항상 beat sheet를 먼저 생성하십시오.',
           '**세션 문서 업데이트 무시하기.** 장면을 생성한 후 챕터 요약을 업데이트하지 않으면 세션 문서가 구식이 됩니다. 구식 세션 문서는 몇 세션 후 불일치를 만들어 냅니다.',
@@ -3291,10 +3381,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          'Llama 3.3 70B 장문 컨텍스트 벤치마크 — [Meta AI Research](https://ai.meta.com)',
-          'Qwen3 32B 기술 보고서(컨텍스트 윈도 벤치마크 포함) — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
-          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
-          'Fountain 시나리오 형식 사양 — [Fountain.io](https://fountain.io)',
+          '[Qwen3.6-27B 모델 카드](https://huggingface.co/Qwen/Qwen3.6-27B) 및 [Qwen3.6-35B-A3B 모델 카드](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) — 파라미터, 네이티브 262,144 토큰 컨텍스트, YaRN 확장, Apache-2.0, 2026년 10월 26일 확인',
+          '[Gemma 4 31B 모델 카드](https://huggingface.co/google/gemma-4-31B-it) — dense 31B, 256K 컨텍스트, Apache 2.0, 2026년 10월 26일 확인',
+          '[Llama 3.3 70B Instruct 모델 카드](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 70B, 128K 컨텍스트, Llama 3.3 Community License, 2024년 12월 6일 공개',
+          '[Hermes 4 70B 모델 카드](https://huggingface.co/NousResearch/Hermes-4-70B) — Llama-3.1-70B 기반, 하이브리드 추론, "broadly neutral alignment"',
+          '[Kimi-K2.6 모델 카드](https://huggingface.co/moonshotai/Kimi-K2.6) — 총 1조 파라미터, 활성 320억 개, 256K 컨텍스트, 네이티브 int4',
+          '[Command A+ 문서](https://docs.cohere.com/docs/command-a-plus) 및 [Mistral Large 3 모델 카드](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) — 서버급 모델의 파라미터 수와 라이선스',
+          '[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — Liu 외, 2023',
+          '[Fountain.io](https://fountain.io) — Fountain 시나리오 형식 사양 및 [앱 목록](https://fountain.io/apps)',
+          '[Final Draft 도움말 센터](https://kb.finaldraft.com/hc/en-us/articles/15575076862228-Can-Final-Draft-import-a-file-written-in-a-Fountain-based-screenwriting-program) — Final Draft가 .fountain 파일을 직접 가져올 수 없다고 명시',
+          '[Amazon KDP의 AI 콘텐츠 규정(Publishers Weekly)](https://www.publishersweekly.com/pw/by-topic/digital/content-and-e-books/article/93122-amazon-issues-new-ai-guidelines-for-its-kdp-platform.html) 및 [Clarkesworld 투고 안내](https://clarkesworldmagazine.com/submissions/) — 출판사·플랫폼의 AI 정책; 투고 전에 최신 문구를 확인',
+          '[Scrivener 릴리스 노트](https://www.literatureandlatte.com/scrivener/release-notes) — 3.4.0~3.5.2(2025년 12월): 플러그인·API 항목 없음; "Scrivener itself contains no AI"; 2026년 10월 26일 확인',
+          '[Plottr in 2026](https://plottr.com/plottr-in-2026/) 및 [NovelCrafter AI 연결 도움말](https://www.novelcrafter.com/help/categories/ai-connections) — Plottr는 AI 기능을 개발하지 않는다고 밝힘; NovelCrafter는 LM Studio, Ollama, OpenAI API 호환 연결을 나열',
           'Ollama API 문서 — [Ollama](https://ollama.com/docs)',
         ],
       },
@@ -3304,11 +3402,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '로컬 LLM이 완전한 소설을 쓸 수 있습니까?',
-            a: '로컬 LLM은 완전한 소설의 산문을 생성할 수 있습니다 — 하지만 구조적·편집적 지능은 작가로부터 나와야 합니다. 모델은 특정 설정이 제공될 때 장면을 생성합니다; 자율적으로 계획하거나 평가하거나 주제적 결정을 내리지 않습니다. 로컬 LLM을 초안 도구로 사용하는 작가들은 이를 "이미 쓰는 방법을 아는 장면들을 위한 매우 빠른 첫 번째 초안 생성기"라고 설명합니다. 모델은 빈 페이지 문제에 드는 시간을 절약해 주며, 작가는 여전히 모든 중요한 결정을 내립니다.',
+            a: '로컬 LLM은 한 편의 소설 분량의 산문을 생성할 수 있지만, 구조적·편집적 판단은 작가에게서 나와야 합니다. 모델은 구체적인 설정이 주어지면 장면을 생성하지만, 스스로 계획하거나 평가하거나 주제적 결정을 내리지는 않습니다. 이미 쓰는 방법을 아는 장면을 위한 빠른 초안 생성기로 보는 것이 적절합니다. 백지 앞에서의 시간을 아껴 주지만, 중요한 결정은 모두 작가가 내립니다. 투고 전에 출판사와 플랫폼의 AI 정책을 확인하십시오(아래 출판사 관련 질문 참조).',
           },
           {
             q: '신뢰할 수 있게 사용할 수 있는 최대 컨텍스트 윈도는 얼마입니까?',
-            a: '실제로는 Llama 3.3 70B와 Qwen3 32B를 포함한 대부분의 로컬 모델에서 약 32K 토큰(~24,000 단어)까지 신뢰할 수 있는 어텐션 품질을 계획하십시오. 이를 초과하면 모델은 컨텍스트 시작의 콘텐츠에 대한 정확한 참조를 잃기 시작합니다. 세션 문서 기법은 작업 컨텍스트를 4,000–6,000 토큰 아래로 유지하여 각 생성 호출이 어텐션 윈도의 가장 신뢰할 수 있는 부분에서 작동하게 됩니다.',
+            a: '모델은 128K에서 262,144 토큰을 내세우지만, PromptQuorum은 긴 컨텍스트 연구에서 모델이 긴 입력의 중간을 덜 안정적으로 활용한다고 보고되어 있으므로 1회 생성당 약 32K 토큰(~24,000 단어)으로 계획할 것을 권장합니다. 이는 보수적인 계획 규칙이며 모든 모델에 대해 측정된 한계가 아니므로, 사용하는 모델을 직접 시험하십시오. 세션 문서 기법은 작업 컨텍스트를 4,000–6,000 토큰 미만으로 유지하므로 모든 생성 호출이 이 범위 안에 충분히 들어갑니다.',
           },
           {
             q: '소설 중간에 모델이 인물의 목소리를 바꾸는 것을 어떻게 방지합니까?',
@@ -3316,11 +3414,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 LLM과 함께 Scrivener를 사용할 수 있습니까?',
-            a: '네이티브로는 불가능합니다 — 2026년 현재 Scrivener는 외부 API 호출을 위한 플러그인 시스템이 없습니다. 가장 일반적인 워크플로는: Ollama에서 생성(터미널 또는 동반 스크립트를 통해), 출력 복사, 해당 Scrivener 문서에 붙여넣기입니다. 일부 작가는 Obsidian을 AI 초안 레이어로 사용하고 완성된 챕터를 최종 구조화를 위해 Scrivener에 가져옵니다. Ollama API를 호출하고 출력을 클립보드에 복사하는 스크립트가 네이티브 통합에 가장 가깝습니다.',
+            a: '기본 지원은 없습니다 — Scrivener 3에는 문서화된 플러그인 시스템이 없으며, 3.5.2(2025년 12월)까지의 공식 릴리스 노트에도 AI 통합에 대한 언급이 없습니다. 3.4.0 노트에는 "Scrivener itself contains no AI"라고 적혀 있고, macOS 시스템 기능인 Apple의 Writing Tools 지원이 추가되었습니다. 일반적인 워크플로: Ollama에서 생성(터미널 또는 보조 스크립트 사용), 출력을 복사해 해당 Scrivener 문서에 붙여넣습니다. 일부 작가는 Obsidian을 AI 초안 작성 레이어로 사용하고 완성된 챕터를 최종 구조화를 위해 Scrivener로 가져옵니다. Ollama API를 호출해 출력을 클립보드에 복사하는 스크립트가 기본 통합에 가장 가깝습니다.',
           },
           {
             q: '시나리오 집필에는 Ollama와 클라우드 AI 중 무엇이 더 낫습니까?',
-            a: '성숙한 콘텐츠(폭력, 어두운 심리학, 도덕적으로 복잡한 인물)를 생성해야 하는 시나리오 작가에게는 Llama 3.3 70B 또는 Hermes 3가 있는 로컬 Ollama가 더 신뢰할 수 있습니다 — 클라우드 모델은 드라마 시나리오에 자주 등장하는 특정 콘텐츠를 거부합니다. 형식 일관성과 페이지 수 규율에 대해서는 시스템 프롬프트에 형식 지시가 주어질 때 클라우드와 로컬 모델 모두 동등한 성능을 보입니다. 선택은 주로 콘텐츠 자유도와 프라이버시에 관한 것이며, 출력 품질에 관한 것이 아닙니다.',
+            a: '성숙한 콘텐츠(폭력, 어두운 심리, 도덕적으로 복잡한 인물)를 생성해야 하는 시나리오 작가에게 로컬 모델은 모델과 거부 동작을 직접 통제할 수 있다는 이점이 있습니다 — 일부 호스팅 모델은 드라마 시나리오에 나오는 내용을 거부하거나 완화하며, 호스팅 서비스의 정책은 시간이 지나며 바뀝니다. Hermes 4 70B 같은 거부가 적은 로컬 모델은 내장된 거부가 적지만, 생성하고 공개하는 콘텐츠에 대한 책임은 여전히 본인에게 있습니다. 형식 일관성은 주로 시스템 프롬프트의 지시에 달려 있으며 둘 다 작동합니다. 선택은 주로 콘텐츠 통제, 프라이버시, 비용의 문제입니다. PromptQuorum은 시나리오 작업에서 호스팅 모델과 로컬 모델의 출력 품질을 비교하지 않았습니다.',
           },
           {
             q: '특정 인물처럼 들리는 대화를 어떻게 생성합니까?',
@@ -3328,23 +3426,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '소설 집필에 로컬 LLM을 사용하려면 GPU가 필요합니까?',
-            a: 'GPU는 생성 속도를 크게 향상시키지만 필수는 아닙니다. Apple Silicon(M3 이상)에서는 통합 메모리 아키텍처 덕분에 MacBook Pro 16 GB도 초안 작업을 위해 Qwen3 14B를 편안하게 실행할 수 있습니다 — 생성 속도는 24 GB GPU 장치보다 느리지만, 생성 사이에 출력을 읽고 평가하는 집필 워크플로에서는 허용 가능합니다. NVIDIA 전용 GPU(RTX 4090, RTX 3090)가 24 GB VRAM을 갖추면 70B 모델을 사용 가능한 생성 속도로 실행합니다.',
+            a: 'GPU는 생성 속도를 크게 높여 주지만 필수는 아닙니다. Apple Silicon에서는 통합 메모리 덕분에 16 GB MacBook Pro도 더 작은 모델(4비트에서 대략 8B–14B급, 추정)을 실행할 수 있습니다 — 24 GB GPU 장비보다 느리지만, 생성 사이에 출력을 읽고 평가하는 집필 워크플로에서는 허용 가능한 수준입니다. 24 GB NVIDIA GPU(RTX 4090, RTX 3090)는 4비트에서 27B–32B급 모델을 담을 수 있습니다(추정). 70B급 모델은 4비트에서 약 40 GB 이상이 필요하므로 GPU 두 장, 48 GB 카드, 64 GB 통합 메모리 또는 속도가 느린 CPU 오프로딩이 필요합니다.',
           },
           {
             q: '로컬 LLM을 Final Draft 또는 다른 전문 시나리오 소프트웨어와 함께 사용할 수 있습니까?',
-            a: '직접적으로는 불가능합니다. Final Draft는 외부 API 통합이 없습니다. 워크플로는: Ollama를 통해 Fountain 일반 텍스트 형식으로 스크립트 페이지를 생성하고, 내장 가져오기(파일 → 가져오기 → Fountain)를 사용하여 Fountain 파일을 Final Draft에 가져오는 것입니다. Highland, WriterDuet, Fade In은 Fountain 가져오기를 네이티브로 지원합니다. Ollama에서 생성하고, Fountain으로 형식화하고, 시나리오 소프트웨어에 가져오십시오.',
+            a: '직접은 안 됩니다. Final Draft 도움말 센터에 따르면 Final Draft는 .fountain 파일을 가져올 수 없습니다. 권장 방법은 텍스트를 일반 .txt로 저장해 가져올 때 Script(Text가 아님)를 선택하거나, FDX를 내보낼 수 있는 앱을 통해 FDX로 가져오는 것입니다. Highland는 Fountain, FDX, PDF 사이를 변환하고, Fade In은 Fountain을 가져오고 내보냅니다(Fountain 앱 목록 기준). 워크플로: Ollama에서 Fountain 형식 텍스트를 생성하고, Highland 또는 Fade In에서 열어 Final Draft용으로 FDX를 내보냅니다.',
           },
           {
             q: '소설 집필을 위해 로컬에서 Kimi-K2.6을 사용할 수 있습니까?',
-            a: 'Kimi-K2.6은 진정한 100만 토큰 컨텍스트 윈도를 가지고 있어 단일 패스에서 소설 분량의 작업에 유용하지만, 소비자 하드웨어에서 로컬로 실행하는 것은 비실용적입니다(Q4 양자화에서 약 480 GB의 VRAM 필요). 완전 로컬 워크플로를 위해서는 Llama 3.3 70B(128K 컨텍스트, ~32K 실질)의 세션 문서 기법이 1M 상한 없이 소설 분량의 작업을 처리합니다. 세션 문서 워크플로가 적용된다면 대부분의 작가는 실제로 1M 컨텍스트가 필요하지 않습니다.',
+            a: 'Kimi-K2.6은 256K 토큰의 컨텍스트 윈도를 내세워 Qwen3.6 27B, Gemma 4 31B와 같은 급이지만, 총 파라미터 약 1조 개(활성 320억 개)의 Mixture-of-Experts 모델이며 네이티브 int4 가중치를 사용합니다. 가중치만 약 500 GB가 되므로(PromptQuorum 추정) 멀티 GPU 서버나 매우 큰 통합 메모리 장비가 필요하며 소비자용 하드웨어에서는 비실용적입니다. 완전한 로컬 워크플로에서는 27B–70B dense 모델과 세션 문서 기법만으로 1조 파라미터 모델 없이도 소설 분량의 작업을 처리할 수 있습니다.',
           },
           {
             q: '편집자들은 AI 지원 원고에 대해 어떻게 생각합니까?',
-            a: '2026년 기준 의견은 혼재하며 진화하고 있습니다. 대부분의 주요 소설 출판사(빅 파이브, 중간 규모 문학 출판사)는 제출된 원고에서 AI의 실질적인 사용을 공개하도록 요구하는 정책을 가지고 있으며, 일부는 완전히 금지합니다. 자가 출판 플랫폼(Amazon KDP)은 AI 생성 콘텐츠가 공개되었음을 확인하도록 요구합니다. 장르 출판사와 단편 소설 시장은 나뉘어 있습니다. 로컬 LLM을 초안 도구로 사용하는 작가들(상당한 인간 수정을 통해)은 일반적으로 AI를 공동 저자가 아닌 도구로 설명하며, 이는 대부분의 정책이 수용합니다. 제출 전에 해당 출판사의 특정 정책을 확인하십시오.',
+            a: '정책은 출판사와 플랫폼마다 다르며 2026년에도 계속 바뀌고 있으므로 투고 전에 해당 정책을 확인하십시오. Amazon KDP는 텍스트, 이미지, 번역이 AI로 생성된 경우 이를 알리도록 요구하며, AI 도구로 만든 콘텐츠는 크게 편집하더라도 AI 생성으로 취급합니다. 본인이 직접 쓴 글을 AI가 편집이나 다듬기만 도운 경우는 "AI 지원"으로 공개할 필요가 없습니다(2023년 9월 Publishers Weekly가 보도한 Amazon 규정 기준). 일부 잡지는 AI가 관여한 작품을 아예 받지 않습니다 — Clarkesworld의 투고 안내는 AI가 쓰거나 공동 집필하거나 지원한 이야기를 검토하지 않는다고 밝힙니다. 로컬 LLM이 생성한 장면 텍스트는 KDP의 "AI 생성" 정의 같은 기준에 해당하므로, 요구되는 곳에서는 공개하십시오. 이는 일반적인 정보이며 법률 자문이 아닙니다.',
           },
           {
-            q: '1M 컨텍스트 모델에는 어떤 하드웨어가 필요합니까?',
-            a: '로컬에서 1M 컨텍스트 모델을 실행하려면 일반적인 로컬 LLM 워크플로보다 훨씬 더 많은 VRAM이 필요합니다 — Kimi-K2.6은 Q4 양자화에서 약 480 GB가 필요하며, 멀티 GPU 서버 설정(8x H100 또는 동급)에서만 달성 가능합니다. 소비자 하드웨어(24–64 GB VRAM 장치)의 경우 128K 컨텍스트 모델이 실질적인 상한이며, 32K 실질 어텐션 품질 한계가 적용됩니다. 이 문서의 세션 문서 기법은 바로 이 격차를 위해 설계되었습니다 — 1M 컨텍스트 없이도 일관된 장문 결과물을 얻기 위한 것입니다.',
+            q: '100만 토큰 컨텍스트에는 어떤 하드웨어가 필요합니까?',
+            a: 'Qwen3.6 27B와 Qwen3.6 35B-A3B는 네이티브 262,144 토큰 컨텍스트를 내세우며, 모델 카드에 따르면 YaRN 스케일링으로 약 1,010,000 토큰까지 확장할 수 있습니다. 긴 컨텍스트는 가중치 외에 KV 캐시용 메모리가 필요하므로 100만 토큰 실행에는 일반적인 소비자 구성보다 훨씬 많은 메모리가 필요합니다. PromptQuorum은 필요량을 측정하지 않았습니다. 이 글의 세션 문서 기법은 바로 이 간극을 위해 설계되었습니다 — 100만 토큰 윈도에 의존하지 않고도 일관된 장문 출력을 얻기 위해서입니다.',
           },
         ],
       },
@@ -3371,7 +3469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-13',
+      dateModified: '2026-10-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
