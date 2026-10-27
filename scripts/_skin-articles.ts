@@ -3,3 +3,6 @@ import { article as a } from '../src/lib/power-local-llm/articles/locally-uncens
 export const ARTICLES: Record<string, Record<string, unknown>> = { 'locally-uncensored-review': a as any }
 import { article as frontends } from '../src/lib/local-llms/articles/best-local-llm-frontends'
 export const LOCAL_LLM_ARTICLES: Record<string, Record<string, unknown>> = { 'best-local-llm-frontends': frontends as any }
+import { article as peDev } from '../src/lib/prompt-engineering/articles/pe-for-developers-workflow'
+import { article as peReview } from '../src/lib/prompt-engineering/articles/prompt-review-workflow-for-teams'
+export const PE_ARTICLES: Record<string, Record<string, unknown>> = { 'pe-for-developers-workflow': peDev as any, 'prompt-review-workflow-for-teams': peReview as any }

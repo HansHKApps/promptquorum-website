@@ -17,6 +17,8 @@ import { CopyButton } from '@/components/CopyButton'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyTermId } from '@/lib/sectionAnchor'
 import { ARTICLE_TITLES_BY_LANG } from '@/lib/prompt-engineering/articleTitleIndex'
+import { renderHubTitle } from '@/components/article-skin/HubTitle'
+import { resolveSkin, getSkinClasses, getSkinThemeColors, type SkinClasses } from '@/components/article-skin/skin'
 
 interface Props {
   slug: string
@@ -984,7 +986,7 @@ interface LightboxImage {
   caption?: string
 }
 
-function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; slug?: string; isGlossary?: boolean; termPathMap?: Map<string, string[]> }) {
+function SectionBlock({ section, colors, skinCls, id, lang, slug, isGlossary, termPathMap }: { section: PESection; colors: { dot: string; badge: string }; skinCls: SkinClasses; id?: string; lang: Language; slug?: string; isGlossary?: boolean; termPathMap?: Map<string, string[]> }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
@@ -1002,7 +1004,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
   return (
     <div className={section.isTldr ? 'mt-2' : 'mt-8'} id={id}>
       {section.title && !section.isTldr && (
-        <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
+        <h2 className={skinCls.h2}>
           {renderInlineLinks(section.title, lang)}
         </h2>
       )}
@@ -1028,8 +1030,8 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
 
       {/* TL;DR block */}
       {section.isTldr && section.items && (
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 sm:p-5 my-3 key-takeaways">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
+        <div className={skinCls.tldrBoxCompact}>
+          <p className={skinCls.tldrLabel}>{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => {
               const itemText = typeof item === 'string' ? item : (item.url ? `[${item.title}](${item.url})` : item.title);
@@ -1525,10 +1527,12 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
   // Fall back to English if translation has fewer than 5 sections (incomplete translation)
   const hasTranslation = articleData[lang] && Object.keys(articleData[lang].sections).length >= 5
   const article = (hasTranslation ? articleData[lang] : articleData['en'])!
-  const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Fundamentals']
+  const skin = resolveSkin(article.designSkin)
+  const skinCls = getSkinClasses(skin, 'violet')
+  const colors = getSkinThemeColors(skin, article.theme, THEME_COLORS[article.theme] ?? THEME_COLORS['Fundamentals']!)
 
   return (
-    <div className="min-h-screen bg-white pt-24 sm:pt-20 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
+    <div className={`min-h-screen ${skinCls.page} pt-24 sm:pt-20 pb-20 px-4 sm:px-6`} key={`${slug}-${lang}`}>
       <div className="max-w-3xl mx-auto">
 
         {/* Breadcrumb + language */}
@@ -1549,10 +1553,10 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
             {article.theme}
           </span>
           <h1 className="text-2xl sm:text-4xl font-bold text-text-primary mb-2 sm:mb-3 leading-tight">
-            {article.title}
+            {renderHubTitle(article.title ?? '', skin, lang)}
           </h1>
           <div className="flex items-center gap-x-4 gap-y-1 text-sm text-text-secondary flex-wrap">
-            <time dateTime={article.dateModified ?? article.publishDate}>
+            <time dateTime={article.dateModified ?? article.publishDate} className={skin === 'hub' ? skinCls.updatedBadge : undefined}>
               {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {formatDisplayDate(article.dateModified ?? article.publishDate, lang)}
             </time>
             <span>·</span>
@@ -1564,7 +1568,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
 
         {/* Lead Answer Block — canonical bold definition, 25–50 words (Rule 31) */}
         {(article as any).leadAnswerBlock && (
-          <div className="border-l-4 border-primary bg-primary/5 rounded-r-xl px-4 sm:px-5 py-3 sm:py-4 mt-0 mb-3 sm:mb-4 max-w-2xl">
+          <div className={skin === 'hub' ? `${skinCls.leadBlockCompact} max-w-2xl` : 'border-l-4 border-primary bg-primary/5 rounded-r-xl px-4 sm:px-5 py-3 sm:py-4 mt-0 mb-3 sm:mb-4 max-w-2xl'}>
             <p className="text-sm font-bold text-text-primary leading-snug sm:leading-relaxed">
               {renderInlineLinks((article as any).leadAnswerBlock, lang)}
             </p>
@@ -1576,7 +1580,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           const tldrEntry = Object.entries(article.sections).find(([, s]) => s.isTldr)
           if (!tldrEntry) return null
           const [tldrKey, tldrSection] = tldrEntry
-          return <SectionBlock key={tldrKey} section={tldrSection} colors={colors} id="key-takeaways" lang={lang} />
+          return <SectionBlock key={tldrKey} section={tldrSection} colors={colors} skinCls={skinCls} id="key-takeaways" lang={lang} />
         })()}
 
         <ClusterBanner cluster="prompt-engineering" />
@@ -1928,13 +1932,13 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           const tldrId = tldrEntry ? slugifySectionId(tldrEntry[1] as any, tldrEntry[0]) : undefined
           const labels = SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!
           return (
-          <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
+          <nav className={skinCls.tocNav} aria-label="Table of contents">
             <details>
-            <summary className="cursor-pointer text-xs font-bold text-primary uppercase tracking-widest">{labels.tableOfContents}</summary>
+            <summary className={skinCls.tocSummary}>{labels.tableOfContents}</summary>
             <ol className="space-y-1 mt-3">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>
-                  <a href={item.anchor.startsWith('#') ? item.anchor : `#${item.anchor}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
+                  <a href={item.anchor.startsWith('#') ? item.anchor : `#${item.anchor}`} className={skinCls.tocLink}>
                     {tldrId && item.anchor.replace(/^#/, '') === tldrId ? labels.keyTakeaways : item.label}
                   </a>
                 </li>
@@ -1946,7 +1950,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
         })()}
 
         {/* Sections */}
-        <article className="key-takeaways-container">
+        <article className={`key-takeaways-container ${skinCls.sections}`}>
           {(() => {
             const query = searchQuery.trim().toLowerCase()
             const isSearching = query.length >= 2
@@ -2015,7 +2019,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
               }
               const sectionId = glossaryIdMap[key] ?? slugifySectionId(section, key)
               return (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} slug={slug} isGlossary={slug === 'prompt-engineering-glossary'} termPathMap={slug === 'prompt-engineering-glossary' ? termPathMap : undefined} />
+                <SectionBlock key={key} section={section} colors={colors} skinCls={skinCls} id={sectionId} lang={lang} slug={slug} isGlossary={slug === 'prompt-engineering-glossary'} termPathMap={slug === 'prompt-engineering-glossary' ? termPathMap : undefined} />
               )
             })
           })()}

@@ -7,6 +7,7 @@ const OG_SLUG = keyToSlug('pe-for-developers-workflow');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-en.webp',
@@ -199,6 +200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisierung',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-de.webp',
@@ -381,6 +383,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatización',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-es.webp',
@@ -563,6 +566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Workflows & Automação',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-pt.webp',
     title: 'Fluxo de trabalho de prompt engineering para desenvolvedores: configuração de IDE, testes e integração CI/CD',
@@ -744,6 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: 'Workflows et automatisation',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-fr.webp',
@@ -926,6 +931,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: 'ワークフローと自動化',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-ja.webp',
@@ -1108,6 +1114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: '工作流与自动化',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-zh.webp',
@@ -1290,6 +1297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-ar.webp',
@@ -1471,6 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     freshness_tier: 'evergreen',
     theme: '워크플로우 및 자동화',
     heroImage: '/images/pe-for-developers-workflow-overview-hero-ko.webp',

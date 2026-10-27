@@ -26,6 +26,7 @@ export interface PESection {
 
 export interface PEArticle {
   theme: string
+  designSkin?: 'hub'         // Hub-template colours for this article (colour classes only; see components/article-skin/skin.ts)
   title?: string
   heroImage?: string
   intro?: string
