@@ -9,11 +9,11 @@ const src = fs.readFileSync(path.join(process.cwd(), 'src/lib/outbound-utm.ts'),
 const js = ts.transpileModule(src, { compilerOptions: { module: 1, target: 99 } }).outputText
 const m = { exports: {} }
 new Function('module', 'exports', js)(m, m.exports)
-const { withUtm, shouldTagUrl, campaignForPath } = m.exports
+const { withUtm, shouldTagUrl, campaignForPath, isAmazonHost } = m.exports
 let fail = 0
 const eq = (got, want, name) => { if (got !== want) { fail++; console.error(`FAIL ${name}\n  got  ${got}\n  want ${want}`) } else console.log(`PASS ${name}`) }
 const T = 'utm_source=promptquorum.com&utm_medium=referral&utm_campaign=directory'
-const t = (u, o = {}) => withUtm(u, { campaign: 'directory', ...o })
+const t = (u) => withUtm(u, { campaign: 'directory' })
 eq(t('https://immich.app/'), `https://immich.app/?${T}`, 'plain site')
 eq(t('https://immich.app'), `https://immich.app?${T}`, 'no path')
 eq(t('https://x.io/a?b=1'), `https://x.io/a?b=1&${T}`, 'existing query appended')
@@ -21,14 +21,14 @@ eq(t('https://x.io/a#faq'), `https://x.io/a?${T}#faq`, 'fragment kept last')
 eq(t('https://x.io/a?b=1#faq'), `https://x.io/a?b=1&${T}#faq`, 'query + fragment')
 eq(t('https://x.io/a?utm_source=other'), 'https://x.io/a?utm_source=other', 'never overwrite existing utm')
 eq(t(t('https://x.io/')), `https://x.io/?${T}`, 'idempotent')
-eq(t('https://x.io/', { medium: 'affiliate' }), 'https://x.io/?utm_source=promptquorum.com&utm_medium=affiliate&utm_campaign=directory', 'affiliate medium')
-eq(t('https://www.amazon.com/s?k=laptop+cooling+pad', { medium: 'affiliate' }).includes('&utm_medium=affiliate'), true, 'amazon search tagged')
 for (const u of [
-  'https://github.com/a/b', 'https://gist.github.com/x', 'https://apps.apple.com/app/id1', 'https://play.google.com/store/apps/details?id=a',
+  'https://www.amazon.com/s?k=laptop+cooling+pad', 'https://www.amazon.de/dp/B0', 'https://amazon.co.jp/x', 'https://amzn.to/abc', 'https://github.com/a/b', 'https://gist.github.com/x', 'https://apps.apple.com/app/id1', 'https://play.google.com/store/apps/details?id=a',
   'https://huggingface.co/x', 'https://en.wikipedia.org/wiki/X', 'https://arxiv.org/abs/1', 'https://eur-lex.europa.eu/x', 'https://www.nist.gov/x',
   'https://www.gov.uk/x', 'https://www.bsi.bund.de/x'.replace('bund.de', 'gov'), 'https://mit.edu/x', 'https://x.com/a', 'https://www.youtube.com/watch?v=1',
   'https://www.promptquorum.com/de/blog', 'https://promptquorum.com/', 'mailto:a@b.c', 'tel:123', '/relative', '#anchor', 'javascript:void(0)', 'not a url', 'https://localhost/x',
 ]) eq(withUtm(u, { campaign: 'x' }), u, `skip ${u}`)
+for (const h of ['amazon.com','amazon.de','amazon.co.uk','amazon.co.jp','amzn.to']) eq(isAmazonHost(h), true, `amazon host ${h}`)
+for (const h of ['notamazon.com','amazon.com.evil.io','amazonaws.com','example.com']) eq(isAmazonHost(h), false, `not amazon ${h}`)
 eq(shouldTagUrl('https://notgithub.com/x'), true, 'lookalike host is not skipped')
 eq(shouldTagUrl('https://evilpromptquorum.com/x'), true, 'lookalike of own host is tagged')
 eq(campaignForPath('/power-local-llm/local-llm-software-directory'), 'directory', 'path directory')
@@ -40,4 +40,6 @@ eq(campaignForPath('/local-llms/what-is-quantization'), 'article', 'path article
 // Wiring: the tagger must stay mounted in the root layout.
 const layout = fs.readFileSync(path.join(process.cwd(), 'src/app/layout.tsx'), 'utf8')
 eq(/<OutboundUtmTagger\s*\/>/.test(layout), true, 'OutboundUtmTagger mounted in layout')
+const tagger = fs.readFileSync(path.join(process.cwd(), 'src/components/OutboundUtmTagger.tsx'), 'utf8')
+eq(/affiliate/.test(src.replace(/\/\/.*$/gm, '')) || /affiliate/.test(tagger.replace(/\/\/.*$/gm, '')), false, 'no "affiliate" label in code (no programme)')
 process.exit(fail ? 1 : 0)

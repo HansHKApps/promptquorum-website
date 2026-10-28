@@ -1,7 +1,12 @@
 // Source tag for every link that leaves promptquorum.com, so app makers and shops can see in their
 // own analytics that a visit came from us (owner rule 2026-10-28). The tag is the same for every
-// visitor and carries nothing personal: utm_source is our domain, utm_medium says what kind of
-// link it was, utm_campaign says which part of the site sent it.
+// visitor and carries nothing personal: utm_source is our domain, utm_medium is always "referral",
+// utm_campaign says which part of the site sent it.
+//
+// PromptQuorum has NO affiliate programme (owner, 2026-10-28), so nothing here ever says
+// "affiliate", and shop links are not treated differently in the tag. The one exception is Amazon:
+// it ignores UTM parameters, so for Amazon we send the plain Referer header instead (see
+// isAmazonHost and OutboundUtmTagger) and leave the URL untouched.
 //
 // Applied at interaction time by OutboundUtmTagger (mounted once in the root layout), so it covers
 // directory tiles, drawers, reviews, hub pages, article prose and every future link without each
@@ -10,7 +15,10 @@
 
 export const UTM_SOURCE = 'promptquorum.com'
 
-export type UtmMedium = 'referral' | 'affiliate'
+/** Amazon storefronts and its short-link host. Amazon reads the Referer header, not utm_*. */
+export const isAmazonHost = (host: string): boolean =>
+  /(^|\.)amazon\.(com|de|fr|es|it|nl|se|pl|ca|com\.mx|com\.br|co\.uk|co\.jp|com\.au|in|ae|sa|sg|com\.tr|eg)$/.test(host) ||
+  host === 'amzn.to' || host === 'amzn.eu' || host === 'a.co'
 
 /** Our own hosts: never tagged. */
 const OWN_HOSTS = ['promptquorum.com']
@@ -57,7 +65,7 @@ export function shouldTagUrl(url: string): boolean {
   const host = u.hostname.toLowerCase().replace(/^www\./, '')
   if (!host.includes('.')) return false
   if (matchesHost(host, OWN_HOSTS)) return false
-  if (matchesHost(host, SKIP_HOSTS) || isInstitutionHost(host)) return false
+  if (matchesHost(host, SKIP_HOSTS) || isInstitutionHost(host) || isAmazonHost(host)) return false
   // Never overwrite a tag the destination or an affiliate network already set.
   for (const key of u.searchParams.keys()) if (key.startsWith('utm_')) return false
   return true
@@ -82,14 +90,14 @@ export function campaignForPath(pathname: string): string {
  * should not be tagged or already has a utm_source. Keeps the existing query, the #fragment and the
  * original spelling of the rest of the URL.
  */
-export function withUtm(url: string, opts: { medium?: UtmMedium; campaign: string }): string {
+export function withUtm(url: string, opts: { campaign: string }): string {
   if (!shouldTagUrl(url)) return url
   const hashAt = url.indexOf('#')
   const hash = hashAt >= 0 ? url.slice(hashAt) : ''
   const base = hashAt >= 0 ? url.slice(0, hashAt) : url
   const sep = base.includes('?') ? (/[?&]$/.test(base) ? '' : '&') : '?'
   const tag =
-    `utm_source=${UTM_SOURCE}&utm_medium=${opts.medium ?? 'referral'}` +
+    `utm_source=${UTM_SOURCE}&utm_medium=referral` +
     `&utm_campaign=${encodeURIComponent(opts.campaign)}`
   return `${base}${sep}${tag}${hash}`
 }
