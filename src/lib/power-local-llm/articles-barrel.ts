@@ -69,6 +69,7 @@ import { article as a_on_device_ai_translator_review } from './articles/on-devic
 import { article as a_llamatik_review } from './articles/llamatik-review'
 import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_pajdo_review } from './articles/pajdo-review'
+import { article as a_tecadrisebot_review } from './articles/tecadrisebot-review'
 import { article as a_immich_review } from './articles/immich-review'
 import { article as a_facet_review } from './articles/facet-review'
 import { article as a_excire_foto_review } from './articles/excire-foto-review'
@@ -738,6 +739,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llamatik-review':                               a_llamatik_review,
   'castmates-review':                              a_castmates_review,
   'pajdo-review':                                  a_pajdo_review,
+  'tecadrisebot-review':                           a_tecadrisebot_review,
   'immich-review':                                 a_immich_review,
   'facet-review':                                  a_facet_review,
   'excire-foto-review':                            a_excire_foto_review,

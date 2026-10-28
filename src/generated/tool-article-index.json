@@ -4701,6 +4701,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tecadrisebot-review",
+        "title": "TecAdRiseBot Review: Free Windows Agent Desktop on Cursor Cloud Models",
+        "url": "/power-local-llm/tecadrisebot-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "coil-review",
         "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
         "url": "/power-local-llm/coil-review",
@@ -4740,7 +4748,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "GPT Engineer": {
@@ -4969,6 +4977,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tecadrisebot-review",
+        "title": "TecAdRiseBot Review: Free Windows Agent Desktop on Cursor Cloud Models",
+        "url": "/power-local-llm/tecadrisebot-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "tolaria-review",
         "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
         "url": "/power-local-llm/tolaria-review",
@@ -4992,7 +5008,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Msty Go": {
@@ -12663,6 +12679,20 @@
         "title": "Local AI Chat Pocket Review: Offline LLM and Image Chat for iPhone and iPad",
         "url": "/power-local-llm/local-ai-chat-pocket-review",
         "dateModified": "2026-10-06",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "TecAdRiseBot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "tecadrisebot-review",
+        "title": "TecAdRiseBot Review: Free Windows Agent Desktop on Cursor Cloud Models",
+        "url": "/power-local-llm/tecadrisebot-review",
+        "dateModified": "2026-10-28",
         "tier": "about"
       }
     ],
