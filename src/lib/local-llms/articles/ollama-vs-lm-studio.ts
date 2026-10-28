@@ -206,7 +206,7 @@ schema: {
           items: [
             '**Same engine:** Both use llama.cpp — comparable speed on the same hardware',
             '**Ollama:** CLI + REST API at port 11434, 4,500+ models, MIT open source, no telemetry',
-            '**LM Studio:** Desktop GUI + API at port 1234, any Hugging Face GGUF, free (closed source), telemetry on by default',
+            '**LM Studio:** Desktop GUI + API at port 1234, any Hugging Face GGUF, free (closed source), no telemetry per its privacy policy',
             '**Setup time:** Ollama 2-3 min (CLI), LM Studio 5 min (GUI)',
             '**For developers:** Ollama — API-first, scriptable, production-ready',
             '**For beginners:** LM Studio — visual model browser, built-in chat, no terminal needed',
@@ -328,7 +328,7 @@ schema: {
           ],
           callouts: [{
             type: 'warning',
-            text: 'LM Studio collects anonymous usage analytics by default. For privacy-sensitive deployments, disable immediately after installation: Settings → Privacy → Send anonymous usage data → off. Ollama collects no telemetry by default.',
+            text: 'LM Studio\'s privacy policy states that the application has no telemetry or user-specific tracking. Update checks send the app version, OS and IP address, and model search and downloads send anonymized search queries. For privacy-sensitive deployments that need proof, verify outbound traffic with a firewall or packet capture. Ollama also collects no telemetry by default.',
           }],
         },
         regionalContext: {
@@ -578,7 +578,7 @@ schema: {
           items: [
             '**Gleicher Motor:** Beide verwenden llama.cpp – vergleichbare Geschwindigkeit auf derselben Hardware',
             '**Ollama:** CLI + REST-API auf Port 11434, 4.500+ Modelle, MIT Open Source, keine Telemetrie',
-            '**LM Studio:** Desktop-GUI + API auf Port 1234, jedes Hugging Face GGUF, kostenlos (geschlossener Code), Telemetrie standardmäßig aktiviert',
+            '**LM Studio:** Desktop-GUI + API auf Port 1234, jedes Hugging Face GGUF, kostenlos (geschlossener Code), laut Datenschutzerklärung keine Telemetrie',
             '**Setup-Zeit:** Ollama 2–3 Min. (CLI), LM Studio 5 Min. (GUI)',
             '**Für Entwickler:** Ollama – API-first, skriptierbar, produktionsreif',
             '**Für Anfänger:** LM Studio – visueller Modellbrowser, integrierter Chat, kein Terminal nötig',
@@ -699,7 +699,7 @@ schema: {
           ],
           callouts: [{
             type: 'warning',
-            text: 'LM Studio erfasst standardmäßig anonyme Nutzungsanalytik. Für datenschutzsensible Bereitstellungen deaktivieren Sie sofort nach der Installation: Einstellungen → Datenschutz → Anonyme Nutzungsdaten senden → aus. Ollama erfasst standardmäßig keine Telemetrie.',
+            text: 'Laut Datenschutzerklärung enthält LM Studio keine Telemetrie und kein nutzerspezifisches Tracking. Update-Prüfungen übermitteln App-Version, Betriebssystem und IP-Adresse; Modellsuche und Downloads übermitteln anonymisierte Suchanfragen. Wenn Sie in datenschutzsensiblen Bereitstellungen einen Nachweis brauchen, prüfen Sie den ausgehenden Datenverkehr per Firewall oder Paketmitschnitt. Auch Ollama erfasst standardmäßig keine Telemetrie.',
           }],
         },
         regionalContext: {
@@ -955,7 +955,7 @@ schema: {
           items: [
             '**Même moteur :** Les deux utilisent llama.cpp – vitesse comparable sur le même matériel',
             '**Ollama :** CLI + API REST port 11434, 4 500+ modèles, MIT open source, zéro télémétrie',
-            '**LM Studio :** GUI de bureau + API port 1234, tout GGUF Hugging Face, gratuit (code fermé), télémétrie activée par défaut',
+            '**LM Studio :** GUI de bureau + API port 1234, tout GGUF Hugging Face, gratuit (code fermé), pas de télémétrie selon sa politique de confidentialité',
             '**Temps configuration :** Ollama 2–3 min (CLI), LM Studio 5 min (GUI)',
             '**Pour développeurs :** Ollama – API-first, scriptable, production',
             '**Pour débutants :** LM Studio – navigateur visuel, chat intégré, zéro terminal',
@@ -1347,7 +1347,7 @@ schema: {
           items: [
             '**同一エンジン:** 両方とも llama.cpp – 同じハードウェアで同等の速度',
             '**Ollama:** CLI + REST API ポート 11434、4 500+ モデル、MIT オープンソース、テレメトリなし',
-            '**LM Studio:** デスクトップ GUI + API ポート 1234、任意の Hugging Face GGUF、無料 (クローズド ソース)、デフォルトでテレメトリ有効',
+            '**LM Studio:** デスクトップ GUI + API ポート 1234、任意の Hugging Face GGUF、無料 (クローズド ソース)、プライバシーポリシー上テレメトリなし',
             '**セットアップ時間:** Ollama 2～3 分 (CLI)、LM Studio 5 分 (GUI)',
             '**開発者向け:** Ollama – API 第一、スクリプト可、本番環境対応',
             '**初心者向け:** LM Studio – ビジュアル モデル ブラウザ、統合チャット、ターミナル不要',
@@ -1646,7 +1646,7 @@ schema: {
           items: [
             '**相同引擎：** 两者都用 llama.cpp——相同硬件上速度相近',
             '**Ollama：** CLI + REST API 端口 11434、4500+ 模型、MIT 开源、无遥测',
-            '**LM Studio：** 桌面 GUI + API 端口 1234、任何 Hugging Face GGUF、免费（闭源）、默认启用遥测',
+            '**LM Studio：** 桌面 GUI + API 端口 1234、任何 Hugging Face GGUF、免费（闭源）、隐私政策称无遥测',
             '**设置时间：** Ollama 2-3 分钟（CLI）、LM Studio 5 分钟（GUI）',
             '**开发者用：** Ollama——API 优先、可编脚本、生产就绪',
             '**初学者用：** LM Studio——可视模型浏览器、内置聊天、无需终端',
@@ -1768,7 +1768,7 @@ schema: {
           callouts: [
             {
               type: 'warning',
-              text: '⚠️ **警告：** LM Studio 默认收集匿名用户分析。隐私重点部署时，安装后立即禁用：设置 → 隐私 → 发送匿名使用数据 → 关。Ollama 默认无遥测。'
+              text: '⚠️ **警告：** LM Studio 的隐私政策称其应用不含遥测或针对用户的跟踪。检查更新会发送应用版本、操作系统和 IP 地址；模型搜索和下载会发送匿名化的搜索查询。若隐私敏感部署需要证明，请通过防火墙或抓包核实出站流量。Ollama 默认同样不收集遥测。'
             }
           ],
         },
@@ -2047,7 +2047,7 @@ schema: {
           items: [
             '**Mismo motor:** ambas usan llama.cpp — velocidad comparable en el mismo hardware',
             '**Ollama:** CLI + REST API en el puerto 11434, 4.500+ modelos, MIT open source, sin telemetría',
-            '**LM Studio:** escritorio GUI + API en el puerto 1234, cualquier GGUF de Hugging Face, gratis (código cerrado), telemetría activada por defecto',
+            '**LM Studio:** escritorio GUI + API en el puerto 1234, cualquier GGUF de Hugging Face, gratis (código cerrado), sin telemetría según su política de privacidad',
             '**Tiempo de configuración:** Ollama 2-3 min (CLI), LM Studio 5 min (GUI)',
             '**Para desarrolladores:** Ollama — API-first, scriptable, listo para producción',
             '**Para principiantes:** LM Studio — navegador visual de modelos, chat integrado, sin terminal',
@@ -2168,7 +2168,7 @@ schema: {
           ],
           callouts: [{
             type: 'warning',
-            text: 'LM Studio recopila analíticas de uso anónimas por defecto. Para despliegues sensibles a la privacidad, desactívalo inmediatamente después de la instalación: Configuración → Privacidad → Enviar datos de uso anónimos → desactivado. Ollama no recopila telemetría por defecto.',
+            text: 'Según su política de privacidad, LM Studio no incluye telemetría ni seguimiento específico de usuarios. Las comprobaciones de actualización envían la versión de la app, el sistema operativo y la dirección IP; la búsqueda y descarga de modelos envían consultas de búsqueda anonimizadas. Si en despliegues sensibles a la privacidad necesitas una prueba, verifica el tráfico saliente con un firewall o una captura de paquetes. Ollama tampoco recopila telemetría por defecto.',
           }],
         },
         regionalContext: {
@@ -2416,7 +2416,7 @@ schema: {
           items: [
             '**نفس المحرك:** كلاهما يستخدم llama.cpp — سرعة مقارِبة على العتاد نفسه',
             '**Ollama:** CLI + API REST على المنفذ 11434، 4,500+ نموذج، مفتوح المصدر بترخيص MIT، بلا قياس عن بُعد',
-            '**LM Studio:** واجهة رسومية لسطح المكتب + API على المنفذ 1234، أي GGUF من Hugging Face، مجاني (مغلق المصدر)، قياس عن بُعد مفعّل افتراضيًا',
+            '**LM Studio:** واجهة رسومية لسطح المكتب + API على المنفذ 1234، أي GGUF من Hugging Face، مجاني (مغلق المصدر)، بلا قياس عن بُعد وفق سياسة الخصوصية',
             '**وقت الإعداد:** Ollama 2-3 دقائق (CLI)، LM Studio 5 دقائق (واجهة رسومية)',
             '**للمطورين:** Ollama — API أولًا، قابل للبرمجة، جاهز للإنتاج',
             '**للمبتدئين:** LM Studio — متصفّح نماذج مرئي، محادثة مدمجة، بلا طرفية',
@@ -2537,7 +2537,7 @@ schema: {
           ],
           callouts: [{
             type: 'warning',
-            text: 'يجمع LM Studio تحليلات استخدام مجهولة افتراضيًا. لعمليات النشر الحساسة للخصوصية، عطّلها فورًا بعد التثبيت: الإعدادات ← الخصوصية ← إرسال بيانات استخدام مجهولة ← معطّل. لا يجمع Ollama قياسًا عن بُعد افتراضيًا.',
+            text: 'تنص سياسة الخصوصية في LM Studio على أن التطبيق لا يتضمن قياسًا عن بُعد ولا تتبعًا خاصًا بالمستخدم. تُرسل عمليات التحقق من التحديثات إصدار التطبيق ونظام التشغيل وعنوان IP، وتُرسل عمليات البحث عن النماذج وتنزيلها استعلامات بحث مجهولة الهوية. إذا احتجت إلى دليل في عمليات النشر الحساسة للخصوصية، فتحقق من حركة البيانات الصادرة عبر جدار الحماية أو التقاط الحزم. كما أن Ollama لا يجمع قياسًا عن بُعد افتراضيًا.',
           }],
         },
         regionalContext: {
@@ -3034,7 +3034,7 @@ schema: {
           items: [
             '**동일한 엔진:** 두 도구 모두 llama.cpp를 사용 — 동일한 하드웨어에서 비슷한 속도',
             '**Ollama:** CLI + 포트 11434의 REST API, 4,500개 이상의 모델, MIT 오픈소스, 텔레메트리 없음',
-            '**LM Studio:** 데스크톱 GUI + 포트 1234의 API, Hugging Face GGUF 모두 지원, 무료(클로즈드 소스), 기본적으로 텔레메트리 활성화',
+            '**LM Studio:** 데스크톱 GUI + 포트 1234의 API, Hugging Face GGUF 모두 지원, 무료(클로즈드 소스), 개인정보 처리방침상 텔레메트리 없음',
             '**설정 시간:** Ollama 2~3분(CLI), LM Studio 5분(GUI)',
             '**개발자용:** Ollama — API 우선, 스크립팅 가능, 운영 환경 준비 완료',
             '**초보자용:** LM Studio — 시각적 모델 브라우저, 내장 채팅, 터미널 불필요',
@@ -3155,7 +3155,7 @@ schema: {
           ],
           callouts: [{
             type: 'warning',
-            text: 'LM Studio는 기본적으로 익명 사용 분석 데이터를 수집합니다. 프라이버시에 민감한 배포의 경우, 설치 직후 비활성화하십시오: 설정 → 개인 정보 보호 → 익명 사용 데이터 보내기 → 끄기. Ollama는 기본적으로 텔레메트리를 수집하지 않습니다.',
+            text: 'LM Studio의 개인정보 처리방침에 따르면 이 애플리케이션에는 텔레메트리나 사용자별 추적이 없습니다. 업데이트 확인 시 앱 버전, 운영체제, IP 주소가 전송되고, 모델 검색과 다운로드 시 익명화된 검색어가 전송됩니다. 프라이버시에 민감한 배포에서 증빙이 필요하면 방화벽이나 패킷 캡처로 외부로 나가는 트래픽을 확인하십시오. Ollama도 기본적으로 텔레메트리를 수집하지 않습니다.',
           }],
         },
         regionalContext: {

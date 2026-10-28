@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + Documents Extension: The Open-Source Pick',
         content:
-          '**Jan is the only one of the three with fully auditable open-source code (Apache 2.0).** The Documents extension adds RAG without compromising the zero-telemetry posture — embeddings run locally, document chunks never leave the device.',
+          '**Jan has fully auditable open-source code (Apache 2.0) and ships with no telemetry by default.** The Documents extension adds RAG without compromising that posture — embeddings run locally, document chunks never leave the device.',
         items: [
           '**Install path:** download Jan from jan.ai (~380 MB). Then enable the Documents extension from the Hub tab inside the app. The extension is shipped by the Jan team, not a third party.',
           '**File formats:** PDF, DOCX, TXT, MD. Adding new formats is on the public roadmap.',
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + Dokumente-Erweiterung: Die Open-Source-Wahl',
         content:
-          '**Jan ist die einzige der drei mit vollständig überprüfbarem Open-Source-Code (Apache 2.0).** Die Dokumente-Erweiterung fügt RAG hinzu, ohne die Null-Telemetrie-Haltung zu kompromittieren — Embeddings laufen lokal, Dokumentchunks verlassen das Gerät nie.',
+          '**Jan hat vollständig überprüfbaren Open-Source-Code (Apache 2.0) und kommt standardmäßig ohne Telemetrie.** Die Dokumente-Erweiterung fügt RAG hinzu, ohne diese Haltung zu kompromittieren — Embeddings laufen lokal, Dokumentchunks verlassen das Gerät nie.',
         items: [
           '**Installationspfad:** Jan von jan.ai herunterladen (~380 MB). Aktivieren Sie dann die Dokumente-Erweiterung von der Hub-Registerkarte in der App. Die Erweiterung wird vom Jan-Team versendet, nicht von einem Dritten.',
           '**Dateiformate:** PDF, DOCX, TXT, MD. Das Hinzufügen neuer Formate steht auf der öffentlichen Roadmap ab August 2026.',
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + extension Documents : Le choix open source',
         content:
-          '**Jan seul parmi les trois avec code source entièrement auditable (Apache 2.0).** L\'extension Documents ajoute RAG sans compromettre zéro télémétrie.',
+          '**Jan a un code source entièrement auditable (Apache 2.0) et n\'a aucune télémétrie par défaut.** L\'extension Documents ajoute RAG sans compromettre cette posture.',
         items: [
           '**Installation :** jan.ai (~380 MB). Activez extension Documents depuis Hub. Extension signée par Jan, pas tiers.',
           '**Formats :** PDF, DOCX, TXT, MD. Nouveaux formats en roadmap public.',
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + ドキュメント拡張：オープンソース選択肢',
         content:
-          '**Jan は 3つの中で唯一、監査可能なオープンソースコード（Apache 2.0）。** ドキュメント拡張は RAG 追加でテレメトリゼロ原則を侵害しない — 埋め込みはローカル実行、ドキュメントチャンクはデバイス離脱なし。',
+          '**Jan は監査可能なオープンソースコード（Apache 2.0）を持ち、デフォルトでテレメトリなし。** ドキュメント拡張は RAG 追加でこの原則を侵害しない — 埋め込みはローカル実行、ドキュメントチャンクはデバイス離脱なし。',
         items: [
           '**インストール：** jan.ai (~380 MB)。次に、アプリ内 Hub タブからドキュメント拡張を有効化。拡張は Jan チーム署名、サードパーティでなし。',
           '**ファイル形式：** PDF、DOCX、TXT、MD。新形式追加は 2026年8月時点で公開ロードマップ上。',
@@ -2272,7 +2272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + 文档扩展：开源选择',
         content:
-          '**Jan是三个中唯一具有完全可审计的开源代码（Apache 2.0）的应用。** 文档扩展添加RAG而不损害零遥测立场 — 嵌入在本地运行，文档块永远不会离开设备。',
+          '**Jan拥有完全可审计的开源代码（Apache 2.0），且默认不含遥测。** 文档扩展添加RAG而不损害这一立场 — 嵌入在本地运行，文档块永远不会离开设备。',
         items: [
           '**安装路径：** 从jan.ai下载Jan（~380 MB）。然后从应用中的Hub标签启用文档扩展。扩展由Jan团队发送，不是第三方。',
           '**文件格式：** PDF、DOCX、TXT、MD。添加新格式在2026年8月的公开路线图上。',
@@ -2800,7 +2800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + extensión de Documentos: la opción open source',
         content:
-          '**Jan es la única de las tres con código fuente completamente auditable (Apache 2.0).** La extensión de Documentos añade RAG sin comprometer la postura de cero telemetría — los embeddings se ejecutan localmente y los fragmentos de documentos nunca abandonan el dispositivo.',
+          '**Jan tiene código fuente completamente auditable (Apache 2.0) y no incluye telemetría por defecto.** La extensión de Documentos añade RAG sin comprometer esa postura — los embeddings se ejecutan localmente y los fragmentos de documentos nunca abandonan el dispositivo.',
         items: [
           '**Instalación:** descarga Jan desde jan.ai (~380 MB). Luego activa la extensión de Documentos desde la pestaña Hub dentro de la app. La extensión es del equipo de Jan, no de terceros.',
           '**Formatos de archivo:** PDF, DOCX, TXT, MD. La incorporación de nuevos formatos está en el roadmap público a mayo 2026.',
@@ -3324,7 +3324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + extensão de Documentos: a opção open source',
         content:
-          '**O Jan é o único dos três com código-fonte totalmente auditável (Apache 2.0).** A extensão de Documentos adiciona RAG sem comprometer a postura de zero telemetria — os embeddings são executados localmente e os fragmentos de documentos nunca saem do dispositivo.',
+          '**O Jan tem código-fonte totalmente auditável (Apache 2.0) e não traz telemetria por padrão.** A extensão de Documentos adiciona RAG sem comprometer essa postura — os embeddings são executados localmente e os fragmentos de documentos nunca saem do dispositivo.',
         items: [
           '**Instalação:** baixe o Jan em jan.ai (~380 MB). Depois ative a extensão de Documentos na aba Hub dentro do app. A extensão é da equipe do Jan, não de terceiros.',
           '**Formatos de arquivo:** PDF, DOCX, TXT, MD. A inclusão de novos formatos está no roadmap público em agosto de 2026.',
@@ -3337,7 +3337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Para a conformidade com o GDPR da UE, indústrias reguladas ou qualquer ambiente onde a auditabilidade do código-fonte seja obrigatória, o Jan é a única opção dos três. O AnythingLLM é open source no GitHub, mas inclui telemetria de código fechado nas builds oficiais; o LM Studio é totalmente proprietário.',
+            text: 'Para a conformidade com o GDPR da UE, indústrias reguladas ou qualquer ambiente onde a auditabilidade do código-fonte seja obrigatória, o Jan é a opção mais sólida: totalmente Apache 2.0, sem telemetria por padrão. O AnythingLLM é open source (MIT) com telemetria anônima opt-out, desativável em Configurações > Privacidade ou com DISABLE_TELEMETRY=true; o LM Studio é totalmente proprietário.',
           },
         ],
       },
@@ -3515,7 +3515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usar esses apps para documentos jurídicos ou médicos sensíveis?',
-            a: 'Os três funcionam totalmente offline depois de instalados e nunca transmitem o conteúdo dos documentos. Para fluxos de trabalho regulados (HIPAA, GDPR, sigilo profissional), o Jan + Documentos é a opção mais sólida porque todo o stack é de código aberto (Apache 2.0) e auditável, com zero telemetria por padrão. O AnythingLLM também é uma opção defensável em ambientes auditados usando a build Docker de código aberto (evitando a telemetria do instalador de desktop). O LM Studio é totalmente proprietário — confirme com sua equipe de conformidade antes de usá-lo com dados regulados.',
+            a: 'Os três funcionam totalmente offline depois de instalados e nunca transmitem o conteúdo dos documentos. Para fluxos de trabalho regulados (HIPAA, GDPR, sigilo profissional), o Jan + Documentos é a opção mais sólida porque todo o stack é de código aberto (Apache 2.0) e auditável, com zero telemetria por padrão. O AnythingLLM também é uma opção defensável em ambientes auditados — é open source (MIT) com telemetria anônima opt-out que você pode desativar em Configurações > Privacidade ou com DISABLE_TELEMETRY=true. O LM Studio é totalmente proprietário — confirme com sua equipe de conformidade antes de usá-lo com dados regulados.',
           },
         ],
       },
@@ -3822,7 +3822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + إضافة المستندات: الخيار المفتوح المصدر',
         content:
-          '**Jan هو الوحيد من بين الثلاثة بكود مصدري قابل للتدقيق بالكامل (Apache 2.0).** تُضيف إضافة المستندات RAG دون المساس بموقف صفر البيانات المُرسَلة — تعمل التضمينات محلياً ومقاطع المستندات لا تغادر الجهاز أبداً.',
+          '**يتميز Jan بكود مصدري قابل للتدقيق بالكامل (Apache 2.0) ولا يتضمن قياساً عن بُعد افتراضياً.** تُضيف إضافة المستندات RAG دون المساس بهذا الموقف — تعمل التضمينات محلياً ومقاطع المستندات لا تغادر الجهاز أبداً.',
         items: [
           '**التثبيت:** نزّل Jan من jan.ai (~380 ميجابايت). ثم فعّل إضافة المستندات من تبويب Hub داخل التطبيق. الإضافة من فريق Jan، لا من جهة أخرى.',
           '**صيغ الملفات:** PDF وDOCX وTXT وMD. إضافة صيغ جديدة مدرجة في خارطة الطريق العامة في أغسطس 2026.',
@@ -4357,7 +4357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan + 문서 확장: 오픈 소스 옵션',
         content:
-          '**Jan은 세 가지 중 완전히 감사 가능한 소스 코드(Apache 2.0)를 가진 유일한 앱입니다.** 문서 확장은 텔레메트리 제로 자세를 손상시키지 않고 RAG를 추가합니다 — 임베딩은 로컬에서 실행되고 문서 청크는 절대 기기를 벗어나지 않습니다.',
+          '**Jan은 완전히 감사 가능한 소스 코드(Apache 2.0)를 갖추고 있으며 기본적으로 텔레메트리가 없습니다.** 문서 확장은 이 자세를 손상시키지 않고 RAG를 추가합니다 — 임베딩은 로컬에서 실행되고 문서 청크는 절대 기기를 벗어나지 않습니다.',
         items: [
           '**설치:** jan.ai에서 Jan을 다운로드하십시오(약 380MB). 그런 다음 앱 내의 Hub 탭에서 문서 확장을 활성화하십시오. 이 확장은 Jan 팀의 것이며 타사가 아닙니다.',
           '**파일 형식:** PDF, DOCX, TXT, MD. 2026년 8월 공개 로드맵에서 새 형식 추가가 예정되어 있습니다.',
