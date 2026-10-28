@@ -1269,6 +1269,7 @@ const HUB_THEMES: Array<{
       'photoprism-review',
       'ente-photos-review',
       'immich-review',
+      'facet-review',
       'controlnet-review',
       'draw-things-review',
       'genva-review',
