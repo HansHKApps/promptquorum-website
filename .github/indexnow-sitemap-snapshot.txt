@@ -616,6 +616,7 @@ https://www.promptquorum.com/power-local-llm/swerve-ai-review
 https://www.promptquorum.com/power-local-llm/swiftlm-review
 https://www.promptquorum.com/power-local-llm/tabby-review
 https://www.promptquorum.com/power-local-llm/taskweaver-review
+https://www.promptquorum.com/power-local-llm/tecadrisebot-review
 https://www.promptquorum.com/power-local-llm/tensorrt-llm-explained
 https://www.promptquorum.com/power-local-llm/text-generator-review
 https://www.promptquorum.com/power-local-llm/tgpt-review
