@@ -11693,6 +11693,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tecadrisebot-review",
+        "title": "TecAdRiseBot Review: Free Windows Agent Desktop on Cursor Cloud Models",
+        "url": "/power-local-llm/tecadrisebot-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -11730,17 +11738,9 @@
         "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
         "dateModified": "2026-10-26",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pajdo-review",
-        "title": "Pajdo Review: Apple Health Companion That Answers on the iPhone",
-        "url": "/power-local-llm/pajdo-review",
-        "dateModified": "2026-10-26",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 231,
+    "totalCount": 232,
     "capped": true
   },
   "Qdrant": {
