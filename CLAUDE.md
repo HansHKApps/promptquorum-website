@@ -356,6 +356,15 @@ Whenever you work on the App Directory — a tile, a FeatureAppPost review, a ca
 
 **Implementation (2026-10-16):** `ToolRecord.lastUpstreamUpdate` (ISO date) + `lastUpstreamUpdateSource` (URL) in `src/lib/power-local-llm/apps/types.ts`; thresholds in `src/components/local-ai-directory/staleness.ts` (`getAppActivity`: >90 days = `quiet` → red warning banner on tile/drawer/table row; >180 days = `dead` → grey tile + dark "likely a dead project" banner). Unset = no warning (unknown, never "no updates"). Set the field on every tile you touch, from a primary source (GitHub: newer of latest release and last push; otherwise official release page/store listing), and run `npm run test:app-activity` (also validates the field). Backfilled 2026-10-16 for 229 of 245 tiles (GitHub API, App Store version history, Google Play, official changelogs). Still unset on purpose: no dated primary-source release found (`backyard-ai`, `blackbox-ai`, `codegpt`, `cognira`, `hyperlink-nexa`, `macwhisper`, `nvidia-g-assist`, `open-felix`, `rapr-ai`, `spiritbox-ultimate`), repo unconfirmed (`hermes-agent`), Cody discontinued 2025-07-23 with no product release date (`sourcegraph-cody`), and model-weight repos where "dead" is misleading (`idefics`, `stable-diffusion`, `xtts-v2`). Left unset on purpose (repo mapping unreliable): `mlx-lm` (lives at ml-explore/mlx-lm, not mlx-examples), `piper-tts` (original archived, development moved to a successor repo).
 
+## Outbound links carry a source tag (owner rule 2026-10-28)
+
+Every link that leaves promptquorum.com gets `utm_source=promptquorum.com&utm_medium=referral|affiliate&utm_campaign=<directory|app-review|comparison|prompt-bites|home|article>` so app makers and shops see in their own analytics that the visit came from us. Applies to directory tiles/drawers, reviews, hubs, article prose and affiliate/sponsored links (`utm_medium=affiliate`).
+
+- **Do nothing per link.** `OutboundUtmTagger` (mounted once in `src/app/layout.tsx`) tags any external `<a>` on hover/focus/touch/right-click via `withUtm()` in `src/lib/outbound-utm.ts`. New links, new clusters and markdown links in article data are covered automatically. Never hand-write `utm_` into a destination URL.
+- **Deliberately untagged:** code hosts and stores (GitHub, App Store, Google Play, Hugging Face, PyPI), reference/standards/government/university hosts, social platforms, our own domain. Edit `SKIP_HOSTS` in `outbound-utm.ts` to change this; a URL that already has any `utm_*` is never touched.
+- **Clean URLs stay clean** in server HTML, JSON-LD, sitemaps, `llms.txt` and MCP output (MCP has its own `utm_source=mcp` tag in `src/lib/mcp/utm.ts`). Single-link opt-out: `data-no-utm`.
+- Test: `npm run test:outbound-utm` (also asserts the tagger is still mounted in the layout).
+
 ## Freshness Tier (MANDATORY before writing any new article)
 
 Before writing or substantially editing any article, ask:
