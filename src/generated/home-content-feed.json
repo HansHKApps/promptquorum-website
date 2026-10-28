@@ -5026,43 +5026,43 @@
     "title": "Best Prompt Engineering IDEs and Editors 2026",
     "excerpt": "Cursor plans start at $8/month; LM Studio is $0 after hardware. Six prompt engineering IDEs, each optimized for a different use case. Here's which one fits yours.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "Beste Prompt-Engineering-IDEs und Editoren (2026)",
-    "excerpt": "6 Prompt-Engineering-IDEs im Test: Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio, LM Studio. Feature-Matrix nach Persona.",
+    "excerpt": "6 Prompt-Engineering-IDEs im Test: Cursor, VS Code + Cline, OpenAI Playground, Claude Console, Google AI Studio, LM Studio. Feature-Matrix nach Persona.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/de/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "fr",
     "title": "Meilleurs IDE et Éditeurs de Prompt Engineering (2026)",
-    "excerpt": "Comparaison de 6 IDE de prompt engineering : Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio. Matrice par persona.",
+    "excerpt": "Comparaison de 6 IDE de prompt engineering : Cursor, VS Code + Cline, OpenAI Playground, Claude Console, Google AI Studio. Matrice par persona.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/fr/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ja",
     "title": "プロンプトエンジニアリング向けベストIDE・エディタ（2026年）",
-    "excerpt": "プロンプトIDE 6選を比較：Cursor、VS Code + Continue、OpenAI Playground、Claude Console、Google AI Studio、LM Studio。ペルソナ別機能マトリクス。",
+    "excerpt": "プロンプトIDE 6選を比較：Cursor、VS Code + Cline、OpenAI Playground、Claude Console、Google AI Studio、LM Studio。ペルソナ別機能マトリクス。",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/ja/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "zh",
     "title": "最佳Prompt工程IDE与编辑器（2026）",
-    "excerpt": "6款Prompt工程IDE对比：Cursor、VS Code + Continue、OpenAI Playground、Claude Console、Google AI Studio、LM Studio。按角色和场景的功能矩阵。",
+    "excerpt": "6款Prompt工程IDE对比：Cursor、VS Code + Cline、OpenAI Playground、Claude Console、Google AI Studio、LM Studio。按角色和场景的功能矩阵。",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/zh/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
@@ -5071,7 +5071,7 @@
     "title": "Mejores IDEs y editores de prompt engineering 2026",
     "excerpt": "Cursor tiene planes desde $8/mes; LM Studio, $0 tras invertir en hardware. Seis IDEs de prompt engineering, cada uno para un caso de uso. Descubre cuál encaja contigo.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/es/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
@@ -5089,7 +5089,7 @@
     "title": "أفضل بيئات تطوير هندسة البرومبت لعام ⁨2026⁩",
     "excerpt": "⁨Cursor⁩ من ⁨8⁩ دولارات/شهر؛ ⁨LM Studio⁩ مجاني بعد الأجهزة. مقارنة ⁨6⁩ بيئات تطوير للبرومبت: ⁨Cursor⁩ و⁨VS Code⁩ و⁨OpenAI Playground⁩ و⁨LM Studio⁩ وغيرها.",
     "publishDate": "2026-05-01",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/ar/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
@@ -5098,7 +5098,7 @@
     "title": "2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터",
     "excerpt": "Cursor는 월 $8부터; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE를 비교합니다. 나에게 맞는 도구를 찾아보세요.",
     "publishDate": "2026-04-10",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/ko/prompt-engineering/best-prompt-engineering-ides",
     "cluster": "prompt-engineering"
   },
@@ -5188,7 +5188,7 @@
     "title": "Prompt Review Workflow for Teams: Checklist & CI/CD Gates",
     "excerpt": "A prompt review workflow for teams: 7-point checklist, 3 reviewer roles and CI/CD gates that block unapproved prompts. Automate routine checks.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5197,7 +5197,7 @@
     "title": "Prompt-Review-Workflow für Teams: Checkliste & CI/CD-Gates",
     "excerpt": "Prompt-Review-Workflow für Teams: 7-Punkte-Checkliste, 3 Reviewer-Rollen und CI/CD-Gates, die ungeprüfte Prompts blockieren. Routine automatisieren.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/de/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5206,7 +5206,7 @@
     "title": "Workflow de Revue de Prompts : Checklist & Gates CI/CD",
     "excerpt": "Workflow de revue de prompts pour équipes : checklist 7 points, 3 rôles de reviewers et gates CI/CD qui bloquent les prompts non approuvés. Automatisez.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/fr/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5215,7 +5215,7 @@
     "title": "チーム向けプロンプトレビューワークフロー：チェックリストとCI/CDゲート",
     "excerpt": "チーム向けプロンプトレビューの進め方。7項目チェックリスト、3つのレビュアー役割、未承認プロンプトを止めるCI/CDゲート。定型チェックは自動化し、意図は手動で確認します。",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/ja/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5224,7 +5224,7 @@
     "title": "团队 Prompt 审查工作流：7 项检查清单 & CI/CD 门控",
     "excerpt": "团队 Prompt 审查工作流：7 项检查清单、3 个审查角色，以及拦截未批准 Prompt 的 CI/CD 门控。常规检查自动化，意图交给人工判断。",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/zh/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5233,7 +5233,7 @@
     "title": "Flujo de Revisión de Prompts para Equipos: Lista de Verificación y Gates CI/CD",
     "excerpt": "Flujo de revisión de prompts para equipos: lista de 7 puntos, 3 roles de revisión y gates CI/CD que bloquean prompts sin aprobar. Automatiza lo rutinario.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/es/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5242,7 +5242,7 @@
     "title": "Fluxo de Revisão de Prompts para Equipes: Lista de Verificação e Gates CI/CD",
     "excerpt": "Fluxo de revisão de prompts para equipes: lista de 7 pontos, 3 funções de revisão e gates CI/CD que bloqueiam prompts não aprovados. Automatize rotinas.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/pt/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5251,7 +5251,7 @@
     "title": "سير عمل مراجعة التعليمات للفرق: قائمة التحقق وبوابات ⁨CI/CD⁩",
     "excerpt": "سير عمل مراجعة التعليمات للفرق: قائمة تحقق من 7 نقاط و3 أدوار مراجعة وبوابات CI/CD تمنع التعليمات غير المعتمدة. أتمت الفحوصات الروتينية وراجع القصد.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/ar/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -5260,7 +5260,7 @@
     "title": "팀을 위한 프롬프트 검토 워크플로: 체크리스트와 CI/CD 게이트",
     "excerpt": "팀을 위한 프롬프트 검토 워크플로: 7개 항목 체크리스트, 3개 검토자 역할, 미승인 프롬프트를 막는 CI/CD 게이트. 반복 검사는 자동화하고 의도는 수동으로 확인합니다.",
     "publishDate": "2026-04-29",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/ko/prompt-engineering/prompt-review-workflow-for-teams",
     "cluster": "prompt-engineering"
   },
@@ -20821,7 +20821,7 @@
     "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
     "excerpt": "Gemma 4 31B and Qwen3.8-27B fit one 24 GB GPU. See the best local LLM for fiction, dialogue and worldbuilding per VRAM tier, with Ollama commands.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20830,7 +20830,7 @@
     "title": "Beste lokale LLMs für kreatives Schreiben (2026): Belletristik, Dialog & Weltenbau",
     "excerpt": "Gemma 4 31B und Qwen3.8-27B passen auf eine 24-GB-GPU. Das beste lokale LLM für Prosa, Dialog und Weltenbau je VRAM-Stufe, mit Ollama-Befehlen.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/de/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20839,7 +20839,7 @@
     "title": "Meilleurs LLM locaux pour l'écriture créative (2026) : fiction, dialogue et worldbuilding",
     "excerpt": "Gemma 4 31B et Qwen3.8-27B tiennent sur un GPU de 24 Go. Le meilleur LLM local pour fiction, dialogue et worldbuilding par palier de VRAM, avec commandes Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/fr/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20848,7 +20848,7 @@
     "title": "創作向けベストローカルLLM（2026年）：小説・対話・世界観構築",
     "excerpt": "Gemma 4 31BとQwen3.8-27Bは24GB GPU1枚で動作。小説・対話・世界観構築に向くローカルLLMをVRAM帯別にOllamaコマンド付きで紹介します。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/ja/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20857,7 +20857,7 @@
     "title": "2026年创意写作最佳本地LLM：小说、对话与世界观构建",
     "excerpt": "Gemma 4 31B和Qwen3.8-27B可在单张24GB显卡上运行。按显存档位推荐适合小说、对话与世界观构建的最佳本地LLM，附Ollama命令。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/zh/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20866,7 +20866,7 @@
     "title": "Mejores LLM locales para escritura creativa (2026): ficción, diálogo y worldbuilding",
     "excerpt": "Gemma 4 31B y Qwen3.8-27B caben en una GPU de 24 GB. El mejor LLM local para ficción, diálogo y worldbuilding por nivel de VRAM, con comandos de Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/es/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20875,7 +20875,7 @@
     "title": "Melhores LLMs locais para escrita criativa (2026): ficção, diálogo e worldbuilding",
     "excerpt": "Gemma 4 31B e Qwen3.8-27B cabem em uma GPU de 24 GB. O melhor LLM local para ficção, diálogo e worldbuilding por faixa de VRAM, com comandos do Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/pt/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20884,7 +20884,7 @@
     "title": "أفضل نماذج LLM المحلية للكتابة الإبداعية (2026): الخيال والحوار وبناء العوالم",
     "excerpt": "يعمل نموذج Gemma 4 31B ونموذج Qwen3.8-27B على بطاقة 24 جيجابايت واحدة. أفضل LLM محلي للخيال والحوار وبناء العوالم حسب فئة VRAM، مع أوامر Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/ar/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -20893,7 +20893,7 @@
     "title": "2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 대화, 세계관 구축",
     "excerpt": "Gemma 4 31B와 Qwen3.8-27B는 24GB GPU 한 장에서 실행됩니다. 소설, 대화, 세계관 구축에 맞는 최고의 로컬 LLM을 VRAM 구간별로 Ollama 명령과 함께 소개합니다.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-27",
     "url": "/ko/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21709,8 +21709,8 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 321 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "Browse 321 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
+    "title": "The Complete Local AI & LLM Software Directory: 322 Apps & Tools for Running AI Locally (2026)",
+    "excerpt": "Browse 322 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/power-local-llm/local-llm-software-directory",
@@ -21718,8 +21718,8 @@
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 321 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "Entdecken Sie 321 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
+    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 322 Apps und Tools, um KI lokal auszuführen (2026)",
+    "excerpt": "Entdecken Sie 322 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/de/power-local-llm/local-llm-software-directory",
@@ -21727,8 +21727,8 @@
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 321 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "Parcourez 321 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
+    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 322 apps et outils pour exécuter l'IA en local (2026)",
+    "excerpt": "Parcourez 322 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/fr/power-local-llm/local-llm-software-directory",
@@ -21736,8 +21736,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす321のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを321件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす322のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを322件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/ja/power-local-llm/local-llm-software-directory",
@@ -21745,8 +21745,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：321款应用与工具，在本地运行AI（2026）",
-    "excerpt": "收录321款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI与LLM软件完整目录：322款应用与工具，在本地运行AI（2026）",
+    "excerpt": "收录322款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/zh/power-local-llm/local-llm-software-directory",
@@ -21754,8 +21754,8 @@
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 321 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "Explora 321 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
+    "title": "El directorio completo de software de IA y LLM local: 322 apps y herramientas para ejecutar IA en local (2026)",
+    "excerpt": "Explora 322 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/es/power-local-llm/local-llm-software-directory",
@@ -21763,8 +21763,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 321 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 321 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 322 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 322 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/pt/power-local-llm/local-llm-software-directory",
@@ -21772,8 +21772,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 321 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 321 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 322 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 322 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/ar/power-local-llm/local-llm-software-directory",
@@ -21781,8 +21781,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 321개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 321개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 322개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 322개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-26",
     "url": "/ko/power-local-llm/local-llm-software-directory",
@@ -23179,7 +23179,7 @@
     "title": "Lokale LLM-Prompts für Belletristik-Autoren: 15 Vorlagen & Techniken (2026)",
     "excerpt": "15 Prompt-Vorlagen für Belletristik mit lokalen LLMs: Szenen, Charaktere, Dialog, Weltenbau und Überarbeitung – kopierfertig für Ollama und LM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/de/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23188,7 +23188,7 @@
     "title": "Prompts LLM locaux pour auteurs de fiction : 15 modèles et techniques (2026)",
     "excerpt": "15 modèles de prompts pour la fiction avec LLM locaux : scènes, personnages, dialogue, mondes, révision. Prêts à copier pour Ollama et LM Studio.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/fr/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23197,7 +23197,7 @@
     "title": "小説家のためのローカルLLMプロンプト：15のテンプレートとテクニック（2026）",
     "excerpt": "ローカルLLMを使った小説執筆向け15プロンプトテンプレート。シーン・キャラクター・ダイアログ・世界構築・修正——OllamaとLM Studio対応でコピーペースト可能。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/ja/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -23206,7 +23206,7 @@
     "title": "本地LLM小说写作提示词：15个模板与技巧（2026）",
     "excerpt": "面向小说写作者的15个本地LLM提示词模板。场景写作、角色开发、对话、世界构建、风格转换、修改和编辑模板——适用于Ollama和LM Studio，即用即取。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-27",
     "url": "/zh/power-local-llm/local-llm-prompts-for-fiction-writers",
     "cluster": "power-local-llm"
   },
@@ -33293,7 +33293,7 @@
   {
     "lang": "en",
     "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-    "excerpt": "Compare 29 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.",
+    "excerpt": "Compare 30 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-images-video-compared",
@@ -33302,7 +33302,7 @@
   {
     "lang": "de",
     "title": "Lokale Bild-, Video- und Vision-Tools im Vergleich (2026): Generierung, Vision und OCR",
-    "excerpt": "Vergleich von 29 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.",
+    "excerpt": "Vergleich von 30 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-images-video-compared",
@@ -33311,7 +33311,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux d'image, de vidéo et de vision : comparatif (2026) — génération, vision et OCR",
-    "excerpt": "Comparez 29 outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 30 outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-images-video-compared",
@@ -33320,7 +33320,7 @@
   {
     "lang": "ja",
     "title": "ローカル画像・動画・ビジョンツール比較(2026):生成、ビジョン、OCR",
-    "excerpt": "ローカル画像ツール29種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル画像ツール30種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-images-video-compared",
@@ -33329,7 +33329,7 @@
   {
     "lang": "zh",
     "title": "本地图像、视频与视觉工具对比(2026):生成、视觉与OCR",
-    "excerpt": "并排对比29款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。",
+    "excerpt": "并排对比30款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-images-video-compared",
@@ -33338,7 +33338,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de imagen, vídeo y visión comparadas (2026): generación, visión y OCR",
-    "excerpt": "Compara 29 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.",
+    "excerpt": "Compara 30 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-images-video-compared",
@@ -33347,7 +33347,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de imagem, vídeo e visão comparadas (2026): geração, visão e OCR",
-    "excerpt": "Compare 29 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.",
+    "excerpt": "Compare 30 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-images-video-compared",
@@ -33356,7 +33356,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصور والفيديو والرؤية المحلية (2026): التوليد والرؤية وOCR",
-    "excerpt": "قارن 29 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.",
+    "excerpt": "قارن 30 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-images-video-compared",
@@ -33365,7 +33365,7 @@
   {
     "lang": "ko",
     "title": "로컬 이미지·영상·비전 도구 비교(2026): 생성, 비전, OCR",
-    "excerpt": "로컬 이미지 도구 29개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 이미지 도구 30개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-images-video-compared",
@@ -33455,7 +33455,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 60 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 61 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33464,7 +33464,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "60 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "61 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33473,7 +33473,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 60 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 61 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33482,7 +33482,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール60種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール61種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33491,7 +33491,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比60款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比61款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33500,7 +33500,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 60 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 61 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33509,7 +33509,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 60 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 61 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33518,7 +33518,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 60 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 61 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33527,7 +33527,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 60개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 61개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -40983,6 +40983,87 @@
     "publishDate": "2026-10-26",
     "dateModified": "2026-10-26",
     "url": "/ko/power-local-llm/immich-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+    "excerpt": "Facet review: free MIT-licensed tool that scores, culls and browses photos locally, with face grouping and search. Setup, model licences, privacy.",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Facet-Rezension: lokale Foto-Bewertung, Aussortieren und Galerie",
+    "excerpt": "Facet-Rezension: kostenloses MIT-Werkzeug zum lokalen Bewerten und Aussortieren von Fotos, mit Gesichtsgruppen und Suche. Lizenzen, Datenschutz.",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/de/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Facet : notation, tri et galerie de photos en local",
+    "excerpt": "Test de Facet : outil gratuit MIT qui note, trie et parcourt vos photos en local, avec visages regroupés et recherche. Licences et confidentialité.",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/fr/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Facetレビュー：ローカルで写真を採点・選別・閲覧",
+    "excerpt": "Facetのレビュー。写真をローカルで採点・選別・閲覧できる無料のMITツールで、顔のグループ化と自然言語検索に対応。導入方法、モデルのライセンス、プライバシーを解説します。",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/ja/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Facet 评测：本地照片评分、筛选与图库",
+    "excerpt": "Facet 评测：免费的 MIT 许可证工具，可在本地为照片评分、筛选和浏览，支持人脸分组与自然语言搜索。涵盖安装方式、模型许可证、隐私以及我们未能核实的内容。",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/zh/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de Facet: puntuación, selección y galería de fotos en local",
+    "excerpt": "Análisis de Facet: herramienta gratuita MIT que puntúa, selecciona y explora fotos en local, con caras agrupadas y búsqueda. Licencias y privacidad.",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/es/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Facet: pontuação, seleção e galeria de fotos locais",
+    "excerpt": "Análise do Facet: ferramenta gratuita MIT que pontua, seleciona e navega fotos localmente, com rostos agrupados e busca. Instalação, licenças, privacidade.",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/pt/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Facet: تقييم الصور وفرزها ومعرضها محليًا",
+    "excerpt": "مراجعة Facet: أداة مجانية بترخيص MIT تقيّم الصور وتفرزها وتتصفحها محليًا، مع تجميع الوجوه والبحث بلغة طبيعية. الإعداد وتراخيص النماذج والخصوصية.",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/ar/power-local-llm/facet-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Facet 리뷰: 로컬 사진 점수화·선별·갤러리",
+    "excerpt": "Facet 리뷰: 사진을 로컬에서 점수화·선별·탐색하는 무료 MIT 도구로, 얼굴 묶기와 자연어 검색을 지원합니다. 설치 방법, 모델 라이선스, 개인정보를 다룹니다.",
+    "publishDate": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "url": "/ko/power-local-llm/facet-review",
     "cluster": "power-local-llm"
   },
   {

@@ -11,6 +11,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-10-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -64,25 +80,9 @@
         "url": "/power-local-llm/arynwood-mcp-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "home-assistant-assist-review",
-        "title": "Home Assistant Assist Review: Local Voice Control and LLM Agents",
-        "url": "/power-local-llm/home-assistant-assist-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 325,
+    "totalCount": 326,
     "capped": true
   },
   "llama.cpp": {
@@ -7839,18 +7839,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-prompts-for-fiction-writers",
-        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
-        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
-        "dateModified": "2026-10-26",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-10-27",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-10-17",
+        "slug": "local-llm-prompts-for-fiction-writers",
+        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
+        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
+        "dateModified": "2026-10-26",
         "tier": "mentioned"
       },
       {
@@ -7941,18 +7941,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "castmates-review",
-        "title": "Castmates Review: Offline AI Character Chat for iPhone",
-        "url": "/power-local-llm/castmates-review",
-        "dateModified": "2026-10-26",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-10-27",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "asiden-review",
-        "title": "Asiden Review: Windows 11 AI Desktop Companion With Local and Optional Cloud AI",
-        "url": "/power-local-llm/asiden-review",
-        "dateModified": "2026-10-24",
+        "slug": "castmates-review",
+        "title": "Castmates Review: Offline AI Character Chat for iPhone",
+        "url": "/power-local-llm/castmates-review",
+        "dateModified": "2026-10-26",
         "tier": "mentioned"
       }
     ],
@@ -9859,6 +9859,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
@@ -9912,17 +9920,9 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "khoj-ai-second-brain-review",
-        "title": "Khoj Review: Self-Hosted AI Second Brain, No Cloud Left",
-        "url": "/power-local-llm/khoj-ai-second-brain-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "FluidVoice": {
@@ -11653,6 +11653,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -11714,17 +11722,9 @@
         "url": "/power-local-llm/anarlog-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "compactifai-app-review",
-        "title": "CompactifAI APP Review: Free Chat App with Offline and Cloud Models",
-        "url": "/power-local-llm/compactifai-app-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 228,
+    "totalCount": 229,
     "capped": true
   },
   "Qdrant": {
@@ -12747,6 +12747,28 @@
         "title": "Immich Review: Self-Hosted Photo Library with Smart Search",
         "url": "/power-local-llm/immich-review",
         "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Facet": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "facet-review",
+        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
+        "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-10-28",
         "tier": "about"
       }
     ],

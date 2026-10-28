@@ -202,6 +202,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'localhosted':                             'localhosted',
   'photoprism':                              'photoprism',
   'immich':                                  'immich',
+  'facet':                                   'facet',
   'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',

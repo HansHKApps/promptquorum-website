@@ -1494,6 +1494,11 @@
     "urlSlug": "immich-review",
     "url": "/power-local-llm/immich-review"
   },
+  "facet": {
+    "cluster": "power-local-llm",
+    "urlSlug": "facet-review",
+    "url": "/power-local-llm/facet-review"
+  },
   "hiwaifu": {
     "cluster": "power-local-llm",
     "urlSlug": "hiwaifu-review",
