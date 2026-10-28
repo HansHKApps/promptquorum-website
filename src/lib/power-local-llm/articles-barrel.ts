@@ -58,7 +58,6 @@ import { article as a_return_editor_review } from './articles/return-editor-revi
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
 import { article as a_local_ai_chat_pocket_review } from './articles/local-ai-chat-pocket-review'
 import { article as a_pixlstash_review } from './articles/pixlstash-review'
-import { article as a_localhosted_review } from './articles/localhosted-review'
 import { article as a_photoprism_review } from './articles/photoprism-review'
 import { article as a_whisper_notes_review } from './articles/whisper-notes-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
@@ -728,7 +727,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'mlxhub-review':                                 a_mlxhub_review,
   'local-ai-chat-pocket-review':                   a_local_ai_chat_pocket_review,
   'pixlstash-review':                              a_pixlstash_review,
-  'localhosted-review':                            a_localhosted_review,
   'photoprism-review':                             a_photoprism_review,
   'whisper-notes-review':                          a_whisper_notes_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
