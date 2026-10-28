@@ -2,7 +2,7 @@
 // Slug: tecadrisebot-review
 // Segment: autonomous-agents (hybrid). Competitors block links hermes-agent-review, agent-zero-review, atomic-bot-review, multica-review.
 // Sources: the product page tecadrise.ai/products/tecadrisebot and its FAQ/comparison pages, the GitHub repo tecadrise-ai/TecAdRiseBot (README, package.json,
-// LICENSE, Releases, commits via the GitHub API) and the Cursor TypeScript SDK docs, all checked 2026-10-28 — no hands-on testing, no maker contact yet.
+// LICENSE, Releases, commits via the GitHub API) and the Cursor TypeScript SDK docs, all checked 2026-10-28 — no hands-on testing. The maker (TecAdRise, unsigned, no individual named) sent two statements plus links the same day; they are quoted in From the Maker and the page says the maker has not reviewed it.
 // The site's legal page (tecadrise.ai/terms, "Terms of Service & Privacy Policy", updated "January 2025") covers the company's website and automation services and
 // never mentions the app; it is linked as the only policy the site offers, with that caveat stated. The site is a client-rendered React app, so the legal text was read
 // from its JavaScript bundle. No founder is named anywhere on the site; the company is registered in Poland (CEIDG).
@@ -67,6 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'How to Get Started', anchor: 'getting-started' },
       { label: 'Features Confirmed by the Sources', anchor: 'key-features' },
       { label: 'What Runs Locally and What Goes to Cursor', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Competitors and Alternatives', anchor: 'tecadrisebot-competitors' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
@@ -101,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'This review is based on the product page, the GitHub repository and the Cursor SDK documentation, checked on 28 October 2026. PromptQuorum has not installed, run or benchmarked the app, and the maker has not reviewed this page.',
+            text: 'This review is based on the product page, the GitHub repository and the Cursor SDK documentation, checked on 28 October 2026, plus statements the maker sent on the same day. PromptQuorum has not installed, run or benchmarked the app, and the maker has not reviewed this page.',
           },
         ],
       },
@@ -124,6 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Item': 'Source and setup', 'Where to get it': '[GitHub repository](https://github.com/tecadrise-ai/TecAdRiseBot) (MIT; README has the setup steps)' },
           { 'Item': 'Website', 'Where to get it': '[tecadrise.ai product page](https://tecadrise.ai/products/tecadrisebot)' },
           { 'Item': 'Privacy policy', 'Where to get it': '[tecadrise.ai/terms](https://tecadrise.ai/terms) (company-wide terms; does not mention the app)' },
+          { 'Item': 'Demo video', 'Where to get it': '[Demo video (MP4)](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4) (attached to the GitHub release page)' },
           { 'Item': 'Needs', 'Where to get it': 'Windows 10/11, Node.js 22.13+, npm 10+, a Cursor API key (created in the Cursor Dashboard)' },
         ],
         note: 'Version reviewed: 0.1.0, read from package.json in the repository on 28 October 2026. Playwright MCP additionally needs Node and npx on the PATH.',
@@ -203,6 +205,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'TecAdRise, the company behind TecAdRiseBot, sent PromptQuorum the two statements below on 28 October 2026, together with the product, GitHub and demo-video links. They are the maker\'s own words, not PromptQuorum\'s independent assessment: the statements are unsigned, no individual is named, and PromptQuorum did not verify the maker\'s comparison with other tools.',
+          '**Why we built it.** "We built TecAdRise Bot because we needed a local multi-agent desktop shell on Windows that we could own end to end: separate agents with their own models, instructions, workspaces, scheduled routines, and tools, without locking the workflow into a hosted chat UI. Existing options were either cloud-only, single-agent, or closed. TecAdRise Bot is a free open-source Grok Bot-style Electron app driven by the Cursor TypeScript SDK, so agents run on the machine with skills, MCP/tools, inter-bot messages, and a localhost control plane. We use it ourselves for outbound, research, and ops, and published it so others can run the same pattern."',
+          '**On local LLMs and Cursor.** "Today the chat shell talks to models through the Cursor SDK (and Cursor\'s model routing). We are not yet wired to a fully offline local LLM stack for agent coding work. Connecting local / open-weight models when quality is strong enough for multi-agent coding and tool use is on the roadmap; the product already runs as a local Windows desktop app with local workspaces, skills, and tools. When that local-model path lands, we will be a better fit for a pure local-LLM page; until then the honest framing is local desktop multi-agent shell + Cursor SDK, not fully offline inference."',
+        ],
+        note: '— TecAdRise, maker of TecAdRiseBot',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: 'Competitors and Alternatives',
@@ -232,8 +244,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Hands-on quality.** PromptQuorum did not run the app, so stability, agent behavior and the scheduler were not tested.',
           '**Data handling at Cursor.** Retention and training terms for SDK traffic were not checked; the app\'s own policy page does not cover them.',
-          '**Offline or local-model use.** The sources show no way to use a local or self-hosted model; anyone needing one should look at the alternatives above.',
-          '**Maker background.** No founder is named and the maker has not been contacted, so support and roadmap commitments are unknown beyond the site\'s statement that Mac support may come later.',
+          '**Offline or local-model use.** The maker says that today models are reached through the Cursor SDK and that local or open-weight models are on its roadmap with no date given; anyone needing a local model should look at the alternatives above.',
+          '**Maker background.** The maker replied without naming an individual, so the people behind the project are unknown; support and roadmap commitments are unverified beyond the statements in From the Maker and the site\'s note that Mac support may come later.',
           '**Track record.** There is no tagged release and no public user feedback yet.',
           '**Not for beginners.** A terminal, Node.js and a paid-usage API key are required.',
         ],
@@ -244,7 +256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Can TecAdRiseBot use Ollama or another local model?',
-            a: 'The sources show no such option; the model is always picked from the Cursor catalog.',
+            a: 'The maker says local and open-weight models are on its roadmap but not connected yet; today the model is picked from the Cursor catalog.',
           },
           {
             q: 'Does it keep working when the laptop is closed?',
@@ -279,6 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[TecAdRiseBot on GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) — README, package.json (version 0.1.0), MIT license, creation date and commit history, read via the GitHub API on 28 October 2026.',
           '[Cursor TypeScript SDK documentation](https://cursor.com/docs/sdk/typescript) — runtimes, hosted-model inference, billing and API keys.',
           '[TecAdRise terms and privacy page](https://tecadrise.ai/terms) — company-wide policy, header dated "January 2025".',
+          'Statements from the maker (TecAdRise) sent to PromptQuorum on 28 October 2026 — the "Why we built it" and "On local LLMs and Cursor" quotes plus the product, GitHub and demo-video links; not independently verified.',
         ],
       },
       relatedReading: {
@@ -380,6 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'So gelingt der Einstieg', anchor: 'getting-started' },
       { label: 'Von den Quellen bestätigte Funktionen', anchor: 'key-features' },
       { label: 'Was lokal läuft und was an Cursor geht', anchor: 'privacy' },
+      { label: 'Vom Hersteller', anchor: 'from-the-maker' },
       { label: 'Wettbewerber und Alternativen', anchor: 'tecadrisebot-competitors' },
       { label: 'Für wen sich die App eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
@@ -414,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Diese Rezension stützt sich auf die Produktseite, das GitHub-Repository und die Dokumentation des Cursor SDK, geprüft am 28. Oktober 2026. PromptQuorum hat die App weder installiert noch ausgeführt oder gemessen, und der Hersteller hat diese Seite nicht durchgesehen.',
+            text: 'Diese Rezension stützt sich auf die Produktseite, das GitHub-Repository und die Dokumentation des Cursor SDK, geprüft am 28. Oktober 2026, sowie auf Aussagen, die der Hersteller am selben Tag geschickt hat. PromptQuorum hat die App weder installiert noch ausgeführt oder gemessen, und der Hersteller hat diese Seite nicht durchgesehen.',
           },
         ],
       },
@@ -437,6 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Eintrag': 'Quellcode und Einrichtung', 'Bezugsquelle': '[GitHub-Repository](https://github.com/tecadrise-ai/TecAdRiseBot) (MIT; die README enthält die Einrichtungsschritte)' },
           { 'Eintrag': 'Website', 'Bezugsquelle': '[Produktseite auf tecadrise.ai](https://tecadrise.ai/products/tecadrisebot)' },
           { 'Eintrag': 'Datenschutzerklärung', 'Bezugsquelle': '[tecadrise.ai/terms](https://tecadrise.ai/terms) (unternehmensweite Bedingungen; erwähnt die App nicht)' },
+          { 'Eintrag': 'Demo-Video', 'Bezugsquelle': '[Demo-Video (MP4)](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4) (an die GitHub-Release-Seite angehängt)' },
           { 'Eintrag': 'Voraussetzungen', 'Bezugsquelle': 'Windows 10/11, Node.js 22.13+, npm 10+, ein Cursor-API-Schlüssel (im Cursor Dashboard erstellt)' },
         ],
         note: 'Geprüfte Version: 0.1.0, am 28. Oktober 2026 aus der package.json im Repository gelesen. Playwright MCP benötigt zusätzlich Node und npx im PATH.',
@@ -516,6 +531,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Hersteller',
+        content: [
+          'TecAdRise, das Unternehmen hinter TecAdRiseBot, hat PromptQuorum am 28. Oktober 2026 die beiden folgenden Aussagen geschickt, zusammen mit den Links zu Produktseite, GitHub und Demo-Video. Es sind die eigenen Worte des Herstellers, keine unabhängige Bewertung von PromptQuorum: Die Aussagen sind nicht unterzeichnet, es wird keine Einzelperson genannt, und PromptQuorum hat den Vergleich des Herstellers mit anderen Tools nicht überprüft.',
+          '**Warum wir es gebaut haben.** „Wir haben TecAdRise Bot gebaut, weil wir eine lokale Multi-Agent-Desktop-Shell für Windows brauchten, die wir von Anfang bis Ende selbst besitzen können: getrennte Agenten mit eigenen Modellen, Anweisungen, Arbeitsbereichen, geplanten Routinen und Werkzeugen, ohne den Workflow an eine gehostete Chat-Oberfläche zu binden. Die vorhandenen Optionen waren entweder reine Cloud-Lösungen, Single-Agent-Lösungen oder geschlossen. TecAdRise Bot ist eine kostenlose Open-Source-Electron-App im Stil von Grok Bot, gesteuert über das Cursor TypeScript SDK, sodass die Agenten mit Skills, MCP/Tools, Nachrichten zwischen den Bots und einer Localhost-Steuerungsebene auf dem Rechner laufen. Wir nutzen sie selbst für Outbound, Recherche und Betrieb und haben sie veröffentlicht, damit andere dasselbe Muster einsetzen können.“',
+          '**Zu lokalen LLMs und Cursor.** „Heute spricht die Chat-Shell über das Cursor SDK (und das Modell-Routing von Cursor) mit den Modellen. Wir sind noch nicht an einen vollständig offline laufenden lokalen LLM-Stack für Agenten-Coding-Aufgaben angebunden. Die Anbindung lokaler Modelle bzw. Open-Weight-Modelle, sobald deren Qualität für Multi-Agent-Coding und Tool-Nutzung ausreicht, steht auf der Roadmap; das Produkt läuft bereits als lokale Windows-Desktop-App mit lokalen Arbeitsbereichen, Skills und Tools. Sobald dieser Weg zu lokalen Modellen steht, passen wir besser zu einer reinen Seite über lokale LLMs; bis dahin lautet die ehrliche Einordnung: lokale Desktop-Multi-Agent-Shell + Cursor SDK, keine vollständig offline laufende Inferenz.“',
+        ],
+        note: '— TecAdRise, Hersteller von TecAdRiseBot',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: 'Wettbewerber und Alternativen',
@@ -545,8 +570,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualität im praktischen Einsatz.** PromptQuorum hat die App nicht ausgeführt, daher wurden Stabilität, Agentenverhalten und Zeitplaner nicht getestet.',
           '**Datenverarbeitung bei Cursor.** Aufbewahrung und Trainingsbedingungen für SDK-Verkehr wurden nicht geprüft; die Richtlinienseite der App deckt sie nicht ab.',
-          '**Offline- oder Lokalmodell-Nutzung.** Die Quellen zeigen keine Möglichkeit, ein lokales oder selbst gehostetes Modell zu verwenden; wer eines braucht, sollte sich die obigen Alternativen ansehen.',
-          '**Hintergrund des Herstellers.** Es wird kein Gründer genannt, und der Hersteller wurde nicht kontaktiert; Support- und Roadmap-Zusagen sind daher unbekannt, abgesehen von der Aussage der Website, Mac-Unterstützung könne später folgen.',
+          '**Offline- oder Lokalmodell-Nutzung.** Laut Hersteller werden Modelle heute über das Cursor SDK angesprochen; lokale oder Open-Weight-Modelle stehen auf der Roadmap, ein Termin wird nicht genannt. Wer ein lokales Modell braucht, sollte sich die obigen Alternativen ansehen.',
+          '**Hintergrund des Herstellers.** Der Hersteller hat geantwortet, ohne eine Einzelperson zu nennen, daher sind die Personen hinter dem Projekt unbekannt; Support- und Roadmap-Zusagen sind über die Aussagen unter „Vom Hersteller“ und den Hinweis der Website, Mac-Unterstützung könne später folgen, hinaus nicht überprüft.',
           '**Erfahrungswerte.** Es gibt kein getaggtes Release und noch keine öffentlichen Nutzerrückmeldungen.',
           '**Nichts für Einsteiger.** Ein Terminal, Node.js und ein API-Schlüssel mit nutzungsabhängigen Kosten sind erforderlich.',
         ],
@@ -557,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Kann TecAdRiseBot Ollama oder ein anderes lokales Modell nutzen?',
-            a: 'Die Quellen zeigen keine solche Option; das Modell wird immer aus dem Cursor-Katalog gewählt.',
+            a: 'Laut Hersteller stehen lokale und Open-Weight-Modelle auf der Roadmap, sind aber noch nicht angebunden; heute wird das Modell aus dem Cursor-Katalog gewählt.',
           },
           {
             q: 'Läuft es weiter, wenn der Laptop zugeklappt ist?',
@@ -592,6 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[TecAdRiseBot auf GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) — README, package.json (Version 0.1.0), MIT-Lizenz, Erstellungsdatum und Commit-Verlauf, am 28. Oktober 2026 über die GitHub-API gelesen.',
           '[Dokumentation des Cursor TypeScript SDK](https://cursor.com/docs/sdk/typescript) — Laufzeitumgebungen, Inferenz über gehostete Modelle, Abrechnung und API-Schlüssel.',
           '[Seite mit Bedingungen und Datenschutz von TecAdRise](https://tecadrise.ai/terms) — unternehmensweite Richtlinie, Kopfzeile datiert „January 2025“.',
+          'Aussagen des Herstellers (TecAdRise) an PromptQuorum vom 28. Oktober 2026 — die Zitate „Warum wir es gebaut haben“ und „Zu lokalen LLMs und Cursor“ sowie die Links zu Produktseite, GitHub und Demo-Video; nicht unabhängig überprüft.',
         ],
       },
       relatedReading: {
@@ -661,6 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cómo empezar', anchor: 'getting-started' },
       { label: 'Funciones confirmadas por las fuentes', anchor: 'key-features' },
       { label: 'Qué se ejecuta en local y qué va a Cursor', anchor: 'privacy' },
+      { label: 'La palabra del creador', anchor: 'from-the-maker' },
       { label: 'Competidores y alternativas', anchor: 'tecadrisebot-competitors' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
@@ -695,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta reseña se basa en la página del producto, el repositorio de GitHub y la documentación del SDK de Cursor, comprobados el 28 de octubre de 2026. PromptQuorum no ha instalado, ejecutado ni medido la app, y el creador no ha revisado esta página.',
+            text: 'Esta reseña se basa en la página del producto, el repositorio de GitHub y la documentación del SDK de Cursor, comprobados el 28 de octubre de 2026, además de las declaraciones que el creador envió ese mismo día. PromptQuorum no ha instalado, ejecutado ni medido la app, y el creador no ha revisado esta página.',
           },
         ],
       },
@@ -718,6 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Elemento': 'Código y configuración', 'Dónde conseguirlo': '[Repositorio de GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) (MIT; el README incluye los pasos de configuración)' },
           { 'Elemento': 'Sitio web', 'Dónde conseguirlo': '[Página del producto en tecadrise.ai](https://tecadrise.ai/products/tecadrisebot)' },
           { 'Elemento': 'Política de privacidad', 'Dónde conseguirlo': '[tecadrise.ai/terms](https://tecadrise.ai/terms) (condiciones de toda la empresa; no menciona la app)' },
+          { 'Elemento': 'Video de demostración', 'Dónde conseguirlo': '[Video de demostración (MP4)](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4) (adjunto a la página de la release de GitHub)' },
           { 'Elemento': 'Requisitos', 'Dónde conseguirlo': 'Windows 10/11, Node.js 22.13+, npm 10+, una clave de API de Cursor (creada en el Cursor Dashboard)' },
         ],
         note: 'Versión analizada: 0.1.0, leída de package.json en el repositorio el 28 de octubre de 2026. Playwright MCP necesita además Node y npx en el PATH.',
@@ -797,6 +825,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La palabra del creador',
+        content: [
+          'TecAdRise, la empresa detrás de TecAdRiseBot, envió a PromptQuorum las dos declaraciones siguientes el 28 de octubre de 2026, junto con los enlaces del producto, de GitHub y del video de demostración. Son palabras del propio creador, no una valoración independiente de PromptQuorum: las declaraciones no están firmadas, no se nombra a ninguna persona y PromptQuorum no verificó la comparación que hace el creador con otras herramientas.',
+          '**Por qué lo creamos.** «Creamos TecAdRise Bot porque necesitábamos un shell de escritorio multiagente local en Windows del que pudiéramos ser dueños de principio a fin: agentes independientes, cada uno con sus propios modelos, instrucciones, espacios de trabajo, rutinas programadas y herramientas, sin encerrar el flujo de trabajo en una interfaz de chat alojada. Las opciones existentes eran solo en la nube, de un solo agente o cerradas. TecAdRise Bot es una app Electron gratuita y de código abierto al estilo de Grok Bot, impulsada por el Cursor TypeScript SDK, de modo que los agentes se ejecutan en la máquina con skills, MCP/herramientas, mensajes entre bots y un plano de control en localhost. Nosotros mismos la usamos para outbound, investigación y operaciones, y la publicamos para que otros puedan seguir el mismo patrón.»',
+          '**Sobre los LLM locales y Cursor.** «Hoy el shell de chat habla con los modelos a través del Cursor SDK (y del enrutamiento de modelos de Cursor). Todavía no estamos conectados a una pila de LLM local totalmente sin conexión para el trabajo de programación con agentes. Conectar modelos locales / de pesos abiertos cuando su calidad sea lo bastante buena para la programación multiagente y el uso de herramientas está en la hoja de ruta; el producto ya funciona como una app de escritorio local para Windows con espacios de trabajo, skills y herramientas locales. Cuando ese camino de modelos locales llegue, encajaremos mejor en una página exclusivamente de LLM locales; hasta entonces, el planteamiento honesto es shell de escritorio multiagente local + Cursor SDK, no inferencia totalmente sin conexión.»',
+        ],
+        note: '— TecAdRise, creador de TecAdRiseBot',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: 'Competidores y alternativas',
@@ -826,8 +864,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Calidad en la práctica.** PromptQuorum no ejecutó la app, así que no se probaron la estabilidad, el comportamiento de los agentes ni el programador.',
           '**Tratamiento de datos en Cursor.** No se comprobaron las condiciones de retención y entrenamiento del tráfico del SDK; la página de política de la propia app no las cubre.',
-          '**Uso sin conexión o con modelos locales.** Las fuentes no muestran ninguna forma de usar un modelo local o autoalojado; quien lo necesite debería mirar las alternativas anteriores.',
-          '**Trayectoria del creador.** No se nombra a ningún fundador y no se ha contactado al creador, por lo que se desconocen el soporte y la hoja de ruta más allá de la afirmación del sitio de que el soporte para Mac podría llegar más adelante.',
+          '**Uso sin conexión o con modelos locales.** El creador dice que hoy se accede a los modelos a través del SDK de Cursor y que los modelos locales o de pesos abiertos están en su hoja de ruta, sin fecha; quien necesite un modelo local debería mirar las alternativas anteriores.',
+          '**Trayectoria del creador.** El creador respondió sin nombrar a ninguna persona, por lo que no se sabe quiénes están detrás del proyecto; el soporte y la hoja de ruta no están verificados más allá de las declaraciones de La palabra del creador y de la nota del sitio de que el soporte para Mac podría llegar más adelante.',
           '**Historial.** No hay ninguna versión etiquetada ni opiniones públicas de usuarios todavía.',
           '**No es para principiantes.** Hacen falta una terminal, Node.js y una clave de API de uso de pago.',
         ],
@@ -838,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Puede TecAdRiseBot usar Ollama u otro modelo local?',
-            a: 'Las fuentes no muestran esa opción; el modelo se elige siempre del catálogo de Cursor.',
+            a: 'El creador dice que los modelos locales y de pesos abiertos están en su hoja de ruta, pero todavía no están conectados; hoy el modelo se elige del catálogo de Cursor.',
           },
           {
             q: '¿Sigue funcionando con el portátil cerrado?',
@@ -873,6 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[TecAdRiseBot en GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) — README, package.json (versión 0.1.0), licencia MIT, fecha de creación e historial de commits, leídos mediante la API de GitHub el 28 de octubre de 2026.',
           '[Documentación del SDK de TypeScript de Cursor](https://cursor.com/docs/sdk/typescript) — entornos de ejecución, inferencia en modelos alojados, facturación y claves de API.',
           '[Página de términos y privacidad de TecAdRise](https://tecadrise.ai/terms) — política de toda la empresa, encabezado fechado «January 2025».',
+          'Declaraciones del creador (TecAdRise) enviadas a PromptQuorum el 28 de octubre de 2026 — las citas «Por qué lo creamos» y «Sobre los LLM locales y Cursor», más los enlaces del producto, de GitHub y del video de demostración; no verificadas de forma independiente.',
         ],
       },
       relatedReading: {
@@ -942,6 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pour commencer', anchor: 'getting-started' },
       { label: 'Fonctions confirmées par les sources', anchor: 'key-features' },
       { label: 'Ce qui reste en local et ce qui part chez Cursor', anchor: 'privacy' },
+      { label: 'Le mot de l\'éditeur', anchor: 'from-the-maker' },
       { label: 'Concurrents et alternatives', anchor: 'tecadrisebot-competitors' },
       { label: 'À qui s\'adresse-t-elle', anchor: 'who-should-use' },
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
@@ -976,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Ce test s\'appuie sur la page produit, le dépôt GitHub et la documentation du SDK Cursor, vérifiés le 28 octobre 2026. PromptQuorum n\'a ni installé, ni exécuté, ni mesuré l\'appli, et l\'éditeur n\'a pas relu cette page.',
+            text: 'Ce test s\'appuie sur la page produit, le dépôt GitHub et la documentation du SDK Cursor, vérifiés le 28 octobre 2026, ainsi que sur les déclarations envoyées le même jour par l\'éditeur. PromptQuorum n\'a ni installé, ni exécuté, ni mesuré l\'appli, et l\'éditeur n\'a pas relu cette page.',
           },
         ],
       },
@@ -999,6 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Élément': 'Code source et installation', 'Où l\'obtenir': '[Dépôt GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) (MIT ; le README détaille l\'installation)' },
           { 'Élément': 'Site web', 'Où l\'obtenir': '[Page produit tecadrise.ai](https://tecadrise.ai/products/tecadrisebot)' },
           { 'Élément': 'Politique de confidentialité', 'Où l\'obtenir': '[tecadrise.ai/terms](https://tecadrise.ai/terms) (conditions valables pour toute la société ; ne mentionne pas l\'appli)' },
+          { 'Élément': 'Vidéo de démonstration', 'Où l\'obtenir': '[Vidéo de démonstration (MP4)](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4) (fichier joint à la version GitHub)' },
           { 'Élément': 'Prérequis', 'Où l\'obtenir': 'Windows 10/11, Node.js 22.13+, npm 10+, une clé API Cursor (créée dans le Cursor Dashboard)' },
         ],
         note: 'Version testée : 0.1.0, lue dans le package.json du dépôt le 28 octobre 2026. Playwright MCP exige en plus Node et npx dans le PATH.',
@@ -1078,6 +1119,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot de l\'éditeur',
+        content: [
+          'TecAdRise, l\'éditeur de TecAdRiseBot, a envoyé à PromptQuorum les deux déclarations ci-dessous le 28 octobre 2026, avec les liens vers la page produit, GitHub et la vidéo de démonstration. Ce sont les propres mots de l\'éditeur, et non l\'évaluation indépendante de PromptQuorum : les déclarations ne sont pas signées, aucune personne n\'est nommée, et PromptQuorum n\'a pas vérifié la comparaison de l\'éditeur avec d\'autres outils.',
+          '**Pourquoi nous l\'avons créée.** « Nous avons créé TecAdRise Bot parce que nous avions besoin d\'un shell de bureau multi-agents local sous Windows que nous pouvions maîtriser de bout en bout : des agents distincts avec leurs propres modèles, instructions, espaces de travail, routines planifiées et outils, sans enfermer le flux de travail dans une interface de chat hébergée. Les solutions existantes étaient soit uniquement cloud, soit mono-agent, soit fermées. TecAdRise Bot est une appli Electron gratuite et open source de type Grok Bot-style, pilotée par le Cursor TypeScript SDK, de sorte que les agents tournent sur la machine avec des skills, du MCP/des outils, des messages entre bots et un plan de contrôle en localhost. Nous l\'utilisons nous-mêmes pour l\'outbound, la recherche et les opérations, et nous l\'avons publiée pour que d\'autres puissent appliquer le même schéma. »',
+          '**À propos des LLM locaux et de Cursor.** « Aujourd\'hui, le shell de chat dialogue avec les modèles via le SDK Cursor (et le routage de modèles de Cursor). Nous ne sommes pas encore reliés à une pile de LLM locaux entièrement hors ligne pour le travail de codage d\'agents. Connecter des modèles locaux / à poids ouverts, lorsque leur qualité sera suffisante pour le codage multi-agents et l\'usage d\'outils, figure sur la feuille de route ; le produit fonctionne déjà comme une appli de bureau Windows locale, avec des espaces de travail, des skills et des outils locaux. Quand cette voie des modèles locaux sera disponible, nous conviendrons mieux à une page purement consacrée aux LLM locaux ; d\'ici là, le cadrage honnête est : shell de bureau multi-agents local + SDK Cursor, et non une inférence entièrement hors ligne. »',
+        ],
+        note: '— TecAdRise, éditeur de TecAdRiseBot',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: 'Concurrents et alternatives',
@@ -1107,8 +1158,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**La qualité à l\'usage.** PromptQuorum n\'a pas exécuté l\'appli : la stabilité, le comportement des agents et le planificateur n\'ont pas été testés.',
           '**Le traitement des données chez Cursor.** Les conditions de conservation et d\'entraînement pour le trafic du SDK n\'ont pas été vérifiées ; la page de politique de l\'appli ne les couvre pas.',
-          '**L\'usage hors ligne ou avec un modèle local.** Les sources ne montrent aucun moyen d\'utiliser un modèle local ou auto-hébergé ; qui en a besoin doit regarder les alternatives ci-dessus.',
-          '**Le profil de l\'éditeur.** Aucun fondateur n\'est nommé et l\'éditeur n\'a pas été contacté : le support et la feuille de route sont inconnus, hormis l\'indication du site selon laquelle une version Mac pourrait venir plus tard.',
+          '**L\'usage hors ligne ou avec un modèle local.** L\'éditeur indique qu\'aujourd\'hui les modèles sont atteints via le SDK Cursor et que les modèles locaux ou à poids ouverts figurent sur sa feuille de route, sans date ; qui a besoin d\'un modèle local doit regarder les alternatives ci-dessus.',
+          '**Le profil de l\'éditeur.** L\'éditeur a répondu sans nommer de personne : les personnes derrière le projet sont donc inconnues ; le support et la feuille de route ne sont pas vérifiés, au-delà des déclarations de la section Le mot de l\'éditeur et de l\'indication du site selon laquelle une version Mac pourrait venir plus tard.',
           '**L\'historique.** Il n\'y a aucune version publiée et aucun retour public d\'utilisateurs pour l\'instant.',
           '**Pas pour les débutants.** Un terminal, Node.js et une clé API à facturation à l\'usage sont nécessaires.',
         ],
@@ -1119,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TecAdRiseBot peut-elle utiliser Ollama ou un autre modèle local ?',
-            a: 'Les sources n\'en montrent aucune possibilité ; le modèle est toujours choisi dans le catalogue Cursor.',
+            a: 'L\'éditeur indique que les modèles locaux et à poids ouverts figurent sur sa feuille de route mais ne sont pas encore connectés ; aujourd\'hui, le modèle est choisi dans le catalogue Cursor.',
           },
           {
             q: 'Continue-t-elle de fonctionner quand le portable est fermé ?',
@@ -1154,6 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[TecAdRiseBot sur GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) — README, package.json (version 0.1.0), licence MIT, date de création et historique des commits, lus via l\'API GitHub le 28 octobre 2026.',
           '[Documentation du SDK TypeScript de Cursor](https://cursor.com/docs/sdk/typescript) — environnements d\'exécution, inférence sur modèles hébergés, facturation et clés API.',
           '[Page des conditions et de confidentialité de TecAdRise](https://tecadrise.ai/terms) — politique commune à la société, en-tête daté de « January 2025 ».',
+          'Déclarations de l\'éditeur (TecAdRise) envoyées à PromptQuorum le 28 octobre 2026 — les citations « Pourquoi nous l\'avons créée » et « À propos des LLM locaux et de Cursor » ainsi que les liens vers la page produit, GitHub et la vidéo de démonstration ; non vérifiées de façon indépendante.',
         ],
       },
       relatedReading: {
@@ -1223,6 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'はじめ方', anchor: 'getting-started' },
       { label: '情報源で確認できた機能', anchor: 'key-features' },
       { label: 'ローカルで動く部分とCursorに送られる部分', anchor: 'privacy' },
+      { label: '開発元より', anchor: 'from-the-maker' },
       { label: '競合と代替ツール', anchor: 'tecadrisebot-competitors' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかったこと', anchor: 'who-should-not-use' },
@@ -1257,7 +1310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '本レビューは、2026年10月28日に確認した製品ページ、GitHubリポジトリ、Cursor SDKのドキュメントに基づいています。PromptQuorumはアプリをインストールも実行もベンチマークもしておらず、開発元もこのページを確認していません。',
+            text: '本レビューは、2026年10月28日に確認した製品ページ、GitHubリポジトリ、Cursor SDKのドキュメントと、同日に開発元から届いたコメントに基づいています。PromptQuorumはアプリをインストールも実行もベンチマークもしておらず、開発元もこのページを確認していません。',
           },
         ],
       },
@@ -1280,6 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'ソースと導入手順', '入手先': '[GitHubリポジトリ](https://github.com/tecadrise-ai/TecAdRiseBot)（MIT。READMEに導入手順あり）' },
           { '項目': '公式サイト', '入手先': '[tecadrise.ai の製品ページ](https://tecadrise.ai/products/tecadrisebot)' },
           { '項目': 'プライバシーポリシー', '入手先': '[tecadrise.ai/terms](https://tecadrise.ai/terms)（会社全体の利用規約。アプリには言及なし）' },
+          { '項目': 'デモ動画', '入手先': '[デモ動画（MP4）](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4)（GitHubのリリースページに添付）' },
           { '項目': '必要なもの', '入手先': 'Windows 10/11、Node.js 22.13以降、npm 10以降、Cursor APIキー（Cursor Dashboardで作成）' },
         ],
         note: '確認したバージョン：0.1.0。2026年10月28日にリポジトリのpackage.jsonから読み取りました。Playwright MCPには、PATH上のNodeとnpxも必要です。',
@@ -1359,6 +1413,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発元より',
+        content: [
+          'TecAdRiseBotの開発元であるTecAdRiseが、2026年10月28日に、製品ページ、GitHub、デモ動画へのリンクとあわせて、以下の2つのコメントをPromptQuorumに送ってきました。これは開発元自身の言葉であり、PromptQuorumの独立した評価ではありません。コメントには署名がなく、個人名は示されておらず、他のツールとの比較についてもPromptQuorumは検証していません。',
+          '**開発の経緯。** 「TecAdRise Botを作ったのは、Windows上で最初から最後まで自分たちで管理できるローカルのマルチエージェント用デスクトップシェルが必要だったからです。エージェントごとに独自のモデル、指示、ワークスペース、スケジュール実行のルーティン、ツールを持たせられ、ワークフローをホスト型のチャットUIに縛りつけないものです。既存の選択肢は、クラウド専用か、単一エージェントか、クローズドのいずれかでした。TecAdRise Botは、Cursor TypeScript SDKで動く、無料でオープンソースのGrok Bot-style Electronアプリで、エージェントはスキル、MCP/ツール、ボット間メッセージ、localhostのコントロールプレーンとともにマシン上で動作します。私たち自身もアウトバウンド、リサーチ、運用に使っており、同じやり方を他の人も実行できるよう公開しました。」',
+          '**ローカルLLMとCursorについて。** 「現時点では、チャットシェルはCursor SDK（およびCursorのモデルルーティング）を通じてモデルとやり取りします。エージェントによるコーディング作業向けの、完全オフラインのローカルLLM環境にはまだ接続していません。マルチエージェントによるコーディングやツール利用に十分な品質になった段階で、ローカル／オープンウェイトのモデルに接続することはロードマップに入っています。製品はすでに、ローカルのワークスペース、スキル、ツールを備えたローカルのWindowsデスクトップアプリとして動作しています。そのローカルモデル対応が実現すれば、純粋なローカルLLMのページにより適したものになりますが、それまでの正直な位置づけは、ローカルのデスクトップ型マルチエージェントシェル＋Cursor SDKであり、完全オフラインの推論ではありません。」',
+        ],
+        note: '— TecAdRise、TecAdRiseBotの開発元',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: '競合と代替ツール',
@@ -1388,8 +1452,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**実際の使い心地。** PromptQuorumはアプリを実行していないため、安定性、エージェントの挙動、スケジューラーはテストしていません。',
           '**Cursor側でのデータの扱い。** SDK経由の通信に関する保持や学習の条件は確認していません。アプリ自体のポリシーページも、これらをカバーしていません。',
-          '**オフライン利用やローカルモデルの利用。** 情報源には、ローカルモデルやセルフホストのモデルを使う方法は示されていません。必要な方は、上記の代替ツールをご覧ください。',
-          '**開発元の背景。** 創業者の名前は公表されておらず、開発元にも連絡していないため、Mac対応が今後登場する可能性があるというサイトの記述のほかは、サポートやロードマップの約束は不明です。',
+          '**オフライン利用やローカルモデルの利用。** 開発元によれば、現時点ではモデルはCursor SDKを通じて利用します。ローカルやオープンウェイトのモデルへの対応はロードマップにありますが、時期は示されていません。ローカルモデルが必要な方は、上記の代替ツールをご覧ください。',
+          '**開発元の背景。** 開発元から返信はありましたが、個人名は示されていないため、プロジェクトに携わる人々は不明です。サポートやロードマップの約束は、「開発元より」のコメントと、Mac対応が今後登場する可能性があるというサイトの記述のほかは確認できていません。',
           '**利用実績。** タグ付きのリリースはなく、公開されたユーザーのフィードバックもまだありません。',
           '**初心者向けではありません。** ターミナル、Node.js、従量課金のAPIキーが必要です。',
         ],
@@ -1400,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TecAdRiseBotでOllamaなどのローカルモデルは使えますか？',
-            a: '情報源には、そのような選択肢は示されていません。モデルは常にCursorのカタログから選びます。',
+            a: '開発元によれば、ローカルやオープンウェイトのモデルへの対応はロードマップにありますが、まだ接続されていません。現時点では、モデルはCursorのカタログから選びます。',
           },
           {
             q: 'ノートPCを閉じても動き続けますか？',
@@ -1435,6 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHubのTecAdRiseBot](https://github.com/tecadrise-ai/TecAdRiseBot) — README、package.json（バージョン0.1.0）、MITライセンス、作成日、コミット履歴。2026年10月28日にGitHub APIで読み取りました。',
           '[Cursor TypeScript SDKドキュメント](https://cursor.com/docs/sdk/typescript) — ランタイム、ホスト型モデルによる推論、課金、APIキー。',
           '[TecAdRiseの利用規約・プライバシーページ](https://tecadrise.ai/terms) — 会社全体のポリシー。ヘッダーの日付は「January 2025」。',
+          '開発元（TecAdRise）が2026年10月28日にPromptQuorumへ送ったコメント — 「開発の経緯」と「ローカルLLMとCursorについて」の引用、および製品ページ、GitHub、デモ動画へのリンク。独立した検証は行っていません。',
         ],
       },
       relatedReading: {
@@ -1504,6 +1569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Como começar', anchor: 'getting-started' },
       { label: 'Recursos confirmados pelas fontes', anchor: 'key-features' },
       { label: 'O que roda localmente e o que vai para o Cursor', anchor: 'privacy' },
+      { label: 'A palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Concorrentes e alternativas', anchor: 'tecadrisebot-competitors' },
       { label: 'Para quem é', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
@@ -1538,7 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta análise se baseia na página do produto, no repositório do GitHub e na documentação do SDK do Cursor, verificados em 28 de outubro de 2026. A PromptQuorum não instalou, executou nem fez benchmarks do app, e o desenvolvedor não revisou esta página.',
+            text: 'Esta análise se baseia na página do produto, no repositório do GitHub e na documentação do SDK do Cursor, verificados em 28 de outubro de 2026, além de declarações que o desenvolvedor enviou no mesmo dia. A PromptQuorum não instalou, executou nem fez benchmarks do app, e o desenvolvedor não revisou esta página.',
           },
         ],
       },
@@ -1561,6 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Item': 'Código-fonte e instalação', 'Onde baixar': '[Repositório no GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) (MIT; o README traz os passos de instalação)' },
           { 'Item': 'Site', 'Onde baixar': '[Página do produto em tecadrise.ai](https://tecadrise.ai/products/tecadrisebot)' },
           { 'Item': 'Política de privacidade', 'Onde baixar': '[tecadrise.ai/terms](https://tecadrise.ai/terms) (termos da empresa; não menciona o app)' },
+          { 'Item': 'Vídeo de demonstração', 'Onde baixar': '[Vídeo de demonstração (MP4)](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4) (anexado à página de release do GitHub)' },
           { 'Item': 'Requisitos', 'Onde baixar': 'Windows 10/11, Node.js 22.13+, npm 10+, uma chave de API do Cursor (criada no Cursor Dashboard)' },
         ],
         note: 'Versão analisada: 0.1.0, lida no package.json do repositório em 28 de outubro de 2026. O Playwright MCP exige, além disso, Node e npx no PATH.',
@@ -1640,6 +1707,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do desenvolvedor',
+        content: [
+          'A TecAdRise, empresa por trás do TecAdRiseBot, enviou à PromptQuorum as duas declarações abaixo em 28 de outubro de 2026, junto com os links do produto, do GitHub e do vídeo de demonstração. São palavras do próprio desenvolvedor, não uma avaliação editorial independente da PromptQuorum: as declarações não são assinadas, nenhuma pessoa é citada e a PromptQuorum não verificou a comparação do desenvolvedor com outras ferramentas.',
+          '**Por que o criamos.** "Criamos o TecAdRise Bot porque precisávamos de um shell de desktop multiagente local no Windows que pudéssemos controlar de ponta a ponta: agentes separados, cada um com seus próprios modelos, instruções, workspaces, rotinas agendadas e ferramentas, sem prender o fluxo de trabalho a uma interface de chat hospedada. As opções existentes eram apenas em nuvem, de agente único ou fechadas. O TecAdRise Bot é um app Electron gratuito e de código aberto, no estilo do Grok Bot, movido pelo Cursor TypeScript SDK, de modo que os agentes rodam na máquina com skills, MCP/ferramentas, mensagens entre bots e um plano de controle em localhost. Nós mesmos o usamos para prospecção (outbound), pesquisa e operações, e o publicamos para que outros possam rodar o mesmo padrão."',
+          '**Sobre LLMs locais e o Cursor.** "Hoje o shell de chat conversa com os modelos por meio do Cursor SDK (e do roteamento de modelos do Cursor). Ainda não estamos conectados a uma pilha de LLM local totalmente offline para trabalho de programação com agentes. Conectar modelos locais / de pesos abertos, quando a qualidade for boa o bastante para programação multiagente e uso de ferramentas, está no roteiro; o produto já roda como um app desktop local no Windows, com workspaces, skills e ferramentas locais. Quando esse caminho com modelos locais chegar, seremos mais adequados para uma página de LLM local pura; até lá, o enquadramento honesto é shell desktop multiagente local + Cursor SDK, não inferência totalmente offline."',
+        ],
+        note: '— TecAdRise, desenvolvedora do TecAdRiseBot',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: 'Concorrentes e alternativas',
@@ -1669,8 +1746,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qualidade na prática.** A PromptQuorum não executou o app, então estabilidade, comportamento dos agentes e o agendador não foram testados.',
           '**Tratamento de dados no Cursor.** As regras de retenção e de treinamento para o tráfego do SDK não foram verificadas; a página de política do próprio app não as cobre.',
-          '**Uso offline ou com modelo local.** As fontes não mostram nenhuma forma de usar um modelo local ou auto-hospedado; quem precisa disso deve olhar as alternativas acima.',
-          '**Histórico do desenvolvedor.** Nenhum fundador é citado e o desenvolvedor não foi contatado, então compromissos de suporte e de roteiro são desconhecidos, além da declaração do site de que o suporte a Mac pode vir depois.',
+          '**Uso offline ou com modelo local.** O desenvolvedor diz que hoje os modelos são acessados pelo Cursor SDK e que modelos locais ou de pesos abertos estão no roteiro, sem data definida; quem precisa de um modelo local deve olhar as alternativas acima.',
+          '**Histórico do desenvolvedor.** O desenvolvedor respondeu sem citar uma pessoa, então não se sabe quem está por trás do projeto; compromissos de suporte e de roteiro não foram verificados, além das declarações em A palavra do desenvolvedor e da nota do site de que o suporte a Mac pode vir depois.',
           '**Histórico do projeto.** Não há versão com tag nem feedback público de usuários ainda.',
           '**Não é para iniciantes.** São necessários um terminal, o Node.js e uma chave de API com uso pago.',
         ],
@@ -1681,7 +1758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O TecAdRiseBot pode usar o Ollama ou outro modelo local?',
-            a: 'As fontes não mostram essa opção; o modelo é sempre escolhido no catálogo do Cursor.',
+            a: 'O desenvolvedor diz que modelos locais e de pesos abertos estão no roteiro, mas ainda não estão conectados; hoje o modelo é escolhido no catálogo do Cursor.',
           },
           {
             q: 'Ele continua funcionando com o notebook fechado?',
@@ -1716,6 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[TecAdRiseBot no GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) — README, package.json (versão 0.1.0), licença MIT, data de criação e histórico de commits, lidos pela API do GitHub em 28 de outubro de 2026.',
           '[Documentação do SDK TypeScript do Cursor](https://cursor.com/docs/sdk/typescript) — runtimes, inferência em modelos hospedados, cobrança e chaves de API.',
           '[Página de termos e privacidade da TecAdRise](https://tecadrise.ai/terms) — política válida para toda a empresa, cabeçalho datado "January 2025".',
+          'Declarações do desenvolvedor (TecAdRise) enviadas à PromptQuorum em 28 de outubro de 2026 — as citações "Por que o criamos" e "Sobre LLMs locais e o Cursor", além dos links do produto, do GitHub e do vídeo de demonstração; não verificadas de forma independente.',
         ],
       },
       relatedReading: {
@@ -1785,6 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'كيف تبدأ', anchor: 'getting-started' },
       { label: 'ميزات أكدتها المصادر', anchor: 'key-features' },
       { label: 'ما يعمل محليًا وما يذهب إلى Cursor', anchor: 'privacy' },
+      { label: 'من الجهة المطوّرة', anchor: 'from-the-maker' },
       { label: 'المنافسون والبدائل', anchor: 'tecadrisebot-competitors' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
@@ -1819,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'تستند هذه المراجعة إلى صفحة المنتج ومستودع GitHub ووثائق Cursor SDK، وقد جرى التحقق منها في 28 أكتوبر 2026. لم تثبّت PromptQuorum التطبيق ولم تشغّله ولم تقِس أداءه، ولم تراجع الجهة المطوّرة هذه الصفحة.',
+            text: 'تستند هذه المراجعة إلى صفحة المنتج ومستودع GitHub ووثائق Cursor SDK، وقد جرى التحقق منها في 28 أكتوبر 2026، إضافة إلى بيانات أرسلتها الجهة المطوّرة في اليوم نفسه. لم تثبّت PromptQuorum التطبيق ولم تشغّله ولم تقِس أداءه، ولم تراجع الجهة المطوّرة هذه الصفحة.',
           },
         ],
       },
@@ -1842,6 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'البند': 'الشفرة والإعداد', 'كيف تحصل عليه': '[مستودع GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) (MIT؛ يتضمن README خطوات الإعداد)' },
           { 'البند': 'الموقع', 'كيف تحصل عليه': '[صفحة المنتج على tecadrise.ai](https://tecadrise.ai/products/tecadrisebot)' },
           { 'البند': 'سياسة الخصوصية', 'كيف تحصل عليه': '[tecadrise.ai/terms](https://tecadrise.ai/terms) (شروط عامة للشركة؛ لا تذكر التطبيق)' },
+          { 'البند': 'فيديو توضيحي', 'كيف تحصل عليه': '[فيديو توضيحي (MP4)](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4) (مرفق بصفحة إصدار GitHub)' },
           { 'البند': 'المتطلبات', 'كيف تحصل عليه': 'Windows 10/11 وNode.js 22.13+ وnpm 10+ ومفتاح Cursor API (يُنشأ في لوحة Cursor Dashboard)' },
         ],
         note: 'الإصدار الذي جرت مراجعته: 0.1.0، قُرئ من package.json في المستودع في 28 أكتوبر 2026. ويحتاج Playwright MCP أيضًا إلى Node وnpx في PATH.',
@@ -1921,6 +2001,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من الجهة المطوّرة',
+        content: [
+          'أرسلت TecAdRise، الشركة المطوّرة لتطبيق TecAdRiseBot، إلى PromptQuorum البيانين أدناه في 28 أكتوبر 2026، مع روابط المنتج وGitHub والفيديو التوضيحي. وهما كلام الجهة المطوّرة نفسه، لا تقييم PromptQuorum المستقل: فالبيانان غير موقّعين، ولا يُذكر أي فرد بالاسم، ولم تتحقق PromptQuorum من مقارنة الجهة المطوّرة مع الأدوات الأخرى.',
+          '**لماذا بنيناه.** «بنينا TecAdRise Bot لأننا احتجنا إلى غلاف سطح مكتب محلي متعدد الوكلاء على Windows نملكه من البداية إلى النهاية: وكلاء منفصلون لكلٍّ منهم نماذجه وتعليماته ومساحات عمله وروتيناته المجدولة وأدواته، دون حبس سير العمل داخل واجهة دردشة مستضافة. كانت الخيارات القائمة إما سحابية فقط، أو بوكيل واحد، أو مغلقة. TecAdRise Bot تطبيق Electron مجاني ومفتوح المصدر على غرار Grok Bot، يعمل بواسطة Cursor TypeScript SDK، فتعمل الوكلاء على الجهاز مع المهارات وأدوات MCP والرسائل بين الروبوتات وواجهة تحكم محلية على localhost. نستخدمه بأنفسنا في التواصل الصادر والبحث والعمليات، ونشرناه ليتمكن الآخرون من تشغيل النمط نفسه.»',
+          '**حول نماذج LLM المحلية وCursor.** «اليوم يتحدث غلاف الدردشة إلى النماذج عبر Cursor SDK (وعبر توجيه النماذج لدى Cursor). لم نربطه بعد بمنظومة LLM محلية تعمل دون اتصال بالكامل لأعمال البرمجة بالوكلاء. ربط النماذج المحلية / مفتوحة الأوزان حين تصبح جودتها كافية للبرمجة متعددة الوكلاء واستخدام الأدوات مدرج في خارطة الطريق؛ والمنتج يعمل بالفعل كتطبيق سطح مكتب محلي على Windows بمساحات عمل ومهارات وأدوات محلية. وعندما يصل مسار النماذج المحلية هذا سنكون أنسب لصفحة مخصصة للنماذج المحلية بحتة؛ وإلى ذلك الحين فالتوصيف الصادق هو: غلاف سطح مكتب محلي متعدد الوكلاء + Cursor SDK، وليس استدلالًا يعمل دون اتصال بالكامل.»',
+        ],
+        note: '— TecAdRise، الجهة المطوّرة لتطبيق TecAdRiseBot',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: 'المنافسون والبدائل',
@@ -1950,8 +2040,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**الجودة عمليًا.** لم تشغّل PromptQuorum التطبيق، لذا لم يُختبر الاستقرار ولا سلوك الوكلاء ولا المجدوِل.',
           '**معالجة البيانات لدى Cursor.** لم تُراجَع شروط الاحتفاظ والتدريب الخاصة بحركة SDK؛ وصفحة سياسة التطبيق نفسها لا تغطيها.',
-          '**الاستخدام دون اتصال أو بنموذج محلي.** لا تُظهر المصادر أي طريقة لاستخدام نموذج محلي أو مستضاف ذاتيًا؛ ومن يحتاج إلى ذلك فعليه النظر في البدائل أعلاه.',
-          '**خلفية الجهة المطوّرة.** لا يُذكر مؤسس ولم يُتواصل مع الجهة المطوّرة، لذا فالتزامات الدعم وخارطة الطريق غير معروفة خارج ما يقوله الموقع من أن دعم Mac قد يأتي لاحقًا.',
+          '**الاستخدام دون اتصال أو بنموذج محلي.** تقول الجهة المطوّرة إن النماذج تُستخدم اليوم عبر Cursor SDK وإن النماذج المحلية أو مفتوحة الأوزان مدرجة في خارطة طريقها دون تحديد موعد؛ ومن يحتاج إلى نموذج محلي فعليه النظر في البدائل أعلاه.',
+          '**خلفية الجهة المطوّرة.** ردّت الجهة المطوّرة دون ذكر أي فرد بالاسم، لذا فالقائمون على المشروع غير معروفين؛ والتزامات الدعم وخارطة الطريق غير موثّقة خارج ما ورد في قسم «من الجهة المطوّرة» وما يقوله الموقع من أن دعم Mac قد يأتي لاحقًا.',
           '**السجل.** لا يوجد إصدار موسوم ولا آراء عامة من المستخدمين حتى الآن.',
           '**غير مناسب للمبتدئين.** يلزم طرفية (Terminal) وNode.js ومفتاح API يُحاسَب على استخدامه.',
         ],
@@ -1962,7 +2052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل يستطيع TecAdRiseBot استخدام Ollama أو نموذج محلي آخر؟',
-            a: 'لا تُظهر المصادر خيارًا كهذا؛ إذ يُختار النموذج دائمًا من فهرس Cursor.',
+            a: 'تقول الجهة المطوّرة إن النماذج المحلية ومفتوحة الأوزان مدرجة في خارطة طريقها لكنها غير مرتبطة بعد؛ واليوم يُختار النموذج من فهرس Cursor.',
           },
           {
             q: 'هل يواصل العمل عند إغلاق الحاسوب المحمول؟',
@@ -1997,6 +2087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[TecAdRiseBot على GitHub](https://github.com/tecadrise-ai/TecAdRiseBot) — README وpackage.json (الإصدار 0.1.0) ورخصة MIT وتاريخ الإنشاء وسجل الإيداعات، قُرئت عبر GitHub API في 28 أكتوبر 2026.',
           '[وثائق Cursor TypeScript SDK](https://cursor.com/docs/sdk/typescript) — بيئات التشغيل والاستدلال على نماذج مستضافة والفوترة ومفاتيح API.',
           '[صفحة الشروط والخصوصية لدى TecAdRise](https://tecadrise.ai/terms) — سياسة عامة للشركة، وترويستها مؤرخة "January 2025".',
+          'بيانات من الجهة المطوّرة (TecAdRise) أُرسلت إلى PromptQuorum في 28 أكتوبر 2026 — اقتباسا «لماذا بنيناه» و«حول نماذج LLM المحلية وCursor» مع روابط المنتج وGitHub والفيديو التوضيحي؛ لم يُتحقق منها بشكل مستقل.',
         ],
       },
       relatedReading: {
@@ -2066,6 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '上手步骤', anchor: 'getting-started' },
       { label: '来源确认的功能', anchor: 'key-features' },
       { label: '哪些在本地运行，哪些发往 Cursor', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '竞品与替代方案', anchor: 'tecadrisebot-competitors' },
       { label: '适合谁用', anchor: 'who-should-use' },
       { label: '我们未能核实的内容', anchor: 'who-should-not-use' },
@@ -2100,7 +2192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '本评测基于 2026 年 10 月 28 日核对的产品页面、GitHub 仓库和 Cursor SDK 文档。PromptQuorum 没有安装、运行或评测该应用，开发方也没有审阅本页。',
+            text: '本评测基于 2026 年 10 月 28 日核对的产品页面、GitHub 仓库和 Cursor SDK 文档，以及开发方当天发来的说明。PromptQuorum 没有安装、运行或评测该应用，开发方也没有审阅本页。',
           },
         ],
       },
@@ -2123,6 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '项目': '源代码与安装', '获取方式': '[GitHub 仓库](https://github.com/tecadrise-ai/TecAdRiseBot)（MIT；README 中有安装步骤）' },
           { '项目': '官网', '获取方式': '[tecadrise.ai 产品页面](https://tecadrise.ai/products/tecadrisebot)' },
           { '项目': '隐私政策', '获取方式': '[tecadrise.ai/terms](https://tecadrise.ai/terms)（公司通用条款；未提及该应用）' },
+          { '项目': '演示视频', '获取方式': '[演示视频（MP4）](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4)（附在 GitHub 发布页上）' },
           { '项目': '运行要求', '获取方式': 'Windows 10/11、Node.js 22.13+、npm 10+，以及一个 Cursor API 密钥（在 Cursor Dashboard 中创建）' },
         ],
         note: '评测版本：0.1.0，2026 年 10 月 28 日从仓库的 package.json 读取。Playwright MCP 另外需要 Node 和 npx 位于 PATH 中。',
@@ -2202,6 +2295,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'TecAdRiseBot 背后的公司 TecAdRise 于 2026 年 10 月 28 日向 PromptQuorum 发来了下面两段说明，并附上了产品页面、GitHub 和演示视频的链接。以下内容是开发方自己的话，并非 PromptQuorum 的独立评价：这些说明没有署名，没有点名任何个人，PromptQuorum 也没有核实开发方与其他工具的对比。',
+          '**我们为什么做它。** “我们开发 TecAdRise Bot，是因为我们需要一个可以从头到尾完全自主掌控的 Windows 本地多智能体桌面外壳：各个智能体有各自的模型、指令、工作区、定时任务和工具，而不是把工作流锁死在托管的聊天界面里。现有的选择要么只有云端，要么只支持单智能体，要么是闭源的。TecAdRise Bot 是一款免费开源、Grok Bot 风格的 Electron 应用，由 Cursor TypeScript SDK 驱动，因此智能体在本机运行，并带有技能、MCP/工具、智能体之间的消息，以及一个 localhost 控制平面。我们自己也用它来做外联、研究和运维，并把它发布出来，让别人也能采用同样的做法。”',
+          '**关于本地大模型与 Cursor。** “目前，聊天外壳通过 Cursor SDK（以及 Cursor 的模型路由）与模型对话。我们还没有接入可完全离线运行的本地大模型方案来完成智能体编程工作。当质量强到足以胜任多智能体编程和工具调用时，接入本地/开放权重模型已列入路线图；产品本身已经是一款带有本地工作区、技能和工具的本地 Windows 桌面应用。等本地模型这条路径落地后，我们会更适合出现在纯本地大模型页面上；在那之前，诚实的定位是本地桌面多智能体外壳 + Cursor SDK，而不是完全离线推理。”',
+        ],
+        note: '— TecAdRise，TecAdRiseBot 的开发方',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: '竞品与替代方案',
@@ -2231,8 +2334,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**实际使用表现。** PromptQuorum 没有运行该应用，因此稳定性、智能体行为和计划任务都没有经过测试。',
           '**Cursor 端的数据处理。** SDK 流量的保留和训练条款没有核对；应用自己的政策页面也没有涵盖这些内容。',
-          '**离线或本地模型使用。** 来源中没有显示任何使用本地或自托管模型的方式；需要的读者应该看上面的替代方案。',
-          '**开发方背景。** 没有点名创始人，也没有联系过开发方，因此除官网所说“Mac 支持以后可能推出”之外，支持和路线图承诺均未知。',
+          '**离线或本地模型使用。** 开发方称，目前模型通过 Cursor SDK 调用，本地或开放权重模型已列入路线图，但没有给出日期；需要本地模型的读者应该看上面的替代方案。',
+          '**开发方背景。** 开发方回复时没有点名任何个人，因此项目背后的人员未知；除了“来自开发者”一节中的说明和官网所称的 Mac 支持以后可能推出之外，支持和路线图方面的承诺均未经核实。',
           '**使用记录。** 没有带标签的正式发布，也还没有公开的用户反馈。',
           '**不适合新手。** 需要终端、Node.js 和一个按用量付费的 API 密钥。',
         ],
@@ -2243,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TecAdRiseBot 能使用 Ollama 或其他本地模型吗？',
-            a: '来源中没有显示这样的选项；模型始终从 Cursor 目录中选择。',
+            a: '开发方称，本地和开放权重模型已列入路线图，但尚未接入；目前模型是从 Cursor 目录中选择的。',
           },
           {
             q: '合上笔记本后它还能继续工作吗？',
@@ -2278,6 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub 上的 TecAdRiseBot](https://github.com/tecadrise-ai/TecAdRiseBot) — README、package.json（0.1.0 版）、MIT 许可证、创建日期和提交历史，2026 年 10 月 28 日通过 GitHub API 读取。',
           '[Cursor TypeScript SDK 文档](https://cursor.com/docs/sdk/typescript) — 运行时、托管模型推理、计费和 API 密钥。',
           '[TecAdRise 条款与隐私页面](https://tecadrise.ai/terms) — 公司通用政策，页首日期为“January 2025”。',
+          '开发方（TecAdRise）于 2026 年 10 月 28 日发给 PromptQuorum 的说明 — “我们为什么做它”和“关于本地大模型与 Cursor”两段引文，以及产品页面、GitHub 和演示视频链接；未经独立核实。',
         ],
       },
       relatedReading: {
@@ -2347,6 +2451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '시작하기', anchor: 'getting-started' },
       { label: '출처로 확인된 기능', anchor: 'key-features' },
       { label: '로컬에서 실행되는 것과 Cursor로 전송되는 것', anchor: 'privacy' },
+      { label: '개발사의 말', anchor: 'from-the-maker' },
       { label: '경쟁 제품과 대안', anchor: 'tecadrisebot-competitors' },
       { label: '추천 대상', anchor: 'who-should-use' },
       { label: '확인하지 못한 내용', anchor: 'who-should-not-use' },
@@ -2381,7 +2486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 리뷰는 2026년 10월 28일에 확인한 제품 페이지, GitHub 저장소, Cursor SDK 문서에 근거합니다. PromptQuorum은 앱을 설치하거나 실행하거나 벤치마크하지 않았으며, 개발사도 이 페이지를 검토하지 않았습니다.',
+            text: '이 리뷰는 2026년 10월 28일에 확인한 제품 페이지, GitHub 저장소, Cursor SDK 문서와 같은 날 개발사가 보내 온 진술에 근거합니다. PromptQuorum은 앱을 설치하거나 실행하거나 벤치마크하지 않았으며, 개발사도 이 페이지를 검토하지 않았습니다.',
           },
         ],
       },
@@ -2404,6 +2509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '소스와 설치 방법', '받는 곳': '[GitHub 저장소](https://github.com/tecadrise-ai/TecAdRiseBot) (MIT, README에 설치 단계 수록)' },
           { '항목': '웹사이트', '받는 곳': '[tecadrise.ai 제품 페이지](https://tecadrise.ai/products/tecadrisebot)' },
           { '항목': '개인정보 처리방침', '받는 곳': '[tecadrise.ai/terms](https://tecadrise.ai/terms) (회사 전체 약관이며 앱은 언급하지 않음)' },
+          { '항목': '데모 영상', '받는 곳': '[데모 영상(MP4)](https://github.com/tecadrise-ai/TecAdRiseBot/releases/download/demo-video/tecadrisebot-demo.mp4) (GitHub 릴리스 페이지에 첨부됨)' },
           { '항목': '필요 사항', '받는 곳': 'Windows 10/11, Node.js 22.13 이상, npm 10 이상, Cursor API 키(Cursor Dashboard에서 생성)' },
         ],
         note: '확인한 버전: 0.1.0으로, 2026년 10월 28일 저장소의 package.json에서 읽었습니다. Playwright MCP에는 추가로 PATH에 Node와 npx가 있어야 합니다.',
@@ -2483,6 +2589,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발사의 말',
+        content: [
+          'TecAdRiseBot을 만든 회사 TecAdRise는 2026년 10월 28일에 제품, GitHub, 데모 영상 링크와 함께 아래 두 가지 진술을 PromptQuorum에 보내 왔습니다. 이는 개발사 본인의 말이며 PromptQuorum의 독립적인 평가가 아닙니다. 진술에는 서명이 없고 특정 개인의 이름도 나와 있지 않으며, PromptQuorum은 개발사가 다른 도구와 비교한 내용을 확인하지 않았습니다.',
+          '**만든 이유.** "저희는 Windows에서 처음부터 끝까지 직접 소유할 수 있는 로컬 멀티 에이전트 데스크톱 셸이 필요해서 TecAdRise Bot을 만들었습니다. 에이전트마다 고유한 모델, 지침, 작업 공간, 예약 루틴, 도구를 갖추고, 워크플로를 호스팅된 채팅 UI에 묶어 두지 않는 구조입니다. 기존 선택지는 클라우드 전용이거나, 단일 에이전트이거나, 폐쇄형이었습니다. TecAdRise Bot은 Cursor TypeScript SDK로 구동되는 무료 오픈소스 Grok Bot 스타일의 Electron 앱이므로, 에이전트가 스킬, MCP/도구, 봇 간 메시지, localhost 제어 플레인과 함께 컴퓨터에서 실행됩니다. 저희는 아웃바운드, 리서치, 운영에 직접 사용하고 있으며, 다른 분들도 같은 방식으로 쓸 수 있도록 공개했습니다."',
+          '**로컬 LLM과 Cursor에 대하여.** "현재 채팅 셸은 Cursor SDK(그리고 Cursor의 모델 라우팅)를 통해 모델과 통신합니다. 저희는 에이전트 코딩 작업을 위한 완전한 오프라인 로컬 LLM 스택에는 아직 연결되어 있지 않습니다. 멀티 에이전트 코딩과 도구 사용에 충분한 품질이 확보되는 시점에 로컬/오픈 웨이트 모델을 연결하는 것이 로드맵에 있습니다. 이 제품은 이미 로컬 작업 공간, 스킬, 도구를 갖춘 로컬 Windows 데스크톱 앱으로 실행됩니다. 이 로컬 모델 경로가 갖춰지면 순수 로컬 LLM 페이지에 더 잘 맞게 될 것입니다. 그때까지 솔직한 설명은 로컬 데스크톱 멀티 에이전트 셸 + Cursor SDK이며, 완전한 오프라인 추론이 아닙니다."',
+        ],
+        note: '— TecAdRise, TecAdRiseBot 개발사',
+      },
       competitors: {
         id: 'tecadrisebot-competitors',
         title: '경쟁 제품과 대안',
@@ -2512,8 +2628,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**실사용 품질.** PromptQuorum은 앱을 실행해 보지 않았으므로 안정성, 에이전트의 동작, 스케줄러는 테스트하지 않았습니다.',
           '**Cursor에서의 데이터 처리.** SDK 트래픽의 보관 및 학습 조건은 확인하지 않았으며, 앱 자체의 방침 페이지도 이를 다루지 않습니다.',
-          '**오프라인 또는 로컬 모델 사용.** 출처에는 로컬 또는 자체 호스팅 모델을 쓰는 방법이 나와 있지 않습니다. 이것이 필요한 분은 위의 대안을 살펴보십시오.',
-          '**개발사 배경.** 창업자의 이름이 나와 있지 않고 개발사에 연락하지도 않았으므로, Mac 지원이 나중에 나올 수 있다는 사이트의 언급 외에는 지원과 로드맵에 대한 약속을 알 수 없습니다.',
+          '**오프라인 또는 로컬 모델 사용.** 개발사는 현재 모델이 Cursor SDK를 통해 연결되며 로컬 또는 오픈 웨이트 모델은 날짜 없이 로드맵에 있다고 밝힙니다. 로컬 모델이 필요한 분은 위의 대안을 살펴보십시오.',
+          '**개발사 배경.** 개발사가 특정 개인을 밝히지 않고 회신했으므로 프로젝트를 만든 사람들은 알려져 있지 않습니다. 지원과 로드맵에 대한 약속은 \'개발사의 말\'에 실린 진술과 Mac 지원이 나중에 나올 수 있다는 사이트의 언급 외에는 확인되지 않았습니다.',
           '**이용 실적.** 태그가 붙은 릴리스가 없고 공개된 사용자 의견도 아직 없습니다.',
           '**초보자에게는 맞지 않습니다.** 터미널, Node.js, 사용량에 따라 요금이 나오는 API 키가 필요합니다.',
         ],
@@ -2524,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TecAdRiseBot에서 Ollama나 다른 로컬 모델을 쓸 수 있습니까?',
-            a: '출처에는 그런 옵션이 나와 있지 않으며, 모델은 항상 Cursor 카탈로그에서 선택합니다.',
+            a: '개발사는 로컬 및 오픈 웨이트 모델이 로드맵에 있지만 아직 연결되지 않았다고 밝힙니다. 현재는 Cursor 카탈로그에서 모델을 고릅니다.',
           },
           {
             q: '노트북을 닫아도 계속 작동합니까?',
@@ -2559,6 +2675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub의 TecAdRiseBot](https://github.com/tecadrise-ai/TecAdRiseBot) — README, package.json(버전 0.1.0), MIT 라이선스, 생성일, 커밋 이력. 2026년 10월 28일 GitHub API로 확인.',
           '[Cursor TypeScript SDK 문서](https://cursor.com/docs/sdk/typescript) — 런타임, 호스팅 모델 추론, 요금, API 키.',
           '[TecAdRise 약관 및 개인정보 페이지](https://tecadrise.ai/terms) — 회사 전체 방침으로, 머리글 날짜는 "January 2025".',
+          '개발사(TecAdRise)가 2026년 10월 28일에 PromptQuorum에 보낸 진술 — \'만든 이유\'와 \'로컬 LLM과 Cursor에 대하여\' 인용문, 그리고 제품, GitHub, 데모 영상 링크. 독립적으로 확인되지 않았습니다.',
         ],
       },
       relatedReading: {
