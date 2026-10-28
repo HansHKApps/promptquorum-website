@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Which local AI app should a non-technical person install first?',
-        answer: 'The easiest local AI app for non-technical users is **Jan** ([jan.ai](https://jan.ai)) — one-click install, no command line, built-in model library. **LM Studio** is the second choice if you want more model control without coding.',
+        answer: 'The easiest local AI app for non-technical users is **GPT4All** — the smallest download (~290 MB) and 4 clicks to the first chat on an 8 GB RAM laptop without a GPU. Caveat: it has had no update since 27 May 2025, so for an actively updated alternative with the same one-click install choose **Jan** ([jan.ai](https://jan.ai)). **LM Studio** is the pick if you want more model control without coding.',
         bullets: [
           '(1) Download Jan from jan.ai, (2) Click \'Download Model\' → select Phi-4-mini, (3) Start chatting. No terminal required.',
           'Jan — best for privacy-conscious beginners; zero telemetry; fully open source.',
@@ -136,10 +136,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan — Best for Privacy-Conscious Beginners',
-        content: '**Jan is the privacy-first pick — zero telemetry, zero analytics SDK, fully auditable open-source code under the AGPL license.** It looks and feels like a clean ChatGPT clone, with a curated catalog of about 150 models you can browse without leaving the app.',
+        content: '**Jan is the privacy-first pick — zero telemetry, zero analytics SDK, fully auditable open-source code under the Apache 2.0 license.** It looks and feels like a clean ChatGPT clone, with a curated catalog of about 150 models you can browse without leaving the app.',
         items: [
           '**Install path:** Download the signed installer from jan.ai → install → pick a model from the in-app library (no Hugging Face account, no logins) → start chatting. About 5 clicks total.',
-          '**Privacy posture:** No telemetry of any kind. No analytics SDK. No phone-home. Source code is published on GitHub under AGPL — independent auditors can verify the binary matches the source.',
+          '**Privacy posture:** No telemetry of any kind. No analytics SDK. No phone-home. Source code is published on GitHub under Apache 2.0 — independent auditors can verify the binary matches the source.',
           '**UI:** Modern dark-mode-by-default chat UI with conversation threads in the sidebar. Comparable to ChatGPT in look, but everything runs on your machine.',
           '**Model browser:** ~150 curated models with a "Hugging Face URL" import escape hatch. Less overwhelming than LM Studio, more guided than GPT4All.',
           '**Built-in tools:** Optional extensions for document chat, web search, and OpenAI-compatible API serving. All optional and clearly labelled.',
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-en.webp',
-        imageCaption: 'Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, AGPL-auditable source, and fully offline operation after install.',
+        imageCaption: 'Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, auditable source, and fully offline operation after install.',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -314,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use these on a work laptop?',
-            a: 'Technically, yes. Politically, ask your IT or compliance team first. Local AI does not send your prompts anywhere, which is often a feature for compliance — but installing third-party software on a managed device is usually still a policy question. Show them this article and the AGPL/MIT source links for Jan and GPT4All if proof of "no data leaving the machine" helps.',
+            a: 'Technically, yes. Politically, ask your IT or compliance team first. Local AI does not send your prompts anywhere, which is often a feature for compliance — but installing third-party software on a managed device is usually still a policy question. Show them this article and the Apache 2.0/MIT source links for Jan and GPT4All if proof of "no data leaving the machine" helps.',
           },
           {
             q: 'What is the difference between local AI and ChatGPT for a non-technical user?',
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do these apps cost money long-term?',
-            a: 'No. All six are free for personal use indefinitely. GPT4All (MIT), Jan (AGPL), and Atomic Chat (Apache 2.0) are open source. Msty has a paid tier for cloud-API features, but local-only use is free forever. LM Studio is free for personal and commercial use. AnythingLLM Desktop is free, with a paid hosted product as a separate offering.',
+            a: 'No. All six are free for personal use indefinitely. GPT4All (MIT), Jan (Apache 2.0), and Atomic Chat (Apache 2.0) are open source. Msty has a paid tier for cloud-API features, but local-only use is free forever. LM Studio is free for personal and commercial use. AnythingLLM Desktop is free, with a paid hosted product as a separate offering.',
           },
         ],
       },
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            'Best for privacy-conscious beginners. Fully open source under AGPL. Zero telemetry shipped by default. Curated catalog of ~150 models.',
+            'Best for privacy-conscious beginners. Fully open source under Apache 2.0. Zero telemetry shipped by default. Curated catalog of ~150 models.',
           url: 'https://jan.ai',
         },
         {
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Welche lokale KI-App sollte ein nicht-technischer Mensch zuerst installieren?',
-        answer: 'Installieren Sie GPT4All. Es ist der kleinste Download (~290 MB), läuft auf 8 GB RAM Laptops ohne GPU und erreicht den ersten Chat in 4 Klicks. Wenn Sie speziell Datenschutz, Dokument-Chat, eine schöne Oberfläche oder einen Mac möchten, schauen Sie sich die unten aufgelistete Persona-Rangliste an — jede Persona hat einen anderen Gewinner.',
+        answer: 'Installieren Sie GPT4All. Es ist der kleinste Download (~290 MB), läuft auf 8 GB RAM Laptops ohne GPU und erreicht den ersten Chat in 4 Klicks. Wenn Sie speziell Datenschutz, Dokument-Chat, eine schöne Oberfläche oder einen Mac möchten, schauen Sie sich die unten aufgelistete Persona-Rangliste an — jede Persona hat einen anderen Gewinner. Einschränkung: GPT4All hat seit dem 27. Mai 2025 kein Update erhalten; wenn Sie eine aktiv gepflegte Alternative mit ebenfalls einfacher Installation möchten, wählen Sie Jan.',
         bullets: [
           'GPT4All — das beste für absolute Anfänger; kleinste Installation; läuft auf schwacher Hardware; 4 Klicks zum ersten Chat. Einschränkung: seit 27. Mai 2025 kein Update.',
           'Jan — das beste für datenschutzorientierte Anfänger; null Telemetrie; vollständig Open Source.',
@@ -532,10 +532,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan — Das beste für datenschutzorientierte Anfänger',
-        content: '**Jan ist die datenschutzorientierte Wahl — null Telemetrie, kein Analytics-SDK, vollständig überprüfbarer Open-Source-Code unter der AGPL-Lizenz.** Es sieht und fühlt sich wie einen sauberen ChatGPT-Klon an, mit einem kuratierten Katalog von etwa 150 Modellen, die Sie durchsuchen können, ohne die App zu verlassen. **Für DSGVO-Konformität:** Jan verarbeitet alle Daten lokal auf Ihrem Computer — keine Datenübertragung an externe Server. Dies erfüllt die Anforderungen der DSGVO Artikel 28 für die Auftragsverarbeitung.',
+        content: '**Jan ist die datenschutzorientierte Wahl — null Telemetrie, kein Analytics-SDK, vollständig überprüfbarer Open-Source-Code unter der Apache 2.0-Lizenz.** Es sieht und fühlt sich wie einen sauberen ChatGPT-Klon an, mit einem kuratierten Katalog von etwa 150 Modellen, die Sie durchsuchen können, ohne die App zu verlassen. **Für DSGVO-Konformität:** Jan verarbeitet alle Daten lokal auf Ihrem Computer — keine Datenübertragung an externe Server. Dies erfüllt die Anforderungen der DSGVO Artikel 28 für die Auftragsverarbeitung.',
         items: [
           '**Installationspfad:** Download des signierten Installationsprogramms von jan.ai → installieren → Wählen Sie ein Modell aus der In-App-Bibliothek (kein Hugging Face-Konto, keine Logins) → chatten Sie. Insgesamt etwa 5 Klicks.',
-          '**Datenschutz-Postur:** Null Telemetrie. Kein Analytics-SDK. Kein „nach Hause telefonieren". Quellcode wird auf GitHub unter AGPL veröffentlicht — unabhängige Prüfer können überprüfen, dass die Binärdatei mit dem Quellcode übereinstimmt.',
+          '**Datenschutz-Postur:** Null Telemetrie. Kein Analytics-SDK. Kein „nach Hause telefonieren". Quellcode wird auf GitHub unter Apache 2.0 veröffentlicht — unabhängige Prüfer können überprüfen, dass die Binärdatei mit dem Quellcode übereinstimmt.',
           '**UI:** Modernes dunkles Standard-Chat-UI mit Conversation-Threads in der Seitenleiste. Vergleichbar mit ChatGPT im Aussehen, aber alles läuft auf Ihrem Computer.',
           '**Modell-Browser:** ~150 kuratierte Modelle mit einer „Hugging Face URL"-Import-Flucht. Weniger überwältigend als LM Studio, geführter als GPT4All.',
           '**Eingebaute Tools:** Optionale Erweiterungen für Dokument-Chat, Websuche und OpenAI-kompatible API-Bereitstellung. Alle optional und klar gekennzeichnet.',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-de.webp',
-        imageCaption: 'Jan Datenschutz-Vergleich: Cloud-KI sendet Eingaben an externe Server mit Analytics-SDK; Jan bietet null Telemetrie, überprüfbaren AGPL-Quellcode und vollständigen Offline-Betrieb nach der Installation.',
+        imageCaption: 'Jan Datenschutz-Vergleich: Cloud-KI sendet Eingaben an externe Server mit Analytics-SDK; Jan bietet null Telemetrie, überprüfbaren Apache 2.0-Quellcode und vollständigen Offline-Betrieb nach der Installation.',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich diese auf einem Arbeits-Laptop verwenden?',
-            a: 'Technisch, ja. Politisch, fragen Sie zuerst Ihr IT oder Compliance-Team. Lokale KI sendet Ihre Eingaben nirgendwo hin, was oft ein Feature für Compliance ist — aber die Installation von Third-Party-Software auf einem verwalteten Gerät ist normalerweise immer noch eine Richtlinien-Frage. Zeigen Sie ihnen diesen Artikel und die AGPL/MIT-Quell-Links für Jan und GPT4All, wenn ein Beweis von „keine Daten verlassen die Maschine" hilft.',
+            a: 'Technisch, ja. Politisch, fragen Sie zuerst Ihr IT oder Compliance-Team. Lokale KI sendet Ihre Eingaben nirgendwo hin, was oft ein Feature für Compliance ist — aber die Installation von Third-Party-Software auf einem verwalteten Gerät ist normalerweise immer noch eine Richtlinien-Frage. Zeigen Sie ihnen diesen Artikel und die Apache 2.0/MIT-Quell-Links für Jan und GPT4All, wenn ein Beweis von „keine Daten verlassen die Maschine" hilft.',
           },
           {
             q: 'Was ist der Unterschied zwischen lokaler KI und ChatGPT für einen nicht-technischen Nutzer?',
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kosten diese Apps langfristig Geld?',
-            a: 'Nein. Alle sechs sind für persönliche Nutzung auf Dauer kostenlos. GPT4All (MIT), Jan (AGPL) und Atomic Chat (Apache 2.0) sind Open Source. Msty hat einen kostenpflichtigen Tier für Cloud-API-Features, aber lokale-nur Nutzung ist für immer kostenlos. LM Studio ist kostenlos für persönliche und kommerzielle Nutzung. AnythingLLM Desktop ist kostenlos, mit einem gebotenen gehosteten Produkt als separates Angebot.',
+            a: 'Nein. Alle sechs sind für persönliche Nutzung auf Dauer kostenlos. GPT4All (MIT), Jan (Apache 2.0) und Atomic Chat (Apache 2.0) sind Open Source. Msty hat einen kostenpflichtigen Tier für Cloud-API-Features, aber lokale-nur Nutzung ist für immer kostenlos. LM Studio ist kostenlos für persönliche und kommerzielle Nutzung. AnythingLLM Desktop ist kostenlos, mit einem gebotenen gehosteten Produkt als separates Angebot.',
           },
           {
             q: 'Muss ich DSGVO beachten, wenn ich lokale KI auf einem Unternehmens-Laptop verwende?',
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche App ist beste für kleine Unternehmen und Freelancer in Deutschland?',
-            a: 'Für deutsche KMUs und Freelancer empfehlen wir Jan oder AnythingLLM Desktop, beide wegen ihrer Datenschutz- und DSGVO-Konformität. Jan für Teams, die Datenschutz absolut ernst nehmen (zero telemetry, AGPL open source). AnythingLLM Desktop für Unternehmen, die mit Dokumenten arbeiten (Verträge, Rechnungen, Kundenakten) — die lokale Verarbeitung ist DSGVO-konform und der Workspace-Ansatz ist perfekt für kleine Teams. Beide funktionieren auf Standard-Office-Hardware und erfordern keine admin-Rechte.',
+            a: 'Für deutsche KMUs und Freelancer empfehlen wir Jan oder AnythingLLM Desktop, beide wegen ihrer Datenschutz- und DSGVO-Konformität. Jan für Teams, die Datenschutz absolut ernst nehmen (zero telemetry, Apache 2.0 open source). AnythingLLM Desktop für Unternehmen, die mit Dokumenten arbeiten (Verträge, Rechnungen, Kundenakten) — die lokale Verarbeitung ist DSGVO-konform und der Workspace-Ansatz ist perfekt für kleine Teams. Beide funktionieren auf Standard-Office-Hardware und erfordern keine admin-Rechte.',
           },
         ],
       },
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            'Das beste für datenschutzorientierte Anfänger. Vollständig Open Source unter AGPL. Zero Telemetrie standardmäßig versandt. Kuratierter Katalog von ~150 Modellen.',
+            'Das beste für datenschutzorientierte Anfänger. Vollständig Open Source unter Apache 2.0. Zero Telemetrie standardmäßig versandt. Kuratierter Katalog von ~150 Modellen.',
           url: 'https://jan.ai',
         },
         {
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Quelle app d\'IA locale un débutant devrait-il installer en premier ?',
-        answer: 'Installez GPT4All. C\'est le plus petit téléchargement (~290 MB), il tourne sur des portables avec 8 GB de RAM sans GPU, et atteint le premier chat en 4 clics. Si vous avez besoin de confidentialité, de chat avec documents, d\'une belle interface, ou si vous êtes sur Mac, consultez la liste classée par profil ci-dessous — chaque profil a un gagnant différent.',
+        answer: 'Installez GPT4All. C\'est le plus petit téléchargement (~290 MB), il tourne sur des portables avec 8 GB de RAM sans GPU, et atteint le premier chat en 4 clics. Si vous avez besoin de confidentialité, de chat avec documents, d\'une belle interface, ou si vous êtes sur Mac, consultez la liste classée par profil ci-dessous — chaque profil a un gagnant différent. Réserve : GPT4All n\'a reçu aucune mise à jour depuis le 27 mai 2025 ; pour une alternative activement mise à jour, choisissez Jan.',
         bullets: [
           'GPT4All — meilleur pour les débutants absolus ; plus petite installation ; tourne sur du matériel faible ; 4 clics vers le premier chat. Réserve : aucune mise à jour depuis le 27 mai 2025.',
           'Jan — meilleur pour les débutants soucieux de la confidentialité ; zéro télémétrie ; entièrement open source.',
@@ -936,10 +936,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan — Meilleur pour confidentialité',
-        content: '**Jan est le choix respectueux de la confidentialité — zéro télémétrie, zéro SDK analytics, code open source entièrement vérifiable sous licence AGPL.** Elle ressemble et se sent comme un clone ChatGPT épuré, avec un catalogue curé d\'environ 150 modèles que vous pouvez parcourir sans quitter l\'app. **Pour la conformité :** Jan traite toutes les données localement — zéro transmission à des serveurs externes. Conforme au RGPD pour les utilisateurs qui traitent des données sensibles.',
+        content: '**Jan est le choix respectueux de la confidentialité — zéro télémétrie, zéro SDK analytics, code open source entièrement vérifiable sous licence Apache 2.0.** Elle ressemble et se sent comme un clone ChatGPT épuré, avec un catalogue curé d\'environ 150 modèles que vous pouvez parcourir sans quitter l\'app. **Pour la conformité :** Jan traite toutes les données localement — zéro transmission à des serveurs externes. Conforme au RGPD pour les utilisateurs qui traitent des données sensibles.',
         items: [
           '**Chemin d\'installation :** Télécharger l\'installateur signé depuis jan.ai → installer → choisir un modèle depuis la bibliothèque in-app (pas de compte Hugging Face, pas de logins) → discuter. Environ 5 clics au total.',
-          '**Posture confidentialité :** Zéro télémétrie. Zéro SDK analytics. Zéro "call home". Le code source est publié sur GitHub sous AGPL — les auditeurs indépendants peuvent vérifier que le binaire correspond au source.',
+          '**Posture confidentialité :** Zéro télémétrie. Zéro SDK analytics. Zéro "call home". Le code source est publié sur GitHub sous Apache 2.0 — les auditeurs indépendants peuvent vérifier que le binaire correspond au source.',
           '**UI :** Interface chat moderne avec thème sombre par défaut et fils de conversation dans la barre latérale. Comparable à ChatGPT en apparence, mais tout tourne sur votre machine.',
           '**Navigateur de modèles :** ~150 modèles curés avec une échappatoire "URL Hugging Face". Moins accablant que LM Studio, plus guidé que GPT4All.',
           '**Outils intégrés :** Extensions optionnelles pour chat avec documents, recherche web, et serveur API compatible OpenAI. Tous optionnels et clairement marqués.',
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-fr.webp',
-        imageCaption: 'Comparaison de confidentialité Jan : l\'IA cloud envoie les requêtes à des serveurs distants avec SDK analytics ; Jan offre zéro télémétrie, source AGPL auditable, et fonctionnement offline après installation.',
+        imageCaption: 'Comparaison de confidentialité Jan : l\'IA cloud envoie les requêtes à des serveurs distants avec SDK analytics ; Jan offre zéro télémétrie, source Apache 2.0 auditable, et fonctionnement offline après installation.',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je les utiliser sur un portable de travail ?',
-            a: 'Techniquement, oui. Politiquement, demandez d\'abord à votre département IT ou Conformité. L\'IA locale ne transmet vos entrées nulle part, ce qui est souvent une feature pour Conformité — mais installer un logiciel tiers sur un appareil géré est habituellement encore une question de politique. Montrez-leur cet article et les liens source AGPL/MIT pour Jan et GPT4All si une preuve de "zéro donnée ne quitte la machine" aide.',
+            a: 'Techniquement, oui. Politiquement, demandez d\'abord à votre département IT ou Conformité. L\'IA locale ne transmet vos entrées nulle part, ce qui est souvent une feature pour Conformité — mais installer un logiciel tiers sur un appareil géré est habituellement encore une question de politique. Montrez-leur cet article et les liens source Apache 2.0/MIT pour Jan et GPT4All si une preuve de "zéro donnée ne quitte la machine" aide.',
           },
           {
             q: 'Quelle est la différence entre IA locale et ChatGPT pour un utilisateur non-technique ?',
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ces apps coûtent-elles de l\'argent à long terme ?',
-            a: 'Non. Les six sont gratuites pour usage personnel indéfiniment. GPT4All (MIT), Jan (AGPL) et Atomic Chat (Apache 2.0) sont open source. Msty a un tier payant pour des features cloud-API, mais l\'usage local-seul est gratuit indéfiniment. LM Studio est gratuite pour usage personnel et commercial. AnythingLLM Desktop est gratuite, avec un produit hébergé payant comme offre séparée.',
+            a: 'Non. Les six sont gratuites pour usage personnel indéfiniment. GPT4All (MIT), Jan (Apache 2.0) et Atomic Chat (Apache 2.0) sont open source. Msty a un tier payant pour des features cloud-API, mais l\'usage local-seul est gratuit indéfiniment. LM Studio est gratuite pour usage personnel et commercial. AnythingLLM Desktop est gratuite, avec un produit hébergé payant comme offre séparée.',
           },
         ],
       },
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            'Meilleur pour débutants soucieux de confidentialité. Entièrement open source sous AGPL. Zéro télémétrie par défaut. Catalogue curé de ~150 modèles.',
+            'Meilleur pour débutants soucieux de confidentialité. Entièrement open source sous Apache 2.0. Zéro télémétrie par défaut. Catalogue curé de ~150 modèles.',
           url: 'https://jan.ai',
         },
         {
@@ -1242,7 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: '技術に詳しくないユーザーが最初にインストールすべきローカルAIアプリはどれですか？',
-        answer: 'GPT4Allをインストールしてください。最も小さいダウンロード（~290 MB）で、GPUなしの8GB RAMノートパソコンで動作し、4クリックで最初のチャットに到達します。プライバシーが必要、ドキュメントチャット機能が欲しい、美しいUI、またはMacユーザーの場合は、以下のペルソナ別ランキングを参照してください。各ペルソナに異なるおすすめがあります。',
+        answer: 'GPT4Allをインストールしてください。最も小さいダウンロード（~290 MB）で、GPUなしの8GB RAMノートパソコンで動作し、4クリックで最初のチャットに到達します。プライバシーが必要、ドキュメントチャット機能が欲しい、美しいUI、またはMacユーザーの場合は、以下のペルソナ別ランキングを参照してください。各ペルソナに異なるおすすめがあります。ただしGPT4Allは2025年5月27日以降更新されていません。活発に更新されている代替が必要ならJanを選んでください。',
         bullets: [
           'GPT4All — 完全初心者向けベスト。最小インストール。弱いハードウェアで動作。最初のチャットまで4クリック。ただし2025年5月27日以降、更新がありません。',
           'Jan — プライバシー重視の初心者向けベスト。テレメトリーゼロ。完全なオープンソース。',
@@ -1332,10 +1332,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan — プライバシー重視向けベスト',
-        content: '**Janはプライバシーファースト — テレメトリーゼロ、Analyticsゼロ、完全に監査可能なオープンソースコード（AGPLライセンス）。** ChatGPTのクローンのようにきれいで、約150のモデルで構成されたキュレーションカタログがあり、アプリを離れずに参照できます。',
+        content: '**Janはプライバシーファースト — テレメトリーゼロ、Analyticsゼロ、完全に監査可能なオープンソースコード（Apache 2.0ライセンス）。** ChatGPTのクローンのようにきれいで、約150のモデルで構成されたキュレーションカタログがあり、アプリを離れずに参照できます。',
         items: [
           '**インストール手順：** jan.aiから署名済みインストーラーをダウンロード → インストール → アプリ内ライブラリからモデル選択（Hugging Faceアカウント不要、ログイン不要）→ チャット開始。合計約5クリック。',
-          '**プライバシー方針：** テレメトリーなし。Analyticsゼロ。外部サーバーへの通信なし。ソースコードはGitHubでAGPLで公開。独立した監査人がバイナリがソースと一致することを検証できます。',
+          '**プライバシー方針：** テレメトリーなし。Analyticsゼロ。外部サーバーへの通信なし。ソースコードはGitHubでApache 2.0で公開。独立した監査人がバイナリがソースと一致することを検証できます。',
           '**UI：** ダークモードのモダンなチャットUIで、サイドバーに会話スレッド。外観はChatGPTに匹敵しますが、すべてあなたのマシンで実行。',
           '**モデルブラウザ：** 約150のキュレーションモデル。「Hugging Face URL」インポート機能あり。LM Studioほど多くなく、GPT4Allより詳細。',
           '**組み込みツール：** ドキュメントチャット、Web検索、OpenAI互換API サーバーのオプション拡張。すべてオプションではっきり表示。',
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-ja.webp',
-        imageCaption: 'Janのプライバシー比較：クラウドAIはプロンプトをリモートサーバーに送信；Janはテレメトリゼロ、AGPL検証可能ソース、インストール後の完全オフライン動作を提供。',
+        imageCaption: 'Janのプライバシー比較：クラウドAIはプロンプトをリモートサーバーに送信；Janはテレメトリゼロ、Apache 2.0検証可能ソース、インストール後の完全オフライン動作を提供。',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -1510,7 +1510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '職場ノートパソコンで使える？',
-            a: '技術的にはい。政治的には先にIT・コンプライアンス質問。ローカルAIはプロンプトをどこにも送信しないため、コンプライアンスにとってしばしば機能。ただし、管理デバイス上にサードパーティソフトウェアインストール通常は方針質問のまま。この記事とJan・GPT4AllのAGPL/MITソースリンクを示す。「マシン外データなし」証拠が役に立つ可能性。',
+            a: '技術的にはい。政治的には先にIT・コンプライアンス質問。ローカルAIはプロンプトをどこにも送信しないため、コンプライアンスにとってしばしば機能。ただし、管理デバイス上にサードパーティソフトウェアインストール通常は方針質問のまま。この記事とJan・GPT4AllのApache 2.0/MITソースリンクを示す。「マシン外データなし」証拠が役に立つ可能性。',
           },
           {
             q: '非技術ユーザーにはローカルAI と ChatGPTの違いは？',
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'これらアプリは長期的にお金がかかる？',
-            a: 'いいえ。6つすべて個人利用は永遠無料。GPT4All（MIT）、Jan（AGPL）、Atomic Chat（Apache 2.0）はオープンソース。Mstyは高度クラウドAPI機能の有料層あり。ローカルのみ使用は永遠無料。LM Studioは個人・商用利用無料。AnythingLLM Desktopは無料、有料ホストされた製品は別。',
+            a: 'いいえ。6つすべて個人利用は永遠無料。GPT4All（MIT）、Jan（Apache 2.0）、Atomic Chat（Apache 2.0）はオープンソース。Mstyは高度クラウドAPI機能の有料層あり。ローカルのみ使用は永遠無料。LM Studioは個人・商用利用無料。AnythingLLM Desktopは無料、有料ホストされた製品は別。',
           },
         ],
       },
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            'プライバシー重視初心者向けベスト。AGPLの下で完全オープンソース。デフォルトゼロテレメトリー。約150モデルのキュレーションカタログ。',
+            'プライバシー重視初心者向けベスト。Apache 2.0の下で完全オープンソース。デフォルトゼロテレメトリー。約150モデルのキュレーションカタログ。',
           url: 'https://jan.ai',
         },
         {
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '非技术用户应该首先安装哪个本地AI应用？',
-        answer: '安装GPT4All。这是最小的下载（约290MB），可在8GB RAM笔记本电脑上无GPU运行，4次点击即可进行首次聊天。如果您特别需要隐私、文档聊天、美观界面或使用Mac，请参阅下面的角色排序列表——每个角色都有不同的赢家。',
+        answer: '安装GPT4All。这是最小的下载（约290MB），可在8GB RAM笔记本电脑上无GPU运行，4次点击即可进行首次聊天。如果您特别需要隐私、文档聊天、美观界面或使用Mac，请参阅下面的角色排序列表——每个角色都有不同的赢家。但GPT4All自2025年5月27日起未再更新；如果需要持续更新的替代品，请选择Jan。',
         bullets: [
           'GPT4All——最适合完全初学者；最小安装；在弱硬件上运行；首次聊天4次点击。但自2025年5月27日起未再更新。',
           'Jan——最适合隐私至上的初学者；零遥测；完全开源。',
@@ -1728,10 +1728,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan——最适合隐私至上的初学者',
-        content: '**Jan是隐私优先的选择——零遥测、零分析SDK、完全可审计的开源代码（AGPL许可证）。** 它看起来和感觉像一个简洁的ChatGPT克隆，拥有大约150个精选模型的目录，您无需离开应用即可浏览。',
+        content: '**Jan是隐私优先的选择——零遥测、零分析SDK、完全可审计的开源代码（Apache 2.0许可证）。** 它看起来和感觉像一个简洁的ChatGPT克隆，拥有大约150个精选模型的目录，您无需离开应用即可浏览。',
         items: [
           '**安装路径：** 从jan.ai下载签名的安装程序 → 安装 → 从应用内库中选择模型（无Hugging Face账户、无登录）→ 聊天。总共约5次点击。',
-          '**隐私立场：** 零遥测。零分析SDK。零电话回家。源代码在GitHub上以AGPL发布——独立审计人员可验证二进制文件与源代码匹配。',
+          '**隐私立场：** 零遥测。零分析SDK。零电话回家。源代码在GitHub上以Apache 2.0发布——独立审计人员可验证二进制文件与源代码匹配。',
           '**UI：** 默认暗模式的现代聊天UI，边栏中有对话线程。与ChatGPT外观相当，但一切都在您的机器上运行。',
           '**模型浏览器：** 约150个精选模型，带有"Hugging Face URL"导入退出选项。不如LM Studio那样令人应接不暇，比GPT4All更有指导。',
           '**内置工具：** 文档聊天、Web搜索和OpenAI兼容API服务的可选扩展。全部可选且清楚标记。',
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-zh.webp',
-        imageCaption: 'Jan隐私对比：云端AI将提示词发送到远程服务器；Jan提供零遥测、AGPL可审计源代码和安装后完全离线运行。',
+        imageCaption: 'Jan隐私对比：云端AI将提示词发送到远程服务器；Jan提供零遥测、Apache 2.0可审计源代码和安装后完全离线运行。',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -1906,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我可以在工作笔记本电脑上使用这些吗？',
-            a: '在技术上是的。在政治上，先咨询您的IT或合规团队。本地AI不会将您的提示发送到任何地方，这通常是合规的一个特性——但在托管设备上安装第三方软件通常仍然是一个策略问题。向他们展示本文和Jan和GPT4All的AGPL/MIT源链接，如果"零数据离开机器"的证明有帮助。',
+            a: '在技术上是的。在政治上，先咨询您的IT或合规团队。本地AI不会将您的提示发送到任何地方，这通常是合规的一个特性——但在托管设备上安装第三方软件通常仍然是一个策略问题。向他们展示本文和Jan和GPT4All的Apache 2.0/MIT源链接，如果"零数据离开机器"的证明有帮助。',
           },
           {
             q: '对于非技术用户，本地AI和ChatGPT有什么区别？',
@@ -1914,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '这些应用会长期花费金钱吗？',
-            a: '不会。所有六个应用永远个人使用免费。GPT4All（MIT）、Jan（AGPL）和Atomic Chat（Apache 2.0）是开源的。Msty有高级云API功能的付费层，但仅限本地使用永远免费。LM Studio对个人和商业使用免费。AnythingLLM Desktop免费，付费托管产品作为单独的产品。',
+            a: '不会。所有六个应用永远个人使用免费。GPT4All（MIT）、Jan（Apache 2.0）和Atomic Chat（Apache 2.0）是开源的。Msty有高级云API功能的付费层，但仅限本地使用永远免费。LM Studio对个人和商业使用免费。AnythingLLM Desktop免费，付费托管产品作为单独的产品。',
           },
         ],
       },
@@ -1952,7 +1952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            '最适合隐私至上的初学者。AGPL下完全开源。默认零遥测。约150个精选模型的目录。',
+            '最适合隐私至上的初学者。Apache 2.0下完全开源。默认零遥测。约150个精选模型的目录。',
           url: 'https://jan.ai',
         },
         {
@@ -2034,7 +2034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Qué app de IA local debe instalar primero un usuario sin conocimientos técnicos?',
-        answer: 'Instala GPT4All. Es la descarga más pequeña (~290 MB), funciona en portátiles con 8 GB de RAM sin GPU, y llega al primer chat en 4 clics. Si necesitas privacidad específica, chat con documentos, una interfaz bonita, o estás en un Mac, consulta la lista ordenada por perfil más abajo — cada perfil tiene un ganador diferente.',
+        answer: 'Instala GPT4All. Es la descarga más pequeña (~290 MB), funciona en portátiles con 8 GB de RAM sin GPU, y llega al primer chat en 4 clics. Si necesitas privacidad específica, chat con documentos, una interfaz bonita, o estás en un Mac, consulta la lista ordenada por perfil más abajo — cada perfil tiene un ganador diferente. Salvedad: GPT4All no recibe actualizaciones desde el 27 de mayo de 2025; si prefieres una alternativa con actualizaciones activas, elige Jan.',
         bullets: [
           'GPT4All — mejor para principiantes absolutos; la instalación más pequeña; funciona en hardware débil; 4 clics hasta el primer chat. Salvedad: sin actualizaciones desde el 27 de mayo de 2025.',
           'Jan — mejor para principiantes preocupados por la privacidad; cero telemetría; completamente de código abierto.',
@@ -2124,10 +2124,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan — Mejor para principiantes preocupados por la privacidad',
-        content: '**Jan es la opción centrada en la privacidad — cero telemetría, cero SDK de análisis, código completamente auditable de código abierto bajo la licencia AGPL.** Se ve y se siente como un clon limpio de ChatGPT, con un catálogo curado de unos 150 modelos que puedes explorar sin salir de la app.',
+        content: '**Jan es la opción centrada en la privacidad — cero telemetría, cero SDK de análisis, código completamente auditable de código abierto bajo la licencia Apache 2.0.** Se ve y se siente como un clon limpio de ChatGPT, con un catálogo curado de unos 150 modelos que puedes explorar sin salir de la app.',
         items: [
           '**Proceso de instalación:** Descarga el instalador firmado desde jan.ai → instala → elige un modelo de la biblioteca dentro de la app (sin cuenta de Hugging Face, sin inicios de sesión) → empieza a chatear. Aproximadamente 5 clics en total.',
-          '**Postura de privacidad:** Cero telemetría. Sin SDK de análisis. Sin llamadas al exterior. El código fuente está publicado en GitHub bajo AGPL — los auditores independientes pueden verificar que el binario coincide con el código fuente.',
+          '**Postura de privacidad:** Cero telemetría. Sin SDK de análisis. Sin llamadas al exterior. El código fuente está publicado en GitHub bajo Apache 2.0 — los auditores independientes pueden verificar que el binario coincide con el código fuente.',
           '**Interfaz:** Interfaz de chat moderna con modo oscuro por defecto y hilos de conversación en la barra lateral. Similar a ChatGPT en apariencia, pero todo corre en tu máquina.',
           '**Navegador de modelos:** ~150 modelos curados con una opción de importar mediante "URL de Hugging Face". Menos abrumador que LM Studio, más guiado que GPT4All.',
           '**Herramientas integradas:** Extensiones opcionales para chat con documentos, búsqueda web y servidor API compatible con OpenAI. Todas opcionales y claramente etiquetadas.',
@@ -2141,7 +2141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-es.webp',
-        imageCaption: 'Comparativa de privacidad de Jan: la IA en la nube envía los prompts a servidores remotos con SDKs de análisis; Jan ofrece cero telemetría, código fuente auditable bajo AGPL y funcionamiento completamente sin conexión tras la instalación.',
+        imageCaption: 'Comparativa de privacidad de Jan: la IA en la nube envía los prompts a servidores remotos con SDKs de análisis; Jan ofrece cero telemetría, código fuente auditable bajo Apache 2.0 y funcionamiento completamente sin conexión tras la instalación.',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -2302,7 +2302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usarlas en un portátil de trabajo?',
-            a: 'Técnicamente, sí. Políticamente, consulta primero con tu departamento de TI o cumplimiento. La IA local no envía tus prompts a ningún lugar, lo que a menudo es una ventaja para el cumplimiento — pero instalar software de terceros en un dispositivo gestionado sigue siendo generalmente una cuestión de política. Muéstrales este artículo y los enlaces al código fuente AGPL/MIT de Jan y GPT4All si una prueba de "cero datos salen de la máquina" ayuda.',
+            a: 'Técnicamente, sí. Políticamente, consulta primero con tu departamento de TI o cumplimiento. La IA local no envía tus prompts a ningún lugar, lo que a menudo es una ventaja para el cumplimiento — pero instalar software de terceros en un dispositivo gestionado sigue siendo generalmente una cuestión de política. Muéstrales este artículo y los enlaces al código fuente Apache 2.0/MIT de Jan y GPT4All si una prueba de "cero datos salen de la máquina" ayuda.',
           },
           {
             q: '¿Cuál es la diferencia entre IA local y ChatGPT para un usuario sin conocimientos técnicos?',
@@ -2310,7 +2310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Estas apps cuestan dinero a largo plazo?',
-            a: 'No. Las seis son gratuitas para uso personal indefinidamente. GPT4All (MIT), Jan (AGPL) y Atomic Chat (Apache 2.0) son de código abierto. Msty tiene un nivel de pago para funciones de API en la nube, pero el uso solo local es gratuito para siempre. LM Studio es gratuita para uso personal y comercial. AnythingLLM Desktop es gratuita, con un producto alojado de pago como oferta separada.',
+            a: 'No. Las seis son gratuitas para uso personal indefinidamente. GPT4All (MIT), Jan (Apache 2.0) y Atomic Chat (Apache 2.0) son de código abierto. Msty tiene un nivel de pago para funciones de API en la nube, pero el uso solo local es gratuito para siempre. LM Studio es gratuita para uso personal y comercial. AnythingLLM Desktop es gratuita, con un producto alojado de pago como oferta separada.',
           },
         ],
       },
@@ -2348,7 +2348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            'Mejor para principiantes preocupados por la privacidad. Completamente de código abierto bajo AGPL. Cero telemetría por defecto. Catálogo curado de ~150 modelos.',
+            'Mejor para principiantes preocupados por la privacidad. Completamente de código abierto bajo Apache 2.0. Cero telemetría por defecto. Catálogo curado de ~150 modelos.',
           url: 'https://jan.ai',
         },
         {
@@ -2431,7 +2431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Qual app de IA local um usuário não técnico deve instalar primeiro?',
-        answer: 'Instale o GPT4All. É o menor download (~290 MB), roda em notebooks com 8 GB de RAM sem GPU e chega ao primeiro chat em 4 cliques. Se você precisa especificamente de privacidade, chat com documentos, uma interface bonita, ou está em um Mac, veja a lista classificada por perfil abaixo — cada perfil tem um vencedor diferente.',
+        answer: 'Instale o GPT4All. É o menor download (~290 MB), roda em notebooks com 8 GB de RAM sem GPU e chega ao primeiro chat em 4 cliques. Se você precisa especificamente de privacidade, chat com documentos, uma interface bonita, ou está em um Mac, veja a lista classificada por perfil abaixo — cada perfil tem um vencedor diferente. Ressalva: o GPT4All não recebe atualizações desde 27 de maio de 2025; se preferir uma alternativa com atualizações ativas, escolha o Jan.',
         bullets: [
           'GPT4All — melhor para iniciantes absolutos; a menor instalação; roda em hardware fraco; 4 cliques até o primeiro chat. Ressalva: sem atualizações desde 27 de maio de 2025.',
           'Jan — melhor para iniciantes preocupados com privacidade; zero telemetria; totalmente open source.',
@@ -2521,10 +2521,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan — Melhor para iniciantes preocupados com privacidade',
-        content: '**Jan é a opção que prioriza a privacidade — zero telemetria, zero SDK de analytics, código totalmente auditável e open source sob a licença AGPL.** Ele se parece e funciona como um clone limpo do ChatGPT, com um catálogo curado de cerca de 150 modelos que você pode explorar sem sair do app.',
+        content: '**Jan é a opção que prioriza a privacidade — zero telemetria, zero SDK de analytics, código totalmente auditável e open source sob a licença Apache 2.0.** Ele se parece e funciona como um clone limpo do ChatGPT, com um catálogo curado de cerca de 150 modelos que você pode explorar sem sair do app.',
         items: [
           '**Caminho de instalação:** Baixe o instalador assinado em jan.ai → instale → escolha um modelo na biblioteca dentro do app (sem conta do Hugging Face, sem logins) → comece a conversar. Cerca de 5 cliques no total.',
-          '**Postura de privacidade:** Nenhum tipo de telemetria. Sem SDK de analytics. Sem chamadas ao exterior. O código-fonte é publicado no GitHub sob AGPL — auditores independentes podem verificar que o binário corresponde ao código.',
+          '**Postura de privacidade:** Nenhum tipo de telemetria. Sem SDK de analytics. Sem chamadas ao exterior. O código-fonte é publicado no GitHub sob Apache 2.0 — auditores independentes podem verificar que o binário corresponde ao código.',
           '**Interface:** Interface de chat moderna com modo escuro por padrão e threads de conversa na barra lateral. Comparável ao ChatGPT na aparência, mas tudo roda na sua máquina.',
           '**Navegador de modelos:** ~150 modelos curados com uma opção de importação por "URL do Hugging Face". Menos sobrecarregado que o LM Studio, mais guiado que o GPT4All.',
           '**Ferramentas integradas:** Extensões opcionais para chat com documentos, busca na web e servidor de API compatível com OpenAI. Todas opcionais e claramente rotuladas.',
@@ -2538,7 +2538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-pt.webp',
-        imageCaption: 'Comparação de privacidade do Jan: a IA na nuvem envia prompts a servidores remotos com SDKs de analytics; o Jan entrega zero telemetria, código auditável sob AGPL e operação totalmente offline após a instalação.',
+        imageCaption: 'Comparação de privacidade do Jan: a IA na nuvem envia prompts a servidores remotos com SDKs de analytics; o Jan entrega zero telemetria, código auditável sob Apache 2.0 e operação totalmente offline após a instalação.',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -2699,7 +2699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usá-los em um notebook de trabalho?',
-            a: 'Tecnicamente, sim. Politicamente, consulte primeiro a sua equipe de TI ou compliance. A IA local não envia seus prompts a lugar nenhum, o que muitas vezes é uma vantagem para compliance — mas instalar software de terceiros em um dispositivo gerenciado geralmente ainda é uma questão de política. Mostre a eles este artigo e os links de código AGPL/MIT do Jan e GPT4All se uma prova de "nenhum dado sai da máquina" ajudar.',
+            a: 'Tecnicamente, sim. Politicamente, consulte primeiro a sua equipe de TI ou compliance. A IA local não envia seus prompts a lugar nenhum, o que muitas vezes é uma vantagem para compliance — mas instalar software de terceiros em um dispositivo gerenciado geralmente ainda é uma questão de política. Mostre a eles este artigo e os links de código Apache 2.0/MIT do Jan e GPT4All se uma prova de "nenhum dado sai da máquina" ajudar.',
           },
           {
             q: 'Qual é a diferença entre IA local e ChatGPT para um usuário não técnico?',
@@ -2707,7 +2707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Esses apps custam dinheiro a longo prazo?',
-            a: 'Não. Os seis são gratuitos para uso pessoal indefinidamente. GPT4All (MIT), Jan (AGPL) e Atomic Chat (Apache 2.0) são open source. O Msty tem um plano pago para recursos de API na nuvem, mas o uso apenas local é gratuito para sempre. LM Studio é gratuito para uso pessoal e comercial. AnythingLLM Desktop é gratuito, com um produto hospedado pago como oferta separada.',
+            a: 'Não. Os seis são gratuitos para uso pessoal indefinidamente. GPT4All (MIT), Jan (Apache 2.0) e Atomic Chat (Apache 2.0) são open source. O Msty tem um plano pago para recursos de API na nuvem, mas o uso apenas local é gratuito para sempre. LM Studio é gratuito para uso pessoal e comercial. AnythingLLM Desktop é gratuito, com um produto hospedado pago como oferta separada.',
           },
         ],
       },
@@ -2745,7 +2745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            'Melhor para iniciantes preocupados com privacidade. Totalmente open source sob AGPL. Zero telemetria por padrão. Catálogo curado de ~150 modelos.',
+            'Melhor para iniciantes preocupados com privacidade. Totalmente open source sob Apache 2.0. Zero telemetria por padrão. Catálogo curado de ~150 modelos.',
           url: 'https://jan.ai',
         },
         {
@@ -2834,7 +2834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'ما أول تطبيق ذكاء اصطناعي محلي يجب على المستخدم غير التقني تثبيته؟',
         answer:
-          'ثبّت GPT4All. هو أصغر تنزيل (~290 ميجابايت)، يعمل على حواسيب محمولة بـ8 جيجابايت RAM بدون GPU، ويصل إلى أول محادثة في 4 نقرات. إن كنت تحتاج تحديداً إلى الخصوصية أو الدردشة مع المستندات أو واجهة جميلة أو أنت على Mac، راجع القائمة المُرتَّبة حسب الملف أدناه — كل ملف له فائز مختلف.',
+          'ثبّت GPT4All. هو أصغر تنزيل (~290 ميجابايت)، يعمل على حواسيب محمولة بـ8 جيجابايت RAM بدون GPU، ويصل إلى أول محادثة في 4 نقرات. إن كنت تحتاج تحديداً إلى الخصوصية أو الدردشة مع المستندات أو واجهة جميلة أو أنت على Mac، راجع القائمة المُرتَّبة حسب الملف أدناه — كل ملف له فائز مختلف. تنبيه: لم يتلقَّ GPT4All أي تحديث منذ 27 مايو 2025؛ وإن أردت بديلاً يُحدَّث بنشاط فاختر Jan.',
         bullets: [
           'GPT4All — الأفضل للمبتدئين المطلقين؛ أصغر تثبيت؛ يعمل على أجهزة ضعيفة؛ 4 نقرات للمحادثة الأولى. تنبيه: لا تحديثات منذ 27 مايو 2025.',
           'Jan — الأفضل للمبتدئين المهتمين بالخصوصية؛ صفر بيانات مُرسَلة؛ مفتوح المصدر بالكامل.',
@@ -2930,10 +2930,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: '#2 Jan — الأفضل للمبتدئين المهتمين بالخصوصية',
         content:
-          '**تطبيق Jan هو الخيار المُركّز على الخصوصية — صفر بيانات مُرسَلة وصفر SDK تحليل وكود مفتوح المصدر قابل للتدقيق بالكامل تحت رخصة AGPL.** يبدو ويعمل مثل نسخة نظيفة من ChatGPT، مع كتالوج مُنتقى من نحو 150 نموذجاً يمكنك استكشافها دون مغادرة التطبيق.',
+          '**تطبيق Jan هو الخيار المُركّز على الخصوصية — صفر بيانات مُرسَلة وصفر SDK تحليل وكود مفتوح المصدر قابل للتدقيق بالكامل تحت رخصة Apache 2.0.** يبدو ويعمل مثل نسخة نظيفة من ChatGPT، مع كتالوج مُنتقى من نحو 150 نموذجاً يمكنك استكشافها دون مغادرة التطبيق.',
         items: [
           '**خطوات التثبيت:** نزّل المثبّت الموقّع من jan.ai ← ثبّت ← اختر نموذجاً من المكتبة داخل التطبيق (بدون حساب Hugging Face، بدون تسجيل دخول) ← ابدأ المحادثة. حوالي 5 نقرات إجمالاً.',
-          '**موقف الخصوصية:** صفر بيانات مُرسَلة. بدون SDK تحليل. بدون اتصالات خارجية. الكود المصدري منشور على GitHub تحت AGPL — المدققون المستقلون يستطيعون التحقق من توافق الملف الثنائي مع الكود.',
+          '**موقف الخصوصية:** صفر بيانات مُرسَلة. بدون SDK تحليل. بدون اتصالات خارجية. الكود المصدري منشور على GitHub تحت Apache 2.0 — المدققون المستقلون يستطيعون التحقق من توافق الملف الثنائي مع الكود.',
           '**الواجهة:** واجهة دردشة حديثة بوضع داكن افتراضي وخيوط محادثات في الشريط الجانبي. تشبه ChatGPT في المظهر لكن كل شيء يعمل على جهازك.',
           '**متصفح النماذج:** ~150 نموذجاً مُنتقى مع خيار استيراد بـ"رابط Hugging Face". أقل إرباكاً من LM Studio، وأكثر توجيهاً من GPT4All.',
           '**أدوات مدمجة:** إضافات اختيارية للدردشة مع المستندات والبحث على الويب وخادم API متوافق مع OpenAI. جميعها اختيارية وموسومة بوضوح.',
@@ -2947,7 +2947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-ar.webp',
-        imageCaption: 'مقارنة خصوصية Jan: الذكاء الاصطناعي السحابي يرسل المطالبات إلى خوادم بعيدة مع SDKs التحليل؛ Jan يوفر صفر بيانات مُرسَلة وكوداً قابلاً للتدقيق تحت AGPL وعملاً كاملاً بدون اتصال بعد التثبيت.',
+        imageCaption: 'مقارنة خصوصية Jan: الذكاء الاصطناعي السحابي يرسل المطالبات إلى خوادم بعيدة مع SDKs التحليل؛ Jan يوفر صفر بيانات مُرسَلة وكوداً قابلاً للتدقيق تحت Apache 2.0 وعملاً كاملاً بدون اتصال بعد التثبيت.',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -3114,7 +3114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدامها على حاسوب العمل؟',
-            a: 'من الناحية التقنية، نعم. من الناحية السياسية، استشر قسم تقنية المعلومات أو الامتثال أولاً. الذكاء الاصطناعي المحلي لا يرسل مطالباتك إلى أي مكان، وهو ما يُعدّ ميزة للامتثال في أغلب الأحيان — لكن تثبيت برامج جهات أخرى على جهاز مُدار لا يزال عادةً مسألة سياسة. اعرض عليهم هذا المقال وروابط كود AGPL/MIT لـJan وGPT4All إن كان إثبات "لا تغادر البيانات الجهاز" يُساعد.',
+            a: 'من الناحية التقنية، نعم. من الناحية السياسية، استشر قسم تقنية المعلومات أو الامتثال أولاً. الذكاء الاصطناعي المحلي لا يرسل مطالباتك إلى أي مكان، وهو ما يُعدّ ميزة للامتثال في أغلب الأحيان — لكن تثبيت برامج جهات أخرى على جهاز مُدار لا يزال عادةً مسألة سياسة. اعرض عليهم هذا المقال وروابط كود Apache 2.0/MIT لـJan وGPT4All إن كان إثبات "لا تغادر البيانات الجهاز" يُساعد.',
           },
           {
             q: 'ما الفرق بين الذكاء الاصطناعي المحلي وChatGPT للمستخدم غير التقني؟',
@@ -3122,7 +3122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تكلّف هذه التطبيقات مالاً على المدى الطويل؟',
-            a: 'لا. الستة مجانية للاستخدام الشخصي إلى أجل غير مسمى. GPT4All (MIT) وJan (AGPL) وAtomic Chat (Apache 2.0) مفتوحة المصدر. Msty لديها خطة مدفوعة لميزات API السحابية، لكن الاستخدام المحلي فقط مجاني للأبد. LM Studio مجاني للاستخدام الشخصي والتجاري. AnythingLLM Desktop مجاني، مع منتج مُستضاف مدفوع كعرض منفصل.',
+            a: 'لا. الستة مجانية للاستخدام الشخصي إلى أجل غير مسمى. GPT4All (MIT) وJan (Apache 2.0) وAtomic Chat (Apache 2.0) مفتوحة المصدر. Msty لديها خطة مدفوعة لميزات API السحابية، لكن الاستخدام المحلي فقط مجاني للأبد. LM Studio مجاني للاستخدام الشخصي والتجاري. AnythingLLM Desktop مجاني، مع منتج مُستضاف مدفوع كعرض منفصل.',
           },
         ],
       },
@@ -3160,7 +3160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            'الأفضل للمبتدئين المهتمين بالخصوصية. مفتوح المصدر بالكامل تحت AGPL. صفر بيانات مُرسَلة افتراضياً. كتالوج مُنتقى من ~150 نموذجاً.',
+            'الأفضل للمبتدئين المهتمين بالخصوصية. مفتوح المصدر بالكامل تحت Apache 2.0. صفر بيانات مُرسَلة افتراضياً. كتالوج مُنتقى من ~150 نموذجاً.',
           url: 'https://jan.ai',
         },
         {
@@ -3241,7 +3241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '비전문가가 처음 설치해야 할 로컬 AI 앱은 무엇입니까?',
-        answer: 'GPT4All을 설치하십시오. 다운로드 용량이 가장 작고(~290 MB), GPU 없이 8 GB RAM 노트북에서도 작동하며, 4번의 클릭으로 첫 번째 채팅에 도달합니다. 특별히 프라이버시, 문서 채팅, 세련된 인터페이스가 필요하거나 Mac 사용자라면 아래 프로필별 순위를 참조하십시오 — 각 프로필마다 다른 최적 선택이 있습니다.',
+        answer: 'GPT4All을 설치하십시오. 다운로드 용량이 가장 작고(~290 MB), GPU 없이 8 GB RAM 노트북에서도 작동하며, 4번의 클릭으로 첫 번째 채팅에 도달합니다. 특별히 프라이버시, 문서 채팅, 세련된 인터페이스가 필요하거나 Mac 사용자라면 아래 프로필별 순위를 참조하십시오 — 각 프로필마다 다른 최적 선택이 있습니다. 단, GPT4All은 2025년 5월 27일 이후 업데이트가 없습니다. 활발히 업데이트되는 대안을 원하면 Jan을 선택하십시오.',
         bullets: [
           'GPT4All — 완전 초보자에게 최적; 가장 작은 설치 용량; 저사양 하드웨어에서도 작동; 4번 클릭으로 첫 채팅. 단, 2025년 5월 27일 이후 업데이트가 없습니다.',
           'Jan — 프라이버시를 중시하는 초보자에게 최적; 완전 무텔레메트리; 완전 오픈소스.',
@@ -3341,10 +3341,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       jan: {
         id: 'jan',
         title: '#2 Jan — 프라이버시를 중시하는 초보자에게 최적',
-        content: '**Jan은 프라이버시 중심 옵션입니다 — 완전 무텔레메트리, 분석 SDK 없음, AGPL 라이선스 하에 완전히 감사 가능한 오픈소스 코드.** 외관과 느낌이 ChatGPT의 깔끔한 클론과 같으며, 앱을 나가지 않고 탐색할 수 있는 약 150개의 선별된 모델 카탈로그를 갖추고 있습니다.',
+        content: '**Jan은 프라이버시 중심 옵션입니다 — 완전 무텔레메트리, 분석 SDK 없음, Apache 2.0 라이선스 하에 완전히 감사 가능한 오픈소스 코드.** 외관과 느낌이 ChatGPT의 깔끔한 클론과 같으며, 앱을 나가지 않고 탐색할 수 있는 약 150개의 선별된 모델 카탈로그를 갖추고 있습니다.',
         items: [
           '**설치 과정:** jan.ai에서 서명된 설치 프로그램 다운로드 → 설치 → 앱 내 라이브러리에서 모델 선택(Hugging Face 계정 불필요, 로그인 불필요) → 채팅 시작. 총 약 5번의 클릭.',
-          '**프라이버시 입장:** 텔레메트리 없음. 분석 SDK 없음. 외부 호출 없음. 소스 코드는 AGPL 하에 GitHub에 공개 — 독립 감사인이 바이너리가 소스 코드와 일치하는지 확인할 수 있습니다.',
+          '**프라이버시 입장:** 텔레메트리 없음. 분석 SDK 없음. 외부 호출 없음. 소스 코드는 Apache 2.0 하에 GitHub에 공개 — 독립 감사인이 바이너리가 소스 코드와 일치하는지 확인할 수 있습니다.',
           '**인터페이스:** 기본 다크 모드와 사이드바 대화 스레드가 있는 현대적인 채팅 인터페이스. 외관상 ChatGPT와 유사하지만 모든 것이 내 컴퓨터에서 실행됩니다.',
           '**모델 브라우저:** "Hugging Face URL"로 가져오기 옵션과 함께 약 150개의 선별된 모델. LM Studio보다 부담이 없고 GPT4All보다 안내가 풍부합니다.',
           '**내장 도구:** 문서 채팅, 웹 검색, OpenAI 호환 API 서버를 위한 선택적 확장 기능. 모두 선택 사항이며 명확하게 표시되어 있습니다.',
@@ -3358,7 +3358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-ko.webp',
-        imageCaption: 'Jan 프라이버시 비교: 클라우드 AI는 분석 SDK와 함께 원격 서버로 프롬프트를 전송하지만, Jan은 완전 무텔레메트리, AGPL 하에 감사 가능한 소스 코드, 설치 후 완전 오프라인 작동을 제공합니다.',
+        imageCaption: 'Jan 프라이버시 비교: 클라우드 AI는 분석 SDK와 함께 원격 서버로 프롬프트를 전송하지만, Jan은 완전 무텔레메트리, Apache 2.0 하에 감사 가능한 소스 코드, 설치 후 완전 오프라인 작동을 제공합니다.',
       },
       atomicChat: {
         id: 'atomic-chat',
@@ -3519,7 +3519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '직장 노트북에서 사용할 수 있습니까?',
-            a: '기술적으로는 예. 정책적으로는 IT 또는 컴플라이언스 부서에 먼저 문의하십시오. 로컬 AI는 프롬프트를 어디에도 보내지 않으므로 컴플라이언스에 유리한 경우가 많습니다 — 그러나 관리되는 기기에 서드파티 소프트웨어를 설치하는 것은 일반적으로 여전히 정책의 문제입니다. "데이터가 기기를 벗어나지 않음"을 증명하는 데 도움이 된다면 이 기사와 Jan 및 GPT4All의 AGPL/MIT 소스 코드 링크를 보여주십시오.',
+            a: '기술적으로는 예. 정책적으로는 IT 또는 컴플라이언스 부서에 먼저 문의하십시오. 로컬 AI는 프롬프트를 어디에도 보내지 않으므로 컴플라이언스에 유리한 경우가 많습니다 — 그러나 관리되는 기기에 서드파티 소프트웨어를 설치하는 것은 일반적으로 여전히 정책의 문제입니다. "데이터가 기기를 벗어나지 않음"을 증명하는 데 도움이 된다면 이 기사와 Jan 및 GPT4All의 Apache 2.0/MIT 소스 코드 링크를 보여주십시오.',
           },
           {
             q: '비전문가에게 로컬 AI와 ChatGPT의 차이는 무엇입니까?',
@@ -3527,7 +3527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '이 앱들은 장기적으로 비용이 드는 건 아닙니까?',
-            a: '아닙니다. 여섯 가지 모두 개인 사용에 영구 무료입니다. GPT4All(MIT), Jan(AGPL), Atomic Chat(Apache 2.0)은 오픈소스입니다. Msty는 클라우드 API 기능에 유료 플랜이 있지만 로컬 전용 사용은 영구 무료입니다. LM Studio는 개인 및 상업용 무료입니다. AnythingLLM Desktop은 무료이며 별도의 상품으로 유료 호스팅 제품이 있습니다.',
+            a: '아닙니다. 여섯 가지 모두 개인 사용에 영구 무료입니다. GPT4All(MIT), Jan(Apache 2.0), Atomic Chat(Apache 2.0)은 오픈소스입니다. Msty는 클라우드 API 기능에 유료 플랜이 있지만 로컬 전용 사용은 영구 무료입니다. LM Studio는 개인 및 상업용 무료입니다. AnythingLLM Desktop은 무료이며 별도의 상품으로 유료 호스팅 제품이 있습니다.',
           },
         ],
       },
@@ -3565,7 +3565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 2,
           name: 'Jan',
           description:
-            '프라이버시를 중시하는 초보자에게 최적. AGPL 하에 완전 오픈소스. 기본적으로 완전 무텔레메트리. 약 150개의 선별된 모델 카탈로그.',
+            '프라이버시를 중시하는 초보자에게 최적. Apache 2.0 하에 완전 오픈소스. 기본적으로 완전 무텔레메트리. 약 150개의 선별된 모델 카탈로그.',
           url: 'https://jan.ai',
         },
         {

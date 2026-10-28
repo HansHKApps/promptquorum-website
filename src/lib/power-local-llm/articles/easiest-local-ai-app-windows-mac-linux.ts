@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio is the fastest path from zero to chatting locally.** Download the installer from lmstudio.ai, open the Discover tab, search "Phi-4 Mini", download, and start chatting. Under 10 minutes on any decent internet connection.',
-          '**Jan is the open-source alternative.** Same ease of use as LM Studio, fully open-source under Apache 2.0 (relicensed from AGPLv3 in 2025), works on Linux AppImage. If you prefer open-source software or want to see the source code, Jan is the equivalent pick.',
+          '**Jan is the open-source alternative.** Same ease of use as LM Studio, fully open-source under Apache 2.0, works on Linux AppImage. If you prefer open-source software or want to see the source code, Jan is the equivalent pick.',
           '**GPT4All is the most simplified experience.** Single chat window, curated model recommendations, no model browsing overhead. Best for users who want to type a question and get an answer without any setup decisions — but note its development has stalled since early 2025, so its curated model list no longer includes the newest models.',
           '**Start with Phi-4 Mini or Llama 3.2 3B on any hardware.** These 3B models run on any laptop made in the last 7 years — no GPU, no 32 GB of RAM, no special hardware. They are slower than a cloud AI but produce usable output for most everyday tasks.',
           '**No cloud account required.** After the initial download (the app + the model file), everything runs locally with no internet connection. No API key, no subscription, no data sent to any server.',
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Last major release: v3.10, early 2025 — development has stalled.',
           '**Minimum hardware:** any laptop with 8 GB RAM for 3B–7B models; 16 GB+ for 8B–14B models; 24 GB+ for 30B+.',
           '**No GPU required** for 3B–7B models on Apple Silicon or CPU inference mode.',
-          '**All three are free**; Jan (Apache 2.0) and GPT4All (MIT) are fully open-source, LM Studio is free but source-available.',
+          '**All three are free**; Jan (Apache 2.0) and GPT4All (MIT) are fully open-source, LM Studio is free but closed source.',
           '**First model recommendation:** Phi-4 Mini (3.8B, ~2.7 GB download) or Gemma 4 E2B for hardware under 8 GB; Qwen3 8B for 8–16 GB systems.',
         ],
       },
@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Feature': 'Model library', 'LM Studio': 'Full Hugging Face GGUF + MLX search (~50,000+ models)', 'Jan': 'Curated + Hugging Face search', 'GPT4All': 'Curated list (~20 models, dated)' },
           { 'Feature': 'Local API server', 'LM Studio': 'Yes (OpenAI + Anthropic compatible)', 'Jan': 'Yes (OpenAI-compatible)', 'GPT4All': 'Yes (limited, less documented)' },
           { 'Feature': 'Multi-chat / conversation history', 'LM Studio': 'Yes', 'Jan': 'Yes', 'GPT4All': 'Single chat window' },
-          { 'Feature': 'Source licence', 'LM Studio': 'Free, source-available (not OSI)', 'Jan': 'Apache 2.0 (fully open-source)', 'GPT4All': 'MIT (fully open-source)' },
+          { 'Feature': 'Source licence', 'LM Studio': 'Free, closed source', 'Jan': 'Apache 2.0 (fully open-source)', 'GPT4All': 'MIT (fully open-source)' },
           { 'Feature': 'Active development', 'LM Studio': 'Frequent (0.4.x, 2026)', 'Jan': 'Frequent (0.8.x, 2026)', 'GPT4All': 'Stalled since early 2025' },
           { 'Feature': 'Linux support', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Feature': 'Best for', 'LM Studio': 'Users who want the best UI + developer API access', 'Jan': 'Users who prefer open-source software', 'GPT4All': 'Pure beginners who want the simplest interface' },
@@ -175,7 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: Setup Guide',
         content:
-          '**Jan is the open-source alternative to LM Studio — same ease of use, identical model download experience, Apache 2.0 licence (relicensed from AGPLv3 in 2025).** Use Jan if open-source software matters to you, if you run an Intel Mac, or if you want to inspect or modify the application code.',
+          '**Jan is the open-source alternative to LM Studio — same ease of use, identical model download experience, Apache 2.0 licence.** Use Jan if open-source software matters to you, if you run an Intel Mac, or if you want to inspect or modify the application code.',
         numberedItems: [
           'Go to jan.ai and download the installer for your platform.',
           'Run the installer and open Jan.',
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How private is a local AI app?',
-            a: 'Completely private. Your conversations, prompts, and the model\'s responses never leave your machine. There are no cloud servers, no logging, no training data collection. LM Studio has optional analytics (opt-out in settings), but the chat content itself is never transmitted. Jan and GPT4All have no telemetry by default.',
+            a: 'Completely private. Your conversations, prompts, and the model\'s responses never leave your machine. There are no cloud servers, no logging, no training data collection. LM Studio\'s privacy policy states it has no telemetry or user-specific tracking; update checks and model search send technical data such as app version, OS and IP address, but the chat content itself is never transmitted. Jan has no telemetry by default, and GPT4All telemetry is opt-in.',
           },
           {
             q: 'What is the difference between LM Studio and Ollama?',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio ist der schnellste Weg von Null zum lokalen Chatten.** Laden Sie das Installationsprogramm von lmstudio.ai herunter, öffnen Sie den Discover-Tab, suchen Sie nach „Phi-4 Mini", laden Sie herunter und beginnen Sie zu chatten. Unter 10 Minuten bei einer anständigen Internetverbindung.',
-          '**Jan ist die Open-Source-Alternative zu LM Studio.** Gleiche Benutzerfreundlichkeit wie LM Studio, vollständig Open-Source unter Apache 2.0 (2025 von AGPLv3 umlizenziert), funktioniert auf Linux AppImage. Wenn Sie Open-Source-Software bevorzugen oder den Quellcode sehen möchten, ist Jan die gleichwertige Wahl.',
+          '**Jan ist die Open-Source-Alternative zu LM Studio.** Gleiche Benutzerfreundlichkeit wie LM Studio, vollständig Open-Source unter Apache 2.0, funktioniert auf Linux AppImage. Wenn Sie Open-Source-Software bevorzugen oder den Quellcode sehen möchten, ist Jan die gleichwertige Wahl.',
           '**GPT4All ist das am meisten vereinfachte Erlebnis.** Einzelnes Chat-Fenster, kuratierte Modellempfehlungen, kein Modellbrowser-Overhead. Am besten für Benutzer, die eine Frage eingeben und eine Antwort erhalten möchten, ohne Setup-Entscheidungen zu treffen — beachten Sie jedoch: Die Entwicklung stagniert seit Anfang 2025, die kuratierte Modellliste enthält die neuesten Modelle nicht mehr.',
           '**Beginnen Sie mit Phi-4 Mini oder Llama 3.2 3B auf jeder Hardware.** Diese 3B-Modelle laufen auf jedem Laptop der letzten 7 Jahre — keine GPU, keine 32 GB RAM, keine spezielle Hardware. Sie sind langsamer als Cloud-AI, produzieren aber verwertbare Ergebnisse für die meisten alltäglichen Aufgaben.',
           '**Kein Cloud-Konto erforderlich.** Nach dem anfänglichen Download (die App + die Modelldatei) läuft alles lokal ohne Internetverbindung. Kein API-Schlüssel, kein Abonnement, keine Daten, die an einen Server gesendet werden.',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Letzte große Version: v3.10, Anfang 2025 — die Entwicklung stagniert.',
           '**Mindestens erforderliche Hardware:** jeder Laptop mit 8 GB RAM für 3B–7B-Modelle; 16 GB+ für 8B–14B-Modelle; 24 GB+ für 30B+.',
           '**Keine GPU erforderlich** für 3B–7B-Modelle auf Apple Silicon oder CPU-Inferenzmodus.',
-          '**Alle drei sind kostenlos**; Jan (Apache 2.0) und GPT4All (MIT) sind vollständig Open-Source, LM Studio ist kostenlos, aber nur quelloffen verfügbar.',
+          '**Alle drei sind kostenlos**; Jan (Apache 2.0) und GPT4All (MIT) sind vollständig Open-Source, LM Studio ist kostenlos, aber Closed Source.',
           '**Erste Modellempfehlung:** Phi-4 Mini (3,8B, ~2,7 GB Download) oder Gemma 4 E2B für Hardware unter 8 GB; Qwen3 8B für 8–16 GB Systeme.',
         ],
       },
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Funktion': 'Modellbibliothek', 'LM Studio': 'Vollständige Hugging Face GGUF- + MLX-Suche (~50.000+ Modelle)', 'Jan': 'Kuratiert + Hugging Face-Suche', 'GPT4All': 'Kuratierte Liste (~20 Modelle, veraltet)' },
           { 'Funktion': 'Lokaler API-Server', 'LM Studio': 'Ja (OpenAI- + Anthropic-kompatibel)', 'Jan': 'Ja (OpenAI-kompatibel)', 'GPT4All': 'Ja (eingeschränkt, weniger dokumentiert)' },
           { 'Funktion': 'Multi-Chat / Gesprächsverlauf', 'LM Studio': 'Ja', 'Jan': 'Ja', 'GPT4All': 'Einzelnes Chat-Fenster' },
-          { 'Funktion': 'Quellcode-Lizenz', 'LM Studio': 'Kostenlos, quelloffen verfügbar (nicht OSI)', 'Jan': 'Apache 2.0 (vollständig Open-Source)', 'GPT4All': 'MIT (vollständig Open-Source)' },
+          { 'Funktion': 'Quellcode-Lizenz', 'LM Studio': 'Kostenlos, Closed Source', 'Jan': 'Apache 2.0 (vollständig Open-Source)', 'GPT4All': 'MIT (vollständig Open-Source)' },
           { 'Funktion': 'Aktive Entwicklung', 'LM Studio': 'Häufig (0.4.x, 2026)', 'Jan': 'Häufig (0.8.x, 2026)', 'GPT4All': 'Stagniert seit Anfang 2025' },
           { 'Funktion': 'Linux-Unterstützung', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Funktion': 'Am besten für', 'LM Studio': 'Benutzer, die die beste Benutzeroberfläche + Entwickler-API-Zugriff wünschen', 'Jan': 'Benutzer, die Open-Source-Software bevorzugen', 'GPT4All': 'Absolute Anfänger, die die einfachste Oberfläche wünschen' },
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: Installationsleitfaden',
         content:
-          '**Jan ist die Open-Source-Alternative zu LM Studio — gleiche Benutzerfreundlichkeit, identisches Modell-Download-Erlebnis, Apache-2.0-Lizenz (2025 von AGPLv3 umlizenziert).** Nutzen Sie Jan, wenn Open-Source-Software für Sie wichtig ist, Sie einen Intel-Mac verwenden, oder wenn Sie den Anwendungscode inspizieren oder ändern möchten.',
+          '**Jan ist die Open-Source-Alternative zu LM Studio — gleiche Benutzerfreundlichkeit, identisches Modell-Download-Erlebnis, Apache-2.0-Lizenz.** Nutzen Sie Jan, wenn Open-Source-Software für Sie wichtig ist, Sie einen Intel-Mac verwenden, oder wenn Sie den Anwendungscode inspizieren oder ändern möchten.',
         numberedItems: [
           'Gehen Sie zu jan.ai und laden Sie das Installationsprogramm für Ihre Plattform herunter.',
           'Führen Sie das Installationsprogramm aus und öffnen Sie Jan.',
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie privat ist eine lokale AI-App?',
-            a: 'Vollständig privat. Ihre Gespräche, Prompts und die Antworten des Modells verlassen niemals Ihren Computer. Es gibt keine Cloud-Server, kein Logging, keine Trainingsdatenerfassung. LM Studio hat optionale Analysen (Abmeldung in den Einstellungen), aber der Chat-Inhalt selbst wird niemals übertragen. Jan und GPT4All haben standardmäßig keine Telemetrie.',
+            a: 'Vollständig privat. Ihre Gespräche, Prompts und die Antworten des Modells verlassen niemals Ihren Computer. Es gibt keine Cloud-Server, kein Logging, keine Trainingsdatenerfassung. Laut Datenschutzerklärung nutzt LM Studio keine Telemetrie und kein nutzerbezogenes Tracking; Update-Prüfungen und Modellsuche übermitteln technische Daten wie App-Version, Betriebssystem und IP-Adresse, aber der Chat-Inhalt selbst wird niemals übertragen. Jan hat standardmäßig keine Telemetrie, bei GPT4All ist sie opt-in.',
           },
           {
             q: 'Was ist der Unterschied zwischen LM Studio und Ollama?',
@@ -901,7 +901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modèles recommandés :** Phi-4 Mini (3,8B, ~2.7 GB) ou Gemma 4 E2B, Llama 3.2 3B (~2.2 GB), Qwen3 8B (~5 GB), gpt-oss 20B (~13 GB), Qwen 3.6 27B (~16 GB, meilleur modèle grand public).',
           '**GPU optionnel :** Tous trois supportent CUDA (NVIDIA) et Metal (Apple Silicon). GPU accélère 5–10x mais n\'est pas nécessaire.',
           '**RAM minimum :** 6 GB pour modèles 3B–8B sans GPU. 4 GB pour Phi-4 Mini seul. 16 GB+ recommandé pour plusieurs modèles.',
-          '**Coût :** Jan (Apache 2.0) et GPT4All (MIT) sont entièrement open-source ; LM Studio est gratuit mais à code source disponible. Aucun abonnement requis.',
+          '**Coût :** Jan (Apache 2.0) et GPT4All (MIT) sont entièrement open-source ; LM Studio est gratuit mais à code source fermé. Aucun abonnement requis.',
         ],
       },
       comparison: {
@@ -1017,7 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-fr.svg',
-        imageCaption: 'Quelle application d\'IA locale installer : LM Studio pour la meilleure UI et accès API (50 000+ modèles) ; Jan comme alternative open-source AGPLv3 ; GPT4All pour l\'expérience débutant fenêtre unique la plus simple avec ~20 modèles curés. Les trois sont gratuits et fonctionnent sans compte cloud.',
+        imageCaption: 'Quelle application d\'IA locale installer : LM Studio pour la meilleure UI et accès API (50 000+ modèles) ; Jan comme alternative open-source Apache 2.0 ; GPT4All pour l\'expérience débutant fenêtre unique la plus simple avec ~20 modèles curés. Les trois sont gratuits et fonctionnent sans compte cloud.',
       },
       firstModel: {
         id: 'first-model',
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-ja.svg',
-        imageCaption: 'インストールするローカルAIアプリ：LM Studioは最高のUIとAPIアクセス（50,000以上のモデル）；JanはオープンソースAGPLv3代替；GPT4Allは~20のキュレーションされたモデルで最もシンプルな単一ウィンドウの初心者体験。3つすべて無料でクラウドアカウント不要で動作。',
+        imageCaption: 'インストールするローカルAIアプリ：LM Studioは最高のUIとAPIアクセス（50,000以上のモデル）；JanはオープンソースApache 2.0代替；GPT4Allは~20のキュレーションされたモデルで最もシンプルな単一ウィンドウの初心者体験。3つすべて無料でクラウドアカウント不要で動作。',
       },
       firstModel: {
         id: 'first-model',
@@ -1851,7 +1851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-zh.svg',
-        imageCaption: '安装哪个本地AI应用：LM Studio提供最佳UI和API访问（50,000+模型）；Jan作为开源AGPLv3替代品；GPT4All提供约20个精选模型的最简单单窗口初学者体验。三者都免费，无需云账户运行。',
+        imageCaption: '安装哪个本地AI应用：LM Studio提供最佳UI和API访问（50,000+模型）；Jan作为开源Apache 2.0替代品；GPT4All提供约20个精选模型的最简单单窗口初学者体验。三者都免费，无需云账户运行。',
       },
       firstModel: {
         id: 'first-model',
@@ -2136,7 +2136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio es el camino más rápido de cero a chatear localmente.** Descarga el instalador desde lmstudio.ai, abre la pestaña Discover, busca "Phi-4 Mini", descarga el modelo y empieza a chatear. En menos de 10 minutos con una conexión a internet decente.',
-          '**Jan es la alternativa de código abierto.** Misma facilidad de uso que LM Studio, completamente de código abierto bajo Apache 2.0 (relicenciado desde AGPLv3 en 2025), funciona en Linux AppImage. Si prefieres software de código abierto o quieres ver el código fuente, Jan es la opción equivalente.',
+          '**Jan es la alternativa de código abierto.** Misma facilidad de uso que LM Studio, completamente de código abierto bajo Apache 2.0, funciona en Linux AppImage. Si prefieres software de código abierto o quieres ver el código fuente, Jan es la opción equivalente.',
           '**GPT4All es la experiencia más simplificada.** Ventana de chat única, recomendaciones de modelos seleccionados, sin sobrecarga de navegación de modelos. Lo mejor para usuarios que quieren escribir una pregunta y obtener una respuesta sin tomar decisiones de configuración — pero su desarrollo está estancado desde principios de 2025, así que su lista de modelos seleccionados ya no incluye los modelos más recientes.',
           '**Empieza con Phi-4 Mini o Llama 3.2 3B en cualquier hardware.** Estos modelos de 3B funcionan en cualquier portátil fabricado en los últimos 7 años — sin GPU, sin 32 GB de RAM, sin hardware especial. Son más lentos que una IA en la nube pero producen resultados utilizables para la mayoría de las tareas cotidianas.',
           '**No se necesita cuenta en la nube.** Tras la descarga inicial (la aplicación y el archivo del modelo), todo se ejecuta localmente sin conexión a internet. Sin clave de API, sin suscripción, sin datos enviados a ningún servidor.',
@@ -2153,7 +2153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Última versión importante: v3.10, a principios de 2025 — el desarrollo está estancado.',
           '**Hardware mínimo:** cualquier portátil con 8 GB RAM para modelos de 3B–7B; 16 GB+ para modelos de 8B–14B; 24 GB+ para 30B+.',
           '**No se necesita GPU** para modelos de 3B–7B en Apple Silicon o modo de inferencia por CPU.',
-          '**Las tres son gratuitas**; Jan (Apache 2.0) y GPT4All (MIT) son completamente de código abierto, LM Studio es gratuita pero solo con código disponible.',
+          '**Las tres son gratuitas**; Jan (Apache 2.0) y GPT4All (MIT) son completamente de código abierto, LM Studio es gratuita pero de código cerrado.',
           '**Recomendación de primer modelo:** Phi-4 Mini (3,8B, ~2,7 GB de descarga) o Gemma 4 E2B para hardware con menos de 8 GB; Qwen3 8B para sistemas de 8–16 GB.',
         ],
       },
@@ -2178,7 +2178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Característica': 'Biblioteca de modelos', 'LM Studio': 'Búsqueda GGUF + MLX completa de Hugging Face (~50.000+ modelos)', 'Jan': 'Seleccionados + búsqueda en Hugging Face', 'GPT4All': 'Lista seleccionada (~20 modelos, desactualizada)' },
           { 'Característica': 'Servidor de API local', 'LM Studio': 'Sí (compatible con OpenAI y Anthropic)', 'Jan': 'Sí (compatible con OpenAI)', 'GPT4All': 'Sí (limitado, menos documentado)' },
           { 'Característica': 'Multi-chat / historial de conversaciones', 'LM Studio': 'Sí', 'Jan': 'Sí', 'GPT4All': 'Ventana de chat única' },
-          { 'Característica': 'Licencia del código fuente', 'LM Studio': 'Gratuito, código disponible (no OSI)', 'Jan': 'Apache 2.0 (completamente de código abierto)', 'GPT4All': 'MIT (completamente de código abierto)' },
+          { 'Característica': 'Licencia del código fuente', 'LM Studio': 'Gratuito, código cerrado', 'Jan': 'Apache 2.0 (completamente de código abierto)', 'GPT4All': 'MIT (completamente de código abierto)' },
           { 'Característica': 'Desarrollo activo', 'LM Studio': 'Frecuente (0.4.x, 2026)', 'Jan': 'Frecuente (0.8.x, 2026)', 'GPT4All': 'Estancado desde principios de 2025' },
           { 'Característica': 'Compatibilidad con Linux', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Característica': 'Lo mejor para', 'LM Studio': 'Usuarios que quieren la mejor interfaz + acceso a API para desarrolladores', 'Jan': 'Usuarios que prefieren software de código abierto', 'GPT4All': 'Principiantes absolutos que quieren la interfaz más sencilla' },
@@ -2219,7 +2219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: guía de configuración',
         content:
-          '**Jan es la alternativa de código abierto a LM Studio — misma facilidad de uso, experiencia de descarga de modelos idéntica, licencia Apache 2.0 (relicenciada desde AGPLv3 en 2025).** Usa Jan si el software de código abierto es importante para ti, si usas un Mac Intel, o si quieres inspeccionar o modificar el código de la aplicación.',
+          '**Jan es la alternativa de código abierto a LM Studio — misma facilidad de uso, experiencia de descarga de modelos idéntica, licencia Apache 2.0.** Usa Jan si el software de código abierto es importante para ti, si usas un Mac Intel, o si quieres inspeccionar o modificar el código de la aplicación.',
         numberedItems: [
           'Ve a jan.ai y descarga el instalador para tu plataforma.',
           'Ejecuta el instalador y abre Jan.',
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué tan privada es una aplicación de IA local?',
-            a: 'Completamente privada. Tus conversaciones, prompts y las respuestas del modelo nunca salen de tu máquina. No hay servidores en la nube, sin registros, sin recopilación de datos de entrenamiento. LM Studio tiene análisis opcionales (se puede desactivar en la configuración), pero el contenido del chat en sí nunca se transmite. Jan y GPT4All no tienen telemetría por defecto.',
+            a: 'Completamente privada. Tus conversaciones, prompts y las respuestas del modelo nunca salen de tu máquina. No hay servidores en la nube, sin registros, sin recopilación de datos de entrenamiento. Según su política de privacidad, LM Studio no tiene telemetría ni seguimiento específico del usuario; las comprobaciones de actualización y la búsqueda de modelos envían datos técnicos como versión de la app, SO y dirección IP, pero el contenido del chat en sí nunca se transmite. Jan no tiene telemetría por defecto y en GPT4All es opt-in.',
           },
           {
             q: '¿Cuál es la diferencia entre LM Studio y Ollama?',
@@ -2525,7 +2525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**O LM Studio é o caminho mais rápido de zero a conversar localmente.** Baixe o instalador em lmstudio.ai, abra a aba Discover, busque "Phi-4 Mini", baixe o modelo e comece a conversar. Em menos de 10 minutos com uma conexão à internet decente.',
-          '**O Jan é a alternativa de código aberto.** Mesma facilidade de uso que o LM Studio, totalmente de código aberto sob Apache 2.0 (relicenciado de AGPLv3 em 2025), funciona no Linux AppImage. Se você prefere software de código aberto ou quer ver o código-fonte, o Jan é a opção equivalente.',
+          '**O Jan é a alternativa de código aberto.** Mesma facilidade de uso que o LM Studio, totalmente de código aberto sob Apache 2.0, funciona no Linux AppImage. Se você prefere software de código aberto ou quer ver o código-fonte, o Jan é a opção equivalente.',
           '**O GPT4All é a experiência mais simplificada.** Janela de chat única, recomendações de modelos selecionados, sem a sobrecarga de navegar por modelos. Melhor para usuários que querem digitar uma pergunta e obter uma resposta sem tomar decisões de configuração — mas seu desenvolvimento está estagnado desde o início de 2025, então sua lista de modelos selecionados não inclui mais os modelos mais recentes.',
           '**Comece com Phi-4 Mini ou Llama 3.2 3B em qualquer hardware.** Esses modelos de 3B funcionam em qualquer notebook fabricado nos últimos 7 anos — sem GPU, sem 32 GB de RAM, sem hardware especial. São mais lentos do que uma IA na nuvem, mas produzem resultados utilizáveis para a maioria das tarefas do dia a dia.',
           '**Nenhuma conta na nuvem é necessária.** Após o download inicial (o aplicativo e o arquivo do modelo), tudo roda localmente sem conexão à internet. Sem chave de API, sem assinatura, sem dados enviados a nenhum servidor.',
@@ -2542,7 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Última versão importante: v3.10, início de 2025 — o desenvolvimento está estagnado.',
           '**Hardware mínimo:** qualquer notebook com 8 GB RAM para modelos de 3B–7B; 16 GB+ para modelos de 8B–14B; 24 GB+ para 30B+.',
           '**Nenhuma GPU é necessária** para modelos de 3B–7B no Apple Silicon ou no modo de inferência por CPU.',
-          '**Os três são gratuitos**; Jan (Apache 2.0) e GPT4All (MIT) são totalmente de código aberto, o LM Studio é gratuito, mas apenas com código disponível.',
+          '**Os três são gratuitos**; Jan (Apache 2.0) e GPT4All (MIT) são totalmente de código aberto, o LM Studio é gratuito, mas de código fechado.',
           '**Recomendação de primeiro modelo:** Phi-4 Mini (3,8B, ~2,7 GB de download) ou Gemma 4 E2B para hardware com menos de 8 GB; Qwen3 8B para sistemas de 8–16 GB.',
         ],
       },
@@ -2567,7 +2567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Recurso': 'Biblioteca de modelos', 'LM Studio': 'Busca GGUF + MLX completa do Hugging Face (~50.000+ modelos)', 'Jan': 'Selecionados + busca no Hugging Face', 'GPT4All': 'Lista selecionada (~20 modelos, desatualizada)' },
           { 'Recurso': 'Servidor de API local', 'LM Studio': 'Sim (compatível com OpenAI e Anthropic)', 'Jan': 'Sim (compatível com OpenAI)', 'GPT4All': 'Sim (limitado, menos documentado)' },
           { 'Recurso': 'Multi-chat / histórico de conversas', 'LM Studio': 'Sim', 'Jan': 'Sim', 'GPT4All': 'Janela de chat única' },
-          { 'Recurso': 'Licença do código-fonte', 'LM Studio': 'Gratuito, código disponível (não OSI)', 'Jan': 'Apache 2.0 (totalmente de código aberto)', 'GPT4All': 'MIT (totalmente de código aberto)' },
+          { 'Recurso': 'Licença do código-fonte', 'LM Studio': 'Gratuito, código fechado', 'Jan': 'Apache 2.0 (totalmente de código aberto)', 'GPT4All': 'MIT (totalmente de código aberto)' },
           { 'Recurso': 'Desenvolvimento ativo', 'LM Studio': 'Frequente (0.4.x, 2026)', 'Jan': 'Frequente (0.8.x, 2026)', 'GPT4All': 'Estagnado desde início de 2025' },
           { 'Recurso': 'Compatibilidade com Linux', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Recurso': 'Melhor para', 'LM Studio': 'Usuários que querem a melhor interface + acesso a API para desenvolvedores', 'Jan': 'Usuários que preferem software de código aberto', 'GPT4All': 'Iniciantes absolutos que querem a interface mais simples' },
@@ -2608,7 +2608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: guia de configuração',
         content:
-          '**O Jan é a alternativa de código aberto ao LM Studio — mesma facilidade de uso, experiência de download de modelos idêntica, licença Apache 2.0 (relicenciada de AGPLv3 em 2025).** Use o Jan se o software de código aberto for importante para você, se você usa um Mac Intel, ou se quiser inspecionar ou modificar o código do aplicativo.',
+          '**O Jan é a alternativa de código aberto ao LM Studio — mesma facilidade de uso, experiência de download de modelos idêntica, licença Apache 2.0.** Use o Jan se o software de código aberto for importante para você, se você usa um Mac Intel, ou se quiser inspecionar ou modificar o código do aplicativo.',
         numberedItems: [
           'Vá a jan.ai e baixe o instalador para a sua plataforma.',
           'Execute o instalador e abra o Jan.',
@@ -2733,7 +2733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quão privado é um aplicativo de IA local?',
-            a: 'Completamente privado. As suas conversas, prompts e as respostas do modelo nunca saem da sua máquina. Não há servidores na nuvem, sem registros, sem coleta de dados de treinamento. O LM Studio tem análises opcionais (podem ser desativadas nas configurações), mas o conteúdo do chat em si nunca é transmitido. O Jan e o GPT4All não têm telemetria por padrão.',
+            a: 'Completamente privado. As suas conversas, prompts e as respostas do modelo nunca saem da sua máquina. Não há servidores na nuvem, sem registros, sem coleta de dados de treinamento. Segundo sua política de privacidade, o LM Studio não tem telemetria nem rastreamento específico do usuário; as verificações de atualização e a busca de modelos enviam dados técnicos como versão do app, SO e endereço IP, mas o conteúdo do chat em si nunca é transmitido. O Jan não tem telemetria por padrão e no GPT4All ela é opt-in.',
           },
           {
             q: 'Qual é a diferença entre o LM Studio e o Ollama?',
@@ -2914,7 +2914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**تطبيق LM Studio هو أسرع طريق من الصفر إلى الدردشة محلياً.** نزّل المثبّت من lmstudio.ai، وافتح تبويب Discover، وابحث عن "Phi-4 Mini"، ونزّل النموذج وابدأ الدردشة. في أقل من 10 دقائق مع اتصال إنترنت معقول.',
-          '**تطبيق Jan هو البديل مفتوح المصدر.** نفس سهولة الاستخدام كـLM Studio، مفتوح المصدر بالكامل بموجب رخصة Apache 2.0 (أُعيد ترخيصه من AGPLv3 في 2025)، يعمل على Linux AppImage. إذا كنت تفضّل برامج مفتوحة المصدر أو تريد الاطلاع على الشفرة المصدرية، فـJan هو الخيار المعادل.',
+          '**تطبيق Jan هو البديل مفتوح المصدر.** نفس سهولة الاستخدام كـLM Studio، مفتوح المصدر بالكامل بموجب رخصة Apache 2.0، يعمل على Linux AppImage. إذا كنت تفضّل برامج مفتوحة المصدر أو تريد الاطلاع على الشفرة المصدرية، فـJan هو الخيار المعادل.',
           '**تطبيق GPT4All هو التجربة الأكثر تبسيطاً.** نافذة دردشة واحدة، وتوصيات نماذج منتقاة، بدون التعقيد في تصفح النماذج. الأفضل للمستخدمين الذين يريدون كتابة سؤال والحصول على إجابة بدون اتخاذ قرارات إعداد — لكن تطويره متوقف عملياً منذ أوائل 2025، لذا لم تعد قائمة النماذج المنتقاة تشمل أحدث النماذج.',
           '**ابدأ بنموذج Phi-4 Mini أو Llama 3.2 3B على أي جهاز.** هذه النماذج ذات 3B معاملات تعمل على أي حاسوب محمول صُنع في السنوات السبع الماضية — بدون GPU، بدون 32 جيجابايت RAM، بدون أجهزة خاصة. هي أبطأ من الذكاء الاصطناعي السحابي لكنها تنتج نتائج قابلة للاستخدام لمعظم المهام اليومية.',
           '**لا حاجة لحساب سحابي.** بعد التنزيل الأولي (التطبيق وملف النموذج)، يعمل كل شيء محلياً بدون اتصال بالإنترنت. بلا مفتاح API، بلا اشتراك، بلا بيانات مُرسَلة إلى أي خادم.',
@@ -2931,7 +2931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPT4All:** gpt4all.io — Windows (x64)، macOS (Apple Silicon، Intel)، Linux (AppImage). آخر إصدار رئيسي: v3.10 في أوائل 2025 — والتطوير متوقف عملياً.',
           '**الحد الأدنى للأجهزة:** أي حاسوب محمول بـ8 جيجابايت RAM للنماذج من 3B إلى 7B؛ 16 جيجابايت+ للنماذج من 8B إلى 14B؛ 24 جيجابايت+ للـ30B+.',
           '**لا GPU مطلوبة** للنماذج من 3B إلى 7B على Apple Silicon أو وضع الاستنتاج بالمعالج فقط.',
-          '**الثلاثة مجانية**؛ Jan (Apache 2.0) وGPT4All (MIT) مفتوحا المصدر بالكامل، وLM Studio مجاني لكن بكود متاح فقط.',
+          '**الثلاثة مجانية**؛ Jan (Apache 2.0) وGPT4All (MIT) مفتوحا المصدر بالكامل، وLM Studio مجاني لكن مغلق المصدر.',
           '**توصية النموذج الأول:** Phi-4 Mini (3.8B، حوالي 2.7 جيجابايت تنزيل) أو Gemma 4 E2B للأجهزة ذات الإمكانيات الأقل من 8 جيجابايت؛ Qwen3 8B للأنظمة من 8 إلى 16 جيجابايت.',
         ],
       },
@@ -2956,7 +2956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الميزة': 'مكتبة النماذج', 'LM Studio': 'بحث GGUF وMLX كامل في Hugging Face (أكثر من 50,000 نموذج)', 'Jan': 'نماذج منتقاة + بحث في Hugging Face', 'GPT4All': 'قائمة منتقاة (~20 نموذجاً، قديمة)' },
           { 'الميزة': 'خادم API محلي', 'LM Studio': 'نعم (متوافق مع OpenAI وAnthropic)', 'Jan': 'نعم (متوافق مع OpenAI)', 'GPT4All': 'نعم (محدود، توثيق أقل)' },
           { 'الميزة': 'دردشة متعددة / سجل المحادثات', 'LM Studio': 'نعم', 'Jan': 'نعم', 'GPT4All': 'نافذة دردشة واحدة' },
-          { 'الميزة': 'ترخيص الشفرة المصدرية', 'LM Studio': 'مجاني، كود متاح (غير OSI)', 'Jan': 'Apache 2.0 (مفتوح المصدر بالكامل)', 'GPT4All': 'MIT (مفتوح المصدر بالكامل)' },
+          { 'الميزة': 'ترخيص الشفرة المصدرية', 'LM Studio': 'مجاني، كود مغلق المصدر', 'Jan': 'Apache 2.0 (مفتوح المصدر بالكامل)', 'GPT4All': 'MIT (مفتوح المصدر بالكامل)' },
           { 'الميزة': 'تطوير نشط', 'LM Studio': 'متكرر (0.4.x، 2026)', 'Jan': 'متكرر (0.8.x، 2026)', 'GPT4All': 'متوقف منذ أوائل 2025' },
           { 'الميزة': 'توافق Linux', 'LM Studio': 'AppImage، .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'الميزة': 'الأفضل لـ', 'LM Studio': 'المستخدمون الذين يريدون أفضل واجهة + وصول API للمطورين', 'Jan': 'المستخدمون الذين يفضّلون البرامج مفتوحة المصدر', 'GPT4All': 'المبتدئون المطلقون الذين يريدون الواجهة الأبسط' },
@@ -2997,7 +2997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: دليل الإعداد',
         content:
-          '**تطبيق Jan هو البديل مفتوح المصدر لـLM Studio — نفس سهولة الاستخدام، تجربة تنزيل نماذج مطابقة، ترخيص Apache 2.0 (أُعيد ترخيصه من AGPLv3 في 2025).** استخدم Jan إذا كان البرنامج مفتوح المصدر مهماً لك، أو إذا كنت تستخدم جهاز Mac بمعالج Intel، أو إذا أردت فحص شفرة التطبيق أو تعديلها.',
+          '**تطبيق Jan هو البديل مفتوح المصدر لـLM Studio — نفس سهولة الاستخدام، تجربة تنزيل نماذج مطابقة، ترخيص Apache 2.0.** استخدم Jan إذا كان البرنامج مفتوح المصدر مهماً لك، أو إذا كنت تستخدم جهاز Mac بمعالج Intel، أو إذا أردت فحص شفرة التطبيق أو تعديلها.',
         numberedItems: [
           'توجّه إلى jan.ai ونزّل المثبّت لمنصتك.',
           'شغّل المثبّت وافتح تطبيق Jan.',
@@ -3122,7 +3122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما مدى خصوصية تطبيق الذكاء الاصطناعي المحلي؟',
-            a: 'خصوصية كاملة. محادثاتك وprompts إدخالاتك ومخرجات النموذج لا تغادر جهازك أبداً. لا خوادم سحابية، لا سجلات، لا جمع بيانات تدريب. يحتوي LM Studio على تحليلات اختيارية (يمكن تعطيلها من الإعدادات)، لكن محتوى الدردشة نفسه لا يُرسَل أبداً. تطبيقا Jan وGPT4All لا يحتويان على أي قياس عن بُعد افتراضياً.',
+            a: 'خصوصية كاملة. محادثاتك وprompts إدخالاتك ومخرجات النموذج لا تغادر جهازك أبداً. لا خوادم سحابية، لا سجلات، لا جمع بيانات تدريب. وفق سياسة الخصوصية، لا يستخدم LM Studio قياساً عن بُعد ولا تتبّعاً خاصاً بالمستخدم؛ فحص التحديثات والبحث عن النماذج يرسلان بيانات تقنية مثل إصدار التطبيق ونظام التشغيل وعنوان IP، لكن محتوى الدردشة نفسه لا يُرسَل أبداً. Jan بلا قياس عن بُعد افتراضياً، وفي GPT4All يكون اختيارياً.',
           },
           {
             q: 'ما الفرق بين LM Studio وOllama؟',
@@ -3303,7 +3303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio는 로컬 채팅을 가장 빠르게 시작하는 방법입니다.** lmstudio.ai에서 설치 프로그램을 다운로드하고, Discover 탭을 열고, "Phi-4 Mini"를 검색하고, 모델을 다운로드한 후 채팅을 시작하십시오. 괜찮은 인터넷 연결이 있다면 10분 이내에 완료됩니다.',
-          '**Jan은 오픈소스 대안입니다.** LM Studio와 동일한 사용 편의성을 제공하고, Apache 2.0(2025년에 AGPLv3에서 재라이선싱됨) 하에 완전한 오픈소스이며, Linux AppImage에서도 작동합니다. 오픈소스 소프트웨어를 선호하거나 소스 코드를 확인하고 싶다면 Jan이 동등한 선택지입니다.',
+          '**Jan은 오픈소스 대안입니다.** LM Studio와 동일한 사용 편의성을 제공하고, Apache 2.0 하에 완전한 오픈소스이며, Linux AppImage에서도 작동합니다. 오픈소스 소프트웨어를 선호하거나 소스 코드를 확인하고 싶다면 Jan이 동등한 선택지입니다.',
           '**GPT4All은 가장 단순화된 경험을 제공합니다.** 단일 채팅 창, 선별된 모델 추천, 모델 탐색 과부하 없음. 설정을 결정하지 않고 질문을 입력하고 답변을 받고 싶은 사용자에게 가장 적합합니다 — 다만 2025년 초 이후 개발이 정체되어, 선별된 모델 목록에 최신 모델이 더 이상 포함되지 않는다는 점에 유의하십시오.',
           '**어떤 하드웨어에서든 Phi-4 Mini 또는 Llama 3.2 3B로 시작하십시오.** 이 3B 모델들은 지난 7년 이내에 제조된 모든 노트북에서 작동합니다 — GPU, 32 GB RAM, 특수 하드웨어가 필요하지 않습니다. 클라우드 AI보다 느리지만 대부분의 일상 작업에서 사용 가능한 결과를 생성합니다.',
           '**클라우드 계정이 필요하지 않습니다.** 초기 다운로드(앱과 모델 파일) 후에는 인터넷 연결 없이 모든 것이 로컬에서 실행됩니다. API 키, 구독, 어떤 서버로도 데이터 전송이 없습니다.',
@@ -3320,7 +3320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPT4All:** gpt4all.io에서 다운로드 — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage) 지원. 마지막 주요 릴리스: v3.10, 2025년 초 — 개발이 정체됨.',
           '**최소 하드웨어:** 3B–7B 모델의 경우 8 GB RAM이 있는 모든 노트북; 8B–14B 모델의 경우 16 GB+; 30B+의 경우 24 GB+.',
           '**GPU 불필요** — Apple Silicon 또는 CPU 추론 모드에서 3B–7B 모델 실행 시.',
-          '**세 가지 모두 무료**입니다. Jan(Apache 2.0)과 GPT4All(MIT)은 완전한 오픈소스이며, LM Studio는 무료이나 코드만 공개되어 있습니다.',
+          '**세 가지 모두 무료**입니다. Jan(Apache 2.0)과 GPT4All(MIT)은 완전한 오픈소스이며, LM Studio는 무료이지만 비공개 소스입니다.',
           '**첫 번째 모델 추천:** 8 GB 미만 하드웨어에는 Phi-4 Mini (3.8B, ~2.7 GB 다운로드) 또는 Gemma 4 E2B; 8–16 GB 시스템에는 Qwen3 8B.',
         ],
       },
@@ -3345,7 +3345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '기능': '모델 라이브러리', 'LM Studio': 'Hugging Face 전체 GGUF + MLX 검색 (~50,000+ 모델)', 'Jan': '선별된 모델 + Hugging Face 검색', 'GPT4All': '선별된 목록 (~20 모델, 오래됨)' },
           { '기능': '로컬 API 서버', 'LM Studio': '예 (OpenAI 및 Anthropic 호환)', 'Jan': '예 (OpenAI 호환)', 'GPT4All': '예 (제한적, 문서화 미흡)' },
           { '기능': '다중 채팅 / 대화 기록', 'LM Studio': '예', 'Jan': '예', 'GPT4All': '단일 채팅 창' },
-          { '기능': '소스 코드 라이선스', 'LM Studio': '무료, 코드 공개 (비OSI)', 'Jan': 'Apache 2.0 (완전 오픈소스)', 'GPT4All': 'MIT (완전 오픈소스)' },
+          { '기능': '소스 코드 라이선스', 'LM Studio': '무료, 비공개 소스', 'Jan': 'Apache 2.0 (완전 오픈소스)', 'GPT4All': 'MIT (완전 오픈소스)' },
           { '기능': '활발한 개발', 'LM Studio': '빈번함 (0.4.x, 2026년)', 'Jan': '빈번함 (0.8.x, 2026년)', 'GPT4All': '2025년 초부터 정체' },
           { '기능': 'Linux 호환성', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { '기능': '최적 대상', 'LM Studio': '최고의 인터페이스 + 개발자 API 액세스를 원하는 사용자', 'Jan': '오픈소스 소프트웨어를 선호하는 사용자', 'GPT4All': '가장 단순한 인터페이스를 원하는 완전 초보자' },
@@ -3386,7 +3386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: 설정 가이드',
         content:
-          '**Jan은 LM Studio의 오픈소스 대안입니다 — 동일한 사용 편의성, 동일한 모델 다운로드 경험, Apache 2.0 라이선스(2025년에 AGPLv3에서 재라이선싱됨).** 오픈소스 소프트웨어가 중요하거나, Intel Mac을 사용하거나, 앱 코드를 검사하거나 수정하고 싶다면 Jan을 사용하십시오.',
+          '**Jan은 LM Studio의 오픈소스 대안입니다 — 동일한 사용 편의성, 동일한 모델 다운로드 경험, Apache 2.0 라이선스.** 오픈소스 소프트웨어가 중요하거나, Intel Mac을 사용하거나, 앱 코드를 검사하거나 수정하고 싶다면 Jan을 사용하십시오.',
         numberedItems: [
           'jan.ai를 방문하여 플랫폼용 설치 프로그램을 다운로드하십시오.',
           '설치 프로그램을 실행하고 Jan을 여십시오.',
@@ -3511,7 +3511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 AI 앱은 얼마나 사적인가요?',
-            a: '완전히 사적입니다. 대화, 프롬프트, 모델 응답이 컴퓨터를 떠나지 않습니다. 클라우드 서버가 없고, 로그가 없고, 학습 데이터 수집이 없습니다. LM Studio에는 선택적 분석 기능이 있습니다(설정에서 비활성화 가능). 하지만 채팅 내용 자체는 전송되지 않습니다. Jan과 GPT4All은 기본적으로 원격 측정이 없습니다.',
+            a: '완전히 사적입니다. 대화, 프롬프트, 모델 응답이 컴퓨터를 떠나지 않습니다. 클라우드 서버가 없고, 로그가 없고, 학습 데이터 수집이 없습니다. LM Studio는 개인정보 처리방침상 텔레메트리와 사용자별 추적이 없으며, 업데이트 확인과 모델 검색 시 앱 버전, OS, IP 주소 같은 기술 데이터가 전송되지만 채팅 내용 자체는 전송되지 않습니다. Jan은 기본적으로 텔레메트리가 없고 GPT4All은 opt-in입니다.',
           },
           {
             q: 'LM Studio와 Ollama의 차이점은 무엇인가요?',

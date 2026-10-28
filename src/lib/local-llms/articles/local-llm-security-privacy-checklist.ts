@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'The 5 non-negotiable steps: (1) no internet access for the model process, (2) model files verified via SHA-256 before loading, (3) API endpoints bound to localhost only, (4) prompt logs stored encrypted or disabled entirely, (5) no third-party plugins without source review.',
             'Local inference keeps prompt data off third-party servers. The remaining risks are: telemetry from the inference tool, model files from untrusted sources, and the Ollama API being exposed on the network.',
             'Ollama binds to localhost by default -- it is not accessible from other devices unless you explicitly set OLLAMA_HOST=0.0.0.0.',
-            'Disable analytics in LM Studio (Settings → Privacy → disable "Send anonymous usage data") and GPT4All (Settings → disable telemetry).',
+            'Verify what LM Studio sends: per its privacy policy it has no telemetry, but update checks and model search send anonymized data. Decline telemetry in GPT4All at first launch (it is opt-in) and block outbound traffic after downloading models.',
             'Download model weights only from Hugging Face (huggingface.co) or the official Ollama library. Verify SHA256 checksums for sensitive deployments.',
             'For regulated data (HIPAA, GDPR, legal privilege): enable full-disk encryption, use an air-gapped machine, and audit all installed extensions.',
           ],
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**The model inference itself is private -- your prompts are never sent to the model provider\'s servers.** But three other data flows can leak information:',
           ],
           items: [
-            '**Application telemetry**: LM Studio, GPT4All, and some other tools collect anonymous usage analytics by default. These may include session counts, model names used, and performance metrics.',
+            '**Application telemetry**: LM Studio states in its privacy policy that it includes no telemetry or user-specific tracking, but update checks and model search send anonymized data. GPT4All telemetry is opt-in. Other tools may collect usage analytics, so verify with a firewall.',
             '**Model download sources**: malicious GGUF files can contain code that executes during model loading in vulnerable inference engines. An unverified model file is a supply chain risk.',
             '**Network exposure**: Ollama\'s API server is accessible to any process on your machine. If misconfigured with `OLLAMA_HOST=0.0.0.0`, it becomes accessible to your entire network without authentication.',
           ],
@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'security-risks',
           title: 'What are the biggest security risks in local LLMs?',
           items: [
-            '**Telemetry leaks** → tools like LM Studio may send usage data',
+            '**Telemetry leaks** → some tools send usage data; LM Studio sends update-check and model-search requests',
             '**Malicious model files** → unverified GGUF files can introduce risk',
             '**Network exposure** → APIs like Ollama can be exposed if misconfigured',
           ],
@@ -176,13 +176,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'How Do You Disable Telemetry in Local LLM Tools?',
           rows: [
             { 'Tool': '[Ollama](https://ollama.com)', 'Telemetry Default': 'None collected', 'How to Confirm/Disable': 'Check github.com/ollama/ollama -- no analytics code' },
-            { 'Tool': '[LM Studio](https://lmstudio.ai)', 'Telemetry Default': 'Anonymous analytics enabled', 'How to Confirm/Disable': 'Settings → Privacy → uncheck "Send anonymous usage data"' },
+            { 'Tool': '[LM Studio](https://lmstudio.ai)', 'Telemetry Default': 'None per policy; update/search send anonymized data', 'How to Confirm/Disable': 'Nothing to disable; verify with a firewall or packet capture' },
             { 'Tool': '[Jan AI](https://jan.ai)', 'Telemetry Default': 'None -- explicitly disabled', 'How to Confirm/Disable': 'Open source -- audit github.com/janhq/jan' },
-            { 'Tool': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetry Default': 'Opt-in only at first launch', 'How to Confirm/Disable': 'Settings → Privacy → disable usage analytics' },
+            { 'Tool': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetry Default': 'Opt-in only at first launch', 'How to Confirm/Disable': 'Decline at first launch; verify with a firewall' },
           ],
           columns: ['Tool', 'Telemetry Default', 'How to Confirm/Disable'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-en.webp',
-          imageCaption: 'Ollama and Jan AI collect nothing by default; LM Studio and GPT4All ship analytics on — check settings.',
+          imageCaption: 'Ollama and Jan AI collect nothing by default; LM Studio has no telemetry per its policy; GPT4All telemetry is opt-in.',
         },
         threatModel: {
           id: 'threat-model',
@@ -202,10 +202,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Is using a local LLM more private than using the OpenAI API?', a: 'Yes, for prompt privacy. With a local LLM, your prompts never leave your machine. The OpenAI API sends prompts to OpenAI\'s servers for processing. OpenAI\'s API Terms of Service state that API input/output is not used to train models by default, but the data does transit their infrastructure. For sensitive or regulated data (medical, legal, financial), local inference is the more conservative choice.' },
             { q: 'How do I verify that a downloaded model file is safe?', a: 'Download models only from Hugging Face (huggingface.co) or the official Ollama library. On Hugging Face, each file shows a SHA256 hash -- verify it with `sha256sum <model_file>` after downloading. Stick to models from known publishers: Meta, Google, Microsoft, Mistral AI, and Qwen/Alibaba. Avoid anonymous file shares or Discord file drops.' },
             { q: 'What is the difference between privacy and security for local LLMs?', a: 'Privacy means your prompts and outputs are not accessible to third parties. Security means your system is protected from threats. A local LLM can be private (no data leaves your machine) but insecure (model downloaded from an untrusted source, or Ollama API exposed on the network). Both must be addressed independently.' },
-            { q: 'Can I use a local LLM for GDPR-regulated data?', a: 'Local inference significantly reduces GDPR risk because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) has telemetry disabled, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.' },
-            { q: 'Does LM Studio send data to its servers?', a: 'LM Studio collects anonymous analytics by default (session counts, model names used, performance metrics). It does not send prompt content. To disable analytics: Settings → Privacy → uncheck "Send anonymous usage data". Model inference and chat logs stay local regardless of this setting.' },
+            { q: 'Can I use a local LLM for GDPR-regulated data?', a: 'Local inference significantly reduces GDPR risk because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) sends no unexpected network traffic, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.' },
+            { q: 'Does LM Studio send data to its servers?', a: 'The LM Studio privacy policy states that the application does not include telemetry or user-specific tracking. Update checks send the app version, OS and IP address (via CDN), and model search and downloads send anonymized search queries. Chat content and documents are not handled unless you use LM Studio Cloud Services. There is no usage-data setting to disable; verify with a firewall or packet capture.' },
             { q: 'How do I prevent Ollama from being accessed by other devices on my network?', a: 'By default, Ollama binds to localhost (127.0.0.1:11434) and is not accessible from other devices. If you previously set OLLAMA_HOST=0.0.0.0 to allow network access, revert it: `export OLLAMA_HOST=127.0.0.1:11434`. Verify isolation by attempting to connect from another device on your network -- it should fail.' },
-            { q: 'Which local LLM tool is best for maximum privacy?', a: 'Jan AI is the most privacy-focused tool: fully open source (MIT licence), zero telemetry, no account required, all data stored locally in plain JSON files. Ollama is second: open source, no telemetry code, binds to localhost by default. LM Studio collects anonymous analytics by default and requires opt-out in Settings.' },
+            { q: 'Which local LLM tool is best for maximum privacy?', a: 'Jan AI is the most privacy-focused tool: fully open source (MIT licence), zero telemetry, no account required, all data stored locally in plain JSON files. Ollama is second: open source, no telemetry code, binds to localhost by default. LM Studio has no telemetry per its privacy policy, but update checks and model search send anonymized data.' },
           ],
         },
         sources: {
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: '**Most local LLM security failures come from configuration oversights, not model vulnerabilities.** These are the five most frequent mistakes and how to fix each one.',
           items: [
             '**Mistake:** Downloading models from third-party sites (Discord, random GitHub releases). **Fix:** Use Hugging Face (huggingface.co) or Ollama library only. Verify with `sha256sum`.',
-            '**Mistake:** Assuming local inference = full privacy. **Fix:** Disable LM Studio analytics (Settings → Privacy) and GPT4All telemetry. Run `netstat -an | grep 11434` to confirm no unexpected ports.',
+            '**Mistake:** Assuming local inference = full privacy. **Fix:** Block outbound traffic after the model download, inspect LM Studio and GPT4All with a firewall, and decline GPT4All telemetry at first launch. Run `netstat -an | grep 11434` to confirm no unexpected ports.',
             '**Mistake:** Leaving `OLLAMA_HOST=0.0.0.0` active after testing. **Fix:** Revert: `export OLLAMA_HOST=127.0.0.1:11434`. Test from another device — connection should be refused.',
             '**Mistake:** Skipping disk encryption for HIPAA/GDPR workloads. **Fix:** Enable FileVault (macOS) or BitLocker (Windows). Encrypt the LM Studio chat log folder separately.',
             '**Mistake:** Not reviewing third-party extensions in Open WebUI or Jan AI. **Fix:** Audit installed extensions monthly. Remove any requesting network access you don\'t recognize.',
@@ -233,9 +233,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What are the regional compliance considerations?',
           content: '**Local LLM inference reduces data residency risk, but full regulatory compliance requires additional controls per region.**',
           items: [
-            '**EU / GDPR (2018):** Local inference removes the Article 28 data processor obligation for the model provider. You must still disable LM Studio analytics, enable disk encryption, and document your data processing setup for any DPIA. Perform a legitimate interest assessment before processing personal data.',
+            '**EU / GDPR (2018):** Local inference removes the Article 28 data processor obligation for the model provider. You must still verify LM Studio network traffic with a firewall, enable disk encryption, and document your data processing setup for any DPIA. Perform a legitimate interest assessment before processing personal data.',
             '**United States / HIPAA:** HIPAA requires safeguards for PHI: full-disk encryption (the "encryption safe harbor"), access controls, and audit logging. Ollama with FileVault enabled and telemetry disabled is a reasonable HIPAA starting point. Formal compliance requires a full risk assessment.',
-            '**Japan / APPI (2022):** The Act on the Protection of Personal Information requires personal data protection during processing. Local inference on an air-gapped machine satisfies data localisation. Disable Ollama update checks and LM Studio analytics for APPI compliance.',
+            '**Japan / APPI (2022):** The Act on the Protection of Personal Information requires personal data protection during processing. Local inference on an air-gapped machine satisfies data localisation. Disable Ollama update checks and verify LM Studio network traffic with a firewall for APPI compliance.',
             '**China / PIPL (2021):** Running a local LLM for internal use does not require CAC registration. If you deploy a local LLM as a public-facing service in China, CAC algorithm registration is required.',
           ],
         },
@@ -334,7 +334,7 @@ schema: {
             'name': 'Can I use a local LLM for GDPR-regulated data?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Local inference significantly reduces GDPR risk because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) has telemetry disabled, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.',
+              'text': 'Local inference significantly reduces GDPR risk because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) sends no unexpected network traffic, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.',
             },
           },
           {
@@ -342,7 +342,7 @@ schema: {
             'name': 'Does LM Studio send data to its servers?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LM Studio collects anonymous analytics by default (session counts, model names used, performance metrics). It does not send prompt content. To disable analytics: Settings → Privacy → uncheck "Send anonymous usage data". Model inference and chat logs stay local regardless of this setting.',
+              'text': 'The LM Studio privacy policy states that the application does not include telemetry or user-specific tracking. Update checks send the app version, OS and IP address (via CDN), and model search and downloads send anonymized search queries. Chat content and documents are not handled unless you use LM Studio Cloud Services. There is no usage-data setting to disable; verify with a firewall or packet capture.',
             },
           },
           {
@@ -358,7 +358,7 @@ schema: {
             'name': 'Which local LLM tool is best for maximum privacy?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Jan AI is the most privacy-focused tool: fully open source (MIT licence), zero telemetry, no account required, all data stored locally in plain JSON files. Ollama is second: open source, no telemetry code, binds to localhost by default. LM Studio collects anonymous analytics by default and requires opt-out in Settings.',
+              'text': 'Jan AI is the most privacy-focused tool: fully open source (MIT licence), zero telemetry, no account required, all data stored locally in plain JSON files. Ollama is second: open source, no telemetry code, binds to localhost by default. LM Studio has no telemetry per its privacy policy, but update checks and model search send anonymized data.',
             },
           },
         ],
@@ -402,7 +402,7 @@ schema: {
         items: [
           'La inferencia local mantiene los datos de los prompts fuera de servidores de terceros. Los riesgos restantes son: telemetría de la herramienta de inferencia, archivos de modelos de fuentes no confiables, y la API de Ollama expuesta en la red.',
           'Ollama se enlaza a localhost por defecto -- no es accesible desde otros dispositivos a menos que establezcas explícitamente OLLAMA_HOST=0.0.0.0.',
-          'Deshabilita los análisis en LM Studio (Configuración → Privacidad → deshabilita "Enviar datos de uso anónimos") y GPT4All (Configuración → deshabilita telemetría).',
+          'Verifica qué envía LM Studio: según su política de privacidad no incluye telemetría, pero las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados. Rechaza la telemetría de GPT4All en el primer inicio (es opt-in) y bloquea el tráfico saliente tras descargar los modelos.',
           'Descarga los pesos del modelo únicamente desde Hugging Face (huggingface.co) o la biblioteca oficial de Ollama. Verifica los checksums SHA256 para implementaciones sensibles.',
           'Para datos regulados (HIPAA, GDPR, privilegio legal): habilita el cifrado de disco completo, usa una máquina con air-gap y audita todas las extensiones instaladas.',
         ],
@@ -414,7 +414,7 @@ schema: {
           '**La inferencia del modelo en sí es privada -- tus prompts nunca se envían a los servidores del proveedor del modelo.** Pero otros tres flujos de datos pueden filtrar información:',
         ],
         items: [
-          '**Telemetría de aplicaciones**: LM Studio, GPT4All y algunas otras herramientas recopilan análisis de uso anónimos por defecto. Estos pueden incluir recuentos de sesiones, nombres de modelos utilizados y métricas de rendimiento.',
+          '**Telemetría de aplicaciones**: LM Studio indica en su política de privacidad que no incluye telemetría ni seguimiento de usuarios, pero las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados. La telemetría de GPT4All es opt-in. Otras herramientas pueden recopilar análisis de uso; verifica con un firewall.',
           '**Fuentes de descarga de modelos**: los archivos GGUF maliciosos pueden contener código que se ejecuta durante la carga del modelo en motores de inferencia vulnerables. Un archivo de modelo no verificado es un riesgo de cadena de suministro.',
           '**Exposición de red**: el servidor API de Ollama es accesible para cualquier proceso en tu máquina. Si se configura incorrectamente con `OLLAMA_HOST=0.0.0.0`, se vuelve accesible a toda tu red sin autenticación.',
         ],
@@ -437,7 +437,7 @@ schema: {
         id: 'security-risks',
         title: '¿Cuáles son los mayores riesgos de seguridad en los LLMs locales?',
         items: [
-          '**Fugas de telemetría** → herramientas como LM Studio pueden enviar datos de uso',
+          '**Fugas de telemetría** → algunas herramientas envían datos de uso; LM Studio envía solicitudes de actualización y búsqueda de modelos',
           '**Archivos de modelos maliciosos** → los archivos GGUF no verificados pueden introducir riesgos',
           '**Exposición de red** → las APIs como Ollama pueden quedar expuestas si están mal configuradas',
         ],
@@ -498,13 +498,13 @@ schema: {
         title: '¿Cómo deshabilitar la telemetría en las herramientas de LLMs locales?',
         rows: [
           { 'Herramienta': '[Ollama](https://ollama.com)', 'Telemetría por defecto': 'Ninguna', 'Cómo confirmar/deshabilitar': 'Verifica github.com/ollama/ollama -- sin código de análisis' },
-          { 'Herramienta': '[LM Studio](https://lmstudio.ai)', 'Telemetría por defecto': 'Análisis anónimos habilitados', 'Cómo confirmar/deshabilitar': 'Configuración → Privacidad → desmarca "Enviar datos de uso anónimos"' },
+          { 'Herramienta': '[LM Studio](https://lmstudio.ai)', 'Telemetría por defecto': 'Ninguna (política); actualización/búsqueda anónimas', 'Cómo confirmar/deshabilitar': 'Nada que desactivar; verifica con un firewall' },
           { 'Herramienta': '[Jan AI](https://jan.ai)', 'Telemetría por defecto': 'Ninguna -- explícitamente deshabilitada', 'Cómo confirmar/deshabilitar': 'Código abierto -- audita github.com/janhq/jan' },
-          { 'Herramienta': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetría por defecto': 'Solo opt-in en el primer lanzamiento', 'Cómo confirmar/deshabilitar': 'Configuración → Privacidad → deshabilita análisis de uso' },
+          { 'Herramienta': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetría por defecto': 'Solo opt-in en el primer lanzamiento', 'Cómo confirmar/deshabilitar': 'Recházalo al primer inicio; verifica con un firewall' },
         ],
         columns: ['Herramienta', 'Telemetría por defecto', 'Cómo confirmar/deshabilitar'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-es.webp',
-          imageCaption: 'Ollama y Jan AI no recopilan nada por defecto; LM Studio y GPT4All traen analítica activada — revisa la configuración.',
+          imageCaption: 'Ollama y Jan AI no recopilan nada por defecto; LM Studio no tiene telemetría según su política; la de GPT4All es opt-in.',
         },
       threatModel: {
         id: 'threat-model',
@@ -524,10 +524,10 @@ schema: {
             { q: '¿Es usar un LLM local más privado que usar la API de OpenAI?', a: 'Sí, en cuanto a privacidad de prompts. Con un LLM local, tus prompts nunca salen de tu máquina. La API de OpenAI envía los prompts a los servidores de OpenAI para su procesamiento. Los Términos de Servicio de la API de OpenAI indican que la entrada/salida de la API no se usa para entrenar modelos por defecto, pero los datos sí transitan por su infraestructura. Para datos sensibles o regulados (médicos, legales, financieros), la inferencia local es la opción más conservadora.' },
             { q: '¿Cómo verifico que un archivo de modelo descargado es seguro?', a: 'Descarga modelos solo desde Hugging Face (huggingface.co) o la biblioteca oficial de Ollama. En Hugging Face, cada archivo muestra un hash SHA256 -- verifícalo con `sha256sum <model_file>` después de descargar. Limítate a modelos de publicadores conocidos: Meta, Google, Microsoft, Mistral AI y Qwen/Alibaba. Evita archivos compartidos anónimamente o en Discord.' },
             { q: '¿Cuál es la diferencia entre privacidad y seguridad para los LLMs locales?', a: 'Privacidad significa que tus prompts y salidas no son accesibles a terceros. Seguridad significa que tu sistema está protegido contra amenazas. Un LLM local puede ser privado (ningún dato sale de tu máquina) pero inseguro (modelo descargado de una fuente no confiable, o API de Ollama expuesta en la red). Ambos deben abordarse de forma independiente.' },
-            { q: '¿Puedo usar un LLM local para datos regulados por GDPR?', a: 'La inferencia local reduce significativamente el riesgo de GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) tenga la telemetría deshabilitada, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.' },
-            { q: '¿LM Studio envía datos a sus servidores?', a: 'LM Studio recopila análisis anónimos por defecto (recuentos de sesiones, nombres de modelos usados, métricas de rendimiento). No envía el contenido de los prompts. Para deshabilitar los análisis: Configuración → Privacidad → desmarca "Enviar datos de uso anónimos". La inferencia del modelo y los registros de chat permanecen locales independientemente de esta configuración.' },
+            { q: '¿Puedo usar un LLM local para datos regulados por GDPR?', a: 'La inferencia local reduce significativamente el riesgo de GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) no envíe tráfico de red inesperado, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.' },
+            { q: '¿LM Studio envía datos a sus servidores?', a: 'La política de privacidad de LM Studio indica que la aplicación no incluye telemetría ni seguimiento de usuarios. Las comprobaciones de actualización envían la versión de la app, el sistema operativo y la IP (vía CDN), y la búsqueda y descarga de modelos envían consultas de búsqueda anonimizadas. El contenido de los chats y documentos no se procesa salvo que uses los servicios en la nube de LM Studio. No hay ningún ajuste que desactivar; verifica con un firewall o una captura de paquetes.' },
             { q: '¿Cómo evito que otros dispositivos en mi red accedan a Ollama?', a: 'Por defecto, Ollama se enlaza a localhost (127.0.0.1:11434) y no es accesible desde otros dispositivos. Si anteriormente configuraste OLLAMA_HOST=0.0.0.0 para permitir acceso en red, reviértelo: `export OLLAMA_HOST=127.0.0.1:11434`. Verifica el aislamiento intentando conectarte desde otro dispositivo en tu red -- debería fallar.' },
-            { q: '¿Qué herramienta de LLM local es mejor para máxima privacidad?', a: 'Jan AI es la herramienta más orientada a la privacidad: completamente código abierto (licencia MIT), sin telemetría, sin cuenta requerida, todos los datos almacenados localmente en archivos JSON simples. Ollama es la segunda: código abierto, sin código de telemetría, se enlaza a localhost por defecto. LM Studio recopila análisis anónimos por defecto y requiere opt-out en Configuración.' },
+            { q: '¿Qué herramienta de LLM local es mejor para máxima privacidad?', a: 'Jan AI es la herramienta más orientada a la privacidad: completamente código abierto (licencia MIT), sin telemetría, sin cuenta requerida, todos los datos almacenados localmente en archivos JSON simples. Ollama es la segunda: código abierto, sin código de telemetría, se enlaza a localhost por defecto. LM Studio no tiene telemetría según su política de privacidad, pero las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados.' },
           ],
       },
       sources: {
@@ -544,7 +544,7 @@ schema: {
         content: '**La mayoría de los fallos de seguridad en LLMs locales provienen de descuidos de configuración, no de vulnerabilidades del modelo.** Estos son los cinco errores más frecuentes y cómo corregir cada uno.',
         items: [
           '**Error:** Descargar modelos de sitios de terceros (Discord, GitHub releases aleatorios). **Solución:** Usa solo Hugging Face (huggingface.co) o la biblioteca de Ollama. Verifica con `sha256sum`.',
-          '**Error:** Asumir que inferencia local = privacidad total. **Solución:** Deshabilita los análisis de LM Studio (Configuración → Privacidad) y la telemetría de GPT4All. Ejecuta `netstat -an | grep 11434` para confirmar que no hay puertos inesperados.',
+          '**Error:** Asumir que inferencia local = privacidad total. **Solución:** Bloquea el tráfico saliente tras descargar el modelo, inspecciona LM Studio y GPT4All con un firewall y rechaza la telemetría de GPT4All en el primer inicio. Ejecuta `netstat -an | grep 11434` para confirmar que no hay puertos inesperados.',
           '**Error:** Dejar `OLLAMA_HOST=0.0.0.0` activo después de pruebas. **Solución:** Revierte: `export OLLAMA_HOST=127.0.0.1:11434`. Prueba desde otro dispositivo -- la conexión debe ser rechazada.',
           '**Error:** Omitir el cifrado de disco para cargas de trabajo HIPAA/GDPR. **Solución:** Habilita FileVault (macOS) o BitLocker (Windows). Cifra la carpeta de registros de chat de LM Studio por separado.',
           '**Error:** No revisar las extensiones de terceros en Open WebUI o Jan AI. **Solución:** Audita las extensiones instaladas mensualmente. Elimina cualquiera que solicite acceso a la red que no reconozcas.',
@@ -555,9 +555,9 @@ schema: {
         title: '¿Cuáles son las consideraciones de cumplimiento regional?',
         content: '**La inferencia local de LLMs reduce el riesgo de residencia de datos, pero el cumplimiento regulatorio completo requiere controles adicionales por región.**',
         items: [
-          '**UE / GDPR (2018):** La inferencia local elimina la obligación del procesador de datos del Artículo 28 para el proveedor del modelo. Aún debes deshabilitar los análisis de LM Studio, habilitar el cifrado de disco y documentar tu configuración de procesamiento de datos para cualquier DPIA. Realiza una evaluación de interés legítimo antes de procesar datos personales.',
+          '**UE / GDPR (2018):** La inferencia local elimina la obligación del procesador de datos del Artículo 28 para el proveedor del modelo. Aún debes verificar con un firewall el tráfico de red de LM Studio, habilitar el cifrado de disco y documentar tu configuración de procesamiento de datos para cualquier DPIA. Realiza una evaluación de interés legítimo antes de procesar datos personales.',
           '**Estados Unidos / HIPAA:** HIPAA requiere salvaguardas para PHI: cifrado de disco completo (el "puerto seguro de cifrado"), controles de acceso y registro de auditoría. Ollama con FileVault habilitado y telemetría deshabilitada es un punto de partida razonable para HIPAA. El cumplimiento formal requiere una evaluación de riesgos completa.',
-          '**Japón / APPI (2022):** La Ley de Protección de Información Personal requiere protección de datos personales durante el procesamiento. La inferencia local en una máquina con air-gap satisface la localización de datos. Deshabilita las verificaciones de actualización de Ollama y los análisis de LM Studio para el cumplimiento de APPI.',
+          '**Japón / APPI (2022):** La Ley de Protección de Información Personal requiere protección de datos personales durante el procesamiento. La inferencia local en una máquina con air-gap satisface la localización de datos. Deshabilita las verificaciones de actualización de Ollama y verifica con un firewall el tráfico de red de LM Studio para el cumplimiento de APPI.',
           '**China / PIPL (2021):** Ejecutar un LLM local para uso interno no requiere registro en la CAC. Si implementas un LLM local como servicio público en China, se requiere el registro de algoritmos de la CAC.',
         ],
       },
@@ -656,7 +656,7 @@ schema: {
             'name': '¿Puedo usar un LLM local para datos regulados por GDPR?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'La inferencia local reduce significativamente el riesgo de GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) tenga la telemetría deshabilitada, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.',
+              'text': 'La inferencia local reduce significativamente el riesgo de GDPR porque los datos no salen de tu infraestructura. Sin embargo, aún debes verificar que la herramienta de inferencia (Ollama, LM Studio) no envíe tráfico de red inesperado, que el cifrado de disco esté habilitado y que los controles de acceso estén en su lugar. Para los requisitos de DPIA del Artículo 35, documenta tu configuración de procesamiento de datos y confirma que ningún dato personal transite por servidores de terceros.',
             },
           },
           {
@@ -664,7 +664,7 @@ schema: {
             'name': '¿LM Studio envía datos a sus servidores?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LM Studio recopila análisis anónimos por defecto (recuentos de sesiones, nombres de modelos usados, métricas de rendimiento). No envía el contenido de los prompts. Para deshabilitar los análisis: Configuración → Privacidad → desmarca "Enviar datos de uso anónimos". La inferencia del modelo y los registros de chat permanecen locales independientemente de esta configuración.',
+              'text': 'La política de privacidad de LM Studio indica que la aplicación no incluye telemetría ni seguimiento de usuarios. Las comprobaciones de actualización envían la versión de la app, el sistema operativo y la IP (vía CDN), y la búsqueda y descarga de modelos envían consultas de búsqueda anonimizadas. El contenido de los chats y documentos no se procesa salvo que uses los servicios en la nube de LM Studio. No hay ningún ajuste que desactivar; verifica con un firewall o una captura de paquetes.',
             },
           },
           {
@@ -680,7 +680,7 @@ schema: {
             'name': '¿Qué herramienta de LLM local es mejor para máxima privacidad?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Jan AI es la herramienta más orientada a la privacidad: completamente código abierto (licencia MIT), sin telemetría, sin cuenta requerida, todos los datos almacenados localmente en archivos JSON simples. Ollama es la segunda: código abierto, sin código de telemetría, se enlaza a localhost por defecto. LM Studio recopila análisis anónimos por defecto y requiere opt-out en Configuración.',
+              'text': 'Jan AI es la herramienta más orientada a la privacidad: completamente código abierto (licencia MIT), sin telemetría, sin cuenta requerida, todos los datos almacenados localmente en archivos JSON simples. Ollama es la segunda: código abierto, sin código de telemetría, se enlaza a localhost por defecto. LM Studio no tiene telemetría según su política de privacidad, pero las comprobaciones de actualización y la búsqueda de modelos envían datos anonimizados.',
             },
           },
         ],
@@ -724,7 +724,7 @@ schema: {
         items: [
           'يُبقي الاستدلال المحلي بيانات المطالبات بعيدة عن خوادم الطرف الثالث. المخاطر المتبقية هي: القياس عن بُعد لأداة الاستدلال، وملفات النماذج من مصادر غير موثوقة، وواجهة API لـOllama المكشوفة على الشبكة.',
           'يرتبط Ollama بـlocalhost افتراضيًا — وهو غير قابل للوصول من أجهزة أخرى ما لم تضبط صراحةً OLLAMA_HOST=0.0.0.0.',
-          'عطّل التحليلات في LM Studio (الإعدادات → الخصوصية → عطّل "إرسال بيانات استخدام مجهولة") وGPT4All (الإعدادات → عطّل القياس عن بُعد).',
+          'تحقق مما يرسله LM Studio: وفق سياسة الخصوصية لا يتضمن قياسًا عن بُعد، لكن فحوصات التحديث والبحث عن النماذج ترسل بيانات مجهولة الهوية. ارفض القياس عن بُعد في GPT4All عند أول تشغيل (هو اختياري) واحجب الاتصالات الصادرة بعد تنزيل النماذج.',
           'نزّل أوزان النموذج فقط من Hugging Face (huggingface.co) أو مكتبة Ollama الرسمية. تحقق من checksums بصيغة SHA256 للتطبيقات الحساسة.',
           'للبيانات الخاضعة للتنظيم (HIPAA، GDPR، الامتياز القانوني): فعّل تشفير القرص الكامل، استخدم جهازًا معزولًا عن الشبكة (air-gap) ودقّق جميع الإضافات المثبتة.',
         ],
@@ -736,7 +736,7 @@ schema: {
           '**استدلال النموذج نفسه خاص — لا تُرسَل مطالباتك أبدًا إلى خوادم مزوّد النموذج.** لكن ثلاثة تدفقات بيانات أخرى قد تُسرّب المعلومات:',
         ],
         items: [
-          '**القياس عن بُعد للتطبيقات**: يجمع LM Studio وGPT4All وبعض الأدوات الأخرى تحليلات استخدام مجهولة افتراضيًا. قد تشمل هذه عدد الجلسات وأسماء النماذج المستخدمة ومقاييس الأداء.',
+          '**القياس عن بُعد للتطبيقات**: تنص سياسة خصوصية LM Studio على أنه لا يتضمن قياسًا عن بُعد ولا تتبعًا خاصًا بالمستخدم، لكن فحوصات التحديث والبحث عن النماذج ترسل بيانات مجهولة الهوية. القياس عن بُعد في GPT4All اختياري. قد تجمع أدوات أخرى تحليلات استخدام، فتحقق بجدار حماية.',
           '**مصادر تنزيل النماذج**: قد تحتوي ملفات GGUF الضارة على شيفرة تُنفَّذ أثناء تحميل النموذج في محركات استدلال ضعيفة. ملف نموذج غير مُتحقق منه يمثّل خطر سلسلة توريد.',
           '**التعرّض للشبكة**: خادم API لـOllama قابل للوصول لأي عملية على جهازك. إذا أُعِدّ بشكل خاطئ بـ`OLLAMA_HOST=0.0.0.0`، يصبح قابلًا للوصول من شبكتك بالكامل دون مصادقة.',
         ],
@@ -759,7 +759,7 @@ schema: {
         id: 'security-risks',
         title: 'ما هي أكبر مخاطر الأمان في نماذج LLM المحلية؟',
         items: [
-          '**تسريبات القياس عن بُعد** → أدوات مثل LM Studio قد ترسل بيانات استخدام',
+          '**تسريبات القياس عن بُعد** → بعض الأدوات ترسل بيانات استخدام؛ يرسل LM Studio طلبات فحص التحديث والبحث عن النماذج',
           '**ملفات النماذج الضارة** → ملفات GGUF غير المُتحقق منها قد تُدخل مخاطر',
           '**التعرّض للشبكة** → واجهات API مثل Ollama قد تنكشف إذا أُعِدّت بشكل خاطئ',
         ],
@@ -820,13 +820,13 @@ schema: {
         title: 'كيف تعطّل القياس عن بُعد في أدوات نماذج LLM المحلية؟',
         rows: [
           { 'Herramienta': '[Ollama](https://ollama.com)', 'Telemetría por defecto': 'لا شيء', 'Cómo confirmar/deshabilitar': 'تحقق من github.com/ollama/ollama — بلا شيفرة تحليلات' },
-          { 'Herramienta': '[LM Studio](https://lmstudio.ai)', 'Telemetría por defecto': 'تحليلات مجهولة مُفعّلة', 'Cómo confirmar/deshabilitar': 'الإعدادات → الخصوصية → ألغِ تحديد "إرسال بيانات استخدام مجهولة"' },
+          { 'Herramienta': '[LM Studio](https://lmstudio.ai)', 'Telemetría por defecto': 'لا شيء (السياسة)؛ التحديث/البحث مجهولان', 'Cómo confirmar/deshabilitar': 'لا شيء لتعطيله؛ تحقق بجدار حماية' },
           { 'Herramienta': '[Jan AI](https://jan.ai)', 'Telemetría por defecto': 'لا شيء — مُعطّلة صراحةً', 'Cómo confirmar/deshabilitar': 'مفتوح المصدر — دقّق github.com/janhq/jan' },
-          { 'Herramienta': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetría por defecto': 'اشتراك اختياري فقط عند الإطلاق الأول', 'Cómo confirmar/deshabilitar': 'الإعدادات → الخصوصية → عطّل تحليلات الاستخدام' },
+          { 'Herramienta': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetría por defecto': 'اشتراك اختياري فقط عند الإطلاق الأول', 'Cómo confirmar/deshabilitar': 'ارفضه عند أول تشغيل؛ تحقق بجدار حماية' },
         ],
         columns: ['Herramienta', 'Telemetría por defecto', 'Cómo confirmar/deshabilitar'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-ar.webp',
-          imageCaption: 'لا يجمع Ollama وJan AI أي شيء افتراضيًا؛ يأتي LM Studio وGPT4All بتحليلات مفعّلة — تحقق من الإعدادات.',
+          imageCaption: 'لا يجمع Ollama وJan AI أي شيء افتراضيًا؛ لا يتضمن LM Studio قياسًا عن بُعد وفق سياسته؛ والقياس في GPT4All اختياري.',
         },
       threatModel: {
         id: 'threat-model',
@@ -846,10 +846,10 @@ schema: {
             { q: 'هل استخدام نموذج LLM محلي أكثر خصوصية من استخدام واجهة API الخاصة بـOpenAI؟', a: 'نعم، من حيث خصوصية المطالبات. مع نموذج LLM محلي، لا تغادر مطالباتك جهازك أبدًا. تُرسل واجهة API الخاصة بـOpenAI المطالبات إلى خوادم OpenAI للمعالجة. تشير شروط خدمة واجهة API الخاصة بـOpenAI إلى أن مدخلات/مخرجات API لا تُستخدم لتدريب النماذج افتراضيًا، لكن البيانات تمر فعلاً عبر بنيتها التحتية. للبيانات الحساسة أو الخاضعة للتنظيم (طبية، قانونية، مالية)، الاستدلال المحلي هو الخيار الأكثر تحفظًا.' },
             { q: 'كيف أتحقق من أن ملف نموذج مُنزَّل آمن؟', a: 'نزّل النماذج فقط من Hugging Face (huggingface.co) أو مكتبة Ollama الرسمية. في Hugging Face، يعرض كل ملف تجزئة SHA256 — تحقق منها بـ`sha256sum <model_file>` بعد التنزيل. التزم بنماذج الناشرين المعروفين: Meta، Google، Microsoft، Mistral AI وQwen/Alibaba. تجنّب الملفات المشتركة بشكل مجهول أو على Discord.' },
             { q: 'ما الفرق بين الخصوصية والأمان لنماذج LLM المحلية؟', a: 'الخصوصية تعني أن مطالباتك ومخرجاتك غير قابلة للوصول من قبل الأطراف الثالثة. الأمان يعني أن نظامك محمي من التهديدات. قد يكون نموذج LLM محلي خاصًا (لا تغادر أي بيانات جهازك) لكن غير آمن (نموذج مُنزَّل من مصدر غير موثوق، أو واجهة API لـOllama مكشوفة على الشبكة). يجب معالجة الاثنين بشكل مستقل.' },
-            { q: 'هل يمكنني استخدام نموذج LLM محلي لبيانات خاضعة لـGDPR؟', a: 'يقلّل الاستدلال المحلي خطر GDPR بشكل كبير لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لديها القياس عن بُعد مُعطّلًا، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.' },
-            { q: 'هل يُرسل LM Studio بيانات إلى خوادمه؟', a: 'يجمع LM Studio تحليلات مجهولة افتراضيًا (عدد الجلسات، أسماء النماذج المستخدمة، مقاييس الأداء). لا يُرسل محتوى المطالبات. لتعطيل التحليلات: الإعدادات → الخصوصية → ألغِ تحديد "إرسال بيانات استخدام مجهولة". يبقى استدلال النموذج وسجلات المحادثة محليًا بغض النظر عن هذا الإعداد.' },
+            { q: 'هل يمكنني استخدام نموذج LLM محلي لبيانات خاضعة لـGDPR؟', a: 'يقلّل الاستدلال المحلي خطر GDPR بشكل كبير لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لا ترسل حركة شبكة غير متوقعة، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.' },
+            { q: 'هل يُرسل LM Studio بيانات إلى خوادمه؟', a: 'تنص سياسة خصوصية LM Studio على أن التطبيق لا يتضمن قياسًا عن بُعد ولا تتبعًا خاصًا بالمستخدم. ترسل فحوصات التحديث إصدار التطبيق ونظام التشغيل وعنوان IP (عبر شبكة CDN)، وترسل عمليات البحث عن النماذج وتنزيلها استعلامات بحث مجهولة الهوية. لا يعالج التطبيق محتوى المحادثات والمستندات إلا إذا استخدمت خدمات LM Studio السحابية. لا يوجد إعداد لتعطيله؛ تحقق بجدار حماية أو التقاط حزم.' },
             { q: 'كيف أمنع الأجهزة الأخرى على شبكتي من الوصول إلى Ollama؟', a: 'افتراضيًا، يرتبط Ollama بـlocalhost (127.0.0.1:11434) وهو غير قابل للوصول من أجهزة أخرى. إذا سبق أن ضبطت OLLAMA_HOST=0.0.0.0 للسماح بالوصول الشبكي، أعِده: `export OLLAMA_HOST=127.0.0.1:11434`. تحقق من العزل بمحاولة الاتصال من جهاز آخر على شبكتك — يجب أن يفشل.' },
-            { q: 'ما أداة LLM المحلية الأفضل لأقصى خصوصية؟', a: 'Jan AI هي الأداة الأكثر توجهًا نحو الخصوصية: مفتوحة المصدر بالكامل (رخصة MIT)، بلا قياس عن بُعد، بلا حساب مطلوب، جميع البيانات مخزّنة محليًا في ملفات JSON بسيطة. Ollama في المرتبة الثانية: مفتوح المصدر، بلا شيفرة قياس عن بُعد، يرتبط بـlocalhost افتراضيًا. يجمع LM Studio تحليلات مجهولة افتراضيًا ويتطلب إلغاء الاشتراك في الإعدادات.' },
+            { q: 'ما أداة LLM المحلية الأفضل لأقصى خصوصية؟', a: 'Jan AI هي الأداة الأكثر توجهًا نحو الخصوصية: مفتوحة المصدر بالكامل (رخصة MIT)، بلا قياس عن بُعد، بلا حساب مطلوب، جميع البيانات مخزّنة محليًا في ملفات JSON بسيطة. Ollama في المرتبة الثانية: مفتوح المصدر، بلا شيفرة قياس عن بُعد، يرتبط بـlocalhost افتراضيًا. لا يتضمن LM Studio قياسًا عن بُعد وفق سياسة الخصوصية، لكن فحوصات التحديث والبحث عن النماذج ترسل بيانات مجهولة الهوية.' },
           ],
       },
       sources: {
@@ -866,7 +866,7 @@ schema: {
         content: '**معظم إخفاقات الأمان في نماذج LLM المحلية تنبع من إهمال الإعداد، لا من ثغرات النموذج.** هذه هي الأخطاء الخمسة الأكثر تكرارًا وكيفية تصحيح كل منها.',
         items: [
           '**خطأ:** تنزيل النماذج من مواقع طرف ثالث (Discord، إصدارات GitHub عشوائية). **الحل:** استخدم فقط Hugging Face (huggingface.co) أو مكتبة Ollama. تحقق بـ`sha256sum`.',
-          '**خطأ:** افتراض أن الاستدلال المحلي = خصوصية كاملة. **الحل:** عطّل تحليلات LM Studio (الإعدادات → الخصوصية) والقياس عن بُعد لـGPT4All. شغّل `netstat -an | grep 11434` للتأكد من عدم وجود منافذ غير متوقعة.',
+          '**خطأ:** افتراض أن الاستدلال المحلي = خصوصية كاملة. **الحل:** احجب الاتصالات الصادرة بعد تنزيل النموذج وافحص حركة LM Studio وGPT4All بجدار حماية، وارفض القياس عن بُعد في GPT4All عند أول تشغيل. شغّل `netstat -an | grep 11434` للتأكد من عدم وجود منافذ غير متوقعة.',
           '**خطأ:** ترك `OLLAMA_HOST=0.0.0.0` نشطًا بعد الاختبار. **الحل:** أعِده: `export OLLAMA_HOST=127.0.0.1:11434`. اختبر من جهاز آخر — يجب رفض الاتصال.',
           '**خطأ:** تجاهل تشفير القرص لأحمال عمل HIPAA/GDPR. **الحل:** فعّل FileVault (macOS) أو BitLocker (Windows). شفّر مجلد سجلات محادثة LM Studio بشكل منفصل.',
           '**خطأ:** عدم مراجعة إضافات الطرف الثالث في Open WebUI أو Jan AI. **الحل:** دقّق الإضافات المثبتة شهريًا. احذف أي إضافة تطلب وصولًا للشبكة لا تعرفها.',
@@ -878,8 +878,8 @@ schema: {
         content: '**يقلّل الاستدلال المحلي لنماذج LLM خطر إقامة البيانات، لكن الامتثال التنظيمي الكامل يتطلب ضوابط إضافية لكل منطقة.**',
         items: [
           '**دول الخليج / السعودية PDPL (2023):** يقلّل الاستدلال المحلي خطر نقل البيانات عبر الحدود بموجب نظام حماية البيانات الشخصية السعودي. فعّل تشفير القرص الكامل ووثّق معالجة البيانات. في الإمارات، يدعم التشغيل داخل المؤسسة متطلبات سيادة البيانات؛ تُتيح النماذج العربية السيادية مثل Jais وALLaM وFalcon استدلالًا محليًا بالكامل دون الاعتماد على مزودين أجانب.',
-          '**الاتحاد الأوروبي / GDPR (2018):** يلغي الاستدلال المحلي التزام معالج البيانات في المادة 28 لمزوّد النموذج. لا يزال يجب تعطيل تحليلات LM Studio وتفعيل تشفير القرص وتوثيق إعداد معالجة البيانات لأي DPIA. أجرِ تقييم مصلحة مشروعة قبل معالجة البيانات الشخصية.',
-          '**اليابان / APPI (2022):** يتطلب قانون حماية المعلومات الشخصية حماية البيانات الشخصية أثناء المعالجة. يلبّي الاستدلال المحلي على جهاز معزول عن الشبكة متطلب توطين البيانات. عطّل فحوصات تحديث Ollama وتحليلات LM Studio للامتثال لـAPPI.',
+          '**الاتحاد الأوروبي / GDPR (2018):** يلغي الاستدلال المحلي التزام معالج البيانات في المادة 28 لمزوّد النموذج. لا يزال يجب التحقق من حركة شبكة LM Studio بجدار حماية وتفعيل تشفير القرص وتوثيق إعداد معالجة البيانات لأي DPIA. أجرِ تقييم مصلحة مشروعة قبل معالجة البيانات الشخصية.',
+          '**اليابان / APPI (2022):** يتطلب قانون حماية المعلومات الشخصية حماية البيانات الشخصية أثناء المعالجة. يلبّي الاستدلال المحلي على جهاز معزول عن الشبكة متطلب توطين البيانات. عطّل فحوصات تحديث Ollama وتحقق من حركة شبكة LM Studio للامتثال لـAPPI.',
           '**الصين / PIPL (2021):** تشغيل نموذج LLM محلي للاستخدام الداخلي لا يتطلب تسجيلًا لدى CAC. إذا نشرت نموذج LLM محلي كخدمة عامة في الصين، يُطلب تسجيل الخوارزميات لدى CAC.',
         ],
       },
@@ -978,7 +978,7 @@ schema: {
             'name': 'هل يمكنني استخدام نموذج LLM محلي لبيانات خاضعة لـGDPR؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'يقلّل الاستدلال المحلي خطر GDPR بشكل كبير لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لديها القياس عن بُعد مُعطّلًا، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.',
+              'text': 'يقلّل الاستدلال المحلي خطر GDPR بشكل كبير لأن البيانات لا تغادر بنيتك التحتية. ومع ذلك، لا يزال يجب التحقق من أن أداة الاستدلال (Ollama، LM Studio) لا ترسل حركة شبكة غير متوقعة، وأن تشفير القرص مُفعّل، وأن ضوابط الوصول في مكانها. لمتطلبات DPIA في المادة 35، وثّق إعداد معالجة البيانات وأكّد أن لا بيانات شخصية تمر عبر خوادم طرف ثالث.',
             },
           },
           {
@@ -986,7 +986,7 @@ schema: {
             'name': 'هل يُرسل LM Studio بيانات إلى خوادمه؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'يجمع LM Studio تحليلات مجهولة افتراضيًا (عدد الجلسات، أسماء النماذج المستخدمة، مقاييس الأداء). لا يُرسل محتوى المطالبات. لتعطيل التحليلات: الإعدادات → الخصوصية → ألغِ تحديد "إرسال بيانات استخدام مجهولة". يبقى استدلال النموذج وسجلات المحادثة محليًا بغض النظر عن هذا الإعداد.',
+              'text': 'تنص سياسة خصوصية LM Studio على أن التطبيق لا يتضمن قياسًا عن بُعد ولا تتبعًا خاصًا بالمستخدم. ترسل فحوصات التحديث إصدار التطبيق ونظام التشغيل وعنوان IP (عبر شبكة CDN)، وترسل عمليات البحث عن النماذج وتنزيلها استعلامات بحث مجهولة الهوية. لا يعالج التطبيق محتوى المحادثات والمستندات إلا إذا استخدمت خدمات LM Studio السحابية. لا يوجد إعداد لتعطيله؛ تحقق بجدار حماية أو التقاط حزم.',
             },
           },
           {
@@ -1002,7 +1002,7 @@ schema: {
             'name': 'ما أداة LLM المحلية الأفضل لأقصى خصوصية؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Jan AI هي الأداة الأكثر توجهًا نحو الخصوصية: مفتوحة المصدر بالكامل (رخصة MIT)، بلا قياس عن بُعد، بلا حساب مطلوب، جميع البيانات مخزّنة محليًا في ملفات JSON بسيطة. Ollama في المرتبة الثانية: مفتوح المصدر، بلا شيفرة قياس عن بُعد، يرتبط بـlocalhost افتراضيًا. يجمع LM Studio تحليلات مجهولة افتراضيًا ويتطلب إلغاء الاشتراك في الإعدادات.',
+              'text': 'Jan AI هي الأداة الأكثر توجهًا نحو الخصوصية: مفتوحة المصدر بالكامل (رخصة MIT)، بلا قياس عن بُعد، بلا حساب مطلوب، جميع البيانات مخزّنة محليًا في ملفات JSON بسيطة. Ollama في المرتبة الثانية: مفتوح المصدر، بلا شيفرة قياس عن بُعد، يرتبط بـlocalhost افتراضيًا. لا يتضمن LM Studio قياسًا عن بُعد وفق سياسة الخصوصية، لكن فحوصات التحديث والبحث عن النماذج ترسل بيانات مجهولة الهوية.',
             },
           },
         ],
@@ -1117,11 +1117,11 @@ schema: {
           },
           {
             q: 'Posso usar um LLM local para dados regulados pela LGPD?',
-            a: 'A inferência local reduz significativamente o risco de conformidade com a LGPD porque os dados não saem da sua infraestrutura. No entanto, você ainda deve verificar se a ferramenta de inferência (Ollama, LM Studio) tem a telemetria desativada, se a criptografia de disco está habilitada e se os controles de acesso estão em vigor. Para requisitos de relatório de impacto à proteção de dados, documente sua configuração de tratamento de dados e confirme que nenhum dado pessoal transita por servidores de terceiros.',
+            a: 'A inferência local reduz significativamente o risco de conformidade com a LGPD porque os dados não saem da sua infraestrutura. No entanto, você ainda deve verificar se a ferramenta de inferência (Ollama, LM Studio) não envia tráfego de rede inesperado, se a criptografia de disco está habilitada e se os controles de acesso estão em vigor. Para requisitos de relatório de impacto à proteção de dados, documente sua configuração de tratamento de dados e confirme que nenhum dado pessoal transita por servidores de terceiros.',
           },
           {
             q: 'O LM Studio envia dados para os servidores dele?',
-            a: 'O LM Studio coleta análises anônimas por padrão (contagens de sessões, nomes de modelos usados, métricas de desempenho). Ele não envia o conteúdo dos prompts. Para desativar as análises: Configurações → Privacidade → desmarque "Enviar dados de uso anônimos". A inferência do modelo e os registros de chat permanecem locais independentemente dessa configuração.',
+            a: 'A política de privacidade do LM Studio afirma que o aplicativo não inclui telemetria nem rastreamento de usuários. As verificações de atualização enviam a versão do app, o sistema operacional e o IP (via CDN), e a busca e o download de modelos enviam consultas de busca anonimizadas. O conteúdo de chats e documentos não é tratado, a menos que você use os serviços em nuvem do LM Studio. Não há configuração para desativar; verifique com um firewall ou captura de pacotes.',
           },
         ],
       },
@@ -1163,7 +1163,7 @@ schema: {
         items: [
           'Lokale Inferenz hält Prompt-Daten von den Servern Dritter fern. Die verbleibenden Risiken sind: Telemetrie des Inferenz-Tools, Modelldateien aus nicht vertrauenswürdigen Quellen und die Ollama-API, die im Netzwerk verfügbar gemacht wird.',
           'Ollama bindet sich standardmäßig an localhost -- es ist nicht von anderen Geräten aus erreichbar, es sei denn, Sie setzen explizit OLLAMA_HOST=0.0.0.0.',
-          'Deaktivieren Sie Analytics in LM Studio (Einstellungen → Datenschutz → „Anonyme Nutzungsdaten senden" deaktivieren) und GPT4All (Einstellungen → Telemetrie deaktivieren).',
+          'Prüfen Sie, was LM Studio sendet: Laut Datenschutzerklärung enthält es keine Telemetrie, aber Update-Prüfungen und Modellsuche senden anonymisierte Daten. Lehnen Sie die Telemetrie in GPT4All beim ersten Start ab (Opt-in) und blockieren Sie nach dem Modell-Download ausgehenden Datenverkehr.',
           'Laden Sie Modellgewichte nur von Hugging Face (huggingface.co) oder aus der offiziellen Ollama-Bibliothek herunter. Überprüfen Sie SHA256-Prüfsummen für sensible Bereitstellungen.',
           'Für regulierte Daten (HIPAA, DSGVO, rechtliche Privilegien): Aktivieren Sie Vollverschlüsselung der Festplatte, verwenden Sie einen isolierten Computer und überprüfen Sie alle installierten Erweiterungen.',
         ],
@@ -1175,7 +1175,7 @@ schema: {
           '**Die Modell-Inferenz selbst ist privat -- Ihre Prompts werden niemals an die Server des Modellanbieters gesendet.** Aber drei weitere Datenflüsse können zu Informationslecks führen:',
         ],
         items: [
-          '**Anwendungs-Telemetrie**: LM Studio, GPT4All und einige andere Tools erfassen standardmäßig anonyme Nutzungsanalysen. Diese können Sitzungszahlen, verwendete Modellnamen und Leistungsmetriken enthalten.',
+          '**Anwendungs-Telemetrie**: LM Studio gibt in seiner Datenschutzerklärung an, keine Telemetrie und kein nutzerbezogenes Tracking zu enthalten, aber Update-Prüfungen und Modellsuche senden anonymisierte Daten. Die GPT4All-Telemetrie ist Opt-in. Andere Tools erfassen eventuell Nutzungsanalysen, prüfen Sie daher mit einer Firewall.',
           '**Modell-Download-Quellen**: Bösartige GGUF-Dateien können Code enthalten, der sich beim Laden von Modellen in anfälligen Inferenz-Engines ausführt. Eine ungeprüfte Modelldatei ist ein Supply-Chain-Risiko.',
           '**Netzwerk-Exposition**: Die Ollama-API ist für jeden Prozess auf Ihrem Computer zugänglich. Bei Fehlkonfiguration mit `OLLAMA_HOST=0.0.0.0` wird sie für Ihr gesamtes Netzwerk ohne Authentifizierung erreichbar.',
         ],
@@ -1198,7 +1198,7 @@ schema: {
         id: 'security-risks',
         title: 'Was sind die größten Sicherheitsrisiken bei lokalen LLMs?',
         items: [
-          '**Telemetrie-Lecks** → Tools wie LM Studio können Nutzungsdaten senden',
+          '**Telemetrie-Lecks** → manche Tools senden Nutzungsdaten; LM Studio sendet Anfragen für Update-Prüfung und Modellsuche',
           '**Bösartige Modelldateien** → nicht überprüfte GGUF-Dateien können Risiken einführen',
           '**Netzwerk-Exposition** → APIs wie Ollama können bei Fehlkonfiguration offengelegt werden',
         ],
@@ -1267,13 +1267,13 @@ schema: {
         title: 'Wie Sie Telemetrie in lokalen LLM-Tools deaktivieren',
         rows: [
           { 'Tool': '[Ollama](https://ollama.com)', 'Telemetrie Standard': 'Keine erfasst', 'Überprüfung/Deaktivieren': 'github.com/ollama/ollama -- kein Analytics-Code' },
-          { 'Tool': '[LM Studio](https://lmstudio.ai)', 'Telemetrie Standard': 'Anonyme Analytics aktiviert', 'Überprüfung/Deaktivieren': 'Einstellungen → Datenschutz → „Anonyme Nutzungsdaten senden" deaktivieren' },
+          { 'Tool': '[LM Studio](https://lmstudio.ai)', 'Telemetrie Standard': 'Keine laut Policy; Update/Suche anonymisiert', 'Überprüfung/Deaktivieren': 'Nichts zu deaktivieren; per Firewall prüfen' },
           { 'Tool': '[Jan AI](https://jan.ai)', 'Telemetrie Standard': 'Keine -- explizit deaktiviert', 'Überprüfung/Deaktivieren': 'Open Source -- überprüfen Sie github.com/janhq/jan' },
-          { 'Tool': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetrie Standard': 'Nur Opt-in beim ersten Start', 'Überprüfung/Deaktivieren': 'Einstellungen → Datenschutz → Nutzungs-Analytics deaktivieren' },
+          { 'Tool': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetrie Standard': 'Nur Opt-in beim ersten Start', 'Überprüfung/Deaktivieren': 'Beim ersten Start ablehnen; per Firewall prüfen' },
         ],
         columns: ['Tool', 'Telemetrie Standard', 'Überprüfung/Deaktivieren'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-de.webp',
-          imageCaption: 'Ollama und Jan AI erfassen standardmäßig nichts; LM Studio und GPT4All liefern Analytics aktiviert aus — Einstellungen prüfen.',
+          imageCaption: 'Ollama und Jan AI erfassen standardmäßig nichts; LM Studio hat laut Policy keine Telemetrie; GPT4All-Telemetrie ist Opt-in.',
         },
       threatModel: {
         id: 'threat-model',
@@ -1304,8 +1304,8 @@ schema: {
             a: 'Ja, mit korrekter Konfiguration. Aktivieren Sie Vollverschlüsselung (AES-256) für die Systemfestplatte, deaktivieren Sie alle Telemetrie, blockieren Sie ausgehende Verbindungen mit einer Firewall und isolieren Sie das Gerät vom Internet. Dokumentieren Sie diese Konfiguration in Ihrer Datenschutz-Folgenabschätzung. Siehe Punkt 12 der Checkliste für air-gapped Umgebungen.',
           },
           {
-            q: 'Wie überprüfe ich, dass LM Studio die Telemetrie wirklich deaktiviert hat?',
-            a: 'Nutzen Sie ein Tool wie Wireshark oder Little Snitch, um den Netzwerkverkehr von LM Studio zu überwachen. Mit deaktivierter Telemetrie sollten Sie keine Verbindungen zu Analysediensten (mixpanel.com, sentry.io, etc.) sehen.',
+            q: 'Wie überprüfe ich, was LM Studio ins Netz sendet?',
+            a: 'Nutzen Sie ein Tool wie Wireshark oder Little Snitch, um den Netzwerkverkehr von LM Studio zu überwachen. Laut Datenschutzerklärung enthält die Anwendung keine Telemetrie; zu erwarten sind nur Update-Prüfungen sowie Modellsuche und -downloads. Weitere, unerwartete Verbindungen wären ein Warnsignal.',
           },
           {
             q: 'Sind SHA256-Hashes allein ausreichend, um GGUF-Dateien zu überprüfen?',
@@ -1313,11 +1313,11 @@ schema: {
           },
           {
             q: 'Kann ich ein lokales LLM für DSGVO-regulierte Daten verwenden?',
-            a: 'Lokale Inferenz reduziert das DSGVO-Risiko erheblich, da Daten Ihre Infrastruktur nicht verlassen. Sie müssen jedoch immer noch überprüfen, dass das Inferenz-Tool (Ollama, LM Studio) Telemetrie deaktiviert hat, dass Festplattenverschlüsselung aktiviert ist und dass Zugriffskontrolle vorhanden ist. Für Artikel-35-DPIA-Anforderungen dokumentieren Sie Ihr Datenverarbeitungs-Setup und bestätigen Sie, dass keine personenbezogenen Daten Drittanbieter-Server durchlaufen.',
+            a: 'Lokale Inferenz reduziert das DSGVO-Risiko erheblich, da Daten Ihre Infrastruktur nicht verlassen. Sie müssen jedoch immer noch überprüfen, dass das Inferenz-Tool (Ollama, LM Studio) keinen unerwarteten Netzwerkverkehr sendet, dass Festplattenverschlüsselung aktiviert ist und dass Zugriffskontrolle vorhanden ist. Für Artikel-35-DPIA-Anforderungen dokumentieren Sie Ihr Datenverarbeitungs-Setup und bestätigen Sie, dass keine personenbezogenen Daten Drittanbieter-Server durchlaufen.',
           },
           {
             q: 'Sendet LM Studio Daten an seine Server?',
-            a: 'LM Studio erfasst standardmäßig anonyme Analytics (Sitzungszähler, verwendete Modellnamen, Leistungsmetriken). Es sendet keinen Prompt-Inhalt. Zum Deaktivieren von Analytics: Einstellungen → Datenschutz → „Anonyme Nutzungsdaten senden" deaktivieren. Modell-Inferenz und Chat-Protokolle bleiben lokal, unabhängig von dieser Einstellung.',
+            a: 'Laut Datenschutzerklärung von LM Studio enthält die Anwendung keine Telemetrie und kein nutzerbezogenes Tracking. Update-Prüfungen senden App-Version, Betriebssystem und IP-Adresse (über CDN), Modellsuche und -downloads senden anonymisierte Suchanfragen. Chat-Inhalte und Dokumente werden nur verarbeitet, wenn Sie die LM-Studio-Cloud-Dienste nutzen. Es gibt keine Einstellung zum Deaktivieren; prüfen Sie per Firewall oder Paketmitschnitt.',
           },
         ],
       },
@@ -1334,7 +1334,7 @@ schema: {
         content: '**Die meisten Sicherheitsfehler bei lokalen LLMs entstehen durch Konfigurationsoversights, nicht durch Modellschwachstellen.** Dies sind die fünf häufigsten Fehler und wie Sie sie beheben.',
         items: [
           '**Fehler:** Herunterladen von Modellen von Drittanbieter-Seiten (Discord, zufällige GitHub-Releases). **Lösung:** Verwenden Sie nur Hugging Face (huggingface.co) oder Ollama-Bibliothek. Verifizieren Sie mit `sha256sum`.',
-          '**Fehler:** Annahme, dass lokale Inferenz = vollständiger Datenschutz. **Lösung:** Deaktivieren Sie LM Studio Analytics (Einstellungen → Datenschutz) und GPT4All Telemetrie. Führen Sie `netstat -an | grep 11434` aus, um unerwartete Ports zu bestätigen.',
+          '**Fehler:** Annahme, dass lokale Inferenz = vollständiger Datenschutz. **Lösung:** Blockieren Sie nach dem Modell-Download ausgehenden Datenverkehr, prüfen Sie LM Studio und GPT4All per Firewall und lehnen Sie die GPT4All-Telemetrie beim ersten Start ab. Führen Sie `netstat -an | grep 11434` aus, um unerwartete Ports zu bestätigen.',
           '**Fehler:** `OLLAMA_HOST=0.0.0.0` aktiv lassen nach Tests. **Lösung:** Zurücksetzen: `export OLLAMA_HOST=127.0.0.1:11434`. Test von anderen Geräten -- Verbindung sollte abgelehnt werden.',
           '**Fehler:** Festplattenverschlüsselung für HIPAA/DSGVO-Workloads überspringen. **Lösung:** Aktivieren Sie FileVault (macOS) oder BitLocker (Windows). Verschlüsseln Sie den LM Studio Chat-Log-Ordner separat.',
           '**Fehler:** Nicht überprüfbare Drittanbieter-Erweiterungen in Open WebUI oder Jan AI. **Lösung:** Überwachen Sie installierte Erweiterungen monatlich. Entfernen Sie alle, die Netzwerkzugriff anfordern, den Sie nicht erkennen.',
@@ -1345,9 +1345,9 @@ schema: {
         title: 'Was sind die regionalen Compliance-Überlegungen?',
         content: '**Lokale LLM-Inferenz reduziert Datenresidenz-Risiken, aber vollständige behördliche Compliance erfordert zusätzliche regionale Kontrollen.**',
         items: [
-          '**EU / DSGVO (2018):** Lokale Inferenz eliminiert die Artikel-28-Verpflichtung des Datenverarbeiters für den Modellanbieter. Sie müssen dennoch LM Studio Analytics deaktivieren, Festplattenverschlüsselung aktivieren und Ihr Datenverarbeitungs-Setup für jede DPIA dokumentieren. Führen Sie eine Interessenabwägung vor der Verarbeitung personenbezogener Daten durch.',
+          '**EU / DSGVO (2018):** Lokale Inferenz eliminiert die Artikel-28-Verpflichtung des Datenverarbeiters für den Modellanbieter. Sie müssen dennoch den Netzwerkverkehr von LM Studio per Firewall prüfen, Festplattenverschlüsselung aktivieren und Ihr Datenverarbeitungs-Setup für jede DPIA dokumentieren. Führen Sie eine Interessenabwägung vor der Verarbeitung personenbezogener Daten durch.',
           '**Vereinigte Staaten / HIPAA:** HIPAA verlangt Schutzmaßnahmen für PHI: Vollverschlüsselung der Festplatte (das "Verschlüsselungs-Safe Harbor"), Zugriffskontrolle und Audit-Logging. Ollama mit aktiviertem FileVault und deaktivierter Telemetrie ist ein angemessener HIPAA-Ausgangspunkt. Formale Compliance erfordert eine vollständige Risikobewertung.',
-          '**Japan / APPI (2022):** Das Gesetz zum Schutz personenbezogener Informationen verlangt den Schutz personenbezogener Daten während der Verarbeitung. Lokale Inferenz auf einem isolierten oder offline-Gerät erfüllt die Datenlokalisierungsanforderung. Deaktivieren Sie Ollama-Updates und LM Studio Analytics für APPI-Compliance.',
+          '**Japan / APPI (2022):** Das Gesetz zum Schutz personenbezogener Informationen verlangt den Schutz personenbezogener Daten während der Verarbeitung. Lokale Inferenz auf einem isolierten oder offline-Gerät erfüllt die Datenlokalisierungsanforderung. Deaktivieren Sie Ollama-Updates und prüfen Sie den Netzwerkverkehr von LM Studio per Firewall für APPI-Compliance.',
           '**China / PIPL (2021):** Das Betreiben eines lokalen LLM für interne Nutzung erfordert keine CAC-Registrierung. Falls Sie ein lokales LLM als öffentlich zugänglichen Service in China bereitstellen, ist eine CAC-Algorithmus-Registrierung erforderlich.',
         ],
       },
@@ -1418,7 +1418,7 @@ schema: {
         items: [
           'L\'inférence locale garde les données d\'invites hors des serveurs tiers. Les risques subsistants : télémétrie de l\'outil, fichiers de modèles non fiables, API Ollama exposée au réseau.',
           'Ollama se lie à localhost par défaut -- inaccessible depuis d\'autres appareils sauf si vous définissez OLLAMA_HOST=0.0.0.0.',
-          'Désactivez l\'analytique : LM Studio (Paramètres → Confidentialité → dé-cocher « Envoyer les données d\'utilisation ») et GPT4All (Paramètres → désactiver télémétrie).',
+          'Vérifiez ce que LM Studio envoie : selon sa politique de confidentialité, il n\'inclut aucune télémétrie, mais les vérifications de mise à jour et la recherche de modèles envoient des données anonymisées. Refusez la télémétrie de GPT4All au premier lancement (opt-in) et bloquez le trafic sortant après le téléchargement des modèles.',
           'Téléchargez les poids uniquement de Hugging Face (huggingface.co) ou Ollama library. Vérifiez les empreintes SHA256 pour les déploiements sensibles.',
           'Données régulées (RGPD, confidentialité légale) : chiffrement complet du disque, machine isolée, audit des extensions.',
         ],
@@ -1430,7 +1430,7 @@ schema: {
           '**L\'inférence du modèle est privée -- vos invites ne partent jamais aux serveurs du fournisseur.** Trois autres flux de données risquent des fuites :',
         ],
         items: [
-          '**Télémétrie applicative** : LM Studio, GPT4All collectent par défaut des analyses d\'utilisation anonymes, incluant comptages de sessions et métriques de performance.',
+          '**Télémétrie applicative** : LM Studio indique dans sa politique de confidentialité n\'inclure ni télémétrie ni suivi par utilisateur, mais les vérifications de mise à jour et la recherche de modèles envoient des données anonymisées. La télémétrie de GPT4All est en opt-in. D\'autres outils peuvent collecter des analyses d\'usage ; vérifiez avec un pare-feu.',
           '**Sources de téléchargement** : fichiers GGUF malveillants exploitent des failles dans llama.cpp. Fichier non vérifié = risque de chaîne d\'approvisionnement.',
           '**Exposition réseau** : serveur Ollama accessible à tout processus. Mal configuré avec `OLLAMA_HOST=0.0.0.0`, il devient accessible à tout le réseau sans authentification.',
         ],
@@ -1453,7 +1453,7 @@ schema: {
         id: 'security-risks',
         title: 'Quels sont les plus grands risques de sécurité des LLM locaux ?',
         items: [
-          '**Fuites de télémétrie** → des outils comme LM Studio peuvent envoyer des données d\'utilisation',
+          '**Fuites de télémétrie** → certains outils envoient des données d\'utilisation ; LM Studio envoie des requêtes de mise à jour et de recherche de modèles',
           '**Fichiers de modèles malveillants** → les fichiers GGUF non vérifiés peuvent introduire des risques',
           '**Exposition réseau** → des API comme Ollama peuvent être exposées si mal configurées',
         ],
@@ -1513,13 +1513,13 @@ schema: {
         title: 'Comment Désactiver la Télémétrie',
         rows: [
           { 'Outil': '[Ollama](https://ollama.com)', 'Télémétrie Défaut': 'Aucune', 'Vérification/Désactiver': 'github.com/ollama/ollama -- pas de code analytics' },
-          { 'Outil': '[LM Studio](https://lmstudio.ai)', 'Télémétrie Défaut': 'Analytics anon activée', 'Vérification/Désactiver': 'Paramètres → Confidentialité → décocher « Données d\'utilisation »' },
+          { 'Outil': '[LM Studio](https://lmstudio.ai)', 'Télémétrie Défaut': 'Aucune (politique) ; MàJ/recherche anonymes', 'Vérification/Désactiver': 'Rien à désactiver ; vérifier via pare-feu' },
           { 'Outil': '[Jan AI](https://jan.ai)', 'Télémétrie Défaut': 'Aucune -- explicitement désactivée', 'Vérification/Désactiver': 'Open source -- auditez github.com/janhq/jan' },
-          { 'Outil': '[GPT4All](https://nomic.ai/gpt4all)', 'Télémétrie Défaut': 'Opt-in au premier lancement', 'Vérification/Désactiver': 'Paramètres → Confidentialité → désactiver analytics' },
+          { 'Outil': '[GPT4All](https://nomic.ai/gpt4all)', 'Télémétrie Défaut': 'Opt-in au premier lancement', 'Vérification/Désactiver': 'Refuser au 1er lancement ; vérifier via pare-feu' },
         ],
         columns: ['Outil', 'Télémétrie Défaut', 'Vérification/Désactiver'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-fr.webp',
-          imageCaption: 'Ollama et Jan AI ne collectent rien par défaut ; LM Studio et GPT4All livrent l’analytique activée — vérifiez les paramètres.',
+          imageCaption: 'Ollama et Jan AI ne collectent rien par défaut ; LM Studio n’a pas de télémétrie selon sa politique ; celle de GPT4All est en opt-in.',
         },
       threatModel: {
         id: 'threat-model',
@@ -1628,7 +1628,7 @@ schema: {
         items: [
           'ローカル推論はプロンプトデータをサードパーティサーバーから遠ざけます。残りのリスク：推論ツールのテレメトリ、信頼できないモデルファイル、ネットワークに公開されたOllama API。',
           'Ollamaはデフォルトでlocalhostにバインドされます。明示的にOLLAMA_HOST=0.0.0.0を設定しない限り、他のデバイスからはアクセスできません。',
-          'テレメトリを無効化：LM Studio（設定 → プライバシー → 「匿名データ送信」をオフ）およびGPT4All（設定 → テレメトリをオフ）',
+          'テレメトリを確認：LM Studioはプライバシーポリシー上テレメトリを含まない（更新確認とモデル検索は匿名化データを送信）。GPT4Allのテレメトリはオプトインなので初回起動時に拒否し、モデルのダウンロード後は外向き通信を遮断する',
           'モデルウェイトはHugging Face（huggingface.co）またはOllama公式ライブラリからのみダウンロードしてください。本番環境ではSHA256チェックサムを確認してください。',
           '規制対象データ（HIPAA、GDPR、法的特権）：ディスク全体暗号化を有効にし、ネットワーク分離されたマシンを使用し、すべてのインストール拡張機能を監査します。',
         ],
@@ -1640,7 +1640,7 @@ schema: {
           '**モデル推論自体はプライベートです。** プロンプトはモデルプロバイダーのサーバーに送信されません。しかし、他の3つのデータフローが情報漏洩を引き起こす可能性があります：',
         ],
         items: [
-          '**アプリケーションテレメトリ**：LM Studio、GPT4Allおよびその他のツールはデフォルトで匿名の使用分析を収集します。セッション数、使用されたモデル名、パフォーマンスメトリクスが含まれる場合があります。',
+          '**アプリケーションテレメトリ**：LM Studioはプライバシーポリシーでテレメトリやユーザー固有のトラッキングを含まないと明記していますが、更新確認とモデル検索は匿名化されたデータを送信します。GPT4Allのテレメトリはオプトインです。他のツールは使用分析を収集する場合があるため、ファイアウォールで確認してください。',
           '**モデルダウンロード出所**：悪意のあるGGUFファイルは、llama.cppの脆弱な推論エンジン内でモデル読み込み時に実行されるコードを含む可能性があります。未検証のモデルファイルはサプライチェーンリスクです。',
           '**ネットワーク公開**：OllamaのAPIサーバーはマシン上のすべてのプロセスからアクセス可能です。`OLLAMA_HOST=0.0.0.0`で不適切に設定されると、認証なしにネットワーク全体からアクセス可能になります。',
         ],
@@ -1663,7 +1663,7 @@ schema: {
         id: 'security-risks',
         title: 'ローカルLLMの最大のセキュリティリスクは何ですか？',
         items: [
-          '**テレメトリ漏洩** → LM Studioなどのツールは使用データを送信する可能性があります',
+          '**テレメトリ漏洩** → 一部のツールは使用データを送信します。LM Studioは更新確認とモデル検索のリクエストを送信します',
           '**悪意のあるモデルファイル** → 未検証のGGUFファイルはリスクをもたらす可能性があります',
           '**ネットワーク公開** → OllamaなどのAPIは誤設定された場合に公開される可能性があります',
         ],
@@ -1733,13 +1733,13 @@ schema: {
         title: 'ローカルLLMツールでテレメトリを無効化する方法',
         rows: [
           { 'ツール': '[Ollama](https://ollama.com)', 'テレメトリデフォルト': 'なし', '確認/無効化方法': 'github.com/ollama/ollama -- アナリティクスコードなし' },
-          { 'ツール': '[LM Studio](https://lmstudio.ai)', 'テレメトリデフォルト': '匿名アナリティクス有効', '確認/無効化方法': '設定 → プライバシー → 「匿名使用データを送信」のチェックを外す' },
+          { 'ツール': '[LM Studio](https://lmstudio.ai)', 'テレメトリデフォルト': 'ポリシー上なし；更新・検索は匿名データ', '確認/無効化方法': '無効化する設定なし；ファイアウォールで確認' },
           { 'ツール': '[Jan AI](https://jan.ai)', 'テレメトリデフォルト': 'なし--明示的に無効', '確認/無効化方法': 'オープンソース -- github.com/janhq/janを監査' },
-          { 'ツール': '[GPT4All](https://nomic.ai/gpt4all)', 'テレメトリデフォルト': '初回起動時のオプトインのみ', '確認/無効化方法': '設定 → プライバシー → 使用分析を無効化' },
+          { 'ツール': '[GPT4All](https://nomic.ai/gpt4all)', 'テレメトリデフォルト': '初回起動時のオプトインのみ', '確認/無効化方法': '初回起動時に拒否；ファイアウォールで確認' },
         ],
         columns: ['ツール', 'テレメトリデフォルト', '確認/無効化方法'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-ja.webp',
-          imageCaption: 'OllamaとJan AIは既定で何も収集しない。LM StudioとGPT4Allは分析が有効出荷 — 設定を確認すること。',
+          imageCaption: 'OllamaとJan AIは既定で何も収集しない。LM Studioはポリシー上テレメトリなし、GPT4Allのテレメトリはオプトイン。',
         },
       threatModel: {
         id: 'threat-model',
@@ -1788,9 +1788,9 @@ schema: {
         title: '地域別コンプライアンスの考慮事項',
         content: '**ローカルLLM推論はデータレジデンシーリスクを削減しますが、完全な規制コンプライアンスには地域ごとに追加のコントロールが必要です。**',
         items: [
-          '**EU / GDPR（2018）：** ローカル推論はモデルプロバイダーに対するArticle 28データプロセッサー義務を排除します。LM Studio Analyticsを無効にし、ディスク暗号化を有効にし、すべてのDPIA用にデータ処理セットアップを文書化する必要があります。個人データを処理する前に正当な利益評価を実施してください。',
+          '**EU / GDPR（2018）：** ローカル推論はモデルプロバイダーに対するArticle 28データプロセッサー義務を排除します。LM Studioの通信をファイアウォールで確認し、ディスク暗号化を有効にし、すべてのDPIA用にデータ処理セットアップを文書化する必要があります。個人データを処理する前に正当な利益評価を実施してください。',
           '**アメリカ合衆国 / HIPAA：** HIPAAはPHIの保護を要求します：フルディスク暗号化（「暗号化安全港」）、アクセスコントロール、監査ログ。FileVaultを有効にしてテレメトリを無効にしたOllamaはHIPAA準拠の合理的な出発点です。正式なコンプライアンスには完全なリスク評価が必要です。',
-          '**日本 / APPI（2022）：** 個人情報保護法は処理中の個人データ保護を要求します。ネットワーク分離されたマシン上のローカル推論はデータローカライゼーション要件を満たします。APPI準拠のためにOllamaアップデートチェックとLM Studio分析を無効にしてください。',
+          '**日本 / APPI（2022）：** 個人情報保護法は処理中の個人データ保護を要求します。ネットワーク分離されたマシン上のローカル推論はデータローカライゼーション要件を満たします。APPI準拠のためにOllamaアップデートチェックを無効にし、LM Studioの通信をファイアウォールで確認してください。',
           '**中国 / PIPL（2021）：** 内部用にローカルLLMを実行する場合、CAC登録は不要です。中国でローカルLLMを公開向けサービスとしてデプロイする場合、CACアルゴリズム登録が必要です。',
         ],
       },
@@ -1861,7 +1861,7 @@ schema: {
         items: [
           '本地推理将提示数据保留在您的机器上，远离第三方服务器。剩余风险：推理工具的遥测、来自不可信来源的模型文件、Ollama API暴露在网络上。',
           'Ollama默认绑定到localhost----除非您明确设置OLLAMA_HOST=0.0.0.0，否则无法从其他设备访问。',
-          '禁用遥测：LM Studio（设置 → 隐私 → 关闭"发送匿名使用数据"）和GPT4All（设置 → 禁用遥测）。',
+          '核查遥测：LM Studio的隐私政策称其不含遥测，但更新检查和模型搜索会发送匿名化数据；GPT4All的遥测为选择性加入，首次启动时请拒绝，并在下载模型后阻止出站流量。',
           '仅从Hugging Face（huggingface.co）或官方Ollama库下载模型权重。对于敏感部署，请验证SHA256校验和。',
           '对于受管制的数据（HIPAA、GDPR、法律特权）：启用完全磁盘加密、使用网络隔离的机器，并审计所有安装的扩展。',
         ],
@@ -1873,7 +1873,7 @@ schema: {
           '**模型推理本身是私密的----您的提示永远不会发送到模型提供商的服务器。** 但是，其他三个数据流可能导致信息泄露：',
         ],
         items: [
-          '**应用程序遥测**：LM Studio、GPT4All和其他一些工具默认收集匿名使用分析。这可能包括会话计数、使用的模型名称和性能指标。',
+          '**应用程序遥测**：LM Studio的隐私政策称其不含遥测或用户级跟踪，但更新检查和模型搜索会发送匿名化数据。GPT4All的遥测为选择性加入。其他一些工具可能收集使用分析，请用防火墙验证。',
           '**模型下载来源**：恶意GGUF文件可能包含在易受攻击的推理引擎中加载模型时执行的代码。未验证的模型文件是供应链风险。',
           '**网络暴露**：Ollama的API服务器可被您机器上的任何进程访问。如果使用`OLLAMA_HOST=0.0.0.0`错误配置，整个网络都可以在没有认证的情况下访问它。',
         ],
@@ -1896,7 +1896,7 @@ schema: {
         id: 'security-risks',
         title: '本地LLM中最大的安全风险是什么？',
         items: [
-          '**遥测泄露** → LM Studio等工具可能发送使用数据',
+          '**遥测泄露** → 部分工具会发送使用数据；LM Studio会发送更新检查和模型搜索请求',
           '**恶意模型文件** → 未验证的GGUF文件可能引入风险',
           '**网络暴露** → Ollama等API如果配置不当可能被公开',
         ],
@@ -1966,13 +1966,13 @@ schema: {
         title: '如何禁用本地LLM工具中的遥测',
         rows: [
           { '工具': '[Ollama](https://ollama.com)', '遥测默认': '不收集', '验证/禁用方式': '检查github.com/ollama/ollama -- 没有分析代码' },
-          { '工具': '[LM Studio](https://lmstudio.ai)', '遥测默认': '匿名分析已启用', '验证/禁用方式': '设置 → 隐私 → 取消勾选"发送匿名使用数据"' },
+          { '工具': '[LM Studio](https://lmstudio.ai)', '遥测默认': '政策称无；更新/搜索发匿名数据', '验证/禁用方式': '无需禁用；用防火墙验证' },
           { '工具': '[Jan AI](https://jan.ai)', '遥测默认': '无 -- 明确禁用', '验证/禁用方式': '开源 -- 审计github.com/janhq/jan' },
-          { '工具': '[GPT4All](https://nomic.ai/gpt4all)', '遥测默认': '首次启动时仅选择性加入', '验证/禁用方式': '设置 → 隐私 → 禁用使用分析' },
+          { '工具': '[GPT4All](https://nomic.ai/gpt4all)', '遥测默认': '首次启动时仅选择性加入', '验证/禁用方式': '首次启动时拒绝；用防火墙验证' },
         ],
         columns: ['工具', '遥测默认', '验证/禁用方式'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-zh.webp',
-          imageCaption: 'Ollama和Jan AI默认不收集任何数据；LM Studio和GPT4All出厂即开启分析 — 请检查设置。',
+          imageCaption: 'Ollama和Jan AI默认不收集任何数据；LM Studio按其政策不含遥测，GPT4All的遥测为选择性加入。',
         },
       threatModel: {
         id: 'threat-model',
@@ -2012,11 +2012,11 @@ schema: {
           },
           {
             q: '我可以将本地LLM用于GDPR规制的数据吗？',
-            a: '本地推理大幅降低了GDPR风险，因为数据不会离开您的基础设施。但是，您仍然必须验证推理工具（Ollama、LM Studio）已禁用遥测，已启用磁盘加密，并且访问控制已就位。对于Article 35 DPIA要求，记录您的数据处理设置并确认没有个人数据通过第三方服务器传输。',
+            a: '本地推理大幅降低了GDPR风险，因为数据不会离开您的基础设施。但是，您仍然必须验证推理工具（Ollama、LM Studio）不会发送意外的网络流量，已启用磁盘加密，并且访问控制已就位。对于Article 35 DPIA要求，记录您的数据处理设置并确认没有个人数据通过第三方服务器传输。',
           },
           {
             q: 'LM Studio是否将数据发送到其服务器？',
-            a: 'LM Studio默认收集匿名分析（会话数、使用的模型名称、性能指标）。它不发送提示内容。要禁用分析：设置 → 隐私 → 取消勾选"发送匿名使用数据"。无论此设置如何，模型推理和聊天日志始终保持本地。',
+            a: 'LM Studio的隐私政策称该应用不含遥测或用户级跟踪。更新检查会发送应用版本、操作系统和IP地址（经CDN），模型搜索和下载会发送匿名化的搜索查询。除非您使用LM Studio云服务，否则不会处理聊天内容和文档。没有可禁用的设置；请用防火墙或抓包验证。',
           },
         ],
       },
@@ -2033,7 +2033,7 @@ schema: {
         content: '**本地LLM安全故障的大多数情况源于配置疏忽，而非模型漏洞。** 这些是5个最频繁的错误及其修复方法。',
         items: [
           '**错误：** 从第三方网站（Discord、随机GitHub发布）下载模型。**修复：** 仅使用Hugging Face（huggingface.co）或Ollama库。使用`sha256sum`验证。',
-          '**错误：** 假设本地推理=完全隐私。**修复：** 禁用LM Studio分析（设置→隐私）和GPT4All遥测。运行`netstat -an | grep 11434`确认无意外端口。',
+          '**错误：** 假设本地推理=完全隐私。**修复：** 下载模型后阻止出站流量，用防火墙检查LM Studio和GPT4All，并在GPT4All首次启动时拒绝遥测。运行`netstat -an | grep 11434`确认无意外端口。',
           '**错误：** 测试后仍保留`OLLAMA_HOST=0.0.0.0`。**修复：** 还原：`export OLLAMA_HOST=127.0.0.1:11434`。从另一设备测试――连接应被拒绝。',
           '**错误：** HIPAA/GDPR工作负载跳过磁盘加密。**修复：** 启用FileVault（macOS）或BitLocker（Windows）。单独加密LM Studio聊天日志文件夹。',
           '**错误：** 未检查Open WebUI或Jan AI中的第三方扩展。**修复：** 每月审计已安装的扩展。删除任何请求您无法识别的网络访问的扩展。',
@@ -2044,9 +2044,9 @@ schema: {
         title: '地区合规性考虑',
         content: '**本地LLM推理降低了数据驻留风险，但完全的监管合规性需要按地区增加控制。**',
         items: [
-          '**欧盟 / GDPR（2018）：** 本地推理消除了对模型提供商的Article 28数据处理器义务。您仍然必须禁用LM Studio分析、启用磁盘加密，并为任何DPIA记录数据处理设置。在处理个人数据之前执行正当利益评估。',
+          '**欧盟 / GDPR（2018）：** 本地推理消除了对模型提供商的Article 28数据处理器义务。您仍然必须用防火墙验证LM Studio的网络流量、启用磁盘加密，并为任何DPIA记录数据处理设置。在处理个人数据之前执行正当利益评估。',
           '**美国 / HIPAA：** HIPAA要求PHI保护：完整磁盘加密（"加密安全港"）、访问控制和审计日志。启用FileVault和禁用遥测的Ollama是HIPAA合规的合理起点。正式合规需要完整风险评估。',
-          '**日本 / APPI（2022）：** 个人信息保护法要求在处理期间保护个人数据。网络隔离机器上的本地推理满足数据本地化要求。禁用Ollama更新检查和LM Studio分析以符合APPI。',
+          '**日本 / APPI（2022）：** 个人信息保护法要求在处理期间保护个人数据。网络隔离机器上的本地推理满足数据本地化要求。禁用Ollama更新检查并用防火墙验证LM Studio的网络流量以符合APPI。',
           '**中国 / PIPL（2021）：** 在中国运行本地LLM供内部使用不需要CAC注册。如果您在中国部署本地LLM作为公开服务，则需要CAC算法注册。',
         ],
       },
@@ -2129,7 +2129,7 @@ schema: {
           items: [
             '로컬 추론은 프롬프트 데이터를 서드파티 서버에서 보호합니다. 남은 위험 요소는 추론 도구의 텔레메트리, 신뢰할 수 없는 출처의 모델 파일, 그리고 네트워크에 노출된 Ollama API입니다.',
             'Ollama는 기본적으로 localhost에 바인딩됩니다. OLLAMA_HOST=0.0.0.0을 명시적으로 설정하지 않는 한 다른 장치에서 접근할 수 없습니다.',
-            'LM Studio에서 분석을 비활성화하십시오(설정 → 개인정보 → "익명 사용 데이터 전송" 비활성화). GPT4All에서도 텔레메트리를 비활성화하십시오(설정 → 텔레메트리 비활성화).',
+            'LM Studio가 보내는 데이터를 확인하십시오. 개인정보 처리방침상 텔레메트리는 없지만 업데이트 확인과 모델 검색은 익명화된 데이터를 전송합니다. GPT4All 텔레메트리는 옵트인이므로 첫 실행 시 거부하고, 모델 다운로드 후에는 아웃바운드 트래픽을 차단하십시오.',
             '모델 가중치는 Hugging Face(huggingface.co) 또는 공식 Ollama 라이브러리에서만 다운로드하십시오. 민감한 배포의 경우 SHA256 체크섬을 검증하십시오.',
             '규제 데이터(HIPAA, GDPR, 법적 특권)의 경우: 전체 디스크 암호화를 활성화하고, 에어갭 장치를 사용하며, 설치된 모든 확장 프로그램을 감사하십시오.',
           ],
@@ -2141,7 +2141,7 @@ schema: {
             '**모델 추론 자체는 비공개입니다. 프롬프트는 절대 모델 제공자의 서버로 전송되지 않습니다.** 그러나 세 가지 다른 데이터 흐름이 정보를 유출할 수 있습니다:',
           ],
           items: [
-            '**애플리케이션 텔레메트리**: LM Studio, GPT4All 및 일부 다른 도구는 기본적으로 익명 사용 분석을 수집합니다. 여기에는 세션 수, 사용된 모델 이름, 성능 지표가 포함될 수 있습니다.',
+            '**애플리케이션 텔레메트리**: LM Studio는 개인정보 처리방침에서 텔레메트리와 사용자별 추적이 없다고 밝히지만, 업데이트 확인과 모델 검색은 익명화된 데이터를 전송합니다. GPT4All 텔레메트리는 옵트인입니다. 다른 도구는 사용 분석을 수집할 수 있으므로 방화벽으로 확인하십시오.',
             '**모델 다운로드 출처**: 악성 GGUF 파일은 취약한 추론 엔진에서 모델 로딩 중에 실행되는 코드를 포함할 수 있습니다. 검증되지 않은 모델 파일은 공급망 위험입니다.',
             '**네트워크 노출**: Ollama의 API 서버는 장치의 모든 프로세스에서 접근할 수 있습니다. `OLLAMA_HOST=0.0.0.0`으로 잘못 구성되면 인증 없이 전체 네트워크에서 접근 가능해집니다.',
           ],
@@ -2164,7 +2164,7 @@ schema: {
           id: 'security-risks',
           title: '로컬 LLM에서 가장 큰 보안 위험은 무엇입니까?',
           items: [
-            '**텔레메트리 유출** → LM Studio와 같은 도구가 사용 데이터를 전송할 수 있습니다',
+            '**텔레메트리 유출** → 일부 도구는 사용 데이터를 전송하며, LM Studio는 업데이트 확인과 모델 검색 요청을 전송합니다',
             '**악성 모델 파일** → 검증되지 않은 GGUF 파일이 위험을 초래할 수 있습니다',
             '**네트워크 노출** → Ollama와 같은 API가 잘못 구성되면 노출될 수 있습니다',
           ],
@@ -2225,13 +2225,13 @@ schema: {
           title: '로컬 LLM 도구에서 텔레메트리를 어떻게 비활성화합니까?',
           rows: [
             { 'Tool': '[Ollama](https://ollama.com)', 'Telemetry Default': '수집하지 않음', 'How to Confirm/Disable': 'github.com/ollama/ollama 확인 -- 분석 코드 없음' },
-            { 'Tool': '[LM Studio](https://lmstudio.ai)', 'Telemetry Default': '익명 분석 활성화됨', 'How to Confirm/Disable': '설정 → 개인정보 → "익명 사용 데이터 전송" 체크 해제' },
+            { 'Tool': '[LM Studio](https://lmstudio.ai)', 'Telemetry Default': '정책상 없음; 업데이트/검색은 익명 데이터', 'How to Confirm/Disable': '끌 설정 없음; 방화벽으로 확인' },
             { 'Tool': '[Jan AI](https://jan.ai)', 'Telemetry Default': '없음 -- 명시적으로 비활성화됨', 'How to Confirm/Disable': '오픈 소스 -- github.com/janhq/jan 감사' },
-            { 'Tool': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetry Default': '첫 실행 시 옵트인만', 'How to Confirm/Disable': '설정 → 개인정보 → 사용 분석 비활성화' },
+            { 'Tool': '[GPT4All](https://nomic.ai/gpt4all)', 'Telemetry Default': '첫 실행 시 옵트인만', 'How to Confirm/Disable': '첫 실행 시 거부; 방화벽으로 확인' },
           ],
           columns: ['Tool', 'Telemetry Default', 'How to Confirm/Disable'],
           image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-ko.webp',
-          imageCaption: 'Ollama와 Jan AI는 기본적으로 아무것도 수집하지 않음; LM Studio와 GPT4All는 분석 기능이 켜진 채로 출시됨 — 설정 확인 필요.',
+          imageCaption: 'Ollama와 Jan AI는 기본적으로 아무것도 수집하지 않음; LM Studio는 정책상 텔레메트리가 없고 GPT4All 텔레메트리는 옵트인.',
         },
         threatModel: {
           id: 'threat-model',
@@ -2271,11 +2271,11 @@ schema: {
             },
             {
               q: 'GDPR 규제 데이터에 로컬 LLM을 사용할 수 있습니까?',
-              a: '로컬 추론은 데이터가 인프라를 벗어나지 않기 때문에 GDPR 위험을 크게 줄입니다. 그러나 추론 도구(Ollama, LM Studio)에 텔레메트리가 비활성화되어 있는지, 디스크 암호화가 활성화되어 있는지, 그리고 접근 제어가 마련되어 있는지 여전히 확인해야 합니다. 제35조 DPIA 요구사항을 위해 데이터 처리 설정을 문서화하고 개인 데이터가 서드파티 서버를 통과하지 않음을 확인하십시오.',
+              a: '로컬 추론은 데이터가 인프라를 벗어나지 않기 때문에 GDPR 위험을 크게 줄입니다. 그러나 추론 도구(Ollama, LM Studio)에 예상치 못한 네트워크 트래픽을 보내지 않는지, 디스크 암호화가 활성화되어 있는지, 그리고 접근 제어가 마련되어 있는지 여전히 확인해야 합니다. 제35조 DPIA 요구사항을 위해 데이터 처리 설정을 문서화하고 개인 데이터가 서드파티 서버를 통과하지 않음을 확인하십시오.',
             },
             {
               q: 'LM Studio가 서버로 데이터를 전송합니까?',
-              a: 'LM Studio는 기본적으로 익명 분석을 수집합니다(세션 수, 사용된 모델 이름, 성능 지표). 프롬프트 내용은 전송하지 않습니다. 분석을 비활성화하려면: 설정 → 개인정보 → "익명 사용 데이터 전송" 체크 해제. 모델 추론 및 채팅 로그는 이 설정에 관계없이 로컬에 유지됩니다.',
+              a: 'LM Studio의 개인정보 처리방침에 따르면 이 애플리케이션에는 텔레메트리와 사용자별 추적이 없습니다. 업데이트 확인은 앱 버전, OS, IP 주소(CDN 경유)를 전송하고, 모델 검색과 다운로드는 익명화된 검색어를 전송합니다. LM Studio 클라우드 서비스를 사용하지 않는 한 채팅 내용과 문서는 처리되지 않습니다. 끌 수 있는 설정은 없으므로 방화벽이나 패킷 캡처로 확인하십시오.',
             },
           ],
         },
@@ -2293,7 +2293,7 @@ schema: {
           content: '**대부분의 로컬 LLM 보안 실패는 모델 취약점이 아닌 구성 실수에서 비롯됩니다.** 다음은 가장 빈번한 다섯 가지 실수와 각각의 해결 방법입니다.',
           items: [
             '**실수:** 서드파티 사이트(Discord, 무작위 GitHub 릴리스)에서 모델 다운로드. **해결:** Hugging Face(huggingface.co) 또는 Ollama 라이브러리만 사용하십시오. `sha256sum`으로 검증하십시오.',
-            '**실수:** 로컬 추론 = 완전한 개인정보 보호라고 가정. **해결:** LM Studio 분석을 비활성화하십시오(설정 → 개인정보). GPT4All 텔레메트리도 비활성화하십시오. `netstat -an | grep 11434`를 실행하여 예상치 못한 포트가 없는지 확인하십시오.',
+            '**실수:** 로컬 추론 = 완전한 개인정보 보호라고 가정. **해결:** 모델 다운로드 후 아웃바운드 트래픽을 차단하고 LM Studio와 GPT4All을 방화벽으로 점검하십시오. GPT4All 텔레메트리는 첫 실행 시 거부하십시오. `netstat -an | grep 11434`를 실행하여 예상치 못한 포트가 없는지 확인하십시오.',
             '**실수:** 테스트 후 `OLLAMA_HOST=0.0.0.0`을 활성화된 상태로 방치. **해결:** 되돌리십시오: `export OLLAMA_HOST=127.0.0.1:11434`. 다른 장치에서 테스트하십시오. 연결이 거부되어야 합니다.',
             '**실수:** HIPAA/GDPR 워크로드에 대한 디스크 암호화 건너뜀. **해결:** FileVault(macOS) 또는 BitLocker(Windows)를 활성화하십시오. LM Studio 채팅 로그 폴더를 별도로 암호화하십시오.',
             '**실수:** Open WebUI 또는 Jan AI의 서드파티 확장 프로그램 검토 안 함. **해결:** 매월 설치된 확장 프로그램을 감사하십시오. 인식하지 못하는 네트워크 접근을 요청하는 확장 프로그램을 제거하십시오.',
@@ -2304,9 +2304,9 @@ schema: {
           title: '지역별 규정 준수 고려사항은 무엇입니까?',
           content: '**로컬 LLM 추론은 데이터 거주 위험을 줄이지만, 완전한 규제 준수에는 지역별 추가 제어가 필요합니다.**',
           items: [
-            '**EU / GDPR (2018):** 로컬 추론은 모델 제공자에 대한 제28조 데이터 처리자 의무를 제거합니다. LM Studio 분석을 비활성화하고, 디스크 암호화를 활성화하며, 모든 DPIA를 위해 데이터 처리 설정을 문서화해야 합니다. 개인 데이터를 처리하기 전에 정당한 이익 평가를 수행하십시오.',
+            '**EU / GDPR (2018):** 로컬 추론은 모델 제공자에 대한 제28조 데이터 처리자 의무를 제거합니다. LM Studio 네트워크 트래픽을 방화벽으로 확인하고, 디스크 암호화를 활성화하며, 모든 DPIA를 위해 데이터 처리 설정을 문서화해야 합니다. 개인 데이터를 처리하기 전에 정당한 이익 평가를 수행하십시오.',
             '**미국 / HIPAA:** HIPAA는 PHI에 대한 안전장치를 요구합니다: 전체 디스크 암호화("암호화 안전 항구"), 접근 제어, 감사 로깅. FileVault가 활성화되고 텔레메트리가 비활성화된 Ollama 사용은 합리적인 HIPAA 시작점입니다. 공식 준수에는 완전한 위험 평가가 필요합니다.',
-            '**일본 / APPI (2022):** 개인정보 보호법은 처리 중 개인 데이터 보호를 요구합니다. 에어갭 장치의 로컬 추론은 데이터 현지화를 만족합니다. APPI 준수를 위해 Ollama 업데이트 확인 및 LM Studio 분석을 비활성화하십시오.',
+            '**일본 / APPI (2022):** 개인정보 보호법은 처리 중 개인 데이터 보호를 요구합니다. 에어갭 장치의 로컬 추론은 데이터 현지화를 만족합니다. APPI 준수를 위해 Ollama 업데이트 확인을 비활성화하고 LM Studio 네트워크 트래픽을 방화벽으로 확인하십시오.',
             '**중국 / PIPL (2021):** 내부 사용을 위한 로컬 LLM 실행은 CAC 등록이 필요하지 않습니다. 중국에서 공개 서비스로 로컬 LLM을 배포하는 경우 CAC 알고리즘 등록이 필요합니다.',
           ],
         },

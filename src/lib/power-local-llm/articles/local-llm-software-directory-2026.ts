@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, ' + TOTAL_TOOL_COUNT + ' projects, one map.** Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge (emerging protocols and unproven ideas), and Other & Niche (apps with no direct competitor, such as health) — most popular projects in 2026 fit in one primary category, and many span more than one.',
           '**Pick a runtime first.** Ollama is the right default for ~95% of readers; llama.cpp is the foundational engine underneath most other tools; vLLM is the production-serving pick for multi-user setups.',
           '**Most categories above Run & Serve are optional.** A desktop app OR a web UI is enough for chat. Add a code assistant or CLI tool only when you want code help; add a RAG system only when you want to chat with your own documents; add an agent framework only when one-shot calls stop being enough; add Images & Video only when you need visual output.',
-          '**Licence matters for commercial use.** MIT and Apache 2.0 dominate the ecosystem. AGPL appears on a handful of UIs (text-generation-webui, KoboldCpp, Jan, SillyTavern) — fine for personal use, more deliberate for commercial deployments. The "License" column below names every one explicitly; see [AI & open-source software licenses explained](/power-local-llm/ai-tool-licenses-explained) for what MIT, Apache-2.0, AGPL-3.0, and the other license types below actually require.',
+          '**Licence matters for commercial use.** MIT and Apache 2.0 dominate the ecosystem. AGPL appears on a handful of UIs (text-generation-webui, KoboldCpp, SillyTavern) — fine for personal use, more deliberate for commercial deployments. The "License" column below names every one explicitly; see [AI & open-source software licenses explained](/power-local-llm/ai-tool-licenses-explained) for what MIT, Apache-2.0, AGPL-3.0, and the other license types below actually require.',
           '**Multi-tool stacks are normal.** Ollama + Open WebUI + AnythingLLM + Cline + Stable Diffusion is a single-machine setup that covers chat, RAG, coding, and image generation without compromise. The "Common Real-World Stacks" table below names the recipes that actually work in 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-en.svg',
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Description': 'Most polished GUI, built-in HuggingFace model browser, server mode', 'License': 'Closed source' },
           { 'Tool': '[**Atomic Chat**](/power-local-llm/atomic-chat-review)', 'Link': '[atomic.chat](https://atomic.chat)', 'Description': 'Offline desktop and mobile chat app with one-click local agents', 'License': 'Apache 2.0' },
-          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Description': 'Privacy-focused offline ChatGPT clone, fully open-source', 'License': 'AGPL 3.0' },
+          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Description': 'Privacy-focused offline ChatGPT clone, fully open-source', 'License': 'Apache 2.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Description': 'Beginner-friendly with strong CPU-only support', 'License': 'MIT' },
           { 'Tool': '[**AnythingLLM**](/power-local-llm/anythingllm-review)', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'RAG and document chat with built-in vector store', 'License': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Description': 'Clean consumer UX, multi-provider support', 'License': 'Closed source' },
@@ -519,11 +519,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which tools work fully offline with no telemetry?',
-            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Cline, Aider, KoboldCpp, Llamafile, MLX-LM, and most of the AGPL/MIT-licensed apps in this directory work fully offline once the model is downloaded. LM Studio and several closed-source tools have optional analytics that can be disabled in settings — verify by running a packet capture once after install. Browser-based UIs (Open WebUI, LibreChat) are local-only when configured to use a local backend.',
+            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Cline, Aider, KoboldCpp, Llamafile, MLX-LM, and most of the AGPL/MIT-licensed apps in this directory work fully offline once the model is downloaded. LM Studio states it has no telemetry, but its update checks and model search contact its servers; several closed-source tools send background requests, so verify by running a packet capture once after install. Browser-based UIs (Open WebUI, LibreChat) are local-only when configured to use a local backend.',
           },
           {
             q: 'Are any of these commercial-licensed (not free for commercial use)?',
-            a: 'A handful: LM Studio, Msty, Backyard AI, Layla, and Cursor are closed-source — generally free to use but not redistributable, and commercial terms vary. Private LLM is paid. AGPL-licensed tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) are free for any use including commercial, but the AGPL terms require source disclosure if you modify and host them publicly. Apache 2.0 and MIT projects (the majority) are usable in any context including commercial without attribution constraints beyond the licence text.',
+            a: 'A handful: LM Studio, Msty, Backyard AI, Layla, and Cursor are closed-source — generally free to use but not redistributable, and commercial terms vary. Private LLM is paid. AGPL-licensed tools (KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) are free for any use including commercial, but the AGPL terms require source disclosure if you modify and host them publicly. Apache 2.0 and MIT projects (the majority) are usable in any context including commercial without attribution constraints beyond the licence text.',
           },
           {
             q: 'Which tools support Apple Silicon (M-series chips) natively?',
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Zehn Schichten, ' + TOTAL_TOOL_COUNT + ' Projekte, eine Übersichtskarte.** Laufzeitumgebungen, Desktop-Apps, Web-UIs, IDE-Integrationen, Terminal-Tools, RAG-Systeme, Agenten-Frameworks, Sprache/Audio/Vision, Mobile-Clients, spezialisierte Produktivitäts-Plugins und Bildgenerierung — fast jedes bekannte Projekt aus 2026 lässt sich exakt einer dieser Schichten zuordnen.',
           '**Wählen Sie zuerst eine Laufzeitumgebung.** Ollama ist für ~95 % der Leserinnen und Leser die richtige Standardwahl; llama.cpp ist die grundlegende Engine hinter den meisten anderen Tools; vLLM ist die Produktionsalternative für Multi-User-Setups auf echten GPUs.',
           '**Die meisten Schichten oberhalb der Laufzeitumgebung sind optional.** Eine Desktop-App ODER ein Web-UI reicht für den Chat aus. Fügen Sie eine IDE-Integration nur dann hinzu, wenn Sie Code-Unterstützung wünschen; Terminal-Tools nur dann, wenn Sie CLI-Workflows möchten; ein RAG-System nur dann, wenn Sie mit eigenen Dokumenten chatten möchten; ein Agenten-Framework nur dann, wenn One-Shot-Aufrufe nicht mehr ausreichen; Bildgenerierung nur dann, wenn Sie visuelle Ausgaben benötigen.',
-          '**Lizenzen sind relevant für den kommerziellen Einsatz.** MIT und Apache 2.0 dominieren das Ökosystem. AGPL findet sich bei einigen UIs (text-generation-webui, KoboldCpp, Jan, SillyTavern) — für den Privatgebrauch unproblematisch, bei kommerziellen Deployments sorgfältig prüfen. Die Spalte „Lizenz" unten benennt jede Lizenz explizit.',
+          '**Lizenzen sind relevant für den kommerziellen Einsatz.** MIT und Apache 2.0 dominieren das Ökosystem. AGPL findet sich bei einigen UIs (text-generation-webui, KoboldCpp, SillyTavern) — für den Privatgebrauch unproblematisch, bei kommerziellen Deployments sorgfältig prüfen. Die Spalte „Lizenz" unten benennt jede Lizenz explizit.',
           '**Multi-Tool-Stacks sind die Norm.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion ist ein Single-Machine-Setup, das Chat, RAG, Coding und Bildgenerierung ohne Kompromisse abdeckt. Die Tabelle „Praktische Einsatz-Stacks" unten nennt die Rezepte, die in 2026 tatsächlich funktionieren.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-de.svg',
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Beschreibung': 'Ausgereifteste GUI, integrierter HuggingFace-Modell-Browser, Server-Modus', 'Lizenz': 'Closed source' },
           { 'Tool': '[**Atomic Chat**](/de/power-local-llm/atomic-chat-review)', 'Link': '[atomic.chat](https://atomic.chat)', 'Beschreibung': 'Offline-Chat-App für Desktop und Mobilgeräte mit lokalen Ein-Klick-Agenten', 'Lizenz': 'Apache 2.0' },
-          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Beschreibung': 'Datenschutzorientierter Offline-ChatGPT-Klon, vollständig quelloffen', 'Lizenz': 'AGPL 3.0' },
+          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Beschreibung': 'Datenschutzorientierter Offline-ChatGPT-Klon, vollständig quelloffen', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Beschreibung': 'Einsteigerfreundlich mit starker CPU-only-Unterstützung', 'Lizenz': 'MIT' },
           { 'Tool': '[**AnythingLLM**](/de/power-local-llm/anythingllm-review)', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Beschreibung': 'RAG und Dokumenten-Chat mit integriertem Vektorspeicher', 'Lizenz': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Beschreibung': 'Übersichtliche Consumer-UX, Multi-Provider-Unterstützung', 'Lizenz': 'Closed source' },
@@ -1108,11 +1108,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Tools funktionieren vollständig offline ohne Telemetrie?',
-            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM und die meisten AGPL/MIT-lizenzierten Apps in diesem Verzeichnis sind nach dem Modell-Download vollständig offline nutzbar. LM Studio und einige proprietäre Tools verfügen über optionale Analysefunktionen, die in den Einstellungen deaktiviert werden können — überprüfen Sie dies durch einen Paketmitschnitt nach der Installation. Browser-basierte UIs (Open WebUI, LibreChat) sind lokal, wenn sie mit einem lokalen Backend konfiguriert sind.',
+            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM und die meisten AGPL/MIT-lizenzierten Apps in diesem Verzeichnis sind nach dem Modell-Download vollständig offline nutzbar. LM Studio gibt an, keine Telemetrie zu nutzen, doch Update-Prüfungen und Modellsuche kontaktieren seine Server; einige proprietäre Tools senden Hintergrundanfragen — überprüfen Sie dies daher durch einen Paketmitschnitt nach der Installation. Browser-basierte UIs (Open WebUI, LibreChat) sind lokal, wenn sie mit einem lokalen Backend konfiguriert sind.',
           },
           {
             q: 'Sind einige dieser Tools kommerziell lizenziert (nicht frei für kommerzielle Nutzung)?',
-            a: 'Eine Handvoll: LM Studio, Msty, Backyard AI, Layla und Cursor sind proprietär — in der Regel kostenlos nutzbar, aber nicht weiterverteilbar; kommerzielle Konditionen variieren je Anbieter. Private LLM ist kostenpflichtig. AGPL-lizenzierte Tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) sind für jeden Zweck einschließlich kommerzieller Nutzung frei, die AGPL-Bedingungen verlangen jedoch Quelloffenlegung, wenn Sie sie modifiziert öffentlich hosten. Apache-2.0- und MIT-Projekte (die Mehrheit) sind in jedem Kontext einschließlich kommerzieller Nutzung ohne wesentliche Auflagen verwendbar.',
+            a: 'Eine Handvoll: LM Studio, Msty, Backyard AI, Layla und Cursor sind proprietär — in der Regel kostenlos nutzbar, aber nicht weiterverteilbar; kommerzielle Konditionen variieren je Anbieter. Private LLM ist kostenpflichtig. AGPL-lizenzierte Tools (KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) sind für jeden Zweck einschließlich kommerzieller Nutzung frei, die AGPL-Bedingungen verlangen jedoch Quelloffenlegung, wenn Sie sie modifiziert öffentlich hosten. Apache-2.0- und MIT-Projekte (die Mehrheit) sind in jedem Kontext einschließlich kommerzieller Nutzung ohne wesentliche Auflagen verwendbar.',
           },
           {
             q: 'Welche Tools unterstützen Apple Silicon (M-Serie) nativ?',
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dix couches, ' + TOTAL_TOOL_COUNT + ' projets, une carte.** Runtimes, applications bureau, interfaces web, intégrations IDE, outils terminal, systèmes RAG, frameworks d\'agents, voix/audio/vision, clients mobiles, plugins de productivité et génération d\'images — presque tous les projets populaires de 2026 s\'inscrivent dans exactement une couche.',
           '**Choisissez d\'abord un runtime.** Ollama est la valeur par défaut pour ~95 % des utilisateurs ; llama.cpp est le moteur fondateur derrière la plupart des autres outils ; vLLM est le choix de production pour les déploiements multi-utilisateurs sur GPU.',
           '**La plupart des couches au-dessus du runtime sont optionnelles.** Une application bureau OU une interface web suffit pour le chat. Ajoutez une intégration IDE uniquement si vous souhaitez une assistance au code ; des outils terminal uniquement pour des workflows CLI ; un système RAG uniquement pour interroger vos documents ; un framework d\'agents uniquement quand les appels ponctuels ne suffisent plus ; la génération d\'images uniquement si vous avez besoin de sorties visuelles.',
-          '**La licence compte pour un usage commercial.** MIT et Apache 2.0 dominent l\'écosystème. AGPL apparaît sur quelques interfaces (text-generation-webui, KoboldCpp, Jan, SillyTavern) — acceptable pour un usage personnel, à examiner avec soin pour un déploiement commercial.',
+          '**La licence compte pour un usage commercial.** MIT et Apache 2.0 dominent l\'écosystème. AGPL apparaît sur quelques interfaces (text-generation-webui, KoboldCpp, SillyTavern) — acceptable pour un usage personnel, à examiner avec soin pour un déploiement commercial.',
           '**Les stacks multi-outils sont la norme.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion couvre le chat, le RAG, le codage et la génération d\'images sur une seule machine, sans compromis. Le tableau « Stacks courants en production » ci-dessous liste les recettes qui fonctionnent réellement en 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-fr.svg',
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Description': 'Interface la plus aboutie, navigateur HuggingFace intégré, mode serveur', 'Licence': 'Closed source' },
           { 'Tool': '[**Atomic Chat**](/fr/power-local-llm/atomic-chat-review)', 'Link': '[atomic.chat](https://atomic.chat)', 'Description': 'Application de chat hors ligne pour ordinateur et mobile avec agents locaux en un clic', 'Licence': 'Apache 2.0' },
-          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Description': 'Clone ChatGPT hors ligne axé vie privée, entièrement open source', 'Licence': 'AGPL 3.0' },
+          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Description': 'Clone ChatGPT hors ligne axé vie privée, entièrement open source', 'Licence': 'Apache 2.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Description': 'Accessible aux débutants, excellent support CPU uniquement', 'Licence': 'MIT' },
           { 'Tool': '[**AnythingLLM**](/fr/power-local-llm/anythingllm-review)', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'RAG et chat sur documents avec store vectoriel intégré', 'Licence': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Description': 'UX grand public épurée, support multi-fournisseurs', 'Licence': 'Closed source' },
@@ -1702,11 +1702,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quels outils fonctionnent entièrement hors ligne sans télémétrie ?',
-            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM et la plupart des applications sous licence AGPL/MIT fonctionnent entièrement hors ligne une fois le modèle téléchargé. LM Studio et plusieurs outils propriétaires disposent d\'analyses optionnelles désactivables dans les paramètres — vérifiez avec une capture réseau après l\'installation. Les interfaces web (Open WebUI, LibreChat) sont locales lorsqu\'elles sont configurées avec un backend local.',
+            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM et la plupart des applications sous licence AGPL/MIT fonctionnent entièrement hors ligne une fois le modèle téléchargé. LM Studio indique ne pas utiliser de télémétrie, mais ses vérifications de mise à jour et sa recherche de modèles contactent ses serveurs ; plusieurs outils propriétaires envoient des requêtes en arrière-plan — vérifiez donc avec une capture réseau après l\'installation. Les interfaces web (Open WebUI, LibreChat) sont locales lorsqu\'elles sont configurées avec un backend local.',
           },
           {
             q: 'Certains de ces outils sont-ils sous licence commerciale (non libres pour un usage commercial) ?',
-            a: 'Quelques-uns : LM Studio, Msty, Backyard AI, Layla et Cursor sont propriétaires — généralement gratuits à l\'usage mais non redistribuables, et les conditions commerciales varient. Private LLM est payant. Les outils sous licence AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) sont libres pour tout usage y compris commercial, mais les conditions AGPL exigent la divulgation du code source si vous les modifiez et les hébergez publiquement. Les projets Apache 2.0 et MIT (la majorité) sont utilisables dans tout contexte sans contraintes significatives.',
+            a: 'Quelques-uns : LM Studio, Msty, Backyard AI, Layla et Cursor sont propriétaires — généralement gratuits à l\'usage mais non redistribuables, et les conditions commerciales varient. Private LLM est payant. Les outils sous licence AGPL (KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) sont libres pour tout usage y compris commercial, mais les conditions AGPL exigent la divulgation du code source si vous les modifiez et les hébergez publiquement. Les projets Apache 2.0 et MIT (la majorité) sont utilisables dans tout contexte sans contraintes significatives.',
           },
           {
             q: 'Quels outils supportent Apple Silicon (puces M) nativement ?',
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリ・' + TOTAL_TOOL_COUNT + 'プロジェクト・1つの地図。** 実行＆配信、チャット＆アシスタント、コード＆開発、ナレッジ＆検索、音声＆オーディオ、画像＆動画、トレーニング＆運用、最前線、その他＆ニッチ — 2026年の主要プロジェクトはほぼすべて正確に1つのカテゴリに収まり、複数にまたがるものも少なくありません。',
           '**まずランタイムを選ぶ。** Ollamaは読者の約95%に適したデフォルト。llama.cppは他の多くのツールの基盤エンジン。vLLMはマルチユーザーGPUデプロイの本番向け選択肢です。',
           '**ランタイム上の層はほとんどがオプション。** チャットにはデスクトップアプリまたはWeb UIのどちらか一方で十分です。コード支援が必要な場合のみIDE統合を追加。CLIワークフローが必要な場合のみターミナルツールを追加。自分のドキュメントを参照したい場合のみRAGシステムを追加。ワンショット呼び出しでは足りなくなった場合のみエージェントフレームワークを追加。ビジュアル出力が必要な場合のみ画像生成を追加してください。',
-          '**ライセンスは商用利用で重要。** MITとApache 2.0がエコシステムを占めています。AGPLは一部のUI（text-generation-webui、KoboldCpp、Jan、SillyTavern）に見られます — 個人利用は問題なし、商用デプロイは要確認。',
+          '**ライセンスは商用利用で重要。** MITとApache 2.0がエコシステムを占めています。AGPLは一部のUI（text-generation-webui、KoboldCpp、SillyTavern）に見られます — 個人利用は問題なし、商用デプロイは要確認。',
           '**マルチツールスタックが標準的。** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusionは1台のマシンでチャット・RAG・コーディング・画像生成を妥協なくカバーします。下の「実用的なスタック構成」テーブルに実際に機能する組み合わせを掲載しています。',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-ja.svg',
@@ -1937,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', '概要': '最も洗練されたGUI。HuggingFaceモデルブラウザ内蔵、サーバーモード対応', 'ライセンス': 'Closed source' },
           { 'Tool': '[**Atomic Chat**](/ja/power-local-llm/atomic-chat-review)', 'Link': '[atomic.chat](https://atomic.chat)', '概要': 'デスクトップ・モバイル対応のオフラインチャットアプリ、ワンクリックでローカルエージェントを実行', 'ライセンス': 'Apache 2.0' },
-          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', '概要': 'プライバシー重視のオフラインChatGPTクローン。完全オープンソース', 'ライセンス': 'AGPL 3.0' },
+          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', '概要': 'プライバシー重視のオフラインChatGPTクローン。完全オープンソース', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '概要': '初心者向け。CPU onlyでの動作が強力', 'ライセンス': 'MIT' },
           { 'Tool': '[**AnythingLLM**](/ja/power-local-llm/anythingllm-review)', 'Link': '[anythingllm.com](https://anythingllm.com)', '概要': 'ベクターストア内蔵のRAGとドキュメントチャット', 'ライセンス': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', '概要': 'すっきりしたコンシューマーUX。マルチプロバイダー対応', 'ライセンス': 'Closed source' },
@@ -2290,11 +2290,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'テレメトリなしで完全オフライン動作するツールはどれですか？',
-            a: 'Ollama、llama.cpp、vLLM、Jan、GPT4All、Open WebUI、AnythingLLM、PrivateGPT、Continue.dev、Aider、KoboldCpp、Llamafile、MLX-LM、およびこのディレクトリのAGPL/MITライセンスのほとんどのアプリは、モデルダウンロード後に完全オフラインで動作します。LM Studioといくつかのプロプライエタリツールは設定で無効化できるオプション分析機能を持ちます — インストール後にパケットキャプチャで確認してください。ブラウザベースのUI（Open WebUI、LibreChat）はローカルバックエンドで設定された場合のみローカルです。',
+            a: 'Ollama、llama.cpp、vLLM、Jan、GPT4All、Open WebUI、AnythingLLM、PrivateGPT、Continue.dev、Aider、KoboldCpp、Llamafile、MLX-LM、およびこのディレクトリのAGPL/MITライセンスのほとんどのアプリは、モデルダウンロード後に完全オフラインで動作します。LM Studioはテレメトリを使用しないと明記していますが、アップデート確認とモデル検索は同社のサーバーに接続します。いくつかのプロプライエタリツールはバックグラウンドで通信を行うため、インストール後にパケットキャプチャで確認してください。ブラウザベースのUI（Open WebUI、LibreChat）はローカルバックエンドで設定された場合のみローカルです。',
           },
           {
             q: '商用ライセンス（商用利用不可）のツールはありますか？',
-            a: '一部あります：LM Studio、Msty、Backyard AI、Layla、Cursorはプロプライエタリ — 通常は無料使用可能ですが再配布不可で、商用条件はベンダーによって異なります。Private LLMは有料です。AGPLライセンスのツール（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Copilot for Obsidian）は商用を含むあらゆる目的に無料ですが、変更して公開ホスティングする場合はソースコードの開示が必要です。Apache 2.0とMITプロジェクト（大多数）は商用を含むあらゆる場面で実質的な制約なく使用できます。',
+            a: '一部あります：LM Studio、Msty、Backyard AI、Layla、Cursorはプロプライエタリ — 通常は無料使用可能ですが再配布不可で、商用条件はベンダーによって異なります。Private LLMは有料です。AGPLライセンスのツール（KoboldCpp、text-generation-webui、SillyTavern、Khoj、Copilot for Obsidian）は商用を含むあらゆる目的に無料ですが、変更して公開ホスティングする場合はソースコードの開示が必要です。Apache 2.0とMITプロジェクト（大多数）は商用を含むあらゆる場面で実質的な制約なく使用できます。',
           },
           {
             q: 'Apple Silicon（Mシリーズ）をネイティブサポートするツールはどれですか？',
@@ -2455,7 +2455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**' + TOTAL_CATEGORY_GROUP_COUNT + '大类别，' + TOTAL_TOOL_COUNT + '个项目，一份全景图。**运行与部署、聊天与助手、代码与开发、知识与检索、语音与音频、图像与视频、训练与运维、前沿探索、其他与细分——2026年几乎所有主流项目都能归入其中一个主要类别，也有不少横跨多个类别。',
           '**优先选择运行时。**Ollama是约95%用户的默认选择；llama.cpp是大多数其他工具底层的核心引擎；vLLM适合在真实GPU上为多用户提供并发推理服务。',
           '**运行时以上的大多数层都是可选的。**聊天只需一个桌面应用或Web界面即可。仅当需要代码辅助时才添加IDE集成；仅当需要CLI工作流时才添加终端工具；仅当需要基于自有文档问答时才添加RAG系统；仅当单次调用不够用时才添加智能体框架；仅当需要视觉输出时才添加图像生成。',
-          '**商业使用时许可证至关重要。**MIT和Apache 2.0许可证主导生态系统。少数Web界面（text-generation-webui、KoboldCpp、Jan、SillyTavern）采用AGPL——个人使用无碍，商业部署前需仔细评估。下方"许可证"列已明确列出每个项目的许可证。',
+          '**商业使用时许可证至关重要。**MIT和Apache 2.0许可证主导生态系统。少数Web界面（text-generation-webui、KoboldCpp、SillyTavern）采用AGPL——个人使用无碍，商业部署前需仔细评估。下方"许可证"列已明确列出每个项目的许可证。',
           '**多工具组合技术栈是常态。**Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion在单台机器上即可同时覆盖聊天、RAG、编程和图像生成需求，互不冲突。下方"常见实用技术栈"表格列出了2026年经验证、实际可用的配方。',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-zh.svg',
@@ -2525,7 +2525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', '描述': '最精良的GUI，内置HuggingFace模型浏览器，支持服务器模式', '许可证': 'Closed source' },
           { 'Tool': '[**Atomic Chat**](/zh/power-local-llm/atomic-chat-review)', 'Link': '[atomic.chat](https://atomic.chat)', '描述': '支持桌面和移动端的离线聊天应用，一键运行本地智能体', '许可证': 'Apache 2.0' },
-          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', '描述': '注重隐私的离线ChatGPT替代品，完全开源', '许可证': 'AGPL 3.0' },
+          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', '描述': '注重隐私的离线ChatGPT替代品，完全开源', '许可证': 'Apache 2.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '描述': '面向初学者，纯CPU运行支持优秀', '许可证': 'MIT' },
           { 'Tool': '[**AnythingLLM**](/zh/power-local-llm/anythingllm-review)', 'Link': '[anythingllm.com](https://anythingllm.com)', '描述': '内置向量存储的RAG与文档问答工具', '许可证': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', '描述': '简洁的消费级UX，支持多提供商', '许可证': 'Closed source' },
@@ -2878,11 +2878,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪些工具支持完全离线使用且无遥测？',
-            a: 'Ollama、llama.cpp、vLLM、Jan、GPT4All、Open WebUI、AnythingLLM、PrivateGPT、Continue.dev、Aider、KoboldCpp、Llamafile、MLX-LM以及本目录中大多数AGPL/MIT许可证应用在模型下载完成后均可完全离线使用。LM Studio和部分闭源工具提供可在设置中禁用的可选分析功能——建议安装后运行一次抓包验证。基于本地后端配置的Web界面（Open WebUI、LibreChat）仅在本地运行。',
+            a: 'Ollama、llama.cpp、vLLM、Jan、GPT4All、Open WebUI、AnythingLLM、PrivateGPT、Continue.dev、Aider、KoboldCpp、Llamafile、MLX-LM以及本目录中大多数AGPL/MIT许可证应用在模型下载完成后均可完全离线使用。LM Studio声明不含遥测，但其更新检查和模型搜索会连接其服务器；部分闭源工具会在后台发送请求，因此建议安装后运行一次抓包验证。基于本地后端配置的Web界面（Open WebUI、LibreChat）仅在本地运行。',
           },
           {
             q: '这些工具中是否有商业许可限制？',
-            a: '部分工具有限制：LM Studio、Msty、Backyard AI、Layla和Cursor是闭源软件——通常免费使用但不可再分发，商业条款各异。Private LLM需付费。AGPL许可工具（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Copilot for Obsidian）可用于任何用途包括商业用途，但AGPL条款要求在公开托管修改版本时披露源代码。Apache 2.0和MIT项目（占多数）在任何场景下均可使用，无需超出许可证文本范围的归因要求。',
+            a: '部分工具有限制：LM Studio、Msty、Backyard AI、Layla和Cursor是闭源软件——通常免费使用但不可再分发，商业条款各异。Private LLM需付费。AGPL许可工具（KoboldCpp、text-generation-webui、SillyTavern、Khoj、Copilot for Obsidian）可用于任何用途包括商业用途，但AGPL条款要求在公开托管修改版本时披露源代码。Apache 2.0和MIT项目（占多数）在任何场景下均可使用，无需超出许可证文本范围的归因要求。',
           },
           {
             q: '哪些工具原生支持Apple Silicon（M系列芯片）？',
@@ -3043,7 +3043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Diez capas, ' + TOTAL_TOOL_COUNT + ' proyectos, un mapa.** Runtimes, apps de escritorio, interfaces web, integraciones IDE, herramientas de terminal, sistemas RAG, frameworks de agentes, voz/audio/visión, clientes móviles, plugins de productividad especializados y generación de imágenes — casi todos los proyectos populares de 2026 encajan exactamente en una capa.',
           '**Elige primero un runtime.** Ollama es la opción predeterminada adecuada para ~95% de los lectores; llama.cpp es el motor fundamental detrás de la mayoría de las otras herramientas; vLLM es la opción de producción para despliegues multiusuario en GPU real.',
           '**La mayoría de las capas por encima del runtime son opcionales.** Una app de escritorio O una interfaz web es suficiente para el chat. Agrega una integración IDE solo cuando quieras asistencia de código; herramientas de terminal solo cuando quieras workflows CLI; un sistema RAG solo cuando quieras chatear con tus propios documentos; un framework de agentes solo cuando las llamadas de un solo paso dejen de ser suficientes; generación de imágenes solo cuando necesites salida visual.',
-          '**La licencia importa para el uso comercial.** MIT y Apache 2.0 dominan el ecosistema. AGPL aparece en algunas interfaces (text-generation-webui, KoboldCpp, Jan, SillyTavern) — perfecto para uso personal, más deliberado para despliegues comerciales. La columna "Licencia" a continuación nombra cada una explícitamente.',
+          '**La licencia importa para el uso comercial.** MIT y Apache 2.0 dominan el ecosistema. AGPL aparece en algunas interfaces (text-generation-webui, KoboldCpp, SillyTavern) — perfecto para uso personal, más deliberado para despliegues comerciales. La columna "Licencia" a continuación nombra cada una explícitamente.',
           '**Los stacks multiherramienta son la norma.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion es una configuración de una sola máquina que cubre chat, RAG, código y generación de imágenes sin compromiso. La tabla "Stacks comunes en producción" a continuación nombra las recetas que realmente funcionan en 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-es.svg',
@@ -3113,7 +3113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Descripción': 'La GUI más pulida, explorador de modelos de HuggingFace integrado, modo servidor', 'Licencia': 'Closed source' },
           { 'Tool': '[**Atomic Chat**](/es/power-local-llm/atomic-chat-review)', 'Link': '[atomic.chat](https://atomic.chat)', 'Descripción': 'App de chat sin conexión para escritorio y móvil con agentes locales en un clic', 'Licencia': 'Apache 2.0' },
-          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Descripción': 'Clon offline de ChatGPT centrado en la privacidad, totalmente open-source', 'Licencia': 'AGPL 3.0' },
+          { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Descripción': 'Clon offline de ChatGPT centrado en la privacidad, totalmente open-source', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Descripción': 'Apto para principiantes con fuerte soporte de solo CPU', 'Licencia': 'MIT' },
           { 'Tool': '[**AnythingLLM**](/es/power-local-llm/anythingllm-review)', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descripción': 'RAG y chat de documentos con almacén vectorial integrado', 'Licencia': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Descripción': 'UX de consumidor limpia, soporte multi-proveedor', 'Licencia': 'Closed source' },
@@ -3466,11 +3466,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué herramientas funcionan completamente offline sin telemetría?',
-            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM y la mayoría de las apps con licencia AGPL/MIT de este directorio funcionan completamente offline una vez descargado el modelo. LM Studio y varias herramientas de código cerrado tienen análisis opcionales que se pueden desactivar en la configuración — verifica con una captura de paquetes una vez después de instalar. Las interfaces web (Open WebUI, LibreChat) son solo locales cuando se configuran para usar un backend local.',
+            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM y la mayoría de las apps con licencia AGPL/MIT de este directorio funcionan completamente offline una vez descargado el modelo. LM Studio indica que no tiene telemetría, pero sus comprobaciones de actualizaciones y la búsqueda de modelos contactan con sus servidores; varias herramientas de código cerrado envían solicitudes en segundo plano, así que verifica con una captura de paquetes una vez después de instalar. Las interfaces web (Open WebUI, LibreChat) son solo locales cuando se configuran para usar un backend local.',
           },
           {
             q: '¿Alguna de estas herramientas tiene licencia comercial (no gratuita para uso comercial)?',
-            a: 'Algunas: LM Studio, Msty, Backyard AI, Layla y Cursor son de código cerrado — generalmente gratuitas para usar pero no redistribuibles, y los términos comerciales varían. Private LLM es de pago. Las herramientas con licencia AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) son gratuitas para cualquier uso incluyendo comercial, pero los términos AGPL requieren divulgar el código fuente si las modificas y las alojas públicamente. Los proyectos Apache 2.0 y MIT (la mayoría) son utilizables en cualquier contexto incluyendo comercial sin restricciones de atribución más allá del texto de la licencia.',
+            a: 'Algunas: LM Studio, Msty, Backyard AI, Layla y Cursor son de código cerrado — generalmente gratuitas para usar pero no redistribuibles, y los términos comerciales varían. Private LLM es de pago. Las herramientas con licencia AGPL (KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) son gratuitas para cualquier uso incluyendo comercial, pero los términos AGPL requieren divulgar el código fuente si las modificas y las alojas públicamente. Los proyectos Apache 2.0 y MIT (la mayoría) son utilizables en cualquier contexto incluyendo comercial sin restricciones de atribución más allá del texto de la licencia.',
           },
           {
             q: '¿Qué herramientas soportan Apple Silicon (chips de la serie M) de forma nativa?',
@@ -3645,7 +3645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias, ' + TOTAL_TOOL_COUNT + ' projetos, um mapa.** Execução e Implantação, Chat e Assistentes, Código e Desenvolvimento, Conhecimento e Busca, Voz e Áudio, Imagens e Vídeo, Treinamento e Operação, Na fronteira e Outros e nichos — quase todos os projetos populares de 2026 se encaixam em uma categoria principal, e muitos abrangem mais de uma.',
           '**Escolha primeiro um runtime.** Ollama é a opção padrão adequada para ~95% dos leitores; llama.cpp é o motor fundamental por trás da maioria das outras ferramentas; vLLM é a opção de produção para implantações multiusuário em GPU real.',
           '**A maioria das camadas acima do runtime são opcionais.** Um app de desktop OU uma interface web é suficiente para o chat. Adicione uma integração IDE apenas quando quiser assistência de código; ferramentas de terminal apenas quando quiser fluxos de trabalho CLI; um sistema RAG apenas quando quiser conversar com seus próprios documentos; um framework de agentes apenas quando as chamadas de uma única etapa deixarem de ser suficientes; geração de imagens apenas quando precisar de saída visual.',
-          '**A licença importa para uso comercial.** MIT e Apache 2.0 dominam o ecossistema. AGPL aparece em algumas interfaces (text-generation-webui, KoboldCpp, Jan, SillyTavern) — perfeito para uso pessoal, mais deliberado para implantações comerciais.',
+          '**A licença importa para uso comercial.** MIT e Apache 2.0 dominam o ecossistema. AGPL aparece em algumas interfaces (text-generation-webui, KoboldCpp, SillyTavern) — perfeito para uso pessoal, mais deliberado para implantações comerciais.',
           '**Os stacks de múltiplas ferramentas são a norma.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion é uma configuração de uma única máquina que cobre chat, RAG, código e geração de imagens sem compromisso.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-pt.svg',
@@ -3715,7 +3715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Ferramenta': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Descrição': 'A GUI mais polida, explorador de modelos do HuggingFace integrado, modo servidor', 'Licença': 'Closed source' },
           { 'Ferramenta': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Descrição': 'App de chat offline para desktop e celular com agentes locais em um clique', 'Licença': 'Apache 2.0' },
-          { 'Ferramenta': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Descrição': 'Clone offline do ChatGPT com foco em privacidade, totalmente open-source', 'Licença': 'AGPL 3.0' },
+          { 'Ferramenta': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Descrição': 'Clone offline do ChatGPT com foco em privacidade, totalmente open-source', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Descrição': 'Adequado para iniciantes com forte suporte de apenas CPU', 'Licença': 'MIT' },
           { 'Ferramenta': '[**AnythingLLM**](/pt/power-local-llm/anythingllm-review)', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descrição': 'RAG e chat de documentos com armazenamento vetorial integrado', 'Licença': 'MIT' },
           { 'Ferramenta': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Descrição': 'UX de consumidor limpa, suporte multi-provedor', 'Licença': 'Closed source' },
@@ -4068,11 +4068,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais ferramentas funcionam completamente offline sem telemetria?',
-            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM e a maioria dos apps com licença AGPL/MIT deste diretório funcionam completamente offline uma vez baixado o modelo. LM Studio e várias ferramentas de código fechado têm análises opcionais que podem ser desativadas nas configurações.',
+            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM e a maioria dos apps com licença AGPL/MIT deste diretório funcionam completamente offline uma vez baixado o modelo. O LM Studio afirma não ter telemetria, mas suas verificações de atualização e a busca de modelos contatam seus servidores; várias ferramentas de código fechado enviam requisições em segundo plano, então verifique com uma captura de pacotes uma vez após a instalação.',
           },
           {
             q: 'Alguma dessas ferramentas tem licença comercial (não gratuita para uso comercial)?',
-            a: 'Algumas: LM Studio, Msty, Backyard AI, Layla e Cursor são de código fechado — geralmente gratuitas para usar mas não redistribuíveis, e os termos comerciais variam. Private LLM é pago. As ferramentas com licença AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) são gratuitas para qualquer uso incluindo comercial, mas os termos AGPL exigem divulgar o código-fonte se você as modificar e hospedar publicamente. Os projetos Apache 2.0 e MIT (a maioria) são utilizáveis em qualquer contexto incluindo comercial sem restrições de atribuição além do texto da licença.',
+            a: 'Algumas: LM Studio, Msty, Backyard AI, Layla e Cursor são de código fechado — geralmente gratuitas para usar mas não redistribuíveis, e os termos comerciais variam. Private LLM é pago. As ferramentas com licença AGPL (KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) são gratuitas para qualquer uso incluindo comercial, mas os termos AGPL exigem divulgar o código-fonte se você as modificar e hospedar publicamente. Os projetos Apache 2.0 e MIT (a maioria) são utilizáveis em qualquer contexto incluindo comercial sem restrições de atribuição além do texto da licença.',
           },
           {
             q: 'Quais ferramentas suportam Apple Silicon (chips da série M) nativamente?',
@@ -4246,7 +4246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات و' + TOTAL_TOOL_COUNT + ' مشروعاً وخريطة واحدة.** التشغيل والنشر، الدردشة والمساعدون، الكود والتطوير، المعرفة والاسترجاع، الصوت والصوتيات، الصور والفيديو، والتدريب والتشغيل، وعلى الحافة، وأخرى ومجالات متخصصة — تقع معظم المشاريع الشائعة في 2026 في فئة أساسية واحدة، ويمتد كثير منها عبر أكثر من فئة.',
           '**اختر runtime أولاً.** Ollama هو الخيار الافتراضي المناسب لـ~95% من القراء؛ llama.cpp هو المحرك الأساسي وراء معظم الأدوات الأخرى؛ vLLM هو الخيار الإنتاجي لنشر متعدد المستخدمين على GPU حقيقي.',
           '**معظم الطبقات فوق runtime اختيارية.** تطبيق سطح مكتب أو واجهة ويب واحدة كافية للدردشة. أضف تكامل IDE فقط عند الحاجة لمساعدة في الكود؛ أضف أدوات طرفية فقط عند الرغبة في سير عمل CLI؛ أضف نظام RAG فقط عند الرغبة في الدردشة مع مستنداتك؛ أضف إطار عملاء ذكيين فقط حين لا تعود استدعاءات الخطوة الواحدة كافية؛ أضف توليد الصور فقط عند الحاجة لمخرجات بصرية.',
-          '**الترخيص مهم للاستخدام التجاري.** MIT وApache 2.0 يسيطران على المنظومة. AGPL يظهر في بعض الواجهات (text-generation-webui وKoboldCpp وJan وSillyTavern) — مثالي للاستخدام الشخصي، يتطلب تأملاً أكثر للنشر التجاري.',
+          '**الترخيص مهم للاستخدام التجاري.** MIT وApache 2.0 يسيطران على المنظومة. AGPL يظهر في بعض الواجهات (text-generation-webui وKoboldCpp وSillyTavern) — مثالي للاستخدام الشخصي، يتطلب تأملاً أكثر للنشر التجاري.',
           '**الـstacks متعددة الأدوات هي القاعدة.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion هو إعداد جهاز واحد يغطي الدردشة وRAG والكود وتوليد الصور بدون تنازلات.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-ar.svg',
@@ -4316,7 +4316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الأداة': '**LM Studio**', 'الرابط': '[lmstudio.ai](https://lmstudio.ai)', 'الوصف': 'أكثر واجهة رسومية مصقولة، مستعرض نماذج HuggingFace مدمج، وضع خادم', 'الترخيص': 'Closed source' },
           { 'الأداة': '**Atomic Chat**', 'الرابط': '[atomic.chat](https://atomic.chat)', 'الوصف': 'تطبيق دردشة يعمل دون اتصال للحاسوب والهاتف مع تشغيل وكلاء محليين بنقرة واحدة', 'الترخيص': 'Apache 2.0' },
-          { 'الأداة': '**Jan**', 'الرابط': '[jan.ai](https://jan.ai)', 'الوصف': 'استنساخ ChatGPT بدون اتصال يركز على الخصوصية، مفتوح المصدر بالكامل', 'الترخيص': 'AGPL 3.0' },
+          { 'الأداة': '**Jan**', 'الرابط': '[jan.ai](https://jan.ai)', 'الوصف': 'استنساخ ChatGPT بدون اتصال يركز على الخصوصية، مفتوح المصدر بالكامل', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**GPT4All**', 'الرابط': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'الوصف': 'مناسب للمبتدئين مع دعم قوي للـCPU فقط', 'الترخيص': 'MIT' },
           { 'الأداة': '[**AnythingLLM**](/ar/power-local-llm/anythingllm-review)', 'الرابط': '[anythingllm.com](https://anythingllm.com)', 'الوصف': 'RAG ودردشة مستندات مع مخزن متجهات مدمج', 'الترخيص': 'MIT' },
           { 'الأداة': '**Msty**', 'الرابط': '[msty.app](https://msty.app)', 'الوصف': 'تجربة مستخدم استهلاكية نظيفة، دعم متعدد المزودين', 'الترخيص': 'Closed source' },
@@ -4673,7 +4673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل أي من هذه الأدوات مرخصة تجارياً (غير مجانية للاستخدام التجاري)؟',
-            a: 'بعضها: LM Studio وMsty وBackyard AI وLayla وCursor هي مغلقة المصدر — مجانية للاستخدام عموماً لكن غير قابلة لإعادة التوزيع. Private LLM مدفوعة. الأدوات برخصة AGPL (Jan وKoboldCpp وtext-generation-webui وSillyTavern وKhoj وCopilot for Obsidian) مجانية لأي استخدام بما فيه التجاري، لكن شروط AGPL تتطلب الكشف عن الكود المصدري إذا عدَّلتها واستضفتها علناً.',
+            a: 'بعضها: LM Studio وMsty وBackyard AI وLayla وCursor هي مغلقة المصدر — مجانية للاستخدام عموماً لكن غير قابلة لإعادة التوزيع. Private LLM مدفوعة. الأدوات برخصة AGPL (KoboldCpp وtext-generation-webui وSillyTavern وKhoj وCopilot for Obsidian) مجانية لأي استخدام بما فيه التجاري، لكن شروط AGPL تتطلب الكشف عن الكود المصدري إذا عدَّلتها واستضفتها علناً.',
           },
           {
             q: 'ما الأدوات التي تدعم Apple Silicon (رقائق سلسلة M) بشكل أصلي؟',
@@ -4847,7 +4847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리, ' + TOTAL_TOOL_COUNT + '개 프로젝트, 하나의 지도.** 실행 및 배포, 채팅 및 어시스턴트, 코드 및 개발, 지식 및 검색, 음성 및 오디오, 이미지 및 비디오, 학습 및 운영, 최전선, 기타 및 틈새 — 2026년의 거의 모든 인기 프로젝트는 하나의 주요 카테고리에 속하며, 여러 카테고리에 걸치는 경우도 많습니다.',
           '**먼저 런타임을 선택하십시오.** Ollama는 독자의 ~95%에게 적합한 기본 선택입니다. llama.cpp는 대부분의 다른 도구 뒤에 있는 기반 엔진이며, vLLM은 실제 GPU에서 멀티유저 배포 시 프로덕션 선택입니다.',
           '**런타임 위의 대부분 레이어는 선택적입니다.** 채팅에는 데스크톱 앱 OR 웹 UI 하나로 충분합니다. 코드 지원이 필요할 때만 IDE 통합을, CLI 워크플로가 필요할 때만 터미널 도구를, 자신의 문서와 대화할 때만 RAG 시스템을, 단일 단계 호출로 충분하지 않을 때만 에이전트 프레임워크를, 시각적 출력이 필요할 때만 이미지 생성을 추가하십시오.',
-          '**상업적 사용 시 라이선스가 중요합니다.** MIT와 Apache 2.0이 생태계를 지배합니다. AGPL은 일부 인터페이스(text-generation-webui, KoboldCpp, Jan, SillyTavern)에 적용됩니다 — 개인 사용에는 적합하지만 상업적 배포 시에는 더 신중하게 검토해야 합니다.',
+          '**상업적 사용 시 라이선스가 중요합니다.** MIT와 Apache 2.0이 생태계를 지배합니다. AGPL은 일부 인터페이스(text-generation-webui, KoboldCpp, SillyTavern)에 적용됩니다 — 개인 사용에는 적합하지만 상업적 배포 시에는 더 신중하게 검토해야 합니다.',
           '**멀티툴 스택이 일반적입니다.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion은 채팅, RAG, 코딩, 이미지 생성을 타협 없이 커버하는 단일 머신 구성입니다. 아래의 "실제 사용 스택" 표에 2026년에 실제로 작동하는 레시피가 나열되어 있습니다.',
         ],
         snippetBlocks: [
@@ -4921,7 +4921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '도구': '**LM Studio**', '링크': '[lmstudio.ai](https://lmstudio.ai)', '설명': '가장 세련된 GUI, HuggingFace 모델 탐색기 내장, 서버 모드', '라이선스': 'Closed source' },
           { '도구': '**Atomic Chat**', '링크': '[atomic.chat](https://atomic.chat)', '설명': '데스크톱과 모바일용 오프라인 채팅 앱, 원클릭으로 로컬 에이전트 실행', '라이선스': 'Apache 2.0' },
-          { '도구': '**Jan**', '링크': '[jan.ai](https://jan.ai)', '설명': '프라이버시 중심의 오프라인 ChatGPT 클론, 완전 오픈소스', '라이선스': 'AGPL 3.0' },
+          { '도구': '**Jan**', '링크': '[jan.ai](https://jan.ai)', '설명': '프라이버시 중심의 오프라인 ChatGPT 클론, 완전 오픈소스', '라이선스': 'Apache 2.0' },
           { '도구': '**GPT4All**', '링크': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '설명': '강력한 CPU 전용 지원을 갖춘 입문자 친화적 앱', '라이선스': 'MIT' },
           { '도구': '[**AnythingLLM**](/ko/power-local-llm/anythingllm-review)', '링크': '[anythingllm.com](https://anythingllm.com)', '설명': '내장 벡터 저장소를 갖춘 RAG 및 문서 채팅', '라이선스': 'MIT' },
           { '도구': '**Msty**', '링크': '[msty.app](https://msty.app)', '설명': '깔끔한 소비자 UX, 멀티 제공자 지원', '라이선스': 'Closed source' },
@@ -5274,11 +5274,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '텔레메트리 없이 완전 오프라인으로 작동하는 도구는 무엇입니까?',
-            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM 및 이 디렉토리의 대부분 AGPL/MIT 라이선스 앱은 모델이 다운로드되면 완전 오프라인으로 작동합니다. LM Studio와 일부 비공개 소스 도구는 설정에서 비활성화할 수 있는 선택적 분석 기능이 있습니다 — 설치 후 한 번 패킷 캡처로 확인하십시오. 웹 인터페이스(Open WebUI, LibreChat)는 로컬 백엔드를 사용하도록 구성된 경우에만 로컬입니다.',
+            a: 'Ollama, llama.cpp, vLLM, Jan, GPT4All, Open WebUI, AnythingLLM, PrivateGPT, Continue.dev, Aider, KoboldCpp, Llamafile, MLX-LM 및 이 디렉토리의 대부분 AGPL/MIT 라이선스 앱은 모델이 다운로드되면 완전 오프라인으로 작동합니다. LM Studio는 텔레메트리가 없다고 밝히고 있지만 업데이트 확인과 모델 검색은 해당 서버에 접속하며, 일부 비공개 소스 도구는 백그라운드 요청을 보내므로 설치 후 한 번 패킷 캡처로 확인하십시오. 웹 인터페이스(Open WebUI, LibreChat)는 로컬 백엔드를 사용하도록 구성된 경우에만 로컬입니다.',
           },
           {
             q: '이 도구 중 일부는 상업적 라이선스(상업적 사용에 무료가 아닌)가 있습니까?',
-            a: '일부 있습니다: LM Studio, Msty, Backyard AI, Layla, Cursor는 비공개 소스 — 일반적으로 사용하기 무료이지만 재배포할 수 없으며 상업적 약관은 다릅니다. Private LLM은 유료입니다. AGPL 라이선스 도구(Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian)는 상업적 사용을 포함한 모든 사용에 무료이지만 AGPL 약관은 수정하여 공개적으로 호스팅할 경우 소스 코드 공개를 요구합니다. Apache 2.0 및 MIT 프로젝트(대부분)는 라이선스 텍스트 이상의 귀속 제한 없이 상업적 맥락을 포함한 모든 맥락에서 사용 가능합니다.',
+            a: '일부 있습니다: LM Studio, Msty, Backyard AI, Layla, Cursor는 비공개 소스 — 일반적으로 사용하기 무료이지만 재배포할 수 없으며 상업적 약관은 다릅니다. Private LLM은 유료입니다. AGPL 라이선스 도구(KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian)는 상업적 사용을 포함한 모든 사용에 무료이지만 AGPL 약관은 수정하여 공개적으로 호스팅할 경우 소스 코드 공개를 요구합니다. Apache 2.0 및 MIT 프로젝트(대부분)는 라이선스 텍스트 이상의 귀속 제한 없이 상업적 맥락을 포함한 모든 맥락에서 사용 가능합니다.',
           },
           {
             q: '네이티브로 Apple Silicon(M 시리즈 칩)을 지원하는 도구는 무엇입니까?',

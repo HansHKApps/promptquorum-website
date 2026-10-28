@@ -31,6 +31,8 @@ import { StickyNextStepBar } from '@/components/StickyNextStepBar'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 
 interface Props {
+  /** Maintenance warning for stale apps this article covers (owner rule 2026-10-16); built server-side by getStaleBanner(). */
+  staleBanner?: { label: string; body: string }
   /** Review pages only (see buildDirectoryFunnel): data for the two directory-funnel blocks. */
   directoryFunnel?: DirectoryFunnelData
   slug: string
@@ -904,7 +906,7 @@ function SectionBlock({ section, colors, skinCls, id, lang, renderLinks }: { sec
   )
 }
 
-function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, directoryFunnel }: Props) {
+function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, directoryFunnel, staleBanner }: Props) {
   const clientLang = useLang(initialLang) as Language
   const lang: Language = clientLang
 
@@ -1036,6 +1038,13 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
           )
         })()}
 
+        {staleBanner && (
+          <div role="alert" className="flex items-start gap-2 rounded-xl border-2 border-red-600 bg-red-50 p-4 mb-6">
+            <p className="text-sm text-red-900">
+              <span className="font-extrabold uppercase tracking-wide">{staleBanner.label}</span> {staleBanner.body}
+            </p>
+          </div>
+        )}
         {directoryFunnel && <DirectoryBlock data={directoryFunnel} position="start" />}
         {directoryFunnel && <DirectoryPopupLoader popup={directoryFunnel.popup} dir={directoryFunnel.dir} />}
 

@@ -86,6 +86,8 @@ interface Props {
    * drawer (ToolCard.tsx/ToolDrawer.tsx), self-expiring on the same schedule.
    */
   founderReviewed?: { appName: string; date: string }
+  /** Maintenance warning for stale apps this article covers (owner rule 2026-10-16); built server-side by getStaleBanner(). */
+  staleBanner?: { label: string; body: string }
   /**
    * Resolved server-side via directory-i18n.ts's `resolveAll(lang)` (see
    * page-helpers.tsx) — only used for the `founderReviewed` banner's two
@@ -1409,7 +1411,7 @@ function SectionBlock({ section, colors, skinCls, id, lang, renderLinks, compare
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks, directoryFunnel }: Props) {
+function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs, directorySlot, founderReviewed, staleBanner, compareData, categoryLinks, directoryFunnel }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
@@ -1542,6 +1544,14 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         {/* Founder-reviewed fact-check credit — mirrors the badge/banner shown on
             this tool's directory tile/drawer (ToolCard.tsx/ToolDrawer.tsx),
             surfaced here too since this article IS that tool's dedicated review. */}
+        {staleBanner && (
+          <div role="alert" className="flex items-start gap-2 rounded-xl border-2 border-red-600 bg-red-50 p-4 mb-6">
+            <p className="text-sm text-red-900">
+              <span className="font-extrabold uppercase tracking-wide">{staleBanner.label}</span> {staleBanner.body}
+            </p>
+          </div>
+        )}
+
         {founderReviewed && (
           <div className="flex items-start gap-2 rounded-xl border-2 border-amber-500 bg-amber-100 p-3 mb-6">
             <StarIcon className="h-4 w-4 mt-0.5 shrink-0 fill-amber-600 text-amber-600" />

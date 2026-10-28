@@ -33,6 +33,7 @@
     "seo:log": "node scripts/seo-log-change.mjs",
     "test:directory-date": "node scripts/test-directory-date.mjs",
     "test:app-activity": "node scripts/test-app-activity.mjs",
+    "test:stale-banner": "node scripts/test-stale-banner.mjs",
     "test:outbound-utm": "node scripts/test-outbound-utm.mjs",
     "test:cluster-noindex": "node scripts/test-cluster-noindex.mjs",
     "check:affiliate-links": "node scripts/check-affiliate-links.mjs",
