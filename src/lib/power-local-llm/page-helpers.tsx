@@ -1185,6 +1185,7 @@ const HUB_THEMES: Array<{
       'siyuan-review',
       'logseq-review',
       'karakeep-review',
+      'ai-file-sorter-review',
       'linkwarden-review',
       'blinko-review',
       'tolaria-review',

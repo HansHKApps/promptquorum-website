@@ -708,6 +708,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'immich-review',
   'facet-review',
   'excire-foto-review',
+  'ai-file-sorter-review',
 
   // Whisper Notes review (Voice, Speech & Multimodal) — 2026-10-18
   'whisper-notes-review',

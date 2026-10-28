@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 326,
+    "totalCount": 327,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 180,
+    "totalCount": 181,
     "capped": true
   },
   "vLLM": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 161,
+    "totalCount": 162,
     "capped": true
   },
   "Atomic Chat": {
@@ -5708,7 +5708,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Ollama vision models": {
@@ -11653,6 +11653,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-file-sorter-review",
+        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
+        "url": "/power-local-llm/ai-file-sorter-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -11714,17 +11722,9 @@
         "url": "/power-local-llm/pajdo-review",
         "dateModified": "2026-10-26",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 230,
+    "totalCount": 231,
     "capped": true
   },
   "Qdrant": {
@@ -12782,6 +12782,20 @@
         "slug": "excire-foto-review",
         "title": "Excire Foto Review: Local AI Photo Manager for Windows and Mac",
         "url": "/power-local-llm/excire-foto-review",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "AI File Sorter": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-file-sorter-review",
+        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
+        "url": "/power-local-llm/ai-file-sorter-review",
         "dateModified": "2026-10-28",
         "tier": "about"
       }

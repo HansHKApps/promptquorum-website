@@ -1504,6 +1504,11 @@
     "urlSlug": "excire-foto-review",
     "url": "/power-local-llm/excire-foto-review"
   },
+  "ai-file-sorter": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ai-file-sorter-review",
+    "url": "/power-local-llm/ai-file-sorter-review"
+  },
   "hiwaifu": {
     "cluster": "power-local-llm",
     "urlSlug": "hiwaifu-review",
