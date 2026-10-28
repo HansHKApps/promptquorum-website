@@ -97,6 +97,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -109,22 +125,6 @@
         "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
         "url": "/power-local-llm/chaterminal-review",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memoryai-review",
-        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
-        "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-25",
         "tier": "about"
       },
       {
@@ -444,7 +444,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
@@ -881,14 +889,6 @@
         "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
         "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
         "tier": "about"
       },
       {
@@ -5815,18 +5815,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-26",
         "tier": "about"
       },
       {
@@ -5885,6 +5885,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -5897,14 +5905,6 @@
         "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
         "tier": "about"
       },
       {
@@ -6001,6 +6001,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "google-ai-edge-gallery-review",
         "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
@@ -6013,14 +6021,6 @@
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
         "tier": "about"
       },
       {
@@ -6090,7 +6090,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -6152,7 +6152,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -6604,7 +6604,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -11677,6 +11677,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -11728,14 +11736,6 @@
         "slug": "immich-review",
         "title": "Immich Review: Self-Hosted Photo Library with Smart Search",
         "url": "/power-local-llm/immich-review",
-        "dateModified": "2026-10-26",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-screenwriting-and-novel-drafting",
-        "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
-        "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
         "dateModified": "2026-10-26",
         "tier": "mentioned"
       }
@@ -12395,6 +12395,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "laria-review",
         "title": "Laria Review: Paid Android AI Assistant With Local Models",
         "url": "/power-local-llm/laria-review",
@@ -12407,14 +12415,6 @@
         "title": "On Device LLM Review: Free Offline Android Chat App",
         "url": "/power-local-llm/on-device-llm-review",
         "dateModified": "2026-10-26",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memoryai-review",
-        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
-        "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-25",
         "tier": "mentioned"
       },
       {
@@ -12840,7 +12840,15 @@
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -12849,14 +12857,6 @@
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-25",
         "tier": "about"
       }
     ],

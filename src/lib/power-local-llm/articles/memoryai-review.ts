@@ -3,7 +3,7 @@
 // Companion to: private-mind-review, pocketpal-ai-review, off-grid-ai-review, google-ai-edge-gallery-review,
 // best-local-llm-apps-android-2026, best-local-llm-apps-iphone-2026
 // Sources: App Store + Google Play listings, the developer's website / privacy policy and the public feedback
-// repository, all checked 2026-10-19 and re-checked 2026-10-23 (both stores on 1.0.56) — no hands-on testing. The developer wrote to PromptQuorum on 2026-10-18 asking
+// repository, all checked 2026-10-19 and re-checked 2026-10-23 (both stores on 1.0.56; App Store on 1.0.60 since 2026-10-25, re-checked 2026-10-28) — no hands-on testing. The developer wrote to PromptQuorum on 2026-10-18 asking
 // for inclusion; every fact below was re-checked against those primary sources, not taken from the message.
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-en.webp',
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (version 1.0.60 on Android and 1.0.56 on iOS as of 25 October 2026) pairs an editable on-device memory with a PIN-locked Kid Mode in a free chat app that needs no account.** Models are downloaded once from Hugging Face and then run offline. Usage events and crash reports without chat content do leave the phone, so read the privacy section before relying on the "no tracking" wording.',
+      '**MemoryAI (version 1.0.60 on Android and iPhone as of 25 October 2026) pairs an editable on-device memory with a PIN-locked Kid Mode in a free chat app that needs no account.** Models are downloaded once from Hugging Face and then run offline. Usage events and crash reports without chat content do leave the phone, so read the privacy section before relying on the "no tracking" wording.',
     quickAnswerTop: {
       en: {
         question: 'Is MemoryAI really offline and free?',
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (feedback only, no source code)',
           },
         ],
-        note: 'Versions listed: 1.0.60 on Android (Google Play listing, updated 25 October 2026) and 1.0.56 on iOS (App Store listing, released 22 October 2026); the developer says 1.0.60 is in Apple\'s review. The review text was written against 1.0.56 and extended with the 1.0.60 Google Play notes. The developer states that Android 9 or later is required; the Google Play text read shows no minimum Android version.',
+        note: 'Versions listed: 1.0.60 on Android (Google Play listing, updated 25 October 2026) and 1.0.60 on iOS (App Store listing, released 25 October 2026). The review text was written against 1.0.56 and extended with the 1.0.60 Google Play notes. The developer states that Android 9 or later is required; the Google Play text read shows no minimum Android version.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Download a model on Wi-Fi',
-            whyItMatters: 'Models are 0.3 to 4 GB each per the listings. The 18 October 2026 update says the first suggested model is now the lightest one that runs well on your phone, and that its download continues if you leave the screen. The 1.0.56 notes add that the app shows a model\'s size and the expected download time before you start, shows how much is left while it downloads, and picks the download up again by itself if the connection drops. The 1.0.60 notes on Google Play add that the first model\'s download now starts by itself on Wi-Fi (Skip pauses it), that models are grouped by what fits your device with the too-big ones hidden until you ask, and that downloads cut by the network pick up where they left off; the iOS listing is still on 1.0.56.',
+            whyItMatters: 'Models are 0.3 to 4 GB each per the listings. The 18 October 2026 update says the first suggested model is now the lightest one that runs well on your phone, and that its download continues if you leave the screen. The 1.0.56 notes add that the app shows a model\'s size and the expected download time before you start, shows how much is left while it downloads, and picks the download up again by itself if the connection drops. The 1.0.60 notes on Google Play and the App Store add that the first model\'s download now starts by itself on Wi-Fi (Skip pauses it), that models are grouped by what fits your device with the too-big ones hidden until you ask, and that downloads cut by the network pick up where they left off.',
           },
           {
             title: 'Chat or talk',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/memoryai-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
-      dateModified: '2026-10-25',
+      dateModified: '2026-10-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Beginner',
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-de.webp',
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (Version 1.0.60 unter Android und 1.0.56 unter iOS, Stand 25. Oktober 2026) verbindet in einer kostenlosen Chat-App ohne Konto ein editierbares Gedächtnis auf dem Gerät mit einem per PIN gesperrten Kindermodus.** Modelle werden einmal von Hugging Face heruntergeladen und laufen danach offline. Nutzungsereignisse und Absturzberichte ohne Chat-Inhalte verlassen das Telefon allerdings; lesen Sie daher den Abschnitt zum Datenschutz, bevor Sie sich auf die Formulierung „kein Tracking“ verlassen.',
+      '**MemoryAI (Version 1.0.60 unter Android und iPhone, Stand 25. Oktober 2026) verbindet in einer kostenlosen Chat-App ohne Konto ein editierbares Gedächtnis auf dem Gerät mit einem per PIN gesperrten Kindermodus.** Modelle werden einmal von Hugging Face heruntergeladen und laufen danach offline. Nutzungsereignisse und Absturzberichte ohne Chat-Inhalte verlassen das Telefon allerdings; lesen Sie daher den Abschnitt zum Datenschutz, bevor Sie sich auf die Formulierung „kein Tracking“ verlassen.',
     quickAnswerTop: {
       de: {
         question: 'Läuft MemoryAI wirklich offline und kostenlos?',
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bezugsquelle': '[GitHub Issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (nur Feedback, kein Quellcode)',
           },
         ],
-        note: 'Gelistete Versionen: 1.0.60 unter Android (Google-Play-Eintrag, aktualisiert am 25. Oktober 2026) und 1.0.56 unter iOS (App-Store-Eintrag, veröffentlicht am 22. Oktober 2026); laut Entwickler befindet sich 1.0.60 in der Apple-Prüfung. Der Reviewtext wurde anhand von 1.0.56 verfasst und um die Hinweise zu 1.0.60 aus Google Play ergänzt. Laut Entwickler wird Android 9 oder neuer benötigt; im gelesenen Google-Play-Text ist keine Mindestversion von Android angegeben.',
+        note: 'Gelistete Versionen: 1.0.60 unter Android (Google-Play-Eintrag, aktualisiert am 25. Oktober 2026) und 1.0.60 unter iOS (App-Store-Eintrag, veröffentlicht am 25. Oktober 2026). Der Reviewtext wurde anhand von 1.0.56 verfasst und um die Hinweise zu 1.0.60 aus Google Play ergänzt. Laut Entwickler wird Android 9 oder neuer benötigt; im gelesenen Google-Play-Text ist keine Mindestversion von Android angegeben.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Modell per WLAN herunterladen',
-            whyItMatters: 'Laut Einträgen umfassen Modelle je 0,3 bis 4 GB. Das Update vom 18. Oktober 2026 nennt als erstes vorgeschlagenes Modell nun das leichteste, das auf Ihrem Telefon gut läuft, und der Download läuft weiter, wenn Sie den Bildschirm verlassen. Laut den Hinweisen zu 1.0.56 zeigt die App vor dem Start die Größe und die voraussichtliche Dauer eines Modell-Downloads an, während des Downloads die verbleibende Menge, und setzt ihn bei abgebrochener Verbindung von selbst fort. Die Hinweise zu 1.0.60 in Google Play ergänzen, dass der Download des ersten Modells nun im WLAN von selbst startet (Überspringen pausiert ihn), dass Modelle danach gruppiert sind, was auf Ihr Gerät passt, wobei zu große erst auf Nachfrage erscheinen, und dass durch das Netzwerk unterbrochene Downloads dort weiterlaufen, wo sie aufgehört haben; der iOS-Eintrag steht noch auf 1.0.56.',
+            whyItMatters: 'Laut Einträgen umfassen Modelle je 0,3 bis 4 GB. Das Update vom 18. Oktober 2026 nennt als erstes vorgeschlagenes Modell nun das leichteste, das auf Ihrem Telefon gut läuft, und der Download läuft weiter, wenn Sie den Bildschirm verlassen. Laut den Hinweisen zu 1.0.56 zeigt die App vor dem Start die Größe und die voraussichtliche Dauer eines Modell-Downloads an, während des Downloads die verbleibende Menge, und setzt ihn bei abgebrochener Verbindung von selbst fort. Die Hinweise zu 1.0.60 in Google Play und im App Store ergänzen, dass der Download des ersten Modells nun im WLAN von selbst startet (Überspringen pausiert ihn), dass Modelle danach gruppiert sind, was auf Ihr Gerät passt, wobei zu große erst auf Nachfrage erscheinen, und dass durch das Netzwerk unterbrochene Downloads dort weiterlaufen, wo sie aufgehört haben.',
           },
           {
             title: 'Chatten oder sprechen',
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-es.webp',
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (versión 1.0.60 en Android y 1.0.56 en iOS a fecha del 25 de octubre de 2026) combina una memoria editable en el dispositivo con un Kid Mode protegido con PIN en una app de chat gratuita que no necesita cuenta.** Los modelos se descargan una sola vez desde Hugging Face y después se ejecutan sin conexión. Los eventos de uso y los informes de fallos sin contenido de los chats sí salen del teléfono, así que lee la sección de privacidad antes de fiarte de la frase «sin rastreo».',
+      '**MemoryAI (versión 1.0.60 en Android y iPhone a fecha del 25 de octubre de 2026) combina una memoria editable en el dispositivo con un Kid Mode protegido con PIN en una app de chat gratuita que no necesita cuenta.** Los modelos se descargan una sola vez desde Hugging Face y después se ejecutan sin conexión. Los eventos de uso y los informes de fallos sin contenido de los chats sí salen del teléfono, así que lee la sección de privacidad antes de fiarte de la frase «sin rastreo».',
     quickAnswerTop: {
       es: {
         question: '¿MemoryAI es realmente offline y gratuita?',
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': '[Incidencias en GitHub](https://github.com/alessandrofacchini/memoryai-feedback/issues) (solo feedback, sin código)',
           },
         ],
-        note: 'Versiones listadas: 1.0.60 en Android (ficha de Google Play, actualizada el 25 de octubre de 2026) y 1.0.56 en iOS (ficha de la App Store, publicada el 22 de octubre de 2026); el desarrollador indica que la 1.0.60 está en revisión de Apple. El texto del análisis se redactó sobre la 1.0.56 y se amplió con las notas de la 1.0.60 de Google Play. El desarrollador indica que se requiere Android 9 o posterior; el texto de Google Play consultado no muestra ninguna versión mínima de Android.',
+        note: 'Versiones listadas: 1.0.60 en Android (ficha de Google Play, actualizada el 25 de octubre de 2026) y 1.0.60 en iOS (ficha de la App Store, publicada el 25 de octubre de 2026). El texto del análisis se redactó sobre la 1.0.56 y se amplió con las notas de la 1.0.60 de Google Play. El desarrollador indica que se requiere Android 9 o posterior; el texto de Google Play consultado no muestra ninguna versión mínima de Android.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Descarga un modelo con Wi-Fi',
-            whyItMatters: 'Los modelos pesan de 0.3 a 4 GB cada uno según las fichas. La actualización del 18 de octubre de 2026 dice que el primer modelo sugerido es ahora el más ligero que funciona bien en tu teléfono y que su descarga continúa si sales de la pantalla. Las notas de la 1.0.56 añaden que la app muestra el tamaño de un modelo y el tiempo aproximado de descarga antes de empezar, indica cuánto queda mientras se descarga y, si se corta la conexión, retoma la descarga por sí sola. Las notas de la 1.0.60 en Google Play añaden que la descarga del primer modelo ahora empieza sola con Wi-Fi (Omitir la pausa), que los modelos se agrupan según lo que cabe en tu dispositivo y los demasiado grandes quedan ocultos hasta que los pidas, y que las descargas cortadas por la red continúan donde se quedaron; la ficha de iOS sigue en la 1.0.56.',
+            whyItMatters: 'Los modelos pesan de 0.3 a 4 GB cada uno según las fichas. La actualización del 18 de octubre de 2026 dice que el primer modelo sugerido es ahora el más ligero que funciona bien en tu teléfono y que su descarga continúa si sales de la pantalla. Las notas de la 1.0.56 añaden que la app muestra el tamaño de un modelo y el tiempo aproximado de descarga antes de empezar, indica cuánto queda mientras se descarga y, si se corta la conexión, retoma la descarga por sí sola. Las notas de la 1.0.60 en Google Play y la App Store añaden que la descarga del primer modelo ahora empieza sola con Wi-Fi (Omitir la pausa), que los modelos se agrupan según lo que cabe en tu dispositivo y los demasiado grandes quedan ocultos hasta que los pidas, y que las descargas cortadas por la red continúan donde se quedaron.',
           },
           {
             title: 'Chatea o habla',
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-fr.webp',
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (version 1.0.60 sur Android et 1.0.56 sur iOS au 25 octobre 2026) associe une mémoire modifiable sur l\'appareil à un Kid Mode verrouillé par code PIN dans une application de chat gratuite qui ne demande aucun compte.** Les modèles sont téléchargés une seule fois depuis Hugging Face, puis exécutés hors ligne. Des événements d\'usage et des rapports de plantage, sans contenu des conversations, quittent bien le téléphone : lisez la section sur la confidentialité avant de vous fier à la mention « aucun suivi ».',
+      '**MemoryAI (version 1.0.60 sur Android et iPhone au 25 octobre 2026) associe une mémoire modifiable sur l\'appareil à un Kid Mode verrouillé par code PIN dans une application de chat gratuite qui ne demande aucun compte.** Les modèles sont téléchargés une seule fois depuis Hugging Face, puis exécutés hors ligne. Des événements d\'usage et des rapports de plantage, sans contenu des conversations, quittent bien le téléphone : lisez la section sur la confidentialité avant de vous fier à la mention « aucun suivi ».',
     quickAnswerTop: {
       fr: {
         question: 'MemoryAI fonctionne-t-elle vraiment hors ligne et gratuitement ?',
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où la trouver': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (retours uniquement, sans code source)',
           },
         ],
-        note: 'Versions affichées : 1.0.60 sur Android (fiche Google Play, mise à jour le 25 octobre 2026) et 1.0.56 sur iOS (fiche App Store, publiée le 22 octobre 2026) ; le développeur indique que la 1.0.60 est en cours de validation chez Apple. Le texte du test a été rédigé sur la 1.0.56 et complété par les notes de la 1.0.60 de Google Play. Le développeur indique qu\'Android 9 ou une version ultérieure est requis ; le texte de Google Play consulté n\'affiche aucune version minimale d\'Android.',
+        note: 'Versions affichées : 1.0.60 sur Android (fiche Google Play, mise à jour le 25 octobre 2026) et 1.0.60 sur iOS (fiche App Store, publiée le 25 octobre 2026). Le texte du test a été rédigé sur la 1.0.56 et complété par les notes de la 1.0.60 de Google Play. Le développeur indique qu\'Android 9 ou une version ultérieure est requis ; le texte de Google Play consulté n\'affiche aucune version minimale d\'Android.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Télécharger un modèle en Wi-Fi',
-            whyItMatters: 'Les modèles pèsent de 0,3 à 4 Go chacun selon les fiches. La mise à jour du 18 octobre 2026 indique que le premier modèle suggéré est désormais le plus léger qui fonctionne bien sur votre téléphone, et que son téléchargement se poursuit si vous quittez l\'écran. Les notes de la 1.0.56 ajoutent que l\'application affiche la taille d\'un modèle et la durée approximative du téléchargement avant de commencer, indique ce qu\'il reste pendant le téléchargement et le reprend d\'elle-même si la connexion est coupée. Les notes de la 1.0.60 sur Google Play ajoutent que le téléchargement du premier modèle démarre désormais tout seul en Wi-Fi (Ignorer le met en pause), que les modèles sont regroupés selon ce qui convient à votre appareil, les trop volumineux restant masqués tant que vous ne les demandez pas, et que les téléchargements coupés par le réseau reprennent là où ils s\'étaient arrêtés ; la fiche iOS reste à la 1.0.56.',
+            whyItMatters: 'Les modèles pèsent de 0,3 à 4 Go chacun selon les fiches. La mise à jour du 18 octobre 2026 indique que le premier modèle suggéré est désormais le plus léger qui fonctionne bien sur votre téléphone, et que son téléchargement se poursuit si vous quittez l\'écran. Les notes de la 1.0.56 ajoutent que l\'application affiche la taille d\'un modèle et la durée approximative du téléchargement avant de commencer, indique ce qu\'il reste pendant le téléchargement et le reprend d\'elle-même si la connexion est coupée. Les notes de la 1.0.60 sur Google Play et l\'App Store ajoutent que le téléchargement du premier modèle démarre désormais tout seul en Wi-Fi (Ignorer le met en pause), que les modèles sont regroupés selon ce qui convient à votre appareil, les trop volumineux restant masqués tant que vous ne les demandez pas, et que les téléchargements coupés par le réseau reprennent là où ils s\'étaient arrêtés .',
           },
           {
             title: 'Discuter ou parler',
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-ja.webp',
@@ -1400,7 +1400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI(2026年10月25日時点でAndroid版はバージョン1.0.60、iOS版はバージョン1.0.56)は、編集可能な端末内メモリとPINで保護されたキッズモードを組み合わせた、アカウント不要の無料チャットアプリです。** モデルはHugging Faceから一度ダウンロードすれば、その後はオフラインで動作します。チャットの内容を含まない利用イベントとクラッシュレポートは端末の外に送られるため、「トラッキングなし」という表記を当てにする前に、プライバシーの項を読んでください。',
+      '**MemoryAI(2026年10月25日時点でAndroidとiPhoneの両方でバージョン1.0.60)は、編集可能な端末内メモリとPINで保護されたキッズモードを組み合わせた、アカウント不要の無料チャットアプリです。** モデルはHugging Faceから一度ダウンロードすれば、その後はオフラインで動作します。チャットの内容を含まない利用イベントとクラッシュレポートは端末の外に送られるため、「トラッキングなし」という表記を当てにする前に、プライバシーの項を読んでください。',
     quickAnswerTop: {
       ja: {
         question: 'MemoryAIは本当にオフラインで動き、無料で使えますか?',
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues)(フィードバック専用、ソースコードなし)',
           },
         ],
-        note: '掲載されているバージョン:Androidは1.0.60(Google Playの掲載情報、2026年10月25日更新)、iOSは1.0.56(App Storeの掲載情報、2026年10月22日リリース)です。開発者によれば1.0.60はAppleの審査中です。本レビューの本文は1.0.56を基に執筆し、Google Playの1.0.60のリリースノートで補足しています。開発者はAndroid 9以降が必要と述べていますが、確認できたGoogle Playの文面には最低Androidバージョンの記載はありません。',
+        note: '掲載されているバージョン:Androidは1.0.60(Google Playの掲載情報、2026年10月25日更新)、iOSは1.0.60(App Storeの掲載情報、2026年10月25日リリース)です。本レビューの本文は1.0.56を基に執筆し、Google Playの1.0.60のリリースノートで補足しています。開発者はAndroid 9以降が必要と述べていますが、確認できたGoogle Playの文面には最低Androidバージョンの記載はありません。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Wi-Fiでモデルをダウンロードする',
-            whyItMatters: '掲載情報によれば、モデルは各0.3〜4 GBです。2026年10月18日のアップデートでは、最初に提案されるモデルが、お使いの端末で問題なく動作する中で最も軽いものになり、画面を離れてもダウンロードが続くとされています。1.0.56のリリースノートでは、開始前にモデルのサイズとおおよその所要時間が表示され、ダウンロード中は残りの量が表示され、接続が切れた場合はアプリが自動的に再開するとされています。Google Playの1.0.60のリリースノートでは、最初のモデルのダウンロードがWi-Fi接続時に自動で始まること(「スキップ」で一時停止)、モデルが端末に適合するかどうかでグループ分けされ、大きすぎるものは求めるまで非表示になること、ネットワークで中断したダウンロードが途中から再開することが追記されています。iOSの掲載情報はまだ1.0.56です。',
+            whyItMatters: '掲載情報によれば、モデルは各0.3〜4 GBです。2026年10月18日のアップデートでは、最初に提案されるモデルが、お使いの端末で問題なく動作する中で最も軽いものになり、画面を離れてもダウンロードが続くとされています。1.0.56のリリースノートでは、開始前にモデルのサイズとおおよその所要時間が表示され、ダウンロード中は残りの量が表示され、接続が切れた場合はアプリが自動的に再開するとされています。Google PlayとApp Storeの1.0.60のリリースノートでは、最初のモデルのダウンロードがWi-Fi接続時に自動で始まること(「スキップ」で一時停止)、モデルが端末に適合するかどうかでグループ分けされ、大きすぎるものは求めるまで非表示になること、ネットワークで中断したダウンロードが途中から再開することが追記されています。',
           },
           {
             title: 'チャットまたは会話する',
@@ -1701,7 +1701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-pt.webp',
@@ -1731,7 +1731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**O MemoryAI (versão 1.0.60 no Android e 1.0.56 no iOS em 25 de outubro de 2026) combina uma memória editável no dispositivo com um Modo Criança protegido por PIN em um app de chat gratuito que não exige conta.** Os modelos são baixados uma vez do Hugging Face e depois rodam offline. Eventos de uso e relatórios de falhas, sem o conteúdo das conversas, saem sim do celular, então leia a seção de privacidade antes de confiar na frase "sem rastreamento".',
+      '**O MemoryAI (versão 1.0.60 no Android e no iPhone em 25 de outubro de 2026) combina uma memória editável no dispositivo com um Modo Criança protegido por PIN em um app de chat gratuito que não exige conta.** Os modelos são baixados uma vez do Hugging Face e depois rodam offline. Eventos de uso e relatórios de falhas, sem o conteúdo das conversas, saem sim do celular, então leia a seção de privacidade antes de confiar na frase "sem rastreamento".',
     quickAnswerTop: {
       pt: {
         question: 'O MemoryAI é mesmo offline e gratuito?',
@@ -1829,7 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (só feedback, sem código-fonte)',
           },
         ],
-        note: 'Versões listadas: 1.0.60 no Android (ficha do Google Play, atualizada em 25 de outubro de 2026) e 1.0.56 no iOS (ficha da App Store, lançada em 22 de outubro de 2026); o desenvolvedor afirma que a 1.0.60 está em análise na Apple. O texto da análise foi escrito sobre a 1.0.56 e complementado com as notas da 1.0.60 do Google Play. O desenvolvedor afirma que o Android 9 ou superior é necessário; o texto do Google Play consultado não mostra versão mínima do Android.',
+        note: 'Versões listadas: 1.0.60 no Android (ficha do Google Play, atualizada em 25 de outubro de 2026) e 1.0.60 no iOS (ficha da App Store, lançada em 25 de outubro de 2026). O texto da análise foi escrito sobre a 1.0.56 e complementado com as notas da 1.0.60 do Google Play. O desenvolvedor afirma que o Android 9 ou superior é necessário; o texto do Google Play consultado não mostra versão mínima do Android.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1844,7 +1844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Baixar um modelo no Wi-Fi',
-            whyItMatters: 'Segundo as fichas, os modelos têm de 0.3 a 4 GB cada. A atualização de 18 de outubro de 2026 diz que o primeiro modelo sugerido agora é o mais leve que roda bem no seu celular e que o download continua se você sair da tela. As notas da 1.0.56 acrescentam que o app mostra o tamanho de um modelo e o tempo aproximado de download antes de você começar, mostra quanto falta durante o download e o retoma sozinho se a conexão cair. As notas da 1.0.60 no Google Play acrescentam que o download do primeiro modelo agora começa sozinho no Wi-Fi (Pular o pausa), que os modelos são agrupados pelo que cabe no seu aparelho, com os grandes demais ocultos até você pedir, e que downloads interrompidos pela rede continuam de onde pararam; a ficha do iOS ainda está na 1.0.56.',
+            whyItMatters: 'Segundo as fichas, os modelos têm de 0.3 a 4 GB cada. A atualização de 18 de outubro de 2026 diz que o primeiro modelo sugerido agora é o mais leve que roda bem no seu celular e que o download continua se você sair da tela. As notas da 1.0.56 acrescentam que o app mostra o tamanho de um modelo e o tempo aproximado de download antes de você começar, mostra quanto falta durante o download e o retoma sozinho se a conexão cair. As notas da 1.0.60 no Google Play e na App Store acrescentam que o download do primeiro modelo agora começa sozinho no Wi-Fi (Pular o pausa), que os modelos são agrupados pelo que cabe no seu aparelho, com os grandes demais ocultos até você pedir, e que downloads interrompidos pela rede continuam de onde pararam',
           },
           {
             title: 'Conversar ou falar',
@@ -2032,7 +2032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-ar.webp',
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (الإصدار 1.0.60 على أندرويد و1.0.56 على iOS اعتباراً من 25 أكتوبر 2026) يجمع بين ذاكرة قابلة للتعديل على الجهاز ووضع للأطفال محمي برقم PIN في تطبيق دردشة مجاني لا يتطلب حساباً.** تُنزَّل النماذج مرة واحدة من Hugging Face ثم تعمل دون اتصال. لكن أحداث الاستخدام وتقارير الأعطال، دون محتوى المحادثات، تغادر الهاتف فعلاً، لذا اقرأ قسم الخصوصية قبل الاعتماد على عبارة «بلا تتبّع».',
+      '**MemoryAI (الإصدار 1.0.60 على أندرويد وiPhone اعتباراً من 25 أكتوبر 2026) يجمع بين ذاكرة قابلة للتعديل على الجهاز ووضع للأطفال محمي برقم PIN في تطبيق دردشة مجاني لا يتطلب حساباً.** تُنزَّل النماذج مرة واحدة من Hugging Face ثم تعمل دون اتصال. لكن أحداث الاستخدام وتقارير الأعطال، دون محتوى المحادثات، تغادر الهاتف فعلاً، لذا اقرأ قسم الخصوصية قبل الاعتماد على عبارة «بلا تتبّع».',
     quickAnswerTop: {
       ar: {
         question: 'هل يعمل MemoryAI فعلاً دون اتصال وبلا أي تكلفة؟',
@@ -2160,7 +2160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': '[مشكلات GitHub](https://github.com/alessandrofacchini/memoryai-feedback/issues) (للملاحظات فقط)',
           },
         ],
-        note: 'الإصدارات المدرجة: 1.0.60 على أندرويد (صفحة Google Play، حُدّثت في 25 أكتوبر 2026) و1.0.56 على iOS (صفحة App Store، صدر في 22 أكتوبر 2026)؛ ويقول المطوّر إن 1.0.60 قيد مراجعة Apple. كُتب نص المراجعة على أساس 1.0.56 وأُضيفت إليه ملاحظات 1.0.60 من Google Play. ويقول المطوّر إن أندرويد 9 أو أحدث مطلوب؛ ولا يظهر في نص Google Play الذي جرت قراءته حد أدنى لإصدار أندرويد.',
+        note: 'الإصدارات المدرجة: 1.0.60 على أندرويد (صفحة Google Play، حُدّثت في 25 أكتوبر 2026) و1.0.60 على iOS (صفحة App Store، صدر في 25 أكتوبر 2026). كُتب نص المراجعة على أساس 1.0.56 وأُضيفت إليه ملاحظات 1.0.60 من Google Play. ويقول المطوّر إن أندرويد 9 أو أحدث مطلوب؛ ولا يظهر في نص Google Play الذي جرت قراءته حد أدنى لإصدار أندرويد.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'نزّل نموذجاً عبر Wi-Fi',
-            whyItMatters: 'يبلغ حجم كل نموذج من 0.3 إلى 4 جيجابايت بحسب صفحتي المتجر. ويذكر تحديث 18 أكتوبر 2026 أن أول نموذج مقترح صار الأخف بين ما يعمل جيداً على هاتفك، وأن تنزيله يستمر إذا غادرت الشاشة. وتضيف ملاحظات الإصدار 1.0.56 أن التطبيق يعرض حجم النموذج والمدة التقريبية للتنزيل قبل أن تبدأ، ويعرض ما تبقّى أثناء التنزيل، ويستأنف التنزيل من تلقاء نفسه إذا انقطع الاتصال. وتضيف ملاحظات الإصدار 1.0.60 في Google Play أن تنزيل النموذج الأول يبدأ الآن من تلقاء نفسه عبر Wi-Fi (يوقفه «تخطّي»)، وأن النماذج تُجمَّع بحسب ما يناسب جهازك مع إخفاء الأكبر من اللازم حتى تطلبها، وأن التنزيلات التي تقطعها الشبكة تستكمل من حيث توقفت؛ أما صفحة iOS فما زالت على 1.0.56.',
+            whyItMatters: 'يبلغ حجم كل نموذج من 0.3 إلى 4 جيجابايت بحسب صفحتي المتجر. ويذكر تحديث 18 أكتوبر 2026 أن أول نموذج مقترح صار الأخف بين ما يعمل جيداً على هاتفك، وأن تنزيله يستمر إذا غادرت الشاشة. وتضيف ملاحظات الإصدار 1.0.56 أن التطبيق يعرض حجم النموذج والمدة التقريبية للتنزيل قبل أن تبدأ، ويعرض ما تبقّى أثناء التنزيل، ويستأنف التنزيل من تلقاء نفسه إذا انقطع الاتصال. وتضيف ملاحظات الإصدار 1.0.60 في Google Play وApp Store أن تنزيل النموذج الأول يبدأ الآن من تلقاء نفسه عبر Wi-Fi (يوقفه «تخطّي»)، وأن النماذج تُجمَّع بحسب ما يناسب جهازك مع إخفاء الأكبر من اللازم حتى تطلبها، وأن التنزيلات التي تقطعها الشبكة تستكمل من حيث توقفت',
           },
           {
             title: 'دردش أو تحدّث',
@@ -2363,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-zh.webp',
@@ -2393,7 +2393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI(截至 2026 年 10 月 25 日,Android 版本为 1.0.60,iOS 版本为 1.0.56)将可编辑的设备端记忆与带 PIN 锁的儿童模式结合在一款无需账号的免费聊天应用中。** 模型只需从 Hugging Face 下载一次,之后即可离线运行。不含聊天内容的使用事件和崩溃报告确实会离开手机,因此在依赖“无追踪”的说法之前,请先阅读隐私部分。',
+      '**MemoryAI(截至 2026 年 10 月 25 日,Android 和 iPhone 版本均为 1.0.60)将可编辑的设备端记忆与带 PIN 锁的儿童模式结合在一款无需账号的免费聊天应用中。** 模型只需从 Hugging Face 下载一次,之后即可离线运行。不含聊天内容的使用事件和崩溃报告确实会离开手机,因此在依赖“无追踪”的说法之前,请先阅读隐私部分。',
     quickAnswerTop: {
       zh: {
         question: 'MemoryAI 真的能离线运行并且免费吗?',
@@ -2491,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取方式': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues)(仅限反馈,无源代码)',
           },
         ],
-        note: '页面所列版本:Android 为 1.0.60(Google Play 页面,2026 年 10 月 25 日更新),iOS 为 1.0.56(App Store 页面,2026 年 10 月 22 日发布);开发者称 1.0.60 正在 Apple 审核中。评测正文基于 1.0.56 撰写,并补充了 Google Play 上 1.0.60 的更新说明。开发者称需要 Android 9 或更高版本;所读取的 Google Play 页面文字中未显示最低 Android 版本。',
+        note: '页面所列版本:Android 为 1.0.60(Google Play 页面,2026 年 10 月 25 日更新),iOS 为 1.0.60(App Store 页面,2026 年 10 月 25 日发布)。评测正文基于 1.0.56 撰写,并补充了 Google Play 上 1.0.60 的更新说明。开发者称需要 Android 9 或更高版本;所读取的 Google Play 页面文字中未显示最低 Android 版本。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2506,7 +2506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '在 Wi-Fi 下下载模型',
-            whyItMatters: '据页面所述,每个模型为 0.3 至 4 GB。2026 年 10 月 18 日的更新称,首个推荐模型现在是最适合你手机运行的最轻量模型,并且即使离开该界面,下载仍会继续。1.0.56 的更新说明称,应用会在开始前显示模型大小和大致下载时间,下载过程中显示剩余量,并在连接中断后自动继续下载。Google Play 上 1.0.60 的更新说明补充称:首个模型的下载现在会在 Wi-Fi 下自动开始(点“跳过”可暂停),模型按设备能否运行分组,过大的模型在你要求之前保持隐藏,被网络中断的下载会从中断处继续;iOS 页面仍是 1.0.56。',
+            whyItMatters: '据页面所述,每个模型为 0.3 至 4 GB。2026 年 10 月 18 日的更新称,首个推荐模型现在是最适合你手机运行的最轻量模型,并且即使离开该界面,下载仍会继续。1.0.56 的更新说明称,应用会在开始前显示模型大小和大致下载时间,下载过程中显示剩余量,并在连接中断后自动继续下载。Google Play 和 App Store 上 1.0.60 的更新说明补充称:首个模型的下载现在会在 Wi-Fi 下自动开始(点“跳过”可暂停),模型按设备能否运行分组,过大的模型在你要求之前保持隐藏,被网络中断的下载会从中断处继续。',
           },
           {
             title: '聊天或对话',
@@ -2694,7 +2694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-ko.webp',
@@ -2724,7 +2724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI(2026년 10월 25일 기준 Android는 버전 1.0.60, iOS는 버전 1.0.56)는 편집 가능한 온디바이스 메모리와 PIN으로 잠그는 키즈 모드를 갖춘, 계정이 필요 없는 무료 채팅 앱입니다.** 모델은 Hugging Face에서 한 번 내려받은 뒤 오프라인으로 실행됩니다. 채팅 내용이 없는 사용 이벤트와 오류 보고서는 휴대폰 밖으로 전송되므로, "추적 없음"이라는 문구에 의존하기 전에 개인정보 항목을 읽어 보시기 바랍니다.',
+      '**MemoryAI(2026년 10월 25일 기준 Android와 iPhone 모두 버전 1.0.60)는 편집 가능한 온디바이스 메모리와 PIN으로 잠그는 키즈 모드를 갖춘, 계정이 필요 없는 무료 채팅 앱입니다.** 모델은 Hugging Face에서 한 번 내려받은 뒤 오프라인으로 실행됩니다. 채팅 내용이 없는 사용 이벤트와 오류 보고서는 휴대폰 밖으로 전송되므로, "추적 없음"이라는 문구에 의존하기 전에 개인정보 항목을 읽어 보시기 바랍니다.',
     quickAnswerTop: {
       ko: {
         question: 'MemoryAI는 정말 오프라인으로 실행되며 무료입니까?',
@@ -2822,7 +2822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '[GitHub 이슈](https://github.com/alessandrofacchini/memoryai-feedback/issues) (피드백 전용, 소스 코드 없음)',
           },
         ],
-        note: '게재된 버전은 Android 1.0.60(Google Play 게재 정보, 2026년 10월 25일 업데이트)과 iOS 1.0.56(App Store 게재 정보, 2026년 10월 22일 출시)입니다. 개발자는 1.0.60이 Apple 심사 중이라고 밝혔습니다. 리뷰 본문은 1.0.56을 기준으로 작성했으며 Google Play의 1.0.60 업데이트 노트로 보완했습니다. 개발자는 Android 9 이상이 필요하다고 밝혔으나 확인한 Google Play 문구에는 최소 Android 버전이 표시되지 않습니다.',
+        note: '게재된 버전은 Android 1.0.60(Google Play 게재 정보, 2026년 10월 25일 업데이트)과 iOS 1.0.60(App Store 게재 정보, 2026년 10월 25일 출시)입니다. 리뷰 본문은 1.0.56을 기준으로 작성했으며 Google Play의 1.0.60 업데이트 노트로 보완했습니다. 개발자는 Android 9 이상이 필요하다고 밝혔으나 확인한 Google Play 문구에는 최소 Android 버전이 표시되지 않습니다.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2837,7 +2837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Wi-Fi에서 모델 내려받기',
-            whyItMatters: '게재 정보에 따르면 모델은 각각 0.3~4 GB입니다. 2026년 10월 18일 업데이트 노트에는 처음 추천되는 모델이 이제 이용자의 휴대폰에서 잘 실행되는 가장 가벼운 모델이며, 화면을 벗어나도 다운로드가 계속된다고 적혀 있습니다. 1.0.56 업데이트 노트에는 시작 전에 모델 크기와 예상 소요 시간을, 내려받는 동안 남은 양을 보여 주고, 연결이 끊기면 앱이 스스로 이어서 받는다고 적혀 있습니다. Google Play의 1.0.60 업데이트 노트에는 첫 모델 다운로드가 Wi-Fi에서 자동으로 시작되고(건너뛰기로 일시 중지), 모델이 기기에 맞는지에 따라 묶여 너무 큰 모델은 요청하기 전까지 숨겨지며, 네트워크로 끊긴 다운로드는 멈춘 지점부터 이어진다고 추가되어 있습니다. iOS 게재 정보는 아직 1.0.56입니다.',
+            whyItMatters: '게재 정보에 따르면 모델은 각각 0.3~4 GB입니다. 2026년 10월 18일 업데이트 노트에는 처음 추천되는 모델이 이제 이용자의 휴대폰에서 잘 실행되는 가장 가벼운 모델이며, 화면을 벗어나도 다운로드가 계속된다고 적혀 있습니다. 1.0.56 업데이트 노트에는 시작 전에 모델 크기와 예상 소요 시간을, 내려받는 동안 남은 양을 보여 주고, 연결이 끊기면 앱이 스스로 이어서 받는다고 적혀 있습니다. Google Play와 App Store의 1.0.60 업데이트 노트에는 첫 모델 다운로드가 Wi-Fi에서 자동으로 시작되고(건너뛰기로 일시 중지), 모델이 기기에 맞는지에 따라 묶여 너무 큰 모델은 요청하기 전까지 숨겨지며, 네트워크로 끊긴 다운로드는 멈춘 지점부터 이어진다고 추가되어 있습니다.',
           },
           {
             title: '채팅 또는 대화',

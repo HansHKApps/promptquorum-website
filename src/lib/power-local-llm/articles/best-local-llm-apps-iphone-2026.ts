@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLM is the paid option in this guide ($4.99 one-time, no subscription).** One purchase covers iPhone, iPad, and Mac, and Family Sharing extends to up to six people. Curated model library; per the developer it plugs into Siri and Shortcuts.',
           '**Locally AI is the free MLX-based alternative, developed by the LM Studio team.** Runs Llama, Gemma (incl. Gemma 4), Qwen, and DeepSeek models on Apple MLX, works with iOS Shortcuts, and can expose Apple\'s own on-device foundation model as a chat interface.',
           '**Google AI Edge Gallery is Google\'s free Gemma 4 app for iPhone.** Thinking mode, agent skills, and image/audio input; models run in the LiteRT-LM format, not GGUF. Google still describes the app as in active development.',
-          '**MemoryAI is the free offline chat app with an editable memory and a PIN-locked Kid Mode (added after the main comparison).** It adds document Q&A, hands-free voice and GGUF import from Hugging Face; it is closed source, the App Store lists version 1.0.56, and there is no PromptQuorum speed figure for it.',
+          '**MemoryAI is the free offline chat app with an editable memory and a PIN-locked Kid Mode (added after the main comparison).** It adds document Q&A, hands-free voice and GGUF import from Hugging Face; it is closed source, the App Store lists version 1.0.60, and there is no PromptQuorum speed figure for it.',
           '**MLC Chat is Metal-accelerated but dormant on iPhone.** Its App Store build has not been updated since v1.6 on 27 September 2024, so its model library predates Phi-4 Mini and Gemma 3. The MLC LLM engine itself is still active on GitHub.',
           '**LLM Farm is currently not on the App Store or TestFlight.** Its own README calls it "temporarily unavailable". It remains open-source and build-from-source via Xcode, but its last release was 1.4.3 in January 2025 and its last code push was 30 January 2026.',
           '**Apple Intelligence is on-device but not a separate app.** Apple\'s ~3B foundation model powers system features (Writing Tools, Smart Reply, Notification Summaries). Since iOS 26, third-party apps can call it via the Foundation Models framework, and Shortcuts can prompt it with the "Use Model" action.',
@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Features:** Document Q&A, an Agent Memory you can open, edit and delete, hands-free voice (on-device speech input and read-aloud), image understanding with vision models, and a Kid Mode locked behind a parent PIN.',
           '**Requirements and price:** iOS 16.4+, 4 GB+ RAM. Free, with no ads, subscriptions or in-app purchases.',
           '**Privacy and licence:** Chat, documents and memories stay on the device after the model download. The app sends usage events and crash reports (no chat content, per the developer), and it is closed source.',
-          '**Install path:** App Store. First released on 30 March 2026, so it is a young app. The App Store lists version 1.0.56; the developer says 1.0.60 is in Apple\'s review.',
+          '**Install path:** App Store. First released on 30 March 2026, so it is a young app. The App Store lists version 1.0.60.',
         ],
         callouts: [
           {
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLM ist die kostenpflichtige Option ($4.99 einmalig, kein Abo).** Ein Kauf deckt iPhone, iPad und Mac ab, und Family Sharing erstreckt sich auf bis zu sechs Personen. Kuratierte Modellbibliothek; laut Entwickler ist die App in Siri und Kurzbefehle eingebunden.',
           '**Locally AI ist die kostenlose MLX-basierte Alternative, entwickelt vom LM-Studio-Team.** Führt Llama-, Gemma- (inkl. Gemma 4), Qwen- und DeepSeek-Modelle auf Apple MLX aus, arbeitet mit iOS Kurzbefehlen zusammen und kann Apples eigenes On-Device-Foundation-Modell als Chat-Oberfläche bereitstellen.',
           '**Google AI Edge Gallery ist Googles kostenlose Gemma-4-App für das iPhone.** Denkmodus, Agent Skills und Bild-/Audioeingabe; die Modelle laufen im LiteRT-LM-Format, nicht als GGUF. Google beschreibt die App weiterhin als in aktiver Entwicklung.',
-          '**MemoryAI ist die kostenlose Offline-Chat-App mit editierbarem Gedächtnis und PIN-geschütztem Kindermodus (nach dem Hauptvergleich ergänzt).** Sie bietet Dokumentenfragen, Freisprech-Sprachmodus und GGUF-Import von Hugging Face; sie ist Closed Source, der App Store listet Version 1.0.56, und es gibt dafür keine PromptQuorum-Geschwindigkeitsangabe.',
+          '**MemoryAI ist die kostenlose Offline-Chat-App mit editierbarem Gedächtnis und PIN-geschütztem Kindermodus (nach dem Hauptvergleich ergänzt).** Sie bietet Dokumentenfragen, Freisprech-Sprachmodus und GGUF-Import von Hugging Face; sie ist Closed Source, der App Store listet Version 1.0.60, und es gibt dafür keine PromptQuorum-Geschwindigkeitsangabe.',
           '**MLC Chat ist Metal-beschleunigt, ruht aber auf dem iPhone.** Der App-Store-Build wurde seit v1.6 am 27. September 2024 nicht aktualisiert, daher liegt die Modellbibliothek vor Phi-4 Mini und Gemma 3. Die MLC-LLM-Engine selbst ist auf GitHub weiterhin aktiv.',
           '**LLM Farm ist derzeit weder im App Store noch über TestFlight verfügbar.** Die eigene README nennt die App „vorübergehend nicht verfügbar". Sie bleibt quelloffen und über Xcode aus dem Quellcode baubar, doch der letzte Release war 1.4.3 im Januar 2025 und der letzte Code-Push erfolgte am 30. Januar 2026.',
           '**Apple Intelligence ist On-Device-KI, aber keine eigenständige App.** Apples ~3B-Foundation-Modell treibt Systemfunktionen an (Schreibwerkzeuge, Smart Reply, Benachrichtigungs-Zusammenfassungen). Seit iOS 26 können Drittanbieter-Apps es über das Foundation-Models-Framework aufrufen, und Kurzbefehle können es über die Aktion „Modell verwenden" ansprechen.',
@@ -944,7 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Funktionen:** Dokumentenfragen, ein Agent Memory, das Sie öffnen, bearbeiten und löschen können, Freisprech-Sprachmodus (Spracheingabe und Vorlesen auf dem Gerät), Bildverständnis mit Vision-Modellen und ein Kindermodus hinter einer Eltern-PIN.',
           '**Voraussetzungen und Preis:** iOS 16.4+, mindestens 4 GB RAM. Kostenlos, ohne Werbung, Abos oder In-App-Käufe.',
           '**Datenschutz und Lizenz:** Chats, Dokumente und Erinnerungen bleiben nach dem Modell-Download auf dem Gerät. Die App sendet Nutzungsereignisse und Absturzberichte (laut Entwickler ohne Chat-Inhalte) und ist Closed Source.',
-          '**Installation:** App Store. Erstveröffentlichung am 30. März 2026, die App ist also noch jung. Der App Store listet Version 1.0.56; laut Entwickler befindet sich 1.0.60 in der Apple-Prüfung.',
+          '**Installation:** App Store. Erstveröffentlichung am 30. März 2026, die App ist also noch jung. Der App Store listet Version 1.0.60.',
         ],
         callouts: [
           {
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1268,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLMは有料オプション（$4.99の買い切り、サブスクなし）です。** 1回の購入でiPhone・iPad・Macに対応し、ファミリー共有で最大6人まで利用できます。厳選モデルライブラリを備え、開発元によるとSiriとShortcutsに連携します。',
           '**Locally AIは、LM Studioチームが開発する無料のMLXベースの代替アプリです。** Apple MLX上でLlama、Gemma（Gemma 4を含む）、Qwen、DeepSeekのモデルを動かし、iOS Shortcutsに対応し、Apple独自のオンデバイスファウンデーションモデルをチャットインターフェースとして利用可能にします。',
           '**Google AI Edge Galleryは、Google製のiPhone向け無料Gemma 4アプリです。** 思考モード、エージェントスキル、画像・音声入力に対応します。モデルはGGUFではなくLiteRT-LM形式で動作します。Googleは引き続き開発中のアプリと説明しています。',
-          '**MemoryAIは、編集できるメモリとPIN付きキッズモードを備えた無料のオフラインチャットアプリです(主な比較の後に追加)。** 文書Q&A、ハンズフリー音声、Hugging FaceからのGGUF取り込みに対応しています。クローズドソースで、App Storeには1.0.56が掲載されており、PromptQuorumによる速度の数値はありません。',
+          '**MemoryAIは、編集できるメモリとPIN付きキッズモードを備えた無料のオフラインチャットアプリです(主な比較の後に追加)。** 文書Q&A、ハンズフリー音声、Hugging FaceからのGGUF取り込みに対応しています。クローズドソースで、App Storeには1.0.60が掲載されており、PromptQuorumによる速度の数値はありません。',
           '**MLC ChatはMetal加速に対応していますが、iPhone版は動きが止まっています。** App Storeビルドは2024年9月27日のv1.6以降更新されておらず、モデルライブラリはPhi-4 MiniやGemma 3より前のものです。MLC LLMエンジン自体はGitHubで活発に開発が続いています。',
           '**LLM Farmは現在App StoreにもTestFlightにもありません。** 公式READMEは「一時的に利用不可」と説明しています。オープンソースのままXcodeでソースからビルド可能ですが、最後のリリースは2025年1月の1.4.3、最後のコードプッシュは2026年1月30日です。',
           '**Apple Intelligenceはオンデバイス型ですが、独立したアプリではありません。** Appleの約3Bファウンデーションモデルがシステム機能（Writing Tools、Smart Reply、通知サマリー）を担います。iOS 26以降、サードパーティアプリはFoundation Modelsフレームワーク経由で呼び出せ、Shortcutsも「モデルを使用」アクションで対応できます。',
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**機能:** 文書Q&A、開いて編集・削除できるエージェントメモリ、ハンズフリー音声(端末内の音声入力と読み上げ)、ビジョンモデルによる画像理解、保護者用PINでロックされるキッズモード。',
           '**要件と価格:** iOS 16.4以降、RAM 4GB以上。無料で、広告、サブスクリプション、アプリ内課金はありません。',
           '**プライバシーとライセンス:** モデルのダウンロード後、チャット、文書、メモリは端末内にとどまります。アプリは利用イベントとクラッシュレポートを送信し(開発者によればチャット内容は含まれません)、クローズドソースです。',
-          '**入手方法:** App Store。初回リリースは2026年3月30日で、新しいアプリです。App Storeには1.0.56が掲載されており、開発者によれば1.0.60はAppleの審査中です。',
+          '**入手方法:** App Store。初回リリースは2026年3月30日で、新しいアプリです。App Storeには1.0.60が掲載されています。',
         ],
         callouts: [
           {
@@ -1742,7 +1742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLM est l\'option payante de ce guide ($4.99 en achat unique, sans abonnement).** Un seul achat couvre iPhone, iPad et Mac, et le partage familial l\'étend à six personnes. Bibliothèque de modèles sélectionnés ; selon le développeur, il s\'intègre à Siri et à Shortcuts.',
           '**Locally AI est l\'alternative gratuite basée sur MLX, développée par l\'équipe LM Studio.** Fait tourner des modèles Llama, Gemma (dont Gemma 4), Qwen et DeepSeek sur Apple MLX, fonctionne avec iOS Shortcuts et peut exposer le propre modèle de fondation on-device d\'Apple comme interface de chat.',
           '**Google AI Edge Gallery est l\'application Gemma 4 gratuite de Google pour iPhone.** Mode réflexion, agent skills et entrée image/audio ; les modèles tournent au format LiteRT-LM, pas GGUF. Google décrit toujours l\'application comme en développement actif.',
-          '**MemoryAI est l\'application de chat gratuite et hors ligne avec une mémoire modifiable et un Kid Mode protégé par PIN (ajoutée après la comparaison principale).** Elle ajoute les questions sur documents, le mode vocal mains libres et l\'import GGUF depuis Hugging Face ; son code est fermé, l\'App Store affiche la version 1.0.56 et nous n\'avons aucune valeur de vitesse PromptQuorum pour elle.',
+          '**MemoryAI est l\'application de chat gratuite et hors ligne avec une mémoire modifiable et un Kid Mode protégé par PIN (ajoutée après la comparaison principale).** Elle ajoute les questions sur documents, le mode vocal mains libres et l\'import GGUF depuis Hugging Face ; son code est fermé, l\'App Store affiche la version 1.0.60 et nous n\'avons aucune valeur de vitesse PromptQuorum pour elle.',
           '**MLC Chat est accéléré par Metal mais inactif sur iPhone.** Sa version App Store n\'a pas été mise à jour depuis la v1.6 du 27 septembre 2024 ; sa bibliothèque de modèles précède donc Phi-4 Mini et Gemma 3. Le moteur MLC LLM lui-même reste actif sur GitHub.',
           '**LLM Farm n\'est actuellement ni sur l\'App Store ni sur TestFlight.** Son propre README le décrit comme « temporairement indisponible ». Il reste open source et compilable via Xcode, mais sa dernière version est la 1.4.3 de janvier 2025 et son dernier push de code date du 30 janvier 2026.',
           '**Apple Intelligence est on-device mais n\'est pas une application distincte.** Le modèle de fondation d\'environ 3B d\'Apple alimente des fonctions système (Outils d\'écriture, Réponse intelligente, Résumés de notifications). Depuis iOS 26, les applications tierces peuvent l\'appeler via le framework Foundation Models, et Shortcuts peut l\'interroger avec l\'action « Utiliser le modèle ».',
@@ -2102,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Fonctions :** questions sur vos documents, une mémoire d\'agent que vous pouvez ouvrir, modifier et supprimer, un mode vocal mains libres (saisie vocale et lecture à voix haute sur l\'appareil), la compréhension d\'images avec des modèles de vision et un Kid Mode verrouillé par un code PIN parental.',
           '**Prérequis et prix :** iOS 16.4+, 4 Go de RAM minimum. Gratuite, sans publicité, abonnement ni achat intégré.',
           '**Confidentialité et licence :** les conversations, documents et souvenirs restent sur l\'appareil après le téléchargement du modèle. L\'application envoie des événements d\'usage et des rapports de plantage (sans contenu des conversations, selon le développeur) et son code est fermé.',
-          '**Installation :** App Store. Première version publiée le 30 mars 2026 : c\'est donc une application jeune. L\'App Store affiche la version 1.0.56 ; selon le développeur, la 1.0.60 est en cours de validation chez Apple.',
+          '**Installation :** App Store. Première version publiée le 30 mars 2026 : c\'est donc une application jeune. L\'App Store affiche la version 1.0.60.',
         ],
         callouts: [
           {
@@ -2317,7 +2317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2418,7 +2418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLM是付费选项（$4.99买断，无需订阅）。** 一次购买即可覆盖iPhone、iPad和Mac，家庭共享最多可供六人使用。精选模型库；据开发者称，它可接入Siri和快捷指令。',
           '**Locally AI是免费的MLX替代方案，由LM Studio团队开发。** 基于Apple MLX运行Llama、Gemma（含Gemma 4）、Qwen和DeepSeek模型，支持iOS快捷指令，还能将苹果自家的设备端基础模型变为可对话的界面。',
           '**Google AI Edge Gallery是谷歌面向iPhone的免费Gemma 4应用。** 提供思考模式、智能体技能以及图像/音频输入；模型采用LiteRT-LM格式，而非GGUF。谷歌仍称该应用处于积极开发中。',
-          '**MemoryAI 是一款免费的离线聊天应用,带可编辑的记忆和 PIN 锁定的儿童模式(在主要对比之后加入)。** 它支持文档问答、免提语音和从 Hugging Face 导入 GGUF;闭源,App Store 列出的版本为 1.0.56,PromptQuorum 没有它的速度数据。',
+          '**MemoryAI 是一款免费的离线聊天应用,带可编辑的记忆和 PIN 锁定的儿童模式(在主要对比之后加入)。** 它支持文档问答、免提语音和从 Hugging Face 导入 GGUF;闭源,App Store 列出的版本为 1.0.60,PromptQuorum 没有它的速度数据。',
           '**MLC Chat采用Metal加速，但iPhone版已停更。** 其App Store版本自2024年9月27日的v1.6起未再更新，模型库停留在Phi-4 Mini和Gemma 3之前。MLC LLM引擎本身在GitHub上仍然活跃。',
           '**LLM Farm目前不在App Store或TestFlight上。** 项目自己的README称其“暂时不可用”。它仍保持开源，可通过Xcode从源码编译，但最后一个发布版本是2025年1月的1.4.3，最后一次代码提交是2026年1月30日。',
           '**Apple Intelligence在设备端运行，但非独立应用。** 苹果约3B的基础模型为写作工具、智能回复、通知摘要等系统功能提供支持。自iOS 26起，第三方应用可通过Foundation Models框架调用它，快捷指令也可通过“使用模型”动作向它发送提示。',
@@ -2677,7 +2677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**功能:** 文档问答、可打开、编辑和删除的智能体记忆、免提语音(设备端语音输入和朗读)、借助视觉模型的图像理解,以及锁在家长 PIN 之后的儿童模式。',
           '**要求与价格:** iOS 16.4 及以上,至少 4 GB 内存。免费,无广告、无订阅、无应用内购买。',
           '**隐私与许可:** 模型下载完成后,聊天、文档和记忆都留在设备上。应用会发送使用事件和崩溃报告(据开发者称不含聊天内容),并且是闭源的。',
-          '**安装方式:** App Store。2026 年 3 月 30 日首次发布,所以还是一款较新的应用。App Store 列出的版本为 1.0.56;开发者称 1.0.60 正在 Apple 审核中。',
+          '**安装方式:** App Store。2026 年 3 月 30 日首次发布,所以还是一款较新的应用。App Store 列出的版本为 1.0.60。',
         ],
         callouts: [
           {
@@ -2892,7 +2892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2993,7 +2993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLM es la opción de pago ($4.99 de pago único, sin suscripción).** Una sola compra cubre iPhone, iPad y Mac, y Compartir en familia lo extiende hasta seis personas. Biblioteca de modelos curada; según el desarrollador, se integra con Siri y Shortcuts.',
           '**Locally AI es la alternativa gratuita basada en MLX, desarrollada por el equipo de LM Studio.** Ejecuta modelos Llama, Gemma (incluido Gemma 4), Qwen y DeepSeek sobre Apple MLX, funciona con iOS Shortcuts y puede exponer el propio modelo de base en dispositivo de Apple como interfaz de chat.',
           '**Google AI Edge Gallery es la app gratuita de Google con Gemma 4 para iPhone.** Modo de razonamiento, habilidades de agente y entrada de imagen/audio; los modelos se ejecutan en formato LiteRT-LM, no GGUF. Google sigue describiendo la app como en desarrollo activo.',
-          '**MemoryAI es la app de chat gratuita y sin conexión con memoria editable y un Kid Mode protegido con PIN (añadida después de la comparación principal).** Aporta preguntas sobre documentos, voz manos libres e importación GGUF desde Hugging Face; es de código cerrado, la App Store lista la versión 1.0.56 y no hay una cifra de velocidad de PromptQuorum para ella.',
+          '**MemoryAI es la app de chat gratuita y sin conexión con memoria editable y un Kid Mode protegido con PIN (añadida después de la comparación principal).** Aporta preguntas sobre documentos, voz manos libres e importación GGUF desde Hugging Face; es de código cerrado, la App Store lista la versión 1.0.60 y no hay una cifra de velocidad de PromptQuorum para ella.',
           '**MLC Chat tiene aceleración Metal, pero está inactiva en iPhone.** Su versión del App Store no se actualiza desde la v1.6 del 27 de septiembre de 2024, por lo que su biblioteca de modelos es anterior a Phi-4 Mini y Gemma 3. El motor MLC LLM en sí sigue activo en GitHub.',
           '**LLM Farm no está disponible actualmente en el App Store ni en TestFlight.** Su propio README la describe como "temporalmente no disponible". Sigue siendo de código abierto y se puede compilar desde el código fuente con Xcode, pero su última versión fue la 1.4.3 en enero de 2025 y su último cambio de código fue el 30 de enero de 2026.',
           '**Apple Intelligence está en el dispositivo, pero no es una app independiente.** El modelo de base de ~3B de Apple potencia funciones del sistema (Herramientas de escritura, Respuesta inteligente, Resúmenes de notificaciones). Desde iOS 26, las apps de terceros pueden llamarlo mediante el framework Foundation Models, y Shortcuts puede invocarlo con la acción "Usar modelo".',
@@ -3252,7 +3252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Funciones:** preguntas sobre documentos, una memoria de agente que puedes abrir, editar y borrar, voz manos libres (entrada de voz y lectura en voz alta en el dispositivo), comprensión de imágenes con modelos de visión y un Kid Mode bloqueado tras un PIN de madre o padre.',
           '**Requisitos y precio:** iOS 16.4+, 4 GB de RAM o más. Gratuita, sin anuncios, suscripciones ni compras dentro de la app.',
           '**Privacidad y licencia:** el chat, los documentos y los recuerdos se quedan en el dispositivo tras la descarga del modelo. La app envía eventos de uso e informes de fallos (sin contenido del chat, según el desarrollador) y es de código cerrado.',
-          '**Instalación:** App Store. Se lanzó por primera vez el 30 de marzo de 2026, así que es una app joven. La App Store lista la versión 1.0.56; el desarrollador indica que la 1.0.60 está en revisión de Apple.',
+          '**Instalación:** App Store. Se lanzó por primera vez el 30 de marzo de 2026, así que es una app joven. La App Store lista la versión 1.0.60.',
         ],
         callouts: [
           {
@@ -3467,7 +3467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -3568,7 +3568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLM은 유료 선택입니다 ($4.99 일회 구매, 구독 없음).** 한 번 구매로 iPhone, iPad, Mac을 모두 사용할 수 있고 가족 공유는 최대 6명까지 확장됩니다. 큐레이션된 모델 라이브러리를 갖추었으며, 개발사에 따르면 Siri 및 Shortcuts와 연동됩니다.',
           '**Locally AI는 LM Studio 팀이 개발한 무료 MLX 기반 대안입니다.** Apple MLX에서 Llama, Gemma(Gemma 4 포함), Qwen, DeepSeek 모델을 실행하고, iOS Shortcuts와 함께 작동하며, Apple 자체의 기기 내 파운데이션 모델을 채팅 인터페이스로 노출할 수 있습니다.',
           '**Google AI Edge Gallery는 iPhone용 Google의 무료 Gemma 4 앱입니다.** 사고 모드, 에이전트 스킬, 이미지·오디오 입력을 제공하며, 모델은 GGUF가 아닌 LiteRT-LM 형식으로 실행됩니다. Google은 이 앱을 여전히 활발히 개발 중이라고 설명합니다.',
-          '**MemoryAI는 편집 가능한 메모리와 PIN 잠금 키즈 모드를 갖춘 무료 오프라인 채팅 앱입니다(주요 비교 이후 추가).** 문서 질의응답, 핸즈프리 음성, Hugging Face의 GGUF 가져오기를 지원합니다. 클로즈드 소스이고 App Store에는 1.0.56이 게재되어 있으며, PromptQuorum의 속도 수치는 없습니다.',
+          '**MemoryAI는 편집 가능한 메모리와 PIN 잠금 키즈 모드를 갖춘 무료 오프라인 채팅 앱입니다(주요 비교 이후 추가).** 문서 질의응답, 핸즈프리 음성, Hugging Face의 GGUF 가져오기를 지원합니다. 클로즈드 소스이고 App Store에는 1.0.60이 게재되어 있으며, PromptQuorum의 속도 수치는 없습니다.',
           '**MLC Chat은 Metal 가속이지만 iPhone에서는 정체되어 있습니다.** App Store 빌드는 2024년 9월 27일의 v1.6 이후 업데이트되지 않았으므로 모델 라이브러리가 Phi-4 Mini와 Gemma 3 이전 수준입니다. MLC LLM 엔진 자체는 GitHub에서 여전히 활발합니다.',
           '**LLM Farm은 현재 App Store와 TestFlight에 없습니다.** 자체 README는 "일시적으로 이용 불가"라고 설명합니다. 여전히 오픈 소스이며 Xcode로 소스 코드에서 빌드할 수 있지만, 마지막 릴리스는 2025년 1월의 1.4.3이고 마지막 코드 푸시는 2026년 1월 30일입니다.',
           '**Apple Intelligence는 기기 내에 있지만 독립 앱이 아닙니다.** Apple의 ~3B 파운데이션 모델이 시스템 기능(작문 도구, 스마트 답장, 알림 요약)을 지원합니다. iOS 26부터 서드파티 앱은 Foundation Models 프레임워크로 이를 호출할 수 있고, Shortcuts는 "모델 사용" 작업으로 프롬프트를 보낼 수 있습니다.',
@@ -3829,7 +3829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**기능:** 문서 질의응답, 열어서 편집·삭제할 수 있는 에이전트 메모리, 핸즈프리 음성(기기 내 음성 입력과 읽어주기), 비전 모델을 이용한 이미지 이해, 부모 PIN으로 잠그는 키즈 모드.',
           '**요구 사항과 가격:** iOS 16.4 이상, RAM 4GB 이상. 무료이며 광고, 구독, 인앱 구매가 없습니다.',
           '**개인정보와 라이선스:** 모델을 내려받은 뒤에는 채팅, 문서, 메모리가 기기에 남습니다. 앱은 사용 이벤트와 충돌 보고서를 전송하며(개발자에 따르면 채팅 내용은 포함되지 않음), 클로즈드 소스입니다.',
-          '**설치 경로:** App Store. 2026년 3월 30일에 처음 출시된 비교적 새로운 앱입니다. App Store에는 1.0.56이 게재되어 있으며, 개발자는 1.0.60이 Apple 심사 중이라고 밝혔습니다.',
+          '**설치 경로:** App Store. 2026년 3월 30일에 처음 출시된 비교적 새로운 앱입니다. App Store에는 1.0.60이 게재되어 있습니다.',
         ],
         callouts: [
           {
@@ -4047,7 +4047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4148,7 +4148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O Private LLM é a opção paga deste guia ($4.99 pagamento único, sem assinatura).** Uma única compra cobre iPhone, iPad e Mac, e o Compartilhamento em Família se estende a até seis pessoas. Biblioteca de modelos curada; segundo o desenvolvedor, ele se integra à Siri e ao Shortcuts.',
           '**O Locally AI é a alternativa gratuita baseada em MLX, desenvolvida pela equipe da LM Studio.** Executa modelos Llama, Gemma (incluindo o Gemma 4), Qwen e DeepSeek em Apple MLX, funciona com o iOS Shortcuts e pode expor o próprio modelo de base no dispositivo da Apple como interface de chat.',
           '**O Google AI Edge Gallery é o app gratuito do Google para o Gemma 4 no iPhone.** Modo de raciocínio, agent skills e entrada de imagem/áudio; os modelos rodam no formato LiteRT-LM, não em GGUF. O Google ainda descreve o app como em desenvolvimento ativo.',
-          '**O MemoryAI é o app de chat gratuito e offline com memória editável e Modo Criança protegido por PIN (adicionado depois da comparação principal).** Traz perguntas sobre documentos, voz mãos livres e importação de GGUF do Hugging Face; é de código fechado, a App Store lista a versão 1.0.56 e não há valor de velocidade do PromptQuorum para ele.',
+          '**O MemoryAI é o app de chat gratuito e offline com memória editável e Modo Criança protegido por PIN (adicionado depois da comparação principal).** Traz perguntas sobre documentos, voz mãos livres e importação de GGUF do Hugging Face; é de código fechado, a App Store lista a versão 1.0.60 e não há valor de velocidade do PromptQuorum para ele.',
           '**O MLC Chat tem aceleração Metal, mas está parado no iPhone.** A versão da App Store não é atualizada desde a v1.6, de 27 de setembro de 2024, então sua biblioteca de modelos é anterior ao Phi-4 Mini e ao Gemma 3. O motor MLC LLM em si continua ativo no GitHub.',
           '**O LLM Farm atualmente não está na App Store nem no TestFlight.** O próprio README o descreve como "temporariamente indisponível". Continua de código aberto e pode ser compilado pelo Xcode, mas a última versão foi a 1.4.3, em janeiro de 2025, e o último envio de código foi em 30 de janeiro de 2026.',
           '**O Apple Intelligence está no aparelho, mas não é um app independente.** O modelo de base de ~3B da Apple alimenta funções do sistema (Ferramentas de Escrita, Resposta Inteligente, Resumos de Notificações). Desde o iOS 26, apps de terceiros podem chamá-lo pelo framework Foundation Models, e o Shortcuts pode acioná-lo com a ação "Usar Modelo".',
@@ -4407,7 +4407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Recursos:** perguntas sobre documentos, uma memória de agente que você pode abrir, editar e apagar, voz mãos livres (entrada de voz e leitura em voz alta no dispositivo), compreensão de imagens com modelos de visão e um Modo Criança travado por um PIN dos responsáveis.',
           '**Requisitos e preço:** iOS 16.4+, 4 GB de RAM ou mais. Gratuito, sem anúncios, assinaturas ou compras no app.',
           '**Privacidade e licença:** conversas, documentos e memórias ficam no dispositivo depois do download do modelo. O app envia eventos de uso e relatórios de falhas (sem conteúdo das conversas, segundo o desenvolvedor) e é de código fechado.',
-          '**Instalação:** App Store. Lançado em 30 de março de 2026, portanto é um app jovem. A App Store lista a versão 1.0.56; o desenvolvedor afirma que a 1.0.60 está em análise na Apple.',
+          '**Instalação:** App Store. Lançado em 30 de março de 2026, portanto é um app jovem. A App Store lista a versão 1.0.60.',
         ],
         callouts: [
           {
@@ -4622,7 +4622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-25',
+    dateModified: '2026-10-28',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4723,7 +4723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Private LLM هو الخيار المدفوع في هذا الدليل (4.99 دولار دفعة واحدة، بدون اشتراك).** يغطي شراء واحد iPhone وiPad وMac، وتمتد مشاركة العائلة إلى ستة أشخاص. مكتبة نماذج منتقاة؛ ووفق المطوّر يتكامل مع Siri وShortcuts.',
           '**Locally AI هو البديل المجاني المبني على MLX، ويُطوّره فريق LM Studio.** يُشغّل نماذج Llama وGemma (بما فيها Gemma 4) وQwen وDeepSeek على Apple MLX، يعمل مع iOS Shortcuts، ويمكنه إتاحة نموذج Apple الأساسي على الجهاز كواجهة دردشة.',
           '**Google AI Edge Gallery هو تطبيق Google المجاني لنماذج Gemma 4 على iPhone.** وضع تفكير ومهارات وكيل وإدخال صور وصوت؛ وتعمل النماذج بصيغة LiteRT-LM لا GGUF. ولا تزال Google تصف التطبيق بأنه قيد التطوير النشط.',
-          '**MemoryAI تطبيق دردشة مجاني يعمل دون اتصال بذاكرة قابلة للتعديل ووضع أطفال برمز PIN (أُضيف بعد المقارنة الرئيسية).** يوفّر أسئلة عن المستندات ووضعاً صوتياً حر اليدين واستيراد ملفات GGUF من Hugging Face؛ وهو مغلق المصدر، ويُدرج App Store الإصدار 1.0.56، ولا توجد له قيمة سرعة من PromptQuorum.',
+          '**MemoryAI تطبيق دردشة مجاني يعمل دون اتصال بذاكرة قابلة للتعديل ووضع أطفال برمز PIN (أُضيف بعد المقارنة الرئيسية).** يوفّر أسئلة عن المستندات ووضعاً صوتياً حر اليدين واستيراد ملفات GGUF من Hugging Face؛ وهو مغلق المصدر، ويُدرج App Store الإصدار 1.0.60، ولا توجد له قيمة سرعة من PromptQuorum.',
           '**MLC Chat يدعم تسريع Metal لكنه متوقف على iPhone.** لم يُحدَّث إصدار App Store منه منذ v1.6 في 27 سبتمبر 2024، لذا فإن مكتبة نماذجه سابقة لـ Phi-4 Mini وGemma 3. أما محرك MLC LLM نفسه فلا يزال نشطاً على GitHub.',
           '**LLM Farm غير متوفر حالياً على App Store أو TestFlight.** يصفه ملف README الخاص به بأنه "غير متاح مؤقتاً". يظل مفتوح المصدر ويمكن بناؤه من الكود المصدري عبر Xcode، لكن آخر إصدار له كان 1.4.3 في يناير 2025 وآخر دفعة كود في 30 يناير 2026.',
           '**Apple Intelligence على الجهاز لكنه ليس تطبيقاً مستقلاً.** نموذج الأساس ~3B من Apple يُشغّل ميزات النظام (أدوات الكتابة، الرد الذكي، ملخصات الإشعارات). منذ iOS 26، تستطيع تطبيقات الجهات الخارجية استدعاءه عبر إطار عمل Foundation Models، ويمكن لـ Shortcuts استدعاؤه عبر إجراء "Use Model".',
@@ -4982,7 +4982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الميزات:** أسئلة عن المستندات، وذاكرة وكيل يمكنك فتحها وتعديلها وحذفها، ووضع صوتي حر اليدين (إدخال صوتي وقراءة بصوت عالٍ على الجهاز)، وفهم الصور بنماذج الرؤية، ووضع أطفال مقفل برمز PIN للوالدين.',
           '**المتطلبات والسعر:** iOS 16.4 أو أحدث، وذاكرة وصول عشوائي 4 جيجابايت أو أكثر. مجاني، بلا إعلانات أو اشتراكات أو مشتريات داخل التطبيق.',
           '**الخصوصية والترخيص:** تبقى المحادثات والمستندات والذكريات على الجهاز بعد تنزيل النموذج. يرسل التطبيق أحداث استخدام وتقارير أعطال (دون محتوى المحادثات بحسب المطوّر)، وهو مغلق المصدر.',
-          '**طريقة التثبيت:** App Store. صدر لأول مرة في 30 مارس 2026، فهو تطبيق حديث. يُدرج App Store الإصدار 1.0.56؛ ويقول المطوّر إن 1.0.60 قيد مراجعة Apple.',
+          '**طريقة التثبيت:** App Store. صدر لأول مرة في 30 مارس 2026، فهو تطبيق حديث. يُدرج App Store الإصدار 1.0.60.',
         ],
         callouts: [
           {
