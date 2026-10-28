@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'Best Local AI App for Non-Technical Users (2026)',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'beginner local llm app',
       'local ai for parents',
     ],
-    leadAnswerBlock: '**Install GPT4All if you have never used a terminal — it is the lowest-friction local AI app, with a 4-click path from download to first reply on a 5-year-old laptop. Pick Jan if you want zero telemetry. Pick Atomic Chat if you want the same private AI on your phone as on your laptop. Pick Msty for the prettiest UI. Pick AnythingLLM Desktop for drag-and-drop document chat. Pick LM Studio if you are on a Mac. All six are free, work offline after the first download, and never send your conversations anywhere.**',
+    leadAnswerBlock: '**Warning: No update since 27 May 2025 (last repository commit; the latest release, v3.10.0, shipped on 25 February 2025). GPT4All may be unmaintained: check that it still works for you before relying on it.** **Install GPT4All if you have never used a terminal — it is the lowest-friction local AI app, with a 4-click path from download to first reply on a 5-year-old laptop. Pick Jan if you want zero telemetry. Pick Atomic Chat if you want the same private AI on your phone as on your laptop. Pick Msty for the prettiest UI. Pick AnythingLLM Desktop for drag-and-drop document chat. Pick LM Studio if you are on a Mac. All six are free, work offline after the first download, and keep your conversations on your device (LM Studio states it has no telemetry, but its update checks and model search send anonymized app and system information by default).**',
     quickAnswerTop: {
       en: {
         question: 'Which local AI app should a non-technical person install first?',
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '(1) Download Jan from jan.ai, (2) Click \'Download Model\' → select Phi-4-mini, (3) Start chatting. No terminal required.',
           'Jan — best for privacy-conscious beginners; zero telemetry; fully open source.',
-          'GPT4All — best for absolute beginners on weak hardware; smallest install; 4 clicks to first chat.',
+          'GPT4All — best for absolute beginners on weak hardware; smallest install; 4 clicks to first chat. Caveat: no update since 27 May 2025.',
           'Atomic Chat — best for "I want it on my phone too"; native iPhone and Android apps that run the model on the phone itself; Apache 2.0 open source.',
           'Msty — best for "I want it pretty"; modern split-pane UI; built-in document chat.',
           'AnythingLLM Desktop — best for users who want familiar Windows-style UI and drop-in document folders.',
@@ -78,14 +78,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: 'No update since 27 May 2025 (last repository commit; the latest release, v3.10.0, shipped on 25 February 2025). GPT4All may be unmaintained: check that it still works for you before relying on it.' }],
         items: [
-          'GPT4All is the lowest-friction starter — 4 clicks from download to first chat on a 5-year-old laptop.',
-          'Jan is the only one of the six with zero telemetry by default and a fully open-source codebase.',
+          'GPT4All is the lowest-friction starter — 4 clicks from download to first chat on a 5-year-old laptop. Caveat: no update since 27 May 2025.',
+          'Jan ships with no telemetry by default and a fully open-source codebase; Msty and Atomic Chat also state no-telemetry designs. LM Studio states it has no telemetry, but its update checks and model search send anonymized app and system information by default.',
           'Atomic Chat is the only one with native iPhone and Android apps that run the model on the phone itself — the same private, offline AI on laptop and phone.',
           'Msty has the most polished modern UI and built-in chat-with-PDFs without setup.',
           'AnythingLLM Desktop feels like a familiar Windows file/chat app — closest to "open document, ask question".',
           'LM Studio is fastest on Apple Silicon and ships the largest in-app model browser.',
-          'All six are free, work offline after install, and never send your prompts to a server.',
+          'All six are free and work offline after install; your chats stay on your device, but some apps make background requests by default (for example, LM Studio\'s update checks and model search send anonymized app and system information).',
         ],
       },
       whoShouldUse: {
@@ -123,6 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Recommended starter model:** Llama 3.2 3B Instruct (Q4_0). About 2 GB on disk, 4–6 GB RAM at runtime, comfortably fast on integrated graphics.',
         ],
         callouts: [
+          { type: 'warning', text: 'No update since 27 May 2025 (last repository commit; the latest release, v3.10.0, shipped on 25 February 2025). GPT4All may be unmaintained: check that it still works for you before relying on it.' },
           {
             type: 'tip',
             text: 'Install this if you are: a parent who wants a private ChatGPT, a journalist on a budget laptop, a teacher demoing AI to students, or anyone whose first reaction to "open the terminal" is "what terminal?".',
@@ -228,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Why it ranks first for Mac:** LM Studio ships custom-tuned Apple Silicon Metal kernels that beat the upstream defaults by 15–30% on M-series chips. On a 16 GB MacBook Pro, it streams 8B-class models at ~38 tokens per second.',
           '**Model browser depth:** ~5,000 model variants pulled live from Hugging Face, filterable by RAM/VRAM, license, and family. Useful when you outgrow the curated catalogs in Jan or GPT4All.',
           '**Built-in document chat:** Yes (introduced in 2025), with a clean drag-and-drop interface.',
-          '**Telemetry:** Anonymous usage events are sent by default. They are easy to disable in Settings → Privacy. Conversations and model files never leave the device.',
+          '**Network requests:** LM Studio\'s privacy policy states the app has no telemetry or user-specific tracking, but update checks and model search and downloads send anonymized app and system information (version, operating system) by default. Conversations and model files stay on the device.',
           '**License:** Proprietary (free for personal and commercial use). If open-source code is non-negotiable, pick Jan instead.',
           '**Recommended starter model:** Phi-4 Mini on 8 GB Macs; Llama 3.1 8B Q4_K_M on 16 GB+ Macs.',
         ],
@@ -350,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            'Best for absolute beginners. Smallest install (~290 MB). Runs on a 5-year-old 8 GB RAM laptop with no GPU. MIT-licensed open source. Telemetry off by default.',
+            'Best for absolute beginners. Smallest install (~290 MB). Runs on a 5-year-old 8 GB RAM laptop with no GPU. MIT-licensed open source. Telemetry off by default. Caveat: no update since 27 May 2025.',
           url: 'https://gpt4all.io',
         },
         {
@@ -405,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'en',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -414,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '6 lokale KI-Apps für nicht-technische Nutzer: Keine Terminal-Befehle, funktionieren sofort',
@@ -436,13 +438,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anfänger lokales llm app',
       'lokale ki für eltern',
     ],
-    leadAnswerBlock: '**Installieren Sie GPT4All, wenn Sie noch nie ein Terminal verwendet haben — es ist die unkomplizierteste lokale KI-App mit einem 4-Klick-Weg vom Download zum ersten Chat auf einem 5 Jahre alten Laptop. Wählen Sie Jan, wenn Sie null Telemetrie möchten. Wählen Sie Atomic Chat, wenn Sie dieselbe private KI auf Ihrem Telefon wie auf Ihrem Laptop möchten. Wählen Sie Msty für die schönste Oberfläche. Wählen Sie AnythingLLM Desktop für Drag-and-Drop-Dokument-Chat. Wählen Sie LM Studio, wenn Sie einen Mac haben. Alle sechs sind kostenlos, funktionieren offline nach dem ersten Download und senden Ihre Unterhaltungen nirgendwo hin.**',
+    leadAnswerBlock: '**Warnung: Kein Update seit 27. Mai 2025 (letzter Repository-Commit; das neueste Release, v3.10.0, erschien am 25. Februar 2025). GPT4All wird möglicherweise nicht mehr gepflegt: Prüfen Sie, ob es bei Ihnen noch funktioniert, bevor Sie sich darauf verlassen.** **Installieren Sie GPT4All, wenn Sie noch nie ein Terminal verwendet haben — es ist die unkomplizierteste lokale KI-App mit einem 4-Klick-Weg vom Download zum ersten Chat auf einem 5 Jahre alten Laptop. Wählen Sie Jan, wenn Sie null Telemetrie möchten. Wählen Sie Atomic Chat, wenn Sie dieselbe private KI auf Ihrem Telefon wie auf Ihrem Laptop möchten. Wählen Sie Msty für die schönste Oberfläche. Wählen Sie AnythingLLM Desktop für Drag-and-Drop-Dokument-Chat. Wählen Sie LM Studio, wenn Sie einen Mac haben. Alle sechs sind kostenlos, funktionieren offline nach dem ersten Download und behalten Ihre Unterhaltungen auf Ihrem Gerät (LM Studio gibt an, keine Telemetrie zu haben, doch Update-Prüfungen und Modellsuche senden standardmäßig anonymisierte App- und Systeminformationen).**',
     quickAnswerTop: {
       de: {
         question: 'Welche lokale KI-App sollte ein nicht-technischer Mensch zuerst installieren?',
         answer: 'Installieren Sie GPT4All. Es ist der kleinste Download (~290 MB), läuft auf 8 GB RAM Laptops ohne GPU und erreicht den ersten Chat in 4 Klicks. Wenn Sie speziell Datenschutz, Dokument-Chat, eine schöne Oberfläche oder einen Mac möchten, schauen Sie sich die unten aufgelistete Persona-Rangliste an — jede Persona hat einen anderen Gewinner.',
         bullets: [
-          'GPT4All — das beste für absolute Anfänger; kleinste Installation; läuft auf schwacher Hardware; 4 Klicks zum ersten Chat.',
+          'GPT4All — das beste für absolute Anfänger; kleinste Installation; läuft auf schwacher Hardware; 4 Klicks zum ersten Chat. Einschränkung: seit 27. Mai 2025 kein Update.',
           'Jan — das beste für datenschutzorientierte Anfänger; null Telemetrie; vollständig Open Source.',
           'Atomic Chat — das beste für „Ich möchte es auch auf meinem Telefon"; native iPhone- und Android-Apps, die das Modell auf dem Telefon selbst ausführen; Apache 2.0 Open Source.',
           'Msty — das beste für „Ich möchte es schön"; modernes Split-Pane-UI; eingebauter Dokument-Chat.',
@@ -472,14 +474,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: 'Kein Update seit 27. Mai 2025 (letzter Repository-Commit; das neueste Release, v3.10.0, erschien am 25. Februar 2025). GPT4All wird möglicherweise nicht mehr gepflegt: Prüfen Sie, ob es bei Ihnen noch funktioniert, bevor Sie sich darauf verlassen.' }],
         items: [
-          'GPT4All ist der unkomplizierteste Starter — 4 Klicks vom Download zum ersten Chat auf einem 5 Jahre alten Laptop.',
-          'Jan ist die einzige der sechs ohne Telemetrie und mit vollständig Open-Source-Codebase.',
+          'GPT4All ist der unkomplizierteste Starter — 4 Klicks vom Download zum ersten Chat auf einem 5 Jahre alten Laptop. Einschränkung: seit 27. Mai 2025 kein Update.',
+          'Jan wird standardmäßig ohne Telemetrie und mit vollständig quelloffenem Code ausgeliefert; Msty und Atomic Chat geben ebenfalls ein Design ohne Telemetrie an. LM Studio gibt an, keine Telemetrie zu haben, doch Update-Prüfungen und Modellsuche senden standardmäßig anonymisierte App- und Systeminformationen.',
           'Atomic Chat ist die einzige der sechs mit nativen iPhone- und Android-Apps, die das Modell auf dem Telefon selbst ausführen — dieselbe private, offline KI auf Laptop und Telefon.',
           'Msty hat das poliert moderne UI und eingebautes Chat-mit-PDFs ohne Setup.',
           'AnythingLLM Desktop fühlt sich wie eine vertraute Windows-Datei/Chat-App an — dem nächsten zu „öffne Dokument, stelle Frage".',
           'LM Studio ist am schnellsten auf Apple Silicon und versand den größten In-App-Modell-Browser.',
-          'Alle sechs sind kostenlos, funktionieren offline nach der Installation und senden Ihre Eingaben nie an einen Server.',
+          'Alle sechs sind kostenlos und funktionieren nach der Installation offline; Ihre Chats bleiben auf Ihrem Gerät, aber einige Apps stellen standardmäßig Hintergrundanfragen (etwa senden die Update-Prüfungen und die Modellsuche von LM Studio anonymisierte App- und Systeminformationen).',
         ],
       },
       whoShouldUse: {
@@ -517,6 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Empfohlenes Starter-Modell:** Llama 3.2 3B Instruct (Q4_0). Etwa 2 GB auf der Festplatte, 4–6 GB RAM zur Laufzeit, angenehm schnell auf integrierter Grafik.',
         ],
         callouts: [
+          { type: 'warning', text: 'Kein Update seit 27. Mai 2025 (letzter Repository-Commit; das neueste Release, v3.10.0, erschien am 25. Februar 2025). GPT4All wird möglicherweise nicht mehr gepflegt: Prüfen Sie, ob es bei Ihnen noch funktioniert, bevor Sie sich darauf verlassen.' },
           {
             type: 'tip',
             text: 'Installieren Sie dies, wenn Sie: ein Elternteil sind, der ein privates ChatGPT möchte, ein Journalist mit einem Budget-Laptop, ein Lehrer, der KI Schülern zeigt, oder jemand, dessen erste Reaktion auf „öffne das Terminal" „welches Terminal?" ist.',
@@ -622,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Warum es zuerst bei Mac rangiert:** LM Studio versendet custom-tuned Apple Silicon Metal Kernels, die die Upstream-Defaults um 15–30% auf M-Serie Chips schlagen. Auf einem 16 GB MacBook Pro streamt es 8B-Klasse Modelle bei ~38 Token pro Sekunde.',
           '**Modell-Browser-Tiefe:** ~5.000 Modell-Varianten live von Hugging Face gezogen, filtrierbar nach RAM/VRAM, Lizenz und Familie. Nützlich, wenn Sie die kuratierten Kataloge in Jan oder GPT4All auswachsen.',
           '**Eingebauter Dokument-Chat:** Ja (eingeführt 2025), mit einem sauberen Drag-and-Drop-Interface.',
-          '**Telemetrie:** Anonyme Nutzungsereignisse werden standardmäßig versendet. Sie sind leicht in Einstellungen → Datenschutz zu deaktivieren. Unterhaltungen und Modelldateien verlassen das Gerät nie.',
+          '**Netzwerkanfragen:** Laut Datenschutzerklärung hat LM Studio keine Telemetrie und kein nutzerbezogenes Tracking, doch Update-Prüfungen sowie Modellsuche und -Downloads senden standardmäßig anonymisierte App- und Systeminformationen (Version, Betriebssystem). Unterhaltungen und Modelldateien bleiben auf dem Gerät.',
           '**Lizenz:** Proprietär (kostenlos für persönliche und kommerzielle Nutzung). Wenn Open-Source-Code nicht verhandelbar ist, wählen Sie stattdessen Jan.',
           '**Empfohlenes Starter-Modell:** Phi-4 Mini auf 8 GB Macs; Llama 3.1 8B Q4_K_M auf 16 GB+ Macs.',
         ],
@@ -752,7 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            'Das beste für absolute Anfänger. Kleinste Installation (~290 MB). Läuft auf einem 5 Jahre alten 8 GB RAM Laptop ohne GPU. MIT-lizenziert Open Source. Telemetrie standardmäßig deaktiviert.',
+            'Das beste für absolute Anfänger. Kleinste Installation (~290 MB). Läuft auf einem 5 Jahre alten 8 GB RAM Laptop ohne GPU. MIT-lizenziert Open Source. Telemetrie standardmäßig deaktiviert. Einschränkung: seit 27. Mai 2025 kein Update.',
           url: 'https://gpt4all.io',
         },
         {
@@ -807,7 +811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/de/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'de',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -816,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '6 apps d\'IA locale pour débutants : zéro terminal, fonctionnent immédiatement',
@@ -838,13 +842,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app llm locale débutant',
       'ia locale pour parents',
     ],
-    leadAnswerBlock: '**Installez GPT4All si vous n\'avez jamais utilisé un terminal — c\'est l\'app d\'IA locale la moins exigeante, avec un chemin en 4 clics du téléchargement au premier chat sur un portable de 5 ans. Choisissez Jan si vous voulez zéro télémétrie. Choisissez Atomic Chat si vous voulez la même IA privée sur votre téléphone que sur votre ordinateur portable. Choisissez Msty pour l\'interface la plus élégante. Choisissez AnythingLLM Desktop pour du drag-and-drop avec les documents. Choisissez LM Studio si vous êtes sur Mac. Les six sont gratuites, fonctionnent hors ligne après le premier téléchargement, et ne transmettent vos conversations nulle part.**',
+    leadAnswerBlock: '**Avertissement : Aucune mise à jour depuis le 27 mai 2025 (dernier commit du dépôt ; la dernière version, v3.10.0, est sortie le 25 février 2025). GPT4All n\'est peut-être plus maintenue : vérifiez qu\'elle fonctionne encore chez vous avant de vous y fier.** **Installez GPT4All si vous n\'avez jamais utilisé un terminal — c\'est l\'app d\'IA locale la moins exigeante, avec un chemin en 4 clics du téléchargement au premier chat sur un portable de 5 ans. Choisissez Jan si vous voulez zéro télémétrie. Choisissez Atomic Chat si vous voulez la même IA privée sur votre téléphone que sur votre ordinateur portable. Choisissez Msty pour l\'interface la plus élégante. Choisissez AnythingLLM Desktop pour du drag-and-drop avec les documents. Choisissez LM Studio si vous êtes sur Mac. Les six sont gratuites, fonctionnent hors ligne après le premier téléchargement, et gardent vos conversations sur votre appareil (LM Studio indique ne pas avoir de télémétrie, mais ses vérifications de mise à jour et sa recherche de modèles envoient par défaut des informations anonymisées sur l\'app et le système).**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle app d\'IA locale un débutant devrait-il installer en premier ?',
         answer: 'Installez GPT4All. C\'est le plus petit téléchargement (~290 MB), il tourne sur des portables avec 8 GB de RAM sans GPU, et atteint le premier chat en 4 clics. Si vous avez besoin de confidentialité, de chat avec documents, d\'une belle interface, ou si vous êtes sur Mac, consultez la liste classée par profil ci-dessous — chaque profil a un gagnant différent.',
         bullets: [
-          'GPT4All — meilleur pour les débutants absolus ; plus petite installation ; tourne sur du matériel faible ; 4 clics vers le premier chat.',
+          'GPT4All — meilleur pour les débutants absolus ; plus petite installation ; tourne sur du matériel faible ; 4 clics vers le premier chat. Réserve : aucune mise à jour depuis le 27 mai 2025.',
           'Jan — meilleur pour les débutants soucieux de la confidentialité ; zéro télémétrie ; entièrement open source.',
           'Atomic Chat — meilleur pour "aussi sur mon téléphone" ; apps iPhone et Android natives qui exécutent le modèle sur le téléphone lui-même ; open source Apache 2.0.',
           'Msty — meilleur pour "je veux que ce soit beau" ; interface épurée moderne ; chat intégré avec documents.',
@@ -874,14 +878,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: 'Aucune mise à jour depuis le 27 mai 2025 (dernier commit du dépôt ; la dernière version, v3.10.0, est sortie le 25 février 2025). GPT4All n\'est peut-être plus maintenue : vérifiez qu\'elle fonctionne encore chez vous avant de vous y fier.' }],
         items: [
-          'GPT4All est la plus simple — 4 clics du téléchargement au premier chat sur un portable de 5 ans.',
-          'Jan est la seule des six avec zéro télémétrie et un code entièrement open source.',
+          'GPT4All est la plus simple — 4 clics du téléchargement au premier chat sur un portable de 5 ans. Réserve : aucune mise à jour depuis le 27 mai 2025.',
+          'Jan est livrée sans télémétrie par défaut et avec un code entièrement open source ; Msty et Atomic Chat annoncent aussi une conception sans télémétrie. LM Studio indique ne pas avoir de télémétrie, mais ses vérifications de mise à jour et sa recherche de modèles envoient par défaut des informations anonymisées sur l\'app et le système.',
           'Atomic Chat est la seule avec des apps iPhone et Android natives qui exécutent le modèle sur le téléphone lui-même — la même IA privée hors ligne sur portable et téléphone.',
           'Msty a l\'interface la plus épurée et le chat intégré avec PDFs sans configuration.',
           'AnythingLLM Desktop ressemble à une app Windows classique — plus proche du "ouvre un document, pose une question".',
           'LM Studio est la plus rapide sur Apple Silicon avec la plus grande médiathèque de modèles.',
-          'Les six sont gratuites, fonctionnent hors ligne après l\'installation, et ne transmettent vos entrées à aucun serveur.',
+          'Les six sont gratuites et fonctionnent hors ligne après l\'installation ; vos chats restent sur votre appareil, mais certaines apps font des requêtes en arrière-plan par défaut (par exemple, les vérifications de mise à jour et la recherche de modèles de LM Studio envoient des informations anonymisées sur l\'app et le système).',
         ],
       },
       whoShouldUse: {
@@ -919,6 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modèle de démarrage recommandé :** Llama 3.2 3B Instruct (Q4_0). Environ 2 GB sur disque, 4–6 GB RAM à l\'exécution, confortablement rapide sur graphique intégré.',
         ],
         callouts: [
+          { type: 'warning', text: 'Aucune mise à jour depuis le 27 mai 2025 (dernier commit du dépôt ; la dernière version, v3.10.0, est sortie le 25 février 2025). GPT4All n\'est peut-être plus maintenue : vérifiez qu\'elle fonctionne encore chez vous avant de vous y fier.' },
           {
             type: 'tip',
             text: 'Installez ceci si vous êtes : un parent qui veut un ChatGPT privé, un journaliste avec un portable budgétaire, un enseignant qui démontre l\'IA à des étudiants, ou quelqu\'un dont la première réaction à "ouvre le terminal" est "quel terminal ?".',
@@ -1024,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pourquoi elle arrive en premier sur Mac :** LM Studio expédie des kernels Metal Apple Silicon custom-tunés qui surpassent les defaults en amont de 15–30% sur puces M-series. Sur un MacBook Pro 16 GB, elle diffuse des modèles classe 8B à ~38 tokens par seconde.',
           '**Profondeur navigateur modèles :** ~5.000 variantes de modèles tirées en direct de Hugging Face, filtrables par RAM/VRAM, licence, et famille. Utile quand vous surpassez les catalogues curés de Jan ou GPT4All.',
           '**Chat intégré avec documents :** Oui (introduit en 2025), avec une interface drag-and-drop épurée.',
-          '**Télémétrie :** Les événements d\'usage anonymes sont envoyés par défaut. Ils sont faciles à désactiver dans Paramètres → Confidentialité. Les conversations et fichiers modèles ne quittent jamais l\'appareil.',
+          '**Requêtes réseau :** la politique de confidentialité de LM Studio indique que l\'app n\'a ni télémétrie ni suivi propre à l\'utilisateur, mais les vérifications de mise à jour, la recherche et le téléchargement de modèles envoient par défaut des informations anonymisées sur l\'app et le système (version, système d\'exploitation). Les conversations et les fichiers de modèles restent sur l\'appareil.',
           '**Licence :** Propriétaire (gratuite pour usage personnel et commercial). Si le code open source est non-négociable, choisissez Jan.',
           '**Modèle de démarrage recommandé :** Phi-4 Mini sur Macs 8 GB ; Llama 3.1 8B Q4_K_M sur Macs 16 GB+.',
         ],
@@ -1146,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            'Meilleur pour débutants absolus. Plus petite installation (~290 MB). Tourne sur un portable 8 GB RAM de 5 ans sans GPU. Licence MIT open source. Télémétrie désactivée par défaut.',
+            'Meilleur pour débutants absolus. Plus petite installation (~290 MB). Tourne sur un portable 8 GB RAM de 5 ans sans GPU. Licence MIT open source. Télémétrie désactivée par défaut. Réserve : aucune mise à jour depuis le 27 mai 2025.',
           url: 'https://gpt4all.io',
         },
         {
@@ -1201,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/fr/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'fr',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1210,7 +1216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '初心者向けローカルAIアプリ6つ：ターミナルなし、すぐに使える',
@@ -1232,13 +1238,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '初心者向けローカルllmアプリ',
       '親向けローカルai',
     ],
-    leadAnswerBlock: '**ターミナルを使ったことがない場合はGPT4Allをインストールしてください。最も負担が少ないローカルAIアプリで、ダウンロードから最初のチャットまで4クリック、5年前のノートパソコンでも動作します。テレメトリーゼロが必要ならJan。Atomic Chatならスマホでもラップトップと同じプライベートAIを使えます。美しいUIが欲しいならMsty。ドキュメントチャットを重視するならAnythingLLM Desktop。Macを使っているならLM Studio。6つすべて無料で、最初のダウンロード後はオフラインで動作し、会話は一度も外部に送信されません。**',
+    leadAnswerBlock: '**警告：2025年5月27日以降、更新がありません（リポジトリの最終コミット。最新リリースv3.10.0は2025年2月25日）。GPT4Allはメンテナンスされていない可能性があります。頼る前に、お使いの環境で動作するか確認してください。** **ターミナルを使ったことがない場合はGPT4Allをインストールしてください。最も負担が少ないローカルAIアプリで、ダウンロードから最初のチャットまで4クリック、5年前のノートパソコンでも動作します。テレメトリーゼロが必要ならJan。Atomic Chatならスマホでもラップトップと同じプライベートAIを使えます。美しいUIが欲しいならMsty。ドキュメントチャットを重視するならAnythingLLM Desktop。Macを使っているならLM Studio。6つすべて無料で、最初のダウンロード後はオフラインで動作し、会話内容は端末内に残ります（LM Studioはテレメトリーなしと明記していますが、アップデート確認とモデル検索では既定で匿名化されたアプリ・システム情報が送信されます）。**',
     quickAnswerTop: {
       ja: {
         question: '技術に詳しくないユーザーが最初にインストールすべきローカルAIアプリはどれですか？',
         answer: 'GPT4Allをインストールしてください。最も小さいダウンロード（~290 MB）で、GPUなしの8GB RAMノートパソコンで動作し、4クリックで最初のチャットに到達します。プライバシーが必要、ドキュメントチャット機能が欲しい、美しいUI、またはMacユーザーの場合は、以下のペルソナ別ランキングを参照してください。各ペルソナに異なるおすすめがあります。',
         bullets: [
-          'GPT4All — 完全初心者向けベスト。最小インストール。弱いハードウェアで動作。最初のチャットまで4クリック。',
+          'GPT4All — 完全初心者向けベスト。最小インストール。弱いハードウェアで動作。最初のチャットまで4クリック。ただし2025年5月27日以降、更新がありません。',
           'Jan — プライバシー重視の初心者向けベスト。テレメトリーゼロ。完全なオープンソース。',
           'Atomic Chat — 「スマホでも使いたい」向けベスト。モデルをスマホ自体で動かすiPhone・Androidネイティブアプリ。Apache 2.0オープンソース。',
           'Msty — 「綺麗にしたい」向けベスト。モダンなスプリットペインUI。組み込みドキュメントチャット。',
@@ -1268,14 +1274,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: '2025年5月27日以降、更新がありません（リポジトリの最終コミット。最新リリースv3.10.0は2025年2月25日）。GPT4Allはメンテナンスされていない可能性があります。頼る前に、お使いの環境で動作するか確認してください。' }],
         items: [
-          'GPT4Allは最も導入が簡単です。ダウンロードから最初のチャットまで4クリック。5年前のノートパソコンでも動作します。',
-          'Janはテレメトリーゼロで、完全なオープンソースコードです。',
+          'GPT4Allは最も導入が簡単です。ダウンロードから最初のチャットまで4クリック。5年前のノートパソコンでも動作します。ただし2025年5月27日以降、更新がありません。',
+          'Janは既定でテレメトリーなし、コードは完全オープンソースです。MstyとAtomic Chatもテレメトリーなしの設計だと表明しています。LM Studioもテレメトリーなしと明記していますが、アップデート確認とモデル検索では既定で匿名化されたアプリ・システム情報が送信されます。',
           'Atomic Chatはモデルをスマホ自体で動かすiPhone・Androidネイティブアプリを備えた唯一のアプリで、ラップトップでもスマホでも同じプライベートなオフラインAIを使えます。',
           'Mstyは最も洗練されたUIで、組み込みのPDFチャット機能があります。',
           'AnythingLLM DesktopはWindowsのような使い慣れたUIで、最も「ドキュメントを開いて質問する」に近い体験です。',
           'LM Studioはアップル・シリコン上で最速で、最大のモデルブラウザを搭載しています。',
-          '6つすべて無料で、インストール後はオフライン動作。会話は絶対に外部に送信されません。',
+          '6つすべて無料で、インストール後はオフラインで動作します。チャット内容は端末内に残りますが、一部のアプリは既定でバックグラウンド通信を行います（例：LM Studioのアップデート確認とモデル検索は、匿名化されたアプリ・システム情報を送信します）。',
         ],
       },
       whoShouldUse: {
@@ -1313,6 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**推奨スターターモデル：** Llama 3.2 3B Instruct（Q4_0）。ディスク2GB、実行時4–6GB RAM。統合グラフィックスで快適に動作。',
         ],
         callouts: [
+          { type: 'warning', text: '2025年5月27日以降、更新がありません（リポジトリの最終コミット。最新リリースv3.10.0は2025年2月25日）。GPT4Allはメンテナンスされていない可能性があります。頼る前に、お使いの環境で動作するか確認してください。' },
           {
             type: 'tip',
             text: 'インストールする対象：親としてプライベートなChatGPTが欲しい、予算ノートパソコンのジャーナリスト、学生にAIをデモする教師、「ターミナルを開いて」と言われて「何のターミナル？」と思う人。',
@@ -1418,7 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Macで第1位の理由：** LM Studioはカスタムチューンされたアップル・シリコンMetalカーネルを搭載。上流デフォルトをM シリーズで15–30%超えます。16GB MacBook Proで約38トークン/秒で8Bモデルをストリーム。',
           '**モデルブラウザ深さ：** Hugging Faceから約5,000モデルバリアント。RAM/VRAM、ライセンス、ファミリーでフィルタ可能。Jan・GPT4Allのキュレーションカタログを超えたいときに有用。',
           '**組み込みドキュメントチャット：** あり（2025年導入）。きれいなドラッグ・アンド・ドロップインターフェース。',
-          '**テレメトリー：** 匿名使用イベントはデフォルトで送信。設定 → プライバシーで簡単に無効化可。会話・モデルファイルはデバイスを離れることなし。',
+          '**ネットワーク通信：** LM Studioのプライバシーポリシーは、テレメトリーやユーザー個別のトラッキングはないと明記していますが、アップデート確認、モデル検索、ダウンロードでは既定で匿名化されたアプリ・システム情報（バージョン、OS）が送信されます。会話とモデルファイルは端末内に残ります。',
           '**ライセンス：** 独占（個人・商用利用無料）。オープンソースコードが必須なら、Janを選んでください。',
           '**推奨スターターモデル：** 8GB Macで Phi-4 Mini; 16GB+ Macで Llama 3.1 8B Q4_K_M。',
         ],
@@ -1540,7 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            '完全初心者向けベスト。最小インストール（~290 MB）。5年前の8GB RAMノートパソコンでGPUなしで動作。MITライセンスオープンソース。テレメトリーデフォルト無効。',
+            '完全初心者向けベスト。最小インストール（~290 MB）。5年前の8GB RAMノートパソコンでGPUなしで動作。MITライセンスオープンソース。テレメトリーデフォルト無効。ただし2025年5月27日以降、更新がありません。',
           url: 'https://gpt4all.io',
         },
         {
@@ -1595,7 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ja/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'ja',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1604,7 +1612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '初学者本地AI应用6个：零终端，立即可用',
@@ -1626,13 +1634,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '初学者本地llm应用',
       '家长本地ai',
     ],
-    leadAnswerBlock: '**如果您从未使用过终端，请安装GPT4All——这是摩擦力最小的本地AI应用，从下载到首次聊天只需4次点击，即使在5年前的笔记本电脑上也能运行。如果需要完全隐私请选Jan。如果想在手机上使用与笔记本相同的私密AI请选Atomic Chat。如果想要最美观的界面请选Msty。如果想要拖放文档聊天请选AnythingLLM Desktop。如果在Mac上请选LM Studio。这六个应用都是免费的，在首次下载后可完全离线运行，您的对话永远不会发送到任何地方。**',
+    leadAnswerBlock: '**警告：自2025年5月27日起未再更新（仓库最后一次提交；最新版本v3.10.0发布于2025年2月25日）。GPT4All可能已无人维护：依赖它之前，请先确认它在您的设备上仍能正常运行。** **如果您从未使用过终端，请安装GPT4All——这是摩擦力最小的本地AI应用，从下载到首次聊天只需4次点击，即使在5年前的笔记本电脑上也能运行。如果需要完全隐私请选Jan。如果想在手机上使用与笔记本相同的私密AI请选Atomic Chat。如果想要最美观的界面请选Msty。如果想要拖放文档聊天请选AnythingLLM Desktop。如果在Mac上请选LM Studio。这六个应用都是免费的，在首次下载后可完全离线运行，您的对话内容保留在本机（LM Studio声明无遥测，但其更新检查和模型搜索默认会发送匿名化的应用和系统信息）。**',
     quickAnswerTop: {
       zh: {
         question: '非技术用户应该首先安装哪个本地AI应用？',
         answer: '安装GPT4All。这是最小的下载（约290MB），可在8GB RAM笔记本电脑上无GPU运行，4次点击即可进行首次聊天。如果您特别需要隐私、文档聊天、美观界面或使用Mac，请参阅下面的角色排序列表——每个角色都有不同的赢家。',
         bullets: [
-          'GPT4All——最适合完全初学者；最小安装；在弱硬件上运行；首次聊天4次点击。',
+          'GPT4All——最适合完全初学者；最小安装；在弱硬件上运行；首次聊天4次点击。但自2025年5月27日起未再更新。',
           'Jan——最适合隐私至上的初学者；零遥测；完全开源。',
           'Atomic Chat——最适合"我也想在手机上用"；在手机本机上运行模型的原生iPhone和Android应用；Apache 2.0开源。',
           'Msty——最适合"我想要漂亮界面"；现代分屏UI；内置文档聊天。',
@@ -1662,14 +1670,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: '自2025年5月27日起未再更新（仓库最后一次提交；最新版本v3.10.0发布于2025年2月25日）。GPT4All可能已无人维护：依赖它之前，请先确认它在您的设备上仍能正常运行。' }],
         items: [
-          'GPT4All是最简单的入门选择——从下载到首次聊天4次点击，即使在5年前的笔记本电脑上也能运行。',
-          'Jan是唯一拥有零遥测和完全开源代码库的应用。',
+          'GPT4All是最简单的入门选择——从下载到首次聊天4次点击，即使在5年前的笔记本电脑上也能运行。但自2025年5月27日起未再更新。',
+          'Jan默认不带遥测，代码完全开源；Msty和Atomic Chat也声明无遥测设计。LM Studio同样声明无遥测，但其更新检查和模型搜索默认会发送匿名化的应用和系统信息。',
           'Atomic Chat是唯一拥有在手机本机上运行模型的原生iPhone和Android应用的选择——笔记本和手机上都是相同的私密、离线AI。',
           'Msty拥有最精美的界面和内置PDF聊天功能，无需设置。',
           'AnythingLLM Desktop感觉像熟悉的Windows文件/聊天应用——最接近"打开文档，提问"的体验。',
           'LM Studio在Apple Silicon上最快，并拥有最大的应用内模型浏览器。',
-          '这六个应用都是免费的，安装后可离线工作，永远不会向服务器发送您的提示。',
+          '这六个应用都是免费的，安装后可离线工作；聊天内容保留在本机，但部分应用默认会进行后台请求（例如LM Studio的更新检查和模型搜索会发送匿名化的应用和系统信息）。',
         ],
       },
       whoShouldUse: {
@@ -1707,6 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**推荐起始模型：** Llama 3.2 3B Instruct（Q4_0）。磁盘约2GB，运行时4–6GB RAM，在集成图形上舒适快速。',
         ],
         callouts: [
+          { type: 'warning', text: '自2025年5月27日起未再更新（仓库最后一次提交；最新版本v3.10.0发布于2025年2月25日）。GPT4All可能已无人维护：依赖它之前，请先确认它在您的设备上仍能正常运行。' },
           {
             type: 'tip',
             text: '安装此应用：想要私有ChatGPT的家长、预算笔记本电脑的记者、向学生演示AI的教师，或第一次反应"打开终端"时想到"什么终端？"的人。',
@@ -1812,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**为什么在Mac上排名第一：** LM Studio附带针对Apple Silicon优化的自定义Metal内核，在M系列芯片上比上游默认快15–30%。在16GB MacBook Pro上，它以约每秒38个token的速度传输8B级模型。',
           '**模型浏览器深度：** 从Hugging Face实时提取约5,000个模型变体，可按RAM/VRAM、许可证和系列筛选。当您超越Jan或GPT4All的精选目录时很有用。',
           '**内置文档聊天：** 是的（2025年推出），具有清晰的拖放界面。',
-          '**遥测：** 默认发送匿名使用事件。在设置 → 隐私中易于禁用。对话和模型文件永远不会离开设备。',
+          '**网络请求：** LM Studio的隐私政策声明应用没有遥测或针对个人的跟踪，但更新检查以及模型搜索和下载默认会发送匿名化的应用和系统信息（版本、操作系统）。对话和模型文件保留在本机。',
           '**许可证：** 专有（个人和商业使用免费）。如果开源代码不可协商，请选择Jan。',
           '**推荐起始模型：** 8GB Mac上的Phi-4 Mini；16GB+Mac上的Llama 3.1 8B Q4_K_M。',
         ],
@@ -1934,7 +1944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            '最适合完全初学者。最小安装（约290MB）。在5年前8GB RAM笔记本电脑上无GPU运行。MIT许可开源。遥测默认关闭。',
+            '最适合完全初学者。最小安装（约290MB）。在5年前8GB RAM笔记本电脑上无GPU运行。MIT许可开源。遥测默认关闭。但自2025年5月27日起未再更新。',
           url: 'https://gpt4all.io',
         },
         {
@@ -1989,7 +1999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/zh/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'zh',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1998,7 +2008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'IA local para usuarios sin conocimientos técnicos: 6 apps que simplemente funcionan (sin terminal)',
@@ -2020,13 +2030,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app llm local para principiantes',
       'ia local para padres',
     ],
-    leadAnswerBlock: '**Instala GPT4All si nunca has usado un terminal — es la app de IA local con menos fricción, con un camino de 4 clics desde la descarga hasta el primer chat en un portátil de 5 años. Elige Jan si quieres cero telemetría. Elige Atomic Chat si quieres la misma IA privada en tu teléfono que en tu portátil. Elige Msty para la interfaz más bonita. Elige AnythingLLM Desktop para chat con documentos mediante arrastrar y soltar. Elige LM Studio si tienes un Mac. Las seis son gratuitas, funcionan sin conexión tras la primera descarga, y nunca envían tus conversaciones a ningún lugar.**',
+    leadAnswerBlock: '**Advertencia: Sin actualizaciones desde el 27 de mayo de 2025 (último commit del repositorio; la versión más reciente, v3.10.0, salió el 25 de febrero de 2025). Es posible que GPT4All ya no tenga mantenimiento: comprueba que sigue funcionando en tu equipo antes de depender de ella.** **Instala GPT4All si nunca has usado un terminal — es la app de IA local con menos fricción, con un camino de 4 clics desde la descarga hasta el primer chat en un portátil de 5 años. Elige Jan si quieres cero telemetría. Elige Atomic Chat si quieres la misma IA privada en tu teléfono que en tu portátil. Elige Msty para la interfaz más bonita. Elige AnythingLLM Desktop para chat con documentos mediante arrastrar y soltar. Elige LM Studio si tienes un Mac. Las seis son gratuitas, funcionan sin conexión tras la primera descarga, y mantienen tus conversaciones en tu dispositivo (LM Studio afirma no tener telemetría, pero sus comprobaciones de actualización y la búsqueda de modelos envían por defecto información anonimizada de la app y del sistema).**',
     quickAnswerTop: {
       es: {
         question: '¿Qué app de IA local debe instalar primero un usuario sin conocimientos técnicos?',
         answer: 'Instala GPT4All. Es la descarga más pequeña (~290 MB), funciona en portátiles con 8 GB de RAM sin GPU, y llega al primer chat en 4 clics. Si necesitas privacidad específica, chat con documentos, una interfaz bonita, o estás en un Mac, consulta la lista ordenada por perfil más abajo — cada perfil tiene un ganador diferente.',
         bullets: [
-          'GPT4All — mejor para principiantes absolutos; la instalación más pequeña; funciona en hardware débil; 4 clics hasta el primer chat.',
+          'GPT4All — mejor para principiantes absolutos; la instalación más pequeña; funciona en hardware débil; 4 clics hasta el primer chat. Salvedad: sin actualizaciones desde el 27 de mayo de 2025.',
           'Jan — mejor para principiantes preocupados por la privacidad; cero telemetría; completamente de código abierto.',
           'Atomic Chat — mejor para "lo quiero también en mi teléfono"; apps nativas de iPhone y Android que ejecutan el modelo en el propio teléfono; código abierto Apache 2.0.',
           'Msty — mejor para "quiero que sea bonita"; interfaz moderna de paneles divididos; chat con documentos integrado.',
@@ -2056,14 +2066,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: 'Sin actualizaciones desde el 27 de mayo de 2025 (último commit del repositorio; la versión más reciente, v3.10.0, salió el 25 de febrero de 2025). Es posible que GPT4All ya no tenga mantenimiento: comprueba que sigue funcionando en tu equipo antes de depender de ella.' }],
         items: [
-          'GPT4All es la opción de inicio con menos fricción — 4 clics desde la descarga hasta el primer chat en un portátil de 5 años.',
-          'Jan es la única de las seis con cero telemetría por defecto y código completamente de código abierto.',
+          'GPT4All es la opción de inicio con menos fricción — 4 clics desde la descarga hasta el primer chat en un portátil de 5 años. Salvedad: sin actualizaciones desde el 27 de mayo de 2025.',
+          'Jan se entrega sin telemetría por defecto y con código totalmente abierto; Msty y Atomic Chat también declaran un diseño sin telemetría. LM Studio afirma no tener telemetría, pero sus comprobaciones de actualización y la búsqueda de modelos envían por defecto información anonimizada de la app y del sistema.',
           'Atomic Chat es la única con apps nativas de iPhone y Android que ejecutan el modelo en el propio teléfono — la misma IA privada y sin conexión en el portátil y en el móvil.',
           'Msty tiene la interfaz más pulida y chat con PDFs integrado sin configuración.',
           'AnythingLLM Desktop se siente como una app de archivos/chat familiar de Windows — la más cercana a "abre documento, haz una pregunta".',
           'LM Studio es la más rápida en Apple Silicon y tiene el navegador de modelos más grande de la app.',
-          'Las seis son gratuitas, funcionan sin conexión tras la instalación y nunca envían tus prompts a un servidor.',
+          'Las seis son gratuitas y funcionan sin conexión tras la instalación; tus chats se quedan en tu dispositivo, pero algunas apps hacen solicitudes en segundo plano por defecto (por ejemplo, las comprobaciones de actualización y la búsqueda de modelos de LM Studio envían información anonimizada de la app y del sistema).',
         ],
       },
       whoShouldUse: {
@@ -2101,6 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modelo inicial recomendado:** Llama 3.2 3B Instruct (Q4_0). Aproximadamente 2 GB en disco, 4–6 GB de RAM en ejecución, cómodamente rápido en gráficos integrados.',
         ],
         callouts: [
+          { type: 'warning', text: 'Sin actualizaciones desde el 27 de mayo de 2025 (último commit del repositorio; la versión más reciente, v3.10.0, salió el 25 de febrero de 2025). Es posible que GPT4All ya no tenga mantenimiento: comprueba que sigue funcionando en tu equipo antes de depender de ella.' },
           {
             type: 'tip',
             text: 'Instala esta si eres: un padre que quiere un ChatGPT privado, un periodista con un portátil económico, un profesor que demuestra IA a estudiantes, o cualquier persona cuya primera reacción a "abre el terminal" es "¿qué terminal?".',
@@ -2206,7 +2218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Por qué lidera en Mac:** LM Studio incluye kernels Metal de Apple Silicon ajustados a medida que superan los valores predeterminados del proyecto original en un 15–30% en chips de la serie M. En un MacBook Pro de 16 GB, transmite modelos de clase 8B a ~38 tokens por segundo.',
           '**Profundidad del navegador de modelos:** ~5.000 variantes de modelos extraídas en tiempo real de Hugging Face, filtrables por RAM/VRAM, licencia y familia. Útil cuando superas los catálogos curados de Jan o GPT4All.',
           '**Chat con documentos integrado:** Sí (introducido en 2025), con una interfaz de arrastrar y soltar limpia.',
-          '**Telemetría:** Los eventos de uso anónimo se envían por defecto. Se desactivan fácilmente en Ajustes → Privacidad. Las conversaciones y los archivos de modelos nunca abandonan el dispositivo.',
+          '**Solicitudes de red:** la política de privacidad de LM Studio afirma que la app no tiene telemetría ni seguimiento específico del usuario, pero las comprobaciones de actualización y la búsqueda y descarga de modelos envían por defecto información anonimizada de la app y del sistema (versión, sistema operativo). Las conversaciones y los archivos de modelos se quedan en el dispositivo.',
           '**Licencia:** Propietaria (gratuita para uso personal y comercial). Si el código de código abierto es innegociable, elige Jan.',
           '**Modelo inicial recomendado:** Phi-4 Mini en Macs con 8 GB; Llama 3.1 8B Q4_K_M en Macs con 16 GB o más.',
         ],
@@ -2328,7 +2340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            'Mejor para principiantes absolutos. La instalación más pequeña (~290 MB). Funciona en un portátil de 5 años con 8 GB de RAM sin GPU. Código abierto con licencia MIT. Telemetría desactivada por defecto.',
+            'Mejor para principiantes absolutos. La instalación más pequeña (~290 MB). Funciona en un portátil de 5 años con 8 GB de RAM sin GPU. Código abierto con licencia MIT. Telemetría desactivada por defecto. Salvedad: sin actualizaciones desde el 27 de mayo de 2025.',
           url: 'https://gpt4all.io',
         },
         {
@@ -2383,7 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'es',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2393,7 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'IA local para usuários não técnicos: 6 apps que simplesmente funcionam (sem terminal)',
@@ -2415,13 +2427,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app llm local para iniciantes',
       'ia local para pais',
     ],
-    leadAnswerBlock: '**Instale o GPT4All se você nunca usou um terminal — é o app de IA local com menos atrito, com um caminho de 4 cliques do download até a primeira resposta em um notebook de 5 anos. Escolha o Jan se você quer zero telemetria. Escolha o Atomic Chat se você quer a mesma IA privada no celular e no notebook. Escolha o Msty para a interface mais bonita. Escolha o AnythingLLM Desktop para chat com documentos por arrastar e soltar. Escolha o LM Studio se você está em um Mac. Os seis são gratuitos, funcionam offline após o primeiro download e nunca enviam suas conversas para lugar nenhum.**',
+    leadAnswerBlock: '**Aviso: Sem atualizações desde 27 de maio de 2025 (último commit do repositório; a versão mais recente, v3.10.0, saiu em 25 de fevereiro de 2025). O GPT4All pode estar sem manutenção: confirme que ele ainda funciona no seu computador antes de depender dele.** **Instale o GPT4All se você nunca usou um terminal — é o app de IA local com menos atrito, com um caminho de 4 cliques do download até a primeira resposta em um notebook de 5 anos. Escolha o Jan se você quer zero telemetria. Escolha o Atomic Chat se você quer a mesma IA privada no celular e no notebook. Escolha o Msty para a interface mais bonita. Escolha o AnythingLLM Desktop para chat com documentos por arrastar e soltar. Escolha o LM Studio se você está em um Mac. Os seis são gratuitos, funcionam offline após o primeiro download e mantêm suas conversas no seu dispositivo (o LM Studio afirma não ter telemetria, mas suas verificações de atualização e a busca de modelos enviam por padrão informações anonimizadas do app e do sistema).**',
     quickAnswerTop: {
       pt: {
         question: 'Qual app de IA local um usuário não técnico deve instalar primeiro?',
         answer: 'Instale o GPT4All. É o menor download (~290 MB), roda em notebooks com 8 GB de RAM sem GPU e chega ao primeiro chat em 4 cliques. Se você precisa especificamente de privacidade, chat com documentos, uma interface bonita, ou está em um Mac, veja a lista classificada por perfil abaixo — cada perfil tem um vencedor diferente.',
         bullets: [
-          'GPT4All — melhor para iniciantes absolutos; a menor instalação; roda em hardware fraco; 4 cliques até o primeiro chat.',
+          'GPT4All — melhor para iniciantes absolutos; a menor instalação; roda em hardware fraco; 4 cliques até o primeiro chat. Ressalva: sem atualizações desde 27 de maio de 2025.',
           'Jan — melhor para iniciantes preocupados com privacidade; zero telemetria; totalmente open source.',
           'Atomic Chat — melhor para "também quero no meu celular"; apps nativos para iPhone e Android que rodam o modelo no próprio celular; open source Apache 2.0.',
           'Msty — melhor para "quero que seja bonito"; interface moderna de painéis divididos; chat com documentos integrado.',
@@ -2451,14 +2463,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: 'Sem atualizações desde 27 de maio de 2025 (último commit do repositório; a versão mais recente, v3.10.0, saiu em 25 de fevereiro de 2025). O GPT4All pode estar sem manutenção: confirme que ele ainda funciona no seu computador antes de depender dele.' }],
         items: [
-          'GPT4All é o ponto de partida com menos atrito — 4 cliques do download até o primeiro chat em um notebook de 5 anos.',
-          'Jan é o único dos seis com zero telemetria por padrão e um código totalmente open source.',
+          'GPT4All é o ponto de partida com menos atrito — 4 cliques do download até o primeiro chat em um notebook de 5 anos. Ressalva: sem atualizações desde 27 de maio de 2025.',
+          'O Jan vem sem telemetria por padrão e com código totalmente aberto; Msty e Atomic Chat também declaram um design sem telemetria. O LM Studio afirma não ter telemetria, mas suas verificações de atualização e a busca de modelos enviam por padrão informações anonimizadas do app e do sistema.',
           'Atomic Chat é o único com apps nativos para iPhone e Android que rodam o modelo no próprio celular — a mesma IA privada e offline no notebook e no celular.',
           'Msty tem a interface moderna mais refinada e chat com PDFs integrado, sem configuração.',
           'AnythingLLM Desktop parece um app familiar de arquivos/chat do Windows — o mais próximo de "abrir documento, fazer pergunta".',
           'LM Studio é o mais rápido em Apple Silicon e traz o maior navegador de modelos dentro do app.',
-          'Os seis são gratuitos, funcionam offline após a instalação e nunca enviam seus prompts a um servidor.',
+          'Os seis são gratuitos e funcionam offline após a instalação; seus chats ficam no seu dispositivo, mas alguns apps fazem requisições em segundo plano por padrão (por exemplo, as verificações de atualização e a busca de modelos do LM Studio enviam informações anonimizadas do app e do sistema).',
         ],
       },
       whoShouldUse: {
@@ -2496,6 +2509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modelo inicial recomendado:** Llama 3.2 3B Instruct (Q4_0). Cerca de 2 GB em disco, 4–6 GB de RAM em execução, confortavelmente rápido em gráficos integrados.',
         ],
         callouts: [
+          { type: 'warning', text: 'Sem atualizações desde 27 de maio de 2025 (último commit do repositório; a versão mais recente, v3.10.0, saiu em 25 de fevereiro de 2025). O GPT4All pode estar sem manutenção: confirme que ele ainda funciona no seu computador antes de depender dele.' },
           {
             type: 'tip',
             text: 'Instale este se você é: um pai que quer um ChatGPT privado, um jornalista com um notebook econômico, um professor demonstrando IA para alunos, ou qualquer pessoa cuja primeira reação a "abra o terminal" seja "que terminal?".',
@@ -2601,7 +2615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Por que lidera no Mac:** LM Studio traz kernels Metal de Apple Silicon ajustados sob medida que superam os padrões originais em 15–30% em chips da série M. Em um MacBook Pro de 16 GB, ele transmite modelos da classe 8B a ~38 tokens por segundo.',
           '**Profundidade do navegador de modelos:** ~5.000 variantes de modelos extraídas em tempo real do Hugging Face, filtráveis por RAM/VRAM, licença e família. Útil quando você supera os catálogos curados do Jan ou GPT4All.',
           '**Chat com documentos integrado:** Sim (introduzido em 2025), com uma interface limpa de arrastar e soltar.',
-          '**Telemetria:** Eventos de uso anônimo são enviados por padrão. São fáceis de desativar em Configurações → Privacidade. As conversas e os arquivos de modelo nunca saem do dispositivo.',
+          '**Requisições de rede:** a política de privacidade do LM Studio afirma que o app não tem telemetria nem rastreamento específico do usuário, mas as verificações de atualização e a busca e o download de modelos enviam por padrão informações anonimizadas do app e do sistema (versão, sistema operacional). As conversas e os arquivos de modelos ficam no dispositivo.',
           '**Licença:** Proprietária (gratuita para uso pessoal e comercial). Se código open source é inegociável, escolha o Jan.',
           '**Modelo inicial recomendado:** Phi-4 Mini em Macs de 8 GB; Llama 3.1 8B Q4_K_M em Macs de 16 GB+.',
         ],
@@ -2723,7 +2737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            'Melhor para iniciantes absolutos. A menor instalação (~290 MB). Roda em um notebook de 5 anos com 8 GB de RAM sem GPU. Open source com licença MIT. Telemetria desativada por padrão.',
+            'Melhor para iniciantes absolutos. A menor instalação (~290 MB). Roda em um notebook de 5 anos com 8 GB de RAM sem GPU. Open source com licença MIT. Telemetria desativada por padrão. Ressalva: sem atualizações desde 27 de maio de 2025.',
           url: 'https://gpt4all.io',
         },
         {
@@ -2778,7 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2788,7 +2802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'الذكاء الاصطناعي المحلي للمستخدمين غير التقنيين: ⁨6⁩ تطبيقات تعمل ببساطة (بدون سطر أوامر)',
@@ -2815,14 +2829,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ذكاء اصطناعي خاص للمنزل',
     ],
     leadAnswerBlock:
-      '**ثبّت تطبيق GPT4All إذا لم تستخدم سطر الأوامر قط — إنه تطبيق الذكاء الاصطناعي المحلي الأقل احتكاكاً، مع مسار 4 نقرات من التنزيل إلى أول محادثة على حاسوب محمول عمره 5 سنوات. اختر Jan إن أردت صفر بيانات مُرسَلة. اختر Atomic Chat إن أردت نفس الذكاء الاصطناعي الخاص على هاتفك كما على حاسوبك المحمول. اختر Msty للواجهة الأجمل. اختر AnythingLLM Desktop للدردشة مع المستندات بالسحب والإسقاط. اختر LM Studio إن كنت على Mac. الستة مجانية، وتعمل بدون اتصال بعد التنزيل الأول، ولا ترسل محادثاتك إلى أي مكان.**',
+      '**تحذير: لا تحديثات منذ 27 مايو 2025 (آخر commit في المستودع؛ وأحدث إصدار v3.10.0 صدر في 25 فبراير 2025). قد لا يكون GPT4All قيد الصيانة: تأكد من أنه ما زال يعمل على جهازك قبل الاعتماد عليه.** **ثبّت تطبيق GPT4All إذا لم تستخدم سطر الأوامر قط — إنه تطبيق الذكاء الاصطناعي المحلي الأقل احتكاكاً، مع مسار 4 نقرات من التنزيل إلى أول محادثة على حاسوب محمول عمره 5 سنوات. اختر Jan إن أردت صفر بيانات مُرسَلة. اختر Atomic Chat إن أردت نفس الذكاء الاصطناعي الخاص على هاتفك كما على حاسوبك المحمول. اختر Msty للواجهة الأجمل. اختر AnythingLLM Desktop للدردشة مع المستندات بالسحب والإسقاط. اختر LM Studio إن كنت على Mac. الستة مجانية، وتعمل بدون اتصال بعد التنزيل الأول، وتُبقي محادثاتك على جهازك (يذكر LM Studio أنه بلا قياس عن بُعد، لكن فحوص التحديث والبحث عن النماذج ترسل افتراضياً معلومات مجهولة الهوية عن التطبيق والنظام).**',
     quickAnswerTop: {
       ar: {
         question: 'ما أول تطبيق ذكاء اصطناعي محلي يجب على المستخدم غير التقني تثبيته؟',
         answer:
           'ثبّت GPT4All. هو أصغر تنزيل (~290 ميجابايت)، يعمل على حواسيب محمولة بـ8 جيجابايت RAM بدون GPU، ويصل إلى أول محادثة في 4 نقرات. إن كنت تحتاج تحديداً إلى الخصوصية أو الدردشة مع المستندات أو واجهة جميلة أو أنت على Mac، راجع القائمة المُرتَّبة حسب الملف أدناه — كل ملف له فائز مختلف.',
         bullets: [
-          'GPT4All — الأفضل للمبتدئين المطلقين؛ أصغر تثبيت؛ يعمل على أجهزة ضعيفة؛ 4 نقرات للمحادثة الأولى.',
+          'GPT4All — الأفضل للمبتدئين المطلقين؛ أصغر تثبيت؛ يعمل على أجهزة ضعيفة؛ 4 نقرات للمحادثة الأولى. تنبيه: لا تحديثات منذ 27 مايو 2025.',
           'Jan — الأفضل للمبتدئين المهتمين بالخصوصية؛ صفر بيانات مُرسَلة؛ مفتوح المصدر بالكامل.',
           'Atomic Chat — الأفضل لـ"أريده على هاتفي أيضاً"؛ تطبيقات iPhone وAndroid أصلية تُشغّل النموذج على الهاتف نفسه؛ مفتوح المصدر برخصة Apache 2.0.',
           'Msty — الأفضل لمن يريد واجهة جميلة؛ واجهة حديثة بلوحات مقسّمة؛ دردشة مع المستندات مدمجة.',
@@ -2855,14 +2869,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: 'لا تحديثات منذ 27 مايو 2025 (آخر commit في المستودع؛ وأحدث إصدار v3.10.0 صدر في 25 فبراير 2025). قد لا يكون GPT4All قيد الصيانة: تأكد من أنه ما زال يعمل على جهازك قبل الاعتماد عليه.' }],
         items: [
-          'GPT4All هو نقطة البداية الأقل احتكاكاً — 4 نقرات من التنزيل إلى أول محادثة على حاسوب محمول عمره 5 سنوات.',
-          'Jan هو الوحيد من بين الستة بصفر بيانات مُرسَلة افتراضياً وكود مفتوح المصدر بالكامل.',
+          'GPT4All هو نقطة البداية الأقل احتكاكاً — 4 نقرات من التنزيل إلى أول محادثة على حاسوب محمول عمره 5 سنوات. تنبيه: لا تحديثات منذ 27 مايو 2025.',
+          'يأتي Jan بلا قياس عن بُعد افتراضياً وبكود مفتوح المصدر بالكامل؛ كما يعلن Msty وAtomic Chat تصميماً بلا قياس عن بُعد. ويذكر LM Studio أنه بلا قياس عن بُعد، لكن فحوص التحديث والبحث عن النماذج ترسل افتراضياً معلومات مجهولة الهوية عن التطبيق والنظام.',
           'Atomic Chat هو الوحيد بتطبيقات iPhone وAndroid أصلية تُشغّل النموذج على الهاتف نفسه — نفس الذكاء الاصطناعي الخاص والعامل بدون اتصال على الحاسوب المحمول والهاتف.',
           'Msty لديه الواجهة الحديثة الأكثر صقلاً والدردشة مع PDF مدمجة بدون إعداد.',
           'AnythingLLM Desktop يشبه تطبيق ملفات/دردشة Windows المألوف — الأقرب إلى "افتح مستنداً، اطرح سؤالاً".',
           'LM Studio الأسرع على Apple Silicon ولديه أكبر متصفح نماذج داخل التطبيق.',
-          'الستة مجانية، وتعمل بدون اتصال بعد التثبيت، ولا ترسل مطالباتك إلى خادم قط.',
+          'الستة مجانية وتعمل بدون اتصال بعد التثبيت؛ تبقى محادثاتك على جهازك، لكن بعض التطبيقات تجري طلبات في الخلفية افتراضياً (مثلاً، فحوص التحديث والبحث عن النماذج في LM Studio ترسل معلومات مجهولة الهوية عن التطبيق والنظام).',
         ],
       },
       whoShouldUse: {
@@ -2902,6 +2917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**النموذج الأولي المُوصى به:** Llama 3.2 3B Instruct (Q4_0). حوالي 2 جيجابايت على القرص، 4–6 جيجابايت RAM أثناء التشغيل، سريع بشكل مريح على بطاقة رسومات مدمجة.',
         ],
         callouts: [
+          { type: 'warning', text: 'لا تحديثات منذ 27 مايو 2025 (آخر commit في المستودع؛ وأحدث إصدار v3.10.0 صدر في 25 فبراير 2025). قد لا يكون GPT4All قيد الصيانة: تأكد من أنه ما زال يعمل على جهازك قبل الاعتماد عليه.' },
           {
             type: 'tip',
             text: 'ثبّت هذا إن كنت: أباً يريد ChatGPT خاصاً، أو صحفياً بحاسوب محمول اقتصادي، أو أستاذاً يُعرّف الطلاب بالذكاء الاصطناعي، أو أي شخص ردّه الأول على "افتح الـterminal" هو "أي terminal؟".',
@@ -3012,7 +3028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**لماذا يتصدر على Mac:** يتضمن LM Studio نوى Metal مخصصة لـApple Silicon تتفوق على الافتراضيات الأصلية بنسبة 15–30% على رقائق سلسلة M. على MacBook Pro بـ16 جيجابايت، يبثّ نماذج فئة 8B بـ~38 توكن في الثانية.',
           '**عمق متصفح النماذج:** ~5000 متغير نموذج مستخرج في الوقت الفعلي من Hugging Face، قابل للتصفية حسب RAM/VRAM والرخصة والعائلة. مفيد عند تجاوز الكتالوجات المُنتقاة في Jan وGPT4All.',
           '**دردشة مع المستندات مدمجة:** نعم (أُضيفت في 2025)، مع واجهة سحب وإسقاط نظيفة.',
-          '**البيانات المُرسَلة:** أحداث الاستخدام المجهولة تُرسَل افتراضياً. يمكن تعطيلها بسهولة من الإعدادات ← الخصوصية. المحادثات وملفات النماذج لا تغادر الجهاز أبداً.',
+          '**طلبات الشبكة:** تذكر سياسة خصوصية LM Studio أن التطبيق بلا قياس عن بُعد وبلا تتبع خاص بالمستخدم، لكن فحوص التحديث والبحث عن النماذج وتنزيلها ترسل افتراضياً معلومات مجهولة الهوية عن التطبيق والنظام (الإصدار، نظام التشغيل). تبقى المحادثات وملفات النماذج على الجهاز.',
           '**الرخصة:** خاصة (مجانية للاستخدام الشخصي والتجاري). إن كان الكود المفتوح المصدر غير قابل للتفاوض، اختر Jan.',
           '**النموذج الأولي المُوصى به:** Phi-4 Mini لأجهزة Mac بـ8 جيجابايت؛ Llama 3.1 8B Q4_K_M لأجهزة Mac بـ16 جيجابايت+.',
         ],
@@ -3136,7 +3152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            'الأفضل للمبتدئين المطلقين. أصغر تثبيت (~290 ميجابايت). يعمل على حاسوب محمول عمره 5 سنوات بـ8 جيجابايت RAM بدون GPU. مفتوح المصدر برخصة MIT. البيانات المُرسَلة معطّلة افتراضياً.',
+            'الأفضل للمبتدئين المطلقين. أصغر تثبيت (~290 ميجابايت). يعمل على حاسوب محمول عمره 5 سنوات بـ8 جيجابايت RAM بدون GPU. مفتوح المصدر برخصة MIT. البيانات المُرسَلة معطّلة افتراضياً. تنبيه: لا تحديثات منذ 27 مايو 2025.',
           url: 'https://gpt4all.io',
         },
         {
@@ -3189,7 +3205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -3198,7 +3214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-28',
     next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     slug: 'local-ai-app-non-technical-users',
@@ -3221,13 +3237,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '초보자용 로컬 llm 앱',
       '부모를 위한 로컬 ai',
     ],
-    leadAnswerBlock: '**터미널을 한 번도 사용한 적이 없다면 GPT4All을 설치하십시오 — 다운로드부터 첫 번째 채팅까지 4번의 클릭만으로 가능하며, 5년 된 노트북에서도 원활히 작동하는 로컬 AI 앱입니다. 완전 무텔레메트리를 원한다면 Jan을 선택하십시오. 노트북에서와 동일한 개인 AI를 휴대폰에서도 사용하고 싶다면 Atomic Chat을 선택하십시오. 가장 세련된 인터페이스를 원한다면 Msty를 선택하십시오. 드래그 앤 드롭 문서 채팅을 원한다면 AnythingLLM Desktop을 선택하십시오. Mac 사용자라면 LM Studio를 선택하십시오. 여섯 가지 모두 무료이며, 최초 다운로드 후 오프라인으로 작동하고, 대화 내용을 어디에도 전송하지 않습니다.**',
+    leadAnswerBlock: '**경고: 2025년 5월 27일 이후 업데이트가 없습니다(저장소 마지막 커밋이며, 최신 릴리스 v3.10.0은 2025년 2월 25일에 나왔습니다). GPT4All은 더 이상 유지보수되지 않을 수 있습니다. 의존하기 전에 사용 중인 환경에서 여전히 작동하는지 확인하십시오.** **터미널을 한 번도 사용한 적이 없다면 GPT4All을 설치하십시오 — 다운로드부터 첫 번째 채팅까지 4번의 클릭만으로 가능하며, 5년 된 노트북에서도 원활히 작동하는 로컬 AI 앱입니다. 완전 무텔레메트리를 원한다면 Jan을 선택하십시오. 노트북에서와 동일한 개인 AI를 휴대폰에서도 사용하고 싶다면 Atomic Chat을 선택하십시오. 가장 세련된 인터페이스를 원한다면 Msty를 선택하십시오. 드래그 앤 드롭 문서 채팅을 원한다면 AnythingLLM Desktop을 선택하십시오. Mac 사용자라면 LM Studio를 선택하십시오. 여섯 가지 모두 무료이며, 최초 다운로드 후 오프라인으로 작동하고, 대화 내용은 기기에 남습니다(LM Studio는 텔레메트리가 없다고 밝히지만, 업데이트 확인과 모델 검색은 기본적으로 익명화된 앱·시스템 정보를 전송합니다).**',
     quickAnswerTop: {
       ko: {
         question: '비전문가가 처음 설치해야 할 로컬 AI 앱은 무엇입니까?',
         answer: 'GPT4All을 설치하십시오. 다운로드 용량이 가장 작고(~290 MB), GPU 없이 8 GB RAM 노트북에서도 작동하며, 4번의 클릭으로 첫 번째 채팅에 도달합니다. 특별히 프라이버시, 문서 채팅, 세련된 인터페이스가 필요하거나 Mac 사용자라면 아래 프로필별 순위를 참조하십시오 — 각 프로필마다 다른 최적 선택이 있습니다.',
         bullets: [
-          'GPT4All — 완전 초보자에게 최적; 가장 작은 설치 용량; 저사양 하드웨어에서도 작동; 4번 클릭으로 첫 채팅.',
+          'GPT4All — 완전 초보자에게 최적; 가장 작은 설치 용량; 저사양 하드웨어에서도 작동; 4번 클릭으로 첫 채팅. 단, 2025년 5월 27일 이후 업데이트가 없습니다.',
           'Jan — 프라이버시를 중시하는 초보자에게 최적; 완전 무텔레메트리; 완전 오픈소스.',
           'Atomic Chat — "휴대폰에서도 사용하고 싶다"에 최적; 모델을 휴대폰 자체에서 실행하는 네이티브 iPhone 및 Android 앱; Apache 2.0 오픈소스.',
           'Msty — "예쁜 인터페이스를 원한다"에 최적; 분할 패널 현대 UI; 내장 문서 채팅.',
@@ -3267,14 +3283,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        callouts: [{ type: 'warning', text: '2025년 5월 27일 이후 업데이트가 없습니다(저장소 마지막 커밋이며, 최신 릴리스 v3.10.0은 2025년 2월 25일에 나왔습니다). GPT4All은 더 이상 유지보수되지 않을 수 있습니다. 의존하기 전에 사용 중인 환경에서 여전히 작동하는지 확인하십시오.' }],
         items: [
-          'GPT4All은 마찰이 가장 적은 시작 옵션입니다 — 5년 된 노트북에서 다운로드부터 첫 번째 채팅까지 4번의 클릭.',
-          'Jan은 여섯 가지 중 유일하게 기본적으로 완전 무텔레메트리이며 완전 오픈소스 코드를 제공합니다.',
+          'GPT4All은 마찰이 가장 적은 시작 옵션입니다 — 5년 된 노트북에서 다운로드부터 첫 번째 채팅까지 4번의 클릭. 단, 2025년 5월 27일 이후 업데이트가 없습니다.',
+          'Jan은 기본적으로 텔레메트리가 없고 코드가 완전 오픈소스입니다. Msty와 Atomic Chat도 텔레메트리 없는 설계라고 밝힙니다. LM Studio도 텔레메트리가 없다고 밝히지만, 업데이트 확인과 모델 검색은 기본적으로 익명화된 앱·시스템 정보를 전송합니다.',
           'Atomic Chat은 유일하게 모델을 휴대폰 자체에서 실행하는 네이티브 iPhone 및 Android 앱을 제공합니다 — 노트북과 휴대폰에서 동일한 개인 오프라인 AI.',
           'Msty는 가장 세련된 UI와 설정 없이 사용 가능한 PDF 채팅을 갖추고 있습니다.',
           'AnythingLLM Desktop은 친숙한 Windows 스타일의 파일/채팅 앱처럼 느껴집니다 — "문서 열기, 질문하기"에 가장 가깝습니다.',
           'LM Studio는 Apple Silicon에서 가장 빠르며 앱 내에서 가장 큰 모델 브라우저를 제공합니다.',
-          '여섯 가지 모두 무료이며, 설치 후 오프라인으로 작동하고, 사용자의 프롬프트를 서버로 전송하지 않습니다.',
+          '여섯 가지 모두 무료이며 설치 후 오프라인으로 작동합니다. 채팅 내용은 기기에 남지만, 일부 앱은 기본적으로 백그라운드 요청을 보냅니다(예: LM Studio의 업데이트 확인과 모델 검색은 익명화된 앱·시스템 정보를 전송).',
         ],
       },
       whoShouldUse: {
@@ -3312,6 +3329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**추천 초기 모델:** Llama 3.2 3B Instruct (Q4_0). 디스크 약 2 GB, 실행 시 RAM 4–6 GB, 내장 그래픽에서도 쾌적하게 빠릅니다.',
         ],
         callouts: [
+          { type: 'warning', text: '2025년 5월 27일 이후 업데이트가 없습니다(저장소 마지막 커밋이며, 최신 릴리스 v3.10.0은 2025년 2월 25일에 나왔습니다). GPT4All은 더 이상 유지보수되지 않을 수 있습니다. 의존하기 전에 사용 중인 환경에서 여전히 작동하는지 확인하십시오.' },
           {
             type: 'tip',
             text: '이 앱을 설치하세요: 개인 ChatGPT를 원하는 부모님, 저렴한 노트북을 가진 기자, 학생들에게 AI를 시연하는 교사, 또는 "터미널을 열어라"는 말에 "터미널이 뭔가요?"라고 반응하는 분.',
@@ -3417,7 +3435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac에서 앞서는 이유:** LM Studio에는 M 시리즈 칩에서 기존 기본값보다 15–30% 향상된 맞춤형 Apple Silicon Metal 커널이 포함되어 있습니다. 16 GB MacBook Pro에서 8B급 모델을 초당 ~38 토큰으로 스트리밍합니다.',
           '**모델 브라우저 깊이:** Hugging Face에서 실시간으로 가져온 약 5,000개의 모델 변형, RAM/VRAM, 라이선스, 계열별 필터링 가능. Jan이나 GPT4All의 선별된 카탈로그를 벗어났을 때 유용합니다.',
           '**내장 문서 채팅:** 예(2025년 도입), 깔끔한 드래그 앤 드롭 인터페이스.',
-          '**텔레메트리:** 기본적으로 익명 사용 이벤트가 전송됩니다. 설정 → 개인 정보 보호에서 쉽게 비활성화할 수 있습니다. 대화와 모델 파일은 절대 기기를 떠나지 않습니다.',
+          '**네트워크 요청:** LM Studio의 개인정보 처리방침은 앱에 텔레메트리나 사용자별 추적이 없다고 밝히지만, 업데이트 확인과 모델 검색·다운로드는 기본적으로 익명화된 앱·시스템 정보(버전, 운영체제)를 전송합니다. 대화와 모델 파일은 기기에 남습니다.',
           '**라이선스:** 독점 소프트웨어(개인 및 상업용 무료). 오픈소스 코드가 필수라면 Jan을 선택하십시오.',
           '**추천 초기 모델:** 8 GB Mac에는 Phi-4 Mini; 16 GB 이상 Mac에는 Llama 3.1 8B Q4_K_M.',
         ],
@@ -3539,7 +3557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           position: 1,
           name: 'GPT4All',
           description:
-            '완전 초보자에게 최적. 가장 작은 설치 용량(~290 MB). GPU 없이 8 GB RAM 5년 된 노트북에서 작동. MIT 라이선스 오픈소스. 기본적으로 텔레메트리 비활성화.',
+            '완전 초보자에게 최적. 가장 작은 설치 용량(~290 MB). GPU 없이 8 GB RAM 5년 된 노트북에서 작동. MIT 라이선스 오픈소스. 기본적으로 텔레메트리 비활성화. 단, 2025년 5월 27일 이후 업데이트가 없습니다.',
           url: 'https://gpt4all.io',
         },
         {
@@ -3594,7 +3612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
