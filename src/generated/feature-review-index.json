@@ -1464,6 +1464,11 @@
     "urlSlug": "pajdo-review",
     "url": "/power-local-llm/pajdo-review"
   },
+  "tecadrisebot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tecadrisebot-review",
+    "url": "/power-local-llm/tecadrisebot-review"
+  },
   "frankly-ai": {
     "cluster": "power-local-llm",
     "urlSlug": "frankly-ai-review",

@@ -268,7 +268,7 @@
         },
         {
           "url": "/images/local-llm-one-click-installers-privacy-ranking-en.svg",
-          "title": "Local LLM privacy ranking: Jan AI and Ollama collect no telemetry (MIT open source), GPT4All telemetry is opt-in only, LM Studio anonymous analytics are on by default (disable: Settings → Privacy → off)."
+          "title": "Local LLM privacy ranking: Jan AI (Apache 2.0) and Ollama (MIT) collect no telemetry, GPT4All telemetry is opt-in only, LM Studio (closed source) states it has no telemetry but sends update-check and model-search requests."
         }
       ]
     },
@@ -357,7 +357,7 @@
         },
         {
           "url": "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-en.webp",
-          "title": "Ollama and Jan AI collect nothing by default; LM Studio and GPT4All ship analytics on — check settings."
+          "title": "Ollama and Jan AI collect nothing by default; LM Studio has no telemetry per its policy; GPT4All telemetry is opt-in."
         }
       ]
     },
@@ -6459,7 +6459,7 @@
         },
         {
           "url": "/images/lm-studio-jan-gpt4all-privacy-telemetry-en.svg",
-          "title": "Privacy comparison: Jan has zero telemetry and Apache 2.0 open-source code; GPT4All has opt-in-only telemetry and MIT licence; LM Studio has anonymous opt-out telemetry and is proprietary. None of the three send prompts or conversation data anywhere."
+          "title": "Privacy comparison: Jan ships with no telemetry by default and Apache 2.0 open-source code; GPT4All has opt-in-only telemetry and MIT licence; LM Studio states in its privacy policy that it has no telemetry, but is proprietary. None of the three send prompts or conversation data anywhere."
         }
       ]
     },
@@ -6486,7 +6486,7 @@
         },
         {
           "url": "/images/local-ai-app-non-technical-users-privacy-comparison-hero-en.webp",
-          "title": "Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, AGPL-auditable source, and fully offline operation after install."
+          "title": "Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, auditable source, and fully offline operation after install."
         },
         {
           "url": "/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg",
@@ -6609,7 +6609,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 9 categories of a local LLM stack: 324 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche."
+          "title": "The 9 categories of a local LLM stack: 325 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -11214,6 +11214,24 @@
       "dateModified": "2026-10-26",
       "lastFactChecked": null,
       "publishDate": "2026-10-26",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "tecadrisebot-review": {
+      "dateModified": "2026-10-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-28",
       "hasSections": true,
       "langs": [
         "en",

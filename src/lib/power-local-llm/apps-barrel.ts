@@ -130,6 +130,7 @@ import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
 import { app as app_castmates } from './apps/castmates'
 import { app as app_pajdo } from './apps/pajdo'
+import { app as app_tecadrisebot } from './apps/tecadrisebot'
 import { app as app_frankly_ai } from './apps/frankly-ai'
 import { app as app_haplo_ai } from './apps/haplo-ai'
 import { app as app_pixlstash } from './apps/pixlstash'
@@ -631,6 +632,7 @@ export const localAiApps: ToolRecord[] = [
   app_local_ai_chat_pocket,
   app_castmates,
   app_pajdo,
+  app_tecadrisebot,
   app_frankly_ai,
   app_haplo_ai,
   app_pixlstash,
