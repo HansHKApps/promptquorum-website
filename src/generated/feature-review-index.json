@@ -1484,11 +1484,6 @@
     "urlSlug": "pixlstash-review",
     "url": "/power-local-llm/pixlstash-review"
   },
-  "localhosted": {
-    "cluster": "power-local-llm",
-    "urlSlug": "localhosted-review",
-    "url": "/power-local-llm/localhosted-review"
-  },
   "photoprism": {
     "cluster": "power-local-llm",
     "urlSlug": "photoprism-review",

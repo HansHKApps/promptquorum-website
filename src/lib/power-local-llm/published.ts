@@ -578,8 +578,6 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'pajdo-review',
   // TecAdRiseBot review (Local AI Agents & Tool Use) — 2026-10-28
   'tecadrisebot-review',
-  // Localhosted review (Model hubs, web directory) — 2026-10-26
-  'localhosted-review',
   // SurfSense review (RAG & Document Chat) — 2026-10-21
   'surfsense-review',
   // Strata review (Run & Serve, inference engine) — 2026-10-23
