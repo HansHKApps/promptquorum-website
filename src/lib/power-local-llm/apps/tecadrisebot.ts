@@ -7,7 +7,7 @@
 // Locality is `hybrid`, NOT `local`: the app, agent config, memory and workspaces live on the PC, but every model call goes to Cursor's hosted
 // models through a Cursor API key, which Cursor bills separately. The vendor's "runs locally" / "local-first" wording describes the app and its files.
 // Install: the README's only path is `git clone` + `npm install` + `npm run dev` (Node 22.13+), so the tier is `terminal-setup`.
-// No founder is named on the site; the legal page (tecadrise.ai/terms) is the company's general website/services policy (updated "January 2025")
+// No founder is named on the site (the maker contact later signed as "Chris", no surname); the legal page (tecadrise.ai/terms) is the company's general website/services policy (updated "January 2025")
 // and does not mention the app.
 
 import type { ToolRecord } from './types'
@@ -55,22 +55,25 @@ export const app: ToolRecord = {
   },
   // Comparison attributes: each value verified 2026-10-28 against the project's README/site and the Cursor SDK docs; a missing key = not stated there.
   compare: { localLlm: false, memory: true, webBrowsing: true },
-  lastVerifiedDate: null, // TODO: the maker sent comments on 2026-10-28 but has not reviewed the finished review
+  lastVerifiedDate: '2026-10-28', // the maker (Chris, TecAdRise) reviewed the published review the same day and approved it by email
   lastUpstreamUpdate: '2026-10-23', // GitHub API pushed_at, read 2026-10-28 (latest commit "Add per-agent workspace memory.md next to shared host Memory")
   lastUpstreamUpdateSource: 'https://github.com/tecadrise-ai/TecAdRiseBot',
-  // 2026-10-28: TecAdRise (the maker; the message was unsigned, no individual is named) sent a "why we built it" note, an "on local LLMs and Cursor" statement and links.
-  // founderReviewedDate is deliberately NOT set: the maker supplied comments but has not reviewed or approved the finished review (owner rule 2026-10-20).
+  // 2026-10-28: TecAdRise sent a "why we built it" note, an "on local LLMs and Cursor" statement and links. Later the same day the contact, who signs
+  // as "Chris" (no surname or role), reviewed the published review and wrote that it "looks accurate and fair on the product framing" and that the
+  // page can stay live as-is, so founderReviewedDate is set (explicit approval of the finished article, owner rule 2026-10-20). Drives the
+  // Founder-reviewed banner + star on the tile, the drawer and the review article.
+  founderReviewedDate: '2026-10-28',
   founder: {
     who: {
-      en: 'TecAdRise, maker of TecAdRiseBot',
-      de: 'TecAdRise, Hersteller von TecAdRiseBot',
-      es: 'TecAdRise, creador de TecAdRiseBot',
-      fr: 'TecAdRise, éditeur de TecAdRiseBot',
-      ja: 'TecAdRise、TecAdRiseBotの開発元',
-      pt: 'TecAdRise, desenvolvedora do TecAdRiseBot',
-      ar: 'TecAdRise، الجهة المطوّرة لتطبيق TecAdRiseBot',
-      zh: 'TecAdRise，TecAdRiseBot 的开发方',
-      ko: 'TecAdRise, TecAdRiseBot 개발사',
+      en: 'Chris, TecAdRise, maker of TecAdRiseBot',
+      de: 'Chris, TecAdRise, Hersteller von TecAdRiseBot',
+      es: 'Chris, TecAdRise, creador de TecAdRiseBot',
+      fr: 'Chris, TecAdRise, éditeur de TecAdRiseBot',
+      ja: 'Chris（TecAdRise）、TecAdRiseBotの開発元',
+      pt: 'Chris, TecAdRise, responsável pelo TecAdRiseBot',
+      ar: 'Chris، TecAdRise، الجهة المطوّرة لتطبيق TecAdRiseBot',
+      zh: 'Chris，TecAdRise，TecAdRiseBot 的开发方',
+      ko: 'Chris, TecAdRise, TecAdRiseBot 개발사',
     },
     providedDate: '2026-10-28',
     why: {
