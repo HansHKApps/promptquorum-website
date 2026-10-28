@@ -71,6 +71,7 @@ import { article as a_castmates_review } from './articles/castmates-review'
 import { article as a_pajdo_review } from './articles/pajdo-review'
 import { article as a_immich_review } from './articles/immich-review'
 import { article as a_facet_review } from './articles/facet-review'
+import { article as a_excire_foto_review } from './articles/excire-foto-review'
 import { article as a_frankly_ai_review } from './articles/frankly-ai-review'
 import { article as a_haplo_ai_review } from './articles/haplo-ai-review'
 import { article as a_surfsense_review } from './articles/surfsense-review'
@@ -738,6 +739,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'pajdo-review':                                  a_pajdo_review,
   'immich-review':                                 a_immich_review,
   'facet-review':                                  a_facet_review,
+  'excire-foto-review':                            a_excire_foto_review,
   'frankly-ai-review':                             a_frankly_ai_review,
   'haplo-ai-review':                              a_haplo_ai_review,
   'surfsense-review':                              a_surfsense_review,

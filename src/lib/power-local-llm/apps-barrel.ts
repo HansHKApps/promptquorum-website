@@ -137,6 +137,7 @@ import { app as app_localhosted } from './apps/localhosted'
 import { app as app_photoprism } from './apps/photoprism'
 import { app as app_immich } from './apps/immich'
 import { app as app_facet } from './apps/facet'
+import { app as app_excire_foto } from './apps/excire-foto'
 import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_hiwaifu } from './apps/hiwaifu'
 import { app as app_memoryai } from './apps/memoryai'
@@ -636,6 +637,7 @@ export const localAiApps: ToolRecord[] = [
   app_photoprism,
   app_immich,
   app_facet,
+  app_excire_foto,
   app_hiwaifu,
   app_memoryai,
   app_on_device_ai_translator,

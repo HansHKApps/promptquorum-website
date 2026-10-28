@@ -411,6 +411,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'photoprism-review':                       'photoprism-review',
   'immich-review':                           'immich-review',
   'facet-review':                            'facet-review',
+  'excire-foto-review':                      'excire-foto-review',
   'whisper-notes-review':                   'whisper-notes-review',
   'transcriptionsuite-review':              'transcriptionsuite-review',
   'parrot-review':                          'parrot-review',

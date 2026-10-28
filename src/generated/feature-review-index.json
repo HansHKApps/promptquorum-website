@@ -1499,6 +1499,11 @@
     "urlSlug": "facet-review",
     "url": "/power-local-llm/facet-review"
   },
+  "excire-foto": {
+    "cluster": "power-local-llm",
+    "urlSlug": "excire-foto-review",
+    "url": "/power-local-llm/excire-foto-review"
+  },
   "hiwaifu": {
     "cluster": "power-local-llm",
     "urlSlug": "hiwaifu-review",

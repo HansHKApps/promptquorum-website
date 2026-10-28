@@ -861,6 +861,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
@@ -922,14 +930,6 @@
         "url": "/power-local-llm/subtitle-edit-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tolaria-review",
-        "title": "Tolaria Review: Open-Source Markdown Notes with Git and AI Agents",
-        "url": "/power-local-llm/tolaria-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 161,
@@ -947,18 +947,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-08-27",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -989,6 +989,14 @@
         "title": "Jan Review: The Open-Source, Offline ChatGPT Alternative",
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -1054,14 +1062,6 @@
         "url": "/local-llms/lm-studio-vs-jan-ai",
         "dateModified": "2026-10-17",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
     "totalCount": 46,
@@ -1075,6 +1075,14 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -1140,14 +1148,6 @@
         "url": "/power-local-llm/enchanted-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "msty-review",
-        "title": "Msty Review: Local + Cloud Chat in One Desktop App",
-        "url": "/power-local-llm/msty-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
     "totalCount": 28,
@@ -1161,6 +1161,14 @@
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -1226,14 +1234,6 @@
         "url": "/power-local-llm/maxkb-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "onyx-review",
-        "title": "Onyx Review: Self-Hosted Enterprise Search and RAG (Formerly Danswer)",
-        "url": "/power-local-llm/onyx-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
     "totalCount": 39,
@@ -1247,6 +1247,14 @@
         "title": "Msty Review: Local + Cloud Chat in One Desktop App",
         "url": "/power-local-llm/msty-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -1279,14 +1287,6 @@
         "title": "Msty Go Review: Msty's Local-First AI Agent",
         "url": "/power-local-llm/msty-go-review",
         "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-08-27",
         "tier": "about"
       },
       {
@@ -11661,6 +11661,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -11714,17 +11722,9 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-25",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anarlog-review",
-        "title": "Anarlog Review: Open-Source AI Meeting Notes, Formerly Hyprnote",
-        "url": "/power-local-llm/anarlog-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 229,
+    "totalCount": 230,
     "capped": true
   },
   "Qdrant": {
@@ -12768,6 +12768,20 @@
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
+        "dateModified": "2026-10-28",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Excire Foto": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "excire-foto-review",
+        "title": "Excire Foto Review: Local AI Photo Manager for Windows and Mac",
+        "url": "/power-local-llm/excire-foto-review",
         "dateModified": "2026-10-28",
         "tier": "about"
       }

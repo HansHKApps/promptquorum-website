@@ -1270,6 +1270,7 @@ const HUB_THEMES: Array<{
       'ente-photos-review',
       'immich-review',
       'facet-review',
+      'excire-foto-review',
       'controlnet-review',
       'draw-things-review',
       'genva-review',

@@ -6464,7 +6464,7 @@
       ]
     },
     "local-ai-app-non-technical-users": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6591,7 +6591,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-10-26",
+      "dateModified": "2026-10-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6609,7 +6609,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 9 categories of a local LLM stack: 322 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche."
+          "title": "The 9 categories of a local LLM stack: 323 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -11247,6 +11247,24 @@
       "images": []
     },
     "facet-review": {
+      "dateModified": "2026-10-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-28",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "excire-foto-review": {
       "dateModified": "2026-10-28",
       "lastFactChecked": null,
       "publishDate": "2026-10-28",
