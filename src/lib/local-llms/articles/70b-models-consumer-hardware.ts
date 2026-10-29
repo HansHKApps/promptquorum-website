@@ -191,6 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One** ([olares.com/one](https://www.olares.com/one)) is a compact desktop AI computer with a laptop-class RTX 5090 (24 GB GDDR7 VRAM), an Intel Core Ultra 9 275HX and 96 GB of DDR5-5600 RAM (upgradable to 128 GB, according to Olares). For 70B models it behaves like the RTX 4090 row above: about 55% of a Q4_K_M model fits in VRAM and the rest is read from system RAM, so expect roughly 2-4 tokens/sec (an estimate, not a benchmark). The 96 GB of RAM adds capacity, not speed: Q8_0 (75 GB) fits with room left for context. Olares lists a $4,999 hardware cost and publishes no 70B tokens/sec figures.' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -494,6 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: train a 70B model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- FSDP + QLoRA on two 24 GB GPUs',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) -- GPU offloading and multi-GPU split documentation',
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile with 24 GB GDDR7, 96 GB DDR5, $4,999 hardware cost',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- YouTube video on the Olares One',
           ],
         },
       },
@@ -952,6 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One** ([olares.com/one](https://www.olares.com/one)) es un equipo de escritorio compacto de IA con una RTX 5090 Mobile (24 GB de VRAM GDDR7), un Intel Core Ultra 9 275HX y 96 GB de RAM DDR5-5600 (ampliable a 128 GB según Olares). Con modelos 70B se comporta como la fila de la RTX 4090 de arriba: cerca del 55% de un modelo Q4_K_M cabe en la VRAM y el resto se lee de la RAM del sistema, así que cabe esperar unos 2-4 tokens/s (estimación, no un benchmark). Los 96 GB de RAM aportan capacidad, no velocidad: Q8_0 (75 GB) cabe con margen para el contexto. Olares indica un coste de hardware de $4,999 y no publica cifras de tokens/s para 70B.' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -1255,6 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: entrena un modelo 70B en casa](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- FSDP + QLoRA en dos GPU de 24 GB',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) -- documentación de GPU offloading y reparto multi-GPU',
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile con 24 GB GDDR7, 96 GB DDR5, coste de hardware de $4,999',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- vídeo de YouTube sobre el Olares One',
           ],
         },
       },
@@ -1508,6 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One** ([olares.com/one](https://www.olares.com/one)) جهاز مكتبي مدمج للذكاء الاصطناعي يضم RTX 5090 Mobile بذاكرة VRAM من نوع GDDR7 بسعة 24 GB، ومعالج Intel Core Ultra 9 275HX، وذاكرة RAM من نوع DDR5-5600 بسعة 96 GB (قابلة للتوسعة إلى 128 GB بحسب Olares). مع نماذج 70B يتصرف مثل صف RTX 4090 أعلاه: يتسع نحو 55% من نموذج Q4_K_M في VRAM ويُقرأ الباقي من ذاكرة النظام، ولذلك يُتوقع نحو 2-4 tokens/s (تقدير وليس اختبار أداء). تزيد ذاكرة RAM بسعة 96 GB السعة لا السرعة: يتسع Q8_0 (75 GB) مع هامش للسياق. تذكر Olares تكلفة عتاد قدرها $4,999 ولا تنشر أرقام tokens/s لنماذج 70B.' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -1811,6 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: تدريب نموذج 70B في المنزل](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- FSDP + QLoRA على بطاقتَي GPU بسعة 24 GB',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) -- توثيق GPU offloading وتقسيم متعدد GPU',
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile بسعة 24 GB من GDDR7 وذاكرة 96 GB من DDR5 وتكلفة عتاد $4,999',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- فيديو على YouTube عن Olares One',
           ],
         },
       },
@@ -2273,6 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One** ([olares.com/one](https://www.olares.com/one)) é um desktop de IA compacto com uma RTX 5090 Mobile (24 GB de VRAM GDDR7), um Intel Core Ultra 9 275HX e 96 GB de RAM DDR5-5600 (expansível a 128 GB, segundo a Olares). Com modelos 70B, ele se comporta como a linha da RTX 4090 acima: cerca de 55% de um modelo Q4_K_M cabe na VRAM e o resto é lido da RAM do sistema, o que dá cerca de 2-4 tokens/s (estimativa, não benchmark). Os 96 GB de RAM aumentam a capacidade, não a velocidade: o Q8_0 (75 GB) cabe com espaço para o contexto. A Olares informa um custo de hardware de US$ 4.999 e não publica números de tokens/s para 70B.' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -2576,6 +2583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: treinar um modelo 70B em casa](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- FSDP + QLoRA em duas GPUs de 24 GB',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) -- documentação de GPU offloading e divisão multi-GPU',
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile com 24 GB GDDR7, 96 GB DDR5, custo de hardware de US$ 4.999',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- vídeo no YouTube sobre o Olares One',
           ],
         },
       },
@@ -2829,6 +2837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One** ([olares.com/one](https://www.olares.com/one)) ist ein kompakter KI-Desktop mit einer RTX 5090 Mobile (24 GB GDDR7-VRAM), einem Intel Core Ultra 9 275HX und 96 GB DDR5-5600-RAM (laut Olares auf 128 GB erweiterbar). Bei 70B-Modellen verhält er sich wie die RTX-4090-Zeile oben: Etwa 55 % eines Q4_K_M-Modells passen in den VRAM, der Rest wird aus dem System-RAM gelesen, daher sind etwa 2-4 Tokens/s zu erwarten (Schätzung, kein Benchmark). Die 96 GB RAM erhöhen die Kapazität, nicht das Tempo: Q8_0 (75 GB) passt mit Platz für den Kontext. Olares nennt Hardwarekosten von 4.999 $ und veröffentlicht keine Tokens/s-Werte für 70B.' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -3132,6 +3141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: ein 70B-Modell zu Hause trainieren](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- FSDP + QLoRA auf zwei 24-GB-GPUs',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) -- Dokumentation zu GPU-Offloading und Multi-GPU-Aufteilung',
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile mit 24 GB GDDR7, 96 GB DDR5, Hardwarekosten 4.999 $',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- YouTube-Video zum Olares One',
           ],
         },
       },
@@ -3603,6 +3613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: "**Olares One** ([olares.com/one](https://www.olares.com/one)) est un ordinateur de bureau IA compact doté d'une RTX 5090 Mobile (24 Go de VRAM GDDR7), d'un Intel Core Ultra 9 275HX et de 96 Go de RAM DDR5-5600 (extensible à 128 Go selon Olares). Avec un modèle 70B, il se comporte comme la ligne RTX 4090 ci-dessus : environ 55 % d'un modèle Q4_K_M tient en VRAM et le reste est lu depuis la RAM système, soit environ 2-4 tokens/s (estimation, pas un benchmark). Les 96 Go de RAM apportent de la capacité, pas de la vitesse : Q8_0 (75 Go) y tient avec de la place pour le contexte. Olares indique un coût matériel de 4 999 $ et ne publie aucun chiffre de tokens/s pour le 70B." },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -3906,6 +3917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "[Answer.AI : entraîner un modèle 70B chez soi](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- FSDP + QLoRA sur deux GPU de 24 Go",
             "[llama.cpp](https://github.com/ggml-org/llama.cpp) -- documentation du déchargement GPU et de la répartition multi-GPU",
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile avec 24 Go de GDDR7, 96 Go de DDR5, coût matériel de 4 999 $',
+            "[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- vidéo YouTube sur l'Olares One",
           ],
         },
       },
@@ -4443,6 +4455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One**（[olares.com/one](https://www.olares.com/one)）は、RTX 5090 Mobile（GDDR7 VRAM 24GB）、Intel Core Ultra 9 275HX、DDR5-5600 RAM 96GB（Olaresによれば128GBまで増設可）を搭載したコンパクトなAIデスクトップです。70Bモデルでは上のRTX 4090の行と同様に動作し、Q4_K_Mモデルの約55%がVRAMに載り、残りはシステムRAMから読み込まれるため、速度は約2～4 tokens/sが目安です（推定値であり、ベンチマークではありません）。96GBのRAMが増やすのは容量であって速度ではなく、Q8_0（75GB）もコンテキスト分の余裕を残して載ります。Olaresが示すハードウェア価格は$4,999で、70Bのtokens/sは公表されていません。' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -4931,6 +4944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: 自宅で70Bモデルを学習する](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- 24GBのGPU2枚でのFSDP＋QLoRA',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) -- GPUオフロードとマルチGPU分割のドキュメント',
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile（GDDR7 24GB）、DDR5 96GB、ハードウェア価格$4,999',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- Olares OneのYouTube動画',
           ],
         },
       },
@@ -5441,6 +5455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One**（[olares.com/one](https://www.olares.com/one)）是一台紧凑型 AI 桌面主机，搭载 RTX 5090 Mobile（24 GB GDDR7 显存）、Intel Core Ultra 9 275HX 和 96 GB DDR5-5600 内存（据 Olares 称最高可扩展至 128 GB）。运行 70B 模型时，其表现与上方 RTX 4090 一行相近：约 55% 的 Q4_K_M 模型可放入显存，其余从系统内存读取，因此预计约 2-4 tokens/s（估算值，非基准测试）。96 GB 内存增加的是容量而不是速度：Q8_0（75 GB）也能放下并留有上下文空间。Olares 标注的硬件成本为 $4,999，未公布 70B 的 tokens/s 数据。' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -5744,6 +5759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: train a 70B model at home](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) -- 在两块 24 GB 显卡上使用 FSDP + QLoRA',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) -- GPU 卸载与多 GPU 拆分文档',
             '[Olares One](https://www.olares.com/one) -- RTX 5090 Mobile（24 GB GDDR7）、96 GB DDR5、硬件成本 $4,999',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) -- 关于 Olares One 的 YouTube 视频',
           ],
         },
       },
@@ -6281,6 +6297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'insight', text: '**Olares One**([olares.com/one](https://www.olares.com/one))은 RTX 5090 Mobile(GDDR7 VRAM 24 GB), Intel Core Ultra 9 275HX, DDR5-5600 RAM 96 GB(Olares에 따르면 128 GB까지 확장 가능)를 갖춘 소형 AI 데스크톱입니다. 70B 모델에서는 위의 RTX 4090 행과 비슷하게 동작합니다. Q4_K_M 모델의 약 55%가 VRAM에 올라가고 나머지는 시스템 RAM에서 읽으므로 약 2-4 tokens/s로 예상됩니다(추정치이며 벤치마크가 아닙니다). 96 GB RAM은 속도가 아니라 용량을 늘려 주며, Q8_0(75 GB)도 컨텍스트 여유를 두고 올라갑니다. Olares는 하드웨어 비용을 $4,999로 표기하며 70B tokens/s 수치는 공개하지 않습니다.' },
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2QpXab8z_Gw',
         },
         ramByQuant: {
           id: 'ram-requirements',
@@ -6754,6 +6771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Answer.AI: 집에서 70B 모델 학습하기](https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html) — 24 GB GPU 두 장에서의 FSDP + QLoRA',
             '[llama.cpp](https://github.com/ggml-org/llama.cpp) — GPU 오프로딩 및 멀티 GPU 분할 문서',
             '[Olares One](https://www.olares.com/one) — RTX 5090 Mobile(GDDR7 24 GB), DDR5 96 GB, 하드웨어 비용 $4,999',
+            '[Alex Ziskind: This Box Runs All My AI… From a Coffee Shop](https://www.youtube.com/watch?v=2QpXab8z_Gw) — Olares One YouTube 영상',
           ],
         },
       },
