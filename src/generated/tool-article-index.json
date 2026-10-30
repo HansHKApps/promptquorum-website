@@ -11685,6 +11685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mylio-photos-review",
+        "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
+        "url": "/power-local-llm/mylio-photos-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
         "url": "/power-local-llm/nanobot-review",
@@ -11730,17 +11738,9 @@
         "url": "/power-local-llm/tecadrisebot-review",
         "dateModified": "2026-10-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 232,
+    "totalCount": 233,
     "capped": true
   },
   "Qdrant": {
@@ -12799,6 +12799,20 @@
         "title": "Excire Foto Review: Local AI Photo Manager for Windows and Mac",
         "url": "/power-local-llm/excire-foto-review",
         "dateModified": "2026-10-28",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Mylio Photos": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "mylio-photos-review",
+        "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
+        "url": "/power-local-llm/mylio-photos-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
