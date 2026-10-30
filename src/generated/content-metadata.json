@@ -4406,7 +4406,7 @@
       "images": []
     },
     "ai-code-review": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-10-30",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4423,16 +4423,12 @@
       ],
       "images": [
         {
-          "url": "/images/code-review-tool-comparison-en.svg",
-          "title": "AI code review tools compared: PromptQuorum dispatches to GPT-5.6 + Claude simultaneously — two models catch different bug classes than any single model alone."
-        },
-        {
           "url": "/images/code-review-workflow-en.svg",
-          "title": "Structured AI code review workflow: adding function context and specifying review focus (security, performance, style) increases actionable finding rate by 3×."
+          "title": "AI code review workflow: add function context, specify the review focus, then triage the findings."
         },
         {
           "url": "/images/code-review-security-steps-en.svg",
-          "title": "Four security categories for AI code review prompts: injection, authentication, hardcoded secrets, and business logic errors — each requires a different prompt framing."
+          "title": "Four security categories for AI code review prompts: injection, authentication, secrets and business logic."
         }
       ]
     },

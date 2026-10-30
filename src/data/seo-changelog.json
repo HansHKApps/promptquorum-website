@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -5904,6 +5904,35 @@
       "clicks": 0,
       "ctr": 0,
       "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a78d76d5-8dec-41ef-9dd0-b8c7b53a487e",
+    "slug": "prompt-engineering/ai-code-review",
+    "date": "2026-10-30T06:29:10.703Z",
+    "fields": [
+      {
+        "field": "seoTitle+metaDescription+new sections",
+        "old": "AI Code Review 2026: Snyk vs Greptile vs CodeRabbit",
+        "new": "AI Code Review 2026: CodeRabbit vs Greptile vs Snyk"
+      }
+    ],
+    "queries": [
+      "greptile vs coderabbit",
+      "coderabbit vs greptile",
+      "coderabbit vs snyk",
+      "greptile alternative",
+      "qodo vs coderabbit",
+      "coderabbit local",
+      "is greptile free"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 599,
+      "clicks": 6,
+      "ctr": 0.01001669449081803,
+      "period": "GSC top queries pasted 2026-10-30 (28d window assumed)"
     },
     "deployedAt": null
   }
