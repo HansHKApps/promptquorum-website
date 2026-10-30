@@ -650,6 +650,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'lm-mini-review',
   // Compass - Local AI review (Mobile & Edge LLMs) — 2026-10-26
   'compass-local-ai-review',
+  'greencube-review',
   // CompactifAI APP review (Mobile & Edge LLMs) — 2026-10-24
   'compactifai-app-review',
   // PocketLLM Lite review (Android local-first chat app, MIT) — 2026-10-24

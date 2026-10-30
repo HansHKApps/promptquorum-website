@@ -886,6 +886,7 @@ const HUB_THEMES: Array<{
       'ekorbia-review',
       'enchanted-review',
       'gpt4all-review',
+      'greencube-review',
       'hanoki-review',
       'jan-review',
       'iimagine-desktop-review',

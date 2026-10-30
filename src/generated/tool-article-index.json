@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 46,
+    "totalCount": 47,
     "capped": true
   },
   "GPT4All": {
@@ -1150,7 +1150,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 28,
+    "totalCount": 29,
     "capped": true
   },
   "AnythingLLM": {
@@ -12935,6 +12935,20 @@
         "title": "Compass - Local AI Review: Free On-Device AI Chat for iPhone",
         "url": "/power-local-llm/compass-local-ai-review",
         "dateModified": "2026-10-26",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "GreenCube": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "greencube-review",
+        "title": "GreenCube Review: One-Time-Purchase Offline AI for Windows",
+        "url": "/power-local-llm/greencube-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
