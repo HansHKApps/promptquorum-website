@@ -1599,6 +1599,11 @@
     "urlSlug": "compass-local-ai-review",
     "url": "/power-local-llm/compass-local-ai-review"
   },
+  "cloak-local-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cloak-local-ai-review",
+    "url": "/power-local-llm/cloak-local-ai-review"
+  },
   "greencube": {
     "cluster": "power-local-llm",
     "urlSlug": "greencube-review",

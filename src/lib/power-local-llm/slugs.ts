@@ -603,6 +603,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'chaterminal-review':                       'chaterminal-review',
   'lm-mini-review':                           'lm-mini-review',
   'compass-local-ai-review':                  'compass-local-ai-review',
+  'cloak-local-ai-review':                    'cloak-local-ai-review',
   'greencube-review':                         'greencube-review',
   'kai-9000-review':                          'kai-9000-review',
   'laria-review':                             'laria-review',

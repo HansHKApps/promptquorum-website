@@ -1125,6 +1125,7 @@ const HUB_THEMES: Array<{
       'lm-mini-review',
       'reins-review',
       'compass-local-ai-review',
+      'cloak-local-ai-review',
       'pocketllm-lite-review',
       'ensu-review',
       'compactifai-app-review',

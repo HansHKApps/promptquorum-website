@@ -153,6 +153,7 @@ import { app as app_caelum } from './apps/caelum'
 import { app as app_chaterminal } from './apps/chaterminal'
 import { app as app_lm_mini } from './apps/lm-mini'
 import { app as app_compass_local_ai } from './apps/compass-local-ai'
+import { app as app_cloak_local_ai } from './apps/cloak-local-ai'
 import { app as app_greencube } from './apps/greencube'
 import { app as app_kai_9000 } from './apps/kai-9000'
 import { app as app_laria } from './apps/laria'
@@ -671,6 +672,7 @@ export const localAiApps: ToolRecord[] = [
   app_chaterminal,
   app_lm_mini,
   app_compass_local_ai,
+  app_cloak_local_ai,
   app_greencube,
   app_kai_9000,
   app_laria,

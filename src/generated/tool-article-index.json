@@ -5956,7 +5956,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 52,
+    "totalCount": 53,
     "capped": true
   },
   "Pocket AI": {
@@ -6633,6 +6633,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cloak-local-ai-review",
+        "title": "Cloak: Local AI Review: Offline AI Chat for iPhone and Mac",
+        "url": "/power-local-llm/cloak-local-ai-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "compass-local-ai-review",
         "title": "Compass - Local AI Review: Free On-Device AI Chat for iPhone",
         "url": "/power-local-llm/compass-local-ai-review",
@@ -6662,18 +6670,10 @@
         "url": "/power-local-llm/private-llm-review",
         "dateModified": "2026-10-23",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tina-review",
-        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
-        "url": "/power-local-llm/tina-review",
-        "dateModified": "2026-10-04",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Arbiter": {
     "articles": [
@@ -11779,6 +11779,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cloak-local-ai-review",
+        "title": "Cloak: Local AI Review: Offline AI Chat for iPhone and Mac",
+        "url": "/power-local-llm/cloak-local-ai-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -11816,17 +11824,9 @@
         "url": "/power-local-llm/mylio-photos-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 240,
+    "totalCount": 241,
     "capped": true
   },
   "Qdrant": {
@@ -13095,6 +13095,28 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "Cloak: Local AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "cloak-local-ai-review",
+        "title": "Cloak: Local AI Review: Offline AI Chat for iPhone and Mac",
+        "url": "/power-local-llm/cloak-local-ai-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
     "capped": false
   },
   "GreenCube": {

@@ -224,6 +224,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'chaterminal':                             'chaterminal',
   'lm-mini':                                 'lm-mini',
   'compass-local-ai':                        'compass-local-ai',
+  'cloak-local-ai':                          'cloak-local-ai',
   'greencube':                               'greencube',
   'laria':                                   'laria',
   'pocketllm-lite':                          'pocketllm-lite',

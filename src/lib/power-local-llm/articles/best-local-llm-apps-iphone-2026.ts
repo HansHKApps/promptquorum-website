@@ -95,6 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)', anchor: '#memoryai' },
       { label: 'Reins: Chat Client for Your Ollama or LM Studio Server (Not Benchmarked)', anchor: '#reins' },
       { label: 'fullmoon: Free Open-Source Chat on Apple MLX (No Release Since Early 2025)', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI: Paid-Once Offline Chat (Not Benchmarked)', anchor: '#cloak-local-ai' },
       { label: 'Models by iPhone Tier', anchor: '#models-by-tier' },
       { label: 'Battery Drain and Thermal Throttling', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri, and Sideloading', anchor: '#ios-integration' },
@@ -209,6 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Cost': 'Free (built into iOS)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'N/A (system feature)', 'Privacy': 'Local + Private Cloud Compute (Apple)', 'Best for': 'Mail, Messages, Notes assistance' },
           { 'App': '[MemoryAI](/power-local-llm/memoryai-review)', 'Cost': 'Free; no ads or in-app purchases', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'No figure', 'Privacy': 'On-device after download; usage events and crash reports sent', 'Best for': 'Documents, editable memory, Kid Mode' },
           { 'App': '[fullmoon](/power-local-llm/fullmoon-review)', 'Cost': 'Free (MIT)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'No figure', 'Privacy': 'On-device per maker; policy contradicts itself', 'Best for': 'Simple offline chat; no release since Jan 2025' },
+          { 'App': '[Cloak: Local AI](/power-local-llm/cloak-local-ai-review)', 'Cost': 'Paid once ($1.99, US store); no subscription', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'No figure', 'Privacy': 'On-device after model download; optional survey and opt-in usage counts', 'Best for': 'Setup-free chat, Voice Memos, Recap' },
         ],
         note:
           '**Note on Apple Neural Engine (ANE) vs Metal vs MLX:** PocketPal AI and LLM Farm use llama.cpp with Metal Performance Shaders for inference, which runs on the GPU. MLC Chat uses MLC LLM with deeper Metal optimisation, which the MLC LLM project describes as faster than llama.cpp-based apps on the same hardware (project claim; PromptQuorum has not measured this). Locally AI uses Apple MLX, Apple\'s own open-source array framework, which reaches similar GPU efficiency on Apple Silicon. Google AI Edge Gallery runs Gemma 4 through Google\'s LiteRT-LM runtime. Apple Intelligence uses ANE specifically for the system ~3B model, which is more power-efficient but less flexible than Metal-based inference. Since iOS 26, third-party apps can call that system model through the Foundation Models framework — Locally AI does exactly this — but custom GGUF/MLX models still cannot directly target the ANE. Apple states the A20 Pro in the iPhone 18 Pro has a Dual 16-core Neural Engine with two times the compute of before; that is an Apple claim, and PromptQuorum has not measured what it means for these apps.',
@@ -397,6 +399,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'The details above come from the maker\'s website, the App Store listing, the privacy policy and the public repository; we have not run fullmoon on our test phones. Full notes: [fullmoon review](/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI: Paid-Once Offline Chat (Not Benchmarked)',
+        content:
+          '**Cloak: Local AI is a paid-once offline chat app for iPhone and iPad with Voice Memos and a weekly Recap.** It was added after the main comparison, so it is not in the speed figures and was not part of our testing.',
+        items: [
+          '**Model library:** The app downloads one recommended model from Hugging Face during setup; there is no model picker, and the model name and size are not published.',
+          '**Features:** Multiple local chat threads, a customizable system prompt, Voice Memos turned into notes or chats, and Recap, a summary of the last seven days built from Photos, Location and Voice Memos. A separate Mac version, Cloak: Local AI Chat, is chat only.',
+          '**Requirements and price:** iOS or iPadOS 18.0+. A one-time purchase of $1.99 in the US store, with no subscription and no in-app purchases listed.',
+          '**Privacy and licence:** The policy says conversations stay on the device after the model download. The iPhone version sends an optional setup survey answer and, only if switched on, daily feature-use counts; it is closed source.',
+          '**Install path:** App Store. First released on 25 June 2026; the App Store lists version 1.2.9, released on 27 October 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the App Store listings, Polyaura\'s website and its privacy policy; the developer was not contacted, and we have not timed Cloak on our test phones. Full notes: [Cloak: Local AI review](/power-local-llm/cloak-local-ai-review).',
           },
         ],
       },
@@ -711,6 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)', anchor: '#memoryai' },
       { label: 'Reins: Chat-Client für Ihren Ollama- oder LM-Studio-Server (nicht gemessen)', anchor: '#reins' },
       { label: 'fullmoon: kostenloser Open-Source-Chat auf Apple MLX (kein Release seit Anfang 2025)', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI: Offline-Chat im Einmalkauf (nicht gemessen)', anchor: '#cloak-local-ai' },
       { label: 'Modelle nach iPhone-Modell', anchor: '#models-by-tier' },
       { label: 'Akkuverbrauch und thermisches Throttling', anchor: '#battery-heat' },
       { label: 'iOS Kurzbefehle, Siri und Sideloading', anchor: '#ios-integration' },
@@ -825,6 +847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Preis': 'Kostenlos (in iOS integriert)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. (Systemfunktion)', 'Datenschutz': 'Lokal + Private Cloud Compute (Apple)', 'Am besten geeignet für': 'Hilfe in Mail, Nachrichten, Notizen' },
           { 'App': '[MemoryAI](/de/power-local-llm/memoryai-review)', 'Preis': 'Kostenlos; keine Werbung oder In-App-Käufe', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Auf dem Gerät nach Download; Nutzungs- und Absturzdaten werden gesendet', 'Am besten geeignet für': 'Dokumente, editierbares Gedächtnis, Kindermodus' },
           { 'App': '[fullmoon](/de/power-local-llm/fullmoon-review)', 'Preis': 'Kostenlos (MIT)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Auf dem Gerät laut Hersteller; Erklärung widersprüchlich', 'Am besten geeignet für': 'Einfacher Offline-Chat; kein Release seit Jan. 2025' },
+          { 'App': '[Cloak: Local AI](/de/power-local-llm/cloak-local-ai-review)', 'Preis': 'Einmalkauf (1,99 €, deutscher Store); kein Abo', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Auf dem Gerät nach Modell-Download; optionale Umfrage und freiwillige Nutzungszähler', 'Am besten geeignet für': 'Chat ohne Einrichtung, Sprachmemos, Recap' },
         ],
         note:
           '**Hinweis zur Apple Neural Engine (ANE) im Vergleich zu Metal und MLX:** PocketPal AI und LLM Farm verwenden llama.cpp mit Metal Performance Shadern, die auf der GPU laufen. MLC Chat verwendet MLC LLM mit tieferer Metal-Optimierung, die das MLC-LLM-Projekt auf gleicher Hardware als schneller beschreibt als llama.cpp-basierte Apps (Projektangabe; von PromptQuorum nicht nachgemessen). Locally AI nutzt Apple MLX, Apples eigenes Open-Source-Array-Framework, das auf Apple Silicon eine ähnliche GPU-Effizienz erreicht. Google AI Edge Gallery führt Gemma 4 über Googles LiteRT-LM-Runtime aus. Apple Intelligence nutzt die ANE speziell für das systemintegrierte ~3B-Modell – energieeffizienter, aber weniger flexibel als Metal-basierte Inferenz. Seit iOS 26 können Drittanbieter-Apps dieses Systemmodell über das Foundation-Models-Framework aufrufen – genau das tut Locally AI –, aber eigene GGUF/MLX-Modelle können die ANE weiterhin nicht direkt ansprechen. Apple gibt an, der A20 Pro im iPhone 18 Pro habe eine Dual-16-Core-Neural-Engine mit doppelter Rechenleistung wie zuvor; das ist eine Apple-Angabe, und PromptQuorum hat nicht gemessen, was sie für diese Apps bedeutet.',
@@ -1013,6 +1036,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Die Angaben stammen von der Website des Herstellers, aus dem App-Store-Eintrag, der Datenschutzerklärung und dem öffentlichen Repository; fullmoon wurde von uns nicht auf unseren Testgeräten ausgeführt. Alle Details: [fullmoon-Rezension](/de/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI: Offline-Chat im Einmalkauf (nicht gemessen)',
+        content:
+          '**Cloak: Local AI ist eine Offline-Chat-App im Einmalkauf für iPhone und iPad mit Sprachmemos und wöchentlichem Recap.** Sie wurde nach dem Hauptvergleich ergänzt, steht deshalb nicht in den Geschwindigkeitsangaben und war nicht Teil unserer Tests.',
+        items: [
+          '**Modellbibliothek:** Die App lädt bei der Einrichtung ein empfohlenes Modell von Hugging Face; es gibt keine Modellauswahl, und Name und Größe des Modells sind nicht veröffentlicht.',
+          '**Funktionen:** Mehrere lokale Chat-Verläufe, ein anpassbarer System-Prompt, Sprachmemos als Notizen oder Chats und Recap, eine Zusammenfassung der letzten sieben Tage aus Fotos, Standort und Sprachmemos. Eine eigene Mac-Version, Cloak: Local AI Chat, bietet nur Chat.',
+          '**Voraussetzungen und Preis:** iOS oder iPadOS 18.0+. Einmalkauf für 1,99 € im deutschen Store, ohne Abo und ohne aufgeführte In-App-Käufe.',
+          '**Datenschutz und Lizenz:** Laut Richtlinie bleiben Gespräche nach dem Modell-Download auf dem Gerät. Die iPhone-Version sendet eine optionale Umfrageantwort bei der Einrichtung und, nur wenn eingeschaltet, tägliche Nutzungszähler; sie ist Closed Source.',
+          '**Installation:** App Store. Erstveröffentlichung am 25. Juni 2026; der App Store listet Version 1.2.9 vom 27. Oktober 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus den App-Store-Einträgen, der Website von Polyaura und ihrer Datenschutzerklärung; der Entwickler wurde nicht kontaktiert, und Cloak wurde von uns nicht auf unseren Testgeräten gemessen. Alle Details: [Cloak: Local AI im Test](/de/power-local-llm/cloak-local-ai-review).',
           },
         ],
       },
@@ -1335,6 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)', anchor: '#memoryai' },
       { label: 'Reins:自分のOllama・LM Studioサーバー向けチャットクライアント(未計測)', anchor: '#reins' },
       { label: 'fullmoon：Apple MLX上で動く無料オープンソースのチャット（2025年初頭以降リリースなし）', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI:買い切りのオフラインチャット(未計測)', anchor: '#cloak-local-ai' },
       { label: 'iPhoneモデル別推奨モデル', anchor: '#models-by-tier' },
       { label: 'バッテリー消耗と熱スロットリング', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts、Siri、サイドローディング', anchor: '#ios-integration' },
@@ -1449,6 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'アプリ': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '価格': '無料（iOS内蔵）', 'トークン/秒（Phi-4 Mini、16 Pro）': '該当なし（システム機能）', 'プライバシー': 'ローカル + Private Cloud Compute（Apple）', '最適な用途': 'メール・メッセージ・メモでの支援' },
           { 'アプリ': '[MemoryAI](/ja/power-local-llm/memoryai-review)', '価格': '無料。広告・アプリ内課金なし', 'トークン/秒（Phi-4 Mini、16 Pro）': '数値なし', 'プライバシー': 'ダウンロード後は端末内で動作。利用イベントとクラッシュレポートを送信', '最適な用途': '文書、編集できるメモリ、キッズモード' },
           { 'アプリ': '[fullmoon](/ja/power-local-llm/fullmoon-review)', '価格': '無料（MIT）', 'トークン/秒（Phi-4 Mini、16 Pro）': '数値なし', 'プライバシー': '提供元によれば端末内。ポリシーは矛盾', '最適な用途': 'シンプルなオフラインチャット。2025年1月以降更新なし' },
+          { 'アプリ': '[Cloak: Local AI](/ja/power-local-llm/cloak-local-ai-review)', '価格': '買い切り(¥300、日本のストア)、サブスクなし', 'トークン/秒（Phi-4 Mini、16 Pro）': '数値なし', 'プライバシー': 'モデルのダウンロード後は端末内で動作。任意のアンケートと任意の利用カウント', '最適な用途': '設定不要のチャット、ボイスメモ、Recap' },
         ],
         note:
           '**Apple Neural Engine（ANE）、Metal、MLXの違いについて：** PocketPal AIとLLM Farmは、GPU上で動作するMetal Performance Shadersを使ったllama.cppで推論を行います。MLC ChatはMLC LLMとより深いMetal最適化を採用しており、MLC LLMプロジェクトは、対応モデルについて同じハードウェア上でllama.cppベースのアプリより高速と説明しています（プロジェクトの主張であり、PromptQuorumは計測していません）。Locally AIはApple独自のオープンソース配列フレームワークであるApple MLXを使用し、Apple Silicon上で同等のGPU効率を実現します。Google AI Edge GalleryはGoogleのLiteRT-LMランタイムでGemma 4を動かします。Apple Intelligenceはシステムの約3Bモデル専用にANEを使用します。Metal推論より省電力ですが、柔軟性は低めです。iOS 26以降、サードパーティアプリはFoundation Modelsフレームワーク経由でこのシステムモデルを呼び出せます（Locally AIがまさにこれを行っています）が、独自のGGUF/MLXモデルは依然としてANEを直接ターゲットできません。AppleはiPhone 18 ProのA20 Proに、従来の2倍の演算性能を持つデュアル16コアNeural Engineが搭載されていると述べています。これはAppleの主張であり、PromptQuorumはこれらのアプリで何を意味するかを計測していません。',
@@ -1637,6 +1681,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '上記の情報は、提供元のWebサイト、App Storeの掲載情報、プライバシーポリシー、公開リポジトリに基づいており、fullmoonを当サイトのテスト端末で動かしてはいません。詳細：[fullmoonレビュー](/ja/power-local-llm/fullmoon-review)。',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI:買い切りのオフラインチャット(未計測)',
+        content:
+          '**Cloak: Local AIは、ボイスメモと週次のRecapを備えた、iPhone・iPad向けの買い切り型オフラインチャットアプリです。** 主な比較の後に追加したもので、速度の数値には含まれず、当方のテストの対象でもありません。',
+        items: [
+          '**モデルライブラリ:** 初期設定時にHugging Faceから推奨モデルを1つダウンロードします。モデルの選択機能はなく、モデル名とサイズは公表されていません。',
+          '**機能:** 端末内に保存される複数のチャットスレッド、カスタマイズできるシステムプロンプト、ノートやチャットに変換できるボイスメモ、写真・位置情報・ボイスメモから直近7日間をまとめるRecap。別アプリのMac版Cloak: Local AI Chatはチャット専用です。',
+          '**動作条件と価格:** iOS／iPadOS 18.0以降。日本のストアで買い切りの¥300、サブスクリプションなし、アプリ内課金の記載もありません。',
+          '**プライバシーとライセンス:** ポリシーによれば、モデルのダウンロード後も会話は端末内にとどまります。iPhone版は任意の初期設定アンケート回答と、オンにした場合のみ日次の機能利用カウントを送信します。クローズドソースです。',
+          '**入手方法:** App Store。初回リリースは2026年6月25日で、App Storeには2026年10月27日リリースのバージョン1.2.9が掲載されています。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はApp Storeの掲載情報、Polyauraのサイト、プライバシーポリシーに基づきます。開発者には連絡しておらず、Cloakはテスト用の端末では計測していません。詳細は[Cloak: Local AIレビュー](/ja/power-local-llm/cloak-local-ai-review)をご覧ください。',
           },
         ],
       },
@@ -1951,6 +2014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)', anchor: '#memoryai' },
       { label: 'Reins : client de chat pour votre serveur Ollama ou LM Studio (non mesuré)', anchor: '#reins' },
       { label: 'fullmoon : chat gratuit et open source sur Apple MLX (aucune version depuis début 2025)', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI : chat hors ligne à achat unique (non mesuré)', anchor: '#cloak-local-ai' },
       { label: 'Modèles par génération d\'iPhone', anchor: '#models-by-tier' },
       { label: 'Autonomie et surchauffe', anchor: '#battery-heat' },
       { label: 'Raccourcis iOS, Siri et chargement latéral', anchor: '#ios-integration' },
@@ -2065,6 +2129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Application': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Prix': 'Gratuit (intégré à iOS)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'N/A (fonctionnalité système)', 'Confidentialité': 'Local + Private Cloud Compute (Apple)', 'Idéal pour': 'Aide Mail, Messages, Notes' },
           { 'Application': '[MemoryAI](/fr/power-local-llm/memoryai-review)', 'Prix': 'Gratuite ; sans publicité ni achat intégré', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'Aucune valeur', 'Confidentialité': 'Sur l\'appareil après téléchargement ; événements d\'usage et plantages envoyés', 'Idéal pour': 'Documents, mémoire modifiable, Kid Mode' },
           { 'Application': '[fullmoon](/fr/power-local-llm/fullmoon-review)', 'Prix': 'Gratuite (MIT)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'Aucune valeur', 'Confidentialité': 'Sur l’appareil selon l’éditeur ; politique contradictoire', 'Idéal pour': 'Chat hors ligne simple ; aucune version depuis janv. 2025' },
+          { 'Application': '[Cloak: Local AI](/fr/power-local-llm/cloak-local-ai-review)', 'Prix': 'Achat unique (1,99 €, App Store français) ; sans abonnement', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'Aucune valeur', 'Confidentialité': 'Sur l’appareil après le téléchargement du modèle ; sondage facultatif et compteurs d’usage sur option', 'Idéal pour': 'Chat sans configuration, mémos vocaux, Recap' },
         ],
         note:
           '**Note sur Apple Neural Engine (ANE), Metal et MLX :** PocketPal AI et LLM Farm utilisent llama.cpp avec Metal Performance Shaders pour l\'inférence, qui s\'exécute sur le GPU. MLC Chat utilise MLC LLM avec une optimisation Metal plus poussée que le projet MLC LLM décrit comme plus rapide que les applications basées sur llama.cpp sur le même matériel (affirmation du projet ; PromptQuorum ne l\'a pas mesurée). Locally AI utilise Apple MLX, le framework de calcul open source d\'Apple, d\'une efficacité GPU comparable sur Apple Silicon. Google AI Edge Gallery exécute Gemma 4 via le runtime LiteRT-LM de Google. Apple Intelligence utilise l\'ANE spécifiquement pour le modèle système d\'environ 3B, plus économe en énergie mais moins flexible que l\'inférence basée sur Metal. Depuis iOS 26, les applications tierces peuvent appeler ce modèle système via le framework Foundation Models — Locally AI le fait déjà —, mais les modèles GGUF/MLX personnalisés ne peuvent toujours pas cibler directement l\'ANE. Apple indique que l\'A20 Pro de l\'iPhone 18 Pro dispose d\'un Neural Engine 16 cœurs double avec deux fois la puissance de calcul précédente ; c\'est une affirmation d\'Apple, et PromptQuorum n\'a pas mesuré ce qu\'elle change pour ces applications.',
@@ -2253,6 +2318,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Les informations ci-dessus proviennent du site de l’éditeur, de la fiche App Store, de la politique de confidentialité et du dépôt public ; nous n’avons pas fait tourner fullmoon sur nos téléphones de test. Détails : [test de fullmoon](/fr/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI : chat hors ligne à achat unique (non mesuré)',
+        content:
+          '**Cloak: Local AI est une appli de chat hors ligne à achat unique pour iPhone et iPad, avec mémos vocaux et un Recap hebdomadaire.** Elle a été ajoutée après la comparaison principale : elle ne figure donc pas dans les chiffres de vitesse et n’a pas fait partie de nos tests.',
+        items: [
+          '**Bibliothèque de modèles :** l’appli télécharge un modèle recommandé depuis Hugging Face lors de la configuration ; il n’y a pas de sélecteur de modèle, et le nom et la taille du modèle ne sont pas publiés.',
+          '**Fonctions :** plusieurs fils de discussion locaux, un prompt système personnalisable, des mémos vocaux transformés en notes ou en conversations, et Recap, un résumé des sept derniers jours à partir de Photos, de la localisation et des mémos vocaux. Une version Mac distincte, Cloak: Local AI Chat, ne propose que le chat.',
+          '**Prérequis et prix :** iOS ou iPadOS 18.0+. Achat unique à 1,99 € sur l’App Store français, sans abonnement et sans achat intégré indiqué.',
+          '**Confidentialité et licence :** selon la politique, les conversations restent sur l’appareil après le téléchargement du modèle. La version iPhone envoie une réponse facultative à un sondage de configuration et, uniquement si vous l’activez, des compteurs quotidiens d’usage ; elle est à source fermée.',
+          '**Installation :** App Store. Première sortie le 25 juin 2026 ; l’App Store affiche la version 1.2.9, sortie le 27 octobre 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ces informations proviennent des fiches de l’App Store, du site de Polyaura et de sa politique de confidentialité ; le développeur n’a pas été contacté et nous n’avons pas mesuré Cloak sur nos téléphones de test. Notes complètes : [test de Cloak: Local AI](/fr/power-local-llm/cloak-local-ai-review).',
           },
         ],
       },
@@ -2567,6 +2651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI:带可编辑记忆的离线聊天(未实测)', anchor: '#memoryai' },
       { label: 'Reins:面向自建 Ollama 或 LM Studio 服务器的聊天客户端(未实测)', anchor: '#reins' },
       { label: 'fullmoon：基于 Apple MLX 的免费开源聊天应用（2025 年初以来无新版本）', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI：一次性付费的离线聊天（未实测）', anchor: '#cloak-local-ai' },
       { label: '按iPhone档次推荐模型', anchor: '#models-by-tier' },
       { label: '电池消耗与过热问题', anchor: '#battery-heat' },
       { label: 'iOS快捷指令、Siri与侧载', anchor: '#ios-integration' },
@@ -2681,6 +2766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '应用': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '费用': '免费（iOS内置）', 'Phi-4 Mini tok/s（16 Pro）': '不适用（系统功能）', '隐私': '本地 + Private Cloud Compute（苹果）', '适合人群': '邮件、信息、备忘录辅助' },
           { '应用': '[MemoryAI](/zh/power-local-llm/memoryai-review)', '费用': '免费;无广告、无应用内购买', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '下载后在设备端运行;会发送使用事件和崩溃报告', '适合人群': '文档、可编辑记忆、儿童模式' },
           { '应用': '[fullmoon](/zh/power-local-llm/fullmoon-review)', '费用': '免费（MIT）', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '据开发者在设备端运行；政策自相矛盾', '适合人群': '简单离线聊天；2025 年 1 月后无新版本' },
+          { '应用': '[Cloak: Local AI](/zh/power-local-llm/cloak-local-ai-review)', '费用': '一次性付费（美国商店 $1.99）；无订阅', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '下载模型后在设备端运行；可选问卷和需手动开启的使用计数', '适合人群': '免设置聊天、语音备忘录、Recap' },
         ],
         note:
           '**关于Apple神经网络引擎（ANE）、Metal与MLX的说明：** PocketPal AI和LLM Farm使用llama.cpp配合Metal Performance Shaders进行推理，运行在GPU上。MLC Chat使用MLC LLM及更深入的Metal优化，MLC LLM项目称其在同一硬件上快于基于llama.cpp的应用（项目自述；PromptQuorum未对此进行测量）。Locally AI使用苹果自家开源的数组框架Apple MLX，在Apple芯片上可达到相近的GPU效率。Google AI Edge Gallery通过谷歌的LiteRT-LM运行时运行Gemma 4。Apple Intelligence专门使用ANE运行系统约3B模型，能效更高，但灵活性不如基于Metal的推理。自iOS 26起，第三方应用可通过Foundation Models框架调用该系统模型——Locally AI正是这样做的——但自定义的GGUF/MLX模型仍无法直接使用ANE。苹果称iPhone 18 Pro的A20 Pro配备双16核神经网络引擎，算力是此前的两倍；这是苹果的说法，PromptQuorum并未测量它对这些应用意味着什么。',
@@ -2869,6 +2955,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '以上信息来自开发者官网、App Store 页面、隐私政策和公开代码仓库；我们没有在测试手机上运行过 fullmoon。详细说明：[fullmoon 评测](/zh/power-local-llm/fullmoon-review)。',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI：一次性付费的离线聊天（未实测）',
+        content:
+          '**Cloak: Local AI 是一款适用于 iPhone 和 iPad 的一次性付费离线聊天应用，带有语音备忘录和每周 Recap。** 它是在主要对比之后加入的，因此不在速度数据之内，也没有参与我们的测试。',
+        items: [
+          '**模型库：** 应用在设置时从 Hugging Face 下载一个推荐模型；没有模型选择器，模型名称和大小均未公布。',
+          '**功能：** 多个保存在本地的聊天线程、可自定义的系统提示词、可转为笔记或聊天的语音备忘录，以及用照片、位置和语音备忘录生成过去七天回顾的 Recap。单独的 Mac 版 Cloak: Local AI Chat 只有聊天功能。',
+          '**系统要求与价格：** iOS 或 iPadOS 18.0+。在美国商店为一次性购买 $1.99，没有订阅，也未列出应用内购买。',
+          '**隐私与许可：** 政策称下载模型后对话留在设备上。iPhone 版会发送一份可选的设置问卷答案，仅在开启后才发送每日功能使用计数；它是闭源的。',
+          '**安装方式：** App Store。2026年6月25日首次发布；App Store 列出的版本为 2026年10月27日发布的 1.2.9。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自 App Store 页面、Polyaura 官网及其隐私政策；我们没有联系开发者，也没有在测试手机上对 Cloak 测速。完整说明见 [Cloak: Local AI 评测](/zh/power-local-llm/cloak-local-ai-review)。',
           },
         ],
       },
@@ -3183,6 +3288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI: chat sin conexión con memoria editable (sin medir)', anchor: '#memoryai' },
       { label: 'Reins: cliente de chat para tu servidor Ollama o LM Studio (sin medir)', anchor: '#reins' },
       { label: 'fullmoon: chat gratuito y de código abierto sobre Apple MLX (sin versiones desde principios de 2025)', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI: chat sin conexión de pago único (sin medir)', anchor: '#cloak-local-ai' },
       { label: 'Modelos según el modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de batería y throttling térmico', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri y carga lateral', anchor: '#ios-integration' },
@@ -3297,6 +3403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Precio': 'Gratis (integrada en iOS)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'N/D (función del sistema)', 'Privacidad': 'Local + Private Cloud Compute (Apple)', 'Ideal para': 'Asistencia en Mail, Mensajes, Notas' },
           { 'App': '[MemoryAI](/es/power-local-llm/memoryai-review)', 'Precio': 'Gratuita; sin anuncios ni compras dentro de la app', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sin cifra', 'Privacidad': 'En el dispositivo tras la descarga; envía eventos de uso y fallos', 'Ideal para': 'Documentos, memoria editable, Kid Mode' },
           { 'App': '[fullmoon](/es/power-local-llm/fullmoon-review)', 'Precio': 'Gratuita (MIT)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sin cifra', 'Privacidad': 'En el dispositivo según el fabricante; política contradictoria', 'Ideal para': 'Chat sin conexión sencillo; sin versiones desde ene. 2025' },
+          { 'App': '[Cloak: Local AI](/es/power-local-llm/cloak-local-ai-review)', 'Precio': 'Pago único (1,99 €, tienda de España); sin suscripción', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sin cifra', 'Privacidad': 'En el dispositivo tras la descarga del modelo; encuesta opcional y recuentos de uso si los activas', 'Ideal para': 'Chat sin configuración, notas de voz, Recap' },
         ],
         note:
           '**Nota sobre Apple Neural Engine (ANE), Metal y MLX:** PocketPal AI y LLM Farm usan llama.cpp con Metal Performance Shaders para la inferencia, que se ejecuta en la GPU. MLC Chat usa MLC LLM con una optimización Metal más profunda, que el proyecto MLC LLM describe como más rápida que las apps basadas en llama.cpp en el mismo hardware (afirmación del proyecto; PromptQuorum no lo ha medido). Locally AI usa Apple MLX, el framework de cálculo de código abierto propio de Apple, que alcanza una eficiencia de GPU comparable en Apple Silicon. Google AI Edge Gallery ejecuta Gemma 4 mediante el runtime LiteRT-LM de Google. Apple Intelligence usa el ANE específicamente para el modelo de sistema de ~3B, que es más eficiente energéticamente pero menos flexible que la inferencia basada en Metal. Desde iOS 26, las apps de terceros pueden llamar a ese modelo de sistema mediante el framework Foundation Models —justo lo que hace Locally AI—, pero los modelos GGUF/MLX personalizados todavía no pueden apuntar directamente al ANE. Apple afirma que el A20 Pro del iPhone 18 Pro tiene un Neural Engine de 16 núcleos dual con el doble de capacidad de cálculo que antes; es una afirmación de Apple y PromptQuorum no ha medido qué supone para estas apps.',
@@ -3485,6 +3592,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Los datos anteriores proceden del sitio web del fabricante, la ficha de la App Store, la política de privacidad y el repositorio público; no hemos ejecutado fullmoon en nuestros teléfonos de prueba. Detalles: [reseña de fullmoon](/es/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI: chat sin conexión de pago único (sin medir)',
+        content:
+          '**Cloak: Local AI es una app de chat sin conexión de pago único para iPhone y iPad, con notas de voz y un Recap semanal.** Se añadió después de la comparación principal, así que no figura en las cifras de velocidad y no formó parte de nuestras pruebas.',
+        items: [
+          '**Biblioteca de modelos:** la app descarga durante la configuración un modelo recomendado de Hugging Face; no hay selector de modelos, y el nombre y el tamaño del modelo no se publican.',
+          '**Funciones:** varios hilos de chat locales, un prompt de sistema personalizable, notas de voz convertidas en notas o chats, y Recap, un resumen de los últimos siete días a partir de Fotos, Ubicación y Notas de voz. Una versión aparte para Mac, Cloak: Local AI Chat, solo ofrece chat.',
+          '**Requisitos y precio:** iOS o iPadOS 18.0+. Compra única de 1,99 € en la tienda de España, sin suscripción y sin compras dentro de la app indicadas.',
+          '**Privacidad y licencia:** según la política, las conversaciones se quedan en el dispositivo tras la descarga del modelo. La versión de iPhone envía una respuesta opcional a una encuesta de configuración y, solo si lo activas, recuentos diarios de uso; es de código cerrado.',
+          '**Instalación:** App Store. Lanzada el 25 de junio de 2026; la App Store lista la versión 1.2.9, publicada el 27 de octubre de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos proceden de las fichas de la App Store, el sitio de Polyaura y su política de privacidad; no se contactó con el desarrollador y no hemos medido Cloak en nuestros teléfonos de prueba. Notas completas: [reseña de Cloak: Local AI](/es/power-local-llm/cloak-local-ai-review).',
           },
         ],
       },
@@ -3799,6 +3925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)', anchor: '#memoryai' },
       { label: 'Reins: 직접 운영하는 Ollama·LM Studio 서버용 채팅 클라이언트(미측정)', anchor: '#reins' },
       { label: 'fullmoon: Apple MLX 기반 무료 오픈소스 채팅 앱(2025년 초 이후 릴리스 없음)', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI: 1회 구매형 오프라인 채팅(미측정)', anchor: '#cloak-local-ai' },
       { label: 'iPhone 등급별 모델', anchor: '#models-by-tier' },
       { label: '배터리 소모와 열 제한', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri 및 사이드로딩', anchor: '#ios-integration' },
@@ -3915,6 +4042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '앱': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '비용': '무료 (iOS 내장)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 (시스템 기능)', '개인 정보 보호': '로컬 + Private Cloud Compute (Apple)', '이상적인 대상': 'Mail, 메시지, 메모 작문 지원' },
           { '앱': '[MemoryAI](/ko/power-local-llm/memoryai-review)', '비용': '무료; 광고와 인앱 구매 없음', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '내려받은 뒤 기기 안에서 동작; 사용 이벤트와 충돌 보고서 전송', '이상적인 대상': '문서, 편집 가능한 메모리, 키즈 모드' },
           { '앱': '[fullmoon](/ko/power-local-llm/fullmoon-review)', '비용': '무료(MIT)', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '개발사 설명상 기기 내; 방침은 모순', '이상적인 대상': '간단한 오프라인 채팅; 2025년 1월 이후 릴리스 없음' },
+          { '앱': '[Cloak: Local AI](/ko/power-local-llm/cloak-local-ai-review)', '비용': '1회 구매(₩3,300, 한국 스토어); 구독 없음', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '모델을 내려받은 뒤 기기 안에서 동작; 선택 설문과 직접 켜는 사용 횟수', '이상적인 대상': '설정 없는 채팅, 음성 메모, Recap' },
         ],
         note:
           '**Apple Neural Engine (ANE), Metal, MLX 비교 참고:** PocketPal AI와 LLM Farm은 추론에 Metal Performance Shaders와 함께 llama.cpp를 사용하며, 이는 GPU에서 실행됩니다. MLC Chat은 더 깊은 Metal 최적화를 적용한 MLC LLM을 사용하는데, MLC LLM 프로젝트는 동일한 하드웨어에서 llama.cpp 기반 앱보다 빠르다고 설명합니다 (프로젝트의 주장이며 PromptQuorum은 이를 측정하지 않았습니다). Locally AI는 Apple 자체의 오픈 소스 배열 프레임워크인 Apple MLX를 사용하여 Apple Silicon에서 비슷한 GPU 효율에 도달합니다. Google AI Edge Gallery는 Google의 LiteRT-LM 런타임으로 Gemma 4를 실행합니다. Apple Intelligence는 시스템 ~3B 모델에 ANE를 구체적으로 사용하며, 이는 Metal 기반 추론보다 전력 효율이 높지만 유연성이 낮습니다. iOS 26부터 서드파티 앱은 Foundation Models 프레임워크를 통해 이 시스템 모델을 호출할 수 있고 — Locally AI가 정확히 그렇게 합니다 — 커스텀 GGUF/MLX 모델은 여전히 ANE를 직접 대상으로 할 수 없습니다. Apple은 iPhone 18 Pro의 A20 Pro가 이전 대비 두 배의 연산 성능을 갖춘 듀얼 16코어 Neural Engine을 탑재했다고 밝히고 있으나, 이는 Apple의 주장이며 PromptQuorum은 이것이 이 앱들에 어떤 의미인지 측정하지 않았습니다.',
@@ -4103,6 +4231,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '위 내용은 개발사 웹사이트, App Store 페이지, 개인정보 처리방침, 공개 저장소에서 가져온 것이며 fullmoon을 우리 테스트 기기에서 실행해 보지는 않았습니다. 자세한 내용: [fullmoon 리뷰](/ko/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI: 1회 구매형 오프라인 채팅(미측정)',
+        content:
+          '**Cloak: Local AI는 음성 메모와 주간 Recap을 갖춘 iPhone·iPad용 1회 구매형 오프라인 채팅 앱입니다.** 주요 비교 이후에 추가되어 속도 수치에 포함되지 않았고 우리의 테스트 대상도 아니었습니다.',
+        items: [
+          '**모델 라이브러리:** 초기 설정 중 Hugging Face에서 추천 모델 하나를 내려받습니다. 모델 선택기는 없고 모델 이름과 크기는 공개되어 있지 않습니다.',
+          '**기능:** 기기에 저장되는 여러 채팅 스레드, 사용자 지정 시스템 프롬프트, 메모나 채팅으로 바꿀 수 있는 음성 메모, 사진·위치·음성 메모로 지난 7일을 요약하는 Recap. 별도의 Mac 버전 Cloak: Local AI Chat은 채팅만 제공합니다.',
+          '**요구 사항과 가격:** iOS 또는 iPadOS 18.0 이상. 한국 스토어에서 ₩3,300의 1회 구매이며 구독은 없고 앱 내 구입도 표시되어 있지 않습니다.',
+          '**개인정보와 라이선스:** 방침에 따르면 모델을 내려받은 뒤 대화는 기기에 남습니다. iPhone 버전은 선택 사항인 설정 설문 응답을 보내고, 켠 경우에만 일별 기능 사용 횟수를 보냅니다. 비공개 소스입니다.',
+          '**설치 경로:** App Store. 2026년 6월 25일 처음 출시되었고, App Store에는 2026년 10월 27일에 출시된 버전 1.2.9가 표시됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 App Store 페이지, Polyaura 웹사이트, 개인정보 처리방침에서 가져왔습니다. 개발자에게는 연락하지 않았고 테스트용 휴대전화에서 Cloak를 측정하지도 않았습니다. 자세한 내용은 [Cloak: Local AI 리뷰](/ko/power-local-llm/cloak-local-ai-review)를 참고하십시오.',
           },
         ],
       },
@@ -4420,6 +4567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI: chat offline com memória editável (não medido)', anchor: '#memoryai' },
       { label: 'Reins: cliente de chat para o seu servidor Ollama ou LM Studio (não medido)', anchor: '#reins' },
       { label: 'fullmoon: chat gratuito e de código aberto sobre Apple MLX (sem versões desde o início de 2025)', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI: chat offline de pagamento único (não medido)', anchor: '#cloak-local-ai' },
       { label: 'Modelos conforme o modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de bateria e limitação térmica', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri e sideloading', anchor: '#ios-integration' },
@@ -4534,6 +4682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Preço': 'Grátis (integrado ao iOS)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'N/A (função do sistema)', 'Privacidade': 'Local + Private Cloud Compute (Apple)', 'Ideal para': 'Ajuda no Mail, Mensagens, Notas' },
           { 'App': '[MemoryAI](/pt/power-local-llm/memoryai-review)', 'Preço': 'Gratuito; sem anúncios nem compras no app', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sem valor', 'Privacidade': 'No dispositivo após o download; envia eventos de uso e falhas', 'Ideal para': 'Documentos, memória editável, Modo Criança' },
           { 'App': '[fullmoon](/pt/power-local-llm/fullmoon-review)', 'Preço': 'Gratuito (MIT)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sem valor', 'Privacidade': 'No dispositivo segundo o fabricante; política contraditória', 'Ideal para': 'Chat offline simples; sem versões desde jan. 2025' },
+          { 'App': '[Cloak: Local AI](/pt/power-local-llm/cloak-local-ai-review)', 'Preço': 'Pagamento único (R$ 12,90, loja brasileira); sem assinatura', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sem valor', 'Privacidade': 'No aparelho após o download do modelo; pesquisa opcional e contagens de uso se você ativar', 'Ideal para': 'Chat sem configuração, Notas de Voz, Recap' },
         ],
         note:
           '**Nota sobre Apple Neural Engine (ANE), Metal e MLX:** o PocketPal AI e o LLM Farm usam llama.cpp com Metal Performance Shaders para a inferência, que roda na GPU. O MLC Chat usa o MLC LLM com uma otimização Metal mais profunda, que o projeto MLC LLM descreve como mais rápida que os apps baseados em llama.cpp no mesmo hardware (afirmação do projeto; o PromptQuorum não mediu isso). O Locally AI usa o Apple MLX, o framework open source de arrays da própria Apple, que alcança eficiência de GPU semelhante no Apple Silicon. O Google AI Edge Gallery executa o Gemma 4 pelo runtime LiteRT-LM do Google. O Apple Intelligence usa o ANE especificamente para o modelo de sistema de ~3B, que é mais eficiente em energia, mas menos flexível que a inferência baseada em Metal. Desde o iOS 26, apps de terceiros podem chamar esse modelo de sistema pelo framework Foundation Models — o Locally AI faz exatamente isso —, mas modelos GGUF/MLX personalizados ainda não conseguem usar o ANE diretamente. A Apple afirma que o A20 Pro do iPhone 18 Pro tem um Neural Engine de 16 núcleos duplo, com o dobro do poder de computação de antes; essa é uma afirmação da Apple, e o PromptQuorum não mediu o que isso significa para esses apps.',
@@ -4722,6 +4871,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Os dados acima vêm do site do fabricante, da página da App Store, da política de privacidade e do repositório público; não executamos o fullmoon nos nossos celulares de teste. Detalhes: [análise do fullmoon](/pt/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI: chat offline de pagamento único (não medido)',
+        content:
+          '**O Cloak: Local AI é um app de chat offline de pagamento único para iPhone e iPad, com Notas de Voz e um Recap semanal.** Ele foi adicionado depois da comparação principal, por isso não entra nos números de velocidade e não fez parte dos nossos testes.',
+        items: [
+          '**Biblioteca de modelos:** o app baixa um modelo recomendado do Hugging Face durante a configuração; não há seletor de modelos, e o nome e o tamanho do modelo não são divulgados.',
+          '**Recursos:** várias conversas locais, um prompt de sistema personalizável, Notas de Voz convertidas em anotações ou chats, e o Recap, um resumo dos últimos sete dias feito com Fotos, Localização e Notas de Voz. Uma versão separada para Mac, o Cloak: Local AI Chat, oferece apenas chat.',
+          '**Requisitos e preço:** iOS ou iPadOS 18.0+. Compra única de R$ 12,90 na loja brasileira, sem assinatura e sem compras no app listadas.',
+          '**Privacidade e licença:** segundo a política, as conversas ficam no aparelho depois do download do modelo. A versão para iPhone envia uma resposta opcional a uma pesquisa de configuração e, só se você ativar, contagens diárias de uso; é de código fechado.',
+          '**Instalação:** App Store. Lançado em 25 de junho de 2026; a App Store lista a versão 1.2.9, de 27 de outubro de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados vêm das páginas da App Store, do site da Polyaura e da política de privacidade; o desenvolvedor não foi contatado e não medimos o Cloak nos nossos celulares de teste. Detalhes completos: [análise do Cloak: Local AI](/pt/power-local-llm/cloak-local-ai-review).',
           },
         ],
       },
@@ -5036,6 +5204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)', anchor: '#memoryai' },
       { label: 'Reins: عميل دردشة لخادم Ollama أو LM Studio الخاص بك (لم يُقَس)', anchor: '#reins' },
       { label: 'fullmoon: دردشة مجانية مفتوحة المصدر على Apple MLX (بلا إصدارات منذ مطلع 2025)', anchor: '#fullmoon' },
+      { label: 'Cloak: Local AI: دردشة دون اتصال بشراء لمرة واحدة (لم يُقَس)', anchor: '#cloak-local-ai' },
       { label: 'النماذج حسب فئة iPhone', anchor: '#models-by-tier' },
       { label: 'استنزاف البطارية والتباطؤ الحراري', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts وSiri والتحميل الجانبي', anchor: '#ios-integration' },
@@ -5150,6 +5319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التطبيق': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'التكلفة': 'مجاني (مدمج في iOS)', 'رموز/ث (Phi-4 Mini)': 'غير متاح (ميزة نظامية)', 'الخصوصية': 'محلي + Private Cloud Compute (Apple)', 'الأنسب لـ': 'المساعدة في Mail والرسائل والملاحظات' },
           { 'التطبيق': '[MemoryAI](/ar/power-local-llm/memoryai-review)', 'التكلفة': 'مجاني؛ بلا إعلانات أو مشتريات داخل التطبيق', 'رموز/ث (Phi-4 Mini)': 'لا توجد قيمة', 'الخصوصية': 'على الجهاز بعد التنزيل؛ يرسل أحداث استخدام وتقارير أعطال', 'الأنسب لـ': 'المستندات، ذاكرة قابلة للتعديل، وضع الأطفال' },
           { 'التطبيق': '[fullmoon](/ar/power-local-llm/fullmoon-review)', 'التكلفة': 'مجاني (MIT)', 'رموز/ث (Phi-4 Mini)': 'لا توجد قيمة', 'الخصوصية': 'على الجهاز بحسب المطوّر؛ السياسة متناقضة', 'الأنسب لـ': 'دردشة بسيطة دون اتصال؛ بلا إصدارات منذ يناير 2025' },
+          { 'التطبيق': '[Cloak: Local AI](/ar/power-local-llm/cloak-local-ai-review)', 'التكلفة': 'شراء لمرة واحدة ($1.99، المتجر الأمريكي)؛ دون اشتراك', 'رموز/ث (Phi-4 Mini)': 'لا توجد قيمة', 'الخصوصية': 'على الجهاز بعد تنزيل النموذج؛ استبيان اختياري وعدّادات استخدام عند تفعيلها', 'الأنسب لـ': 'دردشة بلا إعداد، مذكرات صوتية، Recap' },
         ],
         note:
           '**ملاحظة حول Apple Neural Engine (ANE) وMetal وMLX:** يستخدم PocketPal AI وLLM Farm مكتبة llama.cpp مع Metal Performance Shaders للاستدلال الذي يعمل على وحدة معالجة الرسومات. يستخدم MLC Chat مكتبة MLC LLM مع تحسين Metal أعمق، ويصفه مشروع MLC LLM بأنه أسرع من التطبيقات المبنية على llama.cpp على نفس الجهاز (ادعاء من المشروع؛ ولم يقس PromptQuorum ذلك). يستخدم Locally AI إطار Apple MLX مفتوح المصدر الخاص بشركة Apple، ويحقق كفاءة GPU مشابهة على Apple Silicon. يُشغّل Google AI Edge Gallery نماذج Gemma 4 عبر بيئة LiteRT-LM من Google. يستخدم Apple Intelligence وحدة ANE تحديداً لنموذج النظام ~3B، وهو أكثر كفاءة في استهلاك الطاقة لكنه أقل مرونة من الاستدلال المبني على Metal. منذ iOS 26، تستطيع تطبيقات الجهات الخارجية استدعاء هذا النموذج النظامي عبر إطار عمل Foundation Models — وهذا بالضبط ما يفعله Locally AI — لكن نماذج GGUF/MLX المخصصة لا تزال غير قادرة على استهداف ANE مباشرةً. تذكر Apple أن شريحة A20 Pro في iPhone 18 Pro تحتوي على Neural Engine مزدوج بـ16 نواة بضعف القدرة الحسابية السابقة؛ وهذا ادعاء من Apple، ولم يقس PromptQuorum ما يعنيه ذلك لهذه التطبيقات.',
@@ -5338,6 +5508,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'مصدر التفاصيل أعلاه موقع المطوّر وصفحة App Store وسياسة الخصوصية والمستودع العام؛ ولم نشغّل fullmoon على هواتف الاختبار لدينا. التفاصيل: [مراجعة fullmoon](/ar/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      cloakLocalAI: {
+        id: 'cloak-local-ai',
+        title: 'Cloak: Local AI: دردشة دون اتصال بشراء لمرة واحدة (لم يُقَس)',
+        content:
+          '**Cloak: Local AI تطبيق دردشة دون اتصال يُشترى مرة واحدة لأجهزة iPhone وiPad، مع مذكرات صوتية وRecap أسبوعي.** أُضيف بعد المقارنة الرئيسية، لذا لا يدخل في أرقام السرعة ولم يكن جزءًا من اختباراتنا.',
+        items: [
+          '**مكتبة النماذج:** ينزّل التطبيق نموذجًا موصى به من Hugging Face أثناء الإعداد؛ لا يوجد منتقٍ للنماذج، ولم يُنشر اسم النموذج ولا حجمه.',
+          '**الميزات:** عدة سلاسل دردشة محلية، ومطالبة نظام قابلة للتخصيص، ومذكرات صوتية تتحول إلى ملاحظات أو محادثات، وRecap وهو ملخص للأيام السبعة الماضية من الصور والموقع والمذكرات الصوتية. أما نسخة Mac المنفصلة Cloak: Local AI Chat فتقدم الدردشة فقط.',
+          '**المتطلبات والسعر:** iOS أو iPadOS 18.0+. شراء لمرة واحدة بسعر $1.99 في المتجر الأمريكي دون اشتراك ودون مشتريات داخل التطبيق مدرجة.',
+          '**الخصوصية والترخيص:** تقول السياسة إن المحادثات تبقى على الجهاز بعد تنزيل النموذج. وترسل نسخة iPhone إجابة اختيارية عن استبيان الإعداد، وعدّادات يومية لاستخدام الميزات إذا فعّلتها فقط؛ وهو مغلق المصدر.',
+          '**مسار التثبيت:** App Store. صدر أول مرة في 25 يونيو 2026؛ ويعرض App Store النسخة 1.2.9 الصادرة في 27 أكتوبر 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'تأتي التفاصيل أعلاه من صفحات App Store وموقع Polyaura وسياسة الخصوصية؛ لم نتواصل مع المطوّر ولم نقِس Cloak على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة Cloak: Local AI](/ar/power-local-llm/cloak-local-ai-review).',
           },
         ],
       },
