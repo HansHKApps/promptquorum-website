@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   license: 'Apache-2.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per goose-docs.ai installation docs: no stated minimum RAM/VRAM for the goose process itself — GPU/CPU guidance in the docs is about the LLM backend chosen (Ollama, OpenAI, Anthropic), not a goose-specific floor, checked 2026-09-13
-  stars: 53925, // github.com/aaif-goose/goose, verified via GitHub API 2026-09-05
+  stars: 55939, // github.com/aaif-goose/goose, verified via GitHub API 2026-10-30
   addedDate: '2026-09-05',
   status: 'listed',
   uses: ['agent', 'code', 'build'],
@@ -35,7 +35,7 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { ollama: true, mcp: true, multiAgent: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-10-29', // GitHub API: latest release v1.57.0 (2026-10-28), last push 2026-10-29 (newer), read 2026-10-30
   lastUpstreamUpdateSource: 'https://github.com/aaif-goose/goose',
   reviewSlug: 'goose-review',
 }

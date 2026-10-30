@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -5714,6 +5714,196 @@
       "clicks": 4,
       "ctr": 0.0016771488469601676,
       "period": "GSC top queries, window not stated"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f01e2a16-79d0-42dd-b7d3-337b88acc597",
+    "slug": "/power-local-llm/goose-review",
+    "date": "2026-10-30T06:21:24.631Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Goose Review: Open-Source AI Agent (Apache 2.0)",
+        "new": "Goose AI Agent Review: Open Source, Linux Foundation"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Goose is Block's free, open-source, local-first AI agent, now governed by the Linux Foundation's Agentic AI Foundation. Verified install steps, license, and stars for 2026.",
+        "new": "What is Goose? Block's free, open-source AI agent for any LLM, now under the Linux Foundation. Apache 2.0; install steps for Linux, macOS, Windows."
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR fix - what-is/agent/Linux Foundation intent from GSC, locale en",
+    "queries": [
+      "goose",
+      "goose ia",
+      "goose llm",
+      "goose agent",
+      "goose linux foundation",
+      "goose ai review",
+      "was ist goose",
+      "goose aiエージェント",
+      "goose是什么",
+      "goose linux"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 181,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "700e752b-12e8-48bc-a72d-bf3544779830",
+    "slug": "/de/power-local-llm/goose-review",
+    "date": "2026-10-30T06:21:24.743Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Goose Review: Open-Source-KI-Agent (Apache 2.0)",
+        "new": "Was ist Goose? Review des Open-Source-KI-Agenten"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Goose ist Blocks kostenloser, quelloffener, lokal-first KI-Agent, jetzt unter der Agentic AI Foundation der Linux Foundation. Geprüfte Installationsschritte, Lizenz und Sterne für 2026.",
+        "new": "Was ist Goose? Blocks kostenloser, quelloffener KI-Agent für jedes LLM, jetzt bei der Linux Foundation. Apache 2.0, Installation für Linux, macOS, Windows."
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR fix - what-is/agent/Linux Foundation intent from GSC, locale de",
+    "queries": [
+      "goose",
+      "goose ia",
+      "goose llm",
+      "goose agent",
+      "goose linux foundation",
+      "goose ai review",
+      "was ist goose",
+      "goose aiエージェント",
+      "goose是什么",
+      "goose linux"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 181,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "7255b63a-393e-4193-b2a6-363505ec18fe",
+    "slug": "/fr/power-local-llm/goose-review",
+    "date": "2026-10-30T06:21:24.856Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Goose Review: Agent IA open source (Apache 2.0)",
+        "new": "Goose IA : avis sur l'agent open source (Apache 2.0)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Goose est l'agent IA gratuit, open source et local par défaut de Block, désormais géré par l'Agentic AI Foundation de la Linux Foundation. Étapes d'installation, licence et étoiles vérifiées pour 2026.",
+        "new": "Goose, c'est quoi ? Agent IA gratuit et open source de Block pour tout LLM, sous la Linux Foundation. Apache 2.0, installation Linux, macOS, Windows."
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR fix - what-is/agent/Linux Foundation intent from GSC, locale fr",
+    "queries": [
+      "goose",
+      "goose ia",
+      "goose llm",
+      "goose agent",
+      "goose linux foundation",
+      "goose ai review",
+      "was ist goose",
+      "goose aiエージェント",
+      "goose是什么",
+      "goose linux"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 181,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d68ca2df-d979-4b5d-95a1-b0ad156c1f08",
+    "slug": "/ja/power-local-llm/goose-review",
+    "date": "2026-10-30T06:21:24.970Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Goose レビュー: オープンソースAIエージェント（Apache 2.0）",
+        "new": "Goose AIエージェント レビュー: 無料のオープンソース"
+      },
+      {
+        "field": "metaDescription",
+        "old": "GooseはBlockの無料・オープンソース・ローカルファーストAIエージェントで、現在はLinux FoundationのAgentic AI Foundationが管理しています。2026年版の検証済みインストール手順、ライセンス、スター数。",
+        "new": "BlockのAIエージェントGooseとは？無料・オープンソースで任意のLLMに接続でき、現在はLinux Foundationが管理。Apache 2.0ライセンスとインストール手順を解説。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR fix - what-is/agent/Linux Foundation intent from GSC, locale ja",
+    "queries": [
+      "goose",
+      "goose ia",
+      "goose llm",
+      "goose agent",
+      "goose linux foundation",
+      "goose ai review",
+      "was ist goose",
+      "goose aiエージェント",
+      "goose是什么",
+      "goose linux"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 181,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "d4dc87f2-2b47-49b0-8079-334a16a331fe",
+    "slug": "/zh/power-local-llm/goose-review",
+    "date": "2026-10-30T06:21:25.085Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Goose 评测：开源 AI 代理（Apache 2.0）",
+        "new": "Goose 是什么：开源 AI 代理评测（Apache 2.0）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Goose 是 Block 推出的免费、开源、本地优先 AI 代理，现由 Linux Foundation 的 Agentic AI Foundation 管理。2026年经过核实的安装步骤、许可证与星标数。",
+        "new": "Goose 是什么？Block 推出的免费开源 AI 代理，可连接任意 LLM，现由 Linux Foundation 管理。含 Apache 2.0 许可证与安装步骤。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR fix - what-is/agent/Linux Foundation intent from GSC, locale zh",
+    "queries": [
+      "goose",
+      "goose ia",
+      "goose llm",
+      "goose agent",
+      "goose linux foundation",
+      "goose ai review",
+      "was ist goose",
+      "goose aiエージェント",
+      "goose是什么",
+      "goose linux"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 181,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
     },
     "deployedAt": null
   }
