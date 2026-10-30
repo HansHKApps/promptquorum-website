@@ -9875,6 +9875,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "photoview-review",
+        "title": "Photoview Review: Self-Hosted Photo Gallery with Local Face Recognition",
+        "url": "/power-local-llm/photoview-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -9928,17 +9936,9 @@
         "url": "/power-local-llm/pocketpal-ai-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "FluidVoice": {
@@ -12749,6 +12749,20 @@
         "title": "PhotoPrism Review: Self-Hosted AI Photo Library for Your Server",
         "url": "/power-local-llm/photoprism-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Photoview": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "photoview-review",
+        "title": "Photoview Review: Self-Hosted Photo Gallery with Local Face Recognition",
+        "url": "/power-local-llm/photoview-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
