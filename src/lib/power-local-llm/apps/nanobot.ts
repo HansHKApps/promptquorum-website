@@ -19,11 +19,14 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // an agent loop that calls out to an OpenAI-compatible, local Ollama, or local vLLM backend rather than running inference in-process — GPU need (if any) depends entirely on the chosen backend, verified 2026-09-14
-  stars: 48125, // fast-growing count on an ~7-month-old repo; corroborated by organic-scale fork/issue/contributor activity (8,503 forks, 768 open issues, 30 contributors, weekly-ish releases) rather than independently star-history-audited, verified 2026-09-14
+  stars: 49657, // fast-growing count on an ~9-month-old repo; corroborated by organic-scale fork/issue/contributor activity (8,700 forks, 868 open issues, 100+ contributors, regular releases) rather than independently star-history-audited, GitHub API read 2026-10-30
   addedDate: '2026-09-14',
   status: 'listed',
   uses: ['agent', 'chat'],
-  url: 'github.com/HKUDS/nanobot',
+  url: 'nanobot.wiki', // official site/docs (GitHub repo homepage field) — repo moved to storeLinks.github per feature-app-post check 5, verified 2026-10-30
+  storeLinks: { github: 'https://github.com/HKUDS/nanobot' },
+  installEffort: 'one-command', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README Install section: official installer `curl -fsSL .../scripts/install.sh | sh` (macOS/Linux) and `irm .../install.ps1 | iex` (Windows PowerShell), or `uv tool install nanobot-ai` / pip; GitHub Releases v0.4.0 lists Python packages only, no .dmg/.exe/.AppImage. checked 2026-10-30',
   tagline: {
     en: 'Self-hosted personal AI agent with persistent memory, MCP tools, and chat-app integrations',
     de: 'Selbst gehosteter persönlicher KI-Agent mit dauerhaftem Gedächtnis, MCP-Tools und Chat-App-Integrationen',
@@ -37,10 +40,10 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'nanobot-review', // dedicated PromptQuorum review — added 2026-09-14
   mcpSupport: true, // tagline claims "MCP tools" as a first-class feature — verified 2026-09-14
-  pqReview: { date: '2026-09-20', version: 'v0.3.5', versionSourceUrl: 'https://github.com/HKUDS/nanobot/releases/tag/v0.3.5' },
+  pqReview: { date: '2026-10-30', version: 'v0.4.0', versionSourceUrl: 'https://github.com/HKUDS/nanobot/releases/tag/v0.4.0' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, ollama: true, memory: true, toolUse: true },
-  lastVerifiedDate: '2026-09-20',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastVerifiedDate: '2026-10-30',
+  lastUpstreamUpdate: '2026-10-30', // GitHub API pushed_at 2026-10-30 (latest release v0.4.0 on 2026-10-28), read 2026-10-30
   lastUpstreamUpdateSource: 'https://github.com/HKUDS/nanobot',
 }
