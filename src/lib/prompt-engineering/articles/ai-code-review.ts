@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit vs Greptile: which should I choose?',
+            name: 'CodeRabbit vs Greptile: which should I choose, and is CodeRabbit worth it?',
             acceptedAnswer: { '@type': 'Answer', text: 'Choose Greptile if the highest seeded-bug catch rate matters most and you can budget per review: it caught 82% against CodeRabbit\'s 44% in Greptile\'s own July 2025 test, and Pro has no seat fees (prepaid credits at $1 each; a Base review uses 1 credit). Choose CodeRabbit if you want per-seat pricing ($24 per user per month on Essentials with annual billing, $30 monthly) and free reviews on public repositories. Both offer a 14-day trial and reserve self-hosting for Enterprise. Whether CodeRabbit is worth it depends on volume: a flat seat price is easier to forecast for teams that open many pull requests, while low-volume teams may pay less per review.' },
           },
           {
@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Which AI code review tools can be self-hosted or run on-prem?',
+            name: 'Which AI code review tools offer self-hosted or on-prem deployment, and can I bring my own LLM key?',
             acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit (Enterprise plan; its docs say it is offered to customers with 500+ seats and supports GitHub Enterprise Server, GitLab self-managed, Azure DevOps and Bitbucket Data Center), Greptile (Enterprise) and Qodo (Enterprise: single-tenant SaaS, on-prem and air-gapped) document self-hosting. Self-hosted CodeRabbit still sends prompts and source code to the LLM provider you configure, and its docs say you can connect your own LLM provider or account. CodeRabbit\'s CLI reviews local changes before a pull request but authenticates against CodeRabbit\'s backend. For code that must never leave your infrastructure, run an open-weight model locally.' },
           },
           {
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'No tool is the most accurate in every test. In a July 2025 benchmark run by Greptile on 50 bugs from five open-source repositories, Greptile caught 82%, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44% (default settings, hosted plans). Because Greptile sells one of the tools tested and independent results may differ, use the figures as a starting point and run a two-week trial on your own pull requests. For security scanning, Snyk Code is a separate category: a scanner that complements a pull-request reviewer.',
             },
             {
-              q: 'CodeRabbit vs Greptile: which should I choose?',
+              q: 'CodeRabbit vs Greptile: which should I choose, and is CodeRabbit worth it?',
               a: 'Choose Greptile if the highest seeded-bug catch rate matters most and you can budget per review: it caught 82% against CodeRabbit\'s 44% in Greptile\'s own July 2025 test, and Pro has no seat fees (prepaid credits at $1 each; a Base review uses 1 credit). Choose CodeRabbit if you want per-seat pricing ($24 per user per month on Essentials with annual billing, $30 monthly) and free reviews on public repositories. Both offer a 14-day trial and reserve self-hosting for Enterprise. Whether CodeRabbit is worth it depends on volume: a flat seat price is easier to forecast for teams that open many pull requests, while low-volume teams may pay less per review.',
             },
             {
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'The closest alternatives are CodeRabbit, Qodo, Cursor Bugbot, GitHub Copilot code review and Graphite Agent (Cursor announced its acquisition of Graphite on December 19, 2025). In Greptile\'s July 2025 test Bugbot caught 58%, Copilot 54% and CodeRabbit 44%; Qodo was not tested. Pick by Git platform (Bitbucket: Qodo or Bugbot), by price model (seats, credits or usage) and by deployment (self-hosting is an Enterprise feature at CodeRabbit, Greptile and Qodo).',
             },
             {
-              q: 'Which AI code review tools can be self-hosted or run on-prem?',
+              q: 'Which AI code review tools offer self-hosted or on-prem deployment, and can I bring my own LLM key?',
               a: 'CodeRabbit (Enterprise plan; its docs say it is offered to customers with 500+ seats and supports GitHub Enterprise Server, GitLab self-managed, Azure DevOps and Bitbucket Data Center), Greptile (Enterprise) and Qodo (Enterprise: single-tenant SaaS, on-prem and air-gapped) document self-hosting. Self-hosted CodeRabbit still sends prompts and source code to the LLM provider you configure, and its docs say you can connect your own LLM provider or account. CodeRabbit\'s CLI reviews local changes before a pull request but authenticates against CodeRabbit\'s backend. For code that must never leave your infrastructure, run an open-weight model locally.',
             },
             {
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit vs Greptile: Was sollte ich wählen?',
+            name: 'CodeRabbit vs Greptile: Was sollte ich wählen, und lohnt sich CodeRabbit?',
             acceptedAnswer: { '@type': 'Answer', text: 'Wählen Sie Greptile, wenn die höchste Erkennungsrate bei eingebauten Bugs am wichtigsten ist und Sie pro Review budgetieren können: Es fand 82% gegenüber 44% bei CodeRabbit in Greptiles eigenem Test vom Juli 2025, und Pro hat keine Sitzplatzgebühren (vorausbezahlte Credits zu je $1; ein Base-Review verbraucht 1 Credit). Wählen Sie CodeRabbit, wenn Sie einen Preis pro Sitzplatz ($24 pro Nutzer und Monat bei Essentials mit jährlicher Abrechnung, $30 monatlich) und kostenlose Reviews für öffentliche Repositories wünschen. Beide bieten eine 14-tägige Testphase und reservieren Self-Hosting für Enterprise. Ob sich CodeRabbit lohnt, hängt vom Volumen ab: Ein pauschaler Sitzplatzpreis lässt sich bei Teams mit vielen Pull Requests leichter kalkulieren, während Teams mit geringem Volumen pro Review womöglich weniger zahlen.' },
           },
           {
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Welche KI-Code-Review-Tools lassen sich selbst hosten oder On-Prem betreiben?',
+            name: 'Welche KI-Code-Review-Tools bieten Self-Hosting oder On-Prem-Deployment, und kann ich einen eigenen LLM-Key verwenden?',
             acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit (Enterprise-Tarif; laut Dokumentation wird er Kunden mit 500+ Sitzplätzen angeboten und unterstützt GitHub Enterprise Server, GitLab self-managed, Azure DevOps und Bitbucket Data Center), Greptile (Enterprise) und Qodo (Enterprise: Single-Tenant-SaaS, On-Prem und Air-Gapped) dokumentieren Self-Hosting. Selbst gehostetes CodeRabbit sendet Prompts und Quellcode weiterhin an den von Ihnen konfigurierten LLM-Anbieter, und laut Dokumentation können Sie Ihren eigenen LLM-Anbieter oder Ihr eigenes Konto anbinden. Die CLI von CodeRabbit prüft lokale Änderungen vor einem Pull Request, authentifiziert sich aber gegenüber dem Backend von CodeRabbit. Für Code, der Ihre Infrastruktur nie verlassen darf, betreiben Sie ein Open-Weight-Modell lokal.' },
           },
           {
@@ -1140,7 +1140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Kein Tool ist in jedem Test das genaueste. In einem Benchmark, den Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt hat, fand Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44% (Standardeinstellungen, gehostete Tarife). Da Greptile eines der getesteten Tools verkauft und unabhängige Ergebnisse abweichen können, nutzen Sie die Zahlen als Ausgangspunkt und führen Sie eine zweiwöchige Testphase mit Ihren eigenen Pull Requests durch. Für Sicherheits-Scans ist Snyk Code eine eigene Kategorie: ein Scanner, der einen Pull-Request-Reviewer ergänzt.',
             },
             {
-              q: 'CodeRabbit vs Greptile: Was sollte ich wählen?',
+              q: 'CodeRabbit vs Greptile: Was sollte ich wählen, und lohnt sich CodeRabbit?',
               a: 'Wählen Sie Greptile, wenn die höchste Erkennungsrate bei eingebauten Bugs am wichtigsten ist und Sie pro Review budgetieren können: Es fand 82% gegenüber 44% bei CodeRabbit in Greptiles eigenem Test vom Juli 2025, und Pro hat keine Sitzplatzgebühren (vorausbezahlte Credits zu je $1; ein Base-Review verbraucht 1 Credit). Wählen Sie CodeRabbit, wenn Sie einen Preis pro Sitzplatz ($24 pro Nutzer und Monat bei Essentials mit jährlicher Abrechnung, $30 monatlich) und kostenlose Reviews für öffentliche Repositories wünschen. Beide bieten eine 14-tägige Testphase und reservieren Self-Hosting für Enterprise. Ob sich CodeRabbit lohnt, hängt vom Volumen ab: Ein pauschaler Sitzplatzpreis lässt sich bei Teams mit vielen Pull Requests leichter kalkulieren, während Teams mit geringem Volumen pro Review womöglich weniger zahlen.',
             },
             {
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Die engsten Alternativen sind CodeRabbit, Qodo, Cursor Bugbot, GitHub Copilot Code Review und Graphite Agent (Cursor kündigte die Übernahme von Graphite am 19. Dezember 2025 an). In Greptiles Test vom Juli 2025 fand Bugbot 58%, Copilot 54% und CodeRabbit 44%; Qodo wurde nicht getestet. Wählen Sie nach Git-Plattform (Bitbucket: Qodo oder Bugbot), nach Preismodell (Sitzplätze, Credits oder Nutzung) und nach Bereitstellung (Self-Hosting ist bei CodeRabbit, Greptile und Qodo ein Enterprise-Feature).',
             },
             {
-              q: 'Welche KI-Code-Review-Tools lassen sich selbst hosten oder On-Prem betreiben?',
+              q: 'Welche KI-Code-Review-Tools bieten Self-Hosting oder On-Prem-Deployment, und kann ich einen eigenen LLM-Key verwenden?',
               a: 'CodeRabbit (Enterprise-Tarif; laut Dokumentation wird er Kunden mit 500+ Sitzplätzen angeboten und unterstützt GitHub Enterprise Server, GitLab self-managed, Azure DevOps und Bitbucket Data Center), Greptile (Enterprise) und Qodo (Enterprise: Single-Tenant-SaaS, On-Prem und Air-Gapped) dokumentieren Self-Hosting. Selbst gehostetes CodeRabbit sendet Prompts und Quellcode weiterhin an den von Ihnen konfigurierten LLM-Anbieter, und laut Dokumentation können Sie Ihren eigenen LLM-Anbieter oder Ihr eigenes Konto anbinden. Die CLI von CodeRabbit prüft lokale Änderungen vor einem Pull Request, authentifiziert sich aber gegenüber dem Backend von CodeRabbit. Für Code, der Ihre Infrastruktur nie verlassen darf, betreiben Sie ein Open-Weight-Modell lokal.',
             },
             {
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit vs Greptile: ¿cuál debería elegir?',
+            name: 'CodeRabbit vs Greptile: ¿cuál debería elegir y vale la pena CodeRabbit?',
             acceptedAnswer: { '@type': 'Answer', text: 'Elige Greptile si lo que más importa es la mayor tasa de detección de bugs sembrados y puedes presupuestar por revisión: detectó el 82 % frente al 44 % de CodeRabbit en la propia prueba de Greptile de julio de 2025, y Pro no cobra por puesto (créditos prepagados a $1 cada uno; una revisión Base usa 1 crédito). Elige CodeRabbit si prefieres precios por puesto ($24 por usuario al mes en Essentials con facturación anual, $30 mensual) y revisiones gratuitas en repositorios públicos. Ambos ofrecen una prueba de 14 días y reservan el autohospedaje para Enterprise. Si CodeRabbit merece la pena depende del volumen: un precio fijo por puesto es más fácil de prever para equipos que abren muchos pull requests, mientras que los equipos de bajo volumen pueden pagar menos por revisión.' },
           },
           {
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: '¿Qué herramientas de revisión de código con IA se pueden autohospedar o ejecutar on-prem?',
+            name: '¿Qué herramientas de revisión de código con IA ofrecen autohospedaje o despliegue on-prem, y puedo usar mi propia clave de LLM?',
             acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit (plan Enterprise; su documentación indica que se ofrece a clientes con 500+ puestos y es compatible con GitHub Enterprise Server, GitLab self-managed, Azure DevOps y Bitbucket Data Center), Greptile (Enterprise) y Qodo (Enterprise: SaaS de inquilino único, on-prem y air-gapped) documentan el autohospedaje. CodeRabbit autohospedado sigue enviando prompts y código fuente al proveedor de LLM que configures, y su documentación indica que puedes conectar tu propio proveedor o cuenta de LLM. La CLI de CodeRabbit revisa cambios locales antes de un pull request, pero se autentica contra el backend de CodeRabbit. Para código que nunca debe salir de tu infraestructura, ejecuta un modelo de pesos abiertos en local.' },
           },
           {
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Ninguna herramienta es la más precisa en todas las pruebas. En un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs de cinco repositorios de código abierto, Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 % (configuración por defecto, planes alojados). Como Greptile vende una de las herramientas evaluadas y los resultados independientes pueden diferir, usa las cifras como punto de partida y haz una prueba de dos semanas con tus propios pull requests. Para el escaneo de seguridad, Snyk Code es una categoría aparte: un escáner que complementa a un revisor de pull requests.',
             },
             {
-              q: 'CodeRabbit vs Greptile: ¿cuál debería elegir?',
+              q: 'CodeRabbit vs Greptile: ¿cuál debería elegir y vale la pena CodeRabbit?',
               a: 'Elige Greptile si lo que más importa es la mayor tasa de detección de bugs sembrados y puedes presupuestar por revisión: detectó el 82 % frente al 44 % de CodeRabbit en la propia prueba de Greptile de julio de 2025, y Pro no cobra por puesto (créditos prepagados a $1 cada uno; una revisión Base usa 1 crédito). Elige CodeRabbit si prefieres precios por puesto ($24 por usuario al mes en Essentials con facturación anual, $30 mensual) y revisiones gratuitas en repositorios públicos. Ambos ofrecen una prueba de 14 días y reservan el autohospedaje para Enterprise. Si CodeRabbit merece la pena depende del volumen: un precio fijo por puesto es más fácil de prever para equipos que abren muchos pull requests, mientras que los equipos de bajo volumen pueden pagar menos por revisión.',
             },
             {
@@ -1767,7 +1767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Las alternativas más cercanas son CodeRabbit, Qodo, Cursor Bugbot, GitHub Copilot code review y Graphite Agent (Cursor anunció la adquisición de Graphite el 19 de diciembre de 2025). En la prueba de Greptile de julio de 2025, Bugbot detectó el 58 %, Copilot el 54 % y CodeRabbit el 44 %; Qodo no se evaluó. Elige según la plataforma Git (Bitbucket: Qodo o Bugbot), el modelo de precios (puestos, créditos o uso) y el despliegue (el autohospedaje es una función Enterprise en CodeRabbit, Greptile y Qodo).',
             },
             {
-              q: '¿Qué herramientas de revisión de código con IA se pueden autohospedar o ejecutar on-prem?',
+              q: '¿Qué herramientas de revisión de código con IA ofrecen autohospedaje o despliegue on-prem, y puedo usar mi propia clave de LLM?',
               a: 'CodeRabbit (plan Enterprise; su documentación indica que se ofrece a clientes con 500+ puestos y es compatible con GitHub Enterprise Server, GitLab self-managed, Azure DevOps y Bitbucket Data Center), Greptile (Enterprise) y Qodo (Enterprise: SaaS de inquilino único, on-prem y air-gapped) documentan el autohospedaje. CodeRabbit autohospedado sigue enviando prompts y código fuente al proveedor de LLM que configures, y su documentación indica que puedes conectar tu propio proveedor o cuenta de LLM. La CLI de CodeRabbit revisa cambios locales antes de un pull request, pero se autentica contra el backend de CodeRabbit. Para código que nunca debe salir de tu infraestructura, ejecuta un modelo de pesos abiertos en local.',
             },
             {
@@ -1953,7 +1953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit مقابل Greptile: أيهما أختار؟',
+            name: 'CodeRabbit مقابل Greptile: أيهما أختار، وهل يستحق CodeRabbit الاستخدام؟',
             acceptedAnswer: { '@type': 'Answer', text: 'اختر Greptile إن كان أعلى معدل لاكتشاف الأخطاء المزروعة هو الأهم ويمكنك تخصيص ميزانية لكل مراجعة: اكتشفت 82٪ مقابل 44٪ لـ CodeRabbit في اختبار Greptile نفسها لشهر يوليو 2025، ولا تفرض Pro رسوم مقاعد (أرصدة مدفوعة مسبقًا بسعر ⁨$1⁩ للرصيد؛ وتستهلك مراجعة Base رصيدًا واحدًا). واختر CodeRabbit إن أردت تسعيرًا لكل مقعد (⁨$24⁩ لكل مستخدم شهريًا في Essentials بفوترة سنوية، و⁨$30⁩ شهريًا) ومراجعات مجانية على المستودعات العامة. كلاهما يقدم تجربة لمدة 14 يومًا ويحصر الاستضافة الذاتية في Enterprise. وتعتمد جدوى CodeRabbit على الحجم: سعر المقعد الثابت أسهل في التنبؤ للفرق التي تفتح طلبات سحب كثيرة، بينما قد تدفع الفرق قليلة الحجم أقل لكل مراجعة.' },
           },
           {
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'أي أدوات مراجعة الكود بالذكاء الاصطناعي يمكن استضافتها ذاتيًا أو تشغيلها داخل المؤسسة؟',
+            name: 'ما أدوات مراجعة الكود بالذكاء الاصطناعي التي توفر الاستضافة الذاتية أو النشر داخل المؤسسة (on-prem)، وهل يمكنني استخدام مفتاح LLM الخاص بي؟',
             acceptedAnswer: { '@type': 'Answer', text: 'توثّق الاستضافة الذاتية كل من CodeRabbit (خطة Enterprise؛ تذكر وثائقه أنه يُقدَّم للعملاء ذوي 500+ مقعد ويدعم GitHub Enterprise Server وGitLab المستضاف ذاتيًا وAzure DevOps وBitbucket Data Center) وGreptile (Enterprise) وQodo (Enterprise: SaaS أحادي المستأجر، وداخل المؤسسة، ومعزول عن الشبكة). ويظل CodeRabbit المستضاف ذاتيًا يرسل التعليمات والكود المصدري إلى مزوِّد النموذج اللغوي الذي تهيّئه، وتذكر وثائقه أنه يمكنك ربط مزوِّد النموذج اللغوي أو الحساب الخاص بك. ويراجع CodeRabbit CLI التغييرات المحلية قبل طلب السحب لكنه يصادق على خادم CodeRabbit الخلفي. وللكود الذي يجب ألا يغادر بنيتك التحتية، شغّل نموذجًا مفتوح الأوزان محليًا.' },
           },
           {
@@ -2362,7 +2362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'لا توجد أداة هي الأدق في كل اختبار. في معيار أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر، اكتشفت Greptile ‏82٪، وCursor Bugbot ‏58٪، وGitHub Copilot ‏54٪، وCodeRabbit ‏44٪ (بالإعدادات الافتراضية والخطط المستضافة). ولأن Greptile تبيع إحدى الأدوات المختبَرة وقد تختلف النتائج المستقلة، استخدم الأرقام نقطة انطلاق وأجرِ تجربة لمدة أسبوعين على طلبات السحب الخاصة بك. أما لفحص الأمان فإن Snyk Code فئة منفصلة: ماسح يكمّل مراجع طلبات السحب.',
             },
             {
-              q: 'CodeRabbit مقابل Greptile: أيهما أختار؟',
+              q: 'CodeRabbit مقابل Greptile: أيهما أختار، وهل يستحق CodeRabbit الاستخدام؟',
               a: 'اختر Greptile إن كان أعلى معدل لاكتشاف الأخطاء المزروعة هو الأهم ويمكنك تخصيص ميزانية لكل مراجعة: اكتشفت 82٪ مقابل 44٪ لـ CodeRabbit في اختبار Greptile نفسها لشهر يوليو 2025، ولا تفرض Pro رسوم مقاعد (أرصدة مدفوعة مسبقًا بسعر ⁨$1⁩ للرصيد؛ وتستهلك مراجعة Base رصيدًا واحدًا). واختر CodeRabbit إن أردت تسعيرًا لكل مقعد (⁨$24⁩ لكل مستخدم شهريًا في Essentials بفوترة سنوية، و⁨$30⁩ شهريًا) ومراجعات مجانية على المستودعات العامة. كلاهما يقدم تجربة لمدة 14 يومًا ويحصر الاستضافة الذاتية في Enterprise. وتعتمد جدوى CodeRabbit على الحجم: سعر المقعد الثابت أسهل في التنبؤ للفرق التي تفتح طلبات سحب كثيرة، بينما قد تدفع الفرق قليلة الحجم أقل لكل مراجعة.',
             },
             {
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'أقرب البدائل هي CodeRabbit وQodo وCursor Bugbot ومراجعة الكود في GitHub Copilot وGraphite Agent (أعلنت Cursor استحواذها على Graphite في 19 ديسمبر 2025). في اختبار Greptile لشهر يوليو 2025 اكتشف Bugbot ‏58٪ وCopilot ‏54٪ وCodeRabbit ‏44٪؛ ولم تُختبر Qodo. اختر حسب منصة Git (لـ Bitbucket: Qodo أو Bugbot)، وحسب نموذج التسعير (مقاعد أو أرصدة أو استخدام)، وحسب النشر (الاستضافة الذاتية ميزة Enterprise لدى CodeRabbit وGreptile وQodo).',
             },
             {
-              q: 'أي أدوات مراجعة الكود بالذكاء الاصطناعي يمكن استضافتها ذاتيًا أو تشغيلها داخل المؤسسة؟',
+              q: 'ما أدوات مراجعة الكود بالذكاء الاصطناعي التي توفر الاستضافة الذاتية أو النشر داخل المؤسسة (on-prem)، وهل يمكنني استخدام مفتاح LLM الخاص بي؟',
               a: 'توثّق الاستضافة الذاتية كل من CodeRabbit (خطة Enterprise؛ تذكر وثائقه أنه يُقدَّم للعملاء ذوي 500+ مقعد ويدعم GitHub Enterprise Server وGitLab المستضاف ذاتيًا وAzure DevOps وBitbucket Data Center) وGreptile (Enterprise) وQodo (Enterprise: SaaS أحادي المستأجر، وداخل المؤسسة، ومعزول عن الشبكة). ويظل CodeRabbit المستضاف ذاتيًا يرسل التعليمات والكود المصدري إلى مزوِّد النموذج اللغوي الذي تهيّئه، وتذكر وثائقه أنه يمكنك ربط مزوِّد النموذج اللغوي أو الحساب الخاص بك. ويراجع CodeRabbit CLI التغييرات المحلية قبل طلب السحب لكنه يصادق على خادم CodeRabbit الخلفي. وللكود الذي يجب ألا يغادر بنيتك التحتية، شغّل نموذجًا مفتوح الأوزان محليًا.',
             },
             {
@@ -2564,7 +2564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit vs Greptile: qual devo escolher?',
+            name: 'CodeRabbit vs Greptile: qual devo escolher, e o CodeRabbit vale a pena?',
             acceptedAnswer: { '@type': 'Answer', text: 'Escolha a Greptile se a maior taxa de detecção de bugs inseridos é o mais importante e você consegue orçar por revisão: ela detectou 82% contra 44% do CodeRabbit no próprio teste da Greptile de julho de 2025, e o Pro não tem taxa por assento (créditos pré-pagos a $1 cada; uma revisão Base usa 1 crédito). Escolha o CodeRabbit se você prefere preço por assento ($24 por usuário por mês no Essentials com cobrança anual, $30 mensal) e revisões gratuitas em repositórios públicos. Ambos oferecem teste de 14 dias e reservam a auto-hospedagem para o Enterprise. Se o CodeRabbit vale a pena depende do volume: um preço fixo por assento é mais fácil de prever para equipes que abrem muitos pull requests, enquanto equipes de baixo volume podem pagar menos por revisão.' },
           },
           {
@@ -2584,7 +2584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Quais ferramentas de revisão de código com IA podem ser auto-hospedadas ou executadas on-premises?',
+            name: 'Quais ferramentas de revisão de código com IA oferecem auto-hospedagem ou implantação on-prem, e posso usar minha própria chave de LLM?',
             acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit (plano Enterprise; a documentação diz que é oferecido a clientes com 500+ assentos e oferece suporte a GitHub Enterprise Server, GitLab self-managed, Azure DevOps e Bitbucket Data Center), Greptile (Enterprise) e Qodo (Enterprise: SaaS de locatário único, on-premises e air-gapped) documentam a auto-hospedagem. O CodeRabbit auto-hospedado ainda envia prompts e código-fonte ao provedor de LLM que você configurar, e a documentação diz que você pode conectar seu próprio provedor ou conta de LLM. A CLI do CodeRabbit revisa alterações locais antes de um pull request, mas se autentica no backend do CodeRabbit. Para código que nunca pode sair da sua infraestrutura, execute um modelo de pesos abertos localmente.' },
           },
           {
@@ -2973,7 +2973,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Nenhuma ferramenta é a mais precisa em todos os testes. Em um benchmark de julho de 2025 executado pela Greptile com 50 bugs de cinco repositórios de código aberto, a Greptile detectou 82%, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44% (configurações padrão, planos hospedados). Como a Greptile vende uma das ferramentas testadas e resultados independentes podem diferir, use os números como ponto de partida e faça um teste de duas semanas com seus próprios pull requests. Para varredura de segurança, o Snyk Code é outra categoria: um scanner que complementa um revisor de pull requests.',
             },
             {
-              q: 'CodeRabbit vs Greptile: qual devo escolher?',
+              q: 'CodeRabbit vs Greptile: qual devo escolher, e o CodeRabbit vale a pena?',
               a: 'Escolha a Greptile se a maior taxa de detecção de bugs inseridos é o mais importante e você consegue orçar por revisão: ela detectou 82% contra 44% do CodeRabbit no próprio teste da Greptile de julho de 2025, e o Pro não tem taxa por assento (créditos pré-pagos a $1 cada; uma revisão Base usa 1 crédito). Escolha o CodeRabbit se você prefere preço por assento ($24 por usuário por mês no Essentials com cobrança anual, $30 mensal) e revisões gratuitas em repositórios públicos. Ambos oferecem teste de 14 dias e reservam a auto-hospedagem para o Enterprise. Se o CodeRabbit vale a pena depende do volume: um preço fixo por assento é mais fácil de prever para equipes que abrem muitos pull requests, enquanto equipes de baixo volume podem pagar menos por revisão.',
             },
             {
@@ -2989,7 +2989,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'As alternativas mais próximas são CodeRabbit, Qodo, Cursor Bugbot, revisão de código do GitHub Copilot e Graphite Agent (a Cursor anunciou a aquisição da Graphite em 19 de dezembro de 2025). No teste da Greptile de julho de 2025, o Bugbot detectou 58%, o Copilot 54% e o CodeRabbit 44%; a Qodo não foi testada. Escolha pela plataforma Git (Bitbucket: Qodo ou Bugbot), pelo modelo de preço (assentos, créditos ou uso) e pela implantação (a auto-hospedagem é um recurso Enterprise no CodeRabbit, na Greptile e na Qodo).',
             },
             {
-              q: 'Quais ferramentas de revisão de código com IA podem ser auto-hospedadas ou executadas on-premises?',
+              q: 'Quais ferramentas de revisão de código com IA oferecem auto-hospedagem ou implantação on-prem, e posso usar minha própria chave de LLM?',
               a: 'CodeRabbit (plano Enterprise; a documentação diz que é oferecido a clientes com 500+ assentos e oferece suporte a GitHub Enterprise Server, GitLab self-managed, Azure DevOps e Bitbucket Data Center), Greptile (Enterprise) e Qodo (Enterprise: SaaS de locatário único, on-premises e air-gapped) documentam a auto-hospedagem. O CodeRabbit auto-hospedado ainda envia prompts e código-fonte ao provedor de LLM que você configurar, e a documentação diz que você pode conectar seu próprio provedor ou conta de LLM. A CLI do CodeRabbit revisa alterações locais antes de um pull request, mas se autentica no backend do CodeRabbit. Para código que nunca pode sair da sua infraestrutura, execute um modelo de pesos abertos localmente.',
             },
             {
@@ -3175,7 +3175,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit vs Greptile : lequel choisir ?',
+            name: 'CodeRabbit vs Greptile : lequel choisir, et CodeRabbit vaut-il le coup ?',
             acceptedAnswer: { '@type': 'Answer', text: 'Choisissez Greptile si le taux de détection de bugs injectés le plus élevé est votre priorité et que vous pouvez budgéter par révision : il a détecté 82% contre 44% pour CodeRabbit lors du test de juillet 2025 mené par Greptile lui-même, et l\'offre Pro n\'a pas de frais par siège (crédits prépayés à $1 chacun ; une révision Base consomme 1 crédit). Choisissez CodeRabbit si vous préférez une tarification par siège ($24 par utilisateur et par mois sur Essentials avec facturation annuelle, $30 en facturation mensuelle) et des révisions gratuites sur les dépôts publics. Les deux proposent un essai de 14 jours et réservent l\'auto-hébergement à l\'offre Enterprise. L\'intérêt de CodeRabbit dépend du volume : un prix par siège fixe est plus facile à prévoir pour les équipes qui ouvrent beaucoup de pull requests, tandis que les équipes à faible volume peuvent payer moins par révision.' },
           },
           {
@@ -3195,7 +3195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Quels outils de révision de code par IA peuvent être auto-hébergés ou exécutés sur site ?',
+            name: 'Quels outils de révision de code par IA proposent l\'auto-hébergement ou un déploiement on-prem, et puis-je utiliser ma propre clé LLM ?',
             acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit (offre Enterprise ; sa documentation indique qu\'elle est proposée aux clients de 500+ sièges et qu\'elle prend en charge GitHub Enterprise Server, GitLab auto-hébergé, Azure DevOps et Bitbucket Data Center), Greptile (Enterprise) et Qodo (Enterprise : SaaS mono-locataire, sur site et isolé du réseau) documentent l\'auto-hébergement. CodeRabbit auto-hébergé envoie toujours les prompts et le code source au fournisseur de LLM que vous configurez, et sa documentation indique que vous pouvez connecter votre propre fournisseur ou compte LLM. La CLI de CodeRabbit révise les modifications locales avant une pull request, mais s\'authentifie auprès du backend de CodeRabbit. Pour un code qui ne doit jamais quitter votre infrastructure, exécutez un modèle open-weight en local.' },
           },
           {
@@ -3584,7 +3584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Aucun outil n\'est le plus précis dans tous les tests. Lors d\'un benchmark de juillet 2025 mené par Greptile sur 50 bugs issus de cinq dépôts open source, Greptile a détecté 82%, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44% (paramètres par défaut, offres hébergées). Comme Greptile vend l\'un des outils testés et que des résultats indépendants peuvent différer, utilisez ces chiffres comme point de départ et menez un essai de deux semaines sur vos propres pull requests. Pour l\'analyse de sécurité, Snyk Code est une catégorie à part : un scanner qui complète un relecteur de pull requests.',
             },
             {
-              q: 'CodeRabbit vs Greptile : lequel choisir ?',
+              q: 'CodeRabbit vs Greptile : lequel choisir, et CodeRabbit vaut-il le coup ?',
               a: 'Choisissez Greptile si le taux de détection de bugs injectés le plus élevé est votre priorité et que vous pouvez budgéter par révision : il a détecté 82% contre 44% pour CodeRabbit lors du test de juillet 2025 mené par Greptile lui-même, et l\'offre Pro n\'a pas de frais par siège (crédits prépayés à $1 chacun ; une révision Base consomme 1 crédit). Choisissez CodeRabbit si vous préférez une tarification par siège ($24 par utilisateur et par mois sur Essentials avec facturation annuelle, $30 en facturation mensuelle) et des révisions gratuites sur les dépôts publics. Les deux proposent un essai de 14 jours et réservent l\'auto-hébergement à l\'offre Enterprise. L\'intérêt de CodeRabbit dépend du volume : un prix par siège fixe est plus facile à prévoir pour les équipes qui ouvrent beaucoup de pull requests, tandis que les équipes à faible volume peuvent payer moins par révision.',
             },
             {
@@ -3600,7 +3600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Les alternatives les plus proches sont CodeRabbit, Qodo, Cursor Bugbot, GitHub Copilot code review et Graphite Agent (Cursor a annoncé le rachat de Graphite le 19 décembre 2025). Lors du test de juillet 2025 mené par Greptile, Bugbot a détecté 58%, Copilot 54% et CodeRabbit 44% ; Qodo n\'a pas été testé. Choisissez selon la plateforme Git (Bitbucket : Qodo ou Bugbot), selon le modèle tarifaire (sièges, crédits ou usage) et selon le déploiement (l\'auto-hébergement est une fonctionnalité Enterprise chez CodeRabbit, Greptile et Qodo).',
             },
             {
-              q: 'Quels outils de révision de code par IA peuvent être auto-hébergés ou exécutés sur site ?',
+              q: 'Quels outils de révision de code par IA proposent l\'auto-hébergement ou un déploiement on-prem, et puis-je utiliser ma propre clé LLM ?',
               a: 'CodeRabbit (offre Enterprise ; sa documentation indique qu\'elle est proposée aux clients de 500+ sièges et qu\'elle prend en charge GitHub Enterprise Server, GitLab auto-hébergé, Azure DevOps et Bitbucket Data Center), Greptile (Enterprise) et Qodo (Enterprise : SaaS mono-locataire, sur site et isolé du réseau) documentent l\'auto-hébergement. CodeRabbit auto-hébergé envoie toujours les prompts et le code source au fournisseur de LLM que vous configurez, et sa documentation indique que vous pouvez connecter votre propre fournisseur ou compte LLM. La CLI de CodeRabbit révise les modifications locales avant une pull request, mais s\'authentifie auprès du backend de CodeRabbit. Pour un code qui ne doit jamais quitter votre infrastructure, exécutez un modèle open-weight en local.',
             },
             {
@@ -3786,7 +3786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit と Greptile はどちらを選ぶべきですか？',
+            name: 'CodeRabbit vs Greptile：どちらを選ぶべきですか。CodeRabbitは導入する価値がありますか。',
             acceptedAnswer: { '@type': 'Answer', text: '埋め込みバグの最高の検出率を最優先し、レビュー単位で予算を組めるなら Greptile を選びます。Greptile 自身の2025年7月のテストでは82%に対して CodeRabbit は44%で、Pro にはシート料金がありません（前払いクレジットが1つ$1、Base レビューは1クレジットを消費）。ユーザー単位の料金（Essentials で1ユーザーあたり月額$24（年額払い）、月払いは$30）と公開リポジトリでの無料レビューが欲しいなら CodeRabbit を選びます。どちらも14日間のトライアルがあり、セルフホストは Enterprise に限られます。CodeRabbit が見合うかどうかは量次第です。プルリクエストが多いチームでは固定のシート料金のほうが予測しやすく、量の少ないチームではレビュー単位のほうが安くなる場合があります。' },
           },
           {
@@ -3806,7 +3806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'セルフホストやオンプレミスで動かせる AI コードレビューツールはどれですか？',
+            name: 'セルフホストやオンプレミス導入に対応するAIコードレビューツールはどれですか。自分のLLMキーは使えますか。',
             acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit（Enterprise プラン。ドキュメントによると500席以上の顧客に提供され、GitHub Enterprise Server、GitLab セルフマネージド、Azure DevOps、Bitbucket Data Center に対応）、Greptile（Enterprise）、Qodo（Enterprise：シングルテナント SaaS、オンプレミス、エアギャップ）がセルフホストを文書化しています。セルフホストの CodeRabbit でも、プロンプトとソースコードは設定した LLM プロバイダーに送信され、ドキュメントでは独自の LLM プロバイダーまたはアカウントを接続できるとされています。CodeRabbit の CLI はプルリクエスト前にローカルの変更をレビューしますが、CodeRabbit のバックエンドで認証されます。コードをインフラの外に出せない場合は、オープンウェイトモデルをローカルで実行してください。' },
           },
           {
@@ -4195,7 +4195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'すべてのテストで最も正確なツールはありません。Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施したベンチマークでは、Greptile が82%、Cursor Bugbot が58%、GitHub Copilot が54%、CodeRabbit が44%を検出しました（デフォルト設定、ホスト型プラン）。Greptile はテスト対象のツールの1つを販売しており、独立した結果は異なる可能性があるため、数値は出発点として使い、自社のプルリクエストで2週間のトライアルを行ってください。セキュリティスキャンについては、Snyk Code は別カテゴリで、プルリクエストのレビュアーを補完するスキャナーです。',
             },
             {
-              q: 'CodeRabbit と Greptile はどちらを選ぶべきですか？',
+              q: 'CodeRabbit vs Greptile：どちらを選ぶべきですか。CodeRabbitは導入する価値がありますか。',
               a: '埋め込みバグの最高の検出率を最優先し、レビュー単位で予算を組めるなら Greptile を選びます。Greptile 自身の2025年7月のテストでは82%に対して CodeRabbit は44%で、Pro にはシート料金がありません（前払いクレジットが1つ$1、Base レビューは1クレジットを消費）。ユーザー単位の料金（Essentials で1ユーザーあたり月額$24（年額払い）、月払いは$30）と公開リポジトリでの無料レビューが欲しいなら CodeRabbit を選びます。どちらも14日間のトライアルがあり、セルフホストは Enterprise に限られます。CodeRabbit が見合うかどうかは量次第です。プルリクエストが多いチームでは固定のシート料金のほうが予測しやすく、量の少ないチームではレビュー単位のほうが安くなる場合があります。',
             },
             {
@@ -4211,7 +4211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '最も近い代替は、CodeRabbit、Qodo、Cursor Bugbot、GitHub Copilot のコードレビュー、Graphite Agent です（Cursor は2025年12月19日に Graphite の買収を発表しました）。Greptile の2025年7月のテストでは Bugbot が58%、Copilot が54%、CodeRabbit が44%を検出し、Qodo はテストされていません。Git プラットフォーム（Bitbucket なら Qodo か Bugbot）、料金モデル（シート、クレジット、従量課金）、デプロイ形態（セルフホストは CodeRabbit、Greptile、Qodo では Enterprise の機能）で選んでください。',
             },
             {
-              q: 'セルフホストやオンプレミスで動かせる AI コードレビューツールはどれですか？',
+              q: 'セルフホストやオンプレミス導入に対応するAIコードレビューツールはどれですか。自分のLLMキーは使えますか。',
               a: 'CodeRabbit（Enterprise プラン。ドキュメントによると500席以上の顧客に提供され、GitHub Enterprise Server、GitLab セルフマネージド、Azure DevOps、Bitbucket Data Center に対応）、Greptile（Enterprise）、Qodo（Enterprise：シングルテナント SaaS、オンプレミス、エアギャップ）がセルフホストを文書化しています。セルフホストの CodeRabbit でも、プロンプトとソースコードは設定した LLM プロバイダーに送信され、ドキュメントでは独自の LLM プロバイダーまたはアカウントを接続できるとされています。CodeRabbit の CLI はプルリクエスト前にローカルの変更をレビューしますが、CodeRabbit のバックエンドで認証されます。コードをインフラの外に出せない場合は、オープンウェイトモデルをローカルで実行してください。',
             },
             {
@@ -4397,7 +4397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'CodeRabbit 与 Greptile：我该选哪个？',
+            name: 'CodeRabbit 与 Greptile 该选哪个？CodeRabbit 值得用吗？',
             acceptedAnswer: { '@type': 'Answer', text: '如果最看重植入缺陷的最高检出率，并且可以按审查次数做预算，请选 Greptile：在 Greptile 自己 2025 年 7 月的测试中，它检出 82%，CodeRabbit 为 44%，而且 Pro 没有席位费（预付额度每个 $1；一次 Base 审查消耗 1 个额度）。如果你想要按席位定价（Essentials 按年付费每位用户每月 $24，按月付费 $30）以及公开仓库的免费审查，请选 CodeRabbit。两者都提供 14 天试用，并把自托管保留给企业版。CodeRabbit 是否值得，取决于用量：对拉取请求很多的团队，固定的席位价格更容易预测，而用量较少的团队按审查次数付费可能更便宜。' },
           },
           {
@@ -4417,7 +4417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: '哪些 AI 代码审查工具可以自托管或本地部署？',
+            name: '哪些 AI 代码审查工具支持自托管或本地（on-prem）部署？能否使用自己的 LLM 密钥？',
             acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit（企业版方案；其文档说明该方案面向 500+ 席位的客户，支持 GitHub Enterprise Server、GitLab 自托管、Azure DevOps 和 Bitbucket Data Center）、Greptile（企业版）和 Qodo（企业版：单租户 SaaS、本地部署和气隙部署）都有自托管的文档说明。自托管的 CodeRabbit 仍会把提示和源代码发送给你配置的 LLM 提供商，其文档说明你可以连接自己的 LLM 提供商或账户。CodeRabbit 的 CLI 可在拉取请求之前审查本地更改，但会向 CodeRabbit 的后端进行身份验证。对于绝不能离开你自身基础设施的代码，请在本地运行开源权重模型。' },
           },
           {
@@ -4806,7 +4806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '没有哪个工具在所有测试中都最准确。在 Greptile 于 2025 年 7 月针对五个开源仓库的 50 个缺陷运行的基准测试中，Greptile 检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%（默认设置，托管方案）。由于 Greptile 销售被测工具之一，且独立测试的结果可能不同，请把这些数字作为起点，并在你自己的拉取请求上做两周试用。就安全扫描而言，Snyk Code 属于另一个类别：它是对拉取请求审查工具的补充的扫描器。',
             },
             {
-              q: 'CodeRabbit 与 Greptile：我该选哪个？',
+              q: 'CodeRabbit 与 Greptile 该选哪个？CodeRabbit 值得用吗？',
               a: '如果最看重植入缺陷的最高检出率，并且可以按审查次数做预算，请选 Greptile：在 Greptile 自己 2025 年 7 月的测试中，它检出 82%，CodeRabbit 为 44%，而且 Pro 没有席位费（预付额度每个 $1；一次 Base 审查消耗 1 个额度）。如果你想要按席位定价（Essentials 按年付费每位用户每月 $24，按月付费 $30）以及公开仓库的免费审查，请选 CodeRabbit。两者都提供 14 天试用，并把自托管保留给企业版。CodeRabbit 是否值得，取决于用量：对拉取请求很多的团队，固定的席位价格更容易预测，而用量较少的团队按审查次数付费可能更便宜。',
             },
             {
@@ -4822,7 +4822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '最接近的替代方案是 CodeRabbit、Qodo、Cursor Bugbot、GitHub Copilot 代码审查和 Graphite Agent（Cursor 于 2025年12月19日宣布收购 Graphite）。在 Greptile 2025 年 7 月的测试中，Bugbot 检出 58%，Copilot 54%，CodeRabbit 44%；Qodo 未参与测试。请按 Git 平台（Bitbucket：Qodo 或 Bugbot）、价格模式（席位、额度或用量）和部署方式（自托管是 CodeRabbit、Greptile 和 Qodo 的企业版功能）来选择。',
             },
             {
-              q: '哪些 AI 代码审查工具可以自托管或本地部署？',
+              q: '哪些 AI 代码审查工具支持自托管或本地（on-prem）部署？能否使用自己的 LLM 密钥？',
               a: 'CodeRabbit（企业版方案；其文档说明该方案面向 500+ 席位的客户，支持 GitHub Enterprise Server、GitLab 自托管、Azure DevOps 和 Bitbucket Data Center）、Greptile（企业版）和 Qodo（企业版：单租户 SaaS、本地部署和气隙部署）都有自托管的文档说明。自托管的 CodeRabbit 仍会把提示和源代码发送给你配置的 LLM 提供商，其文档说明你可以连接自己的 LLM 提供商或账户。CodeRabbit 的 CLI 可在拉取请求之前审查本地更改，但会向 CodeRabbit 的后端进行身份验证。对于绝不能离开你自身基础设施的代码，请在本地运行开源权重模型。',
             },
             {
@@ -5011,7 +5011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           '@type': 'Question',
-          name: 'CodeRabbit vs Greptile: 어떤 것을 선택해야 합니까?',
+          name: 'CodeRabbit vs Greptile: 어느 쪽을 선택해야 하며 CodeRabbit은 쓸 만한 가치가 있습니까?',
           acceptedAnswer: { '@type': 'Answer', text: '심어 둔 버그의 최고 탐지율이 가장 중요하고 리뷰 단위로 예산을 잡을 수 있다면 Greptile을 선택하십시오. Greptile 자체의 2025년 7월 테스트에서 CodeRabbit의 44%에 대해 82%를 잡아냈고, Pro에는 좌석 요금이 없습니다(선불 크레딧 개당 $1, Base 리뷰는 1 크레딧 사용). 좌석 단위 가격(Essentials 연간 결제 시 사용자당 월 $24, 월 결제 시 $30)과 공개 저장소 무료 리뷰를 원한다면 CodeRabbit을 선택하십시오. 두 도구 모두 14일 체험판을 제공하며 자체 호스팅은 Enterprise에만 제공합니다. CodeRabbit이 가치가 있는지는 리뷰 물량에 달려 있습니다. 정액 좌석 가격은 pull request를 많이 여는 팀이 예측하기 쉽고, 물량이 적은 팀은 리뷰 단위로 내는 비용이 더 적을 수 있습니다.' },
         },
         {
@@ -5031,7 +5031,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           '@type': 'Question',
-          name: '자체 호스팅 또는 온프레미스로 실행할 수 있는 AI 코드 리뷰 도구는 무엇입니까?',
+          name: '자체 호스팅이나 온프레미스 배포를 지원하는 AI 코드 리뷰 도구는 무엇이며, 자체 LLM 키를 사용할 수 있습니까?',
           acceptedAnswer: { '@type': 'Answer', text: 'CodeRabbit(Enterprise 플랜. 문서에 따르면 500석 이상 고객에게 제공되며 GitHub Enterprise Server, GitLab 자체 관리형, Azure DevOps, Bitbucket Data Center를 지원), Greptile(Enterprise), Qodo(Enterprise: 단일 테넌트 SaaS, 온프레미스, 에어갭)가 자체 호스팅을 문서화하고 있습니다. 자체 호스팅 CodeRabbit도 프롬프트와 소스 코드를 사용자가 설정한 LLM 제공업체로 보내며, 문서에는 자체 LLM 제공업체 또는 계정을 연결할 수 있다고 되어 있습니다. CodeRabbit의 CLI는 pull request 전에 로컬 변경 사항을 리뷰하지만 CodeRabbit 백엔드에 인증합니다. 코드가 인프라 밖으로 나가서는 안 되는 경우 오픈 웨이트 모델을 로컬에서 실행하십시오.' },
         },
         {
@@ -5420,7 +5420,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             a: '모든 테스트에서 가장 정확한 도구는 없습니다. Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행한 벤치마크에서 Greptile은 82%, Cursor Bugbot은 58%, GitHub Copilot은 54%, CodeRabbit은 44%를 잡아냈습니다(기본 설정, 호스팅 플랜). Greptile이 테스트 대상 도구 중 하나를 판매하고 독립적인 결과는 다를 수 있으므로, 이 수치는 출발점으로 사용하고 자신의 pull request로 2주간 시험해 보십시오. 보안 스캔의 경우 Snyk Code는 별도 범주로, pull request 리뷰어를 보완하는 스캐너입니다.',
           },
           {
-            q: 'CodeRabbit vs Greptile: 어떤 것을 선택해야 합니까?',
+            q: 'CodeRabbit vs Greptile: 어느 쪽을 선택해야 하며 CodeRabbit은 쓸 만한 가치가 있습니까?',
             a: '심어 둔 버그의 최고 탐지율이 가장 중요하고 리뷰 단위로 예산을 잡을 수 있다면 Greptile을 선택하십시오. Greptile 자체의 2025년 7월 테스트에서 CodeRabbit의 44%에 대해 82%를 잡아냈고, Pro에는 좌석 요금이 없습니다(선불 크레딧 개당 $1, Base 리뷰는 1 크레딧 사용). 좌석 단위 가격(Essentials 연간 결제 시 사용자당 월 $24, 월 결제 시 $30)과 공개 저장소 무료 리뷰를 원한다면 CodeRabbit을 선택하십시오. 두 도구 모두 14일 체험판을 제공하며 자체 호스팅은 Enterprise에만 제공합니다. CodeRabbit이 가치가 있는지는 리뷰 물량에 달려 있습니다. 정액 좌석 가격은 pull request를 많이 여는 팀이 예측하기 쉽고, 물량이 적은 팀은 리뷰 단위로 내는 비용이 더 적을 수 있습니다.',
           },
           {
@@ -5436,7 +5436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             a: '가장 가까운 대안은 CodeRabbit, Qodo, Cursor Bugbot, GitHub Copilot 코드 리뷰, Graphite Agent입니다(Cursor는 2025년 12월 19일에 Graphite 인수를 발표했습니다). Greptile의 2025년 7월 테스트에서 Bugbot은 58%, Copilot은 54%, CodeRabbit은 44%를 잡아냈으며 Qodo는 테스트되지 않았습니다. Git 플랫폼(Bitbucket: Qodo 또는 Bugbot), 가격 모델(좌석, 크레딧, 사용량), 배포 방식(자체 호스팅은 CodeRabbit, Greptile, Qodo에서 Enterprise 기능)으로 선택하십시오.',
           },
           {
-            q: '자체 호스팅 또는 온프레미스로 실행할 수 있는 AI 코드 리뷰 도구는 무엇입니까?',
+            q: '자체 호스팅이나 온프레미스 배포를 지원하는 AI 코드 리뷰 도구는 무엇이며, 자체 LLM 키를 사용할 수 있습니까?',
             a: 'CodeRabbit(Enterprise 플랜. 문서에 따르면 500석 이상 고객에게 제공되며 GitHub Enterprise Server, GitLab 자체 관리형, Azure DevOps, Bitbucket Data Center를 지원), Greptile(Enterprise), Qodo(Enterprise: 단일 테넌트 SaaS, 온프레미스, 에어갭)가 자체 호스팅을 문서화하고 있습니다. 자체 호스팅 CodeRabbit도 프롬프트와 소스 코드를 사용자가 설정한 LLM 제공업체로 보내며, 문서에는 자체 LLM 제공업체 또는 계정을 연결할 수 있다고 되어 있습니다. CodeRabbit의 CLI는 pull request 전에 로컬 변경 사항을 리뷰하지만 CodeRabbit 백엔드에 인증합니다. 코드가 인프라 밖으로 나가서는 안 되는 경우 오픈 웨이트 모델을 로컬에서 실행하십시오.',
           },
           {
