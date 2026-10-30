@@ -1519,6 +1519,11 @@
     "urlSlug": "acdsee-photo-studio-ultimate-review",
     "url": "/power-local-llm/acdsee-photo-studio-ultimate-review"
   },
+  "tonfotos": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tonfotos-review",
+    "url": "/power-local-llm/tonfotos-review"
+  },
   "ai-file-sorter": {
     "cluster": "power-local-llm",
     "urlSlug": "ai-file-sorter-review",

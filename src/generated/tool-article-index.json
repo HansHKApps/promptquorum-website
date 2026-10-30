@@ -9883,6 +9883,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tonfotos-review",
+        "title": "Tonfotos Review: Local Face Recognition Photo Manager",
+        "url": "/power-local-llm/tonfotos-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -9928,17 +9936,9 @@
         "url": "/power-local-llm/llm-farm-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pocketpal-ai-review",
-        "title": "PocketPal AI Review: Free, Open-Source On-Device Chat",
-        "url": "/power-local-llm/pocketpal-ai-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "FluidVoice": {
@@ -12840,6 +12840,20 @@
         "slug": "acdsee-photo-studio-ultimate-review",
         "title": "ACDSee Photo Studio Ultimate 2027 Review: Photo Editor With Local and Cloud AI",
         "url": "/power-local-llm/acdsee-photo-studio-ultimate-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Tonfotos": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "tonfotos-review",
+        "title": "Tonfotos Review: Local Face Recognition Photo Manager",
+        "url": "/power-local-llm/tonfotos-review",
         "dateModified": "2026-10-30",
         "tier": "about"
       }

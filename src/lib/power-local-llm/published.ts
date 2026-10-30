@@ -712,6 +712,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'excire-foto-review',
   'mylio-photos-review',
   'acdsee-photo-studio-ultimate-review',
+  'tonfotos-review',
   'ai-file-sorter-review',
   'home-gallery-review',
 

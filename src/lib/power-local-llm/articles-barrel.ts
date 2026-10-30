@@ -75,6 +75,7 @@ import { article as a_facet_review } from './articles/facet-review'
 import { article as a_excire_foto_review } from './articles/excire-foto-review'
 import { article as a_mylio_photos_review } from './articles/mylio-photos-review'
 import { article as a_acdsee_photo_studio_ultimate_review } from './articles/acdsee-photo-studio-ultimate-review'
+import { article as a_tonfotos_review } from './articles/tonfotos-review'
 import { article as a_ai_file_sorter_review } from './articles/ai-file-sorter-review'
 import { article as a_home_gallery_review } from './articles/home-gallery-review'
 import { article as a_frankly_ai_review } from './articles/frankly-ai-review'
@@ -749,6 +750,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'excire-foto-review':                            a_excire_foto_review,
   'mylio-photos-review':                           a_mylio_photos_review,
   'acdsee-photo-studio-ultimate-review':           a_acdsee_photo_studio_ultimate_review,
+  'tonfotos-review':                               a_tonfotos_review,
   'ai-file-sorter-review':                         a_ai_file_sorter_review,
   'home-gallery-review':                           a_home_gallery_review,
   'frankly-ai-review':                             a_frankly_ai_review,

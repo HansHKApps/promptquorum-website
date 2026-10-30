@@ -40096,87 +40096,6 @@
   },
   {
     "lang": "en",
-    "title": "Photoview Review: Self-Hosted Photo Gallery with Local Face Recognition",
-    "excerpt": "Photoview review: a free, open-source photo gallery for your own server with face recognition that runs on that server. Docker setup, what is untested.",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "de",
-    "title": "Photoview-Rezension: Selbst gehostete Fotogalerie mit lokaler Gesichtserkennung",
-    "excerpt": "Photoview-Rezension: kostenlose Open-Source-Fotogalerie für den eigenen Server mit lokaler Gesichtserkennung. Docker-Setup und Ungetestetes.",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/de/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "fr",
-    "title": "Test de Photoview : galerie photo auto-hébergée avec reconnaissance faciale locale",
-    "excerpt": "Test de Photoview : galerie photo gratuite et open source pour votre serveur, avec reconnaissance faciale locale. Docker et points non testés.",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/fr/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "ja",
-    "title": "Photoviewレビュー：顔認識をローカルで行うセルフホスト型フォトギャラリー",
-    "excerpt": "Photoviewのレビュー。自分のサーバーで動く顔認識を備えた無料のオープンソース・フォトギャラリーです。Dockerでの導入と、未検証の点を整理します。",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/ja/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "zh",
-    "title": "Photoview 评测：支持本地人脸识别的自托管相册",
-    "excerpt": "Photoview 评测：免费开源、可在自己服务器上运行的相册，人脸识别在该服务器本地完成。介绍 Docker 部署方式，并说明哪些内容未经测试。",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/zh/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "es",
-    "title": "Reseña de Photoview: galería de fotos autoalojada con reconocimiento facial local",
-    "excerpt": "Reseña de Photoview: galería de fotos gratuita y de código abierto para tu servidor, con reconocimiento facial local. Docker y lo que no se probó.",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/es/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "pt",
-    "title": "Análise do Photoview: galeria de fotos auto-hospedada com reconhecimento facial local",
-    "excerpt": "Análise do Photoview: galeria de fotos gratuita e de código aberto para o seu servidor, com reconhecimento facial local. Docker e o que não foi testado.",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/pt/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "ar",
-    "title": "مراجعة Photoview: معرض صور مستضاف ذاتيًا مع تعرّف محلي على الوجوه",
-    "excerpt": "مراجعة Photoview: معرض صور مجاني ومفتوح المصدر لخادمك الخاص مع تعرّف على الوجوه يعمل على ذلك الخادم نفسه. التثبيت عبر Docker وما لم يُختبر هنا.",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/ar/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "ko",
-    "title": "Photoview 리뷰: 얼굴 인식을 로컬로 처리하는 셀프 호스팅 사진 갤러리",
-    "excerpt": "Photoview 리뷰: 내 서버에서 얼굴 인식이 실행되는 무료 오픈소스 사진 갤러리입니다. Docker 설치 방법과 테스트하지 못한 부분을 정리했습니다.",
-    "publishDate": "2026-10-30",
-    "dateModified": "2026-10-30",
-    "url": "/ko/power-local-llm/photoview-review",
-    "cluster": "power-local-llm"
-  },
-  {
-    "lang": "en",
     "title": "Whisper Notes Review: Offline Speech-to-Text for iPhone, iPad and Mac",
     "excerpt": "Whisper Notes review: $7.99 one-time offline speech-to-text app for iPhone, iPad and Apple silicon Mac with speaker labels. Not hands-on tested.",
     "publishDate": "2026-10-18",
@@ -41230,83 +41149,83 @@
   },
   {
     "lang": "en",
-    "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
-    "excerpt": "Mylio Photos review: closed-source photo library for Windows, Mac, iPhone and Android. Mylio says its AI search and face scanning run on your devices.",
+    "title": "Tonfotos Review: Local Face Recognition Photo Manager",
+    "excerpt": "Tonfotos review: photo manager for Windows, Mac and Linux with face recognition that, per its maker, runs locally. Free tier, perpetual licences.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/power-local-llm/mylio-photos-review",
+    "url": "/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Mylio-Photos-Rezension: Foto-Bibliothek für mehrere Geräte mit KI-Suche auf dem Gerät",
-    "excerpt": "Mylio-Photos-Rezension: Foto-Bibliothek für Windows, Mac, iPhone und Android. Laut Mylio laufen KI-Suche und Gesichtserkennung auf Ihren Geräten.",
+    "title": "Tonfotos-Rezension: Fotomanager mit lokaler Gesichtserkennung",
+    "excerpt": "Tonfotos-Rezension: Fotomanager für Windows, Mac und Linux, dessen Gesichtserkennung laut Hersteller lokal läuft. Gratis-Version, unbefristete Lizenzen.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/de/power-local-llm/mylio-photos-review",
+    "url": "/de/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Test de Mylio Photos : bibliothèque de photos multi-appareils avec recherche IA sur l’appareil",
-    "excerpt": "Test de Mylio Photos : photothèque pour Windows, Mac, iPhone et Android. Selon Mylio, la recherche IA et l’analyse des visages tournent sur vos appareils.",
+    "title": "Test de Tonfotos : gestionnaire de photos à reconnaissance faciale locale",
+    "excerpt": "Test de Tonfotos : gestionnaire photo pour Windows, Mac et Linux, reconnaissance faciale locale selon l’éditeur. Version gratuite, licences perpétuelles.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/fr/power-local-llm/mylio-photos-review",
+    "url": "/fr/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "Mylio Photosレビュー：端末内AI検索に対応したマルチデバイス写真ライブラリ",
-    "excerpt": "Mylio Photosのレビュー。Windows・Mac・iPhone・Android向けのクローズドソース写真ライブラリで、Mylioによれば、AI検索と顔スキャンは端末上で動作します。",
+    "title": "Tonfotosレビュー：ローカル顔認識の写真管理ソフト",
+    "excerpt": "Tonfotosレビュー：Windows・Mac・Linux向け写真管理ソフト。開発元によれば顔認識はローカルで動作。無料版と買い切りライセンスあり。",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/ja/power-local-llm/mylio-photos-review",
+    "url": "/ja/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "Mylio Photos 评测：支持设备端 AI 搜索的多设备照片库",
-    "excerpt": "Mylio Photos 评测：适用于 Windows、Mac、iPhone 和 Android 的闭源照片库。据 Mylio 称，AI 搜索和人脸扫描在你的设备上运行。",
+    "title": "Tonfotos 评测：本地人脸识别的照片管理软件",
+    "excerpt": "Tonfotos 评测：适用于 Windows、Mac 和 Linux 的照片管理软件，据开发者称人脸识别在本地运行。提供免费版和永久授权。",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/zh/power-local-llm/mylio-photos-review",
+    "url": "/zh/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Reseña de Mylio Photos: biblioteca de fotos multidispositivo con búsqueda por IA en el dispositivo",
-    "excerpt": "Reseña de Mylio Photos: biblioteca de fotos para Windows, Mac, iPhone y Android. Según Mylio, su IA de búsqueda y caras corre en tus dispositivos.",
+    "title": "Reseña de Tonfotos: gestor de fotos con reconocimiento facial local",
+    "excerpt": "Reseña de Tonfotos: gestor de fotos para Windows, Mac y Linux con reconocimiento facial local, según su fabricante. Versión gratuita y licencias perpetuas.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/es/power-local-llm/mylio-photos-review",
+    "url": "/es/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "Análise do Mylio Photos: biblioteca de fotos multidispositivo com busca por IA no dispositivo",
-    "excerpt": "Análise do Mylio Photos: fotos para Windows, Mac, iPhone e Android. Segundo a Mylio, busca por IA e leitura de rostos rodam nos seus dispositivos.",
+    "title": "Análise do Tonfotos: gerenciador de fotos com reconhecimento facial local",
+    "excerpt": "Análise do Tonfotos: fotos em Windows, Mac e Linux com reconhecimento facial local, segundo o fabricante. Versão grátis e licenças perpétuas.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/pt/power-local-llm/mylio-photos-review",
+    "url": "/pt/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "مراجعة Mylio Photos: مكتبة صور متعددة الأجهزة مع بحث بالذكاء الاصطناعي على الجهاز",
-    "excerpt": "مراجعة Mylio Photos: مكتبة صور مغلقة المصدر لأجهزة Windows وMac وiPhone وAndroid. تقول Mylio إن البحث بالذكاء الاصطناعي ومسح الوجوه يعملان على أجهزتك.",
+    "title": "مراجعة Tonfotos: مدير صور بتعرّف محلي على الوجوه",
+    "excerpt": "مراجعة Tonfotos: مدير صور لأنظمة Windows وMac وLinux يعمل التعرف على الوجوه فيه محليًا بحسب مطوّره. نسخة مجانية وتراخيص دائمة، وأسئلة مفتوحة عن الخصوصية.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/ar/power-local-llm/mylio-photos-review",
+    "url": "/ar/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "Mylio Photos 리뷰: 기기 내 AI 검색을 지원하는 멀티 디바이스 사진 라이브러리",
-    "excerpt": "Mylio Photos 리뷰: Windows, Mac, iPhone, Android용 비공개 소스 사진 라이브러리입니다. Mylio에 따르면 AI 검색과 얼굴 스캔은 내 기기에서 실행됩니다.",
+    "title": "Tonfotos 리뷰: 로컬 얼굴 인식 사진 관리",
+    "excerpt": "Tonfotos 리뷰: Windows·Mac·Linux용 사진 관리 프로그램. 개발사에 따르면 얼굴 인식이 로컬에서 실행됩니다. 무료 버전과 영구 라이선스 제공.",
     "publishDate": "2026-10-30",
     "dateModified": "2026-10-30",
-    "url": "/ko/power-local-llm/mylio-photos-review",
+    "url": "/ko/power-local-llm/tonfotos-review",
     "cluster": "power-local-llm"
   },
   {
