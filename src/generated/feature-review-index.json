@@ -1024,6 +1024,11 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "fullmoon": {
+    "cluster": "power-local-llm",
+    "urlSlug": "fullmoon-review",
+    "url": "/power-local-llm/fullmoon-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

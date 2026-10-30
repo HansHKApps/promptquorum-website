@@ -1110,6 +1110,7 @@ const HUB_THEMES: Array<{
       'llm-farm-review',
       'maid-review',
       'private-mind-review',
+      'fullmoon-review',
       'memoryai-review',
       'laria-review',
       'chaterminal-review',
