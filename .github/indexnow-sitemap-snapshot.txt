@@ -378,6 +378,7 @@ https://www.promptquorum.com/power-local-llm/goose-review
 https://www.promptquorum.com/power-local-llm/gpt-engineer-review
 https://www.promptquorum.com/power-local-llm/gpt4all-review
 https://www.promptquorum.com/power-local-llm/gpustack-review
+https://www.promptquorum.com/power-local-llm/greencube-review
 https://www.promptquorum.com/power-local-llm/h2ogpt-review
 https://www.promptquorum.com/power-local-llm/handy-review
 https://www.promptquorum.com/power-local-llm/hanoki-review
@@ -475,7 +476,6 @@ https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison
 https://www.promptquorum.com/power-local-llm/localai-apexcreator-review
 https://www.promptquorum.com/power-local-llm/localai-explained
 https://www.promptquorum.com/power-local-llm/localghost-review
-https://www.promptquorum.com/power-local-llm/localhosted-review
 https://www.promptquorum.com/power-local-llm/locally-ai-review
 https://www.promptquorum.com/power-local-llm/locally-uncensored-hands-on-test
 https://www.promptquorum.com/power-local-llm/locally-uncensored-review

@@ -9875,6 +9875,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "photoview-review",
+        "title": "Photoview Review: Self-Hosted Photo Gallery with Local Face Recognition",
+        "url": "/power-local-llm/photoview-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
         "url": "/power-local-llm/facet-review",
@@ -9928,17 +9936,9 @@
         "url": "/power-local-llm/pocketpal-ai-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "FluidVoice": {
@@ -11693,6 +11693,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mylio-photos-review",
+        "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
+        "url": "/power-local-llm/mylio-photos-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
         "url": "/power-local-llm/nanobot-review",
@@ -11730,17 +11738,9 @@
         "url": "/power-local-llm/local-ai-app-non-technical-users",
         "dateModified": "2026-10-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tecadrisebot-review",
-        "title": "TecAdRiseBot Review: Free Windows Agent Desktop on Cursor Cloud Models",
-        "url": "/power-local-llm/tecadrisebot-review",
-        "dateModified": "2026-10-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 233,
+    "totalCount": 234,
     "capped": true
   },
   "Qdrant": {
@@ -12755,6 +12755,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Photoview": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "photoview-review",
+        "title": "Photoview Review: Self-Hosted Photo Gallery with Local Face Recognition",
+        "url": "/power-local-llm/photoview-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Immich": {
     "articles": [
       {
@@ -12799,6 +12813,20 @@
         "title": "Excire Foto Review: Local AI Photo Manager for Windows and Mac",
         "url": "/power-local-llm/excire-foto-review",
         "dateModified": "2026-10-28",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Mylio Photos": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "mylio-photos-review",
+        "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
+        "url": "/power-local-llm/mylio-photos-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],

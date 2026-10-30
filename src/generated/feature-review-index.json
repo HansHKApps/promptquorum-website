@@ -1489,6 +1489,11 @@
     "urlSlug": "photoprism-review",
     "url": "/power-local-llm/photoprism-review"
   },
+  "photoview": {
+    "cluster": "power-local-llm",
+    "urlSlug": "photoview-review",
+    "url": "/power-local-llm/photoview-review"
+  },
   "immich": {
     "cluster": "power-local-llm",
     "urlSlug": "immich-review",
@@ -1503,6 +1508,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "excire-foto-review",
     "url": "/power-local-llm/excire-foto-review"
+  },
+  "mylio-photos": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mylio-photos-review",
+    "url": "/power-local-llm/mylio-photos-review"
   },
   "ai-file-sorter": {
     "cluster": "power-local-llm",

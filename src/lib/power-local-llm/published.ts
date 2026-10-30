@@ -706,9 +706,11 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // PixlStash review (Image & Video Generation) — 2026-10-17
   'pixlstash-review',
   'photoprism-review',
+  'photoview-review',
   'immich-review',
   'facet-review',
   'excire-foto-review',
+  'mylio-photos-review',
   'ai-file-sorter-review',
   'home-gallery-review',
 
