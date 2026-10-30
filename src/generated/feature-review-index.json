@@ -1549,6 +1549,11 @@
     "urlSlug": "compass-local-ai-review",
     "url": "/power-local-llm/compass-local-ai-review"
   },
+  "greencube": {
+    "cluster": "power-local-llm",
+    "urlSlug": "greencube-review",
+    "url": "/power-local-llm/greencube-review"
+  },
   "laria": {
     "cluster": "power-local-llm",
     "urlSlug": "laria-review",

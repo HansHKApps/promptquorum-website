@@ -10,6 +10,22 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "goose-review",
+        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
+        "url": "/power-local-llm/goose-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
@@ -63,22 +79,6 @@
         "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
         "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
         "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-screenwriting-and-novel-drafting",
-        "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
-        "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-review",
-        "title": "LobeHub Review (Formerly LobeChat): Agent Workspace With Desktop Apps and Self-Hosting",
-        "url": "/local-llms/lobechat-review",
-        "dateModified": "2026-10-24",
         "tier": "about"
       }
     ],
@@ -635,6 +635,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -655,14 +663,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 46,
+    "totalCount": 47,
     "capped": true
   },
   "GPT4All": {
@@ -1150,7 +1150,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 28,
+    "totalCount": 29,
     "capped": true
   },
   "AnythingLLM": {
@@ -1399,18 +1399,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "swerve-ai-review",
-        "title": "Swerve Review: AI Story and Character Chat for iPhone",
-        "url": "/power-local-llm/swerve-ai-review",
-        "dateModified": "2026-10-17",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -1601,6 +1601,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "goose-review",
+        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
+        "url": "/power-local-llm/goose-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kruvo-review",
         "title": "Kruvo Review: A Desktop AI Coworker That Asks Before It Acts",
         "url": "/power-local-llm/kruvo-review",
@@ -1620,14 +1628,6 @@
         "slug": "atomic-agent-review",
         "title": "Atomic Agent Review: Local AI Agent CLI, Free & MIT-Licensed",
         "url": "/power-local-llm/atomic-agent-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "goose-review",
-        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
-        "url": "/power-local-llm/goose-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
       },
@@ -2339,6 +2339,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "castmates-review",
         "title": "Castmates Review: Offline AI Character Chat for iPhone",
         "url": "/power-local-llm/castmates-review",
@@ -2351,14 +2359,6 @@
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
@@ -3106,7 +3106,7 @@
         "slug": "goose-review",
         "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
         "url": "/power-local-llm/goose-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -3295,10 +3295,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "deepseek-vs-qwen-coding-local-2026",
-        "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
-        "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
-        "dateModified": "2026-10-20",
+        "slug": "goose-review",
+        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
+        "url": "/power-local-llm/goose-review",
+        "dateModified": "2026-10-30",
         "tier": "mentioned"
       }
     ],
@@ -7810,7 +7810,7 @@
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -7957,18 +7957,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-10-27",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-10-30",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "castmates-review",
-        "title": "Castmates Review: Offline AI Character Chat for iPhone",
-        "url": "/power-local-llm/castmates-review",
-        "dateModified": "2026-10-26",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-10-27",
         "tier": "mentioned"
       }
     ],
@@ -8036,7 +8036,15 @@
         "slug": "goose-review",
         "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
         "url": "/power-local-llm/goose-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -8045,14 +8053,6 @@
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
@@ -11669,6 +11669,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -11728,14 +11736,6 @@
         "slug": "castmates-review",
         "title": "Castmates Review: Offline AI Character Chat for iPhone",
         "url": "/power-local-llm/castmates-review",
-        "dateModified": "2026-10-26",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "google-ai-edge-gallery-review",
-        "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
-        "url": "/power-local-llm/google-ai-edge-gallery-review",
         "dateModified": "2026-10-26",
         "tier": "mentioned"
       }
@@ -12935,6 +12935,20 @@
         "title": "Compass - Local AI Review: Free On-Device AI Chat for iPhone",
         "url": "/power-local-llm/compass-local-ai-review",
         "dateModified": "2026-10-26",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "GreenCube": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "greencube-review",
+        "title": "GreenCube Review: One-Time-Purchase Offline AI for Windows",
+        "url": "/power-local-llm/greencube-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
