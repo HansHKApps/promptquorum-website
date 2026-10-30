@@ -126,6 +126,7 @@ import { article as a_caelum_review } from './articles/caelum-review'
 import { article as a_chaterminal_review } from './articles/chaterminal-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_compass_local_ai_review } from './articles/compass-local-ai-review'
+import { article as a_cloak_local_ai_review } from './articles/cloak-local-ai-review'
 import { article as a_greencube_review } from './articles/greencube-review'
 import { article as a_laria_review } from './articles/laria-review'
 import { article as a_compactifai_app_review } from './articles/compactifai-app-review'
@@ -804,6 +805,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'chaterminal-review':                            a_chaterminal_review,
   'lm-mini-review':                                a_lm_mini_review,
   'compass-local-ai-review':                       a_compass_local_ai_review,
+  'cloak-local-ai-review':                         a_cloak_local_ai_review,
   'greencube-review':                              a_greencube_review,
   'laria-review':                                  a_laria_review,
   'compactifai-app-review':                        a_compactifai_app_review,
