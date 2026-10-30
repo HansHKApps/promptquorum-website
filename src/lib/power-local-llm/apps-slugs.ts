@@ -249,6 +249,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
   'fullmoon':                                'fullmoon',
+  'reins':                                   'reins',
   'lyonesse':                                'lyonesse',
   'open-llm-vtuber':                         'open-llm-vtuber',
   'presenton':                               'presenton',

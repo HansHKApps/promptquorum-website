@@ -97,6 +97,7 @@ import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review
 import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_fullmoon_review } from './articles/fullmoon-review'
+import { article as a_reins_review } from './articles/reins-review'
 import { article as a_lyonesse_review } from './articles/lyonesse-review'
 import { article as a_open_llm_vtuber_review } from './articles/open-llm-vtuber-review'
 import { article as a_presenton_review } from './articles/presenton-review'
@@ -777,6 +778,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'localmindai-review':                            a_localmindai_review,
   'murmur-review':                                 a_murmur_review,
   'fullmoon-review':                               a_fullmoon_review,
+  'reins-review':                                  a_reins_review,
   'lyonesse-review':                               a_lyonesse_review,
   'open-llm-vtuber-review':                        a_open_llm_vtuber_review,
   'presenton-review':                              a_presenton_review,

@@ -1029,6 +1029,11 @@
     "urlSlug": "fullmoon-review",
     "url": "/power-local-llm/fullmoon-review"
   },
+  "reins": {
+    "cluster": "power-local-llm",
+    "urlSlug": "reins-review",
+    "url": "/power-local-llm/reins-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
