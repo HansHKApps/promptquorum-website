@@ -1,21 +1,35 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { starsFor } from '@/lib/power-local-llm/app-facts'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
+
+// Star counts come from the directory tile (GEO_WRITING_GUIDELINES.md Rule 49) -- never type them into a string.
+const st = {
+  en: starsFor('en'), de: starsFor('de'), fr: starsFor('fr'), ja: starsFor('ja'), zh: starsFor('zh'),
+  es: starsFor('es'), pt: starsFor('pt'), ar: starsFor('ar'), ko: starsFor('ko'),
+}
+
+// Last upstream update comes from the directory tile (App Maintenance Recency rule); rendered via formatDisplayDate.
+const lastUpdate = (lang: Language) =>
+  formatDisplayDate(localAiApps.find((a) => a.slug === 'dify')?.lastUpstreamUpdate, lang)
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-en.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: 'Developers and technical teams evaluating Dify for self-hosted RAG pipelines, AI agents, and LLM app deployment, and teams comparing it against lighter visual builders or code-first frameworks',
     primaryTerm: 'Dify',
     title: 'Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise',
     seoTitle: 'Dify Review: LLMOps Platform vs. LangChain, Flowise',
     intro: 'Dify combines a visual workflow builder, a RAG pipeline, and an agent framework in one self-hostable platform — instead of stitching together separate tools for each. The license is not plain Apache 2.0, and that distinction matters before you deploy it for a client or as a hosted product.',
-    metaDescription: 'Dify is an open-source LLMOps platform (workflow builder, RAG, agents) under a modified Apache 2.0 license that restricts multi-tenant SaaS use without written permission.',
+    metaDescription: 'Dify review: LLMOps platform with visual workflows, RAG and agents. Self-host free, Cloud from $590/yr; modified Apache 2.0 limits multi-tenant SaaS.',
     readTime: '12 min read',
     targetKeywords: [
       'Dify review',
@@ -31,13 +45,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'What is Dify used for?',
         answer: 'Dify is used to build and deploy LLM applications — chatbots, RAG-based document assistants, and multi-step AI agents — through a visual workflow builder instead of writing orchestration code by hand. It bundles knowledge-base ingestion, agent tool-calling, and app publishing (web app, API, or embeddable widget) into one platform.',
         bullets: [
-          'Open source on GitHub (langgenius/dify), 154,000+ stars',
+          'Open source on GitHub (langgenius/dify), ' + st.en('dify') + ' stars',
           'License: modified Apache 2.0 ("Dify Open Source License") — blocks unauthorized multi-tenant SaaS resale',
           'Three editions: self-hosted Community, managed Dify Cloud, and Dify Enterprise',
           'Visual workflow builder plus a RAG knowledge pipeline and an agent/tool-calling framework in one product',
           'Dify Cloud pricing starts free (Sandbox); paid tiers are billed per workspace, per year',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -77,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'What Is Dify?',
-        content: 'Dify is an open-source platform for building and deploying LLM applications — chatbots, document-search assistants, and multi-agent systems — through a visual interface rather than assembling separate libraries for orchestration, retrieval, and agent logic. The project is maintained by LangGenius and hosted at github.com/langgenius/dify, where it has passed 154,000 GitHub stars.',
+        content: 'Dify is an open-source platform for building and deploying LLM applications — chatbots, document-search assistants, and multi-agent systems — through a visual interface rather than assembling separate libraries for orchestration, retrieval, and agent logic. The project is maintained by LangGenius and hosted at github.com/langgenius/dify, where it has passed ' + st.en('dify', 'bare') + ' GitHub stars.',
         items: [
           'Workflow Studio: a node-based visual builder for chaining prompts, retrieval steps, tool calls, and conditional logic into a working application',
           'Knowledge Pipeline (RAG): document ingestion, chunking, embedding, and indexing that feeds retrieval into an agent or workflow',
@@ -85,7 +99,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Model management: connects to hundreds of proprietary and open-source LLMs across dozens of inference providers, including any OpenAI-API-compatible endpoint',
           '50+ built-in tools for agents (web search, image generation, code execution, and similar), extendable through marketplace integrations and MCP',
           'Publishing options: deploy an app as a web app, a REST API, an embeddable chat widget, or an MCP-compatible tool, with execution monitoring',
-          'Current version: v1.17.1, confirmed via [Dify\'s GitHub releases](https://github.com/langgenius/dify/releases/tag/1.17.1)',
+          'Current version: v1.18.0, confirmed via [Dify\'s GitHub releases](https://github.com/langgenius/dify/releases/tag/1.18.0)',
+          'Latest release: v1.18.0 (' + formatDisplayDate('2026-10-23', 'en') + ') adds Agent Output Routes (an agent picks the next workflow branch), portable `.ifpkg` app packages and a beta Agent Knowledge Base; the new `difyctl` command-line client creates, imports, exports and publishes Workflow and Chatflow apps ([release notes](https://github.com/langgenius/dify/releases/tag/1.18.0))',
+          'Last upstream update: ' + lastUpdate('en') + ' (newest commit or release in the [langgenius/dify](https://github.com/langgenius/dify) repository)',
         ],
         note: 'The distinguishing feature versus a pure workflow tool is that RAG ingestion, agent orchestration, and deployment all live in the same product — you are not gluing together a separate vector database UI, agent framework, and hosting layer.',
       },
@@ -95,13 +111,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Dify is not released under plain Apache License 2.0. The repository uses what LangGenius calls the "Dify Open Source License" — an Apache 2.0 base with additional terms layered on top. This is the fact most reviews gloss over, and it changes how you can legally deploy Dify in specific scenarios.',
           'The additional terms add two restrictions that plain Apache 2.0 does not have. First, you may not use the Dify source code to operate a multi-tenant environment without explicit written authorization from LangGenius — meaning you cannot take the open-source code and resell it as your own hosted, multi-customer SaaS product without a commercial agreement. Second, you may not remove or modify the Dify logo or copyright information shown in the console or in applications built with it.',
+          'Two definitions in the LICENSE file settle most edge cases. A tenant is one workspace: the multi-tenant restriction applies when you use the Dify source code to run separate workspaces for separate customers or organizations. The logo and copyright clause applies only when you use Dify\'s frontend (the `web/` directory or the `web` Docker image) and does not apply to uses that do not involve the frontend. The license also states that Dify may be used commercially, including as a backend service for other applications or as an application development platform for enterprises. This is a plain-language summary, not legal advice; the license text is what counts.',
         ],
         items: [
           'Permitted: self-hosting Dify internally for your own team or organization, on your own infrastructure',
           'Permitted: using Dify as a backend service inside your own application, including commercial products, without a multi-tenant resale model',
           'Permitted: modifying, forking, and redistributing the source code under the same license terms',
           'Restricted without written authorization: operating Dify\'s source code as a multi-tenant SaaS platform — i.e., reselling hosted Dify access to multiple separate customers as your own service',
-          'Restricted at any time: removing or altering the Dify logo/copyright notice in the console or in apps built on it',
+          'Restricted when you use Dify\'s frontend: removing or altering the Dify logo/copyright notice in the console or in apps built on it (the clause does not apply to uses that do not involve the frontend)',
         ],
         note: 'If your use case is "run Dify for my own company" or "embed Dify as the engine behind one product I sell," the modified license does not block you. If your use case is "stand up hosted Dify instances and sell access to many separate customers," that is the multi-tenant SaaS scenario the license reserves for a commercial agreement with LangGenius — Dify Cloud and Dify Enterprise exist as the vendor\'s own path for exactly that model.',
         callouts: [
@@ -159,6 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open http://localhost/install in a browser to complete the first-run setup and create an admin account.',
           'Add at least one LLM provider (an API key for a proprietary model, or a connection to a locally running OpenAI-API-compatible endpoint) before building your first workflow.',
         ],
+        note: 'Upgrading an existing install: read the release notes first. Version 1.17.1 requires a manual, staged upgrade of the bundled Weaviate vector store (1.27.0 → 1.39.2) before restarting; version 1.18.0 requires the API, worker, Agent Backend and Agent runtime images to be upgraded together, and source installs need Python 3.13.',
         faqs: [
           { q: 'Does self-hosted Dify need a GPU?', a: 'No, not for the platform itself. Dify orchestrates calls to LLM providers — it does not run model inference. A GPU is only relevant if you separately self-host the LLM Dify is calling (for example, through a local inference server).' },
           { q: 'Can I run Dify entirely offline with local models?', a: 'You can point Dify at any OpenAI-API-compatible local inference endpoint, which lets a self-hosted Dify instance route requests to a locally hosted model with no calls to external LLM providers, as long as every connected tool and integration is also kept local.' },
@@ -225,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is Dify free?', a: 'The self-hosted Community Edition is free and open source. Dify Cloud has a free Sandbox tier plus paid Professional and Team tiers billed per workspace, per year. Dify Enterprise is custom-priced.' },
-          { q: 'What license does Dify use?', a: 'A modified Apache 2.0 license LangGenius calls the "Dify Open Source License." It adds two restrictions beyond plain Apache 2.0: you cannot operate the source code as a multi-tenant SaaS without written authorization, and you cannot remove or modify the Dify logo or copyright notice in the console or apps built with it.' },
+          { q: 'What license does Dify use?', a: 'A modified Apache 2.0 license LangGenius calls the "Dify Open Source License." It adds two conditions beyond plain Apache 2.0: you cannot use the source code to operate a multi-tenant environment (one tenant = one workspace) without written authorization, and you cannot remove or modify the Dify logo or copyright notice when you use Dify\'s frontend.' },
           { q: 'Can I use Dify commercially?', a: 'Yes, for internal use or as the backend of your own commercial product. Reselling hosted, multi-customer access to the open-source code as your own SaaS is the one scenario that needs a separate written agreement with LangGenius.' },
           { q: 'Does Dify support RAG?', a: 'Yes. The Knowledge Pipeline ingests documents and websites, chunks and indexes them, and lets any workflow or agent query the resulting knowledge base as a retrieval step.' },
           { q: 'Does Dify support AI agents?', a: 'Yes. Agents can be built conversationally or manually configured, and can call external APIs, run code, or use any of the 50+ built-in tools shipped with the platform, including MCP-based tools.' },
@@ -234,6 +252,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Can I self-host Dify without a GPU?', a: 'Yes. Dify orchestrates calls to LLM providers rather than running inference itself, so the platform has no GPU requirement of its own. A GPU only matters if you are separately self-hosting the LLM that Dify calls.' },
           { q: 'What does Dify Enterprise add over Community?', a: 'Dify Enterprise adds SSO/SAML authentication, role-based access control (RBAC), multiple workspaces, and SOC 2 Type II and ISO 27001 compliance, deployed self-hosted or in your own VPC with vendor support.' },
           { q: 'What models does Dify support?', a: 'Dify connects to hundreds of proprietary and open-source LLMs across dozens of inference providers, including any endpoint compatible with the OpenAI API — which covers many self-hosted local inference servers.' },
+          { q: 'Can I create a Dify workflow programmatically through the API?', a: 'Partly. Each published app has its own Service API (Bearer-token authentication) for running workflows and chats from your own backend. Creating and managing the apps themselves from code is newer: according to the v1.18.0 release notes, the new difyctl command-line client, built on the server\'s OpenAPI operation catalog, supports Workflow and Chatflow creation, DSL import/export, settings, environment variables, publishing and version restoration. The Service API documentation covers running published apps only.' },
+          { q: 'Is Dify open source?', a: 'The source code is public on GitHub and free to self-host, but the license is a modified Apache 2.0 with two extra conditions (no multi-tenant service without written permission, and keep the logo when using the frontend), so it is not plain Apache 2.0. Whether that counts as open source for you depends on your own license policy.' },
+          { q: 'What is Dify Cloud?', a: 'Dify Cloud is the managed service run by LangGenius at [cloud.dify.ai](https://cloud.dify.ai), with Sandbox (free), Professional ($590 per workspace per year) and Team ($1,590 per workspace per year) plans. Dify Enterprise is sold through sales for self-hosted or VPC deployment.' },
         ],
       },
       sources: {
@@ -262,19 +283,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-de.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und technische Teams, die Dify für selbst gehostete RAG-Pipelines, KI-Agenten und LLM-App-Deployment evaluieren, sowie Teams, die es mit leichteren visuellen Buildern oder code-first-Frameworks vergleichen',
     primaryTerm: 'Dify',
     title: 'Dify-Rezension: Lizenz, Preise & Self-Hosting im Detail',
     seoTitle: 'Dify-Rezension: Lizenz, Preise, Self-Hosting im Detail',
     intro: 'Dify verbindet einen visuellen Workflow-Builder, eine RAG-Pipeline und ein Agenten-Framework in einer selbst hostbaren Plattform — statt separate Tools für jede Ebene zu kombinieren. Die Lizenz ist kein reines Apache 2.0, und dieser Unterschied ist entscheidend, bevor Sie Dify für einen Kunden oder als gehostetes Produkt einsetzen.',
-    metaDescription: 'Dify ist eine Open-Source-LLMOps-Plattform (Workflow-Builder, RAG, Agenten) unter modifizierter Apache-2.0-Lizenz, die Multi-Tenant-SaaS-Nutzung ohne Genehmigung untersagt.',
+    metaDescription: 'Dify im Test: LLMOps mit Workflows, RAG, Agenten. Self-Hosting gratis, Cloud ab 590 $/Jahr; modifiziertes Apache 2.0 begrenzt Multi-Tenant-SaaS.',
     readTime: '13 Min. Lesezeit',
     targetKeywords: [
       'Dify Test',
@@ -290,13 +312,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Wofür wird Dify verwendet?',
         answer: 'Dify wird zum Erstellen und Bereitstellen von LLM-Anwendungen verwendet — Chatbots, RAG-basierte Dokumentenassistenten und mehrstufige KI-Agenten — über einen visuellen Workflow-Builder statt handgeschriebenen Orchestrierungscode. Die Plattform bündelt Wissensdatenbank-Ingestion, Agenten-Tool-Aufrufe und App-Veröffentlichung (Web-App, API oder einbettbares Widget) in einem Produkt.',
         bullets: [
-          'Open Source auf GitHub (langgenius/dify), über 154.000 Stars',
+          'Open Source auf GitHub (langgenius/dify), über ' + st.de('dify', 'bare') + ' Stars',
           'Lizenz: modifiziertes Apache 2.0 ("Dify Open Source License") — untersagt nicht genehmigten Multi-Tenant-SaaS-Weiterverkauf',
           'Drei Editionen: selbst gehostete Community, gehostetes Dify Cloud und Dify Enterprise',
           'Visueller Workflow-Builder plus RAG-Wissenspipeline plus Agenten-/Tool-Aufruf-Framework in einem Produkt',
           'Dify-Cloud-Preise starten kostenlos (Sandbox); kostenpflichtige Stufen werden pro Workspace und Jahr abgerechnet',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -336,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'Was ist Dify?',
-        content: 'Dify ist eine Open-Source-Plattform zum Erstellen und Bereitstellen von LLM-Anwendungen — Chatbots, Dokumentensuch-Assistenten und Multi-Agenten-Systeme — über eine visuelle Oberfläche, statt separate Bibliotheken für Orchestrierung, Retrieval und Agentenlogik zusammenzusetzen. Das Projekt wird von LangGenius gepflegt und ist unter github.com/langgenius/dify gehostet, wo es über 154.000 GitHub-Stars überschritten hat.',
+        content: 'Dify ist eine Open-Source-Plattform zum Erstellen und Bereitstellen von LLM-Anwendungen — Chatbots, Dokumentensuch-Assistenten und Multi-Agenten-Systeme — über eine visuelle Oberfläche, statt separate Bibliotheken für Orchestrierung, Retrieval und Agentenlogik zusammenzusetzen. Das Projekt wird von LangGenius gepflegt und ist unter github.com/langgenius/dify gehostet, wo es über ' + st.de('dify', 'bare') + ' GitHub-Stars überschritten hat.',
         items: [
           'Workflow Studio: ein knotenbasierter visueller Builder zum Verketten von Prompts, Retrieval-Schritten, Tool-Aufrufen und bedingter Logik zu einer funktionierenden Anwendung',
           'Knowledge Pipeline (RAG): Dokumenten-Ingestion, Chunking, Embedding und Indexierung, die Retrieval in einen Agenten oder Workflow einspeist',
@@ -344,7 +366,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Modellverwaltung: verbindet mit Hunderten proprietären und Open-Source-LLMs über Dutzende Inferenz-Anbieter, einschließlich jedem OpenAI-API-kompatiblen Endpunkt',
           'Über 50 integrierte Tools für Agenten (Websuche, Bildgenerierung, Codeausführung und Ähnliches), erweiterbar über Marketplace-Integrationen und MCP',
           'Veröffentlichungsoptionen: eine App als Web-App, REST-API, einbettbares Chat-Widget oder MCP-kompatibles Tool bereitstellen, mit Ausführungsüberwachung',
-          'Aktuelle Version: v1.17.1, bestätigt über [Difys GitHub-Releases](https://github.com/langgenius/dify/releases/tag/1.17.1)',
+          'Aktuelle Version: v1.18.0, bestätigt über [Difys GitHub-Releases](https://github.com/langgenius/dify/releases/tag/1.18.0)',
+          'Neueste Version: v1.18.0 (' + formatDisplayDate('2026-10-23', 'de') + ') bringt Agent-Ausgaberouten (ein Agent wählt den nächsten Workflow-Zweig), portable `.ifpkg`-App-Pakete und eine Beta des Agent Knowledge Base; der neue Kommandozeilen-Client `difyctl` erstellt, importiert, exportiert und veröffentlicht Workflow- und Chatflow-Apps ([Release-Notes](https://github.com/langgenius/dify/releases/tag/1.18.0))',
+          'Letztes Upstream-Update: ' + lastUpdate('de') + ' (jüngster Commit bzw. Release im Repository [langgenius/dify](https://github.com/langgenius/dify))',
         ],
         note: 'Das unterscheidende Merkmal gegenüber einem reinen Workflow-Tool: RAG-Ingestion, Agenten-Orchestrierung und Deployment leben alle im selben Produkt — Sie müssen nicht separat eine Vektordatenbank-Oberfläche, ein Agenten-Framework und eine Hosting-Ebene zusammenkleben.',
       },
@@ -354,13 +378,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Dify ist nicht unter reiner Apache License 2.0 veröffentlicht. Das Repository nutzt, was LangGenius die "Dify Open Source License" nennt — eine Apache-2.0-Basis mit zusätzlichen Bedingungen. Das ist die Tatsache, die die meisten Reviews übergehen, und sie ändert, wie Sie Dify in bestimmten Szenarien legal einsetzen dürfen.',
           'Die zusätzlichen Bedingungen fügen zwei Einschränkungen hinzu, die reines Apache 2.0 nicht hat. Erstens dürfen Sie den Dify-Quellcode ohne ausdrückliche schriftliche Genehmigung von LangGenius nicht für einen Multi-Tenant-Betrieb nutzen — das heißt, Sie können den Open-Source-Code nicht ohne kommerzielle Vereinbarung als eigenes gehostetes Multi-Kunden-SaaS-Produkt weiterverkaufen. Zweitens dürfen Sie das Dify-Logo oder die Copyright-Informationen in der Konsole oder in damit erstellten Anwendungen nicht entfernen oder ändern.',
+          'Zwei Definitionen in der LICENSE-Datei klären die meisten Grenzfälle. Ein Mandant (Tenant) entspricht einem Workspace: Die Multi-Tenant-Einschränkung greift, wenn Sie mit dem Dify-Quellcode getrennte Workspaces für getrennte Kunden oder Organisationen betreiben. Die Logo- und Copyright-Klausel gilt nur, wenn Sie das Frontend von Dify nutzen (das Verzeichnis `web/` bzw. das Docker-Image `web`); auf Nutzungen ohne Frontend ist sie nicht anwendbar. Die Lizenz erlaubt ausdrücklich die kommerzielle Nutzung, auch als Backend-Dienst für andere Anwendungen oder als Entwicklungsplattform für Unternehmen. Das ist eine verständliche Zusammenfassung, keine Rechtsberatung — maßgeblich ist der Lizenztext.',
         ],
         items: [
           'Erlaubt: Dify intern für das eigene Team oder die eigene Organisation auf eigener Infrastruktur selbst hosten',
           'Erlaubt: Dify als Backend-Dienst innerhalb der eigenen Anwendung nutzen, einschließlich kommerzieller Produkte, ohne Multi-Tenant-Weiterverkaufsmodell',
           'Erlaubt: den Quellcode unter denselben Lizenzbedingungen modifizieren, forken und weiterverteilen',
           'Ohne schriftliche Genehmigung eingeschränkt: den Dify-Quellcode als Multi-Tenant-SaaS-Plattform betreiben — also gehosteten Dify-Zugriff an mehrere separate Kunden als eigenen Dienst weiterverkaufen',
-          'Jederzeit eingeschränkt: das Dify-Logo bzw. den Copyright-Hinweis in der Konsole oder in darauf aufgebauten Apps entfernen oder ändern',
+          'Bei Nutzung des Dify-Frontends eingeschränkt: das Dify-Logo bzw. den Copyright-Hinweis in der Konsole oder in darauf aufgebauten Apps entfernen oder ändern (die Klausel gilt nicht für Nutzungen ohne Frontend)',
         ],
         note: 'Wenn Ihr Anwendungsfall "Dify für das eigene Unternehmen betreiben" oder "Dify als Engine hinter einem verkauften Produkt einbetten" lautet, blockiert die modifizierte Lizenz Sie nicht. Wenn Ihr Anwendungsfall "gehostete Dify-Instanzen aufsetzen und Zugriff an viele separate Kunden verkaufen" lautet, ist das genau das Multi-Tenant-SaaS-Szenario, das die Lizenz einer kommerziellen Vereinbarung mit LangGenius vorbehält — Dify Cloud und Dify Enterprise sind der eigene Weg des Anbieters für genau dieses Modell.',
         callouts: [
@@ -418,6 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'http://localhost/install im Browser öffnen, um die Ersteinrichtung abzuschließen und ein Admin-Konto zu erstellen.',
           'Mindestens einen LLM-Anbieter hinzufügen (einen API-Schlüssel für ein proprietäres Modell oder eine Verbindung zu einem lokal laufenden OpenAI-API-kompatiblen Endpunkt), bevor Sie den ersten Workflow bauen.',
         ],
+        note: 'Bestehende Installation aktualisieren: Lesen Sie zuerst die Release-Notes. Version 1.17.1 verlangt vor dem Neustart ein manuelles, schrittweises Upgrade des mitgelieferten Weaviate-Vektorspeichers (1.27.0 → 1.39.2); Version 1.18.0 verlangt, dass API-, Worker-, Agent-Backend- und Agent-Runtime-Images gemeinsam aktualisiert werden, und Quellinstallationen benötigen Python 3.13.',
         faqs: [
           { q: 'Braucht selbst gehostetes Dify eine GPU?', a: 'Nein, nicht für die Plattform selbst. Dify orchestriert Aufrufe an LLM-Anbieter — es führt keine Modellinferenz aus. Eine GPU ist nur relevant, wenn Sie das von Dify aufgerufene LLM separat selbst hosten (zum Beispiel über einen lokalen Inferenzserver).' },
           { q: 'Kann ich Dify vollständig offline mit lokalen Modellen betreiben?', a: 'Sie können Dify auf jeden OpenAI-API-kompatiblen lokalen Inferenz-Endpunkt zeigen lassen, wodurch eine selbst gehostete Dify-Instanz Anfragen an ein lokal gehostetes Modell weiterleiten kann, ohne externe LLM-Anbieter aufzurufen — solange auch jedes verbundene Tool und jede Integration lokal bleibt.' },
@@ -484,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist Dify kostenlos?', a: 'Die selbst gehostete Community Edition ist kostenlos und quelloffen. Dify Cloud hat eine kostenlose Sandbox-Stufe sowie kostenpflichtige Professional- und Team-Stufen, abgerechnet pro Workspace und Jahr. Dify Enterprise ist individuell bepreist.' },
-          { q: 'Welche Lizenz nutzt Dify?', a: 'Eine modifizierte Apache-2.0-Lizenz, die LangGenius "Dify Open Source License" nennt. Sie fügt zwei Einschränkungen über reines Apache 2.0 hinaus hinzu: Sie dürfen den Quellcode ohne schriftliche Genehmigung nicht als Multi-Tenant-SaaS betreiben, und Sie dürfen das Dify-Logo oder den Copyright-Hinweis in der Konsole oder in damit erstellten Apps nicht entfernen oder ändern.' },
+          { q: 'Welche Lizenz nutzt Dify?', a: 'Eine modifizierte Apache-2.0-Lizenz, die LangGenius "Dify Open Source License" nennt. Sie ergänzt reines Apache 2.0 um zwei Bedingungen: Ohne schriftliche Genehmigung dürfen Sie den Quellcode nicht für einen Multi-Tenant-Betrieb nutzen (ein Mandant entspricht einem Workspace), und bei Nutzung des Dify-Frontends dürfen Sie das Logo und den Copyright-Hinweis nicht entfernen oder ändern.' },
           { q: 'Darf ich Dify kommerziell nutzen?', a: 'Ja, für internen Gebrauch oder als Backend Ihres eigenen kommerziellen Produkts. Der Weiterverkauf von gehostetem Multi-Kunden-Zugriff auf den Open-Source-Code als eigenes SaaS ist das einzige Szenario, das eine separate schriftliche Vereinbarung mit LangGenius benötigt.' },
           { q: 'Unterstützt Dify RAG?', a: 'Ja. Die Knowledge Pipeline nimmt Dokumente und Websites auf, chunked und indexiert sie und lässt jeden Workflow oder Agenten die entstandene Wissensdatenbank als Retrieval-Schritt abfragen.' },
           { q: 'Unterstützt Dify KI-Agenten?', a: 'Ja. Agenten lassen sich konversationell erstellen oder manuell konfigurieren und können externe APIs aufrufen, Code ausführen oder eines der über 50 integrierten Tools nutzen, die mit der Plattform mitgeliefert werden, einschließlich MCP-basierter Tools.' },
@@ -495,6 +521,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Welche Modelle unterstützt Dify?', a: 'Dify verbindet sich mit Hunderten proprietären und Open-Source-LLMs über Dutzende Inferenz-Anbieter, einschließlich jedem Endpunkt, der mit der OpenAI-API kompatibel ist — was viele selbst gehostete lokale Inferenzserver einschließt.' },
           { q: 'Muss ich bei der Verwendung von Dify die DSGVO beachten?', a: 'Bei Self-Hosting der Community Edition auf eigener Infrastruktur in der EU/DACH-Region verarbeiten Sie Daten selbst, was Artikel 28 DSGVO (Auftragsverarbeitung) grundsätzlich vereinfacht, solange keine externen LLM-APIs außerhalb der EU eingebunden werden. Für Dify Cloud oder Enterprise prüfen Sie den Auftragsverarbeitungsvertrag und den Serverstandort von LangGenius, bevor Sie personenbezogene Daten verarbeiten, und wenden Sie zusätzlich die BSI-Grundschutz-Kataloge für die Absicherung der eigenen Instanz an. Dies ist keine Rechtsberatung; lassen Sie die konkrete datenschutzrechtliche Einordnung für Ihren Anwendungsfall von einem Datenschutzbeauftragten oder einer Kanzlei prüfen.' },
           { q: 'Ist Dify für den deutschen Mittelstand geeignet?', a: 'Für Teams mit Docker-Erfahrung ist die selbst gehostete Community Edition eine praktikable IT-Sicherheitslösung (BSI-konform absicherbar) ohne Lizenzkosten. Wachsende Mittelstandsunternehmen mit Compliance-Anforderungen (SOC 2, ISO 27001, SSO) sind eher bei Dify Enterprise richtig, das genau diese Nachweise für eine Sicherheitsprüfung mitbringt.' },
+          { q: 'Kann ich Dify-Workflows programmatisch per API erstellen?', a: 'Teilweise. Jede veröffentlichte App hat eine eigene Service-API (Bearer-Token-Authentifizierung), mit der Sie Workflows und Chats aus Ihrem Backend ausführen. Die Apps selbst per Code zu erstellen und zu verwalten ist neuer: Laut Release-Notes von v1.18.0 unterstützt der neue Kommandozeilen-Client difyctl, der auf dem OpenAPI-Operationskatalog des Servers aufbaut, das Erstellen von Workflow- und Chatflow-Apps, DSL-Import und -Export, Einstellungen, Umgebungsvariablen, Veröffentlichen und Wiederherstellen von Versionen. Die Service-API-Dokumentation beschreibt nur das Ausführen veröffentlichter Apps.' },
+          { q: 'Ist Dify Open Source?', a: 'Der Quellcode ist öffentlich auf GitHub und lässt sich kostenlos selbst hosten. Die Lizenz ist jedoch ein modifiziertes Apache 2.0 mit zwei Zusatzbedingungen (kein Multi-Tenant-Dienst ohne schriftliche Genehmigung, Logo-Erhalt bei Nutzung des Frontends) und damit kein reines Apache 2.0. Ob das für Sie als Open Source gilt, hängt von Ihrer eigenen Lizenzrichtlinie ab.' },
+          { q: 'Was ist Dify Cloud?', a: 'Dify Cloud ist der von LangGenius betriebene Managed-Service unter [cloud.dify.ai](https://cloud.dify.ai) mit den Plänen Sandbox (kostenlos), Professional (590 $ pro Workspace und Jahr) und Team (1.590 $ pro Workspace und Jahr). Dify Enterprise wird über den Vertrieb verkauft, für Self-Hosting oder VPC-Betrieb.' },
         ],
       },
       sources: {
@@ -521,19 +550,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et équipes techniques évaluant Dify pour des pipelines RAG auto-hébergés, des agents IA et le déploiement d\'applications LLM, ainsi que ceux qui le comparent à des constructeurs visuels plus légers ou à des frameworks code-first',
     primaryTerm: 'Dify',
     title: 'Dify : la plateforme LLMOps open source, licence et limites',
     seoTitle: 'Dify : plateforme LLMOps open source, licence expliquée',
     intro: 'Dify réunit un constructeur de workflows visuel, une pipeline RAG et un framework d\'agents dans une seule plateforme auto-hébergeable, au lieu d\'assembler des outils séparés pour chaque couche. La licence n\'est pas une Apache 2.0 classique, et cette nuance compte avant tout déploiement pour un client ou comme produit hébergé.',
-    metaDescription: 'Dify est une plateforme LLMOps open source (constructeur de workflows, RAG, agents) sous licence Apache 2.0 modifiée, qui restreint l\'usage SaaS multi-tenant sans autorisation.',
+    metaDescription: 'Test de Dify : LLMOps avec workflows, RAG et agents. Auto-hébergement gratuit, Cloud dès 590 $/an ; Apache 2.0 modifiée limitant le SaaS multi-tenant.',
     readTime: '12 min de lecture',
     targetKeywords: [
       'avis Dify',
@@ -543,19 +573,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify auto-hébergé',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify est une plateforme LLMOps gratuite et open source ([github.com/langgenius/dify](https://github.com/langgenius/dify)) pour créer des workflows IA, des pipelines RAG et des agents via une seule interface visuelle — mais sa licence est une Apache 2.0 modifiée qui interdit d\'en faire un service SaaS multi-tenant sans autorisation écrite de LangGenius, l\'entreprise derrière le projet.',
+    leadAnswerBlock: 'Dify est une plateforme LLMOps gratuite et open source ([github.com/langgenius/dify](https://github.com/langgenius/dify)) pour créer des workflows IA, des pipelines RAG et des agents via une seule interface visuelle — mais sa licence est une Apache 2.0 modifiée qui interdit d\'en faire un service SaaS multi-tenant sans autorisation écrite de LangGenius.',
     quickAnswerTop: {
       fr: {
         question: 'À quoi sert Dify ?',
         answer: 'Dify sert à créer et déployer des applications LLM — chatbots, assistants documentaires basés sur le RAG, et agents IA à plusieurs étapes — via un constructeur de workflows visuel plutôt qu\'en écrivant du code d\'orchestration à la main. La plateforme regroupe l\'ingestion de base de connaissances, l\'appel d\'outils par les agents et la publication d\'applications (app web, API ou widget intégrable) en un seul produit.',
         bullets: [
-          'Open source sur GitHub (langgenius/dify), plus de 154 000 étoiles',
+          'Open source sur GitHub (langgenius/dify), plus de ' + st.fr('dify', 'bare') + ' étoiles',
           'Licence : Apache 2.0 modifiée ("Dify Open Source License") — bloque la revente SaaS multi-tenant non autorisée',
           'Trois éditions : Community auto-hébergée, Dify Cloud gérée, et Dify Enterprise',
           'Constructeur de workflows visuel, pipeline de connaissances RAG et framework d\'agents/outils réunis dans un seul produit',
           'Les tarifs Dify Cloud démarrent gratuitement (Sandbox) ; les niveaux payants sont facturés par espace de travail et par an',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -595,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'Qu\'est-ce que Dify ?',
-        content: 'Dify est une plateforme open source pour créer et déployer des applications LLM — chatbots, assistants de recherche documentaire, systèmes multi-agents — via une interface visuelle, plutôt qu\'en assemblant des bibliothèques séparées pour l\'orchestration, la récupération et la logique d\'agent. Le projet est maintenu par LangGenius et hébergé sur github.com/langgenius/dify, où il a dépassé 154 000 étoiles GitHub.',
+        content: 'Dify est une plateforme open source pour créer et déployer des applications LLM — chatbots, assistants de recherche documentaire, systèmes multi-agents — via une interface visuelle, plutôt qu\'en assemblant des bibliothèques séparées pour l\'orchestration, la récupération et la logique d\'agent. Le projet est maintenu par LangGenius et hébergé sur github.com/langgenius/dify, où il a dépassé ' + st.fr('dify', 'bare') + ' étoiles GitHub.',
         items: [
           'Workflow Studio : un constructeur visuel à base de nœuds pour enchaîner des prompts, des étapes de récupération, des appels d\'outils et une logique conditionnelle en une application fonctionnelle',
           'Knowledge Pipeline (RAG) : ingestion, découpage, embedding et indexation de documents, alimentant la récupération d\'un agent ou d\'un workflow',
@@ -603,7 +633,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gestion des modèles : connexion à des centaines de LLM propriétaires et open source via des dizaines de fournisseurs d\'inférence, y compris tout point de terminaison compatible avec l\'API OpenAI',
           'Plus de 50 outils intégrés pour les agents (recherche web, génération d\'images, exécution de code, et similaires), extensibles via des intégrations marketplace et MCP',
           'Options de publication : déployer une application en tant qu\'app web, API REST, widget de chat intégrable ou outil compatible MCP, avec suivi d\'exécution',
-          'Version actuelle : v1.17.1, confirmée via les [releases GitHub de Dify](https://github.com/langgenius/dify/releases/tag/1.17.1)',
+          'Version actuelle : v1.18.0, confirmée via les [releases GitHub de Dify](https://github.com/langgenius/dify/releases/tag/1.18.0)',
+          'Dernière version : v1.18.0 (' + formatDisplayDate('2026-10-23', 'fr') + ') ajoute les routes de sortie d\'agent (un agent choisit la prochaine branche du workflow), les paquets d\'application portables `.ifpkg` et une bêta d\'Agent Knowledge Base ; le nouveau client en ligne de commande `difyctl` crée, importe, exporte et publie des applications Workflow et Chatflow ([notes de version](https://github.com/langgenius/dify/releases/tag/1.18.0))',
+          'Dernière mise à jour en amont : ' + lastUpdate('fr') + ' (dernier commit ou release du dépôt [langgenius/dify](https://github.com/langgenius/dify))',
         ],
         note: 'La caractéristique distinctive face à un outil de workflow pur : l\'ingestion RAG, l\'orchestration d\'agents et le déploiement vivent tous dans le même produit — vous n\'assemblez pas séparément une interface de base vectorielle, un framework d\'agents et une couche d\'hébergement.',
       },
@@ -613,13 +645,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Dify n\'est pas publié sous licence Apache 2.0 classique. Le dépôt utilise ce que LangGenius appelle la « Dify Open Source License » — une base Apache 2.0 avec des conditions supplémentaires. C\'est le fait que la plupart des avis passent sous silence, et il change la façon dont vous pouvez légalement déployer Dify dans certains scénarios.',
           'Les conditions supplémentaires ajoutent deux restrictions absentes d\'Apache 2.0 classique. Premièrement, vous ne pouvez pas utiliser le code source de Dify pour exploiter un environnement multi-tenant sans autorisation écrite explicite de LangGenius — c\'est-à-dire que vous ne pouvez pas prendre le code open source et le revendre comme votre propre produit SaaS hébergé multi-clients sans accord commercial. Deuxièmement, vous ne pouvez pas retirer ni modifier le logo Dify ou les mentions de copyright affichés dans la console ou dans les applications construites avec.',
+          'Deux définitions du fichier LICENSE tranchent la plupart des cas limites. Un tenant correspond à un espace de travail : la restriction multi-tenant s\'applique lorsque vous utilisez le code source de Dify pour exploiter des espaces de travail distincts pour des clients ou des organisations distincts. La clause sur le logo et le copyright ne s\'applique que si vous utilisez le frontend de Dify (le répertoire `web/` ou l\'image Docker `web`) ; elle ne s\'applique pas aux usages qui n\'impliquent pas le frontend. La licence autorise expressément l\'usage commercial, y compris comme service backend d\'autres applications ou comme plateforme de développement pour les entreprises. Il s\'agit d\'un résumé en langage clair, pas d\'un avis juridique : seul le texte de la licence fait foi.',
         ],
         items: [
           'Autorisé : auto-héberger Dify en interne pour votre propre équipe ou organisation, sur votre propre infrastructure',
           'Autorisé : utiliser Dify comme service backend au sein de votre propre application, y compris des produits commerciaux, sans modèle de revente multi-tenant',
           'Autorisé : modifier, forker et redistribuer le code source sous les mêmes conditions de licence',
           'Restreint sans autorisation écrite : exploiter le code source de Dify comme plateforme SaaS multi-tenant — c\'est-à-dire revendre un accès Dify hébergé à plusieurs clients distincts comme votre propre service',
-          'Restreint en toute circonstance : retirer ou modifier le logo/l\'avis de copyright Dify dans la console ou dans les applications construites dessus',
+          'Restreint lors de l\'usage du frontend de Dify : retirer ou modifier le logo/l\'avis de copyright Dify dans la console ou dans les applications construites dessus (la clause ne s\'applique pas aux usages sans frontend)',
         ],
         note: 'Si votre cas d\'usage est « faire tourner Dify pour ma propre entreprise » ou « intégrer Dify comme moteur derrière un seul produit que je vends », la licence modifiée ne vous bloque pas. Si votre cas d\'usage est « déployer des instances Dify hébergées et vendre l\'accès à de nombreux clients distincts », c\'est précisément le scénario SaaS multi-tenant que la licence réserve à un accord commercial avec LangGenius — Dify Cloud et Dify Enterprise sont la voie propre à l\'éditeur pour exactement ce modèle.',
         callouts: [
@@ -677,6 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ouvrez http://localhost/install dans un navigateur pour terminer la configuration initiale et créer un compte administrateur.',
           'Ajoutez au moins un fournisseur de LLM (une clé API pour un modèle propriétaire, ou une connexion à un point de terminaison local compatible API OpenAI) avant de construire votre premier workflow.',
         ],
+        note: 'Mise à jour d\'une installation existante : lisez d\'abord les notes de version. La version 1.17.1 exige, avant le redémarrage, une montée de version manuelle et progressive du magasin vectoriel Weaviate fourni (1.27.0 → 1.39.2) ; la version 1.18.0 exige de mettre à jour ensemble les images API, workers, Agent Backend et runtime d\'agent, et les installations depuis les sources requièrent Python 3.13.',
         faqs: [
           { q: 'Dify auto-hébergé nécessite-t-il un GPU ?', a: 'Non, pas pour la plateforme elle-même. Dify orchestre des appels vers des fournisseurs de LLM — il n\'exécute pas l\'inférence des modèles. Un GPU n\'est pertinent que si vous auto-hébergez séparément le LLM que Dify appelle (par exemple via un serveur d\'inférence local).' },
           { q: 'Puis-je faire tourner Dify entièrement hors ligne avec des modèles locaux ?', a: 'Vous pouvez pointer Dify vers n\'importe quel point de terminaison d\'inférence local compatible API OpenAI, ce qui permet à une instance Dify auto-hébergée d\'acheminer les requêtes vers un modèle hébergé localement sans appeler de fournisseurs de LLM externes, à condition que chaque outil et intégration connectés restent aussi locaux.' },
@@ -743,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Dify est-il gratuit ?', a: 'La Community Edition auto-hébergée est gratuite et open source. Dify Cloud propose un niveau Sandbox gratuit ainsi que des niveaux Professional et Team payants, facturés par espace de travail et par an. Dify Enterprise est tarifé sur devis.' },
-          { q: 'Quelle licence Dify utilise-t-il ?', a: 'Une licence Apache 2.0 modifiée que LangGenius appelle la « Dify Open Source License ». Elle ajoute deux restrictions par rapport à Apache 2.0 pur : vous ne pouvez pas exploiter le code source comme SaaS multi-tenant sans autorisation écrite, et vous ne pouvez pas retirer ni modifier le logo Dify ou l\'avis de copyright dans la console ou les applications construites avec.' },
+          { q: 'Quelle licence Dify utilise-t-il ?', a: 'Une licence Apache 2.0 modifiée que LangGenius appelle la « Dify Open Source License ». Elle ajoute deux conditions à l\'Apache 2.0 classique : vous ne pouvez pas utiliser le code source pour exploiter un environnement multi-tenant sans autorisation écrite (un tenant correspond à un espace de travail), et vous ne pouvez pas retirer ni modifier le logo ou l\'avis de copyright de Dify lorsque vous utilisez son frontend.' },
           { q: 'Puis-je utiliser Dify commercialement ?', a: 'Oui, pour un usage interne ou comme backend de votre propre produit commercial. Revendre un accès hébergé multi-clients au code open source comme votre propre SaaS est le seul scénario nécessitant un accord écrit distinct avec LangGenius.' },
           { q: 'Dify prend-il en charge le RAG ?', a: 'Oui. La Knowledge Pipeline ingère documents et sites web, les découpe et les indexe, et laisse tout workflow ou agent interroger la base de connaissances résultante comme étape de récupération.' },
           { q: 'Dify prend-il en charge les agents IA ?', a: 'Oui. Les agents se construisent par conversation ou configuration manuelle, et peuvent appeler des API externes, exécuter du code, ou utiliser l\'un des plus de 50 outils intégrés fournis avec la plateforme, y compris des outils basés sur MCP.' },
@@ -752,6 +786,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Puis-je auto-héberger Dify sans GPU ?', a: 'Oui. Dify orchestre des appels vers des fournisseurs de LLM plutôt que d\'exécuter l\'inférence lui-même, donc la plateforme n\'a aucune exigence GPU propre. Un GPU ne compte que si vous auto-hébergez séparément le LLM que Dify appelle.' },
           { q: 'Que fournit Dify Enterprise en plus de Community ?', a: 'Dify Enterprise ajoute l\'authentification SSO/SAML, le contrôle d\'accès basé sur les rôles (RBAC), plusieurs espaces de travail, et la conformité SOC 2 Type II et ISO 27001, déployé en auto-hébergé ou dans votre propre VPC avec support éditeur.' },
           { q: 'Quels modèles Dify prend-il en charge ?', a: 'Dify se connecte à des centaines de LLM propriétaires et open source via des dizaines de fournisseurs d\'inférence, y compris tout point de terminaison compatible avec l\'API OpenAI — ce qui couvre de nombreux serveurs d\'inférence locaux auto-hébergés.' },
+          { q: 'Peut-on créer des workflows Dify par programmation via une API ?', a: 'En partie. Chaque application publiée dispose de sa propre API de service (authentification par jeton Bearer) pour exécuter des workflows et des conversations depuis votre backend. Créer et gérer les applications elles-mêmes par code est plus récent : selon les notes de version de la v1.18.0, le nouveau client en ligne de commande difyctl, bâti sur le catalogue d\'opérations OpenAPI du serveur, prend en charge la création d\'applications Workflow et Chatflow, l\'import/export DSL, les paramètres, les variables d\'environnement, la publication et la restauration de versions. La documentation de l\'API de service ne couvre que l\'exécution d\'applications publiées.' },
+          { q: 'Dify est-il open source ?', a: 'Le code source est public sur GitHub et peut être auto-hébergé gratuitement, mais la licence est une Apache 2.0 modifiée avec deux conditions supplémentaires (pas de service multi-tenant sans autorisation écrite, conservation du logo si vous utilisez le frontend) ; ce n\'est donc pas une Apache 2.0 classique. Qu\'elle compte comme open source pour vous dépend de votre propre politique de licences.' },
+          { q: 'Qu\'est-ce que Dify Cloud ?', a: 'Dify Cloud est le service géré exploité par LangGenius sur [cloud.dify.ai](https://cloud.dify.ai), avec les offres Sandbox (gratuite), Professional (590 $ par espace de travail et par an) et Team (1 590 $ par espace de travail et par an). Dify Enterprise se vend via l\'équipe commerciale, pour un déploiement auto-hébergé ou en VPC.' },
         ],
       },
       sources: {
@@ -778,19 +815,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-es.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores y equipos técnicos que evalúan Dify para pipelines RAG autoalojados, agentes de IA y despliegue de aplicaciones LLM, y quienes lo comparan con constructores visuales más ligeros o frameworks code-first',
     primaryTerm: 'Dify',
     title: 'Dify a fondo: plataforma LLMOps open source vs. Flowise',
     seoTitle: 'Dify: reseña de la plataforma LLMOps open source',
     intro: 'Dify combina un constructor visual de workflows, un pipeline de RAG y un framework de agentes en una sola plataforma autoalojable, en lugar de unir herramientas separadas para cada capa. Su licencia no es Apache 2.0 estándar, y esa diferencia importa antes de desplegarla para un cliente o como producto alojado.',
-    metaDescription: 'Dify es una plataforma LLMOps open source (constructor de workflows, RAG, agentes) bajo una licencia Apache 2.0 modificada que restringe el uso SaaS multiusuario sin autorización.',
+    metaDescription: 'Reseña de Dify: LLMOps con workflows, RAG y agentes. Autoalojamiento gratis, Cloud desde $590/año; Apache 2.0 modificada limita el SaaS multiusuario.',
     readTime: '12 min de lectura',
     targetKeywords: [
       'reseña de Dify',
@@ -800,19 +838,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify autoalojado',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify es una plataforma LLMOps gratuita y de código abierto ([github.com/langgenius/dify](https://github.com/langgenius/dify)) para construir workflows de IA, pipelines de RAG y agentes desde una sola interfaz visual — pero su licencia es una Apache 2.0 modificada que prohíbe operarla como SaaS multiusuario sin autorización escrita de LangGenius, la empresa detrás del proyecto.',
+    leadAnswerBlock: 'Dify es una plataforma LLMOps gratuita y de código abierto ([github.com/langgenius/dify](https://github.com/langgenius/dify)) para construir workflows de IA, pipelines de RAG y agentes desde una sola interfaz visual — pero su licencia es una Apache 2.0 modificada que prohíbe operarla como SaaS multiusuario sin autorización escrita de LangGenius.',
     quickAnswerTop: {
       es: {
         question: '¿Para qué se usa Dify?',
         answer: 'Dify se usa para construir y desplegar aplicaciones LLM — chatbots, asistentes documentales basados en RAG y agentes de IA de varios pasos — mediante un constructor visual de workflows en lugar de escribir código de orquestación a mano. Reúne la ingestión de bases de conocimiento, las llamadas a herramientas por parte de agentes y la publicación de apps (app web, API o widget integrable) en una sola plataforma.',
         bullets: [
-          'Open source en GitHub (langgenius/dify), más de 154.000 estrellas',
+          'Open source en GitHub (langgenius/dify), más de ' + st.es('dify', 'bare') + ' estrellas',
           'Licencia: Apache 2.0 modificada ("Dify Open Source License"), que bloquea la reventa SaaS multiusuario no autorizada',
           'Tres ediciones: Community autoalojada, Dify Cloud gestionada y Dify Enterprise',
           'Constructor visual de workflows, pipeline de conocimiento RAG y framework de agentes/herramientas en un solo producto',
           'Los precios de Dify Cloud empiezan gratis (Sandbox); los niveles de pago se facturan por espacio de trabajo y por año',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -852,7 +890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: '¿Qué es Dify?',
-        content: 'Dify es una plataforma open source para construir y desplegar aplicaciones LLM — chatbots, asistentes de búsqueda documental y sistemas multiagente — mediante una interfaz visual, en lugar de ensamblar bibliotecas separadas para orquestación, recuperación y lógica de agentes. El proyecto lo mantiene LangGenius y está alojado en github.com/langgenius/dify, donde ha superado las 154.000 estrellas en GitHub.',
+        content: 'Dify es una plataforma open source para construir y desplegar aplicaciones LLM — chatbots, asistentes de búsqueda documental y sistemas multiagente — mediante una interfaz visual, en lugar de ensamblar bibliotecas separadas para orquestación, recuperación y lógica de agentes. El proyecto lo mantiene LangGenius y está alojado en github.com/langgenius/dify, donde ha superado las ' + st.es('dify', 'bare') + ' estrellas en GitHub.',
         items: [
           'Workflow Studio: un constructor visual basado en nodos para encadenar prompts, pasos de recuperación, llamadas a herramientas y lógica condicional en una aplicación funcional',
           'Knowledge Pipeline (RAG): ingestión, fragmentación, embedding e indexación de documentos que alimenta la recuperación de un agente o workflow',
@@ -860,7 +898,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gestión de modelos: conecta con cientos de LLM propietarios y open source a través de decenas de proveedores de inferencia, incluido cualquier endpoint compatible con la API de OpenAI',
           'Más de 50 herramientas integradas para agentes (búsqueda web, generación de imágenes, ejecución de código, y similares), ampliables mediante integraciones de marketplace y MCP',
           'Opciones de publicación: desplegar una app como app web, API REST, widget de chat integrable o herramienta compatible con MCP, con monitoreo de ejecución',
-          'Versión actual: v1.17.1, confirmada mediante los [lanzamientos de GitHub de Dify](https://github.com/langgenius/dify/releases/tag/1.17.1)',
+          'Versión actual: v1.18.0, confirmada mediante los [lanzamientos de GitHub de Dify](https://github.com/langgenius/dify/releases/tag/1.18.0)',
+          'Última versión: v1.18.0 (' + formatDisplayDate('2026-10-23', 'es') + ') añade rutas de salida de agente (un agente elige la siguiente rama del workflow), paquetes de apps portables `.ifpkg` y una beta de Agent Knowledge Base; el nuevo cliente de línea de comandos `difyctl` crea, importa, exporta y publica apps Workflow y Chatflow ([notas de la versión](https://github.com/langgenius/dify/releases/tag/1.18.0))',
+          'Última actualización upstream: ' + lastUpdate('es') + ' (commit o release más reciente del repositorio [langgenius/dify](https://github.com/langgenius/dify))',
         ],
         note: 'La característica que lo distingue de una herramienta de workflow pura: la ingestión RAG, la orquestación de agentes y el despliegue viven todos en el mismo producto — no tienes que unir por separado una interfaz de base vectorial, un framework de agentes y una capa de hosting.',
       },
@@ -870,13 +910,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Dify no se publica bajo la licencia Apache 2.0 estándar. El repositorio usa lo que LangGenius llama la "Dify Open Source License" — una base Apache 2.0 con condiciones adicionales. Este es el dato que la mayoría de las reseñas pasa por alto, y cambia cómo puedes desplegar Dify legalmente en escenarios concretos.',
           'Las condiciones adicionales añaden dos restricciones que la Apache 2.0 pura no tiene. Primero, no puedes usar el código fuente de Dify para operar un entorno multiusuario sin autorización escrita explícita de LangGenius — es decir, no puedes tomar el código open source y revenderlo como tu propio producto SaaS alojado y multicliente sin un acuerdo comercial. Segundo, no puedes eliminar ni modificar el logo de Dify ni la información de copyright que aparece en la consola o en las aplicaciones construidas con él.',
+          'Dos definiciones del archivo LICENSE resuelven la mayoría de los casos límite. Un inquilino (tenant) equivale a un espacio de trabajo: la restricción multiusuario se aplica cuando usas el código fuente de Dify para operar espacios de trabajo separados para clientes u organizaciones distintos. La cláusula de logo y copyright solo se aplica si usas el frontend de Dify (el directorio `web/` o la imagen Docker `web`); no se aplica a usos que no involucran el frontend. La licencia permite expresamente el uso comercial, incluso como servicio backend de otras aplicaciones o como plataforma de desarrollo para empresas. Es un resumen en lenguaje claro, no asesoría legal: lo que vale es el texto de la licencia.',
         ],
         items: [
           'Permitido: autoalojar Dify internamente para tu propio equipo u organización, en tu propia infraestructura',
           'Permitido: usar Dify como servicio de backend dentro de tu propia aplicación, incluidos productos comerciales, sin un modelo de reventa multiusuario',
           'Permitido: modificar, bifurcar (fork) y redistribuir el código fuente bajo los mismos términos de licencia',
           'Restringido sin autorización escrita: operar el código fuente de Dify como plataforma SaaS multiusuario — es decir, revender acceso a Dify alojado a varios clientes distintos como tu propio servicio',
-          'Restringido en cualquier momento: eliminar o alterar el logo o el aviso de copyright de Dify en la consola o en las apps construidas sobre él',
+          'Restringido al usar el frontend de Dify: eliminar o alterar el logo o el aviso de copyright de Dify en la consola o en las apps construidas sobre él (la cláusula no se aplica a usos sin frontend)',
         ],
         note: 'Si tu caso de uso es "ejecutar Dify para mi propia empresa" o "integrar Dify como motor detrás de un único producto que vendo", la licencia modificada no te bloquea. Si tu caso de uso es "levantar instancias de Dify alojadas y vender acceso a muchos clientes distintos", ese es exactamente el escenario SaaS multiusuario que la licencia reserva a un acuerdo comercial con LangGenius — Dify Cloud y Dify Enterprise son la vía propia del proveedor para ese modelo.',
         callouts: [
@@ -934,6 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Abre http://localhost/install en un navegador para completar la configuración inicial y crear una cuenta de administrador.',
           'Añade al menos un proveedor de LLM (una clave API para un modelo propietario, o una conexión a un endpoint local compatible con la API de OpenAI) antes de construir tu primer workflow.',
         ],
+        note: 'Actualizar una instalación existente: lee primero las notas de la versión. La 1.17.1 exige, antes de reiniciar, una actualización manual y escalonada del almacén vectorial Weaviate incluido (1.27.0 → 1.39.2); la 1.18.0 exige actualizar juntas las imágenes de API, workers, Agent Backend y runtime de agente, y las instalaciones desde código fuente necesitan Python 3.13.',
         faqs: [
           { q: '¿El Dify autoalojado necesita una GPU?', a: 'No, no para la plataforma en sí. Dify orquesta llamadas a proveedores de LLM — no ejecuta la inferencia del modelo. Una GPU solo importa si autoalojas por separado el LLM que Dify llama (por ejemplo, mediante un servidor de inferencia local).' },
           { q: '¿Puedo ejecutar Dify completamente sin conexión con modelos locales?', a: 'Puedes apuntar Dify a cualquier endpoint de inferencia local compatible con la API de OpenAI, lo que permite que una instancia de Dify autoalojada enrute solicitudes a un modelo hospedado localmente sin llamar a proveedores de LLM externos, siempre que cada herramienta e integración conectada también se mantenga local.' },
@@ -1000,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Es gratis Dify?', a: 'La Community Edition autoalojada es gratuita y open source. Dify Cloud tiene un nivel Sandbox gratuito además de niveles Professional y Team de pago, facturados por espacio de trabajo y por año. Dify Enterprise tiene precio personalizado.' },
-          { q: '¿Qué licencia usa Dify?', a: 'Una licencia Apache 2.0 modificada que LangGenius llama "Dify Open Source License". Añade dos restricciones más allá de la Apache 2.0 pura: no puedes operar el código fuente como SaaS multiusuario sin autorización escrita, y no puedes eliminar ni modificar el logo de Dify ni el aviso de copyright en la consola o en las apps construidas con él.' },
+          { q: '¿Qué licencia usa Dify?', a: 'Una licencia Apache 2.0 modificada que LangGenius llama "Dify Open Source License". Añade dos condiciones a Apache 2.0 estándar: no puedes usar el código fuente para operar un entorno multiusuario sin autorización escrita (un inquilino equivale a un espacio de trabajo), y no puedes eliminar ni modificar el logo o el aviso de copyright de Dify cuando usas su frontend.' },
           { q: '¿Puedo usar Dify comercialmente?', a: 'Sí, para uso interno o como backend de tu propio producto comercial. Revender acceso alojado multicliente al código open source como tu propio SaaS es el único escenario que necesita un acuerdo escrito separado con LangGenius.' },
           { q: '¿Dify soporta RAG?', a: 'Sí. El Knowledge Pipeline ingiere documentos y sitios web, los fragmenta e indexa, y permite que cualquier workflow o agente consulte la base de conocimiento resultante como paso de recuperación.' },
           { q: '¿Dify soporta agentes de IA?', a: 'Sí. Los agentes se pueden construir de forma conversacional o configurarse manualmente, y pueden llamar a APIs externas, ejecutar código, o usar cualquiera de las más de 50 herramientas integradas que trae la plataforma, incluidas herramientas basadas en MCP.' },
@@ -1009,6 +1051,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Puedo autoalojar Dify sin GPU?', a: 'Sí. Dify orquesta llamadas a proveedores de LLM en lugar de ejecutar la inferencia él mismo, así que la plataforma no tiene ningún requisito propio de GPU. Una GPU solo importa si autoalojas por separado el LLM que Dify llama.' },
           { q: '¿Qué añade Dify Enterprise sobre Community?', a: 'Dify Enterprise añade autenticación SSO/SAML, control de acceso basado en roles (RBAC), varios espacios de trabajo, y cumplimiento SOC 2 Tipo II e ISO 27001, desplegado autoalojado o en tu propia VPC con soporte del proveedor.' },
           { q: '¿Qué modelos soporta Dify?', a: 'Dify se conecta con cientos de LLM propietarios y open source a través de decenas de proveedores de inferencia, incluido cualquier endpoint compatible con la API de OpenAI, lo que cubre muchos servidores de inferencia locales autoalojados.' },
+          { q: '¿Puedo crear workflows de Dify por programación mediante una API?', a: 'En parte. Cada app publicada tiene su propia API de servicio (autenticación con token Bearer) para ejecutar workflows y chats desde tu backend. Crear y gestionar las apps mismas desde código es más reciente: según las notas de la versión v1.18.0, el nuevo cliente de línea de comandos difyctl, basado en el catálogo de operaciones OpenAPI del servidor, admite la creación de apps Workflow y Chatflow, la importación y exportación de DSL, ajustes, variables de entorno, publicación y restauración de versiones. La documentación de la API de servicio solo cubre la ejecución de apps publicadas.' },
+          { q: '¿Dify es open source?', a: 'El código fuente es público en GitHub y se puede autoalojar gratis, pero la licencia es una Apache 2.0 modificada con dos condiciones adicionales (sin servicio multiusuario sin autorización escrita y conservar el logo al usar el frontend), así que no es una Apache 2.0 estándar. Que cuente como open source para ti depende de tu propia política de licencias.' },
+          { q: '¿Qué es Dify Cloud?', a: 'Dify Cloud es el servicio gestionado que opera LangGenius en [cloud.dify.ai](https://cloud.dify.ai), con los planes Sandbox (gratis), Professional ($590 por espacio de trabajo al año) y Team ($1.590 por espacio de trabajo al año). Dify Enterprise se vende a través de ventas, para despliegue autoalojado o en VPC.' },
         ],
       },
       sources: {
@@ -1035,19 +1080,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e equipes técnicas avaliando o Dify para pipelines RAG auto-hospedados, agentes de IA e deploy de aplicações LLM, e quem está comparando com construtores visuais mais leves ou frameworks code-first',
     primaryTerm: 'Dify',
     title: 'Dify: a plataforma LLMOps open source e sua licença real',
     seoTitle: 'Dify: plataforma LLMOps open source, licença explicada',
     intro: 'O Dify reúne um construtor visual de workflows, um pipeline de RAG e um framework de agentes em uma única plataforma que pode ser auto-hospedada, em vez de exigir ferramentas separadas para cada camada. A licença não é a Apache 2.0 padrão, e essa diferença importa antes de você implantar o Dify para um cliente ou como produto hospedado.',
-    metaDescription: 'O Dify é uma plataforma LLMOps open source (construtor de workflows, RAG, agentes) sob licença Apache 2.0 modificada, que restringe uso SaaS multiusuário sem autorização.',
+    metaDescription: 'Análise do Dify: LLMOps com workflows, RAG e agentes. Self-hosting grátis, Cloud desde US$ 590/ano; Apache 2.0 modificada limita SaaS multiusuário.',
     readTime: '12 min de leitura',
     targetKeywords: [
       'análise do Dify',
@@ -1057,19 +1103,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify auto-hospedado',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'O Dify é uma plataforma LLMOps gratuita e de código aberto ([github.com/langgenius/dify](https://github.com/langgenius/dify)) para criar workflows de IA, pipelines de RAG e agentes em uma única interface visual — mas sua licença é uma Apache 2.0 modificada que proíbe operá-la como SaaS multiusuário sem autorização por escrito da LangGenius, a empresa por trás do projeto.',
+    leadAnswerBlock: 'O Dify é uma plataforma LLMOps gratuita e de código aberto ([github.com/langgenius/dify](https://github.com/langgenius/dify)) para criar workflows de IA, pipelines de RAG e agentes em uma única interface visual — mas sua licença é uma Apache 2.0 modificada que proíbe operá-la como SaaS multiusuário sem autorização por escrito da LangGenius.',
     quickAnswerTop: {
       pt: {
         question: 'Para que serve o Dify?',
         answer: 'O Dify é usado para criar e implantar aplicações LLM — chatbots, assistentes de documentos baseados em RAG e agentes de IA de várias etapas — por meio de um construtor visual de workflows, em vez de escrever código de orquestração manualmente. Ele reúne ingestão de base de conhecimento, chamadas de ferramentas por agentes e publicação de apps (app web, API ou widget incorporável) em uma só plataforma.',
         bullets: [
-          'Código aberto no GitHub (langgenius/dify), mais de 154.000 estrelas',
+          'Código aberto no GitHub (langgenius/dify), mais de ' + st.pt('dify', 'bare') + ' estrelas',
           'Licença: Apache 2.0 modificada ("Dify Open Source License") — bloqueia revenda SaaS multiusuário não autorizada',
           'Três edições: Community auto-hospedada, Dify Cloud gerenciada e Dify Enterprise',
           'Construtor visual de workflows, pipeline de conhecimento RAG e framework de agentes/ferramentas em um só produto',
           'Os preços do Dify Cloud começam gratuitos (Sandbox); os planos pagos são cobrados por workspace, por ano',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1109,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'O que é o Dify?',
-        content: 'O Dify é uma plataforma open source para criar e implantar aplicações LLM — chatbots, assistentes de busca em documentos e sistemas multiagente — por meio de uma interface visual, em vez de reunir bibliotecas separadas para orquestração, recuperação e lógica de agentes. O projeto é mantido pela LangGenius e hospedado em github.com/langgenius/dify, onde já ultrapassou 154.000 estrelas no GitHub.',
+        content: 'O Dify é uma plataforma open source para criar e implantar aplicações LLM — chatbots, assistentes de busca em documentos e sistemas multiagente — por meio de uma interface visual, em vez de reunir bibliotecas separadas para orquestração, recuperação e lógica de agentes. O projeto é mantido pela LangGenius e hospedado em github.com/langgenius/dify, onde já ultrapassou ' + st.pt('dify', 'bare') + ' estrelas no GitHub.',
         items: [
           'Workflow Studio: um construtor visual baseado em nós para encadear prompts, etapas de recuperação, chamadas de ferramentas e lógica condicional em uma aplicação funcional',
           'Knowledge Pipeline (RAG): ingestão, fragmentação, embedding e indexação de documentos, alimentando a recuperação de um agente ou workflow',
@@ -1117,7 +1163,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gerenciamento de modelos: conecta a centenas de LLMs proprietários e open source por dezenas de provedores de inferência, incluindo qualquer endpoint compatível com a API da OpenAI',
           'Mais de 50 ferramentas integradas para agentes (busca na web, geração de imagens, execução de código, entre outras), extensíveis via integrações do marketplace e MCP',
           'Opções de publicação: implantar um app como app web, API REST, widget de chat incorporável ou ferramenta compatível com MCP, com monitoramento de execução',
-          'Versão atual: v1.17.1, confirmada via [lançamentos no GitHub do Dify](https://github.com/langgenius/dify/releases/tag/1.17.1)',
+          'Versão atual: v1.18.0, confirmada via [lançamentos no GitHub do Dify](https://github.com/langgenius/dify/releases/tag/1.18.0)',
+          'Versão mais recente: v1.18.0 (' + formatDisplayDate('2026-10-23', 'pt') + ') traz rotas de saída de agente (um agente escolhe o próximo ramo do workflow), pacotes de apps portáteis `.ifpkg` e um beta do Agent Knowledge Base; o novo cliente de linha de comando `difyctl` cria, importa, exporta e publica apps Workflow e Chatflow ([notas da versão](https://github.com/langgenius/dify/releases/tag/1.18.0))',
+          'Última atualização upstream: ' + lastUpdate('pt') + ' (commit ou release mais recente do repositório [langgenius/dify](https://github.com/langgenius/dify))',
         ],
         note: 'A característica que o distingue de uma ferramenta de workflow pura: ingestão de RAG, orquestração de agentes e implantação vivem todos no mesmo produto — você não precisa juntar separadamente uma interface de banco de dados vetorial, um framework de agentes e uma camada de hospedagem.',
       },
@@ -1127,13 +1175,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'O Dify não é lançado sob a licença Apache 2.0 padrão. O repositório usa o que a LangGenius chama de "Dify Open Source License" — uma base Apache 2.0 com termos adicionais. Esse é o fato que a maioria das análises ignora, e ele muda como você pode implantar o Dify legalmente em cenários específicos.',
           'Os termos adicionais acrescentam duas restrições que a Apache 2.0 pura não tem. Primeiro, você não pode usar o código-fonte do Dify para operar um ambiente multiusuário sem autorização explícita por escrito da LangGenius — ou seja, não pode pegar o código open source e revendê-lo como seu próprio produto SaaS hospedado e multicliente sem um acordo comercial. Segundo, você não pode remover ou modificar o logo do Dify nem as informações de copyright exibidas no console ou em aplicações construídas com ele.',
+          'Duas definições do arquivo LICENSE resolvem a maioria dos casos limite. Um tenant corresponde a um workspace: a restrição multiusuário se aplica quando você usa o código-fonte do Dify para operar workspaces separados para clientes ou organizações diferentes. A cláusula de logo e copyright só se aplica quando você usa o frontend do Dify (o diretório `web/` ou a imagem Docker `web`); ela não se aplica a usos que não envolvem o frontend. A licença permite expressamente o uso comercial, inclusive como serviço de backend para outras aplicações ou como plataforma de desenvolvimento para empresas. Este é um resumo em linguagem simples, não aconselhamento jurídico: vale o texto da licença.',
         ],
         items: [
           'Permitido: auto-hospedar o Dify internamente para sua própria equipe ou organização, em sua própria infraestrutura',
           'Permitido: usar o Dify como serviço de backend dentro de sua própria aplicação, incluindo produtos comerciais, sem um modelo de revenda multiusuário',
           'Permitido: modificar, bifurcar (fork) e redistribuir o código-fonte sob os mesmos termos de licença',
           'Restrito sem autorização por escrito: operar o código-fonte do Dify como plataforma SaaS multiusuário — ou seja, revender acesso ao Dify hospedado para vários clientes distintos como seu próprio serviço',
-          'Restrito a qualquer momento: remover ou alterar o logo/aviso de copyright do Dify no console ou em apps construídos sobre ele',
+          'Restrito ao usar o frontend do Dify: remover ou alterar o logo/aviso de copyright do Dify no console ou em apps construídos sobre ele (a cláusula não se aplica a usos sem frontend)',
         ],
         note: 'Se o seu caso de uso é "rodar o Dify para a minha própria empresa" ou "incorporar o Dify como motor por trás de um único produto que vendo", a licença modificada não bloqueia você. Se o seu caso de uso é "levantar instâncias do Dify hospedadas e vender acesso para muitos clientes distintos", esse é exatamente o cenário SaaS multiusuário que a licença reserva para um acordo comercial com a LangGenius — o Dify Cloud e o Dify Enterprise são o caminho próprio do fornecedor para exatamente esse modelo.',
         callouts: [
@@ -1191,6 +1240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Abra http://localhost/install em um navegador para concluir a configuração inicial e criar uma conta de administrador.',
           'Adicione pelo menos um provedor de LLM (uma chave de API para um modelo proprietário, ou uma conexão a um endpoint local compatível com a API da OpenAI) antes de construir seu primeiro workflow.',
         ],
+        note: 'Atualizando uma instalação existente: leia primeiro as notas da versão. A 1.17.1 exige, antes de reiniciar, um upgrade manual e escalonado do armazenamento vetorial Weaviate incluído (1.27.0 → 1.39.2); a 1.18.0 exige atualizar juntas as imagens de API, workers, Agent Backend e runtime de agente, e instalações a partir do código-fonte precisam do Python 3.13.',
         faqs: [
           { q: 'O Dify auto-hospedado precisa de GPU?', a: 'Não, não para a plataforma em si. O Dify orquestra chamadas para provedores de LLM — ele não executa a inferência do modelo. Uma GPU só é relevante se você auto-hospedar separadamente o LLM que o Dify chama (por exemplo, via um servidor de inferência local).' },
           { q: 'Posso rodar o Dify totalmente offline com modelos locais?', a: 'Você pode apontar o Dify para qualquer endpoint de inferência local compatível com a API da OpenAI, o que permite que uma instância do Dify auto-hospedada encaminhe solicitações para um modelo hospedado localmente sem chamar provedores de LLM externos, desde que cada ferramenta e integração conectada também permaneça local.' },
@@ -1257,7 +1307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O Dify é gratuito?', a: 'A Community Edition auto-hospedada é gratuita e de código aberto. O Dify Cloud tem um nível Sandbox gratuito além de níveis Professional e Team pagos, cobrados por workspace e por ano. O Dify Enterprise tem preço personalizado.' },
-          { q: 'Que licença o Dify usa?', a: 'Uma licença Apache 2.0 modificada que a LangGenius chama de "Dify Open Source License". Ela adiciona duas restrições além da Apache 2.0 pura: você não pode operar o código-fonte como SaaS multiusuário sem autorização por escrito, e não pode remover ou modificar o logo do Dify ou o aviso de copyright no console ou nos apps construídos com ele.' },
+          { q: 'Que licença o Dify usa?', a: 'Uma licença Apache 2.0 modificada que a LangGenius chama de "Dify Open Source License". Ela acrescenta duas condições ao Apache 2.0 padrão: você não pode usar o código-fonte para operar um ambiente multiusuário sem autorização por escrito (um tenant corresponde a um workspace) e não pode remover ou modificar o logo ou o aviso de copyright do Dify ao usar o frontend.' },
           { q: 'Posso usar o Dify comercialmente?', a: 'Sim, para uso interno ou como backend do seu próprio produto comercial. Revender acesso hospedado multicliente ao código open source como seu próprio SaaS é o único cenário que exige um acordo por escrito separado com a LangGenius.' },
           { q: 'O Dify suporta RAG?', a: 'Sim. O Knowledge Pipeline ingere documentos e sites, fragmenta e indexa, e permite que qualquer workflow ou agente consulte a base de conhecimento resultante como etapa de recuperação.' },
           { q: 'O Dify suporta agentes de IA?', a: 'Sim. Os agentes podem ser criados por conversa ou configurados manualmente, e podem chamar APIs externas, executar código, ou usar qualquer uma das mais de 50 ferramentas integradas que acompanham a plataforma, incluindo ferramentas baseadas em MCP.' },
@@ -1266,6 +1316,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Posso auto-hospedar o Dify sem GPU?', a: 'Sim. O Dify orquestra chamadas para provedores de LLM em vez de executar a inferência ele mesmo, então a plataforma não tem exigência própria de GPU. Uma GPU só importa se você auto-hospedar separadamente o LLM que o Dify chama.' },
           { q: 'O que o Dify Enterprise adiciona em relação ao Community?', a: 'O Dify Enterprise adiciona autenticação SSO/SAML, controle de acesso baseado em funções (RBAC), vários workspaces, e conformidade SOC 2 Type II e ISO 27001, implantado auto-hospedado ou em sua própria VPC com suporte do fornecedor.' },
           { q: 'Quais modelos o Dify suporta?', a: 'O Dify se conecta a centenas de LLMs proprietários e open source por dezenas de provedores de inferência, incluindo qualquer endpoint compatível com a API da OpenAI — o que cobre muitos servidores de inferência locais auto-hospedados.' },
+          { q: 'Posso criar workflows do Dify por programação via API?', a: 'Em parte. Cada app publicado tem sua própria API de serviço (autenticação com token Bearer) para executar workflows e chats a partir do seu backend. Criar e gerenciar os próprios apps por código é mais recente: segundo as notas da versão v1.18.0, o novo cliente de linha de comando difyctl, baseado no catálogo de operações OpenAPI do servidor, oferece suporte à criação de apps Workflow e Chatflow, importação e exportação de DSL, configurações, variáveis de ambiente, publicação e restauração de versões. A documentação da API de serviço cobre apenas a execução de apps publicados.' },
+          { q: 'O Dify é open source?', a: 'O código-fonte é público no GitHub e pode ser hospedado por conta própria sem custo, mas a licença é uma Apache 2.0 modificada com duas condições adicionais (sem serviço multiusuário sem autorização por escrito e manutenção do logo ao usar o frontend), portanto não é um Apache 2.0 padrão. Se isso conta como open source para você depende da sua própria política de licenças.' },
+          { q: 'O que é o Dify Cloud?', a: 'O Dify Cloud é o serviço gerenciado operado pela LangGenius em [cloud.dify.ai](https://cloud.dify.ai), com os planos Sandbox (grátis), Professional (US$ 590 por workspace por ano) e Team (US$ 1.590 por workspace por ano). O Dify Enterprise é vendido pela equipe comercial, para implantação própria ou em VPC.' },
         ],
       },
       sources: {
@@ -1292,19 +1345,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: 'المطورون والفرق التقنية التي تقيّم Dify لأنظمة RAG المستضافة ذاتيًا ووكلاء الذكاء الاصطناعي ونشر تطبيقات LLM، والفرق التي تقارنه بأدوات بناء مرئية أخف أو أطر عمل قائمة على الكود',
     primaryTerm: 'Dify',
     title: 'Dify: منصة LLMOps مفتوحة المصدر ورخصتها الحقيقية',
     seoTitle: 'مراجعة Dify: منصة LLMOps ورخصتها المعدّلة',
     intro: 'تجمع Dify بين أداة بناء سير عمل مرئية، وخط أنابيب RAG، وإطار عمل للوكلاء في منصة واحدة يمكن استضافتها ذاتيًا — بدلاً من دمج أدوات منفصلة لكل طبقة. الرخصة ليست Apache 2.0 قياسية، وهذا الفرق مهم قبل نشرها لعميل أو كمنتج مستضاف.',
-    metaDescription: 'Dify منصة LLMOps مفتوحة المصدر (أداة بناء سير عمل، RAG، وكلاء) برخصة Apache 2.0 معدّلة تقيّد استخدام SaaS متعدد المستأجرين دون إذن.',
+    metaDescription: 'مراجعة Dify: منصة LLMOps بسير عمل وRAG ووكلاء. استضافة ذاتية مجانية وCloud من 590$ سنويًا؛ رخصة Apache 2.0 المعدّلة تقيّد SaaS متعدد المستأجرين.',
     readTime: '12 دقائق للقراءة',
     targetKeywords: [
       'مراجعة Dify',
@@ -1320,13 +1374,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'ما الذي تُستخدم من أجله Dify؟',
         answer: 'تُستخدم Dify لبناء ونشر تطبيقات LLM — روبوتات المحادثة، ومساعدات المستندات القائمة على RAG، ووكلاء الذكاء الاصطناعي متعددي الخطوات — عبر أداة بناء سير عمل مرئية بدلاً من كتابة كود التنسيق يدويًا. تجمع المنصة بين استيعاب قاعدة المعرفة، واستدعاء أدوات الوكلاء، ونشر التطبيقات (تطبيق ويب، أو API، أو أداة قابلة للتضمين) في منصة واحدة.',
         bullets: [
-          'مفتوحة المصدر على GitHub (langgenius/dify)، بأكثر من 154,000 نجمة',
+          'مفتوحة المصدر على GitHub (langgenius/dify)، بأكثر من ' + st.ar('dify', 'bare') + ' نجمة',
           'الرخصة: Apache 2.0 معدّلة ("Dify Open Source License") — تمنع إعادة بيع SaaS متعدد المستأجرين دون إذن',
           'ثلاث إصدارات: Community المستضافة ذاتيًا، وDify Cloud المُدارة، وDify Enterprise',
           'أداة بناء سير عمل مرئية مع خط أنابيب معرفة RAG وإطار عمل وكلاء/أدوات في منتج واحد',
           'تبدأ أسعار Dify Cloud مجانًا (Sandbox)؛ والمستويات المدفوعة تُفوتر لكل مساحة عمل سنويًا',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1366,7 +1420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'ما هي Dify؟',
-        content: 'Dify منصة مفتوحة المصدر لبناء ونشر تطبيقات LLM — روبوتات محادثة، ومساعدات بحث في المستندات، وأنظمة متعددة الوكلاء — عبر واجهة مرئية، بدلاً من تجميع مكتبات منفصلة للتنسيق والاسترجاع ومنطق الوكلاء. يُصان المشروع من قبل LangGenius ومُستضاف على github.com/langgenius/dify، حيث تجاوز 154,000 نجمة على GitHub.',
+        content: 'Dify منصة مفتوحة المصدر لبناء ونشر تطبيقات LLM — روبوتات محادثة، ومساعدات بحث في المستندات، وأنظمة متعددة الوكلاء — عبر واجهة مرئية، بدلاً من تجميع مكتبات منفصلة للتنسيق والاسترجاع ومنطق الوكلاء. يُصان المشروع من قبل LangGenius ومُستضاف على github.com/langgenius/dify، حيث تجاوز ' + st.ar('dify', 'bare') + ' نجمة على GitHub.',
         items: [
           'Workflow Studio: أداة بناء مرئية قائمة على العُقد لربط المطالبات وخطوات الاسترجاع واستدعاءات الأدوات والمنطق الشرطي في تطبيق يعمل',
           'Knowledge Pipeline (RAG): استيعاب المستندات وتجزئتها وتضمينها وفهرستها لتغذية الاسترجاع في وكيل أو سير عمل',
@@ -1374,7 +1428,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'إدارة النماذج: تتصل بمئات نماذج LLM المملوكة ومفتوحة المصدر عبر عشرات مزودي الاستدلال، بما في ذلك أي نقطة نهاية متوافقة مع OpenAI API',
           'أكثر من 50 أداة مدمجة للوكلاء (بحث ويب، توليد صور، تنفيذ كود، وما شابه)، قابلة للتوسّع عبر تكاملات السوق وMCP',
           'خيارات النشر: نشر تطبيق كتطبيق ويب، أو API من نوع REST، أو أداة محادثة قابلة للتضمين، أو أداة متوافقة مع MCP، مع مراقبة التنفيذ',
-          'الإصدار الحالي: v1.17.1، تم التأكد منه عبر [إصدارات Dify على GitHub](https://github.com/langgenius/dify/releases/tag/1.17.1)',
+          'الإصدار الحالي: v1.18.0، تم التأكد منه عبر [إصدارات Dify على GitHub](https://github.com/langgenius/dify/releases/tag/1.18.0)',
+          'أحدث إصدار: v1.18.0 (' + formatDisplayDate('2026-10-23', 'ar') + ') يضيف مسارات مخرجات الوكيل (يختار الوكيل فرع سير العمل التالي)، وحزم تطبيقات قابلة للنقل بصيغة `.ifpkg`، ونسخة تجريبية من Agent Knowledge Base؛ كما ينشئ عميل سطر الأوامر الجديد `difyctl` تطبيقات Workflow وChatflow ويستوردها ويصدّرها وينشرها ([ملاحظات الإصدار](https://github.com/langgenius/dify/releases/tag/1.18.0))',
+          'آخر تحديث في المشروع الأصلي: ' + lastUpdate('ar') + ' (أحدث commit أو إصدار في المستودع [langgenius/dify](https://github.com/langgenius/dify))',
         ],
         note: 'الميزة المميّزة مقارنة بأداة سير عمل خالصة: استيعاب RAG وتنسيق الوكلاء والنشر تعيش جميعها في نفس المنتج — لست بحاجة إلى تجميع واجهة قاعدة بيانات متجهية وإطار وكلاء وطبقة استضافة بشكل منفصل.',
       },
@@ -1384,13 +1440,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'لا تصدر Dify بموجب رخصة Apache License 2.0 القياسية. يستخدم المستودع ما تسميه LangGenius "Dify Open Source License" — أساس Apache 2.0 مع شروط إضافية. هذه هي الحقيقة التي تتجاهلها معظم المراجعات، وهي تُغيّر كيفية نشر Dify قانونيًا في سيناريوهات محددة.',
           'تضيف الشروط الإضافية قيدين لا توجد في Apache 2.0 الخالصة. أولاً، لا يجوز استخدام كود Dify المصدري لتشغيل بيئة متعددة المستأجرين دون إذن كتابي صريح من LangGenius — أي لا يمكنك أخذ الكود مفتوح المصدر وإعادة بيعه كمنتج SaaS مستضاف متعدد العملاء خاص بك دون اتفاقية تجارية. ثانيًا، لا يجوز إزالة أو تعديل شعار Dify أو معلومات حقوق النشر الظاهرة في وحدة التحكم أو في التطبيقات المبنية باستخدامه.',
+          'يحسم تعريفان في ملف LICENSE معظم الحالات الحدّية. المستأجر (tenant) يعادل مساحة عمل واحدة: ينطبق قيد تعدد المستأجرين عندما تستخدم الشيفرة المصدرية لـ Dify لتشغيل مساحات عمل منفصلة لعملاء أو مؤسسات مختلفة. أما بند الشعار وحقوق النشر فينطبق فقط عند استخدام الواجهة الأمامية (frontend) لـ Dify (المجلد `web/` أو صورة Docker المسماة `web`)، ولا ينطبق على الاستخدامات التي لا تشمل الواجهة الأمامية. وتنص الرخصة على جواز الاستخدام التجاري، بما في ذلك كخدمة خلفية لتطبيقات أخرى أو كمنصة تطوير تطبيقات للشركات. هذا ملخص مبسّط وليس استشارة قانونية؛ والمرجع هو نص الرخصة نفسه.',
         ],
         items: [
           'مسموح: استضافة Dify داخليًا لفريقك أو مؤسستك الخاصة، على بنيتك التحتية الخاصة',
           'مسموح: استخدام Dify كخدمة خلفية داخل تطبيقك الخاص، بما في ذلك المنتجات التجارية، دون نموذج إعادة بيع متعدد المستأجرين',
           'مسموح: تعديل الكود المصدري وتفريعه (fork) وإعادة توزيعه بموجب شروط الرخصة نفسها',
           'مقيّد دون إذن كتابي: تشغيل كود Dify المصدري كمنصة SaaS متعددة المستأجرين — أي إعادة بيع وصول Dify المستضافة لعدة عملاء منفصلين كخدمتك الخاصة',
-          'مقيّد في أي وقت: إزالة أو تغيير شعار/إشعار حقوق نشر Dify في وحدة التحكم أو في التطبيقات المبنية عليه',
+          'مقيّد عند استخدام الواجهة الأمامية لـ Dify: إزالة أو تغيير شعار/إشعار حقوق نشر Dify في وحدة التحكم أو في التطبيقات المبنية عليه (لا ينطبق البند على الاستخدامات التي لا تشمل الواجهة الأمامية)',
         ],
         note: 'إذا كانت حالة استخدامك هي "تشغيل Dify لشركتي الخاصة" أو "تضمين Dify كمحرك خلف منتج واحد أبيعه"، فإن الرخصة المعدّلة لا تمنعك. أما إذا كانت حالة استخدامك هي "إنشاء نسخ مستضافة من Dify وبيع الوصول لعملاء منفصلين كثيرين"، فهذا بالضبط سيناريو SaaS متعدد المستأجرين الذي تحجزه الرخصة لاتفاقية تجارية مع LangGenius — وDify Cloud وDify Enterprise هما مسار المزوّد الخاص لهذا النموذج تحديدًا.',
         callouts: [
@@ -1448,6 +1505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'افتح http://localhost/install في متصفح لإكمال إعداد التشغيل الأول وإنشاء حساب مسؤول.',
           'أضِف مزوّد LLM واحدًا على الأقل (مفتاح API لنموذج مملوك، أو اتصال بنقطة نهاية محلية متوافقة مع OpenAI API) قبل بناء أول سير عمل.',
         ],
+        note: 'عند ترقية تثبيت قائم: اقرأ ملاحظات الإصدار أولًا. يتطلب الإصدار 1.17.1 ترقية يدوية متدرجة لمخزن المتجهات Weaviate المضمّن (من 1.27.0 إلى 1.39.2) قبل إعادة التشغيل؛ ويتطلب الإصدار 1.18.0 ترقية صور API وworkers وAgent Backend وAgent runtime معًا، كما تحتاج التثبيتات من المصدر إلى Python 3.13.',
         faqs: [
           { q: 'هل يحتاج Dify المستضاف ذاتيًا إلى GPU؟', a: 'لا، ليس للمنصة نفسها. تُنسّق Dify استدعاءات مزودي LLM — ولا تُشغّل استدلال النموذج بنفسها. تكون GPU ذات صلة فقط إذا استضفت بنفسك النموذج الذي تستدعيه Dify (مثلاً عبر خادم استدلال محلي).' },
           { q: 'هل يمكنني تشغيل Dify دون اتصال تمامًا بنماذج محلية؟', a: 'يمكنك توجيه Dify إلى أي نقطة نهاية استدلال محلية متوافقة مع OpenAI API، مما يسمح لنسخة Dify المستضافة ذاتيًا بتوجيه الطلبات إلى نموذج مستضاف محليًا دون استدعاء مزودي LLM خارجيين، طالما بقيت كل أداة وتكامل متصل محليًا أيضًا.' },
@@ -1514,7 +1572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل Dify مجانية؟', a: 'إصدار Community المستضاف ذاتيًا مجاني ومفتوح المصدر. يوفر Dify Cloud مستوى Sandbox مجانيًا بالإضافة إلى مستويي Professional وTeam المدفوعين، اللذين يُفوتران لكل مساحة عمل سنويًا. Dify Enterprise بتسعير مخصص.' },
-          { q: 'ما الرخصة التي تستخدمها Dify؟', a: 'رخصة Apache 2.0 معدّلة تسميها LangGenius "Dify Open Source License". تضيف قيدين إضافيين على Apache 2.0 الخالصة: لا يمكنك تشغيل الكود المصدري كـ SaaS متعدد المستأجرين دون إذن كتابي، ولا يمكنك إزالة أو تعديل شعار Dify أو إشعار حقوق النشر في وحدة التحكم أو التطبيقات المبنية باستخدامه.' },
+          { q: 'ما الرخصة التي تستخدمها Dify؟', a: 'رخصة Apache 2.0 معدّلة تسميها LangGenius «Dify Open Source License». تضيف شرطين إلى Apache 2.0 القياسية: لا يجوز استخدام الشيفرة المصدرية لتشغيل بيئة متعددة المستأجرين دون إذن كتابي (المستأجر الواحد يعادل مساحة عمل واحدة)، ولا يجوز إزالة شعار Dify أو إشعار حقوق النشر أو تعديلهما عند استخدام واجهته الأمامية.' },
           { q: 'هل يمكنني استخدام Dify تجاريًا؟', a: 'نعم، للاستخدام الداخلي أو كخلفية لمنتجك التجاري الخاص. إعادة بيع وصول مستضاف متعدد العملاء للكود مفتوح المصدر كخدمة SaaS خاصة بك هو السيناريو الوحيد الذي يتطلب اتفاقية كتابية منفصلة مع LangGenius.' },
           { q: 'هل تدعم Dify RAG؟', a: 'نعم. يستوعب Knowledge Pipeline المستندات والمواقع، ويجزّئها ويفهرسها، ويتيح لأي سير عمل أو وكيل استعلام قاعدة المعرفة الناتجة كخطوة استرجاع.' },
           { q: 'هل تدعم Dify وكلاء الذكاء الاصطناعي؟', a: 'نعم. يمكن بناء الوكلاء بالمحادثة أو تكوينهم يدويًا، ويمكنهم استدعاء APIs خارجية، أو تشغيل كود، أو استخدام أي من أكثر من 50 أداة مدمجة مرفقة مع المنصة، بما في ذلك أدوات قائمة على MCP.' },
@@ -1523,6 +1581,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يمكنني استضافة Dify ذاتيًا دون GPU؟', a: 'نعم. تُنسّق Dify استدعاءات مزودي LLM بدلاً من تشغيل الاستدلال بنفسها، لذا لا تمتلك المنصة نفسها أي متطلب GPU. تكون GPU مهمة فقط إذا استضفت بنفسك النموذج الذي تستدعيه Dify.' },
           { q: 'ماذا يضيف Dify Enterprise فوق Community؟', a: 'يضيف Dify Enterprise مصادقة SSO/SAML، وتحكمًا في الوصول قائمًا على الأدوار (RBAC)، ومساحات عمل متعددة، وامتثال SOC 2 Type II وISO 27001، يُنشر مستضافًا ذاتيًا أو في VPC الخاصة بك مع دعم من المزوّد.' },
           { q: 'ما النماذج التي تدعمها Dify؟', a: 'تتصل Dify بمئات نماذج LLM المملوكة ومفتوحة المصدر عبر عشرات مزودي الاستدلال، بما في ذلك أي نقطة نهاية متوافقة مع OpenAI API — وهو ما يغطي العديد من خوادم الاستدلال المحلية المستضافة ذاتيًا.' },
+          { q: 'هل يمكن إنشاء سير عمل Dify برمجيًا عبر API؟', a: 'جزئيًا. لكل تطبيق منشور واجهة Service API خاصة به (مصادقة برمز Bearer) لتشغيل سير العمل والمحادثات من الخادم الخلفي لديك. أما إنشاء التطبيقات نفسها وإدارتها بالشيفرة فهو أحدث: بحسب ملاحظات إصدار v1.18.0، يدعم عميل سطر الأوامر الجديد difyctl، المبني على كتالوج عمليات OpenAPI في الخادم، إنشاء تطبيقات Workflow وChatflow، واستيراد DSL وتصديره، والإعدادات، ومتغيرات البيئة، والنشر، واستعادة الإصدارات. أما وثائق Service API فتغطي تشغيل التطبيقات المنشورة فقط.' },
+          { q: 'هل Dify مفتوح المصدر؟', a: 'الشيفرة المصدرية متاحة علنًا على GitHub ويمكن استضافتها ذاتيًا مجانًا، لكن الرخصة هي Apache 2.0 معدّلة بشرطين إضافيين (لا خدمة متعددة المستأجرين دون إذن كتابي، والإبقاء على الشعار عند استخدام الواجهة الأمامية)، ولذلك فهي ليست Apache 2.0 القياسية. وما إذا كانت تُعدّ مفتوحة المصدر بالنسبة إليك يعتمد على سياسة التراخيص لديك.' },
+          { q: 'ما هو Dify Cloud؟', a: 'Dify Cloud هو الخدمة المُدارة التي تشغّلها LangGenius على [cloud.dify.ai](https://cloud.dify.ai)، وتشمل الخطط Sandbox (مجانية) وProfessional (590$ لكل مساحة عمل سنويًا) وTeam (1,590$ لكل مساحة عمل سنويًا). أما Dify Enterprise فيُباع عبر فريق المبيعات للنشر ذاتي الاستضافة أو داخل VPC.' },
         ],
       },
       sources: {
@@ -1549,19 +1610,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: '评估 Dify 用于自托管 RAG 流水线、AI 智能体和 LLM 应用部署的开发者和技术团队，以及将其与更轻量的可视化构建器或代码优先框架进行比较的团队',
     primaryTerm: 'Dify',
     title: 'Dify 深度评测：开源 LLMOps 平台的许可证真相',
     seoTitle: 'Dify 评测：开源 LLMOps 平台，许可证限制详解',
     intro: 'Dify 将可视化工作流构建器、RAG 流水线和智能体框架整合到一个可自托管的平台中，而不需要为每一层拼凑不同的工具。它的许可证并非标准 Apache 2.0，在为客户部署或作为托管产品之前，这一区别很重要。',
-    metaDescription: 'Dify 是一个开源 LLMOps 平台（工作流构建器、RAG、智能体），采用修改版 Apache 2.0 许可证，未经授权禁止多租户 SaaS 使用。',
+    metaDescription: 'Dify 评测：集可视化工作流、RAG 与智能体于一体的 LLMOps 平台。自托管免费，云版每年 590 美元起；修改版 Apache 2.0 限制多租户 SaaS。',
     readTime: '阅读约12分钟',
     targetKeywords: [
       'Dify 评测',
@@ -1577,13 +1639,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Dify 用来做什么？',
         answer: 'Dify 用于构建和部署 LLM 应用——聊天机器人、基于 RAG 的文档助手、多步骤 AI 智能体——通过可视化工作流构建器完成，而不是手写编排代码。它把知识库摄取、智能体工具调用和应用发布（Web 应用、API 或可嵌入组件）整合在一个平台里。',
         bullets: [
-          '在 GitHub 开源（langgenius/dify），超过 154,000 星标',
+          '在 GitHub 开源（langgenius/dify），超过 ' + st.zh('dify', 'bare') + ' 星标',
           '许可证：修改版 Apache 2.0（"Dify Open Source License"）——禁止未经授权的多租户 SaaS 转售',
           '三种版本：自托管 Community、托管 Dify Cloud、Dify Enterprise',
           '可视化工作流构建器、RAG 知识流水线、智能体/工具调用框架集于一个产品',
           'Dify Cloud 定价从免费开始（Sandbox）；付费层按工作区、按年计费',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1623,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'Dify 是什么？',
-        content: 'Dify 是一个开源平台，用于通过可视化界面构建和部署 LLM 应用——聊天机器人、文档搜索助手和多智能体系统，而不必为编排、检索和智能体逻辑拼凑不同的库。项目由 LangGenius 维护，托管在 github.com/langgenius/dify，GitHub 星标已超过 154,000。',
+        content: 'Dify 是一个开源平台，用于通过可视化界面构建和部署 LLM 应用——聊天机器人、文档搜索助手和多智能体系统，而不必为编排、检索和智能体逻辑拼凑不同的库。项目由 LangGenius 维护，托管在 github.com/langgenius/dify，GitHub 星标已超过 ' + st.zh('dify', 'bare') + '。',
         items: [
           'Workflow Studio：基于节点的可视化构建器，将提示词、检索步骤、工具调用和条件逻辑串联成可运行的应用',
           'Knowledge Pipeline（RAG）：文档摄取、分块、嵌入和索引，为智能体或工作流提供检索能力',
@@ -1631,7 +1693,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '模型管理：连接数十家推理供应商的数百个专有和开源 LLM，包括任何兼容 OpenAI API 的端点',
           '为智能体内置超过 50 种工具（网页搜索、图像生成、代码执行等），可通过市场集成和 MCP 扩展',
           '发布选项：将应用部署为 Web 应用、REST API、可嵌入聊天组件或兼容 MCP 的工具，并支持执行监控',
-          '当前版本：v1.17.1，通过[Dify的GitHub发布页](https://github.com/langgenius/dify/releases/tag/1.17.1)确认',
+          '当前版本：v1.18.0，通过[Dify的GitHub发布页](https://github.com/langgenius/dify/releases/tag/1.18.0)确认',
+          '最新版本：v1.18.0（' + formatDisplayDate('2026-10-23', 'zh') + '）新增 Agent 输出路由（由智能体选择工作流的下一分支）、可移植的 `.ifpkg` 应用包以及 Agent Knowledge Base 测试版；新的命令行客户端 `difyctl` 可创建、导入、导出和发布 Workflow 与 Chatflow 应用（[发布说明](https://github.com/langgenius/dify/releases/tag/1.18.0)）',
+          '上游最近更新：' + lastUpdate('zh') + '（仓库 [langgenius/dify](https://github.com/langgenius/dify) 中最新的提交或发布）',
         ],
         note: '与纯工作流工具的区别在于：RAG 摄取、智能体编排和部署都在同一产品中——你不需要单独拼接向量数据库界面、智能体框架和托管层。',
       },
@@ -1641,13 +1705,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Dify 并非采用纯 Apache License 2.0 发布。该仓库使用的是 LangGenius 所称的 "Dify Open Source License"——以 Apache 2.0 为基础，叠加了附加条款。这是大多数评测忽略的事实，它会改变你在特定场景下部署 Dify 的合法方式。',
           '附加条款增加了纯 Apache 2.0 所没有的两项限制。第一，未经 LangGenius 明确书面授权，不得使用 Dify 源代码运营多租户环境——也就是说，不能未经商业协议就把开源代码转卖成自己的托管多客户 SaaS 产品。第二，不得移除或修改控制台或基于其构建的应用中显示的 Dify 标志或版权信息。',
+          'LICENSE 文件中的两个定义可以解决大多数边界情况。一个租户对应一个工作区：当你使用 Dify 源代码为不同客户或组织运营彼此独立的工作区时，多租户限制即适用。标志与版权条款仅在你使用 Dify 前端（`web/` 目录或 `web` Docker 镜像）时适用，不适用于不涉及前端的使用方式。许可证明确允许商业使用，包括作为其他应用的后端服务，或作为企业的应用开发平台。以上是通俗摘要，不构成法律意见，请以许可证原文为准。',
         ],
         items: [
           '允许：在自有基础设施上，为自己的团队或组织内部自托管 Dify',
           '允许：将 Dify 作为自有应用（包括商业产品）内的后端服务使用，且不采用多租户转售模式',
           '允许：在相同许可条款下修改、分叉（fork）和重新分发源代码',
           '未经书面授权受限：将 Dify 源代码作为多租户 SaaS 平台运营——即把托管的 Dify 访问权限作为自己的服务转卖给多个独立客户',
-          '任何时候均受限：移除或更改控制台或基于其构建的应用中的 Dify 标志/版权声明',
+          '使用 Dify 前端时受限：移除或更改控制台或基于其构建的应用中的 Dify 标志/版权声明（该条款不适用于不涉及前端的使用方式）',
         ],
         note: '如果你的用例是"为自己公司运行 Dify"或"将 Dify 作为引擎嵌入你销售的单一产品"，修改后的许可证并不会阻止你。如果你的用例是"搭建托管 Dify 实例并向许多独立客户出售访问权限"，那正是许可证为与 LangGenius 的商业协议所保留的多租户 SaaS 场景——Dify Cloud 和 Dify Enterprise 正是供应商为这种模式提供的自有路径。',
         callouts: [
@@ -1705,6 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在浏览器中打开 http://localhost/install 完成首次运行设置并创建管理员账户。',
           '在构建第一个工作流之前，至少添加一个 LLM 供应商（专有模型的 API 密钥，或连接到本地运行的兼容 OpenAI API 的端点）。',
         ],
+        note: '升级现有安装：请先阅读发布说明。1.17.1 要求在重启前对内置 Weaviate 向量库做手动分步升级（1.27.0 → 1.39.2）；1.18.0 要求同时升级 API、worker、Agent Backend 和 Agent runtime 镜像，源码安装需使用 Python 3.13。',
         faqs: [
           { q: '自托管 Dify 需要 GPU 吗？', a: '不需要，平台本身不需要。Dify 编排对 LLM 供应商的调用——它本身不执行模型推理。只有当你单独自托管 Dify 调用的 LLM（例如通过本地推理服务器）时，GPU 才有意义。' },
           { q: '我能用本地模型完全离线运行 Dify 吗？', a: '你可以将 Dify 指向任何兼容 OpenAI API 的本地推理端点，这样自托管的 Dify 实例就能把请求路由到本地托管的模型，而不调用外部 LLM 供应商——前提是每个连接的工具和集成也保持本地化。' },
@@ -1771,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'Dify 是免费的吗？', a: '自托管的 Community 版免费且开源。Dify Cloud 有免费的 Sandbox 层，以及按工作区、按年计费的付费 Professional 和 Team 层。Dify Enterprise 采用定制定价。' },
-          { q: 'Dify 使用什么许可证？', a: '一种修改版 Apache 2.0 许可证，LangGenius 称之为 "Dify Open Source License"。它在纯 Apache 2.0 之上增加了两项限制：未经书面授权不得将源代码作为多租户 SaaS 运营，且不得移除或修改控制台或基于其构建的应用中的 Dify 标志或版权声明。' },
+          { q: 'Dify 使用什么许可证？', a: '一种修改版 Apache 2.0 许可证，LangGenius 称之为“Dify Open Source License”。它在标准 Apache 2.0 之上增加两项条件：未经书面授权，不得使用源代码运营多租户环境（一个租户对应一个工作区）；使用 Dify 前端时，不得移除或修改 Dify 标志或版权声明。' },
           { q: '我可以将 Dify 用于商业用途吗？', a: '可以，用于内部使用或作为你自己商业产品的后端。将开源代码的托管多客户访问权限转卖为你自己的 SaaS，是唯一需要与 LangGenius 单独签订书面协议的场景。' },
           { q: 'Dify 支持 RAG 吗？', a: '支持。Knowledge Pipeline 摄取文档和网站，对其进行分块和索引，并让任何工作流或智能体将生成的知识库作为检索步骤查询。' },
           { q: 'Dify 支持 AI 智能体吗？', a: '支持。智能体可以通过对话构建或手动配置，并能调用外部 API、执行代码，或使用平台内置的超过 50 种工具中的任意一种，包括基于 MCP 的工具。' },
@@ -1780,6 +1846,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '我可以不使用 GPU 自托管 Dify 吗？', a: '可以。Dify 编排对 LLM 供应商的调用，而不是自己执行推理，因此平台本身没有任何 GPU 需求。只有当你单独自托管 Dify 调用的 LLM 时，GPU 才会起作用。' },
           { q: 'Dify Enterprise 相比 Community 增加了什么？', a: 'Dify Enterprise 增加了 SSO/SAML 认证、基于角色的访问控制（RBAC）、多个工作区，以及 SOC 2 Type II 和 ISO 27001 合规，可自托管部署或部署在你自己的 VPC 中，并获得供应商支持。' },
           { q: 'Dify 支持哪些模型？', a: 'Dify 连接数十家推理供应商的数百个专有和开源 LLM，包括任何兼容 OpenAI API 的端点——这涵盖了许多自托管的本地推理服务器。' },
+          { q: '可以通过 API 以编程方式创建 Dify 工作流吗？', a: '部分可以。每个已发布的应用都有自己的 Service API（Bearer 令牌认证），可从你的后端运行工作流和对话。通过代码创建和管理应用本身则较新：根据 v1.18.0 发布说明，基于服务器 OpenAPI 操作目录的新命令行客户端 difyctl 支持创建 Workflow 和 Chatflow 应用、DSL 导入/导出、设置、环境变量、发布以及版本恢复。Service API 文档仅涵盖运行已发布的应用。' },
+          { q: 'Dify 是开源的吗？', a: '源代码在 GitHub 上公开，可免费自托管，但许可证是附带两项额外条件的修改版 Apache 2.0（未经书面授权不得提供多租户服务；使用前端时须保留标志），因此不是标准 Apache 2.0。它对你是否算作开源，取决于你自己的许可证政策。' },
+          { q: 'Dify Cloud 是什么？', a: 'Dify Cloud 是 LangGenius 运营的托管服务，地址为 [cloud.dify.ai](https://cloud.dify.ai)，提供 Sandbox（免费）、Professional（每工作区 590 美元/年）和 Team（每工作区 1,590 美元/年）方案。Dify Enterprise 通过销售团队购买，用于自托管或 VPC 部署。' },
         ],
       },
       sources: {
@@ -1806,19 +1875,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: 'セルフホスト型RAGパイプライン、AIエージェント、LLMアプリのデプロイにDifyを検討している開発者・技術チーム、および軽量なビジュアルビルダーやコードファーストのフレームワークと比較検討しているチーム',
     primaryTerm: 'Dify',
     title: 'Difyのライセンス徹底解説：OSSのLLMOps基盤',
     seoTitle: 'Dify徹底評価：OSSのLLMOpsとライセンス制限',
     intro: 'Difyはビジュアルワークフロービルダー、RAGパイプライン、エージェントフレームワークを1つのセルフホスト可能なプラットフォームに統合しています——各層ごとに別々のツールを組み合わせる代わりに。ライセンスは通常のApache 2.0ではなく、この違いはクライアント向けやホスト型製品として導入する前に重要です。',
-    metaDescription: 'Difyはワークフロービルダー・RAG・エージェントを備えたOSSのLLMOps基盤で、無許可でのマルチテナントSaaS利用を制限する修正版Apache 2.0ライセンスを採用しています。',
+    metaDescription: 'Dify徹底評価：ビジュアルワークフロー・RAG・エージェントを備えたLLMOps基盤。セルフホストは無料、Cloudは年590ドルから。修正版Apache 2.0がマルチテナントSaaSを制限。',
     readTime: '12分で読める',
     targetKeywords: [
       'Dify レビュー',
@@ -1834,13 +1904,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Difyは何に使うのか？',
         answer: 'Difyは、チャットボット、RAGベースのドキュメントアシスタント、複数ステップのAIエージェントといったLLMアプリを、オーケストレーションコードを手書きせずビジュアルワークフロービルダーで構築・デプロイするために使われます。ナレッジベースの取り込み、エージェントのツール呼び出し、アプリ公開（Webアプリ、API、埋め込みウィジェット）を1つの基盤にまとめています。',
         bullets: [
-          'GitHubでOSS公開（langgenius/dify）、15.4万以上のスター',
+          'GitHubでOSS公開（langgenius/dify）、' + st.ja('dify', 'bare') + '以上のスター',
           'ライセンス：修正版Apache 2.0（「Dify Open Source License」）——無許可のマルチテナントSaaS転売を禁止',
           '3つのエディション：セルフホスト型Community、マネージドのDify Cloud、Dify Enterprise',
           'ビジュアルワークフロービルダー、RAGナレッジパイプライン、エージェント/ツール呼び出しフレームワークが1製品に統合',
           'Dify Cloudの料金は無料（Sandbox）から始まり、有料プランはワークスペース単位・年払い',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1880,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'Difyとは何か？',
-        content: 'Difyは、オーケストレーション・検索・エージェントロジックそれぞれに別々のライブラリを組み合わせる代わりに、ビジュアルインターフェースでLLMアプリ（チャットボット、ドキュメント検索アシスタント、マルチエージェントシステム）を構築・デプロイするOSSプラットフォームです。LangGeniusが開発を主導し、github.com/langgenius/dify で公開されており、GitHubスターは15.4万を超えています。',
+        content: 'Difyは、オーケストレーション・検索・エージェントロジックそれぞれに別々のライブラリを組み合わせる代わりに、ビジュアルインターフェースでLLMアプリ（チャットボット、ドキュメント検索アシスタント、マルチエージェントシステム）を構築・デプロイするOSSプラットフォームです。LangGeniusが開発を主導し、github.com/langgenius/dify で公開されており、GitHubスターは' + st.ja('dify', 'bare') + 'を超えています。',
         items: [
           'Workflow Studio：ノードベースのビジュアルビルダーで、プロンプト、検索ステップ、ツール呼び出し、条件分岐を連結して動作するアプリを構築',
           'Knowledge Pipeline（RAG）：ドキュメントの取り込み、チャンク分割、埋め込み、インデックス化を行い、エージェントやワークフローの検索に供給',
@@ -1888,7 +1958,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'モデル管理：数十のインフェレンスプロバイダーにまたがる数百の商用・OSSのLLMに接続、OpenAI API互換の任意のエンドポイントも含む',
           'エージェント向けに50以上の組み込みツール（Web検索、画像生成、コード実行など）があり、マーケットプレイス連携やMCPで拡張可能',
           '公開オプション：Webアプリ、REST API、埋め込み可能なチャットウィジェット、MCP互換ツールとしてアプリをデプロイでき、実行モニタリングも可能',
-          '現行バージョン：v1.17.1（[DifyのGitHubリリース](https://github.com/langgenius/dify/releases/tag/1.17.1)で確認）',
+          '現行バージョン：v1.18.0（[DifyのGitHubリリース](https://github.com/langgenius/dify/releases/tag/1.18.0)で確認）',
+          '最新バージョン：v1.18.0（' + formatDisplayDate('2026-10-23', 'ja') + '）では、エージェント出力ルート（エージェントがワークフローの次の分岐を選択）、持ち運び可能な`.ifpkg`アプリパッケージ、Agent Knowledge Baseのベータ版が追加されました。新しいコマンドラインクライアント`difyctl`で、WorkflowおよびChatflowアプリの作成・インポート・エクスポート・公開ができます（[リリースノート](https://github.com/langgenius/dify/releases/tag/1.18.0)）',
+          '上流の最終更新：' + lastUpdate('ja') + '（リポジトリ[langgenius/dify](https://github.com/langgenius/dify)の最新のコミットまたはリリース）',
         ],
         note: '純粋なワークフローツールとの違いは、RAGの取り込み、エージェントのオーケストレーション、デプロイがすべて同じ製品内にあること——ベクトルデータベースのUI、エージェントフレームワーク、ホスティング層を別々に組み合わせる必要はありません。',
       },
@@ -1898,13 +1970,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Difyは純粋なApache License 2.0では公開されていません。リポジトリはLangGeniusが「Dify Open Source License」と呼ぶもの——Apache 2.0をベースに追加条項を重ねたもの——を採用しています。これは多くのレビューが見過ごしている事実であり、特定のシナリオでDifyを合法的に展開する方法を変えます。',
           '追加条項は、純粋なApache 2.0にはない2つの制限を加えています。第一に、LangGeniusの明示的な書面許可なしに、Difyのソースコードを使ってマルチテナント環境を運用することはできません——つまり、商用契約なしにOSSコードを自社のホスト型マルチカスタマーSaaS製品として転売することはできません。第二に、コンソールやそれを使って構築されたアプリケーションに表示されるDifyのロゴまたは著作権情報を削除・変更することはできません。',
+          'LICENSEファイルの2つの定義で、ほとんどの境界ケースは判断できます。テナントは1つのワークスペースに相当します。Difyのソースコードを使って、別々の顧客や組織向けに独立したワークスペースを運用する場合、マルチテナント制限が適用されます。ロゴと著作権の条項は、Difyのフロントエンド（`web/`ディレクトリまたは`web` Dockerイメージ）を使う場合にのみ適用され、フロントエンドを使わない利用には適用されません。ライセンスは、他のアプリケーションのバックエンドサービスや企業向けのアプリ開発基盤としての利用を含め、商用利用を認めています。これは平易な要約であり法的助言ではありません。ライセンス本文が優先されます。',
         ],
         items: [
           '許可される：自社インフラ上で、自チームまたは自組織向けにDifyを内部的にセルフホストすること',
           '許可される：マルチテナント転売モデルを伴わずに、自社アプリケーション（商用製品を含む）内のバックエンドサービスとしてDifyを利用すること',
           '許可される：同じライセンス条件のもとでソースコードを改変・フォーク・再配布すること',
           '書面許可なしでは制限される：DifyのソースコードをマルチテナントのSaaSプラットフォームとして運用すること——つまり、ホスト型Difyへのアクセスを複数の別々の顧客に自社サービスとして転売すること',
-          'いつでも制限される：コンソールまたはそれを基に構築されたアプリ内のDifyロゴ/著作権表示を削除または変更すること',
+          'Difyのフロントエンドを使う場合は制限される：コンソールまたはそれを基に構築されたアプリ内のDifyロゴ/著作権表示を削除または変更すること（フロントエンドを使わない利用には適用されない）',
         ],
         note: 'ユースケースが「自社のためにDifyを運用する」または「販売する1つの製品の裏側でDifyをエンジンとして組み込む」であれば、修正ライセンスは制約になりません。ユースケースが「ホスト型Difyインスタンスを立ち上げ、多数の別々の顧客にアクセスを販売する」であれば、それはまさにライセンスがLangGeniusとの商用契約に留保しているマルチテナントSaaSのシナリオです——Dify CloudとDify Enterpriseは、まさにこのモデル向けにベンダー自身が用意した道です。',
         callouts: [
@@ -1962,6 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ブラウザで http://localhost/install を開き、初回セットアップを完了し管理者アカウントを作成する。',
           '最初のワークフローを構築する前に、少なくとも1つのLLMプロバイダー（商用モデル用のAPIキー、またはローカルで動くOpenAI API互換エンドポイントへの接続）を追加する。',
         ],
+        note: '既存環境のアップグレード：まずリリースノートをお読みください。1.17.1では、再起動前に同梱のWeaviateベクトルストアを手動で段階的にアップグレードする必要があります（1.27.0 → 1.39.2）。1.18.0では、API、ワーカー、Agent Backend、Agentランタイムの各イメージをまとめてアップグレードする必要があり、ソースからのインストールにはPython 3.13が必要です。',
         faqs: [
           { q: 'セルフホストのDifyにGPUは必要か？', a: 'いいえ、プラットフォーム自体には不要です。DifyはLLMプロバイダーへの呼び出しをオーケストレーションするだけで、モデル推論自体は実行しません。GPUが関係するのは、Difyが呼び出すLLMを（たとえばローカル推論サーバー経由で）別途セルフホストする場合だけです。' },
           { q: 'ローカルモデルでDifyを完全にオフラインで動かせるか？', a: 'DifyをOpenAI API互換の任意のローカル推論エンドポイントに向けることができ、これによりセルフホストのDifyインスタンスは外部のLLMプロバイダーを呼び出さずにローカルでホストされたモデルへリクエストをルーティングできます——接続されているすべてのツールと連携もローカルに保たれていることが条件です。' },
@@ -2028,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'Difyは無料か？', a: 'セルフホストのCommunity版は無料でOSSです。Dify Cloudには無料のSandbox層に加え、ワークスペース単位・年払いの有料ProfessionalとTeamの各プランがあります。Dify Enterpriseはカスタム価格です。' },
-          { q: 'Difyはどのライセンスを使っているか？', a: 'LangGeniusが「Dify Open Source License」と呼ぶ修正版Apache 2.0ライセンスです。純粋なApache 2.0を超える2つの制限を追加しています：書面許可なくソースコードをマルチテナントSaaSとして運用できないこと、コンソールやそれを使って構築されたアプリ内のDifyのロゴまたは著作権表示を削除・変更できないことです。' },
+          { q: 'Difyはどのライセンスを使っているか？', a: 'LangGeniusが「Dify Open Source License」と呼ぶ修正版Apache 2.0ライセンスです。通常のApache 2.0に2つの条件が加わります。書面による許可なくソースコードでマルチテナント環境を運用してはならない（1テナントは1ワークスペースに相当）こと、そしてDifyのフロントエンドを使う場合にDifyロゴや著作権表示を削除・変更してはならないことです。' },
           { q: 'Difyは商用利用できるか？', a: 'はい、社内利用として、または自社の商用製品のバックエンドとして利用できます。OSSコードへのホスト型マルチカスタマーアクセスを自社SaaSとして転売することだけが、LangGeniusとの別途書面契約が必要な唯一のシナリオです。' },
           { q: 'DifyはRAGに対応しているか？', a: 'はい。Knowledge Pipelineがドキュメントとウェブサイトを取り込み、チャンク分割とインデックス化を行い、任意のワークフローやエージェントが結果のナレッジベースを検索ステップとしてクエリできるようにします。' },
           { q: 'DifyはAIエージェントに対応しているか？', a: 'はい。エージェントは会話形式で構築するか手動で設定でき、外部APIの呼び出し、コードの実行、またはプラットフォームに同梱される50以上の組み込みツール（MCPベースのツールを含む）のいずれかを使用できます。' },
@@ -2037,6 +2111,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'GPUなしでDifyをセルフホストできるか？', a: 'はい。Difyは自分で推論を実行するのではなくLLMプロバイダーへの呼び出しをオーケストレーションするため、プラットフォーム自体にGPU要件はありません。GPUが重要になるのは、Difyが呼び出すLLMを別途セルフホストする場合だけです。' },
           { q: 'Dify EnterpriseはCommunityと比べて何が追加されるか？', a: 'Dify Enterpriseは、SSO/SAML認証、ロールベースアクセス制御（RBAC）、複数のワークスペース、SOC 2 Type IIおよびISO 27001準拠を追加し、セルフホストまたは自社VPC上に展開され、ベンダーサポートが付きます。' },
           { q: 'Difyはどんなモデルに対応しているか？', a: 'Difyは数十のインフェレンスプロバイダーにまたがる数百の商用・OSSのLLMに接続でき、OpenAI API互換の任意のエンドポイントも含みます——これは多くのセルフホストのローカル推論サーバーをカバーします。' },
+          { q: 'DifyのワークフローをAPIでプログラム的に作成できますか？', a: '一部可能です。公開済みの各アプリには専用のService API（Bearerトークン認証）があり、自社のバックエンドからワークフローやチャットを実行できます。アプリ自体をコードで作成・管理する機能は新しく、v1.18.0のリリースノートによれば、サーバーのOpenAPI操作カタログに基づく新しいコマンドラインクライアントdifyctlが、WorkflowとChatflowアプリの作成、DSLのインポート/エクスポート、設定、環境変数、公開、バージョン復元に対応しています。Service APIのドキュメントは、公開済みアプリの実行のみを扱っています。' },
+          { q: 'Difyはオープンソースですか？', a: 'ソースコードはGitHubで公開されており、無料でセルフホストできます。ただしライセンスは、2つの追加条件（書面による許可なくマルチテナントサービスを提供しない、フロントエンド使用時はロゴを維持する）が付いた修正版Apache 2.0であり、通常のApache 2.0ではありません。オープンソースとして扱えるかどうかは、自社のライセンスポリシー次第です。' },
+          { q: 'Dify Cloudとは何ですか？', a: 'Dify Cloudは、LangGeniusが[cloud.dify.ai](https://cloud.dify.ai)で運営するマネージドサービスで、Sandbox（無料）、Professional（ワークスペースあたり年間590ドル）、Team（ワークスペースあたり年間1,590ドル）の各プランがあります。Dify Enterpriseは営業窓口経由で提供され、セルフホストまたはVPCに導入します。' },
         ],
       },
       sources: {
@@ -2063,19 +2140,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/dify-ai-workflow-builder-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-02',
+    next_refresh_due: '2027-04-30',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-30',
     educationalLevel: 'Intermediate',
     audience: '셀프 호스팅 RAG 파이프라인, AI 에이전트, LLM 앱 배포를 위해 Dify를 검토 중인 개발자 및 기술 팀, 그리고 더 가벼운 비주얼 빌더나 코드 우선 프레임워크와 비교 중인 팀',
     primaryTerm: 'Dify',
     title: 'Dify 라이선스 완전 정리: 오픈소스 LLMOps 플랫폼',
     seoTitle: 'Dify 리뷰: 오픈소스 LLMOps 플랫폼과 라이선스 제한',
     intro: 'Dify는 비주얼 워크플로 빌더, RAG 파이프라인, 에이전트 프레임워크를 셀프 호스팅 가능한 하나의 플랫폼으로 결합합니다. 각 계층마다 별도 도구를 조합하는 대신입니다. 라이선스는 표준 Apache 2.0이 아니며, 이 차이는 고객사에 배포하거나 호스팅 제품으로 운영하기 전에 반드시 확인해야 합니다.',
-    metaDescription: 'Dify는 워크플로 빌더, RAG, 에이전트를 갖춘 오픈소스 LLMOps 플랫폼으로, 무단 멀티테넌트 SaaS 사용을 제한하는 수정된 Apache 2.0 라이선스를 사용합니다.',
+    metaDescription: 'Dify 리뷰: 비주얼 워크플로, RAG, 에이전트를 갖춘 LLMOps 플랫폼. 셀프 호스팅은 무료, Cloud는 연 590달러부터이며 수정된 Apache 2.0이 멀티테넌트 SaaS를 제한합니다.',
     readTime: '12분 읽기',
     targetKeywords: [
       'Dify 리뷰',
@@ -2091,13 +2169,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Dify는 무엇에 사용됩니까?',
         answer: 'Dify는 챗봇, RAG 기반 문서 어시스턴트, 여러 단계로 구성된 AI 에이전트 같은 LLM 애플리케이션을 오케스트레이션 코드를 직접 작성하지 않고 비주얼 워크플로 빌더로 구축하고 배포하는 데 사용됩니다. 지식 베이스 수집, 에이전트 도구 호출, 앱 게시(웹 앱, API, 임베드 위젯)를 하나의 플랫폼에 통합했습니다.',
         bullets: [
-          'GitHub 오픈소스(langgenius/dify), 15만 4천 개 이상의 스타',
+          'GitHub 오픈소스(langgenius/dify), ' + st.ko('dify', 'bare') + ' 개 이상의 스타',
           '라이선스: 수정된 Apache 2.0("Dify Open Source License") — 무단 멀티테넌트 SaaS 재판매 차단',
           '세 가지 에디션: 셀프 호스팅 Community, 관리형 Dify Cloud, Dify Enterprise',
           '비주얼 워크플로 빌더, RAG 지식 파이프라인, 에이전트/도구 호출 프레임워크가 한 제품에 통합',
           'Dify Cloud 요금제는 무료(Sandbox)부터 시작하며, 유료 등급은 워크스페이스당 연 단위로 청구',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2137,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-dify',
         title: 'Dify란 무엇인가?',
-        content: 'Dify는 오케스트레이션, 검색, 에이전트 로직마다 별도의 라이브러리를 조합하는 대신, 비주얼 인터페이스로 LLM 애플리케이션(챗봇, 문서 검색 어시스턴트, 멀티에이전트 시스템)을 구축하고 배포하는 오픈소스 플랫폼입니다. 이 프로젝트는 LangGenius가 관리하며 github.com/langgenius/dify에 호스팅되어 있고, GitHub 스타 15만 4천 개를 넘어섰습니다.',
+        content: 'Dify는 오케스트레이션, 검색, 에이전트 로직마다 별도의 라이브러리를 조합하는 대신, 비주얼 인터페이스로 LLM 애플리케이션(챗봇, 문서 검색 어시스턴트, 멀티에이전트 시스템)을 구축하고 배포하는 오픈소스 플랫폼입니다. 이 프로젝트는 LangGenius가 관리하며 github.com/langgenius/dify에 호스팅되어 있고, GitHub 스타 ' + st.ko('dify', 'bare') + ' 개를 넘어섰습니다.',
         items: [
           'Workflow Studio: 프롬프트, 검색 단계, 도구 호출, 조건부 로직을 연결해 작동하는 애플리케이션을 만드는 노드 기반 비주얼 빌더',
           'Knowledge Pipeline(RAG): 문서 수집, 청킹, 임베딩, 인덱싱을 수행해 에이전트나 워크플로의 검색에 데이터를 제공',
@@ -2145,7 +2223,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '모델 관리: 수십 개 추론 공급자에 걸친 수백 개의 독점 및 오픈소스 LLM에 연결되며, OpenAI API와 호환되는 모든 엔드포인트도 포함',
           '에이전트용 내장 도구 50개 이상(웹 검색, 이미지 생성, 코드 실행 등)을 제공하며, 마켓플레이스 연동과 MCP로 확장 가능',
           '게시 옵션: 웹 앱, REST API, 임베드 가능한 채팅 위젯, 또는 MCP 호환 도구로 앱을 배포하며 실행 모니터링도 지원',
-          '현재 버전: v1.17.1 ([Dify GitHub 릴리스](https://github.com/langgenius/dify/releases/tag/1.17.1)에서 확인)',
+          '현재 버전: v1.18.0 ([Dify GitHub 릴리스](https://github.com/langgenius/dify/releases/tag/1.18.0)에서 확인)',
+          '최신 버전: v1.18.0(' + formatDisplayDate('2026-10-23', 'ko') + ')에는 에이전트 출력 경로(에이전트가 워크플로의 다음 분기를 선택), 이식 가능한 `.ifpkg` 앱 패키지, Agent Knowledge Base 베타가 추가되었습니다. 새 명령줄 클라이언트 `difyctl`로 Workflow 및 Chatflow 앱을 생성, 가져오기, 내보내기, 게시할 수 있습니다([릴리스 노트](https://github.com/langgenius/dify/releases/tag/1.18.0))',
+          '업스트림 최종 업데이트: ' + lastUpdate('ko') + '(저장소 [langgenius/dify](https://github.com/langgenius/dify)의 최신 커밋 또는 릴리스)',
         ],
         note: '순수 워크플로 도구와의 차별점은 RAG 수집, 에이전트 오케스트레이션, 배포가 모두 같은 제품 안에 있다는 점입니다 — 벡터 데이터베이스 UI, 에이전트 프레임워크, 호스팅 계층을 따로따로 조합할 필요가 없습니다.',
       },
@@ -2155,13 +2235,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Dify는 순수 Apache License 2.0으로 배포되지 않습니다. 리포지토리는 LangGenius가 "Dify Open Source License"라고 부르는 것을 사용합니다 — Apache 2.0을 기반으로 추가 조건을 덧붙인 라이선스입니다. 이는 대부분의 리뷰가 간과하는 사실이며, 특정 시나리오에서 Dify를 합법적으로 배포하는 방식을 바꿉니다.',
           '추가 조건은 순수 Apache 2.0에는 없는 두 가지 제한을 더합니다. 첫째, LangGenius의 명시적 서면 승인 없이는 Dify 소스 코드를 사용해 멀티테넌트 환경을 운영할 수 없습니다 — 즉, 상업적 계약 없이 오픈소스 코드를 가져다 자체 호스팅형 멀티고객 SaaS 제품으로 재판매할 수 없습니다. 둘째, 콘솔이나 이를 이용해 만든 애플리케이션에 표시되는 Dify 로고 또는 저작권 정보를 제거하거나 수정할 수 없습니다.',
+          'LICENSE 파일의 두 가지 정의로 대부분의 경계 사례를 판단할 수 있습니다. 테넌트 하나는 워크스페이스 하나에 해당합니다. Dify 소스 코드로 서로 다른 고객이나 조직을 위한 별도 워크스페이스를 운영하면 멀티테넌트 제한이 적용됩니다. 로고 및 저작권 조항은 Dify 프런트엔드(`web/` 디렉터리 또는 `web` Docker 이미지)를 사용할 때만 적용되며, 프런트엔드를 사용하지 않는 용도에는 적용되지 않습니다. 라이선스는 다른 애플리케이션의 백엔드 서비스나 기업용 애플리케이션 개발 플랫폼으로 쓰는 경우를 포함해 상업적 사용을 허용한다고 명시합니다. 이는 쉬운 말로 정리한 요약이며 법률 자문이 아닙니다. 라이선스 원문이 우선합니다.',
         ],
         items: [
           '허용됨: 자체 인프라에서 자기 팀이나 조직을 위해 내부적으로 Dify를 셀프 호스팅하는 것',
           '허용됨: 멀티테넌트 재판매 모델 없이 자체 애플리케이션(상업용 제품 포함) 내부의 백엔드 서비스로 Dify를 사용하는 것',
           '허용됨: 동일한 라이선스 조건 하에 소스 코드를 수정, 포크, 재배포하는 것',
           '서면 승인 없이는 제한됨: Dify 소스 코드를 멀티테넌트 SaaS 플랫폼으로 운영하는 것 — 즉 여러 개별 고객에게 호스팅된 Dify 접근 권한을 자체 서비스로 재판매하는 것',
-          '언제든 제한됨: 콘솔이나 그 위에 구축된 앱에서 Dify 로고/저작권 표시를 제거하거나 변경하는 것',
+          'Dify 프런트엔드를 사용할 때 제한됨: 콘솔이나 그 위에 구축된 앱에서 Dify 로고/저작권 표시를 제거하거나 변경하는 것(프런트엔드를 사용하지 않는 용도에는 이 조항이 적용되지 않음)',
         ],
         note: '사용 사례가 "우리 회사를 위해 Dify를 운영한다" 또는 "내가 판매하는 하나의 제품 뒤에서 Dify를 엔진으로 내장한다"라면 수정된 라이선스는 걸림돌이 되지 않습니다. 사용 사례가 "호스팅된 Dify 인스턴스를 여러 개 세워 놓고 여러 개별 고객에게 접근 권한을 판매한다"라면, 이는 정확히 라이선스가 LangGenius와의 상업적 계약을 위해 유보해 둔 멀티테넌트 SaaS 시나리오입니다 — Dify Cloud와 Dify Enterprise는 벤더가 바로 그 모델을 위해 마련한 자체 경로입니다.',
         callouts: [
@@ -2219,6 +2300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '브라우저에서 http://localhost/install 을 열어 초기 설정을 완료하고 관리자 계정을 만듭니다.',
           '첫 워크플로를 만들기 전에 최소 하나의 LLM 공급자(독점 모델용 API 키, 또는 로컬에서 실행 중인 OpenAI API 호환 엔드포인트 연결)를 추가합니다.',
         ],
+        note: '기존 설치 업그레이드: 먼저 릴리스 노트를 읽으십시오. 1.17.1은 재시작 전에 번들 Weaviate 벡터 저장소를 수동으로 단계별 업그레이드(1.27.0 → 1.39.2)해야 하며, 1.18.0은 API, 워커, Agent Backend, Agent 런타임 이미지를 함께 업그레이드해야 하고 소스 설치에는 Python 3.13이 필요합니다.',
         faqs: [
           { q: '셀프 호스팅 Dify에 GPU가 필요합니까?', a: '아니요, 플랫폼 자체에는 필요하지 않습니다. Dify는 LLM 공급자 호출을 오케스트레이션할 뿐 모델 추론을 직접 실행하지 않습니다. GPU는 Dify가 호출하는 LLM을 (예를 들어 로컬 추론 서버를 통해) 별도로 셀프 호스팅하는 경우에만 관련이 있습니다.' },
           { q: '로컬 모델로 Dify를 완전히 오프라인으로 실행할 수 있습니까?', a: 'Dify를 OpenAI API와 호환되는 로컬 추론 엔드포인트로 지정할 수 있으며, 이렇게 하면 셀프 호스팅된 Dify 인스턴스가 외부 LLM 공급자를 호출하지 않고 로컬에 호스팅된 모델로 요청을 라우팅할 수 있습니다 — 단, 연결된 모든 도구와 연동도 로컬에 유지되어야 합니다.' },
@@ -2285,7 +2367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Dify는 무료입니까?', a: '셀프 호스팅 Community 에디션은 무료이며 오픈소스입니다. Dify Cloud는 무료 Sandbox 등급과 워크스페이스당 연 단위로 청구되는 유료 Professional·Team 등급을 제공합니다. Dify Enterprise는 맞춤 견적입니다.' },
-          { q: 'Dify는 어떤 라이선스를 사용합니까?', a: 'LangGenius가 "Dify Open Source License"라고 부르는 수정된 Apache 2.0 라이선스입니다. 순수 Apache 2.0을 넘어서는 두 가지 제한이 추가됩니다 — 서면 승인 없이 소스 코드를 멀티테넌트 SaaS로 운영할 수 없고, 콘솔이나 이를 이용해 만든 앱에서 Dify 로고나 저작권 표시를 제거하거나 수정할 수 없습니다.' },
+          { q: 'Dify는 어떤 라이선스를 사용합니까?', a: 'LangGenius가 "Dify Open Source License"라고 부르는 수정된 Apache 2.0 라이선스입니다. 표준 Apache 2.0에 두 가지 조건이 추가됩니다. 서면 허가 없이 소스 코드로 멀티테넌트 환경을 운영할 수 없으며(테넌트 하나는 워크스페이스 하나에 해당), Dify 프런트엔드를 사용할 때는 Dify 로고나 저작권 표시를 제거하거나 수정할 수 없습니다.' },
           { q: 'Dify를 상업적으로 사용할 수 있습니까?', a: '네, 내부 사용이나 자체 상업 제품의 백엔드로 사용할 수 있습니다. 오픈소스 코드에 대한 호스팅형 멀티고객 접근 권한을 자체 SaaS로 재판매하는 것만이 LangGenius와의 별도 서면 계약이 필요한 유일한 시나리오입니다.' },
           { q: 'Dify는 RAG를 지원합니까?', a: '네. Knowledge Pipeline이 문서와 웹사이트를 수집하고, 청킹 및 인덱싱을 수행하여, 어떤 워크플로나 에이전트든 결과 지식 베이스를 검색 단계로 조회할 수 있게 합니다.' },
           { q: 'Dify는 AI 에이전트를 지원합니까?', a: '네. 에이전트는 대화형으로 만들거나 수동으로 설정할 수 있으며, 외부 API 호출, 코드 실행, 또는 플랫폼에 내장된 50개 이상의 도구(MCP 기반 도구 포함) 중 하나를 사용할 수 있습니다.' },
@@ -2294,6 +2376,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'GPU 없이 Dify를 셀프 호스팅할 수 있습니까?', a: '네. Dify는 직접 추론을 실행하지 않고 LLM 공급자 호출을 오케스트레이션하므로 플랫폼 자체에는 GPU 요구사항이 없습니다. GPU는 Dify가 호출하는 LLM을 별도로 셀프 호스팅하는 경우에만 중요합니다.' },
           { q: 'Dify Enterprise는 Community에 비해 무엇이 추가됩니까?', a: 'Dify Enterprise는 SSO/SAML 인증, 역할 기반 접근 제어(RBAC), 여러 워크스페이스, SOC 2 Type II 및 ISO 27001 준수를 추가하며, 셀프 호스팅 또는 자체 VPC에 배포되고 벤더 지원이 제공됩니다.' },
           { q: 'Dify는 어떤 모델을 지원합니까?', a: 'Dify는 수십 개 추론 공급자에 걸친 수백 개의 독점 및 오픈소스 LLM에 연결되며, OpenAI API와 호환되는 모든 엔드포인트도 포함합니다 — 이는 셀프 호스팅되는 많은 로컬 추론 서버를 포괄합니다.' },
+          { q: 'API로 Dify 워크플로를 프로그래밍 방식으로 만들 수 있습니까?', a: '일부 가능합니다. 게시된 각 앱에는 자체 Service API(Bearer 토큰 인증)가 있어 백엔드에서 워크플로와 채팅을 실행할 수 있습니다. 앱 자체를 코드로 생성하고 관리하는 기능은 더 최근에 추가되었습니다. v1.18.0 릴리스 노트에 따르면 서버의 OpenAPI 작업 카탈로그를 기반으로 하는 새 명령줄 클라이언트 difyctl이 Workflow 및 Chatflow 앱 생성, DSL 가져오기/내보내기, 설정, 환경 변수, 게시, 버전 복원을 지원합니다. Service API 문서는 게시된 앱 실행만 다룹니다.' },
+          { q: 'Dify는 오픈소스입니까?', a: '소스 코드는 GitHub에 공개되어 있으며 무료로 셀프 호스팅할 수 있습니다. 다만 라이선스는 두 가지 추가 조건(서면 허가 없는 멀티테넌트 서비스 금지, 프런트엔드 사용 시 로고 유지)이 붙은 수정된 Apache 2.0이므로 표준 Apache 2.0이 아닙니다. 이것을 오픈소스로 볼 수 있는지는 귀사의 라이선스 정책에 따라 다릅니다.' },
+          { q: 'Dify Cloud란 무엇입니까?', a: 'Dify Cloud는 LangGenius가 [cloud.dify.ai](https://cloud.dify.ai)에서 운영하는 관리형 서비스이며, Sandbox(무료), Professional(워크스페이스당 연 590달러), Team(워크스페이스당 연 1,590달러) 요금제가 있습니다. Dify Enterprise는 영업팀을 통해 판매되며 셀프 호스팅 또는 VPC 배포용입니다.' },
         ],
       },
       sources: {

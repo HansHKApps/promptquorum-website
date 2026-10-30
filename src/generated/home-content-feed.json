@@ -8266,7 +8266,7 @@
     "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
     "excerpt": "A 70B model needs ~43 GB at Q4_K_M plus context. RAM, VRAM and estimated tok/s on Mac, DGX Spark, RTX GPUs and CPU-only PCs, incl. 256 GB RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8275,7 +8275,7 @@
     "title": "70B-LLM lokal ausführen 2026: RAM, VRAM & Tempo je Hardware",
     "excerpt": "Ein 70B-Modell braucht ca. 43 GB bei Q4_K_M plus Kontext. RAM, VRAM und geschätzte tok/s auf Mac, DGX Spark, RTX-GPUs und CPU-PCs, auch mit 256 GB RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/de/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8284,7 +8284,7 @@
     "title": "Exécuter un LLM 70B en local 2026 : RAM, VRAM et vitesse",
     "excerpt": "Un modèle 70B demande ~43 Go en Q4_K_M plus le contexte. RAM, VRAM et tok/s estimés sur Mac, DGX Spark, GPU RTX et PC sans GPU, dont 256 Go de RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/fr/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8293,7 +8293,7 @@
     "title": "70B LLMをローカルで動かす2026年版：ハード別のRAM・VRAM・速度",
     "excerpt": "70BモデルはQ4_K_Mで約43GB＋コンテキスト分が必要です。Mac・DGX Spark・RTX GPU・CPUのみのPC（RAM 256GB含む）で、RAM・VRAM・推定tok/sを比較します。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/ja/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8302,7 +8302,7 @@
     "title": "本地运行 70B 大模型 2026：各硬件内存与速度",
     "excerpt": "70B 模型在 Q4_K_M 下约需 43 GB 内存，另加上下文。对比 Mac、DGX Spark、RTX 显卡和纯 CPU 电脑（含 256 GB 内存）所需的内存、显存与估算 tok/s。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/zh/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8311,7 +8311,7 @@
     "title": "Ejecutar un LLM 70B en local 2026: RAM, VRAM y velocidad",
     "excerpt": "Un modelo 70B necesita ~43 GB en Q4_K_M más contexto. RAM, VRAM y tok/s estimados en Mac, DGX Spark, GPU RTX y PC solo con CPU, incl. 256 GB de RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/es/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8320,7 +8320,7 @@
     "title": "Rodar LLM de 70B localmente em 2026: RAM, VRAM e velocidade",
     "excerpt": "Um modelo 70B precisa de ~43 GB em Q4_K_M mais contexto. RAM, VRAM e tok/s estimados em Mac, DGX Spark, GPUs RTX e PCs só com CPU, inclusive 256 GB de RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/pt/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8329,7 +8329,7 @@
     "title": "تشغيل نموذج 70B محليًا 2026: الذاكرة وVRAM والسرعة",
     "excerpt": "يحتاج نموذج 70B إلى نحو 43 GB عند Q4_K_M مع السياق. قارن الذاكرة وVRAM والسرعة التقديرية على أجهزة Mac وDGX Spark وبطاقات RTX وحواسيب المعالج فقط، حتى 256 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/ar/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -8338,7 +8338,7 @@
     "title": "70B LLM 로컬 실행 2026: 하드웨어·RAM·속도",
     "excerpt": "70B 모델은 Q4_K_M 기준 약 43 GB와 컨텍스트 메모리가 필요합니다. Mac, DGX Spark, RTX GPU, CPU 전용 PC(RAM 256 GB 포함)별 RAM·VRAM과 대역폭 기반 추정 tok/s를 비교합니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-29",
     "url": "/ko/local-llms/70b-models-consumer-hardware",
     "cluster": "local-llms"
   },
@@ -26084,81 +26084,81 @@
   {
     "lang": "en",
     "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
-    "excerpt": "Dify is an open-source LLMOps platform (workflow builder, RAG, agents) under a modified Apache 2.0 license that restricts multi-tenant SaaS use without written permission.",
+    "excerpt": "Dify review: LLMOps platform with visual workflows, RAG and agents. Self-host free, Cloud from $590/yr; modified Apache 2.0 limits multi-tenant SaaS.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Dify-Rezension: Lizenz, Preise & Self-Hosting im Detail",
-    "excerpt": "Dify ist eine Open-Source-LLMOps-Plattform (Workflow-Builder, RAG, Agenten) unter modifizierter Apache-2.0-Lizenz, die Multi-Tenant-SaaS-Nutzung ohne Genehmigung untersagt.",
+    "excerpt": "Dify im Test: LLMOps mit Workflows, RAG, Agenten. Self-Hosting gratis, Cloud ab 590 $/Jahr; modifiziertes Apache 2.0 begrenzt Multi-Tenant-SaaS.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/de/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Dify : la plateforme LLMOps open source, licence et limites",
-    "excerpt": "Dify est une plateforme LLMOps open source (constructeur de workflows, RAG, agents) sous licence Apache 2.0 modifiée, qui restreint l'usage SaaS multi-tenant sans autorisation.",
+    "excerpt": "Test de Dify : LLMOps avec workflows, RAG et agents. Auto-hébergement gratuit, Cloud dès 590 $/an ; Apache 2.0 modifiée limitant le SaaS multi-tenant.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/fr/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Difyのライセンス徹底解説：OSSのLLMOps基盤",
-    "excerpt": "Difyはワークフロービルダー・RAG・エージェントを備えたOSSのLLMOps基盤で、無許可でのマルチテナントSaaS利用を制限する修正版Apache 2.0ライセンスを採用しています。",
+    "excerpt": "Dify徹底評価：ビジュアルワークフロー・RAG・エージェントを備えたLLMOps基盤。セルフホストは無料、Cloudは年590ドルから。修正版Apache 2.0がマルチテナントSaaSを制限。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/ja/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Dify 深度评测：开源 LLMOps 平台的许可证真相",
-    "excerpt": "Dify 是一个开源 LLMOps 平台（工作流构建器、RAG、智能体），采用修改版 Apache 2.0 许可证，未经授权禁止多租户 SaaS 使用。",
+    "excerpt": "Dify 评测：集可视化工作流、RAG 与智能体于一体的 LLMOps 平台。自托管免费，云版每年 590 美元起；修改版 Apache 2.0 限制多租户 SaaS。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/zh/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Dify a fondo: plataforma LLMOps open source vs. Flowise",
-    "excerpt": "Dify es una plataforma LLMOps open source (constructor de workflows, RAG, agentes) bajo una licencia Apache 2.0 modificada que restringe el uso SaaS multiusuario sin autorización.",
+    "excerpt": "Reseña de Dify: LLMOps con workflows, RAG y agentes. Autoalojamiento gratis, Cloud desde $590/año; Apache 2.0 modificada limita el SaaS multiusuario.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/es/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Dify: a plataforma LLMOps open source e sua licença real",
-    "excerpt": "O Dify é uma plataforma LLMOps open source (construtor de workflows, RAG, agentes) sob licença Apache 2.0 modificada, que restringe uso SaaS multiusuário sem autorização.",
+    "excerpt": "Análise do Dify: LLMOps com workflows, RAG e agentes. Self-hosting grátis, Cloud desde US$ 590/ano; Apache 2.0 modificada limita SaaS multiusuário.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/pt/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "Dify: منصة LLMOps مفتوحة المصدر ورخصتها الحقيقية",
-    "excerpt": "Dify منصة LLMOps مفتوحة المصدر (أداة بناء سير عمل، RAG، وكلاء) برخصة Apache 2.0 معدّلة تقيّد استخدام SaaS متعدد المستأجرين دون إذن.",
+    "excerpt": "مراجعة Dify: منصة LLMOps بسير عمل وRAG ووكلاء. استضافة ذاتية مجانية وCloud من 590$ سنويًا؛ رخصة Apache 2.0 المعدّلة تقيّد SaaS متعدد المستأجرين.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/ar/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Dify 라이선스 완전 정리: 오픈소스 LLMOps 플랫폼",
-    "excerpt": "Dify는 워크플로 빌더, RAG, 에이전트를 갖춘 오픈소스 LLMOps 플랫폼으로, 무단 멀티테넌트 SaaS 사용을 제한하는 수정된 Apache 2.0 라이선스를 사용합니다.",
+    "excerpt": "Dify 리뷰: 비주얼 워크플로, RAG, 에이전트를 갖춘 LLMOps 플랫폼. 셀프 호스팅은 무료, Cloud는 연 590달러부터이며 수정된 Apache 2.0이 멀티테넌트 SaaS를 제한합니다.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-30",
     "url": "/ko/power-local-llm/dify-ai-workflow-builder-review",
     "cluster": "power-local-llm"
   },

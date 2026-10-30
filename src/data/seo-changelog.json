@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -5688,6 +5688,32 @@
       "impressions": 5266,
       "clicks": 2,
       "ctr": 0.00037979491074819596
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a4fe1148-67e3-4344-8b8c-c255bc611fc0",
+    "slug": "power-local-llm/dify-ai-workflow-builder-review",
+    "date": "2026-10-30T06:19:20.320Z",
+    "fields": [
+      {
+        "field": "faq+license+overview+metaDescription",
+        "old": "v1.17.1 review, license-only meta",
+        "new": "v1.18.0 refresh, API/Cloud/open-source FAQs, tenant definition, new meta"
+      }
+    ],
+    "queries": [
+      "dify api create workflow programmatically",
+      "dify cloud",
+      "dify open source",
+      "dify license multi tenant"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 2385,
+      "clicks": 4,
+      "ctr": 0.0016771488469601676,
+      "period": "GSC top queries, window not stated"
     },
     "deployedAt": null
   }
