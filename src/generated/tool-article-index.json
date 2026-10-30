@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-29",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
@@ -72,14 +80,6 @@
         "url": "/local-llms/lobechat-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "arynwood-mcp-review",
-        "title": "Arynwood MCP Review: A Local AI Workspace in Alpha",
-        "url": "/power-local-llm/arynwood-mcp-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 327,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-29",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "subtitle-edit-review",
-        "title": "Subtitle Edit Review: Local Whisper Transcription and Auto-Translate",
-        "url": "/power-local-llm/subtitle-edit-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -542,19 +542,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-29",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-23",
         "tier": "mentioned"
       },
       {
@@ -3626,7 +3626,7 @@
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-09-02",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -3717,6 +3717,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -3737,14 +3745,6 @@
         "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
         "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
         "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dify-ai-workflow-builder-review",
-        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
-        "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-09-02",
         "tier": "about"
       },
       {
@@ -3849,6 +3849,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -3885,14 +3893,6 @@
         "title": "Qdrant Review: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dify-ai-workflow-builder-review",
-        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
-        "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-09-02",
         "tier": "about"
       },
       {
@@ -4129,6 +4129,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -4188,14 +4196,6 @@
         "slug": "docker-model-runner-review",
         "title": "Docker Model Runner Review: Local LLMs via the Docker CLI",
         "url": "/power-local-llm/docker-model-runner-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "n8n-review",
-        "title": "n8n Review: AI Workflow Automation With Local Ollama Support",
-        "url": "/power-local-llm/n8n-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
@@ -11669,6 +11669,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ai-file-sorter-review",
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
@@ -11728,14 +11736,6 @@
         "slug": "google-ai-edge-gallery-review",
         "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
-        "dateModified": "2026-10-26",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "immich-review",
-        "title": "Immich Review: Self-Hosted Photo Library with Smart Search",
-        "url": "/power-local-llm/immich-review",
         "dateModified": "2026-10-26",
         "tier": "mentioned"
       }

@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'Modified Apache 2.0',
   price: 'freemium',
   hardware: { ramGb: 4, vramGb: null, cpuOnly: true }, // docs.dify.ai self-host Docker Compose quick-start: stated minimum "CPU >= 2 Core" and "RAM >= 4 GiB" for the self-hosted stack itself; no GPU required unless the user's chosen model backend needs one, verified 2026-09-13
-  stars: 154429,
+  stars: 159956,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build', 'agent', 'docs'],
@@ -34,11 +34,11 @@ export const app: ToolRecord = {
     ko: 'RAG 및 에이전트 지원을 갖춘 AI 워크플로 빌더',
   },
   reviewSlug: 'dify-ai-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-09-25', version: 'v1.17.1', versionSourceUrl: 'https://github.com/langgenius/dify/releases/tag/1.17.1' },
+  pqReview: { date: '2026-10-30', version: 'v1.18.0', versionSourceUrl: 'https://github.com/langgenius/dify/releases/tag/1.18.0' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-25; a missing key = not stated there, never false.
   // multiVector confirmed via docker/docker-compose.yaml + docker/.env.example: separate service profiles for weaviate (default), qdrant, pgvector, pgvecto-rs, chroma, oceanbase, couchbase, and others.
   compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true, mcp: true, toolCalling: true },
-  lastVerifiedDate: '2026-09-25',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastVerifiedDate: '2026-10-30',
+  lastUpstreamUpdate: '2026-10-30', // GitHub API (latest release or push, whichever is newer), read 2026-10-30; latest tagged release 1.18.0 on 2026-10-23
   lastUpstreamUpdateSource: 'https://github.com/langgenius/dify',
 }
