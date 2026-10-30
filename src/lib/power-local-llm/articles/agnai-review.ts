@@ -4,12 +4,18 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
+
+// Last upstream update comes from the directory tile (App Maintenance Recency rule); rendered via formatDisplayDate.
+const lastUpdate = (lang: Language) =>
+  formatDisplayDate(localAiApps.find((a) => a.slug === 'agnai')?.lastUpstreamUpdate, lang)
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-en.webp',
@@ -18,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Agnai ([agnai.chat](https://agnai.chat)), maintained on GitHub as [agnaistic/agnai](https://github.com/agnaistic/agnai), is an open-source AI roleplay chat platform licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). Unlike an app that bundles its own model, Agnai is a frontend that dispatches conversations to external AI services you connect — Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer. It runs either hosted at agnai.chat with no install, or self-hosted via an npm package or Docker, with MongoDB and Redis both optional. This review is a companion to Agnai\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) and covers what Agnai actually supports, how self-hosting works, and how it compares with SillyTavern, Backyard AI, and RisuAI.',
     metaDescription:
-      'Agnai review 2026: open-source AI roleplay chat, self-host via npm or Docker (MongoDB optional), 9 supported AI services, character cards, group chat, and comparison with SillyTavern and RisuAI.',
+      'Agnai (agnai.chat) is a free, open-source AI roleplay chat: hosted or self-hosted via npm/Docker, 9 AI services, group chat. Setup and SillyTavern comparison.',
     twitterDescription:
       'Agnai review 2026: self-hostable open-source roleplay chat platform connecting to Kobold, NovelAI, AI Horde, OpenAI, Claude and more — how it compares with SillyTavern, Backyard AI, and RisuAI.',
     audience:
@@ -55,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -80,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         items: [
-          'Agnai ([agnai.chat](https://agnai.chat)) is a self-hostable, open-source AI roleplay chat platform maintained at [agnaistic/agnai](https://github.com/agnaistic/agnai) on GitHub — 782 stars and 150 forks as of 2026-09-12, licensed under AGPL-3.0.',
+          'Agnai ([agnai.chat](https://agnai.chat)) is a self-hostable, open-source AI roleplay chat platform maintained at [agnaistic/agnai](https://github.com/agnaistic/agnai) on GitHub — last upstream update ' + lastUpdate('en') + ', licensed under AGPL-3.0.',
           'Agnai is a frontend, not a model host — it connects to external AI services: Kobold-compatible backends (including KoboldCpp), NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer.',
           'Self-hosting installs as an npm package (`npm install agnai -g`) or via Docker; MongoDB and Redis are both optional — Agnai runs in a "Guest Only" anonymous mode without a database, storing data in the browser instead.',
           'Core features: multi-user/multi-bot group conversations, character cards in four persona formats (W++, Square Bracket Format, Boostyle, plain text), Memory/Lore books, and AI-assisted character generation.',
@@ -97,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Think of Agnai as a chat interface for AI characters, similar to SillyTavern, that you use either hosted at agnai.chat or self-hosted and plugged into a backend like KoboldCpp, OpenAI, or Anthropic Claude.' },
         ],
         content: [
-          'Agnai — described in its own [GitHub repository](https://github.com/agnaistic/agnai) as "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind" — is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0) and had 782 stars and 150 forks as of 2026-09-12.',
+          'Agnai — described in its own [GitHub repository](https://github.com/agnaistic/agnai) as "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind" — is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0) and its last upstream update was on ' + lastUpdate('en') + '.',
           'The project traces its early work to Galatea-UI by PygmalionAI and has grown into a multi-tenant platform: user authentication, per-user AI-service settings, and per-user generation presets are built in — features aimed at hosting Agnai for more than one person, not just a single-player desktop workflow.',
           'Agnai does not run its own language model. It is a chat frontend that dispatches conversation turns to whichever AI service you configure, which is why self-hosting it needs no dedicated GPU of its own — the GPU (or API budget) requirement depends entirely on the backend you connect, not on Agnai itself.',
         ],
@@ -212,6 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is Agnai?', a: 'Agnai (also called Agnaistic) is an open-source AI roleplay chat platform, available hosted at [agnai.chat](https://agnai.chat) or self-hosted from [agnaistic/agnai](https://github.com/agnaistic/agnai) on GitHub, licensed under AGPL-3.0. It connects to external AI services rather than running its own model.' },
+          { q: 'What is the difference between Agnai, Agnaistic and agnai.chat?', a: 'They are the same project. Agnai is the product name, Agnaistic is the name of the open-source repository, npm package and Docker image ([agnaistic/agnai](https://github.com/agnaistic/agnai)), and [agnai.chat](https://agnai.chat) is the hosted version of it.' },
           { q: 'Is Agnai free?', a: 'Yes. The self-hosted software is free and open-source under AGPL-3.0. The hosted site at agnai.chat is also free to use with your own AI-service API key or the free AI Horde backend; it additionally offers a paid subscription for priority access to Agnai\'s own hosted models, though specific pricing is not published in the project\'s documentation.' },
           { q: 'Does Agnai support Ollama?', a: 'Not directly. Agnai\'s README lists Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer as supported AI services — Ollama is not among them. Connecting Ollama requires routing it through an OpenAI-compatible proxy layer rather than a native integration.' },
           { q: 'How do I self-host Agnai?', a: 'Install it as an npm package with `npm install agnai -g`, then run `agnai`; or use Docker with `docker compose -p agnai -f self-host.docker-compose.yml up -d` (with MongoDB) or `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest` (without MongoDB). MongoDB and Redis are both optional.' },
@@ -253,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-de.webp',
@@ -262,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Agnai ([agnai.chat](https://agnai.chat)), auf GitHub als [agnaistic/agnai](https://github.com/agnaistic/agnai) gepflegt, ist eine Open-Source-Plattform für KI-Rollenspiel-Chat unter der GNU Affero General Public License v3.0 (AGPL-3.0). Anders als eine App mit eingebautem Modell ist Agnai ein Frontend, das Gespräche an extern angebundene KI-Dienste weiterleitet — Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer. Es läuft entweder gehostet auf agnai.chat ohne Installation, oder selbst gehostet über ein npm-Paket oder Docker, wobei MongoDB und Redis beide optional sind. Diese Rezension ist ein Begleittext zu Agnais Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) und behandelt, was Agnai tatsächlich unterstützt, wie Self-Hosting funktioniert und wie es sich mit SillyTavern, Backyard AI und RisuAI vergleicht.',
     metaDescription:
-      'Agnai-Rezension 2026: Open-Source KI-Rollenspiel-Chat, Self-Hosting per npm oder Docker (MongoDB optional), 9 unterstützte KI-Dienste, Charakterkarten, Gruppenchat und Vergleich mit SillyTavern und RisuAI.',
+      'Agnai (agnai.chat) ist ein kostenloser, quelloffener KI-Rollenspiel-Chat: gehostet oder selbst gehostet per npm/Docker, 9 KI-Dienste, Gruppenchat. Setup und Vergleich.',
     twitterDescription:
       'Agnai-Rezension 2026: selbst hostbare Open-Source-Rollenspiel-Chat-Plattform mit Anbindung an Kobold, NovelAI, AI Horde, OpenAI, Claude u. a. — Vergleich mit SillyTavern, Backyard AI und RisuAI.',
     audience:
@@ -299,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       de: {
         question: 'Sollte ich Agnai für KI-Rollenspiel und Charakter-Chat nutzen?',
@@ -312,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die gehostete Version auf [agnai.chat](https://agnai.chat) benötigt keine Installation und bietet eine kostenlose Stufe plus optionales kostenpflichtiges Abo.',
           'Führt Ollama nicht als natives Backend auf — die Anbindung von Ollama erfordert eine OpenAI-kompatible Proxy-Schicht, keine direkte Einstellung.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -337,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Das Wichtigste in Kürze',
         isTldr: true,
         items: [
-          'Agnai ([agnai.chat](https://agnai.chat)) ist eine selbst hostbare, quelloffene KI-Rollenspiel-Chat-Plattform, gepflegt bei [agnaistic/agnai](https://github.com/agnaistic/agnai) auf GitHub — 782 Sterne und 150 Forks (Stand 2026-09-12), lizenziert unter AGPL-3.0.',
+          'Agnai ([agnai.chat](https://agnai.chat)) ist eine selbst hostbare, quelloffene KI-Rollenspiel-Chat-Plattform, gepflegt bei [agnaistic/agnai](https://github.com/agnaistic/agnai) auf GitHub — letzte Aktualisierung des Projekts: ' + lastUpdate('de') + ', lizenziert unter AGPL-3.0.',
           'Agnai ist ein Frontend, kein Modell-Host — es bindet externe KI-Dienste an: Kobold-kompatible Backends (inkl. KoboldCpp), NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer.',
           'Self-Hosting läuft als npm-Paket (`npm install agnai -g`) oder per Docker; MongoDB und Redis sind beide optional — ohne Datenbank läuft Agnai im anonymen "Guest Only"-Modus und speichert Daten stattdessen im Browser.',
           'Kernfunktionen: Gruppengespräche mit mehreren Nutzern/Bots, Charakterkarten in vier Persona-Formaten (W++, Square Bracket Format, Boostyle, Klartext), Memory/Lore-Books und KI-gestützte Charaktererstellung.',
@@ -354,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Stellen Sie sich Agnai als Chat-Oberfläche für KI-Charaktere vor, ähnlich wie SillyTavern, die Sie entweder gehostet auf agnai.chat nutzen oder selbst hosten und mit einem Backend wie KoboldCpp, OpenAI oder Anthropic Claude verbinden.' },
         ],
         content: [
-          'Agnai — im eigenen [GitHub-Repository](https://github.com/agnaistic/agnai) als "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind" beschrieben — ist unter der GNU Affero General Public License v3.0 (AGPL-3.0) lizenziert und hatte zum Stand 2026-09-12 782 Sterne und 150 Forks.',
+          'Agnai — im eigenen [GitHub-Repository](https://github.com/agnaistic/agnai) als "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind" beschrieben — ist unter der GNU Affero General Public License v3.0 (AGPL-3.0) lizenziert und hatte die letzte Aktualisierung des Projekts war am ' + lastUpdate('de') + '.',
           'Das Projekt geht auf frühe Arbeiten von Galatea-UI von PygmalionAI zurück und ist zu einer Multi-Tenant-Plattform gewachsen: Nutzerauthentifizierung, KI-Dienst-Einstellungen pro Nutzer und Generierungs-Presets pro Nutzer sind eingebaut — Funktionen, die auf das Hosten für mehrere Personen abzielen, nicht nur auf einen Single-Player-Desktop-Workflow.',
           'Agnai betreibt kein eigenes Sprachmodell. Es ist ein Chat-Frontend, das Gesprächsrunden an den jeweils konfigurierten KI-Dienst weiterleitet — deshalb braucht Self-Hosting keine dedizierte GPU: Der GPU- (oder API-Budget-)Bedarf hängt vollständig vom angebundenen Backend ab, nicht von Agnai selbst.',
         ],
@@ -469,6 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist Agnai?', a: 'Agnai (auch Agnaistic genannt) ist eine quelloffene KI-Rollenspiel-Chat-Plattform, verfügbar gehostet auf [agnai.chat](https://agnai.chat) oder self-hosted über [agnaistic/agnai](https://github.com/agnaistic/agnai) auf GitHub, lizenziert unter AGPL-3.0. Es bindet externe KI-Dienste an, statt ein eigenes Modell zu betreiben.' },
+          { q: 'Was ist der Unterschied zwischen Agnai, Agnaistic und agnai.chat?', a: 'Es ist dasselbe Projekt. Agnai ist der Produktname, Agnaistic der Name des Open-Source-Repositorys, des npm-Pakets und des Docker-Images ([agnaistic/agnai](https://github.com/agnaistic/agnai)), und [agnai.chat](https://agnai.chat) ist die gehostete Version.' },
           { q: 'Ist Agnai kostenlos?', a: 'Ja. Die selbst gehostete Software ist kostenlos und quelloffen unter AGPL-3.0. Die gehostete Seite auf agnai.chat ist mit eigenem KI-Dienst-API-Schlüssel oder dem kostenlosen AI-Horde-Backend ebenfalls kostenlos nutzbar; zusätzlich gibt es ein kostenpflichtiges Abo für priorisierten Zugriff auf Agnais eigene gehostete Modelle, wobei konkrete Preise in der Projektdokumentation nicht veröffentlicht sind.' },
           { q: 'Unterstützt Agnai Ollama?', a: 'Nicht direkt. Agnais README listet Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer als unterstützte KI-Dienste auf — Ollama gehört nicht dazu. Die Anbindung von Ollama erfordert eine vorgeschaltete OpenAI-kompatible Proxy-Schicht statt einer nativen Integration.' },
           { q: 'Wie hoste ich Agnai selbst?', a: 'Installation als npm-Paket mit `npm install agnai -g`, dann `agnai` ausführen; oder Docker nutzen mit `docker compose -p agnai -f self-host.docker-compose.yml up -d` (mit MongoDB) oder `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest` (ohne MongoDB). MongoDB und Redis sind beide optional.' },
@@ -510,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-fr.webp',
@@ -519,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Agnai ([agnai.chat](https://agnai.chat)), maintenu sur GitHub sous [agnaistic/agnai](https://github.com/agnaistic/agnai), est une plateforme open source de chat de jeu de rôle IA sous licence GNU Affero General Public License v3.0 (AGPL-3.0). Contrairement à une application qui embarque son propre modèle, Agnai est un frontend qui envoie les conversations vers des services IA externes que vous connectez — backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer. Il fonctionne soit hébergé sur agnai.chat sans installation, soit auto-hébergé via un paquet npm ou Docker, MongoDB et Redis étant tous deux optionnels. Cet avis complète la fiche d\'Agnai dans le [Répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) et couvre ce qu\'Agnai prend réellement en charge, le fonctionnement de l\'auto-hébergement, et la comparaison avec SillyTavern, Backyard AI et RisuAI.',
     metaDescription:
-      'Avis Agnai 2026 : chat de jeu de rôle IA open source, auto-hébergement via npm ou Docker (MongoDB optionnel), 9 services IA supportés, cartes de personnages, chat de groupe, comparaison avec SillyTavern et RisuAI.',
+      'Agnai (agnai.chat) est un chat de jeu de rôle IA open source et gratuit : hébergé ou auto-hébergé via npm/Docker, 9 services IA, chat de groupe. Installation et comparatif.',
     twitterDescription:
       'Avis Agnai 2026 : plateforme de chat de jeu de rôle open source auto-hébergeable, connectée à Kobold, NovelAI, AI Horde, OpenAI, Claude et plus — comparaison avec SillyTavern, Backyard AI et RisuAI.',
     audience:
@@ -556,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       fr: {
         question: 'Dois-je utiliser Agnai pour le jeu de rôle et le chat de personnages IA ?',
@@ -569,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La version hébergée sur [agnai.chat](https://agnai.chat) ne nécessite aucune installation et propose un palier gratuit plus un abonnement payant optionnel.',
           'Ne liste pas Ollama comme backend natif — connecter Ollama nécessite une couche proxy compatible OpenAI, pas un simple réglage.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -594,7 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'En bref',
         isTldr: true,
         items: [
-          'Agnai ([agnai.chat](https://agnai.chat)) est une plateforme de chat de jeu de rôle IA open source et auto-hébergeable, maintenue chez [agnaistic/agnai](https://github.com/agnaistic/agnai) sur GitHub — 782 étoiles et 150 forks au 2026-09-12, sous licence AGPL-3.0.',
+          'Agnai ([agnai.chat](https://agnai.chat)) est une plateforme de chat de jeu de rôle IA open source et auto-hébergeable, maintenue chez [agnaistic/agnai](https://github.com/agnaistic/agnai) sur GitHub — dernière mise à jour du projet : ' + lastUpdate('fr') + ', sous licence AGPL-3.0.',
           'Agnai est un frontend, pas un hébergeur de modèle — il se connecte à des services IA externes : backends compatibles Kobold (dont KoboldCpp), NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer.',
           'L\'auto-hébergement s\'installe comme un paquet npm (`npm install agnai -g`) ou via Docker ; MongoDB et Redis sont tous deux optionnels — sans base de données, Agnai fonctionne en mode anonyme "Guest Only" et stocke les données dans le navigateur.',
           'Fonctionnalités clés : conversations de groupe multi-utilisateurs/multi-bots, cartes de personnages en quatre formats de persona (W++, Square Bracket Format, Boostyle, texte brut), livres de mémoire/lore, et génération de personnages assistée par IA.',
@@ -611,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Voyez Agnai comme une interface de chat pour personnages IA, similaire à SillyTavern, que vous utilisez soit hébergée sur agnai.chat, soit auto-hébergée et connectée à un backend comme KoboldCpp, OpenAI ou Anthropic Claude.' },
         ],
         content: [
-          'Agnai — décrit dans son propre [dépôt GitHub](https://github.com/agnaistic/agnai) comme « AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind » — est sous licence GNU Affero General Public License v3.0 (AGPL-3.0) et comptait 782 étoiles et 150 forks au 2026-09-12.',
+          'Agnai — décrit dans son propre [dépôt GitHub](https://github.com/agnaistic/agnai) comme « AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind » — est sous licence GNU Affero General Public License v3.0 (AGPL-3.0) et sa dernière mise à jour date du ' + lastUpdate('fr') + '.',
           'Le projet remonte aux premiers travaux de Galatea-UI par PygmalionAI et s\'est développé en une plateforme multi-tenant : authentification des utilisateurs, réglages de service IA par utilisateur et préréglages de génération par utilisateur sont intégrés — des fonctionnalités visant l\'hébergement pour plusieurs personnes, pas seulement un flux de travail de bureau mono-utilisateur.',
           'Agnai n\'exécute pas son propre modèle de langage. C\'est un frontend de chat qui envoie les tours de conversation vers le service IA configuré — c\'est pourquoi l\'auto-hébergement ne nécessite aucun GPU dédié : le besoin en GPU (ou en budget API) dépend entièrement du backend connecté, pas d\'Agnai lui-même.',
         ],
@@ -726,6 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Qu\'est-ce qu\'Agnai ?', a: 'Agnai (aussi appelé Agnaistic) est une plateforme de chat de jeu de rôle IA open source, disponible hébergée sur [agnai.chat](https://agnai.chat) ou auto-hébergée depuis [agnaistic/agnai](https://github.com/agnaistic/agnai) sur GitHub, sous licence AGPL-3.0. Il se connecte à des services IA externes au lieu d\'exécuter son propre modèle.' },
+          { q: 'Quelle est la différence entre Agnai, Agnaistic et agnai.chat ?', a: 'C\'est le même projet. Agnai est le nom du produit, Agnaistic celui du dépôt open source, du paquet npm et de l\'image Docker ([agnaistic/agnai](https://github.com/agnaistic/agnai)), et [agnai.chat](https://agnai.chat) en est la version hébergée.' },
           { q: 'Agnai est-il gratuit ?', a: 'Oui. Le logiciel auto-hébergé est gratuit et open source sous AGPL-3.0. Le site hébergé agnai.chat est également gratuit avec votre propre clé API de service IA ou le backend gratuit AI Horde ; il propose en plus un abonnement payant pour un accès prioritaire aux propres modèles hébergés d\'Agnai, bien que le prix précis ne soit pas publié dans la documentation du projet.' },
           { q: 'Agnai prend-il en charge Ollama ?', a: 'Pas directement. Le README d\'Agnai liste les backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer comme services IA pris en charge — Ollama n\'en fait pas partie. Connecter Ollama nécessite de le router via une couche proxy compatible OpenAI plutôt qu\'une intégration native.' },
           { q: 'Comment auto-héberger Agnai ?', a: 'Installez-le comme paquet npm avec `npm install agnai -g`, puis lancez `agnai` ; ou utilisez Docker avec `docker compose -p agnai -f self-host.docker-compose.yml up -d` (avec MongoDB) ou `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest` (sans MongoDB). MongoDB et Redis sont tous deux optionnels.' },
@@ -767,7 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-es.webp',
@@ -776,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Agnai ([agnai.chat](https://agnai.chat)), mantenido en GitHub como [agnaistic/agnai](https://github.com/agnaistic/agnai), es una plataforma de chat de rol con IA de código abierto bajo la licencia GNU Affero General Public License v3.0 (AGPL-3.0). A diferencia de una app que incluye su propio modelo, Agnai es un frontend que envía las conversaciones a servicios de IA externos que tú conectas — backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer. Funciona alojado en agnai.chat sin instalación, o autoalojado mediante un paquete npm o Docker, con MongoDB y Redis ambos opcionales. Esta reseña complementa la ficha de Agnai en el [Directorio de software de LLM locales](https://www.promptquorum.com/directory) y explica qué soporta realmente Agnai, cómo funciona el autoalojamiento y cómo se compara con SillyTavern, Backyard AI y RisuAI.',
     metaDescription:
-      'Reseña de Agnai 2026: chat de rol IA de código abierto, autoalojamiento vía npm o Docker (MongoDB opcional), 9 servicios de IA soportados, tarjetas de personajes, chat grupal y comparación con SillyTavern y RisuAI.',
+      'Agnai (agnai.chat) es un chat de rol con IA gratuito y de código abierto: alojado o autoalojado con npm/Docker, 9 servicios de IA, chat grupal. Instalación y comparativa.',
     twitterDescription:
       'Reseña de Agnai 2026: plataforma de chat de rol de código abierto y autoalojable conectada a Kobold, NovelAI, AI Horde, OpenAI, Claude y más — comparación con SillyTavern, Backyard AI y RisuAI.',
     audience:
@@ -813,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       es: {
         question: '¿Debería usar Agnai para rol y chat de personajes con IA?',
@@ -826,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La versión alojada en [agnai.chat](https://agnai.chat) no necesita instalación y tiene un nivel gratuito más una suscripción de pago opcional.',
           'No lista a Ollama como backend nativo — conectar Ollama requiere una capa proxy compatible con OpenAI, no un simple ajuste.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -851,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumen',
         isTldr: true,
         items: [
-          'Agnai ([agnai.chat](https://agnai.chat)) es una plataforma de chat de rol con IA autoalojable y de código abierto, mantenida en [agnaistic/agnai](https://github.com/agnaistic/agnai) en GitHub — 782 estrellas y 150 forks a fecha de 2026-09-12, bajo licencia AGPL-3.0.',
+          'Agnai ([agnai.chat](https://agnai.chat)) es una plataforma de chat de rol con IA autoalojable y de código abierto, mantenida en [agnaistic/agnai](https://github.com/agnaistic/agnai) en GitHub — última actualización del proyecto: ' + lastUpdate('es') + ', bajo licencia AGPL-3.0.',
           'Agnai es un frontend, no un alojador de modelos — se conecta a servicios de IA externos: backends compatibles con Kobold (incluido KoboldCpp), NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer.',
           'El autoalojamiento se instala como paquete npm (`npm install agnai -g`) o vía Docker; MongoDB y Redis son ambos opcionales — sin base de datos, Agnai funciona en modo anónimo "Guest Only" y guarda los datos en el navegador.',
           'Funciones clave: conversaciones grupales multiusuario/multibot, tarjetas de personajes en cuatro formatos de persona (W++, Square Bracket Format, Boostyle, texto plano), libros de memoria/lore y generación de personajes asistida por IA.',
@@ -868,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Piensa en Agnai como una interfaz de chat para personajes de IA, similar a SillyTavern, que usas alojada en agnai.chat o autoalojada y conectada a un backend como KoboldCpp, OpenAI o Anthropic Claude.' },
         ],
         content: [
-          'Agnai —descrito en su propio [repositorio de GitHub](https://github.com/agnaistic/agnai) como "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind"— está bajo la licencia GNU Affero General Public License v3.0 (AGPL-3.0) y tenía 782 estrellas y 150 forks a fecha de 2026-09-12.',
+          'Agnai —descrito en su propio [repositorio de GitHub](https://github.com/agnaistic/agnai) como "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind"— está bajo la licencia GNU Affero General Public License v3.0 (AGPL-3.0) y su última actualización fue el ' + lastUpdate('es') + '.',
           'El proyecto tiene su origen en el trabajo inicial de Galatea-UI de PygmalionAI y ha crecido hasta convertirse en una plataforma multiusuario: autenticación de usuarios, ajustes de servicio de IA por usuario y preajustes de generación por usuario vienen integrados — funciones pensadas para alojar Agnai para varias personas, no solo un flujo de trabajo de escritorio individual.',
           'Agnai no ejecuta su propio modelo de lenguaje. Es un frontend de chat que envía cada turno de conversación al servicio de IA que configures, por lo que autoalojarlo no requiere GPU dedicada propia: el requisito de GPU (o presupuesto de API) depende por completo del backend conectado, no de Agnai en sí.',
         ],
@@ -983,6 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es Agnai?', a: 'Agnai (también llamado Agnaistic) es una plataforma de chat de rol con IA de código abierto, disponible alojada en [agnai.chat](https://agnai.chat) o autoalojada desde [agnaistic/agnai](https://github.com/agnaistic/agnai) en GitHub, bajo licencia AGPL-3.0. Se conecta a servicios de IA externos en lugar de ejecutar su propio modelo.' },
+          { q: '¿Cuál es la diferencia entre Agnai, Agnaistic y agnai.chat?', a: 'Son el mismo proyecto. Agnai es el nombre del producto, Agnaistic es el nombre del repositorio de código abierto, del paquete npm y de la imagen de Docker ([agnaistic/agnai](https://github.com/agnaistic/agnai)), y [agnai.chat](https://agnai.chat) es su versión alojada.' },
           { q: '¿Es Agnai gratis?', a: 'Sí. El software autoalojado es gratuito y de código abierto bajo AGPL-3.0. El sitio alojado agnai.chat también es gratis con tu propia clave API de servicio de IA o el backend gratuito AI Horde; además ofrece una suscripción de pago para acceso prioritario a los modelos alojados propios de Agnai, aunque el precio concreto no está publicado en la documentación del proyecto.' },
           { q: '¿Agnai soporta Ollama?', a: 'No directamente. El README de Agnai lista backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer como servicios de IA soportados — Ollama no está entre ellos. Conectar Ollama requiere dirigirlo a través de una capa proxy compatible con OpenAI en lugar de una integración nativa.' },
           { q: '¿Cómo autoalojo Agnai?', a: 'Instálalo como paquete npm con `npm install agnai -g`, luego ejecuta `agnai`; o usa Docker con `docker compose -p agnai -f self-host.docker-compose.yml up -d` (con MongoDB) o `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest` (sin MongoDB). MongoDB y Redis son ambos opcionales.' },
@@ -1024,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-pt.webp',
@@ -1033,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Agnai ([agnai.chat](https://agnai.chat)), mantido no GitHub como [agnaistic/agnai](https://github.com/agnaistic/agnai), é uma plataforma de chat de roleplay com IA de código aberto sob a licença GNU Affero General Public License v3.0 (AGPL-3.0). Diferente de um app que embute seu próprio modelo, o Agnai é um frontend que envia conversas para serviços de IA externos que você conecta — backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer. Ele roda hospedado em agnai.chat sem instalação, ou auto-hospedado via um pacote npm ou Docker, com MongoDB e Redis ambos opcionais. Esta análise complementa a ficha do Agnai no [Diretório de Software de LLMs Locais](https://www.promptquorum.com/directory) e cobre o que o Agnai realmente suporta, como funciona a auto-hospedagem e como ele se compara ao SillyTavern, Backyard AI e RisuAI.',
     metaDescription:
-      'Análise do Agnai 2026: chat de roleplay com IA de código aberto, auto-hospedagem via npm ou Docker (MongoDB opcional), 9 serviços de IA suportados, cartões de personagem, chat em grupo e comparação com SillyTavern e RisuAI.',
+      'Agnai (agnai.chat) é um chat de roleplay com IA gratuito e de código aberto: hospedado ou auto-hospedado via npm/Docker, 9 serviços de IA, chat em grupo. Instalação e comparação.',
     twitterDescription:
       'Análise do Agnai 2026: plataforma de chat de roleplay open source e auto-hospedável conectada a Kobold, NovelAI, AI Horde, OpenAI, Claude e mais — comparação com SillyTavern, Backyard AI e RisuAI.',
     audience:
@@ -1070,7 +1080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       pt: {
         question: 'Devo usar o Agnai para roleplay e chat de personagens com IA?',
@@ -1083,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A versão hospedada em [agnai.chat](https://agnai.chat) não precisa de instalação e tem um nível gratuito mais uma assinatura paga opcional.',
           'Não lista o Ollama como backend nativo — conectar o Ollama exige uma camada de proxy compatível com OpenAI, não uma configuração direta.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -1108,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumo',
         isTldr: true,
         items: [
-          'O Agnai ([agnai.chat](https://agnai.chat)) é uma plataforma de chat de roleplay com IA auto-hospedável e de código aberto, mantida em [agnaistic/agnai](https://github.com/agnaistic/agnai) no GitHub — 782 estrelas e 150 forks em 2026-09-12, licenciada sob AGPL-3.0.',
+          'O Agnai ([agnai.chat](https://agnai.chat)) é uma plataforma de chat de roleplay com IA auto-hospedável e de código aberto, mantida em [agnaistic/agnai](https://github.com/agnaistic/agnai) no GitHub — última atualização do projeto: ' + lastUpdate('pt') + ', licenciada sob AGPL-3.0.',
           'O Agnai é um frontend, não um hospedeiro de modelo — ele se conecta a serviços de IA externos: backends compatíveis com Kobold (incluindo KoboldCpp), NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer.',
           'A auto-hospedagem se instala como um pacote npm (`npm install agnai -g`) ou via Docker; MongoDB e Redis são ambos opcionais — sem banco de dados, o Agnai roda em modo anônimo "Guest Only" e guarda os dados no navegador.',
           'Recursos principais: conversas em grupo multiusuário/multibot, cartões de personagem em quatro formatos de persona (W++, Square Bracket Format, Boostyle, texto simples), livros de memória/lore e geração de personagens assistida por IA.',
@@ -1125,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Pense no Agnai como uma interface de chat para personagens de IA, parecida com o SillyTavern, que você usa hospedada em agnai.chat ou auto-hospedada e conectada a um backend como KoboldCpp, OpenAI ou Anthropic Claude.' },
         ],
         content: [
-          'O Agnai — descrito em seu próprio [repositório no GitHub](https://github.com/agnaistic/agnai) como "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind" — é licenciado sob a GNU Affero General Public License v3.0 (AGPL-3.0) e tinha 782 estrelas e 150 forks em 2026-09-12.',
+          'O Agnai — descrito em seu próprio [repositório no GitHub](https://github.com/agnaistic/agnai) como "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind" — é licenciado sob a GNU Affero General Public License v3.0 (AGPL-3.0) e sua última atualização foi em ' + lastUpdate('pt') + '.',
           'O projeto tem origem no trabalho inicial do Galatea-UI, da PygmalionAI, e cresceu até se tornar uma plataforma multiusuário: autenticação de usuários, configurações de serviço de IA por usuário e presets de geração por usuário vêm integrados — recursos voltados a hospedar o Agnai para mais de uma pessoa, não apenas um fluxo de trabalho de desktop individual.',
           'O Agnai não roda seu próprio modelo de linguagem. É um frontend de chat que envia cada turno de conversa para o serviço de IA que você configurar — por isso auto-hospedá-lo não exige GPU dedicada própria: o requisito de GPU (ou orçamento de API) depende inteiramente do backend conectado, não do Agnai em si.',
         ],
@@ -1240,6 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é o Agnai?', a: 'O Agnai (também chamado Agnaistic) é uma plataforma de chat de roleplay com IA de código aberto, disponível hospedada em [agnai.chat](https://agnai.chat) ou auto-hospedada a partir de [agnaistic/agnai](https://github.com/agnaistic/agnai) no GitHub, licenciada sob AGPL-3.0. Ele se conecta a serviços de IA externos em vez de rodar seu próprio modelo.' },
+          { q: 'Qual é a diferença entre Agnai, Agnaistic e agnai.chat?', a: 'É o mesmo projeto. Agnai é o nome do produto, Agnaistic é o nome do repositório de código aberto, do pacote npm e da imagem Docker ([agnaistic/agnai](https://github.com/agnaistic/agnai)), e [agnai.chat](https://agnai.chat) é a versão hospedada.' },
           { q: 'O Agnai é gratuito?', a: 'Sim. O software auto-hospedado é gratuito e de código aberto sob AGPL-3.0. O site hospedado agnai.chat também é gratuito de usar com sua própria chave de API de serviço de IA ou o backend gratuito AI Horde; ele ainda oferece uma assinatura paga para acesso prioritário aos modelos hospedados próprios do Agnai, embora o preço específico não esteja publicado na documentação do projeto.' },
           { q: 'O Agnai suporta o Ollama?', a: 'Não diretamente. O README do Agnai lista backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer como serviços de IA suportados — o Ollama não está entre eles. Conectar o Ollama exige roteá-lo por uma camada de proxy compatível com OpenAI em vez de uma integração nativa.' },
           { q: 'Como faço para auto-hospedar o Agnai?', a: 'Instale como pacote npm com `npm install agnai -g`, depois execute `agnai`; ou use Docker com `docker compose -p agnai -f self-host.docker-compose.yml up -d` (com MongoDB) ou `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest` (sem MongoDB). MongoDB e Redis são ambos opcionais.' },
@@ -1281,7 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-ja.webp',
@@ -1290,7 +1301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Agnai([agnai.chat](https://agnai.chat))はGitHub上で[agnaistic/agnai](https://github.com/agnaistic/agnai)として管理されている、GNU Affero General Public License v3.0(AGPL-3.0)のオープンソースAIロールプレイチャット基盤です。独自モデルを内蔵するアプリとは異なり、AgnaiはKobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerなど、接続した外部AIサービスに会話を振り分けるフロントエンドです。インストール不要のagnai.chatでホスト利用するか、npmパッケージまたはDockerでセルフホストでき、MongoDBとRedisはいずれも任意です。本レビューは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)内のAgnaiのエントリーを補完するもので、Agnaiが実際にサポートする機能、セルフホストの仕組み、SillyTavern・Backyard AI・RisuAIとの比較を扱います。',
     metaDescription:
-      'Agnaiレビュー2026:オープンソースAIロールプレイチャット、npmまたはDockerでのセルフホスト(MongoDB任意)、9つの対応AIサービス、キャラクターカード、グループチャット、SillyTavernとRisuAIとの比較。',
+      'Agnai(agnai.chat)は無料のオープンソースAIロールプレイチャット。ホスト版またはnpm/Dockerでセルフホスト、9つのAIサービス、グループチャット対応。導入手順と比較。',
     twitterDescription:
       'Agnaiレビュー2026:Kobold、NovelAI、AI Horde、OpenAI、Claudeなどに接続できるセルフホスト可能なオープンソースロールプレイチャット基盤 — SillyTavern、Backyard AI、RisuAIとの比較。',
     audience:
@@ -1327,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       ja: {
         question: 'AIロールプレイとキャラクターチャットにAgnaiを使うべきですか?',
@@ -1340,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[agnai.chat](https://agnai.chat)のホスト版はインストール不要で、無料枠に加え任意の有料サブスクリプションがある。',
           'Ollamaはネイティブバックエンドとして記載されていない — Ollamaの接続にはOpenAI互換プロキシ層が必要で、直接設定ではない。',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -1365,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点まとめ',
         isTldr: true,
         items: [
-          'Agnai([agnai.chat](https://agnai.chat))は、GitHubの[agnaistic/agnai](https://github.com/agnaistic/agnai)で管理されているセルフホスト可能なオープンソースAIロールプレイチャット基盤 — 2026-09-12時点でスター782、フォーク150、AGPL-3.0ライセンス。',
+          'Agnai([agnai.chat](https://agnai.chat))は、GitHubの[agnaistic/agnai](https://github.com/agnaistic/agnai)で管理されているセルフホスト可能なオープンソースAIロールプレイチャット基盤 — 最終更新日は' + lastUpdate('ja') + '、AGPL-3.0ライセンス。',
           'Agnaiはモデルホストではなくフロントエンドであり、外部AIサービスに接続する:Kobold互換バックエンド(KoboldCpp含む)、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancer。',
           'セルフホストはnpmパッケージ(`npm install agnai -g`)またはDocker経由でインストール。MongoDBとRedisはいずれも任意 — データベースなしではAgnaiは匿名の「Guest Only」モードで動作し、データはブラウザに保存される。',
           '主な機能:マルチユーザー/マルチボットのグループ会話、4種類のペルソナ形式(W++、Square Bracket Format、Boostyle、プレーンテキスト)のキャラクターカード、Memory/Loreブック、AI支援のキャラクター生成。',
@@ -1382,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'AgnaiはSillyTavernに似たAIキャラクター向けチャットインターフェースで、agnai.chatでホスト利用するか、セルフホストしてKoboldCpp、OpenAI、Anthropic Claudeなどのバックエンドに接続して使うものと考えてください。' },
         ],
         content: [
-          'Agnai は、自身の[GitHubリポジトリ](https://github.com/agnaistic/agnai)で「AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind」と説明されており、GNU Affero General Public License v3.0(AGPL-3.0)の下でライセンスされ、2026-09-12時点でスター782、フォーク150を記録している。',
+          'Agnai は、自身の[GitHubリポジトリ](https://github.com/agnaistic/agnai)で「AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind」と説明されており、GNU Affero General Public License v3.0(AGPL-3.0)の下でライセンスされ、最終更新日は' + lastUpdate('ja') + '。',
           'このプロジェクトはPygmalionAIによるGalatea-UIの初期の成果に端を発し、マルチテナント基盤へと成長した:ユーザー認証、ユーザーごとのAIサービス設定、ユーザーごとの生成プリセットが組み込まれている — これは単一ユーザーのデスクトップ向けワークフローではなく、複数人でのホストを想定した機能である。',
           'Agnaiは独自の言語モデルを実行しない。設定したAIサービスに会話のやり取りを振り分けるチャットフロントエンドであり、そのためセルフホストに専用GPUは不要である — GPU(またはAPI予算)の要件は接続したバックエンドに完全に依存し、Agnai自体には依存しない。',
         ],
@@ -1497,6 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'Agnaiとは何ですか?', a: 'Agnai(Agnaisticとも呼ばれる)は、[agnai.chat](https://agnai.chat)でホスト利用できるか、GitHubの[agnaistic/agnai](https://github.com/agnaistic/agnai)からセルフホストできる、AGPL-3.0ライセンスのオープンソースAIロールプレイチャット基盤です。独自モデルを実行する代わりに外部AIサービスに接続します。' },
+          { q: 'Agnai、Agnaistic、agnai.chatの違いは何ですか?', a: '同じプロジェクトです。Agnaiは製品名、Agnaisticはオープンソースのリポジトリ、npmパッケージ、Dockerイメージの名称([agnaistic/agnai](https://github.com/agnaistic/agnai))、[agnai.chat](https://agnai.chat)はそのホスト版です。' },
           { q: 'Agnaiは無料ですか?', a: 'はい。セルフホストのソフトウェアはAGPL-3.0の下で無料かつオープンソースです。ホスト版のagnai.chatも自分のAIサービスAPIキーまたは無料のAI Hordeバックエンドで無料利用できます。さらに、Agnai自身のホスト型モデルへの優先アクセスを提供する有料サブスクリプションもありますが、具体的な価格はプロジェクトのドキュメントに公開されていません。' },
           { q: 'AgnaiはOllamaに対応していますか?', a: '直接的には対応していません。AgnaiのREADMEは対応AIサービスとしてKobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerを挙げていますが、Ollamaは含まれていません。Ollamaの接続には、ネイティブ統合ではなくOpenAI互換プロキシ層を経由させる必要があります。' },
           { q: 'Agnaiをどうやってセルフホストしますか?', a: '`npm install agnai -g`でnpmパッケージとしてインストール後 `agnai` を実行するか、Dockerで `docker compose -p agnai -f self-host.docker-compose.yml up -d`(MongoDBあり)または `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest`(MongoDBなし)を使います。MongoDBとRedisはいずれも任意です。' },
@@ -1538,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-zh.webp',
@@ -1547,7 +1559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Agnai([agnai.chat](https://agnai.chat))在GitHub上以[agnaistic/agnai](https://github.com/agnaistic/agnai)维护,是一个采用GNU Affero通用公共许可证v3.0(AGPL-3.0)的开源AI角色扮演聊天平台。与内置自有模型的应用不同,Agnai是一个前端,把对话分发给你所连接的外部AI服务——兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer。它既可以在agnai.chat上免安装托管使用,也可以通过npm包或Docker自托管,MongoDB和Redis均为可选。本评测是[本地LLM软件目录](https://www.promptquorum.com/directory)中Agnai条目的配套内容,涵盖Agnai实际支持的功能、自托管的原理,以及它与SillyTavern、Backyard AI和RisuAI的比较。',
     metaDescription:
-      'Agnai评测2026:开源AI角色扮演聊天,通过npm或Docker自托管(MongoDB可选),支持9种AI服务,角色卡,群聊,以及与SillyTavern和RisuAI的比较。',
+      'Agnai(agnai.chat)是免费开源的AI角色扮演聊天平台:托管版或通过npm/Docker自托管,支持9种AI服务和群聊。含安装步骤与同类对比。',
     twitterDescription:
       'Agnai评测2026:可自托管的开源角色扮演聊天平台,可连接Kobold、NovelAI、AI Horde、OpenAI、Claude等——与SillyTavern、Backyard AI和RisuAI的比较。',
     audience:
@@ -1584,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       zh: {
         question: 'AI角色扮演和角色聊天应该用Agnai吗?',
@@ -1597,7 +1609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[agnai.chat](https://agnai.chat)的托管版免安装,提供免费层级和可选付费订阅。',
           '未将Ollama列为原生后端——连接Ollama需要OpenAI兼容代理层,而非直接设置。',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -1622,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '要点速览',
         isTldr: true,
         items: [
-          'Agnai([agnai.chat](https://agnai.chat))是一个可自托管的开源AI角色扮演聊天平台,在GitHub上以[agnaistic/agnai](https://github.com/agnaistic/agnai)维护——截至2026-09-12获得782颗星、150次分叉,采用AGPL-3.0许可证。',
+          'Agnai([agnai.chat](https://agnai.chat))是一个可自托管的开源AI角色扮演聊天平台,在GitHub上以[agnaistic/agnai](https://github.com/agnaistic/agnai)维护——最近一次更新于' + lastUpdate('zh') + ',采用AGPL-3.0许可证。',
           'Agnai是一个前端,而非模型托管方——它连接外部AI服务:兼容Kobold的后端(含KoboldCpp)、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer。',
           '自托管可作为npm包安装(`npm install agnai -g`)或通过Docker安装;MongoDB和Redis均为可选——没有数据库时,Agnai以匿名的"Guest Only"模式运行,数据改为存储在浏览器中。',
           '核心功能:多用户/多机器人群聊、四种角色格式(W++、Square Bracket Format、Boostyle、纯文本)的角色卡、Memory/Lore书,以及AI辅助角色生成。',
@@ -1639,7 +1651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '可以把Agnai看作一个类似SillyTavern的AI角色聊天界面,你既可以在agnai.chat上托管使用,也可以自托管并连接KoboldCpp、OpenAI或Anthropic Claude等后端。' },
         ],
         content: [
-          'Agnai在自己的[GitHub仓库](https://github.com/agnaistic/agnai)中被描述为"AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind",采用GNU Affero通用公共许可证v3.0(AGPL-3.0),截至2026-09-12获得782颗星、150次分叉。',
+          'Agnai在自己的[GitHub仓库](https://github.com/agnaistic/agnai)中被描述为"AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind",采用GNU Affero通用公共许可证v3.0(AGPL-3.0),最近一次更新于' + lastUpdate('zh') + '。',
           '该项目源自PygmalionAI的Galatea-UI早期工作,已发展成一个多租户平台:内置用户认证、按用户设置AI服务,以及按用户设置生成预设——这些功能面向多人托管,而非单人桌面工作流。',
           'Agnai不运行自己的语言模型。它是一个聊天前端,将对话回合分发给你配置的AI服务——这也是自托管不需要专用GPU的原因:GPU(或API预算)需求完全取决于所连接的后端,而非Agnai本身。',
         ],
@@ -1754,6 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'Agnai是什么?', a: 'Agnai(也称Agnaistic)是一个开源AI角色扮演聊天平台,可在[agnai.chat](https://agnai.chat)托管使用,也可从GitHub上的[agnaistic/agnai](https://github.com/agnaistic/agnai)自托管,采用AGPL-3.0许可证。它连接外部AI服务,而不是运行自己的模型。' },
+          { q: 'Agnai、Agnaistic和agnai.chat有什么区别?', a: '它们是同一个项目。Agnai是产品名称,Agnaistic是开源仓库、npm包和Docker镜像的名称([agnaistic/agnai](https://github.com/agnaistic/agnai)),[agnai.chat](https://agnai.chat)则是其托管版本。' },
           { q: 'Agnai免费吗?', a: '是的。自托管软件在AGPL-3.0下免费且开源。托管站点agnai.chat用你自己的AI服务API密钥或免费的AI Horde后端也可免费使用;此外还提供付费订阅以优先访问Agnai自有的托管模型,不过具体价格未在项目文档中公开。' },
           { q: 'Agnai支持Ollama吗?', a: '不直接支持。Agnai的README将兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer列为支持的AI服务——其中不包括Ollama。连接Ollama需要通过OpenAI兼容代理层进行路由,而不是原生集成。' },
           { q: '如何自托管Agnai?', a: '用`npm install agnai -g`将其作为npm包安装,然后运行`agnai`;或使用Docker,执行`docker compose -p agnai -f self-host.docker-compose.yml up -d`(含MongoDB)或`docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest`(不含MongoDB)。MongoDB和Redis均为可选。' },
@@ -1795,7 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-ar.webp',
@@ -1804,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Agnai ([agnai.chat](https://agnai.chat))، الذي يُصان على GitHub باسم [agnaistic/agnai](https://github.com/agnaistic/agnai)، هو منصة مفتوحة المصدر لدردشة تقمص الأدوار بالذكاء الاصطناعي مرخّصة بموجب رخصة جنو أفيرو العمومية العامة الإصدار 3.0 (AGPL-3.0). على عكس تطبيق يضمّ نموذجه الخاص، فإن Agnai واجهة أمامية توجّه المحادثات إلى خدمات ذكاء اصطناعي خارجية تقوم أنت بربطها — خلفيات متوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer. يعمل إما مستضافًا على agnai.chat دون أي تثبيت، أو مستضافًا ذاتيًا عبر حزمة npm أو Docker، مع كون MongoDB وRedis اختياريَين كليهما. هذه المراجعة مكمّلة لمدخل Agnai في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) وتغطي ما يدعمه Agnai فعليًا، وكيفية عمل الاستضافة الذاتية، ومقارنته بـ SillyTavern وBackyard AI وRisuAI.',
     metaDescription:
-      'مراجعة Agnai 2026: دردشة تقمص أدوار مفتوحة المصدر بالذكاء الاصطناعي، استضافة ذاتية عبر npm أو Docker (MongoDB اختياري)، 9 خدمات ذكاء اصطناعي مدعومة، بطاقات شخصيات، دردشة جماعية، ومقارنة مع SillyTavern وRisuAI.',
+      'Agnai (agnai.chat) منصة دردشة تقمص أدوار مفتوحة المصدر ومجانية: نسخة مستضافة أو استضافة ذاتية عبر npm/Docker، 9 خدمات ذكاء اصطناعي ودردشة جماعية. الإعداد والمقارنة.',
     twitterDescription:
       'مراجعة Agnai 2026: منصة دردشة تقمص أدوار مفتوحة المصدر قابلة للاستضافة الذاتية تتصل بـ Kobold وNovelAI وAI Horde وOpenAI وClaude وغيرها — مقارنة مع SillyTavern وBackyard AI وRisuAI.',
     audience:
@@ -1841,7 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       ar: {
         question: 'هل يجب أن أستخدم Agnai لتقمص الأدوار ودردشة الشخصيات بالذكاء الاصطناعي؟',
@@ -1854,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'النسخة المستضافة على [agnai.chat](https://agnai.chat) لا تحتاج إلى تثبيت وتضم مستوى مجانيًا إضافة إلى اشتراك مدفوع اختياري.',
           'لا يُدرج Ollama كخلفية أصيلة — يتطلب ربط Ollama طبقة وكيل متوافقة مع OpenAI، وليس إعدادًا مباشرًا.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -1879,7 +1892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخلاصة السريعة',
         isTldr: true,
         items: [
-          'Agnai ([agnai.chat](https://agnai.chat)) منصة دردشة تقمص أدوار مفتوحة المصدر وقابلة للاستضافة الذاتية، تُصان في [agnaistic/agnai](https://github.com/agnaistic/agnai) على GitHub — 782 نجمة و150 عملية تفريع حتى 2026-09-12، مرخّصة بموجب AGPL-3.0.',
+          'Agnai ([agnai.chat](https://agnai.chat)) منصة دردشة تقمص أدوار مفتوحة المصدر وقابلة للاستضافة الذاتية، تُصان في [agnaistic/agnai](https://github.com/agnaistic/agnai) على GitHub — آخر تحديث للمشروع: ' + lastUpdate('ar') + '، مرخّصة بموجب AGPL-3.0.',
           'Agnai واجهة أمامية وليس مضيف نماذج — يتصل بخدمات ذكاء اصطناعي خارجية: خلفيات متوافقة مع Kobold (بما فيها KoboldCpp)، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer.',
           'تُثبَّت الاستضافة الذاتية كحزمة npm (`npm install agnai -g`) أو عبر Docker؛ MongoDB وRedis اختياريان كلاهما — دون قاعدة بيانات، يعمل Agnai في وضع "ضيف فقط" مجهول ويخزّن البيانات في المتصفح بدلًا من ذلك.',
           'الميزات الأساسية: محادثات جماعية متعددة المستخدمين/متعددة الروبوتات، وبطاقات شخصيات بأربعة تنسيقات شخصية (W++، وSquare Bracket Format، وBoostyle، والنص العادي)، وكتب الذاكرة/الخلفية القصصية، وتوليد الشخصيات بمساعدة الذكاء الاصطناعي.',
@@ -1896,7 +1909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'فكّر في Agnai كواجهة دردشة لشخصيات الذكاء الاصطناعي، شبيهة بـ SillyTavern، تستخدمها إما مستضافة على agnai.chat أو مستضافة ذاتيًا ومتصلة بخلفية مثل KoboldCpp أو OpenAI أو Anthropic Claude.' },
         ],
         content: [
-          'يُوصف Agnai في [مستودعه على GitHub](https://github.com/agnaistic/agnai) بأنه "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind"، وهو مرخّص بموجب رخصة جنو أفيرو العمومية العامة الإصدار 3.0 (AGPL-3.0)، وكان يملك 782 نجمة و150 عملية تفريع حتى 2026-09-12.',
+          'يُوصف Agnai في [مستودعه على GitHub](https://github.com/agnaistic/agnai) بأنه "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind"، وهو مرخّص بموجب رخصة جنو أفيرو العمومية العامة الإصدار 3.0 (AGPL-3.0)، وكان آخر تحديث له بتاريخ ' + lastUpdate('ar') + '.',
           'يعود المشروع في أصله إلى العمل المبكر لـ Galatea-UI من PygmalionAI، وقد تطوّر إلى منصة متعددة المستأجرين: مصادقة المستخدمين، وإعدادات خدمة الذكاء الاصطناعي لكل مستخدم، وإعدادات توليد مسبقة لكل مستخدم — كلها مدمجة، وهي ميزات تستهدف استضافة Agnai لأكثر من شخص، لا سير عمل سطح مكتب فردي فقط.',
           'لا يشغّل Agnai نموذج لغته الخاص. إنه واجهة دردشة أمامية توجّه أدوار المحادثة إلى خدمة الذكاء الاصطناعي التي تُعدّها، ولهذا لا تحتاج استضافته الذاتية إلى وحدة معالجة رسومات مخصصة خاصة به: تعتمد متطلبات وحدة المعالجة الرسومية (أو ميزانية واجهة برمجة التطبيقات) كليًا على الخلفية المتصلة، لا على Agnai نفسه.',
         ],
@@ -2011,6 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو Agnai؟', a: 'Agnai (يُسمّى أيضًا Agnaistic) هو منصة دردشة تقمص أدوار مفتوحة المصدر بالذكاء الاصطناعي، متاحة مستضافة على [agnai.chat](https://agnai.chat) أو مستضافة ذاتيًا من [agnaistic/agnai](https://github.com/agnaistic/agnai) على GitHub، مرخّصة بموجب AGPL-3.0. يتصل بخدمات ذكاء اصطناعي خارجية بدلًا من تشغيل نموذجه الخاص.' },
+          { q: 'ما الفرق بين Agnai وAgnaistic وagnai.chat؟', a: 'هي المشروع نفسه. Agnai هو اسم المنتج، وAgnaistic هو اسم المستودع مفتوح المصدر وحزمة npm وصورة Docker ([agnaistic/agnai](https://github.com/agnaistic/agnai))، أما [agnai.chat](https://agnai.chat) فهو النسخة المستضافة منه.' },
           { q: 'هل Agnai مجاني؟', a: 'نعم. البرنامج المستضاف ذاتيًا مجاني ومفتوح المصدر بموجب AGPL-3.0. الموقع المستضاف agnai.chat مجاني أيضًا للاستخدام مع مفتاح واجهة برمجة تطبيقات خدمة الذكاء الاصطناعي الخاص بك أو خلفية AI Horde المجانية؛ ويقدّم أيضًا اشتراكًا مدفوعًا للوصول ذي الأولوية إلى نماذج Agnai المستضافة الخاصة، وإن لم يكن السعر المحدد منشورًا في وثائق المشروع.' },
           { q: 'هل يدعم Agnai خدمة Ollama؟', a: 'ليس مباشرة. يُدرج ملف README الخاص بـ Agnai الخلفيات المتوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer كخدمات ذكاء اصطناعي مدعومة — وليست Ollama من بينها. يتطلب ربط Ollama توجيهها عبر طبقة وكيل متوافقة مع OpenAI بدلًا من تكامل أصيل.' },
           { q: 'كيف أستضيف Agnai ذاتيًا؟', a: 'ثبّته كحزمة npm بـ `npm install agnai -g`، ثم شغّل `agnai`؛ أو استخدم Docker بـ `docker compose -p agnai -f self-host.docker-compose.yml up -d` (مع MongoDB) أو `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest` (بدون MongoDB). MongoDB وRedis اختياريان كلاهما.' },
@@ -2052,7 +2066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-09-12',
+    dateModified: '2026-10-30',
     next_refresh_due: '2027-03-12',
     theme: 'Creative & Roleplay',
     heroImage: '/images/agnai-review-hero-ko.webp',
@@ -2061,7 +2075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GitHub에서 [agnaistic/agnai](https://github.com/agnaistic/agnai)로 관리되는 Agnai([agnai.chat](https://agnai.chat))는 GNU Affero General Public License v3.0(AGPL-3.0) 하에 배포되는 오픈소스 AI 롤플레이 채팅 플랫폼입니다. 자체 모델을 내장한 앱과 달리 Agnai는 사용자가 연결한 외부 AI 서비스 — Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer — 로 대화를 전달하는 프런트엔드입니다. 설치 없이 agnai.chat에서 호스팅 버전으로 사용하거나, npm 패키지 또는 Docker로 셀프 호스팅할 수 있으며 MongoDB와 Redis는 모두 선택 사항입니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 Agnai 항목을 보완하며, Agnai가 실제로 지원하는 기능, 셀프 호스팅 방법, SillyTavern·Backyard AI·RisuAI와의 비교를 다룹니다.',
     metaDescription:
-      'Agnai 리뷰 2026: 오픈소스 AI 롤플레이 채팅, npm 또는 Docker로 셀프 호스팅(MongoDB 선택), 9개 지원 AI 서비스, 캐릭터 카드, 그룹 채팅, SillyTavern·RisuAI와의 비교.',
+      'Agnai(agnai.chat)는 무료 오픈소스 AI 롤플레이 채팅입니다. 호스팅 버전 또는 npm/Docker 셀프 호스팅, 9개 AI 서비스, 그룹 채팅. 설치 방법과 비교.',
     twitterDescription:
       'Agnai 리뷰 2026: Kobold, NovelAI, AI Horde, OpenAI, Claude 등에 연결되는 셀프 호스팅 가능한 오픈소스 롤플레이 채팅 플랫폼 — SillyTavern, Backyard AI, RisuAI와의 비교.',
     audience:
@@ -2098,7 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hosted version at [agnai.chat](https://agnai.chat) needs no install and has a free tier plus an optional paid subscription.',
           'Does not list Ollama as a native backend — connecting Ollama requires an OpenAI-compatible proxy layer, not a direct setting.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
       ko: {
         question: 'AI 롤플레이와 캐릭터 채팅에 Agnai를 사용해야 할까요?',
@@ -2111,7 +2125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[agnai.chat](https://agnai.chat)의 호스팅 버전은 설치가 필요 없으며 무료 등급과 선택적 유료 구독을 제공.',
           'Ollama를 네이티브 백엔드로 기재하지 않음 — Ollama 연결에는 직접 설정이 아니라 OpenAI 호환 프록시 계층이 필요.',
         ],
-        updatedDate: '2026-09-12',
+        updatedDate: '2026-10-30',
       },
     },
     toc: [
@@ -2136,7 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '요약',
         isTldr: true,
         items: [
-          'Agnai([agnai.chat](https://agnai.chat))는 GitHub의 [agnaistic/agnai](https://github.com/agnaistic/agnai)에서 관리되는 셀프 호스팅 가능한 오픈소스 AI 롤플레이 채팅 플랫폼으로, 2026-09-12 기준 스타 782개, 포크 150개이며 AGPL-3.0 라이선스입니다.',
+          'Agnai([agnai.chat](https://agnai.chat))는 GitHub의 [agnaistic/agnai](https://github.com/agnaistic/agnai)에서 관리되는 셀프 호스팅 가능한 오픈소스 AI 롤플레이 채팅 플랫폼으로, 마지막 업스트림 업데이트는 ' + lastUpdate('ko') + '이며 AGPL-3.0 라이선스입니다.',
           'Agnai는 모델 호스트가 아니라 프런트엔드입니다 — Kobold 호환 백엔드(KoboldCpp 포함), NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer 등 외부 AI 서비스에 연결됩니다.',
           '셀프 호스팅은 npm 패키지(`npm install agnai -g`) 또는 Docker로 설치합니다. MongoDB와 Redis는 모두 선택 사항이며, 데이터베이스가 없으면 Agnai는 익명의 "Guest Only" 모드로 실행되어 데이터를 브라우저에 저장합니다.',
           '핵심 기능: 다중 사용자/다중 봇 그룹 대화, 4가지 페르소나 형식(W++, Square Bracket Format, Boostyle, 일반 텍스트)의 캐릭터 카드, Memory/Lore 북, AI 지원 캐릭터 생성.',
@@ -2153,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Agnai는 SillyTavern과 비슷한 AI 캐릭터용 채팅 인터페이스로, agnai.chat에서 호스팅 버전으로 사용하거나 셀프 호스팅해서 KoboldCpp, OpenAI, Anthropic Claude 같은 백엔드에 연결해 사용한다고 생각하면 된다.' },
         ],
         content: [
-          'Agnai는 자체 [GitHub 저장소](https://github.com/agnaistic/agnai)에서 "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind"로 소개되며, GNU Affero General Public License v3.0(AGPL-3.0) 하에 라이선스되어 있고 2026-09-12 기준 스타 782개, 포크 150개를 기록했다.',
+          'Agnai는 자체 [GitHub 저장소](https://github.com/agnaistic/agnai)에서 "AI Agnostic (Multi-user and Multi-bot) Chat with Fictional Characters, designed with scale in mind"로 소개되며, GNU Affero General Public License v3.0(AGPL-3.0) 하에 라이선스되어 있고 마지막 업스트림 업데이트는 ' + lastUpdate('ko') + '이다.',
           '이 프로젝트는 PygmalionAI의 Galatea-UI 초기 작업에서 시작되어 멀티 테넌트 플랫폼으로 성장했다: 사용자 인증, 사용자별 AI 서비스 설정, 사용자별 생성 프리셋이 내장되어 있는데, 이는 단일 사용자 데스크톱 워크플로가 아니라 여러 사람을 위한 호스팅을 겨냥한 기능이다.',
           'Agnai는 자체 언어 모델을 실행하지 않는다. 설정한 AI 서비스로 대화 턴을 전달하는 채팅 프런트엔드이며, 이 때문에 셀프 호스팅에 전용 GPU가 필요 없다 — GPU(또는 API 예산) 요구 사항은 전적으로 연결한 백엔드에 달려 있으며 Agnai 자체와는 무관하다.',
         ],
@@ -2268,6 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Agnai란 무엇인가요?', a: 'Agnai(Agnaistic이라고도 함)는 [agnai.chat](https://agnai.chat)에서 호스팅 버전으로 이용하거나 GitHub의 [agnaistic/agnai](https://github.com/agnaistic/agnai)에서 셀프 호스팅할 수 있는, AGPL-3.0 라이선스의 오픈소스 AI 롤플레이 채팅 플랫폼입니다. 자체 모델을 실행하는 대신 외부 AI 서비스에 연결됩니다.' },
+          { q: 'Agnai, Agnaistic, agnai.chat은 무엇이 다른가요?', a: '모두 같은 프로젝트입니다. Agnai는 제품 이름, Agnaistic은 오픈소스 저장소·npm 패키지·Docker 이미지의 이름([agnaistic/agnai](https://github.com/agnaistic/agnai))이며, [agnai.chat](https://agnai.chat)은 그 호스팅 버전입니다.' },
           { q: 'Agnai는 무료인가요?', a: '예. 셀프 호스팅 소프트웨어는 AGPL-3.0 하에 무료이며 오픈소스입니다. 호스팅 사이트 agnai.chat도 자신의 AI 서비스 API 키나 무료 AI Horde 백엔드로 무료로 사용할 수 있으며, 추가로 Agnai 자체 호스팅 모델에 우선 접근할 수 있는 유료 구독도 제공하지만 구체적인 가격은 프로젝트 문서에 공개되어 있지 않습니다.' },
           { q: 'Agnai는 Ollama를 지원하나요?', a: '직접적으로는 아닙니다. Agnai의 README는 Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer를 지원 AI 서비스로 나열하지만 Ollama는 포함되어 있지 않습니다. Ollama를 연결하려면 네이티브 통합이 아니라 OpenAI 호환 프록시 계층을 통해 라우팅해야 합니다.' },
           { q: 'Agnai를 어떻게 셀프 호스팅하나요?', a: '`npm install agnai -g`로 npm 패키지로 설치한 뒤 `agnai`를 실행하거나, Docker로 `docker compose -p agnai -f self-host.docker-compose.yml up -d`(MongoDB 포함) 또는 `docker run -dt --restart=always -p 3001:3001 ghcr.io/agnaistic/agnaistic:latest`(MongoDB 미포함)를 사용합니다. MongoDB와 Redis는 모두 선택 사항입니다.' },

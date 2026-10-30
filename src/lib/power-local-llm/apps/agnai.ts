@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   reviewSlug: 'agnai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/agnaistic/agnai README: self-host deps are Node.js/MongoDB/Redis only, no stated RAM/GPU floor — Agnai is a chat frontend that connects to an external backend (KoboldAI, NovelAI, OpenAI, etc.), the frontend itself needs no GPU; verified 2026-09-13
-  stars: 776,
+  stars: 790, // GitHub API 2026-10-30
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
