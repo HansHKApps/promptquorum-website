@@ -20,6 +20,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-en.webp',
       title: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
       intro: 'AI code review tools caught 44–82% of seeded bugs in a July 2025 benchmark run by Greptile on 50 bugs from five open-source repositories. Treat vendor-run numbers as directional: Greptile sells one of the tools tested and independent results may differ. The practical challenge is signal-to-noise: AI reviewers can bury logic and security findings under style comments, which teaches developers to ignore them. Scoped prompts that prioritize security and logic over formatting are the main lever.',
+      leadAnswerBlock: '**In a July 2025 benchmark run by Greptile on 50 seeded bugs, Greptile caught 82%, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44%; because that test is vendor-run, compare pricing, platforms and self-hosting too, and trial two tools on your own pull requests.**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -627,6 +628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-de.webp',
       title: 'KI-Code-Review 2026: Die besten Tools im Ranking (CodeRabbit, Greptile, Snyk) + Prompt-Framework',
       intro: 'KI-Code-Review-Tools fanden in einem Benchmark, den Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt hat, 44–82% der eingebauten Bugs. Betrachten Sie vom Hersteller durchgeführte Zahlen als Richtwert: Greptile verkauft eines der getesteten Tools, und unabhängige Ergebnisse können abweichen. Die praktische Herausforderung ist das Signal-Rausch-Verhältnis: KI-Reviewer können Logik- und Sicherheitsbefunde unter Stilkommentaren begraben, was Entwickler dazu bringt, sie zu ignorieren. Eng gefasste Prompts, die Sicherheit und Logik vor Formatierung priorisieren, sind der wichtigste Hebel.',
+      leadAnswerBlock: '**In einem von Greptile im Juli 2025 durchgeführten Benchmark mit 50 eingebauten Bugs erkannte Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44%. Da der Test vom Hersteller stammt, vergleichen Sie auch Preise, Plattformen und Self-Hosting und testen Sie zwei Tools an Ihren eigenen Pull Requests.**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -1237,6 +1239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-es.webp',
       title: 'Revisión de Código con IA 2026: Ranking de Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
       intro: 'Las herramientas de revisión de código con IA detectaron entre el 44 y el 82 % de los bugs sembrados en un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs de cinco repositorios de código abierto. Toma las cifras de los proveedores como orientativas: Greptile vende una de las herramientas evaluadas y los resultados independientes pueden diferir. El reto práctico es la relación señal/ruido: los revisores de IA pueden enterrar los hallazgos de lógica y seguridad bajo comentarios de estilo, lo que enseña a los desarrolladores a ignorarlos. Los prompts acotados que priorizan la seguridad y la lógica sobre el formato son la palanca principal.',
+      leadAnswerBlock: '**En un benchmark de julio de 2025 ejecutado por Greptile con 50 bugs sembrados, Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 %. Como la prueba es del proveedor, compara también precios, plataformas y autohospedaje, y prueba dos herramientas con tus propios pull requests.**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -1847,6 +1850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-ar.webp',
       title: 'مراجعة الكود بالذكاء الاصطناعي ⁨2026⁩: أفضل الأدوات مرتبة (⁨CodeRabbit⁩، ⁨Greptile⁩، ⁨Snyk⁩) + إطار التعليمات',
       intro: 'اكتشفت أدوات مراجعة الكود بالذكاء الاصطناعي ما بين 44 و82٪ من الأخطاء المزروعة في معيار أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر. تعامل مع أرقام المزوِّد بوصفها مؤشرًا اتجاهيًا فقط: تبيع Greptile إحدى الأدوات المختبَرة وقد تختلف النتائج المستقلة. التحدي العملي هو نسبة الإشارة إلى الضوضاء: قد يدفن مراجعو الذكاء الاصطناعي نتائج المنطق والأمان تحت تعليقات الأسلوب، مما يُعلّم المطورين تجاهلها. التعليمات ذات النطاق المحدد التي تعطي الأولوية للأمان والمنطق على التنسيق هي الرافعة الرئيسية.',
+      leadAnswerBlock: '**في اختبار أجرته Greptile في يوليو 2025 على 50 خطأً مزروعًا، اكتشفت Greptile نسبة 82% وCursor Bugbot نسبة 58% وGitHub Copilot نسبة 54% وCodeRabbit نسبة 44%. وبما أن الاختبار من المزوِّد، قارن أيضًا الأسعار والمنصات والاستضافة الذاتية، وجرّب أداتين على طلبات الدمج الخاصة بك.**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -2457,6 +2461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-pt.webp',
       title: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
       intro: 'As ferramentas de revisão de código com IA detectaram 44–82% dos bugs inseridos em um benchmark de julho de 2025 executado pela Greptile com 50 bugs de cinco repositórios de código aberto. Trate os números executados pelos fornecedores como indicativos: a Greptile vende uma das ferramentas testadas e resultados independentes podem diferir. O desafio prático é a relação sinal/ruído: os revisores de IA podem enterrar descobertas de lógica e segurança sob comentários de estilo, o que ensina os desenvolvedores a ignorá-los. Prompts com escopo, que priorizam segurança e lógica sobre formatação, são a principal alavanca.',
+      leadAnswerBlock: '**Em um benchmark de julho de 2025 executado pela Greptile com 50 bugs inseridos, a Greptile detectou 82%, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44%. Como o teste é do fornecedor, compare também preços, plataformas e auto-hospedagem e teste duas ferramentas nos seus próprios pull requests.**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -3067,6 +3072,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-fr.webp',
       title: 'Révision de code par IA en 2026 : classement des outils (CodeRabbit, Greptile, Snyk) + framework de prompts',
       intro: 'Les outils de révision de code par IA ont détecté 44–82% des bugs injectés lors d\'un benchmark de juillet 2025 mené par Greptile sur 50 bugs issus de cinq dépôts open source. Considérez les chiffres publiés par les éditeurs comme indicatifs : Greptile vend l\'un des outils testés et des résultats indépendants peuvent différer. Le défi pratique est le rapport signal-bruit : les relecteurs IA peuvent noyer les constats de logique et de sécurité sous des commentaires de style, ce qui apprend aux développeurs à les ignorer. Des prompts ciblés qui privilégient la sécurité et la logique plutôt que la mise en forme sont le principal levier.',
+      leadAnswerBlock: '**Dans un benchmark mené par Greptile en juillet 2025 sur 50 bugs injectés, Greptile en a détecté 82%, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44%. Ce test émanant d\'un éditeur, comparez aussi tarifs, plateformes et auto-hébergement, et essayez deux outils sur vos propres pull requests.**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -3677,6 +3683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-ja.webp',
       title: 'AI コードレビュー2026：おすすめツール比較（CodeRabbit、Greptile、Snyk）とプロンプトフレームワーク',
       intro: 'AI コードレビューツールは、Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施したベンチマークで、意図的に埋め込まれたバグの44～82%を検出しました。ベンダー実施の数値は参考値として扱ってください。Greptile はテスト対象のツールの1つを販売しており、独立した結果は異なる可能性があります。実務上の課題はシグナル・ノイズ比です。AI レビュアーはロジックやセキュリティの指摘をスタイルのコメントの中に埋もれさせることがあり、開発者がそれらを無視するようになります。セキュリティとロジックをスタイルより優先する、範囲を絞ったプロンプトが主な対策です。',
+      leadAnswerBlock: '**Greptileが5つのオープンソースリポジトリの50件の埋め込みバグで2025年7月に実施したベンチマークでは、検出率はGreptile 82%、Cursor Bugbot 58%、GitHub Copilot 54%、CodeRabbit 44%でした。ベンダー実施のテストなので、価格・対応プラットフォーム・セルフホストも比較し、自社のプルリクエストで2つのツールを試してください。**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -4287,6 +4294,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-zh.webp',
       title: 'AI 代码审查 2026：工具排名（CodeRabbit、Greptile、Snyk）与提示框架',
       intro: 'AI 代码审查工具在 Greptile 于 2025 年 7 月针对五个开源仓库的 50 个缺陷运行的基准测试中，检出了 44–82% 的植入缺陷。请把厂商自测的数字仅作方向性参考：Greptile 销售被测工具之一，独立测试的结果可能不同。实际难题在于信噪比：AI 审查工具可能把逻辑和安全方面的发现淹没在风格评论之中，让开发者学会忽略它们。限定范围、优先关注安全与逻辑而非格式的提示，是最主要的改进手段。',
+      leadAnswerBlock: '**在 Greptile 于 2025 年 7 月针对 50 个植入缺陷运行的基准测试中，Greptile 检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%。由于该测试由厂商自行运行，请同时比较价格、平台与自托管，并在自己的 Pull Request 上试用两款工具。**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -4900,6 +4908,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/ai-code-review-overview-hero-ko.webp',
     title: 'AI 코드 리뷰 2026: 최고 도구 순위 (CodeRabbit, Greptile, Snyk) + 프롬프트 프레임워크',
     intro: 'AI 코드 리뷰 도구는 Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행한 벤치마크에서 심어 둔 버그의 44–82%를 잡아냈습니다. 벤더가 직접 실행한 수치는 방향성을 보여 주는 참고치로만 보십시오. Greptile은 테스트 대상 도구 중 하나를 판매하며 독립적인 결과는 다를 수 있습니다. 실무상의 과제는 신호 대 잡음 비율입니다. AI 리뷰어는 로직과 보안 발견 사항을 스타일 코멘트 속에 묻어 버릴 수 있으며, 이는 개발자가 코멘트를 무시하도록 만듭니다. 보안과 로직을 형식보다 우선하도록 범위를 한정한 프롬프트가 가장 큰 해결 수단입니다.',
+    leadAnswerBlock: '**2025년 7월 Greptile이 50개의 삽입 버그로 실행한 벤치마크에서 탐지율은 Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%였습니다. 벤더가 직접 실행한 테스트이므로 가격, 지원 플랫폼, 자체 호스팅도 함께 비교하고 자사 풀 리퀘스트에서 두 도구를 시험해 보시기 바랍니다.**',
     publishDate: '2026-03-24',
     dateModified: '2026-10-30',
     toc: [
