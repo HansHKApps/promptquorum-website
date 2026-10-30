@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-en.webp',
       title: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
-      intro: 'AI code review tools caught 44–82% of seeded bugs in the only public head-to-head test with a documented method — a July 2025 benchmark run by Greptile on 50 bugs from five open-source repositories — against under 20% for rule-based static analysis in third-party estimates. Treat vendor-run numbers as directional: other published benchmarks rank the same tools differently. The practical challenge is signal-to-noise: a published industry analysis found 64% of AI review comments address style rather than logic bugs. Scoped prompts that prioritize security and logic over formatting are the main lever.',
+      intro: 'AI code review tools caught 44–82% of seeded bugs in a July 2025 benchmark run by Greptile on 50 bugs from five open-source repositories. Treat vendor-run numbers as directional: Greptile sells one of the tools tested and independent results may differ. The practical challenge is signal-to-noise: AI reviewers can bury logic and security findings under style comments, which teaches developers to ignore them. Scoped prompts that prioritize security and logic over formatting are the main lever.',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -78,11 +78,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'AI Code Review Tools', description: 'Automated software tools that analyze code PRs and identify bugs, security vulnerabilities, and style issues' },
-          { '@type': 'Thing', name: 'Signal-to-Noise Problem', description: 'The challenge that most AI code review comments address style issues rather than logic bugs, per a published industry analysis' },
+          { '@type': 'Thing', name: 'Signal-to-Noise Problem', description: 'The challenge that AI code review comments can be dominated by style issues rather than logic bugs' },
           { '@type': 'Thing', name: 'Prompt Engineering for Code Review', description: 'Techniques for structuring AI instructions to prioritize logic and security findings over style comments' },
           { '@type': 'Thing', name: 'Chain-of-Thought Prompting', description: 'The method of asking AI models to trace execution paths step-by-step before identifying bugs' },
           { '@type': 'Thing', name: 'Code Review Automation', description: 'Integration of AI code review tools into CI/CD pipelines and pull request workflows' },
-          { '@type': 'Thing', name: 'GDPR-Compliant AI Code Review', description: 'Approaches for using AI code review while meeting European data protection requirements' },
+          { '@type': 'Thing', name: 'Data Protection in AI Code Review', description: 'Considerations for using AI code review under European data protection requirements' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -102,11 +102,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**Highest catch rate in the one documented public test:** Greptile at 82% (vendor-run, July 2025, 50 seeded bugs) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
+        '**Highest catch rate in the Greptile-run test:** Greptile at 82% (vendor-run, July 2025, 50 seeded bugs) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
         '**Pricing models differ:** CodeRabbit $24 per user per month (annual, Essentials); Greptile Pro $1 per review credit; Snyk Code Team $25 per month for up to 10 developers',
         '**Free options:** CodeRabbit on public repositories; Greptile Starter for one developer; Snyk Code Free (100 tests per month)',
         '**Self-hosting:** Enterprise plans only at CodeRabbit (500+ seats per its docs), Greptile and Qodo',
-        '**The signal problem:** a published industry analysis found 64% of AI review comments are style noise and 14% catch logic or security bugs',
+        '**The signal problem:** AI reviewers can bury logic and security findings under style comments — measure the share of comments your developers act on',
         '**The fix:** scoped prompts (5-part framework) shift comments toward logic and security',
       ],
       faqSchema: {
@@ -116,12 +116,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'What is the most accurate AI code review tool in 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No tool is the most accurate in every test. In the only public head-to-head benchmark with a documented method — run by Greptile in July 2025 on 50 bugs from five open-source repositories — Greptile caught 82%, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44% (default settings, hosted plans). Because Greptile sells one of the tools tested and other published benchmarks rank the tools differently, use the figures as a starting point and run a two-week trial on your own pull requests. For security scanning, Snyk Code is a separate category: a scanner that complements a pull-request reviewer.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'No tool is the most accurate in every test. In a July 2025 benchmark run by Greptile on 50 bugs from five open-source repositories, Greptile caught 82%, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44% (default settings, hosted plans). Because Greptile sells one of the tools tested and independent results may differ, use the figures as a starting point and run a two-week trial on your own pull requests. For security scanning, Snyk Code is a separate category: a scanner that complements a pull-request reviewer.' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit vs Greptile: which should I choose?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Choose Greptile if catching deep bugs matters most and you can budget per review: it caught 82% against CodeRabbit\'s 44% in Greptile\'s own July 2025 test, and Pro has no seat fees (prepaid credits at $1 each; a Base review uses 1 credit). Choose CodeRabbit if you want per-seat pricing ($24 per user per month on Essentials with annual billing, $30 monthly) and free reviews on public repositories. Both offer a 14-day trial and reserve self-hosting for Enterprise. Whether CodeRabbit is worth it depends on volume: a flat seat price is easier to forecast for teams that open many pull requests, while low-volume teams may pay less per review.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Choose Greptile if the highest seeded-bug catch rate matters most and you can budget per review: it caught 82% against CodeRabbit\'s 44% in Greptile\'s own July 2025 test, and Pro has no seat fees (prepaid credits at $1 each; a Base review uses 1 credit). Choose CodeRabbit if you want per-seat pricing ($24 per user per month on Essentials with annual billing, $30 monthly) and free reviews on public repositories. Both offer a 14-day trial and reserve self-hosting for Enterprise. Whether CodeRabbit is worth it depends on volume: a flat seat price is easier to forecast for teams that open many pull requests, while low-volume teams may pay less per review.' },
           },
           {
             '@type': 'Question',
@@ -151,12 +151,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'How much does AI code review reduce review time?',
-            acceptedAnswer: { '@type': 'Answer', text: 'A third-party industry guide (DigitalApplied, 2025) reports 40% less review time and 62% fewer production bugs; PromptQuorum has not measured these. Studies of AI bug triage report 65% shorter triage time and 30–40% faster time-to-resolution than manual methods. Teams that scope AI review prompts to logic and security (not style) report developer action rates of about 52%, in line with human reviewers.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'A third-party industry guide (DigitalApplied, 2025) reports 40% less review time and 62% fewer production bugs; PromptQuorum has not measured these. In the Khaleefulla et al. paper (IJERT), the authors report a 65% reduction in average triage time for their AI triage system. Whatever the tool, measure the share of AI comments your developers act on before and after you tune the prompt scope.' },
           },
           {
             '@type': 'Question',
             name: 'How does AI code review compare to traditional static analysis (SAST)?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Third-party estimates put traditional rule-based SAST below 20% on meaningful runtime bugs, with high false positive rates. AI-powered SAST scored 84–92/100 on AI-generated code in a 2025 third-party comparison, and transformer-based models reach 94% accuracy in bug classification benchmarks vs. 65% for rule-based methods (none measured by PromptQuorum). The key advantage of AI is contextual reasoning — it evaluates how code paths interact rather than matching fixed vulnerability signatures.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Rule-based SAST applies fixed vulnerability signatures and tends to produce many false positives, while AI-powered tools add contextual reasoning: they evaluate how code paths interact rather than matching signatures. In a 2025 third-party comparison, Snyk Code, Semgrep Enterprise and CodeQL scored 84–92/100 on AI-generated code (not measured by PromptQuorum). The two approaches are complementary.' },
           },
           {
             '@type': 'Question',
@@ -170,8 +170,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'What percentage of AI code review comments are actually useful?',
-            acceptedAnswer: { '@type': 'Answer', text: 'A published industry analysis of 1,247 AI review comments across 340 PRs (not measured by PromptQuorum) found only 14% addressed logic bugs and security issues — the issues that cause production incidents — while 64% addressed style, duplication, and test coverage. Tools with less than 60% actionable feedback see developer adoption collapse as engineers start ignoring all comments. Scoped prompts that explicitly exclude style comments are the main lever for raising the share of actionable comments.' },
+            name: 'What share of AI code review comments are actually useful?',
+            acceptedAnswer: { '@type': 'Answer', text: 'We could not confirm a verified public figure, and the share varies by tool, prompt and codebase, so measure it: count the share of AI comments your developers act on over a month. If most comments are ignored, tighten the scope — explicitly exclude style comments and ask for logic, security and performance findings only — and re-measure.' },
           },
           {
             '@type': 'Question',
@@ -191,12 +191,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Can AI code review detect security vulnerabilities better than dedicated SAST tools?',
-            acceptedAnswer: { '@type': 'Answer', text: 'In third-party comparisons, AI-powered SAST tools (Snyk Code, Semgrep Enterprise, CodeQL) scored 84–92/100 on AI-generated code, compared to 65% accuracy for rule-based static analysis. Traditional SAST is still faster for high-volume checking of large codebases because AI requires more compute per PR. Best practice: use lightweight SAST and linting for speed, and supplement with AI review for deep security analysis on high-risk changes (auth, payments, infrastructure).' },
+            acceptedAnswer: { '@type': 'Answer', text: 'In third-party comparisons, AI-powered SAST tools (Snyk Code, Semgrep Enterprise, CodeQL) scored 84–92/100 on AI-generated code in a 2025 third-party comparison (not measured by PromptQuorum), and rule-based static analysis remains useful as a fast merge gate. Traditional SAST is still faster for high-volume checking of large codebases because AI requires more compute per PR. Best practice: use lightweight SAST and linting for speed, and supplement with AI review for deep security analysis on high-risk changes (auth, payments, infrastructure).' },
           },
           {
             '@type': 'Question',
             name: 'Can I run AI code review locally for fully private code?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Devstral Small 24B (Mistral AI, 16 GB RAM) and Llama 4 Scout (~55 GB VRAM, 10M context) run fully on-premises via Ollama. No code is transmitted to external APIs, which removes the third-party processing step that a DPIA would otherwise need to cover. Quality is lower than frontier cloud models on complex security analysis but sufficient for most PR-level review.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Devstral Small 24B (Mistral AI, 16 GB RAM) and Llama 4 Scout (~55 GB VRAM, 10M context) run fully on-premises via Ollama. Inference runs on your hardware, so code is not sent to a cloud reviewer; this can remove the third-party processing step a DPIA would otherwise need to cover, but check model download and update behaviour with your security team. Quality is lower than frontier cloud models on complex security analysis but sufficient for most PR-level review.' },
           },
           {
             '@type': 'Question',
@@ -224,11 +224,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Key Takeaways',
           isTldr: true,
           items: [
-            'In the only public head-to-head test with a documented method (run by Greptile, July 2025, 50 seeded bugs), AI reviewers caught 44–82%: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — vendor-run, so directional only',
+            'In a July 2025 benchmark run by Greptile (50 seeded bugs), AI reviewers caught 44–82%: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — vendor-run, so directional only',
             'Pricing models differ: CodeRabbit charges per seat ($24–$72 per user per month on annual billing), Greptile Pro charges per review credit ($1 each, no seat fees), Snyk Code Team is a flat $25 per month for up to 10 developers',
             'CodeRabbit reviews public repositories for free and Greptile Starter is free for one developer; Qodo has a 14-day trial but no permanent free tier',
             'Self-hosting is an Enterprise-plan feature at CodeRabbit (offered to 500+ seat customers per its docs), Greptile and Qodo; self-hosted CodeRabbit still sends code to the LLM provider you configure',
-            'A published industry analysis found 64% of AI review comments address style and duplication and only 14% address logic bugs and security — scoped prompts are needed to invert this ratio',
+            'AI reviewers can bury logic and security findings under style comments; no public dataset we could verify quantifies the ratio, so measure the share of comments developers act on and use scoped prompts to push it up',
             'Snyk Code is a security scanner (92/100 in a 2025 third-party comparison of three security tools), not a general pull-request reviewer — run it next to an AI reviewer',
             'GDPR may require a Data Protection Impact Assessment (Article 35) before cloud AI code review processes source code that touches personal data — check with your data protection officer',
             'Cloud frontier models offer context windows around 1M tokens (roughly 75,000–100,000 lines of code, an estimate); the open-weight Llama 4 Scout supports 10M tokens locally',
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'AI Code Review Tools: Which One to Use',
           content: [
-            'In the only public head-to-head test with a documented method, Greptile caught 82% of 50 seeded bugs, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44% (Greptile-run benchmark, July 2025, default settings, hosted plans). Greptile sells one of the tools tested and other published benchmarks rank the same tools in a different order, so read the figures as directional, not as a verdict.',
+            'In a July 2025 benchmark run by Greptile on 50 seeded bugs, Greptile caught 82%, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44% (default settings, hosted plans). Greptile sells one of the tools tested and independent results may differ, so read the figures as directional, not as a verdict.',
             'CodeRabbit offers free reviews on public repositories; private repositories need Essentials ($24 per user per month billed annually, $30 monthly), Team ($48 annually, $60 monthly) or Advanced ($72), with Enterprise by quote. Self-hosting is Enterprise-only, and the self-hosting docs state it is offered to customers with 500+ seats.',
             'Greptile Starter is free for one active developer (50 credits per month). Pro has no seat fees: credits cost $1 each, and a Base review uses 1 credit, a Plus review 3 and an Apex review 10. Qodo Pro Team lists $30 with pooled credits for up to 30 users and has no permanent free tier. GitHub Copilot code review is generally available on Copilot Pro, Pro+, Max, Business and Enterprise (not Copilot Free) and consumes AI credits — GitHub documents averages of about $0.25 (Lite), $1.50 (Balanced) and $10 (Max) per review.',
           ],
@@ -264,11 +264,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { Tool: '[CodeRabbit](https://www.coderabbit.ai)', 'Catch rate (vendor test)': '44%', 'Git platforms': 'GitHub, GitLab', 'Self-hosting': 'Enterprise (500+ seats)', 'List price': '$24 per user per month (annual)' },
             { Tool: '[Qodo](https://www.qodo.ai)', 'Catch rate (vendor test)': 'Not tested', 'Git platforms': 'GitHub, GitLab, Bitbucket, Azure', 'Self-hosting': 'Enterprise (on-prem)', 'List price': 'Pro Team from $30 (pooled)' },
             { Tool: '[Snyk Code](https://snyk.io)', 'Catch rate (vendor test)': 'Not tested', 'Git platforms': 'Via SCM integrations', 'Self-hosting': 'Not stated', 'List price': 'Free; Team from $25 (10 devs)' },
-            { Tool: 'Traditional SAST', 'Catch rate (vendor test)': 'Under 20%*', 'Git platforms': 'Varies', 'Self-hosting': 'Varies', 'List price': 'Varies' },
+            { Tool: 'Traditional SAST', 'Catch rate (vendor test)': 'Not tested', 'Git platforms': 'Varies', 'Self-hosting': 'Varies', 'List price': 'Varies' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Provenance', text: '*Third-party estimate, not measured by PromptQuorum. Catch rates: Greptile-run benchmark, July 2025. List prices from the vendors\' pricing pages; plans change often, so confirm before buying.' },
+            { type: 'info', label: 'Provenance', text: 'Catch rates: Greptile-run benchmark, July 2025, not measured by PromptQuorum. List prices from the vendors\' pricing pages; plans change often, so confirm before buying.' },
           ],
           image: '/images/code-review-tool-comparison-en.svg',
           imageCaption: 'Feature comparison of PromptQuorum, GitHub Copilot, ChatGPT and Cursor: PromptQuorum dispatches one prompt to several models at once, so a single review can be cross-checked across models.',
@@ -339,10 +339,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Why Is Signal-to-Noise a Problem in AI Code Review?',
           content: [
             'AI code review tools comment on style issues far more reliably than they catch critical runtime bugs (44–82% in the vendor-run test above) — creating a comment volume problem that can cause developer adoption collapse.',
-            'A published industry analysis of 1,247 AI review comments across 340 pull requests (not measured by PromptQuorum) found: ~64% of all AI review comments addressed style, duplication, and test coverage. Only ~14% of comments addressed logic bugs and security issues — the issues that cause production incidents. Tools with less than 60% actionable feedback see developer adoption collapse as engineers begin ignoring all feedback, including critical findings.',
-            'The root cause is training data: AI models are trained on codebases where style violations vastly outnumber logic errors. The model learns to surface what it sees most frequently — not what matters most.',
-            'The same analysis reports that a tuned AI review system, with prompt engineering specifically instructing the model to prioritise logic and security over style, reached a 52% developer action rate — in line with the 50% action rate of human-led code reviews across 10,000+ analysed comments.',
-            '**In One Sentence:** The signal-to-noise problem means AI code review tools generate 64% style comments but only 14% actionable security/logic findings — requiring scoped prompts to invert this ratio and reach 50%+ developer adoption.',
+            'Industry guides commonly report that AI reviewers produce many style, duplication and test-coverage comments relative to logic and security findings. We could not verify a public dataset that quantifies the ratio, so measure it yourself: the share of AI comments your developers act on is the number that matters. Tools whose comments are mostly ignored teach engineers to ignore all feedback, including critical findings.',
+            'A likely cause is training data: models see far more style variation than logic errors in the codebases they learn from, so they surface what is frequent, not what matters most.',
+            'Prompt engineering that instructs the model to prioritise logic and security over style is the main lever for shifting the mix; tune the prompt, then re-measure the action rate.',
+            '**In One Sentence:** AI code review tools can generate mostly style comments — scoped prompts and a tracked action rate keep logic and security findings visible.',
           ],
           callouts: [
             { type: 'warning', label: 'Warning', text: 'Teams that deploy AI code review without scoping prompts risk developer adoption collapse. Engineers start ignoring ALL comments — including critical security findings — when most comments are noise. Always configure explicit review priorities before rolling out to the team.' },
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            'The structured prompt produces a triage-ready security report. The open prompt produces 12 comments about variable naming and one buried security finding the engineer never reads.',
+            'The structured prompt produces a triage-ready security report. For example, the open prompt can return a dozen comments about variable naming and one buried security finding the engineer never reads.',
           ],
         },
 
@@ -409,8 +409,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: 'How Do You Perform Security-Focused AI Code Review?',
           content: [
-            'AI-powered SAST (Static Application Security Testing) tools trained on real-world vulnerability datasets achieve bug detection scores of 84–92 out of 100 on AI-generated code — compared to 65% accuracy for rule-based methods and 94% for transformer-based models in third-party deep learning benchmarks (not measured by PromptQuorum).',
-            'Transformer-based models — the architecture behind today\'s large language models and dedicated code security tools — achieve 94% accuracy in bug classification benchmarks, with very low false positive rates. This represents a measurable advance over convolutional neural network (CNN) and recurrent neural network (RNN) approaches at 89%, static analysis at 72%, and rule-based methods at 65%.',
+            'AI-powered SAST (Static Application Security Testing) tools trained on real-world vulnerability datasets scored 84–92 out of 100 on AI-generated code in a 2025 third-party comparison (not measured by PromptQuorum).',
+            'Rule-based static analysis applies fixed patterns, while AI-assisted tools also reason about how code paths interact. The two are complementary, which is why many teams run a rule engine as the merge gate and an AI reviewer or scanner alongside it.',
             'Three security-focused tools, scored in a 2025 third-party comparison on AI-generated code (sanj.dev; not measured by PromptQuorum):',
           ],
           columns: ['Tool', 'Score (third-party)', 'False Positives', 'Best For'],
@@ -434,12 +434,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: 'What Is AI Bug Triaging?',
           content: [
-            'AI-powered bug triaging achieves 85–90% accuracy in severity classification — compared to 60–70% for manual methods — while reducing triage time by 65% and cutting false positives by up to 60%.',
-            'AI bug triaging is the downstream step after detection: classifying bugs by severity, predicting production impact, and routing issues to the right engineer. A study by Khaleefulla et al. demonstrated AI-driven triaging systems achieved over 85% accuracy in bug classification and 82% precision in priority prediction — reducing average triage time by 65%.',
-            'Time-to-resolution (TTR) improves by 30–40% compared to manual methods, with the primary gain from faster classification and routing rather than faster fixing. Bug severity classification at 85–90% accuracy means engineers spend significantly less time debating priority and more time resolving the issues that matter.',
+            'AI-powered bug triaging classifies bugs by severity, predicts production impact and routes issues to the right engineer, reducing the time engineers spend debating priority.',
+            'AI bug triaging is the downstream step after detection. In a paper by Khaleefulla, Sudeep and Savithri ([IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization)), the authors report over 85% accuracy in bug classification, 82% precision in priority prediction and a 65% reduction in average triage time for their system. These are the authors\' own results, not measured by PromptQuorum.',
+            'The gain comes mainly from faster classification and routing rather than faster fixing. Severity conventions differ between projects, so accuracy reported for one system may not transfer to yours; pilot on your own backlog before relying on it.',
           ],
           callouts: [
-            { type: 'info', label: 'Did You Know', text: 'AI bug triaging achieves 85-90% severity classification accuracy vs 60-70% for manual triage. The primary time saving isn\'t faster fixing — it\'s faster classification and routing. Engineers spend less time debating priority and more time resolving the issues that matter.' },
+            { type: 'info', label: 'Did You Know', text: 'The time saving in AI triage is not faster fixing — it is faster classification and routing. Engineers spend less time debating priority and more time resolving the issues that matter.' },
           ],
         },
 
@@ -462,9 +462,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: 'How Do Regional Regulations Affect AI Code Review?',
           content: [
-            'European enterprises sending source code to external AI APIs may need a Data Protection Impact Assessment (DPIA) under GDPR Article 35 before deployment, particularly when the code or the data it touches involves personal data processing. GDPR and the EU AI Act can apply at the same time to AI-assisted code review when personal data is processed, so involve your data protection officer before rollout. The stakes are real: GDPR fines in 2024 included a €30.5 million penalty against Clearview AI.',
-            'For EU teams, CodeRabbit offers self-hosted deployment on its Enterprise plan (500+ seats per its docs), although the self-hosted agent still sends prompts and code to the LLM provider you configure. Open-weight models, including Mistral AI (France) models, can be run locally via Ollama for teams requiring zero cloud egress.',
-            'Chinese development teams use open-weight models such as Qwen3 (Alibaba) and DeepSeek as locally-deployable code review models, both of which support Chinese-language code comments and documentation — critical for mixed-language codebases common in Chinese enterprise environments. Japanese enterprises under METI data governance guidelines deploy LLaMA 4 Scout or LLaMA 3.3-based code review workflows locally via Ollama — LLaMA 4 Scout requires ~55 GB VRAM for inference, with zero external API calls.',
+            'European enterprises sending source code to external AI APIs may need a Data Protection Impact Assessment (DPIA) under GDPR Article 35 before deployment, particularly when the code or the data it touches involves personal data processing. GDPR and the EU AI Act can apply at the same time to AI-assisted code review when personal data is processed, so involve your data protection officer before rollout. This is general information, not legal advice; confirm the requirements with your data protection officer or counsel.',
+            'For EU teams, CodeRabbit offers self-hosted deployment on its Enterprise plan (500+ seats per its docs), although the self-hosted agent still sends prompts and code to the LLM provider you configure. Open-weight models, including Mistral AI (France) models, can be run locally via Ollama for teams that must keep code out of third-party clouds.',
+            'Teams in China may use open-weight models such as Qwen3 (Alibaba) and DeepSeek as locally deployable code review models; both support Chinese-language code comments and documentation, which matters for mixed-language codebases. Teams in Japan working under METI data governance guidelines may run Llama 4 Scout or Llama 3.3-based review workflows locally via Ollama — Llama 4 Scout needs roughly 55 GB of VRAM for inference — so code does not reach external APIs.',
           ],
         },
 
@@ -500,12 +500,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: 'Deploying AI review with default settings and no prompt customization.',
-              problem: 'Default AI review can produce mostly style comments (64% in a published industry analysis). Developers start ignoring all comments. Critical security findings get buried.',
+              problem: 'Default AI review can produce mostly style comments. Developers start ignoring all comments. Critical security findings get buried.',
               fix: 'Use the 5-part prompt framework. Explicitly exclude style/naming. Scope to logic, security, and performance.',
             },
             {
               mistake: 'Using AI code review as the only review layer.',
-              problem: 'AI reviewers caught 44–82% of seeded bugs in the one documented public test — not 100%. Context-specific issues (scaling implications, team conventions, business logic errors) require human judgment.',
+              problem: 'AI reviewers caught 44–82% of seeded bugs in Greptile\'s July 2025 benchmark — not 100%. Context-specific issues (scaling implications, team conventions, business logic errors) require human judgment.',
               fix: 'AI is the first-pass filter. Human reviewers focus on architecture, business logic, and the bugs AI misses.',
             },
             {
@@ -527,11 +527,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'What is the most accurate AI code review tool in 2026?',
-              a: 'No tool is the most accurate in every test. In the only public head-to-head benchmark with a documented method — run by Greptile in July 2025 on 50 bugs from five open-source repositories — Greptile caught 82%, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44% (default settings, hosted plans). Because Greptile sells one of the tools tested and other published benchmarks rank the tools differently, use the figures as a starting point and run a two-week trial on your own pull requests. For security scanning, Snyk Code is a separate category: a scanner that complements a pull-request reviewer.',
+              a: 'No tool is the most accurate in every test. In a July 2025 benchmark run by Greptile on 50 bugs from five open-source repositories, Greptile caught 82%, Cursor Bugbot 58%, GitHub Copilot 54% and CodeRabbit 44% (default settings, hosted plans). Because Greptile sells one of the tools tested and independent results may differ, use the figures as a starting point and run a two-week trial on your own pull requests. For security scanning, Snyk Code is a separate category: a scanner that complements a pull-request reviewer.',
             },
             {
               q: 'CodeRabbit vs Greptile: which should I choose?',
-              a: 'Choose Greptile if catching deep bugs matters most and you can budget per review: it caught 82% against CodeRabbit\'s 44% in Greptile\'s own July 2025 test, and Pro has no seat fees (prepaid credits at $1 each; a Base review uses 1 credit). Choose CodeRabbit if you want per-seat pricing ($24 per user per month on Essentials with annual billing, $30 monthly) and free reviews on public repositories. Both offer a 14-day trial and reserve self-hosting for Enterprise. Whether CodeRabbit is worth it depends on volume: a flat seat price is easier to forecast for teams that open many pull requests, while low-volume teams may pay less per review.',
+              a: 'Choose Greptile if the highest seeded-bug catch rate matters most and you can budget per review: it caught 82% against CodeRabbit\'s 44% in Greptile\'s own July 2025 test, and Pro has no seat fees (prepaid credits at $1 each; a Base review uses 1 credit). Choose CodeRabbit if you want per-seat pricing ($24 per user per month on Essentials with annual billing, $30 monthly) and free reviews on public repositories. Both offer a 14-day trial and reserve self-hosting for Enterprise. Whether CodeRabbit is worth it depends on volume: a flat seat price is easier to forecast for teams that open many pull requests, while low-volume teams may pay less per review.',
             },
             {
               q: 'Are CodeRabbit and Greptile free?',
@@ -555,11 +555,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'How much does AI code review reduce review time?',
-              a: 'A third-party industry guide (DigitalApplied, 2025) reports 40% less review time and 62% fewer production bugs; PromptQuorum has not measured these. Studies of AI bug triage report 65% shorter triage time and 30–40% faster time-to-resolution than manual methods. Teams that scope AI review prompts to logic and security (not style) report developer action rates of about 52%, in line with human reviewers.',
+              a: 'A third-party industry guide (DigitalApplied, 2025) reports 40% less review time and 62% fewer production bugs; PromptQuorum has not measured these. In the Khaleefulla et al. paper (IJERT), the authors report a 65% reduction in average triage time for their AI triage system. Whatever the tool, measure the share of AI comments your developers act on before and after you tune the prompt scope.',
             },
             {
               q: 'How does AI code review compare to traditional static analysis (SAST)?',
-              a: 'Third-party estimates put traditional rule-based SAST below 20% on meaningful runtime bugs, with high false positive rates. AI-powered SAST scored 84–92/100 on AI-generated code in a 2025 third-party comparison, and transformer-based models reach 94% accuracy in bug classification benchmarks vs. 65% for rule-based methods (none measured by PromptQuorum). The key advantage of AI is contextual reasoning — it evaluates how code paths interact rather than matching fixed vulnerability signatures.',
+              a: 'Rule-based SAST applies fixed vulnerability signatures and tends to produce many false positives, while AI-powered tools add contextual reasoning: they evaluate how code paths interact rather than matching signatures. In a 2025 third-party comparison, Snyk Code, Semgrep Enterprise and CodeQL scored 84–92/100 on AI-generated code (not measured by PromptQuorum). The two approaches are complementary.',
             },
             {
               q: 'Is AI code review GDPR-compliant for European teams?',
@@ -570,8 +570,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Yes — for complex logic with multiple conditional branches, Chain-of-Thought (CoT) prompting asks the model to trace data flow through each execution path before generating findings. This surfaces logic bugs that pattern-matching misses, because the model must explicitly model every path a null value or unexpected input type can take through the function — rather than matching the code against templates of common errors. CoT is most valuable for security-sensitive functions and complex state management; it adds latency and is unnecessary for simple utility functions.',
             },
             {
-              q: 'What percentage of AI code review comments are actually useful?',
-              a: 'A published industry analysis of 1,247 AI review comments across 340 PRs (not measured by PromptQuorum) found only 14% addressed logic bugs and security issues — the issues that cause production incidents — while 64% addressed style, duplication, and test coverage. Tools with less than 60% actionable feedback see developer adoption collapse as engineers start ignoring all comments. Scoped prompts that explicitly exclude style comments are the main lever for raising the share of actionable comments.',
+              q: 'What share of AI code review comments are actually useful?',
+              a: 'We could not confirm a verified public figure, and the share varies by tool, prompt and codebase, so measure it: count the share of AI comments your developers act on over a month. If most comments are ignored, tighten the scope — explicitly exclude style comments and ask for logic, security and performance findings only — and re-measure.',
             },
             {
               q: 'Which AI model is best for code review?',
@@ -587,11 +587,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Can AI code review detect security vulnerabilities better than dedicated SAST tools?',
-              a: 'In third-party comparisons, AI-powered SAST tools (Snyk Code, Semgrep Enterprise, CodeQL) scored 84–92/100 on AI-generated code, compared to 65% accuracy for rule-based static analysis. Traditional SAST is still faster for high-volume checking of large codebases because AI requires more compute per PR. Best practice: use lightweight SAST and linting for speed, and supplement with AI review for deep security analysis on high-risk changes (auth, payments, infrastructure).',
+              a: 'In third-party comparisons, AI-powered SAST tools (Snyk Code, Semgrep Enterprise, CodeQL) scored 84–92/100 on AI-generated code in a 2025 third-party comparison (not measured by PromptQuorum), and rule-based static analysis remains useful as a fast merge gate. Traditional SAST is still faster for high-volume checking of large codebases because AI requires more compute per PR. Best practice: use lightweight SAST and linting for speed, and supplement with AI review for deep security analysis on high-risk changes (auth, payments, infrastructure).',
             },
             {
               q: 'Can I run AI code review locally for fully private code?',
-              a: 'Yes. Devstral Small 24B (Mistral AI, 16 GB RAM) and Llama 4 Scout (~55 GB VRAM, 10M context) run fully on-premises via Ollama. No code is transmitted to external APIs, which removes the third-party processing step that a DPIA would otherwise need to cover. Quality is lower than frontier cloud models on complex security analysis but sufficient for most PR-level review.',
+              a: 'Yes. Devstral Small 24B (Mistral AI, 16 GB RAM) and Llama 4 Scout (~55 GB VRAM, 10M context) run fully on-premises via Ollama. Inference runs on your hardware, so code is not sent to a cloud reviewer; this can remove the third-party processing step a DPIA would otherwise need to cover, but check model download and update behaviour with your security team. Quality is lower than frontier cloud models on complex security analysis but sufficient for most PR-level review.',
             },
             {
               q: 'What is the best AI code review tool for small teams (under 10 developers)?',
@@ -615,6 +615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[GitHub Docs: Copilot code review](https://docs.github.com/en/copilot/concepts/agents/code-review) — plans that include code review and AI-credit billing',
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — technical guide to scoped prompts for reducing false positives and improving signal',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — third-party benchmark of three SAST tools on AI-generated code (source of the 92 / 87 / 84 scores)',
+            '[Khaleefulla, Sudeep and Savithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) — authors\' own results: over 85% classification accuracy, 82% priority precision, 65% shorter triage time',
             '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — industry figures: 40% time savings, 62% fewer production bugs',
             '**Note:** Catch rates are vendor-reported and were not measured by PromptQuorum; prices are list prices from the vendor pages above. AI code review is a fast-moving market — verify current pricing and platform support on vendor websites before purchasing.',
           ],
