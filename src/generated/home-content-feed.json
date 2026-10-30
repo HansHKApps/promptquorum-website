@@ -41392,6 +41392,87 @@
   },
   {
     "lang": "en",
+    "title": "Home-Gallery Review: Self-Hosted Photo Gallery With AI Search",
+    "excerpt": "Home-Gallery review: free MIT-licensed self-hosted photo and video gallery with tagging and AI search. Binary or Docker setup, what the AI sends out.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Home-Gallery-Rezension: selbst gehostete Fotogalerie mit KI-Suche",
+    "excerpt": "Home-Gallery-Rezension: kostenlose, MIT-lizenzierte Foto- und Videogalerie zum Selbsthosten mit Tags und KI-Suche. Einrichtung per Binärdatei oder Docker.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/de/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Home-Gallery : galerie photo auto-hébergée avec recherche par IA",
+    "excerpt": "Test de Home-Gallery : galerie photo et vidéo auto-hébergée, gratuite et MIT, avec étiquettes et recherche par IA. Installation par binaire ou Docker.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/fr/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Home-Galleryレビュー：AI検索付きセルフホスト型フォトギャラリー",
+    "excerpt": "Home-Galleryのレビュー：タグ付けとAI検索を備えた、無料・MITライセンスのセルフホスト型写真・動画ギャラリー。バイナリまたはDockerで導入し、AIが送信するデータも解説します。",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ja/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Home-Gallery 评测：支持 AI 搜索的自托管照片图库",
+    "excerpt": "Home-Gallery 评测：免费、MIT 许可证的自托管照片与视频图库，支持标签和 AI 搜索。可用二进制文件或 Docker 部署，并说明 AI 功能会发送哪些数据。",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/zh/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de Home-Gallery: galería de fotos autoalojada con búsqueda por IA",
+    "excerpt": "Análisis de Home-Gallery: galería autoalojada de fotos y vídeos, gratis y MIT, con etiquetas y búsqueda por IA. Instalación con binario o Docker.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/es/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Home-Gallery: galeria de fotos auto-hospedada com busca por IA",
+    "excerpt": "Análise do Home-Gallery: galeria de fotos e vídeos auto-hospedada, grátis e MIT, com etiquetas e busca por IA. Instalação por binário ou Docker.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/pt/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Home-Gallery: معرض صور مستضاف ذاتيًا مع بحث بالذكاء الاصطناعي",
+    "excerpt": "مراجعة Home-Gallery: معرض صور وفيديو مجاني بترخيص MIT مستضاف ذاتيًا مع وسوم وبحث بالذكاء الاصطناعي. التثبيت بملف تنفيذي أو Docker وما تُرسله ميزاته.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ar/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Home-Gallery 리뷰: AI 검색을 갖춘 셀프 호스팅 사진 갤러리",
+    "excerpt": "Home-Gallery 리뷰: 태그와 AI 검색을 갖춘 무료 MIT 라이선스 셀프 호스팅 사진·동영상 갤러리. 바이너리 또는 Docker로 설치하고, AI가 보내는 데이터도 정리했습니다.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ko/power-local-llm/home-gallery-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Frankly AI Review: iPhone Chat App With Downloadable On-Device Models",
     "excerpt": "Frankly AI review: free iPhone chat app with downloadable on-device models and personas. What the listing and privacy policy do and do not confirm.",
     "publishDate": "2026-10-24",

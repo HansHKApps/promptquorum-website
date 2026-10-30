@@ -712,6 +712,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'excire-foto-review',
   'mylio-photos-review',
   'ai-file-sorter-review',
+  'home-gallery-review',
 
   // Whisper Notes review (Voice, Speech & Multimodal) — 2026-10-18
   'whisper-notes-review',

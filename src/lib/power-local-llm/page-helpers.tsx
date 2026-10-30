@@ -1273,6 +1273,7 @@ const HUB_THEMES: Array<{
       'ente-photos-review',
       'immich-review',
       'facet-review',
+      'home-gallery-review',
       'excire-foto-review',
       'mylio-photos-review',
       'controlnet-review',

@@ -11685,6 +11685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "home-gallery-review",
+        "title": "Home-Gallery Review: Self-Hosted Photo Gallery With AI Search",
+        "url": "/power-local-llm/home-gallery-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mylio-photos-review",
         "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
         "url": "/power-local-llm/mylio-photos-review",
@@ -11730,17 +11738,9 @@
         "url": "/power-local-llm/local-ai-app-non-technical-users",
         "dateModified": "2026-10-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tecadrisebot-review",
-        "title": "TecAdRiseBot Review: Free Windows Agent Desktop on Cursor Cloud Models",
-        "url": "/power-local-llm/tecadrisebot-review",
-        "dateModified": "2026-10-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 233,
+    "totalCount": 234,
     "capped": true
   },
   "Qdrant": {
@@ -12841,6 +12841,20 @@
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
         "dateModified": "2026-10-28",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Home-Gallery": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "home-gallery-review",
+        "title": "Home-Gallery Review: Self-Hosted Photo Gallery With AI Search",
+        "url": "/power-local-llm/home-gallery-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
