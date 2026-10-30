@@ -205,6 +205,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'facet':                                   'facet',
   'excire-foto':                             'excire-foto',
   'ai-file-sorter':                          'ai-file-sorter',
+  'home-gallery':                            'home-gallery',
   'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',
