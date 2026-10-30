@@ -1276,6 +1276,7 @@ const HUB_THEMES: Array<{
       'home-gallery-review',
       'excire-foto-review',
       'mylio-photos-review',
+      'acdsee-photo-studio-ultimate-review',
       'controlnet-review',
       'draw-things-review',
       'genva-review',

@@ -140,6 +140,7 @@ import { app as app_immich } from './apps/immich'
 import { app as app_facet } from './apps/facet'
 import { app as app_excire_foto } from './apps/excire-foto'
 import { app as app_mylio_photos } from './apps/mylio-photos'
+import { app as app_acdsee_photo_studio_ultimate } from './apps/acdsee-photo-studio-ultimate'
 import { app as app_ai_file_sorter } from './apps/ai-file-sorter'
 import { app as app_home_gallery } from './apps/home-gallery'
 import { app as app_swerve_ai } from './apps/swerve-ai'
@@ -645,6 +646,7 @@ export const localAiApps: ToolRecord[] = [
   app_facet,
   app_excire_foto,
   app_mylio_photos,
+  app_acdsee_photo_studio_ultimate,
   app_ai_file_sorter,
   app_home_gallery,
   app_hiwaifu,
