@@ -41230,6 +41230,87 @@
   },
   {
     "lang": "en",
+    "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
+    "excerpt": "Mylio Photos review: closed-source photo library for Windows, Mac, iPhone and Android. Mylio says its AI search and face scanning run on your devices.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Mylio-Photos-Rezension: Foto-Bibliothek für mehrere Geräte mit KI-Suche auf dem Gerät",
+    "excerpt": "Mylio-Photos-Rezension: Foto-Bibliothek für Windows, Mac, iPhone und Android. Laut Mylio laufen KI-Suche und Gesichtserkennung auf Ihren Geräten.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/de/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Mylio Photos : bibliothèque de photos multi-appareils avec recherche IA sur l’appareil",
+    "excerpt": "Test de Mylio Photos : photothèque pour Windows, Mac, iPhone et Android. Selon Mylio, la recherche IA et l’analyse des visages tournent sur vos appareils.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/fr/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Mylio Photosレビュー：端末内AI検索に対応したマルチデバイス写真ライブラリ",
+    "excerpt": "Mylio Photosのレビュー。Windows・Mac・iPhone・Android向けのクローズドソース写真ライブラリで、Mylioによれば、AI検索と顔スキャンは端末上で動作します。",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ja/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Mylio Photos 评测：支持设备端 AI 搜索的多设备照片库",
+    "excerpt": "Mylio Photos 评测：适用于 Windows、Mac、iPhone 和 Android 的闭源照片库。据 Mylio 称，AI 搜索和人脸扫描在你的设备上运行。",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/zh/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Mylio Photos: biblioteca de fotos multidispositivo con búsqueda por IA en el dispositivo",
+    "excerpt": "Reseña de Mylio Photos: biblioteca de fotos para Windows, Mac, iPhone y Android. Según Mylio, su IA de búsqueda y caras corre en tus dispositivos.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/es/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Mylio Photos: biblioteca de fotos multidispositivo com busca por IA no dispositivo",
+    "excerpt": "Análise do Mylio Photos: fotos para Windows, Mac, iPhone e Android. Segundo a Mylio, busca por IA e leitura de rostos rodam nos seus dispositivos.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/pt/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Mylio Photos: مكتبة صور متعددة الأجهزة مع بحث بالذكاء الاصطناعي على الجهاز",
+    "excerpt": "مراجعة Mylio Photos: مكتبة صور مغلقة المصدر لأجهزة Windows وMac وiPhone وAndroid. تقول Mylio إن البحث بالذكاء الاصطناعي ومسح الوجوه يعملان على أجهزتك.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ar/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Mylio Photos 리뷰: 기기 내 AI 검색을 지원하는 멀티 디바이스 사진 라이브러리",
+    "excerpt": "Mylio Photos 리뷰: Windows, Mac, iPhone, Android용 비공개 소스 사진 라이브러리입니다. Mylio에 따르면 AI 검색과 얼굴 스캔은 내 기기에서 실행됩니다.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ko/power-local-llm/mylio-photos-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
     "excerpt": "AI File Sorter review: free AGPL desktop app that suggests folders and file names with local models or your own API key. Install, privacy, undo and limits.",
     "publishDate": "2026-10-28",

@@ -1509,6 +1509,11 @@
     "urlSlug": "excire-foto-review",
     "url": "/power-local-llm/excire-foto-review"
   },
+  "mylio-photos": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mylio-photos-review",
+    "url": "/power-local-llm/mylio-photos-review"
+  },
   "ai-file-sorter": {
     "cluster": "power-local-llm",
     "urlSlug": "ai-file-sorter-review",
