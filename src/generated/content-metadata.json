@@ -11044,24 +11044,6 @@
       ],
       "images": []
     },
-    "photoview-review": {
-      "dateModified": "2026-10-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-30",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
     "whisper-notes-review": {
       "dateModified": "2026-10-18",
       "lastFactChecked": null,
@@ -11296,7 +11278,7 @@
       ],
       "images": []
     },
-    "mylio-photos-review": {
+    "tonfotos-review": {
       "dateModified": "2026-10-30",
       "lastFactChecked": null,
       "publishDate": "2026-10-30",
