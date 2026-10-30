@@ -2303,7 +2303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: 'Goose는 Block이 만든 무료 오픈소스 로컬 우선 AI 에이전트로, macOS·Linux·Windows용 데스크톱 앱, 명령줄 도구, API 형태로 코딩·자동화·워크플로 작업을 수행합니다. 소프트웨어 자체는 라이선스 비용이 없으며, 직접 키를 준비하는(BYOK) 방식으로 작동하므로 비용은 연결하는 LLM 제공업체에 따라 달라집니다(로컬 Ollama 모델이면 0원). 거버넌스는 2026년 4월 7일 Block에서 Linux Foundation의 Agentic AI Foundation으로 이전되었습니다.',
         bullets: [
           '무료 오픈소스, Apache 2.0 라이선스(2026년 9월 12일 GitHub API로 확인)',
-          `GitHub 저장소는 기준 ${st.ko('goose')}개 스타 표시, [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose) 기준`,
+          `GitHub 저장소는 ${st.ko('goose')}개 스타 표시, [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose) 기준`,
           '데스크톱 앱(macOS, Linux, Windows), CLI, API 형태로 제공',
           '수십 개의 LLM 제공업체(Anthropic, OpenAI, Google, Ollama, OpenRouter, Azure, Amazon Bedrock 등)에 직접 API 키로 연결, 또는 로컬 Ollama 모델이면 0원',
           'Model Context Protocol(MCP)로 확장 가능하며 커뮤니티 및 공식 확장 기능 디렉터리 보유',
@@ -2340,7 +2340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Block](https://block.xyz)(Square, Cash App, Afterpay, Tidal)이 개발해 2025년 1월 28일 공개 출시',
           '2025년 12월 Block이 Anthropic의 MCP, OpenAI의 AGENTS.md와 함께 Linux Foundation [Agentic AI Foundation(AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation)의 창립 프로젝트로 기증',
           '코드와 거버넌스는 2026년 4월 7일 공식적으로 AAIF로 이전; 정식 저장소는 [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose)(기존 `block/goose` URL은 이곳으로 리디렉션)',
-          `GitHub 저장소는 기준 ${st.ko('goose')}개 스타를 표시, [GitHub API](https://api.github.com/repos/aaif-goose/goose)로 확인`,
+          `GitHub 저장소는 ${st.ko('goose')}개 스타를 표시, [GitHub API](https://api.github.com/repos/aaif-goose/goose)로 확인`,
           '네이티브 데스크톱 앱(macOS, Linux, Windows), CLI, API 형태로 제공',
           '직접 API 키로 수십 개의 LLM 제공업체(Anthropic, OpenAI, Google, OpenRouter, Azure, Amazon Bedrock 등)에 연결하거나, 로컬 Ollama 모델은 무료로 사용',
           'Anthropic이 AAIF에 함께 기여한 것과 동일한 개방형 표준인 Model Context Protocol(MCP)로 확장 가능',
