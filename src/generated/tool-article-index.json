@@ -13226,17 +13226,9 @@
         "url": "/power-local-llm/aiko-review",
         "dateModified": "2026-10-30",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "voice-assistant-local-mobile-offline",
-        "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
-        "url": "/power-local-llm/voice-assistant-local-mobile-offline",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 1,
     "capped": false
   },
   "AnyLLM": {
