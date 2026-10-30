@@ -201,6 +201,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'haplo-ai':                                'haplo-ai',
   'pixlstash':                               'pixlstash',
   'photoprism':                              'photoprism',
+  'photoview':                               'photoview',
   'immich':                                  'immich',
   'facet':                                   'facet',
   'excire-foto':                             'excire-foto',

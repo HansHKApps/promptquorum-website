@@ -1269,6 +1269,7 @@ const HUB_THEMES: Array<{
       'comfyui-review',
       'pixlstash-review',
       'photoprism-review',
+      'photoview-review',
       'ente-photos-review',
       'immich-review',
       'facet-review',

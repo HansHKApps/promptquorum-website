@@ -408,6 +408,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-ai-chat-pocket-review':             'local-ai-chat-pocket-review',
   'pixlstash-review':                        'pixlstash-review',
   'photoprism-review':                       'photoprism-review',
+  'photoview-review':                        'photoview-review',
   'immich-review':                           'immich-review',
   'facet-review':                            'facet-review',
   'excire-foto-review':                      'excire-foto-review',

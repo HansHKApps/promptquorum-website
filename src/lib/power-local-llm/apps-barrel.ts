@@ -135,6 +135,7 @@ import { app as app_frankly_ai } from './apps/frankly-ai'
 import { app as app_haplo_ai } from './apps/haplo-ai'
 import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_photoprism } from './apps/photoprism'
+import { app as app_photoview } from './apps/photoview'
 import { app as app_immich } from './apps/immich'
 import { app as app_facet } from './apps/facet'
 import { app as app_excire_foto } from './apps/excire-foto'
@@ -637,6 +638,7 @@ export const localAiApps: ToolRecord[] = [
   app_haplo_ai,
   app_pixlstash,
   app_photoprism,
+  app_photoview,
   app_immich,
   app_facet,
   app_excire_foto,
