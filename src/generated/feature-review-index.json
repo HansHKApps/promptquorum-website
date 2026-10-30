@@ -1054,6 +1054,11 @@
     "urlSlug": "anarlog-review",
     "url": "/power-local-llm/anarlog-review"
   },
+  "perfect-memory": {
+    "cluster": "power-local-llm",
+    "urlSlug": "perfect-memory-review",
+    "url": "/power-local-llm/perfect-memory-review"
+  },
   "searxng": {
     "cluster": "power-local-llm",
     "urlSlug": "searxng-review",

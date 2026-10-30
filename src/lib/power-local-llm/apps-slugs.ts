@@ -254,6 +254,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'buzz-captions':                           'buzz-captions',
   'logseq':                                  'logseq',
   'anarlog':                                 'anarlog',
+  'perfect-memory':                          'perfect-memory',
   'searxng':                                 'searxng',
   'linkwarden':                              'linkwarden',
   'tolaria':                                 'tolaria',
