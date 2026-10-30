@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-code-review-overview-hero-es.webp',
       title: 'Revisión de Código con IA 2026: Ranking de Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
       intro: 'Las herramientas de revisión de código con IA detectaron entre el 44 y el 82 % de los bugs sembrados en un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs de cinco repositorios de código abierto. Toma las cifras de los proveedores como orientativas: Greptile vende una de las herramientas evaluadas y los resultados independientes pueden diferir. El reto práctico es la relación señal/ruido: los revisores de IA pueden enterrar los hallazgos de lógica y seguridad bajo comentarios de estilo, lo que enseña a los desarrolladores a ignorarlos. Los prompts acotados que priorizan la seguridad y la lógica sobre el formato son la palanca principal.',
-      leadAnswerBlock: '**En el benchmark de Greptile de julio de 2025 (50 bugs sembrados), Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 %. Como lo ejecutó un proveedor, compara también precios, plataformas y autohospedaje, y prueba dos herramientas.**',
+      leadAnswerBlock: '**En el benchmark de Greptile de julio de 2025 (50 bugs sembrados), Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 %. Al ser de un proveedor, compara también precios, plataformas y autohospedaje.**',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
