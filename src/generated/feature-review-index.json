@@ -1599,6 +1599,11 @@
     "urlSlug": "greencube-review",
     "url": "/power-local-llm/greencube-review"
   },
+  "kai-9000": {
+    "cluster": "power-local-llm",
+    "urlSlug": "kai-9000-review",
+    "url": "/power-local-llm/kai-9000-review"
+  },
   "laria": {
     "cluster": "power-local-llm",
     "urlSlug": "laria-review",

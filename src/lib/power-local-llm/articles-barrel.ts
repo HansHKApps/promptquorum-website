@@ -128,6 +128,7 @@ import { article as a_chaterminal_review } from './articles/chaterminal-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_compass_local_ai_review } from './articles/compass-local-ai-review'
 import { article as a_greencube_review } from './articles/greencube-review'
+import { article as a_kai_9000_review } from './articles/kai-9000-review'
 import { article as a_laria_review } from './articles/laria-review'
 import { article as a_compactifai_app_review } from './articles/compactifai-app-review'
 import { article as a_pocketllm_lite_review } from './articles/pocketllm-lite-review'
@@ -807,6 +808,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'lm-mini-review':                                a_lm_mini_review,
   'compass-local-ai-review':                       a_compass_local_ai_review,
   'greencube-review':                              a_greencube_review,
+  'kai-9000-review':                               a_kai_9000_review,
   'laria-review':                                  a_laria_review,
   'compactifai-app-review':                        a_compactifai_app_review,
   'pocketllm-lite-review':                         a_pocketllm_lite_review,

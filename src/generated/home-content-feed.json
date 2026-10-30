@@ -45685,6 +45685,87 @@
   },
   {
     "lang": "en",
+    "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
+    "excerpt": "Kai 9000 review: free open-source AI assistant for phone, desktop and web. Cloud by default, optional on-device Gemma 4. Data flow and limits.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Kai-9000-Rezension: Kostenloser Open-Source-KI-Assistent für Cloud und Gerät",
+    "excerpt": "Kai-9000-Rezension: kostenloser Open-Source-KI-Assistent für Handy, Desktop und Web. Cloud als Standard, Gemma 4 optional lokal. Datenfluss, Grenzen.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/de/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Kai 9000 : assistant IA gratuit et open source, cloud ou sur l'appareil",
+    "excerpt": "Test de Kai 9000 : assistant IA gratuit et open source pour mobile, bureau et web. Cloud par défaut, Gemma 4 local en option. Données et limites.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/fr/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Kai 9000レビュー:クラウドも端末内も使える無料オープンソースAIアシスタント",
+    "excerpt": "Kai 9000レビュー:スマホ・PC・Webで使える無料のオープンソースAIアシスタント。標準はクラウド、任意で端末内Gemma 4。データの流れと制約を解説します。",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ja/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Kai 9000 评测：免费开源 AI 助手，云端或本机运行",
+    "excerpt": "Kai 9000 评测：支持手机、桌面和网页的免费开源 AI 助手，带记忆和工具。默认使用云端，可选在本机运行 Gemma 4。数据流向与限制一览。",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/zh/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Kai 9000: asistente de IA gratuito y de código abierto, en la nube o en el dispositivo",
+    "excerpt": "Reseña de Kai 9000: asistente de IA gratuito y abierto para móvil, escritorio y web. Nube por defecto, Gemma 4 local opcional. Datos y límites.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/es/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Kai 9000: assistente de IA gratuito e de código aberto, na nuvem ou no dispositivo",
+    "excerpt": "Análise do Kai 9000: assistente de IA gratuito e aberto para celular, desktop e web. Nuvem por padrão, Gemma 4 local opcional. Dados e limites.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/pt/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Kai 9000: مساعد ذكاء اصطناعي مجاني ومفتوح المصدر على السحابة أو الجهاز",
+    "excerpt": "مراجعة Kai 9000: مساعد ذكاء اصطناعي مجاني ومفتوح المصدر للهاتف والحاسوب والويب. سحابي افتراضيًا وGemma 4 محلي اختياريًا. تدفق البيانات والحدود.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ar/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Kai 9000 리뷰: 클라우드와 기기 내 실행을 모두 지원하는 무료 오픈소스 AI 어시스턴트",
+    "excerpt": "Kai 9000 리뷰: 휴대폰·PC·웹에서 쓰는 무료 오픈소스 AI 어시스턴트. 기본은 클라우드, 선택 시 기기 내 Gemma 4. 데이터 흐름과 한계를 정리했습니다.",
+    "publishDate": "2026-10-30",
+    "dateModified": "2026-10-30",
+    "url": "/ko/power-local-llm/kai-9000-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Laria Review: Paid Android AI Assistant With Local Models",
     "excerpt": "Laria review: paid, closed-source Android AI assistant with downloadable local models, optional cloud providers, image tools and AI identities.",
     "publishDate": "2026-10-26",
