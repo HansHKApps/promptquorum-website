@@ -270,8 +270,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: 'Provenance', text: 'Catch rates: Greptile-run benchmark, July 2025, not measured by PromptQuorum. List prices from the vendors\' pricing pages; plans change often, so confirm before buying.' },
           ],
-          image: '/images/code-review-tool-comparison-en.svg',
-          imageCaption: 'Feature comparison of PromptQuorum, GitHub Copilot, ChatGPT and Cursor: PromptQuorum dispatches one prompt to several models at once, so a single review can be cross-checked across models.',
         },
 
         vsComparison: {
@@ -882,8 +880,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: 'Herkunft der Daten', text: 'Erkennungsraten: von Greptile durchgeführter Benchmark, Juli 2025, nicht von PromptQuorum gemessen. Listenpreise von den Preisseiten der Hersteller; Tarife ändern sich häufig, bestätigen Sie sie daher vor dem Kauf.' },
           ],
-          image: '/images/code-review-tool-comparison-de.svg',
-          imageCaption: 'Funktionsvergleich von PromptQuorum, GitHub Copilot, ChatGPT und Cursor: PromptQuorum sendet einen Prompt gleichzeitig an mehrere Modelle, sodass ein einzelnes Review modellübergreifend gegengeprüft werden kann.',
         },
 
         vsComparison: {
@@ -1494,8 +1490,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: 'Procedencia', text: 'Tasas de detección: benchmark ejecutado por Greptile, julio de 2025, no medido por PromptQuorum. Precios de lista tomados de las páginas de precios de los proveedores; los planes cambian con frecuencia, así que confírmalos antes de comprar.' },
           ],
-          image: '/images/code-review-tool-comparison-es.svg',
-          imageCaption: 'Comparativa de funciones de PromptQuorum, GitHub Copilot, ChatGPT y Cursor: PromptQuorum envía un prompt a varios modelos a la vez, de modo que una sola revisión puede contrastarse entre modelos.',
         },
 
         vsComparison: {
@@ -2106,8 +2100,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: 'المصدر', text: 'معدلات الاكتشاف: معيار أجرته Greptile، يوليو 2025، ولم تقِسها PromptQuorum. أسعار القائمة من صفحات التسعير لدى المزوِّدين؛ والخطط تتغير كثيرًا، لذا تأكد قبل الشراء.' },
           ],
-          image: '/images/code-review-tool-comparison-ar.svg',
-          imageCaption: 'مقارنة ميزات PromptQuorum وGitHub Copilot وChatGPT وCursor: يرسل PromptQuorum تعليمة واحدة إلى عدة نماذج في وقت واحد، فيمكن التحقق من المراجعة الواحدة عبر النماذج.',
         },
 
         vsComparison: {
@@ -2718,8 +2710,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: 'Origem dos dados', text: 'Taxas de detecção: benchmark executado pela Greptile, julho de 2025, não medido pela PromptQuorum. Preços de tabela das páginas de preços dos fornecedores; os planos mudam com frequência, então confirme antes de comprar.' },
           ],
-          image: '/images/code-review-tool-comparison-pt.svg',
-          imageCaption: 'Comparação de recursos de PromptQuorum, GitHub Copilot, ChatGPT e Cursor: o PromptQuorum envia um prompt a vários modelos ao mesmo tempo, de modo que uma única revisão pode ser conferida entre modelos.',
         },
 
         vsComparison: {
@@ -3330,8 +3320,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: 'Provenance', text: 'Taux de détection : benchmark réalisé par Greptile, juillet 2025, non mesuré par PromptQuorum. Les prix catalogue proviennent des pages tarifaires des éditeurs ; les offres changent souvent, confirmez donc avant tout achat.' },
           ],
-          image: '/images/code-review-tool-comparison-fr.svg',
-          imageCaption: 'Comparaison des fonctionnalités de PromptQuorum, GitHub Copilot, ChatGPT et Cursor : PromptQuorum envoie un même prompt à plusieurs modèles à la fois, ce qui permet de recouper une seule révision entre plusieurs modèles.',
         },
 
         vsComparison: {
@@ -3942,8 +3930,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: '出典区分', text: '検出率：Greptile 実施のベンチマーク、2025年7月、PromptQuorum が測定したものではありません。定価は各ベンダーの料金ページによるもので、プランは頻繁に変わるため、購入前に確認してください。' },
           ],
-          image: '/images/code-review-tool-comparison-ja.svg',
-          imageCaption: 'PromptQuorum、GitHub Copilot、ChatGPT、Cursor の機能比較：PromptQuorum は1つのプロンプトを複数のモデルに同時に送るため、1回のレビューをモデル間でクロスチェックできます。',
         },
 
         vsComparison: {
@@ -4554,8 +4540,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           callouts: [
             { type: 'info', label: '数据来源说明', text: '检出率：Greptile 运行的基准测试，2025 年 7 月，非 PromptQuorum 实测。标价取自各厂商的定价页面；方案经常变动，购买前请自行确认。' },
           ],
-          image: '/images/code-review-tool-comparison-zh.svg',
-          imageCaption: 'PromptQuorum、GitHub Copilot、ChatGPT 和 Cursor 的功能对比：PromptQuorum 可将一条提示同时发送给多个模型，因此一次审查可以在多个模型之间交叉核对。',
         },
 
         vsComparison: {
@@ -5169,8 +5153,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         callouts: [
           { type: 'info', label: '출처 표기', text: '탐지율: Greptile 실행 벤치마크, 2025년 7월, PromptQuorum이 측정한 것이 아닙니다. 정가는 각 벤더의 가격 페이지 기준이며 플랜은 자주 바뀌므로 구매 전에 확인하십시오.' },
         ],
-        image: '/images/code-review-tool-comparison-ko.svg',
-        imageCaption: 'PromptQuorum, GitHub Copilot, ChatGPT, Cursor의 기능 비교: PromptQuorum은 하나의 프롬프트를 여러 모델에 동시에 보내므로 한 번의 리뷰를 여러 모델에서 교차 검증할 수 있습니다.',
       },
 
       vsComparison: {
