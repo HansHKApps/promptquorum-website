@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 328,
+    "totalCount": 329,
     "capped": true
   },
   "llama.cpp": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 163,
+    "totalCount": 164,
     "capped": true
   },
   "Atomic Chat": {
@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 48,
+    "totalCount": 49,
     "capped": true
   },
   "GPT4All": {
@@ -4907,6 +4907,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kai-9000-review",
+        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
+        "url": "/power-local-llm/kai-9000-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "strata-review",
         "title": "Strata Review: A 125B-Parameter Open Model on a Gaming PC",
         "url": "/power-local-llm/strata-review",
@@ -4928,17 +4936,9 @@
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cognee-review",
-        "title": "cognee Review: Open-Source Knowledge-Graph Memory for AI Agents",
-        "url": "/power-local-llm/cognee-review",
-        "dateModified": "2026-09-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Hermes Agent": {
@@ -5956,7 +5956,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 51,
+    "totalCount": 52,
     "capped": true
   },
   "Pocket AI": {
@@ -9889,6 +9889,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kai-9000-review",
+        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
+        "url": "/power-local-llm/kai-9000-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "photoview-review",
         "title": "Photoview Review: Self-Hosted Photo Gallery with Local Face Recognition",
         "url": "/power-local-llm/photoview-review",
@@ -9942,17 +9950,9 @@
         "url": "/power-local-llm/anythingllm-mobile-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llm-farm-review",
-        "title": "LLM Farm Review: Open-Source GGUF App, Off the App Store",
-        "url": "/power-local-llm/llm-farm-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "FluidVoice": {
@@ -11743,6 +11743,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "kai-9000-review",
+        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
+        "url": "/power-local-llm/kai-9000-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mylio-photos-review",
         "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
         "url": "/power-local-llm/mylio-photos-review",
@@ -11772,17 +11780,9 @@
         "url": "/power-local-llm/xberg-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ai-file-sorter-review",
-        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
-        "url": "/power-local-llm/ai-file-sorter-review",
-        "dateModified": "2026-10-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 237,
+    "totalCount": 238,
     "capped": true
   },
   "Qdrant": {
@@ -13060,6 +13060,20 @@
         "slug": "greencube-review",
         "title": "GreenCube Review: One-Time-Purchase Offline AI for Windows",
         "url": "/power-local-llm/greencube-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Kai 9000": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "kai-9000-review",
+        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
+        "url": "/power-local-llm/kai-9000-review",
         "dateModified": "2026-10-30",
         "tier": "about"
       }

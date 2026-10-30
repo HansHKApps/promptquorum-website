@@ -1147,6 +1147,7 @@ const HUB_THEMES: Array<{
       'mlc-chat-review',
       'pocket-ai-review',
       'pocketpal-ai-review',
+      'kai-9000-review',
       'private-llm-review',
       'rikkahub-review',
       'enclave-ai-review',
