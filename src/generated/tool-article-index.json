@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-29",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "facet-review",
         "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
@@ -72,14 +80,6 @@
         "url": "/local-llms/lobechat-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "arynwood-mcp-review",
-        "title": "Arynwood MCP Review: A Local AI Workspace in Alpha",
-        "url": "/power-local-llm/arynwood-mcp-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
     "totalCount": 327,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-29",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "subtitle-edit-review",
-        "title": "Subtitle Edit Review: Local Whisper Transcription and Auto-Translate",
-        "url": "/power-local-llm/subtitle-edit-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -542,19 +542,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-29",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-23",
         "tier": "mentioned"
       },
       {
@@ -3342,7 +3342,7 @@
         "slug": "tgpt-review",
         "title": "tgpt Review: AI in Your Terminal, No API Key Required",
         "url": "/power-local-llm/tgpt-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-10-30",
         "tier": "mentioned"
       },
       {
@@ -3364,7 +3364,7 @@
         "slug": "tgpt-review",
         "title": "tgpt Review: AI in Your Terminal, No API Key Required",
         "url": "/power-local-llm/tgpt-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -8329,6 +8329,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tgpt-review",
+        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
+        "url": "/power-local-llm/tgpt-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -8349,14 +8357,6 @@
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tgpt-review",
-        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
-        "url": "/power-local-llm/tgpt-review",
-        "dateModified": "2026-09-06",
         "tier": "about"
       },
       {
