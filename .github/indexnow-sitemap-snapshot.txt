@@ -226,6 +226,7 @@ https://www.promptquorum.com/local-llms/what-are-local-llms
 https://www.promptquorum.com/local-llms/why-enterprises-use-local-llms
 https://www.promptquorum.com/local-llms/xinference-llama-qwen-chatglm-mistral
 https://www.promptquorum.com/power-local-llm
+https://www.promptquorum.com/power-local-llm/acdsee-photo-studio-ultimate-review
 https://www.promptquorum.com/power-local-llm/agent-zero-review
 https://www.promptquorum.com/power-local-llm/agentic-ai-security-identity-access
 https://www.promptquorum.com/power-local-llm/agentic-inbox-review
@@ -388,6 +389,7 @@ https://www.promptquorum.com/power-local-llm/hermes-agent-review
 https://www.promptquorum.com/power-local-llm/hilbertraum-review
 https://www.promptquorum.com/power-local-llm/hiwaifu-review
 https://www.promptquorum.com/power-local-llm/home-assistant-assist-review
+https://www.promptquorum.com/power-local-llm/home-gallery-review
 https://www.promptquorum.com/power-local-llm/honey-llm-review
 https://www.promptquorum.com/power-local-llm/hyperlink-nexa-review
 https://www.promptquorum.com/power-local-llm/idefics-review
@@ -405,6 +407,7 @@ https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
 https://www.promptquorum.com/power-local-llm/kilo-code-review
 https://www.promptquorum.com/power-local-llm/koboldcpp-review
 https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs
+https://www.promptquorum.com/power-local-llm/krita-ai-diffusion-review
 https://www.promptquorum.com/power-local-llm/kruvo-review
 https://www.promptquorum.com/power-local-llm/kserve-review
 https://www.promptquorum.com/power-local-llm/langchain-chatchat-review
@@ -513,6 +516,7 @@ https://www.promptquorum.com/power-local-llm/msty-hands-on-test
 https://www.promptquorum.com/power-local-llm/msty-review
 https://www.promptquorum.com/power-local-llm/multica-review
 https://www.promptquorum.com/power-local-llm/murmur-review
+https://www.promptquorum.com/power-local-llm/mylio-photos-review
 https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/nanobot-review
 https://www.promptquorum.com/power-local-llm/nekoni-review
@@ -554,6 +558,7 @@ https://www.promptquorum.com/power-local-llm/pcai-photo-retouch-review
 https://www.promptquorum.com/power-local-llm/pearai-review
 https://www.promptquorum.com/power-local-llm/phoneclaw-review
 https://www.promptquorum.com/power-local-llm/photoprism-review
+https://www.promptquorum.com/power-local-llm/photoview-review
 https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma
 https://www.promptquorum.com/power-local-llm/piper-tts-review
 https://www.promptquorum.com/power-local-llm/piper-vs-chatterbox-tts
@@ -623,6 +628,7 @@ https://www.promptquorum.com/power-local-llm/tgpt-review
 https://www.promptquorum.com/power-local-llm/tina-review
 https://www.promptquorum.com/power-local-llm/tokforge-review
 https://www.promptquorum.com/power-local-llm/tolaria-review
+https://www.promptquorum.com/power-local-llm/tonfotos-review
 https://www.promptquorum.com/power-local-llm/toolneuron-review
 https://www.promptquorum.com/power-local-llm/transcriptionsuite-review
 https://www.promptquorum.com/power-local-llm/translate-books-with-llms-review
