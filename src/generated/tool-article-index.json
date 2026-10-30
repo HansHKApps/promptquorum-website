@@ -5140,7 +5140,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "faster-whisper": {
@@ -13211,6 +13211,20 @@
         "title": "Whisper Notes Review: Offline Speech-to-Text for iPhone, iPad and Mac",
         "url": "/power-local-llm/whisper-notes-review",
         "dateModified": "2026-10-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Aiko": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "aiko-review",
+        "title": "Aiko Review: On-Device Whisper Transcription for Mac and iPhone",
+        "url": "/power-local-llm/aiko-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],

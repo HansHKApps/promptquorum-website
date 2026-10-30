@@ -213,6 +213,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',
+  'aiko':                                    'aiko',
   'anyllm':                                  'anyllm',
   'hiwaifu':                                 'hiwaifu',
   'memoryai':                                'memoryai',

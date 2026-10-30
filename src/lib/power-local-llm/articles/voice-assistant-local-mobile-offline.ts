@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**STT engine:** Whisper.cpp (cross-platform), WhisperKit (iOS, Apple Neural Engine optimised), Sherpa-ONNX (Android, ONNX runtime).',
           '**LLM:** Phi-4 Mini (3.8B) on flagship phones; Qwen3 1.7B or SmolLM 2 1.7B on older devices.',
           '**TTS:** Piper TTS (open-source, ~50 MB per voice), iOS system TTS (AVSpeechSynthesizer), Android system TTS.',
-          '**iPhone apps:** WhisperKit, Whisper Transcription (Aiko developer), LLM Farm, PocketPal AI.',
+          '**iPhone apps:** WhisperKit, Whisper Transcription (Good Snooze), LLM Farm, PocketPal AI.',
           '**Android apps:** Layla (bundled stack), Termux + whisper.cpp + Ollama, Sherpa-ONNX demo apps.',
           '**Speech-to-first-audio target:** under 2 seconds = "feels usable"; under 1 second = "feels native".',
           '**Battery (1 hour active):** iPhone 16 Pro ~25–35%; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The simplest fully-offline iPhone voice assistant in 2026: WhisperKit (or Whisper Transcription) for STT, LLM Farm for the LLM, and iOS system TTS for the voice.** Total setup time is 5–10 minutes plus model download time.',
         numberedItems: [
-          'Install WhisperKit-based app from App Store (e.g., "Whisper Transcription" by Aiko developer, free) — provides on-device transcription using Apple Neural Engine. Alternatively, build the WhisperKit reference app from GitHub (Argmax / WhisperKit).',
+          'Install WhisperKit-based app from App Store (e.g., "Whisper Transcription" by Good Snooze, free) — provides on-device transcription using Apple Neural Engine. Alternatively, build the WhisperKit reference app from GitHub (Argmax / WhisperKit).',
           'In WhisperKit / Whisper Transcription: download the "Small" model (~466 MB). Tiny is faster but inaccurate; Medium is more accurate but slower.',
           'Install LLM Farm from the App Store (free). In LLM Farm: tap Models → "Add Model from URL" → paste a Hugging Face URL for Phi-4 Mini Q4_K_M (or use the in-app library if available). Model is ~2.7 GB.',
           'Wire them together via iOS Shortcuts: create a Shortcut with these actions — (1) Record Audio (or accept Audio input from Share Sheet), (2) Transcribe with Whisper Transcription, (3) Generate Text with LLM Farm (if exposed) or Private LLM (~£10, has a Shortcuts action), (4) Speak Text using iOS system voice.',
@@ -550,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**STT-Engine:** Whisper.cpp (plattformübergreifend), WhisperKit (iOS, Apple Neural Engine optimiert), Sherpa-ONNX (Android, ONNX-Runtime).',
           '**LLM:** Phi-4 Mini (3,8B) auf Flaggschiff-Telefonen; Qwen3 1,7B oder SmolLM 2 1,7B auf älteren Geräten.',
           '**TTS:** Piper TTS (Open-Source, ~50 MB pro Stimme), iOS System-TTS (AVSpeechSynthesizer), Android System-TTS.',
-          '**iPhone-Apps:** WhisperKit, Whisper Transcription (Aiko-Entwickler), LLM Farm, PocketPal AI.',
+          '**iPhone-Apps:** WhisperKit, Whisper Transcription (Good Snooze), LLM Farm, PocketPal AI.',
           '**Android-Apps:** Layla (gebündelter Stack), Termux + whisper.cpp + Ollama, Sherpa-ONNX Demo-Apps.',
           '**Sprache-zu-erstem-Audio-Ziel:** unter 2 Sekunden = „nutzbar anfühlend"; unter 1 Sekunde = „wirkt nativ".',
           '**Akku (1 Stunde aktiv):** iPhone 16 Pro ~25–35%; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Der einfachste vollständig offline iPhone-Sprachassistent 2026: WhisperKit (oder Whisper Transcription) für STT, LLM Farm für das LLM und iOS System-TTS für die Stimme.** Gesamteinrichtungszeit beträgt 5–10 Minuten plus Modell-Download-Zeit.',
         numberedItems: [
-          'Installieren Sie WhisperKit-basierte App aus dem App Store (z. B. „Whisper Transcription" von Aiko-Entwickler, kostenlos) — bietet Transkription auf dem Gerät unter Verwendung der Apple Neural Engine. Alternatively, bauen Sie die WhisperKit-Referenz-App von GitHub (Argmax / WhisperKit).',
+          'Installieren Sie WhisperKit-basierte App aus dem App Store (z. B. „Whisper Transcription" von Good Snooze, kostenlos) — bietet Transkription auf dem Gerät unter Verwendung der Apple Neural Engine. Alternatively, bauen Sie die WhisperKit-Referenz-App von GitHub (Argmax / WhisperKit).',
           'In WhisperKit / Whisper Transcription: laden Sie das „Small" Modell herunter (~466 MB). Tiny ist schneller, aber ungenau; Medium ist genauer, aber langsamer.',
           'Installieren Sie LLM Farm aus dem App Store (kostenlos). In LLM Farm: tippen Sie Models → „Add Model from URL" → fügen Sie eine Hugging Face URL für Phi-4 Mini Q4_K_M ein (oder verwenden Sie die In-App-Bibliothek, falls verfügbar). Modell ist ~2,7 GB.',
           'Verdrahten Sie sie über iOS Shortcuts: erstellen Sie eine Shortcut mit diesen Aktionen — (1) Audio aufnehmen (oder akzeptieren Sie Audioeingabe von Share Sheet), (2) mit Whisper Transcription transkribieren, (3) Text mit LLM Farm generieren (falls offengelegt) oder Private LLM (~£10, hat eine Shortcuts-Aktion), (4) Text mit iOS-Systemstimme sprechen.',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Moteur STT :** Whisper.cpp (multiplateforme), WhisperKit (iOS, Neural Engine Apple optimisé), Sherpa-ONNX (Android, runtime ONNX).',
           '**LLM :** Phi-4 Mini (3.8B) sur téléphones phares ; Qwen3 1.7B ou SmolLM 2 1.7B sur appareils plus anciens.',
           '**TTS :** Piper TTS (open-source, ~50 MB par voix), TTS système iOS (AVSpeechSynthesizer), TTS système Android.',
-          '**Applications iPhone :** WhisperKit, Whisper Transcription (développeur Aiko), LLM Farm, PocketPal AI.',
+          '**Applications iPhone :** WhisperKit, Whisper Transcription (Good Snooze), LLM Farm, PocketPal AI.',
           '**Applications Android :** Layla (pile groupée), Termux + whisper.cpp + Ollama, applications de démonstration Sherpa-ONNX.',
           '**Cible parole vers premier audio :** moins de 2 secondes = « se sentir utilisable » ; moins de 1 seconde = « se sentir natif ».',
           '**Batterie (1 heure actif) :** iPhone 16 Pro ~25–35% ; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**L\'assistant vocal entièrement hors ligne iPhone le plus simple en 2026 : WhisperKit (ou Whisper Transcription) pour STT, LLM Farm pour le LLM, et TTS système iOS pour la voix.** Le temps de configuration total est de 5–10 minutes plus le temps de téléchargement du modèle.',
         numberedItems: [
-          'Installez une application basée sur WhisperKit depuis l\'App Store (par exemple, « Whisper Transcription » du développeur Aiko, gratuit) — fournit la transcription sur l\'appareil utilisant le Neural Engine Apple. Vous pouvez également construire l\'application de référence WhisperKit à partir de GitHub (Argmax / WhisperKit).',
+          'Installez une application basée sur WhisperKit depuis l\'App Store (par exemple, « Whisper Transcription » du Good Snooze, gratuit) — fournit la transcription sur l\'appareil utilisant le Neural Engine Apple. Vous pouvez également construire l\'application de référence WhisperKit à partir de GitHub (Argmax / WhisperKit).',
           'Dans WhisperKit / Whisper Transcription : téléchargez le modèle « Small » (~466 MB). Tiny est plus rapide mais imprécis ; Medium est plus précis mais plus lent.',
           'Installez LLM Farm depuis l\'App Store (gratuit). Dans LLM Farm : appuyez sur Modèles → « Ajouter un modèle depuis l\'URL » → collez une URL Hugging Face pour Phi-4 Mini Q4_K_M (ou utilisez la bibliothèque intégrée si disponible). Le modèle fait ~2,7 GB.',
           'Connectez-les via Raccourcis iOS : créez un Raccourci avec ces actions — (1) Enregistrer l\'audio (ou acceptez l\'entrée audio à partir de Partager), (2) Transcrire avec Whisper Transcription, (3) Générer du texte avec LLM Farm (si exposé) ou Private LLM (~£10, a une action Raccourcis), (4) Parler le texte en utilisant la voix système iOS.',
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**STTエンジン：** Whisper.cpp（クロスプラットフォーム）、WhisperKit（iOS、Apple Neural Engine最適化）、Sherpa-ONNX（Android、ONNXランタイム）。',
           '**LLM：** Phi-4 Mini（3.8B）フラッグシップスマートフォン上；Qwen3 1.7BまたはSmolLM 2 1.7B古いデバイス上。',
           '**TTS：** Piper TTS（オープンソース、~50 MB/音声）、iOSシステムTTS（AVSpeechSynthesizer）、AndroidシステムTTS。',
-          '**iPhoneアプリ：** WhisperKit、Whisper Transcription（Aiko開発者）、LLM Farm、PocketPal AI。',
+          '**iPhoneアプリ：** WhisperKit、Whisper Transcription（Good Snooze）、LLM Farm、PocketPal AI。',
           '**Androidアプリ：** Layla（バンドルスタック）、Termux + whisper.cpp + Ollama、Sherpa-ONNXデモアプリ。',
           '**音声から最初のオーディオまでのターゲット：** 2秒以下 = 「使用可能に感じる」；1秒以下 = 「ネイティブに感じる」。',
           '**バッテリー（1時間アクティブ）：** iPhone 16 Pro ~25～35% ; Pixel 9 Pro / Galaxy S25 Ultra ~25～40%。',
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**2026年で最も単純な完全にオフラインのiPhone音声アシスタント：STT用のWhisperKit（またはWhisper Transcription）、LLM用のLLM Farm、およびボイス用のiOSシステムTTS。** 総設定時間は5～10分、モデルダウンロード時間を追加します。',
         numberedItems: [
-          'App Storeからwhisperkit-baseアプリをインストール（例：「Whisper Transcription」by Aiko developer、無料）—Apple Neural Engineを使用して、デバイス上でのトランスクリプションを提供。または、GitHubからwhisperkit参照アプリを構築（Argmax / WhisperKit）。',
+          'App Storeからwhisperkit-baseアプリをインストール（例：「Whisper Transcription」by Good Snooze、無料）—Apple Neural Engineを使用して、デバイス上でのトランスクリプションを提供。または、GitHubからwhisperkit参照アプリを構築（Argmax / WhisperKit）。',
           'WhisperKit / Whisper Transcriptionで：「Small」モデル（~466 MB）をダウンロード。Tinyはより速いですが不正確です；Mediumはより正確ですが遅い。',
           'App StoreからLLM Farmをインストール（無料）。LLM Farmで：モデル→「URLからモデルを追加」をタップ→Hugging Face URLを貼り付けて、Phi-4 Mini Q4_K_M（または、利用可能な場合はアプリ内ライブラリを使用）。モデルは~2.7 GB。',
           'iOSショートカット経由で接続：これらのアクションを備えたショートカットを作成—（1）オーディオを記録（または共有シートからオーディオ入力を受け入れ）、（2）Whisper Transcriptionで転写、（3）LLM Farm（露出されている場合）または私立LLM（~£10、ショートカットアクション有）でテキスト生成、（4）iOSシステムボイスを使用してテキストを話す。',
@@ -1999,7 +1999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**STT引擎：** Whisper.cpp（跨平台）、WhisperKit（iOS、Apple Neural Engine优化）、Sherpa-ONNX（Android、ONNX运行时）。',
           '**LLM：** Phi-4 Mini（3.8B）在旗舰手机上；Qwen3 1.7B或SmolLM 2 1.7B在较旧的设备上。',
           '**TTS：** Piper TTS（开源、~50 MB /语音）、iOS系统TTS（AVSpeechSynthesizer）、Android系统TTS。',
-          '**iPhone应用：** WhisperKit、Whisper Transcription（Aiko开发者）、LLM Farm、PocketPal AI。',
+          '**iPhone应用：** WhisperKit、Whisper Transcription（Good Snooze）、LLM Farm、PocketPal AI。',
           '**Android应用：** Layla（捆绑堆栈）、Termux + whisper.cpp + Ollama、Sherpa-ONNX演示应用。',
           '**语音到首个音频目标：** 2秒以内 = "感觉可用"；1秒以内 = "感觉本地"。',
           '**电池（1小时活跃）：** iPhone 16 Pro ~25-35% ；Pixel 9 Pro / Galaxy S25 Ultra ~25-40%。',
@@ -2103,7 +2103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**2026年最简单的完全离线iPhone语音助手：STT的WhisperKit（或Whisper Transcription）、LLM的LLM Farm和语音的iOS系统TTS。** 总设置时间为5-10分钟加上模型下载时间。',
         numberedItems: [
-          '从App Store安装基于WhisperKit的应用（例如" Whisper Transcription"（Aiko开发者、免费）—使用Apple Neural Engine提供设备上的转录。或者，从GitHub（Argmax / WhisperKit）构建WhisperKit参考应用。',
+          '从App Store安装基于WhisperKit的应用（例如" Whisper Transcription"（Good Snooze、免费）—使用Apple Neural Engine提供设备上的转录。或者，从GitHub（Argmax / WhisperKit）构建WhisperKit参考应用。',
           '在WhisperKit / Whisper Transcription中：下载"Small"模型（~466 MB）。Tiny更快但不准确；Medium更准确但更慢。',
           '从App Store安装LLM Farm（免费）。在LLM Farm中：点击Models → "从URL添加模型" → 粘贴Phi-4 Mini Q4_K_M的Hugging Face URL（或使用应用内库（如果可用））。模型为~2.7 GB。',
           '通过iOS快捷方式连接：创建具有这些操作的快捷方式— （1）录制音频（或从共享表中接受音频输入）、（2）使用Whisper Transcription转录、（3）使用LLM Farm（如果公开）或私有LLM（~£10、有快捷方式操作）生成文本、（4）使用iOS系统语音说文本。',
@@ -2482,7 +2482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Motor STT:** Whisper.cpp (multiplataforma), WhisperKit (iOS, optimizado para Apple Neural Engine), Sherpa-ONNX (Android, runtime ONNX).',
           '**LLM:** Phi-4 Mini (3,8B) en teléfonos de gama alta; Qwen3 1,7B o SmolLM 2 1,7B en dispositivos más antiguos.',
           '**TTS:** Piper TTS (código abierto, ~50 MB por voz), TTS del sistema iOS (AVSpeechSynthesizer), TTS del sistema Android.',
-          '**Apps para iPhone:** WhisperKit, Whisper Transcription (desarrollador Aiko), LLM Farm, PocketPal AI.',
+          '**Apps para iPhone:** WhisperKit, Whisper Transcription (Good Snooze), LLM Farm, PocketPal AI.',
           '**Apps para Android:** Layla (stack integrado), Termux + whisper.cpp + Ollama, apps de demostración de Sherpa-ONNX.',
           '**Objetivo de voz al primer audio:** menos de 2 segundos = "se siente usable"; menos de 1 segundo = "se siente nativo".',
           '**Batería (1 hora activa):** iPhone 16 Pro ~25–35%; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
@@ -2586,7 +2586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El asistente de voz iPhone más sencillo y completamente offline en 2026: WhisperKit (o Whisper Transcription) para STT, LLM Farm para el LLM y el TTS del sistema iOS para la voz.** El tiempo total de configuración es de 5–10 minutos más el tiempo de descarga del modelo.',
         numberedItems: [
-          'Instala una app basada en WhisperKit desde la App Store (por ejemplo, "Whisper Transcription" del desarrollador Aiko, gratis) — proporciona transcripción en el dispositivo usando Apple Neural Engine. También puedes compilar la app de referencia de WhisperKit desde GitHub (Argmax / WhisperKit).',
+          'Instala una app basada en WhisperKit desde la App Store (por ejemplo, "Whisper Transcription" de Good Snooze, gratis) — proporciona transcripción en el dispositivo usando Apple Neural Engine. También puedes compilar la app de referencia de WhisperKit desde GitHub (Argmax / WhisperKit).',
           'En WhisperKit / Whisper Transcription: descarga el modelo "Small" (~466 MB). Tiny es más rápido pero inexacto; Medium es más preciso pero más lento.',
           'Instala LLM Farm desde la App Store (gratis). En LLM Farm: toca Modelos → "Agregar modelo desde URL" → pega una URL de Hugging Face para Phi-4 Mini Q4_K_M (o usa la biblioteca integrada si está disponible). El modelo ocupa ~2,7 GB.',
           'Conéctalos mediante Atajos de iOS: crea un Atajo con estas acciones — (1) Grabar audio (o aceptar entrada de audio desde la Hoja para compartir), (2) Transcribir con Whisper Transcription, (3) Generar texto con LLM Farm (si está disponible) o Private LLM (~£10, tiene una acción de Atajos), (4) Reproducir texto con la voz del sistema iOS.',
@@ -2965,7 +2965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**STT 엔진:** Whisper.cpp(크로스플랫폼), WhisperKit(iOS, Apple Neural Engine에 최적화), Sherpa-ONNX(Android, ONNX 런타임).',
           '**LLM:** 고급 전화기에서 Phi-4 Mini(3.8B); 오래된 기기에서 Qwen3 1.7B 또는 SmolLM 2 1.7B.',
           '**TTS:** Piper TTS(오픈소스, 음성당 ~50 MB), iOS TTS 시스템(AVSpeechSynthesizer), Android 시스템 TTS.',
-          '**iPhone 앱:** WhisperKit, Whisper Transcription(개발자 Aiko), LLM Farm, PocketPal AI.',
+          '**iPhone 앱:** WhisperKit, Whisper Transcription(Good Snooze), LLM Farm, PocketPal AI.',
           '**Android 앱:** Layla(통합 스택), Termux + whisper.cpp + Ollama, Sherpa-ONNX 데모 앱.',
           '**음성에서 첫 오디오 목표:** 2초 미만 = "사용 가능하게 느껴짐"; 1초 미만 = "네이티브하게 느껴짐".',
           '**배터리(1시간 활성):** iPhone 16 Pro ~25–35%; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
@@ -3069,7 +3069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**2026년 가장 간단하고 완전히 오프라인인 iPhone 음성 비서: STT를 위한 WhisperKit(또는 Whisper Transcription), LLM을 위한 LLM Farm, 음성을 위한 iOS 시스템 TTS.** 총 설정 시간은 모델 다운로드 시간 플러스 5–10분입니다.',
         numberedItems: [
-          'App Store에서 WhisperKit 기반 앱 설치(예: 개발자 Aiko의 "Whisper Transcription", 무료) — Apple Neural Engine을 사용하여 기기 내 전사를 제공합니다. GitHub(Argmax / WhisperKit)에서 WhisperKit 참조 앱을 빌드할 수도 있습니다.',
+          'App Store에서 WhisperKit 기반 앱 설치(예: Good Snooze의 "Whisper Transcription", 무료) — Apple Neural Engine을 사용하여 기기 내 전사를 제공합니다. GitHub(Argmax / WhisperKit)에서 WhisperKit 참조 앱을 빌드할 수도 있습니다.',
           'WhisperKit / Whisper Transcription에서: "Small" 모델 다운로드(~466 MB). Tiny는 더 빠르지만 부정확하고; Medium은 더 정확하지만 더 느립니다.',
           'App Store에서 LLM Farm 설치(무료). LLM Farm에서: Models 탭 → "URL에서 모델 추가" → Phi-4 Mini Q4_K_M을 위한 Hugging Face URL 붙여넣기(또는 사용 가능한 경우 내장 라이브러리 사용). 모델은 ~2.7 GB를 차지합니다.',
           'iOS Shortcuts를 통해 연결: 다음 액션으로 단축어 생성 — (1) 오디오 녹음(또는 공유 시트에서 오디오 입력 수락), (2) Whisper Transcription으로 전사, (3) LLM Farm(사용 가능한 경우) 또는 Private LLM(~£10, 단축어 액션 있음)으로 텍스트 생성, (4) iOS 시스템 음성으로 텍스트 재생.',
@@ -3448,7 +3448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Motor STT:** Whisper.cpp (multiplataforma), WhisperKit (iOS, otimizado para Apple Neural Engine), Sherpa-ONNX (Android, runtime ONNX).',
           '**LLM:** Phi-4 Mini (3,8B) em telefones de ponta; Qwen3 1,7B ou SmolLM 2 1,7B em dispositivos mais antigos.',
           '**TTS:** Piper TTS (código aberto, ~50 MB por voz), TTS do sistema iOS (AVSpeechSynthesizer), TTS do sistema Android.',
-          '**Apps para iPhone:** WhisperKit, Whisper Transcription (desenvolvedor Aiko), LLM Farm, PocketPal AI.',
+          '**Apps para iPhone:** WhisperKit, Whisper Transcription (Good Snooze), LLM Farm, PocketPal AI.',
           '**Apps para Android:** Layla (stack integrado), Termux + whisper.cpp + Ollama, apps de demonstração do Sherpa-ONNX.',
           '**Meta de voz ao primeiro áudio:** menos de 2 segundos = "parece utilizável"; menos de 1 segundo = "parece nativo".',
           '**Bateria (1 hora ativa):** iPhone 16 Pro ~25–35%; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
@@ -3552,7 +3552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O assistente de voz para iPhone mais simples e totalmente offline em 2026: WhisperKit (ou Whisper Transcription) para STT, LLM Farm para o LLM e o TTS do sistema iOS para a voz.** O tempo total de configuração é de 5–10 minutos mais o tempo de download do modelo.',
         numberedItems: [
-          'Instale um app baseado no WhisperKit na App Store (por exemplo, "Whisper Transcription" do desenvolvedor Aiko, gratuito) — ele oferece transcrição no dispositivo usando o Apple Neural Engine. Você também pode compilar o app de referência do WhisperKit pelo GitHub (Argmax / WhisperKit).',
+          'Instale um app baseado no WhisperKit na App Store (por exemplo, "Whisper Transcription" da Good Snooze, gratuito) — ele oferece transcrição no dispositivo usando o Apple Neural Engine. Você também pode compilar o app de referência do WhisperKit pelo GitHub (Argmax / WhisperKit).',
           'No WhisperKit / Whisper Transcription: baixe o modelo "Small" (~466 MB). O Tiny é mais rápido mas impreciso; o Medium é mais preciso mas mais lento.',
           'Instale o LLM Farm na App Store (gratuito). No LLM Farm: toque em Modelos → "Adicionar modelo a partir de URL" → cole uma URL do Hugging Face para o Phi-4 Mini Q4_K_M (ou use a biblioteca integrada se disponível). O modelo ocupa ~2,7 GB.',
           'Conecte-os usando os Atalhos do iOS: crie um Atalho com estas ações — (1) Gravar áudio (ou aceitar entrada de áudio da Folha de compartilhamento), (2) Transcrever com Whisper Transcription, (3) Gerar texto com LLM Farm (se disponível) ou Private LLM (~£10, tem uma ação de Atalhos), (4) Reproduzir texto com a voz do sistema iOS.',
@@ -3932,7 +3932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**محرك STT:** Whisper.cpp ‏(متعدد المنصات)‏، WhisperKit ‏(iOS، محسَّن لـ Apple Neural Engine)‏، Sherpa-ONNX ‏(Android، نظام تشغيل ONNX)‏.',
           '**نموذج LLM:** Phi-4 Mini ‏(3.8B)‏ على الهواتف المتميزة؛ Qwen3 1.7B أو SmolLM 2 1.7B على الأجهزة الأقدم.',
           '**TTS:** Piper TTS ‏(مفتوح المصدر، ~50 ميجابايت لكل صوت)‏، TTS نظام iOS ‏(AVSpeechSynthesizer)‏، TTS نظام Android.',
-          '**تطبيقات iPhone:** WhisperKit، Whisper Transcription ‏(مطور Aiko)‏، LLM Farm، PocketPal AI.',
+          '**تطبيقات iPhone:** WhisperKit، Whisper Transcription ‏(Good Snooze)‏، LLM Farm، PocketPal AI.',
           '**تطبيقات Android:** Layla ‏(حزمة متكاملة)‏، Termux + whisper.cpp + Ollama، تطبيقات Sherpa-ONNX التجريبية.',
           '**هدف صوت إلى أول صوت:** أقل من ثانيتين = "يبدو قابلًا للاستخدام"؛ أقل من ثانية = "يبدو طبيعيًا".',
           '**البطارية ‏(ساعة نشطة)‏:** iPhone 16 Pro ~25–35%؛ Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
@@ -4036,7 +4036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**أبسط وأكمل مساعد صوتي محلي على iPhone في 2026: WhisperKit ‏(أو Whisper Transcription)‏ للـ STT، وLLM Farm للـ LLM، وTTS نظام iOS للصوت.** إجمالي وقت الإعداد 5–10 دقائق زائد وقت تنزيل النموذج.',
         numberedItems: [
-          'ثبّت تطبيقًا مبنيًا على WhisperKit من App Store ‏(مثلًا "Whisper Transcription" من مطور Aiko، مجاني)‏ — يوفر نسخًا على الجهاز باستخدام Apple Neural Engine. يمكنك أيضًا بناء تطبيق مرجع WhisperKit من GitHub ‏(Argmax / WhisperKit)‏.',
+          'ثبّت تطبيقًا مبنيًا على WhisperKit من App Store ‏(مثلًا "Whisper Transcription" من Good Snooze، مجاني)‏ — يوفر نسخًا على الجهاز باستخدام Apple Neural Engine. يمكنك أيضًا بناء تطبيق مرجع WhisperKit من GitHub ‏(Argmax / WhisperKit)‏.',
           'في WhisperKit / Whisper Transcription: نزّل نموذج "Small" ‏(~466 ميجابايت)‏. Tiny أسرع لكن غير دقيق؛ Medium أدق لكن أبطأ.',
           'ثبّت LLM Farm من App Store ‏(مجاني)‏. في LLM Farm: اضغط على النماذج ← "إضافة نموذج من URL" ← الصق رابط Hugging Face لـ Phi-4 Mini Q4_K_M ‏(أو استخدم المكتبة المدمجة إن كانت متاحة)‏. النموذج يحتل ~2.7 جيجابايت.',
           'اربطهما عبر Shortcuts على iOS: أنشئ اختصارًا بهذه الإجراءات — ‏(1)‏ تسجيل صوت ‏(أو قبول إدخال صوتي من ورقة المشاركة)‏، ‏(2)‏ نسخ مع Whisper Transcription، ‏(3)‏ توليد نص مع LLM Farm ‏(إن كان متاحًا)‏ أو Private LLM ‏(~£10، له إجراء Shortcuts)‏، ‏(4)‏ تشغيل النص بصوت نظام iOS.',

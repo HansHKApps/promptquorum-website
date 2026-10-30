@@ -160,6 +160,7 @@ import { app as app_pocketllm_lite } from './apps/pocketllm-lite'
 import { app as app_obscurify } from './apps/obscurify'
 import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
+import { app as app_aiko } from './apps/aiko'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_local_ai_mail } from './apps/local-ai-mail'
@@ -678,6 +679,7 @@ export const localAiApps: ToolRecord[] = [
   app_obscurify,
   app_genva,
   app_whisper_notes,
+  app_aiko,
   app_anyllm,
   app_local_ai_geetmark,
   app_local_ai_mail,
