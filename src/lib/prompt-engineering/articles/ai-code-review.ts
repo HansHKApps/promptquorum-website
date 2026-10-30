@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-de.webp',
       title: 'KI-Code-Review 2026: Die besten Tools im Ranking (CodeRabbit, Greptile, Snyk) + Prompt-Framework',
-      intro: 'KI-Code-Review-Tools fanden im einzigen öffentlichen Direktvergleich mit dokumentierter Methode 44–82% der eingebauten Bugs — ein Benchmark, den Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt hat —, gegenüber unter 20% bei regelbasierter statischer Analyse nach Schätzungen Dritter. Betrachten Sie vom Hersteller durchgeführte Zahlen als Richtwert: Andere veröffentlichte Benchmarks reihen dieselben Tools anders ein. Die praktische Herausforderung ist das Signal-Rausch-Verhältnis: Eine veröffentlichte Branchenanalyse ergab, dass 64% der KI-Review-Kommentare Stilfragen statt Logikfehler betreffen. Eng gefasste Prompts, die Sicherheit und Logik vor Formatierung priorisieren, sind der wichtigste Hebel.',
+      intro: 'KI-Code-Review-Tools fanden in einem Benchmark, den Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt hat, 44–82% der eingebauten Bugs. Betrachten Sie vom Hersteller durchgeführte Zahlen als Richtwert: Greptile verkauft eines der getesteten Tools, und unabhängige Ergebnisse können abweichen. Die praktische Herausforderung ist das Signal-Rausch-Verhältnis: KI-Reviewer können Logik- und Sicherheitsbefunde unter Stilkommentaren begraben, was Entwickler dazu bringt, sie zu ignorieren. Eng gefasste Prompts, die Sicherheit und Logik vor Formatierung priorisieren, sind der wichtigste Hebel.',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -687,11 +687,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'KI-Code-Review-Tools', description: 'Automatisierte Software-Tools, die Code-PRs analysieren und Bugs, Sicherheitslücken und Stilprobleme erkennen' },
-          { '@type': 'Thing', name: 'Signal-Rausch-Problem', description: 'Die Herausforderung, dass laut einer veröffentlichten Branchenanalyse die meisten KI-Review-Kommentare Stilfragen statt Logikfehler betreffen' },
+          { '@type': 'Thing', name: 'Signal-Rausch-Problem', description: 'Die Herausforderung, dass KI-Review-Kommentare von Stilfragen statt von Logikfehlern dominiert sein können' },
           { '@type': 'Thing', name: 'Prompt Engineering für Code-Review', description: 'Techniken zur Strukturierung von KI-Anweisungen, damit Logik- und Sicherheitsbefunde Vorrang vor Stilkommentaren haben' },
           { '@type': 'Thing', name: 'Chain-of-Thought-Prompting', description: 'Die Methode, KI-Modelle Ausführungspfade Schritt für Schritt nachvollziehen zu lassen, bevor sie Bugs benennen' },
           { '@type': 'Thing', name: 'Code-Review-Automatisierung', description: 'Integration von KI-Code-Review-Tools in CI/CD-Pipelines und Pull-Request-Workflows' },
-          { '@type': 'Thing', name: 'DSGVO-konformes KI-Code-Review', description: 'Ansätze, KI-Code-Review unter Einhaltung europäischer Datenschutzanforderungen einzusetzen' },
+          { '@type': 'Thing', name: 'Datenschutz beim KI-Code-Review', description: 'Überlegungen zum Einsatz von KI-Code-Review unter europäischen Datenschutzanforderungen' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -712,11 +712,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**Höchste Erkennungsrate im einzigen dokumentierten öffentlichen Test:** Greptile mit 82% (vom Hersteller durchgeführt, Juli 2025, 50 eingebaute Bugs) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
+        '**Höchste Erkennungsrate im von Greptile durchgeführten Test:** Greptile mit 82% (vom Hersteller durchgeführt, Juli 2025, 50 eingebaute Bugs) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
         '**Preismodelle unterscheiden sich:** CodeRabbit $24 pro Nutzer und Monat (jährlich, Essentials); Greptile Pro $1 pro Review-Credit; Snyk Code Team $25 pro Monat für bis zu 10 Entwickler',
         '**Kostenlose Optionen:** CodeRabbit für öffentliche Repositories; Greptile Starter für einen Entwickler; Snyk Code Free (100 Tests pro Monat)',
         '**Self-Hosting:** nur in Enterprise-Tarifen bei CodeRabbit (500+ Sitzplätze laut Dokumentation), Greptile und Qodo',
-        '**Das Signalproblem:** Eine veröffentlichte Branchenanalyse ergab, dass 64% der KI-Review-Kommentare Stil-Rauschen sind und 14% Logik- oder Sicherheitsfehler finden',
+        '**Das Signalproblem:** KI-Reviewer können Logik- und Sicherheitsbefunde unter Stilkommentaren begraben — messen Sie den Anteil der Kommentare, die Ihre Entwickler umsetzen',
         '**Die Lösung:** eng gefasste Prompts (5-teiliges Framework) verlagern die Kommentare hin zu Logik und Sicherheit',
       ],
       faqSchema: {
@@ -727,12 +727,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Welches ist das genaueste KI-Code-Review-Tool im Jahr 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Kein Tool ist in jedem Test das genaueste. Im einzigen öffentlichen Direktvergleich mit dokumentierter Methode — von Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt — fand Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44% (Standardeinstellungen, gehostete Tarife). Da Greptile eines der getesteten Tools verkauft und andere veröffentlichte Benchmarks die Tools anders reihen, nutzen Sie die Zahlen als Ausgangspunkt und führen Sie eine zweiwöchige Testphase mit Ihren eigenen Pull Requests durch. Für Sicherheits-Scans ist Snyk Code eine eigene Kategorie: ein Scanner, der einen Pull-Request-Reviewer ergänzt.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Kein Tool ist in jedem Test das genaueste. In einem Benchmark, den Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt hat, fand Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44% (Standardeinstellungen, gehostete Tarife). Da Greptile eines der getesteten Tools verkauft und unabhängige Ergebnisse abweichen können, nutzen Sie die Zahlen als Ausgangspunkt und führen Sie eine zweiwöchige Testphase mit Ihren eigenen Pull Requests durch. Für Sicherheits-Scans ist Snyk Code eine eigene Kategorie: ein Scanner, der einen Pull-Request-Reviewer ergänzt.' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit vs Greptile: Was sollte ich wählen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Wählen Sie Greptile, wenn das Finden tief liegender Bugs am wichtigsten ist und Sie pro Review budgetieren können: Es fand 82% gegenüber 44% bei CodeRabbit in Greptiles eigenem Test vom Juli 2025, und Pro hat keine Sitzplatzgebühren (vorausbezahlte Credits zu je $1; ein Base-Review verbraucht 1 Credit). Wählen Sie CodeRabbit, wenn Sie einen Preis pro Sitzplatz ($24 pro Nutzer und Monat bei Essentials mit jährlicher Abrechnung, $30 monatlich) und kostenlose Reviews für öffentliche Repositories wünschen. Beide bieten eine 14-tägige Testphase und reservieren Self-Hosting für Enterprise. Ob sich CodeRabbit lohnt, hängt vom Volumen ab: Ein pauschaler Sitzplatzpreis lässt sich bei Teams mit vielen Pull Requests leichter kalkulieren, während Teams mit geringem Volumen pro Review womöglich weniger zahlen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Wählen Sie Greptile, wenn die höchste Erkennungsrate bei eingebauten Bugs am wichtigsten ist und Sie pro Review budgetieren können: Es fand 82% gegenüber 44% bei CodeRabbit in Greptiles eigenem Test vom Juli 2025, und Pro hat keine Sitzplatzgebühren (vorausbezahlte Credits zu je $1; ein Base-Review verbraucht 1 Credit). Wählen Sie CodeRabbit, wenn Sie einen Preis pro Sitzplatz ($24 pro Nutzer und Monat bei Essentials mit jährlicher Abrechnung, $30 monatlich) und kostenlose Reviews für öffentliche Repositories wünschen. Beide bieten eine 14-tägige Testphase und reservieren Self-Hosting für Enterprise. Ob sich CodeRabbit lohnt, hängt vom Volumen ab: Ein pauschaler Sitzplatzpreis lässt sich bei Teams mit vielen Pull Requests leichter kalkulieren, während Teams mit geringem Volumen pro Review womöglich weniger zahlen.' },
           },
           {
             '@type': 'Question',
@@ -762,16 +762,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Wie stark verkürzt KI-Code-Review die Review-Zeit?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ein Branchenleitfaden eines Dritten (DigitalApplied, 2025) berichtet von 40% weniger Review-Zeit und 62% weniger Produktionsfehlern; PromptQuorum hat dies nicht gemessen. Studien zum KI-Bug-Triaging berichten von 65% kürzerer Triage-Zeit und 30–40% schnellerer Time-to-Resolution gegenüber manuellen Methoden. Teams, die KI-Review-Prompts auf Logik und Sicherheit (nicht auf Stil) eingrenzen, berichten von Aktionsraten der Entwickler von etwa 52%, im Einklang mit menschlichen Reviewern.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ein Branchenleitfaden eines Dritten (DigitalApplied, 2025) berichtet von 40% weniger Review-Zeit und 62% weniger Produktionsfehlern; PromptQuorum hat dies nicht gemessen. In der Arbeit von Khaleefulla et al. (IJERT) berichten die Autoren von einer um 65% verkürzten durchschnittlichen Triage-Zeit bei ihrem KI-Triage-System. Unabhängig vom Tool: Messen Sie vor und nach der Anpassung des Prompt-Umfangs den Anteil der KI-Kommentare, die Ihre Entwickler umsetzen.' },
           },
           {
             '@type': 'Question',
             name: 'Wie schneidet KI-Code-Review im Vergleich zu klassischer statischer Analyse (SAST) ab?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Schätzungen Dritter beziffern klassisches regelbasiertes SAST bei bedeutsamen Laufzeitfehlern auf unter 20%, mit hohen Falsch-Positiv-Raten. KI-gestütztes SAST erreichte in einem Drittanbieter-Vergleich von 2025 bei KI-generiertem Code 84–92/100, und Transformer-basierte Modelle erreichen in Benchmarks zur Bug-Klassifizierung 94% Genauigkeit gegenüber 65% bei regelbasierten Methoden (nichts davon von PromptQuorum gemessen). Der wesentliche Vorteil der KI ist das kontextbezogene Schließen — sie bewertet, wie Codepfade zusammenwirken, statt feste Schwachstellensignaturen abzugleichen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Regelbasiertes SAST wendet feste Schwachstellensignaturen an und neigt zu vielen Falsch-Positiven, während KI-gestützte Tools kontextbezogenes Schließen ergänzen: Sie bewerten, wie Codepfade zusammenwirken, statt Signaturen abzugleichen. In einem Drittanbieter-Vergleich von 2025 erreichten Snyk Code, Semgrep Enterprise und CodeQL bei KI-generiertem Code 84–92/100 (nicht von PromptQuorum gemessen). Die beiden Ansätze ergänzen einander.' },
           },
           {
             '@type': 'Question',
-            name: 'Ist KI-Code-Review für europäische Teams DSGVO-konform?',
+            name: 'Ist KI-Code-Review für europäische Teams mit der DSGVO vereinbar?',
             acceptedAnswer: { '@type': 'Answer', text: 'Nicht automatisch. Das Senden von Quellcode, der die Verarbeitung personenbezogener Daten berührt, an externe KI-APIs kann eine Datenschutz-Folgenabschätzung (DPIA) nach Artikel 35 DSGVO erfordern; fragen Sie Ihre Datenschutzbeauftragte oder Ihren Datenschutzbeauftragten. DSGVO und EU-KI-Verordnung (EU AI Act) können gleichzeitig gelten. Bei strengen Anforderungen nutzen Sie Self-Hosting (CodeRabbit Enterprise, Kunden mit 500+ Sitzplätzen angeboten, sendet Code weiterhin an den von Ihnen konfigurierten LLM-Anbieter) oder betreiben Open-Weight-Modelle lokal über Ollama, sodass kein Code Ihre Infrastruktur verlässt.' },
           },
           {
@@ -782,7 +782,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Welcher Anteil der KI-Code-Review-Kommentare ist tatsächlich nützlich?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Eine veröffentlichte Branchenanalyse von 1.247 KI-Review-Kommentaren in 340 PRs (nicht von PromptQuorum gemessen) ergab, dass nur 14% Logikfehler und Sicherheitsprobleme betrafen — die Probleme, die Produktionsvorfälle verursachen —, während 64% Stil, Duplikation und Testabdeckung betrafen. Bei Tools mit weniger als 60% umsetzbarem Feedback bricht die Akzeptanz bei Entwicklern ein, weil Ingenieure beginnen, alle Kommentare zu ignorieren. Eng gefasste Prompts, die Stilkommentare ausdrücklich ausschließen, sind der wichtigste Hebel, um den Anteil umsetzbarer Kommentare zu erhöhen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Eine belastbare öffentliche Zahl konnten wir nicht bestätigen, und der Anteil variiert je nach Tool, Prompt und Codebase; messen Sie ihn daher selbst: Zählen Sie einen Monat lang den Anteil der KI-Kommentare, die Ihre Entwickler umsetzen. Wenn die meisten Kommentare ignoriert werden, grenzen Sie den Umfang enger ein — schließen Sie Stilkommentare ausdrücklich aus und fordern Sie nur Befunde zu Logik, Sicherheit und Performance an — und messen Sie erneut.' },
           },
           {
             '@type': 'Question',
@@ -802,12 +802,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Kann KI-Code-Review Sicherheitslücken besser erkennen als spezialisierte SAST-Tools?',
-            acceptedAnswer: { '@type': 'Answer', text: 'In Vergleichen von Drittanbietern erzielten KI-gestützte SAST-Tools (Snyk Code, Semgrep Enterprise, CodeQL) bei KI-generiertem Code 84–92/100, verglichen mit 65% Genauigkeit bei regelbasierter statischer Analyse. Klassisches SAST ist bei der Massenprüfung großer Codebasen weiterhin schneller, weil KI pro PR mehr Rechenleistung benötigt. Bewährte Praxis: Nutzen Sie leichtgewichtiges SAST und Linting für die Geschwindigkeit und ergänzen Sie es um KI-Review für die tiefe Sicherheitsanalyse bei risikoreichen Änderungen (Authentifizierung, Zahlungen, Infrastruktur).' },
+            acceptedAnswer: { '@type': 'Answer', text: 'In Vergleichen von Drittanbietern erzielten KI-gestützte SAST-Tools (Snyk Code, Semgrep Enterprise, CodeQL) bei KI-generiertem Code 84–92/100 in einem Drittanbieter-Vergleich von 2025 (nicht von PromptQuorum gemessen), und regelbasierte statische Analyse bleibt als schnelles Merge-Gate nützlich. Klassisches SAST ist bei der Massenprüfung großer Codebasen weiterhin schneller, weil KI pro PR mehr Rechenleistung benötigt. Bewährte Praxis: Nutzen Sie leichtgewichtiges SAST und Linting für die Geschwindigkeit und ergänzen Sie es um KI-Review für die tiefe Sicherheitsanalyse bei risikoreichen Änderungen (Authentifizierung, Zahlungen, Infrastruktur).' },
           },
           {
             '@type': 'Question',
             name: 'Kann ich KI-Code-Review lokal für vollständig privaten Code betreiben?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Devstral Small 24B (Mistral AI, 16 GB RAM) und Llama 4 Scout (~55 GB VRAM, 10M Kontext) laufen über Ollama vollständig On-Premises. Es wird kein Code an externe APIs übertragen, wodurch der Verarbeitungsschritt durch Dritte entfällt, den eine DPIA sonst abdecken müsste. Die Qualität liegt bei komplexer Sicherheitsanalyse unter der von Cloud-Frontier-Modellen, genügt aber für die meisten Reviews auf PR-Ebene.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Devstral Small 24B (Mistral AI, 16 GB RAM) und Llama 4 Scout (~55 GB VRAM, 10M Kontext) laufen über Ollama vollständig On-Premises. Die Inferenz läuft auf Ihrer Hardware, sodass Code nicht an einen Cloud-Reviewer gesendet wird; das kann den Verarbeitungsschritt durch Dritte entfallen lassen, den eine DPIA sonst abdecken müsste, doch klären Sie das Verhalten beim Modell-Download und bei Updates mit Ihrem Security-Team. Die Qualität liegt bei komplexer Sicherheitsanalyse unter der von Cloud-Frontier-Modellen, genügt aber für die meisten Reviews auf PR-Ebene.' },
           },
           {
             '@type': 'Question',
@@ -836,11 +836,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Zusammenfassung',
           isTldr: true,
           items: [
-            'Im einzigen öffentlichen Direktvergleich mit dokumentierter Methode (von Greptile durchgeführt, Juli 2025, 50 eingebaute Bugs) fanden KI-Reviewer 44–82%: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — vom Hersteller durchgeführt, daher nur ein Richtwert',
+            'In einem von Greptile im Juli 2025 durchgeführten Benchmark (50 eingebaute Bugs) fanden KI-Reviewer 44–82%: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — vom Hersteller durchgeführt, daher nur ein Richtwert',
             'Die Preismodelle unterscheiden sich: CodeRabbit rechnet pro Sitzplatz ab ($24–$72 pro Nutzer und Monat bei jährlicher Abrechnung), Greptile Pro pro Review-Credit ($1 je Credit, keine Sitzplatzgebühren), Snyk Code Team pauschal $25 pro Monat für bis zu 10 Entwickler',
             'CodeRabbit prüft öffentliche Repositories kostenlos und Greptile Starter ist für einen Entwickler kostenlos; Qodo bietet eine 14-tägige Testphase, aber keinen dauerhaft kostenlosen Tarif',
             'Self-Hosting ist bei CodeRabbit (laut Dokumentation für Kunden mit 500+ Sitzplätzen), Greptile und Qodo ein Enterprise-Feature; selbst gehostetes CodeRabbit sendet Code weiterhin an den von Ihnen konfigurierten LLM-Anbieter',
-            'Eine veröffentlichte Branchenanalyse ergab, dass 64% der KI-Review-Kommentare Stil und Duplikation betreffen und nur 14% Logikfehler und Sicherheit — eng gefasste Prompts sind nötig, um dieses Verhältnis umzukehren',
+            'KI-Reviewer können Logik- und Sicherheitsbefunde unter Stilkommentaren begraben; keine öffentliche Datenbasis, die wir verifizieren konnten, beziffert das Verhältnis — messen Sie daher den Anteil der Kommentare, die Entwickler umsetzen, und heben Sie ihn mit eng gefassten Prompts an',
             'Snyk Code ist ein Sicherheits-Scanner (92/100 in einem Drittanbieter-Vergleich von drei Sicherheits-Tools aus dem Jahr 2025), kein allgemeiner Pull-Request-Reviewer — setzen Sie es neben einem KI-Reviewer ein',
             'Die DSGVO kann eine Datenschutz-Folgenabschätzung (Artikel 35) verlangen, bevor ein Cloud-basiertes KI-Code-Review Quellcode verarbeitet, der personenbezogene Daten berührt — klären Sie das mit Ihrem Datenschutzbeauftragten',
             'Cloud-Frontier-Modelle bieten Kontextfenster von rund 1M Tokens (etwa 75.000–100.000 Codezeilen, eine Schätzung); das Open-Weight-Modell Llama 4 Scout unterstützt lokal 10M Tokens',
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'KI-Code-Review-Tools: Welches Sie einsetzen sollten',
           content: [
-            'Im einzigen öffentlichen Direktvergleich mit dokumentierter Methode fand Greptile 82% von 50 eingebauten Bugs, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44% (von Greptile durchgeführter Benchmark, Juli 2025, Standardeinstellungen, gehostete Tarife). Greptile verkauft eines der getesteten Tools, und andere veröffentlichte Benchmarks reihen dieselben Tools in anderer Reihenfolge ein; lesen Sie die Zahlen daher als Richtwert, nicht als Urteil.',
+            'In einem von Greptile im Juli 2025 durchgeführten Benchmark mit 50 eingebauten Bugs fand Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44% (Standardeinstellungen, gehostete Tarife). Greptile verkauft eines der getesteten Tools, und unabhängige Ergebnisse können abweichen; lesen Sie die Zahlen daher als Richtwert, nicht als Urteil.',
             'CodeRabbit bietet kostenlose Reviews für öffentliche Repositories; private Repositories benötigen Essentials ($24 pro Nutzer und Monat bei jährlicher Abrechnung, $30 monatlich), Team ($48 jährlich, $60 monatlich) oder Advanced ($72), Enterprise auf Anfrage. Self-Hosting gibt es nur im Enterprise-Tarif, und laut der Self-Hosting-Dokumentation wird es Kunden mit 500+ Sitzplätzen angeboten.',
             'Greptile Starter ist für einen aktiven Entwickler kostenlos (50 Credits pro Monat). Pro hat keine Sitzplatzgebühren: Credits kosten je $1, ein Base-Review verbraucht 1 Credit, ein Plus-Review 3 und ein Apex-Review 10. Qodo Pro Team nennt $30 mit gemeinsam genutzten Credits für bis zu 30 Nutzer und hat keinen dauerhaft kostenlosen Tarif. GitHub Copilot Code Review ist für Copilot Pro, Pro+, Max, Business und Enterprise allgemein verfügbar (nicht für Copilot Free) und verbraucht KI-Credits — GitHub dokumentiert durchschnittlich etwa $0,25 (Lite), $1,50 (Balanced) und $10 (Max) pro Review.',
           ],
@@ -876,11 +876,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { Tool: '[CodeRabbit](https://www.coderabbit.ai)', 'Erkennungsrate (Herstellertest)': '44%', 'Git-Plattformen': 'GitHub, GitLab', 'Self-Hosting': 'Enterprise (500+ Sitzplätze)', 'Listenpreis': '$24 pro Nutzer und Monat (jährlich)' },
             { Tool: '[Qodo](https://www.qodo.ai)', 'Erkennungsrate (Herstellertest)': 'Nicht getestet', 'Git-Plattformen': 'GitHub, GitLab, Bitbucket, Azure', 'Self-Hosting': 'Enterprise (On-Prem)', 'Listenpreis': 'Pro Team ab $30 (gemeinsam genutzt)' },
             { Tool: '[Snyk Code](https://snyk.io)', 'Erkennungsrate (Herstellertest)': 'Nicht getestet', 'Git-Plattformen': 'Über SCM-Integrationen', 'Self-Hosting': 'Keine Angabe', 'Listenpreis': 'Kostenlos; Team ab $25 (10 Entwickler)' },
-            { Tool: 'Klassisches SAST', 'Erkennungsrate (Herstellertest)': 'Unter 20%*', 'Git-Plattformen': 'Unterschiedlich', 'Self-Hosting': 'Unterschiedlich', 'Listenpreis': 'Unterschiedlich' },
+            { Tool: 'Klassisches SAST', 'Erkennungsrate (Herstellertest)': 'Nicht getestet', 'Git-Plattformen': 'Unterschiedlich', 'Self-Hosting': 'Unterschiedlich', 'Listenpreis': 'Unterschiedlich' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Herkunft der Daten', text: '*Schätzung eines Dritten, nicht von PromptQuorum gemessen. Erkennungsraten: von Greptile durchgeführter Benchmark, Juli 2025. Listenpreise von den Preisseiten der Hersteller; Tarife ändern sich häufig, bestätigen Sie sie daher vor dem Kauf.' },
+            { type: 'info', label: 'Herkunft der Daten', text: 'Erkennungsraten: von Greptile durchgeführter Benchmark, Juli 2025, nicht von PromptQuorum gemessen. Listenpreise von den Preisseiten der Hersteller; Tarife ändern sich häufig, bestätigen Sie sie daher vor dem Kauf.' },
           ],
           image: '/images/code-review-tool-comparison-de.svg',
           imageCaption: 'Funktionsvergleich von PromptQuorum, GitHub Copilot, ChatGPT und Cursor: PromptQuorum sendet einen Prompt gleichzeitig an mehrere Modelle, sodass ein einzelnes Review modellübergreifend gegengeprüft werden kann.',
@@ -951,10 +951,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Warum ist das Signal-Rausch-Verhältnis beim KI-Code-Review ein Problem?',
           content: [
             'KI-Code-Review-Tools kommentieren Stilprobleme weit zuverlässiger, als sie kritische Laufzeitfehler finden (44–82% im oben genannten, vom Hersteller durchgeführten Test) — das erzeugt ein Problem der Kommentarmenge, das zum Einbruch der Akzeptanz bei Entwicklern führen kann.',
-            'Eine veröffentlichte Branchenanalyse von 1.247 KI-Review-Kommentaren in 340 Pull Requests (nicht von PromptQuorum gemessen) ergab: ~64% aller KI-Review-Kommentare betrafen Stil, Duplikation und Testabdeckung. Nur ~14% der Kommentare betrafen Logikfehler und Sicherheitsprobleme — die Probleme, die Produktionsvorfälle verursachen. Bei Tools mit weniger als 60% umsetzbarem Feedback bricht die Akzeptanz bei Entwicklern ein, weil Ingenieure beginnen, jedes Feedback zu ignorieren, auch kritische Befunde.',
-            'Die Ursache sind die Trainingsdaten: KI-Modelle werden mit Codebasen trainiert, in denen Stilverstöße Logikfehler bei Weitem übersteigen. Das Modell lernt, das anzuzeigen, was es am häufigsten sieht — nicht das, was am wichtigsten ist.',
-            'Dieselbe Analyse berichtet, dass ein abgestimmtes KI-Review-System, dessen Prompts das Modell gezielt anweisen, Logik und Sicherheit vor Stil zu priorisieren, eine Aktionsrate der Entwickler von 52% erreichte — im Einklang mit der Aktionsrate von 50% bei menschlich geführten Code-Reviews über mehr als 10.000 analysierte Kommentare.',
-            '**In einem Satz:** Das Signal-Rausch-Problem bedeutet, dass KI-Code-Review-Tools 64% Stilkommentare, aber nur 14% umsetzbare Sicherheits- und Logikbefunde erzeugen — es braucht eng gefasste Prompts, um dieses Verhältnis umzukehren und mehr als 50% Akzeptanz bei Entwicklern zu erreichen.',
+            'Branchenleitfäden berichten häufig, dass KI-Reviewer im Verhältnis zu Logik- und Sicherheitsbefunden viele Kommentare zu Stil, Duplikation und Testabdeckung erzeugen. Eine öffentliche Datenbasis, die dieses Verhältnis beziffert, konnten wir nicht verifizieren; messen Sie es daher selbst: Der Anteil der KI-Kommentare, die Ihre Entwickler umsetzen, ist die Zahl, auf die es ankommt. Tools, deren Kommentare meist ignoriert werden, bringen Ingenieure dazu, jedes Feedback zu ignorieren, auch kritische Befunde.',
+            'Eine wahrscheinliche Ursache sind die Trainingsdaten: Die Modelle sehen in den Codebasen, aus denen sie lernen, weit mehr Stilvarianten als Logikfehler und zeigen daher an, was häufig ist, nicht was am wichtigsten ist.',
+            'Prompt Engineering, das das Modell anweist, Logik und Sicherheit vor Stil zu priorisieren, ist der wichtigste Hebel, um die Mischung zu verschieben; passen Sie den Prompt an und messen Sie die Aktionsrate danach erneut.',
+            '**In einem Satz:** KI-Code-Review-Tools können überwiegend Stilkommentare erzeugen — eng gefasste Prompts und eine erfasste Aktionsrate halten Logik- und Sicherheitsbefunde sichtbar.',
           ],
           callouts: [
             { type: 'warning', label: 'Warnung', text: 'Teams, die KI-Code-Review ohne eng gefasste Prompts einführen, riskieren einen Einbruch der Akzeptanz bei Entwicklern. Ingenieure beginnen, ALLE Kommentare zu ignorieren — auch kritische Sicherheitsbefunde —, wenn die meisten Kommentare Rauschen sind. Konfigurieren Sie vor dem Rollout im Team immer explizite Review-Prioritäten.' },
@@ -1005,7 +1005,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            'Der strukturierte Prompt liefert einen Sicherheitsbericht, der sich direkt priorisieren lässt. Der offene Prompt liefert 12 Kommentare zu Variablennamen und einen vergrabenen Sicherheitsbefund, den der Entwickler nie liest.',
+            'Der strukturierte Prompt liefert einen Sicherheitsbericht, der sich direkt priorisieren lässt. Der offene Prompt kann zum Beispiel ein Dutzend Kommentare zu Variablennamen und einen vergrabenen Sicherheitsbefund, den der Entwickler nie liest.',
           ],
         },
 
@@ -1021,8 +1021,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: 'Wie führt man ein sicherheitsorientiertes KI-Code-Review durch?',
           content: [
-            'KI-gestützte SAST-Tools (Static Application Security Testing), die auf realen Schwachstellen-Datensätzen trainiert wurden, erreichen bei KI-generiertem Code Bug-Erkennungswerte von 84–92 von 100 — im Vergleich zu 65% Genauigkeit bei regelbasierten Methoden und 94% bei Transformer-basierten Modellen in Deep-Learning-Benchmarks von Drittanbietern (nicht von PromptQuorum gemessen).',
-            'Transformer-basierte Modelle — die Architektur hinter heutigen großen Sprachmodellen und spezialisierten Code-Sicherheits-Tools — erreichen in Benchmarks zur Bug-Klassifizierung 94% Genauigkeit bei sehr niedrigen Falsch-Positiv-Raten. Das ist ein messbarer Fortschritt gegenüber Ansätzen mit Convolutional Neural Networks (CNN) und Recurrent Neural Networks (RNN) mit 89%, statischer Analyse mit 72% und regelbasierten Methoden mit 65%.',
+            'KI-gestützte SAST-Tools (Static Application Security Testing), die auf realen Schwachstellen-Datensätzen trainiert wurden, erreichten bei KI-generiertem Code in einem Drittanbieter-Vergleich von 2025 Werte von 84–92 von 100 (nicht von PromptQuorum gemessen).',
+            'Regelbasierte statische Analyse wendet feste Muster an, während KI-gestützte Tools zusätzlich bewerten, wie Codepfade zusammenwirken. Beide ergänzen einander, weshalb viele Teams eine Regel-Engine als Merge-Gate und daneben einen KI-Reviewer oder Scanner einsetzen.',
             'Drei sicherheitsorientierte Tools, bewertet in einem Drittanbieter-Vergleich von 2025 an KI-generiertem Code (sanj.dev; nicht von PromptQuorum gemessen):',
           ],
           columns: ['Tool', 'Bewertung (Drittanbieter)', 'Falsch-Positive', 'Geeignet für'],
@@ -1046,12 +1046,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: 'Was ist KI-Bug-Triaging?',
           content: [
-            'KI-gestütztes Bug-Triaging erreicht 85–90% Genauigkeit bei der Schweregrad-Klassifizierung — gegenüber 60–70% bei manuellen Methoden — und verkürzt die Triage-Zeit um 65%, während es Falsch-Positive um bis zu 60% senkt.',
-            'KI-Bug-Triaging ist der nachgelagerte Schritt nach der Erkennung: Bugs nach Schweregrad klassifizieren, die Auswirkung auf die Produktion vorhersagen und Probleme an die richtige Ingenieurin oder den richtigen Ingenieur weiterleiten. Eine Studie von Khaleefulla et al. zeigte, dass KI-gestützte Triage-Systeme bei der Bug-Klassifizierung über 85% Genauigkeit und bei der Prioritätsvorhersage 82% Präzision erreichten — und die durchschnittliche Triage-Zeit um 65% verkürzten.',
-            'Die Zeit bis zur Behebung (Time-to-Resolution, TTR) verbessert sich gegenüber manuellen Methoden um 30–40%, wobei der Hauptgewinn aus schnellerer Klassifizierung und Weiterleitung stammt, nicht aus schnellerem Beheben. Eine Schweregrad-Klassifizierung mit 85–90% Genauigkeit bedeutet, dass Ingenieure deutlich weniger Zeit mit Prioritätsdiskussionen verbringen und mehr Zeit mit der Lösung der Probleme, auf die es ankommt.',
+            'KI-gestütztes Bug-Triaging klassifiziert Bugs nach Schweregrad, sagt die Auswirkung auf die Produktion vorher und leitet Probleme an die richtige Ingenieurin oder den richtigen Ingenieur weiter, sodass weniger Zeit für Prioritätsdiskussionen draufgeht.',
+            'KI-Bug-Triaging ist der nachgelagerte Schritt nach der Erkennung. In einer Arbeit von Khaleefulla, Sudeep und Savithri ([IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization)) berichten die Autoren bei ihrem System von über 85% Genauigkeit bei der Bug-Klassifizierung, 82% Präzision bei der Prioritätsvorhersage und einer um 65% verkürzten durchschnittlichen Triage-Zeit. Das sind die eigenen Ergebnisse der Autoren, nicht von PromptQuorum gemessen.',
+            'Der Gewinn stammt hauptsächlich aus schnellerer Klassifizierung und Weiterleitung, nicht aus schnellerem Beheben. Konventionen zum Schweregrad unterscheiden sich zwischen Projekten, sodass die für ein System berichtete Genauigkeit nicht auf Ihres übertragbar sein muss; testen Sie mit Ihrem eigenen Backlog in einem Pilot, bevor Sie sich darauf verlassen.',
           ],
           callouts: [
-            { type: 'info', label: 'Wussten Sie schon', text: 'KI-Bug-Triaging erreicht 85–90% Genauigkeit bei der Schweregrad-Klassifizierung gegenüber 60–70% bei manueller Triage. Die Zeitersparnis stammt nicht aus schnellerem Beheben, sondern aus schnellerer Klassifizierung und Weiterleitung. Ingenieure verbringen weniger Zeit mit Prioritätsdiskussionen und mehr Zeit mit der Lösung der Probleme, auf die es ankommt.' },
+            { type: 'info', label: 'Wussten Sie schon', text: 'Die Zeitersparnis beim KI-Triaging stammt nicht aus schnellerem Beheben, sondern aus schnellerer Klassifizierung und Weiterleitung. Ingenieure verbringen weniger Zeit mit Prioritätsdiskussionen und mehr Zeit mit der Lösung der Probleme, auf die es ankommt.' },
           ],
         },
 
@@ -1074,9 +1074,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: 'Wie wirken sich regionale Vorschriften auf KI-Code-Review aus?',
           content: [
-            'Europäische Unternehmen, die Quellcode an externe KI-APIs senden, benötigen vor dem Einsatz möglicherweise eine Datenschutz-Folgenabschätzung (DPIA) nach Artikel 35 DSGVO, insbesondere wenn der Code oder die Daten, die er berührt, die Verarbeitung personenbezogener Daten betreffen. DSGVO und EU-KI-Verordnung (EU AI Act) können beim KI-gestützten Code-Review gleichzeitig gelten, wenn personenbezogene Daten verarbeitet werden; binden Sie daher vor dem Rollout Ihre Datenschutzbeauftragte oder Ihren Datenschutzbeauftragten ein. Die Risiken sind real: Zu den DSGVO-Bußgeldern des Jahres 2024 zählte eine Strafe von 30,5 Millionen € gegen Clearview AI.',
-            'Für EU-Teams bietet CodeRabbit im Enterprise-Tarif eine selbst gehostete Bereitstellung an (500+ Sitzplätze laut Dokumentation), wobei der selbst gehostete Agent Prompts und Code weiterhin an den von Ihnen konfigurierten LLM-Anbieter sendet. Open-Weight-Modelle, darunter Modelle von Mistral AI (Frankreich), lassen sich für Teams, die keinerlei Cloud-Abfluss wünschen, lokal über Ollama betreiben.',
-            'Chinesische Entwicklungsteams nutzen Open-Weight-Modelle wie Qwen3 (Alibaba) und DeepSeek als lokal bereitstellbare Code-Review-Modelle, die beide chinesischsprachige Code-Kommentare und Dokumentation unterstützen — entscheidend für gemischtsprachige Codebasen, wie sie in chinesischen Unternehmen üblich sind. Japanische Unternehmen unter den Daten-Governance-Richtlinien des METI setzen Code-Review-Workflows auf Basis von LLaMA 4 Scout oder LLaMA 3.3 lokal über Ollama ein — LLaMA 4 Scout benötigt für die Inferenz ~55 GB VRAM, bei null externen API-Aufrufen.',
+            'Europäische Unternehmen, die Quellcode an externe KI-APIs senden, benötigen vor dem Einsatz möglicherweise eine Datenschutz-Folgenabschätzung (DPIA) nach Artikel 35 DSGVO, insbesondere wenn der Code oder die Daten, die er berührt, die Verarbeitung personenbezogener Daten betreffen. DSGVO und EU-KI-Verordnung (EU AI Act) können beim KI-gestützten Code-Review gleichzeitig gelten, wenn personenbezogene Daten verarbeitet werden; binden Sie daher vor dem Rollout Ihre Datenschutzbeauftragte oder Ihren Datenschutzbeauftragten ein. Dies ist eine allgemeine Information, keine Rechtsberatung; klären Sie die Anforderungen mit Ihrer Datenschutzbeauftragten, Ihrem Datenschutzbeauftragten oder Ihrer Rechtsberatung.',
+            'Für EU-Teams bietet CodeRabbit im Enterprise-Tarif eine selbst gehostete Bereitstellung an (500+ Sitzplätze laut Dokumentation), wobei der selbst gehostete Agent Prompts und Code weiterhin an den von Ihnen konfigurierten LLM-Anbieter sendet. Open-Weight-Modelle, darunter Modelle von Mistral AI (Frankreich), lassen sich für Teams, die Code aus Clouds von Drittanbietern heraushalten müssen, lokal über Ollama betreiben.',
+            'Teams in China können Open-Weight-Modelle wie Qwen3 (Alibaba) und DeepSeek als lokal bereitstellbare Code-Review-Modelle nutzen; beide unterstützen chinesischsprachige Code-Kommentare und Dokumentation, was für gemischtsprachige Codebasen wichtig ist. Teams in Japan, die unter den Daten-Governance-Richtlinien des METI arbeiten, können Review-Workflows auf Basis von Llama 4 Scout oder Llama 3.3 lokal über Ollama betreiben — Llama 4 Scout benötigt für die Inferenz etwa 55 GB VRAM —, sodass Code keine externen APIs erreicht.',
           ],
         },
 
@@ -1112,12 +1112,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: 'KI-Review mit Standardeinstellungen und ohne angepasste Prompts einführen.',
-              problem: 'Standard-KI-Review kann überwiegend Stilkommentare erzeugen (64% in einer veröffentlichten Branchenanalyse). Entwickler beginnen, alle Kommentare zu ignorieren. Kritische Sicherheitsbefunde gehen unter.',
+              problem: 'Standard-KI-Review kann überwiegend Stilkommentare erzeugen. Entwickler beginnen, alle Kommentare zu ignorieren. Kritische Sicherheitsbefunde gehen unter.',
               fix: 'Nutzen Sie das 5-teilige Prompt-Framework. Schließen Sie Stil und Benennung ausdrücklich aus. Beschränken Sie den Umfang auf Logik, Sicherheit und Performance.',
             },
             {
               mistake: 'KI-Code-Review als einzige Review-Ebene verwenden.',
-              problem: 'KI-Reviewer fanden im einen dokumentierten öffentlichen Test 44–82% der eingebauten Bugs — nicht 100%. Kontextspezifische Probleme (Skalierungsfolgen, Team-Konventionen, Fehler in der Geschäftslogik) erfordern menschliches Urteilsvermögen.',
+              problem: 'KI-Reviewer fanden in Greptiles Benchmark vom Juli 2025 44–82% der eingebauten Bugs — nicht 100%. Kontextspezifische Probleme (Skalierungsfolgen, Team-Konventionen, Fehler in der Geschäftslogik) erfordern menschliches Urteilsvermögen.',
               fix: 'KI ist der Filter für die erste Prüfung. Menschliche Reviewer konzentrieren sich auf Architektur, Geschäftslogik und die Bugs, die der KI entgehen.',
             },
             {
@@ -1139,11 +1139,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'Welches ist das genaueste KI-Code-Review-Tool im Jahr 2026?',
-              a: 'Kein Tool ist in jedem Test das genaueste. Im einzigen öffentlichen Direktvergleich mit dokumentierter Methode — von Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt — fand Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44% (Standardeinstellungen, gehostete Tarife). Da Greptile eines der getesteten Tools verkauft und andere veröffentlichte Benchmarks die Tools anders reihen, nutzen Sie die Zahlen als Ausgangspunkt und führen Sie eine zweiwöchige Testphase mit Ihren eigenen Pull Requests durch. Für Sicherheits-Scans ist Snyk Code eine eigene Kategorie: ein Scanner, der einen Pull-Request-Reviewer ergänzt.',
+              a: 'Kein Tool ist in jedem Test das genaueste. In einem Benchmark, den Greptile im Juli 2025 mit 50 Bugs aus fünf Open-Source-Repositories durchgeführt hat, fand Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54% und CodeRabbit 44% (Standardeinstellungen, gehostete Tarife). Da Greptile eines der getesteten Tools verkauft und unabhängige Ergebnisse abweichen können, nutzen Sie die Zahlen als Ausgangspunkt und führen Sie eine zweiwöchige Testphase mit Ihren eigenen Pull Requests durch. Für Sicherheits-Scans ist Snyk Code eine eigene Kategorie: ein Scanner, der einen Pull-Request-Reviewer ergänzt.',
             },
             {
               q: 'CodeRabbit vs Greptile: Was sollte ich wählen?',
-              a: 'Wählen Sie Greptile, wenn das Finden tief liegender Bugs am wichtigsten ist und Sie pro Review budgetieren können: Es fand 82% gegenüber 44% bei CodeRabbit in Greptiles eigenem Test vom Juli 2025, und Pro hat keine Sitzplatzgebühren (vorausbezahlte Credits zu je $1; ein Base-Review verbraucht 1 Credit). Wählen Sie CodeRabbit, wenn Sie einen Preis pro Sitzplatz ($24 pro Nutzer und Monat bei Essentials mit jährlicher Abrechnung, $30 monatlich) und kostenlose Reviews für öffentliche Repositories wünschen. Beide bieten eine 14-tägige Testphase und reservieren Self-Hosting für Enterprise. Ob sich CodeRabbit lohnt, hängt vom Volumen ab: Ein pauschaler Sitzplatzpreis lässt sich bei Teams mit vielen Pull Requests leichter kalkulieren, während Teams mit geringem Volumen pro Review womöglich weniger zahlen.',
+              a: 'Wählen Sie Greptile, wenn die höchste Erkennungsrate bei eingebauten Bugs am wichtigsten ist und Sie pro Review budgetieren können: Es fand 82% gegenüber 44% bei CodeRabbit in Greptiles eigenem Test vom Juli 2025, und Pro hat keine Sitzplatzgebühren (vorausbezahlte Credits zu je $1; ein Base-Review verbraucht 1 Credit). Wählen Sie CodeRabbit, wenn Sie einen Preis pro Sitzplatz ($24 pro Nutzer und Monat bei Essentials mit jährlicher Abrechnung, $30 monatlich) und kostenlose Reviews für öffentliche Repositories wünschen. Beide bieten eine 14-tägige Testphase und reservieren Self-Hosting für Enterprise. Ob sich CodeRabbit lohnt, hängt vom Volumen ab: Ein pauschaler Sitzplatzpreis lässt sich bei Teams mit vielen Pull Requests leichter kalkulieren, während Teams mit geringem Volumen pro Review womöglich weniger zahlen.',
             },
             {
               q: 'Sind CodeRabbit und Greptile kostenlos?',
@@ -1167,14 +1167,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wie stark verkürzt KI-Code-Review die Review-Zeit?',
-              a: 'Ein Branchenleitfaden eines Dritten (DigitalApplied, 2025) berichtet von 40% weniger Review-Zeit und 62% weniger Produktionsfehlern; PromptQuorum hat dies nicht gemessen. Studien zum KI-Bug-Triaging berichten von 65% kürzerer Triage-Zeit und 30–40% schnellerer Time-to-Resolution gegenüber manuellen Methoden. Teams, die KI-Review-Prompts auf Logik und Sicherheit (nicht auf Stil) eingrenzen, berichten von Aktionsraten der Entwickler von etwa 52%, im Einklang mit menschlichen Reviewern.',
+              a: 'Ein Branchenleitfaden eines Dritten (DigitalApplied, 2025) berichtet von 40% weniger Review-Zeit und 62% weniger Produktionsfehlern; PromptQuorum hat dies nicht gemessen. In der Arbeit von Khaleefulla et al. (IJERT) berichten die Autoren von einer um 65% verkürzten durchschnittlichen Triage-Zeit bei ihrem KI-Triage-System. Unabhängig vom Tool: Messen Sie vor und nach der Anpassung des Prompt-Umfangs den Anteil der KI-Kommentare, die Ihre Entwickler umsetzen.',
             },
             {
               q: 'Wie schneidet KI-Code-Review im Vergleich zu klassischer statischer Analyse (SAST) ab?',
-              a: 'Schätzungen Dritter beziffern klassisches regelbasiertes SAST bei bedeutsamen Laufzeitfehlern auf unter 20%, mit hohen Falsch-Positiv-Raten. KI-gestütztes SAST erreichte in einem Drittanbieter-Vergleich von 2025 bei KI-generiertem Code 84–92/100, und Transformer-basierte Modelle erreichen in Benchmarks zur Bug-Klassifizierung 94% Genauigkeit gegenüber 65% bei regelbasierten Methoden (nichts davon von PromptQuorum gemessen). Der wesentliche Vorteil der KI ist das kontextbezogene Schließen — sie bewertet, wie Codepfade zusammenwirken, statt feste Schwachstellensignaturen abzugleichen.',
+              a: 'Regelbasiertes SAST wendet feste Schwachstellensignaturen an und neigt zu vielen Falsch-Positiven, während KI-gestützte Tools kontextbezogenes Schließen ergänzen: Sie bewerten, wie Codepfade zusammenwirken, statt Signaturen abzugleichen. In einem Drittanbieter-Vergleich von 2025 erreichten Snyk Code, Semgrep Enterprise und CodeQL bei KI-generiertem Code 84–92/100 (nicht von PromptQuorum gemessen). Die beiden Ansätze ergänzen einander.',
             },
             {
-              q: 'Ist KI-Code-Review für europäische Teams DSGVO-konform?',
+              q: 'Ist KI-Code-Review für europäische Teams mit der DSGVO vereinbar?',
               a: 'Nicht automatisch. Das Senden von Quellcode, der die Verarbeitung personenbezogener Daten berührt, an externe KI-APIs kann eine Datenschutz-Folgenabschätzung (DPIA) nach Artikel 35 DSGVO erfordern; fragen Sie Ihre Datenschutzbeauftragte oder Ihren Datenschutzbeauftragten. DSGVO und EU-KI-Verordnung (EU AI Act) können gleichzeitig gelten. Bei strengen Anforderungen nutzen Sie Self-Hosting (CodeRabbit Enterprise, Kunden mit 500+ Sitzplätzen angeboten, sendet Code weiterhin an den von Ihnen konfigurierten LLM-Anbieter) oder betreiben Open-Weight-Modelle lokal über Ollama, sodass kein Code Ihre Infrastruktur verlässt.',
             },
             {
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Welcher Anteil der KI-Code-Review-Kommentare ist tatsächlich nützlich?',
-              a: 'Eine veröffentlichte Branchenanalyse von 1.247 KI-Review-Kommentaren in 340 PRs (nicht von PromptQuorum gemessen) ergab, dass nur 14% Logikfehler und Sicherheitsprobleme betrafen — die Probleme, die Produktionsvorfälle verursachen —, während 64% Stil, Duplikation und Testabdeckung betrafen. Bei Tools mit weniger als 60% umsetzbarem Feedback bricht die Akzeptanz bei Entwicklern ein, weil Ingenieure beginnen, alle Kommentare zu ignorieren. Eng gefasste Prompts, die Stilkommentare ausdrücklich ausschließen, sind der wichtigste Hebel, um den Anteil umsetzbarer Kommentare zu erhöhen.',
+              a: 'Eine belastbare öffentliche Zahl konnten wir nicht bestätigen, und der Anteil variiert je nach Tool, Prompt und Codebase; messen Sie ihn daher selbst: Zählen Sie einen Monat lang den Anteil der KI-Kommentare, die Ihre Entwickler umsetzen. Wenn die meisten Kommentare ignoriert werden, grenzen Sie den Umfang enger ein — schließen Sie Stilkommentare ausdrücklich aus und fordern Sie nur Befunde zu Logik, Sicherheit und Performance an — und messen Sie erneut.',
             },
             {
               q: 'Welches KI-Modell ist für Code-Review am besten?',
@@ -1199,11 +1199,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Kann KI-Code-Review Sicherheitslücken besser erkennen als spezialisierte SAST-Tools?',
-              a: 'In Vergleichen von Drittanbietern erzielten KI-gestützte SAST-Tools (Snyk Code, Semgrep Enterprise, CodeQL) bei KI-generiertem Code 84–92/100, verglichen mit 65% Genauigkeit bei regelbasierter statischer Analyse. Klassisches SAST ist bei der Massenprüfung großer Codebasen weiterhin schneller, weil KI pro PR mehr Rechenleistung benötigt. Bewährte Praxis: Nutzen Sie leichtgewichtiges SAST und Linting für die Geschwindigkeit und ergänzen Sie es um KI-Review für die tiefe Sicherheitsanalyse bei risikoreichen Änderungen (Authentifizierung, Zahlungen, Infrastruktur).',
+              a: 'In Vergleichen von Drittanbietern erzielten KI-gestützte SAST-Tools (Snyk Code, Semgrep Enterprise, CodeQL) bei KI-generiertem Code 84–92/100 in einem Drittanbieter-Vergleich von 2025 (nicht von PromptQuorum gemessen), und regelbasierte statische Analyse bleibt als schnelles Merge-Gate nützlich. Klassisches SAST ist bei der Massenprüfung großer Codebasen weiterhin schneller, weil KI pro PR mehr Rechenleistung benötigt. Bewährte Praxis: Nutzen Sie leichtgewichtiges SAST und Linting für die Geschwindigkeit und ergänzen Sie es um KI-Review für die tiefe Sicherheitsanalyse bei risikoreichen Änderungen (Authentifizierung, Zahlungen, Infrastruktur).',
             },
             {
               q: 'Kann ich KI-Code-Review lokal für vollständig privaten Code betreiben?',
-              a: 'Ja. Devstral Small 24B (Mistral AI, 16 GB RAM) und Llama 4 Scout (~55 GB VRAM, 10M Kontext) laufen über Ollama vollständig On-Premises. Es wird kein Code an externe APIs übertragen, wodurch der Verarbeitungsschritt durch Dritte entfällt, den eine DPIA sonst abdecken müsste. Die Qualität liegt bei komplexer Sicherheitsanalyse unter der von Cloud-Frontier-Modellen, genügt aber für die meisten Reviews auf PR-Ebene.',
+              a: 'Ja. Devstral Small 24B (Mistral AI, 16 GB RAM) und Llama 4 Scout (~55 GB VRAM, 10M Kontext) laufen über Ollama vollständig On-Premises. Die Inferenz läuft auf Ihrer Hardware, sodass Code nicht an einen Cloud-Reviewer gesendet wird; das kann den Verarbeitungsschritt durch Dritte entfallen lassen, den eine DPIA sonst abdecken müsste, doch klären Sie das Verhalten beim Modell-Download und bei Updates mit Ihrem Security-Team. Die Qualität liegt bei komplexer Sicherheitsanalyse unter der von Cloud-Frontier-Modellen, genügt aber für die meisten Reviews auf PR-Ebene.',
             },
             {
               q: 'Welches ist das beste KI-Code-Review-Tool für kleine Teams (unter 10 Entwickler)?',
@@ -1227,6 +1227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[GitHub Docs: Copilot code review](https://docs.github.com/en/copilot/concepts/agents/code-review) — Tarife mit Code-Review und Abrechnung in KI-Credits',
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — technischer Leitfaden zu eng gefassten Prompts, um Falsch-Positive zu verringern und das Signal zu verbessern',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — Drittanbieter-Benchmark von drei SAST-Tools an KI-generiertem Code (Quelle der Werte 92 / 87 / 84)',
+            '[Khaleefulla, Sudeep und Savithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) — eigene Ergebnisse der Autoren: über 85% Klassifizierungsgenauigkeit, 82% Präzision bei der Priorität, 65% kürzere Triage-Zeit',
             '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — Branchenzahlen: 40% Zeitersparnis, 62% weniger Produktionsfehler',
             '**Hinweis:** Die Erkennungsraten stammen von den Herstellern und wurden nicht von PromptQuorum gemessen; die Preise sind Listenpreise von den oben genannten Herstellerseiten. KI-Code-Review ist ein sich schnell entwickelnder Markt — prüfen Sie aktuelle Preise und Plattformunterstützung vor dem Kauf auf den Websites der Hersteller.',
           ],
@@ -1239,7 +1240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-es.webp',
       title: 'Revisión de Código con IA 2026: Ranking de Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
-      intro: 'Las herramientas de revisión de código con IA detectaron entre el 44 y el 82 % de los bugs sembrados en la única prueba comparativa pública con método documentado — un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs de cinco repositorios de código abierto — frente a menos del 20 % del análisis estático basado en reglas según estimaciones de terceros. Toma las cifras de los proveedores como orientativas: otros benchmarks publicados clasifican las mismas herramientas de forma distinta. El reto práctico es la relación señal/ruido: un análisis del sector publicado encontró que el 64 % de los comentarios de revisión de IA abordan el estilo y no bugs de lógica. Los prompts acotados que priorizan la seguridad y la lógica sobre el formato son la palanca principal.',
+      intro: 'Las herramientas de revisión de código con IA detectaron entre el 44 y el 82 % de los bugs sembrados en un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs de cinco repositorios de código abierto. Toma las cifras de los proveedores como orientativas: Greptile vende una de las herramientas evaluadas y los resultados independientes pueden diferir. El reto práctico es la relación señal/ruido: los revisores de IA pueden enterrar los hallazgos de lógica y seguridad bajo comentarios de estilo, lo que enseña a los desarrolladores a ignorarlos. Los prompts acotados que priorizan la seguridad y la lógica sobre el formato son la palanca principal.',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -1298,11 +1299,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'Herramientas de revisión de código con IA', description: 'Herramientas de software automatizadas que analizan PRs e identifican bugs, vulnerabilidades de seguridad y problemas de estilo' },
-          { '@type': 'Thing', name: 'Problema señal/ruido', description: 'El desafío de que la mayoría de los comentarios de revisión de IA abordan problemas de estilo en lugar de bugs de lógica, según un análisis del sector publicado' },
+          { '@type': 'Thing', name: 'Problema señal/ruido', description: 'El desafío de que los comentarios de revisión de IA pueden estar dominados por problemas de estilo en lugar de bugs de lógica' },
           { '@type': 'Thing', name: 'Prompt engineering para revisión de código', description: 'Técnicas para estructurar instrucciones de IA que prioricen hallazgos de lógica y seguridad sobre comentarios de estilo' },
           { '@type': 'Thing', name: 'Prompting Chain-of-Thought', description: 'El método de pedir a los modelos de IA que tracen rutas de ejecución paso a paso antes de identificar bugs' },
           { '@type': 'Thing', name: 'Automatización de revisión de código', description: 'Integración de herramientas de revisión de código con IA en pipelines CI/CD y flujos de trabajo de pull requests' },
-          { '@type': 'Thing', name: 'Revisión de código con IA conforme al RGPD', description: 'Enfoques para usar revisión de código con IA cumpliendo los requisitos europeos de protección de datos' },
+          { '@type': 'Thing', name: 'Protección de datos en la revisión de código con IA', description: 'Consideraciones para usar revisión de código con IA bajo los requisitos europeos de protección de datos' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -1323,11 +1324,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**Mayor detección en la única prueba pública documentada:** Greptile con el 82 % (ejecutada por el proveedor, julio de 2025, 50 bugs sembrados) — Cursor Bugbot 58 %, GitHub Copilot 54 %, CodeRabbit 44 %',
+        '**Mayor detección en la prueba ejecutada por Greptile:** Greptile con el 82 % (ejecutada por el proveedor, julio de 2025, 50 bugs sembrados) — Cursor Bugbot 58 %, GitHub Copilot 54 %, CodeRabbit 44 %',
         '**Los modelos de precios difieren:** CodeRabbit $24 por usuario al mes (anual, Essentials); Greptile Pro $1 por crédito de revisión; Snyk Code Team $25 al mes para hasta 10 desarrolladores',
         '**Opciones gratuitas:** CodeRabbit en repositorios públicos; Greptile Starter para un desarrollador; Snyk Code Free (100 tests al mes)',
         '**Autohospedaje:** solo en planes Enterprise de CodeRabbit (500+ puestos según su documentación), Greptile y Qodo',
-        '**El problema de señal:** un análisis del sector publicado encontró que el 64 % de los comentarios de revisión de IA son ruido de estilo y el 14 % detecta bugs de lógica o seguridad',
+        '**El problema de señal:** los revisores de IA pueden enterrar los hallazgos de lógica y seguridad bajo comentarios de estilo — mide la proporción de comentarios sobre los que actúan tus desarrolladores',
         '**La solución:** los prompts acotados (framework de 5 partes) desplazan los comentarios hacia lógica y seguridad',
       ],
       faqSchema: {
@@ -1338,12 +1339,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '¿Cuál es la herramienta de revisión de código con IA más precisa en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ninguna herramienta es la más precisa en todas las pruebas. En el único benchmark comparativo público con método documentado — ejecutado por Greptile en julio de 2025 sobre 50 bugs de cinco repositorios de código abierto — Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 % (configuración por defecto, planes alojados). Como Greptile vende una de las herramientas evaluadas y otros benchmarks publicados clasifican las herramientas de otra forma, usa las cifras como punto de partida y haz una prueba de dos semanas con tus propios pull requests. Para el escaneo de seguridad, Snyk Code es una categoría aparte: un escáner que complementa a un revisor de pull requests.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ninguna herramienta es la más precisa en todas las pruebas. En un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs de cinco repositorios de código abierto, Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 % (configuración por defecto, planes alojados). Como Greptile vende una de las herramientas evaluadas y los resultados independientes pueden diferir, usa las cifras como punto de partida y haz una prueba de dos semanas con tus propios pull requests. Para el escaneo de seguridad, Snyk Code es una categoría aparte: un escáner que complementa a un revisor de pull requests.' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit vs Greptile: ¿cuál debería elegir?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Elige Greptile si lo que más importa es detectar bugs profundos y puedes presupuestar por revisión: detectó el 82 % frente al 44 % de CodeRabbit en la propia prueba de Greptile de julio de 2025, y Pro no cobra por puesto (créditos prepagados a $1 cada uno; una revisión Base usa 1 crédito). Elige CodeRabbit si prefieres precios por puesto ($24 por usuario al mes en Essentials con facturación anual, $30 mensual) y revisiones gratuitas en repositorios públicos. Ambos ofrecen una prueba de 14 días y reservan el autohospedaje para Enterprise. Si CodeRabbit merece la pena depende del volumen: un precio fijo por puesto es más fácil de prever para equipos que abren muchos pull requests, mientras que los equipos de bajo volumen pueden pagar menos por revisión.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Elige Greptile si lo que más importa es la mayor tasa de detección de bugs sembrados y puedes presupuestar por revisión: detectó el 82 % frente al 44 % de CodeRabbit en la propia prueba de Greptile de julio de 2025, y Pro no cobra por puesto (créditos prepagados a $1 cada uno; una revisión Base usa 1 crédito). Elige CodeRabbit si prefieres precios por puesto ($24 por usuario al mes en Essentials con facturación anual, $30 mensual) y revisiones gratuitas en repositorios públicos. Ambos ofrecen una prueba de 14 días y reservan el autohospedaje para Enterprise. Si CodeRabbit merece la pena depende del volumen: un precio fijo por puesto es más fácil de prever para equipos que abren muchos pull requests, mientras que los equipos de bajo volumen pueden pagar menos por revisión.' },
           },
           {
             '@type': 'Question',
@@ -1373,12 +1374,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '¿Cuánto reduce la revisión de código con IA el tiempo de revisión?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Una guía del sector de terceros (DigitalApplied, 2025) informa de un 40 % menos de tiempo de revisión y un 62 % menos de bugs en producción; PromptQuorum no ha medido estas cifras. Los estudios sobre triaje de bugs con IA informan de un 65 % menos de tiempo de triaje y un tiempo de resolución entre un 30 y un 40 % más rápido que con métodos manuales. Los equipos que acotan los prompts de revisión de IA a lógica y seguridad (no estilo) informan de tasas de acción del desarrollador de alrededor del 52 %, en línea con los revisores humanos.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Una guía del sector de terceros (DigitalApplied, 2025) informa de un 40 % menos de tiempo de revisión y un 62 % menos de bugs en producción; PromptQuorum no ha medido estas cifras. En el artículo de Khaleefulla et al. (IJERT), los autores informan de una reducción del 65 % en el tiempo promedio de triaje de su sistema de triaje con IA. Sea cual sea la herramienta, mide la proporción de comentarios de IA sobre los que actúan tus desarrolladores antes y después de ajustar el alcance del prompt.' },
           },
           {
             '@type': 'Question',
             name: '¿Cómo se compara la revisión de código con IA con el análisis estático tradicional (SAST)?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Las estimaciones de terceros sitúan el SAST tradicional basado en reglas por debajo del 20 % en bugs de ejecución significativos, con tasas elevadas de falsos positivos. El SAST impulsado por IA obtuvo 84–92/100 en código generado por IA en una comparativa de terceros de 2025, y los modelos basados en transformadores alcanzan un 94 % de precisión en benchmarks de clasificación de bugs frente al 65 % de los métodos basados en reglas (ninguna cifra medida por PromptQuorum). La ventaja clave de la IA es el razonamiento contextual: evalúa cómo interactúan las rutas de código en lugar de comparar con firmas fijas de vulnerabilidades.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'El SAST basado en reglas aplica firmas fijas de vulnerabilidades y tiende a producir muchos falsos positivos, mientras que las herramientas impulsadas por IA añaden razonamiento contextual: evalúan cómo interactúan las rutas de código en lugar de comparar con firmas. En una comparativa de terceros de 2025, Snyk Code, Semgrep Enterprise y CodeQL obtuvieron 84–92/100 en código generado por IA (no medido por PromptQuorum). Ambos enfoques son complementarios.' },
           },
           {
             '@type': 'Question',
@@ -1392,8 +1393,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: '¿Qué porcentaje de los comentarios de revisión de código con IA son realmente útiles?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Un análisis del sector publicado, sobre 1,247 comentarios de revisión de IA en 340 PRs (no medido por PromptQuorum), encontró que solo el 14 % abordaba bugs de lógica y problemas de seguridad — los problemas que causan incidentes en producción — mientras que el 64 % abordaba estilo, duplicación y cobertura de tests. Las herramientas con menos del 60 % de comentarios accionables ven colapsar la adopción por parte de los desarrolladores, porque los ingenieros empiezan a ignorar todos los comentarios. Los prompts acotados que excluyen explícitamente los comentarios de estilo son la palanca principal para aumentar la proporción de comentarios accionables.' },
+            name: '¿Qué proporción de los comentarios de revisión de código con IA son realmente útiles?',
+            acceptedAnswer: { '@type': 'Answer', text: 'No pudimos confirmar una cifra pública verificada, y la proporción varía según la herramienta, el prompt y la base de código, así que mídela: cuenta la proporción de comentarios de IA sobre los que actúan tus desarrolladores durante un mes. Si la mayoría de los comentarios se ignoran, ajusta el alcance — excluye explícitamente los comentarios de estilo y pide solo hallazgos de lógica, seguridad y rendimiento — y vuelve a medir.' },
           },
           {
             '@type': 'Question',
@@ -1413,12 +1414,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '¿Puede la revisión de código con IA detectar vulnerabilidades de seguridad mejor que las herramientas SAST dedicadas?',
-            acceptedAnswer: { '@type': 'Answer', text: 'En comparativas de terceros, las herramientas SAST impulsadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtuvieron 84–92/100 en código generado por IA, frente al 65 % de precisión del análisis estático basado en reglas. El SAST tradicional sigue siendo más rápido para comprobaciones de alto volumen en bases de código grandes, porque la IA requiere más cómputo por PR. Mejor práctica: usa SAST ligero y linting para velocidad, y complementa con revisión de IA para análisis de seguridad profundo en cambios de alto riesgo (autenticación, pagos, infraestructura).' },
+            acceptedAnswer: { '@type': 'Answer', text: 'En comparativas de terceros, las herramientas SAST impulsadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtuvieron 84–92/100 en código generado por IA en una comparativa de terceros de 2025 (no medido por PromptQuorum), y el análisis estático basado en reglas sigue siendo útil como puerta de fusión rápida. El SAST tradicional sigue siendo más rápido para comprobaciones de alto volumen en bases de código grandes, porque la IA requiere más cómputo por PR. Mejor práctica: usa SAST ligero y linting para velocidad, y complementa con revisión de IA para análisis de seguridad profundo en cambios de alto riesgo (autenticación, pagos, infraestructura).' },
           },
           {
             '@type': 'Question',
             name: '¿Puedo ejecutar la revisión de código con IA en local para código totalmente privado?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Devstral Small 24B (Mistral AI, 16 GB de RAM) y Llama 4 Scout (~55 GB de VRAM, contexto de 10M) se ejecutan totalmente on-premise mediante Ollama. No se transmite código a APIs externas, lo que elimina el paso de tratamiento por terceros que una EIPD tendría que cubrir. La calidad es inferior a la de los modelos frontier en la nube en análisis de seguridad complejos, pero suficiente para la mayoría de las revisiones a nivel de PR.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Devstral Small 24B (Mistral AI, 16 GB de RAM) y Llama 4 Scout (~55 GB de VRAM, contexto de 10M) se ejecutan totalmente on-premise mediante Ollama. La inferencia se ejecuta en tu hardware, así que el código no se envía a un revisor en la nube; esto puede eliminar el paso de tratamiento por terceros que una EIPD tendría que cubrir, pero comprueba con tu equipo de seguridad el comportamiento de descarga y actualización de modelos. La calidad es inferior a la de los modelos frontier en la nube en análisis de seguridad complejos, pero suficiente para la mayoría de las revisiones a nivel de PR.' },
           },
           {
             '@type': 'Question',
@@ -1447,11 +1448,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Puntos clave',
           isTldr: true,
           items: [
-            'En la única prueba comparativa pública con método documentado (ejecutada por Greptile, julio de 2025, 50 bugs sembrados), los revisores de IA detectaron entre el 44 y el 82 %: Greptile 82 %, Cursor Bugbot 58 %, GitHub Copilot 54 %, CodeRabbit 44 % — ejecutada por el proveedor, por lo que solo es orientativa',
+            'En un benchmark de julio de 2025 ejecutado por Greptile (50 bugs sembrados), los revisores de IA detectaron entre el 44 y el 82 %: Greptile 82 %, Cursor Bugbot 58 %, GitHub Copilot 54 %, CodeRabbit 44 % — ejecutada por el proveedor, por lo que solo es orientativa',
             'Los modelos de precios difieren: CodeRabbit cobra por puesto ($24–$72 por usuario al mes con facturación anual), Greptile Pro cobra por crédito de revisión ($1 cada uno, sin tarifas por puesto), Snyk Code Team cuesta $25 fijos al mes para hasta 10 desarrolladores',
             'CodeRabbit revisa repositorios públicos gratis y Greptile Starter es gratuito para un desarrollador; Qodo tiene una prueba de 14 días pero ningún plan gratuito permanente',
             'El autohospedaje es una función de los planes Enterprise en CodeRabbit (ofrecido a clientes con 500+ puestos según su documentación), Greptile y Qodo; CodeRabbit autohospedado sigue enviando código al proveedor de LLM que configures',
-            'Un análisis del sector publicado encontró que el 64 % de los comentarios de revisión de IA abordan estilo y duplicación y solo el 14 % aborda bugs de lógica y seguridad — se necesitan prompts acotados para invertir esta proporción',
+            'Los revisores de IA pueden enterrar los hallazgos de lógica y seguridad bajo comentarios de estilo; ningún conjunto de datos público que hayamos podido verificar cuantifica la proporción, así que mide la proporción de comentarios sobre los que actúan los desarrolladores y usa prompts acotados para aumentarla',
             'Snyk Code es un escáner de seguridad (92/100 en una comparativa de terceros de 2025 de tres herramientas de seguridad), no un revisor general de pull requests — úsalo junto a un revisor de IA',
             'El RGPD puede exigir una Evaluación de Impacto de Protección de Datos (Artículo 35) antes de que una revisión de código con IA en la nube procese código fuente que afecta a datos personales — consúltalo con tu delegado de protección de datos',
             'Los modelos frontier en la nube ofrecen ventanas de contexto de alrededor de 1M de tokens (aproximadamente 75,000–100,000 líneas de código, una estimación); el modelo de pesos abiertos Llama 4 Scout admite 10M de tokens en local',
@@ -1475,7 +1476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'Herramientas de revisión de código con IA: cuál usar',
           content: [
-            'En la única prueba comparativa pública con método documentado, Greptile detectó el 82 % de 50 bugs sembrados, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 % (benchmark ejecutado por Greptile, julio de 2025, configuración por defecto, planes alojados). Greptile vende una de las herramientas evaluadas y otros benchmarks publicados clasifican las mismas herramientas en otro orden, así que lee las cifras como orientativas, no como un veredicto.',
+            'En un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs sembrados, Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 % (configuración por defecto, planes alojados). Greptile vende una de las herramientas evaluadas y los resultados independientes pueden diferir, así que lee las cifras como orientativas, no como un veredicto.',
             'CodeRabbit ofrece revisiones gratuitas en repositorios públicos; los repositorios privados requieren Essentials ($24 por usuario al mes con facturación anual, $30 mensual), Team ($48 anual, $60 mensual) o Advanced ($72), y Enterprise bajo presupuesto. El autohospedaje es solo Enterprise, y la documentación de autohospedaje indica que se ofrece a clientes con 500+ puestos.',
             'Greptile Starter es gratuito para un desarrollador activo (50 créditos al mes). Pro no cobra por puesto: los créditos cuestan $1 cada uno, y una revisión Base usa 1 crédito, una Plus 3 y una Apex 10. Qodo Pro Team indica $30 con créditos agrupados para hasta 30 usuarios y no tiene plan gratuito permanente. GitHub Copilot code review está disponible con carácter general en Copilot Pro, Pro+, Max, Business y Enterprise (no en Copilot Free) y consume créditos de IA — GitHub documenta promedios de unos $0.25 (Lite), $1.50 (Balanced) y $10 (Max) por revisión.',
           ],
@@ -1487,11 +1488,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Herramienta': '[CodeRabbit](https://www.coderabbit.ai)', 'Detección (prueba del proveedor)': '44 %', 'Plataformas Git': 'GitHub, GitLab', 'Autohospedaje': 'Enterprise (500+ puestos)', 'Precio de lista': '$24 por usuario al mes (anual)' },
             { 'Herramienta': '[Qodo](https://www.qodo.ai)', 'Detección (prueba del proveedor)': 'No evaluado', 'Plataformas Git': 'GitHub, GitLab, Bitbucket, Azure', 'Autohospedaje': 'Enterprise (on-prem)', 'Precio de lista': 'Pro Team desde $30 (agrupado)' },
             { 'Herramienta': '[Snyk Code](https://snyk.io)', 'Detección (prueba del proveedor)': 'No evaluado', 'Plataformas Git': 'Mediante integraciones SCM', 'Autohospedaje': 'No indicado', 'Precio de lista': 'Gratis; Team desde $25 (10 devs)' },
-            { 'Herramienta': 'SAST tradicional', 'Detección (prueba del proveedor)': 'Menos del 20 %*', 'Plataformas Git': 'Variable', 'Autohospedaje': 'Variable', 'Precio de lista': 'Variable' },
+            { 'Herramienta': 'SAST tradicional', 'Detección (prueba del proveedor)': 'No evaluado', 'Plataformas Git': 'Variable', 'Autohospedaje': 'Variable', 'Precio de lista': 'Variable' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Procedencia', text: '*Estimación de terceros, no medida por PromptQuorum. Tasas de detección: benchmark ejecutado por Greptile, julio de 2025. Precios de lista tomados de las páginas de precios de los proveedores; los planes cambian con frecuencia, así que confírmalos antes de comprar.' },
+            { type: 'info', label: 'Procedencia', text: 'Tasas de detección: benchmark ejecutado por Greptile, julio de 2025, no medido por PromptQuorum. Precios de lista tomados de las páginas de precios de los proveedores; los planes cambian con frecuencia, así que confírmalos antes de comprar.' },
           ],
           image: '/images/code-review-tool-comparison-es.svg',
           imageCaption: 'Comparativa de funciones de PromptQuorum, GitHub Copilot, ChatGPT y Cursor: PromptQuorum envía un prompt a varios modelos a la vez, de modo que una sola revisión puede contrastarse entre modelos.',
@@ -1562,10 +1563,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '¿Por qué la relación señal/ruido es un problema en la revisión de código con IA?',
           content: [
             'Las herramientas de revisión de código con IA comentan problemas de estilo con mucha más fiabilidad de la que detectan bugs críticos de ejecución (44–82 % en la prueba ejecutada por proveedores descrita arriba) — creando un problema de volumen de comentarios que puede provocar el colapso de la adopción por parte de los desarrolladores.',
-            'Un análisis del sector publicado, sobre 1,247 comentarios de revisión de IA en 340 pull requests (no medido por PromptQuorum), encontró: ~64 % de todos los comentarios de revisión de IA abordaban estilo, duplicación y cobertura de tests. Solo ~14 % de los comentarios abordaban bugs de lógica y problemas de seguridad — los problemas que causan incidentes en producción. Las herramientas con menos del 60 % de comentarios accionables ven colapsar la adopción por parte de los desarrolladores, ya que los ingenieros comienzan a ignorar todos los comentarios, incluidos los hallazgos críticos.',
-            'La causa raíz son los datos de entrenamiento: los modelos de IA se entrenan en bases de código donde las infracciones de estilo superan ampliamente a los errores de lógica. El modelo aprende a mostrar lo que ve con más frecuencia — no lo que más importa.',
-            'El mismo análisis informa de que un sistema de revisión de IA ajustado, con prompt engineering que instruye específicamente al modelo a priorizar lógica y seguridad sobre estilo, alcanzó una tasa de acción del desarrollador del 52 % — en línea con la tasa de acción del 50 % de las revisiones de código lideradas por humanos en más de 10,000 comentarios analizados.',
-            '**En una oración:** El problema señal/ruido significa que las herramientas de revisión de código con IA generan un 64 % de comentarios de estilo pero solo un 14 % de hallazgos accionables de seguridad/lógica — lo que exige prompts acotados para invertir esta proporción y alcanzar una adopción por parte de los desarrolladores superior al 50 %.',
+            'Las guías del sector suelen informar de que los revisores de IA producen muchos comentarios de estilo, duplicación y cobertura de tests en relación con los hallazgos de lógica y seguridad. No pudimos verificar un conjunto de datos público que cuantifique la proporción, así que mídela tú mismo: la proporción de comentarios de IA sobre los que actúan tus desarrolladores es la cifra que importa. Las herramientas cuyos comentarios se ignoran en su mayoría enseñan a los ingenieros a ignorar todo el feedback, incluidos los hallazgos críticos.',
+            'Una causa probable son los datos de entrenamiento: los modelos ven mucha más variación de estilo que errores de lógica en las bases de código con las que aprenden, así que muestran lo que es frecuente, no lo que más importa.',
+            'El prompt engineering que instruye al modelo a priorizar lógica y seguridad sobre estilo es la palanca principal para cambiar la mezcla; ajusta el prompt y vuelve a medir la tasa de acción.',
+            '**En una oración:** Las herramientas de revisión de código con IA pueden generar sobre todo comentarios de estilo — los prompts acotados y una tasa de acción medida mantienen visibles los hallazgos de lógica y seguridad.',
           ],
           callouts: [
             { type: 'warning', label: 'Advertencia', text: 'Los equipos que despliegan revisión de código con IA sin acotar los prompts corren el riesgo de que colapse la adopción por parte de los desarrolladores. Los ingenieros empiezan a ignorar TODOS los comentarios — incluidos los hallazgos críticos de seguridad — cuando la mayoría de los comentarios son ruido. Configura siempre prioridades de revisión explícitas antes de desplegar al equipo.' },
@@ -1616,7 +1617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            'El prompt estructurado produce un informe de seguridad listo para triaje. El prompt abierto produce 12 comentarios sobre nombres de variables y un hallazgo de seguridad enterrado que el ingeniero nunca lee.',
+            'El prompt estructurado produce un informe de seguridad listo para triaje. Por ejemplo, el prompt abierto puede devolver una docena de comentarios sobre nombres de variables y un hallazgo de seguridad enterrado que el ingeniero nunca lee.',
           ],
         },
 
@@ -1632,8 +1633,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: '¿Cómo se realiza una revisión de código con IA enfocada en seguridad?',
           content: [
-            'Las herramientas SAST (Static Application Security Testing) impulsadas por IA entrenadas en conjuntos de datos de vulnerabilidades reales logran puntuaciones de detección de bugs de 84–92 sobre 100 en código generado por IA — en comparación con el 65 % de precisión de los métodos basados en reglas y el 94 % de los modelos basados en transformadores en benchmarks de aprendizaje profundo de terceros (no medidos por PromptQuorum).',
-            'Los modelos basados en transformadores — la arquitectura detrás de los grandes modelos de lenguaje actuales y de las herramientas de seguridad de código dedicadas — logran un 94 % de precisión en benchmarks de clasificación de bugs, con tasas de falsos positivos muy bajas. Esto representa un avance medible frente a los enfoques de redes neuronales convolucionales (CNN) y recurrentes (RNN) con el 89 %, el análisis estático con el 72 % y los métodos basados en reglas con el 65 %.',
+            'Las herramientas SAST (Static Application Security Testing) impulsadas por IA entrenadas en conjuntos de datos de vulnerabilidades reales obtuvieron 84–92 sobre 100 en código generado por IA en una comparativa de terceros de 2025 (no medida por PromptQuorum).',
+            'El análisis estático basado en reglas aplica patrones fijos, mientras que las herramientas asistidas por IA también razonan sobre cómo interactúan las rutas de código. Ambos enfoques son complementarios, por eso muchos equipos usan un motor de reglas como puerta de fusión y un revisor de IA o un escáner a su lado.',
             'Tres herramientas enfocadas en seguridad, puntuadas en una comparativa de terceros de 2025 sobre código generado por IA (sanj.dev; no medidas por PromptQuorum):',
           ],
           columns: ['Herramienta', 'Puntuación (terceros)', 'Falsos positivos', 'Ideal para'],
@@ -1657,12 +1658,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: '¿Qué es el triaje de bugs con IA?',
           content: [
-            'El triaje de bugs impulsado por IA logra entre el 85 y el 90 % de precisión en clasificación de gravedad — en comparación con el 60–70 % de los métodos manuales — mientras reduce el tiempo de triaje en un 65 % y recorta los falsos positivos hasta en un 60 %.',
-            'El triaje de bugs con IA es el paso posterior a la detección: clasificar los bugs por gravedad, predecir el impacto en producción y enrutar los problemas al ingeniero correcto. Un estudio de Khaleefulla et al. demostró que los sistemas de triaje impulsados por IA lograron más del 85 % de precisión en clasificación de bugs y un 82 % de precisión en predicción de prioridad — reduciendo el tiempo promedio de triaje en un 65 %.',
-            'El tiempo de resolución (TTR) mejora entre un 30 y un 40 % en comparación con los métodos manuales, con la ganancia principal proveniente de una clasificación y un enrutamiento más rápidos, no de una corrección más rápida. Una clasificación de gravedad con una precisión del 85–90 % significa que los ingenieros dedican mucho menos tiempo a debatir la prioridad y más tiempo a resolver los problemas que importan.',
+            'El triaje de bugs impulsado por IA clasifica los bugs por gravedad, predice el impacto en producción y enruta los problemas al ingeniero correcto, lo que reduce el tiempo que los ingenieros dedican a debatir la prioridad.',
+            'El triaje de bugs con IA es el paso posterior a la detección. En un artículo de Khaleefulla, Sudeep y Savithri ([IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization)), los autores informan de más del 85 % de precisión en la clasificación de bugs, un 82 % de precisión en la predicción de prioridad y una reducción del 65 % en el tiempo promedio de triaje de su sistema. Son resultados propios de los autores, no medidos por PromptQuorum.',
+            'La ganancia proviene principalmente de una clasificación y un enrutamiento más rápidos, no de una corrección más rápida. Las convenciones de gravedad difieren entre proyectos, así que la precisión informada para un sistema puede no trasladarse al tuyo; haz un piloto con tu propio backlog antes de confiar en ella.',
           ],
           callouts: [
-            { type: 'info', label: '¿Sabías que?', text: 'El triaje de bugs con IA logra entre un 85 y un 90 % de precisión en clasificación de gravedad vs. un 60–70 % del triaje manual. El ahorro de tiempo principal no está en la corrección más rápida — está en la clasificación y el enrutamiento más rápidos. Los ingenieros dedican menos tiempo a debatir la prioridad y más tiempo a resolver los problemas que importan.' },
+            { type: 'info', label: '¿Sabías que?', text: 'El ahorro de tiempo en el triaje con IA no está en la corrección más rápida — está en la clasificación y el enrutamiento más rápidos. Los ingenieros dedican menos tiempo a debatir la prioridad y más tiempo a resolver los problemas que importan.' },
           ],
         },
 
@@ -1685,9 +1686,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: '¿Cómo afectan las regulaciones regionales a la revisión de código con IA?',
           content: [
-            'Las empresas europeas que envían código fuente a APIs de IA externas pueden necesitar una Evaluación de Impacto de Protección de Datos (EIPD) bajo el Artículo 35 del RGPD antes del despliegue, en particular cuando el código o los datos que toca implican tratamiento de datos personales. El RGPD y la Ley de IA de la UE pueden aplicarse al mismo tiempo a la revisión de código asistida por IA cuando se procesan datos personales, así que involucra a tu delegado de protección de datos antes del despliegue. Lo que está en juego es real: las multas del RGPD en 2024 incluyeron una sanción de €30.5 millones contra Clearview AI.',
-            'Para equipos de la UE, CodeRabbit ofrece despliegue autohospedado en su plan Enterprise (500+ puestos según su documentación), aunque el agente autohospedado sigue enviando prompts y código al proveedor de LLM que configures. Los modelos de pesos abiertos, incluidos los de Mistral AI (Francia), pueden ejecutarse en local con Ollama para los equipos que requieren cero salida de datos a la nube.',
-            'Los equipos de desarrollo chinos usan modelos de pesos abiertos como Qwen3 (Alibaba) y DeepSeek como modelos de revisión de código desplegables localmente, ambos compatibles con comentarios de código y documentación en chino — fundamental para las bases de código con varios idiomas, habituales en entornos empresariales chinos. Las empresas japonesas bajo las directrices de gobernanza de datos de METI despliegan flujos de trabajo de revisión de código basados en LLaMA 4 Scout o LLaMA 3.3 localmente mediante Ollama — LLaMA 4 Scout requiere ~55 GB de VRAM para inferencia, sin llamadas API externas.',
+            'Las empresas europeas que envían código fuente a APIs de IA externas pueden necesitar una Evaluación de Impacto de Protección de Datos (EIPD) bajo el Artículo 35 del RGPD antes del despliegue, en particular cuando el código o los datos que toca implican tratamiento de datos personales. El RGPD y la Ley de IA de la UE pueden aplicarse al mismo tiempo a la revisión de código asistida por IA cuando se procesan datos personales, así que involucra a tu delegado de protección de datos antes del despliegue. Esto es información general, no asesoramiento jurídico; confirma los requisitos con tu delegado de protección de datos o con un asesor legal.',
+            'Para equipos de la UE, CodeRabbit ofrece despliegue autohospedado en su plan Enterprise (500+ puestos según su documentación), aunque el agente autohospedado sigue enviando prompts y código al proveedor de LLM que configures. Los modelos de pesos abiertos, incluidos los de Mistral AI (Francia), pueden ejecutarse en local con Ollama para los equipos que deben mantener el código fuera de nubes de terceros.',
+            'Los equipos en China pueden usar modelos de pesos abiertos como Qwen3 (Alibaba) y DeepSeek como modelos de revisión de código desplegables localmente; ambos son compatibles con comentarios de código y documentación en chino, lo que importa en bases de código con varios idiomas. Los equipos en Japón que trabajan bajo las directrices de gobernanza de datos de METI pueden ejecutar flujos de trabajo de revisión basados en Llama 4 Scout o Llama 3.3 localmente mediante Ollama — Llama 4 Scout necesita aproximadamente 55 GB de VRAM para inferencia — de modo que el código no llega a APIs externas.',
           ],
         },
 
@@ -1723,12 +1724,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: 'Desplegar revisión de IA con configuración predeterminada y sin personalización de prompts.',
-              problem: 'La revisión de IA predeterminada puede producir mayoritariamente comentarios de estilo (64 % en un análisis del sector publicado). Los desarrolladores empiezan a ignorar todos los comentarios. Los hallazgos críticos de seguridad quedan enterrados.',
+              problem: 'La revisión de IA predeterminada puede producir mayoritariamente comentarios de estilo. Los desarrolladores empiezan a ignorar todos los comentarios. Los hallazgos críticos de seguridad quedan enterrados.',
               fix: 'Usa el framework de prompts de 5 partes. Excluye explícitamente el estilo y los nombres. Acota a lógica, seguridad y rendimiento.',
             },
             {
               mistake: 'Usar la revisión de código con IA como única capa de revisión.',
-              problem: 'Los revisores de IA detectaron entre el 44 y el 82 % de los bugs sembrados en la única prueba pública documentada — no el 100 %. Los problemas específicos del contexto (implicaciones de escala, convenciones del equipo, errores de lógica de negocio) requieren juicio humano.',
+              problem: 'Los revisores de IA detectaron entre el 44 y el 82 % de los bugs sembrados en el benchmark de Greptile de julio de 2025 — no el 100 %. Los problemas específicos del contexto (implicaciones de escala, convenciones del equipo, errores de lógica de negocio) requieren juicio humano.',
               fix: 'La IA es el filtro de primera pasada. Los revisores humanos se enfocan en arquitectura, lógica de negocio y los bugs que la IA pierde.',
             },
             {
@@ -1750,11 +1751,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: '¿Cuál es la herramienta de revisión de código con IA más precisa en 2026?',
-              a: 'Ninguna herramienta es la más precisa en todas las pruebas. En el único benchmark comparativo público con método documentado — ejecutado por Greptile en julio de 2025 sobre 50 bugs de cinco repositorios de código abierto — Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 % (configuración por defecto, planes alojados). Como Greptile vende una de las herramientas evaluadas y otros benchmarks publicados clasifican las herramientas de otra forma, usa las cifras como punto de partida y haz una prueba de dos semanas con tus propios pull requests. Para el escaneo de seguridad, Snyk Code es una categoría aparte: un escáner que complementa a un revisor de pull requests.',
+              a: 'Ninguna herramienta es la más precisa en todas las pruebas. En un benchmark de julio de 2025 ejecutado por Greptile sobre 50 bugs de cinco repositorios de código abierto, Greptile detectó el 82 %, Cursor Bugbot el 58 %, GitHub Copilot el 54 % y CodeRabbit el 44 % (configuración por defecto, planes alojados). Como Greptile vende una de las herramientas evaluadas y los resultados independientes pueden diferir, usa las cifras como punto de partida y haz una prueba de dos semanas con tus propios pull requests. Para el escaneo de seguridad, Snyk Code es una categoría aparte: un escáner que complementa a un revisor de pull requests.',
             },
             {
               q: 'CodeRabbit vs Greptile: ¿cuál debería elegir?',
-              a: 'Elige Greptile si lo que más importa es detectar bugs profundos y puedes presupuestar por revisión: detectó el 82 % frente al 44 % de CodeRabbit en la propia prueba de Greptile de julio de 2025, y Pro no cobra por puesto (créditos prepagados a $1 cada uno; una revisión Base usa 1 crédito). Elige CodeRabbit si prefieres precios por puesto ($24 por usuario al mes en Essentials con facturación anual, $30 mensual) y revisiones gratuitas en repositorios públicos. Ambos ofrecen una prueba de 14 días y reservan el autohospedaje para Enterprise. Si CodeRabbit merece la pena depende del volumen: un precio fijo por puesto es más fácil de prever para equipos que abren muchos pull requests, mientras que los equipos de bajo volumen pueden pagar menos por revisión.',
+              a: 'Elige Greptile si lo que más importa es la mayor tasa de detección de bugs sembrados y puedes presupuestar por revisión: detectó el 82 % frente al 44 % de CodeRabbit en la propia prueba de Greptile de julio de 2025, y Pro no cobra por puesto (créditos prepagados a $1 cada uno; una revisión Base usa 1 crédito). Elige CodeRabbit si prefieres precios por puesto ($24 por usuario al mes en Essentials con facturación anual, $30 mensual) y revisiones gratuitas en repositorios públicos. Ambos ofrecen una prueba de 14 días y reservan el autohospedaje para Enterprise. Si CodeRabbit merece la pena depende del volumen: un precio fijo por puesto es más fácil de prever para equipos que abren muchos pull requests, mientras que los equipos de bajo volumen pueden pagar menos por revisión.',
             },
             {
               q: '¿CodeRabbit y Greptile son gratuitos?',
@@ -1778,11 +1779,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cuánto reduce la revisión de código con IA el tiempo de revisión?',
-              a: 'Una guía del sector de terceros (DigitalApplied, 2025) informa de un 40 % menos de tiempo de revisión y un 62 % menos de bugs en producción; PromptQuorum no ha medido estas cifras. Los estudios sobre triaje de bugs con IA informan de un 65 % menos de tiempo de triaje y un tiempo de resolución entre un 30 y un 40 % más rápido que con métodos manuales. Los equipos que acotan los prompts de revisión de IA a lógica y seguridad (no estilo) informan de tasas de acción del desarrollador de alrededor del 52 %, en línea con los revisores humanos.',
+              a: 'Una guía del sector de terceros (DigitalApplied, 2025) informa de un 40 % menos de tiempo de revisión y un 62 % menos de bugs en producción; PromptQuorum no ha medido estas cifras. En el artículo de Khaleefulla et al. (IJERT), los autores informan de una reducción del 65 % en el tiempo promedio de triaje de su sistema de triaje con IA. Sea cual sea la herramienta, mide la proporción de comentarios de IA sobre los que actúan tus desarrolladores antes y después de ajustar el alcance del prompt.',
             },
             {
               q: '¿Cómo se compara la revisión de código con IA con el análisis estático tradicional (SAST)?',
-              a: 'Las estimaciones de terceros sitúan el SAST tradicional basado en reglas por debajo del 20 % en bugs de ejecución significativos, con tasas elevadas de falsos positivos. El SAST impulsado por IA obtuvo 84–92/100 en código generado por IA en una comparativa de terceros de 2025, y los modelos basados en transformadores alcanzan un 94 % de precisión en benchmarks de clasificación de bugs frente al 65 % de los métodos basados en reglas (ninguna cifra medida por PromptQuorum). La ventaja clave de la IA es el razonamiento contextual: evalúa cómo interactúan las rutas de código en lugar de comparar con firmas fijas de vulnerabilidades.',
+              a: 'El SAST basado en reglas aplica firmas fijas de vulnerabilidades y tiende a producir muchos falsos positivos, mientras que las herramientas impulsadas por IA añaden razonamiento contextual: evalúan cómo interactúan las rutas de código en lugar de comparar con firmas. En una comparativa de terceros de 2025, Snyk Code, Semgrep Enterprise y CodeQL obtuvieron 84–92/100 en código generado por IA (no medido por PromptQuorum). Ambos enfoques son complementarios.',
             },
             {
               q: '¿Es la revisión de código con IA conforme al RGPD para equipos europeos?',
@@ -1793,8 +1794,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Sí — para lógica compleja con múltiples ramas condicionales, el prompting Chain-of-Thought (CoT) pide al modelo que trace el flujo de datos a través de cada ruta de ejecución antes de generar hallazgos. Esto saca a la luz bugs de lógica que la coincidencia de patrones pierde, porque el modelo debe modelar explícitamente cada ruta que un valor nulo o un tipo de entrada inesperado puede tomar a través de la función, en lugar de comparar el código con plantillas de errores comunes. CoT es más valioso para funciones sensibles a la seguridad y gestión compleja de estado; añade latencia y es innecesario para funciones de utilidad sencillas.',
             },
             {
-              q: '¿Qué porcentaje de los comentarios de revisión de código con IA son realmente útiles?',
-              a: 'Un análisis del sector publicado, sobre 1,247 comentarios de revisión de IA en 340 PRs (no medido por PromptQuorum), encontró que solo el 14 % abordaba bugs de lógica y problemas de seguridad — los problemas que causan incidentes en producción — mientras que el 64 % abordaba estilo, duplicación y cobertura de tests. Las herramientas con menos del 60 % de comentarios accionables ven colapsar la adopción por parte de los desarrolladores, porque los ingenieros empiezan a ignorar todos los comentarios. Los prompts acotados que excluyen explícitamente los comentarios de estilo son la palanca principal para aumentar la proporción de comentarios accionables.',
+              q: '¿Qué proporción de los comentarios de revisión de código con IA son realmente útiles?',
+              a: 'No pudimos confirmar una cifra pública verificada, y la proporción varía según la herramienta, el prompt y la base de código, así que mídela: cuenta la proporción de comentarios de IA sobre los que actúan tus desarrolladores durante un mes. Si la mayoría de los comentarios se ignoran, ajusta el alcance — excluye explícitamente los comentarios de estilo y pide solo hallazgos de lógica, seguridad y rendimiento — y vuelve a medir.',
             },
             {
               q: '¿Qué modelo de IA es mejor para la revisión de código?',
@@ -1810,11 +1811,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Puede la revisión de código con IA detectar vulnerabilidades de seguridad mejor que las herramientas SAST dedicadas?',
-              a: 'En comparativas de terceros, las herramientas SAST impulsadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtuvieron 84–92/100 en código generado por IA, frente al 65 % de precisión del análisis estático basado en reglas. El SAST tradicional sigue siendo más rápido para comprobaciones de alto volumen en bases de código grandes, porque la IA requiere más cómputo por PR. Mejor práctica: usa SAST ligero y linting para velocidad, y complementa con revisión de IA para análisis de seguridad profundo en cambios de alto riesgo (autenticación, pagos, infraestructura).',
+              a: 'En comparativas de terceros, las herramientas SAST impulsadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtuvieron 84–92/100 en código generado por IA en una comparativa de terceros de 2025 (no medido por PromptQuorum), y el análisis estático basado en reglas sigue siendo útil como puerta de fusión rápida. El SAST tradicional sigue siendo más rápido para comprobaciones de alto volumen en bases de código grandes, porque la IA requiere más cómputo por PR. Mejor práctica: usa SAST ligero y linting para velocidad, y complementa con revisión de IA para análisis de seguridad profundo en cambios de alto riesgo (autenticación, pagos, infraestructura).',
             },
             {
               q: '¿Puedo ejecutar la revisión de código con IA en local para código totalmente privado?',
-              a: 'Sí. Devstral Small 24B (Mistral AI, 16 GB de RAM) y Llama 4 Scout (~55 GB de VRAM, contexto de 10M) se ejecutan totalmente on-premise mediante Ollama. No se transmite código a APIs externas, lo que elimina el paso de tratamiento por terceros que una EIPD tendría que cubrir. La calidad es inferior a la de los modelos frontier en la nube en análisis de seguridad complejos, pero suficiente para la mayoría de las revisiones a nivel de PR.',
+              a: 'Sí. Devstral Small 24B (Mistral AI, 16 GB de RAM) y Llama 4 Scout (~55 GB de VRAM, contexto de 10M) se ejecutan totalmente on-premise mediante Ollama. La inferencia se ejecuta en tu hardware, así que el código no se envía a un revisor en la nube; esto puede eliminar el paso de tratamiento por terceros que una EIPD tendría que cubrir, pero comprueba con tu equipo de seguridad el comportamiento de descarga y actualización de modelos. La calidad es inferior a la de los modelos frontier en la nube en análisis de seguridad complejos, pero suficiente para la mayoría de las revisiones a nivel de PR.',
             },
             {
               q: '¿Cuál es la mejor herramienta de revisión de código con IA para equipos pequeños (menos de 10 desarrolladores)?',
@@ -1838,6 +1839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[GitHub Docs: Copilot code review](https://docs.github.com/en/copilot/concepts/agents/code-review) — planes que incluyen la revisión de código y facturación en créditos de IA',
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — guía técnica de prompts acotados para reducir falsos positivos y mejorar la señal',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — benchmark de terceros de tres herramientas SAST sobre código generado por IA (fuente de las puntuaciones 92 / 87 / 84)',
+            '[Khaleefulla, Sudeep y Savithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) — resultados propios de los autores: más del 85 % de precisión de clasificación, 82 % de precisión de prioridad, 65 % menos de tiempo de triaje',
             '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — cifras del sector: 40 % de ahorro de tiempo, 62 % menos bugs en producción',
             '**Nota:** Las tasas de detección son las informadas por los proveedores y PromptQuorum no las midió; los precios son precios de lista de las páginas de proveedores citadas arriba. La revisión de código con IA es un mercado de rápido movimiento — verifica los precios actuales y la compatibilidad de plataformas en los sitios web de los proveedores antes de comprar.',
           ],
@@ -1850,7 +1852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-ar.webp',
       title: 'مراجعة الكود بالذكاء الاصطناعي ⁨2026⁩: أفضل الأدوات مرتبة (⁨CodeRabbit⁩، ⁨Greptile⁩، ⁨Snyk⁩) + إطار التعليمات',
-      intro: 'اكتشفت أدوات مراجعة الكود بالذكاء الاصطناعي ما بين 44 و82٪ من الأخطاء المزروعة في الاختبار العلني الوحيد المقارن بين الأدوات الذي يوثّق منهجه — معيار أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر — مقابل أقل من 20٪ للتحليل الثابت القائم على القواعد وفق تقديرات طرف ثالث. تعامل مع أرقام المزوِّد بوصفها مؤشرًا اتجاهيًا فقط: معايير منشورة أخرى ترتّب الأدوات نفسها ترتيبًا مختلفًا. التحدي العملي هو نسبة الإشارة إلى الضوضاء: وجد تحليل صناعي منشور أن 64٪ من تعليقات المراجعة بالذكاء الاصطناعي تتناول الأسلوب لا أخطاء المنطق. التعليمات ذات النطاق المحدد التي تعطي الأولوية للأمان والمنطق على التنسيق هي الرافعة الرئيسية.',
+      intro: 'اكتشفت أدوات مراجعة الكود بالذكاء الاصطناعي ما بين 44 و82٪ من الأخطاء المزروعة في معيار أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر. تعامل مع أرقام المزوِّد بوصفها مؤشرًا اتجاهيًا فقط: تبيع Greptile إحدى الأدوات المختبَرة وقد تختلف النتائج المستقلة. التحدي العملي هو نسبة الإشارة إلى الضوضاء: قد يدفن مراجعو الذكاء الاصطناعي نتائج المنطق والأمان تحت تعليقات الأسلوب، مما يُعلّم المطورين تجاهلها. التعليمات ذات النطاق المحدد التي تعطي الأولوية للأمان والمنطق على التنسيق هي الرافعة الرئيسية.',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -1909,11 +1911,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'أدوات مراجعة الكود بالذكاء الاصطناعي', description: 'أدوات برمجية آلية تحلل طلبات السحب وتحدد الأخطاء ونقاط الضعف الأمنية ومشكلات الأسلوب' },
-          { '@type': 'Thing', name: 'مشكلة نسبة الإشارة إلى الضوضاء', description: 'التحدي المتمثل في أن معظم تعليقات مراجعة الذكاء الاصطناعي تتناول مشكلات الأسلوب لا أخطاء المنطق، وفق تحليل صناعي منشور' },
+          { '@type': 'Thing', name: 'مشكلة نسبة الإشارة إلى الضوضاء', description: 'التحدي المتمثل في أن تعليقات مراجعة الذكاء الاصطناعي قد يطغى عليها الأسلوب لا أخطاء المنطق' },
           { '@type': 'Thing', name: 'هندسة تعليمات مراجعة الكود', description: 'تقنيات هيكلة تعليمات الذكاء الاصطناعي التي تعطي الأولوية لنتائج المنطق والأمان على تعليقات الأسلوب' },
           { '@type': 'Thing', name: 'صياغة سلسلة التفكير', description: 'طريقة طلب النماذج من الذكاء الاصطناعي تتبع مسارات التنفيذ خطوة بخطوة قبل تحديد الأخطاء' },
           { '@type': 'Thing', name: 'أتمتة مراجعة الكود', description: 'دمج أدوات مراجعة الكود بالذكاء الاصطناعي في خطوط CI/CD وسير عمل طلبات السحب' },
-          { '@type': 'Thing', name: 'مراجعة الكود بالذكاء الاصطناعي المتوافقة مع GDPR', description: 'مناهج لاستخدام مراجعة الكود بالذكاء الاصطناعي مع الالتزام بمتطلبات حماية البيانات الأوروبية' },
+          { '@type': 'Thing', name: 'حماية البيانات في مراجعة الكود بالذكاء الاصطناعي', description: 'اعتبارات استخدام مراجعة الكود بالذكاء الاصطناعي في ظل متطلبات حماية البيانات الأوروبية' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -1934,11 +1936,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**أعلى معدل اكتشاف في الاختبار العلني الموثَّق الوحيد:** Greptile بنسبة 82٪ (أجراه المزوِّد نفسه، يوليو 2025، 50 خطأً مزروعًا) — Cursor Bugbot بنسبة 58٪، وGitHub Copilot بنسبة 54٪، وCodeRabbit بنسبة 44٪',
+        '**أعلى معدل اكتشاف في اختبار أجرته Greptile:** Greptile بنسبة 82٪ (أجراه المزوِّد نفسه، يوليو 2025، 50 خطأً مزروعًا) — Cursor Bugbot بنسبة 58٪، وGitHub Copilot بنسبة 54٪، وCodeRabbit بنسبة 44٪',
         '**نماذج التسعير مختلفة:** CodeRabbit بسعر ⁨$24⁩ لكل مستخدم شهريًا (فوترة سنوية، خطة Essentials)؛ Greptile Pro بسعر ⁨$1⁩ لكل رصيد مراجعة؛ Snyk Code Team بسعر ⁨$25⁩ شهريًا لما يصل إلى 10 مطورين',
         '**خيارات مجانية:** CodeRabbit على المستودعات العامة؛ Greptile Starter لمطور واحد؛ Snyk Code Free (100 اختبار شهريًا)',
         '**الاستضافة الذاتية:** في خطط Enterprise فقط لدى CodeRabbit (500+ مقعد وفق وثائقه) وGreptile وQodo',
-        '**مشكلة الإشارة:** وجد تحليل صناعي منشور أن 64٪ من تعليقات مراجعة الذكاء الاصطناعي ضوضاء أسلوبية و14٪ فقط تكتشف أخطاء المنطق أو الأمان',
+        '**مشكلة الإشارة:** قد يدفن مراجعو الذكاء الاصطناعي نتائج المنطق والأمان تحت تعليقات الأسلوب — قِس نسبة التعليقات التي يتصرف المطورون بناءً عليها',
         '**الحل:** التعليمات ذات النطاق المحدد (إطار من 5 أجزاء) تحوّل التعليقات نحو المنطق والأمان',
       ],
       faqSchema: {
@@ -1949,12 +1951,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'ما هي أدق أداة لمراجعة الكود بالذكاء الاصطناعي في 2026؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'لا توجد أداة هي الأدق في كل اختبار. في المعيار العلني الوحيد المقارن الذي يوثّق منهجه — أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر — اكتشفت Greptile ‏82٪، وCursor Bugbot ‏58٪، وGitHub Copilot ‏54٪، وCodeRabbit ‏44٪ (بالإعدادات الافتراضية والخطط المستضافة). ولأن Greptile تبيع إحدى الأدوات المختبَرة، ولأن معايير منشورة أخرى ترتّب الأدوات ترتيبًا مختلفًا، استخدم الأرقام نقطة انطلاق وأجرِ تجربة لمدة أسبوعين على طلبات السحب الخاصة بك. أما لفحص الأمان فإن Snyk Code فئة منفصلة: ماسح يكمّل مراجع طلبات السحب.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'لا توجد أداة هي الأدق في كل اختبار. في معيار أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر، اكتشفت Greptile ‏82٪، وCursor Bugbot ‏58٪، وGitHub Copilot ‏54٪، وCodeRabbit ‏44٪ (بالإعدادات الافتراضية والخطط المستضافة). ولأن Greptile تبيع إحدى الأدوات المختبَرة وقد تختلف النتائج المستقلة، استخدم الأرقام نقطة انطلاق وأجرِ تجربة لمدة أسبوعين على طلبات السحب الخاصة بك. أما لفحص الأمان فإن Snyk Code فئة منفصلة: ماسح يكمّل مراجع طلبات السحب.' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit مقابل Greptile: أيهما أختار؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'اختر Greptile إن كان اكتشاف الأخطاء العميقة هو الأهم ويمكنك تخصيص ميزانية لكل مراجعة: اكتشفت 82٪ مقابل 44٪ لـ CodeRabbit في اختبار Greptile نفسها لشهر يوليو 2025، ولا تفرض Pro رسوم مقاعد (أرصدة مدفوعة مسبقًا بسعر ⁨$1⁩ للرصيد؛ وتستهلك مراجعة Base رصيدًا واحدًا). واختر CodeRabbit إن أردت تسعيرًا لكل مقعد (⁨$24⁩ لكل مستخدم شهريًا في Essentials بفوترة سنوية، و⁨$30⁩ شهريًا) ومراجعات مجانية على المستودعات العامة. كلاهما يقدم تجربة لمدة 14 يومًا ويحصر الاستضافة الذاتية في Enterprise. وتعتمد جدوى CodeRabbit على الحجم: سعر المقعد الثابت أسهل في التنبؤ للفرق التي تفتح طلبات سحب كثيرة، بينما قد تدفع الفرق قليلة الحجم أقل لكل مراجعة.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'اختر Greptile إن كان أعلى معدل لاكتشاف الأخطاء المزروعة هو الأهم ويمكنك تخصيص ميزانية لكل مراجعة: اكتشفت 82٪ مقابل 44٪ لـ CodeRabbit في اختبار Greptile نفسها لشهر يوليو 2025، ولا تفرض Pro رسوم مقاعد (أرصدة مدفوعة مسبقًا بسعر ⁨$1⁩ للرصيد؛ وتستهلك مراجعة Base رصيدًا واحدًا). واختر CodeRabbit إن أردت تسعيرًا لكل مقعد (⁨$24⁩ لكل مستخدم شهريًا في Essentials بفوترة سنوية، و⁨$30⁩ شهريًا) ومراجعات مجانية على المستودعات العامة. كلاهما يقدم تجربة لمدة 14 يومًا ويحصر الاستضافة الذاتية في Enterprise. وتعتمد جدوى CodeRabbit على الحجم: سعر المقعد الثابت أسهل في التنبؤ للفرق التي تفتح طلبات سحب كثيرة، بينما قد تدفع الفرق قليلة الحجم أقل لكل مراجعة.' },
           },
           {
             '@type': 'Question',
@@ -1984,12 +1986,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'بكم تُقلِّل مراجعة الكود بالذكاء الاصطناعي من وقت المراجعة؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'يذكر دليل صناعي من طرف ثالث (DigitalApplied، 2025) تقليلًا في وقت المراجعة بنسبة 40٪ وانخفاضًا في أخطاء الإنتاج بنسبة 62٪؛ ولم تقِس PromptQuorum هذه الأرقام. وتفيد دراسات فرز الأخطاء بالذكاء الاصطناعي بتقليل وقت الفرز بنسبة 65٪ وتسريع وقت الحل بنسبة 30–40٪ مقارنةً بالأساليب اليدوية. وتفيد الفرق التي تحدد نطاق تعليمات المراجعة بالذكاء الاصطناعي على المنطق والأمان (لا الأسلوب) بمعدلات تصرف من المطورين نحو 52٪، بما يتوافق مع المراجعين البشر.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'يذكر دليل صناعي من طرف ثالث (DigitalApplied، 2025) تقليلًا في وقت المراجعة بنسبة 40٪ وانخفاضًا في أخطاء الإنتاج بنسبة 62٪؛ ولم تقِس PromptQuorum هذه الأرقام. وفي ورقة Khaleefulla et al. ‏(IJERT)، يذكر المؤلفون تقليلًا بنسبة 65٪ في متوسط وقت الفرز لنظام الفرز بالذكاء الاصطناعي الخاص بهم. وأيًّا كانت الأداة، قِس نسبة تعليقات الذكاء الاصطناعي التي يتصرف المطورون بناءً عليها قبل ضبط نطاق التعليمة وبعده.' },
           },
           {
             '@type': 'Question',
             name: 'كيف تقارن مراجعة الكود بالذكاء الاصطناعي بالتحليل الثابت التقليدي (SAST)؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'تضع تقديرات الأطراف الثالثة أداة SAST التقليدية القائمة على القواعد دون 20٪ في اكتشاف أخطاء وقت التشغيل المهمة، مع معدلات نتائج إيجابية كاذبة مرتفعة. وسجّل SAST المدعوم بالذكاء الاصطناعي 84–92/100 على الكود المولَّد بالذكاء الاصطناعي في مقارنة طرف ثالث لعام 2025، وتبلغ النماذج القائمة على المحوِّل دقة 94٪ في معايير تصنيف الأخطاء مقابل 65٪ للأساليب القائمة على القواعد (لم تقِس PromptQuorum أيًّا منها). الميزة الأساسية للذكاء الاصطناعي هي الاستدلال السياقي — إذ يقيّم كيف تتفاعل مسارات الكود بدلًا من مطابقة تواقيع ثغرات ثابتة.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'تعتمد أدوات SAST القائمة على القواعد على تواقيع ثغرات ثابتة وتميل إلى إنتاج نتائج إيجابية كاذبة كثيرة، بينما تضيف الأدوات المدعومة بالذكاء الاصطناعي استدلالًا سياقيًا: إذ تقيّم كيف تتفاعل مسارات الكود بدلًا من مطابقة التواقيع. وفي مقارنة طرف ثالث لعام 2025، سجّلت Snyk Code وSemgrep Enterprise وCodeQL درجات 84–92/100 على الكود المولَّد بالذكاء الاصطناعي (لم تقِسها PromptQuorum). والنهجان متكاملان.' },
           },
           {
             '@type': 'Question',
@@ -2003,8 +2005,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'ما نسبة تعليقات مراجعة الكود بالذكاء الاصطناعي المفيدة فعليًا؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'وجد تحليل صناعي منشور لـ 1,247 تعليقًا من مراجعة الذكاء الاصطناعي على 340 طلب سحب (لم تقِسه PromptQuorum) أن 14٪ فقط تناولت أخطاء المنطق ومشكلات الأمان — المشكلات التي تسبب حوادث الإنتاج — بينما تناولت 64٪ الأسلوب والتكرار وتغطية الاختبارات. الأدوات التي تقل نسبة تعليقاتها القابلة للتنفيذ عن 60٪ يشهد استخدامها انهيارًا بين المطورين إذ يبدأ المهندسون في تجاهل كل التعليقات. والتعليمات ذات النطاق المحدد التي تستثني صراحةً تعليقات الأسلوب هي الرافعة الرئيسية لرفع نسبة التعليقات القابلة للتنفيذ.' },
+            name: 'ما حصة تعليقات مراجعة الكود بالذكاء الاصطناعي المفيدة فعليًا؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'لم نتمكن من تأكيد رقم عام موثَّق، وتختلف الحصة باختلاف الأداة والتعليمة وقاعدة الكود، لذا قِسها: احسب نسبة تعليقات الذكاء الاصطناعي التي يتصرف المطورون بناءً عليها على مدى شهر. إذا كان معظم التعليقات يُتجاهل، فضيّق النطاق — استثنِ تعليقات الأسلوب صراحةً واطلب نتائج المنطق والأمان والأداء فقط — ثم أعد القياس.' },
           },
           {
             '@type': 'Question',
@@ -2024,12 +2026,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'هل تستطيع مراجعة الكود بالذكاء الاصطناعي اكتشاف ثغرات الأمان بشكل أفضل من أدوات SAST المتخصصة؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'في مقارنات الأطراف الثالثة، سجّلت أدوات SAST المدعومة بالذكاء الاصطناعي (Snyk Code وSemgrep Enterprise وCodeQL) درجات 84–92/100 على الكود المولَّد بالذكاء الاصطناعي، مقارنةً بدقة 65٪ للتحليل الثابت القائم على القواعد. ويظل SAST التقليدي أسرع في الفحص عالي الحجم لقواعد الكود الكبيرة لأن الذكاء الاصطناعي يتطلب حوسبة أكثر لكل طلب سحب. أفضل ممارسة: استخدم SAST خفيفًا والتدقيق (linting) للسرعة، وكمّل بمراجعة الذكاء الاصطناعي للتحليل الأمني العميق في التغييرات عالية المخاطر (المصادقة والمدفوعات والبنية التحتية).' },
+            acceptedAnswer: { '@type': 'Answer', text: 'في مقارنات الأطراف الثالثة، سجّلت أدوات SAST المدعومة بالذكاء الاصطناعي (Snyk Code وSemgrep Enterprise وCodeQL) درجات 84–92/100 على الكود المولَّد بالذكاء الاصطناعي في مقارنة طرف ثالث لعام 2025 (لم تقِسها PromptQuorum)، ويظل التحليل الثابت القائم على القواعد مفيدًا كبوابة دمج سريعة. ويظل SAST التقليدي أسرع في الفحص عالي الحجم لقواعد الكود الكبيرة لأن الذكاء الاصطناعي يتطلب حوسبة أكثر لكل طلب سحب. أفضل ممارسة: استخدم SAST خفيفًا والتدقيق (linting) للسرعة، وكمّل بمراجعة الذكاء الاصطناعي للتحليل الأمني العميق في التغييرات عالية المخاطر (المصادقة والمدفوعات والبنية التحتية).' },
           },
           {
             '@type': 'Question',
             name: 'هل يمكنني تشغيل مراجعة الكود بالذكاء الاصطناعي محليًا لكود خاص تمامًا؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نعم. يعمل Devstral Small 24B (من Mistral AI، ذاكرة RAM بسعة 16 GB) وLlama 4 Scout (~55 GB من VRAM، سياق 10 ملايين) كليًا داخل المؤسسة عبر Ollama. لا يُرسَل أي كود إلى واجهات API خارجية، مما يزيل خطوة المعالجة لدى طرف ثالث التي كان على DPIA أن يغطيها لولا ذلك. الجودة أدنى من النماذج السحابية الحدودية في التحليل الأمني المعقد لكنها كافية لمعظم المراجعات على مستوى طلب السحب.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'نعم. يعمل Devstral Small 24B (من Mistral AI، ذاكرة RAM بسعة 16 GB) وLlama 4 Scout (~55 GB من VRAM، سياق 10 ملايين) كليًا داخل المؤسسة عبر Ollama. يعمل الاستدلال على عتادك، فلا يُرسَل الكود إلى مراجع سحابي؛ وقد يزيل ذلك خطوة المعالجة لدى طرف ثالث التي كان على DPIA أن يغطيها لولا ذلك، لكن تحقق من سلوك تنزيل النماذج وتحديثها مع فريق الأمن لديك. الجودة أدنى من النماذج السحابية الحدودية في التحليل الأمني المعقد لكنها كافية لمعظم المراجعات على مستوى طلب السحب.' },
           },
           {
             '@type': 'Question',
@@ -2058,11 +2060,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'النقاط الرئيسية',
           isTldr: true,
           items: [
-            'في الاختبار العلني الوحيد المقارن بين الأدوات الذي يوثّق منهجه (أجرته Greptile، يوليو 2025، 50 خطأً مزروعًا) اكتشف المراجعون بالذكاء الاصطناعي ما بين 44 و82٪: Greptile 82٪، وCursor Bugbot 58٪، وGitHub Copilot 54٪، وCodeRabbit 44٪ — اختبار أجراه المزوِّد، لذا هو مؤشر اتجاهي فقط',
+            'في معيار أجرته Greptile في يوليو 2025 (50 خطأً مزروعًا) اكتشف المراجعون بالذكاء الاصطناعي ما بين 44 و82٪: Greptile 82٪، وCursor Bugbot 58٪، وGitHub Copilot 54٪، وCodeRabbit 44٪ — اختبار أجراه المزوِّد، لذا هو مؤشر اتجاهي فقط',
             'نماذج التسعير مختلفة: يحتسب CodeRabbit لكل مقعد (من ⁨$24⁩ إلى ⁨$72⁩ لكل مستخدم شهريًا بفوترة سنوية)، ويحتسب Greptile Pro لكل رصيد مراجعة (⁨$1⁩ للرصيد، بلا رسوم مقاعد)، أما Snyk Code Team فسعر ثابت قدره ⁨$25⁩ شهريًا لما يصل إلى 10 مطورين',
             'يراجع CodeRabbit المستودعات العامة مجانًا وخطة Greptile Starter مجانية لمطور واحد؛ أما Qodo فلديه تجربة لمدة 14 يومًا لكن لا توجد خطة مجانية دائمة',
             'الاستضافة الذاتية ميزة في خطط Enterprise لدى CodeRabbit (تُقدَّم للعملاء ذوي 500+ مقعد وفق وثائقه) وGreptile وQodo؛ ويظل CodeRabbit المستضاف ذاتيًا يرسل الكود إلى مزوِّد النموذج اللغوي الذي تهيّئه',
-            'وجد تحليل صناعي منشور أن 64٪ من تعليقات مراجعة الذكاء الاصطناعي تتناول الأسلوب والتكرار و14٪ فقط تتناول أخطاء المنطق والأمان — والتعليمات ذات النطاق المحدد ضرورية لعكس هذه النسبة',
+            'قد يدفن مراجعو الذكاء الاصطناعي نتائج المنطق والأمان تحت تعليقات الأسلوب؛ ولا توجد مجموعة بيانات عامة استطعنا التحقق منها تحدد النسبة، لذا قِس نسبة التعليقات التي يتصرف المطورون بناءً عليها واستخدم تعليمات ذات نطاق محدد لرفعها',
             'Snyk Code ماسح أمني (92/100 في مقارنة طرف ثالث لعام 2025 شملت ثلاث أدوات أمنية) وليس مراجع طلبات سحب عامًا — شغّله بجانب مراجع بالذكاء الاصطناعي',
             'قد يتطلب GDPR إجراء تقييم أثر حماية البيانات (المادة 35) قبل أن تعالج مراجعة الكود السحابية بالذكاء الاصطناعي كودًا مصدريًا يمسّ بيانات شخصية — استشر مسؤول حماية البيانات لديك',
             'تقدم النماذج السحابية الحدودية نوافذ سياق تقارب مليون رمز (نحو 75,000–100,000 سطر كود، وهو تقدير)؛ أما النموذج مفتوح الأوزان Llama 4 Scout فيدعم 10 ملايين رمز محليًا',
@@ -2086,7 +2088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'أدوات مراجعة الكود بالذكاء الاصطناعي: أيها تستخدم',
           content: [
-            'في الاختبار العلني الوحيد المقارن بين الأدوات الذي يوثّق منهجه، اكتشفت Greptile ‏82٪ من 50 خطأً مزروعًا، وCursor Bugbot ‏58٪، وGitHub Copilot ‏54٪، وCodeRabbit ‏44٪ (معيار أجرته Greptile، يوليو 2025، بالإعدادات الافتراضية والخطط المستضافة). تبيع Greptile إحدى الأدوات المختبَرة، وتُرتّب معايير منشورة أخرى الأدوات نفسها بترتيب مختلف، لذا اقرأ الأرقام بوصفها مؤشرًا اتجاهيًا لا حكمًا نهائيًا.',
+            'في معيار أجرته Greptile في يوليو 2025 على 50 خطأً مزروعًا، اكتشفت Greptile ‏82٪، وCursor Bugbot ‏58٪، وGitHub Copilot ‏54٪، وCodeRabbit ‏44٪ (بالإعدادات الافتراضية والخطط المستضافة). تبيع Greptile إحدى الأدوات المختبَرة وقد تختلف النتائج المستقلة، لذا اقرأ الأرقام بوصفها مؤشرًا اتجاهيًا لا حكمًا نهائيًا.',
             'يقدم CodeRabbit مراجعات مجانية على المستودعات العامة؛ أما المستودعات الخاصة فتحتاج إلى Essentials (⁨$24⁩ لكل مستخدم شهريًا بفوترة سنوية، ⁨$30⁩ بفوترة شهرية) أو Team (⁨$48⁩ سنويًا، ⁨$60⁩ شهريًا) أو Advanced (⁨$72⁩)، مع Enterprise بعرض سعر. الاستضافة الذاتية لخطة Enterprise فقط، وتذكر وثائق الاستضافة الذاتية أنها تُقدَّم للعملاء ذوي 500+ مقعد.',
             'خطة Greptile Starter مجانية لمطور واحد نشط (50 رصيدًا شهريًا). لا تفرض Pro رسوم مقاعد: الرصيد بسعر ⁨$1⁩، وتستهلك مراجعة Base رصيدًا واحدًا، ومراجعة Plus ثلاثة أرصدة، ومراجعة Apex عشرة. تُدرج Qodo خطة Pro Team بسعر ⁨$30⁩ مع أرصدة مشتركة لما يصل إلى 30 مستخدمًا، وليس لديها خطة مجانية دائمة. مراجعة الكود في GitHub Copilot متاحة عمومًا في Copilot Pro وPro+ وMax وBusiness وEnterprise (وليس في Copilot Free) وتستهلك أرصدة الذكاء الاصطناعي — وتوثّق GitHub متوسطات تقارب ⁨$0.25⁩ (Lite) و⁨$1.50⁩ (Balanced) و⁨$10⁩ (Max) للمراجعة الواحدة.',
           ],
@@ -2098,11 +2100,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'الأداة': '[CodeRabbit](https://www.coderabbit.ai)', 'معدل الاكتشاف (اختبار المزوِّد)': '44٪', 'منصات Git': 'GitHub وGitLab', 'الاستضافة الذاتية': 'Enterprise (500+ مقعد)', 'سعر القائمة': '⁨$24⁩ لكل مستخدم شهريًا (سنوي)' },
             { 'الأداة': '[Qodo](https://www.qodo.ai)', 'معدل الاكتشاف (اختبار المزوِّد)': 'لم تُختبر', 'منصات Git': 'GitHub وGitLab وBitbucket وAzure', 'الاستضافة الذاتية': 'Enterprise (on-prem)', 'سعر القائمة': 'Pro Team بدءًا من ⁨$30⁩ (مشترك)' },
             { 'الأداة': '[Snyk Code](https://snyk.io)', 'معدل الاكتشاف (اختبار المزوِّد)': 'لم تُختبر', 'منصات Git': 'عبر تكاملات SCM', 'الاستضافة الذاتية': 'غير مذكورة', 'سعر القائمة': 'مجانية؛ Team بدءًا من ⁨$25⁩ (10 مطورين)' },
-            { 'الأداة': 'SAST التقليدي', 'معدل الاكتشاف (اختبار المزوِّد)': 'أقل من 20٪*', 'منصات Git': 'متغيرة', 'الاستضافة الذاتية': 'متغيرة', 'سعر القائمة': 'متغير' },
+            { 'الأداة': 'SAST التقليدي', 'معدل الاكتشاف (اختبار المزوِّد)': 'لم تُختبر', 'منصات Git': 'متغيرة', 'الاستضافة الذاتية': 'متغيرة', 'سعر القائمة': 'متغير' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'المصدر', text: '*تقدير من طرف ثالث، لم تقِسه PromptQuorum. معدلات الاكتشاف: معيار أجرته Greptile، يوليو 2025. أسعار القائمة من صفحات التسعير لدى المزوِّدين؛ والخطط تتغير كثيرًا، لذا تأكد قبل الشراء.' },
+            { type: 'info', label: 'المصدر', text: 'معدلات الاكتشاف: معيار أجرته Greptile، يوليو 2025، ولم تقِسها PromptQuorum. أسعار القائمة من صفحات التسعير لدى المزوِّدين؛ والخطط تتغير كثيرًا، لذا تأكد قبل الشراء.' },
           ],
           image: '/images/code-review-tool-comparison-ar.svg',
           imageCaption: 'مقارنة ميزات PromptQuorum وGitHub Copilot وChatGPT وCursor: يرسل PromptQuorum تعليمة واحدة إلى عدة نماذج في وقت واحد، فيمكن التحقق من المراجعة الواحدة عبر النماذج.',
@@ -2173,10 +2175,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'لماذا نسبة الإشارة إلى الضوضاء مشكلة في مراجعة الكود بالذكاء الاصطناعي؟',
           content: [
             'تعلّق أدوات مراجعة الكود بالذكاء الاصطناعي على مشكلات الأسلوب بموثوقية أعلى بكثير من اكتشافها أخطاء وقت التشغيل الحرجة (44–82٪ في اختبار المزوِّد أعلاه) — مما يخلق مشكلة حجم تعليقات قد تتسبب في انهيار تبني المطورين.',
-            'وجد تحليل صناعي منشور لـ 1,247 تعليقًا من مراجعة الذكاء الاصطناعي على 340 طلب سحب (لم تقِسه PromptQuorum): ~64٪ من جميع التعليقات تناولت الأسلوب والتكرار وتغطية الاختبارات. ~14٪ فقط من التعليقات تناولت أخطاء المنطق ومشكلات الأمان — المشكلات التي تسبب حوادث الإنتاج. الأدوات التي تقل نسبة تعليقاتها القابلة للتنفيذ عن 60٪ يشهد استخدامها انهيارًا بين المطورين، إذ يبدأ المهندسون في تجاهل كل الملاحظات بما فيها النتائج الحرجة.',
-            'السبب الجذري هو بيانات التدريب: تُدرَّب النماذج على قواعد كود تفوق فيها مخالفات الأسلوب أخطاء المنطق بكثير. يتعلم النموذج إبراز ما يراه أكثر تكرارًا — لا ما يهم أكثر.',
-            'يذكر التحليل نفسه أن نظام مراجعة بالذكاء الاصطناعي مضبوطًا، مع هندسة تعليمات تُرشد النموذج صراحةً إلى إعطاء الأولوية للمنطق والأمان على الأسلوب، بلغ معدل تصرف من المطورين قدره 52٪ — بما يتوافق مع معدل التصرف البالغ 50٪ في المراجعات التي يقودها البشر عبر أكثر من 10,000 تعليق محلَّل.',
-            '**في جملة واحدة:** مشكلة نسبة الإشارة إلى الضوضاء تعني أن أدوات مراجعة الكود بالذكاء الاصطناعي تولّد 64٪ تعليقات أسلوبية لكن 14٪ فقط نتائج قابلة للتنفيذ في الأمان/المنطق — وتستلزم تعليمات ذات نطاق محدد لعكس هذه النسبة وبلوغ تبنٍّ من المطورين يفوق 50٪.',
+            'تذكر الأدلة الصناعية عمومًا أن مراجعي الذكاء الاصطناعي يُنتجون تعليقات كثيرة عن الأسلوب والتكرار وتغطية الاختبارات قياسًا بنتائج المنطق والأمان. لم نتمكن من التحقق من مجموعة بيانات عامة تحدد هذه النسبة، لذا قِسها بنفسك: نسبة تعليقات الذكاء الاصطناعي التي يتصرف المطورون بناءً عليها هي الرقم المهم. والأدوات التي يُتجاهل معظم تعليقاتها تُعلّم المهندسين تجاهل كل الملاحظات بما فيها النتائج الحرجة.',
+            'من الأسباب المحتملة بيانات التدريب: ترى النماذج في قواعد الكود التي تتعلم منها تنوعًا في الأسلوب أكبر بكثير من أخطاء المنطق، فتُبرز ما هو متكرر لا ما يهم أكثر.',
+            'وهندسة التعليمات التي تُرشد النموذج إلى إعطاء الأولوية للمنطق والأمان على الأسلوب هي الرافعة الرئيسية لتغيير هذا المزيج؛ اضبط التعليمة ثم أعد قياس معدل التصرف.',
+            '**في جملة واحدة:** قد تولّد أدوات مراجعة الكود بالذكاء الاصطناعي تعليقات أسلوبية في معظمها — والتعليمات ذات النطاق المحدد ومعدل تصرف يُتتبَّع يُبقيان نتائج المنطق والأمان ظاهرة.',
           ],
           callouts: [
             { type: 'warning', label: 'تحذير', text: 'الفرق التي تنشر مراجعة الكود بالذكاء الاصطناعي دون تحديد نطاق التعليمات تخاطر بانهيار تبني المطورين. يبدأ المهندسون في تجاهل كل التعليقات — بما فيها النتائج الأمنية الحرجة — حين تكون معظم التعليقات ضوضاء. اضبط دائمًا أولويات مراجعة صريحة قبل النشر للفريق.' },
@@ -2227,7 +2229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            'التعليمة المنظَّمة تُنتج تقرير أمان جاهزًا للفرز. التعليمة المفتوحة تُنتج 12 تعليقًا على أسماء المتغيرات ونتيجة أمنية واحدة مدفونة لا يقرأها المهندس.',
+            'التعليمة المنظَّمة تُنتج تقرير أمان جاهزًا للفرز. على سبيل المثال، قد تُعيد التعليمة المفتوحة اثني عشر تعليقًا على أسماء المتغيرات ونتيجة أمنية واحدة مدفونة لا يقرأها المهندس.',
           ],
         },
 
@@ -2243,8 +2245,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: 'كيف تُجري مراجعة كود بالذكاء الاصطناعي مركَّزة على الأمان؟',
           content: [
-            'أدوات SAST (الاختبار الثابت لأمان التطبيقات) المدعومة بالذكاء الاصطناعي والمُدرَّبة على مجموعات بيانات ثغرات حقيقية تحقق درجات اكتشاف أخطاء 84–92 من 100 في الكود المولَّد بالذكاء الاصطناعي — مقارنةً بدقة 65٪ للأساليب القائمة على القواعد و94٪ للنماذج القائمة على المحوِّل في معايير التعلم العميق من أطراف ثالثة (لم تقِسها PromptQuorum).',
-            'النماذج القائمة على المحوِّل (transformer) — المعمارية وراء النماذج اللغوية الكبيرة اليوم وأدوات أمان الكود المتخصصة — تحقق دقة 94٪ في معايير تصنيف الأخطاء، مع معدلات نتائج إيجابية كاذبة منخفضة جدًا. وهذا تقدم قابل للقياس مقارنةً بالشبكات العصبية الالتفافية (CNN) والشبكات العصبية المتكررة (RNN) عند 89٪، والتحليل الثابت عند 72٪، والأساليب القائمة على القواعد عند 65٪.',
+            'أدوات SAST (الاختبار الثابت لأمان التطبيقات) المدعومة بالذكاء الاصطناعي والمُدرَّبة على مجموعات بيانات ثغرات حقيقية سجّلت 84–92 من 100 على الكود المولَّد بالذكاء الاصطناعي في مقارنة طرف ثالث لعام 2025 (لم تقِسها PromptQuorum).',
+            'يطبّق التحليل الثابت القائم على القواعد أنماطًا ثابتة، بينما تستدل الأدوات المدعومة بالذكاء الاصطناعي أيضًا على كيفية تفاعل مسارات الكود. والنهجان متكاملان، ولهذا تشغّل فرق كثيرة محرك قواعد كبوابة دمج ومراجعًا أو ماسحًا بالذكاء الاصطناعي إلى جانبه.',
             'ثلاث أدوات مركَّزة على الأمان، سُجّلت درجاتها في مقارنة طرف ثالث لعام 2025 على كود مولَّد بالذكاء الاصطناعي (sanj.dev؛ لم تقِسها PromptQuorum):',
           ],
           columns: ['الأداة', 'الدرجة (طرف ثالث)', 'النتائج الإيجابية الكاذبة', 'الأفضل لـ'],
@@ -2268,12 +2270,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: 'ما هو فرز الأخطاء بالذكاء الاصطناعي؟',
           content: [
-            'يحقق فرز الأخطاء المدعوم بالذكاء الاصطناعي دقة 85–90٪ في تصنيف الخطورة — مقارنةً بـ 60–70٪ للأساليب اليدوية — مع تقليل وقت الفرز بنسبة 65٪ وخفض النتائج الإيجابية الكاذبة بما يصل إلى 60٪.',
-            'فرز الأخطاء بالذكاء الاصطناعي هو الخطوة التالية للاكتشاف: تصنيف الأخطاء حسب الخطورة والتنبؤ بالتأثير الإنتاجي وتوجيه المشكلات للمهندس الصحيح. أظهرت دراسة Khaleefulla et al. أن أنظمة الفرز المدعومة بالذكاء الاصطناعي حققت أكثر من 85٪ دقة في تصنيف الأخطاء و82٪ دقة في التنبؤ بالأولوية — مما يُقلِّل متوسط وقت الفرز بنسبة 65٪.',
-            'يتحسن وقت الحل (TTR) بنسبة 30–40٪ مقارنةً بالأساليب اليدوية، مع الكسب الرئيسي من تصنيف وتوجيه أسرع بدلًا من إصلاح أسرع. وتصنيف الخطورة بدقة 85–90٪ يعني أن المهندسين يقضون وقتًا أقل بكثير في نقاش الأولوية ووقتًا أكثر في حل المشكلات المهمة.',
+            'يصنّف فرز الأخطاء المدعوم بالذكاء الاصطناعي الأخطاء حسب الخطورة ويتنبأ بالتأثير الإنتاجي ويوجّه المشكلات للمهندس الصحيح، مما يقلل الوقت الذي يقضيه المهندسون في نقاش الأولوية.',
+            'فرز الأخطاء بالذكاء الاصطناعي هو الخطوة التالية للاكتشاف. في ورقة لـ Khaleefulla وSudeep وSavithri ([IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization))، يذكر المؤلفون أكثر من 85٪ دقة في تصنيف الأخطاء و82٪ دقة في التنبؤ بالأولوية وتقليلًا بنسبة 65٪ في متوسط وقت الفرز لنظامهم. هذه نتائج المؤلفين أنفسهم، ولم تقِسها PromptQuorum.',
+            'يأتي الكسب أساسًا من تصنيف وتوجيه أسرع لا من إصلاح أسرع. وتختلف اصطلاحات الخطورة بين المشاريع، فقد لا تنطبق الدقة المذكورة لنظام ما على نظامك؛ فجرّب على قائمة الأخطاء المتراكمة لديك قبل الاعتماد عليها.',
           ],
           callouts: [
-            { type: 'info', label: 'هل تعلم؟', text: 'يحقق فرز الأخطاء بالذكاء الاصطناعي دقة 85–90٪ في تصنيف الخطورة مقابل 60–70٪ للفرز اليدوي. وفورات الوقت الرئيسية ليست في الإصلاح الأسرع — بل في التصنيف والتوجيه الأسرع. يقضي المهندسون وقتًا أقل في نقاش الأولوية ووقتًا أكثر في حل المشكلات المهمة.' },
+            { type: 'info', label: 'هل تعلم؟', text: 'وفورات الوقت في فرز الأخطاء بالذكاء الاصطناعي ليست في الإصلاح الأسرع — بل في التصنيف والتوجيه الأسرع. يقضي المهندسون وقتًا أقل في نقاش الأولوية ووقتًا أكثر في حل المشكلات المهمة.' },
           ],
         },
 
@@ -2296,9 +2298,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: 'كيف تؤثر اللوائح الإقليمية على مراجعة الكود بالذكاء الاصطناعي؟',
           content: [
-            'قد تحتاج الشركات الأوروبية التي ترسل الكود المصدري إلى واجهات API خارجية للذكاء الاصطناعي إلى إجراء تقييم أثر حماية البيانات (DPIA) بموجب المادة 35 من GDPR قبل النشر، خصوصًا حين يتضمن الكود أو البيانات التي يمسّها معالجة بيانات شخصية. قد ينطبق GDPR وقانون الذكاء الاصطناعي الأوروبي في وقت واحد على مراجعة الكود المدعومة بالذكاء الاصطناعي حين تُعالَج بيانات شخصية، لذا أشرك مسؤول حماية البيانات لديك قبل الإطلاق. والمخاطر حقيقية: شملت غرامات GDPR في 2024 غرامة قدرها 30.5 مليون يورو على Clearview AI.',
-            'لفرق الاتحاد الأوروبي، يقدم CodeRabbit نشرًا مستضافًا ذاتيًا في خطة Enterprise (500+ مقعد وفق وثائقه)، مع أن الوكيل المستضاف ذاتيًا يظل يرسل التعليمات والكود إلى مزوِّد النموذج اللغوي الذي تهيّئه. ويمكن تشغيل النماذج مفتوحة الأوزان، ومنها نماذج Mistral AI (فرنسا)، محليًا عبر Ollama للفرق التي تتطلب عدم خروج أي بيانات إلى السحابة.',
-            'تستخدم فرق التطوير الصينية نماذج مفتوحة الأوزان مثل Qwen3 (Alibaba) وDeepSeek كنماذج مراجعة كود قابلة للنشر محليًا، وكلاهما يدعم تعليقات الكود والوثائق بالصينية — وهو أمر حاسم لقواعد الكود متعددة اللغات الشائعة في بيئات الشركات الصينية. وتنشر الشركات اليابانية الخاضعة لإرشادات حوكمة البيانات الصادرة عن METI سير عمل مراجعة الكود القائم على LLaMA 4 Scout أو LLaMA 3.3 محليًا عبر Ollama — يتطلب LLaMA 4 Scout نحو 55 GB من VRAM للاستدلال، دون أي استدعاءات API خارجية.',
+            'قد تحتاج الشركات الأوروبية التي ترسل الكود المصدري إلى واجهات API خارجية للذكاء الاصطناعي إلى إجراء تقييم أثر حماية البيانات (DPIA) بموجب المادة 35 من GDPR قبل النشر، خصوصًا حين يتضمن الكود أو البيانات التي يمسّها معالجة بيانات شخصية. قد ينطبق GDPR وقانون الذكاء الاصطناعي الأوروبي في وقت واحد على مراجعة الكود المدعومة بالذكاء الاصطناعي حين تُعالَج بيانات شخصية، لذا أشرك مسؤول حماية البيانات لديك قبل الإطلاق. هذه معلومات عامة وليست استشارة قانونية؛ تأكد من المتطلبات مع مسؤول حماية البيانات لديك أو مستشارك القانوني.',
+            'لفرق الاتحاد الأوروبي، يقدم CodeRabbit نشرًا مستضافًا ذاتيًا في خطة Enterprise (500+ مقعد وفق وثائقه)، مع أن الوكيل المستضاف ذاتيًا يظل يرسل التعليمات والكود إلى مزوِّد النموذج اللغوي الذي تهيّئه. ويمكن تشغيل النماذج مفتوحة الأوزان، ومنها نماذج Mistral AI (فرنسا)، محليًا عبر Ollama للفرق التي يجب أن تُبقي الكود خارج سحابات الأطراف الثالثة.',
+            'قد تستخدم الفرق في الصين نماذج مفتوحة الأوزان مثل Qwen3 (Alibaba) وDeepSeek كنماذج مراجعة كود قابلة للنشر محليًا؛ وكلاهما يدعم تعليقات الكود والوثائق بالصينية، وهو أمر مهم لقواعد الكود متعددة اللغات. وقد تشغّل الفرق في اليابان العاملة وفق إرشادات حوكمة البيانات الصادرة عن METI سير عمل مراجعة قائمًا على Llama 4 Scout أو Llama 3.3 محليًا عبر Ollama — يحتاج Llama 4 Scout إلى نحو 55 GB من VRAM للاستدلال — بحيث لا يصل الكود إلى واجهات API خارجية.',
           ],
         },
 
@@ -2334,12 +2336,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: 'نشر مراجعة الذكاء الاصطناعي بالإعدادات الافتراضية دون تخصيص التعليمات.',
-              problem: 'قد تنتج مراجعة الذكاء الاصطناعي الافتراضية تعليقات أسلوبية في معظمها (64٪ في تحليل صناعي منشور). يبدأ المطورون في تجاهل كل التعليقات. وتُدفن النتائج الأمنية الحرجة.',
+              problem: 'قد تنتج مراجعة الذكاء الاصطناعي الافتراضية تعليقات أسلوبية في معظمها. يبدأ المطورون في تجاهل كل التعليقات. وتُدفن النتائج الأمنية الحرجة.',
               fix: 'استخدم إطار التعليمات من 5 أجزاء. استبعد الأسلوب/الأسماء صراحةً. حدِّد النطاق بالمنطق والأمان والأداء.',
             },
             {
               mistake: 'استخدام مراجعة الكود بالذكاء الاصطناعي كطبقة مراجعة وحيدة.',
-              problem: 'اكتشف المراجعون بالذكاء الاصطناعي 44–82٪ من الأخطاء المزروعة في الاختبار العلني الموثَّق الوحيد — وليس 100٪. المشكلات الخاصة بالسياق (تداعيات التوسع واصطلاحات الفريق وأخطاء منطق الأعمال) تتطلب حكمًا بشريًا.',
+              problem: 'اكتشف المراجعون بالذكاء الاصطناعي 44–82٪ من الأخطاء المزروعة في معيار Greptile لشهر يوليو 2025 — وليس 100٪. المشكلات الخاصة بالسياق (تداعيات التوسع واصطلاحات الفريق وأخطاء منطق الأعمال) تتطلب حكمًا بشريًا.',
               fix: 'الذكاء الاصطناعي هو مرشِّح المرور الأول. يركز المراجعون البشريون على المعمارية ومنطق الأعمال والأخطاء التي يفوتها الذكاء الاصطناعي.',
             },
             {
@@ -2361,11 +2363,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'ما هي أدق أداة لمراجعة الكود بالذكاء الاصطناعي في 2026؟',
-              a: 'لا توجد أداة هي الأدق في كل اختبار. في المعيار العلني الوحيد المقارن الذي يوثّق منهجه — أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر — اكتشفت Greptile ‏82٪، وCursor Bugbot ‏58٪، وGitHub Copilot ‏54٪، وCodeRabbit ‏44٪ (بالإعدادات الافتراضية والخطط المستضافة). ولأن Greptile تبيع إحدى الأدوات المختبَرة، ولأن معايير منشورة أخرى ترتّب الأدوات ترتيبًا مختلفًا، استخدم الأرقام نقطة انطلاق وأجرِ تجربة لمدة أسبوعين على طلبات السحب الخاصة بك. أما لفحص الأمان فإن Snyk Code فئة منفصلة: ماسح يكمّل مراجع طلبات السحب.',
+              a: 'لا توجد أداة هي الأدق في كل اختبار. في معيار أجرته Greptile في يوليو 2025 على 50 خطأً من خمسة مستودعات مفتوحة المصدر، اكتشفت Greptile ‏82٪، وCursor Bugbot ‏58٪، وGitHub Copilot ‏54٪، وCodeRabbit ‏44٪ (بالإعدادات الافتراضية والخطط المستضافة). ولأن Greptile تبيع إحدى الأدوات المختبَرة وقد تختلف النتائج المستقلة، استخدم الأرقام نقطة انطلاق وأجرِ تجربة لمدة أسبوعين على طلبات السحب الخاصة بك. أما لفحص الأمان فإن Snyk Code فئة منفصلة: ماسح يكمّل مراجع طلبات السحب.',
             },
             {
               q: 'CodeRabbit مقابل Greptile: أيهما أختار؟',
-              a: 'اختر Greptile إن كان اكتشاف الأخطاء العميقة هو الأهم ويمكنك تخصيص ميزانية لكل مراجعة: اكتشفت 82٪ مقابل 44٪ لـ CodeRabbit في اختبار Greptile نفسها لشهر يوليو 2025، ولا تفرض Pro رسوم مقاعد (أرصدة مدفوعة مسبقًا بسعر ⁨$1⁩ للرصيد؛ وتستهلك مراجعة Base رصيدًا واحدًا). واختر CodeRabbit إن أردت تسعيرًا لكل مقعد (⁨$24⁩ لكل مستخدم شهريًا في Essentials بفوترة سنوية، و⁨$30⁩ شهريًا) ومراجعات مجانية على المستودعات العامة. كلاهما يقدم تجربة لمدة 14 يومًا ويحصر الاستضافة الذاتية في Enterprise. وتعتمد جدوى CodeRabbit على الحجم: سعر المقعد الثابت أسهل في التنبؤ للفرق التي تفتح طلبات سحب كثيرة، بينما قد تدفع الفرق قليلة الحجم أقل لكل مراجعة.',
+              a: 'اختر Greptile إن كان أعلى معدل لاكتشاف الأخطاء المزروعة هو الأهم ويمكنك تخصيص ميزانية لكل مراجعة: اكتشفت 82٪ مقابل 44٪ لـ CodeRabbit في اختبار Greptile نفسها لشهر يوليو 2025، ولا تفرض Pro رسوم مقاعد (أرصدة مدفوعة مسبقًا بسعر ⁨$1⁩ للرصيد؛ وتستهلك مراجعة Base رصيدًا واحدًا). واختر CodeRabbit إن أردت تسعيرًا لكل مقعد (⁨$24⁩ لكل مستخدم شهريًا في Essentials بفوترة سنوية، و⁨$30⁩ شهريًا) ومراجعات مجانية على المستودعات العامة. كلاهما يقدم تجربة لمدة 14 يومًا ويحصر الاستضافة الذاتية في Enterprise. وتعتمد جدوى CodeRabbit على الحجم: سعر المقعد الثابت أسهل في التنبؤ للفرق التي تفتح طلبات سحب كثيرة، بينما قد تدفع الفرق قليلة الحجم أقل لكل مراجعة.',
             },
             {
               q: 'هل CodeRabbit وGreptile مجانيان؟',
@@ -2389,11 +2391,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'بكم تُقلِّل مراجعة الكود بالذكاء الاصطناعي من وقت المراجعة؟',
-              a: 'يذكر دليل صناعي من طرف ثالث (DigitalApplied، 2025) تقليلًا في وقت المراجعة بنسبة 40٪ وانخفاضًا في أخطاء الإنتاج بنسبة 62٪؛ ولم تقِس PromptQuorum هذه الأرقام. وتفيد دراسات فرز الأخطاء بالذكاء الاصطناعي بتقليل وقت الفرز بنسبة 65٪ وتسريع وقت الحل بنسبة 30–40٪ مقارنةً بالأساليب اليدوية. وتفيد الفرق التي تحدد نطاق تعليمات المراجعة بالذكاء الاصطناعي على المنطق والأمان (لا الأسلوب) بمعدلات تصرف من المطورين نحو 52٪، بما يتوافق مع المراجعين البشر.',
+              a: 'يذكر دليل صناعي من طرف ثالث (DigitalApplied، 2025) تقليلًا في وقت المراجعة بنسبة 40٪ وانخفاضًا في أخطاء الإنتاج بنسبة 62٪؛ ولم تقِس PromptQuorum هذه الأرقام. وفي ورقة Khaleefulla et al. ‏(IJERT)، يذكر المؤلفون تقليلًا بنسبة 65٪ في متوسط وقت الفرز لنظام الفرز بالذكاء الاصطناعي الخاص بهم. وأيًّا كانت الأداة، قِس نسبة تعليقات الذكاء الاصطناعي التي يتصرف المطورون بناءً عليها قبل ضبط نطاق التعليمة وبعده.',
             },
             {
               q: 'كيف تقارن مراجعة الكود بالذكاء الاصطناعي بالتحليل الثابت التقليدي (SAST)؟',
-              a: 'تضع تقديرات الأطراف الثالثة أداة SAST التقليدية القائمة على القواعد دون 20٪ في اكتشاف أخطاء وقت التشغيل المهمة، مع معدلات نتائج إيجابية كاذبة مرتفعة. وسجّل SAST المدعوم بالذكاء الاصطناعي 84–92/100 على الكود المولَّد بالذكاء الاصطناعي في مقارنة طرف ثالث لعام 2025، وتبلغ النماذج القائمة على المحوِّل دقة 94٪ في معايير تصنيف الأخطاء مقابل 65٪ للأساليب القائمة على القواعد (لم تقِس PromptQuorum أيًّا منها). الميزة الأساسية للذكاء الاصطناعي هي الاستدلال السياقي — إذ يقيّم كيف تتفاعل مسارات الكود بدلًا من مطابقة تواقيع ثغرات ثابتة.',
+              a: 'تعتمد أدوات SAST القائمة على القواعد على تواقيع ثغرات ثابتة وتميل إلى إنتاج نتائج إيجابية كاذبة كثيرة، بينما تضيف الأدوات المدعومة بالذكاء الاصطناعي استدلالًا سياقيًا: إذ تقيّم كيف تتفاعل مسارات الكود بدلًا من مطابقة التواقيع. وفي مقارنة طرف ثالث لعام 2025، سجّلت Snyk Code وSemgrep Enterprise وCodeQL درجات 84–92/100 على الكود المولَّد بالذكاء الاصطناعي (لم تقِسها PromptQuorum). والنهجان متكاملان.',
             },
             {
               q: 'هل مراجعة الكود بالذكاء الاصطناعي متوافقة مع GDPR للفرق الأوروبية؟',
@@ -2404,8 +2406,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'نعم — للمنطق المعقد ذي الفروع الشرطية المتعددة، تطلب صياغة سلسلة التفكير (CoT) من النموذج تتبع تدفق البيانات عبر كل مسار تنفيذ قبل توليد النتائج. هذا يكشف أخطاء المنطق التي تفوتها مطابقة الأنماط، لأن النموذج يجب أن ينمذج صراحةً كل مسار قد تسلكه قيمة null أو نوع إدخال غير متوقع عبر الدالة — بدلًا من مطابقة الكود مع قوالب الأخطاء الشائعة. وتكون CoT أكثر قيمة للدوال الحساسة أمنيًا ولإدارة الحالة المعقدة؛ وهي تضيف زمن استجابة وغير ضرورية للدوال المساعدة البسيطة.',
             },
             {
-              q: 'ما نسبة تعليقات مراجعة الكود بالذكاء الاصطناعي المفيدة فعليًا؟',
-              a: 'وجد تحليل صناعي منشور لـ 1,247 تعليقًا من مراجعة الذكاء الاصطناعي على 340 طلب سحب (لم تقِسه PromptQuorum) أن 14٪ فقط تناولت أخطاء المنطق ومشكلات الأمان — المشكلات التي تسبب حوادث الإنتاج — بينما تناولت 64٪ الأسلوب والتكرار وتغطية الاختبارات. الأدوات التي تقل نسبة تعليقاتها القابلة للتنفيذ عن 60٪ يشهد استخدامها انهيارًا بين المطورين إذ يبدأ المهندسون في تجاهل كل التعليقات. والتعليمات ذات النطاق المحدد التي تستثني صراحةً تعليقات الأسلوب هي الرافعة الرئيسية لرفع نسبة التعليقات القابلة للتنفيذ.',
+              q: 'ما حصة تعليقات مراجعة الكود بالذكاء الاصطناعي المفيدة فعليًا؟',
+              a: 'لم نتمكن من تأكيد رقم عام موثَّق، وتختلف الحصة باختلاف الأداة والتعليمة وقاعدة الكود، لذا قِسها: احسب نسبة تعليقات الذكاء الاصطناعي التي يتصرف المطورون بناءً عليها على مدى شهر. إذا كان معظم التعليقات يُتجاهل، فضيّق النطاق — استثنِ تعليقات الأسلوب صراحةً واطلب نتائج المنطق والأمان والأداء فقط — ثم أعد القياس.',
             },
             {
               q: 'ما نموذج الذكاء الاصطناعي الأفضل لمراجعة الكود؟',
@@ -2421,11 +2423,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'هل تستطيع مراجعة الكود بالذكاء الاصطناعي اكتشاف ثغرات الأمان بشكل أفضل من أدوات SAST المتخصصة؟',
-              a: 'في مقارنات الأطراف الثالثة، سجّلت أدوات SAST المدعومة بالذكاء الاصطناعي (Snyk Code وSemgrep Enterprise وCodeQL) درجات 84–92/100 على الكود المولَّد بالذكاء الاصطناعي، مقارنةً بدقة 65٪ للتحليل الثابت القائم على القواعد. ويظل SAST التقليدي أسرع في الفحص عالي الحجم لقواعد الكود الكبيرة لأن الذكاء الاصطناعي يتطلب حوسبة أكثر لكل طلب سحب. أفضل ممارسة: استخدم SAST خفيفًا والتدقيق (linting) للسرعة، وكمّل بمراجعة الذكاء الاصطناعي للتحليل الأمني العميق في التغييرات عالية المخاطر (المصادقة والمدفوعات والبنية التحتية).',
+              a: 'في مقارنات الأطراف الثالثة، سجّلت أدوات SAST المدعومة بالذكاء الاصطناعي (Snyk Code وSemgrep Enterprise وCodeQL) درجات 84–92/100 على الكود المولَّد بالذكاء الاصطناعي في مقارنة طرف ثالث لعام 2025 (لم تقِسها PromptQuorum)، ويظل التحليل الثابت القائم على القواعد مفيدًا كبوابة دمج سريعة. ويظل SAST التقليدي أسرع في الفحص عالي الحجم لقواعد الكود الكبيرة لأن الذكاء الاصطناعي يتطلب حوسبة أكثر لكل طلب سحب. أفضل ممارسة: استخدم SAST خفيفًا والتدقيق (linting) للسرعة، وكمّل بمراجعة الذكاء الاصطناعي للتحليل الأمني العميق في التغييرات عالية المخاطر (المصادقة والمدفوعات والبنية التحتية).',
             },
             {
               q: 'هل يمكنني تشغيل مراجعة الكود بالذكاء الاصطناعي محليًا لكود خاص تمامًا؟',
-              a: 'نعم. يعمل Devstral Small 24B (من Mistral AI، ذاكرة RAM بسعة 16 GB) وLlama 4 Scout (~55 GB من VRAM، سياق 10 ملايين) كليًا داخل المؤسسة عبر Ollama. لا يُرسَل أي كود إلى واجهات API خارجية، مما يزيل خطوة المعالجة لدى طرف ثالث التي كان على DPIA أن يغطيها لولا ذلك. الجودة أدنى من النماذج السحابية الحدودية في التحليل الأمني المعقد لكنها كافية لمعظم المراجعات على مستوى طلب السحب.',
+              a: 'نعم. يعمل Devstral Small 24B (من Mistral AI، ذاكرة RAM بسعة 16 GB) وLlama 4 Scout (~55 GB من VRAM، سياق 10 ملايين) كليًا داخل المؤسسة عبر Ollama. يعمل الاستدلال على عتادك، فلا يُرسَل الكود إلى مراجع سحابي؛ وقد يزيل ذلك خطوة المعالجة لدى طرف ثالث التي كان على DPIA أن يغطيها لولا ذلك، لكن تحقق من سلوك تنزيل النماذج وتحديثها مع فريق الأمن لديك. الجودة أدنى من النماذج السحابية الحدودية في التحليل الأمني المعقد لكنها كافية لمعظم المراجعات على مستوى طلب السحب.',
             },
             {
               q: 'ما هي أفضل أداة لمراجعة الكود بالذكاء الاصطناعي للفرق الصغيرة (أقل من 10 مطورين)؟',
@@ -2449,6 +2451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[وثائق GitHub: مراجعة الكود في Copilot](https://docs.github.com/en/copilot/concepts/agents/code-review) — الخطط التي تشمل مراجعة الكود والفوترة بأرصدة الذكاء الاصطناعي',
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — دليل تقني للتعليمات ذات النطاق المحدد لتقليل النتائج الإيجابية الكاذبة وتحسين الإشارة',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — معيار من طرف ثالث لثلاث أدوات SAST على كود مولَّد بالذكاء الاصطناعي (مصدر الدرجات 92 / 87 / 84)',
+            '[Khaleefulla وSudeep وSavithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) — نتائج المؤلفين أنفسهم: أكثر من 85٪ دقة تصنيف و82٪ دقة أولوية وتقليل وقت الفرز بنسبة 65٪',
             '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — أرقام قطاعية: توفير 40٪ من الوقت و62٪ أقل أخطاء في الإنتاج',
             '**ملاحظة:** معدلات الاكتشاف أعلنها المزوِّدون ولم تقِسها PromptQuorum؛ والأسعار هي أسعار القائمة من صفحات المزوِّدين أعلاه. مراجعة الكود بالذكاء الاصطناعي سوق سريع التطور — تحقق من الأسعار الحالية ودعم المنصات على مواقع المزوِّدين قبل الشراء.',
           ],
@@ -2461,7 +2464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-pt.webp',
       title: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
-      intro: 'As ferramentas de revisão de código com IA detectaram 44–82% dos bugs inseridos no único teste comparativo público com método documentado — um benchmark de julho de 2025 executado pela Greptile com 50 bugs de cinco repositórios de código aberto — contra menos de 20% da análise estática baseada em regras, segundo estimativas de terceiros. Trate os números executados pelos fornecedores como indicativos: outros benchmarks publicados classificam as mesmas ferramentas de forma diferente. O desafio prático é a relação sinal/ruído: uma análise do setor publicada constatou que 64% dos comentários de revisão de IA tratam de estilo, e não de bugs de lógica. Prompts com escopo, que priorizam segurança e lógica sobre formatação, são a principal alavanca.',
+      intro: 'As ferramentas de revisão de código com IA detectaram 44–82% dos bugs inseridos em um benchmark de julho de 2025 executado pela Greptile com 50 bugs de cinco repositórios de código aberto. Trate os números executados pelos fornecedores como indicativos: a Greptile vende uma das ferramentas testadas e resultados independentes podem diferir. O desafio prático é a relação sinal/ruído: os revisores de IA podem enterrar descobertas de lógica e segurança sob comentários de estilo, o que ensina os desenvolvedores a ignorá-los. Prompts com escopo, que priorizam segurança e lógica sobre formatação, são a principal alavanca.',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -2520,11 +2523,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'Ferramentas de revisão de código com IA', description: 'Ferramentas de software automatizadas que analisam PRs de código e identificam bugs, vulnerabilidades de segurança e problemas de estilo' },
-          { '@type': 'Thing', name: 'Problema sinal/ruído', description: 'O desafio de que a maioria dos comentários de revisão de IA trata de problemas de estilo em vez de bugs de lógica, segundo uma análise do setor publicada' },
+          { '@type': 'Thing', name: 'Problema sinal/ruído', description: 'O desafio de que os comentários de revisão de código com IA podem ser dominados por problemas de estilo em vez de bugs de lógica' },
           { '@type': 'Thing', name: 'Prompt engineering para revisão de código', description: 'Técnicas para estruturar instruções de IA que priorizem descobertas de lógica e segurança sobre comentários de estilo' },
           { '@type': 'Thing', name: 'Prompting Chain-of-Thought', description: 'O método de pedir aos modelos de IA que rastreiem caminhos de execução passo a passo antes de identificar bugs' },
           { '@type': 'Thing', name: 'Automação de revisão de código', description: 'Integração de ferramentas de revisão de código com IA em pipelines CI/CD e fluxos de trabalho de pull requests' },
-          { '@type': 'Thing', name: 'Revisão de código com IA em conformidade com o GDPR', description: 'Abordagens para usar revisão de código com IA cumprindo os requisitos europeus de proteção de dados' },
+          { '@type': 'Thing', name: 'Proteção de dados na revisão de código com IA', description: 'Considerações para usar revisão de código com IA sob os requisitos europeus de proteção de dados' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -2545,11 +2548,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**Maior taxa de detecção no único teste público documentado:** Greptile com 82% (executado pelo fornecedor, julho de 2025, 50 bugs inseridos) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
+        '**Maior taxa de detecção no teste executado pela Greptile:** Greptile com 82% (executado pelo fornecedor, julho de 2025, 50 bugs inseridos) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
         '**Os modelos de preço diferem:** CodeRabbit $24 por usuário por mês (anual, Essentials); Greptile Pro $1 por crédito de revisão; Snyk Code Team $25 por mês para até 10 desenvolvedores',
         '**Opções gratuitas:** CodeRabbit em repositórios públicos; Greptile Starter para um desenvolvedor; Snyk Code Free (100 testes por mês)',
         '**Auto-hospedagem:** apenas em planos Enterprise na CodeRabbit (500+ assentos, segundo a documentação), na Greptile e na Qodo',
-        '**O problema do sinal:** uma análise do setor publicada constatou que 64% dos comentários de revisão de IA são ruído de estilo e 14% detectam bugs de lógica ou de segurança',
+        '**O problema do sinal:** os revisores de IA podem enterrar descobertas de lógica e segurança sob comentários de estilo — meça a parcela de comentários que seus desenvolvedores acatam',
         '**A solução:** prompts com escopo (framework de 5 partes) deslocam os comentários para lógica e segurança',
       ],
       faqSchema: {
@@ -2560,12 +2563,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Qual é a ferramenta de revisão de código com IA mais precisa em 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Nenhuma ferramenta é a mais precisa em todos os testes. No único benchmark comparativo público com método documentado — executado pela Greptile em julho de 2025 com 50 bugs de cinco repositórios de código aberto — a Greptile detectou 82%, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44% (configurações padrão, planos hospedados). Como a Greptile vende uma das ferramentas testadas e outros benchmarks publicados classificam as ferramentas de forma diferente, use os números como ponto de partida e faça um teste de duas semanas com seus próprios pull requests. Para varredura de segurança, o Snyk Code é outra categoria: um scanner que complementa um revisor de pull requests.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Nenhuma ferramenta é a mais precisa em todos os testes. Em um benchmark de julho de 2025 executado pela Greptile com 50 bugs de cinco repositórios de código aberto, a Greptile detectou 82%, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44% (configurações padrão, planos hospedados). Como a Greptile vende uma das ferramentas testadas e resultados independentes podem diferir, use os números como ponto de partida e faça um teste de duas semanas com seus próprios pull requests. Para varredura de segurança, o Snyk Code é outra categoria: um scanner que complementa um revisor de pull requests.' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit vs Greptile: qual devo escolher?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Escolha a Greptile se detectar bugs profundos é o mais importante e você consegue orçar por revisão: ela detectou 82% contra 44% do CodeRabbit no próprio teste da Greptile de julho de 2025, e o Pro não tem taxa por assento (créditos pré-pagos a $1 cada; uma revisão Base usa 1 crédito). Escolha o CodeRabbit se você prefere preço por assento ($24 por usuário por mês no Essentials com cobrança anual, $30 mensal) e revisões gratuitas em repositórios públicos. Ambos oferecem teste de 14 dias e reservam a auto-hospedagem para o Enterprise. Se o CodeRabbit vale a pena depende do volume: um preço fixo por assento é mais fácil de prever para equipes que abrem muitos pull requests, enquanto equipes de baixo volume podem pagar menos por revisão.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Escolha a Greptile se a maior taxa de detecção de bugs inseridos é o mais importante e você consegue orçar por revisão: ela detectou 82% contra 44% do CodeRabbit no próprio teste da Greptile de julho de 2025, e o Pro não tem taxa por assento (créditos pré-pagos a $1 cada; uma revisão Base usa 1 crédito). Escolha o CodeRabbit se você prefere preço por assento ($24 por usuário por mês no Essentials com cobrança anual, $30 mensal) e revisões gratuitas em repositórios públicos. Ambos oferecem teste de 14 dias e reservam a auto-hospedagem para o Enterprise. Se o CodeRabbit vale a pena depende do volume: um preço fixo por assento é mais fácil de prever para equipes que abrem muitos pull requests, enquanto equipes de baixo volume podem pagar menos por revisão.' },
           },
           {
             '@type': 'Question',
@@ -2595,12 +2598,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Quanto a revisão de código com IA reduz o tempo de revisão?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Um guia do setor de terceiros (DigitalApplied, 2025) relata 40% menos tempo de revisão e 62% menos bugs em produção; a PromptQuorum não mediu esses números. Estudos sobre triagem de bugs com IA relatam 65% menos tempo de triagem e tempo de resolução 30–40% mais rápido do que os métodos manuais. Equipes que delimitam os prompts de revisão de IA a lógica e segurança (não estilo) relatam taxas de ação do desenvolvedor de cerca de 52%, em linha com os revisores humanos.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Um guia do setor de terceiros (DigitalApplied, 2025) relata 40% menos tempo de revisão e 62% menos bugs em produção; a PromptQuorum não mediu esses números. No artigo de Khaleefulla et al. (IJERT), os autores relatam uma redução de 65% no tempo médio de triagem para o sistema de triagem com IA deles. Seja qual for a ferramenta, meça a parcela de comentários de IA que seus desenvolvedores acatam antes e depois de ajustar o escopo do prompt.' },
           },
           {
             '@type': 'Question',
             name: 'Como a revisão de código com IA se compara à análise estática tradicional (SAST)?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Estimativas de terceiros situam o SAST tradicional baseado em regras abaixo de 20% em bugs relevantes de tempo de execução, com altas taxas de falsos positivos. O SAST impulsionado por IA obteve 84–92/100 em código gerado por IA em uma comparação de terceiros de 2025, e modelos baseados em transformadores alcançam 94% de precisão em benchmarks de classificação de bugs vs. 65% para métodos baseados em regras (nenhum medido pela PromptQuorum). A principal vantagem da IA é o raciocínio contextual — ela avalia como os caminhos do código interagem em vez de comparar com assinaturas fixas de vulnerabilidades.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'O SAST baseado em regras aplica assinaturas fixas de vulnerabilidades e tende a produzir muitos falsos positivos, enquanto as ferramentas impulsionadas por IA acrescentam raciocínio contextual: elas avaliam como os caminhos do código interagem em vez de comparar com assinaturas. Em uma comparação de terceiros de 2025, Snyk Code, Semgrep Enterprise e CodeQL obtiveram 84–92/100 em código gerado por IA (não medido pela PromptQuorum). As duas abordagens são complementares.' },
           },
           {
             '@type': 'Question',
@@ -2614,8 +2617,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Que porcentagem dos comentários de revisão de código com IA é realmente útil?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Uma análise do setor publicada, com 1,247 comentários de revisão de IA em 340 PRs (não medida pela PromptQuorum), constatou que apenas 14% tratavam de bugs de lógica e problemas de segurança — os problemas que causam incidentes em produção — enquanto 64% tratavam de estilo, duplicação e cobertura de testes. Ferramentas com menos de 60% de feedback acionável veem a adoção pelos desenvolvedores desabar, pois os engenheiros passam a ignorar todos os comentários. Prompts com escopo que excluem explicitamente comentários de estilo são a principal alavanca para aumentar a parcela de comentários acionáveis.' },
+            name: 'Que parcela dos comentários de revisão de código com IA é realmente útil?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Não conseguimos confirmar um número público verificado, e a parcela varia conforme a ferramenta, o prompt e a base de código, então meça: conte a parcela de comentários de IA que seus desenvolvedores acatam ao longo de um mês. Se a maioria dos comentários é ignorada, restrinja o escopo — exclua explicitamente comentários de estilo e peça apenas descobertas de lógica, segurança e desempenho — e meça de novo.' },
           },
           {
             '@type': 'Question',
@@ -2635,12 +2638,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'A revisão de código com IA pode detectar vulnerabilidades de segurança melhor que ferramentas SAST dedicadas?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Em comparações de terceiros, as ferramentas SAST impulsionadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtiveram 84–92/100 em código gerado por IA, contra 65% de precisão da análise estática baseada em regras. O SAST tradicional ainda é mais rápido para verificações de alto volume em bases de código grandes, porque a IA exige mais computação por PR. Melhor prática: use SAST leve e linting para velocidade e complemente com revisão de IA para análise de segurança profunda em mudanças de alto risco (autenticação, pagamentos, infraestrutura).' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Em comparações de terceiros, as ferramentas SAST impulsionadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtiveram 84–92/100 em código gerado por IA em uma comparação de terceiros de 2025 (não medida pela PromptQuorum), e a análise estática baseada em regras continua útil como um portão de merge rápido. O SAST tradicional ainda é mais rápido para verificações de alto volume em bases de código grandes, porque a IA exige mais computação por PR. Melhor prática: use SAST leve e linting para velocidade e complemente com revisão de IA para análise de segurança profunda em mudanças de alto risco (autenticação, pagamentos, infraestrutura).' },
           },
           {
             '@type': 'Question',
             name: 'Posso executar a revisão de código com IA localmente para código totalmente privado?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sim. Devstral Small 24B (Mistral AI, 16 GB de RAM) e Llama 4 Scout (~55 GB de VRAM, contexto de 10M) executam totalmente on-premises via Ollama. Nenhum código é transmitido a APIs externas, o que elimina a etapa de processamento por terceiros que uma DPIA precisaria cobrir. A qualidade é inferior à dos modelos frontier na nuvem em análise de segurança complexa, mas suficiente para a maioria das revisões em nível de PR.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Sim. Devstral Small 24B (Mistral AI, 16 GB de RAM) e Llama 4 Scout (~55 GB de VRAM, contexto de 10M) executam totalmente on-premises via Ollama. A inferência roda no seu hardware, então o código não é enviado a um revisor na nuvem; isso pode eliminar a etapa de processamento por terceiros que uma DPIA precisaria cobrir, mas verifique o comportamento de download e atualização de modelos com sua equipe de segurança. A qualidade é inferior à dos modelos frontier na nuvem em análise de segurança complexa, mas suficiente para a maioria das revisões em nível de PR.' },
           },
           {
             '@type': 'Question',
@@ -2669,11 +2672,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Pontos principais',
           isTldr: true,
           items: [
-            'No único teste comparativo público com método documentado (executado pela Greptile, julho de 2025, 50 bugs inseridos), os revisores de IA detectaram 44–82%: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — executado pelo fornecedor, portanto apenas indicativo',
+            'Em um benchmark de julho de 2025 executado pela Greptile (50 bugs inseridos), os revisores de IA detectaram 44–82%: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — executado pelo fornecedor, portanto apenas indicativo',
             'Os modelos de preço diferem: o CodeRabbit cobra por assento ($24–$72 por usuário por mês com cobrança anual), o Greptile Pro cobra por crédito de revisão ($1 cada, sem taxa por assento) e o Snyk Code Team custa $25 fixos por mês para até 10 desenvolvedores',
             'O CodeRabbit revisa repositórios públicos gratuitamente e o Greptile Starter é gratuito para um desenvolvedor; a Qodo tem teste de 14 dias, mas nenhum plano gratuito permanente',
             'A auto-hospedagem é um recurso de plano Enterprise no CodeRabbit (oferecido a clientes com 500+ assentos, segundo sua documentação), na Greptile e na Qodo; o CodeRabbit auto-hospedado ainda envia código ao provedor de LLM que você configurar',
-            'Uma análise do setor publicada constatou que 64% dos comentários de revisão de IA tratam de estilo e duplicação e apenas 14% de bugs de lógica e segurança — são necessários prompts com escopo para inverter essa proporção',
+            'Os revisores de IA podem enterrar descobertas de lógica e segurança sob comentários de estilo; nenhum conjunto de dados público que pudéssemos verificar quantifica a proporção, então meça a parcela de comentários que os desenvolvedores acatam e use prompts com escopo para elevá-la',
             'O Snyk Code é um scanner de segurança (92/100 em uma comparação de terceiros de 2025 entre três ferramentas de segurança), não um revisor geral de pull requests — execute-o ao lado de um revisor de IA',
             'O GDPR pode exigir uma Avaliação de Impacto sobre a Proteção de Dados (Artigo 35) antes de a revisão de código com IA na nuvem processar código-fonte que envolva dados pessoais — consulte seu encarregado de proteção de dados',
             'Modelos frontier na nuvem oferecem janelas de contexto de cerca de 1M de tokens (aproximadamente 75.000–100.000 linhas de código, uma estimativa); o Llama 4 Scout de pesos abertos suporta 10M de tokens localmente',
@@ -2697,7 +2700,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'Ferramentas de revisão de código com IA: qual usar',
           content: [
-            'No único teste comparativo público com método documentado, a Greptile detectou 82% de 50 bugs inseridos, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44% (benchmark executado pela Greptile, julho de 2025, configurações padrão, planos hospedados). A Greptile vende uma das ferramentas testadas e outros benchmarks publicados classificam as mesmas ferramentas em outra ordem, então leia os números como indicativos, e não como um veredito.',
+            'Em um benchmark de julho de 2025 executado pela Greptile com 50 bugs inseridos, a Greptile detectou 82%, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44% (configurações padrão, planos hospedados). A Greptile vende uma das ferramentas testadas e resultados independentes podem diferir, então leia os números como indicativos, e não como um veredito.',
             'O CodeRabbit oferece revisões gratuitas em repositórios públicos; repositórios privados exigem Essentials ($24 por usuário por mês com cobrança anual, $30 mensal), Team ($48 anual, $60 mensal) ou Advanced ($72), com Enterprise sob consulta. A auto-hospedagem é exclusiva do Enterprise, e a documentação de auto-hospedagem afirma que ela é oferecida a clientes com 500+ assentos.',
             'O Greptile Starter é gratuito para um desenvolvedor ativo (50 créditos por mês). O Pro não tem taxa por assento: os créditos custam $1 cada, e uma revisão Base usa 1 crédito, uma revisão Plus 3 e uma revisão Apex 10. O Qodo Pro Team lista $30 com créditos compartilhados para até 30 usuários e não tem plano gratuito permanente. A revisão de código do GitHub Copilot está disponível em geral nos planos Copilot Pro, Pro+, Max, Business e Enterprise (não no Copilot Free) e consome créditos de IA — o GitHub documenta médias de cerca de $0.25 (Lite), $1.50 (Balanced) e $10 (Max) por revisão.',
           ],
@@ -2709,11 +2712,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Ferramenta': '[CodeRabbit](https://www.coderabbit.ai)', 'Taxa de detecção (teste do fornecedor)': '44%', 'Plataformas Git': 'GitHub, GitLab', 'Auto-hospedagem': 'Enterprise (500+ assentos)', 'Preço de tabela': '$24 por usuário por mês (anual)' },
             { 'Ferramenta': '[Qodo](https://www.qodo.ai)', 'Taxa de detecção (teste do fornecedor)': 'Não testada', 'Plataformas Git': 'GitHub, GitLab, Bitbucket, Azure', 'Auto-hospedagem': 'Enterprise (on-premises)', 'Preço de tabela': 'Pro Team a partir de $30 (compartilhado)' },
             { 'Ferramenta': '[Snyk Code](https://snyk.io)', 'Taxa de detecção (teste do fornecedor)': 'Não testado', 'Plataformas Git': 'Via integrações com SCM', 'Auto-hospedagem': 'Não informado', 'Preço de tabela': 'Gratuito; Team a partir de $25 (10 devs)' },
-            { 'Ferramenta': 'SAST tradicional', 'Taxa de detecção (teste do fornecedor)': 'Menos de 20%*', 'Plataformas Git': 'Varia', 'Auto-hospedagem': 'Varia', 'Preço de tabela': 'Varia' },
+            { 'Ferramenta': 'SAST tradicional', 'Taxa de detecção (teste do fornecedor)': 'Não testado', 'Plataformas Git': 'Varia', 'Auto-hospedagem': 'Varia', 'Preço de tabela': 'Varia' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Origem dos dados', text: '*Estimativa de terceiros, não medida pela PromptQuorum. Taxas de detecção: benchmark executado pela Greptile, julho de 2025. Preços de tabela das páginas de preços dos fornecedores; os planos mudam com frequência, então confirme antes de comprar.' },
+            { type: 'info', label: 'Origem dos dados', text: 'Taxas de detecção: benchmark executado pela Greptile, julho de 2025, não medido pela PromptQuorum. Preços de tabela das páginas de preços dos fornecedores; os planos mudam com frequência, então confirme antes de comprar.' },
           ],
           image: '/images/code-review-tool-comparison-pt.svg',
           imageCaption: 'Comparação de recursos de PromptQuorum, GitHub Copilot, ChatGPT e Cursor: o PromptQuorum envia um prompt a vários modelos ao mesmo tempo, de modo que uma única revisão pode ser conferida entre modelos.',
@@ -2784,10 +2787,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Por que a relação sinal/ruído é um problema na revisão de código com IA?',
           content: [
             'As ferramentas de revisão de código com IA comentam problemas de estilo com muito mais confiabilidade do que detectam bugs críticos de tempo de execução (44–82% no teste executado por fornecedor acima) — criando um problema de volume de comentários que pode provocar o colapso da adoção pelos desenvolvedores.',
-            'Uma análise do setor publicada, com 1,247 comentários de revisão de IA em 340 pull requests (não medida pela PromptQuorum), constatou: ~64% de todos os comentários de revisão de IA tratavam de estilo, duplicação e cobertura de testes. Apenas ~14% dos comentários tratavam de bugs de lógica e problemas de segurança — os problemas que causam incidentes em produção. Ferramentas com menos de 60% de feedback acionável veem a adoção pelos desenvolvedores desabar, pois os engenheiros começam a ignorar todo o feedback, incluindo as descobertas críticas.',
-            'A causa raiz são os dados de treinamento: os modelos de IA são treinados em bases de código onde as violações de estilo superam amplamente os erros de lógica. O modelo aprende a mostrar o que vê com mais frequência — não o que mais importa.',
-            'A mesma análise relata que um sistema de revisão de IA ajustado, com prompt engineering que instrui especificamente o modelo a priorizar lógica e segurança sobre estilo, atingiu uma taxa de ação do desenvolvedor de 52% — em linha com a taxa de ação de 50% das revisões de código lideradas por humanos em mais de 10.000 comentários analisados.',
-            '**Em uma sentença:** O problema sinal/ruído significa que as ferramentas de revisão de código com IA geram 64% de comentários de estilo, mas apenas 14% de descobertas acionáveis de segurança/lógica — exigindo prompts com escopo para inverter essa proporção e atingir adoção superior a 50% pelos desenvolvedores.',
+            'Guias do setor costumam relatar que os revisores de IA produzem muitos comentários de estilo, duplicação e cobertura de testes em relação a descobertas de lógica e segurança. Não conseguimos verificar um conjunto de dados público que quantifique essa proporção, então meça você mesmo: a parcela de comentários de IA que seus desenvolvedores acatam é o número que importa. Ferramentas cujos comentários são em sua maioria ignorados ensinam os engenheiros a ignorar todo o feedback, incluindo as descobertas críticas.',
+            'Uma causa provável são os dados de treinamento: os modelos veem muito mais variação de estilo do que erros de lógica nas bases de código com as quais aprendem, então mostram o que é frequente, não o que mais importa.',
+            'O prompt engineering que instrui o modelo a priorizar lógica e segurança sobre estilo é a principal alavanca para mudar essa mistura; ajuste o prompt e meça de novo a taxa de ação.',
+            '**Em uma sentença:** As ferramentas de revisão de código com IA podem gerar majoritariamente comentários de estilo — prompts com escopo e uma taxa de ação acompanhada mantêm visíveis as descobertas de lógica e segurança.',
           ],
           callouts: [
             { type: 'warning', label: 'Aviso', text: 'Equipes que implantam revisão de código com IA sem delimitar os prompts correm o risco de colapso da adoção pelos desenvolvedores. Os engenheiros começam a ignorar TODOS os comentários — incluindo as descobertas críticas de segurança — quando a maioria dos comentários é ruído. Sempre configure prioridades de revisão explícitas antes de implantar para a equipe.' },
@@ -2838,7 +2841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            'O prompt estruturado produz um relatório de segurança pronto para triagem. O prompt aberto produz 12 comentários sobre nomes de variáveis e uma descoberta de segurança enterrada que o engenheiro nunca lê.',
+            'O prompt estruturado produz um relatório de segurança pronto para triagem. Por exemplo, o prompt aberto pode devolver uma dúzia de comentários sobre nomes de variáveis e uma descoberta de segurança enterrada que o engenheiro nunca lê.',
           ],
         },
 
@@ -2854,8 +2857,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: 'Como realizar revisão de código com IA focada em segurança?',
           content: [
-            'As ferramentas SAST (Static Application Security Testing) impulsionadas por IA, treinadas em conjuntos de dados de vulnerabilidades reais, alcançam pontuações de detecção de bugs de 84–92 de 100 em código gerado por IA — comparado a 65% de precisão para métodos baseados em regras e 94% para modelos baseados em transformadores em benchmarks de aprendizado profundo de terceiros (não medidos pela PromptQuorum).',
-            'Modelos baseados em transformadores — a arquitetura por trás dos grandes modelos de linguagem atuais e das ferramentas dedicadas de segurança de código — alcançam 94% de precisão em benchmarks de classificação de bugs, com taxas de falsos positivos muito baixas. Isso representa um avanço mensurável sobre as abordagens de redes neurais convolucionais (CNN) e recorrentes (RNN), com 89%, a análise estática, com 72%, e os métodos baseados em regras, com 65%.',
+            'As ferramentas SAST (Static Application Security Testing) impulsionadas por IA, treinadas em conjuntos de dados de vulnerabilidades reais, obtiveram pontuações de 84–92 de 100 em código gerado por IA em uma comparação de terceiros de 2025 (não medida pela PromptQuorum).',
+            'A análise estática baseada em regras aplica padrões fixos, enquanto as ferramentas assistidas por IA também raciocinam sobre como os caminhos do código interagem. As duas abordagens são complementares, e por isso muitas equipes usam um mecanismo de regras como portão de merge e um revisor ou scanner de IA ao lado dele.',
             'Três ferramentas focadas em segurança, pontuadas em uma comparação de terceiros de 2025 com código gerado por IA (sanj.dev; não medidas pela PromptQuorum):',
           ],
           columns: ['Ferramenta', 'Pontuação (terceiros)', 'Falsos positivos', 'Ideal para'],
@@ -2879,12 +2882,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: 'O que é triagem de bugs com IA?',
           content: [
-            'A triagem de bugs impulsionada por IA alcança 85–90% de precisão na classificação de gravidade — comparado a 60–70% para métodos manuais — enquanto reduz o tempo de triagem em 65% e corta os falsos positivos em até 60%.',
-            'A triagem de bugs com IA é a etapa posterior à detecção: classificar bugs por gravidade, prever o impacto em produção e encaminhar problemas ao engenheiro correto. Um estudo de Khaleefulla et al. demonstrou que sistemas de triagem impulsionados por IA alcançaram mais de 85% de precisão na classificação de bugs e 82% de precisão na previsão de prioridade — reduzindo o tempo médio de triagem em 65%.',
-            'O tempo de resolução (TTR) melhora em 30–40% em comparação com os métodos manuais, com o ganho principal vindo da classificação e do encaminhamento mais rápidos, e não de uma correção mais rápida. Uma classificação de gravidade com 85–90% de precisão significa que os engenheiros gastam bem menos tempo debatendo prioridade e mais tempo resolvendo os problemas que importam.',
+            'A triagem de bugs impulsionada por IA classifica bugs por gravidade, prevê o impacto em produção e encaminha problemas ao engenheiro correto, reduzindo o tempo que os engenheiros gastam debatendo prioridade.',
+            'A triagem de bugs com IA é a etapa posterior à detecção. Em um artigo de Khaleefulla, Sudeep e Savithri ([IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization)), os autores relatam mais de 85% de precisão na classificação de bugs, 82% de precisão na previsão de prioridade e uma redução de 65% no tempo médio de triagem para o sistema deles. Esses são resultados dos próprios autores, não medidos pela PromptQuorum.',
+            'O ganho vem principalmente da classificação e do encaminhamento mais rápidos, e não de uma correção mais rápida. As convenções de gravidade diferem entre projetos, então a precisão relatada para um sistema pode não se aplicar ao seu; faça um piloto no seu próprio backlog antes de confiar nela.',
           ],
           callouts: [
-            { type: 'info', label: 'Você sabia?', text: 'A triagem de bugs com IA alcança 85-90% de precisão na classificação de gravidade vs. 60-70% para triagem manual. A principal economia de tempo não está na correção mais rápida — está na classificação e no encaminhamento mais rápidos. Os engenheiros dedicam menos tempo debatendo prioridade e mais tempo resolvendo os problemas que importam.' },
+            { type: 'info', label: 'Você sabia?', text: 'A economia de tempo na triagem com IA não está na correção mais rápida — está na classificação e no encaminhamento mais rápidos. Os engenheiros dedicam menos tempo debatendo prioridade e mais tempo resolvendo os problemas que importam.' },
           ],
         },
 
@@ -2907,9 +2910,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: 'Como as regulamentações regionais afetam a revisão de código com IA?',
           content: [
-            'Empresas europeias que enviam código-fonte a APIs de IA externas podem precisar de uma Avaliação de Impacto sobre a Proteção de Dados (DPIA) nos termos do Artigo 35 do GDPR antes da implantação, em especial quando o código ou os dados que ele toca envolvem o tratamento de dados pessoais. O GDPR e a Lei de IA da UE podem se aplicar ao mesmo tempo à revisão de código assistida por IA quando dados pessoais são tratados, então envolva seu encarregado de proteção de dados antes da implantação. As consequências são reais: as multas do GDPR em 2024 incluíram uma penalidade de €30,5 milhões contra a Clearview AI.',
-            'Para equipes da UE, o CodeRabbit oferece implantação auto-hospedada no plano Enterprise (500+ assentos, segundo sua documentação), embora o agente auto-hospedado ainda envie prompts e código ao provedor de LLM que você configurar. Modelos de pesos abertos, incluindo modelos da Mistral AI (França), podem ser executados localmente via Ollama por equipes que exigem zero saída de dados para a nuvem.',
-            'Equipes de desenvolvimento chinesas usam modelos de pesos abertos como Qwen3 (Alibaba) e DeepSeek como modelos de revisão de código implantáveis localmente, ambos compatíveis com comentários de código e documentação em chinês — essencial para as bases de código com idiomas mistos comuns em ambientes empresariais chineses. Empresas japonesas sob as diretrizes de governança de dados do METI implantam fluxos de trabalho de revisão de código baseados em LLaMA 4 Scout ou LLaMA 3.3 localmente via Ollama — o LLaMA 4 Scout requer ~55 GB de VRAM para inferência, sem chamadas de API externas.',
+            'Empresas europeias que enviam código-fonte a APIs de IA externas podem precisar de uma Avaliação de Impacto sobre a Proteção de Dados (DPIA) nos termos do Artigo 35 do GDPR antes da implantação, em especial quando o código ou os dados que ele toca envolvem o tratamento de dados pessoais. O GDPR e a Lei de IA da UE podem se aplicar ao mesmo tempo à revisão de código assistida por IA quando dados pessoais são tratados, então envolva seu encarregado de proteção de dados antes da implantação. Esta é uma informação geral, não aconselhamento jurídico; confirme os requisitos com seu encarregado de proteção de dados ou com um advogado.',
+            'Para equipes da UE, o CodeRabbit oferece implantação auto-hospedada no plano Enterprise (500+ assentos, segundo sua documentação), embora o agente auto-hospedado ainda envie prompts e código ao provedor de LLM que você configurar. Modelos de pesos abertos, incluindo modelos da Mistral AI (França), podem ser executados localmente via Ollama por equipes que precisam manter o código fora de nuvens de terceiros.',
+            'Equipes na China podem usar modelos de pesos abertos como Qwen3 (Alibaba) e DeepSeek como modelos de revisão de código implantáveis localmente; ambos são compatíveis com comentários de código e documentação em chinês, o que importa para bases de código com idiomas mistos. Equipes no Japão que atuam sob as diretrizes de governança de dados do METI podem executar fluxos de trabalho de revisão baseados em Llama 4 Scout ou Llama 3.3 localmente via Ollama — o Llama 4 Scout precisa de aproximadamente 55 GB de VRAM para inferência —, assim o código não chega a APIs externas.',
           ],
         },
 
@@ -2945,12 +2948,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: 'Implantar revisão de IA com configurações padrão e sem personalização de prompts.',
-              problem: 'A revisão de IA padrão pode produzir majoritariamente comentários de estilo (64% em uma análise do setor publicada). Os desenvolvedores passam a ignorar todos os comentários. As descobertas críticas de segurança ficam enterradas.',
+              problem: 'A revisão de IA padrão pode produzir majoritariamente comentários de estilo. Os desenvolvedores passam a ignorar todos os comentários. As descobertas críticas de segurança ficam enterradas.',
               fix: 'Use o framework de prompts de 5 partes. Exclua explicitamente estilo/nomes. Delimite para lógica, segurança e desempenho.',
             },
             {
               mistake: 'Usar a revisão de código com IA como única camada de revisão.',
-              problem: 'Os revisores de IA detectaram 44–82% dos bugs inseridos no único teste público documentado — não 100%. Problemas específicos do contexto (implicações de escala, convenções da equipe, erros de lógica de negócios) exigem julgamento humano.',
+              problem: 'Os revisores de IA detectaram 44–82% dos bugs inseridos no benchmark de julho de 2025 da Greptile — não 100%. Problemas específicos do contexto (implicações de escala, convenções da equipe, erros de lógica de negócios) exigem julgamento humano.',
               fix: 'A IA é o filtro de primeira passagem. Os revisores humanos se concentram em arquitetura, lógica de negócios e nos bugs que a IA perde.',
             },
             {
@@ -2972,11 +2975,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'Qual é a ferramenta de revisão de código com IA mais precisa em 2026?',
-              a: 'Nenhuma ferramenta é a mais precisa em todos os testes. No único benchmark comparativo público com método documentado — executado pela Greptile em julho de 2025 com 50 bugs de cinco repositórios de código aberto — a Greptile detectou 82%, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44% (configurações padrão, planos hospedados). Como a Greptile vende uma das ferramentas testadas e outros benchmarks publicados classificam as ferramentas de forma diferente, use os números como ponto de partida e faça um teste de duas semanas com seus próprios pull requests. Para varredura de segurança, o Snyk Code é outra categoria: um scanner que complementa um revisor de pull requests.',
+              a: 'Nenhuma ferramenta é a mais precisa em todos os testes. Em um benchmark de julho de 2025 executado pela Greptile com 50 bugs de cinco repositórios de código aberto, a Greptile detectou 82%, o Cursor Bugbot 58%, o GitHub Copilot 54% e o CodeRabbit 44% (configurações padrão, planos hospedados). Como a Greptile vende uma das ferramentas testadas e resultados independentes podem diferir, use os números como ponto de partida e faça um teste de duas semanas com seus próprios pull requests. Para varredura de segurança, o Snyk Code é outra categoria: um scanner que complementa um revisor de pull requests.',
             },
             {
               q: 'CodeRabbit vs Greptile: qual devo escolher?',
-              a: 'Escolha a Greptile se detectar bugs profundos é o mais importante e você consegue orçar por revisão: ela detectou 82% contra 44% do CodeRabbit no próprio teste da Greptile de julho de 2025, e o Pro não tem taxa por assento (créditos pré-pagos a $1 cada; uma revisão Base usa 1 crédito). Escolha o CodeRabbit se você prefere preço por assento ($24 por usuário por mês no Essentials com cobrança anual, $30 mensal) e revisões gratuitas em repositórios públicos. Ambos oferecem teste de 14 dias e reservam a auto-hospedagem para o Enterprise. Se o CodeRabbit vale a pena depende do volume: um preço fixo por assento é mais fácil de prever para equipes que abrem muitos pull requests, enquanto equipes de baixo volume podem pagar menos por revisão.',
+              a: 'Escolha a Greptile se a maior taxa de detecção de bugs inseridos é o mais importante e você consegue orçar por revisão: ela detectou 82% contra 44% do CodeRabbit no próprio teste da Greptile de julho de 2025, e o Pro não tem taxa por assento (créditos pré-pagos a $1 cada; uma revisão Base usa 1 crédito). Escolha o CodeRabbit se você prefere preço por assento ($24 por usuário por mês no Essentials com cobrança anual, $30 mensal) e revisões gratuitas em repositórios públicos. Ambos oferecem teste de 14 dias e reservam a auto-hospedagem para o Enterprise. Se o CodeRabbit vale a pena depende do volume: um preço fixo por assento é mais fácil de prever para equipes que abrem muitos pull requests, enquanto equipes de baixo volume podem pagar menos por revisão.',
             },
             {
               q: 'CodeRabbit e Greptile são gratuitos?',
@@ -3000,11 +3003,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Quanto a revisão de código com IA reduz o tempo de revisão?',
-              a: 'Um guia do setor de terceiros (DigitalApplied, 2025) relata 40% menos tempo de revisão e 62% menos bugs em produção; a PromptQuorum não mediu esses números. Estudos sobre triagem de bugs com IA relatam 65% menos tempo de triagem e tempo de resolução 30–40% mais rápido do que os métodos manuais. Equipes que delimitam os prompts de revisão de IA a lógica e segurança (não estilo) relatam taxas de ação do desenvolvedor de cerca de 52%, em linha com os revisores humanos.',
+              a: 'Um guia do setor de terceiros (DigitalApplied, 2025) relata 40% menos tempo de revisão e 62% menos bugs em produção; a PromptQuorum não mediu esses números. No artigo de Khaleefulla et al. (IJERT), os autores relatam uma redução de 65% no tempo médio de triagem para o sistema de triagem com IA deles. Seja qual for a ferramenta, meça a parcela de comentários de IA que seus desenvolvedores acatam antes e depois de ajustar o escopo do prompt.',
             },
             {
               q: 'Como a revisão de código com IA se compara à análise estática tradicional (SAST)?',
-              a: 'Estimativas de terceiros situam o SAST tradicional baseado em regras abaixo de 20% em bugs relevantes de tempo de execução, com altas taxas de falsos positivos. O SAST impulsionado por IA obteve 84–92/100 em código gerado por IA em uma comparação de terceiros de 2025, e modelos baseados em transformadores alcançam 94% de precisão em benchmarks de classificação de bugs vs. 65% para métodos baseados em regras (nenhum medido pela PromptQuorum). A principal vantagem da IA é o raciocínio contextual — ela avalia como os caminhos do código interagem em vez de comparar com assinaturas fixas de vulnerabilidades.',
+              a: 'O SAST baseado em regras aplica assinaturas fixas de vulnerabilidades e tende a produzir muitos falsos positivos, enquanto as ferramentas impulsionadas por IA acrescentam raciocínio contextual: elas avaliam como os caminhos do código interagem em vez de comparar com assinaturas. Em uma comparação de terceiros de 2025, Snyk Code, Semgrep Enterprise e CodeQL obtiveram 84–92/100 em código gerado por IA (não medido pela PromptQuorum). As duas abordagens são complementares.',
             },
             {
               q: 'A revisão de código com IA está em conformidade com o GDPR para equipes europeias?',
@@ -3015,8 +3018,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Sim — para lógica complexa com múltiplos ramos condicionais, o prompting Chain-of-Thought (CoT) pede ao modelo que rastreie o fluxo de dados por cada caminho de execução antes de gerar descobertas. Isso revela bugs de lógica que a correspondência de padrões perde, porque o modelo deve modelar explicitamente cada caminho que um valor nulo ou tipo de entrada inesperado pode percorrer pela função — em vez de comparar o código com modelos de erros comuns. O CoT é mais valioso para funções sensíveis à segurança e gerenciamento complexo de estado; ele adiciona latência e é desnecessário para funções utilitárias simples.',
             },
             {
-              q: 'Que porcentagem dos comentários de revisão de código com IA é realmente útil?',
-              a: 'Uma análise do setor publicada, com 1,247 comentários de revisão de IA em 340 PRs (não medida pela PromptQuorum), constatou que apenas 14% tratavam de bugs de lógica e problemas de segurança — os problemas que causam incidentes em produção — enquanto 64% tratavam de estilo, duplicação e cobertura de testes. Ferramentas com menos de 60% de feedback acionável veem a adoção pelos desenvolvedores desabar, pois os engenheiros passam a ignorar todos os comentários. Prompts com escopo que excluem explicitamente comentários de estilo são a principal alavanca para aumentar a parcela de comentários acionáveis.',
+              q: 'Que parcela dos comentários de revisão de código com IA é realmente útil?',
+              a: 'Não conseguimos confirmar um número público verificado, e a parcela varia conforme a ferramenta, o prompt e a base de código, então meça: conte a parcela de comentários de IA que seus desenvolvedores acatam ao longo de um mês. Se a maioria dos comentários é ignorada, restrinja o escopo — exclua explicitamente comentários de estilo e peça apenas descobertas de lógica, segurança e desempenho — e meça de novo.',
             },
             {
               q: 'Qual modelo de IA é melhor para revisão de código?',
@@ -3032,11 +3035,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'A revisão de código com IA pode detectar vulnerabilidades de segurança melhor que ferramentas SAST dedicadas?',
-              a: 'Em comparações de terceiros, as ferramentas SAST impulsionadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtiveram 84–92/100 em código gerado por IA, contra 65% de precisão da análise estática baseada em regras. O SAST tradicional ainda é mais rápido para verificações de alto volume em bases de código grandes, porque a IA exige mais computação por PR. Melhor prática: use SAST leve e linting para velocidade e complemente com revisão de IA para análise de segurança profunda em mudanças de alto risco (autenticação, pagamentos, infraestrutura).',
+              a: 'Em comparações de terceiros, as ferramentas SAST impulsionadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) obtiveram 84–92/100 em código gerado por IA em uma comparação de terceiros de 2025 (não medida pela PromptQuorum), e a análise estática baseada em regras continua útil como um portão de merge rápido. O SAST tradicional ainda é mais rápido para verificações de alto volume em bases de código grandes, porque a IA exige mais computação por PR. Melhor prática: use SAST leve e linting para velocidade e complemente com revisão de IA para análise de segurança profunda em mudanças de alto risco (autenticação, pagamentos, infraestrutura).',
             },
             {
               q: 'Posso executar a revisão de código com IA localmente para código totalmente privado?',
-              a: 'Sim. Devstral Small 24B (Mistral AI, 16 GB de RAM) e Llama 4 Scout (~55 GB de VRAM, contexto de 10M) executam totalmente on-premises via Ollama. Nenhum código é transmitido a APIs externas, o que elimina a etapa de processamento por terceiros que uma DPIA precisaria cobrir. A qualidade é inferior à dos modelos frontier na nuvem em análise de segurança complexa, mas suficiente para a maioria das revisões em nível de PR.',
+              a: 'Sim. Devstral Small 24B (Mistral AI, 16 GB de RAM) e Llama 4 Scout (~55 GB de VRAM, contexto de 10M) executam totalmente on-premises via Ollama. A inferência roda no seu hardware, então o código não é enviado a um revisor na nuvem; isso pode eliminar a etapa de processamento por terceiros que uma DPIA precisaria cobrir, mas verifique o comportamento de download e atualização de modelos com sua equipe de segurança. A qualidade é inferior à dos modelos frontier na nuvem em análise de segurança complexa, mas suficiente para a maioria das revisões em nível de PR.',
             },
             {
               q: 'Qual é a melhor ferramenta de revisão de código com IA para equipes pequenas (menos de 10 desenvolvedores)?',
@@ -3060,6 +3063,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Documentação do GitHub: revisão de código do Copilot](https://docs.github.com/en/copilot/concepts/agents/code-review) — planos que incluem revisão de código e cobrança em créditos de IA',
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — guia técnico de prompts com escopo para reduzir falsos positivos e melhorar o sinal',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — benchmark de terceiros de três ferramentas SAST em código gerado por IA (fonte das pontuações 92 / 87 / 84)',
+            '[Khaleefulla, Sudeep e Savithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) — resultados dos próprios autores: mais de 85% de precisão de classificação, 82% de precisão de prioridade, 65% menos tempo de triagem',
             '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — números do setor: 40% de economia de tempo, 62% menos bugs em produção',
             '**Nota:** As taxas de detecção são informadas pelos fornecedores e não foram medidas pela PromptQuorum; os preços são preços de tabela das páginas dos fornecedores acima. A revisão de código com IA é um mercado em rápida evolução — verifique os preços atuais e o suporte de plataformas nos sites dos fornecedores antes de comprar.',
           ],
@@ -3072,7 +3076,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-fr.webp',
       title: 'Révision de code par IA en 2026 : classement des outils (CodeRabbit, Greptile, Snyk) + framework de prompts',
-      intro: 'Les outils de révision de code par IA ont détecté 44–82% des bugs injectés dans le seul test comparatif public à la méthode documentée — un benchmark de juillet 2025 mené par Greptile sur 50 bugs issus de cinq dépôts open source — contre moins de 20% pour l\'analyse statique à base de règles selon des estimations tierces. Considérez les chiffres publiés par les éditeurs comme indicatifs : d\'autres benchmarks publiés classent les mêmes outils différemment. Le défi pratique est le rapport signal-bruit : une analyse sectorielle publiée a constaté que 64% des commentaires de révision par IA portent sur le style plutôt que sur des bugs de logique. Des prompts ciblés qui privilégient la sécurité et la logique plutôt que la mise en forme sont le principal levier.',
+      intro: 'Les outils de révision de code par IA ont détecté 44–82% des bugs injectés lors d\'un benchmark de juillet 2025 mené par Greptile sur 50 bugs issus de cinq dépôts open source. Considérez les chiffres publiés par les éditeurs comme indicatifs : Greptile vend l\'un des outils testés et des résultats indépendants peuvent différer. Le défi pratique est le rapport signal-bruit : les relecteurs IA peuvent noyer les constats de logique et de sécurité sous des commentaires de style, ce qui apprend aux développeurs à les ignorer. Des prompts ciblés qui privilégient la sécurité et la logique plutôt que la mise en forme sont le principal levier.',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -3131,11 +3135,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'Outils de révision de code par IA', description: 'Outils logiciels automatisés qui analysent les pull requests et identifient les bugs, les failles de sécurité et les problèmes de style' },
-          { '@type': 'Thing', name: 'Problème du rapport signal-bruit', description: 'Le défi lié au fait que la plupart des commentaires de révision par IA portent sur le style plutôt que sur des bugs de logique, selon une analyse sectorielle publiée' },
+          { '@type': 'Thing', name: 'Problème du rapport signal-bruit', description: 'Le défi lié au fait que les commentaires de révision de code par IA peuvent être dominés par des problèmes de style plutôt que par des bugs de logique' },
           { '@type': 'Thing', name: 'Prompt engineering pour la révision de code', description: 'Techniques de structuration des instructions données à l\'IA pour privilégier les constats de logique et de sécurité plutôt que les commentaires de style' },
           { '@type': 'Thing', name: 'Chain-of-Thought Prompting', description: 'La méthode qui consiste à demander aux modèles d\'IA de suivre les chemins d\'exécution pas à pas avant d\'identifier les bugs' },
           { '@type': 'Thing', name: 'Automatisation de la révision de code', description: 'Intégration des outils de révision de code par IA dans les pipelines CI/CD et les workflows de pull requests' },
-          { '@type': 'Thing', name: 'Révision de code par IA conforme au RGPD', description: 'Approches permettant d\'utiliser la révision de code par IA tout en respectant les exigences européennes de protection des données' },
+          { '@type': 'Thing', name: 'Protection des données dans la révision de code par IA', description: 'Points à considérer pour utiliser la révision de code par IA au regard des exigences européennes de protection des données' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -3156,11 +3160,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**Meilleur taux de détection dans le seul test public documenté :** Greptile avec 82% (test réalisé par l\'éditeur, juillet 2025, 50 bugs injectés) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
+        '**Meilleur taux de détection dans le test mené par Greptile :** Greptile avec 82% (test réalisé par l\'éditeur, juillet 2025, 50 bugs injectés) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
         '**Les modèles tarifaires diffèrent :** CodeRabbit $24 par utilisateur et par mois (facturation annuelle, Essentials) ; Greptile Pro $1 par crédit de révision ; Snyk Code Team $25 par mois pour un maximum de 10 développeurs',
         '**Offres gratuites :** CodeRabbit sur les dépôts publics ; Greptile Starter pour un développeur ; Snyk Code Free (100 tests par mois)',
         '**Auto-hébergement :** uniquement dans les offres Enterprise chez CodeRabbit (500+ sièges selon sa documentation), Greptile et Qodo',
-        '**Le problème du signal :** une analyse sectorielle publiée a constaté que 64% des commentaires de révision par IA sont du bruit de style et que 14% détectent des bugs de logique ou de sécurité',
+        '**Le problème du signal :** les relecteurs IA peuvent noyer les constats de logique et de sécurité sous des commentaires de style — mesurez la part de commentaires auxquels vos développeurs donnent suite',
         '**La solution :** des prompts ciblés (framework en 5 parties) orientent les commentaires vers la logique et la sécurité',
       ],
       faqSchema: {
@@ -3171,12 +3175,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Quel est l\'outil de révision de code par IA le plus précis en 2026 ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Aucun outil n\'est le plus précis dans tous les tests. Dans le seul benchmark comparatif public à la méthode documentée — réalisé par Greptile en juillet 2025 sur 50 bugs issus de cinq dépôts open source — Greptile a détecté 82%, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44% (paramètres par défaut, offres hébergées). Comme Greptile vend l\'un des outils testés et que d\'autres benchmarks publiés classent les outils différemment, utilisez ces chiffres comme point de départ et menez un essai de deux semaines sur vos propres pull requests. Pour l\'analyse de sécurité, Snyk Code est une catégorie à part : un scanner qui complète un relecteur de pull requests.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Aucun outil n\'est le plus précis dans tous les tests. Lors d\'un benchmark de juillet 2025 mené par Greptile sur 50 bugs issus de cinq dépôts open source, Greptile a détecté 82%, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44% (paramètres par défaut, offres hébergées). Comme Greptile vend l\'un des outils testés et que des résultats indépendants peuvent différer, utilisez ces chiffres comme point de départ et menez un essai de deux semaines sur vos propres pull requests. Pour l\'analyse de sécurité, Snyk Code est une catégorie à part : un scanner qui complète un relecteur de pull requests.' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit vs Greptile : lequel choisir ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Choisissez Greptile si la détection de bugs profonds est votre priorité et que vous pouvez budgéter par révision : il a détecté 82% contre 44% pour CodeRabbit lors du test de juillet 2025 mené par Greptile lui-même, et l\'offre Pro n\'a pas de frais par siège (crédits prépayés à $1 chacun ; une révision Base consomme 1 crédit). Choisissez CodeRabbit si vous préférez une tarification par siège ($24 par utilisateur et par mois sur Essentials avec facturation annuelle, $30 en facturation mensuelle) et des révisions gratuites sur les dépôts publics. Les deux proposent un essai de 14 jours et réservent l\'auto-hébergement à l\'offre Enterprise. L\'intérêt de CodeRabbit dépend du volume : un prix par siège fixe est plus facile à prévoir pour les équipes qui ouvrent beaucoup de pull requests, tandis que les équipes à faible volume peuvent payer moins par révision.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Choisissez Greptile si le taux de détection de bugs injectés le plus élevé est votre priorité et que vous pouvez budgéter par révision : il a détecté 82% contre 44% pour CodeRabbit lors du test de juillet 2025 mené par Greptile lui-même, et l\'offre Pro n\'a pas de frais par siège (crédits prépayés à $1 chacun ; une révision Base consomme 1 crédit). Choisissez CodeRabbit si vous préférez une tarification par siège ($24 par utilisateur et par mois sur Essentials avec facturation annuelle, $30 en facturation mensuelle) et des révisions gratuites sur les dépôts publics. Les deux proposent un essai de 14 jours et réservent l\'auto-hébergement à l\'offre Enterprise. L\'intérêt de CodeRabbit dépend du volume : un prix par siège fixe est plus facile à prévoir pour les équipes qui ouvrent beaucoup de pull requests, tandis que les équipes à faible volume peuvent payer moins par révision.' },
           },
           {
             '@type': 'Question',
@@ -3206,12 +3210,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Dans quelle mesure la révision de code par IA réduit-elle le temps de révision ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Un guide sectoriel tiers (DigitalApplied, 2025) indique 40% de temps de révision en moins et 62% de bugs en production en moins ; PromptQuorum n\'a pas mesuré ces chiffres. Des études sur le triage de bugs par IA rapportent un temps de triage réduit de 65% et un délai de résolution plus court de 30–40% par rapport aux méthodes manuelles. Les équipes qui limitent les prompts de révision par IA à la logique et à la sécurité (et non au style) rapportent des taux d\'action des développeurs d\'environ 52%, comparables à ceux des relecteurs humains.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Un guide sectoriel tiers (DigitalApplied, 2025) indique 40% de temps de révision en moins et 62% de bugs en production en moins ; PromptQuorum n\'a pas mesuré ces chiffres. Dans l\'article de Khaleefulla et al. (IJERT), les auteurs rapportent une réduction de 65% du temps de triage moyen pour leur système de triage par IA. Quel que soit l\'outil, mesurez avant et après l\'ajustement du périmètre du prompt la part de commentaires de l\'IA auxquels vos développeurs donnent suite.' },
           },
           {
             '@type': 'Question',
             name: 'Comment la révision de code par IA se compare-t-elle à l\'analyse statique traditionnelle (SAST) ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Des estimations tierces situent le SAST traditionnel à base de règles sous 20% pour les bugs d\'exécution significatifs, avec des taux élevés de faux positifs. Le SAST assisté par IA a obtenu 84–92/100 sur du code généré par IA dans une comparaison tierce de 2025, et les modèles basés sur les transformeurs atteignent 94% de précision dans les benchmarks de classification de bugs contre 65% pour les méthodes à base de règles (aucun de ces chiffres n\'a été mesuré par PromptQuorum). L\'avantage clé de l\'IA est le raisonnement contextuel : elle évalue l\'interaction entre les chemins de code au lieu de comparer le code à des signatures de vulnérabilités fixes.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Le SAST à base de règles applique des signatures de vulnérabilités fixes et tend à produire de nombreux faux positifs, tandis que les outils assistés par IA ajoutent un raisonnement contextuel : ils évaluent l\'interaction entre les chemins de code au lieu de comparer le code à des signatures. Dans une comparaison tierce de 2025, Snyk Code, Semgrep Enterprise et CodeQL ont obtenu 84–92/100 sur du code généré par IA (non mesuré par PromptQuorum). Les deux approches sont complémentaires.' },
           },
           {
             '@type': 'Question',
@@ -3225,8 +3229,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Quel pourcentage des commentaires de révision de code par IA est réellement utile ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Une analyse sectorielle publiée portant sur 1,247 commentaires de révision par IA répartis sur 340 PR (non mesurée par PromptQuorum) a constaté que seuls 14% concernaient des bugs de logique et des problèmes de sécurité — ceux qui provoquent des incidents en production — tandis que 64% portaient sur le style, la duplication et la couverture de tests. Avec moins de 60% de retours exploitables, l\'adoption par les développeurs s\'effondre, car les ingénieurs se mettent à ignorer tous les commentaires. Des prompts ciblés qui excluent explicitement les commentaires de style sont le principal levier pour augmenter la part de commentaires exploitables.' },
+            name: 'Quelle part des commentaires de révision de code par IA est réellement utile ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Nous n\'avons pas pu confirmer de chiffre public vérifié, et cette part varie selon l\'outil, le prompt et la base de code : mesurez-la donc, en comptant sur un mois la part des commentaires de l\'IA auxquels vos développeurs donnent suite. Si la plupart des commentaires sont ignorés, resserrez le périmètre — excluez explicitement les commentaires de style et demandez uniquement des constats de logique, de sécurité et de performance — puis mesurez à nouveau.' },
           },
           {
             '@type': 'Question',
@@ -3246,12 +3250,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'La révision de code par IA peut-elle détecter les failles de sécurité mieux que les outils SAST dédiés ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Dans les comparaisons tierces, les outils SAST assistés par IA (Snyk Code, Semgrep Enterprise, CodeQL) ont obtenu 84–92/100 sur du code généré par IA, contre 65% de précision pour l\'analyse statique à base de règles. Le SAST traditionnel reste plus rapide pour vérifier en volume de grandes bases de code, car l\'IA demande plus de calcul par PR. Bonne pratique : utilisez un SAST léger et du lint pour la rapidité, et complétez par une révision par IA pour l\'analyse de sécurité approfondie des changements à haut risque (authentification, paiements, infrastructure).' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Dans les comparaisons tierces, les outils SAST assistés par IA (Snyk Code, Semgrep Enterprise, CodeQL) ont obtenu 84–92/100 sur du code généré par IA dans une comparaison tierce de 2025 (non mesuré par PromptQuorum), et l\'analyse statique à base de règles reste utile comme barrière de merge rapide. Le SAST traditionnel reste plus rapide pour vérifier en volume de grandes bases de code, car l\'IA demande plus de calcul par PR. Bonne pratique : utilisez un SAST léger et du lint pour la rapidité, et complétez par une révision par IA pour l\'analyse de sécurité approfondie des changements à haut risque (authentification, paiements, infrastructure).' },
           },
           {
             '@type': 'Question',
             name: 'Puis-je exécuter la révision de code par IA en local pour un code entièrement privé ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Devstral Small 24B (Mistral AI, 16 GB de RAM) et Llama 4 Scout (~55 GB de VRAM, contexte de 10M) fonctionnent entièrement sur site via Ollama. Aucun code n\'est transmis à des API externes, ce qui supprime l\'étape de traitement par un tiers qu\'une AIPD devrait sinon couvrir. La qualité est inférieure à celle des modèles frontier du cloud pour l\'analyse de sécurité complexe, mais suffisante pour la plupart des révisions au niveau des PR.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. Devstral Small 24B (Mistral AI, 16 GB de RAM) et Llama 4 Scout (~55 GB de VRAM, contexte de 10M) fonctionnent entièrement sur site via Ollama. L\'inférence s\'exécute sur votre matériel : le code n\'est donc pas envoyé à un relecteur cloud ; cela peut supprimer l\'étape de traitement par un tiers qu\'une AIPD devrait sinon couvrir, mais vérifiez avec votre équipe sécurité le comportement de téléchargement et de mise à jour des modèles. La qualité est inférieure à celle des modèles frontier du cloud pour l\'analyse de sécurité complexe, mais suffisante pour la plupart des révisions au niveau des PR.' },
           },
           {
             '@type': 'Question',
@@ -3280,11 +3284,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Points clés',
           isTldr: true,
           items: [
-            'Dans le seul test comparatif public à la méthode documentée (réalisé par Greptile, juillet 2025, 50 bugs injectés), les relecteurs IA ont détecté 44–82% : Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — test réalisé par l\'éditeur, donc indicatif seulement',
+            'Lors d\'un benchmark de juillet 2025 mené par Greptile (50 bugs injectés), les relecteurs IA ont détecté 44–82% : Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — test réalisé par l\'éditeur, donc indicatif seulement',
             'Les modèles tarifaires diffèrent : CodeRabbit facture par siège ($24–$72 par utilisateur et par mois en facturation annuelle), Greptile Pro facture par crédit de révision ($1 chacun, sans frais par siège), Snyk Code Team coûte $25 par mois forfaitaires pour un maximum de 10 développeurs',
             'CodeRabbit révise gratuitement les dépôts publics et Greptile Starter est gratuit pour un développeur ; Qodo propose un essai de 14 jours mais pas d\'offre gratuite permanente',
             'L\'auto-hébergement est une fonctionnalité des offres Enterprise chez CodeRabbit (proposé aux clients de 500+ sièges selon sa documentation), Greptile et Qodo ; CodeRabbit auto-hébergé envoie toujours le code au fournisseur de LLM que vous configurez',
-            'Une analyse sectorielle publiée a constaté que 64% des commentaires de révision par IA portent sur le style et la duplication et que seuls 14% portent sur des bugs de logique et la sécurité — des prompts ciblés sont nécessaires pour inverser ce rapport',
+            'Les relecteurs IA peuvent noyer les constats de logique et de sécurité sous des commentaires de style ; aucun jeu de données public que nous ayons pu vérifier ne chiffre ce rapport : mesurez donc la part de commentaires auxquels les développeurs donnent suite et utilisez des prompts ciblés pour l\'augmenter',
             'Snyk Code est un scanner de sécurité (92/100 dans une comparaison tierce de 2025 portant sur trois outils de sécurité), pas un relecteur général de pull requests — utilisez-le en complément d\'un relecteur IA',
             'Le RGPD peut exiger une analyse d\'impact relative à la protection des données (article 35) avant que la révision de code par IA dans le cloud ne traite du code source qui touche à des données personnelles — consultez votre délégué à la protection des données',
             'Les modèles frontier du cloud offrent des fenêtres de contexte d\'environ 1M tokens (à peu près 75,000–100,000 lignes de code, estimation) ; le modèle open-weight Llama 4 Scout prend en charge 10M tokens en local',
@@ -3308,7 +3312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'Outils de révision de code par IA : lequel utiliser',
           content: [
-            'Dans le seul test comparatif public à la méthode documentée, Greptile a détecté 82% de 50 bugs injectés, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44% (benchmark réalisé par Greptile, juillet 2025, paramètres par défaut, offres hébergées). Greptile vend l\'un des outils testés et d\'autres benchmarks publiés classent les mêmes outils dans un ordre différent : lisez ces chiffres comme indicatifs, pas comme un verdict.',
+            'Lors d\'un benchmark de juillet 2025 mené par Greptile sur 50 bugs injectés, Greptile a détecté 82%, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44% (paramètres par défaut, offres hébergées). Greptile vend l\'un des outils testés et des résultats indépendants peuvent différer : lisez ces chiffres comme indicatifs, pas comme un verdict.',
             'CodeRabbit propose des révisions gratuites sur les dépôts publics ; les dépôts privés nécessitent Essentials ($24 par utilisateur et par mois en facturation annuelle, $30 en facturation mensuelle), Team ($48 en facturation annuelle, $60 en facturation mensuelle) ou Advanced ($72), Enterprise étant sur devis. L\'auto-hébergement est réservé à Enterprise, et la documentation d\'auto-hébergement indique qu\'il est proposé aux clients de 500+ sièges.',
             'Greptile Starter est gratuit pour un développeur actif (50 crédits par mois). Pro n\'a pas de frais par siège : les crédits coûtent $1 chacun, et une révision Base consomme 1 crédit, une révision Plus 3 et une révision Apex 10. Qodo Pro Team affiche $30 avec des crédits mutualisés pour un maximum de 30 utilisateurs et n\'a pas d\'offre gratuite permanente. La révision de code GitHub Copilot est en disponibilité générale sur Copilot Pro, Pro+, Max, Business et Enterprise (pas sur Copilot Free) et consomme des crédits d\'IA — GitHub documente des moyennes d\'environ $0.25 (Lite), $1.50 (Balanced) et $10 (Max) par révision.',
           ],
@@ -3320,11 +3324,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Outil': '[CodeRabbit](https://www.coderabbit.ai)', 'Taux de détection (test éditeur)': '44%', 'Plateformes Git': 'GitHub, GitLab', 'Auto-hébergement': 'Enterprise (500+ sièges)', 'Prix catalogue': '$24 par utilisateur et par mois (annuel)' },
             { 'Outil': '[Qodo](https://www.qodo.ai)', 'Taux de détection (test éditeur)': 'Non testé', 'Plateformes Git': 'GitHub, GitLab, Bitbucket, Azure', 'Auto-hébergement': 'Enterprise (sur site)', 'Prix catalogue': 'Pro Team à partir de $30 (mutualisé)' },
             { 'Outil': '[Snyk Code](https://snyk.io)', 'Taux de détection (test éditeur)': 'Non testé', 'Plateformes Git': 'Via les intégrations SCM', 'Auto-hébergement': 'Non précisé', 'Prix catalogue': 'Gratuit ; Team à partir de $25 (10 devs)' },
-            { 'Outil': 'SAST traditionnel', 'Taux de détection (test éditeur)': 'Moins de 20%*', 'Plateformes Git': 'Variable', 'Auto-hébergement': 'Variable', 'Prix catalogue': 'Variable' },
+            { 'Outil': 'SAST traditionnel', 'Taux de détection (test éditeur)': 'Non testé', 'Plateformes Git': 'Variable', 'Auto-hébergement': 'Variable', 'Prix catalogue': 'Variable' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: 'Provenance', text: '*Estimation tierce, non mesurée par PromptQuorum. Taux de détection : benchmark réalisé par Greptile, juillet 2025. Les prix catalogue proviennent des pages tarifaires des éditeurs ; les offres changent souvent, confirmez donc avant tout achat.' },
+            { type: 'info', label: 'Provenance', text: 'Taux de détection : benchmark réalisé par Greptile, juillet 2025, non mesuré par PromptQuorum. Les prix catalogue proviennent des pages tarifaires des éditeurs ; les offres changent souvent, confirmez donc avant tout achat.' },
           ],
           image: '/images/code-review-tool-comparison-fr.svg',
           imageCaption: 'Comparaison des fonctionnalités de PromptQuorum, GitHub Copilot, ChatGPT et Cursor : PromptQuorum envoie un même prompt à plusieurs modèles à la fois, ce qui permet de recouper une seule révision entre plusieurs modèles.',
@@ -3395,10 +3399,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Pourquoi le rapport signal-bruit pose-t-il problème dans la révision de code par IA ?',
           content: [
             'Les outils de révision de code par IA commentent les problèmes de style de manière bien plus fiable qu\'ils ne détectent les bugs d\'exécution critiques (44–82% dans le test réalisé par les éditeurs ci-dessus) — ce qui crée un problème de volume de commentaires pouvant entraîner l\'effondrement de l\'adoption par les développeurs.',
-            'Une analyse sectorielle publiée portant sur 1,247 commentaires de révision par IA répartis sur 340 pull requests (non mesurée par PromptQuorum) a constaté : ~64% de tous les commentaires de révision par IA portaient sur le style, la duplication et la couverture de tests. Seuls ~14% des commentaires portaient sur des bugs de logique et des problèmes de sécurité — ceux qui provoquent des incidents en production. Avec moins de 60% de retours exploitables, l\'adoption par les développeurs s\'effondre, car les ingénieurs se mettent à ignorer tous les retours, y compris les constats critiques.',
-            'La cause profonde tient aux données d\'entraînement : les modèles d\'IA sont entraînés sur des bases de code où les violations de style sont bien plus nombreuses que les erreurs de logique. Le modèle apprend à faire ressortir ce qu\'il voit le plus souvent — pas ce qui compte le plus.',
-            'La même analyse indique qu\'un système de révision par IA ajusté, avec un prompt engineering demandant explicitement au modèle de privilégier la logique et la sécurité plutôt que le style, a atteint un taux d\'action des développeurs de 52% — comparable au taux d\'action de 50% des révisions de code menées par des humains sur plus de 10,000 commentaires analysés.',
-            '**En une phrase :** le problème du rapport signal-bruit signifie que les outils de révision de code par IA génèrent 64% de commentaires de style mais seulement 14% de constats exploitables de sécurité ou de logique — d\'où le besoin de prompts ciblés pour inverser ce rapport et atteindre plus de 50% d\'adoption par les développeurs.',
+            'Les guides sectoriels rapportent couramment que les relecteurs IA produisent beaucoup de commentaires de style, de duplication et de couverture de tests par rapport aux constats de logique et de sécurité. Nous n\'avons pas pu vérifier de jeu de données public qui chiffre ce rapport ; mesurez-le donc vous-même : la part des commentaires de l\'IA auxquels vos développeurs donnent suite est le chiffre qui compte. Les outils dont les commentaires sont surtout ignorés apprennent aux ingénieurs à ignorer tous les retours, y compris les constats critiques.',
+            'Une cause probable tient aux données d\'entraînement : les modèles voient bien plus de variations de style que d\'erreurs de logique dans les bases de code sur lesquelles ils apprennent ; ils font donc ressortir ce qui est fréquent, pas ce qui compte le plus.',
+            'Un prompt engineering qui demande au modèle de privilégier la logique et la sécurité plutôt que le style est le principal levier pour modifier ce mélange ; ajustez le prompt, puis mesurez à nouveau le taux d\'action.',
+            '**En une phrase :** les outils de révision de code par IA peuvent générer surtout des commentaires de style — des prompts ciblés et un taux d\'action suivi gardent visibles les constats de logique et de sécurité.',
           ],
           callouts: [
             { type: 'warning', label: 'Avertissement', text: 'Les équipes qui déploient la révision de code par IA sans cibler les prompts risquent un effondrement de l\'adoption par les développeurs. Les ingénieurs se mettent à ignorer TOUS les commentaires — y compris les constats de sécurité critiques — lorsque la plupart des commentaires sont du bruit. Configurez toujours des priorités de révision explicites avant le déploiement auprès de l\'équipe.' },
@@ -3449,7 +3453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            'Le prompt structuré produit un rapport de sécurité prêt pour le triage. Le prompt ouvert produit 12 commentaires sur le nommage des variables et un constat de sécurité noyé que l\'ingénieur ne lit jamais.',
+            'Le prompt structuré produit un rapport de sécurité prêt pour le triage. Par exemple, le prompt ouvert peut renvoyer une douzaine de commentaires sur le nommage des variables et un constat de sécurité noyé que l\'ingénieur ne lit jamais.',
           ],
         },
 
@@ -3465,8 +3469,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: 'Comment réaliser une révision de code par IA axée sur la sécurité ?',
           content: [
-            'Les outils SAST (Static Application Security Testing) assistés par IA, entraînés sur des jeux de données de vulnérabilités réelles, obtiennent des scores de détection de bugs de 84–92 sur 100 sur du code généré par IA — contre 65% de précision pour les méthodes à base de règles et 94% pour les modèles basés sur les transformeurs dans des benchmarks tiers d\'apprentissage profond (non mesurés par PromptQuorum).',
-            'Les modèles basés sur les transformeurs — l\'architecture derrière les grands modèles de langage actuels et les outils dédiés à la sécurité du code — atteignent 94% de précision dans les benchmarks de classification de bugs, avec de très faibles taux de faux positifs. C\'est une avancée mesurable par rapport aux approches par réseaux de neurones convolutifs (CNN) et récurrents (RNN), à 89%, à l\'analyse statique, à 72%, et aux méthodes à base de règles, à 65%.',
+            'Les outils SAST (Static Application Security Testing) assistés par IA, entraînés sur des jeux de données de vulnérabilités réelles, ont obtenu 84–92 sur 100 sur du code généré par IA dans une comparaison tierce de 2025 (non mesurée par PromptQuorum).',
+            'L\'analyse statique à base de règles applique des motifs fixes, tandis que les outils assistés par IA raisonnent aussi sur l\'interaction entre les chemins de code. Les deux sont complémentaires, c\'est pourquoi de nombreuses équipes utilisent un moteur de règles comme barrière de merge et, à ses côtés, un relecteur IA ou un scanner.',
             'Trois outils axés sur la sécurité, notés dans une comparaison tierce de 2025 portant sur du code généré par IA (sanj.dev ; non mesurée par PromptQuorum) :',
           ],
           columns: ['Outil', 'Score (tiers)', 'Faux positifs', 'Idéal pour'],
@@ -3490,12 +3494,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: 'Qu\'est-ce que le triage de bugs par IA ?',
           content: [
-            'Le triage de bugs assisté par IA atteint 85–90% de précision dans la classification de la gravité — contre 60–70% pour les méthodes manuelles — tout en réduisant le temps de triage de 65% et les faux positifs jusqu\'à 60%.',
-            'Le triage de bugs par IA est l\'étape qui suit la détection : classer les bugs par gravité, prédire leur impact en production et orienter les tickets vers le bon ingénieur. Une étude de Khaleefulla et al. a montré que des systèmes de triage pilotés par IA atteignaient plus de 85% de précision dans la classification des bugs et 82% de précision dans la prédiction des priorités — réduisant le temps de triage moyen de 65%.',
-            'Le délai de résolution (TTR) s\'améliore de 30–40% par rapport aux méthodes manuelles, le gain provenant surtout d\'une classification et d\'un routage plus rapides plutôt que de corrections plus rapides. Une classification de la gravité à 85–90% de précision signifie que les ingénieurs passent beaucoup moins de temps à débattre des priorités et davantage à résoudre les problèmes qui comptent.',
+            'Le triage de bugs assisté par IA classe les bugs par gravité, prédit leur impact en production et oriente les tickets vers le bon ingénieur, ce qui réduit le temps que les ingénieurs passent à débattre des priorités.',
+            'Le triage de bugs par IA est l\'étape qui suit la détection. Dans un article de Khaleefulla, Sudeep et Savithri ([IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization)), les auteurs rapportent plus de 85% de précision dans la classification des bugs, 82% de précision dans la prédiction des priorités et une réduction de 65% du temps de triage moyen pour leur système. Ce sont les résultats des auteurs eux-mêmes, non mesurés par PromptQuorum.',
+            'Le gain provient surtout d\'une classification et d\'un routage plus rapides plutôt que de corrections plus rapides. Les conventions de gravité diffèrent d\'un projet à l\'autre : la précision rapportée pour un système peut donc ne pas se transposer au vôtre ; faites un pilote sur votre propre backlog avant de vous y fier.',
           ],
           callouts: [
-            { type: 'info', label: 'Le saviez-vous', text: 'Le triage de bugs par IA atteint 85-90% de précision dans la classification de la gravité contre 60-70% pour le triage manuel. Le principal gain de temps ne vient pas de corrections plus rapides, mais d\'une classification et d\'un routage plus rapides. Les ingénieurs passent moins de temps à débattre des priorités et davantage à résoudre les problèmes qui comptent.' },
+            { type: 'info', label: 'Le saviez-vous', text: 'Le gain de temps du triage par IA ne vient pas de corrections plus rapides, mais d\'une classification et d\'un routage plus rapides. Les ingénieurs passent moins de temps à débattre des priorités et davantage à résoudre les problèmes qui comptent.' },
           ],
         },
 
@@ -3518,9 +3522,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: 'Comment les réglementations régionales affectent-elles la révision de code par IA ?',
           content: [
-            'Les entreprises européennes qui envoient du code source à des API d\'IA externes peuvent avoir besoin d\'une analyse d\'impact relative à la protection des données (AIPD) au titre de l\'article 35 du RGPD avant le déploiement, en particulier lorsque le code ou les données qu\'il touche impliquent le traitement de données personnelles. Le RGPD et le règlement européen sur l\'IA peuvent s\'appliquer en même temps à la révision de code assistée par IA lorsque des données personnelles sont traitées : impliquez donc votre délégué à la protection des données avant le déploiement. Les enjeux sont réels : parmi les amendes RGPD de 2024 figure une sanction de 30.5 millions d\'euros contre Clearview AI.',
-            'Pour les équipes de l\'UE, CodeRabbit propose un déploiement auto-hébergé dans son offre Enterprise (500+ sièges selon sa documentation), même si l\'agent auto-hébergé envoie toujours les prompts et le code au fournisseur de LLM que vous configurez. Les modèles open-weight, dont ceux de Mistral AI (France), peuvent être exécutés en local via Ollama pour les équipes qui exigent zéro sortie de données vers le cloud.',
-            'Les équipes de développement chinoises utilisent des modèles open-weight comme Qwen3 (Alibaba) et DeepSeek comme modèles de révision de code déployables en local ; tous deux prennent en charge les commentaires de code et la documentation en chinois — essentiel pour les bases de code multilingues courantes dans les entreprises chinoises. Les entreprises japonaises soumises aux lignes directrices de gouvernance des données du METI déploient en local, via Ollama, des workflows de révision de code basés sur LLaMA 4 Scout ou LLaMA 3.3 — LLaMA 4 Scout nécessite ~55 GB de VRAM pour l\'inférence, sans aucun appel d\'API externe.',
+            'Les entreprises européennes qui envoient du code source à des API d\'IA externes peuvent avoir besoin d\'une analyse d\'impact relative à la protection des données (AIPD) au titre de l\'article 35 du RGPD avant le déploiement, en particulier lorsque le code ou les données qu\'il touche impliquent le traitement de données personnelles. Le RGPD et le règlement européen sur l\'IA peuvent s\'appliquer en même temps à la révision de code assistée par IA lorsque des données personnelles sont traitées : impliquez donc votre délégué à la protection des données avant le déploiement. Ce sont des informations générales, pas un avis juridique ; confirmez les exigences auprès de votre délégué à la protection des données ou de votre conseil juridique.',
+            'Pour les équipes de l\'UE, CodeRabbit propose un déploiement auto-hébergé dans son offre Enterprise (500+ sièges selon sa documentation), même si l\'agent auto-hébergé envoie toujours les prompts et le code au fournisseur de LLM que vous configurez. Les modèles open-weight, dont ceux de Mistral AI (France), peuvent être exécutés en local via Ollama pour les équipes qui doivent garder leur code hors des clouds tiers.',
+            'Les équipes en Chine peuvent utiliser des modèles open-weight comme Qwen3 (Alibaba) et DeepSeek comme modèles de révision de code déployables en local ; tous deux prennent en charge les commentaires de code et la documentation en chinois, ce qui compte pour les bases de code multilingues. Les équipes au Japon soumises aux lignes directrices de gouvernance des données du METI peuvent exécuter en local, via Ollama, des workflows de révision basés sur Llama 4 Scout ou Llama 3.3 — Llama 4 Scout nécessite environ 55 GB de VRAM pour l\'inférence — afin que le code n\'atteigne pas d\'API externes.',
           ],
         },
 
@@ -3556,12 +3560,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: 'Déployer la révision par IA avec les paramètres par défaut et sans personnaliser les prompts.',
-              problem: 'La révision par IA par défaut peut produire surtout des commentaires de style (64% dans une analyse sectorielle publiée). Les développeurs se mettent à ignorer tous les commentaires. Les constats de sécurité critiques sont noyés.',
+              problem: 'La révision par IA par défaut peut produire surtout des commentaires de style. Les développeurs se mettent à ignorer tous les commentaires. Les constats de sécurité critiques sont noyés.',
               fix: 'Utilisez le framework de prompts en 5 parties. Excluez explicitement le style et le nommage. Limitez le périmètre à la logique, à la sécurité et à la performance.',
             },
             {
               mistake: 'Utiliser la révision de code par IA comme unique niveau de relecture.',
-              problem: 'Les relecteurs IA ont détecté 44–82% des bugs injectés dans le seul test public documenté — pas 100%. Les problèmes dépendants du contexte (implications de passage à l\'échelle, conventions d\'équipe, erreurs de logique métier) exigent un jugement humain.',
+              problem: 'Les relecteurs IA ont détecté 44–82% des bugs injectés dans le benchmark de juillet 2025 de Greptile — pas 100%. Les problèmes dépendants du contexte (implications de passage à l\'échelle, conventions d\'équipe, erreurs de logique métier) exigent un jugement humain.',
               fix: 'L\'IA est le filtre de premier passage. Les relecteurs humains se concentrent sur l\'architecture, la logique métier et les bugs que l\'IA manque.',
             },
             {
@@ -3583,11 +3587,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'Quel est l\'outil de révision de code par IA le plus précis en 2026 ?',
-              a: 'Aucun outil n\'est le plus précis dans tous les tests. Dans le seul benchmark comparatif public à la méthode documentée — réalisé par Greptile en juillet 2025 sur 50 bugs issus de cinq dépôts open source — Greptile a détecté 82%, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44% (paramètres par défaut, offres hébergées). Comme Greptile vend l\'un des outils testés et que d\'autres benchmarks publiés classent les outils différemment, utilisez ces chiffres comme point de départ et menez un essai de deux semaines sur vos propres pull requests. Pour l\'analyse de sécurité, Snyk Code est une catégorie à part : un scanner qui complète un relecteur de pull requests.',
+              a: 'Aucun outil n\'est le plus précis dans tous les tests. Lors d\'un benchmark de juillet 2025 mené par Greptile sur 50 bugs issus de cinq dépôts open source, Greptile a détecté 82%, Cursor Bugbot 58%, GitHub Copilot 54% et CodeRabbit 44% (paramètres par défaut, offres hébergées). Comme Greptile vend l\'un des outils testés et que des résultats indépendants peuvent différer, utilisez ces chiffres comme point de départ et menez un essai de deux semaines sur vos propres pull requests. Pour l\'analyse de sécurité, Snyk Code est une catégorie à part : un scanner qui complète un relecteur de pull requests.',
             },
             {
               q: 'CodeRabbit vs Greptile : lequel choisir ?',
-              a: 'Choisissez Greptile si la détection de bugs profonds est votre priorité et que vous pouvez budgéter par révision : il a détecté 82% contre 44% pour CodeRabbit lors du test de juillet 2025 mené par Greptile lui-même, et l\'offre Pro n\'a pas de frais par siège (crédits prépayés à $1 chacun ; une révision Base consomme 1 crédit). Choisissez CodeRabbit si vous préférez une tarification par siège ($24 par utilisateur et par mois sur Essentials avec facturation annuelle, $30 en facturation mensuelle) et des révisions gratuites sur les dépôts publics. Les deux proposent un essai de 14 jours et réservent l\'auto-hébergement à l\'offre Enterprise. L\'intérêt de CodeRabbit dépend du volume : un prix par siège fixe est plus facile à prévoir pour les équipes qui ouvrent beaucoup de pull requests, tandis que les équipes à faible volume peuvent payer moins par révision.',
+              a: 'Choisissez Greptile si le taux de détection de bugs injectés le plus élevé est votre priorité et que vous pouvez budgéter par révision : il a détecté 82% contre 44% pour CodeRabbit lors du test de juillet 2025 mené par Greptile lui-même, et l\'offre Pro n\'a pas de frais par siège (crédits prépayés à $1 chacun ; une révision Base consomme 1 crédit). Choisissez CodeRabbit si vous préférez une tarification par siège ($24 par utilisateur et par mois sur Essentials avec facturation annuelle, $30 en facturation mensuelle) et des révisions gratuites sur les dépôts publics. Les deux proposent un essai de 14 jours et réservent l\'auto-hébergement à l\'offre Enterprise. L\'intérêt de CodeRabbit dépend du volume : un prix par siège fixe est plus facile à prévoir pour les équipes qui ouvrent beaucoup de pull requests, tandis que les équipes à faible volume peuvent payer moins par révision.',
             },
             {
               q: 'CodeRabbit et Greptile sont-ils gratuits ?',
@@ -3611,11 +3615,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Dans quelle mesure la révision de code par IA réduit-elle le temps de révision ?',
-              a: 'Un guide sectoriel tiers (DigitalApplied, 2025) indique 40% de temps de révision en moins et 62% de bugs en production en moins ; PromptQuorum n\'a pas mesuré ces chiffres. Des études sur le triage de bugs par IA rapportent un temps de triage réduit de 65% et un délai de résolution plus court de 30–40% par rapport aux méthodes manuelles. Les équipes qui limitent les prompts de révision par IA à la logique et à la sécurité (et non au style) rapportent des taux d\'action des développeurs d\'environ 52%, comparables à ceux des relecteurs humains.',
+              a: 'Un guide sectoriel tiers (DigitalApplied, 2025) indique 40% de temps de révision en moins et 62% de bugs en production en moins ; PromptQuorum n\'a pas mesuré ces chiffres. Dans l\'article de Khaleefulla et al. (IJERT), les auteurs rapportent une réduction de 65% du temps de triage moyen pour leur système de triage par IA. Quel que soit l\'outil, mesurez avant et après l\'ajustement du périmètre du prompt la part de commentaires de l\'IA auxquels vos développeurs donnent suite.',
             },
             {
               q: 'Comment la révision de code par IA se compare-t-elle à l\'analyse statique traditionnelle (SAST) ?',
-              a: 'Des estimations tierces situent le SAST traditionnel à base de règles sous 20% pour les bugs d\'exécution significatifs, avec des taux élevés de faux positifs. Le SAST assisté par IA a obtenu 84–92/100 sur du code généré par IA dans une comparaison tierce de 2025, et les modèles basés sur les transformeurs atteignent 94% de précision dans les benchmarks de classification de bugs contre 65% pour les méthodes à base de règles (aucun de ces chiffres n\'a été mesuré par PromptQuorum). L\'avantage clé de l\'IA est le raisonnement contextuel : elle évalue l\'interaction entre les chemins de code au lieu de comparer le code à des signatures de vulnérabilités fixes.',
+              a: 'Le SAST à base de règles applique des signatures de vulnérabilités fixes et tend à produire de nombreux faux positifs, tandis que les outils assistés par IA ajoutent un raisonnement contextuel : ils évaluent l\'interaction entre les chemins de code au lieu de comparer le code à des signatures. Dans une comparaison tierce de 2025, Snyk Code, Semgrep Enterprise et CodeQL ont obtenu 84–92/100 sur du code généré par IA (non mesuré par PromptQuorum). Les deux approches sont complémentaires.',
             },
             {
               q: 'La révision de code par IA est-elle conforme au RGPD pour les équipes européennes ?',
@@ -3626,8 +3630,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Oui — pour une logique complexe comportant plusieurs branches conditionnelles, le prompting Chain-of-Thought (CoT) demande au modèle de suivre le flux de données dans chaque chemin d\'exécution avant de formuler ses constats. Cela fait ressortir des bugs de logique que la simple reconnaissance de motifs manque, car le modèle doit modéliser explicitement chaque chemin qu\'une valeur nulle ou un type d\'entrée inattendu peut emprunter dans la fonction — au lieu de comparer le code à des modèles d\'erreurs courantes. Le CoT est surtout utile pour les fonctions sensibles du point de vue de la sécurité et pour la gestion d\'état complexe ; il ajoute de la latence et n\'est pas nécessaire pour de simples fonctions utilitaires.',
             },
             {
-              q: 'Quel pourcentage des commentaires de révision de code par IA est réellement utile ?',
-              a: 'Une analyse sectorielle publiée portant sur 1,247 commentaires de révision par IA répartis sur 340 PR (non mesurée par PromptQuorum) a constaté que seuls 14% concernaient des bugs de logique et des problèmes de sécurité — ceux qui provoquent des incidents en production — tandis que 64% portaient sur le style, la duplication et la couverture de tests. Avec moins de 60% de retours exploitables, l\'adoption par les développeurs s\'effondre, car les ingénieurs se mettent à ignorer tous les commentaires. Des prompts ciblés qui excluent explicitement les commentaires de style sont le principal levier pour augmenter la part de commentaires exploitables.',
+              q: 'Quelle part des commentaires de révision de code par IA est réellement utile ?',
+              a: 'Nous n\'avons pas pu confirmer de chiffre public vérifié, et cette part varie selon l\'outil, le prompt et la base de code : mesurez-la donc, en comptant sur un mois la part des commentaires de l\'IA auxquels vos développeurs donnent suite. Si la plupart des commentaires sont ignorés, resserrez le périmètre — excluez explicitement les commentaires de style et demandez uniquement des constats de logique, de sécurité et de performance — puis mesurez à nouveau.',
             },
             {
               q: 'Quel modèle d\'IA est le meilleur pour la révision de code ?',
@@ -3643,11 +3647,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'La révision de code par IA peut-elle détecter les failles de sécurité mieux que les outils SAST dédiés ?',
-              a: 'Dans les comparaisons tierces, les outils SAST assistés par IA (Snyk Code, Semgrep Enterprise, CodeQL) ont obtenu 84–92/100 sur du code généré par IA, contre 65% de précision pour l\'analyse statique à base de règles. Le SAST traditionnel reste plus rapide pour vérifier en volume de grandes bases de code, car l\'IA demande plus de calcul par PR. Bonne pratique : utilisez un SAST léger et du lint pour la rapidité, et complétez par une révision par IA pour l\'analyse de sécurité approfondie des changements à haut risque (authentification, paiements, infrastructure).',
+              a: 'Dans les comparaisons tierces, les outils SAST assistés par IA (Snyk Code, Semgrep Enterprise, CodeQL) ont obtenu 84–92/100 sur du code généré par IA dans une comparaison tierce de 2025 (non mesuré par PromptQuorum), et l\'analyse statique à base de règles reste utile comme barrière de merge rapide. Le SAST traditionnel reste plus rapide pour vérifier en volume de grandes bases de code, car l\'IA demande plus de calcul par PR. Bonne pratique : utilisez un SAST léger et du lint pour la rapidité, et complétez par une révision par IA pour l\'analyse de sécurité approfondie des changements à haut risque (authentification, paiements, infrastructure).',
             },
             {
               q: 'Puis-je exécuter la révision de code par IA en local pour un code entièrement privé ?',
-              a: 'Oui. Devstral Small 24B (Mistral AI, 16 GB de RAM) et Llama 4 Scout (~55 GB de VRAM, contexte de 10M) fonctionnent entièrement sur site via Ollama. Aucun code n\'est transmis à des API externes, ce qui supprime l\'étape de traitement par un tiers qu\'une AIPD devrait sinon couvrir. La qualité est inférieure à celle des modèles frontier du cloud pour l\'analyse de sécurité complexe, mais suffisante pour la plupart des révisions au niveau des PR.',
+              a: 'Oui. Devstral Small 24B (Mistral AI, 16 GB de RAM) et Llama 4 Scout (~55 GB de VRAM, contexte de 10M) fonctionnent entièrement sur site via Ollama. L\'inférence s\'exécute sur votre matériel : le code n\'est donc pas envoyé à un relecteur cloud ; cela peut supprimer l\'étape de traitement par un tiers qu\'une AIPD devrait sinon couvrir, mais vérifiez avec votre équipe sécurité le comportement de téléchargement et de mise à jour des modèles. La qualité est inférieure à celle des modèles frontier du cloud pour l\'analyse de sécurité complexe, mais suffisante pour la plupart des révisions au niveau des PR.',
             },
             {
               q: 'Quel est le meilleur outil de révision de code par IA pour les petites équipes (moins de 10 développeurs) ?',
@@ -3671,6 +3675,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[GitHub Docs : Copilot code review](https://docs.github.com/en/copilot/concepts/agents/code-review) — offres incluant la révision de code et facturation en crédits d\'IA',
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — guide technique sur les prompts ciblés pour réduire les faux positifs et améliorer le signal',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — benchmark tiers de trois outils SAST sur du code généré par IA (source des scores 92 / 87 / 84)',
+            '[Khaleefulla, Sudeep et Savithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) — résultats des auteurs eux-mêmes : plus de 85% de précision de classification, 82% de précision de priorité, temps de triage réduit de 65%',
             '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — chiffres sectoriels : 40% de temps gagné, 62% de bugs en production en moins',
             '**Remarque :** les taux de détection sont ceux annoncés par les éditeurs et n\'ont pas été mesurés par PromptQuorum ; les prix sont les prix catalogue des pages d\'éditeurs ci-dessus. La révision de code par IA est un marché en évolution rapide — vérifiez les tarifs et la prise en charge des plateformes actuels sur les sites des éditeurs avant tout achat.',
           ],
@@ -3683,7 +3688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-ja.webp',
       title: 'AI コードレビュー2026：おすすめツール比較（CodeRabbit、Greptile、Snyk）とプロンプトフレームワーク',
-      intro: 'AI コードレビューツールは、方法が公開されている唯一の公開ヘッドツーヘッドテスト（Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施したベンチマーク）で、意図的に埋め込まれたバグの44～82%を検出しました。第三者の推定では、ルールベースの静的解析は20%未満です。ベンダー実施の数値は参考値として扱ってください。他の公開ベンチマークでは、同じツールの順位が異なります。実務上の課題はシグナル・ノイズ比です。公開されている業界分析では、AI レビューコメントの64%がロジックバグではなくスタイルに関するものでした。セキュリティとロジックをスタイルより優先する、範囲を絞ったプロンプトが主な対策です。',
+      intro: 'AI コードレビューツールは、Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施したベンチマークで、意図的に埋め込まれたバグの44～82%を検出しました。ベンダー実施の数値は参考値として扱ってください。Greptile はテスト対象のツールの1つを販売しており、独立した結果は異なる可能性があります。実務上の課題はシグナル・ノイズ比です。AI レビュアーはロジックやセキュリティの指摘をスタイルのコメントの中に埋もれさせることがあり、開発者がそれらを無視するようになります。セキュリティとロジックをスタイルより優先する、範囲を絞ったプロンプトが主な対策です。',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -3742,11 +3747,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'AI コードレビューツール', description: 'コードの PR を分析し、バグ、セキュリティ脆弱性、スタイルの問題を特定する自動化ソフトウェアツール' },
-          { '@type': 'Thing', name: 'シグナル・ノイズ比の問題', description: '公開されている業界分析によると、AI コードレビューのコメントの大半がロジックバグではなくスタイルの問題に関するものであるという課題' },
+          { '@type': 'Thing', name: 'シグナル・ノイズ比の問題', description: 'AI コードレビューのコメントがロジックバグではなくスタイルの問題に偏りうるという課題' },
           { '@type': 'Thing', name: 'コードレビューのためのプロンプトエンジニアリング', description: 'スタイルのコメントよりもロジックとセキュリティの指摘を優先するよう、AI への指示を構造化する手法' },
           { '@type': 'Thing', name: 'Chain-of-Thought プロンプティング', description: 'バグを特定する前に、AI モデルに実行パスを一歩ずつ追跡させる手法' },
           { '@type': 'Thing', name: 'コードレビューの自動化', description: 'AI コードレビューツールを CI/CD パイプラインやプルリクエストのワークフローに組み込むこと' },
-          { '@type': 'Thing', name: 'GDPR に準拠した AI コードレビュー', description: '欧州のデータ保護要件を満たしながら AI コードレビューを利用するためのアプローチ' },
+          { '@type': 'Thing', name: 'AI コードレビューにおけるデータ保護', description: '欧州のデータ保護要件の下で AI コードレビューを利用する際の考慮事項' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -3767,11 +3772,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**公開されている唯一のテストで最高の検出率：** Greptile が82%（ベンダー実施、2025年7月、埋め込みバグ50件）——Cursor Bugbot は58%、GitHub Copilot は54%、CodeRabbit は44%',
+        '**Greptile 実施のテストで最高の検出率：** Greptile が82%（ベンダー実施、2025年7月、埋め込みバグ50件）——Cursor Bugbot は58%、GitHub Copilot は54%、CodeRabbit は44%',
         '**料金モデルが異なる：** CodeRabbit は1ユーザーあたり月額$24（年額払い、Essentials）；Greptile Pro は1レビュークレジットあたり$1；Snyk Code Team は開発者10人まで月額$25',
         '**無料の選択肢：** 公開リポジトリでの CodeRabbit；開発者1人向けの Greptile Starter；Snyk Code Free（月100テスト）',
         '**セルフホスト：** CodeRabbit（ドキュメントによると500席以上）、Greptile、Qodo では Enterprise プランのみ',
-        '**シグナルの問題：** 公開されている業界分析では、AI レビューコメントの64%がスタイルのノイズで、ロジックやセキュリティのバグを捉えたのは14%',
+        '**シグナルの問題：** AI レビュアーはロジックやセキュリティの指摘をスタイルのコメントの中に埋もれさせることがあります——開発者が対応したコメントの割合を測定してください',
         '**対策：** 範囲を絞ったプロンプト（5要素のフレームワーク）で、コメントをロジックとセキュリティに寄せる',
       ],
       faqSchema: {
@@ -3782,12 +3787,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '2026年で最も正確なAI コードレビューツールはどれですか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'すべてのテストで最も正確なツールはありません。方法が公開されている唯一の公開ヘッドツーヘッドベンチマーク（Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施）では、Greptile が82%、Cursor Bugbot が58%、GitHub Copilot が54%、CodeRabbit が44%を検出しました（デフォルト設定、ホスト型プラン）。Greptile はテスト対象のツールの1つを販売しており、他の公開ベンチマークでは順位が異なるため、数値は出発点として使い、自社のプルリクエストで2週間のトライアルを行ってください。セキュリティスキャンについては、Snyk Code は別カテゴリで、プルリクエストのレビュアーを補完するスキャナーです。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'すべてのテストで最も正確なツールはありません。Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施したベンチマークでは、Greptile が82%、Cursor Bugbot が58%、GitHub Copilot が54%、CodeRabbit が44%を検出しました（デフォルト設定、ホスト型プラン）。Greptile はテスト対象のツールの1つを販売しており、独立した結果は異なる可能性があるため、数値は出発点として使い、自社のプルリクエストで2週間のトライアルを行ってください。セキュリティスキャンについては、Snyk Code は別カテゴリで、プルリクエストのレビュアーを補完するスキャナーです。' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit と Greptile はどちらを選ぶべきですか？',
-            acceptedAnswer: { '@type': 'Answer', text: '深いバグの検出を最優先し、レビュー単位で予算を組めるなら Greptile を選びます。Greptile 自身の2025年7月のテストでは82%に対して CodeRabbit は44%で、Pro にはシート料金がありません（前払いクレジットが1つ$1、Base レビューは1クレジットを消費）。ユーザー単位の料金（Essentials で1ユーザーあたり月額$24（年額払い）、月払いは$30）と公開リポジトリでの無料レビューが欲しいなら CodeRabbit を選びます。どちらも14日間のトライアルがあり、セルフホストは Enterprise に限られます。CodeRabbit が見合うかどうかは量次第です。プルリクエストが多いチームでは固定のシート料金のほうが予測しやすく、量の少ないチームではレビュー単位のほうが安くなる場合があります。' },
+            acceptedAnswer: { '@type': 'Answer', text: '埋め込みバグの最高の検出率を最優先し、レビュー単位で予算を組めるなら Greptile を選びます。Greptile 自身の2025年7月のテストでは82%に対して CodeRabbit は44%で、Pro にはシート料金がありません（前払いクレジットが1つ$1、Base レビューは1クレジットを消費）。ユーザー単位の料金（Essentials で1ユーザーあたり月額$24（年額払い）、月払いは$30）と公開リポジトリでの無料レビューが欲しいなら CodeRabbit を選びます。どちらも14日間のトライアルがあり、セルフホストは Enterprise に限られます。CodeRabbit が見合うかどうかは量次第です。プルリクエストが多いチームでは固定のシート料金のほうが予測しやすく、量の少ないチームではレビュー単位のほうが安くなる場合があります。' },
           },
           {
             '@type': 'Question',
@@ -3817,12 +3822,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'AI コードレビューはレビュー時間をどれだけ短縮しますか？',
-            acceptedAnswer: { '@type': 'Answer', text: '第三者の業界ガイド（DigitalApplied、2025年）は、レビュー時間が40%減り、本番バグが62%減ると報告していますが、PromptQuorum は測定していません。AI バグトリアージの研究では、手動の方法と比べてトリアージ時間が65%短縮し、解決までの時間が30～40%速くなると報告されています。AI レビューのプロンプトをスタイルではなくロジックとセキュリティに絞ったチームでは、開発者のアクション率が約52%で、人間のレビュアーと同程度と報告されています。' },
+            acceptedAnswer: { '@type': 'Answer', text: '第三者の業界ガイド（DigitalApplied、2025年）は、レビュー時間が40%減り、本番バグが62%減ると報告していますが、PromptQuorum は測定していません。Khaleefulla らの論文（IJERT）では、著者らが自らの AI トリアージシステムについて、平均トリアージ時間が65%短縮したと報告しています。どのツールでも、プロンプトのスコープを調整する前後で、開発者が対応した AI コメントの割合を測定してください。' },
           },
           {
             '@type': 'Question',
             name: 'AI コードレビューは従来の静的解析（SAST）とどう違いますか？',
-            acceptedAnswer: { '@type': 'Answer', text: '第三者の推定では、従来のルールベース SAST は意味のある実行時バグの20%未満しか検出できず、誤検知率も高いとされています。AI 搭載の SAST は2025年の第三者比較で AI 生成コードに対して84～92/100を記録し、トランスフォーマーベースのモデルはバグ分類ベンチマークで94%の精度に達しました（ルールベースの手法は65%。いずれも PromptQuorum は測定していません）。AI の主な利点は文脈を踏まえた推論で、固定の脆弱性シグネチャと照合するのではなく、コードパス同士がどう作用するかを評価します。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'ルールベースの SAST は固定の脆弱性シグネチャを適用し、誤検知が多くなりがちです。一方、AI 搭載のツールは文脈を踏まえた推論を加え、シグネチャと照合するのではなく、コードパス同士がどう作用するかを評価します。2025年の第三者比較では、Snyk Code、Semgrep Enterprise、CodeQL が AI 生成コードに対して84～92/100を記録しました（PromptQuorum は測定していません）。両者は補完関係にあります。' },
           },
           {
             '@type': 'Question',
@@ -3836,8 +3841,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'AI コードレビューのコメントのうち、実際に役立つものの割合はどのくらいですか？',
-            acceptedAnswer: { '@type': 'Answer', text: '340件の PR にわたる1,247件の AI レビューコメントを対象とした公開の業界分析（PromptQuorum は測定していません）では、本番インシデントの原因となるロジックバグやセキュリティ問題に関するものはわずか14%で、64%はスタイル、重複、テストカバレッジに関するものでした。実行可能なフィードバックが60%未満のツールでは、エンジニアがすべてのコメントを無視し始め、開発者の採用が崩壊します。スタイルのコメントを明示的に除外する、範囲を絞ったプロンプトが、実行可能なコメントの割合を高める主な手段です。' },
+            name: 'AI コードレビューコメントのうち、実際に役立つ割合はどれくらいですか？',
+            acceptedAnswer: { '@type': 'Answer', text: '検証できた公開数値は確認できておらず、割合はツール、プロンプト、コードベースによって異なるため、測定してください。1か月間、開発者が対応した AI コメントの割合を数えます。コメントの大半が無視されている場合は、スコープを絞ります——スタイルのコメントを明示的に除外し、ロジック、セキュリティ、パフォーマンスの指摘のみを求め、再測定してください。' },
           },
           {
             '@type': 'Question',
@@ -3857,12 +3862,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'AI コードレビューは、専用の SAST ツールよりセキュリティ脆弱性をうまく検出できますか？',
-            acceptedAnswer: { '@type': 'Answer', text: '第三者の比較では、AI 搭載の SAST ツール（Snyk Code、Semgrep Enterprise、CodeQL）が AI 生成コードで84～92/100を記録し、ルールベースの静的解析の精度は65%でした。大規模コードベースを大量にチェックする場合は、AI が PR あたりより多くの計算資源を必要とするため、従来の SAST のほうが依然として高速です。ベストプラクティスは、速度のために軽量な SAST とリンターを使い、リスクの高い変更（認証、決済、インフラ）では AI レビューを加えて深いセキュリティ分析を行うことです。' },
+            acceptedAnswer: { '@type': 'Answer', text: '第三者の比較では、AI 搭載の SAST ツール（Snyk Code、Semgrep Enterprise、CodeQL）が AI 生成コードで84～92/100を記録し（2025年の第三者比較。PromptQuorum は測定していません）、ルールベースの静的解析は高速なマージゲートとして引き続き有用です。大規模コードベースを大量にチェックする場合は、AI が PR あたりより多くの計算資源を必要とするため、従来の SAST のほうが依然として高速です。ベストプラクティスは、速度のために軽量な SAST とリンターを使い、リスクの高い変更（認証、決済、インフラ）では AI レビューを加えて深いセキュリティ分析を行うことです。' },
           },
           {
             '@type': 'Question',
             name: '完全に非公開のコードに対して、AI コードレビューをローカルで実行できますか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'はい。Devstral Small 24B（Mistral AI、16 GB RAM）と Llama 4 Scout（約55 GB VRAM、10M コンテキスト）は、Ollama 経由で完全にオンプレミスで動作します。コードが外部 API に送信されないため、DPIA で対象にする必要がある第三者による処理のステップがなくなります。複雑なセキュリティ分析ではクラウドのフロンティアモデルより品質が劣りますが、PR レベルのレビューの大半には十分です。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'はい。Devstral Small 24B（Mistral AI、16 GB RAM）と Llama 4 Scout（約55 GB VRAM、10M コンテキスト）は、Ollama 経由で完全にオンプレミスで動作します。推論は自社のハードウェアで実行されるため、コードはクラウドのレビュアーに送信されません。これにより、DPIA で対象にする必要がある第三者による処理のステップをなくせる可能性がありますが、モデルのダウンロードと更新時の挙動はセキュリティチームと確認してください。複雑なセキュリティ分析ではクラウドのフロンティアモデルより品質が劣りますが、PR レベルのレビューの大半には十分です。' },
           },
           {
             '@type': 'Question',
@@ -3891,11 +3896,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '重要ポイント',
           isTldr: true,
           items: [
-            '方法が公開されている唯一の公開ヘッドツーヘッドテスト（Greptile 実施、2025年7月、埋め込みバグ50件）で、AI レビュアーは44～82%を検出しました：Greptile 82%、Cursor Bugbot 58%、GitHub Copilot 54%、CodeRabbit 44%——ベンダー実施のため、参考値にとどまります',
+            'Greptile が2025年7月に実施したベンチマーク（埋め込みバグ50件）で、AI レビュアーは44～82%を検出しました：Greptile 82%、Cursor Bugbot 58%、GitHub Copilot 54%、CodeRabbit 44%——ベンダー実施のため、参考値にとどまります',
             '料金モデルは異なります：CodeRabbit はシート単位（年額払いで1ユーザーあたり月額$24～$72）、Greptile Pro はレビュークレジット単位（1つ$1、シート料金なし）、Snyk Code Team は開発者10人まで月額$25の定額です',
             'CodeRabbit は公開リポジトリのレビューが無料で、Greptile Starter は開発者1人まで無料です；Qodo は14日間のトライアルがありますが、恒久的な無料プランはありません',
             'セルフホストは CodeRabbit（ドキュメントによると500席以上の顧客に提供）、Greptile、Qodo では Enterprise プランの機能です；セルフホストの CodeRabbit でも、コードは設定した LLM プロバイダーに送信されます',
-            '公開されている業界分析では、AI レビューコメントの64%がスタイルと重複に関するもので、ロジックバグとセキュリティに関するものは14%のみでした——この比率を逆転させるには、範囲を絞ったプロンプトが必要です',
+            'AI レビュアーはロジックやセキュリティの指摘をスタイルのコメントの中に埋もれさせることがあります。検証できた公開データセットでこの比率を定量化したものはないため、開発者が対応したコメントの割合を測定し、範囲を絞ったプロンプトでそれを高めてください',
             'Snyk Code はセキュリティスキャナー（セキュリティツール3つの2025年の第三者比較で92/100）であり、汎用のプルリクエストレビュアーではありません——AI レビュアーと並べて運用してください',
             'ソースコードが個人データに関わる場合、クラウドの AI コードレビューで処理する前に、GDPR（第35条）に基づくデータ保護影響評価が必要になる可能性があります——データ保護責任者に確認してください',
             'クラウドのフロンティアモデルのコンテキストウィンドウは約1Mトークン（コード約75,000～100,000行、推定値）；オープンウェイトの Llama 4 Scout はローカルで10Mトークンに対応します',
@@ -3919,7 +3924,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'AI コードレビューツール：どれを使うべきか',
           content: [
-            '方法が公開されている唯一の公開ヘッドツーヘッドテストでは、埋め込みバグ50件のうち Greptile が82%、Cursor Bugbot が58%、GitHub Copilot が54%、CodeRabbit が44%を検出しました（Greptile 実施のベンチマーク、2025年7月、デフォルト設定、ホスト型プラン）。Greptile はテスト対象のツールの1つを販売しており、他の公開ベンチマークでは同じツールの順位が異なるため、数値は評決ではなく参考値として読んでください。',
+            'Greptile が2025年7月に埋め込みバグ50件で実施したベンチマークでは、Greptile が82%、Cursor Bugbot が58%、GitHub Copilot が54%、CodeRabbit が44%を検出しました（デフォルト設定、ホスト型プラン）。Greptile はテスト対象のツールの1つを販売しており、独立した結果は異なる可能性があるため、数値は評決ではなく参考値として読んでください。',
             'CodeRabbit は公開リポジトリのレビューが無料です。プライベートリポジトリには Essentials（年額払いで1ユーザーあたり月額$24、月払いは$30）、Team（年額払い$48、月払い$60）、Advanced（$72）のいずれかが必要で、Enterprise は見積もりです。セルフホストは Enterprise 限定で、セルフホストのドキュメントでは500席以上の顧客に提供されると記されています。',
             'Greptile Starter はアクティブな開発者1人まで無料です（月50クレジット）。Pro にはシート料金がなく、クレジットは1つ$1で、Base レビューは1クレジット、Plus レビューは3、Apex レビューは10を消費します。Qodo Pro Team は最大30ユーザーでクレジットをプールする形で$30と記載されており、恒久的な無料プランはありません。GitHub Copilot のコードレビューは Copilot Pro、Pro+、Max、Business、Enterprise で一般提供されており（Copilot Free は対象外）、AI クレジットを消費します——GitHub は1レビューあたりの平均を約$0.25（Lite）、$1.50（Balanced）、$10（Max）と文書化しています。',
           ],
@@ -3931,11 +3936,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'ツール': '[CodeRabbit](https://www.coderabbit.ai)', '検出率（ベンダーのテスト）': '44%', 'Git プラットフォーム': 'GitHub、GitLab', 'セルフホスト': 'Enterprise（500席以上）', '定価': '1ユーザーあたり月額$24（年額払い）' },
             { 'ツール': '[Qodo](https://www.qodo.ai)', '検出率（ベンダーのテスト）': 'テスト対象外', 'Git プラットフォーム': 'GitHub、GitLab、Bitbucket、Azure', 'セルフホスト': 'Enterprise（オンプレミス）', '定価': 'Pro Team は$30から（プール）' },
             { 'ツール': '[Snyk Code](https://snyk.io)', '検出率（ベンダーのテスト）': 'テスト対象外', 'Git プラットフォーム': 'SCM 連携経由', 'セルフホスト': '記載なし', '定価': '無料；Team は$25から（開発者10人）' },
-            { 'ツール': '従来型 SAST', '検出率（ベンダーのテスト）': '20%未満*', 'Git プラットフォーム': '製品による', 'セルフホスト': '製品による', '定価': '製品による' },
+            { 'ツール': '従来型 SAST', '検出率（ベンダーのテスト）': '未テスト', 'Git プラットフォーム': '製品による', 'セルフホスト': '製品による', '定価': '製品による' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: '出典区分', text: '*第三者の推定であり、PromptQuorum が測定したものではありません。検出率：Greptile 実施のベンチマーク、2025年7月。定価は各ベンダーの料金ページによるもので、プランは頻繁に変わるため、購入前に確認してください。' },
+            { type: 'info', label: '出典区分', text: '検出率：Greptile 実施のベンチマーク、2025年7月、PromptQuorum が測定したものではありません。定価は各ベンダーの料金ページによるもので、プランは頻繁に変わるため、購入前に確認してください。' },
           ],
           image: '/images/code-review-tool-comparison-ja.svg',
           imageCaption: 'PromptQuorum、GitHub Copilot、ChatGPT、Cursor の機能比較：PromptQuorum は1つのプロンプトを複数のモデルに同時に送るため、1回のレビューをモデル間でクロスチェックできます。',
@@ -4006,10 +4011,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'AI コードレビューでシグナル・ノイズ比が問題になるのはなぜですか？',
           content: [
             'AI コードレビューツールは、重大な実行時バグを検出する（上記のベンダー実施テストでは44～82%）よりも、はるかに確実にスタイルの問題にコメントします。その結果コメント量が問題となり、開発者の採用が崩壊する原因になりえます。',
-            '340件のプルリクエストにわたる1,247件の AI レビューコメントを対象とした公開の業界分析（PromptQuorum は測定していません）では、AI レビューコメント全体の約64%がスタイル、重複、テストカバレッジに関するものでした。ロジックバグとセキュリティ問題——本番インシデントの原因となる問題——に関するコメントは約14%にすぎませんでした。実行可能なフィードバックが60%未満のツールでは、エンジニアが重大な指摘を含むすべてのフィードバックを無視し始め、開発者の採用が崩壊します。',
-            '根本的な原因は学習データです。AI モデルは、スタイル違反がロジックエラーをはるかに上回るコードベースで学習されています。モデルは最も重要なものではなく、最も頻繁に目にするものを指摘するようになります。',
-            '同じ分析によると、スタイルよりロジックとセキュリティを優先するようモデルに指示するプロンプトエンジニアリングで調整した AI レビューシステムは、開発者のアクション率が52%に達し、10,000件以上のコメントを分析した人間主導のコードレビューのアクション率50%と同程度でした。',
-            '**一言で言えば：** シグナル・ノイズ比の問題とは、AI コードレビューツールがスタイルのコメントを64%生成する一方で、実行可能なセキュリティ・ロジックの指摘は14%にとどまることです——この比率を逆転させて開発者の採用率50%以上に届かせるには、範囲を絞ったプロンプトが必要です。',
+            '業界のガイドでは、AI レビュアーはロジックやセキュリティの指摘に比べてスタイル、重複、テストカバレッジのコメントを多く出すとよく報告されています。検証できた公開データセットでこの比率を定量化したものはないため、自分で測定してください。重要なのは、開発者が対応した AI コメントの割合です。コメントの大半が無視されるツールは、重大な指摘を含むすべてのフィードバックを無視するようエンジニアに教え込んでしまいます。',
+            '考えられる原因は学習データです。モデルが学習するコードベースにはロジックエラーよりスタイルのばらつきのほうがはるかに多く含まれるため、重要なものではなく、頻繁に目にするものを指摘するようになります。',
+            'モデルにスタイルよりロジックとセキュリティを優先するよう指示するプロンプトエンジニアリングは、この構成を変える主な手段です。プロンプトを調整し、アクション率を再測定してください。',
+            '**一言で言えば：** AI コードレビューツールはスタイルのコメントばかりを生成することがあります——範囲を絞ったプロンプトと、追跡したアクション率が、ロジックとセキュリティの指摘を見えるまま保ちます。',
           ],
           callouts: [
             { type: 'warning', label: '警告', text: 'プロンプトの範囲を絞らずに AI コードレビューを導入すると、開発者の採用が崩壊するリスクがあります。コメントの大半がノイズだと、エンジニアは重大なセキュリティ指摘を含むすべてのコメントを無視し始めます。チームに展開する前に、必ずレビューの優先事項を明示的に設定してください。' },
@@ -4060,7 +4065,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            '構造化されたプロンプトは、そのままトリアージに使えるセキュリティレポートを生成します。漠然としたプロンプトは、変数名に関するコメントを12件生成し、エンジニアが読まない埋もれたセキュリティ指摘を1件残すだけです。',
+            '構造化されたプロンプトは、そのままトリアージに使えるセキュリティレポートを生成します。たとえば、漠然としたプロンプトでは、変数名に関するコメントが12件ほど返り、エンジニアが読まない埋もれたセキュリティ指摘が1件残ることがあります。',
           ],
         },
 
@@ -4076,8 +4081,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: 'セキュリティ重視の AI コードレビューはどう行いますか？',
           content: [
-            '実際の脆弱性データセットで学習した AI 搭載 SAST（Static Application Security Testing）ツールは、AI 生成コードで84～92/100のバグ検出スコアを記録します。第三者のディープラーニングのベンチマークでは、ルールベースの手法の精度は65%、トランスフォーマーベースのモデルは94%でした（PromptQuorum は測定していません）。',
-            '現在の大規模言語モデルや専用のコードセキュリティツールの基盤であるトランスフォーマーベースのモデルは、バグ分類ベンチマークで94%の精度を達成し、誤検知率は非常に低いとされています。これは、畳み込みニューラルネットワーク（CNN）とリカレントニューラルネットワーク（RNN）の89%、静的解析の72%、ルールベースの手法の65%を上回る、測定可能な進歩です。',
+            '実際の脆弱性データセットで学習した AI 搭載 SAST（Static Application Security Testing）ツールは、2025年の第三者比較で AI 生成コードに対して84～92/100を記録しました（PromptQuorum は測定していません）。',
+            'ルールベースの静的解析は固定のパターンを適用しますが、AI 支援のツールはコードパス同士がどう作用するかも推論します。両者は補完関係にあり、そのため多くのチームがルールエンジンをマージゲートとし、その横で AI レビュアーまたはスキャナーを実行しています。',
             'AI 生成コードを対象とした2025年の第三者比較（sanj.dev；PromptQuorum は測定していません）でスコアが付けられた、セキュリティ重視のツール3つ：',
           ],
           columns: ['ツール', 'スコア（第三者）', '誤検知', '最適な用途'],
@@ -4101,12 +4106,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: 'AI バグトリアージとは？',
           content: [
-            'AI 搭載のバグトリアージは、重大度分類で85～90%の精度を達成します（手動の方法は60～70%）。同時に、トリアージ時間を65%短縮し、誤検知を最大60%削減します。',
-            'AI バグトリアージは、検出の後に続く工程です。バグを重大度で分類し、本番環境への影響を予測し、問題を適切なエンジニアに振り分けます。Khaleefulla らの研究では、AI 駆動のトリアージシステムがバグ分類で85%超の精度、優先度予測で82%の適合率を達成し、平均トリアージ時間を65%短縮したことが示されました。',
-            '解決までの時間（TTR）は手動の方法と比べて30～40%改善します。主な効果は、修正が速くなることではなく、分類と振り分けが速くなることによるものです。重大度分類の精度が85～90%あれば、エンジニアは優先度の議論に費やす時間を大きく減らし、重要な問題の解決により多くの時間を使えます。',
+            'AI 搭載のバグトリアージは、バグを重大度で分類し、本番環境への影響を予測し、問題を適切なエンジニアに振り分けることで、エンジニアが優先度の議論に費やす時間を減らします。',
+            'AI バグトリアージは、検出の後に続く工程です。Khaleefulla、Sudeep、Savithri の論文（[IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization)）では、著者らが自らのシステムについて、バグ分類で85%超の精度、優先度予測で82%の適合率、平均トリアージ時間の65%短縮を報告しています。これらは著者ら自身の結果であり、PromptQuorum が測定したものではありません。',
+            '効果は主に、修正が速くなることではなく、分類と振り分けが速くなることによるものです。重大度の基準はプロジェクトごとに異なるため、あるシステムで報告された精度が自社に当てはまるとは限りません。頼る前に、自社のバックログで試験運用してください。',
           ],
           callouts: [
-            { type: 'info', label: '豆知識', text: 'AI バグトリアージの重大度分類の精度は85～90%で、手動トリアージの60～70%を上回ります。時間短縮の主因は修正が速くなることではなく、分類と振り分けが速くなることです。エンジニアは優先度の議論に費やす時間を減らし、重要な問題の解決により多くの時間を使えます。' },
+            { type: 'info', label: '豆知識', text: 'AI トリアージの時間短縮の主因は、修正が速くなることではなく、分類と振り分けが速くなることです。エンジニアは優先度の議論に費やす時間を減らし、重要な問題の解決により多くの時間を使えます。' },
           ],
         },
 
@@ -4129,9 +4134,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: '地域の規制は AI コードレビューにどう影響しますか？',
           content: [
-            '欧州企業がソースコードを外部の AI API に送る場合、特にコードまたはそれが扱うデータが個人データの処理に関わる場合、導入前に GDPR 第35条に基づくデータ保護影響評価（DPIA）が必要になる可能性があります。個人データが処理される場合、AI 支援のコードレビューには GDPR と EU AI Act が同時に適用されうるため、展開前にデータ保護責任者を関与させてください。リスクは現実のものです：2024年の GDPR 制裁金には、Clearview AI に対する3,050万ユーロのものが含まれていました。',
-            'EU のチーム向けに、CodeRabbit は Enterprise プランでセルフホスト型のデプロイを提供しています（ドキュメントによると500席以上）が、セルフホストのエージェントでも、プロンプトとコードは設定した LLM プロバイダーに送信されます。Mistral AI（フランス）のモデルを含むオープンウェイトモデルは、クラウドへのデータ送出をゼロにしたいチーム向けに、Ollama 経由でローカルで実行できます。',
-            '中国の開発チームは、ローカルにデプロイ可能なコードレビューモデルとして、Qwen3（Alibaba）や DeepSeek などのオープンウェイトモデルを使っており、どちらも中国語のコードコメントとドキュメントに対応しています——中国企業の環境に多い、多言語が混在するコードベースにとって重要な点です。METI のデータガバナンスガイドラインの対象となる日本企業は、Ollama 経由で LLaMA 4 Scout または LLaMA 3.3 ベースのコードレビューのワークフローをローカルにデプロイしています——LLaMA 4 Scout は推論に約55 GB の VRAM が必要で、外部 API 呼び出しはゼロです。',
+            '欧州企業がソースコードを外部の AI API に送る場合、特にコードまたはそれが扱うデータが個人データの処理に関わる場合、導入前に GDPR 第35条に基づくデータ保護影響評価（DPIA）が必要になる可能性があります。個人データが処理される場合、AI 支援のコードレビューには GDPR と EU AI Act が同時に適用されうるため、展開前にデータ保護責任者を関与させてください。これは一般的な情報であり、法的助言ではありません。要件はデータ保護責任者または弁護士に確認してください。',
+            'EU のチーム向けに、CodeRabbit は Enterprise プランでセルフホスト型のデプロイを提供しています（ドキュメントによると500席以上）が、セルフホストのエージェントでも、プロンプトとコードは設定した LLM プロバイダーに送信されます。Mistral AI（フランス）のモデルを含むオープンウェイトモデルは、コードをサードパーティのクラウドの外に置く必要があるチーム向けに、Ollama 経由でローカルで実行できます。',
+            '中国のチームは、ローカルにデプロイ可能なコードレビューモデルとして、Qwen3（Alibaba）や DeepSeek などのオープンウェイトモデルを使うことができます。どちらも中国語のコードコメントとドキュメントに対応しており、多言語が混在するコードベースにとって重要な点です。METI のデータガバナンスガイドラインの下で作業する日本のチームは、Ollama 経由で Llama 4 Scout または Llama 3.3 ベースのレビューのワークフローをローカルで実行できます——Llama 4 Scout は推論に約55 GB の VRAM が必要で、コードは外部 API に届きません。',
           ],
         },
 
@@ -4167,12 +4172,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: 'デフォルト設定のまま、プロンプトをカスタマイズせずに AI レビューを導入する。',
-              problem: 'デフォルトの AI レビューは、コメントの大半がスタイルに関するものになりえます（公開されている業界分析では64%）。開発者はすべてのコメントを無視し始め、重大なセキュリティ指摘が埋もれます。',
+              problem: 'デフォルトの AI レビューは、コメントの大半がスタイルに関するものになりえます。開発者はすべてのコメントを無視し始め、重大なセキュリティ指摘が埋もれます。',
               fix: '5要素のプロンプトフレームワークを使います。スタイルと命名を明示的に除外し、ロジック、セキュリティ、パフォーマンスにスコープを絞ります。',
             },
             {
               mistake: 'AI コードレビューを唯一のレビュー層として使う。',
-              problem: '公開されている唯一のテストで、AI レビュアーが検出した埋め込みバグは44～82%で、100%ではありません。文脈依存の問題（スケーリングへの影響、チームの規約、ビジネスロジックのエラー）には人間の判断が必要です。',
+              problem: 'Greptile の2025年7月のベンチマークで、AI レビュアーが検出した埋め込みバグは44～82%で、100%ではありません。文脈依存の問題（スケーリングへの影響、チームの規約、ビジネスロジックのエラー）には人間の判断が必要です。',
               fix: 'AI は一次フィルターです。人間のレビュアーは、アーキテクチャ、ビジネスロジック、AI が見逃すバグに集中します。',
             },
             {
@@ -4194,11 +4199,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: '2026年で最も正確なAI コードレビューツールはどれですか？',
-              a: 'すべてのテストで最も正確なツールはありません。方法が公開されている唯一の公開ヘッドツーヘッドベンチマーク（Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施）では、Greptile が82%、Cursor Bugbot が58%、GitHub Copilot が54%、CodeRabbit が44%を検出しました（デフォルト設定、ホスト型プラン）。Greptile はテスト対象のツールの1つを販売しており、他の公開ベンチマークでは順位が異なるため、数値は出発点として使い、自社のプルリクエストで2週間のトライアルを行ってください。セキュリティスキャンについては、Snyk Code は別カテゴリで、プルリクエストのレビュアーを補完するスキャナーです。',
+              a: 'すべてのテストで最も正確なツールはありません。Greptile が2025年7月に5つのオープンソースリポジトリの50件のバグで実施したベンチマークでは、Greptile が82%、Cursor Bugbot が58%、GitHub Copilot が54%、CodeRabbit が44%を検出しました（デフォルト設定、ホスト型プラン）。Greptile はテスト対象のツールの1つを販売しており、独立した結果は異なる可能性があるため、数値は出発点として使い、自社のプルリクエストで2週間のトライアルを行ってください。セキュリティスキャンについては、Snyk Code は別カテゴリで、プルリクエストのレビュアーを補完するスキャナーです。',
             },
             {
               q: 'CodeRabbit と Greptile はどちらを選ぶべきですか？',
-              a: '深いバグの検出を最優先し、レビュー単位で予算を組めるなら Greptile を選びます。Greptile 自身の2025年7月のテストでは82%に対して CodeRabbit は44%で、Pro にはシート料金がありません（前払いクレジットが1つ$1、Base レビューは1クレジットを消費）。ユーザー単位の料金（Essentials で1ユーザーあたり月額$24（年額払い）、月払いは$30）と公開リポジトリでの無料レビューが欲しいなら CodeRabbit を選びます。どちらも14日間のトライアルがあり、セルフホストは Enterprise に限られます。CodeRabbit が見合うかどうかは量次第です。プルリクエストが多いチームでは固定のシート料金のほうが予測しやすく、量の少ないチームではレビュー単位のほうが安くなる場合があります。',
+              a: '埋め込みバグの最高の検出率を最優先し、レビュー単位で予算を組めるなら Greptile を選びます。Greptile 自身の2025年7月のテストでは82%に対して CodeRabbit は44%で、Pro にはシート料金がありません（前払いクレジットが1つ$1、Base レビューは1クレジットを消費）。ユーザー単位の料金（Essentials で1ユーザーあたり月額$24（年額払い）、月払いは$30）と公開リポジトリでの無料レビューが欲しいなら CodeRabbit を選びます。どちらも14日間のトライアルがあり、セルフホストは Enterprise に限られます。CodeRabbit が見合うかどうかは量次第です。プルリクエストが多いチームでは固定のシート料金のほうが予測しやすく、量の少ないチームではレビュー単位のほうが安くなる場合があります。',
             },
             {
               q: 'CodeRabbit と Greptile は無料ですか？',
@@ -4222,11 +4227,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI コードレビューはレビュー時間をどれだけ短縮しますか？',
-              a: '第三者の業界ガイド（DigitalApplied、2025年）は、レビュー時間が40%減り、本番バグが62%減ると報告していますが、PromptQuorum は測定していません。AI バグトリアージの研究では、手動の方法と比べてトリアージ時間が65%短縮し、解決までの時間が30～40%速くなると報告されています。AI レビューのプロンプトをスタイルではなくロジックとセキュリティに絞ったチームでは、開発者のアクション率が約52%で、人間のレビュアーと同程度と報告されています。',
+              a: '第三者の業界ガイド（DigitalApplied、2025年）は、レビュー時間が40%減り、本番バグが62%減ると報告していますが、PromptQuorum は測定していません。Khaleefulla らの論文（IJERT）では、著者らが自らの AI トリアージシステムについて、平均トリアージ時間が65%短縮したと報告しています。どのツールでも、プロンプトのスコープを調整する前後で、開発者が対応した AI コメントの割合を測定してください。',
             },
             {
               q: 'AI コードレビューは従来の静的解析（SAST）とどう違いますか？',
-              a: '第三者の推定では、従来のルールベース SAST は意味のある実行時バグの20%未満しか検出できず、誤検知率も高いとされています。AI 搭載の SAST は2025年の第三者比較で AI 生成コードに対して84～92/100を記録し、トランスフォーマーベースのモデルはバグ分類ベンチマークで94%の精度に達しました（ルールベースの手法は65%。いずれも PromptQuorum は測定していません）。AI の主な利点は文脈を踏まえた推論で、固定の脆弱性シグネチャと照合するのではなく、コードパス同士がどう作用するかを評価します。',
+              a: 'ルールベースの SAST は固定の脆弱性シグネチャを適用し、誤検知が多くなりがちです。一方、AI 搭載のツールは文脈を踏まえた推論を加え、シグネチャと照合するのではなく、コードパス同士がどう作用するかを評価します。2025年の第三者比較では、Snyk Code、Semgrep Enterprise、CodeQL が AI 生成コードに対して84～92/100を記録しました（PromptQuorum は測定していません）。両者は補完関係にあります。',
             },
             {
               q: 'AI コードレビューは欧州チームにとって GDPR に準拠していますか？',
@@ -4237,8 +4242,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'はい。複数の条件分岐を持つ複雑なロジックでは、Chain-of-Thought（CoT）プロンプティングによって、指摘を生成する前に各実行パスでのデータフローをモデルに追跡させます。これにより、パターンマッチングでは見落とすロジックバグが見つかります。モデルは、よくあるエラーのテンプレートとコードを照合するのではなく、null 値や想定外の入力型が関数内でたどりうるすべてのパスを明示的にモデル化する必要があるためです。CoT はセキュリティ上重要な関数や複雑な状態管理で最も効果的です。遅延が増えるため、単純なユーティリティ関数には不要です。',
             },
             {
-              q: 'AI コードレビューのコメントのうち、実際に役立つものの割合はどのくらいですか？',
-              a: '340件の PR にわたる1,247件の AI レビューコメントを対象とした公開の業界分析（PromptQuorum は測定していません）では、本番インシデントの原因となるロジックバグやセキュリティ問題に関するものはわずか14%で、64%はスタイル、重複、テストカバレッジに関するものでした。実行可能なフィードバックが60%未満のツールでは、エンジニアがすべてのコメントを無視し始め、開発者の採用が崩壊します。スタイルのコメントを明示的に除外する、範囲を絞ったプロンプトが、実行可能なコメントの割合を高める主な手段です。',
+              q: 'AI コードレビューコメントのうち、実際に役立つ割合はどれくらいですか？',
+              a: '検証できた公開数値は確認できておらず、割合はツール、プロンプト、コードベースによって異なるため、測定してください。1か月間、開発者が対応した AI コメントの割合を数えます。コメントの大半が無視されている場合は、スコープを絞ります——スタイルのコメントを明示的に除外し、ロジック、セキュリティ、パフォーマンスの指摘のみを求め、再測定してください。',
             },
             {
               q: 'コードレビューに最適な AI モデルはどれですか？',
@@ -4254,11 +4259,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI コードレビューは、専用の SAST ツールよりセキュリティ脆弱性をうまく検出できますか？',
-              a: '第三者の比較では、AI 搭載の SAST ツール（Snyk Code、Semgrep Enterprise、CodeQL）が AI 生成コードで84～92/100を記録し、ルールベースの静的解析の精度は65%でした。大規模コードベースを大量にチェックする場合は、AI が PR あたりより多くの計算資源を必要とするため、従来の SAST のほうが依然として高速です。ベストプラクティスは、速度のために軽量な SAST とリンターを使い、リスクの高い変更（認証、決済、インフラ）では AI レビューを加えて深いセキュリティ分析を行うことです。',
+              a: '第三者の比較では、AI 搭載の SAST ツール（Snyk Code、Semgrep Enterprise、CodeQL）が AI 生成コードで84～92/100を記録し（2025年の第三者比較。PromptQuorum は測定していません）、ルールベースの静的解析は高速なマージゲートとして引き続き有用です。大規模コードベースを大量にチェックする場合は、AI が PR あたりより多くの計算資源を必要とするため、従来の SAST のほうが依然として高速です。ベストプラクティスは、速度のために軽量な SAST とリンターを使い、リスクの高い変更（認証、決済、インフラ）では AI レビューを加えて深いセキュリティ分析を行うことです。',
             },
             {
               q: '完全に非公開のコードに対して、AI コードレビューをローカルで実行できますか？',
-              a: 'はい。Devstral Small 24B（Mistral AI、16 GB RAM）と Llama 4 Scout（約55 GB VRAM、10M コンテキスト）は、Ollama 経由で完全にオンプレミスで動作します。コードが外部 API に送信されないため、DPIA で対象にする必要がある第三者による処理のステップがなくなります。複雑なセキュリティ分析ではクラウドのフロンティアモデルより品質が劣りますが、PR レベルのレビューの大半には十分です。',
+              a: 'はい。Devstral Small 24B（Mistral AI、16 GB RAM）と Llama 4 Scout（約55 GB VRAM、10M コンテキスト）は、Ollama 経由で完全にオンプレミスで動作します。推論は自社のハードウェアで実行されるため、コードはクラウドのレビュアーに送信されません。これにより、DPIA で対象にする必要がある第三者による処理のステップをなくせる可能性がありますが、モデルのダウンロードと更新時の挙動はセキュリティチームと確認してください。複雑なセキュリティ分析ではクラウドのフロンティアモデルより品質が劣りますが、PR レベルのレビューの大半には十分です。',
             },
             {
               q: '小規模チーム（開発者10人未満）におすすめの AI コードレビューツールは何ですか？',
@@ -4282,6 +4287,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[GitHub Docs: Copilot code review](https://docs.github.com/en/copilot/concepts/agents/code-review) —— コードレビューを含むプランと AI クレジット課金',
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) —— 誤検知を減らしシグナルを高める、範囲を絞ったプロンプトの技術ガイド',
             '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) —— AI 生成コードに対する3つの SAST ツールの第三者ベンチマーク（92 / 87 / 84のスコアの出典）',
+            '[Khaleefulla、Sudeep、Savithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) —— 著者ら自身の結果：分類精度85%超、優先度の適合率82%、トリアージ時間65%短縮',
             '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) —— 業界の数値：時間削減40%、本番バグ62%減',
             '**注：** 検出率はベンダーの報告によるもので、PromptQuorum が測定したものではありません；価格は上記のベンダーページの定価です。AI コードレビューは変化の速い市場です——購入前に、ベンダーのウェブサイトで最新の料金とプラットフォーム対応を確認してください。',
           ],
@@ -4294,7 +4300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-code-review-overview-hero-zh.webp',
       title: 'AI 代码审查 2026：工具排名（CodeRabbit、Greptile、Snyk）与提示框架',
-      intro: '在唯一一项方法有据可查的公开横向测试中，AI 代码审查工具检出了 44–82% 的植入缺陷——这是 Greptile 于 2025 年 7 月在五个开源仓库的 50 个缺陷上运行的基准测试；而第三方估算认为，基于规则的静态分析低于 20%。请把厂商自测的数字仅作方向性参考：其他已发布的基准测试对同一批工具的排名并不相同。实际难题在于信噪比：一份已发布的行业分析发现，64% 的 AI 审查评论针对的是风格而非逻辑缺陷。限定范围、优先关注安全与逻辑而非格式的提示，是最主要的改进手段。',
+      intro: 'AI 代码审查工具在 Greptile 于 2025 年 7 月针对五个开源仓库的 50 个缺陷运行的基准测试中，检出了 44–82% 的植入缺陷。请把厂商自测的数字仅作方向性参考：Greptile 销售被测工具之一，独立测试的结果可能不同。实际难题在于信噪比：AI 审查工具可能把逻辑和安全方面的发现淹没在风格评论之中，让开发者学会忽略它们。限定范围、优先关注安全与逻辑而非格式的提示，是最主要的改进手段。',
       publishDate: '2026-03-24',
       dateModified: '2026-10-30',
       toc: [
@@ -4353,11 +4359,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         about: [
           { '@type': 'Thing', name: 'AI 代码审查工具', description: '自动分析代码拉取请求并识别缺陷、安全漏洞和风格问题的软件工具' },
-          { '@type': 'Thing', name: '信噪比问题', description: '据一份已发布的行业分析，大多数 AI 代码审查评论针对的是风格问题而非逻辑缺陷' },
+          { '@type': 'Thing', name: '信噪比问题', description: 'AI 代码审查评论可能以风格问题为主，而非逻辑缺陷' },
           { '@type': 'Thing', name: '面向代码审查的提示工程', description: '通过构造 AI 指令，使逻辑和安全方面的发现优先于风格评论的技巧' },
           { '@type': 'Thing', name: '思维链提示', description: '要求 AI 模型在识别缺陷之前逐步追踪执行路径的方法' },
           { '@type': 'Thing', name: '代码审查自动化', description: '将 AI 代码审查工具集成到 CI/CD 管道和拉取请求工作流中' },
-          { '@type': 'Thing', name: '符合 GDPR 的 AI 代码审查', description: '在使用 AI 代码审查的同时满足欧洲数据保护要求的做法' },
+          { '@type': 'Thing', name: 'AI 代码审查中的数据保护', description: '在欧洲数据保护要求下使用 AI 代码审查时需要考虑的事项' },
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -4378,11 +4384,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       quickFacts: [
-        '**唯一一项有据可查的公开测试中检出率最高：** Greptile 为 82%（厂商自测，2025 年 7 月，50 个植入缺陷）——Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%',
+        '**在 Greptile 运行的测试中检出率最高：** Greptile 为 82%（厂商自测，2025 年 7 月，50 个植入缺陷）——Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%',
         '**定价模式不同：** CodeRabbit 每位用户每月 $24（按年付费，Essentials）；Greptile Pro 每次审查额度 $1；Snyk Code Team 最多 10 名开发者每月 $25',
         '**免费选项：** CodeRabbit 的公开仓库；面向一名开发者的 Greptile Starter；Snyk Code Free（每月 100 次测试）',
         '**自托管：** 仅限企业版方案，涉及 CodeRabbit（据其文档为 500+ 席位）、Greptile 和 Qodo',
-        '**信号问题：** 一份已发布的行业分析发现，64% 的 AI 审查评论是风格噪声，仅 14% 能发现逻辑或安全缺陷',
+        '**信号问题：** AI 审查工具可能把逻辑和安全方面的发现淹没在风格评论之中——请衡量开发者实际采纳的评论占比',
         '**解决办法：** 限定范围的提示（5 部分框架）能让评论更多地转向逻辑和安全',
       ],
       faqSchema: {
@@ -4393,12 +4399,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '2026 年最准确的 AI 代码审查工具是哪一个？',
-            acceptedAnswer: { '@type': 'Answer', text: '没有哪个工具在所有测试中都最准确。在唯一一项方法有据可查的公开横向基准测试中——由 Greptile 于 2025 年 7 月在五个开源仓库的 50 个缺陷上运行——Greptile 检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%（默认设置，托管方案）。由于 Greptile 销售被测工具之一，且其他已发布的基准测试对这些工具的排名不同，请把这些数字作为起点，并在你自己的拉取请求上做两周试用。就安全扫描而言，Snyk Code 属于另一个类别：它是对拉取请求审查工具的补充的扫描器。' },
+            acceptedAnswer: { '@type': 'Answer', text: '没有哪个工具在所有测试中都最准确。在 Greptile 于 2025 年 7 月针对五个开源仓库的 50 个缺陷运行的基准测试中，Greptile 检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%（默认设置，托管方案）。由于 Greptile 销售被测工具之一，且独立测试的结果可能不同，请把这些数字作为起点，并在你自己的拉取请求上做两周试用。就安全扫描而言，Snyk Code 属于另一个类别：它是对拉取请求审查工具的补充的扫描器。' },
           },
           {
             '@type': 'Question',
             name: 'CodeRabbit 与 Greptile：我该选哪个？',
-            acceptedAnswer: { '@type': 'Answer', text: '如果最看重发现深层缺陷，并且可以按审查次数做预算，请选 Greptile：在 Greptile 自己 2025 年 7 月的测试中，它检出 82%，CodeRabbit 为 44%，而且 Pro 没有席位费（预付额度每个 $1；一次 Base 审查消耗 1 个额度）。如果你想要按席位定价（Essentials 按年付费每位用户每月 $24，按月付费 $30）以及公开仓库的免费审查，请选 CodeRabbit。两者都提供 14 天试用，并把自托管保留给企业版。CodeRabbit 是否值得，取决于用量：对拉取请求很多的团队，固定的席位价格更容易预测，而用量较少的团队按审查次数付费可能更便宜。' },
+            acceptedAnswer: { '@type': 'Answer', text: '如果最看重植入缺陷的最高检出率，并且可以按审查次数做预算，请选 Greptile：在 Greptile 自己 2025 年 7 月的测试中，它检出 82%，CodeRabbit 为 44%，而且 Pro 没有席位费（预付额度每个 $1；一次 Base 审查消耗 1 个额度）。如果你想要按席位定价（Essentials 按年付费每位用户每月 $24，按月付费 $30）以及公开仓库的免费审查，请选 CodeRabbit。两者都提供 14 天试用，并把自托管保留给企业版。CodeRabbit 是否值得，取决于用量：对拉取请求很多的团队，固定的席位价格更容易预测，而用量较少的团队按审查次数付费可能更便宜。' },
           },
           {
             '@type': 'Question',
@@ -4428,12 +4434,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'AI 代码审查能减少多少审查时间？',
-            acceptedAnswer: { '@type': 'Answer', text: '一份第三方行业指南（DigitalApplied，2025）报告审查时间减少 40%、生产缺陷减少 62%；PromptQuorum 并未测量这些数据。关于 AI 缺陷分诊的研究报告称，与人工方法相比，分诊时间缩短 65%，解决时间加快 30–40%。把 AI 审查提示限定在逻辑和安全（而非风格）上的团队，报告的开发者行动率约为 52%，与人工审查者相当。' },
+            acceptedAnswer: { '@type': 'Answer', text: '一份第三方行业指南（DigitalApplied，2025）报告审查时间减少 40%、生产缺陷减少 62%；PromptQuorum 并未测量这些数据。在 Khaleefulla 等人的论文（IJERT）中，作者报告其 AI 分诊系统使平均分诊时间缩短 65%。无论使用哪种工具，请在调整提示范围前后，衡量开发者采纳 AI 评论的占比。' },
           },
           {
             '@type': 'Question',
             name: 'AI 代码审查与传统静态分析（SAST）相比如何？',
-            acceptedAnswer: { '@type': 'Answer', text: '第三方估算认为，传统的基于规则的 SAST 在有意义的运行时缺陷上低于 20%，且误报率很高。在 2025 年的一项第三方对比中，AI 驱动的 SAST 在 AI 生成代码上得分 84–92/100；在缺陷分类基准测试中，基于 Transformer 的模型准确率达 94%，而基于规则的方法为 65%（均非 PromptQuorum 实测）。AI 的关键优势在于上下文推理——它评估代码路径如何相互作用，而不是匹配固定的漏洞特征。' },
+            acceptedAnswer: { '@type': 'Answer', text: '基于规则的 SAST 应用固定的漏洞特征，往往会产生大量误报，而 AI 驱动的工具增加了上下文推理：它们评估代码路径如何相互作用，而不是匹配特征。在 2025 年的一项第三方对比中，Snyk Code、Semgrep Enterprise 和 CodeQL 在 AI 生成代码上得分 84–92/100（非 PromptQuorum 实测）。两种方法是互补的。' },
           },
           {
             '@type': 'Question',
@@ -4447,8 +4453,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'AI 代码审查评论中有多大比例真正有用？',
-            acceptedAnswer: { '@type': 'Answer', text: '一份已发布的行业分析（非 PromptQuorum 实测）审阅了 340 个 PR 中的 1,247 条 AI 审查评论，发现只有 14% 针对逻辑缺陷和安全问题——也就是导致生产事故的问题——而 64% 针对风格、重复和测试覆盖率。可操作反馈低于 60% 的工具，会因工程师开始忽略所有评论而导致开发者采用率崩溃。明确排除风格评论的限定范围提示，是提高可操作评论占比的主要手段。' },
+            name: 'AI 代码审查评论中有多少比例真正有用？',
+            acceptedAnswer: { '@type': 'Answer', text: '我们没有找到可验证的公开数字，而且该比例因工具、提示和代码库而异，因此请自行衡量：统计一个月内开发者采纳的 AI 评论占比。如果大多数评论被忽略，请收紧范围——明确排除风格评论，只要求逻辑、安全和性能方面的发现——然后重新衡量。' },
           },
           {
             '@type': 'Question',
@@ -4468,12 +4474,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'AI 代码审查在检测安全漏洞方面能比专用 SAST 工具更好吗？',
-            acceptedAnswer: { '@type': 'Answer', text: '在第三方对比中，AI 驱动的 SAST 工具（Snyk Code、Semgrep Enterprise、CodeQL）在 AI 生成代码上得分 84–92/100，而基于规则的静态分析准确率为 65%。对大型代码库做大批量检查时，传统 SAST 仍然更快，因为 AI 每个 PR 需要更多算力。最佳实践：用轻量的 SAST 和 lint 保证速度，并在高风险变更（身份验证、支付、基础设施）上用 AI 审查补充深度安全分析。' },
+            acceptedAnswer: { '@type': 'Answer', text: '在第三方对比中，AI 驱动的 SAST 工具（Snyk Code、Semgrep Enterprise、CodeQL）在 2025 年的一项第三方对比中于 AI 生成代码上得分 84–92/100（非 PromptQuorum 实测），而基于规则的静态分析仍可作为快速的合并门禁。对大型代码库做大批量检查时，传统 SAST 仍然更快，因为 AI 每个 PR 需要更多算力。最佳实践：用轻量的 SAST 和 lint 保证速度，并在高风险变更（身份验证、支付、基础设施）上用 AI 审查补充深度安全分析。' },
           },
           {
             '@type': 'Question',
             name: '我可以在本地运行 AI 代码审查来保护完全私有的代码吗？',
-            acceptedAnswer: { '@type': 'Answer', text: '可以。Devstral Small 24B（Mistral AI，16 GB RAM）和 Llama 4 Scout（约 55 GB VRAM，10M 上下文）可通过 Ollama 完全在本地运行。不会有代码传输给外部 API，这就省去了 DPIA 原本需要涵盖的第三方处理环节。在复杂的安全分析上，质量低于云端前沿模型，但对大多数 PR 级审查已经足够。' },
+            acceptedAnswer: { '@type': 'Answer', text: '可以。Devstral Small 24B（Mistral AI，16 GB RAM）和 Llama 4 Scout（约 55 GB VRAM，10M 上下文）可通过 Ollama 完全在本地运行。推理在你自己的硬件上进行，因此代码不会发送给云端审查工具；这可能省去 DPIA 原本需要涵盖的第三方处理环节，但请与你的安全团队确认模型下载和更新的行为。在复杂的安全分析上，质量低于云端前沿模型，但对大多数 PR 级审查已经足够。' },
           },
           {
             '@type': 'Question',
@@ -4502,11 +4508,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '关键要点',
           isTldr: true,
           items: [
-            '在唯一一项方法有据可查的公开横向测试中（由 Greptile 于 2025 年 7 月运行，50 个植入缺陷），AI 审查工具检出了 44–82%：Greptile 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%——属厂商自测，仅供方向性参考',
+            '在 Greptile 于 2025 年 7 月运行的基准测试中（50 个植入缺陷），AI 审查工具检出了 44–82%：Greptile 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%——属厂商自测，仅供方向性参考',
             '定价模式不同：CodeRabbit 按席位收费（按年付费每位用户每月 $24–$72），Greptile Pro 按审查额度收费（每个 $1，无席位费），Snyk Code Team 为最多 10 名开发者每月固定 $25',
             'CodeRabbit 的公开仓库免费，Greptile Starter 对一名开发者免费；Qodo 有 14 天试用，但没有永久免费版',
             '自托管是 CodeRabbit（据其文档面向 500+ 席位的客户）、Greptile 和 Qodo 的企业版功能；自托管的 CodeRabbit 仍会把代码发送给你配置的 LLM 提供商',
-            '一份已发布的行业分析发现，64% 的 AI 审查评论针对风格和重复，仅 14% 针对逻辑缺陷和安全——需要限定范围的提示来扭转这一比例',
+            'AI 审查工具可能把逻辑和安全方面的发现淹没在风格评论之中；我们没有找到可验证的公开数据集来量化这一比例，因此请衡量开发者采纳评论的占比，并用限定范围的提示来提高它',
             'Snyk Code 是安全扫描器（在 2025 年对三款安全工具的第三方对比中得分 92/100），不是通用的拉取请求审查工具——请与 AI 审查工具搭配使用',
             '在云端 AI 代码审查处理涉及个人数据的源代码之前，GDPR 可能要求进行数据保护影响评估（第 35 条）——请咨询你的数据保护官',
             '云端前沿模型的上下文窗口约为 1M 令牌（约 75,000–100,000 行代码，为估算值）；开源权重的 Llama 4 Scout 在本地支持 10M 令牌',
@@ -4530,7 +4536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'tools',
           title: 'AI 代码审查工具：该选哪一个',
           content: [
-            '在唯一一项方法有据可查的公开横向测试中，Greptile 在 50 个植入缺陷上检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%（Greptile 运行的基准测试，2025 年 7 月，默认设置，托管方案）。Greptile 销售被测工具之一，且其他已发布的基准测试对同一批工具的排名顺序不同，因此请把这些数字当作方向性参考，而不是定论。',
+            '在 Greptile 于 2025 年 7 月运行的基准测试中，针对 50 个植入缺陷，Greptile 检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%（默认设置，托管方案）。Greptile 销售被测工具之一，独立测试的结果可能不同，因此请把这些数字当作方向性参考，而不是定论。',
             'CodeRabbit 的公开仓库可免费审查；私有仓库需要 Essentials（按年付费每位用户每月 $24，按月付费 $30）、Team（按年付费 $48，按月付费 $60）或 Advanced（$72），企业版需询价。自托管仅限企业版，自托管文档说明该方案面向 500+ 席位的客户。',
             'Greptile Starter 对一名活跃开发者免费（每月 50 个额度）。Pro 没有席位费：额度每个 $1，Base 审查消耗 1 个额度，Plus 审查 3 个，Apex 审查 10 个。Qodo Pro Team 标价 $30，最多 30 名用户共享额度，没有永久免费版。GitHub Copilot 代码审查已在 Copilot Pro、Pro+、Max、Business 和 Enterprise 上正式推出（Copilot Free 不含），并消耗 AI 额度——GitHub 文档给出的平均每次审查费用约为 $0.25（Lite）、$1.50（Balanced）和 $10（Max）。',
           ],
@@ -4542,11 +4548,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '工具': '[CodeRabbit](https://www.coderabbit.ai)', '检出率（厂商测试）': '44%', 'Git 平台': 'GitHub、GitLab', '自托管': '企业版（500+ 席位）', '标价': '每位用户每月 $24（按年付费）' },
             { '工具': '[Qodo](https://www.qodo.ai)', '检出率（厂商测试）': '未测试', 'Git 平台': 'GitHub、GitLab、Bitbucket、Azure', '自托管': '企业版（本地部署）', '标价': 'Pro Team 起价 $30（共享）' },
             { '工具': '[Snyk Code](https://snyk.io)', '检出率（厂商测试）': '未测试', 'Git 平台': '通过 SCM 集成', '自托管': '未说明', '标价': '免费；Team 起价 $25（10 名开发者）' },
-            { '工具': '传统 SAST', '检出率（厂商测试）': '低于 20%*', 'Git 平台': '视产品而定', '自托管': '视产品而定', '标价': '视产品而定' },
+            { '工具': '传统 SAST', '检出率（厂商测试）': '未测试', 'Git 平台': '视产品而定', '自托管': '视产品而定', '标价': '视产品而定' },
           ],
           tableFormat: true,
           callouts: [
-            { type: 'info', label: '数据来源说明', text: '*第三方估算，非 PromptQuorum 实测。检出率：Greptile 运行的基准测试，2025 年 7 月。标价取自各厂商的定价页面；方案经常变动，购买前请自行确认。' },
+            { type: 'info', label: '数据来源说明', text: '检出率：Greptile 运行的基准测试，2025 年 7 月，非 PromptQuorum 实测。标价取自各厂商的定价页面；方案经常变动，购买前请自行确认。' },
           ],
           image: '/images/code-review-tool-comparison-zh.svg',
           imageCaption: 'PromptQuorum、GitHub Copilot、ChatGPT 和 Cursor 的功能对比：PromptQuorum 可将一条提示同时发送给多个模型，因此一次审查可以在多个模型之间交叉核对。',
@@ -4617,10 +4623,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '为什么信噪比是 AI 代码审查的一个问题？',
           content: [
             'AI 代码审查工具对风格问题发表评论的可靠程度，远高于发现关键运行时缺陷（上述厂商自测中为 44–82%）——这造成了评论量问题，可能导致开发者不再采用。',
-            '一份已发布的行业分析（非 PromptQuorum 实测）审阅了 340 个拉取请求中的 1,247 条 AI 审查评论，发现：约 64% 的 AI 审查评论针对风格、重复和测试覆盖率；只有约 14% 的评论针对逻辑缺陷和安全问题——也就是导致生产事故的问题。可操作反馈低于 60% 的工具，会因工程师开始忽略所有反馈（包括关键发现）而导致开发者采用率崩溃。',
-            '根本原因在于训练数据：AI 模型是在风格违规远多于逻辑错误的代码库上训练的。模型学会的是呈现它最常见到的内容，而不是最重要的内容。',
-            '同一份分析报告称，经过调优的 AI 审查系统通过提示工程明确指示模型优先关注逻辑和安全而非风格，达到了 52% 的开发者行动率——与对 10,000+ 条评论的分析中人工主导代码审查的 50% 行动率相当。',
-            '**一句话总结：** 信噪比问题意味着 AI 代码审查工具产生 64% 的风格评论，却只有 14% 是可操作的安全/逻辑发现——需要限定范围的提示来扭转这一比例，使开发者采用率达到 50% 以上。',
+            '行业指南普遍报告称，相对于逻辑和安全方面的发现，AI 审查工具会产生大量关于风格、重复和测试覆盖率的评论。我们没有找到可验证的公开数据集来量化这一比例，因此请自行衡量：开发者实际采纳的 AI 评论占比才是关键数字。评论大多被忽略的工具，会让工程师学会忽略所有反馈，包括关键发现。',
+            '一个可能的原因是训练数据：模型在所学代码库中见到的风格差异远多于逻辑错误，因此它呈现的是出现频率高的内容，而不是最重要的内容。',
+            '通过提示工程指示模型优先关注逻辑和安全而非风格，是改变评论构成的主要手段；调整提示后，请重新衡量行动率。',
+            '**一句话总结：** AI 代码审查工具可能产生以风格为主的评论——限定范围的提示加上持续跟踪的行动率，能让逻辑和安全方面的发现保持可见。',
           ],
           callouts: [
             { type: 'warning', label: '警告', text: '部署 AI 代码审查却不限定提示范围的团队，有开发者不再采用的风险。当大多数评论都是噪声时，工程师会开始忽略所有评论——包括关键的安全发现。推广到团队之前，务必先配置明确的审查优先级。' },
@@ -4671,7 +4677,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         promptOutcome: {
           content: [
-            '结构化的提示会产出可直接用于分诊的安全报告。开放式的提示则会产出 12 条关于变量命名的评论，外加一条被埋没、工程师永远不会读到的安全发现。',
+            '结构化的提示会产出可直接用于分诊的安全报告。例如，开放式的提示可能返回十几条关于变量命名的评论，外加一条被埋没、工程师永远不会读到的安全发现。',
           ],
         },
 
@@ -4687,8 +4693,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'security',
           title: '如何进行以安全为导向的 AI 代码审查？',
           content: [
-            '在真实漏洞数据集上训练的 AI 驱动 SAST（静态应用安全测试）工具，在 AI 生成代码上的缺陷检测得分为 84–92（满分 100）——而第三方深度学习基准测试中，基于规则的方法准确率为 65%，基于 Transformer 的模型为 94%（非 PromptQuorum 实测）。',
-            '基于 Transformer 的模型——当今大语言模型和专用代码安全工具背后的架构——在缺陷分类基准测试中达到 94% 的准确率，误报率很低。相比之下，卷积神经网络（CNN）和循环神经网络（RNN）方法为 89%，静态分析为 72%，基于规则的方法为 65%，这是可衡量的进步。',
+            '在真实漏洞数据集上训练的 AI 驱动 SAST（静态应用安全测试）工具，在 2025 年的一项第三方对比中，于 AI 生成代码上得分 84–92（满分 100）（非 PromptQuorum 实测）。',
+            '基于规则的静态分析应用固定的模式，而 AI 辅助工具还会推理代码路径如何相互作用。两者是互补的，这也是许多团队把规则引擎作为合并门禁、同时并行使用 AI 审查工具或扫描器的原因。',
             '三款以安全为导向的工具，在 2025 年第三方对 AI 生成代码的对比中的得分（sanj.dev；非 PromptQuorum 实测）：',
           ],
           columns: ['工具', '得分（第三方）', '误报', '最适合'],
@@ -4712,12 +4718,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'bug-triaging',
           title: '什么是 AI 缺陷分诊？',
           content: [
-            'AI 驱动的缺陷分诊在严重程度分类上达到 85–90% 的准确率——人工方法为 60–70%——同时将分诊时间缩短 65%，并将误报最多减少 60%。',
-            'AI 缺陷分诊是检测之后的下游步骤：按严重程度对缺陷分类，预测对生产的影响，并将问题分派给合适的工程师。Khaleefulla 等人的一项研究表明，AI 驱动的分诊系统在缺陷分类上达到 85% 以上的准确率，在优先级预测上达到 82% 的精确率——平均分诊时间缩短 65%。',
-            '与人工方法相比，解决时间（TTR）缩短 30–40%，主要收益来自更快的分类和分派，而不是更快的修复。85–90% 的严重程度分类准确率意味着工程师花在争论优先级上的时间大幅减少，而把更多时间用于解决真正重要的问题。',
+            'AI 驱动的缺陷分诊按严重程度对缺陷分类，预测对生产的影响，并将问题分派给合适的工程师，从而减少工程师花在争论优先级上的时间。',
+            'AI 缺陷分诊是检测之后的下游步骤。在 Khaleefulla、Sudeep 和 Savithri 的一篇论文（[IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization)）中，作者报告其系统在缺陷分类上达到 85% 以上的准确率，在优先级预测上达到 82% 的精确率，平均分诊时间缩短 65%。这些是作者自己的结果，并非 PromptQuorum 实测。',
+            '收益主要来自更快的分类和分派，而不是更快的修复。各项目的严重程度约定不同，某个系统报告的准确率未必适用于你的项目；依赖它之前，请先在你自己的积压缺陷上做试点。',
           ],
           callouts: [
-            { type: 'info', label: '你知道吗', text: 'AI 缺陷分诊的严重程度分类准确率为 85-90%，而人工分诊为 60-70%。主要节省的时间不在于更快修复，而在于更快分类和分派。工程师花在争论优先级上的时间更少，更多时间用于解决真正重要的问题。' },
+            { type: 'info', label: '你知道吗', text: 'AI 分诊节省的时间不在于更快修复，而在于更快分类和分派。工程师花在争论优先级上的时间更少，更多时间用于解决真正重要的问题。' },
           ],
         },
 
@@ -4740,9 +4746,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'regional',
           title: '地区性法规如何影响 AI 代码审查？',
           content: [
-            '欧洲企业把源代码发送给外部 AI API，在部署前可能需要根据 GDPR 第 35 条进行数据保护影响评估（DPIA），特别是当代码或其接触的数据涉及个人数据处理时。当处理个人数据时，GDPR 和欧盟 AI 法案可能同时适用于 AI 辅助代码审查，因此在推广之前请让你的数据保护官参与。风险是真实存在的：2024 年的 GDPR 罚款中包括对 Clearview AI 的 €30.5 million 罚款。',
-            '对于欧盟团队，CodeRabbit 在其企业版方案中提供自托管部署（据其文档为 500+ 席位），不过自托管代理仍会把提示和代码发送给你配置的 LLM 提供商。需要零云端外传的团队，可以通过 Ollama 在本地运行开源权重模型，包括 Mistral AI（法国）的模型。',
-            '中国的开发团队使用 Qwen3（阿里巴巴）和 DeepSeek 等开源权重模型作为可本地部署的代码审查模型，二者都支持中文代码注释和文档——这对中国企业环境中常见的混合语言代码库至关重要。受 METI 数据治理指南约束的日本企业，通过 Ollama 在本地部署基于 LLaMA 4 Scout 或 LLaMA 3.3 的代码审查工作流——LLaMA 4 Scout 推理需要约 55 GB VRAM，且零外部 API 调用。',
+            '欧洲企业把源代码发送给外部 AI API，在部署前可能需要根据 GDPR 第 35 条进行数据保护影响评估（DPIA），特别是当代码或其接触的数据涉及个人数据处理时。当处理个人数据时，GDPR 和欧盟 AI 法案可能同时适用于 AI 辅助代码审查，因此在推广之前请让你的数据保护官参与。这是一般性信息，不构成法律意见；请与你的数据保护官或法律顾问确认具体要求。',
+            '对于欧盟团队，CodeRabbit 在其企业版方案中提供自托管部署（据其文档为 500+ 席位），不过自托管代理仍会把提示和代码发送给你配置的 LLM 提供商。必须让代码远离第三方云的团队，可以通过 Ollama 在本地运行开源权重模型，包括 Mistral AI（法国）的模型。',
+            '中国的团队可以使用 Qwen3（阿里巴巴）和 DeepSeek 等开源权重模型作为可本地部署的代码审查模型；二者都支持中文代码注释和文档，这对混合语言代码库很重要。在 METI 数据治理指南下工作的日本团队，可以通过 Ollama 在本地运行基于 Llama 4 Scout 或 Llama 3.3 的审查工作流——Llama 4 Scout 推理大约需要 55 GB VRAM——这样代码就不会到达外部 API。',
           ],
         },
 
@@ -4778,12 +4784,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           mistakes: [
             {
               mistake: '使用默认设置部署 AI 审查，不做任何提示定制。',
-              problem: '默认的 AI 审查可能产生大量风格评论（一份已发布的行业分析中为 64%）。开发者开始忽略所有评论，关键的安全发现也被埋没。',
+              problem: '默认的 AI 审查可能产生以风格为主的评论。开发者开始忽略所有评论，关键的安全发现也被埋没。',
               fix: '使用 5 部分提示框架。明确排除风格/命名。把范围限定在逻辑、安全和性能上。',
             },
             {
               mistake: '把 AI 代码审查当作唯一的审查层。',
-              problem: '在唯一一项有据可查的公开测试中，AI 审查工具检出了 44–82% 的植入缺陷——并非 100%。依赖具体上下文的问题（扩展性影响、团队约定、业务逻辑错误）需要人工判断。',
+              problem: '在 Greptile 2025 年 7 月的基准测试中，AI 审查工具检出了 44–82% 的植入缺陷——并非 100%。依赖具体上下文的问题（扩展性影响、团队约定、业务逻辑错误）需要人工判断。',
               fix: 'AI 是初筛过滤器。人工审查者负责架构、业务逻辑，以及 AI 漏掉的缺陷。',
             },
             {
@@ -4805,11 +4811,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: '2026 年最准确的 AI 代码审查工具是哪一个？',
-              a: '没有哪个工具在所有测试中都最准确。在唯一一项方法有据可查的公开横向基准测试中——由 Greptile 于 2025 年 7 月在五个开源仓库的 50 个缺陷上运行——Greptile 检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%（默认设置，托管方案）。由于 Greptile 销售被测工具之一，且其他已发布的基准测试对这些工具的排名不同，请把这些数字作为起点，并在你自己的拉取请求上做两周试用。就安全扫描而言，Snyk Code 属于另一个类别：它是对拉取请求审查工具的补充的扫描器。',
+              a: '没有哪个工具在所有测试中都最准确。在 Greptile 于 2025 年 7 月针对五个开源仓库的 50 个缺陷运行的基准测试中，Greptile 检出 82%，Cursor Bugbot 58%，GitHub Copilot 54%，CodeRabbit 44%（默认设置，托管方案）。由于 Greptile 销售被测工具之一，且独立测试的结果可能不同，请把这些数字作为起点，并在你自己的拉取请求上做两周试用。就安全扫描而言，Snyk Code 属于另一个类别：它是对拉取请求审查工具的补充的扫描器。',
             },
             {
               q: 'CodeRabbit 与 Greptile：我该选哪个？',
-              a: '如果最看重发现深层缺陷，并且可以按审查次数做预算，请选 Greptile：在 Greptile 自己 2025 年 7 月的测试中，它检出 82%，CodeRabbit 为 44%，而且 Pro 没有席位费（预付额度每个 $1；一次 Base 审查消耗 1 个额度）。如果你想要按席位定价（Essentials 按年付费每位用户每月 $24，按月付费 $30）以及公开仓库的免费审查，请选 CodeRabbit。两者都提供 14 天试用，并把自托管保留给企业版。CodeRabbit 是否值得，取决于用量：对拉取请求很多的团队，固定的席位价格更容易预测，而用量较少的团队按审查次数付费可能更便宜。',
+              a: '如果最看重植入缺陷的最高检出率，并且可以按审查次数做预算，请选 Greptile：在 Greptile 自己 2025 年 7 月的测试中，它检出 82%，CodeRabbit 为 44%，而且 Pro 没有席位费（预付额度每个 $1；一次 Base 审查消耗 1 个额度）。如果你想要按席位定价（Essentials 按年付费每位用户每月 $24，按月付费 $30）以及公开仓库的免费审查，请选 CodeRabbit。两者都提供 14 天试用，并把自托管保留给企业版。CodeRabbit 是否值得，取决于用量：对拉取请求很多的团队，固定的席位价格更容易预测，而用量较少的团队按审查次数付费可能更便宜。',
             },
             {
               q: 'CodeRabbit 和 Greptile 免费吗？',
@@ -4833,11 +4839,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI 代码审查能减少多少审查时间？',
-              a: '一份第三方行业指南（DigitalApplied，2025）报告审查时间减少 40%、生产缺陷减少 62%；PromptQuorum 并未测量这些数据。关于 AI 缺陷分诊的研究报告称，与人工方法相比，分诊时间缩短 65%，解决时间加快 30–40%。把 AI 审查提示限定在逻辑和安全（而非风格）上的团队，报告的开发者行动率约为 52%，与人工审查者相当。',
+              a: '一份第三方行业指南（DigitalApplied，2025）报告审查时间减少 40%、生产缺陷减少 62%；PromptQuorum 并未测量这些数据。在 Khaleefulla 等人的论文（IJERT）中，作者报告其 AI 分诊系统使平均分诊时间缩短 65%。无论使用哪种工具，请在调整提示范围前后，衡量开发者采纳 AI 评论的占比。',
             },
             {
               q: 'AI 代码审查与传统静态分析（SAST）相比如何？',
-              a: '第三方估算认为，传统的基于规则的 SAST 在有意义的运行时缺陷上低于 20%，且误报率很高。在 2025 年的一项第三方对比中，AI 驱动的 SAST 在 AI 生成代码上得分 84–92/100；在缺陷分类基准测试中，基于 Transformer 的模型准确率达 94%，而基于规则的方法为 65%（均非 PromptQuorum 实测）。AI 的关键优势在于上下文推理——它评估代码路径如何相互作用，而不是匹配固定的漏洞特征。',
+              a: '基于规则的 SAST 应用固定的漏洞特征，往往会产生大量误报，而 AI 驱动的工具增加了上下文推理：它们评估代码路径如何相互作用，而不是匹配特征。在 2025 年的一项第三方对比中，Snyk Code、Semgrep Enterprise 和 CodeQL 在 AI 生成代码上得分 84–92/100（非 PromptQuorum 实测）。两种方法是互补的。',
             },
             {
               q: 'AI 代码审查对欧洲团队来说符合 GDPR 吗？',
@@ -4848,8 +4854,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '能——对于带有多个条件分支的复杂逻辑，思维链（CoT）提示会要求模型在给出发现之前，沿着每条执行路径追踪数据流。这能发现模式匹配遗漏的逻辑缺陷，因为模型必须显式地建模 null 值或意外输入类型在函数中可能经过的每一条路径，而不是把代码与常见错误的模板相匹配。CoT 对安全敏感函数和复杂状态管理最有价值；它会增加延迟，对简单的工具函数则没有必要。',
             },
             {
-              q: 'AI 代码审查评论中有多大比例真正有用？',
-              a: '一份已发布的行业分析（非 PromptQuorum 实测）审阅了 340 个 PR 中的 1,247 条 AI 审查评论，发现只有 14% 针对逻辑缺陷和安全问题——也就是导致生产事故的问题——而 64% 针对风格、重复和测试覆盖率。可操作反馈低于 60% 的工具，会因工程师开始忽略所有评论而导致开发者采用率崩溃。明确排除风格评论的限定范围提示，是提高可操作评论占比的主要手段。',
+              q: 'AI 代码审查评论中有多少比例真正有用？',
+              a: '我们没有找到可验证的公开数字，而且该比例因工具、提示和代码库而异，因此请自行衡量：统计一个月内开发者采纳的 AI 评论占比。如果大多数评论被忽略，请收紧范围——明确排除风格评论，只要求逻辑、安全和性能方面的发现——然后重新衡量。',
             },
             {
               q: '哪个 AI 模型最适合代码审查？',
@@ -4865,11 +4871,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI 代码审查在检测安全漏洞方面能比专用 SAST 工具更好吗？',
-              a: '在第三方对比中，AI 驱动的 SAST 工具（Snyk Code、Semgrep Enterprise、CodeQL）在 AI 生成代码上得分 84–92/100，而基于规则的静态分析准确率为 65%。对大型代码库做大批量检查时，传统 SAST 仍然更快，因为 AI 每个 PR 需要更多算力。最佳实践：用轻量的 SAST 和 lint 保证速度，并在高风险变更（身份验证、支付、基础设施）上用 AI 审查补充深度安全分析。',
+              a: '在第三方对比中，AI 驱动的 SAST 工具（Snyk Code、Semgrep Enterprise、CodeQL）在 2025 年的一项第三方对比中于 AI 生成代码上得分 84–92/100（非 PromptQuorum 实测），而基于规则的静态分析仍可作为快速的合并门禁。对大型代码库做大批量检查时，传统 SAST 仍然更快，因为 AI 每个 PR 需要更多算力。最佳实践：用轻量的 SAST 和 lint 保证速度，并在高风险变更（身份验证、支付、基础设施）上用 AI 审查补充深度安全分析。',
             },
             {
               q: '我可以在本地运行 AI 代码审查来保护完全私有的代码吗？',
-              a: '可以。Devstral Small 24B（Mistral AI，16 GB RAM）和 Llama 4 Scout（约 55 GB VRAM，10M 上下文）可通过 Ollama 完全在本地运行。不会有代码传输给外部 API，这就省去了 DPIA 原本需要涵盖的第三方处理环节。在复杂的安全分析上，质量低于云端前沿模型，但对大多数 PR 级审查已经足够。',
+              a: '可以。Devstral Small 24B（Mistral AI，16 GB RAM）和 Llama 4 Scout（约 55 GB VRAM，10M 上下文）可通过 Ollama 完全在本地运行。推理在你自己的硬件上进行，因此代码不会发送给云端审查工具；这可能省去 DPIA 原本需要涵盖的第三方处理环节，但请与你的安全团队确认模型下载和更新的行为。在复杂的安全分析上，质量低于云端前沿模型，但对大多数 PR 级审查已经足够。',
             },
             {
               q: '10 人以下的小团队最适合哪款 AI 代码审查工具？',
@@ -4893,6 +4899,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[GitHub 文档：Copilot 代码审查](https://docs.github.com/en/copilot/concepts/agents/code-review) —— 包含代码审查的方案和 AI 额度计费',
             '[Graphite，2025 年。“AI 代码审查的有效提示工程”](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) —— 关于用限定范围的提示来减少误报、提高信号的技术指南',
             '[Sanjay，2025 年。“2025 年最佳 AI 代码安全工具：Snyk vs Semgrep vs CodeQL”](https://sanj.dev/post/ai-code-security-tools-comparison) —— 三款 SAST 工具在 AI 生成代码上的第三方基准测试（92 / 87 / 84 分的来源）',
+            '[Khaleefulla、Sudeep 和 Savithri。“使用人工智能的自动化缺陷分类与任务分配系统”（IJERT）](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) —— 作者自己的结果：85% 以上的分类准确率，82% 的优先级精确率，分诊时间缩短 65%',
             '[DigitalApplied，2025 年。“AI 代码审查自动化完整指南”](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) —— 行业数据：节省 40% 的时间，生产缺陷减少 62%',
             '**注意：** 检出率由厂商报告，并非 PromptQuorum 实测；价格为上述厂商页面中的标价。AI 代码审查市场变化很快——购买前请在厂商网站上核实当前的价格和平台支持情况。',
           ],
@@ -4908,7 +4915,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Use Cases',
     heroImage: '/images/ai-code-review-overview-hero-ko.webp',
     title: 'AI 코드 리뷰 2026: 최고 도구 순위 (CodeRabbit, Greptile, Snyk) + 프롬프트 프레임워크',
-    intro: 'AI 코드 리뷰 도구는 문서화된 방법이 있는 유일한 공개 비교 테스트에서 심어 둔 버그의 44–82%를 잡아냈습니다. 이는 Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행한 벤치마크이며, 규칙 기반 정적 분석은 서드파티 추정치로 20% 미만입니다. 벤더가 직접 실행한 수치는 방향성을 보여 주는 참고치로만 보십시오. 다른 공개 벤치마크는 같은 도구의 순위를 다르게 매깁니다. 실무상의 과제는 신호 대 잡음 비율입니다. 공개된 업계 분석에 따르면 AI 리뷰 코멘트의 64%는 로직 버그가 아닌 스타일을 다룹니다. 보안과 로직을 형식보다 우선하도록 범위를 한정한 프롬프트가 가장 큰 해결 수단입니다.',
+    intro: 'AI 코드 리뷰 도구는 Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행한 벤치마크에서 심어 둔 버그의 44–82%를 잡아냈습니다. 벤더가 직접 실행한 수치는 방향성을 보여 주는 참고치로만 보십시오. Greptile은 테스트 대상 도구 중 하나를 판매하며 독립적인 결과는 다를 수 있습니다. 실무상의 과제는 신호 대 잡음 비율입니다. AI 리뷰어는 로직과 보안 발견 사항을 스타일 코멘트 속에 묻어 버릴 수 있으며, 이는 개발자가 코멘트를 무시하도록 만듭니다. 보안과 로직을 형식보다 우선하도록 범위를 한정한 프롬프트가 가장 큰 해결 수단입니다.',
     publishDate: '2026-03-24',
     dateModified: '2026-10-30',
     toc: [
@@ -4967,11 +4974,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       about: [
         { '@type': 'Thing', name: 'AI 코드 리뷰 도구', description: 'PR을 분석하고 버그, 보안 취약점, 스타일 문제를 식별하는 자동화된 소프트웨어 도구' },
-        { '@type': 'Thing', name: '신호 대 잡음 문제', description: '공개된 업계 분석에 따르면 AI 코드 리뷰 코멘트 대부분이 로직 버그가 아닌 스타일 문제를 다룬다는 과제' },
+        { '@type': 'Thing', name: '신호 대 잡음 문제', description: 'AI 코드 리뷰 코멘트가 로직 버그보다 스타일 문제에 치우칠 수 있다는 과제' },
         { '@type': 'Thing', name: '코드 리뷰를 위한 프롬프트 엔지니어링', description: '스타일 코멘트보다 로직 및 보안 결과를 우선하도록 AI 지시를 구조화하는 기법' },
         { '@type': 'Thing', name: 'Chain-of-Thought 프롬프팅', description: 'AI 모델에게 버그를 식별하기 전에 단계별로 실행 경로를 추적하도록 요청하는 방법' },
         { '@type': 'Thing', name: '코드 리뷰 자동화', description: 'CI/CD 파이프라인 및 pull request 워크플로우에 AI 코드 리뷰 도구를 통합하는 것' },
-        { '@type': 'Thing', name: 'GDPR 준수 AI 코드 리뷰', description: '유럽 데이터 보호 요건을 충족하면서 AI 코드 리뷰를 사용하는 접근 방식' },
+        { '@type': 'Thing', name: 'AI 코드 리뷰의 데이터 보호', description: '유럽 데이터 보호 요건 아래에서 AI 코드 리뷰를 사용할 때의 고려 사항' },
       ],
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -4992,11 +4999,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     quickFacts: [
-      '**문서화된 유일한 공개 테스트에서 가장 높은 탐지율:** Greptile 82% (벤더 자체 실행, 2025년 7월, 심어 둔 버그 50개) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
+      '**Greptile 실행 테스트에서 가장 높은 탐지율:** Greptile 82% (벤더 자체 실행, 2025년 7월, 심어 둔 버그 50개) — Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44%',
       '**가격 모델이 다릅니다:** CodeRabbit은 사용자당 월 $24(연간 결제, Essentials), Greptile Pro는 리뷰 크레딧당 $1, Snyk Code Team은 개발자 최대 10명 기준 월 $25',
       '**무료 옵션:** 공개 저장소의 CodeRabbit, 개발자 1명용 Greptile Starter, Snyk Code Free(월 100회 테스트)',
       '**자체 호스팅:** CodeRabbit(문서 기준 500석 이상), Greptile, Qodo 모두 Enterprise 플랜에서만 제공',
-      '**신호 문제:** 공개된 업계 분석에 따르면 AI 리뷰 코멘트의 64%는 스타일 잡음이고 14%만이 로직 또는 보안 버그를 발견합니다',
+      '**신호 문제:** AI 리뷰어는 로직과 보안 발견 사항을 스타일 코멘트 속에 묻어 버릴 수 있습니다 — 개발자가 실제로 실행에 옮기는 코멘트의 비율을 측정하십시오',
       '**해결책:** 범위를 한정한 프롬프트(5단계 프레임워크)가 코멘트를 로직과 보안 쪽으로 옮깁니다',
     ],
     faqSchema: {
@@ -5007,12 +5014,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           '@type': 'Question',
           name: '2026년에 가장 정확한 AI 코드 리뷰 도구는 무엇입니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '모든 테스트에서 가장 정확한 도구는 없습니다. 문서화된 방법이 있는 유일한 공개 비교 벤치마크 — Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행 — 에서 Greptile은 82%, Cursor Bugbot은 58%, GitHub Copilot은 54%, CodeRabbit은 44%를 잡아냈습니다(기본 설정, 호스팅 플랜). Greptile이 테스트 대상 도구 중 하나를 판매하고 다른 공개 벤치마크는 도구 순위를 다르게 매기므로, 이 수치는 출발점으로 사용하고 자신의 pull request로 2주간 시험해 보십시오. 보안 스캔의 경우 Snyk Code는 별도 범주로, pull request 리뷰어를 보완하는 스캐너입니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: '모든 테스트에서 가장 정확한 도구는 없습니다. Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행한 벤치마크에서 Greptile은 82%, Cursor Bugbot은 58%, GitHub Copilot은 54%, CodeRabbit은 44%를 잡아냈습니다(기본 설정, 호스팅 플랜). Greptile이 테스트 대상 도구 중 하나를 판매하고 독립적인 결과는 다를 수 있으므로, 이 수치는 출발점으로 사용하고 자신의 pull request로 2주간 시험해 보십시오. 보안 스캔의 경우 Snyk Code는 별도 범주로, pull request 리뷰어를 보완하는 스캐너입니다.' },
         },
         {
           '@type': 'Question',
           name: 'CodeRabbit vs Greptile: 어떤 것을 선택해야 합니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '깊은 버그를 잡는 것이 가장 중요하고 리뷰 단위로 예산을 잡을 수 있다면 Greptile을 선택하십시오. Greptile 자체의 2025년 7월 테스트에서 CodeRabbit의 44%에 대해 82%를 잡아냈고, Pro에는 좌석 요금이 없습니다(선불 크레딧 개당 $1, Base 리뷰는 1 크레딧 사용). 좌석 단위 가격(Essentials 연간 결제 시 사용자당 월 $24, 월 결제 시 $30)과 공개 저장소 무료 리뷰를 원한다면 CodeRabbit을 선택하십시오. 두 도구 모두 14일 체험판을 제공하며 자체 호스팅은 Enterprise에만 제공합니다. CodeRabbit이 가치가 있는지는 리뷰 물량에 달려 있습니다. 정액 좌석 가격은 pull request를 많이 여는 팀이 예측하기 쉽고, 물량이 적은 팀은 리뷰 단위로 내는 비용이 더 적을 수 있습니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: '심어 둔 버그의 최고 탐지율이 가장 중요하고 리뷰 단위로 예산을 잡을 수 있다면 Greptile을 선택하십시오. Greptile 자체의 2025년 7월 테스트에서 CodeRabbit의 44%에 대해 82%를 잡아냈고, Pro에는 좌석 요금이 없습니다(선불 크레딧 개당 $1, Base 리뷰는 1 크레딧 사용). 좌석 단위 가격(Essentials 연간 결제 시 사용자당 월 $24, 월 결제 시 $30)과 공개 저장소 무료 리뷰를 원한다면 CodeRabbit을 선택하십시오. 두 도구 모두 14일 체험판을 제공하며 자체 호스팅은 Enterprise에만 제공합니다. CodeRabbit이 가치가 있는지는 리뷰 물량에 달려 있습니다. 정액 좌석 가격은 pull request를 많이 여는 팀이 예측하기 쉽고, 물량이 적은 팀은 리뷰 단위로 내는 비용이 더 적을 수 있습니다.' },
         },
         {
           '@type': 'Question',
@@ -5042,12 +5049,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           '@type': 'Question',
           name: 'AI 코드 리뷰는 리뷰 시간을 얼마나 줄여줍니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '서드파티 업계 가이드(DigitalApplied, 2025)는 리뷰 시간 40% 감소와 프로덕션 버그 62% 감소를 보고하며, PromptQuorum은 이를 측정하지 않았습니다. AI 버그 트리아지 연구는 수동 방법 대비 트리아지 시간 65% 단축과 해결 시간 30–40% 개선을 보고합니다. AI 리뷰 프롬프트를 스타일이 아닌 로직과 보안으로 한정한 팀은 사람 리뷰어와 비슷한 약 52%의 개발자 실행률을 보고합니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: '서드파티 업계 가이드(DigitalApplied, 2025)는 리뷰 시간 40% 감소와 프로덕션 버그 62% 감소를 보고하며, PromptQuorum은 이를 측정하지 않았습니다. Khaleefulla 외의 논문(IJERT)에서 저자들은 자신들의 AI 트리아지 시스템이 평균 트리아지 시간을 65% 줄였다고 보고합니다. 어떤 도구를 쓰든, 프롬프트 범위를 조정하기 전후에 개발자가 실행에 옮기는 AI 코멘트의 비율을 측정하십시오.' },
         },
         {
           '@type': 'Question',
           name: 'AI 코드 리뷰는 전통적인 정적 분석(SAST)과 어떻게 비교됩니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '서드파티 추정치에 따르면 전통적인 규칙 기반 SAST는 의미 있는 런타임 버그에서 20% 미만이며 오탐률이 높습니다. AI 기반 SAST는 2025년 서드파티 비교에서 AI 생성 코드에 대해 84–92/100점을 받았고, 트랜스포머 기반 모델은 버그 분류 벤치마크에서 94% 정확도에 도달한 반면 규칙 기반 방법은 65%입니다(PromptQuorum이 측정한 것은 없음). AI의 핵심 장점은 맥락적 추론입니다. 고정된 취약점 시그니처를 매칭하는 대신 코드 경로가 서로 어떻게 상호작용하는지 평가합니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: '규칙 기반 SAST는 고정된 취약점 시그니처를 적용하며 오탐이 많이 나오는 경향이 있는 반면, AI 기반 도구는 맥락적 추론을 더합니다. 시그니처를 매칭하는 대신 코드 경로가 서로 어떻게 상호작용하는지 평가합니다. 2025년 서드파티 비교에서 Snyk Code, Semgrep Enterprise, CodeQL은 AI 생성 코드에 대해 84–92/100점을 받았습니다(PromptQuorum이 측정한 것이 아님). 두 방식은 서로 보완적입니다.' },
         },
         {
           '@type': 'Question',
@@ -5061,8 +5068,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           '@type': 'Question',
-          name: 'AI 코드 리뷰 코멘트의 몇 퍼센트가 실제로 유용합니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '340개의 PR에 걸친 1,247개의 AI 리뷰 코멘트에 대한 공개된 업계 분석(PromptQuorum이 측정한 것이 아님)에서 14%만이 프로덕션 인시던트를 일으키는 문제인 로직 버그와 보안 문제를 다루었고, 64%는 스타일, 중복, 테스트 커버리지를 다루었습니다. 실행 가능한 피드백이 60% 미만인 도구는 엔지니어들이 모든 코멘트를 무시하기 시작하면서 개발자 채택률 붕괴를 겪습니다. 스타일 코멘트를 명시적으로 제외하는 범위 한정 프롬프트는 실행 가능한 코멘트의 비율을 높이는 가장 큰 수단입니다.' },
+          name: 'AI 코드 리뷰 코멘트 중 실제로 유용한 비중은 얼마입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '검증된 공개 수치는 확인하지 못했으며, 그 비중은 도구, 프롬프트, 코드베이스에 따라 달라지므로 직접 측정하십시오. 한 달 동안 개발자가 실행에 옮기는 AI 코멘트의 비율을 세어 보십시오. 대부분의 코멘트가 무시된다면 범위를 좁히고 — 스타일 코멘트를 명시적으로 제외하고 로직, 보안, 성능 발견 사항만 요청하십시오 — 다시 측정하십시오.' },
         },
         {
           '@type': 'Question',
@@ -5082,12 +5089,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         {
           '@type': 'Question',
           name: 'AI 코드 리뷰가 전용 SAST 도구보다 보안 취약점을 더 잘 탐지할 수 있습니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '서드파티 비교에서 AI 기반 SAST 도구(Snyk Code, Semgrep Enterprise, CodeQL)는 AI 생성 코드에서 84–92/100점을 받았으며, 규칙 기반 정적 분석의 정확도는 65%였습니다. AI는 PR당 더 많은 연산이 필요하므로 대규모 코드베이스를 대량으로 검사하는 데는 전통적인 SAST가 여전히 더 빠릅니다. 모범 사례: 속도를 위해 가벼운 SAST와 린팅을 사용하고, 고위험 변경(인증, 결제, 인프라)에는 심층 보안 분석을 위해 AI 리뷰로 보완하십시오.' },
+          acceptedAnswer: { '@type': 'Answer', text: '서드파티 비교에서 AI 기반 SAST 도구(Snyk Code, Semgrep Enterprise, CodeQL)는 2025년 서드파티 비교에서 AI 생성 코드에 대해 84–92/100점을 받았으며(PromptQuorum이 측정한 것이 아님), 규칙 기반 정적 분석은 빠른 머지 게이트로 여전히 유용합니다. AI는 PR당 더 많은 연산이 필요하므로 대규모 코드베이스를 대량으로 검사하는 데는 전통적인 SAST가 여전히 더 빠릅니다. 모범 사례: 속도를 위해 가벼운 SAST와 린팅을 사용하고, 고위험 변경(인증, 결제, 인프라)에는 심층 보안 분석을 위해 AI 리뷰로 보완하십시오.' },
         },
         {
           '@type': 'Question',
           name: '코드를 완전히 비공개로 유지하면서 AI 코드 리뷰를 로컬에서 실행할 수 있습니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '예. Devstral Small 24B(Mistral AI, 16 GB RAM)와 Llama 4 Scout(~55 GB VRAM, 10M 컨텍스트)는 Ollama로 완전히 온프레미스에서 실행됩니다. 코드가 외부 API로 전송되지 않으므로, DPIA가 별도로 다뤄야 할 서드파티 처리 단계가 없어집니다. 복잡한 보안 분석에서는 품질이 프론티어 클라우드 모델보다 낮지만 대부분의 PR 수준 리뷰에는 충분합니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: '예. Devstral Small 24B(Mistral AI, 16 GB RAM)와 Llama 4 Scout(~55 GB VRAM, 10M 컨텍스트)는 Ollama로 완전히 온프레미스에서 실행됩니다. 추론이 사용자의 하드웨어에서 실행되므로 코드가 클라우드 리뷰어로 전송되지 않습니다. 이는 DPIA가 별도로 다뤄야 할 서드파티 처리 단계를 없앨 수 있지만, 모델 다운로드와 업데이트 동작은 보안 팀과 함께 확인하십시오. 복잡한 보안 분석에서는 품질이 프론티어 클라우드 모델보다 낮지만 대부분의 PR 수준 리뷰에는 충분합니다.' },
         },
         {
           '@type': 'Question',
@@ -5116,11 +5123,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '핵심 내용',
         isTldr: true,
         items: [
-          '문서화된 방법이 있는 유일한 공개 비교 테스트(Greptile 실행, 2025년 7월, 심어 둔 버그 50개)에서 AI 리뷰어는 44–82%를 잡아냈습니다: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — 벤더가 직접 실행했으므로 방향성만 참고하십시오',
+          '2025년 7월 Greptile이 실행한 벤치마크(심어 둔 버그 50개)에서 AI 리뷰어는 44–82%를 잡아냈습니다: Greptile 82%, Cursor Bugbot 58%, GitHub Copilot 54%, CodeRabbit 44% — 벤더가 직접 실행했으므로 방향성만 참고하십시오',
           '가격 모델이 다릅니다: CodeRabbit은 좌석 단위(연간 결제 시 사용자당 월 $24–$72), Greptile Pro는 리뷰 크레딧 단위($1, 좌석 요금 없음), Snyk Code Team은 개발자 최대 10명 기준 월 $25 정액입니다',
           'CodeRabbit은 공개 저장소를 무료로 리뷰하고 Greptile Starter는 개발자 1명에게 무료입니다. Qodo는 14일 체험판이 있지만 영구 무료 플랜은 없습니다',
           '자체 호스팅은 CodeRabbit(문서 기준 500석 이상 고객에게 제공), Greptile, Qodo 모두 Enterprise 플랜 기능이며, 자체 호스팅 CodeRabbit도 코드를 사용자가 설정한 LLM 제공업체로 보냅니다',
-          '공개된 업계 분석에 따르면 AI 리뷰 코멘트의 64%는 스타일과 중복을 다루고 14%만이 로직 버그와 보안을 다룹니다 — 이 비율을 뒤집으려면 범위를 한정한 프롬프트가 필요합니다',
+          'AI 리뷰어는 로직과 보안 발견 사항을 스타일 코멘트 속에 묻어 버릴 수 있습니다. 확인할 수 있는 공개 데이터셋 중에는 그 비율을 정량화한 것이 없으므로, 개발자가 실행에 옮기는 코멘트의 비율을 측정하고 범위를 한정한 프롬프트로 그 비율을 끌어올리십시오',
           'Snyk Code는 일반 pull request 리뷰어가 아니라 보안 스캐너입니다(보안 도구 3종을 비교한 2025년 서드파티 비교에서 92/100). AI 리뷰어와 함께 실행하십시오',
           '클라우드 AI 코드 리뷰가 개인 데이터와 관련된 소스 코드를 처리하기 전에 GDPR에 따라 데이터 보호 영향 평가(제35조)가 필요할 수 있습니다 — 데이터 보호 책임자와 확인하십시오',
           '클라우드 프론티어 모델의 컨텍스트 윈도우는 약 1M 토큰(대략 75,000–100,000줄의 코드, 추정치)이며, 오픈 웨이트 모델 Llama 4 Scout는 로컬에서 10M 토큰을 지원합니다',
@@ -5144,7 +5151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'tools',
         title: 'AI 코드 리뷰 도구: 어떤 것을 사용할까',
         content: [
-          '문서화된 방법이 있는 유일한 공개 비교 테스트에서 Greptile은 심어 둔 버그 50개 중 82%, Cursor Bugbot은 58%, GitHub Copilot은 54%, CodeRabbit은 44%를 잡아냈습니다(Greptile 실행 벤치마크, 2025년 7월, 기본 설정, 호스팅 플랜). Greptile은 테스트 대상 도구 중 하나를 판매하며 다른 공개 벤치마크는 같은 도구의 순위를 다르게 매기므로, 이 수치는 결론이 아닌 방향성으로 읽으십시오.',
+          'Greptile이 2025년 7월에 실행한 벤치마크에서 Greptile은 심어 둔 버그 50개 중 82%, Cursor Bugbot은 58%, GitHub Copilot은 54%, CodeRabbit은 44%를 잡아냈습니다(기본 설정, 호스팅 플랜). Greptile은 테스트 대상 도구 중 하나를 판매하며 독립적인 결과는 다를 수 있으므로, 이 수치는 결론이 아닌 방향성으로 읽으십시오.',
           'CodeRabbit은 공개 저장소를 무료로 리뷰합니다. 비공개 저장소에는 Essentials(연간 결제 시 사용자당 월 $24, 월 결제 시 $30), Team(연간 $48, 월 $60) 또는 Advanced($72)가 필요하며 Enterprise는 견적 기반입니다. 자체 호스팅은 Enterprise 전용이고, 자체 호스팅 문서에는 500석 이상 고객에게 제공된다고 명시되어 있습니다.',
           'Greptile Starter는 활성 개발자 1명에게 무료입니다(월 50 크레딧). Pro에는 좌석 요금이 없습니다: 크레딧은 개당 $1이며 Base 리뷰는 1 크레딧, Plus 리뷰는 3, Apex 리뷰는 10을 사용합니다. Qodo Pro Team은 최대 30명 사용자용 공유 크레딧을 포함해 $30로 표시되어 있으며 영구 무료 플랜은 없습니다. GitHub Copilot 코드 리뷰는 Copilot Pro, Pro+, Max, Business, Enterprise에서 정식 제공되며(Copilot Free 제외) AI 크레딧을 소비합니다 — GitHub은 리뷰당 평균 약 $0.25(Lite), $1.50(Balanced), $10(Max)로 문서화하고 있습니다.',
         ],
@@ -5156,11 +5163,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '도구': '[CodeRabbit](https://www.coderabbit.ai)', '탐지율 (벤더 테스트)': '44%', 'Git 플랫폼': 'GitHub, GitLab', '자체 호스팅': 'Enterprise (500석 이상)', '정가': '사용자당 월 $24 (연간 결제)' },
           { '도구': '[Qodo](https://www.qodo.ai)', '탐지율 (벤더 테스트)': '테스트 안 됨', 'Git 플랫폼': 'GitHub, GitLab, Bitbucket, Azure', '자체 호스팅': 'Enterprise (온프레미스)', '정가': 'Pro Team $30부터 (공유 크레딧)' },
           { '도구': '[Snyk Code](https://snyk.io)', '탐지율 (벤더 테스트)': '테스트 안 됨', 'Git 플랫폼': 'SCM 연동을 통해', '자체 호스팅': '명시되어 있지 않음', '정가': '무료; Team $25부터 (개발자 10명)' },
-          { '도구': '전통적인 SAST', '탐지율 (벤더 테스트)': '20% 미만*', 'Git 플랫폼': '다양함', '자체 호스팅': '다양함', '정가': '다양함' },
+          { '도구': '전통적인 SAST', '탐지율 (벤더 테스트)': '테스트 안 됨', 'Git 플랫폼': '다양함', '자체 호스팅': '다양함', '정가': '다양함' },
         ],
         tableFormat: true,
         callouts: [
-          { type: 'info', label: '출처 표기', text: '*서드파티 추정치이며 PromptQuorum이 측정한 것이 아닙니다. 탐지율: Greptile 실행 벤치마크, 2025년 7월. 정가는 각 벤더의 가격 페이지 기준이며 플랜은 자주 바뀌므로 구매 전에 확인하십시오.' },
+          { type: 'info', label: '출처 표기', text: '탐지율: Greptile 실행 벤치마크, 2025년 7월, PromptQuorum이 측정한 것이 아닙니다. 정가는 각 벤더의 가격 페이지 기준이며 플랜은 자주 바뀌므로 구매 전에 확인하십시오.' },
         ],
         image: '/images/code-review-tool-comparison-ko.svg',
         imageCaption: 'PromptQuorum, GitHub Copilot, ChatGPT, Cursor의 기능 비교: PromptQuorum은 하나의 프롬프트를 여러 모델에 동시에 보내므로 한 번의 리뷰를 여러 모델에서 교차 검증할 수 있습니다.',
@@ -5231,10 +5238,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'AI 코드 리뷰에서 신호 대 잡음이 문제인 이유는 무엇입니까?',
         content: [
           'AI 코드 리뷰 도구는 치명적인 런타임 버그를 잡아내는 것(위의 벤더 실행 테스트에서 44–82%)보다 스타일 문제에 대해 훨씬 안정적으로 코멘트합니다 — 이로 인해 코멘트 양 문제가 생기고 개발자 채택률 붕괴로 이어질 수 있습니다.',
-          '340개의 pull request에 걸친 1,247개의 AI 리뷰 코멘트에 대한 공개된 업계 분석(PromptQuorum이 측정한 것이 아님)에 따르면 전체 AI 리뷰 코멘트의 약 64%가 스타일, 중복, 테스트 커버리지를 다루었습니다. 로직 버그와 보안 문제 — 프로덕션 인시던트를 일으키는 문제 — 를 다룬 코멘트는 약 14%에 불과했습니다. 실행 가능한 피드백이 60% 미만인 도구는 엔지니어가 치명적인 발견 사항을 포함한 모든 피드백을 무시하기 시작하면서 개발자 채택률 붕괴를 겪습니다.',
-          '근본 원인은 학습 데이터입니다. AI 모델은 스타일 위반이 로직 오류보다 압도적으로 많은 코드베이스로 학습됩니다. 모델은 가장 중요한 것이 아니라 가장 자주 보는 것을 드러내는 법을 배웁니다.',
-          '같은 분석에 따르면, 스타일보다 로직과 보안을 우선하도록 모델에 구체적으로 지시하는 프롬프트 엔지니어링을 적용해 조정한 AI 리뷰 시스템은 52%의 개발자 실행률에 도달했으며, 이는 10,000개 이상의 분석된 코멘트에서 사람이 주도한 코드 리뷰의 실행률 50%와 비슷한 수준입니다.',
-          '**한 문장으로:** 신호 대 잡음 문제란 AI 코드 리뷰 도구가 스타일 코멘트는 64%를 생성하지만 실행 가능한 보안/로직 발견 사항은 14%에 불과하다는 뜻이며, 이 비율을 뒤집어 50% 이상의 개발자 채택에 도달하려면 범위를 한정한 프롬프트가 필요합니다.',
+          '업계 가이드들은 대체로 AI 리뷰어가 로직 및 보안 발견 사항에 비해 스타일, 중복, 테스트 커버리지 코멘트를 많이 만든다고 보고합니다. 그 비율을 정량화한 공개 데이터셋은 확인하지 못했으므로 직접 측정하십시오. 중요한 숫자는 개발자가 실행에 옮기는 AI 코멘트의 비율입니다. 코멘트 대부분이 무시되는 도구는 엔지니어가 치명적인 발견 사항을 포함한 모든 피드백을 무시하도록 가르칩니다.',
+          '가능한 원인은 학습 데이터입니다. 모델은 학습하는 코드베이스에서 로직 오류보다 스타일 변형을 훨씬 많이 보기 때문에, 가장 중요한 것이 아니라 가장 자주 나타나는 것을 드러냅니다.',
+          '스타일보다 로직과 보안을 우선하도록 모델에 지시하는 프롬프트 엔지니어링이 코멘트 구성을 바꾸는 가장 큰 수단입니다. 프롬프트를 조정한 뒤 실행률을 다시 측정하십시오.',
+          '**한 문장으로:** AI 코드 리뷰 도구는 대부분 스타일 코멘트를 만들어 낼 수 있으며, 범위를 한정한 프롬프트와 추적하는 실행률이 로직과 보안 발견 사항을 눈에 띄게 유지합니다.',
         ],
         callouts: [
           { type: 'warning', label: '경고', text: '프롬프트 범위를 한정하지 않고 AI 코드 리뷰를 배포하는 팀은 개발자 채택률 붕괴 위험이 있습니다. 대부분의 코멘트가 잡음이면 엔지니어들은 중요한 보안 발견 사항을 포함한 모든 코멘트를 무시하기 시작합니다. 팀에 배포하기 전에 항상 명시적인 리뷰 우선순위를 구성하십시오.' },
@@ -5285,7 +5292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       promptOutcome: {
         content: [
-          '구조화된 프롬프트는 바로 분류할 수 있는 보안 보고서를 만듭니다. 범위가 열려 있는 프롬프트는 변수 이름에 대한 코멘트 12개와, 엔지니어가 읽지 않는 묻혀 버린 보안 발견 사항 하나를 만듭니다.',
+          '구조화된 프롬프트는 바로 분류할 수 있는 보안 보고서를 만듭니다. 예를 들어 범위가 열려 있는 프롬프트는 변수 이름에 대한 코멘트 십여 개와, 엔지니어가 읽지 않는 묻혀 버린 보안 발견 사항 하나를 만듭니다.',
         ],
       },
 
@@ -5301,8 +5308,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'security',
         title: '보안 중심 AI 코드 리뷰는 어떻게 수행합니까?',
         content: [
-          '실제 취약점 데이터셋으로 학습한 AI 기반 SAST(Static Application Security Testing) 도구는 AI 생성 코드에서 100점 만점에 84–92점의 버그 탐지 점수를 달성합니다 — 서드파티 딥러닝 벤치마크에서 규칙 기반 방법은 65% 정확도, 트랜스포머 기반 모델은 94%입니다(PromptQuorum이 측정한 것이 아님).',
-          '오늘날 대규모 언어 모델과 전용 코드 보안 도구의 기반 아키텍처인 트랜스포머 기반 모델은 버그 분류 벤치마크에서 매우 낮은 오탐률과 함께 94% 정확도를 달성합니다. 이는 89%인 합성곱 신경망(CNN) 및 순환 신경망(RNN) 접근 방식, 72%인 정적 분석, 65%인 규칙 기반 방법에 비해 측정 가능한 진전입니다.',
+          '실제 취약점 데이터셋으로 학습한 AI 기반 SAST(Static Application Security Testing) 도구는 2025년 서드파티 비교에서 AI 생성 코드에 대해 100점 만점에 84–92점을 받았습니다(PromptQuorum이 측정한 것이 아님).',
+          '규칙 기반 정적 분석은 고정된 패턴을 적용하는 반면, AI 지원 도구는 코드 경로가 서로 어떻게 상호작용하는지도 추론합니다. 두 방식은 서로 보완적이며, 그래서 많은 팀이 규칙 엔진을 머지 게이트로 실행하고 AI 리뷰어나 스캐너를 함께 사용합니다.',
           'AI 생성 코드를 대상으로 한 2025년 서드파티 비교(sanj.dev; PromptQuorum이 측정한 것이 아님)에서 점수를 받은 세 가지 보안 도구입니다.',
         ],
         columns: ['도구', '점수 (서드파티)', '오탐', '적합한 용도'],
@@ -5326,12 +5333,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'bug-triaging',
         title: 'AI 버그 트리아지란 무엇입니까?',
         content: [
-          'AI 기반 버그 트리아지는 심각도 분류에서 85–90%의 정확도를 달성합니다 — 수동 방법의 60–70%에 비해 — 동시에 트리아지 시간을 65% 줄이고 오탐을 최대 60% 줄입니다.',
-          'AI 버그 트리아지는 탐지 이후의 단계입니다. 버그를 심각도별로 분류하고, 프로덕션 영향을 예측하고, 이슈를 적절한 엔지니어에게 배정합니다. Khaleefulla 외의 연구는 AI 기반 트리아지 시스템이 버그 분류에서 85% 이상의 정확도, 우선순위 예측에서 82%의 정밀도를 달성했으며 평균 트리아지 시간을 65% 줄였음을 보여 주었습니다.',
-          '해결 시간(TTR)은 수동 방법에 비해 30–40% 개선되며, 주된 이득은 수정 속도가 아니라 더 빠른 분류와 배정에서 나옵니다. 85–90% 정확도의 버그 심각도 분류는 엔지니어가 우선순위를 논의하는 시간을 크게 줄이고 중요한 문제를 해결하는 데 더 많은 시간을 쓴다는 뜻입니다.',
+          'AI 기반 버그 트리아지는 버그를 심각도별로 분류하고, 프로덕션 영향을 예측하고, 이슈를 적절한 엔지니어에게 배정하여 엔지니어가 우선순위를 논의하는 데 쓰는 시간을 줄입니다.',
+          'AI 버그 트리아지는 탐지 이후의 단계입니다. Khaleefulla, Sudeep, Savithri의 논문([IJERT](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization))에서 저자들은 자신들의 시스템이 버그 분류에서 85% 이상의 정확도, 우선순위 예측에서 82%의 정밀도, 평균 트리아지 시간 65% 감소를 달성했다고 보고합니다. 이는 저자들 자신의 결과이며 PromptQuorum이 측정한 것이 아닙니다.',
+          '이득은 수정 속도가 아니라 주로 더 빠른 분류와 배정에서 나옵니다. 심각도 기준은 프로젝트마다 다르므로 한 시스템에서 보고된 정확도가 여러분의 프로젝트에 그대로 적용되지 않을 수 있습니다. 의존하기 전에 자신의 백로그로 시범 운영해 보십시오.',
         ],
         callouts: [
-          { type: 'info', label: '알고 계셨나요?', text: 'AI 버그 트리아지는 심각도 분류에서 수동 트리아지의 60-70% 대비 85-90%의 정확도를 달성합니다. 주요 시간 절약은 더 빠른 수정에서 오는 것이 아니라 더 빠른 분류와 라우팅에서 옵니다. 엔지니어들은 우선순위를 논의하는 시간을 줄이고 중요한 문제를 해결하는 시간을 더 많이 사용합니다.' },
+          { type: 'info', label: '알고 계셨나요?', text: 'AI 트리아지에서 시간 절약은 더 빠른 수정에서 오는 것이 아니라 더 빠른 분류와 라우팅에서 옵니다. 엔지니어들은 우선순위를 논의하는 시간을 줄이고 중요한 문제를 해결하는 시간을 더 많이 사용합니다.' },
         ],
       },
 
@@ -5354,9 +5361,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'regional',
         title: '지역별 규정은 AI 코드 리뷰에 어떤 영향을 줍니까?',
         content: [
-          '소스 코드를 외부 AI API로 보내는 유럽 기업은, 특히 코드나 그것이 다루는 데이터가 개인 데이터 처리와 관련된 경우, 도입 전에 GDPR 제35조에 따른 데이터 보호 영향 평가(DPIA)가 필요할 수 있습니다. 개인 데이터가 처리되는 경우 GDPR과 EU AI법이 AI 지원 코드 리뷰에 동시에 적용될 수 있으므로, 도입 전에 데이터 보호 책임자를 참여시키십시오. 위험은 현실적입니다. 2024년 GDPR 과징금에는 Clearview AI에 대한 €30.5 million 과징금이 포함되었습니다.',
-          'EU 팀의 경우 CodeRabbit은 Enterprise 플랜에서 자체 호스팅 배포를 제공하지만(문서 기준 500석 이상), 자체 호스팅 에이전트도 프롬프트와 코드를 사용자가 설정한 LLM 제공업체로 보냅니다. Mistral AI(프랑스) 모델을 포함한 오픈 웨이트 모델은 클라우드 외부 전송이 전혀 없어야 하는 팀을 위해 Ollama로 로컬에서 실행할 수 있습니다.',
-          '중국 개발 팀은 Qwen3(Alibaba)와 DeepSeek 같은 오픈 웨이트 모델을 로컬 배포 가능한 코드 리뷰 모델로 사용하며, 두 모델 모두 중국어 코드 주석과 문서를 지원합니다 — 중국 기업 환경에서 흔한 다국어 코드베이스에 중요합니다. METI 데이터 거버넌스 지침을 따르는 일본 기업은 LLaMA 4 Scout 또는 LLaMA 3.3 기반 코드 리뷰 워크플로우를 Ollama로 로컬 배포합니다 — LLaMA 4 Scout는 추론에 ~55 GB VRAM이 필요하며 외부 API 호출은 전혀 없습니다.',
+          '소스 코드를 외부 AI API로 보내는 유럽 기업은, 특히 코드나 그것이 다루는 데이터가 개인 데이터 처리와 관련된 경우, 도입 전에 GDPR 제35조에 따른 데이터 보호 영향 평가(DPIA)가 필요할 수 있습니다. 개인 데이터가 처리되는 경우 GDPR과 EU AI법이 AI 지원 코드 리뷰에 동시에 적용될 수 있으므로, 도입 전에 데이터 보호 책임자를 참여시키십시오. 이는 일반적인 정보이며 법률 자문이 아닙니다. 요건은 데이터 보호 책임자 또는 법률 전문가와 확인하십시오.',
+          'EU 팀의 경우 CodeRabbit은 Enterprise 플랜에서 자체 호스팅 배포를 제공하지만(문서 기준 500석 이상), 자체 호스팅 에이전트도 프롬프트와 코드를 사용자가 설정한 LLM 제공업체로 보냅니다. Mistral AI(프랑스) 모델을 포함한 오픈 웨이트 모델은 코드를 서드파티 클라우드 밖에 두어야 하는 팀을 위해 Ollama로 로컬에서 실행할 수 있습니다.',
+          '중국의 팀은 Qwen3(Alibaba)와 DeepSeek 같은 오픈 웨이트 모델을 로컬 배포 가능한 코드 리뷰 모델로 사용할 수 있으며, 두 모델 모두 중국어 코드 주석과 문서를 지원하므로 다국어 코드베이스에 중요합니다. METI 데이터 거버넌스 지침을 따르는 일본의 팀은 Llama 4 Scout 또는 Llama 3.3 기반 리뷰 워크플로우를 Ollama로 로컬 실행할 수 있으며 — Llama 4 Scout는 추론에 대략 55 GB의 VRAM이 필요합니다 — 이 경우 코드가 외부 API에 전달되지 않습니다.',
         ],
       },
 
@@ -5392,12 +5399,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mistakes: [
           {
             mistake: '프롬프트 커스터마이징 없이 기본 설정으로 AI 리뷰를 배포하는 것.',
-            problem: '기본 AI 리뷰는 대부분 스타일 코멘트를 만들 수 있습니다(공개된 업계 분석에서 64%). 개발자들이 모든 코멘트를 무시하기 시작합니다. 중요한 보안 발견 사항이 묻힙니다.',
+            problem: '기본 AI 리뷰는 대부분 스타일 코멘트를 만들 수 있습니다. 개발자들이 모든 코멘트를 무시하기 시작합니다. 중요한 보안 발견 사항이 묻힙니다.',
             fix: '5단계 프롬프트 프레임워크를 사용하십시오. 스타일/이름을 명시적으로 제외하십시오. 로직, 보안, 성능으로 범위를 한정하십시오.',
           },
           {
             mistake: 'AI 코드 리뷰를 유일한 리뷰 계층으로 사용하는 것.',
-            problem: '문서화된 유일한 공개 테스트에서 AI 리뷰어는 심어 둔 버그의 44–82%를 잡아냈습니다 — 100%가 아닙니다. 컨텍스트별 문제(확장 영향, 팀 규칙, 비즈니스 로직 오류)에는 사람의 판단이 필요합니다.',
+            problem: 'Greptile의 2025년 7월 벤치마크에서 AI 리뷰어는 심어 둔 버그의 44–82%를 잡아냈습니다 — 100%가 아닙니다. 컨텍스트별 문제(확장 영향, 팀 규칙, 비즈니스 로직 오류)에는 사람의 판단이 필요합니다.',
             fix: 'AI는 1차 필터입니다. 사람 리뷰어는 아키텍처, 비즈니스 로직, AI가 놓치는 버그에 집중하십시오.',
           },
           {
@@ -5419,11 +5426,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: [
           {
             q: '2026년에 가장 정확한 AI 코드 리뷰 도구는 무엇입니까?',
-            a: '모든 테스트에서 가장 정확한 도구는 없습니다. 문서화된 방법이 있는 유일한 공개 비교 벤치마크 — Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행 — 에서 Greptile은 82%, Cursor Bugbot은 58%, GitHub Copilot은 54%, CodeRabbit은 44%를 잡아냈습니다(기본 설정, 호스팅 플랜). Greptile이 테스트 대상 도구 중 하나를 판매하고 다른 공개 벤치마크는 도구 순위를 다르게 매기므로, 이 수치는 출발점으로 사용하고 자신의 pull request로 2주간 시험해 보십시오. 보안 스캔의 경우 Snyk Code는 별도 범주로, pull request 리뷰어를 보완하는 스캐너입니다.',
+            a: '모든 테스트에서 가장 정확한 도구는 없습니다. Greptile이 2025년 7월에 다섯 개의 오픈소스 저장소에서 가져온 50개 버그로 실행한 벤치마크에서 Greptile은 82%, Cursor Bugbot은 58%, GitHub Copilot은 54%, CodeRabbit은 44%를 잡아냈습니다(기본 설정, 호스팅 플랜). Greptile이 테스트 대상 도구 중 하나를 판매하고 독립적인 결과는 다를 수 있으므로, 이 수치는 출발점으로 사용하고 자신의 pull request로 2주간 시험해 보십시오. 보안 스캔의 경우 Snyk Code는 별도 범주로, pull request 리뷰어를 보완하는 스캐너입니다.',
           },
           {
             q: 'CodeRabbit vs Greptile: 어떤 것을 선택해야 합니까?',
-            a: '깊은 버그를 잡는 것이 가장 중요하고 리뷰 단위로 예산을 잡을 수 있다면 Greptile을 선택하십시오. Greptile 자체의 2025년 7월 테스트에서 CodeRabbit의 44%에 대해 82%를 잡아냈고, Pro에는 좌석 요금이 없습니다(선불 크레딧 개당 $1, Base 리뷰는 1 크레딧 사용). 좌석 단위 가격(Essentials 연간 결제 시 사용자당 월 $24, 월 결제 시 $30)과 공개 저장소 무료 리뷰를 원한다면 CodeRabbit을 선택하십시오. 두 도구 모두 14일 체험판을 제공하며 자체 호스팅은 Enterprise에만 제공합니다. CodeRabbit이 가치가 있는지는 리뷰 물량에 달려 있습니다. 정액 좌석 가격은 pull request를 많이 여는 팀이 예측하기 쉽고, 물량이 적은 팀은 리뷰 단위로 내는 비용이 더 적을 수 있습니다.',
+            a: '심어 둔 버그의 최고 탐지율이 가장 중요하고 리뷰 단위로 예산을 잡을 수 있다면 Greptile을 선택하십시오. Greptile 자체의 2025년 7월 테스트에서 CodeRabbit의 44%에 대해 82%를 잡아냈고, Pro에는 좌석 요금이 없습니다(선불 크레딧 개당 $1, Base 리뷰는 1 크레딧 사용). 좌석 단위 가격(Essentials 연간 결제 시 사용자당 월 $24, 월 결제 시 $30)과 공개 저장소 무료 리뷰를 원한다면 CodeRabbit을 선택하십시오. 두 도구 모두 14일 체험판을 제공하며 자체 호스팅은 Enterprise에만 제공합니다. CodeRabbit이 가치가 있는지는 리뷰 물량에 달려 있습니다. 정액 좌석 가격은 pull request를 많이 여는 팀이 예측하기 쉽고, 물량이 적은 팀은 리뷰 단위로 내는 비용이 더 적을 수 있습니다.',
           },
           {
             q: 'CodeRabbit과 Greptile은 무료입니까?',
@@ -5447,11 +5454,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'AI 코드 리뷰는 리뷰 시간을 얼마나 줄여줍니까?',
-            a: '서드파티 업계 가이드(DigitalApplied, 2025)는 리뷰 시간 40% 감소와 프로덕션 버그 62% 감소를 보고하며, PromptQuorum은 이를 측정하지 않았습니다. AI 버그 트리아지 연구는 수동 방법 대비 트리아지 시간 65% 단축과 해결 시간 30–40% 개선을 보고합니다. AI 리뷰 프롬프트를 스타일이 아닌 로직과 보안으로 한정한 팀은 사람 리뷰어와 비슷한 약 52%의 개발자 실행률을 보고합니다.',
+            a: '서드파티 업계 가이드(DigitalApplied, 2025)는 리뷰 시간 40% 감소와 프로덕션 버그 62% 감소를 보고하며, PromptQuorum은 이를 측정하지 않았습니다. Khaleefulla 외의 논문(IJERT)에서 저자들은 자신들의 AI 트리아지 시스템이 평균 트리아지 시간을 65% 줄였다고 보고합니다. 어떤 도구를 쓰든, 프롬프트 범위를 조정하기 전후에 개발자가 실행에 옮기는 AI 코멘트의 비율을 측정하십시오.',
           },
           {
             q: 'AI 코드 리뷰는 전통적인 정적 분석(SAST)과 어떻게 비교됩니까?',
-            a: '서드파티 추정치에 따르면 전통적인 규칙 기반 SAST는 의미 있는 런타임 버그에서 20% 미만이며 오탐률이 높습니다. AI 기반 SAST는 2025년 서드파티 비교에서 AI 생성 코드에 대해 84–92/100점을 받았고, 트랜스포머 기반 모델은 버그 분류 벤치마크에서 94% 정확도에 도달한 반면 규칙 기반 방법은 65%입니다(PromptQuorum이 측정한 것은 없음). AI의 핵심 장점은 맥락적 추론입니다. 고정된 취약점 시그니처를 매칭하는 대신 코드 경로가 서로 어떻게 상호작용하는지 평가합니다.',
+            a: '규칙 기반 SAST는 고정된 취약점 시그니처를 적용하며 오탐이 많이 나오는 경향이 있는 반면, AI 기반 도구는 맥락적 추론을 더합니다. 시그니처를 매칭하는 대신 코드 경로가 서로 어떻게 상호작용하는지 평가합니다. 2025년 서드파티 비교에서 Snyk Code, Semgrep Enterprise, CodeQL은 AI 생성 코드에 대해 84–92/100점을 받았습니다(PromptQuorum이 측정한 것이 아님). 두 방식은 서로 보완적입니다.',
           },
           {
             q: 'AI 코드 리뷰는 유럽 팀에게 GDPR을 준수합니까?',
@@ -5462,8 +5469,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             a: '예 — 여러 조건부 분기가 있는 복잡한 로직의 경우 Chain-of-Thought(CoT) 프롬프팅은 모델에게 발견 사항을 생성하기 전에 각 실행 경로를 통해 데이터 흐름을 추적하도록 요청합니다. 이는 패턴 매칭이 놓치는 로직 버그를 드러냅니다. 모델이 코드를 일반적인 오류 템플릿과 대조하는 대신, null 값이나 예상치 못한 입력 타입이 함수를 통해 취할 수 있는 모든 경로를 명시적으로 모델링해야 하기 때문입니다. CoT는 보안에 민감한 함수와 복잡한 상태 관리에서 가장 가치가 크며, 지연 시간을 늘리고 단순한 유틸리티 함수에는 불필요합니다.',
           },
           {
-            q: 'AI 코드 리뷰 코멘트의 몇 퍼센트가 실제로 유용합니까?',
-            a: '340개의 PR에 걸친 1,247개의 AI 리뷰 코멘트에 대한 공개된 업계 분석(PromptQuorum이 측정한 것이 아님)에서 14%만이 프로덕션 인시던트를 일으키는 문제인 로직 버그와 보안 문제를 다루었고, 64%는 스타일, 중복, 테스트 커버리지를 다루었습니다. 실행 가능한 피드백이 60% 미만인 도구는 엔지니어들이 모든 코멘트를 무시하기 시작하면서 개발자 채택률 붕괴를 겪습니다. 스타일 코멘트를 명시적으로 제외하는 범위 한정 프롬프트는 실행 가능한 코멘트의 비율을 높이는 가장 큰 수단입니다.',
+            q: 'AI 코드 리뷰 코멘트 중 실제로 유용한 비중은 얼마입니까?',
+            a: '검증된 공개 수치는 확인하지 못했으며, 그 비중은 도구, 프롬프트, 코드베이스에 따라 달라지므로 직접 측정하십시오. 한 달 동안 개발자가 실행에 옮기는 AI 코멘트의 비율을 세어 보십시오. 대부분의 코멘트가 무시된다면 범위를 좁히고 — 스타일 코멘트를 명시적으로 제외하고 로직, 보안, 성능 발견 사항만 요청하십시오 — 다시 측정하십시오.',
           },
           {
             q: '코드 리뷰에 가장 좋은 AI 모델은 무엇입니까?',
@@ -5479,11 +5486,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'AI 코드 리뷰가 전용 SAST 도구보다 보안 취약점을 더 잘 탐지할 수 있습니까?',
-            a: '서드파티 비교에서 AI 기반 SAST 도구(Snyk Code, Semgrep Enterprise, CodeQL)는 AI 생성 코드에서 84–92/100점을 받았으며, 규칙 기반 정적 분석의 정확도는 65%였습니다. AI는 PR당 더 많은 연산이 필요하므로 대규모 코드베이스를 대량으로 검사하는 데는 전통적인 SAST가 여전히 더 빠릅니다. 모범 사례: 속도를 위해 가벼운 SAST와 린팅을 사용하고, 고위험 변경(인증, 결제, 인프라)에는 심층 보안 분석을 위해 AI 리뷰로 보완하십시오.',
+            a: '서드파티 비교에서 AI 기반 SAST 도구(Snyk Code, Semgrep Enterprise, CodeQL)는 2025년 서드파티 비교에서 AI 생성 코드에 대해 84–92/100점을 받았으며(PromptQuorum이 측정한 것이 아님), 규칙 기반 정적 분석은 빠른 머지 게이트로 여전히 유용합니다. AI는 PR당 더 많은 연산이 필요하므로 대규모 코드베이스를 대량으로 검사하는 데는 전통적인 SAST가 여전히 더 빠릅니다. 모범 사례: 속도를 위해 가벼운 SAST와 린팅을 사용하고, 고위험 변경(인증, 결제, 인프라)에는 심층 보안 분석을 위해 AI 리뷰로 보완하십시오.',
           },
           {
             q: '코드를 완전히 비공개로 유지하면서 AI 코드 리뷰를 로컬에서 실행할 수 있습니까?',
-            a: '예. Devstral Small 24B(Mistral AI, 16 GB RAM)와 Llama 4 Scout(~55 GB VRAM, 10M 컨텍스트)는 Ollama로 완전히 온프레미스에서 실행됩니다. 코드가 외부 API로 전송되지 않으므로, DPIA가 별도로 다뤄야 할 서드파티 처리 단계가 없어집니다. 복잡한 보안 분석에서는 품질이 프론티어 클라우드 모델보다 낮지만 대부분의 PR 수준 리뷰에는 충분합니다.',
+            a: '예. Devstral Small 24B(Mistral AI, 16 GB RAM)와 Llama 4 Scout(~55 GB VRAM, 10M 컨텍스트)는 Ollama로 완전히 온프레미스에서 실행됩니다. 추론이 사용자의 하드웨어에서 실행되므로 코드가 클라우드 리뷰어로 전송되지 않습니다. 이는 DPIA가 별도로 다뤄야 할 서드파티 처리 단계를 없앨 수 있지만, 모델 다운로드와 업데이트 동작은 보안 팀과 함께 확인하십시오. 복잡한 보안 분석에서는 품질이 프론티어 클라우드 모델보다 낮지만 대부분의 PR 수준 리뷰에는 충분합니다.',
           },
           {
             q: '소규모 팀(개발자 10명 미만)에게 가장 좋은 AI 코드 리뷰 도구는 무엇입니까?',
@@ -5507,6 +5514,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[GitHub Docs: Copilot 코드 리뷰](https://docs.github.com/en/copilot/concepts/agents/code-review) — 코드 리뷰가 포함된 플랜과 AI 크레딧 과금',
           '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — 오탐을 줄이고 신호를 개선하기 위한 범위 한정 프롬프트 기술 가이드',
           '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — AI 생성 코드에서 SAST 도구 3종을 비교한 서드파티 벤치마크(92 / 87 / 84 점수의 출처)',
+          '[Khaleefulla, Sudeep and Savithri. "Automated Bug Categorization and Task Assignment System Using Artificial Intelligence" (IJERT)](https://www.ijert.org/automated-bug-categorization-and-task-assignment-system-using-artificial-intelligence-a-comprehensive-frame-work-for-enhanced-software-development-workflow-optimization) — 저자들 자신의 결과: 분류 정확도 85% 이상, 우선순위 정밀도 82%, 트리아지 시간 65% 단축',
           '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — 업계 수치: 시간 40% 절감, 프로덕션 버그 62% 감소',
           '**참고:** 탐지율은 벤더가 보고한 수치이며 PromptQuorum이 측정한 것이 아닙니다. 가격은 위 벤더 페이지의 정가입니다. AI 코드 리뷰는 빠르게 변하는 시장이므로 구매 전에 벤더 웹사이트에서 최신 가격과 플랫폼 지원을 확인하십시오.',
         ],
