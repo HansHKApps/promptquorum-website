@@ -725,6 +725,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Parrot review (Voice, Speech & Multimodal) — 2026-10-18
   'parrot-review',
+  'xberg-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

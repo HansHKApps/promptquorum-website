@@ -909,6 +909,11 @@
     "urlSlug": "firecrawl-review",
     "url": "/power-local-llm/firecrawl-review"
   },
+  "xberg": {
+    "cluster": "power-local-llm",
+    "urlSlug": "xberg-review",
+    "url": "/power-local-llm/xberg-review"
+  },
   "blinko": {
     "cluster": "power-local-llm",
     "urlSlug": "blinko-review",

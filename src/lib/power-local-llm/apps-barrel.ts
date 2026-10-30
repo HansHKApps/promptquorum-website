@@ -245,6 +245,7 @@ import { app as app_agentic_inbox } from './apps/agentic-inbox'
 import { app as app_aiclient2api } from './apps/aiclient2api'
 import { app as app_baserow } from './apps/baserow'
 import { app as app_firecrawl } from './apps/firecrawl'
+import { app as app_xberg } from './apps/xberg'
 import { app as app_blinko } from './apps/blinko'
 import { app as app_surfsense } from './apps/surfsense'
 import { app as app_strata } from './apps/strata'
@@ -527,6 +528,7 @@ export const localAiApps: ToolRecord[] = [
   app_aiclient2api,
   app_baserow,
   app_firecrawl,
+  app_xberg,
   app_blinko,
   app_surfsense,
   app_strata,

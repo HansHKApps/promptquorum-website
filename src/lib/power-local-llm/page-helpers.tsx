@@ -917,6 +917,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     colorDot: 'bg-emerald-400',
     slugs: [
+      'xberg-review',
       'anythingllm-vs-privategpt-vs-openwebui-rag',
       'local-rag-on-your-pdfs-step-by-step',
       'best-embedding-models-local-rag-2026',
