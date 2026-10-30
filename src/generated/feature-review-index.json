@@ -1509,6 +1509,11 @@
     "urlSlug": "ai-file-sorter-review",
     "url": "/power-local-llm/ai-file-sorter-review"
   },
+  "home-gallery": {
+    "cluster": "power-local-llm",
+    "urlSlug": "home-gallery-review",
+    "url": "/power-local-llm/home-gallery-review"
+  },
   "hiwaifu": {
     "cluster": "power-local-llm",
     "urlSlug": "hiwaifu-review",
