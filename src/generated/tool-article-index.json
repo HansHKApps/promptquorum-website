@@ -9669,6 +9669,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Xberg": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "xberg-review",
+        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
+        "url": "/power-local-llm/xberg-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Blinko": {
     "articles": [
       {
@@ -11731,6 +11745,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "xberg-review",
+        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
+        "url": "/power-local-llm/xberg-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ai-file-sorter-review",
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
@@ -11744,17 +11766,9 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "facet-review",
-        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
-        "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-10-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 235,
+    "totalCount": 236,
     "capped": true
   },
   "Qdrant": {

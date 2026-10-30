@@ -522,6 +522,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'kserve-review':                            'kserve-review',
   'baserow-review':                           'baserow-review',
   'firecrawl-review':                         'firecrawl-review',
+  'xberg-review':                             'xberg-review',
   'shimmy-review':                            'shimmy-review',
   // FeatureAppPost batch 4 (ranks 21-30 of the 2026-09-18 directory additions) — 2026-09-19
   'longmemory-review':                        'longmemory-review',

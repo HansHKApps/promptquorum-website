@@ -412,6 +412,7 @@ import { article as a_mission_control_review } from './articles/mission-control-
 import { article as a_kserve_review } from './articles/kserve-review'
 import { article as a_baserow_review } from './articles/baserow-review'
 import { article as a_firecrawl_review } from './articles/firecrawl-review'
+import { article as a_xberg_review } from './articles/xberg-review'
 import { article as a_shimmy_review } from './articles/shimmy-review'
 import { article as a_longmemory_review } from './articles/longmemory-review'
 import { article as a_lorax_review } from './articles/lorax-review'
@@ -890,6 +891,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'kserve-review':                                       a_kserve_review,
   'baserow-review':                                      a_baserow_review,
   'firecrawl-review':                                    a_firecrawl_review,
+  'xberg-review':                                        a_xberg_review,
   'shimmy-review':                                       a_shimmy_review,
   'longmemory-review':                                   a_longmemory_review,
   'lorax-review':                                        a_lorax_review,
