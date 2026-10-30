@@ -1514,6 +1514,11 @@
     "urlSlug": "mylio-photos-review",
     "url": "/power-local-llm/mylio-photos-review"
   },
+  "acdsee-photo-studio-ultimate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "acdsee-photo-studio-ultimate-review",
+    "url": "/power-local-llm/acdsee-photo-studio-ultimate-review"
+  },
   "ai-file-sorter": {
     "cluster": "power-local-llm",
     "urlSlug": "ai-file-sorter-review",

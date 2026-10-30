@@ -11669,6 +11669,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "acdsee-photo-studio-ultimate-review",
+        "title": "ACDSee Photo Studio Ultimate 2027 Review: Photo Editor With Local and Cloud AI",
+        "url": "/power-local-llm/acdsee-photo-studio-ultimate-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -11730,17 +11738,9 @@
         "url": "/power-local-llm/facet-review",
         "dateModified": "2026-10-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-10-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 234,
+    "totalCount": 235,
     "capped": true
   },
   "Qdrant": {
@@ -12826,6 +12826,20 @@
         "slug": "mylio-photos-review",
         "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
         "url": "/power-local-llm/mylio-photos-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "ACDSee Photo Studio Ultimate 2027": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "acdsee-photo-studio-ultimate-review",
+        "title": "ACDSee Photo Studio Ultimate 2027 Review: Photo Editor With Local and Cloud AI",
+        "url": "/power-local-llm/acdsee-photo-studio-ultimate-review",
         "dateModified": "2026-10-30",
         "tier": "about"
       }

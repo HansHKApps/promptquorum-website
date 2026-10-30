@@ -25,9 +25,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ACDSee Photo Studio Ultimate 2027 Review: Photo Editor With Local and Cloud AI',
     seoTitle: 'ACDSee Ultimate 2027 Review: Local AI, Cloud Generative',
     intro:
-      'ACDSee Photo Studio Ultimate 2027 is a closed-source photo manager and RAW editor for Windows. According to ACDSee, its core AI features (face recognition, keywording, masking, upscaling) run on your own PC, while four generative tools send your images to ACDSee\'s cloud. It is sold as a perpetual licence and needs an email address and internet connection to activate. This review reflects ACDSee\'s website, release notes and privacy policy as checked on 30 October 2026; the current release is build 20.0.0.4660 of 16 September 2026.',
+      'ACDSee Photo Studio Ultimate 2027 is a closed-source photo manager and RAW editor for Windows. According to ACDSee, its core AI features (face recognition, keywording, masking, upscaling) run on your own PC, while four generative tools send your images to ACDSee\'s cloud. It is sold as a perpetual licence. This review reflects ACDSee\'s website, release notes and privacy policy as checked on 30 October 2026; the current release was published on 16 September 2026.',
     metaDescription:
-      'ACDSee Photo Studio Ultimate 2027 review: Windows photo manager and RAW editor whose core AI runs locally, per ACDSee, while generative tools use the cloud.',
+      'ACDSee Photo Studio Ultimate 2027 review: Windows photo manager and RAW editor with core AI that runs locally, per ACDSee; generative tools use the cloud.',
     twitterDescription:
       'ACDSee Photo Studio Ultimate 2027 review: a Windows photo editor with perpetual licence. Which AI features run on your PC, which four go to the cloud, what activation and credits involve.',
     audience:
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027 is a closed-source Windows photo manager and RAW editor whose AI is split in two: according to ACDSee, face recognition, keywording, similarity search, masking, denoising and upscaling run on your PC, while AI Image Generation, Generative Fill, Generative Edit and AI Remove use ACDSee\'s cloud.** The newest build, 20.0.0.4660, was released on 16 September 2026, so no stale-project warning applies.',
+      '**ACDSee Photo Studio Ultimate 2027 is a closed-source Windows photo manager and RAW editor whose AI is split in two: according to ACDSee, face recognition, keywording, similarity search, masking, denoising and upscaling run on your PC, while AI Image Generation, Generative Fill, Generative Edit and AI Remove use ACDSee\'s cloud.** The newest build was released on 16 September 2026, so no stale-project warning applies.',
     quickAnswerTop: {
       en: {
         question: 'Does ACDSee Photo Studio Ultimate 2027 keep your photos on your own PC?',
@@ -57,8 +57,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Closed source, perpetual licence for one device, with a 15-day trial; a subscription plan exists separately.',
           'Windows 10 (64-bit) and Windows 11 only; there is no Mac version of this product.',
           'Local AI, per ACDSee: keywording, face recognition, similarity grouping, upscaling, denoising, sky replacement, face edit and masking.',
-          'Cloud AI: image generation, Generative Fill, Generative Edit and AI Remove, which use AI credits.',
-          'Latest build 20.0.0.4660 dated 16 September 2026.',
+          'Cloud AI: the four generative tools, which use AI credits.',
+          'Latest build dated 16 September 2026.',
         ],
         updatedDate: '2026-10',
       },
@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance: build 20.0.0.4660 carries a release-notes date of 16 September 2026, which is 44 days before this review, so no stale warning applies.',
+          'Maintenance: the newest build\'s release notes are dated 44 days before this review, so no stale warning applies.',
           'Maker: ACD Systems International Inc. of Victoria, Canada, according to its privacy policy.',
           'Scope: photo management, RAW development, layers and AI tools; it is not a chat or language-model assistant.',
           'Platform: Windows only; ACDSee sells a separate product for Mac.',
@@ -120,16 +120,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Get It',
         content: [
-          '**ACDSee Photo Studio Ultimate 2027 is a Windows installer download; you buy a perpetual licence or start the 15-day trial, and activation needs an email address and an internet connection.**',
+          '**ACDSee Photo Studio Ultimate 2027 is a Windows installer download; you buy a perpetual licence or start the 15-day trial.**',
         ],
         columns: ['Option', 'How to get it'],
         rows: [
           { 'Option': 'Website', 'How to get it': '[acdsee.com](https://www.acdsee.com/en/products/photo-studio-ultimate/)' },
           { 'Option': 'Free trial', 'How to get it': '[15-day trial](https://www.acdsee.com/en/free-trials/) for Windows' },
           { 'Option': 'Buy', 'How to get it': '[ACDSee store](https://www.acdsee.com/en/products/photo-studio-ultimate/buy/): perpetual licence, $179.99, one device' },
-          { 'Option': 'Windows', 'How to get it': 'Installer .exe, 778 MB, build 20.0.0.4660' },
+          { 'Option': 'Windows', 'How to get it': 'Installer .exe, 778 MB' },
           { 'Option': 'Mac', 'How to get it': 'Not supported; ACDSee sells Photo Studio for Mac separately' },
-          { 'Option': 'Release notes', 'How to get it': '[Build 20.0.0.4660, 16 September 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { 'Option': 'Release notes', 'How to get it': '[Build notes of 16 September 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { 'Option': 'Privacy policy', 'How to get it': '[ACDSee privacy policy](https://www.acdsee.com/en/privacy-policy/)' },
           { 'Option': 'Source code', 'How to get it': 'None: proprietary software' },
         ],
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Management.** Auto-Stack and custom stacking, AI reverse image search, grouping by AI image similarity, a Reject tag, face detection and recognition, and a background Activity Manager.',
           '**RAW editing.** Non-destructive development for more than 750 camera models, Color and Tone Wheels, Light EQ, the Clone tool and AI Develop Presets.',
           '**Layers.** Layer masks, blend modes, text, shapes, AI selection tools and AI filters such as Sky Replacement and Face Edit.',
-          '**Generative tools.** Text-to-image generation, Generative Fill, Generative Edit and AI Remove.',
+          '**Generative tools.** Four cloud-based tools for creating and changing image content.',
           '**Latest build.** The 16 September 2026 release notes add six RAW camera models, JPEG XL support inside DNG files, new Develop preset categories and more lens profiles, and fix crashes.',
         ],
       },
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Data Flow and Privacy',
         content: [
           '**For the generative tools, ACDSee\'s AI page says prompts and images are encrypted before being routed through ACDSee\'s servers and are not stored; the Fstoppers launch article instead reports that the requests are deleted a week later.** These two statements differ, so check the current terms before sending sensitive images.',
-          'Other data flows in the sources: activation needs a valid email address, and the program\'s connection to ACDSee\'s licence and update services sends connection time, IP address, an application ID, product version, install date and licence number, according to the privacy policy. Crash data may be collected and is kept for up to 30 days. The privacy policy is dated 19 January 2026 and does not say whether photos are uploaded; for local features that statement rests on the AI page.',
+          'Other data flows in the sources: the program\'s connection to ACDSee\'s licence and update services sends connection time, IP address, an application ID, product version, install date and licence number, according to the privacy policy. Crash data may be collected and is kept for up to 30 days. The privacy policy is dated 19 January 2026 and does not say whether photos are uploaded; for local features that statement rests on the AI page.',
         ],
         callouts: [
           {
@@ -216,8 +216,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'What We Could Not Verify',
         items: [
-          '**Offline use.** Activation needs the internet; whether everything else works without a connection afterwards is not stated.',
-          '**Credits.** The trial thank-you page mentions 2,000 AI credits and the Fstoppers launch article says the purchase includes 20,000, while the store page lists none and a third-party price tracker reports the bonus ended with the presale; what a generative edit costs is not published in the sources read.',
+          '**Offline use.** Whether the program works without a connection after activation is not stated.',
+          '**Credits.** The trial thank-you page mentions 2,000 AI credits and the Fstoppers launch article says the purchase includes 20,000, while the store page lists none; what a generative edit costs is not published in the sources read.',
           '**Retention.** "Not stored" (ACDSee AI page) versus "deleted a week later" (Fstoppers) for cloud images.',
           '**AI quality.** Keywording accuracy, face grouping, masking and upscaling quality were not tested.',
           '**Languages.** The software\'s interface languages are not listed in the sources read.',
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which AI features need the cloud?',
-            a: 'Four: AI Image Generation, Generative Fill, Generative Edit and AI Remove. ACDSee says every other AI feature runs locally.',
+            a: 'The four generative tools; each sends the image to ACDSee\'s servers and uses AI credits. ACDSee says every other AI feature runs locally.',
           },
           {
             q: 'What else does it cost besides the licence?',
@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is it still maintained?',
-            a: 'Yes, by the evidence read: the release notes list build 20.0.0.4660 on 16 September 2026. They contain only that one entry, so release cadence cannot be judged.',
+            a: 'Yes, by the evidence read: the release notes list one build, dated 16 September 2026, and nothing else, so release cadence cannot be judged.',
           },
         ],
       },
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'ACDSee Photo Studio Ultimate 2027 combines cataloguing, RAW editing and layers with AI keywording, face recognition, masking and upscaling that ACDSee says run on your PC, under a perpetual licence with a 15-day trial. Against that, it is closed source and Windows only, activation needs an email address and internet, the four generative tools send images to ACDSee\'s cloud and use credits, and ACDSee\'s retention statements differ between sources. It suits Windows photographers who want one subscription-free program and will use the local AI tools; anyone who needs everything offline, open source or on a Mac should look elsewhere.',
+          'ACDSee Photo Studio Ultimate 2027 combines cataloguing, RAW editing and layers with AI keywording, face recognition, masking and upscaling that ACDSee says run on your PC, under a perpetual licence with a 15-day trial. Against that, it is closed source and Windows only, the four generative tools send images to ACDSee\'s cloud and use credits, and ACDSee\'s retention statements differ between sources. It suits Windows photographers who want one subscription-free program and will use the local AI tools; anyone who needs everything offline, open source or on a Mac should look elsewhere.',
       },
       sources: {
         id: 'sources',
@@ -343,9 +343,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ACDSee Photo Studio Ultimate 2027 Rezension: Fotoeditor mit lokaler und Cloud-KI',
     seoTitle: 'ACDSee Ultimate 2027 Rezension: Lokale KI, Cloud-Generativ',
     intro:
-      'ACDSee Photo Studio Ultimate 2027 ist ein nicht quelloffener Foto-Manager und RAW-Editor für Windows. Laut ACDSee laufen die zentralen KI-Funktionen (Gesichtserkennung, Verschlagwortung, Masken, Hochskalierung) auf Ihrem eigenen PC, während vier generative Werkzeuge Ihre Bilder an die Cloud von ACDSee senden. Verkauft wird er als Dauerlizenz, und für die Aktivierung braucht er eine E-Mail-Adresse und eine Internetverbindung. Diese Rezension gibt Website, Release Notes und Datenschutzerklärung von ACDSee so wieder, wie sie am 30. Oktober 2026 geprüft wurden; aktuell ist Build 20.0.0.4660 vom 16. September 2026.',
+      'ACDSee Photo Studio Ultimate 2027 ist ein nicht quelloffener Foto-Manager und RAW-Editor für Windows. Laut ACDSee laufen die zentralen KI-Funktionen (Gesichtserkennung, Verschlagwortung, Masken, Hochskalierung) auf Ihrem eigenen PC, während vier generative Werkzeuge Ihre Bilder an die Cloud von ACDSee senden. Verkauft wird er als Dauerlizenz. Diese Rezension gibt Website, Release Notes und Datenschutzerklärung von ACDSee so wieder, wie sie am 30. Oktober 2026 geprüft wurden; der aktuelle Build erschien am 16. September 2026.',
     metaDescription:
-      'ACDSee-Photo-Studio-Ultimate-2027-Rezension: Foto-Manager und RAW-Editor für Windows, dessen zentrale KI laut ACDSee lokal läuft; generative Werkzeuge nutzen die Cloud.',
+      'ACDSee Photo Studio Ultimate 2027 Rezension: Windows-Foto-Manager und RAW-Editor, dessen KI laut ACDSee lokal läuft; generative Tools nutzen die Cloud.',
     twitterDescription:
       'ACDSee-Photo-Studio-Ultimate-2027-Rezension: ein Windows-Fotoeditor mit Dauerlizenz. Welche KI-Funktionen auf Ihrem PC laufen, welche vier in die Cloud gehen und was Aktivierung und Credits bedeuten.',
     audience:
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027 ist ein nicht quelloffener Foto-Manager und RAW-Editor für Windows, dessen KI zweigeteilt ist: Laut ACDSee laufen Gesichtserkennung, Verschlagwortung, Ähnlichkeitssuche, Masken, Entrauschen und Hochskalierung auf Ihrem PC, während AI Image Generation, Generative Fill, Generative Edit und AI Remove die Cloud von ACDSee nutzen.** Der neueste Build 20.0.0.4660 erschien am 16. September 2026; eine Veraltet-Warnung gilt daher nicht.',
+      '**ACDSee Photo Studio Ultimate 2027 ist ein nicht quelloffener Foto-Manager und RAW-Editor für Windows, dessen KI zweigeteilt ist: Laut ACDSee laufen Gesichtserkennung, Verschlagwortung, Ähnlichkeitssuche, Masken, Entrauschen und Hochskalierung auf Ihrem PC, während AI Image Generation, Generative Fill, Generative Edit und AI Remove die Cloud von ACDSee nutzen.** Der neueste Build erschien am 16. September 2026; eine Veraltet-Warnung gilt daher nicht.',
     quickAnswerTop: {
       de: {
         question: 'Bleiben Ihre Fotos bei ACDSee Photo Studio Ultimate 2027 auf Ihrem eigenen PC?',
@@ -375,8 +375,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nicht quelloffen, Dauerlizenz für ein Gerät mit 15 Tagen Testzeit; ein Abo-Tarif existiert getrennt davon.',
           'Nur Windows 10 (64-Bit) und Windows 11; für Mac gibt es von diesem Produkt keine Version.',
           'Lokale KI laut ACDSee: Verschlagwortung, Gesichtserkennung, Ähnlichkeitsgruppen, Hochskalierung, Entrauschen, Himmelstausch, Gesichtsbearbeitung und Masken.',
-          'Cloud-KI: Bildgenerierung, Generative Fill, Generative Edit und AI Remove, die KI-Credits verbrauchen.',
-          'Neuester Build 20.0.0.4660 vom 16. September 2026.',
+          'Cloud-KI: die vier generativen Werkzeuge, die KI-Credits verbrauchen.',
+          'Neuester Build vom 16. September 2026.',
         ],
         updatedDate: '2026-10',
       },
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Pflege: Build 20.0.0.4660 trägt in den Release Notes das Datum 16. September 2026, also 44 Tage vor dieser Rezension; eine Veraltet-Warnung gilt daher nicht.',
+          'Pflege: Die Release Notes des neuesten Builds sind 44 Tage vor dieser Rezension datiert; eine Veraltet-Warnung gilt daher nicht.',
           'Hersteller: ACD Systems International Inc. in Victoria, Kanada, laut Datenschutzerklärung.',
           'Umfang: Fotoverwaltung, RAW-Entwicklung, Ebenen und KI-Werkzeuge; kein Chat- oder Sprachmodell-Assistent.',
           'Plattform: nur Windows; für den Mac verkauft ACDSee ein eigenes Produkt.',
@@ -438,16 +438,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Bezugsquelle',
         content: [
-          '**ACDSee Photo Studio Ultimate 2027 ist ein Installer-Download für Windows; Sie kaufen eine Dauerlizenz oder starten die 15-Tage-Testversion, und die Aktivierung braucht eine E-Mail-Adresse und eine Internetverbindung.**',
+          '**ACDSee Photo Studio Ultimate 2027 ist ein Installer-Download für Windows; Sie kaufen eine Dauerlizenz oder starten die 15-Tage-Testversion.**',
         ],
         columns: ['Option', 'So erhalten Sie es'],
         rows: [
           { 'Option': 'Website', 'So erhalten Sie es': '[acdsee.com](https://www.acdsee.com/de/products/photo-studio-ultimate/)' },
           { 'Option': 'Kostenlose Testversion', 'So erhalten Sie es': '[15-Tage-Test](https://www.acdsee.com/en/free-trials/) für Windows' },
           { 'Option': 'Kaufen', 'So erhalten Sie es': '[ACDSee-Shop](https://www.acdsee.com/de/products/photo-studio-ultimate/buy/): Dauerlizenz, 209,99 € inkl. MwSt. (deutscher Shop), ein Gerät' },
-          { 'Option': 'Windows', 'So erhalten Sie es': 'Installer (.exe), 778 MB, Build 20.0.0.4660' },
+          { 'Option': 'Windows', 'So erhalten Sie es': 'Installer (.exe), 778 MB' },
           { 'Option': 'Mac', 'So erhalten Sie es': 'Nicht unterstützt; Photo Studio für Mac verkauft ACDSee getrennt' },
-          { 'Option': 'Release Notes', 'So erhalten Sie es': '[Build 20.0.0.4660, 16. September 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { 'Option': 'Release Notes', 'So erhalten Sie es': '[Build-Hinweise vom 16. September 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { 'Option': 'Datenschutzerklärung', 'So erhalten Sie es': '[Datenschutzerklärung von ACDSee](https://www.acdsee.com/en/privacy-policy/)' },
           { 'Option': 'Quellcode', 'So erhalten Sie es': 'Keiner: proprietäre Software' },
         ],
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Verwaltung.** Auto-Stack und eigene Stapel, KI-Rückwärtssuche nach Bildern, Gruppierung nach KI-Bildähnlichkeit, ein Reject-Tag, Gesichtserkennung und ein Activity Manager im Hintergrund.',
           '**RAW-Bearbeitung.** Nicht destruktive Entwicklung für mehr als 750 Kameramodelle, Color und Tone Wheels, Light EQ, das Klonwerkzeug und AI Develop Presets.',
           '**Ebenen.** Ebenenmasken, Mischmodi, Text, Formen, KI-Auswahlwerkzeuge und KI-Filter wie Sky Replacement und Face Edit.',
-          '**Generative Werkzeuge.** Text-zu-Bild-Generierung, Generative Fill, Generative Edit und AI Remove.',
+          '**Generative Werkzeuge.** Vier Cloud-Werkzeuge zum Erzeugen und Verändern von Bildinhalten.',
           '**Neuester Build.** Die Release Notes vom 16. September 2026 ergänzen sechs RAW-Kameramodelle, JPEG-XL-Unterstützung in DNG-Dateien, neue Develop-Preset-Kategorien und weitere Objektivprofile und beheben Abstürze.',
         ],
       },
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenfluss und Datenschutz',
         content: [
           '**Für die generativen Werkzeuge sagt die KI-Seite von ACDSee, dass Prompts und Bilder verschlüsselt über die Server von ACDSee geleitet und nicht gespeichert werden; der Launch-Artikel von Fstoppers berichtet dagegen, dass die Anfragen eine Woche später gelöscht werden.** Diese beiden Angaben unterscheiden sich; prüfen Sie die aktuellen Bedingungen, bevor Sie sensible Bilder senden.',
-          'Weitere Datenflüsse in den Quellen: Die Aktivierung braucht eine gültige E-Mail-Adresse, und die Verbindung des Programms zu den Lizenz- und Update-Diensten von ACDSee übermittelt laut Datenschutzerklärung Verbindungszeit, IP-Adresse, eine Anwendungs-ID, Produktversion, Installationsdatum und Lizenznummer. Absturzdaten können erhoben und bis zu 30 Tage gespeichert werden. Die Datenschutzerklärung trägt das Datum 19. Januar 2026 und sagt nicht, ob Fotos hochgeladen werden; für lokale Funktionen stützt sich diese Aussage auf die KI-Seite.',
+          'Weitere Datenflüsse in den Quellen: Die Verbindung des Programms zu den Lizenz- und Update-Diensten von ACDSee übermittelt laut Datenschutzerklärung Verbindungszeit, IP-Adresse, eine Anwendungs-ID, Produktversion, Installationsdatum und Lizenznummer. Absturzdaten können erhoben und bis zu 30 Tage gespeichert werden. Die Datenschutzerklärung trägt das Datum 19. Januar 2026 und sagt nicht, ob Fotos hochgeladen werden; für lokale Funktionen stützt sich diese Aussage auf die KI-Seite.',
         ],
         callouts: [
           {
@@ -534,8 +534,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Was wir nicht überprüfen konnten',
         items: [
-          '**Offline-Nutzung.** Die Aktivierung braucht Internet; ob alles Weitere danach ohne Verbindung funktioniert, wird nicht angegeben.',
-          '**Credits.** Die Danke-Seite der Testversion erwähnt 2.000 KI-Credits, und der Launch-Artikel von Fstoppers sagt, der Kauf enthalte 20.000; die Shop-Seite nennt keine, und ein Preisbeobachter eines Dritten meldet, der Bonus sei mit dem Vorverkauf ausgelaufen. Was eine generative Bearbeitung kostet, steht in den gelesenen Quellen nicht.',
+          '**Offline-Nutzung.** Ob das Programm nach der Aktivierung ohne Verbindung funktioniert, wird nicht angegeben.',
+          '**Credits.** Die Danke-Seite der Testversion erwähnt 2.000 KI-Credits, und der Launch-Artikel von Fstoppers sagt, der Kauf enthalte 20.000; die Shop-Seite nennt keine. Was eine generative Bearbeitung kostet, steht in den gelesenen Quellen nicht.',
           '**Aufbewahrung.** „Nicht gespeichert“ (KI-Seite von ACDSee) gegenüber „eine Woche später gelöscht“ (Fstoppers) bei Cloud-Bildern.',
           '**KI-Qualität.** Genauigkeit der Verschlagwortung, Gesichtsgruppierung, Masken und Hochskalierung wurden nicht getestet.',
           '**Sprachen.** Die Oberflächensprachen der Software werden in den gelesenen Quellen nicht genannt.',
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche KI-Funktionen brauchen die Cloud?',
-            a: 'Vier: AI Image Generation, Generative Fill, Generative Edit und AI Remove. Alle anderen KI-Funktionen laufen laut ACDSee lokal.',
+            a: 'Die vier generativen Werkzeuge; jedes sendet das Bild an die Server von ACDSee und verbraucht KI-Credits. Alle anderen KI-Funktionen laufen laut ACDSee lokal.',
           },
           {
             q: 'Was kostet es außer der Lizenz noch?',
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wird es noch gepflegt?',
-            a: 'Ja, nach den gelesenen Belegen: Die Release Notes führen Build 20.0.0.4660 vom 16. September 2026 auf. Sie enthalten nur diesen einen Eintrag, daher lässt sich der Veröffentlichungsrhythmus nicht beurteilen.',
+            a: 'Ja, nach den gelesenen Belegen: Die Release Notes führen einen Build vom 16. September 2026 auf, und sonst nichts, daher lässt sich der Veröffentlichungsrhythmus nicht beurteilen.',
           },
         ],
       },
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'ACDSee Photo Studio Ultimate 2027 verbindet Katalogisierung, RAW-Bearbeitung und Ebenen mit KI-Verschlagwortung, Gesichtserkennung, Masken und Hochskalierung, die laut ACDSee auf Ihrem PC laufen, als Dauerlizenz mit 15 Tagen Testzeit. Dagegen steht: nicht quelloffen und nur für Windows, die Aktivierung braucht eine E-Mail-Adresse und Internet, die vier generativen Werkzeuge senden Bilder an die Cloud von ACDSee und verbrauchen Credits, und die Angaben von ACDSee zur Aufbewahrung unterscheiden sich je nach Quelle. Geeignet für Fotografen unter Windows, die ein Programm ohne Abo wollen und die lokalen KI-Werkzeuge nutzen; wer alles offline, quelloffen oder auf dem Mac braucht, sollte sich anderswo umsehen.',
+          'ACDSee Photo Studio Ultimate 2027 verbindet Katalogisierung, RAW-Bearbeitung und Ebenen mit KI-Verschlagwortung, Gesichtserkennung, Masken und Hochskalierung, die laut ACDSee auf Ihrem PC laufen, als Dauerlizenz mit 15 Tagen Testzeit. Dagegen steht: nicht quelloffen und nur für Windows, die vier generativen Werkzeuge senden Bilder an die Cloud von ACDSee und verbrauchen Credits, und die Angaben von ACDSee zur Aufbewahrung unterscheiden sich je nach Quelle. Geeignet für Fotografen unter Windows, die ein Programm ohne Abo wollen und die lokalen KI-Werkzeuge nutzen; wer alles offline, quelloffen oder auf dem Mac braucht, sollte sich anderswo umsehen.',
       },
       sources: {
         id: 'sources',
@@ -629,9 +629,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de ACDSee Photo Studio Ultimate 2027: editor de fotos con IA local y en la nube',
     seoTitle: 'Reseña ACDSee Ultimate 2027: IA local y generativa en nube',
     intro:
-      'ACDSee Photo Studio Ultimate 2027 es un gestor de fotos y editor RAW de código cerrado para Windows. Según ACDSee, sus funciones de IA principales (reconocimiento de caras, palabras clave, máscaras, escalado) se ejecutan en tu propio PC, mientras que cuatro herramientas generativas envían tus imágenes a la nube de ACDSee. Se vende con licencia perpetua y necesita una dirección de correo y conexión a internet para activarse. Esta reseña recoge el sitio web, las notas de versión y la política de privacidad de ACDSee tal como se consultaron el 30 de octubre de 2026; la versión actual es la compilación 20.0.0.4660 del 16 de septiembre de 2026.',
+      'ACDSee Photo Studio Ultimate 2027 es un gestor de fotos y editor RAW de código cerrado para Windows. Según ACDSee, sus funciones de IA principales (reconocimiento de caras, palabras clave, máscaras, escalado) se ejecutan en tu propio PC, mientras que cuatro herramientas generativas envían tus imágenes a la nube de ACDSee. Se vende con licencia perpetua. Esta reseña recoge el sitio web, las notas de versión y la política de privacidad de ACDSee tal como se consultaron el 30 de octubre de 2026; la versión actual se publicó el 16 de septiembre de 2026.',
     metaDescription:
-      'Reseña de ACDSee Photo Studio Ultimate 2027: gestor de fotos y editor RAW para Windows cuya IA principal es local, según ACDSee; las herramientas generativas usan la nube.',
+      'Reseña de ACDSee Photo Studio Ultimate 2027: gestor de fotos y editor RAW para Windows con IA local según ACDSee; las herramientas generativas, la nube.',
     twitterDescription:
       'Reseña de ACDSee Photo Studio Ultimate 2027: un editor de fotos para Windows con licencia perpetua. Qué funciones de IA se ejecutan en tu PC, cuáles cuatro van a la nube y qué implican la activación y los créditos.',
     audience:
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027 es un gestor de fotos y editor RAW de código cerrado para Windows cuya IA se divide en dos: según ACDSee, el reconocimiento de caras, las palabras clave, la búsqueda por similitud, las máscaras, la reducción de ruido y el escalado se ejecutan en tu PC, mientras que AI Image Generation, Generative Fill, Generative Edit y AI Remove usan la nube de ACDSee.** La compilación más reciente, 20.0.0.4660, se publicó el 16 de septiembre de 2026, así que no se aplica ninguna advertencia de obsolescencia.',
+      '**ACDSee Photo Studio Ultimate 2027 es un gestor de fotos y editor RAW de código cerrado para Windows cuya IA se divide en dos: según ACDSee, el reconocimiento de caras, las palabras clave, la búsqueda por similitud, las máscaras, la reducción de ruido y el escalado se ejecutan en tu PC, mientras que AI Image Generation, Generative Fill, Generative Edit y AI Remove usan la nube de ACDSee.** La compilación más reciente se publicó el 16 de septiembre de 2026, así que no se aplica ninguna advertencia de obsolescencia.',
     quickAnswerTop: {
       es: {
         question: '¿ACDSee Photo Studio Ultimate 2027 mantiene tus fotos en tu propio PC?',
@@ -661,8 +661,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Código cerrado, licencia perpetua para un dispositivo con prueba de 15 días; existe un plan de suscripción aparte.',
           'Solo Windows 10 (64 bits) y Windows 11; este producto no tiene versión para Mac.',
           'IA local según ACDSee: palabras clave, reconocimiento de caras, agrupación por similitud, escalado, reducción de ruido, cambio de cielo, edición de caras y máscaras.',
-          'IA en la nube: generación de imágenes, Generative Fill, Generative Edit y AI Remove, que consumen créditos de IA.',
-          'Última compilación 20.0.0.4660, con fecha del 16 de septiembre de 2026.',
+          'IA en la nube: las cuatro herramientas generativas, que consumen créditos de IA.',
+          'Última compilación con fecha del 16 de septiembre de 2026.',
         ],
         updatedDate: '2026-10',
       },
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Mantenimiento: la compilación 20.0.0.4660 lleva en las notas de versión la fecha del 16 de septiembre de 2026, 44 días antes de esta reseña, por lo que no se aplica advertencia de obsolescencia.',
+          'Mantenimiento: las notas de versión de la compilación más reciente están fechadas 44 días antes de esta reseña, por lo que no se aplica advertencia de obsolescencia.',
           'Editor: ACD Systems International Inc., de Victoria (Canadá), según su política de privacidad.',
           'Alcance: gestión de fotos, revelado RAW, capas y herramientas de IA; no es un asistente de chat ni un modelo de lenguaje.',
           'Plataforma: solo Windows; ACDSee vende un producto aparte para Mac.',
@@ -724,16 +724,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Dónde conseguirlo',
         content: [
-          '**ACDSee Photo Studio Ultimate 2027 se descarga como instalador para Windows; compras una licencia perpetua o inicias la prueba de 15 días, y la activación necesita una dirección de correo y conexión a internet.**',
+          '**ACDSee Photo Studio Ultimate 2027 se descarga como instalador para Windows; compras una licencia perpetua o inicias la prueba de 15 días.**',
         ],
         columns: ['Opción', 'Cómo conseguirlo'],
         rows: [
           { 'Opción': 'Sitio web', 'Cómo conseguirlo': '[acdsee.com](https://www.acdsee.com/en/products/photo-studio-ultimate/)' },
           { 'Opción': 'Prueba gratuita', 'Cómo conseguirlo': '[Prueba de 15 días](https://www.acdsee.com/en/free-trials/) para Windows' },
           { 'Opción': 'Comprar', 'Cómo conseguirlo': '[Tienda de ACDSee](https://www.acdsee.com/en/products/photo-studio-ultimate/buy/): licencia perpetua, $179.99 (tienda de EE. UU.), un dispositivo' },
-          { 'Opción': 'Windows', 'Cómo conseguirlo': 'Instalador .exe, 778 MB, compilación 20.0.0.4660' },
+          { 'Opción': 'Windows', 'Cómo conseguirlo': 'Instalador .exe, 778 MB' },
           { 'Opción': 'Mac', 'Cómo conseguirlo': 'No compatible; ACDSee vende Photo Studio para Mac por separado' },
-          { 'Opción': 'Notas de versión', 'Cómo conseguirlo': '[Compilación 20.0.0.4660, 16 de septiembre de 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { 'Opción': 'Notas de versión', 'Cómo conseguirlo': '[Notas de la compilación del 16 de septiembre de 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { 'Opción': 'Política de privacidad', 'Cómo conseguirlo': '[Política de privacidad de ACDSee](https://www.acdsee.com/en/privacy-policy/)' },
           { 'Opción': 'Código fuente', 'Cómo conseguirlo': 'Ninguno: software propietario' },
         ],
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Gestión.** Auto-Stack y pilas personalizadas, búsqueda inversa de imágenes con IA, agrupación por similitud de imagen con IA, una etiqueta Reject, detección y reconocimiento de caras y un Activity Manager en segundo plano.',
           '**Edición RAW.** Revelado no destructivo para más de 750 modelos de cámara, Color y Tone Wheels, Light EQ, la herramienta Clonar y AI Develop Presets.',
           '**Capas.** Máscaras de capa, modos de fusión, texto, formas, herramientas de selección con IA y filtros de IA como Sky Replacement y Face Edit.',
-          '**Herramientas generativas.** Generación de imágenes a partir de texto, Generative Fill, Generative Edit y AI Remove.',
+          '**Herramientas generativas.** Cuatro herramientas en la nube para crear y modificar contenido de imagen.',
           '**Última compilación.** Las notas de versión del 16 de septiembre de 2026 añaden seis modelos de cámara RAW, compatibilidad con JPEG XL dentro de archivos DNG, nuevas categorías de ajustes preestablecidos Develop y más perfiles de objetivo, y corrigen cierres inesperados.',
         ],
       },
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Flujo de datos y privacidad',
         content: [
           '**Para las herramientas generativas, la página de IA de ACDSee dice que los prompts y las imágenes se cifran antes de pasar por los servidores de ACDSee y no se almacenan; el artículo de lanzamiento de Fstoppers informa, en cambio, de que las solicitudes se borran una semana después.** Las dos afirmaciones difieren; revisa las condiciones vigentes antes de enviar imágenes sensibles.',
-          'Otros flujos de datos en las fuentes: la activación necesita una dirección de correo válida, y la conexión del programa con los servicios de licencia y actualización de ACDSee envía, según la política de privacidad, la hora de conexión, la dirección IP, un identificador de aplicación, la versión del producto, la fecha de instalación y el número de licencia. Pueden recogerse datos de fallos, que se conservan hasta 30 días. La política de privacidad lleva fecha del 19 de enero de 2026 y no dice si se suben fotos; para las funciones locales, esa afirmación se apoya en la página de IA.',
+          'Otros flujos de datos en las fuentes: la conexión del programa con los servicios de licencia y actualización de ACDSee envía, según la política de privacidad, la hora de conexión, la dirección IP, un identificador de aplicación, la versión del producto, la fecha de instalación y el número de licencia. Pueden recogerse datos de fallos, que se conservan hasta 30 días. La política de privacidad lleva fecha del 19 de enero de 2026 y no dice si se suben fotos; para las funciones locales, esa afirmación se apoya en la página de IA.',
         ],
         callouts: [
           {
@@ -820,8 +820,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Lo que no pudimos verificar',
         items: [
-          '**Uso sin conexión.** La activación necesita internet; no se indica si el resto funciona sin conexión después.',
-          '**Créditos.** La página de agradecimiento de la prueba menciona 2000 créditos de IA y el artículo de lanzamiento de Fstoppers dice que la compra incluye 20 000, mientras que la página de la tienda no cita ninguno y un seguidor de precios de terceros informa de que la bonificación terminó con la preventa; el coste de una edición generativa no figura en las fuentes leídas.',
+          '**Uso sin conexión.** No se indica si el programa funciona sin conexión tras la activación.',
+          '**Créditos.** La página de agradecimiento de la prueba menciona 2000 créditos de IA y el artículo de lanzamiento de Fstoppers dice que la compra incluye 20 000, mientras que la página de la tienda no cita ninguno; el coste de una edición generativa no figura en las fuentes leídas.',
           '**Conservación.** «No se almacena» (página de IA de ACDSee) frente a «se borra una semana después» (Fstoppers) para las imágenes enviadas a la nube.',
           '**Calidad de la IA.** No se probó la precisión de las palabras clave, la agrupación de caras, las máscaras ni el escalado.',
           '**Idiomas.** Los idiomas de la interfaz del software no se indican en las fuentes leídas.',
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué funciones de IA necesitan la nube?',
-            a: 'Cuatro: AI Image Generation, Generative Fill, Generative Edit y AI Remove. Según ACDSee, el resto de las funciones de IA se ejecutan en local.',
+            a: 'Las cuatro herramientas generativas; cada una envía la imagen a los servidores de ACDSee y consume créditos de IA. Según ACDSee, el resto de las funciones de IA se ejecutan en local.',
           },
           {
             q: '¿Cuánto cuesta además de la licencia?',
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Sigue recibiendo mantenimiento?',
-            a: 'Sí, según las pruebas leídas: las notas de versión incluyen la compilación 20.0.0.4660 del 16 de septiembre de 2026. Solo contienen esa entrada, por lo que no se puede juzgar el ritmo de publicación.',
+            a: 'Sí, según las pruebas leídas: las notas de versión incluyen una compilación del 16 de septiembre de 2026 y nada más, por lo que no se puede juzgar el ritmo de publicación.',
           },
         ],
       },
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'ACDSee Photo Studio Ultimate 2027 combina catalogación, edición RAW y capas con palabras clave por IA, reconocimiento de caras, máscaras y escalado que, según ACDSee, se ejecutan en tu PC, con licencia perpetua y prueba de 15 días. En contra: es de código cerrado y solo para Windows, la activación necesita una dirección de correo e internet, las cuatro herramientas generativas envían imágenes a la nube de ACDSee y consumen créditos, y las declaraciones de ACDSee sobre la conservación difieren según la fuente. Encaja con fotógrafos con Windows que quieren un programa sin suscripción y usarán las herramientas de IA locales; quien necesite todo sin conexión, de código abierto o en Mac debería buscar en otra parte.',
+          'ACDSee Photo Studio Ultimate 2027 combina catalogación, edición RAW y capas con palabras clave por IA, reconocimiento de caras, máscaras y escalado que, según ACDSee, se ejecutan en tu PC, con licencia perpetua y prueba de 15 días. En contra: es de código cerrado y solo para Windows, las cuatro herramientas generativas envían imágenes a la nube de ACDSee y consumen créditos, y las declaraciones de ACDSee sobre la conservación difieren según la fuente. Encaja con fotógrafos con Windows que quieren un programa sin suscripción y usarán las herramientas de IA locales; quien necesite todo sin conexión, de código abierto o en Mac debería buscar en otra parte.',
       },
       sources: {
         id: 'sources',
@@ -915,9 +915,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Test d’ACDSee Photo Studio Ultimate 2027 : éditeur photo avec IA locale et cloud',
     seoTitle: 'Test ACDSee Ultimate 2027 : IA locale, génératif cloud',
     intro:
-      'ACDSee Photo Studio Ultimate 2027 est un gestionnaire de photos et éditeur RAW pour Windows, à code fermé. Selon ACDSee, ses fonctions d’IA principales (reconnaissance des visages, mots-clés, masques, agrandissement) s’exécutent sur votre propre PC, tandis que quatre outils génératifs envoient vos images au cloud d’ACDSee. Il est vendu en licence perpétuelle et exige une adresse e-mail et une connexion internet pour l’activation. Ce test reprend le site, les notes de version et la politique de confidentialité d’ACDSee tels qu’ils ont été consultés le 30 octobre 2026 ; la version actuelle est le build 20.0.0.4660 du 16 septembre 2026.',
+      'ACDSee Photo Studio Ultimate 2027 est un gestionnaire de photos et éditeur RAW pour Windows, à code fermé. Selon ACDSee, ses fonctions d’IA principales (reconnaissance des visages, mots-clés, masques, agrandissement) s’exécutent sur votre propre PC, tandis que quatre outils génératifs envoient vos images au cloud d’ACDSee. Il est vendu en licence perpétuelle. Ce test reprend le site, les notes de version et la politique de confidentialité d’ACDSee tels qu’ils ont été consultés le 30 octobre 2026 ; la version actuelle a été publiée le 16 septembre 2026.',
     metaDescription:
-      'Test d’ACDSee Photo Studio Ultimate 2027 : gestionnaire de photos et éditeur RAW pour Windows dont l’IA principale est locale selon ACDSee ; les outils génératifs passent par le cloud.',
+      'Test d’ACDSee Photo Studio Ultimate 2027 : gestionnaire photo et éditeur RAW Windows, IA locale selon ACDSee ; les outils génératifs passent par le cloud.',
     twitterDescription:
       'Test d’ACDSee Photo Studio Ultimate 2027 : un éditeur photo Windows en licence perpétuelle. Quelles fonctions d’IA tournent sur votre PC, lesquelles passent par le cloud, et ce qu’impliquent l’activation et les crédits.',
     audience:
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027 est un gestionnaire de photos et éditeur RAW pour Windows, à code fermé, dont l’IA se répartit en deux : selon ACDSee, la reconnaissance des visages, les mots-clés, la recherche par similarité, les masques, la réduction du bruit et l’agrandissement s’exécutent sur votre PC, tandis qu’AI Image Generation, Generative Fill, Generative Edit et AI Remove utilisent le cloud d’ACDSee.** Le build le plus récent, 20.0.0.4660, date du 16 septembre 2026 : aucun avertissement d’obsolescence ne s’applique.',
+      '**ACDSee Photo Studio Ultimate 2027 est un gestionnaire de photos et éditeur RAW pour Windows, à code fermé, dont l’IA se répartit en deux : selon ACDSee, la reconnaissance des visages, les mots-clés, la recherche par similarité, les masques, la réduction du bruit et l’agrandissement s’exécutent sur votre PC, tandis qu’AI Image Generation, Generative Fill, Generative Edit et AI Remove utilisent le cloud d’ACDSee.** Le build le plus récent date du 16 septembre 2026 : aucun avertissement d’obsolescence ne s’applique.',
     quickAnswerTop: {
       fr: {
         question: 'ACDSee Photo Studio Ultimate 2027 garde-t-il vos photos sur votre propre PC ?',
@@ -947,8 +947,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Code fermé, licence perpétuelle pour un appareil avec essai de 15 jours ; un abonnement existe séparément.',
           'Windows 10 (64 bits) et Windows 11 uniquement ; ce produit n’a pas de version Mac.',
           'IA locale selon ACDSee : mots-clés, reconnaissance des visages, regroupement par similarité, agrandissement, réduction du bruit, remplacement du ciel, retouche du visage et masques.',
-          'IA dans le cloud : génération d’images, Generative Fill, Generative Edit et AI Remove, qui consomment des crédits d’IA.',
-          'Dernier build 20.0.0.4660 daté du 16 septembre 2026.',
+          'IA dans le cloud : les quatre outils génératifs, qui consomment des crédits d’IA.',
+          'Dernier build daté du 16 septembre 2026.',
         ],
         updatedDate: '2026-10',
       },
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Maintenance : le build 20.0.0.4660 porte la date du 16 septembre 2026 dans les notes de version, soit 44 jours avant ce test ; aucun avertissement d’obsolescence ne s’applique.',
+          'Maintenance : les notes de version du build le plus récent datent de 44 jours avant ce test ; aucun avertissement d’obsolescence ne s’applique.',
           'Éditeur : ACD Systems International Inc. à Victoria (Canada), selon sa politique de confidentialité.',
           'Périmètre : gestion de photos, développement RAW, calques et outils d’IA ; ce n’est pas un assistant de chat ni un modèle de langage.',
           'Plateforme : Windows uniquement ; ACDSee vend un produit distinct pour Mac.',
@@ -1010,16 +1010,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Où l’obtenir',
         content: [
-          '**ACDSee Photo Studio Ultimate 2027 se télécharge sous forme d’installateur Windows ; vous achetez une licence perpétuelle ou lancez l’essai de 15 jours, et l’activation exige une adresse e-mail et une connexion internet.**',
+          '**ACDSee Photo Studio Ultimate 2027 se télécharge sous forme d’installateur Windows ; vous achetez une licence perpétuelle ou lancez l’essai de 15 jours.**',
         ],
         columns: ['Option', 'Comment l’obtenir'],
         rows: [
           { 'Option': 'Site web', 'Comment l’obtenir': '[acdsee.com](https://www.acdsee.com/fr/products/photo-studio-ultimate/)' },
           { 'Option': 'Essai gratuit', 'Comment l’obtenir': '[Essai de 15 jours](https://www.acdsee.com/en/free-trials/) pour Windows' },
           { 'Option': 'Acheter', 'Comment l’obtenir': '[Boutique ACDSee](https://www.acdsee.com/fr/products/photo-studio-ultimate/buy/) : licence perpétuelle, 209,99 € TTC (boutique française), un appareil' },
-          { 'Option': 'Windows', 'Comment l’obtenir': 'Installateur .exe, 778 Mo, build 20.0.0.4660' },
+          { 'Option': 'Windows', 'Comment l’obtenir': 'Installateur .exe, 778 Mo' },
           { 'Option': 'Mac', 'Comment l’obtenir': 'Non pris en charge ; ACDSee vend Photo Studio pour Mac séparément' },
-          { 'Option': 'Notes de version', 'Comment l’obtenir': '[Build 20.0.0.4660, 16 septembre 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { 'Option': 'Notes de version', 'Comment l’obtenir': '[Notes du build du 16 septembre 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { 'Option': 'Politique de confidentialité', 'Comment l’obtenir': '[Politique de confidentialité d’ACDSee](https://www.acdsee.com/en/privacy-policy/)' },
           { 'Option': 'Code source', 'Comment l’obtenir': 'Aucun : logiciel propriétaire' },
         ],
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Gestion.** Auto-Stack et piles personnalisées, recherche d’images inversée par IA, regroupement par similarité d’image IA, une étiquette Reject, détection et reconnaissance des visages et un Activity Manager en arrière-plan.',
           '**Retouche RAW.** Développement non destructif pour plus de 750 modèles d’appareils, Color et Tone Wheels, Light EQ, l’outil Clone et les AI Develop Presets.',
           '**Calques.** Masques de calque, modes de fusion, texte, formes, outils de sélection par IA et filtres IA comme Sky Replacement et Face Edit.',
-          '**Outils génératifs.** Génération d’images à partir de texte, Generative Fill, Generative Edit et AI Remove.',
+          '**Outils génératifs.** Quatre outils dans le cloud pour créer et modifier du contenu d’image.',
           '**Dernier build.** Les notes de version du 16 septembre 2026 ajoutent six modèles d’appareils RAW, la prise en charge de JPEG XL dans les fichiers DNG, de nouvelles catégories de presets Develop et davantage de profils d’objectifs, et corrigent des plantages.',
         ],
       },
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Flux de données et confidentialité',
         content: [
           '**Pour les outils génératifs, la page IA d’ACDSee indique que les prompts et les images sont chiffrés avant de passer par les serveurs d’ACDSee et ne sont pas conservés ; l’article de lancement de Fstoppers rapporte au contraire que les requêtes sont supprimées une semaine plus tard.** Ces deux déclarations diffèrent ; vérifiez les conditions actuelles avant d’envoyer des images sensibles.',
-          'Autres flux de données dans les sources : l’activation exige une adresse e-mail valide, et la connexion du programme aux services de licence et de mise à jour d’ACDSee transmet, selon la politique de confidentialité, l’heure de connexion, l’adresse IP, un identifiant d’application, la version du produit, la date d’installation et le numéro de licence. Des données de plantage peuvent être collectées et sont conservées jusqu’à 30 jours. La politique de confidentialité est datée du 19 janvier 2026 et ne dit pas si des photos sont téléversées ; pour les fonctions locales, cette affirmation repose sur la page IA.',
+          'Autres flux de données dans les sources : la connexion du programme aux services de licence et de mise à jour d’ACDSee transmet, selon la politique de confidentialité, l’heure de connexion, l’adresse IP, un identifiant d’application, la version du produit, la date d’installation et le numéro de licence. Des données de plantage peuvent être collectées et sont conservées jusqu’à 30 jours. La politique de confidentialité est datée du 19 janvier 2026 et ne dit pas si des photos sont téléversées ; pour les fonctions locales, cette affirmation repose sur la page IA.',
         ],
         callouts: [
           {
@@ -1106,8 +1106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Ce que nous n’avons pas pu vérifier',
         items: [
-          '**Usage hors ligne.** L’activation exige internet ; la page ne dit pas si le reste fonctionne sans connexion ensuite.',
-          '**Crédits.** La page de remerciement de l’essai mentionne 2 000 crédits d’IA et l’article de lancement de Fstoppers affirme que l’achat en inclut 20 000, alors que la page de la boutique n’en cite aucun et qu’un suivi de prix tiers indique que ce bonus a pris fin avec la prévente ; le coût d’une retouche générative ne figure pas dans les sources lues.',
+          '**Usage hors ligne.** La page ne dit pas si le programme fonctionne sans connexion après l’activation.',
+          '**Crédits.** La page de remerciement de l’essai mentionne 2 000 crédits d’IA et l’article de lancement de Fstoppers affirme que l’achat en inclut 20 000, alors que la page de la boutique n’en cite aucun ; le coût d’une retouche générative ne figure pas dans les sources lues.',
           '**Conservation.** « Non conservé » (page IA d’ACDSee) contre « supprimé une semaine plus tard » (Fstoppers) pour les images envoyées au cloud.',
           '**Qualité de l’IA.** La précision des mots-clés, du regroupement des visages, des masques et de l’agrandissement n’a pas été testée.',
           '**Langues.** Les langues d’interface du logiciel ne sont pas indiquées dans les sources lues.',
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelles fonctions d’IA ont besoin du cloud ?',
-            a: 'Quatre : AI Image Generation, Generative Fill, Generative Edit et AI Remove. Selon ACDSee, toutes les autres fonctions d’IA s’exécutent en local.',
+            a: 'Les quatre outils génératifs ; chacun envoie l’image aux serveurs d’ACDSee et consomme des crédits d’IA. Selon ACDSee, toutes les autres fonctions d’IA s’exécutent en local.',
           },
           {
             q: 'Que coûte-t-il en plus de la licence ?',
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Est-il toujours maintenu ?',
-            a: 'Oui, d’après les éléments lus : les notes de version listent le build 20.0.0.4660 du 16 septembre 2026. Elles ne contiennent que cette entrée, le rythme des publications ne peut donc pas être jugé.',
+            a: 'Oui, d’après les éléments lus : les notes de version listent un build du 16 septembre 2026 et rien d’autre, le rythme des publications ne peut donc pas être jugé.',
           },
         ],
       },
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'ACDSee Photo Studio Ultimate 2027 réunit catalogage, retouche RAW et calques avec des mots-clés par IA, la reconnaissance des visages, les masques et l’agrandissement qui, selon ACDSee, s’exécutent sur votre PC, en licence perpétuelle avec essai de 15 jours. En contrepartie : code fermé et Windows uniquement, l’activation exige une adresse e-mail et internet, les quatre outils génératifs envoient des images au cloud d’ACDSee et consomment des crédits, et les déclarations d’ACDSee sur la conservation diffèrent selon les sources. Il convient aux photographes sous Windows qui veulent un programme sans abonnement et utiliseront les outils d’IA locaux ; ceux qui ont besoin de tout hors ligne, en open source ou sur Mac chercheront ailleurs.',
+          'ACDSee Photo Studio Ultimate 2027 réunit catalogage, retouche RAW et calques avec des mots-clés par IA, la reconnaissance des visages, les masques et l’agrandissement qui, selon ACDSee, s’exécutent sur votre PC, en licence perpétuelle avec essai de 15 jours. En contrepartie : code fermé et Windows uniquement, les quatre outils génératifs envoient des images au cloud d’ACDSee et consomment des crédits, et les déclarations d’ACDSee sur la conservation diffèrent selon les sources. Il convient aux photographes sous Windows qui veulent un programme sans abonnement et utiliseront les outils d’IA locaux ; ceux qui ont besoin de tout hors ligne, en open source ou sur Mac chercheront ailleurs.',
       },
       sources: {
         id: 'sources',
@@ -1199,9 +1199,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/acdsee-photo-studio-ultimate-review-hero-ja.webp',
     title: 'ACDSee Photo Studio Ultimate 2027レビュー：ローカルAIとクラウドAIを備えた写真編集ソフト',
-    seoTitle: 'ACDSee Ultimate 2027レビュー：ローカルAIとクラウド生成',
+    seoTitle: 'ACDSee 2027レビュー：ローカルAIとクラウド生成',
     intro:
-      'ACDSee Photo Studio Ultimate 2027は、Windows向けのクローズドソースの写真管理・RAW編集ソフトです。ACDSeeによると、顔認識、キーワード付け、マスク、拡大といった中心的なAI機能はお使いのPC上で動作し、生成AIの4機能は画像をACDSeeのクラウドに送ります。永続ライセンスで販売されており、認証にはメールアドレスとインターネット接続が必要です。このレビューは、2026年10月30日に確認したACDSeeのウェブサイト、リリースノート、プライバシーポリシーに基づいており、現行版は2026年9月16日のビルド20.0.0.4660です。',
+      'ACDSee Photo Studio Ultimate 2027は、Windows向けのクローズドソースの写真管理・RAW編集ソフトです。ACDSeeによると、顔認識、キーワード付け、マスク、拡大といった中心的なAI機能はお使いのPC上で動作し、生成AIの4機能は画像をACDSeeのクラウドに送ります。永続ライセンスで販売されています。このレビューは、2026年10月30日に確認したACDSeeのウェブサイト、リリースノート、プライバシーポリシーに基づいており、現行版は2026年9月16日に公開されたビルドです。',
     metaDescription:
       'ACDSee Photo Studio Ultimate 2027のレビュー。ACDSeeによると中心のAIはローカルで動作するWindows向け写真管理・RAW編集ソフトで、生成AIはクラウドを使います。',
     twitterDescription:
@@ -1223,7 +1223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027は、AIが2つに分かれたWindows向けのクローズドソースの写真管理・RAW編集ソフトです。ACDSeeによると、顔認識、キーワード付け、類似画像検索、マスク、ノイズ除去、拡大はPC上で動作し、AI Image Generation、Generative Fill、Generative Edit、AI RemoveはACDSeeのクラウドを使います。**最新ビルド20.0.0.4660は2026年9月16日に公開されているため、更新停滞の警告は該当しません。',
+      '**ACDSee Photo Studio Ultimate 2027は、AIが2つに分かれたWindows向けのクローズドソースの写真管理・RAW編集ソフトです。ACDSeeによると、顔認識、キーワード付け、類似画像検索、マスク、ノイズ除去、拡大はPC上で動作し、AI Image Generation、Generative Fill、Generative Edit、AI RemoveはACDSeeのクラウドを使います。**最新ビルドは2026年9月16日に公開されているため、更新停滞の警告は該当しません。',
     quickAnswerTop: {
       ja: {
         question: 'ACDSee Photo Studio Ultimate 2027は写真を自分のPCの中にとどめますか？',
@@ -1233,8 +1233,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'クローズドソースで、1台用の永続ライセンスに15日間の試用版があり、サブスクリプションのプランは別にあります。',
           'Windows 10（64ビット）とWindows 11のみで、この製品にMac版はありません。',
           'ACDSeeによるローカルAI：キーワード付け、顔認識、類似画像のグループ化、拡大、ノイズ除去、空の置き換え、顔の編集、マスク。',
-          'クラウドAI：画像生成、Generative Fill、Generative Edit、AI Remove（AIクレジットを消費）。',
-          '最新ビルドは2026年9月16日付の20.0.0.4660です。',
+          'クラウドAI：4つの生成ツール（AIクレジットを消費）。',
+          '最新ビルドは2026年9月16日付です。',
         ],
         updatedDate: '2026-10',
       },
@@ -1271,7 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'メンテナンス：ビルド20.0.0.4660のリリースノートの日付は2026年9月16日で、このレビューの44日前のため、更新停滞の警告は該当しません。',
+          'メンテナンス：最新ビルドのリリースノートの日付はこのレビューの44日前のため、更新停滞の警告は該当しません。',
           '提供元：プライバシーポリシーによると、カナダ・ビクトリアのACD Systems International Inc.です。',
           '対象範囲：写真管理、RAW現像、レイヤー、AIツール。チャット型や言語モデルのアシスタントではありません。',
           'プラットフォーム：Windowsのみ。MacにはACDSeeが別製品を販売しています。',
@@ -1296,16 +1296,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: '入手方法',
         content: [
-          '**ACDSee Photo Studio Ultimate 2027はWindows用インストーラーをダウンロードする形式で、永続ライセンスを購入するか15日間の試用版を開始します。認証にはメールアドレスとインターネット接続が必要です。**',
+          '**ACDSee Photo Studio Ultimate 2027はWindows用インストーラーをダウンロードする形式で、永続ライセンスを購入するか15日間の試用版を開始します。**',
         ],
         columns: ['項目', '入手方法'],
         rows: [
           { '項目': '公式サイト', '入手方法': '[acdsee.com](https://www.acdsee.com/en/products/photo-studio-ultimate/)' },
           { '項目': '無料試用版', '入手方法': 'Windows用の[15日間試用版](https://www.acdsee.com/en/free-trials/)' },
           { '項目': '購入', '入手方法': '[ACDSeeストア](https://www.acdsee.com/en/products/photo-studio-ultimate/buy/)：永続ライセンス、179.99ドル（米国ストア）、1台' },
-          { '項目': 'Windows', '入手方法': '.exeインストーラー、778 MB、ビルド20.0.0.4660' },
+          { '項目': 'Windows', '入手方法': '.exeインストーラー、778 MB' },
           { '項目': 'Mac', '入手方法': '非対応。ACDSeeはPhoto Studio for Macを別に販売' },
-          { '項目': 'リリースノート', '入手方法': '[ビルド20.0.0.4660、2026年9月16日](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { '項目': 'リリースノート', '入手方法': '[2026年9月16日のビルドのノート](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { '項目': 'プライバシーポリシー', '入手方法': '[ACDSeeのプライバシーポリシー](https://www.acdsee.com/en/privacy-policy/)' },
           { '項目': 'ソースコード', '入手方法': 'なし：プロプライエタリソフトウェア' },
         ],
@@ -1340,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**管理。**Auto-Stackとカスタムスタック、AIによる画像の逆引き検索、AI画像類似度によるグループ化、Rejectタグ、顔の検出と認識、バックグラウンドのActivity Manager。',
           '**RAW編集。**750機種を超えるカメラに対応する非破壊現像、Color・Tone Wheels、Light EQ、クローンツール、AI Develop Presets。',
           '**レイヤー。**レイヤーマスク、描画モード、テキスト、図形、AI選択ツール、Sky ReplacementやFace EditなどのAIフィルター。',
-          '**生成ツール。**テキストからの画像生成、Generative Fill、Generative Edit、AI Remove。',
+          '**生成ツール。**画像の作成・変更を行う4つのクラウド型ツール。',
           '**最新ビルド。**2026年9月16日のリリースノートでは、RAW対応カメラ6機種、DNGファイル内のJPEG XL対応、新しいDevelopプリセットのカテゴリー、レンズプロファイルの追加が加わり、クラッシュが修正されています。',
         ],
       },
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'データの流れとプライバシー',
         content: [
           '**生成ツールについて、ACDSeeのAIページは、プロンプトと画像は暗号化されてACDSeeのサーバーを経由し、保存されないと説明しています。一方、Fstoppersの発表記事は、リクエストが1週間後に削除されると伝えています。**両者の説明は異なるため、機微な画像を送る前に最新の規約を確認してください。',
-          '情報源にあるその他のデータの流れ：認証には有効なメールアドレスが必要で、プライバシーポリシーによると、プログラムがACDSeeのライセンス・更新サービスに接続する際、接続時刻、IPアドレス、アプリケーションID、製品バージョン、インストール日、ライセンス番号が送信されます。クラッシュデータが収集されることがあり、最長30日間保管されます。プライバシーポリシーの日付は2026年1月19日で、写真がアップロードされるかどうかには触れていません。ローカル機能については、AIページの説明が根拠です。',
+          '情報源にあるその他のデータの流れ：プライバシーポリシーによると、プログラムがACDSeeのライセンス・更新サービスに接続する際、接続時刻、IPアドレス、アプリケーションID、製品バージョン、インストール日、ライセンス番号が送信されます。クラッシュデータが収集されることがあり、最長30日間保管されます。プライバシーポリシーの日付は2026年1月19日で、写真がアップロードされるかどうかには触れていません。ローカル機能については、AIページの説明が根拠です。',
         ],
         callouts: [
           {
@@ -1392,8 +1392,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '確認できなかった点',
         items: [
-          '**オフライン利用。**認証にはインターネットが必要で、認証後にそれ以外の機能が接続なしで動くかどうかは記載がありません。',
-          '**クレジット。**試用版のサンクスページには2,000 AIクレジットの記載があり、Fstoppersの発表記事は購入に20,000が含まれると述べていますが、ストアのページには記載がなく、第三者の価格追跡サービスは予約販売の終了とともに特典がなくなったと伝えています。生成編集1回の消費量は、読んだ情報源にありません。',
+          '**オフライン利用。**認証後に接続なしで動作するかどうかは記載がありません。',
+          '**クレジット。**試用版のサンクスページには2,000 AIクレジットの記載があり、Fstoppersの発表記事は購入に20,000が含まれると述べていますが、ストアのページには記載がありません。生成編集1回の消費量は、読んだ情報源にありません。',
           '**保持。**クラウドに送った画像について、「保存されない」（ACDSeeのAIページ）と「1週間後に削除」（Fstoppers）で説明が異なります。',
           '**AIの品質。**キーワード付け、顔のグループ化、マスク、拡大の精度は検証していません。',
           '**言語。**ソフトのインターフェース言語は、読んだ情報源に記載がありません。',
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'クラウドが必要なAI機能はどれですか？',
-            a: '4つです：AI Image Generation、Generative Fill、Generative Edit、AI Remove。ACDSeeによれば、それ以外のAI機能はすべてローカルで動作します。',
+            a: '4つの生成ツールで、いずれも画像をACDSeeのサーバーに送りAIクレジットを消費します。ACDSeeによれば、それ以外のAI機能はすべてローカルで動作します。',
           },
           {
             q: 'ライセンス以外にかかる費用はありますか？',
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'まだメンテナンスされていますか？',
-            a: '読んだ根拠ではされています。リリースノートに2026年9月16日のビルド20.0.0.4660が掲載されています。掲載はこの1件のみのため、リリースの頻度は判断できません。',
+            a: '読んだ根拠ではされています。リリースノートには2026年9月16日のビルドが掲載されています。掲載はこの1件のみのため、リリースの頻度は判断できません。',
           },
         ],
       },
@@ -1448,7 +1448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'ACDSee Photo Studio Ultimate 2027は、カタログ管理、RAW編集、レイヤーに、ACDSeeによればPC上で動作するAIのキーワード付け、顔認識、マスク、拡大を組み合わせ、永続ライセンスと15日間の試用版で提供されます。一方で、クローズドソースでWindows専用であること、認証にメールアドレスとインターネットが必要なこと、4つの生成ツールが画像をACDSeeのクラウドに送ってクレジットを消費すること、保持に関するACDSeeの説明が情報源によって異なることが挙げられます。サブスクリプション不要の1本を求め、ローカルのAIツールを使うWindowsの写真家に向いています。すべてをオフラインで、オープンソースで、またはMacで使いたい方は、別の選択肢を探してください。',
+          'ACDSee Photo Studio Ultimate 2027は、カタログ管理、RAW編集、レイヤーに、ACDSeeによればPC上で動作するAIのキーワード付け、顔認識、マスク、拡大を組み合わせ、永続ライセンスと15日間の試用版で提供されます。一方で、クローズドソースでWindows専用であること、4つの生成ツールが画像をACDSeeのクラウドに送ってクレジットを消費すること、保持に関するACDSeeの説明が情報源によって異なることが挙げられます。サブスクリプション不要の1本を求め、ローカルのAIツールを使うWindowsの写真家に向いています。すべてをオフラインで、オープンソースで、またはMacで使いたい方は、別の選択肢を探してください。',
       },
       sources: {
         id: 'sources',
@@ -1485,11 +1485,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/acdsee-photo-studio-ultimate-review-hero-pt.webp',
     title: 'Análise do ACDSee Photo Studio Ultimate 2027: editor de fotos com IA local e na nuvem',
-    seoTitle: 'Análise ACDSee Ultimate 2027: IA local e generativa na nuvem',
+    seoTitle: 'Análise ACDSee Ultimate 2027: IA local e geração na nuvem',
     intro:
-      'O ACDSee Photo Studio Ultimate 2027 é um gerenciador de fotos e editor RAW de código fechado para Windows. Segundo a ACDSee, seus recursos de IA principais (reconhecimento de rostos, palavras-chave, máscaras, ampliação) rodam no seu próprio PC, enquanto quatro ferramentas generativas enviam suas imagens para a nuvem da ACDSee. É vendido com licença perpétua e precisa de um endereço de e-mail e de conexão com a internet para ativar. Esta análise reflete o site, as notas de versão e a política de privacidade da ACDSee conforme consultados em 30 de outubro de 2026; a versão atual é a build 20.0.0.4660, de 16 de setembro de 2026.',
+      'O ACDSee Photo Studio Ultimate 2027 é um gerenciador de fotos e editor RAW de código fechado para Windows. Segundo a ACDSee, seus recursos de IA principais (reconhecimento de rostos, palavras-chave, máscaras, ampliação) rodam no seu próprio PC, enquanto quatro ferramentas generativas enviam suas imagens para a nuvem da ACDSee. É vendido com licença perpétua. Esta análise reflete o site, as notas de versão e a política de privacidade da ACDSee conforme consultados em 30 de outubro de 2026; a versão atual foi publicada em 16 de setembro de 2026.',
     metaDescription:
-      'Análise do ACDSee Photo Studio Ultimate 2027: gerenciador de fotos e editor RAW para Windows cuja IA principal roda localmente, segundo a ACDSee; as ferramentas generativas usam a nuvem.',
+      'Análise do ACDSee Photo Studio Ultimate 2027: gerenciador de fotos e editor RAW para Windows com IA local, segundo a ACDSee; as generativas usam a nuvem.',
     twitterDescription:
       'Análise do ACDSee Photo Studio Ultimate 2027: um editor de fotos para Windows com licença perpétua. Quais recursos de IA rodam no seu PC, quais quatro vão para a nuvem e o que a ativação e os créditos envolvem.',
     audience:
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**O ACDSee Photo Studio Ultimate 2027 é um gerenciador de fotos e editor RAW de código fechado para Windows cuja IA se divide em duas partes: segundo a ACDSee, reconhecimento de rostos, palavras-chave, busca por similaridade, máscaras, redução de ruído e ampliação rodam no seu PC, enquanto AI Image Generation, Generative Fill, Generative Edit e AI Remove usam a nuvem da ACDSee.** A build mais recente, 20.0.0.4660, saiu em 16 de setembro de 2026, então nenhum aviso de projeto desatualizado se aplica.',
+      '**O ACDSee Photo Studio Ultimate 2027 é um gerenciador de fotos e editor RAW de código fechado para Windows cuja IA se divide em duas partes: segundo a ACDSee, reconhecimento de rostos, palavras-chave, busca por similaridade, máscaras, redução de ruído e ampliação rodam no seu PC, enquanto AI Image Generation, Generative Fill, Generative Edit e AI Remove usam a nuvem da ACDSee.** A build mais recente saiu em 16 de setembro de 2026, então nenhum aviso de projeto desatualizado se aplica.',
     quickAnswerTop: {
       pt: {
         question: 'O ACDSee Photo Studio Ultimate 2027 mantém suas fotos no seu próprio PC?',
@@ -1519,8 +1519,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Código fechado, licença perpétua para um dispositivo com teste de 15 dias; existe um plano de assinatura separado.',
           'Somente Windows 10 (64 bits) e Windows 11; este produto não tem versão para Mac.',
           'IA local segundo a ACDSee: palavras-chave, reconhecimento de rostos, agrupamento por similaridade, ampliação, redução de ruído, troca de céu, edição de rosto e máscaras.',
-          'IA na nuvem: geração de imagens, Generative Fill, Generative Edit e AI Remove, que consomem créditos de IA.',
-          'Última build 20.0.0.4660, de 16 de setembro de 2026.',
+          'IA na nuvem: as quatro ferramentas generativas, que consomem créditos de IA.',
+          'Última build de 16 de setembro de 2026.',
         ],
         updatedDate: '2026-10',
       },
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Manutenção: a build 20.0.0.4660 traz nas notas de versão a data de 16 de setembro de 2026, 44 dias antes desta análise, então nenhum aviso de projeto desatualizado se aplica.',
+          'Manutenção: as notas de versão da build mais recente são datadas de 44 dias antes desta análise, então nenhum aviso de projeto desatualizado se aplica.',
           'Fabricante: ACD Systems International Inc., de Victoria, Canadá, segundo sua política de privacidade.',
           'Escopo: gerenciamento de fotos, revelação RAW, camadas e ferramentas de IA; não é um assistente de chat nem um modelo de linguagem.',
           'Plataforma: somente Windows; a ACDSee vende um produto separado para Mac.',
@@ -1582,16 +1582,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Onde obter',
         content: [
-          '**O ACDSee Photo Studio Ultimate 2027 é baixado como instalador para Windows; você compra uma licença perpétua ou inicia o teste de 15 dias, e a ativação exige um e-mail e uma conexão com a internet.**',
+          '**O ACDSee Photo Studio Ultimate 2027 é baixado como instalador para Windows; você compra uma licença perpétua ou inicia o teste de 15 dias.**',
         ],
         columns: ['Opção', 'Onde obter'],
         rows: [
           { 'Opção': 'Site', 'Onde obter': '[acdsee.com](https://www.acdsee.com/en/products/photo-studio-ultimate/)' },
           { 'Opção': 'Teste gratuito', 'Onde obter': '[Teste de 15 dias](https://www.acdsee.com/en/free-trials/) para Windows' },
           { 'Opção': 'Comprar', 'Onde obter': '[Loja da ACDSee](https://www.acdsee.com/en/products/photo-studio-ultimate/buy/): licença perpétua, US$ 179,99 (loja dos EUA), um dispositivo' },
-          { 'Opção': 'Windows', 'Onde obter': 'Instalador .exe, 778 MB, build 20.0.0.4660' },
+          { 'Opção': 'Windows', 'Onde obter': 'Instalador .exe, 778 MB' },
           { 'Opção': 'Mac', 'Onde obter': 'Sem suporte; a ACDSee vende o Photo Studio para Mac separadamente' },
-          { 'Opção': 'Notas de versão', 'Onde obter': '[Build 20.0.0.4660, 16 de setembro de 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { 'Opção': 'Notas de versão', 'Onde obter': '[Notas da build de 16 de setembro de 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { 'Opção': 'Política de privacidade', 'Onde obter': '[Política de privacidade da ACDSee](https://www.acdsee.com/en/privacy-policy/)' },
           { 'Opção': 'Código-fonte', 'Onde obter': 'Nenhum: software proprietário' },
         ],
@@ -1626,7 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Gerenciamento.** Auto-Stack e pilhas personalizadas, busca reversa de imagens por IA, agrupamento por similaridade de imagem com IA, uma etiqueta Reject, detecção e reconhecimento de rostos e um Activity Manager em segundo plano.',
           '**Edição RAW.** Revelação não destrutiva para mais de 750 modelos de câmera, Color e Tone Wheels, Light EQ, a ferramenta Clonar e AI Develop Presets.',
           '**Camadas.** Máscaras de camada, modos de mesclagem, texto, formas, ferramentas de seleção por IA e filtros de IA como Sky Replacement e Face Edit.',
-          '**Ferramentas generativas.** Geração de imagens a partir de texto, Generative Fill, Generative Edit e AI Remove.',
+          '**Ferramentas generativas.** Quatro ferramentas na nuvem para criar e alterar conteúdo de imagem.',
           '**Build mais recente.** As notas de versão de 16 de setembro de 2026 acrescentam seis modelos de câmera RAW, suporte a JPEG XL em arquivos DNG, novas categorias de predefinições Develop e mais perfis de lente, e corrigem travamentos.',
         ],
       },
@@ -1656,7 +1656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxo de dados e privacidade',
         content: [
           '**Para as ferramentas generativas, a página de IA da ACDSee diz que prompts e imagens são criptografados antes de passar pelos servidores da ACDSee e não são armazenados; o artigo de lançamento da Fstoppers relata, ao contrário, que as solicitações são apagadas uma semana depois.** As duas declarações diferem; confira os termos atuais antes de enviar imagens sensíveis.',
-          'Outros fluxos de dados nas fontes: a ativação exige um e-mail válido, e a conexão do programa com os serviços de licença e atualização da ACDSee envia, segundo a política de privacidade, horário da conexão, endereço IP, um identificador de aplicativo, versão do produto, data de instalação e número da licença. Dados de falhas podem ser coletados e ficam guardados por até 30 dias. A política de privacidade é datada de 19 de janeiro de 2026 e não diz se fotos são enviadas; para os recursos locais, essa afirmação se apoia na página de IA.',
+          'Outros fluxos de dados nas fontes: a conexão do programa com os serviços de licença e atualização da ACDSee envia, segundo a política de privacidade, horário da conexão, endereço IP, um identificador de aplicativo, versão do produto, data de instalação e número da licença. Dados de falhas podem ser coletados e ficam guardados por até 30 dias. A política de privacidade é datada de 19 de janeiro de 2026 e não diz se fotos são enviadas; para os recursos locais, essa afirmação se apoia na página de IA.',
         ],
         callouts: [
           {
@@ -1678,8 +1678,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'O que não conseguimos verificar',
         items: [
-          '**Uso offline.** A ativação exige internet; não se informa se o restante funciona sem conexão depois.',
-          '**Créditos.** A página de agradecimento do teste menciona 2.000 créditos de IA e o artigo de lançamento da Fstoppers diz que a compra inclui 20.000, enquanto a página da loja não cita nenhum e um monitor de preços de terceiros relata que o bônus acabou com a pré-venda; o custo de uma edição generativa não consta nas fontes lidas.',
+          '**Uso offline.** Não se informa se o programa funciona sem conexão após a ativação.',
+          '**Créditos.** A página de agradecimento do teste menciona 2.000 créditos de IA e o artigo de lançamento da Fstoppers diz que a compra inclui 20.000, enquanto a página da loja não cita nenhum; o custo de uma edição generativa não consta nas fontes lidas.',
           '**Retenção.** "Não armazenado" (página de IA da ACDSee) versus "apagado uma semana depois" (Fstoppers) para imagens enviadas à nuvem.',
           '**Qualidade da IA.** Precisão das palavras-chave, do agrupamento de rostos, das máscaras e da ampliação não foi testada.',
           '**Idiomas.** Os idiomas da interface do software não são listados nas fontes lidas.',
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais recursos de IA precisam da nuvem?',
-            a: 'Quatro: AI Image Generation, Generative Fill, Generative Edit e AI Remove. Segundo a ACDSee, todos os outros recursos de IA rodam localmente.',
+            a: 'As quatro ferramentas generativas; cada uma envia a imagem aos servidores da ACDSee e consome créditos de IA. Segundo a ACDSee, todos os outros recursos de IA rodam localmente.',
           },
           {
             q: 'Quanto custa além da licença?',
@@ -1726,7 +1726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ainda recebe manutenção?',
-            a: 'Sim, pelas evidências lidas: as notas de versão listam a build 20.0.0.4660 de 16 de setembro de 2026. Elas contêm apenas essa entrada, então o ritmo de lançamentos não pode ser avaliado.',
+            a: 'Sim, pelas evidências lidas: as notas de versão listam uma build de 16 de setembro de 2026 e mais nada, então o ritmo de lançamentos não pode ser avaliado.',
           },
         ],
       },
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'O ACDSee Photo Studio Ultimate 2027 combina catalogação, edição RAW e camadas com palavras-chave por IA, reconhecimento de rostos, máscaras e ampliação que, segundo a ACDSee, rodam no seu PC, com licença perpétua e teste de 15 dias. Em contrapartida: código fechado e somente Windows, a ativação exige um e-mail e internet, as quatro ferramentas generativas enviam imagens à nuvem da ACDSee e consomem créditos, e as declarações da ACDSee sobre retenção diferem conforme a fonte. Serve a fotógrafos no Windows que querem um programa sem assinatura e usarão as ferramentas de IA locais; quem precisa de tudo offline, em código aberto ou no Mac deve procurar outra opção.',
+          'O ACDSee Photo Studio Ultimate 2027 combina catalogação, edição RAW e camadas com palavras-chave por IA, reconhecimento de rostos, máscaras e ampliação que, segundo a ACDSee, rodam no seu PC, com licença perpétua e teste de 15 dias. Em contrapartida: código fechado e somente Windows, as quatro ferramentas generativas enviam imagens à nuvem da ACDSee e consomem créditos, e as declarações da ACDSee sobre retenção diferem conforme a fonte. Serve a fotógrafos no Windows que querem um programa sem assinatura e usarão as ferramentas de IA locais; quem precisa de tudo offline, em código aberto ou no Mac deve procurar outra opção.',
       },
       sources: {
         id: 'sources',
@@ -1773,9 +1773,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة ACDSee Photo Studio Ultimate 2027: محرر صور بذكاء اصطناعي محلي وسحابي',
     seoTitle: 'مراجعة ACDSee Ultimate 2027: ذكاء محلي وتوليد سحابي',
     intro:
-      'ACDSee Photo Studio Ultimate 2027 برنامج مغلق المصدر لإدارة الصور وتحرير ملفات RAW على Windows. بحسب ACDSee، تعمل ميزات الذكاء الاصطناعي الأساسية فيه (التعرف على الوجوه والكلمات المفتاحية والأقنعة والتكبير) على حاسوبك الخاص، بينما ترسل أربع أدوات توليدية صورك إلى سحابة ACDSee. يُباع بترخيص دائم ويحتاج إلى بريد إلكتروني واتصال بالإنترنت للتفعيل. تعكس هذه المراجعة موقع ACDSee وملاحظات الإصدار وسياسة الخصوصية كما روجعت في 30 أكتوبر 2026؛ والإصدار الحالي هو البناء 20.0.0.4660 الصادر في 16 سبتمبر 2026.',
+      'ACDSee Photo Studio Ultimate 2027 برنامج مغلق المصدر لإدارة الصور وتحرير ملفات RAW على Windows. بحسب ACDSee، تعمل ميزات الذكاء الاصطناعي الأساسية فيه (التعرف على الوجوه والكلمات المفتاحية والأقنعة والتكبير) على حاسوبك الخاص، بينما ترسل أربع أدوات توليدية صورك إلى سحابة ACDSee. يُباع بترخيص دائم. تعكس هذه المراجعة موقع ACDSee وملاحظات الإصدار وسياسة الخصوصية كما روجعت في 30 أكتوبر 2026؛ وصدر الإصدار الحالي في 16 سبتمبر 2026.',
     metaDescription:
-      'مراجعة ACDSee Photo Studio Ultimate 2027: برنامج لإدارة الصور وتحرير RAW على Windows يعمل ذكاؤه الأساسي محليًا بحسب ACDSee، وتستخدم أدواته التوليدية السحابة.',
+      'مراجعة ACDSee Photo Studio Ultimate 2027: إدارة صور وتحرير RAW على Windows بذكاء اصطناعي محلي بحسب ACDSee، وأدواته التوليدية تستخدم السحابة.',
     twitterDescription:
       'مراجعة ACDSee Photo Studio Ultimate 2027: محرر صور لـ Windows بترخيص دائم. أي ميزات ذكاء اصطناعي تعمل على حاسوبك، وأي أربع منها تذهب إلى السحابة، وماذا تعني الأرصدة والتفعيل.',
     audience:
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027 برنامج مغلق المصدر لإدارة الصور وتحرير RAW على Windows، ويتوزع ذكاؤه الاصطناعي على قسمين: بحسب ACDSee، يعمل التعرف على الوجوه والكلمات المفتاحية والبحث بالتشابه والأقنعة وإزالة الضوضاء والتكبير على حاسوبك، بينما تستخدم AI Image Generation وGenerative Fill وGenerative Edit وAI Remove سحابة ACDSee.** صدر أحدث بناء 20.0.0.4660 في 16 سبتمبر 2026، لذا لا ينطبق تحذير التوقف عن التحديث.',
+      '**ACDSee Photo Studio Ultimate 2027 برنامج مغلق المصدر لإدارة الصور وتحرير RAW على Windows، ويتوزع ذكاؤه الاصطناعي على قسمين: بحسب ACDSee، يعمل التعرف على الوجوه والكلمات المفتاحية والبحث بالتشابه والأقنعة وإزالة الضوضاء والتكبير على حاسوبك، بينما تستخدم AI Image Generation وGenerative Fill وGenerative Edit وAI Remove سحابة ACDSee.** صدر أحدث بناء في 16 سبتمبر 2026، لذا لا ينطبق تحذير التوقف عن التحديث.',
     quickAnswerTop: {
       ar: {
         question: 'هل يُبقي ACDSee Photo Studio Ultimate 2027 صورك على حاسوبك الخاص؟',
@@ -1805,8 +1805,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مغلق المصدر، وترخيص دائم لجهاز واحد مع تجربة 15 يومًا؛ وتوجد خطة اشتراك منفصلة.',
           'يعمل على Windows 10 (64 بت) وWindows 11 فقط؛ ولا يوجد إصدار Mac لهذا المنتج.',
           'ذكاء اصطناعي محلي بحسب ACDSee: الكلمات المفتاحية والتعرف على الوجوه والتجميع بالتشابه والتكبير وإزالة الضوضاء واستبدال السماء وتحرير الوجه والأقنعة.',
-          'ذكاء اصطناعي سحابي: توليد الصور وGenerative Fill وGenerative Edit وAI Remove، وهي تستهلك أرصدة الذكاء الاصطناعي.',
-          'أحدث بناء 20.0.0.4660 بتاريخ 16 سبتمبر 2026.',
+          'ذكاء اصطناعي سحابي: أدوات التوليد الأربع، وهي تستهلك أرصدة الذكاء الاصطناعي.',
+          'أحدث بناء بتاريخ 16 سبتمبر 2026.',
         ],
         updatedDate: '2026-10',
       },
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الصيانة: يحمل البناء 20.0.0.4660 في ملاحظات الإصدار تاريخ 16 سبتمبر 2026، أي قبل هذه المراجعة بـ 44 يومًا، لذا لا ينطبق تحذير التوقف عن التحديث.',
+          'الصيانة: تسبق ملاحظات إصدار أحدث بناء هذه المراجعة بـ 44 يومًا، لذا لا ينطبق تحذير التوقف عن التحديث.',
           'الجهة المصنِّعة: ACD Systems International Inc. في فيكتوريا بكندا، بحسب سياسة الخصوصية.',
           'النطاق: إدارة الصور ومعالجة RAW والطبقات وأدوات الذكاء الاصطناعي؛ وليس مساعد دردشة أو نموذجًا لغويًا.',
           'المنصة: Windows فقط؛ وتبيع ACDSee منتجًا منفصلًا لنظام Mac.',
@@ -1868,16 +1868,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'كيف تحصل عليه',
         content: [
-          '**يُنزَّل ACDSee Photo Studio Ultimate 2027 كمثبّت لنظام Windows؛ تشتري ترخيصًا دائمًا أو تبدأ تجربة 15 يومًا، ويحتاج التفعيل إلى بريد إلكتروني واتصال بالإنترنت.**',
+          '**يُنزَّل ACDSee Photo Studio Ultimate 2027 كمثبّت لنظام Windows؛ تشتري ترخيصًا دائمًا أو تبدأ تجربة 15 يومًا.**',
         ],
         columns: ['الخيار', 'مصدر الحصول عليه'],
         rows: [
           { 'الخيار': 'الموقع', 'مصدر الحصول عليه': '[acdsee.com](https://www.acdsee.com/en/products/photo-studio-ultimate/)' },
           { 'الخيار': 'تجربة مجانية', 'مصدر الحصول عليه': '[تجربة 15 يومًا](https://www.acdsee.com/en/free-trials/) لنظام Windows' },
           { 'الخيار': 'الشراء', 'مصدر الحصول عليه': '[متجر ACDSee](https://www.acdsee.com/en/products/photo-studio-ultimate/buy/): ترخيص دائم، $179.99 (المتجر الأمريكي)، جهاز واحد' },
-          { 'الخيار': 'Windows', 'مصدر الحصول عليه': 'مثبّت .exe بحجم 778 MB، البناء 20.0.0.4660' },
+          { 'الخيار': 'Windows', 'مصدر الحصول عليه': 'مثبّت .exe بحجم 778 MB' },
           { 'الخيار': 'Mac', 'مصدر الحصول عليه': 'غير مدعوم؛ تبيع ACDSee منتج Photo Studio for Mac منفصلًا' },
-          { 'الخيار': 'ملاحظات الإصدار', 'مصدر الحصول عليه': '[البناء 20.0.0.4660، 16 سبتمبر 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { 'الخيار': 'ملاحظات الإصدار', 'مصدر الحصول عليه': '[ملاحظات البناء الصادر في 16 سبتمبر 2026](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { 'الخيار': 'سياسة الخصوصية', 'مصدر الحصول عليه': '[سياسة خصوصية ACDSee](https://www.acdsee.com/en/privacy-policy/)' },
           { 'الخيار': 'الشفرة المصدرية', 'مصدر الحصول عليه': 'لا توجد: برنامج احتكاري' },
         ],
@@ -1912,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الإدارة.** Auto-Stack والتكديس المخصص، والبحث العكسي عن الصور بالذكاء الاصطناعي، والتجميع حسب تشابه الصور بالذكاء الاصطناعي، ووسم Reject، واكتشاف الوجوه والتعرف عليها، ومدير Activity Manager في الخلفية.',
           '**تحرير RAW.** معالجة غير مدمّرة لأكثر من 750 طراز كاميرا، وColor وTone Wheels، وLight EQ، وأداة النسخ، وAI Develop Presets.',
           '**الطبقات.** أقنعة الطبقات وأنماط المزج والنصوص والأشكال وأدوات التحديد بالذكاء الاصطناعي ومرشحات ذكاء اصطناعي مثل Sky Replacement وFace Edit.',
-          '**الأدوات التوليدية.** توليد الصور من النص وGenerative Fill وGenerative Edit وAI Remove.',
+          '**الأدوات التوليدية.** أربع أدوات سحابية لإنشاء محتوى الصور وتعديله.',
           '**أحدث بناء.** تضيف ملاحظات الإصدار الصادرة في 16 سبتمبر 2026 ستة طرازات كاميرا RAW ودعم JPEG XL داخل ملفات DNG وفئات جديدة من إعدادات Develop المسبقة وملفات تعريف عدسات إضافية، وتصلح حالات انهيار.',
         ],
       },
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تدفق البيانات والخصوصية',
         content: [
           '**بالنسبة للأدوات التوليدية، تقول صفحة الذكاء الاصطناعي لدى ACDSee إن المطالبات والصور تُشفَّر قبل مرورها عبر خوادم ACDSee ولا تُخزَّن؛ أما مقال الإطلاق في Fstoppers فيفيد بأن الطلبات تُحذف بعد أسبوع.** يختلف التصريحان، فراجع الشروط الحالية قبل إرسال صور حساسة.',
-          'تدفقات بيانات أخرى في المصادر: يحتاج التفعيل إلى بريد إلكتروني صالح، ويرسل اتصال البرنامج بخدمات الترخيص والتحديث لدى ACDSee، بحسب سياسة الخصوصية، وقت الاتصال وعنوان IP ومعرّف التطبيق وإصدار المنتج وتاريخ التثبيت ورقم الترخيص. وقد تُجمع بيانات الانهيار وتُحفظ حتى 30 يومًا. تحمل سياسة الخصوصية تاريخ 19 يناير 2026 ولا تذكر ما إذا كانت الصور تُرفع؛ وبالنسبة للميزات المحلية يستند هذا القول إلى صفحة الذكاء الاصطناعي.',
+          'تدفقات بيانات أخرى في المصادر: يرسل اتصال البرنامج بخدمات الترخيص والتحديث لدى ACDSee، بحسب سياسة الخصوصية، وقت الاتصال وعنوان IP ومعرّف التطبيق وإصدار المنتج وتاريخ التثبيت ورقم الترخيص. وقد تُجمع بيانات الانهيار وتُحفظ حتى 30 يومًا. تحمل سياسة الخصوصية تاريخ 19 يناير 2026 ولا تذكر ما إذا كانت الصور تُرفع؛ وبالنسبة للميزات المحلية يستند هذا القول إلى صفحة الذكاء الاصطناعي.',
         ],
         callouts: [
           {
@@ -1964,8 +1964,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'ما لم نتمكن من التحقق منه',
         items: [
-          '**الاستخدام دون اتصال.** يحتاج التفعيل إلى الإنترنت؛ ولا يُذكر ما إذا كان باقي البرنامج يعمل دون اتصال بعد ذلك.',
-          '**الأرصدة.** تذكر صفحة الشكر الخاصة بالتجربة 2,000 رصيد ذكاء اصطناعي، ويقول مقال الإطلاق في Fstoppers إن الشراء يتضمن 20,000، بينما لا تذكر صفحة المتجر أي رصيد، ويفيد متتبع أسعار تابع لجهة خارجية بأن هذه المكافأة انتهت مع البيع المسبق؛ وتكلفة التعديل التوليدي الواحد غير مذكورة في المصادر المقروءة.',
+          '**الاستخدام دون اتصال.** لا يُذكر ما إذا كان البرنامج يعمل دون اتصال بعد التفعيل.',
+          '**الأرصدة.** تذكر صفحة الشكر الخاصة بالتجربة 2,000 رصيد ذكاء اصطناعي، ويقول مقال الإطلاق في Fstoppers إن الشراء يتضمن 20,000، بينما لا تذكر صفحة المتجر أي رصيد؛ وتكلفة التعديل التوليدي الواحد غير مذكورة في المصادر المقروءة.',
           '**الاحتفاظ.** «لا تُخزَّن» (صفحة الذكاء الاصطناعي لدى ACDSee) مقابل «تُحذف بعد أسبوع» (Fstoppers) بالنسبة للصور المرسلة إلى السحابة.',
           '**جودة الذكاء الاصطناعي.** لم تُختبر دقة الكلمات المفتاحية وتجميع الوجوه والأقنعة والتكبير.',
           '**اللغات.** لا تُذكر لغات واجهة البرنامج في المصادر المقروءة.',
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي ميزات ذكاء اصطناعي تحتاج إلى السحابة؟',
-            a: 'أربع: AI Image Generation وGenerative Fill وGenerative Edit وAI Remove. وبحسب ACDSee تعمل جميع ميزات الذكاء الاصطناعي الأخرى محليًا.',
+            a: 'أدوات التوليد الأربع، وكل منها يرسل الصورة إلى خوادم ACDSee ويستهلك أرصدة ذكاء اصطناعي. وبحسب ACDSee تعمل جميع ميزات الذكاء الاصطناعي الأخرى محليًا.',
           },
           {
             q: 'ماذا يكلف إضافة إلى الترخيص؟',
@@ -2012,7 +2012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل ما زال يُصان؟',
-            a: 'نعم بحسب الأدلة المقروءة: تسرد ملاحظات الإصدار البناء 20.0.0.4660 الصادر في 16 سبتمبر 2026. وهي لا تحتوي إلا على هذا البند، لذا لا يمكن الحكم على وتيرة الإصدارات.',
+            a: 'نعم بحسب الأدلة المقروءة: تسرد ملاحظات الإصدار بناءً صادرًا في 16 سبتمبر 2026. وهي لا تحتوي إلا على هذا البند، لذا لا يمكن الحكم على وتيرة الإصدارات.',
           },
         ],
       },
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'يجمع ACDSee Photo Studio Ultimate 2027 بين الفهرسة وتحرير RAW والطبقات مع كلمات مفتاحية بالذكاء الاصطناعي وتعرف على الوجوه وأقنعة وتكبير تعمل على حاسوبك بحسب ACDSee، بترخيص دائم وتجربة 15 يومًا. في المقابل هو مغلق المصدر ولنظام Windows فقط، ويحتاج التفعيل إلى بريد إلكتروني وإنترنت، وترسل أدواته التوليدية الأربع الصور إلى سحابة ACDSee وتستهلك أرصدة، وتختلف تصريحات ACDSee عن الاحتفاظ بحسب المصدر. يناسب المصورين على Windows الذين يريدون برنامجًا دون اشتراك وسيستخدمون أدوات الذكاء الاصطناعي المحلية؛ ومن يحتاج كل شيء دون اتصال أو مفتوح المصدر أو على Mac فعليه البحث في مكان آخر.',
+          'يجمع ACDSee Photo Studio Ultimate 2027 بين الفهرسة وتحرير RAW والطبقات مع كلمات مفتاحية بالذكاء الاصطناعي وتعرف على الوجوه وأقنعة وتكبير تعمل على حاسوبك بحسب ACDSee، بترخيص دائم وتجربة 15 يومًا. في المقابل هو مغلق المصدر ولنظام Windows فقط، وترسل أدواته التوليدية الأربع الصور إلى سحابة ACDSee وتستهلك أرصدة، وتختلف تصريحات ACDSee عن الاحتفاظ بحسب المصدر. يناسب المصورين على Windows الذين يريدون برنامجًا دون اشتراك وسيستخدمون أدوات الذكاء الاصطناعي المحلية؛ ومن يحتاج كل شيء دون اتصال أو مفتوح المصدر أو على Mac فعليه البحث في مكان آخر.',
       },
       sources: {
         id: 'sources',
@@ -2057,9 +2057,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/acdsee-photo-studio-ultimate-review-hero-zh.webp',
     title: 'ACDSee Photo Studio Ultimate 2027 评测：兼具本地与云端 AI 的照片编辑软件',
-    seoTitle: 'ACDSee Ultimate 2027 评测：本地 AI 与云端生成',
+    seoTitle: 'ACDSee 2027 评测：本地 AI 与云端生成',
     intro:
-      'ACDSee Photo Studio Ultimate 2027 是一款面向 Windows 的闭源照片管理与 RAW 编辑软件。据 ACDSee 称，人脸识别、关键词、蒙版、放大等核心 AI 功能在你自己的电脑上运行，而四项生成式工具会把图像发送到 ACDSee 的云端。它以永久许可销售，激活需要电子邮箱和网络连接。本评测反映 2026 年 10 月 30 日查阅的 ACDSee 网站、版本说明和隐私政策；当前版本为 2026 年 9 月 16 日发布的构建 20.0.0.4660。',
+      'ACDSee Photo Studio Ultimate 2027 是一款面向 Windows 的闭源照片管理与 RAW 编辑软件。据 ACDSee 称，人脸识别、关键词、蒙版、放大等核心 AI 功能在你自己的电脑上运行，而四项生成式工具会把图像发送到 ACDSee 的云端。它以永久许可销售。本评测反映 2026 年 10 月 30 日查阅的 ACDSee 网站、版本说明和隐私政策；当前版本发布于 2026 年 9 月 16 日。',
     metaDescription:
       'ACDSee Photo Studio Ultimate 2027 评测：面向 Windows 的照片管理与 RAW 编辑软件，据 ACDSee 称核心 AI 在本地运行，生成式工具使用云端。',
     twitterDescription:
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027 是一款面向 Windows 的闭源照片管理与 RAW 编辑软件，其 AI 分为两部分：据 ACDSee 称，人脸识别、关键词、相似度搜索、蒙版、降噪和放大在你的电脑上运行，而 AI Image Generation、Generative Fill、Generative Edit 和 AI Remove 使用 ACDSee 的云端。**最新构建 20.0.0.4660 发布于 2026 年 9 月 16 日，因此不适用长期未更新警告。',
+      '**ACDSee Photo Studio Ultimate 2027 是一款面向 Windows 的闭源照片管理与 RAW 编辑软件，其 AI 分为两部分：据 ACDSee 称，人脸识别、关键词、相似度搜索、蒙版、降噪和放大在你的电脑上运行，而 AI Image Generation、Generative Fill、Generative Edit 和 AI Remove 使用 ACDSee 的云端。**最新构建发布于 2026 年 9 月 16 日，因此不适用长期未更新警告。',
     quickAnswerTop: {
       zh: {
         question: 'ACDSee Photo Studio Ultimate 2027 会把照片保留在你自己的电脑上吗？',
@@ -2091,8 +2091,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '闭源，单设备永久许可，提供 15 天试用；订阅方案另行提供。',
           '仅支持 Windows 10（64 位）和 Windows 11；该产品没有 Mac 版。',
           '据 ACDSee 称的本地 AI：关键词、人脸识别、相似度分组、放大、降噪、天空替换、人脸编辑和蒙版。',
-          '云端 AI：图像生成、Generative Fill、Generative Edit 和 AI Remove，会消耗 AI 积分。',
-          '最新构建 20.0.0.4660，日期为 2026 年 9 月 16 日。',
+          '云端 AI：四项生成式工具，会消耗 AI 积分。',
+          '最新构建的日期为 2026 年 9 月 16 日。',
         ],
         updatedDate: '2026-10',
       },
@@ -2129,7 +2129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '维护情况：构建 20.0.0.4660 的版本说明日期为 2026 年 9 月 16 日，比本评测早 44 天，因此不适用长期未更新警告。',
+          '维护情况：最新构建的版本说明日期比本评测早 44 天，因此不适用长期未更新警告。',
           '发行方：据其隐私政策，为加拿大维多利亚的 ACD Systems International Inc.。',
           '范围：照片管理、RAW 处理、图层和 AI 工具；它不是聊天或语言模型助手。',
           '平台：仅限 Windows；ACDSee 为 Mac 另售一款产品。',
@@ -2154,16 +2154,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: '获取方式',
         content: [
-          '**ACDSee Photo Studio Ultimate 2027 以 Windows 安装程序下载提供；你可以购买永久许可或开始 15 天试用，激活需要电子邮箱和网络连接。**',
+          '**ACDSee Photo Studio Ultimate 2027 以 Windows 安装程序下载提供；你可以购买永久许可或开始 15 天试用。**',
         ],
         columns: ['选项', '获取方式'],
         rows: [
           { '选项': '官方网站', '获取方式': '[acdsee.com](https://www.acdsee.com/en/products/photo-studio-ultimate/)' },
           { '选项': '免费试用', '获取方式': 'Windows 版[15 天试用](https://www.acdsee.com/en/free-trials/)' },
           { '选项': '购买', '获取方式': '[ACDSee 商店](https://www.acdsee.com/en/products/photo-studio-ultimate/buy/)：永久许可，$179.99（美国商店），单设备' },
-          { '选项': 'Windows', '获取方式': '.exe 安装程序，778 MB，构建 20.0.0.4660' },
+          { '选项': 'Windows', '获取方式': '.exe 安装程序，778 MB' },
           { '选项': 'Mac', '获取方式': '不支持；ACDSee 另售 Photo Studio for Mac' },
-          { '选项': '版本说明', '获取方式': '[构建 20.0.0.4660，2026 年 9 月 16 日](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { '选项': '版本说明', '获取方式': '[2026 年 9 月 16 日的构建说明](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { '选项': '隐私政策', '获取方式': '[ACDSee 隐私政策](https://www.acdsee.com/en/privacy-policy/)' },
           { '选项': '源代码', '获取方式': '无：专有软件' },
         ],
@@ -2198,7 +2198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**管理。**Auto-Stack 和自定义堆叠、AI 以图搜图、按 AI 图像相似度分组、Reject 标记、人脸检测与识别，以及后台的 Activity Manager。',
           '**RAW 编辑。**支持 750 多种相机型号的非破坏性处理、Color 和 Tone Wheels、Light EQ、克隆工具和 AI Develop Presets。',
           '**图层。**图层蒙版、混合模式、文字、形状、AI 选择工具，以及 Sky Replacement 和 Face Edit 等 AI 滤镜。',
-          '**生成式工具。**文字生成图像、Generative Fill、Generative Edit 和 AI Remove。',
+          '**生成式工具。**四项用于创建和修改图像内容的云端工具。',
           '**最新构建。**2026 年 9 月 16 日的版本说明新增六款 RAW 相机型号、DNG 文件内的 JPEG XL 支持、新的 Develop 预设类别和更多镜头配置文件，并修复了崩溃问题。',
         ],
       },
@@ -2228,7 +2228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '数据流向与隐私',
         content: [
           '**对于生成式工具，ACDSee 的 AI 页面称提示词和图像在经过 ACDSee 服务器前会被加密且不会被存储；Fstoppers 的发布报道则称这些请求会在一周后删除。**两种说法不一致，发送敏感图像前请先查看当前条款。',
-          '来源中的其他数据流向：激活需要有效的电子邮箱；据隐私政策，程序连接 ACDSee 的授权和更新服务时会发送连接时间、IP 地址、应用程序 ID、产品版本、安装日期和许可证编号。可能会收集崩溃数据，并最长保存 30 天。隐私政策的日期为 2026 年 1 月 19 日，没有说明是否上传照片；对本地功能而言，这一说法依据的是 AI 页面。',
+          '来源中的其他数据流向：据隐私政策，程序连接 ACDSee 的授权和更新服务时会发送连接时间、IP 地址、应用程序 ID、产品版本、安装日期和许可证编号。可能会收集崩溃数据，并最长保存 30 天。隐私政策的日期为 2026 年 1 月 19 日，没有说明是否上传照片；对本地功能而言，这一说法依据的是 AI 页面。',
         ],
         callouts: [
           {
@@ -2250,8 +2250,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '我们未能核实的内容',
         items: [
-          '**离线使用。**激活需要联网；激活后其余功能能否在无网络时运行，没有说明。',
-          '**积分。**试用版感谢页提到 2,000 AI 积分，Fstoppers 的发布报道称购买包含 20,000，但商店页面没有列出，第三方价格追踪服务则称该赠送随预售结束而取消；一次生成式编辑消耗多少，所读来源中没有。',
+          '**离线使用。**激活后程序能否在无网络时运行，没有说明。',
+          '**积分。**试用版感谢页提到 2,000 AI 积分，Fstoppers 的发布报道称购买包含 20,000，但商店页面没有列出；一次生成式编辑消耗多少，所读来源中没有。',
           '**保留期限。**对发送到云端的图像，「不存储」（ACDSee AI 页面）与「一周后删除」（Fstoppers）说法不同。',
           '**AI 质量。**关键词、人脸分组、蒙版和放大的准确度均未测试。',
           '**语言。**所读来源没有列出软件的界面语言。',
@@ -2282,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪些 AI 功能需要云端？',
-            a: '四项：AI Image Generation、Generative Fill、Generative Edit 和 AI Remove。据 ACDSee 称，其余 AI 功能都在本地运行。',
+            a: '四项生成式工具，每项都会把图像发送到 ACDSee 的服务器并消耗 AI 积分。据 ACDSee 称，其余 AI 功能都在本地运行。',
           },
           {
             q: '除了许可证还有什么费用？',
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '它还在维护吗？',
-            a: '据所读证据是的：版本说明列出了 2026 年 9 月 16 日的构建 20.0.0.4660。其中只有这一条记录，因此无法判断发布节奏。',
+            a: '据所读证据是的：版本说明列出了 2026 年 9 月 16 日的一个构建。其中只有这一条记录，因此无法判断发布节奏。',
           },
         ],
       },
@@ -2306,7 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'ACDSee Photo Studio Ultimate 2027 把图库管理、RAW 编辑和图层，与据 ACDSee 称在你的电脑上运行的 AI 关键词、人脸识别、蒙版和放大结合起来，以永久许可和 15 天试用的方式提供。代价是：闭源且仅限 Windows，激活需要电子邮箱和网络，四项生成式工具会把图像发送到 ACDSee 的云端并消耗积分，而 ACDSee 对保留期限的说法因来源而异。它适合想要免订阅程序并会使用本地 AI 工具的 Windows 摄影师；需要全部离线、开源或使用 Mac 的人应另选方案。',
+          'ACDSee Photo Studio Ultimate 2027 把图库管理、RAW 编辑和图层，与据 ACDSee 称在你的电脑上运行的 AI 关键词、人脸识别、蒙版和放大结合起来，以永久许可和 15 天试用的方式提供。代价是：闭源且仅限 Windows，四项生成式工具会把图像发送到 ACDSee 的云端并消耗积分，而 ACDSee 对保留期限的说法因来源而异。它适合想要免订阅程序并会使用本地 AI 工具的 Windows 摄影师；需要全部离线、开源或使用 Mac 的人应另选方案。',
       },
       sources: {
         id: 'sources',
@@ -2343,11 +2343,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/acdsee-photo-studio-ultimate-review-hero-ko.webp',
     title: 'ACDSee Photo Studio Ultimate 2027 리뷰: 로컬 AI와 클라우드 AI를 갖춘 사진 편집기',
-    seoTitle: 'ACDSee Ultimate 2027 리뷰: 로컬 AI와 클라우드 생성',
+    seoTitle: 'ACDSee Ultimate 2027 리뷰: 로컬 AI·클라우드 생성',
     intro:
-      'ACDSee Photo Studio Ultimate 2027은 Windows용 비공개 소스 사진 관리·RAW 편집 소프트웨어입니다. ACDSee에 따르면 얼굴 인식, 키워드, 마스크, 확대 같은 핵심 AI 기능은 내 PC에서 실행되고, 생성형 도구 4가지는 이미지를 ACDSee 클라우드로 보냅니다. 영구 라이선스로 판매되며 활성화에는 이메일 주소와 인터넷 연결이 필요합니다. 이 리뷰는 2026년 10월 30일에 확인한 ACDSee 웹사이트, 릴리스 노트, 개인정보 처리방침을 반영하며, 현재 버전은 2026년 9월 16일의 빌드 20.0.0.4660입니다.',
+      'ACDSee Photo Studio Ultimate 2027은 Windows용 비공개 소스 사진 관리·RAW 편집 소프트웨어입니다. ACDSee에 따르면 얼굴 인식, 키워드, 마스크, 확대 같은 핵심 AI 기능은 내 PC에서 실행되고, 생성형 도구 4가지는 이미지를 ACDSee 클라우드로 보냅니다. 영구 라이선스로 판매됩니다. 이 리뷰는 2026년 10월 30일에 확인한 ACDSee 웹사이트, 릴리스 노트, 개인정보 처리방침을 반영하며, 현재 버전은 2026년 9월 16일에 공개되었습니다.',
     metaDescription:
-      'ACDSee Photo Studio Ultimate 2027 리뷰: ACDSee에 따르면 핵심 AI가 로컬에서 실행되는 Windows용 사진 관리·RAW 편집기이며, 생성형 도구는 클라우드를 사용합니다.',
+      'ACDSee Photo Studio Ultimate 2027 리뷰: ACDSee에 따르면 핵심 AI는 로컬, 생성형 도구는 클라우드를 쓰는 Windows 사진 편집기입니다.',
     twitterDescription:
       'ACDSee Photo Studio Ultimate 2027 리뷰: 영구 라이선스의 Windows 사진 편집기. 내 PC에서 실행되는 AI 기능, 클라우드로 가는 4가지, 활성화와 크레딧의 의미를 정리했습니다.',
     audience:
@@ -2367,7 +2367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**ACDSee Photo Studio Ultimate 2027은 AI가 두 갈래로 나뉜 Windows용 비공개 소스 사진 관리·RAW 편집 소프트웨어입니다. ACDSee에 따르면 얼굴 인식, 키워드, 유사도 검색, 마스크, 노이즈 제거, 확대는 내 PC에서 실행되고, AI Image Generation, Generative Fill, Generative Edit, AI Remove는 ACDSee 클라우드를 사용합니다.** 최신 빌드 20.0.0.4660은 2026년 9월 16일에 공개되었으므로 업데이트 중단 경고는 해당하지 않습니다.',
+      '**ACDSee Photo Studio Ultimate 2027은 AI가 두 갈래로 나뉜 Windows용 비공개 소스 사진 관리·RAW 편집 소프트웨어입니다. ACDSee에 따르면 얼굴 인식, 키워드, 유사도 검색, 마스크, 노이즈 제거, 확대는 내 PC에서 실행되고, AI Image Generation, Generative Fill, Generative Edit, AI Remove는 ACDSee 클라우드를 사용합니다.** 최신 빌드는 2026년 9월 16일에 공개되었으므로 업데이트 중단 경고는 해당하지 않습니다.',
     quickAnswerTop: {
       ko: {
         question: 'ACDSee Photo Studio Ultimate 2027은 사진을 내 PC 안에만 보관합니까?',
@@ -2377,8 +2377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '비공개 소스이며 기기 1대용 영구 라이선스에 15일 체험판이 있고, 구독 요금제는 별도로 있습니다.',
           'Windows 10(64비트)과 Windows 11만 지원하며, 이 제품에는 Mac 버전이 없습니다.',
           'ACDSee에 따른 로컬 AI: 키워드, 얼굴 인식, 유사도 그룹화, 확대, 노이즈 제거, 하늘 교체, 얼굴 편집, 마스크.',
-          '클라우드 AI: 이미지 생성, Generative Fill, Generative Edit, AI Remove로, AI 크레딧을 사용합니다.',
-          '최신 빌드는 2026년 9월 16일자 20.0.0.4660입니다.',
+          '클라우드 AI: 생성형 도구 4가지로, AI 크레딧을 사용합니다.',
+          '최신 빌드는 2026년 9월 16일자입니다.',
         ],
         updatedDate: '2026-10',
       },
@@ -2415,7 +2415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '유지 관리: 빌드 20.0.0.4660의 릴리스 노트 날짜는 2026년 9월 16일로 이 리뷰보다 44일 앞서므로 업데이트 중단 경고는 해당하지 않습니다.',
+          '유지 관리: 최신 빌드의 릴리스 노트 날짜는 이 리뷰보다 44일 앞서므로 업데이트 중단 경고는 해당하지 않습니다.',
           '제작사: 개인정보 처리방침에 따르면 캐나다 빅토리아의 ACD Systems International Inc.입니다.',
           '범위: 사진 관리, RAW 현상, 레이어, AI 도구이며 채팅이나 언어 모델 어시스턴트가 아닙니다.',
           '플랫폼: Windows 전용이며, Mac용은 ACDSee가 별도 제품으로 판매합니다.',
@@ -2440,16 +2440,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: '입수 방법',
         content: [
-          '**ACDSee Photo Studio Ultimate 2027은 Windows용 설치 프로그램을 내려받는 방식이며, 영구 라이선스를 구매하거나 15일 체험판을 시작합니다. 활성화에는 이메일 주소와 인터넷 연결이 필요합니다.**',
+          '**ACDSee Photo Studio Ultimate 2027은 Windows용 설치 프로그램을 내려받는 방식이며, 영구 라이선스를 구매하거나 15일 체험판을 시작합니다.**',
         ],
         columns: ['옵션', '입수 방법'],
         rows: [
           { '옵션': '웹사이트', '입수 방법': '[acdsee.com](https://www.acdsee.com/en/products/photo-studio-ultimate/)' },
           { '옵션': '무료 체험판', '입수 방법': 'Windows용 [15일 체험판](https://www.acdsee.com/en/free-trials/)' },
           { '옵션': '구매', '입수 방법': '[ACDSee 스토어](https://www.acdsee.com/en/products/photo-studio-ultimate/buy/): 영구 라이선스, $179.99(미국 스토어), 기기 1대' },
-          { '옵션': 'Windows', '입수 방법': '.exe 설치 프로그램, 778 MB, 빌드 20.0.0.4660' },
+          { '옵션': 'Windows', '입수 방법': '.exe 설치 프로그램, 778 MB' },
           { '옵션': 'Mac', '입수 방법': '미지원, ACDSee가 Photo Studio for Mac을 별도로 판매' },
-          { '옵션': '릴리스 노트', '입수 방법': '[빌드 20.0.0.4660, 2026년 9월 16일](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
+          { '옵션': '릴리스 노트', '입수 방법': '[2026년 9월 16일 빌드 노트](https://www.acdsee.com/en/support/photo-studio-ultimate/release-notes/acuw20en/)' },
           { '옵션': '개인정보 처리방침', '입수 방법': '[ACDSee 개인정보 처리방침](https://www.acdsee.com/en/privacy-policy/)' },
           { '옵션': '소스 코드', '입수 방법': '없음: 독점 소프트웨어' },
         ],
@@ -2484,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**관리.** Auto-Stack과 사용자 지정 스택, AI 이미지 역검색, AI 이미지 유사도 그룹화, Reject 태그, 얼굴 감지·인식, 백그라운드 Activity Manager.',
           '**RAW 편집.** 750종 이상의 카메라를 지원하는 비파괴 현상, Color·Tone Wheels, Light EQ, 복제 도구, AI Develop Presets.',
           '**레이어.** 레이어 마스크, 혼합 모드, 텍스트, 도형, AI 선택 도구, Sky Replacement·Face Edit 같은 AI 필터.',
-          '**생성형 도구.** 텍스트로 이미지 생성, Generative Fill, Generative Edit, AI Remove.',
+          '**생성형 도구.** 이미지 콘텐츠를 만들고 바꾸는 클라우드 도구 4가지.',
           '**최신 빌드.** 2026년 9월 16일 릴리스 노트에는 RAW 카메라 6종, DNG 파일 내 JPEG XL 지원, 새 Develop 프리셋 범주, 렌즈 프로필 추가가 담겼고 충돌 문제가 수정되었습니다.',
         ],
       },
@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '데이터 흐름과 개인정보',
         content: [
           '**생성형 도구에 대해 ACDSee의 AI 페이지는 프롬프트와 이미지가 암호화되어 ACDSee 서버를 거치며 저장되지 않는다고 설명하지만, Fstoppers의 출시 기사는 요청이 일주일 뒤 삭제된다고 전합니다.** 두 설명이 다르므로 민감한 이미지를 보내기 전에 현재 약관을 확인하십시오.',
-          '출처에 나타난 그 밖의 데이터 흐름: 활성화에는 유효한 이메일 주소가 필요하며, 개인정보 처리방침에 따르면 프로그램이 ACDSee의 라이선스·업데이트 서비스에 연결할 때 연결 시간, IP 주소, 애플리케이션 ID, 제품 버전, 설치 날짜, 라이선스 번호가 전송됩니다. 충돌 데이터가 수집될 수 있으며 최대 30일간 보관됩니다. 개인정보 처리방침의 날짜는 2026년 1월 19일이며 사진이 업로드되는지는 밝히지 않습니다. 로컬 기능에 대한 설명은 AI 페이지에 근거합니다.',
+          '출처에 나타난 그 밖의 데이터 흐름: 개인정보 처리방침에 따르면 프로그램이 ACDSee의 라이선스·업데이트 서비스에 연결할 때 연결 시간, IP 주소, 애플리케이션 ID, 제품 버전, 설치 날짜, 라이선스 번호가 전송됩니다. 충돌 데이터가 수집될 수 있으며 최대 30일간 보관됩니다. 개인정보 처리방침의 날짜는 2026년 1월 19일이며 사진이 업로드되는지는 밝히지 않습니다. 로컬 기능에 대한 설명은 AI 페이지에 근거합니다.',
         ],
         callouts: [
           {
@@ -2536,8 +2536,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '확인하지 못한 사항',
         items: [
-          '**오프라인 사용.** 활성화에는 인터넷이 필요하며, 이후 나머지 기능이 연결 없이 작동하는지는 밝혀져 있지 않습니다.',
-          '**크레딧.** 체험판 감사 페이지에는 AI 크레딧 2,000이 언급되고 Fstoppers 출시 기사는 구매에 20,000이 포함된다고 하지만, 스토어 페이지에는 기재가 없고 제3자 가격 추적 서비스는 사전 판매 종료와 함께 혜택이 사라졌다고 전합니다. 생성형 편집 1회의 비용은 읽은 출처에 없습니다.',
+          '**오프라인 사용.** 활성화 후 연결 없이 작동하는지는 밝혀져 있지 않습니다.',
+          '**크레딧.** 체험판 감사 페이지에는 AI 크레딧 2,000이 언급되고 Fstoppers 출시 기사는 구매에 20,000이 포함된다고 하지만, 스토어 페이지에는 기재가 없습니다. 생성형 편집 1회의 비용은 읽은 출처에 없습니다.',
           '**보관.** 클라우드로 보낸 이미지에 대해 「저장되지 않음」(ACDSee AI 페이지)과 「일주일 뒤 삭제」(Fstoppers)로 설명이 다릅니다.',
           '**AI 품질.** 키워드, 얼굴 그룹화, 마스크, 확대의 정확도는 테스트하지 않았습니다.',
           '**언어.** 소프트웨어의 인터페이스 언어는 읽은 출처에 나와 있지 않습니다.',
@@ -2568,7 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '어떤 AI 기능이 클라우드를 필요로 합니까?',
-            a: '4가지입니다: AI Image Generation, Generative Fill, Generative Edit, AI Remove. ACDSee에 따르면 나머지 AI 기능은 모두 로컬에서 실행됩니다.',
+            a: '생성형 도구 4가지이며, 각각 이미지를 ACDSee 서버로 보내고 AI 크레딧을 사용합니다. ACDSee에 따르면 나머지 AI 기능은 모두 로컬에서 실행됩니다.',
           },
           {
             q: '라이선스 외에 드는 비용이 있습니까?',
@@ -2584,7 +2584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '아직 유지 관리되고 있습니까?',
-            a: '읽은 근거로는 그렇습니다. 릴리스 노트에 2026년 9월 16일의 빌드 20.0.0.4660이 올라 있습니다. 항목이 이것 하나뿐이어서 릴리스 주기는 판단할 수 없습니다.',
+            a: '읽은 근거로는 그렇습니다. 릴리스 노트에 2026년 9월 16일의 빌드가 올라 있습니다. 항목이 이것 하나뿐이어서 릴리스 주기는 판단할 수 없습니다.',
           },
         ],
       },
@@ -2592,7 +2592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'ACDSee Photo Studio Ultimate 2027은 정리, RAW 편집, 레이어에 ACDSee에 따르면 PC에서 실행되는 AI 키워드, 얼굴 인식, 마스크, 확대를 결합하고 영구 라이선스와 15일 체험판으로 제공됩니다. 반면 비공개 소스에 Windows 전용이며, 활성화에는 이메일 주소와 인터넷이 필요하고, 생성형 도구 4가지는 이미지를 ACDSee 클라우드로 보내 크레딧을 사용하며, 보관에 대한 ACDSee의 설명은 출처마다 다릅니다. 구독 없는 프로그램 하나를 원하고 로컬 AI 도구를 쓸 Windows 사진가에게 적합하며, 모든 것을 오프라인·오픈소스·Mac에서 쓰려는 분은 다른 곳을 찾아보십시오.',
+          'ACDSee Photo Studio Ultimate 2027은 정리, RAW 편집, 레이어에 ACDSee에 따르면 PC에서 실행되는 AI 키워드, 얼굴 인식, 마스크, 확대를 결합하고 영구 라이선스와 15일 체험판으로 제공됩니다. 반면 비공개 소스에 Windows 전용이며, 생성형 도구 4가지는 이미지를 ACDSee 클라우드로 보내 크레딧을 사용하며, 보관에 대한 ACDSee의 설명은 출처마다 다릅니다. 구독 없는 프로그램 하나를 원하고 로컬 AI 도구를 쓸 Windows 사진가에게 적합하며, 모든 것을 오프라인·오픈소스·Mac에서 쓰려는 분은 다른 곳을 찾아보십시오.',
       },
       sources: {
         id: 'sources',
