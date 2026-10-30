@@ -10,18 +10,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-en.webp',
     title: 'Layla Review: On-Device AI Companion App for Android and iOS',
-    seoTitle: 'Layla Review: Local AI Companion App, Pricing & Privacy',
+    seoTitle: 'Layla AI Review: Local App, Cloud, Server & Pricing',
     intro:
       'Layla, made by [Layla Network Pty Ltd](https://www.layla-network.ai) — an Australia-registered company also linked on GitHub to developer [l3utterfly](https://github.com/l3utterfly), who publishes the "Layla" family of fine-tuned open-weight models — is a paid app for Android and iOS built around running a personal AI companion locally on your phone, with persona, roleplay, and character features that go beyond plain chat. It costs [$19.99 as a one-time app purchase](https://apps.apple.com/us/app/layla/id6456886656) on both the App Store and Google Play, on top of which the App Store listing shows three named in-app purchase tiers. Layla\'s core chat is designed to run entirely on-device using GGUF models via llama.cpp, but the app also ships an optional, separately consented cloud mode called Layla Cloud that is not on by default — this review covers exactly what runs locally, what does not, what it actually costs, and who it fits, based on the developer\'s own privacy policy, app store listings, and public documentation rather than independent hands-on testing.',
     metaDescription:
-      'Layla review 2026: $19.99 on-device AI companion app for Android and iOS. What actually runs locally vs. the optional Layla Cloud mode, exact pricing, models, and who should skip it.',
+      'Layla AI review: $19.99 offline AI companion for Android and iPhone. What runs locally, Layla Cloud vs. Layla-Server, plans, free APK and privacy.',
     twitterDescription:
-      'Layla review 2026: a $19.99 local AI companion app for Android and iOS with roleplay and persona features. What runs on-device, what the optional cloud mode collects, and how it compares to PocketPal AI and Private LLM.',
+      'Layla AI review: a $19.99 local AI companion app for Android and iOS with roleplay and persona features. What runs on-device, what Layla Cloud collects, the free APK, and how it compares to PocketPal AI and Private LLM.',
     audience:
       'Android and iOS users considering a paid, on-device AI companion/roleplay app and who need to know precisely what stays local versus what an optional cloud mode collects, plus exact pricing and reliability caveats from public app store reviews.',
     readTime: '11 min read',
@@ -37,6 +37,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai pricing',
       'local ai companion app',
       'layla vs pocketpal ai',
+      'layla cloud',
+      'layla server',
+      'is layla ai safe',
+      'layla ai free',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -52,9 +56,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Core chat runs on-device via GGUF models through llama.cpp; the developer\'s privacy policy says it warns you before any data leaves the device.',
           'Layla Cloud is a separate, optional, opt-in mode that collects anonymized conversation data when enabled — it is off unless you activate it.',
           'Roleplay-focused: persona characters, group conversations, 100+ TTS voices, and local Stable Diffusion 1.5 image generation, per the app store listings.',
-          'App Store rating is 3.8/5 from 31 ratings at review time; some reviewers report unreliable offline features — treat this as user-reported, not independently verified by PromptQuorum.',
+          'App Store rating is 3.8/5 from 33 ratings at review time; some reviewers report unreliable offline features — treat this as user-reported, not independently verified by PromptQuorum.',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -93,12 +97,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Price: [$19.99 one-time purchase](https://apps.apple.com/us/app/layla/id6456886656) on the App Store and Google Play, plus three named in-app purchase tiers whose exact contents are not fully detailed in the public listing.',
+          'Price: [$19.99 one-time purchase](https://apps.apple.com/us/app/layla/id6456886656) on the App Store and Google Play, plus three named in-app plans (each also listed with a yearly price) whose exact contents are not fully detailed in the public listing; the developer\'s site also offers a free, feature-limited APK.',
+          'Version: 7.6.0 is the current release on the App Store and on Google Play, where the last update is listed as 19 October 2026.',
           'Developer: [Layla Network Pty Ltd](https://www.layla-network.ai), an Australia-registered company; Layla-branded fine-tuned models on Hugging Face are published under the GitHub account [l3utterfly](https://github.com/l3utterfly).',
           'Core chat runs on-device via GGUF models through llama.cpp; the app also supports LiteRT-LM and PTE (ExecuTorch) model backends and local Stable Diffusion 1.5 image generation, per the developer\'s own technical blog posts.',
           'Privacy: per the developer\'s [privacy policy](https://blog.layla-network.ai/privacy), core functionality is designed to run offline and the app warns you before data leaves the device — except for the separate, optional Layla Cloud mode, which is off by default.',
           'Companion and roleplay focus: customizable personas, group conversations, 100+ voices, and Live2D character animation, distinguishing it from plainer chat apps in this category.',
-          'App Store rating: 3.8/5 from 31 ratings at review time; some reviewers report crashes and unreliable offline behavior — a user-reported concern this review has not independently verified.',
+          'App Store rating: 3.8/5 from 33 ratings at review time; some reviewers report crashes and unreliable offline behavior — a user-reported concern this review has not independently verified.',
         ],
         callouts: [
           {
@@ -107,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'This review is based on Layla\'s public privacy policy, the App Store and Google Play listings, the developer\'s own technical blog posts, and publicly visible user reviews, checked in September 2026. PromptQuorum has not conducted independent hands-on testing or benchmarking of Layla for this review.',
+            text: 'This review is based on Layla\'s public privacy policy, the App Store and Google Play listings, the developer\'s own site and technical blog posts, and publicly visible user reviews, re-checked against version 7.6.0. PromptQuorum has not conducted independent hands-on testing or benchmarking of Layla for this review.',
           },
         ],
       },
@@ -131,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Publisher: [Layla Network Pty Ltd](https://www.layla-network.ai), registered in Southport, Queensland, Australia.',
           'Public launch: around August 2023, per third-party app-directory listings.',
           'Model development: Layla-branded open-weight fine-tunes published on Hugging Face under the GitHub account [l3utterfly](https://github.com/l3utterfly).',
-          'Related projects: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (connect the app to a self-hosted PC backend over WebRTC) and [Layla SDK](https://github.com/l3utterfly/layla-sdk) (build mini-apps inside Layla).',
+          'Related projects: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (connect the app to a self-hosted PC backend over WebRTC) and [Layla SDK](https://github.com/l3utterfly/layla-sdk) (build mini-apps inside Layla), both Apache-2.0 licensed.',
           'Client app source code is not public — unlike PocketPal AI or Maid, Layla\'s app itself is closed source even though some of its underlying models are open-weight.',
         ],
       },
@@ -144,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Buy and install the app',
-            whyItMatters: 'Download Layla from the [App Store](https://apps.apple.com/us/app/layla/id6456886656) ($19.99) or [Google Play](https://play.google.com/store/apps/details?id=com.layla) ($19.99). A separate, more limited free version has reportedly been distributed via direct APK download from the developer\'s own site — check [layla-network.ai](https://www.layla-network.ai) directly for current availability of that option before assuming it applies to your platform.',
+            whyItMatters: 'Download Layla from the [App Store](https://apps.apple.com/us/app/layla/id6456886656) ($19.99) or [Google Play](https://play.google.com/store/apps/details?id=com.layla) ($19.99). The developer\'s [download page](https://www.layla-network.ai/download) also offers a direct APK for Android that includes a free version with limited features; it does not list which features are limited. Download the APK only from the developer\'s own site — the page warns that modded APKs from third parties can contain malware and do not receive updates.',
           },
           {
             title: 'Let the app download its default model',
@@ -213,12 +218,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Platform': 'Android',
             'Availability': 'Available on [Google Play](https://play.google.com/store/apps/details?id=com.layla)',
-            'Notes': 'A direct APK distribution channel has also reportedly been offered from the developer\'s own site, separate from Google Play — verify current availability directly before relying on it.',
+            'Notes': 'The developer\'s [download page](https://www.layla-network.ai/download) also offers a direct APK from its own servers, which includes a free version with limited features.',
           },
           {
             'Platform': 'Windows / Linux',
             'Availability': 'No native Windows or Linux desktop release confirmed at review time',
-            'Notes': 'The [Layla-Server](https://github.com/l3utterfly/Layla-Server) project lets the mobile app connect to a PC running its own local backend over WebRTC, which is a bridge rather than a native desktop client.',
+            'Notes': 'The [Layla-Server](https://github.com/l3utterfly/Layla-Server) project (Apache-2.0) lets the mobile app connect to a PC running its own local backend over WebRTC — a bridge, not a native desktop client. A developer blog post also describes running Layla on Windows through BlueStacks and connecting it to LM Studio via an OpenAI-compatible API.',
           },
         ],
       },
@@ -226,14 +231,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'How Much Does Layla Cost?',
         content: [
-          '**Layla costs $19.99 as a one-time purchase on both the [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) and [Google Play](https://play.google.com/store/apps/details?id=com.layla).** On top of that base purchase, the App Store listing shows three named in-app purchase tiers — Monarch ($4.99), Birdwing ($19.99), and Blue Morpho ($29.99) — but the public store listing does not fully spell out what each tier unlocks (for example, whether they cover cloud usage credits, premium characters, or additional voices). Confirm exactly what a given tier includes inside the app before purchasing it.',
-          'A separate, more limited free version of the app has reportedly been distributed via direct APK download from the developer\'s own site, according to the developer\'s own blog content — this is distinct from the paid App Store and Google Play listings, and its current availability and feature set should be checked directly on [layla-network.ai](https://www.layla-network.ai) rather than assumed from this review.',
-          'Layla Cloud, the separate optional cloud-chat mode, is listed as free to download as its own app on the stores; whether ongoing use of Layla Cloud requires a subscription or credits beyond the free tier is not detailed in the public listing reviewed for this article.',
+          '**Layla costs $19.99 as a one-time purchase on both the [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) and [Google Play](https://play.google.com/store/apps/details?id=com.layla).** On top of that base purchase, the US App Store listing shows three named in-app plans — Monarch ($4.99), Birdwing ($19.99), and Blue Morpho ($29.99) — each also listed as a yearly plan (Monarch $49.99, Birdwing $169.99, Blue Morpho $249.99). Yearly plan listings suggest recurring billing, so confirm on the purchase screen whether a plan renews. The public listing does not spell out what each plan unlocks (for example, cloud usage credits, premium characters, or additional voices), so confirm that inside the app before purchasing.',
+          'The developer\'s [download page](https://www.layla-network.ai/download) and site FAQ describe a free version with limited features, available as a direct APK for Android and separate from the paid store listings. They give no purchase code or license key for it and do not list which features are limited. Layla Network states that the full app is a one-time purchase, not a subscription.',
+          'Layla Cloud, the separate optional cloud-chat mode, is listed as free to download as its own app on the App Store, with no in-app purchases shown; whether ongoing use of Layla Cloud requires a subscription or credits beyond the free tier is not detailed in the public listing reviewed for this article.',
         ],
         items: [
           '**Base app:** $19.99 one-time purchase on the App Store and Google Play — no subscription required for the base purchase itself.',
-          '**In-app purchase tiers:** Monarch ($4.99), Birdwing ($19.99), Blue Morpho ($29.99) — named on the App Store listing; exact inclusions not fully detailed publicly.',
-          '**Free/limited version:** Reportedly available via direct APK download from the developer\'s own site, separate from the paid store listings — verify current status directly.',
+          '**In-app plans:** Monarch ($4.99), Birdwing ($19.99), Blue Morpho ($29.99), each also listed as a yearly plan ($49.99, $169.99, $249.99) on the US App Store; exact inclusions not fully detailed publicly.',
+          '**Free/limited version:** A direct APK from the developer\'s [download page](https://www.layla-network.ai/download), with limited features and no purchase code mentioned — separate from the paid store listings.',
           '**Layla Cloud:** A separate, free-to-download companion app for cloud-based character chat; its own cost structure beyond the free tier is not detailed in the public listing.',
         ],
       },
@@ -242,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy: Local Chat vs. Layla Cloud',
         content: [
           '**Layla\'s own [privacy policy](https://blog.layla-network.ai/privacy) states that "the core functionality of our App is designed to run offline on your device," and that the app will show you a warning and a confirmation message before taking any action that sends your data outside the device.** The policy names specific triggers for outbound data: uploading a character to the Personality Hub, using the in-app "Report a Bug" feature, and enabling optional cloud features.',
-          'That last item — optional cloud features — is Layla Cloud, described by the developer as a distinct, separate mode: per the policy, "Layla Cloud is only enabled if you install the \'Layla Cloud\' mini-app within Layla," and if it is not installed or activated, "no features related to Layla Cloud are enabled." When Layla Cloud is active, the developer\'s own documentation states it collects conversation history — your messages, character responses, and data from auxiliary features such as Long-Term Memory, PDF Digest, and Dream — and that this data is anonymized and not linked to your account, though it may be used for debugging or to improve the service. The policy also states Layla Cloud does not retroactively collect conversations from before it was enabled.',
+          'That last item — optional cloud features — is Layla Cloud, described by the developer as a distinct, separate mode: per the policy, "Layla Cloud is only enabled if you install the \'Layla Cloud\' mini-app within Layla," and if it is not installed or activated, "no features related to Layla Cloud are enabled." When Layla Cloud is active, the developer\'s own documentation states it collects conversation history — your messages, character responses, and data from auxiliary features such as Long-Term Memory, PDF Digest, and Dream — and that this data is anonymized and not linked to your account, though it may be used for debugging or AI training to improve the service. The policy also states that deleting a Layla Cloud account does not delete past conversation history from the developer\'s servers. The policy also states Layla Cloud does not retroactively collect conversations from before it was enabled.',
           'Taken together, this is a materially different privacy design from an app whose core functionality has no cloud component at all: Layla\'s default local mode is designed to stay on-device with an explicit consent gate before any transmission, but the product itself ships an optional, separately activated cloud path that does collect anonymized conversation data when a user turns it on. Readers who want the strongest possible guarantee — a product with no cloud mode to opt into in the first place — should compare this against [PocketPal AI](/power-local-llm/pocketpal-ai-review), whose entire codebase is open source and MIT-licensed with no built-in cloud chat feature to activate.',
         ],
         items: [
@@ -250,6 +255,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** A separate, opt-in mode (installed as a mini-app or a distinct app) that collects anonymized conversation history, including auxiliary feature data, when activated.',
           '**Not retroactive:** Per the policy, enabling Layla Cloud does not pull in conversation history from before it was turned on.',
           '**Closed source:** Unlike PocketPal AI or Maid, Layla\'s client app code is not published, so the no-transmission-by-default claim rests on the developer\'s own privacy policy rather than independent code audit.',
+          '**Store privacy labels:** Developer-declared and not verified by Apple — the main app lists diagnostics data and, for app functionality, photos or videos, none of it linked to you, while the separate Layla (Cloud) listing declares email address and user content.',
+          '**Policy age:** The policy page shows a last-updated stamp of 10/05/2024, which predates the 7.x releases, so it may not describe newer features.',
         ],
         callouts: [
           {
@@ -279,12 +286,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: 'What Hardware Do You Need to Run Layla?',
         content: [
-          '**The App Store listing recommends a minimum of 8 GB of RAM, and Layla\'s own marketing has historically described the app as targeting recent flagship phones rather than budget or older hardware.** This is a stricter baseline than some competing local-chat apps that support smaller 2–4B parameter models comfortably on 4 GB of RAM — Layla\'s companion features (larger default models, local image generation, and character animation) push the practical hardware floor higher.',
+          '**The developer\'s site says small local models run on phones with around 4 GB of RAM and larger models work best with 8 GB or more; the App Store description targets "the latest flagship phones (8GB+ RAM)."** Layla\'s companion features (larger default models, local image generation, and character animation) push the practical hardware floor above that of plainer local-chat apps.',
           'As with any GGUF-based app, the specific model loaded — not the app itself — is the real determinant of memory needs: a smaller quantized model needs less RAM than a 7B+ parameter model, and running local Stable Diffusion image generation alongside chat adds additional memory and processing overhead beyond text-only inference.',
         ],
         items: [
-          'Minimum recommended: 8 GB of RAM, per the App Store listing — meaningfully higher than the 4 GB floor common among plainer local-chat apps in this category.',
-          'Recent flagship-tier phones (roughly the last few generations) are recommended over older or budget devices, per the developer\'s own marketing materials.',
+          'Small local models: around 4 GB of RAM, per the developer\'s site; larger models: 8 GB or more.',
+          'Best experience: 8 GB+ flagship-tier phones, per the App Store description, over older or budget devices.',
           'Storage: the default first-launch model download has been reported at around 4 GB in past versions; custom GGUF models and Stable Diffusion checkpoints add further storage requirements.',
           'Local image generation (Stable Diffusion 1.5) adds processing and memory overhead beyond text-only chat — expect slower performance on lower-RAM devices when using this feature.',
         ],
@@ -303,7 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Benefit': 'Local text and image generation',
             'What it means in real use': 'Both chat and Stable Diffusion 1.5 image generation can run entirely on-device.',
-            'Limitation / caveat': 'Requires meaningfully more RAM and storage than text-only local chat apps; the App Store lists an 8 GB minimum.',
+            'Limitation / caveat': 'Requires meaningfully more RAM and storage than text-only local chat apps; the App Store description targets 8 GB+ phones.',
           },
           {
             'Benefit': 'Explicit consent gate before outbound data',
@@ -318,7 +325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Benefit': 'One-time $19.99 purchase',
             'What it means in real use': 'No subscription required for the base app on either store.',
-            'Limitation / caveat': 'Three additional named in-app purchase tiers exist whose exact inclusions are not fully detailed in the public listing — confirm what you are buying in-app.',
+            'Limitation / caveat': 'Three additional named in-app plans exist (each also with a yearly price) whose exact inclusions are not fully detailed in the public listing — confirm what you are buying and whether it renews.',
           },
           {
             'Benefit': 'Cross-platform: Android and iOS',
@@ -344,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Readers who need a guaranteed zero-cloud-component product.** Because Layla ships an optional cloud mode (Layla Cloud) that collects anonymized data once activated, readers who specifically want an app with no cloud feature to ever opt into should choose [PocketPal AI](/power-local-llm/pocketpal-ai-review), whose entire open-source codebase has no built-in cloud chat path.',
           '**Readers who want a free or fully open-source app.** Layla is a $19.99 paid, closed-source app; PocketPal AI (free, MIT-licensed) and Maid (free, MIT-licensed) both cover that need instead.',
           '**Readers who want a simple, minimal assistant-style chat interface.** Layla\'s character- and persona-first design adds complexity that users who just want a straightforward Q&A chat may not want; Private LLM or PocketPal AI are more assistant-shaped.',
-          '**Readers on lower-RAM or older devices.** The App Store lists 8 GB of RAM as a minimum recommendation, higher than several competing apps that run smaller models comfortably on 4 GB.',
+          '**Readers on lower-RAM or older devices.** The App Store description targets 8 GB+ phones, and the developer\'s site puts larger models at 8 GB or more — higher than several competing apps that run smaller models comfortably on 4 GB.',
           '**Readers who need enterprise or team features.** Layla is a single-user consumer app with no admin console, shared licensing, or team billing; organizations should look at self-hosted, server-side local-LLM infrastructure instead.',
           '**Readers who want to independently audit the app\'s source code.** Layla\'s client app is closed source; readers who need that level of assurance should use an MIT- or AGPL-licensed alternative like PocketPal AI, Maid, or ChatterUI.',
         ],
@@ -434,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is Layla free?',
-            a: 'No, the main Layla app is a $19.99 one-time purchase on both the App Store and Google Play. The App Store listing also shows three named in-app purchase tiers (Monarch $4.99, Birdwing $19.99, Blue Morpho $29.99). A separate, more limited free version has reportedly been distributed via direct APK download from the developer\'s own site — check [layla-network.ai](https://www.layla-network.ai) for current availability. Layla Cloud, a separate companion app for cloud-based chat, is free to download as its own app.',
+            a: 'Partly. The main Layla app is a $19.99 one-time purchase on both the App Store and Google Play, while the developer\'s [download page](https://www.layla-network.ai/download) offers a free, feature-limited version as a direct Android APK. The official pages mention no purchase code or license key, so treat sites promising a free "purchase code" with caution. The US App Store also lists in-app plans (Monarch, Birdwing, Blue Morpho) with monthly and yearly prices. Layla Cloud, a separate app, is free to download on the App Store.',
           },
           {
             q: 'Does Layla run completely offline, with no cloud component at all?',
@@ -454,15 +461,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much RAM does Layla need?',
-            a: 'The App Store listing recommends a minimum of 8 GB of RAM, which is higher than the roughly 4 GB floor common among plainer text-only local-chat apps, reflecting Layla\'s larger default models, local image generation, and character animation features.',
+            a: 'The developer\'s site says small local models run on phones with around 4 GB of RAM and larger models work best with 8 GB or more, while the App Store description targets 8 GB+ flagship phones. Layla\'s larger default models, local image generation, and character animation raise the practical floor above plainer text-only chat apps.',
           },
           {
             q: 'What is Layla Cloud, and is it the same as the main Layla app?',
-            a: 'No. Layla Cloud is a separate, optional mode or mini-app that provides cloud-based character chat for users who do not want to manage local models. Per the privacy policy, it is only active if a user installs or enables it, and when active it collects anonymized conversation history for debugging or service improvement. It does not retroactively collect data from before it was enabled.',
+            a: 'No. Layla Cloud is a separate, optional mode or mini-app that provides cloud-based character chat for users who do not want to manage local models. Per the privacy policy, it is only active if a user installs or enables it, and when active it collects anonymized conversation history for debugging or service improvement. It does not retroactively collect data from before it was enabled, and deleting a Layla Cloud account does not delete past conversation history from the developer\'s servers. Layla (Cloud) is also listed as its own free app on the App Store.',
+          },
+          {
+            q: 'Can Layla connect to a PC or server?',
+            a: 'Yes, through the developer\'s open-source [Layla-Server](https://github.com/l3utterfly/Layla-Server), an Apache-2.0 wrapper around llama-server (or any OpenAI-compatible server) that proxies requests over WebRTC so the Layla app can reach your PC from anywhere. A developer blog post also describes running Layla on Windows via BlueStacks and pointing it at LM Studio through an OpenAI-compatible API. Layla Cloud is a different thing: it is the developer\'s hosted mode, not your own server.',
+          },
+          {
+            q: 'Is Layla open source?',
+            a: 'No for the app itself: the Layla client is closed source. The [Layla-Server](https://github.com/l3utterfly/Layla-Server) and [Layla SDK](https://github.com/l3utterfly/layla-sdk) repositories are Apache-2.0 licensed, and the Layla-branded fine-tuned models are published openly on [Hugging Face](https://huggingface.co/l3utterfly). Because the client cannot be audited, its privacy behavior rests on the developer\'s own policy.',
+          },
+          {
+            q: 'Is Layla AI safe to use?',
+            a: 'PromptQuorum has not audited the app. Per the developer, core chat runs offline, chats are stored encrypted on the device, and the app asks before using the internet. The Layla Cloud mode is the main exception, and the closed-source client cannot be independently verified. Download only from the App Store, Google Play, or the developer\'s own site, which warns that modded APKs can contain malware.',
           },
           {
             q: 'Is Layla reliable? Do users report problems?',
-            a: 'Layla holds a 3.8/5 rating from 31 ratings on the App Store at review time. Some public App Store reviewers report crashes and unreliable offline features, particularly around custom model import on iOS. This review has not independently verified current app stability — treat these as user-reported observations, and test the app within your platform\'s refund window before relying on it.',
+            a: 'Layla holds a 3.8/5 rating from 33 ratings on the App Store at review time. Some public App Store reviewers report crashes and unreliable offline features, particularly around custom model import on iOS. This review has not independently verified current app stability — treat these as user-reported observations, and test the app within your platform\'s refund window before relying on it.',
           },
           {
             q: 'Is the "Layla" AI companion app the same company as the "Layla" AI travel planner acquired by Expedia?',
@@ -486,10 +505,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Layla on the App Store](https://apps.apple.com/us/app/layla/id6456886656) — price, in-app purchase tiers, platform requirements, ratings, and version history.',
           '[Layla on Google Play](https://play.google.com/store/apps/details?id=com.layla) — Android availability and pricing.',
-          '[Layla official site](https://www.layla-network.ai) — product overview and developer-published feature descriptions.',
+          '[Layla official site](https://www.layla-network.ai) and [download page](https://www.layla-network.ai/download) — product overview, free APK, restore-purchase notes, and RAM guidance.',
           '[Layla privacy policy](https://blog.layla-network.ai/privacy) — local-vs-cloud data handling, Layla Cloud scope, and data collection disclosures.',
           '[Layla (Cloud) on the App Store](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — the separate optional cloud-mode app listing.',
-          '[l3utterfly on GitHub](https://github.com/l3utterfly) and [l3utterfly on Hugging Face](https://huggingface.co/l3utterfly) — Layla-branded model releases and related infrastructure projects (Layla-Server, Layla SDK).',
+          '[l3utterfly on GitHub](https://github.com/l3utterfly) and [l3utterfly on Hugging Face](https://huggingface.co/l3utterfly) — Layla-branded model releases and related infrastructure projects ([Layla-Server](https://github.com/l3utterfly/Layla-Server), [Layla SDK](https://github.com/l3utterfly/layla-sdk)).',
         ],
       },
       relatedReading: {
@@ -508,13 +527,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Layla Review (2026): On-Device AI Companion App for Android and iOS',
+      headline: 'Layla Review: On-Device AI Companion App for Android and iOS',
       description:
         'Layla review: a $19.99 on-device AI companion app for Android and iOS with roleplay features. What runs locally vs. the optional Layla Cloud mode, pricing, and who it fits.',
       url: 'https://www.promptquorum.com/power-local-llm/layla-review',
       inLanguage: 'en',
       datePublished: '2026-09-06',
-      dateModified: '2026-09-06',
+      dateModified: '2026-10-30',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -535,25 +554,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Layla Review (2026)', item: 'https://www.promptquorum.com/power-local-llm/layla-review' },
+        { '@type': 'ListItem', position: 3, name: 'Layla Review', item: 'https://www.promptquorum.com/power-local-llm/layla-review' },
       ],
     },
   },
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-de.webp',
     title: 'Layla-Rezension: KI-Begleiter-App für Android und iOS auf dem Gerät',
-    seoTitle: 'Layla-Rezension: Lokale KI-Begleiter-App, Preise & Datenschutz',
+    seoTitle: 'Layla AI Rezension: Lokale App, Cloud, Server & Preise',
     intro:
       'Layla, entwickelt von [Layla Network Pty Ltd](https://www.layla-network.ai) — einem in Australien registrierten Unternehmen, das auf GitHub auch mit dem Entwickler [l3utterfly](https://github.com/l3utterfly) verknüpft ist, der die "Layla"-Familie feinabgestimmter Open-Weight-Modelle veröffentlicht —, ist eine kostenpflichtige App für Android und iOS, die auf einem lokal auf dem Smartphone laufenden persönlichen KI-Begleiter aufbaut, mit Persona-, Rollenspiel- und Charakterfunktionen, die über einen einfachen Chat hinausgehen. Sie kostet [19,99 $ als einmaligen App-Kauf](https://apps.apple.com/us/app/layla/id6456886656) sowohl im App Store als auch bei Google Play; zusätzlich zeigt der App-Store-Eintrag drei benannte In-App-Kauf-Stufen. Laylas Kern-Chat ist so ausgelegt, dass er vollständig auf dem Gerät über GGUF-Modelle mit llama.cpp läuft, doch die App bietet zusätzlich einen optionalen, separat zustimmungspflichtigen Cloud-Modus namens Layla Cloud, der nicht standardmäßig aktiv ist — diese Rezension zeigt genau, was tatsächlich lokal läuft, was nicht, was die App wirklich kostet und für wen sie geeignet ist, basierend auf der eigenen Datenschutzrichtlinie des Entwicklers, den App-Store-Einträgen und öffentlicher Dokumentation statt auf eigenständigen praktischen Tests.',
     metaDescription:
-      'Layla-Rezension 2026: 19,99 $ KI-Begleiter-App für Android und iOS auf dem Gerät. Was tatsächlich lokal läuft vs. der optionale Layla-Cloud-Modus, genaue Preise, Modelle und für wen sie geeignet ist.',
+      'Layla-AI-Rezension: 19,99 $ Offline-KI-Begleiter für Android und iPhone. Was lokal läuft, was Layla Cloud und Server tun, Pläne, Gratis-APK, Datenschutz.',
     twitterDescription:
-      'Layla-Rezension 2026: eine 19,99 $ lokale KI-Begleiter-App für Android und iOS mit Rollenspiel- und Persona-Funktionen. Was auf dem Gerät läuft, was der optionale Cloud-Modus sammelt, und der Vergleich mit PocketPal AI und Private LLM.',
+      'Layla-AI-Rezension: eine lokale KI-Begleiter-App für 19,99 $ (Android und iOS) mit Rollenspiel- und Persona-Funktionen. Was auf dem Gerät läuft, was Layla Cloud sammelt, die kostenlose APK und der Vergleich mit PocketPal AI und Private LLM.',
     audience:
       'Android- und iOS-Nutzer, die eine kostenpflichtige KI-Begleiter-/Rollenspiel-App auf dem Gerät in Betracht ziehen und genau wissen müssen, was lokal bleibt und was ein optionaler Cloud-Modus sammelt, plus genaue Preise und Zuverlässigkeitshinweise aus öffentlichen App-Store-Bewertungen.',
     readTime: '11 Min. Lesezeit',
@@ -569,6 +588,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai preise',
       'lokale ki begleiter app',
       'layla vs pocketpal ai',
+      'layla cloud',
+      'layla server',
+      'ist layla ai sicher',
+      'layla ai kostenlos',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -584,9 +607,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der Kern-Chat läuft über GGUF-Modelle mit llama.cpp auf dem Gerät; laut Datenschutzrichtlinie des Entwicklers warnt die App, bevor Daten das Gerät verlassen.',
           'Layla Cloud ist ein separater, optionaler Opt-in-Modus, der bei Aktivierung anonymisierte Gesprächsdaten sammelt — er ist standardmäßig deaktiviert.',
           'Rollenspiel-fokussiert: Persona-Charaktere, Gruppenunterhaltungen, über 100 TTS-Stimmen und lokale Stable-Diffusion-1.5-Bildgenerierung, laut App-Store-Einträgen.',
-          'Die App-Store-Bewertung liegt zum Testzeitpunkt bei 3,8/5 aus 31 Bewertungen; manche Rezensenten berichten von unzuverlässigen Offline-Funktionen — dies ist nutzergemeldet und wurde von PromptQuorum nicht unabhängig überprüft.',
+          'Die App-Store-Bewertung liegt zum Testzeitpunkt bei 3,8/5 aus 33 Bewertungen; manche Rezensenten berichten von unzuverlässigen Offline-Funktionen — dies ist nutzergemeldet und wurde von PromptQuorum nicht unabhängig überprüft.',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -625,12 +648,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Preis: [19,99 $ einmaliger Kauf](https://apps.apple.com/us/app/layla/id6456886656) im App Store und bei Google Play, plus drei benannte In-App-Kauf-Stufen, deren genauer Inhalt im öffentlichen Eintrag nicht vollständig aufgeschlüsselt ist.',
+          'Preis: [19,99 $ einmaliger Kauf](https://apps.apple.com/us/app/layla/id6456886656) im App Store und bei Google Play, plus drei benannte In-App-Pläne (jeweils auch mit Jahrespreis gelistet), deren genauer Inhalt im öffentlichen Eintrag nicht vollständig aufgeschlüsselt ist; die Website des Entwicklers bietet zudem eine kostenlose APK mit eingeschränktem Funktionsumfang an.',
+          'Version: 7.6.0 ist die aktuelle Version im App Store und bei Google Play, wo das letzte Update mit dem 19. Oktober 2026 angegeben ist.',
           'Entwickler: [Layla Network Pty Ltd](https://www.layla-network.ai), ein in Australien registriertes Unternehmen; die Layla-Marken-Feinabstimmungsmodelle auf Hugging Face werden unter dem GitHub-Konto [l3utterfly](https://github.com/l3utterfly) veröffentlicht.',
           'Der Kern-Chat läuft über GGUF-Modelle mit llama.cpp auf dem Gerät; die App unterstützt laut den technischen Blogbeiträgen des Entwicklers zusätzlich LiteRT-LM- und PTE-Modell-Backends (ExecuTorch) sowie lokale Stable-Diffusion-1.5-Bildgenerierung.',
           'Datenschutz: Laut der [Datenschutzrichtlinie](https://blog.layla-network.ai/privacy) des Entwicklers ist die Kernfunktion darauf ausgelegt, offline zu laufen, und die App warnt, bevor Daten das Gerät verlassen — mit Ausnahme des separaten, optionalen Layla-Cloud-Modus, der standardmäßig deaktiviert ist.',
           'Begleiter- und Rollenspiel-Fokus: individuell anpassbare Personas, Gruppenunterhaltungen, über 100 Stimmen und Live2D-Charakteranimation heben die App von schlichteren Chat-Apps in dieser Kategorie ab.',
-          'App-Store-Bewertung: 3,8/5 aus 31 Bewertungen zum Testzeitpunkt; manche Rezensenten berichten von Abstürzen und unzuverlässigem Offline-Verhalten — ein nutzergemeldetes Anliegen, das diese Rezension nicht unabhängig überprüft hat.',
+          'App-Store-Bewertung: 3,8/5 aus 33 Bewertungen zum Testzeitpunkt; manche Rezensenten berichten von Abstürzen und unzuverlässigem Offline-Verhalten — ein nutzergemeldetes Anliegen, das diese Rezension nicht unabhängig überprüft hat.',
         ],
         callouts: [
           {
@@ -639,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Diese Rezension basiert auf Laylas öffentlicher Datenschutzrichtlinie, den App-Store- und Google-Play-Einträgen, den eigenen technischen Blogbeiträgen des Entwicklers und öffentlich einsehbaren Nutzerbewertungen, geprüft im September 2026. PromptQuorum hat für diese Rezension keine eigenständigen praktischen Tests oder Benchmarks von Layla durchgeführt.',
+            text: 'Diese Rezension basiert auf Laylas öffentlicher Datenschutzrichtlinie, den App-Store- und Google-Play-Einträgen, der eigenen Website und den technischen Blogbeiträgen des Entwicklers sowie öffentlich einsehbaren Nutzerbewertungen, erneut geprüft anhand von Version 7.6.0. PromptQuorum hat für diese Rezension keine eigenständigen praktischen Tests oder Benchmarks von Layla durchgeführt.',
           },
         ],
       },
@@ -663,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Herausgeber: [Layla Network Pty Ltd](https://www.layla-network.ai), registriert in Southport, Queensland, Australien.',
           'Öffentlicher Start: um August 2023, laut Drittanbieter-App-Verzeichnissen.',
           'Modellentwicklung: Layla-Marken-Open-Weight-Feinabstimmungen, veröffentlicht auf Hugging Face unter dem GitHub-Konto [l3utterfly](https://github.com/l3utterfly).',
-          'Verwandte Projekte: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (Verbindung der App mit einem selbst gehosteten PC-Backend über WebRTC) und [Layla SDK](https://github.com/l3utterfly/layla-sdk) (Mini-Apps innerhalb von Layla erstellen).',
+          'Verwandte Projekte: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (Verbindung der App mit einem selbst gehosteten PC-Backend über WebRTC) und [Layla SDK](https://github.com/l3utterfly/layla-sdk) (Mini-Apps innerhalb von Layla erstellen), beide unter Apache-2.0 lizenziert.',
           'Der Quellcode der Client-App ist nicht öffentlich — anders als bei PocketPal AI oder Maid ist Laylas App selbst Closed Source, auch wenn einige der zugrunde liegenden Modelle Open Weight sind.',
         ],
       },
@@ -676,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'App kaufen und installieren',
-            whyItMatters: 'Laden Sie Layla aus dem [App Store](https://apps.apple.com/us/app/layla/id6456886656) (19,99 $) oder bei [Google Play](https://play.google.com/store/apps/details?id=com.layla) (19,99 $) herunter. Eine separate, eingeschränktere kostenlose Version wurde Berichten zufolge als direkter APK-Download von der eigenen Website des Entwicklers angeboten — prüfen Sie die aktuelle Verfügbarkeit dieser Option direkt auf [layla-network.ai](https://www.layla-network.ai), bevor Sie annehmen, dass sie für Ihre Plattform gilt.',
+            whyItMatters: 'Laden Sie Layla aus dem [App Store](https://apps.apple.com/us/app/layla/id6456886656) (19,99 $) oder bei [Google Play](https://play.google.com/store/apps/details?id=com.layla) (19,99 $) herunter. Auf der [Download-Seite](https://www.layla-network.ai/download) des Entwicklers gibt es zudem eine direkte APK für Android, die eine kostenlose Version mit eingeschränktem Funktionsumfang enthält; welche Funktionen eingeschränkt sind, wird dort nicht aufgeführt. Laden Sie die APK nur von der eigenen Website des Entwicklers herunter — die Seite warnt, dass modifizierte APKs von Drittanbietern Malware enthalten können und keine Updates erhalten.',
           },
           {
             title: 'App das Standardmodell herunterladen lassen',
@@ -745,12 +769,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Android',
             'Verfügbarkeit': 'Verfügbar bei [Google Play](https://play.google.com/store/apps/details?id=com.layla)',
-            'Hinweise': 'Berichten zufolge wurde zudem ein direkter APK-Vertriebsweg von der eigenen Website des Entwicklers angeboten, getrennt von Google Play — prüfen Sie die aktuelle Verfügbarkeit direkt, bevor Sie sich darauf verlassen.',
+            'Hinweise': 'Die [Download-Seite](https://www.layla-network.ai/download) des Entwicklers bietet zudem eine direkte APK von den eigenen Servern an, die eine kostenlose Version mit eingeschränktem Funktionsumfang enthält.',
           },
           {
             'Plattform': 'Windows / Linux',
             'Verfügbarkeit': 'Zum Testzeitpunkt keine native Windows- oder Linux-Desktop-Version bestätigt',
-            'Hinweise': 'Das Projekt [Layla-Server](https://github.com/l3utterfly/Layla-Server) erlaubt es der mobilen App, sich über WebRTC mit einem PC zu verbinden, auf dem ein eigenes lokales Backend läuft — das ist eine Brücke, kein nativer Desktop-Client.',
+            'Hinweise': 'Das Projekt [Layla-Server](https://github.com/l3utterfly/Layla-Server) (Apache-2.0) erlaubt es der mobilen App, sich über WebRTC mit einem PC zu verbinden, auf dem ein eigenes lokales Backend läuft — eine Brücke, kein nativer Desktop-Client. Ein Blogbeitrag des Entwicklers beschreibt zudem, wie Layla unter Windows über BlueStacks läuft und über eine OpenAI-kompatible API mit LM Studio verbunden wird.',
           },
         ],
       },
@@ -758,14 +782,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'Was kostet Layla?',
         content: [
-          '**Layla kostet 19,99 $ als einmaligen Kauf sowohl im [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) als auch bei [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Zusätzlich zu diesem Basiskauf zeigt der App-Store-Eintrag drei benannte In-App-Kauf-Stufen — Monarch (4,99 $), Birdwing (19,99 $) und Blue Morpho (29,99 $) —, doch der öffentliche Store-Eintrag schlüsselt nicht vollständig auf, was jede Stufe freischaltet (zum Beispiel, ob sie Cloud-Nutzungsguthaben, Premium-Charaktere oder zusätzliche Stimmen abdecken). Bestätigen Sie vor dem Kauf in der App genau, was eine bestimmte Stufe enthält.',
-          'Eine separate, eingeschränktere kostenlose Version der App wurde laut den eigenen Blog-Inhalten des Entwicklers Berichten zufolge als direkter APK-Download von der eigenen Website des Entwicklers angeboten — das ist getrennt von den kostenpflichtigen App-Store- und Google-Play-Einträgen; die aktuelle Verfügbarkeit und der Funktionsumfang sollten direkt auf [layla-network.ai](https://www.layla-network.ai) geprüft werden, statt aus dieser Rezension übernommen zu werden.',
-          'Layla Cloud, der separate optionale Cloud-Chat-Modus, wird als eigene App in den Stores kostenlos zum Download angeboten; ob die fortlaufende Nutzung von Layla Cloud über die kostenlose Stufe hinaus ein Abonnement oder Guthaben erfordert, ist im für diesen Artikel geprüften öffentlichen Eintrag nicht aufgeschlüsselt.',
+          '**Layla kostet 19,99 $ als einmaligen Kauf sowohl im [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) als auch bei [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Zusätzlich zu diesem Basiskauf zeigt der US-App-Store-Eintrag drei benannte In-App-Pläne — Monarch (4,99 $), Birdwing (19,99 $) und Blue Morpho (29,99 $) —, die jeweils auch als Jahresplan gelistet sind (Monarch 49,99 $, Birdwing 169,99 $, Blue Morpho 249,99 $). Die Jahresplan-Einträge deuten auf wiederkehrende Abrechnung hin; prüfen Sie daher auf dem Kaufbildschirm, ob sich ein Plan verlängert. Der öffentliche Eintrag schlüsselt nicht auf, was jeder Plan freischaltet (zum Beispiel Cloud-Nutzungsguthaben, Premium-Charaktere oder zusätzliche Stimmen); bestätigen Sie das vor dem Kauf in der App.',
+          'Die [Download-Seite](https://www.layla-network.ai/download) und die FAQ der Website beschreiben eine kostenlose Version mit eingeschränktem Funktionsumfang, die als direkte APK für Android erhältlich und von den kostenpflichtigen Store-Einträgen getrennt ist. Ein Kaufcode oder Lizenzschlüssel dafür wird nicht genannt, und es wird nicht aufgeführt, welche Funktionen eingeschränkt sind. Layla Network gibt an, dass die Vollversion der App ein einmaliger Kauf und kein Abonnement ist.',
+          'Layla Cloud, der separate optionale Cloud-Chat-Modus, wird als eigene App im App Store kostenlos zum Download angeboten, ohne dass In-App-Käufe angezeigt werden; ob die fortlaufende Nutzung von Layla Cloud über die kostenlose Stufe hinaus ein Abonnement oder Guthaben erfordert, ist im für diesen Artikel geprüften öffentlichen Eintrag nicht aufgeschlüsselt.',
         ],
         items: [
           '**Basis-App:** 19,99 $ einmaliger Kauf im App Store und bei Google Play — für den Basiskauf selbst ist kein Abonnement erforderlich.',
-          '**In-App-Kauf-Stufen:** Monarch (4,99 $), Birdwing (19,99 $), Blue Morpho (29,99 $) — im App-Store-Eintrag benannt; genauer Inhalt öffentlich nicht vollständig aufgeschlüsselt.',
-          '**Kostenlose/eingeschränkte Version:** Berichten zufolge über direkten APK-Download von der eigenen Website des Entwicklers verfügbar, getrennt von den kostenpflichtigen Store-Einträgen — aktuellen Status direkt prüfen.',
+          '**In-App-Pläne:** Monarch (4,99 $), Birdwing (19,99 $), Blue Morpho (29,99 $), jeweils auch als Jahresplan gelistet (49,99 $, 169,99 $, 249,99 $) im US-App-Store; genauer Inhalt öffentlich nicht vollständig aufgeschlüsselt.',
+          '**Kostenlose/eingeschränkte Version:** Direkte APK von der [Download-Seite](https://www.layla-network.ai/download) des Entwicklers, mit eingeschränktem Funktionsumfang und ohne erwähnten Kaufcode — getrennt von den kostenpflichtigen Store-Einträgen.',
           '**Layla Cloud:** Eine separate, kostenlos herunterladbare Begleit-App für Cloud-basierten Charakter-Chat; die eigene Kostenstruktur über die kostenlose Stufe hinaus ist im öffentlichen Eintrag nicht aufgeschlüsselt.',
         ],
       },
@@ -774,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz: lokaler Chat vs. Layla Cloud',
         content: [
           '**Laylas eigene [Datenschutzrichtlinie](https://blog.layla-network.ai/privacy) besagt, dass "die Kernfunktion unserer App darauf ausgelegt ist, offline auf Ihrem Gerät zu laufen", und dass die App eine Warnung und eine Bestätigungsmeldung anzeigt, bevor eine Aktion Ihre Daten außerhalb des Geräts sendet.** Die Richtlinie nennt konkrete Auslöser für ausgehende Daten: das Hochladen eines Charakters in den Personality Hub, die Nutzung der In-App-Funktion "Fehler melden" sowie die Aktivierung optionaler Cloud-Funktionen.',
-          'Dieser letzte Punkt — optionale Cloud-Funktionen — ist Layla Cloud, vom Entwickler als eigenständiger, separater Modus beschrieben: Laut der Richtlinie "wird Layla Cloud nur aktiviert, wenn Sie die Mini-App \'Layla Cloud\' innerhalb von Layla installieren", und wenn sie nicht installiert oder aktiviert ist, "sind keine mit Layla Cloud verbundenen Funktionen aktiv". Wenn Layla Cloud aktiv ist, sammelt es laut der eigenen Dokumentation des Entwicklers den Gesprächsverlauf — Ihre Nachrichten, Charakterantworten sowie Daten aus Zusatzfunktionen wie Langzeitgedächtnis, PDF Digest und Dream —, und diese Daten sind anonymisiert und nicht mit Ihrem Konto verknüpft, können aber zur Fehlerbehebung oder zur Verbesserung des Dienstes verwendet werden. Die Richtlinie besagt zudem, dass Layla Cloud keine Gespräche rückwirkend erfasst, die vor der Aktivierung stattfanden.',
+          'Dieser letzte Punkt — optionale Cloud-Funktionen — ist Layla Cloud, vom Entwickler als eigenständiger, separater Modus beschrieben: Laut der Richtlinie "wird Layla Cloud nur aktiviert, wenn Sie die Mini-App \'Layla Cloud\' innerhalb von Layla installieren", und wenn sie nicht installiert oder aktiviert ist, "sind keine mit Layla Cloud verbundenen Funktionen aktiv". Wenn Layla Cloud aktiv ist, sammelt es laut der eigenen Dokumentation des Entwicklers den Gesprächsverlauf — Ihre Nachrichten, Charakterantworten sowie Daten aus Zusatzfunktionen wie Langzeitgedächtnis, PDF Digest und Dream —, und diese Daten sind anonymisiert und nicht mit Ihrem Konto verknüpft, können aber zur Fehlerbehebung oder für KI-Training zur Verbesserung des Dienstes verwendet werden. Laut der Richtlinie wird zudem der bisherige Gesprächsverlauf auf den Servern des Entwicklers nicht gelöscht, wenn ein Layla-Cloud-Konto gelöscht wird. Die Richtlinie besagt zudem, dass Layla Cloud keine Gespräche rückwirkend erfasst, die vor der Aktivierung stattfanden.',
           'Insgesamt ist das ein deutlich anderes Datenschutzkonzept als bei einer App ohne jegliche Cloud-Komponente: Laylas lokaler Standardmodus ist darauf ausgelegt, mit einer ausdrücklichen Zustimmungsschranke vor jeder Übertragung auf dem Gerät zu bleiben, doch das Produkt selbst bietet einen optionalen, separat aktivierten Cloud-Pfad, der bei Aktivierung anonymisierte Gesprächsdaten sammelt. Leser, die die stärkstmögliche Garantie wollen — ein Produkt ohne überhaupt aktivierbaren Cloud-Modus —, sollten dies mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen, dessen gesamter Quellcode Open Source und MIT-lizenziert ist, ohne integrierte Cloud-Chat-Funktion zum Aktivieren.',
         ],
         items: [
@@ -782,6 +806,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** Ein separater, Opt-in-Modus (als Mini-App oder eigenständige App installiert), der bei Aktivierung anonymisierten Gesprächsverlauf einschließlich Zusatzfunktionsdaten sammelt.',
           '**Nicht rückwirkend:** Laut der Richtlinie erfasst die Aktivierung von Layla Cloud keinen Gesprächsverlauf von vor der Aktivierung.',
           '**Closed Source:** Anders als PocketPal AI oder Maid ist Laylas Client-Code nicht veröffentlicht, sodass die Standard-Nicht-Übertragung-Behauptung auf der eigenen Datenschutzrichtlinie des Entwicklers beruht statt auf einer unabhängigen Code-Prüfung.',
+          '**Datenschutz-Labels der Stores:** Vom Entwickler angegeben und von Apple nicht überprüft — die Haupt-App listet Diagnosedaten sowie Fotos oder Videos (für die App-Funktionalität), jeweils nicht mit Ihnen verknüpft, während der separate Eintrag Layla (Cloud) E-Mail-Adresse und Nutzerinhalte angibt.',
+          '**Alter der Richtlinie:** Die Richtlinienseite zeigt als letzte Aktualisierung den 10/05/2024, was vor den 7.x-Versionen liegt; sie beschreibt neuere Funktionen daher möglicherweise nicht.',
         ],
         callouts: [
           {
@@ -811,12 +837,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: 'Welche Hardware wird für Layla benötigt?',
         content: [
-          '**Der App-Store-Eintrag empfiehlt mindestens 8 GB RAM, und Laylas eigenes Marketing hat die App historisch als für aktuelle Flaggschiff-Smartphones statt für Budget- oder ältere Hardware ausgelegt beschrieben.** Das ist eine strengere Untergrenze als bei manchen konkurrierenden lokalen Chat-Apps, die kleinere 2–4B-Parameter-Modelle bequem mit 4 GB RAM unterstützen — Laylas Begleiter-Funktionen (größere Standardmodelle, lokale Bildgenerierung und Charakteranimation) heben die praktische Hardware-Untergrenze an.',
+          '**Die Website des Entwicklers nennt für kleine lokale Modelle rund 4 GB RAM, größere Modelle laufen am besten mit 8 GB oder mehr; die App-Store-Beschreibung richtet sich an "die neuesten Flaggschiff-Smartphones (8GB+ RAM)".** Laylas Begleiter-Funktionen (größere Standardmodelle, lokale Bildgenerierung und Charakteranimation) heben die praktische Hardware-Untergrenze über die schlichterer lokaler Chat-Apps an.',
           'Wie bei jeder GGUF-basierten App bestimmt das konkret geladene Modell — nicht die App selbst — den tatsächlichen Speicherbedarf: Ein kleineres quantisiertes Modell benötigt weniger RAM als ein Modell mit 7B+ Parametern, und die lokale Stable-Diffusion-Bildgenerierung parallel zum Chat bringt zusätzlichen Speicher- und Rechenaufwand über reine Textinferenz hinaus mit sich.',
         ],
         items: [
-          'Empfohlene Mindestausstattung: 8 GB RAM laut App-Store-Eintrag — deutlich höher als die in dieser Kategorie übliche Untergrenze von 4 GB bei schlichteren lokalen Chat-Apps.',
-          'Laut eigenen Marketingmaterialien des Entwicklers werden aktuelle Flaggschiff-Smartphones (etwa die letzten paar Generationen) gegenüber älteren oder Budget-Geräten empfohlen.',
+          'Kleine lokale Modelle: rund 4 GB RAM laut Website des Entwicklers; größere Modelle: 8 GB oder mehr.',
+          'Beste Erfahrung: Flaggschiff-Smartphones mit 8 GB+ RAM laut App-Store-Beschreibung, gegenüber älteren oder Budget-Geräten.',
           'Speicherplatz: Der Standard-Modell-Download beim ersten Start wurde in früheren Versionen mit rund 4 GB angegeben; eigene GGUF-Modelle und Stable-Diffusion-Checkpoints erhöhen den Speicherbedarf zusätzlich.',
           'Lokale Bildgenerierung (Stable Diffusion 1.5) bringt zusätzlichen Rechen- und Speicheraufwand über reinen Text-Chat hinaus mit sich — bei Geräten mit weniger RAM ist bei dieser Funktion mit langsamerer Leistung zu rechnen.',
         ],
@@ -835,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Lokale Text- und Bildgenerierung',
             'Bedeutung in der Praxis': 'Sowohl Chat als auch Stable-Diffusion-1.5-Bildgenerierung können vollständig auf dem Gerät laufen.',
-            'Einschränkung / Hinweis': 'Erfordert deutlich mehr RAM und Speicherplatz als reine Text-Chat-Apps; der App Store nennt ein Minimum von 8 GB.',
+            'Einschränkung / Hinweis': 'Erfordert deutlich mehr RAM und Speicherplatz als reine Text-Chat-Apps; die App-Store-Beschreibung richtet sich an Smartphones mit 8 GB+.',
           },
           {
             'Vorteil': 'Ausdrückliche Zustimmungsschranke vor ausgehenden Daten',
@@ -850,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Einmaliger Kauf für 19,99 $',
             'Bedeutung in der Praxis': 'Für die Basis-App ist auf keiner der beiden Stores ein Abonnement erforderlich.',
-            'Einschränkung / Hinweis': 'Es gibt drei zusätzliche benannte In-App-Kauf-Stufen, deren genauer Inhalt im öffentlichen Eintrag nicht vollständig aufgeschlüsselt ist — in der App prüfen, was genau gekauft wird.',
+            'Einschränkung / Hinweis': 'Es gibt drei zusätzliche benannte In-App-Pläne (jeweils auch mit Jahrespreis), deren genauer Inhalt im öffentlichen Eintrag nicht vollständig aufgeschlüsselt ist — prüfen Sie, was genau Sie kaufen und ob es sich verlängert.',
           },
           {
             'Vorteil': 'Plattformübergreifend: Android und iOS',
@@ -876,7 +902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Leser, die ein garantiert komponentenfreies Cloud-Produkt benötigen.** Da Layla einen optionalen Cloud-Modus (Layla Cloud) anbietet, der nach Aktivierung anonymisierte Daten sammelt, sollten Leser, die ausdrücklich eine App ohne jemals aktivierbare Cloud-Funktion wollen, [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) wählen, dessen gesamter Open-Source-Code keinen integrierten Cloud-Chat-Pfad hat.',
           '**Leser, die eine kostenlose oder vollständig quelloffene App wollen.** Layla ist eine kostenpflichtige, Closed-Source-App für 19,99 $; PocketPal AI (kostenlos, MIT-lizenziert) und Maid (kostenlos, MIT-lizenziert) decken diesen Bedarf stattdessen ab.',
           '**Leser, die eine schlichte, minimalistische Assistenten-Chat-Oberfläche wollen.** Laylas charakter- und persona-erstes Design bringt Komplexität mit sich, die Nutzer, die nur einen unkomplizierten Frage-Antwort-Chat wollen, möglicherweise nicht wünschen; Private LLM oder PocketPal AI sind eher assistentenartig gestaltet.',
-          '**Leser mit Geräten mit weniger RAM oder älterer Hardware.** Der App Store nennt 8 GB RAM als Mindestempfehlung, höher als bei mehreren konkurrierenden Apps, die kleinere Modelle bequem mit 4 GB unterstützen.',
+          '**Leser mit Geräten mit weniger RAM oder älterer Hardware.** Die App-Store-Beschreibung richtet sich an Smartphones mit 8 GB+, und laut Website des Entwicklers liegen größere Modelle bei 8 GB oder mehr — höher als bei mehreren konkurrierenden Apps, die kleinere Modelle bequem mit 4 GB unterstützen.',
           '**Leser, die Unternehmens- oder Team-Funktionen benötigen.** Layla ist eine Einzelnutzer-Verbraucher-App ohne Admin-Konsole, gemeinsame Lizenzverwaltung oder Team-Abrechnung; Organisationen sollten stattdessen selbst gehostete, serverseitige lokale-LLM-Infrastruktur in Betracht ziehen.',
           '**Leser, die den Quellcode der App selbst unabhängig prüfen wollen.** Laylas Client-App ist Closed Source; Leser, die diese Sicherheit benötigen, sollten eine MIT- oder AGPL-lizenzierte Alternative wie PocketPal AI, Maid oder ChatterUI nutzen.',
         ],
@@ -966,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist Layla kostenlos?',
-            a: 'Nein, die Haupt-App Layla kostet 19,99 $ als einmaligen Kauf sowohl im App Store als auch bei Google Play. Der App-Store-Eintrag zeigt zudem drei benannte In-App-Kauf-Stufen (Monarch 4,99 $, Birdwing 19,99 $, Blue Morpho 29,99 $). Eine separate, eingeschränktere kostenlose Version wurde Berichten zufolge als direkter APK-Download von der eigenen Website des Entwicklers angeboten — aktuelle Verfügbarkeit auf [layla-network.ai](https://www.layla-network.ai) prüfen. Layla Cloud, eine separate Begleit-App für Cloud-basierten Chat, ist als eigene App kostenlos herunterladbar.',
+            a: 'Teilweise. Die Haupt-App Layla kostet 19,99 $ als einmaligen Kauf sowohl im App Store als auch bei Google Play, während die [Download-Seite](https://www.layla-network.ai/download) des Entwicklers eine kostenlose Version mit eingeschränktem Funktionsumfang als direkte Android-APK anbietet. Die offiziellen Seiten erwähnen keinen Kaufcode und keinen Lizenzschlüssel; seien Sie daher vorsichtig bei Seiten, die einen kostenlosen "Kaufcode" versprechen. Der US-App-Store listet zudem In-App-Pläne (Monarch, Birdwing, Blue Morpho) mit Monats- und Jahrespreisen. Layla Cloud, eine separate App, ist im App Store kostenlos herunterladbar.',
           },
           {
             q: 'Läuft Layla vollständig offline, ganz ohne Cloud-Komponente?',
@@ -986,15 +1012,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie viel RAM benötigt Layla?',
-            a: 'Der App-Store-Eintrag empfiehlt mindestens 8 GB RAM, was höher ist als die bei schlichteren reinen Text-Chat-Apps übliche Untergrenze von rund 4 GB — bedingt durch Laylas größere Standardmodelle, lokale Bildgenerierung und Charakteranimationsfunktionen.',
+            a: 'Die Website des Entwicklers nennt für kleine lokale Modelle rund 4 GB RAM, größere Modelle laufen am besten mit 8 GB oder mehr, während die App-Store-Beschreibung Flaggschiff-Smartphones mit 8 GB+ RAM anspricht. Laylas größere Standardmodelle, lokale Bildgenerierung und Charakteranimation heben die praktische Untergrenze über die schlichterer reiner Text-Chat-Apps an.',
           },
           {
             q: 'Was ist Layla Cloud, und ist es dasselbe wie die Haupt-App Layla?',
-            a: 'Nein. Layla Cloud ist ein separater, optionaler Modus bzw. eine Mini-App, die Cloud-basierten Charakter-Chat für Nutzer bietet, die keine lokalen Modelle verwalten möchten. Laut Datenschutzrichtlinie ist er nur aktiv, wenn ein Nutzer ihn installiert oder aktiviert, und sammelt im aktiven Zustand anonymisierten Gesprächsverlauf zur Fehlerbehebung oder Diensteverbesserung. Er erfasst keine Daten rückwirkend von vor der Aktivierung.',
+            a: 'Nein. Layla Cloud ist ein separater, optionaler Modus bzw. eine Mini-App, die Cloud-basierten Charakter-Chat für Nutzer bietet, die keine lokalen Modelle verwalten möchten. Laut Datenschutzrichtlinie ist er nur aktiv, wenn ein Nutzer ihn installiert oder aktiviert, und sammelt im aktiven Zustand anonymisierten Gesprächsverlauf zur Fehlerbehebung oder Diensteverbesserung. Er erfasst keine Daten rückwirkend von vor der Aktivierung, und das Löschen eines Layla-Cloud-Kontos löscht den bisherigen Gesprächsverlauf auf den Servern des Entwicklers nicht. Layla (Cloud) ist im App Store zudem als eigene kostenlose App gelistet.',
+          },
+          {
+            q: 'Kann Layla sich mit einem PC oder Server verbinden?',
+            a: 'Ja, über den quelloffenen [Layla-Server](https://github.com/l3utterfly/Layla-Server) des Entwicklers, einen Apache-2.0-Wrapper um llama-server (oder jeden OpenAI-kompatiblen Server), der Anfragen über WebRTC weiterleitet, sodass die Layla-App Ihren PC von überall erreichen kann. Ein Blogbeitrag des Entwicklers beschreibt zudem, wie Layla unter Windows über BlueStacks läuft und über eine OpenAI-kompatible API auf LM Studio zugreift. Layla Cloud ist etwas anderes: Es ist der gehostete Modus des Entwicklers, nicht Ihr eigener Server.',
+          },
+          {
+            q: 'Ist Layla Open Source?',
+            a: 'Nein, was die App selbst betrifft: Der Layla-Client ist Closed Source. Die Repositories [Layla-Server](https://github.com/l3utterfly/Layla-Server) und [Layla SDK](https://github.com/l3utterfly/layla-sdk) stehen unter Apache-2.0, und die feinabgestimmten Modelle der Marke Layla werden offen auf [Hugging Face](https://huggingface.co/l3utterfly) veröffentlicht. Da sich der Client nicht prüfen lässt, beruht sein Datenschutzverhalten auf der eigenen Richtlinie des Entwicklers.',
+          },
+          {
+            q: 'Ist Layla AI sicher in der Nutzung?',
+            a: 'PromptQuorum hat die App nicht geprüft. Laut Entwickler läuft der Kern-Chat offline, Chats werden verschlüsselt auf dem Gerät gespeichert, und die App fragt nach, bevor sie das Internet nutzt. Der Layla-Cloud-Modus ist die wichtigste Ausnahme, und der Closed-Source-Client lässt sich nicht unabhängig überprüfen. Laden Sie die App nur aus dem App Store, von Google Play oder von der eigenen Website des Entwicklers herunter, die davor warnt, dass modifizierte APKs Malware enthalten können.',
           },
           {
             q: 'Ist Layla zuverlässig? Berichten Nutzer von Problemen?',
-            a: 'Layla hat zum Testzeitpunkt eine Bewertung von 3,8/5 aus 31 Bewertungen im App Store. Manche öffentlichen App-Store-Rezensenten berichten von Abstürzen und unzuverlässigen Offline-Funktionen, insbesondere beim Import eigener Modelle unter iOS. Diese Rezension hat die aktuelle App-Stabilität nicht unabhängig überprüft — betrachten Sie dies als nutzergemeldete Beobachtungen und testen Sie die App innerhalb des Rückgabefensters Ihrer Plattform, bevor Sie sich darauf verlassen.',
+            a: 'Layla hat zum Testzeitpunkt eine Bewertung von 3,8/5 aus 33 Bewertungen im App Store. Manche öffentlichen App-Store-Rezensenten berichten von Abstürzen und unzuverlässigen Offline-Funktionen, insbesondere beim Import eigener Modelle unter iOS. Diese Rezension hat die aktuelle App-Stabilität nicht unabhängig überprüft — betrachten Sie dies als nutzergemeldete Beobachtungen und testen Sie die App innerhalb des Rückgabefensters Ihrer Plattform, bevor Sie sich darauf verlassen.',
           },
           {
             q: 'Ist die KI-Begleiter-App "Layla" dasselbe Unternehmen wie der von Expedia übernommene KI-Reiseplaner "Layla"?',
@@ -1018,10 +1056,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Layla im App Store](https://apps.apple.com/us/app/layla/id6456886656) — Preis, In-App-Kauf-Stufen, Plattformanforderungen, Bewertungen und Versionsverlauf.',
           '[Layla bei Google Play](https://play.google.com/store/apps/details?id=com.layla) — Verfügbarkeit und Preise für Android.',
-          '[Offizielle Layla-Website](https://www.layla-network.ai) — Produktübersicht und vom Entwickler veröffentlichte Funktionsbeschreibungen.',
+          '[Offizielle Layla-Website](https://www.layla-network.ai) und [Download-Seite](https://www.layla-network.ai/download) — Produktübersicht, kostenlose APK, Hinweise zur Kaufwiederherstellung und RAM-Angaben.',
           '[Layla-Datenschutzrichtlinie](https://blog.layla-network.ai/privacy) — Umgang mit lokalen vs. Cloud-Daten, Umfang von Layla Cloud und Angaben zur Datenerfassung.',
           '[Layla (Cloud) im App Store](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — der Eintrag der separaten optionalen Cloud-Modus-App.',
-          '[l3utterfly auf GitHub](https://github.com/l3utterfly) und [l3utterfly auf Hugging Face](https://huggingface.co/l3utterfly) — Layla-Marken-Modellveröffentlichungen und verwandte Infrastrukturprojekte (Layla-Server, Layla SDK).',
+          '[l3utterfly auf GitHub](https://github.com/l3utterfly) und [l3utterfly auf Hugging Face](https://huggingface.co/l3utterfly) — Layla-Marken-Modellveröffentlichungen und verwandte Infrastrukturprojekte ([Layla-Server](https://github.com/l3utterfly/Layla-Server), [Layla SDK](https://github.com/l3utterfly/layla-sdk)).',
         ],
       },
       relatedReading: {
@@ -1041,18 +1079,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-es.webp',
     title: 'Layla: Análisis: App de Compañero de IA en el Dispositivo para Android e iOS',
-    seoTitle: 'Layla Análisis: App de IA Local, Precios y Privacidad',
+    seoTitle: 'Qué es Layla AI: app local, Cloud, Server y precio',
     intro:
       'Layla, creada por [Layla Network Pty Ltd](https://www.layla-network.ai) —una empresa registrada en Australia también vinculada en GitHub al desarrollador [l3utterfly](https://github.com/l3utterfly), quien publica la familia de modelos de peso abierto ajustados "Layla"—, es una app de pago para Android e iOS centrada en ejecutar un compañero de IA personal de forma local en el teléfono, con funciones de persona, rol y personaje que van más allá del chat simple. Cuesta [$19.99 como compra única](https://apps.apple.com/us/app/layla/id6456886656) tanto en la App Store como en Google Play, y además la ficha de la App Store muestra tres niveles de compra dentro de la app. El chat principal de Layla está diseñado para ejecutarse completamente en el dispositivo mediante modelos GGUF con llama.cpp, pero la app también incluye un modo en la nube opcional y con consentimiento aparte llamado Layla Cloud, que no está activo por defecto. Este análisis explica exactamente qué se ejecuta localmente, qué no, cuánto cuesta realmente y para quién es adecuada, basado en la política de privacidad del propio desarrollador, las fichas de las tiendas de apps y documentación pública, no en pruebas prácticas independientes.',
     metaDescription:
-      'Análisis de Layla 2026: app de compañero de IA en el dispositivo para Android e iOS por $19.99. Qué se ejecuta realmente en local frente al modo opcional Layla Cloud, precios exactos, modelos y para quién es adecuada.',
+      'Qué es Layla AI: app de IA sin conexión para Android y iPhone por $19.99. Qué corre en local, Layla Cloud y Server, planes, APK gratis y privacidad.',
     twitterDescription:
-      'Análisis de Layla 2026: una app de compañero de IA local para Android e iOS por $19.99, con funciones de rol y persona. Qué se ejecuta en el dispositivo, qué recopila el modo de nube opcional y cómo se compara con PocketPal AI y Private LLM.',
+      'Análisis de Layla AI: una app de compañero de IA local para Android e iOS por $19.99, con funciones de rol y persona. Qué se ejecuta en el dispositivo, qué recopila Layla Cloud, el APK gratuito y cómo se compara con PocketPal AI y Private LLM.',
     audience:
       'Usuarios de Android e iOS que consideran una app de pago de compañero de IA/rol en el dispositivo y necesitan saber con precisión qué permanece local frente a lo que recopila un modo de nube opcional, además de precios exactos y observaciones de fiabilidad de reseñas públicas en las tiendas de apps.',
     readTime: '11 min de lectura',
@@ -1068,11 +1106,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai precio',
       'app de compañero de ia local',
       'layla vs pocketpal ai',
+      'qué es layla app',
+      'layla cloud y server',
+      'la aplicación layla es confiable',
+      'layla app gratis o de pago',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Layla es una app de compra única de $19.99 para Android e iOS, creada por [Layla Network Pty Ltd](https://www.layla-network.ai), que ejecuta modelos de lenguaje GGUF en el dispositivo para un compañero de IA basado en personas, con personajes de rol, voces y generación de imágenes.** Según la propia [política de privacidad](https://blog.layla-network.ai/privacy) del desarrollador, la funcionalidad principal de la app está diseñada para funcionar sin conexión, y esta muestra una advertencia antes de que cualquier dato salga del dispositivo; sin embargo, Layla también incluye un modo de nube opcional y activado por separado llamado Layla Cloud, algo distinto del diseño totalmente local, sin ningún componente de nube, de una app como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review). Los lectores que buscan la garantía más sólida posible de que "nunca se conecta a un servidor" deben sopesar cuidadosamente esta distinción antes de comprar.',
+      '**Layla es una app de compañero de IA para Android e iOS, creada por [Layla Network Pty Ltd](https://www.layla-network.ai), que ejecuta modelos de lenguaje GGUF en el dispositivo, con personajes de rol, voces y generación de imágenes. Es de pago ($19.99 como compra única), aunque el sitio del desarrollador ofrece además un APK gratuito con funciones limitadas.** Según la propia [política de privacidad](https://blog.layla-network.ai/privacy) del desarrollador, la funcionalidad principal de la app está diseñada para funcionar sin conexión, y esta muestra una advertencia antes de que cualquier dato salga del dispositivo; sin embargo, Layla también incluye un modo de nube opcional y activado por separado llamado Layla Cloud, algo distinto del diseño totalmente local, sin ningún componente de nube, de una app como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review). Los lectores que buscan la garantía más sólida posible de que "nunca se conecta a un servidor" deben sopesar cuidadosamente esta distinción antes de comprar.',
     quickAnswerTop: {
       es: {
         question: '¿Es Layla una app de IA completamente sin conexión y solo local?',
@@ -1083,9 +1125,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El chat principal se ejecuta en el dispositivo mediante modelos GGUF con llama.cpp; la política de privacidad del desarrollador afirma que advierte antes de que cualquier dato salga del dispositivo.',
           'Layla Cloud es un modo separado y opcional que recopila datos de conversación anonimizados cuando está activado; está desactivado a menos que se active.',
           'Enfocada en el rol: personajes de persona, conversaciones grupales, más de 100 voces de texto a voz y generación local de imágenes con Stable Diffusion 1.5, según las fichas de las tiendas de apps.',
-          'La calificación en la App Store es de 3.8/5 sobre 31 valoraciones al momento del análisis; algunas reseñas mencionan funciones sin conexión poco fiables — tratar esto como algo reportado por usuarios, no verificado de forma independiente por PromptQuorum.',
+          'La calificación en la App Store es de 3.8/5 sobre 33 valoraciones al momento del análisis; algunas reseñas mencionan funciones sin conexión poco fiables — tratar esto como algo reportado por usuarios, no verificado de forma independiente por PromptQuorum.',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1124,12 +1166,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Precio: [compra única de $19.99](https://apps.apple.com/us/app/layla/id6456886656) en la App Store y Google Play, además de tres niveles de compra dentro de la app cuyo contenido exacto no se detalla del todo en la ficha pública.',
+          'Precio: [compra única de $19.99](https://apps.apple.com/us/app/layla/id6456886656) en la App Store y Google Play, además de tres planes dentro de la app (cada uno con precio anual también) cuyo contenido exacto no se detalla del todo en la ficha pública; el sitio del desarrollador también ofrece un APK gratuito con funciones limitadas.',
+          'Versión: 7.6.0 es la versión actual en la App Store y en Google Play, donde la última actualización figura el 19 de octubre de 2026.',
           'Desarrollador: [Layla Network Pty Ltd](https://www.layla-network.ai), una empresa registrada en Australia; los modelos ajustados de la marca Layla en Hugging Face se publican bajo la cuenta de GitHub [l3utterfly](https://github.com/l3utterfly).',
           'El chat principal se ejecuta en el dispositivo mediante modelos GGUF con llama.cpp; la app también admite backends de modelo LiteRT-LM y PTE (ExecuTorch), además de generación local de imágenes con Stable Diffusion 1.5, según las propias publicaciones técnicas del desarrollador.',
           'Privacidad: según la [política de privacidad](https://blog.layla-network.ai/privacy) del desarrollador, la funcionalidad principal está diseñada para funcionar sin conexión y la app advierte antes de que los datos salgan del dispositivo, excepto en el modo separado y opcional Layla Cloud, que está desactivado por defecto.',
           'Enfoque de compañero y rol: personas personalizables, conversaciones grupales, más de 100 voces y animación de personajes Live2D, lo que la distingue de apps de chat más simples en esta categoría.',
-          'Calificación en la App Store: 3.8/5 sobre 31 valoraciones al momento del análisis; algunas reseñas mencionan fallos y comportamiento sin conexión poco fiable — una preocupación reportada por usuarios que este análisis no ha verificado de forma independiente.',
+          'Calificación en la App Store: 3.8/5 sobre 33 valoraciones al momento del análisis; algunas reseñas mencionan fallos y comportamiento sin conexión poco fiable — una preocupación reportada por usuarios que este análisis no ha verificado de forma independiente.',
         ],
         callouts: [
           {
@@ -1138,7 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Este análisis se basa en la política de privacidad pública de Layla, las fichas de la App Store y Google Play, las publicaciones técnicas del propio desarrollador y reseñas de usuarios visibles públicamente, revisadas en septiembre de 2026. PromptQuorum no ha realizado pruebas prácticas independientes ni evaluaciones comparativas de Layla para este análisis.',
+            text: 'Este análisis se basa en la política de privacidad pública de Layla, las fichas de la App Store y Google Play, el propio sitio y las publicaciones técnicas del desarrollador, y reseñas de usuarios visibles públicamente, revisadas de nuevo con la versión 7.6.0. PromptQuorum no ha realizado pruebas prácticas independientes ni evaluaciones comparativas de Layla para este análisis.',
           },
         ],
       },
@@ -1162,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Editor: [Layla Network Pty Ltd](https://www.layla-network.ai), registrada en Southport, Queensland, Australia.',
           'Lanzamiento público: alrededor de agosto de 2023, según directorios de apps de terceros.',
           'Desarrollo de modelos: modelos ajustados de peso abierto de la marca Layla publicados en Hugging Face bajo la cuenta de GitHub [l3utterfly](https://github.com/l3utterfly).',
-          'Proyectos relacionados: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (conecta la app con un backend de PC autoalojado mediante WebRTC) y [Layla SDK](https://github.com/l3utterfly/layla-sdk) (crear miniaplicaciones dentro de Layla).',
+          'Proyectos relacionados: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (conecta la app con un backend de PC autoalojado mediante WebRTC) y [Layla SDK](https://github.com/l3utterfly/layla-sdk) (crear miniaplicaciones dentro de Layla), ambos con licencia Apache-2.0.',
           'El código fuente de la app del cliente no es público; a diferencia de PocketPal AI o Maid, la propia app de Layla es de código cerrado aunque algunos de sus modelos subyacentes sean de peso abierto.',
         ],
       },
@@ -1175,7 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Comprar e instalar la app',
-            whyItMatters: 'Descargue Layla desde la [App Store](https://apps.apple.com/us/app/layla/id6456886656) ($19.99) o [Google Play](https://play.google.com/store/apps/details?id=com.layla) ($19.99). Según se ha informado, existe una versión gratuita más limitada distribuida como descarga directa de APK desde el propio sitio del desarrollador — consulte [layla-network.ai](https://www.layla-network.ai) directamente para conocer la disponibilidad actual antes de asumir que aplica a su plataforma.',
+            whyItMatters: 'Descargue Layla desde la [App Store](https://apps.apple.com/us/app/layla/id6456886656) ($19.99) o [Google Play](https://play.google.com/store/apps/details?id=com.layla) ($19.99). La [página de descarga](https://www.layla-network.ai/download) del desarrollador también ofrece un APK directo para Android que incluye una versión gratuita con funciones limitadas; no indica cuáles son las funciones limitadas. Descargue el APK solo desde el sitio del propio desarrollador: la página advierte de que los APK modificados de terceros pueden contener malware y no reciben actualizaciones.',
           },
           {
             title: 'Dejar que la app descargue su modelo predeterminado',
@@ -1244,12 +1287,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Android',
             'Disponibilidad': 'Disponible en [Google Play](https://play.google.com/store/apps/details?id=com.layla)',
-            'Notas': 'Según se ha informado, también se ha ofrecido un canal de distribución directa de APK desde el propio sitio del desarrollador, separado de Google Play; verifique la disponibilidad actual directamente antes de confiar en él.',
+            'Notas': 'La [página de descarga](https://www.layla-network.ai/download) del desarrollador también ofrece un APK directo desde sus propios servidores, que incluye una versión gratuita con funciones limitadas.',
           },
           {
             'Plataforma': 'Windows / Linux',
             'Disponibilidad': 'No se confirmó ninguna versión nativa de escritorio para Windows o Linux al momento del análisis',
-            'Notas': 'El proyecto [Layla-Server](https://github.com/l3utterfly/Layla-Server) permite que la app móvil se conecte a un PC que ejecute su propio backend local mediante WebRTC, lo cual es un puente y no un cliente de escritorio nativo.',
+            'Notas': 'El proyecto [Layla-Server](https://github.com/l3utterfly/Layla-Server) (Apache-2.0) permite que la app móvil se conecte a un PC que ejecute su propio backend local mediante WebRTC: un puente, no un cliente de escritorio nativo. Una publicación del blog del desarrollador describe además cómo ejecutar Layla en Windows mediante BlueStacks y conectarla a LM Studio a través de una API compatible con OpenAI.',
           },
         ],
       },
@@ -1257,14 +1300,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: '¿Cuánto cuesta Layla?',
         content: [
-          '**Layla cuesta $19.99 como compra única tanto en la [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) como en [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Además de esa compra base, la ficha de la App Store muestra tres niveles de compra dentro de la app con nombre propio: Monarch ($4.99), Birdwing ($19.99) y Blue Morpho ($29.99), pero la ficha pública de la tienda no detalla por completo qué desbloquea cada nivel (por ejemplo, si cubren créditos de uso en la nube, personajes premium o voces adicionales). Confirme exactamente qué incluye un nivel determinado dentro de la app antes de comprarlo.',
-          'Según el propio contenido del blog del desarrollador, una versión gratuita más limitada de la app se ha distribuido, aparentemente, mediante descarga directa de APK desde su propio sitio; esto es distinto de las fichas de pago de la App Store y Google Play, y su disponibilidad y conjunto de funciones actuales deben verificarse directamente en [layla-network.ai](https://www.layla-network.ai) en lugar de asumirse a partir de este análisis.',
-          'Layla Cloud, el modo de chat en la nube opcional y separado, aparece como descarga gratuita como app independiente en las tiendas; si el uso continuo de Layla Cloud requiere una suscripción o créditos más allá del nivel gratuito no se detalla en la ficha pública revisada para este artículo.',
+          '**Layla cuesta $19.99 como compra única tanto en la [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) como en [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Además de esa compra base, la ficha de la App Store de EE. UU. muestra tres planes dentro de la app con nombre propio: Monarch ($4.99), Birdwing ($19.99) y Blue Morpho ($29.99), cada uno listado también como plan anual (Monarch $49.99, Birdwing $169.99, Blue Morpho $249.99). Los planes anuales listados sugieren una facturación recurrente, así que confirme en la pantalla de compra si un plan se renueva. La ficha pública no detalla qué desbloquea cada plan (por ejemplo, créditos de uso en la nube, personajes premium o voces adicionales), por lo que conviene confirmarlo dentro de la app antes de comprar.',
+          'La [página de descarga](https://www.layla-network.ai/download) del desarrollador y las preguntas frecuentes de su sitio describen una versión gratuita con funciones limitadas, disponible como APK directo para Android y separada de las fichas de pago de las tiendas. No dan ningún código de compra ni clave de licencia para ella y no indican cuáles son las funciones limitadas. Layla Network afirma que la app completa es una compra única, no una suscripción.',
+          'Layla Cloud, el modo de chat en la nube opcional y separado, aparece como descarga gratuita como app independiente en la App Store, sin compras dentro de la app visibles; si el uso continuo de Layla Cloud requiere una suscripción o créditos más allá del nivel gratuito no se detalla en la ficha pública revisada para este artículo.',
         ],
         items: [
           '**App base:** compra única de $19.99 en la App Store y Google Play; no se requiere suscripción para la compra base en sí.',
-          '**Niveles de compra dentro de la app:** Monarch ($4.99), Birdwing ($19.99), Blue Morpho ($29.99); mencionados en la ficha de la App Store; su contenido exacto no se detalla públicamente por completo.',
-          '**Versión gratuita/limitada:** según se ha informado, disponible mediante descarga directa de APK desde el propio sitio del desarrollador, separada de las fichas de pago de las tiendas; verifique el estado actual directamente.',
+          '**Planes dentro de la app:** Monarch ($4.99), Birdwing ($19.99), Blue Morpho ($29.99), cada uno listado también como plan anual ($49.99, $169.99, $249.99) en la App Store de EE. UU.; su contenido exacto no se detalla públicamente por completo.',
+          '**Versión gratuita/limitada:** un APK directo desde la [página de descarga](https://www.layla-network.ai/download) del desarrollador, con funciones limitadas y sin mención de ningún código de compra; separada de las fichas de pago de las tiendas.',
           '**Layla Cloud:** una app complementaria separada y gratuita para chat de personajes basado en la nube; su propia estructura de costos más allá del nivel gratuito no se detalla en la ficha pública.',
         ],
       },
@@ -1273,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidad: chat local vs. Layla Cloud',
         content: [
           '**La propia [política de privacidad](https://blog.layla-network.ai/privacy) de Layla indica que "la funcionalidad principal de nuestra app está diseñada para funcionar sin conexión en su dispositivo", y que la app mostrará una advertencia y un mensaje de confirmación antes de realizar cualquier acción que envíe sus datos fuera del dispositivo.** La política nombra desencadenantes específicos para el envío de datos: subir un personaje al Personality Hub, usar la función "Reportar un error" dentro de la app y activar funciones de nube opcionales.',
-          'Ese último elemento —funciones de nube opcionales— es Layla Cloud, descrito por el desarrollador como un modo distinto y separado: según la política, "Layla Cloud solo se activa si instala la miniaplicación \'Layla Cloud\' dentro de Layla", y si no está instalada o activada, "no hay funciones relacionadas con Layla Cloud habilitadas". Cuando Layla Cloud está activo, la propia documentación del desarrollador indica que recopila el historial de conversación —sus mensajes, las respuestas de los personajes y datos de funciones auxiliares como Memoria a Largo Plazo, PDF Digest y Dream—, y que estos datos están anonimizados y no vinculados a su cuenta, aunque pueden usarse para depuración o para mejorar el servicio. La política también indica que Layla Cloud no recopila retroactivamente conversaciones anteriores a su activación.',
+          'Ese último elemento —funciones de nube opcionales— es Layla Cloud, descrito por el desarrollador como un modo distinto y separado: según la política, "Layla Cloud solo se activa si instala la miniaplicación \'Layla Cloud\' dentro de Layla", y si no está instalada o activada, "no hay funciones relacionadas con Layla Cloud habilitadas". Cuando Layla Cloud está activo, la propia documentación del desarrollador indica que recopila el historial de conversación —sus mensajes, las respuestas de los personajes y datos de funciones auxiliares como Memoria a Largo Plazo, PDF Digest y Dream—, y que estos datos están anonimizados y no vinculados a su cuenta, aunque pueden usarse para depuración o entrenamiento de IA para mejorar el servicio. La política indica además que eliminar una cuenta de Layla Cloud no borra el historial de conversaciones anteriores de los servidores del desarrollador. También señala que Layla Cloud no recopila retroactivamente conversaciones anteriores a su activación.',
           'En conjunto, este es un diseño de privacidad materialmente distinto al de una app cuya funcionalidad principal no tiene ningún componente de nube en absoluto: el modo local predeterminado de Layla está diseñado para permanecer en el dispositivo con una barrera explícita de consentimiento antes de cualquier transmisión, pero el propio producto ofrece un camino opcional y activado por separado hacia la nube que sí recopila datos de conversación anonimizados cuando el usuario lo activa. Los lectores que buscan la garantía más sólida posible —un producto sin ningún modo de nube que activar— deben comparar esto con [PocketPal AI](/es/power-local-llm/pocketpal-ai-review), cuyo código base es totalmente de código abierto y con licencia MIT, sin función de chat en la nube integrada.',
         ],
         items: [
@@ -1281,6 +1324,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** un modo separado y opcional (instalado como miniaplicación o app distinta) que recopila historial de conversación anonimizado, incluidos datos de funciones auxiliares, cuando está activado.',
           '**No retroactivo:** según la política, activar Layla Cloud no incorpora historial de conversación anterior a su activación.',
           '**Código cerrado:** a diferencia de PocketPal AI o Maid, el código de la app cliente de Layla no está publicado, por lo que la afirmación de "no transmisión por defecto" se basa en la propia política de privacidad del desarrollador y no en una auditoría de código independiente.',
+          '**Etiquetas de privacidad de las tiendas:** declaradas por el desarrollador y no verificadas por Apple; la app principal indica datos de diagnóstico y fotos o videos (para el funcionamiento de la app), ninguno vinculado a usted, mientras que la ficha separada de Layla (Cloud) declara dirección de correo electrónico y contenido del usuario.',
+          '**Antigüedad de la política:** la página de la política muestra una fecha de última actualización de 10/05/2024, anterior a las versiones 7.x, por lo que puede no describir funciones más recientes.',
         ],
         callouts: [
           {
@@ -1310,12 +1355,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: '¿Qué hardware se necesita para ejecutar Layla?',
         content: [
-          '**La ficha de la App Store recomienda un mínimo de 8 GB de RAM, y el propio marketing de Layla ha descrito históricamente la app como orientada a teléfonos insignia recientes en lugar de hardware económico o antiguo.** Este es un umbral más estricto que el de algunas apps de chat local competidoras que admiten cómodamente modelos más pequeños de 2–4B de parámetros con 4 GB de RAM; las funciones de compañero de Layla (modelos predeterminados más grandes, generación local de imágenes y animación de personajes) elevan el umbral de hardware práctico.',
+          '**El sitio del desarrollador indica que los modelos locales pequeños funcionan en teléfonos con alrededor de 4 GB de RAM y que los modelos más grandes rinden mejor con 8 GB o más; la descripción de la App Store apunta a "los últimos teléfonos insignia (8GB+ RAM)".** Las funciones de compañero de Layla (modelos predeterminados más grandes, generación local de imágenes y animación de personajes) elevan el umbral de hardware práctico por encima del de apps de chat local más simples.',
           'Como con cualquier app basada en GGUF, el modelo concreto cargado —no la app en sí— determina realmente las necesidades de memoria: un modelo cuantizado más pequeño necesita menos RAM que uno de 7B+ parámetros, y ejecutar generación local de imágenes con Stable Diffusion junto con el chat añade sobrecarga adicional de memoria y procesamiento más allá de la inferencia de solo texto.',
         ],
         items: [
-          'Mínimo recomendado: 8 GB de RAM, según la ficha de la App Store; notablemente más alto que el umbral de 4 GB común entre apps de chat local más simples en esta categoría.',
-          'Se recomiendan teléfonos de gama insignia recientes (aproximadamente las últimas generaciones) frente a dispositivos más antiguos o económicos, según los propios materiales de marketing del desarrollador.',
+          'Modelos locales pequeños: alrededor de 4 GB de RAM, según el sitio del desarrollador; modelos más grandes: 8 GB o más.',
+          'Mejor experiencia: teléfonos insignia de 8 GB+, según la descripción de la App Store, frente a dispositivos más antiguos o económicos.',
           'Almacenamiento: la descarga del modelo predeterminado en el primer inicio se ha reportado en torno a 4 GB en versiones anteriores; los modelos GGUF personalizados y los checkpoints de Stable Diffusion añaden requisitos de almacenamiento adicionales.',
           'La generación local de imágenes (Stable Diffusion 1.5) añade sobrecarga de procesamiento y memoria más allá del chat de solo texto; espere un rendimiento más lento en dispositivos con menos RAM al usar esta función.',
         ],
@@ -1334,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ventaja': 'Generación local de texto e imágenes',
             'Qué significa en el uso real': 'Tanto el chat como la generación de imágenes con Stable Diffusion 1.5 pueden ejecutarse completamente en el dispositivo.',
-            'Limitación / advertencia': 'Requiere notablemente más RAM y almacenamiento que las apps de chat local de solo texto; la App Store indica un mínimo de 8 GB.',
+            'Limitación / advertencia': 'Requiere notablemente más RAM y almacenamiento que las apps de chat local de solo texto; la descripción de la App Store apunta a teléfonos de 8 GB+.',
           },
           {
             'Ventaja': 'Barrera explícita de consentimiento antes del envío de datos',
@@ -1349,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ventaja': 'Compra única de $19.99',
             'Qué significa en el uso real': 'No se requiere suscripción para la app base en ninguna de las dos tiendas.',
-            'Limitación / advertencia': 'Existen tres niveles adicionales de compra dentro de la app cuyo contenido exacto no se detalla del todo en la ficha pública; confirme dentro de la app qué está comprando exactamente.',
+            'Limitación / advertencia': 'Existen tres planes adicionales dentro de la app (cada uno también con precio anual) cuyo contenido exacto no se detalla del todo en la ficha pública; confirme qué está comprando y si se renueva.',
           },
           {
             'Ventaja': 'Multiplataforma: Android e iOS',
@@ -1375,7 +1420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Lectores que necesitan un producto garantizado sin componente de nube.** Dado que Layla incluye un modo de nube opcional (Layla Cloud) que recopila datos anonimizados una vez activado, los lectores que específicamente quieren una app sin función de nube que activar jamás deben elegir [PocketPal AI](/es/power-local-llm/pocketpal-ai-review), cuyo código base totalmente abierto no tiene ningún camino de chat en la nube integrado.',
           '**Lectores que quieren una app gratuita o totalmente de código abierto.** Layla es una app de pago y código cerrado de $19.99; PocketPal AI (gratis, licencia MIT) y Maid (gratis, licencia MIT) cubren esa necesidad en su lugar.',
           '**Lectores que quieren una interfaz de chat sencilla y minimalista tipo asistente.** El diseño de Layla centrado en personajes y personas añade complejidad que los usuarios que solo quieren un chat de preguntas y respuestas sencillo pueden no desear; Private LLM o PocketPal AI tienen un formato más de asistente.',
-          '**Lectores con dispositivos de poca RAM o antiguos.** La App Store indica 8 GB de RAM como recomendación mínima, más alta que varias apps competidoras que ejecutan modelos más pequeños cómodamente con 4 GB.',
+          '**Lectores con dispositivos de poca RAM o antiguos.** La descripción de la App Store apunta a teléfonos de 8 GB+, y el sitio del desarrollador sitúa los modelos más grandes en 8 GB o más; es más que varias apps competidoras que ejecutan modelos más pequeños cómodamente con 4 GB.',
           '**Lectores que necesitan funciones empresariales o de equipo.** Layla es una app de consumo para un solo usuario, sin consola de administración, licencias compartidas ni facturación de equipo; las organizaciones deberían considerar infraestructura de LLM local autoalojada del lado del servidor en su lugar.',
           '**Lectores que quieren auditar de forma independiente el código fuente de la app.** La app cliente de Layla es de código cerrado; los lectores que necesiten ese nivel de garantía deberían usar una alternativa con licencia MIT o AGPL como PocketPal AI, Maid o ChatterUI.',
         ],
@@ -1465,7 +1510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Es gratis Layla?',
-            a: 'No, la app principal Layla cuesta $19.99 como compra única tanto en la App Store como en Google Play. La ficha de la App Store también muestra tres niveles de compra dentro de la app con nombre propio (Monarch $4.99, Birdwing $19.99, Blue Morpho $29.99). Según se ha informado, existe una versión gratuita más limitada distribuida mediante descarga directa de APK desde el propio sitio del desarrollador; consulte [layla-network.ai](https://www.layla-network.ai) para conocer la disponibilidad actual. Layla Cloud, una app complementaria separada para chat basado en la nube, es gratuita de descargar como app independiente.',
+            a: 'Parcialmente. La app principal Layla cuesta $19.99 como compra única tanto en la App Store como en Google Play, mientras que la [página de descarga](https://www.layla-network.ai/download) del desarrollador ofrece una versión gratuita con funciones limitadas como APK directo para Android. Las páginas oficiales no mencionan ningún código de compra ni clave de licencia, así que desconfíe de los sitios que prometen un "código de compra" gratuito. La App Store de EE. UU. también lista planes dentro de la app (Monarch, Birdwing, Blue Morpho) con precios mensuales y anuales. Layla Cloud, una app independiente, es gratuita de descargar en la App Store.',
           },
           {
             q: '¿Funciona Layla completamente sin conexión, sin ningún componente de nube en absoluto?',
@@ -1485,15 +1530,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánta RAM necesita Layla?',
-            a: 'La ficha de la App Store recomienda un mínimo de 8 GB de RAM, más alto que el umbral de aproximadamente 4 GB común entre apps de chat local de solo texto más simples, reflejando los modelos predeterminados más grandes de Layla, la generación local de imágenes y las funciones de animación de personajes.',
+            a: 'El sitio del desarrollador indica que los modelos locales pequeños funcionan en teléfonos con alrededor de 4 GB de RAM y que los modelos más grandes rinden mejor con 8 GB o más, mientras que la descripción de la App Store apunta a teléfonos insignia de 8 GB+. Los modelos predeterminados más grandes de Layla, la generación local de imágenes y la animación de personajes elevan el umbral práctico por encima del de apps de chat de solo texto más simples.',
           },
           {
             q: '¿Qué es Layla Cloud, y es lo mismo que la app principal Layla?',
-            a: 'No. Layla Cloud es un modo separado y opcional, o miniaplicación, que ofrece chat de personajes basado en la nube para usuarios que no quieren gestionar modelos locales. Según la política de privacidad, solo está activo si un usuario lo instala o lo activa, y cuando está activo recopila historial de conversación anonimizado para depuración o mejora del servicio. No recopila datos retroactivamente de antes de su activación.',
+            a: 'No. Layla Cloud es un modo separado y opcional, o miniaplicación, que ofrece chat de personajes basado en la nube para usuarios que no quieren gestionar modelos locales. Según la política de privacidad, solo está activo si un usuario lo instala o lo activa, y cuando está activo recopila historial de conversación anonimizado para depuración o mejora del servicio. No recopila datos retroactivamente de antes de su activación, y eliminar una cuenta de Layla Cloud no borra el historial de conversaciones anteriores de los servidores del desarrollador. Layla (Cloud) también figura como app gratuita independiente en la App Store.',
+          },
+          {
+            q: '¿Puede Layla conectarse a un PC o a un servidor?',
+            a: 'Sí, mediante [Layla-Server](https://github.com/l3utterfly/Layla-Server), el proyecto de código abierto del desarrollador: un envoltorio con licencia Apache-2.0 en torno a llama-server (o a cualquier servidor compatible con OpenAI) que reenvía las solicitudes mediante WebRTC para que la app Layla pueda llegar a su PC desde cualquier lugar. Una publicación del blog del desarrollador describe además cómo ejecutar Layla en Windows mediante BlueStacks y apuntarla a LM Studio a través de una API compatible con OpenAI. Layla Cloud es otra cosa: es el modo alojado del desarrollador, no su propio servidor.',
+          },
+          {
+            q: '¿Es Layla de código abierto?',
+            a: 'No en el caso de la app en sí: el cliente de Layla es de código cerrado. Los repositorios [Layla-Server](https://github.com/l3utterfly/Layla-Server) y [Layla SDK](https://github.com/l3utterfly/layla-sdk) tienen licencia Apache-2.0, y los modelos ajustados de la marca Layla se publican abiertamente en [Hugging Face](https://huggingface.co/l3utterfly). Como el cliente no puede auditarse, su comportamiento de privacidad depende de la política del propio desarrollador.',
+          },
+          {
+            q: '¿Es seguro usar Layla AI?',
+            a: 'PromptQuorum no ha auditado la app. Según el desarrollador, el chat principal funciona sin conexión, los chats se almacenan cifrados en el dispositivo y la app pregunta antes de usar internet. El modo Layla Cloud es la excepción principal, y el cliente de código cerrado no puede verificarse de forma independiente. Descargue la app solo desde la App Store, Google Play o el sitio del propio desarrollador, que advierte de que los APK modificados pueden contener malware.',
           },
           {
             q: '¿Es fiable Layla? ¿Reportan problemas los usuarios?',
-            a: 'Layla tiene una calificación de 3.8/5 sobre 31 valoraciones en la App Store al momento del análisis. Algunas reseñas públicas de la App Store mencionan fallos y funciones sin conexión poco fiables, especialmente en la importación de modelos personalizados en iOS. Este análisis no ha verificado de forma independiente la estabilidad actual de la app; trate esto como observaciones reportadas por usuarios y pruebe la app dentro del plazo de devolución de su plataforma antes de confiar en ella.',
+            a: 'Layla tiene una calificación de 3.8/5 sobre 33 valoraciones en la App Store al momento del análisis. Algunas reseñas públicas de la App Store mencionan fallos y funciones sin conexión poco fiables, especialmente en la importación de modelos personalizados en iOS. Este análisis no ha verificado de forma independiente la estabilidad actual de la app; trate esto como observaciones reportadas por usuarios y pruebe la app dentro del plazo de devolución de su plataforma antes de confiar en ella.',
           },
           {
             q: '¿Es la app de compañero de IA "Layla" la misma empresa que el planificador de viajes con IA "Layla" adquirido por Expedia?',
@@ -1517,10 +1574,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Layla en la App Store](https://apps.apple.com/us/app/layla/id6456886656) — precio, niveles de compra dentro de la app, requisitos de plataforma, calificaciones e historial de versiones.',
           '[Layla en Google Play](https://play.google.com/store/apps/details?id=com.layla) — disponibilidad y precios para Android.',
-          '[Sitio oficial de Layla](https://www.layla-network.ai) — resumen del producto y descripciones de funciones publicadas por el desarrollador.',
+          '[Sitio oficial de Layla](https://www.layla-network.ai) y [página de descarga](https://www.layla-network.ai/download) — resumen del producto, APK gratuito, notas sobre la restauración de compras y orientación sobre la RAM.',
           '[Política de privacidad de Layla](https://blog.layla-network.ai/privacy) — manejo de datos local vs. nube, alcance de Layla Cloud y divulgaciones de recopilación de datos.',
           '[Layla (Cloud) en la App Store](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — la ficha de la app separada del modo de nube opcional.',
-          '[l3utterfly en GitHub](https://github.com/l3utterfly) y [l3utterfly en Hugging Face](https://huggingface.co/l3utterfly) — publicaciones de modelos de la marca Layla y proyectos de infraestructura relacionados (Layla-Server, Layla SDK).',
+          '[l3utterfly en GitHub](https://github.com/l3utterfly) y [l3utterfly en Hugging Face](https://huggingface.co/l3utterfly) — publicaciones de modelos de la marca Layla y proyectos de infraestructura relacionados ([Layla-Server](https://github.com/l3utterfly/Layla-Server), [Layla SDK](https://github.com/l3utterfly/layla-sdk)).',
         ],
       },
       relatedReading: {
@@ -1540,18 +1597,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-fr.webp',
     title: 'Layla: Avis — Application de Compagnon IA Local pour Android et iOS',
-    seoTitle: 'Layla Avis: App IA Locale, Prix et Confidentialité',
+    seoTitle: 'Layla Avis: App IA Locale, Cloud, Serveur et Prix',
     intro:
       'Layla, développée par [Layla Network Pty Ltd](https://www.layla-network.ai) — une société enregistrée en Australie également liée sur GitHub au développeur [l3utterfly](https://github.com/l3utterfly), qui publie la famille de modèles à poids ouverts affinés "Layla" —, est une application payante pour Android et iOS conçue autour d\'un compagnon IA personnel fonctionnant localement sur le téléphone, avec des fonctionnalités de persona, de jeu de rôle et de personnage qui vont au-delà du simple chat. Elle coûte [19,99 $ en achat unique](https://apps.apple.com/us/app/layla/id6456886656) sur l\'App Store comme sur Google Play, et la fiche de l\'App Store affiche en plus trois paliers d\'achat intégré nommés. Le chat principal de Layla est conçu pour fonctionner entièrement sur l\'appareil via des modèles GGUF avec llama.cpp, mais l\'application propose également un mode cloud optionnel et activé séparément, appelé Layla Cloud, qui n\'est pas actif par défaut — cet avis détaille précisément ce qui fonctionne réellement en local, ce qui n\'y fonctionne pas, ce que cela coûte réellement et à qui l\'application convient, sur la base de la politique de confidentialité du développeur, des fiches des boutiques d\'applications et de la documentation publique, et non de tests pratiques indépendants.',
     metaDescription:
-      'Avis Layla 2026 : application de compagnon IA locale à 19,99 $ pour Android et iOS. Ce qui fonctionne réellement en local face au mode optionnel Layla Cloud, prix exacts, modèles et public cible.',
+      'Avis Layla : compagnon IA local à 19,99 $ (achat unique) sur Android et iPhone. Layla Cloud, serveur, formules, APK gratuit limité et confidentialité.',
     twitterDescription:
-      'Avis Layla 2026 : une application de compagnon IA locale à 19,99 $ pour Android et iOS, avec fonctions de jeu de rôle et de persona. Ce qui fonctionne sur l\'appareil, ce que collecte le mode cloud optionnel, et la comparaison avec PocketPal AI et Private LLM.',
+      'Avis Layla : une application de compagnon IA locale à 19,99 $ pour Android et iOS, avec fonctions de jeu de rôle et de persona. Ce qui fonctionne sur l\'appareil, ce que collecte Layla Cloud, l\'APK gratuit, et la comparaison avec PocketPal AI et Private LLM.',
     audience:
       'Utilisateurs Android et iOS envisageant une application payante de compagnon/jeu de rôle IA locale, qui ont besoin de savoir précisément ce qui reste local par rapport à ce que collecte un mode cloud optionnel, ainsi que les prix exacts et les réserves de fiabilité issues d\'avis publics sur les boutiques d\'applications.',
     readTime: '11 min de lecture',
@@ -1567,6 +1624,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai prix',
       'application compagnon ia locale',
       'layla vs pocketpal ai',
+      'layla cloud',
+      'layla serveur',
+      'layla ai est-elle sûre',
+      'layla ai gratuit',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -1582,9 +1643,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le chat principal fonctionne sur l\'appareil via des modèles GGUF avec llama.cpp ; la politique de confidentialité du développeur indique qu\'un avertissement s\'affiche avant toute sortie de données de l\'appareil.',
           'Layla Cloud est un mode séparé et facultatif qui collecte des données de conversation anonymisées lorsqu\'il est activé — il est désactivé sauf activation explicite.',
           'Axée sur le jeu de rôle : personnages de persona, conversations de groupe, plus de 100 voix TTS et génération locale d\'images via Stable Diffusion 1.5, selon les fiches des boutiques d\'applications.',
-          'La note sur l\'App Store est de 3,8/5 sur 31 avis au moment de l\'évaluation ; certains avis signalent des fonctions hors ligne peu fiables — à considérer comme des signalements d\'utilisateurs, non vérifiés de façon indépendante par PromptQuorum.',
+          'La note sur l\'App Store est de 3,8/5 sur 33 évaluations au moment de l\'évaluation ; certains avis signalent des fonctions hors ligne peu fiables — à considérer comme des signalements d\'utilisateurs, non vérifiés de façon indépendante par PromptQuorum.',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1623,12 +1684,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Prix : [achat unique de 19,99 $](https://apps.apple.com/us/app/layla/id6456886656) sur l\'App Store et Google Play, plus trois paliers d\'achat intégré nommés dont le contenu exact n\'est pas entièrement détaillé sur la fiche publique.',
+          'Prix : [achat unique de 19,99 $](https://apps.apple.com/us/app/layla/id6456886656) sur l\'App Store et Google Play, plus trois formules d\'achat intégré nommées (chacune aussi proposée avec un prix annuel) dont le contenu exact n\'est pas entièrement détaillé sur la fiche publique ; le site du développeur propose aussi un APK gratuit aux fonctions limitées.',
+          'Version : la version 7.6.0 est la version actuelle sur l\'App Store et sur Google Play, où la dernière mise à jour est indiquée au 19 octobre 2026.',
           'Développeur : [Layla Network Pty Ltd](https://www.layla-network.ai), une société enregistrée en Australie ; les modèles affinés de la marque Layla sur Hugging Face sont publiés sous le compte GitHub [l3utterfly](https://github.com/l3utterfly).',
           'Le chat principal fonctionne sur l\'appareil via des modèles GGUF avec llama.cpp ; l\'application prend également en charge les backends de modèles LiteRT-LM et PTE (ExecuTorch), ainsi que la génération locale d\'images via Stable Diffusion 1.5, selon les propres billets techniques du développeur.',
           'Confidentialité : selon la [politique de confidentialité](https://blog.layla-network.ai/privacy) du développeur, la fonctionnalité principale est conçue pour fonctionner hors ligne et l\'application avertit avant que des données ne quittent l\'appareil — à l\'exception du mode séparé et optionnel Layla Cloud, désactivé par défaut.',
           'Orientation compagnon et jeu de rôle : personas personnalisables, conversations de groupe, plus de 100 voix et animation de personnage Live2D, ce qui la distingue des applications de chat plus sobres de cette catégorie.',
-          'Note sur l\'App Store : 3,8/5 sur 31 avis au moment de l\'évaluation ; certains avis signalent des plantages et un comportement hors ligne peu fiable — un signalement d\'utilisateurs que cet avis n\'a pas vérifié de façon indépendante.',
+          'Note sur l\'App Store : 3,8/5 sur 33 évaluations au moment de l\'évaluation ; certains avis signalent des plantages et un comportement hors ligne peu fiable — un signalement d\'utilisateurs que cet avis n\'a pas vérifié de façon indépendante.',
         ],
         callouts: [
           {
@@ -1637,7 +1699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Cet avis se fonde sur la politique de confidentialité publique de Layla, les fiches App Store et Google Play, les billets techniques du développeur et des avis d\'utilisateurs publiquement visibles, vérifiés en septembre 2026. PromptQuorum n\'a pas réalisé de tests pratiques ni de benchmarks indépendants de Layla pour cet avis.',
+            text: 'Cet avis se fonde sur la politique de confidentialité publique de Layla, les fiches App Store et Google Play, le site et les billets techniques du développeur et des avis d\'utilisateurs publiquement visibles, revérifiés par rapport à la version 7.6.0. PromptQuorum n\'a pas réalisé de tests pratiques ni de benchmarks indépendants de Layla pour cet avis.',
           },
         ],
       },
@@ -1661,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Éditeur : [Layla Network Pty Ltd](https://www.layla-network.ai), enregistrée à Southport, Queensland, Australie.',
           'Lancement public : vers août 2023, selon des annuaires d\'applications tiers.',
           'Développement des modèles : modèles à poids ouverts affinés de la marque Layla publiés sur Hugging Face sous le compte GitHub [l3utterfly](https://github.com/l3utterfly).',
-          'Projets connexes : [Layla-Server](https://github.com/l3utterfly/Layla-Server) (connecter l\'application à un backend PC auto-hébergé via WebRTC) et [Layla SDK](https://github.com/l3utterfly/layla-sdk) (créer des mini-applications à l\'intérieur de Layla).',
+          'Projets connexes : [Layla-Server](https://github.com/l3utterfly/Layla-Server) (connecter l\'application à un backend PC auto-hébergé via WebRTC) et [Layla SDK](https://github.com/l3utterfly/layla-sdk) (créer des mini-applications à l\'intérieur de Layla), toutes deux sous licence Apache-2.0.',
           'Le code source de l\'application cliente n\'est pas public — contrairement à PocketPal AI ou Maid, l\'application Layla elle-même est à code source fermé même si certains de ses modèles sous-jacents sont à poids ouverts.',
         ],
       },
@@ -1674,7 +1736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Acheter et installer l\'application',
-            whyItMatters: 'Téléchargez Layla depuis l\'[App Store](https://apps.apple.com/us/app/layla/id6456886656) (19,99 $) ou [Google Play](https://play.google.com/store/apps/details?id=com.layla) (19,99 $). Une version gratuite plus limitée aurait été distribuée en téléchargement direct d\'APK depuis le site du développeur — vérifiez directement sur [layla-network.ai](https://www.layla-network.ai) la disponibilité actuelle de cette option avant de supposer qu\'elle s\'applique à votre plateforme.',
+            whyItMatters: 'Téléchargez Layla depuis l\'[App Store](https://apps.apple.com/us/app/layla/id6456886656) (19,99 $) ou [Google Play](https://play.google.com/store/apps/details?id=com.layla) (19,99 $). La [page de téléchargement](https://www.layla-network.ai/download) du développeur propose aussi un APK direct pour Android, qui inclut une version gratuite aux fonctions limitées ; elle n\'indique pas lesquelles sont limitées. Téléchargez l\'APK uniquement depuis le site du développeur : la page avertit que les APK modifiés provenant de tiers peuvent contenir des malwares et ne reçoivent pas de mises à jour.',
           },
           {
             title: 'Laisser l\'application télécharger son modèle par défaut',
@@ -1743,12 +1805,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plateforme': 'Android',
             'Disponibilité': 'Disponible sur [Google Play](https://play.google.com/store/apps/details?id=com.layla)',
-            'Remarques': 'Un canal de distribution APK direct aurait également été proposé depuis le site du développeur, séparément de Google Play — vérifiez la disponibilité actuelle directement avant de vous y fier.',
+            'Remarques': 'La [page de téléchargement](https://www.layla-network.ai/download) du développeur propose aussi un APK direct depuis ses propres serveurs, qui inclut une version gratuite aux fonctions limitées.',
           },
           {
             'Plateforme': 'Windows / Linux',
             'Disponibilité': 'Aucune version de bureau native pour Windows ou Linux confirmée au moment de l\'évaluation',
-            'Remarques': 'Le projet [Layla-Server](https://github.com/l3utterfly/Layla-Server) permet à l\'application mobile de se connecter via WebRTC à un PC exécutant son propre backend local, ce qui constitue un pont plutôt qu\'un client de bureau natif.',
+            'Remarques': 'Le projet [Layla-Server](https://github.com/l3utterfly/Layla-Server) (Apache-2.0) permet à l\'application mobile de se connecter via WebRTC à un PC exécutant son propre backend local — un pont, et non un client de bureau natif. Un billet du blog du développeur décrit aussi l\'exécution de Layla sous Windows via BlueStacks, connectée à LM Studio par une API compatible OpenAI.',
           },
         ],
       },
@@ -1756,14 +1818,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'Combien coûte Layla ?',
         content: [
-          '**Layla coûte 19,99 $ en achat unique, aussi bien sur l\'[Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) que sur [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Au-delà de cet achat de base, la fiche App Store affiche trois paliers d\'achat intégré nommés — Monarch (4,99 $), Birdwing (19,99 $) et Blue Morpho (29,99 $) —, mais la fiche publique de la boutique ne détaille pas entièrement ce que chaque palier débloque (par exemple, s\'ils couvrent des crédits d\'usage cloud, des personnages premium ou des voix supplémentaires). Confirmez précisément ce qu\'inclut un palier donné dans l\'application avant de l\'acheter.',
-          'Selon le propre contenu du blog du développeur, une version gratuite plus limitée de l\'application aurait été distribuée en téléchargement direct d\'APK depuis son propre site — cela diffère des fiches payantes de l\'App Store et de Google Play, et sa disponibilité et son périmètre de fonctionnalités actuels devraient être vérifiés directement sur [layla-network.ai](https://www.layla-network.ai) plutôt que présumés à partir de cet avis.',
-          'Layla Cloud, le mode de chat cloud optionnel et séparé, est proposé au téléchargement gratuit en tant qu\'application distincte sur les boutiques ; la question de savoir si l\'usage continu de Layla Cloud nécessite un abonnement ou des crédits au-delà du palier gratuit n\'est pas détaillée dans la fiche publique consultée pour cet article.',
+          '**Layla coûte 19,99 $ en achat unique, aussi bien sur l\'[Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) que sur [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Au-delà de cet achat de base, la fiche de l\'App Store américain affiche trois formules d\'achat intégré nommées — Monarch (4,99 $), Birdwing (19,99 $) et Blue Morpho (29,99 $) —, chacune aussi proposée en formule annuelle (Monarch 49,99 $, Birdwing 169,99 $, Blue Morpho 249,99 $). Les formules annuelles listées suggèrent une facturation récurrente ; vérifiez donc sur l\'écran d\'achat si une formule se renouvelle. La fiche publique ne détaille pas ce que débloque chaque formule (par exemple, des crédits d\'usage cloud, des personnages premium ou des voix supplémentaires) ; confirmez-le dans l\'application avant d\'acheter.',
+          'La [page de téléchargement](https://www.layla-network.ai/download) et la FAQ du site du développeur décrivent une version gratuite aux fonctions limitées, disponible en APK direct pour Android et distincte des fiches payantes des boutiques. Elles ne mentionnent ni code d\'achat ni clé de licence pour celle-ci et n\'indiquent pas quelles fonctions sont limitées. Layla Network indique que l\'application complète est un achat unique, et non un abonnement.',
+          'Layla Cloud, le mode de chat cloud optionnel et séparé, est proposé au téléchargement gratuit en tant qu\'application distincte sur l\'App Store, sans achat intégré affiché ; la question de savoir si l\'usage continu de Layla Cloud nécessite un abonnement ou des crédits au-delà du palier gratuit n\'est pas détaillée dans la fiche publique consultée pour cet article.',
         ],
         items: [
           '**Application de base :** achat unique de 19,99 $ sur l\'App Store et Google Play — aucun abonnement requis pour l\'achat de base lui-même.',
-          '**Paliers d\'achat intégré :** Monarch (4,99 $), Birdwing (19,99 $), Blue Morpho (29,99 $) — nommés sur la fiche App Store ; contenu exact non entièrement détaillé publiquement.',
-          '**Version gratuite/limitée :** disponible, selon les informations disponibles, via téléchargement direct d\'APK depuis le site du développeur, séparément des fiches payantes des boutiques — vérifier le statut actuel directement.',
+          '**Formules d\'achat intégré :** Monarch (4,99 $), Birdwing (19,99 $), Blue Morpho (29,99 $), chacune aussi proposée en formule annuelle (49,99 $, 169,99 $, 249,99 $) sur l\'App Store américain ; contenu exact non entièrement détaillé publiquement.',
+          '**Version gratuite/limitée :** un APK direct depuis la [page de téléchargement](https://www.layla-network.ai/download) du développeur, aux fonctions limitées et sans code d\'achat mentionné — distinct des fiches payantes des boutiques.',
           '**Layla Cloud :** une application compagnon distincte et gratuite au téléchargement pour le chat de personnage basé sur le cloud ; sa propre structure de coûts au-delà du palier gratuit n\'est pas détaillée dans la fiche publique.',
         ],
       },
@@ -1772,7 +1834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confidentialité : chat local vs. Layla Cloud',
         content: [
           '**La propre [politique de confidentialité](https://blog.layla-network.ai/privacy) de Layla indique que "la fonctionnalité principale de notre application est conçue pour fonctionner hors ligne sur votre appareil", et que l\'application affichera un avertissement et un message de confirmation avant toute action envoyant vos données hors de l\'appareil.** La politique nomme des déclencheurs spécifiques pour la sortie de données : téléverser un personnage vers le Personality Hub, utiliser la fonction "Signaler un bug" intégrée, et activer des fonctionnalités cloud optionnelles.',
-          'Ce dernier point — les fonctionnalités cloud optionnelles — correspond à Layla Cloud, décrit par le développeur comme un mode distinct et séparé : selon la politique, "Layla Cloud n\'est activé que si vous installez la mini-application \'Layla Cloud\' à l\'intérieur de Layla", et si elle n\'est pas installée ou activée, "aucune fonctionnalité liée à Layla Cloud n\'est activée". Lorsque Layla Cloud est actif, la propre documentation du développeur indique qu\'il collecte l\'historique des conversations — vos messages, les réponses des personnages, ainsi que les données de fonctionnalités auxiliaires comme la Mémoire à Long Terme, le PDF Digest et Dream —, et que ces données sont anonymisées et non liées à votre compte, bien qu\'elles puissent être utilisées pour le débogage ou l\'amélioration du service. La politique précise également que Layla Cloud ne collecte pas rétroactivement les conversations antérieures à son activation.',
+          'Ce dernier point — les fonctionnalités cloud optionnelles — correspond à Layla Cloud, décrit par le développeur comme un mode distinct et séparé : selon la politique, "Layla Cloud n\'est activé que si vous installez la mini-application \'Layla Cloud\' à l\'intérieur de Layla", et si elle n\'est pas installée ou activée, "aucune fonctionnalité liée à Layla Cloud n\'est activée". Lorsque Layla Cloud est actif, la propre documentation du développeur indique qu\'il collecte l\'historique des conversations — vos messages, les réponses des personnages, ainsi que les données de fonctionnalités auxiliaires comme la Mémoire à Long Terme, le PDF Digest et Dream —, et que ces données sont anonymisées et non liées à votre compte, bien qu\'elles puissent être utilisées pour le débogage ou pour l\'entraînement d\'IA afin d\'améliorer le service. La politique précise aussi que la suppression d\'un compte Layla Cloud n\'efface pas l\'historique des conversations passées des serveurs du développeur. La politique précise également que Layla Cloud ne collecte pas rétroactivement les conversations antérieures à son activation.',
           'Dans l\'ensemble, il s\'agit d\'une conception de confidentialité sensiblement différente de celle d\'une application dont la fonctionnalité principale ne comporte aucune composante cloud : le mode local par défaut de Layla est conçu pour rester sur l\'appareil avec une barrière de consentement explicite avant toute transmission, mais le produit lui-même propose un chemin optionnel et activé séparément vers le cloud qui collecte bien des données de conversation anonymisées lorsqu\'un utilisateur l\'active. Les lecteurs souhaitant la garantie la plus forte possible — un produit sans aucun mode cloud à activer — devraient comparer cela à [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review), dont l\'intégralité du code est open source sous licence MIT, sans aucune fonction de chat cloud intégrée.',
         ],
         items: [
@@ -1780,6 +1842,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud :** un mode séparé et optionnel (installé comme mini-application ou application distincte) qui collecte un historique de conversation anonymisé, y compris des données de fonctionnalités auxiliaires, une fois activé.',
           '**Non rétroactif :** selon la politique, l\'activation de Layla Cloud n\'intègre pas l\'historique de conversation antérieur à son activation.',
           '**Code source fermé :** contrairement à PocketPal AI ou Maid, le code de l\'application cliente de Layla n\'est pas publié, de sorte que l\'affirmation d\'absence de transmission par défaut repose sur la politique de confidentialité du développeur lui-même plutôt que sur un audit de code indépendant.',
+          '**Étiquettes de confidentialité des boutiques :** déclarées par le développeur et non vérifiées par Apple — l\'application principale indique des données de diagnostic ainsi que des photos ou vidéos (pour le fonctionnement de l\'app), aucune n\'étant liée à vous, tandis que la fiche distincte Layla (Cloud) déclare l\'adresse e-mail et le contenu utilisateur.',
+          '**Ancienneté de la politique :** la page de la politique affiche une date de dernière mise à jour du 10/05/2024, antérieure aux versions 7.x ; elle peut donc ne pas décrire les fonctions plus récentes.',
         ],
         callouts: [
           {
@@ -1809,12 +1873,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: 'Quel matériel est nécessaire pour faire fonctionner Layla ?',
         content: [
-          '**La fiche App Store recommande un minimum de 8 Go de RAM, et le propre marketing de Layla a historiquement décrit l\'application comme visant les smartphones haut de gamme récents plutôt que du matériel économique ou ancien.** Il s\'agit d\'un seuil plus strict que celui de certaines applications de chat local concurrentes prenant en charge confortablement des modèles plus petits de 2 à 4 milliards de paramètres avec 4 Go de RAM — les fonctionnalités de compagnon de Layla (modèles par défaut plus lourds, génération locale d\'images et animation de personnage) relèvent le seuil matériel pratique.',
+          '**Le site du développeur indique que de petits modèles locaux fonctionnent sur des téléphones disposant d\'environ 4 Go de RAM et que les modèles plus grands fonctionnent mieux avec 8 Go ou plus ; la description de l\'App Store vise "les derniers smartphones haut de gamme (8 Go de RAM ou plus)".** Les fonctionnalités de compagnon de Layla (modèles par défaut plus lourds, génération locale d\'images et animation de personnage) relèvent le seuil matériel pratique au-dessus de celui d\'applications de chat local plus sobres.',
           'Comme pour toute application basée sur GGUF, le modèle précis chargé — et non l\'application elle-même — détermine réellement les besoins en mémoire : un modèle quantifié plus petit nécessite moins de RAM qu\'un modèle de 7 milliards de paramètres ou plus, et exécuter la génération locale d\'images Stable Diffusion en parallèle du chat ajoute une surcharge de mémoire et de traitement supplémentaire au-delà de l\'inférence en texte seul.',
         ],
         items: [
-          'Minimum recommandé : 8 Go de RAM, selon la fiche App Store — nettement plus élevé que le seuil de 4 Go courant chez les applications de chat local plus sobres de cette catégorie.',
-          'Les smartphones haut de gamme récents (approximativement les dernières générations) sont recommandés plutôt que du matériel plus ancien ou économique, selon les propres supports marketing du développeur.',
+          'Petits modèles locaux : environ 4 Go de RAM, selon le site du développeur ; modèles plus grands : 8 Go ou plus.',
+          'Meilleure expérience : smartphones haut de gamme avec 8 Go ou plus, selon la description de l\'App Store, plutôt que du matériel plus ancien ou économique.',
           'Stockage : le téléchargement du modèle par défaut au premier lancement a été signalé autour de 4 Go dans les versions précédentes ; les modèles GGUF personnalisés et les checkpoints Stable Diffusion ajoutent des besoins de stockage supplémentaires.',
           'La génération locale d\'images (Stable Diffusion 1.5) ajoute une surcharge de traitement et de mémoire au-delà du chat en texte seul — attendez-vous à des performances plus lentes sur les appareils à faible RAM lors de l\'utilisation de cette fonctionnalité.',
         ],
@@ -1833,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Avantage': 'Génération locale de texte et d\'images',
             'Portée en usage réel': 'Le chat comme la génération d\'images Stable Diffusion 1.5 peuvent fonctionner entièrement sur l\'appareil.',
-            'Limite / réserve': 'Nécessite sensiblement plus de RAM et de stockage que les applications de chat local en texte seul ; l\'App Store indique un minimum de 8 Go.',
+            'Limite / réserve': 'Nécessite sensiblement plus de RAM et de stockage que les applications de chat local en texte seul ; la description de l\'App Store vise les smartphones de 8 Go ou plus.',
           },
           {
             'Avantage': 'Barrière de consentement explicite avant sortie de données',
@@ -1848,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Avantage': 'Achat unique de 19,99 $',
             'Portée en usage réel': 'Aucun abonnement requis pour l\'application de base, sur aucune des deux boutiques.',
-            'Limite / réserve': 'Trois paliers d\'achat intégré supplémentaires existent, dont le contenu exact n\'est pas entièrement détaillé sur la fiche publique — vérifiez dans l\'application ce que vous achetez exactement.',
+            'Limite / réserve': 'Trois formules d\'achat intégré supplémentaires existent (chacune aussi avec un prix annuel), dont le contenu exact n\'est pas entièrement détaillé sur la fiche publique — vérifiez dans l\'application ce que vous achetez exactement et si la formule se renouvelle.',
           },
           {
             'Avantage': 'Multiplateforme : Android et iOS',
@@ -1874,7 +1938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Lecteurs ayant besoin d\'un produit garanti sans aucune composante cloud.** Layla proposant un mode cloud optionnel (Layla Cloud) qui collecte des données anonymisées une fois activé, les lecteurs souhaitant spécifiquement une application sans jamais aucune fonction cloud à activer devraient plutôt choisir [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review), dont l\'intégralité du code open source ne comporte aucun chemin de chat cloud intégré.',
           '**Lecteurs souhaitant une application gratuite ou entièrement open source.** Layla est une application payante à code source fermé à 19,99 $ ; PocketPal AI (gratuite, licence MIT) et Maid (gratuite, licence MIT) répondent plutôt à ce besoin.',
           '**Lecteurs souhaitant une interface de chat simple et minimale façon assistant.** La conception de Layla centrée sur les personnages et les personas ajoute une complexité que les utilisateurs souhaitant un simple chat questions-réponses pourraient ne pas vouloir ; Private LLM ou PocketPal AI sont conçus de façon plus proche d\'un assistant.',
-          '**Lecteurs disposant d\'appareils à faible RAM ou anciens.** L\'App Store indique 8 Go de RAM comme recommandation minimale, plus élevée que plusieurs applications concurrentes exécutant confortablement des modèles plus petits avec 4 Go.',
+          '**Lecteurs disposant d\'appareils à faible RAM ou anciens.** La description de l\'App Store vise les smartphones de 8 Go ou plus, et le site du développeur place les modèles plus grands à 8 Go ou plus — soit davantage que plusieurs applications concurrentes exécutant confortablement des modèles plus petits avec 4 Go.',
           '**Lecteurs ayant besoin de fonctionnalités d\'entreprise ou d\'équipe.** Layla est une application grand public mono-utilisateur, sans console d\'administration, sans gestion de licences partagées ni facturation d\'équipe ; les organisations devraient plutôt envisager une infrastructure LLM locale auto-hébergée côté serveur.',
           '**Lecteurs souhaitant auditer eux-mêmes le code source de l\'application.** L\'application cliente de Layla est à code source fermé ; les lecteurs ayant besoin de ce niveau de garantie devraient utiliser une alternative sous licence MIT ou AGPL comme PocketPal AI, Maid ou ChatterUI.',
         ],
@@ -1964,7 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Layla est-elle gratuite ?',
-            a: 'Non, l\'application principale Layla coûte 19,99 $ en achat unique sur l\'App Store comme sur Google Play. La fiche App Store affiche également trois paliers d\'achat intégré nommés (Monarch 4,99 $, Birdwing 19,99 $, Blue Morpho 29,99 $). Une version gratuite plus limitée aurait été distribuée en téléchargement direct d\'APK depuis le site du développeur — vérifiez la disponibilité actuelle sur [layla-network.ai](https://www.layla-network.ai). Layla Cloud, une application compagnon distincte pour le chat basé sur le cloud, est gratuite au téléchargement en tant qu\'application autonome.',
+            a: 'En partie. L\'application principale Layla coûte 19,99 $ en achat unique sur l\'App Store comme sur Google Play, tandis que la [page de téléchargement](https://www.layla-network.ai/download) du développeur propose une version gratuite aux fonctions limitées, en APK direct pour Android. Les pages officielles ne mentionnent ni code d\'achat ni clé de licence ; méfiez-vous donc des sites qui promettent un « code d\'achat » gratuit. L\'App Store américain liste aussi des formules d\'achat intégré (Monarch, Birdwing, Blue Morpho) avec des prix mensuels et annuels. Layla Cloud, une application distincte, est gratuite au téléchargement sur l\'App Store.',
           },
           {
             q: 'Layla fonctionne-t-elle entièrement hors ligne, sans aucune composante cloud ?',
@@ -1984,15 +2048,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'De combien de RAM Layla a-t-elle besoin ?',
-            a: 'La fiche App Store recommande un minimum de 8 Go de RAM, plus élevé que le seuil d\'environ 4 Go courant chez les applications de chat local en texte seul plus sobres, reflétant les modèles par défaut plus lourds de Layla, la génération locale d\'images et les fonctionnalités d\'animation de personnage.',
+            a: 'Le site du développeur indique que de petits modèles locaux fonctionnent sur des téléphones disposant d\'environ 4 Go de RAM et que les modèles plus grands fonctionnent mieux avec 8 Go ou plus, tandis que la description de l\'App Store vise les smartphones haut de gamme de 8 Go ou plus. Les modèles par défaut plus lourds de Layla, la génération locale d\'images et l\'animation de personnage relèvent le seuil pratique au-dessus de celui d\'applications de chat en texte seul plus sobres.',
           },
           {
             q: 'Qu\'est-ce que Layla Cloud, et est-ce la même chose que l\'application principale Layla ?',
-            a: 'Non. Layla Cloud est un mode séparé et optionnel, ou une mini-application, qui propose un chat de personnage basé sur le cloud pour les utilisateurs ne souhaitant pas gérer de modèles locaux. Selon la politique de confidentialité, il n\'est actif que si un utilisateur l\'installe ou l\'active, et lorsqu\'il est actif, il collecte un historique de conversation anonymisé à des fins de débogage ou d\'amélioration du service. Il ne collecte pas rétroactivement de données antérieures à son activation.',
+            a: 'Non. Layla Cloud est un mode séparé et optionnel, ou une mini-application, qui propose un chat de personnage basé sur le cloud pour les utilisateurs ne souhaitant pas gérer de modèles locaux. Selon la politique de confidentialité, il n\'est actif que si un utilisateur l\'installe ou l\'active, et lorsqu\'il est actif, il collecte un historique de conversation anonymisé à des fins de débogage ou d\'amélioration du service. Il ne collecte pas rétroactivement de données antérieures à son activation, et la suppression d\'un compte Layla Cloud n\'efface pas l\'historique des conversations passées des serveurs du développeur. Layla (Cloud) est aussi proposée comme application gratuite distincte sur l\'App Store.',
+          },
+          {
+            q: 'Layla peut-elle se connecter à un PC ou à un serveur ?',
+            a: 'Oui, via le projet open source du développeur, [Layla-Server](https://github.com/l3utterfly/Layla-Server), un wrapper sous licence Apache-2.0 autour de llama-server (ou de tout serveur compatible OpenAI) qui relaie les requêtes via WebRTC afin que l\'application Layla puisse joindre votre PC de n\'importe où. Un billet du blog du développeur décrit aussi l\'exécution de Layla sous Windows via BlueStacks, connectée à LM Studio par une API compatible OpenAI. Layla Cloud est autre chose : c\'est le mode hébergé du développeur, et non votre propre serveur.',
+          },
+          {
+            q: 'Layla est-elle open source ?',
+            a: 'Non pour l\'application elle-même : le client Layla est à code source fermé. Les dépôts [Layla-Server](https://github.com/l3utterfly/Layla-Server) et [Layla SDK](https://github.com/l3utterfly/layla-sdk) sont sous licence Apache-2.0, et les modèles affinés de la marque Layla sont publiés ouvertement sur [Hugging Face](https://huggingface.co/l3utterfly). Comme le client ne peut pas être audité, son comportement en matière de confidentialité repose sur la politique du développeur lui-même.',
+          },
+          {
+            q: 'Layla AI est-elle sûre à utiliser ?',
+            a: 'PromptQuorum n\'a pas audité l\'application. Selon le développeur, le chat principal fonctionne hors ligne, les conversations sont stockées chiffrées sur l\'appareil et l\'application demande avant d\'utiliser Internet. Le mode Layla Cloud est la principale exception, et le client à code source fermé ne peut pas être vérifié de façon indépendante. Téléchargez-la uniquement depuis l\'App Store, Google Play ou le site du développeur, qui avertit que des APK modifiés peuvent contenir des malwares.',
           },
           {
             q: 'Layla est-elle fiable ? Les utilisateurs signalent-ils des problèmes ?',
-            a: 'Layla affiche une note de 3,8/5 sur 31 avis sur l\'App Store au moment de l\'évaluation. Certains avis publics sur l\'App Store signalent des plantages et des fonctions hors ligne peu fiables, en particulier lors de l\'import de modèles personnalisés sur iOS. Cet avis n\'a pas vérifié de façon indépendante la stabilité actuelle de l\'application — considérez cela comme des observations signalées par des utilisateurs, et testez l\'application pendant le délai de remboursement de votre plateforme avant de vous y fier.',
+            a: 'Layla affiche une note de 3,8/5 sur 33 évaluations sur l\'App Store au moment de l\'évaluation. Certains avis publics sur l\'App Store signalent des plantages et des fonctions hors ligne peu fiables, en particulier lors de l\'import de modèles personnalisés sur iOS. Cet avis n\'a pas vérifié de façon indépendante la stabilité actuelle de l\'application — considérez cela comme des observations signalées par des utilisateurs, et testez l\'application pendant le délai de remboursement de votre plateforme avant de vous y fier.',
           },
           {
             q: 'L\'application de compagnon IA "Layla" est-elle la même société que le planificateur de voyages IA "Layla" racheté par Expedia ?',
@@ -2016,10 +2092,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Layla sur l\'App Store](https://apps.apple.com/us/app/layla/id6456886656) — prix, paliers d\'achat intégré, exigences de plateforme, notes et historique des versions.',
           '[Layla sur Google Play](https://play.google.com/store/apps/details?id=com.layla) — disponibilité et prix pour Android.',
-          '[Site officiel de Layla](https://www.layla-network.ai) — présentation du produit et descriptions des fonctionnalités publiées par le développeur.',
+          '[Site officiel de Layla](https://www.layla-network.ai) et [page de téléchargement](https://www.layla-network.ai/download) — présentation du produit, APK gratuit, notes sur la restauration des achats et indications de RAM.',
           '[Politique de confidentialité de Layla](https://blog.layla-network.ai/privacy) — traitement des données local vs. cloud, périmètre de Layla Cloud et informations sur la collecte de données.',
           '[Layla (Cloud) sur l\'App Store](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — la fiche de l\'application distincte du mode cloud optionnel.',
-          '[l3utterfly sur GitHub](https://github.com/l3utterfly) et [l3utterfly sur Hugging Face](https://huggingface.co/l3utterfly) — publications de modèles de la marque Layla et projets d\'infrastructure connexes (Layla-Server, Layla SDK).',
+          '[l3utterfly sur GitHub](https://github.com/l3utterfly) et [l3utterfly sur Hugging Face](https://huggingface.co/l3utterfly) — publications de modèles de la marque Layla et projets d\'infrastructure connexes ([Layla-Server](https://github.com/l3utterfly/Layla-Server), [Layla SDK](https://github.com/l3utterfly/layla-sdk)).',
         ],
       },
       relatedReading: {
@@ -2039,18 +2115,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-ja.webp',
     title: 'Layla レビュー:Android・iOS向けオンデバイスAIコンパニオンアプリ',
-    seoTitle: 'Layla レビュー:ローカルAIコンパニオンアプリの料金とプライバシー',
+    seoTitle: 'Layla AIレビュー:ローカル・クラウド・サーバーと料金',
     intro:
       '[Layla Network Pty Ltd](https://www.layla-network.ai)（オーストラリアで登記された企業で、GitHub上では"Layla"ブランドのファインチューニング済みオープンウェイトモデルを公開する開発者[l3utterfly](https://github.com/l3utterfly)とも関連付けられています)が手がけるLaylaは、スマートフォン上でローカルに動作するパーソナルAIコンパニオンを軸に、単なるチャットにとどまらないペルソナ・ロールプレイ・キャラクター機能を備えたAndroidとiOS向けの有料アプリです。App StoreとGoogle Playの両方で[19.99ドルの買い切り](https://apps.apple.com/us/app/layla/id6456886656)で、App Storeの掲載情報にはさらに名前付きのアプリ内課金プランが3種類表示されています。Laylaのコアチャットはllama.cppを使ってGGUFモデルを完全に端末上で動かすよう設計されていますが、アプリには「Layla Cloud」というデフォルトでは有効ではない、別途同意が必要なオプションのクラウドモードも用意されています。本レビューは、実際にローカルで動く部分・動かない部分、実際の料金、そしてどのような読者に向いているかを、独自のハンズオンテストではなく、開発者自身のプライバシーポリシー、アプリストアの掲載情報、公開ドキュメントに基づいて解説します。',
     metaDescription:
-      'Layla レビュー2026:Android・iOS向け19.99ドルのオンデバイスAIコンパニオンアプリ。実際にローカルで動く部分とオプションのLayla Cloudモードの違い、正確な料金、モデル、向いている読者を解説。',
+      'Layla AIレビュー:Android・iPhone向け19.99ドルのオフラインAIコンパニオンアプリ。ローカルで動く部分、Layla CloudとLayla-Server、プラン、無料APK、プライバシーを解説。',
     twitterDescription:
-      'Layla レビュー2026:ロールプレイ・ペルソナ機能を備えたAndroid・iOS向け19.99ドルのローカルAIコンパニオンアプリ。端末上で動く部分、オプションのクラウドモードが収集するデータ、PocketPal AIやPrivate LLMとの比較を解説。',
+      'Layla AIレビュー:ロールプレイ・ペルソナ機能を備えたAndroid・iOS向け19.99ドルのローカルAIコンパニオンアプリ。端末上で動く部分、Layla Cloudが収集するデータ、無料APK、PocketPal AIやPrivate LLMとの比較を解説。',
     audience:
       '有料のオンデバイスAIコンパニオン/ロールプレイアプリを検討しているAndroid・iOSユーザー向け。ローカルに留まる部分とオプションのクラウドモードが収集する内容を正確に把握したい読者、正確な料金、公開アプリストアレビューに基づく信頼性の注意点も扱います。',
     readTime: '11分で読める',
@@ -2066,6 +2142,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai 料金',
       'ローカル ai コンパニオン アプリ',
       'layla vs pocketpal ai',
+      'layla cloud とは',
+      'layla server 接続',
+      'layla ai 安全性',
+      'layla ai 無料',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -2081,9 +2161,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'コアチャットはllama.cppを使ってGGUFモデルで端末上で動作。開発者のプライバシーポリシーによれば、データが端末外に出る前に警告するとされている。',
           'Layla Cloudは別個のオプションのモードで、有効化すると匿名化された会話データを収集する。デフォルトでは無効。',
           'ロールプレイに重点:ペルソナキャラクター、グループ会話、100種類以上のTTS音声、ローカルStable Diffusion 1.5による画像生成(アプリストアの掲載情報による)。',
-          'レビュー時点でApp Storeの評価は31件のレビューで3.8/5。一部のレビュアーはオフライン機能の不安定さを報告しているが、これはユーザー報告であり、PromptQuorumが独自に検証したものではない。',
+          'レビュー時点でApp Storeの評価は33件のレビューで3.8/5。一部のレビュアーはオフライン機能の不安定さを報告しているが、これはユーザー報告であり、PromptQuorumが独自に検証したものではない。',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2122,12 +2202,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '料金:[App Store](https://apps.apple.com/us/app/layla/id6456886656)とGoogle Playで19.99ドルの買い切り、加えて公開情報では内容が完全には示されていない、名前付きのアプリ内課金プランが3種類ある。',
+          '料金:[App Store](https://apps.apple.com/us/app/layla/id6456886656)とGoogle Playで19.99ドルの買い切り、加えて公開情報では内容が完全には示されていない、名前付きのアプリ内プランが3種類あり(それぞれ年額価格も掲載)、開発者のサイトでは機能が制限された無料APKも提供されている。',
+          'バージョン:7.6.0がApp StoreとGoogle Playの現行リリースで、Google Playでの最終更新は2026年10月19日と表示されている。',
           '開発元:[Layla Network Pty Ltd](https://www.layla-network.ai)というオーストラリアで登記された企業。Hugging Face上のLaylaブランドのファインチューニングモデルはGitHubアカウント[l3utterfly](https://github.com/l3utterfly)の下で公開されている。',
           'コアチャットはllama.cppを使ってGGUFモデルで端末上で動作する。開発者自身の技術ブログ記事によれば、LiteRT-LMおよびPTE(ExecuTorch)モデルバックエンド、ローカルStable Diffusion 1.5による画像生成にも対応している。',
           'プライバシー:開発者の[プライバシーポリシー](https://blog.layla-network.ai/privacy)によれば、コア機能はオフラインで動作するよう設計されており、デフォルトでは無効な別個のオプション「Layla Cloud」モードを除き、データが端末外に出る前に警告する。',
           'コンパニオン・ロールプレイ重視:カスタマイズ可能なペルソナ、グループ会話、100種類以上の音声、Live2Dキャラクターアニメーションが、このカテゴリのよりシンプルなチャットアプリとの違いとなっている。',
-          'App Store評価:レビュー時点で31件のレビューで3.8/5。一部のレビュアーはクラッシュや不安定なオフライン動作を報告しているが、本レビューはこのユーザー報告を独自に検証していない。',
+          'App Store評価:レビュー時点で33件のレビューで3.8/5。一部のレビュアーはクラッシュや不安定なオフライン動作を報告しているが、本レビューはこのユーザー報告を独自に検証していない。',
         ],
         callouts: [
           {
@@ -2136,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: '本レビューは、Laylaの公開プライバシーポリシー、App StoreとGoogle Playの掲載情報、開発者自身の技術ブログ記事、公開されているユーザーレビューに基づき、2026年9月時点で確認したものです。PromptQuorumは本レビューのために独自のハンズオンテストやベンチマークをLaylaに対して実施していません。',
+            text: '本レビューは、Laylaの公開プライバシーポリシー、App StoreとGoogle Playの掲載情報、開発者自身のサイトと技術ブログ記事、公開されているユーザーレビューに基づき、バージョン7.6.0に照らして再確認したものです。PromptQuorumは本レビューのために独自のハンズオンテストやベンチマークをLaylaに対して実施していません。',
           },
         ],
       },
@@ -2160,7 +2241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '発行元:[Layla Network Pty Ltd](https://www.layla-network.ai)、オーストラリア・クイーンズランド州サウスポートに登記。',
           '公開開始:サードパーティのアプリディレクトリによれば2023年8月頃。',
           'モデル開発:LaylaブランドのオープンウェイトファインチューニングモデルはGitHubアカウント[l3utterfly](https://github.com/l3utterfly)の下でHugging Faceに公開されている。',
-          '関連プロジェクト:[Layla-Server](https://github.com/l3utterfly/Layla-Server)(WebRTC経由でアプリを自己ホスト型のPCバックエンドに接続する)、[Layla SDK](https://github.com/l3utterfly/layla-sdk)(Layla内でミニアプリを構築する)。',
+          '関連プロジェクト:[Layla-Server](https://github.com/l3utterfly/Layla-Server)(WebRTC経由でアプリを自己ホスト型のPCバックエンドに接続する)、[Layla SDK](https://github.com/l3utterfly/layla-sdk)(Layla内でミニアプリを構築する)。いずれもApache-2.0ライセンス。',
           'クライアントアプリのソースコードは公開されていない — PocketPal AIやMaidと異なり、Laylaのアプリ自体はクローズドソースであり、一部の基盤モデルがオープンウェイトであっても同様。',
         ],
       },
@@ -2173,7 +2254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'アプリを購入してインストールする',
-            whyItMatters: '[App Store](https://apps.apple.com/us/app/layla/id6456886656)(19.99ドル)または[Google Play](https://play.google.com/store/apps/details?id=com.layla)(19.99ドル)からLaylaをダウンロードします。開発者自身のサイトから直接APKをダウンロードする、より機能が制限された無料版が提供されているとの報告もあります — お使いのプラットフォームに当てはまると仮定する前に、[layla-network.ai](https://www.layla-network.ai)で現在の提供状況を直接確認してください。',
+            whyItMatters: '[App Store](https://apps.apple.com/us/app/layla/id6456886656)(19.99ドル)または[Google Play](https://play.google.com/store/apps/details?id=com.layla)(19.99ドル)からLaylaをダウンロードします。開発者の[ダウンロードページ](https://www.layla-network.ai/download)では、機能が制限された無料版を含むAndroid向けの直接APKも提供されていますが、どの機能が制限されるかは記載されていません。APKは必ず開発者自身のサイトから入手してください — 同ページは、サードパーティの改造APKにはマルウェアが含まれる可能性があり、更新も受けられないと警告しています。',
           },
           {
             title: 'アプリにデフォルトモデルをダウンロードさせる',
@@ -2242,12 +2323,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'プラットフォーム': 'Android',
             '提供状況': '[Google Play](https://play.google.com/store/apps/details?id=com.layla)で提供',
-            '備考': 'Google Playとは別に、開発者自身のサイトから直接APKを配布するチャネルも提供されているとの報告がある — 依存する前に現在の提供状況を直接確認すること。',
+            '備考': '開発者の[ダウンロードページ](https://www.layla-network.ai/download)でも、Google Playとは別に自社サーバーから直接APKを提供しており、機能が制限された無料版が含まれている。',
           },
           {
             'プラットフォーム': 'Windows / Linux',
             '提供状況': 'レビュー時点でネイティブのWindowsまたはLinuxデスクトップ版は確認されていない',
-            '備考': '[Layla-Server](https://github.com/l3utterfly/Layla-Server)プロジェクトにより、モバイルアプリはWebRTC経由で独自のローカルバックエンドを動かすPCに接続できるが、これはネイティブのデスクトップクライアントではなくブリッジである。',
+            '備考': '[Layla-Server](https://github.com/l3utterfly/Layla-Server)プロジェクト(Apache-2.0)により、モバイルアプリはWebRTC経由で独自のローカルバックエンドを動かすPCに接続できるが、これはネイティブのデスクトップクライアントではなくブリッジである。開発者のブログ記事では、BlueStacks経由でWindows上でLaylaを動かし、OpenAI互換APIでLM Studioに接続する方法も紹介されている。',
           },
         ],
       },
@@ -2255,14 +2336,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'Laylaの料金は?',
         content: [
-          '**Laylaは、[Apple App Store](https://apps.apple.com/us/app/layla/id6456886656)と[Google Play](https://play.google.com/store/apps/details?id=com.layla)の両方で19.99ドルの買い切りです。** この基本購入に加えて、App Storeの掲載情報には、Monarch(4.99ドル)、Birdwing(19.99ドル)、Blue Morpho(29.99ドル)という名前付きのアプリ内課金プランが3種類表示されていますが、各プランが具体的に何を解放するのか(たとえばクラウド利用クレジット、プレミアムキャラクター、追加音声を含むかどうかなど)は、公開されているストア情報では完全には示されていません。購入前に、アプリ内で特定のプランに何が含まれるかを正確に確認してください。',
-          '開発者自身のブログコンテンツによれば、より機能が制限された無料版のアプリが、開発者自身のサイトから直接APKでダウンロードできる形で提供されていると報告されています。これは有料のApp StoreおよびGoogle Playの掲載とは別のもので、現在の提供状況と機能セットは、本レビューから推測するのではなく[layla-network.ai](https://www.layla-network.ai)で直接確認する必要があります。',
-          '別個のオプションのクラウドチャットモードであるLayla Cloudは、各ストアで独立したアプリとして無料でダウンロードできると表示されています。Layla Cloudの継続利用が無料枠を超えて定期課金やクレジットを必要とするかどうかは、本記事で確認した公開掲載情報では示されていません。',
+          '**Laylaは、[Apple App Store](https://apps.apple.com/us/app/layla/id6456886656)と[Google Play](https://play.google.com/store/apps/details?id=com.layla)の両方で19.99ドルの買い切りです。** この基本購入に加えて、米国App Storeの掲載情報には、Monarch(4.99ドル)、Birdwing(19.99ドル)、Blue Morpho(29.99ドル)という名前付きのアプリ内プランが3種類表示されており、それぞれ年額プラン(Monarch 49.99ドル、Birdwing 169.99ドル、Blue Morpho 249.99ドル)も掲載されています。年額プランの掲載から定期課金である可能性がうかがえるため、購入画面でプランが自動更新されるかを確認してください。各プランが具体的に何を解放するのか(たとえばクラウド利用クレジット、プレミアムキャラクター、追加音声を含むかどうかなど)は公開情報では示されていないため、購入前にアプリ内で確認してください。',
+          '開発者の[ダウンロードページ](https://www.layla-network.ai/download)とサイトのFAQには、機能が制限された無料版が、有料のストア掲載とは別に、Android向けの直接APKとして提供されていると記載されています。この無料版の購入コードやライセンスキーは示されておらず、どの機能が制限されるかも記載されていません。Layla Networkは、フルアプリは定期課金ではなく買い切りだと述べています。',
+          '別個のオプションのクラウドチャットモードであるLayla Cloudは、App Storeで独立したアプリとして無料でダウンロードでき、アプリ内課金は表示されていないと掲載されています。Layla Cloudの継続利用が無料枠を超えて定期課金やクレジットを必要とするかどうかは、本記事で確認した公開掲載情報では示されていません。',
         ],
         items: [
           '**基本アプリ:** App StoreとGoogle Playで19.99ドルの買い切り — 基本購入自体には定期課金は不要。',
-          '**アプリ内課金プラン:** Monarch(4.99ドル)、Birdwing(19.99ドル)、Blue Morpho(29.99ドル) — App Storeの掲載情報に名前が記載されているが、正確な内容は公開情報では完全には示されていない。',
-          '**無料/機能限定版:** 開発者自身のサイトから直接APKでダウンロードできると報告されており、有料のストア掲載とは別のもの — 現在の状況を直接確認すること。',
+          '**アプリ内プラン:** Monarch(4.99ドル)、Birdwing(19.99ドル)、Blue Morpho(29.99ドル)。米国App Storeでは、それぞれ年額プラン(49.99ドル、169.99ドル、249.99ドル)も掲載されている。正確な内容は公開情報では完全には示されていない。',
+          '**無料/機能限定版:** 開発者の[ダウンロードページ](https://www.layla-network.ai/download)から入手できる直接APKで、機能は限定されており、購入コードの記載はない。有料のストア掲載とは別のもの。',
           '**Layla Cloud:** クラウドベースのキャラクターチャット向けの、無料でダウンロードできる別個のコンパニオンアプリ。無料枠を超えた独自の費用体系は公開掲載情報では示されていない。',
         ],
       },
@@ -2271,7 +2352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシー:ローカルチャット vs. Layla Cloud',
         content: [
           '**Layla自身の[プライバシーポリシー](https://blog.layla-network.ai/privacy)には「当アプリのコア機能はお使いの端末上でオフラインに動作するよう設計されています」と記載されており、端末外にデータを送信するアクションの前に、警告と確認メッセージを表示するとされています。** ポリシーでは、外向きデータの具体的なトリガーとして、Personality Hubへのキャラクターのアップロード、アプリ内「不具合を報告」機能の利用、オプションのクラウド機能の有効化を挙げています。',
-          'この最後の項目 — オプションのクラウド機能 — がLayla Cloudであり、開発者はこれを独立した別個のモードとして説明しています。ポリシーによれば「Layla Cloudは、Layla内で『Layla Cloud』ミニアプリをインストールした場合にのみ有効になります」とされ、インストールまたは有効化していない場合は「Layla Cloudに関連する機能は一切有効になりません」とされています。Layla Cloudが有効な場合、開発者自身のドキュメントによれば、メッセージ・キャラクターの応答、長期記憶・PDF Digest・Dreamなどの補助機能のデータを含む会話履歴を収集するとされており、このデータは匿名化されアカウントに紐付けられませんが、デバッグやサービス改善に使用される可能性があります。ポリシーはまた、Layla Cloudが有効化前の会話を遡って収集することはないとも述べています。',
+          'この最後の項目 — オプションのクラウド機能 — がLayla Cloudであり、開発者はこれを独立した別個のモードとして説明しています。ポリシーによれば「Layla Cloudは、Layla内で『Layla Cloud』ミニアプリをインストールした場合にのみ有効になります」とされ、インストールまたは有効化していない場合は「Layla Cloudに関連する機能は一切有効になりません」とされています。Layla Cloudが有効な場合、開発者自身のドキュメントによれば、メッセージ・キャラクターの応答、長期記憶・PDF Digest・Dreamなどの補助機能のデータを含む会話履歴を収集するとされており、このデータは匿名化されアカウントに紐付けられませんが、デバッグ、またはサービス改善のためのAI学習に使用される可能性があります。ポリシーは、Layla Cloudアカウントを削除しても、過去の会話履歴は開発者のサーバーから削除されないとも述べています。ポリシーはまた、Layla Cloudが有効化前の会話を遡って収集することはないとも述べています。',
           '総合すると、これはコア機能にクラウドコンポーネントが一切ないアプリとは実質的に異なるプライバシー設計です。Laylaのデフォルトのローカルモードは、送信前に明示的な同意ゲートを設けて端末内に留まるよう設計されていますが、製品自体は、ユーザーがオンにすると匿名化された会話データを収集する、別途有効化が必要なオプションのクラウド経路を搭載しています。「そもそもオンにできるクラウドモードが存在しない」という最も強い保証を求める読者は、これを、MITライセンスの下で全コードがオープンソースであり、組み込みのクラウドチャット機能が一切ない[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比較検討すべきです。',
         ],
         items: [
@@ -2279,6 +2360,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** ミニアプリまたは別のアプリとしてインストールされる別個のオプトインモードで、有効化すると補助機能のデータを含む匿名化された会話履歴を収集する。',
           '**遡及なし:** ポリシーによれば、Layla Cloudを有効化しても、有効化前の会話履歴が取り込まれることはない。',
           '**クローズドソース:** PocketPal AIやMaidと異なり、Laylaのクライアントアプリのコードは公開されていないため、「デフォルトでは送信しない」という主張は、独立したコード監査ではなく開発者自身のプライバシーポリシーに依拠している。',
+          '**ストアのプライバシーラベル:** 開発者の自己申告でありAppleによる検証はない。メインアプリは「ユーザーに紐付かない」データとして診断データと写真・動画(アプリの機能向け)を掲載し、別個のLayla(Cloud)の掲載情報ではメールアドレスとユーザーコンテンツが申告されている。',
+          '**ポリシーの日付:** ポリシーページの最終更新表示は10/05/2024で、7.xのリリースより前のため、新しい機能は記載されていない可能性がある。',
         ],
         callouts: [
           {
@@ -2308,12 +2391,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: 'Laylaを動かすにはどのハードウェアが必要?',
         content: [
-          '**App Storeの掲載情報では最低8GBのRAMを推奨しており、Layla自身のマーケティングは歴史的に、廉価または古いハードウェアではなく最近のフラッグシップスマートフォンを対象としているとアプリを説明してきました。** これは、4GBのRAMで2〜4Bパラメータの小型モデルを快適にサポートする一部の競合ローカルチャットアプリよりも厳しい基準です。Laylaのコンパニオン機能(より大きなデフォルトモデル、ローカル画像生成、キャラクターアニメーション)が、実用上のハードウェアの下限を押し上げています。',
+          '**開発者のサイトによれば、小型のローカルモデルはRAM 4GB前後のスマートフォンで動作し、大きなモデルは8GB以上で最も快適に動くとされています。App Storeの説明は「最新のフラッグシップスマートフォン(8GB以上のRAM)」を対象としています。** Laylaのコンパニオン機能(より大きなデフォルトモデル、ローカル画像生成、キャラクターアニメーション)が、実用上のハードウェアの下限を、よりシンプルなローカルチャットアプリより高く押し上げています。',
           'GGUFベースのアプリと同様、実際のメモリ要件を決定するのはアプリ自体ではなく読み込む具体的なモデルです。より小さい量子化モデルは7B以上のパラメータを持つモデルより少ないRAMで済み、チャットと並行してローカルのStable Diffusion画像生成を実行すると、テキストのみの推論を超える追加のメモリと処理のオーバーヘッドが発生します。',
         ],
         items: [
-          '推奨最小構成:App Storeの掲載情報によれば8GBのRAM — このカテゴリのよりシンプルなローカルチャットアプリで一般的な4GBの下限よりも著しく高い。',
-          '開発者自身のマーケティング資料によれば、古いまたは廉価なデバイスよりも、最近のフラッグシップ級スマートフォン(おおよそ直近数世代)が推奨される。',
+          '小型のローカルモデル:開発者のサイトによればRAM 4GB前後。大きなモデル:8GB以上。',
+          '最適な環境:App Storeの説明によれば、古いまたは廉価なデバイスよりも、8GB以上のフラッグシップ級スマートフォン。',
           'ストレージ:初回起動時のデフォルトモデルダウンロードは、過去のバージョンで約4GBと報告されている。カスタムGGUFモデルとStable Diffusionのチェックポイントは、さらなるストレージ要件を追加する。',
           'ローカル画像生成(Stable Diffusion 1.5)は、テキストのみのチャットを超える処理・メモリのオーバーヘッドを追加する — RAMが少ないデバイスでこの機能を使う場合、より遅いパフォーマンスを想定すべき。',
         ],
@@ -2332,7 +2415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '利点': 'ローカルなテキストと画像の生成',
             '実際の利用での意味': 'チャットとStable Diffusion 1.5による画像生成の両方が完全に端末上で動作できる。',
-            '制約・注意点': 'テキストのみのローカルチャットアプリより著しく多くのRAMとストレージが必要 — App Storeは最低8GBを挙げている。',
+            '制約・注意点': 'テキストのみのローカルチャットアプリより著しく多くのRAMとストレージが必要 — App Storeの説明は8GB以上の端末を対象としている。',
           },
           {
             '利点': '外向きデータ送信前の明示的な同意ゲート',
@@ -2347,7 +2430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '利点': '19.99ドルの買い切り',
             '実際の利用での意味': 'どちらのストアでも基本アプリに定期課金は不要。',
-            '制約・注意点': '公開情報では正確な内容が完全には示されていない、名前付きのアプリ内課金プランが3種類さらに存在する — 何を購入しているのかアプリ内で確認すること。',
+            '制約・注意点': '公開情報では正確な内容が完全には示されていない、名前付きのアプリ内プランが3種類さらに存在する(それぞれ年額価格もある) — 何を購入するのか、更新されるのかをアプリ内で確認すること。',
           },
           {
             '利点': 'クロスプラットフォーム:AndroidとiOS',
@@ -2373,7 +2456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**クラウドコンポーネントが一切ないことが保証された製品を必要とする読者。** Laylaは有効化するとデータを収集する、オプションのクラウドモード(Layla Cloud)を搭載しているため、そもそも一度もオンにできるクラウド機能がないアプリを特に求める読者は、組み込みのクラウドチャット経路が一切ない、オープンソースの全コードを持つ[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)を選ぶべきである。',
           '**無料または完全にオープンソースなアプリを求める読者。** Laylaは19.99ドルの有料・クローズドソースアプリであり、PocketPal AI(無料、MITライセンス)やMaid(無料、MITライセンス)がこのニーズをそれぞれカバーする。',
           '**シンプルで最小限のアシスタント風チャットインターフェースを求める読者。** キャラクターとペルソナを最優先するLaylaの設計は、シンプルな一問一答形式のチャットだけを求めるユーザーには不要な複雑さを加える。Private LLMやPocketPal AIの方がよりアシスタントに近い形をしている。',
-          '**RAMが少ない、または古いデバイスを使う読者。** App Storeでは最低推奨として8GBのRAMを挙げており、4GBで小型モデルを快適に動かせる複数の競合アプリよりも高い基準となっている。',
+          '**RAMが少ない、または古いデバイスを使う読者。** App Storeの説明は8GB以上の端末を対象とし、開発者のサイトも大きなモデルには8GB以上を挙げており、4GBで小型モデルを快適に動かせる複数の競合アプリよりも高い基準となっている。',
           '**企業やチーム向け機能を必要とする読者。** Laylaは管理コンソール、共有ライセンス管理、チーム請求のない単一ユーザー向けコンシューマーアプリであり、組織はサーバーサイドの自己ホスト型ローカルLLMインフラを検討すべきである。',
           '**アプリのソースコードを自分で独自に監査したい読者。** Laylaのクライアントアプリはクローズドソースであり、その水準の保証を必要とする読者は、PocketPal AI、Maid、ChatterUIなどのMITまたはAGPLライセンスの代替アプリを利用すべきである。',
         ],
@@ -2463,7 +2546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Laylaは無料ですか?',
-            a: 'いいえ。メインのLaylaアプリはApp StoreとGoogle Playの両方で19.99ドルの買い切りです。App Storeの掲載情報には、名前付きのアプリ内課金プランが3種類(Monarch 4.99ドル、Birdwing 19.99ドル、Blue Morpho 29.99ドル)も表示されています。開発者自身のサイトから直接APKでダウンロードできる、より機能が制限された無料版が提供されているとの報告もあります — 現在の提供状況は[layla-network.ai](https://www.layla-network.ai)で確認してください。クラウドベースのチャット向けの別個のコンパニオンアプリであるLayla Cloudは、独立したアプリとして無料でダウンロードできます。',
+            a: '一部は無料です。メインのLaylaアプリはApp StoreとGoogle Playの両方で19.99ドルの買い切りですが、開発者の[ダウンロードページ](https://www.layla-network.ai/download)では、機能が制限された無料版をAndroid向けの直接APKとして提供しています。公式ページには購入コードやライセンスキーの記載がないため、無料の「購入コード」をうたうサイトには注意してください。米国App Storeには、月額・年額の価格が付いたアプリ内プラン(Monarch、Birdwing、Blue Morpho)も掲載されています。別個のアプリであるLayla Cloudは、App Storeで無料でダウンロードできます。',
           },
           {
             q: 'Laylaはクラウドコンポーネントが一切なく完全にオフラインで動作しますか?',
@@ -2483,15 +2566,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Laylaにはどれくらいのメモリが必要ですか?',
-            a: 'App Storeの掲載情報では最低8GBのRAMを推奨しており、これはよりシンプルなテキストのみのローカルチャットアプリで一般的な約4GBの下限より高く、Laylaのより大きなデフォルトモデル、ローカル画像生成、キャラクターアニメーション機能を反映しています。',
+            a: '開発者のサイトによれば、小型のローカルモデルはRAM 4GB前後のスマートフォンで動作し、大きなモデルは8GB以上で最も快適に動きます。App Storeの説明は8GB以上のフラッグシップスマートフォンを対象としています。Laylaのより大きなデフォルトモデル、ローカル画像生成、キャラクターアニメーション機能が、実用上の下限をテキストのみのシンプルなチャットアプリより高くしています。',
           },
           {
             q: 'Layla Cloudとは何ですか、それはメインのLaylaアプリと同じものですか?',
-            a: 'いいえ。Layla Cloudは、ローカルモデルを管理したくないユーザー向けに、クラウドベースのキャラクターチャットを提供する、別個のオプションのモードまたはミニアプリです。プライバシーポリシーによれば、ユーザーがインストールまたは有効化した場合にのみアクティブになり、アクティブな間は、デバッグやサービス改善のために匿名化された会話履歴を収集します。有効化前のデータを遡って収集することはありません。',
+            a: 'いいえ。Layla Cloudは、ローカルモデルを管理したくないユーザー向けに、クラウドベースのキャラクターチャットを提供する、別個のオプションのモードまたはミニアプリです。プライバシーポリシーによれば、ユーザーがインストールまたは有効化した場合にのみアクティブになり、アクティブな間は、デバッグやサービス改善のために匿名化された会話履歴を収集します。有効化前のデータを遡って収集することはなく、Layla Cloudアカウントを削除しても、過去の会話履歴は開発者のサーバーから削除されません。Layla(Cloud)はApp Storeで独立した無料アプリとしても掲載されています。',
+          },
+          {
+            q: 'LaylaはPCやサーバーに接続できますか?',
+            a: 'はい。開発者のオープンソースプロジェクト[Layla-Server](https://github.com/l3utterfly/Layla-Server)を使います。これはllama-server(またはOpenAI互換の任意のサーバー)を包むApache-2.0のラッパーで、WebRTC経由でリクエストを中継するため、LaylaアプリからどこからでもPCに接続できます。開発者のブログ記事では、BlueStacks経由でWindows上でLaylaを動かし、OpenAI互換API経由でLM Studioに接続する方法も紹介されています。Layla Cloudは別物で、ご自身のサーバーではなく開発者が提供するホスト型モードです。',
+          },
+          {
+            q: 'Laylaはオープンソースですか?',
+            a: 'アプリ本体はオープンソースではありません。Laylaのクライアントはクローズドソースです。一方、[Layla-Server](https://github.com/l3utterfly/Layla-Server)と[Layla SDK](https://github.com/l3utterfly/layla-sdk)のリポジトリはApache-2.0ライセンスで、Laylaブランドのファインチューニング済みモデルは[Hugging Face](https://huggingface.co/l3utterfly)で公開されています。クライアントを監査できないため、プライバシーに関する挙動は開発者自身のポリシーに依拠しています。',
+          },
+          {
+            q: 'Layla AIは安全に使えますか?',
+            a: 'PromptQuorumは本アプリを監査していません。開発者によれば、コアチャットはオフラインで動作し、チャットは端末上で暗号化して保存され、インターネットを使う前にアプリが確認を求めます。主な例外はLayla Cloudモードで、クローズドソースのクライアントは独立して検証できません。ダウンロードはApp Store、Google Play、または開発者自身のサイトからのみ行ってください。同サイトは、改造APKにはマルウェアが含まれる可能性があると警告しています。',
           },
           {
             q: 'Laylaは信頼できますか?ユーザーは問題を報告していますか?',
-            a: 'レビュー時点で、LaylaはApp Storeで31件のレビューによる3.8/5の評価を得ています。一部の公開されたApp Storeレビュアーは、特にiOSでのカスタムモデルインポート周りでのクラッシュや不安定なオフライン機能を報告しています。本レビューは現在のアプリの安定性を独自に検証していません — これらをユーザー報告による観察として扱い、依存する前にお使いのプラットフォームの返金期間内にアプリをテストしてください。',
+            a: 'レビュー時点で、LaylaはApp Storeで33件のレビューによる3.8/5の評価を得ています。一部の公開されたApp Storeレビュアーは、特にiOSでのカスタムモデルインポート周りでのクラッシュや不安定なオフライン機能を報告しています。本レビューは現在のアプリの安定性を独自に検証していません — これらをユーザー報告による観察として扱い、依存する前にお使いのプラットフォームの返金期間内にアプリをテストしてください。',
           },
           {
             q: 'AIコンパニオンアプリの「Layla」は、Expediaに買収されたAI旅行プランナーの「Layla」と同じ企業ですか?',
@@ -2515,10 +2610,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store上のLayla](https://apps.apple.com/us/app/layla/id6456886656) — 料金、アプリ内課金プラン、プラットフォーム要件、評価、バージョン履歴。',
           '[Google Play上のLayla](https://play.google.com/store/apps/details?id=com.layla) — Androidでの提供状況と料金。',
-          '[Layla公式サイト](https://www.layla-network.ai) — 製品概要と開発者公開の機能説明。',
+          '[Layla公式サイト](https://www.layla-network.ai)および[ダウンロードページ](https://www.layla-network.ai/download) — 製品概要、無料APK、購入の復元に関する案内、RAMの目安。',
           '[Laylaプライバシーポリシー](https://blog.layla-network.ai/privacy) — ローカルとクラウドのデータ取り扱い、Layla Cloudの範囲、データ収集に関する開示。',
           '[App Store上のLayla(Cloud)](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — 別個のオプションのクラウドモードアプリの掲載情報。',
-          '[GitHub上のl3utterfly](https://github.com/l3utterfly)および[Hugging Face上のl3utterfly](https://huggingface.co/l3utterfly) — Laylaブランドのモデル公開および関連インフラプロジェクト(Layla-Server、Layla SDK)。',
+          '[GitHub上のl3utterfly](https://github.com/l3utterfly)および[Hugging Face上のl3utterfly](https://huggingface.co/l3utterfly) — Laylaブランドのモデル公開および関連インフラプロジェクト([Layla-Server](https://github.com/l3utterfly/Layla-Server)、[Layla SDK](https://github.com/l3utterfly/layla-sdk))。',
         ],
       },
       relatedReading: {
@@ -2538,18 +2633,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-pt.webp',
     title: 'Layla: Análise — App de Companheiro de IA no Dispositivo para Android e iOS',
-    seoTitle: 'Layla Análise: App de IA Local, Preço e Privacidade',
+    seoTitle: 'Layla AI Análise: App Local, Cloud, Servidor e Preço',
     intro:
       'A Layla, criada pela [Layla Network Pty Ltd](https://www.layla-network.ai) — uma empresa registrada na Austrália também vinculada no GitHub ao desenvolvedor [l3utterfly](https://github.com/l3utterfly), que publica a família de modelos de peso aberto ajustados "Layla" —, é um app pago para Android e iOS voltado para executar um companheiro de IA pessoal localmente no celular, com recursos de persona, roleplay e personagens que vão além do chat simples. Custa [$19,99 em compra única](https://apps.apple.com/us/app/layla/id6456886656) tanto na App Store quanto no Google Play, e a ficha da App Store ainda mostra três níveis de compra dentro do app com nomes próprios. O chat principal da Layla é projetado para rodar inteiramente no dispositivo usando modelos GGUF via llama.cpp, mas o app também traz um modo de nuvem opcional e ativado separadamente, chamado Layla Cloud, que não vem ativado por padrão — esta análise mostra exatamente o que roda localmente, o que não roda, quanto custa de fato e para quem o app é indicado, com base na própria política de privacidade do desenvolvedor, nas fichas das lojas de apps e em documentação pública, e não em testes práticos independentes.',
     metaDescription:
-      'Análise da Layla 2026: app de companheiro de IA no dispositivo para Android e iOS por $19,99. O que realmente roda localmente vs. o modo opcional Layla Cloud, preço exato, modelos e para quem é indicado.',
+      'Análise do Layla AI: app offline por $19,99 no Android e iPhone. O que roda local, o Layla Cloud e o Server, planos, APK grátis e privacidade.',
     twitterDescription:
-      'Análise da Layla 2026: um app de companheiro de IA local para Android e iOS por $19,99, com recursos de roleplay e persona. O que roda no dispositivo, o que o modo de nuvem opcional coleta e como se compara ao PocketPal AI e ao Private LLM.',
+      'Análise do Layla AI: um aplicativo de companheiro de IA local para Android e iOS por $19,99, com roleplay e persona. O que roda no dispositivo, o que o Layla Cloud coleta, o APK grátis e como se compara ao PocketPal AI e ao Private LLM.',
     audience:
       'Usuários de Android e iOS avaliando um app pago de companheiro/roleplay de IA no dispositivo que precisam saber com precisão o que permanece local versus o que um modo de nuvem opcional coleta, além do preço exato e ressalvas de confiabilidade a partir de avaliações públicas nas lojas de apps.',
     readTime: '11 min de leitura',
@@ -2565,6 +2660,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai preço',
       'app de companheiro de ia local',
       'layla vs pocketpal ai',
+      'layla cloud',
+      'layla server',
+      'layla ai é segura',
+      'aplicativo layla grátis',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -2580,9 +2679,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O chat principal roda no dispositivo via modelos GGUF com llama.cpp; a política de privacidade do desenvolvedor afirma que o app avisa antes que qualquer dado saia do dispositivo.',
           'O Layla Cloud é um modo separado e opcional que coleta dados de conversa anonimizados quando ativado — vem desativado por padrão.',
           'Foco em roleplay: personagens de persona, conversas em grupo, mais de 100 vozes TTS e geração local de imagens com Stable Diffusion 1.5, segundo as fichas das lojas de apps.',
-          'A avaliação na App Store é de 3,8/5 com 31 avaliações no momento desta análise; algumas resenhas mencionam recursos offline pouco confiáveis — trate isso como relato de usuários, não verificado de forma independente pela PromptQuorum.',
+          'A avaliação na App Store é de 3,8/5 com 33 avaliações no momento desta análise; algumas resenhas mencionam recursos offline pouco confiáveis — trate isso como relato de usuários, não verificado de forma independente pela PromptQuorum.',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2621,12 +2720,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Preço: [compra única de $19,99](https://apps.apple.com/us/app/layla/id6456886656) na App Store e no Google Play, além de três níveis de compra dentro do app cujo conteúdo exato não é totalmente detalhado na ficha pública.',
+          'Preço: [compra única de $19,99](https://apps.apple.com/us/app/layla/id6456886656) na App Store e no Google Play, além de três planos dentro do app (cada um também listado com preço anual) cujo conteúdo exato não é totalmente detalhado na ficha pública; o site do desenvolvedor também oferece um APK gratuito com recursos limitados.',
+          'Versão: a 7.6.0 é a versão atual na App Store e no Google Play, onde a última atualização consta como 19 de outubro de 2026.',
           'Desenvolvedor: [Layla Network Pty Ltd](https://www.layla-network.ai), empresa registrada na Austrália; os modelos ajustados da marca Layla no Hugging Face são publicados sob a conta do GitHub [l3utterfly](https://github.com/l3utterfly).',
           'O chat principal roda no dispositivo via modelos GGUF com llama.cpp; o app também suporta backends de modelo LiteRT-LM e PTE (ExecuTorch), além de geração local de imagens com Stable Diffusion 1.5, segundo os próprios posts técnicos do desenvolvedor.',
           'Privacidade: segundo a [política de privacidade](https://blog.layla-network.ai/privacy) do desenvolvedor, a funcionalidade principal é projetada para funcionar offline e o app avisa antes que dados saiam do dispositivo — exceto no modo separado e opcional Layla Cloud, desativado por padrão.',
           'Foco em companheiro e roleplay: personas personalizáveis, conversas em grupo, mais de 100 vozes e animação de personagem Live2D distinguem o app de apps de chat mais simples nessa categoria.',
-          'Avaliação na App Store: 3,8/5 com 31 avaliações no momento desta análise; algumas resenhas mencionam travamentos e comportamento offline pouco confiável — uma preocupação relatada por usuários que esta análise não verificou de forma independente.',
+          'Avaliação na App Store: 3,8/5 com 33 avaliações no momento desta análise; algumas resenhas mencionam travamentos e comportamento offline pouco confiável — uma preocupação relatada por usuários que esta análise não verificou de forma independente.',
         ],
         callouts: [
           {
@@ -2635,7 +2735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Esta análise se baseia na política de privacidade pública da Layla, nas fichas da App Store e do Google Play, nos posts técnicos do próprio desenvolvedor e em avaliações de usuários visíveis publicamente, verificadas em setembro de 2026. A PromptQuorum não realizou testes práticos nem benchmarks independentes da Layla para esta análise.',
+            text: 'Esta análise se baseia na política de privacidade pública da Layla, nas fichas da App Store e do Google Play, no site e nos posts técnicos do próprio desenvolvedor e em avaliações de usuários visíveis publicamente, reverificadas com base na versão 7.6.0. A PromptQuorum não realizou testes práticos nem benchmarks independentes da Layla para esta análise.',
           },
         ],
       },
@@ -2659,7 +2759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Editora: [Layla Network Pty Ltd](https://www.layla-network.ai), registrada em Southport, Queensland, Austrália.',
           'Lançamento público: por volta de agosto de 2023, segundo diretórios de apps de terceiros.',
           'Desenvolvimento de modelos: modelos de peso aberto ajustados da marca Layla publicados no Hugging Face sob a conta do GitHub [l3utterfly](https://github.com/l3utterfly).',
-          'Projetos relacionados: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (conecta o app a um backend de PC auto-hospedado via WebRTC) e [Layla SDK](https://github.com/l3utterfly/layla-sdk) (criar mini-apps dentro da Layla).',
+          'Projetos relacionados: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (conecta o app a um backend de PC auto-hospedado via WebRTC) e [Layla SDK](https://github.com/l3utterfly/layla-sdk) (criar mini-apps dentro da Layla), ambos com licença Apache-2.0.',
           'O código-fonte do app cliente não é público — diferente do PocketPal AI ou do Maid, o próprio app da Layla é de código fechado, mesmo que alguns de seus modelos subjacentes sejam de peso aberto.',
         ],
       },
@@ -2672,7 +2772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Comprar e instalar o app',
-            whyItMatters: 'Baixe a Layla pela [App Store](https://apps.apple.com/us/app/layla/id6456886656) ($19,99) ou pelo [Google Play](https://play.google.com/store/apps/details?id=com.layla) ($19,99). Uma versão gratuita mais limitada foi, segundo relatos, distribuída via download direto de APK no próprio site do desenvolvedor — verifique diretamente em [layla-network.ai](https://www.layla-network.ai) a disponibilidade atual dessa opção antes de assumir que ela se aplica à sua plataforma.',
+            whyItMatters: 'Baixe a Layla pela [App Store](https://apps.apple.com/us/app/layla/id6456886656) ($19,99) ou pelo [Google Play](https://play.google.com/store/apps/details?id=com.layla) ($19,99). A [página de download](https://www.layla-network.ai/download) do desenvolvedor também oferece um APK direto para Android, que inclui uma versão gratuita com recursos limitados; ela não informa quais recursos são limitados. Baixe o APK apenas do site do próprio desenvolvedor — a página avisa que APKs modificados de terceiros podem conter malware e não recebem atualizações.',
           },
           {
             title: 'Deixar o app baixar o modelo padrão',
@@ -2741,12 +2841,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Android',
             'Disponibilidade': 'Disponível no [Google Play](https://play.google.com/store/apps/details?id=com.layla)',
-            'Observações': 'Segundo relatos, também foi oferecido um canal de distribuição direta de APK a partir do próprio site do desenvolvedor, separado do Google Play — verifique a disponibilidade atual diretamente antes de confiar nisso.',
+            'Observações': 'A [página de download](https://www.layla-network.ai/download) do desenvolvedor também oferece um APK direto a partir de seus próprios servidores, que inclui uma versão gratuita com recursos limitados.',
           },
           {
             'Plataforma': 'Windows / Linux',
             'Disponibilidade': 'Nenhuma versão nativa de desktop para Windows ou Linux confirmada no momento desta análise',
-            'Observações': 'O projeto [Layla-Server](https://github.com/l3utterfly/Layla-Server) permite que o app móvel se conecte a um PC rodando seu próprio backend local via WebRTC, o que é uma ponte, não um cliente de desktop nativo.',
+            'Observações': 'O projeto [Layla-Server](https://github.com/l3utterfly/Layla-Server) (Apache-2.0) permite que o app móvel se conecte a um PC rodando seu próprio backend local via WebRTC — uma ponte, não um cliente de desktop nativo. Um post do blog do desenvolvedor também descreve rodar a Layla no Windows via BlueStacks e conectá-la ao LM Studio por uma API compatível com a OpenAI.',
           },
         ],
       },
@@ -2754,14 +2854,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'Quanto custa a Layla?',
         content: [
-          '**A Layla custa $19,99 em compra única tanto na [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) quanto no [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Além dessa compra base, a ficha da App Store mostra três níveis de compra dentro do app com nomes próprios — Monarch ($4,99), Birdwing ($19,99) e Blue Morpho ($29,99) —, mas a ficha pública da loja não detalha totalmente o que cada nível desbloqueia (por exemplo, se cobrem créditos de uso em nuvem, personagens premium ou vozes adicionais). Confirme exatamente o que um determinado nível inclui dentro do app antes de comprá-lo.',
-          'Segundo o próprio conteúdo de blog do desenvolvedor, uma versão gratuita mais limitada do app foi, aparentemente, distribuída via download direto de APK a partir do próprio site do desenvolvedor — isso é diferente das fichas pagas da App Store e do Google Play, e sua disponibilidade e conjunto de recursos atuais devem ser verificados diretamente em [layla-network.ai](https://www.layla-network.ai), em vez de presumidos a partir desta análise.',
-          'O Layla Cloud, o modo de chat em nuvem opcional e separado, aparece como download gratuito como app próprio nas lojas; se o uso contínuo do Layla Cloud exige assinatura ou créditos além do nível gratuito não é detalhado na ficha pública revisada para este artigo.',
+          '**A Layla custa $19,99 em compra única tanto na [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) quanto no [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Além dessa compra base, a ficha da App Store dos EUA mostra três planos dentro do app com nomes próprios — Monarch ($4,99), Birdwing ($19,99) e Blue Morpho ($29,99) —, cada um também listado como plano anual (Monarch $49,99, Birdwing $169,99, Blue Morpho $249,99). As listagens de plano anual sugerem cobrança recorrente, então confirme na tela de compra se o plano renova. A ficha pública não detalha o que cada plano desbloqueia (por exemplo, créditos de uso em nuvem, personagens premium ou vozes adicionais), portanto confirme isso dentro do app antes de comprar.',
+          'A [página de download](https://www.layla-network.ai/download) e o FAQ do site do desenvolvedor descrevem uma versão gratuita com recursos limitados, disponível como APK direto para Android e separada das fichas pagas das lojas. Eles não informam código de compra nem chave de licença para ela e não listam quais recursos são limitados. A Layla Network afirma que o app completo é uma compra única, não uma assinatura.',
+          'O Layla Cloud, o modo de chat em nuvem opcional e separado, aparece como download gratuito como app próprio na App Store, sem compras dentro do app exibidas; se o uso contínuo do Layla Cloud exige assinatura ou créditos além do nível gratuito não é detalhado na ficha pública revisada para este artigo.',
         ],
         items: [
           '**App base:** compra única de $19,99 na App Store e no Google Play — não é exigida assinatura para a compra base em si.',
-          '**Níveis de compra dentro do app:** Monarch ($4,99), Birdwing ($19,99), Blue Morpho ($29,99) — nomeados na ficha da App Store; conteúdo exato não totalmente detalhado publicamente.',
-          '**Versão gratuita/limitada:** segundo relatos, disponível via download direto de APK a partir do próprio site do desenvolvedor, separada das fichas pagas das lojas — verifique o status atual diretamente.',
+          '**Planos dentro do app:** Monarch ($4,99), Birdwing ($19,99), Blue Morpho ($29,99), cada um também listado como plano anual ($49,99, $169,99, $249,99) na App Store dos EUA; conteúdo exato não totalmente detalhado publicamente.',
+          '**Versão gratuita/limitada:** um APK direto da [página de download](https://www.layla-network.ai/download) do desenvolvedor, com recursos limitados e sem menção a código de compra — separada das fichas pagas das lojas.',
           '**Layla Cloud:** um app complementar separado e gratuito para chat de personagens baseado em nuvem; sua própria estrutura de custos além do nível gratuito não é detalhada na ficha pública.',
         ],
       },
@@ -2770,7 +2870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidade: chat local vs. Layla Cloud',
         content: [
           '**A própria [política de privacidade](https://blog.layla-network.ai/privacy) da Layla afirma que "a funcionalidade principal do nosso app é projetada para rodar offline no seu dispositivo", e que o app exibirá um aviso e uma mensagem de confirmação antes de qualquer ação que envie seus dados para fora do dispositivo.** A política nomeia gatilhos específicos para saída de dados: enviar um personagem para o Personality Hub, usar o recurso "Reportar um bug" dentro do app e ativar recursos de nuvem opcionais.',
-          'Esse último item — recursos de nuvem opcionais — é o Layla Cloud, descrito pelo desenvolvedor como um modo distinto e separado: segundo a política, "o Layla Cloud só é ativado se você instalar o mini-app \'Layla Cloud\' dentro da Layla", e se ele não estiver instalado ou ativado, "nenhum recurso relacionado ao Layla Cloud fica habilitado". Quando o Layla Cloud está ativo, a própria documentação do desenvolvedor afirma que ele coleta o histórico de conversas — suas mensagens, as respostas dos personagens e dados de recursos auxiliares como Memória de Longo Prazo, PDF Digest e Dream —, e que esses dados são anonimizados e não vinculados à sua conta, embora possam ser usados para depuração ou para melhorar o serviço. A política também afirma que o Layla Cloud não coleta retroativamente conversas anteriores à sua ativação.',
+          'Esse último item — recursos de nuvem opcionais — é o Layla Cloud, descrito pelo desenvolvedor como um modo distinto e separado: segundo a política, "o Layla Cloud só é ativado se você instalar o mini-app \'Layla Cloud\' dentro da Layla", e se ele não estiver instalado ou ativado, "nenhum recurso relacionado ao Layla Cloud fica habilitado". Quando o Layla Cloud está ativo, a própria documentação do desenvolvedor afirma que ele coleta o histórico de conversas — suas mensagens, as respostas dos personagens e dados de recursos auxiliares como Memória de Longo Prazo, PDF Digest e Dream —, e que esses dados são anonimizados e não vinculados à sua conta, embora possam ser usados para depuração ou para treinamento de IA com o objetivo de melhorar o serviço. A política também afirma que excluir uma conta do Layla Cloud não apaga o histórico de conversas anterior dos servidores do desenvolvedor. A política também afirma que o Layla Cloud não coleta retroativamente conversas anteriores à sua ativação.',
           'No conjunto, esse é um design de privacidade materialmente diferente de um app cuja funcionalidade principal não tem nenhum componente de nuvem: o modo local padrão da Layla é projetado para permanecer no dispositivo, com uma barreira explícita de consentimento antes de qualquer transmissão, mas o próprio produto oferece um caminho opcional e ativado separadamente para a nuvem, que coleta dados de conversa anonimizados quando o usuário o ativa. Leitores que buscam a garantia mais forte possível — um produto sem nenhum modo de nuvem para ativar — devem comparar isso com o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review), cujo código é totalmente open source sob licença MIT, sem nenhum recurso de chat em nuvem embutido.',
         ],
         items: [
@@ -2778,6 +2878,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** um modo separado e opcional (instalado como mini-app ou app distinto) que coleta histórico de conversas anonimizado, incluindo dados de recursos auxiliares, quando ativado.',
           '**Não retroativo:** segundo a política, ativar o Layla Cloud não traz o histórico de conversas anterior à ativação.',
           '**Código fechado:** diferente do PocketPal AI ou do Maid, o código do app cliente da Layla não é publicado, então a afirmação de "sem transmissão por padrão" se baseia na própria política de privacidade do desenvolvedor, e não em uma auditoria de código independente.',
+          '**Rótulos de privacidade das lojas:** declarados pelo próprio desenvolvedor e não verificados pela Apple — o app principal lista dados de diagnóstico e fotos ou vídeos (para o funcionamento do app), nenhum vinculado a você, enquanto a ficha separada do Layla (Cloud) declara endereço de e-mail e conteúdo do usuário.',
+          '**Idade da política:** a página da política mostra a data de última atualização 10/05/2024, anterior às versões 7.x, então pode não descrever recursos mais novos.',
         ],
         callouts: [
           {
@@ -2807,12 +2909,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: 'Qual hardware é necessário para rodar a Layla?',
         content: [
-          '**A ficha da App Store recomenda no mínimo 8 GB de RAM, e o próprio marketing da Layla historicamente descreveu o app como voltado a smartphones topo de linha recentes, em vez de hardware econômico ou antigo.** Esse é um patamar mais rígido do que alguns apps de chat local concorrentes, que suportam confortavelmente modelos menores de 2–4B parâmetros com 4 GB de RAM — os recursos de companheiro da Layla (modelos padrão maiores, geração local de imagens e animação de personagem) elevam o piso prático de hardware.',
+          '**O site do desenvolvedor diz que modelos locais pequenos rodam em celulares com cerca de 4 GB de RAM e que modelos maiores funcionam melhor com 8 GB ou mais; a descrição da App Store mira celulares topo de linha recentes (8GB+ de RAM).** Os recursos de companheiro da Layla (modelos padrão maiores, geração local de imagens e animação de personagem) elevam o piso prático de hardware acima do de apps de chat local mais simples.',
           'Como em qualquer app baseado em GGUF, o modelo específico carregado — não o app em si — é o que realmente determina as necessidades de memória: um modelo quantizado menor precisa de menos RAM do que um modelo de 7B+ parâmetros, e rodar a geração local de imagens com Stable Diffusion junto com o chat adiciona sobrecarga extra de memória e processamento além da inferência apenas de texto.',
         ],
         items: [
-          'Mínimo recomendado: 8 GB de RAM, segundo a ficha da App Store — significativamente maior que o piso de 4 GB comum entre apps de chat local mais simples nessa categoria.',
-          'Smartphones topo de linha recentes (aproximadamente as últimas gerações) são recomendados em vez de dispositivos mais antigos ou econômicos, segundo os próprios materiais de marketing do desenvolvedor.',
+          'Modelos locais pequenos: cerca de 4 GB de RAM, segundo o site do desenvolvedor; modelos maiores: 8 GB ou mais.',
+          'Melhor experiência: celulares topo de linha com 8 GB+, segundo a descrição da App Store, em vez de dispositivos mais antigos ou econômicos.',
           'Armazenamento: o download do modelo padrão no primeiro uso foi relatado em torno de 4 GB em versões anteriores; modelos GGUF personalizados e checkpoints de Stable Diffusion adicionam requisitos de armazenamento extras.',
           'A geração local de imagens (Stable Diffusion 1.5) adiciona sobrecarga de processamento e memória além do chat apenas de texto — espere desempenho mais lento em dispositivos com menos RAM ao usar esse recurso.',
         ],
@@ -2831,7 +2933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vantagem': 'Geração local de texto e imagem',
             'O que significa na prática': 'Tanto o chat quanto a geração de imagens com Stable Diffusion 1.5 podem rodar inteiramente no dispositivo.',
-            'Limitação / ressalva': 'Exige significativamente mais RAM e armazenamento do que apps de chat local apenas de texto; a App Store lista um mínimo de 8 GB.',
+            'Limitação / ressalva': 'Exige significativamente mais RAM e armazenamento do que apps de chat local apenas de texto; a descrição da App Store mira celulares com 8 GB+.',
           },
           {
             'Vantagem': 'Barreira explícita de consentimento antes do envio de dados',
@@ -2846,7 +2948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vantagem': 'Compra única de $19,99',
             'O que significa na prática': 'Nenhuma assinatura é exigida para o app base em nenhuma das duas lojas.',
-            'Limitação / ressalva': 'Existem três níveis adicionais de compra dentro do app cujo conteúdo exato não é totalmente detalhado na ficha pública — confirme dentro do app exatamente o que está comprando.',
+            'Limitação / ressalva': 'Existem três planos adicionais dentro do app (cada um também com preço anual) cujo conteúdo exato não é totalmente detalhado na ficha pública — confirme o que está comprando e se o plano renova.',
           },
           {
             'Vantagem': 'Multiplataforma: Android e iOS',
@@ -2872,7 +2974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Leitores que precisam de um produto garantidamente sem componente de nuvem.** Como a Layla traz um modo de nuvem opcional (Layla Cloud) que coleta dados anonimizados uma vez ativado, leitores que especificamente querem um app sem nenhum recurso de nuvem para ativar em algum momento devem escolher o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review), cujo código totalmente aberto não tem nenhum caminho de chat em nuvem embutido.',
           '**Leitores que querem um app gratuito ou totalmente open source.** A Layla é um app pago e de código fechado por $19,99; o PocketPal AI (gratuito, licença MIT) e o Maid (gratuito, licença MIT) cobrem essa necessidade em vez disso.',
           '**Leitores que querem uma interface de chat simples e minimalista estilo assistente.** O design da Layla centrado em personagens e personas adiciona complexidade que usuários que só querem um chat simples de perguntas e respostas podem não desejar; o Private LLM ou o PocketPal AI têm um formato mais de assistente.',
-          '**Leitores com dispositivos de pouca RAM ou mais antigos.** A App Store lista 8 GB de RAM como recomendação mínima, mais alta que vários apps concorrentes que rodam modelos menores confortavelmente com 4 GB.',
+          '**Leitores com dispositivos de pouca RAM ou mais antigos.** A descrição da App Store mira celulares com 8 GB+, e o site do desenvolvedor indica 8 GB ou mais para modelos maiores — mais do que vários apps concorrentes que rodam modelos menores confortavelmente com 4 GB.',
           '**Leitores que precisam de recursos empresariais ou de equipe.** A Layla é um app de consumo para um único usuário, sem console de administração, licenciamento compartilhado ou faturamento de equipe; organizações devem considerar infraestrutura de LLM local auto-hospedada do lado do servidor em vez disso.',
           '**Leitores que querem auditar de forma independente o código-fonte do app.** O app cliente da Layla é de código fechado; leitores que precisam desse nível de garantia devem usar uma alternativa com licença MIT ou AGPL, como PocketPal AI, Maid ou ChatterUI.',
         ],
@@ -2962,7 +3064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'A Layla é gratuita?',
-            a: 'Não, o app principal Layla custa $19,99 em compra única tanto na App Store quanto no Google Play. A ficha da App Store também mostra três níveis de compra dentro do app com nomes próprios (Monarch $4,99, Birdwing $19,99, Blue Morpho $29,99). Segundo relatos, uma versão gratuita mais limitada foi distribuída via download direto de APK a partir do próprio site do desenvolvedor — verifique a disponibilidade atual em [layla-network.ai](https://www.layla-network.ai). O Layla Cloud, um app complementar separado para chat baseado em nuvem, é gratuito para baixar como app próprio.',
+            a: 'Em parte. O app principal Layla custa $19,99 em compra única tanto na App Store quanto no Google Play, enquanto a [página de download](https://www.layla-network.ai/download) do desenvolvedor oferece uma versão gratuita com recursos limitados como APK direto para Android. As páginas oficiais não mencionam código de compra nem chave de licença, então desconfie de sites que prometem um "código de compra" gratuito. A App Store dos EUA também lista planos dentro do app (Monarch, Birdwing, Blue Morpho) com preços mensais e anuais. O Layla Cloud, um app separado, é gratuito para baixar na App Store.',
           },
           {
             q: 'A Layla roda completamente offline, sem nenhum componente de nuvem?',
@@ -2982,15 +3084,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanta RAM a Layla precisa?',
-            a: 'A ficha da App Store recomenda no mínimo 8 GB de RAM, mais alto que o piso de cerca de 4 GB comum entre apps de chat local apenas de texto mais simples, refletindo os modelos padrão maiores da Layla, a geração local de imagens e os recursos de animação de personagem.',
+            a: 'O site do desenvolvedor diz que modelos locais pequenos rodam em celulares com cerca de 4 GB de RAM e que modelos maiores funcionam melhor com 8 GB ou mais, enquanto a descrição da App Store mira celulares topo de linha com 8 GB+. Os modelos padrão maiores da Layla, a geração local de imagens e a animação de personagem elevam o piso prático acima do de apps de chat apenas de texto mais simples.',
           },
           {
             q: 'O que é o Layla Cloud, e é o mesmo que o app principal Layla?',
-            a: 'Não. O Layla Cloud é um modo separado e opcional, ou mini-app, que oferece chat de personagens baseado em nuvem para usuários que não querem gerenciar modelos locais. Segundo a política de privacidade, ele só fica ativo se um usuário o instalar ou ativar, e enquanto ativo coleta histórico de conversas anonimizado para depuração ou melhoria do serviço. Ele não coleta dados retroativamente de antes de sua ativação.',
+            a: 'Não. O Layla Cloud é um modo separado e opcional, ou mini-app, que oferece chat de personagens baseado em nuvem para usuários que não querem gerenciar modelos locais. Segundo a política de privacidade, ele só fica ativo se um usuário o instalar ou ativar, e enquanto ativo coleta histórico de conversas anonimizado para depuração ou melhoria do serviço. Ele não coleta dados retroativamente de antes de sua ativação, e excluir uma conta do Layla Cloud não apaga o histórico de conversas anterior dos servidores do desenvolvedor. O Layla (Cloud) também está listado como app gratuito próprio na App Store.',
+          },
+          {
+            q: 'A Layla se conecta a um PC ou servidor?',
+            a: 'Sim, por meio do [Layla-Server](https://github.com/l3utterfly/Layla-Server), projeto open source do desenvolvedor: um wrapper Apache-2.0 em volta do llama-server (ou de qualquer servidor compatível com a OpenAI) que encaminha solicitações via WebRTC para que o app Layla alcance seu PC de qualquer lugar. Um post do blog do desenvolvedor também descreve rodar a Layla no Windows via BlueStacks e apontá-la para o LM Studio por uma API compatível com a OpenAI. O Layla Cloud é outra coisa: é o modo hospedado do desenvolvedor, não o seu próprio servidor.',
+          },
+          {
+            q: 'A Layla é open source?',
+            a: 'Não, no caso do app em si: o cliente da Layla é de código fechado. Os repositórios [Layla-Server](https://github.com/l3utterfly/Layla-Server) e [Layla SDK](https://github.com/l3utterfly/layla-sdk) têm licença Apache-2.0, e os modelos ajustados da marca Layla são publicados abertamente no [Hugging Face](https://huggingface.co/l3utterfly). Como o cliente não pode ser auditado, seu comportamento de privacidade depende da política do próprio desenvolvedor.',
+          },
+          {
+            q: 'A Layla AI é segura de usar?',
+            a: 'A PromptQuorum não auditou o app. Segundo o desenvolvedor, o chat principal roda offline, as conversas ficam armazenadas criptografadas no dispositivo e o app pergunta antes de usar a internet. O modo Layla Cloud é a principal exceção, e o cliente de código fechado não pode ser verificado de forma independente. Baixe apenas da App Store, do Google Play ou do site do próprio desenvolvedor, que avisa que APKs modificados podem conter malware.',
           },
           {
             q: 'A Layla é confiável? Os usuários relatam problemas?',
-            a: 'A Layla tem uma avaliação de 3,8/5 com 31 avaliações na App Store no momento desta análise. Algumas resenhas públicas na App Store relatam travamentos e recursos offline pouco confiáveis, especialmente na importação de modelos personalizados no iOS. Esta análise não verificou de forma independente a estabilidade atual do app — trate isso como observações relatadas por usuários, e teste o app dentro do prazo de reembolso da sua plataforma antes de confiar nele.',
+            a: 'A Layla tem uma avaliação de 3,8/5 com 33 avaliações na App Store no momento desta análise. Algumas resenhas públicas na App Store relatam travamentos e recursos offline pouco confiáveis, especialmente na importação de modelos personalizados no iOS. Esta análise não verificou de forma independente a estabilidade atual do app — trate isso como observações relatadas por usuários, e teste o app dentro do prazo de reembolso da sua plataforma antes de confiar nele.',
           },
           {
             q: 'O app de companheiro de IA "Layla" é a mesma empresa do planejador de viagens com IA "Layla" adquirido pela Expedia?',
@@ -3014,10 +3128,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Layla na App Store](https://apps.apple.com/us/app/layla/id6456886656) — preço, níveis de compra dentro do app, requisitos de plataforma, avaliações e histórico de versões.',
           '[Layla no Google Play](https://play.google.com/store/apps/details?id=com.layla) — disponibilidade e preço para Android.',
-          '[Site oficial da Layla](https://www.layla-network.ai) — visão geral do produto e descrições de recursos publicadas pelo desenvolvedor.',
+          '[Site oficial da Layla](https://www.layla-network.ai) e [página de download](https://www.layla-network.ai/download) — visão geral do produto, APK gratuito, observações sobre restaurar compras e orientações de RAM.',
           '[Política de privacidade da Layla](https://blog.layla-network.ai/privacy) — tratamento de dados local vs. nuvem, escopo do Layla Cloud e divulgações sobre coleta de dados.',
           '[Layla (Cloud) na App Store](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — a ficha do app separado do modo de nuvem opcional.',
-          '[l3utterfly no GitHub](https://github.com/l3utterfly) e [l3utterfly no Hugging Face](https://huggingface.co/l3utterfly) — publicações de modelos da marca Layla e projetos de infraestrutura relacionados (Layla-Server, Layla SDK).',
+          '[l3utterfly no GitHub](https://github.com/l3utterfly) e [l3utterfly no Hugging Face](https://huggingface.co/l3utterfly) — publicações de modelos da marca Layla e projetos de infraestrutura relacionados ([Layla-Server](https://github.com/l3utterfly/Layla-Server), [Layla SDK](https://github.com/l3utterfly/layla-sdk)).',
         ],
       },
       relatedReading: {
@@ -3037,18 +3151,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-ar.webp',
     title: 'مراجعة Layla: تطبيق رفيق ذكاء اصطناعي على الجهاز لأندرويد و iOS',
-    seoTitle: 'مراجعة Layla: تطبيق ذكاء اصطناعي محلي، السعر والخصوصية',
+    seoTitle: 'مراجعة Layla AI: التطبيق المحلي والسحابة والخادم والسعر',
     intro:
       'تطبيق Layla، من تطوير [Layla Network Pty Ltd](https://www.layla-network.ai) — شركة مسجّلة في أستراليا ومرتبطة أيضاً على GitHub بالمطوّر [l3utterfly](https://github.com/l3utterfly) الذي ينشر عائلة نماذج "Layla" ذات الأوزان المفتوحة المضبوطة —، هو تطبيق مدفوع لأندرويد و iOS مبني حول تشغيل رفيق ذكاء اصطناعي شخصي محلياً على الهاتف، مع ميزات شخصية (persona) ولعب أدوار وشخصيات تتجاوز الدردشة البسيطة. سعره [19.99 دولاراً كشراء لمرة واحدة](https://apps.apple.com/us/app/layla/id6456886656) على متجر App Store ومتجر Google Play، وتُظهر صفحة App Store أيضاً ثلاث فئات شراء داخل التطبيق باسم محدد. صُمّمت الدردشة الأساسية في Layla لتعمل بالكامل على الجهاز باستخدام نماذج GGUF عبر llama.cpp، لكن التطبيق يتضمن أيضاً وضعاً سحابياً اختيارياً يُفعَّل بشكل منفصل يُسمى Layla Cloud وغير مفعّل افتراضياً — تشرح هذه المراجعة بدقة ما يعمل فعلياً محلياً وما لا يعمل، والتكلفة الحقيقية، ومن يناسبه التطبيق، استناداً إلى سياسة خصوصية المطوّر نفسه وصفحات متاجر التطبيقات والوثائق العامة، وليس إلى اختبارات عملية مستقلة.',
     metaDescription:
-      'مراجعة Layla 2026: تطبيق رفيق ذكاء اصطناعي على الجهاز لأندرويد و iOS بسعر 19.99 دولاراً. ما يعمل فعلياً محلياً مقابل وضع Layla Cloud الاختياري، السعر الدقيق، النماذج، ومن يناسبه التطبيق.',
+      'مراجعة Layla AI: تطبيق رفيق ذكاء اصطناعي دون اتصال لأندرويد و iPhone بـ 19.99 دولاراً. ما يعمل محلياً، و Layla Cloud والخادم، والخطط، وملف APK المجاني.',
     twitterDescription:
-      'مراجعة Layla 2026: تطبيق رفيق ذكاء اصطناعي محلي لأندرويد و iOS بسعر 19.99 دولاراً، مع ميزات لعب أدوار وشخصية. ما يعمل على الجهاز، وما يجمعه الوضع السحابي الاختياري، والمقارنة مع PocketPal AI و Private LLM.',
+      'مراجعة Layla AI: تطبيق رفيق ذكاء اصطناعي محلي لأندرويد و iOS بسعر 19.99 دولاراً، مع ميزات لعب أدوار وشخصية. ما يعمل على الجهاز، وما تجمعه Layla Cloud، ونسخة APK المجانية، والمقارنة مع PocketPal AI و Private LLM.',
     audience:
       'مستخدمو أندرويد و iOS الذين يفكرون في تطبيق مدفوع لرفيق/لعب أدوار ذكاء اصطناعي على الجهاز، ويحتاجون إلى معرفة بدقة ما يبقى محلياً مقابل ما يجمعه وضع سحابي اختياري، إضافة إلى السعر الدقيق وملاحظات الموثوقية من مراجعات علنية في متاجر التطبيقات.',
     readTime: '11 دقائق للقراءة',
@@ -3064,6 +3178,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai سعر',
       'تطبيق رفيق ذكاء اصطناعي محلي',
       'layla vs pocketpal ai',
+      'layla cloud ما هو',
+      'layla server اتصال بالكمبيوتر',
+      'هل layla ai آمن',
+      'layla ai مجاني',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -3079,9 +3197,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تعمل الدردشة الأساسية على الجهاز عبر نماذج GGUF مع llama.cpp؛ وتنص سياسة خصوصية المطوّر على أنه يحذّر قبل خروج أي بيانات من الجهاز.',
           'Layla Cloud وضع منفصل واختياري يجمع بيانات محادثة مجهولة المصدر عند تفعيله — وهو معطّل ما لم يُفعَّل.',
           'يركّز على لعب الأدوار: شخصيات (persona)، محادثات جماعية، أكثر من 100 صوت تحويل نص إلى كلام، وتوليد صور محلي عبر Stable Diffusion 1.5، وفقاً لصفحات متاجر التطبيقات.',
-          'تقييم التطبيق على App Store هو 3.8 من 5 من 31 تقييماً وقت إعداد المراجعة؛ يذكر بعض المراجعين عدم موثوقية الميزات دون اتصال — يجب التعامل مع هذا كإفادة من المستخدمين لم تتحقق منها PromptQuorum بشكل مستقل.',
+          'تقييم التطبيق على App Store هو 3.8 من 5 من 33 تقييماً وقت إعداد المراجعة؛ يذكر بعض المراجعين عدم موثوقية الميزات دون اتصال — يجب التعامل مع هذا كإفادة من المستخدمين لم تتحقق منها PromptQuorum بشكل مستقل.',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -3120,12 +3238,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'السعر: [شراء لمرة واحدة بسعر 19.99 دولاراً](https://apps.apple.com/us/app/layla/id6456886656) على App Store و Google Play، إضافة إلى ثلاث فئات شراء داخل التطبيق لا يوضّح المحتوى العام تفاصيلها بالكامل.',
+          'السعر: [شراء لمرة واحدة بسعر 19.99 دولاراً](https://apps.apple.com/us/app/layla/id6456886656) على App Store و Google Play، إضافة إلى ثلاث خطط داخل التطبيق (لكل منها سعر سنوي أيضاً) لا يوضّح المحتوى العام تفاصيلها بالكامل؛ ويوفّر موقع المطوّر كذلك ملف APK مجانياً محدود الميزات.',
+          'الإصدار: 7.6.0 هو الإصدار الحالي على App Store وعلى Google Play، حيث يُدرج آخر تحديث بتاريخ 19 أكتوبر 2026.',
           'المطوّر: [Layla Network Pty Ltd](https://www.layla-network.ai)، شركة مسجّلة في أستراليا؛ تُنشر النماذج المضبوطة بعلامة Layla على Hugging Face تحت حساب GitHub [l3utterfly](https://github.com/l3utterfly).',
           'تعمل الدردشة الأساسية على الجهاز عبر نماذج GGUF مع llama.cpp؛ ويدعم التطبيق أيضاً واجهات نماذج LiteRT-LM و PTE (ExecuTorch)، إضافة إلى توليد الصور المحلي عبر Stable Diffusion 1.5، وفقاً لمنشورات المطوّر التقنية الخاصة.',
           'الخصوصية: وفقاً لسياسة خصوصية المطوّر، صُمّمت الوظيفة الأساسية لتعمل دون اتصال بالإنترنت ويحذّر التطبيق قبل خروج البيانات من الجهاز — باستثناء وضع Layla Cloud المنفصل والاختياري، وهو معطّل افتراضياً.',
           'التركيز على الرفيق ولعب الأدوار: شخصيات قابلة للتخصيص، محادثات جماعية، أكثر من 100 صوت، ورسوم متحركة للشخصيات بتقنية Live2D، ما يميّزه عن تطبيقات الدردشة الأبسط في هذه الفئة.',
-          'تقييم App Store: 3.8 من 5 من 31 تقييماً وقت إعداد المراجعة؛ يذكر بعض المراجعين تعطلاً وسلوكاً غير موثوق دون اتصال — وهو أمر أفاد به المستخدمون ولم تتحقق منه هذه المراجعة بشكل مستقل.',
+          'تقييم App Store: 3.8 من 5 من 33 تقييماً وقت إعداد المراجعة؛ يذكر بعض المراجعين تعطلاً وسلوكاً غير موثوق دون اتصال — وهو أمر أفاد به المستخدمون ولم تتحقق منه هذه المراجعة بشكل مستقل.',
         ],
         callouts: [
           {
@@ -3134,7 +3253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'تستند هذه المراجعة إلى سياسة خصوصية Layla العامة، وصفحات App Store و Google Play، ومنشورات المطوّر التقنية الخاصة، ومراجعات المستخدمين المتاحة علناً، التي جرى التحقق منها في سبتمبر 2026. لم تُجرِ PromptQuorum اختبارات عملية أو مقارنات أداء مستقلة على Layla لأجل هذه المراجعة.',
+            text: 'تستند هذه المراجعة إلى سياسة خصوصية Layla العامة، وصفحات App Store و Google Play، وموقع المطوّر ومنشوراته التقنية الخاصة، ومراجعات المستخدمين المتاحة علناً، وأُعيد التحقق منها مقابل الإصدار 7.6.0. لم تُجرِ PromptQuorum اختبارات عملية أو مقارنات أداء مستقلة على Layla لأجل هذه المراجعة.',
           },
         ],
       },
@@ -3158,7 +3277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الناشر: [Layla Network Pty Ltd](https://www.layla-network.ai)، مسجّلة في ساوثبورت، كوينزلاند، أستراليا.',
           'الإطلاق العلني: حوالي أغسطس 2023، وفقاً لأدلة تطبيقات تابعة لجهات خارجية.',
           'تطوير النماذج: نماذج ذات أوزان مفتوحة مضبوطة بعلامة Layla منشورة على Hugging Face تحت حساب GitHub [l3utterfly](https://github.com/l3utterfly).',
-          'مشاريع ذات صلة: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (يربط التطبيق بخادم كمبيوتر مُستضاف ذاتياً عبر WebRTC) و[Layla SDK](https://github.com/l3utterfly/layla-sdk) (لإنشاء تطبيقات مصغّرة داخل Layla).',
+          'مشاريع ذات صلة: [Layla-Server](https://github.com/l3utterfly/Layla-Server) (يربط التطبيق بخادم كمبيوتر مُستضاف ذاتياً عبر WebRTC) و[Layla SDK](https://github.com/l3utterfly/layla-sdk) (لإنشاء تطبيقات مصغّرة داخل Layla)، وكلاهما مرخّص بموجب Apache-2.0.',
           'الكود المصدري لتطبيق العميل غير متاح للعامة — على عكس PocketPal AI أو Maid، تطبيق Layla نفسه مغلق المصدر حتى وإن كانت بعض النماذج التي يعتمد عليها ذات أوزان مفتوحة.',
         ],
       },
@@ -3171,7 +3290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'شراء التطبيق وتثبيته',
-            whyItMatters: 'نزّل Layla من [App Store](https://apps.apple.com/us/app/layla/id6456886656) (19.99 دولاراً) أو [Google Play](https://play.google.com/store/apps/details?id=com.layla) (19.99 دولاراً). أفيد بوجود نسخة مجانية أكثر محدودية تُوزَّع كملف APK للتنزيل المباشر من موقع المطوّر نفسه — تحقّق مباشرة من [layla-network.ai](https://www.layla-network.ai) بشأن توفّر هذا الخيار حالياً قبل افتراض أنه ينطبق على منصتك.',
+            whyItMatters: 'نزّل Layla من [App Store](https://apps.apple.com/us/app/layla/id6456886656) (19.99 دولاراً) أو [Google Play](https://play.google.com/store/apps/details?id=com.layla) (19.99 دولاراً). تتيح [صفحة التنزيل](https://www.layla-network.ai/download) لدى المطوّر أيضاً ملف APK مباشراً لأندرويد يتضمن نسخة مجانية محدودة الميزات؛ ولا تذكر الصفحة أي الميزات محدودة. نزّل ملف APK من موقع المطوّر نفسه فقط — إذ تحذّر الصفحة من أن ملفات APK المعدّلة من جهات خارجية قد تحتوي على برمجيات خبيثة ولا تتلقى تحديثات.',
           },
           {
             title: 'السماح للتطبيق بتنزيل نموذجه الافتراضي',
@@ -3240,12 +3359,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'المنصة': 'Android',
             'التوفر': 'متاح على [Google Play](https://play.google.com/store/apps/details?id=com.layla)',
-            'ملاحظات': 'أُفيد أيضاً بوجود قناة توزيع مباشرة لملف APK من موقع المطوّر نفسه، منفصلة عن Google Play — تحقّق مباشرة من التوفر الحالي قبل الاعتماد عليها.',
+            'ملاحظات': 'تتيح [صفحة التنزيل](https://www.layla-network.ai/download) لدى المطوّر أيضاً ملف APK مباشراً من خوادمه، يتضمن نسخة مجانية محدودة الميزات.',
           },
           {
             'المنصة': 'Windows / Linux',
             'التوفر': 'لم يُؤكَّد وجود إصدار سطح مكتب أصلي لـ Windows أو Linux وقت إعداد المراجعة',
-            'ملاحظات': 'يتيح مشروع [Layla-Server](https://github.com/l3utterfly/Layla-Server) للتطبيق الجوّال الاتصال عبر WebRTC بجهاز كمبيوتر يشغّل خلفيته المحلية الخاصة، وهو جسر وليس عميل سطح مكتب أصلي.',
+            'ملاحظات': 'يتيح مشروع [Layla-Server](https://github.com/l3utterfly/Layla-Server) (بترخيص Apache-2.0) للتطبيق الجوّال الاتصال عبر WebRTC بجهاز كمبيوتر يشغّل خلفيته المحلية الخاصة — وهو جسر وليس عميل سطح مكتب أصلي. كما تصف مدونة للمطوّر تشغيل Layla على Windows عبر BlueStacks وربطه بـ LM Studio من خلال واجهة برمجية متوافقة مع OpenAI.',
           },
         ],
       },
@@ -3253,14 +3372,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'كم تكلفة Layla؟',
         content: [
-          '**يبلغ سعر Layla 19.99 دولاراً كشراء لمرة واحدة على كل من [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) و[Google Play](https://play.google.com/store/apps/details?id=com.layla).** بالإضافة إلى هذا الشراء الأساسي، تُظهر صفحة App Store ثلاث فئات شراء داخل التطبيق باسم محدد — Monarch (4.99 دولاراً)، وBirdwing (19.99 دولاراً)، وBlue Morpho (29.99 دولاراً) — لكن صفحة المتجر العامة لا توضّح بالكامل ما تفتحه كل فئة (مثلاً، ما إذا كانت تغطي رصيداً لاستخدام السحابة، أو شخصيات مميّزة، أو أصواتاً إضافية). تأكد بدقة مما تتضمنه فئة معينة داخل التطبيق قبل شرائها.',
-          'وفقاً لمحتوى مدونة المطوّر نفسه، أُفيد بأن نسخة مجانية أكثر محدودية من التطبيق وُزِّعت عبر تنزيل مباشر لملف APK من موقعه الخاص — وهذا يختلف عن صفحتَي App Store و Google Play المدفوعتين، وينبغي التحقق من توفرها ومجموعة ميزاتها الحاليين مباشرة على [layla-network.ai](https://www.layla-network.ai) بدلاً من افتراض ذلك من هذه المراجعة.',
-          'يظهر Layla Cloud، وضع الدردشة السحابي الاختياري والمنفصل، كتنزيل مجاني كتطبيق مستقل على المتاجر؛ أما ما إذا كان الاستخدام المستمر لـ Layla Cloud يتطلّب اشتراكاً أو رصيداً بعد المستوى المجاني فغير موضّح في صفحة المتجر العامة التي جرى الاطلاع عليها لهذا المقال.',
+          '**يبلغ سعر Layla 19.99 دولاراً كشراء لمرة واحدة على كل من [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) و[Google Play](https://play.google.com/store/apps/details?id=com.layla).** بالإضافة إلى هذا الشراء الأساسي، تُظهر صفحة App Store الأمريكية ثلاث خطط داخل التطبيق — Monarch (4.99 دولاراً)، وBirdwing (19.99 دولاراً)، وBlue Morpho (29.99 دولاراً) — وتُدرج كلاً منها أيضاً كخطة سنوية (Monarch بسعر 49.99 دولاراً، وBirdwing بسعر 169.99 دولاراً، وBlue Morpho بسعر 249.99 دولاراً). تشير قوائم الخطط السنوية إلى فوترة متكررة، لذا تأكد من شاشة الشراء مما إذا كانت الخطة تتجدد. لا توضّح صفحة المتجر العامة ما تفتحه كل خطة (مثلاً رصيد استخدام السحابة أو شخصيات مميّزة أو أصوات إضافية)، لذا تأكد من ذلك داخل التطبيق قبل الشراء.',
+          'تصف [صفحة التنزيل](https://www.layla-network.ai/download) لدى المطوّر والأسئلة الشائعة في موقعه نسخة مجانية محدودة الميزات، متاحة كملف APK مباشر لأندرويد ومنفصلة عن صفحات المتاجر المدفوعة. ولا تذكران رمز شراء أو مفتاح ترخيص لها، ولا تحددان الميزات المحدودة. وتذكر Layla Network أن التطبيق الكامل شراء لمرة واحدة وليس اشتراكاً.',
+          'يظهر Layla Cloud، وضع الدردشة السحابي الاختياري والمنفصل، كتنزيل مجاني كتطبيق مستقل على App Store دون عرض أي عمليات شراء داخل التطبيق؛ أما ما إذا كان الاستخدام المستمر لـ Layla Cloud يتطلّب اشتراكاً أو رصيداً بعد المستوى المجاني فغير موضّح في صفحة المتجر العامة التي جرى الاطلاع عليها لهذا المقال.',
         ],
         items: [
           '**التطبيق الأساسي:** شراء لمرة واحدة بسعر 19.99 دولاراً على App Store و Google Play — لا يُطلب اشتراك للشراء الأساسي نفسه.',
-          '**فئات الشراء داخل التطبيق:** Monarch (4.99 دولاراً)، Birdwing (19.99 دولاراً)، Blue Morpho (29.99 دولاراً) — مذكورة على صفحة App Store؛ المحتوى الدقيق غير موضّح علناً بالكامل.',
-          '**النسخة المجانية/المحدودة:** أُفيد بتوفرها عبر تنزيل مباشر لملف APK من موقع المطوّر نفسه، منفصلة عن صفحات المتاجر المدفوعة — تحقق من الوضع الحالي مباشرة.',
+          '**الخطط داخل التطبيق:** Monarch (4.99 دولاراً)، Birdwing (19.99 دولاراً)، Blue Morpho (29.99 دولاراً)، وتُدرج كل منها أيضاً كخطة سنوية (49.99 و169.99 و249.99 دولاراً) على App Store الأمريكي؛ المحتوى الدقيق غير موضّح علناً بالكامل.',
+          '**النسخة المجانية/المحدودة:** ملف APK مباشر من [صفحة التنزيل](https://www.layla-network.ai/download) لدى المطوّر، بميزات محدودة ودون ذكر رمز شراء — منفصل عن صفحات المتاجر المدفوعة.',
           '**Layla Cloud:** تطبيق مرافق منفصل ومجاني التنزيل لدردشة الشخصيات القائمة على السحابة؛ هيكل تكلفته الخاص بعد المستوى المجاني غير موضّح في صفحة المتجر العامة.',
         ],
       },
@@ -3269,7 +3388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخصوصية: الدردشة المحلية مقابل Layla Cloud',
         content: [
           '**تنص [سياسة الخصوصية](https://blog.layla-network.ai/privacy) الخاصة بـ Layla على أن "الوظيفة الأساسية لتطبيقنا مصمَّمة للعمل دون اتصال بالإنترنت على جهازك"، وأن التطبيق سيعرض تحذيراً ورسالة تأكيد قبل أي إجراء يرسل بياناتك خارج الجهاز.** تحدّد السياسة محفّزات معيّنة لخروج البيانات: رفع شخصية إلى Personality Hub، واستخدام ميزة "الإبلاغ عن خلل" داخل التطبيق، وتفعيل ميزات سحابية اختيارية.',
-          'هذا البند الأخير — الميزات السحابية الاختيارية — هو Layla Cloud، الذي يصفه المطوّر بأنه وضع منفصل ومستقل: وفقاً للسياسة، "لا يُفعَّل Layla Cloud إلا إذا ثبّتَّ التطبيق المصغّر \'Layla Cloud\' داخل Layla"، وإذا لم يكن مثبّتاً أو مفعّلاً، فإن "لا ميزات متعلقة بـ Layla Cloud مُفعَّلة". عندما يكون Layla Cloud نشطاً، تنص وثائق المطوّر نفسه على أنه يجمع سجل المحادثات — رسائلك واستجابات الشخصيات وبيانات من ميزات مساعدة مثل الذاكرة طويلة المدى و PDF Digest و Dream —، وأن هذه البيانات مجهولة المصدر وغير مرتبطة بحسابك، وإن كان يمكن استخدامها لتصحيح الأخطاء أو تحسين الخدمة. تنص السياسة أيضاً على أن Layla Cloud لا يجمع بأثر رجعي محادثات سابقة لتفعيله.',
+          'هذا البند الأخير — الميزات السحابية الاختيارية — هو Layla Cloud، الذي يصفه المطوّر بأنه وضع منفصل ومستقل: وفقاً للسياسة، "لا يُفعَّل Layla Cloud إلا إذا ثبّتَّ التطبيق المصغّر \'Layla Cloud\' داخل Layla"، وإذا لم يكن مثبّتاً أو مفعّلاً، فإن "لا ميزات متعلقة بـ Layla Cloud مُفعَّلة". عندما يكون Layla Cloud نشطاً، تنص وثائق المطوّر نفسه على أنه يجمع سجل المحادثات — رسائلك واستجابات الشخصيات وبيانات من ميزات مساعدة مثل الذاكرة طويلة المدى و PDF Digest و Dream —، وأن هذه البيانات مجهولة المصدر وغير مرتبطة بحسابك، وإن كان يمكن استخدامها لتصحيح الأخطاء أو لتدريب الذكاء الاصطناعي بهدف تحسين الخدمة. كما تنص السياسة على أن حذف حساب Layla Cloud لا يحذف سجل المحادثات السابق من خوادم المطوّر. تنص السياسة أيضاً على أن Layla Cloud لا يجمع بأثر رجعي محادثات سابقة لتفعيله.',
           'إجمالاً، هذا تصميم خصوصية مختلف جوهرياً عن تطبيق لا تحتوي وظيفته الأساسية على أي مكوّن سحابي على الإطلاق: الوضع المحلي الافتراضي لـ Layla مصمَّم للبقاء على الجهاز مع حاجز موافقة صريح قبل أي إرسال، لكن المنتج نفسه يوفّر مساراً سحابياً اختيارياً يُفعَّل بشكل منفصل يجمع بالفعل بيانات محادثة مجهولة المصدر عندما يفعّله المستخدم. القراء الذين يريدون أقوى ضمان ممكن — منتج بلا أي وضع سحابي يمكن تفعيله أساساً — يجب أن يقارنوا ذلك بـ[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review)، الذي تكون قاعدة كوده بأكملها مفتوحة المصدر بترخيص MIT دون أي ميزة دردشة سحابية مدمجة.',
         ],
         items: [
@@ -3277,6 +3396,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** وضع منفصل واختياري (مُثبَّت كتطبيق مصغّر أو تطبيق مستقل) يجمع سجل محادثات مجهول المصدر، بما في ذلك بيانات الميزات المساعدة، عند تفعيله.',
           '**غير رجعي:** وفقاً للسياسة، لا يستوعب تفعيل Layla Cloud سجل المحادثات السابق لتفعيله.',
           '**مغلق المصدر:** على عكس PocketPal AI أو Maid، لا يُنشر كود تطبيق العميل الخاص بـ Layla، لذا يعتمد الادعاء بعدم الإرسال افتراضياً على سياسة خصوصية المطوّر نفسه بدلاً من تدقيق كود مستقل.',
+          '**ملصقات الخصوصية في المتجر:** يصرّح بها المطوّر ولا تتحقق منها Apple — يُدرج التطبيق الرئيسي بيانات التشخيص والصور أو مقاطع الفيديو (لوظائف التطبيق)، وكلها غير مرتبطة بك، بينما تصرّح صفحة Layla (Cloud) المنفصلة بعنوان البريد الإلكتروني ومحتوى المستخدم.',
+          '**عمر السياسة:** تعرض صفحة السياسة ختم آخر تحديث بتاريخ 10/05/2024، أي قبل إصدارات 7.x، لذا قد لا تصف الميزات الأحدث.',
         ],
         callouts: [
           {
@@ -3306,12 +3427,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: 'ما العتاد المطلوب لتشغيل Layla؟',
         content: [
-          '**توصي صفحة App Store بحد أدنى 8 جيجابايت من ذاكرة الوصول العشوائي (RAM)، وقد وصف تسويق Layla نفسه تاريخياً التطبيق بأنه موجَّه للهواتف الرائدة الحديثة بدلاً من العتاد الاقتصادي أو القديم.** هذا حد أعلى صرامة من بعض تطبيقات الدردشة المحلية المنافسة التي تدعم بشكل مريح نماذج أصغر بحجم 2-4 مليار معامل بذاكرة 4 جيجابايت — ترفع ميزات الرفيق في Layla (نماذج افتراضية أكبر، توليد صور محلي، ورسوم متحركة للشخصيات) الحد الأدنى العملي للعتاد.',
+          '**يذكر موقع المطوّر أن النماذج المحلية الصغيرة تعمل على هواتف بذاكرة نحو 4 جيجابايت، وأن النماذج الأكبر تعمل بأفضل شكل مع 8 جيجابايت أو أكثر؛ ويستهدف وصف App Store «أحدث الهواتف الرائدة (ذاكرة 8GB+)».** ترفع ميزات الرفيق في Layla (نماذج افتراضية أكبر، توليد صور محلي، ورسوم متحركة للشخصيات) الحد الأدنى العملي للعتاد فوق ما تتطلبه تطبيقات الدردشة المحلية الأبسط.',
           'كما هو الحال مع أي تطبيق مبني على GGUF، فإن النموذج المحدَّد المُحمَّل — وليس التطبيق نفسه — هو ما يحدد فعلياً احتياجات الذاكرة: يحتاج نموذج مكمَّم أصغر إلى ذاكرة أقل من نموذج بـ 7 مليارات معامل أو أكثر، ويضيف تشغيل توليد صور Stable Diffusion المحلي إلى جانب الدردشة عبئاً إضافياً على الذاكرة والمعالجة يتجاوز الاستدلال النصي فقط.',
         ],
         items: [
-          'الحد الأدنى الموصى به: 8 جيجابايت من ذاكرة الوصول العشوائي، وفقاً لصفحة App Store — أعلى بشكل ملحوظ من الحد الأدنى الشائع البالغ 4 جيجابايت لدى تطبيقات الدردشة المحلية الأبسط في هذه الفئة.',
-          'يُوصى بالهواتف الرائدة الحديثة (تقريباً الأجيال القليلة الأخيرة) بدلاً من العتاد الأقدم أو الاقتصادي، وفقاً لمواد التسويق الخاصة بالمطوّر.',
+          'النماذج المحلية الصغيرة: نحو 4 جيجابايت من ذاكرة الوصول العشوائي، وفقاً لموقع المطوّر؛ النماذج الأكبر: 8 جيجابايت أو أكثر.',
+          'أفضل تجربة: هواتف رائدة بذاكرة 8 جيجابايت+، وفقاً لوصف App Store، بدلاً من الأجهزة الأقدم أو الاقتصادية.',
           'التخزين: أُفيد بأن تنزيل النموذج الافتراضي عند التشغيل الأول كان حوالي 4 جيجابايت في إصدارات سابقة؛ تضيف نماذج GGUF المخصّصة ونقاط تفتيش Stable Diffusion متطلبات تخزين إضافية.',
           'يضيف توليد الصور المحلي (Stable Diffusion 1.5) عبئاً على المعالجة والذاكرة يتجاوز الدردشة النصية فقط — تُوقَّع أداء أبطأ على الأجهزة ذات ذاكرة الوصول العشوائي الأقل عند استخدام هذه الميزة.',
         ],
@@ -3330,7 +3451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الميزة': 'توليد نص وصور محلياً',
             'ماذا تعني في الاستخدام الفعلي': 'يمكن للدردشة وتوليد الصور عبر Stable Diffusion 1.5 كليهما العمل بالكامل على الجهاز.',
-            'القيد / التحفّظ': 'يتطلّب ذاكرة وتخزيناً أكبر بكثير من تطبيقات الدردشة المحلية النصية فقط؛ يذكر App Store حداً أدنى قدره 8 جيجابايت.',
+            'القيد / التحفّظ': 'يتطلّب ذاكرة وتخزيناً أكبر بكثير من تطبيقات الدردشة المحلية النصية فقط؛ يستهدف وصف App Store هواتف بذاكرة 8 جيجابايت+.',
           },
           {
             'الميزة': 'حاجز موافقة صريح قبل خروج البيانات',
@@ -3345,7 +3466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الميزة': 'شراء لمرة واحدة بسعر 19.99 دولاراً',
             'ماذا تعني في الاستخدام الفعلي': 'لا يُطلب اشتراك للتطبيق الأساسي على أي من المتجرين.',
-            'القيد / التحفّظ': 'توجد ثلاث فئات إضافية للشراء داخل التطبيق لا يوضّح المحتوى العام تفاصيلها بالكامل — تأكد داخل التطبيق مما تشتريه بالضبط.',
+            'القيد / التحفّظ': 'توجد ثلاث خطط إضافية داخل التطبيق (لكل منها سعر سنوي أيضاً) لا يوضّح المحتوى العام تفاصيلها بالكامل — تأكد داخل التطبيق مما تشتريه وهل يتجدد.',
           },
           {
             'الميزة': 'متعدد المنصات: أندرويد و iOS',
@@ -3371,7 +3492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**القراء الذين يحتاجون إلى منتج مضمون بلا أي مكوّن سحابي.** بما أن Layla يتضمن وضعاً سحابياً اختيارياً (Layla Cloud) يجمع بيانات مجهولة المصدر عند تفعيله، فإن القراء الذين يريدون تحديداً تطبيقاً بلا أي ميزة سحابية يمكن تفعيلها أساساً يجب أن يختاروا [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review)، الذي لا يحتوي كوده المفتوح بالكامل على أي مسار دردشة سحابية مدمج.',
           '**القراء الذين يريدون تطبيقاً مجانياً أو مفتوح المصدر بالكامل.** Layla تطبيق مدفوع ومغلق المصدر بسعر 19.99 دولاراً؛ يغطي PocketPal AI (مجاني، ترخيص MIT) و Maid (مجاني، ترخيص MIT) هذه الحاجة بدلاً منه.',
           '**القراء الذين يريدون واجهة دردشة بسيطة وبسيطة التصميم على طراز المساعد.** يضيف تصميم Layla الذي يركّز على الشخصيات والهويات تعقيداً قد لا يريده المستخدمون الذين يريدون فقط دردشة أسئلة وأجوبة بسيطة؛ Private LLM أو PocketPal AI مصمَّمان بشكل أقرب إلى المساعد.',
-          '**القراء الذين لديهم أجهزة بذاكرة وصول عشوائي أقل أو أقدم.** يذكر App Store 8 جيجابايت من ذاكرة الوصول العشوائي كحد أدنى موصى به، وهو أعلى من عدة تطبيقات منافسة تشغّل نماذج أصغر بشكل مريح بذاكرة 4 جيجابايت.',
+          '**القراء الذين لديهم أجهزة بذاكرة وصول عشوائي أقل أو أقدم.** يستهدف وصف App Store هواتف بذاكرة 8 جيجابايت+، ويضع موقع المطوّر النماذج الأكبر عند 8 جيجابايت أو أكثر — وهو أعلى من عدة تطبيقات منافسة تشغّل نماذج أصغر بشكل مريح بذاكرة 4 جيجابايت.',
           '**القراء الذين يحتاجون إلى ميزات مؤسسية أو جماعية.** Layla تطبيق استهلاكي لمستخدم واحد بلا لوحة تحكم إدارية أو ترخيص مشترك أو فوترة جماعية؛ يجب على المؤسسات النظر بدلاً من ذلك في بنية تحتية لنموذج لغوي محلي مُستضافة ذاتياً من جانب الخادم.',
           '**القراء الذين يريدون تدقيق الكود المصدري للتطبيق بأنفسهم بشكل مستقل.** تطبيق عميل Layla مغلق المصدر؛ يجب على القراء الذين يحتاجون إلى هذا المستوى من الضمان استخدام بديل مرخّص بموجب MIT أو AGPL مثل PocketPal AI أو Maid أو ChatterUI.',
         ],
@@ -3461,7 +3582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Layla مجاني؟',
-            a: 'لا، يبلغ سعر تطبيق Layla الرئيسي 19.99 دولاراً كشراء لمرة واحدة على كل من App Store و Google Play. تُظهر صفحة App Store أيضاً ثلاث فئات شراء داخل التطبيق باسم محدد (Monarch بسعر 4.99 دولاراً، Birdwing بسعر 19.99 دولاراً، Blue Morpho بسعر 29.99 دولاراً). أُفيد بوجود نسخة مجانية أكثر محدودية وُزِّعت عبر تنزيل مباشر لملف APK من موقع المطوّر نفسه — تحقق من التوفر الحالي على [layla-network.ai](https://www.layla-network.ai). Layla Cloud، تطبيق مرافق منفصل للدردشة القائمة على السحابة، مجاني التنزيل كتطبيق مستقل.',
+            a: 'جزئياً. يبلغ سعر تطبيق Layla الرئيسي 19.99 دولاراً كشراء لمرة واحدة على كل من App Store و Google Play، بينما تتيح [صفحة التنزيل](https://www.layla-network.ai/download) لدى المطوّر نسخة مجانية محدودة الميزات كملف APK مباشر لأندرويد. لا تذكر الصفحات الرسمية رمز شراء أو مفتاح ترخيص، لذا تعامل بحذر مع المواقع التي تعد برمز «شراء» مجاني. كما يُدرج App Store الأمريكي خططاً داخل التطبيق (Monarch و Birdwing و Blue Morpho) بأسعار شهرية وسنوية. أما Layla Cloud، وهو تطبيق منفصل، فتنزيله مجاني على App Store.',
           },
           {
             q: 'هل يعمل Layla بالكامل دون اتصال بالإنترنت، بلا أي مكوّن سحابي؟',
@@ -3481,15 +3602,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم من ذاكرة الوصول العشوائي يحتاج Layla؟',
-            a: 'توصي صفحة App Store بحد أدنى 8 جيجابايت من ذاكرة الوصول العشوائي، وهو أعلى من الحد الأدنى الشائع البالغ نحو 4 جيجابايت لدى تطبيقات الدردشة المحلية النصية الأبسط، مما يعكس نماذج Layla الافتراضية الأكبر وتوليد الصور المحلي وميزات الرسوم المتحركة للشخصيات.',
+            a: 'يذكر موقع المطوّر أن النماذج المحلية الصغيرة تعمل على هواتف بذاكرة نحو 4 جيجابايت وأن النماذج الأكبر تعمل بأفضل شكل مع 8 جيجابايت أو أكثر، بينما يستهدف وصف App Store الهواتف الرائدة بذاكرة 8 جيجابايت+. وترفع نماذج Layla الافتراضية الأكبر وتوليد الصور المحلي وميزات الرسوم المتحركة للشخصيات الحد الأدنى العملي فوق ما تتطلبه تطبيقات الدردشة النصية الأبسط.',
           },
           {
             q: 'ما هو Layla Cloud، وهل هو نفسه تطبيق Layla الرئيسي؟',
-            a: 'لا. Layla Cloud وضع منفصل واختياري، أو تطبيق مصغّر، يوفّر دردشة شخصيات قائمة على السحابة للمستخدمين الذين لا يريدون إدارة نماذج محلية. وفقاً لسياسة الخصوصية، لا يكون نشطاً إلا إذا ثبّته المستخدم أو فعّله، وعند نشاطه يجمع سجل محادثات مجهول المصدر لأغراض تصحيح الأخطاء أو تحسين الخدمة. لا يجمع بيانات بأثر رجعي من قبل تفعيله.',
+            a: 'لا. Layla Cloud وضع منفصل واختياري، أو تطبيق مصغّر، يوفّر دردشة شخصيات قائمة على السحابة للمستخدمين الذين لا يريدون إدارة نماذج محلية. وفقاً لسياسة الخصوصية، لا يكون نشطاً إلا إذا ثبّته المستخدم أو فعّله، وعند نشاطه يجمع سجل محادثات مجهول المصدر لأغراض تصحيح الأخطاء أو تحسين الخدمة. لا يجمع بيانات بأثر رجعي من قبل تفعيله، كما أن حذف حساب Layla Cloud لا يحذف سجل المحادثات السابق من خوادم المطوّر. ويُدرج Layla (Cloud) أيضاً كتطبيق مجاني مستقل على App Store.',
+          },
+          {
+            q: 'هل يمكن لـ Layla الاتصال بجهاز كمبيوتر أو خادم؟',
+            a: 'نعم، عبر مشروع [Layla-Server](https://github.com/l3utterfly/Layla-Server) مفتوح المصدر من المطوّر، وهو غلاف بترخيص Apache-2.0 حول llama-server (أو أي خادم متوافق مع OpenAI) يمرّر الطلبات عبر WebRTC بحيث يصل تطبيق Layla إلى جهازك من أي مكان. كما تصف مدونة للمطوّر تشغيل Layla على Windows عبر BlueStacks وربطه بـ LM Studio من خلال واجهة برمجية متوافقة مع OpenAI. أما Layla Cloud فمختلف: هو وضع المطوّر المُستضاف، وليس خادمك الخاص.',
+          },
+          {
+            q: 'هل Layla مفتوح المصدر؟',
+            a: 'لا بالنسبة للتطبيق نفسه: عميل Layla مغلق المصدر. أما مستودعا [Layla-Server](https://github.com/l3utterfly/Layla-Server) و[Layla SDK](https://github.com/l3utterfly/layla-sdk) فمرخّصان بموجب Apache-2.0، وتُنشر النماذج المضبوطة بعلامة Layla علناً على [Hugging Face](https://huggingface.co/l3utterfly). ولأن العميل لا يمكن تدقيقه، يعتمد سلوكه في الخصوصية على سياسة المطوّر نفسه.',
+          },
+          {
+            q: 'هل استخدام Layla AI آمن؟',
+            a: 'لم تدقّق PromptQuorum التطبيق. وفقاً للمطوّر، تعمل الدردشة الأساسية دون اتصال، وتُخزَّن المحادثات مشفّرة على الجهاز، ويسأل التطبيق قبل استخدام الإنترنت. يُعدّ وضع Layla Cloud الاستثناء الرئيسي، ولا يمكن التحقق بشكل مستقل من العميل مغلق المصدر. نزّل التطبيق من App Store أو Google Play أو موقع المطوّر نفسه فقط، إذ يحذّر الموقع من أن ملفات APK المعدّلة قد تحتوي على برمجيات خبيثة.',
           },
           {
             q: 'هل Layla موثوق؟ هل يبلّغ المستخدمون عن مشاكل؟',
-            a: 'يحمل Layla تقييماً قدره 3.8 من 5 من 31 تقييماً على App Store وقت إعداد المراجعة. يذكر بعض المراجعين العلنيين على App Store تعطلاً وميزات دون اتصال غير موثوقة، خصوصاً حول استيراد النماذج المخصّصة على iOS. لم تتحقق هذه المراجعة من استقرار التطبيق الحالي بشكل مستقل — تعامل مع هذه كملاحظات أفاد بها المستخدمون، واختبر التطبيق ضمن فترة استرداد الأموال الخاصة بمنصتك قبل الاعتماد عليه.',
+            a: 'يحمل Layla تقييماً قدره 3.8 من 5 من 33 تقييماً على App Store وقت إعداد المراجعة. يذكر بعض المراجعين العلنيين على App Store تعطلاً وميزات دون اتصال غير موثوقة، خصوصاً حول استيراد النماذج المخصّصة على iOS. لم تتحقق هذه المراجعة من استقرار التطبيق الحالي بشكل مستقل — تعامل مع هذه كملاحظات أفاد بها المستخدمون، واختبر التطبيق ضمن فترة استرداد الأموال الخاصة بمنصتك قبل الاعتماد عليه.',
           },
           {
             q: 'هل تطبيق رفيق الذكاء الاصطناعي "Layla" هو نفس شركة مخطِّط السفر بالذكاء الاصطناعي "Layla" الذي استحوذت عليه Expedia؟',
@@ -3513,10 +3646,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Layla على App Store](https://apps.apple.com/us/app/layla/id6456886656) — السعر، فئات الشراء داخل التطبيق، متطلبات المنصة، التقييمات، وسجل الإصدارات.',
           '[Layla على Google Play](https://play.google.com/store/apps/details?id=com.layla) — التوفر والسعر لأندرويد.',
-          '[موقع Layla الرسمي](https://www.layla-network.ai) — نظرة عامة على المنتج وأوصاف الميزات التي ينشرها المطوّر.',
+          '[موقع Layla الرسمي](https://www.layla-network.ai) و[صفحة التنزيل](https://www.layla-network.ai/download) — نظرة عامة على المنتج، وملف APK المجاني، وملاحظات استعادة المشتريات، وإرشادات الذاكرة.',
           '[سياسة خصوصية Layla](https://blog.layla-network.ai/privacy) — التعامل مع البيانات المحلية مقابل السحابية، نطاق Layla Cloud، والإفصاحات عن جمع البيانات.',
           '[Layla (Cloud) على App Store](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — صفحة التطبيق المنفصل للوضع السحابي الاختياري.',
-          '[l3utterfly على GitHub](https://github.com/l3utterfly) و[l3utterfly على Hugging Face](https://huggingface.co/l3utterfly) — منشورات نماذج بعلامة Layla ومشاريع البنية التحتية ذات الصلة (Layla-Server، Layla SDK).',
+          '[l3utterfly على GitHub](https://github.com/l3utterfly) و[l3utterfly على Hugging Face](https://huggingface.co/l3utterfly) — منشورات نماذج بعلامة Layla ومشاريع البنية التحتية ذات الصلة ([Layla-Server](https://github.com/l3utterfly/Layla-Server)، [Layla SDK](https://github.com/l3utterfly/layla-sdk)).',
         ],
       },
       relatedReading: {
@@ -3536,18 +3669,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-zh.webp',
     title: 'Layla 评测:面向 Android 和 iOS 的本地 AI 伴侣应用',
-    seoTitle: 'Layla 评测:本地 AI 伴侣应用价格与隐私解析',
+    seoTitle: 'Layla AI 评测:本地应用、云端、服务器、价格与隐私',
     intro:
       'Layla 由 [Layla Network Pty Ltd](https://www.layla-network.ai) 开发——这是一家在澳大利亚注册的公司,在 GitHub 上也与开发者 [l3utterfly](https://github.com/l3utterfly) 有关联,后者发布了"Layla"系列经过微调的开放权重模型——是一款面向 Android 和 iOS 的付费应用,核心是在手机上本地运行个人 AI 伴侣,具备超越普通聊天的人设、角色扮演和角色功能。该应用在 App Store 和 Google Play 上均为[一次性付费 19.99 美元](https://apps.apple.com/us/app/layla/id6456886656),App Store 页面还显示了三档具名的应用内购买选项。Layla 的核心聊天功能设计为完全通过 llama.cpp 在设备本地运行 GGUF 模型,但该应用还提供一个默认未启用、需单独同意开启的可选云端模式,名为 Layla Cloud。本评测基于开发商自身的隐私政策、应用商店页面信息和公开文档,而非独立的实测,详细说明了究竟哪些部分真正在本地运行、哪些没有、实际费用如何,以及这款应用适合哪些用户。',
     metaDescription:
-      'Layla 评测2026:面向 Android 和 iOS、售价 19.99 美元的本地 AI 伴侣应用。实际本地运行的部分与可选的 Layla Cloud 模式对比、准确价格、支持的模型以及适用人群。',
+      'Layla AI 评测:售价 19.99 美元的 Android/iPhone 离线 AI 伴侣应用。本地运行的内容、Layla Cloud 与 Layla-Server 的作用、订阅方案、免费 APK 及隐私情况。',
     twitterDescription:
-      'Layla 评测2026:一款售价 19.99 美元、面向 Android 和 iOS 的本地 AI 伴侣应用,具备角色扮演和人设功能。设备端运行的内容、可选云端模式收集的数据,以及与 PocketPal AI、Private LLM 的对比。',
+      'Layla AI 评测:一款售价 19.99 美元、面向 Android 和 iOS 的本地 AI 伴侣应用,具备角色扮演和人设功能。设备端运行的内容、Layla Cloud 收集的数据、免费 APK,以及与 PocketPal AI、Private LLM 的对比。',
     audience:
       '正在考虑购买付费本地 AI 伴侣/角色扮演应用的 Android 和 iOS 用户,需要准确了解哪些内容留在本地、可选云端模式又会收集哪些数据,以及来自应用商店公开评价的准确价格和可靠性提醒。',
     readTime: '阅读约11分钟',
@@ -3563,6 +3696,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai 价格',
       '本地 ai 伴侣 应用',
       'layla vs pocketpal ai',
+      'layla cloud 云端',
+      'layla server 服务器',
+      'layla ai 安全吗',
+      'layla ai 免费',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -3578,9 +3715,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '核心聊天通过 llama.cpp 使用 GGUF 模型在设备本地运行;开发商的隐私政策称会在任何数据离开设备前发出警告。',
           'Layla Cloud 是一个独立的可选模式,启用后会收集匿名化的对话数据——默认处于关闭状态。',
           '主打角色扮演:人设角色、群组对话、100 多种文本转语音音色,以及通过 Stable Diffusion 1.5 实现的本地图像生成,均见于应用商店页面信息。',
-          '评测时 App Store 评分为 3.8/5(31 条评价);部分评价提到离线功能不够稳定——这属于用户反馈,PromptQuorum 未对此进行独立验证。',
+          '评测时 App Store 评分为 3.8/5(33 条评价);部分评价提到离线功能不够稳定——这属于用户反馈,PromptQuorum 未对此进行独立验证。',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -3619,12 +3756,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '价格:在 [App Store](https://apps.apple.com/us/app/layla/id6456886656) 和 Google Play 上[一次性付费 19.99 美元](https://apps.apple.com/us/app/layla/id6456886656),另有三档具名的应用内购买选项,公开页面并未完整说明其具体内容。',
+          '价格:在 [App Store](https://apps.apple.com/us/app/layla/id6456886656) 和 Google Play 上[一次性付费 19.99 美元](https://apps.apple.com/us/app/layla/id6456886656),另有三档具名的应用内方案(每档另有年度价格),公开页面并未完整说明其具体内容;开发商网站还提供功能受限的免费 APK。',
+          '版本:7.6.0 是 App Store 和 Google Play 上的当前版本,Google Play 上列出的最近一次更新为2026年10月19日。',
           '开发商:[Layla Network Pty Ltd](https://www.layla-network.ai),一家在澳大利亚注册的公司;Hugging Face 上 Layla 品牌的微调模型发布于 GitHub 账号 [l3utterfly](https://github.com/l3utterfly) 名下。',
           '核心聊天通过 llama.cpp 使用 GGUF 模型在设备本地运行;根据开发商自身的技术博客文章,该应用还支持 LiteRT-LM 和 PTE(ExecuTorch)模型后端,以及通过 Stable Diffusion 1.5 实现的本地图像生成。',
           '隐私:根据开发商的[隐私政策](https://blog.layla-network.ai/privacy),核心功能设计为离线运行,应用会在数据离开设备前发出警告——但默认关闭的独立可选模式 Layla Cloud 是例外。',
           '主打伴侣与角色扮演:可自定义人设、群组对话、100 多种音色和 Live2D 角色动画,使其区别于该类别中更简单的聊天应用。',
-          'App Store 评分:评测时为 3.8/5(31 条评价);部分评价提到崩溃和离线行为不稳定——这是用户反馈的问题,本评测未对此进行独立验证。',
+          'App Store 评分:评测时为 3.8/5(33 条评价);部分评价提到崩溃和离线行为不稳定——这是用户反馈的问题,本评测未对此进行独立验证。',
         ],
         callouts: [
           {
@@ -3633,7 +3771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: '本评测基于 Layla 公开的隐私政策、App Store 和 Google Play 页面信息、开发商自身的技术博客文章以及公开可见的用户评价,资料核实于2026年9月。PromptQuorum 未针对本评测对 Layla 进行独立的实测或基准测试。',
+            text: '本评测基于 Layla 公开的隐私政策、App Store 和 Google Play 页面信息、开发商自身网站和技术博客文章以及公开可见的用户评价,已对照 7.6.0 版本重新核对。PromptQuorum 未针对本评测对 Layla 进行独立的实测或基准测试。',
           },
         ],
       },
@@ -3657,7 +3795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '发布方:[Layla Network Pty Ltd](https://www.layla-network.ai),注册于澳大利亚昆士兰州绍斯波特。',
           '公开发布时间:根据第三方应用目录信息,约在2023年8月。',
           '模型开发:Layla 品牌的开放权重微调模型发布于 Hugging Face,归属 GitHub 账号 [l3utterfly](https://github.com/l3utterfly)。',
-          '相关项目:[Layla-Server](https://github.com/l3utterfly/Layla-Server)(通过 WebRTC 将应用连接到自托管的 PC 后端)和 [Layla SDK](https://github.com/l3utterfly/layla-sdk)(在 Layla 内构建迷你应用)。',
+          '相关项目:[Layla-Server](https://github.com/l3utterfly/Layla-Server)(通过 WebRTC 将应用连接到自托管的 PC 后端)和 [Layla SDK](https://github.com/l3utterfly/layla-sdk)(在 Layla 内构建迷你应用),两者均采用 Apache-2.0 许可。',
           '客户端应用源代码并未公开——与 PocketPal AI 或 Maid 不同,即便部分底层模型是开放权重的,Layla 应用本身仍为闭源。',
         ],
       },
@@ -3670,7 +3808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '购买并安装应用',
-            whyItMatters: '从 [App Store](https://apps.apple.com/us/app/layla/id6456886656)(19.99 美元)或 [Google Play](https://play.google.com/store/apps/details?id=com.layla)(19.99 美元)下载 Layla。据报道,开发商自己的网站还提供功能更受限的免费版本,可通过直接下载 APK 获取——在假定该选项适用于你的平台之前,请直接在 [layla-network.ai](https://www.layla-network.ai) 上确认当前的可用情况。',
+            whyItMatters: '从 [App Store](https://apps.apple.com/us/app/layla/id6456886656)(19.99 美元)或 [Google Play](https://play.google.com/store/apps/details?id=com.layla)(19.99 美元)下载 Layla。开发商的[下载页面](https://www.layla-network.ai/download)还提供 Android 直接下载的 APK,其中包含功能受限的免费版本,但页面并未列出具体受限的功能。请仅从开发商自己的网站下载 APK——该页面警告称,第三方的修改版 APK 可能含有恶意软件,也不会收到更新。',
           },
           {
             title: '让应用下载其默认模型',
@@ -3739,12 +3877,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '平台': 'Android',
             '可用性': '在 [Google Play](https://play.google.com/store/apps/details?id=com.layla) 上提供',
-            '备注': '据报道,开发商自己的网站也提供了独立于 Google Play 的直接 APK 分发渠道——依赖它之前请直接确认当前的可用情况。',
+            '备注': '开发商的[下载页面](https://www.layla-network.ai/download)也通过自己的服务器提供直接 APK,其中包含功能受限的免费版本。',
           },
           {
             '平台': 'Windows / Linux',
             '可用性': '截至评测时,未确认存在原生的 Windows 或 Linux 桌面版本',
-            '备注': '[Layla-Server](https://github.com/l3utterfly/Layla-Server) 项目让移动应用可以通过 WebRTC 连接到运行自有本地后端的 PC,这是一种桥接方式,而非原生桌面客户端。',
+            '备注': '[Layla-Server](https://github.com/l3utterfly/Layla-Server) 项目(Apache-2.0)让移动应用可以通过 WebRTC 连接到运行自有本地后端的 PC——这是一种桥接方式,而非原生桌面客户端。开发商的一篇博客文章还介绍了通过 BlueStacks 在 Windows 上运行 Layla,并经由 OpenAI 兼容 API 连接 LM Studio。',
           },
         ],
       },
@@ -3752,14 +3890,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'Layla 的价格是多少?',
         content: [
-          '**Layla 在 [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) 和 [Google Play](https://play.google.com/store/apps/details?id=com.layla) 上均为一次性付费 19.99 美元。** 在这一基础购买之外,App Store 页面还显示了三档具名的应用内购买选项——Monarch(4.99 美元)、Birdwing(19.99 美元)和 Blue Morpho(29.99 美元)——但公开的商店页面并未完整说明每档具体解锁的内容(例如是否包含云端使用额度、高级角色或额外音色)。购买前,请在应用内确认某一档具体包含的内容。',
-          '根据开发商自身博客内容,据报道还有一个功能更受限的免费版本,通过开发商自己网站上的直接 APK 下载提供——这与 App Store 和 Google Play 上的付费版本不同,其当前可用情况和功能集应直接在 [layla-network.ai](https://www.layla-network.ai) 上确认,而非根据本评测假设。',
-          'Layla Cloud 作为独立的可选云端聊天模式,在应用商店中以独立应用形式免费下载;持续使用 Layla Cloud 是否需要在免费额度之外订阅或消耗额度,本文查阅的公开页面信息中并未说明。',
+          '**Layla 在 [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) 和 [Google Play](https://play.google.com/store/apps/details?id=com.layla) 上均为一次性付费 19.99 美元。** 在这一基础购买之外,美国 App Store 页面还显示了三档具名的应用内方案——Monarch(4.99 美元)、Birdwing(19.99 美元)和 Blue Morpho(29.99 美元)——每档还列有年度方案(Monarch 49.99 美元、Birdwing 169.99 美元、Blue Morpho 249.99 美元)。年度方案的列出表明可能采用定期扣费,请在购买页面确认方案是否会自动续订。公开页面并未说明每档具体解锁的内容(例如云端使用额度、高级角色或额外音色),购买前请在应用内确认。',
+          '开发商的[下载页面](https://www.layla-network.ai/download)和网站常见问题介绍了一个功能受限的免费版本,以 Android 直接下载 APK 的方式提供,与付费商店版本分开。页面未给出该版本的购买码或许可证密钥,也未列出具体受限的功能。Layla Network 表示完整版应用为一次性购买,而非订阅。',
+          'Layla Cloud 作为独立的可选云端聊天模式,在 App Store 中以独立应用形式免费下载,且未显示应用内购买;持续使用 Layla Cloud 是否需要在免费额度之外订阅或消耗额度,本文查阅的公开页面信息中并未说明。',
         ],
         items: [
           '**基础应用:** 在 App Store 和 Google Play 均为一次性付费 19.99 美元——基础购买本身无需订阅。',
-          '**应用内购买档位:** Monarch(4.99 美元)、Birdwing(19.99 美元)、Blue Morpho(29.99 美元)——在 App Store 页面中列出;具体内容公开信息中未完整说明。',
-          '**免费/受限版本:** 据报道可通过开发商自己网站的直接 APK 下载获得,与付费商店页面分开——请直接确认当前状态。',
+          '**应用内方案:** Monarch(4.99 美元)、Birdwing(19.99 美元)、Blue Morpho(29.99 美元),每档另有年度方案(49.99、169.99、249.99 美元),见美国 App Store;具体内容公开信息中未完整说明。',
+          '**免费/受限版本:** 开发商[下载页面](https://www.layla-network.ai/download)提供的直接 APK,功能受限,未提及购买码——与付费商店版本分开。',
           '**Layla Cloud:** 一款独立且免费下载的伴侣应用,提供基于云端的角色聊天;其在免费额度之外的具体费用结构在公开页面中未说明。',
         ],
       },
@@ -3768,7 +3906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私:本地聊天 vs. Layla Cloud',
         content: [
           '**Layla 自身的[隐私政策](https://blog.layla-network.ai/privacy)指出,"我们应用的核心功能设计为在您的设备上离线运行",并称在任何会将您的数据发送到设备之外的操作前,应用都会显示警告和确认信息。** 该政策列出了触发数据外传的具体场景:将角色上传到 Personality Hub、使用应用内"举报错误"功能,以及启用可选的云端功能。',
-          '最后一项——可选的云端功能——即 Layla Cloud,开发商将其描述为一个独立的单独模式:根据该政策,"只有在 Layla 内安装『Layla Cloud』迷你应用后,Layla Cloud 才会启用",如果未安装或启用,"任何与 Layla Cloud 相关的功能都不会生效"。当 Layla Cloud 处于活跃状态时,开发商自身的文档指出它会收集对话历史——你的消息、角色的回复,以及长期记忆(Long-Term Memory)、PDF Digest 和 Dream 等辅助功能产生的数据——这些数据经过匿名化处理且不与你的账号关联,但可能用于调试或改进服务。该政策还指出,Layla Cloud 不会追溯收集其启用之前的对话。',
+          '最后一项——可选的云端功能——即 Layla Cloud,开发商将其描述为一个独立的单独模式:根据该政策,"只有在 Layla 内安装『Layla Cloud』迷你应用后,Layla Cloud 才会启用",如果未安装或启用,"任何与 Layla Cloud 相关的功能都不会生效"。当 Layla Cloud 处于活跃状态时,开发商自身的文档指出它会收集对话历史——你的消息、角色的回复,以及长期记忆(Long-Term Memory)、PDF Digest 和 Dream 等辅助功能产生的数据——这些数据经过匿名化处理且不与你的账号关联,但可能用于调试或 AI 训练以改进服务。该政策还指出,删除 Layla Cloud 账号并不会删除开发商服务器上的历史对话记录。此外,该政策指出,Layla Cloud 不会追溯收集其启用之前的对话。',
           '综合来看,这与核心功能完全不含任何云端组件的应用相比,是一种截然不同的隐私设计:Layla 默认的本地模式设计为在传输前设置明确的同意关卡,从而将数据留在设备上,但产品本身确实提供了一条可选、需单独启用的云端路径,一旦用户开启,就会收集匿名化的对话数据。希望获得最强保证——即产品从一开始就没有任何可开启的云端模式——的读者,应将其与 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 进行比较,后者的全部代码库均以 MIT 许可开源,不包含任何内置的云端聊天功能。',
         ],
         items: [
@@ -3776,6 +3914,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** 一种独立的可选启用模式(以迷你应用或独立应用形式安装),启用后会收集匿名化的对话历史,包括辅助功能产生的数据。',
           '**不追溯:** 根据政策,启用 Layla Cloud 不会纳入其启用之前的对话历史。',
           '**闭源:** 与 PocketPal AI 或 Maid 不同,Layla 的客户端代码并未公开,因此"默认不传输"的说法依据的是开发商自身的隐私政策,而非独立的代码审计。',
+          '**商店隐私标签:** 由开发商自行申报,未经 Apple 验证——主应用列出的是诊断数据以及照片或视频(用于应用功能),均未与你关联,而独立的 Layla(Cloud)页面则申报了电子邮件地址和用户内容。',
+          '**政策时效:** 政策页面显示的最后更新时间为 10/05/2024,早于 7.x 版本发布,因此可能未涵盖较新的功能。',
         ],
         callouts: [
           {
@@ -3805,12 +3945,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: '运行 Layla 需要什么硬件?',
         content: [
-          '**App Store 页面建议最低配备 8 GB 内存(RAM),而 Layla 自身的宣传材料历来将该应用定位为面向近期旗舰智能手机,而非经济型或较旧的硬件。** 这一门槛比部分竞品本地聊天应用更为严格,后者通常可用 4 GB 内存流畅支持 2-4B 参数的小型模型——Layla 的伴侣功能(更大的默认模型、本地图像生成和角色动画)提高了实际的硬件下限。',
+          '**开发商网站称,小型本地模型可在约 4 GB 内存的手机上运行,较大的模型在 8 GB 或以上内存时效果最佳;App Store 描述则面向“最新的旗舰手机(8GB+ 内存)”。** Layla 的伴侣功能(更大的默认模型、本地图像生成和角色动画)使实际的硬件下限高于更简单的本地聊天应用。',
           '与任何基于 GGUF 的应用一样,真正决定内存需求的是所加载的具体模型,而非应用本身:较小的量化模型所需内存低于 70 亿参数以上的模型,而在聊天的同时并行运行本地 Stable Diffusion 图像生成,会带来超出纯文本推理的额外内存和处理开销。',
         ],
         items: [
-          '建议最低配置:根据 App Store 页面信息,为 8 GB 内存——明显高于该类别中更简单的本地聊天应用常见的 4 GB 下限。',
-          '根据开发商自身的宣传材料,建议使用近期旗舰级智能手机(大致为最近几代产品),而非较旧或经济型设备。',
+          '小型本地模型:据开发商网站,约需 4 GB 内存;较大的模型:8 GB 或以上。',
+          '最佳体验:据 App Store 描述,为 8 GB 以上内存的旗舰级手机,而非较旧或经济型设备。',
           '存储空间:据报道,以往版本首次启动时的默认模型下载约为 4 GB;自定义 GGUF 模型和 Stable Diffusion 检查点会增加额外的存储需求。',
           '本地图像生成(Stable Diffusion 1.5)会带来超出纯文本聊天的处理和内存开销——在内存较低的设备上使用该功能时,预期性能会更慢。',
         ],
@@ -3829,7 +3969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '优点': '本地文本与图像生成',
             '实际使用中的含义': '聊天和 Stable Diffusion 1.5 图像生成均可完全在设备本地运行。',
-            '局限 / 提醒': '相比纯文本本地聊天应用,需要明显更多的内存和存储空间;App Store 列出的最低要求为 8 GB。',
+            '局限 / 提醒': '相比纯文本本地聊天应用,需要明显更多的内存和存储空间;App Store 描述面向 8 GB 以上内存的手机。',
           },
           {
             '优点': '数据外传前的明确同意关卡',
@@ -3844,7 +3984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '优点': '19.99 美元一次性付费',
             '实际使用中的含义': '两个应用商店均不要求订阅即可使用基础应用。',
-            '局限 / 提醒': '另有三档具名的应用内购买选项,其确切内容在公开页面中未完整说明——请在应用内确认自己具体购买了什么。',
+            '局限 / 提醒': '另有三档具名的应用内方案(每档另有年度价格),其确切内容在公开页面中未完整说明——请确认自己购买的内容以及是否会续订。',
           },
           {
             '优点': '跨平台:Android 与 iOS',
@@ -3870,7 +4010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**需要保证完全不含云端组件产品的读者。** 由于 Layla 提供了一个可选的云端模式(Layla Cloud),一旦启用就会收集匿名化数据,特别希望使用一款从一开始就没有任何可开启云端功能应用的读者,应选择 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review),其全部开源代码中不包含任何内置的云端聊天路径。',
           '**希望使用免费或完全开源应用的读者。** Layla 是一款售价 19.99 美元的付费闭源应用;PocketPal AI(免费,MIT 许可)和 Maid(免费,MIT 许可)可以满足这一需求。',
           '**希望使用简洁、极简助手式聊天界面的读者。** Layla 以角色和人设为先的设计,增加了那些只想要简单问答式聊天的用户可能并不需要的复杂度;Private LLM 或 PocketPal AI 的形态更接近助手。',
-          '**内存较低或设备较旧的读者。** App Store 将 8 GB 内存列为最低建议配置,高于多款可用 4 GB 内存流畅运行较小模型的竞品应用。',
+          '**内存较低或设备较旧的读者。** App Store 描述面向 8 GB 以上内存的手机,开发商网站也称较大模型需要 8 GB 或以上内存,高于多款可用 4 GB 内存流畅运行较小模型的竞品应用。',
           '**需要企业或团队功能的读者。** Layla 是一款面向单一用户的消费级应用,没有管理控制台、共享许可管理或团队计费功能;组织机构应转而考虑自托管的服务器端本地 LLM 基础设施。',
           '**希望自行独立审计应用源代码的读者。** Layla 的客户端应用为闭源;需要这一保证级别的读者应使用 PocketPal AI、Maid 或 ChatterUI 等采用 MIT 或 AGPL 许可的替代方案。',
         ],
@@ -3960,7 +4100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Layla 免费吗?',
-            a: '不是,Layla 主应用在 App Store 和 Google Play 上均为一次性付费 19.99 美元。App Store 页面还显示了三档具名的应用内购买选项(Monarch 4.99 美元、Birdwing 19.99 美元、Blue Morpho 29.99 美元)。据报道,还有一个功能更受限的免费版本,可通过开发商自己网站上的直接 APK 下载获得——请在 [layla-network.ai](https://www.layla-network.ai) 上确认当前的可用情况。Layla Cloud 是一款用于基于云端聊天的独立伴侣应用,作为独立应用可免费下载。',
+            a: '部分免费。Layla 主应用在 App Store 和 Google Play 上均为一次性付费 19.99 美元,而开发商的[下载页面](https://www.layla-network.ai/download)提供功能受限的免费版本,以 Android 直接下载 APK 的方式获得。官方页面未提及购买码或许可证密钥,因此对声称提供免费“购买码”的网站应保持警惕。美国 App Store 还列出了应用内方案(Monarch、Birdwing、Blue Morpho),含月度和年度价格。Layla Cloud 是一款独立应用,可在 App Store 免费下载。',
           },
           {
             q: 'Layla 是否完全离线运行,完全不含任何云端组件?',
@@ -3980,15 +4120,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Layla 需要多少内存?',
-            a: 'App Store 页面建议最低配备 8 GB 内存,高于更简单的纯文本本地聊天应用常见的约 4 GB 下限,这反映了 Layla 更大的默认模型、本地图像生成以及角色动画功能带来的需求。',
+            a: '开发商网站称,小型本地模型可在约 4 GB 内存的手机上运行,较大的模型在 8 GB 或以上内存时效果最佳,而 App Store 描述则面向 8 GB 以上内存的旗舰手机。Layla 更大的默认模型、本地图像生成以及角色动画功能,使实际下限高于更简单的纯文本聊天应用。',
           },
           {
             q: 'Layla Cloud 是什么,它和 Layla 主应用是同一个东西吗?',
-            a: '不是。Layla Cloud 是一个独立的可选模式或迷你应用,为不想管理本地模型的用户提供基于云端的角色聊天。根据隐私政策,只有用户安装或启用它后才会生效,处于活跃状态时会收集匿名化的对话历史,用于调试或改进服务。它不会追溯收集其启用之前的数据。',
+            a: '不是。Layla Cloud 是一个独立的可选模式或迷你应用,为不想管理本地模型的用户提供基于云端的角色聊天。根据隐私政策,只有用户安装或启用它后才会生效,处于活跃状态时会收集匿名化的对话历史,用于调试或改进服务。它不会追溯收集其启用之前的数据,删除 Layla Cloud 账号也不会删除开发商服务器上的历史对话记录。Layla(Cloud)还作为独立的免费应用在 App Store 上架。',
+          },
+          {
+            q: 'Layla 可以连接到电脑或服务器吗?',
+            a: '可以,通过开发商的开源项目 [Layla-Server](https://github.com/l3utterfly/Layla-Server)。它是对 llama-server(或任何 OpenAI 兼容服务器)的封装,采用 Apache-2.0 许可,通过 WebRTC 转发请求,使 Layla 应用可以从任何地方访问你的电脑。开发商的一篇博客文章还介绍了通过 BlueStacks 在 Windows 上运行 Layla,并经由 OpenAI 兼容 API 连接 LM Studio。Layla Cloud 则是另一回事:它是开发商托管的模式,而不是你自己的服务器。',
+          },
+          {
+            q: 'Layla 是开源的吗?',
+            a: '应用本身不是:Layla 客户端为闭源。[Layla-Server](https://github.com/l3utterfly/Layla-Server)和 [Layla SDK](https://github.com/l3utterfly/layla-sdk)代码仓库采用 Apache-2.0 许可,Layla 品牌的微调模型则公开发布在 [Hugging Face](https://huggingface.co/l3utterfly) 上。由于无法对客户端进行审计,其隐私行为依据的是开发商自己的政策。',
+          },
+          {
+            q: '使用 Layla AI 安全吗?',
+            a: 'PromptQuorum 未对该应用进行审计。据开发商称,核心聊天可离线运行,聊天记录加密存储在设备上,应用在使用互联网前会先询问。Layla Cloud 模式是主要例外,而且闭源客户端无法被独立验证。请仅从 App Store、Google Play 或开发商自己的网站下载;该网站警告称,修改版 APK 可能含有恶意软件。',
           },
           {
             q: 'Layla 可靠吗?用户是否反馈过问题?',
-            a: '评测时,Layla 在 App Store 上的评分为 3.8/5(31 条评价)。部分公开的 App Store 评价提到崩溃以及不稳定的离线功能,尤其是在 iOS 上导入自定义模型时。本评测未对当前的应用稳定性进行独立验证——请将这些视为用户反馈的观察,并在依赖该应用之前,先在你所在平台的退款期限内进行测试。',
+            a: '评测时,Layla 在 App Store 上的评分为 3.8/5(33 条评价)。部分公开的 App Store 评价提到崩溃以及不稳定的离线功能,尤其是在 iOS 上导入自定义模型时。本评测未对当前的应用稳定性进行独立验证——请将这些视为用户反馈的观察,并在依赖该应用之前,先在你所在平台的退款期限内进行测试。',
           },
           {
             q: 'AI 伴侣应用"Layla"和被 Expedia 收购的 AI 旅行规划公司"Layla"是同一家公司吗?',
@@ -4012,10 +4164,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store 上的 Layla](https://apps.apple.com/us/app/layla/id6456886656) — 价格、应用内购买档位、平台要求、评分和版本历史。',
           '[Google Play 上的 Layla](https://play.google.com/store/apps/details?id=com.layla) — Android 端的可用性和价格。',
-          '[Layla 官方网站](https://www.layla-network.ai) — 产品概览和开发商发布的功能说明。',
+          '[Layla 官方网站](https://www.layla-network.ai)和[下载页面](https://www.layla-network.ai/download) — 产品概览、免费 APK、恢复购买说明和内存配置建议。',
           '[Layla 隐私政策](https://blog.layla-network.ai/privacy) — 本地与云端数据处理方式、Layla Cloud 的范围以及数据收集方面的披露。',
           '[App Store 上的 Layla(Cloud)](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — 独立可选云端模式应用的页面信息。',
-          '[GitHub 上的 l3utterfly](https://github.com/l3utterfly) 与 [Hugging Face 上的 l3utterfly](https://huggingface.co/l3utterfly) — Layla 品牌模型的发布及相关基础设施项目(Layla-Server、Layla SDK)。',
+          '[GitHub 上的 l3utterfly](https://github.com/l3utterfly) 与 [Hugging Face 上的 l3utterfly](https://huggingface.co/l3utterfly) — Layla 品牌模型的发布及相关基础设施项目([Layla-Server](https://github.com/l3utterfly/Layla-Server)、[Layla SDK](https://github.com/l3utterfly/layla-sdk))。',
         ],
       },
       relatedReading: {
@@ -4035,18 +4187,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
-    next_refresh_due: '2027-03-06',
+    dateModified: '2026-10-30',
+    next_refresh_due: '2027-04-30',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-ko.webp',
     title: 'Layla 리뷰: Android·iOS용 온디바이스 AI 컴패니언 앱',
-    seoTitle: 'Layla 리뷰: 로컬 AI 컴패니언 앱 가격 및 개인정보',
+    seoTitle: 'Layla AI 리뷰: 로컬·클라우드·서버·요금제 정리',
     intro:
       'Layla는 [Layla Network Pty Ltd](https://www.layla-network.ai)가 개발했습니다. 이 회사는 호주에 등록되어 있으며, GitHub에서는 "Layla" 브랜드의 파인튜닝된 오픈 웨이트 모델을 공개하는 개발자 [l3utterfly](https://github.com/l3utterfly)와도 연관되어 있습니다. Layla는 스마트폰에서 로컬로 실행되는 개인 AI 컴패니언을 중심으로 설계된 Android·iOS용 유료 앱으로, 단순한 채팅을 넘어선 페르소나·롤플레이·캐릭터 기능을 갖추고 있습니다. App Store와 Google Play 모두에서 [19.99달러 일회성 구매](https://apps.apple.com/us/app/layla/id6456886656)로 제공되며, App Store 페이지에는 이름이 붙은 앱 내 구매 등급 3종도 표시되어 있습니다. Layla의 핵심 채팅 기능은 llama.cpp를 통해 GGUF 모델을 기기에서 완전히 실행하도록 설계되어 있지만, 기본적으로 활성화되어 있지 않고 별도 동의가 필요한 선택적 클라우드 모드인 Layla Cloud도 함께 제공됩니다. 이 리뷰는 자체적인 실사용 테스트가 아니라 개발사 자체의 개인정보 처리방침, 앱스토어 게재 정보, 공개 문서를 근거로 실제로 무엇이 로컬에서 작동하고 무엇이 그렇지 않은지, 실제 비용은 얼마인지, 어떤 독자에게 적합한지를 정확히 다룹니다.',
     metaDescription:
-      'Layla 리뷰 2026: Android·iOS용 19.99달러 온디바이스 AI 컴패니언 앱. 실제로 로컬에서 작동하는 부분과 선택적 Layla Cloud 모드의 차이, 정확한 가격, 모델, 적합한 이용자를 분석합니다.',
+      'Layla AI 리뷰: Android·iPhone용 19.99달러 오프라인 AI 앱. 로컬 작동 범위, Layla Cloud·Layla-Server, 요금제, 무료 APK, 개인정보를 정리합니다.',
     twitterDescription:
-      'Layla 리뷰 2026: 롤플레이 및 페르소나 기능을 갖춘 Android·iOS용 19.99달러 로컬 AI 컴패니언 앱. 기기에서 작동하는 부분, 선택적 클라우드 모드가 수집하는 항목, PocketPal AI·Private LLM과의 비교를 다룹니다.',
+      'Layla AI 리뷰: 롤플레이 및 페르소나 기능을 갖춘 Android·iOS용 19.99달러 로컬 AI 컴패니언 앱. 기기에서 작동하는 부분, Layla Cloud가 수집하는 항목, 무료 APK, PocketPal AI·Private LLM과의 비교를 다룹니다.',
     audience:
       '온디바이스 AI 컴패니언·롤플레이 유료 앱을 검토 중이며, 무엇이 로컬에 남고 선택적 클라우드 모드가 무엇을 수집하는지 정확히 알아야 하는 Android·iOS 이용자. 정확한 가격과 공개 앱스토어 리뷰에 근거한 신뢰성 관련 유의사항도 함께 다룹니다.',
     readTime: '11분 읽기',
@@ -4062,6 +4214,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'layla ai 가격',
       '로컬 ai 컴패니언 앱',
       'layla vs pocketpal ai',
+      'layla 클라우드',
+      'layla 서버',
+      'layla ai 안전한가',
+      'layla ai 무료',
     ],
     current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
@@ -4077,9 +4233,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '핵심 채팅은 llama.cpp를 사용해 GGUF 모델로 기기에서 작동하며, 개발사의 개인정보 처리방침에 따르면 데이터가 기기 밖으로 나가기 전에 경고한다고 명시되어 있음.',
           'Layla Cloud는 별도의 선택적 모드로, 활성화되면 익명화된 대화 데이터를 수집하며 기본값은 비활성화 상태.',
           '롤플레이 중심: 페르소나 캐릭터, 그룹 대화, 100개 이상의 TTS 음성, Stable Diffusion 1.5를 통한 로컬 이미지 생성(앱스토어 게재 정보 기준).',
-          '리뷰 시점 기준 App Store 평점은 31건의 평가에서 3.8/5; 일부 리뷰는 오프라인 기능의 불안정성을 지적하나, 이는 이용자 제보이며 PromptQuorum이 독립적으로 검증한 사항은 아님.',
+          '리뷰 시점 기준 App Store 평점은 33건의 평가에서 3.8/5; 일부 리뷰는 오프라인 기능의 불안정성을 지적하나, 이는 이용자 제보이며 PromptQuorum이 독립적으로 검증한 사항은 아님.',
         ],
-        updatedDate: '2026-09',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -4118,12 +4274,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '가격: [App Store](https://apps.apple.com/us/app/layla/id6456886656)와 Google Play에서 [19.99달러 일회성 구매](https://apps.apple.com/us/app/layla/id6456886656), 공개 페이지에 정확한 내용이 전부 나와 있지 않은 이름 붙은 앱 내 구매 등급 3종 추가.',
+          '가격: [App Store](https://apps.apple.com/us/app/layla/id6456886656)와 Google Play에서 [19.99달러 일회성 구매](https://apps.apple.com/us/app/layla/id6456886656), 이름 붙은 앱 내 요금제 3종 추가(각각 연간 가격도 표시되며 공개 페이지에 정확한 내용이 전부 나와 있지 않음); 개발사 사이트에서는 기능이 제한된 무료 APK도 제공함.',
+          '버전: 7.6.0이 App Store와 Google Play의 현재 릴리스이며, Google Play에는 마지막 업데이트가 2026년 10월 19일로 표시되어 있음.',
           '개발사: [Layla Network Pty Ltd](https://www.layla-network.ai), 호주에 등록된 회사; Hugging Face의 Layla 브랜드 파인튜닝 모델은 GitHub 계정 [l3utterfly](https://github.com/l3utterfly) 명의로 공개됨.',
           '핵심 채팅은 llama.cpp를 사용해 GGUF 모델로 기기에서 작동함; 개발사 자체 기술 블로그 게시물에 따르면 LiteRT-LM 및 PTE(ExecuTorch) 모델 백엔드와 Stable Diffusion 1.5를 통한 로컬 이미지 생성도 지원함.',
           '개인정보: 개발사의 [개인정보 처리방침](https://blog.layla-network.ai/privacy)에 따르면 핵심 기능은 오프라인으로 작동하도록 설계되어 있으며 기본적으로 비활성화된 별도의 선택적 Layla Cloud 모드를 제외하고는 데이터가 기기 밖으로 나가기 전에 경고함.',
           '컴패니언·롤플레이 중심: 커스터마이즈 가능한 페르소나, 그룹 대화, 100개 이상의 음성, Live2D 캐릭터 애니메이션이 이 카테고리의 더 단순한 채팅 앱들과 차별화되는 요소.',
-          'App Store 평점: 리뷰 시점 기준 31건의 평가에서 3.8/5; 일부 리뷰는 충돌 및 불안정한 오프라인 동작을 지적하며, 이는 이 리뷰가 독립적으로 검증하지 않은 이용자 제보 사항임.',
+          'App Store 평점: 리뷰 시점 기준 33건의 평가에서 3.8/5; 일부 리뷰는 충돌 및 불안정한 오프라인 동작을 지적하며, 이는 이 리뷰가 독립적으로 검증하지 않은 이용자 제보 사항임.',
         ],
         callouts: [
           {
@@ -4132,7 +4289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: '이 리뷰는 Layla의 공개 개인정보 처리방침, App Store 및 Google Play 게재 정보, 개발사 자체 기술 블로그 게시물, 공개적으로 확인 가능한 이용자 리뷰를 근거로 하며 2026년 9월 기준으로 확인되었습니다. PromptQuorum은 이 리뷰를 위해 Layla에 대한 독립적인 실사용 테스트나 벤치마크를 수행하지 않았습니다.',
+            text: '이 리뷰는 Layla의 공개 개인정보 처리방침, App Store 및 Google Play 게재 정보, 개발사 자체 사이트와 기술 블로그 게시물, 공개적으로 확인 가능한 이용자 리뷰를 근거로 하며 버전 7.6.0을 기준으로 다시 확인되었습니다. PromptQuorum은 이 리뷰를 위해 Layla에 대한 독립적인 실사용 테스트나 벤치마크를 수행하지 않았습니다.',
           },
         ],
       },
@@ -4156,7 +4313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '게시자: [Layla Network Pty Ltd](https://www.layla-network.ai), 호주 퀸즐랜드주 사우스포트에 등록.',
           '공개 출시: 서드파티 앱 디렉터리에 따르면 2023년 8월경.',
           '모델 개발: Layla 브랜드의 오픈 웨이트 파인튜닝 모델은 GitHub 계정 [l3utterfly](https://github.com/l3utterfly) 명의로 Hugging Face에 공개됨.',
-          '관련 프로젝트: [Layla-Server](https://github.com/l3utterfly/Layla-Server)(WebRTC를 통해 앱을 자체 호스팅 PC 백엔드에 연결)와 [Layla SDK](https://github.com/l3utterfly/layla-sdk)(Layla 내에서 미니 앱 제작).',
+          '관련 프로젝트: [Layla-Server](https://github.com/l3utterfly/Layla-Server)(WebRTC를 통해 앱을 자체 호스팅 PC 백엔드에 연결)와 [Layla SDK](https://github.com/l3utterfly/layla-sdk)(Layla 내에서 미니 앱 제작), 둘 다 Apache-2.0 라이선스.',
           '클라이언트 앱 소스 코드는 공개되지 않음 — PocketPal AI나 Maid와 달리, 일부 기반 모델이 오픈 웨이트임에도 Layla 앱 자체는 클로즈드 소스임.',
         ],
       },
@@ -4169,7 +4326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '앱 구매 및 설치',
-            whyItMatters: '[App Store](https://apps.apple.com/us/app/layla/id6456886656)(19.99달러) 또는 [Google Play](https://play.google.com/store/apps/details?id=com.layla)(19.99달러)에서 Layla를 다운로드합니다. 개발사 자체 사이트에서 직접 APK 다운로드로 배포되는 기능이 더 제한된 무료 버전이 있다는 보고도 있습니다 — 자신의 플랫폼에 적용된다고 가정하기 전에 [layla-network.ai](https://www.layla-network.ai)에서 현재 제공 여부를 직접 확인하세요.',
+            whyItMatters: '[App Store](https://apps.apple.com/us/app/layla/id6456886656)(19.99달러) 또는 [Google Play](https://play.google.com/store/apps/details?id=com.layla)(19.99달러)에서 Layla를 다운로드합니다. 개발사의 [다운로드 페이지](https://www.layla-network.ai/download)에서는 Android용 직접 APK도 제공하며, 여기에는 기능이 제한된 무료 버전이 포함됩니다. 어떤 기능이 제한되는지는 공개되어 있지 않습니다. APK는 반드시 개발사 자체 사이트에서만 받으세요 — 해당 페이지는 서드파티의 변조(modded) APK에 악성코드가 포함될 수 있고 업데이트도 받지 못한다고 경고합니다.',
           },
           {
             title: '앱이 기본 모델을 다운로드하도록 함',
@@ -4238,12 +4395,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '플랫폼': 'Android',
             '제공 여부': '[Google Play](https://play.google.com/store/apps/details?id=com.layla)에서 제공',
-            '참고 사항': 'Google Play와 별개로 개발사 자체 사이트에서 직접 APK를 배포하는 채널도 제공되었다는 보고가 있음 — 의존하기 전에 현재 제공 여부를 직접 확인할 것.',
+            '참고 사항': '개발사의 [다운로드 페이지](https://www.layla-network.ai/download)에서는 자체 서버의 직접 APK도 제공하며, 여기에는 기능이 제한된 무료 버전이 포함됨.',
           },
           {
             '플랫폼': 'Windows / Linux',
             '제공 여부': '리뷰 시점 기준 네이티브 Windows 또는 Linux 데스크톱 버전은 확인되지 않음',
-            '참고 사항': '[Layla-Server](https://github.com/l3utterfly/Layla-Server) 프로젝트를 통해 모바일 앱이 자체 로컬 백엔드를 실행하는 PC에 WebRTC로 연결할 수 있으나, 이는 네이티브 데스크톱 클라이언트가 아니라 브리지임.',
+            '참고 사항': '[Layla-Server](https://github.com/l3utterfly/Layla-Server) 프로젝트(Apache-2.0)를 통해 모바일 앱이 자체 로컬 백엔드를 실행하는 PC에 WebRTC로 연결할 수 있으나, 이는 네이티브 데스크톱 클라이언트가 아니라 브리지임. 개발사 블로그 게시물에는 BlueStacks를 통해 Windows에서 Layla를 실행하고 OpenAI 호환 API로 LM Studio에 연결하는 방법도 설명되어 있음.',
           },
         ],
       },
@@ -4251,14 +4408,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'Layla의 가격은?',
         content: [
-          '**Layla는 [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656)와 [Google Play](https://play.google.com/store/apps/details?id=com.layla) 모두에서 19.99달러 일회성 구매로 제공됩니다.** 이 기본 구매 외에도 App Store 페이지에는 Monarch(4.99달러), Birdwing(19.99달러), Blue Morpho(29.99달러)라는 이름이 붙은 앱 내 구매 등급 3종이 표시되어 있지만, 공개 스토어 페이지에서는 각 등급이 정확히 무엇을 잠금 해제하는지(예: 클라우드 이용 크레딧, 프리미엄 캐릭터, 추가 음성 포함 여부 등) 전부 설명하지 않습니다. 구매 전 앱 내에서 특정 등급에 정확히 무엇이 포함되는지 확인하세요.',
-          '개발사 자체 블로그 콘텐츠에 따르면, 개발사 자체 사이트에서 직접 APK 다운로드로 배포되는 기능이 더 제한된 무료 버전이 있는 것으로 보고됩니다 — 이는 유료 App Store 및 Google Play 페이지와는 별개이며, 현재 제공 여부와 기능 구성은 이 리뷰에서 추정하기보다 [layla-network.ai](https://www.layla-network.ai)에서 직접 확인해야 합니다.',
-          '별도의 선택적 클라우드 채팅 모드인 Layla Cloud는 각 스토어에서 독립된 앱으로 무료 다운로드가 가능하다고 표시됩니다. Layla Cloud를 계속 사용하는 데 무료 등급을 넘어서는 구독이나 크레딧이 필요한지 여부는 이 글에서 확인한 공개 페이지에 명시되어 있지 않습니다.',
+          '**Layla는 [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656)와 [Google Play](https://play.google.com/store/apps/details?id=com.layla) 모두에서 19.99달러 일회성 구매로 제공됩니다.** 이 기본 구매 외에도 미국 App Store 페이지에는 Monarch(4.99달러), Birdwing(19.99달러), Blue Morpho(29.99달러)라는 이름이 붙은 앱 내 요금제 3종이 표시되어 있으며, 각각 연간 요금제도 함께 표시됩니다(Monarch 49.99달러, Birdwing 169.99달러, Blue Morpho 249.99달러). 연간 요금제 표기는 정기 결제를 시사하므로, 구매 화면에서 요금제가 자동 갱신되는지 확인하세요. 공개 페이지에서는 각 요금제가 정확히 무엇을 잠금 해제하는지(예: 클라우드 이용 크레딧, 프리미엄 캐릭터, 추가 음성 포함 여부 등) 설명하지 않으므로, 구매 전 앱 내에서 확인하세요.',
+          '개발사의 [다운로드 페이지](https://www.layla-network.ai/download)와 사이트 FAQ에는 기능이 제한된 무료 버전이 Android용 직접 APK로 제공되며 유료 스토어 페이지와는 별개라고 설명되어 있습니다. 이 버전에 대한 구매 코드나 라이선스 키는 안내되어 있지 않고, 어떤 기능이 제한되는지도 공개되어 있지 않습니다. Layla Network는 전체 앱이 구독이 아닌 일회성 구매라고 밝히고 있습니다.',
+          '별도의 선택적 클라우드 채팅 모드인 Layla Cloud는 App Store에서 독립된 앱으로 무료 다운로드가 가능하며 앱 내 구매는 표시되지 않습니다. Layla Cloud를 계속 사용하는 데 무료 등급을 넘어서는 구독이나 크레딧이 필요한지 여부는 이 글에서 확인한 공개 페이지에 명시되어 있지 않습니다.',
         ],
         items: [
           '**기본 앱:** App Store와 Google Play에서 19.99달러 일회성 구매 — 기본 구매 자체에는 구독이 필요하지 않음.',
-          '**앱 내 구매 등급:** Monarch(4.99달러), Birdwing(19.99달러), Blue Morpho(29.99달러) — App Store 페이지에 이름이 명시되어 있으나 정확한 내용은 공개적으로 전부 설명되어 있지 않음.',
-          '**무료/제한 버전:** 개발사 자체 사이트의 직접 APK 다운로드로 제공된다고 보고되며 유료 스토어 페이지와는 별개 — 현재 상태를 직접 확인할 것.',
+          '**앱 내 요금제:** Monarch(4.99달러), Birdwing(19.99달러), Blue Morpho(29.99달러), 각각 연간 요금제(49.99달러, 169.99달러, 249.99달러)도 미국 App Store에 표시됨; 정확한 내용은 공개적으로 전부 설명되어 있지 않음.',
+          '**무료/제한 버전:** 개발사 [다운로드 페이지](https://www.layla-network.ai/download)의 직접 APK로 제공되며 기능이 제한되고 구매 코드는 언급되지 않음 — 유료 스토어 페이지와는 별개.',
           '**Layla Cloud:** 클라우드 기반 캐릭터 채팅을 위한 별도의 무료 다운로드 컴패니언 앱; 무료 등급을 넘어서는 자체 비용 구조는 공개 페이지에 명시되어 있지 않음.',
         ],
       },
@@ -4267,7 +4424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보: 로컬 채팅 vs. Layla Cloud',
         content: [
           '**Layla 자체의 [개인정보 처리방침](https://blog.layla-network.ai/privacy)에는 "당사 앱의 핵심 기능은 사용자 기기에서 오프라인으로 작동하도록 설계되었습니다"라고 명시되어 있으며, 사용자의 데이터를 기기 밖으로 전송하는 어떤 조치를 취하기 전에도 경고 및 확인 메시지를 표시할 것이라고 밝히고 있습니다.** 이 방침은 데이터 외부 전송의 구체적인 계기로 Personality Hub에 캐릭터를 업로드하는 것, 앱 내 "버그 신고" 기능을 사용하는 것, 선택적 클라우드 기능을 활성화하는 것을 명시하고 있습니다.',
-          '이 마지막 항목인 선택적 클라우드 기능이 바로 Layla Cloud이며, 개발사는 이를 별개의 독립된 모드로 설명합니다. 방침에 따르면 "Layla Cloud는 Layla 내에서 \'Layla Cloud\' 미니 앱을 설치한 경우에만 활성화되며", 설치하거나 활성화하지 않으면 "Layla Cloud와 관련된 어떤 기능도 활성화되지 않습니다." Layla Cloud가 활성화된 경우, 개발사 자체 문서에 따르면 메시지, 캐릭터의 응답, 장기 기억(Long-Term Memory), PDF Digest, Dream 등 보조 기능에서 나온 데이터를 포함한 대화 기록을 수집하며, 이 데이터는 익명화되어 계정과 연결되지 않지만 디버깅이나 서비스 개선에 사용될 수 있습니다. 또한 이 방침은 Layla Cloud가 활성화되기 이전의 대화를 소급하여 수집하지 않는다고도 명시합니다.',
+          '이 마지막 항목인 선택적 클라우드 기능이 바로 Layla Cloud이며, 개발사는 이를 별개의 독립된 모드로 설명합니다. 방침에 따르면 "Layla Cloud는 Layla 내에서 \'Layla Cloud\' 미니 앱을 설치한 경우에만 활성화되며", 설치하거나 활성화하지 않으면 "Layla Cloud와 관련된 어떤 기능도 활성화되지 않습니다." Layla Cloud가 활성화된 경우, 개발사 자체 문서에 따르면 메시지, 캐릭터의 응답, 장기 기억(Long-Term Memory), PDF Digest, Dream 등 보조 기능에서 나온 데이터를 포함한 대화 기록을 수집하며, 이 데이터는 익명화되어 계정과 연결되지 않지만 디버깅이나 서비스 개선을 위한 AI 학습에 사용될 수 있습니다. 또한 이 방침에는 Layla Cloud 계정을 삭제해도 과거 대화 기록이 개발사 서버에서 삭제되지는 않는다고 명시되어 있습니다. 또한 이 방침은 Layla Cloud가 활성화되기 이전의 대화를 소급하여 수집하지 않는다고도 명시합니다.',
           '종합하면, 이는 핵심 기능에 클라우드 구성 요소가 전혀 없는 앱과는 실질적으로 다른 개인정보 설계입니다. Layla의 기본 로컬 모드는 전송 전 명시적인 동의 관문을 두어 기기 내에 머물도록 설계되어 있지만, 제품 자체는 이용자가 활성화하면 익명화된 대화 데이터를 수집하는 선택적이고 별도로 활성화되는 클라우드 경로를 제공합니다. 애초에 활성화할 수 있는 클라우드 모드가 전혀 없는 제품이라는 가장 강력한 보장을 원하는 독자는, MIT 라이선스로 전체 코드가 오픈소스이며 내장된 클라우드 채팅 기능이 전혀 없는 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해 봐야 합니다.',
         ],
         items: [
@@ -4275,6 +4432,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Layla Cloud:** 미니 앱 또는 별도 앱으로 설치되는 독립적이고 선택적인 모드로, 활성화되면 보조 기능 데이터를 포함한 익명화된 대화 기록을 수집함.',
           '**소급 없음:** 방침에 따르면 Layla Cloud를 활성화해도 활성화 이전의 대화 기록은 반영되지 않음.',
           '**클로즈드 소스:** PocketPal AI나 Maid와 달리 Layla의 클라이언트 앱 코드는 공개되어 있지 않아, "기본적으로 전송하지 않는다"는 주장은 독립적인 코드 감사가 아니라 개발사 자체의 개인정보 처리방침에 의존함.',
+          '**스토어 개인정보 라벨:** 개발사가 직접 기재한 것으로 Apple이 검증하지 않음 — 메인 앱은 사용자와 연결되지 않는 진단 데이터와 사진 또는 동영상(앱 기능용)을 표시하고, 별도의 Layla(Cloud) 목록은 이메일 주소와 사용자 콘텐츠를 표시함.',
+          '**방침 날짜:** 방침 페이지의 최종 업데이트 표기는 10/05/2024로 7.x 릴리스보다 이전이므로 최신 기능을 설명하지 않을 수 있음.',
         ],
         callouts: [
           {
@@ -4304,12 +4463,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-requirements',
         title: 'Layla를 실행하려면 어떤 하드웨어가 필요한가?',
         content: [
-          '**App Store 페이지는 최소 8GB의 RAM을 권장하며, Layla 자체 마케팅은 이 앱을 저가형이나 오래된 하드웨어가 아니라 최근 플래그십 스마트폰을 대상으로 한다고 역사적으로 설명해 왔습니다.** 이는 4GB RAM으로 2-4B 파라미터의 소형 모델을 편안하게 지원하는 일부 경쟁 로컬 채팅 앱보다 더 엄격한 기준입니다 — Layla의 컴패니언 기능(더 큰 기본 모델, 로컬 이미지 생성, 캐릭터 애니메이션)이 실질적인 하드웨어 최소 기준을 높입니다.',
+          '**개발사 사이트에 따르면 소형 로컬 모델은 RAM 약 4GB의 휴대폰에서 실행되고 더 큰 모델은 8GB 이상에서 가장 잘 작동하며, App Store 설명은 "최신 플래그십 휴대폰(RAM 8GB 이상)"을 대상으로 합니다.** Layla의 컴패니언 기능(더 큰 기본 모델, 로컬 이미지 생성, 캐릭터 애니메이션)은 더 단순한 로컬 채팅 앱보다 실질적인 하드웨어 기준을 높입니다.',
           '모든 GGUF 기반 앱과 마찬가지로, 실제 메모리 요구량을 결정하는 것은 앱 자체가 아니라 로드된 특정 모델입니다: 작게 양자화된 모델은 70억 파라미터 이상의 모델보다 적은 RAM을 필요로 하며, 채팅과 함께 로컬 Stable Diffusion 이미지 생성을 실행하면 텍스트 전용 추론을 넘어서는 추가적인 메모리 및 처리 오버헤드가 발생합니다.',
         ],
         items: [
-          '권장 최소 사양: App Store 페이지에 따르면 8GB RAM — 이 카테고리의 더 단순한 로컬 채팅 앱에서 흔한 4GB 최소 기준보다 눈에 띄게 높음.',
-          '개발사 자체 마케팅 자료에 따르면 오래되었거나 저가형인 기기보다 최근 플래그십급 스마트폰(대략 최근 몇 세대)을 권장함.',
+          '소형 로컬 모델: 개발사 사이트에 따르면 RAM 약 4GB; 더 큰 모델: 8GB 이상.',
+          '최상의 경험: App Store 설명에 따르면 오래되었거나 저가형인 기기보다 RAM 8GB 이상의 플래그십급 스마트폰.',
           '저장 공간: 최초 실행 시 기본 모델 다운로드는 과거 버전에서 약 4GB로 보고됨; 커스텀 GGUF 모델과 Stable Diffusion 체크포인트는 추가적인 저장 공간 요구를 더함.',
           '로컬 이미지 생성(Stable Diffusion 1.5)은 텍스트 전용 채팅을 넘어서는 처리 및 메모리 오버헤드를 더함 — RAM이 적은 기기에서 이 기능을 사용할 경우 더 느린 성능을 예상해야 함.',
         ],
@@ -4328,7 +4487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '이점': '로컬 텍스트 및 이미지 생성',
             '실제 사용에서의 의미': '채팅과 Stable Diffusion 1.5 이미지 생성 모두 기기에서 완전히 실행될 수 있습니다.',
-            '한계 / 유의사항': '텍스트 전용 로컬 채팅 앱보다 눈에 띄게 더 많은 RAM과 저장 공간이 필요합니다; App Store는 최소 8GB를 명시합니다.',
+            '한계 / 유의사항': '텍스트 전용 로컬 채팅 앱보다 눈에 띄게 더 많은 RAM과 저장 공간이 필요합니다; App Store 설명은 RAM 8GB 이상의 휴대폰을 대상으로 합니다.',
           },
           {
             '이점': '데이터 외부 전송 전 명시적 동의 관문',
@@ -4343,7 +4502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '이점': '19.99달러 일회성 구매',
             '실제 사용에서의 의미': '두 스토어 모두에서 기본 앱에 구독이 필요하지 않습니다.',
-            '한계 / 유의사항': '공개 페이지에서 정확한 내용이 전부 설명되지 않은 이름 붙은 앱 내 구매 등급 3종이 추가로 존재합니다 — 앱 내에서 정확히 무엇을 구매하는지 확인하세요.',
+            '한계 / 유의사항': '이름 붙은 앱 내 요금제 3종이 추가로 존재하며(각각 연간 가격도 있음) 공개 페이지에서 정확한 내용이 전부 설명되지 않습니다 — 무엇을 구매하는지, 그리고 갱신되는지 앱 내에서 확인하세요.',
           },
           {
             '이점': '크로스 플랫폼: Android와 iOS',
@@ -4369,7 +4528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**클라우드 구성 요소가 전혀 없다는 보장이 필요한 독자.** Layla는 활성화되면 익명화된 데이터를 수집하는 선택적 클라우드 모드(Layla Cloud)를 제공하므로, 애초에 활성화할 수 있는 클라우드 기능이 전혀 없는 앱을 특별히 원하는 독자는 내장된 클라우드 채팅 경로가 전혀 없는 완전 오픈소스 코드의 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)를 선택해야 합니다.',
           '**무료이거나 완전한 오픈소스 앱을 원하는 독자.** Layla는 19.99달러의 유료 클로즈드 소스 앱입니다; PocketPal AI(무료, MIT 라이선스)와 Maid(무료, MIT 라이선스)가 이러한 요구를 대신 충족합니다.',
           '**단순하고 미니멀한 어시스턴트형 채팅 인터페이스를 원하는 독자.** 캐릭터와 페르소나를 우선시하는 Layla의 설계는 단순한 질의응답 채팅만 원하는 이용자에게는 필요 없는 복잡성을 더할 수 있습니다; Private LLM이나 PocketPal AI가 더 어시스턴트에 가까운 형태입니다.',
-          '**RAM이 적거나 오래된 기기를 사용하는 독자.** App Store는 8GB RAM을 최소 권장 사양으로 명시하는데, 이는 4GB로도 작은 모델을 편안하게 실행하는 여러 경쟁 앱보다 높은 기준입니다.',
+          '**RAM이 적거나 오래된 기기를 사용하는 독자.** App Store 설명은 RAM 8GB 이상의 휴대폰을 대상으로 하고 개발사 사이트도 더 큰 모델에는 8GB 이상을 제시하는데, 이는 4GB로도 작은 모델을 편안하게 실행하는 여러 경쟁 앱보다 높은 기준입니다.',
           '**엔터프라이즈 또는 팀 기능이 필요한 독자.** Layla는 관리 콘솔, 공유 라이선스 관리, 팀 청구 기능이 없는 단일 이용자용 소비자 앱입니다; 조직은 대신 자체 호스팅되는 서버 측 로컬 LLM 인프라를 검토해야 합니다.',
           '**앱의 소스 코드를 스스로 독립적으로 감사하고 싶은 독자.** Layla의 클라이언트 앱은 클로즈드 소스입니다; 이 수준의 보장이 필요한 독자는 PocketPal AI, Maid, ChatterUI 같은 MIT 또는 AGPL 라이선스 대안을 사용해야 합니다.',
         ],
@@ -4459,7 +4618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Layla는 무료입니까?',
-            a: '아니요, Layla 메인 앱은 App Store와 Google Play 모두에서 19.99달러 일회성 구매입니다. App Store 페이지에는 이름이 붙은 앱 내 구매 등급 3종(Monarch 4.99달러, Birdwing 19.99달러, Blue Morpho 29.99달러)도 표시되어 있습니다. 개발사 자체 사이트에서 직접 APK 다운로드로 배포되는 기능이 더 제한된 무료 버전이 있다는 보고도 있습니다 — 현재 제공 여부는 [layla-network.ai](https://www.layla-network.ai)에서 확인하세요. 클라우드 기반 채팅을 위한 별도 컴패니언 앱인 Layla Cloud는 독립된 앱으로 무료 다운로드가 가능합니다.',
+            a: '부분적으로 그렇습니다. Layla 메인 앱은 App Store와 Google Play 모두에서 19.99달러 일회성 구매이지만, 개발사의 [다운로드 페이지](https://www.layla-network.ai/download)에서는 기능이 제한된 무료 버전을 Android용 직접 APK로 제공합니다. 공식 페이지에는 구매 코드나 라이선스 키가 언급되어 있지 않으므로, 무료 "구매 코드"를 내세우는 사이트는 주의해서 대하세요. 미국 App Store에는 월간·연간 가격이 있는 앱 내 요금제(Monarch, Birdwing, Blue Morpho)도 표시되어 있습니다. 별도 앱인 Layla Cloud는 App Store에서 무료로 다운로드할 수 있습니다.',
           },
           {
             q: 'Layla는 클라우드 구성 요소가 전혀 없이 완전히 오프라인으로 작동합니까?',
@@ -4479,15 +4638,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Layla는 얼마나 많은 RAM이 필요합니까?',
-            a: 'App Store 페이지는 최소 8GB의 RAM을 권장하는데, 이는 더 단순한 텍스트 전용 로컬 채팅 앱에서 흔한 약 4GB 최소 기준보다 높으며, Layla의 더 큰 기본 모델, 로컬 이미지 생성, 캐릭터 애니메이션 기능을 반영합니다.',
+            a: '개발사 사이트에 따르면 소형 로컬 모델은 RAM 약 4GB의 휴대폰에서 실행되고 더 큰 모델은 8GB 이상에서 가장 잘 작동하며, App Store 설명은 RAM 8GB 이상의 플래그십 휴대폰을 대상으로 합니다. Layla의 더 큰 기본 모델, 로컬 이미지 생성, 캐릭터 애니메이션 기능은 실질적인 하드웨어 기준을 더 단순한 텍스트 전용 채팅 앱보다 높입니다.',
           },
           {
             q: 'Layla Cloud란 무엇이며, Layla 메인 앱과 같은 것입니까?',
-            a: '아니요. Layla Cloud는 로컬 모델을 관리하고 싶지 않은 이용자를 위해 클라우드 기반 캐릭터 채팅을 제공하는 별도의 선택적 모드 또는 미니 앱입니다. 개인정보 처리방침에 따르면 이용자가 설치하거나 활성화한 경우에만 활성화되며, 활성화된 동안에는 디버깅이나 서비스 개선을 위해 익명화된 대화 기록을 수집합니다. 활성화 이전의 데이터는 소급하여 수집하지 않습니다.',
+            a: '아니요. Layla Cloud는 로컬 모델을 관리하고 싶지 않은 이용자를 위해 클라우드 기반 캐릭터 채팅을 제공하는 별도의 선택적 모드 또는 미니 앱입니다. 개인정보 처리방침에 따르면 이용자가 설치하거나 활성화한 경우에만 활성화되며, 활성화된 동안에는 디버깅이나 서비스 개선을 위해 익명화된 대화 기록을 수집합니다. 활성화 이전의 데이터는 소급하여 수집하지 않으며, Layla Cloud 계정을 삭제해도 과거 대화 기록이 개발사 서버에서 삭제되지는 않습니다. Layla(Cloud)는 App Store에서 별도의 무료 앱으로도 제공됩니다.',
+          },
+          {
+            q: 'Layla를 PC나 서버에 연결할 수 있습니까?',
+            a: '네. 개발사의 오픈소스 [Layla-Server](https://github.com/l3utterfly/Layla-Server)를 통해 가능합니다. 이는 llama-server(또는 OpenAI 호환 서버)를 감싸는 Apache-2.0 래퍼로, 요청을 WebRTC로 중계하여 Layla 앱이 어디서든 PC에 접속할 수 있게 합니다. 개발사 블로그 게시물에는 BlueStacks를 통해 Windows에서 Layla를 실행하고 OpenAI 호환 API로 LM Studio에 연결하는 방법도 설명되어 있습니다. Layla Cloud는 이와 다릅니다: 이는 개발사가 호스팅하는 모드이며 이용자 자신의 서버가 아닙니다.',
+          },
+          {
+            q: 'Layla는 오픈소스입니까?',
+            a: '앱 자체는 아닙니다: Layla 클라이언트는 클로즈드 소스입니다. [Layla-Server](https://github.com/l3utterfly/Layla-Server)와 [Layla SDK](https://github.com/l3utterfly/layla-sdk) 저장소는 Apache-2.0 라이선스이며, Layla 브랜드의 파인튜닝 모델은 [Hugging Face](https://huggingface.co/l3utterfly)에 공개되어 있습니다. 클라이언트를 감사할 수 없으므로 개인정보 동작은 개발사 자체의 방침에 의존합니다.',
+          },
+          {
+            q: 'Layla AI는 안전하게 사용할 수 있습니까?',
+            a: 'PromptQuorum은 이 앱을 감사하지 않았습니다. 개발사에 따르면 핵심 채팅은 오프라인으로 작동하고, 대화는 기기에 암호화되어 저장되며, 앱은 인터넷을 사용하기 전에 확인을 요청합니다. Layla Cloud 모드가 주요 예외이며, 클로즈드 소스 클라이언트는 독립적으로 검증할 수 없습니다. App Store, Google Play 또는 개발사 자체 사이트에서만 다운로드하세요. 개발사 사이트는 변조된 APK에 악성코드가 포함될 수 있다고 경고합니다.',
           },
           {
             q: 'Layla는 신뢰할 만합니까? 이용자들이 문제를 제보합니까?',
-            a: '리뷰 시점 기준 Layla는 App Store에서 31건의 평가로 3.8/5의 평점을 받고 있습니다. 일부 공개된 App Store 리뷰는 충돌과 신뢰할 수 없는 오프라인 기능을 지적하며, 특히 iOS에서 커스텀 모델 가져오기와 관련해 그렇습니다. 이 리뷰는 현재의 앱 안정성을 독립적으로 검증하지 않았습니다 — 이를 이용자가 제보한 관찰 사항으로 간주하고, 앱에 의존하기 전에 해당 플랫폼의 환불 기간 내에 테스트해 보세요.',
+            a: '리뷰 시점 기준 Layla는 App Store에서 33건의 평가로 3.8/5의 평점을 받고 있습니다. 일부 공개된 App Store 리뷰는 충돌과 신뢰할 수 없는 오프라인 기능을 지적하며, 특히 iOS에서 커스텀 모델 가져오기와 관련해 그렇습니다. 이 리뷰는 현재의 앱 안정성을 독립적으로 검증하지 않았습니다 — 이를 이용자가 제보한 관찰 사항으로 간주하고, 앱에 의존하기 전에 해당 플랫폼의 환불 기간 내에 테스트해 보세요.',
           },
           {
             q: 'AI 컴패니언 앱 "Layla"는 Expedia가 인수한 AI 여행 플래너 "Layla"와 같은 회사입니까?',
@@ -4511,10 +4682,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store의 Layla](https://apps.apple.com/us/app/layla/id6456886656) — 가격, 앱 내 구매 등급, 플랫폼 요구 사항, 평점, 버전 히스토리.',
           '[Google Play의 Layla](https://play.google.com/store/apps/details?id=com.layla) — Android 제공 여부 및 가격.',
-          '[Layla 공식 사이트](https://www.layla-network.ai) — 제품 개요 및 개발사가 게시한 기능 설명.',
+          '[Layla 공식 사이트](https://www.layla-network.ai) 및 [다운로드 페이지](https://www.layla-network.ai/download) — 제품 개요, 무료 APK, 구매 복원 안내, RAM 가이드.',
           '[Layla 개인정보 처리방침](https://blog.layla-network.ai/privacy) — 로컬 대 클라우드 데이터 처리, Layla Cloud의 범위, 데이터 수집 공개 사항.',
           '[App Store의 Layla(Cloud)](https://apps.apple.com/gb/app/layla-cloud/id6764344419) — 별도의 선택적 클라우드 모드 앱 페이지.',
-          '[GitHub의 l3utterfly](https://github.com/l3utterfly) 및 [Hugging Face의 l3utterfly](https://huggingface.co/l3utterfly) — Layla 브랜드 모델 게시 및 관련 인프라 프로젝트(Layla-Server, Layla SDK).',
+          '[GitHub의 l3utterfly](https://github.com/l3utterfly) 및 [Hugging Face의 l3utterfly](https://huggingface.co/l3utterfly) — Layla 브랜드 모델 게시 및 관련 인프라 프로젝트([Layla-Server](https://github.com/l3utterfly/Layla-Server), [Layla SDK](https://github.com/l3utterfly/layla-sdk)).',
         ],
       },
       relatedReading: {

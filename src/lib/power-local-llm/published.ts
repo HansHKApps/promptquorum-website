@@ -612,6 +612,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localmindai-review',
   // Murmur review (Voice, Speech & Multimodal, iPhone AI music generator) — 2026-10-24
   'murmur-review',
+  // fullmoon review (Mobile & Edge LLMs, free MIT offline chat app for iPhone/iPad/Mac, stale since 2025) — 2026-10-30
+  'fullmoon-review',
+  'reins-review',
   // Lyonesse review (Voice, Speech & Multimodal, iPhone/iPad/Mac transcription) — 2026-10-26
   'lyonesse-review',
   'open-llm-vtuber-review',
@@ -655,6 +658,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cloak: Local AI review (Mobile & Edge LLMs) — 2026-10-30
   'cloak-local-ai-review',
   'greencube-review',
+  'kai-9000-review',
   // CompactifAI APP review (Mobile & Edge LLMs) — 2026-10-24
   'compactifai-app-review',
   // PocketLLM Lite review (Android local-first chat app, MIT) — 2026-10-24
@@ -722,6 +726,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Whisper Notes review (Voice, Speech & Multimodal) — 2026-10-18
   'whisper-notes-review',
+  'aiko-review',
 
   // TranscriptionSuite review (Voice, Speech & Multimodal) — 2026-10-18
   'transcriptionsuite-review',
