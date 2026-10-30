@@ -1273,6 +1273,7 @@ const HUB_THEMES: Array<{
       'immich-review',
       'facet-review',
       'excire-foto-review',
+      'mylio-photos-review',
       'controlnet-review',
       'draw-things-review',
       'genva-review',
