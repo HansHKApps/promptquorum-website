@@ -320,6 +320,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'openwhispr-review',
   // Voicebox review (Voice, Speech & Multimodal, local voice cloning, text-to-speech and dictation) — 2026-10-26
   'voicebox-review',
+  'krita-ai-diffusion-review',
   'faster-whisper-review',
   'dograh-review',
   // exo review — 2026-09-12

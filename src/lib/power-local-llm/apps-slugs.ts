@@ -240,6 +240,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'fluidvoice':                             'fluidvoice',
   'openwhispr':                              'openwhispr',
   'voicebox':                                'voicebox',
+  'krita-ai-diffusion':                      'krita-ai-diffusion',
   'localmcp':                                'localmcp',
   'ecc':                                     'ecc',
   'libredb-studio':                          'libredb-studio',
