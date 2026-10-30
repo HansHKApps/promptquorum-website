@@ -96,6 +96,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
@@ -156,14 +164,6 @@
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-10-24",
         "tier": "about"
       }
@@ -5885,6 +5885,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -5946,14 +5954,6 @@
         "url": "/power-local-llm/local-ai-chat-pocket-review",
         "dateModified": "2026-10-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "paios-review",
-        "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
-        "url": "/power-local-llm/paios-review",
-        "dateModified": "2026-10-05",
-        "tier": "about"
       }
     ],
     "totalCount": 51,
@@ -5997,6 +5997,14 @@
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -6061,14 +6069,6 @@
         "title": "Off Grid AI Review: Cross-Platform Local AI for iOS, Android, macOS, and Windows",
         "url": "/power-local-llm/off-grid-ai-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pocket-ai-review",
-        "title": "Pocket AI Review: Offline On-Device AI Chat for iPhone",
-        "url": "/power-local-llm/pocket-ai-review",
-        "dateModified": "2026-09-11",
         "tier": "about"
       }
     ],
@@ -6190,7 +6190,7 @@
         "slug": "layla-review",
         "title": "Layla Review: On-Device AI Companion App for Android and iOS",
         "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -6249,6 +6249,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -6269,14 +6277,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-09-06",
         "tier": "about"
       },
       {
@@ -6769,6 +6769,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "haplo-ai-review",
         "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
         "url": "/power-local-llm/haplo-ai-review",
@@ -6829,14 +6837,6 @@
         "title": "SwarmUI Review: The Multi-GPU Stable Diffusion Web UI",
         "url": "/power-local-llm/stableswarmui-review",
         "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
         "tier": "about"
       }
     ],
@@ -11743,6 +11743,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "layla-review",
+        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
+        "url": "/power-local-llm/layla-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mylio-photos-review",
         "title": "Mylio Photos Review: Multi-Device Photo Library with On-Device AI Search",
         "url": "/power-local-llm/mylio-photos-review",
@@ -11772,17 +11780,9 @@
         "url": "/power-local-llm/xberg-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ai-file-sorter-review",
-        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
-        "url": "/power-local-llm/ai-file-sorter-review",
-        "dateModified": "2026-10-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 237,
+    "totalCount": 238,
     "capped": true
   },
   "Qdrant": {
