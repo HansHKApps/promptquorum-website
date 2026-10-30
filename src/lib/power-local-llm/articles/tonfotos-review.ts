@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Tonfotos review: photo manager for Windows, Mac and Linux with face recognition that, per its maker, runs locally. Free tier, perpetual licences.',
     twitterDescription:
-      'Tonfotos review: a photo and video archive manager for Windows, macOS and Linux with duplicate removal, family trees and face recognition that runs locally, per its maker. Licences, privacy and open questions.',
+      'Tonfotos review: duplicate removal, family trees and face recognition that runs locally, per its maker, for large photo archives. Licences, privacy and open questions.',
     audience:
       'Families and hobbyists with large photo archives on Windows, macOS or Linux who want people tagged and duplicates removed without a cloud service, and who need to know what the sources confirm about data flow and licensing.',
     readTime: '6 min read',
@@ -47,12 +47,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotos is a closed-source photo and video archive manager for Windows, macOS and Linux that, according to its maker, recognises faces with AI running locally on your computer.** It adds duplicate removal and a family tree, and it has a free tier plus perpetual paid licences instead of a subscription.',
+      '**Tonfotos is closed-source desktop software that, according to its maker, recognises faces with AI running locally on your computer.** It organises large photo and video collections, adds duplicate removal and a family tree, and sells a free tier plus perpetual paid licences instead of a subscription.',
     quickAnswerTop: {
       en: {
         question: 'Does Tonfotos keep your photos and face data on your own computer?',
         answer:
-          'Per Tonfotos, yes for the photos: its FAQ says it "processes your photos right where they are and never sends them anywhere", and face recognition runs locally. The app still contacts the developer\'s server for update and license checks. PromptQuorum has not inspected network traffic.',
+          'Per Tonfotos, yes for the photos: its FAQ says photos are processed where they are and never sent anywhere, and face recognition runs locally. The app still contacts the developer\'s server for update and license checks. PromptQuorum has not inspected network traffic.',
         bullets: [
           'Closed source, with no public repository; no subscription.',
           'Windows 10 and 11, macOS 10.15 or later (Intel and Apple silicon) and Linux (.deb and .rpm).',
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'These are the vendor\'s declarations, not audit results, and PromptQuorum has not inspected network traffic.',
+            text: 'These are the vendor\'s declarations, not audit results, and PromptQuorum has not inspected network traffic. Face recognition processes biometric data about the people in your photos; for anything beyond purely personal or household use, data-protection rules such as the GDPR may apply, and this review is not legal advice.',
           },
         ],
       },
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Recognition quality.** Accuracy, speed and any GPU benefit were not tested.',
           '**Free-tier limit.** The number of people the Free licence allows is not stated.',
           '**Requirements.** No minimum RAM, disk space or processor is published.',
-          '**Offline use.** Update and license checks go through the developer\'s server; whether the app works fully offline is not stated.',
+          '**Offline use.** Whether the app works fully offline is not stated.',
           '**Crash reports.** The policy lists tagged names and file names but does not say whether photo content or face data is included.',
         ],
       },
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Tonfotos offers face recognition, duplicate removal and a family tree for large photo archives on Windows, macOS and Linux, with a free tier and perpetual licences, and its maker says the recognition runs locally. Against that, it is closed source, the Free licence caps the number of tagged people, the app contacts the developer\'s server for update and license checks, crash reports can include tagged names, and the website shows no real version number, changelog or system requirements. It suits people who want a local family-photo archive without a subscription and will start with the Free licence; anyone who needs open source or audited data flow should look elsewhere.',
+          'Tonfotos offers face recognition, duplicate removal and a family tree for large photo archives, with a free tier and perpetual licences, and its maker says the recognition runs locally. Against that, it is closed source, the Free licence caps the number of tagged people, the app contacts the developer\'s server for update and license checks, crash reports can include tagged names, and the website shows no real version number, changelog or system requirements. It suits people who want a local family-photo archive without a subscription and will start with the Free licence; anyone who needs open source or audited data flow should look elsewhere.',
       },
       sources: {
         id: 'sources',
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Tonfotos Review: Local Face Recognition Photo Manager',
       description:
-        'Tonfotos review: a closed-source photo and video archive manager for Windows, macOS and Linux with local face recognition, duplicate removal and family trees. Licences, privacy and open questions.',
+        'Tonfotos review: closed-source photo software with local face recognition, duplicate removal and family trees. Licences, privacy and open questions.',
       url: 'https://www.promptquorum.com/power-local-llm/tonfotos-review',
       inLanguage: 'en',
       datePublished: '2026-10-30',
@@ -322,12 +322,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotos ist ein nicht quelloffener Foto- und Video-Archivmanager für Windows, macOS und Linux, der Gesichter laut Hersteller mit KI erkennt, die lokal auf Ihrem Computer läuft.** Er ergänzt Duplikatentfernung und einen Stammbaum und bietet eine kostenlose Version sowie unbefristete Bezahllizenzen statt eines Abos.',
+      '**Tonfotos ist nicht quelloffene Desktop-Software, die Gesichter laut Hersteller mit KI erkennt, die lokal auf Ihrem Computer läuft.** Sie ordnet große Foto- und Videosammlungen, ergänzt Duplikatentfernung und einen Stammbaum und bietet eine kostenlose Version sowie unbefristete Bezahllizenzen statt eines Abos.',
     quickAnswerTop: {
       de: {
         question: 'Bleiben Ihre Fotos und Gesichtsdaten bei Tonfotos auf Ihrem eigenen Computer?',
         answer:
-          'Laut Tonfotos gilt das für die Fotos: Die FAQ sagt, es „processes your photos right where they are and never sends them anywhere“, und die Gesichtserkennung läuft lokal. Die App kontaktiert dennoch den Server des Entwicklers für Update- und Lizenzprüfungen. PromptQuorum hat den Netzwerkverkehr nicht geprüft.',
+          'Laut Tonfotos gilt das für die Fotos: Die FAQ sagt, Fotos würden dort verarbeitet, wo sie liegen, und nirgendwohin gesendet, und die Gesichtserkennung läuft lokal. Die App kontaktiert dennoch den Server des Entwicklers für Update- und Lizenzprüfungen. PromptQuorum hat den Netzwerkverkehr nicht geprüft.',
         bullets: [
           'Nicht quelloffen, ohne öffentliches Repository; kein Abo.',
           'Windows 10 und 11, macOS 10.15 oder neuer (Intel und Apple Silicon) sowie Linux (.deb und .rpm).',
@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dies sind Erklärungen des Herstellers, keine Prüfergebnisse, und PromptQuorum hat den Netzwerkverkehr nicht untersucht.',
+            text: 'Dies sind Erklärungen des Herstellers, keine Prüfergebnisse, und PromptQuorum hat den Netzwerkverkehr nicht untersucht. Gesichtserkennung verarbeitet biometrische Daten der Personen auf Ihren Fotos; bei einer Nutzung über rein persönliche oder familiäre Zwecke hinaus können Datenschutzvorschriften wie die DSGVO gelten, und diese Rezension ist keine Rechtsberatung.',
           },
         ],
       },
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Erkennungsqualität.** Genauigkeit, Geschwindigkeit und ein möglicher GPU-Vorteil wurden nicht getestet.',
           '**Grenze der kostenlosen Lizenz.** Wie viele Personen die kostenlose Lizenz erlaubt, wird nicht genannt.',
           '**Anforderungen.** Weder Mindest-RAM noch Speicherplatz oder Prozessor sind veröffentlicht.',
-          '**Offline-Nutzung.** Update- und Lizenzprüfungen laufen über den Server des Entwicklers; ob die App vollständig offline funktioniert, wird nicht gesagt.',
+          '**Offline-Nutzung.** Ob die App vollständig offline funktioniert, wird nicht gesagt.',
           '**Absturzberichte.** Die Erklärung nennt getaggte Namen und Dateinamen, sagt aber nicht, ob Fotoinhalte oder Gesichtsdaten enthalten sind.',
         ],
       },
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Tonfotos bietet Gesichtserkennung, Duplikatentfernung und einen Stammbaum für große Fotoarchive unter Windows, macOS und Linux, mit kostenloser Version und unbefristeten Lizenzen, und der Hersteller sagt, die Erkennung laufe lokal. Dagegen ist es nicht quelloffen, die kostenlose Lizenz begrenzt die Zahl getaggter Personen, die App kontaktiert für Update- und Lizenzprüfungen den Server des Entwicklers, Absturzberichte können getaggte Namen enthalten, und die Website nennt keine echte Versionsnummer, kein Änderungsprotokoll und keine Systemanforderungen. Es eignet sich für Menschen, die ein lokales Familienfoto-Archiv ohne Abo wollen und mit der kostenlosen Lizenz beginnen; wer Open Source oder einen geprüften Datenfluss braucht, sollte sich anderweitig umsehen.',
+          'Tonfotos bietet Gesichtserkennung, Duplikatentfernung und einen Stammbaum für große Fotoarchive, mit kostenloser Version und unbefristeten Lizenzen, und der Hersteller sagt, die Erkennung laufe lokal. Dagegen ist es nicht quelloffen, die kostenlose Lizenz begrenzt die Zahl getaggter Personen, die App kontaktiert für Update- und Lizenzprüfungen den Server des Entwicklers, Absturzberichte können getaggte Namen enthalten, und die Website nennt keine echte Versionsnummer, kein Änderungsprotokoll und keine Systemanforderungen. Es eignet sich für Menschen, die ein lokales Familienfoto-Archiv ohne Abo wollen und mit der kostenlosen Lizenz beginnen; wer Open Source oder einen geprüften Datenfluss braucht, sollte sich anderweitig umsehen.',
       },
       sources: {
         id: 'sources',
@@ -565,12 +565,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotos es un gestor de archivo de fotos y vídeos de código cerrado para Windows, macOS y Linux que, según su fabricante, reconoce caras con una IA que se ejecuta en local en tu ordenador.** Añade eliminación de duplicados y un árbol genealógico, y ofrece una versión gratuita y licencias de pago perpetuas en lugar de una suscripción.',
+      '**Tonfotos es software de escritorio de código cerrado que, según su fabricante, reconoce caras con una IA que se ejecuta en local en tu ordenador.** Organiza grandes colecciones de fotos y vídeos, añade eliminación de duplicados y un árbol genealógico, y ofrece una versión gratuita y licencias de pago perpetuas en lugar de una suscripción.',
     quickAnswerTop: {
       es: {
         question: '¿Tonfotos mantiene tus fotos y los datos faciales en tu propio ordenador?',
         answer:
-          'Según Tonfotos, sí en el caso de las fotos: su FAQ dice que "processes your photos right where they are and never sends them anywhere", y el reconocimiento facial se ejecuta en local. Aun así, la app contacta con el servidor del desarrollador para comprobar actualizaciones y licencia. PromptQuorum no ha inspeccionado el tráfico de red.',
+          'Según Tonfotos, sí en el caso de las fotos: su FAQ dice que se procesan donde están y no se envían a ningún sitio, y el reconocimiento facial se ejecuta en local. Aun así, la app contacta con el servidor del desarrollador para comprobar actualizaciones y licencia. PromptQuorum no ha inspeccionado el tráfico de red.',
         bullets: [
           'Código cerrado y sin repositorio público; sin suscripción.',
           'Windows 10 y 11, macOS 10.15 o posterior (Intel y Apple silicon) y Linux (.deb y .rpm).',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Son declaraciones del fabricante, no resultados de una auditoría, y PromptQuorum no ha inspeccionado el tráfico de red.',
+            text: 'Son declaraciones del fabricante, no resultados de una auditoría, y PromptQuorum no ha inspeccionado el tráfico de red. El reconocimiento facial trata datos biométricos de las personas que aparecen en tus fotos; si lo usas más allá de un ámbito puramente personal o doméstico, pueden aplicarse normas de protección de datos como el RGPD, y esta reseña no constituye asesoramiento jurídico.',
           },
         ],
       },
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Calidad del reconocimiento.** No se probaron la precisión, la velocidad ni un posible beneficio de la GPU.',
           '**Límite de la licencia gratuita.** No se indica cuántas personas permite la licencia gratuita.',
           '**Requisitos.** No se publica una cifra mínima de RAM, espacio en disco ni procesador.',
-          '**Uso sin conexión.** Las comprobaciones de actualización y licencia pasan por el servidor del desarrollador; no se dice si la app funciona del todo sin conexión.',
+          '**Uso sin conexión.** No se dice si la app funciona del todo sin conexión.',
           '**Informes de fallos.** La política enumera nombres etiquetados y nombres de archivo, pero no dice si incluyen contenido de fotos o datos faciales.',
         ],
       },
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Tonfotos ofrece reconocimiento facial, eliminación de duplicados y un árbol genealógico para grandes archivos de fotos en Windows, macOS y Linux, con versión gratuita y licencias perpetuas, y su fabricante dice que el reconocimiento se ejecuta en local. En contra, es de código cerrado, la licencia gratuita limita las personas etiquetadas, la app contacta con el servidor del desarrollador para comprobar actualizaciones y licencia, los informes de fallos pueden incluir nombres etiquetados y el sitio web no muestra un número de versión real, ni registro de cambios ni requisitos del sistema. Encaja con quienes quieren un archivo familiar de fotos en local sin suscripción y empezarán con la licencia gratuita; quien necesite código abierto o un flujo de datos auditado debería buscar otra opción.',
+          'Tonfotos ofrece reconocimiento facial, eliminación de duplicados y un árbol genealógico para grandes archivos de fotos, con versión gratuita y licencias perpetuas, y su fabricante dice que el reconocimiento se ejecuta en local. En contra, es de código cerrado, la licencia gratuita limita las personas etiquetadas, la app contacta con el servidor del desarrollador para comprobar actualizaciones y licencia, los informes de fallos pueden incluir nombres etiquetados y el sitio web no muestra un número de versión real, ni registro de cambios ni requisitos del sistema. Encaja con quienes quieren un archivo familiar de fotos en local sin suscripción y empezarán con la licencia gratuita; quien necesite código abierto o un flujo de datos auditado debería buscar otra opción.',
       },
       sources: {
         id: 'sources',
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Test de Tonfotos : gestionnaire photo pour Windows, Mac et Linux, reconnaissance faciale locale selon l’éditeur. Version gratuite, licences perpétuelles.',
     twitterDescription:
-      'Test de Tonfotos : un gestionnaire d’archives photo et vidéo pour Windows, macOS et Linux avec suppression des doublons, arbre généalogique et reconnaissance faciale locale, selon l’éditeur. Licences, confidentialité et questions ouvertes.',
+      'Test de Tonfotos : suppression des doublons, arbre généalogique et reconnaissance faciale locale, selon l’éditeur, pour de grandes archives de photos. Licences, confidentialité et questions ouvertes.',
     audience:
       'Familles et amateurs ayant de grandes archives de photos sous Windows, macOS ou Linux qui veulent identifier les personnes et supprimer les doublons sans service cloud, et qui doivent savoir ce que les sources confirment sur le flux de données et les licences.',
     readTime: '6 min de lecture',
@@ -808,12 +808,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotos est un gestionnaire d’archives photo et vidéo à code fermé pour Windows, macOS et Linux qui, selon son éditeur, reconnaît les visages grâce à une IA exécutée localement sur votre ordinateur.** Il ajoute la suppression des doublons et un arbre généalogique, avec une version gratuite et des licences payantes perpétuelles plutôt qu’un abonnement.',
+      '**Tonfotos est un logiciel de bureau à code fermé qui, selon son éditeur, reconnaît les visages grâce à une IA exécutée localement sur votre ordinateur.** Il organise de grandes collections de photos et de vidéos, ajoute la suppression des doublons et un arbre généalogique, avec une version gratuite et des licences payantes perpétuelles plutôt qu’un abonnement.',
     quickAnswerTop: {
       fr: {
         question: 'Tonfotos garde-t-il vos photos et vos données faciales sur votre propre ordinateur ?',
         answer:
-          'Selon Tonfotos, oui pour les photos : sa FAQ indique qu’il "processes your photos right where they are and never sends them anywhere", et la reconnaissance faciale s’exécute en local. L’application contacte toutefois le serveur du développeur pour les contrôles de mise à jour et de licence. PromptQuorum n’a pas inspecté le trafic réseau.',
+          'Selon Tonfotos, oui pour les photos : sa FAQ dit qu’elles sont traitées là où elles se trouvent et jamais envoyées ailleurs, et la reconnaissance faciale s’exécute en local. L’application contacte toutefois le serveur du développeur pour les contrôles de mise à jour et de licence. PromptQuorum n’a pas inspecté le trafic réseau.',
         bullets: [
           'Code fermé, sans dépôt public ; pas d’abonnement.',
           'Windows 10 et 11, macOS 10.15 ou ultérieur (Intel et Apple silicon) et Linux (.deb et .rpm).',
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Tonfotos est un gestionnaire d’archives photo et vidéo de bureau qui, selon son éditeur, trouve et regroupe les visages sur votre propre ordinateur pour que vous puissiez identifier les personnes, supprimer les doublons et créer un arbre généalogique.',
+            text: 'Tonfotos est un logiciel de bureau qui, selon son éditeur, trouve et regroupe les visages sur votre propre ordinateur pour que vous puissiez identifier les personnes, supprimer les doublons et créer un arbre généalogique.',
           },
           {
             type: 'plain-terms',
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Ce sont des déclarations de l’éditeur, pas des résultats d’audit, et PromptQuorum n’a pas inspecté le trafic réseau.',
+            text: 'Ce sont des déclarations de l’éditeur, pas des résultats d’audit, et PromptQuorum n’a pas inspecté le trafic réseau. La reconnaissance faciale traite des données biométriques sur les personnes figurant dans vos photos ; au-delà d’un usage purement personnel ou domestique, des règles de protection des données comme le RGPD peuvent s’appliquer, et ce test ne constitue pas un conseil juridique.',
           },
         ],
       },
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qualité de la reconnaissance.** La précision, la vitesse et un éventuel gain du GPU n’ont pas été testés.',
           '**Limite de la licence gratuite.** Le nombre de personnes autorisées par la licence gratuite n’est pas indiqué.',
           '**Prérequis.** Aucun minimum de RAM, d’espace disque ni de processeur n’est publié.',
-          '**Usage hors ligne.** Les contrôles de mise à jour et de licence passent par le serveur du développeur ; il n’est pas dit si l’application fonctionne entièrement hors ligne.',
+          '**Usage hors ligne.** Il n’est pas dit si l’application fonctionne entièrement hors ligne.',
           '**Rapports de plantage.** La politique cite les noms identifiés et les noms de fichiers, mais ne dit pas si le contenu des photos ou les données faciales y figurent.',
         ],
       },
@@ -991,7 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Tonfotos propose reconnaissance faciale, suppression des doublons et arbre généalogique pour de grandes archives de photos sous Windows, macOS et Linux, avec une version gratuite et des licences perpétuelles, et son éditeur affirme que la reconnaissance s’exécute en local. En contrepartie, il est à code fermé, la licence gratuite plafonne les personnes identifiées, l’application contacte le serveur du développeur pour les contrôles de mise à jour et de licence, les rapports de plantage peuvent contenir des noms identifiés, et le site n’affiche ni vrai numéro de version, ni journal des modifications, ni configuration requise. Il convient à ceux qui veulent des archives photo familiales en local sans abonnement et commenceront par la licence gratuite ; ceux qui exigent l’open source ou un flux de données audité doivent chercher ailleurs.',
+          'Tonfotos propose reconnaissance faciale, suppression des doublons et arbre généalogique pour de grandes archives de photos, avec une version gratuite et des licences perpétuelles, et son éditeur affirme que la reconnaissance s’exécute en local. En contrepartie, il est à code fermé, la licence gratuite plafonne les personnes identifiées, l’application contacte le serveur du développeur pour les contrôles de mise à jour et de licence, les rapports de plantage peuvent contenir des noms identifiés, et le site n’affiche ni vrai numéro de version, ni journal des modifications, ni configuration requise. Il convient à ceux qui veulent des archives photo familiales en local sans abonnement et commenceront par la licence gratuite ; ceux qui exigent l’open source ou un flux de données audité doivent chercher ailleurs.',
       },
       sources: {
         id: 'sources',
@@ -1051,12 +1051,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotosは、Windows・macOS・Linux向けのクローズドソースの写真・動画アーカイブ管理ソフトで、開発元によれば、顔認識のAIはお使いのコンピューター上でローカルに動作します。** 重複削除と家系図の機能があり、サブスクリプションではなく無料版と買い切り型の有料ライセンスで提供されています。',
+      '**Tonfotosは、クローズドソースのデスクトップソフトで、開発元によれば、顔認識のAIはお使いのコンピューター上でローカルに動作します。** 大量の写真・動画の整理に加え、重複削除と家系図の機能があり、サブスクリプションではなく無料版と買い切り型の有料ライセンスで提供されています。',
     quickAnswerTop: {
       ja: {
         question: 'Tonfotosは写真や顔のデータを自分のコンピューター内にとどめますか？',
         answer:
-          'Tonfotosによれば、写真についてはそのとおりです。FAQには「processes your photos right where they are and never sends them anywhere」とあり、顔認識はローカルで動作します。ただしアプリは、更新とライセンスの確認のために開発者のサーバーに接続します。PromptQuorumはネットワーク通信を検査していません。',
+          'Tonfotosによれば、写真についてはそのとおりです。FAQでは、写真は保存場所でそのまま処理され、どこにも送信されないとされ、顔認識はローカルで動作します。ただしアプリは、更新とライセンスの確認のために開発者のサーバーに接続します。PromptQuorumはネットワーク通信を検査していません。',
         bullets: [
           'クローズドソースで公開リポジトリはなく、サブスクリプションではありません。',
           'Windows 10・11、macOS 10.15以降（IntelとApple silicon）、Linux（.debと.rpm）に対応します。',
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'これらは開発元の表明であり、監査結果ではありません。PromptQuorumはネットワーク通信を検査していません。',
+            text: 'これらは開発元の表明であり、監査結果ではありません。PromptQuorumはネットワーク通信を検査していません。顔認識は、写真に写っている人物の生体データを扱います。純粋に個人的または家庭内の利用を超える場合は、GDPRなどのデータ保護規則が適用されることがあり、このレビューは法的助言ではありません。',
           },
         ],
       },
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**認識の品質。** 精度、速度、GPUによる効果は検証していません。',
           '**無料ライセンスの上限。** 無料ライセンスで何人までタグ付けできるかは記載されていません。',
           '**動作要件。** 最小RAM、ディスク容量、プロセッサーは公開されていません。',
-          '**オフライン利用。** 更新とライセンスの確認は開発者のサーバー経由で行われ、完全にオフラインで動作するかは記載されていません。',
+          '**オフライン利用。** 完全にオフラインで動作するかは記載されていません。',
           '**クラッシュレポート。** ポリシーにはタグ付けされた名前とファイル名が挙げられていますが、写真の内容や顔のデータが含まれるかは書かれていません。',
         ],
       },
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'Tonfotosは、Windows・macOS・Linuxの大量の写真アーカイブ向けに、顔認識、重複削除、家系図を無料版と買い切りライセンスで提供し、開発元は認識がローカルで動作すると述べています。一方で、クローズドソースであること、無料ライセンスではタグ付けできる人数に上限があること、アプリが更新とライセンスの確認のために開発者のサーバーへ接続すること、クラッシュレポートにタグ付けされた名前が含まれうること、サイトに実際のバージョン番号、変更履歴、動作要件がないことが挙げられます。サブスクなしでローカルの家族写真アーカイブを使いたく、まず無料ライセンスで試す方に向いています。オープンソースや監査済みのデータの流れが必要な方は、ほかを検討してください。',
+          'Tonfotosは、大量の写真アーカイブ向けに、顔認識、重複削除、家系図を無料版と買い切りライセンスで提供し、開発元は認識がローカルで動作すると述べています。一方で、クローズドソースであること、無料ライセンスではタグ付けできる人数に上限があること、アプリが更新とライセンスの確認のために開発者のサーバーへ接続すること、クラッシュレポートにタグ付けされた名前が含まれうること、サイトに実際のバージョン番号、変更履歴、動作要件がないことが挙げられます。サブスクなしでローカルの家族写真アーカイブを使いたく、まず無料ライセンスで試す方に向いています。オープンソースや監査済みのデータの流れが必要な方は、ほかを検討してください。',
       },
       sources: {
         id: 'sources',
@@ -1294,12 +1294,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**O Tonfotos é um gerenciador de arquivo de fotos e vídeos de código fechado para Windows, macOS e Linux que, segundo o fabricante, reconhece rostos com uma IA que roda localmente no seu computador.** Ele acrescenta remoção de duplicatas e uma árvore genealógica, e oferece uma versão gratuita e licenças pagas perpétuas em vez de assinatura.',
+      '**O Tonfotos é um software de desktop de código fechado que, segundo o fabricante, reconhece rostos com uma IA que roda localmente no seu computador.** Ele organiza grandes coleções de fotos e vídeos, acrescenta remoção de duplicatas e uma árvore genealógica, e oferece uma versão gratuita e licenças pagas perpétuas em vez de assinatura.',
     quickAnswerTop: {
       pt: {
         question: 'O Tonfotos mantém suas fotos e os dados faciais no seu próprio computador?',
         answer:
-          'Segundo o Tonfotos, sim para as fotos: o FAQ diz que ele "processes your photos right where they are and never sends them anywhere", e o reconhecimento facial roda localmente. Mesmo assim, o app contata o servidor do desenvolvedor para verificar atualizações e licença. A PromptQuorum não inspecionou o tráfego de rede.',
+          'Segundo o Tonfotos, sim para as fotos: o FAQ diz que elas são processadas onde estão e nunca enviadas a lugar nenhum, e o reconhecimento facial roda localmente. Mesmo assim, o app contata o servidor do desenvolvedor para verificar atualizações e licença. A PromptQuorum não inspecionou o tráfego de rede.',
         bullets: [
           'Código fechado e sem repositório público; sem assinatura.',
           'Windows 10 e 11, macOS 10.15 ou posterior (Intel e Apple silicon) e Linux (.deb e .rpm).',
@@ -1407,7 +1407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'São declarações do fabricante, não resultados de auditoria, e a PromptQuorum não inspecionou o tráfego de rede.',
+            text: 'São declarações do fabricante, não resultados de auditoria, e a PromptQuorum não inspecionou o tráfego de rede. O reconhecimento facial trata dados biométricos das pessoas que aparecem nas suas fotos; para qualquer uso além do puramente pessoal ou doméstico, podem se aplicar normas de proteção de dados como o GDPR, e esta análise não é aconselhamento jurídico.',
           },
         ],
       },
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qualidade do reconhecimento.** Precisão, velocidade e qualquer ganho com GPU não foram testados.',
           '**Limite da licença gratuita.** Não é informado quantas pessoas a licença gratuita permite.',
           '**Requisitos.** Nenhum mínimo de RAM, espaço em disco ou processador é publicado.',
-          '**Uso offline.** As verificações de atualização e licença passam pelo servidor do desenvolvedor; não se diz se o app funciona totalmente offline.',
+          '**Uso offline.** Não se diz se o app funciona totalmente offline.',
           '**Relatórios de falha.** A política lista nomes marcados e nomes de arquivos, mas não diz se incluem conteúdo de fotos ou dados faciais.',
         ],
       },
@@ -1477,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'O Tonfotos oferece reconhecimento facial, remoção de duplicatas e uma árvore genealógica para grandes arquivos de fotos em Windows, macOS e Linux, com versão gratuita e licenças perpétuas, e o fabricante diz que o reconhecimento roda localmente. Em contrapartida, é de código fechado, a licença gratuita limita as pessoas marcadas, o app contata o servidor do desenvolvedor para verificar atualizações e licença, os relatórios de falha podem incluir nomes marcados, e o site não mostra número de versão real, registro de alterações nem requisitos do sistema. Serve para quem quer um arquivo familiar de fotos local sem assinatura e vai começar pela licença gratuita; quem precisa de código aberto ou de um fluxo de dados auditado deve procurar outra opção.',
+          'O Tonfotos oferece reconhecimento facial, remoção de duplicatas e uma árvore genealógica para grandes arquivos de fotos, com versão gratuita e licenças perpétuas, e o fabricante diz que o reconhecimento roda localmente. Em contrapartida, é de código fechado, a licença gratuita limita as pessoas marcadas, o app contata o servidor do desenvolvedor para verificar atualizações e licença, os relatórios de falha podem incluir nomes marcados, e o site não mostra número de versão real, registro de alterações nem requisitos do sistema. Serve para quem quer um arquivo familiar de fotos local sem assinatura e vai começar pela licença gratuita; quem precisa de código aberto ou de um fluxo de dados auditado deve procurar outra opção.',
       },
       sources: {
         id: 'sources',
@@ -1537,12 +1537,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotos برنامج مغلق المصدر لإدارة أرشيف الصور والفيديو على Windows وmacOS وLinux، ويتعرف على الوجوه بحسب الشركة المطوّرة بذكاء اصطناعي يعمل محليًا على حاسوبك.** يضيف إزالة المكررات وشجرة العائلة، ويتوفر بنسخة مجانية وتراخيص مدفوعة دائمة بدلًا من الاشتراك.',
+      '**Tonfotos برنامج مكتبي مغلق المصدر يتعرف على الوجوه بحسب الشركة المطوّرة بذكاء اصطناعي يعمل محليًا على حاسوبك.** ينظّم مجموعات الصور والفيديو الكبيرة، ويضيف إزالة المكررات وشجرة العائلة، ويتوفر بنسخة مجانية وتراخيص مدفوعة دائمة بدلًا من الاشتراك.',
     quickAnswerTop: {
       ar: {
         question: 'هل يُبقي Tonfotos صورك وبيانات الوجوه على حاسوبك الخاص؟',
         answer:
-          'بحسب Tonfotos، نعم بالنسبة إلى الصور: تقول الأسئلة الشائعة إنه "processes your photos right where they are and never sends them anywhere"، ويعمل التعرف على الوجوه محليًا. ومع ذلك يتصل التطبيق بخادم المطوّر للتحقق من التحديثات والترخيص. لم تفحص PromptQuorum حركة الشبكة.',
+          'بحسب Tonfotos، نعم بالنسبة إلى الصور: تقول الأسئلة الشائعة إنها تُعالَج حيث توجد ولا تُرسَل إلى أي مكان، ويعمل التعرف على الوجوه محليًا. ومع ذلك يتصل التطبيق بخادم المطوّر للتحقق من التحديثات والترخيص. لم تفحص PromptQuorum حركة الشبكة.',
         bullets: [
           'مغلق المصدر وبلا مستودع عام؛ ولا يعتمد على الاشتراك.',
           'يدعم Windows 10 و11 وmacOS 10.15 أو أحدث (Intel وApple silicon) وLinux (‏.deb و.rpm).',
@@ -1650,7 +1650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'هذه إفادات من المطوّر وليست نتائج تدقيق، ولم تفحص PromptQuorum حركة الشبكة.',
+            text: 'هذه إفادات من المطوّر وليست نتائج تدقيق، ولم تفحص PromptQuorum حركة الشبكة. يعالج التعرف على الوجوه بيانات بيومترية عن الأشخاص في صورك؛ وعند أي استخدام يتجاوز الغرض الشخصي أو المنزلي البحت قد تنطبق قواعد حماية البيانات مثل اللائحة العامة لحماية البيانات (GDPR)، وهذه المراجعة ليست استشارة قانونية.',
           },
         ],
       },
@@ -1671,7 +1671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**جودة التعرف.** لم نختبر الدقة ولا السرعة ولا أي فائدة من وحدة GPU.',
           '**حد الترخيص المجاني.** لا يُذكر عدد الأشخاص الذي يسمح به الترخيص المجاني.',
           '**المتطلبات.** لم يُنشر حد أدنى لذاكرة RAM أو مساحة القرص أو المعالج.',
-          '**الاستخدام دون اتصال.** تمر عمليات التحقق من التحديثات والترخيص عبر خادم المطوّر؛ ولا يُذكر ما إذا كان التطبيق يعمل دون اتصال بالكامل.',
+          '**الاستخدام دون اتصال.** لا يُذكر ما إذا كان التطبيق يعمل دون اتصال بالكامل.',
           '**تقارير الأعطال.** تذكر السياسة الأسماء الموسومة وأسماء الملفات، لكنها لا تقول إن كانت تتضمن محتوى الصور أو بيانات الوجوه.',
         ],
       },
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'يوفّر Tonfotos التعرف على الوجوه وإزالة المكررات وشجرة العائلة لأرشيفات الصور الكبيرة على Windows وmacOS وLinux، بنسخة مجانية وتراخيص دائمة، وتقول الشركة المطوّرة إن التعرف يعمل محليًا. وفي المقابل هو مغلق المصدر، ويحدّ الترخيص المجاني من عدد الأشخاص الموسومين، ويتصل التطبيق بخادم المطوّر للتحقق من التحديثات والترخيص، وقد تتضمن تقارير الأعطال أسماء موسومة، ولا يعرض الموقع رقم إصدار حقيقيًا ولا سجل تغييرات ولا متطلبات النظام. يناسب من يريدون أرشيف صور عائلية محليًا دون اشتراك ويبدؤون بالترخيص المجاني؛ أما من يحتاجون إلى مصدر مفتوح أو تدفق بيانات مدقَّق فعليهم البحث في مكان آخر.',
+          'يوفّر Tonfotos التعرف على الوجوه وإزالة المكررات وشجرة العائلة لأرشيفات الصور الكبيرة، بنسخة مجانية وتراخيص دائمة، وتقول الشركة المطوّرة إن التعرف يعمل محليًا. وفي المقابل هو مغلق المصدر، ويحدّ الترخيص المجاني من عدد الأشخاص الموسومين، ويتصل التطبيق بخادم المطوّر للتحقق من التحديثات والترخيص، وقد تتضمن تقارير الأعطال أسماء موسومة، ولا يعرض الموقع رقم إصدار حقيقيًا ولا سجل تغييرات ولا متطلبات النظام. يناسب من يريدون أرشيف صور عائلية محليًا دون اشتراك ويبدؤون بالترخيص المجاني؛ أما من يحتاجون إلى مصدر مفتوح أو تدفق بيانات مدقَّق فعليهم البحث في مكان آخر.',
       },
       sources: {
         id: 'sources',
@@ -1780,12 +1780,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotos 是一款适用于 Windows、macOS 和 Linux 的闭源照片与视频归档管理软件，据开发者称，它使用在你电脑本地运行的 AI 识别人脸。** 它还提供去重和家谱功能，采用免费版加永久付费授权的方式，而不是订阅。',
+      '**Tonfotos 是一款闭源的桌面软件，据开发者称，它使用在你电脑本地运行的 AI 识别人脸。** 它可整理大型照片与视频集，还提供去重和家谱功能，采用免费版加永久付费授权的方式，而不是订阅。',
     quickAnswerTop: {
       zh: {
         question: 'Tonfotos 会把你的照片和人脸数据留在自己的电脑上吗？',
         answer:
-          '据 Tonfotos 称，照片是这样：其 FAQ 写道它 "processes your photos right where they are and never sends them anywhere"，人脸识别也在本地运行。不过该应用会连接开发者的服务器来检查更新和授权。PromptQuorum 没有检查网络流量。',
+          '据 Tonfotos 称，照片是这样：其 FAQ 称照片在原处处理，不会发送到任何地方，人脸识别也在本地运行。不过该应用会连接开发者的服务器来检查更新和授权。PromptQuorum 没有检查网络流量。',
         bullets: [
           '闭源，没有公开代码仓库；不是订阅制。',
           '支持 Windows 10 和 11、macOS 10.15 及更高版本（Intel 和 Apple silicon）以及 Linux（.deb 和 .rpm）。',
@@ -1893,7 +1893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '这些是开发者的声明，不是审计结果，PromptQuorum 没有检查网络流量。',
+            text: '这些是开发者的声明，不是审计结果，PromptQuorum 没有检查网络流量。人脸识别会处理照片中人物的生物识别数据；如果用途超出纯个人或家庭范围，可能适用 GDPR 等数据保护规则，本评测不构成法律建议。',
           },
         ],
       },
@@ -1914,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**识别质量。** 准确度、速度以及 GPU 带来的提升均未测试。',
           '**免费授权的上限。** 没有说明免费授权最多允许标注多少人。',
           '**运行要求。** 没有公布最低内存、磁盘空间或处理器要求。',
-          '**离线使用。** 更新和授权检查经由开发者的服务器进行；没有说明应用能否完全离线运行。',
+          '**离线使用。** 没有说明应用能否完全离线运行。',
           '**崩溃报告。** 政策列出了已标注的姓名和文件名，但没有说明是否包含照片内容或人脸数据。',
         ],
       },
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Tonfotos 为 Windows、macOS 和 Linux 上的大型照片档案提供人脸识别、去重和家谱功能，有免费版和永久授权，开发者称识别在本地运行。另一方面，它是闭源软件，免费授权限制标注人数，应用会连接开发者的服务器检查更新和授权，崩溃报告可能包含已标注的姓名，官网也没有真实的版本号、更新日志或系统要求。它适合想要不订阅的本地家庭照片档案、并先用免费授权试用的人；需要开源或经过审计的数据流向的用户应另寻他选。',
+          'Tonfotos 为大型照片档案提供人脸识别、去重和家谱功能，有免费版和永久授权，开发者称识别在本地运行。另一方面，它是闭源软件，免费授权限制标注人数，应用会连接开发者的服务器检查更新和授权，崩溃报告可能包含已标注的姓名，官网也没有真实的版本号、更新日志或系统要求。它适合想要不订阅的本地家庭照片档案、并先用免费授权试用的人；需要开源或经过审计的数据流向的用户应另寻他选。',
       },
       sources: {
         id: 'sources',
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-30',
     theme: 'Image & Video Generation',
     heroImage: '/images/tonfotos-review-hero-ko.webp',
-    title: 'Tonfotos 리뷰: 로컬 얼굴 인식 사진 관리 프로그램',
+    title: 'Tonfotos 리뷰: 로컬 얼굴 인식 사진 관리',
     seoTitle: 'Tonfotos 리뷰: 로컬 얼굴 인식 사진 관리 프로그램',
     intro:
       'Tonfotos는 Windows, macOS, Linux용 비공개 소스 사진·동영상 아카이브 관리 프로그램으로, 개발사에 따르면 얼굴 인식이 내 컴퓨터에서 실행됩니다. 무료 버전과 일회성 구매 유료 라이선스가 있습니다. 이 리뷰는 2026년 10월 30일에 확인한 Tonfotos 웹사이트, 문서, 개인정보 처리방침과 설치 파일 자체를 바탕으로 하며, 확인한 버전은 1.17.1입니다.',
@@ -2023,12 +2023,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Apple silicon', 'NVIDIA CUDA'],
     leadAnswerBlock:
-      '**Tonfotos는 Windows, macOS, Linux용 비공개 소스 사진·동영상 아카이브 관리 프로그램으로, 개발사에 따르면 내 컴퓨터에서 로컬로 실행되는 AI로 얼굴을 인식합니다.** 중복 제거와 가계도 기능이 있으며, 구독 대신 무료 버전과 영구 유료 라이선스로 제공됩니다.',
+      '**Tonfotos는 비공개 소스 데스크톱 소프트웨어로, 개발사에 따르면 내 컴퓨터에서 로컬로 실행되는 AI로 얼굴을 인식합니다.** 대규모 사진·동영상 모음을 정리하고, 중복 제거와 가계도 기능이 있으며, 구독 대신 무료 버전과 영구 유료 라이선스로 제공됩니다.',
     quickAnswerTop: {
       ko: {
         question: 'Tonfotos는 사진과 얼굴 데이터를 내 컴퓨터 안에만 보관합니까?',
         answer:
-          'Tonfotos에 따르면 사진은 그렇습니다. FAQ에는 "processes your photos right where they are and never sends them anywhere"라고 되어 있으며, 얼굴 인식은 로컬에서 실행됩니다. 다만 앱은 업데이트와 라이선스 확인을 위해 개발자의 서버에 접속합니다. PromptQuorum은 네트워크 트래픽을 검사하지 않았습니다.',
+          'Tonfotos에 따르면 사진은 그렇습니다. FAQ는 사진이 있는 자리에서 처리되며 어디로도 전송되지 않는다고 설명하고, 얼굴 인식은 로컬에서 실행됩니다. 다만 앱은 업데이트와 라이선스 확인을 위해 개발자의 서버에 접속합니다. PromptQuorum은 네트워크 트래픽을 검사하지 않았습니다.',
         bullets: [
           '비공개 소스이며 공개 저장소가 없고, 구독제가 아닙니다.',
           'Windows 10·11, macOS 10.15 이상(Intel 및 Apple silicon), Linux(.deb 및 .rpm)를 지원합니다.',
@@ -2136,7 +2136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이는 개발사의 주장이며 감사 결과가 아니고, PromptQuorum은 네트워크 트래픽을 검사하지 않았습니다.',
+            text: '이는 개발사의 주장이며 감사 결과가 아니고, PromptQuorum은 네트워크 트래픽을 검사하지 않았습니다. 얼굴 인식은 사진 속 인물의 생체 정보를 처리합니다. 순수하게 개인적이거나 가정 내 용도를 넘어 사용하면 GDPR 같은 데이터 보호 규정이 적용될 수 있으며, 이 리뷰는 법률 자문이 아닙니다.',
           },
         ],
       },
@@ -2157,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**인식 품질.** 정확도, 속도, GPU 효과는 테스트하지 않았습니다.',
           '**무료 라이선스의 한도.** 무료 라이선스로 몇 명까지 태그할 수 있는지는 명시되어 있지 않습니다.',
           '**요구 사항.** 최소 RAM, 디스크 공간, 프로세서는 공개되어 있지 않습니다.',
-          '**오프라인 사용.** 업데이트와 라이선스 확인은 개발자의 서버를 거치며, 앱이 완전히 오프라인으로 동작하는지는 명시되어 있지 않습니다.',
+          '**오프라인 사용.** 앱이 완전히 오프라인으로 동작하는지는 명시되어 있지 않습니다.',
           '**충돌 보고서.** 방침에는 태그된 이름과 파일 이름이 나열되어 있지만 사진 내용이나 얼굴 데이터가 포함되는지는 나와 있지 않습니다.',
         ],
       },
@@ -2206,7 +2206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'Tonfotos는 Windows, macOS, Linux의 대규모 사진 아카이브를 위해 얼굴 인식, 중복 제거, 가계도를 무료 버전과 영구 라이선스로 제공하며, 개발사는 인식이 로컬에서 실행된다고 밝힙니다. 반면 비공개 소스이고, 무료 라이선스는 태그할 수 있는 인물 수를 제한하며, 앱이 업데이트와 라이선스 확인을 위해 개발자의 서버에 접속하고, 충돌 보고서에 태그된 이름이 포함될 수 있으며, 웹사이트에는 실제 버전 번호, 변경 내역, 시스템 요구 사항이 없습니다. 구독 없이 로컬 가족 사진 아카이브를 원하고 무료 라이선스로 먼저 시작할 분께 맞으며, 오픈 소스나 감사된 데이터 흐름이 필요한 분은 다른 선택지를 찾아보시기 바랍니다.',
+          'Tonfotos는 대규모 사진 아카이브를 위해 얼굴 인식, 중복 제거, 가계도를 무료 버전과 영구 라이선스로 제공하며, 개발사는 인식이 로컬에서 실행된다고 밝힙니다. 반면 비공개 소스이고, 무료 라이선스는 태그할 수 있는 인물 수를 제한하며, 앱이 업데이트와 라이선스 확인을 위해 개발자의 서버에 접속하고, 충돌 보고서에 태그된 이름이 포함될 수 있으며, 웹사이트에는 실제 버전 번호, 변경 내역, 시스템 요구 사항이 없습니다. 구독 없이 로컬 가족 사진 아카이브를 원하고 무료 라이선스로 먼저 시작할 분께 맞으며, 오픈 소스나 감사된 데이터 흐름이 필요한 분은 다른 선택지를 찾아보시기 바랍니다.',
       },
       sources: {
         id: 'sources',
