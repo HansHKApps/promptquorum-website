@@ -154,11 +154,13 @@ import { app as app_chaterminal } from './apps/chaterminal'
 import { app as app_lm_mini } from './apps/lm-mini'
 import { app as app_compass_local_ai } from './apps/compass-local-ai'
 import { app as app_greencube } from './apps/greencube'
+import { app as app_kai_9000 } from './apps/kai-9000'
 import { app as app_laria } from './apps/laria'
 import { app as app_pocketllm_lite } from './apps/pocketllm-lite'
 import { app as app_obscurify } from './apps/obscurify'
 import { app as app_genva } from './apps/genva'
 import { app as app_whisper_notes } from './apps/whisper-notes'
+import { app as app_aiko } from './apps/aiko'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_local_ai_mail } from './apps/local-ai-mail'
@@ -268,6 +270,8 @@ import { app as app_openrag } from './apps/openrag'
 import { app as app_arynwood_mcp } from './apps/arynwood-mcp'
 import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
+import { app as app_fullmoon } from './apps/fullmoon'
+import { app as app_reins } from './apps/reins'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
@@ -552,6 +556,8 @@ export const localAiApps: ToolRecord[] = [
   app_arynwood_mcp,
   app_localmindai,
   app_murmur,
+  app_fullmoon,
+  app_reins,
   app_lyonesse,
   app_open_llm_vtuber,
   app_presenton,
@@ -666,12 +672,14 @@ export const localAiApps: ToolRecord[] = [
   app_lm_mini,
   app_compass_local_ai,
   app_greencube,
+  app_kai_9000,
   app_laria,
   app_compactifai_app,
   app_pocketllm_lite,
   app_obscurify,
   app_genva,
   app_whisper_notes,
+  app_aiko,
   app_anyllm,
   app_local_ai_geetmark,
   app_local_ai_mail,

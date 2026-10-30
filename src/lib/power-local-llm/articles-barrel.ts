@@ -61,6 +61,7 @@ import { article as a_pixlstash_review } from './articles/pixlstash-review'
 import { article as a_photoprism_review } from './articles/photoprism-review'
 import { article as a_photoview_review } from './articles/photoview-review'
 import { article as a_whisper_notes_review } from './articles/whisper-notes-review'
+import { article as a_aiko_review } from './articles/aiko-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -96,6 +97,8 @@ import { article as a_openrag_review } from './articles/openrag-review'
 import { article as a_arynwood_mcp_review } from './articles/arynwood-mcp-review'
 import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
+import { article as a_fullmoon_review } from './articles/fullmoon-review'
+import { article as a_reins_review } from './articles/reins-review'
 import { article as a_lyonesse_review } from './articles/lyonesse-review'
 import { article as a_open_llm_vtuber_review } from './articles/open-llm-vtuber-review'
 import { article as a_presenton_review } from './articles/presenton-review'
@@ -127,6 +130,7 @@ import { article as a_chaterminal_review } from './articles/chaterminal-review'
 import { article as a_lm_mini_review } from './articles/lm-mini-review'
 import { article as a_compass_local_ai_review } from './articles/compass-local-ai-review'
 import { article as a_greencube_review } from './articles/greencube-review'
+import { article as a_kai_9000_review } from './articles/kai-9000-review'
 import { article as a_laria_review } from './articles/laria-review'
 import { article as a_compactifai_app_review } from './articles/compactifai-app-review'
 import { article as a_pocketllm_lite_review } from './articles/pocketllm-lite-review'
@@ -739,6 +743,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'photoprism-review':                             a_photoprism_review,
   'photoview-review':                              a_photoview_review,
   'whisper-notes-review':                          a_whisper_notes_review,
+  'aiko-review':                                   a_aiko_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
@@ -774,6 +779,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'arynwood-mcp-review':                           a_arynwood_mcp_review,
   'localmindai-review':                            a_localmindai_review,
   'murmur-review':                                 a_murmur_review,
+  'fullmoon-review':                               a_fullmoon_review,
+  'reins-review':                                  a_reins_review,
   'lyonesse-review':                               a_lyonesse_review,
   'open-llm-vtuber-review':                        a_open_llm_vtuber_review,
   'presenton-review':                              a_presenton_review,
@@ -805,6 +812,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'lm-mini-review':                                a_lm_mini_review,
   'compass-local-ai-review':                       a_compass_local_ai_review,
   'greencube-review':                              a_greencube_review,
+  'kai-9000-review':                               a_kai_9000_review,
   'laria-review':                                  a_laria_review,
   'compactifai-app-review':                        a_compactifai_app_review,
   'pocketllm-lite-review':                         a_pocketllm_lite_review,

@@ -1024,6 +1024,16 @@
     "urlSlug": "murmur-review",
     "url": "/power-local-llm/murmur-review"
   },
+  "fullmoon": {
+    "cluster": "power-local-llm",
+    "urlSlug": "fullmoon-review",
+    "url": "/power-local-llm/fullmoon-review"
+  },
+  "reins": {
+    "cluster": "power-local-llm",
+    "urlSlug": "reins-review",
+    "url": "/power-local-llm/reins-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
@@ -1594,6 +1604,11 @@
     "urlSlug": "greencube-review",
     "url": "/power-local-llm/greencube-review"
   },
+  "kai-9000": {
+    "cluster": "power-local-llm",
+    "urlSlug": "kai-9000-review",
+    "url": "/power-local-llm/kai-9000-review"
+  },
   "laria": {
     "cluster": "power-local-llm",
     "urlSlug": "laria-review",
@@ -1623,6 +1638,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "whisper-notes-review",
     "url": "/power-local-llm/whisper-notes-review"
+  },
+  "aiko": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aiko-review",
+    "url": "/power-local-llm/aiko-review"
   },
   "anyllm": {
     "cluster": "power-local-llm",

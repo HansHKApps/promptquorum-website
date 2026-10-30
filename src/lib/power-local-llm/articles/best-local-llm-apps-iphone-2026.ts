@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -93,6 +93,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: Not on the App Store, Source Still Available', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: System-Integrated On-Device AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)', anchor: '#memoryai' },
+      { label: 'Reins: Chat Client for Your Ollama or LM Studio Server (Not Benchmarked)', anchor: '#reins' },
+      { label: 'fullmoon: Free Open-Source Chat on Apple MLX (No Release Since Early 2025)', anchor: '#fullmoon' },
       { label: 'Models by iPhone Tier', anchor: '#models-by-tier' },
       { label: 'Battery Drain and Thermal Throttling', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri, and Sideloading', anchor: '#ios-integration' },
@@ -206,6 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Cost': 'Free (build from source)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'No figure', 'Privacy': 'Local inference (project docs; unverified)', 'Best for': 'Developers (not on App Store, stale)' },
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Cost': 'Free (built into iOS)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'N/A (system feature)', 'Privacy': 'Local + Private Cloud Compute (Apple)', 'Best for': 'Mail, Messages, Notes assistance' },
           { 'App': '[MemoryAI](/power-local-llm/memoryai-review)', 'Cost': 'Free; no ads or in-app purchases', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'No figure', 'Privacy': 'On-device after download; usage events and crash reports sent', 'Best for': 'Documents, editable memory, Kid Mode' },
+          { 'App': '[fullmoon](/power-local-llm/fullmoon-review)', 'Cost': 'Free (MIT)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'No figure', 'Privacy': 'On-device per maker; policy contradicts itself', 'Best for': 'Simple offline chat; no release since Jan 2025' },
         ],
         note:
           '**Note on Apple Neural Engine (ANE) vs Metal vs MLX:** PocketPal AI and LLM Farm use llama.cpp with Metal Performance Shaders for inference, which runs on the GPU. MLC Chat uses MLC LLM with deeper Metal optimisation, which the MLC LLM project describes as faster than llama.cpp-based apps on the same hardware (project claim; PromptQuorum has not measured this). Locally AI uses Apple MLX, Apple\'s own open-source array framework, which reaches similar GPU efficiency on Apple Silicon. Google AI Edge Gallery runs Gemma 4 through Google\'s LiteRT-LM runtime. Apple Intelligence uses ANE specifically for the system ~3B model, which is more power-efficient but less flexible than Metal-based inference. Since iOS 26, third-party apps can call that system model through the Foundation Models framework — Locally AI does exactly this — but custom GGUF/MLX models still cannot directly target the ANE. Apple states the A20 Pro in the iPhone 18 Pro has a Dual 16-core Neural Engine with two times the compute of before; that is an Apple claim, and PromptQuorum has not measured what it means for these apps.',
@@ -375,6 +378,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'The details above come from the store listings, the privacy policy and the developer, who reviewed our write-up; we have not timed MemoryAI on our test phones. Full notes: [MemoryAI review](/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon: Free Open-Source Chat on Apple MLX (No Release Since Early 2025)',
+        content:
+          '**fullmoon is a free, MIT-licensed offline chat app for iPhone, iPad and Mac that runs small models through Apple\'s MLX, but it has had no release since 28 January 2025 and no code change since 5 May 2025, so it may be unmaintained.** It was added after the main comparison, so it was not part of our testing.',
+        items: [
+          '**Models:** Llama 3.2 1B and 3B and two DeepSeek-R1-Distill-Qwen-1.5B builds (0.7–1.9 GB each), per the website.',
+          '**Features:** An editable system prompt, theme and fonts, and a Shortcuts action; chat history is stored locally (README).',
+          '**Requirements and price:** iOS 17.6+, 31.6 MB before models are downloaded. Free to download.',
+          '**Privacy and licence:** The policy says nothing is collected but also lists purposes for collected data, so it contradicts itself. The source code is public under the MIT licence.',
+          '**Install path:** App Store (version 1.2.0); the website also offers a TestFlight link for newer builds.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the maker\'s website, the App Store listing, the privacy policy and the public repository; we have not run fullmoon on our test phones. Full notes: [fullmoon review](/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins: Chat Client for Your Ollama or LM Studio Server (Not Benchmarked)',
+        content:
+          '**Reins is a free chat app for iPhone and iPad that connects to your own Ollama, LM Studio or OpenAI-compatible server and, since version 2, can also run MLX models on the device.** It was added after the main comparison, so it is not in the comparison table and was not part of our testing.',
+        items: [
+          '**Model library:** On-device MLX models download inside the app from Hugging Face, and any MLX model can be searched and downloaded; Apple Foundation Models are supported too.',
+          '**Features:** Tool calls, built-in web search without an API key, image, PDF, CSV and text attachments, chat branching, thinking mode and temporary chats.',
+          '**Requirements and price:** iOS 17.0+ (background generation needs iOS 26). Free to download, with Reins Pro as a monthly, yearly or lifetime in-app purchase; the sources do not list what Pro unlocks.',
+          '**Privacy and licence:** The developer says there is no login, no analytics and no data collection. Version 2 is closed source; the public repository holds the code only up to version 1.3.4.',
+          '**Install path:** App Store. The App Store lists version 2.3.3, released on 21 October 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the App Store listing, the developer\'s website and policies; we have not timed Reins on our test phones. Full notes: [Reins review](/power-local-llm/reins-review).',
           },
         ],
       },
@@ -584,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -668,6 +709,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: Nicht im App Store, Quellcode weiterhin verfügbar', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: Systemintegrierte On-Device-KI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)', anchor: '#memoryai' },
+      { label: 'Reins: Chat-Client für Ihren Ollama- oder LM-Studio-Server (nicht gemessen)', anchor: '#reins' },
+      { label: 'fullmoon: kostenloser Open-Source-Chat auf Apple MLX (kein Release seit Anfang 2025)', anchor: '#fullmoon' },
       { label: 'Modelle nach iPhone-Modell', anchor: '#models-by-tier' },
       { label: 'Akkuverbrauch und thermisches Throttling', anchor: '#battery-heat' },
       { label: 'iOS Kurzbefehle, Siri und Sideloading', anchor: '#ios-integration' },
@@ -781,6 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Preis': 'Kostenlos (nur Quellcode)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Lokale Inferenz (Projektdoku; ungeprüft)', 'Am besten geeignet für': 'Entwickler (nicht im App Store, veraltet)' },
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Preis': 'Kostenlos (in iOS integriert)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. (Systemfunktion)', 'Datenschutz': 'Lokal + Private Cloud Compute (Apple)', 'Am besten geeignet für': 'Hilfe in Mail, Nachrichten, Notizen' },
           { 'App': '[MemoryAI](/de/power-local-llm/memoryai-review)', 'Preis': 'Kostenlos; keine Werbung oder In-App-Käufe', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Auf dem Gerät nach Download; Nutzungs- und Absturzdaten werden gesendet', 'Am besten geeignet für': 'Dokumente, editierbares Gedächtnis, Kindermodus' },
+          { 'App': '[fullmoon](/de/power-local-llm/fullmoon-review)', 'Preis': 'Kostenlos (MIT)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Auf dem Gerät laut Hersteller; Erklärung widersprüchlich', 'Am besten geeignet für': 'Einfacher Offline-Chat; kein Release seit Jan. 2025' },
         ],
         note:
           '**Hinweis zur Apple Neural Engine (ANE) im Vergleich zu Metal und MLX:** PocketPal AI und LLM Farm verwenden llama.cpp mit Metal Performance Shadern, die auf der GPU laufen. MLC Chat verwendet MLC LLM mit tieferer Metal-Optimierung, die das MLC-LLM-Projekt auf gleicher Hardware als schneller beschreibt als llama.cpp-basierte Apps (Projektangabe; von PromptQuorum nicht nachgemessen). Locally AI nutzt Apple MLX, Apples eigenes Open-Source-Array-Framework, das auf Apple Silicon eine ähnliche GPU-Effizienz erreicht. Google AI Edge Gallery führt Gemma 4 über Googles LiteRT-LM-Runtime aus. Apple Intelligence nutzt die ANE speziell für das systemintegrierte ~3B-Modell – energieeffizienter, aber weniger flexibel als Metal-basierte Inferenz. Seit iOS 26 können Drittanbieter-Apps dieses Systemmodell über das Foundation-Models-Framework aufrufen – genau das tut Locally AI –, aber eigene GGUF/MLX-Modelle können die ANE weiterhin nicht direkt ansprechen. Apple gibt an, der A20 Pro im iPhone 18 Pro habe eine Dual-16-Core-Neural-Engine mit doppelter Rechenleistung wie zuvor; das ist eine Apple-Angabe, und PromptQuorum hat nicht gemessen, was sie für diese Apps bedeutet.',
@@ -950,6 +994,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Die Angaben stammen aus den Store-Einträgen, der Datenschutzerklärung und vom Entwickler, der unseren Text geprüft hat; MemoryAI wurde von uns nicht auf unseren Testgeräten gemessen. Alle Details: [MemoryAI-Review](/de/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon: kostenloser Open-Source-Chat auf Apple MLX (kein Release seit Anfang 2025)',
+        content:
+          '**fullmoon ist eine kostenlose Offline-Chat-App unter MIT-Lizenz für iPhone, iPad und Mac, die kleine Modelle über Apples MLX ausführt – sie hat aber seit dem 28. Januar 2025 kein Release und seit dem 5. Mai 2025 keine Codeänderung mehr erhalten und wird möglicherweise nicht mehr gepflegt.** Sie wurde nach dem Hauptvergleich ergänzt und war nicht Teil unserer Tests.',
+        items: [
+          '**Modelle:** Llama 3.2 1B und 3B sowie zwei Builds von DeepSeek-R1-Distill-Qwen-1.5B (je 0,7–1,9 GB) laut Website.',
+          '**Funktionen:** Editierbarer Systemprompt, Design und Schriftarten sowie eine Kurzbefehle-Aktion; der Chatverlauf wird lokal gespeichert (README).',
+          '**Voraussetzungen und Preis:** iOS 17.6+, 31,6 MB vor dem Modell-Download. Kostenlos herunterladbar.',
+          '**Datenschutz und Lizenz:** Die Erklärung sagt, dass nichts erhoben wird, nennt aber auch Zwecke für erhobene Daten und widerspricht sich damit selbst. Der Quellcode ist öffentlich unter MIT-Lizenz.',
+          '**Installation:** App Store (Version 1.2.0); die Website bietet zusätzlich einen TestFlight-Link für neuere Builds.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen von der Website des Herstellers, aus dem App-Store-Eintrag, der Datenschutzerklärung und dem öffentlichen Repository; fullmoon wurde von uns nicht auf unseren Testgeräten ausgeführt. Alle Details: [fullmoon-Rezension](/de/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins: Chat-Client für Ihren Ollama- oder LM-Studio-Server (nicht gemessen)',
+        content:
+          '**Reins ist eine kostenlose Chat-App für iPhone und iPad, die sich mit Ihrem eigenen Ollama-, LM-Studio- oder OpenAI-kompatiblen Server verbindet und seit Version 2 auch MLX-Modelle auf dem Gerät ausführen kann.** Sie wurde nach dem Hauptvergleich ergänzt, steht daher nicht in der Vergleichstabelle und war nicht Teil unserer Tests.',
+        items: [
+          '**Modellbibliothek:** On-Device-MLX-Modelle werden in der App von Hugging Face geladen, und jedes MLX-Modell lässt sich suchen und herunterladen; auch Apple Foundation Models werden unterstützt.',
+          '**Funktionen:** Tool-Aufrufe, eingebaute Websuche ohne API-Schlüssel, Anhänge als Bild, PDF, CSV und Text, Chat-Verzweigung, Denkmodus und temporäre Chats.',
+          '**Anforderungen und Preis:** iOS 17.0 oder neuer (Generierung im Hintergrund braucht iOS 26). Der Download ist kostenlos, Reins Pro gibt es als Monats-, Jahres- oder Lifetime-In-App-Kauf; die Quellen listen nicht auf, was Pro freischaltet.',
+          '**Datenschutz und Lizenz:** Laut Entwickler gibt es keinen Login, keine Analyse und keine Datenerhebung. Version 2 ist Closed Source; das öffentliche Repository enthält den Code nur bis Version 1.3.4.',
+          '**Installationsweg:** App Store. Der App Store nennt Version 2.3.3, veröffentlicht am 21. Oktober 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem App-Store-Eintrag sowie der Website und den Richtlinien des Entwicklers; wir haben Reins nicht auf unseren Testtelefonen gemessen. Alle Details: [Reins-Rezension](/de/power-local-llm/reins-review).',
           },
         ],
       },
@@ -1167,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1251,6 +1333,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm：App Store非掲載、ソースは入手可能', anchor: '#llm-farm' },
       { label: 'Apple Intelligence：システム統合型オンデバイスAI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)', anchor: '#memoryai' },
+      { label: 'Reins:自分のOllama・LM Studioサーバー向けチャットクライアント(未計測)', anchor: '#reins' },
+      { label: 'fullmoon：Apple MLX上で動く無料オープンソースのチャット（2025年初頭以降リリースなし）', anchor: '#fullmoon' },
       { label: 'iPhoneモデル別推奨モデル', anchor: '#models-by-tier' },
       { label: 'バッテリー消耗と熱スロットリング', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts、Siri、サイドローディング', anchor: '#ios-integration' },
@@ -1364,6 +1448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'アプリ': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '価格': '無料（ソースからビルド）', 'トークン/秒（Phi-4 Mini、16 Pro）': '数値なし', 'プライバシー': 'ローカル推論（プロジェクト文書。未検証）', '最適な用途': '開発者向け（App Store非掲載、更新停止）' },
           { 'アプリ': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '価格': '無料（iOS内蔵）', 'トークン/秒（Phi-4 Mini、16 Pro）': '該当なし（システム機能）', 'プライバシー': 'ローカル + Private Cloud Compute（Apple）', '最適な用途': 'メール・メッセージ・メモでの支援' },
           { 'アプリ': '[MemoryAI](/ja/power-local-llm/memoryai-review)', '価格': '無料。広告・アプリ内課金なし', 'トークン/秒（Phi-4 Mini、16 Pro）': '数値なし', 'プライバシー': 'ダウンロード後は端末内で動作。利用イベントとクラッシュレポートを送信', '最適な用途': '文書、編集できるメモリ、キッズモード' },
+          { 'アプリ': '[fullmoon](/ja/power-local-llm/fullmoon-review)', '価格': '無料（MIT）', 'トークン/秒（Phi-4 Mini、16 Pro）': '数値なし', 'プライバシー': '提供元によれば端末内。ポリシーは矛盾', '最適な用途': 'シンプルなオフラインチャット。2025年1月以降更新なし' },
         ],
         note:
           '**Apple Neural Engine（ANE）、Metal、MLXの違いについて：** PocketPal AIとLLM Farmは、GPU上で動作するMetal Performance Shadersを使ったllama.cppで推論を行います。MLC ChatはMLC LLMとより深いMetal最適化を採用しており、MLC LLMプロジェクトは、対応モデルについて同じハードウェア上でllama.cppベースのアプリより高速と説明しています（プロジェクトの主張であり、PromptQuorumは計測していません）。Locally AIはApple独自のオープンソース配列フレームワークであるApple MLXを使用し、Apple Silicon上で同等のGPU効率を実現します。Google AI Edge GalleryはGoogleのLiteRT-LMランタイムでGemma 4を動かします。Apple Intelligenceはシステムの約3Bモデル専用にANEを使用します。Metal推論より省電力ですが、柔軟性は低めです。iOS 26以降、サードパーティアプリはFoundation Modelsフレームワーク経由でこのシステムモデルを呼び出せます（Locally AIがまさにこれを行っています）が、独自のGGUF/MLXモデルは依然としてANEを直接ターゲットできません。AppleはiPhone 18 ProのA20 Proに、従来の2倍の演算性能を持つデュアル16コアNeural Engineが搭載されていると述べています。これはAppleの主張であり、PromptQuorumはこれらのアプリで何を意味するかを計測していません。',
@@ -1533,6 +1618,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '上記はストアの掲載情報、プライバシーポリシー、そして当サイトの記事を確認した開発者の情報に基づいています。MemoryAIを当サイトのテスト端末で計測したわけではありません。詳しくは[MemoryAIレビュー](/ja/power-local-llm/memoryai-review)をご覧ください。',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon：Apple MLX上で動く無料オープンソースのチャット（2025年初頭以降リリースなし）',
+        content:
+          '**fullmoonは、AppleのMLXで小型モデルを実行する、MITライセンスの無料オフラインチャットアプリ（iPhone・iPad・Mac対応）ですが、2025年1月28日以降リリースがなく、2025年5月5日以降コードの変更もないため、メンテナンスが終了している可能性があります。** 主要な比較の後に追加したため、当サイトのテスト対象には含まれていません。',
+        items: [
+          '**モデル：** Webサイトによれば、Llama 3.2 1Bと3B、およびDeepSeek-R1-Distill-Qwen-1.5Bの2種類（各0.7〜1.9 GB）。',
+          '**機能：** 編集できるシステムプロンプト、テーマとフォント、ショートカットのアクション。チャット履歴は端末内に保存されます（README）。',
+          '**要件と価格：** iOS 17.6以降、モデルのダウンロード前で31.6 MB。ダウンロードは無料です。',
+          '**プライバシーとライセンス：** ポリシーは「何も収集しない」としながら、収集した情報の利用目的も挙げており、矛盾しています。ソースコードはMITライセンスで公開されています。',
+          '**入手方法：** App Store（バージョン1.2.0）。新しいビルド向けにTestFlightのリンクもWebサイトにあります。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記の情報は、提供元のWebサイト、App Storeの掲載情報、プライバシーポリシー、公開リポジトリに基づいており、fullmoonを当サイトのテスト端末で動かしてはいません。詳細：[fullmoonレビュー](/ja/power-local-llm/fullmoon-review)。',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins:自分のOllama・LM Studioサーバー向けチャットクライアント(未計測)',
+        content:
+          '**Reinsは、自分で運用するOllama、LM Studio、OpenAI互換サーバーに接続するiPhone・iPad向けの無料チャットアプリで、バージョン2からは端末上でMLXモデルも実行できます。**メインの比較のあとに追加したため、比較表には含まれず、当方のテスト対象でもありません。',
+        items: [
+          '**モデルライブラリ:**端末上のMLXモデルはアプリ内でHugging Faceからダウンロードされ、任意のMLXモデルを検索してダウンロードできます。AppleのFoundation Modelsにも対応します。',
+          '**機能:**ツール呼び出し、APIキー不要の内蔵Web検索、画像・PDF・CSV・テキストの添付、チャットの分岐、思考モード、一時チャット。',
+          '**要件と価格:**iOS 17.0以降(バックグラウンド生成にはiOS 26が必要)。ダウンロードは無料で、Reins Proは月額・年額・買い切りのアプリ内課金です。Proで何が使えるかは情報源に記載がありません。',
+          '**プライバシーとライセンス:**開発者によれば、ログイン、分析、データ収集はありません。バージョン2はクローズドソースで、公開リポジトリのコードはバージョン1.3.4までです。',
+          '**入手方法:**App Store。App Storeにはバージョン2.3.3(2026年10月21日公開)と表示されています。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はApp Storeの掲載情報、開発者の公式サイトとポリシーに基づく内容で、当方のテスト用端末でReinsを計測してはいません。詳細は[Reinsレビュー](/ja/power-local-llm/reins-review)をご覧ください。',
           },
         ],
       },
@@ -1742,7 +1865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -1826,6 +1949,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm : absent de l\'App Store, sources toujours disponibles', anchor: '#llm-farm' },
       { label: 'Apple Intelligence : IA on-device intégrée au système', anchor: '#apple-intelligence' },
       { label: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)', anchor: '#memoryai' },
+      { label: 'Reins : client de chat pour votre serveur Ollama ou LM Studio (non mesuré)', anchor: '#reins' },
+      { label: 'fullmoon : chat gratuit et open source sur Apple MLX (aucune version depuis début 2025)', anchor: '#fullmoon' },
       { label: 'Modèles par génération d\'iPhone', anchor: '#models-by-tier' },
       { label: 'Autonomie et surchauffe', anchor: '#battery-heat' },
       { label: 'Raccourcis iOS, Siri et chargement latéral', anchor: '#ios-integration' },
@@ -1939,6 +2064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Application': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Prix': 'Gratuit (compilation depuis les sources)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'Aucun chiffre', 'Confidentialité': 'Inférence locale (doc projet ; non vérifié)', 'Idéal pour': 'Développeurs (hors App Store, obsolète)' },
           { 'Application': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Prix': 'Gratuit (intégré à iOS)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'N/A (fonctionnalité système)', 'Confidentialité': 'Local + Private Cloud Compute (Apple)', 'Idéal pour': 'Aide Mail, Messages, Notes' },
           { 'Application': '[MemoryAI](/fr/power-local-llm/memoryai-review)', 'Prix': 'Gratuite ; sans publicité ni achat intégré', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'Aucune valeur', 'Confidentialité': 'Sur l\'appareil après téléchargement ; événements d\'usage et plantages envoyés', 'Idéal pour': 'Documents, mémoire modifiable, Kid Mode' },
+          { 'Application': '[fullmoon](/fr/power-local-llm/fullmoon-review)', 'Prix': 'Gratuite (MIT)', 'Tokens/sec (Phi-4 Mini, 16 Pro)': 'Aucune valeur', 'Confidentialité': 'Sur l’appareil selon l’éditeur ; politique contradictoire', 'Idéal pour': 'Chat hors ligne simple ; aucune version depuis janv. 2025' },
         ],
         note:
           '**Note sur Apple Neural Engine (ANE), Metal et MLX :** PocketPal AI et LLM Farm utilisent llama.cpp avec Metal Performance Shaders pour l\'inférence, qui s\'exécute sur le GPU. MLC Chat utilise MLC LLM avec une optimisation Metal plus poussée que le projet MLC LLM décrit comme plus rapide que les applications basées sur llama.cpp sur le même matériel (affirmation du projet ; PromptQuorum ne l\'a pas mesurée). Locally AI utilise Apple MLX, le framework de calcul open source d\'Apple, d\'une efficacité GPU comparable sur Apple Silicon. Google AI Edge Gallery exécute Gemma 4 via le runtime LiteRT-LM de Google. Apple Intelligence utilise l\'ANE spécifiquement pour le modèle système d\'environ 3B, plus économe en énergie mais moins flexible que l\'inférence basée sur Metal. Depuis iOS 26, les applications tierces peuvent appeler ce modèle système via le framework Foundation Models — Locally AI le fait déjà —, mais les modèles GGUF/MLX personnalisés ne peuvent toujours pas cibler directement l\'ANE. Apple indique que l\'A20 Pro de l\'iPhone 18 Pro dispose d\'un Neural Engine 16 cœurs double avec deux fois la puissance de calcul précédente ; c\'est une affirmation d\'Apple, et PromptQuorum n\'a pas mesuré ce qu\'elle change pour ces applications.',
@@ -2108,6 +2234,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Les informations ci-dessus proviennent des fiches des stores, de la politique de confidentialité et du développeur, qui a relu notre texte ; nous n\'avons pas chronométré MemoryAI sur nos téléphones de test. Notes complètes : [test de MemoryAI](/fr/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon : chat gratuit et open source sur Apple MLX (aucune version depuis début 2025)',
+        content:
+          '**fullmoon est une application de chat hors ligne gratuite, sous licence MIT, pour iPhone, iPad et Mac, qui exécute de petits modèles via MLX d’Apple ; elle n’a toutefois reçu aucune version depuis le 28 janvier 2025 ni aucune modification de code depuis le 5 mai 2025 et n’est peut-être plus maintenue.** Elle a été ajoutée après la comparaison principale et n’a donc pas fait partie de nos tests.',
+        items: [
+          '**Modèles :** Llama 3.2 1B et 3B et deux builds de DeepSeek-R1-Distill-Qwen-1.5B (0.7–1.9 GB chacun), d’après le site.',
+          '**Fonctions :** prompt système modifiable, thème et polices, et une action Raccourcis ; l’historique est stocké localement (README).',
+          '**Prérequis et prix :** iOS 17.6+, 31.6 MB avant le téléchargement des modèles. Gratuite au téléchargement.',
+          '**Confidentialité et licence :** la politique dit que rien n’est collecté mais énumère aussi des usages des données collectées, ce qui la rend contradictoire. Le code source est public sous licence MIT.',
+          '**Installation :** App Store (version 1.2.0) ; le site propose aussi un lien TestFlight pour les versions plus récentes.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent du site de l’éditeur, de la fiche App Store, de la politique de confidentialité et du dépôt public ; nous n’avons pas fait tourner fullmoon sur nos téléphones de test. Détails : [test de fullmoon](/fr/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins : client de chat pour votre serveur Ollama ou LM Studio (non mesuré)',
+        content:
+          '**Reins est une appli de chat gratuite pour iPhone et iPad qui se connecte à votre propre serveur Ollama, LM Studio ou compatible OpenAI et, depuis la version 2, peut aussi exécuter des modèles MLX sur l’appareil.** Elle a été ajoutée après le comparatif principal ; elle ne figure donc pas dans le tableau comparatif et n’a pas fait partie de nos tests.',
+        items: [
+          '**Bibliothèque de modèles :** les modèles MLX sur l’appareil se téléchargent dans l’appli depuis Hugging Face, et tout modèle MLX peut être recherché et téléchargé ; les Apple Foundation Models sont aussi pris en charge.',
+          '**Fonctions :** appels d’outils, recherche web intégrée sans clé d’API, pièces jointes image, PDF, CSV et texte, branches de chat, mode réflexion et chats temporaires.',
+          '**Configuration et prix :** iOS 17.0 ou ultérieur (la génération en arrière-plan exige iOS 26). Téléchargement gratuit, avec Reins Pro en achat intégré mensuel, annuel ou à vie ; les sources n’énumèrent pas ce que Pro débloque.',
+          '**Confidentialité et licence :** le développeur affirme qu’il n’y a ni connexion, ni analytique, ni collecte de données. La version 2 est fermée ; le dépôt public ne contient le code que jusqu’à la version 1.3.4.',
+          '**Installation :** App Store. L’App Store indique la version 2.3.3, publiée le 21 octobre 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ces informations viennent de la fiche de l’App Store, du site et des politiques du développeur ; nous n’avons pas mesuré Reins sur nos téléphones de test. Notes complètes : [test de Reins](/fr/power-local-llm/reins-review).',
           },
         ],
       },
@@ -2317,7 +2481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2401,6 +2565,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm：不在App Store上，源码仍可获取', anchor: '#llm-farm' },
       { label: 'Apple Intelligence：系统级内置AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:带可编辑记忆的离线聊天(未实测)', anchor: '#memoryai' },
+      { label: 'Reins:面向自建 Ollama 或 LM Studio 服务器的聊天客户端(未实测)', anchor: '#reins' },
+      { label: 'fullmoon：基于 Apple MLX 的免费开源聊天应用（2025 年初以来无新版本）', anchor: '#fullmoon' },
       { label: '按iPhone档次推荐模型', anchor: '#models-by-tier' },
       { label: '电池消耗与过热问题', anchor: '#battery-heat' },
       { label: 'iOS快捷指令、Siri与侧载', anchor: '#ios-integration' },
@@ -2514,6 +2680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '应用': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '费用': '免费（从源码编译）', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '本地推理（项目文档；未核实）', '适合人群': '开发者（不在App Store，已过时）' },
           { '应用': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '费用': '免费（iOS内置）', 'Phi-4 Mini tok/s（16 Pro）': '不适用（系统功能）', '隐私': '本地 + Private Cloud Compute（苹果）', '适合人群': '邮件、信息、备忘录辅助' },
           { '应用': '[MemoryAI](/zh/power-local-llm/memoryai-review)', '费用': '免费;无广告、无应用内购买', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '下载后在设备端运行;会发送使用事件和崩溃报告', '适合人群': '文档、可编辑记忆、儿童模式' },
+          { '应用': '[fullmoon](/zh/power-local-llm/fullmoon-review)', '费用': '免费（MIT）', 'Phi-4 Mini tok/s（16 Pro）': '无数据', '隐私': '据开发者在设备端运行；政策自相矛盾', '适合人群': '简单离线聊天；2025 年 1 月后无新版本' },
         ],
         note:
           '**关于Apple神经网络引擎（ANE）、Metal与MLX的说明：** PocketPal AI和LLM Farm使用llama.cpp配合Metal Performance Shaders进行推理，运行在GPU上。MLC Chat使用MLC LLM及更深入的Metal优化，MLC LLM项目称其在同一硬件上快于基于llama.cpp的应用（项目自述；PromptQuorum未对此进行测量）。Locally AI使用苹果自家开源的数组框架Apple MLX，在Apple芯片上可达到相近的GPU效率。Google AI Edge Gallery通过谷歌的LiteRT-LM运行时运行Gemma 4。Apple Intelligence专门使用ANE运行系统约3B模型，能效更高，但灵活性不如基于Metal的推理。自iOS 26起，第三方应用可通过Foundation Models框架调用该系统模型——Locally AI正是这样做的——但自定义的GGUF/MLX模型仍无法直接使用ANE。苹果称iPhone 18 Pro的A20 Pro配备双16核神经网络引擎，算力是此前的两倍；这是苹果的说法，PromptQuorum并未测量它对这些应用意味着什么。',
@@ -2683,6 +2850,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '以上信息来自应用商店页面、隐私政策以及审阅过我们文章的开发者;我们没有在自己的测试手机上对 MemoryAI 计时。完整说明见[MemoryAI 评测](/zh/power-local-llm/memoryai-review)。',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon：基于 Apple MLX 的免费开源聊天应用（2025 年初以来无新版本）',
+        content:
+          '**fullmoon 是一款免费的 MIT 许可离线聊天应用，适用于 iPhone、iPad 和 Mac，借助苹果的 MLX 运行小型模型，但自 2025 年 1 月 28 日起未再发布新版本，自 2025 年 5 月 5 日起代码也无更改，可能已无人维护。** 它是在主要对比之后加入的，因此未纳入我们的测试。',
+        items: [
+          '**模型：** 据官网，有 Llama 3.2 1B 和 3B，以及两个 DeepSeek-R1-Distill-Qwen-1.5B 版本（各 0.7–1.9 GB）。',
+          '**功能：** 可编辑的系统提示词、主题和字体，以及一个快捷指令动作；聊天记录保存在本地（README）。',
+          '**要求与价格：** iOS 17.6 及以上，下载模型前为 31.6 MB。可免费下载。',
+          '**隐私与许可证：** 政策称不收集任何信息，却又列出所收集信息的用途，前后矛盾。源代码以 MIT 许可证公开。',
+          '**获取方式：** App Store（1.2.0 版）；官网还提供 TestFlight 链接以体验较新的构建。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上信息来自开发者官网、App Store 页面、隐私政策和公开代码仓库；我们没有在测试手机上运行过 fullmoon。详细说明：[fullmoon 评测](/zh/power-local-llm/fullmoon-review)。',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins:面向自建 Ollama 或 LM Studio 服务器的聊天客户端(未实测)',
+        content:
+          '**Reins 是一款免费的 iPhone 和 iPad 聊天应用,可连接你自己的 Ollama、LM Studio 或兼容 OpenAI 的服务器,自第 2 版起还能在设备上运行 MLX 模型。**它是在主对比之后加入的,因此不在对比表中,也不属于我们的测试范围。',
+        items: [
+          '**模型库:**设备端 MLX 模型在应用内从 Hugging Face 下载,也可搜索并下载任意 MLX 模型;同时支持 Apple Foundation Models。',
+          '**功能:**工具调用、无需 API 密钥的内置网页搜索、图片/PDF/CSV/文本附件、对话分支、思考模式和临时对话。',
+          '**要求与价格:**iOS 17.0 及以上(后台生成需要 iOS 26)。免费下载,Reins Pro 为月付、年付或买断的应用内购买;资料没有列出 Pro 解锁什么。',
+          '**隐私与许可:**开发者称无需登录、无分析、不收集数据。第 2 版闭源;公开仓库只包含截至 1.3.4 版的代码。',
+          '**安装途径:**App Store。App Store 列出的版本为 2.3.3,发布于 2026 年 10 月 21 日。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自 App Store 页面、开发者官网和政策文件;我们没有在测试手机上实测 Reins。完整说明:[Reins 评测](/zh/power-local-llm/reins-review)。',
           },
         ],
       },
@@ -2892,7 +3097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -2976,6 +3181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: fuera del App Store, código fuente aún disponible', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: IA en dispositivo integrada en el sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat sin conexión con memoria editable (sin medir)', anchor: '#memoryai' },
+      { label: 'Reins: cliente de chat para tu servidor Ollama o LM Studio (sin medir)', anchor: '#reins' },
+      { label: 'fullmoon: chat gratuito y de código abierto sobre Apple MLX (sin versiones desde principios de 2025)', anchor: '#fullmoon' },
       { label: 'Modelos según el modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de batería y throttling térmico', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri y carga lateral', anchor: '#ios-integration' },
@@ -3089,6 +3296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Precio': 'Gratis (compilar desde el código)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sin cifra', 'Privacidad': 'Inferencia local (doc. del proyecto; sin verificar)', 'Ideal para': 'Desarrolladores (fuera del App Store, desactualizada)' },
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Precio': 'Gratis (integrada en iOS)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'N/D (función del sistema)', 'Privacidad': 'Local + Private Cloud Compute (Apple)', 'Ideal para': 'Asistencia en Mail, Mensajes, Notas' },
           { 'App': '[MemoryAI](/es/power-local-llm/memoryai-review)', 'Precio': 'Gratuita; sin anuncios ni compras dentro de la app', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sin cifra', 'Privacidad': 'En el dispositivo tras la descarga; envía eventos de uso y fallos', 'Ideal para': 'Documentos, memoria editable, Kid Mode' },
+          { 'App': '[fullmoon](/es/power-local-llm/fullmoon-review)', 'Precio': 'Gratuita (MIT)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sin cifra', 'Privacidad': 'En el dispositivo según el fabricante; política contradictoria', 'Ideal para': 'Chat sin conexión sencillo; sin versiones desde ene. 2025' },
         ],
         note:
           '**Nota sobre Apple Neural Engine (ANE), Metal y MLX:** PocketPal AI y LLM Farm usan llama.cpp con Metal Performance Shaders para la inferencia, que se ejecuta en la GPU. MLC Chat usa MLC LLM con una optimización Metal más profunda, que el proyecto MLC LLM describe como más rápida que las apps basadas en llama.cpp en el mismo hardware (afirmación del proyecto; PromptQuorum no lo ha medido). Locally AI usa Apple MLX, el framework de cálculo de código abierto propio de Apple, que alcanza una eficiencia de GPU comparable en Apple Silicon. Google AI Edge Gallery ejecuta Gemma 4 mediante el runtime LiteRT-LM de Google. Apple Intelligence usa el ANE específicamente para el modelo de sistema de ~3B, que es más eficiente energéticamente pero menos flexible que la inferencia basada en Metal. Desde iOS 26, las apps de terceros pueden llamar a ese modelo de sistema mediante el framework Foundation Models —justo lo que hace Locally AI—, pero los modelos GGUF/MLX personalizados todavía no pueden apuntar directamente al ANE. Apple afirma que el A20 Pro del iPhone 18 Pro tiene un Neural Engine de 16 núcleos dual con el doble de capacidad de cálculo que antes; es una afirmación de Apple y PromptQuorum no ha medido qué supone para estas apps.',
@@ -3258,6 +3466,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Los datos anteriores proceden de las fichas de las tiendas, la política de privacidad y el desarrollador, que revisó nuestro texto; no hemos medido MemoryAI en nuestros teléfonos de prueba. Notas completas: [análisis de MemoryAI](/es/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon: chat gratuito y de código abierto sobre Apple MLX (sin versiones desde principios de 2025)',
+        content:
+          '**fullmoon es una app de chat sin conexión gratuita y con licencia MIT para iPhone, iPad y Mac que ejecuta modelos pequeños con MLX de Apple, pero no recibe ninguna versión desde el 28 de enero de 2025 ni cambios de código desde el 5 de mayo de 2025, así que puede que ya no tenga mantenimiento.** Se añadió después de la comparativa principal, por lo que no formó parte de nuestras pruebas.',
+        items: [
+          '**Modelos:** Llama 3.2 1B y 3B y dos versiones de DeepSeek-R1-Distill-Qwen-1.5B (0.7–1.9 GB cada una), según el sitio web.',
+          '**Funciones:** prompt del sistema editable, tema y fuentes, y una acción de Atajos; el historial de chat se guarda en local (README).',
+          '**Requisitos y precio:** iOS 17.6+, 31.6 MB antes de descargar modelos. Descarga gratuita.',
+          '**Privacidad y licencia:** la política dice que no se recopila nada, pero también enumera para qué se usan los datos recopilados, así que se contradice. El código fuente es público con licencia MIT.',
+          '**Instalación:** App Store (versión 1.2.0); el sitio web ofrece además un enlace de TestFlight para versiones más recientes.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden del sitio web del fabricante, la ficha de la App Store, la política de privacidad y el repositorio público; no hemos ejecutado fullmoon en nuestros teléfonos de prueba. Detalles: [reseña de fullmoon](/es/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins: cliente de chat para tu servidor Ollama o LM Studio (sin medir)',
+        content:
+          '**Reins es una app de chat gratuita para iPhone y iPad que se conecta a tu propio servidor Ollama, LM Studio o compatible con OpenAI y, desde la versión 2, también puede ejecutar modelos MLX en el dispositivo.** Se añadió después de la comparativa principal, así que no está en la tabla comparativa y no formó parte de nuestras pruebas.',
+        items: [
+          '**Biblioteca de modelos:** los modelos MLX en el dispositivo se descargan dentro de la app desde Hugging Face, y se puede buscar y descargar cualquier modelo MLX; también admite Apple Foundation Models.',
+          '**Funciones:** llamadas a herramientas, búsqueda web integrada sin clave de API, adjuntos de imagen, PDF, CSV y texto, ramificación de chats, modo de razonamiento y chats temporales.',
+          '**Requisitos y precio:** iOS 17.0 o posterior (la generación en segundo plano requiere iOS 26). Descarga gratuita, con Reins Pro como compra dentro de la app mensual, anual o de por vida; las fuentes no enumeran qué desbloquea Pro.',
+          '**Privacidad y licencia:** el desarrollador dice que no hay inicio de sesión, analítica ni recopilación de datos. La versión 2 es de código cerrado; el repositorio público contiene el código solo hasta la versión 1.3.4.',
+          '**Instalación:** App Store. La App Store indica la versión 2.3.3, publicada el 21 de octubre de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos proceden de la ficha de la App Store, el sitio y las políticas del desarrollador; no hemos medido Reins en nuestros teléfonos de prueba. Notas completas: [reseña de Reins](/es/power-local-llm/reins-review).',
           },
         ],
       },
@@ -3467,7 +3713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -3551,6 +3797,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: App Store에는 없지만 소스는 계속 제공됩니다', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: 시스템 내장 기기 내 AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)', anchor: '#memoryai' },
+      { label: 'Reins: 직접 운영하는 Ollama·LM Studio 서버용 채팅 클라이언트(미측정)', anchor: '#reins' },
+      { label: 'fullmoon: Apple MLX 기반 무료 오픈소스 채팅 앱(2025년 초 이후 릴리스 없음)', anchor: '#fullmoon' },
       { label: 'iPhone 등급별 모델', anchor: '#models-by-tier' },
       { label: '배터리 소모와 열 제한', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri 및 사이드로딩', anchor: '#ios-integration' },
@@ -3666,6 +3914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '앱': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', '비용': '무료 (소스 빌드)', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '로컬 추론 (프로젝트 문서, 미검증)', '이상적인 대상': '개발자 (App Store 없음, 오래됨)' },
           { '앱': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', '비용': '무료 (iOS 내장)', '토큰/초 (Phi-4 Mini, 16 Pro)': '해당 없음 (시스템 기능)', '개인 정보 보호': '로컬 + Private Cloud Compute (Apple)', '이상적인 대상': 'Mail, 메시지, 메모 작문 지원' },
           { '앱': '[MemoryAI](/ko/power-local-llm/memoryai-review)', '비용': '무료; 광고와 인앱 구매 없음', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '내려받은 뒤 기기 안에서 동작; 사용 이벤트와 충돌 보고서 전송', '이상적인 대상': '문서, 편집 가능한 메모리, 키즈 모드' },
+          { '앱': '[fullmoon](/ko/power-local-llm/fullmoon-review)', '비용': '무료(MIT)', '토큰/초 (Phi-4 Mini, 16 Pro)': '수치 없음', '개인 정보 보호': '개발사 설명상 기기 내; 방침은 모순', '이상적인 대상': '간단한 오프라인 채팅; 2025년 1월 이후 릴리스 없음' },
         ],
         note:
           '**Apple Neural Engine (ANE), Metal, MLX 비교 참고:** PocketPal AI와 LLM Farm은 추론에 Metal Performance Shaders와 함께 llama.cpp를 사용하며, 이는 GPU에서 실행됩니다. MLC Chat은 더 깊은 Metal 최적화를 적용한 MLC LLM을 사용하는데, MLC LLM 프로젝트는 동일한 하드웨어에서 llama.cpp 기반 앱보다 빠르다고 설명합니다 (프로젝트의 주장이며 PromptQuorum은 이를 측정하지 않았습니다). Locally AI는 Apple 자체의 오픈 소스 배열 프레임워크인 Apple MLX를 사용하여 Apple Silicon에서 비슷한 GPU 효율에 도달합니다. Google AI Edge Gallery는 Google의 LiteRT-LM 런타임으로 Gemma 4를 실행합니다. Apple Intelligence는 시스템 ~3B 모델에 ANE를 구체적으로 사용하며, 이는 Metal 기반 추론보다 전력 효율이 높지만 유연성이 낮습니다. iOS 26부터 서드파티 앱은 Foundation Models 프레임워크를 통해 이 시스템 모델을 호출할 수 있고 — Locally AI가 정확히 그렇게 합니다 — 커스텀 GGUF/MLX 모델은 여전히 ANE를 직접 대상으로 할 수 없습니다. Apple은 iPhone 18 Pro의 A20 Pro가 이전 대비 두 배의 연산 성능을 갖춘 듀얼 16코어 Neural Engine을 탑재했다고 밝히고 있으나, 이는 Apple의 주장이며 PromptQuorum은 이것이 이 앱들에 어떤 의미인지 측정하지 않았습니다.',
@@ -3835,6 +4084,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '위 내용은 스토어 정보, 개인정보 처리방침, 그리고 저희 글을 검토한 개발자의 설명에 근거합니다. MemoryAI를 저희 테스트 폰에서 직접 측정하지는 않았습니다. 자세한 내용은 [MemoryAI 리뷰](/ko/power-local-llm/memoryai-review)를 참고하세요.',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon: Apple MLX 기반 무료 오픈소스 채팅 앱(2025년 초 이후 릴리스 없음)',
+        content:
+          '**fullmoon은 Apple의 MLX로 소형 모델을 실행하는 MIT 라이선스의 무료 오프라인 채팅 앱(iPhone·iPad·Mac)이지만, 2025년 1월 28일 이후 릴리스가 없고 2025년 5월 5일 이후 코드 변경도 없어 유지보수가 중단되었을 수 있습니다.** 주요 비교 이후에 추가되어 우리 테스트에는 포함되지 않았습니다.',
+        items: [
+          '**모델:** 웹사이트에 따르면 Llama 3.2 1B와 3B, 그리고 두 가지 DeepSeek-R1-Distill-Qwen-1.5B 빌드(각 0.7–1.9 GB).',
+          '**기능:** 편집 가능한 시스템 프롬프트, 테마와 글꼴, 단축어 동작이 있으며 채팅 기록은 기기에 저장됩니다(README).',
+          '**요구 사항과 가격:** iOS 17.6 이상, 모델을 내려받기 전 31.6 MB. 내려받기는 무료입니다.',
+          '**개인정보와 라이선스:** 방침은 아무것도 수집하지 않는다고 하면서 수집 정보의 용도도 나열해 스스로 모순됩니다. 소스 코드는 MIT 라이선스로 공개되어 있습니다.',
+          '**입수 경로:** App Store(버전 1.2.0). 웹사이트에는 더 새로운 빌드용 TestFlight 링크도 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 개발사 웹사이트, App Store 페이지, 개인정보 처리방침, 공개 저장소에서 가져온 것이며 fullmoon을 우리 테스트 기기에서 실행해 보지는 않았습니다. 자세한 내용: [fullmoon 리뷰](/ko/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins: 직접 운영하는 Ollama·LM Studio 서버용 채팅 클라이언트(미측정)',
+        content:
+          '**Reins는 직접 운영하는 Ollama, LM Studio 또는 OpenAI 호환 서버에 연결하는 무료 iPhone·iPad 채팅 앱이며, 버전 2부터는 기기에서 MLX 모델도 실행할 수 있습니다.** 주요 비교 이후에 추가되었으므로 비교표에는 없고 저희 테스트에도 포함되지 않았습니다.',
+        items: [
+          '**모델 라이브러리:** 기기 내 MLX 모델은 앱 안에서 Hugging Face로부터 내려받으며, 임의의 MLX 모델을 검색해 내려받을 수 있습니다. Apple Foundation Models도 지원합니다.',
+          '**기능:** 도구 호출, API 키가 필요 없는 내장 웹 검색, 이미지·PDF·CSV·텍스트 첨부, 채팅 분기, 사고 모드, 임시 채팅.',
+          '**요구 사항과 가격:** iOS 17.0 이상(백그라운드 생성에는 iOS 26 필요). 다운로드는 무료이며 Reins Pro는 월간·연간·평생 앱 내 구입입니다. Pro가 무엇을 여는지는 출처에 나와 있지 않습니다.',
+          '**개인정보와 라이선스:** 개발자에 따르면 로그인, 분석, 데이터 수집이 없습니다. 버전 2는 비공개 소스이며 공개 저장소에는 버전 1.3.4까지의 코드만 있습니다.',
+          '**설치 경로:** App Store. App Store에는 2026년 10월 21일에 출시된 버전 2.3.3이 표시됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 App Store 페이지와 개발자의 웹사이트·정책에 근거하며, 저희 테스트 휴대폰에서 Reins를 측정하지는 않았습니다. 자세한 내용: [Reins 리뷰](/ko/power-local-llm/reins-review).',
           },
         ],
       },
@@ -4047,7 +4334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4131,6 +4418,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: fora da App Store, código-fonte ainda disponível', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: IA no aparelho integrada ao sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat offline com memória editável (não medido)', anchor: '#memoryai' },
+      { label: 'Reins: cliente de chat para o seu servidor Ollama ou LM Studio (não medido)', anchor: '#reins' },
+      { label: 'fullmoon: chat gratuito e de código aberto sobre Apple MLX (sem versões desde o início de 2025)', anchor: '#fullmoon' },
       { label: 'Modelos conforme o modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de bateria e limitação térmica', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts, Siri e sideloading', anchor: '#ios-integration' },
@@ -4244,6 +4533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Preço': 'Grátis (compilar o código-fonte)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sem número', 'Privacidade': 'Inferência local (doc. do projeto; não verificado)', 'Ideal para': 'Desenvolvedores (fora da App Store, desatualizado)' },
           { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Preço': 'Grátis (integrado ao iOS)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'N/A (função do sistema)', 'Privacidade': 'Local + Private Cloud Compute (Apple)', 'Ideal para': 'Ajuda no Mail, Mensagens, Notas' },
           { 'App': '[MemoryAI](/pt/power-local-llm/memoryai-review)', 'Preço': 'Gratuito; sem anúncios nem compras no app', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sem valor', 'Privacidade': 'No dispositivo após o download; envia eventos de uso e falhas', 'Ideal para': 'Documentos, memória editável, Modo Criança' },
+          { 'App': '[fullmoon](/pt/power-local-llm/fullmoon-review)', 'Preço': 'Gratuito (MIT)', 'Tokens/seg (Phi-4 Mini, 16 Pro)': 'Sem valor', 'Privacidade': 'No dispositivo segundo o fabricante; política contraditória', 'Ideal para': 'Chat offline simples; sem versões desde jan. 2025' },
         ],
         note:
           '**Nota sobre Apple Neural Engine (ANE), Metal e MLX:** o PocketPal AI e o LLM Farm usam llama.cpp com Metal Performance Shaders para a inferência, que roda na GPU. O MLC Chat usa o MLC LLM com uma otimização Metal mais profunda, que o projeto MLC LLM descreve como mais rápida que os apps baseados em llama.cpp no mesmo hardware (afirmação do projeto; o PromptQuorum não mediu isso). O Locally AI usa o Apple MLX, o framework open source de arrays da própria Apple, que alcança eficiência de GPU semelhante no Apple Silicon. O Google AI Edge Gallery executa o Gemma 4 pelo runtime LiteRT-LM do Google. O Apple Intelligence usa o ANE especificamente para o modelo de sistema de ~3B, que é mais eficiente em energia, mas menos flexível que a inferência baseada em Metal. Desde o iOS 26, apps de terceiros podem chamar esse modelo de sistema pelo framework Foundation Models — o Locally AI faz exatamente isso —, mas modelos GGUF/MLX personalizados ainda não conseguem usar o ANE diretamente. A Apple afirma que o A20 Pro do iPhone 18 Pro tem um Neural Engine de 16 núcleos duplo, com o dobro do poder de computação de antes; essa é uma afirmação da Apple, e o PromptQuorum não mediu o que isso significa para esses apps.',
@@ -4413,6 +4703,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Os dados acima vêm das páginas das lojas, da política de privacidade e do desenvolvedor, que revisou o nosso texto; não medimos o MemoryAI nos nossos celulares de teste. Notas completas: [análise do MemoryAI](/pt/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon: chat gratuito e de código aberto sobre Apple MLX (sem versões desde o início de 2025)',
+        content:
+          '**O fullmoon é um app de chat offline gratuito, com licença MIT, para iPhone, iPad e Mac que executa modelos pequenos com o MLX da Apple, mas não recebe versão desde 28 de janeiro de 2025 nem alterações de código desde 5 de maio de 2025, e pode estar sem manutenção.** Foi adicionado depois da comparação principal e, por isso, não fez parte dos nossos testes.',
+        items: [
+          '**Modelos:** Llama 3.2 1B e 3B e duas versões do DeepSeek-R1-Distill-Qwen-1.5B (0.7–1.9 GB cada), segundo o site.',
+          '**Recursos:** prompt do sistema editável, tema e fontes, e uma ação do Atalhos; o histórico de conversas fica armazenado localmente (README).',
+          '**Requisitos e preço:** iOS 17.6+, 31.6 MB antes de baixar os modelos. Download gratuito.',
+          '**Privacidade e licença:** a política diz que nada é coletado, mas também lista finalidades dos dados coletados, o que a torna contraditória. O código-fonte é público sob licença MIT.',
+          '**Instalação:** App Store (versão 1.2.0); o site também oferece um link do TestFlight para versões mais novas.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm do site do fabricante, da página da App Store, da política de privacidade e do repositório público; não executamos o fullmoon nos nossos celulares de teste. Detalhes: [análise do fullmoon](/pt/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins: cliente de chat para o seu servidor Ollama ou LM Studio (não medido)',
+        content:
+          '**O Reins é um app de chat gratuito para iPhone e iPad que se conecta ao seu próprio servidor Ollama, LM Studio ou compatível com OpenAI e, desde a versão 2, também pode executar modelos MLX no aparelho.** Foi adicionado depois da comparação principal, portanto não está na tabela comparativa e não fez parte dos nossos testes.',
+        items: [
+          '**Biblioteca de modelos:** os modelos MLX no aparelho são baixados dentro do app a partir do Hugging Face, e qualquer modelo MLX pode ser pesquisado e baixado; os Apple Foundation Models também são suportados.',
+          '**Recursos:** chamadas de ferramentas, busca na web integrada sem chave de API, anexos de imagem, PDF, CSV e texto, ramificação de chats, modo de raciocínio e chats temporários.',
+          '**Requisitos e preço:** iOS 17.0 ou posterior (a geração em segundo plano exige iOS 26). Download gratuito, com o Reins Pro como compra no app mensal, anual ou vitalícia; as fontes não listam o que o Pro libera.',
+          '**Privacidade e licença:** o desenvolvedor diz que não há login, análise nem coleta de dados. A versão 2 é de código fechado; o repositório público contém o código apenas até a versão 1.3.4.',
+          '**Instalação:** App Store. A App Store lista a versão 2.3.3, lançada em 21 de outubro de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados vêm da página da App Store, do site e das políticas do desenvolvedor; não medimos o Reins em nossos celulares de teste. Notas completas: [análise do Reins](/pt/power-local-llm/reins-review).',
           },
         ],
       },
@@ -4622,7 +4950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-30',
     last_full_refresh: '2026-10-23',
     next_refresh_due: '2027-04-23',
     theme: 'Mobile & Edge LLMs',
@@ -4706,6 +5034,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: خارج App Store والمصدر لا يزال متاحاً', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: ذكاء اصطناعي على الجهاز مدمج في النظام', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)', anchor: '#memoryai' },
+      { label: 'Reins: عميل دردشة لخادم Ollama أو LM Studio الخاص بك (لم يُقَس)', anchor: '#reins' },
+      { label: 'fullmoon: دردشة مجانية مفتوحة المصدر على Apple MLX (بلا إصدارات منذ مطلع 2025)', anchor: '#fullmoon' },
       { label: 'النماذج حسب فئة iPhone', anchor: '#models-by-tier' },
       { label: 'استنزاف البطارية والتباطؤ الحراري', anchor: '#battery-heat' },
       { label: 'iOS Shortcuts وSiri والتحميل الجانبي', anchor: '#ios-integration' },
@@ -4819,6 +5149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التطبيق': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'التكلفة': 'مجاني (بناء من المصدر)', 'رموز/ث (Phi-4 Mini)': 'لا يوجد رقم', 'الخصوصية': 'استدلال محلي (وثائق المشروع؛ غير متحقق منه)', 'الأنسب لـ': 'المطورون (خارج App Store، قديم)' },
           { 'التطبيق': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'التكلفة': 'مجاني (مدمج في iOS)', 'رموز/ث (Phi-4 Mini)': 'غير متاح (ميزة نظامية)', 'الخصوصية': 'محلي + Private Cloud Compute (Apple)', 'الأنسب لـ': 'المساعدة في Mail والرسائل والملاحظات' },
           { 'التطبيق': '[MemoryAI](/ar/power-local-llm/memoryai-review)', 'التكلفة': 'مجاني؛ بلا إعلانات أو مشتريات داخل التطبيق', 'رموز/ث (Phi-4 Mini)': 'لا توجد قيمة', 'الخصوصية': 'على الجهاز بعد التنزيل؛ يرسل أحداث استخدام وتقارير أعطال', 'الأنسب لـ': 'المستندات، ذاكرة قابلة للتعديل، وضع الأطفال' },
+          { 'التطبيق': '[fullmoon](/ar/power-local-llm/fullmoon-review)', 'التكلفة': 'مجاني (MIT)', 'رموز/ث (Phi-4 Mini)': 'لا توجد قيمة', 'الخصوصية': 'على الجهاز بحسب المطوّر؛ السياسة متناقضة', 'الأنسب لـ': 'دردشة بسيطة دون اتصال؛ بلا إصدارات منذ يناير 2025' },
         ],
         note:
           '**ملاحظة حول Apple Neural Engine (ANE) وMetal وMLX:** يستخدم PocketPal AI وLLM Farm مكتبة llama.cpp مع Metal Performance Shaders للاستدلال الذي يعمل على وحدة معالجة الرسومات. يستخدم MLC Chat مكتبة MLC LLM مع تحسين Metal أعمق، ويصفه مشروع MLC LLM بأنه أسرع من التطبيقات المبنية على llama.cpp على نفس الجهاز (ادعاء من المشروع؛ ولم يقس PromptQuorum ذلك). يستخدم Locally AI إطار Apple MLX مفتوح المصدر الخاص بشركة Apple، ويحقق كفاءة GPU مشابهة على Apple Silicon. يُشغّل Google AI Edge Gallery نماذج Gemma 4 عبر بيئة LiteRT-LM من Google. يستخدم Apple Intelligence وحدة ANE تحديداً لنموذج النظام ~3B، وهو أكثر كفاءة في استهلاك الطاقة لكنه أقل مرونة من الاستدلال المبني على Metal. منذ iOS 26، تستطيع تطبيقات الجهات الخارجية استدعاء هذا النموذج النظامي عبر إطار عمل Foundation Models — وهذا بالضبط ما يفعله Locally AI — لكن نماذج GGUF/MLX المخصصة لا تزال غير قادرة على استهداف ANE مباشرةً. تذكر Apple أن شريحة A20 Pro في iPhone 18 Pro تحتوي على Neural Engine مزدوج بـ16 نواة بضعف القدرة الحسابية السابقة؛ وهذا ادعاء من Apple، ولم يقس PromptQuorum ما يعنيه ذلك لهذه التطبيقات.',
@@ -4988,6 +5319,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'تأتي التفاصيل أعلاه من صفحات المتاجر وسياسة الخصوصية والمطوّر الذي راجع نصنا؛ لم نقِس سرعة MemoryAI على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة MemoryAI](/ar/power-local-llm/memoryai-review).',
+          },
+        ],
+      },
+      fullmoon: {
+        id: 'fullmoon',
+        title: 'fullmoon: دردشة مجانية مفتوحة المصدر على Apple MLX (بلا إصدارات منذ مطلع 2025)',
+        content:
+          '**fullmoon تطبيق دردشة مجاني دون اتصال بترخيص MIT لأجهزة iPhone وiPad وMac، يشغّل نماذج صغيرة عبر MLX من Apple، لكنه لم يتلقَّ أي إصدار منذ 28 يناير 2025 ولا أي تغيير في الشيفرة منذ 5 مايو 2025، وقد يكون توقف الاهتمام به.** أُضيف بعد المقارنة الرئيسية، فلم يكن جزءًا من اختباراتنا.',
+        items: [
+          '**النماذج:** Llama 3.2 1B وَ3B ونسختان من DeepSeek-R1-Distill-Qwen-1.5B (من 0.7 إلى 1.9 GB لكل منها)، بحسب الموقع.',
+          '**الميزات:** موجّه نظام قابل للتعديل وسمة وخطوط وإجراء في «الاختصارات»؛ ويُحفظ سجل الدردشة محليًا (README).',
+          '**المتطلبات والسعر:** iOS 17.6 أو أحدث، و31.6 MB قبل تنزيل النماذج. تنزيل مجاني.',
+          '**الخصوصية والترخيص:** تقول السياسة إنه لا يُجمع شيء لكنها تسرد أيضًا أوجه استخدام البيانات المجموعة، فهي تناقض نفسها. والشيفرة المصدرية عامة بترخيص MIT.',
+          '**طريقة التثبيت:** App Store (الإصدار 1.2.0)؛ ويعرض الموقع أيضًا رابط TestFlight للإصدارات الأحدث.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'مصدر التفاصيل أعلاه موقع المطوّر وصفحة App Store وسياسة الخصوصية والمستودع العام؛ ولم نشغّل fullmoon على هواتف الاختبار لدينا. التفاصيل: [مراجعة fullmoon](/ar/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins: عميل دردشة لخادم Ollama أو LM Studio الخاص بك (لم يُقَس)',
+        content:
+          '**Reins تطبيق دردشة مجاني لـ iPhone وiPad يتصل بخادم Ollama أو LM Studio أو خادم متوافق مع OpenAI تديره بنفسك، ويستطيع منذ الإصدار 2 تشغيل نماذج MLX على الجهاز أيضًا.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في جدول المقارنة ولم يكن ضمن اختباراتنا.',
+        items: [
+          '**مكتبة النماذج:** تُنزَّل نماذج MLX على الجهاز داخل التطبيق من Hugging Face، ويمكن البحث عن أي نموذج MLX وتنزيله؛ كما يدعم Apple Foundation Models.',
+          '**الميزات:** استدعاء الأدوات، وبحث مدمج على الويب دون مفتاح API، ومرفقات الصور وPDF وCSV والنصوص، وتفريع المحادثات، ووضع التفكير، والمحادثات المؤقتة.',
+          '**المتطلبات والسعر:** iOS 17.0 أو أحدث (يتطلب التوليد في الخلفية iOS 26). التنزيل مجاني مع Reins Pro كشراء داخل التطبيق شهري أو سنوي أو مدى الحياة؛ ولا تسرد المصادر ما يفتحه Pro.',
+          '**الخصوصية والترخيص:** يقول المطوّر إنه لا يوجد تسجيل دخول ولا تحليلات ولا جمع بيانات. الإصدار 2 مغلق المصدر؛ والمستودع العام يحتوي الشيفرة حتى الإصدار 1.3.4 فقط.',
+          '**طريقة التثبيت:** App Store. يعرض App Store الإصدار 2.3.3 الذي صدر في 21 أكتوبر 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'مصدر هذه التفاصيل صفحة App Store وموقع المطوّر وسياساته؛ ولم نقِس أداء Reins على هواتف الاختبار لدينا. التفاصيل الكاملة: [مراجعة Reins](/ar/power-local-llm/reins-review).',
           },
         ],
       },

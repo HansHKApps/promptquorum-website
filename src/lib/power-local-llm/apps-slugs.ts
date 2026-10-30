@@ -213,6 +213,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',
+  'aiko':                                    'aiko',
   'anyllm':                                  'anyllm',
   'hiwaifu':                                 'hiwaifu',
   'memoryai':                                'memoryai',
@@ -248,6 +249,8 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'openclient':                              'openclient',
   'localmindai':                             'localmindai',
   'murmur':                                  'murmur',
+  'fullmoon':                                'fullmoon',
+  'reins':                                   'reins',
   'lyonesse':                                'lyonesse',
   'open-llm-vtuber':                         'open-llm-vtuber',
   'presenton':                               'presenton',
@@ -271,6 +274,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'kernelai':                                'kernelai',
   'llama-app':                               'llama-app',
   'on-device-llm':                           'on-device-llm',
+  'kai-9000':                                'kai-9000',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
