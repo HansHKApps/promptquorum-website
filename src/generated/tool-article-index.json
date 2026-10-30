@@ -3342,7 +3342,7 @@
         "slug": "tgpt-review",
         "title": "tgpt Review: AI in Your Terminal, No API Key Required",
         "url": "/power-local-llm/tgpt-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-10-30",
         "tier": "mentioned"
       },
       {
@@ -3364,7 +3364,7 @@
         "slug": "tgpt-review",
         "title": "tgpt Review: AI in Your Terminal, No API Key Required",
         "url": "/power-local-llm/tgpt-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -8329,6 +8329,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tgpt-review",
+        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
+        "url": "/power-local-llm/tgpt-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -8349,14 +8357,6 @@
         "title": "Ollama Review: The One-Command Local LLM Runtime",
         "url": "/power-local-llm/ollama-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tgpt-review",
-        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
-        "url": "/power-local-llm/tgpt-review",
-        "dateModified": "2026-09-06",
         "tier": "about"
       },
       {
