@@ -1639,6 +1639,11 @@
     "urlSlug": "whisper-notes-review",
     "url": "/power-local-llm/whisper-notes-review"
   },
+  "aiko": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aiko-review",
+    "url": "/power-local-llm/aiko-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",

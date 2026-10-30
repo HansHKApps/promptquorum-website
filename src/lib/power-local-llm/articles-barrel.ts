@@ -61,6 +61,7 @@ import { article as a_pixlstash_review } from './articles/pixlstash-review'
 import { article as a_photoprism_review } from './articles/photoprism-review'
 import { article as a_photoview_review } from './articles/photoview-review'
 import { article as a_whisper_notes_review } from './articles/whisper-notes-review'
+import { article as a_aiko_review } from './articles/aiko-review'
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
@@ -742,6 +743,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'photoprism-review':                             a_photoprism_review,
   'photoview-review':                              a_photoview_review,
   'whisper-notes-review':                          a_whisper_notes_review,
+  'aiko-review':                                   a_aiko_review,
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
