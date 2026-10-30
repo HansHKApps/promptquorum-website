@@ -567,6 +567,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'private-mind-review',
   // MemoryAI review (Mobile & Edge LLMs) — 2026-10-19
   'memoryai-review',
+  'perfect-memory-review',
   // Laria, Mobile LM Server, On Device LLM reviews (Android chat apps) — 2026-10-26, published indexed (index gate)
   'laria-review',
   'chaterminal-review',

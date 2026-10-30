@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 327,
+    "totalCount": 328,
     "capped": true
   },
   "llama.cpp": {
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 162,
+    "totalCount": 163,
     "capped": true
   },
   "Atomic Chat": {
@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 47,
+    "totalCount": 48,
     "capped": true
   },
   "GPT4All": {
@@ -10267,6 +10267,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Perfect Memory AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "perfect-memory-review",
+        "title": "Perfect Memory AI Review: Searchable Screen and Meeting Memory",
+        "url": "/power-local-llm/perfect-memory-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "SearXNG": {
     "articles": [
       {
@@ -11745,6 +11759,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "perfect-memory-review",
+        "title": "Perfect Memory AI Review: Searchable Screen and Meeting Memory",
+        "url": "/power-local-llm/perfect-memory-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "xberg-review",
         "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
         "url": "/power-local-llm/xberg-review",
@@ -11758,17 +11780,9 @@
         "url": "/power-local-llm/ai-file-sorter-review",
         "dateModified": "2026-10-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 236,
+    "totalCount": 237,
     "capped": true
   },
   "Qdrant": {
