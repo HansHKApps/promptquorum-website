@@ -6840,7 +6840,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 34,
+    "totalCount": 35,
     "capped": true
   },
   "ComfyUI": {
@@ -6926,7 +6926,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -7197,6 +7197,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "krita-ai-diffusion-review",
+        "title": "Krita AI Diffusion Review: Open-Source AI Painting Plugin",
+        "url": "/power-local-llm/krita-ai-diffusion-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "easy-diffusion-review",
         "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
         "url": "/power-local-llm/easy-diffusion-review",
@@ -7210,17 +7218,9 @@
         "url": "/power-local-llm/draw-things-review",
         "dateModified": "2026-10-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "comfyui-review",
-        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
-        "url": "/power-local-llm/comfyui-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Real-ESRGAN": {
@@ -9977,6 +9977,20 @@
         "title": "Voicebox Review: Open-Source Local Voice Studio",
         "url": "/power-local-llm/voicebox-review",
         "dateModified": "2026-10-26",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Krita AI Diffusion": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "krita-ai-diffusion-review",
+        "title": "Krita AI Diffusion Review: Open-Source AI Painting Plugin",
+        "url": "/power-local-llm/krita-ai-diffusion-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],

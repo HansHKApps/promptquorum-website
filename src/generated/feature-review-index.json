@@ -984,6 +984,11 @@
     "urlSlug": "voicebox-review",
     "url": "/power-local-llm/voicebox-review"
   },
+  "krita-ai-diffusion": {
+    "cluster": "power-local-llm",
+    "urlSlug": "krita-ai-diffusion-review",
+    "url": "/power-local-llm/krita-ai-diffusion-review"
+  },
   "localmcp": {
     "cluster": "power-local-llm",
     "urlSlug": "localmcp-review",

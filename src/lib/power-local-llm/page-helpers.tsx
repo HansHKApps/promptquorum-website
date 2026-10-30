@@ -1283,6 +1283,7 @@ const HUB_THEMES: Array<{
       'genva-review',
       'fooocus-review',
       'invokeai-review',
+      'krita-ai-diffusion-review',
       'real-esrgan-ai-image-upscaler-review',
       'stable-diffusion-review',
       'stableswarmui-review',
