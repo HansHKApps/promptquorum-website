@@ -206,6 +206,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'facet':                                   'facet',
   'excire-foto':                             'excire-foto',
   'mylio-photos':                            'mylio-photos',
+  'acdsee-photo-studio-ultimate':            'acdsee-photo-studio-ultimate',
   'ai-file-sorter':                          'ai-file-sorter',
   'home-gallery':                            'home-gallery',
   'swerve-ai':                               'swerve-ai',
