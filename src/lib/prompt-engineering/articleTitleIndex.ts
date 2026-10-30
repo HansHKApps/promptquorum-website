@@ -91,7 +91,7 @@ export const ARTICLE_TITLES_BY_LANG: Partial<Record<Language, Record<string, str
     'Zero-Shot vs. Few-Shot Prompting': 'zero-shot-vs-few-shot',
   },
   de: {
-    'KI-Code-Review: Tools, Halluzinations-Raten und Verifikations-Workflows': 'ai-code-review',
+    'KI-Code-Review 2026: Die besten Tools im Ranking (CodeRabbit, Greptile, Snyk) + Prompt-Framework': 'ai-code-review',
     'KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt': 'ai-hallucinations-how-to-stop',
     'KI-Einschränkungen: Was LLMs 2026 nicht können': 'ai-limitations-what-llms-cant-do',
     'KI-gestützte Forschung: Tools, Halluzinations-Quoten und Verifikations-Workflows': 'ai-powered-research',
@@ -171,7 +171,7 @@ export const ARTICLE_TITLES_BY_LANG: Partial<Record<Language, Record<string, str
     'Zero-Shot vs. Few-Shot Prompting': 'zero-shot-vs-few-shot',
   },
   fr: {
-    'Révision de Code par IA : Outils, Taux d\'Hallucinations et Workflows de Vérification': 'ai-code-review',
+    'Révision de code par IA en 2026 : classement des outils (CodeRabbit, Greptile, Snyk) + framework de prompts': 'ai-code-review',
     'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter': 'ai-hallucinations-how-to-stop',
     'Limitations de l\'IA : Ce que les LLMs ne peuvent pas faire en 2026': 'ai-limitations-what-llms-cant-do',
     'Recherche Assistée par IA : Outils, Taux d\'Hallucination et Workflows de Vérification': 'ai-powered-research',
@@ -250,7 +250,7 @@ export const ARTICLE_TITLES_BY_LANG: Partial<Record<Language, Record<string, str
     'Zero-Shot vs. Few-Shot Prompting': 'zero-shot-vs-few-shot',
   },
   ja: {
-    'AI コードレビュー：ツール、ハルシネーション率、検証ワークフロー': 'ai-code-review',
+    'AI コードレビュー2026：おすすめツール比較（CodeRabbit、Greptile、Snyk）とプロンプトフレームワーク': 'ai-code-review',
     'AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法': 'ai-hallucinations-how-to-stop',
     'AI制限：2026年にLLMができないこと': 'ai-limitations-what-llms-cant-do',
     'AI駆動型研究：ツール、幻想率、検証ワークフロー': 'ai-powered-research',
@@ -327,7 +327,7 @@ export const ARTICLE_TITLES_BY_LANG: Partial<Record<Language, Record<string, str
     'ゼロショット vs. フューショットプロンプティング': 'zero-shot-vs-few-shot',
   },
   zh: {
-    'AI 代码审查：工具、幻觉率和验证工作流': 'ai-code-review',
+    'AI 代码审查 2026：工具排名（CodeRabbit、Greptile、Snyk）与提示框架': 'ai-code-review',
     'AI幻觉：为什么AI会编造东西——以及如何停止它们': 'ai-hallucinations-how-to-stop',
     'AI研究：工具、幻想率和验证工作流': 'ai-powered-research',
     'APE框架：分析、规划、执行 —— 让推理过程可见的结构化提示词': 'ape-framework',
@@ -405,7 +405,7 @@ export const ARTICLE_TITLES_BY_LANG: Partial<Record<Language, Record<string, str
     '零样本与少样本提示对比': 'zero-shot-vs-few-shot',
   },
   es: {
-    'Revisión de Código con IA 2026: Mejores Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts': 'ai-code-review',
+    'Revisión de Código con IA 2026: Ranking de Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts': 'ai-code-review',
     'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas': 'ai-hallucinations-how-to-stop',
     'Limitaciones de la IA: Lo que los LLMs no pueden hacer en 2026': 'ai-limitations-what-llms-cant-do',
     'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación': 'ai-powered-research',
@@ -567,7 +567,7 @@ export const ARTICLE_TITLES_BY_LANG: Partial<Record<Language, Record<string, str
     'Zero-Shot vs. Few-Shot Prompting': 'zero-shot-vs-few-shot',
   },
   ar: {
-    'مراجعة الكود بالذكاء الاصطناعي ⁨2026⁩: أفضل الأدوات (⁨CodeRabbit⁩، ⁨Greptile⁩، ⁨Snyk⁩) + إطار التعليمات': 'ai-code-review',
+    'مراجعة الكود بالذكاء الاصطناعي ⁨2026⁩: أفضل الأدوات مرتبة (⁨CodeRabbit⁩، ⁨Greptile⁩، ⁨Snyk⁩) + إطار التعليمات': 'ai-code-review',
     'هلوسات الذكاء الاصطناعي: لماذا تخترع الذكاء الاصطناعي الأشياء — وكيف توقفها': 'ai-hallucinations-how-to-stop',
     'قيود الذكاء الاصطناعي: ما لا تستطيع النماذج اللغوية الكبيرة فعله في ⁨2026⁩': 'ai-limitations-what-llms-cant-do',
     'البحث بالذكاء الاصطناعي: الأدوات ومعدلات الهلوسة وسير عمل التحقق': 'ai-powered-research',
