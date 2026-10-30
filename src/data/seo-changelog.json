@@ -5670,5 +5670,25 @@
       "period": "28d to 2026-10-25"
     },
     "deployedAt": null
+  },
+  {
+    "id": "761af059-3f21-4072-8edb-8b6b750eade3",
+    "slug": "/power-local-llm/agnai-review",
+    "date": "2026-10-30T06:07:11.688Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Agnai review 2026: open-source AI roleplay chat, self-host via npm or Docker (MongoDB optional), 9 supported AI services, character cards, group chat, and comparison with SillyTavern and RisuAI.",
+        "new": "Agnai (agnai.chat) is a free, open-source AI roleplay chat: hosted or self-hosted via npm/Docker, 9 AI services, group chat. Setup and SillyTavern comparison."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand-query intent (agnai 5,266 imps, 2 clicks); meta answers what/where first",
+    "baseline": {
+      "position": 0,
+      "impressions": 5266,
+      "clicks": 2,
+      "ctr": 0.00037979491074819596
+    },
+    "deployedAt": null
   }
 ]
