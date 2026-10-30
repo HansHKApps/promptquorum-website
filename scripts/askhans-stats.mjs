@@ -1,0 +1,66 @@
+// Ask Hans usage report. Reads the anonymous counters straight from Upstash Redis.
+// Needs UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN (e.g. from .env.local via `vercel env pull`).
+// Run: npm run askhans:stats            (last 30 days)
+//      npm run askhans:stats -- 7       (last 7 days)
+import fs from 'node:fs'
+import { Redis } from '@upstash/redis'
+
+for (const f of ['.env.local', '.env']) {
+  if (!fs.existsSync(f)) continue
+  for (const line of fs.readFileSync(f, 'utf8').split('\n')) {
+    const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*"?([^"\n]*)"?\s*$/)
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2]
+  }
+}
+if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
+  console.error('Missing UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN (run `vercel env pull .env.local`).')
+  process.exit(1)
+}
+const redis = new Redis({ url: process.env.UPSTASH_REDIS_REST_URL, token: process.env.UPSTASH_REDIS_REST_TOKEN })
+
+const days = Math.max(1, Number(process.argv[2]) || 30)
+const dates = Array.from({ length: days }, (_, i) => new Date(Date.now() - i * 86_400_000).toISOString().slice(0, 10)).reverse()
+
+const perDay = []
+const total = {}
+const visitors = new Set()
+for (const d of dates) {
+  const h = (await redis.hgetall(`askhans:day:${d}`)) ?? {}
+  const ids = await redis.smembers(`askhans:visits:${d}`)
+  ids.forEach((i) => visitors.add(i))
+  perDay.push({ d, h, visits: ids.length })
+  for (const [k, v] of Object.entries(h)) total[k] = (total[k] ?? 0) + Number(v)
+}
+
+const sum = (prefix) =>
+  Object.entries(total)
+    .filter(([k]) => k.startsWith(prefix))
+    .map(([k, v]) => [k.slice(prefix.length), v])
+    .sort((a, b) => b[1] - a[1])
+
+console.log(`\nAsk Hans — last ${days} days (${dates[0]} to ${dates[dates.length - 1]})\n`)
+
+console.log('Questions per category per day (only visitors who said yes)')
+const cats = sum('q:').map(([c]) => c)
+console.log(['date', ...cats].join('\t'))
+for (const { d, h } of perDay) {
+  if (!cats.some((c) => h[`q:${c}`])) continue
+  console.log([d, ...cats.map((c) => h[`q:${c}`] ?? 0)].join('\t'))
+}
+console.log('\nQuestions per category (total)')
+sum('q:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
+
+console.log('\nTop links clicked (category:link)')
+sum('link:').slice(0, 15).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
+
+console.log('\nTools used')
+sum('tool:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
+
+console.log('\nLanguages')
+sum('lang:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
+
+const yes = total.consent_yes ?? 0
+const no = total.consent_no ?? 0
+console.log('\nConsent')
+console.log(`  yes ${yes}   no ${no}   withdrawn ${total.consent_withdrawn ?? 0}   consent rate ${yes + no ? Math.round((100 * yes) / (yes + no)) + ' %' : 'n/a'}`)
+console.log(`  "New" clicks ${total.new ?? 0}   unique anonymous visits (with consent) ${visitors.size}\n`)

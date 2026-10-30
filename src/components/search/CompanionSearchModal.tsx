@@ -10,13 +10,15 @@ interface Props {
   isOpen: boolean
   onClose: () => void
   lang: string
+  /** Ask Hans (flag-gated, see SearchTrigger): when set, Enter hands the typed text to Ask Hans instead of Roland's companion. */
+  onAskHans?: (question: string) => void
 }
 
 // German-only Q&A companion (see src/components/search/SearchTrigger.tsx).
 // Deliberately NOT sharing a rendering shell with SearchModal.tsx — copied the
 // portal/backdrop/Escape/scroll-lock chrome instead of extracting it, so the
 // other 8 locales' SearchModal stays byte-for-byte untouched by this change.
-export function CompanionSearchModal({ isOpen, onClose, lang }: Props) {
+export function CompanionSearchModal({ isOpen, onClose, lang, onAskHans }: Props) {
   // lang is always 'de' here (see SearchTrigger.tsx's branch), so this reads
   // the de block directly rather than the translations[lang]||en union lookup
   // SearchModal.tsx uses — the companion* keys only exist on the de block.
@@ -66,6 +68,11 @@ export function CompanionSearchModal({ isOpen, onClose, lang }: Props) {
   const handleSubmit = async () => {
     const q = question.trim()
     if (!q || isLoading) return
+    if (onAskHans) {
+      onClose()
+      onAskHans(q)
+      return
+    }
     const result = await ask(q)
     if (!result.ok) {
       // Silent fallback: mount the classic search in place, same open state,

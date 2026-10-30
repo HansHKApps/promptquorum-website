@@ -1,0 +1,451 @@
+'use client'
+
+// Ask Hans — orchestration. Mounted once in the root layout (only when ASK_HANS_ENABLED), so the chat
+// survives internal page navigation. The German search opens it with a CustomEvent (ASK_HANS_OPEN_EVENT).
+// Conversations are kept in sessionStorage only; nothing is stored on the server.
+
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_FALLBACK_SEARCH_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION } from '@/lib/askhans/config'
+import { DEFAULT_CATEGORY_KEY, type AskHansLink } from '@/lib/askhans/categories'
+import { AskHansLogo } from './AskHansLogo'
+import { AskHansWindow } from './AskHansWindow'
+import { ConsentNotice } from './ConsentNotice'
+import { DE } from './copy'
+import { AskIcon } from './icons'
+import { Markdown } from './markdown'
+import { MarketingPanel } from './MarketingPanel'
+import { clearConsent, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
+import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
+import { logEvent, streamAnswer } from './useAskStream'
+import { useIsDesktop } from './useIsDesktop'
+import { WelcomeBox } from './WelcomeBox'
+
+const newConversation = (): Conversation => ({ id: uid(), messages: [], category: DEFAULT_CATEGORY_KEY, startedAt: Date.now() })
+
+/** Messages the AI may see: errored answers and the question they belong to are left out. */
+function toApiMessages(messages: ChatMsg[]): { role: 'user' | 'assistant'; content: string }[] {
+  const out: { role: 'user' | 'assistant'; content: string }[] = []
+  for (let i = 0; i < messages.length; i++) {
+    const m = messages[i]
+    const next = messages[i + 1]
+    if (m.role === 'user' && next?.role === 'assistant' && (next.error || next.pending || !next.content.trim())) {
+      i++
+      continue
+    }
+    if (m.role === 'assistant' && (m.error || !m.content.trim())) continue
+    out.push({ role: m.role, content: m.content })
+  }
+  return out
+}
+
+const userCount = (cs: Conversation[]) => cs.reduce((n, c) => n + c.messages.filter((m) => m.role === 'user').length, 0)
+
+export function AskHansRoot() {
+  const isDesktop = useIsDesktop()
+  const [ready, setReady] = useState(false)
+  const [conversations, setConversations] = useState<Conversation[]>([])
+  const [activeId, setActiveId] = useState<string | null>(null)
+  const [ui, setUi] = useState<UiState>({ open: false, maximized: false, everClosed: false })
+  const [consent, setConsent] = useState<ConsentRecord | null>(null)
+  const [consentOpen, setConsentOpen] = useState(false)
+  const [pendingQuestion, setPendingQuestion] = useState<string | null>(null)
+  const [streaming, setStreaming] = useState(false)
+  const [draft, setDraft] = useState('')
+  const [expanded, setExpanded] = useState<Set<string>>(new Set())
+  const visitId = useRef('')
+  const logoRef = useRef<HTMLButtonElement>(null)
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const stick = useRef(true)
+
+  // ---- load / persist -------------------------------------------------------------------------
+  // Browser storage only exists after hydration, so the initial load has to happen in an effect.
+  /* eslint-disable react-hooks/set-state-in-effect */
+  useEffect(() => {
+    visitId.current = getVisitId()
+    const cs = loadConversations()
+    setConversations(cs)
+    setActiveId(cs.length ? cs[cs.length - 1].id : null)
+    setUi(loadUi())
+    const c = loadConsent()
+    setConsent(c)
+    setReady(true)
+  }, [])
+  /* eslint-enable react-hooks/set-state-in-effect */
+
+  useEffect(() => {
+    if (ready) saveUi(ui)
+  }, [ui, ready])
+
+  useEffect(() => {
+    if (ready && !streaming) saveConversations(conversations)
+  }, [conversations, streaming, ready])
+
+  const active = conversations.find((c) => c.id === activeId) ?? null
+  const previous = conversations.filter((c) => c.id !== active?.id && c.messages.length > 0).reverse()
+
+  // ---- window actions -------------------------------------------------------------------------
+  const closeWindow = useCallback((focusLogo = true) => {
+    setUi((u) => ({ ...u, open: false, everClosed: true }))
+    if (focusLogo) setTimeout(() => logoRef.current?.focus(), 30)
+  }, [])
+
+  const openWindow = useCallback(() => {
+    setUi((u) => ({ ...u, open: true }))
+    setTimeout(() => inputRef.current?.focus(), 60)
+  }, [])
+
+  const setRect = useCallback((rect: Rect) => setUi((u) => ({ ...u, rect })), [])
+
+  // ---- sending --------------------------------------------------------------------------------
+  const patchConv = useCallback((id: string, fn: (c: Conversation) => Conversation) => {
+    setConversations((cs) => cs.map((c) => (c.id === id ? fn(c) : c)))
+  }, [])
+
+  const patchMsg = useCallback(
+    (convId: string, msgId: string, fn: (m: ChatMsg) => ChatMsg) => patchConv(convId, (c) => ({ ...c, messages: c.messages.map((m) => (m.id === msgId ? fn(m) : m)) })),
+    [patchConv],
+  )
+
+  const send = useCallback(
+    async (text: string, consentValue: ConsentRecord | null) => {
+      const conv = active ?? newConversation()
+      const history = toApiMessages(conv.messages)
+      const userMsg: ChatMsg = { id: uid(), role: 'user', content: text }
+      const asstMsg: ChatMsg = { id: uid(), role: 'assistant', content: '', pending: true, status: DE.thinking }
+      if (active) patchConv(conv.id, (c) => ({ ...c, messages: [...c.messages, userMsg, asstMsg] }))
+      else {
+        setConversations((cs) => [...cs, { ...conv, messages: [userMsg, asstMsg] }])
+        setActiveId(conv.id)
+      }
+      stick.current = true
+      setStreaming(true)
+
+      let acc = ''
+      let category = conv.category
+      await streamAnswer({ visitId: visitId.current, lang: 'de', messages: [...history, { role: 'user', content: text }] }, (ev) => {
+        if (ev.t === 'text') {
+          acc += ev.v
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, content: acc, status: undefined }))
+        } else if (ev.t === 'tool') {
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, status: DE.searching }))
+        } else if (ev.t === 'category') {
+          category = ev.v
+          patchConv(conv.id, (c) => ({ ...c, category: ev.v }))
+        } else if (ev.t === 'done') {
+          const empty = !acc.trim()
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, ...(empty ? { error: 'failed' as AskErrorCode } : {}) }))
+          if (!empty && consentValue?.value === 'yes') {
+            logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, lang: 'de' })
+          }
+        } else if (ev.t === 'error') {
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, error: ev.code }))
+        }
+      })
+      setStreaming(false)
+    },
+    [active, patchConv, patchMsg],
+  )
+
+  const submit = useCallback(
+    (raw: string, carriedFromSearch = false) => {
+      const text = raw.trim()
+      if (!text || streaming) return
+      setUi((u) => ({ ...u, open: true }))
+      if (text.length > ASK_HANS_LIMITS.maxMessageChars) {
+        // keep what the visitor typed so they can shorten it
+        setDraft(text)
+        if (carriedFromSearch) setTimeout(() => inputRef.current?.focus(), 80)
+        return
+      }
+      if (userCount(conversations) >= ASK_HANS_LIMITS.maxMessagesPerVisit) {
+        const conv = active ?? newConversation()
+        const note: ChatMsg = { id: uid(), role: 'assistant', content: '', error: 'limit' }
+        const q: ChatMsg = { id: uid(), role: 'user', content: text }
+        if (active) patchConv(conv.id, (c) => ({ ...c, messages: [...c.messages, q, note] }))
+        else {
+          setConversations((cs) => [...cs, { ...conv, messages: [q, note] }])
+          setActiveId(conv.id)
+        }
+        return
+      }
+      if (!consent) {
+        setPendingQuestion(text)
+        setConsentOpen(true)
+        return
+      }
+      setDraft('')
+      void send(text, consent)
+    },
+    [active, consent, conversations, patchConv, send, streaming],
+  )
+
+  // Always call the freshest submit from the global open event.
+  const submitRef = useRef(submit)
+  useEffect(() => {
+    submitRef.current = submit
+  })
+  useEffect(() => {
+    if (!ready) return
+    const on = (e: Event) => {
+      const q = (e as CustomEvent<{ question?: string }>).detail?.question
+      if (q && q.trim()) submitRef.current(q, true)
+      else openWindow()
+    }
+    window.addEventListener(ASK_HANS_OPEN_EVENT, on)
+    return () => window.removeEventListener(ASK_HANS_OPEN_EVENT, on)
+  }, [ready, openWindow])
+
+  // ---- consent --------------------------------------------------------------------------------
+  const chooseConsent = (value: 'yes' | 'no') => {
+    const rec = saveConsent(value)
+    setConsent(rec)
+    setConsentOpen(false)
+    if (value === 'yes') logEvent({ type: 'consent_yes', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
+    else logEvent({ type: 'consent_no' })
+    const q = pendingQuestion
+    setPendingQuestion(null)
+    if (q) {
+      setDraft('')
+      void send(q, rec)
+    }
+  }
+
+  const withdrawConsent = () => {
+    if (consent?.value === 'yes') logEvent({ type: 'consent_withdrawn', visitId: visitId.current, textVersion: ASK_HANS_CONSENT_TEXT_VERSION })
+    clearConsent()
+    setConsent(null)
+    setConsentOpen(true)
+  }
+
+  // ---- other actions --------------------------------------------------------------------------
+  const startNew = () => {
+    if (streaming || !active || active.messages.length === 0) return
+    const conv = newConversation()
+    setConversations((cs) => [...cs, conv])
+    setActiveId(conv.id)
+    setDraft('')
+    if (consent?.value === 'yes') logEvent({ type: 'new_chat', visitId: visitId.current })
+    setTimeout(() => inputRef.current?.focus(), 30)
+  }
+
+  const onLinkClick = (categoryKey: string, link: AskHansLink) => {
+    if (consent?.value === 'yes') logEvent({ type: 'link_click', visitId: visitId.current, category: categoryKey, linkId: link.id })
+    closeWindow(false) // chat state is already saved; the visitor reopens it with the logo
+  }
+
+  const searchInstead = (query: string) => {
+    closeWindow(false)
+    window.dispatchEvent(new CustomEvent(ASK_HANS_FALLBACK_SEARCH_EVENT, { detail: { query } }))
+  }
+
+  const retry = (convId: string, msgId: string) => {
+    const conv = conversations.find((c) => c.id === convId)
+    if (!conv || streaming) return
+    const i = conv.messages.findIndex((m) => m.id === msgId)
+    const q = conv.messages[i - 1]
+    if (i < 1 || q?.role !== 'user') return
+    patchConv(convId, (c) => ({ ...c, messages: c.messages.filter((m) => m.id !== msgId && m.id !== q.id) }))
+    setTimeout(() => submitRef.current(q.content), 0)
+  }
+
+  // ---- scrolling ------------------------------------------------------------------------------
+  const lastLen = active?.messages.reduce((n, m) => n + m.content.length, 0) ?? 0
+  useLayoutEffect(() => {
+    const el = scrollRef.current
+    if (el && stick.current) el.scrollTop = el.scrollHeight
+  }, [lastLen, active?.messages.length, ui.open, consentOpen])
+
+  if (!ready) return null
+
+  const showLogo = !ui.open && (ui.everClosed || conversations.some((c) => c.messages.length > 0))
+  const categoryKey = active?.category ?? DEFAULT_CATEGORY_KEY
+  const atLimit = userCount(conversations) >= ASK_HANS_LIMITS.maxMessagesPerVisit
+
+  const renderMessage = (convId: string, m: ChatMsg, readOnly = false) => {
+    const mine = m.role === 'user'
+    const question = !mine ? undefined : m.content
+    return (
+      <li key={m.id} className={`flex ${mine ? 'justify-end' : 'justify-start'}`}>
+        <div className={`max-w-[92%] rounded-2xl px-3.5 py-2 text-[14px] leading-relaxed ${mine ? 'rounded-br-md bg-primary text-primary-foreground' : 'rounded-bl-md border border-border bg-white text-foreground shadow-sm'}`}>
+          {mine ? (
+            <p className="whitespace-pre-wrap break-words">{question}</p>
+          ) : (
+            <>
+              {m.content && <Markdown text={m.content} />}
+              {m.pending && m.status && <p className="text-[13px] italic text-muted-foreground" role="status">{m.status}</p>}
+              {m.error && (
+                <div className={m.content ? 'mt-2 border-t border-border pt-2' : ''}>
+                  <p className="text-[13px]">{m.error === 'limit' ? DE.errors.limit(ASK_HANS_LIMITS.maxMessagesPerVisit) : DE.errors[m.error]}</p>
+                  {!readOnly && (
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {m.error !== 'refused' && m.error !== 'limit' && (
+                        <button type="button" onClick={() => retry(convId, m.id)} className="rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary">
+                          {DE.retry}
+                        </button>
+                      )}
+                      {searchButton(convId, m.id)}
+                    </div>
+                  )}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </li>
+    )
+  }
+
+  // The normal-search fallback needs the question that preceded the failed answer.
+  const searchButton = (convId: string, msgId: string) => {
+    const conv = conversations.find((c) => c.id === convId)
+    const i = conv?.messages.findIndex((m) => m.id === msgId) ?? -1
+    const q = i > 0 ? conv?.messages[i - 1] : undefined
+    if (!q || q.role !== 'user') return null
+    return (
+      <button type="button" onClick={() => searchInstead(q.content)} className="rounded-md bg-primary px-2.5 py-1 text-xs font-semibold text-primary-foreground hover:opacity-90">
+        {DE.searchInstead}
+      </button>
+    )
+  }
+
+  return (
+    <>
+      {showLogo && <AskHansLogo ref={logoRef} onOpen={openWindow} />}
+      {ui.open && (
+        <AskHansWindow
+          maximized={ui.maximized}
+          rect={ui.rect}
+          onRectChange={setRect}
+          onClose={() => closeWindow()}
+          onToggleMaximize={() => setUi((u) => ({ ...u, maximized: !u.maximized }))}
+          onNew={startNew}
+          newDisabled={streaming || !active || active.messages.length === 0}
+        >
+          <div className="grid min-h-0 flex-1" style={isDesktop ? { gridTemplateColumns: `${ASK_HANS_SPLIT.chatFr}fr ${ASK_HANS_SPLIT.panelFr}fr` } : undefined}>
+            <div className="flex min-h-0 min-w-0 flex-col">
+              <div
+                ref={scrollRef}
+                onScroll={(e) => {
+                  const el = e.currentTarget
+                  stick.current = el.scrollHeight - el.scrollTop - el.clientHeight < 120
+                }}
+                className="min-h-0 flex-1 space-y-3 overflow-y-auto bg-muted/20 p-3"
+              >
+                {consentOpen ? (
+                  <ConsentNotice pendingQuestion={pendingQuestion} onChoose={chooseConsent} />
+                ) : (
+                  <>
+                    <WelcomeBox onPick={(q) => submit(q)} disabled={streaming || atLimit} />
+
+                    {previous.map((c) => {
+                      const open = expanded.has(c.id)
+                      const firstQ = c.messages.find((m) => m.role === 'user')?.content ?? ''
+                      return (
+                        <section key={c.id} className="rounded-xl border border-border bg-white">
+                          <button
+                            type="button"
+                            aria-expanded={open}
+                            onClick={() =>
+                              setExpanded((s) => {
+                                const n = new Set(s)
+                                if (n.has(c.id)) n.delete(c.id)
+                                else n.add(c.id)
+                                return n
+                              })
+                            }
+                            className="flex w-full items-center gap-2 px-3 py-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                          >
+                            <AskIcon name="ChevronDown" className={`h-4 w-4 flex-shrink-0 text-muted-foreground transition-transform ${open ? '' : '-rotate-90'}`} />
+                            <span className="min-w-0 flex-1">
+                              <span className="block text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{DE.previousChat(c.messages.length)}</span>
+                              <span className="block truncate text-[13px] text-foreground">{firstQ}</span>
+                            </span>
+                          </button>
+                          {open && (
+                            <div className="border-t border-border p-3">
+                              <ul className="space-y-3">{c.messages.map((m) => renderMessage(c.id, m, true))}</ul>
+                              <button
+                                type="button"
+                                disabled={streaming}
+                                onClick={() => {
+                                  setActiveId(c.id)
+                                  setExpanded(new Set())
+                                }}
+                                className="mt-3 rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary disabled:opacity-50"
+                              >
+                                {DE.continueChat}
+                              </button>
+                            </div>
+                          )}
+                        </section>
+                      )
+                    })}
+
+                    {active && active.messages.length > 0 && (
+                      <ul role="log" aria-live="polite" aria-busy={streaming} className="space-y-3">
+                        {active.messages.map((m) => renderMessage(active.id, m))}
+                      </ul>
+                    )}
+                  </>
+                )}
+              </div>
+
+              {!isDesktop && <MarketingPanel variant="strip" categoryKey={categoryKey} onLinkClick={onLinkClick} />}
+
+              <form
+                className="flex-shrink-0 border-t border-border bg-white p-2.5"
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  submit(draft)
+                }}
+              >
+                <div className="flex items-end gap-2">
+                  <label htmlFor="askhans-input" className="sr-only">{DE.inputLabel}</label>
+                  <textarea
+                    id="askhans-input"
+                    ref={inputRef}
+                    value={draft}
+                    rows={1}
+                    maxLength={ASK_HANS_LIMITS.maxMessageChars + 200}
+                    disabled={consentOpen || streaming || atLimit}
+                    placeholder={DE.inputPlaceholder}
+                    onChange={(e) => setDraft(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault()
+                        submit(draft)
+                      }
+                    }}
+                    className="max-h-28 min-h-[40px] flex-1 resize-none rounded-lg border border-input bg-white px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary disabled:bg-muted"
+                  />
+                  <button
+                    type="submit"
+                    disabled={consentOpen || streaming || atLimit || !draft.trim()}
+                    aria-label={DE.send}
+                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-40"
+                  >
+                    <AskIcon name="SendHorizontal" className="h-4 w-4" />
+                  </button>
+                </div>
+                {draft.length > ASK_HANS_LIMITS.maxMessageChars && (
+                  <p className="mt-1 text-xs font-medium text-destructive" role="alert">{DE.errors.tooLong(ASK_HANS_LIMITS.maxMessageChars)} ({DE.charCount(draft.length, ASK_HANS_LIMITS.maxMessageChars)})</p>
+                )}
+                <p className="mt-1.5 flex flex-wrap items-center justify-between gap-x-3 text-[11px] leading-snug text-muted-foreground">
+                  <span>{DE.aiNotice}</span>
+                  {consent && !consentOpen && (
+                    <button type="button" onClick={withdrawConsent} className="underline underline-offset-2 hover:text-foreground">
+                      {DE.withdraw}
+                    </button>
+                  )}
+                </p>
+              </form>
+            </div>
+
+            {isDesktop && <MarketingPanel variant="side" categoryKey={categoryKey} onLinkClick={onLinkClick} />}
+          </div>
+        </AskHansWindow>
+      )}
+    </>
+  )
+}
