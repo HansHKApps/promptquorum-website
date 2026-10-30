@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -5934,6 +5934,192 @@
       "ctr": 0.01001669449081803,
       "period": "GSC top queries pasted 2026-10-30 (28d window assumed)"
     },
+    "deployedAt": null
+  },
+  {
+    "id": "53c4ebd9-20b3-42c9-8981-4b55c3767e62",
+    "slug": "/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:13.512Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla Review: Local AI Companion App, Pricing & Privacy",
+        "new": "Layla AI Review: Local App, Cloud, Server & Pricing"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Layla review 2026: $19.99 on-device AI companion app for Android and iOS. What actually runs locally vs. the optional Layla Cloud mode, exact pricing, models, and who should skip it.",
+        "new": "Layla AI review: $19.99 offline AI companion for Android and iPhone. What runs locally, Layla Cloud vs. Layla-Server, plans, free APK and privacy."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": {
+      "position": 6.3,
+      "impressions": 4150,
+      "clicks": 49,
+      "ctr": 0.011807228915662651,
+      "period": "2026-10-01 to 2026-10-28"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a1b882f7-2c12-48b3-ac5d-6bd3347ef695",
+    "slug": "/de/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:13.620Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla-Rezension: Lokale KI-Begleiter-App, Preise & Datenschutz",
+        "new": "Layla AI Rezension: Lokale App, Cloud, Server & Preise"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Layla-Rezension 2026: 19,99 $ KI-Begleiter-App für Android und iOS auf dem Gerät. Was tatsächlich lokal läuft vs. der optionale Layla-Cloud-Modus, genaue Preise, Modelle und für wen sie geeignet ist.",
+        "new": "Layla-AI-Rezension: 19,99 $ Offline-KI-Begleiter für Android und iPhone. Was lokal läuft, was Layla Cloud und Server tun, Pläne, Gratis-APK, Datenschutz."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8d7f0a01-ae69-4e08-b69e-2e0ffdd1e1ab",
+    "slug": "/es/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:13.725Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla Análisis: App de IA Local, Precios y Privacidad",
+        "new": "Qué es Layla AI: app local, Cloud, Server y precio"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Análisis de Layla 2026: app de compañero de IA en el dispositivo para Android e iOS por $19.99. Qué se ejecuta realmente en local frente al modo opcional Layla Cloud, precios exactos, modelos y para quién es adecuada.",
+        "new": "Qué es Layla AI: app de IA sin conexión para Android y iPhone por $19.99. Qué corre en local, Layla Cloud y Server, planes, APK gratis y privacidad."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "65d4d3b5-e748-4836-959d-7accb40184da",
+    "slug": "/fr/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:13.831Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla Avis: App IA Locale, Prix et Confidentialité",
+        "new": "Layla Avis: App IA Locale, Cloud, Serveur et Prix"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Avis Layla 2026 : application de compagnon IA locale à 19,99 $ pour Android et iOS. Ce qui fonctionne réellement en local face au mode optionnel Layla Cloud, prix exacts, modèles et public cible.",
+        "new": "Avis Layla : compagnon IA local à 19,99 $ (achat unique) sur Android et iPhone. Layla Cloud, serveur, formules, APK gratuit limité et confidentialité."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "286e6071-9743-42fd-9ac9-469504394f9e",
+    "slug": "/ja/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:13.942Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla レビュー:ローカルAIコンパニオンアプリの料金とプライバシー",
+        "new": "Layla AIレビュー:ローカル・クラウド・サーバーと料金"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Layla レビュー2026:Android・iOS向け19.99ドルのオンデバイスAIコンパニオンアプリ。実際にローカルで動く部分とオプションのLayla Cloudモードの違い、正確な料金、モデル、向いている読者を解説。",
+        "new": "Layla AIレビュー:Android・iPhone向け19.99ドルのオフラインAIコンパニオンアプリ。ローカルで動く部分、Layla CloudとLayla-Server、プラン、無料APK、プライバシーを解説。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "bdc78b33-2fb7-4809-9f8e-2771c0bd8093",
+    "slug": "/pt/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:14.053Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla Análise: App de IA Local, Preço e Privacidade",
+        "new": "Layla AI Análise: App Local, Cloud, Servidor e Preço"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Análise da Layla 2026: app de companheiro de IA no dispositivo para Android e iOS por $19,99. O que realmente roda localmente vs. o modo opcional Layla Cloud, preço exato, modelos e para quem é indicado.",
+        "new": "Análise do Layla AI: app offline por $19,99 no Android e iPhone. O que roda local, o Layla Cloud e o Server, planos, APK grátis e privacidade."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "0282343e-196f-4b43-9001-297c3563f445",
+    "slug": "/ar/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:14.156Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Layla: تطبيق ذكاء اصطناعي محلي، السعر والخصوصية",
+        "new": "مراجعة Layla AI: التطبيق المحلي والسحابة والخادم والسعر"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة Layla 2026: تطبيق رفيق ذكاء اصطناعي على الجهاز لأندرويد و iOS بسعر 19.99 دولاراً. ما يعمل فعلياً محلياً مقابل وضع Layla Cloud الاختياري، السعر الدقيق، النماذج، ومن يناسبه التطبيق.",
+        "new": "مراجعة Layla AI: تطبيق رفيق ذكاء اصطناعي دون اتصال لأندرويد و iPhone بـ 19.99 دولاراً. ما يعمل محلياً، و Layla Cloud والخادم، والخطط، وملف APK المجاني."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e2849d7b-b1d2-4f80-94eb-2a930bb8066f",
+    "slug": "/zh/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:14.259Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla 评测:本地 AI 伴侣应用价格与隐私解析",
+        "new": "Layla AI 评测:本地应用、云端、服务器、价格与隐私"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Layla 评测2026:面向 Android 和 iOS、售价 19.99 美元的本地 AI 伴侣应用。实际本地运行的部分与可选的 Layla Cloud 模式对比、准确价格、支持的模型以及适用人群。",
+        "new": "Layla AI 评测:售价 19.99 美元的 Android/iPhone 离线 AI 伴侣应用。本地运行的内容、Layla Cloud 与 Layla-Server 的作用、订阅方案、免费 APK 及隐私情况。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "e32cedb8-762a-499c-88aa-7d607fa52a49",
+    "slug": "/ko/power-local-llm/layla-review",
+    "date": "2026-10-30T11:21:14.364Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Layla 리뷰: 로컬 AI 컴패니언 앱 가격 및 개인정보",
+        "new": "Layla AI 리뷰: 로컬·클라우드·서버·요금제 정리"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Layla 리뷰 2026: Android·iOS용 19.99달러 온디바이스 AI 컴패니언 앱. 실제로 로컬에서 작동하는 부분과 선택적 Layla Cloud 모드의 차이, 정확한 가격, 모델, 적합한 이용자를 분석합니다.",
+        "new": "Layla AI 리뷰: Android·iPhone용 19.99달러 오프라인 AI 앱. 로컬 작동 범위, Layla Cloud·Layla-Server, 요금제, 무료 APK, 개인정보를 정리합니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
+    "baseline": null,
     "deployedAt": null
   }
 ]
