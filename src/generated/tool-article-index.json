@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "goose-review",
         "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
         "url": "/power-local-llm/goose-review",
@@ -30,6 +38,14 @@
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
         "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "reins-review",
+        "title": "Reins Review: iPhone Chat App for Ollama and LM Studio",
+        "url": "/power-local-llm/reins-review",
         "dateModified": "2026-10-30",
         "tier": "about"
       },
@@ -64,25 +80,9 @@
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-10-26",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chaterminal-review",
-        "title": "Mobile LM Server Review: Android App for Local Models and a Phone-Hosted API",
-        "url": "/power-local-llm/chaterminal-review",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
-        "tier": "about"
       }
     ],
-    "totalCount": 329,
+    "totalCount": 331,
     "capped": true
   },
   "llama.cpp": {
@@ -869,6 +869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "reins-review",
+        "title": "Reins Review: iPhone Chat App for Ollama and LM Studio",
+        "url": "/power-local-llm/reins-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/presenton-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "subtitle-edit-review",
-        "title": "Subtitle Edit Review: Local Whisper Transcription and Auto-Translate",
-        "url": "/power-local-llm/subtitle-edit-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 164,
+    "totalCount": 165,
     "capped": true
   },
   "Atomic Chat": {
@@ -10125,6 +10125,28 @@
     "totalCount": 2,
     "capped": false
   },
+  "Reins": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "reins-review",
+        "title": "Reins Review: iPhone Chat App for Ollama and LM Studio",
+        "url": "/power-local-llm/reins-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {
@@ -11802,17 +11824,9 @@
         "url": "/power-local-llm/perfect-memory-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "xberg-review",
-        "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
-        "url": "/power-local-llm/xberg-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 238,
+    "totalCount": 239,
     "capped": true
   },
   "Qdrant": {

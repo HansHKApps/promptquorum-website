@@ -93,6 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: Not on the App Store, Source Still Available', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: System-Integrated On-Device AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline Chat with Editable Memory (Not Benchmarked)', anchor: '#memoryai' },
+      { label: 'Reins: Chat Client for Your Ollama or LM Studio Server (Not Benchmarked)', anchor: '#reins' },
       { label: 'fullmoon: Free Open-Source Chat on Apple MLX (No Release Since Early 2025)', anchor: '#fullmoon' },
       { label: 'Models by iPhone Tier', anchor: '#models-by-tier' },
       { label: 'Battery Drain and Thermal Throttling', anchor: '#battery-heat' },
@@ -399,6 +400,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins: Chat Client for Your Ollama or LM Studio Server (Not Benchmarked)',
+        content:
+          '**Reins is a free chat app for iPhone and iPad that connects to your own Ollama, LM Studio or OpenAI-compatible server and, since version 2, can also run MLX models on the device.** It was added after the main comparison, so it is not in the comparison table and was not part of our testing.',
+        items: [
+          '**Model library:** On-device MLX models download inside the app from Hugging Face, and any MLX model can be searched and downloaded; Apple Foundation Models are supported too.',
+          '**Features:** Tool calls, built-in web search without an API key, image, PDF, CSV and text attachments, chat branching, thinking mode and temporary chats.',
+          '**Requirements and price:** iOS 17.0+ (background generation needs iOS 26). Free to download, with Reins Pro as a monthly, yearly or lifetime in-app purchase; the sources do not list what Pro unlocks.',
+          '**Privacy and licence:** The developer says there is no login, no analytics and no data collection. Version 2 is closed source; the public repository holds the code only up to version 1.3.4.',
+          '**Install path:** App Store. The App Store lists version 2.3.3, released on 21 October 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the App Store listing, the developer\'s website and policies; we have not timed Reins on our test phones. Full notes: [Reins review](/power-local-llm/reins-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Models by iPhone Tier',
@@ -689,6 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: Nicht im App Store, Quellcode weiterhin verfügbar', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: Systemintegrierte On-Device-KI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: Offline-Chat mit editierbarem Gedächtnis (nicht gemessen)', anchor: '#memoryai' },
+      { label: 'Reins: Chat-Client für Ihren Ollama- oder LM-Studio-Server (nicht gemessen)', anchor: '#reins' },
       { label: 'fullmoon: kostenloser Open-Source-Chat auf Apple MLX (kein Release seit Anfang 2025)', anchor: '#fullmoon' },
       { label: 'Modelle nach iPhone-Modell', anchor: '#models-by-tier' },
       { label: 'Akkuverbrauch und thermisches Throttling', anchor: '#battery-heat' },
@@ -995,6 +1016,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins: Chat-Client für Ihren Ollama- oder LM-Studio-Server (nicht gemessen)',
+        content:
+          '**Reins ist eine kostenlose Chat-App für iPhone und iPad, die sich mit Ihrem eigenen Ollama-, LM-Studio- oder OpenAI-kompatiblen Server verbindet und seit Version 2 auch MLX-Modelle auf dem Gerät ausführen kann.** Sie wurde nach dem Hauptvergleich ergänzt, steht daher nicht in der Vergleichstabelle und war nicht Teil unserer Tests.',
+        items: [
+          '**Modellbibliothek:** On-Device-MLX-Modelle werden in der App von Hugging Face geladen, und jedes MLX-Modell lässt sich suchen und herunterladen; auch Apple Foundation Models werden unterstützt.',
+          '**Funktionen:** Tool-Aufrufe, eingebaute Websuche ohne API-Schlüssel, Anhänge als Bild, PDF, CSV und Text, Chat-Verzweigung, Denkmodus und temporäre Chats.',
+          '**Anforderungen und Preis:** iOS 17.0 oder neuer (Generierung im Hintergrund braucht iOS 26). Der Download ist kostenlos, Reins Pro gibt es als Monats-, Jahres- oder Lifetime-In-App-Kauf; die Quellen listen nicht auf, was Pro freischaltet.',
+          '**Datenschutz und Lizenz:** Laut Entwickler gibt es keinen Login, keine Analyse und keine Datenerhebung. Version 2 ist Closed Source; das öffentliche Repository enthält den Code nur bis Version 1.3.4.',
+          '**Installationsweg:** App Store. Der App Store nennt Version 2.3.3, veröffentlicht am 21. Oktober 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem App-Store-Eintrag sowie der Website und den Richtlinien des Entwicklers; wir haben Reins nicht auf unseren Testtelefonen gemessen. Alle Details: [Reins-Rezension](/de/power-local-llm/reins-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelle nach iPhone-Modell',
@@ -1293,6 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm：App Store非掲載、ソースは入手可能', anchor: '#llm-farm' },
       { label: 'Apple Intelligence：システム統合型オンデバイスAI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:編集できるメモリを備えたオフラインチャット(未計測)', anchor: '#memoryai' },
+      { label: 'Reins:自分のOllama・LM Studioサーバー向けチャットクライアント(未計測)', anchor: '#reins' },
       { label: 'fullmoon：Apple MLX上で動く無料オープンソースのチャット（2025年初頭以降リリースなし）', anchor: '#fullmoon' },
       { label: 'iPhoneモデル別推奨モデル', anchor: '#models-by-tier' },
       { label: 'バッテリー消耗と熱スロットリング', anchor: '#battery-heat' },
@@ -1599,6 +1640,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins:自分のOllama・LM Studioサーバー向けチャットクライアント(未計測)',
+        content:
+          '**Reinsは、自分で運用するOllama、LM Studio、OpenAI互換サーバーに接続するiPhone・iPad向けの無料チャットアプリで、バージョン2からは端末上でMLXモデルも実行できます。**メインの比較のあとに追加したため、比較表には含まれず、当方のテスト対象でもありません。',
+        items: [
+          '**モデルライブラリ:**端末上のMLXモデルはアプリ内でHugging Faceからダウンロードされ、任意のMLXモデルを検索してダウンロードできます。AppleのFoundation Modelsにも対応します。',
+          '**機能:**ツール呼び出し、APIキー不要の内蔵Web検索、画像・PDF・CSV・テキストの添付、チャットの分岐、思考モード、一時チャット。',
+          '**要件と価格:**iOS 17.0以降(バックグラウンド生成にはiOS 26が必要)。ダウンロードは無料で、Reins Proは月額・年額・買い切りのアプリ内課金です。Proで何が使えるかは情報源に記載がありません。',
+          '**プライバシーとライセンス:**開発者によれば、ログイン、分析、データ収集はありません。バージョン2はクローズドソースで、公開リポジトリのコードはバージョン1.3.4までです。',
+          '**入手方法:**App Store。App Storeにはバージョン2.3.3(2026年10月21日公開)と表示されています。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記はApp Storeの掲載情報、開発者の公式サイトとポリシーに基づく内容で、当方のテスト用端末でReinsを計測してはいません。詳細は[Reinsレビュー](/ja/power-local-llm/reins-review)をご覧ください。',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'iPhoneモデル別推奨モデル',
@@ -1889,6 +1949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm : absent de l\'App Store, sources toujours disponibles', anchor: '#llm-farm' },
       { label: 'Apple Intelligence : IA on-device intégrée au système', anchor: '#apple-intelligence' },
       { label: 'MemoryAI : chat hors ligne avec mémoire modifiable (non mesuré)', anchor: '#memoryai' },
+      { label: 'Reins : client de chat pour votre serveur Ollama ou LM Studio (non mesuré)', anchor: '#reins' },
       { label: 'fullmoon : chat gratuit et open source sur Apple MLX (aucune version depuis début 2025)', anchor: '#fullmoon' },
       { label: 'Modèles par génération d\'iPhone', anchor: '#models-by-tier' },
       { label: 'Autonomie et surchauffe', anchor: '#battery-heat' },
@@ -2195,6 +2256,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins : client de chat pour votre serveur Ollama ou LM Studio (non mesuré)',
+        content:
+          '**Reins est une appli de chat gratuite pour iPhone et iPad qui se connecte à votre propre serveur Ollama, LM Studio ou compatible OpenAI et, depuis la version 2, peut aussi exécuter des modèles MLX sur l’appareil.** Elle a été ajoutée après le comparatif principal ; elle ne figure donc pas dans le tableau comparatif et n’a pas fait partie de nos tests.',
+        items: [
+          '**Bibliothèque de modèles :** les modèles MLX sur l’appareil se téléchargent dans l’appli depuis Hugging Face, et tout modèle MLX peut être recherché et téléchargé ; les Apple Foundation Models sont aussi pris en charge.',
+          '**Fonctions :** appels d’outils, recherche web intégrée sans clé d’API, pièces jointes image, PDF, CSV et texte, branches de chat, mode réflexion et chats temporaires.',
+          '**Configuration et prix :** iOS 17.0 ou ultérieur (la génération en arrière-plan exige iOS 26). Téléchargement gratuit, avec Reins Pro en achat intégré mensuel, annuel ou à vie ; les sources n’énumèrent pas ce que Pro débloque.',
+          '**Confidentialité et licence :** le développeur affirme qu’il n’y a ni connexion, ni analytique, ni collecte de données. La version 2 est fermée ; le dépôt public ne contient le code que jusqu’à la version 1.3.4.',
+          '**Installation :** App Store. L’App Store indique la version 2.3.3, publiée le 21 octobre 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ces informations viennent de la fiche de l’App Store, du site et des politiques du développeur ; nous n’avons pas mesuré Reins sur nos téléphones de test. Notes complètes : [test de Reins](/fr/power-local-llm/reins-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modèles par génération d\'iPhone',
@@ -2485,6 +2565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm：不在App Store上，源码仍可获取', anchor: '#llm-farm' },
       { label: 'Apple Intelligence：系统级内置AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI:带可编辑记忆的离线聊天(未实测)', anchor: '#memoryai' },
+      { label: 'Reins:面向自建 Ollama 或 LM Studio 服务器的聊天客户端(未实测)', anchor: '#reins' },
       { label: 'fullmoon：基于 Apple MLX 的免费开源聊天应用（2025 年初以来无新版本）', anchor: '#fullmoon' },
       { label: '按iPhone档次推荐模型', anchor: '#models-by-tier' },
       { label: '电池消耗与过热问题', anchor: '#battery-heat' },
@@ -2791,6 +2872,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins:面向自建 Ollama 或 LM Studio 服务器的聊天客户端(未实测)',
+        content:
+          '**Reins 是一款免费的 iPhone 和 iPad 聊天应用,可连接你自己的 Ollama、LM Studio 或兼容 OpenAI 的服务器,自第 2 版起还能在设备上运行 MLX 模型。**它是在主对比之后加入的,因此不在对比表中,也不属于我们的测试范围。',
+        items: [
+          '**模型库:**设备端 MLX 模型在应用内从 Hugging Face 下载,也可搜索并下载任意 MLX 模型;同时支持 Apple Foundation Models。',
+          '**功能:**工具调用、无需 API 密钥的内置网页搜索、图片/PDF/CSV/文本附件、对话分支、思考模式和临时对话。',
+          '**要求与价格:**iOS 17.0 及以上(后台生成需要 iOS 26)。免费下载,Reins Pro 为月付、年付或买断的应用内购买;资料没有列出 Pro 解锁什么。',
+          '**隐私与许可:**开发者称无需登录、无分析、不收集数据。第 2 版闭源;公开仓库只包含截至 1.3.4 版的代码。',
+          '**安装途径:**App Store。App Store 列出的版本为 2.3.3,发布于 2026 年 10 月 21 日。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自 App Store 页面、开发者官网和政策文件;我们没有在测试手机上实测 Reins。完整说明:[Reins 评测](/zh/power-local-llm/reins-review)。',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: '按iPhone档次推荐模型',
@@ -3081,6 +3181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: fuera del App Store, código fuente aún disponible', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: IA en dispositivo integrada en el sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat sin conexión con memoria editable (sin medir)', anchor: '#memoryai' },
+      { label: 'Reins: cliente de chat para tu servidor Ollama o LM Studio (sin medir)', anchor: '#reins' },
       { label: 'fullmoon: chat gratuito y de código abierto sobre Apple MLX (sin versiones desde principios de 2025)', anchor: '#fullmoon' },
       { label: 'Modelos según el modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de batería y throttling térmico', anchor: '#battery-heat' },
@@ -3387,6 +3488,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins: cliente de chat para tu servidor Ollama o LM Studio (sin medir)',
+        content:
+          '**Reins es una app de chat gratuita para iPhone y iPad que se conecta a tu propio servidor Ollama, LM Studio o compatible con OpenAI y, desde la versión 2, también puede ejecutar modelos MLX en el dispositivo.** Se añadió después de la comparativa principal, así que no está en la tabla comparativa y no formó parte de nuestras pruebas.',
+        items: [
+          '**Biblioteca de modelos:** los modelos MLX en el dispositivo se descargan dentro de la app desde Hugging Face, y se puede buscar y descargar cualquier modelo MLX; también admite Apple Foundation Models.',
+          '**Funciones:** llamadas a herramientas, búsqueda web integrada sin clave de API, adjuntos de imagen, PDF, CSV y texto, ramificación de chats, modo de razonamiento y chats temporales.',
+          '**Requisitos y precio:** iOS 17.0 o posterior (la generación en segundo plano requiere iOS 26). Descarga gratuita, con Reins Pro como compra dentro de la app mensual, anual o de por vida; las fuentes no enumeran qué desbloquea Pro.',
+          '**Privacidad y licencia:** el desarrollador dice que no hay inicio de sesión, analítica ni recopilación de datos. La versión 2 es de código cerrado; el repositorio público contiene el código solo hasta la versión 1.3.4.',
+          '**Instalación:** App Store. La App Store indica la versión 2.3.3, publicada el 21 de octubre de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos proceden de la ficha de la App Store, el sitio y las políticas del desarrollador; no hemos medido Reins en nuestros teléfonos de prueba. Notas completas: [reseña de Reins](/es/power-local-llm/reins-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelos según el modelo de iPhone',
@@ -3677,6 +3797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: App Store에는 없지만 소스는 계속 제공됩니다', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: 시스템 내장 기기 내 AI', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: 편집 가능한 메모리를 갖춘 오프라인 채팅(미측정)', anchor: '#memoryai' },
+      { label: 'Reins: 직접 운영하는 Ollama·LM Studio 서버용 채팅 클라이언트(미측정)', anchor: '#reins' },
       { label: 'fullmoon: Apple MLX 기반 무료 오픈소스 채팅 앱(2025년 초 이후 릴리스 없음)', anchor: '#fullmoon' },
       { label: 'iPhone 등급별 모델', anchor: '#models-by-tier' },
       { label: '배터리 소모와 열 제한', anchor: '#battery-heat' },
@@ -3985,6 +4106,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins: 직접 운영하는 Ollama·LM Studio 서버용 채팅 클라이언트(미측정)',
+        content:
+          '**Reins는 직접 운영하는 Ollama, LM Studio 또는 OpenAI 호환 서버에 연결하는 무료 iPhone·iPad 채팅 앱이며, 버전 2부터는 기기에서 MLX 모델도 실행할 수 있습니다.** 주요 비교 이후에 추가되었으므로 비교표에는 없고 저희 테스트에도 포함되지 않았습니다.',
+        items: [
+          '**모델 라이브러리:** 기기 내 MLX 모델은 앱 안에서 Hugging Face로부터 내려받으며, 임의의 MLX 모델을 검색해 내려받을 수 있습니다. Apple Foundation Models도 지원합니다.',
+          '**기능:** 도구 호출, API 키가 필요 없는 내장 웹 검색, 이미지·PDF·CSV·텍스트 첨부, 채팅 분기, 사고 모드, 임시 채팅.',
+          '**요구 사항과 가격:** iOS 17.0 이상(백그라운드 생성에는 iOS 26 필요). 다운로드는 무료이며 Reins Pro는 월간·연간·평생 앱 내 구입입니다. Pro가 무엇을 여는지는 출처에 나와 있지 않습니다.',
+          '**개인정보와 라이선스:** 개발자에 따르면 로그인, 분석, 데이터 수집이 없습니다. 버전 2는 비공개 소스이며 공개 저장소에는 버전 1.3.4까지의 코드만 있습니다.',
+          '**설치 경로:** App Store. App Store에는 2026년 10월 21일에 출시된 버전 2.3.3이 표시됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 App Store 페이지와 개발자의 웹사이트·정책에 근거하며, 저희 테스트 휴대폰에서 Reins를 측정하지는 않았습니다. 자세한 내용: [Reins 리뷰](/ko/power-local-llm/reins-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'iPhone 등급별 모델',
@@ -4278,6 +4418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: fora da App Store, código-fonte ainda disponível', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: IA no aparelho integrada ao sistema', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: chat offline com memória editável (não medido)', anchor: '#memoryai' },
+      { label: 'Reins: cliente de chat para o seu servidor Ollama ou LM Studio (não medido)', anchor: '#reins' },
       { label: 'fullmoon: chat gratuito e de código aberto sobre Apple MLX (sem versões desde o início de 2025)', anchor: '#fullmoon' },
       { label: 'Modelos conforme o modelo de iPhone', anchor: '#models-by-tier' },
       { label: 'Consumo de bateria e limitação térmica', anchor: '#battery-heat' },
@@ -4584,6 +4725,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      reins: {
+        id: 'reins',
+        title: 'Reins: cliente de chat para o seu servidor Ollama ou LM Studio (não medido)',
+        content:
+          '**O Reins é um app de chat gratuito para iPhone e iPad que se conecta ao seu próprio servidor Ollama, LM Studio ou compatível com OpenAI e, desde a versão 2, também pode executar modelos MLX no aparelho.** Foi adicionado depois da comparação principal, portanto não está na tabela comparativa e não fez parte dos nossos testes.',
+        items: [
+          '**Biblioteca de modelos:** os modelos MLX no aparelho são baixados dentro do app a partir do Hugging Face, e qualquer modelo MLX pode ser pesquisado e baixado; os Apple Foundation Models também são suportados.',
+          '**Recursos:** chamadas de ferramentas, busca na web integrada sem chave de API, anexos de imagem, PDF, CSV e texto, ramificação de chats, modo de raciocínio e chats temporários.',
+          '**Requisitos e preço:** iOS 17.0 ou posterior (a geração em segundo plano exige iOS 26). Download gratuito, com o Reins Pro como compra no app mensal, anual ou vitalícia; as fontes não listam o que o Pro libera.',
+          '**Privacidade e licença:** o desenvolvedor diz que não há login, análise nem coleta de dados. A versão 2 é de código fechado; o repositório público contém o código apenas até a versão 1.3.4.',
+          '**Instalação:** App Store. A App Store lista a versão 2.3.3, lançada em 21 de outubro de 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados vêm da página da App Store, do site e das políticas do desenvolvedor; não medimos o Reins em nossos celulares de teste. Notas completas: [análise do Reins](/pt/power-local-llm/reins-review).',
+          },
+        ],
+      },
       modelsByDevice: {
         id: 'models-by-tier',
         title: 'Modelos conforme o modelo de iPhone',
@@ -4874,6 +5034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LLM Farm: خارج App Store والمصدر لا يزال متاحاً', anchor: '#llm-farm' },
       { label: 'Apple Intelligence: ذكاء اصطناعي على الجهاز مدمج في النظام', anchor: '#apple-intelligence' },
       { label: 'MemoryAI: دردشة دون اتصال بذاكرة قابلة للتعديل (لم يُقَس)', anchor: '#memoryai' },
+      { label: 'Reins: عميل دردشة لخادم Ollama أو LM Studio الخاص بك (لم يُقَس)', anchor: '#reins' },
       { label: 'fullmoon: دردشة مجانية مفتوحة المصدر على Apple MLX (بلا إصدارات منذ مطلع 2025)', anchor: '#fullmoon' },
       { label: 'النماذج حسب فئة iPhone', anchor: '#models-by-tier' },
       { label: 'استنزاف البطارية والتباطؤ الحراري', anchor: '#battery-heat' },
@@ -5177,6 +5338,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'مصدر التفاصيل أعلاه موقع المطوّر وصفحة App Store وسياسة الخصوصية والمستودع العام؛ ولم نشغّل fullmoon على هواتف الاختبار لدينا. التفاصيل: [مراجعة fullmoon](/ar/power-local-llm/fullmoon-review).',
+          },
+        ],
+      },
+      reins: {
+        id: 'reins',
+        title: 'Reins: عميل دردشة لخادم Ollama أو LM Studio الخاص بك (لم يُقَس)',
+        content:
+          '**Reins تطبيق دردشة مجاني لـ iPhone وiPad يتصل بخادم Ollama أو LM Studio أو خادم متوافق مع OpenAI تديره بنفسك، ويستطيع منذ الإصدار 2 تشغيل نماذج MLX على الجهاز أيضًا.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في جدول المقارنة ولم يكن ضمن اختباراتنا.',
+        items: [
+          '**مكتبة النماذج:** تُنزَّل نماذج MLX على الجهاز داخل التطبيق من Hugging Face، ويمكن البحث عن أي نموذج MLX وتنزيله؛ كما يدعم Apple Foundation Models.',
+          '**الميزات:** استدعاء الأدوات، وبحث مدمج على الويب دون مفتاح API، ومرفقات الصور وPDF وCSV والنصوص، وتفريع المحادثات، ووضع التفكير، والمحادثات المؤقتة.',
+          '**المتطلبات والسعر:** iOS 17.0 أو أحدث (يتطلب التوليد في الخلفية iOS 26). التنزيل مجاني مع Reins Pro كشراء داخل التطبيق شهري أو سنوي أو مدى الحياة؛ ولا تسرد المصادر ما يفتحه Pro.',
+          '**الخصوصية والترخيص:** يقول المطوّر إنه لا يوجد تسجيل دخول ولا تحليلات ولا جمع بيانات. الإصدار 2 مغلق المصدر؛ والمستودع العام يحتوي الشيفرة حتى الإصدار 1.3.4 فقط.',
+          '**طريقة التثبيت:** App Store. يعرض App Store الإصدار 2.3.3 الذي صدر في 21 أكتوبر 2026.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'مصدر هذه التفاصيل صفحة App Store وموقع المطوّر وسياساته؛ ولم نقِس أداء Reins على هواتف الاختبار لدينا. التفاصيل الكاملة: [مراجعة Reins](/ar/power-local-llm/reins-review).',
           },
         ],
       },
