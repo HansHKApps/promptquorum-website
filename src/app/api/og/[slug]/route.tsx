@@ -19,7 +19,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   // (lookup order: prompt-engineering → local-llms → power-local-llm → prompt-bites →
   // smart-home → balcony-solar → frameworks; first match wins). Importing the full
   // content barrels here pushed the function over Vercel's 250 MB limit.
-  const entry = (ogIndex as Record<string, Partial<Record<Language, [string, string]>>>)[slug]
+  const entry = (ogIndex as unknown as Record<string, Partial<Record<Language, [string, string]>>>)[slug]
   const pair = entry?.[selectedLang] || entry?.en
   const article: { title?: string; intro?: string } | undefined = pair ? { title: pair[0], intro: pair[1] } : undefined
 
