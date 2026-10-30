@@ -96,19 +96,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
         "url": "/local-llms/70b-models-consumer-hardware",
         "dateModified": "2026-10-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -444,7 +444,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -864,7 +864,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -5818,7 +5818,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -5888,7 +5888,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -6004,7 +6004,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -6090,7 +6090,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -6152,7 +6152,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -6604,7 +6604,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -10103,6 +10103,28 @@
     "totalCount": 2,
     "capped": false
   },
+  "fullmoon": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "fullmoon-review",
+        "title": "fullmoon Review: Free Offline AI Chat for iPhone, iPad and Mac",
+        "url": "/power-local-llm/fullmoon-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
   "Lyonesse": {
     "articles": [
       {
@@ -11727,6 +11749,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -11771,14 +11801,6 @@
         "title": "Xberg Review: Open-Source Document Intelligence for LLM and RAG Pipelines",
         "url": "/power-local-llm/xberg-review",
         "dateModified": "2026-10-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ai-file-sorter-review",
-        "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
-        "url": "/power-local-llm/ai-file-sorter-review",
-        "dateModified": "2026-10-28",
         "tier": "mentioned"
       }
     ],
@@ -12960,7 +12982,7 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
