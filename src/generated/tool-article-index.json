@@ -26,6 +26,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
@@ -70,14 +78,6 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-10-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-prompts-for-fiction-writers",
-        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
-        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
         "dateModified": "2026-10-26",
         "tier": "about"
       }
@@ -183,6 +183,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-10-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "litellm-review",
         "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
         "url": "/power-local-llm/litellm-review",
@@ -219,14 +227,6 @@
         "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-10",
         "tier": "about"
       },
       {
@@ -1586,9 +1586,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
         "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-10",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -4216,9 +4216,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
         "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-10",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -9510,9 +9510,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
         "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-10",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -11685,6 +11685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-10-30",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ai-file-sorter-review",
         "title": "AI File Sorter Review: Local AI That Renames and Sorts Files",
         "url": "/power-local-llm/ai-file-sorter-review",
@@ -11728,14 +11736,6 @@
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-26",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "castmates-review",
-        "title": "Castmates Review: Offline AI Character Chat for iPhone",
-        "url": "/power-local-llm/castmates-review",
         "dateModified": "2026-10-26",
         "tier": "mentioned"
       }
