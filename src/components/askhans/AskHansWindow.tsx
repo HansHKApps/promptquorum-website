@@ -4,7 +4,7 @@
 // viewport, sizes from ASK_HANS_WINDOW), maximize/restore, close (= minimize to the logo).
 // Modal dialog semantics: focus is trapped inside, Esc closes, labelled for screen readers.
 
-import { useCallback, useEffect, useId, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
+import { useEffect, useId, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Logo } from '@/components/Logo'
 import { ASK_HANS_WINDOW } from '@/lib/askhans/config'
@@ -17,10 +17,10 @@ type Edge = 'n' | 's' | 'e' | 'w' | 'ne' | 'nw' | 'se' | 'sw'
 
 const EDGE_CURSOR: Record<Edge, string> = { n: 'ns-resize', s: 'ns-resize', e: 'ew-resize', w: 'ew-resize', ne: 'nesw-resize', sw: 'nesw-resize', nw: 'nwse-resize', se: 'nwse-resize' }
 const EDGE_STYLE: Record<Edge, string> = {
-  n: 'top-0 left-3 right-3 h-1.5',
-  s: 'bottom-0 left-3 right-3 h-1.5',
-  e: 'right-0 top-3 bottom-3 w-1.5',
-  w: 'left-0 top-3 bottom-3 w-1.5',
+  n: 'top-0 left-3 right-3 h-2',
+  s: 'bottom-0 left-3 right-3 h-2',
+  e: 'right-0 top-3 bottom-3 w-2',
+  w: 'left-0 top-3 bottom-3 w-2',
   ne: 'top-0 right-0 h-3 w-3',
   nw: 'top-0 left-0 h-3 w-3',
   se: 'bottom-0 right-0 h-3 w-3',
@@ -83,11 +83,16 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
   const floating = isDesktop && !maximized
   const effective: Rect = floating ? clampRect(rect ?? defaultRect(vp.w, vp.h), vp.w, vp.h) : { x: 0, y: 0, w: vp.w, h: vp.h }
 
-  const onKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
+  // Document-level so Esc and the Tab trap also work when a click on plain text left focus on <body>.
+  const onCloseRef = useRef(onClose)
+  useEffect(() => {
+    onCloseRef.current = onClose
+  })
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        e.stopPropagation()
-        onClose()
+        e.preventDefault()
+        onCloseRef.current()
         return
       }
       if (e.key !== 'Tab' || !ref.current) return
@@ -96,16 +101,20 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
       const first = items[0]
       const last = items[items.length - 1]
       const active = document.activeElement
-      if (e.shiftKey && (active === first || !ref.current.contains(active))) {
+      if (!ref.current.contains(active)) {
+        e.preventDefault()
+        ;(e.shiftKey ? last : first).focus()
+      } else if (e.shiftKey && (active === first || active === ref.current)) {
         e.preventDefault()
         last.focus()
-      } else if (!e.shiftKey && (active === last || !ref.current.contains(active))) {
+      } else if (!e.shiftKey && active === last) {
         e.preventDefault()
         first.focus()
       }
-    },
-    [onClose],
-  )
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [])
 
   const startResize = (edge: Edge) => (e: ReactPointerEvent<HTMLDivElement>) => {
     e.preventDefault()
@@ -149,8 +158,8 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        onKeyDown={onKeyDown}
-        className={`fixed z-[100] flex flex-col overflow-hidden bg-white text-foreground shadow-2xl ${floating ? 'rounded-xl border border-border' : ''}`}
+        tabIndex={-1}
+        className={`fixed z-[100] flex flex-col overflow-hidden bg-white text-foreground shadow-2xl outline-none ${floating ? 'rounded-xl border border-border' : ''}`}
         style={floating ? { left: effective.x, top: effective.y, width: effective.w, height: effective.h } : { left: 0, top: 0, width: '100vw', height: '100dvh' }}
       >
         <header className="flex flex-shrink-0 items-center gap-2 border-b border-border bg-white px-3 py-2">
