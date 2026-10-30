@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Prompt engineering is the practice of structuring AI instructions to constrain and direct model output. For code review, the most impactful variable is explicit scope: when you tell the model exactly which classes of issues to prioritise, it produces fewer style comments and more logic and security findings.',
           ],
           image: '/images/code-review-workflow-en.svg',
-          imageCaption: 'Structured AI code review workflow: adding function context and specifying review focus (security, performance, style) helps the model focus on actionable findings.',
+          imageCaption: 'AI code review workflow: add function context, specify the review focus, then triage the findings.',
         },
 
         promptFramework: {
@@ -419,7 +419,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-en.svg',
-          imageCaption: 'Four security categories for AI code review prompts: injection, authentication, hardcoded secrets, and business logic errors — each requires a different prompt framing.',
+          imageCaption: 'Four security categories for AI code review prompts: injection, authentication, secrets and business logic.',
         },
 
         securityDetails: {
@@ -965,7 +965,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Prompt Engineering ist die Praxis, KI-Anweisungen so zu strukturieren, dass die Modellausgabe eingegrenzt und gelenkt wird. Beim Code-Review ist der wirksamste Hebel ein expliziter Umfang: Wenn Sie dem Modell genau sagen, welche Problemklassen es priorisieren soll, erzeugt es weniger Stilkommentare und mehr Logik- und Sicherheitsbefunde.',
           ],
           image: '/images/code-review-workflow-de.svg',
-          imageCaption: 'Strukturierter KI-Code-Review-Workflow: Wenn Sie Funktionskontext ergänzen und den Review-Schwerpunkt (Sicherheit, Performance, Stil) angeben, kann sich das Modell auf umsetzbare Befunde konzentrieren.',
+          imageCaption: 'KI-Code-Review-Workflow: Funktionskontext ergänzen, Review-Fokus festlegen, Ergebnisse priorisieren.',
         },
 
         promptFramework: {
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-de.svg',
-          imageCaption: 'Vier Sicherheitskategorien für KI-Code-Review-Prompts: Injection, Authentifizierung, hartkodierte Secrets und Fehler in der Geschäftslogik — jede erfordert eine andere Prompt-Formulierung.',
+          imageCaption: 'Vier Sicherheitskategorien für KI-Code-Review-Prompts: Injection, Authentifizierung, Secrets und Geschäftslogik.',
         },
 
         securityDetails: {
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'El prompt engineering es la práctica de estructurar instrucciones de IA para restringir y dirigir la salida del modelo. Para la revisión de código, la variable más impactante es el alcance explícito: cuando le dices al modelo exactamente qué clases de problemas priorizar, produce menos comentarios de estilo y más hallazgos de lógica y seguridad.',
           ],
           image: '/images/code-review-workflow-es.svg',
-          imageCaption: 'Flujo de trabajo de revisión de código con IA estructurado: añadir contexto de función y especificar el enfoque de revisión (seguridad, rendimiento, estilo) ayuda al modelo a centrarse en hallazgos accionables.',
+          imageCaption: 'Flujo de revisión de código con IA: añade contexto de la función, define el foco de la revisión y prioriza los hallazgos.',
         },
 
         promptFramework: {
@@ -1639,7 +1639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-es.svg',
-          imageCaption: 'Cuatro categorías de seguridad para prompts de revisión de código con IA: inyección, autenticación, secretos codificados y errores de lógica de negocio — cada una requiere un encuadre de prompt diferente.',
+          imageCaption: 'Cuatro categorías de seguridad en prompts de revisión con IA: inyección, autenticación, secretos y lógica de negocio.',
         },
 
         securityDetails: {
@@ -2185,7 +2185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'هندسة التعليمات هي ممارسة هيكلة تعليمات الذكاء الاصطناعي لتقييد مخرجات النموذج وتوجيهها. لمراجعة الكود، المتغير الأكثر تأثيرًا هو النطاق الصريح: حين تخبر النموذج بالضبط ما فئات المشكلات التي تُعطيها أولوية، يُنتج تعليقات أسلوبية أقل ونتائج منطق وأمان أكثر.',
           ],
           image: '/images/code-review-workflow-ar.svg',
-          imageCaption: 'سير عمل مراجعة الكود بالذكاء الاصطناعي المنظَّم: إضافة سياق الدالة وتحديد تركيز المراجعة (الأمان، الأداء، الأسلوب) يساعد النموذج على التركيز على النتائج القابلة للتنفيذ.',
+          imageCaption: 'سير عمل مراجعة الكود بالذكاء الاصطناعي: إضافة سياق الدالة وتحديد محور المراجعة ثم فرز النتائج.',
         },
 
         promptFramework: {
@@ -2249,7 +2249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-ar.svg',
-          imageCaption: 'أربع فئات أمان لتعليمات مراجعة الكود بالذكاء الاصطناعي: الحقن والمصادقة والأسرار المُشفَّرة وأخطاء منطق الأعمال — كل منها يتطلب صياغة تعليمة مختلفة.',
+          imageCaption: 'أربع فئات أمنية لتعليمات مراجعة الكود بالذكاء الاصطناعي: الحقن والمصادقة والأسرار ومنطق الأعمال.',
         },
 
         securityDetails: {
@@ -2795,7 +2795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'O prompt engineering é a prática de estruturar instruções de IA para restringir e direcionar a saída do modelo. Para revisão de código, a variável mais impactante é o escopo explícito: quando você diz ao modelo exatamente quais classes de problemas priorizar, ele produz menos comentários de estilo e mais descobertas de lógica e segurança.',
           ],
           image: '/images/code-review-workflow-pt.svg',
-          imageCaption: 'Fluxo de trabalho de revisão de código com IA estruturado: adicionar contexto de função e especificar o foco da revisão (segurança, desempenho, estilo) ajuda o modelo a se concentrar em descobertas acionáveis.',
+          imageCaption: 'Fluxo de revisão de código com IA: adicione o contexto da função, defina o foco da revisão e priorize os achados.',
         },
 
         promptFramework: {
@@ -2859,7 +2859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-pt.svg',
-          imageCaption: 'Quatro categorias de segurança para prompts de revisão de código com IA: injeção, autenticação, segredos codificados e erros de lógica de negócios — cada uma requer um enquadramento de prompt diferente.',
+          imageCaption: 'Quatro categorias de segurança para prompts de revisão com IA: injeção, autenticação, segredos e lógica de negócio.',
         },
 
         securityDetails: {
@@ -3405,7 +3405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Le prompt engineering est la pratique qui consiste à structurer les instructions données à l\'IA pour contraindre et orienter la sortie du modèle. Pour la révision de code, la variable la plus déterminante est un périmètre explicite : lorsque vous indiquez précisément au modèle quelles classes de problèmes privilégier, il produit moins de commentaires de style et davantage de constats de logique et de sécurité.',
           ],
           image: '/images/code-review-workflow-fr.svg',
-          imageCaption: 'Workflow structuré de révision de code par IA : ajouter le contexte de la fonction et préciser l\'objectif de la révision (sécurité, performance, style) aide le modèle à se concentrer sur des constats exploitables.',
+          imageCaption: 'Workflow de révision de code par IA : ajouter le contexte de la fonction, cibler la revue, trier les résultats.',
         },
 
         promptFramework: {
@@ -3469,7 +3469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-fr.svg',
-          imageCaption: 'Quatre catégories de sécurité pour les prompts de révision de code par IA : injection, authentification, secrets codés en dur et erreurs de logique métier — chacune demande une formulation de prompt différente.',
+          imageCaption: 'Quatre catégories de sécurité pour les prompts de revue de code IA : injection, authentification, secrets, logique métier.',
         },
 
         securityDetails: {
@@ -4015,7 +4015,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'プロンプトエンジニアリングとは、モデルの出力を制約し方向づけるために AI への指示を構造化する手法です。コードレビューで最も効果が大きい変数は、明示的なスコープです。優先すべき問題の種類をモデルに正確に伝えると、スタイルのコメントが減り、ロジックとセキュリティの指摘が増えます。',
           ],
           image: '/images/code-review-workflow-ja.svg',
-          imageCaption: '構造化された AI コードレビューのワークフロー：関数のコンテキストを加え、レビューの焦点（セキュリティ、パフォーマンス、スタイル）を指定すると、モデルが実行可能な指摘に集中しやすくなります。',
+          imageCaption: 'AIコードレビューのワークフロー：関数の文脈を加え、レビューの焦点を指定し、結果を優先順位付けします。',
         },
 
         promptFramework: {
@@ -4079,7 +4079,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-ja.svg',
-          imageCaption: 'AI コードレビュー用プロンプトの4つのセキュリティカテゴリ：インジェクション、認証、ハードコードされたシークレット、ビジネスロジックのエラー——それぞれ異なるプロンプトの組み立てが必要です。',
+          imageCaption: 'AIコードレビュー用プロンプトの4つのセキュリティ分類：インジェクション、認証、シークレット、ビジネスロジック。',
         },
 
         securityDetails: {
@@ -4625,7 +4625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '提示工程是构造 AI 指令以约束和引导模型输出的实践。对代码审查而言，影响最大的变量是明确的范围：当你告诉模型究竟要优先关注哪几类问题时，它产生的风格评论更少，逻辑和安全方面的发现更多。',
           ],
           image: '/images/code-review-workflow-zh.svg',
-          imageCaption: '结构化的 AI 代码审查工作流：补充函数上下文并指明审查重点（安全、性能、风格），有助于模型聚焦可操作的发现。',
+          imageCaption: 'AI 代码审查工作流程：补充函数上下文、指定审查重点、再对结果分级处理。',
         },
 
         promptFramework: {
@@ -4689,7 +4689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-security-steps-zh.svg',
-          imageCaption: 'AI 代码审查提示的四个安全类别：注入、身份验证、硬编码密钥和业务逻辑错误——每一类都需要不同的提示表述。',
+          imageCaption: 'AI 代码审查提示词的四类安全问题：注入、认证、密钥泄露和业务逻辑缺陷。',
         },
 
         securityDetails: {
@@ -5238,7 +5238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '프롬프트 엔지니어링은 모델 출력을 제약하고 이끌도록 AI 지시를 구조화하는 방법입니다. 코드 리뷰에서 가장 영향력이 큰 변수는 명시적인 범위입니다. 모델에게 어떤 종류의 문제를 우선할지 정확히 알려 주면 스타일 코멘트는 줄고 로직 및 보안 발견 사항은 늘어납니다.',
         ],
         image: '/images/code-review-workflow-ko.svg',
-        imageCaption: 'AI 코드 리뷰 워크플로우 구조: 함수 컨텍스트를 추가하고 리뷰 초점(보안, 성능, 스타일)을 지정하면 모델이 실행 가능한 발견 사항에 집중하는 데 도움이 됩니다.',
+        imageCaption: 'AI 코드 리뷰 워크플로우: 함수 컨텍스트 추가, 리뷰 초점 지정, 결과 분류 순으로 진행합니다.',
       },
 
       promptFramework: {
@@ -5302,7 +5302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         tableFormat: true,
         image: '/images/code-review-security-steps-ko.svg',
-        imageCaption: 'AI 코드 리뷰 프롬프트를 위한 4가지 보안 카테고리: 인젝션, 인증, 하드코딩된 시크릿, 비즈니스 로직 오류 — 각각 다른 프롬프트 프레이밍이 필요합니다.',
+        imageCaption: 'AI 코드 리뷰 프롬프트의 4가지 보안 범주: 인젝션, 인증, 시크릿, 비즈니스 로직.',
       },
 
       securityDetails: {
