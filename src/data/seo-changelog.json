@@ -5340,7 +5340,11 @@
       "ctr": 0.01644575355915562,
       "period": "2026-09-24..2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "a8d52832-5490-4acf-8e0a-47f22416f4fb",
@@ -5366,7 +5370,11 @@
       "ctr": 0.014010803511141121,
       "period": "2026-09-24..2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "68f387b6-f89b-4aef-8212-5b2a267b8ded",
@@ -5392,7 +5400,11 @@
       "ctr": 0.014010803511141121,
       "period": "2026-09-24..2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "333287e7-4835-453c-8a9c-4c47d1a36f4d",
@@ -5419,7 +5431,11 @@
       "ctr": 0.006896551724137931,
       "period": "28d to 2026-10-23"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "2b49c47c-ae02-4eb0-a0a9-522e36873e4d",
@@ -5454,7 +5470,11 @@
       "ctr": 0,
       "period": "GSC export pasted 2026-10-24, window not stated"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "b59ccab3-a1ae-4abd-95ed-4c9695340fae",
@@ -5482,7 +5502,11 @@
       "ctr": 0.008937034529451592,
       "period": "28d to 2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "9c3ee211-3dee-42f3-b53c-0203070dd310",
@@ -5510,7 +5534,11 @@
       "ctr": 0.008937034529451592,
       "period": "28d to 2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "5d0813d2-663b-4e92-953c-d387a9ec173b",
@@ -5537,7 +5565,11 @@
       "ctr": 0.044897959183673466,
       "period": "28d to 2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "21a295f7-d0d7-4b05-81be-ea64a0e68116",
@@ -5563,7 +5595,11 @@
       "ctr": 0.03556485355648536,
       "period": "28d to 2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "ac49a276-a1bd-4800-9d3a-e57c04304e03",
@@ -5587,7 +5623,11 @@
       "ctr": 0.03333333333333333,
       "period": "28d to 2026-10-21"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "80199bad-4c5f-419d-a19d-992eb28062f5",
@@ -5615,7 +5655,11 @@
       "ctr": 0.024509803921568627,
       "period": "28d to 2026-10-25"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "34540cf8-92a3-4d5e-ba81-d53bc2b1ae59",
@@ -5643,7 +5687,11 @@
       "ctr": 0.023234200743494422,
       "period": "28d to 2026-10-25"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "bfba068b-401a-463d-a4bb-7c98c312480b",
@@ -5669,7 +5717,11 @@
       "ctr": 0,
       "period": "28d to 2026-10-25"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "761af059-3f21-4072-8edb-8b6b750eade3",
@@ -5689,7 +5741,11 @@
       "clicks": 2,
       "ctr": 0.00037979491074819596
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "a4fe1148-67e3-4344-8b8c-c255bc611fc0",
@@ -5715,7 +5771,11 @@
       "ctr": 0.0016771488469601676,
       "period": "GSC top queries, window not stated"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "f01e2a16-79d0-42dd-b7d3-337b88acc597",
@@ -5753,7 +5813,11 @@
       "ctr": 0,
       "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "700e752b-12e8-48bc-a72d-bf3544779830",
@@ -5791,7 +5855,11 @@
       "ctr": 0,
       "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "7255b63a-393e-4193-b2a6-363505ec18fe",
@@ -5829,7 +5897,11 @@
       "ctr": 0,
       "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "d68ca2df-d979-4b5d-95a1-b0ad156c1f08",
@@ -5867,7 +5939,11 @@
       "ctr": 0,
       "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "d4dc87f2-2b47-49b0-8079-334a16a331fe",
@@ -5905,7 +5981,11 @@
       "ctr": 0,
       "period": "GSC last 28d to 2026-10-30 (EN head query goose; 0 clicks on all 10 top queries)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "a78d76d5-8dec-41ef-9dd0-b8c7b53a487e",
@@ -5934,7 +6014,11 @@
       "ctr": 0.01001669449081803,
       "period": "GSC top queries pasted 2026-10-30 (28d window assumed)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "53c4ebd9-20b3-42c9-8981-4b55c3767e62",
@@ -5960,7 +6044,11 @@
       "ctr": 0.011807228915662651,
       "period": "2026-10-01 to 2026-10-28"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "a1b882f7-2c12-48b3-ac5d-6bd3347ef695",
@@ -5980,7 +6068,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "8d7f0a01-ae69-4e08-b69e-2e0ffdd1e1ab",
@@ -6000,7 +6092,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "65d4d3b5-e748-4836-959d-7accb40184da",
@@ -6020,7 +6116,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "286e6071-9743-42fd-9ac9-469504394f9e",
@@ -6040,7 +6140,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "bdc78b33-2fb7-4809-9f8e-2771c0bd8093",
@@ -6060,7 +6164,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "0282343e-196f-4b43-9001-297c3563f445",
@@ -6080,7 +6188,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "e2849d7b-b1d2-4f80-94eb-2a930bb8066f",
@@ -6100,7 +6212,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "e32cedb8-762a-499c-88aa-7d607fa52a49",
@@ -6120,7 +6236,11 @@
     ],
     "reason": "geo-meta-optimizer: GSC-driven refresh (Cloud/server/free/iPhone/open-source/safety queries), v7.6.0 facts re-verified; no year in meta",
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "bcaf63aa-dea3-456d-be15-45ad00b40bb5",
@@ -6145,7 +6265,11 @@
       "clicks": 2,
       "ctr": 0.01092896174863388
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "698bd124-3f98-46d9-a0b2-110ee5d5b106",
@@ -6168,7 +6292,11 @@
       "ctr": 0,
       "period": "GSC export 2026-10-31, window not stated"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "204b121f-0d44-4c54-b08c-e55a7c215e53",
@@ -6194,7 +6322,11 @@
       "ctr": 0,
       "period": "last 28 days to 2026-10-31"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "a4a849b4-1db4-4fe3-b04d-2b842bd59ce8",
@@ -6225,7 +6357,11 @@
       "light weight local llm chat interface"
     ],
     "baseline": null,
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "8694ec93-2df6-470c-a075-8126dd5fecd5",
@@ -6259,7 +6395,11 @@
       "ctr": 0.007333333333333333,
       "period": "28d to 2026-10-28 (blended page)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "eabda5e4-defd-41cc-b6a4-c8bec08aec16",
@@ -6290,7 +6430,11 @@
       "ctr": 0.014814814814814815,
       "period": "28d to 2026-10-28 (blended page)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "6f99a580-e9f1-404f-80f7-07f0eb663907",
@@ -6322,7 +6466,11 @@
       "ctr": 0.011406844106463879,
       "period": "28d to 2026-10-28 (blended page)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "5308ff7c-6c77-4bc5-9b52-b35cde8710ae",
@@ -6353,7 +6501,11 @@
       "ctr": 0.023121387283236993,
       "period": "28d to 2026-10-28 (blended page)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "c3eeecd6-e75b-4162-9ea8-1c4b968a43f1",
@@ -6385,7 +6537,11 @@
       "ctr": 0.009055627425614488,
       "period": "28d to 2026-10-28 (blended page)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "2cc1823f-7188-4d2b-b043-3d52ba59cec5",
@@ -6409,7 +6565,11 @@
       "ctr": 0,
       "period": "GSC export 2026-10-31 (last 28 days)"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   },
   {
     "id": "e48e300f-08a7-4d9c-a5dc-3dcb00975d3d",
@@ -6440,6 +6600,10 @@
       "ctr": 0.058823529411764705,
       "period": "28d to 2026-10-31"
     },
-    "deployedAt": null
+    "deployedAt": "2026-10-31",
+    "measure": {
+      "t14": "2026-11-14",
+      "t28": "2026-11-28"
+    }
   }
 ]
