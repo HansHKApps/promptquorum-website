@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs: Local TTS vs Cloud Voice AI (2026)',
     seoTitle: 'Kokoro vs ElevenLabs (2026): Local vs Cloud TTS',
@@ -799,6 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs: Lokale TTS vs Cloud-Sprach-KI (2026)',
     seoTitle: 'Kokoro vs ElevenLabs (2026): Lokal vs Cloud-TTS',
@@ -1593,6 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs : TTS local vs IA vocale cloud (2026)',
     seoTitle: 'Kokoro vs ElevenLabs (2026) : TTS local vs cloud',
@@ -2387,6 +2390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs: TTS local vs IA de voz en la nube (2026)',
     seoTitle: 'Kokoro vs ElevenLabs (2026): TTS local vs nube',
@@ -3181,6 +3185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs:ローカルTTS vs クラウド音声AI(2026)',
     seoTitle: 'Kokoro vs ElevenLabs(2026):ローカル vs クラウドTTS',
@@ -3975,6 +3980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs:本地TTS对比云端语音AI(2026)',
     seoTitle: 'Kokoro vs ElevenLabs(2026):本地对比云端TTS',
@@ -4769,6 +4775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs: TTS local vs IA de voz em nuvem (2026)',
     seoTitle: 'Kokoro vs ElevenLabs (2026): TTS local vs nuvem',
@@ -5563,6 +5570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro مقابل ElevenLabs: تحويل النص إلى كلام محلي مقابل الذكاء الاصطناعي الصوتي السحابي (2026)',
     seoTitle: 'Kokoro مقابل ElevenLabs (2026): محلي مقابل سحابي TTS',
@@ -6357,6 +6365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Kokoro vs ElevenLabs: 로컬 TTS와 클라우드 음성 AI 비교(2026)',
     seoTitle: 'Kokoro vs ElevenLabs(2026): 로컬 vs 클라우드 TTS',
