@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import sharp from 'sharp'
 import fs from 'fs'
 import path from 'path'
 import { splitBidiRuns } from '@/lib/hero/bidi-runs'
@@ -37,6 +38,8 @@ type HeroSpec = {
   // highlights/short bullets exist.
   facts?: { label?: string; value: string }[]
   footer?: string
+  // Optional photo under public/images (e.g. 'olares-one-desk.webp'), drawn full-bleed behind a dark gradient.
+  photo?: string
 }
 
 const stripMarkdown = (t: string) => t.replace(/\*\*/g, '').replace(/\s+/g, ' ').trim()
@@ -108,6 +111,20 @@ export async function POST(request: Request) {
   const lines = punchLines(spec)
   const showFormula = !!spec.callout && !spec.bullets?.length
   const fontSize = titleSize(title, spec.lang)
+  const photoName = spec.photo && /^[\w.-]+\.(webp|png|jpe?g)$/i.test(spec.photo) ? spec.photo : null
+  // Satori cannot decode webp, so the photo is composed with sharp (dark canvas in the photo's own
+  // background colour, photo placed on the text-free side) and handed over as JPEG.
+  let photoUri: string | null = null
+  if (photoName) {
+    const file = path.join(process.cwd(), 'public/images', photoName)
+    const shot = await sharp(file).resize({ width: 900 }).toBuffer()
+    const corner = await sharp(file).extract({ left: 0, top: 0, width: 1, height: 1 }).raw().toBuffer()
+    const canvas = await sharp({ create: { width: 1200, height: 675, channels: 3, background: { r: corner[0], g: corner[1], b: corner[2] } } })
+      .composite([{ input: shot, left: isRtl ? -210 : 420, top: 220 }])
+      .jpeg({ quality: 90 })
+      .toBuffer()
+    photoUri = `data:image/jpeg;base64,${canvas.toString('base64')}`
+  }
 
   return new ImageResponse(
     (
@@ -126,6 +143,13 @@ export async function POST(request: Request) {
           padding: '56px 72px',
         }}
       >
+        {photoUri && (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={photoUri} alt="" width={1200} height={675} style={{ position: 'absolute', top: '-56px', left: '-72px', width: '1200px', height: '675px' }} />
+            <div style={{ display: 'flex', position: 'absolute', top: '-56px', left: '-72px', width: '1200px', height: '675px', background: isRtl ? 'linear-gradient(270deg, rgba(30,10,74,0.9) 0%, rgba(30,10,74,0.55) 50%, rgba(30,10,74,0) 100%)' : 'linear-gradient(90deg, rgba(30,10,74,0.9) 0%, rgba(30,10,74,0.55) 50%, rgba(30,10,74,0) 100%)' }} />
+          </>
+        )}
         {/* Shine: soft glows plus a diagonal sheen band */}
         <div style={{ display: 'flex', position: 'absolute', top: '-180px', ...(isRtl ? { left: '-120px' } : { right: '-120px' }), width: '620px', height: '620px', borderRadius: '9999px', background: 'radial-gradient(circle, rgba(251,191,36,0.55) 0%, rgba(251,191,36,0) 68%)' }} />
         <div style={{ display: 'flex', position: 'absolute', bottom: '-240px', ...(isRtl ? { right: '-160px' } : { left: '-160px' }), width: '700px', height: '700px', borderRadius: '9999px', background: 'radial-gradient(circle, rgba(232,121,249,0.5) 0%, rgba(232,121,249,0) 70%)' }} />

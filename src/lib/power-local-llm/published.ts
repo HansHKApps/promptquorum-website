@@ -166,6 +166,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // ASUS mini PC + electricity/solar affiliate pages — 2026-09-01
   'asus-mini-pc-local-ai',
+  'olares-one-local-ai-review',
   'local-llm-electricity-cost-balcony-solar',
 
   // Flowise shutdown coverage — 2026-09-02

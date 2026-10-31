@@ -816,6 +816,7 @@ const HUB_THEMES: Array<{
       'deepseek-offline-china-self-hosted-2026',
       'best-web-hosting',
       'asus-mini-pc-local-ai',
+      'olares-one-local-ai-review',
       'local-llm-electricity-cost-balcony-solar',
       'enterprise-llm-inference-servers-vllm-tgi-nim',
       'lemonade-review',
