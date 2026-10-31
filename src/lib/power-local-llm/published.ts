@@ -163,6 +163,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Local AI Workstations category — 2026-10-31
   'local-ai-workstations-strix-halo-vs-dgx-spark',
+  'nvidia-dgx-spark-local-ai-workstation',
+  'amd-ryzen-ai-halo-local-ai-workstation',
+  'framework-desktop-local-ai-workstation',
+  'hp-z2-mini-g1a-local-ai-workstation',
+  'gmktec-evo-x2-local-ai-workstation',
+  'minisforum-ms-s1-max-local-ai-workstation',
 
   // ASUS mini PC + electricity/solar affiliate pages — 2026-09-01
   'asus-mini-pc-local-ai',
