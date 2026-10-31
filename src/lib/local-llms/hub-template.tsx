@@ -77,7 +77,17 @@ export function usesLocalLlmsHubTemplate(lang: string): boolean {
 }
 
 // Slugs behind the "Start here" cards come from HUB_START_HERE_ITEMS (same picks as the old hub).
-const START_ICONS: HubStartCard['icon'][] = ['package', 'trend', 'shield', 'home', 'trend']
+// One icon per start pick, matched to the topic (keyed by article slug, not by position).
+const START_ICON_BY_SLUG: Record<string, HubStartCard['icon']> = {
+  'how-to-install-ollama': 'download',
+  'top-open-source-models-ollama': 'trophy',
+  'best-local-llms-for-coding': 'code',
+  'local-llm-hardware-guide': 'chip',
+  'best-budget-gpus-local-llm': 'coins',
+  'best-cpu-only-llm': 'chip',
+  'apple-silicon-m5-local-llm': 'laptop',
+  'small-local-llm-models': 'feather',
+}
 const START_TONES: HubTone[] = ['violet', 'azure', 'rose', 'indigo', 'orchid']
 const PRIMARY_CTA_SLUG = 'how-to-install-ollama'
 
@@ -235,7 +245,7 @@ export function LocalLlmsHubTemplate({ lang, titlesMap, datesMap, liveSlugs }: L
       goal: item.label,
       title: titleOf(slug),
       tone: START_TONES[i % START_TONES.length],
-      icon: START_ICONS[i % START_ICONS.length],
+      icon: START_ICON_BY_SLUG[slug] ?? 'package',
       badge: i === 0 ? copy.start.badge : undefined,
     }
   })

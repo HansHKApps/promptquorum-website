@@ -214,6 +214,7 @@ export function HubTemplate(props: HubTemplateProps) {
                     </div>
                     <div className="mb-1.5 text-lg font-bold leading-snug">{card.goal}</div>
                     <div className="text-sm leading-relaxed text-text-secondary">{card.title}</div>
+                    <div className="mt-3 text-sm font-semibold text-primary" aria-hidden="true">→</div>
                   </Link>
                 )
               })}
