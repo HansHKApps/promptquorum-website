@@ -1,0 +1,78 @@
+// Only the lucide icons Ask Hans actually uses (categories.json `icon` fields + UI chrome),
+// imported by name so the bundle does not pull in the whole icon set.
+// Adding a category with a new icon name = add it here too (npm run askhans:check tells you).
+
+import {
+  AppWindow,
+  ArrowLeftRight,
+  ArrowRight,
+  Bot,
+  Brain,
+  Check,
+  ChevronDown,
+  CircleUser,
+  Code,
+  Compass,
+  Cpu,
+  Database,
+  Eye,
+  FileText,
+  HousePlug,
+  Image,
+  LayoutGrid,
+  Maximize2,
+  MessageCircle,
+  Mic,
+  Minimize2,
+  Monitor,
+  Plus,
+  Scale,
+  SendHorizontal,
+  Sun,
+  TerminalSquare,
+  Volume2,
+  Workflow,
+  X,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react'
+
+export const ASK_HANS_ICONS: Record<string, LucideIcon> = {
+  AppWindow,
+  ArrowLeftRight,
+  ArrowRight,
+  Bot,
+  Brain,
+  Check,
+  ChevronDown,
+  CircleUser,
+  Code,
+  Compass,
+  Cpu,
+  Database,
+  Eye,
+  FileText,
+  HousePlug,
+  Image,
+  LayoutGrid,
+  Maximize2,
+  MessageCircle,
+  Mic,
+  Minimize2,
+  Monitor,
+  Plus,
+  Scale,
+  SendHorizontal,
+  Sun,
+  TerminalSquare,
+  Volume2,
+  Workflow,
+  X,
+  Zap,
+}
+
+/** Renders a registered icon by name (unknown names fall back to a compass). */
+export function AskIcon({ name, className }: { name: string; className?: string }) {
+  const Icon = ASK_HANS_ICONS[name] ?? Compass
+  return <Icon className={className} aria-hidden="true" />
+}

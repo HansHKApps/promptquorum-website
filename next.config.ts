@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
   // any unchanged-content caching exemption.
   env: {
     BUILD_DATE: new Date().toISOString(),
+    // Ask Hans kill switch, inlined for the browser at build time. Hans only ever sets
+    // ASK_HANS_ENABLED; unset or anything but "true" = the German search behaves exactly as before.
+    NEXT_PUBLIC_ASK_HANS_ENABLED: process.env.ASK_HANS_ENABLED === 'true' ? 'true' : 'false',
   },
   compress: true,
   trailingSlash: false,

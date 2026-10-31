@@ -13,9 +13,11 @@ interface Props {
   isOpen: boolean
   onClose: () => void
   lang: string
+  /** Pre-fills the field when the modal opens (Ask Hans failure fallback: "use the normal search for my text"). */
+  initialQuery?: string
 }
 
-export function SearchModal({ isOpen, onClose, lang }: Props) {
+export function SearchModal({ isOpen, onClose, lang, initialQuery }: Props) {
   const router = useRouter()
   const t = translations[lang as keyof typeof translations] || translations.en
   const { search, loadIndex, isLoaded, getPopular } = useSearch(lang)
@@ -41,12 +43,13 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
   useEffect(() => {
     if (isOpen) {
       loadIndex()
+      if (initialQuery) setQuery(initialQuery)
       setTimeout(() => inputRef.current?.focus(), 50)
     } else {
       setQuery('')
       setActiveIndex(0)
     }
-  }, [isOpen, loadIndex])
+  }, [isOpen, loadIndex, initialQuery])
 
   // Lock body scroll
   useEffect(() => {

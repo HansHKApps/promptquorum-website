@@ -1,0 +1,866 @@
+{
+  "_readme": "Editable by Hans. Replace image/links and set affiliate:true later; no code change needed. icon = lucide-react icon name. Verify links with: npm run askhans:check",
+  "categories": [
+    {
+      "key": "prompt-engineering",
+      "label_de": "Prompt Engineering",
+      "label_en": "Prompt Engineering",
+      "icon": "TerminalSquare",
+      "image": "/askhans/prompt-engineering.svg",
+      "alt": "Prompt Engineering",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "pe-hub",
+          "title": "Prompt Engineering",
+          "description": "Alle Guides zum Thema im Überblick",
+          "url": "/de/prompt-engineering",
+          "icon": "TerminalSquare",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "pe-ides",
+          "title": "Prompt-Engineering-IDEs",
+          "description": "Die besten Werkzeuge zum Schreiben von Prompts",
+          "url": "/de/prompt-engineering/best-prompt-engineering-ides",
+          "icon": "Code",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "pe-mgmt",
+          "title": "Prompt-Management",
+          "description": "Plattformen zum Verwalten von Prompts",
+          "url": "/de/prompt-engineering/best-prompt-management-platforms",
+          "icon": "Database",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "local-llms",
+      "label_de": "Lokale LLMs",
+      "label_en": "Local LLMs",
+      "icon": "Brain",
+      "image": "/askhans/local-llms.svg",
+      "alt": "Lokale LLMs",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "ll-what",
+          "title": "Was sind lokale LLMs?",
+          "description": "Der Einstieg in lokale KI",
+          "url": "/de/local-llms/what-are-local-llms",
+          "icon": "Brain",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ll-ollama",
+          "title": "Ollama installieren",
+          "description": "Schritt für Schritt zum ersten Modell",
+          "url": "/de/local-llms/how-to-install-ollama",
+          "icon": "Zap",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ll-beginner",
+          "title": "Modelle für Einsteiger",
+          "description": "Welche Modelle sich zum Start eignen",
+          "url": "/de/local-llms/best-beginner-local-llm-models",
+          "icon": "Compass",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "mini-pcs",
+      "label_de": "Mini-PCs",
+      "label_en": "Mini PCs",
+      "icon": "Monitor",
+      "image": "/askhans/mini-pcs.svg",
+      "alt": "Mini-PCs",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "mp-best",
+          "title": "Beste Mini-PCs für lokale KI",
+          "description": "Vergleich geeigneter Mini-PCs",
+          "url": "/de/local-llms/best-mini-pcs-local-llm",
+          "icon": "Monitor",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "mp-amd",
+          "title": "AMD-Mini-PCs",
+          "description": "Mini-PCs mit AMD-Prozessor im Überblick",
+          "url": "/de/local-llms/best-amd-mini-pc-local-llm-2026",
+          "icon": "Cpu",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "mp-run",
+          "title": "Was kann ich ausführen?",
+          "description": "Hardware prüfen und passende Modelle finden",
+          "url": "/de/tools/what-can-i-run",
+          "icon": "Eye",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "gpus-vram",
+      "label_de": "Grafikkarten & VRAM",
+      "label_en": "GPUs and VRAM",
+      "icon": "Cpu",
+      "image": "/askhans/gpus-vram.svg",
+      "alt": "Grafikkarten & VRAM",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "gp-best",
+          "title": "Beste GPUs für lokale LLMs",
+          "description": "Grafikkarten im Vergleich",
+          "url": "/de/local-llms/best-gpus-for-local-llms",
+          "icon": "Cpu",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "gp-apple",
+          "title": "Apple Silicon oder NVIDIA?",
+          "description": "Zwei Plattformen im Vergleich",
+          "url": "/de/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+          "icon": "Monitor",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "gp-can",
+          "title": "Läuft das auf meinem PC?",
+          "description": "Kompatibilität selbst prüfen",
+          "url": "/de/tools/can-i-run-this",
+          "icon": "Eye",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "smart-home",
+      "label_de": "Smart Home",
+      "label_en": "Smart Home",
+      "icon": "HousePlug",
+      "image": "/askhans/smart-home.svg",
+      "alt": "Smart Home",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "sh-hub",
+          "title": "Smart Home",
+          "description": "Lokale KI im Zuhause",
+          "url": "/de/smart-home",
+          "icon": "HousePlug",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "sh-ha",
+          "title": "Home Assistant starten",
+          "description": "Erste Schritte mit Home Assistant",
+          "url": "/de/smart-home/home-assistant-getting-started",
+          "icon": "Zap",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "sh-hw",
+          "title": "Hardware für lokales Smart Home",
+          "description": "Welche Geräte sich eignen",
+          "url": "/de/smart-home/best-hardware-for-local-smart-home",
+          "icon": "Cpu",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "balcony-solar",
+      "label_de": "Balkonkraftwerk",
+      "label_en": "Balcony solar",
+      "icon": "Sun",
+      "image": "/askhans/balcony-solar.svg",
+      "alt": "Balkonkraftwerk",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "bs-hub",
+          "title": "Balkonkraftwerk",
+          "description": "Grundlagen und Überblick",
+          "url": "/de/balcony-solar",
+          "icon": "Sun",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "bs-batt",
+          "title": "Speicher für Balkonkraftwerke",
+          "description": "Batteriespeicher im Überblick",
+          "url": "/de/balcony-solar/balcony-solar-battery-storage-standard-2027",
+          "icon": "Database",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "bs-anker",
+          "title": "Anker Solix im Überblick",
+          "description": "Ein System im Detail",
+          "url": "/de/balcony-solar/anker-solix-balcony-solar",
+          "icon": "Zap",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "find-app",
+      "label_de": "App finden",
+      "label_en": "Find an app",
+      "icon": "LayoutGrid",
+      "image": "/askhans/find-app.svg",
+      "alt": "App finden",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "fa-dir",
+          "title": "Software-Verzeichnis",
+          "description": "Alle Apps durchsuchen und filtern",
+          "url": "/de/directory",
+          "icon": "LayoutGrid",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "fa-iphone",
+          "title": "Apps für das iPhone",
+          "description": "Lokale KI auf dem iPhone",
+          "url": "/de/power-local-llm/best-local-llm-apps-iphone-2026",
+          "icon": "Monitor",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "fa-android",
+          "title": "Apps für Android",
+          "description": "Lokale KI auf Android",
+          "url": "/de/power-local-llm/best-local-llm-apps-android-2026",
+          "icon": "Monitor",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "chat-clients",
+      "label_de": "Chat-Clients",
+      "label_en": "Chat clients",
+      "icon": "MessageCircle",
+      "image": "/askhans/chat-clients.svg",
+      "alt": "Chat-Clients",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "cc-comp",
+          "title": "Chat-Apps im Vergleich",
+          "description": "Chat und Assistenten gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-chat-assistants-compared",
+          "icon": "MessageCircle",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "cc-anything",
+          "title": "AnythingLLM im Test",
+          "description": "Ein Chat-Client im Detail",
+          "url": "/de/power-local-llm/anythingllm-review",
+          "icon": "Brain",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "cc-jan",
+          "title": "Jan im Test",
+          "description": "Ein Chat-Client im Detail",
+          "url": "/de/power-local-llm/jan-review",
+          "icon": "Brain",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "inference-engines",
+      "label_de": "Inferenz-Engines",
+      "label_en": "Inference engines",
+      "icon": "Zap",
+      "image": "/askhans/inference-engines.svg",
+      "alt": "Inferenz-Engines",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "ie-comp",
+          "title": "Engines im Vergleich",
+          "description": "Ausführen und Bereitstellen im Überblick",
+          "url": "/de/power-local-llm/local-llm-run-serve-compared",
+          "icon": "Zap",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ie-ollama",
+          "title": "Ollama im Test",
+          "description": "Die bekannteste Engine im Detail",
+          "url": "/de/power-local-llm/ollama-review",
+          "icon": "Zap",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ie-lms",
+          "title": "LM Studio im Test",
+          "description": "Ein Desktop-Programm im Detail",
+          "url": "/de/power-local-llm/lm-studio-review",
+          "icon": "Monitor",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "agent-frameworks",
+      "label_de": "Agent-Frameworks",
+      "label_en": "Agent frameworks",
+      "icon": "Bot",
+      "image": "/askhans/agent-frameworks.svg",
+      "alt": "Agent-Frameworks",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "af-comp",
+          "title": "Code und Entwicklung im Vergleich",
+          "description": "Agenten und Frameworks gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-code-development-compared",
+          "icon": "Bot",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "af-langchain",
+          "title": "LangChain im Test",
+          "description": "Ein Framework im Detail",
+          "url": "/de/power-local-llm/langchain-review",
+          "icon": "Code",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "af-openclaw",
+          "title": "OpenClaw im Test",
+          "description": "Ein Agent im Detail",
+          "url": "/de/power-local-llm/openclaw-review",
+          "icon": "Bot",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "code-assistants",
+      "label_de": "Code-Assistenten",
+      "label_en": "Code assistants",
+      "icon": "Code",
+      "image": "/askhans/code-assistants.svg",
+      "alt": "Code-Assistenten",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "ca-comp",
+          "title": "Code und Entwicklung im Vergleich",
+          "description": "Assistenten und Plugins gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-code-development-compared",
+          "icon": "Code",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ca-continue",
+          "title": "Continue im Test",
+          "description": "Ein IDE-Plugin im Detail",
+          "url": "/de/power-local-llm/continue-dev-review",
+          "icon": "Code",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ca-cline",
+          "title": "Cline im Test",
+          "description": "Ein Assistent im Detail",
+          "url": "/de/power-local-llm/cline-review",
+          "icon": "Bot",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "document-pdf-chat",
+      "label_de": "Dokumente & PDF-Chat",
+      "label_en": "Document and PDF chat",
+      "icon": "FileText",
+      "image": "/askhans/document-pdf-chat.svg",
+      "alt": "Dokumente & PDF-Chat",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "dp-comp",
+          "title": "Wissen und Suche im Vergleich",
+          "description": "Dokumente und RAG gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
+          "icon": "FileText",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "dp-anything",
+          "title": "AnythingLLM im Test",
+          "description": "Mit Dokumenten chatten",
+          "url": "/de/power-local-llm/anythingllm-review",
+          "icon": "Brain",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "dp-ragflow",
+          "title": "RAGFlow im Test",
+          "description": "Dokumentenverständnis im Detail",
+          "url": "/de/power-local-llm/ragflow-document-understanding-rag-review",
+          "icon": "FileText",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "rag-vector-databases",
+      "label_de": "RAG & Vektordatenbanken",
+      "label_en": "RAG and vector databases",
+      "icon": "Database",
+      "image": "/askhans/rag-vector-databases.svg",
+      "alt": "RAG & Vektordatenbanken",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "rv-comp",
+          "title": "Wissen und Suche im Vergleich",
+          "description": "RAG und Vektordatenbanken im Überblick",
+          "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
+          "icon": "Database",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "rv-llama",
+          "title": "LlamaIndex im Test",
+          "description": "Ein RAG-Framework im Detail",
+          "url": "/de/power-local-llm/llamaindex-rag-framework-review",
+          "icon": "Database",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "rv-qdrant",
+          "title": "Qdrant im Test",
+          "description": "Eine Vektordatenbank im Detail",
+          "url": "/de/power-local-llm/qdrant-review",
+          "icon": "Database",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "image-generation",
+      "label_de": "Bildgenerierung",
+      "label_en": "Image generation",
+      "icon": "Image",
+      "image": "/askhans/image-generation.svg",
+      "alt": "Bildgenerierung",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "ig-comp",
+          "title": "Bild und Video im Vergleich",
+          "description": "Werkzeuge gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-images-video-compared",
+          "icon": "Image",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ig-comfy",
+          "title": "ComfyUI im Test",
+          "description": "Ein Bildgenerator im Detail",
+          "url": "/de/power-local-llm/comfyui-review",
+          "icon": "Image",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "ig-fooocus",
+          "title": "Fooocus im Test",
+          "description": "Ein einfacher Einstieg",
+          "url": "/de/power-local-llm/fooocus-review",
+          "icon": "Image",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "speech-to-text",
+      "label_de": "Spracherkennung",
+      "label_en": "Speech-to-text",
+      "icon": "Mic",
+      "image": "/askhans/speech-to-text.svg",
+      "alt": "Spracherkennung",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "st-comp",
+          "title": "Sprache und Audio im Vergleich",
+          "description": "Werkzeuge gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-voice-audio-compared",
+          "icon": "Mic",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "st-whisper",
+          "title": "Whisper.cpp im Test",
+          "description": "Spracherkennung im Detail",
+          "url": "/de/power-local-llm/whisper-cpp-review",
+          "icon": "Mic",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "st-ha",
+          "title": "Whisper für Home Assistant",
+          "description": "Sprachsteuerung lokal betreiben",
+          "url": "/de/smart-home/local-whisper-home-assistant",
+          "icon": "HousePlug",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "text-to-speech-voice",
+      "label_de": "Sprachausgabe & Stimme",
+      "label_en": "Text-to-speech and voice",
+      "icon": "Volume2",
+      "image": "/askhans/text-to-speech-voice.svg",
+      "alt": "Sprachausgabe & Stimme",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "tv-comp",
+          "title": "Sprache und Audio im Vergleich",
+          "description": "Werkzeuge gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-voice-audio-compared",
+          "icon": "Volume2",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "tv-voicebox",
+          "title": "Voicebox im Test",
+          "description": "Sprachausgabe im Detail",
+          "url": "/de/power-local-llm/voicebox-review",
+          "icon": "Volume2",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "tv-dir",
+          "title": "Software-Verzeichnis",
+          "description": "Alle Apps durchsuchen",
+          "url": "/de/directory",
+          "icon": "LayoutGrid",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "personal-assistants",
+      "label_de": "Persönliche Assistenten",
+      "label_en": "Personal assistants",
+      "icon": "CircleUser",
+      "image": "/askhans/personal-assistants.svg",
+      "alt": "Persönliche Assistenten",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "pa-comp",
+          "title": "Chat und Assistenten im Vergleich",
+          "description": "Assistenten gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-chat-assistants-compared",
+          "icon": "CircleUser",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "pa-ha",
+          "title": "Home Assistant Assist im Test",
+          "description": "Ein Sprachassistent im Detail",
+          "url": "/de/power-local-llm/home-assistant-assist-review",
+          "icon": "HousePlug",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "pa-claw",
+          "title": "OpenClaw im Test",
+          "description": "Ein Assistent im Detail",
+          "url": "/de/power-local-llm/openclaw-review",
+          "icon": "Bot",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "vision-ocr",
+      "label_de": "Bilderkennung & OCR",
+      "label_en": "Vision and OCR",
+      "icon": "Eye",
+      "image": "/askhans/vision-ocr.svg",
+      "alt": "Bilderkennung & OCR",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "vo-comp",
+          "title": "Bild und Video im Vergleich",
+          "description": "Werkzeuge gegenübergestellt",
+          "url": "/de/power-local-llm/local-llm-images-video-compared",
+          "icon": "Eye",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "vo-llava",
+          "title": "LLaVA im Test",
+          "description": "Bilder verstehen im Detail",
+          "url": "/de/power-local-llm/llava-review",
+          "icon": "Eye",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "vo-immich",
+          "title": "Immich im Test",
+          "description": "Fotos lokal verwalten",
+          "url": "/de/power-local-llm/immich-review",
+          "icon": "Image",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "workflow-automation",
+      "label_de": "Workflows & Automatisierung",
+      "label_en": "Workflow and automation",
+      "icon": "Workflow",
+      "image": "/askhans/workflow-automation.svg",
+      "alt": "Workflows & Automatisierung",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "wa-n8n",
+          "title": "n8n im Test",
+          "description": "Workflows bauen im Detail",
+          "url": "/de/power-local-llm/n8n-review",
+          "icon": "Workflow",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "wa-dify",
+          "title": "Dify im Test",
+          "description": "Ein Workflow-Builder im Detail",
+          "url": "/de/power-local-llm/dify-ai-workflow-builder-review",
+          "icon": "Workflow",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "wa-langflow",
+          "title": "Langflow im Test",
+          "description": "Visuelle Orchestrierung im Detail",
+          "url": "/de/power-local-llm/langflow-visual-ai-orchestration-review",
+          "icon": "Workflow",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "promptquorum-apps",
+      "label_de": "PQ Apps",
+      "label_en": "PromptQuorum apps",
+      "icon": "AppWindow",
+      "image": "/askhans/promptquorum-apps.svg",
+      "alt": "PQ Apps",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "pq-hub",
+          "title": "PQ Apps",
+          "description": "Die Apps von PromptQuorum",
+          "url": "/de/pq-apps",
+          "icon": "AppWindow",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "pq-dir",
+          "title": "Software-Verzeichnis",
+          "description": "Alle Apps durchsuchen",
+          "url": "/de/directory",
+          "icon": "LayoutGrid",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "pq-about",
+          "title": "Über uns",
+          "description": "Wer hinter PromptQuorum steht",
+          "url": "/de/about",
+          "icon": "Compass",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    },
+    {
+      "key": "default",
+      "label_de": "Allgemein",
+      "label_en": "General (fallback)",
+      "icon": "Compass",
+      "image": "/askhans/default.svg",
+      "alt": "Allgemein",
+      "affiliate": false,
+      "links": [
+        {
+          "id": "df-dir",
+          "title": "Software-Verzeichnis",
+          "description": "Alle Apps durchsuchen und filtern",
+          "url": "/de/directory",
+          "icon": "LayoutGrid",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "df-ll",
+          "title": "Lokale LLMs",
+          "description": "Der Einstieg in lokale KI",
+          "url": "/de/local-llms",
+          "icon": "Brain",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        },
+        {
+          "id": "df-run",
+          "title": "Was kann ich ausführen?",
+          "description": "Hardware prüfen",
+          "url": "/de/tools/what-can-i-run",
+          "icon": "Eye",
+          "placeholder": true,
+          "external": false,
+          "affiliate": false
+        }
+      ]
+    }
+  ]
+}

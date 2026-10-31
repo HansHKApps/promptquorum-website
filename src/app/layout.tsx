@@ -44,6 +44,7 @@ import { ClarityLoader } from '@/components/ClarityLoader'
 import { ConsentEnforcer } from '@/components/ConsentEnforcer'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
 import { McpFloatingCta } from '@/components/McpFloatingCta'
+import { AskHansRoot } from '@/components/askhans/AskHansRoot'
 import { TableOfContentsButton } from '@/components/TableOfContentsButton'
 import { GooglePreferredSourcesCard } from '@/components/GooglePreferredSourcesCard'
 import { ConsentedAnalytics } from '@/components/ConsentedAnalytics'
@@ -262,6 +263,7 @@ export default function RootLayout({
           <CookieBanner />
           <PushPromptBanner />
           <McpFloatingCta />
+          {process.env.NEXT_PUBLIC_ASK_HANS_ENABLED === 'true' && <AskHansRoot />}
           <TableOfContentsButton />
           <GooglePreferredSourcesCard />
 
