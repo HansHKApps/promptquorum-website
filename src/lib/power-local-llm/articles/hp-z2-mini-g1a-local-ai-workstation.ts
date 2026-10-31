@@ -5,8 +5,8 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -204,8 +204,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'HP Z2 Mini G1a for Local AI: Specs, Price and Verdict',
       'description': 'HP Z2 Mini G1a for local AI: Ryzen AI Max+ PRO 395, up to 128 GB, specs, sourced US prices, independent LLM test results and who should skip it.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -226,8 +226,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -425,8 +425,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'HP Z2 Mini G1a für lokale KI: Specs, Preis und Fazit',
       'description': 'HP Z2 Mini G1a für lokale KI: Ryzen AI Max+ PRO 395, bis zu 128 GB, Specs, belegte US-Preise, unabhängige LLM-Tests und für wen er nichts ist.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -447,8 +447,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -646,8 +646,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': "HP Z2 Mini G1a pour l'IA locale : fiche technique, prix et verdict",
       'description': "HP Z2 Mini G1a pour l'IA locale : Ryzen AI Max+ PRO 395, jusqu'à 128 Go, specs, prix US sourcés, tests LLM indépendants et pour qui l'éviter.",
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -668,8 +668,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -867,8 +867,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'ローカルAI向けHP Z2 Mini G1a: 仕様・価格・総評',
       'description': 'HP Z2 Mini G1aをローカルAIの視点で解説。Ryzen AI Max+ PRO 395と最大128GB、仕様、出典付き米国価格、独立したLLMテスト結果、見送るべき人まで。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -888,8 +888,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -1087,8 +1087,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '用于本地AI的HP Z2 Mini G1a：规格、价格与结论',
       'description': 'HP Z2 Mini G1a本地AI评测：Ryzen AI Max+ PRO 395、最高128 GB内存，含规格、有来源的美国价格、独立的大模型测试结果，以及哪些人应跳过它。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1108,8 +1108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -1307,8 +1307,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'HP Z2 Mini G1a para IA local: especificaciones, precio y veredicto',
       'description': 'HP Z2 Mini G1a para IA local: Ryzen AI Max+ PRO 395, hasta 128 GB, especificaciones, precios de EE. UU. con fuente y pruebas independientes con LLM.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1329,8 +1329,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -1528,8 +1528,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'HP Z2 Mini G1a para IA local: especificações, preço e veredito',
       'description': 'HP Z2 Mini G1a para IA local: Ryzen AI Max+ PRO 395, até 128 GB, specs, preços dos EUA com fonte, testes independentes de LLM e quem deve evitar.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1550,8 +1550,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -1749,8 +1749,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم',
       'description': 'HP Z2 Mini G1a للذكاء الاصطناعي المحلي: Ryzen AI Max+ PRO 395 وذاكرة حتى 128 GB، المواصفات وأسعار أمريكية موثقة ونتائج LLM مستقلة ولمن لا يناسب.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1770,8 +1770,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'HP Z2 Mini G1a',
@@ -1969,8 +1969,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '로컬 AI용 HP Z2 Mini G1a: 사양, 가격, 평가',
       'description': 'HP Z2 Mini G1a 로컬 AI 가이드: Ryzen AI Max+ PRO 395, 최대 128GB, 사양, 출처 표기 미국 가격, 독립 LLM 테스트 결과, 비추천 대상.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',

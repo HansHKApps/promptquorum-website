@@ -5,8 +5,8 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -203,8 +203,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict',
       'description': 'AMD Ryzen AI Halo specs for local AI: 128 GB Ryzen AI Max+ 395 and 192 GB PRO 495 versions, sourced US prices and what independent reviews found.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -225,8 +225,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -423,8 +423,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'AMD Ryzen AI Halo für lokale KI: Spezifikationen, Preis und Fazit',
       'description': 'AMD Ryzen AI Halo für lokale KI: Versionen mit 128 GB (Ryzen AI Max+ 395) und 192 GB (PRO 495), belegte US-Preise und was unabhängige Tests ergaben.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -445,8 +445,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -643,8 +643,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': "AMD Ryzen AI Halo pour l'IA locale : caractéristiques, prix et verdict",
       'description': "AMD Ryzen AI Halo pour l'IA locale : versions 128 Go (Ryzen AI Max+ 395) et 192 Go (PRO 495), prix US sourcés et ce qu'ont constaté les tests indépendants.",
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -665,8 +665,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -863,8 +863,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'ローカルAI向けAMD Ryzen AI Halo: 仕様・価格・評価',
       'description': 'ローカルAI向けAMD Ryzen AI Haloの仕様を解説。128GB版（395）と192GB版（PRO 495）、出典付き米国価格、独立レビューの結果を整理しました。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -884,8 +884,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1082,8 +1082,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '用于本地AI的AMD Ryzen AI Halo：规格、价格与结论',
       'description': 'AMD Ryzen AI Halo本地AI规格：128 GB的Ryzen AI Max+ 395与192 GB的PRO 495两个版本、有来源的美国价格，以及独立评测的发现。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1103,8 +1103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1301,8 +1301,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'AMD Ryzen AI Halo para IA local: especificaciones, precio y veredicto',
       'description': 'Specs del AMD Ryzen AI Halo para IA local: versiones de 128 GB (Max+ 395) y 192 GB (PRO 495), precios en EE. UU. con fuentes y qué hallaron las reseñas.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1323,8 +1323,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1521,8 +1521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'AMD Ryzen AI Halo para IA local: especificações, preço e veredito',
       'description': 'Specs do AMD Ryzen AI Halo para IA local: versões de 128 GB (395) e 192 GB (PRO 495), preços nos EUA com fonte e o que mostram as análises independentes.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1543,8 +1543,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1741,8 +1741,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
       'description': 'مواصفات AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: نسخة 128 GB بشريحة 395 ونسخة 192 GB بشريحة PRO 495، وأسعار أمريكية موثقة ونتائج المراجعات المستقلة.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1762,8 +1762,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'AMD Ryzen AI Halo',
@@ -1960,8 +1960,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '로컬 AI용 AMD Ryzen AI Halo: 사양, 가격, 평가',
       'description': '로컬 AI용 AMD Ryzen AI Halo 사양: Ryzen AI Max+ 395 128GB와 PRO 495 192GB 버전, 출처 표기 미국 가격, 독립 리뷰 결과.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
