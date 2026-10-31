@@ -347,7 +347,7 @@ export function recommendStack(args: RecommendStackArgs) {
       const app: ToolRecord | undefined = localAiApps.find((a) => a.slug === slug)
       return app ? summarize(app, hardwareFit(app, args.ramGb, args.vramGb), { ramGb: args.ramGb, vramGb: args.vramGb }) : { slug, name: slug }
     }),
-    articleUrl: `${SITE}/power-local-llm/local-llm-software-directory-2026#stacks`,
+    articleUrl: `${SITE}/directory#stacks`,
   }))
 
   return {

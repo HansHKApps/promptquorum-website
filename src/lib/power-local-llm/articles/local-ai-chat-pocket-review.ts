@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get Local AI Chat Pocket',
         content: [
           '**Local AI Chat - pocket is distributed through the Apple App Store.** The download is 256.4 MB and the app is a free download with in-app purchases.',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which lists the app alongside other mobile and desktop local AI tools.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which lists the app alongside other mobile and desktop local AI tools.',
         ],
         columns: ['Channel', 'Get It'],
         rows: [
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Oscilla Review](/power-local-llm/oscilla-review) — an iOS app with a fixed catalog of on-device models.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — open-source on-device chat for iOS and Android.',
           '[MLXHub Review](/power-local-llm/mlxhub-review) — an iPhone and iPad app with a LAN server and multi-device model splitting.',
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
         ],
       },
     },
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI Chat Pocket herunterladen',
         content: [
           '**Local AI Chat - pocket wird über den Apple App Store vertrieben.** Der Download umfasst 256.4 MB, und die App lässt sich kostenlos laden, mit In-App-Käufen.',
-          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) von PromptQuorum, das die App neben anderen mobilen und Desktop-Tools für lokale KI listet.',
+          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/directory) von PromptQuorum, das die App neben anderen mobilen und Desktop-Tools für lokale KI listet.',
         ],
         columns: ['Kanal', 'Download'],
         rows: [
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Oscilla-Rezension](/de/power-local-llm/oscilla-review) — eine iOS-App mit festem Katalog von On-Device-Modellen.',
           '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — quelloffener On-Device-Chat für iOS und Android.',
           '[MLXHub-Rezension](/de/power-local-llm/mlxhub-review) — eine iPhone- und iPad-App mit LAN-Server und Modellaufteilung auf mehrere Geräte.',
-          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
+          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
         ],
       },
     },
@@ -811,7 +811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir Local AI Chat Pocket',
         content: [
           '**Local AI Chat - pocket est distribuée par l\'Apple App Store.** Le téléchargement pèse 256,4 Mo et l\'application se télécharge gratuitement, avec des achats intégrés.',
-          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui recense l\'application aux côtés d\'autres outils d\'IA locale mobiles et de bureau.',
+          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/directory) de PromptQuorum, qui recense l\'application aux côtés d\'autres outils d\'IA locale mobiles et de bureau.',
         ],
         columns: ['Canal', 'Obtenir'],
         rows: [
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis Oscilla](/fr/power-local-llm/oscilla-review) — une application iOS avec un catalogue fixe de modèles sur l\'appareil.',
           '[Avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — chat open source sur l\'appareil pour iOS et Android.',
           '[Avis MLXHub](/fr/power-local-llm/mlxhub-review) — une application iPhone et iPad avec serveur LAN et répartition de modèle entre appareils.',
-          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
+          '[Le répertoire complet des logiciels LLM locaux](/fr/directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
         ],
       },
     },
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI Chat Pocketを入手する',
         content: [
           '**Local AI Chat - pocketはApple App Storeで配布されています。** ダウンロードサイズは256.4 MBで、アプリはダウンロード無料、アプリ内課金ありです。',
-          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を補完するものです。このディレクトリはこのアプリを他のモバイルやデスクトップのローカルAIツールと並べて掲載しています。',
+          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)を補完するものです。このディレクトリはこのアプリを他のモバイルやデスクトップのローカルAIツールと並べて掲載しています。',
         ],
         columns: ['入手経路', '入手方法'],
         rows: [
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Oscillaレビュー](/ja/power-local-llm/oscilla-review) — オンデバイスモデルの固定カタログを備えたiOSアプリ。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — iOSとAndroid向けのオープンソースのオンデバイスチャット。',
           '[MLXHubレビュー](/ja/power-local-llm/mlxhub-review) — LANサーバーと複数端末でのモデル分割に対応するiPhoneとiPad向けアプリ。',
-          '[完全なローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
+          '[完全なローカルLLMソフトウェアディレクトリ](/ja/directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
         ],
       },
     },
@@ -1521,7 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取Local AI Chat Pocket',
         content: [
           '**Local AI Chat - pocket通过Apple App Store发布。** 下载大小为256.4 MB，应用免费下载，含应用内购买。',
-          '本评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的配套文章，该目录将这款应用与其他移动端和桌面端本地AI工具一并列出。',
+          '本评测是PromptQuorum[本地LLM软件目录](/zh/directory)的配套文章，该目录将这款应用与其他移动端和桌面端本地AI工具一并列出。',
         ],
         columns: ['渠道', '获取方式'],
         rows: [
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Oscilla评测](/zh/power-local-llm/oscilla-review) — 内置固定设备端模型目录的iOS应用。',
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review) — 适用于iOS和Android的开源设备端聊天应用。',
           '[MLXHub评测](/zh/power-local-llm/mlxhub-review) — 带有局域网服务器和多设备模型拆分功能的iPhone和iPad应用。',
-          '[完整本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 涵盖多平台本地LLM工具的更全面目录。',
+          '[完整本地LLM软件目录](/zh/directory) — 涵盖多平台本地LLM工具的更全面目录。',
         ],
       },
     },
@@ -1876,7 +1876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo conseguir Local AI Chat Pocket',
         content: [
           '**Local AI Chat - pocket se distribuye a través de la App Store de Apple.** La descarga ocupa 256.4 MB y la app se descarga gratis con compras dentro de la app.',
-          'Esta reseña complementa el [directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que incluye la app junto a otras herramientas de IA local móviles y de escritorio.',
+          'Esta reseña complementa el [directorio de software LLM local](/es/directory) de PromptQuorum, que incluye la app junto a otras herramientas de IA local móviles y de escritorio.',
         ],
         columns: ['Canal', 'Cómo conseguirla'],
         rows: [
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Oscilla](/es/power-local-llm/oscilla-review) — una app de iOS con un catálogo fijo de modelos en el dispositivo.',
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — chat en el dispositivo de código abierto para iOS y Android.',
           '[Reseña de MLXHub](/es/power-local-llm/mlxhub-review) — una app para iPhone y iPad con servidor LAN y reparto de modelos entre dispositivos.',
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
         ],
       },
     },
@@ -2231,7 +2231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como obter o Local AI Chat Pocket',
         content: [
           '**O Local AI Chat - pocket é distribuído pela Apple App Store.** O download tem 256.4 MB e o aplicativo é gratuito para baixar, com compras no aplicativo.',
-          'Esta análise complementa o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum, que lista o app ao lado de outras ferramentas de IA local para celular e desktop.',
+          'Esta análise complementa o [diretório de software de LLM local](/pt/directory) da PromptQuorum, que lista o app ao lado de outras ferramentas de IA local para celular e desktop.',
         ],
         columns: ['Canal', 'Como obter'],
         rows: [
@@ -2486,7 +2486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Oscilla](/pt/power-local-llm/oscilla-review) — um aplicativo iOS com um catálogo fixo de modelos no dispositivo.',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — chat de código aberto no dispositivo para iOS e Android.',
           '[Análise do MLXHub](/pt/power-local-llm/mlxhub-review) — um aplicativo para iPhone e iPad com servidor LAN e divisão de modelos entre dispositivos.',
-          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
+          '[O diretório completo de software de LLM local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
         ],
       },
     },
@@ -2586,7 +2586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيفية الحصول على Local AI Chat Pocket',
         content: [
           '**يُوزَّع Local AI Chat - pocket عبر متجر Apple App Store.** حجم التنزيل 256.4 MB، والتطبيق مجاني التنزيل مع مشتريات داخل التطبيق.',
-          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum، الذي يدرج التطبيق إلى جانب أدوات ذكاء اصطناعي محلي أخرى للجوال وسطح المكتب.',
+          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/directory) من PromptQuorum، الذي يدرج التطبيق إلى جانب أدوات ذكاء اصطناعي محلي أخرى للجوال وسطح المكتب.',
         ],
         columns: ['القناة', 'كيفية الحصول عليه'],
         rows: [
@@ -2841,7 +2841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Oscilla](/ar/power-local-llm/oscilla-review) — تطبيق iOS بكتالوج ثابت من النماذج على الجهاز.',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — دردشة مفتوحة المصدر على الجهاز لنظامي iOS وأندرويد.',
           '[مراجعة MLXHub](/ar/power-local-llm/mlxhub-review) — تطبيق للآيفون والآيباد مع خادم شبكة محلية وتقسيم النموذج على عدة أجهزة.',
-          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
+          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
         ],
       },
     },
@@ -2941,7 +2941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI Chat Pocket 받기',
         content: [
           '**Local AI Chat - pocket은 Apple App Store로 배포됩니다.** 앱 용량은 256.4 MB이며 앱 내 구매가 있는 무료 앱입니다.',
-          '이 리뷰는 이 앱을 다른 모바일 및 데스크톱 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 짝을 이루는 콘텐츠입니다.',
+          '이 리뷰는 이 앱을 다른 모바일 및 데스크톱 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 짝을 이루는 콘텐츠입니다.',
         ],
         columns: ['경로', '받는 방법'],
         rows: [
@@ -3196,7 +3196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Oscilla 리뷰](/ko/power-local-llm/oscilla-review) — 온디바이스 모델의 고정 카탈로그를 갖춘 iOS 앱.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — iOS와 안드로이드용 오픈소스 온디바이스 채팅.',
           '[MLXHub 리뷰](/ko/power-local-llm/mlxhub-review) — LAN 서버와 다중 기기 모델 분할을 갖춘 아이폰 및 아이패드 앱.',
-          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
+          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
         ],
       },
     },
