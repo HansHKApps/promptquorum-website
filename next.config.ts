@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
   // per-process heap flags in build-with-fix.js, which weren't reaching the
   // worker process that actually crashed.
   enablePrerenderSourceMaps: false,
+  // api/hero-image reads public/images/<name> with a dynamic filename, so file tracing
+  // pulled the whole images folder (~600 MB) into the function and broke the deploy
+  // (250 MB limit). The route is a local generator; the photo option only works in dev.
+  outputFileTracingExcludes: {
+    '/api/hero-image': ['./public/images/**/*'],
+  },
   experimental: {
     cpus: 1,
     workerThreads: false,
