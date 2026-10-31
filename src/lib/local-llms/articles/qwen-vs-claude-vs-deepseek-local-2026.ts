@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-en.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: Local LLM vs Cloud Comparison 2026',
@@ -289,6 +290,7 @@ dispatch_rules:
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-es.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: LLM Local vs Cloud Comparación 2026',
@@ -534,6 +536,7 @@ dispatch_rules:
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ar.webp',
     title: '⁨Qwen 3⁩ مقابل ⁨Claude Sonnet 5⁩ مقابل ⁨DeepSeek R2⁩: مقارنة ⁨LLM⁩ المحلي مقابل السحابي ⁨2026⁩',
@@ -779,6 +782,7 @@ dispatch_rules:
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-pt.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: LLM Local vs Nuvem 2026',
@@ -1004,6 +1008,7 @@ dispatch_rules:
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-de.webp',
     title: 'Qwen 3 vs. Claude Sonnet 5 vs. DeepSeek R2: Lokale KI vs. Cloud-Vergleich 2026',
@@ -1224,6 +1229,7 @@ dispatch_rules:
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-fr.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 : Comparatif Local vs Cloud 2026',
@@ -1444,6 +1450,7 @@ dispatch_rules:
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-zh.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：本地LLM vs 云端对比 2026',
@@ -1708,6 +1715,7 @@ dispatch_rules:
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ja.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：ローカルLLM vs クラウド比較 2026',
@@ -2023,6 +2031,7 @@ dispatchers:
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Best Models',
     heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ko.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: 로컬 LLM vs 클라우드 비교 2026',

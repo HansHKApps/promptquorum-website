@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'Used GPUs for Local LLMs: Best Value Picks',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-en.webp',
@@ -247,6 +248,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'GPUs de segunda mano para LLMs locales: Las mejores opciones por precio',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-es.webp',
@@ -462,6 +464,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'وحدات ⁨GPU⁩ المستعملة لنماذج ⁨LLM⁩ المحلية: أفضل الخيارات حسب السعر',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-ar.webp',
@@ -679,6 +682,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'GPUs usadas para LLMs locais: As melhores opções por preço',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-pt.webp',
@@ -891,6 +895,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'Gebrauchte GPUs für lokale LLMs: Die besten Sparangebote',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-de.webp',
@@ -1118,6 +1123,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'GPU utilisés pour LLMs locaux : Meilleures offres de valeur',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-fr.webp',
@@ -1333,6 +1339,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'ローカルLLM向け中古GPU：ベストバリューピック',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-ja.webp',
@@ -1548,6 +1555,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: '本地LLM二手GPU：最佳价值选择',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-zh.webp',
@@ -1763,6 +1771,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: '중고 GPU로 로컬 LLM 구동하기: 최고의 가성비 선택',
     heroImage: '/images/used-gpus-for-local-llms-overview-hero-ko.webp',

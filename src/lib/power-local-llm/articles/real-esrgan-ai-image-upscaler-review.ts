@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-en.webp',
     freshness_tier: 'semi_annual',
@@ -237,6 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-de.webp',
     freshness_tier: 'semi_annual',
@@ -471,6 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
@@ -705,6 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-es.webp',
     freshness_tier: 'semi_annual',
@@ -939,6 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
@@ -1173,6 +1178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
@@ -1407,6 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
@@ -1641,6 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
@@ -1875,6 +1883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/real-esrgan-ai-image-upscaler-review-hero-ko.webp',
     freshness_tier: 'semi_annual',

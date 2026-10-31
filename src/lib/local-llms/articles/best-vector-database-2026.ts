@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma',
     seoTitle: 'Best Vector Database 2026',
@@ -593,6 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Beste Vektordatenbank 2026: Qdrant, Pinecone, Weaviate oder Chroma',
     seoTitle: 'Beste Vektordatenbank 2026',
@@ -1189,6 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Mejor base de datos vectorial 2026: Qdrant, Pinecone, Weaviate o Chroma',
     seoTitle: 'Mejor base de datos vectorial 2026',
@@ -1777,6 +1780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Meilleure base de donnees vectorielle 2026 : Qdrant, Pinecone, Weaviate ou Chroma',
     seoTitle: 'Meilleure base de donnees vectorielle 2026',
@@ -2365,6 +2369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Melhor banco de dados vetorial 2026: Qdrant, Pinecone, Weaviate ou Chroma',
     seoTitle: 'Melhor banco de dados vetorial 2026',
@@ -2930,6 +2935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年 最適なベクトルデータベース：Qdrant・Pinecone・Weaviate・Chroma',
     seoTitle: '2026年 最適なベクトルデータベース',
@@ -3518,6 +3524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年最佳向量数据库：Qdrant、Pinecone、Weaviate 还是 Chroma',
     seoTitle: '2026年最佳向量数据库',
@@ -4106,6 +4113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'أفضل قاعدة بيانات متجهية 2026: Qdrant أم Pinecone أم Weaviate أم Chroma',
     seoTitle: 'أفضل قاعدة بيانات متجهية 2026',
@@ -4671,6 +4679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 벡터 데이터베이스: Qdrant, Pinecone, Weaviate, Chroma',
     seoTitle: '2026년 최고의 벡터 데이터베이스',

@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs OpenRouter vs Portkey: Best LLM Gateway 2026',
     seoTitle: 'Best LLM API Gateway 2026: LiteLLM vs OpenRouter',
@@ -554,6 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs. OpenRouter vs. Portkey: Bestes LLM-Gateway 2026',
     seoTitle: 'Bestes LLM-API-Gateway 2026: LiteLLM oder OpenRouter?',
@@ -1121,6 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs OpenRouter vs Portkey: mejor gateway LLM 2026',
     seoTitle: 'Mejor gateway de API LLM 2026: LiteLLM vs OpenRouter',
@@ -1670,6 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs OpenRouter vs Portkey : meilleure passerelle LLM 2026',
     seoTitle: 'Meilleure passerelle API LLM 2026 : LiteLLM ou OpenRouter',
@@ -2219,6 +2223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs OpenRouter vs Portkey: melhor gateway LLM 2026',
     seoTitle: 'Melhor gateway de API LLM 2026: LiteLLM ou OpenRouter',
@@ -2768,6 +2773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs OpenRouter vs Portkey：最適なLLMゲートウェイ 2026',
     seoTitle: '最適なLLM APIゲートウェイ2026：LiteLLMかOpenRouterか',
@@ -3317,6 +3323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs OpenRouter vs Portkey：2026年最佳LLM网关',
     seoTitle: '2026年最佳LLM API网关：选LiteLLM还是OpenRouter',
@@ -3866,6 +3873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM مقابل OpenRouter مقابل Portkey: أفضل بوابة LLM 2026',
     seoTitle: 'أفضل بوابة API لنماذج LLM 2026: LiteLLM أم OpenRouter',
@@ -4415,6 +4423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'LiteLLM vs OpenRouter vs Portkey: 최고의 LLM 게이트웨이 2026',
     seoTitle: '2026 최고의 LLM API 게이트웨이: LiteLLM인가 OpenRouter인가',

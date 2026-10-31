@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'How to Run 70B Models on 24GB VRAM: Advanced Techniques',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-en.webp',
@@ -235,6 +236,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '70B-Modelle auf 24GB VRAM ausführen: Fortgeschrittene Techniken',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-de.webp',
@@ -456,6 +458,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Exécuter des modèles 70B sur 24 Go de VRAM : Techniques avancées',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-fr.webp',
@@ -677,6 +680,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '24GB VRAMで70Bモデルを実行: 高度なテクニック',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-ja.webp',
@@ -907,6 +911,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '在24GB VRAM上运行70B模型：高级技术',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-zh.webp',
@@ -1137,6 +1142,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Cómo ejecutar modelos 70B en 24 GB de VRAM: técnicas avanzadas',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-es.webp',
@@ -1379,6 +1385,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'كيفية تشغيل نماذج ⁨70B⁩ على ⁨24 GB⁩ من ⁨VRAM⁩: تقنيات متقدمة',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-ar.webp',
@@ -1621,6 +1628,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Como executar modelos 70B em 24 GB de VRAM: técnicas avançadas',
       heroImage: '/images/run-70b-models-24gb-vram-overview-hero-pt.webp',
@@ -1824,6 +1832,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '24GB VRAM에서 70B 모델 실행하기: 고급 기법',
     heroImage: '/images/run-70b-models-24gb-vram-overview-hero-ko.webp',

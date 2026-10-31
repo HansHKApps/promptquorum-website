@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Local RAG 2026: Build Document Q&A Systems Without Cloud APIs',
       heroImage: '/images/local-rag-2026-overview-hero-en.webp',
@@ -236,6 +237,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'RAG Local 2026: Construye Sistemas de Preguntas y Respuestas sin APIs en la Nube',
       heroImage: '/images/local-rag-2026-overview-hero-es.webp',
@@ -476,6 +478,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: '⁨RAG⁩ محلي ⁨2026⁩: ابنِ أنظمة أسئلة وأجوبة دون واجهات ⁨API⁩ سحابية',
       heroImage: '/images/local-rag-2026-overview-hero-ar.webp',
@@ -716,6 +719,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'RAG Local 2026: Crie Sistemas de Perguntas e Respostas sem APIs na Nuvem',
       heroImage: '/images/local-rag-2026-overview-hero-pt.webp',
@@ -946,6 +950,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Lokale RAG 2026: Erstellen Sie Dokumenten-Q&A-Systeme ohne Cloud-APIs',
       heroImage: '/images/local-rag-2026-overview-hero-de.webp',
@@ -1172,6 +1177,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'RAG local 2026 : créer des systèmes de questions-réponses sur documents sans APIs cloud',
       heroImage: '/images/local-rag-2026-overview-hero-fr.webp',
@@ -1398,6 +1404,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'ローカルRAG 2026：クラウドAPIなしで文書Q&Aシステムを構築',
       heroImage: '/images/local-rag-2026-overview-hero-ja.webp',
@@ -1681,6 +1688,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: '本地RAG 2026：无需云API构建文档问答系统',
       heroImage: '/images/local-rag-2026-overview-hero-zh.webp',
@@ -1964,6 +1972,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: '로컬 RAG 2026: 클라우드 API 없이 문서 Q&A 시스템 구축하기',
     heroImage: '/images/local-rag-2026-overview-hero-ko.webp',

@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     last_full_refresh: '2026-09-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment (2026)',
     seoTitle: 'Sovereign AI & Data Residency: EU/GDPR Guide (2026)',
@@ -247,6 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Datenresidenz & Souveräne KI: DSGVO-konforme Enterprise-LLM-Bereitstellung (2026)',
     seoTitle: 'Souveräne KI & Datenresidenz: DSGVO-Leitfaden (2026)',
@@ -450,6 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Résidence des Données & IA Souveraine : Déploiement LLM Entreprise RGPD/UE (2026)',
     seoTitle: 'IA Souveraine & Résidence des Données : Guide RGPD (2026)',
@@ -653,6 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Residencia de Datos e IA Soberana: Despliegue Empresarial de LLM UE/GDPR (2026)',
     seoTitle: 'IA Soberana y Residencia de Datos: Guía GDPR (2026)',
@@ -856,6 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Residência de Dados e IA Soberana: Deploy Enterprise de LLM para UE/GDPR (2026)',
     seoTitle: 'IA Soberana e Residência de Dados: Guia GDPR (2026)',
@@ -1059,6 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'データレジデンシーとソブリンAI: EU/GDPR企業向けLLM導入ガイド (2026)',
     seoTitle: 'ソブリンAIとデータレジデンシー: GDPRガイド (2026)',
@@ -1262,6 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: '数据驻留与主权AI：欧盟/GDPR企业级LLM部署指南 (2026)',
     seoTitle: '主权AI与数据驻留：GDPR指南 (2026)',
@@ -1465,6 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي وفق اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (2026)',
     seoTitle: 'الذكاء الاصطناعي السيادي وإقامة البيانات: دليل اللائحة العامة (2026)',
@@ -1668,6 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: '데이터 레지던시와 주권 AI: EU/GDPR 기업용 LLM 배포 가이드 (2026)',
     seoTitle: '주권 AI와 데이터 레지던시: EU/GDPR 가이드 (2026)',

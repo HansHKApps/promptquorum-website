@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)',
     seoTitle: 'SOC 2 & ISO 27001 Readiness: Self-Hosted LLMs (2026)',
@@ -356,6 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'SOC 2 & ISO 27001: Audit-Bereitschaft für selbst gehostete LLMs (2026)',
     seoTitle: 'SOC 2 & ISO 27001 für selbst gehostete LLMs (2026)',
@@ -690,6 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'SOC 2 et ISO 27001 : préparer un déploiement de LLM auto-hébergé (2026)',
     seoTitle: 'SOC 2 & ISO 27001 : LLM auto-hébergé (2026)',
@@ -1012,6 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'セルフホストLLMのSOC 2・ISO 27001監査対応ガイド(2026)',
     seoTitle: 'SOC 2・ISO 27001:セルフホストLLM監査対応(2026)',
@@ -1333,6 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: '自托管LLM部署的SOC 2与ISO 27001审计准备指南(2026)',
     seoTitle: 'SOC 2与ISO 27001:自托管LLM审计准备(2026)',
@@ -1654,6 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Preparación SOC 2 e ISO 27001 para LLMs autoalojados (2026)',
     seoTitle: 'SOC 2 e ISO 27001: LLMs autoalojados (2026)',
@@ -1975,6 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'SOC 2 e ISO 27001: preparação de auditoria para LLMs auto-hospedados (2026)',
     seoTitle: 'SOC 2 e ISO 27001 para LLMs auto-hospedados (2026)',
@@ -2296,6 +2303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'الاستعداد لتدقيق SOC 2 وISO 27001 لنماذج LLM المستضافة ذاتيًا (2026)',
     seoTitle: 'SOC 2 وISO 27001: نماذج LLM ذاتية الاستضافة (2026)',
@@ -2617,6 +2625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: '셀프호스팅 LLM을 위한 SOC 2·ISO 27001 감사 준비 가이드(2026)',
     seoTitle: 'SOC 2·ISO 27001: 셀프호스팅 LLM 감사 준비(2026)',

@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     last_full_refresh: '2026-09-02',
     current_hardware_mentioned: ['NVIDIA Jetson AGX Thor', 'Hailo-10H', 'NVIDIA Jetson Orin NX', 'NVIDIA Jetson AGX Orin 64GB', 'NVIDIA Jetson Orin Nano Super', 'Rockchip RK3588'],
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-en.webp',
     title: 'Edge AI Silicon for Local LLMs 2026: What Actually Fits in a Shipping Product',
@@ -258,6 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-de.webp',
     title: 'Edge-AI-Silizium für lokale LLMs 2026: Was tatsächlich in ein Serienprodukt passt',
@@ -511,6 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-fr.webp',
     title: 'Silicium IA embarquée pour LLM locaux 2026 : ce qui tient vraiment dans un produit',
@@ -762,6 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-ja.webp',
     title: 'ローカルLLM向けエッジAIシリコン2026：量産製品に実際に収まるのは何か',
@@ -1013,6 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-zh.webp',
     title: '2026本地LLM边缘AI芯片指南：量产产品里真正装得下的是什么',
@@ -1263,6 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   es: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-es.webp',
     title: 'Silicio de IA de borde para LLM locales 2026: qué cabe realmente en un producto en producción',
@@ -1514,6 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-pt.webp',
     title: 'Silício de IA de borda para LLMs locais 2026: o que realmente cabe num produto de produção',
@@ -1765,6 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-ar.webp',
     title: 'شرائح الذكاء الاصطناعي الطرفي لنماذج اللغة المحلية 2026: ما الذي يناسب فعلاً منتجاً جاهزاً للشحن',
@@ -2016,6 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   ko: {
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/edge-ai-hardware-for-local-llms-hero-ko.webp',
     title: '로컬 LLM을 위한 엣지 AI 실리콘 2026: 실제로 양산 제품에 들어가는 것은 무엇인가',

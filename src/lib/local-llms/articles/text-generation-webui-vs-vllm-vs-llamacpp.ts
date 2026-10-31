@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       next_refresh_due: '2027-02-28',
       current_models_mentioned: ['Llama 3.2 3B', 'Llama 4 Scout', 'Phi-3 3.8B', 'Mistral 7B', 'Qwen3 8B'],
       current_hardware_mentioned: ['RTX 4090', 'M4 MacBook Pro'],
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-en.webp',
@@ -383,6 +384,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026: Comparación de Motores de Inferencia',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-es.webp',
@@ -753,6 +755,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '⁨Text-Generation-WebUI⁩ مقابل ⁨vLLM⁩ مقابل ⁨llama.cpp⁩ في ⁨2026⁩: مقارنة محركات الاستدلال',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ar.webp',
@@ -1125,6 +1128,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp em 2026: Comparação de Motores de Inferência',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-pt.webp',
@@ -1348,6 +1352,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026: Vergleich von Inference-Engines',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-de.webp',
@@ -1609,6 +1614,7 @@ schema: {
     },
   },
     fr: {
+      designSkin: 'hub',
       theme: 'Outils & Interfaces',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026 : Comparaison des moteurs d\'inférence',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-fr.webp',
@@ -1975,6 +1981,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ツール & インターフェース',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推論エンジン比較',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ja.webp',
@@ -2337,6 +2344,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '工具和接口',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推理引擎对比',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-zh.webp',
@@ -2700,6 +2708,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026년 비교: 추론 엔진 완벽 가이드',
     heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ko.webp',

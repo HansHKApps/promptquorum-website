@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_seo_review_due: '2026-10-03',
     last_seo_review: '2026-08-27',
     current_hardware_mentioned: ['RTX 3090', 'RTX 4090', 'Ryzen mini PC', 'Apple Silicon (unified memory)'],
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-en.webp',
     title: 'Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026',
@@ -276,6 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-de.webp',
     title: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026',
@@ -507,6 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026', description: 'Interaktiver TCO-Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete für LLMs 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-fr.webp',
     title: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026',
@@ -777,6 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026', description: 'Calculateur interactif de coût total de possession comparant matériel GPU local et location cloud GPU pour LLM en 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-ja.webp',
     title: 'ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版',
@@ -1008,6 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: { '@type': 'TechArticle', headline: 'ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版', description: 'ローカルGPUハードウェアとクラウドGPUレンタルをLLM向けに比較するインタラクティブなTCO計算機、2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'ja' },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-es.webp',
     title: 'IA Local vs IA en la Nube: Calculadora de Costos (Comprar vs Rentar) 2026',
@@ -1267,6 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-ar.webp',
     title: 'الذكاء الاصطناعي المحلي مقابل السحابي: حاسبة التكلفة (شراء مقابل استئجار) 2026',
@@ -1521,6 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-zh.webp',
     title: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026',
@@ -1752,6 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: { '@type': 'TechArticle', headline: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026', description: '交互式总拥有成本计算器，对比本地GPU硬件与云GPU租用运行LLM的成本，2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-28', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-pt.webp',
     title: 'IA Local vs IA na Nuvem: Calculadora de Custo (Montar vs Alugar) 2026',
@@ -2005,6 +2013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-ko.webp',
     title: '로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈) 2026',
