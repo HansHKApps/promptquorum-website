@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat',
     dateModified: '2026-09-05',
@@ -259,6 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern 2026: Das kostenlose Frontend für KI-Charakter-Rollenspiele und lange Chats',
     dateModified: '2026-09-05',
@@ -514,6 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern en 2026: el frontend gratuito para roleplay de personajes de IA y chat de formato largo',
     dateModified: '2026-09-05',
@@ -769,6 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: "SillyTavern en 2026 : le frontend gratuit pour le roleplay de personnages IA et le chat au long cours",
     dateModified: '2026-09-05',
@@ -1024,6 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern 2026年版:AIキャラクターロールプレイと長文チャットのための無料フロントエンド',
     dateModified: '2026-09-05',
@@ -1280,6 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern 2026:免费的 AI 角色扮演与长篇对话前端',
     dateModified: '2026-09-05',
@@ -1536,6 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern em 2026: O Frontend Gratuito para Roleplay de Personagens de IA e Chat Longo',
     dateModified: '2026-09-05',
@@ -1792,6 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern في 2026: الواجهة المجانية للعب الأدوار مع شخصيات الذكاء الاصطناعي والمحادثات الطويلة',
     dateModified: '2026-09-05',
@@ -2048,6 +2056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'SillyTavern 2026: AI 캐릭터 롤플레이와 장문 채팅을 위한 무료 프론트엔드',
     dateModified: '2026-09-05',

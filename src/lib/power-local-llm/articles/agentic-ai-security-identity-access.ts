@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Agentic AI Security in 2026: The Identity and Access Controls That Work',
     seoTitle: 'Agentic AI Security 2026: IAM Controls That Work',
@@ -177,6 +178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Agentic-AI-Sicherheit 2026: Die IAM-Kontrollen, die wirklich funktionieren',
     seoTitle: 'Agentic-AI-Sicherheit 2026: IAM-Kontrollen im Griff',
@@ -351,6 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Sécurité de l\'IA agentique en 2026 : les contrôles IAM qui fonctionnent',
     seoTitle: 'Sécurité IA agentique 2026 : contrôles IAM efficaces',
@@ -523,6 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Seguridad de la IA agéntica en 2026: los controles IAM que funcionan',
     seoTitle: 'Seguridad IA agéntica 2026: controles IAM eficaces',
@@ -695,6 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Segurança de IA agêntica em 2026: os controles de IAM que funcionam',
     seoTitle: 'Segurança IA agêntica 2026: controles de IAM eficazes',
@@ -867,6 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: '2026年智能体AI安全：真正有效的身份与访问控制',
     seoTitle: '智能体AI安全2026：有效的IAM控制',
@@ -1039,6 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'エージェント型AIセキュリティ2026：実際に機能するID・アクセス制御',
     seoTitle: 'エージェント型AIセキュリティ2026：機能するIAM対策',
@@ -1211,6 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'أمن الذكاء الاصطناعي الوكيل في 2026: ضوابط الهوية والوصول الفعّالة فعلاً',
     seoTitle: 'أمن الذكاء الاصطناعي الوكيل 2026: ضوابط IAM فعّالة',
@@ -1383,6 +1391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: '2026년 에이전틱 AI 보안: 실제로 작동하는 IAM 통제',
     seoTitle: '에이전틱 AI 보안 2026: 효과적인 IAM 통제',

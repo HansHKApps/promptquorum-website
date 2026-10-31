@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Local LLM Commercial License Guide 2026: Which AI Models Can Businesses Use?',
     seoTitle: 'LLM Commercial Licenses 2026: Which AI Models Can Businesses Use?',
@@ -375,6 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Lizenzleitfaden für lokale LLMs im Unternehmen 2026: Welche KI-Modelle dürfen Unternehmen nutzen?',
     seoTitle: 'LLM-Lizenzen für Unternehmen 2026: Welche KI-Modelle sind erlaubt?',
@@ -746,6 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Guide des licences LLM locaux pour entreprises 2026 : quels modèles d\'IA les entreprises peuvent-elles utiliser ?',
     seoTitle: 'Licences LLM commerciales 2026 : quels modèles utiliser ?',
@@ -1115,6 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'ローカルLLM商用ライセンスガイド2026:企業が使えるAIモデルはどれか',
     seoTitle: 'LLM商用ライセンス2026:企業が使えるモデルは?',
@@ -1484,6 +1488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: '本地LLM商用许可证指南2026:企业可以使用哪些AI模型?',
     seoTitle: 'LLM商用许可证指南2026:企业能用哪些模型?',
@@ -1853,6 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Guía de licencias comerciales de LLM locales 2026: ¿qué modelos de IA pueden usar las empresas?',
     seoTitle: 'Licencias de LLM comerciales 2026: ¿qué modelos usar?',
@@ -2222,6 +2228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'Guia de licenças comerciais de LLM locais 2026: quais modelos de IA as empresas podem usar?',
     seoTitle: 'Licenças de LLM comerciais 2026: quais modelos usar?',
@@ -2591,6 +2598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: 'دليل تراخيص نماذج اللغة المحلية للاستخدام التجاري 2026: أي نماذج ذكاء اصطناعي يمكن للشركات استخدامها؟',
     seoTitle: 'تراخيص LLM التجارية 2026: أي نماذج يمكن استخدامها؟',
@@ -2960,6 +2968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Enterprise',
     title: '로컬 LLM 상업용 라이선스 가이드 2026: 기업이 사용할 수 있는 AI 모델은?',
     seoTitle: 'LLM 상업용 라이선스 2026: 기업이 쓸 수 있는 모델은?',

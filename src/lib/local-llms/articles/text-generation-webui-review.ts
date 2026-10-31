@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui in 2026: How Oobabooga\'s Local LLM UI Became "TextGen"',
     dateModified: '2026-09-05',
@@ -257,6 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui im Jahr 2026: Wie Oobaboogas lokale LLM-Oberfläche zu „TextGen" wurde',
     dateModified: '2026-09-05',
@@ -510,6 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui en 2026: Cómo la interfaz de LLM local de Oobabooga se convirtió en "TextGen"',
     dateModified: '2026-09-05',
@@ -764,6 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui en 2026 : comment l\'interface LLM locale d\'Oobabooga est devenue "TextGen"',
     dateModified: '2026-09-05',
@@ -1016,6 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui 2026年版:Oobabooga のローカルLLM UIが「TextGen」になるまで',
     dateModified: '2026-09-05',
@@ -1269,6 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年的text-generation-webui：Oobabooga的本地LLM界面如何变成"TextGen"',
     dateModified: '2026-09-05',
@@ -1522,6 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui em 2026: Como a Interface de LLM Local do Oobabooga Virou "TextGen"',
     dateModified: '2026-09-05',
@@ -1776,6 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui في 2026: كيف أصبحت واجهة LLM المحلية من Oobabooga باسم "TextGen"',
     dateModified: '2026-09-05',
@@ -2029,6 +2037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026년 text-generation-webui: Oobabooga의 로컬 LLM UI가 "TextGen"이 되기까지',
     dateModified: '2026-09-05',

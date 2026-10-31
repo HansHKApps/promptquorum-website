@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -247,6 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -491,6 +493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -735,6 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -979,6 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -1223,6 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -1467,6 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -1711,6 +1718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',
@@ -1955,6 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-03',

@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI: Which Controls Actually Fit Your Company Size',
     seoTitle: 'Shadow AI Controls by Company Size | PromptQuorum',
@@ -231,6 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI: Welche Kontrollen wirklich zur Unternehmensgröße passen',
     seoTitle: 'Shadow-AI-Kontrollen nach Unternehmensgröße | PromptQuorum',
@@ -456,6 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI : quels contrôles conviennent vraiment à la taille de votre entreprise',
     seoTitle: 'Contrôles Shadow AI selon la taille | PromptQuorum',
@@ -681,6 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI: qué controles encajan realmente con el tamaño de tu empresa',
     seoTitle: 'Controles de Shadow AI por tamaño | PromptQuorum',
@@ -906,6 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI: quais controles realmente combinam com o tamanho da sua empresa',
     seoTitle: 'Controles de Shadow AI por Tamanho | PromptQuorum',
@@ -1131,6 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI：哪些管控措施真正适合你公司的规模',
     seoTitle: 'Shadow AI 分规模管控指南 | PromptQuorum',
@@ -1356,6 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'シャドーAI：企業規模に本当に合った対策とは',
     seoTitle: '企業規模別シャドーAI対策 | PromptQuorum',
@@ -1581,6 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI: 기업 규모에 실제로 맞는 통제는 무엇인가',
     seoTitle: '기업 규모별 Shadow AI 통제 | PromptQuorum',
@@ -1806,6 +1814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-02',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Shadow AI: ما هي الضوابط التي تناسب فعلاً حجم شركتك',
     seoTitle: 'ضوابط Shadow AI حسب حجم الشركة | PromptQuorum',

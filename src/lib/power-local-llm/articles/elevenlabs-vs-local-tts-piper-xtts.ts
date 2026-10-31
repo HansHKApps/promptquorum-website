@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?',
     seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026): Which Is Best?',
@@ -966,6 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'ElevenLabs vs. Piper vs. XTTS v2: Welche TTS ist 2026 am besten?',
     seoTitle: 'ElevenLabs vs. Piper vs. XTTS v2 (2026): Was ist am besten?',
@@ -1924,6 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'ElevenLabs vs Piper vs XTTS v2 : quel TTS choisir en 2026 ?',
     seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026) : lequel choisir ?',
@@ -2882,6 +2885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: '2026年ElevenLabs对比Piper对比XTTS v2：哪个TTS最好？',
     seoTitle: 'ElevenLabs对比Piper对比XTTS v2(2026)：哪个最好？',
@@ -3837,6 +3841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'ElevenLabs対Piper対XTTS v2:2026年、最良のTTSは?',
     seoTitle: 'ElevenLabs対Piper対XTTS v2(2026):どれが最良?',
@@ -4792,6 +4797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'ElevenLabs vs Piper vs XTTS v2: ¿cuál es la mejor TTS en 2026?',
     seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026): ¿cuál es mejor?',
@@ -5750,6 +5756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'ElevenLabs vs Piper vs XTTS v2: Qual é o Melhor TTS em 2026?',
     seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026): Qual é Melhor?',
@@ -6707,6 +6714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: '2026년 ElevenLabs vs Piper vs XTTS v2: 최고의 TTS는?',
     seoTitle: 'ElevenLabs vs Piper vs XTTS v2(2026): 무엇이 최고인가',
@@ -7659,6 +7667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'ElevenLabs مقابل Piper مقابل XTTS v2: أيهما الأفضل في 2026؟',
     seoTitle: 'ElevenLabs مقابل Piper مقابل XTTS v2 (2026): أيهما الأفضل؟',

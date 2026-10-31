@@ -32,6 +32,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
+    designSkin: 'hub',
+
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-en.webp',
     title: 'RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?',
@@ -487,6 +489,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-10-03',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
+
+    designSkin: 'hub',
 
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-de.webp',
@@ -944,6 +948,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
+    designSkin: 'hub',
+
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-fr.webp',
     title: 'RTX 3090 pour LLM local en 2026 : acheter ou louer ?',
@@ -1399,6 +1405,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-10-03',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
+
+    designSkin: 'hub',
 
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-es.webp',
@@ -1856,6 +1864,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
+    designSkin: 'hub',
+
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-pt.webp',
     title: 'RTX 3090 para LLM local em 2026: comprar ou alugar?',
@@ -2312,6 +2322,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
+    designSkin: 'hub',
+
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-ar.webp',
     title: 'بطاقة RTX 3090 لتشغيل نماذج LLM محليًا في 2026: هل تشتري أم تستأجر؟',
@@ -2766,6 +2778,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-10-03',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
+
+    designSkin: 'hub',
 
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-ja.webp',
@@ -3222,6 +3236,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
+    designSkin: 'hub',
+
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-zh.webp',
     title: '2026年本地LLM用RTX 3090：买还是租？',
@@ -3676,6 +3692,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-10-03',
     last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
+
+    designSkin: 'hub',
 
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-ko.webp',

@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'AI-Generated Content and IP Risk: What You Actually Own, Infringe, and Leak',
     seoTitle: 'AI Content IP Risk: Own, Infringe, or Leak? | PromptQuorum',
@@ -198,6 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'KI-generierte Inhalte und IP-Risiko: Was Sie wirklich besitzen, verletzen und preisgeben',
     seoTitle: 'KI-Content & IP-Risiko: Besitz, Verletzung, Leak? | PromptQuorum',
@@ -392,6 +394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Contenu généré par IA et risque de PI : ce que vous possédez, enfreignez et divulguez réellement',
     seoTitle: 'Contenu IA et risque de PI : propriété ou fuite ? | PromptQuorum',
@@ -584,6 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Contenido generado por IA y riesgo de PI: qué es lo que realmente posees, infringes y filtras',
     seoTitle: 'Contenido IA y riesgo de PI: ¿propiedad o fuga? | PromptQuorum',
@@ -776,6 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Conteúdo gerado por IA e risco de PI: o que você realmente possui, infringe e vaza',
     seoTitle: 'Conteúdo IA e risco de PI: propriedade ou vazamento? | PromptQuorum',
@@ -969,6 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'AI 生成内容与知识产权风险：您到底拥有什么、侵犯什么、泄露什么',
     seoTitle: 'AI内容知识产权风险：所有权还是泄露？| PromptQuorum',
@@ -1162,6 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'AI生成コンテンツと知財リスク：実際に何を所有し、侵害し、漏らしているのか',
     seoTitle: 'AIコンテンツの知財リスク：所有か漏洩か | PromptQuorum',
@@ -1352,6 +1359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'المحتوى المولَّد بالذكاء الاصطناعي ومخاطر الملكية الفكرية: ماذا تملك فعلاً، وماذا تنتهك، وماذا تُسرِّب',
     seoTitle: 'مخاطر IP لمحتوى الذكاء الاصطناعي: ملكية أم تسريب؟',
@@ -1543,6 +1551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'AI 생성 콘텐츠와 IP 위험: 실제로 소유하고, 침해하고, 유출하는 것',
     seoTitle: 'AI 콘텐츠 IP 위험: 소유인가 유출인가? | PromptQuorum',

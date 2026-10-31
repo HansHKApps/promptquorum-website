@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-en.webp',
     freshness_tier: 'semi_annual',
@@ -275,6 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-de.webp',
     freshness_tier: 'semi_annual',
@@ -546,6 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
@@ -816,6 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
@@ -1086,6 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
@@ -1356,6 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-es.webp',
     freshness_tier: 'semi_annual',
@@ -1626,6 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
@@ -1896,6 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
@@ -2166,6 +2174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/langchain-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
