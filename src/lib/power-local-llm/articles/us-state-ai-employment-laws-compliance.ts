@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'US State AI Employment Laws: What Actually Applies to Your Hiring Process',
     seoTitle: 'US State AI Employment Laws 2026: What Applies to Hiring | PromptQuorum',
@@ -193,6 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'US-KI-Arbeitsrecht nach Bundesstaat: Was für Ihren Einstellungsprozess tatsächlich gilt',
     seoTitle: 'US-KI-Arbeitsrecht 2026: Was für Einstellungen gilt | PromptQuorum',
@@ -378,6 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Lois d\'État américaines sur l\'IA en emploi : ce qui s\'applique réellement à votre recrutement',
     seoTitle: 'Lois d\'État américaines sur l\'IA en emploi 2026 | PromptQuorum',
@@ -561,6 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Leyes estatales de IA en el empleo en EE. UU.: qué aplica realmente a tu proceso de contratación',
     seoTitle: 'Leyes estatales de IA en el empleo EE. UU. 2026 | PromptQuorum',
@@ -744,6 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Leis estaduais de IA no emprego nos EUA: o que realmente se aplica ao seu processo de contratação',
     seoTitle: 'Leis estaduais de IA no emprego EUA 2026 | PromptQuorum',
@@ -927,6 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: '美国各州AI雇佣法：您的招聘流程究竟适用哪些规定',
     seoTitle: '美国各州AI雇佣法2026：招聘适用哪些规定 | PromptQuorum',
@@ -1110,6 +1116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: '米国州別AI雇用法：採用プロセスに実際に適用されるものは何か',
     seoTitle: '米国州別AI雇用法2026：採用に適用される規制 | PromptQuorum',
@@ -1294,6 +1301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: '미국 주별 AI 고용법: 채용 프로세스에 실제로 적용되는 것은 무엇인가',
     seoTitle: '미국 주별 AI 고용법 2026: 채용에 적용되는 규정 | PromptQuorum',
@@ -1478,6 +1486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'قوانين الذكاء الاصطناعي للتوظيف في ولايات أمريكا: ما الذي ينطبق فعليًا على عملية التوظيف لديك',
     seoTitle: 'قوانين الذكاء الاصطناعي للتوظيف في الولايات الأمريكية 2026 | PromptQuorum',
