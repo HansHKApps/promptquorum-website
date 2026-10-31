@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content',
       seoTitle: 'Best Local LLMs for Creative Writing 2026',
@@ -349,6 +350,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Mejores LLM locales para escritura creativa en 2026: ficción, poesía y contenido de formato largo',
       seoTitle: 'Mejores LLM locales para escritura creativa 2026',
@@ -687,6 +689,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية للكتابة الإبداعية في ⁨2026⁩: الروايات والشعر والمحتوى الطويل',
       seoTitle: '⁨LLM⁩ محلي للكتابة الإبداعية ⁨2026⁩: ⁨Llama⁩ و⁨Mistral⁩',
@@ -1025,6 +1028,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e conteúdo de formato longo',
       seoTitle: 'Melhores LLMs locais para escrita criativa 2026',
@@ -1362,6 +1366,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Beste lokale LLMs für kreatives Schreiben 2026: Fiktion, Poesie und Long-Form-Content',
       seoTitle: 'Beste lokale LLMs für kreatives Schreiben',
@@ -1681,6 +1686,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Meilleurs LLMs locaux pour écriture créative 2026: fiction, poésie et contenu long format',
       seoTitle: 'Meilleurs LLMs locaux pour écriture créative',
@@ -1985,6 +1991,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: '2026年最高の創作文章向けローカルLLM: フィクション、詩、長編コンテンツのトップ5モデル',
       seoTitle: '2026年の創作文章向けベストローカルLLM',
@@ -2302,6 +2309,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: '2026年最佳创意写作本地LLM：小说、诗歌和长篇内容排名',
       seoTitle: '2026年最佳创意写作本地LLM',
@@ -2618,6 +2626,7 @@ schema: {
     },
     ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '최고의 모델',
       title: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 시, 장편 콘텐츠',
       seoTitle: '창작 글쓰기를 위한 최고의 로컬 LLM 2026',

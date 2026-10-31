@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/create-custom-local-models-overview-hero-en.webp',
       title: 'Create Custom Local LLMs 2026: Fine-Tuning vs Pre-Training with Unsloth and Ollama',
@@ -393,6 +394,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/create-custom-local-models-overview-hero-es.webp',
       title: 'Crear LLMs Locales Personalizados 2026: Fine-Tuning vs Pre-Training con Unsloth y Ollama',
@@ -781,6 +783,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/create-custom-local-models-overview-hero-ar.webp',
       title: 'إنشاء نماذج ⁨LLM⁩ محلية مخصصة ⁨2026⁩: الضبط الدقيق مقابل التدريب المسبق بـ ⁨Unsloth⁩ و⁨Ollama⁩',
@@ -1169,6 +1172,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/create-custom-local-models-overview-hero-pt.webp',
       title: 'Criar LLMs Locais Personalizados 2026: Fine-Tuning vs Pré-Treinamento com Unsloth e Ollama',
@@ -1324,6 +1328,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Fortgeschrittene Techniken',
       heroImage: '/images/create-custom-local-models-overview-hero-de.webp',
       title: 'Eigene lokale LLMs erstellen 2026: Fine-Tuning vs. Pre-Training mit Unsloth und Ollama',
@@ -1738,6 +1743,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Techniques avancées',
       heroImage: '/images/create-custom-local-models-overview-hero-fr.webp',
       title: 'Créer des LLMs locaux personnalisés en 2026 : Fine-tuning vs. Pre-training avec Unsloth et Ollama',
@@ -2103,6 +2109,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '高度な技術',
       heroImage: '/images/create-custom-local-models-overview-hero-ja.webp',
       title: 'カスタム ローカル LLM を構築する 2026 年版：Unsloth と Ollama による Fine-tuning vs. Pre-training',
@@ -2467,6 +2474,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '高级技术',
       heroImage: '/images/create-custom-local-models-overview-hero-zh.webp',
       title: '创建自定义本地 LLM 2026：使用 Unsloth 和 Ollama 进行微调与预训练',
@@ -2855,6 +2863,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
     heroImage: '/images/create-custom-local-models-overview-hero-ko.webp',
       title: '커스텀 로컬 LLM 만들기 2026: Unsloth와 Ollama를 활용한 파인튜닝 vs 사전학습',

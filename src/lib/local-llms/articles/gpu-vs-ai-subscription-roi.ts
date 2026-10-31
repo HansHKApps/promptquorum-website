@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       title: 'GPU vs ChatGPT Plus 2026: When Buying a GPU Pays Back the Subscription',
@@ -356,6 +357,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       title: 'GPU vs ChatGPT Plus 2026: Cuándo comprar una GPU es más rentable que la suscripción',
@@ -701,6 +703,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       title: '⁨GPU⁩ مقابل ⁨ChatGPT Plus 2026⁩: متى يكون شراء ⁨GPU⁩ أوفر من الاشتراك',
@@ -1046,6 +1049,7 @@ schema: {
       },
     },
     pt: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       title: 'GPU vs ChatGPT Plus 2026: Quando comprar uma GPU é mais econômico que a assinatura',
@@ -1158,6 +1162,7 @@ schema: {
       },
     },
     de: {
+    designSkin: 'hub',
     theme: 'Kosten & Vergleiche',
     title: 'GPU vs ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abonnement amortisiert',
       heroImage: '/images/gpu-vs-ai-subscription-roi-overview-hero-de.webp',
@@ -1495,6 +1500,7 @@ schema: {
     },
   },
     fr: {
+      designSkin: 'hub',
       theme: 'Coûts & Comparaisons',
       title: 'GPU vs ChatGPT Plus 2026 : Quand l\'achat d\'un GPU devient rentable face à l\'abonnement',
       heroImage: '/images/gpu-vs-ai-subscription-roi-overview-hero-fr.webp',
@@ -1543,6 +1549,7 @@ schema: {
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'name': 'GPU vs ChatGPT Plus 5-Ans ROI par Tier 2026', 'numberOfItems': 5, 'inLanguage': 'fr', 'itemListElement': [{ '@type': 'ListItem', 'position': 1, 'name': 'Utilisateur occasionnel (2 heures/semaine)', 'description': 'GPU 600 € total vs ChatGPT Plus 1 200 €. GPU perd 600 €. Conservez abonnement.' }, { '@type': 'ListItem', 'position': 2, 'name': 'Utilisateur régulier (5 heures/semaine)', 'description': 'GPU 600 € total vs ChatGPT Plus 1 200 €. GPU gagne 600 €. Amortissement : 18–24 mois.' }, { '@type': 'ListItem', 'position': 3, 'name': 'Utilisateur moyen (10 heures/semaine)', 'description': 'GPU 750 € total vs ChatGPT Plus 1 200 €. GPU gagne 450 € + aucune limite de débit. Amortissement : 12–14 mois.' }, { '@type': 'ListItem', 'position': 4, 'name': 'Utilisateur intensif (20 heures/semaine)', 'description': 'GPU 1 050 € total vs ChatGPT Plus 1 200 €. GPU gagne 150 € + requêtes illimitées. Amortissement : 9–12 mois.' }, { '@type': 'ListItem', 'position': 5, 'name': 'Utilisateur très intensif (40+ heures/semaine)', 'description': 'GPU 1 650 € vs passage forcé Pro 100 € (6 000 €/5-ans). GPU économise 4 350 € + aucune limite. Pro 100 € essentiel si cloud uniquement.' }] },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       title: 'GPU vs ChatGPT Plus 2026: 中古GPU（¥44万）が18ヶ月で元が取れる時代',
@@ -1899,6 +1906,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       title: 'GPU vs ChatGPT Plus 2026: 二手GPU在18个月内收回成本的时代',
@@ -2218,6 +2226,7 @@ schema: {
       },
     },
   ko: {
+      designSkin: 'hub',
       theme: '비용 및 비교',
       freshness_tier: 'annual',
       title: 'GPU vs ChatGPT Plus 2026: GPU 구매가 구독료를 회수하는 시점',

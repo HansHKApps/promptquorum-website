@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Best LLM Evaluation Tool 2026: Braintrust vs Weave vs Promptfoo',
     seoTitle: 'Best LLM Evaluation Tool 2026',
@@ -513,6 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Bestes LLM-Evaluationstool 2026: Braintrust, Weave oder Promptfoo',
     seoTitle: 'Bestes LLM-Evaluationstool 2026',
@@ -1039,6 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Mejor herramienta de evaluación de LLM 2026: Braintrust, Weave o Promptfoo',
     seoTitle: 'Mejor herramienta de evaluación de LLM 2026',
@@ -1556,6 +1559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Meilleur outil d\'evaluation de LLM 2026 : Braintrust, Weave ou Promptfoo',
     seoTitle: 'Meilleur outil d\'evaluation de LLM 2026',
@@ -2073,6 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Melhor ferramenta de avaliacao de LLM 2026: Braintrust, Weave ou Promptfoo',
     seoTitle: 'Melhor ferramenta de avaliacao de LLM 2026',
@@ -2590,6 +2595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年 最適なLLM評価ツール：Braintrust・Weave・Promptfoo',
     seoTitle: '2026年 最適なLLM評価ツール',
@@ -3098,6 +3104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026 年最佳 LLM 评估工具：Braintrust、Weave 与 Promptfoo',
     seoTitle: '2026 年最佳 LLM 评估工具',
@@ -3615,6 +3622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'أفضل أداة لتقييم النماذج اللغوية 2026: Braintrust وWeave وPromptfoo',
     seoTitle: 'أفضل أداة لتقييم النماذج اللغوية 2026',
@@ -4132,6 +4140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 LLM 평가 도구: Braintrust, Weave, Promptfoo',
     seoTitle: '2026년 최고의 LLM 평가 도구',

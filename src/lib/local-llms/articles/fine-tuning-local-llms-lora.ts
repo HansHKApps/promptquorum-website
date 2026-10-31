@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'LoRA Fine-Tuning for Local LLMs 2026: Unsloth Tutorial on 8 GB VRAM with Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-en.webp',
@@ -373,6 +374,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Fine-Tuning LoRA para LLMs Locales 2026: Tutorial de Unsloth en 8 GB de VRAM con Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-es.webp',
@@ -717,6 +719,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'الضبط الدقيق بـ ⁨LoRA⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: درس ⁨Unsloth⁩ على ⁨8 GB⁩ من ⁨VRAM⁩ مع ⁨Llama 3.3⁩',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-ar.webp',
@@ -1070,6 +1073,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Fine-Tuning LoRA para LLMs Locais 2026: Tutorial do Unsloth em 8 GB de VRAM com Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-pt.webp',
@@ -1209,6 +1213,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Fortgeschrittene Techniken',
       title: 'LoRA Fine-Tuning für lokale LLMs 2026: Unsloth-Anleitung mit Llama 3.3 auf 8 GB VRAM',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-de.webp',
@@ -1569,6 +1574,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Techniques avancées',
       title: 'Fine-Tuning LoRA pour LLMs locaux 2026 : Tutoriel Unsloth sur 8 Go de VRAM avec Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-fr.webp',
@@ -1929,6 +1935,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '高度な技術',
       title: 'LoRA ファインチューニング入門 2026年 : Unsloth で Llama 3.3 を 8GB VRAM で実行',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-ja.webp',
@@ -2280,6 +2287,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '高级技术',
       title: 'LoRA 微调本地 LLM 2026：Unsloth 8GB VRAM Llama 3.3 教程',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-zh.webp',
@@ -2640,6 +2648,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '고급 기술',
       title: 'LoRA 파인튜닝 로컬 LLM 2026: Llama 3.3으로 8 GB VRAM에서 Unsloth 튜토리얼',
     heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-ko.webp',

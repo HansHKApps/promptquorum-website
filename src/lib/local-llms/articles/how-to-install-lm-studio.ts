@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Install LM Studio: GUI Setup for macOS, Windows & Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-en.webp',
@@ -344,6 +345,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-es.webp',
@@ -713,6 +715,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'تثبيت ⁨LM Studio⁩: إعداد الواجهة الرسومية لـ ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-ar.webp',
@@ -1046,6 +1049,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Instalar LM Studio: configuração de interface gráfica para macOS, Windows e Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-pt.webp',
@@ -1376,6 +1380,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'LM Studio installieren: Desktop-App-Einrichtung für macOS, Windows und Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-de.webp',
@@ -1757,6 +1762,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Bien démarrer',
       title: 'Installer LM Studio : guide de configuration de l\'application desktop pour macOS, Windows et Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-fr.webp',
@@ -2081,6 +2087,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'はじめに',
       title: 'LM Studio のインストール方法：macOS・Windows・Linux 向けデスクトップアプリ設定ガイド',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-ja.webp',
@@ -2359,6 +2366,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '入门',
       title: '如何安装 LM Studio：macOS、Windows 和 Linux 的桌面应用设置指南',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-zh.webp',
@@ -2638,6 +2646,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '시작하기',
       title: 'LM Studio 설치: macOS, Windows 및 Linux GUI 설정 가이드',
     heroImage: '/images/how-to-install-lm-studio-overview-hero-ko.webp',

@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-en.webp',
       title: 'Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice',
@@ -215,6 +216,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-es.webp',
       title: 'Mejores LLMs locales para redacción profesional en 2026: correos, propuestas y voz de marca',
@@ -419,6 +421,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-ar.webp',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية للكتابة المهنية في ⁨2026⁩: رسائل البريد والمقترحات وصوت العلامة التجارية',
@@ -623,6 +626,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-pt.webp',
       title: 'Melhores LLMs locais para escrita profissional em 2026: e-mails, propostas e voz da marca',
@@ -826,6 +830,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Modelle nach Anwendungsfall',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-de.webp',
       title: 'Die besten lokalen LLMs für Geschäftskorrespondenz 2026: E-Mail, Angebote und Markenstimme',
@@ -1034,6 +1039,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Modèles par cas d\'usage',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-fr.webp',
       title: 'Meilleurs LLMs locaux pour rédaction professionnelle en 2026 : emails, propositions et voix de marque',
@@ -1236,6 +1242,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: '用途別モデル',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-ja.webp',
       title: '2026年ビジネスライティング向けベストなローカルLLM: メール、提案、ブランドボイス',
@@ -1438,6 +1445,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '按用途分类的模型',
       heroImage: '/images/best-local-llms-business-writing-overview-hero-zh.webp',
       title: '2026年商业写作最佳本地LLM：电子邮件、提案和品牌声音',
@@ -1642,6 +1650,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '사용 사례별 모델',
     heroImage: '/images/best-local-llms-business-writing-overview-hero-ko.webp',
       title: '2026년 비즈니스 문서 작성을 위한 최고의 로컬 LLM: 이메일, 제안서, 브랜드 보이스',

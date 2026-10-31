@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM',
       dateModified: '2026-08-28',
@@ -235,6 +236,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'Mejores LLMs locales para Code Review en 2026: Clasificados por detección de errores, velocidad y VRAM',
       seoTitle: 'Mejores LLMs locales para Code Review 2026: Precisión vs Velocidad',
@@ -452,6 +454,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية لمراجعة الكود في ⁨2026⁩: مصنّفة حسب كشف الأخطاء والسرعة و⁨VRAM⁩',
       seoTitle: 'مراجعة الكود بـ ⁨LLM⁩ محلي ⁨2026⁩: ⁨Qwen3-Coder⁩ و⁨DeepSeek⁩',
@@ -668,6 +671,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Modelle nach Anwendungsfall',
       title: 'Beste lokale LLMs für Code Review in 2026: Rangiert nach Fehlerdetection, Geschwindigkeit und VRAM',
       seoTitle: 'Lokale LLMs für Code Review 2026: Genauigkeit vs Tempo',
@@ -886,6 +890,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: "Modèles par cas d'utilisation",
       title: "Meilleurs LLMs locaux pour Code Review en 2026 : Classés par détection de bugs, vitesse et VRAM",
       seoTitle: "LLMs locaux pour Code Review 2026 : Précision vs Vitesse",
@@ -1109,6 +1114,7 @@ schema: {
       },
     },
   ja: {
+    designSkin: 'hub',
     theme: '利用事例別モデル',
     title: '2026年ローカルコードレビュー向けベストLLM：バグ検出精度で分類、速度とVRAM比較',
     seoTitle: 'ローカルコードレビュー向けLLM 2026：精度 vs 速度',
@@ -1139,6 +1145,7 @@ schema: {
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ja', 'mainEntity': [{ '@type': 'Question', 'name': 'どのモデルが最速ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.1 8B（100ms）> DeepSeek-R1 14B（300ms）> Qwen2.5-Coder 32B（400ms）> Llama 3.3 70B（2秒）。速度優先なら 8B、精度重視なら 32B 以上を選択。' } }, { '@type': 'Question', 'name': 'Mac で実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Ollama は Mac 対応（Intel/Apple Silicon 両対応）。ただし GPU 支援がないため、32B モデルは遅い（5～10秒/推論）。M2 Max 以上推奨。' } }, { '@type': 'Question', 'name': 'オフラインで使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。モデルダウンロード後はネット接続不要。完全なローカル推論。セキュリティ機密性が重要な企業向け。' } }, { '@type': 'Question', 'name': 'セキュリティバグ検出率はどの程度ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OWASP Top 10（SQLインジェクション、XSS、認証バイパス）は 85～92%検出。ロジックバグは 60～70%。誤検知も 5～10%存在するため、最終判定は人間。' } }, { '@type': 'Question', 'name': '複数の GPU で並列実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。vLLM の `--tensor-parallel-size 2` で 2 GPU 並列化。推論速度を 1.8 倍短縮。' } }, { '@type': 'Question', 'name': 'クラウド サービスとの TCO はどちらが安いですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ローカル：初期投資 100 万円（GPU サーバ）+ 月 10 万円。API：月 50～200 万円（トラフィック次第）。年間リクエスト月 10 万件超えなら、ローカルが安い。' } }, { '@type': 'Question', 'name': '日本企業向けのコンプライアンスはありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。METI AI ガバナンス 2024、FISC（金融庁）ガイドでローカル推論を推奨。PDPA（シンガポール）、PIPL（中国）対応にも有効。' } }, { '@type': 'Question', 'name': '古いモデルから新モデルへの移行は容易ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Ollama では `ollama pull qwen2.5-coder:32b` で新バージョン自動ダウンロード。API は互換性あり。' } }] },
   },
   zh: {
+    designSkin: 'hub',
     theme: '按用途分类的模型',
     title: '2026年本地代码审查最佳LLM：按缺陷检测精度分类、速度与VRAM对比',
     seoTitle: '本地代码审查最佳LLM 2026：精度 vs 速度',
@@ -1170,6 +1177,7 @@ schema: {
   },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'Melhores LLMs locais para Code Review em 2026: classificados por detecção de bugs, velocidade e VRAM',
       seoTitle: 'Melhores LLMs locais para Code Review 2026: Precisão vs Velocidade',
@@ -1393,6 +1401,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: '2026년 코드 리뷰에 최적화된 로컬 LLM 추천: 버그 탐지율, 속도, VRAM 기준 순위',
       seoTitle: '2026년 코드 리뷰용 최고 로컬 LLM: 정확도 vs 속도',

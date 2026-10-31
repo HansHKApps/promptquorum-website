@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Headless Local LLMs: Running Models Without a UI (2026)',
       heroImage: '/images/headless-local-llms-overview-hero-en.webp',
@@ -179,6 +180,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LLMs locales headless: ejecutar modelos sin interfaz de usuario (2026)',
       heroImage: '/images/headless-local-llms-overview-hero-es.webp',
@@ -359,6 +361,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'نماذج ⁨LLM⁩ المحلية بلا واجهة (⁨headless⁩): تشغيل النماذج دون واجهة مستخدم (⁨2026⁩)',
       heroImage: '/images/headless-local-llms-overview-hero-ar.webp',
@@ -539,6 +542,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LLMs locais headless: rodar modelos sem interface de usuário (2026)',
       heroImage: '/images/headless-local-llms-overview-hero-pt.webp',
@@ -719,6 +723,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Headless Local LLMs: Modelle ohne Benutzeroberfläche ausführen (2026)',
       heroImage: '/images/headless-local-llms-overview-hero-de.webp',
@@ -899,6 +904,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LLMs Headless locaux : exécuter des modèles sans interface utilisateur (2026)',
       heroImage: '/images/headless-local-llms-overview-hero-fr.webp',
@@ -1069,6 +1075,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Headless Local LLMs: UIなしでモデルを実行する (2026)',
       heroImage: '/images/headless-local-llms-overview-hero-ja.webp',
@@ -1243,6 +1250,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Headless本地LLMs: 无界面运行模型 (2026)',
       heroImage: '/images/headless-local-llms-overview-hero-zh.webp',
@@ -1417,6 +1425,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '도구 및 인터페이스',
       title: '헤드리스 로컬 LLM: UI 없이 모델 실행하기 (2026)',
     heroImage: '/images/headless-local-llms-overview-hero-ko.webp',

@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-en.webp',
       title: 'Best 7B Models for Consumer Hardware',
@@ -300,6 +301,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-es.webp',
       title: 'Mejores modelos 7B para hardware de consumo',
@@ -582,6 +584,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-ar.webp',
       title: 'أفضل نماذج ⁨7B⁩ لعتاد المستهلك',
@@ -867,6 +870,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-pt.webp',
       title: 'Melhores modelos 7B para hardware de consumo 2026',
@@ -1075,6 +1079,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Modelle nach Anwendungsfall',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-de.webp',
       title: 'Beste 7B-Modelle für Consumer-Hardware',
@@ -1375,6 +1380,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Modèles par cas d\'usage',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-fr.webp',
       title: 'Meilleurs modèles 7B pour les GPU grand public',
@@ -1665,6 +1671,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ユースケース別モデル',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-ja.webp',
       title: 'コンシューマハードウェア向け最良の7Bモデル',
@@ -1955,6 +1962,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '按用途分类的模型',
       heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-zh.webp',
       title: '消费级硬件最佳7B模型',
@@ -2237,6 +2245,7 @@ schema: {
     },
   ko: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: '용도별 모델',
     heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-ko.webp',
     title: '소비자 하드웨어를 위한 최고의 7B 모델',

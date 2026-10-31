@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       last_full_refresh: '2026-08-26',
       current_models_mentioned: ['Qwen 3.6 35B-A3B', 'DeepSeek V4-Flash', 'Llama 4 Scout', 'Kimi K2.6', 'gpt-oss:20b'],
       current_hardware_mentioned: ['RTX 5090', 'RTX 5080', 'RTX 5070', 'RTX 4090', 'RTX 3090', 'RTX 3060', 'RTX 2060', 'H100', 'Mac Studio M5 Max/Ultra'],
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'How Much VRAM for Local LLM? 7B to 70B Charts (2026)',
       seoTitle: 'Local LLM VRAM: 7B=4GB, 13B=8GB, 70B=42GB (2026)',
@@ -368,6 +369,7 @@ schema: {
     es: {
       freshness_tier: 'monthly',
       next_refresh_due: '2026-12-19',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: '¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)',
       seoTitle: 'VRAM para LLM local: 7B=4GB, 13B=8GB, 70B=42GB (2026)',
@@ -704,6 +706,7 @@ schema: {
     ar: {
       freshness_tier: 'monthly',
       next_refresh_due: '2026-12-19',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'كم تحتاج من ⁨VRAM⁩ لنموذج ⁨LLM⁩ محلي؟ جداول من ⁨7B⁩ إلى ⁨70B⁩ (⁨2026⁩)',
       seoTitle: '⁨VRAM⁩ لـ ⁨LLM⁩ محلي: ⁨7B⁩=⁨4GB⁩ و⁨13B⁩=⁨8GB⁩ و⁨70B⁩=⁨42GB⁩ (⁨2026⁩)',
@@ -1040,6 +1043,7 @@ schema: {
     pt: {
       freshness_tier: 'monthly',
       next_refresh_due: '2026-12-19',
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'Quanta VRAM para um LLM local? Tabelas de 7B a 70B (2026)',
       seoTitle: 'VRAM para LLM local: 7B=4GB, 13B=8GB, 70B=42GB (2026)',
@@ -1365,6 +1369,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'Règle empirique VRAM : 7B=4GB, 70B=42GB (Guide 2026)',
       seoTitle: 'VRAM LLM local : 7B=4GB, 13B=8GB, 70B=42GB (2026)',
@@ -1637,6 +1642,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'VRAM-Richtlinie: 7B=4GB, 70B=42GB (2026 Guide)',
       seoTitle: 'Lokale-LLM-VRAM: 7B=4GB, 13B=8GB, 70B=42GB (2026)',
@@ -1699,6 +1705,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', mainEntity: [{ '@type': 'Question', name: 'Kann ein 3B-Modell auf meiner GPU laufen?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 3060 (3 GB) oder CPU. Q4-Quantisierung benötigt 1,5-2 GB VRAM. Ollama, Llama.cpp, LM Studio unterstützen alle.' } }, { '@type': 'Question', name: 'Ist RTX 4060 ausreichend für 7B Q4?', acceptedAnswer: { '@type': 'Answer', text: 'Knapp. RTX 4060 (8 GB) sollte 5 GB theoretisch verwalten, aber OS/Laufzeit-Overhead wird eng. RTX 4070 (12 GB) empfohlen.' } }, { '@type': 'Question', name: 'Sind 12 GB für Llama3 13B ausreichend?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, deutlich. Ein 13B-Modell braucht bei Q4 nur etwa 8 GB, 12 GB lässt also echten Puffer. Bei Q5 (~9 GB) ist es noch komfortabel; bei Q8 (~14 GB) wird es eng.' } }, { '@type': 'Question', name: 'Benötige ich 24 GB für ein 70B-Modell?', acceptedAnswer: { '@type': 'Answer', text: 'Nein, aber Sie brauchen fast so viel. Ein 70B-Modell benötigt etwa 42 GB bei Q4 allein für die Gewichte. Bei Q5+ sind es 50 GB+. 24 GB reichen bei keiner Quantisierungsstufe.' } }, { '@type': 'Question', name: 'Reduziert höhere Batch-Größe VRAM für einzelne Inferenz?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Einzelne Inferenz verwendet immer batch=1. Batch-Größe hilft nur Durchsatz (Multi-User-Szenarios).' } }, { '@type': 'Question', name: 'Was ist die präziseste Quantisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Q8 nahezu unmerklicher Verlust. Q5 ~2% Verlust. Q4 ~1% Verlust. Für die meisten Fälle Q4 beste Balance.' } }, { '@type': 'Question', name: 'Kann ich Teil des VRAM auf CPU-RAM auslagern?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, über Layer-Splitting. Llama.cpp und Ollama unterstützen es. Leistung sinkt 30-50%.' } }, { '@type': 'Question', name: 'Was ist die minimale VRAM für lokale LLM-Ausführung?', acceptedAnswer: { '@type': 'Answer', text: '4 GB VRAM mit 3B Q4. Praktisches Minimum 8 GB VRAM + 7B Q4. Unter 6 GB OOM für die meisten 7B-Modelle.' } }, { '@type': 'Question', name: 'Ist Apple Silicon VRAM dasselbe wie GPU VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon verwendet Unified Memory -- ganzer Speicherpool verfügbar. M3 18 GB = GPU 18 GB VRAM. MacBook Pro M3 18 GB kann Llama3 13B Q4 (~7 GB) + Overhead ausführen.' } }, { '@type': 'Question', name: 'Wie viel VRAM benötigt 7B bei verschiedenen Quantisierungen?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28 GB. 7B Q8: ~7 GB. 7B Q5: ~5 GB. 7B Q4: ~5-6 GB (4 GB Gewichte + 1-2 GB Overhead). 6 GB GPU eng, 8 GB komfortabel.' } }, { '@type': 'Question', name: 'Was sind die VRAM-Anforderungen für DSGVO-konforme lokale Inferenz in Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum RTX 4070 Ti (12 GB) für bis zu 50 Nutzer mit Llama3 13B Q4. Für 50-500 Nutzer RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB). ECC-GPU für Speicherfehler-Detektion empfohlen.' } }, { '@type': 'Question', name: 'Welche GPU empfiehlt sich für einen Team-Server im deutschen Mittelstand?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4070 Ti (12 GB) für 1-50 Mitarbeiter. RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für 50-500 Mitarbeiter. RTX 4070 Ti kann Llama3 13B Q4 + vLLM mit 3-5 gleichzeitigen Anfragen verwalten.' } }] },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: 'VRAM目安：7B=4GB、70B=42GB（2026ガイド）',
       seoTitle: 'ローカルLLMのVRAM：7B=4GB、13B=8GB、70B=42GB（2026）',
@@ -1896,6 +1903,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'GPU Buying Guides',
       title: '显存经验法则：7B=4GB、70B=42GB（2026指南）',
       seoTitle: '本地LLM显存：7B=4GB、13B=8GB、70B=42GB（2026）',
@@ -2087,6 +2095,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
   ko: {
       freshness_tier: 'monthly',
       next_refresh_due: '2026-12-19',
+      designSkin: 'hub',
       theme: 'GPU 구매 가이드',
       title: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',
       seoTitle: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',

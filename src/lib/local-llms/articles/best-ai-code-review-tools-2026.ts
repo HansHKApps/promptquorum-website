@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit vs Greptile vs Qodo: Best AI Code Review 2026',
     seoTitle: 'Best AI Code Review Tool 2026: CodeRabbit vs Greptile',
@@ -505,6 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit vs. Greptile vs. Qodo: beste KI-Code-Review 2026',
     seoTitle: 'Bestes KI-Code-Review-Tool 2026: CodeRabbit oder Greptile',
@@ -1022,6 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit vs Greptile vs Qodo: mejor revisión de código IA 2026',
     seoTitle: 'Mejor herramienta de revisión de código IA 2026',
@@ -1539,6 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit vs Greptile vs Qodo : meilleure revue de code IA 2026',
     seoTitle: 'Meilleur outil de revue de code IA 2026 : le comparatif',
@@ -2056,6 +2060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit vs Greptile vs Qodo: melhor revisao de codigo com IA 2026',
     seoTitle: 'Melhor ferramenta de revisao de codigo com IA 2026',
@@ -2573,6 +2578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit・Greptile・Qodo比較：2026年のAIコードレビュー',
     seoTitle: '2026年 最適なAIコードレビューツール比較',
@@ -3090,6 +3096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit、Greptile 与 Qodo 对比：2026 年 AI 代码审查',
     seoTitle: '2026 年最佳 AI 代码审查工具对比',
@@ -3616,6 +3623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'مقارنة CodeRabbit وGreptile وQodo: أفضل مراجعة كود بالذكاء الاصطناعي 2026',
     seoTitle: 'أفضل أداة مراجعة كود بالذكاء الاصطناعي 2026',
@@ -4115,6 +4123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit·Greptile·Qodo 비교: 2026년 AI 코드 리뷰',
     seoTitle: '2026년 최고의 AI 코드 리뷰 도구 비교',
