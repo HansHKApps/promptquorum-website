@@ -23,13 +23,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       designSkin: 'hub',
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
-      title: 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
-      seoTitle: 'Best Ollama & Local LLM Frontends 2026: 8 Compared',
+      title: 'Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More',
+      seoTitle: 'Best Local LLM Frontends & Chat UIs 2026: 8 Compared',
       intro: `A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Ollama itself now ships a basic desktop chat app for macOS and Windows, so a separate frontend mainly adds RAG, multi-user access, mobile apps, or coding tools. Open WebUI has the most features (RAG, multimodal, multi-user) and ${st.en('open-webui')} GitHub stars, Enchanted UI is a native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux. This guide compares 8 frontends by features, setup time, license, and use case.`,
-      metaDescription: `Compare 8 Ollama frontends: Open WebUI (${st.en('open-webui', 'k')} stars, RAG), Ollama desktop app, Enchanted UI (native Apple app), Jan AI (offline). Licenses and setup guide.`,
+      metaDescription: `Compare 8 local LLM frontends and chat UIs for Ollama: Open WebUI (${st.en('open-webui', 'k')} stars, RAG), Enchanted UI, Jan AI, lightweight picks. GUI, Linux, licenses, setup.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
       leadAnswerBlock: `**A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Ollama itself now ships a basic desktop chat app for macOS and Windows, so a separate frontend mainly adds RAG, multi-user access, mobile apps, or coding tools. Open WebUI has the most features (RAG, multimodal, multi-user) and ${st.en('open-webui')} GitHub stars, Enchanted UI is a native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux.**`,
@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'Yes. Web frontends such as Open WebUI and LobeHub run well on a server: run Ollama there, deploy the frontend in Docker, and open it from your laptop via HTTP. Native apps like Enchanted UI connect to a remote Ollama server when you enter its address in Settings. Secure the setup with authentication or a firewall.',
             },
             {
-              q: 'Which frontend uses the least RAM?',
+              q: 'What is the lightest local LLM chat interface (lowest RAM)?',
               a: 'Native and extension-based clients add the least overhead: the Ollama desktop app, Enchanted UI, Page Assist and Continue.dev have no Docker or database layer. Open WebUI\'s slim Docker image idles at roughly 300 MB according to its documentation, and uses more once RAG and embedding models are active. If RAM is constrained, use the Ollama desktop app or Page Assist, Enchanted UI on Apple devices, or Continue.dev for code.',
             },
             {
@@ -437,11 +437,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
+        'headline': 'Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More',
         'description': `Best local LLM chat UIs in 2026: Open WebUI (${st.en('open-webui', 'k')} GitHub stars), Ollama desktop app, Enchanted UI (native Apple app), Jan AI (offline app). Comparison and setup guide.`,
         'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -526,7 +526,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Which frontend uses the least RAM?',
+            'name': 'What is the lightest local LLM chat interface (lowest RAM)?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Native and extension-based clients add the least overhead: the Ollama desktop app, Enchanted UI, Page Assist and Continue.dev have no Docker or database layer. Open WebUI\'s slim Docker image idles at roughly 300 MB according to its documentation, and uses more once RAG and embedding models are active. If RAM is constrained, use the Ollama desktop app or Page Assist, Enchanted UI on Apple devices, or Continue.dev for code.' }
           },
           {
@@ -551,7 +551,7 @@ schema: {
       metaDescription: `8 Ollama-Frontends im Vergleich: Open WebUI (${st.de('open-webui')} Sterne, RAG), Ollama-Desktop-App, Enchanted UI (Apple-App), Jan AI (offline). Lizenzen, Setup.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       leadAnswerBlock: `**Ein Frontend ist die Chat-Oberfläche für Ihr lokales LLM -- Ollama oder LM Studio führt das Modell aus, das Frontend liefert die komfortable Benutzeroberfläche. Ollama selbst enthält inzwischen eine einfache Desktop-Chat-App für macOS und Windows; ein separates Frontend bringt daher vor allem RAG, Mehrbenutzerzugriff, mobile Apps oder Coding-Werkzeuge. Open WebUI bietet die meisten Funktionen (RAG, multimodal, Mehrbenutzerbetrieb) und über ${st.de('open-webui', 'bare')} GitHub-Sterne, Enchanted UI ist eine native macOS/iOS/visionOS-App, und Jan AI deckt den Offline-Desktop-Einsatz unter Windows, macOS und Linux ab.**`,
       audience: 'Einsteiger, die ihr erstes lokales LLM auf Standard-Hardware betreiben',
       readTime: '11 Min. Lesezeit',
@@ -787,7 +787,7 @@ schema: {
               a: 'Ja. Web-Frontends wie Open WebUI und LobeHub laufen gut auf einem Server: Ollama dort betreiben, das Frontend in Docker bereitstellen und von Ihrem Laptop per HTTP öffnen. Native Apps wie Enchanted UI verbinden sich mit einem entfernten Ollama-Server, wenn Sie dessen Adresse in den Einstellungen eintragen. Sichern Sie die Installation mit Authentifizierung oder einer Firewall ab.',
             },
             {
-              q: 'Welches Frontend braucht am wenigsten RAM?',
+              q: 'Welche ist die leichteste lokale LLM-Chat-Oberfläche (wenig RAM)?',
               a: 'Native und erweiterungsbasierte Clients verursachen den geringsten Overhead: Die Ollama-Desktop-App, Enchanted UI, Page Assist und Continue.dev haben keine Docker- oder Datenbankschicht. Das schlanke Docker-Image von Open WebUI benötigt laut Dokumentation im Leerlauf etwa 300 MB und mehr, sobald RAG und Embedding-Modelle aktiv sind. Bei knappem RAM nutzen Sie die Ollama-Desktop-App oder Page Assist, auf Apple-Geräten Enchanted UI oder für Code Continue.dev.',
             },
             {
@@ -851,7 +851,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llm-frontends',
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -938,7 +938,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Welches Frontend braucht am wenigsten RAM?',
+            'name': 'Welche ist die leichteste lokale LLM-Chat-Oberfläche (wenig RAM)?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Native und erweiterungsbasierte Clients verursachen den geringsten Overhead: Die Ollama-Desktop-App, Enchanted UI, Page Assist und Continue.dev haben keine Docker- oder Datenbankschicht. Das schlanke Docker-Image von Open WebUI benötigt laut Dokumentation im Leerlauf etwa 300 MB und mehr, sobald RAG und Embedding-Modelle aktiv sind. Bei knappem RAM nutzen Sie die Ollama-Desktop-App oder Page Assist, auf Apple-Geräten Enchanted UI oder für Code Continue.dev.' }
           },
           {
@@ -973,7 +973,7 @@ schema: {
       metaDescription: `Comparez 8 interfaces pour Ollama : Open WebUI (${st.fr('open-webui', 'k')} étoiles, RAG), app de bureau Ollama, Enchanted UI (Apple), Jan AI (hors ligne). Licences et guide.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       leadAnswerBlock: `**Un frontend est l\'interface de chat de votre LLM local : Ollama ou LM Studio exécute le modèle, le frontend fournit l\'interface soignée. Ollama propose désormais lui-même une application de chat de base pour macOS et Windows ; un frontend séparé apporte donc surtout le RAG, l\'accès multi-utilisateurs, des applications mobiles ou des outils de programmation. Open WebUI offre le plus de fonctionnalités (RAG, multimodal, multi-utilisateurs) et compte plus de ${st.fr('open-webui', 'bare')} étoiles GitHub, Enchanted UI est une application native macOS/iOS/visionOS, et Jan AI couvre l\'usage hors ligne sur Windows, macOS et Linux.**`,
       audience: 'Débutants qui font tourner leur premier LLM local sur du matériel grand public',
       readTime: '11 min de lecture',
@@ -1209,7 +1209,7 @@ schema: {
               a: 'Oui. Les interfaces web comme Open WebUI et LobeHub fonctionnent bien sur un serveur : exécutez Ollama dessus, déployez l\'interface dans Docker et ouvrez-la depuis votre portable via HTTP. Les apps natives comme Enchanted UI se connectent à un serveur Ollama distant quand vous saisissez son adresse dans les réglages. Sécurisez l\'ensemble avec une authentification ou un pare-feu.',
             },
             {
-              q: 'Quelle interface consomme le moins de RAM ?',
+              q: 'Quelle est l’interface de chat LLM locale la plus légère (peu de RAM) ?',
               a: 'Les clients natifs et sous forme d\'extension ajoutent le moins de charge : l\'app de bureau Ollama, Enchanted UI, Page Assist et Continue.dev n\'ont ni Docker ni couche de base de données. L\'image Docker allégée d\'Open WebUI consomme environ 300 Mo au repos d\'après sa documentation, et davantage dès que le RAG et les modèles d\'embedding sont actifs. Si la RAM est limitée, utilisez l\'app de bureau Ollama ou Page Assist, Enchanted UI sur les appareils Apple, ou Continue.dev pour le code.',
             },
             {
@@ -1265,7 +1265,7 @@ schema: {
         'description': `Meilleures interfaces de chat pour LLM locaux en 2026 : Open WebUI (${st.fr('open-webui', 'k')} étoiles GitHub), app de bureau Ollama, Enchanted UI (app Apple native), Jan AI (app hors ligne). Comparaison et guide.`,
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1352,7 +1352,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Quelle interface consomme le moins de RAM ?',
+            'name': 'Quelle est l’interface de chat LLM locale la plus légère (peu de RAM) ?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Les clients natifs et sous forme d\'extension ajoutent le moins de charge : l\'app de bureau Ollama, Enchanted UI, Page Assist et Continue.dev n\'ont ni Docker ni couche de base de données. L\'image Docker allégée d\'Open WebUI consomme environ 300 Mo au repos d\'après sa documentation, et davantage dès que le RAG et les modèles d\'embedding sont actifs. Si la RAM est limitée, utilisez l\'app de bureau Ollama ou Page Assist, Enchanted UI sur les appareils Apple, ou Continue.dev pour le code.' }
           },
           {
@@ -1377,7 +1377,7 @@ schema: {
       metaDescription: `Ollama対応フロントエンド8種を比較：Open WebUI（${st.ja('open-webui', 'k')}スター・RAG）、Ollamaデスクトップアプリ、Enchanted UI（Apple向け）、Jan AI（オフライン）。ライセンスも解説。`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       leadAnswerBlock: `**フロントエンドはローカルLLM用のチャットUIです。モデルを動かすのはOllamaやLM Studioで、フロントエンドは使いやすい画面を提供します。Ollama自体もmacOSとWindows向けに基本的なデスクトップチャットアプリを提供しているため、別途フロントエンドを入れる主な理由は、RAG、マルチユーザー対応、モバイルアプリ、コーディング支援のいずれかです。Open WebUIは機能が最も多く（RAG、マルチモーダル、マルチユーザー）、GitHubスターは${st.ja('open-webui', 'bare')}以上。Enchanted UIはmacOS/iOS/visionOSのネイティブアプリ、Jan AIはWindows・macOS・Linuxでのオフライン利用に向いています。**`,
       audience: 'コンシューマー向けハードウェアで初めてローカルLLMを動かす初心者',
       readTime: '11分で読める',
@@ -1610,7 +1610,7 @@ schema: {
               a: 'はい。Open WebUIやLobeHubなどのWebフロントエンドはサーバー上でも問題なく動作します。サーバーでOllamaを実行し、フロントエンドをDockerでデプロイして、ノートPCからHTTP経由でアクセスします。Enchanted UIのようなネイティブアプリは、設定にアドレスを入力すれば、リモートのOllamaサーバーに接続できます。認証やファイアウォールで構成を保護してください。',
             },
             {
-              q: 'RAM使用量が最も少ないフロントエンドはどれですか？',
+              q: '最も軽量なローカルLLMチャットUIはどれですか（RAM使用量が少ないもの）？',
               a: 'ネイティブアプリや拡張機能型のクライアントがオーバーヘッドは最小です：Ollamaデスクトップアプリ、Enchanted UI、Page Assist、Continue.devには、DockerやDBの層がありません。Open WebUIの軽量版Dockerイメージは、ドキュメントによるとアイドル時で約300 MBですが、RAGや埋め込みモデルが動くとさらに増えます。RAMに余裕がない場合は、OllamaデスクトップアプリかPage Assist、Apple端末ではEnchanted UI、コード用にはContinue.devを使いましょう。',
             },
             {
@@ -1666,7 +1666,7 @@ schema: {
         'description': `2026年のローカルLLMチャットUI比較：Open WebUI（${st.ja('open-webui', 'k')} GitHubスター）、Ollamaデスクトップアプリ、Enchanted UI（Apple向けネイティブアプリ）、Jan AI（オフラインアプリ）。比較とセットアップガイド。`,
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1753,7 +1753,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'RAM使用量が最も少ないフロントエンドはどれですか？',
+            'name': '最も軽量なローカルLLMチャットUIはどれですか（RAM使用量が少ないもの）？',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'ネイティブアプリや拡張機能型のクライアントがオーバーヘッドは最小です：Ollamaデスクトップアプリ、Enchanted UI、Page Assist、Continue.devには、DockerやDBの層がありません。Open WebUIの軽量版Dockerイメージは、ドキュメントによるとアイドル時で約300 MBですが、RAGや埋め込みモデルが動くとさらに増えます。RAMに余裕がない場合は、OllamaデスクトップアプリかPage Assist、Apple端末ではEnchanted UI、コード用にはContinue.devを使いましょう。' }
           },
           {
@@ -1778,7 +1778,7 @@ schema: {
       metaDescription: `8款Ollama前端对比：Open WebUI（${st.zh('open-webui', 'k')}星、RAG）、Ollama桌面应用、Enchanted UI（Apple原生）、Jan AI（离线），含许可证与设置指南。`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       leadAnswerBlock: `**前端是本地LLM的聊天界面——由Ollama或LM Studio运行模型，前端则提供精致的UI。Ollama自身现已为macOS和Windows提供基础的桌面聊天应用，因此单独的前端主要增加RAG、多用户访问、移动应用或编程工具。Open WebUI功能最丰富（RAG、多模态、多用户），拥有${st.zh('open-webui')} GitHub星；Enchanted UI是macOS/iOS/visionOS原生应用；Jan AI支持Windows、macOS和Linux上的离线桌面使用。**`,
       audience: '在消费级硬件上运行首个本地LLM的初学者',
       readTime: '阅读约11分钟',
@@ -2013,7 +2013,7 @@ schema: {
               a: '可以。Open WebUI和LobeHub等Web前端很适合部署在服务器上：在服务器上运行Ollama，用Docker部署前端，然后从笔记本电脑通过HTTP访问。Enchanted UI等原生应用在设置中输入远程Ollama服务器的地址即可连接。请用身份验证或防火墙保护该设置。',
             },
             {
-              q: '哪个前端占用的RAM最少？',
+              q: '最轻量的本地LLM聊天界面是哪个（占用RAM最少）？',
               a: '原生应用和基于扩展的客户端开销最小：Ollama桌面应用、Enchanted UI、Page Assist和Continue.dev都没有Docker或数据库层。根据其文档，Open WebUI的精简版Docker镜像空闲时约占用300 MB，启用RAG和嵌入模型后会占用更多。如果RAM有限，请使用Ollama桌面应用或Page Assist，Apple设备上可用Enchanted UI，编程场景可用Continue.dev。',
             },
             {
@@ -2069,7 +2069,7 @@ schema: {
         'description': `2026年本地LLM聊天界面：Open WebUI（${st.zh('open-webui', 'k')} GitHub星）、Ollama桌面应用、Enchanted UI（Apple原生应用）、Jan AI（离线应用）。对比与设置指南。`,
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2156,7 +2156,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': '哪个前端占用的RAM最少？',
+            'name': '最轻量的本地LLM聊天界面是哪个（占用RAM最少）？',
             'acceptedAnswer': { '@type': 'Answer', 'text': '原生应用和基于扩展的客户端开销最小：Ollama桌面应用、Enchanted UI、Page Assist和Continue.dev都没有Docker或数据库层。根据其文档，Open WebUI的精简版Docker镜像空闲时约占用300 MB，启用RAG和嵌入模型后会占用更多。如果RAM有限，请使用Ollama桌面应用或Page Assist，Apple设备上可用Enchanted UI，编程场景可用Continue.dev。' }
           },
           {
@@ -2182,7 +2182,7 @@ schema: {
       metaDescription: `Compara 8 frontends para Ollama: Open WebUI (${st.es('open-webui', 'k')} estrellas, RAG), app de Ollama, Enchanted UI (app nativa Apple) y Jan AI. Licencias y guía.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       leadAnswerBlock: `**Un frontend es la interfaz de chat de tu LLM local: Ollama o LM Studio ejecutan el modelo, pero el frontend proporciona la interfaz visual. Ollama ya incluye una app de chat básica para macOS y Windows, así que un frontend aparte aporta sobre todo RAG, acceso multiusuario, apps móviles o herramientas de programación. Open WebUI tiene más funciones (RAG, multimodal, multiusuario) y más de ${st.es('open-webui', 'bare')} estrellas en GitHub, Enchanted UI es una app nativa de macOS/iOS/visionOS y Jan AI cubre el uso de escritorio sin conexión en Windows, macOS y Linux.**`,
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '11 min de lectura',
@@ -2419,7 +2419,7 @@ schema: {
               a: 'Sí. Los frontends web como Open WebUI y LobeHub funcionan bien en un servidor: ejecuta Ollama allí, despliega el frontend en Docker y ábrelo desde tu laptop mediante HTTP. Las apps nativas como Enchanted UI se conectan a un servidor Ollama remoto cuando introduces su dirección en Ajustes. Protege la configuración con autenticación o un firewall.',
             },
             {
-              q: '¿Qué frontend usa menos RAM?',
+              q: '¿Cuál es la interfaz de chat LLM local más ligera (menos RAM)?',
               a: 'Los clientes nativos y las extensiones añaden la menor sobrecarga: la app de escritorio de Ollama, Enchanted UI, Page Assist y Continue.dev no tienen capa de Docker ni base de datos. La imagen slim de Docker de Open WebUI consume en reposo unos 300 MB según su documentación, y más cuando están activos RAG y los modelos de embeddings. Si la RAM es limitada, usa la app de escritorio de Ollama o Page Assist, Enchanted UI en dispositivos Apple o Continue.dev para código.',
             },
             {
@@ -2475,7 +2475,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2562,7 +2562,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': '¿Qué frontend usa menos RAM?',
+            'name': '¿Cuál es la interfaz de chat LLM local más ligera (menos RAM)?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Los clientes nativos y las extensiones añaden la menor sobrecarga: la app de escritorio de Ollama, Enchanted UI, Page Assist y Continue.dev no tienen capa de Docker ni base de datos. La imagen slim de Docker de Open WebUI consume en reposo unos 300 MB según su documentación, y más cuando están activos RAG y los modelos de embeddings. Si la RAM es limitada, usa la app de escritorio de Ollama o Page Assist, Enchanted UI en dispositivos Apple o Continue.dev para código.' }
           },
           {
@@ -2588,7 +2588,7 @@ schema: {
       metaDescription: `قارن 8 واجهات لـ Ollama: Open WebUI (أكثر من ${st.ar('open-webui', 'bare')} نجمة، RAG)، تطبيق Ollama المكتبي، Enchanted UI، Jan AI (دون اتصال). التراخيص ودليل الإعداد.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
       leadAnswerBlock: `**الواجهة هي نافذة الدردشة التي تتعامل بها مع نموذج LLM المحلي -- يشغّل Ollama أو LM Studio النموذج، وتوفّر الواجهة تجربة الاستخدام المصقولة. يأتي Ollama نفسه الآن مع تطبيق دردشة مكتبي أساسي لأنظمة macOS وWindows، لذا تضيف الواجهة المستقلة في الغالب RAG أو الوصول متعدد المستخدمين أو تطبيقات الجوال أو أدوات البرمجة. يملك Open WebUI أكثر الميزات (RAG، متعددة الوسائط، متعددة المستخدمين) وأكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub، وEnchanted UI تطبيق أصلي لأنظمة macOS وiOS وvisionOS، وJan AI يغطي الاستخدام المكتبي دون اتصال على Windows وmacOS وLinux.**`,
@@ -2826,7 +2826,7 @@ schema: {
               a: 'نعم. تعمل واجهات الويب مثل Open WebUI وLobeHub جيداً على خادم: شغّل Ollama هناك، وانشر الواجهة عبر Docker، وافتحها من حاسوبك المحمول عبر HTTP. وتتصل التطبيقات الأصلية مثل Enchanted UI بخادم Ollama بعيد عند إدخال عنوانه في الإعدادات. أمّن الإعداد بالمصادقة أو بجدار حماية.',
             },
             {
-              q: 'أي واجهة تستخدم أقل قدر من RAM؟',
+              q: 'ما أخف واجهة دردشة LLM محلية (أقل استهلاك لـ RAM)؟',
               a: 'تضيف التطبيقات الأصلية والعملاء القائمون على الامتدادات أقل عبء: تطبيق Ollama المكتبي وEnchanted UI وPage Assist وContinue.dev لا تحتاج إلى طبقة Docker أو قاعدة بيانات. تستهلك صورة Open WebUI المصغّرة على Docker نحو 300 MB في وضع الخمول وفق وثائقه، وتستخدم أكثر عند تفعيل RAG ونماذج التضمين. إذا كانت RAM محدودة، فاستخدم تطبيق Ollama المكتبي أو Page Assist، أو Enchanted UI على أجهزة Apple، أو Continue.dev للكود.',
             },
             {
@@ -2882,7 +2882,7 @@ schema: {
         'description': `أفضل واجهات الدردشة لنماذج LLM المحلية في 2026: Open WebUI (أكثر من ${st.ar('open-webui', 'bare')} نجمة)، تطبيق Ollama المكتبي، Enchanted UI (تطبيق Apple أصلي)، Jan AI (دون اتصال). مقارنة ودليل إعداد.`,
         'url': 'https://www.promptquorum.com/ar/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2969,7 +2969,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'أي واجهة تستخدم أقل قدر من RAM؟',
+            'name': 'ما أخف واجهة دردشة LLM محلية (أقل استهلاك لـ RAM)؟',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'تضيف التطبيقات الأصلية والعملاء القائمون على الامتدادات أقل عبء: تطبيق Ollama المكتبي وEnchanted UI وPage Assist وContinue.dev لا تحتاج إلى طبقة Docker أو قاعدة بيانات. تستهلك صورة Open WebUI المصغّرة على Docker نحو 300 MB في وضع الخمول وفق وثائقه، وتستخدم أكثر عند تفعيل RAG ونماذج التضمين. إذا كانت RAM محدودة، فاستخدم تطبيق Ollama المكتبي أو Page Assist، أو Enchanted UI على أجهزة Apple، أو Continue.dev للكود.' }
           },
           {
@@ -2995,7 +2995,7 @@ schema: {
       metaDescription: `Compare 8 frontends para Ollama: Open WebUI (${st.pt('open-webui', 'k')} estrelas, RAG), app do Ollama, Enchanted UI (app Apple nativo), Jan AI (offline). Licenças e guia.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
       leadAnswerBlock: `**Um frontend é a interface de chat do seu LLM local: o Ollama ou o LM Studio executa o modelo, e o frontend oferece a interface visual. O próprio Ollama agora inclui um app de chat básico para macOS e Windows, então um frontend separado serve principalmente para RAG, acesso multiusuário, apps móveis ou ferramentas de programação. O Open WebUI tem mais recursos (RAG, multimodal, multiusuário) e mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub, o Enchanted UI é um app nativo para macOS/iOS/visionOS e o Jan AI cobre o uso offline no desktop em Windows, macOS e Linux.**`,
@@ -3231,7 +3231,7 @@ schema: {
               a: 'Sim. Frontends web como o Open WebUI e o LobeHub funcionam bem em um servidor: rode o Ollama lá, implante o frontend no Docker e abra-o do seu notebook via HTTP. Apps nativos como o Enchanted UI se conectam a um servidor Ollama remoto quando você informa o endereço dele em Ajustes. Proteja a configuração com autenticação ou um firewall.',
             },
             {
-              q: 'Qual frontend usa menos RAM?',
+              q: 'Qual é a interface de chat LLM local mais leve (menos RAM)?',
               a: 'Clientes nativos e baseados em extensão acrescentam menos sobrecarga: o app desktop do Ollama, o Enchanted UI, o Page Assist e o Continue.dev não têm camada de Docker nem de banco de dados. A imagem Docker slim do Open WebUI fica em cerca de 300 MB em repouso, segundo a documentação, e usa mais quando o RAG e os modelos de embedding estão ativos. Se a RAM for limitada, use o app desktop do Ollama ou o Page Assist, o Enchanted UI em dispositivos Apple ou o Continue.dev para código.',
             },
             {
@@ -3287,7 +3287,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llm-frontends',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -3374,7 +3374,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Qual frontend usa menos RAM?',
+            'name': 'Qual é a interface de chat LLM local mais leve (menos RAM)?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Clientes nativos e baseados em extensão acrescentam menos sobrecarga: o app desktop do Ollama, o Enchanted UI, o Page Assist e o Continue.dev não têm camada de Docker nem de banco de dados. A imagem Docker slim do Open WebUI fica em cerca de 300 MB em repouso, segundo a documentação, e usa mais quando o RAG e os modelos de embedding estão ativos. Se a RAM for limitada, use o app desktop do Ollama ou o Page Assist, o Enchanted UI em dispositivos Apple ou o Continue.dev para código.' }
           },
           {
@@ -3400,7 +3400,7 @@ schema: {
       metaDescription: 'Open WebUI(RAG), Ollama 데스크톱 앱, Enchanted UI, Jan AI 등 로컬 LLM 프론트엔드 8종을 기능, 라이선스, 설정 시간으로 비교합니다.',
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ko.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-10-23',
+      dateModified: '2026-10-31',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
       leadAnswerBlock: `**프론트엔드는 로컬 LLM을 위한 채팅 인터페이스입니다. Ollama 또는 LM Studio가 모델을 실행하고, 프론트엔드는 다듬어진 UI를 제공합니다. Ollama 자체도 이제 macOS와 Windows용 기본 데스크톱 채팅 앱을 제공하므로, 별도 프론트엔드는 주로 RAG, 다중 사용자 접근, 모바일 앱, 코딩 도구를 추가할 때 의미가 있습니다. Open WebUI는 기능이 가장 많고(RAG, 멀티모달, 다중 사용자) GitHub 스타가 ${st.ko('open-webui', 'bare')}개 이상이며, Enchanted UI는 네이티브 macOS/iOS/visionOS 앱이고, Jan AI는 Windows, macOS, Linux에서 오프라인 데스크톱 사용을 지원합니다.**`,
@@ -3638,7 +3638,7 @@ schema: {
               a: '예. Open WebUI와 LobeHub 같은 웹 프론트엔드는 서버에서 잘 동작합니다. 서버에서 Ollama를 실행하고 프론트엔드를 Docker로 배포한 뒤, 노트북에서 HTTP로 접속하십시오. Enchanted UI 같은 네이티브 앱은 설정에 원격 Ollama 서버 주소를 입력하면 연결됩니다. 인증이나 방화벽으로 구성을 보호하십시오.',
             },
             {
-              q: 'RAM을 가장 적게 쓰는 프론트엔드는 무엇입니까?',
+              q: '가장 가벼운 로컬 LLM 채팅 UI는 무엇입니까 (RAM 사용량 최소)?',
               a: '네이티브 및 확장 프로그램 기반 클라이언트가 오버헤드가 가장 적습니다. Ollama 데스크톱 앱, Enchanted UI, Page Assist, Continue.dev에는 Docker나 데이터베이스 계층이 없습니다. Open WebUI의 slim Docker 이미지는 문서에 따르면 유휴 상태에서 약 300 MB를 쓰며, RAG와 임베딩 모델이 활성화되면 더 많이 씁니다. RAM이 부족하다면 Ollama 데스크톱 앱이나 Page Assist, Apple 기기에서는 Enchanted UI, 코딩에는 Continue.dev를 사용하십시오.',
             },
             {
@@ -3694,7 +3694,7 @@ schema: {
         'description': `2026년 로컬 LLM 채팅 UI 비교: Open WebUI(GitHub 스타 ${st.ko('open-webui', 'bare')}개 이상), Ollama 데스크톱 앱, Enchanted UI(네이티브 Apple 앱), Jan AI(오프라인 앱). 비교와 설정 가이드.`,
         'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-10-31',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -3781,7 +3781,7 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'RAM을 가장 적게 쓰는 프론트엔드는 무엇입니까?',
+            'name': '가장 가벼운 로컬 LLM 채팅 UI는 무엇입니까 (RAM 사용량 최소)?',
             'acceptedAnswer': { '@type': 'Answer', 'text': '네이티브 및 확장 프로그램 기반 클라이언트가 오버헤드가 가장 적습니다. Ollama 데스크톱 앱, Enchanted UI, Page Assist, Continue.dev에는 Docker나 데이터베이스 계층이 없습니다. Open WebUI의 slim Docker 이미지는 문서에 따르면 유휴 상태에서 약 300 MB를 쓰며, RAG와 임베딩 모델이 활성화되면 더 많이 씁니다. RAM이 부족하다면 Ollama 데스크톱 앱이나 Page Assist, Apple 기기에서는 Enchanted UI, 코딩에는 Continue.dev를 사용하십시오.' }
           },
           {

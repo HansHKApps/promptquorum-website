@@ -6195,5 +6195,36 @@
       "period": "last 28 days to 2026-10-31"
     },
     "deployedAt": null
+  },
+  {
+    "id": "a4a849b4-1db4-4fe3-b04d-2b842bd59ce8",
+    "slug": "/local-llms/best-local-llm-frontends",
+    "date": "2026-10-31T07:43:47.030Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Ollama & Local LLM Frontends 2026: 8 Compared",
+        "new": "Best Local LLM Frontends & Chat UIs 2026: 8 Compared"
+      },
+      {
+        "field": "title",
+        "old": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "new": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More"
+      }
+    ],
+    "reason": "GSC-driven (28d to 2026-10-28, EN): add UI/GUI/chat-UI vocabulary to title/H1/meta; reword RAM FAQ to mirror 'light weight local llm chat interface' (87 impr, pos 9.0). de/ja/fr already match queries: unchanged.",
+    "queries": [
+      "local llm frontend",
+      "best local llm frontend",
+      "best local ai frontend",
+      "llm frontends",
+      "ollama frontends",
+      "best local llm gui",
+      "llm ui",
+      "llm interface",
+      "light weight local llm chat interface"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
