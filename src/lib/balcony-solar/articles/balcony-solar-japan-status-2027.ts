@@ -2,6 +2,7 @@
 // BSOL-30 — Tier 5 (2027 Trends), legislation/status, semi_annual.
 // SCOPE NOTE: no dedicated plug-in/balcony solar legislation exists in Japan yet —
 // this is a status/emerging-policy piece, not a "here are the rules" piece.
+// REFRESH 2026-10-31: REI roadmap re-read at source — five hurdles (not three), three-step roadmap, <1 kW class proposal, Electricians Act; FAQ +1.
 // REFRESH 2026-10-19: REI June 2026 roadmap + Selectra Japan (grid-interconnection rules) added; "regulatory vacuum" framing corrected.
 import type { Language } from "@/lib/blog/blogContent";
 import type { LLMArticle } from "@/lib/local-llms/types";
@@ -9,22 +10,22 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-18',
-    last_full_refresh: '2026-10-19',
+    next_refresh_due: '2027-04-30',
+    last_full_refresh: '2026-10-31',
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Japan? 2027 Status Report',
     seoTitle: 'Is Balcony Solar Legal in Japan? 2027 Status Report',
     intro: 'Japan has no dedicated plug-in or balcony solar law, and the general rules point the other way: according to an analysis by the Renewable Energy Institute (REI) summarized by Selectra Japan, feeding power into a household outlet counts as grid interconnection, reverse power flow without the utility\'s permission is not allowed, and installation needs a licensed electrician. This is a status report on a policy debate that gained a concrete proposal in June 2026 — REI\'s roadmap for opening solar to renters and apartment residents — not a guide to settled rules.',
-    metaDescription: 'Japan has no plug-in solar law in 2026, and plugging a kit into an outlet counts as grid connection needing utility permission. REI proposed reform in June.',
+    metaDescription: 'Japan has no plug-in solar law, and plugging a kit into an outlet counts as grid connection needing utility permission. REI proposed reform in June.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min read',
     educationalLevel: 'Beginner',
     audience: 'Prospective balcony solar buyers and policy watchers in Japan',
     primaryTerm: 'balcony solar legal status japan',
     targetKeywords: ['balcony solar japan', 'plug-in solar japan legal', 'japan solar policy 2027'],
-    leadAnswerBlock: '**Japan has no dedicated plug-in or balcony solar law as of 2026-10-19 — no simplified category, wattage cap or registration route for 800 W-class devices — and, according to REI\'s analysis as summarized by Selectra Japan, plugging a solar device into a household outlet is treated as grid interconnection that needs the utility\'s permission.** Selectra Japan (updated 9 September 2026), summarizing REI\'s analysis, says reverse power flow without the utility\'s permission is not allowed, installation by a licensed electrician is required, and it advises against buying overseas plug-in kits for use in Japanese outlets. In June 2026 the Renewable Energy Institute (自然エネルギー財団) published a roadmap report, "賃貸・集合住宅にも開かれた太陽光発電へ" (solar power open to renters and apartment residents), on how Japan could introduce plug-in solar, following its March 2026 report on Germany\'s experience. This is policy advocacy, not enacted law, and no METI draft, consultation or timeline has been found. Separately, METI announced on 19 March 2026 that FIT/FIP support for commercial non-rooftop solar ends from fiscal year 2027 while rooftop and residential support continues — general solar policy, not balcony-specific.',
+    leadAnswerBlock: '**Japan has no dedicated plug-in or balcony solar law as of 2026-10-31 — no simplified category, wattage cap or registration route for 800 W-class devices — and, according to REI\'s analysis as summarized by Selectra Japan, plugging a solar device into a household outlet is treated as grid interconnection that needs the utility\'s permission.** Selectra Japan (updated 9 September 2026), summarizing REI\'s analysis, says reverse power flow without the utility\'s permission is not allowed, installation by a licensed electrician is required, and it advises against buying overseas plug-in kits for use in Japanese outlets. In June 2026 the Renewable Energy Institute (自然エネルギー財団) published a roadmap report, "賃貸・集合住宅にも開かれた太陽光発電へ" (solar power open to renters and apartment residents), on how Japan could introduce plug-in solar, following its March 2026 report on Germany\'s experience. This is policy advocacy, not enacted law, and no METI draft, consultation or timeline has been found. Separately, METI announced on 19 March 2026 that FIT/FIP support for commercial non-rooftop solar ends from fiscal year 2027 while rooftop and residential support continues — general solar policy, not balcony-specific.',
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Japan?',
@@ -36,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Groundwork referenced in the debate: NEDO\'s "Demonstration Project for Multi-Purpose Applications of Solar Power" (including balcony-mounted R&D) and the "Solar Power Development Strategy 2025"',
           'METI announced March 19, 2026 that FIT/FIP support for commercial non-rooftop solar ends from FY2027 while residential and rooftop support continues — not balcony-specific; no timeline for balcony rules has been found',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -53,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Japan has no dedicated plug-in or balcony solar law as of 2026-10-19 — no wattage cap, no registration process, no simplified category for 800 W-class devices.',
+          'Japan has no dedicated plug-in or balcony solar law as of 2026-10-31 — no wattage cap, no registration process, no simplified category for 800 W-class devices.',
           'Under the general rules, feeding a household outlet counts as grid interconnection: reverse power flow without the utility\'s permission is not allowed and a licensed electrician is required (REI analysis summarized by Selectra Japan). Selectra advises against plugging imported kits into Japanese outlets.',
           'In June 2026 the Renewable Energy Institute published a roadmap report on introducing plug-in solar in Japan, following its March 2026 report on Germany. It is advocacy, not a government proposal.',
           'Referenced groundwork: NEDO\'s "Demonstration Project for Multi-Purpose Applications of Solar Power" (which included balcony-mounted system R&D) and the "Solar Power Development Strategy 2025".',
@@ -64,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: 'No Dedicated Law Yet',
         content: [
-          '**As of 2026-10-19, Japan has no plug-in or balcony solar legislation — no simplified category, wattage cap or registration route for 800 W-class devices — and the general grid rules apply instead.** According to Selectra Japan (updated 9 September 2026), summarizing analysis by the Renewable Energy Institute (REI), feeding power into a household outlet counts as grid interconnection (系統連系); reverse power flow without the utility\'s permission is not allowed; and installation by a licensed electrician (電気工事士) is required, with a reverse-power relay and a connection application to the distribution operator among the hurdles. So this is not a vacuum in the sense of "anything goes": without a simplified category, the rules for grid-connected generation apply to a device that was never designed for them. Germany\'s 800 W rule has no Japanese equivalent.',
+          '**As of 2026-10-31, Japan has no plug-in or balcony solar legislation — no simplified category, wattage cap or registration route for 800 W-class devices — and the general grid rules apply instead.** According to Selectra Japan (updated 9 September 2026), summarizing analysis by the Renewable Energy Institute (REI), feeding power into a household outlet counts as grid interconnection (系統連系); reverse power flow without the utility\'s permission is not allowed; and installation by a licensed electrician (電気工事士) is required, with a reverse-power relay and a connection application to the distribution operator among the hurdles. So this is not a vacuum in the sense of "anything goes": without a simplified category, the rules for grid-connected generation apply to a device that was never designed for them. Germany\'s 800 W rule has no Japanese equivalent.',
           'This page is a status report, not a rules guide, and it is not legal advice. Selectra Japan advises against buying overseas plug-in kits and plugging them into Japanese household outlets; ask your distribution utility before connecting any generation device.',
         ],
       },
@@ -72,12 +73,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: 'The Policy Conversation So Far',
         content: [
-          '**In June 2026 the Renewable Energy Institute (自然エネルギー財団) published a roadmap report, "賃貸・集合住宅にも開かれた太陽光発電へ" (solar power open to renters and apartment residents), on how Japan could introduce plug-in solar; its contents list three hurdles — outlet connection, panel installation and grid connection.** It follows REI\'s March 2026 English report on Germany, "Plug-in PV: How Germany Made Solar Accessible to All". This is advocacy and analysis from a renewable-energy policy institute, not a government proposal or draft bill.',
+          '**In June 2026 the Renewable Energy Institute (自然エネルギー財団) published a roadmap report, "賃貸・集合住宅にも開かれた太陽光発電へ" (solar power open to renters and apartment residents), on how Japan could introduce plug-in solar; its contents list five hurdles — outlet connection, panel installation, grid connection, product safety and installation procedures.** It follows REI\'s March 2026 English report on Germany, "Plug-in PV: How Germany Made Solar Accessible to All". This is advocacy and analysis from a renewable-energy policy institute, not a government proposal or draft bill.',
+          '**REI\'s roadmap proposes three steps: pilot projects and technical safety verification; a clear legal category for small plug-in devices, with the report floating a class for systems under 1 kW AC below today\'s 10 kW AC minimum class as an example; and technical standards, certification and simplified online registration, followed by a rollout aimed at rental and apartment buildings.** REI also lists the Electricians Act (電気工事士法), which reserves work on general electrical installations to licensed electricians, as a rule to review so that self-installation could be allowed under defined safety conditions. These are recommendations to policymakers, not enacted rules.',
           'Earlier groundwork exists: NEDO\'s (New Energy and Industrial Technology Development Organization) "Demonstration Project for Multi-Purpose Applications of Solar Power", which included R&D on balcony-mounted systems, and Japan\'s "Solar Power Development Strategy 2025". These are technical and strategic foundations, not enacted rules for consumer plug-in systems.',
           '**Separately, and not balcony-specific: METI announced on March 19, 2026 that it will discontinue FIT/FIP (Feed-in Tariff / Feed-in Premium) support for commercial, non-rooftop solar from fiscal year 2027, while continuing FIT/FIP support for residential and commercial rooftop solar.** This shows METI drawing a policy line between rooftop/residential and utility-scale solar — background for where balcony solar could eventually be categorized — but it is general solar policy, not a balcony-solar announcement.',
         ],
         callouts: [
-          { type: 'warning', text: 'As of 2026-10-19 no ministry draft, consultation or timeline for plug-in solar rules has been found. This summary draws on secondary reporting (Selectra Japan) and REI\'s published report titles; read REI\'s report and METI or utility guidance directly. This is not legal advice.' },
+          { type: 'warning', text: 'As of 2026-10-31 no ministry draft, consultation or timeline for plug-in solar rules has been found. This summary draws on secondary reporting (Selectra Japan) and REI\'s June 2026 roadmap report; also check METI and utility guidance directly. This is not legal advice.' },
         ],
       },
       whereHeaded: {
@@ -91,10 +93,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Is balcony solar legal in Japan?', a: 'There is no dedicated law permitting or banning it, but plugging a generation device into a household outlet is treated as grid interconnection that needs the utility\'s permission, according to an analysis by REI summarized by Selectra Japan. In practice, imported plug-in kits are not a legal "just plug it in" product in Japan today.' },
+          { q: 'Is balcony solar legal in Japan?', a: 'There is no dedicated law permitting or banning it, but plugging a generation device into a household outlet is treated as grid interconnection that needs the utility\'s permission, according to an analysis by REI summarized by Selectra Japan. According to Selectra Japan, simply plugging in an imported kit is in principle not allowed in Japan today.' },
           { q: 'Can I use an imported plug-in solar kit in a Japanese outlet?', a: 'Selectra Japan, citing REI\'s analysis, advises against it: reverse power flow without the utility\'s permission is not allowed, and installation by a licensed electrician is required. Ask your distribution utility before connecting any generation device. This is not legal advice.' },
           { q: 'Is Japan planning to regulate balcony solar?', a: 'No government proposal has been found. The Renewable Energy Institute published a roadmap report on introducing plug-in solar in June 2026, and METI separated residential/rooftop from utility-scale FIT/FIP support in March 2026 — but neither is dedicated balcony-solar legislation, and no timeline has been announced.' },
-          { q: 'What is the REI roadmap?', a: 'A June 2026 report by the Renewable Energy Institute titled "賃貸・集合住宅にも開かれた太陽光発電へ", on how Japan could introduce plug-in solar for renters and apartment residents. Its contents list three hurdles: outlet connection, panel installation and grid connection. It is policy advocacy, not enacted rules.' },
+          { q: 'What is the REI roadmap?', a: 'A June 2026 report by the Renewable Energy Institute titled "賃貸・集合住宅にも開かれた太陽光発電へ", on how Japan could introduce plug-in solar for renters and apartment residents. Its contents list five hurdles: outlet connection, panel installation, grid connection, product safety and installation procedures. It is policy advocacy, not enacted rules.' },
+          { q: 'What does the REI roadmap propose for plug-in solar in Japan?', a: 'REI proposes three steps: pilot projects to verify safety on Japanese wiring, outlets and balconies; a new legal category for small plug-in systems (its example is a class for systems under 1 kW AC) plus a review of the Electricians Act and reverse-power-flow rules; then technical standards, certification, simplified online registration and model rules for apartment buildings. It describes plug-in systems as roughly 300–1,200 W AC. These are recommendations, not enacted rules, and no timeline has been announced.' },
           { q: 'What is NEDO\'s role in Japan\'s balcony solar policy discussion?', a: 'NEDO (New Energy and Industrial Technology Development Organization) ran a "Demonstration Project for Multi-Purpose Applications of Solar Power" that included R&D on balcony-mounted systems — referenced groundwork, not enacted regulation.' },
           { q: 'Does METI\'s March 2026 FIT/FIP announcement affect balcony solar?', a: 'Not directly. METI announced it will discontinue FIT/FIP support for commercial, non-rooftop solar from FY2027 while continuing support for residential and rooftop solar. This is general solar policy, not a balcony-specific rule.' },
           { q: 'When will Japan have balcony solar rules?', a: 'No timeline has been announced. Treat any specific date as speculation until a ministry proposal or draft bill is published.' },
@@ -129,13 +132,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Japan hat kein eigenes Gesetz für steckerfertige Solaranlagen oder Balkonkraftwerke, und die allgemeinen Regeln sprechen eher dagegen: Laut einer Analyse des Renewable Energy Institute (REI), die Selectra Japan zusammenfasst, gilt das Einspeisen in eine Haushaltssteckdose als Netzanschluss, Rückspeisung ohne Zustimmung des Versorgers ist nicht erlaubt, und die Installation erfordert eine Elektrofachkraft. Dies ist ein Statusbericht zu einer politischen Debatte, die im Juni 2026 einen konkreten Vorschlag erhielt — den Fahrplan des REI, Solarstrom auch für Mieter und Bewohner von Mehrfamilienhäusern zu öffnen — und kein Leitfaden zu feststehenden Regeln.',
     metaDescription: 'Japan hat 2026 kein Steckersolar-Gesetz; ein Set an der Steckdose gilt als Netzanschluss mit Zustimmung des Versorgers. REI schlug im Juni Reformen vor.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Angehende Käufer von Balkonkraftwerken und politische Beobachter in Japan',
     primaryTerm: 'rechtlicher status von balkonkraftwerken in japan',
     targetKeywords: ['balkonkraftwerk japan', 'steckerfertige solaranlage japan legal', 'japan solarpolitik 2027'],
-    leadAnswerBlock: '**Japan hat zum 19.10.2026 kein eigenes Gesetz für steckerfertige Solaranlagen oder Balkonkraftwerke — keine vereinfachte Kategorie, keine Leistungsobergrenze und keinen Registrierungsweg für Geräte der 800-W-Klasse —, und laut der von Selectra Japan zusammengefassten Analyse des REI gilt der Anschluss eines Solargeräts an eine Haushaltssteckdose als Netzanschluss, der die Zustimmung des Versorgers erfordert.** Selectra Japan (aktualisiert am 9. September 2026) fasst die Analyse des REI zusammen: Rückspeisung ohne Zustimmung des Versorgers ist nicht erlaubt, eine Installation durch eine Elektrofachkraft ist erforderlich, und es wird davon abgeraten, im Ausland gekaufte Steckersets an japanischen Steckdosen zu betreiben. Im Juni 2026 veröffentlichte das Renewable Energy Institute (自然エネルギー財団) einen Fahrplan-Bericht, „賃貸・集合住宅にも開かれた太陽光発電へ" (Solarstrom auch für Mieter und Bewohner von Mehrfamilienhäusern), dazu, wie Japan Steckersolar einführen könnte, im Anschluss an seinen Bericht vom März 2026 zu den deutschen Erfahrungen. Das ist politische Interessenvertretung, kein erlassenes Gesetz, und es wurde weder ein METI-Entwurf noch eine Konsultation oder ein Zeitplan gefunden. Separat davon kündigte METI am 19. März 2026 an, die FIT/FIP-Förderung für gewerbliche Solaranlagen außerhalb von Dächern ab dem Geschäftsjahr 2027 zu beenden, während die Förderung für Dach- und Wohnanlagen fortgesetzt wird — allgemeine Solarpolitik, nicht balkonspezifisch.',
+    leadAnswerBlock: '**Japan hat zum 31.10.2026 kein eigenes Gesetz für steckerfertige Solaranlagen oder Balkonkraftwerke — keine vereinfachte Kategorie, keine Leistungsobergrenze und keinen Registrierungsweg für Geräte der 800-W-Klasse —, und laut der von Selectra Japan zusammengefassten Analyse des REI gilt der Anschluss eines Solargeräts an eine Haushaltssteckdose als Netzanschluss, der die Zustimmung des Versorgers erfordert.** Selectra Japan (aktualisiert am 9. September 2026) fasst die Analyse des REI zusammen: Rückspeisung ohne Zustimmung des Versorgers ist nicht erlaubt, eine Installation durch eine Elektrofachkraft ist erforderlich, und es wird davon abgeraten, im Ausland gekaufte Steckersets an japanischen Steckdosen zu betreiben. Im Juni 2026 veröffentlichte das Renewable Energy Institute (自然エネルギー財団) einen Fahrplan-Bericht, „賃貸・集合住宅にも開かれた太陽光発電へ" (Solarstrom auch für Mieter und Bewohner von Mehrfamilienhäusern), dazu, wie Japan Steckersolar einführen könnte, im Anschluss an seinen Bericht vom März 2026 zu den deutschen Erfahrungen. Das ist politische Interessenvertretung, kein erlassenes Gesetz, und es wurde weder ein METI-Entwurf noch eine Konsultation oder ein Zeitplan gefunden. Separat davon kündigte METI am 19. März 2026 an, die FIT/FIP-Förderung für gewerbliche Solaranlagen außerhalb von Dächern ab dem Geschäftsjahr 2027 zu beenden, während die Förderung für Dach- und Wohnanlagen fortgesetzt wird — allgemeine Solarpolitik, nicht balkonspezifisch.',
     quickAnswerTop: {
       de: {
         question: 'Ist ein Balkonkraftwerk in Japan legal?',
@@ -147,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'In der Debatte referenzierte Vorarbeit: NEDOs „Demonstrationsprojekt für Mehrzweckanwendungen von Solarenergie" (einschließlich Forschung zu balkonmontierten Systemen) und die „Strategie zur Entwicklung der Solarenergie 2025"',
           'METI kündigte am 19. März 2026 an, die FIT/FIP-Förderung für gewerbliche Solaranlagen außerhalb von Dächern ab dem Geschäftsjahr 2027 zu beenden, während die Förderung für Wohn- und Dachanlagen fortgesetzt wird — nicht balkonspezifisch; ein Zeitplan für Balkonregeln wurde nicht gefunden',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -164,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Japan hat zum 19.10.2026 kein eigenes Gesetz für steckerfertige Solaranlagen oder Balkonkraftwerke — keine Leistungsobergrenze, kein Registrierungsverfahren, keine vereinfachte Kategorie für Geräte der 800-W-Klasse.',
+          'Japan hat zum 31.10.2026 kein eigenes Gesetz für steckerfertige Solaranlagen oder Balkonkraftwerke — keine Leistungsobergrenze, kein Registrierungsverfahren, keine vereinfachte Kategorie für Geräte der 800-W-Klasse.',
           'Nach den allgemeinen Regeln gilt der Anschluss an eine Haushaltssteckdose als Netzanschluss: Rückspeisung ohne Zustimmung des Versorgers ist nicht erlaubt und eine Elektrofachkraft ist erforderlich (REI-Analyse, zusammengefasst von Selectra Japan). Selectra rät davon ab, importierte Steckersets an japanischen Steckdosen zu betreiben.',
           'Im Juni 2026 veröffentlichte das Renewable Energy Institute einen Fahrplan-Bericht zur Einführung von Steckersolar in Japan, im Anschluss an seinen Bericht vom März 2026 zu Deutschland. Er ist Interessenvertretung, kein Regierungsvorschlag.',
           'Referenzierte Vorarbeit: NEDOs „Demonstrationsprojekt für Mehrzweckanwendungen von Solarenergie" (das Forschung zu balkonmontierten Systemen umfasste) und die „Strategie zur Entwicklung der Solarenergie 2025".',
@@ -175,7 +178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: 'Noch kein eigenes Gesetz',
         content: [
-          '**Zum 19.10.2026 hat Japan keine Gesetzgebung für steckerfertige Solaranlagen oder Balkonkraftwerke — keine vereinfachte Kategorie, keine Leistungsobergrenze und keinen Registrierungsweg für Geräte der 800-W-Klasse —, stattdessen gelten die allgemeinen Netzregeln.** Laut Selectra Japan (aktualisiert am 9. September 2026), das die Analyse des Renewable Energy Institute (REI) zusammenfasst, gilt das Einspeisen in eine Haushaltssteckdose als Netzanschluss (系統連系); Rückspeisung ohne Zustimmung des Versorgers ist nicht erlaubt; und eine Installation durch eine Elektrofachkraft (電気工事士) ist erforderlich, wobei ein Rückleistungsrelais und ein Anschlussantrag beim Verteilnetzbetreiber zu den Hürden gehören. Es ist also kein Vakuum im Sinne von „alles erlaubt": Ohne vereinfachte Kategorie gelten die Regeln für netzgekoppelte Erzeugung für ein Gerät, das nie dafür gedacht war. Für die deutsche 800-W-Regel gibt es in Japan kein Pendant.',
+          '**Zum 31.10.2026 hat Japan keine Gesetzgebung für steckerfertige Solaranlagen oder Balkonkraftwerke — keine vereinfachte Kategorie, keine Leistungsobergrenze und keinen Registrierungsweg für Geräte der 800-W-Klasse —, stattdessen gelten die allgemeinen Netzregeln.** Laut Selectra Japan (aktualisiert am 9. September 2026), das die Analyse des Renewable Energy Institute (REI) zusammenfasst, gilt das Einspeisen in eine Haushaltssteckdose als Netzanschluss (系統連系); Rückspeisung ohne Zustimmung des Versorgers ist nicht erlaubt; und eine Installation durch eine Elektrofachkraft (電気工事士) ist erforderlich, wobei ein Rückleistungsrelais und ein Anschlussantrag beim Verteilnetzbetreiber zu den Hürden gehören. Es ist also kein Vakuum im Sinne von „alles erlaubt": Ohne vereinfachte Kategorie gelten die Regeln für netzgekoppelte Erzeugung für ein Gerät, das nie dafür gedacht war. Für die deutsche 800-W-Regel gibt es in Japan kein Pendant.',
           'Diese Seite ist ein Statusbericht und kein Regel-Leitfaden, und sie ist keine Rechtsberatung. Selectra Japan rät davon ab, im Ausland gekaufte Steckersets zu erwerben und an japanischen Haushaltssteckdosen zu betreiben; fragen Sie Ihren Verteilnetzbetreiber, bevor Sie ein Erzeugungsgerät anschließen.',
         ],
       },
@@ -183,12 +186,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: 'Der bisherige politische Diskurs',
         content: [
-          '**Im Juni 2026 veröffentlichte das Renewable Energy Institute (自然エネルギー財団) einen Fahrplan-Bericht, „賃貸・集合住宅にも開かれた太陽光発電へ" (Solarstrom auch für Mieter und Bewohner von Mehrfamilienhäusern), dazu, wie Japan Steckersolar einführen könnte; das Inhaltsverzeichnis nennt drei Hürden — Steckdosenanschluss, Modulmontage und Netzanschluss.** Er folgt auf den englischen REI-Bericht vom März 2026 zu Deutschland, „Plug-in PV: How Germany Made Solar Accessible to All". Dies ist Interessenvertretung und Analyse eines Politikinstituts für erneuerbare Energien, kein Regierungsvorschlag und kein Gesetzentwurf.',
+          '**Im Juni 2026 veröffentlichte das Renewable Energy Institute (自然エネルギー財団) einen Fahrplan-Bericht, „賃貸・集合住宅にも開かれた太陽光発電へ" (Solarstrom auch für Mieter und Bewohner von Mehrfamilienhäusern), dazu, wie Japan Steckersolar einführen könnte; das Inhaltsverzeichnis nennt fünf Hürden — Steckdosenanschluss, Modulmontage, Netzanschluss, Produktsicherheit und Installationsverfahren.** Er folgt auf den englischen REI-Bericht vom März 2026 zu Deutschland, „Plug-in PV: How Germany Made Solar Accessible to All". Dies ist Interessenvertretung und Analyse eines Politikinstituts für erneuerbare Energien, kein Regierungsvorschlag und kein Gesetzentwurf.',
+          '**Der Fahrplan des REI schlägt drei Schritte vor: Pilotprojekte und eine technische Sicherheitsprüfung; eine klare rechtliche Kategorie für kleine Steckersolar-Geräte, wobei der Bericht beispielhaft eine Klasse für Anlagen unter 1 kW AC unterhalb der heutigen Mindestklasse von 10 kW AC nennt; und schließlich technische Normen, Zertifizierung und eine vereinfachte Online-Registrierung, gefolgt von einem Rollout für Miet- und Mehrfamilienhäuser.** Außerdem führt das REI das Elektrikergesetz (電気工事士法), das Arbeiten an allgemeinen Elektroanlagen Elektrofachkräften vorbehält, als Regelung auf, die geprüft werden sollte, damit eine Selbstinstallation unter definierten Sicherheitsbedingungen erlaubt werden könnte. Das sind Empfehlungen an die Politik, keine erlassenen Regeln.',
           'Es gibt Vorarbeit: NEDOs (New Energy and Industrial Technology Development Organization) „Demonstrationsprojekt für Mehrzweckanwendungen von Solarenergie", das Forschung zu balkonmontierten Systemen umfasste, und Japans „Strategie zur Entwicklung der Solarenergie 2025". Das sind technische und strategische Grundlagen, keine erlassenen Regeln für steckerfertige Verbrauchersysteme.',
           '**Separat und nicht balkonspezifisch: METI kündigte am 19. März 2026 an, die FIT/FIP-Förderung (Einspeisetarif / Einspeiseprämie) für gewerbliche Solaranlagen außerhalb von Dächern ab dem Geschäftsjahr 2027 einzustellen, während die FIT/FIP-Förderung für Wohn- und gewerbliche Dachanlagen fortgesetzt wird.** Das zeigt, dass METI eine politische Trennlinie zwischen Dach-/Wohnanlagen und Anlagen im Versorgungsmaßstab zieht — Hintergrund dafür, wo Balkonkraftwerke einmal eingeordnet werden könnten —, ist aber allgemeine Solarpolitik und keine Ankündigung zu Balkonkraftwerken.',
         ],
         callouts: [
-          { type: 'warning', text: 'Zum 19.10.2026 wurde weder ein Ministeriumsentwurf noch eine Konsultation oder ein Zeitplan für Regeln zu steckerfertigen Solaranlagen gefunden. Diese Zusammenfassung stützt sich auf Sekundärberichterstattung (Selectra Japan) und die veröffentlichten Berichtstitel des REI; lesen Sie den REI-Bericht und die Hinweise von METI oder Ihrem Versorger direkt. Dies ist keine Rechtsberatung.' },
+          { type: 'warning', text: 'Zum 31.10.2026 wurde weder ein Ministeriumsentwurf noch eine Konsultation oder ein Zeitplan für Regeln zu steckerfertigen Solaranlagen gefunden. Diese Zusammenfassung stützt sich auf Sekundärberichterstattung (Selectra Japan) und den REI-Fahrplan-Bericht vom Juni 2026; prüfen Sie zusätzlich die Hinweise von METI oder Ihrem Versorger direkt. Dies ist keine Rechtsberatung.' },
         ],
       },
       whereHeaded: {
@@ -202,10 +206,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Ist ein Balkonkraftwerk in Japan legal?', a: 'Es gibt kein eigenes Gesetz, das es erlaubt oder verbietet, aber der Anschluss eines Erzeugungsgeräts an eine Haushaltssteckdose gilt laut einer Analyse des REI, die Selectra Japan zusammenfasst, als Netzanschluss, der die Zustimmung des Versorgers erfordert. In der Praxis sind importierte Steckersets in Japan heute kein legales „einfach einstecken"-Produkt.' },
+          { q: 'Ist ein Balkonkraftwerk in Japan legal?', a: 'Es gibt kein eigenes Gesetz, das es erlaubt oder verbietet, aber der Anschluss eines Erzeugungsgeräts an eine Haushaltssteckdose gilt laut einer Analyse des REI, die Selectra Japan zusammenfasst, als Netzanschluss, der die Zustimmung des Versorgers erfordert. Laut Selectra Japan ist das bloße Einstecken eines importierten Sets in Japan derzeit grundsätzlich nicht zulässig.' },
           { q: 'Kann ich ein importiertes Steckersolar-Set an einer japanischen Steckdose betreiben?', a: 'Selectra Japan rät unter Verweis auf die REI-Analyse davon ab: Rückspeisung ohne Zustimmung des Versorgers ist nicht erlaubt, und eine Installation durch eine Elektrofachkraft ist erforderlich. Fragen Sie Ihren Verteilnetzbetreiber, bevor Sie ein Erzeugungsgerät anschließen. Dies ist keine Rechtsberatung.' },
           { q: 'Plant Japan, Balkonkraftwerke zu regulieren?', a: 'Es wurde kein Regierungsvorschlag gefunden. Das Renewable Energy Institute veröffentlichte im Juni 2026 einen Fahrplan-Bericht zur Einführung von Steckersolar, und METI trennte im März 2026 die FIT/FIP-Förderung für Wohn-/Dachanlagen von der im Versorgungsmaßstab — beides ist jedoch keine eigene Gesetzgebung zu Balkonkraftwerken, und ein Zeitplan wurde nicht angekündigt.' },
-          { q: 'Was ist der REI-Fahrplan?', a: 'Ein Bericht des Renewable Energy Institute vom Juni 2026 mit dem Titel „賃貸・集合住宅にも開かれた太陽光発電へ" dazu, wie Japan Steckersolar für Mieter und Bewohner von Mehrfamilienhäusern einführen könnte. Das Inhaltsverzeichnis nennt drei Hürden: Steckdosenanschluss, Modulmontage und Netzanschluss. Er ist politische Interessenvertretung, keine erlassene Regel.' },
+          { q: 'Was ist der REI-Fahrplan?', a: 'Ein Bericht des Renewable Energy Institute vom Juni 2026 mit dem Titel „賃貸・集合住宅にも開かれた太陽光発電へ" dazu, wie Japan Steckersolar für Mieter und Bewohner von Mehrfamilienhäusern einführen könnte. Das Inhaltsverzeichnis nennt fünf Hürden: Steckdosenanschluss, Modulmontage, Netzanschluss, Produktsicherheit und Installationsverfahren. Er ist politische Interessenvertretung, keine erlassene Regel.' },
+          { q: 'Was schlägt der REI-Fahrplan für Steckersolar in Japan vor?', a: 'Das REI schlägt drei Schritte vor: Pilotprojekte, die die Sicherheit an japanischer Verkabelung, Steckdosen und Balkonen prüfen; eine neue rechtliche Kategorie für kleine Steckersolar-Anlagen (als Beispiel nennt der Bericht eine Klasse für Anlagen unter 1 kW AC) samt Überprüfung des Elektrikergesetzes und der Regeln zur Rückspeisung; danach technische Normen, Zertifizierung, vereinfachte Online-Registrierung und Mustervorschriften für Mehrfamilienhäuser. Steckersolar-Systeme beschreibt es mit etwa 300–1.200 W AC. Das sind Empfehlungen, keine erlassenen Regeln, und ein Zeitplan wurde nicht angekündigt.' },
           { q: 'Welche Rolle spielt NEDO in Japans Diskussion über Balkonkraftwerke?', a: 'NEDO (New Energy and Industrial Technology Development Organization) führte ein „Demonstrationsprojekt für Mehrzweckanwendungen von Solarenergie" durch, das Forschung zu balkonmontierten Systemen umfasste — referenzierte Vorarbeit, keine erlassene Regulierung.' },
           { q: 'Betrifft METIs FIT/FIP-Ankündigung vom März 2026 Balkonkraftwerke?', a: 'Nicht direkt. METI kündigte an, die FIT/FIP-Förderung für gewerbliche Solaranlagen außerhalb von Dächern ab dem Geschäftsjahr 2027 einzustellen, während die Förderung für Wohn- und Dachanlagen fortgesetzt wird. Das ist allgemeine Solarpolitik, keine balkonspezifische Regel.' },
           { q: 'Wann wird Japan Regeln für Balkonkraftwerke haben?', a: 'Es wurde kein Zeitplan angekündigt. Behandeln Sie jedes konkrete Datum als Spekulation, bis ein Ministeriumsvorschlag oder Gesetzentwurf veröffentlicht ist.' },
@@ -235,18 +240,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-es.webp',
-    title: '¿Es legal la energía solar de balcón en Japón? Informe de estado 2027',
-    seoTitle: '¿Es legal la energía solar de balcón en Japón? Informe de estado 2027',
+    title: '¿Es legal la energía solar de balcón en Japón? 2027',
+    seoTitle: '¿Es legal la energía solar de balcón en Japón? 2027',
     intro: 'Japón no tiene una ley específica sobre energía solar enchufable o de balcón, y las reglas generales apuntan en sentido contrario: según un análisis del Renewable Energy Institute (REI) resumido por Selectra Japan, inyectar energía en un enchufe doméstico cuenta como conexión a la red, el flujo inverso sin permiso de la distribuidora no está permitido y la instalación requiere un electricista habilitado. Este es un informe de estado sobre un debate político que recibió una propuesta concreta en junio de 2026 — la hoja de ruta del REI para abrir la energía solar a inquilinos y residentes de edificios de apartamentos — y no una guía de reglas ya establecidas.',
-    metaDescription: 'Japón no tiene ley de solar enchufable en 2026; conectar un kit al enchufe es conexión a red con permiso de la distribuidora. REI propuso reformas en junio.',
+    metaDescription: 'Japón no tiene ley de solar enchufable; conectar un kit al enchufe es conexión a red con permiso de la distribuidora. REI propuso reformas en junio.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Compradores potenciales de energía solar de balcón y observadores de política en Japón',
     primaryTerm: 'estado legal de la energía solar de balcón en japón',
     targetKeywords: ['energía solar de balcón japón', 'energía solar enchufable japón legal', 'política solar japón 2027'],
-    leadAnswerBlock: '**Japón no tiene una ley específica sobre energía solar enchufable o de balcón al 19/10/2026 — ninguna categoría simplificada, límite de potencia ni vía de registro para dispositivos de clase 800 W — y, según el análisis del REI resumido por Selectra Japan, conectar un dispositivo solar a un enchufe doméstico se trata como una conexión a la red que requiere el permiso de la distribuidora.** Selectra Japan (actualizado el 9 de septiembre de 2026), que resume el análisis del REI, indica que el flujo inverso sin permiso de la distribuidora no está permitido, que se exige instalación por un electricista habilitado y que desaconseja comprar kits enchufables en el extranjero para usarlos en enchufes japoneses. En junio de 2026 el Renewable Energy Institute (自然エネルギー財団) publicó un informe de hoja de ruta, «賃貸・集合住宅にも開かれた太陽光発電へ» (energía solar abierta a inquilinos y residentes de apartamentos), sobre cómo Japón podría introducir la energía solar enchufable, tras su informe de marzo de 2026 sobre la experiencia de Alemania. Es promoción de políticas, no ley vigente, y no se ha encontrado ningún borrador del METI, consulta ni calendario. Por separado, el METI anunció el 19 de marzo de 2026 que el apoyo FIT/FIP para la solar comercial no instalada en tejados termina desde el ejercicio fiscal 2027, mientras continúa el apoyo a la solar en tejados y residencial — política solar general, no específica de balcones.',
+    leadAnswerBlock: '**Japón no tiene una ley específica sobre energía solar enchufable o de balcón al 31/10/2026 — ninguna categoría simplificada, límite de potencia ni vía de registro para dispositivos de clase 800 W — y, según el análisis del REI resumido por Selectra Japan, conectar un dispositivo solar a un enchufe doméstico se trata como una conexión a la red que requiere el permiso de la distribuidora.** Selectra Japan (actualizado el 9 de septiembre de 2026), que resume el análisis del REI, indica que el flujo inverso sin permiso de la distribuidora no está permitido, que se exige instalación por un electricista habilitado y que desaconseja comprar kits enchufables en el extranjero para usarlos en enchufes japoneses. En junio de 2026 el Renewable Energy Institute (自然エネルギー財団) publicó un informe de hoja de ruta, «賃貸・集合住宅にも開かれた太陽光発電へ» (energía solar abierta a inquilinos y residentes de apartamentos), sobre cómo Japón podría introducir la energía solar enchufable, tras su informe de marzo de 2026 sobre la experiencia de Alemania. Es promoción de políticas, no ley vigente, y no se ha encontrado ningún borrador del METI, consulta ni calendario. Por separado, el METI anunció el 19 de marzo de 2026 que el apoyo FIT/FIP para la solar comercial no instalada en tejados termina desde el ejercicio fiscal 2027, mientras continúa el apoyo a la solar en tejados y residencial — política solar general, no específica de balcones.',
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Japón?',
@@ -258,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Trabajo previo citado en el debate: el «Proyecto de demostración de aplicaciones multipropósito de la energía solar» de NEDO (incluida I+D de sistemas montados en balcones) y la «Estrategia de desarrollo de la energía solar 2025»',
           'El METI anunció el 19 de marzo de 2026 que el apoyo FIT/FIP a la solar comercial no instalada en tejados termina desde el ejercicio 2027, mientras continúa el de la solar residencial y de tejados — no específico de balcones; no se ha encontrado calendario para normas de balcón',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -275,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Japón no tiene una ley específica sobre energía solar enchufable o de balcón al 19/10/2026 — sin límite de potencia, sin proceso de registro, sin categoría simplificada para dispositivos de clase 800 W.',
+          'Japón no tiene una ley específica sobre energía solar enchufable o de balcón al 31/10/2026 — sin límite de potencia, sin proceso de registro, sin categoría simplificada para dispositivos de clase 800 W.',
           'Según las reglas generales, alimentar un enchufe doméstico cuenta como conexión a la red: el flujo inverso sin permiso de la distribuidora no está permitido y se exige un electricista habilitado (análisis del REI resumido por Selectra Japan). Selectra desaconseja enchufar kits importados en enchufes japoneses.',
           'En junio de 2026 el Renewable Energy Institute publicó un informe de hoja de ruta sobre la introducción de la solar enchufable en Japón, tras su informe de marzo de 2026 sobre Alemania. Es promoción de políticas, no una propuesta del Gobierno.',
           'Trabajo previo citado: el «Proyecto de demostración de aplicaciones multipropósito de la energía solar» de NEDO (que incluyó I+D de sistemas montados en balcones) y la «Estrategia de desarrollo de la energía solar 2025».',
@@ -286,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: 'Aún no hay una ley dedicada',
         content: [
-          '**Al 19/10/2026, Japón no tiene legislación sobre energía solar enchufable o de balcón — ninguna categoría simplificada, límite de potencia ni vía de registro para dispositivos de clase 800 W — y se aplican en su lugar las reglas generales de red.** Según Selectra Japan (actualizado el 9 de septiembre de 2026), que resume el análisis del Renewable Energy Institute (REI), inyectar energía en un enchufe doméstico cuenta como conexión a la red (系統連系); el flujo inverso sin permiso de la distribuidora no está permitido; y se exige instalación por un electricista habilitado (電気工事士), con un relé de potencia inversa y una solicitud de conexión al operador de distribución entre los obstáculos. Por tanto, no es un vacío en el sentido de «todo vale»: sin una categoría simplificada, las reglas de generación conectada a la red se aplican a un dispositivo que nunca se diseñó para ellas. La regla alemana de 800 W no tiene equivalente japonés.',
+          '**Al 31/10/2026, Japón no tiene legislación sobre energía solar enchufable o de balcón — ninguna categoría simplificada, límite de potencia ni vía de registro para dispositivos de clase 800 W — y se aplican en su lugar las reglas generales de red.** Según Selectra Japan (actualizado el 9 de septiembre de 2026), que resume el análisis del Renewable Energy Institute (REI), inyectar energía en un enchufe doméstico cuenta como conexión a la red (系統連系); el flujo inverso sin permiso de la distribuidora no está permitido; y se exige instalación por un electricista habilitado (電気工事士), con un relé de potencia inversa y una solicitud de conexión al operador de distribución entre los obstáculos. Por tanto, no es un vacío en el sentido de «todo vale»: sin una categoría simplificada, las reglas de generación conectada a la red se aplican a un dispositivo que nunca se diseñó para ellas. La regla alemana de 800 W no tiene equivalente japonés.',
           'Esta página es un informe de estado, no una guía de reglas, y no es asesoramiento jurídico. Selectra Japan desaconseja comprar kits enchufables en el extranjero y conectarlos a enchufes domésticos japoneses; consulta a tu distribuidora antes de conectar cualquier dispositivo generador.',
         ],
       },
@@ -294,12 +299,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: 'La conversación de política hasta ahora',
         content: [
-          '**En junio de 2026 el Renewable Energy Institute (自然エネルギー財団) publicó un informe de hoja de ruta, «賃貸・集合住宅にも開かれた太陽光発電へ» (energía solar abierta a inquilinos y residentes de apartamentos), sobre cómo Japón podría introducir la energía solar enchufable; su índice enumera tres obstáculos: conexión al enchufe, instalación de paneles y conexión a la red.** Sigue al informe en inglés del REI de marzo de 2026 sobre Alemania, «Plug-in PV: How Germany Made Solar Accessible to All». Es promoción y análisis de un instituto de políticas de energías renovables, no una propuesta del Gobierno ni un proyecto de ley.',
+          '**En junio de 2026 el Renewable Energy Institute (自然エネルギー財団) publicó un informe de hoja de ruta, «賃貸・集合住宅にも開かれた太陽光発電へ» (energía solar abierta a inquilinos y residentes de apartamentos), sobre cómo Japón podría introducir la energía solar enchufable; su índice enumera cinco obstáculos: conexión al enchufe, instalación de paneles, conexión a la red, seguridad de los productos y trámites de instalación.** Sigue al informe en inglés del REI de marzo de 2026 sobre Alemania, «Plug-in PV: How Germany Made Solar Accessible to All». Es promoción y análisis de un instituto de políticas de energías renovables, no una propuesta del Gobierno ni un proyecto de ley.',
+          '**La hoja de ruta del REI propone tres pasos: proyectos piloto y verificación técnica de la seguridad; una categoría legal clara para los dispositivos enchufables pequeños, con el informe planteando como ejemplo una clase para sistemas de menos de 1 kW CA por debajo de la actual clase mínima de 10 kW CA; y, por último, normas técnicas, certificación y un registro en línea simplificado, seguidos de un despliegue dirigido a edificios de alquiler y de apartamentos.** El REI también señala la Ley de Electricistas (電気工事士法), que reserva a electricistas habilitados los trabajos en instalaciones eléctricas generales, como una norma que revisar para que la autoinstalación pudiera permitirse bajo condiciones de seguridad definidas. Son recomendaciones a los responsables políticos, no normas vigentes.',
           'Existe trabajo previo: el «Proyecto de demostración de aplicaciones multipropósito de la energía solar» de NEDO (New Energy and Industrial Technology Development Organization), que incluyó I+D de sistemas montados en balcones, y la «Estrategia de desarrollo de la energía solar 2025» de Japón. Son bases técnicas y estratégicas, no normas vigentes para sistemas enchufables de consumo.',
           '**Por separado, y sin ser específico de balcones: el METI anunció el 19 de marzo de 2026 que dejará de apoyar con FIT/FIP (tarifa regulada / prima regulada) la solar comercial no instalada en tejados desde el ejercicio fiscal 2027, mientras continúa el apoyo FIT/FIP a la solar residencial y comercial en tejados.** Esto muestra que el METI traza una línea de política entre la solar de tejado/residencial y la de escala de servicios públicos — contexto sobre dónde podría clasificarse la energía solar de balcón —, pero es política solar general, no un anuncio sobre balcones.',
         ],
         callouts: [
-          { type: 'warning', text: 'Al 19/10/2026 no se ha encontrado borrador ministerial, consulta ni calendario para normas de energía solar enchufable. Este resumen se basa en cobertura secundaria (Selectra Japan) y en los títulos de informes publicados por el REI; lee directamente el informe del REI y las orientaciones del METI o de tu distribuidora. No es asesoramiento jurídico.' },
+          { type: 'warning', text: 'Al 31/10/2026 no se ha encontrado borrador ministerial, consulta ni calendario para normas de energía solar enchufable. Este resumen se basa en cobertura secundaria (Selectra Japan) y en el informe de hoja de ruta del REI de junio de 2026; consulta además las orientaciones del METI o de tu distribuidora. No es asesoramiento jurídico.' },
         ],
       },
       whereHeaded: {
@@ -313,10 +319,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Es legal la energía solar de balcón en Japón?', a: 'No hay una ley específica que la permita o la prohíba, pero conectar un dispositivo generador a un enchufe doméstico se trata como una conexión a la red que requiere el permiso de la distribuidora, según un análisis del REI resumido por Selectra Japan. En la práctica, los kits enchufables importados no son hoy en Japón un producto legal de «solo enchufar».' },
+          { q: '¿Es legal la energía solar de balcón en Japón?', a: 'No hay una ley específica que la permita o la prohíba, pero conectar un dispositivo generador a un enchufe doméstico se trata como una conexión a la red que requiere el permiso de la distribuidora, según un análisis del REI resumido por Selectra Japan. Según Selectra Japan, limitarse a enchufar un kit importado no está permitido, en principio, en Japón hoy.' },
           { q: '¿Puedo usar un kit solar enchufable importado en un enchufe japonés?', a: 'Selectra Japan, citando el análisis del REI, lo desaconseja: el flujo inverso sin permiso de la distribuidora no está permitido y se exige instalación por un electricista habilitado. Consulta a tu distribuidora antes de conectar cualquier dispositivo generador. No es asesoramiento jurídico.' },
           { q: '¿Planea Japón regular la energía solar de balcón?', a: 'No se ha encontrado ninguna propuesta del Gobierno. El Renewable Energy Institute publicó en junio de 2026 un informe de hoja de ruta sobre la introducción de la solar enchufable, y el METI separó en marzo de 2026 el apoyo FIT/FIP a la solar residencial/de tejados del de escala de servicios públicos — pero ninguno es legislación específica sobre balcones, y no se ha anunciado calendario.' },
-          { q: '¿Qué es la hoja de ruta del REI?', a: 'Un informe de junio de 2026 del Renewable Energy Institute titulado «賃貸・集合住宅にも開かれた太陽光発電へ», sobre cómo Japón podría introducir la energía solar enchufable para inquilinos y residentes de apartamentos. Su índice enumera tres obstáculos: conexión al enchufe, instalación de paneles y conexión a la red. Es promoción de políticas, no normas vigentes.' },
+          { q: '¿Qué es la hoja de ruta del REI?', a: 'Un informe de junio de 2026 del Renewable Energy Institute titulado «賃貸・集合住宅にも開かれた太陽光発電へ», sobre cómo Japón podría introducir la energía solar enchufable para inquilinos y residentes de apartamentos. Su índice enumera cinco obstáculos: conexión al enchufe, instalación de paneles, conexión a la red, seguridad de los productos y trámites de instalación. Es promoción de políticas, no normas vigentes.' },
+          { q: '¿Qué propone la hoja de ruta del REI para la energía solar enchufable en Japón?', a: 'El REI propone tres pasos: proyectos piloto que verifiquen la seguridad con el cableado, los enchufes y los balcones japoneses; una nueva categoría legal para los sistemas enchufables pequeños (su ejemplo es una clase para sistemas de menos de 1 kW CA), junto con la revisión de la Ley de Electricistas y de las normas sobre flujo inverso; y después normas técnicas, certificación, registro en línea simplificado y normas modelo para edificios de apartamentos. Describe los sistemas enchufables como de unos 300–1200 W CA. Son recomendaciones, no normas vigentes, y no se ha anunciado calendario.' },
           { q: '¿Qué papel tiene NEDO en el debate sobre la energía solar de balcón en Japón?', a: 'NEDO (New Energy and Industrial Technology Development Organization) llevó a cabo un «Proyecto de demostración de aplicaciones multipropósito de la energía solar» que incluyó I+D de sistemas montados en balcones — trabajo previo citado, no regulación vigente.' },
           { q: '¿Afecta el anuncio FIT/FIP del METI de marzo de 2026 a la energía solar de balcón?', a: 'No directamente. El METI anunció que dejará de apoyar con FIT/FIP la solar comercial no instalada en tejados desde el ejercicio 2027, mientras continúa el apoyo a la solar residencial y de tejados. Es política solar general, no una norma específica de balcones.' },
           { q: '¿Cuándo tendrá Japón normas sobre energía solar de balcón?', a: 'No se ha anunciado ningún calendario. Trata cualquier fecha concreta como especulación hasta que se publique una propuesta ministerial o un proyecto de ley.' },
@@ -346,18 +353,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-fr.webp',
-    title: 'L\'énergie solaire de balcon est-elle légale au Japon ? Rapport d\'état 2027',
-    seoTitle: 'L\'énergie solaire de balcon est-elle légale au Japon ? Rapport d\'état 2027',
+    title: 'Le solaire de balcon est-il légal au Japon ? Bilan 2027',
+    seoTitle: 'Le solaire de balcon est-il légal au Japon ? Bilan 2027',
     intro: 'Le Japon n\'a pas de loi dédiée au solaire enfichable ou de balcon, et les règles générales vont plutôt dans le sens contraire : selon une analyse du Renewable Energy Institute (REI) résumée par Selectra Japan, injecter de l\'électricité dans une prise domestique vaut raccordement au réseau, le flux inverse sans l\'accord du gestionnaire n\'est pas autorisé et l\'installation exige un électricien habilité. Ceci est un rapport de situation sur un débat politique qui a reçu une proposition concrète en juin 2026 — la feuille de route du REI pour ouvrir le solaire aux locataires et aux habitants d\'immeubles — et non un guide de règles établies.',
-    metaDescription: 'Le Japon n\'a pas de loi sur le solaire enfichable en 2026 ; brancher un kit vaut raccordement réseau avec accord du gestionnaire. Le REI propose une réforme.',
+    metaDescription: 'Le Japon n\'a pas de loi sur le solaire enfichable ; brancher un kit vaut raccordement réseau avec accord du gestionnaire. Le REI propose une réforme.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Acheteurs potentiels de solaire de balcon et observateurs politiques au Japon',
     primaryTerm: 'statut légal du solaire de balcon au japon',
     targetKeywords: ['solaire de balcon japon', 'solaire plug-and-play japon légal', 'politique solaire japon 2027'],
-    leadAnswerBlock: '**Le Japon n\'a pas de loi dédiée au solaire enfichable ou de balcon au 19/10/2026 — ni catégorie simplifiée, ni plafond de puissance, ni voie d\'enregistrement pour les appareils de classe 800 W — et, selon l\'analyse du REI résumée par Selectra Japan, brancher un appareil solaire sur une prise domestique est traité comme un raccordement au réseau nécessitant l\'accord du gestionnaire.** Selectra Japan (mis à jour le 9 septembre 2026), qui résume l\'analyse du REI, indique que le flux inverse sans l\'accord du gestionnaire n\'est pas autorisé, qu\'une installation par un électricien habilité est exigée et déconseille d\'acheter des kits enfichables à l\'étranger pour les brancher sur des prises japonaises. En juin 2026, le Renewable Energy Institute (自然エネルギー財団) a publié un rapport de feuille de route, « 賃貸・集合住宅にも開かれた太陽光発電へ » (le solaire ouvert aux locataires et aux habitants d\'immeubles), sur la manière dont le Japon pourrait introduire le solaire enfichable, à la suite de son rapport de mars 2026 sur l\'expérience allemande. Il s\'agit de plaidoyer, non de droit en vigueur, et aucun projet du METI, aucune consultation ni aucun calendrier n\'a été trouvé. Par ailleurs, le METI a annoncé le 19 mars 2026 que le soutien FIT/FIP au solaire commercial hors toiture prend fin à partir de l\'exercice 2027, tandis que le soutien au solaire en toiture et résidentiel se poursuit — politique solaire générale, non propre au balcon.',
+    leadAnswerBlock: '**Le Japon n\'a pas de loi dédiée au solaire enfichable ou de balcon au 31/10/2026 — ni catégorie simplifiée, ni plafond de puissance, ni voie d\'enregistrement pour les appareils de classe 800 W — et, selon l\'analyse du REI résumée par Selectra Japan, brancher un appareil solaire sur une prise domestique est traité comme un raccordement au réseau nécessitant l\'accord du gestionnaire.** Selectra Japan (mis à jour le 9 septembre 2026), qui résume l\'analyse du REI, indique que le flux inverse sans l\'accord du gestionnaire n\'est pas autorisé, qu\'une installation par un électricien habilité est exigée et déconseille d\'acheter des kits enfichables à l\'étranger pour les brancher sur des prises japonaises. En juin 2026, le Renewable Energy Institute (自然エネルギー財団) a publié un rapport de feuille de route, « 賃貸・集合住宅にも開かれた太陽光発電へ » (le solaire ouvert aux locataires et aux habitants d\'immeubles), sur la manière dont le Japon pourrait introduire le solaire enfichable, à la suite de son rapport de mars 2026 sur l\'expérience allemande. Il s\'agit de plaidoyer, non de droit en vigueur, et aucun projet du METI, aucune consultation ni aucun calendrier n\'a été trouvé. Par ailleurs, le METI a annoncé le 19 mars 2026 que le soutien FIT/FIP au solaire commercial hors toiture prend fin à partir de l\'exercice 2027, tandis que le soutien au solaire en toiture et résidentiel se poursuit — politique solaire générale, non propre au balcon.',
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal au Japon ?',
@@ -369,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Travaux préparatoires cités dans le débat : le « Projet de démonstration d\'applications multifonctions de l\'énergie solaire » de NEDO (dont la R&D sur des systèmes montés sur balcon) et la « Stratégie de développement de l\'énergie solaire 2025 »',
           'Le METI a annoncé le 19 mars 2026 que le soutien FIT/FIP au solaire commercial hors toiture prend fin dès l\'exercice 2027, tandis que celui au solaire résidentiel et en toiture se poursuit — non propre au balcon ; aucun calendrier pour des règles dédiées au balcon n\'a été trouvé',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -386,7 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Le Japon n\'a pas de loi dédiée au solaire enfichable ou de balcon au 19/10/2026 — ni plafond de puissance, ni procédure d\'enregistrement, ni catégorie simplifiée pour les appareils de classe 800 W.',
+          'Le Japon n\'a pas de loi dédiée au solaire enfichable ou de balcon au 31/10/2026 — ni plafond de puissance, ni procédure d\'enregistrement, ni catégorie simplifiée pour les appareils de classe 800 W.',
           'Selon les règles générales, alimenter une prise domestique vaut raccordement au réseau : le flux inverse sans l\'accord du gestionnaire n\'est pas autorisé et un électricien habilité est exigé (analyse du REI résumée par Selectra Japan). Selectra déconseille de brancher des kits importés sur des prises japonaises.',
           'En juin 2026, le Renewable Energy Institute a publié un rapport de feuille de route sur l\'introduction du solaire enfichable au Japon, à la suite de son rapport de mars 2026 sur l\'Allemagne. C\'est du plaidoyer, non une proposition gouvernementale.',
           'Travaux préparatoires cités : le « Projet de démonstration d\'applications multifonctions de l\'énergie solaire » de NEDO (qui incluait de la R&D sur des systèmes montés sur balcon) et la « Stratégie de développement de l\'énergie solaire 2025 ».',
@@ -397,7 +404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: 'Aucune loi dédiée pour l\'instant',
         content: [
-          '**Au 19/10/2026, le Japon n\'a pas de législation sur le solaire enfichable ou de balcon — ni catégorie simplifiée, ni plafond de puissance, ni voie d\'enregistrement pour les appareils de classe 800 W — et ce sont les règles générales du réseau qui s\'appliquent.** Selon Selectra Japan (mis à jour le 9 septembre 2026), qui résume l\'analyse du Renewable Energy Institute (REI), injecter de l\'électricité dans une prise domestique vaut raccordement au réseau (系統連系) ; le flux inverse sans l\'accord du gestionnaire n\'est pas autorisé ; et une installation par un électricien habilité (電気工事士) est exigée, avec un relais de puissance inverse et une demande de raccordement auprès du gestionnaire de distribution parmi les obstacles. Ce n\'est donc pas un vide au sens de « tout est permis » : faute de catégorie simplifiée, les règles de la production raccordée au réseau s\'appliquent à un appareil qui n\'a jamais été conçu pour elles. La règle allemande des 800 W n\'a pas d\'équivalent japonais.',
+          '**Au 31/10/2026, le Japon n\'a pas de législation sur le solaire enfichable ou de balcon — ni catégorie simplifiée, ni plafond de puissance, ni voie d\'enregistrement pour les appareils de classe 800 W — et ce sont les règles générales du réseau qui s\'appliquent.** Selon Selectra Japan (mis à jour le 9 septembre 2026), qui résume l\'analyse du Renewable Energy Institute (REI), injecter de l\'électricité dans une prise domestique vaut raccordement au réseau (系統連系) ; le flux inverse sans l\'accord du gestionnaire n\'est pas autorisé ; et une installation par un électricien habilité (電気工事士) est exigée, avec un relais de puissance inverse et une demande de raccordement auprès du gestionnaire de distribution parmi les obstacles. Ce n\'est donc pas un vide au sens de « tout est permis » : faute de catégorie simplifiée, les règles de la production raccordée au réseau s\'appliquent à un appareil qui n\'a jamais été conçu pour elles. La règle allemande des 800 W n\'a pas d\'équivalent japonais.',
           'Cette page est un rapport de situation, non un guide de règles, et ne constitue pas un conseil juridique. Selectra Japan déconseille d\'acheter des kits enfichables à l\'étranger et de les brancher sur des prises domestiques japonaises ; interrogez votre gestionnaire de distribution avant de raccorder tout appareil producteur.',
         ],
       },
@@ -405,12 +412,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: 'La conversation politique jusqu\'ici',
         content: [
-          '**En juin 2026, le Renewable Energy Institute (自然エネルギー財団) a publié un rapport de feuille de route, « 賃貸・集合住宅にも開かれた太陽光発電へ » (le solaire ouvert aux locataires et aux habitants d\'immeubles), sur la manière dont le Japon pourrait introduire le solaire enfichable ; son sommaire énumère trois obstacles : le branchement sur prise, l\'installation des panneaux et le raccordement au réseau.** Il fait suite au rapport en anglais du REI de mars 2026 sur l\'Allemagne, « Plug-in PV: How Germany Made Solar Accessible to All ». Il s\'agit de plaidoyer et d\'analyse d\'un institut de politiques des énergies renouvelables, non d\'une proposition gouvernementale ni d\'un projet de loi.',
+          '**En juin 2026, le Renewable Energy Institute (自然エネルギー財団) a publié un rapport de feuille de route, « 賃貸・集合住宅にも開かれた太陽光発電へ » (le solaire ouvert aux locataires et aux habitants d\'immeubles), sur la manière dont le Japon pourrait introduire le solaire enfichable ; son sommaire énumère cinq obstacles : le branchement sur prise, l\'installation des panneaux, le raccordement au réseau, la sécurité des produits et les démarches d\'installation.** Il fait suite au rapport en anglais du REI de mars 2026 sur l\'Allemagne, « Plug-in PV: How Germany Made Solar Accessible to All ». Il s\'agit de plaidoyer et d\'analyse d\'un institut de politiques des énergies renouvelables, non d\'une proposition gouvernementale ni d\'un projet de loi.',
+          '**La feuille de route du REI propose trois étapes : des projets pilotes et une vérification technique de la sécurité ; une catégorie juridique claire pour les petits dispositifs enfichables, le rapport évoquant à titre d\'exemple une classe pour les systèmes de moins de 1 kW CA, sous la classe minimale actuelle de 10 kW CA ; puis des normes techniques, une certification et un enregistrement en ligne simplifié, suivis d\'un déploiement visant les immeubles locatifs et collectifs.** Le REI cite aussi la loi sur les électriciens (電気工事士法), qui réserve aux électriciens habilités les travaux sur les installations électriques générales, comme une règle à réexaminer afin que l\'auto-installation puisse être autorisée sous des conditions de sécurité définies. Ce sont des recommandations adressées aux décideurs, non des règles en vigueur.',
           'Des travaux préparatoires existent : le « Projet de démonstration d\'applications multifonctions de l\'énergie solaire » de NEDO (New Energy and Industrial Technology Development Organization), qui incluait de la R&D sur des systèmes montés sur balcon, et la « Stratégie de développement de l\'énergie solaire 2025 » du Japon. Ce sont des fondations techniques et stratégiques, non des règles en vigueur pour les systèmes enfichables grand public.',
           '**Par ailleurs, et sans lien propre avec le balcon : le METI a annoncé le 19 mars 2026 qu\'il mettra fin au soutien FIT/FIP (tarif d\'achat / prime) au solaire commercial hors toiture à partir de l\'exercice 2027, tout en maintenant le soutien FIT/FIP au solaire résidentiel et commercial en toiture.** Cela montre que le METI trace une ligne entre solaire en toiture/résidentiel et solaire à l\'échelle industrielle — contexte sur la catégorie où pourrait un jour entrer le solaire de balcon —, mais c\'est de la politique solaire générale, non une annonce sur le solaire de balcon.',
         ],
         callouts: [
-          { type: 'warning', text: 'Au 19/10/2026, aucun projet ministériel, aucune consultation ni aucun calendrier pour des règles sur le solaire enfichable n\'a été trouvé. Ce résumé s\'appuie sur une couverture secondaire (Selectra Japan) et sur les titres de rapports publiés par le REI ; lisez directement le rapport du REI et les orientations du METI ou de votre gestionnaire. Ce n\'est pas un conseil juridique.' },
+          { type: 'warning', text: 'Au 31/10/2026, aucun projet ministériel, aucune consultation ni aucun calendrier pour des règles sur le solaire enfichable n\'a été trouvé. Ce résumé s\'appuie sur une couverture secondaire (Selectra Japan) et sur le rapport de feuille de route du REI de juin 2026 ; consultez aussi les orientations du METI ou de votre gestionnaire. Ce n\'est pas un conseil juridique.' },
         ],
       },
       whereHeaded: {
@@ -424,10 +432,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Foire aux questions',
         faqs: [
-          { q: 'Le solaire de balcon est-il légal au Japon ?', a: 'Aucune loi dédiée ne l\'autorise ni ne l\'interdit, mais brancher un appareil producteur sur une prise domestique est traité comme un raccordement au réseau nécessitant l\'accord du gestionnaire, selon une analyse du REI résumée par Selectra Japan. En pratique, les kits enfichables importés ne sont aujourd\'hui pas un produit légal de type « il suffit de brancher » au Japon.' },
+          { q: 'Le solaire de balcon est-il légal au Japon ?', a: 'Aucune loi dédiée ne l\'autorise ni ne l\'interdit, mais brancher un appareil producteur sur une prise domestique est traité comme un raccordement au réseau nécessitant l\'accord du gestionnaire, selon une analyse du REI résumée par Selectra Japan. Selon Selectra Japan, brancher simplement un kit importé n\'est aujourd\'hui, en principe, pas autorisé au Japon.' },
           { q: 'Puis-je utiliser un kit solaire enfichable importé sur une prise japonaise ?', a: 'Selectra Japan, citant l\'analyse du REI, le déconseille : le flux inverse sans l\'accord du gestionnaire n\'est pas autorisé et une installation par un électricien habilité est exigée. Interrogez votre gestionnaire de distribution avant de raccorder tout appareil producteur. Ce n\'est pas un conseil juridique.' },
           { q: 'Le Japon prévoit-il de réglementer le solaire de balcon ?', a: 'Aucune proposition gouvernementale n\'a été trouvée. Le Renewable Energy Institute a publié en juin 2026 un rapport de feuille de route sur l\'introduction du solaire enfichable, et le METI a séparé en mars 2026 le soutien FIT/FIP au solaire résidentiel/en toiture de celui à l\'échelle industrielle — mais aucun des deux n\'est une législation dédiée au solaire de balcon, et aucun calendrier n\'a été annoncé.' },
-          { q: 'Qu\'est-ce que la feuille de route du REI ?', a: 'Un rapport de juin 2026 du Renewable Energy Institute intitulé « 賃貸・集合住宅にも開かれた太陽光発電へ », sur la manière dont le Japon pourrait introduire le solaire enfichable pour les locataires et les habitants d\'immeubles. Son sommaire énumère trois obstacles : le branchement sur prise, l\'installation des panneaux et le raccordement au réseau. C\'est du plaidoyer, non des règles en vigueur.' },
+          { q: 'Qu\'est-ce que la feuille de route du REI ?', a: 'Un rapport de juin 2026 du Renewable Energy Institute intitulé « 賃貸・集合住宅にも開かれた太陽光発電へ », sur la manière dont le Japon pourrait introduire le solaire enfichable pour les locataires et les habitants d\'immeubles. Son sommaire énumère cinq obstacles : le branchement sur prise, l\'installation des panneaux, le raccordement au réseau, la sécurité des produits et les démarches d\'installation. C\'est du plaidoyer, non des règles en vigueur.' },
+          { q: 'Que propose la feuille de route du REI pour le solaire enfichable au Japon ?', a: 'Le REI propose trois étapes : des projets pilotes vérifiant la sécurité sur le câblage, les prises et les balcons japonais ; une nouvelle catégorie juridique pour les petits systèmes enfichables (son exemple est une classe pour les systèmes de moins de 1 kW CA), avec un réexamen de la loi sur les électriciens et des règles sur le flux inverse ; puis des normes techniques, une certification, un enregistrement en ligne simplifié et des règlements types pour les immeubles collectifs. Il décrit les systèmes enfichables comme d\'environ 300–1 200 W CA. Ce sont des recommandations, non des règles en vigueur, et aucun calendrier n\'a été annoncé.' },
           { q: 'Quel est le rôle de NEDO dans la discussion japonaise sur le solaire de balcon ?', a: 'NEDO (New Energy and Industrial Technology Development Organization) a mené un « Projet de démonstration d\'applications multifonctions de l\'énergie solaire » qui incluait de la R&D sur des systèmes montés sur balcon — travaux préparatoires cités, non une réglementation en vigueur.' },
           { q: 'L\'annonce FIT/FIP du METI de mars 2026 affecte-t-elle le solaire de balcon ?', a: 'Pas directement. Le METI a annoncé qu\'il mettra fin au soutien FIT/FIP au solaire commercial hors toiture dès l\'exercice 2027 tout en maintenant celui au solaire résidentiel et en toiture. C\'est de la politique solaire générale, non une règle propre au balcon.' },
           { q: 'Quand le Japon aura-t-il des règles sur le solaire de balcon ?', a: 'Aucun calendrier n\'a été annoncé. Considérez toute date précise comme de la spéculation tant qu\'une proposition ministérielle ou un projet de loi n\'est pas publié.' },
@@ -457,18 +466,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-ar.webp',
-    title: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟ تقرير الحالة لعام 2027',
-    seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟ تقرير الحالة لعام 2027',
+    title: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟ 2027',
+    seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟ 2027',
     intro: 'ليس في اليابان قانون خاص بالطاقة الشمسية القابلة للتوصيل أو الشرفات، والقواعد العامة تسير في الاتجاه المعاكس: وفق تحليل لمعهد الطاقة المتجددة (REI) لخّصته Selectra Japan، يُعدّ ضخّ الكهرباء في مقبس منزلي ربطًا بالشبكة، ولا يُسمح بالتدفق العكسي دون إذن شركة التوزيع، ويتطلب التركيب كهربائيًا مرخّصًا. وهذا تقرير حالة عن نقاش سياسي حصل في يونيو 2026 على مقترح ملموس — خارطة طريق REI لإتاحة الطاقة الشمسية للمستأجرين وسكان الشقق — وليس دليلًا لقواعد مستقرة.',
     metaDescription: 'لا قانون خاصًا للطاقة الشمسية القابلة للتوصيل في اليابان 2026؛ توصيل المجموعة بالمقبس ربطٌ بالشبكة يتطلب إذن المشغّل. واقترح REI إصلاحًا في يونيو.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'المشترون المحتملون للطاقة الشمسية للشرفات ومراقبو السياسات في اليابان',
     primaryTerm: 'الوضع القانوني للطاقة الشمسية للشرفات في اليابان',
     targetKeywords: ['الطاقة الشمسية للشرفات اليابان', 'الطاقة الشمسية القابلة للتوصيل قانونية في اليابان', 'سياسة الطاقة الشمسية في اليابان 2027'],
-    leadAnswerBlock: '**ليس في اليابان حتى 19/10/2026 قانون خاص بالطاقة الشمسية القابلة للتوصيل أو الشرفات — لا فئة مبسّطة ولا حد أقصى للقدرة ولا مسار تسجيل للأجهزة من فئة 800 واط — ووفق تحليل REI الذي لخّصته Selectra Japan يُعامل توصيل جهاز شمسي بمقبس منزلي على أنه ربط بالشبكة يتطلب إذن شركة التوزيع.** وتقول Selectra Japan (محدّثة في 9 سبتمبر 2026)، وهي تلخّص تحليل REI، إن التدفق العكسي دون إذن شركة التوزيع غير مسموح، وإن التركيب بواسطة كهربائي مرخّص مطلوب، وتنصح بعدم شراء مجموعات قابلة للتوصيل من الخارج لاستخدامها في المقابس اليابانية. وفي يونيو 2026 نشر معهد الطاقة المتجددة (自然エネルギー財団) تقرير خارطة طريق بعنوان «賃貸・集合住宅にも開かれた太陽光発電へ» (الطاقة الشمسية المتاحة للمستأجرين وسكان الشقق) حول كيفية إدخال اليابان للطاقة الشمسية القابلة للتوصيل، عقب تقريره الصادر في مارس 2026 عن تجربة ألمانيا. وهذا دعوة سياساتية وليس قانونًا نافذًا، ولم يُعثر على مشروع من METI ولا استشارة ولا جدول زمني. وبصورة منفصلة أعلنت METI في 19 مارس 2026 أن دعم FIT/FIP للطاقة الشمسية التجارية غير المركّبة على الأسطح ينتهي اعتبارًا من السنة المالية 2027، مع استمرار دعم الأسطح والاستخدام السكني — سياسة شمسية عامة وليست خاصة بالشرفات.',
+    leadAnswerBlock: '**ليس في اليابان حتى 31/10/2026 قانون خاص بالطاقة الشمسية القابلة للتوصيل أو الشرفات — لا فئة مبسّطة ولا حد أقصى للقدرة ولا مسار تسجيل للأجهزة من فئة 800 واط — ووفق تحليل REI الذي لخّصته Selectra Japan يُعامل توصيل جهاز شمسي بمقبس منزلي على أنه ربط بالشبكة يتطلب إذن شركة التوزيع.** وتقول Selectra Japan (محدّثة في 9 سبتمبر 2026)، وهي تلخّص تحليل REI، إن التدفق العكسي دون إذن شركة التوزيع غير مسموح، وإن التركيب بواسطة كهربائي مرخّص مطلوب، وتنصح بعدم شراء مجموعات قابلة للتوصيل من الخارج لاستخدامها في المقابس اليابانية. وفي يونيو 2026 نشر معهد الطاقة المتجددة (自然エネルギー財団) تقرير خارطة طريق بعنوان «賃貸・集合住宅にも開かれた太陽光発電へ» (الطاقة الشمسية المتاحة للمستأجرين وسكان الشقق) حول كيفية إدخال اليابان للطاقة الشمسية القابلة للتوصيل، عقب تقريره الصادر في مارس 2026 عن تجربة ألمانيا. وهذا دعوة سياساتية وليس قانونًا نافذًا، ولم يُعثر على مشروع من METI ولا استشارة ولا جدول زمني. وبصورة منفصلة أعلنت METI في 19 مارس 2026 أن دعم FIT/FIP للطاقة الشمسية التجارية غير المركّبة على الأسطح ينتهي اعتبارًا من السنة المالية 2027، مع استمرار دعم الأسطح والاستخدام السكني — سياسة شمسية عامة وليست خاصة بالشرفات.',
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟',
@@ -480,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الأعمال التمهيدية المشار إليها في النقاش: «مشروع NEDO التجريبي للتطبيقات متعددة الأغراض للطاقة الشمسية» (ويشمل بحثًا وتطويرًا لأنظمة مثبتة على الشرفات) و«استراتيجية تطوير الطاقة الشمسية 2025»',
           'أعلنت METI في 19 مارس 2026 أن دعم FIT/FIP للطاقة الشمسية التجارية غير المركّبة على الأسطح ينتهي من السنة المالية 2027 مع استمرار دعم الاستخدام السكني والأسطح — ليس خاصًا بالشرفات؛ ولم يُعثر على جدول زمني لقواعد الشرفات',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -497,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'ليس في اليابان حتى 19/10/2026 قانون خاص بالطاقة الشمسية القابلة للتوصيل أو الشرفات — لا حد أقصى للقدرة ولا إجراء تسجيل ولا فئة مبسّطة للأجهزة من فئة 800 واط.',
+          'ليس في اليابان حتى 31/10/2026 قانون خاص بالطاقة الشمسية القابلة للتوصيل أو الشرفات — لا حد أقصى للقدرة ولا إجراء تسجيل ولا فئة مبسّطة للأجهزة من فئة 800 واط.',
           'بموجب القواعد العامة يُعدّ التغذية عبر مقبس منزلي ربطًا بالشبكة: ولا يُسمح بالتدفق العكسي دون إذن شركة التوزيع ويُشترط كهربائي مرخّص (تحليل REI الذي لخّصته Selectra Japan). وتنصح Selectra بعدم توصيل مجموعات مستوردة بالمقابس اليابانية.',
           'في يونيو 2026 نشر معهد الطاقة المتجددة تقرير خارطة طريق حول إدخال الطاقة الشمسية القابلة للتوصيل في اليابان، عقب تقريره الصادر في مارس 2026 عن ألمانيا. وهو دعوة سياساتية وليس مقترحًا حكوميًا.',
           'الأعمال التمهيدية المشار إليها: «مشروع NEDO التجريبي للتطبيقات متعددة الأغراض للطاقة الشمسية» (الذي شمل بحثًا وتطويرًا لأنظمة مثبتة على الشرفات) و«استراتيجية تطوير الطاقة الشمسية 2025».',
@@ -508,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: 'لا يوجد قانون مخصص بعد',
         content: [
-          '**حتى 19/10/2026 ليس لدى اليابان تشريع للطاقة الشمسية القابلة للتوصيل أو الشرفات — لا فئة مبسّطة ولا حد أقصى للقدرة ولا مسار تسجيل للأجهزة من فئة 800 واط — وتنطبق بدلًا من ذلك قواعد الشبكة العامة.** وبحسب Selectra Japan (محدّثة في 9 سبتمبر 2026)، التي تلخّص تحليل معهد الطاقة المتجددة (REI)، يُعدّ ضخّ الكهرباء في مقبس منزلي ربطًا بالشبكة (系統連系)؛ ولا يُسمح بالتدفق العكسي دون إذن شركة التوزيع؛ ويُشترط التركيب بواسطة كهربائي مرخّص (電気工事士)، ومن العقبات مرحّل القدرة العكسية وطلب الربط المقدَّم إلى مشغّل التوزيع. فليس الأمر فراغًا بمعنى «كل شيء مباح»: فمن دون فئة مبسّطة تنطبق قواعد التوليد المرتبط بالشبكة على جهاز لم يُصمَّم لها أصلًا. وليس لقاعدة 800 واط الألمانية نظير ياباني.',
+          '**حتى 31/10/2026 ليس لدى اليابان تشريع للطاقة الشمسية القابلة للتوصيل أو الشرفات — لا فئة مبسّطة ولا حد أقصى للقدرة ولا مسار تسجيل للأجهزة من فئة 800 واط — وتنطبق بدلًا من ذلك قواعد الشبكة العامة.** وبحسب Selectra Japan (محدّثة في 9 سبتمبر 2026)، التي تلخّص تحليل معهد الطاقة المتجددة (REI)، يُعدّ ضخّ الكهرباء في مقبس منزلي ربطًا بالشبكة (系統連系)؛ ولا يُسمح بالتدفق العكسي دون إذن شركة التوزيع؛ ويُشترط التركيب بواسطة كهربائي مرخّص (電気工事士)، ومن العقبات مرحّل القدرة العكسية وطلب الربط المقدَّم إلى مشغّل التوزيع. فليس الأمر فراغًا بمعنى «كل شيء مباح»: فمن دون فئة مبسّطة تنطبق قواعد التوليد المرتبط بالشبكة على جهاز لم يُصمَّم لها أصلًا. وليس لقاعدة 800 واط الألمانية نظير ياباني.',
           'هذه الصفحة تقرير حالة وليست دليل قواعد، وهي ليست استشارة قانونية. تنصح Selectra Japan بعدم شراء مجموعات قابلة للتوصيل من الخارج وتوصيلها بالمقابس المنزلية اليابانية؛ فاسأل شركة التوزيع قبل توصيل أي جهاز توليد.',
         ],
       },
@@ -516,12 +525,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: 'النقاش السياساتي حتى الآن',
         content: [
-          '**في يونيو 2026 نشر معهد الطاقة المتجددة (自然エネルギー財団) تقرير خارطة طريق بعنوان «賃貸・集合住宅にも開かれた太陽光発電へ» (الطاقة الشمسية المتاحة للمستأجرين وسكان الشقق) حول كيفية إدخال اليابان للطاقة الشمسية القابلة للتوصيل؛ ويذكر فهرس محتوياته ثلاث عقبات: التوصيل بالمقبس وتركيب الألواح والربط بالشبكة.** وهو يأتي بعد تقرير REI الإنجليزي الصادر في مارس 2026 عن ألمانيا، «Plug-in PV: How Germany Made Solar Accessible to All». وهذه دعوة وتحليل من معهد سياسات للطاقة المتجددة، وليست مقترحًا حكوميًا ولا مشروع قانون.',
+          '**في يونيو 2026 نشر معهد الطاقة المتجددة (自然エネルギー財団) تقرير خارطة طريق بعنوان «賃貸・集合住宅にも開かれた太陽光発電へ» (الطاقة الشمسية المتاحة للمستأجرين وسكان الشقق) حول كيفية إدخال اليابان للطاقة الشمسية القابلة للتوصيل؛ ويذكر فهرس محتوياته خمس عقبات: التوصيل بالمقبس وتركيب الألواح والربط بالشبكة وسلامة المنتجات وإجراءات التركيب.** وهو يأتي بعد تقرير REI الإنجليزي الصادر في مارس 2026 عن ألمانيا، «Plug-in PV: How Germany Made Solar Accessible to All». وهذه دعوة وتحليل من معهد سياسات للطاقة المتجددة، وليست مقترحًا حكوميًا ولا مشروع قانون.',
+          '**تقترح خارطة طريق REI ثلاث خطوات: مشاريع تجريبية وتحققًا تقنيًا من السلامة؛ وفئة قانونية واضحة للأجهزة الصغيرة القابلة للتوصيل، مع طرح التقرير مثالًا على فئة للأنظمة التي تقل عن 1 kW AC دون الفئة الدنيا الحالية البالغة 10 kW AC؛ ثم معايير تقنية وشهادات اعتماد وتسجيلًا إلكترونيًا مبسّطًا، يليها طرح موجّه للمباني المؤجرة والشقق السكنية.** كما يذكر REI قانون الكهربائيين (電気工事士法)، الذي يقصر العمل على منشآت الكهرباء العامة على الكهربائيين المرخصين، بوصفه قاعدة ينبغي مراجعتها كي يمكن السماح بالتركيب الذاتي ضمن شروط سلامة محددة. هذه توصيات لصانعي السياسات، وليست قواعد نافذة.',
           'توجد أعمال تمهيدية سابقة: «مشروع NEDO التجريبي للتطبيقات متعددة الأغراض للطاقة الشمسية» (NEDO — منظمة تطوير الطاقة الجديدة والتكنولوجيا الصناعية)، الذي شمل بحثًا وتطويرًا لأنظمة مثبتة على الشرفات، و«استراتيجية تطوير الطاقة الشمسية 2025» في اليابان. وهذه أسس تقنية واستراتيجية وليست قواعد نافذة للأنظمة القابلة للتوصيل للمستهلكين.',
           '**وبصورة منفصلة وغير خاصة بالشرفات: أعلنت METI في 19 مارس 2026 أنها ستوقف دعم FIT/FIP (تعرفة التغذية / علاوة التغذية) للطاقة الشمسية التجارية غير المركّبة على الأسطح اعتبارًا من السنة المالية 2027، مع مواصلة دعم FIT/FIP للطاقة الشمسية السكنية والتجارية المركّبة على الأسطح.** ويُظهر ذلك أن METI ترسم خطًا بين الطاقة الشمسية على الأسطح/السكنية وتلك على نطاق المرافق — خلفية لمكان تصنيف الطاقة الشمسية على الشرفات مستقبلًا — لكنه سياسة شمسية عامة وليس إعلانًا خاصًا بالشرفات.',
         ],
         callouts: [
-          { type: 'warning', text: 'حتى 19/10/2026 لم يُعثر على مشروع وزاري ولا استشارة ولا جدول زمني لقواعد الطاقة الشمسية القابلة للتوصيل. يعتمد هذا الملخص على تغطية ثانوية (Selectra Japan) وعناوين تقارير REI المنشورة؛ فاقرأ تقرير REI وإرشادات METI أو شركة التوزيع مباشرة. هذه ليست استشارة قانونية.' },
+          { type: 'warning', text: 'حتى 31/10/2026 لم يُعثر على مشروع وزاري ولا استشارة ولا جدول زمني لقواعد الطاقة الشمسية القابلة للتوصيل. يعتمد هذا الملخص على تغطية ثانوية (Selectra Japan) وتقرير خارطة طريق REI الصادر في يونيو 2026؛ وراجع كذلك إرشادات METI أو شركة التوزيع مباشرة. هذه ليست استشارة قانونية.' },
         ],
       },
       whereHeaded: {
@@ -535,10 +545,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل الطاقة الشمسية على الشرفات قانونية في اليابان؟', a: 'لا يوجد قانون خاص يسمح بها أو يحظرها، لكن توصيل جهاز توليد بمقبس منزلي يُعامل على أنه ربط بالشبكة يتطلب إذن شركة التوزيع، وفق تحليل REI الذي لخّصته Selectra Japan. وعمليًا ليست المجموعات القابلة للتوصيل المستوردة اليوم منتجًا قانونيًا من نوع «وصّل وشغّل» في اليابان.' },
+          { q: 'هل الطاقة الشمسية على الشرفات قانونية في اليابان؟', a: 'لا يوجد قانون خاص يسمح بها أو يحظرها، لكن توصيل جهاز توليد بمقبس منزلي يُعامل على أنه ربط بالشبكة يتطلب إذن شركة التوزيع، وفق تحليل REI الذي لخّصته Selectra Japan. ووفق Selectra Japan، فإن مجرد توصيل مجموعة مستوردة بالمقبس غير مسموح به من حيث المبدأ في اليابان حاليًا.' },
           { q: 'هل يمكنني استخدام مجموعة طاقة شمسية قابلة للتوصيل مستوردة في مقبس ياباني؟', a: 'تنصح Selectra Japan بعدم ذلك استنادًا إلى تحليل REI: فالتدفق العكسي دون إذن شركة التوزيع غير مسموح، ويُشترط التركيب بواسطة كهربائي مرخّص. اسأل شركة التوزيع قبل توصيل أي جهاز توليد. هذه ليست استشارة قانونية.' },
           { q: 'هل تخطط اليابان لتنظيم الطاقة الشمسية على الشرفات؟', a: 'لم يُعثر على مقترح حكومي. نشر معهد الطاقة المتجددة في يونيو 2026 تقرير خارطة طريق حول إدخال الطاقة الشمسية القابلة للتوصيل، وفصلت METI في مارس 2026 دعم FIT/FIP للأسطح/السكني عن دعم نطاق المرافق — لكن أيًّا منهما ليس تشريعًا خاصًا بالشرفات، ولم يُعلن جدول زمني.' },
-          { q: 'ما خارطة طريق REI؟', a: 'تقرير صادر في يونيو 2026 عن معهد الطاقة المتجددة بعنوان «賃貸・集合住宅にも開かれた太陽光発電へ» حول كيفية إدخال اليابان للطاقة الشمسية القابلة للتوصيل للمستأجرين وسكان الشقق. يذكر فهرسه ثلاث عقبات: التوصيل بالمقبس وتركيب الألواح والربط بالشبكة. وهو دعوة سياساتية وليس قواعد نافذة.' },
+          { q: 'ما خارطة طريق REI؟', a: 'تقرير صادر في يونيو 2026 عن معهد الطاقة المتجددة بعنوان «賃貸・集合住宅にも開かれた太陽光発電へ» حول كيفية إدخال اليابان للطاقة الشمسية القابلة للتوصيل للمستأجرين وسكان الشقق. يذكر فهرسه خمس عقبات: التوصيل بالمقبس وتركيب الألواح والربط بالشبكة وسلامة المنتجات وإجراءات التركيب. وهو دعوة سياساتية وليس قواعد نافذة.' },
+          { q: 'ماذا تقترح خارطة طريق REI بشأن الطاقة الشمسية القابلة للتوصيل في اليابان؟', a: 'يقترح REI ثلاث خطوات: مشاريع تجريبية تتحقق من السلامة على الأسلاك والمقابس والشرفات اليابانية؛ وفئة قانونية جديدة للأنظمة الصغيرة القابلة للتوصيل (مثاله فئة للأنظمة التي تقل عن 1 kW AC) مع مراجعة قانون الكهربائيين وقواعد التدفق العكسي؛ ثم معايير تقنية وشهادات اعتماد وتسجيل إلكتروني مبسّط وقواعد نموذجية للمباني السكنية. ويصف الأنظمة القابلة للتوصيل بأنها نحو 300–1200 W AC. هذه توصيات وليست قواعد نافذة، ولم يُعلن جدول زمني.' },
           { q: 'ما دور NEDO في النقاش الياباني حول الطاقة الشمسية على الشرفات؟', a: 'نفّذت NEDO (منظمة تطوير الطاقة الجديدة والتكنولوجيا الصناعية) «مشروعًا تجريبيًا للتطبيقات متعددة الأغراض للطاقة الشمسية» شمل بحثًا وتطويرًا لأنظمة مثبتة على الشرفات — أعمال تمهيدية مشار إليها وليست تنظيمًا نافذًا.' },
           { q: 'هل يؤثر إعلان METI بشأن FIT/FIP في مارس 2026 على الطاقة الشمسية على الشرفات؟', a: 'ليس مباشرة. أعلنت METI أنها ستوقف دعم FIT/FIP للطاقة الشمسية التجارية غير المركّبة على الأسطح من السنة المالية 2027 مع مواصلة دعم الاستخدام السكني والأسطح. وهذه سياسة شمسية عامة وليست قاعدة خاصة بالشرفات.' },
           { q: 'متى ستكون لدى اليابان قواعد للطاقة الشمسية على الشرفات؟', a: 'لم يُعلن أي جدول زمني. تعامل مع أي تاريخ محدد بوصفه تخمينًا إلى أن يُنشر مقترح وزاري أو مشروع قانون.' },
@@ -573,13 +584,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '日本にはプラグイン式・バルコニー太陽光の専用法がなく、一般のルールはむしろ逆の方向を向いています。Selectra Japanが要約した自然エネルギー財団（REI）の分析によれば、家庭のコンセントに発電した電気を流すことは系統連系にあたり、電力会社の許可のない逆潮流は認められず、施工には電気工事士が必要です。本ページは、2026年6月に具体的な提言が出された政策議論（REIによる、賃貸・集合住宅にも太陽光を開くロードマップ）についての現状報告であり、確定したルールの案内ではありません。',
     metaDescription: '日本には2026年時点でプラグイン式太陽光の専用法がなく、コンセントへの接続は系統連系として電力会社の許可が必要とされます。REIが6月に制度化の道筋を提言しました。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5分で読める',
     educationalLevel: 'Beginner',
     audience: '日本でバルコニーソーラーの購入を検討している人、および政策動向を注視している人',
     primaryTerm: '日本におけるバルコニーソーラーの法的地位',
     targetKeywords: ['バルコニーソーラー 日本', 'プラグイン型ソーラー 日本 合法', '日本 太陽光政策 2027'],
-    leadAnswerBlock: '**2026年10月19日時点で、日本にはプラグイン式・バルコニー太陽光の専用法がなく、800W級の機器向けの簡易な区分、出力上限、登録手続きもありません。Selectra Japanが要約したREIの分析では、太陽光発電機器を家庭のコンセントに接続することは、電力会社の許可が必要な系統連系として扱われます。** REIの分析を要約したSelectra Japan（2026年9月9日更新）は、電力会社の許可なく逆潮流させることは認められず、電気工事士による施工が必要だとし、海外で販売されているプラグイン式製品を日本のコンセントで使わないよう勧めています。2026年6月、自然エネルギー財団（REI）は、2026年3月のドイツの経験に関する報告書に続き、日本がプラグインソーラーを導入する方法を示したロードマップ報告書「賃貸・集合住宅にも開かれた太陽光発電へ」を公表しました。これは政策提言であり成立した法律ではなく、経済産業省の草案、意見募集、スケジュールは見つかっていません。これとは別に、経済産業省は2026年3月19日、屋根設置を除く商業用太陽光へのFIT/FIP支援を2027年度から終了し、住宅用・屋根設置型への支援は継続すると発表しました。これは太陽光政策全般の話で、バルコニー固有のものではありません。',
+    leadAnswerBlock: '**2026年10月31日時点で、日本にはプラグイン式・バルコニー太陽光の専用法がなく、800W級の機器向けの簡易な区分、出力上限、登録手続きもありません。Selectra Japanが要約したREIの分析では、太陽光発電機器を家庭のコンセントに接続することは、電力会社の許可が必要な系統連系として扱われます。** REIの分析を要約したSelectra Japan（2026年9月9日更新）は、電力会社の許可なく逆潮流させることは認められず、電気工事士による施工が必要だとし、海外で販売されているプラグイン式製品を日本のコンセントで使わないよう勧めています。2026年6月、自然エネルギー財団（REI）は、2026年3月のドイツの経験に関する報告書に続き、日本がプラグインソーラーを導入する方法を示したロードマップ報告書「賃貸・集合住宅にも開かれた太陽光発電へ」を公表しました。これは政策提言であり成立した法律ではなく、経済産業省の草案、意見募集、スケジュールは見つかっていません。これとは別に、経済産業省は2026年3月19日、屋根設置を除く商業用太陽光へのFIT/FIP支援を2027年度から終了し、住宅用・屋根設置型への支援は継続すると発表しました。これは太陽光政策全般の話で、バルコニー固有のものではありません。',
     quickAnswerTop: {
       ja: {
         question: '日本でバルコニーソーラーは合法ですか?',
@@ -591,7 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '議論で参照されている土台：NEDOの「太陽光発電の多目的利用に関する実証事業」（バルコニー設置型のR&Dを含む）と「太陽光発電開発戦略2025」',
           '経済産業省は2026年3月19日、屋根設置を除く商業用太陽光へのFIT/FIP支援を2027年度から終了し、住宅用・屋根設置型への支援は継続すると発表。バルコニー固有ではなく、バルコニー向けルールのスケジュールは見つかっていません',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -608,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '2026年10月19日時点で、日本にはプラグイン式・バルコニー太陽光の専用法がありません。出力上限も登録手続きも、800W級機器向けの簡易な区分もありません。',
+          '2026年10月31日時点で、日本にはプラグイン式・バルコニー太陽光の専用法がありません。出力上限も登録手続きも、800W級機器向けの簡易な区分もありません。',
           '一般のルールでは、家庭のコンセントへの接続は系統連系にあたり、電力会社の許可のない逆潮流は認められず、電気工事士が必要です（Selectra Japanが要約したREIの分析）。Selectraは、輸入キットを日本のコンセントに挿して使わないよう勧めています。',
           '2026年6月、自然エネルギー財団は、3月のドイツに関する報告書に続き、日本でのプラグインソーラー導入に関するロードマップ報告書を公表しました。政策提言であり、政府の提案ではありません。',
           '参照されている土台：NEDOの「太陽光発電の多目的利用に関する実証事業」（バルコニー設置型システムのR&Dを含む）と「太陽光発電開発戦略2025」。',
@@ -619,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: 'まだ専用の法律はありません',
         content: [
-          '**2026年10月19日時点で、日本にはプラグイン式・バルコニー太陽光の法律がなく、800W級の機器向けの簡易な区分、出力上限、登録手続きもありません。代わりに一般の系統ルールが適用されます。** Selectra Japan（2026年9月9日更新）が要約した自然エネルギー財団（REI）の分析によれば、家庭のコンセントに発電した電気を流すことは系統連系にあたり、電力会社の許可のない逆潮流は認められず、電気工事士による施工が必要で、逆電力リレーの設置や一般送配電事業者への接続申請もハードルとして挙げられています。つまり「何でもあり」という意味の空白ではありません。簡易な区分がないため、系統連系する発電設備のルールが、もともと想定されていない機器にそのまま適用されます。ドイツの800Wルールに相当するものは日本にはありません。',
+          '**2026年10月31日時点で、日本にはプラグイン式・バルコニー太陽光の法律がなく、800W級の機器向けの簡易な区分、出力上限、登録手続きもありません。代わりに一般の系統ルールが適用されます。** Selectra Japan（2026年9月9日更新）が要約した自然エネルギー財団（REI）の分析によれば、家庭のコンセントに発電した電気を流すことは系統連系にあたり、電力会社の許可のない逆潮流は認められず、電気工事士による施工が必要で、逆電力リレーの設置や一般送配電事業者への接続申請もハードルとして挙げられています。つまり「何でもあり」という意味の空白ではありません。簡易な区分がないため、系統連系する発電設備のルールが、もともと想定されていない機器にそのまま適用されます。ドイツの800Wルールに相当するものは日本にはありません。',
           '本ページは現状報告であり、ルールの解説書ではなく、法的助言でもありません。Selectra Japanは、海外でプラグイン式製品を購入して日本の家庭のコンセントで使わないよう勧めています。発電機器を接続する前に、管轄の一般送配電事業者にご確認ください。',
         ],
       },
@@ -627,12 +638,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: 'これまでの政策議論',
         content: [
-          '**2026年6月、自然エネルギー財団（REI）は、日本がプラグインソーラーをどう導入できるかを示したロードマップ報告書「賃貸・集合住宅にも開かれた太陽光発電へ」を公表しました。目次には、コンセント接続、パネル設置、系統への接続という3つの課題が挙げられています。** これは、2026年3月のREIの英語報告書「Plug-in PV: How Germany Made Solar Accessible to All」（ドイツの事例）に続くものです。再生可能エネルギーの政策研究機関による提言と分析であり、政府の提案や法案ではありません。',
+          '**2026年6月、自然エネルギー財団（REI）は、日本がプラグインソーラーをどう導入できるかを示したロードマップ報告書「賃貸・集合住宅にも開かれた太陽光発電へ」を公表しました。目次には、コンセント接続、パネル設置、系統への接続、製品の安全性、設置手続きという5つの課題が挙げられています。** これは、2026年3月のREIの英語報告書「Plug-in PV: How Germany Made Solar Accessible to All」（ドイツの事例）に続くものです。再生可能エネルギーの政策研究機関による提言と分析であり、政府の提案や法案ではありません。',
+          '**REIのロードマップは3つのステップを提案しています。安全性を確認する実証事業と技術検証、小型のプラグイン式機器のための明確な制度上の区分（報告書は例として、現行の最小区分である10kWAC未満の下に、1kWAC未満の設備の区分を設ける案を挙げています）、そして技術基準・認証制度と簡素なオンライン登録の整備に続く、賃貸・集合住宅への展開です。** あわせてREIは、一般用電気工作物に関する作業を電気工事士に限っている電気工事士法を、一定の安全条件の下で自己設置を認められるよう見直す対象として挙げています。これらは政策担当者への提言であり、成立済みのルールではありません。',
           'これまでの土台もあります。NEDO（新エネルギー・産業技術総合開発機構）の「太陽光発電の多目的利用に関する実証事業」にはバルコニー設置型システムのR&Dが含まれ、また日本には「太陽光発電開発戦略2025」があります。これらは技術的・戦略的な土台であり、消費者向けプラグイン式システムに関する成立済みのルールではありません。',
           '**これとは別に、バルコニー固有の話ではありませんが、経済産業省は2026年3月19日、屋根設置を除く商業用太陽光へのFIT/FIP（固定価格買取制度／FIP制度）支援を2027年度から終了し、住宅用および商業用の屋根設置型へのFIT/FIP支援は継続すると発表しました。** 経済産業省が屋根・住宅用と大規模電源との間に政策上の線を引いていることを示しており、バルコニー太陽光が将来どこに分類されうるかの背景になりますが、太陽光政策全般の話であり、バルコニー太陽光に関する発表ではありません。',
         ],
         callouts: [
-          { type: 'warning', text: '2026年10月19日時点で、プラグイン式太陽光のルールについて、省庁の草案、意見募集、スケジュールは見つかっていません。本要約は二次報道（Selectra Japan）とREIが公表した報告書のタイトルに基づいています。REIの報告書や経済産業省・電力会社の案内を直接ご確認ください。法的助言ではありません。' },
+          { type: 'warning', text: '2026年10月31日時点で、プラグイン式太陽光のルールについて、省庁の草案、意見募集、スケジュールは見つかっていません。本要約は二次報道（Selectra Japan）とREIが2026年6月に公表したロードマップ報告書に基づいています。あわせて経済産業省・電力会社の案内を直接ご確認ください。法的助言ではありません。' },
         ],
       },
       whereHeaded: {
@@ -646,10 +658,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: '日本でバルコニー太陽光は合法ですか？', a: '許可も禁止もする専用法はありませんが、Selectra Japanが要約したREIの分析によれば、家庭のコンセントに発電機器を接続することは、電力会社の許可が必要な系統連系として扱われます。実際には、輸入されたプラグイン式キットは、現在の日本では合法的に「挿すだけ」で使える製品ではありません。' },
+          { q: '日本でバルコニー太陽光は合法ですか？', a: '許可も禁止もする専用法はありませんが、Selectra Japanが要約したREIの分析によれば、家庭のコンセントに発電機器を接続することは、電力会社の許可が必要な系統連系として扱われます。Selectra Japanによれば、輸入されたキットを単にコンセントに挿して使うことは、現在の日本では原則として認められていません。' },
           { q: '輸入したプラグイン式太陽光キットを日本のコンセントで使えますか？', a: 'Selectra Japanは、REIの分析を引用して、使わないよう勧めています。電力会社の許可のない逆潮流は認められず、電気工事士による施工が必要です。発電機器を接続する前に、管轄の一般送配電事業者にご確認ください。法的助言ではありません。' },
           { q: '日本はバルコニー太陽光を規制する予定ですか？', a: '政府の提案は見つかっていません。自然エネルギー財団は2026年6月にプラグインソーラー導入に関するロードマップ報告書を公表し、経済産業省は2026年3月に住宅用・屋根設置型と大規模電源へのFIT/FIP支援を区別しましたが、どちらもバルコニー太陽光専用の立法ではなく、スケジュールも発表されていません。' },
-          { q: 'REIのロードマップとは何ですか？', a: '自然エネルギー財団が2026年6月に公表した報告書「賃貸・集合住宅にも開かれた太陽光発電へ」で、賃貸住宅や集合住宅の居住者向けに日本がプラグインソーラーを導入する方法を扱っています。目次には、コンセント接続、パネル設置、系統への接続という3つの課題が挙げられています。政策提言であり、成立済みのルールではありません。' },
+          { q: 'REIのロードマップとは何ですか？', a: '自然エネルギー財団が2026年6月に公表した報告書「賃貸・集合住宅にも開かれた太陽光発電へ」で、賃貸住宅や集合住宅の居住者向けに日本がプラグインソーラーを導入する方法を扱っています。目次には、コンセント接続、パネル設置、系統への接続、製品の安全性、設置手続きという5つの課題が挙げられています。政策提言であり、成立済みのルールではありません。' },
+          { q: 'REIのロードマップはプラグインソーラーについて何を提案していますか？', a: 'REIは3つのステップを提案しています。日本の配線・コンセント・バルコニーでの安全性を確認する実証事業、小型のプラグイン式システムのための新たな制度上の区分（例として1kWAC未満の設備の区分）と、電気工事士法や逆潮流の扱いの見直し、そして技術基準、認証制度、簡素なオンライン登録、集合住宅向けのモデル規約の整備です。プラグイン式システムの規模は300〜1,200WAC程度としています。これらは提言であり、成立済みのルールではなく、スケジュールも発表されていません。' },
           { q: '日本のバルコニー太陽光の議論でNEDOはどんな役割を持ちますか？', a: 'NEDO（新エネルギー・産業技術総合開発機構）は、バルコニー設置型システムのR&Dを含む「太陽光発電の多目的利用に関する実証事業」を実施しました。参照される土台であり、成立済みの規制ではありません。' },
           { q: '経済産業省の2026年3月のFIT/FIP発表はバルコニー太陽光に影響しますか？', a: '直接の影響はありません。経済産業省は、屋根設置を除く商業用太陽光へのFIT/FIP支援を2027年度から終了し、住宅用・屋根設置型への支援は継続すると発表しました。太陽光政策全般であり、バルコニー固有のルールではありません。' },
           { q: '日本でバルコニー太陽光のルールはいつできますか？', a: 'スケジュールは発表されていません。省庁の提案や法案が公表されるまでは、特定の日付は推測として扱ってください。' },
@@ -684,13 +697,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '일본에는 플러그인 또는 발코니 태양광 전용 법이 없으며, 일반 규정은 오히려 반대 방향을 가리킵니다. Selectra Japan이 요약한 재생에너지재단(REI)의 분석에 따르면 가정용 콘센트로 전력을 흘려보내는 것은 계통 연계에 해당하고, 전력회사의 허가 없는 역전력 흐름은 허용되지 않으며, 설치에는 면허 있는 전기 기술자가 필요합니다. 이 글은 2026년 6월 구체적인 제안(임차인과 공동주택 거주자에게 태양광을 여는 REI의 로드맵)이 나온 정책 논의의 현황 보고서이며, 확정된 규정의 안내서가 아닙니다.',
     metaDescription: '일본에는 2026년 현재 플러그인 태양광 전용 법이 없으며, 콘센트 연결은 계통 연계로 간주되어 전력회사 허가가 필요합니다. REI가 6월에 제도화 로드맵을 제안했습니다.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5분 읽기',
     educationalLevel: 'Beginner',
     audience: '일본의 발코니 태양광 잠재 구매자 및 정책 동향을 주시하는 사람들',
     primaryTerm: '일본 발코니 태양광의 법적 지위',
     targetKeywords: ['일본 발코니 태양광', '플러그인 태양광 일본 합법', '일본 태양광 정책 2027'],
-    leadAnswerBlock: '**2026년 10월 19일 기준 일본에는 플러그인 또는 발코니 태양광 전용 법이 없으며, 800W급 기기를 위한 간소화된 구분, 출력 한도, 등록 절차도 없습니다. Selectra Japan이 요약한 REI의 분석에서는 태양광 기기를 가정용 콘센트에 연결하는 것을 전력회사 허가가 필요한 계통 연계로 취급합니다.** REI의 분석을 요약한 Selectra Japan(2026년 9월 9일 갱신)은 전력회사의 허가 없는 역전력 흐름은 허용되지 않고 면허 있는 전기 기술자의 설치가 필요하다고 하며, 해외에서 판매되는 플러그인 키트를 일본 콘센트에 사용하지 말 것을 권고합니다. 2026년 6월 재생에너지재단(自然エネルギー財団)은 2026년 3월 독일 사례 보고서에 이어, 일본이 플러그인 태양광을 도입하는 방법을 다룬 로드맵 보고서 「賃貸・集合住宅にも開かれた太陽光発電へ」(임차인과 공동주택 거주자에게도 열린 태양광)를 발표했습니다. 이는 정책 옹호이지 제정된 법이 아니며, 경제산업성의 초안, 의견수렴, 일정은 확인되지 않았습니다. 이와 별개로 경제산업성은 2026년 3월 19일 지붕 설치형을 제외한 상업용 태양광에 대한 FIT/FIP 지원을 2027 회계연도부터 종료하고 주택 및 지붕형 지원은 계속한다고 발표했습니다. 이는 일반 태양광 정책이며 발코니 전용이 아닙니다.',
+    leadAnswerBlock: '**2026년 10월 31일 기준 일본에는 플러그인 또는 발코니 태양광 전용 법이 없으며, 800W급 기기를 위한 간소화된 구분, 출력 한도, 등록 절차도 없습니다. Selectra Japan이 요약한 REI의 분석에서는 태양광 기기를 가정용 콘센트에 연결하는 것을 전력회사 허가가 필요한 계통 연계로 취급합니다.** REI의 분석을 요약한 Selectra Japan(2026년 9월 9일 갱신)은 전력회사의 허가 없는 역전력 흐름은 허용되지 않고 면허 있는 전기 기술자의 설치가 필요하다고 하며, 해외에서 판매되는 플러그인 키트를 일본 콘센트에 사용하지 말 것을 권고합니다. 2026년 6월 재생에너지재단(自然エネルギー財団)은 2026년 3월 독일 사례 보고서에 이어, 일본이 플러그인 태양광을 도입하는 방법을 다룬 로드맵 보고서 「賃貸・集合住宅にも開かれた太陽光発電へ」(임차인과 공동주택 거주자에게도 열린 태양광)를 발표했습니다. 이는 정책 옹호이지 제정된 법이 아니며, 경제산업성의 초안, 의견수렴, 일정은 확인되지 않았습니다. 이와 별개로 경제산업성은 2026년 3월 19일 지붕 설치형을 제외한 상업용 태양광에 대한 FIT/FIP 지원을 2027 회계연도부터 종료하고 주택 및 지붕형 지원은 계속한다고 발표했습니다. 이는 일반 태양광 정책이며 발코니 전용이 아닙니다.',
     quickAnswerTop: {
       ko: {
         question: '일본에서 발코니 태양광은 합법입니까?',
@@ -702,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '논의에서 참조되는 기반: NEDO의 「태양광발전 다목적 이용 실증사업」(발코니 설치형 R&D 포함)과 「태양광발전 개발 전략 2025」',
           '경제산업성은 2026년 3월 19일 지붕 설치형을 제외한 상업용 태양광의 FIT/FIP 지원을 2027 회계연도부터 종료하고 주택 및 지붕형 지원은 계속한다고 발표 — 발코니 전용이 아니며, 발코니 규정의 일정은 확인되지 않았습니다',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -719,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '2026년 10월 19일 기준 일본에는 플러그인 또는 발코니 태양광 전용 법이 없습니다. 출력 한도도, 등록 절차도, 800W급 기기를 위한 간소화된 구분도 없습니다.',
+          '2026년 10월 31일 기준 일본에는 플러그인 또는 발코니 태양광 전용 법이 없습니다. 출력 한도도, 등록 절차도, 800W급 기기를 위한 간소화된 구분도 없습니다.',
           '일반 규정상 가정용 콘센트 연결은 계통 연계에 해당합니다. 전력회사의 허가 없는 역전력 흐름은 허용되지 않고 면허 있는 전기 기술자가 필요합니다(Selectra Japan이 요약한 REI 분석). Selectra는 수입 키트를 일본 콘센트에 꽂아 쓰지 말 것을 권고합니다.',
           '2026년 6월 재생에너지재단은 3월 독일 보고서에 이어 일본의 플러그인 태양광 도입에 관한 로드맵 보고서를 발표했습니다. 정책 옹호이며 정부 제안이 아닙니다.',
           '참조되는 기반: NEDO의 「태양광발전 다목적 이용 실증사업」(발코니 설치형 시스템 R&D 포함)과 「태양광발전 개발 전략 2025」.',
@@ -730,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: '아직 전용 법률 없음',
         content: [
-          '**2026년 10월 19일 기준 일본에는 플러그인 또는 발코니 태양광 관련 법률이 없으며, 800W급 기기를 위한 간소화된 구분, 출력 한도, 등록 절차도 없습니다. 대신 일반 계통 규정이 적용됩니다.** Selectra Japan(2026년 9월 9일 갱신)이 요약한 재생에너지재단(REI)의 분석에 따르면 가정용 콘센트로 전력을 흘려보내는 것은 계통 연계(系統連系)에 해당하고, 전력회사의 허가 없는 역전력 흐름은 허용되지 않으며, 면허 있는 전기 기술자(電気工事士)의 설치가 필요하고, 역전력 계전기와 배전사업자에 대한 접속 신청도 장애물로 꼽힙니다. 따라서 이는 「뭐든 가능하다」는 의미의 공백이 아닙니다. 간소화된 구분이 없으므로 계통 연계 발전 설비의 규정이 애초에 그것을 염두에 두지 않은 기기에 그대로 적용됩니다. 독일의 800W 규칙에 해당하는 것은 일본에 없습니다.',
+          '**2026년 10월 31일 기준 일본에는 플러그인 또는 발코니 태양광 관련 법률이 없으며, 800W급 기기를 위한 간소화된 구분, 출력 한도, 등록 절차도 없습니다. 대신 일반 계통 규정이 적용됩니다.** Selectra Japan(2026년 9월 9일 갱신)이 요약한 재생에너지재단(REI)의 분석에 따르면 가정용 콘센트로 전력을 흘려보내는 것은 계통 연계(系統連系)에 해당하고, 전력회사의 허가 없는 역전력 흐름은 허용되지 않으며, 면허 있는 전기 기술자(電気工事士)의 설치가 필요하고, 역전력 계전기와 배전사업자에 대한 접속 신청도 장애물로 꼽힙니다. 따라서 이는 「뭐든 가능하다」는 의미의 공백이 아닙니다. 간소화된 구분이 없으므로 계통 연계 발전 설비의 규정이 애초에 그것을 염두에 두지 않은 기기에 그대로 적용됩니다. 독일의 800W 규칙에 해당하는 것은 일본에 없습니다.',
           '이 글은 현황 보고서이지 규정 안내서가 아니며 법률 자문도 아닙니다. Selectra Japan은 해외에서 플러그인 키트를 구매해 일본 가정용 콘센트에 꽂아 쓰지 말 것을 권고합니다. 발전 기기를 연결하기 전에 관할 배전사업자에게 문의하십시오.',
         ],
       },
@@ -738,12 +751,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: '지금까지의 정책 논의',
         content: [
-          '**2026년 6월 재생에너지재단(自然エネルギー財団)은 일본이 플러그인 태양광을 어떻게 도입할 수 있는지 다룬 로드맵 보고서 「賃貸・集合住宅にも開かれた太陽光発電へ」(임차인과 공동주택 거주자에게도 열린 태양광)를 발표했습니다. 목차에는 콘센트 연결, 패널 설치, 계통 접속이라는 세 가지 장애물이 나열되어 있습니다.** 이는 2026년 3월 REI의 영문 보고서 「Plug-in PV: How Germany Made Solar Accessible to All」(독일 사례)에 이은 것입니다. 재생에너지 정책 연구기관의 옹호 및 분석이며, 정부 제안이나 법안이 아닙니다.',
+          '**2026년 6월 재생에너지재단(自然エネルギー財団)은 일본이 플러그인 태양광을 어떻게 도입할 수 있는지 다룬 로드맵 보고서 「賃貸・集合住宅にも開かれた太陽光発電へ」(임차인과 공동주택 거주자에게도 열린 태양광)를 발표했습니다. 목차에는 콘센트 연결, 패널 설치, 계통 접속, 제품 안전, 설치 절차라는 다섯 가지 장애물이 나열되어 있습니다.** 이는 2026년 3월 REI의 영문 보고서 「Plug-in PV: How Germany Made Solar Accessible to All」(독일 사례)에 이은 것입니다. 재생에너지 정책 연구기관의 옹호 및 분석이며, 정부 제안이나 법안이 아닙니다.',
+          '**REI의 로드맵은 세 단계를 제안합니다. 안전성을 확인하는 실증사업과 기술 검증, 소형 플러그인 기기를 위한 명확한 제도상 구분(보고서는 현행 최소 구분인 10kWAC 미만 아래에 1kWAC 미만 설비 구분을 두는 안을 예로 듭니다), 그리고 기술 기준·인증 제도와 간소한 온라인 등록의 정비에 이은 임대·공동주택 보급입니다.** 또한 REI는 면허를 가진 전기 기술자에게만 일반용 전기설비 작업을 허용하는 電気工事士法(전기공사사법)을, 일정한 안전 조건 아래 자가 설치를 허용할 수 있도록 검토할 대상으로 꼽습니다. 이는 정책 입안자에 대한 권고이며, 제정된 규정이 아닙니다.',
           '이전의 기반도 있습니다. NEDO(신에너지·산업기술종합개발기구)의 「태양광발전 다목적 이용 실증사업」에는 발코니 설치형 시스템 R&D가 포함되었고, 일본에는 「태양광발전 개발 전략 2025」도 있습니다. 이는 기술적·전략적 기반이며, 소비자용 플러그인 시스템에 관한 제정된 규정이 아닙니다.',
           '**이와 별개로, 발코니 전용은 아니지만 경제산업성은 2026년 3월 19일 지붕 설치형을 제외한 상업용 태양광에 대한 FIT/FIP(발전차액지원 / 시장연동 프리미엄) 지원을 2027 회계연도부터 종료하고, 주택용 및 상업용 지붕형에 대한 FIT/FIP 지원은 계속한다고 발표했습니다.** 이는 경제산업성이 지붕·주택용과 대규모 발전 사이에 정책상의 선을 긋고 있음을 보여 주며, 발코니 태양광이 장차 어디에 분류될 수 있는지에 대한 배경이 되지만, 일반 태양광 정책이며 발코니 태양광에 관한 발표가 아닙니다.',
         ],
         callouts: [
-          { type: 'warning', text: '2026년 10월 19일 기준 플러그인 태양광 규정에 관한 부처 초안, 의견수렴, 일정은 확인되지 않았습니다. 이 요약은 2차 보도(Selectra Japan)와 REI가 공개한 보고서 제목에 근거합니다. REI 보고서와 경제산업성 또는 전력회사의 안내를 직접 확인하십시오. 법률 자문이 아닙니다.' },
+          { type: 'warning', text: '2026년 10월 31일 기준 플러그인 태양광 규정에 관한 부처 초안, 의견수렴, 일정은 확인되지 않았습니다. 이 요약은 2차 보도(Selectra Japan)와 REI가 2026년 6월에 공개한 로드맵 보고서에 근거합니다. 아울러 경제산업성 또는 전력회사의 안내를 직접 확인하십시오. 법률 자문이 아닙니다.' },
         ],
       },
       whereHeaded: {
@@ -757,10 +771,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '일본에서 발코니 태양광은 합법인가요?', a: '이를 허용하거나 금지하는 전용 법은 없지만, Selectra Japan이 요약한 REI의 분석에 따르면 발전 기기를 가정용 콘센트에 연결하는 것은 전력회사 허가가 필요한 계통 연계로 취급됩니다. 실제로 수입 플러그인 키트는 현재 일본에서 합법적으로 「꽂기만 하면 되는」 제품이 아닙니다.' },
+          { q: '일본에서 발코니 태양광은 합법인가요?', a: '이를 허용하거나 금지하는 전용 법은 없지만, Selectra Japan이 요약한 REI의 분석에 따르면 발전 기기를 가정용 콘센트에 연결하는 것은 전력회사 허가가 필요한 계통 연계로 취급됩니다. Selectra Japan에 따르면, 수입 키트를 단순히 콘센트에 꽂아 쓰는 것은 현재 일본에서 원칙적으로 허용되지 않습니다.' },
           { q: '수입한 플러그인 태양광 키트를 일본 콘센트에 사용할 수 있나요?', a: 'Selectra Japan은 REI의 분석을 인용해 사용하지 말 것을 권고합니다. 전력회사의 허가 없는 역전력 흐름은 허용되지 않으며 면허 있는 전기 기술자의 설치가 필요합니다. 발전 기기를 연결하기 전에 관할 배전사업자에게 문의하십시오. 법률 자문이 아닙니다.' },
           { q: '일본은 발코니 태양광을 규제할 계획인가요?', a: '정부 제안은 확인되지 않았습니다. 재생에너지재단은 2026년 6월 플러그인 태양광 도입에 관한 로드맵 보고서를 발표했고, 경제산업성은 2026년 3월 주택·지붕형과 대규모 발전의 FIT/FIP 지원을 구분했지만, 둘 다 발코니 태양광 전용 입법이 아니며 일정도 발표되지 않았습니다.' },
-          { q: 'REI 로드맵이란 무엇인가요?', a: '재생에너지재단이 2026년 6월에 발표한 보고서 「賃貸・集合住宅にも開かれた太陽光発電へ」로, 일본이 임차인과 공동주택 거주자를 위해 플러그인 태양광을 도입하는 방법을 다룹니다. 목차에는 콘센트 연결, 패널 설치, 계통 접속이라는 세 가지 장애물이 나열되어 있습니다. 정책 옹호이며 제정된 규정이 아닙니다.' },
+          { q: 'REI 로드맵이란 무엇인가요?', a: '재생에너지재단이 2026년 6월에 발표한 보고서 「賃貸・集合住宅にも開かれた太陽光発電へ」로, 일본이 임차인과 공동주택 거주자를 위해 플러그인 태양광을 도입하는 방법을 다룹니다. 목차에는 콘센트 연결, 패널 설치, 계통 접속, 제품 안전, 설치 절차라는 다섯 가지 장애물이 나열되어 있습니다. 정책 옹호이며 제정된 규정이 아닙니다.' },
+          { q: 'REI 로드맵은 일본의 플러그인 태양광에 대해 무엇을 제안하나요?', a: 'REI는 세 단계를 제안합니다. 일본의 배선·콘센트·발코니에서 안전성을 확인하는 실증사업, 소형 플러그인 시스템을 위한 새로운 제도상 구분(예로 1kWAC 미만 설비 구분)과 電気工事士法 및 역전력 흐름 규정의 검토, 그리고 기술 기준, 인증 제도, 간소한 온라인 등록, 공동주택용 모델 규약의 정비입니다. 플러그인 시스템의 규모는 300~1,200WAC 정도로 설명합니다. 이는 권고이며 제정된 규정이 아니고, 일정도 발표되지 않았습니다.' },
           { q: '일본의 발코니 태양광 논의에서 NEDO의 역할은 무엇인가요?', a: 'NEDO(신에너지·산업기술종합개발기구)는 발코니 설치형 시스템 R&D를 포함한 「태양광발전 다목적 이용 실증사업」을 수행했습니다. 참조되는 기반이며 제정된 규제가 아닙니다.' },
           { q: '경제산업성의 2026년 3월 FIT/FIP 발표가 발코니 태양광에 영향을 주나요?', a: '직접적인 영향은 없습니다. 경제산업성은 지붕 설치형을 제외한 상업용 태양광의 FIT/FIP 지원을 2027 회계연도부터 종료하고 주택 및 지붕형 지원은 계속한다고 발표했습니다. 일반 태양광 정책이며 발코니 전용 규정이 아닙니다.' },
           { q: '일본에는 언제 발코니 태양광 규정이 생기나요?', a: '발표된 일정은 없습니다. 부처 제안이나 법안이 공개될 때까지 특정 날짜는 추측으로 받아들이십시오.' },
@@ -790,18 +805,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-pt.webp',
-    title: 'A energia solar de varanda é legal no Japão? Relatório de status 2027',
-    seoTitle: 'A energia solar de varanda é legal no Japão? Relatório de status 2027',
+    title: 'A energia solar de varanda é legal no Japão? 2027',
+    seoTitle: 'A energia solar de varanda é legal no Japão? 2027',
     intro: 'O Japão não tem lei específica para energia solar plug-in ou de varanda, e as regras gerais apontam no sentido contrário: segundo uma análise do Renewable Energy Institute (REI) resumida pela Selectra Japan, injetar energia numa tomada residencial conta como conexão à rede, o fluxo reverso sem permissão da distribuidora não é permitido e a instalação exige um eletricista habilitado. Este é um relatório de status sobre um debate político que ganhou uma proposta concreta em junho de 2026 — o roteiro do REI para abrir a energia solar a inquilinos e moradores de apartamentos — e não um guia de regras consolidadas.',
     metaDescription: 'O Japão não tem lei de solar plug-in em 2026; ligar um kit na tomada é conexão à rede e exige licença da distribuidora. O REI propôs reforma em junho.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Compradores em potencial de energia solar de varanda e observadores de política no Japão',
     primaryTerm: 'status legal da energia solar de varanda no japão',
     targetKeywords: ['energia solar de varanda japão', 'energia solar plug-and-play japão legal', 'política solar japão 2027'],
-    leadAnswerBlock: '**O Japão não tem lei específica para energia solar plug-in ou de varanda em 19/10/2026 — nenhuma categoria simplificada, limite de potência ou via de registro para dispositivos da classe de 800 W — e, segundo a análise do REI resumida pela Selectra Japan, ligar um dispositivo solar a uma tomada residencial é tratado como conexão à rede que exige permissão da distribuidora.** A Selectra Japan (atualizada em 9 de setembro de 2026), resumindo a análise do REI, diz que o fluxo reverso sem permissão da distribuidora não é permitido, que a instalação por eletricista habilitado é exigida e desaconselha comprar kits plug-in no exterior para usá-los em tomadas japonesas. Em junho de 2026, o Renewable Energy Institute (自然エネルギー財団) publicou um relatório de roteiro, «賃貸・集合住宅にも開かれた太陽光発電へ» (energia solar aberta a inquilinos e moradores de apartamentos), sobre como o Japão poderia introduzir a energia solar plug-in, após seu relatório de março de 2026 sobre a experiência da Alemanha. Trata-se de advocacy, não de lei em vigor, e nenhum rascunho do METI, consulta ou cronograma foi encontrado. Separadamente, o METI anunciou em 19 de março de 2026 que o apoio FIT/FIP à solar comercial fora de telhados termina a partir do ano fiscal de 2027, enquanto o apoio à solar em telhados e residencial continua — política solar geral, não específica para varandas.',
+    leadAnswerBlock: '**O Japão não tem lei específica para energia solar plug-in ou de varanda em 31/10/2026 — nenhuma categoria simplificada, limite de potência ou via de registro para dispositivos da classe de 800 W — e, segundo a análise do REI resumida pela Selectra Japan, ligar um dispositivo solar a uma tomada residencial é tratado como conexão à rede que exige permissão da distribuidora.** A Selectra Japan (atualizada em 9 de setembro de 2026), resumindo a análise do REI, diz que o fluxo reverso sem permissão da distribuidora não é permitido, que a instalação por eletricista habilitado é exigida e desaconselha comprar kits plug-in no exterior para usá-los em tomadas japonesas. Em junho de 2026, o Renewable Energy Institute (自然エネルギー財団) publicou um relatório de roteiro, «賃貸・集合住宅にも開かれた太陽光発電へ» (energia solar aberta a inquilinos e moradores de apartamentos), sobre como o Japão poderia introduzir a energia solar plug-in, após seu relatório de março de 2026 sobre a experiência da Alemanha. Trata-se de advocacy, não de lei em vigor, e nenhum rascunho do METI, consulta ou cronograma foi encontrado. Separadamente, o METI anunciou em 19 de março de 2026 que o apoio FIT/FIP à solar comercial fora de telhados termina a partir do ano fiscal de 2027, enquanto o apoio à solar em telhados e residencial continua — política solar geral, não específica para varandas.',
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal no Japão?',
@@ -813,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Trabalho prévio citado no debate: o «Projeto de demonstração de aplicações multifuncionais da energia solar» da NEDO (incluindo P&D de sistemas montados em varandas) e a «Estratégia de desenvolvimento da energia solar 2025»',
           'O METI anunciou em 19 de março de 2026 que o apoio FIT/FIP à solar comercial fora de telhados termina a partir do ano fiscal de 2027, enquanto o apoio à solar residencial e em telhados continua — não específico para varandas; nenhum cronograma para regras de varanda foi encontrado',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -830,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'O Japão não tem lei específica para energia solar plug-in ou de varanda em 19/10/2026 — sem limite de potência, sem processo de registro, sem categoria simplificada para dispositivos da classe de 800 W.',
+          'O Japão não tem lei específica para energia solar plug-in ou de varanda em 31/10/2026 — sem limite de potência, sem processo de registro, sem categoria simplificada para dispositivos da classe de 800 W.',
           'Pelas regras gerais, alimentar uma tomada residencial conta como conexão à rede: o fluxo reverso sem permissão da distribuidora não é permitido e é exigido um eletricista habilitado (análise do REI resumida pela Selectra Japan). A Selectra desaconselha ligar kits importados em tomadas japonesas.',
           'Em junho de 2026, o Renewable Energy Institute publicou um relatório de roteiro sobre a introdução da energia solar plug-in no Japão, após seu relatório de março de 2026 sobre a Alemanha. É advocacy, não proposta do governo.',
           'Trabalho prévio citado: o «Projeto de demonstração de aplicações multifuncionais da energia solar» da NEDO (que incluiu P&D de sistemas montados em varandas) e a «Estratégia de desenvolvimento da energia solar 2025».',
@@ -841,7 +856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: 'Ainda não há lei dedicada',
         content: [
-          '**Em 19/10/2026, o Japão não tem legislação sobre energia solar plug-in ou de varanda — nenhuma categoria simplificada, limite de potência ou via de registro para dispositivos da classe de 800 W — e as regras gerais de rede se aplicam no lugar.** Segundo a Selectra Japan (atualizada em 9 de setembro de 2026), que resume a análise do Renewable Energy Institute (REI), injetar energia numa tomada residencial conta como conexão à rede (系統連系); o fluxo reverso sem permissão da distribuidora não é permitido; e é exigida instalação por eletricista habilitado (電気工事士), com um relé de potência reversa e um pedido de conexão à operadora de distribuição entre os obstáculos. Portanto, não é um vazio no sentido de «vale tudo»: sem uma categoria simplificada, as regras da geração conectada à rede se aplicam a um dispositivo que nunca foi projetado para elas. A regra alemã de 800 W não tem equivalente japonês.',
+          '**Em 31/10/2026, o Japão não tem legislação sobre energia solar plug-in ou de varanda — nenhuma categoria simplificada, limite de potência ou via de registro para dispositivos da classe de 800 W — e as regras gerais de rede se aplicam no lugar.** Segundo a Selectra Japan (atualizada em 9 de setembro de 2026), que resume a análise do Renewable Energy Institute (REI), injetar energia numa tomada residencial conta como conexão à rede (系統連系); o fluxo reverso sem permissão da distribuidora não é permitido; e é exigida instalação por eletricista habilitado (電気工事士), com um relé de potência reversa e um pedido de conexão à operadora de distribuição entre os obstáculos. Portanto, não é um vazio no sentido de «vale tudo»: sem uma categoria simplificada, as regras da geração conectada à rede se aplicam a um dispositivo que nunca foi projetado para elas. A regra alemã de 800 W não tem equivalente japonês.',
           'Esta página é um relatório de status, não um guia de regras, e não é aconselhamento jurídico. A Selectra Japan desaconselha comprar kits plug-in no exterior e ligá-los em tomadas residenciais japonesas; consulte sua distribuidora antes de conectar qualquer dispositivo gerador.',
         ],
       },
@@ -849,12 +864,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: 'A discussão de política até agora',
         content: [
-          '**Em junho de 2026, o Renewable Energy Institute (自然エネルギー財団) publicou um relatório de roteiro, «賃貸・集合住宅にも開かれた太陽光発電へ» (energia solar aberta a inquilinos e moradores de apartamentos), sobre como o Japão poderia introduzir a energia solar plug-in; seu sumário lista três obstáculos: ligação à tomada, instalação dos painéis e conexão à rede.** Ele sucede o relatório em inglês do REI de março de 2026 sobre a Alemanha, «Plug-in PV: How Germany Made Solar Accessible to All». É advocacy e análise de um instituto de políticas de energia renovável, não uma proposta do governo nem um projeto de lei.',
+          '**Em junho de 2026, o Renewable Energy Institute (自然エネルギー財団) publicou um relatório de roteiro, «賃貸・集合住宅にも開かれた太陽光発電へ» (energia solar aberta a inquilinos e moradores de apartamentos), sobre como o Japão poderia introduzir a energia solar plug-in; seu sumário lista cinco obstáculos: ligação à tomada, instalação dos painéis, conexão à rede, segurança dos produtos e procedimentos de instalação.** Ele sucede o relatório em inglês do REI de março de 2026 sobre a Alemanha, «Plug-in PV: How Germany Made Solar Accessible to All». É advocacy e análise de um instituto de políticas de energia renovável, não uma proposta do governo nem um projeto de lei.',
+          '**O roteiro do REI propõe três etapas: projetos-piloto e verificação técnica de segurança; uma categoria legal clara para pequenos dispositivos plug-in, com o relatório citando como exemplo uma classe para sistemas abaixo de 1 kW CA, abaixo da atual classe mínima de 10 kW CA; e, por fim, normas técnicas, certificação e registro on-line simplificado, seguidos de uma implantação voltada a prédios de aluguel e de apartamentos.** O REI também aponta a Lei dos Eletricistas (電気工事士法), que reserva a eletricistas habilitados o trabalho em instalações elétricas gerais, como uma regra a ser revista para que a autoinstalação possa ser permitida sob condições de segurança definidas. São recomendações a quem formula políticas, não regras em vigor.',
           'Existe trabalho prévio: o «Projeto de demonstração de aplicações multifuncionais da energia solar» da NEDO (New Energy and Industrial Technology Development Organization), que incluiu P&D de sistemas montados em varandas, e a «Estratégia de desenvolvimento da energia solar 2025» do Japão. São bases técnicas e estratégicas, não regras em vigor para sistemas plug-in de consumidores.',
           '**Separadamente, e sem ser específico para varandas: o METI anunciou em 19 de março de 2026 que encerrará o apoio FIT/FIP (tarifa feed-in / prêmio feed-in) à solar comercial fora de telhados a partir do ano fiscal de 2027, mantendo o apoio FIT/FIP à solar residencial e comercial em telhados.** Isso mostra o METI traçando uma linha entre solar de telhado/residencial e solar em escala de concessionária — contexto sobre onde a energia solar de varanda poderia ser classificada —, mas é política solar geral, não um anúncio sobre energia solar de varanda.',
         ],
         callouts: [
-          { type: 'warning', text: 'Em 19/10/2026, nenhum rascunho ministerial, consulta ou cronograma para regras de energia solar plug-in foi encontrado. Este resumo se baseia em cobertura secundária (Selectra Japan) e nos títulos de relatórios publicados pelo REI; leia diretamente o relatório do REI e as orientações do METI ou da sua distribuidora. Isto não é aconselhamento jurídico.' },
+          { type: 'warning', text: 'Em 31/10/2026, nenhum rascunho ministerial, consulta ou cronograma para regras de energia solar plug-in foi encontrado. Este resumo se baseia em cobertura secundária (Selectra Japan) e no relatório de roteiro do REI de junho de 2026; consulte também as orientações do METI ou da sua distribuidora. Isto não é aconselhamento jurídico.' },
         ],
       },
       whereHeaded: {
@@ -868,10 +884,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'A energia solar de varanda é legal no Japão?', a: 'Não há lei específica que a permita ou proíba, mas ligar um dispositivo gerador a uma tomada residencial é tratado como conexão à rede que exige permissão da distribuidora, segundo uma análise do REI resumida pela Selectra Japan. Na prática, kits plug-in importados não são hoje no Japão um produto legal de «é só ligar».' },
+          { q: 'A energia solar de varanda é legal no Japão?', a: 'Não há lei específica que a permita ou proíba, mas ligar um dispositivo gerador a uma tomada residencial é tratado como conexão à rede que exige permissão da distribuidora, segundo uma análise do REI resumida pela Selectra Japan. Segundo a Selectra Japan, simplesmente ligar um kit importado na tomada não é, em princípio, permitido no Japão hoje.' },
           { q: 'Posso usar um kit solar plug-in importado numa tomada japonesa?', a: 'A Selectra Japan, citando a análise do REI, desaconselha: o fluxo reverso sem permissão da distribuidora não é permitido e é exigida instalação por eletricista habilitado. Consulte sua distribuidora antes de conectar qualquer dispositivo gerador. Isto não é aconselhamento jurídico.' },
           { q: 'O Japão planeja regular a energia solar de varanda?', a: 'Nenhuma proposta do governo foi encontrada. O Renewable Energy Institute publicou em junho de 2026 um relatório de roteiro sobre a introdução da energia solar plug-in, e o METI separou em março de 2026 o apoio FIT/FIP à solar residencial/de telhados do apoio à solar em escala de concessionária — mas nenhum dos dois é legislação específica para varandas, e nenhum cronograma foi anunciado.' },
-          { q: 'O que é o roteiro do REI?', a: 'Um relatório de junho de 2026 do Renewable Energy Institute intitulado «賃貸・集合住宅にも開かれた太陽光発電へ», sobre como o Japão poderia introduzir a energia solar plug-in para inquilinos e moradores de apartamentos. Seu sumário lista três obstáculos: ligação à tomada, instalação dos painéis e conexão à rede. É advocacy, não regras em vigor.' },
+          { q: 'O que é o roteiro do REI?', a: 'Um relatório de junho de 2026 do Renewable Energy Institute intitulado «賃貸・集合住宅にも開かれた太陽光発電へ», sobre como o Japão poderia introduzir a energia solar plug-in para inquilinos e moradores de apartamentos. Seu sumário lista cinco obstáculos: ligação à tomada, instalação dos painéis, conexão à rede, segurança dos produtos e procedimentos de instalação. É advocacy, não regras em vigor.' },
+          { q: 'O que o roteiro do REI propõe para a energia solar plug-in no Japão?', a: 'O REI propõe três etapas: projetos-piloto que verifiquem a segurança em fiação, tomadas e varandas japonesas; uma nova categoria legal para pequenos sistemas plug-in (o exemplo é uma classe para sistemas abaixo de 1 kW CA), com revisão da Lei dos Eletricistas e das regras de fluxo reverso; e depois normas técnicas, certificação, registro on-line simplificado e regras-modelo para prédios de apartamentos. Descreve os sistemas plug-in como de cerca de 300–1.200 W CA. São recomendações, não regras em vigor, e nenhum cronograma foi anunciado.' },
           { q: 'Qual é o papel da NEDO na discussão japonesa sobre energia solar de varanda?', a: 'A NEDO (New Energy and Industrial Technology Development Organization) conduziu um «Projeto de demonstração de aplicações multifuncionais da energia solar» que incluiu P&D de sistemas montados em varandas — trabalho prévio citado, não regulamentação em vigor.' },
           { q: 'O anúncio FIT/FIP do METI de março de 2026 afeta a energia solar de varanda?', a: 'Não diretamente. O METI anunciou que encerrará o apoio FIT/FIP à solar comercial fora de telhados a partir do ano fiscal de 2027, mantendo o apoio à solar residencial e em telhados. É política solar geral, não uma regra específica para varandas.' },
           { q: 'Quando o Japão terá regras para energia solar de varanda?', a: 'Nenhum cronograma foi anunciado. Trate qualquer data específica como especulação até que uma proposta ministerial ou um projeto de lei seja publicado.' },
@@ -901,18 +918,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-zh.webp',
-    title: '阳台光伏在日本合法吗?2027年现状报告',
-    seoTitle: '阳台光伏在日本合法吗?2027年现状报告',
+    title: '日本的阳台光伏合法吗？2027年现状报告与REI路线图',
+    seoTitle: '日本的阳台光伏合法吗？2027年现状报告与REI路线图',
     intro: '日本没有专门针对插电式或阳台光伏的法律，而一般规则反而指向相反的方向：据Selectra Japan概述的可再生能源研究所（REI）分析，向家用插座输送电力属于并网，未经电力公司许可的反向潮流不被允许，安装需要持证电工。本页是对一场政策讨论的现状报告，该讨论在2026年6月有了具体提案——REI为向租户和公寓住户开放太阳能而制定的路线图——而不是对既定规则的指南。',
-    metaDescription: '日本截至2026年没有专门的插电式光伏法律，将套件接入插座被视为并网，需获得电力公司许可。REI于6月提出制度化路线图。',
+    metaDescription: '日本目前没有专门的插电式光伏法律，将套件接入家用插座被视为并网，需获得电力公司许可并由持证电工安装。REI于2026年6月提出分三步的制度化路线图，列出五项障碍。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '阅读约5分钟',
     educationalLevel: 'Beginner',
     audience: '日本的潜在阳台光伏购买者及政策观察人士',
     primaryTerm: '日本阳台光伏的法律地位',
     targetKeywords: ['日本 阳台光伏', '插电式光伏 日本 合法', '日本太阳能政策 2027'],
-    leadAnswerBlock: '**截至2026年10月19日，日本没有专门针对插电式或阳台光伏的法律——没有针对800瓦级设备的简化类别、功率上限或登记途径——而据Selectra Japan概述的REI分析，将太阳能设备接入家用插座被视为需要电力公司许可的并网。** Selectra Japan（2026年9月9日更新）在概述REI的分析时称，未经电力公司许可的反向潮流不被允许，安装需要持证电工，并建议不要购买海外插电式套件在日本插座上使用。2026年6月，可再生能源研究所（自然エネルギー財団）继2026年3月关于德国经验的报告之后，发布了路线图报告《賃貸・集合住宅にも開かれた太陽光発電へ》（向租户和公寓住户开放的太阳能），探讨日本如何引入插电式光伏。这属于政策倡导而非已颁布的法律，目前未发现经济产业省的草案、征询意见或时间表。另外，经济产业省于2026年3月19日宣布，自2027财年起终止对非屋顶商业太阳能的FIT/FIP支持，同时继续支持住宅和屋顶太阳能——这是一般太阳能政策，并非阳台专属。',
+    leadAnswerBlock: '**截至2026年10月31日，日本没有专门针对插电式或阳台光伏的法律——没有针对800瓦级设备的简化类别、功率上限或登记途径——而据Selectra Japan概述的REI分析，将太阳能设备接入家用插座被视为需要电力公司许可的并网。** Selectra Japan（2026年9月9日更新）在概述REI的分析时称，未经电力公司许可的反向潮流不被允许，安装需要持证电工，并建议不要购买海外插电式套件在日本插座上使用。2026年6月，可再生能源研究所（自然エネルギー財団）继2026年3月关于德国经验的报告之后，发布了路线图报告《賃貸・集合住宅にも開かれた太陽光発電へ》（向租户和公寓住户开放的太阳能），探讨日本如何引入插电式光伏。这属于政策倡导而非已颁布的法律，目前未发现经济产业省的草案、征询意见或时间表。另外，经济产业省于2026年3月19日宣布，自2027财年起终止对非屋顶商业太阳能的FIT/FIP支持，同时继续支持住宅和屋顶太阳能——这是一般太阳能政策，并非阳台专属。',
     quickAnswerTop: {
       zh: {
         question: '阳台光伏在日本合法吗?',
@@ -924,7 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '讨论中提及的基础：NEDO的“太阳能多用途应用示范项目”（含阳台安装系统的研发）以及“太阳能发电开发战略2025”',
           '经济产业省于2026年3月19日宣布，自2027财年起终止对非屋顶商业太阳能的FIT/FIP支持，同时继续支持住宅和屋顶太阳能——并非阳台专属；未发现阳台规则的时间表',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -941,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '截至2026年10月19日，日本没有专门的插电式或阳台光伏法律——没有功率上限、没有登记程序，也没有针对800瓦级设备的简化类别。',
+          '截至2026年10月31日，日本没有专门的插电式或阳台光伏法律——没有功率上限、没有登记程序，也没有针对800瓦级设备的简化类别。',
           '按一般规则，接入家用插座属于并网：未经电力公司许可的反向潮流不被允许，且需要持证电工（REI分析，经Selectra Japan概述）。Selectra建议不要把进口套件接入日本插座。',
           '2026年6月，可再生能源研究所继3月关于德国的报告之后，发布了关于在日本引入插电式光伏的路线图报告。这是政策倡导，而非政府提案。',
           '提及的基础：NEDO的“太阳能多用途应用示范项目”（含阳台安装系统的研发）以及“太阳能发电开发战略2025”。',
@@ -952,7 +969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'no-dedicated-law',
         title: '尚无专门法律',
         content: [
-          '**截至2026年10月19日，日本没有关于插电式或阳台光伏的立法——没有针对800瓦级设备的简化类别、功率上限或登记途径——而是适用一般电网规则。** 据Selectra Japan（2026年9月9日更新）对可再生能源研究所（REI）分析的概述，向家用插座输送电力属于并网（系統連系）；未经电力公司许可的反向潮流不被允许；并且需要持证电工（電気工事士）安装，逆功率继电器以及向配电运营商提交接入申请也在障碍之列。因此这并不是“什么都可以”意义上的空白：由于没有简化类别，并网发电的规则就适用于一种从未为此设计的设备。德国的800瓦规则在日本没有对应物。',
+          '**截至2026年10月31日，日本没有关于插电式或阳台光伏的立法——没有针对800瓦级设备的简化类别、功率上限或登记途径——而是适用一般电网规则。** 据Selectra Japan（2026年9月9日更新）对可再生能源研究所（REI）分析的概述，向家用插座输送电力属于并网（系統連系）；未经电力公司许可的反向潮流不被允许；并且需要持证电工（電気工事士）安装，逆功率继电器以及向配电运营商提交接入申请也在障碍之列。因此这并不是“什么都可以”意义上的空白：由于没有简化类别，并网发电的规则就适用于一种从未为此设计的设备。德国的800瓦规则在日本没有对应物。',
           '本页是现状报告，而非规则指南，也不构成法律建议。Selectra Japan建议不要购买海外插电式套件并接入日本家用插座；在连接任何发电设备之前，请先咨询您的配电运营商。',
         ],
       },
@@ -960,12 +977,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'policy-conversation',
         title: '迄今为止的政策讨论',
         content: [
-          '**2026年6月，可再生能源研究所（自然エネルギー財団）发布了路线图报告《賃貸・集合住宅にも開かれた太陽光発電へ》（向租户和公寓住户开放的太阳能），探讨日本如何引入插电式光伏；其目录列出三个障碍：插座连接、光伏板安装和并网。** 该报告继REI于2026年3月发布的关于德国的英文报告《Plug-in PV: How Germany Made Solar Accessible to All》之后。这是可再生能源政策研究机构的倡导与分析，而非政府提案或法案。',
+          '**2026年6月，可再生能源研究所（自然エネルギー財団）发布了路线图报告《賃貸・集合住宅にも開かれた太陽光発電へ》（向租户和公寓住户开放的太阳能），探讨日本如何引入插电式光伏；其目录列出五个障碍：插座连接、光伏板安装、并网、产品安全和安装手续。** 该报告继REI于2026年3月发布的关于德国的英文报告《Plug-in PV: How Germany Made Solar Accessible to All》之后。这是可再生能源政策研究机构的倡导与分析，而非政府提案或法案。',
+          '**REI的路线图提出三个步骤：开展试点项目和技术安全验证；为小型插电式设备确立明确的法律类别（报告以低于现行最小类别10 kW AC的、1 kW AC以下设备类别为例）；随后建立技术标准、认证制度和简化的在线登记，并面向租赁住宅和公寓推广。** REI还把将一般用电气设备作业限定给持证电工的電気工事士法列为需要审视的规定，以便在明确的安全条件下允许自行安装。这些是对政策制定者的建议，而非已颁布的规则。',
           '此前已有基础：NEDO（新能源产业技术综合开发机构）的“太阳能多用途应用示范项目”，其中包含阳台安装系统的研发，以及日本的“太阳能发电开发战略2025”。这些是技术和战略基础，而不是针对消费级插电式系统的已颁布规则。',
           '**另外，且并非阳台专属：经济产业省于2026年3月19日宣布，自2027财年起终止对非屋顶商业太阳能的FIT/FIP（固定电价/溢价补贴）支持，同时继续对住宅和商业屋顶太阳能提供FIT/FIP支持。** 这表明经济产业省在屋顶/住宅太阳能与公用事业规模太阳能之间划出了政策界线——这是阳台光伏将来可能归入哪一类的背景——但它属于一般太阳能政策，并非关于阳台光伏的声明。',
         ],
         callouts: [
-          { type: 'warning', text: '截至2026年10月19日，未发现关于插电式光伏规则的部委草案、征询意见或时间表。本概述依据二手报道（Selectra Japan）以及REI已发布的报告标题；请直接阅读REI报告以及经济产业省或电力公司的指引。本页不构成法律建议。' },
+          { type: 'warning', text: '截至2026年10月31日，未发现关于插电式光伏规则的部委草案、征询意见或时间表。本概述依据二手报道（Selectra Japan）以及REI于2026年6月发布的路线图报告；另请直接查阅经济产业省或电力公司的指引。本页不构成法律建议。' },
         ],
       },
       whereHeaded: {
@@ -979,10 +997,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '日本的阳台光伏合法吗？', a: '没有专门的法律许可或禁止，但据Selectra Japan概述的REI分析，将发电设备接入家用插座被视为需要电力公司许可的并网。实际上，进口插电式套件目前在日本并不是可以合法“插上就用”的产品。' },
+          { q: '日本的阳台光伏合法吗？', a: '没有专门的法律许可或禁止，但据Selectra Japan概述的REI分析，将发电设备接入家用插座被视为需要电力公司许可的并网。据Selectra Japan称，目前在日本原则上不允许直接把进口套件插上插座使用。' },
           { q: '我可以把进口的插电式光伏套件接入日本插座吗？', a: 'Selectra Japan引用REI的分析，建议不要这样做：未经电力公司许可的反向潮流不被允许，且需要持证电工安装。连接任何发电设备之前，请先咨询您的配电运营商。本页不构成法律建议。' },
           { q: '日本打算监管阳台光伏吗？', a: '目前未发现政府提案。可再生能源研究所于2026年6月发布了关于引入插电式光伏的路线图报告，经济产业省于2026年3月把住宅/屋顶太阳能与公用事业规模的FIT/FIP支持区分开来——但二者都不是专门针对阳台光伏的立法，也未宣布时间表。' },
-          { q: 'REI的路线图是什么？', a: '这是可再生能源研究所于2026年6月发布的报告，题为《賃貸・集合住宅にも開かれた太陽光発電へ》，探讨日本如何为租户和公寓住户引入插电式光伏。其目录列出三个障碍：插座连接、光伏板安装和并网。这是政策倡导，而非已颁布的规则。' },
+          { q: 'REI的路线图是什么？', a: '这是可再生能源研究所于2026年6月发布的报告，题为《賃貸・集合住宅にも開かれた太陽光発電へ》，探讨日本如何为租户和公寓住户引入插电式光伏。其目录列出五个障碍：插座连接、光伏板安装、并网、产品安全和安装手续。这是政策倡导，而非已颁布的规则。' },
+          { q: 'REI的路线图对日本的插电式光伏提出了什么建议？', a: 'REI提出三个步骤：开展试点项目，验证日本的配线、插座和阳台上的安全性；为小型插电式系统设立新的法律类别（其示例是1 kW AC以下设备的类别），并审视電気工事士法和反向潮流的相关规定；随后建立技术标准、认证制度、简化的在线登记以及面向公寓楼的示范规约。报告把插电式系统的规模描述为约300–1,200 W AC。这些是建议，而非已颁布的规则，也未宣布时间表。' },
           { q: 'NEDO在日本阳台光伏政策讨论中扮演什么角色？', a: 'NEDO（新能源产业技术综合开发机构）实施了“太阳能多用途应用示范项目”，其中包含阳台安装系统的研发——这是被提及的基础，而非已颁布的法规。' },
           { q: '经济产业省2026年3月的FIT/FIP声明会影响阳台光伏吗？', a: '不会直接影响。经济产业省宣布，自2027财年起终止对非屋顶商业太阳能的FIT/FIP支持，同时继续支持住宅和屋顶太阳能。这是一般太阳能政策，并非阳台专属规则。' },
           { q: '日本什么时候会有阳台光伏规则？', a: '尚未宣布任何时间表。在部委提案或法案公布之前，请将任何具体日期视为推测。' },
