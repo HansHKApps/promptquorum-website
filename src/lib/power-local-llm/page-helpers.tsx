@@ -1333,6 +1333,12 @@ const HUB_THEMES: Array<{
     colorDot: 'bg-teal-400',
     slugs: [
       'local-ai-workstations-strix-halo-vs-dgx-spark',
+      'nvidia-dgx-spark-local-ai-workstation',
+      'amd-ryzen-ai-halo-local-ai-workstation',
+      'framework-desktop-local-ai-workstation',
+      'hp-z2-mini-g1a-local-ai-workstation',
+      'gmktec-evo-x2-local-ai-workstation',
+      'minisforum-ms-s1-max-local-ai-workstation',
     ],
   },
 ]

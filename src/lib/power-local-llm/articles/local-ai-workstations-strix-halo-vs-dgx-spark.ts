@@ -115,14 +115,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'The Five Machines to Shortlist',
         content:
-          '**Five machines cover the real buying decisions: the most memory, the vendor reference design, the business option, the best value and the expandable workstation.** This is an editorial selection from spec sheets and third-party reports; PromptQuorum has not benchmarked any of them. Links go to vendor pages with no affiliate relationship.',
+          '**Five machines cover the real buying decisions: the most memory, the vendor reference design, the business option, the best value and the expandable workstation.** This is an editorial selection from spec sheets and third-party reports; PromptQuorum has not benchmarked any of them. Links go to vendor pages with no affiliate relationship. Each machine also has its own page: [DGX Spark](/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/power-local-llm/gmktec-evo-x2-local-ai-workstation) and [Minisforum MS-S1 MAX](/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: 'Most memory, modular and repairable',
             verdict:
-              'Ryzen AI Max+ PRO 495 with 192 GB of LPDDR5X-8533 in a 4.5 L case, offered as a DIY Edition or pre-built with Fedora. Framework opened pre-orders on 30 September 2026 for one batch only, with first shipments expected in November. The PRO 495 configuration has an open PCIe x4 slot and supports USB4 and PCIe clustering.',
+              'Ryzen AI Max+ PRO 495 with 192 GB of LPDDR5X-8533 in a 4.5 L case, offered as a DIY Edition or pre-built with Fedora. Framework opened pre-orders on 30 September 2026 for one batch only, with first shipments expected in November. Framework\'s store pages later showed batches 1 and 2 sold out and a December batch 3. The PRO 495 configuration has an open PCIe x4 slot and supports USB4 and PCIe clustering.',
             pros: [
               'More memory than a DGX Spark in a standard, repairable chassis',
               'Open PCIe slot and a documented DIY path',
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: 'Workstation-oriented design',
             verdict:
-              'Ryzen AI Max+ 395 with 128 GB LPDDR5x-8000, dual 10GbE, USB4 v2 and a PCIe x16 expansion slot, with 2U rack-mount support. Its US store listed the 128 GB / 2 TB model on sale when we checked, with shipping estimated for early November. A 192 GB MS-S1 MAX-P495 has been reported on pre-order.',
+              'Ryzen AI Max+ 395 with 128 GB LPDDR5x-8000, dual 10GbE, USB4 v2 and a PCIe x16 expansion slot, with 2U rack-mount support. Its US store listed the 128 GB / 2 TB model on sale when we checked, with shipping estimated for early November. A 192 GB MS-S1 MAX-P495 is listed on its US store and was sold out at last check.',
             pros: [
               'Dual 10GbE and an expansion slot, unusual in this class',
               'Rack-mount option for office or lab use',
@@ -214,12 +214,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Machine': 'NVIDIA DGX Spark', 'Chip and memory': 'GB10, 128 GB', 'US price seen': '$6,950', 'Status and source note': 'Reported 2026-10-03 by ServeTheHome; launched at $3,999, Founders Edition $4,699 earlier in 2026; OEM 64 GB models from $4,999' },
           { 'Machine': 'AMD Ryzen AI Halo', 'Chip and memory': '395, 128 GB', 'US price seen': '$3,999', 'Status and source note': '2 TB SSD; Micro Center per launch coverage' },
-          { 'Machine': 'AMD Ryzen AI Halo 192GB', 'Chip and memory': 'PRO 495, 192 GB', 'US price seen': '$7,299', 'Status and source note': 'Single report (VideoCardz); not confirmed on a retailer page' },
-          { 'Machine': 'Framework Desktop 192GB', 'Chip and memory': 'PRO 495, 192 GB', 'US price seen': '$6,799 DIY / $7,449 pre-built', 'Status and source note': 'Pre-order, one batch, ships November (Phoronix, Framework)' },
+          { 'Machine': 'AMD Ryzen AI Halo 192GB', 'Chip and memory': 'PRO 495, 192 GB', 'US price seen': '$7,299', 'Status and source note': 'Reported by HotHardware and BornCity for Micro Center stores; not confirmed on a retailer page' },
+          { 'Machine': 'Framework Desktop 192GB', 'Chip and memory': 'PRO 495, 192 GB', 'US price seen': '$6,799 DIY / $7,449 pre-built', 'Status and source note': 'Announced as one November batch (Phoronix); Framework\'s store later showed a December batch' },
           { 'Machine': 'Framework Desktop 128GB', 'Chip and memory': '395, 128 GB', 'US price seen': '$3,449', 'Status and source note': 'Quoted by Phoronix for comparison' },
           { 'Machine': 'Minisforum MS-S1 MAX', 'Chip and memory': '395, 128 GB', 'US price seen': '$3,919 sale / $4,899 regular', 'Status and source note': '128 GB / 2 TB on the Minisforum US store; early-November shipping' },
-          { 'Machine': 'HP Z2 Mini G1a', 'Chip and memory': 'PRO 395, 128 GB', 'US price seen': '$3,734 to $5,079', 'Status and source note': 'Newegg 128 GB / 1 TB vs. HP US price reported by Notebookcheck for 128 GB / 2 TB' },
-          { 'Machine': 'GMKtec EVO-X2', 'Chip and memory': '395, 128 GB', 'US price seen': 'about $3,650', 'Status and source note': 'One October 2026 comparison listing for 128 GB / 2 TB; the GMKtec store price changes dynamically' },
+          { 'Machine': 'HP Z2 Mini G1a', 'Chip and memory': 'PRO 395, 128 GB', 'US price seen': '$3,800 to $6,954', 'Status and source note': 'Micro Center and CDW 128 GB / 2 TB listings (Serious Insights); HP\'s own US list price was reported at $5,079 by Notebookcheck' },
+          { 'Machine': 'GMKtec EVO-X2', 'Chip and memory': '395, 128 GB', 'US price seen': '$2,199.99 and $3,649', 'Status and source note': 'GMKtec US page lists $2,199.99 (sold out); Amazon $3,649 for 128 GB / 2 TB per Notebookcheck, 2026-07-18; sources conflict' },
           { 'Machine': 'Corsair AI Workstation 300', 'Chip and memory': '395, 128 GB', 'US price seen': '$3,399', 'Status and source note': 'Tom\'s Hardware report; report date not confirmed' },
           { 'Machine': 'Beelink GTR9 Pro', 'Chip and memory': '395, 128 GB', 'US price seen': 'not verified', 'Status and source note': 'US listings conflict; a PRO 495 variant is priced in China only, so far' },
           { 'Machine': 'Bosgame M5', 'Chip and memory': '395, 128 GB', 'US price seen': 'not verified', 'Status and source note': 'No current price found' },
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: 'October 2026 report of the $6,950 128 GB price and $4,999 64 GB OEM models.' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: 'vLLM serving results, platform notes, $3,999 Halo and $4,699 Founders Edition prices at review time.' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: Ryzen AI Halo launch', description: '128 GB Ryzen AI Halo at $3,999 with Windows 11 support.' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo with PRO 495 and 192GB', description: 'Report of the 192 GB Ryzen AI Halo price.' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo with PRO 495 and 192GB', description: 'Report of the 192 GB Ryzen AI Halo at Micro Center.' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop with Ryzen AI Max+ PRO 495', description: '192 GB pre-order pricing, November shipping, 128 GB comparison price.' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — Official Page', description: 'PRO 495 configuration, memory options, chassis and expansion details.' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — Official US Store', description: 'Specifications, sale and regular prices, shipping estimate.' },
@@ -464,14 +464,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'Die fünf Geräte in der engeren Wahl',
         content:
-          '**Fünf Geräte decken die echten Kaufentscheidungen ab: den meisten Speicher, das Referenzdesign des Herstellers, die Business-Option, das beste Preis-Leistungs-Verhältnis und die erweiterbare Workstation.** Das ist eine redaktionelle Auswahl aus Datenblättern und Berichten Dritter; PromptQuorum hat keines der Geräte selbst gebenchmarkt. Die Links führen zu Herstellerseiten ohne Affiliate-Beziehung.',
+          '**Fünf Geräte decken die echten Kaufentscheidungen ab: den meisten Speicher, das Referenzdesign des Herstellers, die Business-Option, das beste Preis-Leistungs-Verhältnis und die erweiterbare Workstation.** Das ist eine redaktionelle Auswahl aus Datenblättern und Berichten Dritter; PromptQuorum hat keines der Geräte selbst gebenchmarkt. Die Links führen zu Herstellerseiten ohne Affiliate-Beziehung. Jedes Gerät hat außerdem eine eigene Seite: [DGX Spark](/de/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/de/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/de/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/de/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/de/power-local-llm/gmktec-evo-x2-local-ai-workstation) und [Minisforum MS-S1 MAX](/de/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: 'Meiste Speicher, modular und reparierbar',
             verdict:
-              'Ryzen AI Max+ PRO 495 mit 192 GB LPDDR5X-8533 in einem 4,5-Liter-Gehäuse, erhältlich als DIY Edition oder vorkonfektioniert mit Fedora. Framework hat am 30. September 2026 Vorbestellungen für nur eine Charge geöffnet; die ersten Auslieferungen werden im November erwartet. Die PRO-495-Konfiguration hat einen offenen PCIe-x4-Steckplatz und unterstützt USB4- und PCIe-Clustering.',
+              'Ryzen AI Max+ PRO 495 mit 192 GB LPDDR5X-8533 in einem 4,5-Liter-Gehäuse, erhältlich als DIY Edition oder vorkonfektioniert mit Fedora. Framework hat am 30. September 2026 Vorbestellungen für nur eine Charge geöffnet; die ersten Auslieferungen werden im November erwartet. Die Shop-Seiten von Framework zeigten später die Chargen 1 und 2 als ausverkauft und eine Charge 3 im Dezember. Die PRO-495-Konfiguration hat einen offenen PCIe-x4-Steckplatz und unterstützt USB4- und PCIe-Clustering.',
             pros: [
               'Mehr Speicher als eine DGX Spark in einem Standardgehäuse, das sich reparieren lässt',
               'Offener PCIe-Steckplatz und ein dokumentierter DIY-Weg',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: 'Auf Workstation-Einsatz ausgelegtes Design',
             verdict:
-              'Ryzen AI Max+ 395 mit 128 GB LPDDR5x-8000, zwei 10GbE-Anschlüssen, USB4 v2 und einem PCIe-x16-Erweiterungssteckplatz, mit Unterstützung für 2U-Rackmontage. Der US-Shop führte das Modell mit 128 GB / 2 TB bei unserer Prüfung als Angebot, mit geschätztem Versand Anfang November. Ein MS-S1 MAX-P495 mit 192 GB wurde als Vorbestellung gemeldet.',
+              'Ryzen AI Max+ 395 mit 128 GB LPDDR5x-8000, zwei 10GbE-Anschlüssen, USB4 v2 und einem PCIe-x16-Erweiterungssteckplatz, mit Unterstützung für 2U-Rackmontage. Der US-Shop führte das Modell mit 128 GB / 2 TB bei unserer Prüfung als Angebot, mit geschätztem Versand Anfang November. Ein MS-S1 MAX-P495 mit 192 GB ist im US-Shop gelistet und war bei der letzten Prüfung ausverkauft.',
             pros: [
               'Zwei 10GbE-Anschlüsse und ein Erweiterungssteckplatz, in dieser Klasse ungewöhnlich',
               'Rackmontage-Option für Büro oder Labor',
@@ -563,12 +563,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Gerät': 'NVIDIA DGX Spark', 'Chip und Speicher': 'GB10, 128 GB', 'US-Preis (gesehen)': '6.950 $', 'Status und Quellenhinweis': 'Am 2026-10-03 von ServeTheHome gemeldet; Marktstart bei 3.999 $, Founders Edition 4.699 $ Anfang 2026; OEM-Modelle mit 64 GB ab 4.999 $' },
           { 'Gerät': 'AMD Ryzen AI Halo', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': '3.999 $', 'Status und Quellenhinweis': '2-TB-SSD; Micro Center laut Berichten zum Marktstart' },
-          { 'Gerät': 'AMD Ryzen AI Halo 192GB', 'Chip und Speicher': 'PRO 495, 192 GB', 'US-Preis (gesehen)': '7.299 $', 'Status und Quellenhinweis': 'Einzelner Bericht (VideoCardz); auf keiner Händlerseite bestätigt' },
-          { 'Gerät': 'Framework Desktop 192GB', 'Chip und Speicher': 'PRO 495, 192 GB', 'US-Preis (gesehen)': '6.799 $ DIY / 7.449 $ vorkonfektioniert', 'Status und Quellenhinweis': 'Vorbestellung, eine Charge, Versand im November (Phoronix, Framework)' },
+          { 'Gerät': 'AMD Ryzen AI Halo 192GB', 'Chip und Speicher': 'PRO 495, 192 GB', 'US-Preis (gesehen)': '7.299 $', 'Status und Quellenhinweis': 'Berichtet von HotHardware und BornCity für Micro-Center-Filialen; auf keiner Händlerseite bestätigt' },
+          { 'Gerät': 'Framework Desktop 192GB', 'Chip und Speicher': 'PRO 495, 192 GB', 'US-Preis (gesehen)': '6.799 $ DIY / 7.449 $ vorkonfektioniert', 'Status und Quellenhinweis': 'Als eine Charge im November angekündigt (Phoronix); der Framework-Shop zeigte später eine Charge im Dezember' },
           { 'Gerät': 'Framework Desktop 128GB', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': '3.449 $', 'Status und Quellenhinweis': 'Von Phoronix zum Vergleich genannt' },
           { 'Gerät': 'Minisforum MS-S1 MAX', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': '3.919 $ Angebot / 4.899 $ regulär', 'Status und Quellenhinweis': '128 GB / 2 TB im US-Shop von Minisforum; Versand Anfang November' },
-          { 'Gerät': 'HP Z2 Mini G1a', 'Chip und Speicher': 'PRO 395, 128 GB', 'US-Preis (gesehen)': '3.734 $ bis 5.079 $', 'Status und Quellenhinweis': 'Newegg 128 GB / 1 TB vs. HP-US-Preis für 128 GB / 2 TB laut Notebookcheck' },
-          { 'Gerät': 'GMKtec EVO-X2', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': 'etwa 3.650 $', 'Status und Quellenhinweis': 'Eine Vergleichsliste vom Oktober 2026 für 128 GB / 2 TB; der Shop-Preis von GMKtec ändert sich dynamisch' },
+          { 'Gerät': 'HP Z2 Mini G1a', 'Chip und Speicher': 'PRO 395, 128 GB', 'US-Preis (gesehen)': '3.800 $ bis 6.954 $', 'Status und Quellenhinweis': 'Angebote von Micro Center und CDW für 128 GB / 2 TB (Serious Insights); der US-Listenpreis von HP selbst wurde von Notebookcheck mit 5.079 $ gemeldet' },
+          { 'Gerät': 'GMKtec EVO-X2', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': '2.199,99 $ und 3.649 $', 'Status und Quellenhinweis': 'Die US-Seite von GMKtec nennt 2.199,99 $ (ausverkauft); Amazon 3.649 $ für 128 GB / 2 TB laut Notebookcheck, 2026-07-18; die Quellen widersprechen sich' },
           { 'Gerät': 'Corsair AI Workstation 300', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': '3.399 $', 'Status und Quellenhinweis': 'Bericht von Tom\'s Hardware; Berichtsdatum nicht bestätigt' },
           { 'Gerät': 'Beelink GTR9 Pro', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': 'nicht verifiziert', 'Status und Quellenhinweis': 'US-Angebote widersprechen sich; eine PRO-495-Variante hat bisher nur in China einen Preis' },
           { 'Gerät': 'Bosgame M5', 'Chip und Speicher': '395, 128 GB', 'US-Preis (gesehen)': 'nicht verifiziert', 'Status und Quellenhinweis': 'Kein aktueller Preis gefunden' },
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: 'Bericht vom Oktober 2026 zum Preis von 6.950 $ für 128 GB und zu OEM-Modellen mit 64 GB für 4.999 $.' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: 'vLLM-Serving-Ergebnisse, Plattformhinweise, Preise von 3.999 $ (Halo) und 4.699 $ (Founders Edition) zum Zeitpunkt des Tests.' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: Marktstart des Ryzen AI Halo', description: 'Ryzen AI Halo mit 128 GB für 3.999 $ und Windows-11-Unterstützung.' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo mit PRO 495 und 192GB', description: 'Bericht zum Preis des Ryzen AI Halo mit 192 GB.' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo mit PRO 495 und 192GB', description: 'Bericht zum Ryzen AI Halo mit 192 GB bei Micro Center.' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop mit Ryzen AI Max+ PRO 495', description: 'Vorbestellpreise für 192 GB, Versand im November, Vergleichspreis für 128 GB.' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — Offizielle Seite', description: 'PRO-495-Konfiguration, Speicheroptionen, Gehäuse und Erweiterungsdetails.' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — Offizieller US-Shop', description: 'Spezifikationen, Angebots- und Regelpreise, Versandschätzung.' },
@@ -813,14 +813,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'Les cinq machines à présélectionner',
         content:
-          "**Cinq machines couvrent les vraies décisions d'achat : le plus de mémoire, le design de référence du constructeur, l'option professionnelle, le meilleur rapport qualité-prix et la station extensible.** Il s'agit d'une sélection éditoriale à partir de fiches techniques et de rapports tiers ; PromptQuorum n'a testé aucune de ces machines. Les liens mènent aux pages des constructeurs, sans relation d'affiliation.",
+          "**Cinq machines couvrent les vraies décisions d'achat : le plus de mémoire, le design de référence du constructeur, l'option professionnelle, le meilleur rapport qualité-prix et la station extensible.** Il s'agit d'une sélection éditoriale à partir de fiches techniques et de rapports tiers ; PromptQuorum n'a testé aucune de ces machines. Les liens mènent aux pages des constructeurs, sans relation d'affiliation. Chaque machine dispose aussi de sa propre page : [DGX Spark](/fr/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/fr/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/fr/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/fr/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/fr/power-local-llm/gmktec-evo-x2-local-ai-workstation) et [Minisforum MS-S1 MAX](/fr/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).",
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: "Le plus de mémoire, modulaire et réparable",
             verdict:
-              "Ryzen AI Max+ PRO 495 avec 192 Go de LPDDR5X-8533 dans un boîtier de 4,5 L, proposé en édition DIY ou monté avec Fedora. Framework a ouvert les précommandes le 30 septembre 2026 pour un seul lot, avec des premières livraisons attendues en novembre. La configuration PRO 495 dispose d'un emplacement PCIe x4 libre et prend en charge le clustering USB4 et PCIe.",
+              "Ryzen AI Max+ PRO 495 avec 192 Go de LPDDR5X-8533 dans un boîtier de 4,5 L, proposé en édition DIY ou monté avec Fedora. Framework a ouvert les précommandes le 30 septembre 2026 pour un seul lot, avec des premières livraisons attendues en novembre. Les pages de la boutique Framework ont ensuite affiché les lots 1 et 2 comme épuisés et un lot 3 en décembre. La configuration PRO 495 dispose d'un emplacement PCIe x4 libre et prend en charge le clustering USB4 et PCIe.",
             pros: [
               "Plus de mémoire qu'un DGX Spark dans un châssis standard et réparable",
               "Emplacement PCIe libre et parcours DIY documenté",
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: "Conception orientée station de travail",
             verdict:
-              "Ryzen AI Max+ 395 avec 128 Go de LPDDR5x-8000, double 10GbE, USB4 v2 et un emplacement d'extension PCIe x16, avec prise en charge du montage en rack 2U. Sa boutique américaine affichait le modèle 128 Go / 2 To en promotion lors de notre vérification, avec une expédition estimée début novembre. Une version 192 Go, la MS-S1 MAX-P495, a été signalée en précommande.",
+              "Ryzen AI Max+ 395 avec 128 Go de LPDDR5x-8000, double 10GbE, USB4 v2 et un emplacement d'extension PCIe x16, avec prise en charge du montage en rack 2U. Sa boutique américaine affichait le modèle 128 Go / 2 To en promotion lors de notre vérification, avec une expédition estimée début novembre. Une version 192 Go, la MS-S1 MAX-P495, est listée sur sa boutique américaine et était épuisée lors de notre dernière vérification.",
             pros: [
               "Double 10GbE et un emplacement d'extension, rares dans cette classe",
               "Option de montage en rack pour le bureau ou le laboratoire",
@@ -912,12 +912,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Machine': 'NVIDIA DGX Spark', 'Puce et mémoire': 'GB10, 128 Go', 'Prix US relevé': '$6,950', 'Statut et source': "Signalé le 2026-10-03 par ServeTheHome ; lancé à $3,999, Founders Edition à $4,699 plus tôt en 2026 ; modèles OEM 64 Go à partir de $4,999" },
           { 'Machine': 'AMD Ryzen AI Halo', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': '$3,999', 'Statut et source': "SSD 2 To ; Micro Center selon la couverture du lancement" },
-          { 'Machine': 'AMD Ryzen AI Halo 192GB', 'Puce et mémoire': 'PRO 495, 192 Go', 'Prix US relevé': '$7,299', 'Statut et source': "Un seul rapport (VideoCardz) ; non confirmé sur la page d'un revendeur" },
-          { 'Machine': 'Framework Desktop 192GB', 'Puce et mémoire': 'PRO 495, 192 Go', 'Prix US relevé': '$6,799 DIY / $7,449 monté', 'Statut et source': "Précommande, un seul lot, livraison en novembre (Phoronix, Framework)" },
+          { 'Machine': 'AMD Ryzen AI Halo 192GB', 'Puce et mémoire': 'PRO 495, 192 Go', 'Prix US relevé': '$7,299', 'Statut et source': "Signalé par HotHardware et BornCity pour des magasins Micro Center ; non confirmé sur la page d'un revendeur" },
+          { 'Machine': 'Framework Desktop 192GB', 'Puce et mémoire': 'PRO 495, 192 Go', 'Prix US relevé': '$6,799 DIY / $7,449 monté', 'Statut et source': "Annoncé comme un seul lot en novembre (Phoronix) ; la boutique de Framework a ensuite affiché un lot en décembre" },
           { 'Machine': 'Framework Desktop 128GB', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': '$3,449', 'Statut et source': "Cité par Phoronix à titre de comparaison" },
           { 'Machine': 'Minisforum MS-S1 MAX', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': '$3,919 promo / $4,899 normal', 'Statut et source': "128 Go / 2 To sur la boutique américaine de Minisforum ; expédition début novembre" },
-          { 'Machine': 'HP Z2 Mini G1a', 'Puce et mémoire': 'PRO 395, 128 Go', 'Prix US relevé': '$3,734 à $5,079', 'Statut et source': "Newegg 128 Go / 1 To contre prix américain HP relevé par Notebookcheck pour 128 Go / 2 To" },
-          { 'Machine': 'GMKtec EVO-X2', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': 'environ $3,650', 'Statut et source': "Une annonce de comparaison d'octobre 2026 pour 128 Go / 2 To ; le prix en boutique GMKtec change dynamiquement" },
+          { 'Machine': 'HP Z2 Mini G1a', 'Puce et mémoire': 'PRO 395, 128 Go', 'Prix US relevé': '$3,800 à $6,954', 'Statut et source': "Annonces Micro Center et CDW pour 128 Go / 2 To (Serious Insights) ; le prix catalogue américain de HP lui-même a été relevé à $5,079 par Notebookcheck" },
+          { 'Machine': 'GMKtec EVO-X2', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': '$2,199.99 et $3,649', 'Statut et source': "La page américaine de GMKtec affiche $2,199.99 (épuisé) ; Amazon $3,649 pour 128 Go / 2 To selon Notebookcheck, 2026-07-18 ; les sources divergent" },
           { 'Machine': 'Corsair AI Workstation 300', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': '$3,399', 'Statut et source': "Rapport de Tom's Hardware ; date du rapport non confirmée" },
           { 'Machine': 'Beelink GTR9 Pro', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': 'non vérifié', 'Statut et source': "Annonces américaines contradictoires ; une variante PRO 495 n'est affichée qu'en Chine pour l'instant" },
           { 'Machine': 'Bosgame M5', 'Puce et mémoire': '395, 128 Go', 'Prix US relevé': 'non vérifié', 'Statut et source': "Aucun prix actuel trouvé" },
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: "Rapport d'octobre 2026 sur le prix de $6,950 pour le modèle 128 Go et les modèles OEM 64 Go à $4,999." },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: "Résultats de service vLLM, notes sur la plateforme, prix de $3,999 pour le Halo et de $4,699 pour la Founders Edition au moment du test." },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: "Tom's Hardware: Ryzen AI Halo launch", description: "Ryzen AI Halo 128 Go à $3,999 avec prise en charge de Windows 11." },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo with PRO 495 and 192GB', description: "Rapport sur le prix du Ryzen AI Halo 192 Go." },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo with PRO 495 and 192GB', description: "Rapport sur le Ryzen AI Halo 192 Go chez Micro Center." },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop with Ryzen AI Max+ PRO 495', description: "Prix de précommande du 192 Go, livraison en novembre, prix de comparaison du 128 Go." },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — Official Page', description: "Configuration PRO 495, options de mémoire, châssis et détails d'extension." },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — Official US Store', description: "Spécifications, prix promotionnel et prix normal, estimation d'expédition." },
@@ -1162,14 +1162,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '候補に入れる5台',
         content:
-          '**実際の購入判断をカバーするのは5台です。最大メモリ、ベンダーのリファレンス設計、法人向け、コスパ重視、拡張可能なワークステーションです。** これはスペックシートとサードパーティのレポートに基づく編集部の選定であり、PromptQuorumはいずれのマシンもベンチマークしていません。リンク先はベンダーのページで、アフィリエイト関係はありません。',
+          '**実際の購入判断をカバーするのは5台です。最大メモリ、ベンダーのリファレンス設計、法人向け、コスパ重視、拡張可能なワークステーションです。** これはスペックシートとサードパーティのレポートに基づく編集部の選定であり、PromptQuorumはいずれのマシンもベンチマークしていません。リンク先はベンダーのページで、アフィリエイト関係はありません。各マシンには個別のページもあります：[DGX Spark](/ja/power-local-llm/nvidia-dgx-spark-local-ai-workstation)、[Ryzen AI Halo](/ja/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation)、[Framework Desktop](/ja/power-local-llm/framework-desktop-local-ai-workstation)、[HP Z2 Mini G1a](/ja/power-local-llm/hp-z2-mini-g1a-local-ai-workstation)、[GMKtec EVO-X2](/ja/power-local-llm/gmktec-evo-x2-local-ai-workstation)、[Minisforum MS-S1 MAX](/ja/power-local-llm/minisforum-ms-s1-max-local-ai-workstation)。',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: '最大メモリ、モジュール式で修理しやすい',
             verdict:
-              'Ryzen AI Max+ PRO 495に192GBのLPDDR5X-8533を組み合わせた4.5Lのケースで、DIY EditionまたはFedora搭載の完成品として提供されます。Frameworkは2026年9月30日に1バッチ限定の予約受付を開始し、初回出荷は11月の見込みです。PRO 495構成にはオープンなPCIe x4スロットがあり、USB4とPCIeによるクラスタリングに対応します。',
+              'Ryzen AI Max+ PRO 495に192GBのLPDDR5X-8533を組み合わせた4.5Lのケースで、DIY EditionまたはFedora搭載の完成品として提供されます。Frameworkは2026年9月30日に1バッチ限定の予約受付を開始し、初回出荷は11月の見込みです。Frameworkのストアページには、その後、バッチ1と2が完売となり、12月のバッチ3が表示されました。PRO 495構成にはオープンなPCIe x4スロットがあり、USB4とPCIeによるクラスタリングに対応します。',
             pros: [
               '標準的で修理しやすい筐体に、DGX Sparkを上回るメモリを搭載',
               'オープンなPCIeスロットと、文書化されたDIY手順',
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: 'ワークステーション志向の設計',
             verdict:
-              'Ryzen AI Max+ 395に128GBのLPDDR5x-8000、デュアル10GbE、USB4 v2、PCIe x16拡張スロットを備え、2Uラックマウントにも対応します。確認した時点で、米国ストアは128GB/2TBモデルをセール価格で掲載し、出荷は11月上旬の見込みでした。192GBのMS-S1 MAX-P495が予約受付中との報告もあります。',
+              'Ryzen AI Max+ 395に128GBのLPDDR5x-8000、デュアル10GbE、USB4 v2、PCIe x16拡張スロットを備え、2Uラックマウントにも対応します。確認した時点で、米国ストアは128GB/2TBモデルをセール価格で掲載し、出荷は11月上旬の見込みでした。192GBのMS-S1 MAX-P495は米国ストアに掲載されており、最後に確認した時点では売り切れでした。',
             pros: [
               'このクラスでは珍しい、デュアル10GbEと拡張スロット',
               'オフィスやラボ向けのラックマウント対応',
@@ -1261,12 +1261,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '機種': 'NVIDIA DGX Spark', 'チップとメモリ': 'GB10、128GB', '確認した米国価格': '$6,950', '状況と情報源メモ': '2026-10-03にServeTheHomeが報道。発売時$3,999、2026年前半のFounders Editionは$4,699。OEMの64GB版は$4,999から' },
           { '機種': 'AMD Ryzen AI Halo', 'チップとメモリ': '395、128GB', '確認した米国価格': '$3,999', '状況と情報源メモ': '2TB SSD。発売時の報道ではMicro Center' },
-          { '機種': 'AMD Ryzen AI Halo 192GB', 'チップとメモリ': 'PRO 495、192GB', '確認した米国価格': '$7,299', '状況と情報源メモ': '単独の報道（VideoCardz）。小売店ページでは未確認' },
-          { '機種': 'Framework Desktop 192GB', 'チップとメモリ': 'PRO 495、192GB', '確認した米国価格': 'DIY $6,799 / 完成品 $7,449', '状況と情報源メモ': '予約受付、1バッチ、11月出荷（Phoronix、Framework）' },
+          { '機種': 'AMD Ryzen AI Halo 192GB', 'チップとメモリ': 'PRO 495、192GB', '確認した米国価格': '$7,299', '状況と情報源メモ': 'HotHardwareとBornCityがMicro Center店舗向けとして報道。小売店ページでは未確認' },
+          { '機種': 'Framework Desktop 192GB', 'チップとメモリ': 'PRO 495、192GB', '確認した米国価格': 'DIY $6,799 / 完成品 $7,449', '状況と情報源メモ': '11月の1バッチとして発表（Phoronix）。Frameworkのストアには後に12月のバッチが表示' },
           { '機種': 'Framework Desktop 128GB', 'チップとメモリ': '395、128GB', '確認した米国価格': '$3,449', '状況と情報源メモ': '比較用にPhoronixが引用' },
           { '機種': 'Minisforum MS-S1 MAX', 'チップとメモリ': '395、128GB', '確認した米国価格': 'セール $3,919 / 通常 $4,899', '状況と情報源メモ': 'Minisforum米国ストアの128GB/2TB。11月上旬出荷' },
-          { '機種': 'HP Z2 Mini G1a', 'チップとメモリ': 'PRO 395、128GB', '確認した米国価格': '$3,734〜$5,079', '状況と情報源メモ': 'Newegg 128GB/1TBと、Notebookcheckが報じたHP米国価格（128GB/2TB）' },
-          { '機種': 'GMKtec EVO-X2', 'チップとメモリ': '395、128GB', '確認した米国価格': '約$3,650', '状況と情報源メモ': '2026年10月の比較掲載（128GB/2TB）の1件。GMKtecストアの価格は動的に変動' },
+          { '機種': 'HP Z2 Mini G1a', 'チップとメモリ': 'PRO 395、128GB', '確認した米国価格': '$3,800〜$6,954', '状況と情報源メモ': 'Micro CenterとCDWの128GB/2TB掲載（Serious Insights）。HP自身の米国定価はNotebookcheckが$5,079と報じた' },
+          { '機種': 'GMKtec EVO-X2', 'チップとメモリ': '395、128GB', '確認した米国価格': '$2,199.99と$3,649', '状況と情報源メモ': 'GMKtec米国ページは$2,199.99（売り切れ）。AmazonはNotebookcheckによると128GB/2TBで$3,649（2026-07-18）。情報源間で食い違いあり' },
           { '機種': 'Corsair AI Workstation 300', 'チップとメモリ': '395、128GB', '確認した米国価格': '$3,399', '状況と情報源メモ': 'Tom\'s Hardwareの報道。報道日は未確認' },
           { '機種': 'Beelink GTR9 Pro', 'チップとメモリ': '395、128GB', '確認した米国価格': '未確認', '状況と情報源メモ': '米国の掲載内容が食い違う。PRO 495版は現時点で中国のみ価格設定' },
           { '機種': 'Bosgame M5', 'チップとメモリ': '395、128GB', '確認した米国価格': '未確認', '状況と情報源メモ': '現行価格は見つからず' },
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: '128GB版$6,950、OEM 64GB版$4,999という2026年10月の報道。' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: 'vLLMサービングの結果、プラットフォームの注記、レビュー時点の価格（Halo $3,999、Founders Edition $4,699）。' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: Ryzen AI Halo launch', description: 'Windows 11対応の128GB版Ryzen AI Halo、$3,999。' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo with PRO 495 and 192GB', description: '192GB版Ryzen AI Haloの価格に関する報道。' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo with PRO 495 and 192GB', description: '192GB版Ryzen AI HaloのMicro Centerでの取り扱いに関する報道。' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop with Ryzen AI Max+ PRO 495', description: '192GB版の予約価格、11月出荷、128GB版の比較価格。' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — Official Page', description: 'PRO 495構成、メモリの選択肢、筐体と拡張の詳細。' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — Official US Store', description: '仕様、セール価格と通常価格、出荷見込み。' },
@@ -1510,14 +1510,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '值得列入候选的五款机器',
         content:
-          '**五款机器涵盖了真正的购买决策：内存最大、厂商参考设计、商用选择、性价比最佳和可扩展工作站。** 这是根据规格表和第三方报道做出的编辑部遴选；PromptQuorum没有对其中任何一款做过基准测试。链接指向厂商页面，不含联盟关系。',
+          '**五款机器涵盖了真正的购买决策：内存最大、厂商参考设计、商用选择、性价比最佳和可扩展工作站。** 这是根据规格表和第三方报道做出的编辑部遴选；PromptQuorum没有对其中任何一款做过基准测试。链接指向厂商页面，不含联盟关系。每台机器还有各自的页面：[DGX Spark](/zh/power-local-llm/nvidia-dgx-spark-local-ai-workstation)、[Ryzen AI Halo](/zh/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation)、[Framework Desktop](/zh/power-local-llm/framework-desktop-local-ai-workstation)、[HP Z2 Mini G1a](/zh/power-local-llm/hp-z2-mini-g1a-local-ai-workstation)、[GMKtec EVO-X2](/zh/power-local-llm/gmktec-evo-x2-local-ai-workstation)、[Minisforum MS-S1 MAX](/zh/power-local-llm/minisforum-ms-s1-max-local-ai-workstation)。',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: '内存最大，模块化且易维修',
             verdict:
-              '搭载Ryzen AI Max+ PRO 495和192 GB LPDDR5X-8533，机身容积4.5升，提供DIY版或预装Fedora的整机版。Framework于2026年9月30日开放预订，仅限一个批次，预计11月开始首批发货。PRO 495配置带有一个开放的PCIe x4插槽，支持USB4和PCIe互联。',
+              '搭载Ryzen AI Max+ PRO 495和192 GB LPDDR5X-8533，机身容积4.5升，提供DIY版或预装Fedora的整机版。Framework于2026年9月30日开放预订，仅限一个批次，预计11月开始首批发货。Framework的商店页面随后显示第1、2批已售罄，并出现12月的第3批。PRO 495配置带有一个开放的PCIe x4插槽，支持USB4和PCIe互联。',
             pros: [
               '内存比DGX Spark更大，且采用标准、易维修的机箱',
               '开放的PCIe插槽，以及有文档记录的DIY路径',
@@ -1583,7 +1583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: '面向工作站的设计',
             verdict:
-              'Ryzen AI Max+ 395搭配128 GB LPDDR5x-8000，配备双10GbE、USB4 v2和PCIe x16扩展插槽，支持2U机架安装。我们查看时，其美国商店正在特价销售128 GB / 2 TB型号，预计11月初发货。据报道，192 GB的MS-S1 MAX-P495已开放预订。',
+              'Ryzen AI Max+ 395搭配128 GB LPDDR5x-8000，配备双10GbE、USB4 v2和PCIe x16扩展插槽，支持2U机架安装。我们查看时，其美国商店正在特价销售128 GB / 2 TB型号，预计11月初发货。192 GB的MS-S1 MAX-P495已在其美国商店上架，上次查看时已售罄。',
             pros: [
               '双10GbE和扩展插槽，在此类机器中并不常见',
               '可选机架安装，适合办公室或实验室使用',
@@ -1609,12 +1609,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '机型': 'NVIDIA DGX Spark', '芯片与内存': 'GB10，128 GB', '美国价格': '$6,950', '状态与来源说明': 'ServeTheHome 2026-10-03报道；年初发布价$3,999，Founders Edition $4,699；OEM 64 GB $4,999起' },
           { '机型': 'AMD Ryzen AI Halo', '芯片与内存': '395，128 GB', '美国价格': '$3,999', '状态与来源说明': '2 TB SSD；据发布报道在Micro Center销售' },
-          { '机型': 'AMD Ryzen AI Halo 192GB', '芯片与内存': 'PRO 495，192 GB', '美国价格': '$7,299', '状态与来源说明': '仅有单一报道（VideoCardz）；未在零售商页面确认' },
-          { '机型': 'Framework Desktop 192GB', '芯片与内存': 'PRO 495，192 GB', '美国价格': 'DIY $6,799 / 整机 $7,449', '状态与来源说明': '预订，仅一个批次，11月发货（Phoronix、Framework）' },
+          { '机型': 'AMD Ryzen AI Halo 192GB', '芯片与内存': 'PRO 495，192 GB', '美国价格': '$7,299', '状态与来源说明': 'HotHardware和BornCity报道称将在Micro Center门店销售；未在零售商页面确认' },
+          { '机型': 'Framework Desktop 192GB', '芯片与内存': 'PRO 495，192 GB', '美国价格': 'DIY $6,799 / 整机 $7,449', '状态与来源说明': '宣布为11月的单一批次（Phoronix）；Framework商店随后显示12月批次' },
           { '机型': 'Framework Desktop 128GB', '芯片与内存': '395，128 GB', '美国价格': '$3,449', '状态与来源说明': 'Phoronix为对比而引用' },
           { '机型': 'Minisforum MS-S1 MAX', '芯片与内存': '395，128 GB', '美国价格': '特价 $3,919 / 正常 $4,899', '状态与来源说明': 'Minisforum美国商店128 GB / 2 TB；11月初发货' },
-          { '机型': 'HP Z2 Mini G1a', '芯片与内存': 'PRO 395，128 GB', '美国价格': '$3,734至$5,079', '状态与来源说明': 'Newegg 128 GB / 1 TB对比Notebookcheck报道的HP美国128 GB / 2 TB价格' },
-          { '机型': 'GMKtec EVO-X2', '芯片与内存': '395，128 GB', '美国价格': '约$3,650', '状态与来源说明': '2026年10月一份对比列表中的128 GB / 2 TB报价；GMKtec商店价格动态变化' },
+          { '机型': 'HP Z2 Mini G1a', '芯片与内存': 'PRO 395，128 GB', '美国价格': '$3,800至$6,954', '状态与来源说明': 'Micro Center和CDW的128 GB / 2 TB列表（Serious Insights）；Notebookcheck报道HP自家美国标价为$5,079' },
+          { '机型': 'GMKtec EVO-X2', '芯片与内存': '395，128 GB', '美国价格': '$2,199.99和$3,649', '状态与来源说明': 'GMKtec美国页面标价$2,199.99（已售罄）；据Notebookcheck，Amazon上128 GB / 2 TB为$3,649，2026-07-18；各来源不一致' },
           { '机型': 'Corsair AI Workstation 300', '芯片与内存': '395，128 GB', '美国价格': '$3,399', '状态与来源说明': 'Tom\'s Hardware报道；报道日期未确认' },
           { '机型': 'Beelink GTR9 Pro', '芯片与内存': '395，128 GB', '美国价格': '未核实', '状态与来源说明': '美国报价互相矛盾；PRO 495版本目前仅在中国标价' },
           { '机型': 'Bosgame M5', '芯片与内存': '395，128 GB', '美国价格': '未核实', '状态与来源说明': '未找到当前价格' },
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: '2026年10月关于128 GB型号$6,950价格和$4,999 64 GB OEM型号的报道。' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: 'vLLM服务测试结果、平台说明，以及评测时Halo $3,999与Founders Edition $4,699的价格。' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: Ryzen AI Halo launch', description: '128 GB Ryzen AI Halo售价$3,999，支持Windows 11。' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo with PRO 495 and 192GB', description: '关于192 GB Ryzen AI Halo价格的报道。' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo with PRO 495 and 192GB', description: '关于192 GB Ryzen AI Halo在Micro Center上市的报道。' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop with Ryzen AI Max+ PRO 495', description: '192 GB预订价格、11月发货、128 GB对比价格。' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — 官方页面', description: 'PRO 495配置、内存选项、机箱与扩展详情。' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — 官方美国商店', description: '规格、特价与正常价格、预计发货时间。' },
@@ -1858,14 +1858,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'Las cinco máquinas para la lista corta',
         content:
-          '**Cinco máquinas cubren las decisiones de compra reales: la que más memoria tiene, el diseño de referencia del fabricante, la opción para empresas, la mejor relación calidad-precio y la estación ampliable.** Es una selección editorial a partir de fichas técnicas e informes de terceros; PromptQuorum no ha medido ninguna de ellas. Los enlaces van a páginas de los fabricantes, sin relación de afiliación.',
+          '**Cinco máquinas cubren las decisiones de compra reales: la que más memoria tiene, el diseño de referencia del fabricante, la opción para empresas, la mejor relación calidad-precio y la estación ampliable.** Es una selección editorial a partir de fichas técnicas e informes de terceros; PromptQuorum no ha medido ninguna de ellas. Los enlaces van a páginas de los fabricantes, sin relación de afiliación. Cada máquina tiene además su propia página: [DGX Spark](/es/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/es/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/es/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/es/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/es/power-local-llm/gmktec-evo-x2-local-ai-workstation) y [Minisforum MS-S1 MAX](/es/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: 'La que más memoria tiene, modular y reparable',
             verdict:
-              'Ryzen AI Max+ PRO 495 con 192 GB de LPDDR5X-8533 en una caja de 4.5 L, disponible como DIY Edition o premontado con Fedora. Framework abrió las reservas el 30 de septiembre de 2026 para un único lote, con los primeros envíos previstos para noviembre. La configuración PRO 495 tiene una ranura PCIe x4 libre y admite clustering por USB4 y PCIe.',
+              'Ryzen AI Max+ PRO 495 con 192 GB de LPDDR5X-8533 en una caja de 4.5 L, disponible como DIY Edition o premontado con Fedora. Framework abrió las reservas el 30 de septiembre de 2026 para un único lote, con los primeros envíos previstos para noviembre. Las páginas de la tienda de Framework mostraron después los lotes 1 y 2 agotados y un lote 3 en diciembre. La configuración PRO 495 tiene una ranura PCIe x4 libre y admite clustering por USB4 y PCIe.',
             pros: [
               'Más memoria que una DGX Spark en un chasis estándar y reparable',
               'Ranura PCIe libre y una vía DIY documentada',
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: 'Diseño orientado a estación de trabajo',
             verdict:
-              'Ryzen AI Max+ 395 con 128 GB de LPDDR5x-8000, doble 10GbE, USB4 v2 y una ranura de expansión PCIe x16, con compatibilidad de montaje en rack 2U. Su tienda de EE. UU. tenía el modelo de 128 GB / 2 TB en oferta cuando lo comprobamos, con envío estimado para principios de noviembre. Se ha informado de un MS-S1 MAX-P495 de 192 GB en reserva.',
+              'Ryzen AI Max+ 395 con 128 GB de LPDDR5x-8000, doble 10GbE, USB4 v2 y una ranura de expansión PCIe x16, con compatibilidad de montaje en rack 2U. Su tienda de EE. UU. tenía el modelo de 128 GB / 2 TB en oferta cuando lo comprobamos, con envío estimado para principios de noviembre. Un MS-S1 MAX-P495 de 192 GB figura en su tienda de EE. UU. y estaba agotado en la última comprobación.',
             pros: [
               'Doble 10GbE y una ranura de expansión, algo poco habitual en esta clase',
               'Opción de montaje en rack para oficina o laboratorio',
@@ -1957,12 +1957,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Máquina': 'NVIDIA DGX Spark', 'Chip y memoria': 'GB10, 128 GB', 'Precio EE. UU. visto': '$6,950', 'Estado y fuente': 'Informado el 2026-10-03 por ServeTheHome; lanzada a $3,999, Founders Edition a $4,699 antes en 2026; modelos OEM de 64 GB desde $4,999' },
           { 'Máquina': 'AMD Ryzen AI Halo', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': '$3,999', 'Estado y fuente': 'SSD de 2 TB; Micro Center según la cobertura del lanzamiento' },
-          { 'Máquina': 'AMD Ryzen AI Halo 192GB', 'Chip y memoria': 'PRO 495, 192 GB', 'Precio EE. UU. visto': '$7,299', 'Estado y fuente': 'Un solo informe (VideoCardz); no confirmado en la página de un distribuidor' },
-          { 'Máquina': 'Framework Desktop 192GB', 'Chip y memoria': 'PRO 495, 192 GB', 'Precio EE. UU. visto': '$6,799 DIY / $7,449 premontado', 'Estado y fuente': 'Reserva, un lote, envío en noviembre (Phoronix, Framework)' },
+          { 'Máquina': 'AMD Ryzen AI Halo 192GB', 'Chip y memoria': 'PRO 495, 192 GB', 'Precio EE. UU. visto': '$7,299', 'Estado y fuente': 'Informado por HotHardware y BornCity para tiendas Micro Center; no confirmado en la página de un distribuidor' },
+          { 'Máquina': 'Framework Desktop 192GB', 'Chip y memoria': 'PRO 495, 192 GB', 'Precio EE. UU. visto': '$6,799 DIY / $7,449 premontado', 'Estado y fuente': 'Anunciado como un único lote de noviembre (Phoronix); la tienda de Framework mostró después un lote de diciembre' },
           { 'Máquina': 'Framework Desktop 128GB', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': '$3,449', 'Estado y fuente': 'Citado por Phoronix a modo de comparación' },
           { 'Máquina': 'Minisforum MS-S1 MAX', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': '$3,919 oferta / $4,899 normal', 'Estado y fuente': '128 GB / 2 TB en la tienda de Minisforum EE. UU.; envío a principios de noviembre' },
-          { 'Máquina': 'HP Z2 Mini G1a', 'Chip y memoria': 'PRO 395, 128 GB', 'Precio EE. UU. visto': '$3,734 a $5,079', 'Estado y fuente': 'Newegg 128 GB / 1 TB frente al precio de HP EE. UU. informado por Notebookcheck para 128 GB / 2 TB' },
-          { 'Máquina': 'GMKtec EVO-X2', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': 'unos $3,650', 'Estado y fuente': 'Un anuncio de una comparativa de octubre de 2026 para 128 GB / 2 TB; el precio en la tienda de GMKtec cambia de forma dinámica' },
+          { 'Máquina': 'HP Z2 Mini G1a', 'Chip y memoria': 'PRO 395, 128 GB', 'Precio EE. UU. visto': '$3,800 a $6,954', 'Estado y fuente': 'Anuncios de Micro Center y CDW para 128 GB / 2 TB (Serious Insights); Notebookcheck informó el precio de lista de HP en EE. UU. en $5,079' },
+          { 'Máquina': 'GMKtec EVO-X2', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': '$2,199.99 y $3,649', 'Estado y fuente': 'La página de GMKtec en EE. UU. indica $2,199.99 (agotado); Amazon $3,649 por 128 GB / 2 TB según Notebookcheck, 2026-07-18; las fuentes discrepan' },
           { 'Máquina': 'Corsair AI Workstation 300', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': '$3,399', 'Estado y fuente': 'Informe de Tom\'s Hardware; fecha del informe sin confirmar' },
           { 'Máquina': 'Beelink GTR9 Pro', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': 'no verificado', 'Estado y fuente': 'Los anuncios en EE. UU. entran en conflicto; una variante PRO 495 tiene precio solo en China, por ahora' },
           { 'Máquina': 'Bosgame M5', 'Chip y memoria': '395, 128 GB', 'Precio EE. UU. visto': 'no verificado', 'Estado y fuente': 'No se encontró ningún precio actual' },
@@ -2059,7 +2059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: 'Informe de octubre de 2026 sobre el precio de $6,950 de la versión de 128 GB y los modelos OEM de 64 GB a $4,999.' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: 'Resultados de servicio con vLLM, notas de la plataforma, precios de $3,999 del Halo y $4,699 de la Founders Edition en el momento de la reseña.' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: Ryzen AI Halo launch', description: 'Ryzen AI Halo de 128 GB a $3,999 con compatibilidad con Windows 11.' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo with PRO 495 and 192GB', description: 'Informe sobre el precio del Ryzen AI Halo de 192 GB.' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo with PRO 495 and 192GB', description: 'Informe sobre el Ryzen AI Halo de 192 GB en Micro Center.' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop with Ryzen AI Max+ PRO 495', description: 'Precios de reserva del modelo de 192 GB, envío en noviembre, precio de comparación del modelo de 128 GB.' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — Official Page', description: 'Configuración PRO 495, opciones de memoria, chasis y detalles de expansión.' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — Official US Store', description: 'Especificaciones, precios de oferta y normal, estimación de envío.' },
@@ -2207,14 +2207,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'As cinco máquinas para a lista final',
         content:
-          '**Cinco máquinas cobrem as decisões de compra reais: a que tem mais memória, o design de referência do fabricante, a opção para empresas, o melhor custo-benefício e a workstation expansível.** Esta é uma seleção editorial a partir de fichas técnicas e relatos de terceiros; a PromptQuorum não fez benchmark de nenhuma delas. Os links levam a páginas dos fabricantes, sem relação de afiliado.',
+          '**Cinco máquinas cobrem as decisões de compra reais: a que tem mais memória, o design de referência do fabricante, a opção para empresas, o melhor custo-benefício e a workstation expansível.** Esta é uma seleção editorial a partir de fichas técnicas e relatos de terceiros; a PromptQuorum não fez benchmark de nenhuma delas. Os links levam a páginas dos fabricantes, sem relação de afiliado. Cada máquina também tem sua própria página: [DGX Spark](/pt/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/pt/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/pt/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/pt/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/pt/power-local-llm/gmktec-evo-x2-local-ai-workstation) e [Minisforum MS-S1 MAX](/pt/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: 'Mais memória, modular e reparável',
             verdict:
-              'Ryzen AI Max+ PRO 495 com 192 GB de LPDDR5X-8533 em um gabinete de 4.5 L, oferecido como DIY Edition ou pré-montado com Fedora. A Framework abriu as pré-encomendas em 30 de setembro de 2026 para um único lote, com as primeiras remessas previstas para novembro. A configuração PRO 495 tem um slot PCIe x4 livre e suporta clustering por USB4 e PCIe.',
+              'Ryzen AI Max+ PRO 495 com 192 GB de LPDDR5X-8533 em um gabinete de 4.5 L, oferecido como DIY Edition ou pré-montado com Fedora. A Framework abriu as pré-encomendas em 30 de setembro de 2026 para um único lote, com as primeiras remessas previstas para novembro. As páginas da loja da Framework mostraram depois os lotes 1 e 2 esgotados e um lote 3 em dezembro. A configuração PRO 495 tem um slot PCIe x4 livre e suporta clustering por USB4 e PCIe.',
             pros: [
               'Mais memória que um DGX Spark em um gabinete padrão e reparável',
               'Slot PCIe livre e um caminho DIY documentado',
@@ -2280,7 +2280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: 'Design voltado a workstation',
             verdict:
-              'Ryzen AI Max+ 395 com 128 GB de LPDDR5x-8000, 10GbE duplo, USB4 v2 e um slot de expansão PCIe x16, com suporte a montagem em rack 2U. A loja dos EUA listava o modelo de 128 GB / 2 TB em promoção quando conferimos, com envio estimado para o início de novembro. Um MS-S1 MAX-P495 de 192 GB foi reportado em pré-encomenda.',
+              'Ryzen AI Max+ 395 com 128 GB de LPDDR5x-8000, 10GbE duplo, USB4 v2 e um slot de expansão PCIe x16, com suporte a montagem em rack 2U. A loja dos EUA listava o modelo de 128 GB / 2 TB em promoção quando conferimos, com envio estimado para o início de novembro. Um MS-S1 MAX-P495 de 192 GB está listado na loja dos EUA e estava esgotado na última conferência.',
             pros: [
               '10GbE duplo e um slot de expansão, incomuns nesta classe',
               'Opção de montagem em rack para escritório ou laboratório',
@@ -2306,12 +2306,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Máquina': 'NVIDIA DGX Spark', 'Chip e memória': 'GB10, 128 GB', 'Preço nos EUA visto': '$6,950', 'Status e nota de fonte': 'Reportado em 2026-10-03 pela ServeTheHome; lançado a $3,999, Founders Edition a $4,699 no início de 2026; modelos OEM de 64 GB a partir de $4,999' },
           { 'Máquina': 'AMD Ryzen AI Halo', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': '$3,999', 'Status e nota de fonte': 'SSD de 2 TB; Micro Center, segundo a cobertura do lançamento' },
-          { 'Máquina': 'AMD Ryzen AI Halo 192GB', 'Chip e memória': 'PRO 495, 192 GB', 'Preço nos EUA visto': '$7,299', 'Status e nota de fonte': 'Relato único (VideoCardz); não confirmado em página de varejista' },
-          { 'Máquina': 'Framework Desktop 192GB', 'Chip e memória': 'PRO 495, 192 GB', 'Preço nos EUA visto': '$6,799 DIY / $7,449 pré-montado', 'Status e nota de fonte': 'Pré-encomenda, um lote, envio em novembro (Phoronix, Framework)' },
+          { 'Máquina': 'AMD Ryzen AI Halo 192GB', 'Chip e memória': 'PRO 495, 192 GB', 'Preço nos EUA visto': '$7,299', 'Status e nota de fonte': 'Relatado pela HotHardware e pela BornCity para lojas da Micro Center; não confirmado em página de varejista' },
+          { 'Máquina': 'Framework Desktop 192GB', 'Chip e memória': 'PRO 495, 192 GB', 'Preço nos EUA visto': '$6,799 DIY / $7,449 pré-montado', 'Status e nota de fonte': 'Anunciado como um único lote de novembro (Phoronix); a loja da Framework mostrou depois um lote de dezembro' },
           { 'Máquina': 'Framework Desktop 128GB', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': '$3,449', 'Status e nota de fonte': 'Citado pela Phoronix para comparação' },
           { 'Máquina': 'Minisforum MS-S1 MAX', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': '$3,919 promoção / $4,899 normal', 'Status e nota de fonte': '128 GB / 2 TB na loja Minisforum dos EUA; envio no início de novembro' },
-          { 'Máquina': 'HP Z2 Mini G1a', 'Chip e memória': 'PRO 395, 128 GB', 'Preço nos EUA visto': '$3,734 a $5,079', 'Status e nota de fonte': 'Newegg 128 GB / 1 TB vs. preço da HP nos EUA reportado pela Notebookcheck para 128 GB / 2 TB' },
-          { 'Máquina': 'GMKtec EVO-X2', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': 'cerca de $3,650', 'Status e nota de fonte': 'Um anúncio de comparação de outubro de 2026 para 128 GB / 2 TB; o preço na loja da GMKtec muda dinamicamente' },
+          { 'Máquina': 'HP Z2 Mini G1a', 'Chip e memória': 'PRO 395, 128 GB', 'Preço nos EUA visto': '$3,800 a $6,954', 'Status e nota de fonte': 'Anúncios da Micro Center e da CDW para 128 GB / 2 TB (Serious Insights); o preço de lista da própria HP nos EUA foi reportado em $5,079 pela Notebookcheck' },
+          { 'Máquina': 'GMKtec EVO-X2', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': '$2,199.99 e $3,649', 'Status e nota de fonte': 'A página da GMKtec nos EUA lista $2,199.99 (esgotado); Amazon $3,649 por 128 GB / 2 TB segundo a Notebookcheck, 2026-07-18; as fontes divergem' },
           { 'Máquina': 'Corsair AI Workstation 300', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': '$3,399', 'Status e nota de fonte': 'Relato da Tom\'s Hardware; data do relato não confirmada' },
           { 'Máquina': 'Beelink GTR9 Pro', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': 'não verificado', 'Status e nota de fonte': 'Anúncios nos EUA divergem; uma variante PRO 495 tem preço apenas na China, até agora' },
           { 'Máquina': 'Bosgame M5', 'Chip e memória': '395, 128 GB', 'Preço nos EUA visto': 'não verificado', 'Status e nota de fonte': 'Nenhum preço atual encontrado' },
@@ -2408,7 +2408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: 'Relato de outubro de 2026 sobre o preço de $6,950 do modelo de 128 GB e os modelos OEM de 64 GB a $4,999.' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: 'Resultados de serving com vLLM, notas da plataforma e preços de $3,999 do Halo e $4,699 da Founders Edition na época da análise.' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: Ryzen AI Halo launch', description: 'Ryzen AI Halo de 128 GB a $3,999 com suporte ao Windows 11.' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo with PRO 495 and 192GB', description: 'Relato do preço do Ryzen AI Halo de 192 GB.' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo with PRO 495 and 192GB', description: 'Relato sobre o Ryzen AI Halo de 192 GB na Micro Center.' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop with Ryzen AI Max+ PRO 495', description: 'Preço de pré-encomenda de 192 GB, envio em novembro, preço de comparação do modelo de 128 GB.' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — Official Page', description: 'Configuração PRO 495, opções de memória, gabinete e detalhes de expansão.' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — Official US Store', description: 'Especificações, preços promocional e normal, estimativa de envio.' },
@@ -2556,14 +2556,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'الأجهزة الخمسة المرشحة',
         content:
-          '**تغطي خمسة أجهزة قرارات الشراء الفعلية: الأكثر ذاكرة، وتصميم الشركة المرجعي، وخيار الأعمال، والأفضل قيمة، ومحطة العمل القابلة للتوسعة.** هذا اختيار تحريري مبني على أوراق المواصفات وتقارير الأطراف الثالثة؛ ولم تجرِ PromptQuorum اختبار أداء لأي منها. الروابط تؤدي إلى صفحات المصنّعين دون أي علاقة تابعة (affiliate).',
+          '**تغطي خمسة أجهزة قرارات الشراء الفعلية: الأكثر ذاكرة، وتصميم الشركة المرجعي، وخيار الأعمال، والأفضل قيمة، ومحطة العمل القابلة للتوسعة.** هذا اختيار تحريري مبني على أوراق المواصفات وتقارير الأطراف الثالثة؛ ولم تجرِ PromptQuorum اختبار أداء لأي منها. الروابط تؤدي إلى صفحات المصنّعين دون أي علاقة تابعة (affiliate). ولكل جهاز أيضًا صفحته الخاصة: [DGX Spark](/ar/power-local-llm/nvidia-dgx-spark-local-ai-workstation)، [Ryzen AI Halo](/ar/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation)، [Framework Desktop](/ar/power-local-llm/framework-desktop-local-ai-workstation)، [HP Z2 Mini G1a](/ar/power-local-llm/hp-z2-mini-g1a-local-ai-workstation)، [GMKtec EVO-X2](/ar/power-local-llm/gmktec-evo-x2-local-ai-workstation) و[Minisforum MS-S1 MAX](/ar/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: 'أكثر ذاكرة، وقابل للتعديل والإصلاح',
             verdict:
-              'شريحة Ryzen AI Max+ PRO 495 مع 192 GB من LPDDR5X-8533 في هيكل بسعة 4.5 L، متاح بإصدار DIY أو مجمّعًا مسبقًا مع Fedora. فتحت Framework الطلب المسبق في 30 سبتمبر 2026 لدفعة واحدة فقط، مع توقع أولى الشحنات في نوفمبر. يتضمن إعداد PRO 495 فتحة PCIe x4 مفتوحة ويدعم الربط عبر USB4 وPCIe.',
+              'شريحة Ryzen AI Max+ PRO 495 مع 192 GB من LPDDR5X-8533 في هيكل بسعة 4.5 L، متاح بإصدار DIY أو مجمّعًا مسبقًا مع Fedora. فتحت Framework الطلب المسبق في 30 سبتمبر 2026 لدفعة واحدة فقط، مع توقع أولى الشحنات في نوفمبر. أظهرت صفحات متجر Framework لاحقًا أن الدفعتين 1 و2 نفدتا وأن هناك دفعة ثالثة في ديسمبر. يتضمن إعداد PRO 495 فتحة PCIe x4 مفتوحة ويدعم الربط عبر USB4 وPCIe.',
             pros: [
               'ذاكرة أكبر من DGX Spark في هيكل قياسي قابل للإصلاح',
               'فتحة PCIe مفتوحة ومسار DIY موثّق',
@@ -2629,7 +2629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: 'تصميم موجّه لمحطات العمل',
             verdict:
-              'شريحة Ryzen AI Max+ 395 مع 128 GB من LPDDR5x-8000 وشبكتَي 10GbE وUSB4 v2 وفتحة توسعة PCIe x16، مع دعم التركيب في رف 2U. عرض متجرها الأمريكي طراز 128 GB / 2 TB بسعر مخفّض عند فحصنا، مع تقدير للشحن في أوائل نوفمبر. أُفيد بوجود MS-S1 MAX-P495 بذاكرة 192 GB قيد الطلب المسبق.',
+              'شريحة Ryzen AI Max+ 395 مع 128 GB من LPDDR5x-8000 وشبكتَي 10GbE وUSB4 v2 وفتحة توسعة PCIe x16، مع دعم التركيب في رف 2U. عرض متجرها الأمريكي طراز 128 GB / 2 TB بسعر مخفّض عند فحصنا، مع تقدير للشحن في أوائل نوفمبر. طراز MS-S1 MAX-P495 بذاكرة 192 GB مدرج في متجرها الأمريكي وكان نافدًا عند آخر فحص.',
             pros: [
               'شبكتا 10GbE وفتحة توسعة، وهو أمر غير معتاد في هذه الفئة',
               'خيار التركيب في رف للمكتب أو المختبر',
@@ -2655,12 +2655,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الجهاز': 'NVIDIA DGX Spark', 'الشريحة والذاكرة': 'GB10، 128 GB', 'السعر الأمريكي المرصود': '$6,950', 'الحالة وملاحظة المصدر': 'أفادت به ServeTheHome في 2026-10-03؛ أُطلق بسعر $3,999، وFounders Edition بسعر $4,699 في وقت سابق من 2026؛ طرازات OEM بذاكرة 64 GB من $4,999' },
           { 'الجهاز': 'AMD Ryzen AI Halo', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': '$3,999', 'الحالة وملاحظة المصدر': 'SSD بسعة 2 TB؛ Micro Center بحسب تغطية الإطلاق' },
-          { 'الجهاز': 'AMD Ryzen AI Halo 192GB', 'الشريحة والذاكرة': 'PRO 495، 192 GB', 'السعر الأمريكي المرصود': '$7,299', 'الحالة وملاحظة المصدر': 'تقرير واحد (VideoCardz)؛ غير مؤكد على صفحة بائع تجزئة' },
-          { 'الجهاز': 'Framework Desktop 192GB', 'الشريحة والذاكرة': 'PRO 495، 192 GB', 'السعر الأمريكي المرصود': '$6,799 DIY / $7,449 مجمّع', 'الحالة وملاحظة المصدر': 'طلب مسبق، دفعة واحدة، الشحن في نوفمبر (Phoronix وFramework)' },
+          { 'الجهاز': 'AMD Ryzen AI Halo 192GB', 'الشريحة والذاكرة': 'PRO 495، 192 GB', 'السعر الأمريكي المرصود': '$7,299', 'الحالة وملاحظة المصدر': 'ورد في تقارير HotHardware وBornCity لمتاجر Micro Center؛ غير مؤكد على صفحة بائع تجزئة' },
+          { 'الجهاز': 'Framework Desktop 192GB', 'الشريحة والذاكرة': 'PRO 495، 192 GB', 'السعر الأمريكي المرصود': '$6,799 DIY / $7,449 مجمّع', 'الحالة وملاحظة المصدر': 'أُعلن كدفعة واحدة في نوفمبر (Phoronix)؛ وأظهر متجر Framework لاحقًا دفعة في ديسمبر' },
           { 'الجهاز': 'Framework Desktop 128GB', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': '$3,449', 'الحالة وملاحظة المصدر': 'ذكرته Phoronix للمقارنة' },
           { 'الجهاز': 'Minisforum MS-S1 MAX', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': '$3,919 تخفيض / $4,899 عادي', 'الحالة وملاحظة المصدر': '128 GB / 2 TB في متجر Minisforum الأمريكي؛ الشحن في أوائل نوفمبر' },
-          { 'الجهاز': 'HP Z2 Mini G1a', 'الشريحة والذاكرة': 'PRO 395، 128 GB', 'السعر الأمريكي المرصود': '$3,734 إلى $5,079', 'الحالة وملاحظة المصدر': 'Newegg لطراز 128 GB / 1 TB مقابل سعر HP الأمريكي الذي أوردته Notebookcheck لطراز 128 GB / 2 TB' },
-          { 'الجهاز': 'GMKtec EVO-X2', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': 'نحو $3,650', 'الحالة وملاحظة المصدر': 'إعلان واحد في مقارنة أكتوبر 2026 لطراز 128 GB / 2 TB؛ سعر متجر GMKtec يتغير ديناميكيًا' },
+          { 'الجهاز': 'HP Z2 Mini G1a', 'الشريحة والذاكرة': 'PRO 395، 128 GB', 'السعر الأمريكي المرصود': '$3,800 إلى $6,954', 'الحالة وملاحظة المصدر': 'إدراجات Micro Center وCDW لطراز 128 GB / 2 TB (Serious Insights)؛ وأوردت Notebookcheck أن سعر قائمة HP الأمريكي نفسه هو $5,079' },
+          { 'الجهاز': 'GMKtec EVO-X2', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': '$2,199.99 و$3,649', 'الحالة وملاحظة المصدر': 'صفحة GMKtec الأمريكية تعرض $2,199.99 (نافد)؛ Amazon بسعر $3,649 لطراز 128 GB / 2 TB وفق Notebookcheck، 2026-07-18؛ المصادر متضاربة' },
           { 'الجهاز': 'Corsair AI Workstation 300', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': '$3,399', 'الحالة وملاحظة المصدر': 'تقرير Tom\'s Hardware؛ تاريخ التقرير غير مؤكد' },
           { 'الجهاز': 'Beelink GTR9 Pro', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': 'لم يُتحقق منه', 'الحالة وملاحظة المصدر': 'تتعارض الإعلانات الأمريكية؛ ونسخة PRO 495 مسعّرة في الصين فقط حتى الآن' },
           { 'الجهاز': 'Bosgame M5', 'الشريحة والذاكرة': '395، 128 GB', 'السعر الأمريكي المرصود': 'لم يُتحقق منه', 'الحالة وملاحظة المصدر': 'لم نجد سعرًا حاليًا' },
@@ -2757,7 +2757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: إطلاق DGX Spark 64GB وارتفاع سعر 128GB', description: 'تقرير أكتوبر 2026 عن سعر 128 GB البالغ $6,950 وطرازات OEM بذاكرة 64 GB بسعر $4,999.' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo مقابل DGX Spark', description: 'نتائج خدمة vLLM وملاحظات المنصة وسعر Halo البالغ $3,999 وFounders Edition البالغ $4,699 وقت المراجعة.' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: إطلاق Ryzen AI Halo', description: 'جهاز Ryzen AI Halo بذاكرة 128 GB بسعر $3,999 مع دعم ويندوز 11.' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo مع PRO 495 وذاكرة 192GB', description: 'تقرير عن سعر Ryzen AI Halo بذاكرة 192 GB.' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo مع PRO 495 وذاكرة 192GB', description: 'تقرير عن Ryzen AI Halo بذاكرة 192 GB في Micro Center.' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop مع Ryzen AI Max+ PRO 495', description: 'تسعير الطلب المسبق لطراز 192 GB، والشحن في نوفمبر، وسعر المقارنة لطراز 128 GB.' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — الصفحة الرسمية', description: 'إعداد PRO 495 وخيارات الذاكرة وتفاصيل الهيكل والتوسعة.' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — المتجر الأمريكي الرسمي', description: 'المواصفات وأسعار التخفيض والسعر العادي وتقدير الشحن.' },
@@ -2904,14 +2904,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '후보로 꼽을 다섯 기기',
         content:
-          '**다섯 기기가 실제 구매 결정을 모두 포괄합니다. 최대 메모리, 벤더 레퍼런스 설계, 비즈니스용 옵션, 최고 가성비, 확장형 워크스테이션입니다.** 이는 사양서와 제3자 보고서를 바탕으로 한 편집부 선정이며, PromptQuorum은 어떤 기기도 벤치마크하지 않았습니다. 링크는 제휴 관계가 없는 벤더 페이지로 연결됩니다.',
+          '**다섯 기기가 실제 구매 결정을 모두 포괄합니다. 최대 메모리, 벤더 레퍼런스 설계, 비즈니스용 옵션, 최고 가성비, 확장형 워크스테이션입니다.** 이는 사양서와 제3자 보고서를 바탕으로 한 편집부 선정이며, PromptQuorum은 어떤 기기도 벤치마크하지 않았습니다. 링크는 제휴 관계가 없는 벤더 페이지로 연결됩니다. 각 기기에는 별도의 페이지도 있습니다: [DGX Spark](/ko/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/ko/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/ko/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/ko/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/ko/power-local-llm/gmktec-evo-x2-local-ai-workstation), [Minisforum MS-S1 MAX](/ko/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
             name: 'Framework Desktop 192GB',
             tagline: '최대 메모리, 모듈식이며 수리 가능',
             verdict:
-              '4.5L 케이스에 LPDDR5X-8533 192GB를 탑재한 Ryzen AI Max+ PRO 495 기기로, DIY Edition 또는 Fedora가 설치된 완제품으로 제공됩니다. Framework는 2026년 9월 30일에 단일 배치에 한해 사전 주문을 시작했으며, 첫 출하는 11월로 예상됩니다. PRO 495 구성에는 개방형 PCIe x4 슬롯이 있으며 USB4와 PCIe 클러스터링을 지원합니다.',
+              '4.5L 케이스에 LPDDR5X-8533 192GB를 탑재한 Ryzen AI Max+ PRO 495 기기로, DIY Edition 또는 Fedora가 설치된 완제품으로 제공됩니다. Framework는 2026년 9월 30일에 단일 배치에 한해 사전 주문을 시작했으며, 첫 출하는 11월로 예상됩니다. 이후 Framework 스토어 페이지에는 1차와 2차 배치가 매진되었고 12월에 3차 배치가 있는 것으로 표시되었습니다. PRO 495 구성에는 개방형 PCIe x4 슬롯이 있으며 USB4와 PCIe 클러스터링을 지원합니다.',
             pros: [
               '표준 수리 가능 섀시에서 DGX Spark보다 많은 메모리',
               '개방형 PCIe 슬롯과 문서화된 DIY 경로',
@@ -2977,7 +2977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Minisforum MS-S1 MAX',
             tagline: '워크스테이션 지향 설계',
             verdict:
-              'LPDDR5x-8000 128GB를 탑재한 Ryzen AI Max+ 395 기기로, 듀얼 10GbE, USB4 v2, PCIe x16 확장 슬롯을 갖추었고 2U 랙 마운트를 지원합니다. 확인 당시 미국 스토어에서 128GB / 2TB 모델이 할인 판매 중이었으며 배송은 11월 초로 안내되었습니다. 192GB MS-S1 MAX-P495가 사전 주문 중이라는 보도가 있습니다.',
+              'LPDDR5x-8000 128GB를 탑재한 Ryzen AI Max+ 395 기기로, 듀얼 10GbE, USB4 v2, PCIe x16 확장 슬롯을 갖추었고 2U 랙 마운트를 지원합니다. 확인 당시 미국 스토어에서 128GB / 2TB 모델이 할인 판매 중이었으며 배송은 11월 초로 안내되었습니다. 192GB MS-S1 MAX-P495는 미국 스토어에 등록되어 있으며 마지막 확인 시 품절이었습니다.',
             pros: [
               '이 범주에서는 드문 듀얼 10GbE와 확장 슬롯',
               '사무실이나 연구실용 랙 마운트 옵션',
@@ -3003,12 +3003,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '기기': 'NVIDIA DGX Spark', '칩과 메모리': 'GB10, 128GB', '확인된 미국 가격': '$6,950', '상태 및 출처 메모': 'ServeTheHome이 2026-10-03 보도. 출시가 $3,999, 올해 초 Founders Edition $4,699, OEM 64GB 모델은 $4,999부터' },
           { '기기': 'AMD Ryzen AI Halo', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '$3,999', '상태 및 출처 메모': '2TB SSD, 출시 보도 기준 Micro Center' },
-          { '기기': 'AMD Ryzen AI Halo 192GB', '칩과 메모리': 'PRO 495, 192GB', '확인된 미국 가격': '$7,299', '상태 및 출처 메모': '단일 보도(VideoCardz), 판매처 페이지에서 미확인' },
-          { '기기': 'Framework Desktop 192GB', '칩과 메모리': 'PRO 495, 192GB', '확인된 미국 가격': 'DIY $6,799 / 완제품 $7,449', '상태 및 출처 메모': '사전 주문, 단일 배치, 11월 출하(Phoronix, Framework)' },
+          { '기기': 'AMD Ryzen AI Halo 192GB', '칩과 메모리': 'PRO 495, 192GB', '확인된 미국 가격': '$7,299', '상태 및 출처 메모': 'HotHardware와 BornCity가 Micro Center 매장용으로 보도, 판매처 페이지에서 미확인' },
+          { '기기': 'Framework Desktop 192GB', '칩과 메모리': 'PRO 495, 192GB', '확인된 미국 가격': 'DIY $6,799 / 완제품 $7,449', '상태 및 출처 메모': '11월 단일 배치로 발표(Phoronix), Framework 스토어에는 이후 12월 배치가 표시됨' },
           { '기기': 'Framework Desktop 128GB', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '$3,449', '상태 및 출처 메모': '비교용으로 Phoronix가 인용' },
           { '기기': 'Minisforum MS-S1 MAX', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '할인 $3,919 / 정가 $4,899', '상태 및 출처 메모': 'Minisforum 미국 스토어의 128GB / 2TB, 11월 초 배송' },
-          { '기기': 'HP Z2 Mini G1a', '칩과 메모리': 'PRO 395, 128GB', '확인된 미국 가격': '$3,734~$5,079', '상태 및 출처 메모': 'Newegg 128GB / 1TB 대 Notebookcheck가 보도한 HP 미국 128GB / 2TB 가격' },
-          { '기기': 'GMKtec EVO-X2', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '약 $3,650', '상태 및 출처 메모': '2026년 10월 비교 목록의 128GB / 2TB 한 건, GMKtec 스토어 가격은 동적으로 변동' },
+          { '기기': 'HP Z2 Mini G1a', '칩과 메모리': 'PRO 395, 128GB', '확인된 미국 가격': '$3,800~$6,954', '상태 및 출처 메모': 'Micro Center 및 CDW의 128GB / 2TB 등록 정보(Serious Insights), HP 자체 미국 정가는 Notebookcheck가 $5,079로 보도' },
+          { '기기': 'GMKtec EVO-X2', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '$2,199.99 및 $3,649', '상태 및 출처 메모': 'GMKtec 미국 페이지는 $2,199.99로 표기(품절), Amazon은 Notebookcheck 기준 128GB / 2TB $3,649, 2026-07-18, 출처 간 불일치' },
           { '기기': 'Corsair AI Workstation 300', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '$3,399', '상태 및 출처 메모': 'Tom\'s Hardware 보도, 보도 날짜 미확인' },
           { '기기': 'Beelink GTR9 Pro', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '미확인', '상태 및 출처 메모': '미국 목록이 상충, PRO 495 변종은 현재까지 중국에서만 가격 책정' },
           { '기기': 'Bosgame M5', '칩과 메모리': '395, 128GB', '확인된 미국 가격': '미확인', '상태 및 출처 메모': '현재 가격을 찾지 못함' },
@@ -3105,7 +3105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://servethehome.com/nvidia-dgx-spark-64gb-launched-and-big-128gb-gb10-price-increases', title: 'ServeTheHome: DGX Spark 64GB launched, 128GB price increases', description: '128GB 가격 $6,950과 64GB OEM 모델 $4,999에 대한 2026년 10월 보도.' },
           { url: 'https://www.storagereview.com/review/amd-ryzen-ai-halo-review-a-dual-os-200b-parameter-desktop-takes-on-the-dgx-spark', title: 'StorageReview: AMD Ryzen AI Halo vs. DGX Spark', description: 'vLLM 서빙 결과, 플랫폼 참고 사항, 리뷰 당시 Halo $3,999 및 Founders Edition $4,699 가격.' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/amd-challenges-nvidias-dgx-spark-with-usd3-999-ryzen-ai-halo-with-windows-11-support-strix-halo-desktop-undercuts-nvidia-by-usd700-packs-128gb-of-unified-memory', title: 'Tom\'s Hardware: Ryzen AI Halo launch', description: 'Windows 11을 지원하는 $3,999의 128GB Ryzen AI Halo.' },
-          { url: 'https://videocardz.com/newz/amd-ryzen-ai-halo-with-ryzen-ai-max-pro-495-launches-at-7299-with-192gb-memory', title: 'VideoCardz: Ryzen AI Halo with PRO 495 and 192GB', description: '192GB Ryzen AI Halo 가격 보도.' },
+          { url: 'https://hothardware.com/news/amd-ryzen-ai-halo-packs-ryzen-ai-max-pro-495-192gb-memory', title: 'HotHardware: Ryzen AI Halo with PRO 495 and 192GB', description: '192GB Ryzen AI Halo의 Micro Center 취급 보도.' },
           { url: 'https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo', title: 'Phoronix: Framework Desktop with Ryzen AI Max+ PRO 495', description: '192GB 사전 주문 가격, 11월 출하, 128GB 비교 가격.' },
           { url: 'https://frame.work/desktop', title: 'Framework Desktop — Official Page', description: 'PRO 495 구성, 메모리 옵션, 섀시 및 확장 세부 정보.' },
           { url: 'https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc', title: 'Minisforum MS-S1 MAX — Official US Store', description: '사양, 할인가와 정가, 배송 예상일.' },
