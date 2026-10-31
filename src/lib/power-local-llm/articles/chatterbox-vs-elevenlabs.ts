@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs (2026): Open-Source vs Cloud Voice Cloning',
     seoTitle: 'Chatterbox vs ElevenLabs (2026): Which Voice Cloning Wins?',
@@ -677,6 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['63.75% blind-evaluator preference for Chatterbox over ElevenLabs (Resemble AI, via Podonos)', '10,000 monthly credits (ElevenLabs Free)', '$6/month, 30,000 credits (ElevenLabs Starter)', '$22/month, 121,000 credits (ElevenLabs Creator)', '$99/month, 600,000 credits (ElevenLabs Pro)', '$299/month, 1,800,000 credits (ElevenLabs Scale)', '$990/month, 6,000,000 credits (ElevenLabs Business)', 'up to 55% API price cut, May 2026 (ElevenLabs)']
   },
   de: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs (2026): Open Source vs Cloud Voice Cloning',
     seoTitle: 'Chatterbox vs ElevenLabs (2026): Wer gewinnt?',
@@ -1351,6 +1353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['63,75 % Blindtest-Präferenz für Chatterbox gegenüber ElevenLabs (Resemble AI, via Podonos)', '10.000 monatliche Credits (ElevenLabs Free)', '6 $/Monat, 30.000 Credits (ElevenLabs Starter)', '22 $/Monat, 121.000 Credits (ElevenLabs Creator)', '99 $/Monat, 600.000 Credits (ElevenLabs Pro)', '299 $/Monat, 1.800.000 Credits (ElevenLabs Scale)', '990 $/Monat, 6.000.000 Credits (ElevenLabs Business)', 'API-Preissenkung bis zu 55 %, Mai 2026 (ElevenLabs)']
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs (2026) : open source ou cloud ?',
     seoTitle: 'Chatterbox vs ElevenLabs (2026) : quel clonage gagne ?',
@@ -2025,6 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['préférence de 63,75 % en test à l\'aveugle pour Chatterbox contre ElevenLabs (Resemble AI, via Podonos)', '10 000 crédits mensuels (ElevenLabs Free)', '6 $/mois, 30 000 crédits (ElevenLabs Starter)', '22 $/mois, 121 000 crédits (ElevenLabs Creator)', '99 $/mois, 600 000 crédits (ElevenLabs Pro)', '299 $/mois, 1 800 000 crédits (ElevenLabs Scale)', '990 $/mois, 6 000 000 crédits (ElevenLabs Business)', 'réduction de prix API jusqu\'à 55 %, mai 2026 (ElevenLabs)']
   },
   es: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs (2026): ¿código abierto o nube?',
     seoTitle: 'Chatterbox vs ElevenLabs (2026): ¿cuál gana?',
@@ -2699,6 +2703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['63,75% de preferencia en prueba a ciegas para Chatterbox frente a ElevenLabs (Resemble AI, vía Podonos)', '10.000 créditos mensuales (ElevenLabs Free)', '$6/mes, 30.000 créditos (ElevenLabs Starter)', '$22/mes, 121.000 créditos (ElevenLabs Creator)', '$99/mes, 600.000 créditos (ElevenLabs Pro)', '$299/mes, 1.800.000 créditos (ElevenLabs Scale)', '$990/mes, 6.000.000 créditos (ElevenLabs Business)', 'recorte de precios de API de hasta el 55%, mayo de 2026 (ElevenLabs)']
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs(2026):オープンソースかクラウドか',
     seoTitle: 'Chatterbox vs ElevenLabs(2026):どちらが優位か',
@@ -3372,6 +3377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['ブラインドテストでChatterboxがElevenLabsに対し63.75%の選好(Resemble AI、Podonos経由)', '月10,000クレジット(ElevenLabs Free)', '月6ドル、3万クレジット(ElevenLabs Starter)', '月22ドル、12.1万クレジット(ElevenLabs Creator)', '月99ドル、60万クレジット(ElevenLabs Pro)', '月299ドル、180万クレジット(ElevenLabs Scale)', '月990ドル、600万クレジット(ElevenLabs Business)', 'APIの最大55%値下げ、2026年5月(ElevenLabs)']
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs(2026):开源还是云端克隆语音?',
     seoTitle: 'Chatterbox vs ElevenLabs(2026):谁更胜一筹?',
@@ -4045,6 +4051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['盲测中 Chatterbox 对 ElevenLabs 的 63.75% 偏好率(Resemble AI,经 Podonos)', '每月 10,000 积分(ElevenLabs Free)', '每月 6 美元,3万积分(ElevenLabs Starter)', '每月 22 美元,12.1万积分(ElevenLabs Creator)', '每月 99 美元,60万积分(ElevenLabs Pro)', '每月 299 美元,180万积分(ElevenLabs Scale)', '每月 990 美元,600万积分(ElevenLabs Business)', 'API 最高降价 55%,2026 年 5 月(ElevenLabs)']
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs (2026): Código Aberto ou Nuvem?',
     seoTitle: 'Chatterbox vs ElevenLabs (2026): Quem Vence?',
@@ -4719,6 +4726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['63,75% de preferência em teste cego para Chatterbox versus ElevenLabs (Resemble AI, via Podonos)', '10.000 créditos mensais (ElevenLabs Free)', 'US$ 6/mês, 30.000 créditos (ElevenLabs Starter)', 'US$ 22/mês, 121.000 créditos (ElevenLabs Creator)', 'US$ 99/mês, 600.000 créditos (ElevenLabs Pro)', 'US$ 299/mês, 1.800.000 créditos (ElevenLabs Scale)', 'US$ 990/mês, 6.000.000 créditos (ElevenLabs Business)', 'corte de preço de API de até 55%, maio de 2026 (ElevenLabs)']
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox مقابل ElevenLabs (2026): مفتوح المصدر أم سحابي؟',
     seoTitle: 'Chatterbox مقابل ElevenLabs (2026): من يفوز؟',
@@ -5392,6 +5400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['تفضيل بنسبة 63.75% في اختبار أعمى لـChatterbox مقابل ElevenLabs (Resemble AI، عبر Podonos)', '10,000 رصيد شهرياً (ElevenLabs Free)', '6 دولارات/شهرياً، 30,000 رصيد (ElevenLabs Starter)', '22 دولاراً/شهرياً، 121,000 رصيد (ElevenLabs Creator)', '99 دولاراً/شهرياً، 600,000 رصيد (ElevenLabs Pro)', '299 دولاراً/شهرياً، 1,800,000 رصيد (ElevenLabs Scale)', '990 دولاراً/شهرياً، 6,000,000 رصيد (ElevenLabs Business)', 'خفض أسعار واجهة برمجة التطبيقات حتى 55%، مايو 2026 (ElevenLabs)']
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     title: 'Chatterbox vs ElevenLabs(2026년): 오픈소스냐 클라우드냐',
     seoTitle: 'Chatterbox vs ElevenLabs(2026년): 승자는?',
