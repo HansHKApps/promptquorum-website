@@ -316,6 +316,7 @@ https://www.promptquorum.com/power-local-llm/chroma-review
 https://www.promptquorum.com/power-local-llm/claude-code-local-review
 https://www.promptquorum.com/power-local-llm/clawrouter-review
 https://www.promptquorum.com/power-local-llm/cline-review
+https://www.promptquorum.com/power-local-llm/cloak-local-ai-review
 https://www.promptquorum.com/power-local-llm/codegpt-review
 https://www.promptquorum.com/power-local-llm/cognee-review
 https://www.promptquorum.com/power-local-llm/cognira-review
