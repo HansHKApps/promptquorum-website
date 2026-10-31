@@ -42,6 +42,10 @@ function invertMap(map) {
 }
 
 function articleUrl(hub, slug, lang) {
+  // The software directory is served at top-level /directory (legacy slug 308-redirects there).
+  if (hub === 'power-local-llm' && slug === 'local-llm-software-directory') {
+    return lang === 'en' ? '/directory' : `/${lang}/directory`
+  }
   return lang === 'en' ? `/${hub}/${slug}` : `/${lang}/${hub}/${slug}`
 }
 
