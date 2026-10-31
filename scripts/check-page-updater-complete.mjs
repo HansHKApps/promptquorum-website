@@ -25,7 +25,7 @@ for (const cluster of SKIN_CLUSTERS) {
     if (!all && !(latest && latest >= cutoff)) continue
     checked++
     const blocks = LOCALES.length // every article ships all 9 locales; nested `en: {` objects make counting blocks unreliable
-    const skinned = (src.match(/^\s*designSkin:\s*'hub',?\s*$/gm) ?? []).length
+    const skinned = (src.match(/^\s*["']?designSkin["']?:\s*["']hub["'],?\s*$/gm) ?? []).length
     if (skinned === 0) {
       if (!all) problems.push(`${cluster}/${f}: refreshed ${latest} but has no designSkin: 'hub'`)
     } else if (skinned !== blocks) {
