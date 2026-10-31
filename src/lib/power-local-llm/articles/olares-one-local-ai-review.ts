@@ -3,7 +3,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
-  en: {
+  "en": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU: NVIDIA RTX 5090 Mobile, 24 GB GDDR7, 175 W maximum TGP (Olares)",
           "CPU and RAM: Intel Core Ultra 9 275HX, 96 GB (2×48 GB) DDR5-5600, upgradable to 128 GB (Olares)",
           "Storage and ports: 2 TB NVMe, second SSD slot, Thunderbolt 5, 2.5 GbE, Wi-Fi 7, HDMI 2.1",
-          "Official shop price $4,999; Olares also quoted $4,959 and a Black Friday $300 reduction by email (vendor claims)",
+          "Official shop price $4,999; Olares also quoted $4,959 and a Black Friday $300 reduction by email (vendor claims) — $4,659 on the $4,959 quote",
           "PromptQuorum has no affiliate agreement with Olares and earns nothing from this page"
         ],
         "updatedDate": "2026-10"
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One: Intel Core Ultra 9 275HX, RTX 5090 Mobile with 24 GB GDDR7, 96 GB DDR5-5600 (upgradable to 128 GB), 2 TB NVMe — specifications from olares.com/one, checked 2026-10-31",
           "Official shop price $4,999 (single configuration, shop.olares.com, checked 2026-10-31)",
-          "Olares emailed us a $4,959 quote and a Black Friday reduction of $300 per unit (2026-11-17 to 2026-12-03, GMT-8) — vendor claims, see Where to Buy",
+          "Olares emailed us a $4,959 quote and a Black Friday reduction of $300 per unit (2026-11-17 to 2026-12-03, GMT-8) — vendor claims, see Where to Buy — $4,659 on the $4,959 quote",
           "Olares also emailed 18–22 tokens/s for Llama 3 70B (Q4_K_M) and under 32 dB at full load — neither figure is on its product page, and we could not verify either",
           "PromptQuorum estimate: 70B Q4_K_M needs partial offload on 24 GB of VRAM, so a few tokens per second is more realistic than 18–22 (see the 70B guide)",
           "This is not an affiliate page: PromptQuorum has no agreement with Olares, adds no affiliate tags and earns no commission"
@@ -141,9 +141,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "Olares One compact desktop computer on a desk",
-      "imageCaption": "Olares One on a desk (320 × 197 × 55 mm). Photo: Olares.",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "Olares One compact desktop computer on a desk",
+        "imageCaption": "Olares One on a desk (320 × 197 × 55 mm). Photo: Olares.",
         "title": "Verdict",
         "content": "**The Olares One is a well-specified, compact box for people who want a ready-made local-AI desktop and accept a $4,999 price.** Its 24 GB of GDDR7 VRAM suits mid-size models and fast prompt processing; its 96 GB of DDR5 adds capacity for 70B models, but capacity is not speed — layers held in system RAM run at DDR5 bandwidth. The strongest case for it is convenience and size, not price per GB of VRAM. We have not tested a unit, so treat this as a reading of published specifications, and treat any benchmark figure — Olares' or ours — as unverified until an independent test confirms it."
       },
@@ -160,9 +160,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Exploded view of the Olares One internal cooling layout",
-      "imageCaption": "Internal cooling layout of the Olares One, a manufacturer illustration. Image: Olares.",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Exploded view of the Olares One internal cooling layout",
+        "imageCaption": "Internal cooling layout of the Olares One, a manufacturer illustration. Image: Olares.",
         "title": "Olares One Specifications",
         "content": "**Manufacturer-published specifications, taken from olares.com/one on 2026-10-31.** Olares publishes no retail price on that page; the price comes from the official shop.",
         "columns": [
@@ -271,6 +271,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Guidance": "2026-11-17 00:00 to 2026-12-03 00:00 (GMT-8), an extra $300 USD off each unit (vendor claim); order through the shop or email Olares and reference \"PromptQuorum Partner Quote\" for early allocation and multi-unit bundles"
           },
           {
+            "Signal": "Black Friday price (arithmetic)",
+            "Guidance": "$4,659 USD per unit if the $300 reduction applies to the $4,959 quote (PromptQuorum's calculation from Olares' email; vendor claim, not verified)"
+          },
+          {
             "Signal": "Third-party retailers",
             "Guidance": "Not checked"
           }
@@ -352,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  ar: {
+  "ar": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -390,7 +394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "وحدة المعالجة الرسومية: NVIDIA RTX 5090 Mobile، بذاكرة 24 GB GDDR7، وحد أقصى لقدرة TGP يبلغ 175 W (بحسب Olares)",
           "المعالج والذاكرة: Intel Core Ultra 9 275HX، وذاكرة 96 GB (2×48 GB) من نوع DDR5-5600، قابلة للترقية إلى 128 GB (بحسب Olares)",
           "التخزين والمنافذ: 2 TB NVMe، وفتحة SSD ثانية، وThunderbolt 5، وشبكة 2.5 GbE، وWi-Fi 7، وHDMI 2.1",
-          "سعر المتجر الرسمي $4,999؛ وذكرت Olares بالبريد أيضًا سعر $4,959 وخصمًا قدره $300 في الجمعة السوداء (ادعاءات من الشركة المصنّعة)",
+          "سعر المتجر الرسمي $4,999؛ وذكرت Olares بالبريد أيضًا سعر $4,959 وخصمًا قدره $300 في الجمعة السوداء (ادعاءات من الشركة المصنّعة) — $4,659 على عرض $4,959",
           "لا تربط PromptQuorum أي اتفاقية تسويق بالعمولة مع Olares ولا تكسب شيئًا من هذه الصفحة"
         ],
         "updatedDate": "2026-10"
@@ -482,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One: معالج Intel Core Ultra 9 275HX، وبطاقة RTX 5090 Mobile بذاكرة 24 GB GDDR7، وذاكرة 96 GB DDR5-5600 (قابلة للترقية إلى 128 GB)، وتخزين 2 TB NVMe — المواصفات من olares.com/one، تم التحقق في 2026-10-31",
           "سعر المتجر الرسمي $4,999 (تهيئة واحدة، shop.olares.com، تم التحقق في 2026-10-31)",
-          "أرسلت لنا Olares بالبريد عرض سعر $4,959 وخصم الجمعة السوداء بمقدار $300 للوحدة (من 2026-11-17 إلى 2026-12-03، بتوقيت GMT-8) — ادعاءات من الشركة المصنّعة، راجع قسم «أين تشتري»",
+          "أرسلت لنا Olares بالبريد عرض سعر $4,959 وخصم الجمعة السوداء بمقدار $300 للوحدة (من 2026-11-17 إلى 2026-12-03، بتوقيت GMT-8) — ادعاءات من الشركة المصنّعة، راجع قسم «أين تشتري» — $4,659 على عرض $4,959",
           "أرسلت لنا Olares أيضًا 18–22 tokens/s لنموذج Llama 3 70B (Q4_K_M) وأقل من 32 dB عند الحمل الكامل — ولا يظهر أي من الرقمين في صفحة منتجها، ولم نتمكن من التحقق من أيٍّ منهما",
           "تقدير PromptQuorum: نموذج 70B بصيغة Q4_K_M يحتاج إلى تفريغ جزئي على 24 GB من VRAM، لذا فإن بضعة رموز في الثانية أقرب إلى الواقع من 18–22 (راجع دليل 70B)",
           "هذه ليست صفحة تسويق بالعمولة: لا تربط PromptQuorum أي اتفاقية بـ Olares، ولا تضيف أي وسوم تسويق بالعمولة، ولا تتقاضى أي عمولة"
@@ -490,9 +494,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "كمبيوتر Olares One المكتبي المدمج موضوعًا على مكتب",
-      "imageCaption": "Olares One على مكتب (320 × 197 × 55 mm). الصورة: Olares.",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "كمبيوتر Olares One المكتبي المدمج موضوعًا على مكتب",
+        "imageCaption": "Olares One على مكتب (320 × 197 × 55 mm). الصورة: Olares.",
         "title": "الحكم",
         "content": "**Olares One جهاز مدمج جيد المواصفات لمن يريد حاسوبًا مكتبيًا جاهزًا للذكاء الاصطناعي المحلي ويقبل سعر $4,999.** تناسب ذاكرته البالغة 24 GB من VRAM نوع GDDR7 النماذج متوسطة الحجم والمعالجة السريعة للمطالبات؛ وتضيف ذاكرة DDR5 البالغة 96 GB سعةً لنماذج 70B، لكن السعة ليست سرعة — فالطبقات المحفوظة في ذاكرة النظام تعمل بنطاق ترددي يعادل DDR5. أقوى حجة لصالحه هي سهولة الاستخدام وصغر الحجم، لا السعر لكل GB من VRAM. لم نختبر أي وحدة، لذا تعامل مع هذه الصفحة بوصفها قراءة للمواصفات المنشورة، وتعامل مع أي رقم أداء — سواء من Olares أو منا — على أنه غير مُتحقَّق منه حتى يؤكده اختبار مستقل."
       },
@@ -509,9 +513,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "منظر مفكَّك لتصميم التبريد الداخلي في Olares One",
-      "imageCaption": "تصميم التبريد الداخلي في Olares One، رسم توضيحي من الشركة المصنّعة. الصورة: Olares.",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "منظر مفكَّك لتصميم التبريد الداخلي في Olares One",
+        "imageCaption": "تصميم التبريد الداخلي في Olares One، رسم توضيحي من الشركة المصنّعة. الصورة: Olares.",
         "title": "مواصفات Olares One",
         "content": "**مواصفات نشرتها الشركة المصنّعة، مأخوذة من olares.com/one بتاريخ 2026-10-31.** لا تنشر Olares سعر بيع بالتجزئة في تلك الصفحة؛ والسعر مأخوذ من المتجر الرسمي.",
         "columns": [
@@ -620,6 +624,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "الإرشاد": "من 2026-11-17 00:00 إلى 2026-12-03 00:00 (GMT-8)، بخصم إضافي قدره $300 USD عن كل وحدة (ادعاء من الشركة المصنّعة)؛ اطلب عبر المتجر أو راسل Olares واذكر «PromptQuorum Partner Quote» للحصول على تخصيص مبكر وحزم متعددة الوحدات"
           },
           {
+            "المؤشر": "سعر Black Friday (حساب)",
+            "الإرشاد": "$4,659 USD للوحدة إذا طُبّق خصم $300 على عرض $4,959 (حساب PromptQuorum استنادًا إلى بريد Olares؛ ادعاء من الشركة المصنّعة غير مُتحقَّق منه)"
+          },
+          {
             "المؤشر": "تجار التجزئة الخارجيون",
             "الإرشاد": "لم يُتحقَّق منهم"
           }
@@ -701,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  de: {
+  "de": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -739,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU: NVIDIA RTX 5090 Mobile, 24 GB GDDR7, maximal 175 W TGP (Olares)",
           "CPU und RAM: Intel Core Ultra 9 275HX, 96 GB (2×48 GB) DDR5-5600, auf 128 GB erweiterbar (Olares)",
           "Speicher und Anschlüsse: 2 TB NVMe, zweiter SSD-Steckplatz, Thunderbolt 5, 2.5 GbE, Wi-Fi 7, HDMI 2.1",
-          "Preis im offiziellen Shop $4,999; Olares nannte per E-Mail außerdem $4,959 und einen Black-Friday-Nachlass von $300 (Herstellerangaben)",
+          "Preis im offiziellen Shop $4,999; Olares nannte per E-Mail außerdem $4,959 und einen Black-Friday-Nachlass von $300 (Herstellerangaben) — $4,659 auf das Angebot von $4,959",
           "PromptQuorum hat keine Affiliate-Vereinbarung mit Olares und verdient mit dieser Seite nichts"
         ],
         "updatedDate": "2026-10"
@@ -831,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One: Intel Core Ultra 9 275HX, RTX 5090 Mobile mit 24 GB GDDR7, 96 GB DDR5-5600 (auf 128 GB erweiterbar), 2 TB NVMe – Spezifikationen von olares.com/one, geprüft am 2026-10-31",
           "Preis im offiziellen Shop $4,999 (einzige Konfiguration, shop.olares.com, geprüft am 2026-10-31)",
-          "Olares hat uns per E-Mail ein Angebot über $4,959 und einen Black-Friday-Nachlass von $300 pro Gerät genannt (2026-11-17 bis 2026-12-03, GMT-8) – Herstellerangaben, siehe Bezugsquellen",
+          "Olares hat uns per E-Mail ein Angebot über $4,959 und einen Black-Friday-Nachlass von $300 pro Gerät genannt (2026-11-17 bis 2026-12-03, GMT-8) – Herstellerangaben, siehe Bezugsquellen — $4,659 auf das Angebot von $4,959",
           "Olares nannte uns per E-Mail außerdem 18–22 Tokens/s für Llama 3 70B (Q4_K_M) und unter 32 dB unter Volllast – keiner der beiden Werte steht auf der Produktseite, und wir konnten keinen überprüfen",
           "Einschätzung von PromptQuorum: 70B Q4_K_M erfordert bei 24 GB VRAM eine teilweise Auslagerung, daher sind einige wenige Tokens pro Sekunde realistischer als 18–22 (siehe den 70B-Ratgeber)",
           "Dies ist keine Affiliate-Seite: PromptQuorum hat keine Vereinbarung mit Olares, setzt keine Affiliate-Tags und erhält keine Provision"
@@ -839,9 +847,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "Kompakter Olares-One-Desktop-Computer auf einem Schreibtisch",
-      "imageCaption": "Olares One auf dem Schreibtisch (320 × 197 × 55 mm). Foto: Olares.",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "Kompakter Olares-One-Desktop-Computer auf einem Schreibtisch",
+        "imageCaption": "Olares One auf dem Schreibtisch (320 × 197 × 55 mm). Foto: Olares.",
         "title": "Fazit",
         "content": "**Der Olares One ist eine gut ausgestattete, kompakte Box für Menschen, die einen fertigen Desktop für lokale KI wollen und einen Preis von $4,999 akzeptieren.** Seine 24 GB GDDR7-VRAM eignen sich für mittelgroße Modelle und schnelle Prompt-Verarbeitung; die 96 GB DDR5 schaffen zusätzliche Kapazität für 70B-Modelle, aber Kapazität ist nicht Geschwindigkeit – Schichten im Arbeitsspeicher laufen mit der DDR5-Bandbreite. Das stärkste Argument für das Gerät sind Komfort und Größe, nicht der Preis pro GB VRAM. Wir haben kein Gerät getestet; verstehen Sie dies daher als Einschätzung veröffentlichter Spezifikationen und behandeln Sie jeden Benchmark-Wert – von Olares oder von uns – als nicht verifiziert, bis ein unabhängiger Test ihn bestätigt."
       },
@@ -858,9 +866,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Explosionsdarstellung der internen Kühlung des Olares One",
-      "imageCaption": "Interne Kühlung des Olares One, Illustration des Herstellers. Bild: Olares.",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Explosionsdarstellung der internen Kühlung des Olares One",
+        "imageCaption": "Interne Kühlung des Olares One, Illustration des Herstellers. Bild: Olares.",
         "title": "Spezifikationen des Olares One",
         "content": "**Vom Hersteller veröffentlichte Spezifikationen, entnommen von olares.com/one am 2026-10-31.** Olares veröffentlicht auf dieser Seite keinen Verkaufspreis; der Preis stammt aus dem offiziellen Shop.",
         "columns": [
@@ -969,6 +977,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Angabe": "2026-11-17 00:00 bis 2026-12-03 00:00 (GMT-8), weitere $300 USD Nachlass pro Gerät (Herstellerangabe); bestellen Sie über den Shop oder schreiben Sie Olares und nennen Sie „PromptQuorum Partner Quote“ für frühzeitige Zuteilung und Mehrgeräte-Pakete"
           },
           {
+            "Hinweis": "Black-Friday-Preis (Rechnung)",
+            "Angabe": "$4,659 USD pro Gerät, wenn die Ermäßigung von $300 auf das Angebot von $4,959 angewendet wird (Rechnung von PromptQuorum anhand der E-Mail von Olares; Herstellerangabe, nicht verifiziert)"
+          },
+          {
             "Hinweis": "Drittanbieter-Händler",
             "Angabe": "Nicht geprüft"
           }
@@ -1050,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  es: {
+  "es": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -1088,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU: NVIDIA RTX 5090 Mobile, 24 GB GDDR7, TGP máximo de 175 W (Olares)",
           "CPU y RAM: Intel Core Ultra 9 275HX, 96 GB (2×48 GB) DDR5-5600, ampliables a 128 GB (Olares)",
           "Almacenamiento y puertos: 2 TB NVMe, segunda ranura para SSD, Thunderbolt 5, 2.5 GbE, Wi-Fi 7, HDMI 2.1",
-          "Precio oficial en la tienda: $4,999; Olares también indicó por correo $4,959 y una rebaja de $300 por el Black Friday (afirmaciones del fabricante)",
+          "Precio oficial en la tienda: $4,999; Olares también indicó por correo $4,959 y una rebaja de $300 por el Black Friday (afirmaciones del fabricante) — $4,659 sobre la oferta de $4,959",
           "PromptQuorum no tiene ningún acuerdo de afiliación con Olares y no gana nada con esta página"
         ],
         "updatedDate": "2026-10"
@@ -1180,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One: Intel Core Ultra 9 275HX, RTX 5090 Mobile con 24 GB GDDR7, 96 GB DDR5-5600 (ampliables a 128 GB), 2 TB NVMe — especificaciones de olares.com/one, consultadas el 2026-10-31",
           "Precio oficial en la tienda: $4,999 (configuración única, shop.olares.com, consultado el 2026-10-31)",
-          "Olares nos envió por correo una oferta de $4,959 y una rebaja del Black Friday de $300 por unidad (del 2026-11-17 al 2026-12-03, GMT-8): afirmaciones del fabricante, véase Dónde comprar",
+          "Olares nos envió por correo una oferta de $4,959 y una rebaja del Black Friday de $300 por unidad (del 2026-11-17 al 2026-12-03, GMT-8): afirmaciones del fabricante, véase Dónde comprar — $4,659 sobre la oferta de $4,959",
           "Olares también envió por correo 18–22 tokens/s para Llama 3 70B (Q4_K_M) y menos de 32 dB a plena carga: ninguna de las dos cifras figura en su página de producto y no pudimos verificar ninguna",
           "Estimación de PromptQuorum: 70B Q4_K_M necesita descarga parcial con 24 GB de VRAM, por lo que unos pocos tokens por segundo es más realista que 18–22 (véase la guía de 70B)",
           "Esta no es una página de afiliación: PromptQuorum no tiene ningún acuerdo con Olares, no añade etiquetas de afiliado y no recibe comisión alguna"
@@ -1188,9 +1200,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "Ordenador de sobremesa compacto Olares One sobre un escritorio",
-      "imageCaption": "Olares One sobre un escritorio (320 × 197 × 55 mm). Foto: Olares.",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "Ordenador de sobremesa compacto Olares One sobre un escritorio",
+        "imageCaption": "Olares One sobre un escritorio (320 × 197 × 55 mm). Foto: Olares.",
         "title": "Veredicto",
         "content": "**El Olares One es un equipo compacto y bien equipado para quien quiere un sobremesa de IA local listo para usar y acepta un precio de $4,999.** Sus 24 GB de VRAM GDDR7 sirven para modelos de tamaño medio y un procesamiento rápido de prompts; sus 96 GB de DDR5 añaden capacidad para modelos de 70B, pero capacidad no es velocidad: las capas alojadas en la RAM del sistema se ejecutan al ancho de banda de la DDR5. Su mejor argumento es la comodidad y el tamaño, no el precio por GB de VRAM. No hemos probado ninguna unidad, así que trata esto como una lectura de las especificaciones publicadas, y considera cualquier cifra de benchmark —de Olares o nuestra— como no verificada hasta que una prueba independiente la confirme."
       },
@@ -1207,9 +1219,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Vista despiezada de la refrigeración interna del Olares One",
-      "imageCaption": "Refrigeración interna del Olares One, ilustración del fabricante. Imagen: Olares.",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Vista despiezada de la refrigeración interna del Olares One",
+        "imageCaption": "Refrigeración interna del Olares One, ilustración del fabricante. Imagen: Olares.",
         "title": "Especificaciones del Olares One",
         "content": "**Especificaciones publicadas por el fabricante, tomadas de olares.com/one el 2026-10-31.** Olares no publica ningún precio de venta en esa página; el precio procede de la tienda oficial.",
         "columns": [
@@ -1318,6 +1330,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Orientación": "Del 2026-11-17 00:00 al 2026-12-03 00:00 (GMT-8), $300 USD adicionales de descuento por unidad (afirmación del fabricante); pide a través de la tienda o escribe a Olares mencionando \"PromptQuorum Partner Quote\" para asignación anticipada y paquetes de varias unidades"
           },
           {
+            "Indicador": "Precio Black Friday (cálculo)",
+            "Orientación": "$4,659 USD por unidad si el descuento de $300 se aplica a la oferta de $4,959 (cálculo de PromptQuorum a partir del correo de Olares; afirmación del fabricante, no verificada)"
+          },
+          {
             "Indicador": "Minoristas de terceros",
             "Orientación": "No comprobado"
           }
@@ -1399,7 +1415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  fr: {
+  "fr": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -1437,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU : NVIDIA RTX 5090 Mobile, 24 GB GDDR7, TGP maximal de 175 W (Olares)",
           "CPU et RAM : Intel Core Ultra 9 275HX, 96 GB (2×48 GB) DDR5-5600, extensibles à 128 GB (Olares)",
           "Stockage et ports : NVMe de 2 TB, second emplacement SSD, Thunderbolt 5, 2.5 GbE, Wi-Fi 7, HDMI 2.1",
-          "Prix officiel en boutique $4,999 ; Olares a aussi indiqué par e-mail $4,959 et une remise Black Friday de $300 (affirmations du fabricant)",
+          "Prix officiel en boutique $4,999 ; Olares a aussi indiqué par e-mail $4,959 et une remise Black Friday de $300 (affirmations du fabricant) — $4,659 sur l'offre de $4,959",
           "PromptQuorum n'a aucun accord d'affiliation avec Olares et ne gagne rien avec cette page"
         ],
         "updatedDate": "2026-10"
@@ -1529,7 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One : Intel Core Ultra 9 275HX, RTX 5090 Mobile avec 24 GB GDDR7, 96 GB DDR5-5600 (extensibles à 128 GB), NVMe de 2 TB — spécifications tirées de olares.com/one, vérifiées le 2026-10-31",
           "Prix officiel en boutique $4,999 (configuration unique, shop.olares.com, vérifié le 2026-10-31)",
-          "Olares nous a envoyé par e-mail un devis à $4,959 et une réduction Black Friday de $300 par unité (du 2026-11-17 au 2026-12-03, GMT-8) — affirmations du fabricant, voir Où acheter",
+          "Olares nous a envoyé par e-mail un devis à $4,959 et une réduction Black Friday de $300 par unité (du 2026-11-17 au 2026-12-03, GMT-8) — affirmations du fabricant, voir Où acheter — $4,659 sur l'offre de $4,959",
           "Olares a également indiqué par e-mail 18–22 tokens/s pour Llama 3 70B (Q4_K_M) et moins de 32 dB à pleine charge — aucun de ces chiffres ne figure sur sa page produit, et nous n'avons pu vérifier ni l'un ni l'autre",
           "Estimation PromptQuorum : le 70B Q4_K_M nécessite un déport partiel avec 24 GB de VRAM, donc quelques tokens par seconde sont plus réalistes que 18–22 (voir le guide du 70B)",
           "Ceci n'est pas une page d'affiliation : PromptQuorum n'a aucun accord avec Olares, n'ajoute aucune balise d'affiliation et ne perçoit aucune commission"
@@ -1537,9 +1553,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "Ordinateur de bureau compact Olares One posé sur un bureau",
-      "imageCaption": "Olares One sur un bureau (320 × 197 × 55 mm). Photo : Olares.",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "Ordinateur de bureau compact Olares One posé sur un bureau",
+        "imageCaption": "Olares One sur un bureau (320 × 197 × 55 mm). Photo : Olares.",
         "title": "Verdict",
         "content": "**L'Olares One est une machine compacte bien dotée, pour ceux qui veulent un PC IA local prêt à l'emploi et acceptent un prix de $4,999.** Ses 24 GB de VRAM GDDR7 conviennent aux modèles de taille moyenne et au traitement rapide des prompts ; ses 96 GB de DDR5 ajoutent de la capacité pour les modèles 70B, mais capacité ne signifie pas vitesse — les couches conservées dans la RAM système tournent à la bande passante de la DDR5. Son principal atout est la praticité et le format, pas le prix par GB de VRAM. Nous n'avons pas testé d'exemplaire : considérez ceci comme une lecture de spécifications publiées, et tenez tout chiffre de benchmark — celui d'Olares comme le nôtre — pour non vérifié tant qu'un test indépendant ne l'a pas confirmé."
       },
@@ -1556,9 +1572,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Vue éclatée du refroidissement interne de l'Olares One",
-      "imageCaption": "Refroidissement interne de l'Olares One, illustration du fabricant. Image : Olares.",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Vue éclatée du refroidissement interne de l'Olares One",
+        "imageCaption": "Refroidissement interne de l'Olares One, illustration du fabricant. Image : Olares.",
         "title": "Spécifications de l'Olares One",
         "content": "**Spécifications publiées par le fabricant, relevées sur olares.com/one le 2026-10-31.** Olares ne publie aucun prix de vente sur cette page ; le prix provient de la boutique officielle.",
         "columns": [
@@ -1667,6 +1683,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Précisions": "Du 2026-11-17 00:00 au 2026-12-03 00:00 (GMT-8), $300 USD de remise supplémentaire par unité (affirmation du fabricant) ; commandez via la boutique ou écrivez à Olares en mentionnant « PromptQuorum Partner Quote » pour une allocation anticipée et des lots multi-unités"
           },
           {
+            "Indicateur": "Prix Black Friday (calcul)",
+            "Précisions": "$4,659 USD par unité si la remise de $300 s'applique à l'offre de $4,959 (calcul de PromptQuorum d'après l'e-mail d'Olares ; affirmation du fabricant, non vérifiée)"
+          },
+          {
             "Indicateur": "Revendeurs tiers",
             "Précisions": "Non vérifiés"
           }
@@ -1748,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  ja: {
+  "ja": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -1786,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU：NVIDIA RTX 5090 Mobile、24 GB GDDR7、最大TGP 175 W（Olares）",
           "CPUとメモリ：Intel Core Ultra 9 275HX、96 GB（2×48 GB）DDR5-5600、128 GBまで増設可能（Olares）",
           "ストレージとポート：2 TB NVMe、2基目のSSDスロット、Thunderbolt 5、2.5 GbE、Wi-Fi 7、HDMI 2.1",
-          "公式ショップ価格は$4,999。Olaresはメールで$4,959の見積もりと、ブラックフライデーの$300値引きも提示（ベンダー主張）",
+          "公式ショップ価格は$4,999。Olaresはメールで$4,959の見積もりと、ブラックフライデーの$300値引きも提示（ベンダー主張）（$4,959の見積もりから$4,659）",
           "PromptQuorumはOlaresとアフィリエイト契約を結んでおらず、本ページから収益を得ていません"
         ],
         "updatedDate": "2026-10"
@@ -1878,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One：Intel Core Ultra 9 275HX、24 GB GDDR7のRTX 5090 Mobile、96 GB DDR5-5600（128 GBまで増設可能）、2 TB NVMe — 仕様はolares.com/oneより、2026-10-31確認",
           "公式ショップ価格は$4,999（単一構成、shop.olares.com、2026-10-31確認）",
-          "Olaresはメールで$4,959の見積もりと、1台あたり$300のブラックフライデー値引き（2026-11-17〜2026-12-03、GMT-8）を提示 — ベンダー主張です。「購入先と現在の価格」を参照",
+          "Olaresはメールで$4,959の見積もりと、1台あたり$300のブラックフライデー値引き（2026-11-17〜2026-12-03、GMT-8）を提示 — ベンダー主張です。「購入先と現在の価格」を参照（$4,959の見積もりから$4,659）",
           "Olaresはまた、Llama 3 70B（Q4_K_M）で18〜22 tokens/s、フルロード時に32 dB未満とメールで伝えてきた — どちらの数値も製品ページには記載がなく、私たちはどちらも検証できなかった",
           "PromptQuorumの推定：24 GBのVRAMでは70B Q4_K_Mに部分オフロードが必要で、18〜22よりも毎秒数トークンのほうが現実的（70Bガイドを参照）",
           "本ページはアフィリエイトページではありません。PromptQuorumはOlaresと契約を結んでおらず、アフィリエイトタグも付けず、手数料も受け取っていません"
@@ -1886,9 +1906,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "机の上に置かれたコンパクトなデスクトップPC、Olares One",
-      "imageCaption": "机の上のOlares One（320 × 197 × 55 mm）。写真：Olares",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "机の上に置かれたコンパクトなデスクトップPC、Olares One",
+        "imageCaption": "机の上のOlares One（320 × 197 × 55 mm）。写真：Olares",
         "title": "総評",
         "content": "**Olares Oneは、完成品のローカルAIデスクトップを求め、$4,999という価格を受け入れられる人に向けた、仕様の充実したコンパクトなボックスです。** 24 GBのGDDR7 VRAMは中規模モデルと高速なプロンプト処理に向いています。96 GBのDDR5は70Bモデルのための容量を加えますが、容量は速度ではありません — システムメモリに置かれたレイヤーはDDR5の帯域幅で動作します。最大の魅力は利便性とサイズであり、VRAM 1 GBあたりの価格ではありません。私たちは実機をテストしていないため、本ページは公開仕様の読み解きとして扱ってください。また、Olaresのものでも私たちのものでも、ベンチマークの数値は第三者のテストで確認されるまで未検証として扱ってください。"
       },
@@ -1905,9 +1925,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Olares Oneの内部冷却構造の分解図",
-      "imageCaption": "Olares Oneの内部冷却構造（メーカー提供のイラスト）。画像：Olares",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Olares Oneの内部冷却構造の分解図",
+        "imageCaption": "Olares Oneの内部冷却構造（メーカー提供のイラスト）。画像：Olares",
         "title": "Olares One の仕様",
         "content": "**メーカーが公開している仕様。2026-10-31にolares.com/oneから取得。** Olaresはそのページに小売価格を掲載していません。価格は公式ショップのものです。",
         "columns": [
@@ -2016,6 +2036,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "ガイダンス": "2026-11-17 00:00から2026-12-03 00:00（GMT-8）まで、1台あたりさらに$300 USD引き（ベンダー主張）。ショップから注文するか、Olaresにメールで「PromptQuorum Partner Quote」と伝えると、先行割り当てやマルチユニットバンドルの案内を受けられる"
           },
           {
+            "項目": "ブラックフライデー価格（計算値）",
+            "ガイダンス": "$300の割引が$4,959の見積もりに適用される場合、1台あたり$4,659 USD（Olaresのメールを基にPromptQuorumが計算。メーカー申告で未検証）"
+          },
+          {
             "項目": "サードパーティの販売店",
             "ガイダンス": "未確認"
           }
@@ -2097,7 +2121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  ko: {
+  "ko": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -2135,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU: NVIDIA RTX 5090 Mobile, 24 GB GDDR7, 최대 TGP 175 W (Olares)",
           "CPU 및 RAM: Intel Core Ultra 9 275HX, 96 GB(2×48 GB) DDR5-5600, 128 GB까지 업그레이드 가능 (Olares)",
           "저장장치 및 포트: 2 TB NVMe, 두 번째 SSD 슬롯, Thunderbolt 5, 2.5 GbE, Wi-Fi 7, HDMI 2.1",
-          "공식 쇼핑몰 가격 $4,999. Olares는 이메일로 $4,959와 블랙 프라이데이 $300 할인도 제시했습니다(공급사 주장)",
+          "공식 쇼핑몰 가격 $4,999. Olares는 이메일로 $4,959와 블랙 프라이데이 $300 할인도 제시했습니다(공급사 주장) ($4,959 견적 기준 $4,659)",
           "PromptQuorum은 Olares와 제휴 계약이 없으며 이 페이지로 어떤 수익도 얻지 않습니다"
         ],
         "updatedDate": "2026-10"
@@ -2227,7 +2251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One: Intel Core Ultra 9 275HX, 24 GB GDDR7의 RTX 5090 Mobile, 96 GB DDR5-5600(128 GB까지 업그레이드 가능), 2 TB NVMe. 사양은 olares.com/one 기준, 2026-10-31 확인",
           "공식 쇼핑몰 가격 $4,999(단일 구성, shop.olares.com, 2026-10-31 확인)",
-          "Olares는 이메일로 $4,959 견적과 대당 $300 블랙 프라이데이 할인(2026-11-17 ~ 2026-12-03, GMT-8)을 보내왔습니다. 공급사 주장이며, 구매처 및 현재 가격 참조",
+          "Olares는 이메일로 $4,959 견적과 대당 $300 블랙 프라이데이 할인(2026-11-17 ~ 2026-12-03, GMT-8)을 보내왔습니다. 공급사 주장이며, 구매처 및 현재 가격 참조 ($4,959 견적 기준 $4,659)",
           "Olares는 또한 Llama 3 70B(Q4_K_M)에서 18–22 tokens/s, 최대 부하에서 32 dB 미만이라는 수치를 이메일로 보냈습니다. 두 수치 모두 제품 페이지에 없으며, 저희도 어느 쪽도 검증하지 못했습니다",
           "PromptQuorum 추정: 70B Q4_K_M은 24 GB VRAM에서 부분 오프로드가 필요하므로, 18–22보다 초당 몇 토큰 수준이 더 현실적입니다(70B 가이드 참조)",
           "이 페이지는 제휴 페이지가 아닙니다. PromptQuorum은 Olares와 계약이 없고, 제휴 태그를 붙이지 않으며, 수수료를 받지 않습니다"
@@ -2235,9 +2259,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "책상 위에 놓인 소형 데스크톱 컴퓨터 Olares One",
-      "imageCaption": "책상 위의 Olares One(320 × 197 × 55 mm). 사진: Olares",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "책상 위에 놓인 소형 데스크톱 컴퓨터 Olares One",
+        "imageCaption": "책상 위의 Olares One(320 × 197 × 55 mm). 사진: Olares",
         "title": "평가",
         "content": "**Olares One은 완제품 로컬 AI 데스크톱을 원하고 $4,999라는 가격을 받아들일 수 있는 사람에게 잘 갖춰진 소형 박스입니다.** 24 GB GDDR7 VRAM은 중간 규모 모델과 빠른 프롬프트 처리에 적합하고, 96 GB DDR5는 70B 모델을 위한 용량을 더해 주지만, 용량이 곧 속도는 아닙니다. 시스템 RAM에 놓인 레이어는 DDR5 대역폭으로 실행됩니다. 이 제품의 가장 강력한 근거는 편의성과 크기이지, VRAM GB당 가격이 아닙니다. 저희는 제품을 테스트하지 않았으므로 이 글은 공개된 사양에 대한 해석으로 받아들이시고, Olares의 수치든 저희의 수치든 독립적인 테스트로 확인되기 전까지는 모든 벤치마크 수치를 검증되지 않은 것으로 간주하세요."
       },
@@ -2254,9 +2278,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Olares One 내부 냉각 구조 분해도",
-      "imageCaption": "Olares One의 내부 냉각 구조(제조사 제공 일러스트). 이미지: Olares",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Olares One 내부 냉각 구조 분해도",
+        "imageCaption": "Olares One의 내부 냉각 구조(제조사 제공 일러스트). 이미지: Olares",
         "title": "Olares One 사양",
         "content": "**제조사가 공개한 사양이며, 2026-10-31에 olares.com/one에서 가져왔습니다.** Olares는 해당 페이지에 소비자 가격을 게시하지 않으며, 가격은 공식 쇼핑몰에서 가져왔습니다.",
         "columns": [
@@ -2365,6 +2389,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "안내": "2026-11-17 00:00 ~ 2026-12-03 00:00(GMT-8), 대당 $300 USD 추가 할인(공급사 주장). 쇼핑몰에서 주문하거나, Olares에 이메일을 보내 \"PromptQuorum Partner Quote\"를 언급하면 조기 물량 배정과 다중 유닛 번들을 문의할 수 있습니다"
           },
           {
+            "항목": "블랙프라이데이 가격(계산값)",
+            "안내": "$300 할인이 $4,959 견적에 적용될 경우 대당 $4,659 USD(Olares 이메일을 바탕으로 PromptQuorum이 계산, 공급사 주장이며 검증되지 않음)"
+          },
+          {
             "항목": "제3자 판매처",
             "안내": "확인하지 않음"
           }
@@ -2446,7 +2474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  pt: {
+  "pt": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -2484,7 +2512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU: NVIDIA RTX 5090 Mobile, 24 GB de GDDR7, TGP máximo de 175 W (Olares)",
           "CPU e RAM: Intel Core Ultra 9 275HX, 96 GB (2×48 GB) de DDR5-5600, expansível para 128 GB (Olares)",
           "Armazenamento e portas: NVMe de 2 TB, segundo slot de SSD, Thunderbolt 5, 2.5 GbE, Wi-Fi 7, HDMI 2.1",
-          "Preço oficial na loja: $4,999; a Olares também cotou $4,959 e um desconto de $300 na Black Friday por e-mail (declarações do fabricante)",
+          "Preço oficial na loja: $4,999; a Olares também cotou $4,959 e um desconto de $300 na Black Friday por e-mail (declarações do fabricante) — $4,659 sobre a cotação de $4,959",
           "O PromptQuorum não tem acordo de afiliado com a Olares e não ganha nada com esta página"
         ],
         "updatedDate": "2026-10"
@@ -2576,7 +2604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One: Intel Core Ultra 9 275HX, RTX 5090 Mobile com 24 GB de GDDR7, 96 GB de DDR5-5600 (expansível para 128 GB), NVMe de 2 TB — especificações de olares.com/one, verificadas em 2026-10-31",
           "Preço oficial na loja: $4,999 (configuração única, shop.olares.com, verificado em 2026-10-31)",
-          "A Olares nos enviou por e-mail uma cotação de $4,959 e um desconto de $300 por unidade na Black Friday (2026-11-17 a 2026-12-03, GMT-8) — declarações do fabricante, veja Onde comprar",
+          "A Olares nos enviou por e-mail uma cotação de $4,959 e um desconto de $300 por unidade na Black Friday (2026-11-17 a 2026-12-03, GMT-8) — declarações do fabricante, veja Onde comprar — $4,659 sobre a cotação de $4,959",
           "A Olares também enviou por e-mail 18–22 tokens/s para o Llama 3 70B (Q4_K_M) e menos de 32 dB em carga máxima — nenhum dos dois números está na página do produto, e não conseguimos verificar nenhum deles",
           "Estimativa do PromptQuorum: o 70B em Q4_K_M exige offload parcial com 24 GB de VRAM, então alguns poucos tokens por segundo são mais realistas do que 18–22 (veja o guia de 70B)",
           "Esta não é uma página de afiliados: o PromptQuorum não tem acordo com a Olares, não adiciona tags de afiliado e não recebe nenhuma comissão"
@@ -2584,9 +2612,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "Computador de mesa compacto Olares One sobre uma mesa",
-      "imageCaption": "Olares One sobre uma mesa (320 × 197 × 55 mm). Foto: Olares.",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "Computador de mesa compacto Olares One sobre uma mesa",
+        "imageCaption": "Olares One sobre uma mesa (320 × 197 × 55 mm). Foto: Olares.",
         "title": "Veredito",
         "content": "**O Olares One é uma máquina compacta e bem especificada para quem quer um desktop de IA local pronto para uso e aceita um preço de $4,999.** Seus 24 GB de VRAM GDDR7 atendem bem a modelos de porte médio e ao processamento rápido de prompts; seus 96 GB de DDR5 acrescentam capacidade para modelos de 70B, mas capacidade não é velocidade — as camadas mantidas na RAM do sistema rodam na largura de banda da DDR5. O ponto mais forte da máquina é a conveniência e o tamanho, não o preço por GB de VRAM. Não testamos uma unidade; portanto, trate isto como uma leitura de especificações publicadas e trate qualquer número de benchmark — da Olares ou nosso — como não verificado até que um teste independente o confirme."
       },
@@ -2603,9 +2631,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Vista explodida do sistema de refrigeração interno do Olares One",
-      "imageCaption": "Refrigeração interna do Olares One, ilustração do fabricante. Imagem: Olares.",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Vista explodida do sistema de refrigeração interno do Olares One",
+        "imageCaption": "Refrigeração interna do Olares One, ilustração do fabricante. Imagem: Olares.",
         "title": "Especificações do Olares One",
         "content": "**Especificações publicadas pelo fabricante, retiradas de olares.com/one em 2026-10-31.** A Olares não publica preço de varejo nessa página; o preço vem da loja oficial.",
         "columns": [
@@ -2714,6 +2742,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Orientação": "2026-11-17 00:00 a 2026-12-03 00:00 (GMT-8), mais $300 USD de desconto por unidade (declaração do fabricante); faça o pedido pela loja ou escreva à Olares citando \"PromptQuorum Partner Quote\" para alocação antecipada e pacotes com várias unidades"
           },
           {
+            "Sinal": "Preço Black Friday (cálculo)",
+            "Orientação": "$4,659 USD por unidade se o desconto de $300 valer sobre a cotação de $4,959 (cálculo do PromptQuorum a partir do e-mail da Olares; declaração do fabricante, não verificada)"
+          },
+          {
             "Sinal": "Varejistas terceiros",
             "Orientação": "Não verificados"
           }
@@ -2795,7 +2827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     }
   },
-  zh: {
+  "zh": {
     "freshness_tier": "semi_annual",
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
@@ -2833,7 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "GPU：NVIDIA RTX 5090 Mobile，24 GB GDDR7，最大 TGP 175 W（Olares）",
           "CPU 与内存：Intel Core Ultra 9 275HX，96 GB（2×48 GB）DDR5-5600，可升级至 128 GB（Olares）",
           "存储与接口：2 TB NVMe，另有第二个 SSD 插槽，Thunderbolt 5，2.5 GbE，Wi-Fi 7，HDMI 2.1",
-          "官方商店价 $4,999；Olares 还通过邮件报价 $4,959，并提到Black Friday立减 $300（厂商声明）",
+          "官方商店价 $4,999；Olares 还通过邮件报价 $4,959，并提到Black Friday立减 $300（厂商声明）（在 $4,959 报价基础上为 $4,659）",
           "PromptQuorum 与 Olares 没有联盟协议，也不会从本页获得任何收益"
         ],
         "updatedDate": "2026-10"
@@ -2925,7 +2957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "Olares One：Intel Core Ultra 9 275HX、24 GB GDDR7 的 RTX 5090 Mobile、96 GB DDR5-5600（可升级至 128 GB）、2 TB NVMe——规格来自 olares.com/one，核对日期 2026-10-31",
           "官方商店价 $4,999（单一配置，shop.olares.com，核对日期 2026-10-31）",
-          "Olares 通过邮件向我们报价 $4,959，并提到Black Friday每台立减 $300（2026-11-17 至 2026-12-03，GMT-8）——均为厂商声明，详见“购买渠道与当前价格”",
+          "Olares 通过邮件向我们报价 $4,959，并提到Black Friday每台立减 $300（2026-11-17 至 2026-12-03，GMT-8）——均为厂商声明，详见“购买渠道与当前价格”（在 $4,959 报价基础上为 $4,659）",
           "Olares 还通过邮件提供了 Llama 3 70B（Q4_K_M）18–22 tokens/s，以及满载低于 32 dB——这两个数据都不在其产品页上，我们也无法验证",
           "PromptQuorum 估算：在 24 GB 显存上运行 70B Q4_K_M 需要部分卸载，因此每秒几个 token 比 18–22 更符合实际（参见 70B 指南）",
           "本页不是联盟页面：PromptQuorum 与 Olares 没有协议，不添加联盟标记，也不获得任何佣金"
@@ -2933,9 +2965,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
-      "image": "/images/olares-one-desk.webp",
-      "imageAlt": "放在桌面上的紧凑型台式机 Olares One",
-      "imageCaption": "桌面上的 Olares One（320 × 197 × 55 mm）。照片：Olares",
+        "image": "/images/olares-one-desk.webp",
+        "imageAlt": "放在桌面上的紧凑型台式机 Olares One",
+        "imageCaption": "桌面上的 Olares One（320 × 197 × 55 mm）。照片：Olares",
         "title": "结论",
         "content": "**Olares One 是一台规格扎实的紧凑型主机，适合想要开箱即用的本地 AI 桌面主机、并能接受 $4,999 价格的人。** 它的 24 GB GDDR7 显存适合中等规模模型和快速的提示词处理；96 GB DDR5 为 70B 模型提供了容量，但容量不等于速度——放在系统内存里的层只能按 DDR5 的带宽运行。它最有力的理由是便利性和体积，而不是每 GB 显存的价格。我们没有测试过实机，因此请将本文视为对已公布规格的解读；任何基准测试数据——无论来自 Olares 还是我们——在独立测试确认之前，都应视为未经验证。"
       },
@@ -2952,9 +2984,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
-      "image": "/images/olares-one-cooling.webp",
-      "imageAlt": "Olares One 内部散热结构分解图",
-      "imageCaption": "Olares One 的内部散热结构（厂商提供的示意图）。图片：Olares",
+        "image": "/images/olares-one-cooling.webp",
+        "imageAlt": "Olares One 内部散热结构分解图",
+        "imageCaption": "Olares One 的内部散热结构（厂商提供的示意图）。图片：Olares",
         "title": "Olares One 规格",
         "content": "**厂商公布的规格，取自 olares.com/one，日期 2026-10-31。** Olares 在该页面没有公布零售价；价格来自官方商店。",
         "columns": [
@@ -3063,6 +3095,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "说明": "2026-11-17 00:00 至 2026-12-03 00:00（GMT-8），每台额外立减 $300 USD（厂商声明）；可通过商店下单，或发邮件给 Olares 并注明“PromptQuorum Partner Quote”，以获取提前配货和多台组合优惠"
           },
           {
+            "项目": "Black Friday 价格（推算）",
+            "说明": "若 $300 立减适用于 $4,959 的报价，则每台 $4,659 USD（PromptQuorum 根据 Olares 邮件推算；厂商声明，未经验证）"
+          },
+          {
             "项目": "第三方零售商",
             "说明": "未核查"
           }
@@ -3143,5 +3179,5 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     }
-  },
+  }
 }
