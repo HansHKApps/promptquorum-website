@@ -14,7 +14,7 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama'], // Ollama provider documented in docs/usage/providers/ollama.mdx (checked 2026-10-24); LM Studio not re-verified
   engine: 'external',
-  license: 'MIT',
+  license: 'LobeHub Community License (Apache 2.0-based)', // verified 2026-10-31 against github.com/lobehub/lobehub LICENSE (Apache-2.0-based, extra commercial/derivative conditions); was 'MIT'
   price: 'freemium',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // LobeHub is an agent workspace (desktop app / cloud / self-hosted server) that calls external model providers or a local Ollama; no minimum RAM figure is published in the README (checked 2026-10-24)
   stars: 83456, // GitHub API 2026-10-24 (repo lobehub/lobehub)

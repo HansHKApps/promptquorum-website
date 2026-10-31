@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What are the best alternatives to Open WebUI?',
-            a: 'LibreChat (MIT) and LobeChat (MIT, freemium) are the closest browser-based alternatives. Chatbox (GPL 3.0) is a lightweight cross-platform client, and AnythingLLM (MIT) adds built-in document chat on desktop and web. All of them connect to a local Ollama instance, so switching UIs does not change your models.',
+            a: 'LibreChat (MIT) and LobeChat (LobeHub Community License, freemium) are the closest browser-based alternatives. Chatbox (GPL 3.0) is a lightweight cross-platform client, and AnythingLLM (MIT) adds built-in document chat on desktop and web. All of them connect to a local Ollama instance, so switching UIs does not change your models.',
           },
           {
             q: 'Should I choose AnythingLLM or Jan?',
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was sind die besten Alternativen zu Open WebUI?',
-            a: 'LibreChat (MIT) und LobeChat (MIT, Freemium) sind die nächsten browserbasierten Alternativen. Chatbox (GPL 3.0) ist ein schlanker plattformübergreifender Client, und AnythingLLM (MIT) bringt zusätzlich Dokumenten-Chat für Desktop und Web mit. Alle verbinden sich mit einer lokalen Ollama-Instanz, ein Wechsel der Oberfläche ändert Ihre Modelle also nicht.',
+            a: 'LibreChat (MIT) und LobeChat (LobeHub Community License, Freemium) sind die nächsten browserbasierten Alternativen. Chatbox (GPL 3.0) ist ein schlanker plattformübergreifender Client, und AnythingLLM (MIT) bringt zusätzlich Dokumenten-Chat für Desktop und Web mit. Alle verbinden sich mit einer lokalen Ollama-Instanz, ein Wechsel der Oberfläche ändert Ihre Modelle also nicht.',
           },
           {
             q: 'Sollte ich AnythingLLM oder Jan wählen?',
@@ -1754,7 +1754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelles sont les meilleures alternatives à Open WebUI ?',
-            a: 'LibreChat (MIT) et LobeChat (MIT, freemium) sont les alternatives les plus proches dans le navigateur. Chatbox (GPL 3.0) est un client multiplateforme léger, et AnythingLLM (MIT) ajoute le chat avec vos documents sur bureau et web. Tous se connectent à une instance Ollama locale : changer d’interface ne change pas vos modèles.',
+            a: 'LibreChat (MIT) et LobeChat (licence LobeHub Community, freemium) sont les alternatives les plus proches dans le navigateur. Chatbox (GPL 3.0) est un client multiplateforme léger, et AnythingLLM (MIT) ajoute le chat avec vos documents sur bureau et web. Tous se connectent à une instance Ollama locale : changer d’interface ne change pas vos modèles.',
           },
           {
             q: 'Faut-il choisir AnythingLLM ou Jan ?',
@@ -2346,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Open WebUIのおすすめ代替ツールは？',
-            a: 'ブラウザ型で最も近い代替はLibreChat（MIT）とLobeChat（MIT、フリーミアム）です。Chatbox（GPL 3.0）は軽量なクロスプラットフォームクライアントで、AnythingLLM（MIT）はデスクトップとWebで文書チャットも使えます。いずれもローカルのOllamaに接続できるため、UIを変えてもモデルはそのまま使えます。',
+            a: 'ブラウザ型で最も近い代替はLibreChat（MIT）とLobeChat（LobeHub Community License、フリーミアム）です。Chatbox（GPL 3.0）は軽量なクロスプラットフォームクライアントで、AnythingLLM（MIT）はデスクトップとWebで文書チャットも使えます。いずれもローカルのOllamaに接続できるため、UIを変えてもモデルはそのまま使えます。',
           },
           {
             q: 'AnythingLLMとJanはどちらを選ぶべき？',
@@ -2938,7 +2938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Open WebUI有哪些好用的替代品？',
-            a: '最接近的浏览器端替代品是LibreChat（MIT）和LobeChat（MIT，免费增值）。Chatbox（GPL 3.0）是轻量的跨平台客户端，AnythingLLM（MIT）则在桌面端和网页端额外提供文档对话。它们都能连接本地的Ollama，因此更换界面不会改变你使用的模型。',
+            a: '最接近的浏览器端替代品是LibreChat（MIT）和LobeChat（LobeHub Community License，免费增值）。Chatbox（GPL 3.0）是轻量的跨平台客户端，AnythingLLM（MIT）则在桌面端和网页端额外提供文档对话。它们都能连接本地的Ollama，因此更换界面不会改变你使用的模型。',
           },
           {
             q: '应该选择AnythingLLM还是Jan？',
@@ -3530,7 +3530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuáles son las mejores alternativas a Open WebUI?',
-            a: 'LibreChat (MIT) y LobeChat (MIT, freemium) son las alternativas más cercanas en el navegador. Chatbox (GPL 3.0) es un cliente multiplataforma ligero, y AnythingLLM (MIT) añade chat con documentos en escritorio y web. Todas se conectan a una instancia local de Ollama, así que cambiar de interfaz no cambia tus modelos.',
+            a: 'LibreChat (MIT) y LobeChat (licencia LobeHub Community, freemium) son las alternativas más cercanas en el navegador. Chatbox (GPL 3.0) es un cliente multiplataforma ligero, y AnythingLLM (MIT) añade chat con documentos en escritorio y web. Todas se conectan a una instancia local de Ollama, así que cambiar de interfaz no cambia tus modelos.',
           },
           {
             q: '¿Debo elegir AnythingLLM o Jan?',
@@ -4136,7 +4136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais são as melhores alternativas ao Open WebUI?',
-            a: 'LibreChat (MIT) e LobeChat (MIT, freemium) são as alternativas mais próximas no navegador. O Chatbox (GPL 3.0) é um cliente multiplataforma leve, e o AnythingLLM (MIT) acrescenta chat com documentos no desktop e na web. Todos se conectam a uma instância local do Ollama, então trocar de interface não muda seus modelos.',
+            a: 'LibreChat (MIT) e LobeChat (licença LobeHub Community, freemium) são as alternativas mais próximas no navegador. O Chatbox (GPL 3.0) é um cliente multiplataforma leve, e o AnythingLLM (MIT) acrescenta chat com documentos no desktop e na web. Todos se conectam a uma instância local do Ollama, então trocar de interface não muda seus modelos.',
           },
           {
             q: 'Devo escolher AnythingLLM ou Jan?',
@@ -4741,7 +4741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل بدائل Open WebUI؟',
-            a: 'أقرب البدائل داخل المتصفح هما LibreChat (MIT) وLobeChat (MIT، مجاني جزئياً). أما Chatbox (GPL 3.0) فهو عميل خفيف متعدد المنصات، ويضيف AnythingLLM (MIT) الدردشة مع المستندات على سطح المكتب والويب. وتتصل جميعها بنسخة Ollama محلية، لذا لا يغيّر تبديل الواجهة نماذجك.',
+            a: 'أقرب البدائل داخل المتصفح هما LibreChat (MIT) وLobeChat (ترخيص LobeHub Community، مجاني جزئياً). أما Chatbox (GPL 3.0) فهو عميل خفيف متعدد المنصات، ويضيف AnythingLLM (MIT) الدردشة مع المستندات على سطح المكتب والويب. وتتصل جميعها بنسخة Ollama محلية، لذا لا يغيّر تبديل الواجهة نماذجك.',
           },
           {
             q: 'هل أختار AnythingLLM أم Jan؟',
@@ -5350,7 +5350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Open WebUI의 가장 좋은 대안은 무엇인가요?',
-            a: '브라우저 기반에서 가장 가까운 대안은 LibreChat(MIT)과 LobeChat(MIT, 프리미엄)입니다. Chatbox(GPL 3.0)는 가벼운 크로스 플랫폼 클라이언트이고, AnythingLLM(MIT)은 데스크톱과 웹에서 문서 채팅까지 제공합니다. 모두 로컬 Ollama에 연결되므로 UI를 바꿔도 사용하는 모델은 그대로입니다.',
+            a: '브라우저 기반에서 가장 가까운 대안은 LibreChat(MIT)과 LobeChat(LobeHub Community License, 프리미엄)입니다. Chatbox(GPL 3.0)는 가벼운 크로스 플랫폼 클라이언트이고, AnythingLLM(MIT)은 데스크톱과 웹에서 문서 채팅까지 제공합니다. 모두 로컬 Ollama에 연결되므로 UI를 바꿔도 사용하는 모델은 그대로입니다.',
           },
           {
             q: 'AnythingLLM과 Jan 중 무엇을 골라야 하나요?',
