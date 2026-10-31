@@ -57,7 +57,7 @@ export interface HubStartCard {
   /** Real title of the article behind the card. */
   title: string
   tone: HubTone
-  icon: 'package' | 'shield' | 'home' | 'trend'
+  icon: 'package' | 'shield' | 'home' | 'trend' | 'download' | 'trophy' | 'code' | 'chip' | 'coins' | 'laptop' | 'feather'
   badge?: string
 }
 

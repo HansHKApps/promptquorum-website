@@ -1,6 +1,10 @@
 import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
+import { llmThemes } from '@/lib/local-llms/themes'
+import { powerLLMContent } from '@/lib/power-local-llm/content'
+import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
+import { isPowerLLMArticlePublished } from '@/lib/power-local-llm/published'
 import type { Language } from '@/lib/blog/blogContent'
 
 export interface LLMHubData {
@@ -10,6 +14,8 @@ export interface LLMHubData {
   datesMap: Record<string, { publishDate?: string; dateModified?: string }>
   /** slugs that have content and are NOT in COMING_SOON_SLUGS */
   liveSlugs: string[]
+  /** power-local-llm URL slug → title/dates, only for the pages themes.ts lists under externalKeys (published ones). */
+  externalMap: Record<string, { title: string; publishDate?: string; dateModified?: string }>
 }
 
 /**
@@ -47,5 +53,21 @@ export function buildLLMHubData(lang: Language): LLMHubData {
     }
   }
 
-  return { titlesMap, datesMap, liveSlugs }
+  // Hardware and mobile tiles also surface pages from the power-local-llm cluster (workstation reviews, phone apps).
+  const externalMap: LLMHubData['externalMap'] = {}
+  for (const theme of llmThemes) {
+    for (const slug of theme.externalKeys ?? []) {
+      const content = powerLLMContent[POWER_LLM_SLUG_TO_KEY[slug] ?? slug]
+      const en = content?.en
+      const title = content?.[lang]?.title ?? en?.title
+      if (!en || !title || !isPowerLLMArticlePublished(slug, lang)) continue
+      externalMap[slug] = {
+        title,
+        publishDate: en.publishDate,
+        dateModified: en.dateModified,
+      }
+    }
+  }
+
+  return { titlesMap, datesMap, liveSlugs, externalMap }
 }
