@@ -6410,5 +6410,36 @@
       "period": "GSC export 2026-10-31 (last 28 days)"
     },
     "deployedAt": null
+  },
+  {
+    "id": "e48e300f-08a7-4d9c-a5dc-3dcb00975d3d",
+    "slug": "/balcony-solar/balcony-solar-greece-status-2027",
+    "date": "2026-10-31T08:18:56.781Z",
+    "fields": [
+      {
+        "field": "sections+faqs",
+        "old": "7 FAQs, no safety or cost/net-metering sections",
+        "new": "12 FAQs, + safety-conditions and cost-availability sections"
+      }
+    ],
+    "reason": "GSC-driven refresh (Greek-language queries on safety, cost/subsidy, net metering, availability, notification): added safety-conditions and cost-availability sections plus 5 FAQs in 9 locales; shortened over-budget titles in 7 locales",
+    "queries": [
+      "safety conditions",
+      "legal framework",
+      "are they available in greece",
+      "νομοθεσία",
+      "γνωστοποίηση",
+      "νετ μετερινγ",
+      "πότε θα βγει το πρόγραμμα;",
+      "φωτοβολταϊκά μπαλκονι"
+    ],
+    "baseline": {
+      "position": 3.7,
+      "impressions": 17,
+      "clicks": 1,
+      "ctr": 0.058823529411764705,
+      "period": "28d to 2026-10-31"
+    },
+    "deployedAt": null
   }
 ]
