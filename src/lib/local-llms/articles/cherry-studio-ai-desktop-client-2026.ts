@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-en.webp',
     title: 'Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App',
@@ -303,6 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-de.webp',
     title: 'Cherry Studio 2.0 im Jahr 2026: Die kostenlose Agent-basierte KI-Desktop-App',
@@ -603,6 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-es.webp',
     title: 'Cherry Studio 2.0 en 2026: la app de escritorio de IA gratuita basada en agentes',
@@ -903,6 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-fr.webp',
     title: 'Cherry Studio 2.0 en 2026 : l\'application de bureau IA gratuite à base d\'Agents',
@@ -1203,6 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-ja.webp',
     title: 'Cherry Studio 2.0 2026:エージェント型の無料AIデスクトップアプリ',
@@ -1503,6 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-zh.webp',
     title: 'Cherry Studio 2.0 2026:免费的Agent型AI桌面应用',
@@ -1803,6 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-pt.webp',
     title: 'Cherry Studio 2.0 em 2026: o app de desktop de IA gratuito baseado em Agentes',
@@ -2103,6 +2110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-ar.webp',
     title: 'Cherry Studio 2.0 في 2026: تطبيق سطح مكتب مجاني للذكاء الاصطناعي قائم على الوكلاء',
@@ -2403,6 +2411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-20',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/cherry-studio-ai-desktop-client-2026-hero-ko.webp',
     title: 'Cherry Studio 2.0 (2026): 무료 에이전트 기반 AI 데스크톱 앱',

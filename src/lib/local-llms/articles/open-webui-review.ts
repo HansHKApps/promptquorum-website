@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model',
     dateModified: '2026-10-09',
@@ -262,6 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI 2026: Die selbst gehostete ChatGPT-Oberfläche für Ollama und jedes KI-Modell',
     dateModified: '2026-10-09',
@@ -521,6 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI en 2026: la interfaz ChatGPT autoalojada para Ollama y cualquier modelo de IA',
     dateModified: '2026-10-09',
@@ -782,6 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI en 2026 : l\'interface ChatGPT auto-hébergée pour Ollama et tous les modèles d\'IA',
     dateModified: '2026-10-09',
@@ -1043,6 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI 2026年版:Ollamaとあらゆるモデルに対応するセルフホスト型ChatGPTインターフェース',
     dateModified: '2026-10-09',
@@ -1304,6 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI 2026：面向 Ollama 和任意 AI 模型的自托管 ChatGPT 界面',
     dateModified: '2026-10-09',
@@ -1565,6 +1571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI em 2026: A Interface ChatGPT Auto-Hospedada para Ollama e Qualquer Modelo de IA',
     dateModified: '2026-10-09',
@@ -1826,6 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI في 2026: واجهة ChatGPT ذاتية الاستضافة لـ Ollama وأي نموذج ذكاء اصطناعي',
     dateModified: '2026-10-09',
@@ -2087,6 +2095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Open WebUI 2026: Ollama와 모든 AI 모델을 위한 자체 호스팅 ChatGPT 인터페이스',
     dateModified: '2026-10-09',

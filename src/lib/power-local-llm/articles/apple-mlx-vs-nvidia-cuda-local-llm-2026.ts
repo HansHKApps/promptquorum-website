@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -584,6 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -1034,6 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -1560,6 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -2086,6 +2090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -2536,6 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -3103,6 +3109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -3670,6 +3677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
@@ -4237,6 +4245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
