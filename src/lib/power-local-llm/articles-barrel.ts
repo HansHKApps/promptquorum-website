@@ -216,6 +216,7 @@ import { article as a_best_local_coding_models_2026 } from './articles/best-loca
 import { article as a_best_local_llm_apps_android_2026 } from './articles/best-local-llm-apps-android-2026'
 import { article as a_best_local_llm_apps_iphone_2026 } from './articles/best-local-llm-apps-iphone-2026'
 import { article as a_best_local_llm_apps_mac } from './articles/best-local-llm-apps-mac'
+import { article as a_local_llm_app_alternatives } from './articles/local-llm-app-alternatives'
 import { article as a_enclave_ai_review_2026 } from './articles/enclave-ai-review-2026'
 import { article as a_liquid_apollo_review } from './articles/liquid-apollo-review'
 import { article as a_noema_review } from './articles/noema-review'
@@ -471,6 +472,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-local-llm-apps-android-2026':       a_best_local_llm_apps_android_2026,
   'best-local-llm-apps-iphone-2026':        a_best_local_llm_apps_iphone_2026,
   'best-local-llm-apps-mac':                a_best_local_llm_apps_mac,
+  'local-llm-app-alternatives':             a_local_llm_app_alternatives,
   'best-local-llm-creative-writing':   a_best_local_llm_creative_writing,
   'best-local-models-tool-calling-2026':    a_best_local_models_tool_calling_2026,
   'chat-with-1000-pdfs-locally':            a_chat_with_1000_pdfs_locally,

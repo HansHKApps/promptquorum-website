@@ -88,6 +88,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-local-llm-apps-iphone-2026',
   'best-local-llm-apps-android-2026',
   'best-local-llm-apps-mac',
+  'local-llm-app-alternatives',
   'loci-ai-review-offline-local-ai',
   'run-ai-on-tablet-ipad-android',
   'mobile-llm-models-phi4-gemma-smollm',
