@@ -6146,5 +6146,28 @@
       "ctr": 0.01092896174863388
     },
     "deployedAt": null
+  },
+  {
+    "id": "698bd124-3f98-46d9-a0b2-110ee5d5b106",
+    "slug": "/balcony-solar/balcony-solar-japan-status-2027",
+    "date": "2026-10-31T07:41:57.349Z",
+    "fields": [
+      {
+        "field": "title+metaDescription+FAQ",
+        "old": "title: ...Legal in Japan? 2027 Status Report (fr/es/pt/ar over budget)",
+        "new": "fr/es/pt/ar/zh titles and en/es/fr/zh descriptions brought into budget; roadmap FAQ added"
+      }
+    ],
+    "queries": [
+      "plug in solar japan"
+    ],
+    "baseline": {
+      "position": 9.8,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC export 2026-10-31, window not stated"
+    },
+    "deployedAt": null
   }
 ]
