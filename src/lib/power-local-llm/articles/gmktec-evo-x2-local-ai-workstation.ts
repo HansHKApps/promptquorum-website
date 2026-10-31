@@ -5,8 +5,8 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -202,8 +202,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'GMKtec EVO-X2 for Local AI: Specs, Price and Verdict',
       'description': 'GMKtec EVO-X2 with Ryzen AI Max+ 395 and 128 GB: verified specs, conflicting US prices with sources, third-party findings and who should skip it.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -224,8 +224,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -421,8 +421,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'GMKtec EVO-X2 für lokale KI: Specs, Preis und Fazit',
       'description': 'GMKtec EVO-X2 mit Ryzen AI Max+ 395 und 128 GB: geprüfte Specs, widersprüchliche US-Preise mit Quellen, Befunde Dritter und für wen er nichts ist.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -443,8 +443,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -640,8 +640,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': "GMKtec EVO-X2 pour l'IA locale : fiche technique, prix et verdict",
       'description': "GMKtec EVO-X2 avec Ryzen AI Max+ 395 et 128 Go : specs vérifiées, prix US contradictoires avec sources, constats de tiers et pour qui l'éviter.",
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -662,8 +662,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -859,8 +859,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'ローカルAI向けGMKtec EVO-X2: 仕様・価格・総評',
       'description': 'Ryzen AI Max+ 395と128GBを搭載したGMKtec EVO-X2。確認済みの仕様、情報源つきで食い違う米国価格、第三者の検証結果、見送るべき人を解説します。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -880,8 +880,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1077,8 +1077,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '用于本地AI的GMKtec EVO-X2：规格、价格与结论',
       'description': 'GMKtec EVO-X2搭载Ryzen AI Max+ 395与128 GB内存：已核实的规格、互相矛盾的美国价格及来源、第三方评测发现，以及哪些人应跳过它。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1098,8 +1098,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1295,8 +1295,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'GMKtec EVO-X2 para IA local: especificaciones, precio y veredicto',
       'description': 'GMKtec EVO-X2 con Ryzen AI Max+ 395 y 128 GB: especificaciones verificadas, precios de EE. UU. contradictorios con fuentes y hallazgos de terceros.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1317,8 +1317,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1514,8 +1514,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'GMKtec EVO-X2 para IA local: especificações, preço e veredito',
       'description': 'GMKtec EVO-X2 com Ryzen AI Max+ 395 e 128 GB: specs verificadas, preços dos EUA conflitantes com fontes, achados de terceiros e quem deve evitar.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1536,8 +1536,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1733,8 +1733,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'GMKtec EVO-X2 للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم',
       'description': 'GMKtec EVO-X2 بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB: مواصفات موثقة وأسعار أمريكية متعارضة مع مصادرها ونتائج الأطراف الثالثة ولمن لا يناسب هذا الجهاز.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1754,8 +1754,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'GMKtec EVO-X2',
@@ -1951,8 +1951,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '로컬 AI용 GMKtec EVO-X2: 사양, 가격, 평가',
       'description': 'Ryzen AI Max+ 395와 128GB를 탑재한 GMKtec EVO-X2: 확인된 사양, 출처별로 엇갈리는 미국 가격, 제3자 평가, 비추천 대상.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
