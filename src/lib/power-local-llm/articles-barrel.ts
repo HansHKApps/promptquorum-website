@@ -202,6 +202,7 @@ import { article as a_best_embedding_models_local_rag_2026 } from './articles/be
 import { article as a_best_gpu_buying_guide_local_llm_2026 } from './articles/best-gpu-buying-guide-local-llm-2026'
 import { article as a_best_mac_for_local_ai_2026 } from './articles/best-mac-for-local-ai-2026'
 import { article as a_asus_mini_pc_local_ai_2026 } from './articles/asus-mini-pc-local-ai-2026'
+import { article as a_local_ai_workstations_strix_halo_vs_dgx_spark } from './articles/local-ai-workstations-strix-halo-vs-dgx-spark'
 import { article as a_local_llm_electricity_cost_balcony_solar_2026 } from './articles/local-llm-electricity-cost-balcony-solar-2026'
 import { article as a_local_ai_workstation_build_guide_2026 } from './articles/local-ai-workstation-build-guide'
 import { article as a_best_vpn_ai_privacy_local_llm_2026 } from './articles/best-vpn-ai-privacy-local-llm-2026'
@@ -458,6 +459,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-gpu-buying-guide-local-llm-2026':   a_best_gpu_buying_guide_local_llm_2026,
   'best-mac-for-local-ai-2026':             a_best_mac_for_local_ai_2026,
   'asus-mini-pc-local-ai-2026':             a_asus_mini_pc_local_ai_2026,
+  'local-ai-workstations-strix-halo-vs-dgx-spark': a_local_ai_workstations_strix_halo_vs_dgx_spark,
   'local-llm-electricity-cost-balcony-solar-2026': a_local_llm_electricity_cost_balcony_solar_2026,
   'local-ai-workstation-build-guide':  a_local_ai_workstation_build_guide_2026,
   'best-vpn-ai-privacy-local-llm-2026':     a_best_vpn_ai_privacy_local_llm_2026,
