@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-08-26',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-26',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'How Much Unified Memory for Local LLMs? 16GB vs 36GB vs 64GB vs 128GB (2026)',
     seoTitle: 'Unified Memory = VRAM: 16GB=7B, 64GB=34B, 128GB=70B (2026)',
@@ -239,6 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '¿Cuánta memoria unificada necesitas para LLMs locales? 16GB vs 36GB vs 64GB vs 128GB (2026)',
     seoTitle: 'Memoria Unificada = VRAM: 16GB=7B, 128GB=70B (2026)',
@@ -495,6 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'كم تحتاج من الذاكرة الموحدة لنماذج ⁨LLM⁩ المحلية؟ ⁨16GB⁩ مقابل ⁨36GB⁩ مقابل ⁨64GB⁩ مقابل ⁨128GB⁩ (⁨2026⁩)',
     seoTitle: 'الذاكرة الموحدة = ⁨VRAM⁩: ⁨16GB⁩=⁨7B⁩، ⁨128GB⁩=⁨70B⁩ (⁨2026⁩)',
@@ -735,6 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Quanta memória unificada você precisa para LLMs locais? 16GB vs 36GB vs 64GB vs 128GB (2026)',
     seoTitle: 'Memória Unificada = VRAM: 16GB=7B, 128GB=70B (2026)',
@@ -857,6 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Wie viel Unified Memory für lokale LLMs? 16 GB vs 36 GB vs 64 GB vs 128 GB (2026)',
     seoTitle: 'Unified Memory = VRAM: 16GB=7B, 64GB=34B, 128GB=70B (2026)',
@@ -1102,6 +1107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Quelle mémoire unifiée pour les LLM locaux ? 16 Go vs 36 Go vs 64 Go vs 128 Go (2026)',
     seoTitle: 'Mémoire Unifiée = VRAM : 16Go=7B, 128Go=70B (2026)',
@@ -1358,6 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'ローカルLLMに必要なユニファイドメモリは？16GB vs 36GB vs 64GB vs 128GB（2026年）',
     seoTitle: 'Mac統合メモリ=VRAM? LLMサイジング(2026)',
@@ -1626,6 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '本地LLM需要多少统一内存？16GB vs 36GB vs 64GB vs 128GB（2026）',
     seoTitle: '统一内存=VRAM？Mac本地LLM显存指南(2026)',
@@ -1907,6 +1915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '로컬 LLM에 통합 메모리 얼마나 필요할까요? 16GB vs 36GB vs 64GB vs 128GB (2026)',
     seoTitle: '통합 메모리=VRAM? Mac LLM 가이드(2026)',

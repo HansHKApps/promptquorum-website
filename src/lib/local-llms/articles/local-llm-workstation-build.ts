@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: 'Build a Local LLM PC: Best Workstation Setup (GPU, VRAM, 7B–70B Models)',
       heroImage: '/images/local-llm-workstation-build-overview-hero-en.webp',
@@ -381,6 +382,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: 'Local LLM PC bauen: Beste Workstation (GPU, VRAM, 7B–70B Modelle)',
       heroImage: '/images/local-llm-workstation-build-overview-hero-de.webp',
@@ -766,6 +768,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: 'Construire un PC LLM local : meilleure workstation (GPU, VRAM, modèles 7B–70B)',
       heroImage: '/images/local-llm-workstation-build-overview-hero-fr.webp',
@@ -1134,6 +1137,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: 'ローカルLLM用PC構築：最適ワークステーション（GPU・VRAM・7B〜70B対応）',
       heroImage: '/images/local-llm-workstation-build-overview-hero-ja.webp',
@@ -1499,6 +1503,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: '本地LLM电脑配置指南：最佳工作站方案（GPU、VRAM、7B–70B模型）',
       heroImage: '/images/local-llm-workstation-build-overview-hero-zh.webp',
@@ -1867,6 +1872,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: 'Construye un PC para LLM Local: Mejor Estación de Trabajo (GPU, VRAM, Modelos 7B–70B)',
       heroImage: '/images/local-llm-workstation-build-overview-hero-es.webp',
@@ -2235,6 +2241,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: 'ابنِ حاسوبًا لـ⁨LLM⁩ المحلي: أفضل محطة عمل (⁨GPU⁩، ⁨VRAM⁩، نماذج ⁨7B⁩–⁨70B⁩)',
       heroImage: '/images/local-llm-workstation-build-overview-hero-ar.webp',
@@ -2603,6 +2610,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware Setups',
       title: 'Monte um PC para LLM Local: Melhor Estação de Trabalho (GPU, VRAM, Modelos 7B–70B)',
       heroImage: '/images/local-llm-workstation-build-overview-hero-pt.webp',
@@ -2702,6 +2710,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '하드웨어 설정',
       title: '로컬 LLM PC 제작: 최고의 워크스테이션 설정 (GPU, VRAM, 7B~70B 모델)',
     heroImage: '/images/local-llm-workstation-build-overview-hero-ko.webp',

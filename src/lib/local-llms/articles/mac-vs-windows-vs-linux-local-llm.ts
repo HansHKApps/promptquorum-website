@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared',
       seoTitle: 'Mac vs Windows vs Linux for Local LLMs 2026: M5 vs RTX 5090',
@@ -277,6 +278,7 @@ schema: {
     es: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'Mac vs Windows vs Linux para LLMs locales 2026: Apple M5, RTX 5090 y servidor Linux comparados',
       seoTitle: 'Mac vs Windows vs Linux para LLMs locales 2026',
@@ -547,6 +549,7 @@ schema: {
     ar: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: '⁨Mac⁩ مقابل ⁨Windows⁩ مقابل ⁨Linux⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: مقارنة ⁨Apple M5⁩ و⁨RTX 5090⁩ وخادم ⁨Linux⁩',
       seoTitle: '⁨Mac⁩ مقابل ⁨Windows⁩ مقابل ⁨Linux⁩ لـ ⁨LLMs⁩ المحلية ⁨2026⁩',
@@ -817,6 +820,7 @@ schema: {
     pt: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'Mac vs Windows vs Linux para LLMs Locais 2026: Apple M5, RTX 5090 e Servidor Linux Comparados',
       seoTitle: 'Mac vs Windows vs Linux para LLMs locais 2026',
@@ -1004,6 +1008,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Betriebssystem-Vergleich',
       freshness_tier: 'annual',
       specific_year: 2026,
@@ -1216,6 +1221,7 @@ schema: {
     },
     fr: {
           freshness_tier: 'annual',
+          designSkin: 'hub',
           theme: 'Coûts et comparaisons',
           title: 'Mac vs Windows vs Linux pour les LLM locaux 2026 : Apple M5, RTX 5090 et serveur Linux comparés',
           seoTitle: 'Mac vs Windows vs Linux pour les LLM locaux 2026 : M5 vs RTX 5090',
@@ -1480,6 +1486,7 @@ schema: {
     
     ja: {
           freshness_tier: 'annual',
+          designSkin: 'hub',
           theme: 'コスト比較',
           title: 'Mac vs Windows vs Linux でローカルLLM 2026年 : Apple M5、RTX 5090 とLinuxサーバー比較',
           seoTitle: 'Mac vs Windows vs Linux ローカルLLM 2026年 : M5 vs RTX 5090',
@@ -1732,6 +1739,7 @@ schema: {
     
     zh: {
           freshness_tier: 'annual',
+          designSkin: 'hub',
           theme: '成本对比',
           title: 'Mac vs Windows vs Linux 本地LLM 2026：Apple M5、RTX 5090和Linux服务器对比',
           seoTitle: 'Mac vs Windows vs Linux 本地LLM 2026：M5 vs RTX 5090',
@@ -1983,6 +1991,7 @@ schema: {
         },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'Mac vs Windows vs Linux 로컬 LLM 2026: Apple M5, RTX 5090, Linux 서버 비교',
       seoTitle: 'Mac vs Windows vs Linux 로컬 LLM 2026: M5 vs RTX 5090',

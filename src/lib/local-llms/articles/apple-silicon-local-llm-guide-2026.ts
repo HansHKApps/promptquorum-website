@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon for Local LLMs 2026: M1 to M6 Complete Guide',
     seoTitle: 'Apple Silicon 2026: M6 to M5 Ultra for Local LLMs',
@@ -304,6 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon para LLMs locales 2026: Guía completa de M1 a M6',
     seoTitle: 'Apple Silicon 2026: M6 a M5 Ultra para IA Local',
@@ -621,6 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '⁨Apple Silicon⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: دليل كامل من ⁨M1⁩ إلى ⁨M6⁩',
     seoTitle: '⁨Apple Silicon⁩ ⁨2026⁩: من ⁨M6⁩ إلى ⁨M5 Ultra⁩ لنماذج ⁨LLM⁩',
@@ -919,6 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon para LLMs locais 2026: guia completo do M1 ao M6',
     seoTitle: 'Apple Silicon 2026: M6 a M5 Ultra para LLMs locais',
@@ -1223,6 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon für lokale LLMs 2026: M1 bis M6 — Vollständiger Leitfaden',
     seoTitle: 'Apple Silicon 2026: M6 bis M5 Ultra für lokale LLMs',
@@ -1488,6 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon pour LLMs locaux 2026 : Guide complet M1 à M6',
     seoTitle: 'Apple Silicon 2026 : M6 à M5 Ultra pour LLMs locaux',
@@ -1714,6 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple SiliconでのローカルLLM 2026：M1～M6の完全ガイド',
     seoTitle: 'Apple Silicon 2026：M6からM5 Ultraまで',
@@ -1960,6 +1967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon本地LLM完整指南2026：M1至M6',
     seoTitle: 'Mac 本地大模型 2026：M5 Pro/Max/Ultra',
@@ -2230,6 +2238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: '하드웨어 및 성능',
     title: 'Apple Silicon 로컬 LLM 2026: M1부터 M6까지 완전 가이드',
     seoTitle: 'Apple Silicon 2026: 로컬 LLM용 M6부터 M5 Ultra까지',
