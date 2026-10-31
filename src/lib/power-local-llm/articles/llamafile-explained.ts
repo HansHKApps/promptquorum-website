@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/llamafile-explained-hero-en.webp',
     freshness_tier: 'semi_annual',
@@ -237,6 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-de.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: 'Nutzer, die ein LLM als einzelne portable ausführbare Datei ohne Laufzeitabhängigkeiten verteilen oder ausführen möchten, sowie alle, die llamafile mit anderen installationsfreien lokalen LLM-Optionen wie KoboldCpp vergleichen',
     primaryTerm: 'llamafile',
@@ -332,6 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-fr.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: 'Utilisateurs voulant distribuer ou exécuter un LLM comme un seul exécutable portable sans dépendances, et toute personne comparant llamafile à d\'autres options locales sans installation comme KoboldCpp',
     primaryTerm: 'llamafile',
@@ -427,6 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-es.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: 'Usuarios que quieren distribuir o ejecutar un LLM como un único ejecutable portátil sin dependencias, y cualquiera que compare llamafile con otras opciones locales sin instalación como KoboldCpp',
     primaryTerm: 'llamafile',
@@ -522,6 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-ja.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: 'LLMを実行時依存関係のない単一のポータブル実行ファイルとして配布・実行したいユーザー、およびllamafileをKoboldCppなど他のインストール不要のローカルLLM選択肢と比較したいすべての人',
     primaryTerm: 'llamafile',
@@ -617,6 +622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-zh.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: '希望将LLM作为无运行时依赖的单一便携可执行文件进行分发或运行的用户,以及任何将llamafile与KoboldCpp等其他免安装本地LLM方案进行比较的人',
     primaryTerm: 'llamafile',
@@ -712,6 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-pt.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: 'Usuários que querem distribuir ou executar um LLM como um único executável portátil sem dependências de tempo de execução, e qualquer pessoa que esteja comparando o llamafile com outras opções locais sem instalação, como o KoboldCpp',
     primaryTerm: 'llamafile',
@@ -807,6 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-ar.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: 'المستخدمون الذين يريدون توزيع أو تشغيل نموذج لغوي كبير كملف تنفيذي واحد قابل للنقل بلا اعتماديات تشغيل، وأي شخص يقارن llamafile بخيارات محلية أخرى لا تتطلب تثبيتاً مثل KoboldCpp',
     primaryTerm: 'llamafile',
@@ -902,6 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/llamafile-explained-hero-ko.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Beginner',
     audience: 'LLM을 런타임 의존성 없는 단일 휴대용 실행 파일로 배포하거나 실행하고자 하는 사용자, 그리고 llamafile을 KoboldCpp 같은 다른 설치 불필요 로컬 LLM 옵션과 비교하려는 모든 사람',
     primaryTerm: 'llamafile',

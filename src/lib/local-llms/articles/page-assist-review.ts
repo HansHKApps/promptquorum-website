@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-en.webp',
     title: 'Page Assist Review 2026: Browser Sidebar for Local AI Models',
@@ -300,6 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-de.webp',
     title: 'Page-Assist-Rezension 2026: Browser-Sidebar für lokale KI-Modelle',
@@ -595,6 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-fr.webp',
     title: 'Page Assist : Test 2026 de la barre latérale de navigateur pour IA locale',
@@ -890,6 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-ja.webp',
     title: 'Page Assistレビュー2026：ローカルAIモデル用ブラウザサイドバー',
@@ -1185,6 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-zh.webp',
     title: 'Page Assist 评测2026：本地AI模型的浏览器侧边栏',
@@ -1480,6 +1485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-es.webp',
     title: 'Page Assist: análisis 2026 de la barra lateral de navegador para IA local',
@@ -1775,6 +1781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-pt.webp',
     title: 'Page Assist: análise 2026 da barra lateral de navegador para IA local',
@@ -2070,6 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-ar.webp',
     title: 'مراجعة Page Assist 2026: الشريط الجانبي للمتصفح للنماذج الذكية المحلية',
@@ -2365,6 +2373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/page-assist-review-hero-ko.webp',
     title: 'Page Assist 리뷰 2026: 로컬 AI 모델용 브라우저 사이드바',

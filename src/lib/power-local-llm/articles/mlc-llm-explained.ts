@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/mlc-llm-explained-hero-en.webp',
     freshness_tier: 'semi_annual',
@@ -234,6 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/mlc-llm-explained-hero-de.webp',
     freshness_tier: 'semi_annual',
@@ -365,6 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/mlc-llm-explained-hero-fr.webp',
     freshness_tier: 'semi_annual',
@@ -496,6 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/mlc-llm-explained-hero-es.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: 'Desarrolladores que despliegan el mismo modelo en hardware muy distinto — teléfonos, navegadores y GPU de escritorio —, y cualquiera que compare motores basados en compilación ML con motores escritos a mano como llama.cpp o vLLM',
     primaryTerm: 'MLC LLM',
@@ -590,6 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/mlc-llm-explained-hero-ja.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: 'スマートフォン、ブラウザ、デスクトップGPUという大きく異なるハードウェアに同一モデルをデプロイする開発者、およびllama.cppやvLLMのような手書きエンジンとML コンパイル型エンジンを比較したい人',
     primaryTerm: 'MLC LLM',
@@ -684,6 +689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/mlc-llm-explained-hero-zh.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: '需要在手机、浏览器、桌面 GPU 等差异巨大的硬件上部署同一模型的开发者,以及正在将基于 ML 编译的引擎与 llama.cpp、vLLM 等手写引擎进行比较的人',
     primaryTerm: 'MLC LLM',
@@ -778,6 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/mlc-llm-explained-hero-pt.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: 'Desenvolvedores que implantam o mesmo modelo em hardwares muito diferentes — celulares, navegadores e GPUs de desktop —, e qualquer pessoa comparando engines baseadas em compilação de ML com engines escritas à mão como llama.cpp ou vLLM',
     primaryTerm: 'MLC LLM',
@@ -872,6 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/mlc-llm-explained-hero-ar.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: 'مطورون ينشرون النموذج نفسه على عتاد شديد الاختلاف — هواتف ومتصفحات ومعالجات رسومية لسطح المكتب —، وأي شخص يقارن المحركات القائمة على تجميع التعلم الآلي بمحركات مكتوبة يدويًا مثل llama.cpp أو vLLM',
     primaryTerm: 'MLC LLM',
@@ -966,6 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/mlc-llm-explained-hero-ko.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: '휴대폰, 브라우저, 데스크톱 GPU처럼 매우 다른 하드웨어에 동일한 모델을 배포하는 개발자, 그리고 ML 컴파일 기반 엔진을 llama.cpp나 vLLM 같은 수작업 엔진과 비교하려는 사람',
     primaryTerm: 'MLC LLM',

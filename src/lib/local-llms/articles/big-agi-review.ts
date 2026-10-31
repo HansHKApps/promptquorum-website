@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-en.webp',
     title: 'Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare',
@@ -296,6 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-de.webp',
     title: 'Big-AGI-Rezension 2026: Selbst gehosteter Multi-Modell-Chat mit Beam-Vergleich',
@@ -591,6 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-fr.webp',
     title: 'Big-AGI : avis 2026 sur le chat multi-modèle auto-hébergé avec comparaison Beam',
@@ -884,6 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-ja.webp',
     title: 'Big-AGIレビュー2026：Beam比較機能を持つ自己ホスト型マルチモデルチャット',
@@ -1177,6 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-zh.webp',
     title: 'Big-AGI 评测 2026：支持 Beam 对比的自托管多模型聊天工具',
@@ -1470,6 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-es.webp',
     title: 'Big-AGI: reseña 2026 del chat multi-modelo auto-alojado con comparación Beam',
@@ -1763,6 +1769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-pt.webp',
     title: 'Big-AGI: análise 2026 do chat multi-modelo auto-hospedado com comparação Beam',
@@ -2056,6 +2063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-ar.webp',
     title: 'مراجعة Big-AGI 2026: دردشة متعددة النماذج ذاتية الاستضافة مع مقارنة Beam',
@@ -2349,6 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-ko.webp',
     title: 'Big-AGI 리뷰 2026: Beam 비교 기능을 갖춘 셀프 호스팅 멀티 모델 채팅',
