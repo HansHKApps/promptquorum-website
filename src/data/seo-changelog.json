@@ -6226,5 +6226,165 @@
     ],
     "baseline": null,
     "deployedAt": null
+  },
+  {
+    "id": "8694ec93-2df6-470c-a075-8126dd5fecd5",
+    "slug": "/directory",
+    "date": "2026-10-31T07:25:59.349Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Software Directory: 337 Apps & Tools (2026)",
+        "new": "Local LLM Apps & Software: 337 Tools to Compare (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Browse 337 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
+        "new": "Compare 337 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware."
+      }
+    ],
+    "reason": "directory CTR: query-vocabulary titles/meta + GUI/mobile FAQ mirroring GSC queries (28d to 2026-10-28; baseline blended, much bleed)",
+    "queries": [
+      "llm apps",
+      "llm software",
+      "local llm apps",
+      "llm client",
+      "best local llm gui",
+      "what local llm tools work on android and ios?"
+    ],
+    "baseline": {
+      "position": 13.5,
+      "impressions": 1500,
+      "clicks": 11,
+      "ctr": 0.007333333333333333,
+      "period": "28d to 2026-10-28 (blended page)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eabda5e4-defd-41cc-b6a4-c8bec08aec16",
+    "slug": "/de/directory",
+    "date": "2026-10-31T07:25:59.496Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Verzeichnis lokaler LLM-Software: 337 Apps & Tools (2026)",
+        "new": "LLM-Tools für lokale KI: 337 Apps im Vergleich (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Entdecken Sie 337 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
+        "new": "Vergleichen Sie 337 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware."
+      }
+    ],
+    "reason": "directory CTR: query-vocabulary titles/meta + GUI/mobile FAQ mirroring GSC queries (28d to 2026-10-28; baseline blended, much bleed)",
+    "queries": [
+      "llm tools",
+      "llm software",
+      "llm apps"
+    ],
+    "baseline": {
+      "position": 8.4,
+      "impressions": 135,
+      "clicks": 2,
+      "ctr": 0.014814814814814815,
+      "period": "28d to 2026-10-28 (blended page)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6f99a580-e9f1-404f-80f7-07f0eb663907",
+    "slug": "/fr/directory",
+    "date": "2026-10-31T07:25:59.591Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Logiciels LLM locaux : 337 outils et apps (2026)",
+        "new": "Logiciels & outils LLM locaux : 337 apps comparées (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Parcourez 337 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
+        "new": "Comparez 337 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir."
+      }
+    ],
+    "reason": "directory CTR: query-vocabulary titles/meta + GUI/mobile FAQ mirroring GSC queries (28d to 2026-10-28; baseline blended, much bleed)",
+    "queries": [
+      "logiciel llm",
+      "outil llm",
+      "outils llm",
+      "llm local"
+    ],
+    "baseline": {
+      "position": 11,
+      "impressions": 263,
+      "clicks": 3,
+      "ctr": 0.011406844106463879,
+      "period": "28d to 2026-10-28 (blended page)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5308ff7c-6c77-4bc5-9b52-b35cde8710ae",
+    "slug": "/es/directory",
+    "date": "2026-10-31T07:25:59.685Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Software de LLM local: 337 apps y herramientas (2026)",
+        "new": "Herramientas LLM locales: 337 apps y software (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Explora 337 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
+        "new": "Compara 337 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige."
+      }
+    ],
+    "reason": "directory CTR: query-vocabulary titles/meta + GUI/mobile FAQ mirroring GSC queries (28d to 2026-10-28; baseline blended, much bleed)",
+    "queries": [
+      "herramientas llm",
+      "herramienta llm",
+      "llm tools"
+    ],
+    "baseline": {
+      "position": 7.5,
+      "impressions": 173,
+      "clicks": 4,
+      "ctr": 0.023121387283236993,
+      "period": "28d to 2026-10-28 (blended page)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c3eeecd6-e75b-4162-9ea8-1c4b968a43f1",
+    "slug": "/zh/directory",
+    "date": "2026-10-31T07:25:59.778Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地LLM工具与AI应用大全：337款（2026）",
+        "new": "本地AI工具与LLM应用：337款对比（2026）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "收录337款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+        "new": "对比337款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。"
+      }
+    ],
+    "reason": "directory CTR: query-vocabulary titles/meta + GUI/mobile FAQ mirroring GSC queries (28d to 2026-10-28; baseline blended, much bleed)",
+    "queries": [
+      "本地ai工具",
+      "llm前端应用",
+      "免费llm",
+      "本地ai推薦"
+    ],
+    "baseline": {
+      "position": 5.4,
+      "impressions": 773,
+      "clicks": 7,
+      "ctr": 0.009055627425614488,
+      "period": "28d to 2026-10-28 (blended page)"
+    },
+    "deployedAt": null
   }
 ]
