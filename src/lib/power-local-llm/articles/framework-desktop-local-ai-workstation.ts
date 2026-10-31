@@ -5,8 +5,8 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -205,8 +205,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Framework Desktop for Local AI: Specs, Price and Verdict',
       'description': 'Framework Desktop for local AI: 192 GB Ryzen AI Max+ PRO 495 from $6,799, 128 GB model $3,449. Specs, sourced prices, what reports show, who should skip.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -227,8 +227,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -427,8 +427,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Framework Desktop für lokale KI: Spezifikationen, Preis und Fazit',
       'description': 'Framework Desktop für lokale KI: 192 GB mit Ryzen AI Max+ PRO 495 ab 6.799 $, Modell mit 128 GB 3.449 $. Specs, belegte Preise und Berichte.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -449,8 +449,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -649,8 +649,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': "Framework Desktop pour l'IA locale : caractéristiques, prix et verdict",
       'description': "Framework Desktop pour l'IA locale : 192 Go Ryzen AI Max+ PRO 495 dès $6,799, modèle 128 Go à $3,449. Specs, prix sourcés, ce que montrent les rapports.",
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -671,8 +671,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -871,8 +871,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'ローカルAI向けFramework Desktop: 仕様・価格・評価',
       'description': 'ローカルAI向けFramework Desktop。192GB版（PRO 495）は$6,799から、128GB版は$3,449。仕様、出典付き価格、報道の内容、見送るべき人を整理。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -892,8 +892,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -1092,8 +1092,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '用于本地AI的Framework Desktop：规格、价格与结论',
       'description': 'Framework Desktop本地AI指南：192 GB的Ryzen AI Max+ PRO 495起价$6,799，128 GB机型$3,449。规格、有来源的价格、报道内容，以及谁该跳过。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1113,8 +1113,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -1313,8 +1313,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Framework Desktop para IA local: especificaciones, precio y veredicto',
       'description': 'Framework Desktop para IA local: 192 GB con PRO 495 desde $6,799, modelo de 128 GB a $3,449. Specs, precios con fuentes y qué muestran los informes.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1335,8 +1335,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -1535,8 +1535,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Framework Desktop para IA local: especificações, preço e veredito',
       'description': 'Framework Desktop para IA local: Ryzen AI Max+ PRO 495 de 192 GB a partir de $6,799, modelo de 128 GB a $3,449. Specs, preços com fonte e quem deve evitar.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1557,8 +1557,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -1757,8 +1757,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Framework Desktop للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
       'description': 'Framework Desktop للذكاء الاصطناعي المحلي: طراز 192 GB من $6,799 وطراز 128 GB بسعر $3,449. المواصفات وأسعار موثقة وما تُظهره التقارير المستقلة.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1778,8 +1778,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Framework Desktop',
@@ -1978,8 +1978,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '로컬 AI용 Framework Desktop: 사양, 가격, 평가',
       'description': '로컬 AI용 Framework Desktop: 192GB Ryzen AI Max+ PRO 495는 $6,799부터, 128GB는 $3,449. 사양, 출처 표기 가격, 피해야 할 경우.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',

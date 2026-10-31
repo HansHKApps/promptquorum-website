@@ -5,8 +5,8 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -200,8 +200,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark for Local AI: Specs, Price and Verdict',
       'description': 'NVIDIA DGX Spark for local AI: verified GB10 specs, 128 GB and 64 GB US prices with sources, what independent tests show, and who should skip it.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -222,8 +222,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -417,8 +417,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark für lokale KI: Spezifikationen, Preis und Fazit',
       'description': 'NVIDIA DGX Spark für lokale KI: geprüfte GB10-Daten, US-Preise für 128 und 64 GB mit Quellen, Ergebnisse unabhängiger Tests und wer verzichten sollte.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -439,8 +439,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -634,8 +634,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': "NVIDIA DGX Spark pour l'IA locale : caractéristiques, prix et verdict",
       'description': "NVIDIA DGX Spark pour l'IA locale : specs GB10 vérifiées, prix US 128 Go et 64 Go sourcés, ce que disent les tests indépendants, et qui devrait s'abstenir.",
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -656,8 +656,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -851,8 +851,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'ローカルAI向けNVIDIA DGX Spark: 仕様・価格・評価',
       'description': 'NVIDIA DGX SparkをローカルAI向けに解説。GB10の仕様、128GB/64GB版の出典付き米国価格、独立テストの結果、見送るべき人を整理しました。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -872,8 +872,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -1067,8 +1067,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '用于本地AI的NVIDIA DGX Spark：规格、价格与结论',
       'description': 'NVIDIA DGX Spark本地AI指南：已核实的GB10规格、128 GB与64 GB版本的美国价格及来源、独立测试结果，以及哪些人应该跳过它。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1088,8 +1088,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -1283,8 +1283,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark para IA local: especificaciones, precio y veredicto',
       'description': 'NVIDIA DGX Spark para IA local: specs del GB10, precios en EE. UU. de 128 GB y 64 GB con fuentes, qué muestran las pruebas y quién debe evitarla.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1305,8 +1305,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -1500,8 +1500,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark para IA local: especificações, preço e veredito',
       'description': 'NVIDIA DGX Spark para IA local: specs do GB10, preços nos EUA de 128 GB e 64 GB com fontes, o que mostram os testes independentes e quem deve evitá-lo.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1522,8 +1522,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -1717,8 +1717,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'NVIDIA DGX Spark للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة',
       'description': 'NVIDIA DGX Spark للذكاء الاصطناعي المحلي: مواصفات GB10 الموثقة وأسعار 128 GB و64 GB الأمريكية بمصادرها، ونتائج الاختبارات المستقلة، ولمن لا يناسب.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1738,8 +1738,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'NVIDIA DGX Spark',
@@ -1933,8 +1933,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '로컬 AI용 NVIDIA DGX Spark: 사양, 가격, 평가',
       'description': '로컬 AI용 NVIDIA DGX Spark: 검증된 GB10 사양, 128GB와 64GB 모델의 출처 표기 미국 가격, 독립 테스트 결과, 구매를 피해야 할 경우.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',

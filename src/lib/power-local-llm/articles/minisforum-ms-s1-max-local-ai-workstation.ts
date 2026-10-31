@@ -5,8 +5,8 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -203,8 +203,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Minisforum MS-S1 MAX for Local AI: Specs, Price and Verdict',
       'description': 'Minisforum MS-S1 MAX for local AI: Ryzen AI Max+ 395, 128 GB, dual 10GbE, PCIe slot, plus the 192 GB P495. Sourced US prices and what reviews found.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -225,8 +225,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -423,8 +423,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Minisforum MS-S1 MAX für lokale KI: Specs, Preis und Fazit',
       'description': 'Minisforum MS-S1 MAX für lokale KI: Ryzen AI Max+ 395, 128 GB, zwei 10GbE, PCIe-Steckplatz, dazu der P495 mit 192 GB. Belegte US-Preise und Testbefunde.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -445,8 +445,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -643,8 +643,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': "Minisforum MS-S1 MAX pour l'IA locale : fiche technique, prix et verdict",
       'description': "Minisforum MS-S1 MAX pour l'IA locale : Ryzen AI Max+ 395, 128 Go, double 10GbE, slot PCIe, et la P495 de 192 Go. Prix US sourcés et constats des tests.",
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -665,8 +665,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -863,8 +863,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'ローカルAI向けMinisforum MS-S1 MAX: 仕様・価格・総評',
       'description': 'ローカルAI向けMinisforum MS-S1 MAX。Ryzen AI Max+ 395、128GB、デュアル10GbE、PCIeスロットと192GBのP495を解説。出典付き米国価格とレビュー結果も掲載。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -884,8 +884,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -1082,8 +1082,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '用于本地AI的Minisforum MS-S1 MAX：规格、价格与结论',
       'description': 'Minisforum MS-S1 MAX本地AI：Ryzen AI Max+ 395、128 GB内存、双10GbE与PCIe插槽，另含192 GB的P495。有来源的美国价格，以及评测的发现。',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1103,8 +1103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -1301,8 +1301,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Minisforum MS-S1 MAX para IA local: especificaciones, precio y veredicto',
       'description': 'Minisforum MS-S1 MAX para IA local: Ryzen AI Max+ 395, 128 GB, doble 10GbE, ranura PCIe y P495 de 192 GB. Precios de EE. UU. con fuente y reseñas.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1323,8 +1323,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -1521,8 +1521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Minisforum MS-S1 MAX para IA local: especificações, preço e veredito',
       'description': 'Minisforum MS-S1 MAX para IA local: Ryzen AI Max+ 395, 128 GB, 10GbE duplo, slot PCIe e o P495 de 192 GB. Preços dos EUA com fonte e análises.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1543,8 +1543,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -1741,8 +1741,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': 'Minisforum MS-S1 MAX للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم',
       'description': 'Minisforum MS-S1 MAX للذكاء الاصطناعي المحلي: Ryzen AI Max+ 395 وذاكرة 128 GB ومنفذا 10GbE وفتحة PCIe، ونسخة P495 بذاكرة 192 GB. أسعار أمريكية موثقة.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1762,8 +1762,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    publishDate: '2026-11-01',
-    dateModified: '2026-11-01',
+    publishDate: '2026-10-31',
+    dateModified: '2026-10-31',
     next_refresh_due: '2027-05-01',
     current_hardware_mentioned: [
       'Minisforum MS-S1 MAX',
@@ -1960,8 +1960,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '로컬 AI용 Minisforum MS-S1 MAX: 사양, 가격, 평가',
       'description': '로컬 AI용 Minisforum MS-S1 MAX: Ryzen AI Max+ 395, 128GB, 듀얼 10GbE, PCIe 슬롯과 192GB P495. 출처 표기 미국 가격과 리뷰 결과.',
-      'datePublished': '2026-11-01',
-      'dateModified': '2026-11-01',
+      'datePublished': '2026-10-31',
+      'dateModified': '2026-10-31',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
