@@ -9073,10 +9073,10 @@
   },
   {
     "lang": "en",
-    "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-    "excerpt": "Compare 8 Ollama frontends: Open WebUI (150k+ stars, RAG), Ollama desktop app, Enchanted UI (native Apple app), Jan AI (offline). Licenses and setup guide.",
+    "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
+    "excerpt": "Compare 8 local LLM frontends and chat UIs for Ollama: Open WebUI (150k+ stars, RAG), Enchanted UI, Jan AI, lightweight picks. GUI, Linux, licenses, setup.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9085,7 +9085,7 @@
     "title": "Beste lokale LLM-Frontends 2026: Open WebUI, Enchanted UI und mehr",
     "excerpt": "8 Ollama-Frontends im Vergleich: Open WebUI (150.000+ Sterne, RAG), Ollama-Desktop-App, Enchanted UI (Apple-App), Jan AI (offline). Lizenzen, Setup.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/de/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9094,7 +9094,7 @@
     "title": "Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres",
     "excerpt": "Comparez 8 interfaces pour Ollama : Open WebUI (150k+ étoiles, RAG), app de bureau Ollama, Enchanted UI (Apple), Jan AI (hors ligne). Licences et guide.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/fr/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9103,7 +9103,7 @@
     "title": "2026年のローカルLLMフロントエンド比較：Open WebUI、Enchanted UIなど",
     "excerpt": "Ollama対応フロントエンド8種を比較：Open WebUI（150k+スター・RAG）、Ollamaデスクトップアプリ、Enchanted UI（Apple向け）、Jan AI（オフライン）。ライセンスも解説。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/ja/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9112,7 +9112,7 @@
     "title": "2026年最佳本地LLM前端：Open WebUI、Enchanted UI等",
     "excerpt": "8款Ollama前端对比：Open WebUI（150k+星、RAG）、Ollama桌面应用、Enchanted UI（Apple原生）、Jan AI（离线），含许可证与设置指南。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/zh/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9121,7 +9121,7 @@
     "title": "Los mejores frontends para LLMs locales en 2026: Open WebUI, Enchanted UI y más",
     "excerpt": "Compara 8 frontends para Ollama: Open WebUI (150k+ estrellas, RAG), app de Ollama, Enchanted UI (app nativa Apple) y Jan AI. Licencias y guía.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/es/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9130,7 +9130,7 @@
     "title": "Melhores frontends para LLMs locais em 2026: Open WebUI, Enchanted UI e mais",
     "excerpt": "Compare 8 frontends para Ollama: Open WebUI (150 mil+ estrelas, RAG), app do Ollama, Enchanted UI (app Apple nativo), Jan AI (offline). Licenças e guia.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/pt/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9139,7 +9139,7 @@
     "title": "أفضل واجهات نماذج LLM المحلية في 2026: Open WebUI وEnchanted UI وغيرهما",
     "excerpt": "قارن 8 واجهات لـ Ollama: Open WebUI (أكثر من 150,000 نجمة، RAG)، تطبيق Ollama المكتبي، Enchanted UI، Jan AI (دون اتصال). التراخيص ودليل الإعداد.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/ar/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -9148,7 +9148,7 @@
     "title": "2026년 최고의 로컬 LLM 프론트엔드: Open WebUI, Enchanted UI 등",
     "excerpt": "Open WebUI(RAG), Ollama 데스크톱 앱, Enchanted UI, Jan AI 등 로컬 LLM 프론트엔드 8종을 기능, 라이선스, 설정 시간으로 비교합니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-31",
     "url": "/ko/local-llms/best-local-llm-frontends",
     "cluster": "local-llms"
   },
@@ -20818,6 +20818,87 @@
   },
   {
     "lang": "en",
+    "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+    "excerpt": "Compare 8 local LLM apps for Mac: LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX and Chatbox. Cost, license, Apple Silicon needs, best use.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Die besten lokalen LLM-Apps für den Mac 2026: LM Studio, Ollama, Jan und 5 weitere",
+    "excerpt": "8 lokale LLM-Apps für den Mac im Vergleich: LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox. Kosten, Lizenz, Apple Silicon, Einsatz.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Meilleures apps LLM locales pour Mac en 2026 : LM Studio, Ollama, Jan et 5 autres",
+    "excerpt": "Comparez 8 apps LLM locales pour Mac : LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox. Coût, licence, Apple Silicon, usages.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Mac向けローカルLLMアプリ2026年版：LM Studio、Ollama、Janほか全8本を比較",
+    "excerpt": "Mac向けローカルLLMアプリ8本を比較：LM Studio、Ollama、Jan、Msty、AnythingLLMほか。費用、ライセンス、Apple Silicon要件、向く用途を整理。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "2026年Mac最佳本地LLM应用：LM Studio、Ollama、Jan等8款对比",
+    "excerpt": "对比8款Mac本地LLM应用：LM Studio、Ollama、Jan、Msty、AnythingLLM、Open WebUI、oMLX、Chatbox。费用、许可证、Apple Silicon要求与适用场景。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Las mejores apps de LLM local para Mac en 2026: LM Studio, Ollama, Jan y 5 más",
+    "excerpt": "Compara 8 apps de LLM local para Mac: LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox. Coste, licencia, Apple Silicon y mejor uso.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Melhores apps de LLM local para Mac em 2026: LM Studio, Ollama, Jan e mais 5",
+    "excerpt": "Compare 8 apps de LLM local para Mac: LM Studio, Ollama, Jan, Msty, AnythingLLM, Open WebUI, oMLX, Chatbox. Custo, licença, Apple Silicon e melhor uso.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "أفضل تطبيقات النماذج اللغوية المحلية لنظام Mac في 2026: LM Studio وOllama وJan و5 غيرها",
+    "excerpt": "قارن 8 تطبيقات LLM محلية لنظام Mac: LM Studio وOllama وJan وMsty وAnythingLLM وOpen WebUI وoMLX وChatbox. التكلفة والترخيص ومتطلبات Apple Silicon.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "2026년 Mac용 로컬 LLM 앱 추천: LM Studio, Ollama, Jan 등 8종 비교",
+    "excerpt": "Mac용 로컬 LLM 앱 8종 비교: LM Studio, Ollama, Jan, Msty 등. 비용, 라이선스, Apple Silicon 요건, 추천 용도를 정리했습니다.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
     "excerpt": "Gemma 4 31B and Qwen3.8-27B fit one 24 GB GPU. See the best local LLM for fiction, dialogue and worldbuilding per VRAM tier, with Ollama commands.",
     "publishDate": "2026-05-07",
@@ -21709,28 +21790,28 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 338 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "Browse 338 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
+    "title": "Local LLM Apps & Software Directory: 338 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 338 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 338 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "Entdecken Sie 338 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 338 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 338 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/de/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 338 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "Parcourez 338 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 338 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 338 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/fr/directory",
     "cluster": "power-local-llm"
   },
@@ -21739,25 +21820,25 @@
     "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす338のアプリ＆ツール（2026年版）",
     "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを338件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/ja/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：338款应用与工具，在本地运行AI（2026）",
-    "excerpt": "收录338款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：338款软件，在本地运行AI（2026）",
+    "excerpt": "对比338款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/zh/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 338 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "Explora 338 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
+    "title": "Directorio de herramientas y software de LLM local: 338 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 338 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/es/directory",
     "cluster": "power-local-llm"
   },
@@ -21766,7 +21847,7 @@
     "title": "O diretório completo de software de IA e LLM local: 338 apps e ferramentas para executar IA localmente (2026)",
     "excerpt": "Explore 338 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/pt/directory",
     "cluster": "power-local-llm"
   },
@@ -21775,7 +21856,7 @@
     "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 338 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
     "excerpt": "تصفّح 338 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/ar/directory",
     "cluster": "power-local-llm"
   },
@@ -21784,7 +21865,7 @@
     "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 338개 앱과 도구 (2026)",
     "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 338개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-10-31",
     "url": "/ko/directory",
     "cluster": "power-local-llm"
   },
@@ -65450,9 +65531,9 @@
   {
     "lang": "en",
     "title": "Is Balcony Solar Legal in My State? US State-by-State Guide",
-    "excerpt": "Is balcony solar legal in your state? 10 US states have signed plug-in solar laws and New York awaits its governor. Bill numbers, caps, effective dates.",
+    "excerpt": "Which states allow balcony solar? 10 have signed plug-in laws and New York awaits its governor; Texas and Florida have none. Bills, caps, dates.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65461,7 +65542,7 @@
     "title": "Ist Balkonkraftwerk in meinem Bundesstaat legal? US-Leitfaden nach Bundesstaaten",
     "excerpt": "Balkonkraftwerk in Ihrem US-Bundesstaat legal? 10 Bundesstaaten haben Steckersolar-Gesetze unterzeichnet, New York wartet auf den Gouverneur. Daten, Grenzen.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/de/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65470,7 +65551,7 @@
     "title": "Le solaire de balcon est-il légal dans mon État ? Guide État par État aux États-Unis",
     "excerpt": "Solaire de balcon légal dans votre État ? 10 États américains ont signé des lois ; New York attend sa gouverneure. Numéros de projets, plafonds et dates.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/fr/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65479,7 +65560,7 @@
     "title": "バルコニーソーラーは自分の州で合法? 米国州別ガイド",
     "excerpt": "バルコニーソーラーは自分の州で合法？米国10州がプラグイン式の法律に署名済み、ニューヨークは知事の判断待ち。法案番号、出力上限、施行日を確認できます。",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/ja/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65488,7 +65569,7 @@
     "title": "阳台光伏在我所在的州合法吗?美国各州指南",
     "excerpt": "阳台光伏在你所在的州合法吗？美国已有10个州签署插电式光伏法律，纽约等待州长决定。法案编号、功率上限和生效日期一览。",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/zh/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65497,7 +65578,7 @@
     "title": "¿Es legal el balcony solar en mi estado? Guía estado por estado en EE. UU.",
     "excerpt": "¿Es legal el balcony solar en tu estado? 10 estados de EE. UU. firmaron leyes de solar enchufable y Nueva York espera a su gobernadora. Fechas y límites.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/es/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65506,7 +65587,7 @@
     "title": "A energia solar de varanda é legal no meu estado? Guia estado a estado dos EUA",
     "excerpt": "A energia solar de varanda é legal no seu estado? 10 estados dos EUA assinaram leis de solar plug-in e Nova York aguarda o governo. Projetos, limites e datas.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/pt/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65515,7 +65596,7 @@
     "title": "هل الطاقة الشمسية للشرفات قانونية في ولايتي؟ دليل الولايات الأمريكية واحدة تلو الأخرى",
     "excerpt": "هل الطاقة الشمسية للشرفات قانونية في ولايتك؟ وقّعت 10 ولايات أمريكية قوانين، وتنتظر نيويورك حاكمتها. أرقام المشاريع والحدود وتواريخ النفاذ.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/ar/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -65524,7 +65605,7 @@
     "title": "내 주에서 발코니 태양광이 합법인가요? 미국 주별 가이드",
     "excerpt": "내 주에서 발코니 태양광이 합법인가요? 미국 10개 주가 플러그인 태양광 법에 서명했고 뉴욕은 주지사 결정을 기다립니다. 법안 번호, 출력 한도, 시행일.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/ko/balcony-solar/balcony-solar-legal-us-states",
     "cluster": "balcony-solar"
   },
@@ -66584,81 +66665,81 @@
   {
     "lang": "en",
     "title": "How Balcony Solar Went From Illegal to Law in 10 US States (2026)",
-    "excerpt": "Utah legalized balcony solar in March 2025; nine more states followed, latest California. How it happened, why Florida and Texas lag, and what UL 3700 means.",
+    "excerpt": "Is balcony solar legal in Florida or Texas? Neither has a law. How Utah and nine other states legalized plug-in solar, plus UL 3700 and New York.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "de",
     "title": "Wie Balkonkraftwerke in 10 US-Bundesstaaten von illegal zu legal wurden (2026)",
-    "excerpt": "Utah legalisierte Balkonkraftwerke im März 2025, neun Staaten folgten, zuletzt Kalifornien. Wie es kam, warum Florida/Texas zurückliegen, was UL 3700 bedeutet.",
+    "excerpt": "Ist ein Balkonkraftwerk in Florida oder Texas legal? Beide haben kein Gesetz. Wie Utah und neun Staaten Plug-in-Solar legalisierten, plus UL 3700.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/de/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "fr",
     "title": "Comment le solaire de balcon est passé de l'illégalité à la loi dans 10 États américains (2026)",
-    "excerpt": "L'Utah a légalisé le solaire de balcon en mars 2025 ; neuf États ont suivi, dernier la Californie. Pourquoi Floride et Texas tardent, et ce qu'est UL 3700.",
+    "excerpt": "Le solaire de balcon est-il légal en Floride ou au Texas ? Aucune loi. Comment l'Utah et neuf États l'ont légalisé, et ce que signifie UL 3700.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/fr/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ja",
     "title": "バルコニーソーラーは違法から米国10州の法律へ：どう変わったか（2026年）",
-    "excerpt": "ユタ州は2025年3月にバルコニーソーラーを合法化し、その後9州が続き、直近はカリフォルニアです。経緯、フロリダとテキサスが遅れる理由、UL 3700の意味を解説。",
+    "excerpt": "フロリダ州・テキサス州でバルコニーソーラーは合法？どちらも法律はありません。ユタ州と他の9州が合法化した経緯、UL 3700の意味、ニューヨーク州の状況を解説します。",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/ja/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "zh",
     "title": "阳台光伏如何从违法走向美国10个州的法律（2026年）",
-    "excerpt": "犹他州2025年3月使阳台光伏合法，随后又有9个州跟进，最近的是加利福尼亚。来龙去脉、佛罗里达和得克萨斯为何落后，以及UL 3700的意义。",
+    "excerpt": "佛罗里达州和得克萨斯州的阳台光伏合法吗？两州均无专门立法。本文解析犹他州及另外9个州如何使其合法化、UL 3700的意义，以及纽约州的最新进展。",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/zh/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "es",
     "title": "Cómo el balcony solar pasó de ilegal a ley en 10 estados de EE. UU. (2026)",
-    "excerpt": "Utah legalizó el balcony solar en marzo de 2025; nueve estados siguieron, el último California. Por qué Florida y Texas se rezagan y qué es UL 3700.",
+    "excerpt": "¿Es legal el balcony solar en Florida o Texas? Ninguno tiene ley. Cómo Utah y nueve estados lo legalizaron, qué es UL 3700 y qué pasa en Nueva York.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/es/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "pt",
     "title": "Como a energia solar de varanda passou de ilegal a lei em 10 estados dos EUA (2026)",
-    "excerpt": "Utah legalizou a energia solar de varanda em março de 2025; nove estados seguiram, o último a Califórnia. Por que Flórida e Texas atrasam e o que é UL 3700.",
+    "excerpt": "A energia solar de varanda é legal na Flórida ou no Texas? Nenhum tem lei. Como Utah e nove estados a legalizaram, o que é UL 3700 e o caso de Nova York.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/pt/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ar",
     "title": "كيف تحولت الطاقة الشمسية للشرفات من غير قانونية إلى قانون في 10 ولايات أمريكية (2026)",
-    "excerpt": "أجازت يوتا الطاقة الشمسية للشرفات في مارس 2025، وتبعتها تسع ولايات، آخرها كاليفورنيا. كيف حدث ذلك، ولماذا تتأخر فلوريدا وتكساس، وماذا يعني UL 3700.",
+    "excerpt": "هل الطاقة الشمسية للشرفات قانونية في فلوريدا أو تكساس؟ لا قانون فيهما. كيف أجازتها يوتا وتسع ولايات، وماذا يعني UL 3700.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/ar/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ko",
     "title": "발코니 태양광은 어떻게 불법에서 미국 10개 주의 법이 되었나 (2026)",
-    "excerpt": "유타는 2025년 3월 발코니 태양광을 합법화했고 9개 주가 뒤따랐으며 가장 최근은 캘리포니아입니다. 경위, 플로리다와 텍사스가 뒤처지는 이유, UL 3700의 의미.",
+    "excerpt": "플로리다·텍사스에서 발코니 태양광은 합법일까요? 두 주 모두 법이 없습니다. 유타와 9개 주의 합법화 경위와 UL 3700의 의미.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-10-20",
+    "dateModified": "2026-10-31",
     "url": "/ko/balcony-solar/how-balcony-solar-became-legal-in-the-us",
     "cluster": "balcony-solar"
   },
@@ -66829,25 +66910,25 @@
     "title": "Balcony Solar for Landlords and Housing Associations in 2027",
     "excerpt": "Since October 2024, German tenants and condo owners can claim a plug-in solar device. What landlords may require, and what the EU EPBD says.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "de",
     "title": "Balkonsolar für Vermieter und Wohnungsgesellschaften 2027",
-    "excerpt": "Seit Oktober 2024 haben Mieter und Eigentümer Anspruch auf ein Steckersolargerät. Was Vermieter verlangen dürfen und was die EPBD sagt.",
+    "excerpt": "Seit Oktober 2024 haben Mieter und Eigentümer Anspruch auf ein Steckersolargerät. Was Vermieter verlangen dürfen, was Gerichte sagen und was die EPBD sagt.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/de/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "fr",
     "title": "Le solaire de balcon pour les bailleurs et les organismes de logement en 2027",
-    "excerpt": "Depuis octobre 2024, locataires et copropriétaires allemands ont droit à un appareil solaire plug-in. Ce que les bailleurs peuvent exiger et la directive EPBD.",
+    "excerpt": "Depuis octobre 2024, locataires et copropriétaires allemands ont droit à un appareil solaire plug-in. Ce que les bailleurs peuvent exiger, et l'EPBD.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/fr/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
@@ -66856,16 +66937,16 @@
     "title": "2027年の大家・住宅会社向けバルコニーソーラー",
     "excerpt": "2024年10月以降、ドイツの借主と区分所有者はプラグイン式ソーラー機器を求める権利があります。貸主が求められることと、EU指令EPBDの内容を解説。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ja/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "zh",
     "title": "面向房东与住房协会的阳台光伏：2027年",
-    "excerpt": "2024年10月起，德国租户和业主有权要求安装插拔式光伏设备。房东可提出哪些要求，以及欧盟EPBD指令的规定。",
+    "excerpt": "2024年10月起，德国租户和业主有权要求安装插拔式光伏设备。房东可提出哪些要求、法院目前如何裁判，欧盟EPBD指令是否要求房东安装，以及租户的实际做法。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/zh/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
@@ -66874,7 +66955,7 @@
     "title": "Energía solar de balcón para arrendadores y asociaciones de vivienda en 2027",
     "excerpt": "Desde octubre de 2024, en Alemania inquilinos y copropietarios pueden reclamar un dispositivo solar plug-in. Qué pueden exigir los arrendadores y la EPBD.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/es/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
@@ -66883,7 +66964,7 @@
     "title": "Energia solar de varanda para locadores e associações habitacionais em 2027",
     "excerpt": "Desde outubro de 2024, inquilinos e condôminos alemães podem reivindicar um dispositivo solar plug-in. O que locadores podem exigir e o que diz a EPBD.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/pt/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
@@ -66892,7 +66973,7 @@
     "title": "الطاقة الشمسية للشرفة لأصحاب العقارات وجمعيات الإسكان في 2027",
     "excerpt": "منذ أكتوبر 2024 يحق للمستأجرين وملّاك الوحدات في ألمانيا المطالبة بجهاز شمسي قابل للتوصيل بالمقبس. ما يجوز للمؤجّر اشتراطه، وما تقوله EPBD.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ar/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
@@ -66901,16 +66982,16 @@
     "title": "2027년 임대인과 주택협회를 위한 발코니 태양광",
     "excerpt": "2024년 10월부터 독일 세입자와 구분소유자는 플러그인 태양광 장치를 요구할 수 있습니다. 임대인이 요구할 수 있는 것과 EU EPBD의 내용을 정리합니다.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ko/balcony-solar/balcony-solar-housing-associations-b2b-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "en",
     "title": "Netherlands Net Metering Ends in 2027: What It Means for Balcony Solar",
-    "excerpt": "Dutch net metering (saldering) ends January 1, 2027. Until 2030, feed-in pay must be at least 50% of the ex-tax power price. What it means for balcony solar.",
+    "excerpt": "Dutch net metering (saldering) ends January 1, 2027. Until 2030, feed-in pay must be at least 50% of the ex-tax power price. Impact on balcony solar.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
@@ -66919,7 +67000,7 @@
     "title": "Niederlande: Net Metering endet 2027 – Folgen für Balkonkraftwerke",
     "excerpt": "Die niederländische Saldering endet am 1. Januar 2027. Bis 2030 gilt eine Mindestvergütung von 50 % des Preises ohne Steuern. Folgen für Balkonkraftwerke.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/de/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
@@ -66928,7 +67009,7 @@
     "title": "Pays-Bas : la fin du net metering en 2027 et le solaire de balcon",
     "excerpt": "Le saldering néerlandais prend fin le 1er janvier 2027. Jusqu'en 2030, au moins 50 % du prix hors taxes est garanti. Effets sur le solaire de balcon.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/fr/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
@@ -66937,16 +67018,16 @@
     "title": "オランダのネットメータリングが2027年に終了：バルコニーソーラーへの影響",
     "excerpt": "オランダのサルデリングは2027年1月1日に終了。2030年まで、売電の対価は税抜き電気料金の50％以上。バルコニーソーラーへの影響を解説します。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ja/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "zh",
     "title": "荷兰净计量政策2027年终止：对阳台光伏意味着什么",
-    "excerpt": "荷兰saldering制度将于2027年1月1日终止。到2030年，上网补偿不得低于不含税电价的50%。本文解读对阳台光伏的影响。",
+    "excerpt": "荷兰saldering制度将于2027年1月1日终止。到2030年，供电商支付的上网补偿不得低于不含能源税和增值税电价的50%。本文解读对阳台光伏的影响。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/zh/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
@@ -66955,7 +67036,7 @@
     "title": "Países Bajos: el fin del net metering en 2027 y la energía solar de balcón",
     "excerpt": "El saldering neerlandés termina el 1 de enero de 2027. Hasta 2030 se paga al menos el 50 % del precio sin impuestos. Qué implica para el solar de balcón.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/es/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
@@ -66964,16 +67045,16 @@
     "title": "Países Baixos: o fim do net metering em 2027 e a energia solar de varanda",
     "excerpt": "O saldering holandês termina em 1º de janeiro de 2027. Até 2030, o pagamento mínimo é 50% do preço sem impostos. Efeitos no solar de varanda.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/pt/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ar",
     "title": "هولندا: نهاية نظام Net Metering في 2027 وأثره على الطاقة الشمسية للشرفة",
-    "excerpt": "ينتهي نظام saldering الهولندي في 1 يناير 2027. حتى 2030 يجب ألا يقل تعويض التصدير عن 50% من سعر الكهرباء قبل الضرائب. ما أثر ذلك على الطاقة الشمسية للشرفة.",
+    "excerpt": "ينتهي نظام saldering الهولندي في 1 يناير 2027. حتى 2030 يجب ألا يقل تعويض التصدير عن 50% من سعر الكهرباء دون ضرائب. الأثر على الطاقة الشمسية للشرفة.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ar/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
@@ -66982,16 +67063,16 @@
     "title": "네덜란드 넷미터링 2027년 종료: 발코니 태양광에 미치는 영향",
     "excerpt": "네덜란드 살더링이 2027년 1월 1일 종료됩니다. 2030년까지 역송 보상은 세전 전기요금의 50% 이상이어야 합니다. 발코니 태양광에 미치는 영향.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ko/balcony-solar/net-metering-rollback-balcony-solar-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "en",
     "title": "Is Balcony Solar Legal in Japan? 2027 Status Report",
-    "excerpt": "Japan has no plug-in solar law in 2026, and plugging a kit into an outlet counts as grid connection needing utility permission. REI proposed reform in June.",
+    "excerpt": "Japan has no plug-in solar law, and plugging a kit into an outlet counts as grid connection needing utility permission. REI proposed reform in June.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
@@ -67000,16 +67081,16 @@
     "title": "Ist ein Balkonkraftwerk in Japan legal? Statusbericht 2027",
     "excerpt": "Japan hat 2026 kein Steckersolar-Gesetz; ein Set an der Steckdose gilt als Netzanschluss mit Zustimmung des Versorgers. REI schlug im Juni Reformen vor.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/de/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "fr",
-    "title": "L'énergie solaire de balcon est-elle légale au Japon ? Rapport d'état 2027",
-    "excerpt": "Le Japon n'a pas de loi sur le solaire enfichable en 2026 ; brancher un kit vaut raccordement réseau avec accord du gestionnaire. Le REI propose une réforme.",
+    "title": "Le solaire de balcon est-il légal au Japon ? Bilan 2027",
+    "excerpt": "Le Japon n'a pas de loi sur le solaire enfichable ; brancher un kit vaut raccordement réseau avec accord du gestionnaire. Le REI propose une réforme.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/fr/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
@@ -67018,43 +67099,43 @@
     "title": "日本でバルコニーソーラーは合法?2027年ステータスレポート",
     "excerpt": "日本には2026年時点でプラグイン式太陽光の専用法がなく、コンセントへの接続は系統連系として電力会社の許可が必要とされます。REIが6月に制度化の道筋を提言しました。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ja/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "zh",
-    "title": "阳台光伏在日本合法吗?2027年现状报告",
-    "excerpt": "日本截至2026年没有专门的插电式光伏法律，将套件接入插座被视为并网，需获得电力公司许可。REI于6月提出制度化路线图。",
+    "title": "日本的阳台光伏合法吗？2027年现状报告与REI路线图",
+    "excerpt": "日本目前没有专门的插电式光伏法律，将套件接入家用插座被视为并网，需获得电力公司许可并由持证电工安装。REI于2026年6月提出分三步的制度化路线图，列出五项障碍。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/zh/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "es",
-    "title": "¿Es legal la energía solar de balcón en Japón? Informe de estado 2027",
-    "excerpt": "Japón no tiene ley de solar enchufable en 2026; conectar un kit al enchufe es conexión a red con permiso de la distribuidora. REI propuso reformas en junio.",
+    "title": "¿Es legal la energía solar de balcón en Japón? 2027",
+    "excerpt": "Japón no tiene ley de solar enchufable; conectar un kit al enchufe es conexión a red con permiso de la distribuidora. REI propuso reformas en junio.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/es/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "pt",
-    "title": "A energia solar de varanda é legal no Japão? Relatório de status 2027",
+    "title": "A energia solar de varanda é legal no Japão? 2027",
     "excerpt": "O Japão não tem lei de solar plug-in em 2026; ligar um kit na tomada é conexão à rede e exige licença da distribuidora. O REI propôs reforma em junho.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/pt/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ar",
-    "title": "هل الطاقة الشمسية للشرفات قانونية في اليابان؟ تقرير الحالة لعام 2027",
+    "title": "هل الطاقة الشمسية للشرفات قانونية في اليابان؟ 2027",
     "excerpt": "لا قانون خاصًا للطاقة الشمسية القابلة للتوصيل في اليابان 2026؛ توصيل المجموعة بالمقبس ربطٌ بالشبكة يتطلب إذن المشغّل. واقترح REI إصلاحًا في يونيو.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ar/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
@@ -67063,7 +67144,7 @@
     "title": "일본에서 발코니 태양광은 합법인가? 2027년 현황 보고서",
     "excerpt": "일본에는 2026년 현재 플러그인 태양광 전용 법이 없으며, 콘센트 연결은 계통 연계로 간주되어 전력회사 허가가 필요합니다. REI가 6월에 제도화 로드맵을 제안했습니다.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ko/balcony-solar/balcony-solar-japan-status-2027",
     "cluster": "balcony-solar"
   },
@@ -67313,72 +67394,72 @@
   {
     "lang": "en",
     "title": "Is Balcony Solar Legal in Greece? 2027 Status Report",
-    "excerpt": "Balcony solar is legal in Greece under a 2026 ministerial decision: plug-in kits up to 800 W, no grid export, DEDDIE portal notice. Rules and open deadlines.",
+    "excerpt": "Balcony solar is legal in Greece under a 2026 ministerial decision: plug-in kits up to 800 W, no grid export, DEDDIE notice. Rules and open deadlines.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "de",
-    "title": "Ist ein Balkonkraftwerk in Griechenland legal? Statusbericht 2027",
+    "title": "Balkonkraftwerk in Griechenland legal? Status 2027",
     "excerpt": "Balkonkraftwerke sind in Griechenland legal: Entscheidung 2026, bis 800 W, keine Netzeinspeisung, Meldung beim DEDDIE-Portal. Regeln und offene Fristen.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/de/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "fr",
-    "title": "Le solaire de balcon est-il légal en Grèce ? Rapport de situation 2027",
+    "title": "Solaire de balcon en Grèce : légal ? Situation 2027",
     "excerpt": "Le solaire de balcon est légal en Grèce (décision de 2026) : jusqu'à 800 W, sans injection réseau, déclaration sur le portail DEDDIE. Règles et échéances.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/fr/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ja",
-    "title": "ギリシャでバルコニー太陽光は合法か？ 2027年ステータスレポート",
+    "title": "ギリシャでバルコニー太陽光は合法か？2027年ステータスレポート",
     "excerpt": "ギリシャでは2026年の閣僚決定によりバルコニー太陽光が合法化。800Wまでのプラグイン式、逆潮流不可、DEDDIEポータルでの届出が必要です。ルールと未確定の期限を解説。",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ja/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "zh",
-    "title": "希腊阳台光伏合法吗？2027年现状报告",
-    "excerpt": "希腊通过2026年部长级决定使阳台光伏合法：插电式系统最高800瓦，禁止向电网输出，需通过DEDDIE门户申报。了解规则与尚未确定的期限。",
+    "title": "希腊阳台光伏合法吗？2027年现状：规则、限值与申报期限",
+    "excerpt": "希腊通过2026年部长级决定使阳台光伏合法：插电式系统最高800瓦，禁止向电网输出，需通过DEDDIE门户申报。了解规则与尚未确定的各项期限。",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/zh/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "es",
-    "title": "¿Es legal la energía solar de balcón en Grecia? Informe de estado 2027",
+    "title": "Energía solar de balcón en Grecia: ¿legal? Estado 2027",
     "excerpt": "La energía solar de balcón es legal en Grecia (decisión de 2026): hasta 800 W, sin exportar a la red y aviso en el portal de DEDDIE. Reglas y plazos.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/es/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "pt",
-    "title": "A energia solar de varanda é legal na Grécia? Relatório de status 2027",
+    "title": "Energia solar de varanda na Grécia é legal? Status 2027",
     "excerpt": "A energia solar de varanda é legal na Grécia (decisão de 2026): até 800 W, sem exportar à rede e aviso no portal da DEDDIE. Regras e prazos em aberto.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/pt/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ar",
-    "title": "هل الطاقة الشمسية على الشرفات قانونية في اليونان؟ تقرير الحالة لعام 2027",
+    "title": "هل الطاقة الشمسية للشرفات قانونية في اليونان؟ 2027",
     "excerpt": "الطاقة الشمسية على الشرفات قانونية في اليونان بموجب قرار وزاري لعام 2026: أنظمة بحد أقصى 800 واط، دون تصدير إلى الشبكة، مع إخطار عبر بوابة DEDDIE.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ar/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
@@ -67387,7 +67468,7 @@
     "title": "그리스에서 발코니 태양광은 합법인가? 2027년 현황 보고서",
     "excerpt": "그리스는 2026년 장관령으로 발코니 태양광을 합법화했습니다. 최대 800W 플러그인 방식, 계통 역송 금지, DEDDIE 포털 신고. 규정과 남은 기한을 정리했습니다.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ko/balcony-solar/balcony-solar-greece-status-2027",
     "cluster": "balcony-solar"
   },
