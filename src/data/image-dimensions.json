@@ -39489,6 +39489,21 @@
     "width": 1200,
     "height": 675
   },
+  "/images/olares-one-chassis.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1420,
+    "height": 720
+  },
+  "/images/olares-one-cooling.webp": {
+    "encodingFormat": "image/webp",
+    "width": 2422,
+    "height": 1156
+  },
+  "/images/olares-one-desk.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1920,
+    "height": 992
+  },
   "/images/olares-one-local-ai-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,

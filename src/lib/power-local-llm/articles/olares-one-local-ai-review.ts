@@ -141,6 +141,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "Olares One compact desktop computer on a desk",
+      "imageCaption": "Olares One on a desk (320 × 197 × 55 mm). Photo: Olares.",
         "title": "Verdict",
         "content": "**The Olares One is a well-specified, compact box for people who want a ready-made local-AI desktop and accept a $4,999 price.** Its 24 GB of GDDR7 VRAM suits mid-size models and fast prompt processing; its 96 GB of DDR5 adds capacity for 70B models, but capacity is not speed — layers held in system RAM run at DDR5 bandwidth. The strongest case for it is convenience and size, not price per GB of VRAM. We have not tested a unit, so treat this as a reading of published specifications, and treat any benchmark figure — Olares' or ours — as unverified until an independent test confirms it."
       },
@@ -157,6 +160,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Exploded view of the Olares One internal cooling layout",
+      "imageCaption": "Internal cooling layout of the Olares One, a manufacturer illustration. Image: Olares.",
         "title": "Olares One Specifications",
         "content": "**Manufacturer-published specifications, taken from olares.com/one on 2026-10-31.** Olares publishes no retail price on that page; the price comes from the official shop.",
         "columns": [
@@ -484,6 +490,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "كمبيوتر Olares One المكتبي المدمج موضوعًا على مكتب",
+      "imageCaption": "Olares One على مكتب (320 × 197 × 55 mm). الصورة: Olares.",
         "title": "الحكم",
         "content": "**Olares One جهاز مدمج جيد المواصفات لمن يريد حاسوبًا مكتبيًا جاهزًا للذكاء الاصطناعي المحلي ويقبل سعر $4,999.** تناسب ذاكرته البالغة 24 GB من VRAM نوع GDDR7 النماذج متوسطة الحجم والمعالجة السريعة للمطالبات؛ وتضيف ذاكرة DDR5 البالغة 96 GB سعةً لنماذج 70B، لكن السعة ليست سرعة — فالطبقات المحفوظة في ذاكرة النظام تعمل بنطاق ترددي يعادل DDR5. أقوى حجة لصالحه هي سهولة الاستخدام وصغر الحجم، لا السعر لكل GB من VRAM. لم نختبر أي وحدة، لذا تعامل مع هذه الصفحة بوصفها قراءة للمواصفات المنشورة، وتعامل مع أي رقم أداء — سواء من Olares أو منا — على أنه غير مُتحقَّق منه حتى يؤكده اختبار مستقل."
       },
@@ -500,6 +509,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "منظر مفكَّك لتصميم التبريد الداخلي في Olares One",
+      "imageCaption": "تصميم التبريد الداخلي في Olares One، رسم توضيحي من الشركة المصنّعة. الصورة: Olares.",
         "title": "مواصفات Olares One",
         "content": "**مواصفات نشرتها الشركة المصنّعة، مأخوذة من olares.com/one بتاريخ 2026-10-31.** لا تنشر Olares سعر بيع بالتجزئة في تلك الصفحة؛ والسعر مأخوذ من المتجر الرسمي.",
         "columns": [
@@ -827,6 +839,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "Kompakter Olares-One-Desktop-Computer auf einem Schreibtisch",
+      "imageCaption": "Olares One auf dem Schreibtisch (320 × 197 × 55 mm). Foto: Olares.",
         "title": "Fazit",
         "content": "**Der Olares One ist eine gut ausgestattete, kompakte Box für Menschen, die einen fertigen Desktop für lokale KI wollen und einen Preis von $4,999 akzeptieren.** Seine 24 GB GDDR7-VRAM eignen sich für mittelgroße Modelle und schnelle Prompt-Verarbeitung; die 96 GB DDR5 schaffen zusätzliche Kapazität für 70B-Modelle, aber Kapazität ist nicht Geschwindigkeit – Schichten im Arbeitsspeicher laufen mit der DDR5-Bandbreite. Das stärkste Argument für das Gerät sind Komfort und Größe, nicht der Preis pro GB VRAM. Wir haben kein Gerät getestet; verstehen Sie dies daher als Einschätzung veröffentlichter Spezifikationen und behandeln Sie jeden Benchmark-Wert – von Olares oder von uns – als nicht verifiziert, bis ein unabhängiger Test ihn bestätigt."
       },
@@ -843,6 +858,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Explosionsdarstellung der internen Kühlung des Olares One",
+      "imageCaption": "Interne Kühlung des Olares One, Illustration des Herstellers. Bild: Olares.",
         "title": "Spezifikationen des Olares One",
         "content": "**Vom Hersteller veröffentlichte Spezifikationen, entnommen von olares.com/one am 2026-10-31.** Olares veröffentlicht auf dieser Seite keinen Verkaufspreis; der Preis stammt aus dem offiziellen Shop.",
         "columns": [
@@ -1170,6 +1188,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "Ordenador de sobremesa compacto Olares One sobre un escritorio",
+      "imageCaption": "Olares One sobre un escritorio (320 × 197 × 55 mm). Foto: Olares.",
         "title": "Veredicto",
         "content": "**El Olares One es un equipo compacto y bien equipado para quien quiere un sobremesa de IA local listo para usar y acepta un precio de $4,999.** Sus 24 GB de VRAM GDDR7 sirven para modelos de tamaño medio y un procesamiento rápido de prompts; sus 96 GB de DDR5 añaden capacidad para modelos de 70B, pero capacidad no es velocidad: las capas alojadas en la RAM del sistema se ejecutan al ancho de banda de la DDR5. Su mejor argumento es la comodidad y el tamaño, no el precio por GB de VRAM. No hemos probado ninguna unidad, así que trata esto como una lectura de las especificaciones publicadas, y considera cualquier cifra de benchmark —de Olares o nuestra— como no verificada hasta que una prueba independiente la confirme."
       },
@@ -1186,6 +1207,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Vista despiezada de la refrigeración interna del Olares One",
+      "imageCaption": "Refrigeración interna del Olares One, ilustración del fabricante. Imagen: Olares.",
         "title": "Especificaciones del Olares One",
         "content": "**Especificaciones publicadas por el fabricante, tomadas de olares.com/one el 2026-10-31.** Olares no publica ningún precio de venta en esa página; el precio procede de la tienda oficial.",
         "columns": [
@@ -1513,6 +1537,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "Ordinateur de bureau compact Olares One posé sur un bureau",
+      "imageCaption": "Olares One sur un bureau (320 × 197 × 55 mm). Photo : Olares.",
         "title": "Verdict",
         "content": "**L'Olares One est une machine compacte bien dotée, pour ceux qui veulent un PC IA local prêt à l'emploi et acceptent un prix de $4,999.** Ses 24 GB de VRAM GDDR7 conviennent aux modèles de taille moyenne et au traitement rapide des prompts ; ses 96 GB de DDR5 ajoutent de la capacité pour les modèles 70B, mais capacité ne signifie pas vitesse — les couches conservées dans la RAM système tournent à la bande passante de la DDR5. Son principal atout est la praticité et le format, pas le prix par GB de VRAM. Nous n'avons pas testé d'exemplaire : considérez ceci comme une lecture de spécifications publiées, et tenez tout chiffre de benchmark — celui d'Olares comme le nôtre — pour non vérifié tant qu'un test indépendant ne l'a pas confirmé."
       },
@@ -1529,6 +1556,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Vue éclatée du refroidissement interne de l'Olares One",
+      "imageCaption": "Refroidissement interne de l'Olares One, illustration du fabricant. Image : Olares.",
         "title": "Spécifications de l'Olares One",
         "content": "**Spécifications publiées par le fabricant, relevées sur olares.com/one le 2026-10-31.** Olares ne publie aucun prix de vente sur cette page ; le prix provient de la boutique officielle.",
         "columns": [
@@ -1856,6 +1886,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "机の上に置かれたコンパクトなデスクトップPC、Olares One",
+      "imageCaption": "机の上のOlares One（320 × 197 × 55 mm）。写真：Olares",
         "title": "総評",
         "content": "**Olares Oneは、完成品のローカルAIデスクトップを求め、$4,999という価格を受け入れられる人に向けた、仕様の充実したコンパクトなボックスです。** 24 GBのGDDR7 VRAMは中規模モデルと高速なプロンプト処理に向いています。96 GBのDDR5は70Bモデルのための容量を加えますが、容量は速度ではありません — システムメモリに置かれたレイヤーはDDR5の帯域幅で動作します。最大の魅力は利便性とサイズであり、VRAM 1 GBあたりの価格ではありません。私たちは実機をテストしていないため、本ページは公開仕様の読み解きとして扱ってください。また、Olaresのものでも私たちのものでも、ベンチマークの数値は第三者のテストで確認されるまで未検証として扱ってください。"
       },
@@ -1872,6 +1905,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Olares Oneの内部冷却構造の分解図",
+      "imageCaption": "Olares Oneの内部冷却構造（メーカー提供のイラスト）。画像：Olares",
         "title": "Olares One の仕様",
         "content": "**メーカーが公開している仕様。2026-10-31にolares.com/oneから取得。** Olaresはそのページに小売価格を掲載していません。価格は公式ショップのものです。",
         "columns": [
@@ -2199,6 +2235,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "책상 위에 놓인 소형 데스크톱 컴퓨터 Olares One",
+      "imageCaption": "책상 위의 Olares One(320 × 197 × 55 mm). 사진: Olares",
         "title": "평가",
         "content": "**Olares One은 완제품 로컬 AI 데스크톱을 원하고 $4,999라는 가격을 받아들일 수 있는 사람에게 잘 갖춰진 소형 박스입니다.** 24 GB GDDR7 VRAM은 중간 규모 모델과 빠른 프롬프트 처리에 적합하고, 96 GB DDR5는 70B 모델을 위한 용량을 더해 주지만, 용량이 곧 속도는 아닙니다. 시스템 RAM에 놓인 레이어는 DDR5 대역폭으로 실행됩니다. 이 제품의 가장 강력한 근거는 편의성과 크기이지, VRAM GB당 가격이 아닙니다. 저희는 제품을 테스트하지 않았으므로 이 글은 공개된 사양에 대한 해석으로 받아들이시고, Olares의 수치든 저희의 수치든 독립적인 테스트로 확인되기 전까지는 모든 벤치마크 수치를 검증되지 않은 것으로 간주하세요."
       },
@@ -2215,6 +2254,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Olares One 내부 냉각 구조 분해도",
+      "imageCaption": "Olares One의 내부 냉각 구조(제조사 제공 일러스트). 이미지: Olares",
         "title": "Olares One 사양",
         "content": "**제조사가 공개한 사양이며, 2026-10-31에 olares.com/one에서 가져왔습니다.** Olares는 해당 페이지에 소비자 가격을 게시하지 않으며, 가격은 공식 쇼핑몰에서 가져왔습니다.",
         "columns": [
@@ -2542,6 +2584,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "Computador de mesa compacto Olares One sobre uma mesa",
+      "imageCaption": "Olares One sobre uma mesa (320 × 197 × 55 mm). Foto: Olares.",
         "title": "Veredito",
         "content": "**O Olares One é uma máquina compacta e bem especificada para quem quer um desktop de IA local pronto para uso e aceita um preço de $4,999.** Seus 24 GB de VRAM GDDR7 atendem bem a modelos de porte médio e ao processamento rápido de prompts; seus 96 GB de DDR5 acrescentam capacidade para modelos de 70B, mas capacidade não é velocidade — as camadas mantidas na RAM do sistema rodam na largura de banda da DDR5. O ponto mais forte da máquina é a conveniência e o tamanho, não o preço por GB de VRAM. Não testamos uma unidade; portanto, trate isto como uma leitura de especificações publicadas e trate qualquer número de benchmark — da Olares ou nosso — como não verificado até que um teste independente o confirme."
       },
@@ -2558,6 +2603,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Vista explodida do sistema de refrigeração interno do Olares One",
+      "imageCaption": "Refrigeração interna do Olares One, ilustração do fabricante. Imagem: Olares.",
         "title": "Especificações do Olares One",
         "content": "**Especificações publicadas pelo fabricante, retiradas de olares.com/one em 2026-10-31.** A Olares não publica preço de varejo nessa página; o preço vem da loja oficial.",
         "columns": [
@@ -2885,6 +2933,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "verdict": {
         "id": "verdict",
+      "image": "/images/olares-one-desk.webp",
+      "imageAlt": "放在桌面上的紧凑型台式机 Olares One",
+      "imageCaption": "桌面上的 Olares One（320 × 197 × 55 mm）。照片：Olares",
         "title": "结论",
         "content": "**Olares One 是一台规格扎实的紧凑型主机，适合想要开箱即用的本地 AI 桌面主机、并能接受 $4,999 价格的人。** 它的 24 GB GDDR7 显存适合中等规模模型和快速的提示词处理；96 GB DDR5 为 70B 模型提供了容量，但容量不等于速度——放在系统内存里的层只能按 DDR5 的带宽运行。它最有力的理由是便利性和体积，而不是每 GB 显存的价格。我们没有测试过实机，因此请将本文视为对已公布规格的解读；任何基准测试数据——无论来自 Olares 还是我们——在独立测试确认之前，都应视为未经验证。"
       },
@@ -2901,6 +2952,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       "specs": {
         "id": "specs",
+      "image": "/images/olares-one-cooling.webp",
+      "imageAlt": "Olares One 内部散热结构分解图",
+      "imageCaption": "Olares One 的内部散热结构（厂商提供的示意图）。图片：Olares",
         "title": "Olares One 规格",
         "content": "**厂商公布的规格，取自 olares.com/one，日期 2026-10-31。** Olares 在该页面没有公布零售价；价格来自官方商店。",
         "columns": [
