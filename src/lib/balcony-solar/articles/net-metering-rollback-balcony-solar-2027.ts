@@ -13,15 +13,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2027,
     next_refresh_due: '2027-01-18',
-    last_full_refresh: '2026-10-19',
+    last_full_refresh: '2026-10-31',
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-en.webp',
     title: 'Netherlands Net Metering Ends in 2027: What It Means for Balcony Solar',
     seoTitle: 'Dutch Net Metering Ends in 2027: Balcony Solar Impact',
     intro: 'The Netherlands ends its saldering scheme, the 1:1 netting of fed-in and drawn electricity, on January 1, 2027. The law passed the Dutch parliament in late 2024. Afterwards, households that feed power back receive a "reasonable compensation" from their supplier, with a statutory floor until 2030. This page covers the Dutch change only; it is not a general EU net-metering guide and not legal or financial advice.',
-    metaDescription: 'Dutch net metering (saldering) ends January 1, 2027. Until 2030, feed-in pay must be at least 50% of the ex-tax power price. What it means for balcony solar.',
+    metaDescription: 'Dutch net metering (saldering) ends January 1, 2027. Until 2030, feed-in pay must be at least 50% of the ex-tax power price. Impact on balcony solar.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min read',
     educationalLevel: 'Beginner',
     audience: 'Dutch balcony solar owners and buyers affected by the end of saldering',
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Suppliers cannot postpone the date; they must split consumption and feed-in into the periods before and from January 1, 2027',
           'Self-consumption gains value; a battery only pays off if the gap between your purchase price and your export payment is large enough',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -74,6 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Under saldering, electricity drawn from the grid and fed into it are netted 1:1, including energy tax and VAT.** Until January 1, 2027, a household that feeds in 3,000 kWh and draws 4,000 kWh pays for the 1,000 kWh difference. The scheme ends by law on January 1, 2027. The Wet beëindiging salderingsregeling (bill 36611) passed the Tweede Kamer on November 14, 2024 and the Eerste Kamer on December 17, 2024.',
           '**From January 1, 2027, households with a net surplus are entitled to a "reasonable compensation" (redelijke vergoeding) from their supplier.** The law sets no fixed price. According to the consumer site of the regulator ACM, the compensation must be at least 50% of the price paid for electricity excluding energy tax and VAT until January 1, 2030. ACM supervises whether compensation is reasonable. Because the floor is written to run only until 2030, check the rules in force when you sign or renew a contract.',
+          '**From 2027 you pay energy tax and VAT on all electricity you draw from the grid, while power from your own system that you use directly is not taxed.** Under saldering the netting included energy tax and VAT, so only the net difference was taxed. ACM states this on its consumer site.',
         ],
       },
       contractCheck: {
@@ -82,6 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Check three items in your energy contract: the per-kWh feed-in payment, the feed-in fee (terugleverkosten), and how the contract handles the switch on January 1, 2027.** ACM explains that feed-in fees can be a fixed amount or a charge per kWh fed back, and that they can sometimes be higher than the compensation for the power you feed back.',
           '**Suppliers cannot postpone the legal end date, but your contract terms may still matter.** ACM states that a contract can still grant a right to netting under its own terms, and that the supplier must split your consumption and feed-in into the period up to December 31, 2026 and the period from January 1, 2027. ACM advises comparing offers carefully, especially contracts that run past 2027. This page does not quote supplier rates because offers change often.',
+          '**A supplier may change the terms of a contract that runs past 2027 only if the current terms clearly explain why.** In that case, according to ACM, you can switch to another supplier free of charge. If you receive such a change notice, compare it with the feed-in payment and feed-in fee in your current contract before you accept it.',
         ],
         callouts: [
           { type: 'info', text: 'This page is general information, not legal or financial advice. Check your own contract and ask your supplier or a qualified adviser before deciding.' },
@@ -153,6 +155,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Should I buy a battery because of this change?',
             a: 'Not automatically. The gap between the retail price and the export payment widens, which favors self-consumption, but a battery only pays off if the saved gap outweighs its cost. Start with the one-number test in the battery decision guide.',
           },
+          {
+            q: 'How is power fed in by a balcony solar system paid for in the Netherlands?',
+            a: 'The sources behind this page (the law, ACM and Milieu Centraal) describe compensation for fed-in power in general terms and do not set a separate rate for plug-in systems. The general rules are therefore the reference: until January 1, 2030, at least 50% of the price excluding energy tax and VAT per kWh, less any feed-in fee. Ask your supplier how it treats your connection. Small plug-in systems typically feed in little, because most of their output is used in the home, and power used directly is not taxed.',
+          },
+          {
+            q: 'Can I leave my supplier for free if my contract changes because saldering ends?',
+            a: 'Yes, in the case ACM describes. A supplier may change a contract that runs past 2027 only if the current terms clearly explain why, and then you can switch to another supplier free of charge. Check the wording of your contract and ask your supplier or ACM if you are unsure.',
+          },
         ],
       },
       relatedReading: {
@@ -172,9 +182,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'هولندا: نهاية نظام Net Metering في 2027 وأثره على الطاقة الشمسية للشرفة',
     seoTitle: 'هولندا: نهاية Saldering في 2027 والطاقة الشمسية للشرفة',
     intro: 'تنهي هولندا في 1 يناير 2027 نظام saldering، أي المقاصة 1:1 بين الكهرباء المُصدَّرة إلى الشبكة والمسحوبة منها. أقرّ البرلمان الهولندي القانون في أواخر 2024. وبعد ذلك التاريخ تتلقى الأسر التي تُصدّر الكهرباء «تعويضًا معقولًا» من شركة التوريد، مع حدّ أدنى قانوني حتى عام 2030. تتناول هذه الصفحة التغيير الهولندي فقط؛ وهي ليست دليلًا عامًا لنظام Net Metering في الاتحاد الأوروبي، وليست استشارة قانونية أو مالية.',
-    metaDescription: 'ينتهي نظام saldering الهولندي في 1 يناير 2027. حتى 2030 يجب ألا يقل تعويض التصدير عن 50% من سعر الكهرباء قبل الضرائب. ما أثر ذلك على الطاقة الشمسية للشرفة.',
+    metaDescription: 'ينتهي نظام saldering الهولندي في 1 يناير 2027. حتى 2030 يجب ألا يقل تعويض التصدير عن 50% من سعر الكهرباء دون ضرائب. الأثر على الطاقة الشمسية للشرفة.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'ملاك ومشترو الطاقة الشمسية للشرفة في هولندا المتأثرون بانتهاء نظام saldering',
@@ -197,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا تستطيع شركات التوريد تأجيل التاريخ؛ عليها تقسيم الاستهلاك والتصدير إلى فترتين: قبل 1 يناير 2027 ومنه فصاعدًا',
           'تزداد قيمة الاستهلاك الذاتي؛ ولا تُجدي البطارية إلا إذا كان الفرق بين سعر الشراء وتعويض التصدير كبيرًا بما يكفي',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -227,6 +237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**في نظام saldering تُجرى مقاصة 1:1 بين الكهرباء المسحوبة من الشبكة والمُصدَّرة إليها، شاملةً ضريبة الطاقة وضريبة القيمة المضافة.** حتى 1 يناير 2027 تدفع الأسرة التي تُصدّر 3,000 kWh وتسحب 4,000 kWh ثمن الفرق البالغ 1,000 kWh. ينتهي النظام بموجب القانون في 1 يناير 2027. أقرّ Tweede Kamer قانون Wet beëindiging salderingsregeling (مشروع القانون 36611) في 14 نوفمبر 2024، وأقرّه Eerste Kamer في 17 ديسمبر 2024.',
           '**ابتداءً من 1 يناير 2027 يحق للأسر التي لديها فائض صافٍ الحصول على «تعويض معقول» (redelijke vergoeding) من شركة التوريد.** لا يحدد القانون سعرًا ثابتًا. ووفق موقع المستهلكين التابع للجهة المنظِّمة ACM، يجب ألا يقل التعويض حتى 1 يناير 2030 عن 50% من السعر المدفوع للكهرباء دون ضريبة الطاقة وضريبة القيمة المضافة. وتشرف ACM على مدى معقولية التعويض. ولأن الحد الأدنى منصوص عليه حتى 2030 فقط، راجع القواعد السارية عند توقيع العقد أو تجديده.',
+          '**ابتداءً من 2027 ستدفع ضريبة الطاقة وضريبة القيمة المضافة على كل الكهرباء التي تسحبها من الشبكة، أما الكهرباء التي ينتجها نظامك وتستهلكها مباشرة فلا تُفرض عليها ضريبة.** كانت المقاصة في نظام saldering تشمل ضريبة الطاقة وضريبة القيمة المضافة، فلم تكن الضريبة تُفرض إلا على الفرق الصافي. وتذكر ACM ذلك في موقعها للمستهلكين.',
         ],
       },
       contractCheck: {
@@ -235,6 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**راجع في عقد الطاقة ثلاثة بنود: تعويض التصدير لكل kWh، ورسم التصدير (terugleverkosten)، وكيفية تعامل العقد مع الانتقال في 1 يناير 2027.** توضح ACM أن رسوم التصدير قد تكون مبلغًا ثابتًا أو رسمًا على كل kWh مُصدَّر، وأنها قد تتجاوز أحيانًا تعويض الكهرباء المُصدَّرة.',
           '**لا تستطيع شركات التوريد تأجيل تاريخ الانتهاء القانوني، لكن شروط عقدك قد تظل مهمة.** تذكر ACM أن العقد قد يمنح حق المقاصة وفق شروطه الخاصة، وأن على شركة التوريد تقسيم استهلاكك وتصديرك إلى الفترة حتى 31 ديسمبر 2026 والفترة منذ 1 يناير 2027. وتنصح ACM بمقارنة العروض بعناية، خصوصًا العقود التي تمتد بعد 2027. لا نذكر هنا تعرفات شركات بعينها لأن العروض تتغير كثيرًا.',
+          '**لا يجوز لشركة التوريد تعديل شروط عقد يمتد بعد 2027 إلا إذا كانت الشروط الحالية تشرح السبب بوضوح.** وفي هذه الحالة تذكر ACM أنه يمكنك الانتقال إلى شركة توريد أخرى دون رسوم. وإذا وصلك إشعار تعديل كهذا، فقارنه بتعويض التصدير ورسم التصدير في عقدك الحالي قبل أن توافق عليه.',
         ],
         callouts: [
           { type: 'info', text: 'هذه الصفحة معلومات عامة وليست استشارة قانونية أو مالية. راجع عقدك الخاص واسأل شركة التوريد أو مستشارًا مؤهلًا قبل اتخاذ القرار.' },
@@ -306,6 +318,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل ينبغي أن أشتري بطارية بسبب هذا التغيير؟',
             a: 'ليس تلقائيًا. يتسع الفرق بين سعر التجزئة وتعويض التصدير، مما يصبّ في مصلحة الاستهلاك الذاتي، لكن البطارية لا تُجدي إلا إذا تجاوز الفرق الموفَّر تكلفتها. ابدأ باختبار «الرقم الواحد» في دليل قرار البطارية.',
           },
+          {
+            q: 'كيف يُعوَّض في هولندا عن الكهرباء التي يصدّرها نظام الطاقة الشمسية للشرفة؟',
+            a: 'تصف مصادر هذه الصفحة (القانون وACM وMilieu Centraal) التعويض عن الكهرباء المُصدَّرة بصورة عامة ولا تحدد سعرًا منفصلًا للأنظمة القابلة للتوصيل بالمقبس. لذلك تبقى القواعد العامة هي المرجع: حتى 1 يناير 2030 يجب ألا يقل التعويض عن 50% من السعر دون ضريبة الطاقة وضريبة القيمة المضافة لكل kWh، مع خصم أي رسم تصدير. اسأل شركة التوريد كيف تتعامل مع توصيلتك. تصدّر الأنظمة الصغيرة القابلة للتوصيل بالمقبس عادةً قدرًا قليلًا لأن إنتاجها يُستهلك في المنزل في الغالب، والكهرباء المستهلكة مباشرة لا تخضع للضريبة.',
+          },
+          {
+            q: 'هل يمكنني ترك شركة التوريد دون رسوم إذا تغيّر عقدي بسبب نهاية saldering؟',
+            a: 'نعم، في الحالة التي تصفها ACM. لا يجوز لشركة التوريد تعديل عقد يمتد بعد 2027 إلا إذا كانت الشروط الحالية تشرح السبب بوضوح، وعندها يمكنك الانتقال إلى شركة توريد أخرى دون رسوم. راجع صياغة عقدك، واسأل شركة التوريد أو ACM إذا لم تكن متأكدًا.',
+          },
         ],
       },
       relatedReading: {
@@ -327,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Die Niederlande beenden zum 1. Januar 2027 die Saldering, also die 1:1-Verrechnung von eingespeistem und bezogenem Strom. Das Gesetz hat das niederländische Parlament Ende 2024 passiert. Danach erhalten Haushalte, die Strom einspeisen, von ihrem Versorger eine „angemessene Vergütung“, für die bis 2030 eine gesetzliche Untergrenze gilt. Diese Seite behandelt nur die niederländische Änderung; sie ist kein allgemeiner EU-Ratgeber zum Net Metering und keine Rechts- oder Finanzberatung.',
     metaDescription: 'Die niederländische Saldering endet am 1. Januar 2027. Bis 2030 gilt eine Mindestvergütung von 50 % des Preises ohne Steuern. Folgen für Balkonkraftwerke.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Niederländische Balkonkraftwerk-Besitzer und -Käufer, die vom Ende der Saldering betroffen sind',
@@ -350,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Versorger können den Stichtag nicht verschieben; sie müssen Bezug und Einspeisung in die Zeiträume vor und ab dem 1. Januar 2027 aufteilen',
           'Eigenverbrauch gewinnt an Wert; ein Speicher lohnt sich nur, wenn die Lücke zwischen Bezugspreis und Einspeisevergütung groß genug ist',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -380,6 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Bei der Saldering werden aus dem Netz bezogener und ins Netz eingespeister Strom 1:1 verrechnet, einschließlich Energiesteuer und Mehrwertsteuer.** Bis zum 1. Januar 2027 zahlt ein Haushalt, der 3.000 kWh einspeist und 4.000 kWh bezieht, für die Differenz von 1.000 kWh. Die Regelung endet gesetzlich am 1. Januar 2027. Das Wet beëindiging salderingsregeling (Gesetzentwurf 36611) wurde am 14. November 2024 von der Tweede Kamer und am 17. Dezember 2024 von der Eerste Kamer angenommen.',
           '**Ab dem 1. Januar 2027 haben Haushalte mit einem Netto-Überschuss Anspruch auf eine „angemessene Vergütung“ (redelijke vergoeding) ihres Versorgers.** Das Gesetz legt keinen festen Preis fest. Laut der Verbraucherseite der Regulierungsbehörde ACM muss die Vergütung bis zum 1. Januar 2030 mindestens 50 % des gezahlten Strompreises ohne Energiesteuer und Mehrwertsteuer betragen. Die ACM überwacht, ob die Vergütung angemessen ist. Da die Untergrenze nur bis 2030 vorgesehen ist, sollten Sie bei Vertragsabschluss oder -verlängerung die dann geltenden Regeln prüfen.',
+          '**Ab 2027 zahlen Sie Energiesteuer und Mehrwertsteuer auf den gesamten Strom, den Sie aus dem Netz beziehen; direkt verbrauchter Strom aus Ihrer eigenen Anlage bleibt steuerfrei.** Bei der Saldering schloss die Verrechnung Energiesteuer und Mehrwertsteuer ein, sodass nur die Differenz besteuert wurde. Das erklärt die ACM auf ihrer Verbraucherseite.',
         ],
       },
       contractCheck: {
@@ -388,6 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Prüfen Sie in Ihrem Stromvertrag drei Punkte: die Einspeisevergütung pro kWh, die Einspeisegebühr (terugleverkosten) und den Umgang des Vertrags mit dem Wechsel am 1. Januar 2027.** Die ACM erläutert, dass Einspeisegebühren ein Festbetrag oder ein Preis pro eingespeister kWh sein können und mitunter höher ausfallen als die Vergütung für den eingespeisten Strom.',
           '**Versorger können den gesetzlichen Stichtag nicht verschieben, die Vertragsbedingungen können aber weiterhin eine Rolle spielen.** Die ACM führt aus, dass ein Vertrag nach seinen eigenen Bedingungen weiterhin ein Recht auf Verrechnung gewähren kann und dass der Versorger Bezug und Einspeisung in den Zeitraum bis zum 31. Dezember 2026 und den Zeitraum ab dem 1. Januar 2027 aufteilen muss. Die ACM rät, Angebote sorgfältig zu vergleichen, besonders Verträge mit Laufzeit über 2027 hinaus. Konkrete Versorgertarife nennen wir hier nicht, da sich Angebote häufig ändern.',
+          '**Ein Versorger darf die Bedingungen eines Vertrags, der über 2027 hinausläuft, nur ändern, wenn die bisherigen Vertragsbedingungen klar erklären, warum.** In diesem Fall können Sie laut ACM kostenlos zu einem anderen Versorger wechseln. Erhalten Sie eine solche Änderungsmitteilung, vergleichen Sie sie vor der Zustimmung mit der Einspeisevergütung und der Einspeisegebühr Ihres bisherigen Vertrags.',
         ],
         callouts: [
           { type: 'info', text: 'Diese Seite bietet allgemeine Informationen, keine Rechts- oder Finanzberatung. Prüfen Sie Ihren eigenen Vertrag und fragen Sie Ihren Versorger oder eine qualifizierte Beratung, bevor Sie entscheiden.' },
@@ -459,6 +481,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Sollte ich mir wegen dieser Änderung einen Batteriespeicher zulegen?',
             a: 'Nicht automatisch. Die Lücke zwischen Endkundenpreis und Einspeisevergütung wächst, was den Eigenverbrauch begünstigt, aber ein Speicher lohnt sich nur, wenn die eingesparte Lücke seine Kosten übersteigt. Beginnen Sie mit dem Ein-Zahlen-Test im Entscheidungsratgeber zum Batteriespeicher.',
           },
+          {
+            q: 'Wie wird in den Niederlanden der Strom aus einem Balkonkraftwerk vergütet?',
+            a: 'Die Quellen dieser Seite (Gesetz, ACM und Milieu Centraal) beschreiben die Vergütung für eingespeisten Strom allgemein und legen keinen eigenen Satz für Steckersolargeräte fest. Maßgeblich sind daher die allgemeinen Regeln: bis zum 1. Januar 2030 mindestens 50 % des Preises ohne Energiesteuer und Mehrwertsteuer pro kWh, abzüglich einer möglichen Einspeisegebühr. Fragen Sie Ihren Versorger, wie er Ihren Anschluss behandelt. Kleine Steckersolargeräte speisen meist wenig ein, weil ihr Ertrag überwiegend im Haushalt verbraucht wird, und direkt verbrauchter Strom wird nicht besteuert.',
+          },
+          {
+            q: 'Kann ich meinen Versorger kostenlos verlassen, wenn sich mein Vertrag wegen des Endes der Saldering ändert?',
+            a: 'Ja, in dem Fall, den die ACM beschreibt. Ein Versorger darf einen Vertrag, der über 2027 hinausläuft, nur ändern, wenn die bisherigen Bedingungen klar erklären, warum; dann können Sie kostenlos zu einem anderen Versorger wechseln. Prüfen Sie den Wortlaut Ihres Vertrags und fragen Sie im Zweifel Ihren Versorger oder die ACM.',
+          },
         ],
       },
       relatedReading: {
@@ -480,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Los Países Bajos ponen fin el 1 de enero de 2027 al saldering, la compensación 1:1 entre la electricidad inyectada y la consumida. La ley fue aprobada por el Parlamento neerlandés a finales de 2024. A partir de entonces, los hogares que inyectan electricidad reciben de su comercializadora una «compensación razonable», con un mínimo legal hasta 2030. Esta página trata solo el cambio neerlandés; no es una guía general de net metering en la UE ni asesoramiento jurídico o financiero.',
     metaDescription: 'El saldering neerlandés termina el 1 de enero de 2027. Hasta 2030 se paga al menos el 50 % del precio sin impuestos. Qué implica para el solar de balcón.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Propietarios y compradores neerlandeses de energía solar de balcón afectados por el fin del saldering',
@@ -503,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Las comercializadoras no pueden aplazar la fecha; deben dividir consumo e inyección en los periodos anterior y posterior al 1 de enero de 2027',
           'El autoconsumo gana valor; una batería solo compensa si la diferencia entre tu precio de compra y tu pago por inyección es suficientemente grande',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -533,6 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Con el saldering, la electricidad tomada de la red y la inyectada en ella se compensan 1:1, incluidos el impuesto energético y el IVA.** Hasta el 1 de enero de 2027, un hogar que inyecta 3.000 kWh y consume 4.000 kWh paga la diferencia de 1.000 kWh. El esquema termina por ley el 1 de enero de 2027. La Wet beëindiging salderingsregeling (proyecto de ley 36611) fue aprobada por la Tweede Kamer el 14 de noviembre de 2024 y por la Eerste Kamer el 17 de diciembre de 2024.',
           '**Desde el 1 de enero de 2027, los hogares con excedente neto tienen derecho a una «compensación razonable» (redelijke vergoeding) de su comercializadora.** La ley no fija un precio. Según el sitio para consumidores del regulador ACM, la compensación debe ser al menos el 50 % del precio pagado por la electricidad sin impuesto energético ni IVA hasta el 1 de enero de 2030. La ACM supervisa que la compensación sea razonable. Como el mínimo está previsto solo hasta 2030, revisa las reglas vigentes cuando firmes o renueves un contrato.',
+          '**Desde 2027 pagas el impuesto energético y el IVA por toda la electricidad que tomas de la red; la electricidad de tu propia instalación que consumes directamente no tributa.** Con la saldering, la compensación incluía el impuesto energético y el IVA, así que solo se gravaba la diferencia neta. Lo indica la ACM en su web para consumidores.',
         ],
       },
       contractCheck: {
@@ -541,6 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Revisa tres puntos de tu contrato de energía: el pago por kWh inyectado, el cargo por inyección (terugleverkosten) y cómo trata el contrato el cambio del 1 de enero de 2027.** La ACM explica que los cargos por inyección pueden ser un importe fijo o un cargo por kWh inyectado, y que a veces son mayores que la compensación por la electricidad inyectada.',
           '**Las comercializadoras no pueden aplazar la fecha legal de fin, pero las condiciones de tu contrato pueden seguir importando.** La ACM indica que un contrato puede seguir otorgando un derecho a compensación según sus propios términos, y que la comercializadora debe dividir tu consumo e inyección en el periodo hasta el 31 de diciembre de 2026 y el periodo desde el 1 de enero de 2027. La ACM aconseja comparar las ofertas con cuidado, sobre todo los contratos que superan 2027. Aquí no citamos tarifas de comercializadoras porque las ofertas cambian a menudo.',
+          '**Una comercializadora solo puede modificar las condiciones de un contrato que se prolonga más allá de 2027 si las condiciones actuales explican claramente el motivo.** En ese caso, según la ACM, puedes cambiar de comercializadora sin coste. Si recibes un aviso de cambio así, compáralo con el pago por inyección y el cargo por inyección de tu contrato actual antes de aceptarlo.',
         ],
         callouts: [
           { type: 'info', text: 'Esta página ofrece información general, no asesoramiento jurídico ni financiero. Revisa tu propio contrato y consulta con tu comercializadora o con un asesor cualificado antes de decidir.' },
@@ -612,6 +644,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Debería comprar una batería por este cambio?',
             a: 'No automáticamente. La diferencia entre el precio minorista y el pago por inyección aumenta, lo que favorece el autoconsumo, pero una batería solo compensa si la diferencia ahorrada supera su coste. Empieza por la prueba de un solo número de la guía de decisión sobre baterías.',
           },
+          {
+            q: '¿Cómo se paga en los Países Bajos la electricidad inyectada por un sistema solar de balcón?',
+            a: 'Las fuentes de esta página (la ley, la ACM y Milieu Centraal) describen la compensación por la electricidad inyectada de forma general y no fijan una tarifa aparte para los sistemas enchufables. Por eso la referencia son las reglas generales: hasta el 1 de enero de 2030, al menos el 50% del precio sin impuesto energético ni IVA por kWh, menos cualquier cargo por inyección. Pregunta a tu comercializadora cómo trata tu conexión. Los sistemas enchufables pequeños suelen inyectar poco, porque su producción se consume sobre todo en casa, y la electricidad consumida directamente no tributa.',
+          },
+          {
+            q: '¿Puedo cambiar de comercializadora sin coste si mi contrato cambia por el fin de la saldering?',
+            a: 'Sí, en el caso que describe la ACM. Una comercializadora solo puede modificar un contrato que se prolonga más allá de 2027 si las condiciones actuales explican claramente el motivo; entonces puedes cambiar de comercializadora sin coste. Revisa la redacción de tu contrato y, si tienes dudas, consulta a tu comercializadora o a la ACM.',
+          },
         ],
       },
       relatedReading: {
@@ -633,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Les Pays-Bas mettent fin au 1er janvier 2027 au saldering, la compensation 1:1 entre l\'électricité injectée et l\'électricité soutirée. La loi a été adoptée par le Parlement néerlandais fin 2024. Ensuite, les ménages qui injectent de l\'électricité reçoivent de leur fournisseur une « rémunération raisonnable », assortie d\'un plancher légal jusqu\'en 2030. Cette page ne traite que de ce changement néerlandais ; ce n\'est ni un guide général du net metering dans l\'UE ni un conseil juridique ou financier.',
     metaDescription: 'Le saldering néerlandais prend fin le 1er janvier 2027. Jusqu\'en 2030, au moins 50 % du prix hors taxes est garanti. Effets sur le solaire de balcon.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Propriétaires et acheteurs néerlandais de solaire de balcon concernés par la fin du saldering',
@@ -656,7 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les fournisseurs ne peuvent pas reporter la date ; ils doivent répartir consommation et injection entre les périodes avant et à partir du 1er janvier 2027',
           'L\'autoconsommation gagne en valeur ; une batterie n\'est rentable que si l\'écart entre votre prix d\'achat et votre rémunération d\'injection est assez grand',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -686,6 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Avec le saldering, l\'électricité soutirée du réseau et celle qui y est injectée sont compensées 1:1, taxe énergétique et TVA comprises.** Jusqu\'au 1er janvier 2027, un ménage qui injecte 3 000 kWh et soutire 4 000 kWh paie la différence de 1 000 kWh. Le dispositif prend fin par la loi le 1er janvier 2027. La Wet beëindiging salderingsregeling (projet de loi 36611) a été adoptée par la Tweede Kamer le 14 novembre 2024 et par la Eerste Kamer le 17 décembre 2024.',
           '**À partir du 1er janvier 2027, les ménages ayant un excédent net ont droit à une « rémunération raisonnable » (redelijke vergoeding) de leur fournisseur.** La loi ne fixe pas de prix. Selon le site grand public du régulateur ACM, la rémunération doit représenter au moins 50 % du prix payé pour l\'électricité hors taxe énergétique et TVA jusqu\'au 1er janvier 2030. L\'ACM contrôle le caractère raisonnable de la rémunération. Comme le plancher n\'est prévu que jusqu\'en 2030, vérifiez les règles en vigueur lorsque vous signez ou renouvelez un contrat.',
+          '**À partir de 2027, vous payez la taxe énergétique et la TVA sur toute l\'électricité que vous soutirez du réseau ; l\'électricité de votre propre installation que vous consommez directement n\'est pas taxée.** Avec la saldering, la compensation incluait la taxe énergétique et la TVA, si bien que seule la différence nette était taxée. C\'est ce qu\'indique l\'ACM sur son site pour les consommateurs.',
         ],
       },
       contractCheck: {
@@ -694,6 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Vérifiez trois éléments dans votre contrat d\'énergie : la rémunération d\'injection par kWh, les frais d\'injection (terugleverkosten) et la façon dont le contrat gère le passage du 1er janvier 2027.** L\'ACM explique que les frais d\'injection peuvent être un montant fixe ou un tarif par kWh injecté, et qu\'ils peuvent parfois dépasser la rémunération de l\'électricité injectée.',
           '**Les fournisseurs ne peuvent pas reporter la date légale, mais les conditions de votre contrat peuvent rester importantes.** L\'ACM précise qu\'un contrat peut encore ouvrir un droit à la compensation selon ses propres termes, et que le fournisseur doit répartir votre consommation et votre injection entre la période jusqu\'au 31 décembre 2026 et celle à partir du 1er janvier 2027. L\'ACM conseille de comparer attentivement les offres, surtout les contrats qui dépassent 2027. Nous ne citons pas de tarifs de fournisseurs, car les offres changent souvent.',
+          '**Un fournisseur ne peut modifier les conditions d\'un contrat qui se prolonge au-delà de 2027 que si les conditions actuelles en expliquent clairement la raison.** Dans ce cas, selon l\'ACM, vous pouvez changer de fournisseur sans frais. Si vous recevez un tel avis de modification, comparez-le avec la rémunération d\'injection et les frais d\'injection de votre contrat actuel avant de l\'accepter.',
         ],
         callouts: [
           { type: 'info', text: 'Cette page donne des informations générales, pas un conseil juridique ou financier. Vérifiez votre propre contrat et interrogez votre fournisseur ou un conseiller qualifié avant de décider.' },
@@ -765,6 +807,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Dois-je acheter une batterie à cause de ce changement ?',
             a: 'Pas automatiquement. L\'écart entre le prix de détail et la rémunération d\'injection s\'élargit, ce qui favorise l\'autoconsommation, mais une batterie n\'est rentable que si l\'écart économisé dépasse son coût. Commencez par le test à un chiffre du guide de décision sur la batterie.',
           },
+          {
+            q: 'Comment l\'électricité injectée par un système solaire de balcon est-elle rémunérée aux Pays-Bas ?',
+            a: 'Les sources de cette page (la loi, l\'ACM et Milieu Centraal) décrivent la rémunération de l\'électricité injectée en termes généraux et ne fixent pas de tarif distinct pour les systèmes prêts à brancher. Les règles générales font donc référence : jusqu\'au 1er janvier 2030, au moins 50 % du prix hors taxe énergétique et TVA par kWh, déduction faite d\'éventuels frais d\'injection. Demandez à votre fournisseur comment il traite votre raccordement. Les petits systèmes prêts à brancher injectent généralement peu, car leur production est surtout consommée dans le foyer, et l\'électricité consommée directement n\'est pas taxée.',
+          },
+          {
+            q: 'Puis-je quitter mon fournisseur sans frais si mon contrat change à cause de la fin de la saldering ?',
+            a: 'Oui, dans le cas décrit par l\'ACM. Un fournisseur ne peut modifier un contrat qui se prolonge au-delà de 2027 que si les conditions actuelles en expliquent clairement la raison ; vous pouvez alors changer de fournisseur sans frais. Vérifiez la formulation de votre contrat et, en cas de doute, interrogez votre fournisseur ou l\'ACM.',
+          },
         ],
       },
       relatedReading: {
@@ -786,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'オランダは2027年1月1日に、系統への送電量と購入量を1対1で相殺する「サルデリング（saldering）」を終了します。法律は2024年末にオランダ議会で可決されました。以後、余剰電力を送電する世帯は、小売事業者から「合理的な対価」を受け取り、2030年までは法定の下限が適用されます。このページが扱うのはオランダの変更のみです。EU全体のネットメータリングの解説ではなく、法律・金融上の助言でもありません。',
     metaDescription: 'オランダのサルデリングは2027年1月1日に終了。2030年まで、売電の対価は税抜き電気料金の50％以上。バルコニーソーラーへの影響を解説します。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '約5分',
     educationalLevel: 'Beginner',
     audience: 'サルデリング終了の影響を受けるオランダのバルコニーソーラー所有者・購入者',
@@ -804,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '事業者は期日を延期できず、購入量と送電量を2027年1月1日前と以降の期間に分ける必要がある',
           '自家消費の価値が高まる。蓄電池が元を取れるのは、購入価格と売電対価の差が十分に大きい場合だけ',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -834,6 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**サルデリングでは、系統から購入した電力と系統へ送電した電力が、エネルギー税とVATを含めて1対1で相殺されます。** 2027年1月1日までは、3,000 kWhを送電し4,000 kWhを購入した世帯は、差の1,000 kWh分を支払います。この制度は法律により2027年1月1日に終了します。「Wet beëindiging salderingsregeling」（法案36611）は、2024年11月14日に下院、2024年12月17日に上院で可決されました。',
           '**2027年1月1日以降、正味で余剰がある世帯は、小売事業者から「合理的な対価」（redelijke vergoeding）を受け取る権利があります。** 法律は具体的な価格を定めていません。規制当局ACMの消費者向けサイトによると、2030年1月1日までは、エネルギー税とVATを除く電気料金の50％以上でなければなりません。ACMは対価が合理的かどうかを監督します。この下限は2030年までと定められているため、契約の締結・更新時には、その時点で有効なルールを確認してください。',
+          '**2027年からは、系統から受け取る電気のすべてにエネルギー税とVATがかかり、自分の設備で発電して直接使った電気には課税されません。** saldering（相殺）ではエネルギー税とVATを含めて相殺していたため、課税されるのは差し引きの差分だけでした。ACMが消費者向けサイトで説明しています。',
         ],
       },
       contractCheck: {
@@ -842,6 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**電力契約では、1 kWhあたりの売電対価、送電手数料（terugleverkosten）、2027年1月1日の切り替えの扱いという3点を確認してください。** ACMによると、送電手数料は定額の場合も送電量に応じた課金の場合もあり、送電電力の対価を上回ることがあります。',
           '**事業者は法定の終了日を延期できませんが、契約条件は引き続き重要な場合があります。** ACMは、契約自体の条件によって相殺の権利が残ることがあり、事業者は購入量と送電量を2026年12月31日までの期間と2027年1月1日以降の期間に分けなければならないと説明しています。ACMは、特に2027年をまたぐ契約について、オファーを慎重に比較するよう勧めています。オファーは頻繁に変わるため、このページでは事業者ごとの料金は挙げません。',
+          '**2027年をまたぐ契約の条件を事業者が変更できるのは、現行の契約条件がその理由を明確に説明している場合に限られます。** その場合、ACMによると、費用なしで別の事業者に乗り換えられます。そのような変更通知を受け取ったら、承諾する前に、現在の契約の売電対価および送電手数料と比べてください。',
         ],
         callouts: [
           { type: 'info', text: 'このページは一般的な情報であり、法的助言や金融上の助言ではありません。決める前にご自身の契約内容を確認し、供給事業者または資格のある専門家に相談してください。' },
@@ -913,6 +965,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'この変更を受けて蓄電池を買うべきですか？',
             a: '自動的にそうとは限りません。小売価格と売電対価の差が広がるため自家消費が有利になりますが、蓄電池は節約できる差が費用を上回る場合にのみ元が取れます。まず蓄電池の判断ガイドにある「1つの数字」のテストから始めてください。',
           },
+          {
+            q: 'オランダでは、バルコニーソーラーが送電した電気はどのように支払われますか？',
+            a: 'このページの出典（法律、ACM、Milieu Centraal）は、送電した電気への対価を一般的に説明しており、プラグイン式システム向けの別料金は定めていません。そのため一般ルールが基準になります。2030年1月1日までは、1 kWhあたりエネルギー税とVATを除く価格の50％以上で、送電手数料があればそれが差し引かれます。ご自身の接続がどう扱われるかは事業者に確認してください。小型のプラグイン式システムは発電量の大部分を家庭内で使うため、送電量は通常少なく、直接使った電気には課税されません。',
+          },
+          {
+            q: 'saldering終了で契約が変更される場合、費用なしで事業者を変更できますか？',
+            a: 'はい、ACMが説明している場合に限ります。2027年をまたぐ契約を事業者が変更できるのは、現行の条件がその理由を明確に説明しているときだけで、その場合は費用なしで別の事業者に乗り換えられます。契約書の文言を確認し、不明な点は事業者またはACMに問い合わせてください。',
+          },
         ],
       },
       relatedReading: {
@@ -930,11 +990,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-ko.webp',
     title: '네덜란드 넷미터링 2027년 종료: 발코니 태양광에 미치는 영향',
-    seoTitle: '네덜란드 살더링 2027년 종료와 발코니 태양광',
+    seoTitle: '네덜란드 살더링 2027년 종료가 발코니 태양광에 미치는 영향',
     intro: '네덜란드는 2027년 1월 1일에 계통에 보낸 전력과 사용한 전력을 1대1로 상계하는 살더링(saldering) 제도를 종료합니다. 이 법은 2024년 말 네덜란드 의회를 통과했습니다. 이후 전력을 역송하는 가구는 전력 공급사로부터 "합리적인 보상"을 받으며, 2030년까지 법정 하한이 적용됩니다. 이 글은 네덜란드의 변경만 다룹니다. EU 전체의 넷미터링 가이드가 아니며 법률·재무 자문도 아닙니다.',
     metaDescription: '네덜란드 살더링이 2027년 1월 1일 종료됩니다. 2030년까지 역송 보상은 세전 전기요금의 50% 이상이어야 합니다. 발코니 태양광에 미치는 영향.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5분 읽기',
     educationalLevel: 'Beginner',
     audience: '살더링 종료의 영향을 받는 네덜란드 발코니 태양광 소유자 및 구매자',
@@ -952,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '공급사는 날짜를 연기할 수 없으며, 사용량과 역송량을 2027년 1월 1일 이전과 이후 기간으로 나누어야 합니다',
           '자가소비의 가치가 높아집니다. 배터리는 구매 가격과 역송 보상의 차이가 충분히 클 때만 이익이 됩니다',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -982,6 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**살더링에서는 계통에서 가져온 전력과 계통으로 보낸 전력이 에너지세와 부가세를 포함해 1대1로 상계됩니다.** 2027년 1월 1일까지는 3,000 kWh를 역송하고 4,000 kWh를 사용한 가구는 차이인 1,000 kWh만큼 요금을 냅니다. 이 제도는 법에 따라 2027년 1월 1일에 종료됩니다. 「Wet beëindiging salderingsregeling」(법안 36611)은 2024년 11월 14일 하원, 2024년 12월 17일 상원을 통과했습니다.',
           '**2027년 1월 1일부터 순잉여가 있는 가구는 공급사로부터 "합리적인 보상"(redelijke vergoeding)을 받을 권리가 있습니다.** 법은 고정 가격을 정하지 않습니다. 규제 기관 ACM의 소비자 사이트에 따르면 2030년 1월 1일까지는 에너지세와 부가세를 제외한 전기 가격의 50% 이상이어야 합니다. ACM은 보상이 합리적인지 감독합니다. 이 하한은 2030년까지만 규정되어 있으므로, 계약을 체결하거나 갱신할 때 그 시점에 유효한 규정을 확인하십시오.',
+          '**2027년부터는 전력망에서 받는 모든 전기에 에너지세와 부가세를 내며, 자신의 설비에서 발전해 직접 쓴 전기에는 세금이 붙지 않습니다.** saldering(상계) 아래에서는 상계에 에너지세와 부가세가 포함되었으므로 순차액에만 세금이 부과되었습니다. ACM이 소비자용 사이트에서 이렇게 밝히고 있습니다.',
         ],
       },
       contractCheck: {
@@ -990,6 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**에너지 계약에서 세 가지를 확인하십시오. kWh당 역송 보상, 역송 수수료(terugleverkosten), 그리고 2027년 1월 1일 전환을 계약이 어떻게 다루는지입니다.** ACM은 역송 수수료가 정액일 수도 있고 역송 kWh당 요금일 수도 있으며, 때로는 역송 전력의 보상보다 클 수 있다고 설명합니다.',
           '**공급사는 법정 종료일을 연기할 수 없지만, 계약 조건은 여전히 중요할 수 있습니다.** ACM은 계약 자체의 조건에 따라 상계 권리가 남을 수 있으며, 공급사는 사용량과 역송량을 2026년 12월 31일까지의 기간과 2027년 1월 1일 이후의 기간으로 나누어야 한다고 밝혔습니다. ACM은 특히 2027년을 넘기는 계약의 제안을 신중히 비교하라고 권고합니다. 제안은 자주 바뀌므로 이 글에서는 공급사별 요금을 인용하지 않습니다.',
+          '**공급사는 2027년을 넘기는 계약의 조건을 현행 계약 조건이 그 이유를 명확히 설명하는 경우에만 변경할 수 있습니다.** 이 경우 ACM에 따르면 비용 없이 다른 공급사로 옮길 수 있습니다. 이런 변경 통지를 받으면 수락하기 전에 현재 계약의 역송 보상 및 역송 수수료와 비교하십시오.',
         ],
         callouts: [
           { type: 'info', text: '이 페이지는 일반 정보이며 법률 또는 재정 자문이 아닙니다. 결정하기 전에 본인의 계약서를 확인하고 공급사 또는 자격을 갖춘 전문가에게 문의하십시오.' },
@@ -1061,6 +1123,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '이 변경 때문에 배터리를 사야 합니까?',
             a: '자동으로 그렇지는 않습니다. 소매 가격과 역송 보상의 차이가 커져 자가소비에 유리해지지만, 배터리는 절약되는 차이가 비용을 넘을 때만 이익이 됩니다. 배터리 결정 가이드의 "숫자 하나" 테스트부터 시작하십시오.',
           },
+          {
+            q: '네덜란드에서 발코니 태양광이 역송한 전기는 어떻게 보상받습니까?',
+            a: '이 글의 출처(법률, ACM, Milieu Centraal)는 역송 전기에 대한 보상을 일반적으로 설명할 뿐, 플러그인 시스템에 대한 별도 요율은 정하지 않습니다. 따라서 일반 규칙이 기준이 됩니다. 2030년 1월 1일까지는 kWh당 에너지세와 부가세를 제외한 가격의 50% 이상이며, 역송 수수료가 있으면 그만큼 차감됩니다. 본인의 접속을 어떻게 처리하는지 공급사에 문의하십시오. 소형 플러그인 시스템은 발전량 대부분을 가정에서 쓰므로 보통 역송량이 적고, 직접 사용한 전기에는 세금이 붙지 않습니다.',
+          },
+          {
+            q: 'saldering 종료로 계약이 바뀌면 비용 없이 공급사를 바꿀 수 있습니까?',
+            a: '네, ACM이 설명하는 경우에 한합니다. 공급사는 2027년을 넘기는 계약을 현행 조건이 그 이유를 명확히 설명할 때만 변경할 수 있으며, 그 경우 비용 없이 다른 공급사로 옮길 수 있습니다. 계약서 문구를 확인하고, 불확실하면 공급사나 ACM에 문의하십시오.',
+          },
         ],
       },
       relatedReading: {
@@ -1082,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Os Países Baixos encerram em 1º de janeiro de 2027 o saldering, a compensação 1:1 entre a eletricidade injetada e a consumida. A lei foi aprovada pelo Parlamento holandês no fim de 2024. Depois disso, as famílias que injetam energia recebem de seu fornecedor uma "remuneração razoável", com um piso legal até 2030. Esta página trata apenas da mudança holandesa; não é um guia geral de net metering na UE nem aconselhamento jurídico ou financeiro.',
     metaDescription: 'O saldering holandês termina em 1º de janeiro de 2027. Até 2030, o pagamento mínimo é 50% do preço sem impostos. Efeitos no solar de varanda.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Proprietários e compradores holandeses de energia solar de varanda afetados pelo fim do saldering',
@@ -1105,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os fornecedores não podem adiar a data; devem dividir consumo e injeção nos períodos anterior e posterior a 1º de janeiro de 2027',
           'O autoconsumo ganha valor; uma bateria só compensa se a diferença entre o seu preço de compra e o pagamento pela injeção for grande o bastante',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1135,6 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**No saldering, a eletricidade retirada da rede e a injetada nela são compensadas 1:1, incluindo imposto de energia e IVA.** Até 1º de janeiro de 2027, uma casa que injeta 3.000 kWh e consome 4.000 kWh paga a diferença de 1.000 kWh. O esquema termina por lei em 1º de janeiro de 2027. A Wet beëindiging salderingsregeling (projeto de lei 36611) foi aprovada pela Tweede Kamer em 14 de novembro de 2024 e pela Eerste Kamer em 17 de dezembro de 2024.',
           '**A partir de 1º de janeiro de 2027, as famílias com excedente líquido têm direito a uma "remuneração razoável" (redelijke vergoeding) de seu fornecedor.** A lei não fixa um preço. Segundo o site para consumidores do regulador ACM, a remuneração deve ser de pelo menos 50% do preço pago pela eletricidade sem imposto de energia e IVA até 1º de janeiro de 2030. A ACM fiscaliza se a remuneração é razoável. Como o piso está previsto só até 2030, confira as regras em vigor quando assinar ou renovar um contrato.',
+          '**A partir de 2027, você paga imposto de energia e IVA sobre toda a eletricidade que retira da rede; a eletricidade gerada pelo seu próprio sistema e consumida diretamente não é tributada.** Com a saldering, a compensação incluía imposto de energia e IVA, então só a diferença líquida era tributada. É o que a ACM informa no site para consumidores.',
         ],
       },
       contractCheck: {
@@ -1143,6 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Confira três itens no seu contrato de energia: o pagamento por kWh injetado, a taxa de injeção (terugleverkosten) e como o contrato trata a virada de 1º de janeiro de 2027.** A ACM explica que as taxas de injeção podem ser um valor fixo ou uma cobrança por kWh injetado, e que às vezes são maiores que a remuneração pela energia injetada.',
           '**Os fornecedores não podem adiar a data legal de término, mas as condições do seu contrato ainda podem importar.** A ACM afirma que um contrato pode continuar concedendo direito à compensação pelos seus próprios termos, e que o fornecedor deve dividir seu consumo e sua injeção no período até 31 de dezembro de 2026 e no período a partir de 1º de janeiro de 2027. A ACM recomenda comparar as ofertas com cuidado, especialmente contratos que vão além de 2027. Não citamos tarifas de fornecedores aqui porque as ofertas mudam com frequência.',
+          '**Um fornecedor só pode alterar as condições de um contrato que vai além de 2027 se as condições atuais explicarem claramente o motivo.** Nesse caso, segundo a ACM, você pode trocar de fornecedor sem custo. Se receber um aviso de alteração assim, compare-o com o pagamento por injeção e a taxa de injeção do seu contrato atual antes de aceitar.',
         ],
         callouts: [
           { type: 'info', text: 'Esta página traz informações gerais, não aconselhamento jurídico ou financeiro. Confira o seu contrato e consulte seu fornecedor ou um consultor qualificado antes de decidir.' },
@@ -1214,6 +1286,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Devo comprar uma bateria por causa dessa mudança?',
             a: 'Não automaticamente. A diferença entre o preço de varejo e o pagamento pela injeção aumenta, o que favorece o autoconsumo, mas uma bateria só compensa se a diferença economizada superar o custo dela. Comece pelo teste de um número do guia de decisão sobre baterias.',
           },
+          {
+            q: 'Como é paga, nos Países Baixos, a eletricidade injetada por um sistema solar de varanda?',
+            a: 'As fontes desta página (a lei, a ACM e a Milieu Centraal) descrevem a compensação pela eletricidade injetada de forma geral e não fixam uma tarifa separada para sistemas plug-in. Por isso, as regras gerais são a referência: até 1º de janeiro de 2030, pelo menos 50% do preço sem imposto de energia e IVA por kWh, menos qualquer taxa de injeção. Pergunte ao seu fornecedor como ele trata a sua conexão. Sistemas plug-in pequenos costumam injetar pouco, porque a produção é consumida principalmente em casa, e a eletricidade consumida diretamente não é tributada.',
+          },
+          {
+            q: 'Posso sair do meu fornecedor sem custo se o contrato mudar por causa do fim da saldering?',
+            a: 'Sim, no caso que a ACM descreve. Um fornecedor só pode alterar um contrato que vai além de 2027 se as condições atuais explicarem claramente o motivo; nesse caso, você pode trocar de fornecedor sem custo. Confira o texto do seu contrato e, em caso de dúvida, pergunte ao seu fornecedor ou à ACM.',
+          },
         ],
       },
       relatedReading: {
@@ -1233,9 +1313,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '荷兰净计量政策2027年终止：对阳台光伏意味着什么',
     seoTitle: '荷兰saldering 2027年终止：对阳台光伏的影响',
     intro: '荷兰将于2027年1月1日终止saldering制度，即上网电量与用电量按1:1相互抵扣。该法律已于2024年底通过荷兰议会。此后，向电网回送电力的家庭将从供电商处获得“合理补偿”，并在2030年前适用法定下限。本页仅讨论荷兰的这项变化，不是欧盟净计量的通用指南，也不构成法律或财务建议。',
-    metaDescription: '荷兰saldering制度将于2027年1月1日终止。到2030年，上网补偿不得低于不含税电价的50%。本文解读对阳台光伏的影响。',
+    metaDescription: '荷兰saldering制度将于2027年1月1日终止。到2030年，供电商支付的上网补偿不得低于不含能源税和增值税电价的50%。本文解读对阳台光伏的影响。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '约5分钟',
     educationalLevel: 'Beginner',
     audience: '受saldering制度终止影响的荷兰阳台光伏业主和购买者',
@@ -1253,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '供电商不能推迟该日期，必须将用电和上网分别划入2027年1月1日之前和之后两个期间',
           '自发自用的价值上升；只有当购电价与上网补偿之间的差距足够大时，电池才划算',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1283,6 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**在saldering制度下，从电网取用的电量与回送电网的电量按1:1抵扣，含能源税和增值税。** 截至2027年1月1日，上网3,000 kWh、用电4,000 kWh的家庭，为1,000 kWh的差额付费。该制度依法于2027年1月1日终止。《Wet beëindiging salderingsregeling》（法案36611）于2024年11月14日通过下议院，2024年12月17日通过上议院。',
           '**自2027年1月1日起，净有盈余的家庭有权从供电商获得“合理补偿”（redelijke vergoeding）。** 法律未规定固定价格。根据监管机构ACM的消费者网站，到2030年1月1日之前，补偿不得低于所付电价（不含能源税和增值税）的50%。ACM负责监督补偿是否合理。由于该下限只规定到2030年，签订或续签合同时请核实届时有效的规则。',
+          '**自2027年起，您从电网取用的全部电力都要缴纳能源税和增值税；自有系统发出并直接使用的电力不征税。** 在saldering下，抵扣已包含能源税和增值税，因此只对净差额征税。ACM在其消费者网站上作了此说明。',
         ],
       },
       contractCheck: {
@@ -1291,6 +1372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**请在能源合同中核对三项：每度电的上网补偿、上网费用（terugleverkosten），以及合同如何处理2027年1月1日的切换。** ACM说明，上网费用可以是固定金额，也可以按上网电量收费，有时会高于上网电力的补偿。',
           '**供电商不能推迟法定的终止日期，但合同条款仍可能起作用。** ACM指出，合同按其自身条款仍可能赋予抵扣权利，供电商必须将您的用电和上网划分为截至2026年12月31日和自2027年1月1日起两个期间。ACM建议仔细比较各类报价，尤其是跨越2027年的合同。报价变化频繁，本页不引用具体供电商的价格。',
+          '**对于跨越2027年的合同，供电商只有在现行合同条款已清楚说明原因时才能变更条款。** 这种情况下，ACM指出您可以免费改换其他供电商。如果收到这类变更通知，请先与现有合同中的上网补偿和上网费用对比，再决定是否接受。',
         ],
         callouts: [
           { type: 'info', text: '本页面提供的是一般性信息，不构成法律或财务建议。做决定前，请核对您自己的合同，并咨询供电商或具备资质的专业人士。' },
@@ -1341,6 +1423,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '跨越2027年1月1日的合同会怎样？', a: '供电商不能推迟法定终止日期，但合同条款仍可能赋予您抵扣权利。据ACM，供电商必须将您的用电和上网划分为截至2026年12月31日和自2027年1月1日起两个期间。', },
           { q: '这项规则适用于荷兰以外吗？', a: '不适用。这是荷兰的法律。包括德国在内的其他国家有各自的上网与登记规则，请参阅[各国法律状况指南](/zh/balcony-solar/is-balcony-solar-legal-country-guide)。', },
           { q: '我应该因为这项变化购买电池吗？', a: '不一定。零售电价与上网补偿的差距扩大，有利于自发自用，但只有当省下的差距超过电池成本时，电池才划算。请先使用电池决策指南中的“单一数字”测试。', },
+          { q: '荷兰如何结算阳台光伏的上网电力？', a: '本页的出处（法律、ACM和Milieu Centraal）只一般性地说明上网电力的补偿，没有为即插即用系统另设费率。因此以一般规则为准：至2030年1月1日，每度电的补偿不得低于不含能源税和增值税价格的50%，如有上网费用则需扣除。请向供电商确认它如何处理您的接入。小型即插即用系统发出的电大多在家中用掉，上网量通常较少，且直接使用的电力不征税。', },
+          { q: '如果合同因saldering终止而变更，我可以免费更换供电商吗？', a: '可以，限于ACM所述情形。对于跨越2027年的合同，供电商只有在现行条款已清楚说明原因时才能变更，此时您可以免费改换其他供电商。请核对合同措辞，如有疑问，请咨询供电商或ACM。', },
         ],
       },
       relatedReading: {
