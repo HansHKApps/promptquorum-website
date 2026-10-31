@@ -27,6 +27,9 @@
 // notFromZero section below rather than stated as settled fact.
 // REFRESH 2026-10-19: ministerial decision now published (reported as Gazette B 5573, 14 Sep 2026); draft details
 // (TAXISnet gateway, 2-yearly declaration, 900 W installed) replaced; unverified "80,000 installations" claim removed.
+// REFRESH 2026-10-31 (GSC-driven, 14 queries / ~15 impressions, mostly Greek-language): added Safety Conditions and Cost/Subsidy/Net Metering/Availability
+// sections, 5 FAQs (safety, cost + subsidy, net metering, buying now, Greek search terms) and 3 sources (NewMoney.gr 15 Sep 2026, Energypress tag page, DEDDIE news page) in all 9 locales.
+// NOT carried over: the "notify five days before installation" rule from the July draft-stage Athens Times piece (absent from coverage of the final text).
 import type { Language } from "@/lib/blog/blogContent";
 import type { LLMArticle } from "@/lib/local-llms/types";
 
@@ -34,21 +37,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
-    last_full_refresh: '2026-10-19',
+    last_full_refresh: '2026-10-31',
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Greece? 2027 Status Report',
     seoTitle: 'Is Balcony Solar Legal in Greece? 2027 Status Report',
     intro: 'Greece has legalized plug-in balcony solar: a ministerial decision dated 14 September 2026 creates a dedicated category for plug-in systems of up to 800 W generation and 1,000 W installed power per supply point, strictly for self-consumption. The no-export design is not caution for its own sake — Greece\'s grid already curtails existing solar output on many days, and industry figures have warned that unrestricted balcony PV could strain it. What is still pending is the practical machinery: technical specifications are due by 31 October 2026, and the DEDDIE/HEDNO notification portal has no start date yet.',
-    metaDescription: 'Balcony solar is legal in Greece under a 2026 ministerial decision: plug-in kits up to 800 W, no grid export, DEDDIE portal notice. Rules and open deadlines.',
+    metaDescription: 'Balcony solar is legal in Greece under a 2026 ministerial decision: plug-in kits up to 800 W, no grid export, DEDDIE notice. Rules and open deadlines.',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min read',
     educationalLevel: 'Beginner',
     audience: 'Balcony solar buyers and policy watchers in Greece tracking the balcony-PV ministerial decision',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**Yes — Greece has legalized plug-in balcony solar. A ministerial decision dated 14 September 2026 (reported as Government Gazette Β\' 5573), issued under Law 5299/2026, creates a dedicated category of plug-in systems with up to 800 W generation and 1,000 W installed power per supply point, strictly for self-consumption: energy that reaches the grid is not compensated.** No connection contract, permit or connection fee is required, but the owner must notify the grid operator DEDDIE/HEDNO through a digital portal that is not open yet — the technical specifications are due by 31 October 2026 and the portal start date by 31 December 2026. The consultation draft (open until 20 July 2026) had said 900 W installed capacity; Greek press reports the final figure as 1,000 W. Greece is not starting from zero on solar — ministry figures count 37,407 self-consumption systems (1,070 MW) added since 2020 — and the no-export design responds to a grid that already curtails solar output on many days. This is a status summary of published coverage, not legal advice.',
+    leadAnswerBlock: '**Yes — Greece has legalized plug-in balcony solar. A ministerial decision dated 14 September 2026 allows kits of up to 800 W generation and 1,000 W installed power per supply point, for self-consumption only, but the DEDDIE/HEDNO notification portal is not open yet.** Summary of coverage, not legal advice.',
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Greece?',
@@ -60,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No connection contract, permit or connection fee; the owner notifies DEDDIE/HEDNO via a digital portal (Taxisnet login) and an installer or engineer declares compliance',
           'Still pending: technical specifications due by 31 October 2026, portal start date to be announced by 31 December 2026, and operators may bar new connections in areas with limited grid capacity',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -69,6 +72,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Greece Isn\'t Starting From Zero', anchor: '#not-from-zero' },
       { label: 'Why Zero Feed-In — and Why Now', anchor: '#why-zero-feed-in' },
       { label: 'Registration: Portal, Declarations and Deadlines', anchor: '#registration' },
+      { label: 'Safety Conditions: What Is Settled and What Is Not', anchor: '#safety-conditions' },
+      { label: 'Cost, Subsidy, Net Metering and Availability', anchor: '#cost-availability' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Sources', anchor: '#sources' },
       { label: 'Related Reading', anchor: '#related-reading' },
@@ -84,6 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Registration is a notification, not a permit: no connection contract and no connection fee. The owner declares the system through a DEDDIE/HEDNO digital portal, and an installer or engineer declares compliance.',
           'The machinery is not ready: technical specifications are due by 31 October 2026 and the portal start date by 31 December 2026. Insider.gr reports that systems installed earlier must be declared within 30 days of launch.',
           'Operators may restrict new plug-in connections in areas with limited grid capacity. This page summarizes published coverage, not the Gazette text — it is not legal advice.',
+          'Cost and subsidy: Greek press quotes plug-in kits from about €500, with some systems above €1,000, and no subsidy for plug-in kits appears in the coverage reviewed. Net metering does not apply, because energy that reaches the grid is not compensated.',
         ],
       },
       lawVsMd: {
@@ -123,6 +129,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Standalone batteries are a separate category:** batteries without a PV system are allowed for individuals and companies with no grid export, enforced technically by a direction sensor and telemetry (Protothema).',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: 'Safety Conditions: What Is Settled and What Is Not',
+        content: [
+          '**The detailed technical and safety conditions for plug-in kits are not settled yet: DEDDIE/HEDNO, together with ELOT (the Hellenic Organization for Standardization), must publish the technical specifications by 31 October 2026, and the installer or engineer then declares that a system meets them.** pv magazine describes specific requirements to protect the grid and other electrical installations without listing them, and DEDDIE/HEDNO\'s news page listed no plug-in specification or portal announcement at the time of this refresh.',
+          '**Press accounts differ on the details.** NewMoney.gr reports that a direction sensor and telemetry are mandatory for standalone batteries, whereas for plug-in kits the sensor was dropped from the draft and exported energy is simply not compensated. Energypress reported in May that draft safety measures included anti-islanding protection, which the coverage of the final text reviewed here does not mention, so whether a kit must carry specific certifications is unconfirmed.',
+          '**Check the published specification, not the sales page.** Compliance is defined by the DEDDIE/ELOT specification and the installer\'s or engineer\'s declaration, so a retailer calling a kit "plug and play" says nothing about whether it meets Greek requirements. Operators can also bar new plug-in connections in areas with limited grid capacity. This is a summary of published coverage, not legal or electrical-safety advice.',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: 'Cost, Subsidy, Net Metering and Availability',
+        content: [
+          '**Greek press puts a plug-in kit from about €500, with some systems above €1,000, and no subsidy for plug-in kits appears in the coverage reviewed.** NewMoney.gr (15 September 2026) says prices can start at around €500 and in some cases exceed €1,000. The only subsidy figure in pv magazine\'s coverage is the €476 million Islands Decarbonization Fund, which is planned to support island self-consumption projects rather than balcony kits.',
+          '**Net metering does not apply to plug-in kits, because energy that reaches the grid is not compensated.** For standard self-consumption systems, pv magazine reports that mainland surplus is compensated at day-ahead market prices; the plug-in category is self-consumption only and sits outside that mechanism.',
+          '**Plug-in kits are sold internationally on a do-it-yourself basis, but the coverage reviewed names no Greek retailer, and the specification that would define a conforming kit was not yet on DEDDIE/HEDNO\'s news page at the time of this refresh.** Systems installed before the portal opens must be declared within 30 days of launch (Insider.gr). The ministry\'s stated rationale of lower bills, a possible 20–30% reduction, is covered above; this page does not estimate payback.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -134,6 +158,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Can I export excess balcony solar power to the grid in Greece?', a: 'No. Plug-in systems are meant for self-consumption only, and energy that reaches the grid is not compensated. Standalone batteries follow the same no-export rule.' },
           { q: 'When can I actually register?', a: 'Not yet. Technical specifications are due by 31 October 2026 and DEDDIE must announce the portal start date by 31 December 2026. Insider.gr reports that systems installed earlier must be declared within 30 days of the portal launching.' },
           { q: 'Can I add a battery to a balcony system in Greece?', a: 'Standalone batteries without a PV system are now allowed, with no export, and self-consumption systems may add batteries subject to technical requirements (pv magazine, Protothema). On the islands, batteries installed with PV cannot inject electricity into the grid.' },
+          { q: 'What safety conditions apply to plug-in balcony solar in Greece?', a: 'The detailed conditions are not final: DEDDIE/HEDNO and ELOT must publish technical specifications by 31 October 2026, and an installer or engineer then declares that the system meets them. Press accounts differ on details such as a direction sensor, which NewMoney.gr describes as mandatory for standalone batteries but not for plug-in kits, so check the published specification before buying.' },
+          { q: 'How much does a plug-in balcony solar kit cost in Greece, and is there a subsidy?', a: 'NewMoney.gr reports prices from about €500, with some systems above €1,000. No subsidy for plug-in kits appears in the coverage reviewed; the only subsidy figure in pv magazine\'s coverage is the €476 million Islands Decarbonization Fund for island self-consumption projects.' },
+          { q: 'Does net metering apply to balcony solar in Greece?', a: 'No. Plug-in systems are self-consumption only, and energy that reaches the grid is not compensated, so there is no net metering credit for them. The compensation at day-ahead market prices that pv magazine reports applies to mainland surplus from standard self-consumption systems, not to the plug-in category.' },
+          { q: 'Can I buy a plug-in balcony solar kit in Greece now?', a: 'Plug-in kits are sold internationally, but the coverage reviewed names no Greek retailer, and the DEDDIE/ELOT specification that defines a conforming kit was not yet on DEDDIE/HEDNO\'s news page at the time of this refresh. Insider.gr reports that systems installed before the portal opens must be declared within 30 days of launch.' },
+          { q: 'Which Greek terms help when searching for official information?', a: 'Useful Greek search terms are φωτοβολταϊκά μπαλκονιού (balcony photovoltaics), ΔΕΔΔΗΕ (the grid operator, DEDDIE/HEDNO), γνωστοποίηση (notification), Υπουργική Απόφαση (ministerial decision), ΦΕΚ (Government Gazette), αυτοκατανάλωση (self-consumption) and νομοθεσία (legislation). Official texts and operator announcements are published in Greek.' },
         ],
       },
       sources: {
@@ -146,6 +175,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: 'Consultation-stage coverage of the draft, with 37,400+ self-consumption systems since 2020 (22 July 2026)' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: 'Photovoltaics on balconies: experts have reservations — Keep Talking Greece', description: 'Grid-curtailment context and industry warnings (29 April 2026)' },
           { url: 'https://www.et.gr/', title: 'Government Gazette — National Printing Office', description: 'Official source for Gazette B\' 5573/14.09.2026 and Law 5299/2026 (A\'/67/05.05.2026)' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: 'How to install balcony PV — NewMoney', description: 'Limits, notification steps, prices from about €500, direction-sensor rule for standalone batteries, deadlines (15 September 2026, Greek)' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: 'Balcony photovoltaics — Energypress', description: 'Running coverage of the draft and final rules, including draft safety measures reported in May 2026' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: 'News — DEDDIE/HEDNO', description: 'Operator announcements, where the technical specifications and portal start date are to be published (Greek)' },
         ],
       },
       relatedReading: {
@@ -161,18 +193,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-de.webp',
-    title: 'Ist ein Balkonkraftwerk in Griechenland legal? Statusbericht 2027',
-    seoTitle: 'Ist ein Balkonkraftwerk in Griechenland legal? Statusbericht 2027',
+    title: 'Balkonkraftwerk in Griechenland legal? Status 2027',
+    seoTitle: 'Balkonkraftwerk in Griechenland legal? Status 2027',
     intro: 'Griechenland hat steckerfertige Balkonkraftwerke legalisiert: Eine Ministerialentscheidung vom 14. September 2026 schafft eine eigene Kategorie für Steckergeräte mit bis zu 800 W Erzeugungsleistung und 1.000 W installierter Leistung pro Anschlusspunkt, ausschließlich zur Eigenversorgung. Das Einspeiseverbot ist keine Vorsicht um ihrer selbst willen — Griechenlands Netz drosselt die bestehende Solarerzeugung bereits an vielen Tagen, und Branchenvertreter haben gewarnt, dass unbeschränkte Balkon-PV es belasten könnte. Offen ist noch die praktische Umsetzung: Die technischen Spezifikationen sind bis zum 31. Oktober 2026 fällig, und für das Meldeportal von DEDDIE/HEDNO gibt es noch keinen Starttermin.',
     metaDescription: 'Balkonkraftwerke sind in Griechenland legal: Entscheidung 2026, bis 800 W, keine Netzeinspeisung, Meldung beim DEDDIE-Portal. Regeln und offene Fristen.',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Käufer von Balkonkraftwerken und politische Beobachter in Griechenland, die die ministerielle Entscheidung zur Balkon-PV verfolgen',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**Ja — Griechenland hat steckerfertige Balkonkraftwerke legalisiert. Eine Ministerialentscheidung vom 14. September 2026 (berichtet als Regierungsanzeiger Β\' 5573), erlassen unter dem Gesetz 5299/2026, schafft eine eigene Kategorie für Steckergeräte mit bis zu 800 W Erzeugungsleistung und 1.000 W installierter Leistung pro Anschlusspunkt, ausschließlich zur Eigenversorgung: Strom, der ins Netz gelangt, wird nicht vergütet.** Ein Anschlussvertrag, eine Genehmigung oder eine Anschlussgebühr sind nicht erforderlich, aber der Eigentümer muss den Netzbetreiber DEDDIE/HEDNO über ein digitales Portal informieren, das noch nicht geöffnet ist — die technischen Spezifikationen sind bis zum 31. Oktober 2026 fällig, der Starttermin des Portals bis zum 31. Dezember 2026. Der Konsultationsentwurf (offen bis 20. Juli 2026) nannte 900 W installierte Leistung; die griechische Presse berichtet als Endwert 1.000 W. Griechenland startet bei Solarenergie nicht bei null — nach Ministeriumszahlen kamen seit 2020 37.407 Eigenverbrauchsanlagen (1.070 MW) hinzu —, und das Einspeiseverbot reagiert auf ein Netz, das Solarerzeugung bereits an vielen Tagen drosselt. Dies ist eine Zusammenfassung veröffentlichter Berichterstattung, keine Rechtsberatung.',
+    leadAnswerBlock: '**Ja — Griechenland hat Balkonkraftwerke legalisiert. Eine Ministerialentscheidung vom 14. September 2026 erlaubt Steckergeräte bis 800 W Erzeugung und 1.000 W installierter Leistung pro Anschlusspunkt, nur zur Eigenversorgung; das DEDDIE/HEDNO-Portal ist noch nicht offen.** Keine Rechtsberatung.',
     quickAnswerTop: {
       de: {
         question: 'Ist ein Balkonkraftwerk in Griechenland legal?',
@@ -184,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kein Anschlussvertrag, keine Genehmigung, keine Anschlussgebühr; der Eigentümer meldet über ein digitales Portal von DEDDIE/HEDNO (Taxisnet-Login), und ein Installateur oder Ingenieur erklärt die Konformität',
           'Noch offen: technische Spezifikationen bis 31. Oktober 2026, Starttermin des Portals bis 31. Dezember 2026 anzukündigen, und Netzbetreiber können neue Anschlüsse in Gebieten mit begrenzter Netzkapazität untersagen',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -193,6 +225,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Griechenland startet nicht bei null', anchor: '#not-from-zero' },
       { label: 'Warum Zero-Feed-in — und warum jetzt', anchor: '#why-zero-feed-in' },
       { label: 'Registrierung: Portal, Erklärungen und Fristen', anchor: '#registration' },
+      { label: 'Sicherheitsvorgaben: Was feststeht und was nicht', anchor: '#safety-conditions' },
+      { label: 'Kosten, Förderung, Net Metering und Verfügbarkeit', anchor: '#cost-availability' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Quellen', anchor: '#sources' },
       { label: 'Weiterführende Artikel', anchor: '#related-reading' },
@@ -202,12 +236,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Griechenland hat steckerfertige Balkonkraftwerke mit einer Ministerialentscheidung vom 14. September 2026 legalisiert (berichtet als Regierungsanzeiger Β\' 5573), erlassen unter dem Gesetz 5299/2026 (Α\'/67/05.05.2026); laut pv magazine trat sie mit der Veröffentlichung in Kraft.',
+          'Griechenland hat Balkonkraftwerke per Ministerialentscheidung vom 14. September 2026 legalisiert (berichtet als Anzeiger Β\' 5573, Gesetz 5299/2026); laut pv magazine trat sie mit der Veröffentlichung in Kraft.',
           'Grenzen laut griechischer Presse: bis zu 800 W Erzeugungsleistung und 1.000 W installierte Leistung pro Anschlusspunkt, mehrere Sets lassen sich also nicht an einem Anschluss addieren. Der Konsultationsentwurf im Juli nannte 900 W installiert.',
           'Nur Eigenversorgung: Energie, die ins Netz gelangt, wird nicht bezahlt. Eigenständige Batteriespeicher ohne Module sind ebenfalls erlaubt, wiederum ohne Einspeisung.',
           'Die Registrierung ist eine Meldung, keine Genehmigung: kein Anschlussvertrag und keine Anschlussgebühr. Der Eigentümer meldet die Anlage über ein digitales Portal von DEDDIE/HEDNO, und ein Installateur oder Ingenieur erklärt die Konformität.',
           'Die Umsetzung ist noch nicht bereit: Die technischen Spezifikationen sind bis 31. Oktober 2026 fällig, der Starttermin des Portals bis 31. Dezember 2026. Insider.gr berichtet, dass früher installierte Anlagen innerhalb von 30 Tagen nach dem Start gemeldet werden müssen.',
           'Netzbetreiber können neue Steckeranlagen in Gebieten mit begrenzter Netzkapazität einschränken. Diese Seite fasst veröffentlichte Berichterstattung zusammen, nicht den Text des Anzeigers — sie ist keine Rechtsberatung.',
+          'Kosten und Förderung: Die griechische Presse nennt Steckergeräte ab etwa 500 €, einzelne Systeme über 1.000 €; eine Förderung für Steckergeräte taucht in der geprüften Berichterstattung nicht auf. Net Metering gilt nicht, weil Energie, die ins Netz gelangt, nicht vergütet wird.',
         ],
       },
       lawVsMd: {
@@ -247,6 +282,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Eigenständige Batteriespeicher sind eine separate Kategorie:** Batterien ohne PV-Anlage sind für Privatpersonen und Unternehmen ohne Netzeinspeisung erlaubt, technisch durch einen Richtungssensor und Telemetrie durchgesetzt (Protothema).',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: 'Sicherheitsvorgaben: Was feststeht und was nicht',
+        content: [
+          '**Die detaillierten technischen und Sicherheitsvorgaben für Steckergeräte stehen noch nicht fest: DEDDIE/HEDNO muss gemeinsam mit ELOT (der griechischen Normungsorganisation) die technischen Spezifikationen bis zum 31. Oktober 2026 veröffentlichen, und der Installateur oder Ingenieur erklärt dann, dass eine Anlage sie erfüllt.** pv magazine beschreibt konkrete Anforderungen zum Schutz des Netzes und anderer elektrischer Anlagen, ohne sie aufzulisten, und auf der Nachrichtenseite von DEDDIE/HEDNO war zum Zeitpunkt dieser Aktualisierung weder eine Spezifikation für Steckergeräte noch eine Portalankündigung zu finden.',
+          '**Die Presseberichte weichen bei den Details voneinander ab.** NewMoney.gr berichtet, dass ein Richtungssensor und Telemetrie für eigenständige Batteriespeicher Pflicht sind, während bei Steckergeräten der Sensor aus dem Entwurf gestrichen wurde und eingespeiste Energie schlicht nicht vergütet wird. Energypress meldete im Mai, dass die Sicherheitsmaßnahmen im Entwurf einen Inselbetriebsschutz (Anti-Islanding) enthielten, was die hier geprüfte Berichterstattung zum endgültigen Text nicht erwähnt; ob ein Gerät bestimmte Zertifizierungen tragen muss, ist daher unbestätigt.',
+          '**Prüfen Sie die veröffentlichte Spezifikation, nicht die Verkaufsseite.** Die Konformität richtet sich nach der Spezifikation von DEDDIE/ELOT und der Erklärung des Installateurs oder Ingenieurs; wenn ein Händler ein Gerät als „Plug and Play" bezeichnet, sagt das nichts darüber aus, ob es die griechischen Anforderungen erfüllt. Netzbetreiber können neue Steckeranschlüsse in Gebieten mit begrenzter Netzkapazität außerdem untersagen. Dies ist eine Zusammenfassung veröffentlichter Berichterstattung, keine Rechts- oder Elektrosicherheitsberatung.',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: 'Kosten, Förderung, Net Metering und Verfügbarkeit',
+        content: [
+          '**Die griechische Presse nennt Steckergeräte ab etwa 500 €, einzelne Systeme kosten mehr als 1.000 €; eine Förderung für Steckergeräte taucht in der geprüften Berichterstattung nicht auf.** NewMoney.gr (15. September 2026) schreibt, die Preise könnten bei rund 500 € beginnen und in manchen Fällen 1.000 € übersteigen. Die einzige Förderzahl in der Berichterstattung von pv magazine ist der Dekarbonisierungsfonds für die Inseln mit 476 Millionen €, der Eigenversorgungsprojekte auf Inseln unterstützen soll — keine Balkonsets.',
+          '**Net Metering gilt für Steckergeräte nicht, weil Energie, die ins Netz gelangt, nicht vergütet wird.** Für reguläre Eigenversorgungsanlagen wird nach Angaben von pv magazine Überschuss auf dem Festland zu Day-Ahead-Marktpreisen vergütet; die Plug-in-Kategorie ist reine Eigenversorgung und steht außerhalb dieses Mechanismus.',
+          '**Steckergeräte werden international im Do-it-yourself-Verfahren verkauft, die geprüfte Berichterstattung nennt aber keinen griechischen Händler, und die Spezifikation, die ein konformes Gerät definiert, war zum Zeitpunkt dieser Aktualisierung noch nicht auf der Nachrichtenseite von DEDDIE/HEDNO zu finden.** Vor dem Portalstart installierte Anlagen müssen innerhalb von 30 Tagen nach dem Start gemeldet werden (Insider.gr). Die erklärte Begründung des Ministeriums — niedrigere Rechnungen, möglicherweise 20–30 % weniger — ist weiter oben behandelt; diese Seite schätzt keine Amortisationszeit.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -258,6 +311,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Kann ich überschüssigen Balkon-Solarstrom in Griechenland ins Netz einspeisen?', a: 'Nein. Steckeranlagen sind nur zur Eigenversorgung gedacht, und Energie, die ins Netz gelangt, wird nicht vergütet. Eigenständige Batteriespeicher folgen derselben Regel ohne Einspeisung.' },
           { q: 'Wann kann ich mich tatsächlich registrieren?', a: 'Noch nicht. Die technischen Spezifikationen sind bis 31. Oktober 2026 fällig, und DEDDIE muss den Starttermin des Portals bis 31. Dezember 2026 bekannt geben. Insider.gr berichtet, dass früher installierte Anlagen innerhalb von 30 Tagen nach dem Start des Portals gemeldet werden müssen.' },
           { q: 'Kann ich in Griechenland eine Batterie zu einem Balkonsystem hinzufügen?', a: 'Eigenständige Batterien ohne PV-Anlage sind jetzt erlaubt, ohne Einspeisung, und Eigenversorgungsanlagen dürfen Batterien unter technischen Auflagen ergänzen (pv magazine, Protothema). Auf den Inseln dürfen zusammen mit PV installierte Batterien keinen Strom ins Netz einspeisen.' },
+          { q: 'Welche Sicherheitsvorgaben gelten in Griechenland für steckerfertige Balkon-PV?', a: 'Die detaillierten Vorgaben sind noch nicht final: DEDDIE/HEDNO und ELOT müssen bis zum 31. Oktober 2026 technische Spezifikationen veröffentlichen, und ein Installateur oder Ingenieur erklärt dann, dass die Anlage sie erfüllt. Die Presseberichte weichen bei Details wie einem Richtungssensor voneinander ab, den NewMoney.gr für eigenständige Batteriespeicher als Pflicht, für Steckergeräte aber nicht beschreibt — prüfen Sie daher vor dem Kauf die veröffentlichte Spezifikation.' },
+          { q: 'Was kostet ein Balkonkraftwerk in Griechenland, und gibt es eine Förderung?', a: 'NewMoney.gr berichtet von Preisen ab etwa 500 €, einzelne Systeme liegen über 1.000 €. Eine Förderung für Steckergeräte taucht in der geprüften Berichterstattung nicht auf; die einzige Förderzahl bei pv magazine ist der Dekarbonisierungsfonds für die Inseln mit 476 Millionen € für Eigenversorgungsprojekte auf Inseln.' },
+          { q: 'Gilt Net Metering für Balkonkraftwerke in Griechenland?', a: 'Nein. Steckeranlagen dienen nur der Eigenversorgung, und Energie, die ins Netz gelangt, wird nicht vergütet — es gibt dafür also keine Net-Metering-Gutschrift. Die von pv magazine berichtete Vergütung zu Day-Ahead-Marktpreisen betrifft den Überschuss regulärer Eigenversorgungsanlagen auf dem Festland, nicht die Plug-in-Kategorie.' },
+          { q: 'Kann ich in Griechenland jetzt ein Balkonkraftwerk kaufen?', a: 'Steckergeräte werden international verkauft, die geprüfte Berichterstattung nennt aber keinen griechischen Händler, und die Spezifikation von DEDDIE/ELOT, die ein konformes Gerät definiert, war zum Zeitpunkt dieser Aktualisierung noch nicht auf der Nachrichtenseite von DEDDIE/HEDNO zu finden. Insider.gr berichtet, dass vor dem Portalstart installierte Anlagen innerhalb von 30 Tagen nach dem Start gemeldet werden müssen.' },
+          { q: 'Welche griechischen Begriffe helfen bei der Suche nach offiziellen Informationen?', a: 'Hilfreiche griechische Suchbegriffe sind φωτοβολταϊκά μπαλκονιού (Balkon-Photovoltaik), ΔΕΔΔΗΕ (der Netzbetreiber DEDDIE/HEDNO), γνωστοποίηση (Meldung), Υπουργική Απόφαση (Ministerialentscheidung), ΦΕΚ (Regierungsanzeiger), αυτοκατανάλωση (Eigenversorgung) und νομοθεσία (Gesetzgebung). Offizielle Texte und Mitteilungen des Netzbetreibers erscheinen auf Griechisch.' },
         ],
       },
       sources: {
@@ -270,6 +328,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: 'Berichterstattung zur Konsultationsphase des Entwurfs, mit über 37.400 Eigenverbrauchsanlagen seit 2020 (22. Juli 2026)' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: 'Photovoltaik auf Balkonen: Experten haben Vorbehalte — Keep Talking Greece', description: 'Kontext zur Netzdrosselung und Warnungen der Branche (29. April 2026)' },
           { url: 'https://www.et.gr/', title: 'Regierungsanzeiger — Nationale Druckerei', description: 'Offizielle Quelle für den Anzeiger Β\' 5573/14.09.2026 und das Gesetz 5299/2026 (Α\'/67/05.05.2026)' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: 'So installiert man Balkon-PV — NewMoney', description: 'Grenzen, Meldeschritte, Preise ab etwa 500 €, Richtungssensor-Regel für eigenständige Batteriespeicher, Fristen (15. September 2026, griechisch)' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: 'Balkon-Photovoltaik — Energypress', description: 'Laufende Berichterstattung zu Entwurf und endgültigen Regeln, einschließlich der im Mai 2026 berichteten Sicherheitsmaßnahmen im Entwurf' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: 'Nachrichten — DEDDIE/HEDNO', description: 'Mitteilungen des Netzbetreibers, wo die technischen Spezifikationen und der Starttermin des Portals veröffentlicht werden sollen (griechisch)' },
         ],
       },
       relatedReading: {
@@ -285,18 +346,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-es.webp',
-    title: '¿Es legal la energía solar de balcón en Grecia? Informe de estado 2027',
-    seoTitle: '¿Es legal la energía solar de balcón en Grecia? Informe de estado 2027',
+    title: 'Energía solar de balcón en Grecia: ¿legal? Estado 2027',
+    seoTitle: 'Energía solar de balcón en Grecia: ¿legal? Estado 2027',
     intro: 'Grecia ha legalizado la energía solar de balcón enchufable: una decisión ministerial del 14 de septiembre de 2026 crea una categoría específica para sistemas enchufables de hasta 800 W de generación y 1.000 W de potencia instalada por punto de suministro, estrictamente para autoconsumo. El diseño sin exportación no es prudencia porque sí: la red de Grecia ya restringe la producción solar existente muchos días, y voces del sector han advertido de que una energía solar de balcón sin restricciones podría tensionarla. Lo que sigue pendiente es la puesta en práctica: las especificaciones técnicas vencen el 31 de octubre de 2026 y el portal de notificación de DEDDIE/HEDNO aún no tiene fecha de inicio.',
     metaDescription: 'La energía solar de balcón es legal en Grecia (decisión de 2026): hasta 800 W, sin exportar a la red y aviso en el portal de DEDDIE. Reglas y plazos.',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energía solar de balcón y observadores de políticas en Grecia que siguen la decisión ministerial sobre energía solar de balcón',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**Sí — Grecia ha legalizado la energía solar de balcón enchufable. Una decisión ministerial del 14 de septiembre de 2026 (publicada según la prensa como Boletín Oficial Β\' 5573), emitida en virtud de la Ley 5299/2026, crea una categoría específica de sistemas enchufables con hasta 800 W de generación y 1.000 W de potencia instalada por punto de suministro, estrictamente para autoconsumo: la energía que llega a la red no se compensa.** No se exige contrato de conexión, permiso ni tasa de conexión, pero el propietario debe notificar al operador de red DEDDIE/HEDNO mediante un portal digital que aún no está abierto — las especificaciones técnicas vencen el 31 de octubre de 2026 y la fecha de inicio del portal, el 31 de diciembre de 2026. El borrador sometido a consulta (abierta hasta el 20 de julio de 2026) hablaba de 900 W instalados; la prensa griega da como cifra final 1.000 W. Grecia no parte de cero en energía solar — según cifras del ministerio se añadieron 37.407 sistemas de autoconsumo (1.070 MW) desde 2020 — y el diseño sin exportación responde a una red que ya restringe la producción solar muchos días. Este es un resumen de la cobertura publicada, no asesoramiento jurídico.',
+    leadAnswerBlock: '**Sí — Grecia ha legalizado la energía solar de balcón enchufable. Una decisión ministerial del 14 de septiembre de 2026 permite kits de hasta 800 W de generación y 1.000 W instalados por suministro, solo para autoconsumo; el portal de DEDDIE/HEDNO aún no está abierto.** No es asesoramiento jurídico.',
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Grecia?',
@@ -308,7 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sin contrato de conexión, permiso ni tasa; el propietario notifica a DEDDIE/HEDNO mediante un portal digital (acceso Taxisnet) y un instalador o ingeniero declara el cumplimiento',
           'Aún pendiente: especificaciones técnicas antes del 31 de octubre de 2026, fecha de inicio del portal por anunciar antes del 31 de diciembre de 2026, y los operadores pueden denegar nuevas conexiones en zonas con capacidad de red limitada',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -317,6 +378,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Grecia no parte de cero', anchor: '#not-from-zero' },
       { label: 'Por qué cero inyección — y por qué ahora', anchor: '#why-zero-feed-in' },
       { label: 'Registro: portal, declaraciones y plazos', anchor: '#registration' },
+      { label: 'Condiciones de seguridad: qué está definido y qué no', anchor: '#safety-conditions' },
+      { label: 'Costes, ayudas, net metering y disponibilidad', anchor: '#cost-availability' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Fuentes', anchor: '#sources' },
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
@@ -332,6 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El registro es una notificación, no un permiso: sin contrato de conexión ni tasa de conexión. El propietario declara el sistema en un portal digital de DEDDIE/HEDNO y un instalador o ingeniero declara el cumplimiento.',
           'La infraestructura aún no está lista: las especificaciones técnicas vencen el 31 de octubre de 2026 y la fecha de inicio del portal, el 31 de diciembre de 2026. Insider.gr informa de que los sistemas instalados antes deben declararse en los 30 días siguientes al lanzamiento.',
           'Los operadores pueden restringir nuevas conexiones enchufables en zonas con capacidad de red limitada. Esta página resume cobertura publicada, no el texto del Boletín — no es asesoramiento jurídico.',
+          'Costes y ayudas: la prensa griega cita kits enchufables desde unos €500, y algunos sistemas por encima de €1.000; en la cobertura revisada no aparece ninguna ayuda para kits enchufables. El net metering (balance neto) no se aplica, porque la energía que llega a la red no se compensa.',
         ],
       },
       lawVsMd: {
@@ -371,6 +435,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Las baterías independientes son una categoría aparte:** las baterías sin sistema fotovoltaico se permiten a particulares y empresas sin exportación a la red, garantizada técnicamente por un sensor de dirección y telemetría (Protothema).',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: 'Condiciones de seguridad: qué está definido y qué no',
+        content: [
+          '**Las condiciones técnicas y de seguridad detalladas para los kits enchufables aún no están definidas: DEDDIE/HEDNO, junto con ELOT (el organismo griego de normalización), debe publicar las especificaciones técnicas antes del 31 de octubre de 2026, y después el instalador o ingeniero declara que el sistema las cumple.** pv magazine describe requisitos específicos para proteger la red y otras instalaciones eléctricas sin enumerarlos, y la página de noticias de DEDDIE/HEDNO no incluía ninguna especificación para kits enchufables ni anuncio del portal en el momento de esta actualización.',
+          '**Las crónicas de prensa difieren en los detalles.** NewMoney.gr informa de que el sensor de dirección y la telemetría son obligatorios para las baterías independientes, mientras que en los kits enchufables el sensor se eliminó del borrador y la energía exportada simplemente no se compensa. Energypress informó en mayo de que las medidas de seguridad del borrador incluían protección contra funcionamiento en isla (anti-islanding), algo que la cobertura revisada del texto final no menciona, así que no está confirmado si un kit debe llevar certificaciones concretas.',
+          '**Comprueba la especificación publicada, no la página de venta.** El cumplimiento lo define la especificación de DEDDIE/ELOT y la declaración del instalador o ingeniero, así que un comercio que llame a un kit «plug and play» no dice nada sobre si cumple los requisitos griegos. Además, los operadores pueden prohibir nuevas conexiones enchufables en zonas con capacidad de red limitada. Esto es un resumen de la cobertura publicada, no asesoramiento jurídico ni de seguridad eléctrica.',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: 'Costes, ayudas, net metering y disponibilidad',
+        content: [
+          '**La prensa griega sitúa un kit enchufable desde unos €500, con algunos sistemas por encima de €1.000, y en la cobertura revisada no aparece ninguna ayuda para kits enchufables.** NewMoney.gr (15 de septiembre de 2026) indica que los precios pueden empezar en torno a €500 y en algunos casos superar los €1.000. La única cifra de ayudas en la cobertura de pv magazine es el Fondo de Descarbonización de las Islas, de €476 millones, previsto para apoyar proyectos de autoconsumo en las islas y no kits de balcón.',
+          '**El net metering (balance neto) no se aplica a los kits enchufables, porque la energía que llega a la red no se compensa.** En los sistemas de autoconsumo estándar, pv magazine informa de que el excedente en la Grecia continental se compensa a precios del mercado diario; la categoría enchufable es solo autoconsumo y queda fuera de ese mecanismo.',
+          '**Los kits enchufables se venden a nivel internacional para instalar uno mismo, pero la cobertura revisada no nombra ningún comercio griego, y la especificación que definiría un kit conforme aún no figuraba en la página de noticias de DEDDIE/HEDNO en el momento de esta actualización.** Los sistemas instalados antes de que se abra el portal deben declararse en un plazo de 30 días desde su lanzamiento (Insider.gr). La justificación declarada del ministerio, facturas más bajas con una posible reducción del 20–30 %, se trata más arriba; esta página no estima el plazo de amortización.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -382,6 +464,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Puedo exportar a la red el excedente de energía solar de balcón en Grecia?', a: 'No. Los sistemas enchufables están pensados solo para autoconsumo, y la energía que llega a la red no se compensa. Las baterías independientes siguen la misma regla sin exportación.' },
           { q: '¿Cuándo puedo registrarme realmente?', a: 'Todavía no. Las especificaciones técnicas vencen el 31 de octubre de 2026 y DEDDIE debe anunciar la fecha de inicio del portal antes del 31 de diciembre de 2026. Insider.gr informa de que los sistemas instalados antes deben declararse en los 30 días siguientes al lanzamiento del portal.' },
           { q: '¿Puedo añadir una batería a un sistema de balcón en Grecia?', a: 'Ahora se permiten baterías independientes sin sistema fotovoltaico, sin exportación, y los sistemas de autoconsumo pueden añadir baterías sujetas a requisitos técnicos (pv magazine, Protothema). En las islas, las baterías instaladas con fotovoltaica no pueden inyectar electricidad a la red.' },
+          { q: '¿Qué condiciones de seguridad se aplican a la energía solar de balcón enchufable en Grecia?', a: 'Las condiciones detalladas aún no son definitivas: DEDDIE/HEDNO y ELOT deben publicar especificaciones técnicas antes del 31 de octubre de 2026, y después un instalador o ingeniero declara que el sistema las cumple. La prensa difiere en detalles como un sensor de dirección, que NewMoney.gr describe como obligatorio para las baterías independientes pero no para los kits enchufables, así que comprueba la especificación publicada antes de comprar.' },
+          { q: '¿Cuánto cuesta un kit solar de balcón enchufable en Grecia y hay ayudas?', a: 'NewMoney.gr informa de precios desde unos €500, con algunos sistemas por encima de €1.000. En la cobertura revisada no aparece ninguna ayuda para kits enchufables; la única cifra de ayudas de pv magazine es el Fondo de Descarbonización de las Islas, de €476 millones, para proyectos de autoconsumo en las islas.' },
+          { q: '¿Se aplica el net metering (balance neto) a la energía solar de balcón en Grecia?', a: 'No. Los sistemas enchufables son solo de autoconsumo y la energía que llega a la red no se compensa, así que no hay crédito de balance neto para ellos. La compensación a precios del mercado diario que menciona pv magazine se aplica al excedente de los sistemas de autoconsumo estándar de la Grecia continental, no a la categoría enchufable.' },
+          { q: '¿Puedo comprar ya un kit solar de balcón enchufable en Grecia?', a: 'Los kits enchufables se venden a nivel internacional, pero la cobertura revisada no nombra ningún comercio griego, y la especificación de DEDDIE/ELOT que define un kit conforme aún no figuraba en la página de noticias de DEDDIE/HEDNO en el momento de esta actualización. Insider.gr informa de que los sistemas instalados antes de que se abra el portal deben declararse en un plazo de 30 días desde su lanzamiento.' },
+          { q: '¿Qué términos griegos ayudan a buscar información oficial?', a: 'Términos de búsqueda útiles en griego son φωτοβολταϊκά μπαλκονιού (fotovoltaica de balcón), ΔΕΔΔΗΕ (el operador de la red, DEDDIE/HEDNO), γνωστοποίηση (notificación), Υπουργική Απόφαση (decisión ministerial), ΦΕΚ (Boletín Oficial), αυτοκατανάλωση (autoconsumo) y νομοθεσία (legislación). Los textos oficiales y los anuncios del operador se publican en griego.' },
         ],
       },
       sources: {
@@ -394,6 +481,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: 'Cobertura del borrador en fase de consulta, con más de 37.400 sistemas de autoconsumo desde 2020 (22 de julio de 2026)' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: 'Fotovoltaica en balcones: los expertos tienen reservas — Keep Talking Greece', description: 'Contexto de restricción de la red y advertencias del sector (29 de abril de 2026)' },
           { url: 'https://www.et.gr/', title: 'Boletín Oficial — Imprenta Nacional', description: 'Fuente oficial del Boletín Β\' 5573/14.09.2026 y de la Ley 5299/2026 (Α\'/67/05.05.2026)' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: 'Cómo instalar fotovoltaica de balcón — NewMoney', description: 'Límites, pasos de notificación, precios desde unos €500, regla del sensor de dirección para baterías independientes, plazos (15 de septiembre de 2026, en griego)' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: 'Fotovoltaica de balcón — Energypress', description: 'Cobertura continuada del borrador y de las reglas finales, incluidas las medidas de seguridad del borrador informadas en mayo de 2026' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: 'Noticias — DEDDIE/HEDNO', description: 'Anuncios del operador, donde se publicarán las especificaciones técnicas y la fecha de inicio del portal (en griego)' },
         ],
       },
       relatedReading: {
@@ -409,18 +499,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-fr.webp',
-    title: "Le solaire de balcon est-il légal en Grèce ? Rapport de situation 2027",
-    seoTitle: "Le solaire de balcon est-il légal en Grèce ? Rapport de situation 2027",
+    title: "Solaire de balcon en Grèce : légal ? Situation 2027",
+    seoTitle: "Solaire de balcon en Grèce : légal ? Situation 2027",
     intro: 'La Grèce a légalisé le solaire de balcon enfichable : une décision ministérielle du 14 septembre 2026 crée une catégorie dédiée aux systèmes enfichables jusqu\'à 800 W de production et 1 000 W de puissance installée par point de livraison, strictement pour l\'autoconsommation. L\'absence d\'export n\'est pas de la prudence pour elle-même : le réseau grec écrête déjà la production solaire existante de nombreux jours, et des acteurs du secteur ont averti qu\'un solaire de balcon sans restriction pourrait le fragiliser. Reste à mettre en place la mécanique pratique : les spécifications techniques sont attendues d\'ici le 31 octobre 2026, et le portail de déclaration de DEDDIE/HEDNO n\'a pas encore de date d\'ouverture.',
     metaDescription: 'Le solaire de balcon est légal en Grèce (décision de 2026) : jusqu\'à 800 W, sans injection réseau, déclaration sur le portail DEDDIE. Règles et échéances.',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min de lecture',
     educationalLevel: 'Beginner',
     audience: "Acheteurs de solaire de balcon et observateurs des politiques publiques en Grèce suivant la décision ministérielle sur le solaire de balcon",
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**Oui — la Grèce a légalisé le solaire de balcon enfichable. Une décision ministérielle du 14 septembre 2026 (rapportée comme Journal officiel Β\' 5573), prise en vertu de la loi 5299/2026, crée une catégorie dédiée de systèmes enfichables jusqu\'à 800 W de production et 1 000 W de puissance installée par point de livraison, strictement pour l\'autoconsommation : l\'énergie qui atteint le réseau n\'est pas rémunérée.** Aucun contrat de raccordement, permis ni frais de raccordement n\'est exigé, mais le propriétaire doit informer le gestionnaire de réseau DEDDIE/HEDNO via un portail numérique qui n\'est pas encore ouvert — les spécifications techniques sont attendues d\'ici le 31 octobre 2026 et la date d\'ouverture du portail d\'ici le 31 décembre 2026. Le projet soumis à consultation (ouverte jusqu\'au 20 juillet 2026) mentionnait 900 W installés ; la presse grecque rapporte 1 000 W comme chiffre final. La Grèce ne part pas de zéro en solaire — selon les chiffres du ministère, 37 407 systèmes d\'autoconsommation (1 070 MW) ont été ajoutés depuis 2020 — et l\'absence d\'export répond à un réseau qui écrête déjà la production solaire de nombreux jours. Ceci est un résumé de la couverture publiée, pas un conseil juridique.',
+    leadAnswerBlock: '**Oui — la Grèce a légalisé le solaire de balcon enfichable. Une décision ministérielle du 14 septembre 2026 autorise des kits jusqu\'à 800 W de production et 1 000 W installés par raccordement, en autoconsommation uniquement ; le portail de DEDDIE/HEDNO reste fermé.** Ceci n\'est pas un conseil juridique.',
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal en Grèce ?',
@@ -432,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pas de contrat de raccordement, de permis ni de frais ; le propriétaire déclare via un portail numérique de DEDDIE/HEDNO (connexion Taxisnet) et un installateur ou ingénieur atteste la conformité',
           'Encore en attente : spécifications techniques d\'ici le 31 octobre 2026, date d\'ouverture du portail à annoncer d\'ici le 31 décembre 2026, et les gestionnaires peuvent interdire de nouveaux raccordements dans les zones à capacité réseau limitée',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -441,6 +531,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'La Grèce ne part pas de zéro', anchor: '#not-from-zero' },
       { label: 'Pourquoi zéro injection — et pourquoi maintenant', anchor: '#why-zero-feed-in' },
       { label: 'Déclaration : portail, attestations et échéances', anchor: '#registration' },
+      { label: 'Conditions de sécurité : ce qui est fixé et ce qui ne l\'est pas', anchor: '#safety-conditions' },
+      { label: 'Coûts, aides, net metering et disponibilité', anchor: '#cost-availability' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Sources', anchor: '#sources' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
@@ -456,6 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La déclaration est une notification, pas un permis : ni contrat de raccordement ni frais de raccordement. Le propriétaire déclare le système via un portail numérique de DEDDIE/HEDNO, et un installateur ou ingénieur atteste la conformité.',
           'La mécanique n\'est pas prête : les spécifications techniques sont attendues d\'ici le 31 octobre 2026 et la date d\'ouverture du portail d\'ici le 31 décembre 2026. Insider.gr rapporte que les systèmes installés avant doivent être déclarés dans les 30 jours suivant l\'ouverture.',
           'Les gestionnaires peuvent restreindre les nouveaux raccordements enfichables dans les zones à capacité réseau limitée. Cette page résume la couverture publiée, non le texte du Journal officiel — ce n\'est pas un conseil juridique.',
+          'Coûts et aides : la presse grecque cite des kits enfichables à partir d\'environ 500 €, certains systèmes dépassant 1 000 € ; aucune aide pour les kits enfichables n\'apparaît dans la couverture examinée. Le net metering ne s\'applique pas, car l\'énergie qui atteint le réseau n\'est pas compensée.',
         ],
       },
       lawVsMd: {
@@ -495,6 +588,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les batteries autonomes forment une catégorie distincte :** les batteries sans système photovoltaïque sont autorisées pour les particuliers et les entreprises sans export réseau, imposé techniquement par un capteur de direction et une télémétrie (Protothema).',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: 'Conditions de sécurité : ce qui est fixé et ce qui ne l\'est pas',
+        content: [
+          '**Les conditions techniques et de sécurité détaillées pour les kits enfichables ne sont pas encore fixées : DEDDIE/HEDNO, avec l\'ELOT (l\'organisme grec de normalisation), doit publier les spécifications techniques d\'ici le 31 octobre 2026, puis l\'installateur ou l\'ingénieur déclare que le système les respecte.** pv magazine décrit des exigences précises destinées à protéger le réseau et les autres installations électriques sans les énumérer, et la page d\'actualités de DEDDIE/HEDNO ne présentait ni spécification pour les kits enfichables ni annonce du portail au moment de cette mise à jour.',
+          '**Les articles de presse divergent sur les détails.** NewMoney.gr indique que le capteur de direction et la télémétrie sont obligatoires pour les batteries autonomes, alors que, pour les kits enfichables, le capteur a été retiré du projet et l\'énergie exportée n\'est tout simplement pas compensée. Energypress a rapporté en mai que les mesures de sécurité du projet incluaient une protection anti-îlotage, ce que la couverture examinée du texte final ne mentionne pas ; savoir si un kit doit porter des certifications précises n\'est donc pas confirmé.',
+          '**Vérifiez la spécification publiée, pas la page de vente.** La conformité est définie par la spécification de DEDDIE/ELOT et par la déclaration de l\'installateur ou de l\'ingénieur ; un revendeur qui qualifie un kit de « plug and play » ne dit donc rien de sa conformité aux exigences grecques. Les opérateurs peuvent en outre interdire les nouveaux raccordements enfichables dans les zones à capacité réseau limitée. Ceci est un résumé de la couverture publiée, non un conseil juridique ou de sécurité électrique.',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: 'Coûts, aides, net metering et disponibilité',
+        content: [
+          '**La presse grecque situe un kit enfichable à partir d\'environ 500 €, certains systèmes dépassant 1 000 €, et aucune aide pour les kits enfichables n\'apparaît dans la couverture examinée.** NewMoney.gr (15 septembre 2026) indique que les prix peuvent commencer autour de 500 € et, dans certains cas, dépasser 1 000 €. Le seul chiffre d\'aide de la couverture de pv magazine est le Fonds de décarbonation des îles, doté de 476 millions d\'euros, prévu pour soutenir des projets d\'autoconsommation insulaires et non des kits de balcon.',
+          '**Le net metering ne s\'applique pas aux kits enfichables, car l\'énergie qui atteint le réseau n\'est pas compensée.** Pour les systèmes d\'autoconsommation standard, pv magazine rapporte que le surplus en Grèce continentale est compensé aux prix du marché day-ahead ; la catégorie enfichable relève de l\'autoconsommation seule et reste en dehors de ce mécanisme.',
+          '**Les kits enfichables se vendent à l\'international pour une installation par soi-même, mais la couverture examinée ne nomme aucun revendeur grec, et la spécification qui définirait un kit conforme ne figurait pas encore sur la page d\'actualités de DEDDIE/HEDNO au moment de cette mise à jour.** Les systèmes installés avant l\'ouverture du portail doivent être déclarés dans les 30 jours suivant son lancement (Insider.gr). La justification avancée par le ministère, des factures plus basses avec une baisse possible de 20 à 30 %, est traitée plus haut ; cette page n\'estime pas la durée d\'amortissement.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Foire aux questions',
@@ -506,6 +617,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Puis-je exporter vers le réseau l\'excédent d\'électricité d\'un solaire de balcon en Grèce ?', a: 'Non. Les systèmes enfichables sont destinés uniquement à l\'autoconsommation, et l\'énergie qui atteint le réseau n\'est pas rémunérée. Les batteries autonomes suivent la même règle sans export.' },
           { q: 'Quand puis-je réellement me déclarer ?', a: 'Pas encore. Les spécifications techniques sont attendues d\'ici le 31 octobre 2026 et DEDDIE doit annoncer la date d\'ouverture du portail d\'ici le 31 décembre 2026. Insider.gr rapporte que les systèmes installés avant doivent être déclarés dans les 30 jours suivant le lancement du portail.' },
           { q: 'Puis-je ajouter une batterie à un système de balcon en Grèce ?', a: 'Les batteries autonomes sans système photovoltaïque sont désormais autorisées, sans export, et les systèmes d\'autoconsommation peuvent ajouter des batteries sous réserve d\'exigences techniques (pv magazine, Protothema). Sur les îles, les batteries installées avec du photovoltaïque ne peuvent pas injecter d\'électricité dans le réseau.' },
+          { q: 'Quelles conditions de sécurité s\'appliquent au solaire de balcon enfichable en Grèce ?', a: 'Les conditions détaillées ne sont pas définitives : DEDDIE/HEDNO et l\'ELOT doivent publier des spécifications techniques d\'ici le 31 octobre 2026, puis un installateur ou un ingénieur déclare que le système les respecte. La presse diverge sur des détails comme le capteur de direction, que NewMoney.gr décrit comme obligatoire pour les batteries autonomes mais pas pour les kits enfichables ; vérifiez donc la spécification publiée avant d\'acheter.' },
+          { q: 'Combien coûte un kit solaire de balcon enfichable en Grèce, et existe-t-il une aide ?', a: 'NewMoney.gr rapporte des prix à partir d\'environ 500 €, certains systèmes dépassant 1 000 €. Aucune aide pour les kits enfichables n\'apparaît dans la couverture examinée ; le seul chiffre d\'aide de pv magazine est le Fonds de décarbonation des îles, doté de 476 millions d\'euros, pour des projets d\'autoconsommation insulaires.' },
+          { q: 'Le net metering s\'applique-t-il au solaire de balcon en Grèce ?', a: 'Non. Les systèmes enfichables sont réservés à l\'autoconsommation et l\'énergie qui atteint le réseau n\'est pas compensée : il n\'y a donc pas de crédit de net metering pour eux. La compensation aux prix du marché day-ahead rapportée par pv magazine concerne le surplus des systèmes d\'autoconsommation standard en Grèce continentale, pas la catégorie enfichable.' },
+          { q: 'Puis-je acheter dès maintenant un kit solaire de balcon enfichable en Grèce ?', a: 'Les kits enfichables se vendent à l\'international, mais la couverture examinée ne nomme aucun revendeur grec, et la spécification DEDDIE/ELOT qui définit un kit conforme ne figurait pas encore sur la page d\'actualités de DEDDIE/HEDNO au moment de cette mise à jour. Insider.gr rapporte que les systèmes installés avant l\'ouverture du portail doivent être déclarés dans les 30 jours suivant son lancement.' },
+          { q: 'Quels termes grecs aident à trouver des informations officielles ?', a: 'Termes de recherche utiles en grec : φωτοβολταϊκά μπαλκονιού (photovoltaïque de balcon), ΔΕΔΔΗΕ (le gestionnaire de réseau, DEDDIE/HEDNO), γνωστοποίηση (notification), Υπουργική Απόφαση (décision ministérielle), ΦΕΚ (Journal officiel), αυτοκατανάλωση (autoconsommation) et νομοθεσία (législation). Les textes officiels et les annonces du gestionnaire sont publiés en grec.' },
         ],
       },
       sources: {
@@ -518,6 +634,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: 'Couverture du projet au stade de la consultation, avec plus de 37 400 systèmes d\'autoconsommation depuis 2020 (22 juillet 2026)' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: 'Photovoltaïque sur les balcons : les experts émettent des réserves — Keep Talking Greece', description: 'Contexte d\'écrêtement du réseau et avertissements du secteur (29 avril 2026)' },
           { url: 'https://www.et.gr/', title: 'Journal officiel — Imprimerie nationale', description: 'Source officielle du Journal Β\' 5573/14.09.2026 et de la loi 5299/2026 (Α\'/67/05.05.2026)' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: 'Comment installer du photovoltaïque de balcon — NewMoney', description: 'Limites, étapes de notification, prix à partir d\'environ 500 €, règle du capteur de direction pour les batteries autonomes, échéances (15 septembre 2026, en grec)' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: 'Photovoltaïque de balcon — Energypress', description: 'Couverture continue du projet et des règles finales, dont les mesures de sécurité du projet rapportées en mai 2026' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: 'Actualités — DEDDIE/HEDNO', description: 'Annonces du gestionnaire, où les spécifications techniques et la date d\'ouverture du portail doivent être publiées (en grec)' },
         ],
       },
       relatedReading: {
@@ -533,18 +652,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-ar.webp',
-    title: 'هل الطاقة الشمسية على الشرفات قانونية في اليونان؟ تقرير الحالة لعام 2027',
-    seoTitle: 'هل الطاقة الشمسية على الشرفات قانونية في اليونان؟ تقرير الحالة لعام 2027',
+    title: 'هل الطاقة الشمسية للشرفات قانونية في اليونان؟ 2027',
+    seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في اليونان؟ 2027',
     intro: 'أجازت اليونان الطاقة الشمسية القابلة للتوصيل على الشرفات: فقرار وزاري مؤرخ في 14 سبتمبر 2026 ينشئ فئة مستقلة للأنظمة القابلة للتوصيل بقدرة توليد تصل إلى 800 واط وقدرة مركّبة تصل إلى 1,000 واط لكل نقطة إمداد، للاستهلاك الذاتي حصرًا. وعدم التصدير ليس حذرًا لمجرد الحذر: فشبكة اليونان تقلّص بالفعل إنتاج الطاقة الشمسية القائم في أيام كثيرة، وحذّر ممثلو القطاع من أن الطاقة الشمسية على الشرفات دون قيود قد تُجهد الشبكة. أما ما لا يزال معلّقًا فهو الجانب العملي: المواصفات الفنية مستحقة بحلول 31 أكتوبر 2026، ولم يُحدَّد بعد موعد إطلاق بوابة الإخطار الخاصة بـ DEDDIE/HEDNO.',
     metaDescription: 'الطاقة الشمسية على الشرفات قانونية في اليونان بموجب قرار وزاري لعام 2026: أنظمة بحد أقصى 800 واط، دون تصدير إلى الشبكة، مع إخطار عبر بوابة DEDDIE.',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مشترو الطاقة الشمسية للشرفات ومراقبو السياسات في اليونان الذين يتابعون القرار الوزاري الخاص بالطاقة الشمسية على الشرفات',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**نعم — أجازت اليونان الطاقة الشمسية القابلة للتوصيل على الشرفات. فقرار وزاري مؤرخ في 14 سبتمبر 2026 (أُفيد بأنه منشور في الجريدة الرسمية Β\' 5573)، صدر بموجب القانون 5299/2026، ينشئ فئة مستقلة للأنظمة القابلة للتوصيل بقدرة توليد تصل إلى 800 واط وقدرة مركّبة تصل إلى 1,000 واط لكل نقطة إمداد، للاستهلاك الذاتي حصرًا: فالطاقة التي تصل إلى الشبكة لا يُعوَّض عنها.** لا يُشترط عقد توصيل ولا ترخيص ولا رسم توصيل، لكن على المالك إخطار مشغّل الشبكة DEDDIE/HEDNO عبر بوابة رقمية لم تُفتح بعد — فالمواصفات الفنية مستحقة بحلول 31 أكتوبر 2026، وموعد إطلاق البوابة بحلول 31 ديسمبر 2026. وكان مشروع الاستشارة (المفتوحة حتى 20 يوليو 2026) يذكر 900 واط قدرة مركّبة؛ وتفيد الصحافة اليونانية بأن الرقم النهائي هو 1,000 واط. واليونان لا تبدأ من الصفر في الطاقة الشمسية — إذ تُظهر أرقام الوزارة إضافة 37,407 أنظمة للاستهلاك الذاتي (1,070 ميغاواط) منذ 2020 — وتصميم عدم التصدير يستجيب لشبكة تقلّص إنتاج الطاقة الشمسية أصلًا في أيام كثيرة. هذا ملخص للتغطية المنشورة وليس استشارة قانونية.',
+    leadAnswerBlock: '**نعم — أجازت اليونان الطاقة الشمسية القابلة للتوصيل على الشرفات. يسمح قرار وزاري مؤرخ في 14 سبتمبر 2026 بمجموعات حتى 800 واط توليدًا و1,000 واط قدرة مركّبة لكل نقطة إمداد، للاستهلاك الذاتي فقط، لكن بوابة الإخطار لدى DEDDIE/HEDNO لم تُفتح بعد.** ملخص للتغطية المنشورة وليس استشارة قانونية.',
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية على الشرفات قانونية في اليونان؟',
@@ -556,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا عقد توصيل ولا ترخيص ولا رسوم؛ يُخطر المالك DEDDIE/HEDNO عبر بوابة رقمية (بتسجيل دخول Taxisnet) ويُقرّ مُركِّب أو مهندس بالامتثال',
           'ما يزال معلّقًا: المواصفات الفنية بحلول 31 أكتوبر 2026، وموعد إطلاق البوابة يُعلن بحلول 31 ديسمبر 2026، ويجوز للمشغّلين منع التوصيلات الجديدة في المناطق ذات السعة المحدودة للشبكة',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -565,6 +684,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'اليونان لا تبدأ من الصفر', anchor: '#not-from-zero' },
       { label: 'لماذا عدم التصدير — ولماذا الآن', anchor: '#why-zero-feed-in' },
       { label: 'التسجيل: البوابة والإقرارات والمواعيد', anchor: '#registration' },
+      { label: 'شروط السلامة: ما تم حسمه وما لم يُحسم', anchor: '#safety-conditions' },
+      { label: 'التكلفة والدعم وNet Metering والتوفر', anchor: '#cost-availability' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
       { label: 'المصادر', anchor: '#sources' },
       { label: 'مقالات ذات صلة', anchor: '#related-reading' },
@@ -580,6 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التسجيل إخطار وليس ترخيصًا: لا عقد توصيل ولا رسم توصيل. يُقرّ المالك بالنظام عبر بوابة رقمية لدى DEDDIE/HEDNO، ويُقرّ مُركِّب أو مهندس بالامتثال.',
           'الآلية العملية ليست جاهزة بعد: المواصفات الفنية مستحقة بحلول 31 أكتوبر 2026 وموعد إطلاق البوابة بحلول 31 ديسمبر 2026. وتفيد Insider.gr بأن الأنظمة المركّبة قبل ذلك يجب الإقرار بها خلال 30 يومًا من الإطلاق.',
           'يجوز للمشغّلين تقييد التوصيلات الجديدة القابلة للتوصيل في المناطق ذات السعة المحدودة للشبكة. تلخّص هذه الصفحة التغطية المنشورة وليس نص الجريدة الرسمية — وهي ليست استشارة قانونية.',
+          'التكلفة والدعم: تذكر الصحافة اليونانية مجموعات قابلة للتوصيل بدءًا من نحو 500 يورو، وبعض الأنظمة تتجاوز 1,000 يورو؛ ولا يظهر في التغطية التي راجعناها أي دعم للمجموعات القابلة للتوصيل. ولا ينطبق Net Metering لأن الطاقة التي تصل إلى الشبكة لا يُعوَّض عنها.',
         ],
       },
       lawVsMd: {
@@ -619,6 +741,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**البطاريات المستقلة فئة منفصلة:** تُسمح البطاريات دون نظام كهروضوئي للأفراد والشركات دون تصدير إلى الشبكة، ويُفرض ذلك تقنيًا بمستشعر اتجاه وأجهزة قياس عن بُعد (Protothema).',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: 'شروط السلامة: ما تم حسمه وما لم يُحسم',
+        content: [
+          '**الشروط الفنية وشروط السلامة التفصيلية للمجموعات القابلة للتوصيل لم تُحسم بعد: فعلى DEDDIE/HEDNO، بالتعاون مع ELOT (الهيئة اليونانية للتقييس)، نشر المواصفات الفنية بحلول 31 أكتوبر 2026، ثم يُقرّ المُركِّب أو المهندس بأن النظام يستوفيها.** وتصف pv magazine متطلبات محددة لحماية الشبكة والمنشآت الكهربائية الأخرى دون سردها، ولم تكن صفحة أخبار DEDDIE/HEDNO تتضمن وقت هذا التحديث أي مواصفات للمجموعات القابلة للتوصيل ولا إعلانًا عن البوابة.',
+          '**تتباين التقارير الصحفية في التفاصيل.** تفيد NewMoney.gr بأن مستشعر الاتجاه والقياس عن بُعد إلزاميان للبطاريات المستقلة، بينما حُذف المستشعر من المشروع في حالة المجموعات القابلة للتوصيل، والطاقة المصدَّرة ببساطة لا يُعوَّض عنها. وذكرت Energypress في مايو أن إجراءات السلامة في المشروع شملت الحماية من التشغيل الجزيري (anti-islanding)، وهو ما لا تذكره التغطية التي راجعناها للنص النهائي، ولذلك لم يتأكد ما إذا كان على المجموعة أن تحمل شهادات اعتماد محددة.',
+          '**راجع المواصفات المنشورة لا صفحة البيع.** يحدد الامتثال مواصفات DEDDIE/ELOT وإقرار المُركِّب أو المهندس، ولذلك فإن وصف متجر لمجموعة بأنها «plug and play» لا يدل على استيفائها المتطلبات اليونانية. ويجوز للمشغّلين كذلك منع التوصيلات الجديدة القابلة للتوصيل في المناطق ذات سعة الشبكة المحدودة. هذا ملخص للتغطية المنشورة وليس استشارة قانونية أو استشارة في السلامة الكهربائية.',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: 'التكلفة والدعم وNet Metering والتوفر',
+        content: [
+          '**تضع الصحافة اليونانية المجموعة القابلة للتوصيل بدءًا من نحو 500 يورو، وبعض الأنظمة تتجاوز 1,000 يورو، ولا يظهر في التغطية التي راجعناها أي دعم للمجموعات القابلة للتوصيل.** تقول NewMoney.gr (15 سبتمبر 2026) إن الأسعار قد تبدأ من نحو 500 يورو وتتجاوز 1,000 يورو في بعض الحالات. والرقم الوحيد للدعم في تغطية pv magazine هو صندوق إزالة الكربون في الجزر بقيمة 476 مليون يورو، المخطط لدعم مشاريع الاستهلاك الذاتي في الجزر وليس مجموعات الشرفات.',
+          '**لا ينطبق Net Metering على المجموعات القابلة للتوصيل لأن الطاقة التي تصل إلى الشبكة لا يُعوَّض عنها.** وبالنسبة لأنظمة الاستهلاك الذاتي القياسية، تفيد pv magazine بأن الفائض في البر الرئيسي يُعوَّض بأسعار سوق اليوم التالي؛ أما فئة الأنظمة القابلة للتوصيل فهي للاستهلاك الذاتي فقط وتقع خارج هذه الآلية.',
+          '**تُباع المجموعات القابلة للتوصيل دوليًا للتركيب الذاتي، لكن التغطية التي راجعناها لا تسمّي أي بائع يوناني، ولم تكن المواصفات التي تحدد المجموعة المطابقة منشورة بعد على صفحة أخبار DEDDIE/HEDNO وقت هذا التحديث.** ويجب الإقرار بالأنظمة المركّبة قبل فتح البوابة خلال 30 يومًا من إطلاقها (Insider.gr). وقد تناولنا أعلاه مبرر الوزارة المعلن، أي فواتير أقل وخفضًا محتملًا بنسبة 20–30%؛ ولا تقدّر هذه الصفحة مدة استرداد التكلفة.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -630,6 +770,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يمكنني تصدير فائض الطاقة الشمسية من الشرفة إلى الشبكة في اليونان؟', a: 'لا. الأنظمة القابلة للتوصيل مخصصة للاستهلاك الذاتي فقط، والطاقة التي تصل إلى الشبكة لا يُعوَّض عنها. وتسري القاعدة نفسها (بلا تصدير) على البطاريات المستقلة.' },
           { q: 'متى يمكنني التسجيل فعليًا؟', a: 'ليس بعد. المواصفات الفنية مستحقة بحلول 31 أكتوبر 2026، ويجب أن تعلن DEDDIE موعد إطلاق البوابة بحلول 31 ديسمبر 2026. وتفيد Insider.gr بأن الأنظمة المركّبة قبل ذلك يجب الإقرار بها خلال 30 يومًا من إطلاق البوابة.' },
           { q: 'هل يمكنني إضافة بطارية إلى نظام شرفة في اليونان؟', a: 'تُسمح الآن البطاريات المستقلة دون نظام كهروضوئي، دون تصدير، ويجوز لأنظمة الاستهلاك الذاتي إضافة بطاريات وفق متطلبات فنية (pv magazine وProtothema). وفي الجزر لا يجوز للبطاريات المركّبة مع الطاقة الكهروضوئية حقن الكهرباء في الشبكة.' },
+          { q: 'ما شروط السلامة المطبقة على الطاقة الشمسية القابلة للتوصيل للشرفات في اليونان؟', a: 'الشروط التفصيلية ليست نهائية بعد: على DEDDIE/HEDNO وELOT نشر المواصفات الفنية بحلول 31 أكتوبر 2026، ثم يُقرّ المُركِّب أو المهندس بأن النظام يستوفيها. وتتباين الصحافة في تفاصيل مثل مستشعر الاتجاه الذي تصفه NewMoney.gr بأنه إلزامي للبطاريات المستقلة وليس للمجموعات القابلة للتوصيل، ولذلك راجع المواصفات المنشورة قبل الشراء.' },
+          { q: 'كم تكلفة مجموعة طاقة شمسية قابلة للتوصيل للشرفة في اليونان، وهل يوجد دعم؟', a: 'تذكر NewMoney.gr أسعارًا بدءًا من نحو 500 يورو، وبعض الأنظمة تتجاوز 1,000 يورو. ولا يظهر في التغطية التي راجعناها أي دعم للمجموعات القابلة للتوصيل؛ والرقم الوحيد للدعم لدى pv magazine هو صندوق إزالة الكربون في الجزر بقيمة 476 مليون يورو لمشاريع الاستهلاك الذاتي في الجزر.' },
+          { q: 'هل ينطبق Net Metering على الطاقة الشمسية للشرفات في اليونان؟', a: 'لا. الأنظمة القابلة للتوصيل للاستهلاك الذاتي فقط، والطاقة التي تصل إلى الشبكة لا يُعوَّض عنها، فلا يوجد رصيد Net Metering لها. أما التعويض بأسعار سوق اليوم التالي الذي أوردته pv magazine فيخص فائض أنظمة الاستهلاك الذاتي القياسية في البر الرئيسي، لا فئة الأنظمة القابلة للتوصيل.' },
+          { q: 'هل يمكنني شراء مجموعة طاقة شمسية قابلة للتوصيل للشرفة في اليونان الآن؟', a: 'تُباع المجموعات القابلة للتوصيل دوليًا، لكن التغطية التي راجعناها لا تسمّي أي بائع يوناني، ولم تكن مواصفات DEDDIE/ELOT التي تحدد المجموعة المطابقة منشورة بعد على صفحة أخبار DEDDIE/HEDNO وقت هذا التحديث. وتفيد Insider.gr بأن الأنظمة المركّبة قبل فتح البوابة يجب الإقرار بها خلال 30 يومًا من إطلاقها.' },
+          { q: 'ما المصطلحات اليونانية المفيدة للبحث عن المعلومات الرسمية؟', a: 'من مصطلحات البحث المفيدة باليونانية: φωτοβολταϊκά μπαλκονιού (الطاقة الكهروضوئية للشرفات)، ΔΕΔΔΗΕ (مشغّل الشبكة DEDDIE/HEDNO)، γνωστοποίηση (الإخطار)، Υπουργική Απόφαση (القرار الوزاري)، ΦΕΚ (الجريدة الرسمية)، αυτοκατανάλωση (الاستهلاك الذاتي)، νομοθεσία (التشريع). تُنشر النصوص الرسمية وإعلانات المشغّل باليونانية.' },
         ],
       },
       sources: {
@@ -642,6 +787,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: 'تغطية المشروع في مرحلة الاستشارة، مع أكثر من 37,400 نظام للاستهلاك الذاتي منذ 2020 (22 يوليو 2026)' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: 'الطاقة الكهروضوئية على الشرفات: للخبراء تحفظات — Keep Talking Greece', description: 'سياق تقليص الشبكة وتحذيرات القطاع (29 أبريل 2026)' },
           { url: 'https://www.et.gr/', title: 'الجريدة الرسمية — المطبعة الوطنية', description: 'المصدر الرسمي للجريدة Β\' 5573/14.09.2026 والقانون 5299/2026 (Α\'/67/05.05.2026)' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: 'كيف تركّب طاقة كهروضوئية على الشرفة — NewMoney', description: 'الحدود وخطوات الإخطار وأسعار من نحو 500 يورو وقاعدة مستشعر الاتجاه للبطاريات المستقلة والمواعيد (15 سبتمبر 2026، باليونانية)' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: 'الطاقة الكهروضوئية للشرفات — Energypress', description: 'تغطية متواصلة للمشروع والقواعد النهائية، بما فيها إجراءات السلامة في المشروع التي نُشرت في مايو 2026' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: 'الأخبار — DEDDIE/HEDNO', description: 'إعلانات المشغّل، حيث ستُنشر المواصفات الفنية وموعد بدء البوابة (باليونانية)' },
         ],
       },
       relatedReading: {
@@ -657,18 +805,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-ja.webp',
-    title: 'ギリシャでバルコニー太陽光は合法か？ 2027年ステータスレポート',
-    seoTitle: 'ギリシャでバルコニー太陽光は合法か？ 2027年ステータスレポート',
+    title: 'ギリシャでバルコニー太陽光は合法か？2027年ステータスレポート',
+    seoTitle: 'ギリシャでバルコニー太陽光は合法か？2027年ステータスレポート',
     intro: 'ギリシャはプラグイン式バルコニー太陽光を合法化しました。2026年9月14日付の閣僚決定により、供給地点ごとに発電800W・設置容量1,000Wまでのプラグイン式システムという専用カテゴリーが設けられ、用途は自家消費に限られます。逆潮流を認めない設計は慎重さのための慎重さではありません。ギリシャの系統はすでに多くの日に既存の太陽光出力を抑制しており、業界関係者は、無制限のバルコニーPVが系統に負担をかけかねないと警告してきました。まだ残っているのは実務面の整備です。技術仕様の期限は2026年10月31日で、DEDDIE/HEDNOの届出ポータルには開始日がまだありません。',
     metaDescription: 'ギリシャでは2026年の閣僚決定によりバルコニー太陽光が合法化。800Wまでのプラグイン式、逆潮流不可、DEDDIEポータルでの届出が必要です。ルールと未確定の期限を解説。',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6分で読める',
     educationalLevel: 'Beginner',
     audience: 'ギリシャのバルコニー太陽光に関する閣僚決定を追うバルコニー太陽光の購入検討者と政策ウォッチャー',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**はい。ギリシャはプラグイン式バルコニー太陽光を合法化しました。2026年法5299号に基づく2026年9月14日付の閣僚決定（官報B\' 5573として報じられています）により、供給地点ごとに発電800W・設置容量1,000Wまでのプラグイン式システムの専用カテゴリーが設けられ、用途は自家消費に限られます。系統に流れたエネルギーは補償されません。** 系統連系契約、許可、接続料は不要ですが、所有者はまだ開設されていないデジタルポータルを通じて系統事業者DEDDIE/HEDNOに届け出る必要があります。技術仕様の期限は2026年10月31日、ポータルの開始日の発表期限は2026年12月31日です。意見募集（2026年7月20日まで）の草案では設置容量900Wとされていましたが、ギリシャの報道では最終的な数値は1,000Wとされています。ギリシャの太陽光は決してゼロからの出発ではなく、省庁の数字では2020年以降に37,407件の自家消費システム（1,070MW）が追加されました。逆潮流なしの設計は、すでに多くの日に太陽光出力を抑制している系統への対応です。本ページは公表された報道の要約であり、法的助言ではありません。',
+    leadAnswerBlock: '**はい。ギリシャはプラグイン式バルコニー太陽光を合法化しました。2026年9月14日付の閣僚決定により、供給地点ごとに発電800W・設置容量1,000Wまでのキットが、自家消費に限って認められます。ただしDEDDIE/HEDNOの届出ポータルはまだ開設されていません。** 公表された報道の要約であり、法的助言ではありません。',
     quickAnswerTop: {
       ja: {
         question: 'ギリシャでバルコニー太陽光は合法ですか？',
@@ -680,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '系統連系契約・許可・接続料は不要。所有者はDEDDIE/HEDNOのデジタルポータル（Taxisnetログイン）で届け出、施工業者またはエンジニアが適合を宣言します',
           '未確定事項：技術仕様は2026年10月31日まで、ポータル開始日は2026年12月31日までに発表予定。系統容量が限られる地域では、事業者が新規接続を禁止できます',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -689,6 +837,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ギリシャはゼロからの出発ではない', anchor: '#not-from-zero' },
       { label: 'なぜ逆潮流ゼロなのか、そしてなぜ今なのか', anchor: '#why-zero-feed-in' },
       { label: '登録：ポータル・宣言・期限', anchor: '#registration' },
+      { label: '安全条件：確定していること・していないこと', anchor: '#safety-conditions' },
+      { label: '費用・補助金・ネットメータリング・入手性', anchor: '#cost-availability' },
       { label: 'よくある質問', anchor: '#faq' },
       { label: '出典', anchor: '#sources' },
       { label: '関連記事', anchor: '#related-reading' },
@@ -704,6 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '登録は許可ではなく届出です。系統連系契約も接続料も不要で、所有者がDEDDIE/HEDNOのデジタルポータルでシステムを申告し、施工業者またはエンジニアが適合を宣言します。',
           '実務の仕組みは未整備です。技術仕様は2026年10月31日まで、ポータル開始日は2026年12月31日までに発表予定です。Insider.grによれば、それ以前に設置したシステムはポータル開始から30日以内に申告が必要です。',
           '系統容量が限られる地域では、事業者が新規のプラグイン接続を制限できます。本ページは公表された報道の要約であり、官報の条文ではありません。法的助言ではありません。',
+          '費用と補助金：ギリシャの報道では、プラグイン式キットは約500ユーロから、1,000ユーロを超えるシステムもあります。確認した報道にプラグイン式キット向けの補助金は見当たりません。系統に届いたエネルギーは補償されないため、ネットメータリングは適用されません。',
         ],
       },
       lawVsMd: {
@@ -743,6 +894,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**単独蓄電池は別カテゴリーです。** PVシステムのない蓄電池は、個人と企業に対して系統への逆潮流なしで認められ、方向センサーとテレメトリによって技術的に担保されます（Protothema）。',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: '安全条件：確定していること・していないこと',
+        content: [
+          '**プラグイン式キットの詳細な技術・安全条件はまだ確定していません。DEDDIE/HEDNOがELOT（ギリシャ標準化機構）と共同で2026年10月31日までに技術仕様を公表する必要があり、その後、施工業者またはエンジニアがシステムが仕様を満たしていると宣言します。** pv magazineは、系統やその他の電気設備を守るための具体的な要件があるとしていますが、内容は列挙していません。また、今回の更新時点で、DEDDIE/HEDNOのニュースページにはプラグイン式向けの仕様もポータルの告知も掲載されていませんでした。',
+          '**報道は細部で食い違っています。** NewMoney.grは、方向センサーとテレメトリーは単独蓄電池では必須である一方、プラグイン式キットでは草案からセンサーが外され、逆潮流分は単に補償されないだけだと伝えています。Energypressは5月に、草案の安全対策に単独運転防止（アンチアイランディング）保護が含まれていたと報じましたが、確認した最終版の報道には言及がないため、キットが特定の認証を備える必要があるかどうかは未確認です。',
+          '**確認すべきは販売ページではなく、公表された仕様です。** 適合性はDEDDIE/ELOTの仕様と施工業者またはエンジニアの宣言で決まるため、販売店がキットを「プラグアンドプレイ」と呼んでいても、ギリシャの要件を満たすかどうかは分かりません。系統容量が限られる地域では、事業者が新たなプラグイン式の接続を禁止することもあります。本ページは公表された報道の要約であり、法的助言や電気安全に関する助言ではありません。',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: '費用・補助金・ネットメータリング・入手性',
+        content: [
+          '**ギリシャの報道では、プラグイン式キットは約500ユーロからで、1,000ユーロを超えるシステムもあります。確認した報道にプラグイン式キット向けの補助金は見当たりません。** NewMoney.gr（2026年9月15日）は、価格は約500ユーロから始まり、場合によっては1,000ユーロを超えると伝えています。pv magazineの報道にある補助金の数字は、離島の自家消費プロジェクトを支援する予定の4億7,600万ユーロの「離島脱炭素化基金」だけで、バルコニーキット向けではありません。',
+          '**系統に届いたエネルギーは補償されないため、ネットメータリングはプラグイン式キットには適用されません。** 通常の自家消費システムについては、pv magazineによると本土の余剰電力は前日市場価格で補償されますが、プラグイン式は自家消費専用で、その仕組みの対象外です。',
+          '**プラグイン式キットは海外でDIY向けに販売されていますが、確認した報道にギリシャの販売店名は挙がっておらず、適合するキットを定義する仕様も、今回の更新時点ではDEDDIE/HEDNOのニュースページに掲載されていませんでした。** ポータル開始前に設置したシステムは、開始から30日以内に申告が必要です（Insider.gr）。電気代が下がる（20〜30％削減の可能性）という省の説明は前述のとおりで、本ページは回収期間を試算しません。',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
@@ -754,6 +923,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ギリシャでバルコニー太陽光の余剰電力を系統に売れますか?', a: 'いいえ。プラグイン式システムは自家消費専用で、系統に届いたエネルギーは補償されません。単独蓄電池にも同じ逆潮流なしのルールが適用されます。' },
           { q: '実際にはいつ登録できますか?', a: 'まだできません。技術仕様は2026年10月31日まで、DEDDIEはポータルの開始日を2026年12月31日までに発表する必要があります。Insider.grによれば、それ以前に設置したシステムはポータル開始から30日以内に申告が必要です。' },
           { q: 'ギリシャでバルコニーシステムに蓄電池を追加できますか?', a: 'PVシステムのない単独蓄電池は逆潮流なしで認められるようになり、自家消費システムも技術要件を満たせば蓄電池を追加できます（pv magazine、Protothema）。離島では、PVと一緒に設置した蓄電池は系統へ電力を注入できません。' },
+          { q: 'ギリシャのプラグイン式バルコニー太陽光にはどのような安全条件がありますか？', a: '詳細な条件はまだ確定していません。DEDDIE/HEDNOとELOTが2026年10月31日までに技術仕様を公表する必要があり、その後、施工業者またはエンジニアがシステムが仕様を満たしていると宣言します。方向センサーのような細部は報道で食い違っており、NewMoney.grは単独蓄電池では必須、プラグイン式キットでは必須ではないと説明しています。購入前に公表された仕様をご確認ください。' },
+          { q: 'ギリシャでプラグイン式バルコニー太陽光キットはいくらで、補助金はありますか？', a: 'NewMoney.grは約500ユーロからの価格を伝えており、1,000ユーロを超えるシステムもあります。確認した報道にプラグイン式キット向けの補助金は見当たらず、pv magazineにある補助金の数字は、離島の自家消費プロジェクト向けの4億7,600万ユーロの離島脱炭素化基金だけです。' },
+          { q: 'ギリシャのバルコニー太陽光にネットメータリングは適用されますか？', a: 'いいえ。プラグイン式システムは自家消費専用で、系統に届いたエネルギーは補償されないため、ネットメータリングのクレジットはありません。pv magazineが伝える前日市場価格での補償は、本土の通常の自家消費システムの余剰電力に関するもので、プラグイン式には当てはまりません。' },
+          { q: 'ギリシャで今すぐプラグイン式バルコニー太陽光キットを購入できますか？', a: 'プラグイン式キットは海外で販売されていますが、確認した報道にギリシャの販売店名は挙がっておらず、適合するキットを定義するDEDDIE/ELOTの仕様も、今回の更新時点ではDEDDIE/HEDNOのニュースページに掲載されていませんでした。Insider.grによれば、ポータル開始前に設置したシステムは開始から30日以内に申告が必要です。' },
+          { q: '公式情報を探すのに役立つギリシャ語の用語は何ですか？', a: '検索に役立つギリシャ語の用語は、φωτοβολταϊκά μπαλκονιού（バルコニー太陽光発電）、ΔΕΔΔΗΕ（送配電事業者DEDDIE/HEDNO）、γνωστοποίηση（届出）、Υπουργική Απόφαση（閣僚決定）、ΦΕΚ（官報）、αυτοκατανάλωση（自家消費）、νομοθεσία（法令）です。公式の文書や事業者の告知はギリシャ語で公表されます。' },
         ],
       },
       sources: {
@@ -766,6 +940,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: '意見募集段階の草案報道。2020年以降に37,400件超の自家消費システム（2026年7月22日）' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: 'バルコニーの太陽光：専門家は懸念 — Keep Talking Greece', description: '系統抑制の背景と業界の警告（2026年4月29日）' },
           { url: 'https://www.et.gr/', title: '官報 — 国立印刷局', description: '官報B\' 5573/14.09.2026および2026年法5299号（Α\'/67/05.05.2026）の公式情報源' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: 'バルコニーPVの設置方法 — NewMoney', description: '上限、届出の手順、約500ユーロからの価格、単独蓄電池の方向センサー規則、期限（2026年9月15日、ギリシャ語）' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: 'バルコニー太陽光 — Energypress', description: '草案と最終規則の継続報道。2026年5月に報じられた草案の安全対策を含む' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: 'ニュース — DEDDIE/HEDNO', description: '事業者の告知。技術仕様とポータル開始日が公表される予定の場所（ギリシャ語）' },
         ],
       },
       relatedReading: {
@@ -786,13 +963,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '그리스는 플러그인 발코니 태양광을 합법화했습니다. 2026년 9월 14일자 장관령은 공급 지점당 발전 800W, 설치 용량 1,000W 이하의 플러그인 시스템이라는 별도 범주를 만들고, 용도를 자가소비로 엄격히 제한합니다. 역송 금지 설계는 신중함 자체를 위한 것이 아닙니다. 그리스 계통은 이미 많은 날 기존 태양광 출력을 제한하고 있고, 업계 인사들은 제한 없는 발코니 PV가 계통에 부담을 줄 수 있다고 경고해 왔습니다. 아직 남은 것은 실무 체계입니다. 기술 사양은 2026년 10월 31일까지 나와야 하며, DEDDIE/HEDNO 신고 포털은 아직 개시일이 없습니다.',
     metaDescription: '그리스는 2026년 장관령으로 발코니 태양광을 합법화했습니다. 최대 800W 플러그인 방식, 계통 역송 금지, DEDDIE 포털 신고. 규정과 남은 기한을 정리했습니다.',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6분 읽기',
     educationalLevel: 'Beginner',
     audience: '그리스의 발코니 태양광 관련 장관령을 추적하는 발코니 태양광 구매자 및 정책 관찰자',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**네, 그리스는 플러그인 발코니 태양광을 합법화했습니다. 2026년 법률 제5299호에 따라 발령된 2026년 9월 14일자 장관령(관보 Β\' 5573으로 보도됨)은 공급 지점당 발전 800W, 설치 용량 1,000W 이하의 플러그인 시스템이라는 별도 범주를 만들며, 용도는 자가소비로 엄격히 제한됩니다. 계통에 도달한 에너지는 보상되지 않습니다.** 계통 연계 계약, 허가, 접속료는 필요 없지만, 소유자는 아직 열리지 않은 디지털 포털을 통해 계통 운영자 DEDDIE/HEDNO에 신고해야 합니다. 기술 사양 기한은 2026년 10월 31일, 포털 개시일 발표 기한은 2026년 12월 31일입니다. 의견수렴(2026년 7월 20일까지) 초안은 설치 용량 900W로 되어 있었으나, 그리스 언론은 최종 수치를 1,000W로 보도합니다. 그리스는 태양광에서 제로에서 시작하는 것이 아닙니다. 정부 부처 수치에 따르면 2020년 이후 자가소비 시스템 37,407기(1,070MW)가 추가되었습니다. 역송 금지 설계는 이미 많은 날 태양광 출력을 제한하는 계통에 대한 대응입니다. 이 글은 공개된 보도의 요약이며 법률 자문이 아닙니다.',
+    leadAnswerBlock: '**네. 그리스는 플러그인 발코니 태양광을 합법화했습니다. 2026년 9월 14일자 장관령은 공급 지점당 발전 800W, 설치 용량 1,000W 이하의 키트를 자가소비 전용으로 허용하지만, DEDDIE/HEDNO 신고 포털은 아직 열리지 않았습니다.** 공개된 보도를 요약한 것이며 법률 자문이 아닙니다.',
     quickAnswerTop: {
       ko: {
         question: '그리스에서 발코니 태양광은 합법인가요?',
@@ -804,7 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '계통 연계 계약, 허가, 접속료 없음. 소유자는 DEDDIE/HEDNO 디지털 포털(Taxisnet 로그인)로 신고하고, 설치업자 또는 엔지니어가 적합성을 선언합니다',
           '아직 남은 사항: 기술 사양은 2026년 10월 31일까지, 포털 개시일은 2026년 12월 31일까지 발표 예정이며, 계통 용량이 제한된 지역에서는 운영자가 신규 접속을 막을 수 있습니다',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -813,6 +990,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '그리스는 제로에서 시작하는 것이 아닙니다', anchor: '#not-from-zero' },
       { label: '왜 역송 제로인가, 그리고 왜 지금인가', anchor: '#why-zero-feed-in' },
       { label: '등록: 포털, 선언서, 기한', anchor: '#registration' },
+      { label: '안전 조건: 확정된 것과 아닌 것', anchor: '#safety-conditions' },
+      { label: '비용, 보조금, Net Metering, 구매 가능성', anchor: '#cost-availability' },
       { label: '자주 묻는 질문', anchor: '#faq' },
       { label: '출처', anchor: '#sources' },
       { label: '관련 글', anchor: '#related-reading' },
@@ -828,6 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '등록은 허가가 아니라 신고입니다. 계통 연계 계약도 접속료도 없으며, 소유자가 DEDDIE/HEDNO 디지털 포털로 시스템을 신고하고 설치업자 또는 엔지니어가 적합성을 선언합니다.',
           '실무 체계는 아직 준비되지 않았습니다. 기술 사양은 2026년 10월 31일까지, 포털 개시일은 2026년 12월 31일까지 발표되어야 합니다. Insider.gr에 따르면 그 이전에 설치된 시스템은 포털 개시 후 30일 이내에 신고해야 합니다.',
           '계통 용량이 제한된 지역에서는 운영자가 신규 플러그인 접속을 제한할 수 있습니다. 이 글은 공개된 보도를 요약한 것이며 관보 원문이 아닙니다. 법률 자문이 아닙니다.',
+          '비용과 보조금: 그리스 언론은 플러그인 키트를 약 500유로부터로 보도하며 일부 시스템은 1,000유로를 넘습니다. 검토한 보도에서는 플러그인 키트에 대한 보조금이 확인되지 않습니다. 계통에 도달한 에너지는 보상되지 않으므로 Net Metering은 적용되지 않습니다.',
         ],
       },
       lawVsMd: {
@@ -867,6 +1047,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**독립형 배터리는 별도 범주입니다.** PV 시스템이 없는 배터리는 개인과 기업에 계통 역송 없이 허용되며, 방향 센서와 원격 계측으로 기술적으로 보장됩니다(Protothema).',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: '안전 조건: 확정된 것과 아닌 것',
+        content: [
+          '**플러그인 키트의 세부 기술·안전 조건은 아직 확정되지 않았습니다. DEDDIE/HEDNO가 ELOT(그리스 표준화 기구)와 함께 2026년 10월 31일까지 기술 사양을 공개해야 하며, 이후 설치업자 또는 엔지니어가 시스템이 사양을 충족한다고 선언합니다.** pv magazine은 계통과 기타 전기 설비를 보호하기 위한 구체적 요건이 있다고 설명하지만 내용은 나열하지 않았으며, 이번 업데이트 시점에 DEDDIE/HEDNO 뉴스 페이지에는 플러그인 키트용 사양도 포털 공지도 없었습니다.',
+          '**언론 보도는 세부 사항에서 엇갈립니다.** NewMoney.gr는 방향 센서와 원격 계측이 독립형 배터리에는 의무이지만, 플러그인 키트는 초안에서 센서가 빠졌고 역송된 에너지는 단순히 보상되지 않는다고 보도합니다. Energypress는 5월에 초안의 안전 조치에 단독 운전 방지(anti-islanding) 보호가 포함되었다고 보도했으나, 검토한 최종 본문 보도에는 언급이 없어 키트가 특정 인증을 갖춰야 하는지는 확인되지 않았습니다.',
+          '**판매 페이지가 아니라 공개된 사양을 확인하십시오.** 적합 여부는 DEDDIE/ELOT 사양과 설치업자 또는 엔지니어의 선언서로 정해지므로, 판매업체가 키트를 「plug and play」라고 부르는 것만으로는 그리스 요건 충족 여부를 알 수 없습니다. 또한 계통 용량이 제한된 지역에서는 운영자가 새로운 플러그인 접속을 금지할 수 있습니다. 이 글은 공개된 보도를 요약한 것이며 법률 또는 전기 안전 자문이 아닙니다.',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: '비용, 보조금, Net Metering, 구매 가능성',
+        content: [
+          '**그리스 언론은 플러그인 키트를 약 500유로부터로 보도하며 일부 시스템은 1,000유로를 넘습니다. 검토한 보도에서는 플러그인 키트에 대한 보조금이 확인되지 않습니다.** NewMoney.gr(2026년 9월 15일)는 가격이 약 500유로에서 시작하며 경우에 따라 1,000유로를 넘을 수 있다고 전합니다. pv magazine 보도에 나오는 유일한 보조금 수치는 섬 지역 자가소비 프로젝트를 지원할 예정인 4억 7,600만 유로 규모의 섬 탈탄소화 기금이며, 발코니 키트용이 아닙니다.',
+          '**계통에 도달한 에너지는 보상되지 않으므로 Net Metering은 플러그인 키트에 적용되지 않습니다.** 일반 자가소비 시스템의 경우 pv magazine에 따르면 본토의 잉여 전력은 하루 전 시장 가격으로 보상되지만, 플러그인 범주는 자가소비 전용이며 그 체계 밖에 있습니다.',
+          '**플러그인 키트는 해외에서 직접 설치용으로 판매되지만, 검토한 보도에는 그리스 판매업체가 언급되지 않았고, 적합한 키트를 정의할 사양도 이번 업데이트 시점에는 DEDDIE/HEDNO 뉴스 페이지에 게시되어 있지 않았습니다.** 포털 개시 전에 설치된 시스템은 개시 후 30일 이내에 신고해야 합니다(Insider.gr). 전기요금 인하(20–30% 절감 가능성)라는 부처의 공식 취지는 앞에서 다루었으며, 이 글은 투자 회수 기간을 추정하지 않습니다.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: '자주 묻는 질문',
@@ -878,6 +1076,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '그리스에서 발코니 태양광의 잉여 전력을 계통으로 내보낼 수 있나요?', a: '아니요. 플러그인 시스템은 자가소비 전용이며, 계통에 도달한 에너지는 보상되지 않습니다. 독립형 배터리에도 같은 역송 금지 규칙이 적용됩니다.' },
           { q: '실제로 언제 등록할 수 있나요?', a: '아직은 할 수 없습니다. 기술 사양은 2026년 10월 31일까지 나와야 하고, DEDDIE는 포털 개시일을 2026년 12월 31일까지 발표해야 합니다. Insider.gr에 따르면 그 이전에 설치된 시스템은 포털 개시 후 30일 이내에 신고해야 합니다.' },
           { q: '그리스에서 발코니 시스템에 배터리를 추가할 수 있나요?', a: 'PV 시스템이 없는 독립형 배터리는 이제 역송 없이 허용되며, 자가소비 시스템도 기술 요건에 따라 배터리를 추가할 수 있습니다(pv magazine, Protothema). 섬 지역에서는 PV와 함께 설치된 배터리가 계통에 전력을 주입할 수 없습니다.' },
+          { q: '그리스에서 플러그인 발코니 태양광에는 어떤 안전 조건이 적용되나요?', a: '세부 조건은 아직 최종 확정되지 않았습니다. DEDDIE/HEDNO와 ELOT가 2026년 10월 31일까지 기술 사양을 공개해야 하며, 이후 설치업자 또는 엔지니어가 시스템이 사양을 충족한다고 선언합니다. 방향 센서 같은 세부 사항은 보도마다 다르며, NewMoney.gr는 독립형 배터리에는 의무이지만 플러그인 키트에는 아니라고 설명하므로, 구매 전에 공개된 사양을 확인하십시오.' },
+          { q: '그리스에서 플러그인 발코니 태양광 키트는 얼마이고 보조금이 있나요?', a: 'NewMoney.gr는 약 500유로부터의 가격을 전하며 일부 시스템은 1,000유로를 넘습니다. 검토한 보도에서는 플러그인 키트에 대한 보조금이 확인되지 않으며, pv magazine의 유일한 보조금 수치는 섬 지역 자가소비 프로젝트를 위한 4억 7,600만 유로 규모의 섬 탈탄소화 기금입니다.' },
+          { q: '그리스의 발코니 태양광에 Net Metering이 적용되나요?', a: '아니요. 플러그인 시스템은 자가소비 전용이며 계통에 도달한 에너지는 보상되지 않으므로 Net Metering 크레딧이 없습니다. pv magazine이 보도한 하루 전 시장 가격 보상은 본토의 일반 자가소비 시스템 잉여 전력에 해당하며 플러그인 범주에는 해당하지 않습니다.' },
+          { q: '그리스에서 지금 플러그인 발코니 태양광 키트를 구매할 수 있나요?', a: '플러그인 키트는 해외에서 판매되지만, 검토한 보도에는 그리스 판매업체가 언급되지 않았고, 적합한 키트를 정의하는 DEDDIE/ELOT 사양도 이번 업데이트 시점에는 DEDDIE/HEDNO 뉴스 페이지에 게시되어 있지 않았습니다. Insider.gr에 따르면 포털 개시 전에 설치된 시스템은 개시 후 30일 이내에 신고해야 합니다.' },
+          { q: '공식 정보를 찾을 때 도움이 되는 그리스어 용어는 무엇인가요?', a: '검색에 유용한 그리스어 용어는 φωτοβολταϊκά μπαλκονιού(발코니 태양광), ΔΕΔΔΗΕ(계통 운영자 DEDDIE/HEDNO), γνωστοποίηση(신고), Υπουργική Απόφαση(장관령), ΦΕΚ(관보), αυτοκατανάλωση(자가소비), νομοθεσία(법령)입니다. 공식 문서와 운영자 공지는 그리스어로 게시됩니다.' },
         ],
       },
       sources: {
@@ -890,6 +1093,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: '의견수렴 단계의 초안 보도, 2020년 이후 자가소비 시스템 37,400기 이상(2026년 7월 22일)' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: '발코니 태양광: 전문가들은 유보적 — Keep Talking Greece', description: '계통 출력 제한의 배경과 업계 경고(2026년 4월 29일)' },
           { url: 'https://www.et.gr/', title: '관보 — 국립인쇄국', description: '관보 Β\' 5573/14.09.2026 및 2026년 법률 제5299호(Α\'/67/05.05.2026)의 공식 출처' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: '발코니 PV 설치 방법 — NewMoney', description: '한도, 신고 절차, 약 500유로부터의 가격, 독립형 배터리의 방향 센서 규정, 기한(2026년 9월 15일, 그리스어)' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: '발코니 태양광 — Energypress', description: '초안과 최종 규정에 대한 지속 보도. 2026년 5월에 보도된 초안의 안전 조치 포함' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: '뉴스 — DEDDIE/HEDNO', description: '운영자 공지. 기술 사양과 포털 개시일이 게시될 예정인 곳(그리스어)' },
         ],
       },
       relatedReading: {
@@ -905,18 +1111,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-pt.webp',
-    title: 'A energia solar de varanda é legal na Grécia? Relatório de status 2027',
-    seoTitle: 'A energia solar de varanda é legal na Grécia? Relatório de status 2027',
+    title: 'Energia solar de varanda na Grécia é legal? Status 2027',
+    seoTitle: 'Energia solar de varanda na Grécia é legal? Status 2027',
     intro: 'A Grécia legalizou a energia solar de varanda plug-in: uma decisão ministerial de 14 de setembro de 2026 cria uma categoria própria para sistemas plug-in de até 800 W de geração e 1.000 W de potência instalada por ponto de fornecimento, estritamente para autoconsumo. O desenho sem exportação não é cautela por cautela: a rede grega já limita a produção solar existente em muitos dias, e representantes do setor alertaram que a energia solar de varanda sem restrições poderia sobrecarregá-la. O que ainda falta é a parte prática: as especificações técnicas vencem em 31 de outubro de 2026, e o portal de notificação da DEDDIE/HEDNO ainda não tem data de início.',
     metaDescription: 'A energia solar de varanda é legal na Grécia (decisão de 2026): até 800 W, sem exportar à rede e aviso no portal da DEDDIE. Regras e prazos em aberto.',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energia solar de varanda e observadores de políticas na Grécia acompanhando a decisão ministerial sobre energia solar de varanda',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**Sim — a Grécia legalizou a energia solar de varanda plug-in. Uma decisão ministerial de 14 de setembro de 2026 (noticiada como Diário Oficial Β\' 5573), emitida com base na Lei 5299/2026, cria uma categoria própria de sistemas plug-in com até 800 W de geração e 1.000 W de potência instalada por ponto de fornecimento, estritamente para autoconsumo: a energia que chega à rede não é compensada.** Não são exigidos contrato de conexão, licença nem taxa de conexão, mas o proprietário deve notificar a operadora da rede DEDDIE/HEDNO por um portal digital que ainda não está aberto — as especificações técnicas vencem em 31 de outubro de 2026 e a data de início do portal, em 31 de dezembro de 2026. O rascunho em consulta (aberta até 20 de julho de 2026) falava em 900 W instalados; a imprensa grega informa 1.000 W como valor final. A Grécia não parte do zero em energia solar — segundo números do ministério, foram adicionados 37.407 sistemas de autoconsumo (1.070 MW) desde 2020 — e o desenho sem exportação responde a uma rede que já limita a produção solar em muitos dias. Este é um resumo da cobertura publicada, não aconselhamento jurídico.',
+    leadAnswerBlock: '**Sim — a Grécia legalizou a energia solar de varanda plug-in. Uma decisão ministerial de 14 de setembro de 2026 permite kits de até 800 W de geração e 1.000 W instalados por fornecimento, só para autoconsumo; o portal da DEDDIE/HEDNO ainda não está aberto.** Não é aconselhamento jurídico.',
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal na Grécia?',
@@ -928,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sem contrato de conexão, licença nem taxa; o proprietário notifica a DEDDIE/HEDNO por um portal digital (login Taxisnet) e um instalador ou engenheiro declara a conformidade',
           'Ainda pendente: especificações técnicas até 31 de outubro de 2026, data de início do portal a anunciar até 31 de dezembro de 2026, e as operadoras podem barrar novas conexões em áreas com capacidade de rede limitada',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -937,6 +1143,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'A Grécia não parte do zero', anchor: '#not-from-zero' },
       { label: 'Por que zero injeção — e por que agora', anchor: '#why-zero-feed-in' },
       { label: 'Registro: portal, declarações e prazos', anchor: '#registration' },
+      { label: 'Condições de segurança: o que está definido e o que não está', anchor: '#safety-conditions' },
+      { label: 'Custos, subsídios, net metering e disponibilidade', anchor: '#cost-availability' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Fontes', anchor: '#sources' },
       { label: 'Leituras relacionadas', anchor: '#related-reading' },
@@ -952,6 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O registro é uma notificação, não uma licença: sem contrato de conexão e sem taxa de conexão. O proprietário declara o sistema por um portal digital da DEDDIE/HEDNO, e um instalador ou engenheiro declara a conformidade.',
           'A estrutura ainda não está pronta: as especificações técnicas vencem em 31 de outubro de 2026 e a data de início do portal, em 31 de dezembro de 2026. O Insider.gr informa que sistemas instalados antes devem ser declarados em até 30 dias após o lançamento.',
           'As operadoras podem restringir novas conexões plug-in em áreas com capacidade de rede limitada. Esta página resume a cobertura publicada, não o texto do Diário Oficial — não é aconselhamento jurídico.',
+          'Custos e subsídios: a imprensa grega cita kits plug-in a partir de cerca de €500, com alguns sistemas acima de €1.000; nenhum subsídio para kits plug-in aparece na cobertura analisada. O net metering não se aplica, porque a energia que chega à rede não é compensada.',
         ],
       },
       lawVsMd: {
@@ -991,6 +1200,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Baterias independentes são uma categoria separada:** baterias sem sistema fotovoltaico são permitidas para pessoas físicas e empresas sem exportação para a rede, garantida tecnicamente por um sensor de direção e telemetria (Protothema).',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: 'Condições de segurança: o que está definido e o que não está',
+        content: [
+          '**As condições técnicas e de segurança detalhadas para kits plug-in ainda não estão definidas: a DEDDIE/HEDNO, junto com a ELOT (o organismo grego de normalização), deve publicar as especificações técnicas até 31 de outubro de 2026, e então o instalador ou engenheiro declara que o sistema as atende.** A pv magazine descreve requisitos específicos para proteger a rede e outras instalações elétricas sem listá-los, e a página de notícias da DEDDIE/HEDNO não trazia nenhuma especificação para kits plug-in nem anúncio do portal no momento desta atualização.',
+          '**As reportagens divergem nos detalhes.** O NewMoney.gr informa que sensor de direção e telemetria são obrigatórios para baterias independentes, enquanto nos kits plug-in o sensor foi retirado do rascunho e a energia exportada simplesmente não é compensada. A Energypress noticiou em maio que as medidas de segurança do rascunho incluíam proteção anti-ilhamento, o que a cobertura analisada do texto final não menciona; por isso, não está confirmado se um kit precisa ter certificações específicas.',
+          '**Confira a especificação publicada, não a página de vendas.** A conformidade é definida pela especificação da DEDDIE/ELOT e pela declaração do instalador ou engenheiro, então uma loja chamar um kit de «plug and play» não diz nada sobre se ele atende aos requisitos gregos. As operadoras também podem proibir novas conexões plug-in em áreas com capacidade de rede limitada. Isto é um resumo da cobertura publicada, não aconselhamento jurídico nem de segurança elétrica.',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: 'Custos, subsídios, net metering e disponibilidade',
+        content: [
+          '**A imprensa grega situa um kit plug-in a partir de cerca de €500, com alguns sistemas acima de €1.000, e nenhum subsídio para kits plug-in aparece na cobertura analisada.** O NewMoney.gr (15 de setembro de 2026) diz que os preços podem começar em torno de €500 e, em alguns casos, passar de €1.000. O único valor de subsídio na cobertura da pv magazine é o Fundo de Descarbonização das Ilhas, de €476 milhões, previsto para apoiar projetos de autoconsumo nas ilhas, e não kits de varanda.',
+          '**O net metering não se aplica a kits plug-in, porque a energia que chega à rede não é compensada.** Para sistemas de autoconsumo padrão, a pv magazine informa que o excedente no continente é compensado a preços do mercado do dia seguinte; a categoria plug-in é somente autoconsumo e fica fora desse mecanismo.',
+          '**Kits plug-in são vendidos internacionalmente para instalação por conta própria, mas a cobertura analisada não cita nenhuma loja grega, e a especificação que definiria um kit em conformidade ainda não constava da página de notícias da DEDDIE/HEDNO no momento desta atualização.** Sistemas instalados antes da abertura do portal devem ser declarados em até 30 dias após o lançamento (Insider.gr). A justificativa declarada do ministério, contas menores com possível redução de 20–30%, foi tratada acima; esta página não estima o prazo de retorno.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -1002,6 +1229,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Posso exportar o excedente de energia solar de varanda para a rede na Grécia?', a: 'Não. Sistemas plug-in são destinados somente ao autoconsumo, e a energia que chega à rede não é compensada. Baterias independentes seguem a mesma regra, sem exportação.' },
           { q: 'Quando posso realmente me registrar?', a: 'Ainda não. As especificações técnicas vencem em 31 de outubro de 2026 e a DEDDIE deve anunciar a data de início do portal até 31 de dezembro de 2026. O Insider.gr informa que sistemas instalados antes devem ser declarados em até 30 dias após o lançamento do portal.' },
           { q: 'Posso adicionar uma bateria a um sistema de varanda na Grécia?', a: 'Baterias independentes sem sistema fotovoltaico agora são permitidas, sem exportação, e sistemas de autoconsumo podem adicionar baterias sujeitas a requisitos técnicos (pv magazine, Protothema). Nas ilhas, baterias instaladas com fotovoltaica não podem injetar eletricidade na rede.' },
+          { q: 'Quais condições de segurança valem para energia solar de varanda plug-in na Grécia?', a: 'As condições detalhadas ainda não são definitivas: a DEDDIE/HEDNO e a ELOT devem publicar especificações técnicas até 31 de outubro de 2026, e então um instalador ou engenheiro declara que o sistema as atende. A imprensa diverge em detalhes como o sensor de direção, que o NewMoney.gr descreve como obrigatório para baterias independentes, mas não para kits plug-in; por isso, confira a especificação publicada antes de comprar.' },
+          { q: 'Quanto custa um kit de energia solar de varanda plug-in na Grécia e há subsídio?', a: 'O NewMoney.gr informa preços a partir de cerca de €500, com alguns sistemas acima de €1.000. Nenhum subsídio para kits plug-in aparece na cobertura analisada; o único valor de subsídio da pv magazine é o Fundo de Descarbonização das Ilhas, de €476 milhões, para projetos de autoconsumo nas ilhas.' },
+          { q: 'O net metering se aplica à energia solar de varanda na Grécia?', a: 'Não. Sistemas plug-in são somente para autoconsumo e a energia que chega à rede não é compensada, então não há crédito de net metering para eles. A compensação a preços do mercado do dia seguinte noticiada pela pv magazine vale para o excedente de sistemas de autoconsumo padrão no continente, não para a categoria plug-in.' },
+          { q: 'Posso comprar agora um kit de energia solar de varanda plug-in na Grécia?', a: 'Kits plug-in são vendidos internacionalmente, mas a cobertura analisada não cita nenhuma loja grega, e a especificação da DEDDIE/ELOT que define um kit em conformidade ainda não constava da página de notícias da DEDDIE/HEDNO no momento desta atualização. O Insider.gr informa que sistemas instalados antes da abertura do portal devem ser declarados em até 30 dias após o lançamento.' },
+          { q: 'Quais termos em grego ajudam a buscar informações oficiais?', a: 'Termos de busca úteis em grego são φωτοβολταϊκά μπαλκονιού (fotovoltaica de varanda), ΔΕΔΔΗΕ (a operadora da rede, DEDDIE/HEDNO), γνωστοποίηση (notificação), Υπουργική Απόφαση (decisão ministerial), ΦΕΚ (Diário Oficial), αυτοκατανάλωση (autoconsumo) e νομοθεσία (legislação). Os textos oficiais e os anúncios da operadora são publicados em grego.' },
         ],
       },
       sources: {
@@ -1014,6 +1246,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: 'Cobertura do rascunho na fase de consulta, com mais de 37.400 sistemas de autoconsumo desde 2020 (22 de julho de 2026)' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: 'Fotovoltaica em varandas: especialistas têm ressalvas — Keep Talking Greece', description: 'Contexto de limitação da rede e alertas do setor (29 de abril de 2026)' },
           { url: 'https://www.et.gr/', title: 'Diário Oficial — Imprensa Nacional', description: 'Fonte oficial do Diário Β\' 5573/14.09.2026 e da Lei 5299/2026 (Α\'/67/05.05.2026)' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: 'Como instalar fotovoltaica de varanda — NewMoney', description: 'Limites, etapas de notificação, preços a partir de cerca de €500, regra do sensor de direção para baterias independentes, prazos (15 de setembro de 2026, em grego)' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: 'Fotovoltaica de varanda — Energypress', description: 'Cobertura contínua do rascunho e das regras finais, incluindo as medidas de segurança do rascunho noticiadas em maio de 2026' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: 'Notícias — DEDDIE/HEDNO', description: 'Anúncios da operadora, onde as especificações técnicas e a data de início do portal devem ser publicadas (em grego)' },
         ],
       },
       relatedReading: {
@@ -1029,18 +1264,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-zh.webp',
-    title: '希腊阳台光伏合法吗？2027年现状报告',
-    seoTitle: '希腊阳台光伏合法吗？2027年现状报告',
+    title: '希腊阳台光伏合法吗？2027年现状：规则、限值与申报期限',
+    seoTitle: '希腊阳台光伏合法吗？2027年现状：规则、限值与申报期限',
     intro: '希腊已使插电式阳台光伏合法化：2026年9月14日的一项部长级决定，为每个供电点发电功率最高800瓦、装机容量最高1,000瓦的插电式系统设立了专门类别，仅限自发自用。不向电网输出的设计并非为谨慎而谨慎——希腊电网在许多日子里已经对现有太阳能出力进行限电，行业人士也曾警告，不受限制的阳台光伏可能给电网带来压力。目前尚未落地的是具体配套机制：技术规范的截止日期为2026年10月31日，DEDDIE/HEDNO的申报门户尚无启用日期。',
-    metaDescription: '希腊通过2026年部长级决定使阳台光伏合法：插电式系统最高800瓦，禁止向电网输出，需通过DEDDIE门户申报。了解规则与尚未确定的期限。',
+    metaDescription: '希腊通过2026年部长级决定使阳台光伏合法：插电式系统最高800瓦，禁止向电网输出，需通过DEDDIE门户申报。了解规则与尚未确定的各项期限。',
     publishDate: '2026-07-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '阅读约6分钟',
     educationalLevel: 'Beginner',
     audience: '关注希腊阳台光伏部长级决定的阳台光伏购买者和政策观察人士',
     primaryTerm: 'balcony solar legal status greece',
     targetKeywords: ['balcony solar greece', 'greece balcony solar 800w', 'is balcony solar legal in greece', 'greece solar curtailment balcony pv'],
-    leadAnswerBlock: '**是的——希腊已使插电式阳台光伏合法化。依据2026年第5299号法律发布的2026年9月14日部长级决定（据报道刊载于政府公报Β\' 5573），为每个供电点发电功率最高800瓦、装机容量最高1,000瓦的插电式系统设立了专门类别，仅限自发自用：流入电网的电量不予补偿。** 无需并网合同、许可或并网费，但所有者必须通过一个尚未开放的数字门户向电网运营商DEDDIE/HEDNO申报——技术规范的截止日期为2026年10月31日，门户启用日期的公布期限为2026年12月31日。征求意见稿（意见征询至2026年7月20日）曾写明装机容量900瓦，希腊媒体报道的最终数字为1,000瓦。希腊在太阳能方面并非从零起步——据部委数据，2020年以来新增了37,407套自发自用系统（1,070兆瓦）——而不向电网输出的设计，针对的是一个在许多日子里已经对太阳能出力限电的电网。本页是对已发布报道的概述，不构成法律建议。',
+    leadAnswerBlock: '**是的——希腊已使插电式阳台光伏合法化。2026年9月14日的部长级决定允许每个供电点发电功率最高800瓦、装机容量最高1,000瓦的套件，仅限自发自用，但DEDDIE/HEDNO的申报门户尚未开放。** 本页概述已发布的报道，不构成法律建议。',
     quickAnswerTop: {
       zh: {
         question: '希腊的阳台光伏合法吗？',
@@ -1052,7 +1287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '无需并网合同、许可或费用；所有者通过DEDDIE/HEDNO的数字门户（使用Taxisnet登录）申报，由安装商或工程师声明合规',
           '仍待落实：技术规范须在2026年10月31日前发布，门户启用日期须在2026年12月31日前公布；在电网容量有限的地区，运营商可禁止新的接入',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1061,6 +1296,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '希腊并非从零起步', anchor: '#not-from-zero' },
       { label: '为什么不向电网输出——以及为什么是现在', anchor: '#why-zero-feed-in' },
       { label: '登记：门户、声明与期限', anchor: '#registration' },
+      { label: '安全条件：哪些已确定，哪些尚未确定', anchor: '#safety-conditions' },
+      { label: '费用、补贴、净计量与购买渠道', anchor: '#cost-availability' },
       { label: '常见问题', anchor: '#faq' },
       { label: '来源', anchor: '#sources' },
       { label: '相关阅读', anchor: '#related-reading' },
@@ -1076,6 +1313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '登记是申报而非许可：无需并网合同，也无并网费。所有者通过DEDDIE/HEDNO的数字门户申报系统，由安装商或工程师声明合规。',
           '配套机制尚未就绪：技术规范须在2026年10月31日前发布，门户启用日期须在2026年12月31日前公布。Insider.gr报道称，此前已安装的系统须在门户启用后30天内申报。',
           '在电网容量有限的地区，运营商可限制新的插电式接入。本页概述的是已发布的报道，而非公报文本——不构成法律建议。',
+          '费用与补贴：据希腊媒体报道，插电式套件约500欧元起，部分系统超过1,000欧元；在我们查阅的报道中，没有出现针对插电式套件的补贴。净计量不适用，因为流入电网的电量不予补偿。',
         ],
       },
       lawVsMd: {
@@ -1115,6 +1353,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**独立电池是单独的类别：** 不带光伏系统的电池允许个人和企业使用，不得向电网输出，并通过方向传感器和遥测在技术上予以保障（Protothema）。',
         ],
       },
+      safetyConditions: {
+        id: 'safety-conditions',
+        title: '安全条件：哪些已确定，哪些尚未确定',
+        content: [
+          '**插电式套件的详细技术与安全条件尚未确定：DEDDIE/HEDNO须会同ELOT（希腊标准化组织）在2026年10月31日前发布技术规范，之后由安装商或工程师声明系统符合规范。** pv magazine称有保护电网和其他电气设施的具体要求，但未逐一列出；在本次更新时，DEDDIE/HEDNO的新闻页面上也没有插电式套件的规范或门户公告。',
+          '**各媒体报道在细节上并不一致。** NewMoney.gr报道称，方向传感器和遥测对独立电池是强制要求，而对插电式套件，传感器已从草案中删除，输出到电网的电量只是不予补偿。Energypress在5月报道称，草案的安全措施包括防孤岛保护，而我们查阅的最终文本报道并未提及，因此套件是否必须具备特定认证尚未得到确认。',
+          '**请核对已发布的规范，而不是销售页面。** 合规性由DEDDIE/ELOT的规范以及安装商或工程师的声明决定，因此商家把套件称为“即插即用”，并不说明它符合希腊的要求。在电网容量有限的地区，运营商还可禁止新的插电式接入。本页是对已发布报道的概述，不构成法律或电气安全建议。',
+        ],
+      },
+      costAvailability: {
+        id: 'cost-availability',
+        title: '费用、补贴、净计量与购买渠道',
+        content: [
+          '**据希腊媒体报道，插电式套件约500欧元起，部分系统超过1,000欧元；在我们查阅的报道中，没有出现针对插电式套件的补贴。** NewMoney.gr（2026年9月15日）称，价格可能从约500欧元起，在某些情况下超过1,000欧元。pv magazine报道中唯一的补贴数字，是计划用于支持岛屿自发自用项目的4.76亿欧元岛屿脱碳基金，而非针对阳台套件。',
+          '**净计量不适用于插电式套件，因为流入电网的电量不予补偿。** 对于标准的自发自用系统，pv magazine报道称，大陆地区的余电按日前市场价格补偿；插电式类别仅限自发自用，不在该机制之内。',
+          '**插电式套件在国际上以自行安装的方式销售，但我们查阅的报道没有点名任何希腊零售商，而界定合规套件的规范在本次更新时也尚未出现在DEDDIE/HEDNO的新闻页面上。** 门户启用前已安装的系统须在启用后30天内申报（Insider.gr）。该部委所称的降低电费（可能降低20–30%）已在上文介绍；本页不估算回收期。',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: '常见问题',
@@ -1126,6 +1382,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '在希腊，阳台光伏的多余电力可以输出到电网吗？', a: '不可以。插电式系统仅用于自发自用，流入电网的电量不予补偿。独立电池适用同样的禁止输出规则。' },
           { q: '我究竟什么时候可以登记？', a: '目前还不行。技术规范须在2026年10月31日前发布，DEDDIE须在2026年12月31日前公布门户启用日期。Insider.gr报道称，此前已安装的系统须在门户启用后30天内申报。' },
           { q: '在希腊，阳台系统可以增加电池吗？', a: '不带光伏系统的独立电池现已允许使用，不得向电网输出；自发自用系统在满足技术要求的前提下也可增加电池（pv magazine、Protothema）。在岛屿上，与光伏一同安装的电池不得向电网注入电力。' },
+          { q: '希腊的插电式阳台光伏适用哪些安全条件？', a: '详细条件尚未最终确定：DEDDIE/HEDNO和ELOT须在2026年10月31日前发布技术规范，之后由安装商或工程师声明系统符合规范。各媒体对方向传感器等细节的报道不一致，NewMoney.gr称其对独立电池是强制要求，对插电式套件则不是，因此购买前请核对已发布的规范。' },
+          { q: '在希腊，插电式阳台光伏套件要多少钱，有补贴吗？', a: 'NewMoney.gr报道的价格约500欧元起，部分系统超过1,000欧元。在我们查阅的报道中，没有出现针对插电式套件的补贴；pv magazine报道中唯一的补贴数字，是用于岛屿自发自用项目的4.76亿欧元岛屿脱碳基金。' },
+          { q: '净计量适用于希腊的阳台光伏吗？', a: '不适用。插电式系统仅限自发自用，流入电网的电量不予补偿，因此没有净计量抵扣。pv magazine报道的按日前市场价格补偿，针对的是大陆地区标准自发自用系统的余电，而不是插电式类别。' },
+          { q: '现在可以在希腊买到插电式阳台光伏套件吗？', a: '插电式套件在国际上有售，但我们查阅的报道没有点名任何希腊零售商，而界定合规套件的DEDDIE/ELOT规范在本次更新时也尚未出现在DEDDIE/HEDNO的新闻页面上。Insider.gr报道称，门户启用前已安装的系统须在启用后30天内申报。' },
+          { q: '查找官方信息时，哪些希腊语词汇有用？', a: '有用的希腊语搜索词包括：φωτοβολταϊκά μπαλκονιού（阳台光伏）、ΔΕΔΔΗΕ（电网运营商DEDDIE/HEDNO）、γνωστοποίηση（申报）、Υπουργική Απόφαση（部长级决定）、ΦΕΚ（政府公报）、αυτοκατανάλωση（自发自用）和νομοθεσία（立法）。官方文件和运营商公告均以希腊语发布。' },
         ],
       },
       sources: {
@@ -1138,6 +1399,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.pv-magazine.com/2026/07/22/greece-to-permit-balcony-solar-storage/', title: 'Greece to permit balcony solar, storage — pv magazine', description: '征询意见阶段的草案报道，2020年以来新增超过37,400套自发自用系统（2026年7月22日）' },
           { url: 'https://www.keeptalkinggreece.com/2026/04/29/photovoltaics-on-balconies-energy-experts-reservations/', title: '阳台光伏：专家有保留意见 — Keep Talking Greece', description: '电网限电背景与行业警告（2026年4月29日）' },
           { url: 'https://www.et.gr/', title: '政府公报 — 国家印刷局', description: '政府公报Β\' 5573/14.09.2026及2026年第5299号法律（Α\'/67/05.05.2026）的官方来源' },
+          { url: 'https://www.newmoney.gr/roh/palmos-oikonomias/energeia/pos-tha-egkatastisete-fotovoltaiko-sto-balkoni/', title: '如何安装阳台光伏 — NewMoney', description: '限值、申报步骤、约500欧元起的价格、独立电池的方向传感器规则、期限（2026年9月15日，希腊语）' },
+          { url: 'https://energypress.eu/tag/balcony-photovoltaics/', title: '阳台光伏 — Energypress', description: '对草案和最终规则的持续报道，包括2026年5月报道的草案安全措施' },
+          { url: 'https://www.deddie.gr/el/media-center/ta-nea-mas/', title: '新闻 — DEDDIE/HEDNO', description: '运营商公告，技术规范和门户启用日期预计在此发布（希腊语）' },
         ],
       },
       relatedReading: {
