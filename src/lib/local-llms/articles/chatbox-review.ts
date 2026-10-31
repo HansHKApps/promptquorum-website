@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-en.webp',
     title: 'Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile',
@@ -300,6 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-de.webp',
     title: 'Chatbox-Rezension 2026: KI-Chat-Client für Desktop, Web und Mobilgeräte',
@@ -596,6 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-fr.webp',
     title: 'Chatbox : avis 2026 sur le client de chat IA multiplateforme (bureau, web, mobile)',
@@ -892,6 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-es.webp',
     title: 'Chatbox: análisis 2026 del cliente de chat IA multiplataforma (escritorio, web, móvil)',
@@ -1188,6 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-pt.webp',
     title: 'Chatbox: análise 2026 do cliente de chat de IA multiplataforma (desktop, web, mobile)',
@@ -1484,6 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-ja.webp',
     title: 'Chatboxレビュー2026：デスクトップ・Web・モバイル対応のAIチャットクライアント',
@@ -1780,6 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-zh.webp',
     title: 'Chatbox 2026评测：支持桌面、网页与移动端的跨平台AI聊天客户端',
@@ -2076,6 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-ar.webp',
     title: 'مراجعة Chatbox 2026: عميل دردشة ذكاء اصطناعي متعدد المنصات لسطح المكتب والويب والهاتف',
@@ -2372,6 +2380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/chatbox-review-hero-ko.webp',
     title: 'Chatbox 리뷰 2026: 데스크톱·웹·모바일용 크로스플랫폼 AI 채팅 클라이언트',

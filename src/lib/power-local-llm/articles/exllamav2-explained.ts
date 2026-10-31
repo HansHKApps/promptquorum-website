@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/exllamav2-explained-hero-en.webp',
     freshness_tier: 'semi_annual',
@@ -250,6 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/exllamav2-explained-hero-de.webp',
     freshness_tier: 'semi_annual',
@@ -496,6 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/exllamav2-explained-hero-fr.webp',
     freshness_tier: 'semi_annual',
@@ -742,6 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/exllamav2-explained-hero-es.webp',
     freshness_tier: 'semi_annual',
@@ -988,6 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/exllamav2-explained-hero-ja.webp',
     freshness_tier: 'semi_annual',
@@ -1234,6 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/exllamav2-explained-hero-zh.webp',
     freshness_tier: 'semi_annual',
@@ -1480,6 +1486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/exllamav2-explained-hero-pt.webp',
     freshness_tier: 'semi_annual',
@@ -1726,6 +1733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/exllamav2-explained-hero-ar.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: 'مستخدمو معالجات رسومية استهلاكية يريدون أقصى سرعة استدلال عبر صيغة التكميم EXL2، وأي شخص يقيّم ExLlamaV2 ويحتاج لمعرفة أنه أصبح مؤرشفًا لصالح ExLlamaV3',
     primaryTerm: 'ExLlamaV2',
@@ -1825,6 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Overview & Reference', heroImage: '/images/exllamav2-explained-hero-ko.webp', freshness_tier: 'semi_annual', next_refresh_due: '2027-03-06', publishDate: '2026-09-06', dateModified: '2026-09-06', educationalLevel: 'Advanced',
     audience: 'EXL2 양자화 형식을 통해 최대 추론 속도를 원하는 소비자용 GPU 사용자, 그리고 ExLlamaV2가 ExLlamaV3에 밀려 아카이브되었다는 사실을 알아야 하는 사람',
     primaryTerm: 'ExLlamaV2',

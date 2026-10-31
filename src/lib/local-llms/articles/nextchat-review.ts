@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-en.webp',
     title: 'NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI',
@@ -294,6 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-de.webp',
     title: 'NextChat-Rezension 2026: Leichtgewichtige Chat-UI mit Ein-Klick-Deploy',
@@ -584,6 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-fr.webp',
     title: 'NextChat : avis 2026 sur l\'interface de chat légère à déploiement en un clic',
@@ -874,6 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-ja.webp',
     title: 'NextChatレビュー2026：軽量でワンクリックデプロイのチャットUI',
@@ -1164,6 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-zh.webp',
     title: 'NextChat 2026评测：轻量级、一键部署的聊天界面',
@@ -1454,6 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-es.webp',
     title: 'NextChat: análisis 2026 de la interfaz de chat ligera con despliegue en un clic',
@@ -1744,6 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-pt.webp',
     title: 'NextChat: análise 2026 da interface de chat leve com deploy em um clique',
@@ -2034,6 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-ar.webp',
     title: 'مراجعة NextChat 2026: واجهة دردشة خفيفة بنشر بنقرة واحدة',
@@ -2324,6 +2332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-11',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-ko.webp',
     title: 'NextChat 리뷰 2026: 가벼운 원클릭 배포 채팅 UI',
