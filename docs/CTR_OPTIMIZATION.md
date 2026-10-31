@@ -8,6 +8,35 @@
 
 ---
 
+## Status note (2026-10-31)
+
+The "New CTR" cells below were never filled: the measurement loop now lives in tooling, not in this table.
+Use `npm run seo:log -- --queries "..."` (target queries only) when logging, `npm run seo:log -- --mark-deployed`
+when shipping, and `npm run seo:measure -- --status` / `--export <pages.csv>` for T+14 / T+28. As of 2026-10-31
+124 logged changes were measurable but 0 had target queries, and several were T+14/T+28 overdue; they need a fresh
+GSC Pages + Queries export. The geo-meta-optimizer skill (Step 4a) now requires query-fit classification
+(target / bleed / operator / off-topic) before any snippet decision.
+
+## Bucket 5 — `/directory` baseline (all 9 locales, 28 days to 2026-10-28, before the consolidated rewrite)
+
+Pasted by the owner from GSC (Page filter = the locale's `/directory` URL). Blended numbers; much of the impression
+volume is bleed (app-name / "article" queries a 337-app list page cannot satisfy), so the real success metric is CTR
+and position on *target* queries.
+
+| Locale | Clicks | Impr | CTR | Pos |
+|---|---|---|---|---|
+| en | 11 | 1,500 | 0.7% | 13.5 |
+| zh | 7 | 773 | 0.9% | 5.4 |
+| ko | 4 | 404 | 1.0% | 6.5 |
+| fr | 3 | 263 | 1.1% | 11.0 |
+| es | 4 | 173 | 2.3% | 7.5 |
+| de | 2 | 135 | 1.5% | 8.4 |
+| pt | 1 | 80 | 1.3% | 8.3 |
+| ja | 0 | 79 | 0% | 10.4 |
+| ar | 0 | 20 | 0% | 9.2 |
+
+---
+
 ## Bucket 2 — Snippet Rewrites (geo-meta-optimizer, all locales)
 
 8 high-impression pages whose titles and meta descriptions were rewritten to lead with hard
