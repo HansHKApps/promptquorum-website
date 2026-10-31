@@ -520,9 +520,9 @@ Run this against the **live or locally built HTML** of every locale URL of the p
 
 ---
 
-### Step 4.9: Hub Skin (design only — set by the page-updater, never by hand)
+### Step 4.9: Hub Skin (design only — mandatory for every new and updated article)
 
-Articles reached from a cluster hub should look like the hub. When you run a full page update on an article, set the skin flag **on every locale object of that article**:
+Articles reached from a cluster hub should look like the hub. **Owner rule 2026-11-01: every NEW article and every updated article in `local-llms` / `power-local-llm` ships on the new design — no new or refreshed page may stay on the old design.** Set the skin flag **on every locale object of that article**, in the same run that creates or updates it:
 
 ```ts
 designSkin: 'hub',
@@ -531,7 +531,7 @@ designSkin: 'hub',
 What it does: makes the article look like its cluster hub — page background in the hub accent tint (rose for `/local-llms`, violet for `/power-local-llm`), every H2 section as a numbered card cycling through the hub tones (violet, azure, indigo, orchid, rose; numbers via CSS counter, no extra text), plus the TL;DR box, lead block, table of contents, "last updated" badge and theme badge in `--hub-*` tokens. It changes **classes only**: no sections, headings, text, links or schema are added, removed or reordered.
 
 Rules:
-- Only the page-updater adds the flag. Do not add it in a content-only edit or to pages you did not update.
+- The flag is set when you create a new article (from the first commit, all 9 locales) and on every page-updater run. Do not add it to pages you did not create or update. Run `npm run check:page-updater` before finishing; an `INCOMPLETE` line is a failed run.
 - Set it in all 9 locales or none (parity, same as Step 5.5).
 - Do not touch the speakable hooks (`.article-intro`, `.key-takeaways`, `h1`, `h2`) or move the first answer block.
 - Supported renderers: `PowerLocalLLMPostClient` and `LocalLLMsPostClient` (`/local-llms/*`); other clusters are wired in later. The flag is ignored by a renderer that does not support it, so setting it early is harmless.

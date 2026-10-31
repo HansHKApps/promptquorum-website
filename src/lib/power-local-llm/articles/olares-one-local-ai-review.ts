@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-en.webp",
     "affiliateDisclosure": true,
@@ -366,6 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-ar.webp",
     "affiliateDisclosure": true,
@@ -719,6 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-de.webp",
     "affiliateDisclosure": true,
@@ -1072,6 +1075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-es.webp",
     "affiliateDisclosure": true,
@@ -1425,6 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-fr.webp",
     "affiliateDisclosure": true,
@@ -1778,6 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-ja.webp",
     "affiliateDisclosure": true,
@@ -2131,6 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-ko.webp",
     "affiliateDisclosure": true,
@@ -2484,6 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-pt.webp",
     "affiliateDisclosure": true,
@@ -2837,6 +2845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Intel Core Ultra 9 275HX",
       "NVIDIA GeForce RTX 5090 Mobile"
     ],
+    designSkin: 'hub',
     "theme": "Decision & Comparison",
     "heroImage": "/images/olares-one-local-ai-review-hero-zh.webp",
     "affiliateDisclosure": true,
