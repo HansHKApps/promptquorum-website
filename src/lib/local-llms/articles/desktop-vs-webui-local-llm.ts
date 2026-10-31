@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Desktop vs Web UI for Local LLMs: Which Interface Should You Choose?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-en.webp',
@@ -198,6 +199,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Desktop vs Web UI para LLMs locales: ¿Qué interfaz debes elegir?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-es.webp',
@@ -387,6 +389,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'تطبيق سطح المكتب مقابل واجهة الويب لنماذج ⁨LLM⁩ المحلية: أي واجهة تختار؟',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-ar.webp',
@@ -578,6 +581,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Desktop vs Web UI para LLMs locais: qual interface escolher?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-pt.webp',
@@ -767,6 +771,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Desktop vs Web-UI für lokale LLMs: Welche Oberfläche sollten Sie wählen?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-de.webp',
@@ -956,6 +961,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Bureau vs Interface Web pour LLM locaux : quelle interface choisir ?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-fr.webp',
@@ -1145,6 +1151,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'デスクトップ対Webインターフェース: ローカルLLMに最適なインターフェースを選択',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-ja.webp',
@@ -1334,6 +1341,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '桌面应用对Web界面：本地LLM的最佳界面选择',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-zh.webp',
@@ -1523,6 +1531,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '로컬 LLM용 데스크톱 vs 웹 UI: 어떤 인터페이스를 선택해야 합니까?',
     heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-ko.webp',

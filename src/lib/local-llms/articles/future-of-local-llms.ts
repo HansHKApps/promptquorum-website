@@ -10,6 +10,7 @@ import { buildImageObject } from '@/lib/imageObjectSchema';
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-en.webp',
       title: 'Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI',
@@ -294,6 +295,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-es.webp',
       title: 'Tendencias de LLM local 2026–2027: 5 predicciones clave para la adopción empresarial y la IA en dispositivo',
@@ -581,6 +583,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-ar.webp',
       title: 'اتجاهات ⁨LLM⁩ المحلية ⁨2026⁩–⁨2027⁩: ⁨5⁩ تنبؤات رئيسية لتبني المؤسسات والذكاء الاصطناعي على الجهاز',
@@ -868,6 +871,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-pt.webp',
       title: 'Tendências de LLM local 2026–2027: 5 previsões principais para adoção empresarial e IA em dispositivo',
@@ -1001,6 +1005,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-de.webp',
       title: 'Lokale LLM Trends 2026–2027: 5 Schlüsselvorhersagen für Enterprise-Adoption und On-Device-KI',
@@ -1306,6 +1311,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-fr.webp',
       title: 'Tendances LLM local 2026–2027 : 5 prédictions clés pour l\'adoption entreprise et l\'IA sur appareil',
@@ -1593,6 +1599,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-ja.webp',
       title: 'ローカルLLMトレンド2026–2027：エンタープライズ導入と端末AI予測',
@@ -1880,6 +1887,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/future-of-local-llms-overview-hero-zh.webp',
       title: '本地LLM趋势2026–2027：企业采用与端设备AI的5大预测',
@@ -2167,6 +2175,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '고급 기법',
     heroImage: '/images/future-of-local-llms-overview-hero-ko.webp',
       title: '로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측',

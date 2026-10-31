@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       last_seo_review: '2026-08-28',
       current_models_mentioned: ['Llama 3.2 3B', 'Llama 3.2 1B', 'Phi-4 Mini 3.8B', 'Gemma 4 E2B', 'Llama 3.1 8B', 'Qwen3 8B', 'Mistral Small v0.3 (deprecated pick)'],
       current_hardware_mentioned: ['4 GB RAM tier', '8 GB RAM tier', 'CPU-only 8-core laptop'],
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)',
       seoTitle: 'Best Beginner Local LLMs 2026: Llama, Phi, Gemma, Qwen',
@@ -526,6 +527,7 @@ schema: {
     },
     es: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Mejores LLMs locales para principiantes 2026: Modelos de 4 GB y 8 GB de RAM (Llama, Phi, Gemma, Qwen)',
       seoTitle: 'Mejores LLMs locales 2026: Llama, Phi, Gemma, Qwen',
@@ -938,6 +940,7 @@ schema: {
       last_seo_review: '2026-08-28',
       current_models_mentioned: ['Llama 3.2 3B', 'Llama 3.2 1B', 'Phi-4 Mini 3.8B', 'Gemma 4 E2B', 'Llama 3.1 8B', 'Qwen3 8B', 'Mistral Small v0.3 (deprecated pick)'],
       current_hardware_mentioned: ['4 GB RAM tier', '8 GB RAM tier', 'CPU-only 8-core laptop'],
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية للمبتدئين ⁨2026⁩: نماذج بذاكرة ⁨4 GB⁩ و⁨8 GB⁩ (⁨Llama⁩ وPhi وGemma وQwen)',
       seoTitle: 'أفضل ⁨LLM⁩ محلية للمبتدئين ⁨2026⁩: ⁨Llama⁩ وPhi وGemma وQwen',
@@ -1343,6 +1346,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Melhores LLMs locais para iniciantes 2026: modelos de 4 GB e 8 GB de RAM',
       seoTitle: 'Melhores LLMs locais 2026: 5 modelos para 4–8 GB RAM',
@@ -1509,6 +1513,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Erste Schritte',
       title: 'Beste Einsteiger-LLMs 2026: 4GB & 8GB RAM Modelle (Llama, Phi, Gemma, Qwen)',
       seoTitle: 'Beste Einsteiger-LLMs 2026: Llama, Phi, Gemma, Qwen',
@@ -1921,6 +1926,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Premiers pas',
       title: 'Meilleurs LLMs débutants 2026 : Modèles 4GB & 8GB RAM classés (Llama, Phi, Gemma, Qwen)',
       seoTitle: 'Meilleurs LLMs locaux 2026 : Llama, Phi, Gemma, Qwen',
@@ -2323,6 +2329,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: '入門',
       title: '2026年初心者向けローカルLLM：4GB & 8GB RAM完全比較ガイド（Llama、Phi、Gemma、Qwen）',
       seoTitle: '初心者向けローカルLLM 2026：Llama、Phi、Gemma、Qwen',
@@ -2772,6 +2779,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '入门指南',
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-10-01',
@@ -3186,6 +3194,7 @@ schema: {
     last_full_refresh: '2026-08-28',
     lastFactChecked: '2026-08-28',
     last_seo_review: '2026-08-28',
+    designSkin: 'hub',
     theme: '시작하기',
     title: '2026년 초보자 입문 로컬 LLM: 4GB & 8GB RAM 모델 완전 비교 (Llama, Phi, Gemma, Qwen)',
     seoTitle: '로컬 LLM 추천 순위 2026: Llama·Qwen',

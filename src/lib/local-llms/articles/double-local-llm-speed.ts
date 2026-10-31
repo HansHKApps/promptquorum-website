@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'How to Double Local LLM Speed: Optimization Techniques',
       heroImage: '/images/double-local-llm-speed-overview-hero-en.webp',
@@ -303,6 +304,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Cómo duplicar la velocidad de LLMs locales: Técnicas de optimización',
       heroImage: '/images/double-local-llm-speed-overview-hero-es.webp',
@@ -599,6 +601,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'كيف تضاعف سرعة نماذج ⁨LLM⁩ المحلية: تقنيات التحسين',
       heroImage: '/images/double-local-llm-speed-overview-hero-ar.webp',
@@ -895,6 +898,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Como duplicar a velocidade de LLMs locais: Técnicas de otimização',
       heroImage: '/images/double-local-llm-speed-overview-hero-pt.webp',
@@ -1070,6 +1074,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Lokale LLMs beschleunigen: Optimierungstechniken für 2026',
       heroImage: '/images/double-local-llm-speed-overview-hero-de.webp',
@@ -1402,6 +1407,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Doubler la Vitesse des LLM Locaux : Techniques d\'Optimisation 2026',
       heroImage: '/images/double-local-llm-speed-overview-hero-fr.webp',
@@ -1707,6 +1713,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'ハードウェア＆パフォーマンス',
       title: 'ローカルLLMを2-3倍高速化：最適化テクニック2026',
       heroImage: '/images/double-local-llm-speed-overview-hero-ja.webp',
@@ -2003,6 +2010,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '硬件与性能',
       title: '如何将本地LLM速度翻倍：优化技术指南',
       heroImage: '/images/double-local-llm-speed-overview-hero-zh.webp',
@@ -2298,6 +2306,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '하드웨어 및 성능',
       title: '로컬 LLM 속도를 두 배로 높이는 방법: 최적화 기법',
     heroImage: '/images/double-local-llm-speed-overview-hero-ko.webp',

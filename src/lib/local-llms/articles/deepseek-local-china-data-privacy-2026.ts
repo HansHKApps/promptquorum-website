@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
     last_full_refresh: '2026-08-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-en.webp',
     title: 'Does Local DeepSeek Solve the China Data Problem? 2026',
@@ -212,6 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-de.webp',
     title: 'Löst lokales DeepSeek das China-Datenproblem? 2026',
@@ -418,6 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-fr.webp',
     title: 'DeepSeek en local résout-il le problème des données en Chine ? 2026',
@@ -624,6 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-ja.webp',
     title: 'ローカルのDeepSeekは中国のデータ問題を解決するか？2026',
@@ -830,6 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-zh.webp',
     title: '本地运行 DeepSeek 能解决中国数据问题吗？2026',
@@ -1036,6 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-es.webp',
     title: '¿Resuelve DeepSeek local el problema de los datos en China? 2026',
@@ -1242,6 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-pt.webp',
     title: 'DeepSeek local resolve o problema de dados da China? 2026',
@@ -1448,6 +1455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-ar.webp',
     title: 'هل يحل ⁨DeepSeek⁩ المحلي مشكلة بيانات الصين؟ ⁨2026⁩',
@@ -1654,6 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Privacy & Compliance',
     heroImage: '/images/deepseek-local-china-data-privacy-2026-overview-hero-ko.webp',
     title: '로컬 DeepSeek는 중국 데이터 문제를 해결할까요? 2026',

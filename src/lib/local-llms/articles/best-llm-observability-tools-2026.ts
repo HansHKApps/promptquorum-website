@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone',
     seoTitle: 'Best LLM Observability Tool 2026',
@@ -583,6 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Bestes LLM-Observability-Tool 2026: Langfuse, LangSmith oder Helicone',
     seoTitle: 'Bestes LLM-Observability-Tool 2026',
@@ -1169,6 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Mejor herramienta de observabilidad de LLM 2026: Langfuse, LangSmith o Helicone',
     seoTitle: 'Mejor herramienta de observabilidad de LLM 2026',
@@ -1747,6 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Meilleur outil d observabilite LLM 2026 : Langfuse, LangSmith ou Helicone',
     seoTitle: 'Meilleur outil d observabilite LLM 2026',
@@ -2325,6 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Melhor ferramenta de observabilidade de LLM 2026: Langfuse, LangSmith ou Helicone',
     seoTitle: 'Melhor ferramenta de observabilidade de LLM 2026',
@@ -2903,6 +2908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年 最適なLLMオブザーバビリティツール：Langfuse・LangSmith・Helicone',
     seoTitle: '2026年 最適なLLMオブザーバビリティツール',
@@ -3481,6 +3487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年最佳 LLM 可观测性工具：Langfuse、LangSmith 还是 Helicone',
     seoTitle: '2026年最佳 LLM 可观测性工具',
@@ -4059,6 +4066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'أفضل أداة لمراقبة نماذج اللغة الكبيرة 2026: Langfuse أم LangSmith أم Helicone',
     seoTitle: 'أفضل أداة لمراقبة نماذج اللغة الكبيرة 2026',
@@ -4637,6 +4645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 LLM 옵저버빌리티 도구: Langfuse, LangSmith, Helicone',
     seoTitle: '2026년 최고의 LLM 옵저버빌리티 도구',

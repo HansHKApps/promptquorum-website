@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain',
       heroImage: '/images/best-local-rag-tools-overview-hero-en.webp',
@@ -211,6 +212,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Mejores herramientas RAG locales en 2026: Open WebUI, LlamaIndex y LangChain',
       heroImage: '/images/best-local-rag-tools-overview-hero-es.webp',
@@ -429,6 +431,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'أفضل أدوات ⁨RAG⁩ المحلية في ⁨2026⁩: ⁨Open WebUI⁩ و⁨LlamaIndex⁩ و⁨LangChain⁩',
       heroImage: '/images/best-local-rag-tools-overview-hero-ar.webp',
@@ -647,6 +650,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Melhores ferramentas RAG locais em 2026: Open WebUI, LlamaIndex e LangChain',
       heroImage: '/images/best-local-rag-tools-overview-hero-pt.webp',
@@ -865,6 +869,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Beste lokale RAG-Tools im 2026: Open WebUI, LlamaIndex und LangChain',
       heroImage: '/images/best-local-rag-tools-overview-hero-de.webp',
@@ -1080,6 +1085,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Meilleurs outils RAG locaux en 2026: Open WebUI, LlamaIndex et LangChain',
       heroImage: '/images/best-local-rag-tools-overview-hero-fr.webp',
@@ -1285,6 +1291,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '2026年のベストローカルRAGツール：Open WebUI、LlamaIndex、LangChain',
       heroImage: '/images/best-local-rag-tools-overview-hero-ja.webp',
@@ -1538,6 +1545,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '2026年最佳本地RAG工具：Open WebUI、LlamaIndex和LangChain',
       heroImage: '/images/best-local-rag-tools-overview-hero-zh.webp',
@@ -1791,6 +1799,7 @@ schema: {
     },
   ko: {
   freshness_tier: 'semi_annual',
+  designSkin: 'hub',
   theme: '도구 및 인터페이스',
   title: '2026년 최고의 로컬 RAG 도구: Open WebUI, LlamaIndex, LangChain',
     heroImage: '/images/best-local-rag-tools-overview-hero-ko.webp',

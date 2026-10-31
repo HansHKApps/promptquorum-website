@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Enterprise Compliance: GDPR, HIPAA, SOC2, and AI Regulations',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-en.webp',
@@ -287,6 +288,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Cumplimiento Empresarial: GDPR, HIPAA, SOC2 y Regulaciones de IA',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-es.webp',
@@ -564,6 +566,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'الامتثال المؤسسي: ⁨GDPR⁩ و⁨HIPAA⁩ و⁨SOC2⁩ ولوائح الذكاء الاصطناعي',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-ar.webp',
@@ -844,6 +847,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Conformidade Empresarial: LGPD, GDPR, HIPAA, SOC2 e Regulamentações de IA',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-pt.webp',
@@ -1030,6 +1034,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Enterprise Compliance: DSGVO, HIPAA, SOC2 und KI-Regulierung',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-de.webp',
@@ -1257,6 +1262,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Conformité Entreprise: RGPD, HIPAA, SOC2 et Réglementations IA',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-fr.webp',
@@ -1473,6 +1479,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'エンタープライズコンプライアンス: GDPR、HIPAA、SOC2、AI規制',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-ja.webp',
@@ -1687,6 +1694,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '企业合规: GDPR、HIPAA、SOC2 和 AI 法规',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-zh.webp',
@@ -1901,6 +1909,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '기업',
       title: '기업 컴플라이언스: GDPR, HIPAA, SOC2 및 AI 규정',
     heroImage: '/images/enterprise-compliance-local-llms-overview-hero-ko.webp',

@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Best AI Agent Framework 2026: LangGraph vs CrewAI vs n8n',
     seoTitle: 'Best AI Agent Framework 2026',
@@ -622,6 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Bestes KI-Agenten-Framework 2026: LangGraph, CrewAI oder n8n',
     seoTitle: 'Bestes KI-Agenten-Framework 2026',
@@ -1266,6 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Mejor framework de agentes de IA 2026: LangGraph, CrewAI o n8n',
     seoTitle: 'Mejor framework de agentes de IA 2026',
@@ -1892,6 +1895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Meilleur framework d\'agents IA 2026 : LangGraph, CrewAI ou n8n',
     seoTitle: 'Meilleur framework d\'agents IA 2026',
@@ -2518,6 +2522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Melhor framework de agentes de IA 2026: LangGraph, CrewAI ou n8n',
     seoTitle: 'Melhor framework de agentes de IA 2026',
@@ -3063,6 +3068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026年 最適なAIエージェント基盤：LangGraph・CrewAI・n8n',
     seoTitle: '2026年 最適なAIエージェント基盤',
@@ -3680,6 +3686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026 年最佳 AI 智能体框架：LangGraph、CrewAI 与 n8n',
     seoTitle: '2026 年最佳 AI 智能体框架',
@@ -4306,6 +4313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'أفضل إطار عمل لوكلاء الذكاء الاصطناعي 2026: LangGraph وCrewAI وn8n',
     seoTitle: 'أفضل إطار عمل لوكلاء الذكاء الاصطناعي 2026',
@@ -4851,6 +4859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-28',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 AI 에이전트 프레임워크: LangGraph, CrewAI, n8n',
     seoTitle: '2026년 최고의 AI 에이전트 프레임워크',
