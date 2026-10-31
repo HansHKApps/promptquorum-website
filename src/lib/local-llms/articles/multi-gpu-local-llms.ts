@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-en.webp',
@@ -356,6 +357,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Multi-GPU LLMs Locales 2026: Ejecuta Modelos 70B en 2+ GPUs con vLLM y Ollama',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-es.webp',
@@ -699,6 +701,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'نماذج ⁨LLM⁩ المحلية متعددة ⁨GPU 2026⁩: شغّل نماذج ⁨70B⁩ على ⁨2+ GPU⁩ بـ ⁨vLLM⁩ و⁨Ollama⁩',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-ar.webp',
@@ -1042,6 +1045,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Multi-GPU Lokale LLMs 2026: 70B-Modelle auf 2+ GPUs mit vLLM und Ollama ausführen',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-de.webp',
@@ -1400,6 +1404,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Multi-GPU LLMs Locaux 2026 : Exécuter les Modèles 70B sur 2+ GPUs avec vLLM et Ollama',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-fr.webp',
@@ -1760,6 +1765,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'マルチGPU ローカルLLMs 2026: 2+ GPUsで70Bモデルを実行する（vLLM + Ollama）',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-ja.webp',
@@ -2120,6 +2126,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '多GPU本地LLMs 2026：在2+个GPU上运行70B模型（vLLM和Ollama）',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-zh.webp',
@@ -2462,6 +2469,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Multi-GPU LLMs Locais 2026: Execute Modelos 70B em 2+ GPUs com vLLM e Ollama',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-pt.webp',
@@ -2694,6 +2702,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '멀티 GPU 로컬 LLM 2026: vLLM과 Ollama로 2개 이상의 GPU에서 70B 모델 실행하기',
     heroImage: '/images/multi-gpu-local-llms-overview-hero-ko.webp',

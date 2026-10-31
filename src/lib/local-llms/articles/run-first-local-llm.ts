@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Run Your First Local LLM in 10 Minutes: Install to First Response',
       heroImage: '/images/run-first-local-llm-overview-hero-en.webp',
@@ -358,6 +359,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Ejecuta tu primer LLM local en 10 minutos: De la instalación a la primera respuesta',
       heroImage: '/images/run-first-local-llm-overview-hero-es.webp',
@@ -708,6 +710,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'شغّل أول نموذج ⁨LLM⁩ محلي في ⁨10⁩ دقائق: من التثبيت إلى أول استجابة',
       heroImage: '/images/run-first-local-llm-overview-hero-ar.webp',
@@ -1058,6 +1061,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Erste Schritte',
       title: 'Führe dein erstes lokales LLM aus: Von Installation bis erste Antwort in 10 Minuten',
       heroImage: '/images/run-first-local-llm-overview-hero-de.webp',
@@ -1325,6 +1329,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Premiers pas',
       title: 'Exécutez votre premier LLM local: de l\'installation à la première réponse en 10 minutes',
       heroImage: '/images/run-first-local-llm-overview-hero-fr.webp',
@@ -1431,6 +1436,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '入門',
       title: '初めてのローカルLLM：インストールから最初の回答まで10分',
       heroImage: '/images/run-first-local-llm-overview-hero-ja.webp',
@@ -1537,6 +1543,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '入门',
       title: '运行您的第一个本地LLM：从安装到首个响应仅需10分钟',
       heroImage: '/images/run-first-local-llm-overview-hero-zh.webp',
@@ -1643,6 +1650,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Rode seu primeiro LLM local em 10 minutos: da instalação à primeira resposta',
       heroImage: '/images/run-first-local-llm-overview-hero-pt.webp',
@@ -1993,6 +2001,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '로컬 LLM 처음 실행하기: 설치부터 첫 응답까지 10분 완성',
     heroImage: '/images/run-first-local-llm-overview-hero-ko.webp',

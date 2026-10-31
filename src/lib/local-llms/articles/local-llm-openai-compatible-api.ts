@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LM Studio & Ollama OpenAI-Compatible API Documentation: Python, Node.js, Aider, Cline & Roo Code (2026)',
       seoTitle: 'Official LM Studio & Ollama OpenAI API Docs (2026)',
@@ -468,6 +469,7 @@ schema: {
     de: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LM Studio & Ollama OpenAI-kompatible API-Dokumentation: Python, Node.js, Aider, Cline & Roo Code (2026)',
       seoTitle: 'Offizielle LM Studio & Ollama OpenAI API-Doku (2026)',
@@ -836,6 +838,7 @@ schema: {
     fr: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Outils & Interfaces',
       title: 'LM Studio & Ollama : documentation API compatible OpenAI — Python, Node.js, Aider, Cline & Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama : API OpenAI officielle (2026)',
@@ -1227,6 +1230,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'ツール＆インターフェース',
       title: 'LM Studio & Ollama OpenAI互換APIドキュメント：Python・Node.js・Aider・Cline・Roo Code対応 (2026)',
       seoTitle: 'LM Studio & Ollama公式OpenAI APIドキュメント(2026)',
@@ -1636,6 +1640,7 @@ schema: {
     zh: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: '工具与接口',
       title: 'LM Studio和Ollama OpenAI兼容API文档：Python、Node.js、Aider、Cline与Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama官方OpenAI API文档(2026)',
@@ -2036,6 +2041,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'LM Studio y Ollama: documentación de la API compatible con OpenAI — Python, Node.js, Aider, Cline y Roo Code (2026)',
       seoTitle: 'Documentación oficial API OpenAI: LM Studio y Ollama (2026)',
@@ -2494,6 +2500,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'توثيق واجهة ⁨OpenAI⁩ المتوافقة لـ ⁨LM Studio⁩ و⁨Ollama⁩: ⁨Python⁩ و⁨Node.js⁩ و⁨Aider⁩ و⁨Cline⁩ و⁨Roo Code⁩ (⁨2026⁩)',
       seoTitle: 'توثيق ⁨OpenAI⁩ الرسمي: ⁨LM Studio⁩ و⁨Ollama⁩ (⁨2026⁩)',
@@ -2947,6 +2954,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Documentação da API compatível com OpenAI: LM Studio, Ollama, Aider, Cline e Roo Code (2026)',
       seoTitle: 'LM Studio e Ollama: API OpenAI oficial (2026)',
@@ -3211,6 +3219,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: '도구 및 인터페이스',
       title: 'LM Studio 및 Ollama OpenAI 호환 API 문서: Python, Node.js, Aider, Cline, Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama 공식 OpenAI API 문서 (2026)',

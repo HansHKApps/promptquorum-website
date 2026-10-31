@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Best Local LLM Stack for Developers',
       heroImage: '/images/local-llm-developer-stack-overview-hero-en.webp',
@@ -248,6 +249,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Mejor Stack Local de LLM para Desarrolladores',
       heroImage: '/images/local-llm-developer-stack-overview-hero-es.webp',
@@ -491,6 +493,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'أفضل حزمة ⁨LLM⁩ محلية للمطورين (⁩)',
       heroImage: '/images/local-llm-developer-stack-overview-hero-ar.webp',
@@ -737,6 +740,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Melhor Stack de LLM Local para Desenvolvedores',
       heroImage: '/images/local-llm-developer-stack-overview-hero-pt.webp',
@@ -826,6 +830,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Oberflächen',
       title: 'Best Local LLM Stack für Entwickler',
       heroImage: '/images/local-llm-developer-stack-overview-hero-de.webp',
@@ -1046,6 +1051,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Outils & Interfaces',
       title: 'Meilleur Stack LLM Local pour Développeurs',
       heroImage: '/images/local-llm-developer-stack-overview-hero-fr.webp',
@@ -1263,6 +1269,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ツール＆インターフェース',
       title: '開発者向けベストローカルLLMスタック',
       heroImage: '/images/local-llm-developer-stack-overview-hero-ja.webp',
@@ -1478,6 +1485,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '工具与界面',
       title: '开发者最佳本地LLM技术栈',
       heroImage: '/images/local-llm-developer-stack-overview-hero-zh.webp',
@@ -1694,6 +1702,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '도구 및 인터페이스',
       title: '개발자를 위한 최고의 로컬 LLM 스택',
     heroImage: '/images/local-llm-developer-stack-overview-hero-ko.webp',

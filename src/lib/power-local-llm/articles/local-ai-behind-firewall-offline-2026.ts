@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-08-29',
     next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-en.webp',
     title: 'Run Local AI Behind a Firewall: Offline Deployment Guide 2026',
@@ -296,6 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-08-29',
     next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-de.webp',
     title: 'Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026',
@@ -352,6 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-08-29', next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-fr.webp',
     title: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026',
@@ -412,6 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-08-29', next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ja.webp',
     title: 'ファイアウォール背後でのローカルAI：オフライン展開ガイド 2026',
@@ -472,6 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-08-29', next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-zh.webp',
     title: '防火墙后的本地AI：离线部署指南 2026',
@@ -562,6 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-08-29',
     next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-es.webp',
     title: 'IA local detrás de un cortafuegos: Guía de despliegue sin conexión 2026',
@@ -824,6 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-08-29',
     next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ko.webp',
     title: '방화벽 뒤 로컬 AI: 2026 오프라인 배포 가이드',
@@ -1041,6 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-08-29',
     next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-pt.webp',
     title: 'IA local atrás de um firewall: guia de implantação offline 2026',
@@ -1303,6 +1311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-08-29',
     next_refresh_due: '2026-11-26',
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ar.webp',
     title: 'الذكاء الاصطناعي المحلي خلف جدار الحماية: دليل النشر دون اتصال ⁨2026⁩',

@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Open WebUI vs SillyTavern: Best Chat UI for Local LLMs',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-en.webp',
@@ -277,6 +278,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Open WebUI vs SillyTavern: Beste Chat-UI für lokale LLMs',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-de.webp',
@@ -531,6 +533,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Outils & Interfaces',
       title: 'Open WebUI vs SillyTavern : Meilleure Interface Chat pour LLM Locaux',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-fr.webp',
@@ -804,6 +807,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ツール＆インターフェイス',
       title: 'Open WebUI vs SillyTavern：ローカルLLM最良のチャットUI',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-ja.webp',
@@ -1063,6 +1067,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '工具＆界面',
       title: 'Open WebUI vs SillyTavern：本地LLM最佳聊天界面',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-zh.webp',
@@ -1322,6 +1327,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Open WebUI vs SillyTavern: Mejor Interfaz de Chat para LLMs Locales',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-es.webp',
@@ -1594,6 +1600,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '⁨Open WebUI⁩ مقابل ⁨SillyTavern⁩: أفضل واجهة محادثة لنماذج ⁨LLM⁩ المحلية',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-ar.webp',
@@ -1866,6 +1873,7 @@ schema: {
       },
     },
     pt: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Open WebUI vs SillyTavern: Melhor Interface de Chat para LLMs Locais',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-pt.webp',
@@ -2044,6 +2052,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Open WebUI vs SillyTavern: 로컬 LLM을 위한 최고의 채팅 UI',
     heroImage: '/images/open-webui-vs-sillytavern-overview-hero-ko.webp',

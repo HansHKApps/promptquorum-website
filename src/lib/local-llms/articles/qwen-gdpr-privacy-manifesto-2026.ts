@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-en.webp',
     title: 'The Local LLM Privacy Manifesto 2026: Why Open Weights Are Non-Negotiable for EU Compliance',
@@ -233,6 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-es.webp',
     title: 'El Manifiesto de Privacidad de LLMs Locales 2026: Por qué los Pesos Abiertos son Imprescindibles para el Cumplimiento del RGPD en la UE',
@@ -472,6 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-ar.webp',
     title: 'بيان خصوصية نماذج ⁨LLM⁩ المحلية ⁨2026⁩: لماذا الأوزان المفتوحة ضرورية لامتثال ⁨GDPR⁩ في الاتحاد الأوروبي',
@@ -663,6 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-de.webp',
     title: 'Das Local-LLM-Datenschutz-Manifest 2026: Warum Open Weights fuer EU-Konformitaet unverzichtbar sind',
@@ -811,6 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-fr.webp',
     title: 'Le Manifeste de Confidentialité Local LLM 2026 : Pourquoi les Poids Ouverts sont Indispensables pour la Conformité UE',
@@ -959,6 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-ja.webp',
     title: 'ローカルLLMプライバシーマニフェスト2026：EU準拠のためにオープンウェイトが不可欠な理由',
@@ -1107,6 +1113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-zh.webp',
     title: '本地LLM隐私宣言2026：为何开放权重对EU合规不可或缺',
@@ -1256,6 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-pt.webp',
     title: 'O Manifesto de Privacidade de LLMs Locais 2026: Por que Pesos Abertos São Inegociáveis para a Conformidade com o GDPR na UE',
@@ -1507,6 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
+    designSkin: 'hub',
     theme: 'Privacy & Security',
     heroImage: '/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-ko.webp',
     title: '로컬 LLM 프라이버시 선언문 2026: EU 컴플라이언스를 위해 오픈 웨이트가 반드시 필요한 이유',

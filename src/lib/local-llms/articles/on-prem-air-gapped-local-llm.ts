@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Isolated Deployment for Classified Environments',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-en.webp',
@@ -285,6 +286,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Despliegue Aislado para Entornos Clasificados',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-es.webp',
@@ -559,6 +561,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'نماذج ⁨LLM⁩ المحلية المعزولة في الموقع (⁨Air-Gapped⁩): نشر معزول للبيئات المصنّفة',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-ar.webp',
@@ -833,6 +836,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'LLMs Locais On-Prem Air-Gapped: Implantação Isolada para Ambientes Classificados',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-pt.webp',
@@ -1054,6 +1058,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Isolierte Bereitstellung für klassifizierte Umgebungen',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-de.webp',
@@ -1285,6 +1290,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Déploiement isolé pour environnements classifiés',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-fr.webp',
@@ -1506,6 +1512,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'オンプレミス・エアギャップローカルLLM: 機密環境の隔離デプロイ',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-ja.webp',
@@ -1726,6 +1733,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '本地LLM气隙部署: 隔离架构与分类数据保护',
       heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-zh.webp',
@@ -2001,6 +2009,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '온프레미스 에어갭 로컬 LLM: 기밀 환경을 위한 완전 격리 배포',
     heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-ko.webp',

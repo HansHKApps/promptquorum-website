@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Ollama vs LM Studio vs Jan AI vs GPT4All: Which Local LLM Installer in 2026? (Comparison + Install Guide)',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-en.webp',
@@ -419,6 +420,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Ollama vs LM Studio vs Jan AI vs GPT4All: ¿Cuál instalador de LLM local elegir en 2026? (Comparativa + Guía de instalación)',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-es.webp',
@@ -714,6 +716,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '⁨Ollama⁩ مقابل ⁨LM Studio⁩ مقابل ⁨Jan AI⁩ مقابل ⁨GPT4All⁩: أي مثبّت ⁨LLM⁩ محلي تختار في ⁨2026⁩؟ (مقارنة + دليل تثبيت)',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-ar.webp',
@@ -1009,6 +1012,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Ollama vs LM Studio vs Jan AI vs GPT4All: Qual instalador de LLM local escolher em 2026?',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-pt.webp',
@@ -1113,6 +1117,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Lokale LLM One-Click-Installer: Ollama vs LM Studio vs Jan AI vs GPT4All im Vergleich',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-de.webp',
@@ -1530,6 +1535,7 @@ schema: {
       gammaDescription: 'Die Präsentation vergleicht Ollama, LM Studio, Jan AI und GPT4All: API-Ports (11434, 1234, 1337, 4891), Datenschutz-Ranking und Installationsschritte. PDF als LLM-Installer-Referenzkarte herunterladen.',
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Installateurs LLM locaux One-Click : Ollama vs LM Studio vs Jan AI vs GPT4All comparés',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-fr.webp',
@@ -1946,6 +1952,7 @@ schema: {
       gammaDescription: 'La présentation compare Ollama, LM Studio, Jan AI et GPT4All : ports API (11434, 1234, 1337, 4891), classement confidentialité et étapes d\'installation. Télécharger le PDF comme carte de référence des installateurs LLM.',
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'ローカルLLM One-Clickインストーラー：Ollama vs LM Studio vs Jan AI vs GPT4All 比較',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-ja.webp',
@@ -2380,6 +2387,7 @@ schema: {
       gammaDescription: 'このスライドではOllama、LM Studio、Jan AI、GPT4Allを比較：APIポート（11434、1234、1337、4891）、プライバシーランキング、インストール手順を紹介。PDFをLLMインストーラーリファレンスカードとしてダウンロード。',
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '本地LLM一键安装器对比：Ollama vs LM Studio vs Jan AI vs GPT4All',
       heroImage: '/images/local-llm-one-click-installers-overview-hero-zh.webp',
@@ -2861,6 +2869,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: '시작하기',
       title: 'Ollama vs LM Studio vs Jan AI vs GPT4All: 2026년 최고의 로컬 LLM 설치 도구는? (비교 + 설치 가이드)',
     heroImage: '/images/local-llm-one-click-installers-overview-hero-ko.webp',

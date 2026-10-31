@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-en.webp',
       title: 'Local LLM Power Consumption and Cooling 2026: RTX 4090, RTX 5090, M5 Max Compared',
@@ -333,6 +334,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-es.webp',
       title: 'Consumo de Energía de LLMs Locales 2026: RTX 4090, RTX 5090 y M5 Max Comparados',
@@ -660,6 +662,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-ar.webp',
       title: 'استهلاك الطاقة لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: مقارنة ⁨RTX 4090⁩ و⁨RTX 5090⁩ و⁨M5 Max⁩',
@@ -987,6 +990,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-pt.webp',
       title: 'Consumo de Energia de LLMs Locais 2026: RTX 4090, RTX 5090 e M5 Max Comparados',
@@ -1093,6 +1097,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-de.webp',
       title: 'Stromverbrauch lokaler LLMs 2026: RTX 4090, RTX 5090 und M5 Max im Vergleich',
@@ -1424,6 +1429,7 @@ schema: {
       gammaDescription: 'Interaktives 14-Folien-Deck: GPU-Stromverbrauch nach Klasse (RTX 5090 575W bis M5 Max 25–35W), Stromkostentabellen (€150/Monat vs €8/Monat), PSU-Anforderungen, Kühlungseinrichtung für 83°C-Limit, Strombegrenzung für 40% Einsparung, Kosten nach Region. PDF als Referenzkarte herunterladen.',
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Matériel & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-fr.webp',
       title: 'Consommation électrique des LLMs locaux 2026 : RTX 4090, RTX 5090 et M5 Max comparés',
@@ -1741,6 +1747,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '硬件 & 性能',
       heroImage: '/images/local-llm-power-consumption-overview-hero-zh.webp',
       title: '本地LLM功耗与冷却指南2026：RTX 4090、RTX 5090、M5 Max对比',
@@ -2047,6 +2054,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-ja.webp',
       title: 'ローカルLLM電力消費と冷却2026: RTX 4090、RTX 5090、M5 Max比較',
@@ -2258,6 +2266,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: '하드웨어 및 성능',
     heroImage: '/images/local-llm-power-consumption-overview-hero-ko.webp',
       title: '로컬 LLM 전력 소비 및 냉각 2026: RTX 4090, RTX 5090, M5 Max 비교',

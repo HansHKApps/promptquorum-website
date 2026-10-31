@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Local LLMs vs Cloud APIs: Which Should You Use in 2026?',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-en.webp',
@@ -245,6 +246,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'LLMs locales vs APIs en la nube: ¿Cuál deberías usar en 2026?',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-es.webp',
@@ -485,6 +487,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'نماذج ⁨LLM⁩ المحلية مقابل واجهات ⁨API⁩ السحابية: أيهما يجب أن تستخدم في ⁨2026⁩؟',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-ar.webp',
@@ -725,6 +728,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'LLMs Locais vs APIs na Nuvem: Qual Usar em 2026?',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-pt.webp',
@@ -944,6 +948,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Erste Schritte',
       title: 'Lokale LLMs vs. Cloud-APIs: Was sollten Sie 2026 verwenden?',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-de.webp',
@@ -1242,6 +1247,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Pour commencer',
       title: 'LLMs locaux vs APIs cloud : Que choisir en 2026 ?',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-fr.webp',
@@ -1541,6 +1547,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'はじめ方',
       title: 'ローカルLLM vs クラウドAPI：2026年はどちらを選ぶべきか？',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-ja.webp',
@@ -1849,6 +1856,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '入门指南',
       title: '本地LLM vs 云端API：2026年该如何选择？',
       heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-zh.webp',
@@ -2149,6 +2157,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '로컬 LLM vs 클라우드 API: 2026년에는 무엇을 선택해야 합니까?',
     heroImage: '/images/local-llms-vs-cloud-apis-overview-hero-ko.webp',

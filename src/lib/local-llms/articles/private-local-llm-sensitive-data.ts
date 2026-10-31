@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-en.webp',
       title: 'Best Local LLM Setup for Sensitive Data',
@@ -240,6 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     es: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-es.webp',
       title: 'Mejor configuración de LLM local para datos sensibles',
@@ -471,6 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ar: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-ar.webp',
       title: 'أفضل تهيئة ⁨LLM⁩ محلي للبيانات الحساسة',
@@ -703,6 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     pt: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-pt.webp',
       title: 'Melhor configuração de LLM local para dados sensíveis',
@@ -937,6 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     fr: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Confidentialité & Entreprise',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-fr.webp',
       title: 'Configuration optimale des LLM locaux pour données sensibles',
@@ -1156,6 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ja: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'プライバシーと企業',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-ja.webp',
       title: '機密データ向けローカルLLMの最適なセットアップ',
@@ -1375,6 +1381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     zh: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: '合规性与企业',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-zh.webp',
       title: '敏感数据安全的本地 LLM 配置',
@@ -1593,6 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     de: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Datenschutz & Unternehmen',
       heroImage: '/images/private-local-llm-sensitive-data-overview-hero-de.webp',
       title: 'Optimale lokale LLM-Einrichtung für sensible Daten',
@@ -1694,6 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
       freshness_tier: 'annual',
       specific_year: 2026,
+      designSkin: 'hub',
       theme: 'Privacy & Business',
     heroImage: '/images/private-local-llm-sensitive-data-overview-hero-ko.webp',
       title: '민감한 데이터를 위한 최적의 로컬 LLM 설정',

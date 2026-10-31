@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents',
       seoTitle: 'Best Local LLM Stack 2026: Coding, RAG, Writing & Agents',
@@ -403,6 +404,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Mejor stack de LLM local por caso de uso 2026: Escritura, Código, RAG, Agentes',
       seoTitle: 'Mejor stack LLM local 2026: Código, RAG, Escritura y Agentes',
@@ -695,6 +697,7 @@ for filename, review in reviews:
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'أفضل منظومة ⁨LLM⁩ محلية حسب حالة الاستخدام ⁨2026⁩: الكتابة، البرمجة، ⁨RAG⁩، الوكلاء',
       seoTitle: 'منظومة ⁨LLM⁩ محلية ⁨2026⁩: برمجة، ⁨RAG⁩، كتابة، وكلاء',
@@ -989,6 +992,7 @@ for filename, review in reviews:
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Melhor stack de LLM local por caso de uso 2026: Escrita, Código, RAG, Agentes',
       seoTitle: 'Melhor stack LLM local 2026: Código, RAG, Escrita e Agentes',
@@ -1128,6 +1132,7 @@ for filename, review in reviews:
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Schnittstellen',
       title: 'Bester lokaler LLM-Stack nach Anwendungsfall 2026: Schreiben, Coding, RAG, Agenten',
       seoTitle: 'Lokaler LLM-Stack 2026: Coding, Schreiben, RAG, Agenten',
@@ -1415,6 +1420,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Outils & Interfaces',
       title: 'Meilleur stack LLM local par cas d\'usage 2026 : Rédaction, Coding, RAG, Agents',
       seoTitle: 'Stack LLM local 2026 : Coding, Rédaction, RAG, Agents',
@@ -1698,6 +1704,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ツール & インターフェース',
       title: 'ユースケース別ローカルLLMスタック2026：ライティング、コーディング、RAG、エージェント',
       seoTitle: 'ローカルLLMスタック2026：コーディング、ライティング、RAG、エージェント別最適構成',
@@ -1981,6 +1988,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '工具 & 界面',
       title: '按用途分类的2026年最佳本地LLM堆栈：写作、编程、RAG、智能体',
       seoTitle: '本地LLM堆栈护23：编程、写作、RAG、智能体最优方案',
@@ -2265,6 +2273,7 @@ schema: {
     },
   ko: {
   freshness_tier: 'semi_annual',
+  designSkin: 'hub',
   theme: '도구 및 인터페이스',
   title: '사용 사례별 최적 로컬 LLM 스택 2026: 글쓰기, 코딩, RAG, 에이전트',
   seoTitle: '최적 로컬 LLM 스택 2026: 코딩, RAG, 글쓰기 & 에이전트',

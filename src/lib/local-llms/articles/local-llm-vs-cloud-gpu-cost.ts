@@ -11,6 +11,7 @@ const OG_SLUG = 'local-llm-vs-cloud-gpu-cost';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       title: 'Local LLM vs Cloud GPU: What Is Cheaper?',
@@ -198,6 +199,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       specific_year: 2026,
@@ -386,6 +388,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       specific_year: 2026,
@@ -575,6 +578,7 @@ schema: {
     },
     // VERIFY: modelo de TCO mantido em USD de propósito — GPUs em nuvem (Lambda/Paperspace/AWS/RunPod) são cobradas em dólar mundialmente, então o equilíbrio precisa de moeda única. Contexto de hardware no varejo brasileiro adicionado (RTX 4070 ~R$ 2.500-3.500; RTX 4090 usada ~R$ 11.000). Eletricidade do modelo é a dos EUA (US$ 0,14/kWh); no Brasil ~R$ 0,80/kWh. Confirmar estimativas BR antes de publicar.
     pt: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'annual',
       specific_year: 2026,
@@ -763,6 +767,7 @@ schema: {
       },
     },
     de: {
+  designSkin: 'hub',
   theme: 'Cost & Comparisons',
   title: 'Local LLMs vs. Cloud-GPUs: Kostenvergleich 2026',
       heroImage: '/images/local-llm-vs-cloud-gpu-cost-overview-hero-de.webp',
@@ -1002,6 +1007,7 @@ schema: {
   },
     },
   ja: {
+  designSkin: 'hub',
   theme: 'Cost & Comparisons',
   title: 'ローカルLLMとクラウドGPU: コスト比較2026',
     heroImage: '/images/local-llm-vs-cloud-gpu-cost-overview-hero-ja.webp',
@@ -1241,6 +1247,7 @@ schema: {
   },
   },
   fr: {
+  designSkin: 'hub',
   theme: 'Cost & Comparisons',
   title: 'Local LLMs vs. GPU Cloud: Comparaison des coûts 2026',
     heroImage: '/images/local-llm-vs-cloud-gpu-cost-overview-hero-fr.webp',
@@ -1285,6 +1292,7 @@ schema: {
   itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Comparaison des coûts: GPU local vs fournisseurs de GPU Cloud', itemListElement: [ { '@type': 'Thing', name: 'RTX 4070 local', description: 'GPU d\'occasion à 350–500 $ avec un coût total de 0,043 $/heure, amortissement inclus, le TCO le plus bas sur 1 an pour une utilisation constante.' }, { '@type': 'Thing', name: 'Lambda Labs RTX 4090 Cloud', description: 'Paiement à l\'usage à 2,50 $/heure, idéal pour les charges en rafale, 10 à 50 fois plus cher par heure que le local (Remarque: RTX 4090 EOL, prix d\'occasion $2.000-2.600).' }, { '@type': 'Thing', name: 'Paperspace A100 Cloud', description: 'Option Cloud plus économique à 0,60 $/heure pour le fine-tuning, seuil de rentabilité à environ 3 ans face à la RTX 4070 locale.' } ] },
   },
   zh: {
+  designSkin: 'hub',
   theme: 'Cost & Comparisons',
   title: '本地LLM与云GPU: 2026年成本比较',
     heroImage: '/images/local-llm-vs-cloud-gpu-cost-overview-hero-zh.webp',
@@ -1329,6 +1337,7 @@ schema: {
   itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: '成本比较：本地GPU与云GPU提供商', itemListElement: [ { '@type': 'Thing', name: '本地RTX 4070', description: '二手GPU价格350-500美元，含折旧的总成本为每小时0.043美元，持续使用时1年期TCO最低。' }, { '@type': 'Thing', name: '云端Lambda Labs RTX 4090', description: '按使用量付费，每小时2.50美元，最适合突发工作负载，每小时成本比本地高10-50倍。(注：RTX 4090已停产，二手价格$2,000-2,600)' }, { '@type': 'Thing', name: '云端Paperspace A100', description: '更便宜的云选项，微调每小时0.60美元，与本地RTX 4070相比约3年可达到收支平衡。' } ] },
   },
   ko: {
+      designSkin: 'hub',
       theme: '비용 및 비교',
       freshness_tier: 'annual',
       title: '로컬 LLM vs 클라우드 GPU: 어느 쪽이 더 저렴합니까?',

@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Fix Local LLM Errors in 2026: 11 Common Problems in Ollama, LM Studio, and vLLM',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-en.webp',
@@ -352,6 +353,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Corregir errores de LLM local en 2026: 11 problemas frecuentes en Ollama, LM Studio y vLLM',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-es.webp',
@@ -695,6 +697,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'إصلاح أخطاء ⁨LLM⁩ المحلي في ⁨2026⁩: ⁨11⁩ مشكلة شائعة في ⁨Ollama⁩ و⁨LM Studio⁩ و⁨vLLM⁩',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-ar.webp',
@@ -1040,6 +1043,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Corrigir erros de LLM local em 2026: 11 problemas frequentes no Ollama, LM Studio e vLLM',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-pt.webp',
@@ -1384,6 +1388,7 @@ schema: {
       gammaDescription: 'A apresentação abaixo cobre: os 10 erros mais comuns na configuração de LLM local (sem memória, GPU não detectada, inferência lenta, conexão recusada, saída corrompida), os requisitos de RAM para modelos 3B–14B com quantização Q4_K_M e Q8_0, um processo de depuração em 5 etapas e os comandos do Ollama para cada correção. O erro 11 (host remoto inesperado) é abordado no texto do artigo. Baixe o PDF como cartão de referência para solução de problemas de LLM local.',
     },
     de: {
+  designSkin: 'hub',
   theme: 'Getting Started',
   title: 'Lokale LLM-Fehler 2026 beheben: 11 häufige Probleme in Ollama, LM Studio und vLLM',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-de.webp',
@@ -1728,6 +1733,7 @@ schema: {
   gammaDescription: 'Die folgende Präsentation behandelt: die 10 häufigsten Fehler beim Einrichten lokaler LLMs (Out-of-Memory, GPU nicht erkannt, langsame Inferenz, Connection Refused, fehlerhafte Ausgabe), RAM-Anforderungen für 3B–14B-Modelle bei Q4_K_M- und Q8_0-Quantisierung, einen 5-Schritte-Debugprozess und Ollama-Befehle für jeden Fix. Fehler 11 (unerwarteter Remote-Host) wird im Artikeltext behandelt. Als PDF herunterladen als Referenzkarte für die Fehlerbehebung bei lokalen LLMs.',
 },
     fr: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Corriger les erreurs locales LLM 2026 : 11 problèmes courants dans Ollama, LM Studio et vLLM',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-fr.webp',
@@ -2070,6 +2076,7 @@ schema: {
       gammaDescription: 'La présentation suivante couvre : les 10 erreurs les plus courantes dans la configuration des LLM locaux (manque de mémoire, GPU non détecté, inférence lente, connexion refusée, sortie brouillée), les exigences RAM pour les modèles 3B–14B en quantification Q4_K_M et Q8_0, un processus de débogage en 5 étapes et les commandes Ollama pour chaque correction. L\'erreur 11 (hôte distant inattendu) est couverte dans le texte de l\'article. Télécharger le PDF comme carte de référence pour le dépannage des LLM locaux.',
     },
     ja: {
+  designSkin: 'hub',
   theme: 'Getting Started',
   title: 'ローカルLLMエラーを2026年に修正する：Ollama、LM Studio、vLLMの10個の一般的な問題',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-ja.webp',
@@ -2527,6 +2534,7 @@ schema: {
   gammaDescription: '以下のプレゼンテーションでは、ローカルLLMセットアップの最も一般的な10のエラー（メモリ不足、GPU未検出、推論遅延、接続拒否、出力破損）、Q4_K_MとQ8_0量子化での3B〜14Bモデルのメモリ要件、5ステップのデバッグプロセス、各修正のOllamaコマンドを解説します。エラー11（予期しないリモートホスト）は記事本文で解説しています。ローカルLLMトラブルシューティングリファレンスカードとしてPDFをダウンロード。',
 },
     zh: {
+      designSkin: 'hub',
       theme: '入门指南',
   title: '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 11 个常见问题',
       heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-zh.webp',
@@ -2880,6 +2888,7 @@ schema: {
 },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '2026년 로컬 LLM 오류 해결: Ollama, LM Studio, vLLM의 11가지 주요 문제',
     heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-ko.webp',

@@ -8,6 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -259,6 +260,7 @@ schema: {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -510,6 +512,7 @@ schema: {
       },
     },
     ar: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -761,6 +764,7 @@ schema: {
       },
     },
     pt: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -990,6 +994,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -1251,6 +1256,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -1502,6 +1508,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -1753,6 +1760,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',
@@ -2004,6 +2012,7 @@ schema: {
       },
     },
   ko: {
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-05',

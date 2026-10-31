@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama Command Guide: Every Command Explained (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-en.webp',
@@ -273,6 +274,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Guia de Comandos Ollama: Todos os Comandos Explicados (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-pt.webp',
@@ -486,6 +488,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama Befehls-Anleitung: Alle Befehle erklärt (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-de.webp',
@@ -734,6 +737,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Guide des commandes Ollama: Toutes les commandes expliquées (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-fr.webp',
@@ -972,6 +976,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama コマンドガイド: すべてのコマンド説明 (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-ja.webp',
@@ -1210,6 +1215,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Guía de Comandos de Ollama: Todos los Comandos Explicados (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-es.webp',
@@ -1473,6 +1479,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'دليل أوامر ⁨Ollama⁩: شرح جميع الأوامر (⁨2026⁩)',
       heroImage: '/images/ollama-command-guide-overview-hero-ar.webp',
@@ -1736,6 +1743,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama 命令指南：每个命令详解 (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-zh.webp',
@@ -1965,6 +1973,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama 명령어 가이드: 모든 명령어 완전 해설 (2026)',
     heroImage: '/images/ollama-command-guide-overview-hero-ko.webp',

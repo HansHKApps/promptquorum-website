@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Private Local AI For Business: On-Premises Deployment Without Cloud',
       heroImage: '/images/private-local-ai-for-business-overview-hero-en.webp',
@@ -288,6 +289,7 @@ schema: {
     },
 de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Fortgeschrittene Techniken',
       title: 'Private lokale KI für Unternehmen: On-Premises-Bereitstellung ohne Cloud',
       heroImage: '/images/private-local-ai-for-business-overview-hero-de.webp',
@@ -605,6 +607,7 @@ schema: {
     },
   fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'IA Locale Privée Pour Les Entreprises : Déploiement On-Premises Sans Cloud',
     heroImage: '/images/private-local-ai-for-business-overview-hero-fr.webp',
@@ -1017,6 +1020,7 @@ schema: {
 
   ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'プライベート・ローカルAI for ビジネス：オンプレミス展開ガイド 2026',
     heroImage: '/images/private-local-ai-for-business-overview-hero-ja.webp',
@@ -1451,6 +1455,7 @@ schema: {
 
   zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: '企业本地私有AI：保持数据主权与成本控制的On-Premises部署指南 2026',
     heroImage: '/images/private-local-ai-for-business-overview-hero-zh.webp',
@@ -1876,6 +1881,7 @@ schema: {
     },
   es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'IA Local Privada para Empresas: Despliegue On-Premises sin la Nube',
     heroImage: '/images/private-local-ai-for-business-overview-hero-es.webp',
@@ -2154,6 +2160,7 @@ schema: {
     },
   ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'الذكاء الاصطناعي المحلي الخاص للشركات: نشر في الموقع دون السحابة',
     heroImage: '/images/private-local-ai-for-business-overview-hero-ar.webp',
@@ -2432,6 +2439,7 @@ schema: {
     },
   pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'IA Local Privada para Empresas: Implantação On-Premises sem a Nuvem',
     heroImage: '/images/private-local-ai-for-business-overview-hero-pt.webp',
@@ -2614,6 +2622,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: '비즈니스를 위한 프라이빗 로컬 AI: 클라우드 없이 온프레미스 배포',
     heroImage: '/images/private-local-ai-for-business-overview-hero-ko.webp',
