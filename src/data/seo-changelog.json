@@ -6169,5 +6169,31 @@
       "period": "GSC export 2026-10-31, window not stated"
     },
     "deployedAt": null
+  },
+  {
+    "id": "204b121f-0d44-4c54-b08c-e55a7c215e53",
+    "slug": "balcony-solar/how-balcony-solar-became-legal-in-the-us",
+    "date": "2026-10-31T07:37:57.471Z",
+    "fields": [
+      {
+        "field": "metaDescription+florida H2+2 FAQs",
+        "old": "Utah legalized balcony solar in March 2025; nine more states followed, latest California...",
+        "new": "Is balcony solar legal in Florida or Texas? Neither has a law..."
+      }
+    ],
+    "queries": [
+      "is balcony solar legal in florida",
+      "is balcony solar legal in texas",
+      "balcony solar legal states",
+      "balcony solar laws"
+    ],
+    "baseline": {
+      "position": 8.3,
+      "impressions": 12,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "last 28 days to 2026-10-31"
+    },
+    "deployedAt": null
   }
 ]
