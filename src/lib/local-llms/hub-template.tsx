@@ -198,7 +198,7 @@ export interface LocalLlmsHubTemplateProps extends LLMHubData {
   lang: Lang
 }
 
-export function LocalLlmsHubTemplate({ lang, titlesMap, datesMap, liveSlugs }: LocalLlmsHubTemplateProps) {
+export function LocalLlmsHubTemplate({ lang, titlesMap, datesMap, liveSlugs, externalMap }: LocalLlmsHubTemplateProps) {
   const copy = HUB_TEMPLATE_COPY[lang]
   const labels = HUB_EXPLORE_LABELS[lang]
   if (!copy || !labels) {
@@ -221,7 +221,20 @@ export function LocalLlmsHubTemplate({ lang, titlesMap, datesMap, liveSlugs }: L
     }
   }
 
-  // One tile per theme; items = the theme's live articles in editorial order.
+  // Pages from the power-local-llm cluster that the hardware and mobile tiles list next to the local-llms guides.
+  const toExternalItem = (slug: string): HubItem => {
+    const entry = externalMap[slug]
+    const isNew = isNewArticle(entry?.publishDate)
+    const isUpdated = !isNew && isUpdatedArticle(entry?.publishDate, entry?.dateModified)
+    return {
+      href: navHref(`/power-local-llm/${slug}`, lang),
+      title: entry?.title ?? slugToTitle(slug),
+      kind: 'guide',
+      badge: isNew ? 'new' : isUpdated ? 'updated' : undefined,
+    }
+  }
+
+  // One tile per theme; items = the theme's live articles in editorial order, then its power-local-llm pages.
   const tiles: HubTile[] = llmThemes.map((theme) => {
     const intro = stripLinks(THEME_DESCRIPTIONS[theme.id]?.[lang] ?? THEME_DESCRIPTIONS[theme.id]?.en ?? theme.description)
     const id = theme.id as keyof typeof copy.explore.tileSummary
@@ -231,7 +244,10 @@ export function LocalLlmsHubTemplate({ lang, titlesMap, datesMap, liveSlugs }: L
       summary: copy.explore.tileSummary[id] ?? intro,
       intro,
       unit: copy.explore.unit,
-      items: theme.articleKeys.filter((key) => liveSet.has(key)).map(toItem),
+      items: [
+        ...theme.articleKeys.filter((key) => liveSet.has(key)).map(toItem),
+        ...(theme.externalKeys ?? []).filter((slug) => slug in externalMap).map(toExternalItem),
+      ],
     }
   })
   const uniquePages = new Set(tiles.flatMap((tile) => tile.items.map((item) => item.href))).size
@@ -250,27 +266,39 @@ export function LocalLlmsHubTemplate({ lang, titlesMap, datesMap, liveSlugs }: L
     }
   })
 
-  // Latest: the three live articles with the newest change date (EN dates, same basis as the NEW / UPDATED badges).
-  const dated = [...liveSet]
-    .map((slug) => {
-      const dates = datesMap[slug]
-      const date = dates?.dateModified ?? dates?.publishDate
-      return { slug, date, modified: Boolean(dates?.dateModified) }
-    })
-    .filter((entry): entry is { slug: string; date: string; modified: boolean } => Boolean(entry.date))
+  // Latest: the six pages with the newest change date (EN dates, same basis as the NEW / UPDATED badges).
+  // Includes the power-local-llm pages shown in the hardware and mobile tiles, so hardware work is not crowded out.
+  const dateOf = (dates?: { publishDate?: string; dateModified?: string }) => dates?.dateModified ?? dates?.publishDate
+  const candidates = [
+    ...[...liveSet].map((slug) => ({ item: toItem(slug), date: dateOf(datesMap[slug]), modified: Boolean(datesMap[slug]?.dateModified) })),
+    ...Object.keys(externalMap).map((slug) => ({ item: toExternalItem(slug), date: dateOf(externalMap[slug]), modified: Boolean(externalMap[slug].dateModified) })),
+  ]
+  // At most two cards per topic tile, so one busy topic (e.g. a batch of workstation reviews) cannot fill the whole row.
+  const tileOfHref = new Map<string, string>()
+  for (const tile of tiles) for (const item of tile.items) if (!tileOfHref.has(item.href)) tileOfHref.set(item.href, tile.id)
+  const perTile = new Map<string, number>()
+  const seenHrefs = new Set<string>()
+  const dated = candidates
+    .filter((entry): entry is { item: HubItem; date: string; modified: boolean } => Boolean(entry.date))
     .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 3)
+    .filter((entry) => {
+      if (seenHrefs.has(entry.item.href)) return false
+      seenHrefs.add(entry.item.href)
+      const tileId = tileOfHref.get(entry.item.href) ?? entry.item.href
+      const used = perTile.get(tileId) ?? 0
+      if (used >= 2) return false
+      perTile.set(tileId, used + 1)
+      return true
+    })
+    .slice(0, 6)
   const latestTones: HubTone[] = ['orchid', 'azure', 'violet']
-  const latestCards: HubLatestCard[] = dated.map((entry, i) => {
-    const item = toItem(entry.slug)
-    return {
-      href: item.href,
-      title: item.title,
-      tone: latestTones[i % latestTones.length],
-      badge: item.badge,
-      dateLabel: `${entry.modified ? copy.latest.updated : copy.latest.published}: ${formatDisplayDate(entry.date, lang)}`,
-    }
-  })
+  const latestCards: HubLatestCard[] = dated.map((entry, i) => ({
+    href: entry.item.href,
+    title: entry.item.title,
+    tone: latestTones[i % latestTones.length],
+    badge: entry.item.badge,
+    dateLabel: `${entry.modified ? copy.latest.updated : copy.latest.published}: ${formatDisplayDate(entry.date, lang)}`,
+  }))
 
   const hubLinks: HubLink[] = DEEPER_SLUGS.map((slug) => ({
     href: navHref(`/${slug}`, lang),
