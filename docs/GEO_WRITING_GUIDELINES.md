@@ -1141,6 +1141,10 @@ If CTR is <20% below your avg or <5% below competitors on similar queries, revis
 
 ---
 
+### Rule 35c: New Design Only — `designSkin: 'hub'` (Mandatory, owner rule 2026-11-01)
+
+Every new article in `local-llms` and `power-local-llm` (and every one you update) must carry `designSkin: 'hub',` on **all 9 locale objects**, from the first commit. It changes classes only (hub tint, numbered section cards), never text or schema. No new or refreshed page may ship on the old design. Details and verification: `docs/PAGE_UPDATER.md` Step 4.9. Gate: `npm run check:page-updater` (an `INCOMPLETE` line means the page is not done) and `npm run test:article-skin`.
+
 ### Rule 35b: Legal & Reputational Risk Gate (Mandatory Before Publishing — Every New Article)
 
 **Every new article written under these guidelines must pass the `risk-checker` skill before it is committed.** No exceptions for short articles, prompt bites, or "just a translation" — translations are where hedged English claims turn into absolute German/French/Japanese ones.
