@@ -6123,6 +6123,31 @@
     "deployedAt": null
   },
   {
+    "id": "bcaf63aa-dea3-456d-be15-45ad00b40bb5",
+    "slug": "balcony-solar/balcony-solar-legal-us-states",
+    "date": "2026-10-31T07:40:34.713Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Balcony Solar Legal by State: US Guide (2026)",
+        "new": "Which States Allow Balcony Solar? US Guide (2026)"
+      }
+    ],
+    "queries": [
+      "which states allow balcony solar",
+      "what states allow balcony solar",
+      "is balcony solar legal in texas",
+      "will balcony solar become legal in states other than utah"
+    ],
+    "baseline": {
+      "position": 6,
+      "impressions": 183,
+      "clicks": 2,
+      "ctr": 0.01092896174863388
+    },
+    "deployedAt": null
+  },
+  {
     "id": "698bd124-3f98-46d9-a0b2-110ee5d5b106",
     "slug": "/balcony-solar/balcony-solar-japan-status-2027",
     "date": "2026-10-31T07:41:57.349Z",
