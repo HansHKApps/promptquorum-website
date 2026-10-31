@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'How to Run Qwen 3 Locally in 2026: Ollama + LM Studio Setup Guide',
     seoTitle: 'Run Qwen 3 Locally 2026: 16 GB VRAM, Under 10 Min',
@@ -353,6 +354,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   es: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Cómo ejecutar Qwen 3 localmente en 2026: Guía de configuración Ollama + LM Studio',
     seoTitle: 'Ejecutar Qwen 3 en local 2026: 16 GB VRAM, 10 min',
@@ -661,6 +663,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   ar: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'كيفية تشغيل ⁨Qwen 3⁩ محليًا في ⁨2026⁩: دليل إعداد ⁨Ollama + LM Studio⁩',
     seoTitle: 'تشغيل ⁨Qwen 3⁩ محليًا ⁨2026⁩: ⁨16 GB VRAM⁩ في ⁨10⁩ دقائق',
@@ -969,6 +972,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   pt: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Como executar o Qwen 3 localmente em 2026: Guia Ollama + LM Studio',
     seoTitle: 'Executar o Qwen 3 local 2026: 16 GB VRAM, 10 min',
@@ -1055,6 +1059,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   de: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Qwen 3 lokal ausführen 2026: Vollständige Anleitung mit Ollama und LM Studio',
     seoTitle: 'Qwen 3 lokal ausführen 2026: 16 GB VRAM, unter 10 Min',
@@ -1341,6 +1346,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   fr: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Comment Exécuter Qwen 3 Localement en 2026 : Guide Ollama + LM Studio',
     seoTitle: 'Exécuter Qwen 3 en local 2026 : 16 Go VRAM, 10 min',
@@ -1625,6 +1631,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   ja: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: '2026年にQwen 3をローカルで実行する方法：Ollama + LM Studioセットアップガイド',
     seoTitle: '2026年Qwen 3ローカル実行：16GB VRAM・10分',
@@ -1909,6 +1916,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   zh: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: '2026年如何在本地运行Qwen 3：Ollama + LM Studio完整设置指南',
     seoTitle: '2026本地运行Qwen 3：16GB显存，10分钟搞定',
@@ -2193,6 +2201,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
   ko: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-12-03',
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: '2026년 Qwen 3 로컬 실행 방법: Ollama + LM Studio 설정 가이드',
     seoTitle: '2026 Qwen 3 로컬 실행: Ollama & LM Studio 설정 가이드',

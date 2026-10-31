@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Running 70B+ Models on Apple Silicon 2026: M5 Max Complete Guide',
     seoTitle: '70B Models on M5 Max 128GB: 12–20 tok/s, Matches GPT-5.6 Quality',
@@ -427,6 +428,7 @@ for chunk in stream_generate(model, tokenizer, "Explain quantum computing", max_
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Ejecutar modelos 70B+ en Apple Silicon 2026: Guía completa M5 Max',
     seoTitle: 'Modelos 70B en M5 Max 128GB: 12–20 tok/s, calidad GPT-5.6',
@@ -817,6 +819,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'تشغيل نماذج ⁨70B⁩+ على ⁨Apple Silicon 2026⁩: دليل ⁨M5 Max⁩ الكامل',
     seoTitle: 'نماذج ⁨70B⁩ على ⁨M5 Max 128GB⁩: ⁨12⁩–⁨20 tok⁩/ث، جودة ⁨GPT⁩',
@@ -1191,6 +1194,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Executar modelos 70B+ no Apple Silicon 2026: Guia completo M5 Max',
     seoTitle: 'Modelos 70B no M5 Max 128GB: 12–20 tok/s, qualidade GPT-5.6',
@@ -1294,6 +1298,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '70B+-Modelle auf Apple Silicon 2026: M5 Max Kompletleitfaden',
     seoTitle: '70B-Modelle auf M5 Max 128GB: 12–20 tok/s, GPT-5.6-Qualität',
@@ -1637,6 +1642,7 @@ for chunk in stream_generate(model, tokenizer, "Erkläre Quantencomputing", max_
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Exécuter des modèles 70B+ sur Apple Silicon M5 Max 128GB : Guide complet 2026',
     seoTitle: 'Modèles 70B sur M5 Max 128GB : 12–20 tok/s, Qualité GPT-5.6',
@@ -1864,6 +1870,7 @@ for chunk in stream_generate(model, tokenizer, "Erkläre Quantencomputing", max_
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon 2026で70B以上のモデルを動かす：M5 Max完全ガイド',
     seoTitle: 'M5 Max 128GBで70Bモデル実行：12～20 tok/s、GPT-5.6品質',
@@ -2231,6 +2238,7 @@ for chunk in stream_generate(model, tokenizer, "量子コンピューティン�
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '在Apple Silicon上运行70B+模型2026：M5 Max完整指南',
     seoTitle: 'M5 Max 128GB运行70B模型：12～20 tok/s，GPT-5.6级质量',
@@ -2610,6 +2618,7 @@ for chunk in stream_generate(model, tokenizer, "解释量子计算", max_tokens=
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon M5 Max에서 70B+ 모델 실행하기 2026: 완전 가이드',
     seoTitle: 'M5 Max 128GB에서 70B 모델: 12–20 tok/s, GPT-5.6 수준의 품질',

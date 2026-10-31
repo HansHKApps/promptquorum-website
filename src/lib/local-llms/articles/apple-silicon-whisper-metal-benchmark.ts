@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-en.webp',
     title: 'Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide',
@@ -287,6 +288,7 @@ while True:
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-es.webp',
     title: 'Whisper en Apple Silicon 2026: Benchmarks Metal, Configuración Core ML, Guía M1–M5',
@@ -574,6 +576,7 @@ while True:
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-ar.webp',
     title: '⁨Whisper⁩ على ⁨Apple Silicon 2026⁩: اختبارات ⁨Metal⁩ المرجعية، إعداد ⁨Core ML⁩، دليل ⁨M1⁩–⁨M5⁩',
@@ -866,6 +869,7 @@ while True:
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-pt.webp',
     title: 'Whisper no Apple Silicon 2026: benchmarks Metal, configuração Core ML, guia M1-M5',
@@ -1024,6 +1028,7 @@ while True:
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-de.webp',
     title: 'Whisper auf Apple Silicon 2026: Metal-Benchmarks, Core-ML-Setup, M1–M5-Geschwindigkeitsleitfaden',
@@ -1308,6 +1313,7 @@ while True:
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-fr.webp',
     title: 'Whisper sur Apple Silicon 2026 : Benchmarks Metal, Configuration Core ML, Guide M1–M5',
@@ -1587,6 +1593,7 @@ while True:
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-ja.webp',
     title: 'Apple Silicon上のWhisper 2026：MetalベンチマークとCore ML設定、M1–M5速度ガイド',
@@ -1866,6 +1873,7 @@ while True:
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-zh.webp',
     title: 'Apple Silicon上的Whisper 2026：Metal基准测试、Core ML设置、M1–M5速度指南',
@@ -2145,6 +2153,7 @@ while True:
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: '하드웨어 & 성능',
     heroImage: '/images/apple-silicon-whisper-metal-benchmark-overview-hero-ko.webp',
     title: 'Apple Silicon의 Whisper 2026: Metal 벤치마크, Core ML 설정, M1–M5 속도 가이드',

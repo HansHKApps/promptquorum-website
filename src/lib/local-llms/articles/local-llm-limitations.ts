@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       last_full_refresh: '2026-08-27',
       next_seo_review_due: '2026-10-01',
       last_seo_review: '2026-08-27',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)',
       seoTitle: 'Local LLM Trade-Offs 2026: Privacy vs Speed vs Quality',
@@ -619,6 +620,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'LLM Local vs API en la Nube: Cuándo Usar Cada Uno (Comparativa 2026)',
       seoTitle: 'LLM Local vs Nube 2026: Privacidad vs Velocidad vs Calidad',
@@ -1113,6 +1115,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '⁨LLM⁩ المحلي مقابل واجهة ⁨API⁩ السحابية: متى تستخدم كلًا منهما (مقارنة ⁨2026⁩)',
       seoTitle: 'قيود ⁨LLM⁩ المحلي مقابل السحابة: متى تختار كلًا منهما',
@@ -1607,6 +1610,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'LLM Local vs API na Nuvem: Quando Usar Cada Um (Comparativo 2026)',
       seoTitle: 'LLM Local vs Nuvem 2026: Privacidade vs Velocidade vs Qualidade',
@@ -1712,6 +1716,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Erste Schritte',
       title: 'Lokales LLM vs Cloud API: Wann welches verwenden (2026 Vergleich)',
       seoTitle: 'Lokales LLM vs Cloud: Datenschutz vs Geschwindigkeit 2026',
@@ -2335,6 +2340,7 @@ schema: {
       }
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Débuter',
       title: 'LLM Local vs API Cloud : Quand utiliser lequel (Comparatif 2026)',
       seoTitle: 'LLM Local vs Cloud : Gratuité vs Vitesse 2026',
@@ -2959,6 +2965,7 @@ schema: {
       }
     },
     ja: {
+      designSkin: 'hub',
       theme: '始める',
       title: 'ローカルLLM vs クラウドAPI：いつどちらを使うべきか（2026年比較）',
       seoTitle: 'ローカルLLM vs クラウド：プライバシー10倍、速度1/10（2026年比較）',
@@ -3577,6 +3584,7 @@ schema: {
       }
     },
     zh: {
+      designSkin: 'hub',
       theme: '入门',
       title: '本地LLM vs 云API：何时使用哪个（2026年权衡分析）',
       seoTitle: '本地LLM vs 云API：数据安全 vs 速度权衡（2026年）',
@@ -4157,6 +4165,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '시작하기',
       title: '로컬 LLM vs 클라우드 API: 각각의 적합한 사용 시기 (2026년 트레이드오프)',
       seoTitle: '로컬 LLM 트레이드오프 2026: 개인정보 보호 vs 속도 vs 품질',
