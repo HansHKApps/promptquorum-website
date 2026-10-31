@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-en.webp',
     title: 'Ollama on Mac 2026: Complete Apple Silicon Setup Guide (M1–M5, Metal GPU)',
@@ -177,6 +178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-de.webp',
     title: 'Ollama auf Mac 2026: Vollständige Apple Silicon Setup-Anleitung (M1–M5, Metal GPU)',
@@ -349,6 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-fr.webp',
     title: 'Ollama sur Mac 2026 : Guide d\'installation complet Apple Silicon (M1–M5, GPU Metal)',
@@ -521,6 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-ja.webp',
     title: 'Mac上のOllama 2026：Apple Silicon完全セットアップガイド（M1–M5、Metal GPU）',
@@ -693,6 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-zh.webp',
     title: 'Mac上的Ollama 2026：完整Apple Silicon安装指南（M1–M5，Metal GPU）',
@@ -865,6 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-es.webp',
     title: 'Ollama en Mac 2026: Guía completa de configuración Apple Silicon (M1–M5, GPU Metal)',
@@ -1045,6 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-ar.webp',
     title: '⁨Ollama⁩ على ⁨Mac 2026⁩: دليل إعداد ⁨Apple Silicon⁩ الكامل (⁨M1⁩–⁨M5⁩، ⁨GPU Metal⁩)',
@@ -1232,6 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-pt.webp',
     title: 'Ollama no Mac 2026: Guia completo de configuração Apple Silicon (M1–M5, GPU Metal)',
@@ -1418,6 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'annual',
     specific_year: 2026,
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     heroImage: '/images/ollama-on-mac-apple-silicon-setup-2026-overview-hero-ko.webp',
     title: 'Mac용 Ollama 2026: Apple Silicon 완전 설치 가이드 (M1–M5, Metal GPU)',

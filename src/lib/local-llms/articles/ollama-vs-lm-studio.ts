@@ -15,6 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-12-19',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama vs LM Studio 2026: CLI vs GUI — Speed, API, Privacy & Setup Compared',
       seoTitle: 'Ollama vs LM Studio 2026: Speed, Features & Setup Guide',
@@ -399,6 +400,7 @@ schema: {
     de: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Vergleich & Werkzeuge',
       title: 'Ollama vs LM Studio 2026: Geschwindigkeit, Features & Setup Vergleich',
       seoTitle: 'Ollama vs LM Studio 2026: Geschwindigkeit, Features & Setup',
@@ -768,6 +770,7 @@ schema: {
     fr: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Comparaisons & Outils',
       title: 'Ollama vs LM Studio 2026 : Vitesse, Fonctionnalités & Configuration comparées',
       seoTitle: 'Ollama vs LM Studio 2026 : Vitesse & Configuration',
@@ -1143,6 +1146,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: '比較・ツール',
       title: 'Ollama vs LM Studio 2026: 速度、機能 & セットアップ完全比較',
       seoTitle: 'Ollama vs LM Studio 2026: 速度、機能 & セットアップ比較',
@@ -1537,6 +1541,7 @@ schema: {
     zh: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: '对比与工具',
       title: 'Ollama vs LM Studio 2026: 速度、功能 & 设置完整对比',
       seoTitle: 'Ollama vs LM Studio 2026: 速度、功能 & 设置对比',
@@ -1868,6 +1873,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama vs LM Studio 2026: CLI vs GUI — Velocidad, API, Privacidad y Configuración',
       seoTitle: 'Ollama vs LM Studio 2026: velocidad, funciones y setup',
@@ -2237,6 +2243,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '⁨Ollama⁩ مقابل ⁨LM Studio 2026⁩: ⁨CLI⁩ مقابل ⁨GUI⁩ — السرعة و⁨API⁩ والخصوصية والإعداد',
       seoTitle: '⁨Ollama⁩ مقابل ⁨LM Studio 2026⁩: ⁨CLI⁩ أم واجهة رسومية',
@@ -2606,6 +2613,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama vs LM Studio 2026: CLI vs GUI — Velocidade, API, Privacidade e Configuração',
       seoTitle: 'Ollama vs LM Studio 2026: velocidade, recursos e setup',
@@ -2864,6 +2872,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'Ollama vs LM Studio 2026: CLI vs GUI — 속도, API, 프라이버시 및 설정 비교',
       seoTitle: 'Ollama vs LM Studio 2026: 속도, 기능 및 설정 가이드',

@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-en.webp',
@@ -299,6 +300,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-de.webp',
@@ -594,6 +596,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-fr.webp',
@@ -879,6 +882,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-ja.webp',
@@ -1164,6 +1168,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: '本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-zh.webp',
@@ -1448,6 +1453,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'LLMs locales vs ChatGPT Plus 2026: Comparación completa de costos en 7 niveles de precios',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-es.webp',
@@ -1734,6 +1740,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'نماذج ⁨LLM⁩ المحلية مقابل ⁨ChatGPT Plus 2026⁩: مقارنة تكاليف كاملة عبر ⁨7⁩ مستويات تسعير',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-ar.webp',
@@ -2020,6 +2027,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: 'LLMs Locais vs ChatGPT Plus 2026: Comparação Completa de Custos em 7 Níveis de Preço',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-pt.webp',
@@ -2307,6 +2315,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Cost & Comparisons',
       title: '로컬 LLM vs ChatGPT Plus 2026: 7가지 요금제 완전 비용 비교',
     heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-ko.webp',

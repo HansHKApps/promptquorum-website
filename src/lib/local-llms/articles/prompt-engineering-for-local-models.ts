@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-en.webp',
       title: 'Prompt Engineering for Local LLMs 2026: CoT & Few-Shot',
@@ -374,6 +375,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-es.webp',
       title: 'Prompt Engineering para LLMs locales 2026: CoT y Few-Shot',
@@ -749,6 +751,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-ar.webp',
       title: 'هندسة الأوامر لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨CoT⁩ و⁨Few-Shot⁩',
@@ -1124,6 +1127,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-pt.webp',
       title: 'Prompt Engineering para LLMs locais 2026: CoT e Few-Shot',
@@ -1427,6 +1431,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Fortgeschrittene Techniken',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-de.webp',
       title: 'Prompt Engineering für lokale LLMs 2026: CoT & Few-Shot',
@@ -1821,6 +1826,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Techniques avancées',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-fr.webp',
       title: 'Ingénierie des prompts pour LLM locaux 2026 : CoT & Few-Shot',
@@ -2197,6 +2203,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '高度なテクニック',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-ja.webp',
       title: 'ローカルLLM向けプロンプトエンジニアリング2026：CoT＆Few-Shot',
@@ -2572,6 +2579,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '高级技术',
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-zh.webp',
       title: '本地LLM提示工程2026：思维链与少样本',
@@ -2947,6 +2955,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
     heroImage: '/images/prompt-engineering-for-local-models-overview-hero-ko.webp',
       title: '로컬 LLM 프롬프트 엔지니어링 2026: CoT 및 Few-Shot',

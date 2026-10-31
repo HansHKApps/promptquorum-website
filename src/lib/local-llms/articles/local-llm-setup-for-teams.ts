@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'Local LLM Server Setup for Business Teams: Multi-User Access & Cost Control',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-en.webp',
@@ -335,6 +336,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'Lokaler LLM-Server für Business-Teams: Multi-User-Zugriff & Kostenscaling',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-de.webp',
@@ -622,6 +624,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'Configuration serveur LLM local pour équipes professionnelles: Accès multi-utilisateurs et contrôle des coûts',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-fr.webp',
@@ -918,6 +921,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'チームビジネス向けローカルLLMサーバー構築: マルチユーザーアクセスとコスト管理',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-ja.webp',
@@ -1214,6 +1218,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: '团队本地LLM服务器构建: 多用户访问与成本管理',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-zh.webp',
@@ -1510,6 +1515,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'Servidor LLM local para equipos empresariales: acceso multiusuario y control de costos',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-es.webp',
@@ -1799,6 +1805,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'خادم ⁨LLM⁩ محلي للفرق المؤسسية: وصول متعدد المستخدمين والتحكم في التكاليف',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-ar.webp',
@@ -2097,6 +2104,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'Servidor LLM local para equipes empresariais: acesso multiusuário e controle de custos',
       heroImage: '/images/local-llm-setup-for-teams-overview-hero-pt.webp',
@@ -2244,6 +2252,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '프라이버시 및 비즈니스',
       title: '비즈니스 팀을 위한 로컬 LLM 서버 설정: 다중 사용자 접근 및 비용 관리',
     heroImage: '/images/local-llm-setup-for-teams-overview-hero-ko.webp',

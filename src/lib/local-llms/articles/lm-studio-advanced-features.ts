@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-en.webp',
       title: 'LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning',
@@ -325,6 +326,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-de.webp',
       title: 'LM Studio erweiterte Funktionen 2026: GPU-Einstellungen, LoRA und Fine-Tuning',
@@ -719,6 +721,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-fr.webp',
       title: 'LM Studio : Fonctionnalités avancées 2026 (Paramètres GPU, LoRA et Fine-Tuning)',
@@ -1091,6 +1094,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-ja.webp',
       title: 'LM Studio高度な機能 2026: GPU設定、LoRA、ファインチューニング',
@@ -1266,6 +1270,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-zh.webp',
       title: 'LM Studio 高级功能 2026：GPU 设置、LoRA 与微调',
@@ -1442,6 +1447,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-es.webp',
       title: 'LM Studio: Funciones avanzadas 2026 (GPU, LoRA y ajuste fino)',
@@ -1761,6 +1767,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-ar.webp',
       title: '⁨LM Studio⁩: الميزات المتقدمة ⁨2026⁩ (⁨GPU⁩ و⁨LoRA⁩ والضبط الدقيق)',
@@ -2083,6 +2090,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-pt.webp',
       title: 'Recursos Avançados do LM Studio em 2026: GPU, LoRA e Fine-Tuning',
@@ -2266,6 +2274,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '도구 및 인터페이스',
     heroImage: '/images/lm-studio-advanced-features-overview-hero-ko.webp',
       title: 'LM Studio 고급 기능 2026: GPU 설정, LoRA, 파인튜닝',

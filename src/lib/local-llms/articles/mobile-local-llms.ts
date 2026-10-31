@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       last_full_refresh: '2026-08-27',
       next_seo_review_due: '2026-10-01',
       last_seo_review: '2026-08-27',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-en.webp',
@@ -487,6 +488,7 @@ schema: {
     de: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'Mobile lokale LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-de.webp',
@@ -940,6 +942,7 @@ schema: {
     fr: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'LLMs locaux mobiles 2026 : iPhone 16 Pro, iPad M4 & Snapdragon X',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-fr.webp',
@@ -1375,6 +1378,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'モバイル向けローカルLLM 2026：iPhone 16 Pro・iPad M4・Snapdragon X',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-ja.webp',
@@ -1819,6 +1823,7 @@ schema: {
     zh: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '移动本地LLM 2026：iPhone 16 Pro、iPad M4与Snapdragon X对比',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-zh.webp',
@@ -2272,6 +2277,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'LLMs locales en móviles 2026: iPhone 16 Pro, iPad M4 y Snapdragon X',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-es.webp',
@@ -2662,6 +2668,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'نماذج ⁨LLM⁩ المحلية على الهواتف ⁨2026⁩: ⁨iPhone 16 Pro⁩ و⁨iPad M4⁩ و⁨Snapdragon X⁩',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-ar.webp',
@@ -3052,6 +3059,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: 'LLMs Locais em Celulares 2026: iPhone 16 Pro, iPad M4 e Snapdragon X',
       heroImage: '/images/local-llms-mobile-local-llms-overview-hero-pt.webp',
@@ -3335,6 +3343,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
+      designSkin: 'hub',
       theme: 'Hardware & Performance',
       title: '모바일 로컬 LLM 2026: iPhone 16 Pro, iPad M4 & Snapdragon X',
     heroImage: '/images/local-llms-mobile-local-llms-overview-hero-ko.webp',

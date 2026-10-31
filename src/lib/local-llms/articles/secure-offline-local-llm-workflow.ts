@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-en.webp',
       title: 'How to Build a Secure Offline Local LLM Workflow',
@@ -194,6 +195,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-es.webp',
       title: 'Cómo construir un flujo de trabajo local con LLM offline seguro',
@@ -422,6 +424,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-ar.webp',
       title: 'كيفية بناء سير عمل آمن لنموذج ⁨LLM⁩ محلي يعمل دون اتصال',
@@ -650,6 +653,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-pt.webp',
       title: 'Como construir um fluxo de trabalho local com LLM offline seguro',
@@ -878,6 +882,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-de.webp',
       title: 'Sichere Offline-Workflow mit lokalen LLMs aufbauen',
@@ -1121,6 +1126,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-fr.webp',
       title: 'Construire un flux de travail LLM sécurisé hors ligne',
@@ -1349,6 +1355,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-ja.webp',
       title: 'セキュアなオフラインローカルLLMワークフローの構築',
@@ -1577,6 +1584,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-zh.webp',
       title: '构建安全的离线本地LLM工作流',
@@ -1805,6 +1813,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
     heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-ko.webp',
       title: '안전한 오프라인 로컬 LLM 워크플로우 구축 방법',

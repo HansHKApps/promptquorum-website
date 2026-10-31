@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Local LLM Model Updates 2026: Every Major Open-Weight Release This Year',
       dateModified: '2026-08-29',
@@ -400,6 +401,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Actualizaciones de modelos LLM locales 2026: Todos los lanzamientos open-weight importantes del año',
       seoTitle: 'LLM locales 2026: lanzamientos y estado en Ollama',
@@ -729,6 +731,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'تحديثات نماذج ⁨LLM⁩ المحلية ⁨2026⁩: جميع الإصدارات مفتوحة الأوزان المهمة في العام',
       seoTitle: 'تحديثات نماذج ⁨LLM 2026⁩: ⁨Llama⁩ و⁨Gemma⁩ و⁨Qwen⁩ في ⁨Ollama⁩',
@@ -1058,6 +1061,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Atualizações de modelos LLM locais 2026: Todos os grandes lançamentos open-weight do ano',
       seoTitle: 'LLMs locais 2026: lançamentos e status no Ollama',
@@ -1122,6 +1126,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ベストモデル',
       title: 'ローカルLLMモデルアップデート2026年：すべての大型オープンウェイトリリース',
       seoTitle: 'ローカルLLM 2026年：すべての主要モデルリリース + Ollama対応',
@@ -1419,6 +1424,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Beste Modelle',
       title: 'Lokale LLM-Modell-Updates 2026: Alle großen Open-Weight-Releases dieses Jahr',
       seoTitle: 'Lokale LLMs 2026: Gemma 3, Llama 4 und Ollama-Status',
@@ -1707,6 +1713,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '最佳模型',
       title: '本地LLM模型更新2026年：所有大型开源权重发布',
       seoTitle: '本地LLM新模型2026：Gemma 3、Llama 4与Ollama支持',
@@ -2061,6 +2068,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Meilleurs modèles',
       title: 'Mises à jour des LLM locaux 2026 : Chaque release open-weight majeure de l\'année',
       seoTitle: 'LLM locaux 2026: Gemma 3, Llama 4 et disponibilité Ollama',
@@ -2341,6 +2349,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: '로컬 LLM 모델 업데이트 2026: 올해 출시된 주요 오픈 웨이트 모델 총정리',
       seoTitle: '로컬 LLM 2026: 주요 모델 출시 현황 + Ollama 지원 여부',

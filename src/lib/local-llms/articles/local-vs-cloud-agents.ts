@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Local vs Cloud AI Agents 2026: Cost, Speed, Privacy Comparison',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-en.webp',
@@ -274,6 +275,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Agentes de IA Local vs Cloud 2026: Comparativa de Coste, Velocidad y Privacidad',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-es.webp',
@@ -546,6 +548,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'وكلاء الذكاء الاصطناعي المحليون مقابل السحابيين ⁨2026⁩: مقارنة التكلفة والسرعة والخصوصية',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-ar.webp',
@@ -818,6 +821,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Agentes de IA Local vs Nuvem 2026: Comparação de Custo, Velocidade e Privacidade',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-pt.webp',
@@ -1049,6 +1053,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Fortgeschrittene Techniken',
       title: 'Local vs Cloud AI Agenten 2026: Kosten-, Geschwindigkeit- und Datenschutzvergleich',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-de.webp',
@@ -1365,6 +1370,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Techniques avancées',
       title: 'Agents IA Cloud vs Locaux 2026 : Comparaison des coûts, vitesse et confidentialité',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-fr.webp',
@@ -1680,6 +1686,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'アドバンスドテクニック',
       title: 'Local vs Cloud AIエージェント2026: コスト・速度・プライバシー比較',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-ja.webp',
@@ -1955,6 +1962,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '高级技术',
       title: '本地 vs 云端AI代理2026: 成本、速度和隐私对比',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-zh.webp',
@@ -2230,6 +2238,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: '로컬 vs 클라우드 AI 에이전트 2026: 비용, 속도, 개인정보 보호 비교',
     heroImage: '/images/local-vs-cloud-agents-overview-hero-ko.webp',

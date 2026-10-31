@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Local AI Agents With LangGraph and Ollama: Build Autonomous Decision-Making Systems',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-en.webp',
@@ -348,6 +349,7 @@ schema: {
     de: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Fortgeschrittene Techniken',
       title: 'Lokale KI-Agenten mit LangGraph und Ollama: Autonome Entscheidungsfindungssysteme bauen',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-de.webp',
@@ -655,6 +657,7 @@ schema: {
     fr: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Techniques Avancées',
       title: 'Agents IA Locaux avec LangGraph et Ollama : Construire des Systèmes de Prise de Décision Autonomes',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-fr.webp',
@@ -952,6 +955,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: '高度なテクニック',
       title: 'LangGraphとOllamaを使用したローカルAIエージェント：自律的な意思決定システムを構築する',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-ja.webp',
@@ -1249,6 +1253,7 @@ schema: {
     zh: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: '高级技术',
       title: '使用LangGraph和Ollama的本地AI智能体：构建自主决策系统',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-zh.webp',
@@ -1546,6 +1551,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Agentes de IA Locales con LangGraph y Ollama: Construye Sistemas de Toma de Decisiones Autónomos',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-es.webp',
@@ -1851,6 +1857,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'وكلاء الذكاء الاصطناعي المحليون باستخدام ⁨LangGraph⁩ و⁨Ollama⁩: بناء أنظمة اتخاذ قرار مستقلة',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-ar.webp',
@@ -2158,6 +2165,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: 'Advanced Techniques',
       title: 'Agentes de IA Locais com LangGraph e Ollama: Construa Sistemas de Decisão Autônomos',
       heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-pt.webp',
@@ -2433,6 +2441,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
+      designSkin: 'hub',
       theme: '고급 기법',
       title: 'LangGraph와 Ollama로 구축하는 로컬 AI 에이전트: 자율 의사결정 시스템 구축 가이드',
     heroImage: '/images/local-ai-agents-langgraph-ollama-overview-hero-ko.webp',

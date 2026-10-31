@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'monthly',
       next_refresh_due: '2026-12-03',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'Q4 vs Q5 vs Q8: Which Quantization Level Should You Use?',
       seoTitle: 'Q4 vs Q5 vs Q8: Best LLM Quantization for Speed, RAM & Quality (2026)',
@@ -258,6 +259,7 @@ schema: {
     },
     es: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'Q4 vs Q5 vs Q8: ¿Qué nivel de cuantización deberías usar?',
       seoTitle: 'Q4 vs Q5 vs Q8 2026: mejor cuantización LLM para velocidad',
@@ -505,6 +507,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: '⁨Q4⁩ مقابل ⁨Q5⁩ مقابل ⁨Q8⁩: أي مستوى تكميم ينبغي أن تستخدم؟',
       seoTitle: '⁨Q4⁩ مقابل ⁨Q8⁩: أفضل مستوى تكميم ⁨GGUF⁩ لنماذج ⁨LLM⁩',
@@ -752,6 +755,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'Q4 vs Q5 vs Q8: qual nível de quantização você deve usar?',
       seoTitle: 'Q4 vs Q5 vs Q8 2026: melhor quantização LLM para velocidade',
@@ -998,6 +1002,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Modelle nach Anwendungsfall',
       title: 'Q4 vs Q5 vs Q8: Welche Quantisierungsstufe sollten Sie wählen?',
       seoTitle: 'Quantisierungsstufen 2026: Q2 bis Q8 für lokale LLMs',
@@ -1248,6 +1253,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: 'Modèles par cas d\'utilisation',
       title: 'Q4 vs Q5 vs Q8 : Quel niveau de quantification utiliser ?',
       seoTitle: 'Q4 vs Q5 vs Q8 : Meilleure quantification LLM pour vitesse, RAM et qualité (2026)',
@@ -1491,6 +1497,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: 'ユースケース別モデル',
       title: 'Q4 vs Q5 vs Q8: どの量子化レベルを使用する?',
       seoTitle: 'Q4 vs Q5 vs Q8: 速度、RAM、品質に最適なLLM量子化(2026)',
@@ -1652,6 +1659,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'monthly',
+      designSkin: 'hub',
       theme: '按用途分类的模型',
       title: 'Q4 vs Q5 vs Q8: 应该使用哪个量子化级别?',
       seoTitle: 'Q4 vs Q5 vs Q8: 本地LLM最优量子化级别2026',
@@ -1814,6 +1822,7 @@ schema: {
   ko: {
       freshness_tier: 'monthly',
       next_refresh_due: '2026-12-03',
+      designSkin: 'hub',
       theme: 'Models by Use Case',
       title: 'Q4 vs Q5 vs Q8: 어떤 양자화 수준을 사용해야 할까요?',
       seoTitle: 'Q4 vs Q5 vs Q8: 속도, RAM, 품질을 위한 최적의 LLM 양자화 (2026)',

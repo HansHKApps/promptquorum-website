@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Multilingual Local LLMs: Best Models for Non-English Languages in 2026',
       heroImage: '/images/multilingual-local-llms-overview-hero-en.webp',
@@ -185,6 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     es: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Los mejores LLM locales multilingues 2026: Qwen3 vs Mistral',
       heroImage: '/images/multilingual-local-llms-overview-hero-es.webp',
@@ -519,6 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     },
     ar: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية متعددة اللغات ⁨2026⁩: ⁨Qwen3⁩ مقابل ⁨Mistral⁩',
       heroImage: '/images/multilingual-local-llms-overview-hero-ar.webp',
@@ -853,6 +856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     },
     pt: {
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Melhores LLMs Locais Multilíngues 2026: Qwen3 vs Mistral',
       heroImage: '/images/multilingual-local-llms-overview-hero-pt.webp',
@@ -1032,6 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Einstieg',
       title: 'Beste mehrsprachige lokale LLMs 2026: Qwen3 vs. Mistral',
       heroImage: '/images/multilingual-local-llms-overview-hero-de.webp',
@@ -1566,6 +1571,7 @@ schema: {
       }
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Meilleurs modèles',
       title: 'Meilleurs LLMs locaux multilingues 2026 : Qwen3 vs Mistral',
       heroImage: '/images/multilingual-local-llms-overview-hero-fr.webp',
@@ -2075,6 +2081,7 @@ schema: {
       }
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ベストモデル',
       title: 'ベスト多言語ローカルLLM 2026：Qwen3 vs Mistral',
       heroImage: '/images/multilingual-local-llms-overview-hero-ja.webp',
@@ -2589,6 +2596,7 @@ schema: {
       }
     },
     zh: {
+      designSkin: 'hub',
       theme: '最佳模型',
       title: '多语言本地LLM：2026年非英语语言的最佳模型',
       heroImage: '/images/multilingual-local-llms-overview-hero-zh.webp',
@@ -2798,6 +2806,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: '다국어 로컬 LLM: 2026년 비영어권 언어에 최적화된 모델',
     heroImage: '/images/multilingual-local-llms-overview-hero-ko.webp',

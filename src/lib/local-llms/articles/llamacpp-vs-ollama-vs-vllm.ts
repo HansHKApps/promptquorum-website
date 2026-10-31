@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-en.webp',
@@ -336,6 +337,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'llama.cpp vs Ollama vs vLLM 2026: Velocidad, Batching y Benchmarks GPU',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-es.webp',
@@ -667,6 +669,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: '⁨llama.cpp⁩ مقابل ⁨Ollama⁩ مقابل ⁨vLLM 2026⁩: السرعة والـ ⁨Batching⁩ ومعايير ⁨GPU⁩',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-ar.webp',
@@ -989,6 +992,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Tools & Interfaces',
       title: 'llama.cpp vs Ollama vs vLLM 2026: Velocidade, Batching e Benchmarks GPU',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-pt.webp',
@@ -1311,6 +1315,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Tools & Schnittstellen',
       title: 'llama.cpp vs Ollama vs vLLM 2026: Geschwindigkeit & GPU-Benchmarks',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-de.webp',
@@ -1615,6 +1620,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Outils & Interfaces',
       title: 'llama.cpp vs Ollama vs vLLM 2026 : Vitesse & Benchmarks GPU',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-fr.webp',
@@ -1922,6 +1928,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'ツール＆インターフェイス',
       title: 'llama.cpp vs Ollama vs vLLM 2026：速度・バッチ処理・GPU性能比較',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-ja.webp',
@@ -2244,6 +2251,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '工具与接口',
       title: 'llama.cpp vs Ollama vs vLLM：选择哪个推理后端？',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-zh.webp',
@@ -2621,6 +2629,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: '도구 및 인터페이스',
       title: 'llama.cpp vs Ollama vs vLLM 2026: 속도, 배칭 및 GPU 벤치마크',
     heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-ko.webp',
