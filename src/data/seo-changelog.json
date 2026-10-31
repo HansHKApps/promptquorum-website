@@ -6386,5 +6386,29 @@
       "period": "28d to 2026-10-28 (blended page)"
     },
     "deployedAt": null
+  },
+  {
+    "id": "2cc1823f-7188-4d2b-b043-3d52ba59cec5",
+    "slug": "balcony-solar/net-metering-rollback-balcony-solar-2027",
+    "date": "2026-10-31T07:48:59.164Z",
+    "fields": [
+      {
+        "field": "metaDescription,seoTitle",
+        "old": "en desc 157ch, ar desc 155ch, zh desc 65ch, ko title 26ch (out of budget)",
+        "new": "all 9 locales within budget; 2 FAQs added (plug-in feed-in pay, free switch)"
+      }
+    ],
+    "queries": [
+      "net metering netherlands",
+      "wie wird in den niederlanden der pv-strom von bkw vergütet?"
+    ],
+    "baseline": {
+      "position": 11.5,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC export 2026-10-31 (last 28 days)"
+    },
+    "deployedAt": null
   }
 ]
