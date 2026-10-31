@@ -7,8 +7,8 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-19',
-    last_full_refresh: '2026-10-19',
+    next_refresh_due: '2027-04-30',
+    last_full_refresh: '2026-10-31',
     theme: 'Balcony Solar Long-Tail',
     heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-en.webp',
     title: 'Balcony Solar for Landlords and Housing Associations in 2027',
@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'In Germany, tenants and condominium owners have had a legal claim to plug-in solar devices ("Steckersolargeräte") since October 17, 2024, which moves the landlord question from "may I?" to "how, and on what terms?". This page explains what the law says, what landlords and owner communities may require, how a large landlord (Vonovia) has handled requests, and what the EU building directive does and does not demand. It is general information about Germany, not legal advice.',
     metaDescription: 'Since October 2024, German tenants and condo owners can claim a plug-in solar device. What landlords may require, and what the EU EPBD says.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min read',
     educationalLevel: 'Beginner',
     audience: 'Landlords, property managers, housing associations and tenants in Germany assessing plug-in solar',
@@ -37,8 +37,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Landlords and owner communities can set rules on mounting; Haufe notes that such requirements must not be excessive',
           'Vonovia agreed to an Aachen tenant\'s installation without reservation in January 2026 after a lawsuit backed by Deutsche Umwelthilfe. A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic',
           'The EPBD (Directive (EU) 2024/1275) makes solar the norm for new buildings and certain existing non-residential buildings; it does not require landlords to install plug-in solar',
+          'Case law is thin and mostly from local courts: vague liability concerns were rejected (Amtsgericht Hamburg-Wandsbek, December 2025), but landlords won where the installation was unsafe (Amtsgericht Köln, Amtsgericht Dresden). The DUH filed an injunction suit against Vonovia\'s permission agreement at the Oberlandesgericht Hamm (announced September 17, 2026; no ruling reported)',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -46,6 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What German Law Gives Tenants and Owners', anchor: '#legal-claim', },
       { label: 'Why the EU Building Directive Does Not Mandate Plug-In Solar', anchor: '#regulatory-driver', },
       { label: 'How Large Landlords Are Handling Requests', anchor: '#landlord-practice', },
+      { label: 'What Courts and Case Law Say So Far', anchor: '#court-practice', },
       { label: 'What Landlords and Owner Communities Can Require, and What Renters Should Do', anchor: '#landlord-rules', },
       { label: 'The Bulk-Procurement Channel', anchor: '#b2b-channel', },
       { label: 'Sources', anchor: '#sources', },
@@ -59,9 +61,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Since October 17, 2024, § 554 (1) BGB gives tenants, and § 20 (2) no. 5 WEG gives condominium owners, a claim to measures serving electricity generation by plug-in solar devices.',
           'A tenant\'s claim fails only if the measure is unreasonable for the landlord even after weighing the tenant\'s interests (§ 554 BGB). Agreements that disadvantage the tenant and deviate from the rule are void.',
-          'Landlords and owner communities keep a say in how a device is mounted, but requirements must not be excessive. Whether a community resolution is formally required is not settled in the sources we checked; ask your administrator.',
+          'Landlords and owner communities keep a say in how a device is mounted, but requirements must not be excessive. The statute text does not say whether a community resolution is formally required; reports on a July 2025 Federal Court of Justice (BGH) judgment suggest that a clearly visible installation without a resolution can be ordered removed, so ask your administrator and apply for a resolution before installing.',
           'Vonovia conceded an Aachen tenant\'s installation without reservation in January 2026. A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic.',
           'The EU building directive does not require landlords to install plug-in solar, and we could not verify reports of landlord programs with 50,000+ units.',
+          'Case law is thin and mostly from local courts: one court rejected vague liability concerns (Amtsgericht Hamburg-Wandsbek, December 2025), while others sided with landlords where the installation was unsafe (Amtsgericht Köln, Amtsgericht Dresden). On September 17, 2026 the DUH announced an injunction suit against Vonovia\'s standard permission agreement at the Oberlandesgericht Hamm; no ruling had been reported.',
         ],
       },
       legalClaim: {
@@ -69,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What German Law Gives Tenants and Owners',
         content: [
           '**Since October 17, 2024, German law lists plug-in solar devices among the measures tenants and condominium owners can demand.** § 554 (1) BGB lets a tenant ask the landlord to allow structural changes that serve electricity generation by plug-in solar devices ("Steckersolargeräte"), alongside accessibility, EV charging and burglary protection. The claim fails if the change is unreasonable for the landlord even after weighing the tenant\'s interests. § 554 (2) BGB makes agreements that disadvantage the tenant and deviate from the rule void. The tenant may agree to provide special security, with § 551 (3) BGB applying accordingly.',
-          '**§ 20 (2) no. 5 WEG gives each condominium owner the same kind of claim.** The owner community decides on the implementation within proper administration. Haufe notes that consent can no longer be refused without good reason, that owners and landlords keep a say in how a device is mounted, and that the requirements must not be excessive. Whether a community resolution is still formally required is not settled in the sources we checked, so ask your administrator.',
+          '**§ 20 (2) no. 5 WEG gives each condominium owner the same kind of claim.** The owner community decides on the implementation within proper administration. Haufe notes that consent can no longer be refused without good reason, that owners and landlords keep a say in how a device is mounted, and that the requirements must not be excessive. The statute text does not say whether a resolution is still formally required; Haufe and Cleanthinking report that the Federal Court of Justice (BGH, July 18, 2025, V ZR 29/24) let a community demand removal of a clearly visible plug-in system installed without a resolution. We did not read the full decision and could not confirm which version of the law applied, so ask your administrator and apply for a resolution before installing.',
         ],
       },
       regulatoryDriver: {
@@ -86,6 +89,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Large landlords decide case by case, and the practice is contested.** In January 2026 Vonovia agreed "without reservation" to an Aachen tenant\'s balcony system after a lawsuit supported by Deutsche Umwelthilfe (DUH); according to the DUH, Vonovia had demanded wind-load calculations, structural proofs and compliance with a vertical-glazing standard. The DUH wants Vonovia to revise its installation rules.',
           '**A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic.** These are positions reported by third parties, not court rulings on storage; see [Balcony Solar Batteries in 2027](/balcony-solar/balcony-solar-battery-storage-standard-2027) for the storage rules.',
+          '**On September 17, 2026 the DUH announced that it had filed an injunction suit against Vonovia\'s standard permission agreement ("Gestattungsvereinbarung") at the Oberlandesgericht Hamm; no ruling had been reported at that date.** According to the DUH, tenants with an outdoor socket must sign the agreement and accept an on-site inspection, bear the costs of any defects found and release Vonovia from liability, and drilling or routing cables indoors is generally not permitted for tenants without an outdoor socket. These are the DUH\'s descriptions of Vonovia\'s terms; we found no Vonovia statement on the suit.',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: 'What Courts and Case Law Say So Far',
+        content: [
+          '**In the cases reported so far, courts accepted conditions on how a device is installed and rejected a blanket refusal; the case law is thin and mostly at local-court level.** On December 2, 2025 the Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) held that vague liability or appearance concerns did not justify a removal claim and, according to Cleanthinking, relied on the new product standard to allow a connection to a normal outdoor socket. Haufe and the VDIV reported the judgment as not yet final.',
+          '**Courts have also ruled for landlords where the installation was unsafe.** The Amtsgericht Köln (December 13, 2024, Az. 208 C 460/23) ordered a tenant to remove two modules hung on the outside of a balcony railing without consent because of the risk in storms; according to Cleanthinking (October 18, 2026) the appeal is pending at the Landgericht Köln. The Amtsgericht Dresden (May 18, 2026, Az. 143 C 1125/25) dismissed a tenant\'s claim where two modules stood above the railing and left a gap of about 4 cm that, the landlord argued, children could get stuck in; the court agreed, as reported by Vermieter-Web (October 23, 2026).',
+          '**The VDIV, an industry association of property managers, summarizes the conditions a landlord may generally impose as proof of private liability insurance, standard-compliant components, proper installation, registration in the Marktstammdatenregister and removal on move-out.** According to Cleanthinking, no court has yet decided whether a landlord may demand a deposit. These are secondary reports, not legal advice; check the full judgments before relying on any of them.',
         ],
       },
       landlordRules: {
@@ -94,6 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Rules on how a device is mounted are allowed; rules that empty the claim are not.** The device itself is limited by the law and the product standard: the EEG definition allows up to 800 W inverter output and 2,000 W of modules, while the product standard DIN VDE V 0126-95 allows up to 960 W of modules with a normal household plug and up to 2,000 Wp with a special energy plug installed by an electrician. The operator registers the device in the Marktstammdatenregister (five technical details); since the Solarpaket I (May 2024) the grid operator no longer has to be informed directly.',
           '**For renters, the practical sequence is to ask in writing, name the device and the mounting method, offer to follow reasonable mounting rules and keep the answer.** If consent is refused without a reason, consumer advice centres and tenant associations can help. This is general information, not legal advice.',
+          '**Conditions that the VDIV lists as generally permissible are narrow and concrete:** proof of private liability insurance, standard-compliant components, proper installation, registration and removal on move-out. A genuine safety defect can justify a refusal; the tenant-side losses reported above involved modules hung outside or standing above the railing, so describe the mounting method precisely in your request. This is general information, not legal advice.',
         ],
       },
       b2bChannel: {
@@ -147,6 +161,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE — FAQ zur DIN VDE V 0126-95',
             description: 'Product standard limits: 800 VA, 960 W with a normal plug, 2,000 Wp with a special energy plug',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe — press release of September 17, 2026',
+            description: 'Injunction suit against Vonovia\'s permission agreement at the Oberlandesgericht Hamm; the DUH\'s description of Vonovia\'s terms',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV — Courts strengthen the claim to balcony solar (January 20, 2026)',
+            description: 'Summary of the Amtsgericht Hamburg-Wandsbek judgment (Az. 714 C 160/25) and conditions landlords may impose',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe — Streit um Balkonkraftwerke vor Gericht',
+            description: 'Case-law overview: Amtsgericht Köln, Amtsgericht Hamburg-Wandsbek and the BGH judgment V ZR 29/24 on condominiums',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking — tenants, owners and balcony solar (October 18, 2026)',
+            description: 'Overview of the 2024 law, case law and open questions such as deposits',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web — landlord consent for balcony solar (October 23, 2026)',
+            description: 'Report on the Amtsgericht Dresden judgment of May 18, 2026 (Az. 143 C 1125/25)',
+          },
         ],
       },
       faqSection: {
@@ -159,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do condominium owners need a community resolution?',
-            a: '§ 20 (2) no. 5 WEG gives each owner a claim to appropriate structural changes for plug-in solar devices, and the community decides on the implementation within proper administration. The sources we checked do not settle whether a resolution is still formally required, so ask your administrator.',
+            a: '§ 20 (2) no. 5 WEG gives each owner a claim to appropriate structural changes for plug-in solar devices, and the community decides on the implementation within proper administration. Haufe and Cleanthinking report that the Federal Court of Justice (V ZR 29/24, July 18, 2025) let a community demand removal of a clearly visible system installed without a resolution. We did not read the full decision, so ask your administrator and apply for a resolution before installing.',
           },
           {
             q: 'Do large German landlords run balcony solar programs?',
@@ -176,6 +215,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Which limits apply to a plug-in solar device in Germany?',
             a: 'The EEG definition allows up to 800 W inverter output and 2,000 W of modules. The product standard DIN VDE V 0126-95 allows up to 960 W of modules with a normal household plug and up to 2,000 Wp with a special energy plug installed by an electrician. The standard does not cover devices with storage.',
+          },
+          {
+            q: 'What conditions may a landlord attach to balcony solar?',
+            a: 'The VDIV, an industry association of property managers, summarizes generally permissible conditions as proof of private liability insurance, standard-compliant components, proper installation, registration in the Marktstammdatenregister and removal on move-out. The Amtsgericht Hamburg-Wandsbek (December 2, 2025, Az. 714 C 160/25; reported as not yet final) rejected a blanket refusal citing vague liability risks. According to Cleanthinking, no court has decided whether a landlord may demand a deposit. This is general information, not legal advice.',
+          },
+          {
+            q: 'Have German courts ruled on balcony solar disputes?',
+            a: 'Yes, mostly at local-court level, and the picture is mixed. The Amtsgericht Hamburg-Wandsbek sided with a tenant against vague liability concerns, while the Amtsgericht Köln (December 13, 2024, Az. 208 C 460/23) and the Amtsgericht Dresden (May 18, 2026, Az. 143 C 1125/25) sided with landlords where the installation was a safety risk. The DUH\'s injunction suit against Vonovia\'s permission agreement is pending at the Oberlandesgericht Hamm. Check the full judgments before relying on any of them.',
           },
         ],
       },
@@ -199,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'في ألمانيا، يتمتع المستأجرون وملّاك الوحدات بحق قانوني في الأجهزة الشمسية القابلة للتوصيل بالمقبس («Steckersolargeräte») منذ 17 أكتوبر 2024، مما ينقل سؤال المؤجّر من «هل يجوز لي؟» إلى «كيف وبأي شروط؟». تشرح هذه الصفحة ما ينص عليه القانون، وما يجوز للمؤجّرين وجمعيات الملّاك اشتراطه، وكيف تعاملت شركة عقارية كبيرة (Vonovia) مع الطلبات، وما تتطلبه توجيهات الاتحاد الأوروبي للمباني وما لا تتطلبه. هذه معلومات عامة عن ألمانيا وليست استشارة قانونية.',
     metaDescription: 'منذ أكتوبر 2024 يحق للمستأجرين وملّاك الوحدات في ألمانيا المطالبة بجهاز شمسي قابل للتوصيل بالمقبس. ما يجوز للمؤجّر اشتراطه، وما تقوله EPBD.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'المؤجّرون ومديرو العقارات وجمعيات الإسكان والمستأجرون في ألمانيا الذين يقيّمون الطاقة الشمسية القابلة للتوصيل بالمقبس',
@@ -220,8 +267,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يستطيع المؤجّرون وجمعيات الملّاك وضع قواعد للتركيب؛ وتشير Haufe إلى أن هذه الاشتراطات يجب ألا تكون مفرطة',
           'وافقت Vonovia دون تحفظ على تركيب مستأجر في آخن في يناير 2026 بعد دعوى دعمتها Deutsche Umwelthilfe. ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي',
           'تجعل EPBD (التوجيه (EU) 2024/1275) الطاقة الشمسية القاعدة في المباني الجديدة وبعض المباني القائمة غير السكنية؛ ولا تُلزم المؤجّرين بتركيب أجهزة شمسية قابلة للتوصيل بالمقبس',
+          'الاجتهاد القضائي محدود ويأتي في معظمه من المحاكم المحلية: رُفضت مخاوف المسؤولية الغامضة (Amtsgericht Hamburg-Wandsbek، ديسمبر 2025)، لكن المؤجّرين كسبوا حين كان التركيب غير آمن (Amtsgericht Köln وAmtsgericht Dresden). رفعت DUH دعوى لوقف الممارسة ضد اتفاقية الإذن لدى Vonovia أمام Oberlandesgericht Hamm (أُعلن عنها في 17 سبتمبر 2026؛ ولم يُبلَّغ عن حكم)',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -229,6 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ما يمنحه القانون الألماني للمستأجرين وملّاك الوحدات', anchor: '#legal-claim', },
       { label: 'لماذا لا تفرض توجيهات الاتحاد الأوروبي للمباني الطاقة الشمسية القابلة للتوصيل بالمقبس', anchor: '#regulatory-driver', },
       { label: 'كيف تتعامل الشركات العقارية الكبيرة مع الطلبات', anchor: '#landlord-practice', },
+      { label: 'ما تقوله المحاكم والاجتهاد القضائي حتى الآن', anchor: '#court-practice', },
       { label: 'ما يجوز للمؤجّرين وجمعيات الملّاك اشتراطه، وما ينبغي للمستأجرين فعله', anchor: '#landlord-rules', },
       { label: 'قناة الشراء بالجملة', anchor: '#b2b-channel', },
       { label: 'المصادر', anchor: '#sources', },
@@ -242,9 +291,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'منذ 17 أكتوبر 2024 يمنح § 554 (1) BGB المستأجرين، و§ 20 (2) رقم 5 WEG ملّاك الوحدات، حقًا في إجراءات تخدم توليد الكهرباء بأجهزة شمسية قابلة للتوصيل بالمقبس.',
           'لا يسقط حق المستأجر إلا إذا كان الإجراء غير معقول للمؤجّر حتى بعد موازنته بمصالح المستأجر (§ 554 BGB). وأي اتفاق مخالف يضر بالمستأجر يكون باطلًا.',
-          'يحتفظ المؤجّرون وجمعيات الملّاك بحق إبداء الرأي في طريقة التركيب، لكن يجب ألا تكون الاشتراطات مفرطة. أما هل لا يزال قرار الجمعية مطلوبًا شكليًا فلم تحسمه المصادر التي راجعناها؛ اسأل مدير العقار.',
+          'يحتفظ المؤجّرون وجماعات الملّاك بحق إبداء الرأي في طريقة تركيب الجهاز، لكن لا يجوز أن تكون الاشتراطات مفرطة. لا ينص نص القانون على ما إذا كان قرار الجماعة لا يزال مطلوبًا شكليًا؛ وتفيد تقارير عن حكم المحكمة الاتحادية العدلية (BGH) الصادر في يوليو 2025 بأن التركيب الظاهر بوضوح دون قرار قد يُؤمر بإزالته. لذا اسأل مدير العقار واطلب قرارًا قبل التركيب.',
           'رضخت Vonovia دون تحفظ لتركيب مستأجر في آخن في يناير 2026. ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي.',
           'لا تُلزم توجيهات الاتحاد الأوروبي للمباني المؤجّرين بتركيب أجهزة شمسية قابلة للتوصيل بالمقبس، ولم نتمكن من التحقق من تقارير عن برامج مؤجّرين تتجاوز 50,000 وحدة.',
+          'الاجتهاد القضائي محدود ويأتي في معظمه من المحاكم المحلية: فقد رفضت إحدى المحاكم مخاوف المسؤولية الغامضة (Amtsgericht Hamburg-Wandsbek، ديسمبر 2025)، بينما انحازت محاكم أخرى إلى المؤجّرين حين كان التركيب غير آمن (Amtsgericht Köln وAmtsgericht Dresden). وفي 17 سبتمبر 2026 أعلنت DUH رفع دعوى لوقف الممارسة ضد اتفاقية الإذن القياسية لدى Vonovia أمام Oberlandesgericht Hamm؛ ولم يُبلَّغ عن أي حكم.',
         ],
       },
       legalClaim: {
@@ -252,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما يمنحه القانون الألماني للمستأجرين وملّاك الوحدات',
         content: [
           '**منذ 17 أكتوبر 2024 يدرج القانون الألماني الأجهزة الشمسية القابلة للتوصيل بالمقبس ضمن الإجراءات التي يحق للمستأجرين وملّاك الوحدات المطالبة بها.** يتيح § 554 (1) BGB للمستأجر أن يطلب من المؤجّر الإذن بتغييرات إنشائية تخدم توليد الكهرباء بأجهزة شمسية قابلة للتوصيل بالمقبس («Steckersolargeräte»)، إلى جانب إمكانية الوصول وشحن المركبات الكهربائية والحماية من السرقة. ويسقط الحق إذا كان التغيير غير معقول للمؤجّر حتى بعد موازنته بمصالح المستأجر. ويجعل § 554 (2) BGB الاتفاقات المخالفة التي تضر بالمستأجر باطلة. ويجوز للمستأجر أن يوافق على تقديم ضمان خاص، مع سريان § 551 (3) BGB بالقياس.',
-          '**يمنح § 20 (2) رقم 5 WEG كل مالك وحدة حقًا من النوع نفسه.** وتقرر جمعية الملّاك التنفيذ ضمن الإدارة السليمة. وتشير Haufe إلى أن الموافقة لا يمكن رفضها بعد الآن دون سبب وجيه، وأن للملّاك والمؤجّرين رأيًا في طريقة تركيب الجهاز، وأن الاشتراطات يجب ألا تكون مفرطة. أما هل لا يزال قرار الجمعية مطلوبًا شكليًا فلم تحسمه المصادر التي راجعناها، لذا اسأل مدير العقار.',
+          '**يمنح § 20 (2) رقم 5 WEG كل مالك وحدة حقًا من النوع نفسه.** وتقرر الجماعة تنفيذه ضمن الإدارة الرشيدة. وتشير Haufe إلى أنه لم يعد يجوز رفض الموافقة دون سبب وجيه، وأن الملّاك والمؤجّرين يحتفظون بحق إبداء الرأي في طريقة التركيب، وأن الاشتراطات يجب ألا تكون مفرطة. ولا ينص نص القانون على ما إذا كان القرار لا يزال مطلوبًا شكليًا؛ وتفيد Haufe وCleanthinking بأن المحكمة الاتحادية العدلية (BGH، 18 يوليو 2025، V ZR 29/24) سمحت لجماعة ملّاك بطلب إزالة منظومة قابلة للتوصيل بالمقبس ظاهرة بوضوح رُكّبت دون قرار. لم نقرأ الحكم كاملًا ولم نتمكن من تأكيد أي صيغة من القانون طُبّقت، لذا اسأل مدير العقار واطلب قرارًا قبل التركيب.',
         ],
       },
       regulatoryDriver: {
@@ -269,6 +319,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**تقرر الشركات العقارية الكبيرة كل حالة على حدة، والممارسة محل خلاف.** في يناير 2026 وافقت Vonovia «دون تحفظ» على منشأة شرفة لمستأجر في آخن بعد دعوى قضائية دعمتها Deutsche Umwelthilfe (DUH)؛ ووفق DUH كانت Vonovia قد طالبت بحسابات حمل الرياح وإثباتات إنشائية والامتثال لمعيار الزجاج الرأسي. وتريد DUH أن تراجع Vonovia قواعد التركيب لديها.',
           '**ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي.** هذه مواقف ينقلها أطراف ثالثة، وليست أحكامًا قضائية بشأن التخزين؛ وللاطلاع على قواعد التخزين انظر [بطاريات الطاقة الشمسية للشرفة في 2027](/ar/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**في 17 سبتمبر 2026 أعلنت DUH أنها رفعت دعوى لوقف الممارسة ضد اتفاقية الإذن القياسية لدى Vonovia («Gestattungsvereinbarung») أمام Oberlandesgericht Hamm؛ ولم يُبلَّغ عن أي حكم حتى ذلك التاريخ.** وبحسب DUH، يجب على المستأجرين الذين لديهم مقبس خارجي توقيع الاتفاقية وقبول فحص ميداني وتحمّل تكاليف العيوب المكتشفة وإبراء ذمة Vonovia من المسؤولية، أما المستأجرون بلا مقبس خارجي فلا يُسمح لهم من حيث المبدأ بالحفر أو تمديد الكابلات داخل المسكن. هذه أوصاف DUH لشروط Vonovia؛ ولم نعثر على بيان من Vonovia بشأن الدعوى.',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: 'ما تقوله المحاكم والاجتهاد القضائي حتى الآن',
+        content: [
+          '**في القضايا المُبلَّغ عنها حتى الآن، قبلت المحاكم اشتراطات بشأن طريقة التركيب ورفضت الرفض الشامل؛ والاجتهاد القضائي محدود ويأتي في معظمه من المحاكم المحلية.** ففي 2 ديسمبر 2025 قضت Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) بأن مخاوف المسؤولية أو المظهر الغامضة لا تبرر طلب الإزالة، واستندت وفق Cleanthinking إلى معيار المنتج الجديد للسماح بالتوصيل بمقبس خارجي عادي. وأفادت Haufe وVDIV بأن الحكم لم يصبح نهائيًا بعد.',
+          '**وحكمت المحاكم أيضًا لصالح مؤجّرين حين كان التركيب غير آمن.** فقد أمرت Amtsgericht Köln (13 ديسمبر 2024، Az. 208 C 460/23) مستأجرًا بإزالة لوحين علّقهما دون موافقة على الجانب الخارجي من حاجز الشرفة بسبب الخطر أثناء العواصف؛ ووفق Cleanthinking (18 أكتوبر 2026) فإن الاستئناف قيد النظر أمام Landgericht Köln. ورفضت Amtsgericht Dresden (18 مايو 2026، Az. 143 C 1125/25) دعوى مستأجر ارتفع لوحاه فوق الحاجز وتركا فجوة نحو 4 سم قال المؤجّر إن الأطفال قد يعلقون فيها، ووافقته المحكمة، وفق ما أوردته Vermieter-Web (23 أكتوبر 2026).',
+          '**تلخّص VDIV، وهي جمعية قطاعية لمديري العقارات، الشروط التي يجوز للمؤجّر فرضها عمومًا في:** إثبات تأمين المسؤولية المدنية الخاص، ومكونات مطابقة للمعيار، وتركيب سليم، والتسجيل في Marktstammdatenregister، والإزالة عند الانتقال. ووفق Cleanthinking لم تبتّ أي محكمة بعد في جواز مطالبة المؤجّر بتأمين نقدي. هذه تقارير ثانوية وليست استشارة قانونية؛ راجع الأحكام كاملة قبل الاعتماد على أي منها.',
         ],
       },
       landlordRules: {
@@ -277,6 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**القواعد المتعلقة بطريقة تركيب الجهاز مسموحة؛ أما القواعد التي تُفرغ الحق من مضمونه فغير مسموحة.** والجهاز نفسه مقيَّد بالقانون ومعيار المنتج: يسمح تعريف EEG بخرج عاكس يصل إلى 800 W وألواح بقدرة 2,000 W، بينما يسمح معيار المنتج DIN VDE V 0126-95 بما يصل إلى 960 W من الألواح مع مقبس منزلي عادي، وما يصل إلى 2,000 Wp مع مقبس طاقة خاص يركّبه كهربائي. ويسجّل المشغّل الجهاز بنفسه في Marktstammdatenregister (خمس بيانات فنية)؛ ومنذ Solarpaket I (مايو 2024) لم يعد لازمًا إبلاغ مشغّل الشبكة مباشرة.',
           '**أما بالنسبة إلى المستأجرين، فالتسلسل العملي هو أن يطلبوا كتابةً، ويحددوا الجهاز وطريقة التثبيت، ويعرضوا اتباع قواعد تثبيت معقولة، ويحتفظوا بالرد.** وإذا رُفضت الموافقة دون سبب، يمكن لمراكز استشارات المستهلكين ورابطات المستأجرين المساعدة. هذه معلومات عامة وليست استشارة قانونية.',
+          '**الشروط التي تدرجها VDIV على أنها جائزة عمومًا ضيقة ومحددة:** إثبات تأمين المسؤولية المدنية الخاص، ومكونات مطابقة للمعيار، وتركيب سليم، والتسجيل، والإزالة عند الانتقال. وقد يبرر عيب سلامة حقيقي الرفض؛ وقضايا خسارة المستأجرين المذكورة أعلاه تعلقت بألواح معلّقة من الخارج أو مرتفعة فوق الحاجز، لذا صِف طريقة التركيب بدقة في طلبك. هذه معلومات عامة وليست استشارة قانونية.',
         ],
       },
       b2bChannel: {
@@ -330,6 +391,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE — الأسئلة الشائعة حول DIN VDE V 0126-95',
             description: 'حدود معيار المنتج: 800 VA، و960 W مع مقبس عادي، و2,000 Wp مع مقبس طاقة خاص',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe — بيان صحفي بتاريخ 17 سبتمبر 2026',
+            description: 'دعوى لوقف الممارسة ضد اتفاقية الإذن لدى Vonovia أمام Oberlandesgericht Hamm؛ ووصف DUH لشروط Vonovia',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV — المحاكم تعزز الحق في الطاقة الشمسية للشرفة (20 يناير 2026)',
+            description: 'ملخص حكم Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) والشروط التي يجوز للمؤجّرين فرضها',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe — Streit um Balkonkraftwerke vor Gericht',
+            description: 'نظرة على الاجتهاد القضائي: Amtsgericht Köln وAmtsgericht Hamburg-Wandsbek وحكم BGH رقم V ZR 29/24 بشأن جماعات الملّاك',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking — المستأجرون والملّاك والطاقة الشمسية للشرفة (18 أكتوبر 2026)',
+            description: 'نظرة على قانون 2024 والاجتهاد القضائي والمسائل المفتوحة مثل التأمين النقدي',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web — موافقة المؤجّر على الطاقة الشمسية للشرفة (23 أكتوبر 2026)',
+            description: 'تقرير عن حكم Amtsgericht Dresden الصادر في 18 مايو 2026 (Az. 143 C 1125/25)',
+          },
         ],
       },
       faqSection: {
@@ -342,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يحتاج ملّاك الوحدات إلى قرار من الجمعية؟',
-            a: 'يمنح § 20 (2) رقم 5 WEG كل مالك حقًا في تغييرات إنشائية مناسبة للأجهزة الشمسية القابلة للتوصيل بالمقبس، وتقرر الجمعية التنفيذ ضمن الإدارة السليمة. ولم تحسم المصادر التي راجعناها ما إذا كان القرار لا يزال مطلوبًا شكليًا؛ اسأل مدير العقار.',
+            a: 'يمنح § 20 (2) رقم 5 WEG كل مالك حقًا في إجراء تعديلات إنشائية مناسبة للأجهزة الشمسية القابلة للتوصيل بالمقبس، وتقرر الجماعة تنفيذها ضمن الإدارة الرشيدة. وتفيد Haufe وCleanthinking بأن المحكمة الاتحادية العدلية (V ZR 29/24، 18 يوليو 2025) سمحت لجماعة ملّاك بطلب إزالة منظومة ظاهرة بوضوح رُكّبت دون قرار. لم نقرأ الحكم كاملًا، لذا اسأل مدير العقار واطلب قرارًا قبل التركيب.',
           },
           {
             q: 'هل تدير شركات العقارات الألمانية الكبرى برامج للطاقة الشمسية للشرفة؟',
@@ -359,6 +445,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'ما الحدود المطبقة على الجهاز الشمسي القابل للتوصيل بالمقبس في ألمانيا؟',
             a: 'يسمح تعريف EEG بخرج عاكس يصل إلى 800 W وألواح بقدرة 2,000 W. ويسمح معيار المنتج DIN VDE V 0126-95 بما يصل إلى 960 W من الألواح مع مقبس منزلي عادي، وما يصل إلى 2,000 Wp مع مقبس طاقة خاص يركّبه كهربائي. ولا يغطي المعيار الأجهزة المزوّدة بتخزين.',
+          },
+          {
+            q: 'ما الشروط التي يجوز للمؤجّر فرضها على الطاقة الشمسية للشرفة؟',
+            a: 'تلخّص VDIV، وهي جمعية قطاعية لمديري العقارات، الشروط الجائزة عمومًا في: إثبات تأمين المسؤولية المدنية الخاص، ومكونات مطابقة للمعيار، وتركيب سليم، والتسجيل في Marktstammdatenregister، والإزالة عند الانتقال. ورفضت Amtsgericht Hamburg-Wandsbek (2 ديسمبر 2025، Az. 714 C 160/25؛ أُفيد بأنه لم يصبح نهائيًا) رفضًا شاملًا استند إلى مخاطر مسؤولية غامضة. ووفق Cleanthinking لم تبتّ أي محكمة في جواز مطالبة المؤجّر بتأمين نقدي. هذه معلومات عامة وليست استشارة قانونية.',
+          },
+          {
+            q: 'هل أصدرت المحاكم الألمانية أحكامًا في نزاعات الطاقة الشمسية للشرفة؟',
+            a: 'نعم، في معظمها على مستوى المحاكم المحلية، والصورة متباينة. فقد انحازت Amtsgericht Hamburg-Wandsbek إلى مستأجر في مواجهة مخاوف مسؤولية غامضة، بينما انحازت Amtsgericht Köln (13 ديسمبر 2024، Az. 208 C 460/23) وAmtsgericht Dresden (18 مايو 2026، Az. 143 C 1125/25) إلى المؤجّرين حين كان التركيب يشكل خطرًا على السلامة. ودعوى DUH لوقف الممارسة ضد اتفاقية الإذن لدى Vonovia قيد النظر أمام Oberlandesgericht Hamm. راجع الأحكام كاملة قبل الاعتماد على أي منها.',
           },
         ],
       },
@@ -380,9 +474,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Balkonsolar für Vermieter und Wohnungsgesellschaften 2027',
     seoTitle: 'Balkonsolar für Vermieter und Wohnungsgesellschaften',
     intro: 'In Deutschland haben Mieter und Wohnungseigentümer seit dem 17. Oktober 2024 einen gesetzlichen Anspruch auf Steckersolargeräte. Damit verschiebt sich die Vermieterfrage von „Darf ich?“ zu „Wie und zu welchen Bedingungen?“. Diese Seite erklärt, was das Gesetz sagt, was Vermieter und Eigentümergemeinschaften verlangen dürfen, wie ein großer Vermieter (Vonovia) mit Anfragen umgeht und was die EU-Gebäuderichtlinie fordert und was nicht. Es sind allgemeine Informationen zu Deutschland, keine Rechtsberatung.',
-    metaDescription: 'Seit Oktober 2024 haben Mieter und Eigentümer Anspruch auf ein Steckersolargerät. Was Vermieter verlangen dürfen und was die EPBD sagt.',
+    metaDescription: 'Seit Oktober 2024 haben Mieter und Eigentümer Anspruch auf ein Steckersolargerät. Was Vermieter verlangen dürfen, was Gerichte sagen und was die EPBD sagt.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Vermieter, Immobilienverwalter, Wohnungsgesellschaften und Mieter in Deutschland, die Steckersolar bewerten',
@@ -403,8 +497,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vermieter und Eigentümergemeinschaften können Regeln zur Anbringung aufstellen; laut Haufe dürfen solche Vorgaben nicht überzogen sein',
           'Vonovia stimmte im Januar 2026 nach einer von der Deutschen Umwelthilfe unterstützten Klage der Installation bei einem Aachener Mieter vorbehaltlos zu. Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch',
           'Die EPBD (Richtlinie (EU) 2024/1275) macht Solaranlagen zur Norm für Neubauten und bestimmte bestehende Nichtwohngebäude; Vermieter müssen kein Steckersolar installieren',
+          'Die Rechtsprechung ist dünn und stammt überwiegend von Amtsgerichten: Vage Haftungsbedenken wurden zurückgewiesen (Amtsgericht Hamburg-Wandsbek, Dezember 2025), Vermieter obsiegten aber bei unsicherer Installation (Amtsgericht Köln, Amtsgericht Dresden). Die DUH hat beim Oberlandesgericht Hamm eine Unterlassungsklage gegen die Gestattungsvereinbarung von Vonovia erhoben (angekündigt am 17. September 2026; kein Urteil berichtet)',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -412,6 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was das deutsche Recht Mietern und Eigentümern gibt', anchor: '#legal-claim', },
       { label: 'Warum die EU-Gebäuderichtlinie kein Steckersolar vorschreibt', anchor: '#regulatory-driver', },
       { label: 'Wie große Vermieter mit Anfragen umgehen', anchor: '#landlord-practice', },
+      { label: 'Was Gerichte und Rechtsprechung bisher sagen', anchor: '#court-practice', },
       { label: 'Was Vermieter und Eigentümergemeinschaften verlangen dürfen und was Mieter tun sollten', anchor: '#landlord-rules', },
       { label: 'Der Kanal der Sammelbeschaffung', anchor: '#b2b-channel', },
       { label: 'Quellen', anchor: '#sources', },
@@ -425,9 +521,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Seit dem 17. Oktober 2024 gibt § 554 Abs. 1 BGB Mietern und § 20 Abs. 2 Nr. 5 WEG Wohnungseigentümern einen Anspruch auf Maßnahmen, die der Stromerzeugung durch Steckersolargeräte dienen.',
           'Der Anspruch des Mieters scheitert nur, wenn die Maßnahme dem Vermieter auch unter Würdigung der Interessen des Mieters nicht zugemutet werden kann (§ 554 BGB). Abweichende Vereinbarungen zum Nachteil des Mieters sind unwirksam.',
-          'Vermieter und Eigentümergemeinschaften behalten ein Mitspracherecht bei der Anbringung, die Vorgaben dürfen aber nicht überzogen sein. Ob ein Gemeinschaftsbeschluss formal noch erforderlich ist, klären die von uns geprüften Quellen nicht; fragen Sie Ihre Verwaltung.',
+          'Vermieter und Eigentümergemeinschaften behalten ein Mitspracherecht bei der Anbringung, die Vorgaben dürfen aber nicht überzogen sein. Der Gesetzestext sagt nicht, ob ein Gemeinschaftsbeschluss formal erforderlich ist; Berichte über ein Urteil des Bundesgerichtshofs (BGH) vom Juli 2025 legen nahe, dass eine deutlich sichtbare Anlage ohne Beschluss zurückgebaut werden muss. Fragen Sie daher Ihre Verwaltung und beantragen Sie vor der Installation einen Beschluss.',
           'Vonovia gab im Januar 2026 der Installation eines Aachener Mieters vorbehaltlos nach. Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch.',
           'Die EU-Gebäuderichtlinie verpflichtet Vermieter nicht zu Steckersolar, und Berichte über Vermieterprogramme mit mehr als 50.000 Einheiten konnten wir nicht verifizieren.',
+          'Die Rechtsprechung ist dünn und stammt überwiegend von Amtsgerichten: Ein Gericht wies vage Haftungsbedenken zurück (Amtsgericht Hamburg-Wandsbek, Dezember 2025), andere gaben Vermietern recht, wenn die Installation unsicher war (Amtsgericht Köln, Amtsgericht Dresden). Am 17. September 2026 kündigte die DUH beim Oberlandesgericht Hamm eine Unterlassungsklage gegen die Gestattungsvereinbarung von Vonovia an; ein Urteil war nicht berichtet.',
         ],
       },
       legalClaim: {
@@ -435,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was das deutsche Recht Mietern und Eigentümern gibt',
         content: [
           '**Seit dem 17. Oktober 2024 zählt das deutsche Recht Steckersolargeräte zu den Maßnahmen, die Mieter und Wohnungseigentümer verlangen können.** § 554 Abs. 1 BGB erlaubt es Mietern, vom Vermieter die Gestattung baulicher Veränderungen zu verlangen, die der Stromerzeugung durch Steckersolargeräte dienen, neben Barrierefreiheit, Laden elektrisch betriebener Fahrzeuge und Einbruchsschutz. Der Anspruch scheitert, wenn die Veränderung dem Vermieter auch unter Würdigung der Interessen des Mieters nicht zugemutet werden kann. Nach § 554 Abs. 2 BGB sind abweichende Vereinbarungen zum Nachteil des Mieters unwirksam. Der Mieter kann sich zu einer besonderen Sicherheitsleistung bereit erklären, wobei § 551 Abs. 3 BGB entsprechend gilt.',
-          '**§ 20 Abs. 2 Nr. 5 WEG gibt jedem Wohnungseigentümer einen Anspruch gleicher Art.** Über die Durchführung entscheidet die Gemeinschaft im Rahmen ordnungsmäßiger Verwaltung. Haufe weist darauf hin, dass die Zustimmung nicht mehr ohne triftigen Grund verweigert werden kann, dass Eigentümer und Vermieter bei der Art der Anbringung mitreden dürfen und dass die Vorgaben nicht überzogen sein dürfen. Ob ein Gemeinschaftsbeschluss formal noch erforderlich ist, klären die von uns geprüften Quellen nicht; fragen Sie daher Ihre Verwaltung.',
+          '**§ 20 Abs. 2 Nr. 5 WEG gibt jedem Wohnungseigentümer einen Anspruch gleicher Art.** Über die Durchführung entscheidet die Gemeinschaft im Rahmen ordnungsmäßiger Verwaltung. Haufe weist darauf hin, dass die Zustimmung nicht mehr ohne triftigen Grund verweigert werden kann, dass Eigentümer und Vermieter bei der Art der Anbringung mitreden dürfen und dass die Vorgaben nicht überzogen sein dürfen. Der Gesetzestext sagt nicht, ob ein Beschluss formal noch erforderlich ist; Haufe und Cleanthinking berichten, dass der Bundesgerichtshof (BGH, 18. Juli 2025, V ZR 29/24) einer Gemeinschaft erlaubte, den Rückbau einer deutlich sichtbaren Steckersolaranlage zu verlangen, die ohne Beschluss installiert worden war. Die vollständige Entscheidung haben wir nicht gelesen und konnten nicht bestätigen, welche Rechtslage galt; fragen Sie daher Ihre Verwaltung und beantragen Sie vor der Installation einen Beschluss.',
         ],
       },
       regulatoryDriver: {
@@ -452,6 +549,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Große Vermieter entscheiden im Einzelfall, und die Praxis ist umstritten.** Im Januar 2026 stimmte Vonovia nach einer von der Deutschen Umwelthilfe (DUH) unterstützten Klage dem Balkonkraftwerk eines Aachener Mieters „vorbehaltlos“ zu; laut DUH hatte Vonovia zuvor Windlastberechnungen, statische Nachweise und die Einhaltung einer Norm für vertikale Verglasung verlangt. Die DUH fordert, dass Vonovia seine Montageregeln überarbeitet.',
           '**Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch.** Das sind von Dritten berichtete Positionen, keine Gerichtsurteile zu Speichern; zu den Speicherregeln siehe [Batteriespeicher für Balkonkraftwerke 2027](/de/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**Am 17. September 2026 gab die DUH bekannt, beim Oberlandesgericht Hamm eine Unterlassungsklage gegen die Gestattungsvereinbarung von Vonovia erhoben zu haben; zu diesem Zeitpunkt war kein Urteil berichtet.** Laut DUH müssen Mieter mit Außensteckdose die Vereinbarung unterschreiben und eine Vor-Ort-Prüfung dulden, die Kosten festgestellter Mängel tragen und Vonovia von der Haftung freistellen; Bohren und Kabelführung im Innenraum sind für Mieter ohne Außensteckdose grundsätzlich nicht gestattet. Das sind Darstellungen der DUH zu den Vonovia-Bedingungen; eine Stellungnahme von Vonovia zur Klage haben wir nicht gefunden.',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: 'Was Gerichte und Rechtsprechung bisher sagen',
+        content: [
+          '**In den bisher berichteten Fällen akzeptierten Gerichte Vorgaben zur Art der Installation und wiesen eine pauschale Verweigerung zurück; die Rechtsprechung ist dünn und stammt überwiegend von Amtsgerichten.** Das Amtsgericht Hamburg-Wandsbek (2. Dezember 2025, Az. 714 C 160/25) entschied, dass vage Haftungs- oder Optikbedenken keinen Rückbauanspruch begründen, und erlaubte laut Cleanthinking unter Verweis auf die neue Produktnorm den Anschluss an eine normale Außensteckdose. Haufe und der VDIV berichteten das Urteil als noch nicht rechtskräftig.',
+          '**Gerichte haben auch zugunsten von Vermietern entschieden, wenn die Installation unsicher war.** Das Amtsgericht Köln (13. Dezember 2024, Az. 208 C 460/23) verpflichtete einen Mieter, zwei ohne Zustimmung außen am Balkongeländer aufgehängte Module wegen der Gefahr bei Unwettern zu entfernen; laut Cleanthinking (18. Oktober 2026) ist die Berufung beim Landgericht Köln anhängig. Das Amtsgericht Dresden (18. Mai 2026, Az. 143 C 1125/25) wies die Klage eines Mieters ab, dessen zwei Module über das Geländer ragten und einen Spalt von etwa 4 cm ließen, in dem laut Vermieter Kinder stecken bleiben könnten; das Gericht folgte dem, so Vermieter-Web (23. Oktober 2026).',
+          '**Der VDIV, ein Branchenverband der Immobilienverwalter, fasst die Bedingungen, die ein Vermieter grundsätzlich stellen darf, so zusammen:** Nachweis einer privaten Haftpflichtversicherung, normgerechte Komponenten, fachgerechte Installation, Anmeldung im Marktstammdatenregister und Rückbau beim Auszug. Ob ein Vermieter eine Kaution verlangen darf, hat laut Cleanthinking noch kein Gericht entschieden. Das sind Sekundärberichte, keine Rechtsberatung; prüfen Sie die vollständigen Urteile, bevor Sie sich auf eines verlassen.',
         ],
       },
       landlordRules: {
@@ -460,6 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Regeln zur Art der Anbringung sind zulässig, Regeln, die den Anspruch aushöhlen, nicht.** Das Gerät selbst ist durch Gesetz und Produktnorm begrenzt: Die EEG-Definition erlaubt bis zu 800 W Wechselrichterleistung und 2.000 W Modulleistung, die Produktnorm DIN VDE V 0126-95 erlaubt mit normalem Haushaltsstecker bis zu 960 W Modulleistung und mit einem speziellen Energiestecker, den ein Elektriker installiert, bis zu 2.000 Wp. Der Betreiber meldet das Gerät selbst im Marktstammdatenregister an (fünf technische Angaben); seit dem Solarpaket I (Mai 2024) muss der Netzbetreiber nicht mehr direkt informiert werden.',
           '**Für Mieter heißt das praktisch: schriftlich anfragen, das Gerät und die Befestigungsart benennen, anbieten, sich an angemessene Montageregeln zu halten, und die Antwort aufbewahren.** Wird die Zustimmung ohne Begründung verweigert, können Verbraucherzentralen und Mietervereine helfen. Dies sind allgemeine Informationen, keine Rechtsberatung.',
+          '**Die Bedingungen, die der VDIV als grundsätzlich zulässig aufführt, sind eng und konkret:** Nachweis einer privaten Haftpflichtversicherung, normgerechte Komponenten, fachgerechte Installation, Anmeldung und Rückbau beim Auszug. Ein echter Sicherheitsmangel kann eine Ablehnung rechtfertigen; die oben berichteten Niederlagen auf Mieterseite betrafen außen aufgehängte oder über das Geländer ragende Module, beschreiben Sie die Befestigungsart in Ihrer Anfrage daher genau. Dies sind allgemeine Informationen, keine Rechtsberatung.',
         ],
       },
       b2bChannel: {
@@ -513,6 +621,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE – FAQ zur DIN VDE V 0126-95',
             description: 'Grenzen der Produktnorm: 800 VA, 960 W mit normalem Stecker, 2.000 Wp mit speziellem Energiestecker',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe – Pressemitteilung vom 17. September 2026',
+            description: 'Unterlassungsklage gegen die Gestattungsvereinbarung von Vonovia beim Oberlandesgericht Hamm; die DUH-Darstellung der Vonovia-Bedingungen',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV – Gerichte stärken Anspruch auf Balkonkraftwerke (20. Januar 2026)',
+            description: 'Zusammenfassung des Urteils des Amtsgerichts Hamburg-Wandsbek (Az. 714 C 160/25) und der Bedingungen, die Vermieter stellen dürfen',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe – Streit um Balkonkraftwerke vor Gericht',
+            description: 'Rechtsprechungsüberblick: Amtsgericht Köln, Amtsgericht Hamburg-Wandsbek und BGH-Urteil V ZR 29/24 zu Eigentümergemeinschaften',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking – Mieter, Eigentümer und Balkonkraftwerke (18. Oktober 2026)',
+            description: 'Überblick über das Gesetz von 2024, die Rechtsprechung und offene Fragen wie die Kaution',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web – Zustimmung des Vermieters zum Balkonkraftwerk (23. Oktober 2026)',
+            description: 'Bericht über das Urteil des Amtsgerichts Dresden vom 18. Mai 2026 (Az. 143 C 1125/25)',
+          },
         ],
       },
       faqSection: {
@@ -525,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Brauchen Wohnungseigentümer einen Gemeinschaftsbeschluss?',
-            a: '§ 20 Abs. 2 Nr. 5 WEG gibt jedem Eigentümer einen Anspruch auf angemessene bauliche Veränderungen für Steckersolargeräte, und die Gemeinschaft entscheidet über die Durchführung im Rahmen ordnungsmäßiger Verwaltung. Ob ein Beschluss formal noch erforderlich ist, klären die von uns geprüften Quellen nicht; fragen Sie Ihre Verwaltung.',
+            a: '§ 20 Abs. 2 Nr. 5 WEG gibt jedem Eigentümer einen Anspruch auf angemessene bauliche Veränderungen für Steckersolargeräte, und die Gemeinschaft entscheidet über die Durchführung im Rahmen ordnungsmäßiger Verwaltung. Haufe und Cleanthinking berichten, dass der Bundesgerichtshof (V ZR 29/24, 18. Juli 2025) einer Gemeinschaft erlaubte, den Rückbau einer deutlich sichtbaren Anlage ohne Beschluss zu verlangen. Die vollständige Entscheidung haben wir nicht gelesen; fragen Sie Ihre Verwaltung und beantragen Sie vor der Installation einen Beschluss.',
           },
           {
             q: 'Betreiben große deutsche Vermieter Balkonkraftwerk-Programme?',
@@ -542,6 +675,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Welche Grenzen gelten für ein Steckersolargerät in Deutschland?',
             a: 'Die EEG-Definition erlaubt bis zu 800 W Wechselrichterleistung und 2.000 W Modulleistung. Die Produktnorm DIN VDE V 0126-95 erlaubt mit normalem Haushaltsstecker bis zu 960 W Modulleistung und mit einem speziellen Energiestecker, den ein Elektriker installiert, bis zu 2.000 Wp. Die Norm deckt Geräte mit Speicher nicht ab.',
+          },
+          {
+            q: 'Welche Bedingungen darf ein Vermieter an ein Balkonkraftwerk knüpfen?',
+            a: 'Der VDIV, ein Branchenverband der Immobilienverwalter, nennt als grundsätzlich zulässig: Nachweis einer privaten Haftpflichtversicherung, normgerechte Komponenten, fachgerechte Installation, Anmeldung im Marktstammdatenregister und Rückbau beim Auszug. Das Amtsgericht Hamburg-Wandsbek (2. Dezember 2025, Az. 714 C 160/25; als noch nicht rechtskräftig berichtet) wies eine pauschale Verweigerung mit vagen Haftungsrisiken zurück. Ob ein Vermieter eine Kaution verlangen darf, hat laut Cleanthinking noch kein Gericht entschieden. Dies sind allgemeine Informationen, keine Rechtsberatung.',
+          },
+          {
+            q: 'Haben deutsche Gerichte Streitfälle zu Balkonkraftwerken entschieden?',
+            a: 'Ja, überwiegend auf Ebene der Amtsgerichte, und das Bild ist gemischt. Das Amtsgericht Hamburg-Wandsbek gab einem Mieter gegen vage Haftungsbedenken recht, während das Amtsgericht Köln (13. Dezember 2024, Az. 208 C 460/23) und das Amtsgericht Dresden (18. Mai 2026, Az. 143 C 1125/25) den Vermietern recht gaben, wenn die Installation ein Sicherheitsrisiko war. Die Unterlassungsklage der DUH gegen die Gestattungsvereinbarung von Vonovia ist beim Oberlandesgericht Hamm anhängig. Prüfen Sie die vollständigen Urteile, bevor Sie sich auf eines verlassen.',
           },
         ],
       },
@@ -565,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'En Alemania, los inquilinos y los copropietarios tienen desde el 17 de octubre de 2024 un derecho legal a los dispositivos solares plug-in («Steckersolargeräte»), lo que desplaza la pregunta del arrendador de «¿puedo?» a «¿cómo y con qué condiciones?». Esta página explica lo que dice la ley, lo que pueden exigir los arrendadores y las comunidades de propietarios, cómo ha gestionado las solicitudes un gran arrendador (Vonovia) y lo que la directiva europea de edificios exige y no exige. Es información general sobre Alemania, no asesoramiento jurídico.',
     metaDescription: 'Desde octubre de 2024, en Alemania inquilinos y copropietarios pueden reclamar un dispositivo solar plug-in. Qué pueden exigir los arrendadores y la EPBD.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Arrendadores, administradores de propiedades, asociaciones de vivienda e inquilinos en Alemania que evalúan la energía solar plug-in',
@@ -586,8 +727,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los arrendadores y las comunidades pueden fijar reglas de montaje; según Haufe, esos requisitos no deben ser excesivos',
           'Vonovia aceptó sin reservas la instalación de un inquilino de Aquisgrán en enero de 2026 tras una demanda respaldada por la Deutsche Umwelthilfe. Un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general',
           'La EPBD (Directiva (UE) 2024/1275) convierte la energía solar en la norma para edificios nuevos y ciertos edificios no residenciales existentes; no obliga a los arrendadores a instalar solar plug-in',
+          'La jurisprudencia es escasa y procede sobre todo de juzgados locales: se rechazaron objeciones vagas de responsabilidad (Amtsgericht Hamburg-Wandsbek, diciembre de 2025), pero los arrendadores ganaron cuando la instalación era insegura (Amtsgericht Köln, Amtsgericht Dresden). La DUH presentó ante el Oberlandesgericht Hamm una demanda de cesación contra el acuerdo de autorización de Vonovia (anunciada el 17 de septiembre de 2026; sin sentencia conocida)',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -595,6 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lo que la ley alemana da a inquilinos y copropietarios', anchor: '#legal-claim', },
       { label: 'Por qué la directiva europea de edificios no impone el solar plug-in', anchor: '#regulatory-driver', },
       { label: 'Cómo gestionan las solicitudes los grandes arrendadores', anchor: '#landlord-practice', },
+      { label: 'Lo que dicen hasta ahora los tribunales y la jurisprudencia', anchor: '#court-practice', },
       { label: 'Qué pueden exigir arrendadores y comunidades, y qué deben hacer los inquilinos', anchor: '#landlord-rules', },
       { label: 'El canal de compras al por mayor', anchor: '#b2b-channel', },
       { label: 'Fuentes', anchor: '#sources', },
@@ -608,9 +751,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Desde el 17 de octubre de 2024, el § 554 apdo. 1 BGB para inquilinos y el § 20 apdo. 2 n.º 5 WEG para copropietarios dan derecho a medidas destinadas a generar electricidad con dispositivos solares plug-in.',
           'El derecho del inquilino solo decae si la medida es irrazonable para el arrendador incluso valorando los intereses del inquilino (§ 554 BGB). Los acuerdos contrarios en perjuicio del inquilino son nulos.',
-          'Los arrendadores y las comunidades conservan voz en el montaje, pero sus requisitos no deben ser excesivos. Las fuentes consultadas no aclaran si sigue siendo formalmente necesario un acuerdo de la comunidad; pregunta a tu administrador.',
+          'Los arrendadores y las comunidades de propietarios conservan voz en cómo se monta un equipo, pero los requisitos no pueden ser excesivos. El texto de la ley no dice si se exige formalmente un acuerdo de la comunidad; según informes sobre una sentencia del Tribunal Supremo Federal (BGH) de julio de 2025, una instalación claramente visible sin acuerdo puede ser objeto de una orden de retirada, así que consulta a tu administrador y solicita un acuerdo antes de instalar.',
           'Vonovia cedió sin reservas a la instalación de un inquilino de Aquisgrán en enero de 2026. Un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general.',
           'La directiva europea de edificios no obliga a los arrendadores a instalar solar plug-in, y no pudimos verificar los informes sobre programas de arrendadores con más de 50.000 unidades.',
+          'La jurisprudencia es escasa y procede sobre todo de juzgados locales: un tribunal rechazó objeciones vagas de responsabilidad (Amtsgericht Hamburg-Wandsbek, diciembre de 2025), mientras que otros dieron la razón a los arrendadores cuando la instalación era insegura (Amtsgericht Köln, Amtsgericht Dresden). El 17 de septiembre de 2026 la DUH anunció una demanda de cesación contra el acuerdo de autorización estándar de Vonovia ante el Oberlandesgericht Hamm; no se había informado de ninguna sentencia.',
         ],
       },
       legalClaim: {
@@ -618,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lo que la ley alemana da a inquilinos y copropietarios',
         content: [
           '**Desde el 17 de octubre de 2024, la ley alemana incluye los dispositivos solares plug-in entre las medidas que inquilinos y copropietarios pueden exigir.** El § 554 apdo. 1 BGB permite al inquilino pedir al arrendador que autorice modificaciones estructurales destinadas a generar electricidad con dispositivos solares plug-in («Steckersolargeräte»), junto con la accesibilidad, la carga de vehículos eléctricos y la protección contra robos. El derecho decae si la modificación es irrazonable para el arrendador incluso valorando los intereses del inquilino. El § 554 apdo. 2 BGB declara nulos los acuerdos contrarios en perjuicio del inquilino. El inquilino puede aceptar prestar una garantía especial, aplicándose por analogía el § 551 apdo. 3 BGB.',
-          '**El § 20 apdo. 2 n.º 5 WEG da a cada copropietario un derecho del mismo tipo.** La comunidad decide sobre la ejecución dentro de una administración ordenada. Haufe señala que el consentimiento ya no puede denegarse sin motivo válido, que copropietarios y arrendadores conservan voz en cómo se monta el dispositivo y que los requisitos no deben ser excesivos. Las fuentes consultadas no aclaran si sigue siendo formalmente necesario un acuerdo de la comunidad, así que pregunta a tu administrador.',
+          '**§ 20 (2) n.º 5 WEG da a cada copropietario el mismo tipo de derecho.** La comunidad decide sobre la ejecución dentro de una administración adecuada. Haufe señala que el consentimiento ya no puede denegarse sin un motivo fundado, que propietarios y arrendadores conservan voz en cómo se monta el equipo y que los requisitos no pueden ser excesivos. El texto de la ley no dice si sigue siendo formalmente necesario un acuerdo; Haufe y Cleanthinking informan de que el Tribunal Supremo Federal (BGH, 18 de julio de 2025, V ZR 29/24) permitió a una comunidad exigir la retirada de una instalación enchufable claramente visible montada sin acuerdo. No leímos la sentencia completa y no pudimos confirmar qué versión de la ley se aplicó, así que consulta a tu administrador y solicita un acuerdo antes de instalar.',
         ],
       },
       regulatoryDriver: {
@@ -635,6 +779,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Los grandes arrendadores deciden caso por caso, y la práctica es discutida.** En enero de 2026, Vonovia aceptó «sin reservas» la instalación de balcón de un inquilino de Aquisgrán tras una demanda apoyada por la Deutsche Umwelthilfe (DUH); según la DUH, Vonovia había exigido cálculos de carga de viento, justificantes estructurales y el cumplimiento de una norma de acristalamiento vertical. La DUH pide que Vonovia revise sus reglas de instalación.',
           '**Un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general.** Son posturas recogidas por terceros, no sentencias sobre el almacenamiento; para las reglas de almacenamiento, consulta [Baterías para energía solar de balcón en 2027](/es/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**El 17 de septiembre de 2026 la DUH anunció que había presentado ante el Oberlandesgericht Hamm una demanda de cesación contra el acuerdo de autorización estándar de Vonovia («Gestattungsvereinbarung»); en esa fecha no se había informado de ninguna sentencia.** Según la DUH, los inquilinos con toma de corriente exterior deben firmar el acuerdo y aceptar una inspección in situ, asumir los costes de los defectos detectados y eximir a Vonovia de responsabilidad, y para los inquilinos sin toma exterior, en general no se permite taladrar ni pasar cables por el interior. Son descripciones de la DUH sobre las condiciones de Vonovia; no encontramos ninguna declaración de Vonovia sobre la demanda.',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: 'Lo que dicen hasta ahora los tribunales y la jurisprudencia',
+        content: [
+          '**En los casos conocidos hasta ahora, los tribunales aceptaron condiciones sobre cómo se instala un equipo y rechazaron una negativa general; la jurisprudencia es escasa y procede sobre todo de juzgados locales.** El 2 de diciembre de 2025 el Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) resolvió que las objeciones vagas de responsabilidad o estética no justificaban una acción de retirada y, según Cleanthinking, se apoyó en la nueva norma de producto para permitir la conexión a una toma exterior normal. Haufe y la VDIV informaron de que la sentencia aún no era firme.',
+          '**Los tribunales también han dado la razón a los arrendadores cuando la instalación era insegura.** El Amtsgericht Köln (13 de diciembre de 2024, Az. 208 C 460/23) ordenó a un inquilino retirar dos módulos colgados sin consentimiento en la parte exterior de la barandilla del balcón por el riesgo en caso de tormenta; según Cleanthinking (18 de octubre de 2026), el recurso está pendiente ante el Landgericht Köln. El Amtsgericht Dresden (18 de mayo de 2026, Az. 143 C 1125/25) desestimó la demanda de un inquilino cuyos dos módulos sobresalían por encima de la barandilla y dejaban un hueco de unos 4 cm en el que, según el arrendador, podían quedar atrapados niños; el tribunal lo aceptó, según informa Vermieter-Web (23 de octubre de 2026).',
+          '**La VDIV, una asociación sectorial de administradores de inmuebles, resume las condiciones que un arrendador puede imponer en general:** prueba de un seguro privado de responsabilidad civil, componentes conformes a la norma, instalación adecuada, registro en el Marktstammdatenregister y retirada al mudarse. Según Cleanthinking, ningún tribunal ha decidido aún si un arrendador puede exigir una fianza. Son informes secundarios, no asesoramiento jurídico; consulta las sentencias completas antes de apoyarte en alguna.',
         ],
       },
       landlordRules: {
@@ -643,6 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Se admiten reglas sobre cómo se monta el dispositivo; no se admiten las que vacían el derecho.** El propio dispositivo está limitado por la ley y la norma de producto: la definición de la EEG permite hasta 800 W de potencia del inversor y 2.000 W de módulos, mientras que la norma de producto DIN VDE V 0126-95 permite hasta 960 W de módulos con un enchufe doméstico normal y hasta 2.000 Wp con un enchufe de energía especial instalado por un electricista. El operador registra el dispositivo en el Marktstammdatenregister (cinco datos técnicos); desde el Solarpaket I (mayo de 2024) ya no hace falta informar directamente al gestor de red.',
           '**Para los inquilinos, la secuencia práctica es preguntar por escrito, nombrar el dispositivo y el método de montaje, ofrecerse a seguir reglas de montaje razonables y conservar la respuesta.** Si se deniega el consentimiento sin motivo, las asociaciones de consumidores y de inquilinos pueden ayudar. Es información general, no asesoramiento jurídico.',
+          '**Las condiciones que la VDIV enumera como generalmente admisibles son acotadas y concretas:** prueba de un seguro privado de responsabilidad civil, componentes conformes a la norma, instalación adecuada, registro y retirada al mudarse. Un defecto real de seguridad puede justificar una negativa; las derrotas de inquilinos descritas arriba afectaban a módulos colgados por fuera o que sobresalían de la barandilla, así que describe con precisión el método de montaje en tu solicitud. Es información general, no asesoramiento jurídico.',
         ],
       },
       b2bChannel: {
@@ -696,6 +851,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE – FAQ zur DIN VDE V 0126-95',
             description: 'Límites de la norma de producto: 800 VA, 960 W con enchufe normal, 2.000 Wp con enchufe de energía especial',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe — comunicado de prensa del 17 de septiembre de 2026',
+            description: 'Demanda de cesación contra el acuerdo de autorización de Vonovia ante el Oberlandesgericht Hamm; descripción de la DUH de las condiciones de Vonovia',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV — Los tribunales refuerzan el derecho a los balkonkraftwerke (20 de enero de 2026)',
+            description: 'Resumen de la sentencia del Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) y de las condiciones que pueden imponer los arrendadores',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe — Streit um Balkonkraftwerke vor Gericht',
+            description: 'Resumen de jurisprudencia: Amtsgericht Köln, Amtsgericht Hamburg-Wandsbek y la sentencia del BGH V ZR 29/24 sobre comunidades de propietarios',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking — inquilinos, propietarios y energía solar de balcón (18 de octubre de 2026)',
+            description: 'Resumen de la ley de 2024, la jurisprudencia y cuestiones abiertas como la fianza',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web — consentimiento del arrendador para la energía solar de balcón (23 de octubre de 2026)',
+            description: 'Informe sobre la sentencia del Amtsgericht Dresden del 18 de mayo de 2026 (Az. 143 C 1125/25)',
+          },
         ],
       },
       faqSection: {
@@ -708,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Necesitan los copropietarios un acuerdo de la comunidad?',
-            a: 'El § 20 apdo. 2 n.º 5 WEG da a cada copropietario un derecho a modificaciones estructurales adecuadas para dispositivos solares plug-in, y la comunidad decide sobre la ejecución dentro de una administración ordenada. Las fuentes consultadas no aclaran si sigue siendo formalmente necesario un acuerdo; pregunta a tu administrador.',
+            a: '§ 20 (2) n.º 5 WEG da a cada propietario derecho a reformas estructurales adecuadas para equipos solares enchufables, y la comunidad decide sobre la ejecución dentro de una administración adecuada. Haufe y Cleanthinking informan de que el Tribunal Supremo Federal (V ZR 29/24, 18 de julio de 2025) permitió a una comunidad exigir la retirada de una instalación claramente visible montada sin acuerdo. No leímos la sentencia completa; consulta a tu administrador y solicita un acuerdo antes de instalar.',
           },
           {
             q: '¿Tienen los grandes arrendadores alemanes programas de solar de balcón?',
@@ -725,6 +905,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Qué límites se aplican a un dispositivo solar plug-in en Alemania?',
             a: 'La definición de la EEG permite hasta 800 W de potencia del inversor y 2.000 W de módulos. La norma de producto DIN VDE V 0126-95 permite hasta 960 W de módulos con un enchufe doméstico normal y hasta 2.000 Wp con un enchufe de energía especial instalado por un electricista. La norma no cubre dispositivos con almacenamiento.',
+          },
+          {
+            q: '¿Qué condiciones puede imponer un arrendador a la energía solar de balcón?',
+            a: 'La VDIV, una asociación sectorial de administradores de inmuebles, resume como generalmente admisibles: prueba de un seguro privado de responsabilidad civil, componentes conformes a la norma, instalación adecuada, registro en el Marktstammdatenregister y retirada al mudarse. El Amtsgericht Hamburg-Wandsbek (2 de diciembre de 2025, Az. 714 C 160/25; informado como no firme) rechazó una negativa general basada en riesgos de responsabilidad imprecisos. Según Cleanthinking, ningún tribunal ha decidido si un arrendador puede exigir una fianza. Es información general, no asesoramiento jurídico.',
+          },
+          {
+            q: '¿Han resuelto los tribunales alemanes litigios sobre energía solar de balcón?',
+            a: 'Sí, sobre todo en juzgados locales, y el panorama es mixto. El Amtsgericht Hamburg-Wandsbek dio la razón a un inquilino frente a objeciones vagas de responsabilidad, mientras que el Amtsgericht Köln (13 de diciembre de 2024, Az. 208 C 460/23) y el Amtsgericht Dresden (18 de mayo de 2026, Az. 143 C 1125/25) la dieron a los arrendadores cuando la instalación suponía un riesgo de seguridad. La demanda de cesación de la DUH contra el acuerdo de autorización de Vonovia está pendiente ante el Oberlandesgericht Hamm. Consulta las sentencias completas antes de apoyarte en alguna.',
           },
         ],
       },
@@ -746,9 +934,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Le solaire de balcon pour les bailleurs et les organismes de logement en 2027',
     seoTitle: 'Solaire de balcon : bailleurs et organismes de logement',
     intro: 'En Allemagne, les locataires et les copropriétaires disposent depuis le 17 octobre 2024 d\'un droit légal aux appareils solaires plug-in (« Steckersolargeräte »), ce qui fait passer la question du bailleur de « puis-je ? » à « comment et à quelles conditions ? ». Cette page explique ce que dit la loi, ce que les bailleurs et les copropriétés peuvent exiger, comment un grand bailleur (Vonovia) a traité les demandes, et ce que la directive européenne sur les bâtiments exige ou non. Ce sont des informations générales sur l\'Allemagne, pas un conseil juridique.',
-    metaDescription: 'Depuis octobre 2024, locataires et copropriétaires allemands ont droit à un appareil solaire plug-in. Ce que les bailleurs peuvent exiger et la directive EPBD.',
+    metaDescription: 'Depuis octobre 2024, locataires et copropriétaires allemands ont droit à un appareil solaire plug-in. Ce que les bailleurs peuvent exiger, et l\'EPBD.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Bailleurs, gestionnaires immobiliers, organismes de logement et locataires en Allemagne évaluant le solaire plug-in',
@@ -769,8 +957,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les bailleurs et les copropriétés peuvent fixer des règles de fixation ; selon Haufe, ces exigences ne doivent pas être excessives',
           'Vonovia a accepté sans réserve l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026 après une action soutenue par la Deutsche Umwelthilfe. Un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale',
           'L\'EPBD (directive (UE) 2024/1275) fait du solaire la norme pour les bâtiments neufs et certains bâtiments non résidentiels existants ; elle n\'oblige pas les bailleurs à installer du solaire plug-in',
+          'La jurisprudence est mince et provient surtout de tribunaux locaux : des craintes vagues de responsabilité ont été écartées (Amtsgericht Hamburg-Wandsbek, décembre 2025), mais les bailleurs ont obtenu gain de cause lorsque l\'installation n\'était pas sûre (Amtsgericht Köln, Amtsgericht Dresden). La DUH a engagé devant l\'Oberlandesgericht Hamm une action en cessation contre l\'accord d\'autorisation de Vonovia (annoncée le 17 septembre 2026 ; aucune décision rapportée)',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -778,6 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ce que le droit allemand donne aux locataires et aux copropriétaires', anchor: '#legal-claim', },
       { label: 'Pourquoi la directive européenne sur les bâtiments n\'impose pas le solaire plug-in', anchor: '#regulatory-driver', },
       { label: 'Comment les grands bailleurs traitent les demandes', anchor: '#landlord-practice', },
+      { label: 'Ce que disent les tribunaux et la jurisprudence à ce jour', anchor: '#court-practice', },
       { label: 'Ce que bailleurs et copropriétés peuvent exiger, et ce que les locataires doivent faire', anchor: '#landlord-rules', },
       { label: 'Le canal des achats groupés', anchor: '#b2b-channel', },
       { label: 'Sources', anchor: '#sources', },
@@ -791,9 +981,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Depuis le 17 octobre 2024, le § 554 al. 1 BGB pour les locataires et le § 20 al. 2 n° 5 WEG pour les copropriétaires donnent un droit aux mesures servant à la production d\'électricité par des appareils solaires plug-in.',
           'Le droit du locataire ne tombe que si la mesure est déraisonnable pour le bailleur même en tenant compte des intérêts du locataire (§ 554 BGB). Les accords contraires au détriment du locataire sont nuls.',
-          'Les bailleurs et les copropriétés gardent leur mot à dire sur la fixation, mais leurs exigences ne doivent pas être excessives. Les sources consultées ne tranchent pas si une décision de l\'assemblée est encore formellement requise ; interrogez votre gestionnaire.',
+          'Les bailleurs et les copropriétés conservent leur mot à dire sur le mode de fixation d\'un appareil, mais les exigences ne doivent pas être excessives. Le texte de loi ne dit pas si une décision de la copropriété est formellement requise ; selon des comptes rendus d\'un arrêt de la Cour fédérale de justice (BGH) de juillet 2025, une installation nettement visible sans décision peut faire l\'objet d\'une demande de dépose. Interrogez donc votre syndic et demandez une décision avant d\'installer.',
           'Vonovia a cédé sans réserve à l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026. Un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale.',
           'La directive européenne sur les bâtiments n\'oblige pas les bailleurs à installer du solaire plug-in, et nous n\'avons pas pu vérifier les annonces de programmes de bailleurs de plus de 50 000 unités.',
+          'La jurisprudence est mince et provient surtout de tribunaux locaux : un tribunal a écarté des craintes vagues de responsabilité (Amtsgericht Hamburg-Wandsbek, décembre 2025), tandis que d\'autres ont donné raison aux bailleurs lorsque l\'installation n\'était pas sûre (Amtsgericht Köln, Amtsgericht Dresden). Le 17 septembre 2026, la DUH a annoncé une action en cessation contre l\'accord d\'autorisation type de Vonovia devant l\'Oberlandesgericht Hamm ; aucune décision n\'avait été rapportée.',
         ],
       },
       legalClaim: {
@@ -801,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce que le droit allemand donne aux locataires et aux copropriétaires',
         content: [
           '**Depuis le 17 octobre 2024, le droit allemand range les appareils solaires plug-in parmi les mesures que locataires et copropriétaires peuvent exiger.** Le § 554 al. 1 BGB permet au locataire de demander au bailleur d\'autoriser des modifications structurelles servant à la production d\'électricité par des appareils solaires plug-in (« Steckersolargeräte »), à côté de l\'accessibilité, de la recharge de véhicules électriques et de la protection contre l\'effraction. Le droit tombe si la modification est déraisonnable pour le bailleur même en tenant compte des intérêts du locataire. Le § 554 al. 2 BGB déclare nuls les accords contraires au détriment du locataire. Le locataire peut accepter de fournir une garantie particulière, le § 551 al. 3 BGB s\'appliquant par analogie.',
-          '**Le § 20 al. 2 n° 5 WEG donne à chaque copropriétaire un droit du même type.** La communauté décide de la mise en œuvre dans le cadre d\'une gestion régulière. Haufe relève que l\'accord ne peut plus être refusé sans motif valable, que copropriétaires et bailleurs gardent un mot à dire sur la fixation de l\'appareil et que les exigences ne doivent pas être excessives. Les sources consultées ne tranchent pas si une décision de la communauté est encore formellement requise ; interrogez donc votre gestionnaire.',
+          '**Le § 20 (2) n° 5 WEG donne à chaque copropriétaire un droit de même nature.** La copropriété décide de la mise en œuvre dans le cadre d\'une gestion régulière. Haufe indique que le consentement ne peut plus être refusé sans motif sérieux, que propriétaires et bailleurs gardent leur mot à dire sur le mode de fixation et que les exigences ne doivent pas être excessives. Le texte de loi ne dit pas si une décision reste formellement requise ; Haufe et Cleanthinking rapportent que la Cour fédérale de justice (BGH, 18 juillet 2025, V ZR 29/24) a permis à une copropriété d\'exiger la dépose d\'une installation enfichable nettement visible posée sans décision. Nous n\'avons pas lu la décision complète et n\'avons pas pu confirmer quelle version de la loi s\'appliquait ; interrogez donc votre syndic et demandez une décision avant d\'installer.',
         ],
       },
       regulatoryDriver: {
@@ -818,6 +1009,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Les grands bailleurs décident au cas par cas, et la pratique est contestée.** En janvier 2026, Vonovia a accepté « sans réserve » l\'installation de balcon d\'un locataire d\'Aix-la-Chapelle après une action en justice soutenue par la Deutsche Umwelthilfe (DUH) ; selon la DUH, Vonovia avait exigé des calculs de charge de vent, des justificatifs de structure et le respect d\'une norme de vitrage vertical. La DUH demande que Vonovia révise ses règles d\'installation.',
           '**Un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale.** Ce sont des positions rapportées par des tiers, pas des décisions de justice sur le stockage ; pour les règles de stockage, voir [Les batteries pour le solaire de balcon en 2027](/fr/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**Le 17 septembre 2026, la DUH a annoncé avoir engagé devant l\'Oberlandesgericht Hamm une action en cessation contre l\'accord d\'autorisation type de Vonovia (« Gestattungsvereinbarung ») ; aucune décision n\'avait été rapportée à cette date.** Selon la DUH, les locataires disposant d\'une prise extérieure doivent signer l\'accord et accepter une inspection sur place, supporter le coût des défauts constatés et décharger Vonovia de toute responsabilité, et le perçage ou le passage de câbles à l\'intérieur n\'est en principe pas autorisé pour les locataires sans prise extérieure. Il s\'agit de descriptions de la DUH sur les conditions de Vonovia ; nous n\'avons trouvé aucune déclaration de Vonovia sur cette action.',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: 'Ce que disent les tribunaux et la jurisprudence à ce jour',
+        content: [
+          '**Dans les affaires rapportées jusqu\'ici, les tribunaux ont accepté des conditions sur le mode d\'installation et écarté un refus général ; la jurisprudence est mince et provient surtout de tribunaux locaux.** Le 2 décembre 2025, l\'Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) a jugé que des craintes vagues de responsabilité ou d\'esthétique ne justifiaient pas une demande de dépose et, selon Cleanthinking, s\'est appuyé sur la nouvelle norme produit pour autoriser le raccordement à une prise extérieure ordinaire. Haufe et la VDIV ont indiqué que le jugement n\'était pas encore définitif.',
+          '**Les tribunaux ont aussi donné raison à des bailleurs lorsque l\'installation n\'était pas sûre.** L\'Amtsgericht Köln (13 décembre 2024, Az. 208 C 460/23) a ordonné à un locataire de retirer deux modules accrochés sans accord à l\'extérieur d\'un garde-corps de balcon en raison du risque en cas de tempête ; selon Cleanthinking (18 octobre 2026), l\'appel est pendant devant le Landgericht Köln. L\'Amtsgericht Dresden (18 mai 2026, Az. 143 C 1125/25) a rejeté la demande d\'un locataire dont les deux modules dépassaient au-dessus du garde-corps et laissaient un interstice d\'environ 4 cm où, selon le bailleur, des enfants pouvaient rester coincés ; le tribunal a suivi cet argument, d\'après Vermieter-Web (23 octobre 2026).',
+          '**La VDIV, association professionnelle d\'administrateurs d\'immeubles, résume ainsi les conditions qu\'un bailleur peut en général imposer :** preuve d\'une assurance responsabilité civile privée, composants conformes à la norme, installation correcte, enregistrement au Marktstammdatenregister et dépose au départ du locataire. Selon Cleanthinking, aucun tribunal n\'a encore tranché la question de savoir si un bailleur peut exiger un dépôt de garantie. Ce sont des comptes rendus secondaires, pas un conseil juridique ; consultez les décisions complètes avant de vous appuyer sur l\'une d\'elles.',
         ],
       },
       landlordRules: {
@@ -826,6 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Les règles sur la fixation de l\'appareil sont admises ; celles qui vident le droit de sa substance ne le sont pas.** L\'appareil lui-même est limité par la loi et la norme produit : la définition de l\'EEG autorise jusqu\'à 800 W de puissance d\'onduleur et 2 000 W de modules, tandis que la norme produit DIN VDE V 0126-95 autorise jusqu\'à 960 W de modules avec une prise domestique normale et jusqu\'à 2 000 Wp avec une prise énergie spéciale installée par un électricien. L\'exploitant déclare lui-même l\'appareil dans le Marktstammdatenregister (cinq données techniques) ; depuis le Solarpaket I (mai 2024), le gestionnaire de réseau n\'a plus à être informé directement.',
           '**Pour les locataires, la marche à suivre pratique est de demander par écrit, de nommer l\'appareil et le mode de fixation, de proposer de suivre des règles de fixation raisonnables et de conserver la réponse.** Si l\'accord est refusé sans motif, les associations de consommateurs et de locataires peuvent aider. Ce sont des informations générales, pas un conseil juridique.',
+          '**Les conditions que la VDIV cite comme généralement admissibles sont étroites et concrètes :** preuve d\'une assurance responsabilité civile privée, composants conformes à la norme, installation correcte, enregistrement et dépose au départ. Un véritable défaut de sécurité peut justifier un refus ; les échecs de locataires rapportés ci-dessus concernaient des modules accrochés à l\'extérieur ou dépassant au-dessus du garde-corps, décrivez donc précisément le mode de fixation dans votre demande. Ce sont des informations générales, pas un conseil juridique.',
         ],
       },
       b2bChannel: {
@@ -879,6 +1081,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE – FAQ zur DIN VDE V 0126-95',
             description: 'Limites de la norme produit : 800 VA, 960 W avec prise normale, 2 000 Wp avec prise énergie spéciale',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe — communiqué de presse du 17 septembre 2026',
+            description: 'Action en cessation contre l\'accord d\'autorisation de Vonovia devant l\'Oberlandesgericht Hamm ; description par la DUH des conditions de Vonovia',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV — Les tribunaux renforcent le droit aux Balkonkraftwerke (20 janvier 2026)',
+            description: 'Résumé du jugement de l\'Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) et des conditions que les bailleurs peuvent imposer',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe — Streit um Balkonkraftwerke vor Gericht',
+            description: 'Panorama de jurisprudence : Amtsgericht Köln, Amtsgericht Hamburg-Wandsbek et arrêt du BGH V ZR 29/24 sur les copropriétés',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking — locataires, propriétaires et solaire de balcon (18 octobre 2026)',
+            description: 'Aperçu de la loi de 2024, de la jurisprudence et des questions ouvertes comme le dépôt de garantie',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web — accord du bailleur pour le solaire de balcon (23 octobre 2026)',
+            description: 'Compte rendu du jugement de l\'Amtsgericht Dresden du 18 mai 2026 (Az. 143 C 1125/25)',
+          },
         ],
       },
       faqSection: {
@@ -891,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Les copropriétaires ont-ils besoin d\'une décision de la communauté ?',
-            a: 'Le § 20 al. 2 n° 5 WEG donne à chaque copropriétaire un droit à des modifications structurelles appropriées pour les appareils solaires plug-in, et la communauté décide de la mise en œuvre dans le cadre d\'une gestion régulière. Les sources consultées ne tranchent pas si une décision est encore formellement requise ; interrogez votre gestionnaire.',
+            a: 'Le § 20 (2) n° 5 WEG donne à chaque copropriétaire droit à des modifications structurelles adaptées pour des appareils solaires enfichables, et la copropriété décide de la mise en œuvre dans le cadre d\'une gestion régulière. Haufe et Cleanthinking rapportent que la Cour fédérale de justice (V ZR 29/24, 18 juillet 2025) a permis à une copropriété d\'exiger la dépose d\'une installation nettement visible posée sans décision. Nous n\'avons pas lu la décision complète ; interrogez votre syndic et demandez une décision avant d\'installer.',
           },
           {
             q: 'Les grands bailleurs allemands mènent-ils des programmes de solaire de balcon ?',
@@ -908,6 +1135,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Quelles limites s\'appliquent à un appareil solaire plug-in en Allemagne ?',
             a: 'La définition de l\'EEG autorise jusqu\'à 800 W de puissance d\'onduleur et 2 000 W de modules. La norme produit DIN VDE V 0126-95 autorise jusqu\'à 960 W de modules avec une prise domestique normale et jusqu\'à 2 000 Wp avec une prise énergie spéciale installée par un électricien. La norme ne couvre pas les appareils avec stockage.',
+          },
+          {
+            q: 'Quelles conditions un bailleur peut-il poser au solaire de balcon ?',
+            a: 'La VDIV, association professionnelle d\'administrateurs d\'immeubles, résume comme généralement admissibles : preuve d\'une assurance responsabilité civile privée, composants conformes à la norme, installation correcte, enregistrement au Marktstammdatenregister et dépose au départ. L\'Amtsgericht Hamburg-Wandsbek (2 décembre 2025, Az. 714 C 160/25 ; rapporté comme non définitif) a écarté un refus général fondé sur des risques de responsabilité vagues. Selon Cleanthinking, aucun tribunal n\'a tranché la question du dépôt de garantie. Ce sont des informations générales, pas un conseil juridique.',
+          },
+          {
+            q: 'Les tribunaux allemands ont-ils tranché des litiges sur le solaire de balcon ?',
+            a: 'Oui, surtout au niveau des tribunaux locaux, et le tableau est mitigé. L\'Amtsgericht Hamburg-Wandsbek a donné raison à un locataire face à des craintes vagues de responsabilité, tandis que l\'Amtsgericht Köln (13 décembre 2024, Az. 208 C 460/23) et l\'Amtsgericht Dresden (18 mai 2026, Az. 143 C 1125/25) ont donné raison aux bailleurs lorsque l\'installation présentait un risque de sécurité. L\'action en cessation de la DUH contre l\'accord d\'autorisation de Vonovia est pendante devant l\'Oberlandesgericht Hamm. Consultez les décisions complètes avant de vous appuyer sur l\'une d\'elles.',
           },
         ],
       },
@@ -931,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ドイツでは、2024年10月17日から、借主と区分所有者にプラグイン式ソーラー機器（「Steckersolargeräte」）を求める法的な権利があります。これにより、貸主にとっての問いは「設置してよいか」から「どのような条件で、どう設置するか」に移りました。このページでは、法律の内容、貸主や管理組合が求めてよいこと、大手貸主（Vonovia）の対応、EUの建築物指令が求めていること・求めていないことを説明します。ドイツに関する一般的な情報であり、法的助言ではありません。',
     metaDescription: '2024年10月以降、ドイツの借主と区分所有者はプラグイン式ソーラー機器を求める権利があります。貸主が求められることと、EU指令EPBDの内容を解説。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5分で読める',
     educationalLevel: 'Beginner',
     audience: 'プラグイン式ソーラーを検討しているドイツの貸主、不動産管理者、住宅会社、借主',
@@ -948,8 +1183,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '貸主や管理組合は取り付けのルールを定められるが、Haufeによるとその要件は過大であってはならない',
           'Vonoviaは2026年1月、Deutsche Umwelthilfeが支援した訴訟を受け、アーヘンの借主の設置に留保なく同意。drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています',
           'EPBD（指令(EU) 2024/1275）は新築建築物と一部の既存の非住宅建築物で太陽光を標準にするもので、貸主にプラグイン式ソーラーの設置を義務づけてはいない',
+          '判例は少なく、大半は区裁判所のものです。漠然とした責任上の懸念は退けられましたが（Amtsgericht Hamburg-Wandsbek、2025年12月）、設置が安全でなかった事案では貸主が勝訴しました（Amtsgericht Köln、Amtsgericht Dresden）。DUHはVonoviaの承諾契約に対する差止訴訟をOberlandesgericht Hammに提起しました（2026年9月17日発表、判決は報じられていません）',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -957,6 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ドイツの法律が借主と区分所有者に認めていること', anchor: '#legal-claim', },
       { label: 'EUの建築物指令がプラグイン式ソーラーを義務づけない理由', anchor: '#regulatory-driver', },
       { label: '大手貸主は申請にどう対応しているか', anchor: '#landlord-practice', },
+      { label: 'これまでの裁判所の判断と判例', anchor: '#court-practice', },
       { label: '貸主・管理組合が求められることと、借主がすべきこと', anchor: '#landlord-rules', },
       { label: '一括調達というチャネル', anchor: '#b2b-channel', },
       { label: '出典', anchor: '#sources', },
@@ -970,9 +1207,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '2024年10月17日以降、BGB第554条第1項が借主に、WEG第20条第2項第5号が区分所有者に、プラグイン式ソーラー機器による発電に資する措置を求める権利を認めています。',
           '借主の権利が認められないのは、借主の利益を考慮しても措置が貸主にとって受け入れがたい場合だけです（BGB第554条）。借主に不利な、これと異なる合意は無効です。',
-          '貸主や管理組合は取り付け方法について意見を述べられますが、要件は過大であってはなりません。管理組合の決議がなお形式上必要かどうかは、確認した情報源では確定していません。管理会社に確認してください。',
+          '貸主と区分所有者の管理組合は、機器の取り付け方法について発言権を持ちますが、要求は過度であってはなりません。法律の条文は、管理組合の決議が形式上必要かどうかを定めていません。2025年7月の連邦通常裁判所（BGH）の判決に関する報道によれば、決議なしに外から明らかに見える形で設置した場合は撤去を命じられる可能性があります。設置前に管理者へ確認し、決議を求めてください。',
           'Vonoviaは2026年1月、アーヘンの借主の設置に留保なく同意しました。drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています。',
           'EUの建築物指令は貸主にプラグイン式ソーラーの設置を義務づけておらず、5万台超の貸主プログラムとする報道は確認できませんでした。',
+          '判例は少なく、大半は区裁判所のものです。ある裁判所は漠然とした責任上の懸念を退け（Amtsgericht Hamburg-Wandsbek、2025年12月）、設置が安全でなかった事案では貸主の主張が認められました（Amtsgericht Köln、Amtsgericht Dresden）。2026年9月17日、DUHはVonovia（ヴォノヴィア）の標準的な承諾契約に対する差止訴訟をOberlandesgericht Hammに提起したと発表しましたが、判決は報じられていません。',
         ],
       },
       legalClaim: {
@@ -980,7 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ドイツの法律が借主と区分所有者に認めていること',
         content: [
           '**2024年10月17日以降、ドイツの法律はプラグイン式ソーラー機器を、借主と区分所有者が求めることのできる措置に加えています。** BGB第554条第1項は、バリアフリー、電気自動車の充電、侵入防止と並んで、プラグイン式ソーラー機器（「Steckersolargeräte」）による発電に資する構造上の変更を貸主に許可するよう求める権利を借主に認めています。借主の利益を考慮しても貸主にとって受け入れがたい変更であれば、この権利は認められません。同条第2項により、借主に不利でこれと異なる合意は無効です。借主は特別な担保の提供に同意でき、その場合はBGB第551条第3項が準用されます。',
-          '**WEG第20条第2項第5号は、各区分所有者に同種の権利を認めています。** 実施については、管理組合が適正な管理の範囲内で決定します。Haufeは、同意を正当な理由なしに拒否することはもはやできないこと、区分所有者や貸主が取り付け方法に意見を述べられること、要件が過大であってはならないことを指摘しています。管理組合の決議がなお形式上必要かどうかは、確認した情報源では確定していないため、管理会社に確認してください。',
+          '**§ 20 (2) Nr. 5 WEGは、各区分所有者に同種の請求権を与えています。** 実施方法は、適切な管理の範囲内で管理組合が決定します。Haufeは、正当な理由なく同意を拒否することはできなくなったこと、所有者と貸主は取り付け方法について発言権を持つこと、要求は過度であってはならないことを指摘しています。条文は決議が形式上なお必要かどうかを定めていません。HaufeとCleanthinkingは、連邦通常裁判所（BGH、2025年7月18日、V ZR 29/24）が、決議なしに設置された外から明らかに見えるプラグイン式の設備について、管理組合が撤去を求めることを認めたと報じています。当サイトは判決全文を読んでおらず、どの法律の版が適用されたかも確認できていないため、管理者に確認し、設置前に決議を求めてください。',
         ],
       },
       regulatoryDriver: {
@@ -997,6 +1235,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**大手貸主は個別に判断しており、その運用には争いがあります。** 2026年1月、Vonoviaは、Deutsche Umwelthilfe（DUH）が支援した訴訟を受けて、アーヘンの借主のバルコニー設備に「留保なく」同意しました。DUHによると、Vonoviaはそれまで、風荷重の計算、構造上の証明、垂直ガラス規格の順守を求めていました。DUHはVonoviaに設置ルールの見直しを求めています。',
           '**drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています。** これは第三者が伝える立場であり、蓄電池に関する裁判所の判断ではありません。蓄電池のルールは[2027年のバルコニーソーラー用蓄電池](/ja/balcony-solar/balcony-solar-battery-storage-standard-2027)をご覧ください。',
+          '**2026年9月17日、DUHはVonoviaの標準的な承諾契約（「Gestattungsvereinbarung」）に対する差止訴訟をOberlandesgericht Hammに提起したと発表しました。この時点で判決は報じられていません。** DUHによると、屋外コンセントのある借主は契約への署名と現地検査の受け入れ、発見された不具合の費用負担、Vonoviaの責任の免除に応じる必要があり、屋外コンセントのない借主には、室内での穴あけやケーブル配線は原則として認められません。これらはVonoviaの条件に関するDUHの説明であり、本訴訟についてVonovia側の声明は確認できていません。',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: 'これまでの裁判所の判断と判例',
+        content: [
+          '**これまでに報じられた事案では、裁判所は設置方法に関する条件を認め、一律の拒否は退けました。判例は少なく、大半が区裁判所のものです。** Amtsgericht Hamburg-Wandsbek（2025年12月2日、Az. 714 C 160/25）は、漠然とした責任上または外観上の懸念では撤去請求は正当化されないと判断し、Cleanthinkingによれば、新しい製品規格を根拠に通常の屋外コンセントへの接続を認めました。HaufeとVDIVは、この判決は未確定と報じています。',
+          '**設置が安全でなかった事案では、裁判所は貸主側に立ったこともあります。** Amtsgericht Köln（2024年12月13日、Az. 208 C 460/23）は、無断でバルコニーの手すりの外側に掛けられた2枚のモジュールについて、暴風時の危険を理由に借主に撤去を命じました。Cleanthinking（2026年10月18日）によれば、控訴はLandgericht Kölnに係属中です。Amtsgericht Dresden（2026年5月18日、Az. 143 C 1125/25）は、2枚のモジュールが手すりより上に出て約4 cmの隙間ができ、貸主が子どもが挟まる恐れがあると主張した事案で借主の請求を棄却し、裁判所もこれを認めました（Vermieter-Web、2026年10月23日の報道）。',
+          '**不動産管理者の業界団体であるVDIVは、貸主が一般に課せる条件を次のようにまとめています。** 個人賠償責任保険の証明、規格に適合した部品、適切な設置、Marktstammdatenregisterへの登録、退去時の撤去です。Cleanthinkingによれば、貸主が敷金（保証金）を求められるかどうかは、まだどの裁判所も判断していません。これらは二次的な報道であり、法的助言ではありません。いずれかに依拠する前に判決全文をご確認ください。',
         ],
       },
       landlordRules: {
@@ -1005,6 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**機器の取り付け方法に関するルールは認められますが、権利を空洞化させるルールは認められません。** 機器そのものは法律と製品規格で制限されています。EEGの定義ではインバーター出力は最大800 W、モジュールは2,000 Wまでです。製品規格DIN VDE V 0126-95では、通常の家庭用プラグでモジュール最大960 W、電気技術者が設置する専用エネルギープラグで最大2,000 Wpまで認められます。運転者はMarktstammdatenregisterに機器を自分で登録します（技術情報5項目）。Solarpaket I（2024年5月）以降、系統事業者に直接通知する必要はなくなりました。',
           '**借主にとっての実際の手順は、書面で申し出る、機器と取り付け方法を明示する、合理的な取り付けルールに従うと申し出る、回答を保管する、の4つです。** 理由なく同意が拒否された場合は、消費者相談センターや借家人団体が支援してくれます。これは一般的な情報であり、法的助言ではありません。',
+          '**VDIVが一般に認められる条件として挙げているものは、限定的で具体的です。** 個人賠償責任保険の証明、規格適合部品、適切な設置、登録、退去時の撤去です。実際の安全上の欠陥があれば拒否の理由になり得ます。上で報じた借主側の敗訴事例は、外側に掛けたモジュールや手すりより上に出たモジュールに関するものでしたので、申請では取り付け方法を正確に説明してください。これは一般的な情報であり、法的助言ではありません。',
         ],
       },
       b2bChannel: {
@@ -1058,6 +1307,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE — DIN VDE V 0126-95に関するFAQ',
             description: '製品規格の上限：800 VA、通常のプラグで960 W、専用エネルギープラグで2,000 Wp',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe（ドイツ環境援助協会）– 2026年9月17日のプレスリリース',
+            description: 'Vonoviaの承諾契約に対するOberlandesgericht Hammでの差止訴訟、およびVonoviaの条件に関するDUHの説明',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV – 裁判所がバルコニー発電の請求権を強化（2026年1月20日）',
+            description: 'Amtsgericht Hamburg-Wandsbek判決（Az. 714 C 160/25）の要約と、貸主が課せる条件',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe – Streit um Balkonkraftwerke vor Gericht',
+            description: '判例の概観：Amtsgericht Köln、Amtsgericht Hamburg-Wandsbek、および区分所有に関するBGH判決V ZR 29/24',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking – 借主、所有者とバルコニー発電（2026年10月18日）',
+            description: '2024年の法律、判例、敷金などの未解決の論点の概観',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web – バルコニー発電に対する貸主の同意（2026年10月23日）',
+            description: 'Amtsgericht Dresdenの2026年5月18日付判決（Az. 143 C 1125/25）に関する報道',
+          },
         ],
       },
       faqSection: {
@@ -1070,7 +1344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '区分所有者は管理組合の決議が必要ですか？',
-            a: 'WEG第20条第2項第5号は、各区分所有者にプラグイン式ソーラー機器のための適切な構造変更を求める権利を認め、実施については管理組合が適正な管理の範囲内で決定します。決議がなお形式上必要かどうかは、確認した情報源では確定していないため、管理会社に確認してください。',
+            a: '§ 20 (2) Nr. 5 WEGは、各所有者にプラグイン式ソーラー機器のための適切な構造変更を求める権利を与えており、実施方法は適切な管理の範囲内で管理組合が決定します。HaufeとCleanthinkingは、連邦通常裁判所（V ZR 29/24、2025年7月18日）が、決議なしに設置された外から明らかに見える設備について、管理組合が撤去を求めることを認めたと報じています。判決全文は確認していませんので、管理者に確認し、設置前に決議を求めてください。',
           },
           {
             q: 'ドイツの大手貸主はバルコニーソーラーのプログラムを実施していますか？',
@@ -1087,6 +1361,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'ドイツでプラグイン式ソーラー機器にはどのような上限がありますか？',
             a: 'EEGの定義ではインバーター出力は最大800 W、モジュールは2,000 Wまでです。製品規格DIN VDE V 0126-95では、通常の家庭用プラグでモジュール最大960 W、電気技術者が設置する専用エネルギープラグで最大2,000 Wpまで認められます。この規格は蓄電池付きの機器を対象としていません。',
+          },
+          {
+            q: '貸主はバルコニーソーラーにどのような条件を付けられますか。',
+            a: '不動産管理者の業界団体であるVDIVは、一般に認められる条件として、個人賠償責任保険の証明、規格適合部品、適切な設置、Marktstammdatenregisterへの登録、退去時の撤去を挙げています。Amtsgericht Hamburg-Wandsbek（2025年12月2日、Az. 714 C 160/25、未確定と報じられています）は、漠然とした責任リスクを理由とする一律の拒否を退けました。Cleanthinkingによれば、貸主が敷金を求められるかどうかは、まだどの裁判所も判断していません。これは一般的な情報であり、法的助言ではありません。',
+          },
+          {
+            q: 'ドイツの裁判所はバルコニーソーラーの紛争について判断していますか。',
+            a: 'はい。主に区裁判所の段階で、結果はまちまちです。Amtsgericht Hamburg-Wandsbekは漠然とした責任上の懸念に対して借主を支持した一方、Amtsgericht Köln（2024年12月13日、Az. 208 C 460/23）とAmtsgericht Dresden（2026年5月18日、Az. 143 C 1125/25）は、設置が安全上のリスクだった事案で貸主を支持しました。DUHによるVonoviaの承諾契約への差止訴訟は、Oberlandesgericht Hammに係属中です。いずれかに依拠する前に判決全文をご確認ください。',
           },
         ],
       },
@@ -1110,7 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '독일에서는 세입자와 구분소유자가 2024년 10월 17일부터 플러그인 태양광 장치("Steckersolargeräte")를 요구할 법적 권리를 갖습니다. 이로써 임대인의 질문은 "설치해도 되는가"에서 "어떤 조건으로, 어떻게 하는가"로 옮겨 갔습니다. 이 글은 법이 정하는 내용, 임대인과 관리조합이 요구할 수 있는 것, 대형 임대인(Vonovia)의 대응, EU 건축물 지침이 요구하는 것과 요구하지 않는 것을 설명합니다. 독일에 관한 일반 정보이며 법률 자문이 아닙니다.',
     metaDescription: '2024년 10월부터 독일 세입자와 구분소유자는 플러그인 태양광 장치를 요구할 수 있습니다. 임대인이 요구할 수 있는 것과 EU EPBD의 내용을 정리합니다.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5분 읽기',
     educationalLevel: 'Beginner',
     audience: '플러그인 태양광을 검토하는 독일의 임대인, 부동산 관리자, 주택협회, 세입자',
@@ -1127,8 +1409,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '임대인과 관리조합은 설치 규칙을 정할 수 있으나, Haufe에 따르면 그 요건이 과도해서는 안 됩니다',
           'Vonovia는 2026년 1월 독일환경지원이 지원한 소송 이후 아헨 세입자의 설치에 유보 없이 동의했습니다. drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다',
           'EPBD(지침 (EU) 2024/1275)는 신축 건물과 일부 기존 비주거 건물에서 태양광을 표준으로 삼으며, 임대인에게 플러그인 태양광 설치를 의무화하지 않습니다',
+          '판례는 많지 않고 대부분 지방법원 수준입니다. 막연한 책임 우려는 배척되었지만(Amtsgericht Hamburg-Wandsbek, 2025년 12월), 설치가 안전하지 않았던 사건에서는 임대인이 승소했습니다(Amtsgericht Köln, Amtsgericht Dresden). DUH는 Vonovia의 허가 계약에 대한 금지 소송을 Oberlandesgericht Hamm에 제기했습니다(2026년 9월 17일 발표, 판결 보도 없음)',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1136,6 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '독일 법이 세입자와 구분소유자에게 주는 것', anchor: '#legal-claim', },
       { label: 'EU 건축물 지침이 플러그인 태양광을 의무화하지 않는 이유', anchor: '#regulatory-driver', },
       { label: '대형 임대인이 요청을 다루는 방식', anchor: '#landlord-practice', },
+      { label: '지금까지 법원과 판례가 말하는 내용', anchor: '#court-practice', },
       { label: '임대인과 관리조합이 요구할 수 있는 것, 세입자가 할 일', anchor: '#landlord-rules', },
       { label: '대량 조달 채널', anchor: '#b2b-channel', },
       { label: '출처', anchor: '#sources', },
@@ -1149,9 +1433,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '2024년 10월 17일부터 BGB 제554조 제1항은 세입자에게, WEG 제20조 제2항 제5호는 구분소유자에게 플러그인 태양광 장치로 발전하는 데 도움이 되는 조치를 요구할 권리를 인정합니다.',
           '세입자의 청구권이 성립하지 않는 것은 세입자의 이익을 고려하더라도 조치가 임대인에게 기대하기 어려운 경우뿐입니다(BGB 제554조). 세입자에게 불리하게 이와 달리 정한 합의는 무효입니다.',
-          '임대인과 관리조합은 설치 방식에 의견을 낼 수 있지만 요건이 과도해서는 안 됩니다. 관리조합 결의가 형식상 여전히 필요한지는 확인한 출처에서 확정되지 않았으니 관리자에게 문의하십시오.',
+          '임대인과 소유자 공동체는 장치의 설치 방식에 대해 발언권을 가지지만, 요구가 과도해서는 안 됩니다. 법 조문은 공동체 결의가 형식상 필요한지 밝히고 있지 않습니다. 2025년 7월 연방대법원(BGH) 판결에 관한 보도에 따르면, 결의 없이 외부에서 뚜렷하게 보이게 설치한 경우 철거를 요구받을 수 있습니다. 따라서 관리자에게 문의하고 설치 전에 결의를 신청하시기 바랍니다.',
           'Vonovia는 2026년 1월 아헨 세입자의 설치에 유보 없이 동의했습니다. drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다.',
           'EU 건축물 지침은 임대인에게 플러그인 태양광 설치를 의무화하지 않으며, 임대인 프로그램이 5만 대를 넘는다는 보도는 확인할 수 없었습니다.',
+          '판례는 많지 않고 대부분 지방법원 수준입니다. 한 법원은 막연한 책임 우려를 배척했고(Amtsgericht Hamburg-Wandsbek, 2025년 12월), 설치가 안전하지 않았던 사건에서는 다른 법원들이 임대인의 손을 들어 주었습니다(Amtsgericht Köln, Amtsgericht Dresden). 2026년 9월 17일 DUH는 Vonovia의 표준 허가 계약에 대한 금지 소송을 Oberlandesgericht Hamm에 제기했다고 발표했으며, 판결은 보도되지 않았습니다.',
         ],
       },
       legalClaim: {
@@ -1159,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '독일 법이 세입자와 구분소유자에게 주는 것',
         content: [
           '**2024년 10월 17일부터 독일 법은 플러그인 태양광 장치를 세입자와 구분소유자가 요구할 수 있는 조치에 포함합니다.** BGB 제554조 제1항은 장애인 접근성, 전기차 충전, 침입 방지와 함께, 플러그인 태양광 장치("Steckersolargeräte")를 이용한 발전에 도움이 되는 구조 변경을 허용해 달라고 세입자가 임대인에게 요구할 수 있게 합니다. 세입자의 이익을 고려하더라도 그 변경이 임대인에게 기대하기 어려우면 청구권은 성립하지 않습니다. 같은 조 제2항에 따라 세입자에게 불리하게 이와 달리 정한 합의는 무효입니다. 세입자는 특별 담보 제공에 동의할 수 있으며, 이때 BGB 제551조 제3항이 준용됩니다.',
-          '**WEG 제20조 제2항 제5호는 각 구분소유자에게 같은 종류의 권리를 줍니다.** 실행 방법은 관리조합이 적정한 관리의 범위에서 결정합니다. Haufe는 동의를 정당한 사유 없이 거부할 수 없게 되었고, 소유자와 임대인은 장치를 설치하는 방식에 의견을 낼 수 있으며, 요건이 과도해서는 안 된다고 지적합니다. 조합 결의가 형식상 여전히 필요한지는 확인한 출처에서 확정되지 않았으므로 관리자에게 문의하십시오.',
+          '**§ 20 (2) Nr. 5 WEG는 각 구분소유자에게 같은 종류의 청구권을 부여합니다.** 실행 방법은 적정한 관리의 범위 안에서 공동체가 결정합니다. Haufe는 정당한 이유 없이 동의를 거부할 수 없게 되었고, 소유자와 임대인이 설치 방식에 대해 발언권을 가지며, 요구가 과도해서는 안 된다고 지적합니다. 법 조문은 결의가 형식상 여전히 필요한지 밝히고 있지 않습니다. Haufe와 Cleanthinking은 연방대법원(BGH, 2025년 7월 18일, V ZR 29/24)이 결의 없이 설치된, 외부에서 뚜렷하게 보이는 플러그인 설비에 대해 공동체가 철거를 요구하도록 허용했다고 보도합니다. 저희는 판결 전문을 읽지 않았고 어느 시점의 법이 적용되었는지도 확인하지 못했으므로, 관리자에게 문의하고 설치 전에 결의를 신청하시기 바랍니다.',
         ],
       },
       regulatoryDriver: {
@@ -1176,6 +1461,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**대형 임대인은 사안별로 판단하며, 그 관행에는 다툼이 있습니다.** 2026년 1월 Vonovia는 독일환경지원(DUH)이 지원한 소송 이후 아헨 세입자의 발코니 설비에 "유보 없이" 동의했습니다. DUH에 따르면 Vonovia는 그 전까지 풍하중 계산, 구조 증명, 수직 유리 규격 준수를 요구했습니다. DUH는 Vonovia가 설치 규칙을 수정하기를 요구합니다.',
           '**drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다.** 이는 제3자가 전하는 입장이며, 저장장치에 대한 법원 판결이 아닙니다. 저장장치 규정은 [2027년 발코니 태양광 배터리](/ko/balcony-solar/balcony-solar-battery-storage-standard-2027)를 참고하십시오.',
+          '**2026년 9월 17일 DUH는 Vonovia의 표준 허가 계약(「Gestattungsvereinbarung」)에 대한 금지 소송을 Oberlandesgericht Hamm에 제기했다고 발표했으며, 그 시점에 판결은 보도되지 않았습니다.** DUH에 따르면 실외 콘센트가 있는 세입자는 계약에 서명하고 현장 점검을 받아들이며, 발견된 하자의 비용을 부담하고 Vonovia의 책임을 면제해야 합니다. 실외 콘센트가 없는 세입자에게는 실내 천공이나 케이블 배선이 원칙적으로 허용되지 않습니다. 이는 Vonovia의 조건에 대한 DUH의 설명이며, 이 소송에 대한 Vonovia의 입장은 확인하지 못했습니다.',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: '지금까지 법원과 판례가 말하는 내용',
+        content: [
+          '**지금까지 보도된 사건에서 법원은 설치 방식에 관한 조건을 받아들이고 일괄적인 거부를 배척했습니다. 판례는 많지 않고 대부분 지방법원 수준입니다.** Amtsgericht Hamburg-Wandsbek(2025년 12월 2일, Az. 714 C 160/25)은 막연한 책임 또는 외관 우려만으로는 철거 청구가 정당화되지 않는다고 보았고, Cleanthinking에 따르면 새로운 제품 규격을 근거로 일반 실외 콘센트 연결을 허용했습니다. Haufe와 VDIV는 이 판결이 아직 확정되지 않았다고 보도했습니다.',
+          '**설치가 안전하지 않았던 경우 법원이 임대인의 손을 들어 준 사례도 있습니다.** Amtsgericht Köln(2024년 12월 13일, Az. 208 C 460/23)은 동의 없이 발코니 난간 바깥쪽에 건 모듈 두 장에 대해 폭풍 시 위험을 이유로 세입자에게 철거를 명령했습니다. Cleanthinking(2026년 10월 18일)에 따르면 항소는 Landgericht Köln에 계류 중입니다. Amtsgericht Dresden(2026년 5월 18일, Az. 143 C 1125/25)은 모듈 두 장이 난간 위로 튀어나와 약 4 cm의 틈이 생겼고 임대인이 아이들이 끼일 수 있다고 주장한 사건에서 세입자의 청구를 기각했으며, 법원이 이를 받아들였습니다(Vermieter-Web, 2026년 10월 23일 보도).',
+          '**부동산 관리자 업계 단체인 VDIV는 임대인이 일반적으로 요구할 수 있는 조건을 다음과 같이 정리합니다.** 개인 배상책임보험 증빙, 규격에 맞는 부품, 적절한 설치, Marktstammdatenregister 등록, 퇴거 시 철거입니다. Cleanthinking에 따르면 임대인이 보증금을 요구할 수 있는지는 아직 어느 법원도 판단하지 않았습니다. 이는 2차 보도이며 법률 자문이 아닙니다. 어느 것에든 의존하기 전에 판결 전문을 확인하시기 바랍니다.',
         ],
       },
       landlordRules: {
@@ -1184,6 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**장치를 설치하는 방식에 대한 규칙은 허용되지만, 권리를 공동화하는 규칙은 허용되지 않습니다.** 장치 자체는 법과 제품 표준으로 제한됩니다. EEG 정의는 인버터 출력 최대 800 W, 모듈 2,000 W까지를 허용하고, 제품 표준 DIN VDE V 0126-95는 일반 가정용 플러그에서 모듈 최대 960 W, 전기기술자가 설치하는 특수 에너지 플러그에서 최대 2,000 Wp를 허용합니다. 운영자는 Marktstammdatenregister에 직접 장치를 등록합니다(기술 정보 5가지). Solarpaket I(2024년 5월) 이후 전력망 사업자에 직접 알릴 필요는 없습니다.',
           '**세입자의 실무 순서는 서면으로 요청하고, 장치와 설치 방식을 명시하고, 합리적인 설치 규칙을 따르겠다고 제안하고, 답변을 보관하는 것입니다.** 이유 없이 동의가 거부되면 소비자 상담센터와 세입자 단체가 도움을 줄 수 있습니다. 이는 일반 정보이며 법률 자문이 아닙니다.',
+          '**VDIV가 일반적으로 허용되는 조건으로 꼽는 것은 한정적이고 구체적입니다.** 개인 배상책임보험 증빙, 규격에 맞는 부품, 적절한 설치, 등록, 퇴거 시 철거입니다. 실제 안전상 결함이 있으면 거부의 근거가 될 수 있습니다. 위에서 보도한 세입자 패소 사례는 바깥쪽에 걸었거나 난간 위로 튀어나온 모듈에 관한 것이었으므로, 신청서에 설치 방식을 정확히 기재하시기 바랍니다. 이는 일반 정보이며 법률 자문이 아닙니다.',
         ],
       },
       b2bChannel: {
@@ -1237,6 +1533,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE — DIN VDE V 0126-95 FAQ',
             description: '제품 표준 한도: 800 VA, 일반 플러그 960 W, 특수 에너지 플러그 2,000 Wp',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe – 2026년 9월 17일 보도자료',
+            description: 'Oberlandesgericht Hamm에서의 Vonovia 허가 계약에 대한 금지 소송, 그리고 Vonovia 조건에 대한 DUH의 설명',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV – 법원이 발코니 태양광 청구권을 강화(2026년 1월 20일)',
+            description: 'Amtsgericht Hamburg-Wandsbek 판결(Az. 714 C 160/25) 요약 및 임대인이 요구할 수 있는 조건',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe – Streit um Balkonkraftwerke vor Gericht',
+            description: '판례 개관: Amtsgericht Köln, Amtsgericht Hamburg-Wandsbek, 구분소유 공동체에 관한 BGH 판결 V ZR 29/24',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking – 세입자, 소유자와 발코니 태양광(2026년 10월 18일)',
+            description: '2024년 법, 판례, 보증금 같은 미해결 쟁점 개관',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web – 발코니 태양광에 대한 임대인의 동의(2026년 10월 23일)',
+            description: 'Amtsgericht Dresden 2026년 5월 18일 판결(Az. 143 C 1125/25)에 관한 보도',
+          },
         ],
       },
       faqSection: {
@@ -1249,7 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '구분소유자는 관리조합 결의가 필요합니까?',
-            a: 'WEG 제20조 제2항 제5호는 각 구분소유자에게 플러그인 태양광 장치를 위한 적절한 구조 변경을 요구할 권리를 주며, 실행 방법은 관리조합이 적정한 관리의 범위에서 결정합니다. 결의가 형식상 여전히 필요한지는 확인한 출처에서 확정되지 않았으니 관리자에게 문의하십시오.',
+            a: '§ 20 (2) Nr. 5 WEG는 각 소유자에게 플러그인 태양광 장치를 위한 적절한 구조 변경을 청구할 권리를 부여하며, 실행 방법은 적정한 관리의 범위 안에서 공동체가 결정합니다. Haufe와 Cleanthinking은 연방대법원(V ZR 29/24, 2025년 7월 18일)이 결의 없이 설치된, 외부에서 뚜렷하게 보이는 설비에 대해 공동체가 철거를 요구하도록 허용했다고 보도합니다. 판결 전문은 읽지 않았으므로, 관리자에게 문의하고 설치 전에 결의를 신청하시기 바랍니다.',
           },
           {
             q: '독일의 대형 임대인은 발코니 태양광 프로그램을 운영합니까?',
@@ -1266,6 +1587,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '독일에서 플러그인 태양광 장치에는 어떤 한도가 적용됩니까?',
             a: 'EEG 정의는 인버터 출력 최대 800 W, 모듈 2,000 W까지를 허용합니다. 제품 표준 DIN VDE V 0126-95는 일반 가정용 플러그에서 모듈 최대 960 W, 전기기술자가 설치하는 특수 에너지 플러그에서 최대 2,000 Wp를 허용합니다. 이 표준은 저장장치가 포함된 장치를 다루지 않습니다.',
+          },
+          {
+            q: '임대인은 발코니 태양광에 어떤 조건을 붙일 수 있나요?',
+            a: '부동산 관리자 업계 단체인 VDIV는 일반적으로 허용되는 조건으로 개인 배상책임보험 증빙, 규격에 맞는 부품, 적절한 설치, Marktstammdatenregister 등록, 퇴거 시 철거를 꼽습니다. Amtsgericht Hamburg-Wandsbek(2025년 12월 2일, Az. 714 C 160/25, 아직 확정되지 않은 것으로 보도됨)은 막연한 책임 위험을 이유로 한 일괄 거부를 배척했습니다. Cleanthinking에 따르면 임대인이 보증금을 요구할 수 있는지는 아직 어느 법원도 판단하지 않았습니다. 이는 일반 정보이며 법률 자문이 아닙니다.',
+          },
+          {
+            q: '독일 법원이 발코니 태양광 분쟁에 대해 판단한 적이 있나요?',
+            a: '네, 주로 지방법원 수준이며 결과는 엇갈립니다. Amtsgericht Hamburg-Wandsbek은 막연한 책임 우려에 맞서 세입자의 손을 들어 주었고, Amtsgericht Köln(2024년 12월 13일, Az. 208 C 460/23)과 Amtsgericht Dresden(2026년 5월 18일, Az. 143 C 1125/25)은 설치가 안전상 위험이었던 사건에서 임대인의 손을 들어 주었습니다. DUH가 Vonovia의 허가 계약에 대해 제기한 금지 소송은 Oberlandesgericht Hamm에 계류 중입니다. 어느 것에든 의존하기 전에 판결 전문을 확인하시기 바랍니다.',
           },
         ],
       },
@@ -1289,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Na Alemanha, inquilinos e condôminos têm desde 17 de outubro de 2024 um direito legal a dispositivos solares plug-in ("Steckersolargeräte"), o que desloca a pergunta do locador de "posso?" para "como e em que condições?". Esta página explica o que diz a lei, o que locadores e comunidades de proprietários podem exigir, como um grande locador (Vonovia) tratou os pedidos e o que a diretiva europeia de edifícios exige ou não exige. São informações gerais sobre a Alemanha, não aconselhamento jurídico.',
     metaDescription: 'Desde outubro de 2024, inquilinos e condôminos alemães podem reivindicar um dispositivo solar plug-in. O que locadores podem exigir e o que diz a EPBD.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '5 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Locadores, administradores de imóveis, associações habitacionais e inquilinos na Alemanha avaliando solar plug-in',
@@ -1310,8 +1639,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locadores e comunidades podem estabelecer regras de fixação; segundo a Haufe, esses requisitos não devem ser excessivos',
           'A Vonovia concordou sem reservas com a instalação de um inquilino de Aachen em janeiro de 2026 após uma ação apoiada pela Deutsche Umwelthilfe. Uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral',
           'A EPBD (Diretiva (UE) 2024/1275) faz da energia solar a norma para edifícios novos e certos edifícios não residenciais existentes; não obriga locadores a instalar solar plug-in',
+          'A jurisprudência é escassa e vem sobretudo de tribunais locais: preocupações vagas de responsabilidade foram rejeitadas (Amtsgericht Hamburg-Wandsbek, dezembro de 2025), mas os locadores venceram quando a instalação era insegura (Amtsgericht Köln, Amtsgericht Dresden). A DUH ajuizou no Oberlandesgericht Hamm uma ação inibitória contra o acordo de autorização da Vonovia (anunciada em 17 de setembro de 2026; nenhuma decisão relatada)',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1319,6 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que a lei alemã dá a inquilinos e condôminos', anchor: '#legal-claim', },
       { label: 'Por que a diretiva europeia de edifícios não obriga ao solar plug-in', anchor: '#regulatory-driver', },
       { label: 'Como grandes locadores tratam os pedidos', anchor: '#landlord-practice', },
+      { label: 'O que os tribunais e a jurisprudência dizem até agora', anchor: '#court-practice', },
       { label: 'O que locadores e comunidades podem exigir, e o que inquilinos devem fazer', anchor: '#landlord-rules', },
       { label: 'O canal de compras em volume', anchor: '#b2b-channel', },
       { label: 'Fontes', anchor: '#sources', },
@@ -1332,9 +1663,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Desde 17 de outubro de 2024, o § 554 (1) BGB para inquilinos e o § 20 (2) n.º 5 WEG para condôminos dão direito a medidas destinadas à geração de eletricidade por dispositivos solares plug-in.',
           'O direito do inquilino só cai se a medida for irrazoável para o locador mesmo ponderando os interesses do inquilino (§ 554 BGB). Acordos em contrário que prejudiquem o inquilino são nulos.',
-          'Locadores e comunidades mantêm voz sobre a fixação, mas os requisitos não devem ser excessivos. As fontes consultadas não esclarecem se uma deliberação da comunidade ainda é formalmente exigida; pergunte ao seu administrador.',
+          'Locadores e condomínios mantêm voz sobre a forma de fixação do equipamento, mas as exigências não podem ser excessivas. O texto da lei não diz se uma deliberação do condomínio é formalmente exigida; relatos sobre uma decisão do Tribunal Federal de Justiça (BGH) de julho de 2025 indicam que uma instalação claramente visível sem deliberação pode ter a remoção determinada. Por isso, pergunte ao seu administrador e peça uma deliberação antes de instalar.',
           'A Vonovia cedeu sem reservas à instalação de um inquilino de Aachen em janeiro de 2026. Uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral.',
           'A diretiva europeia de edifícios não obriga locadores a instalar solar plug-in, e não conseguimos verificar relatos de programas de locadores com mais de 50.000 unidades.',
+          'A jurisprudência é escassa e vem sobretudo de tribunais locais: um tribunal rejeitou preocupações vagas de responsabilidade (Amtsgericht Hamburg-Wandsbek, dezembro de 2025), enquanto outros deram razão aos locadores quando a instalação era insegura (Amtsgericht Köln, Amtsgericht Dresden). Em 17 de setembro de 2026, a DUH anunciou uma ação inibitória contra o acordo de autorização padrão da Vonovia no Oberlandesgericht Hamm; nenhuma decisão havia sido relatada.',
         ],
       },
       legalClaim: {
@@ -1342,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que a lei alemã dá a inquilinos e condôminos',
         content: [
           '**Desde 17 de outubro de 2024, a lei alemã inclui dispositivos solares plug-in entre as medidas que inquilinos e condôminos podem exigir.** O § 554 (1) BGB permite ao inquilino pedir ao locador que autorize alterações estruturais destinadas à geração de eletricidade por dispositivos solares plug-in ("Steckersolargeräte"), ao lado de acessibilidade, recarga de veículos elétricos e proteção contra arrombamento. O direito cai se a alteração for irrazoável para o locador mesmo ponderando os interesses do inquilino. O § 554 (2) BGB torna nulos acordos em contrário que prejudiquem o inquilino. O inquilino pode concordar em prestar uma garantia especial, aplicando-se por analogia o § 551 (3) BGB.',
-          '**O § 20 (2) n.º 5 WEG dá a cada condômino um direito do mesmo tipo.** A comunidade decide sobre a execução dentro de uma administração regular. A Haufe observa que o consentimento não pode mais ser recusado sem motivo válido, que condôminos e locadores mantêm voz sobre como o dispositivo é fixado e que os requisitos não devem ser excessivos. As fontes consultadas não esclarecem se uma deliberação da comunidade ainda é formalmente exigida, então pergunte ao seu administrador.',
+          '**O § 20 (2) n.º 5 WEG dá a cada condômino o mesmo tipo de direito.** O condomínio decide sobre a execução dentro de uma administração regular. A Haufe observa que o consentimento não pode mais ser recusado sem motivo justo, que proprietários e locadores mantêm voz sobre a forma de fixação e que as exigências não podem ser excessivas. O texto da lei não diz se uma deliberação ainda é formalmente necessária; Haufe e Cleanthinking relatam que o Tribunal Federal de Justiça (BGH, 18 de julho de 2025, V ZR 29/24) permitiu que um condomínio exigisse a remoção de um sistema plug-in claramente visível instalado sem deliberação. Não lemos a decisão completa e não conseguimos confirmar qual versão da lei foi aplicada; por isso, pergunte ao seu administrador e peça uma deliberação antes de instalar.',
         ],
       },
       regulatoryDriver: {
@@ -1359,6 +1691,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Grandes locadores decidem caso a caso, e a prática é contestada.** Em janeiro de 2026, a Vonovia concordou "sem reservas" com o sistema de varanda de um inquilino de Aachen após uma ação apoiada pela Deutsche Umwelthilfe (DUH); segundo a DUH, a Vonovia havia exigido cálculos de carga de vento, comprovações estruturais e cumprimento de uma norma de envidraçamento vertical. A DUH quer que a Vonovia revise suas regras de instalação.',
           '**Uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral.** São posições relatadas por terceiros, não decisões judiciais sobre armazenamento; para as regras de armazenamento, veja [Baterias para energia solar de varanda em 2027](/pt/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**Em 17 de setembro de 2026, a DUH anunciou ter ajuizado no Oberlandesgericht Hamm uma ação inibitória contra o acordo de autorização padrão da Vonovia («Gestattungsvereinbarung»); nenhuma decisão havia sido relatada nessa data.** Segundo a DUH, inquilinos com tomada externa precisam assinar o acordo e aceitar uma inspeção no local, arcar com os custos de defeitos encontrados e isentar a Vonovia de responsabilidade, e furar paredes ou passar cabos por dentro, em regra, não é permitido a inquilinos sem tomada externa. São descrições da DUH sobre as condições da Vonovia; não encontramos nenhuma manifestação da Vonovia sobre a ação.',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: 'O que os tribunais e a jurisprudência dizem até agora',
+        content: [
+          '**Nos casos relatados até agora, os tribunais aceitaram condições sobre a forma de instalação e rejeitaram uma recusa genérica; a jurisprudência é escassa e vem sobretudo de tribunais locais.** Em 2 de dezembro de 2025, o Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) entendeu que preocupações vagas de responsabilidade ou estética não justificavam um pedido de remoção e, segundo a Cleanthinking, apoiou-se na nova norma de produto para permitir a ligação a uma tomada externa comum. Haufe e VDIV relataram que a sentença ainda não era definitiva.',
+          '**Os tribunais também decidiram a favor de locadores quando a instalação era insegura.** O Amtsgericht Köln (13 de dezembro de 2024, Az. 208 C 460/23) determinou que um inquilino retirasse dois módulos pendurados sem consentimento na parte externa do guarda-corpo da varanda, por causa do risco em tempestades; segundo a Cleanthinking (18 de outubro de 2026), o recurso está pendente no Landgericht Köln. O Amtsgericht Dresden (18 de maio de 2026, Az. 143 C 1125/25) rejeitou a ação de um inquilino cujos dois módulos ficavam acima do guarda-corpo e deixavam uma fresta de cerca de 4 cm na qual, segundo o locador, crianças poderiam ficar presas; o tribunal concordou, conforme relata o Vermieter-Web (23 de outubro de 2026).',
+          '**A VDIV, associação setorial de administradores de imóveis, resume as condições que um locador em geral pode impor:** comprovante de seguro privado de responsabilidade civil, componentes em conformidade com a norma, instalação adequada, registro no Marktstammdatenregister e remoção na saída. Segundo a Cleanthinking, nenhum tribunal decidiu ainda se um locador pode exigir caução. São relatos secundários, não aconselhamento jurídico; consulte as decisões completas antes de se apoiar em qualquer uma delas.',
         ],
       },
       landlordRules: {
@@ -1367,6 +1709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Regras sobre como o dispositivo é fixado são permitidas; regras que esvaziam o direito não são.** O próprio dispositivo é limitado pela lei e pela norma de produto: a definição da EEG permite até 800 W de potência do inversor e 2.000 W de módulos, enquanto a norma de produto DIN VDE V 0126-95 permite até 960 W de módulos com uma tomada doméstica normal e até 2.000 Wp com uma tomada de energia especial instalada por um eletricista. O operador registra o dispositivo no Marktstammdatenregister (cinco dados técnicos); desde o Solarpaket I (maio de 2024), a operadora de rede não precisa mais ser informada diretamente.',
           '**Para inquilinos, a sequência prática é perguntar por escrito, nomear o dispositivo e o método de fixação, oferecer-se para seguir regras razoáveis de fixação e guardar a resposta.** Se o consentimento for recusado sem motivo, centros de defesa do consumidor e associações de inquilinos podem ajudar. São informações gerais, não aconselhamento jurídico.',
+          '**As condições que a VDIV lista como em geral admissíveis são restritas e concretas:** comprovante de seguro privado de responsabilidade civil, componentes em conformidade com a norma, instalação adequada, registro e remoção na saída. Um defeito real de segurança pode justificar a recusa; as derrotas de inquilinos relatadas acima envolviam módulos pendurados do lado de fora ou acima do guarda-corpo, por isso descreva com precisão o método de fixação no seu pedido. São informações gerais, não aconselhamento jurídico.',
         ],
       },
       b2bChannel: {
@@ -1420,6 +1763,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE – FAQ zur DIN VDE V 0126-95',
             description: 'Limites da norma de produto: 800 VA, 960 W com tomada normal, 2.000 Wp com tomada de energia especial',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe — comunicado de imprensa de 17 de setembro de 2026',
+            description: 'Ação inibitória contra o acordo de autorização da Vonovia no Oberlandesgericht Hamm; descrição da DUH das condições da Vonovia',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV — Tribunais fortalecem o direito aos Balkonkraftwerke (20 de janeiro de 2026)',
+            description: 'Resumo da sentença do Amtsgericht Hamburg-Wandsbek (Az. 714 C 160/25) e das condições que os locadores podem impor',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe — Streit um Balkonkraftwerke vor Gericht',
+            description: 'Panorama da jurisprudência: Amtsgericht Köln, Amtsgericht Hamburg-Wandsbek e a decisão do BGH V ZR 29/24 sobre condomínios',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking — inquilinos, proprietários e energia solar de varanda (18 de outubro de 2026)',
+            description: 'Visão geral da lei de 2024, da jurisprudência e de questões em aberto, como a caução',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web — consentimento do locador para energia solar de varanda (23 de outubro de 2026)',
+            description: 'Relato da sentença do Amtsgericht Dresden de 18 de maio de 2026 (Az. 143 C 1125/25)',
+          },
         ],
       },
       faqSection: {
@@ -1432,7 +1800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Os condôminos precisam de uma deliberação da comunidade?',
-            a: 'O § 20 (2) n.º 5 WEG dá a cada condômino um direito a alterações estruturais adequadas para dispositivos solares plug-in, e a comunidade decide sobre a execução dentro de uma administração regular. As fontes consultadas não esclarecem se uma deliberação ainda é formalmente exigida; pergunte ao seu administrador.',
+            a: 'O § 20 (2) n.º 5 WEG dá a cada proprietário direito a alterações estruturais adequadas para equipamentos solares plug-in, e o condomínio decide sobre a execução dentro de uma administração regular. Haufe e Cleanthinking relatam que o Tribunal Federal de Justiça (V ZR 29/24, 18 de julho de 2025) permitiu que um condomínio exigisse a remoção de um sistema claramente visível instalado sem deliberação. Não lemos a decisão completa; pergunte ao seu administrador e peça uma deliberação antes de instalar.',
           },
           {
             q: 'Grandes locadores alemães têm programas de solar de varanda?',
@@ -1449,6 +1817,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Quais limites se aplicam a um dispositivo solar plug-in na Alemanha?',
             a: 'A definição da EEG permite até 800 W de potência do inversor e 2.000 W de módulos. A norma de produto DIN VDE V 0126-95 permite até 960 W de módulos com uma tomada doméstica normal e até 2.000 Wp com uma tomada de energia especial instalada por um eletricista. A norma não cobre dispositivos com armazenamento.',
+          },
+          {
+            q: 'Que condições um locador pode impor à energia solar de varanda?',
+            a: 'A VDIV, associação setorial de administradores de imóveis, resume como em geral admissíveis: comprovante de seguro privado de responsabilidade civil, componentes em conformidade com a norma, instalação adequada, registro no Marktstammdatenregister e remoção na saída. O Amtsgericht Hamburg-Wandsbek (2 de dezembro de 2025, Az. 714 C 160/25; relatado como ainda não definitivo) rejeitou uma recusa genérica baseada em riscos vagos de responsabilidade. Segundo a Cleanthinking, nenhum tribunal decidiu se um locador pode exigir caução. São informações gerais, não aconselhamento jurídico.',
+          },
+          {
+            q: 'Os tribunais alemães já decidiram disputas sobre energia solar de varanda?',
+            a: 'Sim, sobretudo em tribunais locais, e o quadro é misto. O Amtsgericht Hamburg-Wandsbek deu razão a um inquilino contra preocupações vagas de responsabilidade, enquanto o Amtsgericht Köln (13 de dezembro de 2024, Az. 208 C 460/23) e o Amtsgericht Dresden (18 de maio de 2026, Az. 143 C 1125/25) deram razão aos locadores quando a instalação representava risco de segurança. A ação inibitória da DUH contra o acordo de autorização da Vonovia está pendente no Oberlandesgericht Hamm. Consulte as decisões completas antes de se apoiar em qualquer uma delas.',
           },
         ],
       },
@@ -1470,9 +1846,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '面向房东与住房协会的阳台光伏：2027年',
     seoTitle: '2027年房东与住房协会阳台光伏：租户权利与规则',
     intro: '在德国，租户和业主自2024年10月17日起依法有权要求安装插拔式光伏设备（“Steckersolargeräte”），这使房东的问题从“我可以吗？”变成了“怎么装、条件是什么？”。本页说明法律规定了什么、房东和业主委员会可以提出哪些要求、大型房东（Vonovia）如何处理申请，以及欧盟建筑指令要求和不要求什么。以下是关于德国的一般信息，不构成法律建议。',
-    metaDescription: '2024年10月起，德国租户和业主有权要求安装插拔式光伏设备。房东可提出哪些要求，以及欧盟EPBD指令的规定。',
+    metaDescription: '2024年10月起，德国租户和业主有权要求安装插拔式光伏设备。房东可提出哪些要求、法院目前如何裁判，欧盟EPBD指令是否要求房东安装，以及租户的实际做法。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '阅读约5分钟',
     educationalLevel: 'Beginner',
     audience: '正在评估插拔式光伏的德国房东、物业管理人员、住房协会和租户',
@@ -1489,8 +1865,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '房东和业主委员会可以制定安装规则；据Haufe，这些要求不得过度',
           '2026年1月，在德国环境援助组织支持的诉讼之后，Vonovia无保留同意了亚琛一名租户的安装。drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题',
           'EPBD（指令(EU) 2024/1275）使太阳能成为新建建筑和部分现有非住宅建筑的常态；它并不要求房东安装插拔式光伏',
+          '判例很少，且主要来自地方法院：含糊的责任顾虑被驳回（Amtsgericht Hamburg-Wandsbek，2025年12月），但在安装不安全时房东胜诉（Amtsgericht Köln、Amtsgericht Dresden）。DUH已就Vonovia的许可协议向Oberlandesgericht Hamm提起禁令之诉（2026年9月17日公布；尚无判决的报道）',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1498,6 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '德国法律赋予租户和业主的权利', anchor: '#legal-claim', },
       { label: '为什么欧盟建筑指令并未强制要求插拔式光伏', anchor: '#regulatory-driver', },
       { label: '大型房东如何处理申请', anchor: '#landlord-practice', },
+      { label: '法院与判例目前的立场', anchor: '#court-practice', },
       { label: '房东和业主委员会可以提出哪些要求，租户该怎么做', anchor: '#landlord-rules', },
       { label: '批量采购渠道', anchor: '#b2b-channel', },
       { label: '资料来源', anchor: '#sources', },
@@ -1511,9 +1889,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '自2024年10月17日起，BGB第554条第1款赋予租户、WEG第20条第2款第5项赋予业主要求采取有助于通过插拔式光伏设备发电的措施的权利。',
           '只有在权衡租户利益后该措施对房东仍不可合理期待时，租户的请求权才不成立（BGB第554条）。对租户不利且与该规定不一致的约定无效。',
-          '房东和业主委员会对安装方式仍有发言权，但要求不得过度。业主委员会决议在形式上是否仍然必要，我们查阅的来源并未明确；请询问您的物业管理人。',
+          '房东和业主委员会对设备的安装方式仍有发言权，但要求不得过分。法条本身并未说明是否仍须形式上的业主决议；有关联邦最高法院（BGH）2025年7月判决的报道显示，未经决议安装且从外部明显可见的设备，可能被要求拆除。因此请先询问物业管理人，并在安装前申请决议。',
           '2026年1月，Vonovia无保留同意了亚琛一名租户的安装。drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题。',
           '欧盟建筑指令并不要求房东安装插拔式光伏，关于房东计划达到5万套以上的报道，我们无法核实。',
+          '判例很少，且主要来自地方法院：一家法院驳回了含糊的责任顾虑（Amtsgericht Hamburg-Wandsbek，2025年12月），另有法院在安装不安全时支持了房东（Amtsgericht Köln、Amtsgericht Dresden）。2026年9月17日，DUH宣布已就Vonovia的标准许可协议向Oberlandesgericht Hamm提起禁令之诉；尚无判决的报道。',
         ],
       },
       legalClaim: {
@@ -1521,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '德国法律赋予租户和业主的权利',
         content: [
           '**自2024年10月17日起，德国法律将插拔式光伏设备列入租户和业主可以要求的措施。** BGB第554条第1款允许租户要求房东同意有助于通过插拔式光伏设备（“Steckersolargeräte”）发电的建筑改动，与无障碍改造、电动汽车充电和防盗措施并列。如果在权衡租户利益后该改动对房东仍不可合理期待，则请求权不成立。BGB第554条第2款规定，对租户不利且与该规定不一致的约定无效。租户可以同意提供特别担保，此时准用BGB第551条第3款。',
-          '**WEG第20条第2款第5项赋予每位业主同类权利。** 具体实施由业主团体在正当管理范围内决定。Haufe指出，同意不能再无正当理由地拒绝，业主和房东对设备安装方式仍有发言权，且要求不得过度。业主团体决议在形式上是否仍然必要，我们查阅的来源并未明确，因此请询问您的物业管理人。',
+          '**§ 20 (2) Nr. 5 WEG赋予每位业主同类的请求权。** 如何实施由业主团体在正当管理范围内决定。Haufe指出，同意不能再无正当理由被拒绝，业主和房东对设备的安装方式仍有发言权，且要求不得过分。法条本身并未说明是否仍须形式上的决议；Haufe和Cleanthinking报道称，联邦最高法院（BGH，2025年7月18日，V ZR 29/24）允许业主团体要求拆除一套未经决议安装、从外部明显可见的插拔式设备。我们未阅读判决全文，也无法确认适用的是哪一版本的法律，因此请先询问物业管理人，并在安装前申请决议。',
         ],
       },
       regulatoryDriver: {
@@ -1538,6 +1917,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**大型房东逐案决定，其做法也存在争议。** 2026年1月，在德国环境援助组织（DUH）支持的诉讼之后，Vonovia对亚琛一名租户的阳台系统表示“无保留”同意；据DUH称，此前Vonovia曾要求提供风荷载计算、结构证明并符合垂直玻璃幕规范。DUH希望Vonovia修订其安装规则。',
           '**drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题。** 这些是第三方转述的立场，而非法院对储能作出的判决；储能规则参见[2027年阳台光伏电池](/zh/balcony-solar/balcony-solar-battery-storage-standard-2027)。',
+          '**2026年9月17日，DUH宣布已就Vonovia的标准许可协议（“Gestattungsvereinbarung”）向Oberlandesgericht Hamm提起禁令之诉；截至当日尚无判决的报道。** 据DUH称，有室外插座的租户必须签署该协议并接受现场检查，承担发现缺陷的费用，并免除Vonovia的责任；对于没有室外插座的租户，原则上不允许在室内钻孔或布线。以上是DUH对Vonovia条件的描述；我们未找到Vonovia就该诉讼发表的声明。',
+        ],
+      },
+      courtPractice: {
+        id: 'court-practice',
+        title: '法院与判例目前的立场',
+        content: [
+          '**在迄今报道的案件中，法院接受对安装方式设定条件，并驳回了一概拒绝；判例很少，且主要来自地方法院。** Amtsgericht Hamburg-Wandsbek（2025年12月2日，Az. 714 C 160/25）认为含糊的责任或外观顾虑不足以支持拆除请求；据Cleanthinking报道，该院依据新的产品标准允许连接普通室外插座。Haufe和VDIV报道称该判决尚未生效。',
+          '**在安装不安全时，法院也支持过房东。** Amtsgericht Köln（2024年12月13日，Az. 208 C 460/23）因暴风天气下的风险，判令一名租户拆除未经同意挂在阳台栏杆外侧的两块组件；据Cleanthinking（2026年10月18日）报道，上诉正在Landgericht Köln审理。Amtsgericht Dresden（2026年5月18日，Az. 143 C 1125/25）驳回了一名租户的诉求：两块组件高出栏杆，留下约4厘米的缝隙，房东主张儿童可能被卡住，法院予以认同（Vermieter-Web，2026年10月23日报道）。',
+          '**房地产管理人行业协会VDIV将房东一般可以提出的条件归纳为：** 提供个人责任险证明、符合标准的部件、规范安装、在Marktstammdatenregister登记以及搬离时拆除。据Cleanthinking称，房东能否要求押金，目前尚无法院作出裁判。以上为二手报道，不构成法律意见；依赖任何一项前请核对判决全文。',
         ],
       },
       landlordRules: {
@@ -1546,6 +1935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**关于设备安装方式的规则是允许的；使该权利落空的规则则不允许。** 设备本身受法律和产品标准限制：EEG的定义允许逆变器输出最高800 W、组件最高2,000 W；产品标准DIN VDE V 0126-95在使用普通家用插头时允许组件最高960 W，使用由电工安装的专用能源插头时最高2,000 Wp。运营者自行在Marktstammdatenregister中登记设备（五项技术信息）；自Solarpaket I（2024年5月）起，无需再直接通知电网运营商。',
           '**对租户而言，实际步骤是：书面提出申请，说明设备和安装方式，表示愿意遵守合理的安装规则，并保存答复。** 如果无理由被拒绝，消费者咨询中心和租户协会可以提供帮助。以上为一般信息，不构成法律建议。',
+          '**VDIV列为一般可接受的条件范围狭窄且具体：** 个人责任险证明、符合标准的部件、规范安装、登记以及搬离时拆除。确实存在的安全缺陷可以成为拒绝的理由；上文报道的租户败诉案件涉及挂在外侧或高出栏杆的组件，因此请在申请中准确说明安装方式。以上为一般性信息，不构成法律意见。',
         ],
       },
       b2bChannel: {
@@ -1599,6 +1989,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'DKE — DIN VDE V 0126-95常见问题',
             description: '产品标准上限：800 VA，普通插头960 W，专用能源插头2,000 Wp',
           },
+          {
+            url: 'https://www.duh.de/presse/pressemitteilungen/pressemitteilung/deutsche-umwelthilfe-verklagt-vonovia-rechtswidrige-huerden-fuer-balkonkraftwerke-stoppen/',
+            title: 'Deutsche Umwelthilfe（德国环境援助协会）– 2026年9月17日新闻稿',
+            description: '就Vonovia许可协议向Oberlandesgericht Hamm提起的禁令之诉；DUH对Vonovia条件的描述',
+          },
+          {
+            url: 'https://vdiv.de/news-details/gerichte-staerken-anspruch-auf-balkonkraftwerke-vermieter-muessen-zustimmen',
+            title: 'VDIV – 法院强化阳台光伏请求权（2026年1月20日）',
+            description: 'Amtsgericht Hamburg-Wandsbek判决（Az. 714 C 160/25）摘要及房东可提出的条件',
+          },
+          {
+            url: 'https://www.haufe.de/immobilien/wirtschaft-politik/balkonkraftwerk-rechtsfaelle-fuer-mieter-und-vermieter_84342_603696.html',
+            title: 'Haufe – Streit um Balkonkraftwerke vor Gericht',
+            description: '判例概览：Amtsgericht Köln、Amtsgericht Hamburg-Wandsbek以及关于业主团体的BGH判决V ZR 29/24',
+          },
+          {
+            url: 'https://www.cleanthinking.de/?p=1074097',
+            title: 'Cleanthinking – 租户、业主与阳台光伏（2026年10月18日）',
+            description: '2024年法律、判例及押金等未决问题概览',
+          },
+          {
+            url: 'https://www.buhl.de/vermieter-web/?p=18171',
+            title: 'Vermieter-Web – 房东对阳台光伏的同意（2026年10月23日）',
+            description: '关于Amtsgericht Dresden 2026年5月18日判决（Az. 143 C 1125/25）的报道',
+          },
         ],
       },
       faqSection: {
@@ -1611,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '业主需要业主团体的决议吗？',
-            a: 'WEG第20条第2款第5项赋予每位业主要求为插拔式光伏设备进行适当建筑改动的权利，具体实施由业主团体在正当管理范围内决定。决议在形式上是否仍然必要，我们查阅的来源并未明确；请询问您的物业管理人。',
+            a: '§ 20 (2) Nr. 5 WEG赋予每位业主就插拔式光伏设备要求适当结构改动的请求权，如何实施由业主团体在正当管理范围内决定。Haufe和Cleanthinking报道称，联邦最高法院（V ZR 29/24，2025年7月18日）允许业主团体要求拆除一套未经决议安装、从外部明显可见的设备。我们未阅读判决全文，因此请先询问物业管理人，并在安装前申请决议。',
           },
           {
             q: '德国大型房东是否开展阳台光伏计划？',
@@ -1628,6 +2043,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '德国的插拔式光伏设备适用哪些上限？',
             a: 'EEG的定义允许逆变器输出最高800 W、组件最高2,000 W。产品标准DIN VDE V 0126-95在使用普通家用插头时允许组件最高960 W，使用由电工安装的专用能源插头时最高2,000 Wp。该标准不涵盖带储能的设备。',
+          },
+          {
+            q: '房东可以对阳台光伏附加哪些条件？',
+            a: '房地产管理人行业协会VDIV将一般可接受的条件归纳为：提供个人责任险证明、符合标准的部件、规范安装、在Marktstammdatenregister登记以及搬离时拆除。Amtsgericht Hamburg-Wandsbek（2025年12月2日，Az. 714 C 160/25；据报道尚未生效）驳回了以含糊的责任风险为由的一概拒绝。据Cleanthinking称，房东能否要求押金，目前尚无法院作出裁判。以上为一般性信息，不构成法律意见。',
+          },
+          {
+            q: '德国法院审理过阳台光伏纠纷吗？',
+            a: '审理过，主要在地方法院，结果不一。Amtsgericht Hamburg-Wandsbek在面对含糊的责任顾虑时支持了租户，而Amtsgericht Köln（2024年12月13日，Az. 208 C 460/23）和Amtsgericht Dresden（2026年5月18日，Az. 143 C 1125/25）在安装构成安全风险时支持了房东。DUH针对Vonovia许可协议的禁令之诉正在Oberlandesgericht Hamm审理。依赖任何一项前请核对判决全文。',
           },
         ],
       },
