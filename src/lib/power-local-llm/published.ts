@@ -161,6 +161,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // AI cloud provider comparison (DigitalOcean vs AWS vs GCP vs Azure vs OCI) — 2026-09-05
   'digitalocean-vs-aws-cloud-for-ai-companies',
 
+  // Local AI Workstations category — 2026-10-31
+  'local-ai-workstations-strix-halo-vs-dgx-spark',
+
   // ASUS mini PC + electricity/solar affiliate pages — 2026-09-01
   'asus-mini-pc-local-ai',
   'local-llm-electricity-cost-balcony-solar',

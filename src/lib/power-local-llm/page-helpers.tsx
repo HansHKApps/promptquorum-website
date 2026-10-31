@@ -1323,6 +1323,17 @@ const HUB_THEMES: Array<{
       'digitalocean-vs-aws-cloud-for-ai-companies',
     ],
   },
+  {
+    id: 'local-ai-workstations',
+    badge: 'Local AI Workstations',
+    question: 'Local AI Workstations: Which 128–192 GB Machine Runs Large Models on Your Desk?',
+    description: 'Compact systems with 128 GB or more of unified memory for 100B-class models: the NVIDIA DGX Spark and AMD Strix Halo machines from AMD, Framework, HP, GMKtec and Minisforum, compared on sourced prices, memory and independent test results. A separate class from ordinary mini PCs.',
+    colorBadge: 'bg-teal-50 text-teal-700 border-teal-200',
+    colorDot: 'bg-teal-400',
+    slugs: [
+      'local-ai-workstations-strix-halo-vs-dgx-spark',
+    ],
+  },
 ]
 
 // ─── LOCALIZED HUB CONTENT ────────────────────────────────────────────────
@@ -1386,6 +1397,11 @@ const HUB_THEME_TEXT_DE: Array<{ badge: string; question: string; description: s
     question: 'Enterprise & Compliance: Was brauchen Unternehmen für einen sicheren Einsatz lokaler KI?',
     description: 'Identitäts- und Zugriffskontrollen für agentenbasierte KI, Call-Center- und Helpdesk-Einsätze sowie Shadow-AI-Governance nach Unternehmensgröße. Behandelt die Einhaltung US-bundesstaatlicher Arbeitsrechtsvorgaben, die Frage, wem die Rechte an KI-generierten Inhalten gehören, und den Vergleich von Cloud-GPU-Anbietern für KI-Unternehmen, die über lokale Hardware hinaus skalieren müssen.',
   },
+  {
+    badge: 'Lokale KI-Workstations',
+    question: 'Lokale KI-Workstations: Welcher Rechner mit 128–192 GB betreibt große Modelle auf Ihrem Schreibtisch?',
+    description: 'Kompakte Systeme mit 128 GB oder mehr Unified Memory für Modelle der 100B-Klasse: NVIDIA DGX Spark und AMD-Strix-Halo-Rechner von AMD, Framework, HP, GMKtec und Minisforum, verglichen anhand belegter Preise, Speicher und unabhängiger Testergebnisse. Eine eigene Klasse neben gewöhnlichen Mini-PCs.',
+  },
 ]
 
 const HUB_THEME_TEXT_FR: Array<{ badge: string; question: string; description: string }> = [
@@ -1443,6 +1459,11 @@ const HUB_THEME_TEXT_FR: Array<{ badge: string; question: string; description: s
     badge: 'Entreprise & Conformité',
     question: 'Entreprise & Conformité : De Quoi les Entreprises Ont-elles Besoin pour Déployer l\'IA Locale en Toute Sécurité ?',
     description: 'Contrôles d\'identité et d\'accès pour l\'IA agentique, déploiements en centres d\'appels et helpdesk, et gouvernance du shadow AI selon la taille de l\'entreprise. Couvre la conformité aux lois du travail des États américains, la question de savoir qui détient les droits de propriété intellectuelle sur le contenu généré par IA, et une comparaison des fournisseurs de GPU cloud pour les entreprises d\'IA ayant besoin de scaler au-delà du matériel sur site.',
+  },
+  {
+    badge: 'Stations de travail IA locales',
+    question: 'Stations de travail IA locales : quelle machine de 128 à 192 Go fait tourner de grands modèles sur votre bureau ?',
+    description: 'Des systèmes compacts dotés d\'au moins 128 Go de mémoire unifiée pour les modèles de classe 100B : le NVIDIA DGX Spark et les machines AMD Strix Halo d\'AMD, Framework, HP, GMKtec et Minisforum, comparés sur des prix sourcés, la mémoire et des tests indépendants. Une classe à part, distincte des mini-PC ordinaires.',
   },
 ]
 
@@ -1503,6 +1524,11 @@ const HUB_THEME_TEXT_JA: Array<{ badge: string; question: string; description: s
     question: 'エンタープライズ & コンプライアンス：企業が安全にローカルAIを導入するために必要なことは？',
     description: 'エージェント型AIのアイデンティティとアクセス制御、コールセンター/ヘルプデスク導入、企業規模別のシャドーAIガバナンスを扱います。米国州レベルの雇用法コンプライアンス、AI生成コンテンツの知的財産権の帰属、オンプレミスを超えてスケールが必要なAI企業向けクラウドGPUベンダーの比較も含みます。',
   },
+  {
+    badge: 'ローカルAIワークステーション',
+    question: 'ローカルAIワークステーション：大規模モデルをデスクで動かせる128〜192GBのマシンはどれですか？',
+    description: '100Bクラスのモデル向けに128GB以上のユニファイドメモリを備えたコンパクトなシステムを扱います。NVIDIA DGX Spark、およびAMD、Framework、HP、GMKtec、MinisforumのAMD Strix Halo搭載マシンを、出典付きの価格、メモリ、独立したテスト結果で比較します。一般的なミニPCとは別のクラスです。',
+  },
 ]
 
 // ZH theme text — same index order as HUB_THEMES
@@ -1561,6 +1587,11 @@ const HUB_THEME_TEXT_ZH: Array<{ badge: string; question: string; description: s
     badge: '企业与合规',
     question: '企业与合规：企业安全部署本地AI需要什么？',
     description: '涵盖代理式AI的身份与访问控制、呼叫中心与服务台部署、按企业规模划分的影子AI治理。还涉及美国各州就业法合规、AI生成内容的知识产权归属，以及需要超越本地硬件规模扩展的AI企业在云GPU厂商之间的比较。',
+  },
+  {
+    badge: '本地AI工作站',
+    question: '本地AI工作站：哪款128–192 GB的机器能在桌面上运行大模型？',
+    description: '面向100B级模型、配备128 GB及以上统一内存的紧凑型系统：NVIDIA DGX Spark，以及来自AMD、Framework、HP、GMKtec和Minisforum的AMD Strix Halo机器，按有出处的价格、内存和独立测试结果进行比较。它们与普通迷你主机属于不同的类别。',
   },
 ]
 
@@ -1621,6 +1652,11 @@ const HUB_THEME_TEXT_ES: Array<{ badge: string; question: string; description: s
     question: 'Empresa y Cumplimiento: ¿Qué Necesitan las Empresas para Implementar IA Local de Forma Segura?',
     description: 'Controles de identidad y acceso para IA agéntica, implementaciones en centros de llamadas y helpdesk, y gobernanza de shadow AI según el tamaño de la empresa. Cubre el cumplimiento de las leyes laborales estatales de EE. UU., quién posee la propiedad intelectual del contenido generado por IA, y una comparación de proveedores de GPU en la nube para empresas de IA que necesitan escalar más allá del hardware local.',
   },
+  {
+    badge: 'Estaciones de trabajo de IA local',
+    question: 'Estaciones de trabajo de IA local: ¿Qué equipo de 128 a 192 GB ejecuta modelos grandes en tu escritorio?',
+    description: 'Sistemas compactos con 128 GB o más de memoria unificada para modelos de clase 100B: el NVIDIA DGX Spark y los equipos AMD Strix Halo de AMD, Framework, HP, GMKtec y Minisforum, comparados con precios con fuente, memoria y resultados de pruebas independientes. Una clase aparte de los mini PC habituales.',
+  },
 ]
 
 // PT theme text — same index order as HUB_THEMES
@@ -1679,6 +1715,11 @@ const HUB_THEME_TEXT_PT: Array<{ badge: string; question: string; description: s
     badge: 'Empresas e Conformidade',
     question: 'Empresas e Conformidade: O Que as Empresas Precisam para Implantar IA Local com Segurança?',
     description: 'Controles de identidade e acesso para IA agêntica, implantações em call centers e helpdesk, e governança de shadow AI por porte de empresa. Aborda a conformidade com as leis trabalhistas estaduais dos EUA, a quem pertence a propriedade intelectual de conteúdo gerado por IA, e uma comparação de provedores de GPU em nuvem para empresas de IA que precisam escalar além do hardware local.',
+  },
+  {
+    badge: 'Workstations de IA local',
+    question: 'Workstations de IA local: Qual máquina de 128 a 192 GB roda modelos grandes na sua mesa?',
+    description: 'Sistemas compactos com 128 GB ou mais de memória unificada para modelos da classe 100B: o NVIDIA DGX Spark e as máquinas AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum, comparados com preços com fonte, memória e resultados de testes independentes. Uma classe à parte dos mini PCs comuns.',
   },
 ]
 
@@ -1739,6 +1780,11 @@ const HUB_THEME_TEXT_KO: Array<{ badge: string; question: string; description: s
     question: '엔터프라이즈 및 컴플라이언스: 기업이 로컬 AI를 안전하게 도입하려면 무엇이 필요할까요?',
     description: '에이전트형 AI를 위한 신원 및 접근 제어, 콜센터·헬프데스크 배포, 기업 규모별 섀도우 AI 거버넌스를 다룹니다. 미국 주별 고용법 준수, AI 생성 콘텐츠의 지식재산권 귀속 문제, 온프레미스 하드웨어를 넘어 확장이 필요한 AI 기업을 위한 클라우드 GPU 공급업체 비교도 포함합니다.',
   },
+  {
+    badge: '로컬 AI 워크스테이션',
+    question: '로컬 AI 워크스테이션: 어떤 128–192GB 머신이 책상 위에서 대형 모델을 실행할까요?',
+    description: '100B급 모델을 위해 128GB 이상의 통합 메모리를 갖춘 소형 시스템을 다룹니다. NVIDIA DGX Spark와 AMD, Framework, HP, GMKtec, Minisforum의 AMD Strix Halo 머신을 출처가 있는 가격, 메모리, 독립 테스트 결과로 비교합니다. 일반 미니 PC와는 별개의 등급입니다.',
+  },
 ]
 
 // AR theme text — same index order as HUB_THEMES
@@ -1797,6 +1843,11 @@ const HUB_THEME_TEXT_AR: Array<{ badge: string; question: string; description: s
     badge: 'المؤسسات والامتثال',
     question: 'المؤسسات والامتثال: ماذا تحتاج الشركات لنشر الذكاء الاصطناعي المحلي بأمان؟',
     description: 'ضوابط الهوية والوصول للذكاء الاصطناعي الوكيل، ونشر مراكز الاتصال ومكاتب الدعم، وحوكمة الذكاء الاصطناعي الخفي حسب حجم الشركة. يغطي الامتثال لقوانين التوظيف في الولايات الأمريكية، ومن يملك الملكية الفكرية للمحتوى المُنشأ بالذكاء الاصطناعي، ومقارنة بين مزودي وحدات معالجة الرسومات السحابية لشركات الذكاء الاصطناعي التي تحتاج إلى التوسع بما يتجاوز الأجهزة المحلية.',
+  },
+  {
+    badge: 'محطات عمل الذكاء الاصطناعي المحلي',
+    question: 'محطات عمل الذكاء الاصطناعي المحلي: أي جهاز بسعة 128–192 GB يشغّل النماذج الكبيرة على مكتبك؟',
+    description: 'أنظمة مدمجة بذاكرة موحدة سعتها 128 GB أو أكثر للنماذج من فئة 100B: NVIDIA DGX Spark وأجهزة AMD Strix Halo من AMD وFramework وHP وGMKtec وMinisforum، تُقارَن بأسعار موثقة بمصادرها وبالذاكرة ونتائج اختبارات مستقلة. فئة مستقلة عن أجهزة الكمبيوتر المصغّرة العادية.',
   },
 ]
 
