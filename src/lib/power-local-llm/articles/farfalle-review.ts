@@ -3,6 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -278,6 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
 
   ar: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -552,6 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -826,6 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -1100,6 +1104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -1374,6 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -1648,6 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -1922,6 +1929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
@@ -2196,6 +2204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    designSkin: 'hub',
     theme: 'Overview & Reference',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
