@@ -10,8 +10,8 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-19',
-    last_full_refresh: '2026-10-19',
+    next_refresh_due: '2027-04-30',
+    last_full_refresh: '2026-10-31',
     current_hardware_mentioned: ['Lidl TRONIC 2.24 kWh add-on battery', 'WattCycle 10 kWh balcony battery'],
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-en.webp',
@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Battery storage is a growing add-on for balcony solar in Germany and the EU, but it is neither required nor right for every household, and the German rules for plug-in systems with storage are still being written. This page summarizes where the rules stand, what add-on battery prices look like and what the tariff-arbitrage research does and does not show. It is a market overview, not a purchase recommendation and not legal or electrical advice.',
     metaDescription: 'The German plug-in standard excludes storage, registration rules are in flux and prices fall. What is verified about balcony batteries, and when storage pays.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min read',
     educationalLevel: 'Beginner',
     audience: 'Balcony solar buyers evaluating whether to add battery storage in 2027',
@@ -31,18 +31,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DIN VDE V 0126-95 storage',
       'wattcycle balcony solar battery',
     ],
-    leadAnswerBlock: '**Batteries are becoming a common add-on for balcony solar, but they are not required, and the German rules for plug-in systems with storage are still unsettled.** The product standard DIN VDE V 0126-95, published in December 2025, covers plug-in solar devices without storage only; the standards committee DKE/K 373 has started planning a further part for devices with storage. The Verbraucherzentrale states that storage must currently be registered with the grid operator by a licensed electrician, while a revised connection rule (VDE-AR-N 4105:2026-03) is reported to simplify the process for small storage up to 800 VA. Entry prices are falling, but whether a battery pays off still depends on the gap between your import price and your export payment.',
+    leadAnswerBlock: '**Batteries are becoming a common add-on for balcony solar, but they are not required, and the German rules for plug-in systems with storage are still unsettled.** The product standard DIN VDE V 0126-95, published in December 2025, covers plug-in solar devices without storage only; the standards committee DKE/K 373 has started planning a further part for devices with storage. The Verbraucherzentrale states (page updated October 21, 2026) that storage must currently be reported to the grid operator in addition to the Marktstammdatenregister, while the revised connection rule VDE-AR-N 4105 offers a simplified procedure for feed-in up to 800 W that not every grid operator accepts yet. The EEG 2027 bill adopted by the cabinet on July 29, 2026 would reportedly count storage behind the same inverter as part of a plug-in device, but it is not law yet. The ADAC puts storage alone at roughly €300 to €1,000, and whether a battery pays off still depends on the gap between your import price and your export payment.',
     quickAnswerTop: {
       en: {
         question: 'Is battery storage becoming standard for balcony solar?',
         answer: 'It is becoming more common, but it is not required and not right for every household. Add-on batteries are getting cheaper, but the German product standard DIN VDE V 0126-95 does not cover plug-in devices with storage and the registration rules for storage are in flux. Whether a battery pays off depends on the gap between what you pay for imported power and what your exports earn.',
         bullets: [
           'DIN VDE V 0126-95 (published December 2025) covers plug-in solar devices without storage; the committee DKE/K 373 has only started planning a part for devices with storage',
-          'The Verbraucherzentrale states that storage must currently be registered with the grid operator by a licensed electrician; the simplified registration route does not cover storage',
-          'Trade media report that VDE-AR-N 4105:2026-03 introduces a simplified connection process for small storage up to 800 VA; confirm the procedure with your grid operator',
+          'The Verbraucherzentrale (page updated October 21, 2026) states that storage must currently be reported to the grid operator in addition to the MaStR; storage is not yet covered by the simplified registration',
+          'According to the Verbraucherzentrale, the revised VDE-AR-N 4105 provides a simplified procedure (form F.1.2) for feed-in up to 800 W, but not all grid operators accept it yet and they may use the previous version until March 1, 2027',
           'A 2026 simulation study of 448 households found dynamic tariffs raised net gains from a 10 kWh battery by 12.7%; it models rooftop PV-battery systems, not plug-in kits',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -61,8 +61,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'The German product standard DIN VDE V 0126-95, published in December 2025, covers plug-in solar devices without storage. The standards committee DKE/K 373 has started planning a further part for devices with storage, with no timeline.',
-          'The Verbraucherzentrale states that storage must currently be registered with the grid operator by a licensed electrician. Trade media report a simplified connection process for storage up to 800 VA under VDE-AR-N 4105:2026-03, so confirm the procedure with your grid operator before buying.',
-          'Entry prices are falling. WattCycle announced a balcony battery with up to 10 kWh for Intersolar Europe 2026; no EU price or availability date is published.',
+          'The Verbraucherzentrale (page updated October 21, 2026) states that storage must currently be reported to the grid operator in addition to the MaStR. The revised VDE-AR-N 4105 provides a simplified procedure with form F.1.2 for feed-in up to 800 W, but not all grid operators accept it yet and they may use the previous version until March 1, 2027, so confirm the procedure with your grid operator before buying.',
+          'The EEG 2027 bill was adopted by the cabinet on July 29, 2026. Trade media report that it would count storage behind the same inverter as part of a plug-in device, while AC storage with its own inverter would not be covered. Parliament has not passed it yet, so it is not law.',
+          'Entry prices are falling. The ADAC (September 2026) puts storage alone with 1.5 to 2 kWh at roughly €300 to €1,000. WattCycle announced a balcony battery with up to 10 kWh for Intersolar Europe 2026; no EU price or availability date is published.',
           'We found no EU-wide subsidy for balcony batteries. Support, where it exists, is set by countries, states or municipalities.',
           'This page describes a market trend. It does not override the household test in "Do You Need a Battery for Balcony Solar?": a battery pays off only if the saved gap between import price and export payment outweighs its cost.',
         ],
@@ -72,8 +73,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'German Rules for Plug-In Storage Are Still Moving',
         content: [
           '**The German product standard DIN VDE V 0126-95 covers plug-in solar devices without storage.** The standards body DKE states in its FAQ that the standard does not cover plug-in solar devices with an energy storage unit, which need additional requirements. Committee DKE/K 373 has started planning a further part but gives no timeline. The standard was published in December 2025 and allows up to 800 VA inverter output and, with a normal household plug, up to 960 W of modules.',
-          '**On registration, the Verbraucherzentrale states that storage must currently be registered with the grid operator by a licensed electrician, who must also connect it.** The short registration in the Marktstammdatenregister (MaStR) that applies to plug-in solar devices does not apply to storage. Since the Solarpaket I (May 2024), the grid operator no longer has to be informed directly for plug-in solar devices without storage.',
-          '**The rules are in motion, but not yet settled.** Trade media report that the revised connection rule VDE-AR-N 4105:2026-03 provides a simplified process for small storage and combined units up to 800 VA, and that a ministry working draft of EEG 2027 (July 18, 2026) would count storage behind the same inverter as part of a plug-in device. A working draft is not an adopted law, and the retailer blog we cite for this is not a neutral source. Ask your grid operator which procedure applies on the day you commission the system.',
+          '**On registration, the Verbraucherzentrale (page updated October 21, 2026) states that storage must currently be reported to the grid operator in addition to the Marktstammdatenregister (MaStR), and that storage is not yet covered by the simplified registration.** For feed-in up to 800 W it points to the revised VDE-AR-N 4105 with a simplified procedure (form F.1.2), but notes that not all grid operators accept it yet and that they may keep using the previous version until March 1, 2027. Plug-in solar devices without storage have needed no direct notification of the grid operator since the Solarpaket I (May 2024). The ADAC (September 2026) describes the registration of storage more simply (MaStR only, within one month) and advises clarifying non-standard setups with the grid operator; because sources differ, confirm the procedure with your grid operator.',
+          '**The rules are in motion, but not yet settled.** Trade media report that the cabinet adopted the EEG 2027 bill on July 29, 2026, and that it would count storage behind the same inverter as part of a plug-in device; AC storage with its own inverter would not be covered. According to press reports, the Bundestag held its first reading on September 24, 2026 and an expert hearing on October 5, 2026; the final vote is pending and the wording may still change. The retailer blog we cite for the earlier working draft is not a neutral source. Ask your grid operator which procedure applies on the day you commission the system.',
           'Landlord rules add another layer: A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic. See [Balcony Solar for Landlords and Housing Associations](/balcony-solar/balcony-solar-housing-associations-b2b-2027).',
         ],
       },
@@ -82,6 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hardware: Falling Entry Prices and Manufacturer Claims',
         content: [
           '**Entry prices are falling.** Lidl sold a TRONIC 2.24 kWh LiFePO4 add-on battery in Germany from May 21 to 27, 2026 for €399, or €299 with the Lidl Plus app. It has no built-in inverter, so it extends an existing balcony system; the promotion has likely ended, so check current prices.',
+          '**Typical prices (ADAC, September 2026):** storage alone with 1.5 to 2 kWh costs about €300 to €1,000. Budget models without an integrated inverter start around €300 to €400, mid-range plug-and-play models cost about €450 to €750, and premium hybrid models about €600 to €1,000. In the ADAC\'s HTW Berlin calculation for an 880 W system, payback is about 4 years without and 5 years with storage for a one-person household, and about 3 versus 4 years for a three-person household. For a ranked buyer\'s guide see [Best Balcony Solar Batteries](/balcony-solar/best-balcony-solar-batteries-2026).',
           '**New products come with manufacturer claims, not independent tests.** At Intersolar Europe 2026 in Munich, WattCycle announced an all-in-one balcony storage system with up to 10 kWh and 2.5 kW or 5 kW bidirectional power, plug-and-play (manufacturer claims, press release of June 20, 2026). We found no published EU price or availability date.',
           'Because DIN VDE V 0126-95 excludes storage, check that a combined system\'s AC output stays within the 800 VA limit that defines a plug-in device in Germany, and ask the seller which registration route the product is designed for.',
         ],
@@ -114,12 +116,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale — Gesetze und Normen für Steckersolar',
-            description: 'Consumer-protection guidance on storage registration, MaStR and grid-operator rules',
+            description: 'Consumer-protection guidance (updated October 21, 2026) on storage registration, MaStR, form F.1.2 and grid-operator rules',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk — Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: 'Retailer blog (not neutral): VDE-AR-N 4105:2026-03 and the EEG 2027 working draft of July 18, 2026',
+            description: 'Retailer blog (not neutral): VDE-AR-N 4105:2026-03 and the earlier EEG 2027 working draft of July 18, 2026',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -141,6 +143,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de — Vonovia and balcony solar storage',
             description: 'Report on Vonovia\'s guideline banning storage and the contested legal assessment',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: 'Price ranges for storage, MaStR registration and payback examples',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: 'Federal Ministry for Economic Affairs — EEG 2027 government bill',
+            description: 'Cabinet draft of July 29, 2026 (German PDF); the storage definition is as reported by trade media',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: 'Cabinet decision of July 29, 2026 and the Bundestag first reading and expert hearing (page dated October 16, 2026)',
+          },
         ],
       },
       faqSection: {
@@ -161,7 +178,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How do I register a balcony system with a battery in Germany?',
-            a: 'The Verbraucherzentrale states that storage must currently be registered with the grid operator by a licensed electrician, who also connects it, and that the simplified MaStR registration does not apply to storage. Trade media report a simplified process for storage up to 800 VA under VDE-AR-N 4105:2026-03; confirm the procedure with your grid operator.',
+            a: 'The Verbraucherzentrale (page updated October 21, 2026) states that storage must currently be reported to the grid operator in addition to the MaStR and is not yet covered by the simplified registration. A simplified procedure with form F.1.2 exists under the revised VDE-AR-N 4105 for feed-in up to 800 W, but not all grid operators accept it yet. The ADAC describes the process more simply, so confirm the procedure with your grid operator.',
+          },
+          {
+            q: 'How much does a balcony power plant battery cost?',
+            a: 'According to the ADAC (September 2026), storage alone with 1.5 to 2 kWh costs about €300 to €1,000: budget models around €300 to €400, mid-range around €450 to €750, premium around €600 to €1,000. Complete sets with 2 to 4 modules and 1.5 to 2 kWh storage run about €700 to €1,700. Prices change often, and in the ADAC\'s example calculation storage extends payback by about one year.',
+          },
+          {
+            q: 'What does the EEG 2027 change for balcony batteries?',
+            a: 'Trade media report that the EEG 2027 bill, adopted by the cabinet on July 29, 2026, would count storage behind the same inverter as part of a plug-in device, while AC storage with its own inverter would not be covered. It is not law yet because the Bundestag has not completed its vote, so the registration rules described above still apply.',
           },
           {
             q: 'What is the WattCycle balcony battery?',
@@ -199,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'يتزايد استخدام تخزين البطاريات كإضافة للطاقة الشمسية للشرفة في ألمانيا والاتحاد الأوروبي، لكنه ليس إلزاميًا ولا يناسب كل أسرة، كما أن القواعد الألمانية الخاصة بالمنظومات القابلة للتوصيل بالمقبس مع التخزين لا تزال قيد الصياغة. تلخّص هذه الصفحة وضع القواعد وأسعار بطاريات التوسعة وما تُظهره أبحاث المراجحة السعرية وما لا تُظهره. هي نظرة عامة على السوق، وليست توصية بالشراء ولا استشارة قانونية أو كهربائية.',
     metaDescription: 'بطاريات الشرفة الشمسية 2027: المعيار الألماني للأجهزة القابلة للتوصيل يستثني التخزين، وقواعد التسجيل تتغير، والأسعار تنخفض. ما الذي تأكد ومتى يجدي التخزين.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مشترو الطاقة الشمسية للشرفة الذين يقيّمون ما إذا كانوا سيضيفون تخزين البطاريات في 2027',
@@ -210,18 +235,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DIN VDE V 0126-95 تخزين',
       'wattcycle بطارية طاقة شمسية للشرفة',
     ],
-    leadAnswerBlock: '**تصبح البطاريات إضافة شائعة للطاقة الشمسية للشرفة، لكنها ليست إلزامية، والقواعد الألمانية للمنظومات القابلة للتوصيل بالمقبس مع التخزين لم تستقر بعد.** يغطي معيار المنتج DIN VDE V 0126-95، الصادر في ديسمبر 2025، الأجهزة الشمسية القابلة للتوصيل بالمقبس بدون تخزين فقط؛ وقد بدأت لجنة المعايير DKE/K 373 التخطيط لجزء إضافي للأجهزة المزوّدة بتخزين. وتذكر منظمة حماية المستهلك الألمانية (Verbraucherzentrale) أن التخزين يجب حاليًا أن يسجّله كهربائي مرخّص لدى مشغّل الشبكة، بينما تفيد وسائل إعلام متخصصة بأن قاعدة الربط المنقّحة (VDE-AR-N 4105:2026-03) تبسّط الإجراءات للتخزين الصغير حتى 800 VA. أسعار الدخول تنخفض، لكن جدوى البطارية لا تزال تعتمد على الفرق بين سعر الشراء وتعويض التصدير.',
+    leadAnswerBlock: '**أصبحت البطاريات إضافة شائعة للطاقة الشمسية في الشرفات، لكنها ليست إلزامية، ولا تزال القواعد الألمانية الخاصة بالأنظمة القابلة للتوصيل بالمقبس مع التخزين غير مستقرة.** يغطي معيار المنتج DIN VDE V 0126-95، الصادر في ديسمبر 2025، الأجهزة الشمسية القابلة للتوصيل بالمقبس دون تخزين فقط؛ وقد بدأت لجنة المعايير DKE/K 373 التخطيط لجزء إضافي للأجهزة مع التخزين. تذكر Verbraucherzentrale (الصفحة محدّثة في 21 أكتوبر 2026) أن التخزين يجب حاليًا إبلاغ مشغّل الشبكة به إضافةً إلى التسجيل في Marktstammdatenregister، بينما تتيح قاعدة التوصيل المنقّحة VDE-AR-N 4105 إجراءً مبسّطًا للتغذية حتى 800 W لا يقبله كل مشغّل شبكة بعد. ووفق ما يُنشر، فإن مشروع قانون EEG 2027 الذي أقرّه مجلس الوزراء في 29 يوليو 2026 سيحتسب التخزين خلف العاكس نفسه جزءًا من الجهاز القابل للتوصيل بالمقبس، لكنه ليس قانونًا بعد. يقدّر ADAC سعر التخزين وحده بنحو 300 إلى 1,000 يورو، ويظل جدوى البطارية مرهونة بالفرق بين سعر الكهرباء التي تشتريها وما تحصل عليه مقابل ما تصدّره.',
     quickAnswerTop: {
       ar: {
         question: 'هل يصبح تخزين البطاريات معيارًا للطاقة الشمسية للشرفة؟',
         answer: 'يزداد انتشاره، لكنه ليس إلزاميًا ولا يناسب كل أسرة. أصبحت بطاريات التوسعة أرخص، لكن معيار المنتج الألماني DIN VDE V 0126-95 لا يغطي الأجهزة القابلة للتوصيل بالمقبس مع التخزين، وقواعد تسجيل التخزين تتغير. وتعتمد جدوى البطارية على الفرق بين ما تدفعه مقابل الكهرباء المشتراة وما تكسبه من الكهرباء المُصدَّرة.',
         bullets: [
           'يغطي DIN VDE V 0126-95 (الصادر في ديسمبر 2025) الأجهزة الشمسية القابلة للتوصيل بالمقبس بدون تخزين؛ ولجنة DKE/K 373 بدأت للتو التخطيط لجزء خاص بالأجهزة المزوّدة بتخزين',
-          'تذكر Verbraucherzentrale أن التخزين يجب حاليًا أن يسجّله كهربائي مرخّص لدى مشغّل الشبكة، وأن مسار التسجيل المبسّط لا يشمل التخزين',
-          'تفيد وسائل إعلام متخصصة بأن VDE-AR-N 4105:2026-03 تُدخل إجراء ربط مبسّطًا للتخزين الصغير حتى 800 VA؛ أكّد الإجراء مع مشغّل شبكتك',
+          'تذكر Verbraucherzentrale (الصفحة محدّثة في 21 أكتوبر 2026) أن التخزين يجب حاليًا إبلاغ مشغّل الشبكة به إضافةً إلى التسجيل في MaStR؛ ولا يشمله التسجيل المبسّط بعد',
+          'وفق Verbraucherzentrale، توفّر VDE-AR-N 4105 المنقّحة إجراءً مبسّطًا (النموذج F.1.2) للتغذية حتى 800 W، لكن ليس كل مشغّلي الشبكات يقبلونه بعد، ويجوز لهم تطبيق النسخة السابقة حتى 1 مارس 2027',
           'وجدت دراسة محاكاة عام 2026 على 448 أسرة أن التعرفة الديناميكية رفعت صافي مكاسب بطارية 10 kWh بنسبة 12.7%؛ وهي تنمذج منظومات الخلايا الشمسية مع البطاريات على الأسطح، لا مجموعات التوصيل بالمقبس',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -240,8 +265,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'يغطي معيار المنتج الألماني DIN VDE V 0126-95، الصادر في ديسمبر 2025، الأجهزة الشمسية القابلة للتوصيل بالمقبس بدون تخزين. وقد بدأت لجنة المعايير DKE/K 373 التخطيط لجزء إضافي للأجهزة المزوّدة بتخزين دون جدول زمني.',
-          'تذكر Verbraucherzentrale أن التخزين يجب حاليًا أن يسجّله كهربائي مرخّص لدى مشغّل الشبكة. وتفيد وسائل إعلام متخصصة بإجراء ربط مبسّط للتخزين حتى 800 VA بموجب VDE-AR-N 4105:2026-03، فأكّد الإجراء مع مشغّل شبكتك قبل الشراء.',
-          'أسعار الدخول تنخفض. أعلنت WattCycle لمعرض Intersolar Europe 2026 بطارية للشرفة بسعة تصل إلى 10 kWh؛ ولم يُنشر سعر في الاتحاد الأوروبي ولا موعد توفّر.',
+          'تذكر Verbraucherzentrale (الصفحة محدّثة في 21 أكتوبر 2026) أن التخزين يجب حاليًا إبلاغ مشغّل الشبكة به إضافةً إلى التسجيل في MaStR. توفّر VDE-AR-N 4105 المنقّحة إجراءً مبسّطًا بالنموذج F.1.2 للتغذية حتى 800 W، لكن ليس كل مشغّلي الشبكات يقبلونه بعد، ويجوز لهم تطبيق النسخة السابقة حتى 1 مارس 2027؛ لذا أكّد الإجراء مع مشغّل الشبكة لديك قبل الشراء.',
+          'أقرّ مجلس الوزراء مشروع قانون EEG 2027 في 29 يوليو 2026. تفيد وسائل إعلام متخصصة بأنه سيحتسب التخزين خلف العاكس نفسه جزءًا من الجهاز القابل للتوصيل بالمقبس، بينما لن يشمل التخزين بالتيار المتردد الذي له عاكس خاص. لم يقرّه البرلمان بعد، فهو ليس قانونًا.',
+          'أسعار الدخول تنخفض. يقدّر ADAC (سبتمبر 2026) سعر التخزين وحده بسعة 1.5 إلى 2 kWh بنحو 300 إلى 1,000 يورو. أعلنت WattCycle عن بطارية للشرفات بسعة تصل إلى 10 kWh لمعرض Intersolar Europe 2026؛ ولم يُنشر سعر في الاتحاد الأوروبي ولا موعد توفر.',
           'لم نعثر على دعم على مستوى الاتحاد الأوروبي لبطاريات الشرفة. والدعم، إن وُجد، تحدده الدول أو الولايات أو البلديات.',
           'تصف هذه الصفحة اتجاهًا في السوق ولا تحل محل اختبار الأسرة في «هل تحتاج إلى بطارية للطاقة الشمسية للشرفة؟»: لا تُجدي البطارية إلا إذا تجاوز الفرق الموفَّر بين سعر الشراء وتعويض التصدير تكلفتها.',
         ],
@@ -251,8 +277,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'القواعد الألمانية للمنظومات القابلة للتوصيل بالمقبس مع التخزين لا تزال تتغير',
         content: [
           '**يغطي معيار المنتج الألماني DIN VDE V 0126-95 الأجهزة الشمسية القابلة للتوصيل بالمقبس بدون تخزين.** تذكر هيئة المعايير DKE في أسئلتها الشائعة أن المعيار لا يغطي الأجهزة الشمسية القابلة للتوصيل بالمقبس المزوّدة بوحدة تخزين طاقة، وأنها تحتاج إلى متطلبات إضافية. وقد بدأت اللجنة DKE/K 373 التخطيط لجزء إضافي دون ذكر جدول زمني. صدر المعيار في ديسمبر 2025 ويسمح بخرج عاكس يصل إلى 800 VA، ومع مقبس منزلي عادي بقدرة ألواح إجمالية تصل إلى 960 W.',
-          '**وبخصوص التسجيل، تذكر Verbraucherzentrale أن التخزين يجب حاليًا أن يسجّله كهربائي مرخّص لدى مشغّل الشبكة، وهو من يتولى توصيله أيضًا.** التسجيل المختصر في Marktstammdatenregister (MaStR) المطبّق على الأجهزة الشمسية القابلة للتوصيل بالمقبس لا ينطبق على التخزين. ومنذ Solarpaket I (مايو 2024) لم يعد لازمًا إبلاغ مشغّل الشبكة مباشرة بشأن الأجهزة القابلة للتوصيل بالمقبس بدون تخزين.',
-          '**القواعد في حالة حركة، لكنها لم تستقر بعد.** تفيد وسائل إعلام متخصصة بأن قاعدة الربط المنقّحة VDE-AR-N 4105:2026-03 تنص على إجراء مبسّط للتخزين الصغير والوحدات المدمجة حتى 800 VA، وبأن مسودة عمل صادرة عن إحدى الوزارات بشأن EEG 2027 (18 يوليو 2026) ستعدّ التخزين الموجود خلف العاكس نفسه جزءًا من الجهاز القابل للتوصيل بالمقبس. مسودة العمل ليست قانونًا معتمدًا، ومدونة التاجر التي نستشهد بها في ذلك ليست مصدرًا محايدًا. اسأل مشغّل شبكتك عن الإجراء المنطبق يوم التشغيل.',
+          '**في ما يخص التسجيل، تذكر Verbraucherzentrale (الصفحة محدّثة في 21 أكتوبر 2026) أن التخزين يجب حاليًا إبلاغ مشغّل الشبكة به إضافةً إلى التسجيل في Marktstammdatenregister (MaStR)، وأن التسجيل المبسّط لا يشمله بعد.** وللتغذية حتى 800 W تشير إلى VDE-AR-N 4105 المنقّحة وإجرائها المبسّط (النموذج F.1.2)، لكنها تنبّه إلى أن ليس كل مشغّلي الشبكات يقبلونه بعد وأن بإمكانهم مواصلة استخدام النسخة السابقة حتى 1 مارس 2027. ولم تعد الأجهزة الشمسية القابلة للتوصيل بالمقبس دون تخزين بحاجة إلى إخطار مشغّل الشبكة مباشرة منذ Solarpaket I (مايو 2024). ويصف ADAC (سبتمبر 2026) تسجيل التخزين بصورة أبسط (MaStR فقط خلال شهر) وينصح بتوضيح الحالات غير القياسية مع مشغّل الشبكة مسبقًا؛ ولأن المصادر تختلف، أكّد الإجراء مع مشغّل الشبكة لديك.',
+          '**القواعد في حالة تغيّر، لكنها لم تستقر بعد.** تفيد وسائل إعلام متخصصة بأن مجلس الوزراء أقرّ مشروع قانون EEG 2027 في 29 يوليو 2026 وأنه سيحتسب التخزين خلف العاكس نفسه جزءًا من الجهاز القابل للتوصيل بالمقبس؛ ولن يشمل التخزين بالتيار المتردد الذي له عاكس خاص. ووفق تقارير صحفية، عقد البوندستاغ القراءة الأولى في 24 سبتمبر 2026 وجلسة استماع للخبراء في 5 أكتوبر 2026؛ والتصويت النهائي معلّق وقد يتغيّر النص. ومدونة التاجر التي نستشهد بها بخصوص المسودة السابقة ليست مصدرًا محايدًا. اسأل مشغّل الشبكة لديك عن الإجراء المطبّق يوم تشغيل النظام.',
           'وتضيف قواعد المؤجّرين طبقة أخرى: ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي. انظر [الطاقة الشمسية للشرفة لأصحاب العقارات وجمعيات الإسكان](/ar/balcony-solar/balcony-solar-housing-associations-b2b-2027).',
         ],
       },
@@ -261,6 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'العتاد: انخفاض أسعار الدخول وادعاءات المصنّعين',
         content: [
           '**أسعار الدخول تنخفض.** باعت Lidl في ألمانيا، من 21 إلى 27 مايو 2026، بطارية توسعة TRONIC بسعة 2.24 kWh (LiFePO4) بسعر 399 يورو، أو 299 يورو عبر تطبيق Lidl Plus. ليس فيها عاكس مدمج، لذا فهي توسّع منشأة شرفة قائمة؛ ومن المرجح أن العرض انتهى، فتحقق من الأسعار الحالية.',
+          '**الأسعار المعتادة (ADAC، سبتمبر 2026):** يكلّف التخزين وحده بسعة 1.5 إلى 2 kWh نحو 300 إلى 1,000 يورو. تبدأ الطرازات الاقتصادية دون عاكس مدمج من نحو 300 إلى 400 يورو، وتكلّف الطرازات المتوسطة الجاهزة للتركيب نحو 450 إلى 750 يورو، والطرازات الهجينة الفاخرة نحو 600 إلى 1,000 يورو. وفي حساب ADAC مع HTW برلين لنظام بقدرة 880 W، تبلغ مدة استرداد التكلفة نحو 4 سنوات دون تخزين و5 سنوات معه لأسرة من فرد واحد، ونحو 3 مقابل 4 سنوات لأسرة من ثلاثة أفراد. وللاطلاع على دليل شراء مرتّب، راجع [أفضل بطاريات الطاقة الشمسية للشرفات](/ar/balcony-solar/best-balcony-solar-batteries-2026).',
           '**تأتي المنتجات الجديدة بادعاءات المصنّعين لا باختبارات مستقلة.** في معرض Intersolar Europe 2026 في ميونخ، أعلنت WattCycle عن نظام تخزين متكامل للشرفة بسعة تصل إلى 10 kWh وبقدرة ثنائية الاتجاه 2.5 kW أو 5 kW، جاهز للتوصيل والتشغيل (ادعاءات المصنّع، بيان صحفي بتاريخ 20 يونيو 2026). لم نعثر على سعر منشور في الاتحاد الأوروبي ولا على موعد توفّر.',
           'ولأن DIN VDE V 0126-95 يستثني التخزين، تحقق من أن خرج التيار المتردد للنظام المدمج يبقى ضمن حد 800 VA الذي يعرّف الجهاز القابل للتوصيل بالمقبس في ألمانيا، واسأل البائع عن مسار التسجيل الذي صُمم المنتج من أجله.',
         ],
@@ -293,12 +320,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale — القوانين والمعايير الخاصة بالطاقة الشمسية القابلة للتوصيل بالمقبس',
-            description: 'إرشادات حماية المستهلك بشأن تسجيل التخزين وMaStR وقواعد مشغّل الشبكة',
+            description: 'معلومات للمستهلك (محدّثة في 21 أكتوبر 2026) حول تسجيل التخزين وMaStR والنموذج F.1.2 وقواعد مشغّل الشبكة',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk — Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: 'مدونة تاجر (غير محايدة): VDE-AR-N 4105:2026-03 ومسودة عمل EEG 2027 بتاريخ 18 يوليو 2026',
+            description: 'مدونة تاجر (غير محايدة): VDE-AR-N 4105:2026-03 ومسودة EEG 2027 السابقة بتاريخ 18 يوليو 2026',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -320,6 +347,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de — Vonovia وتخزين الطاقة في منظومات الشرفة',
             description: 'تقرير عن إرشادات Vonovia التي تحظر التخزين والتقييم القانوني المختلف عليه',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: 'نطاقات أسعار التخزين وتسجيل MaStR وأمثلة استرداد التكلفة',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: 'وزارة الاقتصاد الاتحادية الألمانية — مشروع قانون EEG 2027',
+            description: 'مشروع مجلس الوزراء بتاريخ 29 يوليو 2026 (ملف PDF بالألمانية)؛ وتعريف التخزين وفق تقارير وسائل إعلام متخصصة',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: 'قرار مجلس الوزراء في 29 يوليو 2026 والقراءة الأولى في البوندستاغ وجلسة استماع الخبراء (الصفحة بتاريخ 16 أكتوبر 2026)',
+          },
         ],
       },
       faqSection: {
@@ -340,7 +382,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كيف أسجّل منظومة شرفة مزوّدة ببطارية في ألمانيا؟',
-            a: 'تذكر Verbraucherzentrale أن التخزين يجب حاليًا أن يسجّله ويوصّله كهربائي مرخّص لدى مشغّل الشبكة، وأن تسجيل MaStR المبسّط لا ينطبق على التخزين. وتفيد وسائل إعلام متخصصة بإجراء مبسّط للتخزين حتى 800 VA بموجب VDE-AR-N 4105:2026-03؛ أكّد الإجراء مع مشغّل شبكتك.',
+            a: 'تذكر Verbraucherzentrale (الصفحة محدّثة في 21 أكتوبر 2026) أن التخزين يجب حاليًا إبلاغ مشغّل الشبكة به إضافةً إلى التسجيل في MaStR وأن التسجيل المبسّط لا يشمله بعد. يوجد بموجب VDE-AR-N 4105 المنقّحة إجراء مبسّط بالنموذج F.1.2 للتغذية حتى 800 W، لكن ليس كل مشغّلي الشبكات يقبلونه بعد. ويصف ADAC العملية بصورة أبسط، لذا أكّد الإجراء مع مشغّل الشبكة لديك.',
+          },
+          {
+            q: 'كم تكلّف بطارية محطة الشرفة الشمسية؟',
+            a: 'وفق ADAC (سبتمبر 2026)، يكلّف التخزين وحده بسعة 1.5 إلى 2 kWh نحو 300 إلى 1,000 يورو: الطرازات الاقتصادية نحو 300 إلى 400 يورو، والمتوسطة نحو 450 إلى 750 يورو، والفاخرة نحو 600 إلى 1,000 يورو. وتبلغ الأطقم الكاملة بألواح من 2 إلى 4 وتخزين من 1.5 إلى 2 kWh نحو 700 إلى 1,700 يورو. تتغير الأسعار كثيرًا، وفي مثال الحساب لدى ADAC يطيل التخزين مدة استرداد التكلفة بنحو عام.',
+          },
+          {
+            q: 'ماذا يغيّر EEG 2027 بالنسبة إلى بطاريات الشرفات؟',
+            a: 'تفيد وسائل إعلام متخصصة بأن مشروع قانون EEG 2027 الذي أقرّه مجلس الوزراء في 29 يوليو 2026 سيحتسب التخزين خلف العاكس نفسه جزءًا من الجهاز القابل للتوصيل بالمقبس، بينما لن يشمل التخزين بالتيار المتردد الذي له عاكس خاص. وهو ليس قانونًا بعد لأن البوندستاغ لم يُنهِ التصويت، لذا تظل قواعد التسجيل الموضحة أعلاه سارية.',
           },
           {
             q: 'ما هي بطارية الشرفة من WattCycle؟',
@@ -376,9 +426,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Batteriespeicher für Balkonkraftwerke 2027: Wird er zum Standard?',
     seoTitle: 'Balkonkraftwerk-Speicher 2027: Regeln, Preise, Nutzen',
     intro: 'Batteriespeicher sind für Balkonkraftwerke in Deutschland und der EU ein wachsendes Zubehör, aber weder vorgeschrieben noch für jeden Haushalt sinnvoll, und die deutschen Regeln für Steckersolargeräte mit Speicher werden noch geschrieben. Diese Seite fasst den Regelungsstand, die Preise für Zusatzspeicher und die Aussagekraft der Forschung zur Tarifarbitrage zusammen. Sie ist ein Marktüberblick, keine Kaufempfehlung und keine Rechts- oder Elektroberatung.',
-    metaDescription: 'Die deutsche Steckersolar-Norm schließt Speicher aus, Anmelderegeln sind im Fluss, Einstiegspreise sinken. Was belegt ist und wann sich ein Speicher lohnt.',
+    metaDescription: 'Batteriespeicher für Balkonkraftwerke: Die Norm schließt Speicher aus, der EEG-2027-Entwurf ist nicht beschlossen, Speicher kosten ca. 300–1.000 €.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Balkonkraftwerk-Käufer, die 2027 die Anschaffung eines Batteriespeichers abwägen',
@@ -389,18 +439,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DIN VDE V 0126-95 speicher',
       'wattcycle balkonkraftwerk batterie',
     ],
-    leadAnswerBlock: '**Batteriespeicher werden zum verbreiteten Zubehör für Balkonkraftwerke, sind aber nicht vorgeschrieben, und die deutschen Regeln für Steckersolargeräte mit Speicher sind noch nicht abschließend geklärt.** Die Produktnorm DIN VDE V 0126-95 vom Dezember 2025 gilt nur für Steckersolargeräte ohne Speicher; das Normungsgremium DKE/K 373 hat begonnen, einen weiteren Teil für Geräte mit Speicher zu planen. Die Verbraucherzentrale gibt an, dass Speicher derzeit von einem zugelassenen Elektriker beim Netzbetreiber angemeldet werden müssen; für kleine Speicher bis 800 VA soll eine überarbeitete Anschlussregel (VDE-AR-N 4105:2026-03) laut Fachmedien ein vereinfachtes Verfahren bringen. Die Einstiegspreise sinken, ob sich ein Speicher lohnt, hängt aber weiterhin von der Lücke zwischen Bezugspreis und Einspeisevergütung ab.',
+    leadAnswerBlock: '**Batteriespeicher werden zum verbreiteten Zubehör für Balkonkraftwerke, sind aber nicht vorgeschrieben, und die deutschen Regeln für Steckersolargeräte mit Speicher sind noch nicht abschließend geklärt.** Die Produktnorm DIN VDE V 0126-95 vom Dezember 2025 gilt nur für Steckersolargeräte ohne Speicher; das Normungsgremium DKE/K 373 hat begonnen, einen weiteren Teil für Geräte mit Speicher zu planen. Die Verbraucherzentrale gibt an (Stand 21. Oktober 2026), dass Speicher derzeit zusätzlich zum Marktstammdatenregister beim Netzbetreiber angemeldet werden müssen; die überarbeitete Anschlussregel VDE-AR-N 4105 sieht für Einspeisung bis 800 W ein vereinfachtes Verfahren vor, das noch nicht jeder Netzbetreiber akzeptiert. Der am 29. Juli 2026 vom Kabinett beschlossene Entwurf zum EEG 2027 würde laut Berichten Speicher hinter demselben Wechselrichter als Teil eines Steckersolargeräts zählen, ist aber noch kein Gesetz. Der ADAC beziffert Speicher allein auf grob 300 bis 1.000 €, und ob sich ein Speicher lohnt, hängt weiterhin von der Lücke zwischen Bezugspreis und Einspeisevergütung ab.',
     quickAnswerTop: {
       de: {
         question: 'Wird Batteriespeicher zum Standard bei Balkonkraftwerken?',
         answer: 'Er wird häufiger, ist aber nicht vorgeschrieben und nicht für jeden Haushalt sinnvoll. Zusatzspeicher werden günstiger, aber die Produktnorm DIN VDE V 0126-95 deckt Steckersolargeräte mit Speicher nicht ab, und die Anmelderegeln für Speicher sind im Fluss. Ob sich ein Speicher lohnt, hängt von der Lücke zwischen dem Preis für bezogenen Strom und der Vergütung für Einspeisung ab.',
         bullets: [
           'DIN VDE V 0126-95 (veröffentlicht im Dezember 2025) gilt für Steckersolargeräte ohne Speicher; das Gremium DKE/K 373 hat die Planung eines Teils für Geräte mit Speicher erst begonnen',
-          'Die Verbraucherzentrale gibt an, dass Speicher derzeit von einem zugelassenen Elektriker beim Netzbetreiber angemeldet werden müssen; die vereinfachte Anmeldung gilt für Speicher nicht',
-          'Fachmedien berichten, dass VDE-AR-N 4105:2026-03 ein vereinfachtes Anschlussverfahren für kleine Speicher bis 800 VA einführt; klären Sie das Verfahren mit Ihrem Netzbetreiber',
+          'Die Verbraucherzentrale gibt an (Stand 21. Oktober 2026), dass Speicher derzeit zusätzlich zum MaStR beim Netzbetreiber angemeldet werden müssen; die vereinfachte Anmeldung gilt für Speicher noch nicht',
+          'Laut Verbraucherzentrale sieht die überarbeitete VDE-AR-N 4105 für Einspeisung bis 800 W ein vereinfachtes Verfahren (Formular F.1.2) vor, doch nicht alle Netzbetreiber akzeptieren es bereits und dürfen bis zum 1. März 2027 die bisherige Fassung anwenden',
           'Eine Simulationsstudie von 2026 mit 448 Haushalten ermittelte, dass dynamische Tarife den Nettogewinn eines 10-kWh-Speichers um 12,7 % erhöhten; sie modelliert PV-Speicher-Systeme auf dem Dach, keine Steckersolar-Sets',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -419,8 +469,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Die deutsche Produktnorm DIN VDE V 0126-95 vom Dezember 2025 gilt für Steckersolargeräte ohne Speicher. Das Normungsgremium DKE/K 373 hat begonnen, einen weiteren Teil für Geräte mit Speicher zu planen, ohne Zeitplan.',
-          'Die Verbraucherzentrale gibt an, dass Speicher derzeit von einem zugelassenen Elektriker beim Netzbetreiber angemeldet werden müssen. Fachmedien berichten von einem vereinfachten Anschlussverfahren für Speicher bis 800 VA nach VDE-AR-N 4105:2026-03; klären Sie das Verfahren daher vor dem Kauf mit Ihrem Netzbetreiber.',
-          'Die Einstiegspreise sinken. WattCycle kündigte für die Intersolar Europe 2026 einen Balkonspeicher mit bis zu 10 kWh an; ein EU-Preis oder Liefertermin ist nicht veröffentlicht.',
+          'Die Verbraucherzentrale gibt an (Stand 21. Oktober 2026), dass Speicher derzeit zusätzlich zum MaStR beim Netzbetreiber angemeldet werden müssen. Die überarbeitete VDE-AR-N 4105 sieht für Einspeisung bis 800 W ein vereinfachtes Verfahren mit Formular F.1.2 vor, doch nicht alle Netzbetreiber akzeptieren es bereits und dürfen bis zum 1. März 2027 die bisherige Fassung anwenden; klären Sie das Verfahren daher vor dem Kauf mit Ihrem Netzbetreiber.',
+          'Der Entwurf zum EEG 2027 wurde am 29. Juli 2026 vom Kabinett beschlossen. Fachmedien berichten, er würde Speicher hinter demselben Wechselrichter als Teil eines Steckersolargeräts zählen, AC-Speicher mit eigenem Wechselrichter dagegen nicht erfassen. Das Parlament hat ihn noch nicht verabschiedet, er ist also kein geltendes Recht.',
+          'Die Einstiegspreise sinken. Der ADAC (September 2026) beziffert Speicher allein mit 1,5 bis 2 kWh auf grob 300 bis 1.000 €. WattCycle kündigte für die Intersolar Europe 2026 einen Balkonspeicher mit bis zu 10 kWh an; ein EU-Preis oder Liefertermin ist nicht veröffentlicht.',
           'Eine EU-weite Förderung für Balkonspeicher haben wir nicht gefunden. Fördermittel, soweit vorhanden, legen Staaten, Länder oder Kommunen fest.',
           'Diese Seite beschreibt einen Markttrend. Sie ersetzt nicht den Haushaltstest in „Brauchen Sie einen Batteriespeicher für Ihr Balkonkraftwerk?“: Ein Speicher lohnt sich nur, wenn die eingesparte Lücke zwischen Bezugspreis und Einspeisevergütung seine Kosten übersteigt.',
         ],
@@ -430,8 +481,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Die deutschen Regeln für Steckersolar mit Speicher sind noch im Fluss',
         content: [
           '**Die deutsche Produktnorm DIN VDE V 0126-95 gilt für Steckersolargeräte ohne Speicher.** Das Normungsgremium DKE erklärt in seinen FAQ, dass die Norm Steckersolargeräte mit Energiespeicher nicht abdeckt; für diese sind zusätzliche Anforderungen nötig. Das Komitee DKE/K 373 hat die Planung eines weiteren Teils begonnen, nennt aber keinen Zeitplan. Die Norm wurde im Dezember 2025 veröffentlicht und erlaubt bis zu 800 VA Wechselrichterleistung und, mit normalem Haushaltsstecker, bis zu 960 W Modulleistung.',
-          '**Zur Anmeldung gibt die Verbraucherzentrale an, dass Speicher derzeit von einem zugelassenen Elektriker beim Netzbetreiber angemeldet werden müssen, der sie auch anschließen muss.** Die kurze Anmeldung im Marktstammdatenregister (MaStR), die für Steckersolargeräte gilt, gilt für Speicher nicht. Seit dem Solarpaket I (Mai 2024) muss der Netzbetreiber bei Steckersolargeräten ohne Speicher nicht mehr direkt informiert werden.',
-          '**Die Regeln sind in Bewegung, aber noch nicht abschließend.** Fachmedien berichten, dass die überarbeitete Anschlussregel VDE-AR-N 4105:2026-03 für kleine Speicher und kombinierte Einheiten bis 800 VA ein vereinfachtes Verfahren vorsieht und dass ein Referentenentwurf des Ministeriums zum EEG 2027 (18. Juli 2026) Speicher hinter demselben Wechselrichter als Teil eines Steckersolargeräts zählen würde. Ein Referentenentwurf ist kein beschlossenes Gesetz, und der Händler-Blog, den wir dafür nennen, ist keine neutrale Quelle. Fragen Sie Ihren Netzbetreiber, welches Verfahren am Tag der Inbetriebnahme gilt.',
+          '**Zur Anmeldung gibt die Verbraucherzentrale an (Stand 21. Oktober 2026), dass Speicher derzeit zusätzlich zum Marktstammdatenregister (MaStR) beim Netzbetreiber angemeldet werden müssen und die vereinfachte Anmeldung für Speicher noch nicht gilt.** Für Einspeisung bis 800 W verweist sie auf die überarbeitete VDE-AR-N 4105 mit einem vereinfachten Verfahren (Formular F.1.2), weist aber darauf hin, dass nicht alle Netzbetreiber es bereits akzeptieren und sie bis zum 1. März 2027 die bisherige Fassung anwenden dürfen. Steckersolargeräte ohne Speicher müssen dem Netzbetreiber seit dem Solarpaket I (Mai 2024) nicht mehr direkt gemeldet werden. Der ADAC (September 2026) beschreibt die Anmeldung von Speichern einfacher (nur MaStR, innerhalb eines Monats) und rät, Sonderfälle vorab mit dem Netzbetreiber zu klären; da die Quellen voneinander abweichen, klären Sie das Verfahren mit Ihrem Netzbetreiber.',
+          '**Die Regeln sind in Bewegung, aber noch nicht abschließend.** Fachmedien berichten, dass das Kabinett den Entwurf zum EEG 2027 am 29. Juli 2026 beschlossen hat und dass er Speicher hinter demselben Wechselrichter als Teil eines Steckersolargeräts zählen würde; AC-Speicher mit eigenem Wechselrichter wären nicht erfasst. Laut Presseberichten fand die erste Lesung im Bundestag am 24. September 2026 und eine Sachverständigenanhörung am 5. Oktober 2026 statt; die Abstimmung steht aus, und der Wortlaut kann sich noch ändern. Der Händler-Blog, den wir für den früheren Referentenentwurf nennen, ist keine neutrale Quelle. Fragen Sie Ihren Netzbetreiber, welches Verfahren am Tag der Inbetriebnahme gilt.',
           'Hinzu kommen Vorgaben von Vermietern: Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch. Siehe [Balkonsolar für Vermieter und Wohnungsgesellschaften](/de/balcony-solar/balcony-solar-housing-associations-b2b-2027).',
         ],
       },
@@ -440,6 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hardware: Sinkende Einstiegspreise und Herstellerangaben',
         content: [
           '**Die Einstiegspreise sinken.** Lidl verkaufte vom 21. bis 27. Mai 2026 in Deutschland einen TRONIC-Zusatzspeicher mit 2,24 kWh (LiFePO4) für 399 €, mit der Lidl-Plus-App für 299 €. Er hat keinen integrierten Wechselrichter und erweitert daher eine bestehende Balkonanlage; die Aktion ist vermutlich beendet, prüfen Sie also aktuelle Preise.',
+          '**Typische Preise (ADAC, September 2026):** Ein Speicher allein mit 1,5 bis 2 kWh kostet etwa 300 bis 1.000 €. Einsteigermodelle ohne integrierten Wechselrichter beginnen bei rund 300 bis 400 €, Plug-and-play-Modelle der Mittelklasse kosten etwa 450 bis 750 €, Premium-Hybridmodelle etwa 600 bis 1.000 €. In der HTW-Berlin-Rechnung des ADAC für eine 880-W-Anlage amortisiert sich die Anlage im Ein-Personen-Haushalt nach etwa 4 Jahren ohne und 5 Jahren mit Speicher, im Drei-Personen-Haushalt nach etwa 3 gegenüber 4 Jahren. Eine Kaufberatung mit Rangfolge finden Sie unter [Die besten Batteriespeicher für Balkonkraftwerke](/de/balcony-solar/best-balcony-solar-batteries-2026).',
           '**Neue Produkte kommen mit Herstellerangaben, nicht mit unabhängigen Tests.** Auf der Intersolar Europe 2026 in München kündigte WattCycle ein Balkon-Speichersystem aus einer Hand mit bis zu 10 kWh und 2,5 kW oder 5 kW bidirektionaler Leistung an, Plug-and-play (Herstellerangaben, Pressemitteilung vom 20. Juni 2026). Einen veröffentlichten EU-Preis oder Liefertermin haben wir nicht gefunden.',
           'Da DIN VDE V 0126-95 Speicher ausschließt, prüfen Sie, ob die AC-Leistung eines Kombisystems innerhalb der 800-VA-Grenze bleibt, die in Deutschland ein Steckersolargerät definiert, und fragen Sie den Verkäufer, für welchen Anmeldeweg das Produkt ausgelegt ist.',
         ],
@@ -472,12 +524,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale – Gesetze und Normen für Steckersolar',
-            description: 'Verbraucherinformation zu Speicheranmeldung, MaStR und Netzbetreiberregeln',
+            description: 'Verbraucherinformation (Stand 21. Oktober 2026) zu Speicheranmeldung, MaStR, Formular F.1.2 und Netzbetreiberregeln',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk – Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: 'Händler-Blog (nicht neutral): VDE-AR-N 4105:2026-03 und der EEG-2027-Referentenentwurf vom 18. Juli 2026',
+            description: 'Händler-Blog (nicht neutral): VDE-AR-N 4105:2026-03 und der frühere EEG-2027-Referentenentwurf vom 18. Juli 2026',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -499,6 +551,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de – Vonovia und Balkonkraftwerk-Speicher',
             description: 'Bericht über die Vonovia-Richtlinie mit Speicherverbot und die umstrittene rechtliche Bewertung',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC – Speicher für Balkonkraftwerk',
+            description: 'Preisspannen für Speicher, MaStR-Anmeldung und Amortisationsbeispiele',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: 'Bundesministerium für Wirtschaft und Energie – Gesetzentwurf EEG 2027',
+            description: 'Kabinettsentwurf vom 29. Juli 2026 (PDF); die Speicherdefinition nach Berichten von Fachmedien',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: 'Kabinettsbeschluss vom 29. Juli 2026 sowie erste Lesung im Bundestag und Sachverständigenanhörung (Stand 16. Oktober 2026)',
+          },
         ],
       },
       faqSection: {
@@ -519,7 +586,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie melde ich ein Balkonkraftwerk mit Batterie in Deutschland an?',
-            a: 'Die Verbraucherzentrale gibt an, dass Speicher derzeit von einem zugelassenen Elektriker beim Netzbetreiber angemeldet und angeschlossen werden müssen und dass die vereinfachte MaStR-Anmeldung für Speicher nicht gilt. Fachmedien berichten von einem vereinfachten Verfahren für Speicher bis 800 VA nach VDE-AR-N 4105:2026-03; klären Sie das Verfahren mit Ihrem Netzbetreiber.',
+            a: 'Die Verbraucherzentrale gibt an (Stand 21. Oktober 2026), dass Speicher derzeit zusätzlich zum MaStR beim Netzbetreiber angemeldet werden müssen und die vereinfachte Anmeldung für Speicher noch nicht gilt. Unter der überarbeiteten VDE-AR-N 4105 gibt es für Einspeisung bis 800 W ein vereinfachtes Verfahren mit Formular F.1.2, das aber noch nicht jeder Netzbetreiber akzeptiert. Der ADAC beschreibt den Ablauf einfacher; klären Sie das Verfahren daher mit Ihrem Netzbetreiber.',
+          },
+          {
+            q: 'Was kostet ein Batteriespeicher für ein Balkonkraftwerk?',
+            a: 'Laut ADAC (September 2026) kostet ein Speicher allein mit 1,5 bis 2 kWh etwa 300 bis 1.000 €: Einsteigermodelle rund 300 bis 400 €, Mittelklasse rund 450 bis 750 €, Premium rund 600 bis 1.000 €. Komplettsets mit 2 bis 4 Modulen und 1,5 bis 2 kWh Speicher liegen bei etwa 700 bis 1.700 €. Die Preise ändern sich häufig, und in der Beispielrechnung des ADAC verlängert ein Speicher die Amortisation um etwa ein Jahr.',
+          },
+          {
+            q: 'Was ändert das EEG 2027 für Balkonkraftwerk-Speicher?',
+            a: 'Fachmedien berichten, dass der vom Kabinett am 29. Juli 2026 beschlossene Entwurf zum EEG 2027 Speicher hinter demselben Wechselrichter als Teil eines Steckersolargeräts zählen würde, während AC-Speicher mit eigenem Wechselrichter nicht erfasst wären. Es ist noch kein Gesetz, da der Bundestag die Abstimmung nicht abgeschlossen hat; bis dahin gelten die oben beschriebenen Anmelderegeln.',
           },
           {
             q: 'Was ist der WattCycle-Balkonspeicher?',
@@ -557,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'El almacenamiento en batería es un complemento cada vez más habitual de la energía solar de balcón en Alemania y la UE, pero no es obligatorio ni adecuado para todos los hogares, y las reglas alemanas para sistemas plug-in con almacenamiento aún se están escribiendo. Esta página resume el estado de las normas, los precios de las baterías de ampliación y lo que la investigación sobre arbitraje tarifario muestra y no muestra. Es una visión del mercado, no una recomendación de compra ni asesoramiento jurídico o eléctrico.',
     metaDescription: 'La norma plug-in alemana excluye el almacenamiento, el registro cambia y los precios bajan. Qué está verificado sobre baterías de balcón y cuándo compensan.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energía solar de balcón que evalúan si añadir almacenamiento en batería en 2027',
@@ -568,18 +643,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DIN VDE V 0126-95 almacenamiento',
       'wattcycle batería energía solar balcón',
     ],
-    leadAnswerBlock: '**Las baterías se están convirtiendo en un complemento habitual de la energía solar de balcón, pero no son obligatorias y las reglas alemanas para sistemas plug-in con almacenamiento aún no están asentadas.** La norma de producto DIN VDE V 0126-95, publicada en diciembre de 2025, solo cubre dispositivos solares plug-in sin almacenamiento; el comité de normalización DKE/K 373 ha empezado a planificar una parte adicional para dispositivos con almacenamiento. La Verbraucherzentrale indica que el almacenamiento debe registrarse actualmente ante el gestor de red por un electricista autorizado, mientras que una regla de conexión revisada (VDE-AR-N 4105:2026-03) simplificaría, según la prensa especializada, el proceso para almacenamientos pequeños de hasta 800 VA. Los precios de entrada bajan, pero que una batería compense sigue dependiendo de la diferencia entre tu precio de compra y tu pago por inyección.',
+    leadAnswerBlock: '**Las baterías se están volviendo un complemento habitual del solar de balcón, pero no son obligatorias, y las normas alemanas para sistemas enchufables con almacenamiento aún no están cerradas.** La norma de producto DIN VDE V 0126-95, publicada en diciembre de 2025, cubre solo los dispositivos solares enchufables sin almacenamiento; el comité de normalización DKE/K 373 ha empezado a planificar otra parte para dispositivos con almacenamiento. La Verbraucherzentrale indica (página actualizada el 21 de octubre de 2026) que el almacenamiento debe comunicarse actualmente al operador de red además de al Marktstammdatenregister, mientras que la regla de conexión revisada VDE-AR-N 4105 ofrece un procedimiento simplificado para inyección de hasta 800 W que no todos los operadores de red aceptan todavía. El proyecto de EEG 2027 aprobado por el gabinete el 29 de julio de 2026 contaría, según informes, el almacenamiento tras el mismo inversor como parte de un dispositivo enchufable, pero aún no es ley. El ADAC sitúa el almacenamiento solo en unos 300 a 1000 €, y que una batería compense sigue dependiendo de la diferencia entre el precio de la energía que compras y lo que cobras por la que viertes.',
     quickAnswerTop: {
       es: {
         question: '¿Se está convirtiendo el almacenamiento en batería en estándar para la energía solar de balcón?',
         answer: 'Se está volviendo más común, pero no es obligatorio ni adecuado para todos los hogares. Las baterías de ampliación son más baratas, pero la norma de producto alemana DIN VDE V 0126-95 no cubre los dispositivos plug-in con almacenamiento y las reglas de registro del almacenamiento están cambiando. Que una batería compense depende de la diferencia entre lo que pagas por la electricidad comprada y lo que cobras por la inyectada.',
         bullets: [
           'La DIN VDE V 0126-95 (publicada en diciembre de 2025) cubre los dispositivos solares plug-in sin almacenamiento; el comité DKE/K 373 solo ha empezado a planificar una parte para dispositivos con almacenamiento',
-          'La Verbraucherzentrale indica que el almacenamiento debe registrarse actualmente ante el gestor de red por un electricista autorizado; el registro simplificado no cubre el almacenamiento',
-          'La prensa especializada informa de que la VDE-AR-N 4105:2026-03 introduce un proceso de conexión simplificado para almacenamientos pequeños de hasta 800 VA; confirma el procedimiento con tu gestor de red',
+          'La Verbraucherzentrale indica (página actualizada el 21 de octubre de 2026) que el almacenamiento debe comunicarse actualmente al operador de red además de al MaStR; el registro simplificado aún no lo cubre',
+          'Según la Verbraucherzentrale, la VDE-AR-N 4105 revisada prevé un procedimiento simplificado (formulario F.1.2) para inyección de hasta 800 W, pero no todos los operadores de red lo aceptan aún y pueden aplicar la versión anterior hasta el 1 de marzo de 2027',
           'Un estudio de simulación de 2026 con 448 hogares halló que las tarifas dinámicas aumentaban un 12,7 % la ganancia neta de una batería de 10 kWh; modela sistemas fotovoltaicos con batería en tejado, no kits plug-in',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -598,8 +673,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'La norma de producto alemana DIN VDE V 0126-95, publicada en diciembre de 2025, cubre los dispositivos solares plug-in sin almacenamiento. El comité de normalización DKE/K 373 ha empezado a planificar una parte adicional para dispositivos con almacenamiento, sin calendario.',
-          'La Verbraucherzentrale indica que el almacenamiento debe registrarse actualmente ante el gestor de red por un electricista autorizado. La prensa especializada informa de un proceso de conexión simplificado para almacenamiento de hasta 800 VA según la VDE-AR-N 4105:2026-03, así que confirma el procedimiento con tu gestor de red antes de comprar.',
-          'Los precios de entrada bajan. WattCycle anunció para Intersolar Europe 2026 una batería de balcón de hasta 10 kWh; no se ha publicado precio ni fecha de disponibilidad en la UE.',
+          'La Verbraucherzentrale indica (página actualizada el 21 de octubre de 2026) que el almacenamiento debe comunicarse actualmente al operador de red además de al MaStR. La VDE-AR-N 4105 revisada prevé un procedimiento simplificado con el formulario F.1.2 para inyección de hasta 800 W, pero no todos los operadores de red lo aceptan aún y pueden aplicar la versión anterior hasta el 1 de marzo de 2027; confirma el procedimiento con tu operador de red antes de comprar.',
+          'El proyecto de EEG 2027 fue aprobado por el gabinete el 29 de julio de 2026. Los medios especializados informan de que contaría el almacenamiento tras el mismo inversor como parte de un dispositivo enchufable, mientras que el almacenamiento en CA con inversor propio no quedaría cubierto. El Parlamento aún no lo ha aprobado, por lo que no es ley.',
+          'Los precios de entrada bajan. El ADAC (septiembre de 2026) sitúa el almacenamiento solo, de 1,5 a 2 kWh, en unos 300 a 1000 €. WattCycle anunció para Intersolar Europe 2026 una batería de balcón de hasta 10 kWh; no se ha publicado precio en la UE ni fecha de disponibilidad.',
           'No encontramos ninguna subvención de ámbito UE para baterías de balcón. Las ayudas, donde existen, las fijan países, estados o municipios.',
           'Esta página describe una tendencia del mercado. No sustituye la prueba de «¿Necesitas una batería para la energía solar de balcón?»: una batería solo compensa si la diferencia ahorrada entre precio de compra y pago por inyección supera su coste.',
         ],
@@ -609,8 +685,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Las reglas alemanas para el plug-in con almacenamiento siguen cambiando',
         content: [
           '**La norma de producto alemana DIN VDE V 0126-95 cubre los dispositivos solares plug-in sin almacenamiento.** El organismo de normalización DKE indica en sus preguntas frecuentes que la norma no cubre los dispositivos solares plug-in con unidad de almacenamiento de energía, que requieren requisitos adicionales. El comité DKE/K 373 ha empezado a planificar una parte adicional, pero no da calendario. La norma se publicó en diciembre de 2025 y permite hasta 800 VA de potencia del inversor y, con un enchufe doméstico normal, hasta 960 W de módulos.',
-          '**Sobre el registro, la Verbraucherzentrale indica que el almacenamiento debe registrarse actualmente ante el gestor de red por un electricista autorizado, que también debe conectarlo.** El registro breve en el Marktstammdatenregister (MaStR) que se aplica a los dispositivos solares plug-in no se aplica al almacenamiento. Desde el Solarpaket I (mayo de 2024) ya no hace falta informar directamente al gestor de red en el caso de dispositivos plug-in sin almacenamiento.',
-          '**Las reglas están en movimiento, pero aún no asentadas.** La prensa especializada informa de que la regla de conexión revisada VDE-AR-N 4105:2026-03 prevé un proceso simplificado para almacenamientos pequeños y unidades combinadas de hasta 800 VA, y de que un borrador de trabajo del ministerio para la EEG 2027 (18 de julio de 2026) contaría el almacenamiento detrás del mismo inversor como parte de un dispositivo plug-in. Un borrador de trabajo no es una ley aprobada, y el blog de un minorista que citamos para esto no es una fuente neutral. Pregunta a tu gestor de red qué procedimiento se aplica el día de la puesta en servicio.',
+          '**Sobre el registro, la Verbraucherzentrale indica (página actualizada el 21 de octubre de 2026) que el almacenamiento debe comunicarse actualmente al operador de red además de al Marktstammdatenregister (MaStR), y que aún no lo cubre el registro simplificado.** Para inyección de hasta 800 W remite a la VDE-AR-N 4105 revisada con un procedimiento simplificado (formulario F.1.2), pero señala que no todos los operadores de red lo aceptan aún y que pueden seguir usando la versión anterior hasta el 1 de marzo de 2027. Los dispositivos solares enchufables sin almacenamiento no necesitan notificar directamente al operador de red desde el Solarpaket I (mayo de 2024). El ADAC (septiembre de 2026) describe el registro del almacenamiento de forma más sencilla (solo MaStR, en el plazo de un mes) y aconseja aclarar con el operador de red las instalaciones atípicas; como las fuentes difieren, confirma el procedimiento con tu operador de red.',
+          '**Las normas están en movimiento, pero aún no son definitivas.** Los medios especializados informan de que el gabinete aprobó el proyecto de EEG 2027 el 29 de julio de 2026 y de que contaría el almacenamiento tras el mismo inversor como parte de un dispositivo enchufable; el almacenamiento en CA con inversor propio no quedaría cubierto. Según informaciones de prensa, el Bundestag celebró la primera lectura el 24 de septiembre de 2026 y una audiencia de expertos el 5 de octubre de 2026; la votación final está pendiente y el texto aún puede cambiar. El blog de un minorista que citamos para el borrador anterior no es una fuente neutral. Pregunta a tu operador de red qué procedimiento se aplica el día de la puesta en marcha.',
           'Las normas de los arrendadores añaden otra capa: un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general. Consulta [Energía solar de balcón para propietarios y asociaciones de vivienda](/es/balcony-solar/balcony-solar-housing-associations-b2b-2027).',
         ],
       },
@@ -619,6 +695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hardware: precios de entrada a la baja y afirmaciones de los fabricantes',
         content: [
           '**Los precios de entrada bajan.** Lidl vendió en Alemania del 21 al 27 de mayo de 2026 una batería de ampliación TRONIC de 2,24 kWh (LiFePO4) por 399 €, o 299 € con la app Lidl Plus. No tiene inversor integrado, por lo que amplía una instalación de balcón existente; es probable que la promoción haya terminado, así que consulta los precios actuales.',
+          '**Precios habituales (ADAC, septiembre de 2026):** un almacenamiento solo de 1,5 a 2 kWh cuesta entre 300 y 1000 €. Los modelos básicos sin inversor integrado parten de unos 300 a 400 €, los modelos plug-and-play de gama media cuestan unos 450 a 750 € y los híbridos premium unos 600 a 1000 €. En el cálculo del ADAC con HTW Berlín para una instalación de 880 W, la amortización es de unos 4 años sin almacenamiento y 5 con él en un hogar de una persona, y de unos 3 frente a 4 años en uno de tres personas. Para una guía de compra con clasificación consulta [Las mejores baterías para solar de balcón](/es/balcony-solar/best-balcony-solar-batteries-2026).',
           '**Los productos nuevos llegan con afirmaciones de los fabricantes, no con pruebas independientes.** En Intersolar Europe 2026 en Múnich, WattCycle anunció un sistema de almacenamiento de balcón todo en uno de hasta 10 kWh y 2,5 kW o 5 kW de potencia bidireccional, plug-and-play (afirmaciones del fabricante, nota de prensa del 20 de junio de 2026). No encontramos precio ni fecha de disponibilidad publicados para la UE.',
           'Como la DIN VDE V 0126-95 excluye el almacenamiento, comprueba que la potencia de CA de un sistema combinado se mantenga dentro del límite de 800 VA que define un dispositivo plug-in en Alemania y pregunta al vendedor para qué vía de registro está diseñado el producto.',
         ],
@@ -651,12 +728,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale – Gesetze und Normen für Steckersolar',
-            description: 'Información de protección al consumidor sobre registro del almacenamiento, MaStR y reglas del gestor de red',
+            description: 'Información al consumidor (actualizada el 21 de octubre de 2026) sobre el registro del almacenamiento, MaStR, formulario F.1.2 y reglas del operador de red',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk – Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: 'Blog de un minorista (no neutral): VDE-AR-N 4105:2026-03 y el borrador de trabajo EEG 2027 del 18 de julio de 2026',
+            description: 'Blog de un minorista (no neutral): VDE-AR-N 4105:2026-03 y el borrador anterior del EEG 2027 del 18 de julio de 2026',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -678,6 +755,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de – Vonovia y el almacenamiento en solar de balcón',
             description: 'Informe sobre la directriz de Vonovia que prohíbe el almacenamiento y la valoración jurídica discutida',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: 'Rangos de precios del almacenamiento, registro en el MaStR y ejemplos de amortización',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: 'Ministerio Federal de Economía — proyecto de ley EEG 2027',
+            description: 'Proyecto del gabinete del 29 de julio de 2026 (PDF en alemán); la definición de almacenamiento según informan los medios especializados',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: 'Decisión del gabinete del 29 de julio de 2026, primera lectura en el Bundestag y audiencia de expertos (página del 16 de octubre de 2026)',
+          },
         ],
       },
       faqSection: {
@@ -698,7 +790,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cómo registro un sistema de balcón con batería en Alemania?',
-            a: 'La Verbraucherzentrale indica que el almacenamiento debe registrarse actualmente ante el gestor de red y conectarse por un electricista autorizado, y que el registro simplificado en el MaStR no se aplica al almacenamiento. La prensa especializada informa de un proceso simplificado para almacenamiento de hasta 800 VA según la VDE-AR-N 4105:2026-03; confirma el procedimiento con tu gestor de red.',
+            a: 'La Verbraucherzentrale indica (página actualizada el 21 de octubre de 2026) que el almacenamiento debe comunicarse actualmente al operador de red además de al MaStR y que aún no lo cubre el registro simplificado. Con la VDE-AR-N 4105 revisada existe un procedimiento simplificado con el formulario F.1.2 para inyección de hasta 800 W, pero no todos los operadores de red lo aceptan aún. El ADAC describe el proceso de forma más sencilla; confirma el procedimiento con tu operador de red.',
+          },
+          {
+            q: '¿Cuánto cuesta una batería para una instalación solar de balcón?',
+            a: 'Según el ADAC (septiembre de 2026), un almacenamiento solo de 1,5 a 2 kWh cuesta entre 300 y 1000 €: modelos básicos de 300 a 400 €, gama media de 450 a 750 €, premium de 600 a 1000 €. Los kits completos con 2 a 4 módulos y 1,5 a 2 kWh de almacenamiento cuestan entre 700 y 1700 €. Los precios cambian a menudo, y en el cálculo de ejemplo del ADAC el almacenamiento alarga la amortización en aproximadamente un año.',
+          },
+          {
+            q: '¿Qué cambia el EEG 2027 para las baterías de balcón?',
+            a: 'Los medios especializados informan de que el proyecto de EEG 2027, aprobado por el gabinete el 29 de julio de 2026, contaría el almacenamiento tras el mismo inversor como parte de un dispositivo enchufable, mientras que el almacenamiento en CA con inversor propio no quedaría cubierto. Aún no es ley porque el Bundestag no ha concluido la votación, por lo que siguen vigentes las normas de registro descritas arriba.',
           },
           {
             q: '¿Qué es la batería de balcón de WattCycle?',
@@ -736,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Le stockage par batterie est un complément de plus en plus courant pour le solaire de balcon en Allemagne et dans l\'UE, mais il n\'est ni obligatoire ni adapté à tous les foyers, et les règles allemandes pour les kits plug-in avec stockage sont encore en cours d\'élaboration. Cette page résume l\'état des règles, les prix des batteries d\'appoint et ce que la recherche sur l\'arbitrage tarifaire montre ou non. C\'est un aperçu du marché, pas une recommandation d\'achat ni un conseil juridique ou électrique.',
     metaDescription: 'La norme plug-in allemande exclut le stockage, les règles d\'enregistrement évoluent, les prix baissent. Ce qui est vérifié et quand une batterie rapporte.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Acheteurs de solaire de balcon évaluant l\'ajout d\'un stockage par batterie en 2027',
@@ -747,18 +847,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DIN VDE V 0126-95 stockage',
       'wattcycle batterie solaire balcon',
     ],
-    leadAnswerBlock: '**Les batteries deviennent un complément courant du solaire de balcon, mais elles ne sont pas obligatoires, et les règles allemandes pour les kits plug-in avec stockage ne sont pas encore stabilisées.** La norme produit DIN VDE V 0126-95, publiée en décembre 2025, ne couvre que les appareils solaires plug-in sans stockage ; le comité de normalisation DKE/K 373 a commencé à planifier une partie supplémentaire pour les appareils avec stockage. La Verbraucherzentrale indique que le stockage doit actuellement être déclaré au gestionnaire de réseau par un électricien agréé, tandis qu\'une règle de raccordement révisée (VDE-AR-N 4105:2026-03) simplifierait, selon la presse spécialisée, la procédure pour les petits stockages jusqu\'à 800 VA. Les prix d\'entrée baissent, mais l\'intérêt d\'une batterie dépend toujours de l\'écart entre votre prix d\'achat et votre rémunération d\'injection.',
+    leadAnswerBlock: '**Les batteries deviennent un complément courant du solaire de balcon, mais elles ne sont pas obligatoires, et les règles allemandes pour les systèmes enfichables avec stockage ne sont pas encore stabilisées.** La norme produit DIN VDE V 0126-95, publiée en décembre 2025, ne couvre que les appareils solaires enfichables sans stockage ; le comité de normalisation DKE/K 373 a commencé à planifier une autre partie pour les appareils avec stockage. La Verbraucherzentrale indique (page mise à jour le 21 octobre 2026) que le stockage doit actuellement être déclaré au gestionnaire de réseau en plus du Marktstammdatenregister, tandis que la règle de raccordement révisée VDE-AR-N 4105 prévoit pour une injection jusqu\'à 800 W une procédure simplifiée que tous les gestionnaires de réseau n\'acceptent pas encore. Le projet de loi EEG 2027 adopté par le cabinet le 29 juillet 2026 compterait, selon des informations de presse, le stockage derrière le même onduleur comme partie d\'un appareil enfichable, mais ce n\'est pas encore une loi. L\'ADAC situe le stockage seul à environ 300 à 1 000 €, et la rentabilité d\'une batterie dépend toujours de l\'écart entre votre prix d\'achat de l\'électricité et la rémunération de l\'injection.',
     quickAnswerTop: {
       fr: {
         question: 'Le stockage par batterie devient-il la norme pour le solaire de balcon ?',
         answer: 'Il se répand, mais il n\'est pas obligatoire ni adapté à tous les foyers. Les batteries d\'appoint deviennent moins chères, mais la norme produit allemande DIN VDE V 0126-95 ne couvre pas les appareils plug-in avec stockage et les règles d\'enregistrement du stockage évoluent. L\'intérêt d\'une batterie dépend de l\'écart entre le prix de l\'électricité achetée et la rémunération de votre injection.',
         bullets: [
           'La DIN VDE V 0126-95 (publiée en décembre 2025) couvre les appareils solaires plug-in sans stockage ; le comité DKE/K 373 n\'a fait que commencer à planifier une partie pour les appareils avec stockage',
-          'La Verbraucherzentrale indique que le stockage doit actuellement être déclaré au gestionnaire de réseau par un électricien agréé ; la déclaration simplifiée ne couvre pas le stockage',
-          'La presse spécialisée rapporte que la VDE-AR-N 4105:2026-03 introduit un raccordement simplifié pour les petits stockages jusqu\'à 800 VA ; confirmez la procédure auprès de votre gestionnaire de réseau',
+          'La Verbraucherzentrale indique (page mise à jour le 21 octobre 2026) que le stockage doit actuellement être déclaré au gestionnaire de réseau en plus du MaStR ; la déclaration simplifiée ne le couvre pas encore',
+          'Selon la Verbraucherzentrale, la VDE-AR-N 4105 révisée prévoit une procédure simplifiée (formulaire F.1.2) pour une injection jusqu\'à 800 W, mais tous les gestionnaires de réseau ne l\'acceptent pas encore et peuvent appliquer l\'ancienne version jusqu\'au 1er mars 2027',
           'Une étude de simulation de 2026 portant sur 448 foyers a trouvé que les tarifs dynamiques augmentaient de 12,7 % le gain net d\'une batterie de 10 kWh ; elle modélise des systèmes PV-batterie en toiture, pas des kits plug-in',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -777,8 +877,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'La norme produit allemande DIN VDE V 0126-95, publiée en décembre 2025, couvre les appareils solaires plug-in sans stockage. Le comité de normalisation DKE/K 373 a commencé à planifier une partie supplémentaire pour les appareils avec stockage, sans calendrier.',
-          'La Verbraucherzentrale indique que le stockage doit actuellement être déclaré au gestionnaire de réseau par un électricien agréé. La presse spécialisée rapporte un raccordement simplifié pour le stockage jusqu\'à 800 VA selon la VDE-AR-N 4105:2026-03 ; confirmez donc la procédure auprès de votre gestionnaire de réseau avant l\'achat.',
-          'Les prix d\'entrée baissent. WattCycle a annoncé pour l\'Intersolar Europe 2026 une batterie de balcon jusqu\'à 10 kWh ; aucun prix ni date de disponibilité dans l\'UE n\'est publié.',
+          'La Verbraucherzentrale indique (page mise à jour le 21 octobre 2026) que le stockage doit actuellement être déclaré au gestionnaire de réseau en plus du MaStR. La VDE-AR-N 4105 révisée prévoit une procédure simplifiée avec le formulaire F.1.2 pour une injection jusqu\'à 800 W, mais tous les gestionnaires de réseau ne l\'acceptent pas encore et peuvent appliquer l\'ancienne version jusqu\'au 1er mars 2027 ; confirmez donc la procédure auprès de votre gestionnaire de réseau avant d\'acheter.',
+          'Le projet de loi EEG 2027 a été adopté par le cabinet le 29 juillet 2026. Selon la presse spécialisée, il compterait le stockage derrière le même onduleur comme partie d\'un appareil enfichable, alors que le stockage en courant alternatif avec onduleur propre ne serait pas couvert. Le Parlement ne l\'a pas encore voté : ce n\'est pas une loi.',
+          'Les prix d\'entrée baissent. L\'ADAC (septembre 2026) situe le stockage seul de 1,5 à 2 kWh à environ 300 à 1 000 €. WattCycle a annoncé pour Intersolar Europe 2026 une batterie de balcon jusqu\'à 10 kWh ; aucun prix dans l\'UE ni date de disponibilité n\'est publié.',
           'Nous n\'avons trouvé aucune aide européenne pour les batteries de balcon. Les aides, lorsqu\'elles existent, sont fixées par les pays, les régions ou les communes.',
           'Cette page décrit une tendance du marché. Elle ne remplace pas le test de « Faut-il une batterie pour le solaire de balcon ? » : une batterie n\'est rentable que si l\'écart économisé entre prix d\'achat et rémunération d\'injection dépasse son coût.',
         ],
@@ -788,8 +889,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Les règles allemandes pour le plug-in avec stockage évoluent encore',
         content: [
           '**La norme produit allemande DIN VDE V 0126-95 couvre les appareils solaires plug-in sans stockage.** L\'organisme de normalisation DKE indique dans sa FAQ que la norme ne couvre pas les appareils solaires plug-in avec unité de stockage d\'énergie, qui nécessitent des exigences supplémentaires. Le comité DKE/K 373 a commencé à planifier une partie supplémentaire sans donner de calendrier. La norme a été publiée en décembre 2025 et autorise jusqu\'à 800 VA de puissance d\'onduleur et, avec une prise domestique normale, jusqu\'à 960 W de modules.',
-          '**Pour la déclaration, la Verbraucherzentrale indique que le stockage doit actuellement être déclaré au gestionnaire de réseau par un électricien agréé, qui doit aussi le raccorder.** L\'enregistrement court dans le Marktstammdatenregister (MaStR) qui s\'applique aux appareils solaires plug-in ne s\'applique pas au stockage. Depuis le Solarpaket I (mai 2024), le gestionnaire de réseau n\'a plus à être informé directement pour les appareils plug-in sans stockage.',
-          '**Les règles évoluent, mais ne sont pas encore stabilisées.** La presse spécialisée rapporte que la règle de raccordement révisée VDE-AR-N 4105:2026-03 prévoit une procédure simplifiée pour les petits stockages et unités combinées jusqu\'à 800 VA, et qu\'un projet de travail du ministère pour l\'EEG 2027 (18 juillet 2026) compterait le stockage placé derrière le même onduleur comme partie d\'un appareil plug-in. Un projet de travail n\'est pas une loi adoptée, et le blog de revendeur que nous citons n\'est pas une source neutre. Demandez à votre gestionnaire de réseau quelle procédure s\'applique le jour de la mise en service.',
+          '**Concernant la déclaration, la Verbraucherzentrale indique (page mise à jour le 21 octobre 2026) que le stockage doit actuellement être déclaré au gestionnaire de réseau en plus du Marktstammdatenregister (MaStR), et que la déclaration simplifiée ne le couvre pas encore.** Pour une injection jusqu\'à 800 W, elle renvoie à la VDE-AR-N 4105 révisée et à sa procédure simplifiée (formulaire F.1.2), mais précise que tous les gestionnaires de réseau ne l\'acceptent pas encore et qu\'ils peuvent continuer à utiliser l\'ancienne version jusqu\'au 1er mars 2027. Les appareils solaires enfichables sans stockage n\'ont plus à être signalés directement au gestionnaire de réseau depuis le Solarpaket I (mai 2024). L\'ADAC (septembre 2026) décrit la déclaration du stockage de façon plus simple (MaStR seulement, dans le mois) et conseille de clarifier les installations atypiques avec le gestionnaire de réseau ; les sources divergeant, confirmez la procédure auprès de votre gestionnaire de réseau.',
+          '**Les règles bougent, mais ne sont pas encore définitives.** La presse spécialisée rapporte que le cabinet a adopté le projet de loi EEG 2027 le 29 juillet 2026 et qu\'il compterait le stockage derrière le même onduleur comme partie d\'un appareil enfichable ; le stockage en courant alternatif avec onduleur propre ne serait pas couvert. Selon la presse, le Bundestag a tenu la première lecture le 24 septembre 2026 et une audition d\'experts le 5 octobre 2026 ; le vote final est en attente et le texte peut encore changer. Le blog de revendeur que nous citons pour le premier avant-projet n\'est pas une source neutre. Demandez à votre gestionnaire de réseau quelle procédure s\'applique le jour de la mise en service.',
           'Les règles des bailleurs ajoutent une couche : un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale. Voir [Le solaire de balcon pour les bailleurs et les organismes de logement](/fr/balcony-solar/balcony-solar-housing-associations-b2b-2027).',
         ],
       },
@@ -798,6 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Matériel : baisse des prix d\'entrée et déclarations des fabricants',
         content: [
           '**Les prix d\'entrée baissent.** Lidl a vendu en Allemagne du 21 au 27 mai 2026 une batterie d\'appoint TRONIC de 2,24 kWh (LiFePO4) à 399 €, ou 299 € avec l\'application Lidl Plus. Elle n\'a pas d\'onduleur intégré et complète donc une installation de balcon existante ; la promotion est probablement terminée, vérifiez les prix actuels.',
+          '**Prix courants (ADAC, septembre 2026) :** un stockage seul de 1,5 à 2 kWh coûte environ 300 à 1 000 €. Les modèles d\'entrée de gamme sans onduleur intégré démarrent autour de 300 à 400 €, les modèles plug-and-play de milieu de gamme coûtent environ 450 à 750 € et les modèles hybrides haut de gamme environ 600 à 1 000 €. Dans le calcul de l\'ADAC avec la HTW Berlin pour une installation de 880 W, l\'amortissement est d\'environ 4 ans sans stockage et 5 ans avec pour un foyer d\'une personne, et d\'environ 3 contre 4 ans pour un foyer de trois personnes. Pour un guide d\'achat classé, voir [Les meilleures batteries pour le solaire de balcon](/fr/balcony-solar/best-balcony-solar-batteries-2026).',
           '**Les nouveaux produits s\'accompagnent d\'affirmations de fabricants, pas de tests indépendants.** À l\'Intersolar Europe 2026 à Munich, WattCycle a annoncé un système de stockage de balcon tout-en-un jusqu\'à 10 kWh et 2,5 kW ou 5 kW de puissance bidirectionnelle, plug-and-play (affirmations du fabricant, communiqué du 20 juin 2026). Nous n\'avons trouvé ni prix ni date de disponibilité publiés pour l\'UE.',
           'Comme la DIN VDE V 0126-95 exclut le stockage, vérifiez que la puissance CA d\'un système combiné reste dans la limite de 800 VA qui définit un appareil plug-in en Allemagne, et demandez au vendeur quelle voie d\'enregistrement le produit vise.',
         ],
@@ -830,12 +932,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale – Gesetze und Normen für Steckersolar',
-            description: 'Information de protection des consommateurs sur la déclaration du stockage, le MaStR et les règles du gestionnaire de réseau',
+            description: 'Information aux consommateurs (mise à jour le 21 octobre 2026) sur la déclaration du stockage, le MaStR, le formulaire F.1.2 et les règles des gestionnaires de réseau',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk – Kommen endlich Erleichterungen für Steckerspeicher ?',
-            description: 'Blog de revendeur (non neutre) : VDE-AR-N 4105:2026-03 et le projet de travail EEG 2027 du 18 juillet 2026',
+            description: 'Blog de revendeur (non neutre) : VDE-AR-N 4105:2026-03 et l\'avant-projet EEG 2027 du 18 juillet 2026',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -857,6 +959,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de – Vonovia et le stockage pour solaire de balcon',
             description: 'Article sur la directive de Vonovia interdisant le stockage et l\'évaluation juridique contestée',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: 'Fourchettes de prix du stockage, déclaration au MaStR et exemples d\'amortissement',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: 'Ministère fédéral de l\'Économie — projet de loi EEG 2027',
+            description: 'Projet du cabinet du 29 juillet 2026 (PDF en allemand) ; la définition du stockage telle que rapportée par la presse spécialisée',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: 'Décision du cabinet du 29 juillet 2026, première lecture au Bundestag et audition d\'experts (page du 16 octobre 2026)',
+          },
         ],
       },
       faqSection: {
@@ -877,7 +994,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Comment déclarer une installation de balcon avec batterie en Allemagne ?',
-            a: 'La Verbraucherzentrale indique que le stockage doit actuellement être déclaré au gestionnaire de réseau et raccordé par un électricien agréé, et que la déclaration simplifiée MaStR ne s\'applique pas au stockage. La presse spécialisée rapporte une procédure simplifiée pour le stockage jusqu\'à 800 VA selon la VDE-AR-N 4105:2026-03 ; confirmez la procédure auprès de votre gestionnaire de réseau.',
+            a: 'La Verbraucherzentrale indique (page mise à jour le 21 octobre 2026) que le stockage doit actuellement être déclaré au gestionnaire de réseau en plus du MaStR et que la déclaration simplifiée ne le couvre pas encore. La VDE-AR-N 4105 révisée prévoit une procédure simplifiée avec le formulaire F.1.2 pour une injection jusqu\'à 800 W, mais tous les gestionnaires de réseau ne l\'acceptent pas encore. L\'ADAC décrit la démarche plus simplement ; confirmez donc la procédure auprès de votre gestionnaire de réseau.',
+          },
+          {
+            q: 'Combien coûte une batterie pour une installation solaire de balcon ?',
+            a: 'Selon l\'ADAC (septembre 2026), un stockage seul de 1,5 à 2 kWh coûte environ 300 à 1 000 € : modèles d\'entrée de gamme autour de 300 à 400 €, milieu de gamme autour de 450 à 750 €, haut de gamme autour de 600 à 1 000 €. Les kits complets avec 2 à 4 modules et 1,5 à 2 kWh de stockage coûtent environ 700 à 1 700 €. Les prix changent souvent, et dans l\'exemple de calcul de l\'ADAC le stockage allonge l\'amortissement d\'environ un an.',
+          },
+          {
+            q: 'Que change l\'EEG 2027 pour les batteries de balcon ?',
+            a: 'La presse spécialisée rapporte que le projet de loi EEG 2027, adopté par le cabinet le 29 juillet 2026, compterait le stockage derrière le même onduleur comme partie d\'un appareil enfichable, alors que le stockage en courant alternatif avec onduleur propre ne serait pas couvert. Ce n\'est pas encore une loi, le Bundestag n\'ayant pas terminé son vote ; les règles de déclaration décrites ci-dessus restent donc applicables.',
           },
           {
             q: 'Qu\'est-ce que la batterie de balcon WattCycle ?',
@@ -915,24 +1040,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '蓄電池は、ドイツやEUのバルコニーソーラーで増えつつあるオプションですが、必須ではなく、すべての世帯に向くわけでもありません。蓄電池付きプラグイン式システムに関するドイツのルールも、まだ整備の途中です。このページでは、ルールの現状、増設用バッテリーの価格、料金裁定に関する研究が示すことと示さないことをまとめます。市場の概観であり、購入の推奨でも、法律・電気工事上の助言でもありません。',
     metaDescription: 'バルコニーソーラー蓄電池2027：ドイツのプラグイン規格は蓄電池を対象外とし、登録ルールは流動的で、価格は下落中。確認済みの事実と採算の条件を整理します。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '約6分',
     educationalLevel: 'Beginner',
     audience: '2027年に蓄電池の追加を検討しているバルコニーソーラー購入者',
     primaryTerm: 'バルコニーソーラー 蓄電池 2027',
     targetKeywords: ['バルコニーソーラー バッテリー 2027', 'バルコニー 蓄電池 登録 ドイツ', 'DIN VDE V 0126-95 蓄電', 'wattcycle バルコニーソーラー バッテリー'],
-    leadAnswerBlock: '**蓄電池はバルコニーソーラーの一般的なオプションになりつつありますが、必須ではなく、蓄電池付きプラグイン式システムに関するドイツのルールもまだ定まっていません。** 2025年12月に公表された製品規格DIN VDE V 0126-95は、蓄電池なしのプラグイン式ソーラー機器のみを対象としており、規格委員会DKE/K 373が蓄電池付き機器向けの追加部分の計画を始めたところです。消費者センター（Verbraucherzentrale）は、蓄電池は現時点では認定電気技術者が系統事業者に登録する必要があるとしています。一方、業界メディアによると、改訂された接続規則（VDE-AR-N 4105:2026-03）は800 VAまでの小型蓄電池の手続きを簡素化するとされています。入門価格は下がっていますが、蓄電池が元を取れるかどうかは、購入価格と売電対価の差に左右されます。',
+    leadAnswerBlock: '**バッテリーはバルコニーソーラーの追加機器として一般的になりつつありますが、必須ではなく、蓄電池付きプラグイン式システムに関するドイツの規則もまだ確定していません。** 2025年12月に公表された製品規格DIN VDE V 0126-95は、蓄電池なしのプラグイン式ソーラー機器のみを対象としており、規格委員会DKE/K 373は蓄電池付き機器向けの別の部分の計画を始めたところです。消費者センター（Verbraucherzentrale）は（2026年10月21日更新のページで）、蓄電池は現在、Marktstammdatenregisterへの登録に加えて系統事業者への届出が必要だとしています。一方、改訂された接続規則VDE-AR-N 4105は800 Wまでの系統への逆潮流について簡易手続きを定めていますが、すべての系統事業者がまだ受け入れているわけではありません。2026年7月29日に閣議決定されたEEG 2027法案は、報道によれば、同じインバーターの背後にある蓄電池をプラグイン機器の一部として扱うとされますが、まだ法律ではありません。ADACは蓄電池単体をおよそ300〜1,000ユーロとしており、バッテリーが元を取れるかどうかは、購入電力価格と売電収入の差次第です。',
     quickAnswerTop: {
       ja: {
         question: 'バルコニーソーラーで蓄電池は標準になりつつありますか？',
         answer: '普及は進んでいますが、必須ではなく、すべての世帯に向くわけでもありません。増設用バッテリーは安くなっています。ただし、ドイツの製品規格DIN VDE V 0126-95は蓄電池付きのプラグイン機器を対象としておらず、蓄電池の登録ルールは変動しています。蓄電池が元を取れるかどうかは、購入電力の価格と売電の対価との差で決まります。',
         bullets: [
           'DIN VDE V 0126-95（2025年12月公表）は蓄電池なしのプラグイン式ソーラー機器が対象。蓄電池付き機器向けの部分は、DKE/K 373が計画を始めたばかり',
-          'Verbraucherzentraleは、蓄電池は現時点では認定電気技術者が系統事業者に登録する必要があり、簡易登録は蓄電池に適用されないとしている',
-          '業界メディアによると、VDE-AR-N 4105:2026-03で800 VAまでの小型蓄電池の接続手続きが簡素化される。手続きは系統事業者に確認すること',
+          '消費者センター（2026年10月21日更新のページ）によると、蓄電池は現在、MaStRへの登録に加えて系統事業者への届出が必要で、簡易登録の対象にはまだなっていません',
+          '消費者センターによると、改訂版VDE-AR-N 4105は800 Wまでの逆潮流について簡易手続き（様式F.1.2）を定めていますが、すべての系統事業者がまだ受け入れておらず、2027年3月1日までは従来版を適用できます',
           '2026年の448世帯のシミュレーション研究では、動的料金により10 kWh蓄電池の純利益が12.7％増加。対象は屋根設置のPV蓄電池システムで、プラグイン式キットではない',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -951,8 +1076,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '2025年12月に公表されたドイツの製品規格DIN VDE V 0126-95は、蓄電池なしのプラグイン式ソーラー機器を対象とします。規格委員会DKE/K 373は蓄電池付き機器向けの追加部分の計画を始めましたが、時期は示されていません。',
-          'Verbraucherzentraleは、蓄電池は現時点では認定電気技術者が系統事業者に登録する必要があるとしています。業界メディアはVDE-AR-N 4105:2026-03による800 VAまでの手続き簡素化を伝えているため、購入前に系統事業者に手続きを確認してください。',
-          '入門価格は下がっています。WattCycleはIntersolar Europe 2026に向け最大10 kWhのバルコニー用蓄電池を発表しましたが、EUでの価格や提供時期は公表されていません。',
+          '消費者センター（2026年10月21日更新のページ）によると、蓄電池は現在、MaStRへの登録に加えて系統事業者への届出が必要です。改訂版VDE-AR-N 4105は800 Wまでの逆潮流について様式F.1.2による簡易手続きを定めていますが、すべての系統事業者がまだ受け入れておらず、2027年3月1日までは従来版を適用できます。購入前に系統事業者に手続きを確認してください。',
+          'EEG 2027法案は2026年7月29日に閣議決定されました。専門メディアによると、同じインバーターの背後にある蓄電池はプラグイン機器の一部として扱われる一方、独自のインバーターを持つAC蓄電池は対象外とされます。議会はまだ可決しておらず、法律にはなっていません。',
+          '入門価格は下がっています。ADAC（2026年9月）は、1.5〜2 kWhの蓄電池単体をおよそ300〜1,000ユーロとしています。WattCycleはIntersolar Europe 2026向けに最大10 kWhのバルコニー用バッテリーを発表しましたが、EUでの価格や発売日は公表されていません。',
           'バルコニー用蓄電池に対するEU全体の補助金は見つかりませんでした。支援がある場合は、国・州・自治体が定めています。',
           'このページは市場の動向を説明するものです。「バルコニーソーラーに蓄電池は必要？」の世帯向けテストに代わるものではありません。蓄電池が元を取れるのは、購入価格と売電対価の差による節約が費用を上回る場合だけです。',
         ],
@@ -962,8 +1088,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '蓄電池付きプラグイン式に関するドイツのルールは変化の途中',
         content: [
           '**ドイツの製品規格DIN VDE V 0126-95は、蓄電池なしのプラグイン式ソーラー機器を対象としています。** 規格団体DKEはFAQで、この規格は蓄電ユニット付きのプラグイン式ソーラー機器を対象としておらず、そのような機器には追加の要件が必要だと説明しています。委員会DKE/K 373は追加部分の計画を始めましたが、時期は示していません。規格は2025年12月に公表され、インバーター出力は最大800 VA、通常の家庭用プラグの場合はモジュール出力の合計が最大960 Wまでとされています。',
-          '**登録について、Verbraucherzentraleは、蓄電池は現時点では認定電気技術者が系統事業者に登録し、接続も行う必要があるとしています。** プラグイン式ソーラー機器に適用されるMarktstammdatenregister（MaStR）での簡易登録は、蓄電池には適用されません。Solarpaket I（2024年5月）以降、蓄電池なしのプラグイン式ソーラー機器では系統事業者への直接の通知は不要になりました。',
-          '**ルールは動いていますが、まだ確定していません。** 業界メディアによると、改訂された接続規則VDE-AR-N 4105:2026-03は、800 VAまでの小型蓄電池および一体型ユニットについて簡素化された手続きを定めています。また、EEG 2027の省内の作業草案（2026年7月18日）は、同じインバーターの後段にある蓄電池をプラグイン式機器の一部として扱うとされています。作業草案は成立した法律ではなく、これを伝える販売店のブログは中立的な情報源ではありません。運転開始の日にどの手続きが適用されるかは、系統事業者に確認してください。',
+          '**登録について、消費者センターは（2026年10月21日更新のページで）、蓄電池は現在、Marktstammdatenregister（MaStR）への登録に加えて系統事業者への届出が必要で、簡易登録の対象にはまだなっていないとしています。** 800 Wまでの逆潮流については、簡易手続き（様式F.1.2）を定めた改訂版VDE-AR-N 4105を挙げていますが、すべての系統事業者がまだ受け入れておらず、2027年3月1日までは従来版を使い続けられると指摘しています。蓄電池なしのプラグイン式ソーラー機器は、Solarpaket I（2024年5月）以降、系統事業者に直接知らせる必要がありません。ADAC（2026年9月）は蓄電池の登録をより簡単に説明しており（MaStRのみ、1か月以内）、特殊な構成は事前に系統事業者と確認するよう勧めています。情報源によって説明が異なるため、系統事業者に手続きを確認してください。',
+          '**規則は動いていますが、まだ確定していません。** 専門メディアによると、閣議は2026年7月29日にEEG 2027法案を決定し、同じインバーターの背後にある蓄電池はプラグイン機器の一部として扱われるとされます。独自のインバーターを持つAC蓄電池は対象外です。報道によれば、連邦議会は2026年9月24日に第一読会、2026年10月5日に専門家公聴会を行いました。最終採決は未了で、文言が変わる可能性もあります。以前の作業草案について引用している販売店ブログは中立的な情報源ではありません。運転開始の日にどの手続きが適用されるか、系統事業者に確認してください。',
           '賃貸の場合は、貸主のルールも加わります。drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています。[大家・住宅会社向けバルコニーソーラー](/ja/balcony-solar/balcony-solar-housing-associations-b2b-2027)をご覧ください。',
         ],
       },
@@ -972,6 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ハードウェア：入門価格の下落とメーカーの主張',
         content: [
           '**入門価格は下がっています。** Lidlはドイツで2026年5月21〜27日に、TRONICの2.24 kWh増設用バッテリー（LiFePO4）を399ユーロ、Lidl Plusアプリ利用で299ユーロで販売しました。インバーターは内蔵されておらず、既存のバルコニー設備を拡張するものです。キャンペーンは終了している可能性が高いため、現在の価格を確認してください。',
+          '**一般的な価格（ADAC、2026年9月）：** 1.5〜2 kWhの蓄電池単体はおよそ300〜1,000ユーロです。インバーター非内蔵のエントリーモデルは約300〜400ユーロから、中価格帯のプラグアンドプレイ型は約450〜750ユーロ、プレミアムのハイブリッド型は約600〜1,000ユーロです。ADACによるHTWベルリンの880 Wシステムの試算では、元を取るまでの期間は1人世帯で蓄電池なしが約4年、ありが約5年、3人世帯では約3年と約4年です。ランキング形式の購入ガイドは[バルコニーソーラー向けおすすめバッテリー](/ja/balcony-solar/best-balcony-solar-batteries-2026)をご覧ください。',
           '**新製品に付いてくるのは、独立した試験ではなくメーカーの主張です。** WattCycleはミュンヘンのIntersolar Europe 2026で、最大10 kWh、双方向出力2.5 kWまたは5 kWのオールインワン型バルコニー蓄電システムを発表しました。プラグアンドプレイとしています（メーカーの主張、2026年6月20日のプレスリリース）。EUでの価格や提供時期は公表されていません。',
           'DIN VDE V 0126-95は蓄電池を対象外としているため、一体型システムのAC出力が、ドイツでプラグイン式機器を定義する800 VAの上限内に収まるかを確認し、その製品がどの登録手順を想定しているかを販売者に尋ねてください。',
         ],
@@ -1004,12 +1131,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale — プラグイン式ソーラーの法律と規格',
-            description: '蓄電池の登録、MaStR、系統事業者のルールに関する消費者保護機関の案内',
+            description: '蓄電池の登録、MaStR、様式F.1.2、系統事業者の規則に関する消費者向け情報（2026年10月21日更新）',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk — Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: '販売店のブログ（中立ではない）：VDE-AR-N 4105:2026-03と2026年7月18日のEEG 2027作業草案',
+            description: '販売店ブログ（中立ではありません）：VDE-AR-N 4105:2026-03と、2026年7月18日の以前のEEG 2027作業草案',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -1031,6 +1158,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de — Vonovia とバルコニーソーラーの蓄電池',
             description: 'Vonoviaの蓄電池禁止ガイドラインと、争いのある法的評価に関する報道',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: '蓄電池の価格帯、MaStR登録、回収期間の試算例',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: '連邦経済エネルギー省 — EEG 2027政府法案',
+            description: '2026年7月29日の閣議決定案（ドイツ語PDF）。蓄電池の定義は専門メディアの報道による',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: '2026年7月29日の閣議決定、連邦議会の第一読会と専門家公聴会（2026年10月16日付のページ）',
+          },
         ],
       },
       faqSection: {
@@ -1051,7 +1193,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ドイツで蓄電池付きのバルコニー設備はどう登録しますか？',
-            a: 'Verbraucherzentraleによると、蓄電池は現時点では認定電気技術者が系統事業者に登録し、接続する必要があり、MaStRの簡易登録は蓄電池に適用されません。業界メディアはVDE-AR-N 4105:2026-03により800 VAまでの蓄電池の手続きが簡素化されると伝えているため、系統事業者に手続きを確認してください。',
+            a: '消費者センター（2026年10月21日更新のページ）によると、蓄電池は現在、MaStRへの登録に加えて系統事業者への届出が必要で、簡易登録の対象にはまだなっていません。改訂版VDE-AR-N 4105には800 Wまでの逆潮流向けに様式F.1.2による簡易手続きがありますが、すべての系統事業者がまだ受け入れているわけではありません。ADACは手順をより簡単に説明しているため、系統事業者に手続きを確認してください。',
+          },
+          {
+            q: 'バルコニー発電用バッテリーの価格はいくらですか？',
+            a: 'ADAC（2026年9月）によると、1.5〜2 kWhの蓄電池単体はおよそ300〜1,000ユーロです。エントリーモデルは約300〜400ユーロ、中価格帯は約450〜750ユーロ、プレミアムは約600〜1,000ユーロです。モジュール2〜4枚と1.5〜2 kWhの蓄電池を含むフルセットは約700〜1,700ユーロです。価格は頻繁に変わり、ADACの試算例では蓄電池により元を取るまでの期間が約1年延びます。',
+          },
+          {
+            q: 'EEG 2027はバルコニー用バッテリーに何を変えますか？',
+            a: '専門メディアによると、2026年7月29日に閣議決定されたEEG 2027法案は、同じインバーターの背後にある蓄電池をプラグイン機器の一部として扱い、独自のインバーターを持つAC蓄電池は対象外です。連邦議会が採決を終えておらず、まだ法律ではないため、上記の登録ルールが引き続き適用されます。',
           },
           {
             q: 'WattCycleのバルコニー用蓄電池とは何ですか？',
@@ -1089,24 +1239,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '배터리 저장장치는 독일과 EU의 발코니 태양광에서 점점 늘어나는 추가 옵션이지만, 필수가 아니며 모든 가구에 맞는 것도 아닙니다. 저장장치가 포함된 플러그인 시스템에 대한 독일의 규정도 아직 정비 중입니다. 이 글은 규정 현황, 추가용 배터리 가격, 요금 차익 연구가 보여 주는 것과 보여 주지 않는 것을 정리합니다. 시장 개관이며 구매 권유나 법률·전기 관련 자문이 아닙니다.',
     metaDescription: '발코니 태양광 배터리 2027: 독일 플러그인 표준은 저장장치를 제외하고, 등록 규정은 변동 중이며 가격은 하락합니다. 확인된 사실과 수익성 조건을 정리합니다.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6분 읽기',
     educationalLevel: 'Beginner',
     audience: '2027년 배터리 저장장치 추가 여부를 검토 중인 발코니 태양광 구매자',
     primaryTerm: '발코니 태양광 배터리 2027',
     targetKeywords: ['발코니 태양광 배터리 2027', '독일 발코니 배터리 등록', 'DIN VDE V 0126-95 저장장치', 'wattcycle 발코니 태양광 배터리'],
-    leadAnswerBlock: '**배터리는 발코니 태양광의 흔한 추가 옵션이 되어 가고 있지만 필수는 아니며, 저장장치가 포함된 플러그인 시스템에 대한 독일의 규정도 아직 확정되지 않았습니다.** 2025년 12월에 발표된 제품 표준 DIN VDE V 0126-95는 저장장치가 없는 플러그인 태양광 장치만 다루며, 표준위원회 DKE/K 373이 저장장치 포함 장치를 위한 추가 부분의 계획을 시작했습니다. 독일 소비자센터(Verbraucherzentrale)는 저장장치를 현재 공인 전기기술자가 전력망 사업자에 등록해야 한다고 밝혔고, 업계 매체에 따르면 개정된 접속 규정(VDE-AR-N 4105:2026-03)은 800 VA까지의 소형 저장장치 절차를 간소화합니다. 입문용 가격은 내려가고 있지만, 배터리가 이익이 되는지는 구매 가격과 역송 보상의 차이에 달려 있습니다.',
+    leadAnswerBlock: '**배터리는 발코니 태양광의 일반적인 추가 장비가 되어 가고 있지만 필수는 아니며, 저장장치가 있는 플러그인 시스템에 대한 독일 규정도 아직 확정되지 않았습니다.** 2025년 12월에 발표된 제품 표준 DIN VDE V 0126-95는 저장장치가 없는 플러그인 태양광 장치만 다루며, 표준화 위원회 DKE/K 373은 저장장치가 있는 장치를 위한 별도 부분의 계획을 시작했습니다. 독일 소비자센터(Verbraucherzentrale)는 (2026년 10월 21일 갱신된 페이지에서) 저장장치를 현재 Marktstammdatenregister 등록과 별도로 계통 운영사에도 신고해야 한다고 밝히며, 개정된 접속 규정 VDE-AR-N 4105는 800 W까지의 계통 공급에 간소화 절차를 두고 있지만 모든 계통 운영사가 아직 이를 받아들이는 것은 아니라고 합니다. 2026년 7월 29일 내각이 의결한 EEG 2027 법안은 보도에 따르면 같은 인버터 뒤의 저장장치를 플러그인 장치의 일부로 간주하겠지만, 아직 법은 아닙니다. ADAC는 저장장치 단품을 대략 300~1,000유로로 제시하며, 배터리가 이득이 되는지는 여전히 구매 전력 가격과 계통 공급 수익의 차이에 달려 있습니다.',
     quickAnswerTop: {
       ko: {
         question: '발코니 태양광에서 배터리 저장장치가 표준이 되고 있습니까?',
         answer: '점점 흔해지고 있지만 필수는 아니며 모든 가구에 맞는 것도 아닙니다. 추가용 배터리는 저렴해지고 있습니다. 그러나 독일 제품 표준 DIN VDE V 0126-95는 저장장치가 포함된 플러그인 장치를 다루지 않으며, 저장장치의 등록 규정은 변동 중입니다. 배터리가 이익이 되는지는 구매 전력 가격과 역송 수익의 차이에 달려 있습니다.',
         bullets: [
           'DIN VDE V 0126-95(2025년 12월 발표)는 저장장치가 없는 플러그인 태양광 장치를 다루며, 저장장치 포함 장치를 위한 부분은 DKE/K 373이 계획을 막 시작한 단계입니다',
-          'Verbraucherzentrale는 저장장치를 현재 공인 전기기술자가 전력망 사업자에 등록해야 하며 간이 등록은 저장장치에 적용되지 않는다고 밝혔습니다',
-          '업계 매체에 따르면 VDE-AR-N 4105:2026-03은 800 VA까지의 소형 저장장치에 대해 간소화된 접속 절차를 도입합니다. 절차는 전력망 사업자에게 확인하십시오',
+          '독일 소비자센터(2026년 10월 21일 갱신된 페이지)에 따르면 저장장치는 현재 MaStR 등록과 별도로 계통 운영사에도 신고해야 하며, 간소화된 등록은 아직 적용되지 않습니다',
+          '독일 소비자센터에 따르면 개정된 VDE-AR-N 4105는 800 W까지의 계통 공급에 간소화 절차(양식 F.1.2)를 두고 있지만, 모든 계통 운영사가 아직 받아들이는 것은 아니며 2027년 3월 1일까지는 이전 버전을 적용할 수 있습니다',
           '2026년 448가구 시뮬레이션 연구에서 동적 요금제가 10 kWh 배터리의 순이익을 12.7% 높였습니다. 지붕형 PV-배터리 시스템을 모델링한 것이며 플러그인 키트가 아닙니다',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1125,8 +1275,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '2025년 12월에 발표된 독일 제품 표준 DIN VDE V 0126-95는 저장장치가 없는 플러그인 태양광 장치를 다룹니다. 표준위원회 DKE/K 373은 저장장치 포함 장치를 위한 추가 부분의 계획을 시작했지만 일정은 없습니다.',
-          'Verbraucherzentrale는 저장장치를 현재 공인 전기기술자가 전력망 사업자에 등록해야 한다고 밝혔습니다. 업계 매체는 VDE-AR-N 4105:2026-03에 따라 800 VA까지의 저장장치 절차가 간소화된다고 전하므로, 구매 전에 전력망 사업자에게 절차를 확인하십시오.',
-          '입문용 가격은 내려가고 있습니다. WattCycle은 Intersolar Europe 2026을 앞두고 최대 10 kWh 발코니 배터리를 발표했지만, EU 가격과 출시 시기는 공개되지 않았습니다.',
+          '독일 소비자센터(2026년 10월 21일 갱신된 페이지)에 따르면 저장장치는 현재 MaStR 등록과 별도로 계통 운영사에도 신고해야 합니다. 개정된 VDE-AR-N 4105는 800 W까지의 계통 공급에 양식 F.1.2를 사용하는 간소화 절차를 두고 있지만, 모든 계통 운영사가 아직 받아들이는 것은 아니며 2027년 3월 1일까지는 이전 버전을 적용할 수 있으므로, 구매 전에 계통 운영사에 절차를 확인하십시오.',
+          'EEG 2027 법안은 2026년 7월 29일 내각에서 의결되었습니다. 전문 매체는 같은 인버터 뒤의 저장장치는 플러그인 장치의 일부로 간주되지만, 자체 인버터가 있는 AC 저장장치는 포함되지 않는다고 보도합니다. 의회는 아직 통과시키지 않았으므로 법은 아닙니다.',
+          '입문용 가격은 내려가고 있습니다. ADAC(2026년 9월)는 1.5~2 kWh 저장장치 단품을 대략 300~1,000유로로 제시합니다. WattCycle은 Intersolar Europe 2026을 위해 최대 10 kWh 발코니 배터리를 발표했으며, EU 가격이나 출시일은 공개되지 않았습니다.',
           '발코니 배터리에 대한 EU 차원의 보조금은 찾지 못했습니다. 지원이 있다면 국가, 주 또는 지자체가 정합니다.',
           '이 글은 시장 동향을 설명합니다. 「발코니 태양광에 배터리가 필요할까요?」의 가구별 테스트를 대신하지 않습니다. 구매 가격과 역송 보상의 차이로 절약되는 금액이 배터리 비용을 넘을 때만 이익이 됩니다.',
         ],
@@ -1136,8 +1287,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '저장장치가 포함된 플러그인 시스템에 대한 독일 규정은 아직 변동 중입니다',
         content: [
           '**독일 제품 표준 DIN VDE V 0126-95는 저장장치가 없는 플러그인 태양광 장치를 다룹니다.** 표준 기관 DKE는 FAQ에서 이 표준이 에너지 저장 장치가 포함된 플러그인 태양광 장치를 다루지 않으며, 그런 장치에는 추가 요건이 필요하다고 설명합니다. 위원회 DKE/K 373은 추가 부분의 계획을 시작했지만 일정은 밝히지 않았습니다. 이 표준은 2025년 12월에 발표되었고, 인버터 출력은 최대 800 VA, 일반 가정용 플러그를 사용할 때 모듈 합계 최대 960 W를 허용합니다.',
-          '**등록에 대해 Verbraucherzentrale는 저장장치를 현재 공인 전기기술자가 전력망 사업자에 등록해야 하며, 연결도 그가 해야 한다고 밝혔습니다.** 플러그인 태양광 장치에 적용되는 Marktstammdatenregister(MaStR)의 간이 등록은 저장장치에 적용되지 않습니다. Solarpaket I(2024년 5월) 이후 저장장치가 없는 플러그인 태양광 장치는 전력망 사업자에 직접 알릴 필요가 없습니다.',
-          '**규정은 움직이고 있지만 아직 확정되지 않았습니다.** 업계 매체에 따르면 개정된 접속 규정 VDE-AR-N 4105:2026-03은 800 VA까지의 소형 저장장치와 일체형 장치에 대해 간소화된 절차를 규정하며, EEG 2027에 관한 부처의 작업 초안(2026년 7월 18일)은 같은 인버터 뒤에 있는 저장장치를 플러그인 장치의 일부로 취급할 것이라고 합니다. 작업 초안은 확정된 법률이 아니며, 이를 전하는 판매업체 블로그는 중립적인 출처가 아닙니다. 가동 당일 어떤 절차가 적용되는지 전력망 사업자에게 문의하십시오.',
+          '**등록과 관련하여 독일 소비자센터는 (2026년 10월 21일 갱신된 페이지에서) 저장장치를 현재 Marktstammdatenregister(MaStR) 등록과 별도로 계통 운영사에도 신고해야 하며, 간소화된 등록은 아직 적용되지 않는다고 밝힙니다.** 800 W까지의 계통 공급에 대해서는 간소화 절차(양식 F.1.2)를 둔 개정 VDE-AR-N 4105를 안내하지만, 모든 계통 운영사가 아직 받아들이는 것은 아니며 2027년 3월 1일까지는 이전 버전을 계속 사용할 수 있다고 덧붙입니다. 저장장치가 없는 플러그인 태양광 장치는 Solarpaket I(2024년 5월) 이후 계통 운영사에 직접 알릴 필요가 없습니다. ADAC(2026년 9월)는 저장장치 등록을 더 간단하게 설명하며(MaStR만, 한 달 이내), 비표준 구성은 사전에 계통 운영사와 확인하라고 권고합니다. 출처마다 설명이 다르므로 계통 운영사에 절차를 확인하십시오.',
+          '**규정은 움직이고 있지만 아직 확정되지 않았습니다.** 전문 매체는 내각이 2026년 7월 29일 EEG 2027 법안을 의결했고, 같은 인버터 뒤의 저장장치를 플러그인 장치의 일부로 간주할 것이라고 보도합니다. 자체 인버터가 있는 AC 저장장치는 포함되지 않습니다. 언론 보도에 따르면 연방의회는 2026년 9월 24일 제1독회를, 2026년 10월 5일 전문가 청문회를 열었습니다. 최종 표결은 남아 있으며 문구는 아직 바뀔 수 있습니다. 이전 작업 초안과 관련해 인용한 판매업체 블로그는 중립적인 출처가 아닙니다. 설치를 시작하는 날 어떤 절차가 적용되는지 계통 운영사에 문의하십시오.',
           '임대인의 규정이 또 하나의 층을 더합니다. drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다. [임대인과 주택협회를 위한 발코니 태양광](/ko/balcony-solar/balcony-solar-housing-associations-b2b-2027)을 참고하십시오.',
         ],
       },
@@ -1146,6 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '하드웨어: 입문용 가격 하락과 제조사의 주장',
         content: [
           '**입문용 가격은 내려가고 있습니다.** Lidl은 독일에서 2026년 5월 21~27일에 TRONIC 2.24 kWh 추가용 배터리(LiFePO4)를 399유로, Lidl Plus 앱 이용 시 299유로에 판매했습니다. 인버터가 내장되어 있지 않아 기존 발코니 설비를 확장하는 용도이며, 프로모션은 이미 끝났을 가능성이 높으므로 현재 가격을 확인하십시오.',
+          '**일반적인 가격(ADAC, 2026년 9월):** 1.5~2 kWh 저장장치 단품은 약 300~1,000유로입니다. 인버터가 내장되지 않은 보급형은 약 300~400유로부터, 중급 플러그 앤 플레이형은 약 450~750유로, 프리미엄 하이브리드형은 약 600~1,000유로입니다. ADAC가 인용한 HTW 베를린의 880 W 시스템 계산에서 투자 회수 기간은 1인 가구의 경우 저장장치 없이 약 4년, 있으면 약 5년이고 3인 가구는 약 3년 대 4년입니다. 순위가 있는 구매 가이드는 [최고의 발코니 태양광 배터리](/ko/balcony-solar/best-balcony-solar-batteries-2026)를 참고하십시오.',
           '**신제품에는 독립 시험이 아닌 제조사의 주장이 따라옵니다.** WattCycle은 뮌헨에서 열린 Intersolar Europe 2026에서 최대 10 kWh, 양방향 출력 2.5 kW 또는 5 kW의 올인원 발코니 저장 시스템을 발표했으며, 플러그 앤 플레이라고 합니다(제조사의 주장, 2026년 6월 20일 보도자료). EU 가격이나 출시 시기는 공개된 것을 찾지 못했습니다.',
           'DIN VDE V 0126-95가 저장장치를 제외하므로, 복합 시스템의 AC 출력이 독일에서 플러그인 장치를 규정하는 800 VA 한도 안에 있는지 확인하고, 제품이 어떤 등록 경로를 염두에 두고 설계되었는지 판매자에게 문의하십시오.',
         ],
@@ -1178,12 +1330,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale — 플러그인 태양광의 법률과 표준',
-            description: '저장장치 등록, MaStR, 전력망 사업자 규정에 관한 소비자 보호 기관의 안내',
+            description: '저장장치 등록, MaStR, 양식 F.1.2 및 계통 운영사 규정에 관한 소비자 정보(2026년 10월 21일 갱신)',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk — Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: '판매업체 블로그(중립적이지 않음): VDE-AR-N 4105:2026-03과 2026년 7월 18일 EEG 2027 작업 초안',
+            description: '판매업체 블로그(중립적이지 않음): VDE-AR-N 4105:2026-03 및 2026년 7월 18일의 이전 EEG 2027 작업 초안',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -1205,6 +1357,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de — Vonovia와 발코니 태양광 저장장치',
             description: '저장장치를 금지하는 Vonovia 지침과 논란이 있는 법적 평가에 관한 보도',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: '저장장치 가격대, MaStR 등록 및 투자 회수 예시',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: '독일 연방경제부 — EEG 2027 정부 법안',
+            description: '2026년 7월 29일 내각 초안(독일어 PDF); 저장장치 정의는 전문 매체 보도에 따름',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: '2026년 7월 29일 내각 의결, 연방의회 제1독회와 전문가 청문회(2026년 10월 16일자 페이지)',
+          },
         ],
       },
       faqSection: {
@@ -1225,7 +1392,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '독일에서 배터리가 있는 발코니 시스템은 어떻게 등록합니까?',
-            a: 'Verbraucherzentrale에 따르면 저장장치는 현재 공인 전기기술자가 전력망 사업자에 등록하고 연결해야 하며, MaStR 간이 등록은 저장장치에 적용되지 않습니다. 업계 매체는 VDE-AR-N 4105:2026-03에 따라 800 VA까지의 저장장치 절차가 간소화된다고 전하므로, 절차는 전력망 사업자에게 확인하십시오.',
+            a: '독일 소비자센터(2026년 10월 21일 갱신된 페이지)에 따르면 저장장치는 현재 MaStR 등록과 별도로 계통 운영사에도 신고해야 하며, 간소화된 등록은 아직 적용되지 않습니다. 개정된 VDE-AR-N 4105에는 800 W까지의 계통 공급에 양식 F.1.2를 사용하는 간소화 절차가 있지만, 모든 계통 운영사가 아직 받아들이는 것은 아닙니다. ADAC는 절차를 더 간단하게 설명하므로 계통 운영사에 절차를 확인하십시오.',
+          },
+          {
+            q: '발코니 발전 시스템용 배터리는 얼마입니까?',
+            a: 'ADAC(2026년 9월)에 따르면 1.5~2 kWh 저장장치 단품은 약 300~1,000유로입니다. 보급형은 약 300~400유로, 중급은 약 450~750유로, 프리미엄은 약 600~1,000유로입니다. 모듈 2~4장과 1.5~2 kWh 저장장치가 포함된 완제품 세트는 약 700~1,700유로입니다. 가격은 자주 바뀌며, ADAC의 예시 계산에서는 저장장치로 인해 투자 회수 기간이 약 1년 늘어납니다.',
+          },
+          {
+            q: 'EEG 2027은 발코니 배터리에 무엇을 바꿉니까?',
+            a: '전문 매체에 따르면 2026년 7월 29일 내각이 의결한 EEG 2027 법안은 같은 인버터 뒤의 저장장치를 플러그인 장치의 일부로 간주하지만, 자체 인버터가 있는 AC 저장장치는 포함되지 않습니다. 연방의회가 표결을 마치지 않아 아직 법이 아니므로 위에서 설명한 등록 규정이 계속 적용됩니다.',
           },
           {
             q: 'WattCycle 발코니 배터리는 무엇입니까?',
@@ -1263,7 +1438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'O armazenamento em bateria é um complemento cada vez mais comum da energia solar de varanda na Alemanha e na UE, mas não é obrigatório nem adequado para todas as casas, e as regras alemãs para sistemas plug-in com armazenamento ainda estão sendo escritas. Esta página resume o estado das regras, os preços de baterias de expansão e o que a pesquisa sobre arbitragem tarifária mostra ou não mostra. É um panorama de mercado, não uma recomendação de compra nem aconselhamento jurídico ou elétrico.',
     metaDescription: 'Baterias de varanda em 2027: a norma plug-in alemã exclui armazenamento, o registro muda e os preços caem. O que está verificado e quando armazenar compensa.',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '6 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energia solar de varanda avaliando se devem adicionar armazenamento em bateria em 2027',
@@ -1274,18 +1449,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'DIN VDE V 0126-95 armazenamento',
       'wattcycle bateria energia solar varanda',
     ],
-    leadAnswerBlock: '**As baterias estão se tornando um complemento comum da energia solar de varanda, mas não são obrigatórias, e as regras alemãs para sistemas plug-in com armazenamento ainda não estão consolidadas.** A norma de produto DIN VDE V 0126-95, publicada em dezembro de 2025, cobre apenas dispositivos solares plug-in sem armazenamento; o comitê de normalização DKE/K 373 começou a planejar uma parte adicional para dispositivos com armazenamento. A Verbraucherzentrale informa que o armazenamento deve atualmente ser registrado na operadora de rede por um eletricista autorizado, enquanto uma regra de conexão revisada (VDE-AR-N 4105:2026-03) simplificaria, segundo a imprensa especializada, o processo para armazenamentos pequenos de até 800 VA. Os preços de entrada estão caindo, mas se uma bateria compensa ainda depende da diferença entre o seu preço de compra e o seu pagamento pela injeção.',
+    leadAnswerBlock: '**As baterias estão se tornando um complemento comum do solar de varanda, mas não são obrigatórias, e as regras alemãs para sistemas plug-in com armazenamento ainda não estão definidas.** A norma de produto DIN VDE V 0126-95, publicada em dezembro de 2025, cobre apenas dispositivos solares plug-in sem armazenamento; o comitê de normalização DKE/K 373 começou a planejar outra parte para dispositivos com armazenamento. A Verbraucherzentrale informa (página atualizada em 21 de outubro de 2026) que o armazenamento deve ser comunicado atualmente à operadora de rede além do Marktstammdatenregister, enquanto a regra de conexão revisada VDE-AR-N 4105 prevê um procedimento simplificado para injeção de até 800 W que nem todas as operadoras de rede aceitam ainda. O projeto de lei EEG 2027 aprovado pelo gabinete em 29 de julho de 2026 contaria, segundo relatos, o armazenamento atrás do mesmo inversor como parte de um dispositivo plug-in, mas ainda não é lei. O ADAC estima o armazenamento isolado em cerca de € 300 a € 1.000, e se uma bateria compensa continua dependendo da diferença entre o preço que você paga pela energia e o que recebe pela que injeta.',
     quickAnswerTop: {
       pt: {
         question: 'O armazenamento em bateria está se tornando padrão para a energia solar de varanda?',
         answer: 'Está ficando mais comum, mas não é obrigatório nem adequado para todas as casas. As baterias de expansão estão mais baratas, mas a norma de produto alemã DIN VDE V 0126-95 não cobre dispositivos plug-in com armazenamento e as regras de registro para armazenamento estão mudando. Se uma bateria compensa depende da diferença entre o que você paga pela energia comprada e o que recebe pela injetada.',
         bullets: [
           'A DIN VDE V 0126-95 (publicada em dezembro de 2025) cobre dispositivos solares plug-in sem armazenamento; o comitê DKE/K 373 apenas começou a planejar uma parte para dispositivos com armazenamento',
-          'A Verbraucherzentrale informa que o armazenamento deve atualmente ser registrado na operadora de rede por um eletricista autorizado; o registro simplificado não cobre armazenamento',
-          'A imprensa especializada informa que a VDE-AR-N 4105:2026-03 introduz um processo de conexão simplificado para armazenamentos pequenos de até 800 VA; confirme o procedimento com a sua operadora de rede',
+          'A Verbraucherzentrale informa (página atualizada em 21 de outubro de 2026) que o armazenamento deve ser comunicado atualmente à operadora de rede além do MaStR; o registro simplificado ainda não o cobre',
+          'Segundo a Verbraucherzentrale, a VDE-AR-N 4105 revisada prevê um procedimento simplificado (formulário F.1.2) para injeção de até 800 W, mas nem todas as operadoras de rede o aceitam ainda e podem aplicar a versão anterior até 1º de março de 2027',
           'Um estudo de simulação de 2026 com 448 domicílios constatou que tarifas dinâmicas aumentaram em 12,7% o ganho líquido de uma bateria de 10 kWh; ele modela sistemas fotovoltaicos com bateria em telhado, não kits plug-in',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1304,8 +1479,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'A norma de produto alemã DIN VDE V 0126-95, publicada em dezembro de 2025, cobre dispositivos solares plug-in sem armazenamento. O comitê de normalização DKE/K 373 começou a planejar uma parte adicional para dispositivos com armazenamento, sem cronograma.',
-          'A Verbraucherzentrale informa que o armazenamento deve atualmente ser registrado na operadora de rede por um eletricista autorizado. A imprensa especializada informa um processo de conexão simplificado para armazenamento de até 800 VA pela VDE-AR-N 4105:2026-03, então confirme o procedimento com a sua operadora de rede antes de comprar.',
-          'Os preços de entrada estão caindo. A WattCycle anunciou para a Intersolar Europe 2026 uma bateria de varanda de até 10 kWh; não há preço nem data de disponibilidade na UE publicados.',
+          'A Verbraucherzentrale informa (página atualizada em 21 de outubro de 2026) que o armazenamento deve ser comunicado atualmente à operadora de rede além do MaStR. A VDE-AR-N 4105 revisada prevê um procedimento simplificado com o formulário F.1.2 para injeção de até 800 W, mas nem todas as operadoras de rede o aceitam ainda e podem aplicar a versão anterior até 1º de março de 2027; confirme o procedimento com a sua operadora de rede antes de comprar.',
+          'O projeto de lei EEG 2027 foi aprovado pelo gabinete em 29 de julho de 2026. A mídia especializada relata que ele contaria o armazenamento atrás do mesmo inversor como parte de um dispositivo plug-in, enquanto o armazenamento em CA com inversor próprio não seria coberto. O Parlamento ainda não o aprovou, portanto não é lei.',
+          'Os preços de entrada estão caindo. O ADAC (setembro de 2026) estima o armazenamento isolado de 1,5 a 2 kWh em cerca de € 300 a € 1.000. A WattCycle anunciou para a Intersolar Europe 2026 uma bateria de varanda de até 10 kWh; não há preço na UE nem data de disponibilidade divulgados.',
           'Não encontramos nenhum subsídio em nível de UE para baterias de varanda. O apoio, onde existe, é definido por países, estados ou municípios.',
           'Esta página descreve uma tendência de mercado. Ela não substitui o teste de "Você precisa de uma bateria para energia solar de varanda?": uma bateria só compensa se a diferença economizada entre preço de compra e pagamento pela injeção superar o custo dela.',
         ],
@@ -1315,8 +1491,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'As regras alemãs para plug-in com armazenamento ainda estão mudando',
         content: [
           '**A norma de produto alemã DIN VDE V 0126-95 cobre dispositivos solares plug-in sem armazenamento.** O órgão de normalização DKE afirma em seu FAQ que a norma não cobre dispositivos solares plug-in com unidade de armazenamento de energia, que exigem requisitos adicionais. O comitê DKE/K 373 começou a planejar uma parte adicional, mas não informa cronograma. A norma foi publicada em dezembro de 2025 e permite até 800 VA de potência do inversor e, com uma tomada doméstica normal, até 960 W de módulos.',
-          '**Sobre o registro, a Verbraucherzentrale informa que o armazenamento deve atualmente ser registrado na operadora de rede por um eletricista autorizado, que também deve conectá-lo.** O registro curto no Marktstammdatenregister (MaStR) que vale para dispositivos solares plug-in não vale para armazenamento. Desde o Solarpaket I (maio de 2024), a operadora de rede não precisa mais ser informada diretamente no caso de dispositivos plug-in sem armazenamento.',
-          '**As regras estão em movimento, mas ainda não consolidadas.** A imprensa especializada informa que a regra de conexão revisada VDE-AR-N 4105:2026-03 prevê um processo simplificado para armazenamentos pequenos e unidades combinadas de até 800 VA, e que um rascunho de trabalho do ministério para a EEG 2027 (18 de julho de 2026) contaria o armazenamento atrás do mesmo inversor como parte de um dispositivo plug-in. Um rascunho de trabalho não é lei aprovada, e o blog de varejista que citamos para isso não é uma fonte neutra. Pergunte à sua operadora de rede qual procedimento vale no dia da entrada em operação.',
+          '**Sobre o registro, a Verbraucherzentrale informa (página atualizada em 21 de outubro de 2026) que o armazenamento deve ser comunicado atualmente à operadora de rede além do Marktstammdatenregister (MaStR), e que o registro simplificado ainda não o cobre.** Para injeção de até 800 W, ela aponta a VDE-AR-N 4105 revisada com um procedimento simplificado (formulário F.1.2), mas observa que nem todas as operadoras de rede o aceitam ainda e que podem continuar usando a versão anterior até 1º de março de 2027. Dispositivos solares plug-in sem armazenamento não precisam mais ser comunicados diretamente à operadora de rede desde o Solarpaket I (maio de 2024). O ADAC (setembro de 2026) descreve o registro do armazenamento de forma mais simples (apenas MaStR, em até um mês) e aconselha esclarecer configurações fora do padrão com a operadora de rede; como as fontes divergem, confirme o procedimento com a sua operadora de rede.',
+          '**As regras estão em movimento, mas ainda não são definitivas.** A mídia especializada relata que o gabinete aprovou o projeto de lei EEG 2027 em 29 de julho de 2026 e que ele contaria o armazenamento atrás do mesmo inversor como parte de um dispositivo plug-in; o armazenamento em CA com inversor próprio não seria coberto. Segundo a imprensa, o Bundestag realizou a primeira leitura em 24 de setembro de 2026 e uma audiência de especialistas em 5 de outubro de 2026; a votação final está pendente e o texto ainda pode mudar. O blog de varejista que citamos para o rascunho anterior não é uma fonte neutra. Pergunte à sua operadora de rede qual procedimento vale no dia da colocação em operação.',
           'As regras dos locadores acrescentam outra camada: uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral. Veja [Energia solar de varanda para proprietários e associações habitacionais](/pt/balcony-solar/balcony-solar-housing-associations-b2b-2027).',
         ],
       },
@@ -1325,6 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hardware: preços de entrada em queda e alegações dos fabricantes',
         content: [
           '**Os preços de entrada estão caindo.** A Lidl vendeu na Alemanha, de 21 a 27 de maio de 2026, uma bateria de expansão TRONIC de 2,24 kWh (LiFePO4) por € 399, ou € 299 com o app Lidl Plus. Ela não tem inversor integrado e portanto amplia uma instalação de varanda existente; a promoção provavelmente já terminou, então confira os preços atuais.',
+          '**Preços típicos (ADAC, setembro de 2026):** o armazenamento isolado de 1,5 a 2 kWh custa cerca de € 300 a € 1.000. Modelos básicos sem inversor integrado começam em torno de € 300 a € 400, modelos plug-and-play de faixa intermediária custam cerca de € 450 a € 750 e modelos híbridos premium cerca de € 600 a € 1.000. No cálculo do ADAC com a HTW Berlim para um sistema de 880 W, o retorno do investimento é de cerca de 4 anos sem armazenamento e 5 com ele em uma casa de uma pessoa, e de cerca de 3 contra 4 anos em uma casa de três pessoas. Para um guia de compra com ranking, veja [As melhores baterias para solar de varanda](/pt/balcony-solar/best-balcony-solar-batteries-2026).',
           '**Produtos novos vêm com alegações dos fabricantes, não com testes independentes.** Na Intersolar Europe 2026, em Munique, a WattCycle anunciou um sistema de armazenamento de varanda tudo-em-um de até 10 kWh e 2,5 kW ou 5 kW de potência bidirecional, plug-and-play (alegações do fabricante, comunicado de 20 de junho de 2026). Não encontramos preço nem data de disponibilidade publicados para a UE.',
           'Como a DIN VDE V 0126-95 exclui armazenamento, verifique se a potência CA de um sistema combinado permanece dentro do limite de 800 VA que define um dispositivo plug-in na Alemanha e pergunte ao vendedor para qual via de registro o produto foi projetado.',
         ],
@@ -1357,12 +1534,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale – Gesetze und Normen für Steckersolar',
-            description: 'Orientação de defesa do consumidor sobre registro de armazenamento, MaStR e regras da operadora de rede',
+            description: 'Informação ao consumidor (atualizada em 21 de outubro de 2026) sobre registro de armazenamento, MaStR, formulário F.1.2 e regras da operadora de rede',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk – Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: 'Blog de varejista (não neutro): VDE-AR-N 4105:2026-03 e o rascunho de trabalho da EEG 2027 de 18 de julho de 2026',
+            description: 'Blog de varejista (não neutro): VDE-AR-N 4105:2026-03 e o rascunho anterior do EEG 2027 de 18 de julho de 2026',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -1384,6 +1561,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de – Vonovia e armazenamento em solar de varanda',
             description: 'Reportagem sobre a diretriz da Vonovia que proíbe armazenamento e a avaliação jurídica contestada',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: 'Faixas de preço do armazenamento, registro no MaStR e exemplos de retorno do investimento',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: 'Ministério Federal da Economia — projeto de lei EEG 2027',
+            description: 'Projeto do gabinete de 29 de julho de 2026 (PDF em alemão); a definição de armazenamento conforme relatada pela mídia especializada',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: 'Decisão do gabinete de 29 de julho de 2026, primeira leitura no Bundestag e audiência de especialistas (página de 16 de outubro de 2026)',
+          },
         ],
       },
       faqSection: {
@@ -1404,7 +1596,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Como registro um sistema de varanda com bateria na Alemanha?',
-            a: 'A Verbraucherzentrale informa que o armazenamento deve atualmente ser registrado na operadora de rede e conectado por um eletricista autorizado, e que o registro simplificado no MaStR não vale para armazenamento. A imprensa especializada informa um processo simplificado para armazenamento de até 800 VA pela VDE-AR-N 4105:2026-03; confirme o procedimento com a sua operadora de rede.',
+            a: 'A Verbraucherzentrale informa (página atualizada em 21 de outubro de 2026) que o armazenamento deve ser comunicado atualmente à operadora de rede além do MaStR e que o registro simplificado ainda não o cobre. Com a VDE-AR-N 4105 revisada existe um procedimento simplificado com o formulário F.1.2 para injeção de até 800 W, mas nem todas as operadoras de rede o aceitam ainda. O ADAC descreve o processo de forma mais simples; confirme o procedimento com a sua operadora de rede.',
+          },
+          {
+            q: 'Quanto custa uma bateria para um sistema solar de varanda?',
+            a: 'Segundo o ADAC (setembro de 2026), o armazenamento isolado de 1,5 a 2 kWh custa cerca de € 300 a € 1.000: modelos básicos em torno de € 300 a € 400, faixa intermediária em torno de € 450 a € 750, premium em torno de € 600 a € 1.000. Kits completos com 2 a 4 módulos e 1,5 a 2 kWh de armazenamento ficam em cerca de € 700 a € 1.700. Os preços mudam com frequência, e no cálculo de exemplo do ADAC o armazenamento prolonga o retorno do investimento em cerca de um ano.',
+          },
+          {
+            q: 'O que o EEG 2027 muda para as baterias de varanda?',
+            a: 'A mídia especializada relata que o projeto de lei EEG 2027, aprovado pelo gabinete em 29 de julho de 2026, contaria o armazenamento atrás do mesmo inversor como parte de um dispositivo plug-in, enquanto o armazenamento em CA com inversor próprio não seria coberto. Ainda não é lei porque o Bundestag não concluiu a votação; por isso, as regras de registro descritas acima continuam valendo.',
           },
           {
             q: 'O que é a bateria de varanda da WattCycle?',
@@ -1442,24 +1642,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '电池储能正成为德国和欧盟阳台光伏越来越常见的配件，但它既不是强制要求，也不适合每个家庭，而且德国针对带储能的插拔式系统的规则仍在制定中。本页梳理规则现状、加装电池的价格，以及电价套利研究能说明和不能说明的内容。这是一份市场概览，不是购买建议，也不构成法律或电气方面的建议。',
     metaDescription: '德国插拔式光伏标准不含储能，登记规则仍在变动，入门价格下降。梳理阳台电池哪些信息已核实、储能何时划算，以及电价套利研究的适用范围。',
     publishDate: '2026-07-18',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-31',
     readTime: '阅读约6分钟',
     educationalLevel: 'Beginner',
     audience: '正在评估2027年是否要增加电池储能的阳台光伏购买者',
     primaryTerm: '2027年阳台光伏电池',
     targetKeywords: ['阳台光伏电池 2027', '德国阳台光伏电池登记', 'DIN VDE V 0126-95 储能', 'wattcycle 阳台光伏电池'],
-    leadAnswerBlock: '**电池正成为阳台光伏常见的加装配件，但并非强制要求，德国针对带储能的插拔式系统的规则也尚未定型。** 2025年12月发布的产品标准DIN VDE V 0126-95只涵盖不带储能的插拔式光伏设备；标准委员会DKE/K 373已开始规划针对带储能设备的另一部分。德国消费者中心（Verbraucherzentrale）表示，储能目前必须由持证电工向电网运营商登记；据行业媒体报道，修订后的并网规则（VDE-AR-N 4105:2026-03）将简化800 VA以内小型储能的流程。入门价格在下降，但电池是否划算，仍取决于您的购电价与上网补偿之间的差距。',
+    leadAnswerBlock: '**电池正在成为阳台光伏的常见加装件，但并非必需，德国针对带储能的即插即用系统的规则也尚未定论。** 2025年12月发布的产品标准DIN VDE V 0126-95仅涵盖不带储能的即插即用光伏设备；标准委员会DKE/K 373已开始规划针对带储能设备的另一部分。德国消费者中心（Verbraucherzentrale）表示（页面更新于2026年10月21日），储能目前除在Marktstammdatenregister登记外，还须向电网运营商申报；修订后的并网规则VDE-AR-N 4105为不超过800 W的馈入提供了简化流程，但并非所有电网运营商都已接受。据报道，内阁于2026年7月29日通过的EEG 2027法案草案，会把位于同一逆变器之后的储能视为即插即用设备的一部分，但它尚未成为法律。ADAC给出的单独储能价格约为300至1,000欧元，电池是否划算仍取决于购电价格与上网收益之间的差额。',
     quickAnswerTop: {
       zh: {
         question: '电池储能正在成为阳台光伏的标准配置吗？',
         answer: '它正变得更常见，但并非强制要求，也不适合每个家庭。加装电池越来越便宜，但德国产品标准DIN VDE V 0126-95并不涵盖带储能的插拔式设备，储能的登记规则也在变化。电池是否划算，取决于您的购电价与上网电量所得之间的差距。',
         bullets: [
           'DIN VDE V 0126-95（2025年12月发布）涵盖不带储能的插拔式光伏设备；委员会DKE/K 373才刚开始规划针对带储能设备的部分',
-          'Verbraucherzentrale表示，储能目前必须由持证电工向电网运营商登记，简化登记途径不适用于储能',
-          '行业媒体报道，VDE-AR-N 4105:2026-03为800 VA以内的小型储能引入了简化并网流程；请向您的电网运营商确认具体手续',
+          '德国消费者中心（页面更新于2026年10月21日）表示，储能目前除在MaStR登记外，还须向电网运营商申报；简化登记尚不适用于储能',
+          '据德国消费者中心称，修订后的VDE-AR-N 4105为不超过800 W的馈入提供了简化流程（表格F.1.2），但并非所有电网运营商都已接受，且在2027年3月1日前可继续适用旧版本',
           '2026年一项涵盖448户家庭的模拟研究发现，动态电价使10 kWh电池的净收益提高12.7%；该研究模拟的是屋顶光伏电池系统，而非插拔式套装',
         ],
-        updatedDate: '2026-10-19',
+        updatedDate: '2026-10-31',
       },
     },
     toc: [
@@ -1478,8 +1678,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '2025年12月发布的德国产品标准DIN VDE V 0126-95涵盖不带储能的插拔式光伏设备。标准委员会DKE/K 373已开始规划针对带储能设备的另一部分，但没有时间表。',
-          'Verbraucherzentrale表示，储能目前必须由持证电工向电网运营商登记。行业媒体报道，根据VDE-AR-N 4105:2026-03，800 VA以内的储能并网流程有所简化，因此购买前请向电网运营商确认手续。',
-          '入门价格在下降。WattCycle为Intersolar Europe 2026发布了最高10 kWh的阳台电池，但欧盟售价和上市时间均未公布。',
+          '德国消费者中心（页面更新于2026年10月21日）表示，储能目前除在MaStR登记外，还须向电网运营商申报。修订后的VDE-AR-N 4105为不超过800 W的馈入提供了使用表格F.1.2的简化流程，但并非所有电网运营商都已接受，且在2027年3月1日前可继续适用旧版本，因此购买前请向您的电网运营商确认流程。',
+          'EEG 2027法案草案已于2026年7月29日由内阁通过。专业媒体报道称，位于同一逆变器之后的储能将被视为即插即用设备的一部分，而带独立逆变器的交流储能则不在涵盖范围内。议会尚未通过该法案，因此它还不是法律。',
+          '入门价格正在下降。ADAC（2026年9月）给出的1.5至2 kWh单独储能价格约为300至1,000欧元。WattCycle为Intersolar Europe 2026发布了最高10 kWh的阳台电池；目前未公布欧盟价格或上市日期。',
           '我们没有找到针对阳台电池的欧盟层面补贴。补贴如有，由各国、各州或市政当局设定。',
           '本页描述的是市场趋势，并不取代“阳台光伏需要电池吗？”中的家庭测试：只有当购电价与上网补偿之间省下的差距超过电池成本时，电池才划算。',
         ],
@@ -1489,8 +1690,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '德国针对带储能插拔式系统的规则仍在变动',
         content: [
           '**德国产品标准DIN VDE V 0126-95涵盖不带储能的插拔式光伏设备。** 标准机构DKE在其常见问题中说明，该标准不涵盖带储能单元的插拔式光伏设备，这类设备需要附加要求。委员会DKE/K 373已开始规划另一部分，但未给出时间表。该标准于2025年12月发布，允许逆变器输出最高800 VA，使用普通家用插头时组件功率合计最高960 W。',
-          '**关于登记，Verbraucherzentrale表示，储能目前必须由持证电工向电网运营商登记，并由其负责接线。** 适用于插拔式光伏设备的Marktstammdatenregister（MaStR）简易登记不适用于储能。自Solarpaket I（2024年5月）起，不带储能的插拔式光伏设备无需再直接通知电网运营商。',
-          '**规则在变化，但尚未定型。** 行业媒体报道，修订后的并网规则VDE-AR-N 4105:2026-03为800 VA以内的小型储能和一体化设备规定了简化流程，并且部委关于EEG 2027的工作草案（2026年7月18日）会把位于同一逆变器之后的储能视为插拔式设备的一部分。工作草案不是已通过的法律，我们为此引用的经销商博客也不是中立信息源。请向电网运营商询问投运当天适用哪种手续。',
+          '**关于登记，德国消费者中心表示（页面更新于2026年10月21日），储能目前除在Marktstammdatenregister（MaStR）登记外，还须向电网运营商申报，简化登记尚不适用于储能。** 对于不超过800 W的馈入，它指向修订后的VDE-AR-N 4105及其简化流程（表格F.1.2），但提醒说并非所有电网运营商都已接受，且他们在2027年3月1日前可继续使用旧版本。自Solarpaket I（2024年5月）起，不带储能的即插即用光伏设备无需再直接通知电网运营商。ADAC（2026年9月）对储能登记的描述更为简单（仅需MaStR，须在一个月内完成），并建议非标准配置事先与电网运营商确认；由于各来源说法不一，请向您的电网运营商确认流程。',
+          '**规则正在变化，但尚未定论。** 专业媒体报道称，内阁于2026年7月29日通过了EEG 2027法案草案，位于同一逆变器之后的储能将被视为即插即用设备的一部分；带独立逆变器的交流储能不在涵盖范围内。据媒体报道，联邦议院于2026年9月24日进行了一读，并于2026年10月5日举行了专家听证；最终表决尚未进行，措辞仍可能变化。我们为早先工作草案引用的零售商博客并非中立来源。请向您的电网运营商确认，在您调试系统当天适用哪种流程。',
           '房东的规定又增加了一层：drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题。参见[面向房东与住房协会的阳台光伏](/zh/balcony-solar/balcony-solar-housing-associations-b2b-2027)。',
         ],
       },
@@ -1499,6 +1700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '硬件：入门价格下降与厂商宣称',
         content: [
           '**入门价格正在下降。** Lidl于2026年5月21日至27日在德国销售TRONIC 2.24 kWh（磷酸铁锂）加装电池，常规价399欧元，使用Lidl Plus应用为299欧元。它不带内置逆变器，因此是对现有阳台系统的扩展；促销很可能已结束，请查看当前价格。',
+          '**常见价格（ADAC，2026年9月）：** 1.5至2 kWh的单独储能约为300至1,000欧元。不带内置逆变器的入门型号约从300至400欧元起，中端即插即用型号约450至750欧元，高端混合型号约600至1,000欧元。在ADAC引用的HTW柏林对880 W系统的测算中，单人家庭不带储能约4年回本、带储能约5年，三人家庭分别约3年和4年。带排名的选购指南请参阅[最佳阳台光伏电池](/zh/balcony-solar/best-balcony-solar-batteries-2026)。',
           '**新产品附带的是厂商宣称，而非独立测试。** 在慕尼黑举行的Intersolar Europe 2026上，WattCycle发布了一款一体化阳台储能系统，容量最高10 kWh，双向功率为2.5 kW或5 kW，即插即用（厂商宣称，2026年6月20日新闻稿）。我们没有找到已公布的欧盟售价或上市时间。',
           '由于DIN VDE V 0126-95不涵盖储能，请确认组合系统的交流输出保持在德国界定插拔式设备的800 VA上限内，并询问卖家该产品针对哪种登记途径设计。',
         ],
@@ -1531,12 +1733,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740',
             title: 'Verbraucherzentrale — 插拔式光伏的法律与标准',
-            description: '消费者保护机构关于储能登记、MaStR与电网运营商规则的指引',
+            description: '消费者信息（更新于2026年10月21日）：储能登记、MaStR、表格F.1.2及电网运营商规则',
           },
           {
             url: 'https://kleineskraftwerk.de/blogs/magazin/kommen-endlich-erleichterungen-fur-steckerspeicher',
             title: 'kleines kraftwerk — Kommen endlich Erleichterungen für Steckerspeicher?',
-            description: '经销商博客（非中立）：VDE-AR-N 4105:2026-03与2026年7月18日的EEG 2027工作草案',
+            description: '零售商博客（非中立）：VDE-AR-N 4105:2026-03及2026年7月18日的早期EEG 2027工作草案',
           },
           {
             url: 'https://www.homeandsmart.de/billig-tricks-beim-lidl-speicher-0032-369875',
@@ -1558,6 +1760,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'drweb.de — Vonovia与阳台光伏储能',
             description: '关于Vonovia禁止储能的指南及其有争议的法律评估的报道',
           },
+          {
+            url: 'https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-speicher/',
+            title: 'ADAC — Speicher für Balkonkraftwerk',
+            description: '储能价格区间、MaStR登记及回本期示例',
+          },
+          {
+            url: 'https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/Gesetz/2026/20260729-gesetzentwurf-eeg-stromsektor.pdf?__blob=publicationFile&v=8',
+            title: '德国联邦经济部 — EEG 2027政府法案',
+            description: '2026年7月29日内阁草案（德语PDF）；储能的定义以专业媒体报道为准',
+          },
+          {
+            url: 'https://www.solaranlage-ratgeber.de/eeg-novelle-die-neuen-uebergangsregeln',
+            title: 'solaranlage-ratgeber.de — EEG-Novelle 2026: Was für PV-Anlagen ab 2027 geplant ist',
+            description: '2026年7月29日内阁决定、联邦议院一读及专家听证（页面日期2026年10月16日）',
+          },
         ],
       },
       faqSection: {
@@ -1578,7 +1795,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '在德国如何登记带电池的阳台系统？',
-            a: 'Verbraucherzentrale表示，储能目前必须由持证电工向电网运营商登记并接线，MaStR简易登记不适用于储能。行业媒体报道，根据VDE-AR-N 4105:2026-03，800 VA以内的储能流程有所简化；请向电网运营商确认手续。',
+            a: '德国消费者中心（页面更新于2026年10月21日）表示，储能目前除在MaStR登记外，还须向电网运营商申报，简化登记尚不适用于储能。修订后的VDE-AR-N 4105为不超过800 W的馈入提供了使用表格F.1.2的简化流程，但并非所有电网运营商都已接受。ADAC对流程的描述更为简单，因此请向您的电网运营商确认流程。',
+          },
+          {
+            q: '阳台光伏电池要多少钱？',
+            a: '据ADAC（2026年9月），1.5至2 kWh的单独储能约为300至1,000欧元：入门型号约300至400欧元，中端约450至750欧元，高端约600至1,000欧元。含2至4块组件和1.5至2 kWh储能的完整套装约为700至1,700欧元。价格变动频繁，在ADAC的示例测算中，储能会使回本期延长约一年。',
+          },
+          {
+            q: 'EEG 2027对阳台电池有什么改变？',
+            a: '专业媒体报道称，内阁于2026年7月29日通过的EEG 2027法案草案会把位于同一逆变器之后的储能视为即插即用设备的一部分，而带独立逆变器的交流储能不在涵盖范围内。由于联邦议院尚未完成表决，它还不是法律，上述登记规则仍然适用。',
           },
           {
             q: 'WattCycle阳台电池是什么？',
