@@ -4,6 +4,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared',
     dateModified: '2026-10-11',
@@ -611,6 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados',
     seoTitle: 'M5 Pro vs M5 Max 2026: ancho de banda 307 vs 614 GB/s',
@@ -1108,6 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon لـ LLM المحلي 2026: M5 Pro مقابل M5 Max مقابل Mac Studio',
     seoTitle: 'M5 Pro مقابل M5 Max 2026: النطاق 307 مقابل 614 GB/s',
@@ -1605,6 +1608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados',
     dateModified: '2026-10-11',
@@ -2103,6 +2107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon für lokale LLMs 2026: M5 Pro vs. M5 Max vs. Mac Studio im Vergleich',
     seoTitle: 'M5 Pro vs M5 Max 2026: Bandbreite 307 vs 614 GB/s',
@@ -2587,6 +2592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'Apple Silicon M5 pour LLM local 2026 : M5 Pro vs M5 Max vs Mac Studio comparés',
     seoTitle: 'M5 Pro vs M5 Max 2026 : bande passante 307 vs 614 Go/s',
@@ -3127,6 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: 'ローカルLLM向けApple Silicon 2026：M5 Pro vs M5 Max vs Mac Studio徹底比較',
     seoTitle: 'M5 Pro vs Max 2026：帯域幅307/614GB/s',
@@ -3611,6 +3618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: '本地LLM的Apple Silicon 2026：M5 Pro vs M5 Max vs Mac Studio 对比',
     seoTitle: 'M5 Pro vs Max 2026：带宽307/614GB/s',
@@ -4095,6 +4103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
+    designSkin: 'hub',
     theme: 'Hardware Setups',
     title: '로컬 LLM용 Apple Silicon 2026: M5 Pro vs M5 Max vs Mac Studio 비교',
     seoTitle: 'M5 Pro vs Max 2026: 대역폭 307/614GB/s',

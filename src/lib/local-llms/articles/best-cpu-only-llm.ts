@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Best CPU-Only Local LLM 2026: 5 Models, No GPU Needed',
       seoTitle: 'CPU-Only LLM 2026: Phi-4 Mini Est. 15–25 tok/s, No GPU',
@@ -480,6 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Mejor LLM local solo CPU 2026: 5 modelos, sin GPU',
       seoTitle: 'LLM solo CPU 2026: Phi-4 Mini est. 15–25 tok/s, sin GPU',
@@ -880,6 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'أفضل LLM محلي على CPU فقط 2026: 5 نماذج بلا GPU',
       seoTitle: 'LLM على CPU فقط 2026: Phi-4 Mini بتقدير 15–25 tok/s',
@@ -1280,6 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Melhor LLM Local Só com CPU 2026: 5 Modelos, Sem GPU',
       seoTitle: 'LLM só com CPU 2026: Phi-4 Mini est. 15–25 tok/s, sem GPU',
@@ -1680,6 +1684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Bestes reines CPU-LLM 2026: 5 Modelle, keine GPU nötig',
       seoTitle: 'CPU-LLM 2026: Phi-4 Mini geschätzt 15–25 Tok/s, ohne GPU',
@@ -2066,6 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'Meilleur LLM local sur CPU seul 2026 : 5 modèles, sans GPU',
       seoTitle: 'LLM sur CPU 2026 : Phi-4 Mini est. 15–25 tok/s, sans GPU',
@@ -2452,6 +2458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: 'CPU のみで動く最適なローカル LLM 2026：GPU 不要の 5 モデル',
       seoTitle: 'CPU専用LLM：Phi-4 Mini推定15～25トークン/秒',
@@ -2838,6 +2845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: '2026年最佳纯CPU本地LLM：5款模型，无需GPU',
       seoTitle: '无GPU跑LLM：Phi-4 Mini估算15–25 tok/s',
@@ -3224,6 +3232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-04-23',
+      designSkin: 'hub',
       theme: 'Best Models',
       title: '2026년 최고의 CPU 전용 로컬 LLM: GPU 없이 쓰는 5개 모델',
       seoTitle: 'CPU 전용 LLM: Phi-4 Mini 추정 15–25 tok/s',
