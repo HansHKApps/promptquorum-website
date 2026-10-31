@@ -73,6 +73,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-local-llm-apps-iphone-2026':             'best-local-llm-apps-iphone-2026',
   'best-local-llm-apps-android-2026':            'best-local-llm-apps-android-2026',
   'best-local-llm-apps-mac':                     'best-local-llm-apps-mac',
+  'local-llm-app-alternatives':                  'local-llm-app-alternatives',
   'loci-ai-review-offline-local-ai':             'loci-ai-review-offline-local-ai',
   'run-ai-on-tablet-ipad-android':               'run-ai-on-tablet-ipad-android',
   'mobile-llm-models-phi4-gemma-smollm':         'mobile-llm-models-phi4-gemma-smollm',

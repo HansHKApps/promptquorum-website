@@ -873,6 +873,7 @@ const HUB_THEMES: Array<{
       'lm-studio-vs-jan-vs-gpt4all-2026',
       'easiest-local-ai-app-windows-mac-linux',
       'best-local-llm-apps-mac',
+      'local-llm-app-alternatives',
       'local-ai-app-non-technical-users',
       'best-local-ai-app-low-end-pc',
       'local-ai-app-with-built-in-rag',
