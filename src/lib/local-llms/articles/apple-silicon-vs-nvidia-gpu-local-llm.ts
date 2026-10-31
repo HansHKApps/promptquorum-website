@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-08-26',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-26',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared',
     seoTitle: 'Apple Silicon vs NVIDIA for Local LLMs 2026',
@@ -307,6 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon vs NVIDIA GPU para LLMs locales 2026: Rendimiento, Costo, Workflow Comparados',
     seoTitle: 'Apple Silicon vs NVIDIA para LLMs locales 2026',
@@ -631,6 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '⁨Apple Silicon⁩ مقابل ⁨GPU⁩ من ⁨NVIDIA⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: الأداء والتكلفة وتدفق العمل',
     seoTitle: '⁨Apple Silicon⁩ مقابل ⁨NVIDIA GPU⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩',
@@ -939,6 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon vs GPU NVIDIA para LLMs locais 2026: desempenho, custo e workflow comparados',
     seoTitle: 'Apple Silicon vs NVIDIA para LLMs locais 2026',
@@ -1138,6 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon vs NVIDIA GPU für lokale LLMs 2026: Performance, Kosten, Workflow im Vergleich',
     seoTitle: 'Apple Silicon vs NVIDIA für lokale LLMs 2026',
@@ -1447,6 +1452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Apple Silicon vs NVIDIA GPU pour les LLMs locaux 2026 : Performance, coûts, workflow comparés',
     seoTitle: 'Apple Silicon vs NVIDIA pour LLMs locaux 2026',
@@ -1767,6 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '2026年 Apple SiliconとNVIDIA GPUのローカルLLM比較：性能、コスト、ワークフロー',
     seoTitle: 'Apple Silicon vs NVIDIA 2026：ローカルAI比較',
@@ -2098,6 +2105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '2026年Apple Silicon vs NVIDIA GPU本地大模型对比：性能、成本、工作流',
     seoTitle: 'Apple Silicon vs NVIDIA 2026：对比分析',
@@ -2440,6 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',
+    designSkin: 'hub',
     theme: '하드웨어 및 성능',
     title: '2026년 Apple Silicon vs NVIDIA GPU 로컬 LLM 비교: 성능, 비용, 워크플로우',
     seoTitle: 'Apple Silicon vs NVIDIA 로컬 LLM 2026 비교',

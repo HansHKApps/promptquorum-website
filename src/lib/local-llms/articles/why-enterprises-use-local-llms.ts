@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Why Enterprises Use Local LLMs: Cost, Compliance, and Control',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-en.webp',
@@ -289,6 +290,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Por qué las empresas usan LLMs locales: Costo, Cumplimiento y Control',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-es.webp',
@@ -567,6 +569,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'لماذا تستخدم المؤسسات نماذج ⁨LLM⁩ المحلية: التكلفة، والامتثال، والتحكم',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-ar.webp',
@@ -848,6 +851,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Por que as empresas usam LLMs locais: Custo, Conformidade e Controle',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-pt.webp',
@@ -975,6 +979,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Warum Unternehmen lokale LLMs einsetzen: Kosten, Compliance und Kontrolle',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-de.webp',
@@ -1231,6 +1236,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Pourquoi les entreprises choisissent les LLM locaux : Coût, Conformité et Contrôle',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-fr.webp',
@@ -1487,6 +1493,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'エンタープライズがローカルLLMを使用する理由：コスト、コンプライアンス、制御',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-ja.webp',
@@ -1743,6 +1750,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '企业使用本地LLM的原因：成本、合规性和控制',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-zh.webp',
@@ -1999,6 +2007,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '기업이 로컬 LLM을 선택하는 이유: 비용, 컴플라이언스, 그리고 통제권',
     heroImage: '/images/why-enterprises-use-local-llms-overview-hero-ko.webp',

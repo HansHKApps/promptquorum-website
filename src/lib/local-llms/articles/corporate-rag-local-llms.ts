@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Corporate RAG With Local LLMs: Document Q&A for Organizations',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-en.webp',
@@ -277,6 +278,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'RAG Corporativo con LLMs Locales: Q&A Documental para Organizaciones',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-es.webp',
@@ -543,6 +545,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '⁨RAG⁩ المؤسسي بنماذج ⁨LLM⁩ المحلية: أسئلة وأجوبة المستندات للمؤسسات',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-ar.webp',
@@ -812,6 +815,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'RAG Corporativo com LLMs Locais: Q&A Documental para Organizações',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-pt.webp',
@@ -1021,6 +1025,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Corporate RAG mit lokalen LLMs: Dokumenten-Q&A für Unternehmen',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-de.webp',
@@ -1313,6 +1318,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'RAG d\'entreprise avec LLMs locaux : Q&A documentaire pour organisations',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-fr.webp',
@@ -1567,6 +1573,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '企業RAGとローカルLLM：組織向けドキュメントQ&A',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-ja.webp',
@@ -1826,6 +1833,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '企业RAG与本地LLM：面向组织的文档问答',
       heroImage: '/images/corporate-rag-local-llms-overview-hero-zh.webp',
@@ -2085,6 +2093,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: '기업',
       title: '기업용 RAG와 로컬 LLM: 조직을 위한 문서 Q&A',
     heroImage: '/images/corporate-rag-local-llms-overview-hero-ko.webp',

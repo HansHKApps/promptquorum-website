@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Scaling Local LLMs for Enterprise: Multi-User, Multi-GPU Production Deployment',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-en.webp',
@@ -277,6 +278,7 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Escalando LLMs locales en la empresa: Despliegue en producción multi-usuario y multi-GPU',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-es.webp',
@@ -542,6 +544,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'توسيع نطاق نماذج ⁨LLM⁩ المحلية في المؤسسة: نشر إنتاجي متعدد المستخدمين ومتعدد ⁨GPU⁩',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-ar.webp',
@@ -809,6 +812,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Escalando LLMs locais na empresa: Implantação em produção multi-usuário e multi-GPU',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-pt.webp',
@@ -967,6 +971,7 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Local LLMs in der Enterprise skalieren: Multi-User-, Multi-GPU-Produktionsdeployment',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-de.webp',
@@ -1257,6 +1262,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: 'Mettre à l\'échelle les LLM locaux en entreprise : Déploiement multi-utilisateurs et multi-GPU en production',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-fr.webp',
@@ -1525,6 +1531,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '企業向けLocal LLMのスケーリング：マルチユーザー、マルチGPU本番デプロイメント',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-ja.webp',
@@ -1793,6 +1800,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '企业级本地LLM扩展：多用户、多GPU生产部署',
       heroImage: '/images/scaling-local-llms-enterprise-overview-hero-zh.webp',
@@ -2062,6 +2070,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Enterprise',
       title: '엔터프라이즈를 위한 로컬 LLM 확장: 다중 사용자·다중 GPU 프로덕션 배포',
     heroImage: '/images/scaling-local-llms-enterprise-overview-hero-ko.webp',

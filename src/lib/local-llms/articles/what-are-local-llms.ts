@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'What Is Local AI? How Local LLMs Run AI Models on Your Own Hardware',
       heroImage: '/images/what-are-local-llms-overview-hero-en.webp',
@@ -315,6 +316,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '¿Qué es la IA local? Cómo los LLM locales ejecutan modelos de IA en tu propio hardware',
       heroImage: '/images/what-are-local-llms-overview-hero-es.webp',
@@ -611,6 +613,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'ما هو الذكاء الاصطناعي المحلي؟ كيف تشغّل نماذج ⁨LLM⁩ المحلية نماذج الذكاء الاصطناعي على عتادك الخاص',
       heroImage: '/images/what-are-local-llms-overview-hero-ar.webp',
@@ -909,6 +912,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'O que é IA local? Como LLMs locais rodam modelos de IA no seu próprio hardware',
       heroImage: '/images/what-are-local-llms-overview-hero-pt.webp',
@@ -1212,6 +1216,7 @@ schema: {
       },
     },
     fr: {
+      designSkin: 'hub',
       theme: 'Premiers pas',
       title: 'Qu\'est-ce que l\'IA locale ? Comment les LLMs locaux exécutent des modèles IA sur votre propre matériel',
       heroImage: '/images/what-are-local-llms-overview-hero-fr.webp',
@@ -1403,6 +1408,7 @@ schema: {
       },
     },
     ja: {
+      designSkin: 'hub',
       theme: 'はじめに',
       title: 'ローカルAIとローカルLLMとは？自分のハードウェアでAIモデルを実行する方法',
       heroImage: '/images/what-are-local-llms-overview-hero-ja.webp',
@@ -1581,6 +1587,7 @@ schema: {
       },
     },
     zh: {
+      designSkin: 'hub',
       theme: '入门',
       title: '什么是本地AI？本地LLM如何在自己的硬件上运行AI模型',
       heroImage: '/images/what-are-local-llms-overview-hero-zh.webp',
@@ -1759,6 +1766,7 @@ schema: {
       },
     },
     de: {
+      designSkin: 'hub',
       theme: 'Erste Schritte',
       title: 'Was ist lokale KI? Wie lokale LLMs KI-Modelle auf Ihrer eigenen Hardware ausführen',
       heroImage: '/images/what-are-local-llms-overview-hero-de.webp',
@@ -1940,6 +1948,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-26',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: '로컬 AI와 로컬 LLM이란? 내 하드웨어에서 AI 모델을 실행하는 방법',
     heroImage: '/images/what-are-local-llms-overview-hero-ko.webp',

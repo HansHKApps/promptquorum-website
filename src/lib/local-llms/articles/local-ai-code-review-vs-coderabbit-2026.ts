@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Local AI Code Review vs. CodeRabbit: Is DIY Worth It?',
     seoTitle: 'Local AI Code Review vs CodeRabbit: DIY vs SaaS (2026)',
@@ -439,6 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Lokale KI-Code-Review vs. CodeRabbit: Lohnt sich Selbstbau?',
     seoTitle: 'Lokale KI-Code-Review vs. CodeRabbit: DIY vs. SaaS (2026)',
@@ -891,6 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Revisión de código con IA local vs. CodeRabbit: ¿vale la pena hacerlo tú mismo?',
     seoTitle: 'Revisión de código con IA local vs CodeRabbit: DIY vs SaaS (2026)',
@@ -1325,6 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Revue de code IA locale vs CodeRabbit : le DIY en vaut-il la peine ?',
     seoTitle: 'Revue de code IA locale vs CodeRabbit : DIY vs SaaS (2026)',
@@ -1759,6 +1763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'ローカルAIコードレビュー vs CodeRabbit：自作は割に合うか？',
     seoTitle: 'ローカルAIコードレビュー vs CodeRabbit：DIYかSaaSか（2026年）',
@@ -2193,6 +2198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '本地 AI 代码审查 vs CodeRabbit：自己动手值得吗？',
     seoTitle: '本地 AI 代码审查 vs CodeRabbit：DIY 还是 SaaS（2026）',
@@ -2627,6 +2633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'Revisão de código com IA local vs. CodeRabbit: vale a pena fazer você mesmo?',
     seoTitle: 'Revisão de código com IA local vs CodeRabbit: DIY vs SaaS (2026)',
@@ -3061,6 +3068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: 'مراجعة الكود بالذكاء الاصطناعي المحلي مقابل CodeRabbit: هل يستحق القيام بها بنفسك؟',
     seoTitle: 'مراجعة الكود بالذكاء الاصطناعي المحلي مقابل CodeRabbit (2026)',
@@ -3495,6 +3503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
+    designSkin: 'hub',
     theme: 'Tools & Interfaces',
     title: '로컬 AI 코드 리뷰 대 CodeRabbit: 직접 구축할 가치가 있을까?',
     seoTitle: '로컬 AI 코드 리뷰 대 CodeRabbit: DIY 대 SaaS (2026)',

@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPNs and Local AI: What You Need to Know',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-en.webp',
@@ -245,6 +246,7 @@ schema: {
     },
     de: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPNs und lokale KI: Was du wissen musst',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-de.webp',
@@ -500,6 +502,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPN et IA locale : ce que vous devez savoir',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-fr.webp',
@@ -694,6 +697,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPNとローカルAI：知っておくべきこと',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-ja.webp',
@@ -888,6 +892,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPN 和本地 AI：你需要了解的内容',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-zh.webp',
@@ -1082,6 +1087,7 @@ schema: {
     },
     es: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPN y AI local: todo lo que necesitas saber',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-es.webp',
@@ -1318,6 +1324,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: '⁨VPN⁩ والذكاء الاصطناعي المحلي: كل ما تحتاج معرفته',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-ar.webp',
@@ -1554,6 +1561,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPN e IA local: tudo o que você precisa saber',
       heroImage: '/images/vpn-for-local-llm-users-overview-hero-pt.webp',
@@ -1735,6 +1743,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'annual',
+      designSkin: 'hub',
       theme: 'Privacy & Business',
       title: 'VPN과 로컬 AI: 알아야 할 모든 것',
     heroImage: '/images/vpn-for-local-llm-users-overview-hero-ko.webp',

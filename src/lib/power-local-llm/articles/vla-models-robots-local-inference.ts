@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-en.webp',
     title: 'Running LLMs and VLA Models On-Robot 2026: What Fits, What Doesn\'t',
@@ -299,6 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-de.webp',
     title: 'LLMs und VLA-Modelle On-Robot 2026: Was passt, was nicht',
@@ -592,6 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-fr.webp',
     title: 'LLM et modèles VLA embarqués sur robot 2026 : ce qui tient, ce qui ne tient pas',
@@ -885,6 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-ja.webp',
     title: 'ロボット搭載LLM・VLAモデル 2026：何が載り、何が載らないか',
@@ -1178,6 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-zh.webp',
     title: '2026年机器人端LLM与VLA模型：哪些行得通，哪些行不通',
@@ -1471,6 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-es.webp',
     title: 'LLM y modelos VLA a bordo de robots 2026: qué encaja y qué no',
@@ -1764,6 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-pt.webp',
     title: 'LLMs e modelos VLA embarcados em robôs 2026: o que cabe, o que não cabe',
@@ -2057,6 +2064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-ar.webp',
     title: 'تشغيل نماذج LLM وVLA على متن الروبوتات 2026: ما يناسب وما لا يناسب',
@@ -2350,6 +2358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
+    designSkin: 'hub',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/vla-models-robots-local-inference-hero-ko.webp',
     title: '2026년 로봇 탑재형 LLM·VLA 모델: 무엇이 맞고 무엇이 맞지 않는가',

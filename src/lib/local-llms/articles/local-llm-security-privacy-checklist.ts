@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: 'Getting Started',
       title: 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
       seoTitle: 'Local LLM Security 2026: 12-Point Checklist (Under 10 Min)',
@@ -366,6 +367,7 @@ schema: {
     },
 
   es: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Lista de Verificación de Seguridad y Privacidad para LLMs Locales: 12 Pasos para una Configuración Segura',
     seoTitle: 'Seguridad de LLMs locales 2026: checklist de 12 pasos',
@@ -688,6 +690,7 @@ schema: {
   },
 
   ar: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'قائمة التحقق من الأمان والخصوصية لنماذج ⁨LLM⁩ المحلية: ⁨12⁩ خطوة لإعداد آمن',
     seoTitle: 'أمان ⁨LLM⁩ المحلي ⁨2026⁩: قائمة من ⁨12⁩ خطوة في ⁨10⁩ دقائق',
@@ -1010,6 +1013,7 @@ schema: {
   },
 
   pt: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Lista de Verificação de Segurança e Privacidade para LLMs Locais: 12 Passos para uma Configuração Segura',
     seoTitle: 'Segurança de LLMs locais 2026: checklist de 12 passos',
@@ -1129,6 +1133,7 @@ schema: {
   },
 
   de: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Checkliste für Sicherheit und Datenschutz bei lokalen LLMs: 12 Schritte zu einem sicheren Setup',
     seoTitle: 'Lokale LLM-Sicherheit 2026: 12-Punkte-Checkliste',
@@ -1384,6 +1389,7 @@ schema: {
   },
 
   fr: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'Liste de Contrôle Sécurité et Confidentialité des LLM Locaux : 12 Étapes pour une Configuration Sûre',
     seoTitle: 'Sécurité LLM local 2026 : checklist en 12 étapes',
@@ -1594,6 +1600,7 @@ schema: {
   },
 
   ja: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: 'ローカルLLMセキュリティ&プライバシーチェックリスト：12ステップで安全なセットアップを実現',
     seoTitle: 'ローカルLLMセキュリティ2026：12項目チェックリスト',
@@ -1827,6 +1834,7 @@ schema: {
   },
 
   zh: {
+    designSkin: 'hub',
     theme: 'Getting Started',
     title: '本地LLM安全与隐私检查清单：12个步骤实现安全设置',
     seoTitle: '本地LLM安全2026：12步检查清单（10分钟搞定）',
@@ -2093,6 +2101,7 @@ schema: {
   },
   ko: {
       freshness_tier: 'semi_annual',
+      designSkin: 'hub',
       theme: '시작하기',
       title: '로컬 LLM 보안 및 개인정보 체크리스트: 안전한 설정을 위한 12단계',
       seoTitle: '데이터를 안전하게 보호하십시오: 로컬 LLM 보안 가이드 2026',
