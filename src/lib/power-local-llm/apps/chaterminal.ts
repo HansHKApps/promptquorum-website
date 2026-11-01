@@ -16,8 +16,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'chaterminal',
   name: 'Mobile LM Server',
-  categories: ['general-chat-clients', 'api-servers', 'inference-engines'],
+  categories: ['general-chat-clients', 'inference-engines'],
   interfaces: ['mobile'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'hybrid', // inference runs on the phone, but the listing advertises optional cloud offload ("hybrid AI routing"), built-in online search and ad serving
   platforms: ['android'], // Google Play only, Android 7.0+; no iOS or desktop build found
   worksWith: ['llama.cpp', 'LiteRT-LM', 'OpenAI-compatible clients', 'Ollama-compatible clients'],

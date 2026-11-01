@@ -13,7 +13,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'web-search-mcp',
   name: 'web-search-mcp',
-  categories: ['agent-frameworks'],
+  categories: ['mcp-servers-skills', 'agent-frameworks'],
   interfaces: ['cli', 'plugin'],
   locality: 'hybrid', // self-hosted MCP server, but it fetches live results from external search engines rather than running fully offline, verified 2026-09-18
   platforms: ['mac', 'win', 'linux'], // README: requires Node.js 18+/npm 8+, documents install paths for all three OSes, verified 2026-09-18

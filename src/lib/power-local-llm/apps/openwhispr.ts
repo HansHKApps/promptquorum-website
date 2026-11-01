@@ -14,7 +14,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'openwhispr',
   name: 'OpenWhispr',
-  categories: ['speech-to-text'],
+  categories: ['dictation', 'meeting-notes', 'speech-to-text'],
   interfaces: ['desktop', 'mobile'],
   locality: 'hybrid', // user chooses per mode: on-device models (no audio transmitted per the privacy policy), own API key, or OpenWhispr Cloud (audio sent to its API/providers, not stored)
   platforms: ['mac', 'win', 'linux', 'ios'],

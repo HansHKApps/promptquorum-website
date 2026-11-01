@@ -20,7 +20,12 @@ const CHIP_CLASS: Record<string, { idle: string; active: string }> = {
   'voice-audio': { idle: 'border-cat-voice-audio-edge bg-cat-voice-audio-tint', active: 'border-cat-voice-audio bg-cat-voice-audio' },
   'images-video': { idle: 'border-cat-images-video-edge bg-cat-images-video-tint', active: 'border-cat-images-video bg-cat-images-video' },
   'train-operate': { idle: 'border-cat-train-operate-edge bg-cat-train-operate-tint', active: 'border-cat-train-operate bg-cat-train-operate' },
-  'other-niches': { idle: 'border-cat-other-niches-edge bg-cat-other-niches-tint', active: 'border-cat-other-niches bg-cat-other-niches' },
+  'industry-domain': { idle: 'border-cat-industry-domain-edge bg-cat-industry-domain-tint', active: 'border-cat-industry-domain bg-cat-industry-domain' },
+  'agents-automation': { idle: 'border-cat-agents-automation-edge bg-cat-agents-automation-tint', active: 'border-cat-agents-automation bg-cat-agents-automation' },
+  'documents-research': { idle: 'border-cat-documents-research-edge bg-cat-documents-research-tint', active: 'border-cat-documents-research bg-cat-documents-research' },
+  'photos-cameras-home': { idle: 'border-cat-photos-cameras-home-edge bg-cat-photos-cameras-home-tint', active: 'border-cat-photos-cameras-home bg-cat-photos-cameras-home' },
+  'llmops-security': { idle: 'border-cat-llmops-security-edge bg-cat-llmops-security-tint', active: 'border-cat-llmops-security bg-cat-llmops-security' },
+  'hardware-edge': { idle: 'border-cat-hardware-edge-edge bg-cat-hardware-edge-tint', active: 'border-cat-hardware-edge bg-cat-hardware-edge' },
   'at-the-edge': { idle: 'border-cat-at-the-edge-edge bg-cat-at-the-edge-tint', active: 'border-cat-at-the-edge bg-cat-at-the-edge' },
 }
 

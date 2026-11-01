@@ -11,8 +11,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ollitert',
   name: 'OlliteRT',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['mobile'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['android'],
   worksWith: null,

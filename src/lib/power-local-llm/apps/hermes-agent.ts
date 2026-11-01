@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'hermes-agent',
   name: 'Hermes Agent',
-  categories: ['autonomous-agents'],
+  categories: ['personal-assistants', 'autonomous-agents'],
   interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'linux'],

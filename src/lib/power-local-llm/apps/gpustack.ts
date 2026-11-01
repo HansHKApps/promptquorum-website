@@ -13,7 +13,7 @@ export const app: ToolRecord = {
   slug: 'gpustack',
   name: 'GPUStack',
   reviewSlug: 'gpustack-review', // dedicated PromptQuorum review — added 2026-09-12
-  categories: ['runtimes-managers'],
+  categories: ['distributed-inference', 'runtimes-managers'],
   interfaces: ['web', 'cli'],
   locality: 'local',
   platforms: ['linux', 'win', 'mac'],

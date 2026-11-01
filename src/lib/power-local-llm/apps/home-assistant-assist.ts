@@ -16,7 +16,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'home-assistant-assist',
   name: 'Home Assistant Assist',
-  categories: ['realtime-voice-agents', 'personal-assistants'],
+  categories: ['smart-home-ai', 'voice-assistants', 'realtime-voice-agents', 'personal-assistants'],
   interfaces: ['web', 'mobile'],
   locality: 'hybrid', // fully local pipeline documented (Whisper/Speech-to-Phrase, Piper, Wyoming); Home Assistant Cloud STT/TTS and OpenAI agents are optional cloud routes
   platforms: ['linux', 'web', 'ios', 'android'], // Home Assistant OS / Container serve a web UI; companion apps on Android and iOS; HAOS also runs in VMs on macOS/Windows hosts

@@ -8,8 +8,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'llama-cpp',
   name: 'llama.cpp',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

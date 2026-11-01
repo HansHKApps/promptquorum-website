@@ -8,8 +8,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'lm-studio',
   name: 'LM Studio',
-  categories: ['general-chat-clients', 'runtimes-managers', 'api-servers'],
+  categories: ['general-chat-clients', 'runtimes-managers'],
   interfaces: ['desktop'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

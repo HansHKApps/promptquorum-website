@@ -7,7 +7,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'vane',
   name: 'Vane (formerly Perplexica)',
-  categories: ['local-search', 'rag-frameworks'],
+  categories: ['search-deep-research', 'rag-frameworks', 'local-search'],
   interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'farfalle',
   name: 'Farfalle',
-  categories: ['local-search'],
+  categories: ['search-deep-research', 'local-search'],
   interfaces: ['web', 'cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

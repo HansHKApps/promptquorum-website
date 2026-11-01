@@ -12,7 +12,7 @@ export const app: ToolRecord = {
   categories: ['vector-databases'],
   interfaces: ['cli', 'library'],
   locality: 'local', // fully self-hostable OSS under Apache-2.0; Chroma Cloud is a separate managed offering, verified 2026-09-18
-  platforms: null, // ships as a Python/JS library plus a server binary, deployable on any host OS
+  platforms: ['selfhosted'], // researched 2026-11-01 — docs.trychroma.com getting-started: `docker run chromadb/chroma` client-server mode; pip install lists no OSes
   worksWith: ['LangChain', 'LlamaIndex'],
   engine: 'library',
   license: 'Apache-2.0',

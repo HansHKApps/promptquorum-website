@@ -19,7 +19,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'acdsee-photo-studio-ultimate',
   name: 'ACDSee Photo Studio Ultimate 2027',
-  categories: ['editing-upscaling', 'vision-ocr'],
+  categories: ['photo-libraries', 'editing-upscaling', 'vision-ocr'],
   interfaces: ['desktop'], // Windows desktop program; a separate product, Photo Studio for Mac, exists
   locality: 'hybrid', // ACDSee: core AI features run locally; AI Image Generation, Generative Fill, Generative Edit and AI Remove use ACDSee's cloud
   platforms: ['win'], // Windows 10 (64-bit) and Windows 11; Mac not supported by this product (product page, 2026-10-30)

@@ -16,8 +16,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'llama-app',
   name: 'Llama (llama.app)',
-  categories: ['runtimes-managers', 'api-servers'],
+  categories: ['runtimes-managers'],
   interfaces: ['desktop'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local', // models run on the user's own machine through llama.cpp; downloads and update checks use the network
   platforms: ['mac', 'win'], // Mac (Apple silicon, macOS 15+ per the Homebrew cask) and Windows 11 (x64 and ARM64); Linux gets the CLI only
   worksWith: ['llama.cpp', 'Hugging Face', 'OpenAI SDKs', 'Tailscale'],

@@ -218,6 +218,7 @@ const DIR_UI = {
   groupCategory: { en: 'Category', de: 'Kategorie', fr: 'Catégorie', ja: 'カテゴリー', zh: '类别', es: 'Categoría', pt: 'Categoria', ar: 'الفئة', ko: '카테고리' },
   groupInterface: { en: 'Interface', de: 'Schnittstelle', fr: 'Interface', ja: 'インターフェース', zh: '界面', es: 'Interfaz', pt: 'Interface', ar: 'الواجهة', ko: '인터페이스' },
   groupPrice: { en: 'Price', de: 'Preis', fr: 'Prix', ja: '価格', zh: '价格', es: 'Precio', pt: 'Preço', ar: 'السعر', ko: '가격' },
+  groupApi: { en: 'API', de: 'API', fr: 'API', ja: 'API', zh: 'API', es: 'API', pt: 'API', ar: 'API', ko: 'API' },
   groupMcp: { en: 'MCP support', de: 'MCP-Unterstützung', fr: 'Prise en charge MCP', ja: 'MCP対応', zh: 'MCP支持', es: 'Compatibilidad con MCP', pt: 'Compatibilidade com MCP', ar: 'دعم MCP', ko: 'MCP 지원' },
   // --- Install effort (ToolRecord.installEffort): how hard it is to get the tool running ---
   groupInstall: { en: 'Installation', de: 'Installation', fr: 'Installation', ja: 'インストール', zh: '安装方式', es: 'Instalación', pt: 'Instalação', ar: 'التثبيت', ko: '설치' },
@@ -306,6 +307,7 @@ const DIR_UI = {
   priceFree: { en: 'Free', de: 'Kostenlos', fr: 'Gratuit', ja: '無料', zh: '免费', es: 'Gratis', pt: 'Grátis', ar: 'مجاني', ko: '무료' },
   priceFreemium: { en: 'Freemium', de: 'Freemium', fr: 'Freemium', ja: 'フリーミアム', zh: '免费增值', es: 'Freemium', pt: 'Freemium', ar: 'مجاني جزئيًا', ko: '프리미엄(일부 유료)' },
   pricePaid: { en: 'Paid', de: 'Kostenpflichtig', fr: 'Payant', ja: '有料', zh: '付费', es: 'De pago', pt: 'Pago', ar: 'مدفوع', ko: '유료' },
+  apiExposed: { en: 'Serves an API', de: 'Stellt eine API bereit', fr: 'Expose une API', ja: 'APIを提供', zh: '提供 API', es: 'Ofrece una API', pt: 'Oferece uma API', ar: 'يوفّر واجهة API', ko: 'API 제공' },
   mcpSupported: { en: 'Supports MCP', de: 'Unterstützt MCP', fr: 'Prend en charge MCP', ja: 'MCP対応', zh: '支持MCP', es: 'Compatible con MCP', pt: 'Compatível com MCP', ar: 'يدعم MCP', ko: 'MCP 지원' },
 
   // --- StatsBar ---

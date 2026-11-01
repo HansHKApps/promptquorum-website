@@ -11,7 +11,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'dreamserver',
   name: 'DreamServer',
-  categories: ['runtimes-managers', 'agent-frameworks'],
+  categories: ['one-click-installers', 'runtimes-managers', 'agent-frameworks'],
   interfaces: ['cli', 'web'],
   locality: 'local',
   platforms: ['linux', 'win', 'mac'], // Linux (NVIDIA + AMD), Windows via WSL2, macOS Apple Silicon — verified 2026-09-18

@@ -14,7 +14,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'searxng',
   name: 'SearXNG',
-  categories: ['local-search'],
+  categories: ['search-deep-research', 'local-search'],
   interfaces: ['web'],
   locality: 'hybrid', // the metasearch engine runs on your own machine, but each query is forwarded to the upstream search engines (docs: "mixing your queries with searches on other platforms")
   platforms: ['linux', 'mac', 'win'], // delivered as a container image (Docker or Podman) plus install scripts; the docs page does not list host operating systems, so this is an inference from the container route

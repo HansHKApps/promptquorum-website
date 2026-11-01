@@ -1298,26 +1298,13 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
   }
 }
 
-import { CATEGORY_GROUP_LABEL, type CategoryGroupKey } from './apps/categories'
+import { CATEGORY_GROUP_LABEL_I18N, type CategoryGroupKey } from './apps/categories'
 
-// Translated names of the 7 top-level app categories (the homepage chips, the comparison tool and
-// the review-page block). Order: run-serve, chat-assistants, code-development, knowledge-retrieval,
-// voice-audio, images-video, train-operate.
-const GROUP_KEYS: CategoryGroupKey[] = ['run-serve', 'chat-assistants', 'code-development', 'knowledge-retrieval', 'voice-audio', 'images-video', 'train-operate', 'at-the-edge', 'other-niches']
-const GROUP_LABELS: Record<string, string[]> = {
-  de: ['Ausführen & Bereitstellen', 'Chat & Assistenten', 'Code & Entwicklung', 'Wissen & Retrieval', 'Sprache & Audio', 'Bilder & Video', 'Training & Betrieb', 'An der Grenze', 'Sonstiges & Nischen'],
-  fr: ['Exécution & serveur', 'Chat & assistants', 'Code & développement', 'Connaissances & recherche', 'Voix & audio', 'Images & vidéo', 'Entraînement & exploitation', 'À la pointe', 'Autres et niches'],
-  es: ['Ejecutar y servir', 'Chat y asistentes', 'Código y desarrollo', 'Conocimiento y recuperación', 'Voz y audio', 'Imágenes y vídeo', 'Entrenamiento y operación', 'En la frontera', 'Otros y nichos'],
-  ja: ['実行・サーバー', 'チャット＆アシスタント', 'コード＆開発', 'ナレッジ＆検索', '音声＆オーディオ', '画像＆動画', 'トレーニング＆運用', '最前線', 'その他＆ニッチ'],
-  zh: ['运行与服务', '聊天与助手', '代码与开发', '知识与检索', '语音与音频', '图像与视频', '训练与运维', '前沿探索', '其他与细分'],
-  pt: ['Executar e servir', 'Chat e assistentes', 'Código e desenvolvimento', 'Conhecimento e recuperação', 'Voz e áudio', 'Imagens e vídeo', 'Treinamento e operação', 'Na fronteira', 'Outros e nichos'],
-  ar: ['التشغيل والخدمة', 'الدردشة والمساعدون', 'البرمجة والتطوير', 'المعرفة والاسترجاع', 'الصوت والكلام', 'الصور والفيديو', 'التدريب والتشغيل', 'على الحافة', 'أخرى ومجالات متخصصة'],
-  ko: ['실행·서빙', '채팅·어시스턴트', '코드·개발', '지식·검색', '음성·오디오', '이미지·영상', '학습·운영', '최전선', '기타·틈새'],
-}
-
+// Translated names of the top-level app groups (homepage chips, comparison tool, review-page block).
+// The labels live in apps/categories.ts (CATEGORY_GROUP_LABEL_I18N) so every surface shares one source.
 export function groupLabel(group: CategoryGroupKey, lang: Language | string): string {
-  const labels = GROUP_LABELS[lang]
-  return labels ? labels[GROUP_KEYS.indexOf(group)] : CATEGORY_GROUP_LABEL[group]
+  const labels = CATEGORY_GROUP_LABEL_I18N[group]
+  return labels[lang as Language] ?? labels.en
 }
 
 export function compareStrings(lang: Language | string): CompareStrings {

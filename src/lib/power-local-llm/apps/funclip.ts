@@ -6,10 +6,10 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'funclip',
   name: 'FunClip',
-  categories: ['editing-upscaling', 'speech-to-text'],
+  categories: ['video-editing', 'speech-to-text', 'editing-upscaling'],
   interfaces: ['web', 'cli'],
   locality: 'local',
-  platforms: null, // cross-platform Python/Gradio app; specific OS support not enumerated in docs, not independently verified — 2026-09-18
+  platforms: ['web'], // researched 2026-11-01 — github.com/modelscope/FunClip: local Gradio web UI; OS support not stated
   worksWith: ['FunASR', 'Qwen', 'DeepSeek'],
   engine: 'builtin',
   license: 'MIT',

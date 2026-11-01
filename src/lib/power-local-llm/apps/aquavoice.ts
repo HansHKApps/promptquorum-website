@@ -9,7 +9,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'aquavoice',
   name: 'AquaVoice',
-  categories: ['speech-to-text'],
+  categories: ['dictation', 'speech-to-text'],
   interfaces: ['desktop'],
   locality: 'cloud',
   platforms: ['mac', 'win', 'ios', 'android'],

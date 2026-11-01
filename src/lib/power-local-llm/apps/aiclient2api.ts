@@ -9,8 +9,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'aiclient2api',
   name: 'AIClient2API',
-  categories: ['routers-gateways', 'api-servers'],
+  categories: ['routers-gateways'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'], // Node.js-based proxy, cross-platform — verified 2026-09-18
   worksWith: ['Gemini CLI', 'OpenAI API', 'Claude API', 'Codex', 'Kiro', 'Antigravity', 'Grok'],

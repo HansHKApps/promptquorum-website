@@ -21,6 +21,7 @@ import { getListingFreshness, getAppActivity } from './staleness'
 // names — kept identical across locales, matching ToolCard.tsx's own map.
 const PLATFORM_LABEL: Record<string, string> = {
   mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
+  selfhosted: 'Docker / self-hosted', rpi: 'Raspberry Pi',
 }
 
 export function ToolTable({

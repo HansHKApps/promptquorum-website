@@ -6,7 +6,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'local-deep-research',
   name: 'Local Deep Research',
-  categories: ['autonomous-agents', 'local-search'],
+  categories: ['search-deep-research', 'autonomous-agents', 'local-search'],
   interfaces: ['web', 'cli', 'library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

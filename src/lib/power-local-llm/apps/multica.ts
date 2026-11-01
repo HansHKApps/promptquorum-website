@@ -7,7 +7,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'multica',
   name: 'multica',
-  categories: ['autonomous-agents', 'agent-frameworks'],
+  categories: ['multi-agent-orchestration', 'autonomous-agents', 'agent-frameworks'],
   interfaces: ['web', 'desktop', 'cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

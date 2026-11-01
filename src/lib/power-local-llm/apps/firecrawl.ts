@@ -10,7 +10,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'firecrawl',
   name: 'Firecrawl',
-  categories: ['sdks-libraries'],
+  categories: ['web-scraping-for-ai', 'sdks-libraries'],
   interfaces: ['library', 'cli', 'web'], // REST API + Python/Node.js/Go/Rust/Java/Elixir SDKs + CLI + hosted dashboard, verified 2026-10-17
   locality: 'hybrid', // self-hostable core, but the hosted API and its Fire-engine proxy/rendering layer are cloud, verified 2026-10-17
   platforms: ['web', 'linux', 'mac', 'win'], // hosted API on any OS; self-hosting via Docker Compose, verified 2026-10-17

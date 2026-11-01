@@ -17,7 +17,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'perfect-memory',
   name: 'Perfect Memory AI',
-  categories: ['personal-assistants', 'local-search', 'speech-to-text'],
+  categories: ['local-search', 'meeting-notes', 'personal-assistants', 'speech-to-text'],
   interfaces: ['desktop'],
   locality: 'hybrid', // recording, OCR, speech recognition and storage are on-device; AI answers are local only if you point it at Ollama, LM Studio or Jan, otherwise the built-in AI goes via the maker's server to OpenAI (privacy policy 2026-06-30)
   platforms: ['mac', 'win'], // Windows 10/11 (MSI or Microsoft Store); macOS 14 or later on Apple silicon (DMG)

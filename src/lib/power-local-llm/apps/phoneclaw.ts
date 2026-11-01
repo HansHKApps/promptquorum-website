@@ -11,7 +11,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'phoneclaw',
   name: 'PhoneClaw',
-  categories: ['autonomous-agents'],
+  categories: ['computer-browser-agents', 'autonomous-agents'],
   interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac'],

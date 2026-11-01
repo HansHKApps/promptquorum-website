@@ -12,7 +12,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'parlor',
   name: 'Parlor',
-  categories: ['realtime-voice-agents', 'personal-assistants'],
+  categories: ['realtime-voice-agents', 'voice-assistants', 'personal-assistants'],
   interfaces: ['web', 'cli'],
   locality: 'local',
   platforms: ['mac', 'linux'], // README: "macOS with Apple Silicon, or Linux with a supported GPU" — no Windows support, verified 2026-09-18

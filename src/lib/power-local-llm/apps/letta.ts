@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'letta',
   name: 'Letta (formerly MemGPT)',
-  categories: ['agent-frameworks', 'sdks-libraries'],
+  categories: ['agent-memory', 'agent-frameworks', 'sdks-libraries'],
   interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

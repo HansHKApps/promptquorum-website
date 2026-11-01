@@ -11,7 +11,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'longmemory',
   name: 'LongMemory',
-  categories: ['embeddings-indexing', 'rag-frameworks'],
+  categories: ['agent-memory', 'embeddings-indexing', 'rag-frameworks'],
   interfaces: ['cli', 'library', 'web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

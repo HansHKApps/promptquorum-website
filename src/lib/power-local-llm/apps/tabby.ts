@@ -8,8 +8,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'tabby',
   name: 'Tabby',
-  categories: ['code-assistants-ide-plugins', 'api-servers'],
+  categories: ['code-assistants-ide-plugins'],
   interfaces: ['cli', 'plugin'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'vLLM', 'OpenAI API'],

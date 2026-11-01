@@ -13,8 +13,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ollama-local-ai',
   name: 'Ollama Local AI',
-  categories: ['general-chat-clients', 'api-servers', 'routers-gateways'],
+  categories: ['general-chat-clients', 'routers-gateways'],
   interfaces: ['mobile'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'hybrid', // runs GGUF models on-device (embedded llama.cpp) AND can route to self-hosted Ollama / llama.cpp servers and cloud APIs (OpenAI, Anthropic, NVIDIA NIM, Hugging Face)
   platforms: ['android'],
   worksWith: ['Ollama', 'llama.cpp', 'OpenAI API', 'Anthropic API', 'NVIDIA NIM', 'Hugging Face'],

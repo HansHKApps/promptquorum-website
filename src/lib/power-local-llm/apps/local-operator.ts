@@ -17,7 +17,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'local-operator',
   name: 'Local Operator',
-  categories: ['autonomous-agents'],
+  categories: ['computer-browser-agents', 'autonomous-agents'],
   interfaces: ['desktop', 'cli'],
   locality: 'hybrid', // runtime + files local; model local (Ollama etc.) or hosted (Radient Pass / own API keys) — site privacy section
   platforms: ['mac', 'win', 'linux'],

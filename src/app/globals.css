@@ -64,9 +64,24 @@
     --cat-at-the-edge: 24 70% 42%;
     --cat-at-the-edge-tint: 24 85% 96%;
     --cat-at-the-edge-edge: 24 60% 78%;
-    --cat-other-niches: 210 60% 38%;
-    --cat-other-niches-tint: 210 70% 96%;
-    --cat-other-niches-edge: 210 45% 78%;
+    --cat-industry-domain: 210 60% 38%;
+    --cat-industry-domain-tint: 210 70% 96%;
+    --cat-industry-domain-edge: 210 45% 78%;
+    --cat-agents-automation: 100 55% 38%;
+    --cat-agents-automation-tint: 100 70% 96%;
+    --cat-agents-automation-edge: 100 45% 78%;
+    --cat-documents-research: 195 55% 38%;
+    --cat-documents-research-tint: 195 70% 96%;
+    --cat-documents-research-edge: 195 45% 78%;
+    --cat-photos-cameras-home: 290 55% 38%;
+    --cat-photos-cameras-home-tint: 290 70% 96%;
+    --cat-photos-cameras-home-edge: 290 45% 78%;
+    --cat-llmops-security: 50 55% 38%;
+    --cat-llmops-security-tint: 50 70% 96%;
+    --cat-llmops-security-edge: 50 45% 78%;
+    --cat-hardware-edge: 240 55% 38%;
+    --cat-hardware-edge-tint: 240 70% 96%;
+    --cat-hardware-edge-edge: 240 45% 78%;
 
     /* Hub template palette (src/components/hub-template). Solid = tile fill, tint = card fill,
        ink = text on tint, edge = border on tint. Hex on purpose: values are the approved

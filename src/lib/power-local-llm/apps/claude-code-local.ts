@@ -12,8 +12,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'claude-code-local',
   name: 'claude-code-local',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac'],
   worksWith: ['Claude Code'],

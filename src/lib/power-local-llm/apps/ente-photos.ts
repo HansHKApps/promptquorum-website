@@ -21,7 +21,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ente-photos',
   name: 'Ente Photos',
-  categories: ['vision-ocr'],
+  categories: ['photo-libraries', 'vision-ocr'],
   interfaces: ['mobile', 'desktop', 'web'],
   locality: 'hybrid', // photos are stored end-to-end encrypted in Ente's cloud; face recognition, magic search and OCR run on the device (help pages, 2026-10-24)
   platforms: ['ios', 'android', 'mac', 'win', 'linux'], // plus a web app (photos.ente.com) that has no machine-learning features, not claimed as a platform here

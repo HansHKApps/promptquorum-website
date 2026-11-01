@@ -12,7 +12,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'handy',
   name: 'Handy',
-  categories: ['speech-to-text'],
+  categories: ['dictation', 'speech-to-text'],
   interfaces: ['desktop'],
   locality: 'local', // README + privacy policy: speech recognition runs on the device; optional post-processing can call user-chosen cloud providers; update checks and model downloads use the network
   platforms: ['mac', 'win', 'linux'],

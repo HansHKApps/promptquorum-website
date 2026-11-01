@@ -10,7 +10,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'exo',
   name: 'exo',
-  categories: ['inference-engines'],
+  categories: ['distributed-inference', 'inference-engines'],
   interfaces: ['cli'],
   locality: 'local',
   platforms: ['mac', 'linux'],

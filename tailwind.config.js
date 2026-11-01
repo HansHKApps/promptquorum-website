@@ -30,7 +30,12 @@ module.exports = {
 					'images-video': { DEFAULT: 'hsl(var(--cat-images-video))', tint: 'hsl(var(--cat-images-video-tint))', edge: 'hsl(var(--cat-images-video-edge))' },
 					'train-operate': { DEFAULT: 'hsl(var(--cat-train-operate))', tint: 'hsl(var(--cat-train-operate-tint))', edge: 'hsl(var(--cat-train-operate-edge))' },
 					'at-the-edge': { DEFAULT: 'hsl(var(--cat-at-the-edge))', tint: 'hsl(var(--cat-at-the-edge-tint))', edge: 'hsl(var(--cat-at-the-edge-edge))' },
-					'other-niches': { DEFAULT: 'hsl(var(--cat-other-niches))', tint: 'hsl(var(--cat-other-niches-tint))', edge: 'hsl(var(--cat-other-niches-edge))' },
+					'industry-domain': { DEFAULT: 'hsl(var(--cat-industry-domain))', tint: 'hsl(var(--cat-industry-domain-tint))', edge: 'hsl(var(--cat-industry-domain-edge))' },
+					'agents-automation': { DEFAULT: 'hsl(var(--cat-agents-automation))', tint: 'hsl(var(--cat-agents-automation-tint))', edge: 'hsl(var(--cat-agents-automation-edge))' },
+					'documents-research': { DEFAULT: 'hsl(var(--cat-documents-research))', tint: 'hsl(var(--cat-documents-research-tint))', edge: 'hsl(var(--cat-documents-research-edge))' },
+					'photos-cameras-home': { DEFAULT: 'hsl(var(--cat-photos-cameras-home))', tint: 'hsl(var(--cat-photos-cameras-home-tint))', edge: 'hsl(var(--cat-photos-cameras-home-edge))' },
+					'llmops-security': { DEFAULT: 'hsl(var(--cat-llmops-security))', tint: 'hsl(var(--cat-llmops-security-tint))', edge: 'hsl(var(--cat-llmops-security-edge))' },
+					'hardware-edge': { DEFAULT: 'hsl(var(--cat-hardware-edge))', tint: 'hsl(var(--cat-hardware-edge-tint))', edge: 'hsl(var(--cat-hardware-edge-edge))' },
 				},
 				// Hub template palette — tokens live in src/app/globals.css (--hub-*).
 				hub: {

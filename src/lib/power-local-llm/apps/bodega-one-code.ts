@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'bodega-one-code',
   name: 'Bodega One Code',
-  categories: ['code-assistants-ide-plugins'],
+  categories: ['ai-code-editors', 'code-assistants-ide-plugins'],
   interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

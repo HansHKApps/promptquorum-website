@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'easy-diffusion',
   name: 'Easy Diffusion',
-  categories: ['image-generation'],
+  categories: ['image-generation', 'one-click-installers'],
   interfaces: ['web', 'desktop'], // installer sets up a local server whose browser UI you open, verified 2026-10-17
   locality: 'local',
   platforms: ['linux', 'mac', 'win'],

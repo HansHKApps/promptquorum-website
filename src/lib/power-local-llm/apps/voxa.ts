@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'voxa',
   name: 'Voxa',
-  categories: ['realtime-voice-agents', 'personal-assistants'],
+  categories: ['voice-assistants', 'realtime-voice-agents', 'personal-assistants'],
   interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'], // askvoxa.dev: Windows (WebView2), macOS (WKWebView), Linux (WebKitGTK 4.1) — verified 2026-09-20

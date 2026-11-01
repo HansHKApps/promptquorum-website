@@ -11,7 +11,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'localmcp',
   name: 'LocalMCP',
-  categories: ['personal-assistants', 'local-search'],
+  categories: ['mcp-servers-skills', 'local-search', 'personal-assistants'],
   interfaces: ['desktop'],
   locality: 'local', // runs a local MCP server on the Mac; the listing says it sends no content to a developer backend, but passes content to the MCP client the user connects, which may be cloud-based — read 2026-10-24
   platforms: ['mac'], // Mac App Store, macOS 15.0 or later; no iPhone/iPad/Windows build listed

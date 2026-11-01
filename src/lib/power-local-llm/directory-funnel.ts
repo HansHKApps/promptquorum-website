@@ -138,6 +138,8 @@ const OS_LABEL: Record<OSKey, string> = {
   watchos: 'watchOS',
   android: 'Android',
   web: 'Web',
+  selfhosted: 'Docker / self-hosted',
+  rpi: 'Raspberry Pi',
 }
 
 /** First OS (in this order) the tool does not list — used for "Not on X?". */

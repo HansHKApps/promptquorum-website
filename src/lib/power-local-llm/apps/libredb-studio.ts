@@ -9,7 +9,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'libredb-studio',
   name: 'LibreDB Studio',
-  categories: ['code-assistants-ide-plugins'],
+  categories: ['chat-with-data', 'code-assistants-ide-plugins'],
   interfaces: ['web', 'desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'], // README: "browser, phone, Windows, MacOS, Linux desktop"; self-hosted via Docker, npx, Helm, Homebrew, winget, deb/rpm/snap; native desktop app only as Linux AppImage/deb in the 1.0.0 release assets — read 2026-10-23

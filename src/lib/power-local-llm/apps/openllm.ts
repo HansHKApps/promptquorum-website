@@ -8,10 +8,11 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'openllm',
   name: 'OpenLLM',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'hybrid', // fully self-hostable inference server, but BentoML markets it primarily as a path to a cloud-deployed OpenAI-compatible endpoint (BentoCloud), verified 2026-09-18
-  platforms: null, // Python package/CLI, deployable on any host OS
+  platforms: ['selfhosted'], // researched 2026-11-01 — github.com/bentoml/OpenLLM README: Docker/Kubernetes cloud deployment; pip install lists no OSes
   worksWith: ['Llama', 'DeepSeek', 'Qwen'],
   engine: 'builtin', // runs open-source LLMs directly as an OpenAI-compatible API endpoint, verified 2026-09-18
   license: 'Apache-2.0',

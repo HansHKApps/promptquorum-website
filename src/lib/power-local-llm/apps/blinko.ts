@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   categories: ['notes-integrations'],
   interfaces: ['web', 'mobile'],
   locality: 'hybrid', // self-hosted notes store with local LibSQL vector storage, but RAG search calls a configured external LLM/embedding provider by default, verified 2026-09-18
-  platforms: null, // self-hosted web app runnable via Docker on mac/win/linux, accessible from mobile browsers — no dedicated native mobile build
+  platforms: ['mac', 'win', 'linux', 'android', 'selfhosted'], // researched 2026-11-01 — README (github.com/blinkospace/blinko): Tauri builds for macOS, Windows, Android, Linux + documented Docker deployment; iOS/web not stated
   worksWith: ['OpenAI API'],
   engine: 'external',
   license: 'GPL-3.0',

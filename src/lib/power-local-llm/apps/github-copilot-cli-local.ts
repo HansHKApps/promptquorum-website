@@ -13,7 +13,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'github-copilot-cli-local',
   name: 'GitHub Copilot CLI',
-  categories: ['code-assistants-ide-plugins'],
+  categories: ['terminal-coding-agents', 'code-assistants-ide-plugins'],
   interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

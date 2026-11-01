@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'page-assist',
   name: 'Page Assist',
-  categories: ['general-chat-clients'],
+  categories: ['browser-sidebars', 'general-chat-clients'],
   interfaces: ['web'],
   locality: 'local',
   platforms: ['web'],

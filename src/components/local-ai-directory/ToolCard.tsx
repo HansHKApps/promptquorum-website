@@ -37,7 +37,12 @@ const GROUP_ACCENT: Record<CategoryGroupKey, { wash: string; bar: string; chip: 
   'voice-audio': { wash: 'border-hub-rose-edge bg-gradient-to-b from-hub-rose-tint to-white hover:border-hub-rose', bar: 'bg-hub-rose', chip: 'bg-hub-rose-tint text-hub-rose-ink', avatar: 'bg-hub-rose-tint text-hub-rose-ink' },
   'images-video': { wash: 'border-hub-orchid-edge bg-gradient-to-b from-hub-orchid-tint to-white hover:border-hub-orchid', bar: 'bg-hub-orchid', chip: 'bg-hub-orchid-tint text-hub-orchid-ink', avatar: 'bg-hub-orchid-tint text-hub-orchid-ink' },
   'train-operate': { wash: 'border-hub-amber-edge bg-gradient-to-b from-hub-amber-tint to-white hover:border-hub-amber', bar: 'bg-hub-amber', chip: 'bg-hub-amber-tint text-hub-amber-ink', avatar: 'bg-hub-amber-tint text-hub-amber-ink' },
-  'other-niches': { wash: 'border-hub-blue-edge bg-gradient-to-b from-hub-blue-tint to-white hover:border-hub-blue', bar: 'bg-hub-blue', chip: 'bg-hub-blue-tint text-hub-blue-ink', avatar: 'bg-hub-blue-tint text-hub-blue-ink' },
+  'industry-domain': { wash: 'border-hub-blue-edge bg-gradient-to-b from-hub-blue-tint to-white hover:border-hub-blue', bar: 'bg-hub-blue', chip: 'bg-hub-blue-tint text-hub-blue-ink', avatar: 'bg-hub-blue-tint text-hub-blue-ink' },
+  'agents-automation': { wash: 'border-hub-olive-edge bg-gradient-to-b from-hub-olive-tint to-white hover:border-hub-olive', bar: 'bg-hub-olive', chip: 'bg-hub-olive-tint text-hub-olive-ink', avatar: 'bg-hub-olive-tint text-hub-olive-ink' },
+  'documents-research': { wash: 'border-hub-cyan-edge bg-gradient-to-b from-hub-cyan-tint to-white hover:border-hub-cyan', bar: 'bg-hub-cyan', chip: 'bg-hub-cyan-tint text-hub-cyan-ink', avatar: 'bg-hub-cyan-tint text-hub-cyan-ink' },
+  'photos-cameras-home': { wash: 'border-hub-rose-edge bg-gradient-to-b from-hub-rose-tint to-white hover:border-hub-rose', bar: 'bg-hub-rose', chip: 'bg-hub-rose-tint text-hub-rose-ink', avatar: 'bg-hub-rose-tint text-hub-rose-ink' },
+  'llmops-security': { wash: 'border-hub-amber-edge bg-gradient-to-b from-hub-amber-tint to-white hover:border-hub-amber', bar: 'bg-hub-amber', chip: 'bg-hub-amber-tint text-hub-amber-ink', avatar: 'bg-hub-amber-tint text-hub-amber-ink' },
+  'hardware-edge': { wash: 'border-hub-indigo-edge bg-gradient-to-b from-hub-indigo-tint to-white hover:border-hub-indigo', bar: 'bg-hub-indigo', chip: 'bg-hub-indigo-tint text-hub-indigo-ink', avatar: 'bg-hub-indigo-tint text-hub-indigo-ink' },
   'at-the-edge': { wash: 'border-hub-orange-edge bg-gradient-to-b from-hub-orange-tint to-white hover:border-hub-orange', bar: 'bg-hub-orange', chip: 'bg-hub-orange-tint text-hub-orange-ink', avatar: 'bg-hub-orange-tint text-hub-orange-ink' },
 }
 
@@ -66,6 +71,7 @@ const MCP_BADGE = 'bg-hub-violet-tint text-hub-violet-ink border-hub-violet-edge
 // names — kept identical across locales rather than "translated".
 const PLATFORM_LABEL: Record<string, string> = {
   mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
+  selfhosted: 'Docker / self-hosted', rpi: 'Raspberry Pi',
 }
 
 type ToolArticleEntry = { url: string; tier: 'about' | 'mentioned' }

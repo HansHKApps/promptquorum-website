@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'crewai',
   name: 'CrewAI',
-  categories: ['agent-frameworks'],
+  categories: ['agent-frameworks', 'multi-agent-orchestration'],
   interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

@@ -6,6 +6,7 @@ import type { ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
 import type { FilterOptionCount, FilterState, HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { computeCompatibilityVerdict, hardwareSortValue } from './hardware'
 import { CATEGORY_GROUPS, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
+import type { OSKey } from '@/lib/power-local-llm/apps/types'
 
 // Display order for the default "Category" sort — top-level group order, then
 // subcategory order within each group, both taken from CATEGORY_GROUPS (the
@@ -13,6 +14,10 @@ import { CATEGORY_GROUPS, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/
 // main category before any user interaction changes the sort.
 const CATEGORY_GROUP_ORDER = CATEGORY_GROUPS.map((g) => g.key)
 const CATEGORY_SUB_ORDER = CATEGORY_GROUPS.flatMap((g) => g.subs)
+
+// Every platform the directory knows, in display order. All of them are always offered in the Platform filter,
+// with a count of 0 when no tool lists it yet (owner rule: an empty option is information, not clutter).
+export const ALL_PLATFORMS: readonly OSKey[] = ['mac', 'win', 'linux', 'ios', 'ipados', 'android', 'watchos', 'web', 'selfhosted', 'rpi']
 
 /** True for a value that means "not yet researched" — never offered as a selectable filter option. */
 function isUnresearched(value: unknown): boolean {
@@ -36,6 +41,7 @@ function fieldForGroup(app: ToolRecord, group: keyof FilterState): string | stri
     case 'interface': return app.interfaces
     case 'price': return app.price
     case 'mcp': return app.mcpSupport ? 'mcp' : null
+    case 'api': return app.exposesApi ? 'api' : null
     case 'install': return app.installEffort ?? null
   }
 }
@@ -92,9 +98,9 @@ export interface FilterQuery {
 // machines are Windows or Linux (a Mac is its own "apple" machine type). Web
 // apps run in any browser, so they fit every machine.
 const MACHINE_PLATFORMS: Record<MachineType, readonly string[]> = {
-  apple: ['mac', 'web'],
-  dgpu: ['win', 'linux', 'web'],
-  cpu: ['win', 'linux', 'web'],
+  apple: ['mac', 'web', 'selfhosted'],
+  dgpu: ['win', 'linux', 'web', 'selfhosted'],
+  cpu: ['win', 'linux', 'web', 'selfhosted'],
   ios: ['ios', 'ipados', 'watchos', 'web'],
   android: ['android', 'web'],
 }
@@ -146,6 +152,10 @@ export function countsForGroup(apps: ToolRecord[], query: FilterQuery, group: ke
       counts.set(v, (counts.get(v) ?? 0) + 1)
     }
   }
+  // Taxonomy-backed groups list EVERY known value (count 0 included), in taxonomy order — empty categories and
+  // platforms stay visible so the overview shows the whole map, not just what is stocked today.
+  if (group === 'category') return CATEGORY_SUB_ORDER.map((value) => ({ value, count: counts.get(value) ?? 0 }))
+  if (group === 'platforms') return ALL_PLATFORMS.map((value) => ({ value, count: counts.get(value) ?? 0 }))
   return Array.from(counts.entries())
     .map(([value, count]) => ({ value, count }))
     .sort((a, b) => b.count - a.count || a.value.localeCompare(b.value))

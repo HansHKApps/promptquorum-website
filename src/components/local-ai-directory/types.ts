@@ -60,6 +60,7 @@ export interface FilterState {
   interface: Set<string>
   price: Set<string>
   mcp: Set<string>
+  api: Set<string>
   install: Set<string>
 }
 
@@ -73,6 +74,7 @@ export function emptyFilterState(): FilterState {
     interface: new Set(),
     price: new Set(),
     mcp: new Set(),
+    api: new Set(),
     install: new Set(),
   }
 }
