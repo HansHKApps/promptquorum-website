@@ -72,7 +72,7 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit }: Props) {
           <div className="pointer-events-none absolute -right-10 -top-12 h-40 w-40 rounded-full bg-[hsl(265_70%_70%/0.25)] blur-2xl" aria-hidden="true" />
           <button
             onClick={onClose}
-            className="absolute end-2 top-2 flex h-10 w-10 items-center justify-center rounded-full text-[hsl(var(--primary))] hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[hsl(var(--primary))] md:end-3 md:top-3 md:h-9 md:w-9"
+            className="absolute end-2 top-2 z-10 flex h-10 w-10 items-center justify-center rounded-full text-[hsl(var(--primary))] hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[hsl(var(--primary))] md:end-3 md:top-3 md:h-9 md:w-9"
             aria-label={t.close}
           >
             <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
