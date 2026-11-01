@@ -1,4 +1,4 @@
-export type AskErrorCode = 'disabled' | 'unavailable' | 'rate' | 'limit' | 'refused' | 'failed'
+export type AskErrorCode = 'disabled' | 'unavailable' | 'rate' | 'limit' | 'refused' | 'failed' | 'rephrase'
 
 export interface ChatMsg {
   id: string

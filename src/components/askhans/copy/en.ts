@@ -37,6 +37,7 @@ export const copy: AskCopy = {
   errors: {
     unavailable: 'Ask Hans is currently unreachable.',
     failed: 'Unfortunately, that did not work. Please try again.',
+    rephrase: 'I could not answer that one. Please try rephrasing your question or splitting it into smaller questions.',
     rate: 'A lot of questions have just been asked. Please wait a moment and try again.',
     limit: (n: number) => `The limit of ${n} messages for this visit has been reached.`,
     refused: 'Unfortunately, I cannot say anything about that. Please feel free to ask something else.',

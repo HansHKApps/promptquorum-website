@@ -10,7 +10,7 @@ export const ASK_HANS_LIMITS = {
   rateLimitRequests: 8,
   rateLimitWindow: '1 m' as const,
   /** Max MCP tool calls the AI may make for one answer. */
-  maxToolCallsPerAnswer: 6,
+  maxToolCallsPerAnswer: 8,
   /** Max characters of one tool result handed to the AI (keeps token cost bounded). */
   maxToolResultChars: 14_000,
   /** Max output tokens for one AI turn. */

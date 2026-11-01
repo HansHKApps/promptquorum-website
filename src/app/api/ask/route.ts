@@ -33,7 +33,7 @@ const limiter = new Ratelimit({
 const MAX_HISTORY_MESSAGES = ASK_HANS_LIMITS.maxMessagesPerVisit * 2
 const MAX_ASSISTANT_CHARS = 8000
 
-type ErrorCode = 'disabled' | 'unavailable' | 'rate' | 'limit' | 'refused' | 'failed'
+type ErrorCode = 'disabled' | 'unavailable' | 'rate' | 'limit' | 'refused' | 'failed' | 'rephrase'
 
 function ndjson(stream: (send: (obj: unknown) => void) => Promise<void>): Response {
   const encoder = new TextEncoder()
@@ -90,7 +90,10 @@ function parseBody(raw: unknown): { visitId: string; lang: string; messages: Cha
 
 function classify(err: unknown): ErrorCode {
   if (err instanceof Anthropic.APIError) {
-    // Out of credit comes back as a 400 "credit balance is too low"; overloaded/rate as 429/529; all → friendly fallback.
+    // Out of credit comes back as a 400 "credit balance is too low"; overloaded/rate as 429/529: those are outages.
+    // Any other 400-class rejection means the service is up but refused this particular request → ask to rephrase.
+    const rejected = err.status === 400 || err.status === 413 || err.status === 422
+    if (rejected && !/credit balance|billing|api[_ ]key|authentication/i.test(err.message)) return 'rephrase'
     return 'unavailable'
   }
   return 'failed'
@@ -154,7 +157,10 @@ export async function POST(req: NextRequest): Promise<Response> {
             model,
             max_tokens: ASK_HANS_LIMITS.maxOutputTokens,
             system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
-            tools: budgetSpent ? tools.filter((t) => t.name === SET_CATEGORY_TOOL) : tools,
+            // The tools list must stay identical on every turn: the API binds earlier thinking blocks to it and
+            // rejects the request (400) if it changes. Once the budget is spent, forbid tool use via tool_choice.
+            tools,
+            ...(budgetSpent ? { tool_choice: { type: 'none' as const } } : {}),
             messages,
             output_config: { effort: 'low' },
           },

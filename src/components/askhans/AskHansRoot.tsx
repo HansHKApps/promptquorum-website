@@ -282,7 +282,7 @@ export function AskHansRoot() {
                   <p className="text-[13px]">{m.error === 'limit' ? tx.errors.limit(ASK_HANS_LIMITS.maxMessagesPerVisit) : tx.errors[m.error]}</p>
                   {!readOnly && (
                     <div className="mt-2 flex flex-wrap gap-2">
-                      {m.error !== 'refused' && m.error !== 'limit' && (
+                      {m.error !== 'refused' && m.error !== 'limit' && m.error !== 'rephrase' && (
                         <button type="button" onClick={() => retry(convId, m.id)} className="rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary">
                           {tx.retry}
                         </button>
