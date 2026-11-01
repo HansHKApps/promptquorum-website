@@ -1034,6 +1034,11 @@
     "urlSlug": "reins-review",
     "url": "/power-local-llm/reins-review"
   },
+  "openvoiceos": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openvoiceos-review",
+    "url": "/power-local-llm/openvoiceos-review"
+  },
   "hillnote": {
     "cluster": "power-local-llm",
     "urlSlug": "hillnote-review",

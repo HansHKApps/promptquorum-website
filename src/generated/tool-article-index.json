@@ -10195,6 +10195,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Open Voice OS": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openvoiceos-review",
+        "title": "Open Voice OS Review: Open-Source Voice Assistant for Linux and Raspberry Pi",
+        "url": "/power-local-llm/openvoiceos-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Hillnote": {
     "articles": [
       {
