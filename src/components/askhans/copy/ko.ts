@@ -72,6 +72,15 @@ export const copy: AskCopy = {
     thanks: '피드백을 주셔서 감사합니다!',
     error: '피드백을 보내지 못했습니다. 나중에 다시 시도해 주십시오.',
   },
+  panel: {
+    relatedHeading: "질문과 관련된 내용",
+    panelHide: "주제 패널 숨기기",
+    panelShow: "주제 패널 표시",
+    historyHeading: "이전 대화",
+    historyHide: "이전 대화 숨기기",
+    historyShow: (n: number) => `이전 대화 표시 (${n})`,
+  },
+
   search: {
     badge: "신규 · 베타",
     headline: "질문해 주십시오 — Ask Hans가 답변합니다",

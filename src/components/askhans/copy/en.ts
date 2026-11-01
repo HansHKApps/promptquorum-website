@@ -72,6 +72,15 @@ export const copy: AskCopy = {
     thanks: 'Thank you for your feedback!',
     error: 'The feedback could not be sent. Please try again later.',
   },
+  panel: {
+    relatedHeading: "Matching your question",
+    panelHide: "Hide topic panel",
+    panelShow: "Show topic panel",
+    historyHeading: "Earlier conversations",
+    historyHide: "Hide earlier conversations",
+    historyShow: (n: number) => `Show earlier conversations (${n})`,
+  },
+
   search: {
     badge: "New · Beta",
     headline: "Ask a question — Ask Hans answers",

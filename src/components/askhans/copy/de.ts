@@ -72,6 +72,15 @@ export const copy: AskCopy = {
     thanks: 'Danke für Ihr Feedback!',
     error: 'Das Feedback konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.',
   },
+  panel: {
+    relatedHeading: "Passend zu Ihrer Frage",
+    panelHide: "Themenbereich ausblenden",
+    panelShow: "Themenbereich einblenden",
+    historyHeading: "Frühere Gespräche",
+    historyHide: "Frühere Gespräche ausblenden",
+    historyShow: (n: number) => `Frühere Gespräche anzeigen (${n})`,
+  },
+
   search: {
     badge: "Neu · Beta",
     headline: "Stelle deine Frage – Ask Hans antwortet",

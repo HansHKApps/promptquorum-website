@@ -85,6 +85,16 @@ export interface AskCopy {
   consentNo: string
   consentQuestionLabel: string
 
+  /** side panel with the topic picture + links, and the strip of earlier conversations */
+  panel: {
+    relatedHeading: string
+    panelHide: string
+    panelShow: string
+    historyHeading: string
+    historyHide: string
+    historyShow: (n: number) => string
+  }
+
   /** header search box that hands the question to Ask Hans */
   search: {
     /** small pill, e.g. "New · Beta" */

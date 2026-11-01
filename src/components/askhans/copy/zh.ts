@@ -72,6 +72,15 @@ export const copy: AskCopy = {
     thanks: '感谢您的反馈！',
     error: '反馈未能发送。请您稍后重试。',
   },
+  panel: {
+    relatedHeading: "与您的问题相关",
+    panelHide: "隐藏主题面板",
+    panelShow: "显示主题面板",
+    historyHeading: "以往的对话",
+    historyHide: "隐藏以往的对话",
+    historyShow: (n: number) => `显示以往的对话（${n}）`,
+  },
+
   search: {
     badge: "新功能 · 测试版",
     headline: "提出问题——Ask Hans 为您解答",

@@ -14,6 +14,7 @@ import { useAskCopy, useAskLang } from './copy'
 import { FeedbackBar } from './FeedbackBar'
 import { AskIcon } from './icons'
 import { Markdown } from './markdown'
+import { relatedLinks } from './links'
 import { MarketingPanel } from './MarketingPanel'
 import { clearConsent, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
 import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
@@ -55,6 +56,8 @@ export function AskHansRoot() {
   const [streaming, setStreaming] = useState(false)
   const [draft, setDraft] = useState('')
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
+  const [showPanel, setShowPanel] = useState(true)
+  const [showHistory, setShowHistory] = useState(true)
   const visitId = useRef('')
   const logoRef = useRef<HTMLButtonElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -258,6 +261,8 @@ export function AskHansRoot() {
 
   const showLogo = !ui.open && (ui.everClosed || conversations.some((c) => c.messages.length > 0))
   const categoryKey = active?.category ?? DEFAULT_CATEGORY_KEY
+  const related = relatedLinks(active?.messages ?? [])
+  const dateFmt = new Intl.DateTimeFormat(lang === 'pt' ? 'pt-BR' : lang, { dateStyle: 'medium', timeStyle: 'short' })
   const atLimit = userCount(conversations) >= ASK_HANS_LIMITS.maxMessagesPerVisit
 
   const renderMessage = (convId: string, m: ChatMsg, readOnly = false) => {
@@ -306,8 +311,35 @@ export function AskHansRoot() {
           onNew={startNew}
           newDisabled={streaming || !active || active.messages.length === 0}
         >
-          <div className="grid min-h-0 flex-1" style={isDesktop ? { gridTemplateColumns: `${ASK_HANS_SPLIT.chatFr}fr ${ASK_HANS_SPLIT.panelFr}fr` } : undefined}>
+          <div className="grid min-h-0 flex-1" style={isDesktop && showPanel ? { gridTemplateColumns: `${ASK_HANS_SPLIT.chatFr}fr ${ASK_HANS_SPLIT.panelFr}fr` } : undefined}>
             <div className="flex min-h-0 min-w-0 flex-col">
+              {(previous.length > 0 || !showPanel) && !consentOpen && (
+                <div className="flex flex-shrink-0 items-center justify-between gap-2 border-b border-border bg-white px-3 py-1">
+                  {previous.length > 0 ? (
+                    <button
+                      type="button"
+                      onClick={() => setShowHistory((v) => !v)}
+                      aria-expanded={showHistory}
+                      className="flex items-center gap-1.5 rounded-md px-1.5 py-1 text-[12px] font-medium text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                    >
+                      <AskIcon name="History" className="h-3.5 w-3.5" />
+                      {showHistory ? tx.panel.historyHide : tx.panel.historyShow(previous.length)}
+                    </button>
+                  ) : (
+                    <span />
+                  )}
+                  {!showPanel && (
+                    <button
+                      type="button"
+                      onClick={() => setShowPanel(true)}
+                      className="flex items-center gap-1.5 rounded-md px-1.5 py-1 text-[12px] font-medium text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                    >
+                      <AskIcon name="PanelRightOpen" className="h-3.5 w-3.5 rtl:-scale-x-100" />
+                      {tx.panel.panelShow}
+                    </button>
+                  )}
+                </div>
+              )}
               <div
                 ref={scrollRef}
                 onScroll={(e) => {
@@ -322,49 +354,49 @@ export function AskHansRoot() {
                   <>
                     <WelcomeBox onPick={(q) => submit(q)} disabled={streaming || atLimit} />
 
-                    {previous.map((c) => {
-                      const open = expanded.has(c.id)
-                      const firstQ = c.messages.find((m) => m.role === 'user')?.content ?? ''
-                      return (
-                        <section key={c.id} className="rounded-xl border border-border bg-white">
-                          <button
-                            type="button"
-                            aria-expanded={open}
-                            onClick={() =>
-                              setExpanded((s) => {
-                                const n = new Set(s)
-                                if (n.has(c.id)) n.delete(c.id)
-                                else n.add(c.id)
-                                return n
-                              })
-                            }
-                            className="flex w-full items-center gap-2 px-3 py-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
-                          >
-                            <AskIcon name="ChevronDown" className={`h-4 w-4 flex-shrink-0 text-muted-foreground transition-transform ${open ? '' : '-rotate-90'}`} />
-                            <span className="min-w-0 flex-1">
-                              <span className="block text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.previousChat(c.messages.length)}</span>
-                              <span className="block truncate text-[13px] text-foreground">{firstQ}</span>
-                            </span>
-                          </button>
-                          {open && (
-                            <div className="border-t border-border p-3">
-                              <ul className="space-y-3">{c.messages.map((m) => renderMessage(c.id, m, true))}</ul>
-                              <button
-                                type="button"
-                                disabled={streaming}
-                                onClick={() => {
-                                  setActiveId(c.id)
-                                  setExpanded(new Set())
-                                }}
-                                className="mt-3 rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary disabled:opacity-50"
-                              >
-                                {tx.continueChat}
-                              </button>
-                            </div>
-                          )}
-                        </section>
-                      )
-                    })}
+                    {previous.length > 0 && showHistory && (
+                      <section aria-label={tx.panel.historyHeading} className="space-y-2">
+                        <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.panel.historyHeading}</p>
+                        <ul className="-mx-1 flex snap-x gap-2 overflow-x-auto px-1 pb-1">
+                          {previous.map((c) => {
+                            const open = expanded.has(c.id)
+                            const firstQ = c.messages.find((m) => m.role === 'user')?.content ?? ''
+                            const topic = tx.categories[c.category]?.label ?? ''
+                            return (
+                              <li key={c.id} className="w-56 flex-shrink-0 snap-start">
+                                <button
+                                  type="button"
+                                  aria-expanded={open}
+                                  onClick={() => setExpanded(open ? new Set() : new Set([c.id]))}
+                                  className={`flex h-full w-full flex-col items-start gap-0.5 rounded-xl border bg-white px-3 py-2 text-start shadow-sm transition-colors hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary ${open ? 'border-primary ring-1 ring-primary' : 'border-border'}`}
+                                >
+                                  <span className="text-[11px] font-semibold text-muted-foreground">{dateFmt.format(c.startedAt)}</span>
+                                  {topic && <span className="text-[11px] font-semibold uppercase tracking-wide text-primary">{topic}</span>}
+                                  <span className="line-clamp-2 text-[13px] leading-snug text-foreground">{firstQ}</span>
+                                  <span className="text-[11px] text-muted-foreground">{tx.previousChat(c.messages.length)}</span>
+                                </button>
+                              </li>
+                            )
+                          })}
+                        </ul>
+                        {previous.filter((c) => expanded.has(c.id)).map((c) => (
+                          <div key={c.id} className="rounded-xl border border-border bg-white p-3">
+                            <ul className="space-y-3">{c.messages.map((m) => renderMessage(c.id, m, true))}</ul>
+                            <button
+                              type="button"
+                              disabled={streaming}
+                              onClick={() => {
+                                setActiveId(c.id)
+                                setExpanded(new Set())
+                              }}
+                              className="mt-3 rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary disabled:opacity-50"
+                            >
+                              {tx.continueChat}
+                            </button>
+                          </div>
+                        ))}
+                      </section>
+                    )}
 
                     {active && active.messages.length > 0 && (
                       <ul role="log" aria-live="polite" aria-busy={streaming} className="space-y-3">
@@ -377,7 +409,7 @@ export function AskHansRoot() {
 
               {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && <FeedbackBar key={active.id} />}
 
-              {!isDesktop && <MarketingPanel variant="strip" categoryKey={categoryKey} onLinkClick={onLinkClick} />}
+              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={() => closeWindow(false)} onHide={() => setShowPanel(false)} />}
 
               <form
                 className="flex-shrink-0 border-t border-border bg-white p-2.5"
@@ -428,7 +460,7 @@ export function AskHansRoot() {
               </form>
             </div>
 
-            {isDesktop && <MarketingPanel variant="side" categoryKey={categoryKey} onLinkClick={onLinkClick} />}
+            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={() => closeWindow(false)} onHide={() => setShowPanel(false)} />}
           </div>
         </AskHansWindow>
       )}
