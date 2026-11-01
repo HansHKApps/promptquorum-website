@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "hillnote-review",
+        "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
+        "url": "/power-local-llm/hillnote-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/reins-review",
         "dateModified": "2026-10-30",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 335,
+    "totalCount": 336,
     "capped": true
   },
   "llama.cpp": {
@@ -9929,6 +9929,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "hillnote-review",
+        "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
+        "url": "/power-local-llm/hillnote-review",
+        "dateModified": "2026-11-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kai-9000-review",
         "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
         "url": "/power-local-llm/kai-9000-review",
@@ -9982,17 +9990,9 @@
         "url": "/local-llms/chatbox-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-mobile-review",
-        "title": "AnythingLLM Mobile Review: On-Device Chat + RAG",
-        "url": "/power-local-llm/anythingllm-mobile-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "FluidVoice": {
@@ -10185,6 +10185,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Hillnote": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "hillnote-review",
+        "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
+        "url": "/power-local-llm/hillnote-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Lyonesse": {
@@ -11802,6 +11816,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "hillnote-review",
+        "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
+        "url": "/power-local-llm/hillnote-review",
+        "dateModified": "2026-11-01",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -11864,17 +11886,9 @@
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "home-gallery-review",
-        "title": "Home-Gallery Review: Self-Hosted Photo Gallery With AI Search",
-        "url": "/power-local-llm/home-gallery-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 243,
+    "totalCount": 244,
     "capped": true
   },
   "Qdrant": {

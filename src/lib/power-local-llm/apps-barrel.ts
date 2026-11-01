@@ -273,6 +273,7 @@ import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_fullmoon } from './apps/fullmoon'
 import { app as app_reins } from './apps/reins'
+import { app as app_hillnote } from './apps/hillnote'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
@@ -559,6 +560,7 @@ export const localAiApps: ToolRecord[] = [
   app_murmur,
   app_fullmoon,
   app_reins,
+  app_hillnote,
   app_lyonesse,
   app_open_llm_vtuber,
   app_presenton,
