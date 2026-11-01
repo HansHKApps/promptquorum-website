@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 183,
+    "totalCount": 184,
     "capped": true
   },
   "vLLM": {
@@ -10230,6 +10230,20 @@
         "slug": "picoclaw-review",
         "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
         "url": "/power-local-llm/picoclaw-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Scrypted": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "scrypted-review",
+        "title": "Scrypted Review: Camera and NVR Platform with Local AI Options",
+        "url": "/power-local-llm/scrypted-review",
         "dateModified": "2026-11-01",
         "tier": "about"
       }

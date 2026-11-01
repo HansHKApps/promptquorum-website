@@ -277,6 +277,7 @@ import { app as app_reins } from './apps/reins'
 import { app as app_hillnote } from './apps/hillnote'
 import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
+import { app as app_scrypted } from './apps/scrypted'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
@@ -567,6 +568,7 @@ export const localAiApps: ToolRecord[] = [
   app_hillnote,
   app_llm_vision,
   app_picoclaw,
+  app_scrypted,
   app_lyonesse,
   app_open_llm_vtuber,
   app_presenton,
