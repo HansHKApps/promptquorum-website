@@ -8,8 +8,8 @@ export const copy: AskCopy = {
   restore: '恢复窗口大小',
   newChat: '新对话',
   newChatLabel: '开始新对话',
-  logoLabel: '打开 Ask Hans（双击）',
-  logoTitle: 'Ask Hans — 双击打开',
+  logoLabel: '打开 Ask Hans',
+  logoTitle: 'Ask Hans — 点击打开',
 
   welcomeTitle: '欢迎使用 Ask Hans，您的本地 AI 互动向导。',
   welcomeBody:
