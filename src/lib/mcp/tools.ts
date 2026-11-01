@@ -158,8 +158,14 @@ const QUESTION_STOP_WORDS = new Set([
   'cuál', 'cuáles', 'cómo', 'porque', 'puede', 'puedo', 'los', 'las', 'una', 'para', 'qué', 'qual', 'quais', 'como', 'pode', 'não',
 ])
 
-/** English phrasing of "what it cannot do" maps to the word the pages use. */
-const NEGATION = /\b(cannot|can't|can not|cant|unable|doesn't|does not|not (?:do|able|capable|possible)|never)\b/i
+/** Phrasing of "what it cannot do" in the site's Latin-script languages → the word the pages use for it. */
+const NEGATION_SYNONYMS: { test: RegExp; words: string[] }[] = [
+  { test: /\b(cannot|can't|can not|cant|unable|doesn't|does not|not (?:do|able|capable|possible)|never)\b/i, words: ['limitations', 'limits'] },
+  { test: /\b(nicht|kann\s+nicht|können\s+nicht|nie|niemals|unfähig)\b/i, words: ['einschränkungen', 'grenzen'] },
+  { test: /\b(ne\s+peu(?:t|vent)\s+pas|ne\s+sait\s+pas|incapable|impossible)\b/i, words: ['limites', 'limitations'] },
+  { test: /\b(no\s+pue(?:de|den)|incapaz|imposible)\b/i, words: ['limitaciones', 'límites'] },
+  { test: /\b(não\s+pode(?:m)?|incapaz|impossível)\b/i, words: ['limitações', 'limites'] },
+]
 
 function questionKeywords(query: string): string[] {
   const words = query
@@ -169,9 +175,8 @@ function questionKeywords(query: string): string[] {
     .map((w) => w.replace(/^['-]+|['-]+$/g, ''))
     .filter((w) => w.length >= 3 && !QUESTION_STOP_WORDS.has(w))
   const out = new Set(words)
-  if (NEGATION.test(query)) {
-    out.add('limitations')
-    out.add('limits')
+  for (const { test, words: extra } of NEGATION_SYNONYMS) {
+    if (test.test(query)) extra.forEach((w) => out.add(w))
   }
   return [...out].slice(0, 8)
 }
