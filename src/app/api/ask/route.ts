@@ -133,7 +133,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   const model = process.env.ASK_HANS_MODEL || ASK_HANS_DEFAULT_MODEL
   const client = new Anthropic({ maxRetries: 1, timeout: ASK_HANS_LIMITS.answerTimeoutMs })
   const tools = buildToolDefinitions()
-  const system = buildSystemPrompt()
+  const system = buildSystemPrompt(lang)
   const abort = AbortSignal.timeout(ASK_HANS_LIMITS.answerTimeoutMs)
 
   return ndjson(async (send) => {

@@ -8,7 +8,7 @@ import { useEffect, useId, useRef, useState, type PointerEvent as ReactPointerEv
 import { createPortal } from 'react-dom'
 import { Logo } from '@/components/Logo'
 import { ASK_HANS_WINDOW } from '@/lib/askhans/config'
-import { DE } from './copy'
+import { useAskCopy, ASK_HANS_CONTACT_EMAIL } from './copy'
 import { AskIcon } from './icons'
 import type { Rect } from './types'
 import { useIsDesktop } from './useIsDesktop'
@@ -61,6 +61,7 @@ interface Props {
 }
 
 export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggleMaximize, onNew, newDisabled, children }: Props) {
+  const tx = useAskCopy()
   const isDesktop = useIsDesktop()
   const titleId = useId()
   const ref = useRef<HTMLDivElement>(null)
@@ -158,6 +159,7 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
+        dir={tx.dir}
         tabIndex={-1}
         className={`fixed z-[100] flex flex-col overflow-hidden bg-white text-foreground shadow-2xl outline-none ${floating ? 'rounded-xl border border-border' : ''}`}
         style={floating ? { left: effective.x, top: effective.y, width: effective.w, height: effective.h } : { left: 0, top: 0, width: '100vw', height: '100dvh' }}
@@ -167,25 +169,25 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
             <Logo size={22} role="presentation" aria-hidden="true" />
           </span>
           <div className="min-w-0 flex-1">
-            <h1 id={titleId} className="truncate text-sm font-bold leading-tight">{DE.name}</h1>
-            <p className="truncate text-[11px] leading-tight text-muted-foreground">{DE.tagline}</p>
+            <h1 id={titleId} className="truncate text-sm font-bold leading-tight">{tx.name}</h1>
+            <p className="truncate text-[11px] leading-tight text-muted-foreground">{tx.tagline}</p>
           </div>
           <button
             type="button"
             onClick={onNew}
             disabled={newDisabled}
-            aria-label={DE.newChatLabel}
+            aria-label={tx.newChatLabel}
             className="flex items-center gap-1 rounded-lg border border-primary px-2.5 py-1.5 text-xs font-semibold text-primary hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-50"
           >
             <AskIcon name="Plus" className="h-3.5 w-3.5" />
-            {DE.newChat}
+            {tx.newChat}
           </button>
           {isDesktop && (
             <button
               type="button"
               onClick={onToggleMaximize}
-              aria-label={maximized ? DE.restore : DE.maximize}
-              title={maximized ? DE.restore : DE.maximize}
+              aria-label={maximized ? tx.restore : tx.maximize}
+              title={maximized ? tx.restore : tx.maximize}
               className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
             >
               <AskIcon name={maximized ? 'Minimize2' : 'Maximize2'} className="h-4 w-4" />
@@ -194,13 +196,24 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
           <button
             type="button"
             onClick={onClose}
-            aria-label={DE.close}
-            title={DE.close}
+            aria-label={tx.close}
+            title={tx.close}
             className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
           >
             <AskIcon name="X" className="h-4 w-4" />
           </button>
         </header>
+
+        <p className="flex flex-shrink-0 flex-wrap items-center justify-center gap-x-2 border-b border-border bg-secondary px-3 py-1 text-center text-[11px] leading-snug text-foreground">
+          <span>{tx.devNotice}</span>
+          <a
+            href={`mailto:${ASK_HANS_CONTACT_EMAIL}?subject=Ask%20Hans%20Feedback`}
+            aria-label={tx.contactLabel}
+            className="font-medium text-primary underline underline-offset-2"
+          >
+            {ASK_HANS_CONTACT_EMAIL}
+          </a>
+        </p>
 
         <div className="flex min-h-0 flex-1 flex-col">{children}</div>
 

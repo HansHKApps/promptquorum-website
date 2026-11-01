@@ -5,12 +5,13 @@
 // Conversations are kept in sessionStorage only; nothing is stored on the server.
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_FALLBACK_SEARCH_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION } from '@/lib/askhans/config'
+import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION } from '@/lib/askhans/config'
 import { DEFAULT_CATEGORY_KEY, type AskHansLink } from '@/lib/askhans/categories'
 import { AskHansLogo } from './AskHansLogo'
 import { AskHansWindow } from './AskHansWindow'
 import { ConsentNotice } from './ConsentNotice'
-import { DE } from './copy'
+import { useAskCopy, useAskLang } from './copy'
+import { FeedbackBar } from './FeedbackBar'
 import { AskIcon } from './icons'
 import { Markdown } from './markdown'
 import { MarketingPanel } from './MarketingPanel'
@@ -41,6 +42,8 @@ function toApiMessages(messages: ChatMsg[]): { role: 'user' | 'assistant'; conte
 const userCount = (cs: Conversation[]) => cs.reduce((n, c) => n + c.messages.filter((m) => m.role === 'user').length, 0)
 
 export function AskHansRoot() {
+  const tx = useAskCopy()
+  const lang = useAskLang()
   const isDesktop = useIsDesktop()
   const [ready, setReady] = useState(false)
   const [conversations, setConversations] = useState<Conversation[]>([])
@@ -112,7 +115,7 @@ export function AskHansRoot() {
       const conv = active ?? newConversation()
       const history = toApiMessages(conv.messages)
       const userMsg: ChatMsg = { id: uid(), role: 'user', content: text }
-      const asstMsg: ChatMsg = { id: uid(), role: 'assistant', content: '', pending: true, status: DE.thinking }
+      const asstMsg: ChatMsg = { id: uid(), role: 'assistant', content: '', pending: true, status: tx.thinking }
       if (active) patchConv(conv.id, (c) => ({ ...c, messages: [...c.messages, userMsg, asstMsg] }))
       else {
         setConversations((cs) => [...cs, { ...conv, messages: [userMsg, asstMsg] }])
@@ -123,12 +126,12 @@ export function AskHansRoot() {
 
       let acc = ''
       let category = conv.category
-      await streamAnswer({ visitId: visitId.current, lang: 'de', messages: [...history, { role: 'user', content: text }] }, (ev) => {
+      await streamAnswer({ visitId: visitId.current, lang, messages: [...history, { role: 'user', content: text }] }, (ev) => {
         if (ev.t === 'text') {
           acc += ev.v
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, content: acc, status: undefined }))
         } else if (ev.t === 'tool') {
-          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, status: DE.searching }))
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, status: tx.searching }))
         } else if (ev.t === 'category') {
           category = ev.v
           patchConv(conv.id, (c) => ({ ...c, category: ev.v }))
@@ -136,7 +139,7 @@ export function AskHansRoot() {
           const empty = !acc.trim()
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, ...(empty ? { error: 'failed' as AskErrorCode } : {}) }))
           if (!empty && consentValue?.value === 'yes') {
-            logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, lang: 'de' })
+            logEvent({ type: 'question', visitId: visitId.current, category: ev.category || category, tools: ev.tools, lang })
           }
         } else if (ev.t === 'error') {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, pending: false, status: undefined, error: ev.code }))
@@ -234,11 +237,6 @@ export function AskHansRoot() {
     closeWindow(false) // chat state is already saved; the visitor reopens it with the logo
   }
 
-  const searchInstead = (query: string) => {
-    closeWindow(false)
-    window.dispatchEvent(new CustomEvent(ASK_HANS_FALLBACK_SEARCH_EVENT, { detail: { query } }))
-  }
-
   const retry = (convId: string, msgId: string) => {
     const conv = conversations.find((c) => c.id === convId)
     if (!conv || streaming) return
@@ -276,15 +274,14 @@ export function AskHansRoot() {
               {m.pending && m.status && <p className="text-[13px] italic text-muted-foreground" role="status">{m.status}</p>}
               {m.error && (
                 <div className={m.content ? 'mt-2 border-t border-border pt-2' : ''}>
-                  <p className="text-[13px]">{m.error === 'limit' ? DE.errors.limit(ASK_HANS_LIMITS.maxMessagesPerVisit) : DE.errors[m.error]}</p>
+                  <p className="text-[13px]">{m.error === 'limit' ? tx.errors.limit(ASK_HANS_LIMITS.maxMessagesPerVisit) : tx.errors[m.error]}</p>
                   {!readOnly && (
                     <div className="mt-2 flex flex-wrap gap-2">
                       {m.error !== 'refused' && m.error !== 'limit' && (
                         <button type="button" onClick={() => retry(convId, m.id)} className="rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary">
-                          {DE.retry}
+                          {tx.retry}
                         </button>
                       )}
-                      {searchButton(convId, m.id)}
                     </div>
                   )}
                 </div>
@@ -293,19 +290,6 @@ export function AskHansRoot() {
           )}
         </div>
       </li>
-    )
-  }
-
-  // The normal-search fallback needs the question that preceded the failed answer.
-  const searchButton = (convId: string, msgId: string) => {
-    const conv = conversations.find((c) => c.id === convId)
-    const i = conv?.messages.findIndex((m) => m.id === msgId) ?? -1
-    const q = i > 0 ? conv?.messages[i - 1] : undefined
-    if (!q || q.role !== 'user') return null
-    return (
-      <button type="button" onClick={() => searchInstead(q.content)} className="rounded-md bg-primary px-2.5 py-1 text-xs font-semibold text-primary-foreground hover:opacity-90">
-        {DE.searchInstead}
-      </button>
     )
   }
 
@@ -358,7 +342,7 @@ export function AskHansRoot() {
                           >
                             <AskIcon name="ChevronDown" className={`h-4 w-4 flex-shrink-0 text-muted-foreground transition-transform ${open ? '' : '-rotate-90'}`} />
                             <span className="min-w-0 flex-1">
-                              <span className="block text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{DE.previousChat(c.messages.length)}</span>
+                              <span className="block text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.previousChat(c.messages.length)}</span>
                               <span className="block truncate text-[13px] text-foreground">{firstQ}</span>
                             </span>
                           </button>
@@ -374,7 +358,7 @@ export function AskHansRoot() {
                                 }}
                                 className="mt-3 rounded-md border border-primary px-2.5 py-1 text-xs font-semibold text-primary hover:bg-secondary disabled:opacity-50"
                               >
-                                {DE.continueChat}
+                                {tx.continueChat}
                               </button>
                             </div>
                           )}
@@ -391,6 +375,8 @@ export function AskHansRoot() {
                 )}
               </div>
 
+              {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && <FeedbackBar key={active.id} />}
+
               {!isDesktop && <MarketingPanel variant="strip" categoryKey={categoryKey} onLinkClick={onLinkClick} />}
 
               <form
@@ -401,7 +387,7 @@ export function AskHansRoot() {
                 }}
               >
                 <div className="flex items-end gap-2">
-                  <label htmlFor="askhans-input" className="sr-only">{DE.inputLabel}</label>
+                  <label htmlFor="askhans-input" className="sr-only">{tx.inputLabel}</label>
                   <textarea
                     id="askhans-input"
                     ref={inputRef}
@@ -409,7 +395,7 @@ export function AskHansRoot() {
                     rows={1}
                     maxLength={ASK_HANS_LIMITS.maxMessageChars + 200}
                     disabled={consentOpen || streaming || atLimit}
-                    placeholder={DE.inputPlaceholder}
+                    placeholder={tx.inputPlaceholder}
                     onChange={(e) => setDraft(e.target.value)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' && !e.shiftKey) {
@@ -422,20 +408,20 @@ export function AskHansRoot() {
                   <button
                     type="submit"
                     disabled={consentOpen || streaming || atLimit || !draft.trim()}
-                    aria-label={DE.send}
+                    aria-label={tx.send}
                     className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-40"
                   >
                     <AskIcon name="SendHorizontal" className="h-4 w-4" />
                   </button>
                 </div>
                 {draft.length > ASK_HANS_LIMITS.maxMessageChars && (
-                  <p className="mt-1 text-xs font-medium text-destructive" role="alert">{DE.errors.tooLong(ASK_HANS_LIMITS.maxMessageChars)} ({DE.charCount(draft.length, ASK_HANS_LIMITS.maxMessageChars)})</p>
+                  <p className="mt-1 text-xs font-medium text-destructive" role="alert">{tx.errors.tooLong(ASK_HANS_LIMITS.maxMessageChars)} ({tx.charCount(draft.length, ASK_HANS_LIMITS.maxMessageChars)})</p>
                 )}
                 <p className="mt-1.5 flex flex-wrap items-center justify-between gap-x-3 text-[11px] leading-snug text-muted-foreground">
-                  <span>{DE.aiNotice}</span>
+                  <span>{tx.aiNotice}</span>
                   {consent && !consentOpen && (
                     <button type="button" onClick={withdrawConsent} className="underline underline-offset-2 hover:text-foreground">
-                      {DE.withdraw}
+                      {tx.withdraw}
                     </button>
                   )}
                 </p>
