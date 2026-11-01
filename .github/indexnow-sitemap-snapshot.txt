@@ -74,6 +74,7 @@ https://www.promptquorum.com/frameworks/trace
 https://www.promptquorum.com/local-llms
 https://www.promptquorum.com/local-llms/70b-models-consumer-hardware
 https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026
+https://www.promptquorum.com/local-llms/amd-ryzen-ai-halo-local-ai-workstation
 https://www.promptquorum.com/local-llms/apple-on-device-ai-vs-local-llms
 https://www.promptquorum.com/local-llms/apple-silicon-local-llm-guide-2026
 https://www.promptquorum.com/local-llms/apple-silicon-m5-local-llm
@@ -125,11 +126,13 @@ https://www.promptquorum.com/local-llms/enterprise-gpu-server-buying-guide
 https://www.promptquorum.com/local-llms/eu-cloud-gpu-gdpr-2026
 https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs
 https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora
+https://www.promptquorum.com/local-llms/framework-desktop-local-ai-workstation
 https://www.promptquorum.com/local-llms/future-of-local-llms
 https://www.promptquorum.com/local-llms/galaxy-s26-local-ai-on-device-2026
 https://www.promptquorum.com/local-llms/galaxy-vs-iphone-on-device-ai-2026
 https://www.promptquorum.com/local-llms/gdpr-llm-risk-comparison-2026
 https://www.promptquorum.com/local-llms/glm-5-2-open-weights-frontier-2026
+https://www.promptquorum.com/local-llms/gmktec-evo-x2-local-ai-workstation
 https://www.promptquorum.com/local-llms/gpu-vs-ai-subscription-roi
 https://www.promptquorum.com/local-llms/gpu-vs-cpu-vs-apple-silicon
 https://www.promptquorum.com/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026
@@ -138,6 +141,7 @@ https://www.promptquorum.com/local-llms/how-much-unified-memory-for-local-llm
 https://www.promptquorum.com/local-llms/how-much-vram-local-llm
 https://www.promptquorum.com/local-llms/how-to-install-lm-studio
 https://www.promptquorum.com/local-llms/how-to-install-ollama
+https://www.promptquorum.com/local-llms/hp-z2-mini-g1a-local-ai-workstation
 https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm
 https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm
 https://www.promptquorum.com/local-llms/llm-quantization-explained
@@ -147,6 +151,7 @@ https://www.promptquorum.com/local-llms/lobechat-bigagi-nextchat-pageassist-chat
 https://www.promptquorum.com/local-llms/lobechat-review
 https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama
 https://www.promptquorum.com/local-llms/local-ai-code-review-vs-coderabbit
+https://www.promptquorum.com/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark
 https://www.promptquorum.com/local-llms/local-llm-commercial-license-guide-business
 https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026
 https://www.promptquorum.com/local-llms/local-llm-developer-stack
@@ -176,6 +181,7 @@ https://www.promptquorum.com/local-llms/m5-pro-max-llm-benchmarks-2026
 https://www.promptquorum.com/local-llms/mac-mini-m5-local-ai-server
 https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm
 https://www.promptquorum.com/local-llms/mcp-vs-api-explained
+https://www.promptquorum.com/local-llms/minisforum-ms-s1-max-local-ai-workstation
 https://www.promptquorum.com/local-llms/mlx-vs-ollama-vs-llama-cpp-mac
 https://www.promptquorum.com/local-llms/mobile-local-llms
 https://www.promptquorum.com/local-llms/mram-in-memory-computing-local-ai-2026
@@ -183,6 +189,7 @@ https://www.promptquorum.com/local-llms/multi-gpu-local-llms
 https://www.promptquorum.com/local-llms/multilingual-local-llms
 https://www.promptquorum.com/local-llms/multimodal-local-llms
 https://www.promptquorum.com/local-llms/nextchat-review
+https://www.promptquorum.com/local-llms/nvidia-dgx-spark-local-ai-workstation
 https://www.promptquorum.com/local-llms/ollama-command-guide
 https://www.promptquorum.com/local-llms/ollama-on-mac-apple-silicon-setup-2026
 https://www.promptquorum.com/local-llms/ollama-vs-lm-studio
@@ -241,7 +248,6 @@ https://www.promptquorum.com/power-local-llm/aiclient2api-review
 https://www.promptquorum.com/power-local-llm/aider-review
 https://www.promptquorum.com/power-local-llm/aiko-review
 https://www.promptquorum.com/power-local-llm/amd-gaia-review
-https://www.promptquorum.com/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation
 https://www.promptquorum.com/power-local-llm/anarlog-review
 https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide
 https://www.promptquorum.com/power-local-llm/anyllm-review
@@ -373,14 +379,12 @@ https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-
 https://www.promptquorum.com/power-local-llm/fluidvoice-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
 https://www.promptquorum.com/power-local-llm/foundry-local-review
-https://www.promptquorum.com/power-local-llm/framework-desktop-local-ai-workstation
 https://www.promptquorum.com/power-local-llm/frankly-ai-review
 https://www.promptquorum.com/power-local-llm/friedrichai-review
 https://www.promptquorum.com/power-local-llm/fullmoon-review
 https://www.promptquorum.com/power-local-llm/funclip-review
 https://www.promptquorum.com/power-local-llm/genva-review
 https://www.promptquorum.com/power-local-llm/github-copilot-cli-review
-https://www.promptquorum.com/power-local-llm/gmktec-evo-x2-local-ai-workstation
 https://www.promptquorum.com/power-local-llm/google-ai-edge-gallery-review
 https://www.promptquorum.com/power-local-llm/goose-review
 https://www.promptquorum.com/power-local-llm/gpt-engineer-review
@@ -394,11 +398,11 @@ https://www.promptquorum.com/power-local-llm/haplo-ai-review
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
 https://www.promptquorum.com/power-local-llm/hermes-agent-review
 https://www.promptquorum.com/power-local-llm/hilbertraum-review
+https://www.promptquorum.com/power-local-llm/hillnote-review
 https://www.promptquorum.com/power-local-llm/hiwaifu-review
 https://www.promptquorum.com/power-local-llm/home-assistant-assist-review
 https://www.promptquorum.com/power-local-llm/home-gallery-review
 https://www.promptquorum.com/power-local-llm/honey-llm-review
-https://www.promptquorum.com/power-local-llm/hp-z2-mini-g1a-local-ai-workstation
 https://www.promptquorum.com/power-local-llm/hyperlink-nexa-review
 https://www.promptquorum.com/power-local-llm/idefics-review
 https://www.promptquorum.com/power-local-llm/iimagine-desktop-review
@@ -461,7 +465,6 @@ https://www.promptquorum.com/power-local-llm/local-ai-image-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-mail-review
 https://www.promptquorum.com/power-local-llm/local-ai-video-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-workstation-build-guide
-https://www.promptquorum.com/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark
 https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet
 https://www.promptquorum.com/power-local-llm/local-deep-research-review
 https://www.promptquorum.com/power-local-llm/local-llm-app-alternatives
@@ -513,7 +516,6 @@ https://www.promptquorum.com/power-local-llm/metagpt-agnai-risuai-explained
 https://www.promptquorum.com/power-local-llm/metagpt-review
 https://www.promptquorum.com/power-local-llm/microsoft-agent-framework-review
 https://www.promptquorum.com/power-local-llm/milvus-review
-https://www.promptquorum.com/power-local-llm/minisforum-ms-s1-max-local-ai-workstation
 https://www.promptquorum.com/power-local-llm/mission-control-review
 https://www.promptquorum.com/power-local-llm/mlc-chat-review
 https://www.promptquorum.com/power-local-llm/mlc-llm-explained
@@ -533,7 +535,6 @@ https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/nanobot-review
 https://www.promptquorum.com/power-local-llm/nekoni-review
 https://www.promptquorum.com/power-local-llm/noema-review
-https://www.promptquorum.com/power-local-llm/nvidia-dgx-spark-local-ai-workstation
 https://www.promptquorum.com/power-local-llm/nvidia-g-assist-review
 https://www.promptquorum.com/power-local-llm/obscurify-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
