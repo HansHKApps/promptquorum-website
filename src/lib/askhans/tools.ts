@@ -32,6 +32,7 @@ import {
 import { ASK_HANS_CATEGORIES, isCategoryKey } from './categories'
 import { withConfidence } from './confidence'
 import { ASK_HANS_LIMITS } from './config'
+import { normalizePagePath } from './paths'
 
 const OS = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
 const LANG = z.string().optional().describe('Language code; defaults to the visitor\'s page language')
@@ -241,6 +242,22 @@ export interface ToolOutcome {
   isError: boolean
   /** set when the call was set_category with a valid key */
   category?: string
+  /** page path → page title, taken from the tool result (used for descriptive link cards) */
+  pages?: Record<string, string>
+}
+
+/** Walks a tool result and collects {url, title|name} pairs of PromptQuorum pages. */
+function collectPages(node: unknown, out: Record<string, string>, depth = 0): void {
+  if (depth > 6 || !node || typeof node !== 'object') return
+  if (Array.isArray(node)) {
+    for (const n of node) collectPages(n, out, depth + 1)
+    return
+  }
+  const o = node as Record<string, unknown>
+  const url = typeof o.url === 'string' ? o.url : null
+  const title = typeof o.title === 'string' ? o.title : typeof o.name === 'string' ? o.name : null
+  if (url && title && (url.startsWith('/') || /^https?:\/\/(?:www\.)?promptquorum\.com/i.test(url))) out[normalizePagePath(url)] = title.trim()
+  for (const v of Object.values(o)) collectPages(v, out, depth + 1)
 }
 
 function truncate(text: string): string {
@@ -260,7 +277,9 @@ export async function runTool(name: string, input: unknown, ctx: ToolContext): P
   if (!parsed.success) return { content: `Invalid arguments: ${parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`, isError: true }
   try {
     const result = await (def.run as (a: unknown, c: ToolContext) => unknown)(parsed.data, ctx)
-    return { content: truncate(JSON.stringify(withConfidence(result))), isError: false }
+    const pages: Record<string, string> = {}
+    collectPages(result, pages)
+    return { content: truncate(JSON.stringify(withConfidence(result))), isError: false, ...(Object.keys(pages).length ? { pages } : {}) }
   } catch (err) {
     if (err instanceof AppNotFoundError || err instanceof ArticleNotFoundError) return { content: err.message, isError: true }
     console.error('[askhans] tool failed', name, err)

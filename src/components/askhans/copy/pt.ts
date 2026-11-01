@@ -74,6 +74,24 @@ export const copy: AskCopy = {
     thanks: 'Obrigado pelo seu feedback!',
     error: 'Não foi possível enviar o feedback. Por favor, tente novamente mais tarde.',
   },
+  info: {
+    label: "Sobre o Ask Hans",
+    title: "O que é o Ask Hans?",
+    intro: "O Ask Hans é um assistente de IA que responde às suas perguntas usando somente o conteúdo próprio do PromptQuorum: o diretório de software, os guias, as análises e os dados de hardware deste site. É uma ferramenta beta em desenvolvimento e não é o próprio Hans.",
+    canTitle: "O que ele pode fazer",
+    can: ["Encontrar e comparar apps de IA local do diretório de software e citar alternativas.", "Verificar se o seu hardware (RAM, VRAM) consegue executar um modelo.", "Explicar licenças de software em linguagem simples e sugerir um stack de software.", "Indicar os guias, análises e páginas de hardware correspondentes neste site, no seu idioma."],
+    cannotTitle: "O que ele não pode fazer",
+    cannot: ["Pesquisar qualquer coisa fora de promptquorum.com: sem busca na web, sem notícias, sem previsão do tempo, sem preços em tempo real.", "Acertar sempre: é uma IA e pode errar. Confira os fatos importantes nas páginas indicadas.", "Dar orientação jurídica, médica, financeira ou de instalação elétrica. Para isso, consulte um profissional qualificado.", "Lembrar de você depois que você sair: as conversas ficam no seu navegador e não são armazenadas no nosso servidor.", "Instalar, alterar ou comprar qualquer coisa por você, nem responder sem limite: {messages} perguntas por visita, {chars} caracteres por pergunta."],
+    privacy: "Sua pergunta é enviada ao nosso servidor e à Anthropic (Claude) para gerar a resposta. Por favor, não informe dados pessoais.",
+    close: "Fechar",
+  },
+
+  copyUi: {
+    copy: "Copiar",
+    copied: "Copiado",
+    copyAnswer: "Copiar resposta",
+  },
+
   panel: {
     relatedHeading: "Relacionado à sua pergunta",
     relatedEarlier: "Respostas anteriores",

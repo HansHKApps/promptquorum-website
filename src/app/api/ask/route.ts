@@ -148,6 +148,7 @@ export async function POST(req: NextRequest): Promise<Response> {
     let toolCalls = 0
     let emittedText = false
     let spoken = ''
+    const pageTitles: Record<string, string> = {}
     let onlyCategoryLastTurn = false
 
     try {
@@ -218,6 +219,7 @@ export async function POST(req: NextRequest): Promise<Response> {
             send({ t: 'tool', v: use.name })
           }
           const outcome = await runTool(use.name, use.input, { lang })
+          if (outcome.pages) Object.assign(pageTitles, outcome.pages)
           if (outcome.category) {
             category = outcome.category
             send({ t: 'category', v: category })
@@ -226,6 +228,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         }
         messages.push({ role: 'user', content: results })
       }
+      if (Object.keys(pageTitles).length) send({ t: 'titles', v: Object.fromEntries(Object.entries(pageTitles).slice(0, 60)) })
       // Suggested next questions: best effort, skipped when the answer already took long (function time limit).
       if (spoken.trim() && Date.now() - startedAt < ASK_HANS_LIMITS.followupDeadlineMs) {
         try {

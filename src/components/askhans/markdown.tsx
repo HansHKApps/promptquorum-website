@@ -2,6 +2,7 @@
 // `code`, [text](url) and bare URLs. Builds React nodes only (no raw HTML), and only http(s) or
 // site-relative links are made clickable.
 
+import { CopyButton, plainText } from './CopyButton'
 import type { ReactNode } from 'react'
 
 const INLINE = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)\s]+\)|https?:\/\/[^\s<>)\]]+|\*[^*\s][^*]*\*)/g
@@ -83,8 +84,13 @@ export function Markdown({ text }: { text: string }) {
       i += 2
       const rows: string[][] = []
       while (i < lines.length && isTableRow(lines[i])) rows.push(cells(lines[i++]))
+      const tsv = [head, ...rows].map((r) => r.map((c) => plainText(c)).join('\t')).join('\n')
       blocks.push(
-        <div key={`b${b++}`} className="my-2 overflow-x-auto rounded-md border border-border">
+        <div key={`b${b++}`} className="my-2">
+        <div className="flex justify-end">
+          <CopyButton text={tsv} />
+        </div>
+        <div className="overflow-x-auto rounded-md border border-border">
           <table className="w-full border-collapse text-left text-[13px]">
             <thead className="bg-muted">
               <tr>{head.map((h, c) => <th key={c} className="px-2 py-1.5 font-semibold">{inline(h, `h${c}`)}</th>)}</tr>
@@ -97,6 +103,7 @@ export function Markdown({ text }: { text: string }) {
               ))}
             </tbody>
           </table>
+        </div>
         </div>,
       )
       continue

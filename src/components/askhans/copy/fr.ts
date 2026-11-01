@@ -74,6 +74,24 @@ export const copy: AskCopy = {
     thanks: 'Merci pour votre retour !',
     error: "Le retour n'a pas pu être envoyé. Veuillez réessayer plus tard.",
   },
+  info: {
+    label: "À propos d'Ask Hans",
+    title: "Qu'est-ce qu'Ask Hans ?",
+    intro: "Ask Hans est un assistant IA qui répond à vos questions uniquement à partir des contenus propres de PromptQuorum : l'annuaire de logiciels, les guides, les tests et les données matérielles de ce site. C'est un outil bêta en développement, et non Hans lui-même.",
+    canTitle: "Ce qu'il peut faire",
+    can: ["Trouver et comparer des applications d'IA locale de l'annuaire de logiciels, et citer des alternatives.", "Vérifier si votre matériel (RAM, VRAM) peut exécuter un modèle.", "Expliquer les licences logicielles en langage clair et suggérer une pile logicielle.", "Vous orienter vers les guides, tests et pages matériel correspondants de ce site, dans votre langue."],
+    cannotTitle: "Ce qu'il ne peut pas faire",
+    cannot: ["Chercher quoi que ce soit en dehors de promptquorum.com : pas de recherche web, pas d'actualités, pas de météo, pas de prix en direct.", "Avoir raison à chaque fois : c'est une IA et elle peut se tromper. Vérifiez les informations importantes sur les pages liées.", "Donner des conseils juridiques, médicaux, financiers ou d'installation électrique. Pour cela, adressez-vous à un professionnel qualifié.", "Se souvenir de vous après votre départ : les conversations restent dans votre navigateur et ne sont pas enregistrées sur notre serveur.", "Installer, modifier ou acheter quoi que ce soit à votre place, ni répondre sans limite : {messages} questions par visite, {chars} caractères par question."],
+    privacy: "Votre question est envoyée à notre serveur et à Anthropic (Claude) pour générer la réponse. Merci de ne saisir aucune donnée personnelle.",
+    close: "Fermer",
+  },
+
+  copyUi: {
+    copy: "Copier",
+    copied: "Copié",
+    copyAnswer: "Copier la réponse",
+  },
+
   panel: {
     relatedHeading: "En lien avec votre question",
     relatedEarlier: "Réponses précédentes",

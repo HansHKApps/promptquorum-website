@@ -87,6 +87,26 @@ export interface AskCopy {
   consentNo: string
   consentQuestionLabel: string
 
+  /** "?" info panel: what Ask Hans is, what it can and cannot do ({messages} / {chars} are replaced by the limits) */
+  info: {
+    label: string
+    title: string
+    intro: string
+    canTitle: string
+    can: string[]
+    cannotTitle: string
+    cannot: string[]
+    privacy: string
+    close: string
+  }
+
+  /** copy button on answers and tables */
+  copyUi: {
+    copy: string
+    copied: string
+    copyAnswer: string
+  }
+
   /** side panel with the topic picture + links, and the strip of earlier conversations */
   panel: {
     relatedHeading: string

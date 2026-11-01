@@ -74,6 +74,24 @@ export const copy: AskCopy = {
     thanks: 'Thank you for your feedback!',
     error: 'The feedback could not be sent. Please try again later.',
   },
+  info: {
+    label: "About Ask Hans",
+    title: "What is Ask Hans?",
+    intro: "Ask Hans is an AI assistant that answers your questions using only PromptQuorum's own content: the software directory, guides, reviews and hardware data on this website. It is a beta tool in development and not Hans himself.",
+    canTitle: "What it can do",
+    can: ["Find and compare local-AI apps from the software directory and name alternatives.", "Check whether your hardware (RAM, VRAM) can run a model.", "Explain software licenses in plain language and suggest a software stack.", "Point you to the matching guides, reviews and hardware pages on this site, in your language."],
+    cannotTitle: "What it cannot do",
+    cannot: ["Look anything up outside promptquorum.com: no web search, no news, no weather, no live prices.", "Be right every time: it is an AI and can make mistakes. Check important facts on the linked pages.", "Give legal, medical, financial or electrical-installation advice. For these, ask a qualified professional.", "Remember you after you leave: conversations stay in your browser and are not stored on our server.", "Install, change or buy anything for you, or answer without a limit: {messages} questions per visit, {chars} characters per question."],
+    privacy: "Your question is sent to our server and to Anthropic (Claude) to create the answer. Please do not enter personal data.",
+    close: "Close",
+  },
+
+  copyUi: {
+    copy: "Copy",
+    copied: "Copied",
+    copyAnswer: "Copy answer",
+  },
+
   panel: {
     relatedHeading: "Matching your question",
     relatedEarlier: "Earlier answers",

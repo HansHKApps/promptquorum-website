@@ -14,6 +14,7 @@ import { useAskCopy, useAskLang } from './copy'
 import { FeedbackBar } from './FeedbackBar'
 import { AskIcon } from './icons'
 import { Markdown } from './markdown'
+import { CopyButton, plainText } from './CopyButton'
 import { clickSection, relatedLinks } from './links'
 import { MarketingPanel } from './MarketingPanel'
 import { clearConsent, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
@@ -137,6 +138,8 @@ export function AskHansRoot() {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, content: acc, status: undefined }))
         } else if (ev.t === 'tool') {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, status: tx.searching }))
+        } else if (ev.t === 'titles') {
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, linkTitles: ev.v }))
         } else if (ev.t === 'followups') {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, followups: ev.v }))
         } else if (ev.t === 'category') {
@@ -321,6 +324,11 @@ export function AskHansRoot() {
                       {q}
                     </button>
                   ))}
+                </div>
+              )}
+              {m.content && !m.pending && (
+                <div className="mt-1 flex justify-end">
+                  <CopyButton text={plainText(m.content)} />
                 </div>
               )}
               {m.pending && m.status && <p className="text-[13px] italic text-muted-foreground" role="status">{m.status}</p>}
