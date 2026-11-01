@@ -16,13 +16,7 @@ import { StarIcon } from './icons'
 import type { HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { t } from './directory-i18n'
 import { getListingFreshness, getAppActivity } from './staleness'
-
-// Platform values (macOS/Windows/Linux/iOS/iPadOS/watchOS/Android/Web) are OS product
-// names — kept identical across locales, matching ToolCard.tsx's own map.
-const PLATFORM_LABEL: Record<string, string> = {
-  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
-  selfhosted: 'Docker / self-hosted', rpi: 'Raspberry Pi',
-}
+import { platformLabel } from './platformLabels'
 
 export function ToolTable({
   apps,
@@ -160,7 +154,7 @@ export function ToolTable({
                 </td>
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                   {app.platforms && app.platforms.length > 0
-                    ? app.platforms.map((p) => PLATFORM_LABEL[p] ?? p).join(', ')
+                    ? app.platforms.map((p) => platformLabel(p, lang)).join(', ')
                     : <span className="text-text-secondary/50">—</span>}
                 </td>
                 <td

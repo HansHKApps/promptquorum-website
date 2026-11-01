@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'GPT4All',
   categories: ['general-chat-clients', 'runtimes-managers'],
   interfaces: ['desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://docs.gpt4all.io/gpt4all_api_server/home.html
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'OpenAI API'],

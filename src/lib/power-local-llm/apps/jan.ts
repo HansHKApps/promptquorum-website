@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Jan',
   categories: ['general-chat-clients', 'runtimes-managers'],
   interfaces: ['desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://docs.jan.ai/desktop/api-server
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'vLLM', 'LocalAI', 'OpenAI API', 'Anthropic API'],

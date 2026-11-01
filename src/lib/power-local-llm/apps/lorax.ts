@@ -12,6 +12,7 @@ export const app: ToolRecord = {
   name: 'LoRAX',
   categories: ['inference-engines', 'fine-tuning-lora'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://raw.githubusercontent.com/predibase/lorax/main/README.md
   locality: 'local',
   platforms: ['linux'],
   worksWith: ['HuggingFace', 'PEFT', 'Ludwig', 'Docker'],

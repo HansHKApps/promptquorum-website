@@ -18,6 +18,7 @@ export const app: ToolRecord = {
   name: 'LLM Hub',
   categories: ['general-chat-clients', 'image-generation', 'speech-to-text'],
   interfaces: ['mobile'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://llm-hub.app
   locality: 'local', // inference runs on-device; optional web search and remote MCP servers need the internet, and models download from Hugging Face
   platforms: ['android', 'ios'], // App Store listing also shows iPad, Mac (Apple M1+) and Apple Vision availability; the README says Windows/macOS native apps are planned, not released
   worksWith: ['Hugging Face', 'MCP', 'Termux'], // downloads/imports models from Hugging Face; connects compatible MCP servers; Android agent drafts Termux commands

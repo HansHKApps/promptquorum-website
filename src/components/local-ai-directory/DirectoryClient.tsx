@@ -34,7 +34,7 @@ import { detectDefaultMachine, readStoredMachine, writeStoredMachine, readStored
 import { emptyFilterState, machineCategory, type FilterState, type HardwareProfile, type MachineCategory, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
 import { cn } from '@/lib/utils'
 import { t, machineLabelsFromUi, deviceCategoryLabelsFromUi, type DirUi } from './directory-ui-client'
-import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
+import { CATEGORY_GROUPS, CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { INSTALL_EFFORT_KEYS } from '@/lib/power-local-llm/apps/types'
 
 const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
@@ -56,6 +56,8 @@ function filtersFromUrl(): FilterState {
   const params = new URLSearchParams(window.location.search)
   const category = params.get('category')
   if (category && category in CATEGORY_SUB_LABEL) state.category.add(category)
+  const group = params.get('group')
+  if (group) CATEGORY_GROUPS.find((g) => g.key === group)?.subs.forEach((sub) => state.category.add(sub))
   const os = params.get('os')
   if (os && OS_FILTER_VALUES.includes(os)) state.platforms.add(os)
   const price = params.get('price')

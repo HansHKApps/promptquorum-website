@@ -15,6 +15,7 @@ export const app: ToolRecord = {
   reviewSlug: 'gpustack-review', // dedicated PromptQuorum review — added 2026-09-12
   categories: ['distributed-inference', 'runtimes-managers'],
   interfaces: ['web', 'cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/gpustack/gpustack
   locality: 'local',
   platforms: ['linux', 'win', 'mac'],
   worksWith: ['Ollama', 'vLLM', 'llama.cpp'],

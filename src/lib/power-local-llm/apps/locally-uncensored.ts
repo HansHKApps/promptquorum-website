@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Locally Uncensored',
   categories: ['general-chat-clients', 'image-generation', 'video-generation', 'fine-tuning-lora', 'agent-frameworks'],
   interfaces: ['desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://locallyuncensored.com
   locality: 'local',
   platforms: ['win', 'linux', 'mac'], // 'mac' added 2026-10-20: signed .dmg for Apple Silicon (macOS 14+, beta) first shipped in v3.0.6 — verified against GitHub release assets (LU_3.0.7_aarch64.dmg) and https://locallyuncensored.com/mac/; earlier correction: 2026-09-22 per maker (David, LU Labs): .exe, .deb, .rpm, .AppImage — directory previously listed Windows only
   worksWith: ['Ollama'],

@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Off Grid AI',
   categories: ['general-chat-clients'],
   interfaces: ['mobile', 'desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://getoffgridai.co
   locality: 'local',
   platforms: ['ios', 'android', 'mac', 'win'],
   worksWith: null,

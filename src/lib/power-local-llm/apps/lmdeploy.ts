@@ -8,6 +8,7 @@ export const app: ToolRecord = {
   name: 'LMDeploy',
   categories: ['inference-engines', 'quantization-conversion'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://lmdeploy.readthedocs.io/en/latest/llm/api_server.html
   locality: 'local',
   platforms: ['linux'], // primary supported OS per docs (Docker images and pip wheels target Linux/CUDA) — verified 2026-09-18
   worksWith: ['InternLM', 'Llama', 'Qwen', 'Baichuan', 'DeepSeek'],

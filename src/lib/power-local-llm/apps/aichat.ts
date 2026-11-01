@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'aichat',
   categories: ['terminal-chat-clients', 'general-chat-clients'],
   interfaces: ['cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/sigoden/aichat
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'OpenAI API'],

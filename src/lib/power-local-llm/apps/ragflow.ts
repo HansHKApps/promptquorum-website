@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'RAGFlow',
   categories: ['document-pdf-chat'],
   interfaces: ['web'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://ragflow.io/docs/http_api_reference
   locality: 'hybrid',
   platforms: ['linux'],
   worksWith: ['Ollama', 'vLLM', 'LM Studio', 'Xinference', 'LocalAI'],

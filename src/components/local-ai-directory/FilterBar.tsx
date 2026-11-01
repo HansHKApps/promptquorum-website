@@ -15,14 +15,8 @@ import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL_I18N, CATEGORY_SUB_LABEL, INTERFA
 import type { Language } from '@/lib/blog/blogContent'
 import { t, type DirUi } from './directory-ui-client'
 import { INSTALL_EFFORT_UI } from './installEffort'
-
-// Platform values (macOS/Windows/Linux/iOS/iPadOS/watchOS/Android/Web) are OS product
-// names — kept identical across locales, same as elsewhere on the site,
-// rather than "translated".
-const PLATFORM_VALUE_LABEL: Record<string, string> = {
-  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
-  selfhosted: 'Docker / self-hosted', rpi: 'Raspberry Pi',
-}
+import { platformLabel } from './platformLabels'
+import { ALL_PLATFORMS } from './filters'
 
 function getGroupLabels(ui: DirUi): Record<keyof FilterState, string> {
   return {
@@ -45,7 +39,7 @@ export function getValueLabels(lang: Language, ui: DirUi): Partial<Record<keyof 
     locality: { local: t('localityLocalFilter', ui), hybrid: t('localityHybridFilter', ui), cloud: t('localityCloud', ui) },
     engine: { builtin: t('engineBuiltin', ui), external: t('engineExternal', ui), both: t('engineBoth', ui), library: t('engineLibrary', ui) },
     price: { free: t('priceFree', ui), freemium: t('priceFreemium', ui), paid: t('pricePaid', ui) },
-    platforms: PLATFORM_VALUE_LABEL,
+    platforms: Object.fromEntries(ALL_PLATFORMS.map((p) => [p, platformLabel(p, lang)])),
     category: Object.fromEntries(Object.entries(CATEGORY_SUB_LABEL).map(([k, v]) => [k, v[lang]])),
     interface: Object.fromEntries(Object.entries(INTERFACE_LABEL).map(([k, v]) => [k, v[lang]])),
     install: Object.fromEntries(Object.entries(INSTALL_EFFORT_UI).map(([k, v]) => [k, t(v.label, ui)])),

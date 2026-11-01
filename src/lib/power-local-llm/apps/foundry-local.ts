@@ -9,6 +9,7 @@ export const app: ToolRecord = {
   name: 'Foundry Local',
   categories: ['runtimes-managers'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://learn.microsoft.com/en-us/azure/foundry-local/what-is-foundry-local
   locality: 'local',
   platforms: ['win', 'mac', 'android'],
   worksWith: null,

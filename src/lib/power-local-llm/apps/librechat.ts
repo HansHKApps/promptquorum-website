@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'LibreChat',
   categories: ['general-chat-clients'],
   interfaces: ['web'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://www.librechat.ai/docs/features/agents_api
   locality: 'hybrid',
   platforms: ['web'],
   worksWith: ['Ollama', 'OpenAI API', 'Anthropic API', 'OpenRouter'],

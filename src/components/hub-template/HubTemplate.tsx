@@ -3,7 +3,7 @@ import { AppLink as Link } from '@/components/AppLink'
 import { renderEmphasis } from './emphasis'
 import { HubExplore } from './HubExplore'
 import { HubIcon } from './HubIcon'
-import { HUB_TONES } from './palette'
+import { HUB_TONES, cycleTone } from './palette'
 import type { HubTone } from './palette'
 import type {
   HubExploreLabels,
@@ -42,6 +42,8 @@ export interface HubTemplateProps {
   jump: { label: string; items: { id: string; label: string; tone: HubTone }[] }
   start: { title: string; intro: string; cards: HubStartCard[] }
   explore: { title: string; intro: string; tiles: HubTile[]; labels: HubExploreLabels; sortLocale: string }
+  /** Optional strip under Explore that links the software categories (every one listed, including empty ones). */
+  categories?: { title: string; intro: string; items: { href: string; label: string; count: number; unit: string }[] }
   why: { title: string; intro: string; cards: { label: string; detail: string; tone: HubTone }[]; takeaway?: string }
   latest: { title: string; intro: string; cards: HubLatestCard[]; moreLabel: string; badgeNew: string; badgeUpdated: string }
   deeper: { title: string; intro: string; openLabel: string; links: HubLink[] }
@@ -230,6 +232,25 @@ export function HubTemplate(props: HubTemplateProps) {
             <HubExplore tiles={props.explore.tiles} labels={props.explore.labels} sortLocale={props.explore.sortLocale} />
           </div>
         </section>
+
+        {props.categories && (
+          <section id="categories" className="border-b border-border bg-white">
+            <div className={`${MAX_WIDTH} py-10`}>
+              <h2 className="mb-2 text-[22px] font-bold tracking-tight text-text-primary">{props.categories.title}</h2>
+              <p className="mb-5 text-base text-text-secondary">{props.categories.intro}</p>
+              <ul className="flex flex-wrap gap-2">
+                {props.categories.items.map((item, i) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors hover:shadow-sm ${HUB_TONES[cycleTone(i)].ink} bg-white`}>
+                      {item.label}
+                      <span className="text-xs font-medium text-text-secondary">{item.count} {item.unit}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* 03 Why */}
         <section id="why" className="border-t border-border bg-hub-indigo-tint">

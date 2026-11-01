@@ -324,7 +324,7 @@ export function listCategories() {
 // attribute keys (./compare-schema.ts) when both tools were reviewed in the
 // same category segment — never fabricated for tools that weren't.
 
-export const COMPARE_CRITERIA = ['price', 'license', 'platforms', 'ramGb', 'vramGb', 'cpuOnly', 'installEffort', 'locality', 'interfaces', 'useCases', 'worksWith', 'mcpSupport', 'stars', 'listingFreshness'] as const
+export const COMPARE_CRITERIA = ['price', 'license', 'platforms', 'ramGb', 'vramGb', 'cpuOnly', 'installEffort', 'locality', 'interfaces', 'useCases', 'worksWith', 'mcpSupport', 'exposesApi', 'stars', 'listingFreshness'] as const
 export type CompareCriterion = (typeof COMPARE_CRITERIA)[number]
 
 const NOT_RESEARCHED = 'not researched'
@@ -379,6 +379,7 @@ export function compareApps(args: { slugs: string[]; criteria?: CompareCriterion
       case 'useCases': return a.uses ?? NOT_RESEARCHED
       case 'worksWith': return a.worksWith ?? NOT_RESEARCHED
       case 'mcpSupport': return a.mcpSupport === true ? true : NOT_RESEARCHED
+      case 'exposesApi': return a.exposesApi === true ? true : NOT_RESEARCHED
       case 'stars': return a.stars ?? NOT_RESEARCHED
       case 'listingFreshness': return summarize(a, 'unknown').listingFreshness
     }

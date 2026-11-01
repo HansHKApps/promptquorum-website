@@ -27,6 +27,7 @@ import { t } from './directory-i18n'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
+import { platformLabel } from './platformLabels'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
 const GROUP_ACCENT: Record<CategoryGroupKey, { wash: string; bar: string; chip: string; avatar: string }> = {
@@ -66,13 +67,6 @@ const PRICE_BADGE: Record<'free' | 'freemium' | 'paid', string> = {
 }
 
 const MCP_BADGE = 'bg-hub-violet-tint text-hub-violet-ink border-hub-violet-edge'
-
-// Platform values (macOS/Windows/Linux/iOS/iPadOS/watchOS/Android/Web) are OS product
-// names — kept identical across locales rather than "translated".
-const PLATFORM_LABEL: Record<string, string> = {
-  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', ipados: 'iPadOS', watchos: '⌚ watchOS', android: 'Android', web: 'Web',
-  selfhosted: 'Docker / self-hosted', rpi: 'Raspberry Pi',
-}
 
 type ToolArticleEntry = { url: string; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number }>
@@ -293,7 +287,7 @@ export function ToolCard({
             ))}
             {app.platforms?.map((p) => (
               <span key={p} className={p === 'watchos' ? 'rounded-full bg-hub-rose-tint border border-hub-rose-edge px-2 py-0.5 text-[11px] font-semibold text-hub-rose-ink' : 'rounded-full bg-gray-50 border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-text-secondary'}>
-                {PLATFORM_LABEL[p] ?? p}
+                {platformLabel(p, lang)}
               </span>
             ))}
           </div>

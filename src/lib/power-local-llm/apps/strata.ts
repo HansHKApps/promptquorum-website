@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Strata',
   categories: ['inference-engines'],
   interfaces: ['desktop', 'cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/Niko1221/Strata
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Claude Code', 'Codex CLI', 'OpenCode', 'OpenClaw', 'Hermes Agent', 'OpenAI', 'Anthropic'],

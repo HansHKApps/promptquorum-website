@@ -184,6 +184,8 @@ export interface AppSummary {
   relatedArticles: ArticleLink[]
   categoryGuide?: ArticleLink | null
   mcpSupport?: boolean
+  /** true = documented to serve an OpenAI- or Ollama-compatible API to other apps. Absent = not verified. */
+  exposesApi?: boolean
   upstreamStatus?: { state: 'archived' | 'unmaintained'; since?: string }
   dataVerifiedAt: string | null
   addedDate: string | null
@@ -257,6 +259,7 @@ export function summarize(
     ...articlesForApp(app),
     categoryGuide: group ? categoryGuideForGroup(group) : null,
     ...(app.mcpSupport ? { mcpSupport: true } : {}),
+    ...(app.exposesApi ? { exposesApi: true } : {}),
     ...(app.upstreamStatus ? { upstreamStatus: app.upstreamStatus } : {}),
     dataVerifiedAt: app.lastVerifiedDate,
     addedDate: app.addedDate,
@@ -379,7 +382,7 @@ const SCOPE_STATEMENT = `The Local LLM Software Directory covers local-AI softwa
 function buildWhyMatched(
   app: ToolRecord,
   fit: AppSummary['hardwareFit'],
-  args: { query?: string; category?: string; useCase?: string; os?: string; price?: string; worksWith?: string; installEffort?: string; locality?: string; mcpSupport?: boolean; license?: string; ramGb?: number; vramGb?: number },
+  args: { query?: string; category?: string; useCase?: string; os?: string; price?: string; worksWith?: string; installEffort?: string; locality?: string; mcpSupport?: boolean; exposesApi?: boolean; runsOn?: string; license?: string; ramGb?: number; vramGb?: number },
   matchedKeys?: Set<string>,
 ): string {
   const reasons: string[] = []
@@ -397,6 +400,8 @@ function buildWhyMatched(
   if (args.installEffort) reasons.push(`install effort: ${args.installEffort}`)
   if (args.locality) reasons.push(`runs ${args.locality}`)
   if (args.mcpSupport) reasons.push('documents MCP support')
+  if (args.exposesApi) reasons.push('serves an OpenAI- or Ollama-compatible API')
+  if (args.runsOn) reasons.push(`documented to run as ${args.runsOn}`)
   if (args.license) reasons.push(`license contains "${args.license}"`)
   if (fit === 'fits') reasons.push('confirmed to fit your stated hardware')
   return reasons.length ? reasons.join('; ') : 'listed in the directory (no filters applied)'
@@ -417,6 +422,10 @@ export function searchApps(args: {
   locality?: string
   /** true = only apps with documented MCP support. */
   mcpSupport?: boolean
+  /** true = only apps documented to serve an OpenAI- or Ollama-compatible API to other apps. */
+  exposesApi?: boolean
+  /** selfhosted | rpi. Only apps whose docs state a Docker/self-hosted deployment or Raspberry Pi support; unresearched platforms are excluded. */
+  runsOn?: string
   /** Case-insensitive substring of the license string, e.g. "MIT", "Apache", "GPL". */
   license?: string
   /** stars (default) | recent (newest addedDate first) | easiest (best install effort first). Ignored when a free-text query is given. */
@@ -480,6 +489,8 @@ export function searchApps(args: {
   if (args.installEffort) pool = pool.filter((a) => a.installEffort === args.installEffort)
   if (args.locality) pool = pool.filter((a) => a.locality === args.locality)
   if (args.mcpSupport) pool = pool.filter((a) => a.mcpSupport === true)
+  if (args.exposesApi) pool = pool.filter((a) => a.exposesApi === true)
+  if (args.runsOn) pool = pool.filter((a) => a.platforms?.includes(args.runsOn as OSKey) === true)
   if (args.license) {
     const lic = args.license.toLowerCase()
     pool = pool.filter((a) => a.license.toLowerCase().includes(lic))

@@ -13,6 +13,7 @@ export const app: ToolRecord = {
   reviewSlug: 'docker-model-runner-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   categories: ['runtimes-managers'],
   interfaces: ['cli', 'desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://docs.docker.com/ai/model-runner/
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

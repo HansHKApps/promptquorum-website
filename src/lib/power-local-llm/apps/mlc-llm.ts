@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'MLC LLM',
   categories: ['inference-engines'],
   interfaces: ['library', 'mobile'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://llm.mlc.ai/docs/deploy/rest.html
   locality: 'local',
   platforms: ['mac', 'win', 'linux', 'ios', 'android'],
   worksWith: null,
