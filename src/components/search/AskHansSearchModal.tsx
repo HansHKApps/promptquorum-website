@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Logo } from '@/components/Logo'
 import { useAskCopy } from '@/components/askhans/copy'
+import { ASK_HANS_LIMITS } from '@/lib/askhans/config'
 
 interface Props {
   isOpen: boolean
@@ -20,7 +21,7 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit }: Props) {
   const t = tx.search
   const [question, setQuestion] = useState('')
   const [mounted, setMounted] = useState(false)
-  const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLTextAreaElement>(null)
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), [])
@@ -37,6 +38,14 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit }: Props) {
       document.body.style.overflow = ''
     }
   }, [isOpen])
+
+  // The question box grows with the text (up to about eight lines, then it scrolls).
+  useEffect(() => {
+    const el = inputRef.current
+    if (!el) return
+    el.style.height = 'auto'
+    el.style.height = `${Math.min(el.scrollHeight, 200)}px`
+  }, [question, isOpen])
 
   useEffect(() => {
     if (!isOpen) return
@@ -62,7 +71,7 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit }: Props) {
         dir={tx.dir}
         aria-modal="true"
         aria-label={t.modalAriaLabel}
-        className="fixed z-50 flex flex-col overflow-hidden bg-white inset-0 md:inset-auto md:top-[12vh] md:left-1/2 md:max-h-[76vh] md:w-full md:max-w-[620px] md:-translate-x-1/2 md:rounded-2xl md:border md:border-[hsl(var(--hero-edge))] md:shadow-[0_24px_80px_-12px_rgba(76,29,149,0.45)]"
+        className="fixed z-50 flex flex-col overflow-hidden bg-white inset-0 md:inset-auto md:top-[12vh] md:left-1/2 md:max-h-[76vh] md:w-full md:max-w-[760px] md:-translate-x-1/2 md:rounded-2xl md:border md:border-[hsl(var(--hero-edge))] md:shadow-[0_24px_80px_-12px_rgba(76,29,149,0.45)]"
       >
         {/* Brand header */}
         <div
@@ -98,40 +107,41 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit }: Props) {
 
         {/* Input */}
         <div className="flex-shrink-0 px-5 pt-4">
-          <div className="flex items-center gap-2 rounded-xl border-2 border-[hsl(var(--hero-edge))] bg-white px-3 py-2 shadow-sm transition-colors focus-within:border-[hsl(var(--primary))] focus-within:shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]">
-            <svg className="h-5 w-5 flex-shrink-0 text-[hsl(var(--primary))]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+          <div className="flex items-start gap-2 rounded-xl border-2 border-[hsl(var(--hero-edge))] bg-white px-3 py-2 shadow-sm transition-colors focus-within:border-[hsl(var(--primary))] focus-within:shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]">
+            <svg className="mt-2 h-5 w-5 flex-shrink-0 text-[hsl(var(--primary))]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="11" cy="11" r="8" />
               <path d="m21 21-4.35-4.35" />
             </svg>
-            <input
+            <textarea
               ref={inputRef}
-              type="text"
-              inputMode="text"
+              rows={1}
+              maxLength={ASK_HANS_LIMITS.maxMessageChars + 200}
               enterKeyHint="send"
               aria-label={t.ariaLabel}
               placeholder={t.placeholder}
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter') {
+                // Enter sends, Shift+Enter starts a new line; Enter that confirms an IME composition (ja/zh/ko) is not a send.
+                if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
                   e.preventDefault()
                   submit()
                 }
               }}
-              className="min-w-0 flex-1 bg-transparent text-base text-gray-900 outline-none placeholder:text-gray-400"
+              className="max-h-[200px] min-h-[40px] min-w-0 flex-1 resize-none bg-transparent py-2 text-base leading-snug text-gray-900 outline-none placeholder:text-gray-400"
             />
             <button
               type="button"
               onClick={() => submit()}
               disabled={!question.trim()}
               aria-label={tx.send}
-              className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[hsl(var(--primary))] text-white shadow-sm transition-opacity hover:opacity-90 disabled:opacity-35"
+              className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[hsl(var(--primary))] text-white shadow-sm transition-opacity hover:opacity-90 disabled:opacity-35"
             >
               <svg className="h-4 w-4 rtl:-scale-x-100" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </button>
-            <kbd className="hidden rounded border border-gray-200 px-1.5 py-0.5 font-mono text-[11px] text-gray-400 md:inline">esc</kbd>
+            <kbd className="mt-2 hidden rounded border border-gray-200 px-1.5 py-0.5 font-mono text-[11px] text-gray-400 md:inline">esc</kbd>
           </div>
         </div>
 
