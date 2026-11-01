@@ -47,7 +47,7 @@ export function SearchTrigger() {
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21-4.35-4.35" />
         </svg>
-        <span className="font-medium text-gray-700">{askHansOn ? 'Ask Hans' : t.searchPlaceholder}</span>
+        <span className="whitespace-nowrap font-medium text-gray-700">{askHansOn ? 'Ask Hans' : t.searchPlaceholder}</span>
         <kbd className="text-[11px] text-gray-400 border border-gray-200 rounded px-1 py-0.5 font-mono leading-none">⌘K</kbd>
       </button>
 
