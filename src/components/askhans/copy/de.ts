@@ -73,6 +73,10 @@ export const copy: AskCopy = {
     error: 'Das Feedback konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.',
   },
   search: {
+    badge: "Neu · Beta",
+    headline: "Stelle deine Frage – Ask Hans antwortet",
+    pitch: "Statt einer Linkliste bekommst du eine Antwort aus dem Software-Verzeichnis, den Guides und den Hardware-Daten von PromptQuorum – in deiner Sprache. Eine neue Art der Seitensuche, noch in Entwicklung.",
+    examples: ["Welche App durchsucht meine PDFs lokal?", "Läuft Llama auf einem Mac mit 16 GB?", "Welcher Mini-PC taugt als Home-Assistant-Server?"],
     placeholder: "Stelle deine Frage...",
     ariaLabel: "Frage an den Assistenten stellen",
     modalAriaLabel: "KI-gestützte Fragen und Antworten",

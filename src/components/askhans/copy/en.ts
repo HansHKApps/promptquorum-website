@@ -73,6 +73,10 @@ export const copy: AskCopy = {
     error: 'The feedback could not be sent. Please try again later.',
   },
   search: {
+    badge: "New · Beta",
+    headline: "Ask a question — Ask Hans answers",
+    pitch: "Instead of a list of links, you get an answer built from PromptQuorum's own software directory, guides and hardware data, in your language. A new kind of site search, still in development.",
+    examples: ["Which app can search my PDFs locally?", "Does Llama run on a Mac with 16 GB?", "Which mini PC works as a Home Assistant server?"],
     placeholder: 'Ask your question...',
     ariaLabel: 'Ask the assistant a question',
     modalAriaLabel: 'AI-powered questions and answers',

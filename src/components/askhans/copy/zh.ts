@@ -73,6 +73,10 @@ export const copy: AskCopy = {
     error: '反馈未能发送。请您稍后重试。',
   },
   search: {
+    badge: "新功能 · 测试版",
+    headline: "提出问题——Ask Hans 为您解答",
+    pitch: "您得到的不是一串链接，而是基于 PromptQuorum 自有的软件目录、指南和硬件数据整理出的答案，并使用您的语言。这是一种新的站内搜索方式，仍在开发中。",
+    examples: ["哪个应用可以在本地搜索我的 PDF？", "Llama 能在 16 GB 的 Mac 上运行吗？", "哪款迷你主机适合做 Home Assistant 服务器？"],
     placeholder: '请输入您的问题……',
     ariaLabel: '向助手提问',
     modalAriaLabel: 'AI 问答',

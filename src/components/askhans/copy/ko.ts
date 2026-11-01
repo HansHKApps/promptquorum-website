@@ -73,6 +73,10 @@ export const copy: AskCopy = {
     error: '피드백을 보내지 못했습니다. 나중에 다시 시도해 주십시오.',
   },
   search: {
+    badge: "신규 · 베타",
+    headline: "질문해 주십시오 — Ask Hans가 답변합니다",
+    pitch: "링크 목록 대신, PromptQuorum의 소프트웨어 디렉터리, 가이드, 하드웨어 데이터를 바탕으로 만든 답변을 사용하시는 언어로 받아 보실 수 있습니다. 새로운 방식의 사이트 검색이며, 아직 개발 중입니다.",
+    examples: ["내 PDF를 로컬에서 검색할 수 있는 앱은 무엇입니까?", "16 GB Mac에서 Llama가 실행됩니까?", "Home Assistant 서버로 쓸 만한 미니 PC는 무엇입니까?"],
     placeholder: '질문을 입력해 주십시오...',
     ariaLabel: '어시스턴트에게 질문하기',
     modalAriaLabel: 'AI 기반 질문과 답변',

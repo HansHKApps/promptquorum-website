@@ -73,6 +73,10 @@ export const copy: AskCopy = {
     error: "Le retour n'a pas pu être envoyé. Veuillez réessayer plus tard.",
   },
   search: {
+    badge: "Nouveau · Bêta",
+    headline: "Posez votre question — Ask Hans répond",
+    pitch: "Au lieu d'une liste de liens, vous obtenez une réponse construite à partir de l'annuaire de logiciels, des guides et des données matérielles de PromptQuorum, dans votre langue. Une nouvelle forme de recherche sur le site, encore en développement.",
+    examples: ["Quelle appli peut chercher dans mes PDF en local ?", "Llama tourne-t-il sur un Mac avec 16 Go ?", "Quel mini-PC convient comme serveur Home Assistant ?"],
     placeholder: 'Posez votre question...',
     ariaLabel: "Poser une question à l'assistant",
     modalAriaLabel: 'Questions et réponses assistées par IA',

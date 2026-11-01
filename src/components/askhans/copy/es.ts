@@ -73,6 +73,10 @@ export const copy: AskCopy = {
     error: 'No se pudieron enviar los comentarios. Inténtelo de nuevo más tarde.',
   },
   search: {
+    badge: "Nuevo · Beta",
+    headline: "Haz tu pregunta — Ask Hans responde",
+    pitch: "En lugar de una lista de enlaces, recibes una respuesta elaborada a partir del directorio de software, las guías y los datos de hardware de PromptQuorum, en tu idioma. Una nueva forma de buscar en el sitio, todavía en desarrollo.",
+    examples: ["¿Qué app puede buscar en mis PDF en local?", "¿Funciona Llama en un Mac con 16 GB?", "¿Qué mini PC sirve como servidor de Home Assistant?"],
     placeholder: "Haz tu pregunta...",
     ariaLabel: "Hacer una pregunta al asistente",
     modalAriaLabel: "Preguntas y respuestas con IA",

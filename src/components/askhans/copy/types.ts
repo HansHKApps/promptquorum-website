@@ -87,6 +87,13 @@ export interface AskCopy {
 
   /** header search box that hands the question to Ask Hans */
   search: {
+    /** small pill, e.g. "New · Beta" */
+    badge: string
+    headline: string
+    /** factual one-liner about what the box does (no superlatives, no "first/unique" claims) */
+    pitch: string
+    /** three sample questions; a click sends one to Ask Hans */
+    examples: [string, string, string]
     placeholder: string
     ariaLabel: string
     modalAriaLabel: string
