@@ -722,6 +722,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'photoprism-review',
   'photoview-review',
   'immich-review',
+  'evershelf-review',
   'facet-review',
   'excire-foto-review',
   'mylio-photos-review',
