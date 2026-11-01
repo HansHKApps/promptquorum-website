@@ -5,7 +5,8 @@
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
-//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, new, lang:<xx>, consent_yes/no/withdrawn)
+//   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, click:<text|panel>:<section>,
+//                                 answers_clicked, new, lang:<xx>, consent_yes/no/withdrawn)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
 //   askhans:consent               list of consent proofs {ts, textVersion, visitId, type}  (capped)
 
@@ -23,6 +24,8 @@ const DAY_TTL_S = 400 * 86_400
 const CONSENT_LIST_MAX = 50_000
 const TOOL_NAME = /^[a-z_]{3,40}$/
 const LINK_IDS = new Set(ASK_HANS_CATEGORIES.flatMap((c) => c.links.map((l) => l.id)))
+const CLICK_SOURCES = new Set(['text', 'panel'])
+const CLICK_SECTION = /^[a-z0-9-]{1,40}$/
 const TEXT_VERSION = /^[A-Za-z0-9._-]{1,40}$/
 const VISIT_ID = /^[a-zA-Z0-9-]{8,64}$/
 
@@ -74,6 +77,14 @@ export async function POST(req: NextRequest) {
       case 'link_click': {
         if (!visitId || !isCategoryKey(b.category) || typeof b.linkId !== 'string' || !LINK_IDS.has(b.linkId)) return new NextResponse(null, { status: 400 })
         pipe.hincrby(dayKey, `link:${b.category}:${b.linkId}`, 1)
+        break
+      }
+      case 'answer_click': {
+        // Click-through metric: which part of an answer led into the site. Section = first path segment only.
+        if (!visitId || typeof b.source !== 'string' || !CLICK_SOURCES.has(b.source) || typeof b.section !== 'string' || !CLICK_SECTION.test(b.section)) return new NextResponse(null, { status: 400 })
+        pipe.hincrby(dayKey, `click:${b.source}:${b.section}`, 1)
+        // One count per answer: the client sets firstForAnswer on the first internal click of an answer only.
+        if (b.firstForAnswer === true && b.section !== 'external') pipe.hincrby(dayKey, 'answers_clicked', 1)
         break
       }
       case 'new_chat':
