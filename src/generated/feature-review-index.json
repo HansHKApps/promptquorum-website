@@ -1109,6 +1109,11 @@
     "urlSlug": "home-assistant-assist-review",
     "url": "/power-local-llm/home-assistant-assist-review"
   },
+  "home-generative-agent": {
+    "cluster": "power-local-llm",
+    "urlSlug": "home-generative-agent-review",
+    "url": "/power-local-llm/home-generative-agent-review"
+  },
   "ente-photos": {
     "cluster": "power-local-llm",
     "urlSlug": "ente-photos-review",

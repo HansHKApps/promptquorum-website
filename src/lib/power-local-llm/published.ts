@@ -642,6 +642,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'subtitle-edit-review',
   // Home Assistant Assist review (Voice, Speech & Multimodal, voice pipeline inside Home Assistant) — 2026-10-24
   'home-assistant-assist-review',
+  // home-generative-agent review (goruck/home-generative-agent) — 2026-11-01
+  'home-generative-agent-review',
   // Ente Photos review (Images & Video, encrypted photo backup with on-device AI search) — 2026-10-24
   'ente-photos-review',
   'local-operator-review',

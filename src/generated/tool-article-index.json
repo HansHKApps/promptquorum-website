@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "home-generative-agent-review",
+        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
+        "url": "/power-local-llm/home-generative-agent-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llm-vision-review",
         "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
         "url": "/power-local-llm/llm-vision-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-10-30",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "goose-review",
-        "title": "Goose Review: Block's Open-Source AI Agent, Now Under the Linux Foundation",
-        "url": "/power-local-llm/goose-review",
-        "dateModified": "2026-10-30",
-        "tier": "about"
       }
     ],
-    "totalCount": 338,
+    "totalCount": 340,
     "capped": true
   },
   "llama.cpp": {
@@ -4583,22 +4583,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "home-generative-agent-review",
+        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
+        "url": "/power-local-llm/home-generative-agent-review",
+        "dateModified": "2026-11-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autogpt-local-review-2026",
-        "title": "AutoGPT Review: Classic Agent vs. Hosted Platform",
-        "url": "/power-local-llm/autogpt-local-review",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "Letta (formerly MemGPT)": {
@@ -9945,6 +9945,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "home-generative-agent-review",
+        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
+        "url": "/power-local-llm/home-generative-agent-review",
+        "dateModified": "2026-11-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kai-9000-review",
         "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
         "url": "/power-local-llm/kai-9000-review",
@@ -9990,17 +9998,9 @@
         "url": "/power-local-llm/swerve-ai-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "chatbox-review",
-        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
-        "url": "/local-llms/chatbox-review",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "FluidVoice": {
@@ -10535,6 +10535,20 @@
         "title": "Home Assistant Assist Review: Local Voice Control and LLM Agents",
         "url": "/power-local-llm/home-assistant-assist-review",
         "dateModified": "2026-10-24",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Home Generative Agent": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "home-generative-agent-review",
+        "title": "Home Generative Agent Review: AI Agent for Home Assistant",
+        "url": "/power-local-llm/home-generative-agent-review",
+        "dateModified": "2026-11-01",
         "tier": "about"
       }
     ],

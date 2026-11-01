@@ -1050,6 +1050,7 @@ const HUB_THEMES: Array<{
       'phoneclaw-review',
       'nanobot-review',
       'picoclaw-review',
+      'home-generative-agent-review',
       'tecadrisebot-review',
       'local-operator-review',
       'localmcp-review',

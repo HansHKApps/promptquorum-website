@@ -119,6 +119,7 @@ import { article as a_krita_ai_diffusion_review } from './articles/krita-ai-diff
 import { article as a_tolaria_review } from './articles/tolaria-review'
 import { article as a_subtitle_edit_review } from './articles/subtitle-edit-review'
 import { article as a_home_assistant_assist_review } from './articles/home-assistant-assist-review'
+import { article as a_home_generative_agent_review } from './articles/home-generative-agent-review'
 import { article as a_ente_photos_review } from './articles/ente-photos-review'
 import { article as a_local_operator_review } from './articles/local-operator-review'
 import { article as a_nekoni_review } from './articles/nekoni-review'
@@ -812,6 +813,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'tolaria-review':                                a_tolaria_review,
   'subtitle-edit-review':                          a_subtitle_edit_review,
   'home-assistant-assist-review':                  a_home_assistant_assist_review,
+  'home-generative-agent-review':                  a_home_generative_agent_review,
   'ente-photos-review':                            a_ente_photos_review,
   'local-operator-review':                         a_local_operator_review,
   'nekoni-review':                                 a_nekoni_review,

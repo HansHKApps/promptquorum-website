@@ -289,6 +289,7 @@ import { app as app_linkwarden } from './apps/linkwarden'
 import { app as app_tolaria } from './apps/tolaria'
 import { app as app_subtitle_edit } from './apps/subtitle-edit'
 import { app as app_home_assistant_assist } from './apps/home-assistant-assist'
+import { app as app_home_generative_agent } from './apps/home-generative-agent'
 import { app as app_ente_photos } from './apps/ente-photos'
 import { app as app_local_operator } from './apps/local-operator'
 import { app as app_nekoni } from './apps/nekoni'
@@ -578,6 +579,7 @@ export const localAiApps: ToolRecord[] = [
   app_tolaria,
   app_subtitle_edit,
   app_home_assistant_assist,
+  app_home_generative_agent,
   app_ente_photos,
   app_local_operator,
   app_nekoni,
