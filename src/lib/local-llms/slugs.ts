@@ -205,4 +205,12 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'data-residency-sovereign-ai-eu-gdpr-enterprise': 'data-residency-sovereign-ai-eu-gdpr-enterprise',
   'local-llm-commercial-license-guide-business':  'local-llm-commercial-license-guide-business',
   'renting-gpu-cloud-vs-buying-on-prem-enterprise-ai': 'renting-gpu-cloud-vs-buying-on-prem-enterprise-ai',
+  // Local AI workstations (moved from power-local-llm 2026-11-01)
+  'local-ai-workstations-strix-halo-vs-dgx-spark': 'local-ai-workstations-strix-halo-vs-dgx-spark',
+  'nvidia-dgx-spark-local-ai-workstation': 'nvidia-dgx-spark-local-ai-workstation',
+  'amd-ryzen-ai-halo-local-ai-workstation': 'amd-ryzen-ai-halo-local-ai-workstation',
+  'framework-desktop-local-ai-workstation': 'framework-desktop-local-ai-workstation',
+  'hp-z2-mini-g1a-local-ai-workstation': 'hp-z2-mini-g1a-local-ai-workstation',
+  'gmktec-evo-x2-local-ai-workstation': 'gmktec-evo-x2-local-ai-workstation',
+  'minisforum-ms-s1-max-local-ai-workstation': 'minisforum-ms-s1-max-local-ai-workstation',
 }

@@ -27,6 +27,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/70b-models-consumer-hardware",
         "dateModified": "2026-10-29",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "facet-review",
-        "title": "Facet Review: Local Photo Scoring, Culling and Gallery",
-        "url": "/power-local-llm/facet-review",
-        "dateModified": "2026-10-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 332,
+    "totalCount": 335,
     "capped": true
   },
   "llama.cpp": {
@@ -182,6 +182,30 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "amd-ryzen-ai-halo-local-ai-workstation",
+        "title": "AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-ai-workstations-strix-halo-vs-dgx-spark",
+        "title": "Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
+        "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nvidia-dgx-spark-local-ai-workstation",
+        "title": "NVIDIA DGX Spark for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
@@ -228,33 +252,9 @@
         "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-10-19",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-cpp-explained",
-        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
-        "url": "/power-local-llm/llama-cpp-explained",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "candle-vllm-review",
-        "title": "candle-vllm Review: Rust-Native LLM Serving on CUDA and Metal",
-        "url": "/power-local-llm/candle-vllm-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 96,
+    "totalCount": 99,
     "capped": true
   },
   "LocalAI": {
@@ -877,6 +877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/lm-mini-review",
         "dateModified": "2026-10-24",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-10-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 166,
+    "totalCount": 168,
     "capped": true
   },
   "Atomic Chat": {
@@ -1009,6 +1009,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
@@ -1054,17 +1062,9 @@
         "url": "/power-local-llm/best-local-ai-app-low-end-pc",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-review",
-        "title": "LM Studio Review: The GUI-First Local AI Desktop App",
-        "url": "/power-local-llm/lm-studio-review",
-        "dateModified": "2026-10-23",
-        "tier": "about"
       }
     ],
-    "totalCount": 50,
+    "totalCount": 51,
     "capped": true
   },
   "GPT4All": {
@@ -1181,6 +1181,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
@@ -1226,17 +1234,9 @@
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vane-review",
-        "title": "Vane Review: Self-Hosted AI Answering Engine (Formerly Perplexica)",
-        "url": "/power-local-llm/vane-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 40,
+    "totalCount": 41,
     "capped": true
   },
   "Msty": {
@@ -1254,6 +1254,14 @@
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
@@ -1312,17 +1320,9 @@
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openclient-review",
-        "title": "OpenClient Review: Free Apple Chat App for Ollama and LiteLLM",
-        "url": "/power-local-llm/openclient-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Cherry Studio": {
@@ -2097,6 +2097,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "searxng-review",
         "title": "SearXNG Review: Self-Hosted Search Backend for Local LLMs",
         "url": "/power-local-llm/searxng-review",
@@ -2142,17 +2150,9 @@
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "copilot-for-obsidian-review",
-        "title": "Copilot for Obsidian Review: Local-Model AI Agent for Your Vault",
-        "url": "/power-local-llm/copilot-for-obsidian-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 56,
+    "totalCount": 57,
     "capped": true
   },
   "LibreChat": {
@@ -2163,6 +2163,14 @@
         "title": "LibreChat Review: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
@@ -2228,18 +2236,10 @@
         "url": "/power-local-llm/odysseus-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-review",
-        "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
-        "url": "/local-llms/text-generation-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "text-generation-webui": {
     "articles": [
@@ -2432,6 +2432,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
@@ -2456,7 +2464,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Big-AGI": {
@@ -2625,6 +2633,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -2656,7 +2672,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Continue.dev": {
@@ -5823,6 +5839,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -5878,7 +5902,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "PocketPal AI": {
@@ -5889,6 +5913,14 @@
         "title": "PocketPal AI Review: Free, Open-Source On-Device Chat",
         "url": "/power-local-llm/pocketpal-ai-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
@@ -5954,17 +5986,9 @@
         "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
         "dateModified": "2026-10-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-chat-pocket-review",
-        "title": "Local AI Chat Pocket Review: Offline LLM and Image Chat for iPhone and iPad",
-        "url": "/power-local-llm/local-ai-chat-pocket-review",
-        "dateModified": "2026-10-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 53,
+    "totalCount": 54,
     "capped": true
   },
   "Pocket AI": {
@@ -6005,6 +6029,14 @@
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
         "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
@@ -6070,17 +6102,9 @@
         "url": "/power-local-llm/noema-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "off-grid-ai-review",
-        "title": "Off Grid AI Review: Cross-Platform Local AI for iOS, Android, macOS, and Windows",
-        "url": "/power-local-llm/off-grid-ai-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "Google AI Edge Gallery": {
@@ -6091,6 +6115,14 @@
         "title": "Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
         "dateModified": "2026-10-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
@@ -6142,7 +6174,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "LLM Farm": {
@@ -6609,6 +6641,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -6670,17 +6710,9 @@
         "url": "/power-local-llm/localmindai-review",
         "dateModified": "2026-10-24",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "private-llm-review",
-        "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/private-llm-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Arbiter": {
@@ -11619,6 +11651,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-app-alternatives",
+        "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+        "url": "/power-local-llm/local-llm-app-alternatives",
+        "dateModified": "2026-10-31",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-mini-review",
         "title": "LM Mini Review: iPhone Chat App for On-Device and Home-Server AI",
         "url": "/power-local-llm/lm-mini-review",
@@ -11672,18 +11712,10 @@
         "url": "/power-local-llm/rapid-mlx-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vllm-mlx-review",
-        "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
-        "url": "/power-local-llm/vllm-mlx-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "openai-edge-tts": {
     "articles": [
@@ -11778,6 +11810,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "local-llms",
+        "slug": "framework-desktop-local-ai-workstation",
+        "title": "Framework Desktop for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/framework-desktop-local-ai-workstation",
+        "dateModified": "2026-10-31",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
@@ -11832,17 +11872,9 @@
         "url": "/power-local-llm/home-gallery-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kai-9000-review",
-        "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
-        "url": "/power-local-llm/kai-9000-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 242,
+    "totalCount": 243,
     "capped": true
   },
   "Qdrant": {
