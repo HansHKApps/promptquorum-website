@@ -19117,6 +19117,573 @@
   },
   {
     "lang": "en",
+    "title": "Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
+    "excerpt": "Local AI workstations compared: DGX Spark vs. AMD Strix Halo systems from AMD, Framework, HP, GMKtec, Minisforum: memory, tested speed, sourced prices.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "Lokale KI-Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
+    "excerpt": "Lokale KI-Workstations im Vergleich: DGX Spark vs. AMD Strix Halo von AMD, Framework, HP, GMKtec, Minisforum — Speicher, Tempo, belegte Preise.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "Stations de travail IA locales : AMD Strix Halo contre NVIDIA DGX Spark",
+    "excerpt": "Stations IA locales : DGX Spark face aux machines AMD Strix Halo d'AMD, Framework, HP, GMKtec et Minisforum : mémoire, vitesse mesurée, prix sourcés.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルAIワークステーション: AMD Strix Halo vs. NVIDIA DGX Spark",
+    "excerpt": "ローカルAIワークステーションを比較。DGX SparkとAMD、Framework、HP、GMKtec、MinisforumのStrix Halo機を、メモリ・実測速度・出典付き価格で整理。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "本地AI工作站：AMD Strix Halo对比NVIDIA DGX Spark",
+    "excerpt": "本地AI工作站对比：DGX Spark与AMD、Framework、HP、GMKtec、Minisforum的Strix Halo机型，从内存、实测速度和有来源的价格全面比较。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "Estaciones de trabajo de IA local: AMD Strix Halo vs. NVIDIA DGX Spark",
+    "excerpt": "Estaciones de IA local comparadas: DGX Spark frente a equipos AMD Strix Halo de Framework, HP, GMKtec y Minisforum — memoria, velocidad medida y precios.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "Workstations de IA local: AMD Strix Halo vs. NVIDIA DGX Spark",
+    "excerpt": "Workstations de IA local comparadas: DGX Spark vs. AMD Strix Halo da AMD, Framework, HP, GMKtec e Minisforum — memória, velocidade medida e preços.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "محطات عمل الذكاء الاصطناعي المحلي: AMD Strix Halo مقابل NVIDIA DGX Spark",
+    "excerpt": "مقارنة محطات عمل الذكاء الاصطناعي المحلي: DGX Spark مقابل أجهزة AMD Strix Halo من AMD وFramework وHP وGMKtec وMinisforum: الذاكرة والسرعة وأسعار موثقة.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "로컬 AI 워크스테이션: AMD Strix Halo 대 NVIDIA DGX Spark",
+    "excerpt": "로컬 AI 워크스테이션 비교: DGX Spark 대 AMD, Framework, HP, GMKtec, Minisforum의 Strix Halo 기기 — 메모리, 실측 속도, 출처 표기 가격.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
+    "title": "NVIDIA DGX Spark for Local AI: Specs, Price and Verdict",
+    "excerpt": "NVIDIA DGX Spark for local AI: verified GB10 specs, 128 GB and 64 GB US prices with sources, what independent tests show, and who should skip it.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "NVIDIA DGX Spark für lokale KI: Spezifikationen, Preis und Fazit",
+    "excerpt": "NVIDIA DGX Spark für lokale KI: geprüfte GB10-Daten, US-Preise für 128 und 64 GB mit Quellen, Ergebnisse unabhängiger Tests und wer verzichten sollte.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "NVIDIA DGX Spark pour l'IA locale : caractéristiques, prix et verdict",
+    "excerpt": "NVIDIA DGX Spark pour l'IA locale : specs GB10 vérifiées, prix US 128 Go et 64 Go sourcés, ce que disent les tests indépendants, et qui devrait s'abstenir.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルAI向けNVIDIA DGX Spark: 仕様・価格・評価",
+    "excerpt": "NVIDIA DGX SparkをローカルAI向けに解説。GB10の仕様、128GB/64GB版の出典付き米国価格、独立テストの結果、見送るべき人を整理しました。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "用于本地AI的NVIDIA DGX Spark：规格、价格与结论",
+    "excerpt": "NVIDIA DGX Spark本地AI指南：已核实的GB10规格、128 GB与64 GB版本的美国价格及来源、独立测试结果，以及哪些人应该跳过它。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "NVIDIA DGX Spark para IA local: especificaciones, precio y veredicto",
+    "excerpt": "NVIDIA DGX Spark para IA local: specs del GB10, precios en EE. UU. de 128 GB y 64 GB con fuentes, qué muestran las pruebas y quién debe evitarla.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "NVIDIA DGX Spark para IA local: especificações, preço e veredito",
+    "excerpt": "NVIDIA DGX Spark para IA local: specs do GB10, preços nos EUA de 128 GB e 64 GB com fontes, o que mostram os testes independentes e quem deve evitá-lo.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "NVIDIA DGX Spark للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة",
+    "excerpt": "NVIDIA DGX Spark للذكاء الاصطناعي المحلي: مواصفات GB10 الموثقة وأسعار 128 GB و64 GB الأمريكية بمصادرها، ونتائج الاختبارات المستقلة، ولمن لا يناسب.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "로컬 AI용 NVIDIA DGX Spark: 사양, 가격, 평가",
+    "excerpt": "로컬 AI용 NVIDIA DGX Spark: 검증된 GB10 사양, 128GB와 64GB 모델의 출처 표기 미국 가격, 독립 테스트 결과, 구매를 피해야 할 경우.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/local-llms/nvidia-dgx-spark-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
+    "title": "AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict",
+    "excerpt": "AMD Ryzen AI Halo specs for local AI: 128 GB Ryzen AI Max+ 395 and 192 GB PRO 495 versions, sourced US prices and what independent reviews found.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "AMD Ryzen AI Halo für lokale KI: Spezifikationen, Preis und Fazit",
+    "excerpt": "AMD Ryzen AI Halo für lokale KI: Versionen mit 128 GB (Ryzen AI Max+ 395) und 192 GB (PRO 495), belegte US-Preise und was unabhängige Tests ergaben.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "AMD Ryzen AI Halo pour l'IA locale : caractéristiques, prix et verdict",
+    "excerpt": "AMD Ryzen AI Halo pour l'IA locale : versions 128 Go (Ryzen AI Max+ 395) et 192 Go (PRO 495), prix US sourcés et ce qu'ont constaté les tests indépendants.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルAI向けAMD Ryzen AI Halo: 仕様・価格・評価",
+    "excerpt": "ローカルAI向けAMD Ryzen AI Haloの仕様を解説。128GB版（395）と192GB版（PRO 495）、出典付き米国価格、独立レビューの結果を整理しました。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "用于本地AI的AMD Ryzen AI Halo：规格、价格与结论",
+    "excerpt": "AMD Ryzen AI Halo本地AI规格：128 GB的Ryzen AI Max+ 395与192 GB的PRO 495两个版本、有来源的美国价格，以及独立评测的发现。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "AMD Ryzen AI Halo para IA local: especificaciones, precio y veredicto",
+    "excerpt": "Specs del AMD Ryzen AI Halo para IA local: versiones de 128 GB (Max+ 395) y 192 GB (PRO 495), precios en EE. UU. con fuentes y qué hallaron las reseñas.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "AMD Ryzen AI Halo para IA local: especificações, preço e veredito",
+    "excerpt": "Specs do AMD Ryzen AI Halo para IA local: versões de 128 GB (395) e 192 GB (PRO 495), preços nos EUA com fonte e o que mostram as análises independentes.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة",
+    "excerpt": "مواصفات AMD Ryzen AI Halo للذكاء الاصطناعي المحلي: نسخة 128 GB بشريحة 395 ونسخة 192 GB بشريحة PRO 495، وأسعار أمريكية موثقة ونتائج المراجعات المستقلة.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "로컬 AI용 AMD Ryzen AI Halo: 사양, 가격, 평가",
+    "excerpt": "로컬 AI용 AMD Ryzen AI Halo 사양: Ryzen AI Max+ 395 128GB와 PRO 495 192GB 버전, 출처 표기 미국 가격, 독립 리뷰 결과.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
+    "title": "Framework Desktop for Local AI: Specs, Price and Verdict",
+    "excerpt": "Framework Desktop for local AI: 192 GB Ryzen AI Max+ PRO 495 from $6,799, 128 GB model $3,449. Specs, sourced prices, what reports show, who should skip.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "Framework Desktop für lokale KI: Spezifikationen, Preis und Fazit",
+    "excerpt": "Framework Desktop für lokale KI: 192 GB mit Ryzen AI Max+ PRO 495 ab 6.799 $, Modell mit 128 GB 3.449 $. Specs, belegte Preise und Berichte.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "Framework Desktop pour l'IA locale : caractéristiques, prix et verdict",
+    "excerpt": "Framework Desktop pour l'IA locale : 192 Go Ryzen AI Max+ PRO 495 dès $6,799, modèle 128 Go à $3,449. Specs, prix sourcés, ce que montrent les rapports.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルAI向けFramework Desktop: 仕様・価格・評価",
+    "excerpt": "ローカルAI向けFramework Desktop。192GB版（PRO 495）は$6,799から、128GB版は$3,449。仕様、出典付き価格、報道の内容、見送るべき人を整理。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "用于本地AI的Framework Desktop：规格、价格与结论",
+    "excerpt": "Framework Desktop本地AI指南：192 GB的Ryzen AI Max+ PRO 495起价$6,799，128 GB机型$3,449。规格、有来源的价格、报道内容，以及谁该跳过。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "Framework Desktop para IA local: especificaciones, precio y veredicto",
+    "excerpt": "Framework Desktop para IA local: 192 GB con PRO 495 desde $6,799, modelo de 128 GB a $3,449. Specs, precios con fuentes y qué muestran los informes.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "Framework Desktop para IA local: especificações, preço e veredito",
+    "excerpt": "Framework Desktop para IA local: Ryzen AI Max+ PRO 495 de 192 GB a partir de $6,799, modelo de 128 GB a $3,449. Specs, preços com fonte e quem deve evitar.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "Framework Desktop للذكاء الاصطناعي المحلي: المواصفات والسعر والخلاصة",
+    "excerpt": "Framework Desktop للذكاء الاصطناعي المحلي: طراز 192 GB من $6,799 وطراز 128 GB بسعر $3,449. المواصفات وأسعار موثقة وما تُظهره التقارير المستقلة.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "로컬 AI용 Framework Desktop: 사양, 가격, 평가",
+    "excerpt": "로컬 AI용 Framework Desktop: 192GB Ryzen AI Max+ PRO 495는 $6,799부터, 128GB는 $3,449. 사양, 출처 표기 가격, 피해야 할 경우.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/local-llms/framework-desktop-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
+    "title": "HP Z2 Mini G1a for Local AI: Specs, Price and Verdict",
+    "excerpt": "HP Z2 Mini G1a for local AI: Ryzen AI Max+ PRO 395, up to 128 GB, specs, sourced US prices, independent LLM test results and who should skip it.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "HP Z2 Mini G1a für lokale KI: Specs, Preis und Fazit",
+    "excerpt": "HP Z2 Mini G1a für lokale KI: Ryzen AI Max+ PRO 395, bis zu 128 GB, Specs, belegte US-Preise, unabhängige LLM-Tests und für wen er nichts ist.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "HP Z2 Mini G1a pour l'IA locale : fiche technique, prix et verdict",
+    "excerpt": "HP Z2 Mini G1a pour l'IA locale : Ryzen AI Max+ PRO 395, jusqu'à 128 Go, specs, prix US sourcés, tests LLM indépendants et pour qui l'éviter.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルAI向けHP Z2 Mini G1a: 仕様・価格・総評",
+    "excerpt": "HP Z2 Mini G1aをローカルAIの視点で解説。Ryzen AI Max+ PRO 395と最大128GB、仕様、出典付き米国価格、独立したLLMテスト結果、見送るべき人まで。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "用于本地AI的HP Z2 Mini G1a：规格、价格与结论",
+    "excerpt": "HP Z2 Mini G1a本地AI评测：Ryzen AI Max+ PRO 395、最高128 GB内存，含规格、有来源的美国价格、独立的大模型测试结果，以及哪些人应跳过它。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "HP Z2 Mini G1a para IA local: especificaciones, precio y veredicto",
+    "excerpt": "HP Z2 Mini G1a para IA local: Ryzen AI Max+ PRO 395, hasta 128 GB, especificaciones, precios de EE. UU. con fuente y pruebas independientes con LLM.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "HP Z2 Mini G1a para IA local: especificações, preço e veredito",
+    "excerpt": "HP Z2 Mini G1a para IA local: Ryzen AI Max+ PRO 395, até 128 GB, specs, preços dos EUA com fonte, testes independentes de LLM e quem deve evitar.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "HP Z2 Mini G1a للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم",
+    "excerpt": "HP Z2 Mini G1a للذكاء الاصطناعي المحلي: Ryzen AI Max+ PRO 395 وذاكرة حتى 128 GB، المواصفات وأسعار أمريكية موثقة ونتائج LLM مستقلة ولمن لا يناسب.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "로컬 AI용 HP Z2 Mini G1a: 사양, 가격, 평가",
+    "excerpt": "HP Z2 Mini G1a 로컬 AI 가이드: Ryzen AI Max+ PRO 395, 최대 128GB, 사양, 출처 표기 미국 가격, 독립 LLM 테스트 결과, 비추천 대상.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/local-llms/hp-z2-mini-g1a-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
+    "title": "GMKtec EVO-X2 for Local AI: Specs, Price and Verdict",
+    "excerpt": "GMKtec EVO-X2 with Ryzen AI Max+ 395 and 128 GB: verified specs, conflicting US prices with sources, third-party findings and who should skip it.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "GMKtec EVO-X2 für lokale KI: Specs, Preis und Fazit",
+    "excerpt": "GMKtec EVO-X2 mit Ryzen AI Max+ 395 und 128 GB: geprüfte Specs, widersprüchliche US-Preise mit Quellen, Befunde Dritter und für wen er nichts ist.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "GMKtec EVO-X2 pour l'IA locale : fiche technique, prix et verdict",
+    "excerpt": "GMKtec EVO-X2 avec Ryzen AI Max+ 395 et 128 Go : specs vérifiées, prix US contradictoires avec sources, constats de tiers et pour qui l'éviter.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルAI向けGMKtec EVO-X2: 仕様・価格・総評",
+    "excerpt": "Ryzen AI Max+ 395と128GBを搭載したGMKtec EVO-X2。確認済みの仕様、情報源つきで食い違う米国価格、第三者の検証結果、見送るべき人を解説します。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "用于本地AI的GMKtec EVO-X2：规格、价格与结论",
+    "excerpt": "GMKtec EVO-X2搭载Ryzen AI Max+ 395与128 GB内存：已核实的规格、互相矛盾的美国价格及来源、第三方评测发现，以及哪些人应跳过它。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "GMKtec EVO-X2 para IA local: especificaciones, precio y veredicto",
+    "excerpt": "GMKtec EVO-X2 con Ryzen AI Max+ 395 y 128 GB: especificaciones verificadas, precios de EE. UU. contradictorios con fuentes y hallazgos de terceros.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "GMKtec EVO-X2 para IA local: especificações, preço e veredito",
+    "excerpt": "GMKtec EVO-X2 com Ryzen AI Max+ 395 e 128 GB: specs verificadas, preços dos EUA conflitantes com fontes, achados de terceiros e quem deve evitar.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "GMKtec EVO-X2 للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم",
+    "excerpt": "GMKtec EVO-X2 بمعالج Ryzen AI Max+ 395 وذاكرة 128 GB: مواصفات موثقة وأسعار أمريكية متعارضة مع مصادرها ونتائج الأطراف الثالثة ولمن لا يناسب هذا الجهاز.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "로컬 AI용 GMKtec EVO-X2: 사양, 가격, 평가",
+    "excerpt": "Ryzen AI Max+ 395와 128GB를 탑재한 GMKtec EVO-X2: 확인된 사양, 출처별로 엇갈리는 미국 가격, 제3자 평가, 비추천 대상.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/local-llms/gmktec-evo-x2-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
+    "title": "Minisforum MS-S1 MAX for Local AI: Specs, Price and Verdict",
+    "excerpt": "Minisforum MS-S1 MAX for local AI: Ryzen AI Max+ 395, 128 GB, dual 10GbE, PCIe slot, plus the 192 GB P495. Sourced US prices and what reviews found.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "de",
+    "title": "Minisforum MS-S1 MAX für lokale KI: Specs, Preis und Fazit",
+    "excerpt": "Minisforum MS-S1 MAX für lokale KI: Ryzen AI Max+ 395, 128 GB, zwei 10GbE, PCIe-Steckplatz, dazu der P495 mit 192 GB. Belegte US-Preise und Testbefunde.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "fr",
+    "title": "Minisforum MS-S1 MAX pour l'IA locale : fiche technique, prix et verdict",
+    "excerpt": "Minisforum MS-S1 MAX pour l'IA locale : Ryzen AI Max+ 395, 128 Go, double 10GbE, slot PCIe, et la P495 de 192 Go. Prix US sourcés et constats des tests.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルAI向けMinisforum MS-S1 MAX: 仕様・価格・総評",
+    "excerpt": "ローカルAI向けMinisforum MS-S1 MAX。Ryzen AI Max+ 395、128GB、デュアル10GbE、PCIeスロットと192GBのP495を解説。出典付き米国価格とレビュー結果も掲載。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "zh",
+    "title": "用于本地AI的Minisforum MS-S1 MAX：规格、价格与结论",
+    "excerpt": "Minisforum MS-S1 MAX本地AI：Ryzen AI Max+ 395、128 GB内存、双10GbE与PCIe插槽，另含192 GB的P495。有来源的美国价格，以及评测的发现。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "es",
+    "title": "Minisforum MS-S1 MAX para IA local: especificaciones, precio y veredicto",
+    "excerpt": "Minisforum MS-S1 MAX para IA local: Ryzen AI Max+ 395, 128 GB, doble 10GbE, ranura PCIe y P495 de 192 GB. Precios de EE. UU. con fuente y reseñas.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "pt",
+    "title": "Minisforum MS-S1 MAX para IA local: especificações, preço e veredito",
+    "excerpt": "Minisforum MS-S1 MAX para IA local: Ryzen AI Max+ 395, 128 GB, 10GbE duplo, slot PCIe e o P495 de 192 GB. Preços dos EUA com fonte e análises.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ar",
+    "title": "Minisforum MS-S1 MAX للذكاء الاصطناعي المحلي: المواصفات والسعر والحكم",
+    "excerpt": "Minisforum MS-S1 MAX للذكاء الاصطناعي المحلي: Ryzen AI Max+ 395 وذاكرة 128 GB ومنفذا 10GbE وفتحة PCIe، ونسخة P495 بذاكرة 192 GB. أسعار أمريكية موثقة.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "ko",
+    "title": "로컬 AI용 Minisforum MS-S1 MAX: 사양, 가격, 평가",
+    "excerpt": "로컬 AI용 Minisforum MS-S1 MAX: Ryzen AI Max+ 395, 128GB, 듀얼 10GbE, PCIe 슬롯과 192GB P495. 출처 표기 미국 가격과 리뷰 결과.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/local-llms/minisforum-ms-s1-max-local-ai-workstation",
+    "cluster": "local-llms"
+  },
+  {
+    "lang": "en",
     "title": "Hermes Agent Review: Self-Hosted AI Agent",
     "excerpt": "Hermes Agent (Nous Research, MIT license): self-hosted AI agent with a self-improving skill loop and persistent memory. What it does, how to run it, and who should self-host it.",
     "publishDate": "2026-09-03",
@@ -19761,6 +20328,87 @@
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-03",
     "url": "/ko/power-local-llm/asus-mini-pc-local-ai",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Olares One Review: Compact RTX 5090 Mobile AI Desktop for Local LLMs",
+    "excerpt": "Olares One review: RTX 5090 Mobile 24 GB, 96 GB DDR5, $4,999 official price. Specs, vendor claims checked against Olares' own page, and no affiliate links.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Olares One im Test: Kompakter KI-Desktop mit RTX 5090 Mobile für lokale LLMs",
+    "excerpt": "Olares One im Test: RTX 5090 Mobile 24 GB, 96 GB DDR5, offizieller Preis $4,999. Spezifikationen, Herstellerangaben mit Olares' eigener Seite abgeglichen, keine Affiliate-Links.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de l'Olares One : mini-PC IA compact avec RTX 5090 Mobile pour LLM locaux",
+    "excerpt": "Test de l'Olares One : RTX 5090 Mobile 24 GB, 96 GB DDR5, prix officiel $4,999. Spécifications, affirmations du fabricant vérifiées sur la page d'Olares, sans lien d'affiliation.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Olares One レビュー：ローカルLLM向けのコンパクトなRTX 5090 Mobile搭載AIデスクトップ",
+    "excerpt": "Olares One レビュー：RTX 5090 Mobile 24 GB、96 GB DDR5、公式価格$4,999。仕様、Olares公式ページと照合したベンダー主張、アフィリエイトリンクなし。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Olares One 评测：搭载 RTX 5090 Mobile 的紧凑型 AI 桌面主机，适合本地大模型",
+    "excerpt": "Olares One 评测：RTX 5090 Mobile 24 GB、96 GB DDR5，官方价 $4,999。含规格、对照 Olares 自家页面核对的厂商声明，无联盟链接。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis del Olares One: sobremesa de IA compacto con RTX 5090 Mobile para LLM locales",
+    "excerpt": "Análisis del Olares One: RTX 5090 Mobile de 24 GB, 96 GB DDR5, precio oficial de $4,999. Especificaciones, afirmaciones del fabricante contrastadas con la página de Olares y sin enlaces de afiliación.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Review do Olares One: desktop de IA compacto com RTX 5090 Mobile para LLMs locais",
+    "excerpt": "Review do Olares One: RTX 5090 Mobile de 24 GB, 96 GB de DDR5, preço oficial de $4,999. Especificações, declarações do fabricante conferidas com a página da própria Olares e nenhum link de afiliado.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Olares One: حاسوب مكتبي مدمج للذكاء الاصطناعي ببطاقة RTX 5090 Mobile لتشغيل النماذج اللغوية محليًا",
+    "excerpt": "مراجعة Olares One: بطاقة RTX 5090 Mobile بذاكرة 24 GB، وذاكرة 96 GB DDR5، والسعر الرسمي $4,999. المواصفات وادعاءات الشركة المصنّعة مقارنةً بصفحة Olares الرسمية، ودون روابط تسويق بالعمولة.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/power-local-llm/olares-one-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Olares One 리뷰: 로컬 LLM용 소형 RTX 5090 Mobile AI 데스크톱",
+    "excerpt": "Olares One 리뷰: RTX 5090 Mobile 24 GB, 96 GB DDR5, 공식 가격 $4,999. 사양, Olares 자체 페이지와 대조한 공급사 주장, 제휴 링크 없음.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/power-local-llm/olares-one-local-ai-review",
     "cluster": "power-local-llm"
   },
   {
@@ -20895,6 +21543,87 @@
     "publishDate": "2026-10-31",
     "dateModified": "2026-10-31",
     "url": "/ko/power-local-llm/best-local-llm-apps-mac",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
+    "excerpt": "Alternatives to LM Studio, Ollama, Open WebUI and PocketPal AI: 14 local LLM apps compared by cost, license, platform and latest release date.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Alternativen zu lokalen LLM-Apps 2026: Optionen zu LM Studio, Ollama, Open WebUI und PocketPal AI",
+    "excerpt": "Alternativen zu LM Studio, Ollama, Open WebUI und PocketPal AI: 14 lokale LLM-Apps im Vergleich nach Kosten, Lizenz, Plattform und aktuellem Release.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/de/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Alternatives aux apps LLM locales en 2026 : options pour LM Studio, Ollama, Open WebUI et PocketPal AI",
+    "excerpt": "Alternatives à LM Studio, Ollama, Open WebUI et PocketPal AI : 14 apps LLM locales comparées par coût, licence, plateforme et dernière version.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/fr/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルLLMアプリの代替2026年版：LM Studio、Ollama、Open WebUI、PocketPal AIの代わりになる選択肢",
+    "excerpt": "LM Studio、Ollama、Open WebUI、PocketPal AIの代替ローカルLLMアプリ14本を、費用、ライセンス、プラットフォーム、最新リリースで比較します。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ja/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "2026年本地LLM应用替代方案：LM Studio、Ollama、Open WebUI和PocketPal AI的备选",
+    "excerpt": "LM Studio、Ollama、Open WebUI和PocketPal AI的替代品：对比14款本地LLM应用的费用、许可证、平台和最新版本，找到最接近的选择。",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/zh/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Alternativas a las apps de LLM local en 2026: opciones para LM Studio, Ollama, Open WebUI y PocketPal AI",
+    "excerpt": "Alternativas a LM Studio, Ollama, Open WebUI y PocketPal AI: 14 apps de LLM local comparadas por coste, licencia, plataforma y última versión.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/es/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Alternativas a apps de LLM local em 2026: opções para LM Studio, Ollama, Open WebUI e PocketPal AI",
+    "excerpt": "Alternativas a LM Studio, Ollama, Open WebUI e PocketPal AI: 14 apps de LLM local comparados por custo, licença, plataforma e versão mais recente.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/pt/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "بدائل تطبيقات النماذج اللغوية المحلية في 2026: خيارات بديلة لـ LM Studio وOllama وOpen WebUI وPocketPal AI",
+    "excerpt": "بدائل LM Studio وOllama وOpen WebUI وPocketPal AI: مقارنة 14 تطبيق LLM محلياً بحسب التكلفة والترخيص والمنصة وأحدث إصدار.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ar/power-local-llm/local-llm-app-alternatives",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "2026년 로컬 LLM 앱 대안: LM Studio, Ollama, Open WebUI, PocketPal AI를 대신할 선택지",
+    "excerpt": "LM Studio, Ollama, Open WebUI, PocketPal AI 대안 로컬 LLM 앱 14종을 비용, 라이선스, 플랫폼, 최신 릴리스로 비교합니다.",
+    "publishDate": "2026-10-31",
+    "dateModified": "2026-10-31",
+    "url": "/ko/power-local-llm/local-llm-app-alternatives",
     "cluster": "power-local-llm"
   },
   {
@@ -66748,16 +67477,16 @@
     "title": "Balcony Solar Batteries in 2027: Is Storage Becoming Standard?",
     "excerpt": "The German plug-in standard excludes storage, registration rules are in flux and prices fall. What is verified about balcony batteries, and when storage pays.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
   {
     "lang": "de",
     "title": "Batteriespeicher für Balkonkraftwerke 2027: Wird er zum Standard?",
-    "excerpt": "Die deutsche Steckersolar-Norm schließt Speicher aus, Anmelderegeln sind im Fluss, Einstiegspreise sinken. Was belegt ist und wann sich ein Speicher lohnt.",
+    "excerpt": "Batteriespeicher für Balkonkraftwerke: Die Norm schließt Speicher aus, der EEG-2027-Entwurf ist nicht beschlossen, Speicher kosten ca. 300–1.000 €.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/de/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
@@ -66766,7 +67495,7 @@
     "title": "Batteries pour le solaire de balcon en 2027 : un nouveau standard ?",
     "excerpt": "La norme plug-in allemande exclut le stockage, les règles d'enregistrement évoluent, les prix baissent. Ce qui est vérifié et quand une batterie rapporte.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/fr/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
@@ -66775,7 +67504,7 @@
     "title": "2027年のバルコニーソーラー用蓄電池：標準になるのか",
     "excerpt": "バルコニーソーラー蓄電池2027：ドイツのプラグイン規格は蓄電池を対象外とし、登録ルールは流動的で、価格は下落中。確認済みの事実と採算の条件を整理します。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ja/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
@@ -66784,7 +67513,7 @@
     "title": "2027年阳台光伏电池：储能会成为标配吗？",
     "excerpt": "德国插拔式光伏标准不含储能，登记规则仍在变动，入门价格下降。梳理阳台电池哪些信息已核实、储能何时划算，以及电价套利研究的适用范围。",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/zh/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
@@ -66793,7 +67522,7 @@
     "title": "Baterías para energía solar de balcón en 2027: ¿se vuelven estándar?",
     "excerpt": "La norma plug-in alemana excluye el almacenamiento, el registro cambia y los precios bajan. Qué está verificado sobre baterías de balcón y cuándo compensan.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/es/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
@@ -66802,7 +67531,7 @@
     "title": "Baterias para energia solar de varanda em 2027: viram padrão?",
     "excerpt": "Baterias de varanda em 2027: a norma plug-in alemã exclui armazenamento, o registro muda e os preços caem. O que está verificado e quando armazenar compensa.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/pt/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
@@ -66811,7 +67540,7 @@
     "title": "بطاريات الطاقة الشمسية للشرفة في 2027: هل تصبح معيارًا؟",
     "excerpt": "بطاريات الشرفة الشمسية 2027: المعيار الألماني للأجهزة القابلة للتوصيل يستثني التخزين، وقواعد التسجيل تتغير، والأسعار تنخفض. ما الذي تأكد ومتى يجدي التخزين.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ar/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },
@@ -66820,7 +67549,7 @@
     "title": "2027년 발코니 태양광 배터리: 표준이 되고 있습니까?",
     "excerpt": "발코니 태양광 배터리 2027: 독일 플러그인 표준은 저장장치를 제외하고, 등록 규정은 변동 중이며 가격은 하락합니다. 확인된 사실과 수익성 조건을 정리합니다.",
     "publishDate": "2026-07-18",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-31",
     "url": "/ko/balcony-solar/balcony-solar-battery-storage-standard-2027",
     "cluster": "balcony-solar"
   },

@@ -27,7 +27,7 @@ const FACTS = {
 }
 
 function loadArticle(slug) {
-  const file = `src/lib/power-local-llm/articles/${slug}.ts`
+  const file = `src/lib/local-llms/articles/${slug}.ts`
   const out = ts.transpileModule(readFileSync(file, 'utf8'), { compilerOptions: { module: 'commonjs', target: 'es2020' } }).outputText
   const m = new Module(file)
   m.paths = []

@@ -4047,6 +4047,132 @@
         "ko"
       ],
       "images": []
+    },
+    "local-ai-workstations-strix-halo-vs-dgx-spark": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "nvidia-dgx-spark-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "amd-ryzen-ai-halo-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "framework-desktop-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hp-z2-mini-g1a-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "gmktec-evo-x2-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "minisforum-ms-s1-max-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-engineering": {
@@ -5871,6 +5997,33 @@
       ],
       "images": []
     },
+    "olares-one-local-ai-review": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/olares-one-desk.webp",
+          "title": "Olares One on a desk (320 × 197 × 55 mm). Photo: Olares."
+        },
+        {
+          "url": "/images/olares-one-cooling.webp",
+          "title": "Internal cooling layout of the Olares One, a manufacturer illustration. Image: Olares."
+        }
+      ]
+    },
     "local-llm-electricity-cost-balcony-solar-2026": {
       "dateModified": "2026-09-25",
       "lastFactChecked": null,
@@ -6241,6 +6394,24 @@
       ]
     },
     "best-local-llm-apps-mac": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-app-alternatives": {
       "dateModified": "2026-10-31",
       "lastFactChecked": null,
       "publishDate": "2026-10-31",
@@ -18144,7 +18315,7 @@
       "images": []
     },
     "balcony-solar-battery-storage-standard-2027": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-31",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
