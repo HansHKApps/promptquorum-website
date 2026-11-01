@@ -5,22 +5,13 @@ import { useLang } from '@/hooks/useLang'
 import { translations } from '@/translations'
 import { SearchModal } from './SearchModal'
 import { AskHansSearchModal } from './AskHansSearchModal'
-import { ASK_HANS_FALLBACK_SEARCH_EVENT, ASK_HANS_OPEN_EVENT } from '@/lib/askhans/config'
+import { ASK_HANS_OPEN_EVENT } from '@/lib/askhans/config'
 
 export function SearchTrigger() {
   const [isOpen, setIsOpen] = useState(false)
   const lang = useLang()
   const t = translations[lang as keyof typeof translations] || translations.en
-  const askHansOn = lang === 'de' && process.env.NEXT_PUBLIC_ASK_HANS_ENABLED === 'true'
-  const [fallbackQuery, setFallbackQuery] = useState<string | null>(null)
-
-  useEffect(() => {
-    if (!askHansOn) return
-    const on = (e: Event) => setFallbackQuery((e as CustomEvent<{ query?: string }>).detail?.query ?? '')
-    window.addEventListener(ASK_HANS_FALLBACK_SEARCH_EVENT, on)
-    return () => window.removeEventListener(ASK_HANS_FALLBACK_SEARCH_EVENT, on)
-  }, [askHansOn])
-
+  const askHansOn = process.env.NEXT_PUBLIC_ASK_HANS_ENABLED === 'true'
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
@@ -50,19 +41,18 @@ export function SearchTrigger() {
       <button
         onClick={() => setIsOpen(true)}
         className="hidden md:flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 border border-gray-200 rounded-lg px-3 py-1.5 hover:border-gray-300 transition-colors"
-        aria-label={t.searchAriaLabel}
+        aria-label={askHansOn ? 'Ask Hans' : t.searchAriaLabel}
       >
         <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21-4.35-4.35" />
         </svg>
-        <span>{t.searchPlaceholder}</span>
+        <span className="font-medium text-gray-700">{askHansOn ? 'Ask Hans' : t.searchPlaceholder}</span>
         <kbd className="text-[11px] text-gray-400 border border-gray-200 rounded px-1 py-0.5 font-mono leading-none">⌘K</kbd>
       </button>
 
-      {/* Every locale uses the classic Fuse.js search. Roland's companion is disconnected (2026-10-30).
-          With ASK_HANS_ENABLED=true the German search box instead hands the typed question to Ask Hans on Enter
-          (Cmd/Ctrl+K opens the same box). */}
+      {/* With ASK_HANS_ENABLED=true the header search box of every language hands the typed question to Ask Hans on
+          Enter (Cmd/Ctrl+K opens the same box). The classic Fuse.js search stays only as the kill-switch fallback. */}
       {askHansOn
         ? <AskHansSearchModal
             isOpen={isOpen}
@@ -70,10 +60,6 @@ export function SearchTrigger() {
             onSubmit={(question) => window.dispatchEvent(new CustomEvent(ASK_HANS_OPEN_EVENT, { detail: { question } }))}
           />
         : <SearchModal isOpen={isOpen} onClose={() => setIsOpen(false)} lang={lang} />}
-      {/* Ask Hans failure fallback: "use the normal search for my text". */}
-      {askHansOn && (
-        <SearchModal isOpen={fallbackQuery !== null} onClose={() => setFallbackQuery(null)} lang={lang} initialQuery={fallbackQuery ?? undefined} />
-      )}
     </>
   )
 }

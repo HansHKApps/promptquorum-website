@@ -59,6 +59,12 @@ sum('tool:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`)
 console.log('\nLanguages')
 sum('lang:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
 
+const ratings = total.rating_count ?? 0
+console.log('\nStar ratings (feedback, anonymous)')
+console.log(`  ${ratings} ratings, average ${ratings ? ((total.rating_sum ?? 0) / ratings).toFixed(2) : 'n/a'} / 5`)
+for (let n = 5; n >= 1; n--) console.log(`  ${'★'.repeat(n).padEnd(5)}  ${total[`rating:${n}`] ?? 0}`)
+sum('fb_lang:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  language ${k}`))
+
 const yes = total.consent_yes ?? 0
 const no = total.consent_no ?? 0
 console.log('\nConsent')

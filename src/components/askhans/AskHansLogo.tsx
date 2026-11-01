@@ -7,7 +7,7 @@
 
 import { forwardRef, useRef } from 'react'
 import { Logo } from '@/components/Logo'
-import { DE } from './copy'
+import { useAskCopy } from './copy'
 
 const DOUBLE_TAP_MS = 350
 
@@ -16,14 +16,15 @@ interface Props {
 }
 
 export const AskHansLogo = forwardRef<HTMLButtonElement, Props>(function AskHansLogo({ onOpen }, ref) {
+  const tx = useAskCopy()
   const lastTap = useRef(0)
 
   return (
     <button
       ref={ref}
       type="button"
-      aria-label={DE.logoLabel}
-      title={DE.logoTitle}
+      aria-label={tx.logoLabel}
+      title={tx.logoTitle}
       onDoubleClick={onOpen}
       onPointerUp={(e) => {
         // Touch has no reliable dblclick across browsers: detect the second tap ourselves.

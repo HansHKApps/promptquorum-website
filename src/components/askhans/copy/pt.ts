@@ -1,0 +1,441 @@
+import type { AskCopy } from './types'
+
+export const copy: AskCopy = {
+  name: 'Ask Hans',
+  tagline: 'Assistente de IA para IA local',
+  close: 'Fechar — o Ask Hans permanece como ícone',
+  maximize: 'Tela cheia',
+  restore: 'Restaurar tamanho da janela',
+  newChat: 'Novo',
+  newChatLabel: 'Iniciar nova conversa',
+  logoLabel: 'Abrir o Ask Hans (clique duplo)',
+  logoTitle: 'Ask Hans — clique duplo para abrir',
+
+  welcomeTitle: 'Bem-vindo ao Ask Hans, seu guia interativo para IA local.',
+  welcomeBody:
+    'Eu pesquiso o conteúdo do PromptQuorum e respondo às suas perguntas sobre apps, hardware e guias. Escolha um ponto de partida ou faça sua própria pergunta abaixo.',
+  welcomeCards: [
+    { icon: 'LayoutGrid', title: 'Encontrar apps e guias adequados', question: 'Quais apps e guias combinam comigo? Quero experimentar IA local.' },
+    { icon: 'ArrowLeftRight', title: 'Comparar apps e indicar alternativas', question: 'Você pode me ajudar a comparar apps e encontrar alternativas?' },
+    { icon: 'Cpu', title: 'Verificar se o seu hardware roda um modelo', question: 'Meu hardware consegue rodar um determinado modelo de IA? Por favor, pergunte sobre o meu computador.' },
+    { icon: 'Scale', title: 'Explicar licenças e recomendar um stack de software adequado', question: 'Explique-me as licenças e recomende um stack de software adequado para IA local.' },
+  ],
+
+  previousChat: (n: number) => `Conversa anterior · ${n} ${n === 1 ? 'mensagem' : 'mensagens'}`,
+  continueChat: 'Continuar a conversa aqui',
+
+  inputLabel: 'Sua pergunta para o Ask Hans',
+  inputPlaceholder: 'Faça uma pergunta …',
+  send: 'Enviar',
+  charCount: (n: number, max: number) => `${n} / ${max}`,
+  aiNotice: 'O Ask Hans é uma IA e pode errar. Por favor, não informe dados pessoais.',
+  withdraw: 'Revogar consentimento',
+  thinking: 'O Ask Hans está pensando …',
+  searching: 'Pesquisando no PromptQuorum …',
+  panelTools: 'Usando uma ferramenta …',
+
+  errors: {
+    unavailable: 'O Ask Hans está indisponível no momento.',
+    failed: 'Infelizmente isso não funcionou. Por favor, tente novamente.',
+    rate: 'Muitas perguntas foram feitas agora há pouco. Aguarde um momento e tente novamente.',
+    limit: (n: number) => `O limite de ${n} mensagens para esta visita foi atingido.`,
+    refused: 'Infelizmente não posso comentar sobre isso. Fique à vontade para fazer outra pergunta.',
+    disabled: 'O Ask Hans não está disponível no momento.',
+    tooLong: (max: number) => `Seja mais breve, por favor: as perguntas podem ter no máximo ${max} caracteres.`,
+  },
+  retry: 'Tentar novamente',
+
+  panelLabelPrefix: 'Tema',
+  panelLinksHeading: 'Páginas relacionadas',
+
+  // DRAFT — Hans reviews and approves before launch (see docs/askhans-privacy-draft.de.md).
+  consentTitle: 'Antes de começar',
+  consentParagraphs: [
+    'O Ask Hans responde às suas perguntas com a ajuda de IA (Claude, da Anthropic), com base no conteúdo do PromptQuorum. Para isso, o texto que você digita é enviado ao nosso servidor e à Anthropic. Por favor, não informe dados pessoais.',
+    'Com “Sim, concordo”, você também permite que registremos de forma anônima quais temas são perguntados e quais links são usados. O texto da sua pergunta não é armazenado nesse processo. Mesmo sem consentimento, você pode usar o Ask Hans. Você pode revogar seu consentimento a qualquer momento.',
+  ],
+  consentPrivacyLink: 'Saiba mais na Política de Privacidade.',
+  consentPrivacyHref: '/pt/privacy',
+  consentYes: 'Sim, concordo',
+  consentNo: 'Não, obrigado',
+  consentQuestionLabel: 'Sua pergunta (será enviada após a sua escolha):',
+
+  dir: 'ltr',
+  devNotice: 'Ferramenta em desenvolvimento – aguardamos o seu feedback.',
+  contactLabel: 'Enviar feedback por e-mail',
+  welcomeAria: 'Boas-vindas',
+  feedback: {
+    prompt: 'Quão útil é o Ask Hans?',
+    star: (n: number) => `${n} de 5 estrelas`,
+    commentPlaceholder: 'Opcional: o que podemos melhorar? Por favor, não informe dados pessoais.',
+    send: 'Enviar feedback',
+    thanks: 'Obrigado pelo seu feedback!',
+    error: 'Não foi possível enviar o feedback. Por favor, tente novamente mais tarde.',
+  },
+  search: {
+    placeholder: 'Faça sua pergunta...',
+    ariaLabel: 'Fazer uma pergunta ao assistente',
+    modalAriaLabel: 'Perguntas e respostas com IA',
+    hint: 'Digite a pergunta e pressione Enter',
+    close: 'Fechar',
+  },
+  categories: {
+    'prompt-engineering': {
+      label: 'Prompt Engineering',
+      links: {
+        'pe-hub': {
+          title: 'Prompt Engineering',
+          description: 'Todos os guias sobre o tema em um só lugar',
+        },
+        'pe-ides': {
+          title: 'IDEs de Prompt Engineering',
+          description: 'As melhores ferramentas para escrever prompts',
+        },
+        'pe-mgmt': {
+          title: 'Gerenciamento de prompts',
+          description: 'Plataformas para gerenciar prompts',
+        },
+      },
+    },
+    'local-llms': {
+      label: 'LLMs locais',
+      links: {
+        'll-what': {
+          title: 'O que são LLMs locais?',
+          description: 'A porta de entrada para a IA local',
+        },
+        'll-ollama': {
+          title: 'Instalar o Ollama',
+          description: 'Passo a passo até o primeiro modelo',
+        },
+        'll-beginner': {
+          title: 'Modelos para iniciantes',
+          description: 'Quais modelos são bons para começar',
+        },
+      },
+    },
+    'mini-pcs': {
+      label: 'Mini PCs',
+      links: {
+        'mp-best': {
+          title: 'Melhores mini PCs para IA local',
+          description: 'Comparação de mini PCs adequados',
+        },
+        'mp-amd': {
+          title: 'Mini PCs com AMD',
+          description: 'Visão geral de mini PCs com processador AMD',
+        },
+        'mp-run': {
+          title: 'O que posso rodar?',
+          description: 'Verifique o hardware e encontre os modelos certos',
+        },
+      },
+    },
+    'gpus-vram': {
+      label: 'Placas de vídeo e VRAM',
+      links: {
+        'gp-best': {
+          title: 'Melhores GPUs para LLMs locais',
+          description: 'Placas de vídeo comparadas',
+        },
+        'gp-apple': {
+          title: 'Apple Silicon ou NVIDIA?',
+          description: 'Duas plataformas comparadas',
+        },
+        'gp-can': {
+          title: 'Isso roda no meu PC?',
+          description: 'Verifique a compatibilidade por conta própria',
+        },
+      },
+    },
+    'smart-home': {
+      label: 'Casa inteligente',
+      links: {
+        'sh-hub': {
+          title: 'Casa inteligente',
+          description: 'IA local dentro de casa',
+        },
+        'sh-ha': {
+          title: 'Primeiros passos com o Home Assistant',
+          description: 'Como começar com o Home Assistant',
+        },
+        'sh-hw': {
+          title: 'Hardware para casa inteligente local',
+          description: 'Quais dispositivos são adequados',
+        },
+      },
+    },
+    'balcony-solar': {
+      label: 'Energia solar de varanda',
+      links: {
+        'bs-hub': {
+          title: 'Energia solar de varanda',
+          description: 'Fundamentos e visão geral',
+        },
+        'bs-batt': {
+          title: 'Armazenamento para energia solar de varanda',
+          description: 'Visão geral de baterias de armazenamento',
+        },
+        'bs-anker': {
+          title: 'Visão geral do Anker Solix',
+          description: 'Um sistema em detalhes',
+        },
+      },
+    },
+    'find-app': {
+      label: 'Encontrar app',
+      links: {
+        'fa-dir': {
+          title: 'Diretório de software',
+          description: 'Pesquise e filtre todos os apps',
+        },
+        'fa-iphone': {
+          title: 'Apps para iPhone',
+          description: 'IA local no iPhone',
+        },
+        'fa-android': {
+          title: 'Apps para Android',
+          description: 'IA local no Android',
+        },
+      },
+    },
+    'chat-clients': {
+      label: 'Clientes de chat',
+      links: {
+        'cc-comp': {
+          title: 'Apps de chat comparados',
+          description: 'Chat e assistentes lado a lado',
+        },
+        'cc-anything': {
+          title: 'AnythingLLM em teste',
+          description: 'Um cliente de chat em detalhes',
+        },
+        'cc-jan': {
+          title: 'Jan em teste',
+          description: 'Um cliente de chat em detalhes',
+        },
+      },
+    },
+    'inference-engines': {
+      label: 'Engines de inferência',
+      links: {
+        'ie-comp': {
+          title: 'Engines comparadas',
+          description: 'Execução e disponibilização em visão geral',
+        },
+        'ie-ollama': {
+          title: 'Ollama em teste',
+          description: 'A engine mais conhecida em detalhes',
+        },
+        'ie-lms': {
+          title: 'LM Studio em teste',
+          description: 'Um programa de desktop em detalhes',
+        },
+      },
+    },
+    'agent-frameworks': {
+      label: 'Frameworks de agentes',
+      links: {
+        'af-comp': {
+          title: 'Código e desenvolvimento comparados',
+          description: 'Agentes e frameworks lado a lado',
+        },
+        'af-langchain': {
+          title: 'LangChain em teste',
+          description: 'Um framework em detalhes',
+        },
+        'af-openclaw': {
+          title: 'OpenClaw em teste',
+          description: 'Um agente em detalhes',
+        },
+      },
+    },
+    'code-assistants': {
+      label: 'Assistentes de código',
+      links: {
+        'ca-comp': {
+          title: 'Código e desenvolvimento comparados',
+          description: 'Assistentes e plugins lado a lado',
+        },
+        'ca-continue': {
+          title: 'Continue em teste',
+          description: 'Um plugin de IDE em detalhes',
+        },
+        'ca-cline': {
+          title: 'Cline em teste',
+          description: 'Um assistente em detalhes',
+        },
+      },
+    },
+    'document-pdf-chat': {
+      label: 'Documentos e chat com PDF',
+      links: {
+        'dp-comp': {
+          title: 'Conhecimento e busca comparados',
+          description: 'Documentos e RAG lado a lado',
+        },
+        'dp-anything': {
+          title: 'AnythingLLM em teste',
+          description: 'Converse com seus documentos',
+        },
+        'dp-ragflow': {
+          title: 'RAGFlow em teste',
+          description: 'Compreensão de documentos em detalhes',
+        },
+      },
+    },
+    'rag-vector-databases': {
+      label: 'RAG e bancos de dados vetoriais',
+      links: {
+        'rv-comp': {
+          title: 'Conhecimento e busca comparados',
+          description: 'RAG e bancos de dados vetoriais em visão geral',
+        },
+        'rv-llama': {
+          title: 'LlamaIndex em teste',
+          description: 'Um framework de RAG em detalhes',
+        },
+        'rv-qdrant': {
+          title: 'Qdrant em teste',
+          description: 'Um banco de dados vetorial em detalhes',
+        },
+      },
+    },
+    'image-generation': {
+      label: 'Geração de imagens',
+      links: {
+        'ig-comp': {
+          title: 'Imagem e vídeo comparados',
+          description: 'Ferramentas lado a lado',
+        },
+        'ig-comfy': {
+          title: 'ComfyUI em teste',
+          description: 'Um gerador de imagens em detalhes',
+        },
+        'ig-fooocus': {
+          title: 'Fooocus em teste',
+          description: 'Uma porta de entrada simples',
+        },
+      },
+    },
+    'speech-to-text': {
+      label: 'Reconhecimento de voz',
+      links: {
+        'st-comp': {
+          title: 'Voz e áudio comparados',
+          description: 'Ferramentas lado a lado',
+        },
+        'st-whisper': {
+          title: 'Whisper.cpp em teste',
+          description: 'Reconhecimento de voz em detalhes',
+        },
+        'st-ha': {
+          title: 'Whisper para o Home Assistant',
+          description: 'Controle por voz rodando localmente',
+        },
+      },
+    },
+    'text-to-speech-voice': {
+      label: 'Síntese de fala e voz',
+      links: {
+        'tv-comp': {
+          title: 'Voz e áudio comparados',
+          description: 'Ferramentas lado a lado',
+        },
+        'tv-voicebox': {
+          title: 'Voicebox em teste',
+          description: 'Síntese de fala em detalhes',
+        },
+        'tv-dir': {
+          title: 'Diretório de software',
+          description: 'Pesquise todos os apps',
+        },
+      },
+    },
+    'personal-assistants': {
+      label: 'Assistentes pessoais',
+      links: {
+        'pa-comp': {
+          title: 'Chat e assistentes comparados',
+          description: 'Assistentes lado a lado',
+        },
+        'pa-ha': {
+          title: 'Home Assistant Assist em teste',
+          description: 'Um assistente de voz em detalhes',
+        },
+        'pa-claw': {
+          title: 'OpenClaw em teste',
+          description: 'Um assistente em detalhes',
+        },
+      },
+    },
+    'vision-ocr': {
+      label: 'Visão computacional e OCR',
+      links: {
+        'vo-comp': {
+          title: 'Imagem e vídeo comparados',
+          description: 'Ferramentas lado a lado',
+        },
+        'vo-llava': {
+          title: 'LLaVA em teste',
+          description: 'Compreensão de imagens em detalhes',
+        },
+        'vo-immich': {
+          title: 'Immich em teste',
+          description: 'Gerencie fotos localmente',
+        },
+      },
+    },
+    'workflow-automation': {
+      label: 'Fluxos de trabalho e automação',
+      links: {
+        'wa-n8n': {
+          title: 'n8n em teste',
+          description: 'Criação de fluxos de trabalho em detalhes',
+        },
+        'wa-dify': {
+          title: 'Dify em teste',
+          description: 'Um construtor de fluxos de trabalho em detalhes',
+        },
+        'wa-langflow': {
+          title: 'Langflow em teste',
+          description: 'Orquestração visual em detalhes',
+        },
+      },
+    },
+    'promptquorum-apps': {
+      label: 'Apps PQ',
+      links: {
+        'pq-hub': {
+          title: 'Apps PQ',
+          description: 'Os apps do PromptQuorum',
+        },
+        'pq-dir': {
+          title: 'Diretório de software',
+          description: 'Pesquise todos os apps',
+        },
+        'pq-about': {
+          title: 'Sobre nós',
+          description: 'Quem está por trás do PromptQuorum',
+        },
+      },
+    },
+    default: {
+      label: 'Geral',
+      links: {
+        'df-dir': {
+          title: 'Diretório de software',
+          description: 'Pesquise e filtre todos os apps',
+        },
+        'df-ll': {
+          title: 'LLMs locais',
+          description: 'A porta de entrada para a IA local',
+        },
+        'df-run': {
+          title: 'O que posso rodar?',
+          description: 'Verifique o hardware',
+        },
+      },
+    },
+  },
+}

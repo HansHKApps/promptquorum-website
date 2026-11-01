@@ -54,5 +54,3 @@ export const ASK_HANS_STORAGE = {
 
 /** window CustomEvent: open Ask Hans; detail: { question?: string } */
 export const ASK_HANS_OPEN_EVENT = 'askhans:open'
-/** window CustomEvent: Ask Hans failed, open the normal search; detail: { query: string } */
-export const ASK_HANS_FALLBACK_SEARCH_EVENT = 'askhans:fallback-search'

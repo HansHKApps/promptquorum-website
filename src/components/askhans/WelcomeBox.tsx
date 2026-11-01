@@ -1,7 +1,7 @@
 'use client'
 
 import { Logo } from '@/components/Logo'
-import { DE } from './copy'
+import { useAskCopy } from './copy'
 import { AskIcon } from './icons'
 
 interface Props {
@@ -10,9 +10,10 @@ interface Props {
 }
 
 export function WelcomeBox({ onPick, disabled }: Props) {
+  const tx = useAskCopy()
   return (
     <section
-      aria-label="Willkommen"
+      aria-label={tx.welcomeAria}
       className="rounded-xl border p-4"
       style={{ background: 'hsl(var(--hero-from))', borderColor: 'hsl(var(--hero-edge))' }}
     >
@@ -21,12 +22,12 @@ export function WelcomeBox({ onPick, disabled }: Props) {
           <Logo size={30} role="presentation" aria-hidden="true" />
         </span>
         <div className="min-w-0">
-          <h2 className="text-[15px] font-bold leading-snug text-foreground">{DE.welcomeTitle}</h2>
-          <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{DE.welcomeBody}</p>
+          <h2 className="text-[15px] font-bold leading-snug text-foreground">{tx.welcomeTitle}</h2>
+          <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{tx.welcomeBody}</p>
         </div>
       </div>
       <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
-        {DE.welcomeCards.map((c) => (
+        {tx.welcomeCards.map((c) => (
           <li key={c.title}>
             <button
               type="button"
