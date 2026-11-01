@@ -72,6 +72,15 @@ export const copy: AskCopy = {
     thanks: '¡Gracias por sus comentarios!',
     error: 'No se pudieron enviar los comentarios. Inténtelo de nuevo más tarde.',
   },
+  panel: {
+    relatedHeading: "Relacionado con su pregunta",
+    panelHide: "Ocultar panel de temas",
+    panelShow: "Mostrar panel de temas",
+    historyHeading: "Conversaciones anteriores",
+    historyHide: "Ocultar conversaciones anteriores",
+    historyShow: (n: number) => `Mostrar conversaciones anteriores (${n})`,
+  },
+
   search: {
     badge: "Nuevo · Beta",
     headline: "Haz tu pregunta — Ask Hans responde",

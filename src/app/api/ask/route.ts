@@ -142,6 +142,8 @@ export async function POST(req: NextRequest): Promise<Response> {
     let category = 'default'
     let toolCalls = 0
     let emittedText = false
+    let spoken = ''
+    let onlyCategoryLastTurn = false
 
     try {
       for (let turn = 0; turn < ASK_HANS_LIMITS.maxToolCallsPerAnswer + 2; turn++) {
@@ -158,14 +160,32 @@ export async function POST(req: NextRequest): Promise<Response> {
           },
           { signal: abort },
         )
+        // Text that follows an earlier turn's text is held back: models sometimes call set_category after the
+        // answer and then write the whole answer a second time. Repeats are dropped, new text is appended.
+        const holdBack = emittedText && onlyCategoryLastTurn
+        let held = ''
         let firstDelta = true
         stream.on('text', (delta) => {
-          // Text before and after a tool call belongs to separate paragraphs.
-          send({ t: 'text', v: firstDelta && emittedText ? `\n\n${delta}` : delta })
+          if (holdBack) {
+            held += delta
+            return
+          }
+          // Text before and after a real tool call belongs to separate paragraphs.
+          const v = firstDelta && emittedText ? `\n\n${delta}` : delta
+          send({ t: 'text', v })
+          spoken += v
           firstDelta = false
           emittedText = true
         })
         const message = await stream.finalMessage()
+        if (holdBack && held.trim()) {
+          const norm = (t: string) => t.replace(/\s+/g, ' ').trim()
+          const probe = norm(held).slice(0, 60)
+          if (!norm(spoken).includes(probe)) {
+            send({ t: 'text', v: `\n\n${held}` })
+            spoken += `\n\n${held}`
+          }
+        }
 
         if (message.stop_reason === 'refusal') {
           send({ t: 'error', code: 'refused' satisfies ErrorCode })
@@ -177,6 +197,7 @@ export async function POST(req: NextRequest): Promise<Response> {
 
         // Keep every block (incl. thinking) unchanged in the history.
         messages.push({ role: 'assistant', content: message.content })
+        onlyCategoryLastTurn = toolUses.every((u) => u.name === SET_CATEGORY_TOOL)
         const results: Anthropic.ToolResultBlockParam[] = []
         for (const use of toolUses) {
           toolCalls += use.name === SET_CATEGORY_TOOL ? 0 : 1

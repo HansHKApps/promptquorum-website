@@ -72,6 +72,15 @@ export const copy: AskCopy = {
     thanks: 'フィードバックありがとうございます!',
     error: 'フィードバックを送信できませんでした。しばらくしてからもう一度お試しください。',
   },
+  panel: {
+    relatedHeading: "ご質問に関連する内容",
+    panelHide: "トピックパネルを閉じる",
+    panelShow: "トピックパネルを開く",
+    historyHeading: "過去の会話",
+    historyHide: "過去の会話を閉じる",
+    historyShow: (n: number) => `過去の会話を表示（${n}）`,
+  },
+
   search: {
     badge: "新機能 · ベータ",
     headline: "質問してください — Ask Hans が回答します",

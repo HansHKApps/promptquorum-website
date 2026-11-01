@@ -73,6 +73,15 @@ export const copy: AskCopy = {
     thanks: 'شكرًا على ملاحظاتكم!',
     error: 'تعذّر إرسال الملاحظات. يُرجى المحاولة لاحقًا.',
   },
+  panel: {
+    relatedHeading: "ما يناسب سؤالكم",
+    panelHide: "إخفاء لوحة المواضيع",
+    panelShow: "إظهار لوحة المواضيع",
+    historyHeading: "المحادثات السابقة",
+    historyHide: "إخفاء المحادثات السابقة",
+    historyShow: (n: number) => `إظهار المحادثات السابقة (${n})`,
+  },
+
   search: {
     badge: "جديد · تجريبي",
     headline: "اطرحوا سؤالكم — Ask Hans يجيب",

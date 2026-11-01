@@ -72,6 +72,15 @@ export const copy: AskCopy = {
     thanks: 'Merci pour votre retour !',
     error: "Le retour n'a pas pu être envoyé. Veuillez réessayer plus tard.",
   },
+  panel: {
+    relatedHeading: "En lien avec votre question",
+    panelHide: "Masquer le panneau thématique",
+    panelShow: "Afficher le panneau thématique",
+    historyHeading: "Conversations précédentes",
+    historyHide: "Masquer les conversations précédentes",
+    historyShow: (n: number) => `Afficher les conversations précédentes (${n})`,
+  },
+
   search: {
     badge: "Nouveau · Bêta",
     headline: "Posez votre question — Ask Hans répond",
