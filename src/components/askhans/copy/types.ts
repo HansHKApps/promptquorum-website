@@ -54,6 +54,7 @@ export interface AskCopy {
   errors: {
     unavailable: string
     failed: string
+    rephrase: string
     rate: string
     limit: (n: number) => string
     refused: string

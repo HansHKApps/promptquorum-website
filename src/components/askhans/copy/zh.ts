@@ -37,6 +37,7 @@ export const copy: AskCopy = {
   errors: {
     unavailable: 'Ask Hans 目前无法访问。',
     failed: '很遗憾，操作未能成功。请您重试。',
+    rephrase: '很遗憾，我未能回答这个问题。请换一种方式表述，或将问题拆分成几个较小的问题。',
     rate: '目前提问的人非常多。请您稍候片刻，然后重试。',
     limit: (n: number) => `本次访问已达到 ${n} 条消息的上限。`,
     refused: '很抱歉，我无法回答这个问题。欢迎您换一个问题。',
