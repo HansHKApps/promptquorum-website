@@ -75,6 +75,7 @@ export const copy: AskCopy = {
   },
   panel: {
     relatedHeading: "与您的问题相关",
+    relatedEarlier: "之前的回答",
     panelHide: "隐藏主题面板",
     panelShow: "显示主题面板",
     historyHeading: "以往的对话",

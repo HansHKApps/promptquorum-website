@@ -7,6 +7,8 @@ export interface RelatedLink {
   title: string
   /** site-relative path (with locale prefix as the answer wrote it) */
   href: string
+  /** true = taken from the latest answer; false = from an earlier answer (shown greyed out) */
+  current: boolean
 }
 
 const MD_LINK = /\[([^\]\n]{1,120})\]\((https?:\/\/(?:www\.)?promptquorum\.com)?(\/[^)\s]*)\)/g
@@ -19,6 +21,14 @@ function toRelative(path: string): string {
 export function relatedLinks(messages: ChatMsg[], max = 6): RelatedLink[] {
   const seen = new Set<string>()
   const out: RelatedLink[] = []
+  let latest = -1
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const m = messages[i]
+    if (m.role === 'assistant' && !m.error && m.content) {
+      latest = i
+      break
+    }
+  }
   for (let i = messages.length - 1; i >= 0 && out.length < max; i--) {
     const m = messages[i]
     if (m.role !== 'assistant' || m.error || !m.content) continue
@@ -27,7 +37,7 @@ export function relatedLinks(messages: ChatMsg[], max = 6): RelatedLink[] {
       const key = href.split('#')[0].split('?')[0]
       if (seen.has(key)) continue
       seen.add(key)
-      out.push({ title: match[1].trim(), href })
+      out.push({ title: match[1].trim(), href, current: i === latest })
       if (out.length >= max) break
     }
   }

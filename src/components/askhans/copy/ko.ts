@@ -75,6 +75,7 @@ export const copy: AskCopy = {
   },
   panel: {
     relatedHeading: "질문과 관련된 내용",
+    relatedEarlier: "이전 답변",
     panelHide: "주제 패널 숨기기",
     panelShow: "주제 패널 표시",
     historyHeading: "이전 대화",

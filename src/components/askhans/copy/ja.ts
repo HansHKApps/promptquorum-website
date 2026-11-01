@@ -75,6 +75,7 @@ export const copy: AskCopy = {
   },
   panel: {
     relatedHeading: "ご質問に関連する内容",
+    relatedEarlier: "以前の回答",
     panelHide: "トピックパネルを閉じる",
     panelShow: "トピックパネルを開く",
     historyHeading: "過去の会話",
