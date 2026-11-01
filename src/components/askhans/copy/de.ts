@@ -73,6 +73,24 @@ export const copy: AskCopy = {
     thanks: 'Danke für Ihr Feedback!',
     error: 'Das Feedback konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.',
   },
+  info: {
+    label: "Über Ask Hans",
+    title: "Was ist Ask Hans?",
+    intro: "Ask Hans ist ein KI-Assistent, der Ihre Fragen ausschließlich anhand der eigenen Inhalte von PromptQuorum beantwortet: Software-Verzeichnis, Guides, Testberichte und Hardwaredaten auf dieser Website. Es ist ein Beta-Tool in Entwicklung und nicht Hans selbst.",
+    canTitle: "Was Ask Hans kann",
+    can: ["Apps für lokale KI aus dem Software-Verzeichnis finden, vergleichen und Alternativen nennen.", "Prüfen, ob Ihre Hardware (RAM, VRAM) ein Modell ausführen kann.", "Software-Lizenzen in einfacher Sprache erklären und einen Software-Stack vorschlagen.", "Sie auf die passenden Guides, Testberichte und Hardware-Seiten dieser Website in Ihrer Sprache hinweisen."],
+    cannotTitle: "Was Ask Hans nicht kann",
+    cannot: ["Etwas außerhalb von promptquorum.com nachschlagen: keine Websuche, keine Nachrichten, kein Wetter, keine Live-Preise.", "Immer richtig liegen: Es ist eine KI und kann sich irren. Prüfen Sie wichtige Angaben auf den verlinkten Seiten.", "Rechts-, Medizin-, Finanz- oder Elektroinstallationsberatung geben. Wenden Sie sich dafür an eine qualifizierte Fachperson.", "Sich an Sie erinnern, nachdem Sie die Seite verlassen haben: Gespräche bleiben in Ihrem Browser und werden nicht auf unserem Server gespeichert.", "Für Sie etwas installieren, ändern oder kaufen oder unbegrenzt antworten: {messages} Fragen pro Besuch, {chars} Zeichen pro Frage."],
+    privacy: "Ihre Frage wird zur Erstellung der Antwort an unseren Server und an Anthropic (Claude) gesendet. Bitte keine personenbezogenen Daten eingeben.",
+    close: "Schließen",
+  },
+
+  copyUi: {
+    copy: "Kopieren",
+    copied: "Kopiert",
+    copyAnswer: "Antwort kopieren",
+  },
+
   panel: {
     relatedHeading: "Passend zu Ihrer Frage",
     panelHide: "Themenbereich ausblenden",

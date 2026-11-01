@@ -10,6 +10,7 @@ import { Logo } from '@/components/Logo'
 import { ASK_HANS_WINDOW } from '@/lib/askhans/config'
 import { useAskCopy, ASK_HANS_CONTACT_EMAIL } from './copy'
 import { AskIcon } from './icons'
+import { InfoPanel } from './InfoPanel'
 import type { Rect } from './types'
 import { useIsDesktop } from './useIsDesktop'
 
@@ -182,6 +183,7 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
             <AskIcon name="Plus" className="h-3.5 w-3.5" />
             {tx.newChat}
           </button>
+          <InfoPanel />
           {isDesktop && (
             <button
               type="button"
