@@ -646,6 +646,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'home-assistant-assist-review',
   // home-generative-agent review (goruck/home-generative-agent) — 2026-11-01
   'home-generative-agent-review',
+  // Open Voice OS review (Voice, Speech & Multimodal, community open-source voice assistant platform) — 2026-11-01
+  'openvoiceos-review',
   // Ente Photos review (Images & Video, encrypted photo backup with on-device AI search) — 2026-10-24
   'ente-photos-review',
   'local-operator-review',

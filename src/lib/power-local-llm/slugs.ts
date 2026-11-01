@@ -583,6 +583,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'murmur-review':                            'murmur-review',
   'fullmoon-review':                          'fullmoon-review',
   'reins-review':                             'reins-review',
+  'openvoiceos-review':                       'openvoiceos-review',
   'hillnote-review':                          'hillnote-review',
   'llm-vision-review':                        'llm-vision-review',
   'picoclaw-review':                          'picoclaw-review',
