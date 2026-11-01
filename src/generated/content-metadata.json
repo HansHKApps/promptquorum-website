@@ -4047,6 +4047,132 @@
         "ko"
       ],
       "images": []
+    },
+    "local-ai-workstations-strix-halo-vs-dgx-spark": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "nvidia-dgx-spark-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "amd-ryzen-ai-halo-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "framework-desktop-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hp-z2-mini-g1a-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "gmktec-evo-x2-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "minisforum-ms-s1-max-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-engineering": {
@@ -5871,24 +5997,6 @@
       ],
       "images": []
     },
-    "local-ai-workstations-strix-halo-vs-dgx-spark": {
-      "dateModified": "2026-10-31",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-31",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
     "olares-one-local-ai-review": {
       "dateModified": "2026-10-31",
       "lastFactChecked": null,
@@ -5915,114 +6023,6 @@
           "title": "Internal cooling layout of the Olares One, a manufacturer illustration. Image: Olares."
         }
       ]
-    },
-    "nvidia-dgx-spark-local-ai-workstation": {
-      "dateModified": "2026-10-31",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-31",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "amd-ryzen-ai-halo-local-ai-workstation": {
-      "dateModified": "2026-10-31",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-31",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "framework-desktop-local-ai-workstation": {
-      "dateModified": "2026-10-31",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-31",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "hp-z2-mini-g1a-local-ai-workstation": {
-      "dateModified": "2026-10-31",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-31",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "gmktec-evo-x2-local-ai-workstation": {
-      "dateModified": "2026-10-31",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-31",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "minisforum-ms-s1-max-local-ai-workstation": {
-      "dateModified": "2026-10-31",
-      "lastFactChecked": null,
-      "publishDate": "2026-10-31",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
     },
     "local-llm-electricity-cost-balcony-solar-2026": {
       "dateModified": "2026-09-25",

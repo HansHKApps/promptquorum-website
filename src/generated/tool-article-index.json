@@ -182,26 +182,26 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
+        "cluster": "local-llms",
         "slug": "amd-ryzen-ai-halo-local-ai-workstation",
         "title": "AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict",
-        "url": "/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation",
+        "url": "/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
+        "cluster": "local-llms",
         "slug": "local-ai-workstations-strix-halo-vs-dgx-spark",
         "title": "Local AI Workstations: AMD Strix Halo vs. NVIDIA DGX Spark",
-        "url": "/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark",
+        "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
+        "cluster": "local-llms",
         "slug": "nvidia-dgx-spark-local-ai-workstation",
         "title": "NVIDIA DGX Spark for Local AI: Specs, Price and Verdict",
-        "url": "/power-local-llm/nvidia-dgx-spark-local-ai-workstation",
+        "url": "/local-llms/nvidia-dgx-spark-local-ai-workstation",
         "dateModified": "2026-10-31",
         "tier": "about"
       },
@@ -11832,18 +11832,18 @@
         "tier": "mentioned"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-mac",
-        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
-        "url": "/power-local-llm/best-local-llm-apps-mac",
+        "cluster": "local-llms",
+        "slug": "framework-desktop-local-ai-workstation",
+        "title": "Framework Desktop for Local AI: Specs, Price and Verdict",
+        "url": "/local-llms/framework-desktop-local-ai-workstation",
         "dateModified": "2026-10-31",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "framework-desktop-local-ai-workstation",
-        "title": "Framework Desktop for Local AI: Specs, Price and Verdict",
-        "url": "/power-local-llm/framework-desktop-local-ai-workstation",
+        "slug": "best-local-llm-apps-mac",
+        "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
+        "url": "/power-local-llm/best-local-llm-apps-mac",
         "dateModified": "2026-10-31",
         "tier": "mentioned"
       },

@@ -171,6 +171,15 @@ import { article as a_data_residency_sovereign_ai_eu_gdpr_enterprise } from "./a
 import { article as a_local_llm_commercial_license_guide_business } from "./articles/local-llm-commercial-license-guide-business";
 import { article as a_renting_gpu_cloud_vs_buying_on_prem_enterprise_ai } from "./articles/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai";
 
+// Local AI workstations (moved from power-local-llm 2026-11-01)
+import { article as a_local_ai_workstations_strix_halo_vs_dgx_spark } from "./articles/local-ai-workstations-strix-halo-vs-dgx-spark";
+import { article as a_nvidia_dgx_spark_local_ai_workstation } from "./articles/nvidia-dgx-spark-local-ai-workstation";
+import { article as a_amd_ryzen_ai_halo_local_ai_workstation } from "./articles/amd-ryzen-ai-halo-local-ai-workstation";
+import { article as a_framework_desktop_local_ai_workstation } from "./articles/framework-desktop-local-ai-workstation";
+import { article as a_hp_z2_mini_g1a_local_ai_workstation } from "./articles/hp-z2-mini-g1a-local-ai-workstation";
+import { article as a_gmktec_evo_x2_local_ai_workstation } from "./articles/gmktec-evo-x2-local-ai-workstation";
+import { article as a_minisforum_ms_s1_max_local_ai_workstation } from "./articles/minisforum-ms-s1-max-local-ai-workstation";
+
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   "local-llm-lgpd-compliance-brazil-2026": a_local_llm_lgpd_compliance_brazil_2026,
   "best-local-llms-portuguese-language-2026": a_best_local_llms_portuguese_language_2026,
@@ -334,4 +343,12 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "data-residency-sovereign-ai-eu-gdpr-enterprise": a_data_residency_sovereign_ai_eu_gdpr_enterprise,
   "local-llm-commercial-license-guide-business": a_local_llm_commercial_license_guide_business,
   "renting-gpu-cloud-vs-buying-on-prem-enterprise-ai": a_renting_gpu_cloud_vs_buying_on_prem_enterprise_ai,
+  // Local AI workstations (moved from power-local-llm 2026-11-01)
+  "local-ai-workstations-strix-halo-vs-dgx-spark": a_local_ai_workstations_strix_halo_vs_dgx_spark,
+  "nvidia-dgx-spark-local-ai-workstation": a_nvidia_dgx_spark_local_ai_workstation,
+  "amd-ryzen-ai-halo-local-ai-workstation": a_amd_ryzen_ai_halo_local_ai_workstation,
+  "framework-desktop-local-ai-workstation": a_framework_desktop_local_ai_workstation,
+  "hp-z2-mini-g1a-local-ai-workstation": a_hp_z2_mini_g1a_local_ai_workstation,
+  "gmktec-evo-x2-local-ai-workstation": a_gmktec_evo_x2_local_ai_workstation,
+  "minisforum-ms-s1-max-local-ai-workstation": a_minisforum_ms_s1_max_local_ai_workstation,
 };

@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**We found no independent LLM-speed test of the 128 GB EVO-X2 that we could read.** [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review) reviewed it under the headline "Compact Strix Halo Powerhouse", but only the headline loaded for us, so we do not quote its figures or verdict.',
           '[Notebookcheck\'s review](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html) (published 2025-09-05, 64 GB / 1 TB unit) concluded the machine "joins the ranks of the best mini PCs currently available in 2025", calling cooling efficient and the system comparatively quiet and cool. It criticised limited fan control and more complicated maintenance. The summary page we read carried no benchmark, noise or power figures.',
-          'GMKtec itself ran a comparison against the NVIDIA DGX Spark on Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B and Qwen3 0.6B and said the EVO-X2 led on token speed and first-response latency; [Notebookcheck\'s report](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) gave no figures and noted this was a vendor test. Notebookcheck\'s author still saw the DGX Spark as stronger for large-model, high-throughput work. For an independent Spark versus Strix Halo test on AMD\'s own Ryzen AI Halo, see our [category comparison](/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          'GMKtec itself ran a comparison against the NVIDIA DGX Spark on Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B and Qwen3 0.6B and said the EVO-X2 led on token speed and first-response latency; [Notebookcheck\'s report](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) gave no figures and noted this was a vendor test. Notebookcheck\'s author still saw the DGX Spark as stronger for large-model, high-throughput work. For an independent Spark versus Strix Halo test on AMD\'s own Ryzen AI Halo, see our [category comparison](/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       fit: {
@@ -151,11 +151,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternatives in the Same Class',
         items: [
-          '[Minisforum MS-S1 MAX](/power-local-llm/minisforum-ms-s1-max-local-ai-workstation): same 395 chip, with dual 10GbE and a PCIe x16 slot (x4 electrically) per Minisforum and reviews.',
-          '[Ryzen AI Halo](/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation): AMD\'s own 128 GB Ryzen AI Max+ 395 system, with one 10GbE port and an independent Spark comparison.',
-          '[HP Z2 Mini G1a](/power-local-llm/hp-z2-mini-g1a-local-ai-workstation): the same platform in HP\'s workstation line, aimed at business purchasing.',
-          '[Framework Desktop](/power-local-llm/framework-desktop-local-ai-workstation): a modular case with a 192 GB option on pre-order; GMKtec lists up to 128 GB.',
-          '[DGX Spark](/power-local-llm/nvidia-dgx-spark-local-ai-workstation): NVIDIA\'s CUDA system with 200 Gbps networking; see the [category comparison](/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          '[Minisforum MS-S1 MAX](/local-llms/minisforum-ms-s1-max-local-ai-workstation): same 395 chip, with dual 10GbE and a PCIe x16 slot (x4 electrically) per Minisforum and reviews.',
+          '[Ryzen AI Halo](/local-llms/amd-ryzen-ai-halo-local-ai-workstation): AMD\'s own 128 GB Ryzen AI Max+ 395 system, with one 10GbE port and an independent Spark comparison.',
+          '[HP Z2 Mini G1a](/local-llms/hp-z2-mini-g1a-local-ai-workstation): the same platform in HP\'s workstation line, aimed at business purchasing.',
+          '[Framework Desktop](/local-llms/framework-desktop-local-ai-workstation): a modular case with a 192 GB option on pre-order; GMKtec lists up to 128 GB.',
+          '[DGX Spark](/local-llms/nvidia-dgx-spark-local-ai-workstation): NVIDIA\'s CUDA system with 200 Gbps networking; see the [category comparison](/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       faqSection: {
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'en',
-      'url': 'https://www.promptquorum.com/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'The GMKtec EVO-X2 is a mini PC with an AMD Ryzen AI Max+ 395 and up to 128 GB of unified memory whose US price is reported inconsistently across sellers.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Einen unabhängigen LLM-Geschwindigkeitstest des EVO-X2 mit 128 GB, den wir lesen konnten, haben wir nicht gefunden.** [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review) hat ihn unter der Überschrift „Compact Strix Halo Powerhouse“ getestet, doch bei uns lud nur die Überschrift; deshalb zitieren wir weder Werte noch Urteil.',
           'Der [Test von Notebookcheck](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html) (veröffentlicht am 2025-09-05, Gerät mit 64 GB / 1 TB) kam zu dem Schluss, die Maschine „reihe sich unter die besten derzeit verfügbaren Mini-PCs des Jahres 2025 ein“, und nannte die Kühlung effizient und das System vergleichsweise leise und kühl. Kritisiert wurden die begrenzte Lüftersteuerung und die aufwendigere Wartung. Die Zusammenfassungsseite, die wir gelesen haben, enthielt keine Benchmark-, Lautstärke- oder Leistungswerte.',
-          'GMKtec selbst führte einen Vergleich mit der NVIDIA DGX Spark mit Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B und Qwen3 0.6B durch und gab an, der EVO-X2 liege bei Token-Geschwindigkeit und Latenz der ersten Antwort vorn; der [Bericht von Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) nannte keine Zahlen und vermerkte, dass es ein Test des Herstellers war. Der Autor von Notebookcheck sah die DGX Spark dennoch als stärker für große Modelle und hohen Durchsatz. Einen unabhängigen Test Spark gegen Strix Halo auf dem eigenen Ryzen AI Halo von AMD finden Sie in unserem [Kategorievergleich](/de/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          'GMKtec selbst führte einen Vergleich mit der NVIDIA DGX Spark mit Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B und Qwen3 0.6B durch und gab an, der EVO-X2 liege bei Token-Geschwindigkeit und Latenz der ersten Antwort vorn; der [Bericht von Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) nannte keine Zahlen und vermerkte, dass es ein Test des Herstellers war. Der Autor von Notebookcheck sah die DGX Spark dennoch als stärker für große Modelle und hohen Durchsatz. Einen unabhängigen Test Spark gegen Strix Halo auf dem eigenen Ryzen AI Halo von AMD finden Sie in unserem [Kategorievergleich](/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       fit: {
@@ -370,11 +370,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternativen in derselben Klasse',
         items: [
-          '[Minisforum MS-S1 MAX](/de/power-local-llm/minisforum-ms-s1-max-local-ai-workstation): gleicher 395-Chip, mit zwei 10GbE-Anschlüssen und einem PCIe-x16-Steckplatz (elektrisch x4) laut Minisforum und Tests.',
-          '[Ryzen AI Halo](/de/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation): das eigene System von AMD mit Ryzen AI Max+ 395 und 128 GB, mit einem 10GbE-Anschluss und einem unabhängigen Vergleich mit der Spark.',
-          '[HP Z2 Mini G1a](/de/power-local-llm/hp-z2-mini-g1a-local-ai-workstation): dieselbe Plattform in der Workstation-Reihe von HP, ausgerichtet auf den Geschäftseinkauf.',
-          '[Framework Desktop](/de/power-local-llm/framework-desktop-local-ai-workstation): ein modulares Gehäuse mit einer Option mit 192 GB auf Vorbestellung; GMKtec nennt bis zu 128 GB.',
-          '[DGX Spark](/de/power-local-llm/nvidia-dgx-spark-local-ai-workstation): das CUDA-System von NVIDIA mit 200-Gbit/s-Netzwerk; siehe den [Kategorievergleich](/de/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          '[Minisforum MS-S1 MAX](/de/local-llms/minisforum-ms-s1-max-local-ai-workstation): gleicher 395-Chip, mit zwei 10GbE-Anschlüssen und einem PCIe-x16-Steckplatz (elektrisch x4) laut Minisforum und Tests.',
+          '[Ryzen AI Halo](/de/local-llms/amd-ryzen-ai-halo-local-ai-workstation): das eigene System von AMD mit Ryzen AI Max+ 395 und 128 GB, mit einem 10GbE-Anschluss und einem unabhängigen Vergleich mit der Spark.',
+          '[HP Z2 Mini G1a](/de/local-llms/hp-z2-mini-g1a-local-ai-workstation): dieselbe Plattform in der Workstation-Reihe von HP, ausgerichtet auf den Geschäftseinkauf.',
+          '[Framework Desktop](/de/local-llms/framework-desktop-local-ai-workstation): ein modulares Gehäuse mit einer Option mit 192 GB auf Vorbestellung; GMKtec nennt bis zu 128 GB.',
+          '[DGX Spark](/de/local-llms/nvidia-dgx-spark-local-ai-workstation): das CUDA-System von NVIDIA mit 200-Gbit/s-Netzwerk; siehe den [Kategorievergleich](/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       faqSection: {
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'de',
-      'url': 'https://www.promptquorum.com/de/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/de/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'Der GMKtec EVO-X2 ist ein Mini-PC mit AMD Ryzen AI Max+ 395 und bis zu 128 GB Unified Memory, dessen US-Preis in den Quellen uneinheitlich gemeldet wird.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Nous n'avons trouvé aucun test indépendant de la vitesse en LLM de l'EVO-X2 128 Go que nous ayons pu lire.** [Tom's Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review) l'a testé sous le titre « Compact Strix Halo Powerhouse », mais seul le titre s'est chargé chez nous ; nous ne citons donc ni ses chiffres ni son verdict.",
           "Le [test de Notebookcheck](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html) (publié le 2025-09-05, exemplaire 64 Go / 1 To) conclut que la machine « rejoint les rangs des meilleurs mini-PC actuellement disponibles en 2025 », jugeant le refroidissement efficace et le système relativement silencieux et frais. Il critique le contrôle limité des ventilateurs et une maintenance plus compliquée. La page de synthèse que nous avons lue ne contenait aucun chiffre de benchmark, de bruit ou de consommation.",
-          "GMKtec a lui-même mené une comparaison avec le NVIDIA DGX Spark sur Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B et Qwen3 0.6B, et affirmé que l'EVO-X2 l'emportait sur la vitesse en tokens et la latence de première réponse ; le [rapport de Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) ne donne aucun chiffre et précise qu'il s'agissait d'un test du constructeur. L'auteur de Notebookcheck voyait toutefois le DGX Spark comme plus solide pour les grands modèles et le débit élevé. Pour un test indépendant Spark contre Strix Halo sur le Ryzen AI Halo d'AMD, consultez notre [comparatif de catégorie](/fr/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).",
+          "GMKtec a lui-même mené une comparaison avec le NVIDIA DGX Spark sur Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B et Qwen3 0.6B, et affirmé que l'EVO-X2 l'emportait sur la vitesse en tokens et la latence de première réponse ; le [rapport de Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) ne donne aucun chiffre et précise qu'il s'agissait d'un test du constructeur. L'auteur de Notebookcheck voyait toutefois le DGX Spark comme plus solide pour les grands modèles et le débit élevé. Pour un test indépendant Spark contre Strix Halo sur le Ryzen AI Halo d'AMD, consultez notre [comparatif de catégorie](/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).",
         ],
       },
       fit: {
@@ -589,11 +589,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternatives de la même classe',
         items: [
-          "[Minisforum MS-S1 MAX](/fr/power-local-llm/minisforum-ms-s1-max-local-ai-workstation) : même puce 395, avec double 10GbE et un emplacement PCIe x16 (x4 électriquement) selon Minisforum et les tests.",
-          "[Ryzen AI Halo](/fr/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation) : le système Ryzen AI Max+ 395 de 128 Go d'AMD lui-même, avec un port 10GbE et une comparaison indépendante avec le Spark.",
-          "[HP Z2 Mini G1a](/fr/power-local-llm/hp-z2-mini-g1a-local-ai-workstation) : la même plateforme dans la gamme de stations de travail HP, destinée aux achats professionnels.",
-          "[Framework Desktop](/fr/power-local-llm/framework-desktop-local-ai-workstation) : un boîtier modulaire avec une option de 192 Go en précommande ; GMKtec indique jusqu'à 128 Go.",
-          "[DGX Spark](/fr/power-local-llm/nvidia-dgx-spark-local-ai-workstation) : le système CUDA de NVIDIA avec réseau 200 Gbps ; voir le [comparatif de catégorie](/fr/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).",
+          "[Minisforum MS-S1 MAX](/fr/local-llms/minisforum-ms-s1-max-local-ai-workstation) : même puce 395, avec double 10GbE et un emplacement PCIe x16 (x4 électriquement) selon Minisforum et les tests.",
+          "[Ryzen AI Halo](/fr/local-llms/amd-ryzen-ai-halo-local-ai-workstation) : le système Ryzen AI Max+ 395 de 128 Go d'AMD lui-même, avec un port 10GbE et une comparaison indépendante avec le Spark.",
+          "[HP Z2 Mini G1a](/fr/local-llms/hp-z2-mini-g1a-local-ai-workstation) : la même plateforme dans la gamme de stations de travail HP, destinée aux achats professionnels.",
+          "[Framework Desktop](/fr/local-llms/framework-desktop-local-ai-workstation) : un boîtier modulaire avec une option de 192 Go en précommande ; GMKtec indique jusqu'à 128 Go.",
+          "[DGX Spark](/fr/local-llms/nvidia-dgx-spark-local-ai-workstation) : le système CUDA de NVIDIA avec réseau 200 Gbps ; voir le [comparatif de catégorie](/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).",
         ],
       },
       faqSection: {
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'fr',
-      'url': 'https://www.promptquorum.com/fr/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/fr/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': "Le GMKtec EVO-X2 est un mini-PC avec un AMD Ryzen AI Max+ 395 et jusqu'à 128 Go de mémoire unifiée, dont le prix américain est signalé de façon incohérente selon les vendeurs.",
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**128GB版EVO-X2について、読むことができた独立したLLM速度テストは見つかりませんでした。** [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review)は「Compact Strix Halo Powerhouse」という見出しでレビューしていますが、読み込めたのは見出しだけだったため、その数値や評価は引用しません。',
           '[Notebookcheckのレビュー](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html)（2025-09-05公開、64GB / 1TB機）は、このマシンが「2025年に入手できる最高のmini PCの仲間入りをする」と結論づけ、冷却は効率的で、システムは比較的静かで低温だと述べました。一方で、ファン制御が限られている点と、メンテナンスがより複雑な点は批判しています。私たちが読んだ要約ページには、ベンチマーク、騒音、消費電力の数値は載っていませんでした。',
-          'GMKtec自身は、Llama 3.3 70B、Qwen3 Coder、GPT-OSS 20B、Qwen3 0.6BでNVIDIA DGX Sparkとの比較を行い、EVO-X2がトークン速度と初回応答の遅延で上回ったと述べています。[Notebookcheckの報道](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html)（2025-11-10）は数値を示さず、これがベンダーによるテストであることを指摘しています。それでもNotebookcheckの執筆者は、大規模モデルや高スループットの用途ではDGX Sparkのほうが強いと見ていました。AMD自身のRyzen AI Haloを使ったSparkとStrix Haloの独立比較については、[カテゴリ比較](/ja/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark)をご覧ください。',
+          'GMKtec自身は、Llama 3.3 70B、Qwen3 Coder、GPT-OSS 20B、Qwen3 0.6BでNVIDIA DGX Sparkとの比較を行い、EVO-X2がトークン速度と初回応答の遅延で上回ったと述べています。[Notebookcheckの報道](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html)（2025-11-10）は数値を示さず、これがベンダーによるテストであることを指摘しています。それでもNotebookcheckの執筆者は、大規模モデルや高スループットの用途ではDGX Sparkのほうが強いと見ていました。AMD自身のRyzen AI Haloを使ったSparkとStrix Haloの独立比較については、[カテゴリ比較](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)をご覧ください。',
         ],
       },
       fit: {
@@ -808,11 +808,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: '同クラスの代替機',
         items: [
-          '[Minisforum MS-S1 MAX](/ja/power-local-llm/minisforum-ms-s1-max-local-ai-workstation): 同じ395チップに、デュアル10GbEとPCIe x16スロット（電気的にはx4）を備える。Minisforumとレビューによる。',
-          '[Ryzen AI Halo](/ja/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation): AMD自身の128GB Ryzen AI Max+ 395システム。10GbEポート1基と、Sparkとの独立した比較あり。',
-          '[HP Z2 Mini G1a](/ja/power-local-llm/hp-z2-mini-g1a-local-ai-workstation): HPのワークステーションラインにある同じプラットフォームで、法人調達向け。',
-          '[Framework Desktop](/ja/power-local-llm/framework-desktop-local-ai-workstation): モジュール式ケースで、192GBオプションを予約受付中。GMKtecは最大128GBの掲載です。',
-          '[DGX Spark](/ja/power-local-llm/nvidia-dgx-spark-local-ai-workstation): 200GbpsネットワークとCUDAを備えたNVIDIAのシステム。[カテゴリ比較](/ja/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark)も参照。',
+          '[Minisforum MS-S1 MAX](/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation): 同じ395チップに、デュアル10GbEとPCIe x16スロット（電気的にはx4）を備える。Minisforumとレビューによる。',
+          '[Ryzen AI Halo](/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation): AMD自身の128GB Ryzen AI Max+ 395システム。10GbEポート1基と、Sparkとの独立した比較あり。',
+          '[HP Z2 Mini G1a](/ja/local-llms/hp-z2-mini-g1a-local-ai-workstation): HPのワークステーションラインにある同じプラットフォームで、法人調達向け。',
+          '[Framework Desktop](/ja/local-llms/framework-desktop-local-ai-workstation): モジュール式ケースで、192GBオプションを予約受付中。GMKtecは最大128GBの掲載です。',
+          '[DGX Spark](/ja/local-llms/nvidia-dgx-spark-local-ai-workstation): 200GbpsネットワークとCUDAを備えたNVIDIAのシステム。[カテゴリ比較](/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)も参照。',
         ],
       },
       faqSection: {
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'ja',
-      'url': 'https://www.promptquorum.com/ja/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/ja/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'GMKtec EVO-X2は、AMD Ryzen AI Max+ 395と最大128GBのユニファイドメモリを搭載したmini PCで、米国価格は販売元によって報告が一貫していません。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**我们没有找到能读到的、针对128 GB版EVO-X2的独立大模型速度测试。** [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review)评测过它，标题为“Compact Strix Halo Powerhouse”，但我们只能加载出标题，因此不引用其数据或结论。',
           '[Notebookcheck的评测](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html)（发布于2025-09-05，64 GB / 1 TB机型）得出的结论是，这台机器“跻身2025年现有最佳迷你主机之列”（原文英文），称散热高效、系统相对安静凉爽，同时批评了有限的风扇控制和更复杂的维护。我们读到的摘要页面没有给出基准测试、噪音或功耗数据。',
-          'GMKtec自己用Llama 3.3 70B、Qwen3 Coder、GPT-OSS 20B和Qwen3 0.6B与NVIDIA DGX Spark做了对比，并称EVO-X2在token速度和首次响应延迟上领先；[Notebookcheck的报道](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html)（2025-11-10）没有给出具体数据，并指出这是厂商自己的测试。Notebookcheck的作者仍然认为DGX Spark更适合大模型、高吞吐量的工作。关于在AMD自家Ryzen AI Halo上进行的独立Spark对比Strix Halo测试，请参阅我们的[品类对比](/zh/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark)。',
+          'GMKtec自己用Llama 3.3 70B、Qwen3 Coder、GPT-OSS 20B和Qwen3 0.6B与NVIDIA DGX Spark做了对比，并称EVO-X2在token速度和首次响应延迟上领先；[Notebookcheck的报道](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html)（2025-11-10）没有给出具体数据，并指出这是厂商自己的测试。Notebookcheck的作者仍然认为DGX Spark更适合大模型、高吞吐量的工作。关于在AMD自家Ryzen AI Halo上进行的独立Spark对比Strix Halo测试，请参阅我们的[品类对比](/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)。',
         ],
       },
       fit: {
@@ -1026,11 +1026,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: '同级别的替代选择',
         items: [
-          '[Minisforum MS-S1 MAX](/zh/power-local-llm/minisforum-ms-s1-max-local-ai-workstation)：同样的395芯片，配双10GbE和PCIe x16插槽（电气为x4），出自Minisforum和评测。',
-          '[Ryzen AI Halo](/zh/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation)：AMD自家的128 GB Ryzen AI Max+ 395系统，配一个10GbE口，并有一项独立的Spark对比。',
-          '[HP Z2 Mini G1a](/zh/power-local-llm/hp-z2-mini-g1a-local-ai-workstation)：HP工作站产品线中的同一平台，面向企业采购。',
-          '[Framework Desktop](/zh/power-local-llm/framework-desktop-local-ai-workstation)：模块化机箱，提供可预订的192 GB选项；GMKtec最高列为128 GB。',
-          '[DGX Spark](/zh/power-local-llm/nvidia-dgx-spark-local-ai-workstation)：NVIDIA的CUDA系统，支持200 Gbps网络；参见[品类对比](/zh/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark)。',
+          '[Minisforum MS-S1 MAX](/zh/local-llms/minisforum-ms-s1-max-local-ai-workstation)：同样的395芯片，配双10GbE和PCIe x16插槽（电气为x4），出自Minisforum和评测。',
+          '[Ryzen AI Halo](/zh/local-llms/amd-ryzen-ai-halo-local-ai-workstation)：AMD自家的128 GB Ryzen AI Max+ 395系统，配一个10GbE口，并有一项独立的Spark对比。',
+          '[HP Z2 Mini G1a](/zh/local-llms/hp-z2-mini-g1a-local-ai-workstation)：HP工作站产品线中的同一平台，面向企业采购。',
+          '[Framework Desktop](/zh/local-llms/framework-desktop-local-ai-workstation)：模块化机箱，提供可预订的192 GB选项；GMKtec最高列为128 GB。',
+          '[DGX Spark](/zh/local-llms/nvidia-dgx-spark-local-ai-workstation)：NVIDIA的CUDA系统，支持200 Gbps网络；参见[品类对比](/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)。',
         ],
       },
       faqSection: {
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'zh',
-      'url': 'https://www.promptquorum.com/zh/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/zh/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'GMKtec EVO-X2是一款搭载AMD Ryzen AI Max+ 395、最高128 GB统一内存的迷你主机，各卖家对其美国价格的报道并不一致。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1226,7 +1226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**No encontramos ninguna prueba independiente de velocidad con LLM del EVO-X2 de 128 GB que pudiéramos leer.** [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review) lo reseñó bajo el titular "Compact Strix Halo Powerhouse", pero solo se cargó el titular, así que no citamos sus cifras ni su veredicto.',
           '[La reseña de Notebookcheck](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html) (publicada el 2025-09-05, unidad de 64 GB / 1 TB) concluyó que la máquina "se une a las filas de los mejores mini PC disponibles actualmente en 2025", y calificó la refrigeración de eficiente y el sistema de comparativamente silencioso y fresco. Criticó el control limitado de los ventiladores y un mantenimiento más complicado. La página de resumen que leímos no incluía cifras de rendimiento, ruido ni consumo.',
-          'La propia GMKtec realizó una comparación con la NVIDIA DGX Spark con Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B y Qwen3 0.6B y afirmó que el EVO-X2 lideraba en velocidad de tokens y en latencia de primera respuesta; [el informe de Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) no dio cifras y señaló que era una prueba del fabricante. Aun así, el autor de Notebookcheck veía la DGX Spark como más potente para trabajo con modelos grandes y alto rendimiento. Para una prueba independiente entre la Spark y Strix Halo con el Ryzen AI Halo de AMD, consulta nuestra [comparación de la categoría](/es/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          'La propia GMKtec realizó una comparación con la NVIDIA DGX Spark con Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B y Qwen3 0.6B y afirmó que el EVO-X2 lideraba en velocidad de tokens y en latencia de primera respuesta; [el informe de Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) no dio cifras y señaló que era una prueba del fabricante. Aun así, el autor de Notebookcheck veía la DGX Spark como más potente para trabajo con modelos grandes y alto rendimiento. Para una prueba independiente entre la Spark y Strix Halo con el Ryzen AI Halo de AMD, consulta nuestra [comparación de la categoría](/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       fit: {
@@ -1244,11 +1244,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternativas de la misma clase',
         items: [
-          '[Minisforum MS-S1 MAX](/es/power-local-llm/minisforum-ms-s1-max-local-ai-workstation): el mismo chip 395, con doble 10GbE y una ranura PCIe x16 (x4 eléctricamente) según Minisforum y las reseñas.',
-          '[Ryzen AI Halo](/es/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation): el sistema Ryzen AI Max+ 395 de 128 GB de la propia AMD, con un puerto 10GbE y una comparación independiente con la Spark.',
-          '[HP Z2 Mini G1a](/es/power-local-llm/hp-z2-mini-g1a-local-ai-workstation): la misma plataforma en la línea de estaciones de trabajo de HP, orientada a la compra empresarial.',
-          '[Framework Desktop](/es/power-local-llm/framework-desktop-local-ai-workstation): una caja modular con una opción de 192 GB en reserva; GMKtec indica hasta 128 GB.',
-          '[DGX Spark](/es/power-local-llm/nvidia-dgx-spark-local-ai-workstation): el sistema CUDA de NVIDIA con red de 200 Gbps; consulta la [comparación de la categoría](/es/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          '[Minisforum MS-S1 MAX](/es/local-llms/minisforum-ms-s1-max-local-ai-workstation): el mismo chip 395, con doble 10GbE y una ranura PCIe x16 (x4 eléctricamente) según Minisforum y las reseñas.',
+          '[Ryzen AI Halo](/es/local-llms/amd-ryzen-ai-halo-local-ai-workstation): el sistema Ryzen AI Max+ 395 de 128 GB de la propia AMD, con un puerto 10GbE y una comparación independiente con la Spark.',
+          '[HP Z2 Mini G1a](/es/local-llms/hp-z2-mini-g1a-local-ai-workstation): la misma plataforma en la línea de estaciones de trabajo de HP, orientada a la compra empresarial.',
+          '[Framework Desktop](/es/local-llms/framework-desktop-local-ai-workstation): una caja modular con una opción de 192 GB en reserva; GMKtec indica hasta 128 GB.',
+          '[DGX Spark](/es/local-llms/nvidia-dgx-spark-local-ai-workstation): el sistema CUDA de NVIDIA con red de 200 Gbps; consulta la [comparación de la categoría](/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       faqSection: {
@@ -1308,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'es',
-      'url': 'https://www.promptquorum.com/es/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/es/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'El GMKtec EVO-X2 es un mini PC con AMD Ryzen AI Max+ 395 y hasta 128 GB de memoria unificada cuyo precio en EE. UU. se informa de forma incoherente según el vendedor.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1445,7 +1445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Não encontramos nenhum teste independente de velocidade de LLM do EVO-X2 de 128 GB que pudéssemos ler.** A [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review) o analisou sob o título "Compact Strix Halo Powerhouse", mas só o título carregou para nós, então não citamos os números nem o veredito dela.',
           'A [análise da Notebookcheck](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html) (publicada em 2025-09-05, unidade de 64 GB / 1 TB) concluiu que a máquina "joins the ranks of the best mini PCs currently available in 2025", chamando a refrigeração de eficiente e o sistema de comparativamente silencioso e frio. Criticou o controle limitado das ventoinhas e a manutenção mais complicada. A página-resumo que lemos não trazia números de benchmark, ruído ou consumo.',
-          'A própria GMKtec fez uma comparação com o NVIDIA DGX Spark em Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B e Qwen3 0.6B e disse que o EVO-X2 liderou em velocidade de tokens e latência da primeira resposta; o [relato da Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) não trouxe números e observou que era um teste do fabricante. O autor da Notebookcheck ainda via o DGX Spark como mais forte para trabalho com modelos grandes e alto throughput. Para um teste independente do Spark contra o Strix Halo no Ryzen AI Halo da própria AMD, veja nossa [comparação da categoria](/pt/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          'A própria GMKtec fez uma comparação com o NVIDIA DGX Spark em Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B e Qwen3 0.6B e disse que o EVO-X2 liderou em velocidade de tokens e latência da primeira resposta; o [relato da Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) não trouxe números e observou que era um teste do fabricante. O autor da Notebookcheck ainda via o DGX Spark como mais forte para trabalho com modelos grandes e alto throughput. Para um teste independente do Spark contra o Strix Halo no Ryzen AI Halo da própria AMD, veja nossa [comparação da categoria](/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       fit: {
@@ -1463,11 +1463,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternativas na mesma classe',
         items: [
-          '[Minisforum MS-S1 MAX](/pt/power-local-llm/minisforum-ms-s1-max-local-ai-workstation): mesmo chip 395, com 10GbE duplo e um slot PCIe x16 (x4 eletricamente), segundo a Minisforum e análises.',
-          '[Ryzen AI Halo](/pt/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation): o sistema de 128 GB com Ryzen AI Max+ 395 da própria AMD, com uma porta 10GbE e uma comparação independente com o Spark.',
-          '[HP Z2 Mini G1a](/pt/power-local-llm/hp-z2-mini-g1a-local-ai-workstation): a mesma plataforma na linha de workstations da HP, voltada a compras corporativas.',
-          '[Framework Desktop](/pt/power-local-llm/framework-desktop-local-ai-workstation): um gabinete modular com opção de 192 GB em pré-encomenda; a GMKtec lista até 128 GB.',
-          '[DGX Spark](/pt/power-local-llm/nvidia-dgx-spark-local-ai-workstation): o sistema CUDA da NVIDIA com rede de 200 Gbps; veja a [comparação da categoria](/pt/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          '[Minisforum MS-S1 MAX](/pt/local-llms/minisforum-ms-s1-max-local-ai-workstation): mesmo chip 395, com 10GbE duplo e um slot PCIe x16 (x4 eletricamente), segundo a Minisforum e análises.',
+          '[Ryzen AI Halo](/pt/local-llms/amd-ryzen-ai-halo-local-ai-workstation): o sistema de 128 GB com Ryzen AI Max+ 395 da própria AMD, com uma porta 10GbE e uma comparação independente com o Spark.',
+          '[HP Z2 Mini G1a](/pt/local-llms/hp-z2-mini-g1a-local-ai-workstation): a mesma plataforma na linha de workstations da HP, voltada a compras corporativas.',
+          '[Framework Desktop](/pt/local-llms/framework-desktop-local-ai-workstation): um gabinete modular com opção de 192 GB em pré-encomenda; a GMKtec lista até 128 GB.',
+          '[DGX Spark](/pt/local-llms/nvidia-dgx-spark-local-ai-workstation): o sistema CUDA da NVIDIA com rede de 200 Gbps; veja a [comparação da categoria](/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       faqSection: {
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'pt-BR',
-      'url': 'https://www.promptquorum.com/pt/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/pt/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'O GMKtec EVO-X2 é um mini PC com AMD Ryzen AI Max+ 395 e até 128 GB de memória unificada, cujo preço nos EUA é reportado de forma inconsistente entre os vendedores.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1664,7 +1664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**لم نجد اختبارًا مستقلًا لسرعة LLM على EVO-X2 بذاكرة 128 GB استطعنا قراءته.** راجعته [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review) تحت عنوان "Compact Strix Halo Powerhouse"، لكن العنوان وحده هو ما حُمّل لدينا، فلا نقتبس أرقامها ولا حكمها.',
           'خلصت [مراجعة Notebookcheck](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html) (نُشرت في 2025-09-05، وحدة 64 GB / 1 TB) إلى أن الجهاز "ينضم إلى صفوف أفضل أجهزة الكمبيوتر المصغرة المتاحة حاليًا في 2025"، ووصفت التبريد بالكفء والنظام بأنه هادئ وبارد نسبيًا. وانتقدت محدودية التحكم بالمروحة وتعقيد الصيانة. ولم تتضمن صفحة الملخص التي قرأناها أي أرقام لقياسات الأداء أو الضجيج أو الطاقة.',
-          'أجرت GMKtec نفسها مقارنة مع NVIDIA DGX Spark على Llama 3.3 70B وQwen3 Coder وGPT-OSS 20B وQwen3 0.6B وقالت إن EVO-X2 تقدّم في سرعة token وزمن الاستجابة الأولى؛ ولم يعرض [تقرير Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) أي أرقام وأشار إلى أنه اختبار من المصنّع. ومع ذلك رأى كاتب Notebookcheck أن DGX Spark أقوى للنماذج الكبيرة والإنتاجية العالية. وللاطلاع على اختبار مستقل بين Spark وStrix Halo على Ryzen AI Halo من AMD نفسها، راجع [المقارنة بين الفئات](/ar/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          'أجرت GMKtec نفسها مقارنة مع NVIDIA DGX Spark على Llama 3.3 70B وQwen3 Coder وGPT-OSS 20B وQwen3 0.6B وقالت إن EVO-X2 تقدّم في سرعة token وزمن الاستجابة الأولى؛ ولم يعرض [تقرير Notebookcheck](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html) (2025-11-10) أي أرقام وأشار إلى أنه اختبار من المصنّع. ومع ذلك رأى كاتب Notebookcheck أن DGX Spark أقوى للنماذج الكبيرة والإنتاجية العالية. وللاطلاع على اختبار مستقل بين Spark وStrix Halo على Ryzen AI Halo من AMD نفسها، راجع [المقارنة بين الفئات](/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       fit: {
@@ -1682,11 +1682,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'بدائل من الفئة نفسها',
         items: [
-          '[Minisforum MS-S1 MAX](/ar/power-local-llm/minisforum-ms-s1-max-local-ai-workstation): شريحة 395 نفسها، مع منفذَي 10GbE وفتحة PCIe x16 (x4 كهربائيًا) بحسب Minisforum والمراجعات.',
-          '[Ryzen AI Halo](/ar/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation): نظام AMD الخاص بشريحة Ryzen AI Max+ 395 وذاكرة 128 GB، بمنفذ 10GbE واحد ومقارنة مستقلة مع Spark.',
-          '[HP Z2 Mini G1a](/ar/power-local-llm/hp-z2-mini-g1a-local-ai-workstation): المنصة نفسها ضمن خط محطات العمل من HP، موجهة لشراء الأعمال.',
-          '[Framework Desktop](/ar/power-local-llm/framework-desktop-local-ai-workstation): هيكل معياري مع خيار 192 GB بالطلب المسبق؛ بينما تذكر GMKtec حتى 128 GB.',
-          '[DGX Spark](/ar/power-local-llm/nvidia-dgx-spark-local-ai-workstation): نظام NVIDIA مع CUDA وشبكة 200 Gbps؛ راجع [المقارنة بين الفئات](/ar/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark).',
+          '[Minisforum MS-S1 MAX](/ar/local-llms/minisforum-ms-s1-max-local-ai-workstation): شريحة 395 نفسها، مع منفذَي 10GbE وفتحة PCIe x16 (x4 كهربائيًا) بحسب Minisforum والمراجعات.',
+          '[Ryzen AI Halo](/ar/local-llms/amd-ryzen-ai-halo-local-ai-workstation): نظام AMD الخاص بشريحة Ryzen AI Max+ 395 وذاكرة 128 GB، بمنفذ 10GbE واحد ومقارنة مستقلة مع Spark.',
+          '[HP Z2 Mini G1a](/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation): المنصة نفسها ضمن خط محطات العمل من HP، موجهة لشراء الأعمال.',
+          '[Framework Desktop](/ar/local-llms/framework-desktop-local-ai-workstation): هيكل معياري مع خيار 192 GB بالطلب المسبق؛ بينما تذكر GMKtec حتى 128 GB.',
+          '[DGX Spark](/ar/local-llms/nvidia-dgx-spark-local-ai-workstation): نظام NVIDIA مع CUDA وشبكة 200 Gbps؛ راجع [المقارنة بين الفئات](/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark).',
         ],
       },
       faqSection: {
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'ar',
-      'url': 'https://www.promptquorum.com/ar/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/ar/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'جهاز GMKtec EVO-X2 كمبيوتر مصغر بمعالج AMD Ryzen AI Max+ 395 وذاكرة موحدة تصل إلى 128 GB، يُبلَّغ عن سعره الأمريكي بشكل غير متسق بين البائعين.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**128GB EVO-X2의 LLM 속도를 측정한 독립 테스트는 저희가 읽을 수 있는 범위에서 찾지 못했습니다.** [Tom\'s Hardware](https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review)가 "Compact Strix Halo Powerhouse"라는 헤드라인으로 리뷰했지만 저희에게는 헤드라인만 불러와졌으므로, 그 수치나 평가는 인용하지 않습니다.',
           '[Notebookcheck의 리뷰](https://www.notebookcheck.net/AMD-Strix-Halo-in-the-GMKtec-EVO-X2-Powerful-mini-PC-with-AMD-Ryzen-AI-Max-395-and-Radeon-8060S-reviewed.1102641.0.html)(2025-09-05 게시, 64GB / 1TB 기기)는 이 기기가 "2025년 현재 구매 가능한 최고의 미니 PC 대열에 합류한다"고 결론짓고, 냉각이 효율적이며 시스템이 비교적 조용하고 시원하다고 평가했습니다. 반면 제한적인 팬 제어와 더 복잡한 유지 보수는 비판했습니다. 저희가 읽은 요약 페이지에는 벤치마크, 소음, 전력 수치가 없었습니다.',
-          'GMKtec은 직접 NVIDIA DGX Spark와 Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B, Qwen3 0.6B로 비교를 진행했고 EVO-X2가 토큰 속도와 첫 응답 지연에서 앞섰다고 밝혔습니다. [Notebookcheck의 보도](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html)(2025-11-10)는 수치를 제시하지 않았고 이것이 벤더 테스트임을 언급했습니다. 그럼에도 Notebookcheck의 작성자는 대형 모델과 고처리량 작업에서는 DGX Spark가 더 강하다고 보았습니다. AMD 자체 Ryzen AI Halo로 진행한 Spark 대 Strix Halo 독립 테스트는 [범주 비교](/ko/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark)를 참고하십시오.',
+          'GMKtec은 직접 NVIDIA DGX Spark와 Llama 3.3 70B, Qwen3 Coder, GPT-OSS 20B, Qwen3 0.6B로 비교를 진행했고 EVO-X2가 토큰 속도와 첫 응답 지연에서 앞섰다고 밝혔습니다. [Notebookcheck의 보도](https://www.notebookcheck.net/Nvidia-DGX-Spark-vs-AMD-Strix-Halo-4-000-AI-supercomputer-challenged-by-2-199-mini-PC-with-better-real-time-performance.1159829.0.html)(2025-11-10)는 수치를 제시하지 않았고 이것이 벤더 테스트임을 언급했습니다. 그럼에도 Notebookcheck의 작성자는 대형 모델과 고처리량 작업에서는 DGX Spark가 더 강하다고 보았습니다. AMD 자체 Ryzen AI Halo로 진행한 Spark 대 Strix Halo 독립 테스트는 [범주 비교](/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)를 참고하십시오.',
         ],
       },
       fit: {
@@ -1900,11 +1900,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: '같은 범주의 대안',
         items: [
-          '[Minisforum MS-S1 MAX](/ko/power-local-llm/minisforum-ms-s1-max-local-ai-workstation): 같은 395 칩이며, Minisforum과 리뷰에 따르면 듀얼 10GbE와 PCIe x16 슬롯(전기적으로 x4)을 갖추었습니다.',
-          '[Ryzen AI Halo](/ko/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation): 10GbE 포트 1개를 갖춘 AMD 자체 128GB Ryzen AI Max+ 395 시스템이며 독립적인 Spark 비교 자료가 있습니다.',
-          '[HP Z2 Mini G1a](/ko/power-local-llm/hp-z2-mini-g1a-local-ai-workstation): HP 워크스테이션 라인의 같은 플랫폼으로, 비즈니스 구매를 겨냥합니다.',
-          '[Framework Desktop](/ko/power-local-llm/framework-desktop-local-ai-workstation): 사전 주문으로 192GB 옵션을 제공하는 모듈식 케이스이며, GMKtec은 최대 128GB로 안내합니다.',
-          '[DGX Spark](/ko/power-local-llm/nvidia-dgx-spark-local-ai-workstation): 200 Gbps 네트워킹을 갖춘 NVIDIA의 CUDA 시스템입니다. [범주 비교](/ko/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark)를 참고하십시오.',
+          '[Minisforum MS-S1 MAX](/ko/local-llms/minisforum-ms-s1-max-local-ai-workstation): 같은 395 칩이며, Minisforum과 리뷰에 따르면 듀얼 10GbE와 PCIe x16 슬롯(전기적으로 x4)을 갖추었습니다.',
+          '[Ryzen AI Halo](/ko/local-llms/amd-ryzen-ai-halo-local-ai-workstation): 10GbE 포트 1개를 갖춘 AMD 자체 128GB Ryzen AI Max+ 395 시스템이며 독립적인 Spark 비교 자료가 있습니다.',
+          '[HP Z2 Mini G1a](/ko/local-llms/hp-z2-mini-g1a-local-ai-workstation): HP 워크스테이션 라인의 같은 플랫폼으로, 비즈니스 구매를 겨냥합니다.',
+          '[Framework Desktop](/ko/local-llms/framework-desktop-local-ai-workstation): 사전 주문으로 192GB 옵션을 제공하는 모듈식 케이스이며, GMKtec은 최대 128GB로 안내합니다.',
+          '[DGX Spark](/ko/local-llms/nvidia-dgx-spark-local-ai-workstation): 200 Gbps 네트워킹을 갖춘 NVIDIA의 CUDA 시스템입니다. [범주 비교](/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark)를 참고하십시오.',
         ],
       },
       faqSection: {
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'ko',
-      'url': 'https://www.promptquorum.com/ko/power-local-llm/gmktec-evo-x2-local-ai-workstation',
+      'url': 'https://www.promptquorum.com/ko/local-llms/gmktec-evo-x2-local-ai-workstation',
       'articleBody': 'GMKtec EVO-X2는 AMD Ryzen AI Max+ 395와 최대 128GB의 통합 메모리를 갖춘 미니 PC이며, 미국 가격은 판매처마다 일관되지 않게 보고됩니다.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
