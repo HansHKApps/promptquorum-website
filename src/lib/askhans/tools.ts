@@ -30,6 +30,7 @@ import {
   getHandsOnTestFindings,
 } from '@/lib/mcp/directory-tools'
 import { ASK_HANS_CATEGORIES, isCategoryKey } from './categories'
+import { withConfidence } from './confidence'
 import { ASK_HANS_LIMITS } from './config'
 
 const OS = z.enum(['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web'])
@@ -259,7 +260,7 @@ export async function runTool(name: string, input: unknown, ctx: ToolContext): P
   if (!parsed.success) return { content: `Invalid arguments: ${parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`, isError: true }
   try {
     const result = await (def.run as (a: unknown, c: ToolContext) => unknown)(parsed.data, ctx)
-    return { content: truncate(JSON.stringify(result)), isError: false }
+    return { content: truncate(JSON.stringify(withConfidence(result))), isError: false }
   } catch (err) {
     if (err instanceof AppNotFoundError || err instanceof ArticleNotFoundError) return { content: err.message, isError: true }
     console.error('[askhans] tool failed', name, err)
