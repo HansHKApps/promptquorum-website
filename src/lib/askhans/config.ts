@@ -14,7 +14,7 @@ export const ASK_HANS_LIMITS = {
   /** Max characters of one tool result handed to the AI (keeps token cost bounded). */
   maxToolResultChars: 14_000,
   /** Max output tokens for one AI turn. */
-  maxOutputTokens: 1500,
+  maxOutputTokens: 3000,
   /** Hard wall-clock limit for one answer. */
   answerTimeoutMs: 55_000,
   /** Suggested follow-up questions are skipped when the answer itself took longer than this. */
