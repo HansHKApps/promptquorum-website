@@ -137,6 +137,7 @@ import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_photoprism } from './apps/photoprism'
 import { app as app_photoview } from './apps/photoview'
 import { app as app_immich } from './apps/immich'
+import { app as app_evershelf } from './apps/evershelf'
 import { app as app_facet } from './apps/facet'
 import { app as app_excire_foto } from './apps/excire-foto'
 import { app as app_mylio_photos } from './apps/mylio-photos'
@@ -663,6 +664,7 @@ export const localAiApps: ToolRecord[] = [
   app_photoprism,
   app_photoview,
   app_immich,
+  app_evershelf,
   app_facet,
   app_excire_foto,
   app_mylio_photos,

@@ -1196,6 +1196,7 @@ const HUB_THEMES: Array<{
       'logseq-review',
       'hillnote-review',
       'karakeep-review',
+      'evershelf-review',
       'ai-file-sorter-review',
       'linkwarden-review',
       'blinko-review',

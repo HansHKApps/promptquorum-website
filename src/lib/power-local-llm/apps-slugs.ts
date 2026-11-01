@@ -203,6 +203,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'photoprism':                              'photoprism',
   'photoview':                               'photoview',
   'immich':                                  'immich',
+  'evershelf':                               'evershelf',
   'facet':                                   'facet',
   'excire-foto':                             'excire-foto',
   'mylio-photos':                            'mylio-photos',

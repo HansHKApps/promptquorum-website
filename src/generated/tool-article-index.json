@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 182,
+    "totalCount": 183,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 100,
+    "totalCount": 101,
     "capped": true
   },
   "LocalAI": {
@@ -11853,6 +11853,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "evershelf-review",
+        "title": "EverShelf Review: Self-Hosted Pantry Manager with Optional AI",
+        "url": "/power-local-llm/evershelf-review",
+        "dateModified": "2026-11-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hillnote-review",
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
@@ -11914,17 +11922,9 @@
         "url": "/power-local-llm/cloak-local-ai-review",
         "dateModified": "2026-10-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dify-ai-workflow-builder-review",
-        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
-        "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-10-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 244,
+    "totalCount": 245,
     "capped": true
   },
   "Qdrant": {
@@ -12973,6 +12973,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "EverShelf": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "evershelf-review",
+        "title": "EverShelf Review: Self-Hosted Pantry Manager with Optional AI",
+        "url": "/power-local-llm/evershelf-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Facet": {

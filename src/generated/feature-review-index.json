@@ -1539,6 +1539,11 @@
     "urlSlug": "immich-review",
     "url": "/power-local-llm/immich-review"
   },
+  "evershelf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "evershelf-review",
+    "url": "/power-local-llm/evershelf-review"
+  },
   "facet": {
     "cluster": "power-local-llm",
     "urlSlug": "facet-review",
