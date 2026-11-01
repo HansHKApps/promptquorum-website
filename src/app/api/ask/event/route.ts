@@ -6,7 +6,7 @@
 //
 // Keys:
 //   askhans:day:<YYYY-MM-DD>      hash of counters  (q:<cat>, tool:<name>, link:<cat>:<id>, click:<text|panel>:<section>,
-//                                 answers_clicked, new, lang:<xx>, consent_yes/no/withdrawn)
+//                                 answers_clicked, followup_click, new, lang:<xx>, consent_yes/no/withdrawn)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
 //   askhans:consent               list of consent proofs {ts, textVersion, visitId, type}  (capped)
 
@@ -87,6 +87,11 @@ export async function POST(req: NextRequest) {
         if (b.firstForAnswer === true && b.section !== 'external') pipe.hincrby(dayKey, 'answers_clicked', 1)
         break
       }
+      case 'followup_click':
+        // A suggested follow-up question chip was used (no text stored).
+        if (!visitId) return new NextResponse(null, { status: 400 })
+        pipe.hincrby(dayKey, 'followup_click', 1)
+        break
       case 'new_chat':
         if (!visitId) return new NextResponse(null, { status: 400 })
         pipe.hincrby(dayKey, 'new', 1)

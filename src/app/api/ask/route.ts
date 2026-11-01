@@ -19,6 +19,7 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { redis } from '@/lib/redis'
 import { ASK_HANS_DEFAULT_MODEL, ASK_HANS_LIMITS } from '@/lib/askhans/config'
 import { buildSystemPrompt } from '@/lib/askhans/system-prompt'
+import { generateFollowups } from '@/lib/askhans/followups'
 import { buildToolDefinitions, runTool, SET_CATEGORY_TOOL } from '@/lib/askhans/tools'
 
 export const runtime = 'nodejs'
@@ -138,6 +139,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   const tools = buildToolDefinitions()
   const system = buildSystemPrompt(lang)
   const abort = AbortSignal.timeout(ASK_HANS_LIMITS.answerTimeoutMs)
+  const startedAt = Date.now()
 
   return ndjson(async (send) => {
     const messages: Anthropic.MessageParam[] = history.map((m) => ({ role: m.role, content: m.content }))
@@ -223,6 +225,15 @@ export async function POST(req: NextRequest): Promise<Response> {
           results.push({ type: 'tool_result', tool_use_id: use.id, content: outcome.content, ...(outcome.isError ? { is_error: true } : {}) })
         }
         messages.push({ role: 'user', content: results })
+      }
+      // Suggested next questions: best effort, skipped when the answer already took long (function time limit).
+      if (spoken.trim() && Date.now() - startedAt < ASK_HANS_LIMITS.followupDeadlineMs) {
+        try {
+          const followups = await generateFollowups(client, model, history, spoken, AbortSignal.timeout(ASK_HANS_LIMITS.followupTimeoutMs))
+          if (followups.length) send({ t: 'followups', v: followups })
+        } catch (err) {
+          console.error('[askhans] followups failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
+        }
       }
       send({ t: 'done', category, tools: [...new Set(toolsUsed)] })
     } catch (err) {

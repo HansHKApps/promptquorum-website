@@ -8,6 +8,8 @@ export interface ChatMsg {
   error?: AskErrorCode
   /** transient: assistant message still streaming */
   pending?: boolean
+  /** suggested next questions after this answer (clickable chips under the latest answer) */
+  followups?: string[]
   /** transient: what the AI is doing right now, e.g. "Durchsuche PromptQuorum…" */
   status?: string
 }

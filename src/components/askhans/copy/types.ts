@@ -62,6 +62,7 @@ export interface AskCopy {
     tooLong: (max: number) => string
   }
   retry: string
+  followupsLabel: string
 
   panelLabelPrefix: string
   panelLinksHeading: string

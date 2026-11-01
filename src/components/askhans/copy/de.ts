@@ -45,6 +45,7 @@ export const copy: AskCopy = {
     tooLong: (max: number) => `Bitte fassen Sie sich kürzer: Fragen dürfen höchstens ${max} Zeichen lang sein.`,
   },
   retry: 'Erneut versuchen',
+  followupsLabel: "Vorgeschlagene Anschlussfragen",
 
   panelLabelPrefix: 'Thema',
   panelLinksHeading: 'Passende Seiten',
