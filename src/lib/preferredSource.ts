@@ -87,6 +87,8 @@ type PrefSourceEvent =
 /** Fires `pref_source_<event>` via Umami. Every call site passes `surface` so all
  * three entry points land in one funnel, filterable by origin. */
 export function trackPrefSource(event: PrefSourceEvent, params: Record<string, unknown>) {
+  // Impression events are not sent: they fire on every page view and used up the Umami event quota.
+  if (event === 'shown' || event === 'dismissed') return
   try {
     window.umami?.track(`pref_source_${event}`, params)
   } catch {
