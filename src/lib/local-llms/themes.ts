@@ -70,9 +70,6 @@ export const llmThemes: LLMTheme[] = [
       'best-mini-pcs-local-llm',
       'best-amd-mini-pc-local-llm-2026',
       'mac-mini-m5-local-ai-server',
-    ],
-    externalKeys: [
-      'asus-mini-pc-local-ai',
       'local-ai-workstations-strix-halo-vs-dgx-spark',
       'nvidia-dgx-spark-local-ai-workstation',
       'amd-ryzen-ai-halo-local-ai-workstation',
@@ -80,6 +77,9 @@ export const llmThemes: LLMTheme[] = [
       'hp-z2-mini-g1a-local-ai-workstation',
       'gmktec-evo-x2-local-ai-workstation',
       'minisforum-ms-s1-max-local-ai-workstation',
+    ],
+    externalKeys: [
+      'asus-mini-pc-local-ai',
       'olares-one-local-ai-review',
     ],
   },

@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'The Five Machines to Shortlist',
         content:
-          '**Five machines cover the real buying decisions: the most memory, the vendor reference design, the business option, the best value and the expandable workstation.** This is an editorial selection from spec sheets and third-party reports; PromptQuorum has not benchmarked any of them. Links go to vendor pages with no affiliate relationship. Each machine also has its own page: [DGX Spark](/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/power-local-llm/gmktec-evo-x2-local-ai-workstation) and [Minisforum MS-S1 MAX](/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
+          '**Five machines cover the real buying decisions: the most memory, the vendor reference design, the business option, the best value and the expandable workstation.** This is an editorial selection from spec sheets and third-party reports; PromptQuorum has not benchmarked any of them. Links go to vendor pages with no affiliate relationship. Each machine also has its own page: [DGX Spark](/local-llms/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/local-llms/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/local-llms/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/local-llms/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/local-llms/gmktec-evo-x2-local-ai-workstation) and [Minisforum MS-S1 MAX](/local-llms/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'en',
-      'url': 'https://www.promptquorum.com/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': 'Buy AMD Strix Halo for the cheapest 128 GB entry and x86 compatibility; buy the DGX Spark if CUDA, throughput or clustering matter more than price.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'Die fünf Geräte in der engeren Wahl',
         content:
-          '**Fünf Geräte decken die echten Kaufentscheidungen ab: den meisten Speicher, das Referenzdesign des Herstellers, die Business-Option, das beste Preis-Leistungs-Verhältnis und die erweiterbare Workstation.** Das ist eine redaktionelle Auswahl aus Datenblättern und Berichten Dritter; PromptQuorum hat keines der Geräte selbst gebenchmarkt. Die Links führen zu Herstellerseiten ohne Affiliate-Beziehung. Jedes Gerät hat außerdem eine eigene Seite: [DGX Spark](/de/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/de/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/de/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/de/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/de/power-local-llm/gmktec-evo-x2-local-ai-workstation) und [Minisforum MS-S1 MAX](/de/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
+          '**Fünf Geräte decken die echten Kaufentscheidungen ab: den meisten Speicher, das Referenzdesign des Herstellers, die Business-Option, das beste Preis-Leistungs-Verhältnis und die erweiterbare Workstation.** Das ist eine redaktionelle Auswahl aus Datenblättern und Berichten Dritter; PromptQuorum hat keines der Geräte selbst gebenchmarkt. Die Links führen zu Herstellerseiten ohne Affiliate-Beziehung. Jedes Gerät hat außerdem eine eigene Seite: [DGX Spark](/de/local-llms/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/de/local-llms/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/de/local-llms/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/de/local-llms/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/de/local-llms/gmktec-evo-x2-local-ai-workstation) und [Minisforum MS-S1 MAX](/de/local-llms/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
@@ -696,7 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'de',
-      'url': 'https://www.promptquorum.com/de/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/de/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': 'Kaufen Sie AMD Strix Halo für den günstigsten Einstieg mit 128 GB und x86-Kompatibilität; kaufen Sie die DGX Spark, wenn CUDA, Durchsatz oder Clustering wichtiger sind als der Preis.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -816,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'Les cinq machines à présélectionner',
         content:
-          "**Cinq machines couvrent les vraies décisions d'achat : le plus de mémoire, le design de référence du constructeur, l'option professionnelle, le meilleur rapport qualité-prix et la station extensible.** Il s'agit d'une sélection éditoriale à partir de fiches techniques et de rapports tiers ; PromptQuorum n'a testé aucune de ces machines. Les liens mènent aux pages des constructeurs, sans relation d'affiliation. Chaque machine dispose aussi de sa propre page : [DGX Spark](/fr/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/fr/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/fr/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/fr/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/fr/power-local-llm/gmktec-evo-x2-local-ai-workstation) et [Minisforum MS-S1 MAX](/fr/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).",
+          "**Cinq machines couvrent les vraies décisions d'achat : le plus de mémoire, le design de référence du constructeur, l'option professionnelle, le meilleur rapport qualité-prix et la station extensible.** Il s'agit d'une sélection éditoriale à partir de fiches techniques et de rapports tiers ; PromptQuorum n'a testé aucune de ces machines. Les liens mènent aux pages des constructeurs, sans relation d'affiliation. Chaque machine dispose aussi de sa propre page : [DGX Spark](/fr/local-llms/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/fr/local-llms/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/fr/local-llms/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/fr/local-llms/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/fr/local-llms/gmktec-evo-x2-local-ai-workstation) et [Minisforum MS-S1 MAX](/fr/local-llms/minisforum-ms-s1-max-local-ai-workstation).",
         rankedItems: [
           {
             rank: 1,
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'fr',
-      'url': 'https://www.promptquorum.com/fr/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/fr/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': "Choisissez AMD Strix Halo pour l'entrée de gamme la moins chère en 128 Go et la compatibilité x86 ; choisissez le DGX Spark si CUDA, le débit ou le clustering comptent plus que le prix.",
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '候補に入れる5台',
         content:
-          '**実際の購入判断をカバーするのは5台です。最大メモリ、ベンダーのリファレンス設計、法人向け、コスパ重視、拡張可能なワークステーションです。** これはスペックシートとサードパーティのレポートに基づく編集部の選定であり、PromptQuorumはいずれのマシンもベンチマークしていません。リンク先はベンダーのページで、アフィリエイト関係はありません。各マシンには個別のページもあります：[DGX Spark](/ja/power-local-llm/nvidia-dgx-spark-local-ai-workstation)、[Ryzen AI Halo](/ja/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation)、[Framework Desktop](/ja/power-local-llm/framework-desktop-local-ai-workstation)、[HP Z2 Mini G1a](/ja/power-local-llm/hp-z2-mini-g1a-local-ai-workstation)、[GMKtec EVO-X2](/ja/power-local-llm/gmktec-evo-x2-local-ai-workstation)、[Minisforum MS-S1 MAX](/ja/power-local-llm/minisforum-ms-s1-max-local-ai-workstation)。',
+          '**実際の購入判断をカバーするのは5台です。最大メモリ、ベンダーのリファレンス設計、法人向け、コスパ重視、拡張可能なワークステーションです。** これはスペックシートとサードパーティのレポートに基づく編集部の選定であり、PromptQuorumはいずれのマシンもベンチマークしていません。リンク先はベンダーのページで、アフィリエイト関係はありません。各マシンには個別のページもあります：[DGX Spark](/ja/local-llms/nvidia-dgx-spark-local-ai-workstation)、[Ryzen AI Halo](/ja/local-llms/amd-ryzen-ai-halo-local-ai-workstation)、[Framework Desktop](/ja/local-llms/framework-desktop-local-ai-workstation)、[HP Z2 Mini G1a](/ja/local-llms/hp-z2-mini-g1a-local-ai-workstation)、[GMKtec EVO-X2](/ja/local-llms/gmktec-evo-x2-local-ai-workstation)、[Minisforum MS-S1 MAX](/ja/local-llms/minisforum-ms-s1-max-local-ai-workstation)。',
         rankedItems: [
           {
             rank: 1,
@@ -1395,7 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'ja',
-      'url': 'https://www.promptquorum.com/ja/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/ja/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': '128GBを最も安く手に入れたい、またはx86互換性が必要ならAMD Strix Halo、価格よりCUDA、スループット、クラスタリングを重視するならDGX Sparkを選んでください。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '值得列入候选的五款机器',
         content:
-          '**五款机器涵盖了真正的购买决策：内存最大、厂商参考设计、商用选择、性价比最佳和可扩展工作站。** 这是根据规格表和第三方报道做出的编辑部遴选；PromptQuorum没有对其中任何一款做过基准测试。链接指向厂商页面，不含联盟关系。每台机器还有各自的页面：[DGX Spark](/zh/power-local-llm/nvidia-dgx-spark-local-ai-workstation)、[Ryzen AI Halo](/zh/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation)、[Framework Desktop](/zh/power-local-llm/framework-desktop-local-ai-workstation)、[HP Z2 Mini G1a](/zh/power-local-llm/hp-z2-mini-g1a-local-ai-workstation)、[GMKtec EVO-X2](/zh/power-local-llm/gmktec-evo-x2-local-ai-workstation)、[Minisforum MS-S1 MAX](/zh/power-local-llm/minisforum-ms-s1-max-local-ai-workstation)。',
+          '**五款机器涵盖了真正的购买决策：内存最大、厂商参考设计、商用选择、性价比最佳和可扩展工作站。** 这是根据规格表和第三方报道做出的编辑部遴选；PromptQuorum没有对其中任何一款做过基准测试。链接指向厂商页面，不含联盟关系。每台机器还有各自的页面：[DGX Spark](/zh/local-llms/nvidia-dgx-spark-local-ai-workstation)、[Ryzen AI Halo](/zh/local-llms/amd-ryzen-ai-halo-local-ai-workstation)、[Framework Desktop](/zh/local-llms/framework-desktop-local-ai-workstation)、[HP Z2 Mini G1a](/zh/local-llms/hp-z2-mini-g1a-local-ai-workstation)、[GMKtec EVO-X2](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)、[Minisforum MS-S1 MAX](/zh/local-llms/minisforum-ms-s1-max-local-ai-workstation)。',
         rankedItems: [
           {
             rank: 1,
@@ -1744,7 +1744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'zh',
-      'url': 'https://www.promptquorum.com/zh/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/zh/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': '想要最便宜的128 GB入门配置和x86兼容性，选AMD Strix Halo；如果CUDA、吞吐量或多机互联比价格更重要，选DGX Spark。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -1864,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'Las cinco máquinas para la lista corta',
         content:
-          '**Cinco máquinas cubren las decisiones de compra reales: la que más memoria tiene, el diseño de referencia del fabricante, la opción para empresas, la mejor relación calidad-precio y la estación ampliable.** Es una selección editorial a partir de fichas técnicas e informes de terceros; PromptQuorum no ha medido ninguna de ellas. Los enlaces van a páginas de los fabricantes, sin relación de afiliación. Cada máquina tiene además su propia página: [DGX Spark](/es/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/es/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/es/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/es/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/es/power-local-llm/gmktec-evo-x2-local-ai-workstation) y [Minisforum MS-S1 MAX](/es/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
+          '**Cinco máquinas cubren las decisiones de compra reales: la que más memoria tiene, el diseño de referencia del fabricante, la opción para empresas, la mejor relación calidad-precio y la estación ampliable.** Es una selección editorial a partir de fichas técnicas e informes de terceros; PromptQuorum no ha medido ninguna de ellas. Los enlaces van a páginas de los fabricantes, sin relación de afiliación. Cada máquina tiene además su propia página: [DGX Spark](/es/local-llms/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/es/local-llms/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/es/local-llms/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/es/local-llms/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/es/local-llms/gmktec-evo-x2-local-ai-workstation) y [Minisforum MS-S1 MAX](/es/local-llms/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'es',
-      'url': 'https://www.promptquorum.com/es/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/es/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': 'Compra AMD Strix Halo para la entrada más barata a 128 GB y la compatibilidad con x86; compra la DGX Spark si CUDA, el rendimiento o el clustering importan más que el precio.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -2214,7 +2214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'As cinco máquinas para a lista final',
         content:
-          '**Cinco máquinas cobrem as decisões de compra reais: a que tem mais memória, o design de referência do fabricante, a opção para empresas, o melhor custo-benefício e a workstation expansível.** Esta é uma seleção editorial a partir de fichas técnicas e relatos de terceiros; a PromptQuorum não fez benchmark de nenhuma delas. Os links levam a páginas dos fabricantes, sem relação de afiliado. Cada máquina também tem sua própria página: [DGX Spark](/pt/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/pt/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/pt/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/pt/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/pt/power-local-llm/gmktec-evo-x2-local-ai-workstation) e [Minisforum MS-S1 MAX](/pt/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
+          '**Cinco máquinas cobrem as decisões de compra reais: a que tem mais memória, o design de referência do fabricante, a opção para empresas, o melhor custo-benefício e a workstation expansível.** Esta é uma seleção editorial a partir de fichas técnicas e relatos de terceiros; a PromptQuorum não fez benchmark de nenhuma delas. Os links levam a páginas dos fabricantes, sem relação de afiliado. Cada máquina também tem sua própria página: [DGX Spark](/pt/local-llms/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/pt/local-llms/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/pt/local-llms/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/pt/local-llms/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/pt/local-llms/gmktec-evo-x2-local-ai-workstation) e [Minisforum MS-S1 MAX](/pt/local-llms/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'pt-BR',
-      'url': 'https://www.promptquorum.com/pt/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/pt/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': 'Compre AMD Strix Halo para a entrada mais barata em 128 GB e compatibilidade com x86; compre o DGX Spark se CUDA, throughput ou clustering pesarem mais que o preço.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -2564,7 +2564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'الأجهزة الخمسة المرشحة',
         content:
-          '**تغطي خمسة أجهزة قرارات الشراء الفعلية: الأكثر ذاكرة، وتصميم الشركة المرجعي، وخيار الأعمال، والأفضل قيمة، ومحطة العمل القابلة للتوسعة.** هذا اختيار تحريري مبني على أوراق المواصفات وتقارير الأطراف الثالثة؛ ولم تجرِ PromptQuorum اختبار أداء لأي منها. الروابط تؤدي إلى صفحات المصنّعين دون أي علاقة تابعة (affiliate). ولكل جهاز أيضًا صفحته الخاصة: [DGX Spark](/ar/power-local-llm/nvidia-dgx-spark-local-ai-workstation)، [Ryzen AI Halo](/ar/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation)، [Framework Desktop](/ar/power-local-llm/framework-desktop-local-ai-workstation)، [HP Z2 Mini G1a](/ar/power-local-llm/hp-z2-mini-g1a-local-ai-workstation)، [GMKtec EVO-X2](/ar/power-local-llm/gmktec-evo-x2-local-ai-workstation) و[Minisforum MS-S1 MAX](/ar/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
+          '**تغطي خمسة أجهزة قرارات الشراء الفعلية: الأكثر ذاكرة، وتصميم الشركة المرجعي، وخيار الأعمال، والأفضل قيمة، ومحطة العمل القابلة للتوسعة.** هذا اختيار تحريري مبني على أوراق المواصفات وتقارير الأطراف الثالثة؛ ولم تجرِ PromptQuorum اختبار أداء لأي منها. الروابط تؤدي إلى صفحات المصنّعين دون أي علاقة تابعة (affiliate). ولكل جهاز أيضًا صفحته الخاصة: [DGX Spark](/ar/local-llms/nvidia-dgx-spark-local-ai-workstation)، [Ryzen AI Halo](/ar/local-llms/amd-ryzen-ai-halo-local-ai-workstation)، [Framework Desktop](/ar/local-llms/framework-desktop-local-ai-workstation)، [HP Z2 Mini G1a](/ar/local-llms/hp-z2-mini-g1a-local-ai-workstation)، [GMKtec EVO-X2](/ar/local-llms/gmktec-evo-x2-local-ai-workstation) و[Minisforum MS-S1 MAX](/ar/local-llms/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
@@ -2793,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'ar',
-      'url': 'https://www.promptquorum.com/ar/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/ar/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': 'اشترِ AMD Strix Halo لأرخص مدخل بذاكرة 128 GB وللتوافق مع x86؛ واشترِ DGX Spark إذا كانت CUDA أو الإنتاجية أو الربط أهم من السعر.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
@@ -2913,7 +2913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '후보로 꼽을 다섯 기기',
         content:
-          '**다섯 기기가 실제 구매 결정을 모두 포괄합니다. 최대 메모리, 벤더 레퍼런스 설계, 비즈니스용 옵션, 최고 가성비, 확장형 워크스테이션입니다.** 이는 사양서와 제3자 보고서를 바탕으로 한 편집부 선정이며, PromptQuorum은 어떤 기기도 벤치마크하지 않았습니다. 링크는 제휴 관계가 없는 벤더 페이지로 연결됩니다. 각 기기에는 별도의 페이지도 있습니다: [DGX Spark](/ko/power-local-llm/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/ko/power-local-llm/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/ko/power-local-llm/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/ko/power-local-llm/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/ko/power-local-llm/gmktec-evo-x2-local-ai-workstation), [Minisforum MS-S1 MAX](/ko/power-local-llm/minisforum-ms-s1-max-local-ai-workstation).',
+          '**다섯 기기가 실제 구매 결정을 모두 포괄합니다. 최대 메모리, 벤더 레퍼런스 설계, 비즈니스용 옵션, 최고 가성비, 확장형 워크스테이션입니다.** 이는 사양서와 제3자 보고서를 바탕으로 한 편집부 선정이며, PromptQuorum은 어떤 기기도 벤치마크하지 않았습니다. 링크는 제휴 관계가 없는 벤더 페이지로 연결됩니다. 각 기기에는 별도의 페이지도 있습니다: [DGX Spark](/ko/local-llms/nvidia-dgx-spark-local-ai-workstation), [Ryzen AI Halo](/ko/local-llms/amd-ryzen-ai-halo-local-ai-workstation), [Framework Desktop](/ko/local-llms/framework-desktop-local-ai-workstation), [HP Z2 Mini G1a](/ko/local-llms/hp-z2-mini-g1a-local-ai-workstation), [GMKtec EVO-X2](/ko/local-llms/gmktec-evo-x2-local-ai-workstation), [Minisforum MS-S1 MAX](/ko/local-llms/minisforum-ms-s1-max-local-ai-workstation).',
         rankedItems: [
           {
             rank: 1,
@@ -3142,7 +3142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'inLanguage': 'ko',
-      'url': 'https://www.promptquorum.com/ko/power-local-llm/local-ai-workstations-strix-halo-vs-dgx-spark',
+      'url': 'https://www.promptquorum.com/ko/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark',
       'articleBody': '가장 저렴한 128GB 진입과 x86 호환성이 중요하다면 AMD Strix Halo를, 가격보다 CUDA, 처리량, 클러스터링이 중요하다면 DGX Spark를 구매하십시오.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
