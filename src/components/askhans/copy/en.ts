@@ -45,6 +45,7 @@ export const copy: AskCopy = {
     tooLong: (max: number) => `Please keep it shorter: questions may be at most ${max} characters long.`,
   },
   retry: 'Try again',
+  followupsLabel: "Suggested follow-up questions",
 
   panelLabelPrefix: 'Topic',
   panelLinksHeading: 'Related pages',
@@ -93,6 +94,7 @@ export const copy: AskCopy = {
 
   panel: {
     relatedHeading: "Matching your question",
+    relatedEarlier: "Earlier answers",
     panelHide: "Hide topic panel",
     panelShow: "Show topic panel",
     historyHeading: "Earlier conversations",

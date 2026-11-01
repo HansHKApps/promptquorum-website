@@ -1,5 +1,5 @@
 // Generates the 21 placeholder pictures for Ask Hans: public/askhans/<key>.svg
-// Portrait 3:4 (viewBox 600x800), flat tinted background, one large centred line icon, no text.
+// Landscape 3:1 (viewBox 900x300) to match the side panel's picture box, flat tinted background, one large centred line icon, no text.
 // Colours are read from src/app/globals.css (--hero-from tint, --primary) so they track the brand.
 // Run: node scripts/gen-askhans-pictures.mjs
 import fs from 'node:fs'
@@ -31,7 +31,7 @@ const stroke = hex(hslVar('primary'))
 const { categories } = JSON.parse(fs.readFileSync('src/lib/askhans/categories.json', 'utf8'))
 fs.mkdirSync('public/askhans', { recursive: true })
 
-const SIZE = 320
+const SIZE = 220
 for (const c of categories) {
   const Icon = lucide[c.icon]
   if (!Icon) throw new Error(`lucide icon ${c.icon} missing for ${c.key}`)
@@ -39,11 +39,11 @@ for (const c of categories) {
     React.createElement(Icon, { width: SIZE, height: SIZE, strokeWidth: 1.25, color: stroke, absoluteStrokeWidth: false }),
   )
   const body = inner.replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '')
-  const x = (600 - SIZE) / 2
-  const y = (800 - SIZE) / 2
+  const x = (900 - SIZE) / 2
+  const y = (300 - SIZE) / 2
   const svg =
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" role="img" aria-label="${c.label_de.replace(/&/g, '&amp;')}">` +
-    `<rect width="600" height="800" fill="${bg}"/>` +
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" role="img" aria-label="${c.label_de.replace(/&/g, '&amp;')}">` +
+    `<rect width="900" height="300" fill="${bg}"/>` +
     `<g transform="translate(${x} ${y}) scale(${SIZE / 24})" fill="none" stroke="${stroke}" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">${body}</g>` +
     `</svg>\n`
   fs.writeFileSync(`public/askhans/${c.key}.svg`, svg)

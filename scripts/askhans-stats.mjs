@@ -50,6 +50,20 @@ for (const { d, h } of perDay) {
 console.log('\nQuestions per category (total)')
 sum('q:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
 
+const answers = sum('q:').reduce((n, [, v]) => n + v, 0)
+const clicked = total.answers_clicked ?? 0
+console.log('\nClick-through (answers that sent the visitor into PromptQuorum content)')
+console.log(`  answers ${answers}   answers with >= 1 click ${clicked}   click-through rate ${answers ? ((100 * clicked) / answers).toFixed(1) + ' %' : 'n/a'}`)
+console.log('  rate per day (clicked / answers)')
+for (const { d, h } of perDay) {
+  const a = Object.entries(h).filter(([k]) => k.startsWith('q:')).reduce((n, [, v]) => n + Number(v), 0)
+  if (a) console.log(`    ${d}  ${String(h.answers_clicked ?? 0).padStart(3)} / ${String(a).padEnd(3)}  ${(((h.answers_clicked ?? 0) * 100) / a).toFixed(0)} %`)
+}
+console.log('  clicks by source and site section (text = link in the answer, panel = "Matching your question" card)')
+sum('click:').slice(0, 20).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
+
+console.log(`\nSuggested follow-up questions used: ${total.followup_click ?? 0} (of ${answers} answers${answers ? `, ${(((total.followup_click ?? 0) * 100) / answers).toFixed(1)} %` : ''})`)
+
 console.log('\nTop links clicked (category:link)')
 sum('link:').slice(0, 15).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
 

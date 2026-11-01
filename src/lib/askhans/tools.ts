@@ -30,6 +30,7 @@ import {
   getHandsOnTestFindings,
 } from '@/lib/mcp/directory-tools'
 import { ASK_HANS_CATEGORIES, isCategoryKey } from './categories'
+import { withConfidence } from './confidence'
 import { ASK_HANS_LIMITS } from './config'
 import { normalizePagePath } from './paths'
 
@@ -278,7 +279,7 @@ export async function runTool(name: string, input: unknown, ctx: ToolContext): P
     const result = await (def.run as (a: unknown, c: ToolContext) => unknown)(parsed.data, ctx)
     const pages: Record<string, string> = {}
     collectPages(result, pages)
-    return { content: truncate(JSON.stringify(result)), isError: false, ...(Object.keys(pages).length ? { pages } : {}) }
+    return { content: truncate(JSON.stringify(withConfidence(result))), isError: false, ...(Object.keys(pages).length ? { pages } : {}) }
   } catch (err) {
     if (err instanceof AppNotFoundError || err instanceof ArticleNotFoundError) return { content: err.message, isError: true }
     console.error('[askhans] tool failed', name, err)

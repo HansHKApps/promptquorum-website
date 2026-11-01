@@ -10,6 +10,8 @@ export interface ChatMsg {
   pending?: boolean
   /** page path → title from the tools used for this answer (descriptive related-link cards) */
   linkTitles?: Record<string, string>
+  /** suggested next questions after this answer (clickable chips under the latest answer) */
+  followups?: string[]
   /** transient: what the AI is doing right now, e.g. "Durchsuche PromptQuorum…" */
   status?: string
 }

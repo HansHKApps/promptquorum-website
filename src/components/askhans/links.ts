@@ -10,6 +10,8 @@ export interface RelatedLink {
   title: string
   /** site-relative path (with locale prefix as the answer wrote it) */
   href: string
+  /** true = taken from the latest answer; false = from an earlier answer (shown greyed out) */
+  current: boolean
 }
 
 const MD_LINK = /\[([^\]\n]{1,120})\]\((https?:\/\/(?:www\.)?promptquorum\.com)?(\/[^)\s]*)\)/g
@@ -41,6 +43,14 @@ function toRelative(path: string): string {
 export function relatedLinks(messages: ChatMsg[], max = 6): RelatedLink[] {
   const seen = new Set<string>()
   const out: RelatedLink[] = []
+  let latest = -1
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const m = messages[i]
+    if (m.role === 'assistant' && !m.error && m.content) {
+      latest = i
+      break
+    }
+  }
   for (let i = messages.length - 1; i >= 0 && out.length < max; i--) {
     const m = messages[i]
     if (m.role !== 'assistant' || m.error || !m.content) continue
@@ -52,9 +62,25 @@ export function relatedLinks(messages: ChatMsg[], max = 6): RelatedLink[] {
       const text = match[1].trim()
       const known = m.linkTitles?.[key]
       const title = known ?? (isGeneric(text) ? titleFromPath(href) : text)
-      out.push({ title, href })
+      out.push({ title, href, current: i === latest })
       if (out.length >= max) break
     }
   }
   return out
+}
+
+const LOCALE_PREFIX = /^(de|fr|ja|zh|es|pt|ar|ko)$/
+
+/** Coarse site section of a clicked link, e.g. 'power-local-llm' or 'external'. Never the full URL. */
+export function clickSection(href: string): string {
+  try {
+    const u = new URL(href, 'https://www.promptquorum.com')
+    if (!/^(www\.)?promptquorum\.com$/.test(u.hostname)) return 'external'
+    const parts = u.pathname.split('/').filter(Boolean)
+    if (parts[0] && LOCALE_PREFIX.test(parts[0])) parts.shift()
+    const s = parts[0] ?? 'home'
+    return /^[a-z0-9-]{1,40}$/.test(s) ? s : 'other'
+  } catch {
+    return 'other'
+  }
 }

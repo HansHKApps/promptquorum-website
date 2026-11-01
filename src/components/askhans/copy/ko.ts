@@ -45,6 +45,7 @@ export const copy: AskCopy = {
     tooLong: (max: number) => `질문을 더 짧게 작성해 주십시오. 질문은 최대 ${max}자까지 입력할 수 있습니다.`,
   },
   retry: '다시 시도',
+  followupsLabel: "추천 후속 질문",
 
   panelLabelPrefix: '주제',
   panelLinksHeading: '관련 페이지',
@@ -93,6 +94,7 @@ export const copy: AskCopy = {
 
   panel: {
     relatedHeading: "질문과 관련된 내용",
+    relatedEarlier: "이전 답변",
     panelHide: "주제 패널 숨기기",
     panelShow: "주제 패널 표시",
     historyHeading: "이전 대화",

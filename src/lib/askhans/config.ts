@@ -17,6 +17,10 @@ export const ASK_HANS_LIMITS = {
   maxOutputTokens: 1500,
   /** Hard wall-clock limit for one answer. */
   answerTimeoutMs: 55_000,
+  /** Suggested follow-up questions are skipped when the answer itself took longer than this. */
+  followupDeadlineMs: 40_000,
+  /** Time limit of the follow-up suggestion call. */
+  followupTimeoutMs: 8_000,
 } as const
 
 /** Window geometry (desktop). Mobile is always full screen. */

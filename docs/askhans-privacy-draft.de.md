@@ -36,7 +36,8 @@ für die gewünschte Funktion (§25 Abs. 2 Nr. 2 TDDDG) — bestätigen.
 
 **d) Anonyme Nutzungsstatistik — nur mit Ihrer Einwilligung („Ja, einverstanden“).**
 Erfasst werden: gewählte Themenkategorie, verwendete Werkzeuge (z. B. „App-Suche“), Sprache, Zeitpunkt, angeklickte Links
-(Kategorie und Link-Kennung), Klicks auf „Neu“ und eine zufällige, anonyme Besuchs-ID, die keiner Person zugeordnet ist.
+(Kategorie und Link-Kennung), ob und in welchen Bereich der Website (nur der erste Pfadabschnitt, z. B. „power-local-llm“) ein Link
+aus einer Antwort angeklickt wurde, Klicks auf „Neu“ und eine zufällige, anonyme Besuchs-ID, die keiner Person zugeordnet ist.
 **Nicht erfasst werden:** Fragetext, Antworttext, IP-Adresse, Namen.
 
 **e) Nachweis Ihrer Einwilligung.**
