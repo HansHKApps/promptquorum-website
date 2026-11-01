@@ -1,5 +1,12 @@
 [
   {
+    "file": "src/lib/prompt-engineering/articles/ai-code-review.ts",
+    "models": [
+      "Devstral Small 24B",
+      "Llama 4 Scout"
+    ]
+  },
+  {
     "file": "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
     "models": [
       "Claude Opus 5",
@@ -674,6 +681,15 @@
     ]
   },
   {
+    "file": "src/lib/power-local-llm/articles/ai-file-sorter-review.ts",
+    "models": [
+      "Gemma 1.1 7B",
+      "Gemma 3 4B IT",
+      "LLaVA 1.6 Mistral 7B",
+      "Mistral 7B"
+    ]
+  },
+  {
     "file": "src/lib/power-local-llm/articles/best-local-llms-customer-support-call-centers-enterprise.ts",
     "models": [
       "DeepSeek-R1",
@@ -767,6 +783,18 @@
       "Llama 3.1",
       "Llama 3.3",
       "Qwen2.5"
+    ]
+  },
+  {
+    "file": "src/lib/power-local-llm/articles/on-device-llm-review.ts",
+    "models": [
+      "Gemma 2 2B",
+      "Llama 3.2 1B",
+      "Llama 3.2 3B",
+      "Qwen2.5 0.5B",
+      "Qwen2.5 1.5B",
+      "SmolLM2 360M",
+      "TinyLlama 1.1B"
     ]
   },
   {
@@ -1013,6 +1041,17 @@
     ]
   },
   {
+    "file": "src/lib/power-local-llm/articles/lyonesse-review.ts",
+    "models": [
+      "Apple Intelligence",
+      "Apple Speech",
+      "FluidAudio",
+      "NVIDIA Parakeet",
+      "Qwen2-VL",
+      "Qwen3"
+    ]
+  },
+  {
     "file": "src/lib/power-local-llm/articles/best-local-ai-app-low-end-pc.ts",
     "models": [
       "Gemma 4 E2B",
@@ -1091,6 +1130,17 @@
       "DeepSeek R1",
       "Gemma",
       "Llama",
+      "Qwen"
+    ]
+  },
+  {
+    "file": "src/lib/power-local-llm/articles/chaterminal-review.ts",
+    "models": [
+      "DeepSeek",
+      "Gemma",
+      "Llama",
+      "Mistral",
+      "Phi",
       "Qwen"
     ]
   },
@@ -1261,6 +1311,15 @@
       "Gemma",
       "Llama",
       "Qwen"
+    ]
+  },
+  {
+    "file": "src/lib/power-local-llm/articles/perfect-memory-review.ts",
+    "models": [
+      "ChatGPT",
+      "Jan",
+      "LM Studio",
+      "Ollama"
     ]
   },
   {
@@ -1528,6 +1587,16 @@
     ]
   },
   {
+    "file": "src/lib/power-local-llm/articles/krita-ai-diffusion-review.ts",
+    "models": [
+      "Flux 2",
+      "Illustrious",
+      "Stable Diffusion 1.5",
+      "Stable Diffusion XL",
+      "Z-Image"
+    ]
+  },
+  {
     "file": "src/lib/power-local-llm/articles/piper-vs-chatterbox-tts.ts",
     "models": [
       "Chatterbox",
@@ -1572,13 +1641,24 @@
     ]
   },
   {
+    "file": "src/lib/power-local-llm/articles/fullmoon-review.ts",
+    "models": [
+      "DeepSeek-R1-Distill-Qwen",
+      "Llama 3.2",
+      "Qwen3"
+    ]
+  },
+  {
     "file": "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
     "models": [
       "Command A+",
-      "Hermes 3 Llama 3.1",
+      "Dolphin 3.0",
+      "Gemma 4 12B",
+      "Gemma 4 31B",
+      "Hermes 4.3 36B",
       "Llama 3.3 70B",
-      "Mistral Large",
-      "Qwen3 32B"
+      "Mistral Small 3 24B",
+      "Qwen3.8-27B"
     ]
   },
   {
@@ -1730,6 +1810,15 @@
     ]
   },
   {
+    "file": "src/lib/power-local-llm/articles/voicebox-review.ts",
+    "models": [
+      "Chatterbox",
+      "Kokoro",
+      "Qwen3-TTS",
+      "Whisper"
+    ]
+  },
+  {
     "file": "src/lib/power-local-llm/articles/invokeai-review.ts",
     "models": [
       "CogView4",
@@ -1870,11 +1959,11 @@
   {
     "file": "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts",
     "models": [
-      "Command A+",
-      "Hermes 3 Llama 3.1",
+      "Gemma 4 31B",
+      "Hermes 4 70B",
+      "Kimi-K2.6",
       "Llama 3.3 70B",
-      "Mistral Large",
-      "Qwen3 32B"
+      "Qwen3.6 27B"
     ]
   },
   {
