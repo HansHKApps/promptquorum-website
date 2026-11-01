@@ -18,6 +18,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "picoclaw-review",
+        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
+        "url": "/power-local-llm/picoclaw-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/nanobot-review",
         "dateModified": "2026-10-30",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "reins-review",
-        "title": "Reins Review: iPhone Chat App for Ollama and LM Studio",
-        "url": "/power-local-llm/reins-review",
-        "dateModified": "2026-10-30",
-        "tier": "about"
       }
     ],
-    "totalCount": 336,
+    "totalCount": 337,
     "capped": true
   },
   "llama.cpp": {
@@ -182,6 +182,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "picoclaw-review",
+        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
+        "url": "/power-local-llm/picoclaw-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "amd-ryzen-ai-halo-local-ai-workstation",
         "title": "AMD Ryzen AI Halo for Local AI: Specs, Price and Verdict",
@@ -244,17 +252,9 @@
         "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-factory-review",
-        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
-        "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-10-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 99,
+    "totalCount": 100,
     "capped": true
   },
   "LocalAI": {
@@ -4931,6 +4931,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "picoclaw-review",
+        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
+        "url": "/power-local-llm/picoclaw-review",
+        "dateModified": "2026-11-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kai-9000-review",
         "title": "Kai 9000 Review: Free Open-Source AI Assistant, Cloud or On-Device",
         "url": "/power-local-llm/kai-9000-review",
@@ -4952,17 +4960,9 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dreamserver-review",
-        "title": "DreamServer Review: One-Command Local AI Server Stack",
-        "url": "/power-local-llm/dreamserver-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "Hermes Agent": {
@@ -9557,6 +9557,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "picoclaw-review",
+        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
+        "url": "/power-local-llm/picoclaw-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -9580,7 +9588,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Vane (formerly Perplexica)": {
@@ -10194,6 +10202,20 @@
         "slug": "hillnote-review",
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PicoClaw": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "picoclaw-review",
+        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
+        "url": "/power-local-llm/picoclaw-review",
         "dateModified": "2026-11-01",
         "tier": "about"
       }
