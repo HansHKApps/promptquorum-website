@@ -137,6 +137,8 @@ export function AskHansRoot() {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, content: acc, status: undefined }))
         } else if (ev.t === 'tool') {
           patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, status: tx.searching }))
+        } else if (ev.t === 'followups') {
+          patchMsg(conv.id, asstMsg.id, (m) => ({ ...m, followups: ev.v }))
         } else if (ev.t === 'category') {
           category = ev.v
           patchConv(conv.id, (c) => ({ ...c, category: ev.v }))
@@ -282,6 +284,8 @@ export function AskHansRoot() {
   const dateFmt = new Intl.DateTimeFormat(lang === 'pt' ? 'pt-BR' : lang, { dateStyle: 'medium', timeStyle: 'short' })
   const atLimit = userCount(conversations) >= ASK_HANS_LIMITS.maxMessagesPerVisit
 
+  const lastMessageId = active?.messages[active.messages.length - 1]?.id
+
   const renderMessage = (convId: string, m: ChatMsg, readOnly = false) => {
     const mine = m.role === 'user'
     const question = !mine ? undefined : m.content
@@ -300,6 +304,23 @@ export function AskHansRoot() {
                   }}
                 >
                   <Markdown text={m.content} />
+                </div>
+              )}
+              {!readOnly && !m.pending && !m.error && !streaming && m.followups && m.followups.length > 0 && m.id === lastMessageId && (
+                <div role="group" aria-label={tx.followupsLabel} className="mt-2 flex flex-wrap gap-1.5 border-t border-border pt-2">
+                  {m.followups.map((q) => (
+                    <button
+                      key={q}
+                      type="button"
+                      onClick={() => {
+                        if (consent?.value === 'yes') logEvent({ type: 'followup_click', visitId: visitId.current })
+                        submit(q)
+                      }}
+                      className="rounded-full border border-primary/40 bg-secondary px-3 py-1 text-start text-[13px] font-medium leading-snug text-primary hover:border-primary hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                    >
+                      {q}
+                    </button>
+                  ))}
                 </div>
               )}
               {m.pending && m.status && <p className="text-[13px] italic text-muted-foreground" role="status">{m.status}</p>}

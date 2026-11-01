@@ -45,6 +45,7 @@ export const copy: AskCopy = {
     tooLong: (max: number) => `もう少し短くまとめてください。質問は最大${max}文字までです。`,
   },
   retry: '再試行',
+  followupsLabel: "次の質問の候補",
 
   panelLabelPrefix: 'トピック',
   panelLinksHeading: '関連ページ',

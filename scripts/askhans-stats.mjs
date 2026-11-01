@@ -62,6 +62,8 @@ for (const { d, h } of perDay) {
 console.log('  clicks by source and site section (text = link in the answer, panel = "Matching your question" card)')
 sum('click:').slice(0, 20).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
 
+console.log(`\nSuggested follow-up questions used: ${total.followup_click ?? 0} (of ${answers} answers${answers ? `, ${(((total.followup_click ?? 0) * 100) / answers).toFixed(1)} %` : ''})`)
+
 console.log('\nTop links clicked (category:link)')
 sum('link:').slice(0, 15).forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  ${k}`))
 

@@ -8,6 +8,7 @@ export type AskStreamEvent =
   | { t: 'text'; v: string }
   | { t: 'tool'; v: string }
   | { t: 'category'; v: string }
+  | { t: 'followups'; v: string[] }
   | { t: 'done'; category: string; tools: string[] }
   | { t: 'error'; code: AskErrorCode }
 

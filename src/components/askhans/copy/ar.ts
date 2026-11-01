@@ -46,6 +46,7 @@ export const copy: AskCopy = {
     tooLong: (max: number) => `يُرجى الاختصار: يجب ألا يزيد طول السؤال على ${max} حرفًا.`,
   },
   retry: 'إعادة المحاولة',
+  followupsLabel: "أسئلة متابعة مقترحة",
 
   panelLabelPrefix: 'الموضوع',
   panelLinksHeading: 'صفحات ذات صلة',

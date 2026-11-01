@@ -45,6 +45,7 @@ export const copy: AskCopy = {
     tooLong: (max: number) => `请精简您的提问：问题最多 ${max} 个字符。`,
   },
   retry: '重试',
+  followupsLabel: "建议的后续问题",
 
   panelLabelPrefix: '主题',
   panelLinksHeading: '相关页面',

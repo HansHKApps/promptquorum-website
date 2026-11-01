@@ -45,6 +45,7 @@ export const copy: AskCopy = {
     tooLong: (max: number) => `Sea más breve, por favor: las preguntas pueden tener como máximo ${max} caracteres.`,
   },
   retry: 'Reintentar',
+  followupsLabel: "Preguntas de seguimiento sugeridas",
 
   panelLabelPrefix: 'Tema',
   panelLinksHeading: 'Páginas relacionadas',
