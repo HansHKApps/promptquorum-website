@@ -5,7 +5,7 @@ export const ASK_HANS_LIMITS = {
   /** Max characters in one visitor message. */
   maxMessageChars: 500,
   /** Max visitor messages per visit (per anonymous visit ID, 24 h window). */
-  maxMessagesPerVisit: 20,
+  maxMessagesPerVisit: 50,
   /** Per-visitor rate limit: this many requests per window. */
   rateLimitRequests: 8,
   rateLimitWindow: '1 m' as const,
