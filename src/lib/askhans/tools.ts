@@ -61,9 +61,15 @@ const TOOLS: Record<string, ToolDef> = {
       searchPromptquorum({ ...a, lang: a.lang ?? c.lang, limit: a.limit ?? 5 }),
   },
   get_article: {
-    description: 'Full content of one PromptQuorum article by cluster + slug (taken from a search result URL).',
+    description: 'Full content of one PromptQuorum article by cluster + slug (taken from a search result URL). The result carries the article url: link it whenever you use its content.',
     schema: z.object({ cluster: z.string(), slug: z.string(), lang: LANG }),
-    run: (a: { cluster: string; slug: string; lang?: string }, c) => getArticle({ ...a, lang: a.lang ?? c.lang }),
+    run: (a: { cluster: string; slug: string; lang?: string }, c) => {
+      const res = getArticle({ ...a, lang: a.lang ?? c.lang })
+      // getArticle returns no URL; without one the model cannot link the article it just read from.
+      const prefix = res.lang === 'en' ? '' : `/${res.lang}`
+      const title = typeof res.article.title === 'string' ? res.article.title : res.slug
+      return { ...res, title, url: `https://www.promptquorum.com${prefix}/${res.cluster}/${res.slug}` }
+    },
   },
   list_clusters: {
     description: 'List every content section of PromptQuorum with a short description.',

@@ -20,6 +20,7 @@ import { redis } from '@/lib/redis'
 import { ASK_HANS_DEFAULT_MODEL, ASK_HANS_LIMITS } from '@/lib/askhans/config'
 import { buildSystemPrompt } from '@/lib/askhans/system-prompt'
 import { generateFollowups } from '@/lib/askhans/followups'
+import { missingSourcesMarkdown } from '@/lib/askhans/sources'
 import { bumpTotals } from '@/lib/askhans/totals'
 import { buildToolDefinitions, runTool, SET_CATEGORY_TOOL } from '@/lib/askhans/tools'
 
@@ -245,6 +246,13 @@ export async function POST(req: NextRequest): Promise<Response> {
           results.push({ type: 'tool_result', tool_use_id: use.id, content: outcome.content, ...(outcome.isError ? { is_error: true } : {}) })
         }
         messages.push({ role: 'user', content: results })
+      }
+      // Safety net: an answer built from PromptQuorum pages must show them, even if the model forgot to cite.
+      const lastQuestion = history[history.length - 1]?.content ?? ''
+      const sources = missingSourcesMarkdown(spoken, lastQuestion, pageTitles, lang)
+      if (sources) {
+        send({ t: 'text', v: sources })
+        spoken += sources
       }
       if (Object.keys(pageTitles).length) send({ t: 'titles', v: Object.fromEntries(Object.entries(pageTitles).slice(0, 60)) })
       // Suggested next questions: best effort, skipped when the answer already took long (function time limit).
