@@ -3,6 +3,7 @@ import sharp from 'sharp'
 import fs from 'fs'
 import path from 'path'
 import { splitBidiRuns } from '@/lib/hero/bidi-runs'
+import * as opentype from 'opentype.js'
 
 export const runtime = 'nodejs'
 
@@ -84,9 +85,22 @@ function LogoMark({ color, barWidth = 10, barHeight = 44 }: { color: string; bar
 
 // RTL text: one flex item per Arabic word, one intact LTR item per Latin/number
 // run (see src/lib/hero/bidi-runs.ts). The parent is a row-reverse flex.
-function renderRtlRuns(text: string) {
+// Satori sizes each Arabic word box from unshaped (isolated-form) glyph advances but draws the
+// shaped, connected word inside it, so boxes come out wider than the ink and the gaps between
+// words are uneven. Give every Arabic word an explicit width equal to its shaped width instead
+// (opentype.js applies the Arabic joining features).
+let beirutiBold: opentype.Font | undefined
+function rtlShapedEm(word: string): number {
+  beirutiBold ??= (() => {
+    const buf = fs.readFileSync(path.join(process.cwd(), 'public/fonts/Beiruti-Bold.ttf'))
+    return opentype.parse(buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength))
+  })()
+  const shaped = beirutiBold.stringToGlyphs(word).reduce((sum, g) => sum + g.advanceWidth!, 0)
+  return shaped / beirutiBold.unitsPerEm
+}
+function renderRtlRuns(text: string, fontPx: number) {
   return splitBidiRuns(text).map((r, i) => (
-    <div key={i} style={{ display: 'flex', direction: r.dir, whiteSpace: 'nowrap' }}>{r.text}</div>
+    <div key={i} style={{ display: 'flex', direction: r.dir, whiteSpace: 'nowrap', ...(r.dir === 'rtl' ? { width: `${Math.ceil(rtlShapedEm(r.text) * fontPx)}px`, flexShrink: 0 } : {}) }}>{r.text}</div>
   ))
 }
 
@@ -170,7 +184,7 @@ export async function POST(request: Request) {
             }}
           >
             {/* RTL: Satori picks the paragraph direction from the first strong char, so a title starting with a Latin brand name (e.g. "DeepSeek V4 مقابل …") renders with reversed word order. Word-per-flex-item + row-reverse (same trick as the highlight lines) keeps logical order; join Latin multi-word names with NBSP in the caller. */}
-            {isRtl ? renderRtlRuns(title) : title}
+            {isRtl ? renderRtlRuns(title, fontSize) : title}
           </div>
 
           {showFormula && (
@@ -200,9 +214,9 @@ export async function POST(request: Request) {
                   >
                     {i + 1}
                   </div>
-                  <div style={{ display: 'flex', flexDirection: rowDir, flexWrap: 'wrap', columnGap: isRtl ? '6px' : '0px', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+                  <div style={{ display: 'flex', flexDirection: rowDir, flexWrap: 'wrap', columnGap: isRtl ? '10px' : '0px', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
                     {/* Satori's bidi reorders multi-word Arabic text nodes inconsistently, so for RTL each word is its own flex item and row-reverse fixes the word order; shaping stays intact within a word. */}
-                    {isRtl ? renderRtlRuns(line) : line}
+                    {isRtl ? renderRtlRuns(line, 44) : line}
                   </div>
                 </div>
               ))}
