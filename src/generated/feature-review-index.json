@@ -1039,6 +1039,11 @@
     "urlSlug": "hillnote-review",
     "url": "/power-local-llm/hillnote-review"
   },
+  "picoclaw": {
+    "cluster": "power-local-llm",
+    "urlSlug": "picoclaw-review",
+    "url": "/power-local-llm/picoclaw-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",
