@@ -1193,6 +1193,7 @@ const HUB_THEMES: Array<{
       'llama-factory-review',
       'siyuan-review',
       'logseq-review',
+      'hillnote-review',
       'karakeep-review',
       'ai-file-sorter-review',
       'linkwarden-review',

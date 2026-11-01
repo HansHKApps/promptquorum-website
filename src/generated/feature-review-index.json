@@ -1034,6 +1034,11 @@
     "urlSlug": "reins-review",
     "url": "/power-local-llm/reins-review"
   },
+  "hillnote": {
+    "cluster": "power-local-llm",
+    "urlSlug": "hillnote-review",
+    "url": "/power-local-llm/hillnote-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

@@ -5871,6 +5871,159 @@
       ],
       "images": []
     },
+    "local-ai-workstations-strix-halo-vs-dgx-spark": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "olares-one-local-ai-review": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/olares-one-desk.webp",
+          "title": "Olares One on a desk (320 × 197 × 55 mm). Photo: Olares."
+        },
+        {
+          "url": "/images/olares-one-cooling.webp",
+          "title": "Internal cooling layout of the Olares One, a manufacturer illustration. Image: Olares."
+        }
+      ]
+    },
+    "nvidia-dgx-spark-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "amd-ryzen-ai-halo-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "framework-desktop-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hp-z2-mini-g1a-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "gmktec-evo-x2-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "minisforum-ms-s1-max-local-ai-workstation": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "local-llm-electricity-cost-balcony-solar-2026": {
       "dateModified": "2026-09-25",
       "lastFactChecked": null,
@@ -6258,6 +6411,24 @@
       ],
       "images": []
     },
+    "local-llm-app-alternatives": {
+      "dateModified": "2026-10-31",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-31",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "best-local-llm-creative-writing": {
       "dateModified": "2026-10-27",
       "lastFactChecked": null,
@@ -6623,7 +6794,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 9 categories of a local LLM stack: 338 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche."
+          "title": "The 9 categories of a local LLM stack: 339 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -11768,6 +11939,24 @@
       "dateModified": "2026-10-30",
       "lastFactChecked": null,
       "publishDate": "2026-10-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hillnote-review": {
+      "dateModified": "2026-11-01",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-01",
       "hasSections": true,
       "langs": [
         "en",
@@ -18144,7 +18333,7 @@
       "images": []
     },
     "balcony-solar-battery-storage-standard-2027": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-31",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
