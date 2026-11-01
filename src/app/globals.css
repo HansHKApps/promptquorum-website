@@ -294,3 +294,32 @@ html[dir="rtl"] samp {
     }
   }
 }
+
+/* Ask Hans header button: a shining gradient pill (same family as the MCP pill, but louder).
+   A light sweep runs every few seconds and the glow breathes; both stop for reduced-motion users. */
+.askhans-cta {
+  position: relative;
+  overflow: hidden;
+  animation: askhans-glow 2.8s ease-in-out infinite;
+}
+.askhans-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: askhans-sweep 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes askhans-sweep {
+  0%, 55% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+@keyframes askhans-glow {
+  0%, 100% { box-shadow: 0 0 12px hsl(280 80% 60% / 0.45), 0 2px 6px hsl(265 60% 30% / 0.25); }
+  50% { box-shadow: 0 0 24px hsl(300 85% 62% / 0.75), 0 2px 8px hsl(265 60% 30% / 0.3); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .askhans-cta,
+  .askhans-cta::after { animation: none; }
+}
