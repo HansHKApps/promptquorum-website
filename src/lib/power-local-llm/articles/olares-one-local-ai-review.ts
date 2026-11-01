@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "Vendor claim (email)": "Llama 3 70B (Q4_K_M): about 18–22 tokens/s sustained",
             "Olares product page": "No tokens-per-second figure published",
-            "PromptQuorum status": "Unverified. A Q4_K_M 70B model is larger than 24 GB of VRAM, so part runs from DDR5 system RAM; our estimate in the 70B guide is about 2–4 tokens/s"
+            "PromptQuorum status": "Unverified. Our estimate is lower: a Q4_K_M 70B model is larger than 24 GB of VRAM, so part runs from DDR5 system RAM (about 2–4 tokens/s in the 70B guide)"
           },
           {
             "Vendor claim (email)": "\"96 GB unified memory\" with the RTX 5090M",
@@ -242,18 +242,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Vendor claim (email)": "deepseek-v4.1-flash-10.17 multi-unit deployment at sub-millisecond local latency",
             "Olares product page": "No such model or latency figure published",
             "PromptQuorum status": "Unverified: we could not identify the model name, and sub-millisecond latency is not a meaningful figure for text generation"
-          },
-          {
-            "Vendor claim (email)": "$4,959 \"partner quote\" ($40 off $4,999)",
-            "Olares product page": "Not listed; shop price $4,999",
-            "PromptQuorum status": "The offer link Olares supplied lists $4,949 and is titled for another audience, so we do not link it (checked 2026-10-31)"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "Where to Buy & Current Price",
-        "content": "**Prices and promotions change — check the live shop page.** Price checked: 2026-10-31 on shop.olares.com (single configuration).",
+        "content": "**Prices and promotions change — [check the live shop page](https://shop.olares.com/products/olares-one).** Price checked: 2026-10-31 on shop.olares.com (single configuration).",
         "columns": [
           "Signal",
           "Guidance"
@@ -580,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "ادعاء الشركة المصنّعة (بالبريد)": "Llama 3 70B (Q4_K_M): نحو 18–22 tokens/s بشكل مستدام",
             "صفحة منتج Olares": "لا يوجد رقم منشور لعدد الرموز في الثانية",
-            "حالة PromptQuorum": "غير مُتحقَّق منه. نموذج 70B بصيغة Q4_K_M أكبر من 24 GB من VRAM، لذا يعمل جزء منه من ذاكرة النظام DDR5؛ وتقديرنا في دليل 70B نحو 2–4 tokens/s"
+            "حالة PromptQuorum": "غير مُتحقَّق منه. تقديرنا أقل: نموذج 70B بصيغة Q4_K_M أكبر من 24 GB من VRAM، لذا يعمل جزء منه من ذاكرة النظام DDR5 (نحو 2–4 tokens/s في دليل 70B)"
           },
           {
             "ادعاء الشركة المصنّعة (بالبريد)": "«96 GB unified memory» مع RTX 5090M",
@@ -596,18 +591,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "ادعاء الشركة المصنّعة (بالبريد)": "نشر متعدد الوحدات لـ deepseek-v4.1-flash-10.17 بزمن استجابة محلي أقل من ميلي ثانية",
             "صفحة منتج Olares": "لا يوجد نموذج كهذا ولا رقم لزمن الاستجابة منشور",
             "حالة PromptQuorum": "غير مُتحقَّق منه: لم نتمكن من تحديد اسم النموذج، كما أن زمن استجابة أقل من ميلي ثانية ليس رقمًا ذا معنى لتوليد النصوص"
-          },
-          {
-            "ادعاء الشركة المصنّعة (بالبريد)": "عرض «partner quote» بسعر $4,959 (خصم $40 من $4,999)",
-            "صفحة منتج Olares": "غير مُدرج؛ سعر المتجر $4,999",
-            "حالة PromptQuorum": "يعرض رابط العرض الذي زوّدتنا به Olares سعر $4,949 وعنوانه موجّه إلى جمهور آخر، لذلك لا نضع رابطه (تم التحقق في 2026-10-31)"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "أين تشتري والسعر الحالي",
-        "content": "**الأسعار والعروض تتغير — راجع صفحة المتجر المباشرة.** تاريخ التحقق من السعر: 2026-10-31 على shop.olares.com (تهيئة واحدة).",
+        "content": "**الأسعار والعروض تتغير — [راجع صفحة المتجر المباشرة](https://shop.olares.com/products/olares-one).** تاريخ التحقق من السعر: 2026-10-31 على shop.olares.com (تهيئة واحدة).",
         "columns": [
           "المؤشر",
           "الإرشاد"
@@ -934,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "Herstellerangabe (E-Mail)": "Llama 3 70B (Q4_K_M): etwa 18–22 Tokens/s dauerhaft",
             "Olares-Produktseite": "Kein Tokens-pro-Sekunde-Wert veröffentlicht",
-            "Status laut PromptQuorum": "Nicht verifiziert. Ein 70B-Modell in Q4_K_M ist größer als 24 GB VRAM, daher läuft ein Teil aus dem DDR5-Arbeitsspeicher; unsere Schätzung im 70B-Ratgeber liegt bei etwa 2–4 Tokens/s"
+            "Status laut PromptQuorum": "Nicht verifiziert. Unsere Schätzung liegt niedriger: Ein 70B-Modell in Q4_K_M ist größer als 24 GB VRAM, daher läuft ein Teil aus dem DDR5-Arbeitsspeicher (etwa 2–4 Tokens/s im 70B-Ratgeber)"
           },
           {
             "Herstellerangabe (E-Mail)": "„96 GB Unified Memory“ mit der RTX 5090M",
@@ -950,18 +940,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Herstellerangabe (E-Mail)": "deepseek-v4.1-flash-10.17 im Multi-Geräte-Einsatz mit lokaler Latenz unter einer Millisekunde",
             "Olares-Produktseite": "Weder ein solches Modell noch ein Latenzwert veröffentlicht",
             "Status laut PromptQuorum": "Nicht verifiziert: Wir konnten den Modellnamen nicht zuordnen, und eine Latenz unter einer Millisekunde ist für die Textgenerierung keine aussagekräftige Größe"
-          },
-          {
-            "Herstellerangabe (E-Mail)": "$4,959 „Partner-Angebot“ ($40 unter $4,999)",
-            "Olares-Produktseite": "Nicht aufgeführt; Shop-Preis $4,999",
-            "Status laut PromptQuorum": "Der von Olares gelieferte Angebotslink nennt $4,949 und ist für ein anderes Publikum betitelt, daher verlinken wir ihn nicht (geprüft am 2026-10-31)"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "Bezugsquellen & aktueller Preis",
-        "content": "**Preise und Aktionen ändern sich – prüfen Sie die aktuelle Shop-Seite.** Preis geprüft: 2026-10-31 auf shop.olares.com (einzige Konfiguration).",
+        "content": "**Preise und Aktionen ändern sich – [prüfen Sie die aktuelle Shop-Seite](https://shop.olares.com/products/olares-one).** Preis geprüft: 2026-10-31 auf shop.olares.com (einzige Konfiguration).",
         "columns": [
           "Hinweis",
           "Angabe"
@@ -1288,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "Afirmación del fabricante (correo)": "Llama 3 70B (Q4_K_M): unos 18–22 tokens/s sostenidos",
             "Página de producto de Olares": "No se publica ninguna cifra de tokens por segundo",
-            "Estado según PromptQuorum": "No verificado. Un modelo 70B en Q4_K_M es más grande que los 24 GB de VRAM, por lo que parte se ejecuta desde la RAM del sistema DDR5; nuestra estimación en la guía de 70B es de unos 2–4 tokens/s"
+            "Estado según PromptQuorum": "No verificado. Nuestra estimación es menor: un modelo 70B en Q4_K_M es más grande que los 24 GB de VRAM, por lo que parte se ejecuta desde la RAM del sistema DDR5 (unos 2–4 tokens/s en la guía de 70B)"
           },
           {
             "Afirmación del fabricante (correo)": "«96 GB de memoria unificada» con la RTX 5090M",
@@ -1304,18 +1289,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Afirmación del fabricante (correo)": "Despliegue multiunidad de deepseek-v4.1-flash-10.17 con latencia local inferior al milisegundo",
             "Página de producto de Olares": "No se publica ningún modelo ni cifra de latencia de ese tipo",
             "Estado según PromptQuorum": "No verificado: no pudimos identificar el nombre del modelo, y una latencia inferior al milisegundo no es una cifra con sentido para la generación de texto"
-          },
-          {
-            "Afirmación del fabricante (correo)": "«Partner quote» de $4,959 ($40 menos que $4,999)",
-            "Página de producto de Olares": "No figura; precio en la tienda $4,999",
-            "Estado según PromptQuorum": "El enlace de la oferta que facilitó Olares indica $4,949 y está titulado para otro público, por lo que no lo enlazamos (consultado el 2026-10-31)"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "Dónde comprar y precio actual",
-        "content": "**Los precios y las promociones cambian: consulta la página en vivo de la tienda.** Precio consultado el 2026-10-31 en shop.olares.com (configuración única).",
+        "content": "**Los precios y las promociones cambian: [consulta la página en vivo de la tienda](https://shop.olares.com/products/olares-one).** Precio consultado el 2026-10-31 en shop.olares.com (configuración única).",
         "columns": [
           "Indicador",
           "Orientación"
@@ -1642,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "Affirmation du fabricant (e-mail)": "Llama 3 70B (Q4_K_M) : environ 18–22 tokens/s en continu",
             "Page produit d'Olares": "Aucun chiffre en tokens par seconde publié",
-            "Statut PromptQuorum": "Non vérifié. Un modèle 70B en Q4_K_M dépasse les 24 GB de VRAM, une partie tourne donc depuis la RAM système DDR5 ; notre estimation dans le guide du 70B est d'environ 2–4 tokens/s"
+            "Statut PromptQuorum": "Non vérifié. Notre estimation est plus basse : un modèle 70B en Q4_K_M dépasse les 24 GB de VRAM, une partie tourne donc depuis la RAM système DDR5 (environ 2–4 tokens/s dans le guide du 70B)"
           },
           {
             "Affirmation du fabricant (e-mail)": "« 96 GB de mémoire unifiée » avec la RTX 5090M",
@@ -1658,18 +1638,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Affirmation du fabricant (e-mail)": "Déploiement multi-unités deepseek-v4.1-flash-10.17 avec une latence locale inférieure à la milliseconde",
             "Page produit d'Olares": "Aucun modèle ni chiffre de latence de ce type publié",
             "Statut PromptQuorum": "Non vérifié : nous n'avons pas pu identifier le nom du modèle, et une latence inférieure à la milliseconde n'est pas un chiffre pertinent pour la génération de texte"
-          },
-          {
-            "Affirmation du fabricant (e-mail)": "« Partner quote » à $4,959 ($40 de moins que $4,999)",
-            "Page produit d'Olares": "Non indiqué ; prix en boutique $4,999",
-            "Statut PromptQuorum": "Le lien d'offre fourni par Olares indique $4,949 et porte un titre destiné à un autre public ; nous ne le reprenons donc pas (vérifié le 2026-10-31)"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "Où acheter et prix actuel",
-        "content": "**Les prix et les promotions changent — consultez la page en direct de la boutique.** Prix vérifié : 2026-10-31 sur shop.olares.com (configuration unique).",
+        "content": "**Les prix et les promotions changent — [consultez la page en direct de la boutique](https://shop.olares.com/products/olares-one).** Prix vérifié : 2026-10-31 sur shop.olares.com (configuration unique).",
         "columns": [
           "Indicateur",
           "Précisions"
@@ -1996,7 +1971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "ベンダー主張（メール）": "Llama 3 70B（Q4_K_M）：継続して約18〜22 tokens/s",
             "Olares製品ページ": "tokens/sの数値は公開されていない",
-            "PromptQuorumの判定": "未検証。Q4_K_Mの70Bモデルは24 GBのVRAMより大きく、一部はDDR5のシステムメモリから動作する。70Bガイドでの私たちの推定は約2〜4 tokens/s"
+            "PromptQuorumの判定": "未検証。私たちの推定はこれより低い：Q4_K_Mの70Bモデルは24 GBのVRAMより大きく、一部はDDR5のシステムメモリから動作する（70Bガイドでは約2〜4 tokens/s）"
           },
           {
             "ベンダー主張（メール）": "RTX 5090Mと「96 GBのユニファイドメモリ」",
@@ -2012,18 +1987,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "ベンダー主張（メール）": "deepseek-v4.1-flash-10.17のマルチユニット展開、ミリ秒未満のローカルレイテンシ",
             "Olares製品ページ": "そのようなモデルやレイテンシの数値は公開されていない",
             "PromptQuorumの判定": "未検証：モデル名を特定できず、ミリ秒未満のレイテンシはテキスト生成において意味のある数値ではない"
-          },
-          {
-            "ベンダー主張（メール）": "$4,959の「partner quote」（$4,999から$40引き）",
-            "Olares製品ページ": "掲載なし。ショップ価格は$4,999",
-            "PromptQuorumの判定": "Olaresが提示したオファーのリンクは$4,949と表示され、別の対象者向けのタイトルが付いているため、リンクは掲載しない（2026-10-31確認）"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "購入先と現在の価格",
-        "content": "**価格やキャンペーンは変わります。最新のショップページをご確認ください。** 価格確認日：2026-10-31、shop.olares.com（単一構成）。",
+        "content": "**価格やキャンペーンは変わります。[最新のショップページをご確認ください](https://shop.olares.com/products/olares-one)。** 価格確認日：2026-10-31、shop.olares.com（単一構成）。",
         "columns": [
           "項目",
           "ガイダンス"
@@ -2350,7 +2320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "공급사 주장 (이메일)": "Llama 3 70B(Q4_K_M): 지속적으로 약 18–22 tokens/s",
             "Olares 제품 페이지": "초당 토큰 수 수치 미공개",
-            "PromptQuorum 판단": "검증되지 않음. Q4_K_M 70B 모델은 24 GB VRAM보다 크기 때문에 일부가 DDR5 시스템 RAM에서 실행됩니다. 70B 가이드의 저희 추정치는 약 2–4 tokens/s입니다"
+            "PromptQuorum 판단": "검증되지 않음. 저희 추정치는 더 낮습니다. Q4_K_M 70B 모델은 24 GB VRAM보다 크기 때문에 일부가 DDR5 시스템 RAM에서 실행됩니다(70B 가이드에서 약 2–4 tokens/s)"
           },
           {
             "공급사 주장 (이메일)": "RTX 5090M과 함께 \"96 GB 통합 메모리\"",
@@ -2366,18 +2336,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "공급사 주장 (이메일)": "deepseek-v4.1-flash-10.17 다중 유닛 배포, 서브밀리초 로컬 지연 시간",
             "Olares 제품 페이지": "해당 모델이나 지연 시간 수치는 공개되지 않음",
             "PromptQuorum 판단": "검증되지 않음: 모델 이름을 확인할 수 없었고, 서브밀리초 지연 시간은 텍스트 생성에서 의미 있는 수치가 아닙니다"
-          },
-          {
-            "공급사 주장 (이메일)": "$4,959 \"partner quote\"($4,999에서 $40 할인)",
-            "Olares 제품 페이지": "게재되지 않음, 쇼핑몰 가격 $4,999",
-            "PromptQuorum 판단": "Olares가 제공한 제안 링크에는 $4,949가 표시되어 있고 다른 대상을 위한 제목이 붙어 있어 링크하지 않습니다(2026-10-31 확인)"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "구매처 및 현재 가격",
-        "content": "**가격과 프로모션은 변경될 수 있으니 실시간 쇼핑몰 페이지를 확인하세요.** 가격 확인: 2026-10-31, shop.olares.com(단일 구성).",
+        "content": "**가격과 프로모션은 변경될 수 있으니 [실시간 쇼핑몰 페이지를 확인하세요](https://shop.olares.com/products/olares-one).** 가격 확인: 2026-10-31, shop.olares.com(단일 구성).",
         "columns": [
           "항목",
           "안내"
@@ -2704,7 +2669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "Declaração do fabricante (e-mail)": "Llama 3 70B (Q4_K_M): cerca de 18–22 tokens/s sustentados",
             "Página do produto Olares": "Nenhum valor de tokens por segundo publicado",
-            "Status no PromptQuorum": "Não verificado. Um modelo 70B em Q4_K_M é maior que os 24 GB de VRAM, então parte roda a partir da RAM do sistema DDR5; nossa estimativa no guia de 70B é de cerca de 2–4 tokens/s"
+            "Status no PromptQuorum": "Não verificado. Nossa estimativa é menor: um modelo 70B em Q4_K_M é maior que os 24 GB de VRAM, então parte roda a partir da RAM do sistema DDR5 (cerca de 2–4 tokens/s no guia de 70B)"
           },
           {
             "Declaração do fabricante (e-mail)": "\"96 GB de memória unificada\" com a RTX 5090M",
@@ -2720,18 +2685,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Declaração do fabricante (e-mail)": "Implantação com várias unidades de deepseek-v4.1-flash-10.17 com latência local abaixo de um milissegundo",
             "Página do produto Olares": "Nenhum modelo nem valor de latência desse tipo publicado",
             "Status no PromptQuorum": "Não verificado: não conseguimos identificar o nome do modelo, e latência abaixo de um milissegundo não é um valor significativo para geração de texto"
-          },
-          {
-            "Declaração do fabricante (e-mail)": "\"Cotação de parceiro\" de $4,959 ($40 de desconto sobre $4,999)",
-            "Página do produto Olares": "Não listada; preço na loja: $4,999",
-            "Status no PromptQuorum": "O link da oferta fornecido pela Olares lista $4,949 e tem título voltado a outro público, por isso não o incluímos como link (verificado em 2026-10-31)"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "Onde comprar e preço atual",
-        "content": "**Preços e promoções mudam — confira a página ao vivo da loja.** Preço verificado: 2026-10-31 em shop.olares.com (configuração única).",
+        "content": "**Preços e promoções mudam — [confira a página ao vivo da loja](https://shop.olares.com/products/olares-one).** Preço verificado: 2026-10-31 em shop.olares.com (configuração única).",
         "columns": [
           "Sinal",
           "Orientação"
@@ -3058,7 +3018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "厂商声明（邮件）": "Llama 3 70B（Q4_K_M）：持续约 18–22 tokens/s",
             "Olares 产品页": "未公布每秒 token 数",
-            "PromptQuorum 状态": "未经验证。Q4_K_M 的 70B 模型大于 24 GB 显存，因此一部分要从 DDR5 系统内存运行；我们在 70B 指南中的估算约为 2–4 tokens/s"
+            "PromptQuorum 状态": "未经验证。我们的估算更低：Q4_K_M 的 70B 模型大于 24 GB 显存，因此一部分要从 DDR5 系统内存运行（70B 指南中约为 2–4 tokens/s）"
           },
           {
             "厂商声明（邮件）": "RTX 5090M 搭配“96 GB 统一内存”",
@@ -3074,18 +3034,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "厂商声明（邮件）": "deepseek-v4.1-flash-10.17 多机部署，本地延迟低于毫秒级",
             "Olares 产品页": "未公布此类模型或延迟数据",
             "PromptQuorum 状态": "未经验证：我们无法确认该模型名称，而且亚毫秒延迟对文本生成来说不是有意义的指标"
-          },
-          {
-            "厂商声明（邮件）": "$4,959 的“partner quote”（比 $4,999 便宜 $40）",
-            "Olares 产品页": "未列出；商店价 $4,999",
-            "PromptQuorum 状态": "Olares 提供的优惠链接标价为 $4,949，且标题面向其他受众，因此我们不放该链接（核对日期 2026-10-31）"
           }
         ]
       },
       "whereToBuy": {
         "id": "where-to-buy",
         "title": "购买渠道与当前价格",
-        "content": "**价格和促销会变动——请查看商店页面的实时信息。** 价格核对：2026-10-31，shop.olares.com（单一配置）。",
+        "content": "**价格和促销会变动——[请查看商店页面的实时信息](https://shop.olares.com/products/olares-one)。** 价格核对：2026-10-31，shop.olares.com（单一配置）。",
         "columns": [
           "项目",
           "说明"
