@@ -235,16 +235,6 @@ function PushPromptBannerInner() {
 
       clearInterval(timer)
       setVisible(true)
-      try {
-        window.umami?.track('push_prompt_shown', {
-          visitor_type: visitorTypeRef.current,
-          time_on_site_min: Math.round(elapsed / 60000),
-          source_page: pathname,
-          lang,
-        })
-      } catch {
-        /* silent */
-      }
     }, HEARTBEAT_MS)
 
     return () => {
@@ -252,7 +242,6 @@ function PushPromptBannerInner() {
       releasePromptSlot(SLOT_ID)
     }
     // Armed once per mount — pathname/lang are only read inside the heartbeat.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const dismiss = useCallback(() => {
@@ -263,16 +252,7 @@ function PushPromptBannerInner() {
     }
     setVisible(false)
     releasePromptSlot(SLOT_ID)
-    try {
-      window.umami?.track('push_prompt_dismiss', {
-        visitor_type: visitorTypeRef.current,
-        source_page: pathname,
-        lang,
-      })
-    } catch {
-      /* silent */
-    }
-  }, [pathname, lang])
+  }, [])
 
   const allow = useCallback(() => {
     try {
