@@ -17,7 +17,7 @@ interface Props {
   /** links taken from the conversation's answers; empty = show the topic's placeholder links */
   related: RelatedLink[]
   onLinkClick: (categoryKey: string, link: AskHansLink) => void
-  onRelatedClick: () => void
+  onRelatedClick: (href: string) => void
   /** hides the whole panel (the chat gets the full width / height) */
   onHide: () => void
   /** compact horizontal strip for phones */
@@ -47,10 +47,10 @@ function LinkCard({ link, categoryKey, onLinkClick, compact }: { link: AskHansLi
   )
 }
 
-function RelatedCard({ link, onClick, compact }: { link: RelatedLink; onClick: () => void; compact?: boolean }) {
+function RelatedCard({ link, onClick, compact }: { link: RelatedLink; onClick: (href: string) => void; compact?: boolean }) {
   const old = !link.current
   return (
-    <Link href={link.href} onClick={onClick} className={`${CARD} ${compact ? 'w-56 flex-shrink-0 p-2' : 'p-2.5'} ${old ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : ''}`}>
+    <Link href={link.href} onClick={() => onClick(link.href)} className={`${CARD} ${compact ? 'w-56 flex-shrink-0 p-2' : 'p-2.5'} ${old ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : ''}`}>
       <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md bg-secondary text-primary" aria-hidden="true">
         <AskIcon name="Link2" className="h-4 w-4" />
       </span>

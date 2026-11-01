@@ -14,7 +14,7 @@ import { useAskCopy, useAskLang } from './copy'
 import { FeedbackBar } from './FeedbackBar'
 import { AskIcon } from './icons'
 import { Markdown } from './markdown'
-import { relatedLinks } from './links'
+import { clickSection, relatedLinks } from './links'
 import { MarketingPanel } from './MarketingPanel'
 import { clearConsent, getVisitId, loadConsent, loadConversations, loadUi, saveConsent, saveConversations, saveUi, uid } from './storage'
 import type { AskErrorCode, ChatMsg, ConsentRecord, Conversation, Rect, UiState } from './types'
@@ -59,6 +59,8 @@ export function AskHansRoot() {
   const [showPanel, setShowPanel] = useState(true)
   const [showHistory, setShowHistory] = useState(true)
   const visitId = useRef('')
+  /** answers that already produced a counted click (each answer counts once in the click-through rate) */
+  const clickedAnswers = useRef(new Set<string>())
   const logoRef = useRef<HTMLButtonElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -240,6 +242,21 @@ export function AskHansRoot() {
     closeWindow(false) // chat state is already saved; the visitor reopens it with the logo
   }
 
+  // Click-through metric: anonymous counters only (source + coarse site section + "first click on this answer").
+  const trackAnswerClick = (answerId: string | undefined, href: string, source: 'text' | 'panel') => {
+    if (consent?.value !== 'yes') return
+    const section = clickSection(href)
+    const first = section !== 'external' && !!answerId && !clickedAnswers.current.has(answerId)
+    if (first && answerId) clickedAnswers.current.add(answerId)
+    logEvent({ type: 'answer_click', visitId: visitId.current, source, section, firstForAnswer: first })
+  }
+
+  const onRelatedClick = (href: string) => {
+    const answer = [...(active?.messages ?? [])].reverse().find((m) => m.role === 'assistant' && !m.error && m.content.includes(href))
+    trackAnswerClick(answer?.id, href, 'panel')
+    closeWindow(false)
+  }
+
   const retry = (convId: string, msgId: string) => {
     const conv = conversations.find((c) => c.id === convId)
     if (!conv || streaming) return
@@ -275,7 +292,16 @@ export function AskHansRoot() {
             <p className="whitespace-pre-wrap break-words">{question}</p>
           ) : (
             <>
-              {m.content && <Markdown text={m.content} />}
+              {m.content && (
+                <div
+                  onClick={(e) => {
+                    const a = (e.target as HTMLElement).closest('a')
+                    if (a) trackAnswerClick(m.id, a.getAttribute('href') ?? '', 'text')
+                  }}
+                >
+                  <Markdown text={m.content} />
+                </div>
+              )}
               {m.pending && m.status && <p className="text-[13px] italic text-muted-foreground" role="status">{m.status}</p>}
               {m.error && (
                 <div className={m.content ? 'mt-2 border-t border-border pt-2' : ''}>
@@ -409,7 +435,7 @@ export function AskHansRoot() {
 
               {active && active.messages.some((m) => m.role === 'assistant' && m.content && !m.pending && !m.error) && <FeedbackBar key={active.id} />}
 
-              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={() => closeWindow(false)} onHide={() => setShowPanel(false)} />}
+              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
 
               <form
                 className="flex-shrink-0 border-t border-border bg-white p-2.5"
@@ -460,7 +486,7 @@ export function AskHansRoot() {
               </form>
             </div>
 
-            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={() => closeWindow(false)} onHide={() => setShowPanel(false)} />}
+            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} />}
           </div>
         </AskHansWindow>
       )}

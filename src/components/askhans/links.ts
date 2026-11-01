@@ -43,3 +43,19 @@ export function relatedLinks(messages: ChatMsg[], max = 6): RelatedLink[] {
   }
   return out
 }
+
+const LOCALE_PREFIX = /^(de|fr|ja|zh|es|pt|ar|ko)$/
+
+/** Coarse site section of a clicked link, e.g. 'power-local-llm' or 'external'. Never the full URL. */
+export function clickSection(href: string): string {
+  try {
+    const u = new URL(href, 'https://www.promptquorum.com')
+    if (!/^(www\.)?promptquorum\.com$/.test(u.hostname)) return 'external'
+    const parts = u.pathname.split('/').filter(Boolean)
+    if (parts[0] && LOCALE_PREFIX.test(parts[0])) parts.shift()
+    const s = parts[0] ?? 'home'
+    return /^[a-z0-9-]{1,40}$/.test(s) ? s : 'other'
+  } catch {
+    return 'other'
+  }
+}
