@@ -103,6 +103,7 @@ import { article as a_reins_review } from './articles/reins-review'
 import { article as a_hillnote_review } from './articles/hillnote-review'
 import { article as a_llm_vision_review } from './articles/llm-vision-review'
 import { article as a_picoclaw_review } from './articles/picoclaw-review'
+import { article as a_scrypted_review } from './articles/scrypted-review'
 import { article as a_lyonesse_review } from './articles/lyonesse-review'
 import { article as a_open_llm_vtuber_review } from './articles/open-llm-vtuber-review'
 import { article as a_presenton_review } from './articles/presenton-review'
@@ -797,6 +798,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'hillnote-review':                               a_hillnote_review,
   'llm-vision-review':                             a_llm_vision_review,
   'picoclaw-review':                               a_picoclaw_review,
+  'scrypted-review':                               a_scrypted_review,
   'lyonesse-review':                               a_lyonesse_review,
   'open-llm-vtuber-review':                        a_open_llm_vtuber_review,
   'presenton-review':                              a_presenton_review,

@@ -1049,6 +1049,11 @@
     "urlSlug": "picoclaw-review",
     "url": "/power-local-llm/picoclaw-review"
   },
+  "scrypted": {
+    "cluster": "power-local-llm",
+    "urlSlug": "scrypted-review",
+    "url": "/power-local-llm/scrypted-review"
+  },
   "lyonesse": {
     "cluster": "power-local-llm",
     "urlSlug": "lyonesse-review",

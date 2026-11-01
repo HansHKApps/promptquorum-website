@@ -1227,6 +1227,7 @@ const HUB_THEMES: Array<{
       'subtitle-edit-review',
       'home-assistant-assist-review',
       'llm-vision-review',
+      'scrypted-review',
       'best-local-tts-mac',
       'best-local-tts-nvidia-gpu',
       'best-local-tts-raspberry-pi',
