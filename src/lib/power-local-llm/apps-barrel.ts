@@ -274,6 +274,7 @@ import { app as app_murmur } from './apps/murmur'
 import { app as app_fullmoon } from './apps/fullmoon'
 import { app as app_reins } from './apps/reins'
 import { app as app_hillnote } from './apps/hillnote'
+import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
@@ -562,6 +563,7 @@ export const localAiApps: ToolRecord[] = [
   app_fullmoon,
   app_reins,
   app_hillnote,
+  app_llm_vision,
   app_picoclaw,
   app_lyonesse,
   app_open_llm_vtuber,

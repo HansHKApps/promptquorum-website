@@ -1224,6 +1224,7 @@ const HUB_THEMES: Array<{
       'murmur-review',
       'subtitle-edit-review',
       'home-assistant-assist-review',
+      'llm-vision-review',
       'best-local-tts-mac',
       'best-local-tts-nvidia-gpu',
       'best-local-tts-raspberry-pi',

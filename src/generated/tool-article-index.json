@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llm-vision-review",
+        "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
+        "url": "/power-local-llm/llm-vision-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "picoclaw-review",
         "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
         "url": "/power-local-llm/picoclaw-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/goose-review",
         "dateModified": "2026-10-30",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-30",
-        "tier": "about"
       }
     ],
-    "totalCount": 337,
+    "totalCount": 338,
     "capped": true
   },
   "llama.cpp": {
@@ -269,6 +269,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llm-vision-review",
+        "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
+        "url": "/power-local-llm/llm-vision-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "litellm-review",
         "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
         "url": "/power-local-llm/litellm-review",
@@ -330,17 +338,9 @@
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "bodega-one-code-review-2026",
-        "title": "Bodega One Code Review: A Local-First BYOLLM Coding IDE",
-        "url": "/power-local-llm/bodega-one-code-review",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "TensorRT-LLM": {
@@ -2080,6 +2080,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "llm-vision-review",
+        "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
+        "url": "/power-local-llm/llm-vision-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-frontends",
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
@@ -2142,17 +2150,9 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dreamserver-review",
-        "title": "DreamServer Review: One-Command Local AI Server Stack",
-        "url": "/power-local-llm/dreamserver-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 57,
+    "totalCount": 58,
     "capped": true
   },
   "LibreChat": {
@@ -10202,6 +10202,20 @@
         "slug": "hillnote-review",
         "title": "Hillnote Review: Local-First Markdown Notes With On-Device AI",
         "url": "/power-local-llm/hillnote-review",
+        "dateModified": "2026-11-01",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "LLM Vision": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "llm-vision-review",
+        "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
+        "url": "/power-local-llm/llm-vision-review",
         "dateModified": "2026-11-01",
         "tier": "about"
       }
