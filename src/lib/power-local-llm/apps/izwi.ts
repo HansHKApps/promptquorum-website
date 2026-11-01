@@ -12,6 +12,7 @@ export const app: ToolRecord = {
   name: 'Izwi',
   categories: ['speech-to-text', 'text-to-speech', 'voice-cloning'],
   interfaces: ['desktop', 'web', 'cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/izwi-ai/izwi
   locality: 'local',
   platforms: ['mac', 'win', 'linux'], // macOS (Metal-accelerated on Apple Silicon, CPU fallback), Linux and Windows builds are CPU-only by default, CUDA via Docker/source — verified 2026-09-18
   worksWith: ['Whisper', 'Qwen3-TTS', 'Kokoro', 'Parakeet'],

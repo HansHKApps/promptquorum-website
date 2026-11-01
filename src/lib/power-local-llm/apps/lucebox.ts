@@ -13,6 +13,7 @@ export const app: ToolRecord = {
   name: 'Lucebox',
   categories: ['inference-engines'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://raw.githubusercontent.com/Luce-Org/lucebox/main/README.md
   locality: 'local',
   platforms: ['linux'],
   worksWith: ['Claude Code', 'Codex', 'OpenCode', 'Open WebUI', 'GGUF'],

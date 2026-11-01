@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Whisper.cpp',
   categories: ['speech-to-text'],
   interfaces: ['library', 'cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/ggerganov/whisper.cpp
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'text-generation-webui',
   categories: ['inference-engines'],
   interfaces: ['web', 'cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/oobabooga/text-generation-webui
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,

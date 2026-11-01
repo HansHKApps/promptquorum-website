@@ -93,6 +93,8 @@ const TOOLS: Record<string, ToolDef> = {
       installEffort: z.enum(['installer', 'one-command', 'terminal-setup', 'hosted']).optional(),
       locality: z.enum(['local', 'hybrid', 'cloud']).optional(),
       mcpSupport: z.boolean().optional(),
+      exposesApi: z.boolean().optional(),
+      runsOn: z.enum(['selfhosted', 'rpi']).optional(),
       license: z.string().optional(),
       sortBy: z.enum(['stars', 'recent', 'easiest']).optional(),
       limit: z.number().int().min(1).max(8).optional(),

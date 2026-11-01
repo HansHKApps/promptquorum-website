@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Osaurus',
   categories: ['general-chat-clients', 'runtimes-managers'],
   interfaces: ['desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://raw.githubusercontent.com/osaurus-ai/osaurus/main/README.md
   locality: 'local',
   platforms: ['mac'],
   worksWith: ['Ollama', 'LM Studio'],

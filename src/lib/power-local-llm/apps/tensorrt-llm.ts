@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'TensorRT-LLM',
   categories: ['inference-engines'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://raw.githubusercontent.com/NVIDIA/TensorRT-LLM/main/docs/source/commands/trtllm-serve/trtllm-serve.rst
   locality: 'local',
   platforms: ['win', 'linux'],
   worksWith: null,

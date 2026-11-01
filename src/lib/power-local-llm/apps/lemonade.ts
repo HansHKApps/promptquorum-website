@@ -9,6 +9,7 @@ export const app: ToolRecord = {
   name: 'Lemonade',
   categories: ['runtimes-managers'],
   interfaces: ['cli', 'desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://lemonade-server.ai
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,

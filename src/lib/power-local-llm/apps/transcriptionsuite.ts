@@ -8,6 +8,7 @@ export const app: ToolRecord = {
   name: 'TranscriptionSuite',
   categories: ['speech-to-text', 'meeting-notes'],
   interfaces: ['desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://transcriptionsuite.app
   locality: 'local', // site states "100% Local · 100% Private"; transcription runs on-device. Optional AI Assistant can point at cloud OpenAI-compatible providers (Groq, OpenRouter) or local ones (LM Studio, Ollama) — verified 2026-10-17
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Whisper', 'Parakeet', 'Canary', 'SenseVoice', 'whisper.cpp', 'MLX', 'Ollama', 'LM Studio', 'Docker', 'Tailscale'],

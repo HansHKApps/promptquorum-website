@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'MLX-LM',
   categories: ['inference-engines'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://raw.githubusercontent.com/ml-explore/mlx-lm/main/mlx_lm/SERVER.md
   locality: 'local',
   platforms: ['mac'],
   worksWith: null,

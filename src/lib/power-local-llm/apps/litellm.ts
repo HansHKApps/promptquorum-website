@@ -9,6 +9,7 @@ export const app: ToolRecord = {
   name: 'litellm',
   categories: ['routers-gateways'],
   interfaces: ['cli', 'web'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://docs.litellm.ai/docs/simple_proxy
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'OpenAI API', 'Anthropic API'],

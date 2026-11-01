@@ -11,6 +11,7 @@ export const app: ToolRecord = {
   name: 'ClawRouter',
   categories: ['routers-gateways'],
   interfaces: ['cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/BlockRunAI/ClawRouter
   locality: 'hybrid', // 100% local routing decisions, but forwards requests to external/cloud model providers — verified 2026-09-18
   platforms: ['mac', 'win', 'linux'], // distributed as an npx/Node package, cross-platform — verified 2026-09-18
   worksWith: ['OpenAI API', 'Anthropic API', 'Open-weight models'],

@@ -9,6 +9,7 @@ export const app: ToolRecord = {
   name: 'MLX-Audio',
   categories: ['text-to-speech', 'speech-to-text'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://raw.githubusercontent.com/Blaizzy/mlx-audio/main/README.md
   locality: 'local',
   platforms: ['mac'], // README: "Apple Silicon Mac (M1/M2/M3/M4)", verified 2026-10-23
   worksWith: ['OpenAI API'], // README: OpenAI-compatible /v1/audio/speech and /v1/audio/transcriptions endpoints, verified 2026-10-23

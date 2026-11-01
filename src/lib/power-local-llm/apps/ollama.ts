@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Ollama',
   categories: ['inference-engines', 'runtimes-managers'],
   interfaces: ['cli', 'desktop'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://docs.ollama.com/api/openai-compatibility
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

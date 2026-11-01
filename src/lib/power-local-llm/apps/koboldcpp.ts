@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'KoboldCpp',
   categories: ['inference-engines', 'general-chat-clients'],
   interfaces: ['cli', 'web'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/LostRuins/koboldcpp
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,

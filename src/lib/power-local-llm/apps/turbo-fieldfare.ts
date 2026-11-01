@@ -11,6 +11,7 @@ export const app: ToolRecord = {
   name: 'TurboFieldfare',
   categories: ['inference-engines'],
   interfaces: ['desktop', 'cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/drumih/turbo-fieldfare
   locality: 'local',
   platforms: ['mac'], // Swift/Metal runtime built specifically for Apple Silicon M-series — verified 2026-09-18
   worksWith: ['Gemma'],

@@ -219,6 +219,8 @@ const handler = createMcpHandler(
           installEffort: z.enum(['installer', 'one-command', 'terminal-setup', 'hosted']).optional().describe('Only apps whose verified easiest install path is this. installer = download and run; one-command = single terminal command; terminal-setup = multi-step terminal; hosted = nothing to install.'),
           locality: z.enum(['local', 'hybrid', 'cloud']).optional().describe('local = runs fully on the user\'s machine (offline-capable); hybrid = local plus cloud options; cloud = hosted.'),
           mcpSupport: z.boolean().optional().describe('true = only apps with documented MCP support'),
+          exposesApi: z.boolean().optional().describe('true = only apps documented to serve an OpenAI- or Ollama-compatible API that other apps can call. Apps not yet verified are excluded.'),
+          runsOn: z.enum(['selfhosted', 'rpi']).optional().describe('selfhosted = documented Docker / self-hosted server deployment; rpi = documented to run on a Raspberry Pi or small ARM board. Apps not yet researched are excluded.'),
           license: z.string().optional().describe('Case-insensitive substring of the license string, e.g. "MIT", "Apache", "GPL"'),
           sortBy: z.enum(['stars', 'recent', 'easiest']).optional().describe('Ordering when no free-text query is given: stars (default; reviewed apps first), recent (newest listing first), easiest (simplest install first).'),
           limit: z.number().int().min(1).max(15).optional().describe('Max results per page, default 5'),

@@ -12,6 +12,7 @@ export const app: ToolRecord = {
   name: 'exo',
   categories: ['distributed-inference', 'inference-engines'],
   interfaces: ['cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/exo-explore/exo
   locality: 'local',
   platforms: ['mac', 'linux'],
   worksWith: null,

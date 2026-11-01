@@ -18,6 +18,8 @@ import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Lang } from '@/lib/i18n/constants'
 import { powerLLMContent } from './content'
+import { localAiApps } from './apps-barrel'
+import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL_I18N, CATEGORY_SUB_GROUP } from './apps/categories'
 import { POWER_LLM_BRIEFS } from './briefs'
 import { powerLLMArticlePath } from './metadata-helpers'
 import { isPowerLLMArticlePublished } from './published'
@@ -75,6 +77,8 @@ interface HubTemplateCopy {
     unit: string
     tileSummary: Record<(typeof THEME_IDS)[number], string>
   }
+  /** Strip under Explore linking the software categories. `{groups}` = number of groups. */
+  categories: { title: string; intro: string; unit: string }
   /** Four labels for the first four key takeaways; the fifth becomes the section intro line. */
   why: { title: string; labels: [string, string, string, string] }
   latest: { title: string; intro: string; more: string; updated: string; published: string }
@@ -126,6 +130,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': 'Access control, governance and legal topics for companies.',
       },
     },
+    categories: { title: 'Browse the directory by category', intro: 'The articles above are grouped by topic. The directory sorts software into {groups} categories. Every category is listed, including those that have no tools yet.', unit: 'tools' },
     why: { title: 'Why run LLM software locally', labels: ['Ecosystem', 'Entry points', 'Biggest shift', 'Mobile and edge'] },
     latest: { title: 'Latest', intro: 'The newest and most recently changed pages.', more: 'See all topics', updated: 'Updated', published: 'Published' },
     deeper: {
@@ -186,6 +191,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': 'Zugriffskontrolle, Governance und rechtliche Themen für Unternehmen.',
       },
     },
+    categories: { title: 'Verzeichnis nach Kategorie durchsuchen', intro: 'Die Artikel oben sind nach Themen gruppiert. Das Verzeichnis ordnet Software in {groups} Kategorien ein. Jede Kategorie ist aufgeführt, auch wenn noch keine Tools darin sind.', unit: 'Tools' },
     why: { title: 'Warum LLM-Software lokal betreiben', labels: ['Ökosystem', 'Einstiegspunkte', 'Größter Wandel', 'Mobile und Edge'] },
     latest: { title: 'Neueste', intro: 'Die neuesten und zuletzt geänderten Seiten.', more: 'Alle Themen ansehen', updated: 'Aktualisiert', published: 'Veröffentlicht' },
     deeper: {
@@ -246,6 +252,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': 'Contrôle d\'accès, gouvernance et sujets juridiques pour les entreprises.',
       },
     },
+    categories: { title: "Parcourir l'annuaire par catégorie", intro: "Les articles ci-dessus sont regroupés par sujet. L'annuaire classe les logiciels en {groups} catégories. Toutes sont listées, y compris celles qui ne contiennent pas encore d'outils.", unit: 'outils' },
     why: { title: 'Pourquoi exécuter des LLM en local', labels: ['Écosystème', "Points d'entrée", 'Le plus grand changement', 'Mobile et edge'] },
     latest: { title: 'Récents', intro: 'Les pages les plus récentes et les dernières modifiées.', more: 'Voir tous les sujets', updated: 'Mis à jour', published: 'Publié' },
     deeper: {
@@ -306,6 +313,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': '企業向けのアクセス管理、ガバナンス、法務のテーマ。',
       },
     },
+    categories: { title: 'カテゴリからディレクトリを探す', intro: '上の記事はテーマ別にまとめています。ディレクトリではソフトウェアを{groups}のカテゴリに分類しており、まだツールがないカテゴリも含めてすべて表示しています。', unit: '件' },
     why: { title: 'LLMソフトウェアをローカルで動かす理由', labels: ['エコシステム', '入り口', '最大の変化', 'モバイルとエッジ'] },
     latest: { title: '新着', intro: '最も新しい、または最近変更されたページ。', more: 'すべてのトピックを見る', updated: '更新', published: '公開' },
     deeper: {
@@ -366,6 +374,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': '面向企业的访问控制、治理与法律主题。',
       },
     },
+    categories: { title: '按类别浏览目录', intro: '上面的文章按主题分组。目录把软件分为{groups}个类别，即使某个类别暂时还没有工具，也会列出。', unit: '款工具' },
     why: { title: '为什么在本地运行 LLM 软件', labels: ['生态', '入门选择', '最大转变', '移动与边缘'] },
     latest: { title: '最新', intro: '最新发布和最近有改动的页面。', more: '查看全部主题', updated: '更新于', published: '发布于' },
     deeper: {
@@ -426,6 +435,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': 'Control de acceso, gobernanza y temas legales para empresas.',
       },
     },
+    categories: { title: 'Explora el directorio por categoría', intro: 'Los artículos de arriba se agrupan por tema. El directorio clasifica el software en {groups} categorías. Todas aparecen, incluso las que aún no tienen herramientas.', unit: 'herramientas' },
     why: { title: 'Por qué ejecutar software LLM en local', labels: ['Ecosistema', 'Puntos de entrada', 'Mayor cambio', 'Móvil y edge'] },
     latest: { title: 'Novedades', intro: 'Las páginas más nuevas y modificadas más recientemente.', more: 'Ver todos los temas', updated: 'Actualizado', published: 'Publicado' },
     deeper: {
@@ -486,6 +496,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': 'Controle de acesso, governança e temas jurídicos para empresas.',
       },
     },
+    categories: { title: 'Explore o diretório por categoria', intro: 'Os artigos acima estão agrupados por tema. O diretório classifica o software em {groups} categorias. Todas aparecem, inclusive as que ainda não têm ferramentas.', unit: 'ferramentas' },
     why: { title: 'Por que executar software LLM localmente', labels: ['Ecossistema', 'Pontos de entrada', 'Maior mudança', 'Mobile e edge'] },
     latest: { title: 'Novidades', intro: 'As páginas mais novas e alteradas mais recentemente.', more: 'Ver todos os temas', updated: 'Atualizado', published: 'Publicado' },
     deeper: {
@@ -546,6 +557,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': 'التحكم في الوصول والحوكمة والمواضيع القانونية للشركات.',
       },
     },
+    categories: { title: 'تصفّح الدليل حسب الفئة', intro: 'المقالات أعلاه مجمّعة حسب الموضوع. يصنّف الدليل البرمجيات في {groups} فئة، وجميعها معروضة حتى تلك التي لا تحتوي على أدوات بعد.', unit: 'أداة' },
     why: { title: 'لماذا تشغّل برمجيات LLM محليًا', labels: ['المنظومة', 'نقاط الدخول', 'أكبر تحوّل', 'الهاتف والحافة'] },
     latest: { title: 'الأحدث', intro: 'أحدث الصفحات وأكثرها تغييرًا مؤخرًا.', more: 'عرض كل المواضيع', updated: 'تم التحديث', published: 'نُشر' },
     deeper: {
@@ -606,6 +618,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'enterprise-compliance': '기업을 위한 접근 제어, 거버넌스, 법률 주제.',
       },
     },
+    categories: { title: '카테고리별로 디렉터리 둘러보기', intro: '위 글은 주제별로 묶여 있습니다. 디렉터리는 소프트웨어를 {groups}개 카테고리로 분류하며, 아직 도구가 없는 카테고리도 모두 표시합니다.', unit: '개' },
     why: { title: 'LLM 소프트웨어를 로컬로 실행하는 이유', labels: ['생태계', '시작점', '가장 큰 변화', '모바일과 엣지'] },
     latest: { title: '최신', intro: '가장 새롭거나 최근에 변경된 페이지.', more: '모든 주제 보기', updated: '업데이트', published: '게시' },
     deeper: {
@@ -705,6 +718,16 @@ export function PowerLocalLlmHubTemplate(source: PowerLocalLlmHubTemplateSource)
     }),
   )
 
+  // Software categories (the directory's 14 groups), every one listed even with 0 tools. A tool counts once per
+  // group it belongs to, which matches what /directory?group=<key> shows.
+  const directoryPath = lang === 'en' ? '/directory' : `/${lang}/directory`
+  const categoryItems = CATEGORY_GROUPS.map((group) => ({
+    href: `${directoryPath}?group=${group.key}`,
+    label: CATEGORY_GROUP_LABEL_I18N[group.key][lang],
+    count: localAiApps.filter((app) => app.categories.some((c) => CATEGORY_SUB_GROUP[c] === group.key)).length,
+    unit: copy.categories.unit,
+  }))
+
   const startTones: HubTone[] = ['violet', 'azure', 'rose', 'indigo']
   const startIcons: HubStartCard['icon'][] = ['package', 'shield', 'trend', 'home']
   const startKeys = Object.keys(START_SLUGS) as (keyof typeof START_SLUGS)[]
@@ -791,6 +814,7 @@ export function PowerLocalLlmHubTemplate(source: PowerLocalLlmHubTemplateSource)
         labels,
         sortLocale: HUB_SORT_LOCALE[lang] ?? lang,
       }}
+      categories={{ title: copy.categories.title, intro: fill(copy.categories.intro, { groups: CATEGORY_GROUPS.length }), items: categoryItems }}
       why={{
         title: copy.why.title,
         intro: lastTakeaway ?? '',

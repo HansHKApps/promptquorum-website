@@ -11,6 +11,7 @@ export const app: ToolRecord = {
   name: 'Plano',
   categories: ['routers-gateways', 'observability'],
   interfaces: ['cli'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://github.com/katanemo/plano
   locality: 'hybrid',
   platforms: ['linux'], // ships as a Docker container / CLI binary built on Envoy, verified 2026-09-18
   worksWith: ['OpenAI API', 'Anthropic API', 'Local LLMs'],

@@ -10,6 +10,7 @@ export const app: ToolRecord = {
   name: 'Open WebUI',
   categories: ['general-chat-clients'],
   interfaces: ['web'],
+  exposesApi: true, // OpenAI-/Ollama-compatible API server documented — checked 2026-11-01: https://docs.openwebui.com/reference/api-endpoints
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama', 'OpenAI API'],
