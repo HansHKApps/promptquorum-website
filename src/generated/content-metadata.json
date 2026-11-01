@@ -12295,6 +12295,24 @@
       ],
       "images": []
     },
+    "home-generative-agent-review": {
+      "dateModified": "2026-11-01",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-01",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "ente-photos-review": {
       "dateModified": "2026-10-24",
       "lastFactChecked": null,
