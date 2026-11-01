@@ -48,8 +48,9 @@ function LinkCard({ link, categoryKey, onLinkClick, compact }: { link: AskHansLi
 }
 
 function RelatedCard({ link, onClick, compact }: { link: RelatedLink; onClick: () => void; compact?: boolean }) {
+  const old = !link.current
   return (
-    <Link href={link.href} onClick={onClick} className={`${CARD} ${compact ? 'w-56 flex-shrink-0 p-2' : 'p-2.5'}`}>
+    <Link href={link.href} onClick={onClick} className={`${CARD} ${compact ? 'w-56 flex-shrink-0 p-2' : 'p-2.5'} ${old ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : ''}`}>
       <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md bg-secondary text-primary" aria-hidden="true">
         <AskIcon name="Link2" className="h-4 w-4" />
       </span>
@@ -79,6 +80,8 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
   const cat = getCategory(categoryKey)
   const label = tx.categories[cat.key]?.label ?? cat.label_en
   const hasRelated = related.length > 0
+  const currentLinks = related.filter((l) => l.current)
+  const earlierLinks = related.filter((l) => !l.current)
 
   if (variant === 'strip') {
     return (
@@ -100,15 +103,21 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
         <HideButton onHide={onHide} />
       </div>
       {/* Top third: topic picture, full width. Inactive in v1 — deliberately no handler, cursor or hover state. */}
-      <div className="h-[33%] max-h-48 min-h-[88px] flex-shrink-0 overflow-hidden rounded-lg">
-        <img src={cat.image} alt={cat.alt} width={600} height={800} className="h-full w-full select-none object-cover" draggable={false} />
+      <div className="h-[33%] max-h-48 min-h-[88px] flex-shrink-0 overflow-hidden rounded-lg" style={{ backgroundColor: 'hsl(var(--hero-from))' }}>
+        <img src={cat.image} alt={cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
       </div>
       {/* Rest: links that fit the conversation. */}
       <nav aria-label={hasRelated ? tx.panel.relatedHeading : tx.panelLinksHeading} className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto">
-        {hasRelated && <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.panel.relatedHeading}</p>}
-        {hasRelated
-          ? related.map((l) => <RelatedCard key={l.href} link={l} onClick={onRelatedClick} />)
-          : cat.links.map((l) => <LinkCard key={l.id} link={l} categoryKey={cat.key} onLinkClick={onLinkClick} />)}
+        {hasRelated && currentLinks.length > 0 && <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{tx.panel.relatedHeading}</p>}
+        {hasRelated ? (
+          <>
+            {currentLinks.map((l) => <RelatedCard key={l.href} link={l} onClick={onRelatedClick} />)}
+            {earlierLinks.length > 0 && <p className={`text-[11px] font-semibold uppercase tracking-wide text-muted-foreground/70 ${currentLinks.length > 0 ? 'mt-2' : ''}`}>{tx.panel.relatedEarlier}</p>}
+            {earlierLinks.map((l) => <RelatedCard key={l.href} link={l} onClick={onRelatedClick} />)}
+          </>
+        ) : (
+          cat.links.map((l) => <LinkCard key={l.id} link={l} categoryKey={cat.key} onLinkClick={onLinkClick} />)
+        )}
       </nav>
     </aside>
   )

@@ -89,6 +89,7 @@ export interface AskCopy {
   /** side panel with the topic picture + links, and the strip of earlier conversations */
   panel: {
     relatedHeading: string
+    relatedEarlier: string
     panelHide: string
     panelShow: string
     historyHeading: string

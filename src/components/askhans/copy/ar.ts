@@ -76,6 +76,7 @@ export const copy: AskCopy = {
   },
   panel: {
     relatedHeading: "ما يناسب سؤالكم",
+    relatedEarlier: "إجابات سابقة",
     panelHide: "إخفاء لوحة المواضيع",
     panelShow: "إظهار لوحة المواضيع",
     historyHeading: "المحادثات السابقة",

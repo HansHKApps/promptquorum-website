@@ -75,6 +75,7 @@ export const copy: AskCopy = {
   },
   panel: {
     relatedHeading: "Relacionado con su pregunta",
+    relatedEarlier: "Respuestas anteriores",
     panelHide: "Ocultar panel de temas",
     panelShow: "Mostrar panel de temas",
     historyHeading: "Conversaciones anteriores",
