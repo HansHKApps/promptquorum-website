@@ -124,10 +124,56 @@ export function searchPromptquorum(args: { query: string; lang?: string; cluster
 
   const fuse = new Fuse(entries, FUSE_OPTIONS)
   const limit = Math.min(Math.max(args.limit ?? 10, 1), 25)
-  return fuse
-    .search(args.query)
+  const toResult = (item: SearchEntry): SearchToolResult => ({ title: item.title, description: item.description, url: item.url, hub: item.hub, lang: item.lang })
+
+  const direct = fuse.search(args.query).map((r) => r.item)
+  if (direct.length >= 3) return direct.slice(0, limit).map(toResult)
+
+  // Whole-sentence fuzzy matching finds little for chat-style questions ("what can LLMs not do ??").
+  // Fall back to the keywords of the question (stop words dropped, "cannot/can't/not do" read as "limitations")
+  // and rank pages by how many keywords hit them; direct hits keep their lead.
+  const keywords = questionKeywords(args.query)
+  if (keywords.length === 0) return direct.slice(0, limit).map(toResult)
+  const score = new Map<string, { item: SearchEntry; points: number }>()
+  const add = (item: SearchEntry, points: number) => {
+    const hit = score.get(item.url)
+    if (hit) hit.points += points
+    else score.set(item.url, { item, points })
+  }
+  direct.forEach((item, i) => add(item, 10 - i * 0.1))
+  for (const word of keywords) {
+    fuse.search(word).slice(0, 15).forEach((r, i) => add(r.item, 1 - i * 0.03))
+  }
+  return [...score.values()]
+    .sort((a, b) => b.points - a.points)
     .slice(0, limit)
-    .map((r) => ({ title: r.item.title, description: r.item.description, url: r.item.url, hub: r.item.hub, lang: r.item.lang }))
+    .map((x) => toResult(x.item))
+}
+
+const QUESTION_STOP_WORDS = new Set([
+  'what', 'which', 'who', 'whom', 'whose', 'when', 'where', 'why', 'how', 'can', 'could', 'should', 'would', 'will', 'does', 'did', 'doing',
+  'the', 'and', 'for', 'with', 'about', 'are', 'was', 'were', 'any', 'all', 'you', 'your', 'have', 'has', 'not', 'dont', 'cant', 'cannot',
+  'welche', 'welcher', 'welches', 'was', 'wie', 'wo', 'warum', 'kann', 'können', 'nicht', 'der', 'die', 'das', 'und', 'für', 'mit', 'ist', 'sind', 'gibt',
+  'quel', 'quelle', 'quels', 'comment', 'pourquoi', 'peut', 'pas', 'les', 'des', 'une', 'est', 'sont', 'pour',
+  'cuál', 'cuáles', 'cómo', 'porque', 'puede', 'puedo', 'los', 'las', 'una', 'para', 'qué', 'qual', 'quais', 'como', 'pode', 'não',
+])
+
+/** English phrasing of "what it cannot do" maps to the word the pages use. */
+const NEGATION = /\b(cannot|can't|can not|cant|unable|doesn't|does not|not (?:do|able|capable|possible)|never)\b/i
+
+function questionKeywords(query: string): string[] {
+  const words = query
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s'-]/gu, ' ')
+    .split(/\s+/)
+    .map((w) => w.replace(/^['-]+|['-]+$/g, ''))
+    .filter((w) => w.length >= 3 && !QUESTION_STOP_WORDS.has(w))
+  const out = new Set(words)
+  if (NEGATION.test(query)) {
+    out.add('limitations')
+    out.add('limits')
+  }
+  return [...out].slice(0, 8)
 }
 
 export interface ClusterInfo {
