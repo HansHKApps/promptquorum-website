@@ -6,8 +6,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'kserve',
   name: 'KServe',
-  categories: ['api-servers', 'inference-engines'],
+  categories: ['distributed-inference', 'inference-engines', 'kubernetes-cloud-native'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local', // deploys on the user's own Kubernetes cluster/hardware — verified 2026-09-18
   platforms: ['linux'], // Kubernetes CRD-based platform, Linux clusters only — verified 2026-09-18
   worksWith: ['Kubernetes', 'Istio', 'Knative', 'vLLM', 'TensorRT'],

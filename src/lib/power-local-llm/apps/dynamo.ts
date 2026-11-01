@@ -9,8 +9,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'dynamo',
   name: 'NVIDIA Dynamo',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['distributed-inference', 'inference-engines'],
   interfaces: ['cli', 'library'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['linux'], // datacenter/Kubernetes-oriented distributed serving framework, Linux only — verified 2026-09-18
   worksWith: ['vLLM', 'TensorRT-LLM', 'SGLang', 'Kubernetes'],

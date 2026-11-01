@@ -13,8 +13,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'openai-edge-tts',
   name: 'openai-edge-tts',
-  categories: ['text-to-speech', 'api-servers'],
+  categories: ['text-to-speech'],
   interfaces: ['cli'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'hybrid', // self-hosted API server, but synthesis calls out to Microsoft Edge's free online TTS voices, verified 2026-09-18
   platforms: ['mac', 'win', 'linux'], // Docker image + native Python install documented for all three, verified 2026-09-18
   worksWith: ['OpenAI API'],

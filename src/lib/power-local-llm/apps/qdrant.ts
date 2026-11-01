@@ -9,7 +9,7 @@ export const app: ToolRecord = {
   categories: ['vector-databases'],
   interfaces: ['cli', 'library', 'web'], // ships a built-in web dashboard for collection browsing alongside its API/SDKs, verified 2026-09-18
   locality: 'local', // fully self-hostable OSS under Apache-2.0; Qdrant Cloud is a separate managed offering, verified 2026-09-18
-  platforms: null, // Docker/binary-based server, deployable on any host OS
+  platforms: ['selfhosted'], // researched 2026-11-01 — github.com/qdrant/qdrant: `docker run qdrant/qdrant`; arm64/Raspberry Pi support not confirmed from a primary page, so rpi is not set
   worksWith: ['LangChain', 'LlamaIndex'],
   engine: 'library',
   license: 'Apache-2.0',

@@ -11,7 +11,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'opencode',
   name: 'OpenCode',
-  categories: ['code-assistants-ide-plugins'],
+  categories: ['terminal-coding-agents', 'code-assistants-ide-plugins'],
   interfaces: ['cli', 'desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

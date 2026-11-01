@@ -11,7 +11,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'mission-control',
   name: 'Mission Control',
-  categories: ['agent-frameworks', 'observability'],
+  categories: ['multi-agent-orchestration', 'observability', 'agent-frameworks'],
   interfaces: ['web', 'cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'], // Node.js 22+/pnpm source install or multi-arch Docker images, verified 2026-09-18

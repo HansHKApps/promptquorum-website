@@ -13,8 +13,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'mlxcel',
   name: 'mlxcel',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac', 'linux'], // README: Apple Silicon (Metal) is the primary target, Linux/NVIDIA CUDA is a secondary target, experimental AMD ROCm; no Windows support documented, verified 2026-09-18
   worksWith: null,

@@ -6,7 +6,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'intentkit',
   name: 'IntentKit',
-  categories: ['agent-frameworks', 'autonomous-agents'],
+  categories: ['multi-agent-orchestration', 'agent-frameworks', 'autonomous-agents'],
   interfaces: ['cli', 'library'],
   locality: 'hybrid', // self-hosted (Docker/Python), but the agent cluster itself is built as a cloud-facing service — verified 2026-09-18
   platforms: ['mac', 'win', 'linux'], // ships with Docker + docker-compose plus a Python library install path, verified 2026-09-18

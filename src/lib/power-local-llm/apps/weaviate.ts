@@ -9,7 +9,7 @@ export const app: ToolRecord = {
   categories: ['vector-databases'],
   interfaces: ['cli', 'library', 'web'],
   locality: 'local', // fully self-hostable server; Weaviate Cloud is a separate managed offering, verified 2026-09-18
-  platforms: null, // Docker/binary-based server, deployable on any host OS
+  platforms: ['selfhosted'], // researched 2026-11-01 — docs.weaviate.io/deploy: Docker / Kubernetes; no native Windows support per the docs
   worksWith: ['LangChain', 'LlamaIndex'],
   engine: 'library',
   license: 'BSD-3-Clause (core), Weaviate License for gated features in the wl/ directory (requires a license key)', // GitHub reports license "Other" — repo LICENSE dual-licenses core code under BSD-3-Clause and select features under the proprietary Weaviate License, verified 2026-09-18

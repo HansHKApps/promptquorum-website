@@ -20,7 +20,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'excire-foto',
   name: 'Excire Foto',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'local-search', 'vision-ocr'],
   interfaces: ['desktop'], // standalone installer app for Windows and macOS; optional Excire Search is a separate Lightroom Classic plugin
   locality: 'local', // vendor: "Everything runs locally, your photos stay on your computer"; activation needs an Excire account and code, and cloud sharing is an optional separate feature
   platforms: ['mac', 'win'], // macOS 12+ (Apple silicon and Intel installers) and Windows 11 x86 64-bit (shop page, 2026-10-28)

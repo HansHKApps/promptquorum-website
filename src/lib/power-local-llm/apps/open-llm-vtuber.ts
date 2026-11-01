@@ -15,7 +15,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'open-llm-vtuber',
   name: 'Open-LLM-VTuber',
-  categories: ['roleplay-companions'],
+  categories: ['roleplay-companions', 'avatars-lipsync', 'realtime-voice-agents'],
   interfaces: ['web', 'desktop'],
   locality: 'hybrid', // per the project every component can be local (fully offline), but each of ASR, LLM and TTS can also be a cloud API; the quick-start example uses Edge TTS online
   platforms: ['win', 'mac', 'linux'],

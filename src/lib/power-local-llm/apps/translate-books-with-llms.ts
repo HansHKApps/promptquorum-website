@@ -9,7 +9,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'translate-books-with-llms',
   name: 'TranslateBooksWithLLMs',
-  categories: ['sdks-libraries'],
+  categories: ['translation', 'sdks-libraries'],
   interfaces: ['desktop', 'cli', 'web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'aichat',
   name: 'aichat',
-  categories: ['general-chat-clients'],
+  categories: ['terminal-chat-clients', 'general-chat-clients'],
   interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

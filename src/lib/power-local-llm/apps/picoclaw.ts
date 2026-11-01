@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   categories: ['personal-assistants', 'autonomous-agents'],
   interfaces: ['cli', 'web', 'mobile'], // terminal binary, browser-based WebUI Launcher on localhost:18800, Android APK (README)
   locality: 'hybrid', // agent runs on your device; the model is whatever provider you configure — Ollama/vLLM locally or a cloud API
-  platforms: ['linux', 'mac', 'win', 'android'], // README/site also list Raspberry Pi, RISC-V, ARM, MIPS, LoongArch, FreeBSD and Docker
+  platforms: ['linux', 'mac', 'win', 'android', 'rpi', 'selfhosted'], // README/site list Raspberry Pi and Docker (recorded 2026-11-01 when added); also RISC-V, ARM, MIPS, LoongArch, FreeBSD
   worksWith: ['Ollama', 'vLLM', 'OpenAI-compatible APIs', 'MCP'],
   engine: 'external', // no inference in-process
   license: 'MIT',

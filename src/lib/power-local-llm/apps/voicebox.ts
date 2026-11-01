@@ -12,7 +12,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'voicebox',
   name: 'Voicebox',
-  categories: ['voice-cloning', 'text-to-speech', 'speech-to-text'],
+  categories: ['voice-cloning', 'text-to-speech', 'speech-to-text', 'dictation'],
   interfaces: ['desktop'],
   locality: 'local', // models, voice data and captures stay on the machine per the privacy policy; optional Cloud backup is announced, not yet available
   platforms: ['mac', 'win', 'linux'],

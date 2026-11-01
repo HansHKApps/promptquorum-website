@@ -17,7 +17,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'lyonesse',
   name: 'Lyonesse',
-  categories: ['speech-to-text', 'document-pdf-chat'],
+  categories: ['speech-to-text', 'meeting-notes', 'document-pdf-chat'],
   interfaces: ['mobile', 'desktop'],
   locality: 'local', // developer: transcription, summaries and Q&A run on the device; policy lists anonymized analytics and crash reports, and iCloud sync of text (see review)
   platforms: ['ios', 'ipados', 'mac', 'watchos'], // universal app: iPhone, iPad, Mac (macOS 26.0+, Apple silicon recommended), plus an Apple Watch recorder (watchOS 11.0+); visionOS listed by the App Store

@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'metagpt',
   name: 'MetaGPT',
-  categories: ['agent-frameworks', 'autonomous-agents'],
+  categories: ['agent-frameworks', 'multi-agent-orchestration', 'autonomous-agents'],
   interfaces: ['library', 'cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

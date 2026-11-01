@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'blackbox-ai',
   name: 'Blackbox AI (CLI)',
-  categories: ['code-assistants-ide-plugins'],
+  categories: ['terminal-coding-agents', 'code-assistants-ide-plugins'],
   interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

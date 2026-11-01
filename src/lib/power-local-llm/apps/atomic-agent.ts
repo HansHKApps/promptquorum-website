@@ -7,7 +7,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'atomic-agent',
   name: 'Atomic Agent',
-  categories: ['agent-frameworks'],
+  categories: ['computer-browser-agents', 'autonomous-agents', 'agent-frameworks'],
   interfaces: ['desktop', 'cli'],
   locality: 'local',
   platforms: ['mac', 'linux', 'win'], // Mac requires Apple Silicon, Windows requires x64 — no Intel Mac

@@ -10,8 +10,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'rapid-mlx',
   name: 'Rapid-MLX',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli', 'desktop'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac'],
   worksWith: ['Claude Code', 'Cursor', 'Aider', 'Cline'],

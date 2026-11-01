@@ -18,7 +18,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'home-gallery',
   name: 'Home-Gallery',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['web', 'cli'], // browser gallery (installable PWA) on port 3000, started and fed from a command-line tool (gallery run init / gallery run server)
   locality: 'hybrid', // README: similar-image search, object detection and face recognition send preview images to api.home-gallery.org by default; the API server can be self-hosted (Docker) so it stays local
   platforms: ['linux', 'mac', 'win', 'web'], // README: prebuilt binaries for Linux, macOS (darwin-x64) and Windows (win-x64.exe) plus a Docker image; website lists Docker, Linux, Mac, Windows, PWA; Raspberry Pi mentioned in the README

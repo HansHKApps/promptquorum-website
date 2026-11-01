@@ -11,7 +11,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'krita-ai-diffusion',
   name: 'Krita AI Diffusion',
-  categories: ['image-generation'],
+  categories: ['creative-app-plugins', 'image-generation'],
   interfaces: ['plugin'],
   locality: 'hybrid', // runs on your own GPU through a managed or custom ComfyUI server, or on the paid Interstice.cloud GPU service chosen in the plugin's Configure dialog
   platforms: ['mac', 'win', 'linux'],

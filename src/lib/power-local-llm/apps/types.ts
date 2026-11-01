@@ -22,7 +22,10 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { CategorySubKey, InterfaceKey } from './categories'
 
-export type OSKey = 'mac' | 'win' | 'linux' | 'ios' | 'ipados' | 'watchos' | 'android' | 'web'
+// `selfhosted` = officially deployable as a self-hosted server (documented Docker / Docker Compose / Helm path);
+// `rpi` = officially documented to run on a Raspberry Pi / small ARM edge board. Both are set only from a primary
+// source; unset means "not yet researched", never "no".
+export type OSKey = 'mac' | 'win' | 'linux' | 'ios' | 'ipados' | 'watchos' | 'android' | 'web' | 'selfhosted' | 'rpi'
 
 export type UseCaseKey =
   | 'chat'
@@ -138,6 +141,10 @@ export interface ToolRecord {
   name: string
   categories: CategorySubKey[] // first entry is primary; multi-assign — see ./categories.ts
   interfaces: InterfaceKey[] // how a user actually installs/runs the tool
+  // True when the tool serves an OpenAI-compatible (or Ollama-compatible) HTTP API that other apps can call. A capability
+  // facet, not a category (taxonomy v2): inference engines, runtimes and chat apps all expose one. Unset = not yet
+  // researched, never "no API" — same convention as `mcpSupport`.
+  exposesApi?: boolean
   locality: LocalityKey | 'TODO'
   platforms: OSKey[] | null // null = not yet researched
   worksWith: string[] | null // null = not yet researched

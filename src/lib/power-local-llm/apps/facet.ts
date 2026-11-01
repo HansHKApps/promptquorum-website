@@ -18,7 +18,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'facet',
   name: 'Facet',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['web', 'cli'], // web gallery (Angular + FastAPI viewer, installable PWA) on port 5000, scanned and driven by facet.py command-line tools
   locality: 'local', // README: "Everything runs on your machine; no cloud, accounts, or API keys"; optional outbound: update check (GitHub), OSM map tiles, Photon geocoder, model downloads, and a remote Ollama/OpenAI-compatible VLM if you configure vlm_backend
   platforms: ['linux', 'mac', 'win', 'web'], // README badge: Windows | macOS | Linux | Docker; INSTALLATION.md sends Windows users to Docker (WSL2 for NVIDIA); the gallery is a browser UI

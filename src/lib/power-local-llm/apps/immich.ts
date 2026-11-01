@@ -21,7 +21,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'immich',
   name: 'Immich',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['web', 'mobile', 'cli'], // browser UI served by your own server, iOS and Android apps for backup and browsing, plus an immich CLI for bulk upload
   locality: 'local', // library, smart-search and face-recognition models stay on your server (docs); optional outbound: version check to version.immich.cloud, Immich tile server (can be disabled), model downloads from Hugging Face
   platforms: ['linux', 'ios', 'android', 'web'], // the server runs in Docker (64-bit Linux recommended; macOS/Windows via Docker Desktop are "possible but discouraged" per install/requirements); clients are the mobile apps and any browser

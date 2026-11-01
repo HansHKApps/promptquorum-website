@@ -36,6 +36,8 @@ const OS_LABELS: Record<OSKey, string> = {
   watchos: 'WATCHOS',
   android: 'ANDROID',
   web: 'WEB',
+  selfhosted: 'DOCKER',
+  rpi: 'RASPBERRY PI',
 }
 
 function buildSoftwareApplication(tool: ToolRecord, lang: Language): Record<string, unknown> {

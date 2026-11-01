@@ -11,8 +11,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'swiftlm',
   name: 'SwiftLM',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli', 'mobile'], // macOS server run from the command line; iOS via the bundled SwiftBuddy companion app, verified 2026-09-18
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac', 'ios'], // README: macOS 14.0+ server, plus an iOS/iPadOS SwiftBuddy app, verified 2026-09-18
   worksWith: ['OpenAI API'],

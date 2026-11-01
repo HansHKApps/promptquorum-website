@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-05',
     theme: 'Overview & Reference',
     title: 'Local LLM Apps & Software Directory: ' + TOTAL_TOOL_COUNT + ' Tools for Running AI Locally (2026)',
@@ -91,14 +91,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, ' + TOTAL_TOOL_COUNT + ' projects, one map.** Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge (emerging protocols and unproven ideas), and Other & Niche (apps with no direct competitor, such as health) — most popular projects in 2026 fit in one primary category, and many span more than one.',
+          '**' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, ' + TOTAL_TOOL_COUNT + ' projects, one map.** Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research, Knowledge & Retrieval, Voice & Audio, Images & Video, Photos, Cameras & Home, Train & Customize, LLMOps & Security, Hardware & Edge, Industry & Domain (apps with no direct competitor, such as health), and At the Edge (emerging protocols and unproven ideas) — most popular projects in 2026 fit in one primary category, and many span more than one.',
           '**Pick a runtime first.** Ollama is the right default for ~95% of readers; llama.cpp is the foundational engine underneath most other tools; vLLM is the production-serving pick for multi-user setups.',
           '**Most categories above Run & Serve are optional.** A desktop app OR a web UI is enough for chat. Add a code assistant or CLI tool only when you want code help; add a RAG system only when you want to chat with your own documents; add an agent framework only when one-shot calls stop being enough; add Images & Video only when you need visual output.',
           '**Licence matters for commercial use.** MIT and Apache 2.0 dominate the ecosystem. AGPL appears on a handful of UIs (text-generation-webui, KoboldCpp, SillyTavern) — fine for personal use, more deliberate for commercial deployments. The "License" column below names every one explicitly; see [AI & open-source software licenses explained](/power-local-llm/ai-tool-licenses-explained) for what MIT, Apache-2.0, AGPL-3.0, and the other license types below actually require.',
           '**Multi-tool stacks are normal.** Ollama + Open WebUI + AnythingLLM + Cline + Stable Diffusion is a single-machine setup that covers chat, RAG, coding, and image generation without compromise. The "Common Real-World Stacks" table below names the recipes that actually work in 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-en.svg',
-        imageCaption: 'The ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories of a local LLM stack: ' + TOTAL_TOOL_COUNT + ' actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, At the Edge, and Other & Niche.',
+        imageCaption: 'The ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories of a local LLM stack: ' + TOTAL_TOOL_COUNT + ' actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge.',
       },
       runtimes: {
         id: 'runtimes',
@@ -605,7 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Verzeichnis für LLM-Tools & lokale KI-Software: ' + TOTAL_TOOL_COUNT + ' Apps zum lokalen Ausführen (2026)',
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Vergleichen Sie ' + TOTAL_TOOL_COUNT + ' LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Lizenzen, Links & primäre URLs. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
+      TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Lizenzen, Links & primäre URLs. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored besuchen',
@@ -1204,7 +1204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Répertoire des logiciels et outils LLM locaux : ' + TOTAL_TOOL_COUNT + ' apps pour exécuter l\'IA en local (2026)',
@@ -1215,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Comparez ' + TOTAL_TOOL_COUNT + ' logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' outils LLM locaux en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Licences, liens & URL primaires. La carte d\'orientation avant de choisir votre stack.',
+      TOTAL_TOOL_COUNT + ' outils LLM locaux en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Licences, liens & URL primaires. La carte d\'orientation avant de choisir votre stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Visiter Locally Uncensored',
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす' + TOTAL_TOOL_COUNT + 'のアプリ＆ツール（2026年版）',
@@ -1805,7 +1805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを' + TOTAL_TOOL_COUNT + '件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。',
     twitterDescription:
-      'ローカルLLMツール' + TOTAL_TOOL_COUNT + '件を' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで網羅 — Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate、At the Edge、Other & Niche。ライセンス・リンク・主要URL付き。スタックを決める前の「全体像」マップです。',
+      'ローカルLLMツール' + TOTAL_TOOL_COUNT + '件を' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで網羅 — Run & Serve、Chat & Assistants、Agents & Automation、Code & Development、Documents & Research …。ライセンス・リンク・主要URL付き。スタックを決める前の「全体像」マップです。',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored を訪問',
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地AI工具与LLM应用目录：' + TOTAL_TOOL_COUNT + '款软件，在本地运行AI（2026）',
@@ -2397,7 +2397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       '对比' + TOTAL_TOOL_COUNT + '款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。',
     twitterDescription:
-      '本地LLM工具' + TOTAL_TOOL_COUNT + '款，覆盖' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate、At the Edge、Other & Niche。含许可证、链接与主要网址。确定技术栈前的"现有工具"全景图。',
+      '本地LLM工具' + TOTAL_TOOL_COUNT + '款，覆盖' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Agents & Automation、Code & Development、Documents & Research …。含许可证、链接与主要网址。确定技术栈前的"现有工具"全景图。',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: '访问 Locally Uncensored',
@@ -2978,7 +2978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Directorio de herramientas y software de LLM local: ' + TOTAL_TOOL_COUNT + ' apps para ejecutar IA en local (2026)',
@@ -2989,7 +2989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Compara ' + TOTAL_TOOL_COUNT + ' herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Licencias, enlaces y URLs principales. El mapa de "qué existe" antes de elegir tu stack.',
+      TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Licencias, enlaces y URLs principales. El mapa de "qué existe" antes de elegir tu stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Visita Locally Uncensored',
@@ -3584,7 +3584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas para executar IA localmente (2026)',
@@ -3595,7 +3595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Explore ' + TOTAL_TOOL_COUNT + ' apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' ferramentas LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. Licenças, links e URLs principais. O mapa de "o que existe" antes de escolher seu stack.',
+      TOTAL_TOOL_COUNT + ' ferramentas LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. Licenças, links e URLs principais. O mapa de "o que existe" antes de escolher seu stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Visite Locally Uncensored',
@@ -4189,7 +4189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)',
@@ -4200,7 +4200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'تصفّح ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.',
     twitterDescription:
-      TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وCode & Development وKnowledge & Retrieval وVoice & Audio وImages & Video وTrain & Operate وAt the Edge وOther & Niche. التراخيص والروابط وعناوين URL الرئيسية. خريطة "ما الموجود" قبل اختيار stack.',
+      TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وAgents & Automation وCode & Development وDocuments & Research …. التراخيص والروابط وعناوين URL الرئيسية. خريطة "ما الموجود" قبل اختيار stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'زيارة Locally Uncensored',
@@ -4794,7 +4794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-31',
+    dateModified: '2026-11-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 ' + TOTAL_TOOL_COUNT + '개 앱과 도구 (2026)',
@@ -4805,7 +4805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.',
     twitterDescription:
-      '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리 — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate, At the Edge, Other & Niche. 라이선스·링크·주요 URL 수록. 스택 선택 전 전체 지도 확인.',
+      '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리 — Run & Serve, Chat & Assistants, Agents & Automation, Code & Development, Documents & Research …. 라이선스·링크·주요 URL 수록. 스택 선택 전 전체 지도 확인.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored 방문',

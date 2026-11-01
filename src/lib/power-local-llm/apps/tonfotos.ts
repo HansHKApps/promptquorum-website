@@ -18,7 +18,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'tonfotos',
   name: 'Tonfotos',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['desktop'], // standalone installer app for Windows, macOS and Linux; TonfotosSync is a separate phone companion for importing photos
   locality: 'local', // vendor docs: photos are processed "right where they are and never sent anywhere", face recognition runs locally; the app still contacts the developer's server for update and license checks
   platforms: ['linux', 'mac', 'win'], // download page: Windows 10/11 x64, macOS 10.15+ (Intel and Apple silicon), Linux x64 .deb/.rpm

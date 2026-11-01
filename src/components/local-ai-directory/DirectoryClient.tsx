@@ -40,7 +40,7 @@ import { INSTALL_EFFORT_KEYS } from '@/lib/power-local-llm/apps/types'
 const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
 const MOBILE_MACHINES: readonly MachineType[] = ['ios', 'android']
 
-const OS_FILTER_VALUES: readonly string[] = ['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web']
+const OS_FILTER_VALUES: readonly string[] = ['mac', 'win', 'linux', 'ios', 'ipados', 'watchos', 'android', 'web', 'selfhosted', 'rpi']
 const PRICE_FILTER_VALUES: readonly string[] = ['free', 'freemium', 'paid']
 const INSTALL_FILTER_VALUES: readonly string[] = INSTALL_EFFORT_KEYS
 
@@ -223,7 +223,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
   const sorted = useMemo(() => sortTools(filtered, sortKey, sortDir, machine), [filtered, sortKey, sortDir, machine])
 
   const countsByGroup = useMemo(() => {
-    const groups: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'install', 'mcp']
+    const groups: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'install', 'mcp', 'api']
     return Object.fromEntries(groups.map((g) => [g, countsForGroup(apps, query, g)])) as Record<keyof FilterState, ReturnType<typeof countsForGroup>>
   }, [apps, query])
 
@@ -301,7 +301,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
           <WantChips counts={wantCounts} selected={want} onSelect={handleWant} ui={ui} />
           {want && (
             <SubcategoryChips
-              counts={countsByGroup.category}
+              counts={countsByGroup.category.filter((c) => c.count > 0 || filters.category.has(c.value))}
               selected={filters.category}
               onToggle={(value) => toggleFilter('category', value)}
               onClear={clearCategoryFilters}

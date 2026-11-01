@@ -8,10 +8,10 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'self-hosted-ai-starter-kit',
   name: 'Self-hosted AI Starter Kit',
-  categories: ['workflow-node-builders', 'rag-frameworks'],
+  categories: ['one-click-installers', 'workflow-node-builders', 'rag-frameworks'],
   interfaces: ['web', 'cli'], // n8n's own web UI plus docker-compose CLI setup, verified 2026-09-18
   locality: 'local', // docker-compose template bundling local Ollama, Qdrant, and PostgreSQL — no cloud dependency required, verified 2026-09-18
-  platforms: null, // docker-compose template, deployable on any host OS
+  platforms: ['selfhosted'], // researched 2026-11-01 — github.com/n8n-io/self-hosted-ai-starter-kit: Docker Compose profiles; no native OS apps
   worksWith: ['Ollama', 'Qdrant', 'n8n'],
   engine: 'both', // ships Ollama as a bundled local inference engine, while n8n workflows can also call external providers, verified 2026-09-18
   license: 'Apache-2.0',

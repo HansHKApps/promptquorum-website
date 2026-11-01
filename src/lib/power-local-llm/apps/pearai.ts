@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'pearai',
   name: 'PearAI',
-  categories: ['code-assistants-ide-plugins'],
+  categories: ['ai-code-editors', 'code-assistants-ide-plugins'],
   interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

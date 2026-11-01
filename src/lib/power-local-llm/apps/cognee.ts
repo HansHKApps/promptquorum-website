@@ -6,10 +6,10 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'cognee',
   name: 'cognee',
-  categories: ['rag-frameworks', 'embeddings-indexing'],
+  categories: ['agent-memory', 'knowledge-graphs', 'rag-frameworks', 'embeddings-indexing'],
   interfaces: ['library', 'cli'],
   locality: 'hybrid', // engine and knowledge graph run self-hosted, but default LLM/embedding calls go to a configured external provider (local Ollama is also supported), verified 2026-09-18
-  platforms: null, // ships as a Python library/self-hosted server, deployable on any host OS
+  platforms: ['selfhosted'], // researched 2026-11-01 — github.com/topoteretes/cognee: Docker image + compose; README names no OSes
   worksWith: ['Claude Code', 'Cursor', 'LangGraph', 'Ollama'],
   engine: 'external',
   license: 'Apache-2.0',

@@ -9,7 +9,7 @@ export const app: ToolRecord = {
   categories: ['vector-databases'],
   interfaces: ['cli', 'library'],
   locality: 'local', // fully self-hostable OSS vector DB; Zilliz Cloud is a separate managed offering, not required, verified 2026-09-18
-  platforms: null, // Docker/binary-based server, deployable on any host OS — no single OS-specific build to list
+  platforms: ['mac', 'win', 'linux', 'selfhosted'], // researched 2026-11-01 — milvus.io/docs/milvus_lite.md (macOS/Linux/Windows wheels) + install-overview (Standalone = one Docker image)
   worksWith: ['LangChain', 'LlamaIndex'],
   engine: 'library', // used as retrieval infrastructure behind a RAG stack, not an LLM inference engine itself, verified 2026-09-18
   license: 'Apache-2.0',

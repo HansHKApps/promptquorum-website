@@ -6,7 +6,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'meetily',
   name: 'Meetily',
-  categories: ['speech-to-text', 'personal-assistants'],
+  categories: ['meeting-notes', 'speech-to-text', 'personal-assistants'],
   interfaces: ['desktop'],
   locality: 'local', // README states "100% local processing, no cloud required" for both transcription and summarization, verified 2026-09-18
   platforms: ['mac', 'win'],

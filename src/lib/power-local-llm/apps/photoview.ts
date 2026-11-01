@@ -19,7 +19,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'photoview',
   name: 'Photoview',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['web'], // browser UI served by your own server; the README lists no desktop or mobile app
   locality: 'local', // library and face recognition (dlib via go-face) stay on your server; optional maps load Mapbox in the browser with a token you create
   platforms: ['linux', 'web'], // README: Docker, Debian 12/13, Ubuntu, Arch AUR, NixOS, Unraid, TrueNAS, YunoHost, EmbassyOS; clients are browsers

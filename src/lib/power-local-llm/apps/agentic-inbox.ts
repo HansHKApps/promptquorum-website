@@ -9,7 +9,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'agentic-inbox',
   name: 'Agentic Inbox',
-  categories: ['personal-assistants', 'autonomous-agents'],
+  categories: ['writing-email', 'personal-assistants', 'autonomous-agents'],
   interfaces: ['web'],
   locality: 'hybrid', // self-hosted on the user's own Cloudflare account (Workers/Durable Objects/R2), not a fixed third-party server — verified 2026-09-18
   platforms: ['web'],

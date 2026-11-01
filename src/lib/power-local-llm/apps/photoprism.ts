@@ -15,7 +15,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'photoprism',
   name: 'PhotoPrism',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['web', 'cli'], // browser UI / installable PWA served by your own server, plus a photoprism CLI; the iOS and Android apps in the docs are third-party
   locality: 'local', // library and built-in ONNX models stay on your server (privacy policy, docs); reverse geocoding and world maps contact PhotoPrism and MapTiler, and the optional OpenAI engine is cloud
   platforms: ['linux', 'mac', 'win', 'web'], // server runs wherever Docker runs (Linux, macOS, Windows, Raspberry Pi/ARM64, many NAS devices); clients are browsers

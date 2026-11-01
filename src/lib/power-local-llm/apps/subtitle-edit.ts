@@ -15,7 +15,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'subtitle-edit',
   name: 'Subtitle Edit',
-  categories: ['speech-to-text', 'editing-upscaling'],
+  categories: ['subtitles-dubbing', 'speech-to-text', 'editing-upscaling'],
   interfaces: ['desktop', 'cli'], // desktop editor plus the seconv command-line converter shipped in the same releases
   locality: 'hybrid', // editor and the local engines (whisper.cpp, Crisp ASR, llama.cpp, Ollama, LM Studio) run on the machine; optional cloud engines (Google, DeepL, OpenAI, Anthropic, ...) send the text or audio to the chosen provider (README Privacy section)
   platforms: ['win', 'mac', 'linux'],

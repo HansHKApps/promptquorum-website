@@ -18,7 +18,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'mylio-photos',
   name: 'Mylio Photos',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'vision-ocr', 'local-search'],
   interfaces: ['desktop', 'mobile'], // Windows/macOS installers plus iOS/iPadOS and Android apps, synced through a Mylio account
   locality: 'hybrid', // vendor: "every one of our AI tools runs exclusively on your local devices" and "run AI locally, no internet needed"; Learn Panel GPT chat location unstated; Mylio Drive+ and Shared Albums use Mylio servers
   platforms: ['mac', 'win', 'ios', 'ipados', 'android'], // mylio.com/download: Mylio.dmg, Mylio_x64.msix, Mylio_arm64.msix, App Store, Google Play

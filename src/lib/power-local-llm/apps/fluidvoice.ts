@@ -12,7 +12,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'fluidvoice',
   name: 'FluidVoice',
-  categories: ['speech-to-text'],
+  categories: ['dictation', 'speech-to-text'],
   interfaces: ['desktop'],
   locality: 'local', // website + privacy policy: speech recognition and Fluid-1 text cleanup run on the Mac; optional cloud AI providers (OpenAI, Groq, custom) send text to the provider; model downloads, update checks and optional anonymous analytics use the network
   platforms: ['mac'],

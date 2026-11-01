@@ -15,7 +15,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'anarlog',
   name: 'Anarlog',
-  categories: ['speech-to-text', 'personal-assistants'],
+  categories: ['meeting-notes', 'speech-to-text', 'personal-assistants'],
   interfaces: ['desktop'],
   locality: 'hybrid', // audio capture and storage are local; transcription and summaries are local only if you pick on-device (Apple Silicon Mac) and local models, otherwise Anarlog Cloud or your own provider (docs, 2026-10-24)
   platforms: ['mac', 'win', 'linux'],

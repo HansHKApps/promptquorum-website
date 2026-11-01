@@ -19,7 +19,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'local-ai-mail',
   name: 'Local AI Mail',
-  categories: ['personal-assistants'],
+  categories: ['writing-email', 'translation', 'personal-assistants'],
   interfaces: ['mobile'],
   locality: 'hybrid', // on-device LLM by default; optional cloud AI through the user's own Gemini API key
   platforms: ['android'],

@@ -11,8 +11,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'omlx',
   name: 'oMLX',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['desktop', 'cli'], // native macOS menu-bar app plus CLI/server usage, verified 2026-09-18
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac'], // MLX is Apple Silicon-only, verified 2026-09-18
   worksWith: ['Claude Code', 'OpenClaw', 'OpenCode', 'Codex'], // README integrations list + Claude Code section, verified 2026-10-23

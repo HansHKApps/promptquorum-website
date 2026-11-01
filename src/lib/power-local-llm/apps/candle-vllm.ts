@@ -9,8 +9,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'candle-vllm',
   name: 'candle-vllm',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli', 'library'], // OpenAI-compatible server run from the CLI; also usable as a Rust crate, verified 2026-09-18
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac', 'win', 'linux'], // README: CUDA 11/12/13 on Linux, Metal on macOS/Apple Silicon — cross-platform, same codebase, verified 2026-09-18
   worksWith: ['OpenAI API'],

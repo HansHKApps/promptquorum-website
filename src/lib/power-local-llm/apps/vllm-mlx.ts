@@ -14,8 +14,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'vllm-mlx',
   name: 'vllm-mlx',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac'], // README: "Apple Silicon only (M1, M2, M3, M4, M5) with Metal kernels via MLX", verified 2026-09-18
   worksWith: ['Claude Code', 'OpenAI API', 'Anthropic API'], // README: MCP tool calling and explicit Claude Code support, verified 2026-09-18

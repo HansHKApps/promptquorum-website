@@ -9,7 +9,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'pixlstash',
   name: 'PixlStash',
-  categories: ['vision-ocr', 'local-search'],
+  categories: ['photo-libraries', 'image-generation', 'vision-ocr', 'local-search'],
   interfaces: ['desktop', 'web', 'cli'], // desktop app (native window), headless server on localhost:9537 with browser UI, pixlstash-cli — install page 2026-10-17
   locality: 'local', // site: "Every model below runs on your own machine. Nothing is sent to an API"; privacy policy: no upload, update check and install ID off by default — attributed, not independently tested (2026-10-17)
   platforms: ['mac', 'win', 'linux'], // desktop app: Windows x64, macOS Apple Silicon only, Linux x86_64 (.AppImage/.deb); pip/Docker/source on all three

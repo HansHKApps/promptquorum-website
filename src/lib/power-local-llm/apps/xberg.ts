@@ -12,7 +12,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'xberg',
   name: 'Xberg',
-  categories: ['sdks-libraries'],
+  categories: ['ocr-document-parsing', 'sdks-libraries'],
   interfaces: ['library', 'cli', 'web'], // 15 language bindings, CLI (14 commands), REST API server, MCP server, Docker; WASM runs in the browser, verified 2026-10-30
   locality: 'local', // extraction, OCR, layout and ONNX embeddings run on the host CPU; network only for URL fetching or hosted LLM providers you choose, verified 2026-10-30
   platforms: ['web', 'linux', 'mac', 'win'], // prebuilt binaries for Linux (x86_64, aarch64), macOS (Apple Silicon fully, Intel partly) and Windows; WASM for browsers, verified 2026-10-30

@@ -8,8 +8,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'h2ogpt',
   name: 'h2oGPT',
-  categories: ['document-pdf-chat', 'api-servers'],
+  categories: ['document-pdf-chat'],
   interfaces: ['desktop', 'web'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama', 'llama.cpp', 'GPT4All', 'OpenAI API'],

@@ -18,6 +18,7 @@ import toolArticleIndex from '@/generated/tool-article-index.json'
 import { CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP, CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategoryGroupKey, CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import type { OSKey, PriceKey, ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
+import { CATEGORY_COMPARE_ARTICLE } from '@/lib/power-local-llm/apps/compare-schema'
 import { getListingFreshness } from '@/components/local-ai-directory/staleness'
 
 export const DIRECTORY_DISCLAIMER =
@@ -91,21 +92,25 @@ export function articlesForApp(app: ToolRecord): { article: ArticleLink | null; 
 // Discovered from the already-generated toolArticleIndex (title stays in
 // sync with the live article automatically) rather than hand-typing 7
 // titles that would drift the next time a comparison post is retitled.
-const CATEGORY_COMPARE_SLUG: Record<CategoryGroupKey, string> = Object.fromEntries(
-  CATEGORY_GROUPS.map((g) => [g.key, `local-llm-${g.key}-compared`]),
-) as Record<CategoryGroupKey, string>
+const CATEGORY_COMPARE_SLUG: Partial<Record<CategoryGroupKey, string>> = Object.fromEntries(
+  CATEGORY_GROUPS.flatMap((g) => (CATEGORY_COMPARE_ARTICLE[g.key] ? [[g.key, CATEGORY_COMPARE_ARTICLE[g.key]]] : [])),
+)
 
 let cachedCategoryGuides: Partial<Record<CategoryGroupKey, ArticleLink>> | null = null
 function getCategoryGuides(): Partial<Record<CategoryGroupKey, ArticleLink>> {
   if (cachedCategoryGuides) return cachedCategoryGuides
-  const slugToGroup = new Map(Object.entries(CATEGORY_COMPARE_SLUG).map(([group, slug]) => [slug, group as CategoryGroupKey]))
-  const guides: Partial<Record<CategoryGroupKey, ArticleLink>> = {}
+  const guideBySlug = new Map<string, ArticleLink>()
   for (const entry of Object.values(toolArticleIndex as Record<string, { articles: IndexedArticle[] }>)) {
     for (const a of entry.articles) {
       const slug = a.url.split('/').pop()
-      const group = slug ? slugToGroup.get(slug) : undefined
-      if (group && !guides[group]) guides[group] = { title: a.title, url: `${SITE}${a.url}` }
+      if (slug && !guideBySlug.has(slug)) guideBySlug.set(slug, { title: a.title, url: `${SITE}${a.url}` })
     }
+  }
+  const guides: Partial<Record<CategoryGroupKey, ArticleLink>> = {}
+  // Several groups can share one guide (the v2 groups link to the closest existing comparison article).
+  for (const [group, slug] of Object.entries(CATEGORY_COMPARE_SLUG)) {
+    const link = slug ? guideBySlug.get(slug) : undefined
+    if (link) guides[group as CategoryGroupKey] = link
   }
   cachedCategoryGuides = guides
   return guides
@@ -310,17 +315,25 @@ const QUERY_CATEGORY_SYNONYMS: Record<string, CategorySubKey[]> = {
   cms: ['notes-integrations'],
   publishing: ['notes-integrations', 'document-pdf-chat'],
   notes: ['notes-integrations'],
-  translate: ['general-chat-clients'],
-  translation: ['general-chat-clients'],
-  summarize: ['document-pdf-chat', 'general-chat-clients'],
-  summary: ['document-pdf-chat', 'general-chat-clients'],
+  translate: ['translation', 'general-chat-clients'],
+  translation: ['translation', 'general-chat-clients'],
+  subtitles: ['subtitles-dubbing', 'speech-to-text'],
+  dictation: ['dictation', 'speech-to-text'],
+  meeting: ['meeting-notes', 'speech-to-text'],
+  mcp: ['mcp-servers-skills'],
+  photos: ['photo-libraries'],
+  camera: ['security-cameras-nvr', 'smart-home-ai'],
+  scraping: ['web-scraping-for-ai'],
+  summarize: ['summarizers', 'document-pdf-chat'],
+  summary: ['summarizers', 'document-pdf-chat'],
   database: ['vector-databases'],
   search: ['local-search', 'vector-databases'],
   transcribe: ['speech-to-text'],
   transcription: ['speech-to-text'],
   podcast: ['speech-to-text', 'text-to-speech'],
   narration: ['text-to-speech'],
-  avatar: ['avatars-3d'],
+  avatar: ['avatars-lipsync'],
+  '3d': ['3d-generation'],
   training: ['fine-tuning-lora'],
   finetune: ['fine-tuning-lora'],
   benchmark: ['evaluation-benchmarking'],

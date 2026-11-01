@@ -15,8 +15,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'mlx-serve',
   name: 'mlx-serve',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli', 'desktop'], // server run from the CLI; ships a bundled macOS menu-bar app (MLX Core), verified 2026-09-18
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac'], // README: "macOS 26.2+ on Apple Silicon", no Windows or Linux support, verified 2026-09-18
   worksWith: ['Claude Code', 'Continue', 'Cursor', 'Open WebUI'], // README lists these as compatible OpenAI/Anthropic-API clients, verified 2026-09-18

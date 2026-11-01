@@ -12,7 +12,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ecc',
   name: 'ECC',
-  categories: ['code-assistants-ide-plugins'],
+  categories: ['mcp-servers-skills', 'code-assistants-ide-plugins'],
   interfaces: ['plugin', 'cli'], // native plugin for Claude Code and Codex, npx CLI installer, adapters for other harnesses, verified 2026-10-23
   locality: 'hybrid', // see header: toolkit runs inside the user's harness, the GitHub App is a hosted service
   platforms: ['mac', 'win', 'linux'], // README has a Windows walkthrough; requires Node.js 18+, verified 2026-10-23

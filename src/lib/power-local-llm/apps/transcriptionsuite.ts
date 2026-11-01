@@ -6,7 +6,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'transcriptionsuite',
   name: 'TranscriptionSuite',
-  categories: ['speech-to-text'],
+  categories: ['speech-to-text', 'meeting-notes'],
   interfaces: ['desktop'],
   locality: 'local', // site states "100% Local · 100% Private"; transcription runs on-device. Optional AI Assistant can point at cloud OpenAI-compatible providers (Groq, OpenRouter) or local ones (LM Studio, Ollama) — verified 2026-10-17
   platforms: ['mac', 'win', 'linux'],

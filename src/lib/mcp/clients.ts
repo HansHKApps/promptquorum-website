@@ -81,7 +81,7 @@ export const MCP_CLIENTS: McpClientOnboarding[] = [
   },
 ]
 
-// Goals are the directory's own 7 category groups plus their subcategories,
+// Goals are the directory's own category groups plus their subcategories,
 // so the panel offers exactly what the directory and search_apps understand.
 export const GOAL_GROUPS = CATEGORY_GROUPS.map((g) => ({
   id: g.key,

@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'jarvis',
   name: 'Jarvis',
-  categories: ['realtime-voice-agents', 'personal-assistants'],
+  categories: ['voice-assistants', 'realtime-voice-agents', 'personal-assistants'],
   interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac'],

@@ -9,7 +9,7 @@ export const app: ToolRecord = {
   categories: ['observability', 'evaluation-benchmarking'],
   interfaces: ['web', 'library'],
   locality: 'local', // fully self-hostable; Langfuse Cloud is an optional managed alternative, verified 2026-09-18
-  platforms: null, // self-hosted Docker web platform, not tied to a specific OS
+  platforms: ['selfhosted'], // researched 2026-11-01 — langfuse.com/self-hosting: Docker Compose / Kubernetes Helm; a server, not a native OS app
   worksWith: ['OpenAI API', 'LangChain', 'LlamaIndex'],
   engine: 'external', // traces and evaluates calls to external LLM providers rather than running inference itself, verified 2026-09-18
   license: 'MIT (core), Enterprise Edition features under a separate commercial license', // GitHub reports license "Other" — repo LICENSE is MIT Expat for most of the codebase with a restricted ee/ directory, verified 2026-09-18

@@ -16,7 +16,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'on-device-ai-translator',
   name: 'On-Device AI Translator',
-  categories: ['personal-assistants'],
+  categories: ['translation', 'personal-assistants'],
   interfaces: ['mobile'],
   locality: 'local', // translation with a downloaded model makes no network requests per listing and policy; model downloads and optional update checks use the network
   platforms: ['ios'], // iPhone/iPad, iOS 18.4+; the listing also shows Apple-silicon Macs "not verified for macOS" — no native desktop build

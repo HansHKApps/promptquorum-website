@@ -10,7 +10,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'little-coder',
   name: 'little-coder',
-  categories: ['code-assistants-ide-plugins', 'autonomous-agents'],
+  categories: ['terminal-coding-agents', 'autonomous-agents', 'code-assistants-ide-plugins'],
   interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

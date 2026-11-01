@@ -8,7 +8,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'leon-ai',
   name: 'Leon AI',
-  categories: ['autonomous-agents'],
+  categories: ['personal-assistants', 'autonomous-agents'],
   interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],

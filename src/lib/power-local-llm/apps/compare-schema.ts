@@ -45,8 +45,15 @@ export interface CompareSegment {
 export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
   // At the Edge holds emerging protocols and unproven concepts — too heterogeneous for a like-for-like table, so no segments.
   'at-the-edge': [],
-  // Other & Niche holds apps with no real competitors in the directory (a lone health companion so far) — nothing to compare like for like.
-  'other-niches': [],
+  // Industry & Domain holds apps with no real competitors in the directory (a lone health companion so far) — nothing to compare like for like.
+  'industry-domain': [],
+  // Groups added in taxonomy v2 (2026-11-01). Their tools are still compared inside the segments below, because a
+  // segment selects tools by category key (subs), not by group; they get segments of their own once a pilot defines attributes.
+  'agents-automation': [],
+  'documents-research': [],
+  'photos-cameras-home': [],
+  'llmops-security': [],
+  'hardware-edge': [],
   // Pilot category — attributes are proposals until each is confirmed against the tools' reviews.
   'voice-audio': [
     {
@@ -64,7 +71,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'speech-to-text',
       label: 'Speech-to-text',
-      subs: ['speech-to-text'],
+      subs: ['speech-to-text', 'dictation', 'meeting-notes'],
       attributes: [
         { key: 'languages', label: 'Languages', kind: 'number', hint: 'Count of supported languages' },
         { key: 'realtime', label: 'Real-time transcription', kind: 'boolean' },
@@ -76,7 +83,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'voice-agents',
       label: 'Real-time voice agents',
-      subs: ['realtime-voice-agents'],
+      subs: ['realtime-voice-agents', 'voice-assistants'],
       attributes: [
         { key: 'fullyLocal', label: 'Fully local pipeline', kind: 'boolean' },
         { key: 'bargeIn', label: 'Interruption (barge-in)', kind: 'boolean' },
@@ -104,7 +111,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'vision-ocr',
       label: 'Vision & OCR',
-      subs: ['vision-ocr'],
+      subs: ['vision-ocr', 'photo-libraries'],
       attributes: [
         { key: 'ocr', label: 'Reads text in images (OCR)', kind: 'boolean' },
         { key: 'multiImage', label: 'Multiple images per prompt', kind: 'boolean' },
@@ -119,7 +126,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'inference-engines',
       label: 'Inference engines',
-      subs: ['inference-engines', 'quantization-conversion'],
+      subs: ['inference-engines', 'quantization-conversion', 'distributed-inference'],
       attributes: [
         { key: 'openaiApi', label: 'OpenAI-compatible API', kind: 'boolean' },
         { key: 'nvidiaGpu', label: 'NVIDIA GPU', kind: 'boolean' },
@@ -132,7 +139,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'runtimes-managers',
       label: 'Runtimes & managers',
-      subs: ['runtimes-managers'],
+      subs: ['runtimes-managers', 'one-click-installers'],
       attributes: [
         { key: 'openaiApi', label: 'OpenAI-compatible API', kind: 'boolean' },
         { key: 'desktopApp', label: 'Desktop app', kind: 'boolean' },
@@ -205,7 +212,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'local-search',
       label: 'Local search & research',
-      subs: ['local-search'],
+      subs: ['local-search', 'search-deep-research'],
       attributes: [
         { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
         { key: 'webSearch', label: 'Searches the web', kind: 'boolean' },
@@ -284,7 +291,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'coding-assistants',
       label: 'Coding assistants & IDE plugins',
-      subs: ['code-assistants-ide-plugins'],
+      subs: ['code-assistants-ide-plugins', 'ai-code-editors', 'terminal-coding-agents'],
       attributes: [
         { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
         { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
@@ -311,7 +318,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'autonomous-agents',
       label: 'Autonomous agents',
-      subs: ['autonomous-agents'],
+      subs: ['autonomous-agents', 'computer-browser-agents'],
       attributes: [
         { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
         { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
@@ -379,5 +386,11 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'images-video': 'local-llm-images-video-compared',
   'train-operate': 'local-llm-train-operate-compared',
   'at-the-edge': null,
-  'other-niches': null,
+  'industry-domain': null,
+  // v2 groups point at the existing guide whose segments already compare their tools.
+  'agents-automation': 'local-llm-code-development-compared',
+  'documents-research': 'local-llm-knowledge-retrieval-compared',
+  'photos-cameras-home': 'local-llm-images-video-compared',
+  'llmops-security': 'local-llm-train-operate-compared',
+  'hardware-edge': null,
 }

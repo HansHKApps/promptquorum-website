@@ -15,7 +15,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'presenton',
   name: 'Presenton',
-  categories: ['document-pdf-chat'],
+  categories: ['presentation-generation', 'document-pdf-chat'],
   interfaces: ['desktop', 'web'],
   locality: 'hybrid', // README: text, image and search providers are user-chosen; Ollama/LM Studio keep generation local, cloud providers and the managed Presenton Cloud send content out; community gallery on by default
   platforms: ['mac', 'win', 'linux', 'web'], // Docker/browser UI on any OS; desktop .dmg/.AppImage/.deb in 0.9.x, Windows .exe only up to 0.8.7-beta

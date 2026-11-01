@@ -10,7 +10,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'izwi',
   name: 'Izwi',
-  categories: ['text-to-speech', 'speech-to-text'],
+  categories: ['speech-to-text', 'text-to-speech', 'voice-cloning'],
   interfaces: ['desktop', 'web', 'cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'], // macOS (Metal-accelerated on Apple Silicon, CPU fallback), Linux and Windows builds are CPU-only by default, CUDA via Docker/source — verified 2026-09-18

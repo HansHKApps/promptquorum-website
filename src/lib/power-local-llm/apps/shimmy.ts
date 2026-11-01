@@ -9,8 +9,9 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'shimmy',
   name: 'Shimmy',
-  categories: ['inference-engines', 'api-servers'],
+  categories: ['inference-engines'],
   interfaces: ['cli'],
+  exposesApi: true, // seeded 2026-11-01 from the former `api-servers` category (taxonomy v2: API serving is a facet, not a category)
   locality: 'local',
   platforms: ['mac', 'win', 'linux'], // single-binary Rust CLI, distributed via cargo, verified 2026-09-18
   worksWith: ['GGUF', 'SafeTensors'],
