@@ -51,6 +51,12 @@ export async function POST(req: NextRequest) {
   try {
     const pipe = redis.pipeline()
     switch (type) {
+      case 'open':
+        // Window opened: aggregated counter only (no visitor ID), same footing as consent_no.
+        pipe.hincrby(dayKey, 'total_opens', 1)
+        pipe.hincrby('askhans:total', 'opens', 1)
+        pipe.hsetnx('askhans:total', 'since', day)
+        break
       case 'consent_no':
         // "Nein" is an aggregated counter only — no ID, no proof entry.
         pipe.hincrby(dayKey, 'consent_no', 1)

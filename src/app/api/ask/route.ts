@@ -20,6 +20,7 @@ import { redis } from '@/lib/redis'
 import { ASK_HANS_DEFAULT_MODEL, ASK_HANS_LIMITS } from '@/lib/askhans/config'
 import { buildSystemPrompt } from '@/lib/askhans/system-prompt'
 import { generateFollowups } from '@/lib/askhans/followups'
+import { bumpTotals } from '@/lib/askhans/totals'
 import { buildToolDefinitions, runTool, SET_CATEGORY_TOOL } from '@/lib/askhans/tools'
 
 export const runtime = 'nodejs'
@@ -123,6 +124,8 @@ export async function POST(req: NextRequest): Promise<Response> {
     if (process.env.NODE_ENV === 'production') return errorResponse('unavailable', 503)
   }
 
+  await bumpTotals('requests')
+
   // Per-visit cap: count visitor messages per anonymous visit ID (24 h). Redis failure must not block the visitor.
   try {
     const key = `askhans:visitmsgs:${parsed.visitId}`
@@ -150,6 +153,7 @@ export async function POST(req: NextRequest): Promise<Response> {
     let spoken = ''
     const pageTitles: Record<string, string> = {}
     let onlyCategoryLastTurn = false
+    let nudged = false
 
     try {
       for (let turn = 0; turn < ASK_HANS_LIMITS.maxToolCallsPerAnswer + 2; turn++) {
@@ -163,7 +167,7 @@ export async function POST(req: NextRequest): Promise<Response> {
             // The tools list must stay identical on every turn: the API binds earlier thinking blocks to it and
             // rejects the request (400) if it changes. Once the budget is spent, forbid tool use via tool_choice.
             tools,
-            ...(budgetSpent ? { tool_choice: { type: 'none' as const } } : {}),
+            ...(budgetSpent || nudged ? { tool_choice: { type: 'none' as const } } : {}),
             messages,
             output_config: { effort: 'low' },
           },
@@ -174,6 +178,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         const holdBack = emittedText && onlyCategoryLastTurn
         let held = ''
         let firstDelta = true
+        let turnHadText = false
         stream.on('text', (delta) => {
           if (holdBack) {
             held += delta
@@ -185,9 +190,11 @@ export async function POST(req: NextRequest): Promise<Response> {
           spoken += v
           firstDelta = false
           emittedText = true
+          turnHadText = true
         })
         const message = await stream.finalMessage()
         if (holdBack && held.trim()) {
+          turnHadText = true
           const norm = (t: string) => t.replace(/\s+/g, ' ').trim()
           const probe = norm(held).slice(0, 60)
           if (!norm(spoken).includes(probe)) {
@@ -196,13 +203,24 @@ export async function POST(req: NextRequest): Promise<Response> {
           }
         }
 
+        console.log('[askhans] turn', JSON.stringify({ turn, stop: message.stop_reason, outTokens: message.usage?.output_tokens, text: turnHadText, toolCalls }))
+
         if (message.stop_reason === 'refusal') {
           send({ t: 'error', code: 'refused' satisfies ErrorCode })
           return
         }
         const toolUses = message.content.filter((b): b is Anthropic.ToolUseBlock => b.type === 'tool_use')
         // Only a clean tool_use stop runs tools (never calls cut off by max_tokens).
-        if (message.stop_reason !== 'tool_use' || toolUses.length === 0) break
+        if (message.stop_reason !== 'tool_use' || toolUses.length === 0) {
+          // After reading tool results the model sometimes ends its turn without any text (or runs out of tokens
+          // while thinking). Ask once more, without tools, for the actual answer.
+          if (!turnHadText && toolCalls > 0 && !nudged) {
+            nudged = true
+            messages.push({ role: 'user', content: 'Write the answer for the visitor now, based on the tool results above. Do not call any tool.' })
+            continue
+          }
+          break
+        }
 
         // Keep every block (incl. thinking) unchanged in the history.
         messages.push({ role: 'assistant', content: message.content })
@@ -238,6 +256,7 @@ export async function POST(req: NextRequest): Promise<Response> {
           console.error('[askhans] followups failed', err instanceof Error ? `${err.name}: ${err.message}` : err)
         }
       }
+      if (spoken.trim()) await bumpTotals('answers')
       send({ t: 'done', category, tools: [...new Set(toolsUsed)] })
     } catch (err) {
       console.error('[askhans] model call failed', err instanceof Error ? `${err.name}: ${err.message}` : err)

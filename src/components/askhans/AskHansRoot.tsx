@@ -62,6 +62,7 @@ export function AskHansRoot() {
   const visitId = useRef('')
   /** answers that already produced a counted click (each answer counts once in the click-through rate) */
   const clickedAnswers = useRef(new Set<string>())
+  const wasOpen = useRef<boolean | null>(null)
   const logoRef = useRef<HTMLButtonElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -85,6 +86,14 @@ export function AskHansRoot() {
   useEffect(() => {
     if (ready) saveUi(ui)
   }, [ui, ready])
+
+  useEffect(() => {
+    // The first run after loading only records the restored state; later closed→open changes are real opens
+    // (anonymous counter, no visitor ID).
+    if (!ready) return
+    if (wasOpen.current === false && ui.open) logEvent({ type: 'open' })
+    wasOpen.current = ui.open
+  }, [ui.open, ready])
 
   useEffect(() => {
     if (ready && !streaming) saveConversations(conversations)

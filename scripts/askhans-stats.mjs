@@ -79,6 +79,11 @@ console.log(`  ${ratings} ratings, average ${ratings ? ((total.rating_sum ?? 0) 
 for (let n = 5; n >= 1; n--) console.log(`  ${'★'.repeat(n).padEnd(5)}  ${total[`rating:${n}`] ?? 0}`)
 sum('fb_lang:').forEach(([k, v]) => console.log(`  ${String(v).padStart(5)}  language ${k}`))
 
+const life = (await redis.hgetall('askhans:total')) ?? {}
+console.log('\nTotals (anonymous, all visitors, no consent needed)')
+console.log(`  last ${days} days: opened ${total.total_opens ?? 0}   requests ${total.total_requests ?? 0}   answers ${total.total_answers ?? 0}`)
+console.log(`  lifetime${life.since ? ` since ${life.since}` : ''}: opened ${life.opens ?? 0}   requests ${life.requests ?? 0}   answers ${life.answers ?? 0}`)
+
 const yes = total.consent_yes ?? 0
 const no = total.consent_no ?? 0
 console.log('\nConsent')

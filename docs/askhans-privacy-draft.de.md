@@ -40,6 +40,10 @@ Erfasst werden: gewählte Themenkategorie, verwendete Werkzeuge (z. B. „App-Su
 aus einer Antwort angeklickt wurde, Klicks auf „Neu“ und eine zufällige, anonyme Besuchs-ID, die keiner Person zugeordnet ist.
 **Nicht erfasst werden:** Fragetext, Antworttext, IP-Adresse, Namen.
 
+**d2) Anonyme Gesamtzähler — für alle Besucher, ohne Einwilligung.** Es werden nur drei Summen hochgezählt (Anzahl
+geöffneter Fenster, gestellter Anfragen und gegebener Antworten), ohne Besuchs-ID, ohne Text, ohne IP-Adresse. Sie dienen der
+Gesamtstatistik (z. B. auf der Seite /mcp-stats). `[PRÜFEN]` Rechtsgrundlage (berechtigtes Interesse) und Hinweis in der Datenschutzerklärung bestätigen.
+
 **e) Nachweis Ihrer Einwilligung.**
 Ihre Entscheidung (Ja/Nein), die Version des Einwilligungstextes und der Zeitpunkt werden in Ihrem Browser (`localStorage`)
 gespeichert, damit die Abfrage nicht bei jedem Öffnen wiederholt wird. Bei „Ja“ und bei Widerruf speichern wir zusätzlich
