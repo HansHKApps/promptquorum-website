@@ -543,7 +543,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -11692,6 +11692,38 @@
     "baseline": {
       "position": 7.87,
       "impressions": 31,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-01"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "abd859e5-1e42-4e1e-b4d8-b30594eb00b4",
+    "slug": "/es/power-local-llm/best-web-hosting",
+    "date": "2026-11-02T14:33:00.982Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor Hosting España y Latinoamérica 2026",
+        "new": "Mejor hosting en España y Latinoamérica 2026: precios"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mejor hosting web en España (Webempresa, Nominalia) y Sudamérica (Argentina, Chile, Perú) para 2026. Precios verificados, saltos de renovación y cumplimiento RGPD vs. leyes locales por país.",
+        "new": "Mejor hosting web en España y Sudamérica 2026: Webempresa, Nominalia, DonWeb y Hosting.cl con precios, renovación y ley de datos de cada país."
+      }
+    ],
+    "reason": "Zero-click batch 01 round 4. ES title (41 chars) and meta (190 chars) into budget; lead cut from 86 to 47 words; Webempresa \"stable price\" claim replaced by promo/normal price, Nominalia unlabeled prices hedged, DonWeb prices updated, WNPower marked unverified (read 2026-11-02).",
+    "queries": [
+      "hosting con soporte en español",
+      "mejor hosting",
+      "mejor hosting barato",
+      "hosting recomendados"
+    ],
+    "baseline": {
+      "position": 16.04,
+      "impressions": 920,
       "clicks": 0,
       "ctr": 0,
       "period": "28d to 2026-11-01"
